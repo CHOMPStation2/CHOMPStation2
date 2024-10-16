@@ -268,7 +268,11 @@
 
 	set name = "Drop Item"
 	set desc = "Release an item from your magnetic gripper."
+<<<<<<< HEAD
 	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
+=======
+	set category = "Abilities.Silicon"
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 	drop_item()
 

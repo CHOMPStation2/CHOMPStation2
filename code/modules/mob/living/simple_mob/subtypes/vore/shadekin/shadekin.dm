@@ -134,7 +134,11 @@
 
 	update_icon()
 
+<<<<<<< HEAD
 	add_verb(src,/mob/proc/adjust_hive_range) //CHOMPEdit TGPanel
+=======
+	add_verb(src, /mob/proc/adjust_hive_range)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 	return ..()
 
@@ -231,7 +235,10 @@
 	add_overlay(tailimage)
 	add_overlay(eye_icon_state)
 
+<<<<<<< HEAD
 //ChompEDIT START - TGPanel
+=======
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 /mob/living/simple_mob/shadekin/update_misc_tabs()
 	..()
 	var/list/L = list()
@@ -245,9 +252,14 @@
 				img = icon2html(A,C,sourceonly=TRUE)
 				C.misc_cache[A.ability_name] = img
 
+<<<<<<< HEAD
 		L[++L.len] = list("[A.ability_name]", A.ability_name, img, A.atom_button_text(), REF(A))
 	misc_tabs["Shadekin"] = L
 //ChompEDIT END
+=======
+		L[++L.len] = list("[A.ability_name]", A.ability_name, img, "Activate", REF(A))
+	misc_tabs["Shadekin"] = L
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 //They phase back to the dark when killed
 /mob/living/simple_mob/shadekin/death(gibbed, deathmessage = "phases to somewhere far away!")

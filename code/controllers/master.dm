@@ -695,12 +695,21 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 
 
 
+<<<<<<< HEAD
 /datum/controller/master/stat_entry(msg) //CHOMPEdit
 	if(!statclick)
 		statclick = new/obj/effect/statclick/debug(null, "Initializing...", src)
 
 	msg = "Byond: (FPS:[world.fps]) (TickCount:[world.time/world.tick_lag]) (TickDrift:[round(Master.tickdrift,1)]([round((Master.tickdrift/(world.time/world.tick_lag))*100,0.1)]%))" //CHOMPedit
 	msg += "Master Controller: [statclick.update("(TickRate:[Master.processing]) (Iteration:[Master.iteration])")]" //CHOMPEdit
+=======
+/datum/controller/master/stat_entry(msg)
+	if(!statclick)
+		statclick = new/obj/effect/statclick/debug(null, "Initializing...", src)
+
+	msg = "Byond: (FPS:[world.fps]) (TickCount:[world.time/world.tick_lag]) (TickDrift:[round(Master.tickdrift,1)]([round((Master.tickdrift/(world.time/world.tick_lag))*100,0.1)]%))"
+	msg += "Master Controller: [statclick.update("(TickRate:[Master.processing]) (Iteration:[Master.iteration])")]"
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 	return msg
 

@@ -41,11 +41,19 @@
 		//MIND TRANSFER BEGIN
 		if(caster.mind.special_verbs.len)//If the caster had any special verbs, remove them from the mob verb list.
 			for(var/V in caster.mind.special_verbs)//Since the caster is using an object spell system, this is mostly moot.
+<<<<<<< HEAD
 				remove_verb(caster,V) //But a safety nontheless. //CHOMPEdit
 
 		if(victim.mind.special_verbs.len)//Now remove all of the victim's verbs.
 			for(var/V in victim.mind.special_verbs)
 				remove_verb(victim,V)  //CHOMPEdit
+=======
+				remove_verb(caster, V)//But a safety nontheless.
+
+		if(victim.mind.special_verbs.len)//Now remove all of the victim's verbs.
+			for(var/V in victim.mind.special_verbs)
+				remove_verb(victim, V)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 		var/mob/observer/dead/ghost = victim.ghostize(0)
 		ghost.spell_list += victim.spell_list//If they have spells, transfer them. Now we basically have a backup mob.
@@ -60,7 +68,11 @@
 
 		if(victim.mind.special_verbs.len)//To add all the special verbs for the original caster.
 			for(var/V in caster.mind.special_verbs)//Not too important but could come into play.
+<<<<<<< HEAD
 				add_verb(caster,V)  //CHOMPEdit
+=======
+				add_verb(caster, V)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 		ghost.mind.transfer_to(caster)
 		caster.key = ghost.key	//have to transfer the key since the mind was not active
@@ -70,7 +82,11 @@
 
 		if(caster.mind.special_verbs.len)//If they had any special verbs, we add them here.
 			for(var/V in caster.mind.special_verbs)
+<<<<<<< HEAD
 				add_verb(caster,V)  //CHOMPEdit
+=======
+				add_verb(caster, V)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 		//MIND TRANSFER END
 
 		//Target is handled in ..(), so we handle the caster here

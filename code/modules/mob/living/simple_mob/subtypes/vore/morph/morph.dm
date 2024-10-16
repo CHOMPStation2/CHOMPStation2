@@ -62,10 +62,17 @@
 	/obj/effect))
 
 /mob/living/simple_mob/vore/morph/Initialize()
+<<<<<<< HEAD
 	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
 	add_verb(src,/mob/living/simple_mob/vore/morph/proc/take_over_prey) //CHOMPEdit TGPanel
 	if(!istype(src, /mob/living/simple_mob/vore/morph/dominated_prey))
 		add_verb(src,/mob/living/simple_mob/vore/morph/proc/morph_color) //CHOMPEdit TGPanel
+=======
+	add_verb(src, /mob/living/proc/ventcrawl)
+	add_verb(src, /mob/living/simple_mob/vore/morph/proc/take_over_prey)
+	if(!istype(src, /mob/living/simple_mob/vore/morph/dominated_prey))
+		add_verb(src, /mob/living/simple_mob/vore/morph/proc/morph_color)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 	return ..()
 

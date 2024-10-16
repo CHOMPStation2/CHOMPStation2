@@ -32,7 +32,11 @@
 	if(!focus)
 		return
 	to_chat(owner, "<b>Research Completed</b>: [focus.name]")
+<<<<<<< HEAD
 	add_verb(focus.ability) //CHOMPEdit TGPanel
+=======
+	add_verb(owner, focus.ability)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 	available_abilities -= focus
 	if(focus.next)
 		available_abilities += focus.next

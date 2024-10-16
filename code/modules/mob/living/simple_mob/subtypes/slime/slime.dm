@@ -101,7 +101,11 @@ var/list/_slime_default_emotes = list(
 	emote_hear = list("squishes")
 
 /mob/living/simple_mob/slime/Initialize()
+<<<<<<< HEAD
 	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
+=======
+	add_verb(src, /mob/living/proc/ventcrawl)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 	update_mood()
 	glow_color = color
 	handle_light()

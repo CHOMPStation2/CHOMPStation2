@@ -47,14 +47,24 @@
 	if((. = ..()))
 		//nif.set_flag(NIF_O_SCOTHERS,NIF_FLAGS_OTHER)	//Only required on install if the flag is in the default setting_flags list defined few lines above.
 		if(nif?.human)
+<<<<<<< HEAD
 			add_verb(nif.human,/mob/proc/nsay) //CHOMPEdit TGPanel
 			add_verb(nif.human,/mob/proc/nme) //CHOMPEdit TGPanel
+=======
+			add_verb(nif.human, /mob/proc/nsay)
+			add_verb(nif.human, /mob/proc/nme)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /datum/nifsoft/soulcatcher/uninstall()
 	QDEL_LIST_NULL(brainmobs)
 	if((. = ..()) && nif?.human) //Sometimes NIFs are deleted outside of a human
+<<<<<<< HEAD
 		remove_verb(nif.human,/mob/proc/nsay)  //CHOMPEdit
 		remove_verb(nif.human,/mob/proc/nme)  //CHOMPEdit
+=======
+		remove_verb(nif.human, /mob/proc/nsay)
+		remove_verb(nif.human, /mob/proc/nme)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /datum/nifsoft/soulcatcher/proc/save_settings()
 	if(!nif)

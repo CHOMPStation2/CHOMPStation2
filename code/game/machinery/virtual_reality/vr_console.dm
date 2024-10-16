@@ -259,8 +259,14 @@
 		occupant.enter_vr(avatar)
 		//Yes, I am using a aheal just so your markings transfer over, I could not get .prefs.copy_to working. This is very stupid, and I can't be assed to rewrite this.  Too bad!
 		avatar.revive()
+<<<<<<< HEAD
 		avatar.species.equip_survival_gear(avatar)
 		add_verb(avatar,/mob/living/carbon/human/proc/exit_vr ) //ahealing removes the prommie verbs and the VR verbs, giving it back //CHOMPEdit
+=======
+		avatar.revive()
+		add_verb(avatar, /mob/living/carbon/human/proc/exit_vr) //ahealing removes the prommie verbs and the VR verbs, giving it back
+		avatar.Sleeping(1)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 //CHOMPedit end
 		// Prompt for username after they've enterred the body.

@@ -449,7 +449,11 @@
 		if(!verb || verb == "Cancel")
 			return
 		else
+<<<<<<< HEAD
 			add_verb(H,verb) //CHOMPEdit
+=======
+			add_verb(H, verb)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 	else if(href_list["remverb"])
 		if(!check_rights(R_DEBUG))      return
@@ -466,7 +470,11 @@
 		if(!verb)
 			return
 		else
+<<<<<<< HEAD
 			remove_verb(H,verb)  //CHOMPEdit
+=======
+			remove_verb(H, verb)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 	else if(href_list["addorgan"])
 		if(!check_rights(R_SPAWN))	return

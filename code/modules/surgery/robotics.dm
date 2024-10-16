@@ -642,8 +642,13 @@
 
 	target.species = GLOB.all_species[SPECIES_DIONA]
 
+<<<<<<< HEAD
 	add_verb(target,/mob/living/carbon/human/proc/diona_split_nymph) //CHOMPEdit TGPanel
 	add_verb(target,/mob/living/carbon/human/proc/regenerate) //CHOMPEdit TGPanel
+=======
+	add_verb(target, /mob/living/carbon/human/proc/diona_split_nymph)
+	add_verb(target, /mob/living/carbon/human/proc/regenerate)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 	spawn(0) //Name yourself on your own damn time
 		var/new_name = ""

@@ -82,7 +82,10 @@ SUBSYSTEM_DEF(machines)
 			T.broadcast_status()
 		CHECK_TICK
 
+<<<<<<< HEAD
 //CHOMPEdit Begin
+=======
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 /datum/controller/subsystem/machines/stat_entry(msg)
 	msg = "C:{"
 	msg += "PI:[round(cost_pipenets,1)]|"
@@ -96,7 +99,10 @@ SUBSYSTEM_DEF(machines)
 	msg += "PO:[SSmachines.powerobjs.len]|"
 	msg += "MC/MS:[round((cost ? SSmachines.processing_machines.len/cost_machinery : 0),0.1)]"
 	return ..()
+<<<<<<< HEAD
 // CHOMPEdit End
+=======
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /datum/controller/subsystem/machines/proc/process_pipenets(resumed = 0)
 	if (!resumed)

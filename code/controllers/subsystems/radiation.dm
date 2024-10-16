@@ -53,11 +53,19 @@ SUBSYSTEM_DEF(radiation)
 				A.rad_act(rads)
 		if (MC_TICK_CHECK)
 			return
+<<<<<<< HEAD
 //CHOMPEdit Begin
 /datum/controller/subsystem/radiation/stat_entry(msg)
 	msg = "S:[sources.len], RC:[resistance_cache.len]"
 	return ..()
 //CHOMPEdit End
+=======
+
+/datum/controller/subsystem/radiation/stat_entry(msg)
+	msg = "S:[sources.len], RC:[resistance_cache.len]"
+	return ..()
+
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 // Ray trace from all active radiation sources to T and return the strongest effect.
 /datum/controller/subsystem/radiation/proc/get_rads_at_turf(var/turf/T)
 	. = 0
@@ -146,6 +154,7 @@ SUBSYSTEM_DEF(radiation)
 		return
 	var/turf/epicentre = locate(round(world.maxx / 2), round(world.maxy / 2), source.z)
 	flat_radiate(epicentre, power, world.maxx, respect_maint)
+<<<<<<< HEAD
 
 //CHOMPEdit Begin
 //Putting this here so it can be promptly nuked if I ever redo the radiation subsystem
@@ -153,3 +162,5 @@ SUBSYSTEM_DEF(radiation)
 	. = ..()
 	SSradiation.listeners -= src
 //CHOMPEdit End
+=======
+>>>>>>> c07027136e... Port tg statpanel (#16463)

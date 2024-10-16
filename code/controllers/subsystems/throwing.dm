@@ -8,11 +8,19 @@ SUBSYSTEM_DEF(throwing)
 
 	var/list/currentrun
 	var/list/processing = list()
+<<<<<<< HEAD
 //CHOMPEdit Begin
 /datum/controller/subsystem/throwing/stat_entry(msg)
 	msg = "P:[length(processing)]"
 	return ..()
 //CHOMPEdit End
+=======
+
+/datum/controller/subsystem/throwing/stat_entry(msg)
+	msg = "P:[processing.len]"
+	return ..()
+
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 /datum/controller/subsystem/throwing/fire(resumed = 0)
 	if (!resumed)
 		src.currentrun = processing.Copy()

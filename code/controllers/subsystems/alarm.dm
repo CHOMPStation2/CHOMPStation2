@@ -41,8 +41,14 @@ SUBSYSTEM_DEF(alarm)
 /datum/controller/subsystem/alarm/proc/number_of_active_alarms()
 	return active_alarm_cache.len
 
+<<<<<<< HEAD
 //CHOMPEdit Begin
 /datum/controller/subsystem/alarm/stat_entry(msg)
 	msg = "[number_of_active_alarms()] alarm\s"
 	return ..()
 //CHOMPEdit End
+=======
+/datum/controller/subsystem/alarm/stat_entry(msg)
+	msg = "[number_of_active_alarms()] alarm\s"
+	return ..()
+>>>>>>> c07027136e... Port tg statpanel (#16463)

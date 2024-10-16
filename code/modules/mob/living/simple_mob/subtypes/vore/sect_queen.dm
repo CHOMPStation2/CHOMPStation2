@@ -89,7 +89,11 @@
 
 /mob/living/simple_mob/vore/sect_queen/Login()
 	. = ..()
+<<<<<<< HEAD
 	add_verb(src,/mob/living/simple_mob/vore/sect_queen/proc/set_abdomen_color) //CHOMPEdit TGPanel
+=======
+	add_verb(src,  /mob/living/simple_mob/vore/sect_queen/proc/set_abdomen_color)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /mob/living/simple_mob/vore/sect_queen/proc/set_abdomen_color()
 	set name = "Set Glow Color"

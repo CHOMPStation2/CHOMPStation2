@@ -16,4 +16,8 @@
 
 /datum/controller/proc/Recover()
 
+<<<<<<< HEAD
 /datum/controller/proc/stat_entry(msg) //CHOMPEdit
+=======
+/datum/controller/proc/stat_entry(msg)
+>>>>>>> c07027136e... Port tg statpanel (#16463)

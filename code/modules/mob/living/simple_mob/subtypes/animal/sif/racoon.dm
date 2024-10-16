@@ -159,8 +159,13 @@
 /mob/living/simple_mob/animal/sif/sakimm/Initialize()
 	. = ..()
 
+<<<<<<< HEAD
 	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
 	add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel
+=======
+	add_verb(src, /mob/living/proc/ventcrawl)
+	add_verb(src, /mob/living/proc/hide)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 	if(randomize_size)
 		adjust_scale(rand(8, 11) / 10)

@@ -246,7 +246,10 @@ Total Unsimulated Turfs: [world.maxx*world.maxy*world.maxz - simulated_turf_coun
 		if(MC_TICK_CHECK)
 			return
 
+<<<<<<< HEAD
 //CHOMPEdit Begin
+=======
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 /datum/controller/subsystem/air/stat_entry(msg)
 	msg = "S:[current_step ? part_names[current_step] : ""] "
 	msg += "C:{"
@@ -266,7 +269,10 @@ Total Unsimulated Turfs: [world.maxx*world.maxy*world.maxz - simulated_turf_coun
 	msg += "Z [zones_to_update.len] "
 	msg += "}"
 	return ..()
+<<<<<<< HEAD
 // CHOMPEdit End
+=======
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 // ZAS might displace objects as the map loads if an air tick is processed mid-load.
 /datum/controller/subsystem/air/StartLoadingMap(var/quiet = TRUE)

@@ -41,7 +41,13 @@ SUBSYSTEM_DEF(ticker)
 	//Now we have a general cinematic centrally held within the gameticker....far more efficient!
 	var/obj/screen/cinematic = null
 
+<<<<<<< HEAD
 	var/round_start_time = 0 //CHOMPEdit
+=======
+	var/round_start_time = 0
+
+
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 // This global variable exists for legacy support so we don't have to rename every 'ticker' to 'SSticker' yet.
 var/global/datum/controller/subsystem/ticker/ticker
@@ -103,7 +109,11 @@ var/global/datum/controller/subsystem/ticker/ticker
 
 // Called during GAME_STATE_SETTING_UP (RUNLEVEL_SETUP)
 /datum/controller/subsystem/ticker/proc/setup_tick(resumed = FALSE)
+<<<<<<< HEAD
 	round_start_time = world.time //otherwise round_start_time would be 0 for the signals
+=======
+	round_start_time = world.time // otherwise round_start_time would be 0 for the signals
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 	if(!setup_choose_gamemode())
 		// It failed, go back to lobby state and re-send the welcome message
 		pregame_timeleft = CONFIG_GET(number/pregame_time) // CHOMPEdit

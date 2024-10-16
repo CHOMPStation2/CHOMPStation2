@@ -344,11 +344,19 @@
 
 	if(user.mind.special_verbs.len)
 		for(var/V in user.mind.special_verbs)
+<<<<<<< HEAD
 			remove_verb(user,V)  //CHOMPEdit
 
 	if(stored_swap.mind.special_verbs.len)
 		for(var/V in stored_swap.mind.special_verbs)
 			remove_verb(stored_swap,V)  //CHOMPEdit
+=======
+			remove_verb(user, V)
+
+	if(stored_swap.mind.special_verbs.len)
+		for(var/V in stored_swap.mind.special_verbs)
+			remove_verb(stored_swap, V)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 	var/mob/observer/dead/ghost = stored_swap.ghostize(0)
 	ghost.spell_list = stored_swap.spell_list
@@ -358,7 +366,11 @@
 
 	if(stored_swap.mind.special_verbs.len)
 		for(var/V in user.mind.special_verbs)
+<<<<<<< HEAD
 			add_verb(user,V)  //CHOMPEdit
+=======
+			add_verb(user, V)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 	ghost.mind.transfer_to(user)
 	user.key = ghost.key
@@ -366,7 +378,11 @@
 
 	if(user.mind.special_verbs.len)
 		for(var/V in user.mind.special_verbs)
+<<<<<<< HEAD
 			add_verb(user,V)  //CHOMPEdit
+=======
+			add_verb(user, V)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 	to_chat(stored_swap, span_warning("You're suddenly somewhere else... and someone else?!"))
 	to_chat(user, span_warning("Suddenly you're staring at [src] again... where are you, who are you?!"))

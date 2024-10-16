@@ -243,7 +243,10 @@
 	else
 		msg = "OFFLINE\t[msg]"
 	return msg
+<<<<<<< HEAD
 //CHOMPEdit End
+=======
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /datum/controller/subsystem/proc/state_letter()
 	switch (state)

@@ -133,9 +133,15 @@
 
 /datum/trait/positive/winged_flight/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
+<<<<<<< HEAD
 	add_verb(H,/mob/living/proc/flying_toggle) //CHOMPEdit TGPanel
 	add_verb(H,/mob/living/proc/flying_vore_toggle) //CHOMPEdit TGPanel
 	add_verb(H,/mob/living/proc/start_wings_hovering) //CHOMPEdit TGPanel
+=======
+	add_verb(H, /mob/living/proc/flying_toggle)
+	add_verb(H, /mob/living/proc/flying_vore_toggle)
+	add_verb(H, /mob/living/proc/start_wings_hovering)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /datum/trait/positive/soft_landing
 	name = "Soft Landing"
@@ -162,7 +168,11 @@
 
 /datum/trait/positive/antiseptic_saliva/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
+<<<<<<< HEAD
 	add_verb(H,/mob/living/carbon/human/proc/lick_wounds) //CHOMPEdit TGPanel
+=======
+	add_verb(H, /mob/living/carbon/human/proc/lick_wounds)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /datum/trait/positive/traceur
 	name = "Traceur"
@@ -191,11 +201,19 @@
 
 /datum/trait/positive/weaver/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
+<<<<<<< HEAD
 	add_verb(H,/mob/living/carbon/human/proc/check_silk_amount) //CHOMPEdit TGPanel
 	add_verb(H,/mob/living/carbon/human/proc/toggle_silk_production) //CHOMPEdit TGPanel
 	add_verb(H,/mob/living/carbon/human/proc/weave_structure) //CHOMPEdit TGPanel
 	add_verb(H,/mob/living/carbon/human/proc/weave_item) //CHOMPEdit TGPanel
 	add_verb(H,/mob/living/carbon/human/proc/set_silk_color) //CHOMPEdit TGPanel
+=======
+	add_verb(H, /mob/living/carbon/human/proc/check_silk_amount)
+	add_verb(H, /mob/living/carbon/human/proc/toggle_silk_production)
+	add_verb(H, /mob/living/carbon/human/proc/weave_structure)
+	add_verb(H, /mob/living/carbon/human/proc/weave_item)
+	add_verb(H, /mob/living/carbon/human/proc/set_silk_color)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /datum/trait/positive/aquatic
 	name = "Aquatic"
@@ -208,8 +226,13 @@
 
 /datum/trait/positive/aquatic/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
+<<<<<<< HEAD
 	add_verb(H,/mob/living/carbon/human/proc/water_stealth) //CHOMPEdit TGPanel
 	add_verb(H,/mob/living/carbon/human/proc/underwater_devour) //CHOMPEdit TGPanel
+=======
+	add_verb(H, /mob/living/carbon/human/proc/water_stealth)
+	add_verb(H, /mob/living/carbon/human/proc/underwater_devour)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /datum/trait/positive/cocoon_tf
 	name = "Cocoon Spinner"
@@ -220,7 +243,11 @@
 
 /datum/trait/positive/cocoon_tf/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
+<<<<<<< HEAD
 	add_verb(H,/mob/living/carbon/human/proc/enter_cocoon) //CHOMPEdit TGPanel
+=======
+	add_verb(H, /mob/living/carbon/human/proc/enter_cocoon)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /* //CHOMPedit: We already have our own version of this trait.
 /datum/trait/positive/linguist

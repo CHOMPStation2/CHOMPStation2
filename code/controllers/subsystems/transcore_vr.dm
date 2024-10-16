@@ -126,7 +126,10 @@ SUBSYSTEM_DEF(transcore)
 		if(MC_TICK_CHECK)
 			return
 
+<<<<<<< HEAD
 //CHOMPEdit Begin
+=======
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 /datum/controller/subsystem/transcore/stat_entry(msg)
 	msg = "$:{"
 	msg += "IM:[round(cost_implants,1)]|"
@@ -142,7 +145,10 @@ SUBSYSTEM_DEF(transcore)
 		msg += "DFI:[default_db.implants.len]"
 	msg += "} "
 	return ..()
+<<<<<<< HEAD
 // CHOMPEdit End
+=======
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /datum/controller/subsystem/transcore/Recover()
 	for(var/key in SStranscore.databases)

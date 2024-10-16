@@ -283,13 +283,21 @@
 	if (!rbPDA)
 		rbPDA = new/obj/item/pda/ai(src)
 	rbPDA.set_name_and_job(name,"[modtype] [braintype]")
+<<<<<<< HEAD
 	add_verb(src, /obj/item/pda/ai/verb/cmd_pda_open_ui) //ChompEDIT - TGPanel
+=======
+	add_verb(src, /obj/item/pda/ai/verb/cmd_pda_open_ui)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /mob/living/silicon/robot/proc/setup_communicator()
 	if (!communicator)
 		communicator = new/obj/item/communicator/integrated(src)
 	communicator.register_device(name, "[modtype] [braintype]")
+<<<<<<< HEAD
 	add_verb(src, /obj/item/communicator/integrated/verb/activate) //ChompEDIT - TGPanel
+=======
+	add_verb(src, /obj/item/communicator/integrated/verb/activate)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 //If there's an MMI in the robot, have it ejected when the mob goes away. --NEO
 //Improved /N
@@ -438,7 +446,11 @@
 
 /mob/living/silicon/robot/verb/namepick()
 	set name = "Pick Name"
+<<<<<<< HEAD
 	set category = "Abilities.Settings" //ChompEDIT - TGPanel
+=======
+	set category = "Abilities.Silicon"
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 	if(custom_name)
 		to_chat(usr, "You can't pick another custom name. [isshell(src) ? "" : "Go ask for a name change."]")
@@ -456,7 +468,11 @@
 
 /mob/living/silicon/robot/verb/extra_customization()
 	set name = "Customize Appearance"
+<<<<<<< HEAD
 	set category = "Abilities.Settings" //ChompEDIT - TGPanel
+=======
+	set category = "Abilities.Silicon"
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 	set desc = "Customize your appearance (assuming your chosen sprite allows)."
 
 	if(!sprite_datum || !sprite_datum.has_extra_customization)
@@ -477,7 +493,11 @@
 	return dat
 
 /mob/living/silicon/robot/verb/toggle_lights()
+<<<<<<< HEAD
 	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
+=======
+	set category = "Abilities.Silicon"
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 	set name = "Toggle Lights"
 
 	lights_on = !lights_on
@@ -486,7 +506,11 @@
 	update_icon()
 
 /mob/living/silicon/robot/verb/self_diagnosis_verb()
+<<<<<<< HEAD
 	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
+=======
+	set category = "Abilities.Silicon"
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 	set name = "Self Diagnosis"
 
 	if(!is_component_functioning("diagnosis unit"))
@@ -500,7 +524,11 @@
 
 
 /mob/living/silicon/robot/verb/toggle_component()
+<<<<<<< HEAD
 	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
+=======
+	set category = "Abilities.Silicon"
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 	set name = "Toggle Component"
 	set desc = "Toggle a component, conserving power."
 
@@ -524,7 +552,11 @@
 		to_chat(src, span_red("You enable [C.name]."))
 
 /mob/living/silicon/robot/verb/spark_plug() //So you can still sparkle on demand without violence.
+<<<<<<< HEAD
 	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
+=======
+	set category = "Abilities.Silicon"
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 	set name = "Emit Sparks"
 	to_chat(src, span_filter_notice("You harmlessly spark."))
 	spark_system.start()
@@ -535,7 +567,11 @@
 	// if you have a jetpack, show the internal tank pressure
 	var/obj/item/tank/jetpack/current_jetpack = installed_jetpack()
 	if (current_jetpack)
+<<<<<<< HEAD
 		. += "Internal Atmosphere Info: [current_jetpack.name]"
+=======
+		. = "Internal Atmosphere Info: [current_jetpack.name]"
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 		. += "Tank Pressure: [current_jetpack.air_contents.return_pressure()]"
 
 
@@ -550,11 +586,19 @@
 /mob/living/silicon/robot/proc/show_cell_power()
 	. = list()
 	if(cell)
+<<<<<<< HEAD
 		. += "Charge Left: [round(cell.percent())]%"
 		. += "Cell Rating: [round(cell.maxcharge)]" // Round just in case we somehow get crazy values
 		. += "Power Cell Load: [round(used_power_this_tick)]W"
 	else
 		. += "No Cell Inserted!"
+=======
+		. = "Charge Left: [round(cell.percent())]%"
+		. += "Cell Rating: [round(cell.maxcharge)]" // Round just in case we somehow get crazy values
+		. += "Power Cell Load: [round(used_power_this_tick)]W"
+	else
+		. = "No Cell Inserted!"
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 // function to toggle VTEC once installed
 /mob/living/silicon/robot/proc/toggle_vtec()
@@ -574,7 +618,10 @@
 	if(module)
 		for(var/datum/matter_synth/ms in module.synths)
 			. += "[ms.name]: [ms.energy]/[ms.max_energy]"
+<<<<<<< HEAD
 //ChompEDIT END
+=======
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /mob/living/silicon/robot/restrained()
 	return 0
@@ -861,7 +908,11 @@
 
 /mob/living/silicon/robot/proc/ColorMate()
 	set name = "Recolour Module"
+<<<<<<< HEAD
 	set category = "Abilities.Settings" //ChompEDIT - TGPanel
+=======
+	set category = "Abilities.Silicon"
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 	set desc = "Allows to recolour once."
 
 	if(!has_recoloured)
@@ -1233,7 +1284,11 @@
 
 
 /mob/living/silicon/robot/proc/ResetSecurityCodes()
+<<<<<<< HEAD
 	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
+=======
+	set category = "Abilities.Silicon"
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 	set name = "Reset Identity Codes"
 	set desc = "Scrambles your security and identification codes and resets your current buffers. Unlocks you and permenantly severs you from your AI and the robotics console and will deactivate your camera system."
 
@@ -1242,7 +1297,11 @@
 	if(R)
 		R.UnlinkSelf()
 		to_chat(R, span_filter_notice("Buffers flushed and reset. Camera system shutdown. All systems operational."))
+<<<<<<< HEAD
 		remove_verb(src,/mob/living/silicon/robot/proc/ResetSecurityCodes)  //CHOMPEdit
+=======
+		remove_verb(src, /mob/living/silicon/robot/proc/ResetSecurityCodes)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /mob/living/silicon/robot/proc/SetLockdown(var/state = 1)
 	// They stay locked down if their wire is cut.
@@ -1353,7 +1412,11 @@
 
 /mob/living/silicon/robot/proc/sensor_mode() //Medical/Security HUD controller for borgs
 	set name = "Toggle Sensor Augmentation" //VOREStation Add
+<<<<<<< HEAD
 	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
+=======
+	set category = "Abilities.Silicon"
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 	set desc = "Augment visual feed with internal sensor overlays."
 	sensor_type = !sensor_type //VOREStation Add
 	to_chat(usr, "You [sensor_type ? "enable" : "disable"] your sensors.") //VOREStation Add
@@ -1363,6 +1426,7 @@
 	return
 
 /mob/living/silicon/robot/proc/add_robot_verbs()
+<<<<<<< HEAD
 	add_verb(src,robot_verbs_default) //CHOMPEdit TGPanel
 	add_verb(src,silicon_subsystems) //CHOMPEdit TGPanel
 	if(CONFIG_GET(flag/allow_robot_recolor)) // CHOMPEdit
@@ -1373,6 +1437,18 @@
 	remove_verb(src,silicon_subsystems)  //CHOMPEdit
 	if(CONFIG_GET(flag/allow_robot_recolor)) // CHOMPEdit
 		remove_verb(src,/mob/living/silicon/robot/proc/ColorMate ) //ChompEDIT - probable copypaste error //CHOMPEdit
+=======
+	add_verb(src, robot_verbs_default)
+	add_verb(src, silicon_subsystems)
+	if(config.allow_robot_recolor)
+		add_verb(src, /mob/living/silicon/robot/proc/ColorMate)
+
+/mob/living/silicon/robot/proc/remove_robot_verbs()
+	remove_verb(src, robot_verbs_default)
+	remove_verb(src, silicon_subsystems)
+	if(config.allow_robot_recolor)
+		remove_verb(src, /mob/living/silicon/robot/proc/ColorMate)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 // Uses power from cyborg's cell. Returns 1 on success or 0 on failure.
 // Properly converts using CELLRATE now! Amount is in Joules.

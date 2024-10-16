@@ -20,7 +20,11 @@
 
 /datum/dna/gene/basic/remoteview/activate(var/mob/M, var/connected, var/flags)
 	..(M,connected,flags)
+<<<<<<< HEAD
 	add_verb(M, /mob/living/carbon/human/proc/remoteobserve) //CHOMPEdit
+=======
+	add_verb(M, /mob/living/carbon/human/proc/remoteobserve)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /datum/dna/gene/basic/regenerate
 	name="Regenerate"
@@ -48,7 +52,11 @@
 
 /datum/dna/gene/basic/remotetalk/activate(var/mob/M, var/connected, var/flags)
 	..(M,connected,flags)
+<<<<<<< HEAD
 	add_verb(M, /mob/living/carbon/human/proc/remotesay) //CHOMPEdit
+=======
+	add_verb(M, /mob/living/carbon/human/proc/remotesay)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /datum/dna/gene/basic/morph
 	name="Morph"
@@ -60,7 +68,11 @@
 
 /datum/dna/gene/basic/morph/activate(var/mob/M)
 	..(M)
+<<<<<<< HEAD
 	add_verb(M, /mob/living/carbon/human/proc/morph) //CHOMPEdit
+=======
+	add_verb(M, /mob/living/carbon/human/proc/morph)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /datum/dna/gene/basic/cold_resist
 	name="Cold Resistance"

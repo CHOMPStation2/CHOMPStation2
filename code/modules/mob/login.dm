@@ -89,7 +89,11 @@
 
 	if(cloaked && cloaked_selfimage)
 		client.images += cloaked_selfimage
+<<<<<<< HEAD
 
 	client.init_verbs() //ChompEDIT - TGPanel
 
+=======
+	client.init_verbs()
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 	SEND_SIGNAL(src, COMSIG_MOB_CLIENT_LOGIN, client)

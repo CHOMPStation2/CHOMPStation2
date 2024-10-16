@@ -339,11 +339,19 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 		real_name = name
 	if(!teppi_adult)
 		nutrition = 0
+<<<<<<< HEAD
 		add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
 		add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel
 	else
 		add_verb(src,/mob/living/simple_mob/vore/alienanimals/teppi/proc/produce_offspring) //CHOMPEdit TGPanel
 		add_verb(src,/mob/living/simple_mob/vore/alienanimals/teppi/proc/toggle_producing_offspring) //CHOMPEdit TGPanel
+=======
+		add_verb(src, /mob/living/proc/ventcrawl)
+		add_verb(src, /mob/living/proc/hide)
+	else
+		add_verb(src, /mob/living/simple_mob/vore/alienanimals/teppi/proc/produce_offspring)
+		add_verb(src, /mob/living/simple_mob/vore/alienanimals/teppi/proc/toggle_producing_offspring)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 
 //	teppi_id = rand(1,100000)

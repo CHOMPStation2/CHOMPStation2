@@ -132,7 +132,11 @@ GLOBAL_DATUM_INIT(iconCache, /savefile, new("data/iconCache.sav")) //Cache of ic
 	send_playerinfo()
 	load_database()
 
+<<<<<<< HEAD
 	add_verb(owner,/client/proc/vchat_export_log)  //CHOMPEdit
+=======
+	add_verb(owner, /client/proc/vchat_export_log)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 //Perform DB shenanigans
 /datum/chatOutput/proc/load_database()

@@ -5,7 +5,10 @@
 	This means that this file can be unchecked, along with the other examine files, and can be removed entirely with no effort.
 */
 
+<<<<<<< HEAD
 // # define EXAMINE_PANEL_PADDING "               " //CHOMPRemove
+=======
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /atom/
 	var/description_info = null //Helpful blue text.
@@ -34,7 +37,11 @@
 
 // Quickly adds the boilerplate code to add an image and padding for the image.
 /proc/desc_panel_image(var/icon_state)
+<<<<<<< HEAD
 	return "[icon2html(description_icons[icon_state],usr)]&emsp;" //CHOMPEdit
+=======
+	return "[icon2html(description_icons[icon_state], usr)]&emsp;"
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /mob/living/get_description_fluff()
 	if(flavor_text) //Get flavor text for the green text.
@@ -50,13 +57,18 @@
 /client/var/description_holders[0]
 
 /client/proc/update_description_holders(atom/A, update_antag_info=0)
+<<<<<<< HEAD
 	examine_icon = null //CHOMPEdit
+=======
+	examine_icon = null
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 	description_holders["info"] = A.get_description_info()
 	description_holders["fluff"] = A.get_description_fluff()
 	description_holders["antag"] = (update_antag_info)? A.get_description_antag() : ""
 	description_holders["interactions"] = A.get_description_interaction()
 
 	description_holders["name"] = "[A.name]"
+<<<<<<< HEAD
 	description_holders["icon"] = A //CHOMPEdit
 	description_holders["desc"] = A.desc
 
@@ -97,6 +109,11 @@
 			stat(null,"<font color=[color_a]><b>[description_holders["antag"]]</b></font>") //Red, malicious antag-related text
 */
 
+=======
+	description_holders["icon"] = A
+	description_holders["desc"] = A.desc
+
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 //override examinate verb to update description holders when things are examined
 //mob verbs are faster than object verbs. See http://www.byond.com/forum/?post=1326139&page=2#comment8198716 for why this isn't atom/verb/examine()
 /mob/verb/examinate(atom/A as mob|obj|turf in _validate_atom(A))
@@ -125,7 +142,12 @@
 	if(client)
 		var/is_antag = ((mind && mind.special_role) || isobserver(src)) //ghosts don't have minds
 		client.update_description_holders(A, is_antag)
+<<<<<<< HEAD
 		SSstatpanels.set_examine_tab(client) //CHOMPEdit
+=======
+		SSstatpanels.set_examine_tab(client)
+
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /mob/verb/mob_examine()
 	set name = "Mob Examine"
@@ -201,5 +223,8 @@
 		results = list("You were unable to examine that. Tell a developer!")
 	to_chat(src, jointext(results, "<br>"))
 	update_examine_panel(B)
+<<<<<<< HEAD
 
 // # undef EXAMINE_PANEL_PADDING //CHOMPRemove
+=======
+>>>>>>> c07027136e... Port tg statpanel (#16463)

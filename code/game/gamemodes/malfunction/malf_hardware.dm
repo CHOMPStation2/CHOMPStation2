@@ -8,7 +8,11 @@
 	if(owner && istype(owner))
 		owner.hardware = src
 		if(driver)
+<<<<<<< HEAD
 			add_verb(owner, driver) //CHOMPEdit
+=======
+			add_verb(owner, driver)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /datum/malf_hardware/proc/get_examine_desc()
 	return "It has some sort of hardware attached to its core"

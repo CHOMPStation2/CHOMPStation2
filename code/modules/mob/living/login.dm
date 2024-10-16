@@ -15,6 +15,7 @@
 	AddComponent(/datum/component/character_setup)
 
 	// Vore stuff
+<<<<<<< HEAD
 	add_verb(src,/mob/living/proc/escapeOOC) //CHOMPEdit TGPanel
 	add_verb(src,/mob/living/proc/lick) //CHOMPEdit TGPanel
 	add_verb(src,/mob/living/proc/smell) //CHOMPEdit TGPanel
@@ -26,6 +27,16 @@
 
 	if(!no_vore)
 		add_verb(src,/mob/living/verb/vorebelly_printout) //CHOMPEdit TGPanel
+=======
+	add_verb(src, /mob/living/proc/escapeOOC)
+	add_verb(src, /mob/living/proc/lick)
+	add_verb(src, /mob/living/proc/smell)
+	add_verb(src, /mob/living/proc/switch_scaling)
+	add_verb(src, /mob/living/proc/center_offset)
+
+	if(!no_vore)
+		add_verb(src, /mob/living/proc/vorebelly_printout)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 		if(!vorePanel)
 			AddComponent(/datum/component/vore_panel)
 

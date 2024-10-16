@@ -1462,7 +1462,7 @@ window "rpane"
 		is-visible = false
 		saved-params = "is-checked"
 		text = "Info"
-		command = ".winset \"rpanewindow.left=infowindow\""
+		command = ".winset \"rpanewindow.left=statwindow\""
 		group = "rpanemode"
 		button-type = pushbox
 	elem "mediapanel"
@@ -1519,6 +1519,7 @@ window "ooc_notes"
 		anchor2 = 80,100
 		saved-params = ""
 
+<<<<<<< HEAD
 window "infowindow"
 	elem "infowindow"
 		type = MAIN
@@ -1541,6 +1542,8 @@ window "infowindow"
 		//on-show = ".winset\"rpane.infob.is-visible=true;rpane.browseb.is-visible=true?rpane.infob.pos=130,0:rpane.infob.pos=65,0 rpane.textb.is-visible=true rpane.infob.is-checked=true rpane.rpanewindow.pos=0,30 rpane.rpanewindow.size=0x0 rpane.rpanewindow.left=infowindow\""
 		//on-hide = ".winset\"rpane.infob.is-visible=false;rpane.browseb.is-visible=true?rpane.browseb.is-checked=true rpane.rpanewindow.left=browserwindow:rpane.textb.is-visible=true rpane.rpanewindow.pos=0,30 rpane.rpanewindow.size=0x0 rpane.rpanewindow.left=\""
 
+=======
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 window "text_editor"
 	elem "text_editor"
 		type = MAIN
@@ -1625,4 +1628,22 @@ window "tgui_say"
 		size = 360x30
 		anchor1 = 0,0
 		anchor2 = 0,0
+		saved-params = ""
+
+window "statwindow"
+	elem "statwindow"
+		type = MAIN
+		pos = 281,0
+		size = 640x480
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "pos;size;is-minimized;is-maximized"
+		is-pane = true
+	elem "statbrowser"
+		type = BROWSER
+		pos = 0,0
+		size = 638x477
+		anchor1 = 0,0
+		anchor2 = 100,100
+		is-visible = false
 		saved-params = ""

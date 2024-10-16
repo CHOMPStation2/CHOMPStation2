@@ -8,6 +8,7 @@
 	if(ishuman(src.loc))
 		var/mob/living/carbon/human/H = src.loc
 		if(H.wear_mask == src)
+<<<<<<< HEAD
 			add_verb(H,/mob/living/proc/shred_limb_temp) //CHOMPEdit TGPanel
 		else
 			remove_verb(H,/mob/living/proc/shred_limb_temp) //CHOMPEdit TGPanel
@@ -15,4 +16,13 @@
 
 /obj/item/beartrap/dropped(var/mob/user)
 	remove_verb(user,/mob/living/proc/shred_limb_temp) //CHOMPEdit TGPanel
+=======
+			add_verb(H, /mob/living/proc/shred_limb_temp)
+		else
+			remove_verb(H, /mob/living/proc/shred_limb_temp)
+	..()
+
+/obj/item/beartrap/dropped(var/mob/user)
+	remove_verb(user, /mob/living/proc/shred_limb_temp)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 	..()

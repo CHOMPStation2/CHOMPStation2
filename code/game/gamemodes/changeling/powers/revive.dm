@@ -82,7 +82,11 @@
 	C.set_stat(CONSCIOUS)
 	C.forbid_seeing_deadchat = FALSE
 	C.timeofdeath = null
+<<<<<<< HEAD
 	remove_verb(src,/mob/proc/changeling_revive) //CHOMPEdit TGPanel
+=======
+	remove_verb(src, /mob/proc/changeling_revive)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 	// re-add our changeling powers
 	C.make_changeling()
 

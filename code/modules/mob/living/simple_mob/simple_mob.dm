@@ -182,7 +182,11 @@
 	var/isthermal = 0
 
 /mob/living/simple_mob/Initialize()
+<<<<<<< HEAD
 	remove_verb(src,/mob/verb/observe) //CHOMPEdit TGPanel
+=======
+	remove_verb(src, /mob/verb/observe)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 	health = maxHealth
 
 	if(ID_provided) //VOREStation Edit
@@ -205,8 +209,13 @@
 	if(organ_names)
 		organ_names = GET_DECL(organ_names)
 
+<<<<<<< HEAD
 	if(CONFIG_GET(flag/allow_simple_mob_recolor)) //CHOMPEdit
 		add_verb(src,/mob/living/simple_mob/proc/ColorMate) //CHOMPEdit TGPanel
+=======
+	if(config.allow_simple_mob_recolor)
+		add_verb(src, /mob/living/simple_mob/proc/ColorMate)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 	AddElement(/datum/element/footstep, FOOTSTEP_MOB_SHOE, 1, -6) // CHOMPEdit - Giving them all shoe footsteps FOR NOW until I go through all of them and give appropiate ones
 
@@ -237,7 +246,11 @@
 		voremob_loaded = TRUE
 		init_vore()
 	if(hasthermals)
+<<<<<<< HEAD
 		add_verb(src, /mob/living/simple_mob/proc/hunting_vision) //So that maint preds can see prey through walls, to make it easier to find them. //ChompEDIT
+=======
+		add_verb(src, /mob/living/simple_mob/proc/hunting_vision) //So that maint preds can see prey through walls, to make it easier to find them.
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /mob/living/simple_mob/SelfMove(turf/n, direct, movetime)
 	var/turf/old_turf = get_turf(src)
@@ -297,12 +310,18 @@
 
 	. += ..()
 
+<<<<<<< HEAD
 //CHOMPEdit Begin
+=======
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 /mob/living/simple_mob/get_status_tab_items()
 	. = ..()
 	. += ""
 	. += "Health: [round((health / getMaxHealth()) * 100)]%"
+<<<<<<< HEAD
 //CHOMPEdit End
+=======
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /mob/living/simple_mob/lay_down()
 	..()

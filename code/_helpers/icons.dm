@@ -297,7 +297,10 @@
 		return final_icon
 
 	#undef PROCESS_OVERLAYS_OR_UNDERLAYS
+<<<<<<< HEAD
 //CHOMPEdit End
+=======
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /proc/getIconMask(atom/A)//By yours truly. Creates a dynamic mask for a mob/whatever. /N
 	var/icon/alpha_mask = new(A.icon,A.icon_state)//So we want the default icon and icon state of A.

@@ -172,7 +172,11 @@ var/list/debug_verbs = list (
 
 	if(!check_rights(R_DEBUG)) return
 
+<<<<<<< HEAD
 	add_verb(src,debug_verbs) //CHOMPEdit TGPanel
+=======
+	add_verb(src, debug_verbs)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 	feedback_add_details("admin_verb","mDV") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
@@ -182,7 +186,11 @@ var/list/debug_verbs = list (
 
 	if(!check_rights(R_DEBUG)) return
 
+<<<<<<< HEAD
 	remove_verb(src,debug_verbs) //CHOMPEdit TGPanel
+=======
+	remove_verb(src, debug_verbs)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 	feedback_add_details("admin_verb","hDV") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 

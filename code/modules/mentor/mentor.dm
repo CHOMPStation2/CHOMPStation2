@@ -36,11 +36,19 @@ var/list/mentor_verbs_default = list(
 
 /client/proc/add_mentor_verbs()
 	if(mentorholder)
+<<<<<<< HEAD
 		add_verb(src,mentor_verbs_default) //CHOMPEdit TGPanel
 
 /client/proc/remove_mentor_verbs()
 	if(mentorholder)
 		remove_verb(src,mentor_verbs_default) //CHOMPEdit TGPanel
+=======
+		add_verb(src, mentor_verbs_default)
+
+/client/proc/remove_mentor_verbs()
+	if(mentorholder)
+		remove_verb(src, mentor_verbs_default)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /client/proc/make_mentor()
 	set category = "Admin.Secrets" //CHOMPEdit

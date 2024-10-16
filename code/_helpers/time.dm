@@ -1,8 +1,14 @@
+<<<<<<< HEAD
 //CHOMPEdit Begin
 //Returns the world time in english
 /proc/worldtime2text()
 	return gameTimestamp("hh:mm:ss", world.time)
 //CHOMPEdit End
+=======
+//Returns the world time in english
+/proc/worldtime2text()
+	return gameTimestamp("hh:mm:ss", world.time)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 #define TimeOfGame (get_game_time())
 #define TimeOfTick (TICK_USAGE*0.01*world.tick_lag)

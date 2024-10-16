@@ -153,7 +153,10 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 //called by admin topic
 /obj/effect/statclick/ticket_list/proc/Action()
 	Click()
+<<<<<<< HEAD
 
+=======
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 //
 //TICKET DATUM
 //
@@ -654,9 +657,15 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 		return
 
 	//remove out adminhelp verb temporarily to prevent spamming of admins.
+<<<<<<< HEAD
 	remove_verb(src, /client/verb/adminhelp) //CHOMPEdit
 	spawn(1200)
 		add_verb(src, /client/verb/adminhelp) //CHOMPEdit	// 2 minute cool-down for adminhelps
+=======
+	remove_verb(src, /client/verb/adminhelp)
+	spawn(1200)
+		add_verb(src, /client/verb/adminhelp)	// 2 minute cool-down for adminhelps
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 	feedback_add_details("admin_verb","Adminhelp") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	if(current_ticket)

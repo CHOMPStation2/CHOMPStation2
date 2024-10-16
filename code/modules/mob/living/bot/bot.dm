@@ -588,13 +588,21 @@
 /mob/living/bot/Login()
 	no_vore = FALSE // ROBOT VORE
 	init_vore() // ROBOT VORE
+<<<<<<< HEAD
 	add_verb(src,/mob/proc/insidePanel) //CHOMPEdit TGPanel
+=======
+	add_verb(src, /mob/proc/insidePanel)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 	return ..()
 
 /mob/living/bot/Logout()
 	release_vore_contents()
+<<<<<<< HEAD
 	remove_verb(src,/mob/proc/insidePanel) //CHOMPEdit TGPanel
+=======
+	remove_verb(src, /mob/proc/insidePanel)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 	no_vore = TRUE
 	devourable = FALSE
 	feeding = FALSE

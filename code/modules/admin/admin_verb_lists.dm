@@ -13,7 +13,11 @@ var/list/admin_verbs_default = list(
 //	/client/proc/cmd_mod_say,
 //	/client/proc/deadchat				//toggles deadchat on/off,
 //	/client/proc/toggle_ahelp_sound,
+<<<<<<< HEAD
 	/client/proc/debugstatpanel, //CHOMPEdit
+=======
+	/client/proc/debugstatpanel,
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 	)
 
 var/list/admin_verbs_admin = list(
@@ -516,6 +520,7 @@ var/list/admin_verbs_event_manager = list(
 
 /client/proc/add_admin_verbs()
 	if(holder)
+<<<<<<< HEAD
 		add_verb(src, admin_verbs_default) //CHOMPEdit
 		if(holder.rights & R_BUILDMODE)		add_verb(src, /client/proc/togglebuildmodeself) //CHOMPEdit
 		if(holder.rights & R_ADMIN)			add_verb(src, admin_verbs_admin) //CHOMPEdit
@@ -534,6 +539,26 @@ var/list/admin_verbs_event_manager = list(
 		if(holder.rights & R_SPAWN)			add_verb(src, admin_verbs_spawn) //CHOMPEdit
 		if(holder.rights & R_MOD)			add_verb(src, admin_verbs_mod) //CHOMPEdit
 		if(holder.rights & R_EVENT)			add_verb(src, admin_verbs_event_manager) //CHOMPEdit
+=======
+		add_verb(src, admin_verbs_default)
+		if(holder.rights & R_BUILDMODE)		add_verb(src, /client/proc/togglebuildmodeself)
+		if(holder.rights & R_ADMIN)			add_verb(src, admin_verbs_admin)
+		if(holder.rights & R_BAN)			add_verb(src, admin_verbs_ban)
+		if(holder.rights & R_FUN)			add_verb(src, admin_verbs_fun)
+		if(holder.rights & R_SERVER)		add_verb(src, admin_verbs_server)
+		if(holder.rights & R_DEBUG)
+			add_verb(src, admin_verbs_debug)
+			if(config.debugparanoid && !(holder.rights & R_ADMIN))
+				remove_verb(src, admin_verbs_paranoid_debug)			//Right now it's just callproc but we can easily add others later on.
+		if(holder.rights & R_POSSESS)		add_verb(src, admin_verbs_possess)
+		if(holder.rights & R_PERMISSIONS)	add_verb(src, admin_verbs_permissions)
+		if(holder.rights & R_STEALTH)		add_verb(src, /client/proc/stealth)
+		if(holder.rights & R_REJUVINATE)	add_verb(src, admin_verbs_rejuv)
+		if(holder.rights & R_SOUNDS)		add_verb(src, admin_verbs_sounds)
+		if(holder.rights & R_SPAWN)			add_verb(src, admin_verbs_spawn)
+		if(holder.rights & R_MOD)			add_verb(src, admin_verbs_mod)
+		if(holder.rights & R_EVENT)			add_verb(src, admin_verbs_event_manager)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 //CHOMPEdit Begin
 /client/proc/remove_admin_verbs()
@@ -553,4 +578,7 @@ var/list/admin_verbs_event_manager = list(
 		admin_verbs_spawn,
 		debug_verbs
 		))
+<<<<<<< HEAD
 //CHOMPEdit End
+=======
+>>>>>>> c07027136e... Port tg statpanel (#16463)

@@ -50,7 +50,11 @@ var/obj/effect/lobby_image = new /obj/effect/lobby_image
 	created_for = ckey
 
 	new_player_panel()
+<<<<<<< HEAD
 	client.init_verbs() //ChompEDIT - TGPanel
+=======
+	client.init_verbs()
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 	spawn(40)
 		if(client)
 			handle_privacy_poll()

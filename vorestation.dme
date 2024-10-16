@@ -147,7 +147,11 @@
 #include "code\__defines\sprite_sheets_ch.dm"
 #include "code\__defines\sqlite_defines.dm"
 #include "code\__defines\stat_tracking.dm"
+<<<<<<< HEAD
 #include "code\__defines\statpanel_ch.dm"
+=======
+#include "code\__defines\statpanel.dm"
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 #include "code\__defines\subsystems.dm"
 #include "code\__defines\supply.dm"
 #include "code\__defines\targeting.dm"
@@ -229,7 +233,11 @@
 #include "code\_helpers\typelists.dm"
 #include "code\_helpers\unsorted.dm"
 #include "code\_helpers\unsorted_vr.dm"
+<<<<<<< HEAD
 #include "code\_helpers\verbs_ch.dm"
+=======
+#include "code\_helpers\verbs.dm"
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 #include "code\_helpers\view.dm"
 #include "code\_helpers\visual_filters.dm"
 #include "code\_helpers\widelists_ch.dm"
@@ -401,7 +409,11 @@
 #include "code\controllers\subsystems\speech_controller_ch.dm"
 #include "code\controllers\subsystems\sqlite.dm"
 #include "code\controllers\subsystems\SSvote.dm"
+<<<<<<< HEAD
 #include "code\controllers\subsystems\statpanel_ch.dm"
+=======
+#include "code\controllers\subsystems\statpanel.dm"
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 #include "code\controllers\subsystems\sun.dm"
 #include "code\controllers\subsystems\supply.dm"
 #include "code\controllers\subsystems\tgui.dm"
@@ -420,7 +432,11 @@
 #include "code\controllers\subsystems\processing\fastprocess.dm"
 #include "code\controllers\subsystems\processing\instruments.dm"
 #include "code\controllers\subsystems\processing\obj.dm"
+<<<<<<< HEAD
 #include "code\controllers\subsystems\processing\obj_tab_items_ch.dm"
+=======
+#include "code\controllers\subsystems\processing\obj_tab_items.dm"
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 #include "code\controllers\subsystems\processing\processing.dm"
 #include "code\controllers\subsystems\processing\projectiles.dm"
 #include "code\controllers\subsystems\processing\turfs.dm"
@@ -478,9 +494,13 @@
 #include "code\datums\autolathe\tools.dm"
 #include "code\datums\autolathe\tools_vr.dm"
 #include "code\datums\components\_component.dm"
+<<<<<<< HEAD
 #include "code\datums\components\connect_containers_ch.dm"
 #include "code\datums\components\connect_mob_behalf_ch.dm"
 #include "code\datums\components\connect_range_ch.dm"
+=======
+#include "code\datums\components\connect_mob_behalf.dm"
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 #include "code\datums\components\material_container.dm"
 #include "code\datums\components\overlay_lighting.dm"
 #include "code\datums\components\recursive_move.dm"

@@ -289,7 +289,11 @@
 		H.ability_master = new /obj/screen/movable/ability_master/shadekin(H)
 	for(var/datum/power/shadekin/P in shadekin_ability_datums)
 		if(!(P.verbpath in H.verbs))
+<<<<<<< HEAD
 			add_verb(H,P.verbpath)  //CHOMPEdit
+=======
+			add_verb(H, P.verbpath)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 			H.ability_master.add_shadekin_ability(
 					object_given = H,
 					verb_given = P.verbpath,

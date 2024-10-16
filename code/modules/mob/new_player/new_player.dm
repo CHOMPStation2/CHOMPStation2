@@ -22,6 +22,7 @@
 
 /mob/new_player/New()
 	mob_list += src
+<<<<<<< HEAD
 	add_verb(src,/mob/proc/insidePanel) //CHOMPEdit TGPanel
 	//CHOMPEdit Begin
 	if(length(GLOB.newplayer_start))
@@ -30,6 +31,10 @@
 		forceMove(locate(1,1,1))
 	//CHOMPEdit End
 	flags |= ATOM_INITIALIZED // Explicitly don't use Initialize().  New players join super early and use New() //CHOMPEdit
+=======
+	add_verb(src, /mob/proc/insidePanel)
+	initialized = TRUE // Explicitly don't use Initialize().  New players join super early and use New()
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 
 /mob/new_player/Destroy()
@@ -128,15 +133,23 @@
 	panel.open()
 	return
 
+<<<<<<< HEAD
 //CHOMPEdit Begin
+=======
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 /mob/new_player/get_status_tab_items()
 	. = ..()
 	. += ""
 
 	. += "Game Mode: [SSticker.hide_mode ? "Secret" : "[config.mode_names[master_mode]]"]"
 
+<<<<<<< HEAD
 	//if(SSvote.mode)
 	//	. += "Vote: [capitalize(SSvote.mode)] Time Left: [SSvote.time_remaining] s"
+=======
+	// if(SSvote.mode)
+	// 	. += "Vote: [capitalize(SSvote.mode)] Time Left: [SSvote.time_remaining] s"
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 	if(SSticker.current_state == GAME_STATE_INIT)
 		. += "Time To Start: Server Initializing"
@@ -160,7 +173,10 @@
 				. += "[player.key] [player.ready ? "(Playing as: [refJob ? refJob.title : "Unknown"])" : null]"
 			totalPlayers++
 			if(player.ready)totalPlayersReady++
+<<<<<<< HEAD
 //CHOMPEdit End
+=======
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /mob/new_player/Topic(href, href_list[])
 	if(!client)	return 0
@@ -210,8 +226,13 @@
 				client.prefs.real_name = random_name(client.prefs.identifying_gender)
 			observer.real_name = client.prefs.real_name
 			observer.name = observer.real_name
+<<<<<<< HEAD
 			if(!client.holder && !CONFIG_GET(flag/antag_hud_allowed))           // For new ghosts we remove the verb from even showing up if it's not allowed. // CHOMPEdit
 				remove_verb(observer, /mob/observer/dead/verb/toggle_antagHUD) //CHOMPEdit        // Poor guys, don't know what they are missing!
+=======
+			if(!client.holder && !config.antag_hud_allowed)           // For new ghosts we remove the verb from even showing up if it's not allowed.
+				remove_verb(observer, /mob/observer/dead/verb/toggle_antagHUD)        // Poor guys, don't know what they are missing!
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 			observer.key = key
 			observer.set_respawn_timer(time_till_respawn()) // Will keep their existing time if any, or return 0 and pass 0 into set_respawn_timer which will use the defaults
 			observer.client.init_verbs()
@@ -631,6 +652,7 @@
 
 	character.client.init_verbs() // init verbs for the late join
 
+	character.client.init_verbs()
 	qdel(src) // Delete new_player mob
 
 /mob/new_player/proc/AnnounceCyborg(var/mob/living/character, var/rank, var/join_message, var/channel, var/zlevel)

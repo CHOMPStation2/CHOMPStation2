@@ -37,7 +37,11 @@
 		//ADMIN THINGS//
 		////////////////
 	/// hides the byond verb panel as we use our own custom version
+<<<<<<< HEAD
 	show_verb_panel = FALSE //CHOMPEdit
+=======
+	show_verb_panel = FALSE
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 	///Contains admin info. Null if client is not an admin.
 	var/datum/admins/holder = null
 	var/datum/admins/deadmin_holder = null
@@ -123,7 +127,10 @@
 
 	// Runechat messages
 	var/list/seen_messages
+<<<<<<< HEAD
 	//CHOMPEdit Begin
+=======
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 	/// our current tab
 	var/stat_tab
 
@@ -141,7 +148,10 @@
 	var/list/misc_cache = list()
 
 	var/atom/examine_icon //Holder for examine icon, useful for statpanel
+<<<<<<< HEAD
 	//CHOMPEdit End
+=======
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 
 	//Hide top bars
 	var/fullscreen = FALSE

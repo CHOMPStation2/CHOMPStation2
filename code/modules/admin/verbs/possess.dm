@@ -47,6 +47,11 @@
 	set desc = "Give this guy possess/release verbs"
 	set category = "Debug"
 	set name = "Give Possessing Verbs"
+<<<<<<< HEAD
 	add_verb(M, /proc/possess) //CHOMPEdit
 	add_verb(M, /proc/release) //CHOMPEdit
+=======
+	add_verb(M, /proc/possess)
+	add_verb(M, /proc/release)
+>>>>>>> c07027136e... Port tg statpanel (#16463)
 	feedback_add_details("admin_verb","GPV") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
