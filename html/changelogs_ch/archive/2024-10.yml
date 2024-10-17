@@ -195,3 +195,9 @@
   - maptweak: Medical has now two scanners and two sleepers
   - rscadd: Added "salvage items" that can be found with mobs or in specific PoIs
   - balance: Reduced the amount of guns and weapons found in exploration Pois
+2024-10-17:
+  Etheo:
+  - bugfix: Fixed Marish to be better and more lore accurate.
+  tacoguy7765093:
+  - rscadd: Added a new outsider pod called SecondLifeBar with nearly every scene
+      tool.
