@@ -7,7 +7,7 @@
 /datum/map_template/admin_ships/admin
 	name = "ADM Ship - Administrator ship (New Z)"
 	desc = "A NT Administration ship."
-	mappath = 'adminship.dmm'
+	mappath = "maps/yw/submaps/admin_ships/adminship.dmm"
 
 // The shuttle's area(s)
 /area/ship/adminships
