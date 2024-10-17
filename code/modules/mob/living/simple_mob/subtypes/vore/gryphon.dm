@@ -158,8 +158,8 @@
 	B.emote_lists[DM_DIGEST] = list("")
 
 /mob/living/simple_mob/vore/gryphon/do_special_attack(atom/A)	//Mostly copied from cryptdrake.dm
-	admin_notice("Starting special attack!")
 	set waitfor = FALSE
+	admin_notice("Starting special attack!")
 	if(!isliving(A))
 		return FALSE
 	var/mob/living/L = A
