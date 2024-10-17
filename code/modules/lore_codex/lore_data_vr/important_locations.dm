@@ -119,7 +119,7 @@
 /datum/lore/codex/page/virgo_central_command/add_content()
 	name = "Virgo Central Command (Colony)"
 	keywords += list("Virgo Central Command")
-	data = "<i>This page has been ripped out. Odd.</i>"
+	data = span_italics("This page has been ripped out. Odd.")
 	/*data = "The Virgo Central Command is a large facility on [quick_link("Virgo-3B")] which handles the loading and \
 	unloading, refuelling, and general maintenance of large spacecraft. The main structure is owned by \
 	[quick_link("NanoTrasen")], but individual offices, docking/loading bays, and warehouses are often leased to individuals \

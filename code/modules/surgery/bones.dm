@@ -90,8 +90,8 @@
 		user.balloon_alert_visible("Sets the bone in place.", "Bone set in place.") // CHOMPEdit - Balloon alert
 		affected.stage = 2
 	else
-		user.visible_message("[user] sets the bone in [target]'s [affected.name]<span class='danger'> in the WRONG place with \the [tool].</span>", \
-			"You set the bone in [target]'s [affected.name]<span class='danger'> in the WRONG place with \the [tool].</span>")
+		user.visible_message("[user] sets the bone in [target]'s [affected.name] " + span_danger("in the WRONG place with \the [tool]."), \
+			"You set the bone in [target]'s [affected.name] " + span_danger("in the WRONG place with \the [tool]."))
 		user.balloon_alert_visible("Sets the bone in the WRONG place.", "Bone set in the WRONG place.") // CHOMPEdit - Balloon alert
 		affected.fracture()
 
