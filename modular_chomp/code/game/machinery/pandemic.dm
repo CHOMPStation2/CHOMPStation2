@@ -292,6 +292,13 @@
 	data["resistances"] = resistances
 
 /obj/machinery/computer/pandemic/proc/eject_beaker()
+	set name = "Eject Beaker"
+	set category = "Object"
+	set src in oview(1)
+
+	if(usr.stat != 0)
+		return
+
 	beaker.forceMove(loc)
 	beaker = null
 	icon_state = "pandemic0"
@@ -355,7 +362,7 @@
 	if(I.has_tool_quality(TOOL_SCREWDRIVER))
 		eject_beaker()
 		return
-	if(istype(I, /obj/item/reagent_containers) && I.is_open_container())
+	if(istype(I, /obj/item/reagent_containers/glass) && I.is_open_container())
 		if(stat & (NOPOWER|BROKEN))
 			return
 		if(beaker)
@@ -363,7 +370,7 @@
 			return
 
 		beaker = I
-		beaker.forceMove(src)
+		beaker.loc = src
 		to_chat(usr, span_notice("You add the beaker to the machine."))
 		SStgui.update_uis(src, TRUE)
 		icon_state = "pandemic1"

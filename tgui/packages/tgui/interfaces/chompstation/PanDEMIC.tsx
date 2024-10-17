@@ -1,4 +1,4 @@
-import { useBackend } from '../backend';
+import { useBackend } from '../../backend';
 import {
   Button,
   Flex,
@@ -8,8 +8,8 @@ import {
   Stack,
   Table,
   Tabs,
-} from '../components';
-import { Window } from '../layouts';
+} from '../../components';
+import { Window } from '../../layouts';
 
 type Data = {
   beakerLoaded: boolean;
@@ -41,7 +41,7 @@ type Symptom = {
   transmissibility: number;
 };
 
-const PanDEMIC = () => {
+export const PanDEMIC = () => {
   const { data } = useBackend<Data>();
   const {
     beakerLoaded,
@@ -295,5 +295,3 @@ const ResistancesSection = () => {
     </Stack.Item>
   );
 };
-
-export default PanDEMIC;
