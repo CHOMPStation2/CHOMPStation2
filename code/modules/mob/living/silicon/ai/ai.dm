@@ -99,12 +99,12 @@ var/list/ai_verbs_default = list(
 	can_be_antagged = TRUE
 
 /mob/living/silicon/ai/proc/add_ai_verbs()
-	add_verb(src,ai_verbs_default) //CHOMPEdit TGPanel
-	add_verb(src,silicon_subsystems) //CHOMPEdit TGPanel
+	add_verb(src, ai_verbs_default)
+	add_verb(src, silicon_subsystems)
 
 /mob/living/silicon/ai/proc/remove_ai_verbs()
-	remove_verb(src,ai_verbs_default)  //CHOMPEdit
-	remove_verb(src,silicon_subsystems)  //CHOMPEdit
+	remove_verb(src, ai_verbs_default)
+	remove_verb(src, silicon_subsystems)
 
 /mob/living/silicon/ai/New(loc, var/datum/ai_laws/L, var/obj/item/mmi/B, var/safety = 0)
 	announcement = new()
@@ -243,7 +243,6 @@ var/list/ai_verbs_default = list(
 
 	return ..()
 
-//ChompEDIT START - TGpanel
 /mob/living/silicon/ai/get_status_tab_items()
 	. = ..()
 	. += ""
@@ -264,7 +263,6 @@ var/list/ai_verbs_default = list(
 		. += "AI shell beacons detected: [LAZYLEN(GLOB.available_ai_shells)]" //Count of total AI shells
 	else
 		. += "Systems nonfunctional"
-//ChompEDIT END
 
 /mob/living/silicon/ai/proc/setup_icon()
 	var/file = file2text("config/custom_sprites.txt")

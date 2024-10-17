@@ -165,12 +165,12 @@
 	H.add_language("Cortical Link")
 
 	if(host.stat == 2)
-		add_verb(H,/mob/living/carbon/human/proc/jumpstart) //CHOMPEdit TGPanel
+		add_verb(H, /mob/living/carbon/human/proc/jumpstart)
 
-	add_verb(H,/mob/living/carbon/human/proc/psychic_whisper) //CHOMPEdit TGPanel
-	add_verb(H,/mob/living/carbon/human/proc/tackle) //CHOMPEdit TGPanel
+	add_verb(H, /mob/living/carbon/human/proc/psychic_whisper)
+	add_verb(H, /mob/living/carbon/human/proc/tackle)
 	if(antag)
-		add_verb(H,/mob/living/carbon/proc/spawn_larvae) //CHOMPEdit TGPanel
+		add_verb(H, /mob/living/carbon/proc/spawn_larvae)
 
 	if(H.client)
 		H.ghostize(0)
@@ -331,10 +331,10 @@
 
 			controlling = 1
 
-			add_verb(host,/mob/living/carbon/proc/release_control)  //CHOMPEdit
-			add_verb(host,/mob/living/carbon/proc/punish_host)  //CHOMPEdit
+			add_verb(host, /mob/living/carbon/proc/release_control)
+			add_verb(host, /mob/living/carbon/proc/punish_host)
 			if(antag)
-				add_verb(host,/mob/living/carbon/proc/spawn_larvae)  //CHOMPEdit
+				add_verb(host, /mob/living/carbon/proc/spawn_larvae)
 
 			return
 
@@ -347,7 +347,7 @@
 		to_chat(usr, "Your host is already alive.")
 		return
 
-	remove_verb(src,/mob/living/carbon/human/proc/jumpstart) //CHOMPEdit TGPanel
+	remove_verb(src, /mob/living/carbon/human/proc/jumpstart)
 	visible_message(span_warning("With a hideous, rattling moan, [src] shudders back to life!"))
 
 	rejuvenate()

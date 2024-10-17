@@ -63,8 +63,8 @@
 		humanform = H
 		updatehealth()
 		refactory = locate() in humanform.internal_organs
-		add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
-		add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel
+		add_verb(src, /mob/living/proc/ventcrawl)
+		add_verb(src, /mob/living/proc/hide)
 	else
 		update_icon()
 
@@ -99,12 +99,10 @@
 /mob/living/simple_mob/protean_blob/isSynthetic()
 	return TRUE // yup
 
-//ChompEDIT START - TGPanel
-/mob/living/simple_mob/protean_blob/get_status_tab_items()
+/mob/living/simple_mob/protean_blob/update_misc_tabs()
 	. = ..()
 	if(humanform)
-		humanform.species.update_misc_tabs(humanform)
-//ChompEDIT END
+		humanform.species.update_misc_tabs(src)
 
 /mob/living/simple_mob/protean_blob/update_icon()
 	if(humanform)
@@ -325,10 +323,6 @@ var/global/list/disallowed_protean_accessories = list(
 		to_chat(src,span_warning("You can't change forms while inside something."))
 		return
 
-	var/panel_was_up = FALSE
-	if(client?.statpanel == "Protean")
-		panel_was_up = TRUE
-
 	handle_grasp() //It's possible to blob out before some key parts of the life loop. This results in things getting dropped at null. TODO: Fix the code so this can be done better.
 	remove_micros(src, src) //Living things don't fare well in roblobs.
 	if(buckled)
@@ -414,9 +408,6 @@ var/global/list/disallowed_protean_accessories = list(
 	//We can still speak our languages!
 	blob.languages = languages.Copy()
 
-	//Flip them to the protean panel
-	if(panel_was_up)
-		client?.statpanel = "Protean"
 
 	//Return our blob in case someone wants it
 	return blob
@@ -435,10 +426,6 @@ var/global/list/disallowed_protean_accessories = list(
 	if(!force && !isturf(blob.loc))
 		to_chat(blob,span_warning("You can't change forms while inside something."))
 		return
-
-	var/panel_was_up = FALSE
-	if(client?.statpanel == "Protean")
-		panel_was_up = TRUE
 
 	if(buckled)
 		buckled.unbuckle_mob()
@@ -498,10 +485,6 @@ var/global/list/disallowed_protean_accessories = list(
 
 	//Get rid of friend blob
 	qdel(blob)
-
-	//Flip them to the protean panel
-	if(panel_was_up)
-		client?.statpanel = "Protean"
 
 	//Return ourselves in case someone wants it
 	return src

@@ -207,8 +207,8 @@ Works together with spawning an observer, noted above.
 			B.update()
 		if(ghost.client)
 			ghost.client.time_died_as_mouse = ghost.timeofdeath
-		if(ghost.client && !ghost.client.holder && !CONFIG_GET(flag/antag_hud_allowed))		// For new ghosts we remove the verb from even showing up if it's not allowed. // CHOMPEdit
-			remove_verb(ghost,/mob/observer/dead/verb/toggle_antagHUD	) // Poor guys, don't know what they are missing! //CHOMPEdit
+		if(ghost.client && !ghost.client.holder && !CONFIG_GET(flag/antag_hud_allowed))		// For new ghosts we remove the verb from even showing up if it's not allowed.
+			remove_verb(ghost, /mob/observer/dead/verb/toggle_antagHUD)	// Poor guys, don't know what they are missing!
 		return ghost
 
 /*
@@ -249,7 +249,6 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 /mob/observer/dead/can_use_hands()	return 0
 /mob/observer/dead/is_active()		return 0
 
-//ChompEDIT START
 /mob/observer/dead/get_status_tab_items()
 	. = ..()
 	if(emergency_shuttle)
@@ -257,7 +256,6 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		if(eta_status)
 			. += ""
 			. += "[eta_status]"
-//ChompEDIT END
 
 /mob/observer/dead/verb/reenter_corpse()
 	set category = "Ghost.Game" //CHOMPEdit
@@ -326,13 +324,8 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	set name = "Toggle AntagHUD"
 	set desc = "Toggles AntagHUD allowing you to see who is the antagonist"
 
-<<<<<<< HEAD
 	if(!CONFIG_GET(flag/antag_hud_allowed) && !client.holder) // CHOMPEdit
-		to_chat(src, span_filter_notice("[span_red("Admins have disabled this for this round.")]"))
-=======
-	if(!config.antag_hud_allowed && !client.holder)
 		to_chat(src, span_filter_notice(span_red("Admins have disabled this for this round.")))
->>>>>>> b594520a74... next set of spans (#16434)
 		return
 	if(jobban_isbanned(src, JOB_ANTAGHUD))
 		to_chat(src, span_filter_notice(span_red(span_bold("You have been banned from using this feature"))))
@@ -741,13 +734,8 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	set name = "Write in blood"
 	set desc = "If the round is sufficiently spooky, write a short message in blood on the floor or a wall. Remember, no IC in OOC or OOC in IC."
 
-<<<<<<< HEAD
 	if(!CONFIG_GET(flag/cult_ghostwriter)) // CHOMPEdit
-		to_chat(src, span_filter_notice("[span_red("That verb is not currently permitted.")]"))
-=======
-	if(!(config.cult_ghostwriter))
 		to_chat(src, span_filter_notice(span_red("That verb is not currently permitted.")))
->>>>>>> b594520a74... next set of spans (#16434)
 		return
 
 	if (!src.stat)
@@ -831,15 +819,9 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 /mob/observer/dead/proc/manifest(mob/user)
 	is_manifest = TRUE
-<<<<<<< HEAD
-	add_verb(src,/mob/observer/dead/proc/toggle_visibility) //CHOMPEdit TGPanel
-	add_verb(src,/mob/observer/dead/proc/ghost_whisper) //CHOMPEdit TGPanel
-	to_chat(src, span_filter_notice("[span_purple("As you are now in the realm of the living, you can whisper to the living with the <b>Spectral Whisper</b> verb, inside the IC tab.")]"))
-=======
 	add_verb(src, /mob/observer/dead/proc/toggle_visibility)
 	add_verb(src, /mob/observer/dead/proc/ghost_whisper)
 	to_chat(src, span_filter_notice(span_purple("As you are now in the realm of the living, you can whisper to the living with the " + span_bold("Spectral Whisper") + " verb, inside the IC tab.")))
->>>>>>> b594520a74... next set of spans (#16434)
 	if(plane != PLANE_WORLD)
 		user.visible_message( \
 			span_warning("\The [user] drags ghost, [src], to our plane of reality!"), \

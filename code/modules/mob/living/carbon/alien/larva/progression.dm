@@ -1,8 +1,8 @@
-/mob/living/carbon/alien/larva/get_status_tab_items() //Specified where progression is at, doesn't work right for some things in carbon/alien //ChompEDIT - TGPanel
+/mob/living/carbon/alien/larva/get_status_tab_items() //Specified where progression stats come from, because for some reason it doesn't work right in carbon/alien
 	. = ..()
-	if(.) //ChompEDIT - TGPanel
+	if(.)
 		. += ""
-		. += "Larva Growth: [round(amount_grown)]/[max_grown]" //ChompEDIT - TGPanel
+		. += "Larva Growth: [round(amount_grown)]/[max_grown]"
 
 /mob/living/carbon/alien/larva/confirm_evolution()
 

@@ -242,13 +242,19 @@
 		soulgem = new(src)
 	//CHOMPAdd End
 
+	/* CHOMPRemove Start, handled with the vore_active var
+	if(!IsAdvancedToolUser())
+		add_verb(src, /mob/living/simple_mob/proc/animal_nom)
+		add_verb(src, /mob/living/proc/shred_limb)
+	*/// CHOMPRemove End
+
 	if(LAZYLEN(vore_organs))
 		return
 
 	// Since they have bellies, add verbs to toggle settings on them.
-	add_verb(src,/mob/living/simple_mob/proc/toggle_digestion) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/simple_mob/proc/toggle_fancygurgle) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/proc/vertical_nom) //CHOMPEdit TGPanel
+	add_verb(src, /mob/living/simple_mob/proc/toggle_digestion)
+	add_verb(src, /mob/living/simple_mob/proc/toggle_fancygurgle)
+	add_verb(src, /mob/living/proc/vertical_nom)
 
 	//A much more detailed version of the default /living implementation
 	var/obj/belly/B = new /obj/belly(src)

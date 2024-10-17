@@ -283,13 +283,13 @@
 	if (!rbPDA)
 		rbPDA = new/obj/item/pda/ai(src)
 	rbPDA.set_name_and_job(name,"[modtype] [braintype]")
-	add_verb(src, /obj/item/pda/ai/verb/cmd_pda_open_ui) //ChompEDIT - TGPanel
+	add_verb(src, /obj/item/pda/ai/verb/cmd_pda_open_ui)
 
 /mob/living/silicon/robot/proc/setup_communicator()
 	if (!communicator)
 		communicator = new/obj/item/communicator/integrated(src)
 	communicator.register_device(name, "[modtype] [braintype]")
-	add_verb(src, /obj/item/communicator/integrated/verb/activate) //ChompEDIT - TGPanel
+	add_verb(src, /obj/item/communicator/integrated/verb/activate)
 
 //If there's an MMI in the robot, have it ejected when the mob goes away. --NEO
 //Improved /N
@@ -477,7 +477,7 @@
 	return dat
 
 /mob/living/silicon/robot/verb/toggle_lights()
-	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
+	set category = "Abilities.Silicon"
 	set name = "Toggle Lights"
 
 	lights_on = !lights_on
@@ -486,7 +486,7 @@
 	update_icon()
 
 /mob/living/silicon/robot/verb/self_diagnosis_verb()
-	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
+	set category = "Abilities.Silicon"
 	set name = "Self Diagnosis"
 
 	if(!is_component_functioning("diagnosis unit"))
@@ -500,7 +500,7 @@
 
 
 /mob/living/silicon/robot/verb/toggle_component()
-	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
+	set category = "Abilities.Silicon"
 	set name = "Toggle Component"
 	set desc = "Toggle a component, conserving power."
 
@@ -524,7 +524,7 @@
 		to_chat(src, span_red("You enable [C.name]."))
 
 /mob/living/silicon/robot/verb/spark_plug() //So you can still sparkle on demand without violence.
-	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
+	set category = "Abilities.Silicon"
 	set name = "Emit Sparks"
 	to_chat(src, span_filter_notice("You harmlessly spark."))
 	spark_system.start()
@@ -532,6 +532,7 @@
 // this function displays jetpack pressure in the stat panel
 //ChompEDIT START - TGPanel
 /mob/living/silicon/robot/proc/show_jetpack_pressure()
+	. = list()
 	// if you have a jetpack, show the internal tank pressure
 	var/obj/item/tank/jetpack/current_jetpack = installed_jetpack()
 	if (current_jetpack)
@@ -574,7 +575,6 @@
 	if(module)
 		for(var/datum/matter_synth/ms in module.synths)
 			. += "[ms.name]: [ms.energy]/[ms.max_energy]"
-//ChompEDIT END
 
 /mob/living/silicon/robot/restrained()
 	return 0
@@ -1233,7 +1233,7 @@
 
 
 /mob/living/silicon/robot/proc/ResetSecurityCodes()
-	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
+	set category = "Abilities.Silicon"
 	set name = "Reset Identity Codes"
 	set desc = "Scrambles your security and identification codes and resets your current buffers. Unlocks you and permenantly severs you from your AI and the robotics console and will deactivate your camera system."
 
@@ -1242,7 +1242,7 @@
 	if(R)
 		R.UnlinkSelf()
 		to_chat(R, span_filter_notice("Buffers flushed and reset. Camera system shutdown. All systems operational."))
-		remove_verb(src,/mob/living/silicon/robot/proc/ResetSecurityCodes)  //CHOMPEdit
+		remove_verb(src, /mob/living/silicon/robot/proc/ResetSecurityCodes)
 
 /mob/living/silicon/robot/proc/SetLockdown(var/state = 1)
 	// They stay locked down if their wire is cut.
@@ -1353,7 +1353,7 @@
 
 /mob/living/silicon/robot/proc/sensor_mode() //Medical/Security HUD controller for borgs
 	set name = "Toggle Sensor Augmentation" //VOREStation Add
-	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
+	set category = "Abilities.Silicon"
 	set desc = "Augment visual feed with internal sensor overlays."
 	sensor_type = !sensor_type //VOREStation Add
 	to_chat(usr, "You [sensor_type ? "enable" : "disable"] your sensors.") //VOREStation Add
@@ -1363,16 +1363,16 @@
 	return
 
 /mob/living/silicon/robot/proc/add_robot_verbs()
-	add_verb(src,robot_verbs_default) //CHOMPEdit TGPanel
-	add_verb(src,silicon_subsystems) //CHOMPEdit TGPanel
+	add_verb(src, robot_verbs_default)
+	add_verb(src, silicon_subsystems)
 	if(CONFIG_GET(flag/allow_robot_recolor)) // CHOMPEdit
-		add_verb(src,/mob/living/silicon/robot/proc/ColorMate) //CHOMPEdit TGPanel
+		add_verb(src, /mob/living/silicon/robot/proc/ColorMate)
 
 /mob/living/silicon/robot/proc/remove_robot_verbs()
-	remove_verb(src,robot_verbs_default)  //CHOMPEdit
-	remove_verb(src,silicon_subsystems)  //CHOMPEdit
+	remove_verb(src, robot_verbs_default)
+	remove_verb(src, silicon_subsystems)
 	if(CONFIG_GET(flag/allow_robot_recolor)) // CHOMPEdit
-		remove_verb(src,/mob/living/silicon/robot/proc/ColorMate ) //ChompEDIT - probable copypaste error //CHOMPEdit
+		remove_verb(src, /mob/living/silicon/robot/proc/ColorMate)
 
 // Uses power from cyborg's cell. Returns 1 on success or 0 on failure.
 // Properly converts using CELLRATE now! Amount is in Joules.

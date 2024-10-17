@@ -2,8 +2,8 @@
 	set name = "Adminverbs - Hide Most"
 	set category = "Admin.Misc" //CHOMPEdit
 
-	remove_verb(src, list(/client/proc/hide_most_verbs,admin_verbs_hideable)) //CHOMPEdit TGPanel
-	add_verb(src,/client/proc/show_verbs) //CHOMPEdit TGPanel
+	remove_verb(src, list(/client/proc/hide_most_verbs, admin_verbs_hideable))
+	add_verb(src, /client/proc/show_verbs)
 
 	to_chat(src, span_filter_system(span_interface("Most of your adminverbs have been hidden.")))
 	feedback_add_details("admin_verb","HMV") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
@@ -14,7 +14,7 @@
 	set category = "Admin.Misc" //CHOMPEdit
 
 	remove_admin_verbs()
-	add_verb(src, /client/proc/show_verbs) //CHOMPEdit
+	add_verb(src, /client/proc/show_verbs)
 
 	to_chat(src, span_filter_system(span_interface("Almost all of your adminverbs have been hidden.")))
 	feedback_add_details("admin_verb","TAVVH") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
@@ -24,7 +24,7 @@
 	set name = "Adminverbs - Show"
 	set category = "Admin.Misc" //CHOMPEdit
 
-	remove_verb(src, /client/proc/show_verbs) //CHOMPEdit
+	remove_verb(src, /client/proc/show_verbs)
 	add_admin_verbs()
 
 	to_chat(src, span_filter_adminlog(span_interface("All of your adminverbs are now visible.")))
@@ -32,7 +32,7 @@
 
 
 /client/proc/admin_ghost()
-	set category = "Admin.Game" //CHOMPEdit
+	set category = "Admin.Game"
 	set name = "Aghost"
 	if(!holder)	return
 
@@ -76,7 +76,7 @@
 			ghost = body.ghostize(1)
 			ghost.admin_ghosted = 1
 			log_and_message_admins("[key_name(src)] admin-ghosted.") // CHOMPEdit - Add logging.
-		init_verbs() //CHOMPEdit
+		init_verbs()
 		if(body)
 			body.teleop = ghost
 			if(!body.key)
@@ -391,7 +391,7 @@
 		log_admin("[src] re-admined themself.")
 		message_admins("[src] re-admined themself.", 1)
 		to_chat(src, span_filter_system(span_interface("You now have the keys to control the planet, or at least a small space station")))
-		remove_verb(src,/client/proc/readmin_self) //CHOMPEdit TGPanel
+		remove_verb(src, /client/proc/readmin_self)
 
 /client/proc/deadmin_self()
 	set name = "De-admin self"
@@ -403,7 +403,7 @@
 			message_admins("[src] deadmined themself.", 1)
 			deadmin()
 			to_chat(src, span_filter_system(span_interface("You are now a normal player.")))
-			add_verb(src,/client/proc/readmin_self) //CHOMPEdit TGPanel
+			add_verb(src, /client/proc/readmin_self)
 	feedback_add_details("admin_verb","DAS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/toggle_log_hrefs()

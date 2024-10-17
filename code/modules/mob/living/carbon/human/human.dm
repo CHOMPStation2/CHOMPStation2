@@ -68,7 +68,6 @@
 		dna.real_name = real_name
 		sync_organ_dna()
 
-	//verbs |= /mob/living/proc/toggle_selfsurgery //VOREStation Removal
 	AddComponent(/datum/component/personal_crafting)
 
 /mob/living/carbon/human/Destroy()
@@ -83,7 +82,6 @@
 		QDEL_NULL(vessel)
 	return ..()
 
-//CHOMPEdit Begin
 /mob/living/carbon/human/get_status_tab_items()
 	. = ..()
 	. += ""
@@ -119,8 +117,41 @@
 			. += "Genetic Damage Time: [mind.changeling.geneticdamage]"
 			. += "Re-Adaptations: [mind.changeling.readapts]/[mind.changeling.max_readapts]"
 	if(species)
-		species.Stat(src)
-//CHOMPEdit End
+		species.get_status_tab_items(src)
+
+
+/mob/proc/RigPanel(var/obj/item/rig/R)
+	if(R && !R.canremove && R.installed_modules.len)
+		var/list/L = list()
+		var/cell_status = R.cell ? "[R.cell.charge]/[R.cell.maxcharge]" : "ERROR"
+		L[++L.len] = list("Suit charge: [cell_status]", null, null, null, null)
+		for(var/obj/item/rig_module/module in R.installed_modules)
+		{
+			for(var/stat_rig_module/SRM in module.stat_modules)
+				if(SRM.CanUse())
+					L[++L.len] = list(SRM.module.interface_name,null,null,SRM.name,REF(SRM))
+		}
+		misc_tabs["Hardsuit Modules"] = L
+
+/mob/living/update_misc_tabs()
+	..()
+	if(get_rig_stats)
+		var/obj/item/rig/rig = get_rig()
+		if(rig)
+			RigPanel(rig)
+
+/mob/living/carbon/human/update_misc_tabs()
+	..()
+	if(species)
+		species.update_misc_tabs(src)
+
+	if(istype(back,/obj/item/rig))
+		var/obj/item/rig/R = back
+		RigPanel(R)
+
+	else if(istype(belt,/obj/item/rig))
+		var/obj/item/rig/R = belt
+		RigPanel(R)
 
 /mob/living/carbon/human/ex_act(severity)
 	if(!blinded)
@@ -850,7 +881,7 @@
 		return
 
 	if(!(mMorph in mutations))
-		remove_verb(src,/mob/living/carbon/human/proc/morph)  //CHOMPEdit
+		remove_verb(src, /mob/living/carbon/human/proc/morph)
 		return
 
 	var/new_facial = input(usr, "Please select facial hair color.", "Character Generation",rgb(r_facial,g_facial,b_facial)) as color
@@ -925,7 +956,7 @@
 		return
 
 	if(!(mRemotetalk in src.mutations))
-		remove_verb(src,/mob/living/carbon/human/proc/remotesay)  //CHOMPEdit
+		remove_verb(src, /mob/living/carbon/human/proc/remotesay)
 		return
 	var/list/creatures = list()
 	for(var/mob/living/carbon/h in mob_list)
@@ -956,11 +987,8 @@
 	if(!(mRemote in src.mutations))
 		remoteview_target = null
 		reset_view(0)
-		remove_verb(src,/mob/living/carbon/human/proc/remoteobserve)  //CHOMPEdit
-		return
-
+		remove_verb(src, /mob/living/carbon/human/proc/remoteobserve)
 	if(client.eye != client.mob)
-		remoteview_target = null
 		reset_view(0)
 		return
 
@@ -1091,7 +1119,7 @@
 			blood_DNA[M.dna.unique_enzymes] = M.dna.b_type
 	hand_blood_color = blood_color
 	update_bloodied()
-	add_verb(src,/mob/living/carbon/human/proc/bloody_doodle) //CHOMPEdit TGPanel
+	add_verb(src, /mob/living/carbon/human/proc/bloody_doodle)
 	return 1 //we applied blood to the item
 
 /mob/living/carbon/human/proc/get_full_print()
@@ -1324,7 +1352,7 @@
 		return 0 //something is terribly wrong
 
 	if (!bloody_hands)
-		remove_verb(src,/mob/living/carbon/human/proc/bloody_doodle) //CHOMPEdit TGPanel
+		remove_verb(src, /mob/living/carbon/human/proc/bloody_doodle)
 
 	if (src.gloves)
 		to_chat(src, span_warning("Your [src.gloves] are getting in the way."))
@@ -1694,7 +1722,7 @@
 /mob/living/carbon/human/examine_icon()
 	var/icon/I = get_cached_examine_icon(src)
 	if(!I)
-		I = getFlatIcon(src, defdir = SOUTH, no_anim = TRUE, force_south = TRUE) //CHOMPEdit
+		I = getFlatIcon(src, defdir = SOUTH, no_anim = TRUE, force_south = TRUE)
 		set_cached_examine_icon(src, I, 50 SECONDS)
 	return I
 

@@ -48,6 +48,3 @@
 	for(var/datum/trait/env_trait in env_traits)
 		env_trait.handle_environment_special(H)
 	return
-
-/datum/species/proc/update_misc_tabs(var/mob/living/carbon/human/H)
-	return

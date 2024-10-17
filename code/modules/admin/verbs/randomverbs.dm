@@ -324,32 +324,20 @@ Ccomp's first proc.
 	if(CONFIG_GET(flag/antag_hud_allowed)) // CHOMPEdit
 		for(var/mob/observer/dead/g in get_ghosts())
 			if(!g.client.holder)						//Remove the verb from non-admin ghosts
-				remove_verb(g, /mob/observer/dead/verb/toggle_antagHUD) //CHOMPEdit
+				remove_verb(g, /mob/observer/dead/verb/toggle_antagHUD)
 			if(g.antagHUD)
 				g.antagHUD = 0						// Disable it on those that have it enabled
 				g.has_enabled_antagHUD = 2				// We'll allow them to respawn
-<<<<<<< HEAD
-				to_chat(g, span_red("<B>The Administrator has disabled AntagHUD </B>"))
-		CONFIG_SET(flag/antag_hud_allowed, FALSE) // CHOMPEdit
-		to_chat(src, span_red("<B>AntagHUD usage has been disabled</B>"))
-=======
 				to_chat(g, span_boldwarning("The Administrator has disabled AntagHUD "))
-		config.antag_hud_allowed = 0
+		CONFIG_SET(flag/antag_hud_allowed, FALSE) // CHOMPEdit
 		to_chat(src, span_boldwarning("AntagHUD usage has been disabled"))
->>>>>>> b594520a74... next set of spans (#16434)
 		action = "disabled"
 	else
 		for(var/mob/observer/dead/g in get_ghosts())
 			if(!g.client.holder)						// Add the verb back for all non-admin ghosts
-<<<<<<< HEAD
-				add_verb(g, /mob/observer/dead/verb/toggle_antagHUD) //CHOMPEdit
-			to_chat(g, span_blue("<B>The Administrator has enabled AntagHUD </B>"))	// Notify all observers they can now use AntagHUD
-		CONFIG_SET(flag/antag_hud_allowed, TRUE) // CHOMPEdit
-=======
 				add_verb(g, /mob/observer/dead/verb/toggle_antagHUD)
-			to_chat(g, span_boldnotice("The Administrator has enabled AntagHUD "))	// Notify all observers they can now use AntagHUD
-		config.antag_hud_allowed = 1
->>>>>>> b594520a74... next set of spans (#16434)
+			to_chat(g, span_boldnotice("The Administrator has enabled AntagHUD"))	// Notify all observers they can now use AntagHUD
+		CONFIG_SET(flag/antag_hud_allowed, TRUE) // CHOMPEdit
 		action = "enabled"
 		to_chat(src, span_boldnotice("AntagHUD usage has been enabled"))
 
@@ -372,13 +360,8 @@ Ccomp's first proc.
 		for(var/mob/observer/dead/g in get_ghosts())
 			to_chat(g, span_boldnotice("The administrator has lifted restrictions on joining the round if you use AntagHUD"))
 		action = "lifted restrictions"
-<<<<<<< HEAD
 		CONFIG_SET(flag/antag_hud_restricted, FALSE) // CHOMPEdit
-		to_chat(src, span_blue("<B>AntagHUD restrictions have been lifted</B>"))
-=======
-		config.antag_hud_restricted = 0
 		to_chat(src, span_boldnotice("AntagHUD restrictions have been lifted"))
->>>>>>> b594520a74... next set of spans (#16434)
 	else
 		for(var/mob/observer/dead/g in get_ghosts())
 			to_chat(g, span_boldwarning("The administrator has placed restrictions on joining the round if you use AntagHUD"))
@@ -386,13 +369,8 @@ Ccomp's first proc.
 			g.antagHUD = 0
 			g.has_enabled_antagHUD = 0
 		action = "placed restrictions"
-<<<<<<< HEAD
 		CONFIG_SET(flag/antag_hud_restricted, TRUE) // CHOMPEdit
-		to_chat(src, span_red("<B>AntagHUD restrictions have been enabled</B>"))
-=======
-		config.antag_hud_restricted = 1
 		to_chat(src, span_boldwarning("AntagHUD restrictions have been enabled"))
->>>>>>> b594520a74... next set of spans (#16434)
 
 	log_admin("[key_name(usr)] has [action] on joining the round if they use AntagHUD")
 	message_admins("Admin [key_name_admin(usr)] has [action] on joining the round if they use AntagHUD", 1)
