@@ -593,13 +593,8 @@ var/world_topic_spam_protect_time = world.timeofday
 /world/proc/update_status()
 	var/s = ""
 
-<<<<<<< HEAD
 	if (config && CONFIG_GET(string/servername)) // CHOMPEdit
-		s += "<b>[CONFIG_GET(string/servername)]</b> &#8212; " // CHOMPEdit
-=======
-	if (config && config.server_name)
-		s += span_bold("[config.server_name]") + " &#8212; "
->>>>>>> b594520a74... next set of spans (#16434)
+		s += span_bold("[CONFIG_GET(string/servername)]") + " &#8212; " // CHOMPEdit
 
 	s += span_bold("[station_name()]");
 	s += " ("

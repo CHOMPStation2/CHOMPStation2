@@ -627,11 +627,7 @@ var/global/floorIsLava = 0
 		if(!check_rights(R_SERVER,0))
 			message = sanitize(message, 500, extra = 0)
 		message = replacetext(message, "\n", "<br>") // required since we're putting it in a <p> tag
-<<<<<<< HEAD
 		send_ooc_announcement(message, "From [usr.client.holder.fakekey ? "Administrator" : usr.key]") // CHOMPEdit
-=======
-		to_world(span_notice(span_bold("[usr.client.holder.fakekey ? "Administrator" : usr.key] Announces:") + "<p style='text-indent: 50px'>[message]</p>"))
->>>>>>> b594520a74... next set of spans (#16434)
 		log_admin("Announce: [key_name(usr)] : [message]")
 	feedback_add_details("admin_verb","A") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
@@ -761,15 +757,9 @@ var/datum/announcement/minor/admin_min_announcer = new
 	if(!check_rights(R_ADMIN))
 		return
 
-<<<<<<< HEAD
 	CONFIG_SET(flag/ooc_allowed, !CONFIG_GET(flag/ooc_allowed)) // CHOMPEdit
 	if (CONFIG_GET(flag/ooc_allowed)) // CHOMPEdit
-		to_world("<B>The OOC channel has been globally enabled!</B>")
-=======
-	config.ooc_allowed = !(config.ooc_allowed)
-	if (config.ooc_allowed)
 		to_world(span_world("The OOC channel has been globally enabled!"))
->>>>>>> b594520a74... next set of spans (#16434)
 	else
 		to_world(span_world("The OOC channel has been globally disabled!"))
 	log_and_message_admins("toggled OOC.")
@@ -783,15 +773,9 @@ var/datum/announcement/minor/admin_min_announcer = new
 	if(!check_rights(R_ADMIN))
 		return
 
-<<<<<<< HEAD
 	CONFIG_SET(flag/looc_allowed, !CONFIG_GET(flag/looc_allowed)) // CHOMPEdit
 	if (CONFIG_GET(flag/looc_allowed)) // CHOMPEdit
-		to_world("<B>The LOOC channel has been globally enabled!</B>")
-=======
-	config.looc_allowed = !(config.looc_allowed)
-	if (config.looc_allowed)
 		to_world(span_world("The LOOC channel has been globally enabled!"))
->>>>>>> b594520a74... next set of spans (#16434)
 	else
 		to_world(span_world("The LOOC channel has been globally disabled!"))
 	log_and_message_admins("toggled LOOC.")
@@ -806,15 +790,9 @@ var/datum/announcement/minor/admin_min_announcer = new
 	if(!check_rights(R_ADMIN))
 		return
 
-<<<<<<< HEAD
 	CONFIG_SET(flag/dsay_allowed, !CONFIG_GET(flag/dsay_allowed)) // CHOMPEdit
 	if (CONFIG_GET(flag/dsay_allowed)) // CHOMPEdit
-		to_world("<B>Deadchat has been globally enabled!</B>")
-=======
-	config.dsay_allowed = !(config.dsay_allowed)
-	if (config.dsay_allowed)
 		to_world(span_world("Deadchat has been globally enabled!"))
->>>>>>> b594520a74... next set of spans (#16434)
 	else
 		to_world(span_world("Deadchat has been globally disabled!"))
 	log_admin("[key_name(usr)] toggled deadchat.")
@@ -883,15 +861,9 @@ var/datum/announcement/minor/admin_min_announcer = new
 	set category = "Server.Game" //CHOMPEdit
 	set desc="People can't enter"
 	set name="Toggle Entering"
-<<<<<<< HEAD
 	CONFIG_SET(flag/enter_allowed, !CONFIG_GET(flag/enter_allowed)) // CHOMPEdit
 	if (!CONFIG_GET(flag/enter_allowed)) // CHOMPEdit
-		to_world("<B>New players may no longer enter the game.</B>")
-=======
-	config.enter_allowed = !(config.enter_allowed)
-	if (!(config.enter_allowed))
 		to_world(span_world("New players may no longer enter the game."))
->>>>>>> b594520a74... next set of spans (#16434)
 	else
 		to_world(span_world("New players may now enter the game."))
 	log_admin("[key_name(usr)] toggled new player game entering.")
@@ -903,15 +875,9 @@ var/datum/announcement/minor/admin_min_announcer = new
 	set category = "Server.Game" //CHOMPEdit
 	set desc="People can't be AI"
 	set name="Toggle AI"
-<<<<<<< HEAD
 	CONFIG_SET(flag/allow_ai, !CONFIG_GET(flag/allow_ai)) // CHOMPEdit
 	if (!CONFIG_GET(flag/allow_ai)) // CHOMPEdit
-		to_world("<B>The AI job is no longer chooseable.</B>")
-=======
-	config.allow_ai = !( config.allow_ai )
-	if (!( config.allow_ai ))
 		to_world(span_world("The AI job is no longer chooseable."))
->>>>>>> b594520a74... next set of spans (#16434)
 	else
 		to_world(span_world("The AI job is chooseable now."))
 	log_admin("[key_name(usr)] toggled AI allowed.")
@@ -922,23 +888,13 @@ var/datum/announcement/minor/admin_min_announcer = new
 	set category = "Server.Game" //CHOMPEdit
 	set desc="Respawn basically"
 	set name="Toggle Respawn"
-<<<<<<< HEAD
 	CONFIG_SET(flag/abandon_allowed, !CONFIG_GET(flag/abandon_allowed)) // CHOMPEdit
 	if(CONFIG_GET(flag/abandon_allowed)) // CHOMPEdit
-		to_world("<B>You may now respawn.</B>")
-	else
-		to_world("<B>You may no longer respawn :(</B>")
-	message_admins(span_blue("[key_name_admin(usr)] toggled respawn to [CONFIG_GET(flag/abandon_allowed) ? "On" : "Off"]."), 1) // CHOMPEdit
-	log_admin("[key_name(usr)] toggled respawn to [CONFIG_GET(flag/abandon_allowed) ? "On" : "Off"].") // CHOMPEdit
-=======
-	config.abandon_allowed = !(config.abandon_allowed)
-	if(config.abandon_allowed)
 		to_world(span_world("You may now respawn."))
 	else
 		to_world(span_world("You may no longer respawn :("))
-	message_admins(span_blue("[key_name_admin(usr)] toggled respawn to [config.abandon_allowed ? "On" : "Off"]."), 1)
-	log_admin("[key_name(usr)] toggled respawn to [config.abandon_allowed ? "On" : "Off"].")
->>>>>>> b594520a74... next set of spans (#16434)
+	message_admins(span_blue("[key_name_admin(usr)] toggled respawn to [CONFIG_GET(flag/abandon_allowed) ? "On" : "Off"]."), 1) // CHOMPEdit
+	log_admin("[key_name(usr)] toggled respawn to [CONFIG_GET(flag/abandon_allowed) ? "On" : "Off"].") // CHOMPEdit
 	world.update_status()
 	feedback_add_details("admin_verb","TR") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
@@ -949,18 +905,12 @@ var/datum/announcement/minor/admin_min_announcer = new
 	CONFIG_SET(flag/persistence_disabled, !CONFIG_GET(flag/persistence_disabled)) // CHOMPEdit
 /* CHOMP Edit: the entire world doesn't need to know.
 	if(!config.persistence_disabled)
-		to_world(span_world("Persistence is now enabled.."))
+		to_world(span_world("Persistence is now enabled."))
 	else
-<<<<<<< HEAD
-		to_world("<B>Persistence is no longer enabled.</B>")
+		to_world(span_world("Persistence is no longer enabled."))
 */
 	message_admins(span_blue("[key_name_admin(usr)] toggled persistence to [CONFIG_GET(flag/persistence_disabled) ? "Off" : "On"]."), 1) // CHOMPEdit
 	log_admin("[key_name(usr)] toggled persistence to [CONFIG_GET(flag/persistence_disabled) ? "Off" : "On"].") // CHOMPEdit
-=======
-		to_world(span_world("Persistence is no longer enabled."))
-	message_admins(span_blue("[key_name_admin(usr)] toggled persistence to [config.persistence_disabled ? "Off" : "On"]."), 1)
-	log_admin("[key_name(usr)] toggled persistence to [config.persistence_disabled ? "Off" : "On"].")
->>>>>>> b594520a74... next set of spans (#16434)
 	world.update_status()
 	feedback_add_details("admin_verb","TPD") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
@@ -968,23 +918,13 @@ var/datum/announcement/minor/admin_min_announcer = new
 	set category = "Server.Config" //CHOMPEdit
 	set desc="Whether mapload persistent data will be saved from now on."
 	set name="Toggle Mapload Persistent Data"
-<<<<<<< HEAD
 	CONFIG_SET(flag/persistence_ignore_mapload, !CONFIG_GET(flag/persistence_ignore_mapload)) // CHOMPEdit
 	if(!CONFIG_GET(flag/persistence_ignore_mapload)) // CHOMPEdit
-		to_world("<B>Persistence is now enabled..</B>")
-	else
-		to_world("<B>Persistence is no longer enabled.</B>")
-	message_admins(span_blue("[key_name_admin(usr)] toggled persistence to [CONFIG_GET(flag/persistence_ignore_mapload) ? "Off" : "On"]."), 1) // CHOMPEdit
-	log_admin("[key_name(usr)] toggled persistence to [CONFIG_GET(flag/persistence_ignore_mapload) ? "Off" : "On"].") // CHOMPEdit
-=======
-	config.persistence_ignore_mapload = !(config.persistence_ignore_mapload)
-	if(!config.persistence_ignore_mapload)
-		to_world(span_world("Persistence is now enabled.."))
+		to_world(span_world("Persistence is now enabled."))
 	else
 		to_world(span_world("Persistence is no longer enabled."))
-	message_admins(span_blue("[key_name_admin(usr)] toggled persistence to [config.persistence_ignore_mapload ? "Off" : "On"]."), 1)
-	log_admin("[key_name(usr)] toggled persistence to [config.persistence_ignore_mapload ? "Off" : "On"].")
->>>>>>> b594520a74... next set of spans (#16434)
+	message_admins(span_blue("[key_name_admin(usr)] toggled persistence to [CONFIG_GET(flag/persistence_ignore_mapload) ? "Off" : "On"]."), 1) // CHOMPEdit
+	log_admin("[key_name(usr)] toggled persistence to [CONFIG_GET(flag/persistence_ignore_mapload) ? "Off" : "On"].") // CHOMPEdit
 	world.update_status()
 	feedback_add_details("admin_verb","TMPD") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
@@ -1304,15 +1244,9 @@ var/datum/announcement/minor/admin_min_announcer = new
 	set category = "Debug"
 	set desc="Reduces view range when wearing welding helmets"
 	set name="Toggle tinted welding helmets."
-<<<<<<< HEAD
 	CONFIG_SET(flag/welder_vision, !CONFIG_GET(flag/welder_vision)) // CHOMPEdit
 	if (CONFIG_GET(flag/welder_vision)) // CHOMPEdit
-		to_world("<B>Reduced welder vision has been enabled!</B>")
-=======
-	config.welder_vision = !( config.welder_vision )
-	if (config.welder_vision)
 		to_world(span_world("Reduced welder vision has been enabled!"))
->>>>>>> b594520a74... next set of spans (#16434)
 	else
 		to_world(span_world("Reduced welder vision has been disabled!"))
 	log_admin("[key_name(usr)] toggled welder vision.")
@@ -1323,23 +1257,13 @@ var/datum/announcement/minor/admin_min_announcer = new
 	set category = "Server.Config" //CHOMPEdit
 	set desc="Guests can't enter"
 	set name="Toggle guests"
-<<<<<<< HEAD
 	CONFIG_SET(flag/guests_allowed, !CONFIG_GET(flag/guests_allowed)) // CHOMPEdit
 	if (!CONFIG_GET(flag/guests_allowed)) // CHOMPEdit
-		to_world("<B>Guests may no longer enter the game.</B>")
-	else
-		to_world("<B>Guests may now enter the game.</B>")
-	log_admin("[key_name(usr)] toggled guests game entering [CONFIG_GET(flag/guests_allowed) ? "":"dis"]allowed.") // CHOMPEdit
-	message_admins(span_blue("[key_name_admin(usr)] toggled guests game entering [CONFIG_GET(flag/guests_allowed) ? "":"dis"]allowed."), 1) // CHOMPEdit
-=======
-	config.guests_allowed = !(config.guests_allowed)
-	if (!(config.guests_allowed))
 		to_world(span_world("Guests may no longer enter the game."))
 	else
 		to_world(span_world("Guests may now enter the game."))
-	log_admin("[key_name(usr)] toggled guests game entering [config.guests_allowed?"":"dis"]allowed.")
-	message_admins(span_blue("[key_name_admin(usr)] toggled guests game entering [config.guests_allowed?"":"dis"]allowed."), 1)
->>>>>>> b594520a74... next set of spans (#16434)
+	log_admin("[key_name(usr)] toggled guests game entering [CONFIG_GET(flag/guests_allowed) ? "":"dis"]allowed.") // CHOMPEdit
+	message_admins(span_blue("[key_name_admin(usr)] toggled guests game entering [CONFIG_GET(flag/guests_allowed) ? "":"dis"]allowed."), 1) // CHOMPEdit
 	feedback_add_details("admin_verb","TGU") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/output_ai_laws()

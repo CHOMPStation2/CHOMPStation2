@@ -58,16 +58,10 @@
 
 	if(!ticker || ticker.current_state <= GAME_STATE_PREGAME)
 		if(ready)
-<<<<<<< HEAD
-			output += "<p>\[ <span class='linkOn'><b>Ready</b></span> | <a href='byond://?src=\ref[src];ready=0'>Not Ready</a> \]</p>" //ChompEDIT - fixed height
+			output += "<p>\[ " + span_linkOn(span_bold("Ready")) + " | <a href='byond://?src=\ref[src];ready=0'>Not Ready</a> \]</p>" //ChompEDIT - fixed height
 		else
-			output += "<p>\[ <a href='byond://?src=\ref[src];ready=1'>Ready</a> | <span class='linkOn'><b>Not Ready</b></span> \]</p>" //ChompEDIT - fixed height
+			output += "<p>\[ <a href='byond://?src=\ref[src];ready=1'>Ready</a> | " + span_linkOn(span_bold("Not Ready")) + " \]</p>" //ChompEDIT - fixed height
 		output += "<p><s>Join Game!</s></p>" //ChompEDIT - fixed height
-=======
-			output += "<p>\[ " + span_linkOn(span_bold("Ready")) + " | <a href='byond://?src=\ref[src];ready=0'>Not Ready</a> \]</p>"
-		else
-			output += "<p>\[ <a href='byond://?src=\ref[src];ready=1'>Ready</a> | " + span_linkOn(span_bold("Not Ready")) + " \]</p>"
->>>>>>> b594520a74... next set of spans (#16434)
 
 	else
 		output += "<p><a href='byond://?src=\ref[src];manifest=1'>View the Crew Manifest</A></p>" //ChompEDIT - fixed height
@@ -314,12 +308,8 @@
 			var/sql = "INSERT INTO erro_privacy VALUES (null, Now(), :t_ckey, :t_option)" //CHOMPEdit TGSQL
 			var/datum/db_query/query_insert = SSdbcore.NewQuery(sql,sqlargs) //CHOMPEdit TGSQL
 			query_insert.Execute()
-<<<<<<< HEAD
-			to_chat(usr, "<b>Thank you for your vote!</b>")
-			qdel(query_insert)
-=======
 			to_chat(usr, span_bold("Thank you for your vote!"))
->>>>>>> b594520a74... next set of spans (#16434)
+			qdel(query_insert)
 			usr << browse(null,"window=privacypoll")
 
 	if(!ready && href_list["preference"])

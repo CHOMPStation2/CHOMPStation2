@@ -529,18 +529,13 @@
 		return
 
 	setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
-<<<<<<< HEAD
 	if(tasted == src) //CHOMPEdit Start
-		visible_message(span_vwarning("[src] licks themself!"),span_notice("You lick yourself. You taste rather like [tasted.get_taste_message()]."))
+		visible_message(span_vwarning("[src] licks themself!"),span_notice("You lick yourself. You taste rather like [tasted.get_taste_message()]."),span_infoplain(span_bold("Slurp!")))
 		balloon_alert_visible("Licks themself!", "Tastes like [tasted.get_taste_message()]")
 	else
-		visible_message(span_vwarning("[src] licks [tasted]!"),span_notice("You lick [tasted]. They taste rather like [tasted.get_taste_message()]."))
+		visible_message(span_vwarning("[src] licks [tasted]!"),span_notice("You lick [tasted]. They taste rather like [tasted.get_taste_message()]."),span_infoplain(span_bold("Slurp!")))
 		balloon_alert_visible("Licks [tasted]!", "Tastes like [tasted.get_taste_message()]")
 		//CHOMPEdit End
-=======
-
-	visible_message(span_vwarning("[src] licks [tasted]!"),span_vnotice("You lick [tasted]. They taste rather like [tasted.get_taste_message()]."),span_bold("Slurp!"))
->>>>>>> b594520a74... next set of spans (#16434)
 
 
 /mob/living/proc/get_taste_message(allow_generic = 1)
@@ -579,17 +574,13 @@
 		return
 
 	setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
-<<<<<<< HEAD
 	if(smelled == src) //CHOMPEdit Start
-		visible_message(span_vwarning("[src] smells themself!"),span_notice("You smell yourself. You smell like [smelled.get_smell_message()]."),"<b>Sniff!</b>")
+		visible_message(span_vwarning("[src] smells themself!"),span_notice("You smell yourself. You smell like [smelled.get_smell_message()]."),span_infoplain(span_bold("Sniff!")))
 		balloon_alert_visible("Smells themself!", "Smells like [smelled.get_smell_message()]")
 	else
-		visible_message(span_vwarning("[src] smells [smelled]!"),span_notice("You smell [smelled]. They smell like [smelled.get_smell_message()]."),"<b>Sniff!</b>")
+		visible_message(span_vwarning("[src] smells [smelled]!"),span_notice("You smell [smelled]. They smell like [smelled.get_smell_message()]."),span_infoplain(span_bold("Sniff!")))
 		balloon_alert_visible("Smells [smelled]!", "Smells like [smelled.get_smell_message()]")
 		//CHOMPEdit End
-=======
-	visible_message(span_vwarning("[src] smells [smelled]!"),span_vnotice("You smell [smelled]. They smell like [smelled.get_smell_message()]."),span_bold("Sniff!"))
->>>>>>> b594520a74... next set of spans (#16434)
 
 /mob/living/proc/get_smell_message(allow_generic = 1)
 	if(!vore_smell && !allow_generic)
@@ -1097,13 +1088,8 @@
 			var/obj/item/capture_crystal/C = I
 			if(C.bound_mob && (C.bound_mob in C.contents))
 				if(isbelly(C.loc))
-<<<<<<< HEAD
 					//var/obj/belly/B = C.loc //CHOMPedit
-					//to_chat(C.bound_mob, "<span class= 'notice'>Outside of your crystal, you can see; <B>[B.desc]</B></span>") //CHOMPedit: moved to modular_chomp capture_crystal.dm
-=======
-					var/obj/belly/B = C.loc
-					to_chat(C.bound_mob, span_notice("Outside of your crystal, you can see; " + span_notice("[B.desc]")))
->>>>>>> b594520a74... next set of spans (#16434)
+					//to_chat(C.bound_mob, span_notice("Outside of your crystal, you can see; " + span_notice("[B.desc]"))) //CHOMPedit: moved to modular_chomp capture_crystal.dm
 					to_chat(src, span_notice("You can taste the the power of command."))
 		// CHOMPedit begin
 		else if(istype(I,/obj/item/starcaster_news))
@@ -1342,16 +1328,11 @@
 /mob/living/proc/display_voreprefs(mob/user)	//Called by Topic() calls on instances of /mob/living (and subtypes) containing vore_prefs as an argument
 	if(!user)
 		CRASH("display_voreprefs() was called without an associated user.")
-<<<<<<< HEAD
-
-=======
->>>>>>> b594520a74... next set of spans (#16434)
 	var/dat = "<br>" + span_bold("[src]'s vore preferences") + "<br><br>"
 	if(!client?.prefs?.read_preference(/datum/preference/toggle/show_ooc))
 		dat += span_red(span_bold("OOC DISABLED")) + "<br>"
 	if(!client?.prefs?.read_preference(/datum/preference/toggle/show_looc))
 		dat += span_red(span_bold("LOOC DISABLED")) + "<br>"
-<<<<<<< HEAD
 	//CHOMPEdit Start
 	dat += span_bold("Devourable:") + " [devourable ? span_green("Enabled") : span_red("Disabled")]<br>"
 	if(devourable)
@@ -1393,33 +1374,6 @@
 	dat += span_bold("Belly rub target:") + " [belly_rub_target ? belly_rub_target : (vore_selected ? vore_selected.name : "None")]<br>"
 	//CHOMPEdit End
 	var/datum/browser/popup = new(user, "[name]mvp", "Vore Prefs: [src]", 300, 700, src)
-=======
-	dat += span_bold("Digestable:") + " [digestable ? span_green("Enabled") : span_red("Disabled")]<br>"
-	dat += span_bold("Devourable:") + " [devourable ? span_green("Enabled") : span_red("Disabled")]<br>"
-	dat += span_bold("Feedable:") + " [feeding ? span_green("Enabled") : span_red("Disabled")]<br>"
-	dat += span_bold("Absorption Permission:") + " [absorbable ? span_green("Allowed") : span_red("Disallowed")]<br>"
-	dat += span_bold("Leaves Remains:") + " [digest_leave_remains ? span_green("Enabled") : span_red("Disabled")]<br>"
-	dat += span_bold("Mob Vore:") + " [allowmobvore ? span_green("Enabled") : span_red("Disabled")]<br>"
-	dat += span_bold("Healbelly permission:") + " [permit_healbelly ? span_green("Allowed") : span_red("Disallowed")]<br>"
-	dat += span_bold("Selective Mode Pref:") + " [src.selective_preference]<br>"
-	dat += span_bold("Spontaneous vore prey:") + " [can_be_drop_prey ? span_green("Enabled") : span_red("Disabled")]<br>"
-	dat += span_bold("Spontaneous vore pred:") + " [can_be_drop_pred ? span_green("Enabled") : span_red("Disabled")]<br>"
-	dat += span_bold("Drop Vore:") + " [drop_vore ? span_green("Enabled") : span_red("Disabled")]<br>"
-	dat += span_bold("Slip Vore:") + " [slip_vore ? span_green("Enabled") : span_red("Disabled")]<br>"
-	dat += span_bold("Throw vore:") + " [throw_vore ? span_green("Enabled") : span_red("Disabled")]<br>"
-	dat += span_bold("Stumble Vore:") + " [stumble_vore ? span_green("Enabled") : span_red("Disabled")]<br>"
-	dat += span_bold("Food Vore:") + " [food_vore ? span_green("Enabled") : span_red("Disabled")]<br>"
-	dat += span_bold("Inbelly Spawning:") + " [allow_inbelly_spawning ? span_green("Allowed") : span_red("Disallowed")]<br>"
-	dat += span_bold("Spontaneous transformation:") + " [allow_spontaneous_tf ? span_green("Enabled") : span_red("Disabled")]<br>"
-	dat += span_bold("Mind transfer:") + " [allow_mind_transfer ? span_green("Allowed") : span_red("Disallowed")]<br>"
-	dat += span_bold("Can be stepped on/over:") + " [step_mechanics_pref ? span_green("Allowed") : span_red("Disallowed")]<br>"
-	dat += span_bold("Can be picked up:") + " [pickup_pref ? span_green("Allowed") : span_red("Disallowed")]<br>"
-	dat += span_bold("Global Vore Privacy is:") + " [eating_privacy_global ? "Subtle" : "Loud"]<br>"
-	dat += span_bold("Allow Mimicry:") + " [allow_mimicry ? span_green("Yes") : span_red("No")]<br>"
-	dat = "<center>[dat]</center>"
-
-	var/datum/browser/popup = new(user, "[name]mvp", "Vore Prefs: [src]", 300, 400, src)
->>>>>>> b594520a74... next set of spans (#16434)
 	popup.set_content(dat)
 	popup.open()
 

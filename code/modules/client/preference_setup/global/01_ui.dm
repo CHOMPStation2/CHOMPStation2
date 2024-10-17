@@ -61,20 +61,6 @@
 	. += span_bold("Custom UI") + " (recommended for White UI):<br>"
 	. += "-Color: <a href='?src=\ref[src];select_color=1'><b>[pref.UI_style_color]</b></a> [color_square(hex = pref.UI_style_color)] <a href='?src=\ref[src];reset=ui'>reset</a><br>"
 	. += "-Alpha(transparency): <a href='?src=\ref[src];select_alpha=1'><b>[pref.UI_style_alpha]</b></a> <a href='?src=\ref[src];reset=alpha'>reset</a><br>"
-<<<<<<< HEAD
-	. += "<b>Tooltip Style:</b> <a href='?src=\ref[src];select_tooltip_style=1'><b>[pref.tooltipstyle]</b></a><br>"
-	. += "<b>Client FPS:</b> <a href='?src=\ref[src];select_client_fps=1'><b>[pref.client_fps]</b></a><br>"
-	. += "<b>Random Ambience Frequency:</b> <a href='?src=\ref[src];select_ambience_freq=1'><b>[pref.ambience_freq]</b></a><br>"
-	. += "<b>Ambience Chance:</b> <a href='?src=\ref[src];select_ambience_chance=1'><b>[pref.ambience_chance]</b></a><br>"
-	. += "<b>tgui Window Mode:</b> <a href='?src=\ref[src];tgui_fancy=1'><b>[(pref.tgui_fancy) ? "Fancy (default)" : "Compatible (slower)"]</b></a><br>"
-	. += "<b>tgui Window Placement:</b> <a href='?src=\ref[src];tgui_lock=1'><b>[(pref.tgui_lock) ? "Primary Monitor" : "Free (default)"]</b></a><br>"
-	. += "<b>TGUI Input Framework:</b> <a href='?src=\ref[src];tgui_input_mode=1'><b>[(pref.tgui_input_mode) ? "Enabled" : "Disabled (default)"]</b></a><br>"
-	. += "<b>TGUI Large Buttons:</b> <a href='?src=\ref[src];tgui_large_buttons=1'><b>[(pref.tgui_large_buttons) ? "Enabled (default)" : "Disabled"]</b></a><br>"
-	. += "<b>TGUI Swapped Buttons:</b> <a href='?src=\ref[src];tgui_swapped_buttons=1'><b>[(pref.tgui_swapped_buttons) ? "Enabled" : "Disabled (default)"]</b></a><br>"
-	. += "<b>Obfuscate Ckey:</b> <a href='?src=\ref[src];obfuscate_key=1'><b>[(pref.obfuscate_key) ? "Enabled" : "Disabled (default)"]</b></a><br>"
-	. += "<b>Obfuscate Job:</b> <a href='?src=\ref[src];obfuscate_job=1'><b>[(pref.obfuscate_job) ? "Enabled" : "Disabled (default)"]</b></a><br>"
-	. += "<b>Chat Timestamps:</b> <a href='?src=\ref[src];chat_timestamps=1'><b>[(pref.chat_timestamp) ? "Enabled" : "Disabled (default)"]</b></a><br>"
-=======
 	. += span_bold("Tooltip Style:") + " <a href='?src=\ref[src];select_tooltip_style=1'><b>[pref.tooltipstyle]</b></a><br>"
 	. += span_bold("Client FPS:") + " <a href='?src=\ref[src];select_client_fps=1'><b>[pref.client_fps]</b></a><br>"
 	. += span_bold("Random Ambience Frequency:") + " <a href='?src=\ref[src];select_ambience_freq=1'><b>[pref.ambience_freq]</b></a><br>"
@@ -87,7 +73,6 @@
 	. += span_bold("Obfuscate Ckey:") + " <a href='?src=\ref[src];obfuscate_key=1'><b>[(pref.obfuscate_key) ? "Enabled" : "Disabled (default)"]</b></a><br>"
 	. += span_bold("Obfuscate Job:") + " <a href='?src=\ref[src];obfuscate_job=1'><b>[(pref.obfuscate_job) ? "Enabled" : "Disabled (default)"]</b></a><br>"
 	. += span_bold("Chat Timestamps:") + " <a href='?src=\ref[src];chat_timestamps=1'><b>[(pref.chat_timestamp) ? "Enabled" : "Disabled (default)"]</b></a><br>"
->>>>>>> b594520a74... next set of spans (#16434)
 	if(can_select_ooc_color(user))
 		. += span_bold("OOC Color:")
 		if(pref.ooccolor == initial(pref.ooccolor))

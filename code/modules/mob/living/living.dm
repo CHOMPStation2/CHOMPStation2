@@ -97,8 +97,7 @@
 	if(!..())
 		return 0
 
-<<<<<<< HEAD
-	usr.visible_message(span_filter_notice("<b>[src]</b> points to [A]."))
+	usr.visible_message(span_filter_notice(span_bold("[src]") + " points to [A]."))
 */
 	return ..()
 
@@ -106,12 +105,8 @@
 	if(!..())
 		return FALSE
 
-	visible_message(span_info("<b>[src]</b> points at [pointing_at]."), span_info("You point at [pointing_at]."))
+	visible_message(span_info(span_bold("[src]") + " points at [pointing_at]."), span_info("You point at [pointing_at]."))
 // CHOMPEdit End
-=======
-	usr.visible_message(span_filter_notice(span_bold("[src]") + " points to [A]."))
-	return 1
->>>>>>> b594520a74... next set of spans (#16434)
 
 /mob/living/verb/succumb()
 	set name = "Succumb to death"

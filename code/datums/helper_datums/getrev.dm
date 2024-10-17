@@ -64,19 +64,11 @@
 	var/list/msg = list()
 
 	if(GLOB.revdata.revision)
-<<<<<<< HEAD
-		msg += "<b>Server revision:</b> B:[GLOB.revdata.branch] D:[GLOB.revdata.date]"
-		if(CONFIG_GET(string/githuburl)) // CHOMPEdit
-			msg += "<b>Commit:</b> <a href='[CONFIG_GET(string/githuburl)]/commit/[GLOB.revdata.revision]'>[GLOB.revdata.revision]</a>" // CHOMPEdit
-		else
-			msg += "<b>Commit:</b> [GLOB.revdata.revision]" // CHOMPEdit - Actually SHOW the revision
-=======
 		msg += span_bold("Server revision:") + " B:[GLOB.revdata.branch] D:[GLOB.revdata.date]"
-		if(config.githuburl)
-			msg += span_bold("Commit:") + " <a href='[config.githuburl]/commit/[GLOB.revdata.revision]'>[GLOB.revdata.revision]</a>"
+		if(CONFIG_GET(string/githuburl)) // CHOMPEdit
+			msg += span_bold("Commit:") + " <a href='[CONFIG_GET(string/githuburl)]/commit/[GLOB.revdata.revision]'>[GLOB.revdata.revision]</a>" // CHOMPEdit
 		else
-			msg += span_bold("Commit:") + " GLOB.revdata.revision"
->>>>>>> b594520a74... next set of spans (#16434)
+			msg += span_bold("Commit:") + " [GLOB.revdata.revision]" // CHOMPEdit - Actually SHOW the revision
 	else
 		msg += span_bold("Server revision:") + " Unknown"
 

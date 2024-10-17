@@ -96,11 +96,7 @@
 		var/new_link = strip_html_simple(tgui_input_text(user, "Enter a link to add on to your examine text! This should be a related image link/gallery, or things like your F-list. This is not the place for memes.", "Custom Link" , html_decode(pref.custom_link), max_length = 100, encode = TRUE,  prevent_enter = TRUE)) //ChompEDIT - usr removal
 		if(new_link && CanUseTopic(user)) //ChompEDIT - usr removal
 			if(length(new_link) > 100)
-<<<<<<< HEAD
-				to_chat(user, "<span class = 'warning'>Your entry is too long, it must be 100 characters or less.</span>") //ChompEDIT - usr removal
-=======
-				to_chat(usr, span_warning("Your entry is too long, it must be 100 characters or less."))
->>>>>>> b594520a74... next set of spans (#16434)
+				to_chat(user, span_warning("Your entry is too long, it must be 100 characters or less.")) //ChompEDIT - usr removal
 				return
 			pref.custom_link = new_link
 			log_admin("[user]/[user.ckey] set their custom link to [pref.custom_link]") //ChompEDIT - usr removal

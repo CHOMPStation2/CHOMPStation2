@@ -45,13 +45,8 @@
 			<A href='?src=\ref[src];search=1'>\[Start Search\]</A><BR>"}
 		if(1)
 			establish_old_db_connection()
-<<<<<<< HEAD
 			if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
-				dat += "<font color=red><b>ERROR</b>: Unable to contact External Archive. Please contact your system administrator for assistance.</font><BR>"
-=======
-			if(!dbcon_old.IsConnected())
 				dat += span_red(span_bold("ERROR") + ": Unable to contact External Archive. Please contact your system administrator for assistance.") + "<BR>"
->>>>>>> b594520a74... next set of spans (#16434)
 			else if(!SQLquery)
 				dat += span_red(span_bold("ERROR") + ": Malformed search request. Please contact your system administrator for assistance.") + "<BR>"
 			else
@@ -290,13 +285,8 @@
 
 			//dat += "<h3>" + span_red("arning: System Administrator has slated this archive for removal. Personal uploads should be taken to the NT board of internal literature.") + "</h3>" //VOREStation Removal
 
-<<<<<<< HEAD
 			if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
-				dat += "<font color=red><b>ERROR</b>: Unable to contact External Archive. Please contact your system administrator for assistance.</font>"
-=======
-			if(!dbcon_old.IsConnected())
 				dat += span_red(span_bold("ERROR") + ": Unable to contact External Archive. Please contact your system administrator for assistance.")
->>>>>>> b594520a74... next set of spans (#16434)
 			else
 				dat += {"<A href='?src=\ref[src];orderbyid=1'>(Order book by SS<sup>13</sup>BN)</A><BR><BR>
 				<table>
@@ -332,13 +322,8 @@
 		dat += "<h3>ADMINISTRATIVE MANAGEMENT</h3>"
 		establish_old_db_connection()
 
-<<<<<<< HEAD
 		if(!SSdbcore.IsConnected())
-			dat += "<font color=red><b>ERROR</b>: Unable to contact External Archive. Please contact your system administrator for assistance.</font>"
-=======
-		if(!dbcon_old.IsConnected())
 			dat += span_red(span_bold("ERROR") + ": Unable to contact External Archive. Please contact your system administrator for assistance.")
->>>>>>> b594520a74... next set of spans (#16434)
 		else
 			dat += {"<A href='?src=\ref[src];orderbyid=1'>(Order book by SS<sup>13</sup>BN)</A><BR><BR>
 			<table>
