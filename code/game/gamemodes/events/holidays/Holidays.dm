@@ -230,13 +230,8 @@ var/global/list/Holiday = list() //Holidays are lists now, so we can have more t
 
 //Allows GA and GM to set the Holiday variable
 /client/proc/Set_Holiday()
-<<<<<<< HEAD
-	set name = "Set Holiday" // Fixed Typo?
-	set category = "Fun.Event Kit" //CHOMPEdit
-=======
 	set name = "Set Holiday"
-	set category = "Fun"
->>>>>>> c07027136e... Port tg statpanel (#16463)
+	set category = "Fun.Event Kit" //CHOMPEdit
 	set desc = "Force-set the Holiday variable to make the game think it's a certain day."
 	if(!check_rights(R_SERVER))	return
 

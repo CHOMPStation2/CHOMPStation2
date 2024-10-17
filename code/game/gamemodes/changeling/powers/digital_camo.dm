@@ -29,14 +29,8 @@
 			C.mind.changeling.chem_charges = max(C.mind.changeling.chem_charges - 1, 0)
 			sleep(40)
 
-<<<<<<< HEAD
-	remove_verb(src,/mob/proc/changeling_digitalcamo)  //CHOMPEdit
-	spawn(5)
-		add_verb(src,/mob/proc/changeling_digitalcamo) //CHOMPEdit
-=======
 	remove_verb(src, /mob/proc/changeling_digitalcamo)
 	spawn(5)
 		add_verb(src, /mob/proc/changeling_digitalcamo)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 	feedback_add_details("changeling_powers","CAM")
 	return 1

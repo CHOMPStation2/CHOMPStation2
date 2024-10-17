@@ -33,16 +33,9 @@
 				C.adjustFireLoss(-heal_amount)
 				sleep(1 SECOND)
 
-<<<<<<< HEAD
-	remove_verb(src,/mob/proc/changeling_fleshmend)  //CHOMPEdit
-	spawn(50 SECONDS)
-		to_chat(src, span_notice("Our regeneration has slowed to normal levels."))
-		add_verb(src,/mob/proc/changeling_fleshmend) //CHOMPEdit
-=======
 	remove_verb(src, /mob/proc/changeling_fleshmend)
 	spawn(50 SECONDS)
 		to_chat(src, span_notice("Our regeneration has slowed to normal levels."))
 		add_verb(src, /mob/proc/changeling_fleshmend)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 	feedback_add_details("changeling_powers","FM")
 	return 1

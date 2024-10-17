@@ -1,9 +1,5 @@
 /mob/living/silicon/robot/verb/cmd_show_laws()
-<<<<<<< HEAD
-	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
-=======
 	set category = "Abilities.Silicon"
->>>>>>> c07027136e... Port tg statpanel (#16463)
 	set name = "Show Laws"
 	show_laws()
 
@@ -55,10 +51,6 @@
 	return
 
 /mob/living/silicon/robot/proc/robot_checklaws()
-<<<<<<< HEAD
-	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
-=======
 	set category = "Abilities.Silicon"
->>>>>>> c07027136e... Port tg statpanel (#16463)
 	set name = "State Laws"
 	subsystem_law_manager()

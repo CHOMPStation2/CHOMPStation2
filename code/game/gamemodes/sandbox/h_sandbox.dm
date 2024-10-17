@@ -24,11 +24,7 @@ mob
 				sandbox.owner = src.ckey
 				if(src.client.holder)
 					sandbox.admin = 1
-<<<<<<< HEAD
-				add_verb(src, /mob/proc/sandbox_panel) //CHOMPEdit
-=======
 				add_verb(src, /mob/proc/sandbox_panel)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 		sandbox_panel()
 			if(sandbox)
 				sandbox.update()

@@ -10,15 +10,9 @@
 	hacked_apcs = list()
 	recalc_cpu()
 
-<<<<<<< HEAD
-	add_verb(src, new/datum/game_mode/malfunction/verb/ai_select_hardware()) //CHOMPEdit
-	add_verb(src, new/datum/game_mode/malfunction/verb/ai_select_research()) //CHOMPEdit
-	add_verb(src, new/datum/game_mode/malfunction/verb/ai_help()) //CHOMPEdit
-=======
 	add_verb(src, new/datum/game_mode/malfunction/verb/ai_select_hardware())
 	add_verb(src, new/datum/game_mode/malfunction/verb/ai_select_research())
 	add_verb(src, new/datum/game_mode/malfunction/verb/ai_help())
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 	// And greet user with some OOC info.
 	to_chat(user, "You are malfunctioning, you do not have to follow any laws.")
@@ -114,7 +108,6 @@
 	return (health-CONFIG_GET(number/health_threshold_dead))/2 // CHOMPEdit
 
 // Shows capacitor charge and hardware integrity information to the AI in Status tab.
-//ChompEDIT START - TGPanel
 /mob/living/silicon/ai/show_system_integrity()
 	. = ""
 	if(!src.stat)
@@ -141,10 +134,6 @@
 				. += "SYSTEM OVERRIDE INITIATED"
 			else if(system_override == 2)
 				. += "SYSTEM OVERRIDE COMPLETED"
-<<<<<<< HEAD
-//ChompEDIT END
-=======
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 // Cleaner proc for creating powersupply for an AI.
 /mob/living/silicon/ai/proc/create_powersupply()

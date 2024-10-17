@@ -96,18 +96,9 @@ GLOBAL_REAL(Failsafe, /datum/controller/failsafe) // CHOMPEdit - Managed Globals
 /datum/controller/failsafe/proc/defcon_pretty()
 	return defcon
 
-<<<<<<< HEAD
-/datum/controller/failsafe/stat_entry(msg) //CHOMPEdit
-	if(!statclick)
-		statclick = new/obj/effect/statclick/debug(null, "Initializing...", src)
-
-	msg = "Failsafe Controller: [statclick.update("Defcon: [defcon_pretty()] (Interval: [Failsafe.processing_interval] | Iteration: [Failsafe.master_iteration])")]" //CHOMPEdit
-	return msg //CHOMPEdit
-=======
 /datum/controller/failsafe/stat_entry(msg)
 	if(!statclick)
 		statclick = new/obj/effect/statclick/debug(null, "Initializing...", src)
 
 	msg = "Failsafe Controller: [statclick.update("Defcon: [defcon_pretty()] (Interval: [Failsafe.processing_interval] | Iteration: [Failsafe.master_iteration])")]"
 	return msg
->>>>>>> c07027136e... Port tg statpanel (#16463)

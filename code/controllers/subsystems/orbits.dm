@@ -7,18 +7,10 @@ SUBSYSTEM_DEF(orbit)
 	var/list/currentrun = list()
 	var/list/processing = list()
 
-<<<<<<< HEAD
-//CHOMPEdit Begin
-/datum/controller/subsystem/orbit/stat_entry(msg)
-	msg = "P:[processing.len]"
-	return ..()
-//CHOMPEdit End
-=======
 /datum/controller/subsystem/orbit/stat_entry(msg)
 	msg = "P:[processing.len]"
 	return ..()
 
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /datum/controller/subsystem/orbit/fire(resumed = 0)
 	if (!resumed)

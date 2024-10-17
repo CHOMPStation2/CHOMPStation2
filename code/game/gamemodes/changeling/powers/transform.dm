@@ -56,15 +56,9 @@
 		for(var/datum/modifier/mod in chosen_dna.genMods)
 			self.modifiers.Add(mod.type)
 
-<<<<<<< HEAD
-	remove_verb(src,/mob/proc/changeling_transform)  //CHOMPEdit
-	spawn(10)
-		add_verb(src,/mob/proc/changeling_transform) //CHOMPEdit
-=======
 	remove_verb(src, /mob/proc/changeling_transform)
 	spawn(10)
 		add_verb(src, /mob/proc/changeling_transform)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 		src.regenerate_icons()
 
 	feedback_add_details("changeling_powers","TR")

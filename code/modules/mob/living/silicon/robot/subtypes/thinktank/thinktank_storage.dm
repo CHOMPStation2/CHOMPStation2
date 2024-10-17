@@ -106,11 +106,7 @@
 
 /mob/living/silicon/robot/platform/verb/drop_stored_atom_verb()
 	set name = "Eject Cargo"
-<<<<<<< HEAD
-	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
-=======
 	set category = "Abilities.Silicon"
->>>>>>> c07027136e... Port tg statpanel (#16463)
 	set desc = "Drop something from your internal storage."
 
 	if(incapacitated())

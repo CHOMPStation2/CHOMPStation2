@@ -203,11 +203,7 @@
 	user.hack_can_fail = 0
 	user.hacking = 0
 	user.system_override = 2
-<<<<<<< HEAD
-	add_verb(user,new/datum/game_mode/malfunction/verb/ai_destroy_station()) //CHOMPEdit
-=======
 	add_verb(user, new /datum/game_mode/malfunction/verb/ai_destroy_station())
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 
 // END ABILITY VERBS

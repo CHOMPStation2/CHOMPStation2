@@ -54,11 +54,7 @@ var/list/_nymph_default_emotes = list(
 	species = GLOB.all_species[SPECIES_DIONA]
 	add_language(LANGUAGE_ROOTGLOBAL)
 	add_language(LANGUAGE_GALCOM)
-<<<<<<< HEAD
-	add_verb(src,/mob/living/carbon/alien/diona/proc/merge) //CHOMPEdit TGPanel
-=======
 	add_verb(src, /mob/living/carbon/alien/diona/proc/merge)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /mob/living/carbon/alien/diona/put_in_hands(var/obj/item/W) // No hands.
 	W.loc = get_turf(src)

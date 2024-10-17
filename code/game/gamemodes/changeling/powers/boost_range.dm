@@ -24,14 +24,8 @@
 		range = range + 3
 		to_chat(src, span_notice("We can fire our next sting from five squares away."))
 	changeling.sting_range = range
-<<<<<<< HEAD
-	remove_verb(src,/mob/proc/changeling_boost_range)  //CHOMPEdit
-	spawn(5)
-		add_verb(src,/mob/proc/changeling_boost_range) //CHOMPEdit
-=======
 	remove_verb(src, /mob/proc/changeling_boost_range)
 	spawn(5)
 		add_verb(src, /mob/proc/changeling_boost_range)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 	feedback_add_details("changeling_powers","RS")
 	return 1

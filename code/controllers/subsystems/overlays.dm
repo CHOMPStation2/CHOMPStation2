@@ -32,15 +32,7 @@ SUBSYSTEM_DEF(overlays)
 //CHOMPEdit Begin
 /datum/controller/subsystem/overlays/Initialize()
 	fire(FALSE, TRUE)
-<<<<<<< HEAD
 	return SS_INIT_SUCCESS
-=======
-	..()
-
-/datum/controller/subsystem/overlays/stat_entry(msg)
-	msg = "Queued Atoms: [queue.len], Cache Size: [cache_size]"
-	return ..()
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /datum/controller/subsystem/overlays/stat_entry(msg)
 	msg = "Queued Atoms: [queue.len], Cache Size: [cache_size]"

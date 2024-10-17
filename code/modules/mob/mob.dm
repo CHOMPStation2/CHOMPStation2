@@ -698,104 +698,6 @@
 	for(var/mob/M in viewers())
 		M.see(message)
 
-<<<<<<< HEAD
-/* CHOMP Removal
-/mob/Stat()
-	..()
-	. = (is_client_active(10 MINUTES))
-
-	if(.)
-		if(statpanel("Status"))
-			stat(null, "Time Dilation: [round(SStime_track.time_dilation_current,1)]% AVG:([round(SStime_track.time_dilation_avg_fast,1)]%, [round(SStime_track.time_dilation_avg,1)]%, [round(SStime_track.time_dilation_avg_slow,1)]%)")
-			if(ticker && ticker.current_state != GAME_STATE_PREGAME)
-				stat("Station Time", stationtime2text())
-				var/date = "[stationdate2text()], [capitalize(GLOB.world_time_season)]" // CHOMPEdit - Managed Globals
-				stat("Station Date", date)
-				stat("Round Duration", roundduration2text())
-
-		if(client.holder)
-			if(statpanel("Status"))
-				stat("Location:", "([x], [y], [z]) [loc]")
-				stat("CPU:","[world.cpu]")
-				stat("Instances:","[world.contents.len]")
-				stat(null, "Time Dilation: [round(SStime_track.time_dilation_current,1)]% AVG:([round(SStime_track.time_dilation_avg_fast,1)]%, [round(SStime_track.time_dilation_avg,1)]%, [round(SStime_track.time_dilation_avg_slow,1)]%)")
-				stat("Keys Held", keys2text(client.move_keys_held | client.mod_keys_held))
-				stat("Next Move ADD", dirs2text(client.next_move_dir_add))
-				stat("Next Move SUB", dirs2text(client.next_move_dir_sub))
-				stat("Current size:", size_multiplier * 100)
-
-			if(statpanel("MC"))
-				stat("Location:", "([x], [y], [z]) [loc]")
-				stat("CPU:","[world.cpu]")
-				stat("Instances:","[world.contents.len]")
-				stat("World Time:", world.time)
-				stat("Real time of day:", REALTIMEOFDAY)
-				stat(null)
-				if(GLOB)
-					GLOB.stat_entry()
-				else
-					stat("Globals:", "ERROR")
-				if(config)
-					stat("[config]:", config.stat_entry())
-				else
-					stat("Config:", "ERROR")
-				if(Master)
-					Master.stat_entry()
-				else
-					stat("Master Controller:", "ERROR")
-				if(Failsafe)
-					Failsafe.stat_entry()
-				else
-					stat("Failsafe Controller:", "ERROR")
-				if(Master)
-					stat(null)
-					for(var/datum/controller/subsystem/SS in Master.subsystems)
-						SS.stat_entry()
-			/* CHOMPedit - Ticket System
-			if(statpanel("Tickets"))
-				if(check_rights(R_ADMIN|R_SERVER,FALSE)) //Prevents non-staff from opening the list of ahelp tickets
-					GLOB.ahelp_tickets.stat_entry()
-			*/
-
-			if(length(GLOB.sdql2_queries))
-				if(statpanel("SDQL2"))
-					stat("Access Global SDQL2 List", GLOB.sdql2_vv_statobj)
-					for(var/datum/SDQL2_query/Q as anything in GLOB.sdql2_queries)
-						Q.generate_stat()
-
-		if(has_mentor_powers(client) || client.holder) // CHOMPedit - Ticket System
-			if(statpanel("Tickets"))
-				GLOB.tickets.stat_entry() // CHOMPedit - Ticket System
-
-		if(listed_turf && client)
-			if(!TurfAdjacent(listed_turf))
-				listed_turf = null
-			else
-				if(statpanel("Turf"))
-					stat(listed_turf)
-					for(var/atom/A in listed_turf)
-						if(!A.mouse_opacity)
-							continue
-						if(A.invisibility > see_invisible)
-							continue
-						if(is_type_in_list(A, shouldnt_see))
-							continue
-						if(A.plane > plane)
-							continue
-						stat(A)
-*/
-
-/// Adds this list to the output to the stat browser
-/mob/proc/get_status_tab_items()
-	. = list()
-
-/// Gets all relevant proc holders for the browser statpenl
-/mob/proc/get_proc_holders()
-	. = list()
-	//if(mind)
-		//. += get_spells_for_statpanel(mind.spell_list)
-	//. += get_spells_for_statpanel(mob_spell_list)
-=======
 /// Adds this list to the output to the stat browser
 /mob/proc/get_status_tab_items()
 	. = list()
@@ -809,7 +711,6 @@
 
 /mob/proc/update_misc_tabs()
 	misc_tabs = list() //Reset misc_tabs every Stat() to prevent old shit sticking around
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 // facing verbs
 /mob/proc/canface()

@@ -19,17 +19,9 @@ SUBSYSTEM_DEF(mobs)
 	var/slept_mobs = 0
 	var/list/process_z = list()
 
-<<<<<<< HEAD
-//CHOMPEdit Begin
 /datum/controller/subsystem/mobs/stat_entry(msg)
 	msg = "P: [global.mob_list.len] | S: [slept_mobs]"
 	return ..()
-//CHOMPEdit End
-=======
-/datum/controller/subsystem/mobs/stat_entry(msg)
-	msg = "P: [global.mob_list.len] | S: [slept_mobs]"
-	return ..()
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /datum/controller/subsystem/mobs/fire(resumed = 0)
 	if (!resumed)
@@ -105,7 +97,6 @@ SUBSYSTEM_DEF(mobs)
 /datum/controller/subsystem/mobs/critfail()
 	..()
 	log_recent()
-<<<<<<< HEAD
 
 //CHOMPEdit Begin
 //Mobs need to immediately removed from the SS list on Destroy
@@ -113,5 +104,3 @@ SUBSYSTEM_DEF(mobs)
 	. = ..()
 	SSmobs.currentrun -= src
 //CHOMPEdit End
-=======
->>>>>>> c07027136e... Port tg statpanel (#16463)

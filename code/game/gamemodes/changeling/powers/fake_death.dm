@@ -43,11 +43,7 @@
 
 	spawn(rand(2 MINUTES, 4 MINUTES))
 		//The ling will now be able to choose when to revive
-<<<<<<< HEAD
-		add_verb(/mob/proc/changeling_revive) //CHOMPEdit TGPanel
-=======
 		add_verb(src, /mob/proc/changeling_revive)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 		new /obj/changeling_revive_holder(src)
 

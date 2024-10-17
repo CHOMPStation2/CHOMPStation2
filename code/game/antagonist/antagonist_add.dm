@@ -28,27 +28,16 @@
 	current_antagonists |= player
 
 	if(faction_verb && player.current)
-<<<<<<< HEAD
-		add_verb(player.current,faction_verb) //CHOMPEdit TGPanel
-=======
 		add_verb(player.current, faction_verb)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 	spawn(1 SECOND) //Added a delay so that this should pop up at the bottom and not the top of the text flood the new antag gets.
 		to_chat(player.current, span_notice("Once you decide on a goal to pursue, you can optionally display it to \
 			everyone at the end of the shift with the " + span_bold("Set Ambition") + " verb, located in the IC tab.  You can change this at any time, \
 			and it otherwise has no bearing on your round."))
-<<<<<<< HEAD
-	add_verb(player.current,/mob/living/proc/write_ambition) //CHOMPEdit TGPanel
-
-	if(can_speak_aooc)
-		add_verb(player.current.client,/client/proc/aooc) //CHOMPEdit
-=======
 	add_verb(player.current, /mob/living/proc/write_ambition)
 
 	if(can_speak_aooc)
 		add_verb(player.current.client, /client/proc/aooc)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 	// Handle only adding a mind and not bothering with gear etc.
 	if(nonstandard_role_type)
@@ -62,11 +51,7 @@
 
 /datum/antagonist/proc/remove_antagonist(var/datum/mind/player, var/show_message, var/implanted)
 	if(player.current && faction_verb)
-<<<<<<< HEAD
-		remove_verb(player.current,faction_verb)  //CHOMPEdit
-=======
 		remove_verb(player.current, faction_verb)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 	if(player in current_antagonists)
 		to_chat(player.current, span_danger(span_large("You are no longer a [role_text]!")))
 		current_antagonists -= player
@@ -75,13 +60,8 @@
 		update_icons_removed(player)
 		BITSET(player.current.hud_updateflag, SPECIALROLE_HUD)
 		if(!is_special_character(player))
-<<<<<<< HEAD
-			remove_verb(player.current,/mob/living/proc/write_ambition)  //CHOMPEdit
-			remove_verb(player.current.client,/client/proc/aooc)  //CHOMPEdit
-=======
 			remove_verb(player.current, /mob/living/proc/write_ambition)
 			remove_verb(player.current.client, /client/proc/aooc)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 			player.ambitions = ""
 		return 1
 	return 0

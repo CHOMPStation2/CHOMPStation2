@@ -40,14 +40,7 @@ Reason: Replaced with "Tickets System"
 		return
 
 	//if they requested spice, then remove spice verb temporarily to prevent spamming
-<<<<<<< HEAD
-	remove_verb(usr,/client/verb/adminspice)  //CHOMPEdit
-	spawn(10 MINUTES)
-		if(usr)		// In case we left in the 10 minute cooldown
-			add_verb(usr,/client/verb/adminspice	) // 10 minute cool-down for spice request //CHOMPEdit
-=======
 	remove_verb(usr, /client/verb/adminspice)
 	spawn(10 MINUTES)
 		if(usr)		// In case we left in the 10 minute cooldown
 			add_verb(usr, /client/verb/adminspice)	// 10 minute cool-down for spice request
->>>>>>> c07027136e... Port tg statpanel (#16463)

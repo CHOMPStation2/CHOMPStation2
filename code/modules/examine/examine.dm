@@ -5,10 +5,6 @@
 	This means that this file can be unchecked, along with the other examine files, and can be removed entirely with no effort.
 */
 
-<<<<<<< HEAD
-// # define EXAMINE_PANEL_PADDING "               " //CHOMPRemove
-=======
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /atom/
 	var/description_info = null //Helpful blue text.
@@ -37,11 +33,7 @@
 
 // Quickly adds the boilerplate code to add an image and padding for the image.
 /proc/desc_panel_image(var/icon_state)
-<<<<<<< HEAD
-	return "[icon2html(description_icons[icon_state],usr)]&emsp;" //CHOMPEdit
-=======
 	return "[icon2html(description_icons[icon_state], usr)]&emsp;"
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /mob/living/get_description_fluff()
 	if(flavor_text) //Get flavor text for the green text.
@@ -57,63 +49,16 @@
 /client/var/description_holders[0]
 
 /client/proc/update_description_holders(atom/A, update_antag_info=0)
-<<<<<<< HEAD
-	examine_icon = null //CHOMPEdit
-=======
 	examine_icon = null
->>>>>>> c07027136e... Port tg statpanel (#16463)
 	description_holders["info"] = A.get_description_info()
 	description_holders["fluff"] = A.get_description_fluff()
 	description_holders["antag"] = (update_antag_info)? A.get_description_antag() : ""
 	description_holders["interactions"] = A.get_description_interaction()
 
 	description_holders["name"] = "[A.name]"
-<<<<<<< HEAD
-	description_holders["icon"] = A //CHOMPEdit
-	description_holders["desc"] = A.desc
-
-/* CHOMP Removal
-/mob/Stat()
-	. = ..()
-	if(client && statpanel("Examine"))
-		var/description_holders = client.description_holders
-		stat(null,"[description_holders["icon"]]    <font size='5'>[description_holders["name"]]</font>") //The name, written in big letters.
-		stat(null,"[description_holders["desc"]]") //the default examine text.
-
-
-		var/color_i = "#084B8A"
-		var/color_f = "#298A08"
-		var/color_a = "#8A0808"
-/*
-		The infowindow colours are set in code\modules\vchat\js\vchat.js file
-		Unfortunately, I cannot think of a way to do this elegantly where there's this central define that we can easily track.
-		As of 2023/08/05 13:10, the lightmode colour for vchat tabBackgroundColor is "none", this is also defined in interface\skin.dmf .
-		The darkmode colour for vchat tabBackgroundColor is "#272727".
-		Since it's possible that one day we'll have option to modify the user's preferred tabBackgroundColor
-		I will assume the lightmode colour will be left untouched - therefore, we are checking for none.
-*/
-		if(!(winget(src, "infowindow", "background-color") == "none"))
-			color_i = "#709ec9d8"
-			color_f = "#76d357"
-			color_a = "#c94d4d"
-
-
-		if(description_holders["info"])
-			stat(null,"<font color=[color_i]><b>[description_holders["info"]]</b></font>") //Blue, informative text.
-		if(description_holders["interactions"])
-			for(var/line in description_holders["interactions"])
-				stat(null, "<font color=[color_i]><b>[line]</b></font>")
-		if(description_holders["fluff"])
-			stat(null,"<font color=[color_f]><b>[description_holders["fluff"]]</b></font>") //Yellow, fluff-related text.
-		if(description_holders["antag"])
-			stat(null,"<font color=[color_a]><b>[description_holders["antag"]]</b></font>") //Red, malicious antag-related text
-*/
-
-=======
 	description_holders["icon"] = A
 	description_holders["desc"] = A.desc
 
->>>>>>> c07027136e... Port tg statpanel (#16463)
 //override examinate verb to update description holders when things are examined
 //mob verbs are faster than object verbs. See http://www.byond.com/forum/?post=1326139&page=2#comment8198716 for why this isn't atom/verb/examine()
 /mob/verb/examinate(atom/A as mob|obj|turf in _validate_atom(A))
@@ -142,12 +87,8 @@
 	if(client)
 		var/is_antag = ((mind && mind.special_role) || isobserver(src)) //ghosts don't have minds
 		client.update_description_holders(A, is_antag)
-<<<<<<< HEAD
-		SSstatpanels.set_examine_tab(client) //CHOMPEdit
-=======
 		SSstatpanels.set_examine_tab(client)
 
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /mob/verb/mob_examine()
 	set name = "Mob Examine"
@@ -223,8 +164,3 @@
 		results = list("You were unable to examine that. Tell a developer!")
 	to_chat(src, jointext(results, "<br>"))
 	update_examine_panel(B)
-<<<<<<< HEAD
-
-// # undef EXAMINE_PANEL_PADDING //CHOMPRemove
-=======
->>>>>>> c07027136e... Port tg statpanel (#16463)

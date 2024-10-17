@@ -248,12 +248,7 @@
 
 // Don't make these call bicon or anything, these are what bicon uses. They need to return an icon.
 /atom/proc/examine_icon()
-<<<<<<< HEAD
-	return src //CHOMPEdit 99% of the time just returning src will be sufficient. More complex examine icon things are available where they are needed
-	//return icon(icon=src.icon, icon_state=src.icon_state, dir=SOUTH, frame=1, moving=0) CHOMPEdit-- N O
-=======
 	return src // 99% of the time just returning src will be sufficient. More complex examine icon things are available where they are needed
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 // called by mobs when e.g. having the atom as their machine, pulledby, loc (AKA mob being inside the atom) or buckled var set.
 // see code/modules/mob/mob_movement.dm for more.

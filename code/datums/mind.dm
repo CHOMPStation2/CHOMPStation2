@@ -78,11 +78,7 @@
 	if(current)					//remove ourself from our old body's mind variable
 		if(changeling)
 			current.remove_changeling_powers()
-<<<<<<< HEAD
-			remove_verb(current,/datum/changeling/proc/EvolutionMenu)  //CHOMPEdit
-=======
 			remove_verb(current, /datum/changeling/proc/EvolutionMenu)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 		current.mind = null
 
 	if(new_character.mind)		//remove any mind currently in our new body's mind variable
@@ -97,13 +93,8 @@
 	if(active)
 		new_character.key = key		//now transfer the key to link the client to our new body
 
-<<<<<<< HEAD
-	if(new_character.client) //CHOMPEdit
-		new_character.client.init_verbs() // re-initialize character specific verbs //CHOMPEdit
-=======
 	if(new_character.client)
 		new_character.client.init_verbs() // re-initialize character specific verbs
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /datum/mind/proc/store_memory(new_text)
 	memory += "[new_text]<BR>"
@@ -518,11 +509,7 @@
 	if(!mind.name)	mind.name = real_name
 	mind.current = src
 	if(player_is_antag(mind))
-<<<<<<< HEAD
-		add_verb(src.client,/client/proc/aooc) //CHOMPEdit
-=======
 		add_verb(src.client, /client/proc/aooc)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 //HUMAN
 /mob/living/carbon/human/mind_initialize()

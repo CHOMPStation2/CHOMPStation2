@@ -191,13 +191,8 @@
 			qdel(Org)
 
 		// Purge the diona verbs.
-<<<<<<< HEAD
-		remove_verb(src,/mob/living/carbon/human/proc/diona_split_nymph) //CHOMPEdit TGPanel
-		remove_verb(src,/mob/living/carbon/human/proc/regenerate) //CHOMPEdit TGPanel
-=======
 		remove_verb(src, /mob/living/carbon/human/proc/diona_split_nymph)
 		remove_verb(src, /mob/living/carbon/human/proc/regenerate)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 		for(var/obj/item/organ/external/E in organs) // Just fall apart.
 			E.droplimb(TRUE)

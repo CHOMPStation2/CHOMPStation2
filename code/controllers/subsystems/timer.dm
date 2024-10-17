@@ -54,12 +54,9 @@ SUBSYSTEM_DEF(timer)
 	head_offset = world.time
 	bucket_resolution = world.tick_lag
 
-//CHOMPEdit Begin
 /datum/controller/subsystem/timer/stat_entry(msg)
-<<<<<<< HEAD
-	msg = "B:[bucket_count] P:[length(second_queue)] H:[length(hashes)] C:[length(clienttime_timers)] S:[length(timer_id_dict)] RST:[bucket_reset_count]"
+	msg = "B:[bucket_count] P:[length(second_queue)] H:[length(hashes)] C:[length(clienttime_timers)] S:[length(timer_id_dict)] RST:[bucket_reset_count]" // CHOMPEdit
 	return ..()
-// CHOMPEdit End
 
 /datum/controller/subsystem/timer/proc/dump_timer_buckets(full = TRUE)
 	var/list/to_log = list("Timer bucket reset. world.time: [world.time], head_offset: [head_offset], practical_offset: [practical_offset]")
@@ -84,10 +81,6 @@ SUBSYSTEM_DEF(timer)
 
 	// Dump all the logged data to the world log
 	log_world(to_log.Join("\n"))
-=======
-	msg = "B:[bucket_count] P:[length(second_queue)] H:[length(hashes)] C:[length(clienttime_timers)] S:[length(timer_id_dict)]"
-	return ..()
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /datum/controller/subsystem/timer/fire(resumed = FALSE)
 	// Store local references to datum vars as it is faster to access them

@@ -20,11 +20,7 @@
 // Parameters: None
 // Description: Lets synths use their communicators without hands.
 /obj/item/communicator/integrated/verb/activate()
-<<<<<<< HEAD
 	set category = "Abilities.AI" //ChompEDIT - TGPanel
-=======
-	set category = "Abilities.AI_IM"
->>>>>>> c07027136e... Port tg statpanel (#16463)
 	set name = "Use Communicator"
 	set desc = "Utilizes your built-in communicator."
 	set src in usr

@@ -41,11 +41,7 @@
 	if(modifiers["alt"]) // alt and alt-gr (rightalt)
 		var/turf/T = get_turf(A)
 		if(T && TurfAdjacent(T))
-<<<<<<< HEAD
-			set_listed_turf(T) //CHOMPEdit
-=======
 			set_listed_turf(T)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 			return
 	// You are responsible for checking config.ghost_interaction when you override this function
 	// Not all of them require checking, see below

@@ -76,17 +76,10 @@
 /mob/living/silicon/pai/Initialize()
 	. = ..()
 
-<<<<<<< HEAD
-	add_verb(src,/mob/proc/dominate_predator) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/proc/dominate_prey) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/proc/set_size) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/proc/shred_limb) //CHOMPEdit TGPanel
-=======
 	add_verb(src, /mob/proc/dominate_predator)
 	add_verb(src, /mob/living/proc/dominate_prey)
 	add_verb(src, /mob/living/proc/set_size)
 	add_verb(src, /mob/living/proc/shred_limb)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /mob/living/silicon/pai/Login()
 	. = ..()
