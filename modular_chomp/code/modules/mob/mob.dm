@@ -5,9 +5,6 @@
 	var/died_in_vr = FALSE //For virtual reality sleepers
 	var/last_move_time = 0 //For movement smoothing
 
-/mob/proc/update_misc_tabs()
-	misc_tabs = list() //Reset misc_tabs every Stat() to prevent old shit sticking around
-
 /mob/is_incorporeal()
 	if(incorporeal_move)
 		return 1

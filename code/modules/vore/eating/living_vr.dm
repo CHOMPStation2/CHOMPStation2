@@ -1391,7 +1391,7 @@
 	icon = 'icons/mob/screen_full_colorized_vore_overlays.dmi'
 */ //Chomp DISABLE End
 
-/mob/living/verb/vorebelly_printout() //Spew the vorepanel belly messages into chat window for copypasting. //ChompEDIT proc -> verb
+/mob/living/proc/vorebelly_printout() //Spew the vorepanel belly messages into chat window for copypasting.
 	set name = "X-Print Vorebelly Settings"
 	set category = "Preferences.Vore" //CHOMPEdit
 	set desc = "Print out your vorebelly messages into chat for copypasting."
