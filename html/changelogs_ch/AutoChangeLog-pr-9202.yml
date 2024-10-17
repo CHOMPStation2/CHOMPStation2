@@ -1,4 +1,0 @@
-author: "AzulKitsune"
-delete-after: True
-changes:
-  - bugfix: "fixed the size implant not supporting larger/smaller sizes in dorms.\n:cl:"

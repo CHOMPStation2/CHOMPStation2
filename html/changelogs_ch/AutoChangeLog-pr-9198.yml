@@ -1,5 +1,0 @@
-author: "TheCaramelion"
-delete-after: True
-changes:
-  - rscadd: "Added \"salvage items\" that can be found with mobs or in specific PoIs"
-  - balance: "Reduced the amount of guns and weapons found in exploration Pois"

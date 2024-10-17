@@ -1,5 +1,0 @@
-author: "CHOMPStation2"
-delete-after: True
-changes:
-  - rscadd: "TGUI Say now has a slider for how tall you want the window to be by default."
-  - rscadd: "TGUI Say can now be disabled just for me/subtle."
