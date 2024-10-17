@@ -7,7 +7,7 @@ SUBSYSTEM_DEF(persist)
 	name = "Persist"
 	priority = 20
 	wait = 15 MINUTES
-	flags = SS_NO_INIT|SS_KEEP_TIMING // CHOMPEdit
+	flags = SS_BACKGROUND|SS_NO_INIT|SS_KEEP_TIMING // CHOMPEdit
 	runlevels = RUNLEVEL_GAME|RUNLEVEL_POSTGAME
 	var/list/currentrun = list()
 
@@ -85,11 +85,12 @@ SUBSYSTEM_DEF(persist)
 		var/sql_dpt = sql_sanitize_text(department_earning)
 		var/sql_bal = text2num("[C.department_hours[department_earning]]")
 		var/sql_total = text2num("[C.play_hours[department_earning]]")
-		var/list/sqlargs = list("t_ckey" = sql_ckey, "t_department" = sql_dpt) //CHOMPEdit TGSQL
-		var/datum/db_query/query = SSdbcore.NewQuery("INSERT INTO vr_player_hours (ckey, department, hours, total_hours) VALUES (:t_ckey, :t_department, [sql_bal], [sql_total]) ON DUPLICATE KEY UPDATE hours = VALUES(hours), total_hours = VALUES(total_hours)", sqlargs) //CHOMPEdit TGSQL
-		if(!query.Execute())	//CHOMPEdit
-			log_admin(query.ErrorMsg())	//CHOMPEdit
-		qdel(query) //CHOMPEdit TGSQL
+		spawn()
+			var/list/sqlargs = list("t_ckey" = sql_ckey, "t_department" = sql_dpt) //CHOMPEdit TGSQL
+			var/datum/db_query/query = SSdbcore.NewQuery("INSERT INTO vr_player_hours (ckey, department, hours, total_hours) VALUES (:t_ckey, :t_department, [sql_bal], [sql_total]) ON DUPLICATE KEY UPDATE hours = VALUES(hours), total_hours = VALUES(total_hours)", sqlargs) //CHOMPEdit TGSQL
+			if(!query.Execute())	//CHOMPEdit
+				log_admin(query.ErrorMsg())	//CHOMPEdit
+			qdel(query) //CHOMPEdit TGSQL
 		if (MC_TICK_CHECK)
 			return
 
