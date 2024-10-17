@@ -57764,7 +57764,7 @@
 /area/hallway/secondary/entry/D3)
 "jMw" = (
 /obj/structure/sign/nosmoking_1,
-/turf/simulated/wall,
+/turf/simulated/wall/r_wall,
 /area/medical/medical_lockerroom)
 "jMO" = (
 /obj/structure/table/standard,
@@ -62166,7 +62166,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 4
 	},
-/turf/simulated/wall,
+/turf/simulated/wall/r_wall,
 /area/medical/medical_lockerroom)
 "mjR" = (
 /obj/item/roller,
@@ -63861,9 +63861,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/holodeck_control)
-"njW" = (
-/turf/simulated/wall,
-/area/medical/genetics)
 "nke" = (
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
@@ -67754,10 +67751,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_emt_bay)
-"ppR" = (
-/obj/machinery/shield_diffuser,
-/turf/simulated/floor/plating,
-/area/space)
 "ppW" = (
 /obj/machinery/atmospherics/valve/shutoff{
 	name = "Deck 2 Starboard automatic shutoff valve"
@@ -78209,7 +78202,7 @@
 	dir = 8
 	},
 /obj/machinery/shield_diffuser,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "vIB" = (
 /obj/machinery/firealarm{
@@ -133044,15 +133037,15 @@ nSZ
 mSO
 qrI
 hBo
-njW
+oMg
 sKv
-njW
+oMg
 jMw
 mjF
-guk
-guk
-guk
-guk
+qNE
+qNE
+qNE
+qNE
 qNE
 aaa
 aaa
@@ -135618,9 +135611,9 @@ rJB
 pzW
 aaa
 aaa
-ppR
+abx
 dLq
-ppR
+abx
 vIA
 aaa
 aaa
