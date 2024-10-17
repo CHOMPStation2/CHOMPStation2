@@ -250,12 +250,9 @@
 	mineitemtype = /obj/item/mine/emp
 
 /obj/effect/mine/emp/explode(var/mob/living/M)
-<<<<<<< HEAD
-	triggered = 1 //ChompEDIT recursing mines
-=======
 	if(triggered) // Prevents circular mine explosions from two mines detonating eachother
 		return
->>>>>>> a75b7eb495... adds sanity check to mines to prevent qdel loop (#16477)
+	triggered = 1 //ChompEDIT recursing mines
 	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread()
 	s.set_up(3, 1, src)
 	s.start()
