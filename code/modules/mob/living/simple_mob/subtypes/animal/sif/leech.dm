@@ -119,27 +119,12 @@
 /mob/living/simple_mob/animal/sif/leech/Initialize()
 	. = ..()
 
-<<<<<<< HEAD
-	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel
-
-/mob/living/simple_mob/animal/sif/leech/Stat()
-	..()
-	if(client.statpanel == "Status")
-		statpanel("Status")
-		if(emergency_shuttle)
-			var/eta_status = emergency_shuttle.get_status_panel_eta()
-			if(eta_status)
-				stat(null, eta_status)
-		stat("Chemicals", chemicals)
-=======
 	add_verb(src, /mob/living/proc/ventcrawl)
 	add_verb(src, /mob/living/proc/hide)
 
 /mob/living/simple_mob/animal/sif/leech/get_status_tab_items()
 	. = ..()
 	. += "Chemicals: [chemicals]"
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /mob/living/simple_mob/animal/sif/leech/do_special_attack(atom/A)
 	. = TRUE
