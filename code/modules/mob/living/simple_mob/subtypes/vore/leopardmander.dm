@@ -73,13 +73,8 @@
 	. = ..()
 	if(!riding_datum)
 		riding_datum = new /datum/riding/simple_mob(src)
-<<<<<<< HEAD
-	add_verb(src,/mob/living/simple_mob/proc/animal_mount) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/proc/toggle_rider_reins) //CHOMPEdit TGPanel
-=======
 	add_verb(src, /mob/living/simple_mob/proc/animal_mount)
 	add_verb(src, /mob/living/proc/toggle_rider_reins)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 	movement_cooldown = -1
 
 /mob/living/simple_mob/vore/leopardmander/Initialize()
@@ -153,11 +148,7 @@
 
 /mob/living/simple_mob/vore/leopardmander/exotic/New()
 	..()
-<<<<<<< HEAD
-	add_verb(src,/mob/living/simple_mob/vore/leopardmander/exotic/proc/toggle_glow) //CHOMPEdit TGPanel
-=======
 	add_verb(src, /mob/living/simple_mob/vore/leopardmander/exotic/proc/toggle_glow)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /mob/living/simple_mob/vore/leopardmander/exotic/init_vore()
 	if(!voremob_loaded) //CHOMP add to fix runtime

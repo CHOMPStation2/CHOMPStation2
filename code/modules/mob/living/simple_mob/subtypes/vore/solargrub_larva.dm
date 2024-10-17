@@ -60,11 +60,7 @@ var/global/list/grub_machine_overlays = list()
 	sparks = new(src)
 	sparks.set_up()
 	sparks.attach(src)
-<<<<<<< HEAD
-	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
-=======
 	add_verb(src, /mob/living/proc/ventcrawl)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /mob/living/simple_mob/animal/solargrub_larva/death()
 	powermachine.draining = 0

@@ -69,13 +69,8 @@
 
 /mob/living/simple_mob/vore/overmap/stardog/Login()
 	. = ..()
-<<<<<<< HEAD
-	remove_verb(src,/mob/living/simple_mob/proc/set_name) //CHOMPEdit TGPanel
-	remove_verb(src,/mob/living/simple_mob/proc/set_desc) //CHOMPEdit TGPanel
-=======
 	remove_verb(src, /mob/living/simple_mob/proc/set_name)
 	remove_verb(src, /mob/living/simple_mob/proc/set_desc)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /mob/living/simple_mob/vore/overmap/stardog/attack_hand(mob/living/user)
 	if(!(user.pickup_pref && user.pickup_active))

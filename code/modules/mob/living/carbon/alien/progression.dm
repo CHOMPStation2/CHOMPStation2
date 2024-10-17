@@ -8,11 +8,7 @@
 		return
 
 	if(!adult_form)
-<<<<<<< HEAD
-		remove_verb(src,/mob/living/carbon/alien/verb/evolve) //CHOMPEdit TGPanel
-=======
 		remove_verb(src, /mob/living/carbon/alien/verb/evolve)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 		return
 
 	if(handcuffed || legcuffed)

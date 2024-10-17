@@ -236,10 +236,8 @@
 	var/list/progressbars = null //VOREStation Edit
 
 	var/datum/focus //What receives our keyboard inputs. src by default
-<<<<<<< HEAD
 
-	var/custom_footstep = FOOTSTEP_MOB_SHOE // CHOMPEdit
-=======
 	/// dict of custom stat tabs with data
 	var/list/list/misc_tabs = list()
->>>>>>> c07027136e... Port tg statpanel (#16463)
+
+	var/custom_footstep = FOOTSTEP_MOB_SHOE // CHOMPEdit

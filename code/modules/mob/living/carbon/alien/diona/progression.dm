@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-/mob/living/carbon/alien/diona/get_status_tab_items() //Specified where progression is at, doesn't work right for some things in carbon/alien //ChompEDIT - TGPanel
-	. = ..()
-	if(.) //ChompEDIT - TGPanel
-		. += ""
-		. += "Diona Growth: [round(amount_grown)]/[max_grown]" //ChompEDIT - TGPanel
-=======
 /mob/living/carbon/alien/diona/get_status_tab_items() //Specified where progression is at, doesn't work right for some things in carbon/alien
 	. = ..()
 	if(.)
 		. += ""
 		. += "Diona Growth: [round(amount_grown)]/[max_grown]"
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /mob/living/carbon/alien/diona/confirm_evolution()
 

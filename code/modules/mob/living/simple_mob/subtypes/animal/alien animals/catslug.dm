@@ -140,15 +140,9 @@
 
 /mob/living/simple_mob/vore/alienanimals/catslug/Initialize()
 	. = ..()
-<<<<<<< HEAD
-	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/simple_mob/vore/alienanimals/catslug/proc/catslug_color) //CHOMPEdit TGPanel
-=======
 	add_verb(src, /mob/living/proc/ventcrawl)
 	add_verb(src, /mob/living/proc/hide)
 	add_verb(src, /mob/living/simple_mob/vore/alienanimals/catslug/proc/catslug_color)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /mob/living/simple_mob/vore/alienanimals/catslug/Destroy()
 	if(hat)
@@ -367,15 +361,9 @@
 
 /mob/living/simple_mob/vore/alienanimals/catslug/custom/Initialize()
 	. = ..()
-<<<<<<< HEAD
-	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel
-	remove_verb(src,/mob/living/simple_mob/vore/alienanimals/catslug/proc/catslug_color) //CHOMPEdit TGPanel //Most of these have custom sprites with colour already, so we'll not let them have this.
-=======
 	add_verb(src, /mob/living/proc/ventcrawl)
 	add_verb(src, /mob/living/proc/hide)
 	remove_verb(src, /mob/living/simple_mob/vore/alienanimals/catslug/proc/catslug_color)	//Most of these have custom sprites with colour already, so we'll not let them have this.
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 
 /datum/category_item/catalogue/fauna/catslug/custom/spaceslug
@@ -1095,11 +1083,7 @@
 
 /mob/living/simple_mob/vore/alienanimals/catslug/suslug/Initialize()
 	. = ..()
-<<<<<<< HEAD
-	add_verb(src,/mob/living/simple_mob/vore/alienanimals/catslug/suslug/proc/assussinate) //CHOMPEdit TGPanel
-=======
 	add_verb(src, /mob/living/simple_mob/vore/alienanimals/catslug/suslug/proc/assussinate)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 	update_icon()
 
 /mob/living/simple_mob/vore/alienanimals/catslug/suslug/update_icon()

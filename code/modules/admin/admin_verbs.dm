@@ -2,13 +2,8 @@
 	set name = "Adminverbs - Hide Most"
 	set category = "Admin.Misc" //CHOMPEdit
 
-<<<<<<< HEAD
-	remove_verb(src, list(/client/proc/hide_most_verbs,admin_verbs_hideable)) //CHOMPEdit TGPanel
-	add_verb(src,/client/proc/show_verbs) //CHOMPEdit TGPanel
-=======
 	remove_verb(src, list(/client/proc/hide_most_verbs, admin_verbs_hideable))
 	add_verb(src, /client/proc/show_verbs)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 	to_chat(src, span_filter_system(span_interface("Most of your adminverbs have been hidden.")))
 	feedback_add_details("admin_verb","HMV") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
@@ -19,11 +14,7 @@
 	set category = "Admin.Misc" //CHOMPEdit
 
 	remove_admin_verbs()
-<<<<<<< HEAD
-	add_verb(src, /client/proc/show_verbs) //CHOMPEdit
-=======
 	add_verb(src, /client/proc/show_verbs)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 	to_chat(src, span_filter_system(span_interface("Almost all of your adminverbs have been hidden.")))
 	feedback_add_details("admin_verb","TAVVH") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
@@ -33,11 +24,7 @@
 	set name = "Adminverbs - Show"
 	set category = "Admin.Misc" //CHOMPEdit
 
-<<<<<<< HEAD
-	remove_verb(src, /client/proc/show_verbs) //CHOMPEdit
-=======
 	remove_verb(src, /client/proc/show_verbs)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 	add_admin_verbs()
 
 	to_chat(src, span_filter_adminlog(span_interface("All of your adminverbs are now visible.")))
@@ -45,11 +32,7 @@
 
 
 /client/proc/admin_ghost()
-<<<<<<< HEAD
-	set category = "Admin.Game" //CHOMPEdit
-=======
 	set category = "Admin.Game"
->>>>>>> c07027136e... Port tg statpanel (#16463)
 	set name = "Aghost"
 	if(!holder)	return
 
@@ -92,12 +75,8 @@
 		else
 			ghost = body.ghostize(1)
 			ghost.admin_ghosted = 1
-<<<<<<< HEAD
 			log_and_message_admins("[key_name(src)] admin-ghosted.") // CHOMPEdit - Add logging.
-		init_verbs() //CHOMPEdit
-=======
 		init_verbs()
->>>>>>> c07027136e... Port tg statpanel (#16463)
 		if(body)
 			body.teleop = ghost
 			if(!body.key)
@@ -279,11 +258,7 @@
 #undef AUTOBANTIME
 
 /client/proc/drop_bomb() // Some admin dickery that can probably be done better -- TLE
-<<<<<<< HEAD
 	set category = "Fun.Do Not" //CHOMPEdit
-=======
-	set category = "Special Verbs.Fun"
->>>>>>> c07027136e... Port tg statpanel (#16463)
 	set name = "Drop Bomb"
 	set desc = "Cause an explosion of varying strength at your location."
 
@@ -366,11 +341,7 @@
 	log_and_message_admins("has given [key_name(L)] the modifer [new_modifier_type], with a duration of [duration ? "[duration / 600] minutes" : "forever"].")
 
 /client/proc/make_sound(var/obj/O in world) // -- TLE
-<<<<<<< HEAD
 	set category = "Fun.Sounds" //CHOMPEdit
-=======
-	set category = "Special Verbs.Events"
->>>>>>> c07027136e... Port tg statpanel (#16463)
 	set name = "Make Sound"
 	set desc = "Display a message to everyone who can hear the target"
 	if(O)
@@ -385,21 +356,13 @@
 
 /client/proc/togglebuildmodeself()
 	set name = "Toggle Build Mode Self"
-<<<<<<< HEAD
 	set category = "Debug.Events" //CHOMPEdit
-=======
-	set category = "Special Verbs.Events"
->>>>>>> c07027136e... Port tg statpanel (#16463)
 	if(src.mob)
 		togglebuildmode(src.mob)
 	feedback_add_details("admin_verb","TBMS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/object_talk(var/msg as text) // -- TLE
-<<<<<<< HEAD
 	set category = "Fun.Narrate" //CHOMPEdit
-=======
-	set category = "Special Verbs.Events"
->>>>>>> c07027136e... Port tg statpanel (#16463)
 	set name = "oSay"
 	set desc = "Display a message to everyone who can hear the target"
 	if(mob.control_object)
@@ -428,11 +391,7 @@
 		log_admin("[src] re-admined themself.")
 		message_admins("[src] re-admined themself.", 1)
 		to_chat(src, span_filter_system(span_interface("You now have the keys to control the planet, or at least a small space station")))
-<<<<<<< HEAD
-		remove_verb(src,/client/proc/readmin_self) //CHOMPEdit TGPanel
-=======
 		remove_verb(src, /client/proc/readmin_self)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /client/proc/deadmin_self()
 	set name = "De-admin self"
@@ -444,11 +403,7 @@
 			message_admins("[src] deadmined themself.", 1)
 			deadmin()
 			to_chat(src, span_filter_system(span_interface("You are now a normal player.")))
-<<<<<<< HEAD
-			add_verb(src,/client/proc/readmin_self) //CHOMPEdit TGPanel
-=======
 			add_verb(src, /client/proc/readmin_self)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 	feedback_add_details("admin_verb","DAS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/toggle_log_hrefs()
@@ -461,11 +416,7 @@
 
 /client/proc/check_ai_laws()
 	set name = "Check AI Laws"
-<<<<<<< HEAD
 	set category = "Admin.Silicon" //CHOMPEdit
-=======
-	set category = "Admin.Game"
->>>>>>> c07027136e... Port tg statpanel (#16463)
 	if(holder)
 		src.holder.output_ai_laws()
 

@@ -46,11 +46,7 @@
 			UnregisterSignal(screen_icon, COMSIG_CLICK)
 			qdel_null(screen_icon)
 		if(ishuman(parent))
-<<<<<<< HEAD
-			remove_verb(owner,/mob/living/carbon/human/proc/nif_menu)  //CHOMPEdit
-=======
 			remove_verb(owner, /mob/living/carbon/human/proc/nif_menu)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 
 /datum/component/nif_menu/proc/create_mob_button(mob/user)
@@ -64,11 +60,7 @@
 	LAZYADD(HUD.other_important, screen_icon)
 	user.client?.screen += screen_icon
 
-<<<<<<< HEAD
-	add_verb(user, /mob/living/carbon/human/proc/nif_menu) //ChompEDIT
-=======
 	add_verb(user, /mob/living/carbon/human/proc/nif_menu)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /datum/component/nif_menu/proc/nif_menu_click(source, location, control, params, user)
 	var/mob/living/carbon/human/H = user

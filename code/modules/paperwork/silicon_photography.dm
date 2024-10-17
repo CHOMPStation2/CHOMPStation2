@@ -119,11 +119,7 @@
 		aiCamera.deletepicture()
 
 /mob/living/silicon/robot/proc/take_image()
-<<<<<<< HEAD
-	set category ="Abilities.Silicon" //ChompEDIT - TGPanel
-=======
 	set category ="Abilities.Silicon"
->>>>>>> c07027136e... Port tg statpanel (#16463)
 	set name = "Take Image"
 	set desc = "Takes an image"
 
@@ -131,11 +127,7 @@
 		aiCamera.toggle_camera_mode()
 
 /mob/living/silicon/robot/proc/view_images()
-<<<<<<< HEAD
-	set category ="Abilities.Silicon" //ChompEDIT - TGPanel
-=======
 	set category ="Abilities.Silicon"
->>>>>>> c07027136e... Port tg statpanel (#16463)
 	set name = "View Images"
 	set desc = "View images"
 
@@ -143,11 +135,7 @@
 		aiCamera.viewpictures()
 
 /mob/living/silicon/robot/proc/delete_images()
-<<<<<<< HEAD
-	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
-=======
 	set category = "Abilities.Silicon"
->>>>>>> c07027136e... Port tg statpanel (#16463)
 	set name = "Delete Image"
 	set desc = "Delete a local image"
 

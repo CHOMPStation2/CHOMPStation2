@@ -237,11 +237,7 @@
 		voremob_loaded = TRUE
 		init_vore()
 	if(hasthermals)
-<<<<<<< HEAD
-		add_verb(src, /mob/living/simple_mob/proc/hunting_vision) //So that maint preds can see prey through walls, to make it easier to find them. //ChompEDIT
-=======
 		add_verb(src, /mob/living/simple_mob/proc/hunting_vision) //So that maint preds can see prey through walls, to make it easier to find them.
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /mob/living/simple_mob/SelfMove(turf/n, direct, movetime)
 	var/turf/old_turf = get_turf(src)
@@ -301,18 +297,10 @@
 
 	. += ..()
 
-<<<<<<< HEAD
-//CHOMPEdit Begin
-=======
->>>>>>> c07027136e... Port tg statpanel (#16463)
 /mob/living/simple_mob/get_status_tab_items()
 	. = ..()
 	. += ""
 	. += "Health: [round((health / getMaxHealth()) * 100)]%"
-<<<<<<< HEAD
-//CHOMPEdit End
-=======
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /mob/living/simple_mob/lay_down()
 	..()

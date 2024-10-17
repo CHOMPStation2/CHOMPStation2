@@ -57,11 +57,7 @@
 			// Was dead, still dead.
 			else
 				to_chat(src, span_notice("Consciousness begins to stir as your new body awakens, ready to hatch."))
-<<<<<<< HEAD
-				add_verb(src,/mob/living/carbon/human/proc/hatch) //CHOMPEdit TGPanel
-=======
 				add_verb(src, /mob/living/carbon/human/proc/hatch)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 				revive_ready = REVIVING_DONE
 				src << sound('sound/effects/mob_effects/xenochimera/hatch_notification.ogg',0,0,0,30)
 				clear_alert("regen")
@@ -83,11 +79,7 @@
 				to_chat(src, span_notice("Consciousness begins to stir as your new body awakens, ready to hatch.."))
 			else
 				to_chat(src, span_warning("Consciousness begins to stir as your battered body struggles to recover from its ordeal.."))
-<<<<<<< HEAD
-			add_verb(src,/mob/living/carbon/human/proc/hatch) //CHOMPEdit TGPanel
-=======
 			add_verb(src, /mob/living/carbon/human/proc/hatch)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 			revive_ready = REVIVING_DONE
 			src << sound('sound/effects/mob_effects/xenochimera/hatch_notification.ogg',0,0,0,30)
 			clear_alert("regen")
@@ -118,11 +110,7 @@
 
 	if(revive_ready != REVIVING_DONE)
 		//Hwhat?
-<<<<<<< HEAD
-		remove_verb(src,/mob/living/carbon/human/proc/hatch) //CHOMPEdit TGPanel
-=======
 		remove_verb(src, /mob/living/carbon/human/proc/hatch)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 		return
 
 	var/confirm = tgui_alert(usr, "Are you sure you want to hatch right now? This will be very obvious to anyone in view.", "Confirm Regeneration", list("Yes", "No"))
@@ -150,11 +138,7 @@
 			clear_alert("hatch")
 
 /mob/living/carbon/human/proc/chimera_hatch()
-<<<<<<< HEAD
-	remove_verb(src,/mob/living/carbon/human/proc/hatch) //CHOMPEdit TGPanel
-=======
 	remove_verb(src, /mob/living/carbon/human/proc/hatch)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 	to_chat(src, span_notice("Your new body awakens, bursting free from your old skin."))
 	//Modify and record values (half nutrition and braindamage)
 	var/old_nutrition = nutrition

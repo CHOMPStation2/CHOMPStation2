@@ -2,13 +2,8 @@
 	var/mob/living/silicon/robot/deployed_shell = null //For shell control
 
 /mob/living/silicon/ai/Initialize()
-<<<<<<< HEAD
 	if(CONFIG_GET(flag/allow_ai_shells)) // CHOMPEdit
-		add_verb(src,/mob/living/silicon/ai/proc/deploy_to_shell_act) //CHOMPEdit TGPanel
-=======
-	if(config.allow_ai_shells)
 		add_verb(src, /mob/living/silicon/ai/proc/deploy_to_shell_act)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 	return ..()
 
 /mob/living/silicon/ai/proc/deploy_to_shell(var/mob/living/silicon/robot/target)

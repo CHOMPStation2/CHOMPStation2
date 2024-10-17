@@ -945,11 +945,7 @@
 		visible_message(span_warning("<b>[usr] rips [selection] out of [src]'s body.</b>"),span_warning("<b>[usr] rips [selection] out of your body.</b>"))
 	valid_objects = get_visible_implants(0)
 	if(valid_objects.len == 1) //Yanking out last object - removing verb.
-<<<<<<< HEAD
-		remove_verb(src,/mob/proc/yank_out_object)  //CHOMPEdit
-=======
 		remove_verb(src, /mob/proc/yank_out_object)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 		clear_alert("embeddedobject")
 
 	if(ishuman(src))

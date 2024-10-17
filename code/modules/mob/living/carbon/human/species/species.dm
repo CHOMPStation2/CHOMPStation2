@@ -493,21 +493,13 @@
 /datum/species/proc/remove_inherent_verbs(var/mob/living/carbon/human/H)
 	if(inherent_verbs)
 		for(var/verb_path in inherent_verbs)
-<<<<<<< HEAD
-			remove_verb(H,verb_path)  //CHOMPEdit
-=======
 			remove_verb(H, verb_path)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 	return
 
 /datum/species/proc/add_inherent_verbs(var/mob/living/carbon/human/H)
 	if(inherent_verbs)
 		for(var/verb_path in inherent_verbs)
-<<<<<<< HEAD
-			add_verb(H,verb_path) //CHOMPEdit TGPanel
-=======
 			add_verb(H, verb_path)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 	return
 
 /datum/species/proc/handle_post_spawn(var/mob/living/carbon/human/H) //Handles anything not already covered by basic species assignment.

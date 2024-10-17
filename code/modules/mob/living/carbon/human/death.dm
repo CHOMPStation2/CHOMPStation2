@@ -80,11 +80,7 @@
 			B.host_brain.name = "host brain"
 			B.host_brain.real_name = "host brain"
 
-<<<<<<< HEAD
-		remove_verb(src,/mob/living/carbon/proc/release_control) //CHOMPEdit TGPanel
-=======
 		remove_verb(src, /mob/living/carbon/proc/release_control)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 	callHook("death", list(src, gibbed))
 

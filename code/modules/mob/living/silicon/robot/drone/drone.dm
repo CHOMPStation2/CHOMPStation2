@@ -104,13 +104,8 @@ var/list/mob_hat_cache = list()
 
 /mob/living/silicon/robot/drone/New()
 	..()
-<<<<<<< HEAD
-	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel
-=======
 	add_verb(src, /mob/living/proc/ventcrawl)
 	add_verb(src, /mob/living/proc/hide)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 	remove_language("Robot Talk")
 	add_language("Robot Talk", 0)
 	add_language("Drone Talk", 1)
@@ -128,11 +123,7 @@ var/list/mob_hat_cache = list()
 		var/datum/robot_component/C = components[V]
 		C.max_damage = 10
 
-<<<<<<< HEAD
-	remove_verb(src,/mob/living/silicon/robot/verb/namepick) //CHOMPEdit TGPanel
-=======
 	remove_verb(src, /mob/living/silicon/robot/verb/namepick)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 	if(can_pick_shell)
 		var/random = pick(shell_types)
@@ -181,11 +172,7 @@ var/list/mob_hat_cache = list()
 
 /mob/living/silicon/robot/drone/verb/pick_shell()
 	set name = "Customize Appearance"
-<<<<<<< HEAD
-	set category = "Abilities.Settings" //ChompEDIT - TGPanel
-=======
 	set category = "Abilities.Silicon"
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 	if(!can_pick_shell)
 		to_chat(src, span_warning("You already selected a shell or this drone type isn't customizable."))
@@ -409,17 +396,10 @@ var/list/mob_hat_cache = list()
 	to_chat(src, "Use <b>say ;Hello</b> to talk to other drones and <b>say Hello</b> to speak silently to your nearby fellows.")
 
 /mob/living/silicon/robot/drone/add_robot_verbs()
-<<<<<<< HEAD
-	add_verb(src,silicon_subsystems) //CHOMPEdit TGPanel
-
-/mob/living/silicon/robot/drone/remove_robot_verbs()
-	remove_verb(src,silicon_subsystems)  //CHOMPEdit
-=======
 	add_verb(src, silicon_subsystems)
 
 /mob/living/silicon/robot/drone/remove_robot_verbs()
 	remove_verb(src, silicon_subsystems)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /mob/living/silicon/robot/drone/construction/welcome_drone()
 	to_chat(src, "<b>You are a construction drone, an autonomous engineering and fabrication system.</b>.")

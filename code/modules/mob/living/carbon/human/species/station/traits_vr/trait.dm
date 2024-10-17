@@ -34,11 +34,7 @@
 					S.vars[trait] = trait_prefs[trait]
 				if(TRAIT_VAREDIT_TARGET_MOB)
 					H.vars[trait] = trait_prefs[trait]
-<<<<<<< HEAD
-	add_verb(H,/mob/living/carbon/human/proc/trait_tutorial) //CHOMPEdit TGPanel
-=======
 	add_verb(H, /mob/living/carbon/human/proc/trait_tutorial)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 	return
 
 //Applying trait to preferences rather than just us.

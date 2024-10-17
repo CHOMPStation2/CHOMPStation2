@@ -437,13 +437,8 @@
 		new_hat.forceMove(src)
 
 	blob.update_icon()
-<<<<<<< HEAD
-	remove_verb(blob,/mob/living/proc/ventcrawl ) // Absolutely not. //CHOMPEdit
-	remove_verb(blob,/mob/living/simple_mob/proc/set_name ) // We already have a name. //CHOMPEdit
-=======
 	remove_verb(blob, /mob/living/proc/ventcrawl) // Absolutely not.
 	remove_verb(blob, /mob/living/simple_mob/proc/set_name) // We already have a name.
->>>>>>> c07027136e... Port tg statpanel (#16463)
 	temporary_form = blob
 
 //ChompAdd begins  Handles the ID and Radio, giving the blobform each of them.

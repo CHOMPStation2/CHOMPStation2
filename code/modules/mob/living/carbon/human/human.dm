@@ -82,10 +82,6 @@
 		QDEL_NULL(vessel)
 	return ..()
 
-<<<<<<< HEAD
-//CHOMPEdit Begin
-=======
->>>>>>> c07027136e... Port tg statpanel (#16463)
 /mob/living/carbon/human/get_status_tab_items()
 	. = ..()
 	. += ""
@@ -120,14 +116,9 @@
 			. += "Chemical Storage: [mind.changeling.chem_charges]"
 			. += "Genetic Damage Time: [mind.changeling.geneticdamage]"
 			. += "Re-Adaptations: [mind.changeling.readapts]/[mind.changeling.max_readapts]"
-<<<<<<< HEAD
-	if(species)
-		species.Stat(src)
-//CHOMPEdit End
-=======
-
 	if(species)
 		species.get_status_tab_items(src)
+
 
 /mob/proc/RigPanel(var/obj/item/rig/R)
 	if(R && !R.canremove && R.installed_modules.len)
@@ -161,7 +152,6 @@
 	else if(istype(belt,/obj/item/rig))
 		var/obj/item/rig/R = belt
 		RigPanel(R)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /mob/living/carbon/human/ex_act(severity)
 	if(!blinded)
@@ -891,11 +881,7 @@
 		return
 
 	if(!(mMorph in mutations))
-<<<<<<< HEAD
-		remove_verb(src,/mob/living/carbon/human/proc/morph)  //CHOMPEdit
-=======
 		remove_verb(src, /mob/living/carbon/human/proc/morph)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 		return
 
 	var/new_facial = input(usr, "Please select facial hair color.", "Character Generation",rgb(r_facial,g_facial,b_facial)) as color
@@ -970,11 +956,7 @@
 		return
 
 	if(!(mRemotetalk in src.mutations))
-<<<<<<< HEAD
-		remove_verb(src,/mob/living/carbon/human/proc/remotesay)  //CHOMPEdit
-=======
 		remove_verb(src, /mob/living/carbon/human/proc/remotesay)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 		return
 	var/list/creatures = list()
 	for(var/mob/living/carbon/h in mob_list)
@@ -1005,15 +987,8 @@
 	if(!(mRemote in src.mutations))
 		remoteview_target = null
 		reset_view(0)
-<<<<<<< HEAD
-		remove_verb(src,/mob/living/carbon/human/proc/remoteobserve)  //CHOMPEdit
-=======
 		remove_verb(src, /mob/living/carbon/human/proc/remoteobserve)
->>>>>>> c07027136e... Port tg statpanel (#16463)
-		return
-
 	if(client.eye != client.mob)
-		remoteview_target = null
 		reset_view(0)
 		return
 
@@ -1144,11 +1119,7 @@
 			blood_DNA[M.dna.unique_enzymes] = M.dna.b_type
 	hand_blood_color = blood_color
 	update_bloodied()
-<<<<<<< HEAD
-	add_verb(src,/mob/living/carbon/human/proc/bloody_doodle) //CHOMPEdit TGPanel
-=======
 	add_verb(src, /mob/living/carbon/human/proc/bloody_doodle)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 	return 1 //we applied blood to the item
 
 /mob/living/carbon/human/proc/get_full_print()
@@ -1381,11 +1352,7 @@
 		return 0 //something is terribly wrong
 
 	if (!bloody_hands)
-<<<<<<< HEAD
-		remove_verb(src,/mob/living/carbon/human/proc/bloody_doodle) //CHOMPEdit TGPanel
-=======
 		remove_verb(src, /mob/living/carbon/human/proc/bloody_doodle)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 	if (src.gloves)
 		to_chat(src, span_warning("Your [src.gloves] are getting in the way."))
@@ -1755,11 +1722,7 @@
 /mob/living/carbon/human/examine_icon()
 	var/icon/I = get_cached_examine_icon(src)
 	if(!I)
-<<<<<<< HEAD
-		I = getFlatIcon(src, defdir = SOUTH, no_anim = TRUE, force_south = TRUE) //CHOMPEdit
-=======
 		I = getFlatIcon(src, defdir = SOUTH, no_anim = TRUE, force_south = TRUE)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 		set_cached_examine_icon(src, I, 50 SECONDS)
 	return I
 

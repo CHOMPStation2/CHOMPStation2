@@ -25,11 +25,7 @@
 /obj/item/robot_module/robot/platform/verb/set_eye_colour()
 	set name = "Set Eye Colour"
 	set desc = "Select an eye colour to use."
-<<<<<<< HEAD
-	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
-=======
 	set category = "Abilities.Silicon"
->>>>>>> c07027136e... Port tg statpanel (#16463)
 	set src in usr
 
 	var/new_pupil_color = input(usr, "Select a pupil colour.", "Pupil Colour Selection") as color|null

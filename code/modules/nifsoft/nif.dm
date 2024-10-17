@@ -126,11 +126,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 		human = H
 		human.nif = src
 		stat = NIF_INSTALLING
-<<<<<<< HEAD
-		add_verb(H,/mob/living/carbon/human/proc/set_nif_examine) //ChompEDIT
-=======
 		add_verb(H, /mob/living/carbon/human/proc/set_nif_examine)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 		menu = H.AddComponent(/datum/component/nif_menu)
 		if(starting_software)
 			for(var/path in starting_software)
@@ -175,11 +171,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 	stat = NIF_PREINSTALL
 	vis_update()
 	if(H)
-<<<<<<< HEAD
-		remove_verb(H,/mob/living/carbon/human/proc/set_nif_examine)  //CHOMPEdit
-=======
 		remove_verb(H, /mob/living/carbon/human/proc/set_nif_examine)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 		H.nif = null
 	qdel_null(menu)
 	human = null
@@ -708,11 +700,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 	set category = "OOC.Game Settings" //CHOMPEdit
 
 	if(!nif)
-<<<<<<< HEAD
-		remove_verb(src, /mob/living/carbon/human/proc/set_nif_examine) //ChompEDIT
-=======
 		remove_verb(src, /mob/living/carbon/human/proc/set_nif_examine)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 		to_chat(src,span_warning("You don't have a NIF, not sure why this was here."))
 		return
 

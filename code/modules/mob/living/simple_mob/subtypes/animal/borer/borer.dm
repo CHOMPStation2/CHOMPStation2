@@ -59,13 +59,8 @@
 /mob/living/simple_mob/animal/borer/Initialize()
 	add_language("Cortical Link")
 
-<<<<<<< HEAD
-	add_verb(src, /mob/living/proc/ventcrawl) //CHOMPEdit
-	add_verb(src, /mob/living/proc/hide) //CHOMPEdit
-=======
 	add_verb(src, /mob/living/proc/ventcrawl)
 	add_verb(src, /mob/living/proc/hide)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 	true_name = "[pick("Primary","Secondary","Tertiary","Quaternary")] [rand(1000,9999)]"
 
@@ -123,15 +118,9 @@
 	controlling = FALSE
 
 	host.remove_language("Cortical Link")
-<<<<<<< HEAD
-	remove_verb(host,/mob/living/carbon/proc/release_control)  //CHOMPEdit
-	remove_verb(host,/mob/living/carbon/proc/punish_host)  //CHOMPEdit
-	remove_verb(host,/mob/living/carbon/proc/spawn_larvae)  //CHOMPEdit
-=======
 	remove_verb(host, /mob/living/carbon/proc/release_control)
 	remove_verb(host, /mob/living/carbon/proc/punish_host)
 	remove_verb(host, /mob/living/carbon/proc/spawn_larvae)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 	if(host_brain)
 		// these are here so bans and multikey warnings are not triggered on the wrong people when ckey is changed.

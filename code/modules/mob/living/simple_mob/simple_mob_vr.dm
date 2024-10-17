@@ -235,18 +235,18 @@
 	if(!vore_active || no_vore || !voremob_loaded) //CHOMPedit: On-demand belly loading.
 		return
 
-<<<<<<< HEAD
 	AddElement(/datum/element/slosh) // Sloshy element
 
 	//CHOMPAdd Start
 	if(!soulgem)
 		soulgem = new(src)
 	//CHOMPAdd End
-=======
+
+	/* CHOMPRemove Start, handled with the vore_active var
 	if(!IsAdvancedToolUser())
 		add_verb(src, /mob/living/simple_mob/proc/animal_nom)
 		add_verb(src, /mob/living/proc/shred_limb)
->>>>>>> c07027136e... Port tg statpanel (#16463)
+	*/// CHOMPRemove End
 
 	if(LAZYLEN(vore_organs))
 		return

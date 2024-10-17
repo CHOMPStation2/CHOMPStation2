@@ -47,11 +47,7 @@
 		else
 			return
 	else
-<<<<<<< HEAD
-		remove_verb(imp_in,assigned_proc) //CHOMPEdit TGPanel
-=======
 		remove_verb(imp_in, assigned_proc)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 		return
 
 	if(reagents)

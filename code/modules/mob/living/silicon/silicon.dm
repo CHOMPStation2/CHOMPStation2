@@ -132,38 +132,22 @@
 // this function shows the health of the AI in the Status panel
 //ChompEDIT START - TGPanel
 /mob/living/silicon/proc/show_system_integrity()
-	. = list()
 	if(!src.stat)
-<<<<<<< HEAD
-		. += "System integrity: [round((health/getMaxHealth())*100)]%"
-	else
-		. += "Systems nonfunctional"
-=======
 		. = "System integrity: [round((health/getMaxHealth())*100)]%"
 	else
 		. = "Systems nonfunctional"
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 
 // This is a pure virtual function, it should be overwritten by all subclasses
 /mob/living/silicon/proc/show_malf_ai()
-<<<<<<< HEAD
-	. = list()
-=======
 	return ""
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 // this function displays the shuttles ETA in the status panel if the shuttle has been called
 /mob/living/silicon/proc/show_emergency_shuttle_eta()
-	. = list()
 	if(emergency_shuttle)
 		var/eta_status = emergency_shuttle.get_status_panel_eta()
 		if(eta_status)
-<<<<<<< HEAD
-			. += "[eta_status]"
-=======
 			. = "[eta_status]"
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 
 // This adds the basic clock, shuttle recall timer, and malf_ai info to all silicon lifeforms
@@ -173,10 +157,6 @@
 	. += show_emergency_shuttle_eta()
 	. += show_system_integrity()
 	. += show_malf_ai()
-<<<<<<< HEAD
-//ChompEDIT END
-=======
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 /* VOREStation Removal
 // this function displays the stations manifest in a separate window

@@ -165,21 +165,12 @@
 	H.add_language("Cortical Link")
 
 	if(host.stat == 2)
-<<<<<<< HEAD
-		add_verb(H,/mob/living/carbon/human/proc/jumpstart) //CHOMPEdit TGPanel
-
-	add_verb(H,/mob/living/carbon/human/proc/psychic_whisper) //CHOMPEdit TGPanel
-	add_verb(H,/mob/living/carbon/human/proc/tackle) //CHOMPEdit TGPanel
-	if(antag)
-		add_verb(H,/mob/living/carbon/proc/spawn_larvae) //CHOMPEdit TGPanel
-=======
 		add_verb(H, /mob/living/carbon/human/proc/jumpstart)
 
 	add_verb(H, /mob/living/carbon/human/proc/psychic_whisper)
 	add_verb(H, /mob/living/carbon/human/proc/tackle)
 	if(antag)
 		add_verb(H, /mob/living/carbon/proc/spawn_larvae)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 	if(H.client)
 		H.ghostize(0)
@@ -340,17 +331,10 @@
 
 			controlling = 1
 
-<<<<<<< HEAD
-			add_verb(host,/mob/living/carbon/proc/release_control)  //CHOMPEdit
-			add_verb(host,/mob/living/carbon/proc/punish_host)  //CHOMPEdit
-			if(antag)
-				add_verb(host,/mob/living/carbon/proc/spawn_larvae)  //CHOMPEdit
-=======
 			add_verb(host, /mob/living/carbon/proc/release_control)
 			add_verb(host, /mob/living/carbon/proc/punish_host)
 			if(antag)
 				add_verb(host, /mob/living/carbon/proc/spawn_larvae)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 			return
 
@@ -363,11 +347,7 @@
 		to_chat(usr, "Your host is already alive.")
 		return
 
-<<<<<<< HEAD
-	remove_verb(src,/mob/living/carbon/human/proc/jumpstart) //CHOMPEdit TGPanel
-=======
 	remove_verb(src, /mob/living/carbon/human/proc/jumpstart)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 	visible_message(span_warning("With a hideous, rattling moan, [src] shudders back to life!"))
 
 	rejuvenate()

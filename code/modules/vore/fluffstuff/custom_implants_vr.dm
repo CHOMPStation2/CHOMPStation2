@@ -112,11 +112,7 @@
 /obj/item/implant/reagent_generator/roiz/post_implant(mob/living/carbon/source)
 	START_PROCESSING(SSobj, src)
 	to_chat(source, span_notice("You implant [source] with \the [src]."))
-<<<<<<< HEAD
-	add_verb(source,assigned_proc) //CHOMPEdit TGPanel
-=======
 	add_verb(source, assigned_proc)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 	return 1
 
 /obj/item/implanter/reagent_generator/roiz
@@ -185,11 +181,7 @@
 /obj/item/implant/reagent_generator/jasmine/post_implant(mob/living/carbon/source)
 	START_PROCESSING(SSobj, src)
 	to_chat(source, span_notice("You implant [source] with \the [src]."))
-<<<<<<< HEAD
-	add_verb(source,assigned_proc) //CHOMPEdit TGPanel
-=======
 	add_verb(source, assigned_proc)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 	return 1
 
 /obj/item/implanter/reagent_generator/jasmine
@@ -258,11 +250,7 @@
 /obj/item/implant/reagent_generator/yonra/post_implant(mob/living/carbon/source)
 	START_PROCESSING(SSobj, src)
 	to_chat(source, span_notice("You implant [source] with \the [src]."))
-<<<<<<< HEAD
-	add_verb(source,assigned_proc) //CHOMPEdit TGPanel
-=======
 	add_verb(source, assigned_proc)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 	return 1
 
 /obj/item/implanter/reagent_generator/yonra
@@ -498,11 +486,7 @@
 /obj/item/implant/reagent_generator/evian/post_implant(mob/living/carbon/source)
 	START_PROCESSING(SSobj, src)
 	to_chat(source, span_notice("You implant [source] with \the [src]."))
-<<<<<<< HEAD
-	add_verb(source,assigned_proc) //CHOMPEdit TGPanel
-=======
 	add_verb(source, assigned_proc)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 	return 1
 
 /obj/item/implanter/reagent_generator/evian

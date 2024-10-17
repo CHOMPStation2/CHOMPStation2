@@ -10,13 +10,8 @@
 
 /mob/living/simple_mob/Login()
 	. = ..()
-<<<<<<< HEAD
-	add_verb(src,/mob/living/simple_mob/proc/set_name) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/simple_mob/proc/set_desc) //CHOMPEdit TGPanel
-=======
 	add_verb(src, /mob/living/simple_mob/proc/set_name)
 	add_verb(src, /mob/living/simple_mob/proc/set_desc)
->>>>>>> c07027136e... Port tg statpanel (#16463)
 
 	if(copy_prefs_to_mob)
 		login_prefs()
