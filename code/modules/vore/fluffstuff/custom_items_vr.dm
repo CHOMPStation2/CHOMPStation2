@@ -752,7 +752,7 @@
 
 /obj/item/fluff/dragor_dot/attack_self(mob/user as mob)
 	if(user.ckey == "pontifexminimus")
-		add_verb(user,/mob/living/carbon/human/proc/shapeshifter_select_gender) //CHOMPEdit TGPanel
+		add_verb(user, /mob/living/carbon/human/proc/shapeshifter_select_gender)
 	else
 		return
 

@@ -36,11 +36,11 @@ var/list/mentor_verbs_default = list(
 
 /client/proc/add_mentor_verbs()
 	if(mentorholder)
-		add_verb(src,mentor_verbs_default) //CHOMPEdit TGPanel
+		add_verb(src, mentor_verbs_default)
 
 /client/proc/remove_mentor_verbs()
 	if(mentorholder)
-		remove_verb(src,mentor_verbs_default) //CHOMPEdit TGPanel
+		remove_verb(src, mentor_verbs_default)
 
 /client/proc/make_mentor()
 	set category = "Admin.Secrets" //CHOMPEdit

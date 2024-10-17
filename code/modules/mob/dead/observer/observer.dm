@@ -207,8 +207,8 @@ Works together with spawning an observer, noted above.
 			B.update()
 		if(ghost.client)
 			ghost.client.time_died_as_mouse = ghost.timeofdeath
-		if(ghost.client && !ghost.client.holder && !CONFIG_GET(flag/antag_hud_allowed))		// For new ghosts we remove the verb from even showing up if it's not allowed. // CHOMPEdit
-			remove_verb(ghost,/mob/observer/dead/verb/toggle_antagHUD	) // Poor guys, don't know what they are missing! //CHOMPEdit
+		if(ghost.client && !ghost.client.holder && !CONFIG_GET(flag/antag_hud_allowed))		// For new ghosts we remove the verb from even showing up if it's not allowed.
+			remove_verb(ghost, /mob/observer/dead/verb/toggle_antagHUD)	// Poor guys, don't know what they are missing!
 		return ghost
 
 /*
@@ -249,7 +249,6 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 /mob/observer/dead/can_use_hands()	return 0
 /mob/observer/dead/is_active()		return 0
 
-//ChompEDIT START
 /mob/observer/dead/get_status_tab_items()
 	. = ..()
 	if(emergency_shuttle)
@@ -257,7 +256,6 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		if(eta_status)
 			. += ""
 			. += "[eta_status]"
-//ChompEDIT END
 
 /mob/observer/dead/verb/reenter_corpse()
 	set category = "Ghost.Game" //CHOMPEdit
@@ -821,8 +819,8 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 /mob/observer/dead/proc/manifest(mob/user)
 	is_manifest = TRUE
-	add_verb(src,/mob/observer/dead/proc/toggle_visibility) //CHOMPEdit TGPanel
-	add_verb(src,/mob/observer/dead/proc/ghost_whisper) //CHOMPEdit TGPanel
+	add_verb(src, /mob/observer/dead/proc/toggle_visibility)
+	add_verb(src, /mob/observer/dead/proc/ghost_whisper)
 	to_chat(src, span_filter_notice("[span_purple("As you are now in the realm of the living, you can whisper to the living with the <b>Spectral Whisper</b> verb, inside the IC tab.")]"))
 	if(plane != PLANE_WORLD)
 		user.visible_message( \

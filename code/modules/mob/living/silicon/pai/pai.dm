@@ -130,8 +130,8 @@
 	add_language(LANGUAGE_TERMINUS, 1)
 	add_language(LANGUAGE_SIGN, 1)
 
-	add_verb(src,/mob/living/silicon/pai/proc/choose_chassis) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/silicon/pai/proc/choose_verbs) //CHOMPEdit TGPanel
+	add_verb(src, /mob/living/silicon/pai/proc/choose_chassis)
+	add_verb(src, /mob/living/silicon/pai/proc/choose_verbs)
 
 	//PDA
 	pda = new(src)
@@ -163,7 +163,7 @@
 // this function shows the information about being silenced as a pAI in the Status panel
 //ChompEDIT START - TGPanel
 /mob/living/silicon/pai/proc/show_silenced()
-	. = list()
+	. = ""
 	if(src.silence_time)
 		var/timeleft = round((silence_time - world.timeofday)/10 ,1)
 		. += "Communications system reboot in -[(timeleft / 60) % 60]:[add_zero(num2text(timeleft % 60), 2)]"
@@ -173,7 +173,6 @@
 	. = ..()
 	. += ""
 	. += show_silenced()
-//ChompEDIT END
 
 /mob/living/silicon/pai/check_eye(var/mob/user as mob)
 	if (!src.current)
@@ -311,8 +310,8 @@
 
 	var/turf/T = get_turf(src)
 	if(istype(T)) T.visible_message(span_filter_notice("<b>[src]</b> folds outwards, expanding into a mobile form."))
-	add_verb(src,/mob/living/silicon/pai/proc/pai_nom) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/proc/vertical_nom) //CHOMPEdit TGPanel
+	add_verb(src, /mob/living/silicon/pai/proc/pai_nom)
+	add_verb(src, /mob/living/proc/vertical_nom)
 	update_icon()
 
 /mob/living/silicon/pai/verb/fold_up()
@@ -343,7 +342,7 @@
 		icon_state = possible_chassis[choice]
 		finalized = tgui_alert(usr, "Look at your sprite. Is this what you wish to use?","Choose Chassis",list("No","Yes"))
 	chassis = possible_chassis[choice]
-	add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel
+	add_verb(src, /mob/living/proc/hide)
 //VOREStation Removal End
 */
 
@@ -475,8 +474,8 @@
 	icon_state = "[chassis]"
 	if(isopenspace(card.loc))
 		fall()
-	remove_verb(src,/mob/living/silicon/pai/proc/pai_nom) //CHOMPEdit TGPanel
-	remove_verb(src,/mob/living/proc/vertical_nom) //CHOMPEdit TGPanel
+	remove_verb(src, /mob/living/silicon/pai/proc/pai_nom)
+	remove_verb(src, /mob/living/proc/vertical_nom)
 
 // No binary for pAIs.
 /mob/living/silicon/pai/binarycheck()

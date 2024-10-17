@@ -78,7 +78,7 @@
 	if(current)					//remove ourself from our old body's mind variable
 		if(changeling)
 			current.remove_changeling_powers()
-			remove_verb(current,/datum/changeling/proc/EvolutionMenu)  //CHOMPEdit
+			remove_verb(current, /datum/changeling/proc/EvolutionMenu)
 		current.mind = null
 
 	if(new_character.mind)		//remove any mind currently in our new body's mind variable
@@ -93,8 +93,8 @@
 	if(active)
 		new_character.key = key		//now transfer the key to link the client to our new body
 
-	if(new_character.client) //CHOMPEdit
-		new_character.client.init_verbs() // re-initialize character specific verbs //CHOMPEdit
+	if(new_character.client)
+		new_character.client.init_verbs() // re-initialize character specific verbs
 
 /datum/mind/proc/store_memory(new_text)
 	memory += "[new_text]<BR>"
@@ -509,7 +509,7 @@
 	if(!mind.name)	mind.name = real_name
 	mind.current = src
 	if(player_is_antag(mind))
-		add_verb(src.client,/client/proc/aooc) //CHOMPEdit
+		add_verb(src.client, /client/proc/aooc)
 
 //HUMAN
 /mob/living/carbon/human/mind_initialize()

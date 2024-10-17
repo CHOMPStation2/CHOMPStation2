@@ -32,7 +32,7 @@
 	if(!focus)
 		return
 	to_chat(owner, "<b>Research Completed</b>: [focus.name]")
-	add_verb(focus.ability) //CHOMPEdit TGPanel
+	add_verb(owner, focus.ability)
 	available_abilities -= focus
 	if(focus.next)
 		available_abilities += focus.next

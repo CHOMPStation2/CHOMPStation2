@@ -1391,7 +1391,7 @@
 	icon = 'icons/mob/screen_full_colorized_vore_overlays.dmi'
 */ //Chomp DISABLE End
 
-/mob/living/verb/vorebelly_printout() //Spew the vorepanel belly messages into chat window for copypasting. //ChompEDIT proc -> verb
+/mob/living/proc/vorebelly_printout() //Spew the vorepanel belly messages into chat window for copypasting.
 	set name = "X-Print Vorebelly Settings"
 	set category = "Preferences.Vore" //CHOMPEdit
 	set desc = "Print out your vorebelly messages into chat for copypasting."
@@ -1556,7 +1556,7 @@
 	var/mob/living/owner = parent
 	if(owner.client)
 		create_mob_button(parent)
-	add_verb(owner,/mob/proc/insidePanel) //CHOMPEdit TGPanel
+	add_verb(owner, /mob/proc/insidePanel)
 	if(!owner.vorePanel) //CHOMPEdit
 		owner.vorePanel = new(owner)
 
@@ -1568,7 +1568,7 @@
 		owner?.client?.screen -= screen_icon
 		UnregisterSignal(screen_icon, COMSIG_CLICK)
 		qdel_null(screen_icon)
-	remove_verb(owner,/mob/proc/insidePanel)  //CHOMPEdit
+	remove_verb(owner, /mob/proc/insidePanel)
 	qdel_null(owner.vorePanel)
 
 /datum/component/vore_panel/proc/create_mob_button(mob/user)

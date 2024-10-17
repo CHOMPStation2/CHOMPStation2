@@ -104,8 +104,8 @@ var/list/mob_hat_cache = list()
 
 /mob/living/silicon/robot/drone/New()
 	..()
-	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel
+	add_verb(src, /mob/living/proc/ventcrawl)
+	add_verb(src, /mob/living/proc/hide)
 	remove_language("Robot Talk")
 	add_language("Robot Talk", 0)
 	add_language("Drone Talk", 1)
@@ -123,7 +123,7 @@ var/list/mob_hat_cache = list()
 		var/datum/robot_component/C = components[V]
 		C.max_damage = 10
 
-	remove_verb(src,/mob/living/silicon/robot/verb/namepick) //CHOMPEdit TGPanel
+	remove_verb(src, /mob/living/silicon/robot/verb/namepick)
 
 	if(can_pick_shell)
 		var/random = pick(shell_types)
@@ -146,7 +146,7 @@ var/list/mob_hat_cache = list()
 /mob/living/silicon/robot/drone/Login()
 	. = ..()
 	if(can_pick_shell)
-		to_chat(src, "<b>You can select a shell using the 'Robot Commands' > 'Customize Appearance'</b>")
+		to_chat(src, "<b>You can select a shell using the 'Abilities.Silicon' > 'Customize Appearance'</b>")
 
 //Redefining some robot procs...
 /mob/living/silicon/robot/drone/SetName(pickedName as text)
@@ -172,7 +172,7 @@ var/list/mob_hat_cache = list()
 
 /mob/living/silicon/robot/drone/verb/pick_shell()
 	set name = "Customize Appearance"
-	set category = "Abilities.Settings" //ChompEDIT - TGPanel
+	set category = "Abilities.Silicon"
 
 	if(!can_pick_shell)
 		to_chat(src, span_warning("You already selected a shell or this drone type isn't customizable."))
@@ -396,10 +396,10 @@ var/list/mob_hat_cache = list()
 	to_chat(src, "Use <b>say ;Hello</b> to talk to other drones and <b>say Hello</b> to speak silently to your nearby fellows.")
 
 /mob/living/silicon/robot/drone/add_robot_verbs()
-	add_verb(src,silicon_subsystems) //CHOMPEdit TGPanel
+	add_verb(src, silicon_subsystems)
 
 /mob/living/silicon/robot/drone/remove_robot_verbs()
-	remove_verb(src,silicon_subsystems)  //CHOMPEdit
+	remove_verb(src, silicon_subsystems)
 
 /mob/living/silicon/robot/drone/construction/welcome_drone()
 	to_chat(src, "<b>You are a construction drone, an autonomous engineering and fabrication system.</b>.")
