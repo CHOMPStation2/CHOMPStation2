@@ -1024,15 +1024,10 @@
 			//privacy_volume = 25
 
 	//Print notifications/sound if necessary
-<<<<<<< HEAD
 	if(istype(M, /mob/observer)) //CHOMPEdit
 		silent = TRUE
 	if(!silent)
-		owner.visible_message(span_vnotice("[span_green("<b>[owner] [release_verb] [M] from their [lowertext(name)]!</b>")]"),range = privacy_range)
-=======
-	if(!silent && !isobserver(M))
 		owner.visible_message(span_vnotice(span_green(span_bold("[owner] [release_verb] [M] from their [lowertext(name)]!"))),range = privacy_range)
->>>>>>> b594520a74... next set of spans (#16434)
 		var/soundfile
 		if(!fancy_vore)
 			soundfile = classic_release_sounds[release_sound]

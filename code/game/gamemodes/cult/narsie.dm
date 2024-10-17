@@ -43,13 +43,8 @@ var/global/list/narsie_list = list()
 /obj/singularity/narsie/large/New()
 	..()
 	if(announce)
-<<<<<<< HEAD
-		to_world("<font size='15' color='red'><b>[uppertext(name)] HAS RISEN</b></font>")
-		world << sound('sound/effects/weather/old_wind/wind_5_1.ogg')
-=======
 		to_world(span_world(span_narsie(span_red("[uppertext(name)] HAS RISEN"))))
-		world << sound('sound/effects/weather/wind/wind_5_1.ogg')
->>>>>>> b594520a74... next set of spans (#16434)
+		world << sound('sound/effects/weather/old_wind/wind_5_1.ogg')
 
 	narsie_spawn_animation()
 

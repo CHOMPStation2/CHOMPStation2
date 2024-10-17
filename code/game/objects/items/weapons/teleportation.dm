@@ -78,13 +78,8 @@ Frequency:
 										direct = "very weak"
 							src.temp += "[W.code]-[dir2text(get_dir(sr, tr))]-[direct]<BR>"
 
-<<<<<<< HEAD
-				src.temp += "<B>Extraneous Signals:</B><BR>"
-				for (var/obj/item/implant/tracking/W in GLOB.all_tracking_implants)
-=======
 				src.temp += span_bold("Extraneous Signals:") + "<BR>"
-				for (var/obj/item/implant/tracking/W in all_tracking_implants)
->>>>>>> b594520a74... next set of spans (#16434)
+				for (var/obj/item/implant/tracking/W in GLOB.all_tracking_implants) // CHOMPEdit
 					if (!W.implanted || !(istype(W.loc,/obj/item/organ/external) || ismob(W.loc) || W.malfunction))
 						continue
 

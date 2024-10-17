@@ -370,14 +370,9 @@
 				user.balloon_alert_visible("Crudely slices \the [src]", "Crudely sliced \the [src]") // CHOMPEdit
 				slices_lost = rand(1,min(1,round(slices_num/2)))
 			else
-<<<<<<< HEAD
-				user.visible_message(span_notice("<b>\The [user]</b> slices \the [src]!"), span_notice("You slice \the [src]!"))
+				user.visible_message(span_notice(span_bold("\The [user]") + " slices \the [src]!"), span_notice("You slice \the [src]!"))
 				user.balloon_alert_visible("Slices \the [src]", "Sliced \the [src]!") // CHOMPEdit
 	// CHOMPEdit End - A long list of to_chat to balloon_alert
-=======
-				user.visible_message(span_notice(span_bold("\The [user]") + " slices \the [src]!"), span_notice("You slice \the [src]!"))
-
->>>>>>> b594520a74... next set of spans (#16434)
 			var/reagents_per_slice = reagents.total_volume/slices_num
 			for(var/i=1 to (slices_num-slices_lost))
 				var/obj/slice = new slice_path (src.loc)
@@ -448,12 +443,8 @@
 /obj/item/reagent_containers/food/snacks/attack_generic(var/mob/living/user)
 	if(!isanimal(user) && !isalien(user))
 		return
-<<<<<<< HEAD
-	user.visible_message("[user] nibbles away at \the [src].","You nibble away at \the [src].")
-	user.balloon_alert_visible("Nibbles away at \the [src].","Nibbled away at \the [src].") // CHOMPEdit
-=======
 	user.visible_message(span_infoplain(span_bold("[user]") + " nibbles away at \the [src]."),span_info("You nibble away at \the [src]."))
->>>>>>> b594520a74... next set of spans (#16434)
+	user.balloon_alert_visible("Nibbles away at \the [src].","Nibbled away at \the [src].") // CHOMPEdit
 	bitecount++
 	if(reagents)
 		reagents.trans_to_mob(user, bitesize, CHEM_INGEST)

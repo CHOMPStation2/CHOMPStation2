@@ -411,13 +411,8 @@
 	set category = "Server.Config" //CHOMPEdit
 	if(!holder)	return
 	if(config)
-<<<<<<< HEAD
 		CONFIG_SET(flag/log_hrefs, !CONFIG_GET(flag/log_hrefs)) // CHOMPEdit
-		message_admins("<b>[key_name_admin(usr)] [CONFIG_GET(flag/log_hrefs) ? "started" : "stopped"] logging hrefs</b>") // CHOMPEdit
-=======
-		config.log_hrefs = !config.log_hrefs
-		message_admins(span_bold("[key_name_admin(usr)] [config.log_hrefs ? "started" : "stopped"] logging hrefs"))
->>>>>>> b594520a74... next set of spans (#16434)
+		message_admins(span_bold("[key_name_admin(usr)] [CONFIG_GET(flag/log_hrefs) ? "started" : "stopped"] logging hrefs")) // CHOMPEdit
 
 /client/proc/check_ai_laws()
 	set name = "Check AI Laws"

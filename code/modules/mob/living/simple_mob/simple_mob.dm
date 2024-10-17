@@ -232,14 +232,10 @@
 //Client attached
 /mob/living/simple_mob/Login()
 	. = ..()
-<<<<<<< HEAD
-	to_chat(src,"<b>You are \the [src].</b> [player_msg]")
+	to_chat(src,span_boldnotice("You are \the [src].") + " [player_msg]")
 	if(vore_active && !voremob_loaded) //CHOMPedit: On-demand belly loading.
 		voremob_loaded = TRUE
 		init_vore()
-=======
-	to_chat(src,span_boldnotice("You are \the [src].") + " [player_msg]")
->>>>>>> b594520a74... next set of spans (#16434)
 	if(hasthermals)
 		add_verb(src, /mob/living/simple_mob/proc/hunting_vision) //So that maint preds can see prey through walls, to make it easier to find them. //ChompEDIT
 

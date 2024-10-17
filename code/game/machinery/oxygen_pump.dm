@@ -70,12 +70,8 @@
 			tank.forceMove(src)
 		breather.remove_from_mob(contained)
 		contained.forceMove(src)
-<<<<<<< HEAD
-		src.visible_message("<b>\The [user]</b> makes \the [contained] rapidly retract back into \the [src]!")
-		breather.cozyloop.stop()  // CHOMPStation Add: Cozy Music
-=======
 		src.visible_message(span_infoplain(span_bold("\The [user]") + " makes \the [contained] rapidly retract back into \the [src]!"))
->>>>>>> b594520a74... next set of spans (#16434)
+		breather.cozyloop.stop()  // CHOMPStation Add: Cozy Music
 		if(breather.internals)
 			breather.internals.icon_state = "internal0"
 		breather = null

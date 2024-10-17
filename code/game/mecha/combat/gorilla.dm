@@ -1,14 +1,8 @@
 
 /obj/mecha/combat/gorilla
-<<<<<<< HEAD
-	desc = span_red("<b><BLITZKRIEEEEEEEG!</b>")
-	name = "Sd.Kfz. 269 Mechakampfwagen Gorilla Ausf. A"
-	icon = 'icons/mecha/AxisMech.dmi'
-=======
-	name = "Gorilla"
-	desc = span_bold("Blitzkrieg!") //stop using all caps in item descs i will fight you. its redundant with the bold.
-	icon = 'icons/mecha/mecha64x64.dmi'
->>>>>>> b594520a74... next set of spans (#16434)
+	desc = span_red(span_bold("BLITZKRIEEEEEEEG!")) // CHOMPEdit
+	name = "Sd.Kfz. 269 Mechakampfwagen Gorilla Ausf. A" // CHOMPEdit
+	icon = 'icons/mecha/AxisMech.dmi' // CHOMPEdit
 	icon_state = "pzrmech"
 	initial_icon = "pzrmech"
 	pixel_x = -16

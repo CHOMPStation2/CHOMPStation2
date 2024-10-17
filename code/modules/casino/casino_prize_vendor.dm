@@ -265,11 +265,7 @@
 /obj/machinery/casino_prize_dispenser/proc/pay_with_chips(var/obj/item/spacecasinocash/cashmoney, mob/user, var/price)
 	//"cashmoney_:[cashmoney] user:[user] currently_vending:[currently_vending]"
 	if(price > cashmoney.worth)
-<<<<<<< HEAD
-		to_chat(usr, "[icon2html(cashmoney, user.client)] <span class='warning'>That is not enough chips.</span>") //CHOMPEdit
-=======
 		to_chat(usr, "[icon2html(cashmoney, user.client)] " + span_warning("That is not enough chips."))
->>>>>>> b594520a74... next set of spans (#16434)
 		return 0
 
 	if(istype(cashmoney, /obj/item/spacecasinocash))

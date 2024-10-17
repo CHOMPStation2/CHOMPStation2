@@ -139,15 +139,10 @@ GLOBAL_LIST_EMPTY(bodycamera_screens) // CHOMPEdit
 	if(modifiers["alt"])
 		if(isliving(usr) && Adjacent(usr) && !usr.incapacitated())
 			toggle()
-<<<<<<< HEAD
-			visible_message("<b>[usr]</b> toggles [src] [enabled ? "on" : "off"].","You toggle [src] [enabled ? "on" : "off"].", runemessage = "click")
+			visible_message(span_infoplain(span_bold("[usr]") + " toggles [src] [enabled ? "on" : "off"]."),span_info("You toggle [src] [enabled ? "on" : "off"]."), runemessage = "click")
 	//CHOMPEdit start - Changing click to only come into play when shift or alt clicking. These things are ANNOYING.
 			return
 	if(modifiers["shift"])
-=======
-			visible_message(span_infoplain(span_bold("[usr]") + " toggles [src] [enabled ? "on" : "off"]."),span_info("You toggle [src] [enabled ? "on" : "off"]."), runemessage = "click")
-	else
->>>>>>> b594520a74... next set of spans (#16434)
 		attack_hand(usr)
 		return
 	..()

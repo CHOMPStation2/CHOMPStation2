@@ -269,13 +269,8 @@
 			else O = new /obj/item/stack/material/resin(targetLoc)
 
 	if(O)
-<<<<<<< HEAD
-		visible_message(span_warning("<B>[src] vomits up a thick purple substance and begins to shape it!</B>"), span_alium("You shape a [choice]."))
-//		O.color = "#321D37" // CHOMPedit: Removing colouration, adding predefined colour icons.
-=======
 		visible_message(span_boldwarning("[src] vomits up a thick purple substance and begins to shape it!"), span_alium("You shape a [choice]."))
-		O.color = "#321D37"
->>>>>>> b594520a74... next set of spans (#16434)
+//		O.color = "#321D37" // CHOMPedit: Removing colouration, adding predefined colour icons.
 		playsound(src, 'sound/effects/blobattack.ogg', 40, 1)
 
 	return

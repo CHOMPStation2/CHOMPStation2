@@ -71,15 +71,9 @@
 				user.dna.mutantrace = "shadow"
 				user.update_mutantrace()
 			if("Immortality")
-<<<<<<< HEAD
-				to_chat(user, "<B>Your wish is granted, but at a terrible cost...</B>")
-				to_chat(user, "The Wish Granter punishes you for your selfishness, claiming your soul and warping your body to match the darkness in your heart.")
-				user.verbs += /mob/living/carbon/proc/immortality
-=======
 				to_chat(user, span_boldwarning("Your wish is granted, but at a terrible cost..."))
 				to_chat(user, span_warning("The Wish Granter punishes you for your selfishness, claiming your soul and warping your body to match the darkness in your heart."))
 				add_verb(user, /mob/living/carbon/proc/immortality)
->>>>>>> b594520a74... next set of spans (#16434)
 				user.dna.mutantrace = "shadow"
 				user.update_mutantrace()
 			if("To Kill")
