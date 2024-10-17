@@ -4,7 +4,6 @@
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2";
-	tag = ""
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/structure/window/reinforced/full,
@@ -61,7 +60,6 @@
 	d1 = 2;
 	d2 = 4;
 	icon_state = "2-4";
-	tag = ""
 	},
 /obj/structure/cable{
 	d2 = 2;
@@ -207,7 +205,6 @@
 	d1 = 2;
 	d2 = 4;
 	icon_state = "2-4";
-	tag = ""
 	},
 /turf/simulated/floor/plating,
 /area/submap/abandonedzoo)
@@ -260,7 +257,6 @@
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8";
-	tag = ""
 	},
 /obj/structure/cable{
 	d2 = 8;
@@ -352,7 +348,6 @@
 "aW" = (
 /obj/structure/window/reinforced{
 	dir = 8;
-	tag = "icon-rwindow (WEST)"
 	},
 /obj/structure/window/reinforced,
 /turf/template_noop,
@@ -474,7 +469,6 @@
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8";
-	tag = ""
 	},
 /obj/structure/cable,
 /obj/structure/cable{
@@ -652,7 +646,6 @@
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8";
-	tag = ""
 	},
 /obj/structure/cable,
 /turf/simulated/floor/plating,
@@ -718,7 +711,6 @@
 "do" = (
 /obj/structure/window/reinforced{
 	dir = 1;
-	tag = "icon-rwindow (NORTH)"
 	},
 /turf/template_noop,
 /area/submap/abandonedzoo)
@@ -777,7 +769,6 @@
 "gF" = (
 /obj/structure/window/reinforced{
 	dir = 8;
-	tag = "icon-rwindow (WEST)"
 	},
 /turf/template_noop,
 /area/submap/abandonedzoo)
@@ -832,7 +823,6 @@
 /obj/structure/closet/crate/freezer,
 /obj/machinery/light/small{
 	dir = 1;
-	tag = "icon-bulb1 (NORTH)"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
@@ -981,7 +971,6 @@
 "pc" = (
 /obj/structure/window/reinforced{
 	dir = 4;
-	tag = "icon-rwindow (EAST)"
 	},
 /turf/template_noop,
 /area/submap/abandonedzoo)
@@ -1012,7 +1001,6 @@
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2";
-	tag = ""
 	},
 /turf/simulated/floor/plating,
 /area/submap/abandonedzoo)
@@ -1042,7 +1030,6 @@
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8";
-	tag = ""
 	},
 /obj/structure/cable,
 /obj/structure/cable{
@@ -1074,11 +1061,9 @@
 "vv" = (
 /obj/structure/window/reinforced{
 	dir = 4;
-	tag = "icon-rwindow (EAST)"
 	},
 /obj/structure/window/reinforced{
 	dir = 1;
-	tag = "icon-rwindow (NORTH)"
 	},
 /turf/template_noop,
 /area/submap/abandonedzoo)
@@ -1092,7 +1077,6 @@
 "yb" = (
 /obj/structure/window/reinforced{
 	dir = 4;
-	tag = "icon-rwindow (EAST)"
 	},
 /obj/structure/window/reinforced,
 /turf/template_noop,
@@ -1110,14 +1094,12 @@
 	},
 /obj/structure/window/reinforced{
 	dir = 1;
-	tag = "icon-rwindow (NORTH)"
 	},
 /turf/template_noop,
 /area/submap/abandonedzoo)
 "Bn" = (
 /obj/structure/window/reinforced{
 	dir = 1;
-	tag = "icon-rwindow (NORTH)"
 	},
 /obj/structure/window/reinforced{
 	dir = 8
@@ -1134,7 +1116,6 @@
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8";
-	tag = ""
 	},
 /obj/structure/cable,
 /obj/structure/cable{
@@ -1170,7 +1151,6 @@
 "Dc" = (
 /obj/machinery/light/small{
 	dir = 1;
-	tag = "icon-bulb1 (NORTH)"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
@@ -1208,7 +1188,6 @@
 	d1 = 1;
 	d2 = 4;
 	icon_state = "1-4";
-	tag = "90Curve"
 	},
 /obj/structure/window/reinforced/tinted/frosted{
 	dir = 4
@@ -1384,7 +1363,6 @@
 "Mg" = (
 /obj/structure/window/reinforced{
 	dir = 1;
-	tag = "icon-rwindow (NORTH)"
 	},
 /obj/structure/window/reinforced{
 	dir = 4;
@@ -1440,7 +1418,6 @@
 	},
 /obj/structure/window/reinforced{
 	dir = 1;
-	tag = "icon-rwindow (NORTH)"
 	},
 /turf/template_noop,
 /area/submap/abandonedzoo)
@@ -1513,7 +1490,6 @@
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2";
-	tag = ""
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
@@ -1592,7 +1568,6 @@
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8";
-	tag = ""
 	},
 /obj/structure/cable,
 /obj/structure/cable{
@@ -1639,7 +1614,6 @@
 "Zg" = (
 /obj/structure/window/reinforced{
 	dir = 4;
-	tag = "icon-rwindow (EAST)"
 	},
 /obj/structure/window/reinforced{
 	health = 1e+006;

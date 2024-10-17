@@ -133,7 +133,6 @@
 "aR" = (
 /obj/machinery/light/spot{
 	dir = 4;
-	tag = "icon-tube1 (EAST)"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/old_tile/purple,
@@ -146,7 +145,6 @@
 /obj/machinery/photocopier,
 /obj/machinery/light/spot{
 	dir = 1;
-	tag = "icon-tube1 (NORTH)"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/old_tile/purple,
@@ -319,7 +317,6 @@
 "bF" = (
 /obj/machinery/light/spot{
 	dir = 1;
-	tag = "icon-tube1 (NORTH)"
 	},
 /turf/simulated/floor/tiled/red,
 /area/derelict/arrival)
@@ -333,7 +330,6 @@
 "bH" = (
 /obj/machinery/light/spot{
 	dir = 8;
-	tag = "icon-tube1 (WEST)"
 	},
 /turf/simulated/floor/tiled/old_tile/purple,
 /area/derelict/bridge)
@@ -406,7 +402,6 @@
 "ch" = (
 /obj/machinery/light/spot{
 	dir = 4;
-	tag = "icon-tube1 (EAST)"
 	},
 /turf/simulated/floor/tiled/old_tile/purple,
 /area/derelict/bridge)
@@ -426,7 +421,6 @@
 "ck" = (
 /obj/machinery/shower{
 	dir = 8;
-	tag = "icon-shower (WEST)"
 	},
 /obj/structure/curtain/open/shower,
 /obj/effect/decal/cleanable/dirt,
@@ -662,7 +656,6 @@
 	},
 /obj/machinery/light/spot{
 	dir = 4;
-	tag = "icon-tube1 (EAST)"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/derelict/eva{
@@ -714,7 +707,6 @@
 /obj/structure/table/reinforced,
 /obj/machinery/light/spot{
 	dir = 4;
-	tag = "icon-tube1 (EAST)"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/red,
@@ -818,7 +810,6 @@
 /obj/structure/closet,
 /obj/machinery/light/spot{
 	dir = 4;
-	tag = "icon-tube1 (EAST)"
 	},
 /obj/item/clothing/head/ushanka,
 /obj/item/clothing/head/ushanka,
@@ -849,7 +840,6 @@
 /obj/structure/table/reinforced,
 /obj/machinery/light/spot{
 	dir = 1;
-	tag = "icon-tube1 (NORTH)"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/red,
@@ -864,7 +854,6 @@
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2";
-	tag = ""
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
 	icon_state = "dark"
@@ -931,7 +920,6 @@
 "eh" = (
 /obj/machinery/light/spot{
 	dir = 1;
-	tag = "icon-tube1 (NORTH)"
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/derelict/eva{
@@ -940,7 +928,6 @@
 "ej" = (
 /obj/machinery/light/spot{
 	dir = 1;
-	tag = "icon-tube1 (NORTH)"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/old_tile/gray,
@@ -1077,7 +1064,6 @@
 /obj/structure/bed/chair/sofa/left,
 /obj/machinery/light/spot{
 	dir = 1;
-	tag = "icon-tube1 (NORTH)"
 	},
 /turf/simulated/floor/wood,
 /area/derelict/crew_quarters)
@@ -1105,7 +1091,6 @@
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2";
-	tag = ""
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/derelict/arrival)
@@ -1366,7 +1351,6 @@
 	d1 = 2;
 	d2 = 4;
 	icon_state = "2-4";
-	tag = ""
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
 	icon_state = "dark"
@@ -1387,7 +1371,6 @@
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8";
-	tag = ""
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
 	icon_state = "dark"
@@ -1454,7 +1437,6 @@
 "fP" = (
 /obj/machinery/light/spot{
 	dir = 8;
-	tag = "icon-tube1 (WEST)"
 	},
 /turf/simulated/floor/tiled/old_tile/yellow,
 /area/derelict/eva{
@@ -1634,7 +1616,6 @@
 	},
 /obj/machinery/shower{
 	dir = 8;
-	tag = "icon-shower (WEST)"
 	},
 /obj/structure/curtain/open/shower,
 /turf/simulated/floor/tiled/old_tile/beige,
@@ -1683,7 +1664,6 @@
 /obj/item/stack/cable_coil,
 /obj/machinery/light/spot{
 	dir = 1;
-	tag = "icon-tube1 (NORTH)"
 	},
 /turf/simulated/floor/tiled/old_tile/yellow,
 /area/derelict/eva{
@@ -1802,7 +1782,6 @@
 /obj/item/tool/wrench,
 /obj/machinery/light/spot{
 	dir = 4;
-	tag = "icon-tube1 (EAST)"
 	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/derelict/crew_quarters)
@@ -2124,7 +2103,6 @@
 "ib" = (
 /obj/machinery/light/spot{
 	dir = 8;
-	tag = "icon-tube1 (WEST)"
 	},
 /obj/structure/closet/l3closet/scientist,
 /obj/item/clothing/glasses/science,
@@ -2221,7 +2199,6 @@
 "iz" = (
 /obj/machinery/light/spot{
 	dir = 4;
-	tag = "icon-tube1 (EAST)"
 	},
 /turf/simulated/floor/tiled/old_tile/yellow,
 /area/derelict/arrival)
@@ -2437,7 +2414,6 @@
 "jg" = (
 /obj/machinery/light/spot{
 	dir = 4;
-	tag = "icon-tube1 (EAST)"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/effect/decal/cleanable/dirt,
@@ -3361,7 +3337,6 @@
 "lG" = (
 /obj/machinery/light/spot{
 	dir = 4;
-	tag = "icon-tube1 (EAST)"
 	},
 /obj/machinery/access_button{
 	command = "cycle_interior";
@@ -3437,7 +3412,6 @@
 /obj/structure/bed/chair{
 	dir = 8;
 	icon_state = "chair";
-	tag = "icon-chair (WEST)"
 	},
 /turf/simulated/floor/tiled/old_tile,
 /area/derelict/eva{
@@ -3459,7 +3433,6 @@
 "lV" = (
 /obj/machinery/light/spot{
 	dir = 4;
-	tag = "icon-tube1 (EAST)"
 	},
 /obj/item/trash/tastybread,
 /obj/effect/decal/cleanable/dirt,
@@ -3517,7 +3490,6 @@
 	d1 = 1;
 	d2 = 4;
 	icon_state = "1-4";
-	tag = "90Curve"
 	},
 /obj/structure/cable{
 	d1 = 1;
@@ -3530,7 +3502,6 @@
 "mc" = (
 /obj/structure/shuttle/engine/heater{
 	dir = 1;
-	tag = "icon-heater (NORTH)"
 	},
 /obj/structure/shuttle/engine/propulsion,
 /turf/simulated/shuttle/plating,
@@ -3823,7 +3794,6 @@
 "ne" = (
 /obj/machinery/shower{
 	dir = 4;
-	tag = "icon-shower (EAST)"
 	},
 /obj/structure/curtain/open/shower,
 /obj/effect/decal/cleanable/dirt,
@@ -3899,7 +3869,6 @@
 "ns" = (
 /obj/machinery/shower{
 	dir = 4;
-	tag = "icon-shower (EAST)"
 	},
 /obj/structure/curtain/open/shower,
 /obj/structure/window/reinforced,
@@ -3966,7 +3935,6 @@
 /obj/item/beach_ball/holoball,
 /obj/machinery/light/spot{
 	dir = 4;
-	tag = "icon-tube1 (EAST)"
 	},
 /turf/simulated/floor/tiled/old_tile,
 /area/derelict/crew_quarters)
@@ -3979,7 +3947,6 @@
 	d1 = 1;
 	d2 = 4;
 	icon_state = "1-4";
-	tag = "90Curve"
 	},
 /turf/simulated/floor/tiled/old_tile,
 /area/derelict/arrival)
@@ -4444,7 +4411,6 @@
 /obj/item/storage/box/cups,
 /obj/machinery/light/spot{
 	dir = 8;
-	tag = "icon-tube1 (WEST)"
 	},
 /turf/simulated/floor/tiled/old_tile,
 /area/derelict/crew_quarters)
@@ -4527,7 +4493,6 @@
 "pu" = (
 /obj/structure/window/reinforced{
 	dir = 4;
-	tag = "icon-rwindow (EAST)"
 	},
 /obj/item/mop,
 /obj/machinery/light/small{
@@ -4585,7 +4550,6 @@
 "pI" = (
 /obj/machinery/light/small{
 	dir = 4;
-	tag = "icon-bulb1 (EAST)"
 	},
 /turf/simulated/floor/tiled/old_tile/blue,
 /area/derelict/arrival)
@@ -4608,7 +4572,6 @@
 "pN" = (
 /obj/structure/window/reinforced{
 	dir = 4;
-	tag = "icon-rwindow (EAST)"
 	},
 /obj/effect/spider/stickyweb/dark,
 /turf/simulated/floor/tiled/old_tile/gray,
@@ -4673,7 +4636,6 @@
 "pX" = (
 /obj/structure/window/reinforced{
 	dir = 4;
-	tag = "icon-rwindow (EAST)"
 	},
 /obj/structure/window/reinforced{
 	dir = 1;
@@ -4699,7 +4661,6 @@
 	},
 /obj/machinery/light/small{
 	dir = 4;
-	tag = "icon-bulb1 (EAST)"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/derelict/eva{
@@ -4719,7 +4680,6 @@
 "qe" = (
 /obj/structure/window/reinforced{
 	dir = 4;
-	tag = "icon-rwindow (EAST)"
 	},
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/neutral,
@@ -4760,7 +4720,6 @@
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
 	dir = 4;
-	tag = "icon-rwindow (EAST)"
 	},
 /obj/structure/kitchenspike,
 /turf/simulated/floor/tiled/neutral,
@@ -4799,7 +4758,6 @@
 "qz" = (
 /obj/machinery/light/spot{
 	dir = 4;
-	tag = "icon-tube1 (EAST)"
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/newscaster{
@@ -4880,7 +4838,6 @@
 "qN" = (
 /obj/machinery/light/spot{
 	dir = 1;
-	tag = "icon-tube1 (NORTH)"
 	},
 /turf/simulated/floor/tiled/old_tile/green,
 /area/derelict/arrival)
@@ -4901,7 +4858,6 @@
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
 	dir = 4;
-	tag = "icon-rwindow (EAST)"
 	},
 /obj/structure/flora/ausbushes/fullgrass,
 /obj/structure/flora/ausbushes/leafybush,
@@ -4929,7 +4885,6 @@
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
 	dir = 4;
-	tag = "icon-rwindow (EAST)"
 	},
 /obj/structure/flora/ausbushes/ywflowers,
 /turf/simulated/floor/grass,
@@ -4952,7 +4907,6 @@
 "ra" = (
 /obj/machinery/light/spot{
 	dir = 8;
-	tag = "icon-tube1 (WEST)"
 	},
 /turf/simulated/floor/tiled/old_tile/green,
 /area/derelict/arrival)
@@ -5094,7 +5048,6 @@
 	},
 /obj/structure/window/reinforced{
 	dir = 4;
-	tag = "icon-rwindow (EAST)"
 	},
 /turf/simulated/floor/grass,
 /area/derelict/arrival)
@@ -5141,7 +5094,6 @@
 	},
 /obj/structure/window/reinforced{
 	dir = 4;
-	tag = "icon-rwindow (EAST)"
 	},
 /turf/simulated/floor/grass,
 /area/derelict/arrival)
@@ -5212,7 +5164,6 @@
 	},
 /obj/structure/window/reinforced{
 	dir = 4;
-	tag = "icon-rwindow (EAST)"
 	},
 /obj/structure/flora/ausbushes/ppflowers,
 /obj/structure/flora/ausbushes/sparsegrass,
@@ -5311,7 +5262,6 @@
 "rW" = (
 /obj/structure/window/reinforced{
 	dir = 4;
-	tag = "icon-rwindow (EAST)"
 	},
 /obj/structure/window/reinforced{
 	dir = 1;
@@ -5366,7 +5316,6 @@
 	},
 /obj/machinery/light/small{
 	dir = 4;
-	tag = "icon-bulb1 (EAST)"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
@@ -5777,7 +5726,6 @@
 "MN" = (
 /obj/machinery/light/spot{
 	dir = 4;
-	tag = "icon-tube1 (EAST)"
 	},
 /obj/structure/closet/crate/internals,
 /turf/simulated/floor/tiled/old_tile/yellow,
@@ -5868,7 +5816,6 @@
 "Sp" = (
 /obj/machinery/shower{
 	dir = 8;
-	tag = "icon-shower (WEST)"
 	},
 /obj/structure/curtain/open/shower,
 /obj/effect/decal/cleanable/dirt,
@@ -5882,7 +5829,6 @@
 "Td" = (
 /obj/structure/window/reinforced{
 	dir = 4;
-	tag = "icon-rwindow (EAST)"
 	},
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/old_tile/gray,
