@@ -141,7 +141,11 @@
 				mmsg += " (AFK - [round(seconds / 60)] minutes, [seconds % 60] seconds)"
 		mmsg += "\n"
 
+<<<<<<< HEAD
 	if(CONFIG_GET(flag/show_mentors)) // CHOMPEdit
+=======
+	if(config.show_mentors)
+>>>>>>> edf912d4a6... add missing triggered and some mirror fixes (#16489)
 		msg += "\n" + span_bold(" Current Mentors ([num_mentors_online]):") + "\n" + mmsg
 
 	msg += "\n" + span_info("Adminhelps are also sent to Discord. If no admins are available in game try anyway and an admin on Discord may see it and respond.")
