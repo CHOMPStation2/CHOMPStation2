@@ -72536,14 +72536,14 @@
 /obj/machinery/button/remote/airlock{
 	desc = "A remote control switch for the medbay foyer.";
 	id = "chemcounter";
-	name = "Medbay Doors Control";
+	name = "Chemistry Counter";
 	pixel_y = 24;
 	pixel_x = 5
 	},
 /obj/machinery/button/remote/airlock{
 	desc = "A remote control switch for the medbay foyer.";
 	id = "chemwindow";
-	name = "Medbay Doors Control";
+	name = "Chemistry Windows";
 	pixel_y = 24;
 	pixel_x = -5
 	},
