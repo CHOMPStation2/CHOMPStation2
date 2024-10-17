@@ -168,7 +168,7 @@
 	var/ruptured = 0
 
 /mob/living/simple_mob/animal/space/mouse_army/pyro/death()
-	visible_message("<span class='critical'>\The [src]'s tank groans!</span>")
+	visible_message(span_critical("\The [src]'s tank groans!"))
 	var/delay = rand(1, 3)
 	spawn(0)
 		// Flash black and red as a warning.
@@ -181,7 +181,7 @@
 
 	spawn(rand (1,5))
 		if(!ruptured)
-			visible_message("<span class='critical'>\The [src]'s tank ruptures!</span>")
+			visible_message(span_critical("\The [src]'s tank ruptures!"))
 			ruptured = 1
 			adjust_fire_stacks(2)
 			IgniteMob()
@@ -226,7 +226,7 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
 
 /mob/living/simple_mob/animal/space/mouse_army/ammo/death()
-	visible_message("<span class='critical'>\The [src]'s body begins to rupture!</span>")
+	visible_message(span_critical("\The [src]'s body begins to rupture!"))
 	var/delay = rand(explosion_delay_lower, explosion_delay_upper)
 	spawn(0)
 		// Flash black and red as a warning.
@@ -239,7 +239,7 @@
 
 	spawn(rand(1,5))
 		if(src && !exploded)
-			visible_message("<span class='critical'>\The [src]'s body detonates!</span>")
+			visible_message(span_critical("\The [src]'s body detonates!"))
 			exploded = 1
 			explosion(src.loc, explosion_dev_range, explosion_heavy_range, explosion_light_range, explosion_flash_range)
 			qdel(src)

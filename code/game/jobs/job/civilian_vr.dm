@@ -168,6 +168,7 @@
 	pto_type = PTO_CIVILIAN
 	alt_titles = list(JOB_ALT_INTERNAL_AFFAIRS_LIAISON = /datum/alt_title/ia_liaison, JOB_ALT_INTERNAL_AFFAIRS_DELEGATE = /datum/alt_title/ia_delegate,
 						JOB_ALT_INTERNAL_AFFAIRS_INVESTIGATOR = /datum/alt_title/ia_investigator)
+	dept_time_required = 20 // CHOMPEdit
 
 /datum/alt_title/ia_liaison
 	title = JOB_ALT_INTERNAL_AFFAIRS_LIAISON

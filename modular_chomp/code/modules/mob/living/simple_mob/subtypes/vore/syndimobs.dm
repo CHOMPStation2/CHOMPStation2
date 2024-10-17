@@ -67,7 +67,7 @@
 	var/leap_warmup = 0.5 SECOND // How long the leap telegraphing is.
 	var/leap_sound = 'sound/weapons/spiderlunge.ogg'
 
-	player_msg = "You are very fast, and <b>can perform a leaping attack</b> by clicking on someone from a short distance away.<br>\
+	player_msg = "You are very fast, and " + span_bold("can perform a leaping attack") + " by clicking on someone from a short distance away.<br>\
 	If the leap succeeds, the target will be knocked down briefly and you will be on top of them.<br>\
 	Note that there is a short delay before you leap!<br>\
 	In addition, you will do more damage to incapacitated opponents."

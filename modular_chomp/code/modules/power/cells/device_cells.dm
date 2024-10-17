@@ -178,7 +178,7 @@
 
 /obj/item/cell/device/weapon/recharge/alien/attack_self(var/mob/user)
 	user.remove_from_mob(src)
-	to_chat(user, "<span class='notice'>You swap [src] to 'machinery cell' mode.</span>")
+	to_chat(user, span_notice("You swap [src] to 'machinery cell' mode."))
 	var/obj/item/cell/newcell = new swaps_to(null)
 	user.put_in_active_hand(newcell)
 	var/percentage = charge/maxcharge
@@ -192,7 +192,7 @@
 	origin_tech = list(TECH_POWER = 8, TECH_ENGINEERING = 6)
 	icon = 'icons/obj/abductor.dmi'
 	icon_state = "cell"
-	maxcharge = 10000 
+	maxcharge = 10000
 	charge_amount = 500
 	self_recharge = TRUE
 	charge_delay = 50
@@ -202,7 +202,7 @@
 
 /obj/item/cell/void/attack_self(var/mob/user)
 	user.remove_from_mob(src)
-	to_chat(user, "<span class='notice'>You swap [src] to 'device cell' mode.</span>")
+	to_chat(user, span_notice("You swap [src] to 'device cell' mode."))
 	var/obj/item/cell/newcell = new swaps_to(null)
 	user.put_in_active_hand(newcell)
 	var/percentage = charge/maxcharge

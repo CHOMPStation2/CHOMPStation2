@@ -129,6 +129,7 @@ var/list/admin_verbs_admin = list(
 	/client/proc/removetickets,
 	/client/proc/delbook,
 	/client/proc/toggle_spawning_with_recolour,
+	/client/proc/start_vote,
 	/client/proc/reload_jobwhitelist, //ChompADD
 	/client/proc/reload_alienwhitelist //ChompADD
 	)
@@ -427,6 +428,7 @@ var/list/admin_verbs_mod = list(
 	/datum/admins/proc/view_persistent_data,
 	/datum/admins/proc/view_txt_log,	//shows the server log (diary) for today,
 	/datum/admins/proc/view_atk_log,		//shows the server combat-log, doesn't do anything presently,
+	/client/proc/start_vote,
 	/datum/admins/proc/quick_nif, //CHOMPStation Add,
 	/client/proc/reload_jobwhitelist, //ChompADD
 	/client/proc/reload_alienwhitelist //ChompADD
@@ -573,11 +575,11 @@ var/list/admin_verbs_event_manager = list(
 	/client/proc/toggle_random_events,
 	/client/proc/modify_server_news,
 	/client/proc/toggle_spawning_with_recolour,
+	/client/proc/start_vote,
 	/datum/admins/proc/quick_nif, //CHOMPStation Add,
 	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
 	/client/proc/reload_jobwhitelist, //ChompADD
 	/client/proc/reload_alienwhitelist //ChompADD
-
 )
 
 /client/proc/add_admin_verbs()

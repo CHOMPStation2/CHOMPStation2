@@ -11,6 +11,8 @@
 	var/transaction_purpose = "Default charge"
 	var/access_code = 0
 	var/datum/money_account/linked_account
+	pickup_sound = 'sound/items/pickup/device.ogg'
+	drop_sound = 'sound/items/drop/device.ogg'
 
 /obj/item/eftpos/Initialize()
 	. = ..()
@@ -220,9 +222,9 @@
 	if (istype(I, /obj/item/card/id))
 		var/obj/item/card/id/C = I
 		if(I==ID_container || ID_container == null)
-			usr.visible_message("<span class='info'>\The [usr] swipes a card through \the [src].</span>")
+			usr.visible_message(span_info("\The [usr] swipes a card through \the [src]."))
 		else
-			usr.visible_message("<span class='info'>\The [usr] swipes \the [ID_container] through \the [src].</span>")
+			usr.visible_message(span_info("\The [usr] swipes \the [ID_container] through \the [src]."))
 		if(transaction_locked && !transaction_paid)
 			if(linked_account)
 				if(!linked_account.suspended)
@@ -281,7 +283,7 @@
 				transaction_locked = 0
 				transaction_paid = 0
 			else
-				usr.visible_message("<span class='info'>\The [usr] swipes a card through \the [src].</span>")
+				usr.visible_message(span_info("\The [usr] swipes a card through \the [src]."))
 				playsound(src, 'sound/machines/chime.ogg', 50, 1)
 				src.visible_message("[icon2html(src,viewers(src))] \The [src] chimes.")
 				transaction_paid = 1

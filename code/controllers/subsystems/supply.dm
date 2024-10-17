@@ -121,6 +121,11 @@ SUBSYSTEM_DEF(supply)
 						EC.contents[EC.contents.len]["quantity"] = cashmoney.worth
 						EC.value += EC.contents[EC.contents.len]["value"]
 
+					// CHOMPAdd Start - Sell salvage
+					if(istype(A, /obj/item/salvage))
+						var/obj/item/salvage/salvagedStuff = A
+						EC.contents[EC.contents.len]["value"] = salvagedStuff.worth
+					// CHOMPAdd End
 
 
 			// Make a log of it, but it wasn't shipped properly, and so isn't worth anything
@@ -203,7 +208,7 @@ SUBSYSTEM_DEF(supply)
 					A.req_access = L.Copy()
 					LAZYCLEARLIST(A.req_one_access)
 				else
-					log_debug("<span class='danger'>Supply pack with invalid access restriction [SP.access] encountered!</span>")
+					log_debug(span_danger("Supply pack with invalid access restriction [SP.access] encountered!"))
 
 		//supply manifest generation begin
 		var/obj/item/paper/manifest/slip

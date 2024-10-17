@@ -21,4 +21,4 @@
 
 /obj/item/shockpaddles/standalone/rig/attack_self()
 	use_on_synthetic = !use_on_synthetic
-	to_chat(usr, "<span class='notice'>You switch the [src] to [use_on_synthetic ? "FBP" : "organic"] compatibility.</span>")
+	to_chat(usr, span_notice("You switch the [src] to [use_on_synthetic ? "FBP" : "organic"] compatibility."))

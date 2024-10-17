@@ -15,7 +15,7 @@ SUBSYSTEM_DEF(planets)
 	var/static/list/needs_temp_update = list()
 
 /datum/controller/subsystem/planets/Initialize() // CHOMPEdit
-	admin_notice("<span class='danger'>Initializing planetary weather.</span>", R_DEBUG)
+	admin_notice(span_danger("Initializing planetary weather."), R_DEBUG)
 	createPlanets()
 	return SS_INIT_SUCCESS // CHOMPEdit
 
@@ -28,7 +28,7 @@ SUBSYSTEM_DEF(planets)
 			if(Z > z_to_planet.len)
 				z_to_planet.len = Z
 			if(z_to_planet[Z])
-				admin_notice("<span class='danger'>Z[Z] is shared by more than one planet!</span>", R_DEBUG)
+				admin_notice(span_danger("Z[Z] is shared by more than one planet!"), R_DEBUG)
 				continue
 			z_to_planet[Z] = NP
 

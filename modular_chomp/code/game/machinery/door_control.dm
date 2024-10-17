@@ -4,7 +4,7 @@
 
 /obj/machinery/button/remote/blast_door/single_use/attack_hand(mob/user as mob)
 	if(has_been_pressed)
-		to_chat(user,"<span class='notice'>Nothing happens.</span>")
+		to_chat(user,span_notice("Nothing happens."))
 		return
 	. = ..()
 
@@ -22,7 +22,7 @@
 
 /obj/machinery/button/remote/blast_door/single_use/slab/attack_hand(mob/user as mob)
 	. = ..()
-	to_chat(user,"<span class='notice'>You hear a heavy mechanism open somewhere in the distance.</span>")
+	to_chat(user,span_notice("You hear a heavy mechanism open somewhere in the distance."))
 	icon_state = "slab1"
 
 /obj/machinery/button/remote/blast_door/single_use/slab/update_icon()

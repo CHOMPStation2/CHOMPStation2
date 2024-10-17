@@ -2,9 +2,9 @@
 	. = ..()
 	if(Adjacent(user))
 		if(water.energy)
-			. += "<span class='notice'>[src] is wet. Just like it should be.</span>"
+			. += span_notice("[src] is wet. Just like it should be.")
 		if(water.energy < 5)
-			. += "<span class='notice'>[src] is dry.</span>"
+			. += span_notice("[src] is dry.")
 
 /obj/item/gun/energy/taser/mounted/cyborg/flare
 	name = "flare gun"

@@ -92,7 +92,7 @@
 
 /obj/item/gun/energy/elementalray/emag_act(var/remaining_charges, var/mob/user)
 	..()
-	to_chat(user, "<span class='notice'>You short circuit the internal locking mechanisms of \the [src]!</span>")
+	to_chat(user, span_notice("You short circuit the internal locking mechanisms of \the [src]!"))
 	firemodes = list(
 		list(mode_name="fire", burst=1, fire_delay=15, projectile_type=/obj/item/projectile/bullet/flamegun, charge_cost = 160),
 		list(mode_name="lighting", burst=1, fire_delay=20, projectile_type=/obj/item/projectile/beam/lightingsurge, charge_cost = 480),
@@ -132,8 +132,8 @@
 	desc = "You are covered in acid"
 	mob_overlay_state = "poisoned"
 
-	on_created_text = "<span class='warning'>You are covered in muck...</span>"
-	on_expired_text = "<span class='notice'>You are no longer covered in muck.</span>"
+	on_created_text = span_warning("You are covered in muck...")
+	on_expired_text = span_notice("You are no longer covered in muck.")
 	stacks = MODIFIER_STACK_ALLOWED
 
 	slowdown = 0.2

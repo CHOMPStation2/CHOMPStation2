@@ -73,7 +73,7 @@
     set category = "IC.Game"
 
     if(stat || world.time < last_special)
-        to_chat(usr, "<span class='warning'>You recently tried to create an area. Wait a while before using it again.</span>")
+        to_chat(usr, span_warning("You recently tried to create an area. Wait a while before using it again."))
         return
 
     last_special = world.time + 2 SECONDS // Antispam.

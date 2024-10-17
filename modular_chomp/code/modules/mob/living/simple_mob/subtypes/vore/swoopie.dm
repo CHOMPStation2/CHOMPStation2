@@ -253,15 +253,15 @@
 					if(istype(AM, /mob/living))
 						var/mob/living/M = AM
 						if(!M.devourable || !M.can_be_drop_prey)
-							to_chat(M, "<span class='warning'>[src] plunges their head into \the [D], while you narrowly avoid being sucked up!</span>")
+							to_chat(M, span_warning("[src] plunges their head into \the [D], while you narrowly avoid being sucked up!"))
 							continue
-						to_chat(M, "<span class='warning'>[src] plunges their head into \the [D], sucking up everything inside- Including you!</span>")
+						to_chat(M, span_warning("[src] plunges their head into \the [D], sucking up everything inside- Including you!"))
 					foundstuff = 1
 					AM.forceMove(src)
 				if(foundstuff)
-					src.visible_message("<span class='warning'>[src] plunges their head into \the [D], greedily sucking up everything inside!</span>")
+					src.visible_message(span_warning("[src] plunges their head into \the [D], greedily sucking up everything inside!"))
 				else //Oh, Nothing was inside...
-					to_chat(src, "You poke your head into \the [D], but there doesnt seem to be anything of interest...")
+					to_chat(src, span_infoplain("You poke your head into \the [D], but there doesnt seem to be anything of interest..."))
 				return
 			var/resolved = Vac.resolve_attackby(A, src, click_parameters = params)
 			if(!resolved && A && Vac)
@@ -278,7 +278,7 @@
 	if(L.a_intent == I_GRAB && Vac && Vac.loc == src)
 		if(L.zone_sel.selecting == BP_HEAD)
 			if(L.put_in_active_hand(Vac))
-				L.visible_message("<span class='warning'>[L] grabs [src] by the neck, brandishing the thing like a regular vacuum cleaner!</span>")
+				L.visible_message(span_warning("[L] grabs [src] by the neck, brandishing the thing like a regular vacuum cleaner!"))
 				L.start_pulling(src)
 				return
 	. = ..()
@@ -303,9 +303,9 @@
 	set category = "IC"
 	set src in oview(1)
 	if(!has_AI() || !IIsAlly(usr))
-		to_chat(usr, "<span class=danger></span>")
+		to_chat(usr, span_danger(""))
 	if(!ai_holder == /datum/ai_holder/simple_mob/retaliate/swoopie || !ai_holder)
-		to_chat(usr, "<span class=warning>This [src] doesnt seem to have changable settings!</span>")
+		to_chat(usr, span_warning("This [src] doesnt seem to have changable settings!"))
 		return
 	var/datum/ai_holder/simple_mob/retaliate/swoopie/ai = ai_holder
 	var/list/swooping_options = list(

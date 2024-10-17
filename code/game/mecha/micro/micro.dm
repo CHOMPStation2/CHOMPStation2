@@ -122,7 +122,7 @@
 /obj/mecha/micro/move_inside()
 	var/mob/living/carbon/C = usr
 	if (C.get_effective_size(TRUE) >= 0.5)
-		to_chat(C, "<span class='warning'>You can't fit in this suit!</span>")
+		to_chat(C, span_warning("You can't fit in this suit!"))
 		return
 	else
 		..()
@@ -130,7 +130,7 @@
 /obj/mecha/micro/move_inside_passenger()
 	var/mob/living/carbon/C = usr
 	if (C.get_effective_size(TRUE) >= 0.5)
-		to_chat(C, "<span class='warning'>You can't fit in this suit!</span>")
+		to_chat(C, span_warning("You can't fit in this suit!"))
 		return
 	else
 		..()

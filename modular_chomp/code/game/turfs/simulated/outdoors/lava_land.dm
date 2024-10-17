@@ -26,7 +26,7 @@
 // Stolen from mineral turf code.
 /turf/simulated/floor/outdoors/lavaland/ashrock/attackby(obj/item/W as obj, mob/user as mob)
 	if(!user.IsAdvancedToolUser())
-		to_chat(user, "<span class='warning'>You don't have the dexterity to do this!</span>")
+		to_chat(user, span_warning("You don't have the dexterity to do this!"))
 		return
 
 	if(istype(W, /obj/item/pickaxe))
@@ -39,11 +39,11 @@
 		last_act = world.time
 
 		playsound(user, P.drill_sound, 20, 1)
-		to_chat(user, "<span class='notice'>You start [P.drill_verb].</span>")
+		to_chat(user, span_notice("You start [P.drill_verb]."))
 
 		if(do_after(user,P.digspeed))
 
-			to_chat(user, "<span class='notice'>You finish [P.drill_verb] \the [src].</span>")
+			to_chat(user, span_notice("You finish [P.drill_verb] \the [src]."))
 			density = FALSE
 			opacity = FALSE
 			demote() // Converts the turf to the next layer in turf_layers.

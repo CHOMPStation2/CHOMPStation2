@@ -270,11 +270,11 @@
 		return
 
 	if(usr.loc == src)
-		to_chat(usr, "<span class='warning'>You cannot reach the controls from inside.</span>")
+		to_chat(usr, span_warning("You cannot reach the controls from inside."))
 		return TRUE
 
 	if(mode==-1 && action != "eject") // If the mode is -1, only allow ejection
-		to_chat(usr, "<span class='warning'>The disposal units power is disabled.</span>")
+		to_chat(usr, span_warning("The disposal units power is disabled."))
 		return
 
 	if(stat & BROKEN)
@@ -384,6 +384,15 @@
 // 	return
 
 // eject the contents of the disposal unit
+
+/obj/machinery/disposal/verb/force_eject()
+	set src in oview(1)
+	set category = "Object"
+	set name = "Force Eject"
+	if(flushing)
+		return
+	eject()
+
 /obj/machinery/disposal/proc/eject()
 	for(var/atom/movable/AM in src)
 		AM.forceMove(src.loc)

@@ -131,14 +131,6 @@
 "hp" = (
 /turf/template_noop,
 /area/template_noop)
-"hA" = (
-/obj/structure/table/woodentable,
-/obj/item/stolenpackage,
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/dark,
-/area/submap/DogBase)
 "hZ" = (
 /obj/machinery/power/smes/buildable/point_of_interest,
 /obj/structure/cable/green{
@@ -427,7 +419,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/remains/human,
-/obj/random/contraband/nofail,
+/obj/random/contraband,
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/DogBase)
 "yl" = (
@@ -435,7 +427,7 @@
 /obj/effect/decal/remains/deer,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/random/contraband/nofail,
+/obj/random/contraband,
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/DogBase)
 "yx" = (
@@ -462,7 +454,6 @@
 "AY" = (
 /obj/structure/closet/secure_closet/guncabinet,
 /obj/random/projectile,
-/obj/random/projectile,
 /obj/effect/floor_decal/corner/red/border{
 	dir = 1
 	},
@@ -483,7 +474,7 @@
 /area/submap/DogBase)
 "BB" = (
 /obj/structure/table/woodentable,
-/obj/random/cash/big,
+/obj/random/cash,
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
 "BY" = (
@@ -508,7 +499,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/bone,
-/obj/random/contraband/nofail,
+/obj/random/contraband,
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/DogBase)
 "Dt" = (
@@ -558,7 +549,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
-/obj/random/cash/huge,
+/obj/random/cash,
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
 "Gf" = (
@@ -578,9 +569,6 @@
 /area/submap/DogBase)
 "GJ" = (
 /obj/structure/closet/secure_closet/guncabinet,
-/obj/random/projectile,
-/obj/random/projectile,
-/obj/effect/landmark/loot_spawn,
 /obj/effect/floor_decal/corner/red/border{
 	dir = 1
 	},
@@ -596,7 +584,7 @@
 /area/submap/DogBase)
 "HM" = (
 /obj/structure/table/woodentable,
-/obj/random/contraband/nofail,
+/obj/random/contraband,
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
 "Iz" = (
@@ -643,13 +631,6 @@
 	},
 /mob/living/simple_mob/mechanical/viscerator/mercenary,
 /turf/simulated/floor/plating,
-/area/submap/DogBase)
-"Lm" = (
-/obj/effect/landmark/loot_spawn,
-/obj/effect/floor_decal/borderfloor{
-	dir = 5
-	},
-/turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
 "LJ" = (
 /obj/effect/decal/remains/tajaran,
@@ -767,12 +748,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/dirt,
 /area/template_noop)
-"Rz" = (
-/obj/structure/table/woodentable,
-/obj/item/radio/phone,
-/obj/random/contraband/nofail,
-/turf/simulated/floor/tiled/dark,
-/area/submap/DogBase)
 "RW" = (
 /obj/machinery/light{
 	dir = 8
@@ -850,7 +825,7 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 1
 	},
-/obj/random/cash/huge,
+/obj/random/cash,
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
 "Xz" = (
@@ -1308,7 +1283,7 @@ OS
 Bk
 Yr
 HF
-Rz
+Ok
 wI
 Wq
 Ni
@@ -1329,7 +1304,7 @@ hp
 Hl
 Hl
 Bk
-hA
+lm
 Wq
 Iz
 lX
@@ -1393,7 +1368,7 @@ hp
 Hl
 Hl
 Bk
-hA
+lm
 Wq
 BB
 lX
@@ -1436,7 +1411,7 @@ OS
 Bk
 Yr
 VG
-HM
+Iz
 wI
 lb
 hl
@@ -1498,7 +1473,7 @@ ab
 tz
 qg
 Bk
-Lm
+ec
 se
 se
 se

@@ -116,7 +116,7 @@ Maybe later, gotta figure out a way to click yourself when in a locker etc.
 			add_verb(new_mob,/mob/living/proc/shapeshift_form) //CHOMPEdit TGPanel
 			new_mob.tf_form = src
 			new_mob.forceMove(src.loc)
-			visible_message("<span class='warning'>[src] twists and contorts, shapeshifting into a different form!</span>")
+			visible_message(span_warning("[src] twists and contorts, shapeshifting into a different form!"))
 			if(new_mob.ckey)
 				new_mob.tf_form_ckey = new_mob.ckey
 		else
@@ -184,7 +184,7 @@ Maybe later, gotta figure out a way to click yourself when in a locker etc.
 	set category = "Abilities.Shapeshift"
 	set desc = "Shape shift between set mob forms. (Requires a spawned mob to be varedited into the user's tf_form var as mob reference.)"
 	if(!istype(tf_form))
-		to_chat(src, "<span class='notice'>No shapeshift form set. (Requires a spawned mob to be varedited into the user's tf_form var as mob reference.)</span>")
+		to_chat(src, span_notice("No shapeshift form set. (Requires a spawned mob to be varedited into the user's tf_form var as mob reference.)"))
 		return
 	else
 		transform_into_mob(tf_form, TRUE, TRUE, TRUE)
@@ -204,7 +204,7 @@ Maybe later, gotta figure out a way to click yourself when in a locker etc.
 			new_metadata = ""
 		ooc_notes_favs = new_metadata
 		client.prefs.metadata_favs = new_metadata
-		to_chat(user, "<span class='filter_notice'>OOC note favs have been updated. Don't forget to save!</span>")
+		to_chat(user, span_filter_notice("OOC note favs have been updated. Don't forget to save!"))
 		log_admin("[key_name(user)] updated their OOC note favs mid-round.")
 		if(reopen)
 			ooc_notes_window(user)
@@ -218,7 +218,7 @@ Maybe later, gotta figure out a way to click yourself when in a locker etc.
 			new_metadata = ""
 		ooc_notes_maybes = new_metadata
 		client.prefs.metadata_maybes = new_metadata
-		to_chat(user, "<span class='filter_notice'>OOC note maybes have been updated. Don't forget to save!</span>")
+		to_chat(user, span_filter_notice("OOC note maybes have been updated. Don't forget to save!"))
 		log_admin("[key_name(user)] updated their OOC note maybes mid-round.")
 		if(reopen)
 			ooc_notes_window(user)

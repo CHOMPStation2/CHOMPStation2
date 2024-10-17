@@ -72,36 +72,36 @@
 	var/message = phrase_list[key]
 
 	if (!safety)
-		to_chat(usr, "<span class='notice'>You set the restrictor to: FUCK YOUR CUNT YOU SHIT EATING COCKSUCKER MAN EAT A DONG FUCKING ASS RAMMING SHIT FUCK EAT PENISES IN YOUR FUCK FACE AND SHIT OUT ABORTIONS OF FUCK AND DO SHIT IN YOUR ASS YOU COCK FUCK SHIT MONKEY FUCK ASS WANKER FROM THE DEPTHS OF SHIT.</span>")
+		to_chat(usr, span_notice("You set the restrictor to: FUCK YOUR CUNT YOU SHIT EATING COCKSUCKER MAN EAT A DONG FUCKING ASS RAMMING SHIT FUCK EAT PENISES IN YOUR FUCK FACE AND SHIT OUT ABORTIONS OF FUCK AND DO SHIT IN YOUR ASS YOU COCK FUCK SHIT MONKEY FUCK ASS WANKER FROM THE DEPTHS OF SHIT."))
 		return
 	switch(aggressiveness)
 		if(1)
 			phrase = (phrase < 6) ? (phrase + 1) : 1
 			key = phrase_list[phrase]
 			message = phrase_list[key]
-			to_chat(usr,"<span class='notice'>You set the restrictor to: [message]</span>")
+			to_chat(usr,span_notice("You set the restrictor to: [message]"))
 		if(2)
 			phrase = (phrase < 11 && phrase >= 7) ? (phrase + 1) : 7
 			key = phrase_list[phrase]
 			message = phrase_list[key]
-			to_chat(usr,"<span class='notice'>You set the restrictor to: [message]</span>")
+			to_chat(usr,span_notice("You set the restrictor to: [message]"))
 		if(3)
 			phrase = (phrase < 18 && phrase >= 12 ) ? (phrase + 1) : 12
 			key = phrase_list[phrase]
 			message = phrase_list[key]
-			to_chat(usr,"<span class='notice'>You set the restrictor to: [message]</span>")
+			to_chat(usr,span_notice("You set the restrictor to: [message]"))
 		if(4)
 			phrase = (phrase < 18 && phrase >= 1 ) ? (phrase + 1) : 1
 			key = phrase_list[phrase]
 			message = phrase_list[key]
-			to_chat(usr,"<span class='notice'>You set the restrictor to: [message]</span>")
+			to_chat(usr,span_notice("You set the restrictor to: [message]"))
 		else
-			to_chat(usr, "<span class='notice'>It's broken.</span>")
+			to_chat(usr, span_notice("It's broken."))
 
 /obj/item/clothing/mask/gas/sechailer/emag_act(mob/user)
 	if(safety)
 		safety = 0
-		to_chat(user, "<span class='warning'>You silently fry [src]'s vocal circuit with the cryptographic sequencer.</span>")
+		to_chat(user, span_warning("You silently fry [src]'s vocal circuit with the cryptographic sequencer."))
 	else
 		return
 
@@ -109,30 +109,30 @@
 	if(I.is_screwdriver())
 		switch(aggressiveness)
 			if(1)
-				to_chat(user, "<span class='notice'>You set the aggressiveness restrictor to the second position.</span>")
+				to_chat(user, span_notice("You set the aggressiveness restrictor to the second position."))
 				aggressiveness = 2
 				phrase = 7
 			if(2)
-				to_chat(user, "<span class='notice'>You set the aggressiveness restrictor to the third position.</span>")
+				to_chat(user, span_notice("You set the aggressiveness restrictor to the third position."))
 				aggressiveness = 3
 				phrase = 13
 			if(3)
-				to_chat(user, "<span class='notice'>You set the aggressiveness restrictor to the fourth position.</span>")
+				to_chat(user, span_notice("You set the aggressiveness restrictor to the fourth position."))
 				aggressiveness = 4
 				phrase = 1
 			if(4)
-				to_chat(user, "<span class='notice'>You set the aggressiveness restrictor to the first position.</span>")
+				to_chat(user, span_notice("You set the aggressiveness restrictor to the first position."))
 				aggressiveness = 1
 				phrase = 1
 			if(5)
-				to_chat(user, "<span class='warning'>You adjust the restrictor but nothing happens, probably because its broken.</span>")
+				to_chat(user, span_warning("You adjust the restrictor but nothing happens, probably because its broken."))
 	if(I.is_wirecutter())
 		if(aggressiveness != 5)
-			to_chat(user, "<span class='warning'>You broke it!</span>")
+			to_chat(user, span_warning("You broke it!"))
 			aggressiveness = 5
 	if(I.is_crowbar())
 		if(!hailer)
-			to_chat(user, "<span class='warning'>This mask has an integrated hailer, you can't remove it!</span>")
+			to_chat(user, span_warning("This mask has an integrated hailer, you can't remove it!"))
 		else
 			var/obj/N = new /obj/item/clothing/mask/gas/half(src.loc)
 			playsound(src, 'sound/items/Screwdriver.ogg', 50, 1)
@@ -159,11 +159,11 @@
 	if(cooldown < world.time - 35) // A cooldown, to stop people being jerks
 		if(!safety)
 			message = "FUCK YOUR CUNT YOU SHIT EATING COCKSUCKER MAN EAT A DONG FUCKING ASS RAMMING SHIT FUCK EAT PENISES IN YOUR FUCK FACE AND SHIT OUT ABORTIONS OF FUCK AND DO SHIT IN YOUR ASS YOU COCK FUCK SHIT MONKEY FUCK ASS WANKER FROM THE DEPTHS OF SHIT."
-			usr.visible_message("[usr]'s Compli-o-Nator: <font color='red' size='4'><b>[message]</b></font>")
+			usr.visible_message(span_infoplain("[usr]'s Compli-o-Nator: " + span_red(span_huge(span_bold("[message]")))))
 			playsound(src, 'sound/voice/binsult.ogg', 50, 0, 4) //Future sound channel = something like SFX
 			cooldown = world.time
 			return
 
-		usr.visible_message("[usr]'s Compli-o-Nator: <font color='red' size='4'><b>[message]</b></font>")
+		usr.visible_message(span_infoplain("[usr]'s Compli-o-Nator: " + span_red(span_huge(span_bold("[message]")))))
 		playsound(src, "sound/voice/complionator/[key].ogg", 50, 0, 4) //future sound channel = something like SFX
 		cooldown = world.time

@@ -15,7 +15,7 @@
 
 /obj/item/implant/reagent_generator/egg/post_implant(mob/living/carbon/source)
 	START_PROCESSING(SSobj, src)
-	to_chat(source, "<span class='notice'>You implant [source] with \the [src].</span>")
+	to_chat(source, span_notice("You implant [source] with \the [src]."))
 	add_verb(source,assigned_proc) //CHOMPEdit TGPanel
 	add_verb(source,/mob/living/carbon/human/proc/toggle_cascade) //CHOMPEdit TGPanel
 	return 1
@@ -45,15 +45,15 @@
 
 	if(rimplant.reagents.total_volume >= rimplant.usable_volume*0.75)
 		if(usr != src)
-			to_chat(usr, "<span class='notice'>[src] is very full on eggs, squeezing them now may result in a cascade!</span>")
-		to_chat(src, "<span class='notice'>[pick(rimplant.full_message)]</span>")
+			to_chat(usr, span_notice("[src] is very full on eggs, squeezing them now may result in a cascade!"))
+		to_chat(src, span_notice("[pick(rimplant.full_message)]"))
 
 	if(rimplant.reagents.total_volume <= rimplant.transfer_amount)
 		if(usr != src)
-			to_chat(usr, "<span class='notice'>It seems that [src] is out of eggs!</span>")
-		to_chat(src, "<span class='notice'>[pick(rimplant.empty_message)]</span>")
+			to_chat(usr, span_notice("It seems that [src] is out of eggs!"))
+		to_chat(src, span_notice("[pick(rimplant.empty_message)]"))
 		return
-	visible_message("<span class='danger'>[usr] starts squeezing [src]'s lower body firmly...</span>")
+	visible_message(span_danger("[usr] starts squeezing [src]'s lower body firmly..."))
 	if (rimplant && do_after(usr,120,src))
 		if(src.Adjacent(usr))
 			var/egg = rimplant.eggtype
@@ -66,18 +66,18 @@
 				var/emote = rimplant.emote_descriptor[index]
 				var/verb_desc = rimplant.verb_descriptor[index]
 				var/self_verb_desc = rimplant.self_verb_descriptor[index]
-				visible_message("<span class='notice'>[usr] [verb_desc] [emote]</span>",
-								"<span class='notice'>You [self_verb_desc] [emote]</span>")
+				visible_message(span_notice("[usr] [verb_desc] [emote]"),
+								span_notice("You [self_verb_desc] [emote]"))
 			else
-				visible_message("<span class='notice'>[src] [pick(rimplant.short_emote_descriptor)] an egg.</span>",
-									"<span class='notice'>You [pick(rimplant.self_emote_descriptor)] an egg.</span>")
+				visible_message(span_notice("[src] [pick(rimplant.short_emote_descriptor)] an egg."),
+									span_notice("You [pick(rimplant.self_emote_descriptor)] an egg."))
 
 			if(prob(15))
-				visible_message("<span class='notice'>[src] [pick(rimplant.random_emote)].</span>")
+				visible_message(span_notice("[src] [pick(rimplant.random_emote)]."))
 			rimplant.reagents.remove_any(rimplant.transfer_amount)
 
 			if(rimplant.cascade)
-				to_chat(src, "<span class='notice'>You feel your legs quake as your muscles fail to stand strong!</span>")
+				to_chat(src, span_notice("You feel your legs quake as your muscles fail to stand strong!"))
 				while(rimplant.reagents.total_volume >= rimplant.transfer_amount)
 					if(do_after(src,30))
 						src.SetStunned(3)
@@ -86,7 +86,7 @@
 						new egg(get_turf(src))
 						rimplant.reagents.remove_any(rimplant.transfer_amount)
 						if(prob(25))
-							visible_message("<span class='notice'>[src] [pick(rimplant.random_emote)].</span>")
+							visible_message(span_notice("[src] [pick(rimplant.random_emote)]."))
 		else
 			return
 /mob/living/carbon/human/proc/toggle_cascade()
@@ -104,10 +104,10 @@
 
 	if(rimplant.cascade)
 		rimplant.cascade = 0
-		to_chat(src, "<span class='notice'>You toggle cascading off</span>")
+		to_chat(src, span_notice("You toggle cascading off"))
 	else
 		rimplant.cascade = 1
-		to_chat(src, "<span class='notice'>You toggle cascading on</span>")
+		to_chat(src, span_notice("You toggle cascading on"))
 
 
 /obj/item/implant/reagent_generator/egg/slow

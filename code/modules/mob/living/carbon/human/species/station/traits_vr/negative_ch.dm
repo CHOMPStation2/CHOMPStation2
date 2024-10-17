@@ -57,13 +57,13 @@
 		return
 	if((H.nutrition < 200) && prob(5))
 		if(H.nutrition > 100)
-			to_chat(H,"<span class='warning'>You start to feel noticeably weak as your stomach rumbles, begging for more food. Maybe you should eat something to keep your blood sugar up</span>")
+			to_chat(H,span_warning("You start to feel noticeably weak as your stomach rumbles, begging for more food. Maybe you should eat something to keep your blood sugar up"))
 		else if(H.nutrition > 50)
-			to_chat(H,"<span class='warning'>You begin to feel rather weak, and your stomach rumbles loudly. You feel lightheaded and it's getting harder to think. You really need to eat something.</span>")
+			to_chat(H,span_warning("You begin to feel rather weak, and your stomach rumbles loudly. You feel lightheaded and it's getting harder to think. You really need to eat something."))
 		else if(H.nutrition > 25)
-			to_chat(H,"<span class='danger'>You're feeling very weak and lightheaded, and your stomach continously rumbles at you. You really need to eat something!</span>")
+			to_chat(H,span_danger("You're feeling very weak and lightheaded, and your stomach continously rumbles at you. You really need to eat something!"))
 		else
-			to_chat(H,"<span class='critical'>You're feeling extremely weak and lightheaded. You feel as though you might pass out any moment and your stomach is screaming for food by now! You should really find something to eat!</span>")
+			to_chat(H,span_critical("You're feeling extremely weak and lightheaded. You feel as though you might pass out any moment and your stomach is screaming for food by now! You should really find something to eat!"))
 	if((H.nutrition < 100) && prob(10))
 		H.Confuse(10)
 	if((H.nutrition < 50) && prob(25))
@@ -207,7 +207,7 @@
 		var/list/panicmessages = list(	"Why am I still here? I have to leave and get some space!",
 						"Please, just let me be alone!",
 						"I need to be alone!")
-		return "<span class='danger'><b>[pick(panicmessages)]</b></span>"
+		return span_bolddanger("[pick(panicmessages)]")
 	return FALSE
 
 /datum/trait/negative/agoraphobia/proc/find_held_by(var/atom/item)
@@ -291,7 +291,7 @@
 /datum/trait/negative/lonely/proc/sub_loneliness(var/mob/living/carbon/human/H,var/amount = 4)
 	H.loneliness_stage = max(H.loneliness_stage - 4, 0)
 	if(world.time >= H.next_loneliness_time && H.loneliness_stage > 0)
-		to_chat(H, "The nearby company calms you down...")
+		to_chat(H, span_infoplain("The nearby company calms you down..."))
 		H.next_loneliness_time = world.time+500
 
 /datum/trait/negative/lonely/proc/check_mob_company(var/mob/living/carbon/human/H,var/mob/living/M)
@@ -379,7 +379,7 @@
 		if(H.stuttering < hallucination_cap)
 			H.stuttering += 5
 	if(H.loneliness_stage >= warning_cap)
-		ms = "<span class='danger'><b>[pick("Where are the others?", "Please, there has to be someone nearby!", "I don't want to be alone!")]</b></span>"
+		ms = span_danger(span_bold("[pick("Where are the others?", "Please, there has to be someone nearby!", "I don't want to be alone!")]"))
 	if(world.time < H.next_loneliness_time)
 		return
 	if(ms != "")

@@ -127,6 +127,7 @@
 	panel.set_content(output)
 	panel.open()
 	return
+
 //CHOMPEdit Begin
 /mob/new_player/get_status_tab_items()
 	. = ..()
@@ -134,8 +135,8 @@
 
 	. += "Game Mode: [SSticker.hide_mode ? "Secret" : "[config.mode_names[master_mode]]"]"
 
-	if(SSvote.mode)
-		. += "Vote: [capitalize(SSvote.mode)] Time Left: [SSvote.time_remaining] s"
+	//if(SSvote.mode)
+	//	. += "Vote: [capitalize(SSvote.mode)] Time Left: [SSvote.time_remaining] s"
 
 	if(SSticker.current_state == GAME_STATE_INIT)
 		. += "Time To Start: Server Initializing"
@@ -198,10 +199,10 @@
 			close_spawn_windows()
 			var/obj/O = locate("landmark*Observer-Start")
 			if(istype(O))
-				to_chat(src, "<span class='notice'>Now teleporting.</span>")
+				to_chat(src, span_notice("Now teleporting."))
 				observer.forceMove(O.loc)
 			else
-				to_chat(src, "<span class='danger'>Could not locate an observer spawn point. Use the Teleport verb to jump to the station map.</span>")
+				to_chat(src, span_danger("Could not locate an observer spawn point. Use the Teleport verb to jump to the station map."))
 
 			announce_ghost_joinleave(src)
 
@@ -226,9 +227,9 @@
 
 		var/time_till_respawn = time_till_respawn()
 		if(time_till_respawn == -1) // Special case, never allowed to respawn
-			to_chat(usr, "<span class='warning'>Respawning is not allowed!</span>")
+			to_chat(usr, span_warning("Respawning is not allowed!"))
 		else if(time_till_respawn) // Nonzero time to respawn
-			to_chat(usr, "<span class='warning'>You can't respawn yet! You need to wait another [round(time_till_respawn/10/60, 0.1)] minutes.</span>")
+			to_chat(usr, span_warning("You can't respawn yet! You need to wait another [round(time_till_respawn/10/60, 0.1)] minutes."))
 			return
 /*
 		if(client.prefs.species != "Human" && !check_rights(R_ADMIN, 0)) //VORESTATION EDITS: THE COMMENTED OUT AREAS FROM LINE 154 TO 178
@@ -249,15 +250,15 @@
 		for (var/mob/living/carbon/human/C in mob_list)
 			var/char_name = client.prefs.real_name
 			if(char_name == C.real_name)
-				to_chat(usr, "<span class='notice'>There is a character that already exists with the same name - <b>[C.real_name]</b>, please join with a different one, or use Quit the Round with the previous character.</span>") //VOREStation Edit
+				to_chat(usr, span_notice("There is a character that already exists with the same name - <b>[C.real_name]</b>, please join with a different one, or use Quit the Round with the previous character.")) //VOREStation Edit
 				return
 		*/ //Vorestation Removal End
 
 		if(!CONFIG_GET(flag/enter_allowed)) // CHOMPEdit
-			to_chat(usr, "<span class='notice'>There is an administrative lock on entering the game!</span>")
+			to_chat(usr, span_notice("There is an administrative lock on entering the game!"))
 			return
 		else if(ticker && ticker.mode && ticker.mode.explosion_in_progress)
-			to_chat(usr, "<span class='danger'>The station is currently exploding. Joining would go poorly.</span>")
+			to_chat(usr, span_danger("The station is currently exploding. Joining would go poorly."))
 			return
 
 		if(!is_alien_whitelisted(src, GLOB.all_species[client.prefs.species]))
@@ -471,7 +472,7 @@
 		to_chat(usr, span_red("The round is either not ready, or has already finished..."))
 		return 0
 	if(!CONFIG_GET(flag/enter_allowed)) // CHOMPEdit
-		to_chat(usr, "<span class='notice'>There is an administrative lock on entering the game!</span>")
+		to_chat(usr, span_notice("There is an administrative lock on entering the game!"))
 		return 0
 	if(!IsJobAvailable(rank))
 		tgui_alert_async(src,"[rank] is not available. Please try another.")
@@ -776,13 +777,8 @@
 	return new_character
 
 /mob/new_player/proc/ViewManifest()
-	var/dat = "<div align='center'>"
-	dat += data_core.get_manifest(OOC = 1)
-
-	//src << browse(dat, "window=manifest;size=370x420;can_close=1")
-	var/datum/browser/popup = new(src, "Crew Manifest", "Crew Manifest", 370, 420, src)
-	popup.set_content(dat)
-	popup.open()
+	var/datum/tgui_module/crew_manifest/self_deleting/S = new(src)
+	S.tgui_interact(src)
 
 /mob/new_player/Move()
 	return 0

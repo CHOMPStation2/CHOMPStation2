@@ -16,8 +16,6 @@
 /obj/item/defib_kit/loaded,
 /obj/structure/closet/walllocker_double/medical/south,
 /obj/item/storage/firstaid/regular,
-/obj/item/storage/firstaid/surgery,
-/obj/item/storage/firstaid/adv,
 /obj/item/selectable_item/chemistrykit/gender,
 /obj/item/selectable_item/chemistrykit/size,
 /turf/simulated/shuttle/floor/white,
@@ -82,7 +80,9 @@
 /obj/structure/bed/chair/bay/comfy/blue{
 	dir = 1
 	},
-/mob/living/simple_mob/animal/giant_spider/phorogenic,
+/mob/living/simple_mob/animal/giant_spider/phorogenic{
+	loot_list = list(/obj/item/stock_parts/scanning_module/omni = 50)
+	},
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "ey" = (
@@ -90,14 +90,12 @@
 	dir = 1
 	},
 /obj/structure/bed/chair/bay/shuttle,
-/obj/random/rigsuit/chancetofail,
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "eQ" = (
 /turf/simulated/shuttle/wall/voidcraft/lightblue,
 /area/submap/crashedexplo)
 "fv" = (
-/obj/random/energy/highend,
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "go" = (
@@ -151,13 +149,14 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/obj/item/stock_parts/micro_laser/omni,
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "jc" = (
 /obj/structure/bed/chair/bay/shuttle,
 /obj/effect/decal/cleanable/blood,
-/mob/living/simple_mob/animal/giant_spider/lurker,
+/mob/living/simple_mob/animal/giant_spider/lurker{
+	loot_list = list(/obj/item/stock_parts/capacitor/omni = 50)
+	},
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "ke" = (
@@ -216,7 +215,9 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/mob/living/simple_mob/animal/giant_spider/phorogenic,
+/mob/living/simple_mob/animal/giant_spider/phorogenic{
+	loot_list = list(/obj/item/stock_parts/manipulator/omni = 50)
+	},
 /obj/item/circuitboard/sleeper,
 /turf/simulated/shuttle/floor/white,
 /area/submap/crashedexplo)
@@ -224,7 +225,9 @@
 /turf/simulated/shuttle/wall/voidcraft/hard_corner,
 /area/submap/crashedexplo)
 "nV" = (
-/mob/living/simple_mob/animal/giant_spider/phorogenic,
+/mob/living/simple_mob/animal/giant_spider/phorogenic{
+	loot_list = list(/obj/item/stock_parts/capacitor/omni = 50)
+	},
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "pd" = (
@@ -273,7 +276,9 @@
 	dir = 1;
 	pixel_y = -32
 	},
-/mob/living/simple_mob/animal/giant_spider/carrier,
+/mob/living/simple_mob/animal/giant_spider/carrier{
+	loot_list = list(/obj/item/stock_parts/matter_bin/omni = 50)
+	},
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "sR" = (
@@ -351,7 +356,9 @@
 /area/submap/crashedexplo)
 "vH" = (
 /obj/item/stock_parts/capacitor/omni,
-/mob/living/simple_mob/animal/giant_spider/lurker,
+/mob/living/simple_mob/animal/giant_spider/lurker{
+	loot_list = list(/obj/item/stock_parts/manipulator/omni = 50)
+	},
 /turf/simulated/shuttle/floor/white,
 /area/submap/crashedexplo)
 "wv" = (
@@ -518,17 +525,15 @@
 /turf/simulated/shuttle/plating,
 /area/submap/crashedexplo)
 "Cc" = (
-/mob/living/simple_mob/animal/giant_spider/carrier,
+/mob/living/simple_mob/animal/giant_spider/carrier{
+	loot_list = list(/obj/item/stock_parts/matter_bin/omni = 50)
+	},
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "CY" = (
 /obj/machinery/shipsensors,
 /obj/effect/catwalk_plated/dark,
 /turf/simulated/shuttle/plating,
-/area/submap/crashedexplo)
-"DH" = (
-/obj/item/stock_parts/matter_bin/omni,
-/turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "DJ" = (
 /obj/structure/salvageable/console_broken_os,
@@ -542,12 +547,6 @@
 	},
 /obj/item/gps,
 /obj/structure/closet/walllocker_double/kitchen/east,
-/obj/item/storage/mre/random,
-/obj/item/storage/mre/random,
-/obj/item/storage/mre/random,
-/obj/item/storage/mre/random,
-/obj/item/storage/mre/random,
-/obj/item/storage/mre/random,
 /obj/item/storage/mre/random,
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
@@ -598,7 +597,6 @@
 /area/submap/crashedexplo)
 "KT" = (
 /obj/structure/table/glass,
-/obj/machinery/chemical_dispenser/full,
 /turf/simulated/shuttle/floor/white,
 /area/submap/crashedexplo)
 "KV" = (
@@ -624,7 +622,6 @@
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 1
 	},
-/obj/item/stock_parts/capacitor/omni,
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "LY" = (
@@ -633,7 +630,6 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/obj/item/stock_parts/scanning_module/omni,
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "MU" = (
@@ -765,7 +761,9 @@
 	pixel_x = -25;
 	pixel_y = 32
 	},
-/mob/living/simple_mob/animal/giant_spider/phorogenic,
+/mob/living/simple_mob/animal/giant_spider/phorogenic{
+	loot_list = list(/obj/item/stock_parts/scanning_module/omni = 50)
+	},
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/crashedexplo)
 "SV" = (
@@ -775,7 +773,9 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/mob/living/simple_mob/animal/giant_spider/carrier,
+/mob/living/simple_mob/animal/giant_spider/carrier{
+	loot_list = list(/obj/item/stock_parts/micro_laser/omni = 50)
+	},
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "Tb" = (
@@ -869,7 +869,6 @@
 	icon_state = "2-4"
 	},
 /obj/effect/decal/cleanable/blood,
-/obj/item/stock_parts/scanning_module/omni,
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/crashedexplo)
 "VE" = (
@@ -911,7 +910,6 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/obj/item/stock_parts/manipulator/omni,
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "Yq" = (
@@ -920,10 +918,6 @@
 	id_tag = "shuttle4sens_exp"
 	},
 /turf/simulated/shuttle/wall/voidcraft/lightblue,
-/area/submap/crashedexplo)
-"Yr" = (
-/obj/item/stock_parts/capacitor/omni,
-/turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "YK" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
@@ -1060,7 +1054,7 @@ UG
 UG
 bF
 DJ
-DH
+fv
 LY
 go
 dv
@@ -1082,7 +1076,7 @@ hn
 Cc
 RE
 jc
-Yr
+fv
 Ft
 cI
 lL

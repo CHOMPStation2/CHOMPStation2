@@ -85,7 +85,9 @@
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/solarmoff)
 "E" = (
-/mob/living/simple_mob/animal/space/carp/large,
+/mob/living/simple_mob/animal/space/carp/large{
+	loot_list = list(/obj/item/salvage/ruin/carp = 100)
+	},
 /turf/simulated/floor/water,
 /area/submap/solarmoff)
 "F" = (

@@ -760,7 +760,8 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 			var/list/valid_hairstyles = pref.get_valid_hairstyles()
 
 			if(valid_hairstyles.len)
-				pref.h_style = pick(valid_hairstyles)
+				if(!(pref.h_style in valid_hairstyles))
+					pref.h_style = pick(valid_hairstyles)
 			else
 				//this shouldn't happen
 				pref.h_style = hair_styles_list["Bald"]
@@ -769,7 +770,8 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 			var/list/valid_facialhairstyles = pref.get_valid_facialhairstyles()
 
 			if(valid_facialhairstyles.len)
-				pref.f_style = pick(valid_facialhairstyles)
+				if(!(pref.f_style in valid_facialhairstyles))
+					pref.f_style = pick(valid_facialhairstyles)
 			else
 				//this shouldn't happen
 				pref.f_style = facial_hair_styles_list["Shaved"]
@@ -1208,7 +1210,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 				organ = O_STOMACH
 			if("Brain")
 				if(pref.organ_data[BP_HEAD] != "cyborg")
-					to_chat(user, "<span class='warning'>You may only select a cybernetic or synthetic brain if you have a full prosthetic body.</span>")
+					to_chat(user, span_warning("You may only select a cybernetic or synthetic brain if you have a full prosthetic body."))
 					return
 				organ = "brain"
 

@@ -58,13 +58,13 @@
 			if(!isSynthetic())
 				if(prob(5) && prob(100 * RADIATION_SPEED_COEFFICIENT))
 					radiation -= 5 * rad_mult
-					to_chat(src, "<span class='warning'>You feel weak.</span>")
+					to_chat(src, span_warning("You feel weak."))
 					Weaken(3)
 					if(!lying)
 						emote("collapse")
 				if(prob(5) && prob(100 * RADIATION_SPEED_COEFFICIENT) && species.get_bodytype() == SPECIES_HUMAN) //apes go bald
 					if((h_style != "Bald" || f_style != "Shaved" ))
-						to_chat(src, "<span class='warning'>Your hair falls out.</span>")
+						to_chat(src, span_warning("Your hair falls out."))
 						h_style = "Bald"
 						f_style = "Shaved"
 						update_hair()
@@ -76,7 +76,7 @@
 				if(prob(5))
 					take_overall_damage(0, 5 * RADIATION_SPEED_COEFFICIENT, used_weapon = "Radiation Burns")
 				if(prob(1))
-					to_chat(src, "<span class='warning'>You feel strange!</span>")
+					to_chat(src, span_warning("You feel strange!"))
 					adjustCloneLoss(5 * RADIATION_SPEED_COEFFICIENT)
 					emote("gasp")
 

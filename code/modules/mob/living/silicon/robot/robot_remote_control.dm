@@ -154,7 +154,14 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 	// Laws.
 	connected_ai = mainframe // So they share laws.
 	mainframe.connected_robots |= src
+
+	// CHOMPEdit Start - Outpost 21 upport: force the law sync when an AI enters this shell, unless emagged
+	var/org_lu = lawupdate
+	if(!emagged)
+		lawupdate = TRUE // not emagged, so the AI shell should have law priority. Prevents confusion when you suddenly have two different ion laws. One in shell one in core.
 	lawsync()
+	lawupdate = org_lu
+	// CHOMPEdit End
 
 	// Give button to leave.
 	add_verb(src,/mob/living/silicon/robot/proc/undeploy_act) //CHOMPEdit TGPanel

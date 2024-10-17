@@ -53,16 +53,6 @@
 	temperature = 243.15
 	},
 /area/submap/cliffmanor)
-"iA" = (
-/obj/structure/railing,
-/obj/structure/table/wooden_reinforced,
-/obj/random/material/precious,
-/turf/simulated/floor/wood{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
-/area/submap/cliffmanor)
 "iR" = (
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/wood{
@@ -109,13 +99,10 @@
 	temperature = 243.15
 	},
 /area/submap/cliffmanor)
-"oX" = (
-/obj/structure/table/wooden_reinforced,
-/obj/item/clothing/head/psy_crown/gluttony,
-/turf/simulated/floor/wood,
-/area/submap/cliffmanor)
 "pI" = (
-/mob/living/simple_mob/humanoid/cultist/hunter,
+/mob/living/simple_mob/humanoid/cultist/hunter{
+	loot_list = list(/obj/item/material/butterfly/saw = 100, /obj/item/gun/projectile/shotgun/doublebarrel/sawn/alt = 100, /obj/item/clothing/head/psy_crown/wrath = 25)
+	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood{
 	nitrogen = 93.7835;
@@ -282,15 +269,6 @@
 	temperature = 243.15
 	},
 /area/submap/cliffmanor)
-"Ik" = (
-/obj/structure/table/wooden_reinforced,
-/obj/random/energy/highend,
-/turf/simulated/floor/wood{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
-/area/submap/cliffmanor)
 "Ja" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -302,7 +280,9 @@
 	},
 /area/submap/cliffmanor)
 "Kj" = (
-/mob/living/simple_mob/humanoid/cultist/hunter,
+/mob/living/simple_mob/humanoid/cultist/hunter{
+	loot_list = list(/obj/item/material/butterfly/saw = 100, /obj/item/gun/projectile/shotgun/doublebarrel/sawn/alt = 100, /obj/item/clothing/head/psy_crown/gluttony = 25)
+	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood,
@@ -331,18 +311,8 @@
 	temperature = 243.15
 	},
 /area/submap/cliffmanor)
-"Mt" = (
-/obj/structure/table/wooden_reinforced,
-/obj/random/firstaid,
-/turf/simulated/floor/wood{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
-/area/submap/cliffmanor)
 "ND" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/clothing/head/psy_crown/wrath,
 /turf/simulated/floor/wood,
 /area/submap/cliffmanor)
 "NQ" = (
@@ -360,8 +330,6 @@
 	dir = 1
 	},
 /obj/structure/table/wooden_reinforced,
-/obj/random/medical/pillbottle,
-/obj/random/material/refined,
 /turf/simulated/floor/wood{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -465,8 +433,6 @@
 "Wc" = (
 /obj/structure/railing,
 /obj/structure/table/wooden_reinforced,
-/obj/random/medical/pillbottle,
-/obj/random/material/refined,
 /turf/simulated/floor/wood{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -477,13 +443,11 @@
 /turf/simulated/floor/water,
 /area/submap/cliffmanor)
 "Zp" = (
-/obj/structure/table/wooden_reinforced,
-/obj/random/gun/random,
-/turf/simulated/floor/wood{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
+/obj/structure/closet/crate/secure/loot,
+/obj/random/mainttoyloot/nofail,
+/obj/item/stack/material/mhydrogen,
+/obj/random/material,
+/turf/simulated/floor/wood,
 /area/submap/cliffmanor)
 "ZA" = (
 /obj/structure/cliff/automatic{
@@ -723,7 +687,7 @@ bi
 Qi
 SZ
 kW
-oX
+ND
 uv
 ei
 kW
@@ -813,7 +777,7 @@ lK
 SZ
 nu
 gX
-Zp
+gX
 uS
 kW
 bA
@@ -1069,7 +1033,7 @@ nu
 SZ
 SZ
 SZ
-iA
+Wc
 xD
 rT
 rT
@@ -1155,7 +1119,7 @@ rT
 rT
 aJ
 kW
-GU
+Zp
 wg
 Rh
 Dd
@@ -1247,7 +1211,7 @@ lK
 SZ
 SZ
 gX
-Mt
+gX
 uS
 kW
 Rm
@@ -1255,7 +1219,7 @@ Rm
 Rm
 kW
 uS
-Ik
+gX
 Ls
 SZ
 SZ

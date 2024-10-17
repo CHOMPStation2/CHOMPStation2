@@ -197,6 +197,10 @@
 		return 1
 	return
 
+/obj/item/mecha_parts/mecha_equipment/tool/sleeper/container_resist(var/mob/living)
+	if(occupant == living)
+		eject()
+
 /obj/item/mecha_parts/mecha_equipment/tool/sleeper/verb/eject()
 	set name = "Sleeper Eject"
 	set category = "Exosuit Interface"
@@ -204,7 +208,7 @@
 	set popup_menu = 0
 	if(usr!=src.occupant || usr.stat == 2)
 		return
-	to_chat(usr,"<span class='notice'>Release sequence activated. This will take one minute.</span>")
+	to_chat(usr,span_notice("Release sequence activated. This will take one minute."))
 	sleep(600)
 	if(!src || !usr || !occupant || (occupant != usr)) //Check if someone's released/replaced/bombed him already
 		return

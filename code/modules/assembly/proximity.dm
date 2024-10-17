@@ -39,7 +39,7 @@
 		return
 	var/atom/movable/AM = WF.resolve()
 	if(isnull(AM))
-		log_debug("DEBUG: HasProximity called with [AM] on [src] ([usr]).")
+		log_debug("DEBUG: HasProximity called without reference on [src].")
 		return
 // CHOMPEdit End
 	if (istype(AM, /obj/effect/beam))
@@ -103,7 +103,7 @@
 
 /obj/item/assembly/prox_sensor/tgui_interact(mob/user, datum/tgui/ui)
 	if(!secured)
-		to_chat(user, "<span class='warning'>[src] is unsecured!</span>")
+		to_chat(user, span_warning("[src] is unsecured!"))
 		return FALSE
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)

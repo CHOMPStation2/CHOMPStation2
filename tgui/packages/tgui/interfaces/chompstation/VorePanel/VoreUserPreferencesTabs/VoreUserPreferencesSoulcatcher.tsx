@@ -1,6 +1,6 @@
 import { BooleanLike } from 'common/react';
+import { Box, Flex, Section } from 'tgui/components';
 
-import { Box, Flex, Section } from '../../../../components';
 import { localPrefs } from '../types';
 import { VoreUserPreferenceItem } from '../VoreUserPreferenceItem';
 

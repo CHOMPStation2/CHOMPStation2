@@ -16,6 +16,8 @@
 	origin_tech = list(TECH_MAGNET = 2, TECH_BIO = 1, TECH_ENGINEERING = 2)
 	matter = list(MAT_STEEL = 500, MAT_GLASS = 200)
 	var/mode = 1;
+	pickup_sound = 'sound/items/pickup/device.ogg'
+	drop_sound = 'sound/items/drop/device.ogg'
 
 /obj/item/robotanalyzer/attack(mob/living/M as mob, mob/living/user as mob)
 	do_scan(M, user)
@@ -46,7 +48,7 @@
 		to_chat(user, span_red("You can't analyze non-robotic things!"))
 		return
 
-	user.visible_message("<span class='notice'>\The [user] has analyzed [M]'s components.</span>","<span class='notice'>You have analyzed [M]'s components.</span>")
+	user.visible_message(span_notice("\The [user] has analyzed [M]'s components."),span_notice("You have analyzed [M]'s components."))
 	switch(scan_type)
 		if("robot")
 			if(mode)
@@ -166,11 +168,11 @@
 		if("prosthetics")
 
 			var/mob/living/carbon/human/H = M
-			to_chat(user, "<span class='notice'>Analyzing Results for \the [H]:</span>")
+			to_chat(user, span_notice("Analyzing Results for \the [H]:"))
 			if(H.isSynthetic())
 				to_chat(user, "System instability: [span_green("[H.getToxLoss()]")]")
 			to_chat(user, "Key: [span_orange("Electronics")]/[span_red("Brute")]")
-			to_chat(user, "<span class='notice'>External prosthetics:</span>")
+			to_chat(user, span_notice("External prosthetics:"))
 			var/organ_found
 			if(H.internal_organs.len)
 				for(var/obj/item/organ/external/E in H.organs)
@@ -181,7 +183,7 @@
 			if(!organ_found)
 				to_chat(user, "No prosthetics located.")
 			to_chat(user, "<hr>")
-			to_chat(user, "<span class='notice'>Internal prosthetics:</span>")
+			to_chat(user, span_notice("Internal prosthetics:"))
 			organ_found = null
 			if(H.internal_organs.len)
 				for(var/obj/item/organ/O in H.internal_organs)
@@ -215,13 +217,13 @@
 
 			to_chat(user, output)
 			to_chat(user, "<hr>")
-			to_chat(user, "<span class='notice'>Internal Diagnostics:</span>")
+			to_chat(user, span_notice("Internal Diagnostics:"))
 			for(var/slot in Mecha.internal_components)
 				var/obj/item/mecha_parts/component/MC = Mecha.internal_components[slot]
-				to_chat(user, "[MC?"[slot]: [MC] <span class='notice'>[round((MC.integrity / MC.max_integrity) * 100, 0.1)]%</span> integrity. [MC.get_efficiency() * 100] Operational capacity.":"<span class='warning'>[slot]: Component Not Found</span>"]")
+				to_chat(user, "[MC?"[slot]: [MC] <span class='notice'>[round((MC.integrity / MC.max_integrity) * 100, 0.1)]%</span> integrity. [MC.get_efficiency() * 100] Operational capacity.":span_warning("[slot]: Component Not Found")]")
 
 			to_chat(user, "<hr>")
-			to_chat(user, "<span class='notice'>General Statistics:</span>")
+			to_chat(user, span_notice("General Statistics:"))
 			to_chat(user, "<span class='notice'>Movement Weight: [Mecha.get_step_delay()]</span><br>")
 
 	src.add_fingerprint(user)

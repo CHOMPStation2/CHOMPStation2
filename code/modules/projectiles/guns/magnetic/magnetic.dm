@@ -119,7 +119,7 @@
 /obj/item/gun/magnetic/proc/show_ammo()
 	var/list/ammotext = list()
 	if(loaded)
-		ammotext += "<span class='notice'>It has \a [loaded] loaded.</span>"
+		ammotext += span_notice("It has \a [loaded] loaded.")
 
 	return ammotext
 
@@ -129,24 +129,24 @@
 		. += show_ammo()
 
 		if(cell)
-			. += "<span class='notice'>The installed [cell.name] has a charge level of [round((cell.charge/cell.maxcharge)*100)]%.</span>"
+			. += span_notice("The installed [cell.name] has a charge level of [round((cell.charge/cell.maxcharge)*100)]%.")
 		if(capacitor)
-			. += "<span class='notice'>The installed [capacitor.name] has a charge level of [round((capacitor.charge/capacitor.max_charge)*100)]%.</span>"
+			. += span_notice("The installed [capacitor.name] has a charge level of [round((capacitor.charge/capacitor.max_charge)*100)]%.")
 
 		if(state & ICON_BAD)
-			. += "<span class='notice'>The capacitor charge indicator is blinking [span_red("red")]. Maybe you should check the cell or capacitor.</span>"
+			. += span_notice("The capacitor charge indicator is blinking [span_red("red")]. Maybe you should check the cell or capacitor.")
 		else
 			if(state & ICON_CHARGE)
-				. += "<span class='notice'>The capacitor charge indicator is [span_orange("amber")].</span>"
+				. += span_notice("The capacitor charge indicator is [span_orange("amber")].")
 			else
-				. += "<span class='notice'>The capacitor charge indicator is [span_green("green")].</span>"
+				. += span_notice("The capacitor charge indicator is [span_green("green")].")
 
 /obj/item/gun/magnetic/attackby(var/obj/item/thing, var/mob/user)
 
 	if(removable_components)
 		if(istype(thing, /obj/item/cell))
 			if(cell)
-				to_chat(user, "<span class='warning'>\The [src] already has \a [cell] installed.</span>")
+				to_chat(user, span_warning("\The [src] already has \a [cell] installed."))
 				return
 			cell = thing
 			user.drop_from_inventory(cell, src)
@@ -157,7 +157,7 @@
 
 		if(thing.has_tool_quality(TOOL_SCREWDRIVER))
 			if(!capacitor)
-				to_chat(user, "<span class='warning'>\The [src] has no capacitor installed.</span>")
+				to_chat(user, span_warning("\The [src] has no capacitor installed."))
 				return
 			user.put_in_hands(capacitor)
 			user.visible_message("<b>\The [user]</b> unscrews \the [capacitor] from \the [src].")
@@ -168,7 +168,7 @@
 
 		if(istype(thing, /obj/item/stock_parts/capacitor))
 			if(capacitor)
-				to_chat(user, "<span class='warning'>\The [src] already has \a [capacitor] installed.</span>")
+				to_chat(user, span_warning("\The [src] already has \a [capacitor] installed."))
 				return
 			capacitor = thing
 			user.drop_from_inventory(capacitor, src)
@@ -181,7 +181,7 @@
 	if(istype(thing, load_type))
 
 		if(loaded)
-			to_chat(user, "<span class='warning'>\The [src] already has \a [loaded] loaded.</span>")
+			to_chat(user, span_warning("\The [src] already has \a [loaded] loaded."))
 			return
 
 		// This is not strictly necessary for the magnetic gun but something using
@@ -239,7 +239,7 @@
 
 	if(gun_unreliable && prob(gun_unreliable))
 		spawn(3) // So that it will still fire - considered modifying Fire() to return a value but burst fire makes that annoying.
-			visible_message("<span class='danger'>\The [src] explodes with the force of the shot!</span>")
+			visible_message(span_danger("\The [src] explodes with the force of the shot!"))
 			explosion(get_turf(src), -1, 0, 2)
 			qdel(src)
 
@@ -283,26 +283,26 @@
 					projectile_type = /obj/item/projectile/bullet/magnetic/fuelrod/phoron
 				if("supermatter")
 					projectile_type = /obj/item/projectile/bullet/magnetic/fuelrod/supermatter
-					visible_message("<span class='danger'>The barrel of \the [src] glows a blinding white!</span>")
+					visible_message(span_danger("The barrel of \the [src] glows a blinding white!"))
 					spawn(5)
-						visible_message("<span class='danger'>\The [src] begins to rattle, its acceleration chamber collapsing in on itself!</span>")
+						visible_message(span_danger("\The [src] begins to rattle, its acceleration chamber collapsing in on itself!"))
 						removable_components = FALSE
 						spawn(15)
-							audible_message("<span class='critical'>\The [src]'s power supply begins to overload as the device crumples!</span>", runemessage = "VWRRRRRRRR") //Why are you still holding this?
+							audible_message(span_critical("\The [src]'s power supply begins to overload as the device crumples!"), runemessage = "VWRRRRRRRR") //Why are you still holding this?
 							playsound(src, 'sound/effects/grillehit.ogg', 10, 1)
 							var/datum/effect/effect/system/spark_spread/sparks = new /datum/effect/effect/system/spark_spread()
 							var/turf/T = get_turf(src)
 							sparks.set_up(2, 1, T)
 							sparks.start()
 							spawn(15)
-								visible_message("<span class='critical'>\The [src] explodes in a blinding white light!</span>")
+								visible_message(span_critical("\The [src] explodes in a blinding white light!"))
 								explosion(src.loc, -1, 1, 2, 3)
 								qdel(src)
 				if("blitz")
 					var/max_range = 6																// -- Polymorph
 					var/banglet = 0
 					projectile_type = /obj/item/projectile/bullet/magnetic/fuelrod/blitz
-					visible_message("<span class='critical'>\The [src] explodes in a blinding white light with a deafening bang!</span>")
+					visible_message(span_critical("\The [src] explodes in a blinding white light with a deafening bang!"))
 					for(var/obj/structure/closet/L in hear(max_range, get_turf(src)))
 						if(locate(/mob/living/carbon/, L))
 							for(var/mob/living/carbon/M in L)
@@ -314,7 +314,7 @@
 					spawn(2)
 						qdel(src)
 				if("blitzu")
-					visible_message("<span class='critical'>\The [src] explodes in a blinding white light with a deafening bang!</span>")
+					visible_message(span_critical("\The [src] explodes in a blinding white light with a deafening bang!"))
 					explosion(get_turf(src),1,2,4,6)
 					qdel(src)
 					return
@@ -329,7 +329,7 @@
 		return
 
 /obj/item/gun/magnetic/fuelrod/proc/blitzed(var/turf/T, var/mob/living/carbon/M, var/max_range, var/banglet)					// Added a new proc called 'bang' that takes a location and a person to be banged.
-	to_chat(M, "<span class='danger'>BANG</span>")						// Called during the loop that bangs people in lockers/containers and when banging
+	to_chat(M, span_danger("BANG"))						// Called during the loop that bangs people in lockers/containers and when banging
 	playsound(src, 'sound/effects/bang.ogg', 50, 1, 30)		// people in normal view.  Could theroetically be called during other explosions.
 
 
@@ -384,18 +384,18 @@
 	if(ishuman(M))
 		var/obj/item/organ/internal/eyes/E = H.internal_organs_by_name[O_EYES]
 		if (E && E.damage >= E.min_bruised_damage)
-			to_chat(M, "<span class='danger'>Your eyes start to burn badly!</span>")
+			to_chat(M, span_danger("Your eyes start to burn badly!"))
 			if(!banglet && !(istype(src , /obj/item/grenade/flashbang/clusterbang)))
 				if (E.damage >= E.min_broken_damage)
-					to_chat(M, "<span class='danger'>You can't see anything!</span>")
+					to_chat(M, span_danger("You can't see anything!"))
 	if (M.ear_damage >= 15)
-		to_chat(M, "<span class='danger'>Your ears start to ring badly!</span>")
+		to_chat(M, span_danger("Your ears start to ring badly!"))
 		if(!banglet && !(istype(src , /obj/item/grenade/flashbang/clusterbang)))
 			if (prob(M.ear_damage - 10 + 5))
-				to_chat(M, "<span class='danger'>You can't hear anything!</span>")
+				to_chat(M, span_danger("You can't hear anything!"))
 				M.sdisabilities |= DEAF
 	else if(M.ear_damage >= 5)
-		to_chat(M, "<span class='danger'>Your ears start to ring!</span>")
+		to_chat(M, span_danger("Your ears start to ring!"))
 //CHOMPEdit End
 /obj/item/gun/magnetic/fuelrod/New()
 	cell = new /obj/item/cell/high
