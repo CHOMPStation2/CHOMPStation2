@@ -96,7 +96,9 @@ var/global/list/vr_mob_tf_options = list(
 	"SWOOPIE XL" = /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie,
 	"Abyss lurker" = /mob/living/simple_mob/vore/vore_hostile/abyss_lurker,
 	"Abyss leaper" = /mob/living/simple_mob/vore/vore_hostile/leaper,
-	"Gelatinous cube" = /mob/living/simple_mob/vore/vore_hostile/gelatinous_cube)
+	"Gelatinous cube" = /mob/living/simple_mob/vore/vore_hostile/gelatinous_cube,
+	//"Gryphon" = /mob/living/simple_mob/vore/gryphon // Currently adds 4 bellies to the user when transformed into. Do not uncomment without fixing this.
+	)
 
 var/global/list/vr_mob_spawner_options = list(
 	"Parrot" = /mob/living/simple_mob/animal/passive/bird/parrot,

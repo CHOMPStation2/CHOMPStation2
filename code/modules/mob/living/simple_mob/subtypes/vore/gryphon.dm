@@ -75,7 +75,6 @@
 	var/maybe_eating = null
 
 /datum/ai_holder/simple_mob/vore/gryphon/find_target(list/possible_targets, has_targets_list)
-	admin_notice("Finding target!")
 	ai_log("find_target() : Entered.", AI_LOG_TRACE)
 	var/targets = list()
 	if(!has_targets_list)
@@ -88,13 +87,10 @@
 			if (possible_target.client != null)
 				if (sentient == null)
 					if (vore_check(possible_target))
-						admin_notice("Got player!")
 						sentient = possible_target
 					else
-						admin_notice("Failed vore check!")
 						alone = FALSE
 				else
-					admin_notice("Not alone!")
 					alone = FALSE
 
 	// Only one player, consider eating them
@@ -103,7 +99,6 @@
 
 	// Only one mob, eat them
 	if (length(targets) == 1 && alone)
-		admin_notice("Eating mob!")
 		var/target = pick_target(targets)
 		if (vore_check(target) && can_attack(target))
 			give_target(target)
@@ -112,54 +107,40 @@
 	return null
 
 /datum/ai_holder/simple_mob/vore/gryphon/proc/possibly_eat(var/target, var/alone)
-	admin_notice("Possibly eating!")
 	if (target != maybe_eating)
 		eat_attempts = 0
 
 	maybe_eating = target
 	if (eat_attempts == 0)
-		admin_notice("Rolling eat with [eat_attempts]: 1")
 		to_chat(target, span_danger("\The [holder] licks its beak"))
 	else if (eat_attempts == 5)
-		admin_notice("Rolling eat with [eat_attempts]: 2")
 		to_chat(target, span_danger("\The [holder]'s stomach rumbles loudly"))
 	else if (alone && eat_attempts > 10 && can_attack(target))
-		admin_notice("Rolling eat with [eat_attempts]: 3")
 		give_target(target)
 		return target
-	else
-		admin_notice("Rolling eat with [eat_attempts]: 4")
 
 	if (eat_attempts < 6 || alone)
 		eat_attempts += 1
 	return null
 
 /mob/living/simple_mob/vore/gryphon/init_vore()
-	if (vore_selected != null)
+	if(!voremob_loaded)
 		return
-
-	if(!soulgem)
-		soulgem = new(src)
-
-	// Since they have bellies, add verbs to toggle settings on them.
-	add_verb(src,/mob/living/simple_mob/proc/toggle_digestion) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/simple_mob/proc/toggle_fancygurgle) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/proc/vertical_nom) //CHOMPEdit TGPanel
+	.=..()
 
 	var/obj/belly/B = new /obj/belly/gryphon/beak(src)
 	vore_selected = B
 	B.affects_vore_sprites = FALSE
-	B.emote_lists[DM_HOLD] = list("")
+	B.emote_lists[DM_HOLD] = list("Test")
 	B = new /obj/belly/gryphon/throat(src)
 	B.affects_vore_sprites = FALSE
-	B.emote_lists[DM_HOLD] = list("")
+	B.emote_lists[DM_HOLD] = list("Test")
 	B = new /obj/belly/gryphon/stomach(src)
-	B.emote_lists[DM_HOLD] = list("")
-	B.emote_lists[DM_DIGEST] = list("")
+	B.emote_lists[DM_HOLD] = list("Test")
+	B.emote_lists[DM_DIGEST] = list("Test")
 
 /mob/living/simple_mob/vore/gryphon/do_special_attack(atom/A)	//Mostly copied from cryptdrake.dm
 	set waitfor = FALSE
-	admin_notice("Starting special attack!")
 	if(!isliving(A))
 		return FALSE
 	var/mob/living/L = A
