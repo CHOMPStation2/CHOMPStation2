@@ -132,7 +132,7 @@
 /datum/language/proc/broadcast(var/mob/living/speaker,var/message,var/speaker_mask)
 	log_say("(HIVE) [message]", speaker)
 
-	add_verb(speaker,/mob/proc/adjust_hive_range) //CHOMPEdit TGPanel
+	add_verb(speaker, /mob/proc/adjust_hive_range)
 
 	if(!speaker_mask) speaker_mask = speaker.real_name
 	message = "[get_spoken_verb(message)], \"[format_message(message, get_spoken_verb(message))]\""
@@ -207,7 +207,7 @@
 	languages.Add(new_language)
 	//VOREStation Addition Start
 	if(new_language.flags & HIVEMIND)
-		add_verb(src,/mob/proc/adjust_hive_range) //CHOMPEdit TGPanel
+		add_verb(src, /mob/proc/adjust_hive_range)
 	//VOREStation Addition End
 
 	return 1

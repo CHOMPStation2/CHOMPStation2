@@ -449,7 +449,7 @@
 		if(!verb || verb == "Cancel")
 			return
 		else
-			add_verb(H,verb) //CHOMPEdit
+			add_verb(H, verb)
 
 	else if(href_list["remverb"])
 		if(!check_rights(R_DEBUG))      return
@@ -466,7 +466,7 @@
 		if(!verb)
 			return
 		else
-			remove_verb(H,verb)  //CHOMPEdit
+			remove_verb(H, verb)
 
 	else if(href_list["addorgan"])
 		if(!check_rights(R_SPAWN))	return

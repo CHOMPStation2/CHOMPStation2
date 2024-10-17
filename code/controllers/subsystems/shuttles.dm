@@ -171,8 +171,7 @@ SUBSYSTEM_DEF(shuttles)
 	overmap_halted = !overmap_halted
 	for(var/obj/effect/overmap/visitable/ship/ship_effect as anything in ships)
 		overmap_halted ? ship_effect.halt() : ship_effect.unhalt()
-//CHOMPEdit Begin
+
 /datum/controller/subsystem/shuttles/stat_entry(msg)
 	msg = "Shuttles:[process_shuttles.len]/[shuttles.len], Ships:[ships.len], L:[registered_shuttle_landmarks.len][overmap_halted ? ", HALT" : ""]"
 	return ..()
-//CHOMPEdit End

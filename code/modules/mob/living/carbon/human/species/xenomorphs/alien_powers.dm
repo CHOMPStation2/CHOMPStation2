@@ -85,7 +85,7 @@
 
 	if(!CONFIG_GET(flag/aliens_allowed)) // CHOMPEdit
 		to_chat(src, "You begin to lay an egg, but hesitate. You suspect it isn't allowed.")
-		remove_verb(src,/mob/living/carbon/human/proc/lay_egg) //CHOMPEdit TGPanel
+		remove_verb(src, /mob/living/carbon/human/proc/lay_egg)
 		return
 
 	if(locate(/obj/structure/ghost_pod/automatic/xenomorph_egg) in get_turf(src))

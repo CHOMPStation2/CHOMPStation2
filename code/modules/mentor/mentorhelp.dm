@@ -444,9 +444,9 @@ GLOBAL_DATUM_INIT(mhelp_tickets, /datum/mentor_help_tickets, new)
 		"Send to discord?", list("Admin-help!", "Still mentorhelp!", "Cancel"))
 		if(choice == "Admin-help!")
 			usr.client.adminhelp(msg)
-			remove_verb(src,/client/verb/mentorhelp)  //CHOMPEdit
+			remove_verb(src, /client/verb/mentorhelp)
 			spawn(1200)
-				add_verb(src,/client/verb/mentorhelp ) // 2 minute cd to prevent abusing this to spam admins. //CHOMPEdit
+				add_verb(src, /client/verb/mentorhelp) // 2 minute cd to prevent abusing this to spam admins.
 			return
 		else if(!choice || choice == "Cancel")
 			return
@@ -454,9 +454,9 @@ GLOBAL_DATUM_INIT(mhelp_tickets, /datum/mentor_help_tickets, new)
 
 
 	//remove out adminhelp verb temporarily to prevent spamming of admins.
-	remove_verb(src, /client/verb/mentorhelp) //CHOMPEdit
+	remove_verb(src, /client/verb/mentorhelp)
 	spawn(600)
-		add_verb(src, /client/verb/mentorhelp) //CHOMPEdit	// 1 minute cool-down for mentorhelps
+		add_verb(src, /client/verb/mentorhelp)	// 1 minute cool-down for mentorhelps
 
 	feedback_add_details("admin_verb","Mentorhelp") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	if(current_mentorhelp)
