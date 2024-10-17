@@ -337,7 +337,11 @@ Ccomp's first proc.
 			if(!g.client.holder)						// Add the verb back for all non-admin ghosts
 				add_verb(g, /mob/observer/dead/verb/toggle_antagHUD)
 			to_chat(g, span_boldnotice("The Administrator has enabled AntagHUD"))	// Notify all observers they can now use AntagHUD
+<<<<<<< HEAD
 		CONFIG_SET(flag/antag_hud_allowed, TRUE)
+=======
+		config.antag_hud_allowed = 1
+>>>>>>> edf912d4a6 (add missing triggered and some mirror fixes (#16489))
 		action = "enabled"
 		to_chat(src, span_boldnotice("AntagHUD usage has been enabled"))
 
