@@ -79,7 +79,7 @@ var/global/list/vr_mob_tf_options = list(
 	"Space ghost" = /mob/living/simple_mob/vore/alienanimals/spooky_ghost,
 	"Teppi" = /mob/living/simple_mob/vore/alienanimals/teppi,
 	"Bee" = /mob/living/simple_mob/vore/bee,
-	//"Dragon" = /mob/living/simple_mob/vore/bigdragon/friendly, //Currently adds 12 bellies to the user when transformed into. Do not uncomment without fixing this.
+	"Dragon" = /mob/living/simple_mob/vore/bigdragon/friendly,
 	"Riftwalker" = /mob/living/simple_mob/vore/demon/wendigo,
 	"Horse" = /mob/living/simple_mob/vore/horse/big,
 	"Morph" = /mob/living/simple_mob/vore/morph,
@@ -97,7 +97,7 @@ var/global/list/vr_mob_tf_options = list(
 	"Abyss lurker" = /mob/living/simple_mob/vore/vore_hostile/abyss_lurker,
 	"Abyss leaper" = /mob/living/simple_mob/vore/vore_hostile/leaper,
 	"Gelatinous cube" = /mob/living/simple_mob/vore/vore_hostile/gelatinous_cube,
-	//"Gryphon" = /mob/living/simple_mob/vore/gryphon // Currently adds 4 bellies to the user when transformed into. Do not uncomment without fixing this.
+	"Gryphon" = /mob/living/simple_mob/vore/gryphon
 	)
 
 var/global/list/vr_mob_spawner_options = list(
