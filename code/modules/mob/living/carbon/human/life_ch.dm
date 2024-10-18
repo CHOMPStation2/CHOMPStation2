@@ -46,6 +46,10 @@
 		if(s_brain)
 			return
 		//VOREStation Addition end: shadekin
+
+		if(reagents.has_reagent("prussian_blue")) //Prussian Blue temporarily stops radiation effects.
+			return
+
 		var/rad_mult = RADIATION_SPEED_COEFFICIENT * species.rad_removal_mod
 		var/damage = 0
 		radiation -= 1 * rad_mult
