@@ -252,11 +252,7 @@
 /obj/effect/mine/emp/explode(var/mob/living/M)
 	if(triggered) // Prevents circular mine explosions from two mines detonating eachother
 		return
-<<<<<<< HEAD
-	triggered = 1 //ChompEDIT recursing mines
-=======
 	triggered = TRUE
->>>>>>> edf912d4a6... add missing triggered and some mirror fixes (#16489)
 	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread()
 	s.set_up(3, 1, src)
 	s.start()
