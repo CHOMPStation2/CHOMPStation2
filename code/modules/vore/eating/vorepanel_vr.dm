@@ -2403,6 +2403,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		return TRUE // Aren't here anymore, need to update menu
 
 	var/intent = "Examine"
+<<<<<<< HEAD
 	//CHOMPEdit Start - Only allow indirect belly viewers to examine
 	if(user in OB)
 		if(isliving(target))
@@ -2411,6 +2412,13 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		else if(istype(target, /obj/item))
 			intent = tgui_alert(user, "What do you want to do to that?","Query",list("Examine","Use Hand")) //ChompEDIT - user, not usr
 	//CHOMPEdit End of indirect vorefx changes
+=======
+	if(isliving(target))
+		intent = tgui_alert(user, "What do you want to do to them?","Query",list("Examine","Help Out","Devour"))
+
+	else if(istype(target, /obj/item))
+		intent = tgui_alert(user, "What do you want to do to that?","Query",list("Examine","Use Hand"))
+>>>>>>> 7be625e0cb... some more small things (#16491)
 
 	switch(intent)
 		if("Examine") //Examine a mob inside another mob
@@ -2555,7 +2563,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			if(host.stat)
 				to_chat(user,span_warning("You can't do that in your state!"))
 				return TRUE
+<<<<<<< HEAD
 			var/obj/belly/choice = tgui_input_list(user, "Move [target] where?","Select Belly", host.vore_organs) //ChompEDIT - user, not usr
+=======
+			var/obj/belly/choice = tgui_input_list(user, "Move [target] where?","Select Belly", host.vore_organs)
+>>>>>>> 7be625e0cb... some more small things (#16491)
 			if(!choice || !(target in host.vore_selected))
 				return TRUE
 			to_chat(target,span_vwarning("You're squished from [host]'s [lowertext(host.vore_selected.name)] to their [lowertext(choice.name)]!"))
@@ -2791,7 +2803,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				to_chat(user, span_vwarning("You cannot instantly process [ourtarget]."))
 				return
 
+<<<<<<< HEAD
 			var/ourchoice = tgui_input_list(user, "How would you prefer to process \the [target]? This will perform the given action instantly if the prey accepts.","Instant Process", process_options) //ChompEDIT - user, not usr
+=======
+			var/ourchoice = tgui_input_list(user, "How would you prefer to process \the [target]? This will perform the given action instantly if the prey accepts.","Instant Process", process_options)
+>>>>>>> 7be625e0cb... some more small things (#16491)
 			if(!ourchoice)
 				return
 			if(!ourtarget.client)
@@ -2810,8 +2826,13 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 					if(ourtarget.loc != b)
 						to_chat(user, span_vwarning("\The [ourtarget] is no longer in \the [b]."))
 						return
+<<<<<<< HEAD
 					if(isliving(user)) //ChompEDIT - user, not usr
 						var/mob/living/l = user //ChompEDIT - user, not usr
+=======
+					if(isliving(user))
+						var/mob/living/l = user
+>>>>>>> 7be625e0cb... some more small things (#16491)
 						var/thismuch = ourtarget.health + 100
 						if(ishuman(l))
 							var/mob/living/carbon/human/h = l
@@ -2834,8 +2855,13 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 					if(ourtarget.loc != b)
 						to_chat(user, span_vwarning("\The [ourtarget] is no longer in \the [b]."))
 						return
+<<<<<<< HEAD
 					if(isliving(user)) //ChompEDIT - user, not usr
 						var/mob/living/l = user //ChompEDIT - user, not usr
+=======
+					if(isliving(user))
+						var/mob/living/l = user
+>>>>>>> 7be625e0cb... some more small things (#16491)
 						l.adjust_nutrition(ourtarget.nutrition)
 						var/n = 0 - ourtarget.nutrition
 						ourtarget.adjust_nutrition(n)
@@ -2880,12 +2906,20 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 
 /datum/vore_look/proc/set_attr(mob/user, params)
 	if(!host.vore_selected)
+<<<<<<< HEAD
 		tgui_alert_async(user, "No belly selected to modify.") //ChompEDIT - user, not usr
+=======
+		tgui_alert_async(user, "No belly selected to modify.")
+>>>>>>> 7be625e0cb... some more small things (#16491)
 		return FALSE
 	var/attr = params["attribute"]
 	switch(attr)
 		if("b_name")
+<<<<<<< HEAD
 			var/new_name = html_encode(tgui_input_text(user,"Belly's new name:","New Name")) //ChompEDIT - user, not usr
+=======
+			var/new_name = html_encode(tgui_input_text(user,"Belly's new name:","New Name"))
+>>>>>>> 7be625e0cb... some more small things (#16491)
 
 			var/failure_msg
 			if(length(new_name) > BELLIES_NAME_MAX || length(new_name) < BELLIES_NAME_MIN)
@@ -2914,7 +2948,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			. = TRUE
 		if("b_mode")
 			var/list/menu_list = host.vore_selected.digest_modes.Copy()
+<<<<<<< HEAD
 			var/new_mode = tgui_input_list(user, "Choose Mode (currently [host.vore_selected.digest_mode])", "Mode Choice", menu_list) //ChompEDIT - user, not usr
+=======
+			var/new_mode = tgui_input_list(user, "Choose Mode (currently [host.vore_selected.digest_mode])", "Mode Choice", menu_list)
+>>>>>>> 7be625e0cb... some more small things (#16491)
 			if(!new_mode)
 				return FALSE
 
@@ -2923,7 +2961,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			. = TRUE
 		if("b_addons")
 			var/list/menu_list = host.vore_selected.mode_flag_list.Copy()
+<<<<<<< HEAD
 			var/toggle_addon = tgui_input_list(user, "Toggle Addon", "Addon Choice", menu_list) //ChompEDIT - user, not usr
+=======
+			var/toggle_addon = tgui_input_list(user, "Toggle Addon", "Addon Choice", menu_list)
+>>>>>>> 7be625e0cb... some more small things (#16491)
 			if(!toggle_addon)
 				return FALSE
 			host.vore_selected.mode_flags ^= host.vore_selected.mode_flag_list[toggle_addon]
@@ -2946,7 +2988,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		if("b_item_mode")
 			var/list/menu_list = host.vore_selected.item_digest_modes.Copy()
 
+<<<<<<< HEAD
 			var/new_mode = tgui_input_list(user, "Choose Mode (currently [host.vore_selected.item_digest_mode])", "Mode Choice", menu_list) //ChompEDIT - user, not usr
+=======
+			var/new_mode = tgui_input_list(user, "Choose Mode (currently [host.vore_selected.item_digest_mode])", "Mode Choice", menu_list)
+>>>>>>> 7be625e0cb... some more small things (#16491)
 			if(!new_mode)
 				return FALSE
 
@@ -2958,14 +3004,22 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			. = TRUE
 		if("b_contamination_flavor")
 			var/list/menu_list = contamination_flavors.Copy()
+<<<<<<< HEAD
 			var/new_flavor = tgui_input_list(user, "Choose Contamination Flavor Text Type (currently [host.vore_selected.contamination_flavor])", "Flavor Choice", menu_list) //ChompEDIT - user, not usr
+=======
+			var/new_flavor = tgui_input_list(user, "Choose Contamination Flavor Text Type (currently [host.vore_selected.contamination_flavor])", "Flavor Choice", menu_list)
+>>>>>>> 7be625e0cb... some more small things (#16491)
 			if(!new_flavor)
 				return FALSE
 			host.vore_selected.contamination_flavor = new_flavor
 			. = TRUE
 		if("b_contamination_color")
 			var/list/menu_list = contamination_colors.Copy()
+<<<<<<< HEAD
 			var/new_color = tgui_input_list(user, "Choose Contamination Color (currently [host.vore_selected.contamination_color])", "Color Choice", menu_list) //ChompEDIT - user, not usr
+=======
+			var/new_color = tgui_input_list(user, "Choose Contamination Color (currently [host.vore_selected.contamination_color])", "Color Choice", menu_list)
+>>>>>>> 7be625e0cb... some more small things (#16491)
 			if(!new_color)
 				return FALSE
 			host.vore_selected.contamination_color = new_color
@@ -2973,7 +3027,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			. = TRUE
 		if("b_egg_type")
 			var/list/menu_list = global_vore_egg_types.Copy()
+<<<<<<< HEAD
 			var/new_egg_type = tgui_input_list(user, "Choose Egg Type (currently [host.vore_selected.egg_type])", "Egg Choice", menu_list) //ChompEDIT - user, not usr
+=======
+			var/new_egg_type = tgui_input_list(user, "Choose Egg Type (currently [host.vore_selected.egg_type])", "Egg Choice", menu_list)
+>>>>>>> 7be625e0cb... some more small things (#16491)
 			if(!new_egg_type)
 				return FALSE
 			host.vore_selected.egg_type = new_egg_type
@@ -3005,22 +3063,38 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			host.vore_selected.storing_nutrition = !host.vore_selected.storing_nutrition
 			. = TRUE//CHOMPAdd End
 		if("b_desc")
+<<<<<<< HEAD
 			var/new_desc = html_encode(tgui_input_text(user,"Belly Description, '%pred' will be replaced with your name. '%prey' will be replaced with the prey's name. '%belly' will be replaced with your belly's name. ([BELLIES_DESC_MAX] char limit):","New Description",host.vore_selected.desc, multiline = TRUE, prevent_enter = TRUE)) //ChompEDIT - user, not usr
+=======
+			var/new_desc = html_encode(tgui_input_text(user,"Belly Description, '%pred' will be replaced with your name. '%prey' will be replaced with the prey's name. '%belly' will be replaced with your belly's name. ([BELLIES_DESC_MAX] char limit):","New Description",host.vore_selected.desc, multiline = TRUE, prevent_enter = TRUE))
+>>>>>>> 7be625e0cb... some more small things (#16491)
 
 			if(new_desc)
 				new_desc = readd_quotes(new_desc)
 				if(length(new_desc) > BELLIES_DESC_MAX)
+<<<<<<< HEAD
 					tgui_alert_async(user, "Entered belly desc too long. [BELLIES_DESC_MAX] character limit.","Error") //ChompEDIT - user, not usr
+=======
+					tgui_alert_async(user, "Entered belly desc too long. [BELLIES_DESC_MAX] character limit.","Error")
+>>>>>>> 7be625e0cb... some more small things (#16491)
 					return FALSE
 				host.vore_selected.desc = new_desc
 				. = TRUE
 		if("b_absorbed_desc")
+<<<<<<< HEAD
 			var/new_desc = html_encode(tgui_input_text(user,"Belly Description for absorbed prey, '%pred' will be replaced with your name. '%prey' will be replaced with the prey's name. '%belly' will be replaced with your belly's name. ([BELLIES_DESC_MAX] char limit):","New Description",host.vore_selected.absorbed_desc, multiline = TRUE, prevent_enter = TRUE)) //ChompEDIT - user, not usr
+=======
+			var/new_desc = html_encode(tgui_input_text(user,"Belly Description for absorbed prey, '%pred' will be replaced with your name. '%prey' will be replaced with the prey's name. '%belly' will be replaced with your belly's name. ([BELLIES_DESC_MAX] char limit):","New Description",host.vore_selected.absorbed_desc, multiline = TRUE, prevent_enter = TRUE))
+>>>>>>> 7be625e0cb... some more small things (#16491)
 
 			if(new_desc)
 				new_desc = readd_quotes(new_desc)
 				if(length(new_desc) > BELLIES_DESC_MAX)
+<<<<<<< HEAD
 					tgui_alert_async(user, "Entered belly desc too long. [BELLIES_DESC_MAX] character limit.","Error") //ChompEDIT - user, not usr
+=======
+					tgui_alert_async(user, "Entered belly desc too long. [BELLIES_DESC_MAX] character limit.","Error")
+>>>>>>> 7be625e0cb... some more small things (#16491)
 					return FALSE
 				host.vore_selected.absorbed_desc = new_desc
 				. = TRUE
@@ -3362,25 +3436,43 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 						host.vore_selected.emote_lists = initial(host.vore_selected.emote_lists)
 			. = TRUE
 		if("b_verb")
+<<<<<<< HEAD
 			var/new_verb = html_encode(tgui_input_text(user,"New verb when eating (infinitive tense, e.g. nom or swallow):","New Verb")) //ChompEDIT - user, not usr
 
 			if(length(new_verb) > BELLIES_NAME_MAX || length(new_verb) < BELLIES_NAME_MIN)
 				tgui_alert_async(user, "Entered verb length invalid (must be longer than [BELLIES_NAME_MIN], no longer than [BELLIES_NAME_MAX]).","Error") //ChompEDIT - user, not usr
+=======
+			var/new_verb = html_encode(tgui_input_text(user,"New verb when eating (infinitive tense, e.g. nom or swallow):","New Verb"))
+
+			if(length(new_verb) > BELLIES_NAME_MAX || length(new_verb) < BELLIES_NAME_MIN)
+				tgui_alert_async(user, "Entered verb length invalid (must be longer than [BELLIES_NAME_MIN], no longer than [BELLIES_NAME_MAX]).","Error")
+>>>>>>> 7be625e0cb... some more small things (#16491)
 				return FALSE
 
 			host.vore_selected.vore_verb = new_verb
 			. = TRUE
 		if("b_release_verb")
+<<<<<<< HEAD
 			var/new_release_verb = html_encode(tgui_input_text(user,"New verb when releasing from stomach (e.g. expels or coughs or drops):","New Release Verb")) //ChompEDIT - user, not usr
 
 			if(length(new_release_verb) > BELLIES_NAME_MAX || length(new_release_verb) < BELLIES_NAME_MIN)
 				tgui_alert_async(user, "Entered verb length invalid (must be longer than [BELLIES_NAME_MIN], no longer than [BELLIES_NAME_MAX]).","Error") //ChompEDIT - user, not usr
+=======
+			var/new_release_verb = html_encode(tgui_input_text(user,"New verb when releasing from stomach (e.g. expels or coughs or drops):","New Release Verb"))
+
+			if(length(new_release_verb) > BELLIES_NAME_MAX || length(new_release_verb) < BELLIES_NAME_MIN)
+				tgui_alert_async(user, "Entered verb length invalid (must be longer than [BELLIES_NAME_MIN], no longer than [BELLIES_NAME_MAX]).","Error")
+>>>>>>> 7be625e0cb... some more small things (#16491)
 				return FALSE
 
 			host.vore_selected.release_verb = new_release_verb
 			. = TRUE
 		if("b_eating_privacy")
+<<<<<<< HEAD
 			var/privacy_choice = tgui_input_list(user, "Choose your belly-specific preference. Default uses global preference!", "Eating message privacy", list("default", "subtle", "loud"), "default") //ChompEDIT - user, not usr
+=======
+			var/privacy_choice = tgui_input_list(user, "Choose your belly-specific preference. Default uses global preference!", "Eating message privacy", list("default", "subtle", "loud"), "default")
+>>>>>>> 7be625e0cb... some more small things (#16491)
 			if(privacy_choice == null)
 				return FALSE
 			host.vore_selected.eating_privacy_local = privacy_choice
@@ -3588,7 +3680,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		// CHOMPEdit End
 		if("b_drainmode")
 			var/list/menu_list = host.vore_selected.drainmodes.Copy()
+<<<<<<< HEAD
 			var/new_drainmode = tgui_input_list(user, "Choose Mode (currently [host.vore_selected.digest_mode])", "Mode Choice", menu_list) //ChompEDIT - user, not usr
+=======
+			var/new_drainmode = tgui_input_list(user, "Choose Mode (currently [host.vore_selected.digest_mode])", "Mode Choice", menu_list)
+>>>>>>> 7be625e0cb... some more small things (#16491)
 			if(!new_drainmode)
 				return FALSE
 
@@ -3613,12 +3709,21 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		if("b_escapable")
 			if(host.vore_selected.escapable == 0) //Possibly escapable and special interactions.
 				host.vore_selected.escapable = 1
+<<<<<<< HEAD
 				to_chat(user,span_warning("Prey now have special interactions with your [lowertext(host.vore_selected.name)] depending on your settings.")) //ChompEDIT - user, not usr
 			else if(host.vore_selected.escapable == 1) //Never escapable.
 				host.vore_selected.escapable = 0
 				to_chat(user,span_warning("Prey will not be able to have special interactions with your [lowertext(host.vore_selected.name)].")) //ChompEDIT - user, not usr
 			else
 				tgui_alert_async(user, "Something went wrong. Your stomach will now not have special interactions. Press the button enable them again and tell a dev.","Error") //If they somehow have a varable that's not 0 or 1 //ChompEDIT - user, not usr
+=======
+				to_chat(user,span_warning("Prey now have special interactions with your [lowertext(host.vore_selected.name)] depending on your settings."))
+			else if(host.vore_selected.escapable == 1) //Never escapable.
+				host.vore_selected.escapable = 0
+				to_chat(user,span_warning("Prey will not be able to have special interactions with your [lowertext(host.vore_selected.name)]."))
+			else
+				tgui_alert_async(user, "Something went wrong. Your stomach will now not have special interactions. Press the button enable them again and tell a dev.","Error") //If they somehow have a varable that's not 0 or 1
+>>>>>>> 7be625e0cb... some more small things (#16491)
 				host.vore_selected.escapable = 0
 			. = TRUE
 		if("b_escapechance")
@@ -3647,7 +3752,12 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.vore_selected.transferchance = sanitize_integer(transfer_chance_input, 0, 100, initial(host.vore_selected.transferchance))
 			. = TRUE
 		if("b_transferlocation")
+<<<<<<< HEAD
 			var/obj/belly/choice = tgui_input_list(user, "Where do you want your [lowertext(host.vore_selected.name)] to lead if prey resists?","Select Belly", (host.vore_organs + "None - Remove" - host.vore_selected)) //ChompEDIT - user, not usr
+=======
+			var/obj/belly/choice = tgui_input_list(user, "Where do you want your [lowertext(host.vore_selected.name)] to lead if prey resists?","Select Belly", (host.vore_organs + "None - Remove" - host.vore_selected))
+
+>>>>>>> 7be625e0cb... some more small things (#16491)
 			if(!choice) //They cancelled, no changes
 				return FALSE
 			else if(choice == "None - Remove")
@@ -3661,7 +3771,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.vore_selected.transferchance_secondary = sanitize_integer(transfer_secondary_chance_input, 0, 100, initial(host.vore_selected.transferchance_secondary))
 			. = TRUE
 		if("b_transferlocation_secondary")
+<<<<<<< HEAD
 			var/obj/belly/choice_secondary = tgui_input_list(user, "Where do you want your [lowertext(host.vore_selected.name)] to alternately lead if prey resists?","Select Belly", (host.vore_organs + "None - Remove" - host.vore_selected)) //ChompEDIT - user, not usr
+=======
+			var/obj/belly/choice_secondary = tgui_input_list(user, "Where do you want your [lowertext(host.vore_selected.name)] to alternately lead if prey resists?","Select Belly", (host.vore_organs + "None - Remove" - host.vore_selected))
+>>>>>>> 7be625e0cb... some more small things (#16491)
 
 			if(!choice_secondary) //They cancelled, no changes
 				return FALSE
@@ -3819,7 +3933,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			host.vore_selected.clear_preview(host) //Clears the stomach overlay. This is a failsafe but shouldn't occur.
 			. = TRUE
 		if("b_fullscreen_color")
+<<<<<<< HEAD
 			var/newcolor = input(user, "Choose a color.", "", host.vore_selected.belly_fullscreen_color) as color|null //ChompEDIT - user, not usr
+=======
+			var/newcolor = input(user, "Choose a color.", "", host.vore_selected.belly_fullscreen_color) as color|null
+>>>>>>> 7be625e0cb... some more small things (#16491)
 			if(newcolor)
 				host.vore_selected.belly_fullscreen_color = newcolor
 				host.vore_selected.update_internal_overlay()
@@ -3850,12 +3968,20 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			. = TRUE
 		/* //Chomp REMOVE - use our solution, not upstream's
 		if("b_fullscreen_color_secondary")
+<<<<<<< HEAD
 			var/newcolor = input(user, "Choose a color.", "", host.vore_selected.belly_fullscreen_color_secondary) as color|null //ChompEDIT - user, not usr
+=======
+			var/newcolor = input(user, "Choose a color.", "", host.vore_selected.belly_fullscreen_color_secondary) as color|null
+>>>>>>> 7be625e0cb... some more small things (#16491)
 			if(newcolor)
 				host.vore_selected.belly_fullscreen_color_secondary = newcolor
 			. = TRUE
 		if("b_fullscreen_color_trinary")
+<<<<<<< HEAD
 			var/newcolor = input(user, "Choose a color.", "", host.vore_selected.belly_fullscreen_color_trinary) as color|null //ChompEDIT - user, not usr
+=======
+			var/newcolor = input(user, "Choose a color.", "", host.vore_selected.belly_fullscreen_color_trinary) as color|null
+>>>>>>> 7be625e0cb... some more small things (#16491)
 			if(newcolor)
 				host.vore_selected.belly_fullscreen_color_trinary = newcolor
 			. = TRUE
@@ -3864,7 +3990,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			host.vore_selected.save_digest_mode = !host.vore_selected.save_digest_mode
 			. = TRUE
 		if("b_del")
+<<<<<<< HEAD
 			var/alert = tgui_alert(user, "Are you sure you want to delete your [lowertext(host.vore_selected.name)]?","Confirmation",list("Cancel","Delete")) //ChompEDIT - user, not usr
+=======
+			var/alert = tgui_alert(user, "Are you sure you want to delete your [lowertext(host.vore_selected.name)]?","Confirmation",list("Cancel","Delete"))
+>>>>>>> 7be625e0cb... some more small things (#16491)
 			if(alert != "Delete")
 				return FALSE
 
@@ -3927,6 +4057,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			return TRUE
 		//CHOMPEdit Start
 		if("b_belly_sprite_to_affect")
+<<<<<<< HEAD
 			var/belly_choice = tgui_input_list(user, "Which belly sprite do you want your [lowertext(host.vore_selected.name)] to affect?","Select Region", host.vore_icon_bellies) //ChompEDIT - user, not usr
 			if(!belly_choice) //They cancelled, no changes
 				return FALSE
@@ -3934,6 +4065,17 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.vore_selected.belly_sprite_to_affect = belly_choice
 				host.update_fullness()
 			. = TRUE
+=======
+			if (istype(host, /mob/living/carbon/human))
+				var/mob/living/carbon/human/hhost = host
+				var/belly_choice = tgui_input_list(user, "Which belly sprite do you want your [lowertext(hhost.vore_selected.name)] to affect?","Select Region", hhost.vore_icon_bellies)
+				if(!belly_choice) //They cancelled, no changes
+					return FALSE
+				else
+					hhost.vore_selected.belly_sprite_to_affect = belly_choice
+					hhost.update_fullness()
+				. = TRUE
+>>>>>>> 7be625e0cb... some more small things (#16491)
 		if("b_affects_vore_sprites")
 			host.vore_selected.affects_vore_sprites = !host.vore_selected.affects_vore_sprites
 			host.update_fullness()
@@ -4013,6 +4155,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.update_fullness()
 			. = TRUE
 		if("b_tail_to_change_to")
+<<<<<<< HEAD
 			var/tail_choice = tgui_input_list(user, "Which tail sprite do you want to use when your [lowertext(host.vore_selected.name)] is filled?","Select Sprite", global.tail_styles_list) //ChompEDIT - user, not usr
 			if(!tail_choice) //They cancelled, no changes
 				return FALSE
@@ -4035,6 +4178,37 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.vore_selected.tail_extra_overlay2 = newcolor
 			. = TRUE
 
+=======
+			if (istype(host, /mob/living/carbon/human))
+				var/mob/living/carbon/human/hhost = host
+				var/tail_choice = tgui_input_list(user, "Which tail sprite do you want to use when your [lowertext(host.vore_selected.name)] is filled?","Select Sprite", global.tail_styles_list)
+				if(!tail_choice) //They cancelled, no changes
+					return FALSE
+				else
+					hhost.vore_selected.tail_to_change_to = tail_choice
+				. = TRUE
+		if("b_tail_color")
+			if (istype(host, /mob/living/carbon/human))
+				var/mob/living/carbon/human/hhost = host
+				var/newcolor = input(user, "Choose tail color.", "", hhost.vore_selected.tail_colouration) as color|null
+				if(newcolor)
+					hhost.vore_selected.tail_colouration = newcolor
+				. = TRUE
+		if("b_tail_color2")
+			if (istype(host, /mob/living/carbon/human))
+				var/mob/living/carbon/human/hhost = host
+				var/newcolor = input(user, "Choose tail secondary color.", "", hhost.vore_selected.tail_extra_overlay) as color|null
+				if(newcolor)
+					hhost.vore_selected.tail_extra_overlay = newcolor
+				. = TRUE
+		if("b_tail_color3")
+			if (istype(host, /mob/living/carbon/human))
+				var/mob/living/carbon/human/hhost = host
+				var/newcolor = input(user, "Choose tail tertiary color.", "", hhost.vore_selected.tail_extra_overlay2) as color|null
+				if(newcolor)
+					hhost.vore_selected.tail_extra_overlay2 = newcolor
+				. = TRUE
+>>>>>>> 7be625e0cb... some more small things (#16491)
 	if(.)
 		unsaved_changes = TRUE
 
