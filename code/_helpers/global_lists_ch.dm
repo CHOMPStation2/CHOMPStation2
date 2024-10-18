@@ -197,7 +197,7 @@ var/global/list/vr_mob_spawner_options = list(
 	"Farwa" = /mob/living/carbon/human/farwa,
 	"Neaera" = /mob/living/carbon/human/neaera,
 	"Stok" = /mob/living/carbon/human/stok,
-	"Gryphon" = /mob/living/simple_mob/vore/gryphon
+	//"Gryphon" = /mob/living/simple_mob/vore/gryphon // Disabled until tested
 	)
 
 var/global/list/selectable_footstep = list(
