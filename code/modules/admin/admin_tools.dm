@@ -10,12 +10,24 @@
 	if(M.mind)
 		dat += span_bold("Current Antag?:") + " [(M.mind.special_role)?"Yes":"No"]<br>"
 	dat += "<br>" + span_bold("Note:") + " This is arranged from earliest to latest. <br><br>"
+<<<<<<< HEAD
 	//CHOMPEdit Begin
 	/*for(var/d in M.dialogue_log)
 		dat += "[d]<br>"*/
 	var/datum/db_query/query = SSdbcore.NewQuery("SELECT id,time,ckey,mob,message from erro_attacklog WHERE ckey = :t_ckey", list("t_ckey" = M.ckey))
 	if(!query.Execute())
 		dat += span_italics("Database query error")
+=======
+
+
+	if(!isemptylist(M.attack_log))
+		dat += "<fieldset style='border: 2px solid white; display: inline'>"
+		for(var/l in M.attack_log)
+			dat += "[l]<br>"
+
+		dat += "</fieldset>"
+
+>>>>>>> 7be625e0cb (some more small things (#16491))
 	else
 		var/messages = ""
 		while(query.NextRow())

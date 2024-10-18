@@ -902,9 +902,14 @@ var/datum/announcement/minor/admin_min_announcer = new
 	set category = "Server.Config" //CHOMPEdit
 	set desc="Whether persistent data will be saved from now on."
 	set name="Toggle Persistent Data"
+<<<<<<< HEAD
 	CONFIG_SET(flag/persistence_disabled, !CONFIG_GET(flag/persistence_disabled))
 	/* CHOMP Edit: the entire world doesn't need to know.
 	if(!CONFIG_GET(flag/persistence_disabled))
+=======
+	config.persistence_disabled = !(config.persistence_disabled)
+	if(!config.persistence_disabled)
+>>>>>>> 7be625e0cb (some more small things (#16491))
 		to_world(span_world("Persistence is now enabled."))
 	else
 		to_world(span_world("Persistence is no longer enabled."))
@@ -918,8 +923,13 @@ var/datum/announcement/minor/admin_min_announcer = new
 	set category = "Server.Config" //CHOMPEdit
 	set desc="Whether mapload persistent data will be saved from now on."
 	set name="Toggle Mapload Persistent Data"
+<<<<<<< HEAD
 	CONFIG_SET(flag/persistence_ignore_mapload, !CONFIG_GET(flag/persistence_ignore_mapload))
 	if(!CONFIG_GET(flag/persistence_ignore_mapload))
+=======
+	config.persistence_ignore_mapload = !(config.persistence_ignore_mapload)
+	if(!config.persistence_ignore_mapload)
+>>>>>>> 7be625e0cb (some more small things (#16491))
 		to_world(span_world("Persistence is now enabled."))
 	else
 		to_world(span_world("Persistence is no longer enabled."))

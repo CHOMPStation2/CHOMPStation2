@@ -2403,6 +2403,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		return TRUE // Aren't here anymore, need to update menu
 
 	var/intent = "Examine"
+<<<<<<< HEAD
 	//CHOMPEdit Start - Only allow indirect belly viewers to examine
 	if(user in OB)
 		if(isliving(target))
@@ -2411,6 +2412,13 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		else if(istype(target, /obj/item))
 			intent = tgui_alert(user, "What do you want to do to that?","Query",list("Examine","Use Hand"))
 	//CHOMPEdit End of indirect vorefx changes
+=======
+	if(isliving(target))
+		intent = tgui_alert(user, "What do you want to do to them?","Query",list("Examine","Help Out","Devour"))
+
+	else if(istype(target, /obj/item))
+		intent = tgui_alert(user, "What do you want to do to that?","Query",list("Examine","Use Hand"))
+>>>>>>> 7be625e0cb (some more small things (#16491))
 
 	switch(intent)
 		if("Examine") //Examine a mob inside another mob
@@ -3928,6 +3936,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			return TRUE
 		//CHOMPEdit Start
 		if("b_belly_sprite_to_affect")
+<<<<<<< HEAD
 			var/belly_choice = tgui_input_list(user, "Which belly sprite do you want your [lowertext(host.vore_selected.name)] to affect?","Select Region", host.vore_icon_bellies)
 			if(!belly_choice) //They cancelled, no changes
 				return FALSE
@@ -3935,6 +3944,17 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.vore_selected.belly_sprite_to_affect = belly_choice
 				host.update_fullness()
 			. = TRUE
+=======
+			if (istype(host, /mob/living/carbon/human))
+				var/mob/living/carbon/human/hhost = host
+				var/belly_choice = tgui_input_list(user, "Which belly sprite do you want your [lowertext(hhost.vore_selected.name)] to affect?","Select Region", hhost.vore_icon_bellies)
+				if(!belly_choice) //They cancelled, no changes
+					return FALSE
+				else
+					hhost.vore_selected.belly_sprite_to_affect = belly_choice
+					hhost.update_fullness()
+				. = TRUE
+>>>>>>> 7be625e0cb (some more small things (#16491))
 		if("b_affects_vore_sprites")
 			host.vore_selected.affects_vore_sprites = !host.vore_selected.affects_vore_sprites
 			host.update_fullness()
@@ -4014,6 +4034,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.update_fullness()
 			. = TRUE
 		if("b_tail_to_change_to")
+<<<<<<< HEAD
 			var/tail_choice = tgui_input_list(user, "Which tail sprite do you want to use when your [lowertext(host.vore_selected.name)] is filled?","Select Sprite", global.tail_styles_list)
 			if(!tail_choice) //They cancelled, no changes
 				return FALSE
@@ -4036,6 +4057,37 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.vore_selected.tail_extra_overlay2 = newcolor
 			. = TRUE
 
+=======
+			if (istype(host, /mob/living/carbon/human))
+				var/mob/living/carbon/human/hhost = host
+				var/tail_choice = tgui_input_list(user, "Which tail sprite do you want to use when your [lowertext(host.vore_selected.name)] is filled?","Select Sprite", global.tail_styles_list)
+				if(!tail_choice) //They cancelled, no changes
+					return FALSE
+				else
+					hhost.vore_selected.tail_to_change_to = tail_choice
+				. = TRUE
+		if("b_tail_color")
+			if (istype(host, /mob/living/carbon/human))
+				var/mob/living/carbon/human/hhost = host
+				var/newcolor = input(user, "Choose tail color.", "", hhost.vore_selected.tail_colouration) as color|null
+				if(newcolor)
+					hhost.vore_selected.tail_colouration = newcolor
+				. = TRUE
+		if("b_tail_color2")
+			if (istype(host, /mob/living/carbon/human))
+				var/mob/living/carbon/human/hhost = host
+				var/newcolor = input(user, "Choose tail secondary color.", "", hhost.vore_selected.tail_extra_overlay) as color|null
+				if(newcolor)
+					hhost.vore_selected.tail_extra_overlay = newcolor
+				. = TRUE
+		if("b_tail_color3")
+			if (istype(host, /mob/living/carbon/human))
+				var/mob/living/carbon/human/hhost = host
+				var/newcolor = input(user, "Choose tail tertiary color.", "", hhost.vore_selected.tail_extra_overlay2) as color|null
+				if(newcolor)
+					hhost.vore_selected.tail_extra_overlay2 = newcolor
+				. = TRUE
+>>>>>>> 7be625e0cb (some more small things (#16491))
 	if(.)
 		unsaved_changes = TRUE
 

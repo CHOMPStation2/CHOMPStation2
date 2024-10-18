@@ -529,6 +529,7 @@
 		return
 
 	setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
+<<<<<<< HEAD
 	if(tasted == src) //CHOMPEdit Start
 		visible_message(span_vwarning("[src] licks themself!"),span_notice("You lick yourself. You taste rather like [tasted.get_taste_message()]."),span_infoplain(span_bold("Slurp!")))
 		balloon_alert_visible("Licks themself!", "Tastes like [tasted.get_taste_message()]")
@@ -536,6 +537,10 @@
 		visible_message(span_vwarning("[src] licks [tasted]!"),span_notice("You lick [tasted]. They taste rather like [tasted.get_taste_message()]."),span_infoplain(span_bold("Slurp!")))
 		balloon_alert_visible("Licks [tasted]!", "Tastes like [tasted.get_taste_message()]")
 		//CHOMPEdit End
+=======
+
+	visible_message(span_vwarning("[src] licks [tasted]!"),span_vnotice("You lick [tasted]. They taste rather like [tasted.get_taste_message()]."),span_infoplain(span_bold("Slurp!")))
+>>>>>>> 7be625e0cb (some more small things (#16491))
 
 
 /mob/living/proc/get_taste_message(allow_generic = 1)
@@ -574,6 +579,7 @@
 		return
 
 	setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
+<<<<<<< HEAD
 	if(smelled == src) //CHOMPEdit Start
 		visible_message(span_vwarning("[src] smells themself!"),span_notice("You smell yourself. You smell like [smelled.get_smell_message()]."),span_infoplain(span_bold("Sniff!")))
 		balloon_alert_visible("Smells themself!", "Smells like [smelled.get_smell_message()]")
@@ -581,6 +587,9 @@
 		visible_message(span_vwarning("[src] smells [smelled]!"),span_notice("You smell [smelled]. They smell like [smelled.get_smell_message()]."),span_infoplain(span_bold("Sniff!")))
 		balloon_alert_visible("Smells [smelled]!", "Smells like [smelled.get_smell_message()]")
 		//CHOMPEdit End
+=======
+	visible_message(span_vwarning("[src] smells [smelled]!"),span_vnotice("You smell [smelled]. They smell like [smelled.get_smell_message()]."),span_infoplain(span_bold("Sniff!")))
+>>>>>>> 7be625e0cb (some more small things (#16491))
 
 /mob/living/proc/get_smell_message(allow_generic = 1)
 	if(!vore_smell && !allow_generic)
