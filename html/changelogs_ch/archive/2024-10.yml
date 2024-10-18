@@ -201,3 +201,10 @@
   tacoguy7765093:
   - rscadd: Added a new outsider pod called SecondLifeBar with nearly every scene
       tool.
+2024-10-18:
+  CHOMPStation2:
+  - rscadd: The entire upper right quadrant of the game window has been replaced with
+      a new stat/verb panel that doesn't lag the client to death.
+  - rscadd: Verdigris, an in-tree rust module - responsible for cellular automata
+      currently, and more soon!
+  - rscadd: Server starts faster thanks to Verdigris generating ore turfs much faster.

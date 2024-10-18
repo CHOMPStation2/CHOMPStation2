@@ -1,4 +1,0 @@
-author: "CHOMPStation2"
-delete-after: True
-changes:
-  - rscadd: "The entire upper right quadrant of the game window has been replaced with a new stat/verb panel that doesn't lag the client to death."
