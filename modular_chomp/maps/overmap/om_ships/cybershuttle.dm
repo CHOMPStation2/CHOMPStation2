@@ -7,7 +7,7 @@
 /datum/map_template/om_ships/cybershuttle
 	name = "OM Ship - Cyber Shuttle"
 	desc = "A small privately-owned vessel with some snobbiness to it."
-	mappath = 'cybershuttle-10x11.dmm'
+	mappath = "modular_chomp/maps/overmap/om_ships/cybershuttle-10x11.dmm"
 	annihilate = TRUE
 
 // The shuttle's area(s)
@@ -53,7 +53,7 @@
 
 /datum/map_template/shelter/superpose/cybershuttle
 	shelter_id = "CyberShuttle"
-	mappath = 'cybershuttle-10x11.dmm'
+	mappath = "modular_chomp/maps/overmap/om_ships/cybershuttle-10x11.dmm"
 	name = "CyberShuttle"
 	description = "A very fast, very snobby very dangerous deathtrap that make you look rich."
 	superpose = FALSE

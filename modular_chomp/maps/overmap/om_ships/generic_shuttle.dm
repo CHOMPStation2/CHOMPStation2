@@ -9,7 +9,7 @@
 /datum/map_template/om_ships/hybrid
 	name = "OM Ship - Generic Shuttle"
 	desc = "A small privately-owned vessel."
-	mappath = 'generic_shuttle.dmm'
+	mappath = "modular_chomp/maps/overmap/om_ships/generic_shuttle.dmm"
 	annihilate = TRUE
 
 // The shuttle's area(s)
@@ -61,7 +61,7 @@
 /*
 /datum/map_template/shelter/superpose/genericshuttle
 	shelter_id = "GenericShuttle"
-	mappath = 'genericshuttle-11x13.dmm'
+	mappath = "modular_chomp/maps/overmap/om_ships/genericshuttle-11x13.dmm"
 	name = "Generic Shuttle"
 	description = "This is a generic shuttle, it is a normal-sized item.."
 	superpose = FALSE
