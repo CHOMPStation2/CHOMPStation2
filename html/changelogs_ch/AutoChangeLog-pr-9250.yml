@@ -1,0 +1,5 @@
+author: "CHOMPStation2"
+delete-after: True
+changes:
+  - rscadd: "Action buttons now have a mouse cursor override when being dragged to show where you will drop them."
+  - bugfix: "You can actually move action buttons around again and they'll stay there, until you shift-click on them."
