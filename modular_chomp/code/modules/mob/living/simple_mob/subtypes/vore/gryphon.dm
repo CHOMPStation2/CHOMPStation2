@@ -3,7 +3,8 @@
 	desc = "A large, lazy feline-avian hybrid. Best not to walk too close to a gryphon alone."
 
 	icon_state = "gryphon"
-	icon = 'icons/mob/vore64x64.dmi'
+	icon_living = "gryphon"
+	icon = 'modular_chomp/icons/mob/vore64x64_ch.dmi'
 	vis_height = 64
 
 	faction = FACTION_GRYPHON
@@ -37,7 +38,7 @@
 	buckle_movable = TRUE
 	buckle_lying = FALSE
 
-	var/random_skin = 1
+	var/random_skin = TRUE
 	var/list/skins = list(
 		"gryphon"
 	)
@@ -46,7 +47,7 @@
 	special_attack_max_range = 4
 	special_attack_cooldown = 30 SECONDS
 
-	devourable = 0	//No
+	devourable = FALSE
 
 	ai_holder_type = /datum/ai_holder/simple_mob/vore/gryphon
 	say_list_type = /datum/say_list/gryphon
@@ -60,15 +61,17 @@
 	vore_bump_chance = 25
 	vore_digest_chance = 100
 	vore_pounce_chance = 100
-	vore_active = 1
-	vore_icons = 2
-	vore_icons = SA_ICON_LIVING | SA_ICON_REST
+	vore_active = TRUE
+	vore_icons = 0
 	vore_capacity = 2
-	swallowTime = 50
+	swallowTime = 20
 	vore_ignores_undigestable = TRUE
 	vore_default_mode = DM_DIGEST
 	vore_pounce_maxhealth = 125
 	vore_bump_emote = "tries to gulp down"
+	vore_capacity_ex = list("stomach" = 1, "throat" = 1)
+	vore_fullness_ex = list("stomach" = 0, "throat" = 0)
+	vore_icon_bellies = list("stomach", "throat")
 
 /datum/ai_holder/simple_mob/vore/gryphon
 	var/eat_attempts = 0
@@ -111,31 +114,33 @@
 		eat_attempts = 0
 
 	maybe_eating = target
-	if (eat_attempts == 0)
+	if (eat_attempts == 5)
 		to_chat(target, span_danger("\The [holder] licks its beak"))
-	else if (eat_attempts == 5)
-		to_chat(target, span_danger("\The [holder]'s stomach rumbles loudly"))
-	else if (alone && eat_attempts > 10 && can_attack(target))
+	else if (eat_attempts == 10)
+		to_chat(target, span_danger("\The [holder]'s stomach grumbles loudly"))
+	else if (alone && eat_attempts > 15 && can_attack(target))
 		give_target(target)
-		return target
 
-	if (eat_attempts < 6 || alone)
+	if (eat_attempts < 11 || alone)
 		eat_attempts += 1
-	return null
 
 /mob/living/simple_mob/vore/gryphon/init_vore()
 	if(!voremob_loaded)
 		return
-	.=..()
+	if(LAZYLEN(vore_organs))
+		return TRUE
 
 	var/obj/belly/B = new /obj/belly/gryphon/beak(src)
 	vore_selected = B
 	B.affects_vore_sprites = FALSE
 	B.emote_lists[DM_HOLD] = list("Test")
 	B = new /obj/belly/gryphon/throat(src)
-	B.affects_vore_sprites = FALSE
+	B.affects_vore_sprites = TRUE
+	B.belly_sprite_to_affect = "throat"
 	B.emote_lists[DM_HOLD] = list("Test")
 	B = new /obj/belly/gryphon/stomach(src)
+	B.affects_vore_sprites = TRUE
+	B.belly_sprite_to_affect = "stomach"
 	B.emote_lists[DM_HOLD] = list("Test")
 	B.emote_lists[DM_DIGEST] = list("Test")
 
@@ -185,12 +190,15 @@
 	return
 
 /datum/say_list/gryphon
-	say_got_target = list("purrs", "chirps")
+	emote_hear = list("squawks!", "looks around as its stomach growls.")
+	emote_see = list("licks its beak.", "looks around.")
+	say_maybe_target = list("squawks")
+	say_got_target = list("screeches")
 
 /obj/belly/gryphon
 	autotransferchance = 50
 	autotransferwait = 150
-	fancy_vore = 1
+	fancy_vore = TRUE
 	contamination_color = "green"
 	contamination_flavor = "Wet"
 	vore_verb = "chomp"
@@ -198,19 +206,24 @@
 
 /obj/belly/gryphon/beak
 	name = "Beak"
-	escapable = 1
+	mode_flags = DM_FLAG_THICKBELLY
+	escapable = TRUE
 	escapechance = 5
 	desc = "Noticing you alone, the gryphon lunges forwards and wraps its beak around your head, forcing you to stare into the dark abyss at the back of the gryphon's throat. It quickly tries to swallow you down, beak closing around your torso and head tilting back, letting gravity help make you disappear before anyone sees."
 	struggle_messages_inside = list(
 		"You try to push the gryphon's tongue away, instead getting tossed around and savoured by the massive beast",
 		"Pressing against the beak around your body, you barely pry them off of your torso, trying to wiggle out-- only for the gryphon to clamp right back down around you and continue swallowing their meal",
 		"You try to shy away from the back of the gryphon's maw, desperately avoiding the massive beast's gullet. The gryphon easily counterracts your efforts, pushing you closer and closer towards the fate that throat promises")
-	autotransferlocation = "Crop"
+	autotransferlocation = "Throat"
+	autotransfer_enabled = TRUE
+	autotransferchance = 30
+	autotransferwait = 5
 	belly_fullscreen = "a_tumby"
 	vore_sound = "Insertion1"
 
 /obj/belly/gryphon/throat
 	name = "Throat"
+	mode_flags = DM_FLAG_THICKBELLY
 	transferchance = 20
 	transferlocation = "Beak"
 	escapechance = 0
@@ -222,11 +235,15 @@
 		"More squirming and struggling outwards, trying to hold the throat's muscular walls at bay. Every time you press outwards, the walls press back with twice the strength. Much more of this and it might threaten to crush. Perhaps you should just give in...",
 		"You frantically writhe upwards a couple of inches, before the beast swallows with a sloppy-sounding glllggk, sending you back down a foot or so. Each struggle you make only seems to hasten your journey down the hatch. ")
 	autotransferlocation = "Stomach"
+	autotransfer_enabled = TRUE
+	autotransferchance = 50
+	autotransferwait = 5
 	belly_fullscreen = "another_tumby"
 	vore_sound = "Tauric Swallow"
 
 /obj/belly/gryphon/stomach
 	name = "Stomach"
+	mode_flags = DM_FLAG_THICKBELLY
 	escapechance = 0
 	transferchance = 10
 	transferlocation = "Throat"

@@ -342,7 +342,11 @@
 	preferred_target = null
 
 /datum/ai_holder/proc/vore_check(mob/living/L)
-	if(!holder.vore_active)	//We probably don't have a belly so don't even try //CHOMPEdit
+	var/mob/living/simple_mob/simple = holder
+	if(istype(simple))	//We probably don't have a belly so don't even try //CHOMPEdit
+		if (!simple.vore_active)
+			return FALSE
+	else if (holder.vore_selected == null)
 		return FALSE
 	if(!isliving(L))	//We only want mob/living
 		return FALSE
