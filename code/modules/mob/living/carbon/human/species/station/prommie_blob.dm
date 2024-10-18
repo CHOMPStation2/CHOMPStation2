@@ -47,15 +47,14 @@
 		/decl/emote/visible/floorspin
 	)
 /mob/living/simple_mob/slime/promethean/Initialize(mapload, null)
-	//verbs -= /mob/living/proc/ventcrawl
-	add_verb(src, /mob/living/simple_mob/slime/promethean/proc/prommie_blobform) //CHOMPEdit
-	add_verb(src, /mob/living/proc/set_size) //CHOMPEdit
-	add_verb(src, /mob/living/proc/hide) //CHOMPEdit
-	add_verb(src, /mob/living/simple_mob/proc/animal_nom) //CHOMPEdit
-	add_verb(src, /mob/living/proc/shred_limb) //CHOMPEdit
-	add_verb(src, /mob/living/simple_mob/slime/promethean/proc/toggle_expand) //CHOMPEdit
-	add_verb(src, /mob/living/simple_mob/slime/promethean/proc/prommie_select_colour) //CHOMPEdit
-	add_verb(src, /mob/living/simple_mob/slime/promethean/proc/toggle_shine) //CHOMPEdit
+	add_verb(src, /mob/living/simple_mob/slime/promethean/proc/prommie_blobform)
+	add_verb(src, /mob/living/proc/set_size)
+	add_verb(src, /mob/living/proc/hide)
+	add_verb(src, /mob/living/simple_mob/proc/animal_nom)
+	add_verb(src, /mob/living/proc/shred_limb)
+	add_verb(src, /mob/living/simple_mob/slime/promethean/proc/toggle_expand)
+	add_verb(src, /mob/living/simple_mob/slime/promethean/proc/prommie_select_colour)
+	add_verb(src, /mob/living/simple_mob/slime/promethean/proc/toggle_shine)
 	update_mood()
 	if(rad_glow)
 		rad_glow = CLAMP(rad_glow,0,250)
@@ -86,12 +85,10 @@
 		QDEL_NULL(stored_blob)
 	return ..()
 
-//ChompEDIT START - TGPanel
-/mob/living/simple_mob/slime/promethean/get_status_tab_items()
+/mob/living/simple_mob/slime/promethean/update_misc_tabs()
 	. = ..()
 	if(humanform)
-		humanform.species.Stat(humanform)
-//ChompEDIT END
+		humanform.species.update_misc_tabs(src)
 
 /mob/living/simple_mob/slime/promethean/handle_special() // Should disable default slime healing, we'll use nutrition based heals instead.
 //ChompAdd Begins.  They already heal from their carbon form while even in slime form, but this is for a small bonus healing for being unformed.
@@ -279,11 +276,11 @@
 
 	if(is_wide)
 		is_wide = FALSE
-		src.visible_message("<b>[src.name]</b> pulls together, compacting themselves into a small ball!")
+		src.visible_message(span_infoplain(span_bold("[src.name]") + " pulls together, compacting themselves into a small ball!"))
 		update_icon()
 	else
 		is_wide = TRUE
-		src.visible_message("<b>[src.name]</b> flows outwards, their goop expanding!")
+		src.visible_message(span_infoplain(span_bold("[src.name]") + " flows outwards, their goop expanding!"))
 		update_icon()
 
 /mob/living/simple_mob/slime/promethean/proc/toggle_shine()
@@ -299,11 +296,11 @@
 
 	if(shiny)
 		shiny = FALSE
-		src.visible_message("<b>[src.name]</b> dulls their shine, becoming more translucent.")
+		src.visible_message(span_infoplain(span_bold("[src.name]") + " dulls their shine, becoming more translucent."))
 		update_icon()
 	else
 		shiny = TRUE
-		src.visible_message("<b>[src.name]</b> glistens and sparkles, shining brilliantly.")
+		src.visible_message(span_infoplain(span_bold("[src.name]") + " glistens and sparkles, shining brilliantly."))
 		update_icon()
 
 /mob/living/simple_mob/slime/promethean/proc/prommie_select_colour()
@@ -435,8 +432,8 @@
 		new_hat.forceMove(src)
 
 	blob.update_icon()
-	remove_verb(blob,/mob/living/proc/ventcrawl ) // Absolutely not. //CHOMPEdit
-	remove_verb(blob,/mob/living/simple_mob/proc/set_name ) // We already have a name. //CHOMPEdit
+	remove_verb(blob, /mob/living/proc/ventcrawl) // Absolutely not.
+	remove_verb(blob, /mob/living/simple_mob/proc/set_name) // We already have a name.
 	temporary_form = blob
 
 //ChompAdd begins  Handles the ID and Radio, giving the blobform each of them.
@@ -456,7 +453,7 @@
 	moveToNullspace()
 
 	//Message
-	blob.visible_message("<b>[src.name]</b> squishes into their true form!")
+	blob.visible_message(span_infoplain(span_bold("[src.name]") + " squishes into their true form!"))
 
 	//Transfer vore organs
 	blob.vore_organs = vore_organs
@@ -491,7 +488,7 @@
 	stop_pulling()
 
 	//Message
-	blob.visible_message("<b>[src.name]</b> pulls together, forming a humanoid shape!")
+	blob.visible_message(span_infoplain(span_bold("[src.name]") + " pulls together, forming a humanoid shape!"))
 
 	//Record where they should go
 	var/atom/reform_spot = blob.drop_location()

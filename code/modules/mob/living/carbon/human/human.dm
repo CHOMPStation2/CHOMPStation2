@@ -68,7 +68,6 @@
 		dna.real_name = real_name
 		sync_organ_dna()
 
-	//verbs |= /mob/living/proc/toggle_selfsurgery //VOREStation Removal
 	AddComponent(/datum/component/personal_crafting)
 
 /mob/living/carbon/human/Destroy()
@@ -83,7 +82,6 @@
 		QDEL_NULL(vessel)
 	return ..()
 
-//CHOMPEdit Begin
 /mob/living/carbon/human/get_status_tab_items()
 	. = ..()
 	. += ""
@@ -119,8 +117,41 @@
 			. += "Genetic Damage Time: [mind.changeling.geneticdamage]"
 			. += "Re-Adaptations: [mind.changeling.readapts]/[mind.changeling.max_readapts]"
 	if(species)
-		species.Stat(src)
-//CHOMPEdit End
+		species.get_status_tab_items(src)
+
+
+/mob/proc/RigPanel(var/obj/item/rig/R)
+	if(R && !R.canremove && R.installed_modules.len)
+		var/list/L = list()
+		var/cell_status = R.cell ? "[R.cell.charge]/[R.cell.maxcharge]" : "ERROR"
+		L[++L.len] = list("Suit charge: [cell_status]", null, null, null, null)
+		for(var/obj/item/rig_module/module in R.installed_modules)
+		{
+			for(var/stat_rig_module/SRM in module.stat_modules)
+				if(SRM.CanUse())
+					L[++L.len] = list(SRM.module.interface_name,null,null,SRM.name,REF(SRM))
+		}
+		misc_tabs["Hardsuit Modules"] = L
+
+/mob/living/update_misc_tabs()
+	..()
+	if(get_rig_stats)
+		var/obj/item/rig/rig = get_rig()
+		if(rig)
+			RigPanel(rig)
+
+/mob/living/carbon/human/update_misc_tabs()
+	..()
+	if(species)
+		species.update_misc_tabs(src)
+
+	if(istype(back,/obj/item/rig))
+		var/obj/item/rig/R = back
+		RigPanel(R)
+
+	else if(istype(belt,/obj/item/rig))
+		var/obj/item/rig/R = belt
+		RigPanel(R)
 
 /mob/living/carbon/human/ex_act(severity)
 	if(!blinded)
@@ -413,13 +444,13 @@
 						if (R.fields["id"] == E.fields["id"])
 							if(hasHUD(usr,"security"))
 								var/list/security_hud_text = list()
-								security_hud_text += "<b>Name:</b> [R.fields["name"]]	<b>Criminal Status:</b> [R.fields["criminal"]]"
-								security_hud_text += "<b>Species:</b> [R.fields["species"]]"
-								security_hud_text += "<b>Minor Crimes:</b> [R.fields["mi_crim"]]"
-								security_hud_text += "<b>Details:</b> [R.fields["mi_crim_d"]]"
-								security_hud_text += "<b>Major Crimes:</b> [R.fields["ma_crim"]]"
-								security_hud_text += "<b>Details:</b> [R.fields["ma_crim_d"]]"
-								security_hud_text += "<b>Notes:</b> [R.fields["notes"]]"
+								security_hud_text += span_bold("Name:") + " [R.fields["name"]]	" + span_bold("Criminal Status:") + " [R.fields["criminal"]]"
+								security_hud_text += span_bold("Species:") + " [R.fields["species"]]"
+								security_hud_text += span_bold("Minor Crimes:") + " [R.fields["mi_crim"]]"
+								security_hud_text += span_bold("Details:") + " [R.fields["mi_crim_d"]]"
+								security_hud_text += span_bold("Major Crimes:") + " [R.fields["ma_crim"]]"
+								security_hud_text += span_bold("Details:") + " [R.fields["ma_crim_d"]]"
+								security_hud_text += span_bold("Notes:") + " [R.fields["notes"]]"
 								security_hud_text += "<a href='?src=\ref[src];secrecordComment=`'>\[View Comment Log\]</a>"
 								to_chat(usr, span_filter_notice("[jointext(security_hud_text, "<br>")]"))
 								read = 1
@@ -532,14 +563,14 @@
 						if (R.fields["id"] == E.fields["id"])
 							if(hasHUD(usr,"medical"))
 								var/list/medical_hud_text = list()
-								medical_hud_text += "<b>Name:</b> [R.fields["name"]]	<b>Blood Type:</b> [R.fields["b_type"]]	<b>Blood Basis:</b> [R.fields["blood_reagent"]]"
-								medical_hud_text += "<b>Species:</b> [R.fields["species"]]"
-								medical_hud_text += "<b>DNA:</b> [R.fields["b_dna"]]"
-								medical_hud_text += "<b>Minor Disabilities:</b> [R.fields["mi_dis"]]"
-								medical_hud_text += "<b>Details:</b> [R.fields["mi_dis_d"]]"
-								medical_hud_text += "<b>Major Disabilities:</b> [R.fields["ma_dis"]]"
-								medical_hud_text += "<b>Details:</b> [R.fields["ma_dis_d"]]"
-								medical_hud_text += "<b>Notes:</b> [R.fields["notes"]]"
+								medical_hud_text += span_bold("Name:") + " [R.fields["name"]]	" + span_bold("Blood Type:") + " [R.fields["b_type"]]	" + span_bold("Blood Basis:") + " [R.fields["blood_reagent"]]"
+								medical_hud_text += span_bold("Species:") + " [R.fields["species"]]"
+								medical_hud_text += span_bold("DNA:") + " [R.fields["b_dna"]]"
+								medical_hud_text += span_bold("Minor Disabilities:") + " [R.fields["mi_dis"]]"
+								medical_hud_text += span_bold("Details:") + " [R.fields["mi_dis_d"]]"
+								medical_hud_text += span_bold("Major Disabilities:") + " [R.fields["ma_dis"]]"
+								medical_hud_text += span_bold("Details:") + " [R.fields["ma_dis_d"]]"
+								medical_hud_text += span_bold("Notes:") + " [R.fields["notes"]]"
 								medical_hud_text += "<a href='?src=\ref[src];medrecordComment=`'>\[View Comment Log\]</a>"
 								to_chat(usr, span_filter_notice("[jointext(medical_hud_text, "<br>")]"))
 								read = 1
@@ -616,16 +647,16 @@
 						if (R.fields["id"] == E.fields["id"])
 							if(hasHUD(usr,"best"))
 								var/list/emp_hud_text = list()
-								emp_hud_text += "<b>Name:</b> [R.fields["name"]]"
-								emp_hud_text += "<b>Species:</b> [R.fields["species"]]"
-								emp_hud_text += "<b>Assignment:</b> [R.fields["real_rank"]] ([R.fields["rank"]])"
-								emp_hud_text += "<b>Home System:</b> [R.fields["home_system"]]"
-								emp_hud_text += "<b>Birthplace:</b> [R.fields["birthplace"]]"
-								emp_hud_text += "<b>Citizenship:</b> [R.fields["citizenship"]]"
-								emp_hud_text += "<b>Primary Employer:</b> [R.fields["personal_faction"]]"
-								emp_hud_text += "<b>Religious Beliefs:</b> [R.fields["religion"]]"
-								emp_hud_text += "<b>Known Languages:</b> [R.fields["languages"]]"
-								emp_hud_text += "<b>Notes:</b> [R.fields["notes"]]"
+								emp_hud_text += span_bold("Name:") + " [R.fields["name"]]"
+								emp_hud_text += span_bold("Species:") + " [R.fields["species"]]"
+								emp_hud_text += span_bold("Assignment:") + " [R.fields["real_rank"]] ([R.fields["rank"]])"
+								emp_hud_text += span_bold("Home System:") + " [R.fields["home_system"]]"
+								emp_hud_text += span_bold("Birthplace:") + " [R.fields["birthplace"]]"
+								emp_hud_text += span_bold("Citizenship:") + " [R.fields["citizenship"]]"
+								emp_hud_text += span_bold("Primary Employer:") + " [R.fields["personal_faction"]]"
+								emp_hud_text += span_bold("Religious Beliefs:") + " [R.fields["religion"]]"
+								emp_hud_text += span_bold("Known Languages:") + " [R.fields["languages"]]"
+								emp_hud_text += span_bold("Notes:") + " [R.fields["notes"]]"
 								emp_hud_text += "<a href='?src=\ref[src];emprecordComment=`'>\[View Comment Log\]</a>"
 								to_chat(usr, span_filter_notice("[jointext(emp_hud_text, "<br>")]"))
 								read = 1
@@ -850,7 +881,7 @@
 		return
 
 	if(!(mMorph in mutations))
-		remove_verb(src,/mob/living/carbon/human/proc/morph)  //CHOMPEdit
+		remove_verb(src, /mob/living/carbon/human/proc/morph)
 		return
 
 	var/new_facial = input(usr, "Please select facial hair color.", "Character Generation",rgb(r_facial,g_facial,b_facial)) as color
@@ -925,7 +956,7 @@
 		return
 
 	if(!(mRemotetalk in src.mutations))
-		remove_verb(src,/mob/living/carbon/human/proc/remotesay)  //CHOMPEdit
+		remove_verb(src, /mob/living/carbon/human/proc/remotesay)
 		return
 	var/list/creatures = list()
 	for(var/mob/living/carbon/h in mob_list)
@@ -942,7 +973,7 @@
 	usr.show_message(span_filter_say("[span_blue("You project your mind into [target.real_name]: [say]")]"))
 	log_say("(TPATH to [key_name(target)]) [say]",src)
 	for(var/mob/observer/dead/G in mob_list)
-		G.show_message(span_filter_say("<i>Telepathic message from <b>[src]</b> to <b>[target]</b>: [say]</i>"))
+		G.show_message(span_filter_say(span_italics("Telepathic message from " + span_bold("[src]") + " to " + span_bold("[target]") + ": [say]")))
 
 /mob/living/carbon/human/proc/remoteobserve()
 	set name = "Remote View"
@@ -956,11 +987,8 @@
 	if(!(mRemote in src.mutations))
 		remoteview_target = null
 		reset_view(0)
-		remove_verb(src,/mob/living/carbon/human/proc/remoteobserve)  //CHOMPEdit
-		return
-
+		remove_verb(src, /mob/living/carbon/human/proc/remoteobserve)
 	if(client.eye != client.mob)
-		remoteview_target = null
 		reset_view(0)
 		return
 
@@ -1091,7 +1119,7 @@
 			blood_DNA[M.dna.unique_enzymes] = M.dna.b_type
 	hand_blood_color = blood_color
 	update_bloodied()
-	add_verb(src,/mob/living/carbon/human/proc/bloody_doodle) //CHOMPEdit TGPanel
+	add_verb(src, /mob/living/carbon/human/proc/bloody_doodle)
 	return 1 //we applied blood to the item
 
 /mob/living/carbon/human/proc/get_full_print()
@@ -1324,7 +1352,7 @@
 		return 0 //something is terribly wrong
 
 	if (!bloody_hands)
-		remove_verb(src,/mob/living/carbon/human/proc/bloody_doodle) //CHOMPEdit TGPanel
+		remove_verb(src, /mob/living/carbon/human/proc/bloody_doodle)
 
 	if (src.gloves)
 		to_chat(src, span_warning("Your [src.gloves] are getting in the way."))
@@ -1694,7 +1722,7 @@
 /mob/living/carbon/human/examine_icon()
 	var/icon/I = get_cached_examine_icon(src)
 	if(!I)
-		I = getFlatIcon(src, defdir = SOUTH, no_anim = TRUE, force_south = TRUE) //CHOMPEdit
+		I = getFlatIcon(src, defdir = SOUTH, no_anim = TRUE, force_south = TRUE)
 		set_cached_examine_icon(src, I, 50 SECONDS)
 	return I
 

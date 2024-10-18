@@ -56,7 +56,7 @@
 
 /obj/machinery/oxygen_pump/attack_hand(mob/user as mob)
 	if((stat & MAINT) && tank)
-		user.visible_message("<b>\The [user]</b> removes \the [tank] from \the [src].", span_notice("You remove \the [tank] from \the [src]."))
+		user.visible_message(span_infoplain(span_bold("\The [user]") + " removes \the [tank] from \the [src]."), span_notice("You remove \the [tank] from \the [src]."))
 		user.put_in_hands(tank)
 		src.add_fingerprint(user)
 		tank.add_fingerprint(user)
@@ -70,7 +70,7 @@
 			tank.forceMove(src)
 		breather.remove_from_mob(contained)
 		contained.forceMove(src)
-		src.visible_message("<b>\The [user]</b> makes \the [contained] rapidly retract back into \the [src]!")
+		src.visible_message(span_infoplain(span_bold("\The [user]") + " makes \the [contained] rapidly retract back into \the [src]!"))
 		breather.cozyloop.stop()  // CHOMPStation Add: Cozy Music
 		if(breather.internals)
 			breather.internals.icon_state = "internal0"
@@ -142,7 +142,7 @@
 			user.drop_item()
 			W.forceMove(src)
 			tank = W
-			user.visible_message("<b>\The [user]</b> installs \the [tank] into \the [src].", span_notice("You install \the [tank] into \the [src]."))
+			user.visible_message(span_infoplain(span_bold("\The [user]") + " installs \the [tank] into \the [src]."), span_notice("You install \the [tank] into \the [src]."))
 			src.add_fingerprint(user)
 	if(istype(W, /obj/item/tank) && !stat)
 		to_chat(user, span_warning("Please open the maintenance hatch first."))

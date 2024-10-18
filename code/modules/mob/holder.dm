@@ -33,7 +33,6 @@ var/list/holder_mob_icon_cache = list()
 	held.reset_view(src)
 	START_PROCESSING(SSobj, src)
 
-//CHOMPEdit Start - Add status so that you can see where you are...
 /mob/living/get_status_tab_items()
 	. = ..()
 	if(. && istype(loc, /obj/item/holder))
@@ -68,7 +67,6 @@ var/list/holder_mob_icon_cache = list()
 		if (location != "")
 			. += ""
 			. += "Location: [location]"
-//CHOMPEdit End
 
 /obj/item/holder/Entered(mob/held, atom/OldLoc)
 	if(held_mob)

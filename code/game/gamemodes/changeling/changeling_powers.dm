@@ -65,8 +65,8 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 	if(!mind)				return
 	if(!mind.changeling)	mind.changeling = new /datum/changeling(gender)
 
-	add_verb(src,/datum/changeling/proc/EvolutionMenu) //CHOMPEdit TGPanel
-	add_verb(src,/mob/proc/changeling_respec) //CHOMPEdit TGPanel
+	add_verb(src, /datum/changeling/proc/EvolutionMenu)
+	add_verb(src, /mob/proc/changeling_respec)
 	add_language("Changeling")
 
 	var/lesser_form = !ishuman(src)
@@ -85,7 +85,7 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 		if(P.isVerb)
 			if(lesser_form && !P.allowduringlesserform)	continue
 			if(!(P in src.verbs))
-				add_verb(src,P.verbpath) //CHOMPEdit TGPanel
+				add_verb(src, P.verbpath)
 			if(P.make_hud_button)
 				if(!src.ability_master)
 					src.ability_master = new /obj/screen/movable/ability_master(src)
@@ -113,7 +113,7 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 	if(!mind || !mind.changeling)	return
 	for(var/datum/power/changeling/P in mind.changeling.purchased_powers)
 		if(P.isVerb)
-			remove_verb(src,P.verbpath) //CHOMPEdit TGPanel
+			remove_verb(src, P.verbpath)
 			var/obj/screen/ability/verb_based/changeling/C = ability_master.get_ability_by_proc_ref(P.verbpath)
 			if(C)
 				ability_master.remove_ability(C)
@@ -235,8 +235,8 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 
 	changeling.chem_charges -= required_chems
 	changeling.sting_range = 1
-	remove_verb(src,verb_path)  //CHOMPEdit
-	spawn(10)	add_verb(src,verb_path) //CHOMPEdit
+	remove_verb(src, verb_path)
+	spawn(10)	add_verb(src, verb_path)
 
 	to_chat(src, span_notice("We stealthily sting [T]."))
 	if(!T.mind || !T.mind.changeling)	return T	//T will be affected by the sting
