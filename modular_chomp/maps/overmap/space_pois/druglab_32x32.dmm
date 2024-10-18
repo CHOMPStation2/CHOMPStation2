@@ -216,7 +216,6 @@
 /area/template_noop)
 "oI" = (
 /obj/structure/lattice,
-/obj/structure/lattice,
 /turf/template_noop,
 /area/template_noop)
 "oO" = (

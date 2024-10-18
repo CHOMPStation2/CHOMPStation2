@@ -30253,21 +30253,6 @@
 	},
 /turf/simulated/shuttle/wall/dark/no_join,
 /area/shuttle/large_escape_pod2/station)
-"uDG" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/cable/green{
-	icon_state = "0-8"
-	},
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/obj/machinery/door/blast/regular/open{
-	dir = 4;
-	id = "captainlockdown";
-	layer = 3.3;
-	name = "Site Manager Lockdown"
-	},
-/turf/simulated/floor/plating,
-/area/surface/station/crew_quarters/captain)
 "uDX" = (
 /obj/machinery/light{
 	dir = 1

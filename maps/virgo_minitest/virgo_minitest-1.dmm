@@ -3439,7 +3439,6 @@
 /area/engineering/engine_room)
 "kT" = (
 /obj/structure/lattice,
-/obj/structure/lattice,
 /turf/space,
 /area/space)
 "kU" = (
