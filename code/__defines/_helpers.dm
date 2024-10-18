@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 /// Takes a datum as input, returns its ref string
 #define text_ref(datum) ref(datum)
-=======
 // Stuff that is relatively "core" and is used in other defines/helpers
 
 /**
@@ -16,4 +14,4 @@
 #define ICON_SIZE_X 32
 /// The Y/Height dimension of ICON_SIZE. This will more than likely be the smaller axis.
 #define ICON_SIZE_Y 32
->>>>>>> 8d97f43bd0... General improvements to Action Buttons (#16488)
+yy
