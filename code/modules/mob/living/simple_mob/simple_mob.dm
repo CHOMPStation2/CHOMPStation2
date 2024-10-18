@@ -182,7 +182,7 @@
 	var/isthermal = 0
 
 /mob/living/simple_mob/Initialize()
-	remove_verb(src,/mob/verb/observe) //CHOMPEdit TGPanel
+	remove_verb(src, /mob/verb/observe)
 	health = maxHealth
 
 	if(ID_provided) //VOREStation Edit
@@ -206,7 +206,7 @@
 		organ_names = GET_DECL(organ_names)
 
 	if(CONFIG_GET(flag/allow_simple_mob_recolor)) //CHOMPEdit
-		add_verb(src,/mob/living/simple_mob/proc/ColorMate) //CHOMPEdit TGPanel
+		add_verb(src, /mob/living/simple_mob/proc/ColorMate)
 
 	AddElement(/datum/element/footstep, FOOTSTEP_MOB_SHOE, 1, -6) // CHOMPEdit - Giving them all shoe footsteps FOR NOW until I go through all of them and give appropiate ones
 
@@ -232,12 +232,12 @@
 //Client attached
 /mob/living/simple_mob/Login()
 	. = ..()
-	to_chat(src,"<b>You are \the [src].</b> [player_msg]")
+	to_chat(src,span_boldnotice("You are \the [src].") + " [player_msg]")
 	if(vore_active && !voremob_loaded) //CHOMPedit: On-demand belly loading.
 		voremob_loaded = TRUE
 		init_vore()
 	if(hasthermals)
-		add_verb(src, /mob/living/simple_mob/proc/hunting_vision) //So that maint preds can see prey through walls, to make it easier to find them. //ChompEDIT
+		add_verb(src, /mob/living/simple_mob/proc/hunting_vision) //So that maint preds can see prey through walls, to make it easier to find them.
 
 /mob/living/simple_mob/SelfMove(turf/n, direct, movetime)
 	var/turf/old_turf = get_turf(src)
@@ -297,12 +297,10 @@
 
 	. += ..()
 
-//CHOMPEdit Begin
 /mob/living/simple_mob/get_status_tab_items()
 	. = ..()
 	. += ""
 	. += "Health: [round((health / getMaxHealth()) * 100)]%"
-//CHOMPEdit End
 
 /mob/living/simple_mob/lay_down()
 	..()
@@ -326,7 +324,7 @@
 	return mob_class & MOB_CLASS_HUMANOID|MOB_CLASS_ANIMAL|MOB_CLASS_SLIME // Update this if needed.
 
 /mob/living/simple_mob/get_nametag_desc(mob/user)
-	return "<i>[tt_desc]</i>"
+	return span_italics("[tt_desc]")
 
 /mob/living/simple_mob/make_hud_overlays()
 	hud_list[STATUS_HUD]  = gen_hud_image(buildmode_hud, src, "ai_0", plane = PLANE_BUILDMODE)

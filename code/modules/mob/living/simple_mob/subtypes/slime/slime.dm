@@ -101,7 +101,7 @@ var/list/_slime_default_emotes = list(
 	emote_hear = list("squishes")
 
 /mob/living/simple_mob/slime/Initialize()
-	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
+	add_verb(src, /mob/living/proc/ventcrawl)
 	update_mood()
 	glow_color = color
 	handle_light()
@@ -259,7 +259,7 @@ var/list/_slime_default_emotes = list(
 
 /mob/living/simple_mob/slime/proc/squish()
 	playsound(src, 'sound/effects/slime_squish.ogg', 50, 0)
-	visible_message("<b>\The [src]</b> squishes!")
+	visible_message(span_infoplain(span_bold("\The [src]") + " squishes!"))
 
 /decl/mob_organ_names/slime
 	hit_zones = list("cytoplasmic membrane")

@@ -27,8 +27,8 @@
 
 	time_of_birth = world.time
 
-	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel
+	add_verb(src, /mob/living/proc/ventcrawl)
+	add_verb(src, /mob/living/proc/hide)
 
 	instance_num = rand(1, 1000)
 	name = "[initial(name)] ([instance_num])"

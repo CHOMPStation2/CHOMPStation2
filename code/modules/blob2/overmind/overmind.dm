@@ -70,7 +70,6 @@ var/list/overminds = list()
 	overminds -= src
 	return ..()
 
-// ChompEDIT START - tgpanel
 /mob/observer/blob/get_status_tab_items()
 	. = ..()
 	. += ""
@@ -79,7 +78,6 @@ var/list/overminds = list()
 		. += "Core Health: [blob_core.integrity]"
 	. += "Power Stored: [blob_points]/[max_blob_points]"
 	. += "Total Blobs: [GLOB.all_blobs.len]"
-//ChompEDIT END
 
 /mob/observer/blob/Move(var/atom/NewLoc, Dir = 0)
 	if(placed)
