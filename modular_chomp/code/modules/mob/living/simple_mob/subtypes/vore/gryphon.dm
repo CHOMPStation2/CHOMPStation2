@@ -60,7 +60,9 @@
 /mob/living/simple_mob/vore/gryphon
 	vore_bump_chance = 25
 	vore_digest_chance = 100
+	// Strong pounce, but needs to be alone to trigger it
 	vore_pounce_chance = 100
+	vore_pounce_falloff = 0
 	vore_active = TRUE
 	vore_icons = 0
 	vore_capacity = 2
@@ -133,16 +135,24 @@
 	var/obj/belly/B = new /obj/belly/gryphon/beak(src)
 	vore_selected = B
 	B.affects_vore_sprites = FALSE
-	B.emote_lists[DM_HOLD] = list("Test")
+	B.emote_lists[DM_HOLD] = list("You get pushed around the creature's maw, that tongue pressing you against the roof of its mouth and humming as it savors your taste",
+	"The gryphon swallows, pulling you closer to the gullet desperately trying to gulp you down.",
+	"You feel that beak tilt upwards to help pull you deeper into the gryphon's body, intent on making you disappear.")
 	B = new /obj/belly/gryphon/throat(src)
 	B.affects_vore_sprites = TRUE
 	B.belly_sprite_to_affect = "throat"
-	B.emote_lists[DM_HOLD] = list("Test")
+	B.emote_lists[DM_HOLD] = list("You hear the light gurgling of the stomach below you, calling you to relax and allow the beast to claim you.",
+	"Those throat muscles squeeze and knead all along your body, pressing you deeper into the gryphon's body.")
 	B = new /obj/belly/gryphon/stomach(src)
 	B.affects_vore_sprites = TRUE
 	B.belly_sprite_to_affect = "stomach"
-	B.emote_lists[DM_HOLD] = list("Test")
-	B.emote_lists[DM_DIGEST] = list("Test")
+	B.emote_lists[DM_HOLD] = list("The gryphon lightly sways its filled gut, tossing you around inside of the tight chamber.",
+	"A sudden pressure presses down across your body as the gryphon gives its gut a squeeze.",
+	"Sitting in the hot, stewing guts of the gryphon you wonder when someone will finally notice that you've disappeared.")
+	B.emote_lists[DM_DIGEST] = list("The churning gut squeezes down on your body, rubbing more of those acids into your skin and trying to claim you as nutrients to fuel the massive gryphon.",
+	"The gryphon lightly sways its filled gut, tossing you around inside of the tight chamber.",
+	"A sudden pressure presses down across your body as the gryphon gives its gut a squeeze.",
+	"Sitting in the hot, stewing guts of the gryphon you wonder when someone will finally notice that you've disappeared.")
 
 /mob/living/simple_mob/vore/gryphon/do_special_attack(atom/A)	//Mostly copied from cryptdrake.dm
 	set waitfor = FALSE
@@ -227,18 +237,15 @@
 	transferchance = 20
 	transferlocation = "Beak"
 	escapechance = 0
-	desc = "...And that 'very, very soon' rapidly becomes 'now'. The mighty tongue lifts, having collected enough of your flavor, squelching your lower body up to your chest inside it's hot gullet, giving you an ample view of itself slithering up over your body. You get to watch it quiver and clench with a resounding glllk, around you, the tongue's fat bumpy rear lifting behind your head to displace you down and inside the clinging tunnel. Tight, crushing pressure embraces you with each of those deep, liquid-sounding swallows, inching you down little by little each time. The flesh of the tunnel wraps you tightly, leaving you mostly unable to move, given short moments of respite between each swallow, to listen to the thudding heartbeat and the distant glrrrbles deep below. The hot scent of acidity grows stronger, the deeper you plunge..."
+	desc = "After pushing you about its maw for a while the gryphon finally swallows its treat, the gullet squeezing around you and the creature's head lifting as it gulps you down. Your upper body gets shoved into its throat, the powerful muscles kneading down on your body and continuing to coax you deeper towards the gurgling stomach below."
 	struggle_messages_inside = list(
-		"With as much effort as you can muster, you squirm and writhe, trying to swim up the passage of soft flesh. You barely peek out the beast's gullet, before the back of it's tongue squelches into your face, forcing you back down.",
-		"You struggle and press outwards firmly against the walls. The beast rumbles out over you, shaking you to your bones. Was that a sound of pleasure from the dragon? Perhaps more of this struggling might appease it...",
-		"Bracing your back against a wall, you try to press outwards with all the strength you have, to spread the throat agape. For a moment, it affords you a nice view down your body, towards the sealed muscular entryway to it's stomach. Everything clenches back shut around you shortly after.",
-		"More squirming and struggling outwards, trying to hold the throat's muscular walls at bay. Every time you press outwards, the walls press back with twice the strength. Much more of this and it might threaten to crush. Perhaps you should just give in...",
-		"You frantically writhe upwards a couple of inches, before the beast swallows with a sloppy-sounding glllggk, sending you back down a foot or so. Each struggle you make only seems to hasten your journey down the hatch. ")
+		"You try to push yourself back with your hands, finding no purchase against those slick, spittle-coated muscles.",
+		"Your hands push those throat walls away from you, only for them to clench down around you in another powerful swallow.")
 	autotransferlocation = "Stomach"
 	autotransfer_enabled = TRUE
 	autotransferchance = 50
 	autotransferwait = 5
-	belly_fullscreen = "another_tumby"
+	belly_fullscreen = "VBO_intestines1"
 	vore_sound = "Tauric Swallow"
 
 /obj/belly/gryphon/stomach
@@ -247,15 +254,13 @@
 	escapechance = 0
 	transferchance = 10
 	transferlocation = "Throat"
-	desc = "The final part of your journey arrives, in the form of a tightly squelched, muscular sphincter. Throat pressure crams against you, until abruptly, you find yourself spat into a hot, caustic cauldron of churning doom, the dragon's stomach. After slithering in, the way you entered squelches shut, dissapearing among the folds - impossible for you to find any more. You are trapped, no way out, lounging in a shallow pool of thick sticky juices. endless undulations from thick, pendulous folds of stomach-wall all around continually churn it up into a foamy, bubbling mess, soaking their folds in it to drip in ropes and even shivering sheets of the stuff around you. Clenches gush the digestive slimes all over you from time to time, cradling you in it's noxious embrace. Your ears are filled with such sloppy squelches now, those distant muffled glrrns you heard earlier now sharp, crisp, and thunderous as you nestle in their very source. Settle down for what little time you have left, for your fate rests adding to the powerful beast all around you."
+	desc = "Finally, you get shoved into the beast's stomach, that hammock-like gut welcoming you into a pool of digestive acids. The heat is oppressive, the stomach walls kneading it against your skin, coaxing you to simply give in and become gryphon food. Other than the constant pleasure, the snug warmth is at least pleasant at the moment, rolling across your body in time with the creature's rhythmic breaths and heartbeats, the air stale and thick with the tinge of acid."
 	digest_mode = DM_DIGEST
 	digest_brute = 1
 	digest_burn = 3
 	struggle_messages_inside = list(
-		"Eager to try and escape before you lack the strength to do so anymore, you pound firmly against those walls. They clench in twice as hard, the beast letting out a pleased rumble. Seems it wants you to do that again!",
-		"You try to stand inside the clinging gut, to force your arms and head upwards towards the way you came in. Searching through each and every fold for the muscled entryway leaves you discovering nothing but caches of goop, soaking over you all the more.",
-		"You press all your limbs out firmly into the walls to try and struggle. The softness of the flesh simply envelops over each of them, giving them a close kneading snuggle in hot oily goop.",
-		"Each squirm and struggle you try to make just makes the beast rumble deeply in pleasure. It wriggles itself, sloshing and shaking you about, to try goad you into struggling all the more.",
-		"Yet more frantic wriggling and squirming from you, pressing and thumping out into walls which themselves greedily devour all the effort you make into them. this deep inside, it doesn't appear to be helping.")
-	belly_fullscreen = "anim_belly"
+		"You press your hands out at the tight stomach muscles, feeling the stiff resistance give way for a second, only for the walls to squeeze back down around you even tighter.",
+		"The gryphon presses its talons down on its midsection as you struggle, forcing you to stay still in the depths of its guts and await whatever fate the beast plans for you"
+	)
+	belly_fullscreen = "VBOanim_belly1"
 	vore_sound = "Stomach Move"
