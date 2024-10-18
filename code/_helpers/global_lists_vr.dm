@@ -954,7 +954,6 @@ var/global/list/event_wildlife_roaming = list(
 												list(/mob/living/simple_mob/animal/space/bear = 1),
 												list(/mob/living/simple_mob/vore/aggressive/deathclaw = 1),
 												list(/mob/living/simple_mob/vore/otie = 1),
-												list(/mob/living/simple_mob/vore/gryphon = 1),
 												list(/mob/living/simple_mob/vore/aggressive/panther = 1),
 												list(/mob/living/simple_mob/vore/aggressive/rat = 1),
 												list(/mob/living/simple_mob/vore/aggressive/giant_snake = 1),

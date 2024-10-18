@@ -851,7 +851,6 @@
 		list(/mob/living/simple_mob/vore/alienanimals/skeleton),
 		list(/mob/living/simple_mob/vore/alienanimals/dustjumper),
 		list(/mob/living/simple_mob/vore/cryptdrake),
-		list(/mob/living/simple_mob/vore/gryphon),
 		list(/mob/living/simple_mob/vore/stalker),
 		list(/mob/living/simple_mob/vore/horse/kelpie),
 		list(/mob/living/simple_mob/vore/scrubble),

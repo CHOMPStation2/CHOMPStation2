@@ -309,7 +309,7 @@
 			return FALSE
 		if(tmob.canmove && prob(vore_pounce_chance)) //if they'd pounce for other noms, pounce for these too, otherwise still try and eat them if they hold still
 			tmob.Weaken(5)
-		tmob.visible_message("<span class='danger'>\The [src] [vore_bump_emote] \the [tmob]!</span>") //CHOMPedit remove extra exclamation mark
+		tmob.visible_message("<span class='danger'>\The [src] [vore_bump_emote] \the [tmob]!</span>") //CHOMPEdit remove extra exclamation mark
 		set_AI_busy(TRUE)
 		spawn()
 			animal_nom(tmob)
