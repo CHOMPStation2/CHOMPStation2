@@ -28213,6 +28213,9 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/steel_grid,
 /area/hallway/secondary/firstdeck/research_access)
+"rYm" = (
+/turf/simulated/wall,
+/area/maintenance/firstdeck/centralstarboard)
 "rZP" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor/border_only,
@@ -80422,13 +80425,13 @@ xIH
 moQ
 alI
 kcv
-moQ
-dHz
-dHz
-dHz
-dHz
-dHz
-dHz
+rYm
+fiA
+fiA
+fiA
+fiA
+fiA
+fiA
 dHz
 hvg
 dHz
@@ -80681,7 +80684,7 @@ moQ
 jUv
 fVu
 bjM
-dHz
+fiA
 hbK
 gAa
 ppt
@@ -80691,7 +80694,7 @@ kJV
 uPj
 wHq
 aMP
-fiA
+dHz
 sal
 wZo
 lIC
@@ -80939,7 +80942,7 @@ moQ
 axo
 fVu
 lrd
-dHz
+fiA
 ybM
 iEb
 iEb
@@ -80949,7 +80952,7 @@ iEb
 taP
 iEb
 uvG
-fiA
+dHz
 sal
 poW
 lIC
@@ -81197,7 +81200,7 @@ moQ
 asx
 bnA
 dLu
-dHz
+fiA
 bJP
 yks
 tMg
@@ -81207,7 +81210,7 @@ exY
 thk
 iEb
 iGI
-fiA
+dHz
 sal
 qwb
 wnb
@@ -81455,7 +81458,7 @@ moQ
 upc
 wDG
 mGR
-dHz
+fiA
 vhz
 iEb
 iEb
@@ -81465,7 +81468,7 @@ iEb
 npi
 iEb
 uRT
-fiA
+dHz
 jVV
 sal
 ghB
@@ -81713,7 +81716,7 @@ moQ
 dsS
 mRt
 moQ
-dHz
+fiA
 kfy
 tYn
 tYn
