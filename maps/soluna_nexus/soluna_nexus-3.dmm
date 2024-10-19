@@ -16,9 +16,11 @@
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Domicile/Dormitory_12)
 "aad" = (
-/obj/machinery/vending/sol,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
 /turf/simulated/floor/wood/alt,
-/area/SouthernCrossV2/Domicile/Chomp_Lounge)
+/area/SouthernCrossV2/Domicile/Chomp_Dinner_2)
 "aae" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -109,7 +111,7 @@
 	name = "N-status display";
 	pixel_y = 32
 	},
-/turf/simulated/floor/glass,
+/turf/simulated/floor/wood/alt,
 /area/SouthernCrossV2/Domicile/Chomp_Lounge)
 "aal" = (
 /obj/effect/catwalk_plated/white,
@@ -142,6 +144,12 @@
 /obj/structure/table/woodentable,
 /turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Domicile/Chomp_Lounge)
+"aaw" = (
+/obj/random/trash_pile,
+/obj/random/junk,
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Deck3_Dorms_ForPort_Corridor1)
 "aaD" = (
 /obj/machinery/atmospherics/binary/pump{
 	name = "N2O to Connector"
@@ -1064,7 +1072,10 @@
 /turf/simulated/floor/airless,
 /area/SouthernCrossV2/Engineering/Solar_Array_AftPort)
 "asa" = (
-/obj/structure/table/steel,
+/obj/structure/bed/chair/backed_grey{
+	color = "grey";
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Medical/Lounge)
 "asb" = (
@@ -1406,11 +1417,6 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Engine2_Chamber)
 "ayQ" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 8
@@ -1418,6 +1424,7 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Medical/Aft_Medical_Post)
 "azb" = (
@@ -1467,6 +1474,16 @@
 /obj/effect/catwalk_plated,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Construction_Area)
+"azX" = (
+/obj/machinery/status_display,
+/turf/simulated/wall,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
+"azY" = (
+/obj/random/trash_pile,
+/obj/random/junk,
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Deck3_Engineering_AftStarChamber3)
 "aAb" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -1536,14 +1553,14 @@
 	desc = "A warning sign which reads 'RADIATION SHIELDING IN THIS AREA'.";
 	pixel_x = -32
 	},
-/obj/machinery/light{
-	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
-	},
 /obj/effect/floor_decal/spline/plain,
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
+	},
+/obj/machinery/light/spot{
+	dir = 8;
+	color = "#ccc9ff";
+	desc = "An extra bright lighting fixture."
 	},
 /turf/simulated/floor/wood/alt,
 /area/SouthernCrossV2/Domicile/Chomp_Dinner_1)
@@ -1650,18 +1667,13 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Atmospherics_Chamber)
 "aBA" = (
-/obj/machinery/light{
-	name = "1S-light fixture"
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
 	},
-/obj/machinery/vending/weeb,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/sign/scenery/fakefireaxe{
-	pixel_y = -29
-	},
-/turf/simulated/floor/wood/alt,
-/area/SouthernCrossV2/Domicile/Chomp_Lounge)
+/obj/structure/table/woodentable,
+/obj/item/mail/junkmail,
+/turf/simulated/floor/carpet/brown,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "aBD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -1897,10 +1909,12 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Construction_Area)
 "aGs" = (
-/obj/machinery/light{
-	dir = 1
+/obj/machinery/light/spot{
+	dir = 1;
+	color = "#ccc9ff";
+	desc = "An extra bright lighting fixture."
 	},
-/turf/simulated/floor/glass,
+/turf/simulated/floor/wood/alt,
 /area/SouthernCrossV2/Domicile/Chomp_Lounge)
 "aGu" = (
 /obj/machinery/atmospherics/binary/pump,
@@ -2067,6 +2081,11 @@
 	network = list("Commons")
 	},
 /obj/effect/catwalk_plated/techmaint,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Center_Port)
 "aJK" = (
@@ -2211,8 +2230,13 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Domicile/Dormitory_03)
 "aMs" = (
-/turf/simulated/floor/glass,
-/area/SouthernCrossV2/Domicile/Chomp_Lounge)
+/obj/machinery/hologram/holopad,
+/obj/effect/floor_decal/shuttle/blue{
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/SouthernCrossV2/Domicile/Chomp_Dinner_1)
 "aMv" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -2304,14 +2328,6 @@
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/space)
-"aNP" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Medical/Autoresleeving)
 "aNZ" = (
 /obj/effect/landmark{
 	name = "lightsout"
@@ -2661,10 +2677,19 @@
 	pixel_x = -22;
 	name = "1W-station intercom (Medbay)"
 	},
-/obj/machinery/disposal/wall{
-	dir = 1;
-	pixel_y = -34;
-	name = "1S-inset disposal unit"
+/obj/machinery/power/apc{
+	name = "south bump";
+	pixel_y = -24
+	},
+/obj/machinery/light_switch{
+	pixel_x = 11;
+	pixel_y = -27;
+	name = "S-light switch";
+	dir = 1
+	},
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/white{
 	color = "#8bbbd5"
@@ -3001,11 +3026,6 @@
 	},
 /area/SouthernCrossV2/Medical/Resleeving)
 "bbU" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
@@ -3103,12 +3123,6 @@
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Bridge_AftStarCorridor1)
-"bdC" = (
-/obj/item/stool/baystool/padded{
-	dir = 4
-	},
-/turf/simulated/floor/wood/alt,
-/area/SouthernCrossV2/Domicile/Chomp_Dinner_1)
 "bdG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -3126,6 +3140,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Engine2_Chamber)
+"bdX" = (
+/obj/random/trash_pile,
+/obj/random/junk,
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Deck3_Engineering_AftStarCorridor2)
 "beh" = (
 /obj/structure/table/bench/marble,
 /obj/effect/floor_decal/spline/plain{
@@ -3285,6 +3305,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Medical/Aft_Medical_Post)
 "bhP" = (
@@ -3391,15 +3412,7 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Atmospherics_Substation)
 "bjz" = (
-/obj/structure/flora/pottedplant/bamboo{
-	name = "Monolo";
-	pixel_y = 10
-	},
-/obj/structure/table/bench/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
 /turf/simulated/floor/wood/alt,
@@ -3455,35 +3468,22 @@
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Medical_AftCorridor1)
-"bkm" = (
-/obj/machinery/vending/wallmed1{
-	pixel_y = 26;
-	name = "1N-NanoMed"
-	},
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/orange/border{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "bks" = (
 /obj/effect/floor_decal/steeldecal/steel_decals_central5,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Domicile/Dorm_Corridor_1)
 "bkC" = (
-/obj/machinery/vending/snack,
-/obj/machinery/light{
-	name = "1S-light fixture"
+/obj/machinery/door/firedoor/glass/hidden/steel{
+	dir = 2
 	},
-/turf/simulated/floor/wood/alt,
-/area/SouthernCrossV2/Domicile/Chomp_Lounge)
-"bkJ" = (
-/obj/machinery/computer/timeclock/premade/north,
-/turf/simulated/floor/wood/alt,
-/area/SouthernCrossV2/Domicile/Chomp_Dinner_2)
+/obj/structure/curtain/black{
+	icon_state = "open";
+	layer = 2;
+	name = "privacy curtain";
+	opacity = 0
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "bkO" = (
 /obj/machinery/hologram/holopad,
 /obj/effect/floor_decal/shuttle/blue{
@@ -3614,6 +3614,12 @@
 "bmm" = (
 /turf/simulated/wall,
 /area/SouthernCrossV2/Maints/Deck3_Center_Star)
+"bmI" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/wood/alt,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "bmK" = (
 /obj/machinery/hologram/holopad,
 /obj/effect/floor_decal/shuttle/blue{
@@ -3630,6 +3636,10 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Stairwell_Aft)
+"bnp" = (
+/obj/machinery/vending/cola/soft,
+/turf/simulated/floor/wood/alt,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "bnv" = (
 /obj/structure/sign/warning/airlock,
 /turf/simulated/wall/r_wall,
@@ -3768,7 +3778,7 @@
 	pixel_y = 6
 	},
 /obj/item/storage/secure/briefcase,
-/turf/simulated/floor/glass/reinforced,
+/turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Bridge/Control_Atrium)
 "bqJ" = (
 /obj/structure/flora/pottedplant/flower{
@@ -3813,23 +3823,17 @@
 /turf/simulated/floor/wood/alt/parquet,
 /area/SouthernCrossV2/Bridge/Captain_Office)
 "brm" = (
-/obj/machinery/power/apc{
-	dir = 4;
-	name = "east bump";
-	pixel_x = 24
+/obj/machinery/door/firedoor/glass/hidden/steel{
+	dir = 1
 	},
-/obj/machinery/light_switch{
-	dir = 8;
-	name = "E-light switch";
-	pixel_x = 27;
-	pixel_y = -12
+/obj/structure/curtain/black{
+	icon_state = "open";
+	layer = 2;
+	name = "privacy curtain";
+	opacity = 0
 	},
-/obj/structure/cable/green{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/turf/simulated/floor/wood/alt,
-/area/SouthernCrossV2/Domicile/Chomp_Dinner_1)
+/turf/simulated/floor/tiled/techmaint,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "brq" = (
 /obj/structure/table/rack/steel,
 /obj/random/junk,
@@ -3920,7 +3924,10 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/arrows,
-/obj/machinery/door/airlock/angled_bay/external/glass/red,
+/obj/machinery/door/airlock/angled_bay/hatch/engineering{
+	name = "Solars access";
+	req_access = null
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Engineering/Solar_Control_ForStar)
 "btH" = (
@@ -4195,6 +4202,11 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central2,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Bridge/Leisure_Room)
 "bzs" = (
@@ -4563,24 +4575,11 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Maints/Deck3_Bridge_ForStarChamber1)
 "bGG" = (
-/obj/structure/table/woodentable,
-/obj/item/stack/material/cardboard{
-	amount = 25
-	},
-/obj/item/tape_roll{
-	pixel_x = 3;
-	pixel_y = -5
-	},
-/obj/item/packageWrap{
-	pixel_x = -4;
-	pixel_y = 4
-	},
-/obj/item/packageWrap{
-	pixel_x = -4;
-	pixel_y = 7
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
 	},
 /turf/simulated/floor/wood/alt,
-/area/SouthernCrossV2/Domicile/Chomp_Lounge)
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "bGL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -4853,6 +4852,10 @@
 /obj/effect/floor_decal/corner/beige/border{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Domicile/Dorm_Foyer)
 "bLq" = (
@@ -5006,6 +5009,8 @@
 	dir = 8;
 	pixel_x = 22
 	},
+/obj/random/trash_pile,
+/obj/random/junk,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Center_Star)
 "bNs" = (
@@ -5137,10 +5142,6 @@
 /obj/effect/floor_decal/spline/plain/corner,
 /turf/simulated/floor/wood/alt,
 /area/SouthernCrossV2/Domicile/Chomp_Dinner_2)
-"bPD" = (
-/obj/structure/sign/painting/public,
-/turf/simulated/wall,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "bQc" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -5199,10 +5200,10 @@
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/effect/wingrille_spawn/reinforced/polarized{
-	id = "sc-WTkitchen"
+	id = "sc-WTstage"
 	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "bQX" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/arrows/red{
@@ -5314,15 +5315,12 @@
 /turf/simulated/floor/reinforced/airless,
 /area/space)
 "bTy" = (
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 8
+/obj/structure/bed/chair/backed_grey{
+	color = "grey";
+	dir = 1
 	},
-/obj/effect/floor_decal/corner/orange/border{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
+/turf/simulated/floor/carpet/brown,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "bTD" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/arrows/yellow,
@@ -5428,6 +5426,11 @@
 /obj/structure/curtain/open/shower/medical,
 /turf/simulated/floor/tiled/kafel_full,
 /area/SouthernCrossV2/Medical/Virology)
+"bUO" = (
+/obj/random/trash_pile,
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Deck3_Medical_ForChamber2)
 "bUQ" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
@@ -5553,21 +5556,10 @@
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Domicile/Observation_Lounge)
 "bXC" = (
-/obj/machinery/appliance/cooker/fryer,
-/obj/machinery/ai_status_display{
-	name = "1S-AI display";
-	pixel_y = -32
-	},
-/obj/machinery/camera/network/security{
-	dir = 1;
-	c_tag = "D3-Dmc-Chomp Kitchen1";
-	network = list("Domicile")
-	},
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/obj/effect/floor_decal/borderfloorwhite,
-/obj/effect/floor_decal/corner/orange/border,
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
+/obj/machinery/portable_atmospherics/powered/pump/filled,
+/obj/effect/floor_decal/industrial/hatch/blue,
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Engineering/Central_Engineering_Post)
 "bXF" = (
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/plating,
@@ -6632,9 +6624,21 @@
 /turf/simulated/open,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_ForCorridor1)
 "cpV" = (
-/obj/machinery/vending/snix,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/wood/alt,
-/area/SouthernCrossV2/Domicile/Chomp_Lounge)
+/area/SouthernCrossV2/Domicile/Chomp_Dinner_2)
 "cpZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -6681,37 +6685,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/SouthernCrossV2/Engineering/Engine2_Canister_Storage)
-"cqT" = (
-/obj/machinery/disposal,
-/obj/structure/disposalpipe/trunk{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/orange/border{
-	dir = 1
-	},
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
-"crb" = (
-/obj/machinery/vending/dinnerware,
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/orange/border{
-	dir = 1
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "crM" = (
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/arrows/blue{
@@ -7139,6 +7112,11 @@
 /obj/effect/floor_decal/techfloor/orange/corner{
 	dir = 1
 	},
+/obj/structure/closet/emergsuit_wall{
+	dir = 1;
+	pixel_y = -27;
+	name = "1S-emergency suit storage"
+	},
 /turf/simulated/floor/wood/alt/parquet,
 /area/SouthernCrossV2/Medical/Autoresleeving)
 "cyT" = (
@@ -7289,10 +7267,12 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_ForStarChamber1)
 "cBS" = (
-/obj/machinery/appliance/cooker/oven,
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/power/breakerbox/activated{
+	RCon_tag = "Central Substation Bypass"
+	},
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Engineering/Central_Engineering_Post)
 "cCe" = (
 /obj/machinery/ai_status_display{
 	name = "1N-AI display";
@@ -7470,28 +7450,9 @@
 	},
 /turf/simulated/floor/wood/alt,
 /area/SouthernCrossV2/Domicile/Dormitory_05)
-"cEF" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/freezer,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "cEG" = (
-/obj/item/stool/padded{
-	dir = 8
-	},
-/obj/effect/landmark/start{
-	name = "Chef"
-	},
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/orange/border{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
+/turf/simulated/wall,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "cEH" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/arrows/yellow,
@@ -7502,8 +7463,13 @@
 	name = "Kitchen Maintenance";
 	req_one_access = list(28)
 	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techmaint,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
+/area/SouthernCrossV2/Engineering/Central_Engineering_Post)
 "cES" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -7806,17 +7772,11 @@
 /turf/simulated/floor/wood/alt,
 /area/SouthernCrossV2/Bridge/Embassy)
 "cJI" = (
-/obj/machinery/hologram/holopad,
-/obj/effect/floor_decal/shuttle/blue{
-	pixel_x = -1;
-	pixel_y = 1
-	},
-/obj/effect/floor_decal/spline/plain,
-/obj/effect/floor_decal/spline/plain{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/SouthernCrossV2/Domicile/Chomp_Dinner_2)
+/obj/random/trash_pile,
+/obj/random/junk,
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Deck3_Bridge_ForStarCorridor2)
 "cJN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -7860,6 +7820,10 @@
 	},
 /turf/simulated/floor/wood/alt/parquet,
 /area/SouthernCrossV2/Domicile/Dormitory_03)
+"cKv" = (
+/obj/machinery/ai_status_display,
+/turf/simulated/wall,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "cKC" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -8012,13 +7976,14 @@
 	desc = "A warning sign which reads 'RADIATION SHIELDING IN THIS AREA'.";
 	pixel_x = 32
 	},
-/obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
-	},
 /obj/effect/floor_decal/spline/plain,
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
+	},
+/obj/machinery/light/spot{
+	dir = 4;
+	color = "#ccc9ff";
+	desc = "An extra bright lighting fixture."
 	},
 /turf/simulated/floor/wood/alt,
 /area/SouthernCrossV2/Domicile/Chomp_Dinner_2)
@@ -8084,6 +8049,10 @@
 	icon_state = "2-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -22
+	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Center_Port)
 "cNT" = (
@@ -8257,23 +8226,10 @@
 "cQE" = (
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Maints/Bridge_Substation)
-"cQF" = (
-/obj/machinery/button/remote/blast_door{
-	dir = 4;
-	id = "sc-GCkitchen";
-	name = "Kitchen Shutters Control";
-	pixel_x = -24;
-	req_access = list(28)
-	},
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
-"cQQ" = (
-/obj/item/stool/baystool/padded{
-	dir = 8
-	},
-/turf/simulated/floor/wood/alt,
-/area/SouthernCrossV2/Domicile/Chomp_Dinner_2)
+"cQK" = (
+/obj/structure/sign/painting/public,
+/turf/simulated/wall,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "cQZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/floor_decal/corner/white/border{
@@ -8365,7 +8321,7 @@
 "cRD" = (
 /obj/structure/table/reinforced,
 /obj/machinery/recharger,
-/turf/simulated/floor/glass/reinforced,
+/turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Bridge/Control_Atrium)
 "cSp" = (
 /obj/effect/floor_decal/steeldecal/steel_decals_central2{
@@ -8395,7 +8351,6 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Bridge_AftStarCorridor1)
 "cSX" = (
-/obj/machinery/vending/cigarette,
 /obj/machinery/camera/network/security{
 	dir = 1;
 	c_tag = "D3-Dmc-Chomp Dinner3";
@@ -8418,7 +8373,10 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/arrows,
-/obj/machinery/door/airlock/angled_bay/external/glass/red,
+/obj/machinery/door/airlock/angled_bay/hatch/engineering{
+	name = "Solars access";
+	req_access = null
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Engineering/Solar_Control_AftPort)
 "cTj" = (
@@ -8554,13 +8512,6 @@
 /obj/structure/reagent_dispensers/foam,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Center_Star)
-"cVJ" = (
-/obj/machinery/atm{
-	name = "1E-Automatic Teller Machine";
-	pixel_x = 29
-	},
-/turf/simulated/floor/wood/alt,
-/area/SouthernCrossV2/Domicile/Chomp_Dinner_1)
 "cVP" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
@@ -8921,11 +8872,13 @@
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/SouthernCrossV2/Domicile/Dormitory_06)
 "dcT" = (
-/obj/structure/railing{
-	dir = 4
+/obj/machinery/alarm{
+	pixel_y = 25
 	},
-/turf/simulated/open,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
+/obj/random/trash_pile,
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Deck3_Center_Star)
 "ddi" = (
 /obj/machinery/power/apc{
 	dir = 4;
@@ -9118,13 +9071,6 @@
 /obj/random/junk,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Medical_ForStarChamber1)
-"dgL" = (
-/obj/machinery/light,
-/obj/structure/railing{
-	dir = 4
-	},
-/turf/simulated/open,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "dhi" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -9166,13 +9112,25 @@
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Domicile/Dorm_Foyer)
 "diJ" = (
-/obj/structure/table/marble,
-/obj/structure/sink/countertop{
-	pixel_y = 9
+/obj/structure/bed/chair/backed_grey{
+	color = "grey";
+	dir = 1
 	},
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/brown,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
+"diR" = (
+/obj/machinery/light{
+	dir = 1;
+	name = "1N-lighting fixture"
+	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/SouthernCrossV2/Bridge/Control_Atrium)
 "djr" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -9646,10 +9604,6 @@
 	},
 /turf/simulated/floor/wood/alt,
 /area/SouthernCrossV2/Commons/Star_Breakroom)
-"drt" = (
-/obj/structure/closet/crate/freezer,
-/turf/simulated/floor/tiled/freezer,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "drx" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/catwalk_plated/techmaint,
@@ -9686,18 +9640,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Medical/Resleeving)
-"dsu" = (
-/obj/machinery/atm{
-	name = "1N-Automatic Teller Machine";
-	pixel_y = 22
-	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/wood/alt,
-/area/SouthernCrossV2/Domicile/Chomp_Dinner_2)
 "dsH" = (
 /obj/structure/railing/grey{
 	color = "yellow";
@@ -10118,41 +10060,11 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Engine2_Chamber)
 "dAI" = (
-/obj/structure/table/marble,
-/obj/item/reagent_containers/food/condiment/enzyme{
-	pixel_x = 10;
-	pixel_y = 14
+/obj/effect/floor_decal/stairs/wood_stairs{
+	dir = 4
 	},
-/obj/item/reagent_containers/food/condiment/ketchup{
-	pixel_x = 4;
-	pixel_y = 15
-	},
-/obj/item/reagent_containers/food/condiment/mustard{
-	pixel_y = 14
-	},
-/obj/item/reagent_containers/food/condiment/enzyme{
-	pixel_x = 10;
-	pixel_y = 9
-	},
-/obj/item/reagent_containers/food/condiment/cornoil{
-	pixel_x = 3;
-	pixel_y = 10
-	},
-/obj/item/reagent_containers/food/condiment/cookingoil{
-	pixel_x = 1;
-	pixel_y = 5
-	},
-/obj/item/reagent_containers/food/condiment/hotsauce{
-	pixel_x = -11;
-	pixel_y = 19
-	},
-/obj/item/reagent_containers/food/condiment/soysauce{
-	pixel_x = -8;
-	pixel_y = 14
-	},
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
+/turf/simulated/floor/wood/alt,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "dAY" = (
 /obj/structure/table/woodentable,
 /obj/item/paper_bin{
@@ -10397,21 +10309,8 @@
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Medical/Lounge)
 "dES" = (
-/obj/structure/railing/grey{
-	color = "yellow";
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/zpipe/down/supply{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/zpipe/down/scrubbers{
-	dir = 1
-	},
-/obj/structure/lattice,
-/obj/structure/disposalpipe/down{
-	dir = 1
-	},
-/turf/simulated/open,
+/obj/structure/table/rack/steel,
+/turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Center_Star)
 "dFd" = (
 /obj/machinery/power/apc{
@@ -10438,17 +10337,15 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Engine2_Chamber)
 "dFk" = (
-/obj/item/stool{
-	color = "grey"
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
 	},
-/obj/machinery/light{
-	dir = 4
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
 	},
-/obj/effect/landmark/start{
-	name = "Chef"
-	},
-/turf/simulated/floor/tiled/freezer,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
+/turf/simulated/floor/wood/alt,
+/area/SouthernCrossV2/Domicile/Chomp_Dinner_1)
 "dFo" = (
 /obj/item/radio/intercom/department/medbay{
 	dir = 8;
@@ -10594,6 +10491,16 @@
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Medical_AftCorridor2)
+"dHF" = (
+/obj/machinery/door/firedoor/glass/hidden/steel,
+/obj/structure/curtain/black{
+	icon_state = "open";
+	layer = 2;
+	name = "privacy curtain";
+	opacity = 0
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "dHZ" = (
 /obj/machinery/atmospherics/pipe/tank/air{
 	dir = 1;
@@ -10627,8 +10534,12 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Atmospherics_Chamber)
 "dIz" = (
-/turf/simulated/floor/tiled/freezer,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/obj/structure/table/woodentable,
+/turf/simulated/floor/carpet/brown,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "dIE" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/arrows/yellow,
@@ -10678,6 +10589,9 @@
 /obj/effect/floor_decal/borderfloor/corner2,
 /obj/effect/floor_decal/steeldecal/steel_decals_central2{
 	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/wood/alt,
 /area/SouthernCrossV2/Domicile/Chomp_Dinner_2)
@@ -10808,10 +10722,10 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
 	},
-/obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/steeldecal/steel_decals_central2{
 	dir = 1
 	},
+/obj/structure/disposalpipe/junction,
 /turf/simulated/floor/wood/alt,
 /area/SouthernCrossV2/Domicile/Chomp_Dinner_2)
 "dMh" = (
@@ -11054,6 +10968,14 @@
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Bridge/AI_Core_Chamber)
+"dQE" = (
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/wood/alt,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "dRb" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -11480,18 +11402,6 @@
 	},
 /turf/simulated/wall,
 /area/SouthernCrossV2/Medical/Morgue)
-"dVg" = (
-/obj/structure/table/standard,
-/obj/item/material/knife/butch{
-	pixel_x = 3;
-	pixel_y = -2
-	},
-/obj/item/material/knife/hook{
-	pixel_x = -3;
-	pixel_y = 3
-	},
-/turf/simulated/floor/tiled/freezer,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "dVi" = (
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Medical_ForStarChamber3)
@@ -11823,6 +11733,18 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Commons/Central_3_Deck_Hall)
+"dZo" = (
+/obj/structure/table/bench/glass,
+/obj/structure/flora/pottedplant/bamboo{
+	name = "Monolo";
+	pixel_y = 10
+	},
+/obj/machinery/light/spot{
+	color = "#ccc9ff";
+	desc = "An extra bright lighting fixture."
+	},
+/turf/simulated/floor/wood/alt,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "dZx" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 1
@@ -11866,11 +11788,11 @@
 /turf/simulated/floor/carpet/blue2,
 /area/SouthernCrossV2/Domicile/Dormitory_06)
 "dZX" = (
-/obj/machinery/computer/arcade{
-	dir = 1
-	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
+	},
+/obj/machinery/computer/arcade/battle{
+	dir = 4
 	},
 /turf/simulated/floor/carpet/oracarpet,
 /area/SouthernCrossV2/Domicile/Chomp_Dinner_2)
@@ -11941,11 +11863,11 @@
 	name = "1S-entertainment monitor";
 	pixel_y = -36
 	},
-/obj/machinery/computer/arcade{
-	dir = 1
-	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
+	},
+/obj/item/stool/padded{
+	dir = 4
 	},
 /turf/simulated/floor/carpet/oracarpet,
 /area/SouthernCrossV2/Domicile/Chomp_Dinner_2)
@@ -12981,6 +12903,10 @@
 /obj/effect/floor_decal/corner/beige/bordercorner{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Domicile/Dorm_Corridor_1)
 "ers" = (
@@ -13095,9 +13021,52 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Atmospherics_Substation)
 "euc" = (
-/obj/structure/kitchenspike,
-/turf/simulated/floor/tiled/freezer,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
+/obj/item/storage/box/lights/mixed{
+	pixel_x = 8;
+	pixel_y = 11
+	},
+/obj/item/storage/box/lights/mixed{
+	pixel_x = 8;
+	pixel_y = 22
+	},
+/obj/item/storage/toolbox/electrical{
+	pixel_x = -7;
+	pixel_y = 11
+	},
+/obj/item/storage/toolbox/mechanical{
+	pixel_x = -7;
+	pixel_y = 4
+	},
+/obj/item/radio{
+	pixel_x = -11;
+	pixel_y = -1
+	},
+/obj/item/radio{
+	pixel_x = -8;
+	pixel_y = -1
+	},
+/obj/item/radio{
+	pixel_x = -5;
+	pixel_y = -1
+	},
+/obj/item/radio{
+	pixel_x = -2;
+	pixel_y = -1
+	},
+/obj/item/storage/briefcase/inflatable{
+	pixel_x = 8;
+	pixel_y = -2
+	},
+/obj/item/storage/briefcase/inflatable{
+	pixel_x = 8;
+	pixel_y = -5
+	},
+/obj/structure/table/steel,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Engineering/Central_Engineering_Post)
 "euk" = (
 /obj/effect/floor_decal/corner/blue/diagonal{
 	dir = 4
@@ -13218,6 +13187,20 @@
 /obj/effect/floor_decal/spline/fancy{
 	dir = 8
 	},
+/obj/machinery/power/apc{
+	name = "south bump";
+	pixel_y = -24
+	},
+/obj/machinery/light_switch{
+	dir = 1;
+	name = "S-light switch";
+	pixel_x = 11;
+	pixel_y = -27
+	},
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/carpet/bcarpet,
 /area/SouthernCrossV2/Medical/Autoresleeving)
 "ewn" = (
@@ -13324,15 +13307,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Central_3_Deck_Hall)
-"eyl" = (
-/obj/effect/floor_decal/steeldecal/steel_decals10{
-	dir = 6
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals10{
-	dir = 5
-	},
-/turf/simulated/floor/tiled/freezer,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "eyp" = (
 /obj/structure/sign/flag/vir,
 /obj/structure/cable/white{
@@ -13479,17 +13453,6 @@
 	},
 /turf/simulated/floor/carpet/bcarpet,
 /area/SouthernCrossV2/Medical/Patient_2)
-"eAz" = (
-/obj/structure/table/marble,
-/obj/item/toy/chewtoy,
-/obj/machinery/door/blast/gate/thin{
-	id = "sc-GCkitchen";
-	layer = 3.3;
-	name = "Kitchen Shutters";
-	dir = 4
-	},
-/turf/simulated/floor/tiled/steel_grid,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "eAD" = (
 /obj/structure/bed/chair{
 	dir = 8
@@ -13513,6 +13476,12 @@
 	},
 /turf/simulated/floor/airless,
 /area/SouthernCrossV2/Engineering/Solar_Array_ForPort)
+"eBa" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/wood/alt,
+/area/SouthernCrossV2/Domicile/Chomp_Dinner_2)
 "eBc" = (
 /obj/machinery/vending/hydronutrients,
 /turf/simulated/floor/tiled/hydro,
@@ -13581,6 +13550,12 @@
 	color = "yellow"
 	},
 /obj/structure/disposalpipe/down,
+/obj/structure/cable{
+	d1 = 32;
+	d2 = 2;
+	icon_state = "32-2"
+	},
+/obj/structure/lattice,
 /turf/simulated/open,
 /area/SouthernCrossV2/Maints/Deck3_Center_Port)
 "eCj" = (
@@ -13674,6 +13649,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Engine2_Chamber)
+"eDs" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/wood/alt,
+/area/SouthernCrossV2/Domicile/Chomp_Dinner_1)
 "eDu" = (
 /obj/random/mainttoyloot,
 /turf/simulated/floor/plating,
@@ -13773,6 +13754,21 @@
 /obj/structure/closet/emcloset,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Medical_ForChamber2)
+"eES" = (
+/obj/structure/flora/pottedplant/bamboo{
+	name = "Namala";
+	pixel_y = 10
+	},
+/obj/structure/table/bench/glass,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/light/spot{
+	color = "#ccc9ff";
+	desc = "An extra bright lighting fixture."
+	},
+/turf/simulated/floor/wood/alt,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "eFl" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -13800,7 +13796,8 @@
 	},
 /obj/machinery/access_button{
 	pixel_y = -24;
-	dir = 1
+	dir = 1;
+	req_one_access = list(1,19)
 	},
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/effect/map_helper/airlock/button/ext_button{
@@ -13988,6 +13985,7 @@
 /obj/structure/railing/grey{
 	color = "yellow"
 	},
+/obj/structure/lattice,
 /turf/simulated/open,
 /area/SouthernCrossV2/Maints/Deck3_Center_Star)
 "eIE" = (
@@ -14070,9 +14068,6 @@
 	d2 = 4;
 	icon_state = "0-4"
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /turf/simulated/floor/wood/alt,
 /area/SouthernCrossV2/Domicile/Chomp_Lounge)
 "eJK" = (
@@ -14091,14 +14086,35 @@
 	},
 /turf/simulated/floor/plating/turfpack/airless,
 /area/space)
-"eKo" = (
-/obj/machinery/appliance/cooker/fryer,
-/obj/machinery/light,
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/obj/effect/floor_decal/borderfloorwhite,
-/obj/effect/floor_decal/corner/orange/border,
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
+"eKn" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/power/apc{
+	name = "south bump";
+	pixel_y = -24
+	},
+/obj/machinery/light_switch{
+	dir = 1;
+	name = "S-light switch";
+	pixel_x = 11;
+	pixel_y = -27
+	},
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/machinery/button/windowtint{
+	pixel_x = -12;
+	pixel_y = -26;
+	name = "S-window tint control";
+	id = "sc-WTstage";
+	range = 20
+	},
+/turf/simulated/floor/wood/alt,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "eKF" = (
 /obj/item/toy/plushie/teshari/eili,
 /obj/item/bedsheet/pirate{
@@ -14158,9 +14174,6 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Medical_AftStarChamber1)
 "eLv" = (
-/obj/machinery/light{
-	dir = 8
-	},
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
@@ -14171,8 +14184,16 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 8
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Central_3_Deck_Hall)
@@ -14181,6 +14202,7 @@
 /obj/random/junk,
 /obj/random/trash_pile,
 /obj/random/trash,
+/obj/random/junk,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Dorms_ForPort_Chamber1)
 "eLN" = (
@@ -15381,24 +15403,26 @@
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Maints/Deck3_Center_Star)
 "eYg" = (
-/obj/structure/closet/jequipcloset,
+/obj/machinery/suit_cycler/engineering{
+	req_one_access = list(11,24);
+	req_access = null
+	},
+/obj/effect/floor_decal/industrial/hatch/blue,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
+/area/SouthernCrossV2/Engineering/Central_Engineering_Post)
 "eYk" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
-"eYQ" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals10{
-	dir = 1
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals10{
-	dir = 8
-	},
-/turf/simulated/floor/wood/alt,
-/area/SouthernCrossV2/Domicile/Chomp_Dinner_2)
+/area/SouthernCrossV2/Engineering/Central_Engineering_Post)
 "eYR" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -15420,14 +15444,13 @@
 	dir = 1;
 	pixel_y = -22
 	},
-/obj/machinery/shield_capacitor{
-	dir = 1
-	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/light{
 	name = "1S-light fixture"
 	},
-/obj/structure/cable,
+/obj/machinery/shield_capacitor{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Bridge_Substation)
 "eZc" = (
@@ -15592,6 +15615,14 @@
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Central_3_Deck_Hall)
+"fbb" = (
+/obj/machinery/hologram/holopad,
+/obj/effect/floor_decal/shuttle/blue{
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/SouthernCrossV2/Domicile/Chomp_Dinner_2)
 "fbg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -15637,14 +15668,20 @@
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/SouthernCrossV2/Domicile/Dormitory_03)
 "fbp" = (
-/obj/structure/ladder{
-	pixel_y = 3
+/obj/structure/railing/grey{
+	color = "yellow";
+	dir = 8
 	},
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/sign/small/warning/emerg_only{
-	pixel_y = -32
+/obj/structure/railing/grey{
+	color = "yellow"
 	},
-/turf/simulated/floor/tiled/techfloor/grid,
+/obj/structure/cable/green{
+	d1 = 32;
+	d2 = 2;
+	icon_state = "32-2"
+	},
+/obj/structure/lattice,
+/turf/simulated/open,
 /area/SouthernCrossV2/Maints/Deck3_Center_Star)
 "fbz" = (
 /obj/item/frame/noticeboard,
@@ -15852,19 +15889,6 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/SouthernCrossV2/Bridge/HoS_Quarters)
-"fdI" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/orange/border{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "fdM" = (
 /obj/structure/railing/grey{
 	color = "yellow"
@@ -16396,15 +16420,11 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Bridge/Leisure_Room)
 "fkS" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 10
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
+/turf/simulated/floor/carpet/brown,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "fkV" = (
 /obj/structure/cable/cyan{
 	d1 = 1;
@@ -16515,18 +16535,9 @@
 /turf/simulated/floor/carpet/oracarpet,
 /area/SouthernCrossV2/Domicile/Dormitory_03)
 "fmC" = (
-/obj/structure/table/rack/shelf,
-/obj/random/maintenance/engineering,
-/obj/random/maintenance/clean,
-/obj/random/maintenance/cargo,
-/obj/random/mainttoyloot,
-/obj/random/thermalponcho,
-/obj/random/trash,
-/obj/random/trash,
-/obj/random/contraband,
-/obj/random/fishing_junk,
-/turf/simulated/floor/plating,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
+/obj/structure/table/woodentable,
+/turf/simulated/floor/carpet/brown,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "fmH" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
@@ -16930,13 +16941,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_AftStarCorridor1)
-"frp" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "frv" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -17370,6 +17374,17 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/SouthernCrossV2/Engineering/Engine_Tech_Storage)
+"fyW" = (
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/obj/machinery/ai_status_display{
+	name = "1S-AI display";
+	pixel_y = -32
+	},
+/turf/simulated/floor/wood/alt,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "fzi" = (
 /obj/structure/sign/directions/dorms{
 	dir = 8
@@ -17402,15 +17417,6 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/effect/floor_decal/borderfloor/corner2{
-	dir = 8
-	},
-/obj/effect/floor_decal/borderfloor/corner2{
-	dir = 10
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central2{
 	dir = 4
 	},
 /turf/simulated/floor/wood/alt,
@@ -17515,6 +17521,11 @@
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/borderfloorwhite/corner2,
 /obj/effect/floor_decal/corner/white/bordercorner2,
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Medical/Autoresleeving)
 "fBj" = (
@@ -18072,7 +18083,10 @@
 	dir = 1;
 	name = "1N-lighting fixture"
 	},
-/turf/simulated/floor/glass/reinforced,
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Bridge/Control_Atrium)
 "fIy" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
@@ -18148,7 +18162,7 @@
 /area/SouthernCrossV2/Bridge/Leisure_Room)
 "fJR" = (
 /turf/simulated/wall,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
+/area/SouthernCrossV2/Engineering/Central_Engineering_Post)
 "fKp" = (
 /obj/random/trash,
 /turf/simulated/floor/plating,
@@ -18291,15 +18305,6 @@
 /obj/effect/floor_decal/spline/fancy,
 /turf/simulated/floor/carpet/blucarpet,
 /area/SouthernCrossV2/Medical/Autoresleeving)
-"fLJ" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/effect/floor_decal/industrial/arrows/yellow,
-/obj/effect/floor_decal/industrial/arrows/yellow{
-	dir = 1
-	},
-/obj/machinery/door/airlock/maintenance/common,
-/turf/simulated/floor/tiled/techmaint,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "fLK" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -18441,6 +18446,11 @@
 /obj/effect/floor_decal/techfloor/orange/corner{
 	dir = 1
 	},
+/obj/structure/closet/emergsuit_wall{
+	dir = 1;
+	pixel_y = -27;
+	name = "1S-emergency suit storage"
+	},
 /turf/simulated/floor/wood/alt,
 /area/SouthernCrossV2/Medical/Autoresleeving)
 "fNI" = (
@@ -18497,16 +18507,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Medical/Autoresleeving)
-"fPf" = (
-/obj/structure/table/marble,
-/obj/machinery/door/blast/gate/thin{
-	id = "sc-GCkitchen";
-	layer = 3.3;
-	name = "Kitchen Shutters";
-	dir = 8
-	},
-/turf/simulated/floor/tiled/steel_grid,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "fPi" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -18891,6 +18891,12 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Medical/Surgery_Storage)
+"fVJ" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/turf/simulated/floor/wood/alt,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "fVO" = (
 /obj/machinery/iv_drip,
 /obj/effect/floor_decal/borderfloorwhite{
@@ -18955,7 +18961,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/effect/catwalk_plated/techmaint,
 /obj/structure/cable/green{
 	d1 = 2;
 	d2 = 4;
@@ -19432,35 +19437,14 @@
 /turf/simulated/floor/wood/alt/tile,
 /area/SouthernCrossV2/Bridge/CMO_Quarters)
 "ger" = (
-/obj/structure/table/woodentable,
-/obj/item/paper_bin{
-	pixel_x = 5
-	},
-/obj/item/folder{
-	pixel_x = -6
-	},
-/obj/item/folder{
-	pixel_x = -6;
-	pixel_y = 3
-	},
-/obj/item/pen/blue{
-	pixel_x = 5;
-	pixel_y = 3
-	},
-/obj/item/pen/multi{
-	pixel_x = 5
-	},
-/obj/item/pen/red{
-	pixel_x = 5;
-	pixel_y = -3
-	},
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
+/obj/machinery/light/spot{
+	color = "#ccc9ff";
+	desc = "An extra bright lighting fixture."
 	},
 /turf/simulated/floor/wood/alt,
 /area/SouthernCrossV2/Domicile/Chomp_Lounge)
@@ -19696,6 +19680,11 @@
 /obj/effect/floor_decal/corner/white/border{
 	dir = 1
 	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Central_3_Deck_Hall)
 "gjw" = (
@@ -19791,6 +19780,11 @@
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 9
 	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Central_3_Deck_Hall)
 "glb" = (
@@ -19816,12 +19810,9 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/SouthernCrossV2/Commons/Stairwell_Star)
 "glv" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6
-	},
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/simulated/floor/carpet/brown,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "glw" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 1
@@ -20006,7 +19997,7 @@
 	c_tag = "D3-Brd-Control Room1";
 	network = list("Bridge")
 	},
-/turf/simulated/floor/glass/reinforced,
+/turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Bridge/Control_Atrium)
 "goM" = (
 /obj/machinery/door/firedoor/border_only,
@@ -20098,9 +20089,6 @@
 /turf/simulated/floor/carpet/tealcarpet,
 /area/SouthernCrossV2/Bridge/Secretary_Quarters)
 "gpR" = (
-/obj/machinery/computer/arcade{
-	dir = 1
-	},
 /obj/machinery/firealarm{
 	dir = 8;
 	name = "W-fire alarm";
@@ -20108,6 +20096,9 @@
 	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
+	},
+/obj/item/stool/padded{
+	dir = 4
 	},
 /turf/simulated/floor/carpet/oracarpet,
 /area/SouthernCrossV2/Domicile/Chomp_Dinner_1)
@@ -20547,6 +20538,22 @@
 /obj/machinery/atmospherics/valve/open,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_ForStarChamber2)
+"gys" = (
+/obj/machinery/power/sensor{
+	name = "Powernet Sensor - Central Subgrid";
+	name_tag = "Central Subgrid"
+	},
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Engineering/Central_Engineering_Post)
 "gyA" = (
 /obj/machinery/atmospherics/omni/atmos_filter{
 	tag_north = 1;
@@ -21218,6 +21225,11 @@
 /obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 4
 	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Central_3_Deck_Hall)
 "gJp" = (
@@ -21498,7 +21510,7 @@
 	dir = 4;
 	name = "1E-light fixture"
 	},
-/turf/simulated/floor/wood/alt/parquet,
+/turf/simulated/floor/wood/alt/parquet/turfpack/airless,
 /area/SouthernCrossV2/Bridge/Captain_Office)
 "gMX" = (
 /obj/machinery/portable_atmospherics/canister/air/airlock,
@@ -21529,19 +21541,11 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_AftStarCorridor2)
 "gNz" = (
-/obj/structure/ladder{
-	pixel_y = 3
-	},
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/sign/small/warning/emerg_only{
 	desc = "Ladder for emergency use only";
 	pixel_y = -32
 	},
-/obj/structure/sign/small/warning/emerg_only{
-	desc = "Ladder for emergency use only";
-	pixel_x = 32
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/simulated/floor/plating,
 /area/SouthernCrossV2/Harbor/Port_3_Deck_Airlock_Access)
 "gNI" = (
 /obj/effect/floor_decal/spline/fancy{
@@ -21729,30 +21733,10 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Medical_AftPortChamber1)
 "gSb" = (
-/obj/structure/railing,
-/obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
-	},
-/turf/simulated/open,
-/area/SouthernCrossV2/Domicile/Chomp_Dinner_2)
-"gSd" = (
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 24
-	},
-/obj/machinery/light_switch{
-	name = "N-light switch";
-	pixel_x = 12;
-	pixel_y = 27
-	},
-/obj/structure/cable/green{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/turf/simulated/floor/wood/alt,
-/area/SouthernCrossV2/Domicile/Chomp_Dinner_2)
+/obj/random/trash_pile,
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Deck3_Medical_ForStarChamber3)
 "gSg" = (
 /turf/simulated/wall,
 /area/SouthernCrossV2/Maints/Deck3_Medical_AftPortChamber2)
@@ -22210,6 +22194,12 @@
 	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/SouthernCrossV2/Domicile/Dormitory_09)
+"gYY" = (
+/obj/random/trash_pile,
+/obj/random/junk,
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Deck3_Engineering_AftStarCorridor1)
 "gZd" = (
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_AftStarCorridor1)
@@ -22320,7 +22310,7 @@
 /turf/simulated/floor/tiled/old_cargo,
 /area/SouthernCrossV2/Medical/Deck3_Corridor)
 "hcx" = (
-/obj/machinery/vending/snlvend,
+/obj/structure/table/woodentable,
 /turf/simulated/floor/wood/alt,
 /area/SouthernCrossV2/Domicile/Chomp_Lounge)
 "hcC" = (
@@ -22339,29 +22329,17 @@
 /obj/machinery/status_display,
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Engineering/Engine2_Waste_Handling)
+"hdW" = (
+/obj/random/trash_pile,
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Deck3_Bridge_AftPortCorridor1)
 "hex" = (
 /obj/structure/toilet{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/SouthernCrossV2/Domicile/Dormitory_09)
-"heB" = (
-/obj/structure/table/marble,
-/obj/item/reagent_containers/food/snacks/concha{
-	color = "orange";
-	desc = "A sweet bread roll baked with a tamarind topping thats crunchy and delicious, it kinda looks like a shell.";
-	name = "gummy concha";
-	nutriment_desc = list("sweet    bread" = 3, "tamarind" = 2, "gummy" = 1);
-	pixel_y = 10
-	},
-/obj/machinery/door/blast/gate/thin{
-	id = "sc-GCkitchen";
-	layer = 3.3;
-	name = "Kitchen Shutters";
-	dir = 8
-	},
-/turf/simulated/floor/tiled/steel_grid,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "heC" = (
 /obj/machinery/power/emitter,
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -22846,6 +22824,12 @@
 	},
 /turf/simulated/floor/wood/alt,
 /area/SouthernCrossV2/Commons/Star_Breakroom)
+"hnD" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/turf/simulated/floor/wood/alt,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "hnK" = (
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Central_3_Deck_Hall)
@@ -22887,11 +22871,11 @@
 	name = "1S-entertainment monitor";
 	pixel_y = -36
 	},
-/obj/machinery/computer/arcade{
-	dir = 1
-	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
+	},
+/obj/machinery/computer/arcade/orion_trail{
+	dir = 8
 	},
 /turf/simulated/floor/carpet/oracarpet,
 /area/SouthernCrossV2/Domicile/Chomp_Dinner_1)
@@ -23529,7 +23513,7 @@
 	dir = 8;
 	pixel_x = 22
 	},
-/turf/simulated/floor/glass/reinforced,
+/turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Aft_3_Deck_Central_Corridor_1)
 "hBe" = (
 /obj/effect/floor_decal/techfloor/orange,
@@ -23667,11 +23651,6 @@
 /area/SouthernCrossV2/Domicile/Botanical_Shop)
 "hCZ" = (
 /obj/structure/table/glass,
-/obj/structure/closet/emergsuit_wall{
-	dir = 4;
-	pixel_x = 27;
-	name = "1E-emergency suit storage"
-	},
 /obj/machinery/alarm{
 	pixel_y = 22
 	},
@@ -24325,16 +24304,6 @@
 	},
 /turf/simulated/floor/airless,
 /area/SouthernCrossV2/Engineering/Solar_Control_ForPort)
-"hNz" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 10
-	},
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "hNR" = (
 /obj/machinery/door/firedoor/multi_tile/glass,
 /obj/effect/floor_decal/industrial/arrows/blue,
@@ -24622,11 +24591,6 @@
 /turf/space,
 /area/space)
 "hSo" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
@@ -24637,6 +24601,7 @@
 /obj/effect/floor_decal/corner/paleblue/bordercorner{
 	dir = 1
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Medical/Aft_Medical_Post)
 "hSA" = (
@@ -25003,12 +24968,12 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/effect/catwalk_plated/techmaint,
 /obj/structure/cable/green{
-	d1 = 4;
+	d1 = 1;
 	d2 = 8;
-	icon_state = "4-8"
+	icon_state = "1-8"
 	},
+/obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Center_Port)
 "hYW" = (
@@ -25120,20 +25085,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Center_Star)
 "iaG" = (
-/obj/structure/table/marble,
-/obj/machinery/chemical_dispenser/bar_alc/full{
-	dir = 1;
-	pixel_y = -10
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 6
 	},
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/obj/effect/floor_decal/borderfloorwhite,
-/obj/effect/floor_decal/corner/orange/border,
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
+/turf/simulated/floor/carpet/brown,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "iaH" = (
 /obj/machinery/door/firedoor/glass/hidden/steel{
 	dir = 2
@@ -25393,11 +25352,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Medical/Resleeving)
-"idY" = (
-/obj/structure/table/marble,
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "iea" = (
 /obj/effect/floor_decal/industrial/warning/color/corner,
 /obj/structure/sign/directions/engineering/solars,
@@ -25679,6 +25633,7 @@
 	color = "yellow";
 	dir = 8
 	},
+/obj/structure/lattice,
 /turf/simulated/open,
 /area/SouthernCrossV2/Maints/Deck3_Dorms_ForCorridor1)
 "iiF" = (
@@ -25784,19 +25739,11 @@
 /turf/simulated/wall,
 /area/SouthernCrossV2/Commons/Central_3_Deck_Hall)
 "ikQ" = (
-/obj/machinery/door/firedoor/glass,
-/obj/effect/floor_decal/industrial/arrows/blue{
-	dir = 1
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
 	},
-/obj/effect/floor_decal/industrial/arrows/blue,
-/obj/machinery/door/airlock/freezer{
-	name = "Kitchen cold room";
-	req_access = list(28)
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/tiled/techmaint,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
+/turf/simulated/floor/carpet/brown,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "ikS" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -26404,7 +26351,7 @@
 	dir = 4;
 	pixel_x = -22
 	},
-/turf/simulated/floor/glass/reinforced,
+/turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Aft_3_Deck_Central_Corridor_1)
 "ivZ" = (
 /obj/structure/table/steel,
@@ -26442,6 +26389,19 @@
 	},
 /turf/simulated/open,
 /area/SouthernCrossV2/Maints/Deck3_Center_Star)
+"iwI" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/glass/hidden/steel,
+/obj/structure/curtain/black{
+	icon_state = "open";
+	layer = 2;
+	name = "privacy curtain";
+	opacity = 0
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "ixc" = (
 /obj/structure/bed/chair/comfy/beige,
 /obj/effect/floor_decal/borderfloorblack{
@@ -26922,23 +26882,6 @@
 	color = "#8bbbd5"
 	},
 /area/SouthernCrossV2/Medical/Virology)
-"iDp" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/effect/floor_decal/borderfloorwhite/corner2{
-	dir = 1
-	},
-/obj/effect/floor_decal/borderfloorwhite/corner2{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/white/bordercorner2{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/white/bordercorner2{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/freezer,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "iDv" = (
 /obj/machinery/status_display{
 	layer = 4;
@@ -27111,10 +27054,6 @@
 /obj/machinery/floodlight,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Dorms_AftPortChamber1)
-"iGW" = (
-/obj/structure/table/woodentable,
-/turf/simulated/floor/wood/alt,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "iHm" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black,
 /turf/simulated/floor/reinforced/airless,
@@ -27295,7 +27234,6 @@
 /obj/machinery/door/airlock/angled_bay/double/glass/command{
 	dir = 8;
 	name = "Stairwell";
-	req_one_access = list(5,1,11,24,19);
 	req_access = null
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -27717,43 +27655,6 @@
 	},
 /turf/simulated/floor/wood/alt/parquet,
 /area/SouthernCrossV2/Domicile/Dormitory_03)
-"iRF" = (
-/obj/machinery/power/apc{
-	name = "south bump";
-	pixel_y = -24
-	},
-/obj/machinery/light_switch{
-	dir = 1;
-	name = "S-light switch";
-	pixel_x = 11;
-	pixel_y = -27
-	},
-/obj/machinery/button/windowtint{
-	id = "sc-WTkitchen";
-	name = "S-window tint control";
-	pixel_x = -12;
-	pixel_y = -26;
-	range = 10
-	},
-/obj/structure/cable/green{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5
-	},
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/obj/effect/floor_decal/borderfloorwhite/corner{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/orange/bordercorner{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "iRJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -28171,22 +28072,6 @@
 	},
 /turf/simulated/floor/wood/alt/parquet,
 /area/SouthernCrossV2/Bridge/Captain_Office)
-"iXE" = (
-/obj/item/stool/padded{
-	dir = 4
-	},
-/obj/effect/landmark/start{
-	name = "Chef"
-	},
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/orange/border{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "iXG" = (
 /obj/item/radio/intercom{
 	dir = 4;
@@ -28606,6 +28491,11 @@
 	},
 /turf/simulated/floor/wood/alt,
 /area/SouthernCrossV2/Medical/Patient_1)
+"jgh" = (
+/obj/random/trash_pile,
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Deck3_Center_Star)
 "jgo" = (
 /obj/machinery/computer/atmos_alert,
 /obj/effect/floor_decal/borderfloor{
@@ -29363,13 +29253,10 @@
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Bridge/Embassy)
 "jsw" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/wood/alt,
-/area/SouthernCrossV2/Domicile/Chomp_Dinner_2)
+/obj/random/trash_pile,
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Deck3_Dorms_ForStarChamber2)
 "jta" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -29816,7 +29703,6 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Atmospherics_Chamber)
 "jzA" = (
-/obj/machinery/light,
 /obj/machinery/ai_status_display{
 	name = "1S-AI display";
 	pixel_y = -32
@@ -30114,16 +30000,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Atmospherics_Chamber)
-"jET" = (
-/obj/structure/table/marble,
-/obj/machinery/door/blast/gate/thin{
-	id = "sc-GCkitchen";
-	layer = 3.3;
-	name = "Kitchen Shutters";
-	dir = 4
-	},
-/turf/simulated/floor/tiled/steel_grid,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "jEU" = (
 /obj/effect/floor_decal/industrial/hatch/red,
 /obj/machinery/door/firedoor/border_only,
@@ -30158,22 +30034,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Engine2_Waste_Handling)
-"jFm" = (
-/obj/structure/table/rack/shelf,
-/obj/machinery/light/small,
-/obj/random/maintenance/engineering,
-/obj/random/maintenance/clean,
-/obj/random/maintenance/security,
-/obj/random/maintenance/misc,
-/obj/random/trash,
-/obj/random/trash,
-/obj/random/flashlight,
-/obj/random/drinksoft,
-/obj/random/drinksoft,
-/obj/random/fishing_junk,
-/obj/random/snack,
-/turf/simulated/floor/plating,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "jFq" = (
 /obj/machinery/atmospherics/pipe/simple/visible/universal{
 	dir = 4
@@ -30269,12 +30129,12 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/effect/catwalk_plated/techmaint,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Center_Port)
 "jGq" = (
@@ -30613,6 +30473,11 @@
 	},
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Central_3_Deck_Hall)
@@ -31013,28 +30878,21 @@
 /turf/simulated/wall,
 /area/SouthernCrossV2/Maints/Deck3_Dorms_AftPortChamber1)
 "jTD" = (
-/obj/machinery/power/apc{
-	dir = 8;
-	name = "west bump";
-	pixel_x = -24
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 5
-	},
-/obj/machinery/light_switch{
-	pixel_x = -27;
-	pixel_y = 12;
-	name = "W-light switch";
-	dir = 4
-	},
-/obj/structure/cable/green{
-	d2 = 4;
-	icon_state = "0-4"
 	},
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/paleblue/border,
 /obj/effect/floor_decal/industrial/outline/cut_corners/blue,
 /obj/effect/floor_decal/industrial/loading/blue,
+/obj/machinery/disposal/wall{
+	dir = 4;
+	name = "1W-inset disposal unit";
+	pixel_x = -34
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Medical/Aft_Medical_Post)
 "jUf" = (
@@ -31098,14 +30956,8 @@
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Bridge/Control_Atrium)
 "jVq" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/effect/catwalk_plated/techmaint,
-/turf/simulated/floor/plating,
-/area/SouthernCrossV2/Maints/Deck3_Center_Port)
+/turf/simulated/floor/wood/alt,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "jVt" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/arrows/red{
@@ -32038,11 +31890,17 @@
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Engineering/Engine_Tech_Storage)
 "kle" = (
-/obj/item/reagent_containers/cooking_container/grill,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
+/obj/machinery/atmospherics/pipe/zpipe/down/supply,
+/obj/machinery/atmospherics/pipe/zpipe/down/scrubbers,
+/obj/structure/disposalpipe/down{
+	dir = 2
+	},
+/obj/structure/railing/grey{
+	color = "yellow"
+	},
+/obj/structure/lattice,
+/turf/simulated/open,
+/area/SouthernCrossV2/Maints/Deck3_Center_Star)
 "klh" = (
 /obj/machinery/vending/assist,
 /turf/simulated/floor/tiled/dark,
@@ -32265,27 +32123,11 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Commons/Stairwell_Port)
 "kpt" = (
-/obj/structure/table/bench/glass,
-/obj/structure/flora/pottedplant/bamboo{
-	name = "Namala";
-	pixel_y = 10
-	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/simulated/floor/wood/alt,
-/area/SouthernCrossV2/Domicile/Chomp_Dinner_2)
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "kpC" = (
 /obj/machinery/honey_extractor,
 /turf/simulated/floor/tiled/hydro,
@@ -32298,6 +32140,11 @@
 	},
 /obj/effect/floor_decal/techfloor/orange/corner{
 	dir = 1
+	},
+/obj/structure/closet/emergsuit_wall{
+	dir = 1;
+	pixel_y = -27;
+	name = "1S-emergency suit storage"
 	},
 /turf/simulated/floor/wood/alt/tile,
 /area/SouthernCrossV2/Medical/Autoresleeving)
@@ -33161,16 +33008,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full/blue,
 /area/SouthernCrossV2/Domicile/Central_Restroom)
-"kCR" = (
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/orange/border{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "kDg" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
@@ -33799,6 +33636,11 @@
 /obj/effect/floor_decal/corner/white/border{
 	dir = 4
 	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Central_3_Deck_Hall)
 "kOv" = (
@@ -34074,9 +33916,6 @@
 /turf/simulated/floor/airless,
 /area/SouthernCrossV2/Engineering/Solar_Control_AftStar)
 "kTm" = (
-/obj/machinery/computer/arcade{
-	dir = 1
-	},
 /obj/machinery/firealarm{
 	dir = 4;
 	name = "E-fire alarm";
@@ -34084,6 +33923,9 @@
 	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
+	},
+/obj/machinery/computer/arcade/orion_trail{
+	dir = 8
 	},
 /turf/simulated/floor/carpet/oracarpet,
 /area/SouthernCrossV2/Domicile/Chomp_Dinner_2)
@@ -34550,11 +34392,20 @@
 /turf/simulated/floor/wood/sif,
 /area/SouthernCrossV2/Bridge/RD_Quarters)
 "laA" = (
-/obj/machinery/light{
-	dir = 8
+/obj/machinery/door/firedoor/glass/hidden/steel{
+	dir = 1
 	},
-/turf/simulated/floor/wood/alt,
-/area/SouthernCrossV2/Domicile/Chomp_Dinner_2)
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/curtain/black{
+	icon_state = "open";
+	layer = 2;
+	name = "privacy curtain";
+	opacity = 0
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "laM" = (
 /obj/machinery/hologram/holopad,
 /obj/effect/floor_decal/shuttle/blue{
@@ -34775,22 +34626,19 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Bridge_ForStarChamber1)
 "lea" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+/obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 4
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
-/turf/simulated/floor/wood/alt,
-/area/SouthernCrossV2/Domicile/Chomp_Dinner_2)
+/turf/simulated/floor/tiled,
+/area/SouthernCrossV2/Commons/Central_3_Deck_Hall)
 "lef" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -35135,7 +34983,7 @@
 /obj/item/melee/cultblade{
 	icon_state = "longsword"
 	},
-/turf/simulated/floor/wood/alt/parquet,
+/turf/simulated/floor/wood/alt/parquet/turfpack/airless,
 /area/SouthernCrossV2/Bridge/Captain_Office)
 "lkh" = (
 /obj/structure/lattice,
@@ -35410,6 +35258,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Domicile/Dorm_Foyer)
@@ -35840,12 +35691,20 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Dorms_ForStarChamber2)
 "lxz" = (
-/obj/machinery/disposal,
-/obj/structure/disposalpipe/trunk{
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/turf/simulated/floor/wood/alt,
-/area/SouthernCrossV2/Domicile/Chomp_Lounge)
+/obj/machinery/door/firedoor/glass/hidden/steel{
+	dir = 8
+	},
+/obj/structure/curtain/black{
+	icon_state = "open";
+	layer = 2;
+	name = "privacy curtain";
+	opacity = 0
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "lxJ" = (
 /obj/machinery/alarm{
 	dir = 8;
@@ -35930,6 +35789,11 @@
 /obj/effect/floor_decal/industrial/outline/blue,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Bridge_Substation)
+"lyw" = (
+/obj/random/trash_pile,
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Deck3_Dorms_AftPortChamber1)
 "lyD" = (
 /obj/structure/cable/yellow{
 	d1 = 2;
@@ -36015,7 +35879,7 @@
 /turf/simulated/floor/reinforced/airless,
 /area/space)
 "lzK" = (
-/obj/machinery/smartfridge/produce,
+/obj/machinery/smartfridge/produce/persistent_lossy,
 /turf/simulated/wall,
 /area/SouthernCrossV2/Domicile/Botanical_Shop)
 "lzM" = (
@@ -36284,6 +36148,18 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central2,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Aft_3_Deck_Central_Corridor_1)
+"lDw" = (
+/obj/machinery/door/firedoor/glass/hidden/steel{
+	dir = 8
+	},
+/obj/structure/curtain/black{
+	icon_state = "open";
+	layer = 2;
+	name = "privacy curtain";
+	opacity = 0
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "lDy" = (
 /obj/structure/railing{
 	dir = 8
@@ -37858,11 +37734,14 @@
 /area/SouthernCrossV2/Bridge/CMO_Quarters)
 "lZW" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
-/obj/machinery/light,
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = -22
+	},
+/obj/machinery/light/spot{
+	color = "#ccc9ff";
+	desc = "An extra bright lighting fixture."
 	},
 /turf/simulated/floor/grass2,
 /area/SouthernCrossV2/Domicile/Public_Hydroponics)
@@ -38189,7 +38068,6 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_AftStarChamber2)
 "mep" = (
-/obj/machinery/light,
 /obj/structure/flora/ausbushes/palebush,
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
@@ -38351,10 +38229,13 @@
 /area/SouthernCrossV2/Bridge/CMO_Quarters)
 "mhn" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
-/obj/machinery/light,
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = -22
+	},
+/obj/machinery/light/spot{
+	color = "#ccc9ff";
+	desc = "An extra bright lighting fixture."
 	},
 /turf/simulated/floor/grass2,
 /area/SouthernCrossV2/Domicile/Public_Hydroponics)
@@ -38550,11 +38431,6 @@
 /area/SouthernCrossV2/Commons/Star_Breakroom)
 "mjm" = (
 /obj/structure/table/glass,
-/obj/structure/closet/emergsuit_wall{
-	dir = 4;
-	pixel_x = 27;
-	name = "1E-emergency suit storage"
-	},
 /obj/machinery/alarm{
 	pixel_y = 22
 	},
@@ -38608,8 +38484,31 @@
 /turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_ForStarChamber2)
 "mjJ" = (
-/obj/structure/table/steel,
-/obj/structure/bedsheetbin,
+/obj/structure/closet/crate,
+/obj/item/storage/box/lights/mixed,
+/obj/item/flashlight,
+/obj/item/flashlight,
+/obj/item/radio{
+	frequency = 1487;
+	icon_state = "med_walkietalkie";
+	name = "Medbay Emergency Radio Link"
+	},
+/obj/item/radio{
+	frequency = 1487;
+	icon_state = "med_walkietalkie";
+	name = "Medbay Emergency Radio Link"
+	},
+/obj/item/tool/crowbar/red,
+/obj/item/tool/crowbar/red,
+/obj/item/clothing/suit/straight_jacket,
+/obj/item/clothing/suit/straight_jacket,
+/obj/item/clothing/mask/muzzle{
+	pixel_y = 2
+	},
+/obj/item/clothing/mask/muzzle{
+	pixel_y = -2
+	},
+/obj/item/circuitboard/resleeving_control,
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
 	},
@@ -38897,14 +38796,6 @@
 "mmB" = (
 /turf/simulated/wall,
 /area/SouthernCrossV2/Engineering/Construction_Area)
-"mmK" = (
-/obj/machinery/alarm{
-	dir = 8;
-	pixel_x = 22
-	},
-/obj/machinery/icecream_vat,
-/turf/simulated/floor/plating,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "mmM" = (
 /obj/effect/landmark/event_spawn/morphspawn,
 /obj/structure/cable/white{
@@ -38987,6 +38878,14 @@
 	},
 /turf/simulated/open,
 /area/SouthernCrossV2/Domicile/Dorm_Foyer)
+"mny" = (
+/obj/machinery/light/spot{
+	dir = 8;
+	color = "#ccc9ff";
+	desc = "An extra bright lighting fixture."
+	},
+/turf/simulated/floor/wood/alt,
+/area/SouthernCrossV2/Domicile/Chomp_Dinner_2)
 "mnF" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -39643,20 +39542,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/SouthernCrossV2/Engineering/Engine_Tech_Storage)
-"mzR" = (
-/obj/machinery/smartfridge/drinks/showcase,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/orange/border{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "mzY" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -39989,18 +39874,6 @@
 	},
 /turf/simulated/open,
 /area/SouthernCrossV2/Engineering/Atmospherics_Substation)
-"mFn" = (
-/obj/machinery/appliance/cooker/grill,
-/obj/machinery/firealarm{
-	dir = 1;
-	name = "S-fire alarm";
-	pixel_y = -25
-	},
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/obj/effect/floor_decal/borderfloorwhite,
-/obj/effect/floor_decal/corner/orange/border,
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "mFz" = (
 /obj/effect/catwalk_plated/techmaint,
 /obj/structure/cable/green{
@@ -40093,20 +39966,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/SouthernCrossV2/Bridge/AI_Core_Chamber)
-"mGN" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/effect/floor_decal/borderfloorwhite/corner2,
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/obj/effect/floor_decal/borderfloorwhite/corner2{
-	dir = 9
-	},
-/obj/effect/floor_decal/corner/white/bordercorner2,
-/obj/effect/floor_decal/corner/white/bordercorner2{
-	dir = 9
-	},
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "mGO" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
@@ -40325,6 +40184,22 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/SouthernCrossV2/Bridge/RD_Quarters)
+"mKX" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/wood/alt,
+/area/SouthernCrossV2/Domicile/Chomp_Dinner_2)
 "mLq" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/borderfloor/corner2,
@@ -40376,23 +40251,10 @@
 /turf/simulated/floor/carpet/sblucarpet,
 /area/SouthernCrossV2/Medical/Psych_Room_2)
 "mMn" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/effect/floor_decal/industrial/hatch,
-/obj/structure/grille,
-/obj/structure/window/titanium/full,
-/obj/structure/window/titanium,
-/obj/structure/window/titanium{
-	dir = 4
-	},
-/obj/structure/window/titanium{
-	dir = 1
-	},
-/obj/structure/window/titanium{
-	dir = 8
-	},
-/obj/structure/sign/double/barsign,
-/turf/simulated/floor/plating,
-/area/SouthernCrossV2/Domicile/Chomp_Lounge)
+/obj/structure/lattice,
+/obj/machinery/shield_diffuser,
+/turf/simulated/floor/airless,
+/area/space)
 "mMo" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -41679,14 +41541,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Medical_ForChamber1)
-"niI" = (
-/obj/machinery/light{
-	dir = 4;
-	layer = 3
-	},
-/obj/structure/table/woodentable,
-/turf/simulated/floor/wood/alt,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "niM" = (
 /obj/structure/bed/double/padded{
 	pixel_x = 10;
@@ -42182,10 +42036,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Domicile/Observation_Lounge)
-"nrR" = (
-/obj/effect/floor_decal/steeldecal/steel_decals_central2,
-/turf/simulated/floor/glass/reinforced,
-/area/SouthernCrossV2/Commons/Aft_3_Deck_Central_Corridor_1)
 "nrZ" = (
 /obj/structure/cable/pink{
 	d1 = 1;
@@ -42218,7 +42068,8 @@
 	},
 /obj/machinery/access_button{
 	pixel_y = -24;
-	dir = 1
+	dir = 1;
+	req_one_access = list(1,19)
 	},
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/effect/map_helper/airlock/button/ext_button{
@@ -42310,11 +42161,6 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Bridge_AftStarCorridor1)
 "nuH" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 8
@@ -42322,6 +42168,7 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Medical/Aft_Medical_Post)
 "nuL" = (
@@ -42409,7 +42256,7 @@
 	c_tag = "D3-Com-Aft Hall2";
 	network = list("Commons")
 	},
-/turf/simulated/floor/glass/reinforced,
+/turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Aft_3_Deck_Central_Corridor_1)
 "nwN" = (
 /obj/structure/girder/reinforced,
@@ -42576,7 +42423,8 @@
 	},
 /obj/machinery/access_button{
 	pixel_y = -24;
-	dir = 1
+	dir = 1;
+	req_one_access = list(1,19)
 	},
 /obj/effect/map_helper/airlock/door/int_door,
 /obj/effect/map_helper/airlock/button/int_button{
@@ -42652,7 +42500,7 @@
 	pixel_x = 6;
 	pixel_y = 9
 	},
-/turf/simulated/floor/glass/reinforced,
+/turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Bridge/Control_Atrium)
 "nzU" = (
 /obj/machinery/vending/loadout/uniform,
@@ -42776,20 +42624,23 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Bridge/Deck3_Corridor)
-"nBp" = (
-/obj/structure/closet/secure_closet/freezer/fridge,
-/obj/structure/disposalpipe/segment{
+"nBA" = (
+/obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 1
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 4
 	},
-/obj/effect/floor_decal/corner/orange/border{
-	dir = 1
+/obj/machinery/light{
+	dir = 4
 	},
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled,
+/area/SouthernCrossV2/Commons/Central_3_Deck_Hall)
 "nBF" = (
 /obj/machinery/light{
 	name = "1S-light fixture"
@@ -43132,6 +42983,10 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central2{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Domicile/Dorm_Foyer)
 "nGx" = (
@@ -43243,11 +43098,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Dorms_AftCorridor1)
-"nHS" = (
-/obj/machinery/appliance/mixer/candy,
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "nHT" = (
 /obj/structure/table/standard,
 /obj/random/unidentified_medicine,
@@ -43379,15 +43229,20 @@
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Commons/Port_Breakroom)
 "nJU" = (
-/obj/item/clothing/suit/storage/hooded/foodcostume/turnip{
-	pixel_x = 1
+/obj/structure/closet/firecloset/full/atmos{
+	req_one_access = list(10)
 	},
-/obj/item/clothing/head/hood_vr/turnip_hood{
-	pixel_x = 1
+/obj/item/taperoll/engineering{
+	pixel_x = -4;
+	pixel_y = -8
 	},
-/obj/structure/closet/wardrobe/mixed,
+/obj/item/taperoll/engineering{
+	pixel_x = -2;
+	pixel_y = -6
+	},
+/obj/effect/floor_decal/industrial/hatch/blue,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
+/area/SouthernCrossV2/Engineering/Central_Engineering_Post)
 "nKQ" = (
 /obj/effect/catwalk_plated/techmaint,
 /obj/structure/cable/green{
@@ -43397,23 +43252,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_AftStarChamber3)
-"nKZ" = (
-/obj/structure/closet/secure_closet/freezer/meat,
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/orange/border{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "nLt" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -43643,16 +43481,15 @@
 /area/SouthernCrossV2/Medical/Virology)
 "nPk" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10
+	dir = 9
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 10
+	dir = 9
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
+	dir = 1;
 	icon_state = "pipe-c"
 	},
-/obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Center_Star)
 "nPl" = (
@@ -44050,19 +43887,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Domicile/Dorm_Foyer)
-"nVv" = (
-/obj/structure/table/marble,
-/obj/item/material/knife/butch{
-	pixel_x = 3;
-	pixel_y = -2
-	},
-/obj/item/material/kitchen/rollingpin{
-	pixel_x = -2;
-	pixel_y = 4
-	},
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "nVH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -44100,15 +43924,6 @@
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/airless,
 /area/SouthernCrossV2/Engineering/Solar_Control_AftPort)
-"nVQ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 9
-	},
-/turf/simulated/floor/tiled/freezer,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "nVV" = (
 /obj/structure/bed/chair/sofa/right/blue{
 	dir = 4
@@ -44342,12 +44157,6 @@
 	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/SouthernCrossV2/Domicile/Dormitory_08)
-"nZD" = (
-/obj/structure/sign/goldenplaque{
-	pixel_y = -32
-	},
-/turf/simulated/floor/wood/alt,
-/area/SouthernCrossV2/Domicile/Chomp_Dinner_2)
 "nZG" = (
 /obj/structure/table/standard,
 /obj/fiftyspawner/steel,
@@ -45168,6 +44977,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Domicile/Dorm_Corridor_1)
 "olx" = (
@@ -45401,11 +45213,6 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Medical/Resleeving)
 "opj" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
@@ -45499,7 +45306,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central5{
 	dir = 1
 	},
-/turf/simulated/floor/glass/reinforced,
+/turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Bridge/Control_Atrium)
 "oqC" = (
 /obj/machinery/suit_storage_unit/engineering,
@@ -45749,11 +45556,6 @@
 /turf/simulated/wall,
 /area/SouthernCrossV2/Maints/Deck3_Medical_ForChamber2)
 "ouN" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -45827,15 +45629,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Medical/Surgery_Storage)
-"ovA" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/freezer,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "ovH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -46219,7 +46012,7 @@
 	name = "1W-Station Intercom (General)";
 	pixel_x = -22
 	},
-/turf/simulated/floor/glass/reinforced,
+/turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Aft_3_Deck_Central_Corridor_1)
 "oCp" = (
 /obj/effect/floor_decal/borderfloor{
@@ -46364,11 +46157,11 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/SouthernCrossV2/Domicile/Dormitory_10)
 "oEP" = (
-/obj/structure/table/marble,
-/obj/item/book/codex/chef_recipes,
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/simulated/floor/wood/alt,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "oFF" = (
 /obj/machinery/camera/network/security{
 	c_tag = "D3-Eng-2nd Engine3";
@@ -46485,25 +46278,16 @@
 /area/SouthernCrossV2/Medical/Genetics_Lab)
 "oHP" = (
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 4
 	},
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/wood/alt,
 /area/SouthernCrossV2/Domicile/Chomp_Dinner_2)
 "oIl" = (
@@ -46832,7 +46616,8 @@
 /obj/machinery/door/airlock/angled_bay/double/glass/command{
 	dir = 8;
 	name = "Airlock bay";
-	req_access = list(1)
+	req_access = null;
+	req_one_access = list(1,19)
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -46975,19 +46760,17 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Domicile/Dorm_Corridor_2)
 "oNI" = (
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/effect/catwalk_plated/techmaint,
-/obj/random/junk,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Center_Star)
 "oNY" = (
@@ -47687,6 +47470,15 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/wood/alt/panel,
 /area/SouthernCrossV2/Domicile/Dormitory_02)
+"pau" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/sign/poster/custom{
+	dir = 8
+	},
+/turf/simulated/open,
+/area/SouthernCrossV2/Domicile/Chomp_Dinner_1)
 "paF" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
@@ -48446,18 +48238,9 @@
 	},
 /area/SouthernCrossV2/Medical/Virology)
 "ppD" = (
-/obj/structure/table/marble,
-/obj/item/reagent_containers/dropper{
-	pixel_x = -3;
-	pixel_y = 8
-	},
-/obj/item/reagent_containers/dropper{
-	pixel_x = -1;
-	pixel_y = 6
-	},
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
+/obj/structure/table/hardwoodtable,
+/turf/simulated/floor/wood/alt,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "ppK" = (
 /obj/structure/table/woodentable,
 /obj/machinery/computer/med_data/laptop,
@@ -48513,6 +48296,7 @@
 /area/SouthernCrossV2/Domicile/Public_Garden)
 "pqS" = (
 /obj/structure/table/steel_reinforced,
+/obj/item/binoculars,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Engine1_Chamber)
 "pqT" = (
@@ -48528,19 +48312,42 @@
 /turf/simulated/wall,
 /area/SouthernCrossV2/Domicile/Dormitory_12)
 "prA" = (
-/obj/machinery/vending/boozeomat,
-/obj/structure/disposalpipe/segment{
-	dir = 4
+/obj/machinery/cell_charger{
+	pixel_y = 11
 	},
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 1
+/obj/item/cell/high{
+	charge = 100;
+	maxcharge = 15000;
+	pixel_x = 6;
+	pixel_y = -3
 	},
-/obj/effect/floor_decal/corner/orange/border{
-	dir = 1
+/obj/item/cell/high{
+	charge = 100;
+	maxcharge = 15000;
+	pixel_x = 6;
+	pixel_y = 4
 	},
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
+/obj/machinery/recharger{
+	pixel_x = -6;
+	pixel_y = -2
+	},
+/obj/structure/table/steel,
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
+	},
+/obj/structure/cable/green,
+/obj/structure/cable/green{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Engineering/Central_Engineering_Post)
 "prH" = (
 /obj/machinery/light{
 	dir = 1;
@@ -48576,12 +48383,53 @@
 /turf/simulated/wall,
 /area/SouthernCrossV2/Engineering/Engine1_Access_Hall)
 "psu" = (
-/obj/machinery/light/small{
+/obj/item/stack/material/phoron{
+	amount = 25;
+	pixel_x = 9;
+	pixel_y = -9
+	},
+/obj/item/t_scanner/upgraded{
+	pixel_x = 11;
+	pixel_y = 3
+	},
+/obj/item/clothing/glasses/meson{
+	pixel_x = -6;
+	pixel_y = -13
+	},
+/obj/item/clothing/glasses/welding{
+	pixel_x = -6;
+	pixel_y = -8
+	},
+/obj/structure/closet/crate/large/nanotrasen{
+	req_one_access = list(10)
+	},
+/obj/item/stack/material/plasteel{
+	amount = 30;
+	pixel_y = 1;
+	pixel_x = -8
+	},
+/obj/item/stack/material/steel{
+	amount = 50;
+	pixel_y = 4;
+	pixel_x = -8
+	},
+/obj/item/stack/material/glass{
+	amount = 50;
+	pixel_x = -8;
+	pixel_y = 7
+	},
+/obj/item/clothing/gloves/yellow{
+	pixel_x = -7;
+	pixel_y = 2
+	},
+/obj/item/multitool{
+	pixel_x = 4
+	},
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/foodcart,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
+/area/SouthernCrossV2/Engineering/Central_Engineering_Post)
 "psz" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
@@ -49770,7 +49618,7 @@
 	layer = 3;
 	name = "1W-light fixture"
 	},
-/turf/simulated/floor/wood/alt/parquet,
+/turf/simulated/floor/wood/alt/parquet/turfpack/airless,
 /area/SouthernCrossV2/Bridge/Captain_Office)
 "pJW" = (
 /obj/structure/table/standard,
@@ -50011,6 +49859,29 @@
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/airless,
 /area/SouthernCrossV2/Engineering/Solar_Control_ForPort)
+"pOL" = (
+/obj/structure/table/woodentable,
+/obj/item/stack/material/cardboard{
+	amount = 25
+	},
+/obj/item/tape_roll{
+	pixel_x = 3;
+	pixel_y = -5
+	},
+/obj/item/packageWrap{
+	pixel_x = -4;
+	pixel_y = 4
+	},
+/obj/item/packageWrap{
+	pixel_x = -4;
+	pixel_y = 7
+	},
+/obj/machinery/status_display{
+	name = "S-status display";
+	pixel_y = -32
+	},
+/turf/simulated/floor/wood/alt,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "pOU" = (
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Engineering/Atmospherics_Chamber)
@@ -50277,17 +50148,16 @@
 /obj/structure/window/plastitanium{
 	dir = 4
 	},
-/obj/item/toy/plushie/nymph{
-	pixel_x = -2;
-	pixel_y = 3
-	},
 /obj/structure/table/darkglass,
 /obj/machinery/camera/network/security{
 	dir = 5;
 	c_tag = "D3-Brd-Captain Office1";
 	network = list("Bridge")
 	},
-/turf/simulated/floor/wood/alt/parquet,
+/obj/item/grenade/spawnergrenade/casino/otie/chubby{
+	pixel_x = -1
+	},
+/turf/simulated/floor/wood/alt/parquet/turfpack/airless,
 /area/SouthernCrossV2/Bridge/Captain_Office)
 "pTs" = (
 /obj/structure/cable/green{
@@ -50503,15 +50373,15 @@
 /turf/simulated/floor/carpet/gaycarpet,
 /area/SouthernCrossV2/Bridge/Embassy)
 "pWI" = (
-/obj/machinery/computer/arcade{
-	dir = 1
-	},
 /obj/item/radio/intercom{
 	name = "1S-Station Intercom (General)";
 	pixel_y = -22
 	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
+	},
+/obj/item/stool/padded{
+	dir = 8
 	},
 /turf/simulated/floor/carpet/oracarpet,
 /area/SouthernCrossV2/Domicile/Chomp_Dinner_2)
@@ -50759,6 +50629,13 @@
 	},
 /turf/simulated/floor/glass,
 /area/SouthernCrossV2/Commons/Aft_3_Deck_Stairwell)
+"qbz" = (
+/obj/structure/railing,
+/obj/structure/sign/poster/custom{
+	dir = 4
+	},
+/turf/simulated/open,
+/area/SouthernCrossV2/Domicile/Chomp_Dinner_2)
 "qbV" = (
 /obj/machinery/status_display{
 	layer = 4;
@@ -50847,12 +50724,12 @@
 "qdY" = (
 /obj/machinery/light/small,
 /obj/random/junk,
-/obj/structure/cable/green{
+/obj/effect/catwalk_plated/techmaint,
+/obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Center_Port)
 "qdZ" = (
@@ -51642,6 +51519,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Harbor/For_3_Deck_Airlock_Access_2)
+"qoS" = (
+/obj/machinery/light/spot{
+	color = "#ccc9ff";
+	desc = "An extra bright lighting fixture."
+	},
+/turf/simulated/floor/wood/alt,
+/area/SouthernCrossV2/Domicile/Chomp_Lounge)
 "qph" = (
 /obj/structure/table/wooden_reinforced,
 /obj/item/storage/box/donut{
@@ -52105,11 +51989,10 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Commons/Aft_3_Deck_Central_Corridor_1)
 "qyr" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/shield_capacitor{
 	dir = 1
 	},
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/structure/cable,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Bridge_Substation)
 "qys" = (
@@ -52323,14 +52206,6 @@
 	},
 /turf/simulated/floor/reinforced/phoron,
 /area/SouthernCrossV2/Engineering/Atmospherics_Chamber)
-"qzY" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "qAc" = (
 /obj/structure/bed/padded,
 /obj/item/bedsheet/medical,
@@ -52764,7 +52639,7 @@
 	c_tag = "D3-Brd-Control Room2";
 	network = list("Bridge")
 	},
-/turf/simulated/floor/glass/reinforced,
+/turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Bridge/Control_Atrium)
 "qIt" = (
 /obj/structure/table/rack,
@@ -52864,6 +52739,20 @@
 	},
 /obj/effect/floor_decal/corner/green/bordercorner{
 	dir = 4
+	},
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24
+	},
+/obj/machinery/light_switch{
+	pixel_x = 12;
+	pixel_y = 27;
+	name = "N-light switch"
+	},
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Bridge/Leisure_Room)
@@ -53101,7 +52990,7 @@
 	c_tag = "D3-Brd-Captain Office2";
 	network = list("Bridge")
 	},
-/turf/simulated/floor/wood/alt/parquet,
+/turf/simulated/floor/wood/alt/parquet/turfpack/airless,
 /area/SouthernCrossV2/Bridge/Captain_Office)
 "qMu" = (
 /obj/structure/table/rack/shelf/steel,
@@ -53513,6 +53402,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central2{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Domicile/Dorm_Corridor_1)
 "qUB" = (
@@ -53541,8 +53433,7 @@
 /obj/effect/floor_decal/industrial/arrows/red,
 /obj/machinery/door/airlock/angled_bay/double/glass/command{
 	name = "Command Gym";
-	req_access = null;
-	req_one_access = list(19,1)
+	req_access = null
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/techmaint,
@@ -54002,7 +53893,10 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/arrows,
-/obj/machinery/door/airlock/angled_bay/external/glass/red,
+/obj/machinery/door/airlock/angled_bay/hatch/engineering{
+	name = "Solars access";
+	req_access = null
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Engineering/Solar_Control_AftStar)
 "rdp" = (
@@ -54182,7 +54076,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Harbor/Aft_3_Deck_Airlock_Access)
 "rfG" = (
-/turf/simulated/floor/glass/reinforced,
+/turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Aft_3_Deck_Central_Corridor_1)
 "rfJ" = (
 /obj/effect/floor_decal/borderfloorwhite/corner,
@@ -54480,14 +54374,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/disposalpipe/sortjunction{
-	dir = 2;
-	name = "Chomp Kitchen";
-	sortType = "Chomp Kitchen"
-	},
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/wood/alt,
 /area/SouthernCrossV2/Domicile/Chomp_Dinner_2)
 "rlj" = (
@@ -54531,6 +54421,14 @@
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Engine2_Substation)
+"rmg" = (
+/obj/machinery/hologram/holopad,
+/obj/effect/floor_decal/shuttle/blue{
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "rmj" = (
 /obj/structure/closet/emergsuit_wall{
 	dir = 8;
@@ -54928,6 +54826,15 @@
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Harbor/Port_3_Deck_Airlock_Access)
+"rpY" = (
+/obj/structure/table/hardwoodtable,
+/obj/machinery/light/spot{
+	dir = 1;
+	color = "#ccc9ff";
+	desc = "An extra bright lighting fixture."
+	},
+/turf/simulated/floor/wood/alt,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "rqh" = (
 /obj/item/handcuffs/legcuffs/fuzzy,
 /obj/item/handcuffs/legcuffs{
@@ -54999,11 +54906,6 @@
 /area/SouthernCrossV2/Bridge/Deck3_Corridor)
 "rqQ" = (
 /obj/structure/table/glass,
-/obj/structure/closet/emergsuit_wall{
-	dir = 4;
-	pixel_x = 27;
-	name = "1E-emergency suit storage"
-	},
 /obj/machinery/alarm{
 	pixel_y = 22
 	},
@@ -55027,6 +54929,11 @@
 /obj/structure/flora/ausbushes/ppflowers,
 /turf/simulated/floor/grass,
 /area/SouthernCrossV2/Domicile/Public_Garden)
+"rsu" = (
+/obj/machinery/vending/snack,
+/obj/structure/sign/poster/nanotrasen,
+/turf/simulated/floor/wood/alt,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "rsx" = (
 /obj/machinery/alarm{
 	pixel_y = 22
@@ -55149,17 +55056,10 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Dorms_AftPortChamber2)
 "ruA" = (
-/obj/machinery/hologram/holopad,
-/obj/effect/floor_decal/shuttle/blue{
-	pixel_x = -1;
-	pixel_y = 1
-	},
-/obj/effect/floor_decal/spline/plain,
-/obj/effect/floor_decal/spline/plain{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/SouthernCrossV2/Domicile/Chomp_Dinner_1)
+/obj/random/trash_pile,
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Deck3_Center_Port)
 "ruF" = (
 /obj/structure/sign/directions/engineering/atmospherics{
 	pixel_y = -9;
@@ -55539,25 +55439,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/wood/sif,
 /area/SouthernCrossV2/Domicile/Dormitory_10)
-"rzo" = (
-/obj/structure/table/marble,
-/obj/item/reagent_containers/food/snacks/nachos,
-/obj/machinery/computer/security/telescreen/entertainment{
-	name = "1W-entertainment monitor";
-	pixel_x = -32;
-	pixel_y = -4
-	},
-/obj/machinery/light{
-	dir = 8
-	},
-/obj/machinery/door/blast/gate/thin{
-	id = "sc-GCkitchen";
-	layer = 3.3;
-	name = "Kitchen Shutters";
-	dir = 8
-	},
-/turf/simulated/floor/tiled/steel_grid,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "rzA" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/black,
 /obj/machinery/meter,
@@ -56204,15 +56085,10 @@
 /obj/effect/floor_decal/industrial/arrows/yellow{
 	dir = 1
 	},
-/obj/machinery/door/airlock/maintenance/common,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
+/obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Maints/Deck3_Center_Port)
 "rNz" = (
@@ -56558,7 +56434,7 @@
 	dir = 1
 	},
 /turf/simulated/wall,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
+/area/SouthernCrossV2/Engineering/Central_Engineering_Post)
 "rVb" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -56693,7 +56569,10 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/arrows,
-/obj/machinery/door/airlock/angled_bay/external/glass/red,
+/obj/machinery/door/airlock/angled_bay/hatch/engineering{
+	name = "Solars access";
+	req_access = null
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Engineering/Solar_Control_ForPort)
 "rXM" = (
@@ -57081,38 +56960,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Domicile/Dormitory_11)
-"sdM" = (
-/obj/machinery/computer/guestpass{
-	dir = 1;
-	name = "1S-guest pass terminal";
-	pixel_y = -19
-	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/effect/floor_decal/borderfloorwhite/corner2{
-	dir = 6
-	},
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/obj/effect/floor_decal/borderfloorwhite/corner2{
-	dir = 5
-	},
-/obj/effect/floor_decal/corner/white/bordercorner2{
-	dir = 5
-	},
-/obj/effect/floor_decal/corner/white/bordercorner2{
-	dir = 6
-	},
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "sdO" = (
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -57150,11 +56997,6 @@
 /obj/effect/floor_decal/spline/plain,
 /turf/simulated/floor/wood/alt,
 /area/SouthernCrossV2/Domicile/Chomp_Dinner_1)
-"sem" = (
-/obj/machinery/appliance/mixer/cereal,
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "ser" = (
 /obj/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/floor/plating,
@@ -57350,21 +57192,6 @@
 /turf/simulated/open,
 /area/SouthernCrossV2/Commons/Star_Breakroom)
 "shU" = (
-/obj/machinery/power/apc{
-	dir = 8;
-	name = "west bump";
-	pixel_x = -24
-	},
-/obj/machinery/light_switch{
-	dir = 4;
-	name = "W-light switch";
-	pixel_x = -27;
-	pixel_y = 12
-	},
-/obj/structure/cable/green{
-	d2 = 4;
-	icon_state = "0-4"
-	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
 	},
@@ -57785,6 +57612,16 @@
 	},
 /turf/simulated/floor/wood/alt,
 /area/SouthernCrossV2/Domicile/Chomp_Dinner_2)
+"soc" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/wood/alt,
+/area/SouthernCrossV2/Domicile/Chomp_Dinner_1)
 "son" = (
 /obj/effect/floor_decal/steeldecal/steel_decals_central5{
 	dir = 1
@@ -58279,33 +58116,12 @@
 /turf/simulated/floor/carpet/blue,
 /area/SouthernCrossV2/Bridge/CMO_Quarters)
 "svw" = (
-/obj/structure/closet/crate,
-/obj/item/storage/box/lights/mixed,
-/obj/item/flashlight,
-/obj/item/flashlight,
-/obj/item/radio{
-	frequency = 1487;
-	icon_state = "med_walkietalkie";
-	name = "Medbay Emergency Radio Link"
-	},
-/obj/item/radio{
-	frequency = 1487;
-	icon_state = "med_walkietalkie";
-	name = "Medbay Emergency Radio Link"
-	},
-/obj/item/tool/crowbar/red,
-/obj/item/tool/crowbar/red,
-/obj/item/clothing/suit/straight_jacket,
-/obj/item/clothing/suit/straight_jacket,
-/obj/item/clothing/mask/muzzle{
-	pixel_y = 2
-	},
-/obj/item/clothing/mask/muzzle{
-	pixel_y = -2
-	},
-/obj/item/circuitboard/resleeving_control,
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/paleblue/border,
+/obj/machinery/computer/rdconsole/medical{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Medical/Surgery_Storage)
 "svN" = (
@@ -58359,6 +58175,16 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/SouthernCrossV2/Bridge/AI_Upload_Hall)
+"swY" = (
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/machinery/power/terminal{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Engineering/Central_Engineering_Post)
 "sxg" = (
 /obj/machinery/alarm{
 	dir = 8;
@@ -59060,13 +58886,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Medical/Restrooms)
-"sII" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "sIJ" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
@@ -59218,14 +59037,11 @@
 /turf/simulated/floor/reinforced/airless,
 /area/space)
 "sLk" = (
-/obj/machinery/power/apc{
-	dir = 4;
-	name = "east bump";
-	pixel_x = 24
-	},
-/obj/structure/cable/green{
+/obj/effect/catwalk_plated/techmaint,
+/obj/structure/cable{
+	d1 = 4;
 	d2 = 8;
-	icon_state = "0-8"
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Center_Port)
@@ -59286,25 +59102,6 @@
 	},
 /turf/simulated/floor/airless,
 /area/SouthernCrossV2/Engineering/Solar_Array_AftPort)
-"sMo" = (
-/obj/structure/table/marble,
-/obj/machinery/reagentgrinder{
-	pixel_y = 20
-	},
-/obj/item/reagent_containers/glass/beaker{
-	pixel_x = 9;
-	pixel_y = 3
-	},
-/obj/item/reagent_containers/glass/beaker/measuring_cup{
-	pixel_y = 4;
-	pixel_x = -9
-	},
-/obj/item/reagent_containers/glass/beaker/measuring_cup{
-	pixel_x = -5
-	},
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "sMp" = (
 /obj/item/modular_computer/console/preset/medical{
 	dir = 1
@@ -59596,6 +59393,7 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 1
 	},
+/obj/item/bodybag/large,
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Medical/Surgery_Storage)
 "sQc" = (
@@ -60070,11 +59868,6 @@
 /turf/simulated/wall,
 /area/SouthernCrossV2/Commons/Stairwell_Port)
 "sZF" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/floor_decal/borderfloorwhite/corner2,
@@ -60085,6 +59878,12 @@
 /obj/effect/floor_decal/corner/white/bordercorner2{
 	dir = 9
 	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Medical/Aft_Medical_Post)
 "sZT" = (
@@ -60143,7 +59942,7 @@
 /obj/item/storage/box/custardcream{
 	pixel_y = 1
 	},
-/turf/simulated/floor/glass/reinforced,
+/turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Bridge/Control_Atrium)
 "tay" = (
 /turf/simulated/floor/carpet/turcarpet,
@@ -60327,6 +60126,14 @@
 /obj/machinery/meter,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_ForStarChamber1)
+"tcs" = (
+/obj/machinery/light/spot{
+	dir = 4;
+	color = "#ccc9ff";
+	desc = "An extra bright lighting fixture."
+	},
+/turf/simulated/floor/wood/alt,
+/area/SouthernCrossV2/Domicile/Chomp_Dinner_1)
 "tct" = (
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Engineering/Engine1_Chamber)
@@ -60814,12 +60621,6 @@
 	},
 /turf/simulated/floor/carpet/sblucarpet,
 /area/SouthernCrossV2/Medical/Lounge)
-"tih" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/freezer,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "tiu" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -60951,26 +60752,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Domicile/Observation_Lounge)
-"tkE" = (
-/obj/structure/table/marble,
-/obj/item/reagent_containers/food/snacks/pie,
-/obj/machinery/computer/security/telescreen/entertainment{
-	name = "1E-entertainment monitor";
-	pixel_x = 32;
-	pixel_y = -4
-	},
-/obj/machinery/door/blast/gate/thin{
-	id = "sc-GCkitchen";
-	layer = 3.3;
-	name = "Kitchen Shutters";
-	dir = 4
-	},
-/obj/machinery/light{
-	dir = 4;
-	layer = 3
-	},
-/turf/simulated/floor/tiled/steel_grid,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "tkI" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -61177,30 +60958,9 @@
 /turf/simulated/floor/wood/alt,
 /area/SouthernCrossV2/Bridge/Embassy)
 "tnv" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/effect/floor_decal/industrial/hatch,
-/obj/structure/grille,
-/obj/structure/window/titanium/full,
-/obj/structure/window/titanium,
-/obj/structure/window/titanium{
-	dir = 4
-	},
-/obj/structure/window/titanium{
-	dir = 1
-	},
-/obj/structure/window/titanium{
-	dir = 8
-	},
-/obj/machinery/door/blast/multi_tile/three_tile_hor{
-	icon_state = "open";
-	layer = 3.5;
-	id = "sc-GCbridgeLOCKDOWN";
-	density = 0;
-	opacity = 0
-	},
-/obj/structure/sign/double/barsign,
+/obj/machinery/light/small,
 /turf/simulated/floor/plating,
-/area/SouthernCrossV2/Domicile/Chomp_Lounge)
+/area/SouthernCrossV2/Maints/Deck3_Center_Star)
 "tnz" = (
 /obj/machinery/light{
 	name = "1S-light fixture"
@@ -61259,22 +61019,6 @@
 	},
 /turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Medical_ForPortChamber1)
-"toX" = (
-/obj/structure/railing/grey{
-	color = "yellow";
-	dir = 1
-	},
-/obj/structure/cable/green{
-	d1 = 32;
-	icon_state = "32-1"
-	},
-/obj/structure/lattice,
-/obj/structure/railing/grey{
-	color = "yellow";
-	dir = 8
-	},
-/turf/simulated/open,
-/area/SouthernCrossV2/Maints/Deck3_Center_Star)
 "toY" = (
 /obj/machinery/shower{
 	dir = 1
@@ -61306,11 +61050,11 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Medical/Stairwell)
 "tpp" = (
-/obj/machinery/computer/arcade{
-	dir = 1
-	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
+	},
+/obj/item/stool/padded{
+	dir = 8
 	},
 /turf/simulated/floor/carpet/oracarpet,
 /area/SouthernCrossV2/Domicile/Chomp_Dinner_1)
@@ -61462,6 +61206,8 @@
 /obj/random/trash,
 /obj/random/trash_pile,
 /obj/random/trash,
+/obj/random/junk,
+/obj/random/junk,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Dorms_ForPort_Chamber1)
 "ttJ" = (
@@ -61566,9 +61312,14 @@
 /turf/simulated/open,
 /area/SouthernCrossV2/Commons/Star_Breakroom)
 "txl" = (
-/obj/machinery/gibber,
-/turf/simulated/floor/tiled/freezer,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
+/obj/machinery/power/port_gen/pacman,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/structure/cable/green{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Engineering/Central_Engineering_Post)
 "txm" = (
 /obj/machinery/light{
 	dir = 8;
@@ -61892,11 +61643,6 @@
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Medical/Autoresleeving)
 "tDh" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -61910,6 +61656,12 @@
 	},
 /turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Medical_AftCorridor1)
+"tDI" = (
+/obj/random/trash_pile,
+/obj/random/junk,
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Deck3_Bridge_ForStarCorridor1)
 "tDY" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/arrows/yellow,
@@ -62130,9 +61882,20 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Aft_3_Deck_Central_Corridor_1)
 "tIi" = (
-/obj/machinery/vending/cola/soft,
-/turf/simulated/floor/wood/alt,
-/area/SouthernCrossV2/Domicile/Chomp_Lounge)
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/power/smes/buildable{
+	RCon_tag = "Substation - Central"
+	},
+/obj/structure/sign/warning/high_voltage{
+	pixel_x = 32
+	},
+/obj/structure/cable/green{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/structure/cable/green,
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Engineering/Central_Engineering_Post)
 "tIU" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
@@ -62192,6 +61955,7 @@
 /obj/effect/floor_decal/corner/beige/border{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Domicile/Dorm_Foyer)
 "tJB" = (
@@ -62340,7 +62104,8 @@
 	},
 /obj/machinery/access_button{
 	pixel_y = -24;
-	dir = 1
+	dir = 1;
+	req_one_access = list(1,19)
 	},
 /obj/effect/map_helper/airlock/door/int_door,
 /obj/effect/map_helper/airlock/button/int_button{
@@ -62448,11 +62213,6 @@
 	pixel_x = -1;
 	pixel_y = 1
 	},
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
@@ -62511,14 +62271,19 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Domicile/Dorm_Foyer)
 "tOx" = (
-/obj/machinery/alarm{
-	dir = 8;
-	pixel_x = 22
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 9
 	},
 /obj/effect/catwalk_plated/techmaint,
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
+	},
+/obj/structure/cable/green{
+	d2 = 2;
+	icon_state = "0-2"
+	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Center_Port)
 "tOD" = (
@@ -62595,11 +62360,6 @@
 "tQO" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
-	},
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/floor_decal/spline/plain/corner{
@@ -62723,6 +62483,20 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/SouthernCrossV2/Bridge/AI_Core_Chamber)
+"tSE" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/SouthernCrossV2/Commons/Central_3_Deck_Hall)
 "tSF" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/arrows/yellow,
@@ -62948,7 +62722,12 @@
 	name = "1N-AI display";
 	pixel_y = 32
 	},
-/turf/simulated/floor/glass,
+/obj/machinery/light/spot{
+	dir = 1;
+	color = "#ccc9ff";
+	desc = "An extra bright lighting fixture."
+	},
+/turf/simulated/floor/wood/alt,
 /area/SouthernCrossV2/Domicile/Chomp_Lounge)
 "tWX" = (
 /turf/simulated/floor/tiled/kafel_full/white,
@@ -63092,15 +62871,11 @@
 /turf/simulated/floor/wood/alt,
 /area/SouthernCrossV2/Bridge/Conference_Room)
 "tYZ" = (
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 9
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
 	},
-/obj/effect/floor_decal/corner/orange/border{
-	dir = 9
-	},
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
+/turf/simulated/floor/wood/alt,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "tZd" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/stack/cable_coil/random{
@@ -63222,12 +62997,6 @@
 /obj/effect/catwalk_plated,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Construction_Area)
-"ubW" = (
-/obj/machinery/alarm{
-	pixel_y = 22
-	},
-/turf/simulated/floor/plating,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "ucc" = (
 /obj/effect/catwalk_plated/techmaint,
 /obj/structure/cable/yellow{
@@ -63459,19 +63228,6 @@
 /obj/random/trash,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Harbor/Aft_3_Deck_Airlock_Access)
-"ueQ" = (
-/obj/structure/table/marble,
-/obj/machinery/cash_register/civilian{
-	dir = 8
-	},
-/obj/machinery/door/blast/gate/thin{
-	id = "sc-GCkitchen";
-	layer = 3.3;
-	name = "Kitchen Shutters";
-	dir = 8
-	},
-/turf/simulated/floor/tiled/steel_grid,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "ueV" = (
 /obj/item/radio/intercom{
 	dir = 1;
@@ -63553,6 +63309,7 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 5
 	},
+/obj/item/bodybag/large,
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Medical/Surgery_Storage)
 "ufZ" = (
@@ -63764,20 +63521,6 @@
 	},
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Bridge/Captain_Office)
-"ujy" = (
-/obj/machinery/hologram/holopad,
-/obj/effect/floor_decal/shuttle/blue{
-	pixel_x = -1;
-	pixel_y = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "ujB" = (
 /obj/random/junk,
 /obj/structure/table/steel,
@@ -63842,16 +63585,15 @@
 /turf/simulated/floor/wood/alt/panel,
 /area/SouthernCrossV2/Bridge/CE_Quarters)
 "ukQ" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 1;
-	name = "1S-extinguisher cabinet";
-	pixel_y = -27
+/obj/structure/bed/chair/backed_grey{
+	color = "grey";
+	dir = 1
 	},
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/obj/effect/floor_decal/borderfloorwhite/corner,
-/obj/effect/floor_decal/corner/orange/bordercorner,
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 9
+	},
+/turf/simulated/floor/carpet/brown,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "ull" = (
 /obj/machinery/atmospherics/valve/digital/open{
 	name = "Nitrogen Outlet Valve"
@@ -64030,8 +63772,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Maints/Deck3_Medical_AftPortChamber1)
 "unF" = (
-/obj/machinery/r_n_d/protolathe/medical,
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/table/glass,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Medical/Lounge)
 "unX" = (
@@ -64346,10 +64087,6 @@
 /obj/machinery/floodlight,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Dorms_StarCorridor2)
-"usH" = (
-/obj/machinery/smartfridge/produce/persistent_lossy,
-/turf/simulated/wall,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "usM" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/yellow{
 	dir = 4
@@ -64608,17 +64345,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Domicile/Dorm_Corridor_2)
-"uwW" = (
-/obj/machinery/appliance/cooker/grill,
-/obj/machinery/status_display{
-	name = "S-status display";
-	pixel_y = -32
-	},
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/obj/effect/floor_decal/borderfloorwhite,
-/obj/effect/floor_decal/corner/orange/border,
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "uxl" = (
 /obj/structure/sign/directions/roomnum{
 	pixel_y = 8;
@@ -64626,6 +64352,23 @@
 	},
 /turf/simulated/wall,
 /area/SouthernCrossV2/Domicile/Dormitory_05)
+"uxn" = (
+/obj/machinery/door/firedoor/glass/hidden/steel{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/curtain/black{
+	icon_state = "open";
+	layer = 2;
+	name = "privacy curtain";
+	opacity = 0
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "uxo" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -64799,30 +64542,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Medical/Virology)
-"uzY" = (
-/obj/machinery/door/firedoor/glass,
-/obj/effect/floor_decal/industrial/arrows/blue{
-	dir = 1
-	},
-/obj/effect/floor_decal/industrial/arrows/blue,
-/obj/machinery/door/airlock/angled_bay/standard/glass/common{
-	dir = 4;
-	name = "Kitchen";
-	req_access = list(28)
-	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "uAe" = (
 /obj/machinery/atmospherics/pipe/tank/air/full,
 /obj/effect/floor_decal/industrial/hatch/blue,
@@ -64964,9 +64683,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Domicile/Chomp_Lounge)
 "uCo" = (
@@ -64986,21 +64702,9 @@
 "uCu" = (
 /turf/simulated/wall,
 /area/SouthernCrossV2/Domicile/Dormitory_10)
-"uDd" = (
-/obj/effect/catwalk_plated/white,
-/turf/simulated/floor/plating,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "uDe" = (
-/obj/structure/table/marble,
-/obj/machinery/chemical_dispenser/bar_soft/full{
-	dir = 1;
-	pixel_y = -10
-	},
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/obj/effect/floor_decal/borderfloorwhite,
-/obj/effect/floor_decal/corner/orange/border,
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
+/turf/simulated/floor/carpet/brown,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "uDf" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -65295,15 +64999,6 @@
 /obj/machinery/meter,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Atmospherics_Chamber)
-"uGm" = (
-/obj/item/stool/baystool/padded{
-	dir = 8
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/wood/alt,
-/area/SouthernCrossV2/Domicile/Chomp_Dinner_2)
 "uHu" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
@@ -65338,11 +65033,6 @@
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Medical/Autoresleeving)
 "uIq" = (
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
@@ -65511,10 +65201,10 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
 	},
-/obj/structure/disposalpipe/junction,
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/wood/alt,
 /area/SouthernCrossV2/Domicile/Chomp_Dinner_2)
 "uLN" = (
@@ -65731,15 +65421,15 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/SouthernCrossV2/Bridge/HoS_Quarters)
 "uOJ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
+/obj/structure/bed/chair/backed_grey{
+	color = "grey";
+	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
 	},
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
+/turf/simulated/floor/carpet/brown,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "uOV" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -65762,6 +65452,12 @@
 "uQd" = (
 /turf/simulated/floor/tiled/kafel_full/blue,
 /area/SouthernCrossV2/Medical/Restrooms)
+"uQe" = (
+/obj/random/trash_pile,
+/obj/random/junk,
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Deck3_Medical_ForPortChamber1)
 "uQf" = (
 /turf/simulated/floor/carpet/bcarpet,
 /area/SouthernCrossV2/Medical/Patient_4)
@@ -65882,6 +65578,11 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central2{
 	dir = 1
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/wood/alt,
 /area/SouthernCrossV2/Domicile/Chomp_Dinner_1)
@@ -66204,7 +65905,8 @@
 /obj/machinery/door/airlock/angled_bay/double/glass/command{
 	dir = 8;
 	name = "Airlock bay";
-	req_access = list(1)
+	req_access = null;
+	req_one_access = list(1,19)
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -67449,10 +67151,9 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Construction_Area)
 "vnT" = (
-/obj/random/trash_pile,
-/obj/random/trash,
-/turf/simulated/floor/plating,
-/area/SouthernCrossV2/Maints/Deck3_Dorms_ForPort_Chamber1)
+/obj/structure/sign/poster/nanotrasen,
+/turf/simulated/floor/wood/alt,
+/area/SouthernCrossV2/Domicile/Chomp_Lounge)
 "vnV" = (
 /obj/structure/cable/cyan{
 	d1 = 4;
@@ -67575,6 +67276,12 @@
 	},
 /turf/simulated/floor/carpet/blue,
 /area/SouthernCrossV2/Domicile/Dormitory_07)
+"vqh" = (
+/obj/random/trash_pile,
+/obj/random/junk,
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Deck3_Medical_PortChamber2)
 "vqq" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -67703,7 +67410,7 @@
 	c_tag = "D3-Com-Aft Hall3";
 	network = list("Commons")
 	},
-/turf/simulated/floor/glass/reinforced,
+/turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Aft_3_Deck_Central_Corridor_1)
 "vsp" = (
 /obj/machinery/door/firedoor/border_only,
@@ -68382,6 +68089,11 @@
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Bridge_AftPortCorridor1)
+"vDg" = (
+/obj/random/trash_pile,
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Deck3_Bridge_AftStarCorridor1)
 "vDk" = (
 /obj/structure/table/marble,
 /obj/machinery/light{
@@ -68867,6 +68579,23 @@
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/carpet/gaycarpet,
 /area/SouthernCrossV2/Domicile/Dormitory_05)
+"vJr" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/arrows/yellow,
+/obj/effect/floor_decal/industrial/arrows/yellow{
+	dir = 1
+	},
+/obj/machinery/door/airlock/maintenance/int{
+	name = "Kitchen Maintenance";
+	req_one_access = list(28)
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/SouthernCrossV2/Engineering/Central_Engineering_Post)
 "vJv" = (
 /obj/item/radio/intercom{
 	dir = 4;
@@ -68969,15 +68698,15 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Engineering/Engine2_Chamber)
 "vLx" = (
-/obj/machinery/computer/arcade{
-	dir = 1
-	},
 /obj/item/radio/intercom{
 	name = "1S-Station Intercom (General)";
 	pixel_y = -22
 	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
+	},
+/obj/machinery/computer/arcade/battle{
+	dir = 4
 	},
 /turf/simulated/floor/carpet/oracarpet,
 /area/SouthernCrossV2/Domicile/Chomp_Dinner_1)
@@ -69431,14 +69160,10 @@
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/SouthernCrossV2/Bridge/RD_Quarters)
 "vTg" = (
-/obj/structure/railing,
-/obj/machinery/light{
-	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
-	},
-/turf/simulated/open,
-/area/SouthernCrossV2/Domicile/Chomp_Dinner_1)
+/obj/random/trash_pile,
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Deck3_Medical_AftPortChamber1)
 "vTj" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -69571,6 +69296,10 @@
 /obj/effect/map_helper/airlock/door/ext_door,
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Harbor/Aft_3_Deck_Airlock_Access)
+"vUt" = (
+/obj/machinery/vending/sol,
+/turf/simulated/floor/wood/alt,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "vUL" = (
 /obj/effect/floor_decal/industrial/arrows,
 /obj/effect/floor_decal/industrial/arrows{
@@ -69592,6 +69321,20 @@
 /obj/random/tank,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Medical_ForStarChamber2)
+"vVp" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/arrows/yellow,
+/obj/effect/floor_decal/industrial/arrows/yellow{
+	dir = 1
+	},
+/obj/machinery/door/airlock/maintenance/int,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/SouthernCrossV2/Maints/Deck3_Center_Port)
 "vVx" = (
 /obj/machinery/light{
 	name = "1S-light fixture"
@@ -69927,10 +69670,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Engineering/Engine1_Access_Hall)
-"wbq" = (
-/obj/structure/closet/secure_closet/freezer/meat,
-/turf/simulated/floor/tiled/freezer,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "wbH" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -70215,6 +69954,34 @@
 /obj/structure/sign/nosmoking_2/burnt,
 /turf/simulated/wall,
 /area/SouthernCrossV2/Medical/Morgue)
+"wfP" = (
+/obj/structure/table/woodentable,
+/obj/item/paper_bin{
+	pixel_x = 5
+	},
+/obj/item/folder{
+	pixel_x = -6
+	},
+/obj/item/folder{
+	pixel_x = -6;
+	pixel_y = 3
+	},
+/obj/item/pen/blue{
+	pixel_x = 5;
+	pixel_y = 3
+	},
+/obj/item/pen/multi{
+	pixel_x = 5
+	},
+/obj/item/pen/red{
+	pixel_x = 5;
+	pixel_y = -3
+	},
+/obj/structure/sign/scenery/fakefireaxe{
+	pixel_y = -29
+	},
+/turf/simulated/floor/wood/alt,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "wfR" = (
 /obj/machinery/atmospherics/portables_connector,
 /obj/machinery/portable_atmospherics/canister/oxygen,
@@ -70677,6 +70444,11 @@
 	},
 /obj/effect/floor_decal/corner/white/bordercorner2{
 	dir = 9
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Medical/Autoresleeving)
@@ -71247,21 +71019,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Domicile/Dorm_Foyer)
 "wyr" = (
-/obj/machinery/power/apc{
-	dir = 4;
-	name = "east bump";
-	pixel_x = 24
-	},
-/obj/machinery/light_switch{
-	pixel_x = 27;
-	pixel_y = -12;
-	name = "E-light switch";
-	dir = 8
-	},
-/obj/structure/cable/green{
-	d2 = 8;
-	icon_state = "0-8"
-	},
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 4
 	},
@@ -71381,14 +71138,14 @@
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Engineering/Engine1_Control_Room)
 "wAW" = (
-/obj/structure/closet/secure_closet/medical2,
-/obj/item/bodybag/large,
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 10
 	},
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 10
 	},
+/obj/machinery/r_n_d/protolathe/medical,
+/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Medical/Surgery_Storage)
 "wBa" = (
@@ -71487,15 +71244,12 @@
 	dir = 1
 	},
 /obj/structure/table/darkglass,
-/obj/item/grenade/spawnergrenade/casino/otie/chubby{
-	pixel_y = -1;
-	pixel_x = 4
-	},
 /obj/machinery/light{
 	dir = 4;
 	name = "1E-light fixture"
 	},
-/turf/simulated/floor/wood/alt/parquet,
+/obj/item/soulstone,
+/turf/simulated/floor/wood/alt/parquet/turfpack/airless,
 /area/SouthernCrossV2/Bridge/Captain_Office)
 "wCi" = (
 /obj/structure/cable/cyan{
@@ -71704,17 +71458,17 @@
 	},
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/borderfloor/corner2,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central2{
 	dir = 1
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
 	},
 /turf/simulated/floor/wood/alt,
 /area/SouthernCrossV2/Domicile/Chomp_Dinner_1)
@@ -71943,23 +71697,6 @@
 /obj/random/maintenance/medical,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Dorms_PortChamber1)
-"wJY" = (
-/obj/structure/table/marble,
-/obj/machinery/microwave{
-	pixel_y = 18
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/orange/border{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "wKh" = (
 /obj/structure/reagent_dispensers/foam,
 /turf/simulated/floor/plating,
@@ -72685,48 +72422,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/SouthernCrossV2/Engineering/Engine2_Canister_Storage)
-"wTa" = (
-/obj/structure/table/marble,
-/obj/machinery/alarm{
-	pixel_y = 22
-	},
-/obj/item/packageWrap{
-	pixel_x = 3;
-	pixel_y = -3
-	},
-/obj/item/packageWrap,
-/obj/item/clothing/head/hairnet{
-	pixel_x = -7;
-	pixel_y = 8
-	},
-/obj/item/clothing/head/hairnet{
-	pixel_x = -4;
-	pixel_y = 7
-	},
-/obj/item/toy/figure/chef{
-	pixel_y = 7;
-	pixel_x = -6
-	},
-/obj/item/clothing/head/hairnet{
-	pixel_x = -1;
-	pixel_y = 8
-	},
-/obj/item/clothing/head/hairnet{
-	pixel_x = 2;
-	pixel_y = 7
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/orange/border{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "wTj" = (
 /obj/machinery/light{
 	name = "1S-light fixture"
@@ -72896,14 +72591,11 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/SouthernCrossV2/Domicile/Dormitory_06)
 "wUV" = (
-/obj/item/radio/intercom{
-	name = "1S-Station Intercom (General)";
-	pixel_y = -22
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
 	},
-/obj/machinery/chem_master/condimaster,
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
+/turf/simulated/floor/carpet/brown,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "wVc" = (
 /obj/structure/table/rack/shelf,
 /obj/item/towel/random{
@@ -73087,12 +72779,15 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
-/obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/beige/bordercorner{
 	dir = 4
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 1;
+	icon_state = "pipe-j2"
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Domicile/Dorm_Foyer)
@@ -73135,12 +72830,11 @@
 /turf/simulated/open,
 /area/SouthernCrossV2/Maints/Deck3_Dorms_PortCorridor1)
 "wZl" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 10
+/obj/effect/floor_decal/stairs/wood_stairs{
+	dir = 8
 	},
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
+/turf/simulated/floor/wood/alt,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "wZy" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -73280,16 +72974,6 @@
 /obj/random/junk,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Dorms_StarChamber2)
-"xbv" = (
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/obj/effect/floor_decal/borderfloorwhite/corner{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/orange/bordercorner{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "xbx" = (
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/arrows/blue{
@@ -73381,18 +73065,10 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Domicile/Dorm_Corridor_4)
 "xcP" = (
-/obj/structure/table/marble,
-/obj/machinery/door/blast/gate/thin{
-	id = "sc-GCkitchen";
-	layer = 3.3;
-	name = "Kitchen Shutters";
-	dir = 8
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/steel_grid,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
+/obj/machinery/portable_atmospherics/powered/scrubber,
+/obj/effect/floor_decal/industrial/hatch/blue,
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Engineering/Central_Engineering_Post)
 "xcU" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
@@ -73425,7 +73101,7 @@
 	pixel_y = 5;
 	icon_state = "technomancer_core_old"
 	},
-/turf/simulated/floor/wood/alt/parquet,
+/turf/simulated/floor/wood/alt/parquet/turfpack/airless,
 /area/SouthernCrossV2/Bridge/Captain_Office)
 "xdq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -73469,6 +73145,7 @@
 /obj/effect/floor_decal/corner/beige/bordercorner{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Domicile/Dorm_Foyer)
 "xei" = (
@@ -73759,9 +73436,15 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_ForStarChamber1)
 "xiI" = (
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
+/obj/structure/bed/chair/backed_grey{
+	color = "grey";
+	dir = 1
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 5
+	},
+/turf/simulated/floor/carpet/brown,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "xiO" = (
 /obj/machinery/airlock_sensor{
 	pixel_y = 24
@@ -74081,18 +73764,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Bridge/Embassy)
-"xmQ" = (
-/obj/structure/table/rack/shelf,
-/obj/random/maintenance/engineering,
-/obj/random/maintenance/clean,
-/obj/random/maintenance/cargo,
-/obj/random/maintenance/morestuff,
-/obj/random/medical/lite,
-/obj/random/trash,
-/obj/random/drinkbottle,
-/obj/random/drinkbottle,
-/turf/simulated/floor/plating,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "xmR" = (
 /turf/simulated/wall/r_wall,
 /area/SouthernCrossV2/Maints/Deck3_Medical_PortChamber2)
@@ -74132,11 +73803,15 @@
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck3_Engineering_AftStarChamber2)
 "xnB" = (
-/obj/machinery/light/small{
-	dir = 1
+/obj/structure/ladder{
+	pixel_y = 3
 	},
-/obj/structure/table/rack/steel,
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/sign/small/warning/emerg_only{
+	desc = "Ladder for emergency use only";
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/SouthernCrossV2/Maints/Deck3_Center_Star)
 "xnN" = (
 /obj/structure/table/steel,
@@ -74350,7 +74025,7 @@
 /area/SouthernCrossV2/Bridge/Leisure_Room)
 "xqE" = (
 /obj/effect/catwalk_plated/techmaint,
-/turf/simulated/open,
+/turf/simulated/floor/glass/reinforced,
 /area/SouthernCrossV2/Maints/Deck3_Medical_ForPortChamber1)
 "xqN" = (
 /obj/structure/cable/green{
@@ -74469,11 +74144,6 @@
 /obj/effect/floor_decal/shuttle/blue{
 	pixel_x = -1;
 	pixel_y = 1
-	},
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
 	},
 /obj/structure/cable/green{
 	d1 = 1;
@@ -74872,6 +74542,11 @@
 	},
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Domicile/Dorm_Corridor_2)
+"xzh" = (
+/obj/random/trash_pile,
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Maints/Deck3_Bridge_ForPort_Corridor1)
 "xzq" = (
 /obj/structure/table/glass,
 /obj/item/binoculars,
@@ -74951,34 +74626,15 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Harbor/Aft_3_Deck_Airlock_Access)
 "xAP" = (
-/obj/structure/table/marble,
-/obj/item/reagent_containers/food/snacks/mint{
-	pixel_x = -4;
-	pixel_y = -3
+/obj/structure/bed/chair/backed_grey{
+	color = "grey";
+	dir = 1
 	},
-/obj/item/reagent_containers/food/condiment/small/peppermill{
-	pixel_x = 6;
-	pixel_y = 9
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
 	},
-/obj/item/reagent_containers/food/condiment/small/peppermill{
-	pixel_x = 3;
-	pixel_y = 8
-	},
-/obj/item/reagent_containers/food/condiment/small/saltshaker{
-	pixel_x = -6;
-	pixel_y = 9
-	},
-/obj/item/reagent_containers/food/condiment/small/saltshaker{
-	pixel_x = -3;
-	pixel_y = 8
-	},
-/obj/item/reagent_containers/food/condiment/spacespice{
-	pixel_x = 9;
-	pixel_y = 1
-	},
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
+/turf/simulated/floor/carpet/brown,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "xAS" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -75152,19 +74808,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Harbor/Aft_3_Deck_Airlock_Access)
-"xDD" = (
-/obj/structure/table/marble,
-/obj/machinery/cash_register/civilian{
-	dir = 4
-	},
-/obj/machinery/door/blast/gate/thin{
-	id = "sc-GCkitchen";
-	layer = 3.3;
-	name = "Kitchen Shutters";
-	dir = 4
-	},
-/turf/simulated/floor/tiled/steel_grid,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "xDE" = (
 /obj/machinery/power/apc{
 	dir = 4;
@@ -75460,19 +75103,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Maints/Deck3_Medical_ForStarChamber3)
-"xIo" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 5
-	},
-/obj/effect/floor_decal/corner/orange/border{
-	dir = 5
-	},
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "xIq" = (
 /obj/machinery/alarm{
 	dir = 4;
@@ -75790,16 +75420,9 @@
 /turf/simulated/floor/carpet/bcarpet,
 /area/SouthernCrossV2/Domicile/Observation_Atrium)
 "xLP" = (
-/obj/structure/ladder{
-	pixel_y = 3
-	},
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/sign/small/warning/emerg_only{
-	desc = "Ladder for emergency use only";
-	pixel_x = -32
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/SouthernCrossV2/Harbor/Star_3_Deck_Airlock_Access)
+/obj/machinery/holoposter,
+/turf/simulated/wall,
+/area/SouthernCrossV2/Domicile/Chomp_Stage)
 "xLV" = (
 /obj/machinery/light{
 	name = "1S-light fixture"
@@ -76220,6 +75843,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central5{
 	dir = 1
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Domicile/Dorm_Corridor_1)
 "xSi" = (
@@ -76306,6 +75930,14 @@
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/wood/alt,
 /area/SouthernCrossV2/Bridge/Conference_Room)
+"xUe" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/SouthernCrossV2/Engineering/Central_Engineering_Post)
 "xUo" = (
 /obj/structure/cable/yellow{
 	d2 = 8;
@@ -76334,10 +75966,10 @@
 	pixel_y = -32;
 	name = "1S-AI display"
 	},
-/obj/machinery/computer/rdconsole/medical{
-	dir = 1
+/obj/structure/bed/chair/backed_grey{
+	color = "grey";
+	dir = 8
 	},
-/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Medical/Lounge)
 "xUL" = (
@@ -76394,7 +76026,7 @@
 	pixel_x = -2;
 	pixel_y = 1
 	},
-/turf/simulated/floor/wood/alt/parquet,
+/turf/simulated/floor/wood/alt/parquet/turfpack/airless,
 /area/SouthernCrossV2/Bridge/Captain_Office)
 "xVF" = (
 /obj/structure/cable/green{
@@ -76730,16 +76362,6 @@
 "xZB" = (
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Medical/Virology)
-"xZM" = (
-/obj/effect/floor_decal/borderfloor/corner2{
-	dir = 9
-	},
-/obj/effect/floor_decal/borderfloor/corner2,
-/obj/effect/floor_decal/steeldecal/steel_decals_central2{
-	dir = 1
-	},
-/turf/simulated/floor/wood/alt,
-/area/SouthernCrossV2/Domicile/Chomp_Dinner_2)
 "yaw" = (
 /obj/machinery/alarm{
 	dir = 8;
@@ -76942,81 +76564,18 @@
 /area/SouthernCrossV2/Commons/Aft_3_Deck_Central_Corridor_1)
 "ydk" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden,
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
 /obj/effect/floor_decal/borderfloorwhite/corner{
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/paleblue/bordercorner{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/white,
 /area/SouthernCrossV2/Medical/Aft_Medical_Post)
-"ydN" = (
-/obj/structure/table/rack/shelf,
-/obj/item/storage/box/donkpockets{
-	pixel_x = 7;
-	pixel_y = -7
-	},
-/obj/item/storage/box/donkpockets/berry{
-	pixel_x = 7;
-	pixel_y = -3
-	},
-/obj/item/storage/box/donkpockets/gondola{
-	pixel_x = -9;
-	pixel_y = -7
-	},
-/obj/item/storage/box/donkpockets/honk{
-	pixel_x = -9;
-	pixel_y = -3
-	},
-/obj/item/storage/box/donkpockets/pizza{
-	pixel_x = 7;
-	pixel_y = 1
-	},
-/obj/item/storage/box/donkpockets/spicy{
-	pixel_x = -9;
-	pixel_y = 1
-	},
-/obj/item/storage/box/donkpockets/teriyaki{
-	pixel_y = 5
-	},
-/obj/item/storage/box/donkpockets/teriyaki{
-	pixel_y = 5
-	},
-/obj/item/storage/box/donkpockets{
-	pixel_x = 7;
-	pixel_y = -7
-	},
-/obj/item/storage/box/donkpockets/gondola{
-	pixel_x = -9;
-	pixel_y = -7
-	},
-/obj/item/storage/box/donkpockets/berry{
-	pixel_x = 7;
-	pixel_y = -3
-	},
-/obj/item/storage/box/donkpockets/honk{
-	pixel_x = -9;
-	pixel_y = -3
-	},
-/obj/item/storage/box/donkpockets/pizza{
-	pixel_x = 7;
-	pixel_y = 1
-	},
-/obj/item/storage/box/donkpockets/spicy{
-	pixel_x = -9;
-	pixel_y = 1
-	},
-/obj/item/storage/box/donkpockets/teriyaki{
-	pixel_y = 5
-	},
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/turf/simulated/floor/tiled/white,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "ydV" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 1
@@ -77179,7 +76738,7 @@
 	pixel_x = 3
 	},
 /obj/structure/table/darkglass,
-/turf/simulated/floor/wood/alt/parquet,
+/turf/simulated/floor/wood/alt/parquet/turfpack/airless,
 /area/SouthernCrossV2/Bridge/Captain_Office)
 "yfV" = (
 /obj/machinery/light/small,
@@ -77371,12 +76930,6 @@
 	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/SouthernCrossV2/Bridge/Captain_Office)
-"yjx" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/freezer,
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen)
 "yjL" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -77579,7 +77132,7 @@
 	name = "1E-Station Intercom (General)";
 	pixel_x = 22
 	},
-/turf/simulated/floor/glass/reinforced,
+/turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/Aft_3_Deck_Central_Corridor_1)
 
 (1,1,1) = {"
@@ -86414,7 +85967,7 @@ apc
 apc
 apc
 aqj
-cDl
+mMn
 aqj
 apc
 apc
@@ -86524,7 +86077,7 @@ apc
 apc
 apc
 aqj
-cDl
+mMn
 aqj
 apc
 apc
@@ -86671,9 +86224,9 @@ apc
 apc
 apc
 apc
-cDl
+mMn
 mmN
-cDl
+mMn
 apc
 apc
 apc
@@ -86781,9 +86334,9 @@ apc
 apc
 apc
 apc
-cDl
+mMn
 jwm
-cDl
+mMn
 apc
 apc
 apc
@@ -93443,7 +92996,7 @@ xob
 nyt
 eaY
 xiQ
-gZd
+gYY
 joW
 kWZ
 gun
@@ -97835,7 +97388,7 @@ bBZ
 dwY
 bBZ
 ogk
-ogk
+bdX
 qqS
 ycI
 aPH
@@ -98351,7 +97904,7 @@ moO
 uFW
 wYA
 dNX
-emm
+azY
 qqS
 qAv
 vjX
@@ -101245,8 +100798,8 @@ pdb
 muw
 voL
 muw
-muw
 wVX
+lyw
 jTu
 lPX
 gCl
@@ -102246,7 +101799,7 @@ pvp
 tNl
 tNl
 wRG
-vnT
+reT
 wzO
 jZH
 gxS
@@ -102972,7 +102525,7 @@ yjc
 oIC
 vto
 ddt
-ddt
+ruA
 dOP
 xWy
 hbN
@@ -103252,7 +102805,7 @@ gdy
 mZl
 mqp
 acg
-ddt
+ruA
 rhw
 mqp
 ddt
@@ -103431,7 +102984,7 @@ cPz
 lpN
 cPz
 taO
-jPb
+xzh
 gOm
 shV
 oZi
@@ -103746,10 +103299,10 @@ pMG
 kjO
 ecn
 aAA
-krO
+pau
 abu
 abu
-vTg
+ecn
 gGk
 tFY
 gpR
@@ -103962,7 +103515,7 @@ fDZ
 shV
 ucy
 hfg
-cRv
+wUP
 qJs
 hqo
 hqo
@@ -103971,7 +103524,7 @@ sms
 ifa
 ifH
 wUP
-pIA
+hdW
 pIA
 vUl
 eTi
@@ -104013,7 +103566,7 @@ bDU
 hoF
 euY
 qtU
-jVq
+sLk
 hgN
 fts
 ovH
@@ -104519,7 +104072,7 @@ krO
 iUN
 abu
 ecn
-ruA
+bDU
 krO
 abu
 abu
@@ -104787,7 +104340,7 @@ dVC
 lTV
 euY
 euY
-euY
+vVp
 hgN
 afq
 pwV
@@ -104818,7 +104371,7 @@ dHa
 dHa
 dHa
 ddj
-pfx
+aaw
 ede
 tQo
 qBN
@@ -105034,9 +104587,9 @@ cDw
 aqL
 uFS
 uFS
-uFS
+soc
 hyp
-uFS
+dFk
 uFS
 uFS
 uFS
@@ -105288,24 +104841,24 @@ pQS
 jND
 rlD
 bDU
-bDU
+aMs
 xNQ
-bdC
-bdC
-bDU
-bdC
-bdC
 bDU
 bDU
-cVJ
-brm
+eDs
+bDU
+bjz
+tcs
+bDU
+bDU
+bDU
 uRe
 kqx
 gXC
 gnN
-loO
-fIA
-loO
+nBA
+tSE
+lea
 kOo
 gJm
 rZi
@@ -105537,7 +105090,7 @@ maG
 lWD
 dHa
 dHa
-mMn
+akK
 mmp
 adu
 koz
@@ -105548,16 +105101,16 @@ iKN
 bDU
 bDU
 xNQ
-tkE
-jET
-xDD
-eAz
-jET
-niI
-iGW
-fJR
-fJR
-usH
+cQK
+bkC
+lxz
+brm
+bQV
+cEG
+bQV
+bkC
+lDw
+uxn
 fJR
 fJR
 fJR
@@ -105805,21 +105358,21 @@ wNb
 lAi
 bDU
 bDU
-bjz
+xNQ
+xLP
+jVq
+bmI
+jVq
+bGG
+ukQ
+ikQ
+diJ
+fkS
+eKn
 fJR
-tYZ
-cEG
-bTy
-fJR
-bQV
-bQV
-fJR
-drt
-yjx
-dVg
 euc
-euc
-fJR
+bXC
+xcP
 eYg
 nJU
 fJR
@@ -106064,23 +105617,23 @@ bJj
 aKL
 aKL
 gBQ
-fJR
-bkm
-xiI
-xiI
-cQF
-dcT
-dgL
-fJR
-drt
-cEF
-dIz
-dIz
-eyl
+cEG
+dAI
+oEP
+jVq
+bGG
+uOJ
+uDe
+bTy
+glv
+dQE
 cEH
-uDd
-uDd
-cEH
+xUe
+xUe
+gys
+swY
+eYk
+vJr
 gkF
 eiV
 uZq
@@ -106305,39 +105858,39 @@ iSF
 iSE
 tvL
 gop
-eup
-eup
+bYz
+bYz
 nzK
 qSZ
 dHa
 dHa
 abV
 tWU
-aMs
-aMs
-aMs
-aMs
-aMs
-aMs
-aMs
-aMs
-aad
-bPD
-cqT
-xiI
-xiI
-sII
-ydN
-wUV
+kHn
+kHn
+kHn
+kHn
+kHn
+kHn
+kHn
+kHn
+qoS
+cKv
+rpY
+ppD
+ppD
+hnD
+uOJ
+uDe
+bTy
+glv
+dZo
 fJR
-dIz
-ovA
-tih
-dFk
-txl
-fJR
-mmK
 psu
+txl
+prA
+tIi
+cBS
 fJR
 lnB
 pGA
@@ -106563,33 +106116,33 @@ iSF
 jVA
 cHl
 fHW
-eup
-eup
+bYz
+yis
 bqB
 xKo
 dHa
 dHa
 nIE
-aGs
-aMs
-aMs
-aMs
-aMs
-aMs
-aMs
-aMs
-aMs
-bGG
-bQV
-crb
-xiI
-xiI
-wZl
-fkS
-mGN
-ikQ
-iDp
-nVQ
+kHn
+kHn
+aMh
+aMh
+aMh
+aMh
+aMh
+aMh
+aMh
+vnT
+cEG
+ppD
+ppD
+ppD
+jVq
+uOJ
+uDe
+bTy
+glv
+wfP
 fMV
 fMV
 fMV
@@ -106612,7 +106165,7 @@ mgf
 mgf
 qTV
 eSH
-nrR
+pTW
 rfG
 rfG
 rfG
@@ -106836,18 +106389,18 @@ aMh
 aMh
 aMh
 aMh
+aMh
 kHn
-bkC
-fJR
-wTa
-xiI
-nHS
-sem
-uOJ
-ukQ
-fJR
-wbq
-wbq
+bQV
+ppD
+ppD
+ppD
+jVq
+aBA
+uDe
+fmC
+glv
+pOL
 fMV
 foz
 foz
@@ -107086,7 +106639,7 @@ jtL
 dHa
 dHa
 akK
-cpV
+hcx
 kHn
 aMh
 aMh
@@ -107094,18 +106647,18 @@ aMh
 aMh
 aMh
 aMh
+aMh
 kHn
-tIi
-fJR
-wJY
-xiI
-idY
-sMo
+bQV
+ppD
+ppD
+ppD
+jVq
 uOJ
 uDe
-fJR
-fJR
-fJR
+bTy
+glv
+vUt
 fMV
 foz
 foz
@@ -107330,7 +106883,7 @@ fLj
 fLj
 jSS
 jtL
-eup
+iSF
 eup
 hYl
 oRe
@@ -107345,25 +106898,25 @@ dHa
 dHa
 abV
 mSu
-kHn
+iOs
+aMh
 aMh
 aMh
 snD
 aMh
 aMh
 aMh
-iOs
 cSX
-fJR
-wJY
-xiI
-oEP
-nVv
-ujy
-iaG
-fJR
-eYk
-xmQ
+bQV
+ppD
+ppD
+ppD
+rmg
+uOJ
+uDe
+bTy
+glv
+rsu
 fMV
 foz
 foz
@@ -107610,18 +107163,18 @@ aMh
 aMh
 aMh
 aMh
+aMh
 kHn
-lxz
 bQV
-mzR
-xiI
-xAP
-diJ
+ppD
+ppD
+ppD
+jVq
 uOJ
-bXC
-fJR
-eYk
-jFm
+uDe
+bTy
+glv
+bnp
 fMV
 foz
 foz
@@ -107868,18 +107421,18 @@ aMh
 aMh
 aMh
 aMh
+aMh
 kHn
-aBA
-fJR
-prA
-xiI
+bQV
 ppD
-dAI
-uOJ
-eKo
-fJR
-ubW
+ppD
+ppD
+jVq
+dIz
+uDe
 fmC
+glv
+fyW
 fMV
 foz
 foz
@@ -108110,34 +107663,34 @@ eup
 iSF
 jVA
 bfP
-fHW
-eup
-eup
+diR
+bYz
+gBw
 cRD
 jtL
 dHa
 dHa
 akK
 aGs
-aMs
-aMs
-aMs
-aMs
-aMs
-aMs
-aMs
-aMs
+kHn
+aMh
+aMh
+aMh
+aMh
+aMh
+aMh
+aMh
 eJF
-fJR
-nBp
-xiI
-cBS
-cBS
+cEG
+ppD
+ppD
+ppD
+jVq
 uOJ
-uwW
-fJR
-fLJ
-fJR
+uDe
+bTy
+glv
+eES
 fMV
 fMV
 fMV
@@ -108160,7 +107713,7 @@ mgf
 mgf
 qTV
 mEk
-nrR
+pTW
 rfG
 rfG
 rfG
@@ -108369,33 +107922,33 @@ iSF
 weg
 tpU
 qIs
-eup
-eup
+bYz
+bYz
 tav
 hFy
 dHa
 dHa
 abV
 aak
-aMs
-aMs
-aMs
-aMs
-aMs
-aMs
-aMs
-aMs
+kHn
+kHn
+kHn
+kHn
+kHn
+kHn
+kHn
+kHn
 ger
-bPD
-nKZ
-xiI
+azX
+rpY
+ppD
+ppD
+tYZ
+uOJ
+uDe
+bTy
 glv
-kle
-qzY
-mFn
-fJR
-eYQ
-laA
+kpt
 hKr
 trw
 evA
@@ -108644,16 +108197,16 @@ xIA
 aNx
 aNx
 uCi
-bQV
-fdI
-xiI
-frp
-xiI
-hNz
-iRF
-fJR
-bkJ
-xZM
+cEG
+wZl
+oEP
+jVq
+bGG
+uOJ
+uDe
+bTy
+glv
+kpt
 fsM
 hHz
 eJK
@@ -108891,7 +108444,7 @@ rUF
 lWD
 dHa
 dHa
-tnv
+nIE
 mmp
 ncG
 koz
@@ -108901,17 +108454,17 @@ iuZ
 awy
 dQh
 dQh
+fzE
+xLP
+jVq
+fVJ
+jVq
+bGG
+xiI
+wUV
+xAP
+iaG
 kpt
-fJR
-xIo
-iXE
-kCR
-kCR
-xbv
-sdM
-fJR
-gSd
-dQh
 cVS
 eyi
 fIA
@@ -109159,17 +108712,17 @@ jND
 fXn
 dQh
 dQh
-lea
-rzo
-xcP
-ueQ
-fPf
-heB
+fzE
+cQK
+bkC
+iwI
+brm
 bQV
-uzY
-fJR
-dsu
-nZD
+cEG
+bQV
+bkC
+dHF
+laA
 hJj
 hJj
 hKr
@@ -109416,17 +108969,17 @@ pQS
 atX
 aao
 dQh
-dQh
-lea
-cQQ
-uGm
-dQh
-cQQ
-cQQ
-laA
+fbb
 fzE
 dQh
-jsw
+dQh
+eBa
+dQh
+aad
+mny
+dQh
+dQh
+dQh
 dKj
 dYf
 gXC
@@ -109678,9 +109231,9 @@ bPo
 uLM
 qba
 rkX
-qba
+cpV
 rKJ
-qba
+mKX
 qba
 oHP
 qba
@@ -109881,7 +109434,7 @@ meg
 gTB
 pMd
 lCK
-sun
+tDI
 cxF
 epw
 vTb
@@ -110195,7 +109748,7 @@ blk
 hZc
 avn
 dsP
-cJI
+dQh
 blk
 avn
 avn
@@ -110204,7 +109757,7 @@ aJK
 dQh
 dZX
 bmm
-jdD
+dcT
 fWQ
 jIz
 hJj
@@ -110464,7 +110017,7 @@ pWI
 bmm
 xnB
 iaz
-fbp
+tnv
 hJj
 hyk
 emy
@@ -110720,9 +110273,9 @@ snX
 dQh
 eaN
 bmm
-xDJ
+fbp
 oNI
-toX
+jdD
 hJj
 cPX
 kcJ
@@ -110968,17 +110521,17 @@ cXM
 cXM
 lzM
 ddq
-dsP
+qbz
 cMP
 blk
 avn
 avn
-gSb
+dsP
 dCl
 xku
 kTm
 bmm
-bNg
+kle
 nPk
 dES
 hJj
@@ -111223,7 +110776,7 @@ cKI
 rFD
 xlk
 vBA
-vjD
+jgh
 cXM
 cXM
 cXM
@@ -112983,7 +112536,7 @@ bxg
 oug
 eEJ
 iKn
-eEJ
+cJI
 iVi
 jGo
 oug
@@ -113081,7 +112634,7 @@ dHa
 eow
 eow
 eow
-vZm
+jsw
 eWG
 lxv
 tYA
@@ -113516,7 +113069,7 @@ eEC
 aLd
 ayM
 cSS
-cSS
+vDg
 gVl
 rul
 cwa
@@ -114849,7 +114402,7 @@ qiV
 dih
 azB
 eSu
-xLP
+ess
 ehq
 gtJ
 ehq
@@ -116382,7 +115935,7 @@ vXD
 mfp
 bWV
 pZA
-kcG
+uQe
 kcG
 mfp
 kcG
@@ -116934,7 +116487,7 @@ rPp
 vyx
 sEn
 dpB
-tbD
+vTg
 hBq
 hBq
 dHa
@@ -117161,7 +116714,7 @@ rcO
 kcG
 vwH
 pZA
-aWm
+vqh
 aWm
 uct
 krr
@@ -122572,7 +122125,7 @@ wDV
 eaO
 mXX
 iiF
-aNP
+iDw
 kZN
 dDU
 xrZ
@@ -123092,7 +122645,7 @@ wDV
 wDV
 wDV
 nxp
-dVi
+gSb
 ouJ
 xgk
 xRu
@@ -124644,7 +124197,7 @@ gJr
 ouJ
 eEO
 xRu
-xRu
+bUO
 xVM
 ckO
 lOH
@@ -127951,9 +127504,9 @@ apc
 apc
 apc
 apc
-cDl
+mMn
 naz
-cDl
+mMn
 apc
 apc
 apc
@@ -127965,9 +127518,9 @@ apc
 apc
 apc
 apc
-cDl
+mMn
 naz
-cDl
+mMn
 apc
 apc
 apc
@@ -128047,9 +127600,9 @@ apc
 apc
 apc
 apc
-cDl
+mMn
 biI
-cDl
+mMn
 apc
 apc
 apc
@@ -128061,9 +127614,9 @@ apc
 apc
 apc
 apc
-cDl
+mMn
 biI
-cDl
+mMn
 apc
 apc
 apc
@@ -128210,7 +127763,7 @@ apc
 apc
 apc
 aqj
-cDl
+mMn
 aqj
 apc
 apc
@@ -128224,7 +127777,7 @@ apc
 apc
 apc
 aqj
-cDl
+mMn
 aqj
 apc
 apc
@@ -128306,7 +127859,7 @@ apc
 apc
 apc
 aqj
-cDl
+mMn
 aqj
 apc
 apc
@@ -128320,7 +127873,7 @@ apc
 apc
 apc
 aqj
-cDl
+mMn
 aqj
 apc
 apc
