@@ -8,7 +8,6 @@ GLOBAL_LIST_INIT(advance_cures, list(
 ))
 
 /datum/disease/advance
-
 	name = "Unknown"
 	desc = "An engineered disease which can contain a multitude of symptoms."
 	form = "Advance Disease"
@@ -369,7 +368,7 @@ GLOBAL_LIST_INIT(advance_cures, list(
 		D.AssignName(new_name)
 		D.Refresh()
 
-		for(var/datum/disease/advance/AD in GLOB.active_diseases)
+		for(var/datum/disease/advance/AD in active_diseases)
 			AD.Refresh()
 
 		for(var/thing in shuffle(human_mob_list))

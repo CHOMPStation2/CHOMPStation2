@@ -102,8 +102,14 @@
 		dat += "<b>Genetic Damage</b> - Utilize cryogenic pod with appropriate chemicals (i.e. Cryoxadone) and below 70 K, or give Rezadone.<br>"
 	if(bone)
 		dat += "<b>Bone Fracture</b> - Splint the fractured limb. Commence a bone repair operation or administer Osteodaxon after treating the physical trauma.<br>"
-	if(M.virus2.len)
-		dat += "<b>Viral Infection</b> - Inform a Virologist or the Chief Medical Officer and administer antiviral chemicals such as Corophizine and Spaceacilin. Limit exposure to other personnel.<br>"
+	// CHOMPEdit Start
+	if(M.viruses.len)
+		var/detected = FALSE
+		for(var/datum/disease/D in M.viruses)
+			if(D.discovered && !detected)
+				dat += "<b>Viral Infection</b> - Inform a Virologist or the Chief Medical Officer and administer antiviral chemicals such as Corophizine and Spaceacilin. Limit exposure to other personnel.<br>"
+				detected = TRUE
+	// CHOMPEdit End
 	if(robotparts)
 		dat += "<b>Robotic Body Parts</b> - Inform the Robotics department."
 

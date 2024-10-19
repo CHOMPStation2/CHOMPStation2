@@ -480,8 +480,10 @@
 /atom/proc/add_vomit_floor(mob/living/carbon/M as mob, var/toxvomit = 0)
 	if( istype(src, /turf/simulated) )
 		var/obj/effect/decal/cleanable/vomit/this = new /obj/effect/decal/cleanable/vomit(src)
-		this.virus2 = virus_copylist(M.virus2)
-
+		// CHOMPEdit Start
+		for(var/datum/disease/D in M.viruses)
+			this.viruses |= D.Copy()
+		// CHOMPEdit End
 		// Make toxins vomit look different
 		if(toxvomit)
 			this.icon_state = "vomittox_[pick(1,4)]"

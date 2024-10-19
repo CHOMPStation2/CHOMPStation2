@@ -509,12 +509,13 @@ I said no!
 	result = /obj/item/reagent_containers/food/snacks/icecreamsandwich
 
 // Fuck Science!
+/* CHOMPEdit - No, fuck YOU!
 /datum/recipe/ruinedvirusdish
 	items = list(
 		/obj/item/virusdish
 	)
 	result = /obj/item/ruinedvirusdish
-
+*/
 
 /datum/recipe/onionsoup
 	fruit = list("onion" = 1)

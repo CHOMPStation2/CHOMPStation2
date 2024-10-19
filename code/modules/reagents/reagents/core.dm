@@ -23,9 +23,11 @@
 
 /datum/reagent/blood/get_data() // Just in case you have a reagent that handles data differently.
 	var/t = data.Copy()
-	if(t["virus2"])
-		var/list/v = t["virus2"]
-		t["virus2"] = v.Copy()
+	// CHOMPEdit - Virology reworked
+	if(t["viruses"])
+		var/list/v = t["viruses"]
+		t["viruses"] = v.Copy()
+	// CHOMPEdit End
 	return t
 
 /datum/reagent/blood/touch_turf(var/turf/simulated/T)
@@ -70,13 +72,16 @@
 	if(effective_dose > 15)
 		if(!is_vampire) //VOREStation Edit.
 			M.adjustToxLoss(removed) //VOREStation Edit.
-	if(data && data["virus2"])
-		var/list/vlist = data["virus2"]
+	// CHOMPEdit Start - Virology Rework
+	if(data && data["viruses"])
+		var/list/vlist = data["viruses"]
 		if(vlist.len)
 			for(var/ID in vlist)
-				var/datum/disease2/disease/V = vlist[ID]
-				if(V.spreadtype == "Contact")
-					infect_virus2(M, V.getcopy())
+				var/datum/disease/D = vlist[ID]
+				if((D.spread_flags & SPECIAL) || (D.spread_flags & NON_CONTAGIOUS))
+					continue
+				M.ContractDisease(D)
+	// CHOMPEdit End
 
 /datum/reagent/blood/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
 	if(ishuman(M))
@@ -86,15 +91,18 @@
 	if(alien == IS_SLIME)
 		affect_ingest(M, alien, removed)
 		return
-	if(data && data["virus2"])
-		var/list/vlist = data["virus2"]
+	// CHOMPEdit Start - Virology Rework
+	if(data && data["viruses"])
+		var/list/vlist = data["viruses"]
 		if(vlist.len)
 			for(var/ID in vlist)
-				var/datum/disease2/disease/V = vlist[ID]
-				if(V.spreadtype == "Contact")
-					infect_virus2(M, V.getcopy())
+				var/datum/disease/D = vlist[ID]
+				if((D.spread_flags & SPECIAL) || (D.spread_flags & NON_CONTAGIOUS))
+					continue
+				M.ContractDisease(D)
 	if(data && data["antibodies"])
 		M.antibodies |= data["antibodies"]
+	// CHOMPEdit End - Virology Rework
 
 /datum/reagent/blood/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_SLIME)	//They don't have blood, so it seems weird that they would instantly 'process' the chemical like another species does.

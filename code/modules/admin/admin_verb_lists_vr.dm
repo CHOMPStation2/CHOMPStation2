@@ -191,7 +191,7 @@ var/list/admin_verbs_spawn = list(
 	/client/proc/cmd_admin_droppod_spawn,
 	/client/proc/respawn_character,
 	/client/proc/spawn_character_mob,  //VOREStation Add,
-	/client/proc/virus2_editor,
+	// /client/proc/virus2_editor, - CHOMPEdit
 	/client/proc/spawn_chemdisp_cartridge,
 	/client/proc/map_template_load,
 	/client/proc/map_template_upload,

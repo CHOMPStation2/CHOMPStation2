@@ -22,10 +22,8 @@
 				return
 			if(prob(1))
 				affected_mob.say("*sneeze")
-				spread()
 			if(prob(1))
 				affected_mob.say("*cough")
-				spread()
 			if(prob(1))
 				to_chat(affected_mob, span_danger("Your muscles ache."))
 				if(prob(20))
@@ -40,10 +38,8 @@
 				return
 			if(prob(1))
 				affected_mob.say("*sneeze")
-				spread()
 			if(prob(1))
 				affected_mob.say("*cough")
-				spread()
 			if(prob(1))
 				to_chat(affected_mob, span_danger("Your muscles ache."))
 				if(prob(20))

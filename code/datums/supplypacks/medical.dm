@@ -327,7 +327,7 @@
 	containertype = /obj/structure/closet/crate/secure/veymed
 	containername = "Portable freezers"
 	access = access_medical_equip
-
+/* CHOMPEdit Start
 /datum/supply_pack/med/virus
 	name = "Virus sample crate"
 	contains = list(/obj/item/virusdish/random = 4)
@@ -335,7 +335,7 @@
 	containertype = /obj/structure/closet/crate/secure/zenghu
 	containername = "Virus sample crate"
 	access = access_cmo
-
+*/
 /datum/supply_pack/med/defib
 	name = "Defibrillator crate"
 	contains = list(/obj/item/defib_kit = 2)
@@ -408,7 +408,7 @@
 	containertype = /obj/structure/closet/crate/secure
 	containername = "Virology biohazard equipment"
 	access = access_medical_equip
-
+/* CHOMPEdit
 /datum/supply_pack/med/virus
 	name = "Virus sample crate"
 	contains = list(/obj/item/virusdish/random = 4)
@@ -416,7 +416,7 @@
 	containertype = /obj/structure/closet/crate/secure
 	containername = "Virus sample crate"
 	access = access_medical_equip
-
+*/
 
 /datum/supply_pack/med/bloodpack
 	containertype = /obj/structure/closet/crate/medical/blood

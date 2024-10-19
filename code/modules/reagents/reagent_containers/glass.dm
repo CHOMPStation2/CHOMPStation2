@@ -39,11 +39,11 @@
 		/obj/item/storage/secure/safe,
 		/obj/machinery/iv_drip,
 		/obj/structure/medical_stand, //VOREStation Add,
-		/obj/machinery/disease2/incubator,
+		// /obj/machinery/disease2/incubator, CHOMPEdit
 		/obj/machinery/disposal,
 		/mob/living/simple_mob/animal/passive/cow,
 		/mob/living/simple_mob/animal/goat,
-		/obj/machinery/computer/centrifuge,
+		// /obj/machinery/computer/centrifuge, CHOMPEdit
 		/obj/machinery/sleeper,
 		/obj/machinery/smartfridge/,
 		/obj/machinery/biogenerator,
@@ -52,7 +52,8 @@
 		/obj/machinery/portable_atmospherics/powered/reagent_distillery,
 		/obj/machinery/feeder,
 		/obj/machinery/chemical_synthesizer, //CHOMPedit,
-		/obj/machinery/food_replicator // CHOMPAdd
+		/obj/machinery/food_replicator, // CHOMPAdd
+		/obj/machinery/computer/pandemic // CHOMPAdd
 		)
 //CHOMP Addition for feeder in the above list. I am paranoid about comments within lists so this is outside.
 

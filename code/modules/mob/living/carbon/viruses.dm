@@ -1,3 +1,4 @@
+/* CHOMPEdit - Virology Rework
 /mob/living/carbon/proc/handle_viruses()
 
 	if(status_flags & GODMODE)	return 0	//godmode
@@ -46,3 +47,4 @@
 				V.dead = 1
 
 	return
+*/

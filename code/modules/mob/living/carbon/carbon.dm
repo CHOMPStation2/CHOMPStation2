@@ -13,7 +13,7 @@
 /mob/living/carbon/Life()
 	..()
 
-	handle_viruses()
+	handle_diseases() // CHOMPEdit
 
 	// Increase germ_level regularly
 	if(germ_level < GERM_LEVEL_AMBIENT && prob(30))	//if you're just standing there, you shouldn't get more germs beyond an ambient level
@@ -402,7 +402,12 @@
 		return
 	..()
 	if(istype(A, /mob/living/carbon) && prob(10))
-		spread_disease_to(A, "Contact")
+		// CHOMPEdit Start
+		var/mob/living/carbon/human/H = A
+		for(var/datum/disease/D in viruses)
+			if(D.spread_flags & CONTACT_GENERAL)
+				H.ContractDisease(D)
+		// CHOMPEdit End
 
 /mob/living/carbon/cannot_use_vents()
 	return

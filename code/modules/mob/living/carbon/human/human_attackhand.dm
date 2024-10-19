@@ -76,10 +76,12 @@
 		if(H != src && check_shields(0, null, H, H.zone_sel.selecting, H.name))
 			H.do_attack_animation(src)
 			return FALSE
-
+	// CHOMPEdit Start
 	if(istype(M,/mob/living/carbon))
-		var/mob/living/carbon/C = M
-		C.spread_disease_to(src, "Contact")
+		for(var/datum/disease/D in M.viruses)
+			if(D.spread_flags & CONTACT_HANDS)
+				ContractDisease(D)
+	// CHOMPEdit End
 
 	switch(M.a_intent)
 		if(I_HELP)

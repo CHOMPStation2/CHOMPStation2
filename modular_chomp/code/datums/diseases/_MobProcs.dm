@@ -18,6 +18,9 @@
 	if(istype(D, /datum/disease/advance) && count_by_type(viruses, /datum/disease/advance) > 0)
 		return FALSE
 
+	if(isSynthetic() && !D.infect_synthetics)
+		return FALSE
+
 	if(!(type in D.viable_mobtypes))
 		return -1
 
@@ -33,7 +36,7 @@
 	var/datum/disease/DD = new D.type(1, D, 0)
 	viruses += DD
 	DD.affected_mob = src
-	GLOB.active_diseases += DD
+	active_diseases += DD
 
 	var/list/skipped = list("affected_mob", "holder", "carrier", "stage", "type", "parent_type", "vars", "transformed")
 	if(respect_carrier)
@@ -159,11 +162,3 @@
 		var/datum/disease/D = new thesick(0)
 		ForceContractDisease(D)
 		return TRUE
-
-/mob/living/proc/getAColdStupid()
-	var/datum/disease/Cold = new /datum/disease/cold(0)
-	ForceContractDisease(Cold)
-
-/mob/living/proc/getAnxious()
-	var/datum/disease/Anxiety = new /datum/disease/anxiety(0)
-	ForceContractDisease(Anxiety)
