@@ -201,3 +201,25 @@
   tacoguy7765093:
   - rscadd: Added a new outsider pod called SecondLifeBar with nearly every scene
       tool.
+2024-10-18:
+  CHOMPStation2:
+  - rscadd: The entire upper right quadrant of the game window has been replaced with
+      a new stat/verb panel that doesn't lag the client to death.
+  - rscadd: Verdigris, an in-tree rust module - responsible for cellular automata
+      currently, and more soon!
+  - rscadd: Server starts faster thanks to Verdigris generating ore turfs much faster.
+2024-10-19:
+  CHOMPStation2:
+  - rscadd: Action buttons now have a mouse cursor override when being dragged to
+      show where you will drop them.
+  - bugfix: You can actually move action buttons around again and they'll stay there,
+      until you shift-click on them.
+  Kashargul:
+  - bugfix: prussian blue in the chomp override
+  TheCaramelion:
+  - maptweak: Places lights on Distillery, Chemistry and Cryo
+  - maptweak: Genetics receiving all items throw into disposals
+  - maptweak: Replaced roller beds next to the scanners
+  - maptweak: Fixed virology door buttons
+  - maptweak: Changed wrong tables in Genetics and Chemistry
+  - maptweak: Manifold in Distillery is now hidden

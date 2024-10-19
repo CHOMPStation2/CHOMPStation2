@@ -34,11 +34,11 @@ SUBSYSTEM_DEF(tgui)
 
 /datum/controller/subsystem/tgui/Shutdown()
 	close_all_uis()
-//CHOMPEdit Begin
+
 /datum/controller/subsystem/tgui/stat_entry(msg)
 	msg = "P:[all_uis.len]"
 	return ..()
-//CHOMPEdit End
+
 /datum/controller/subsystem/tgui/fire(resumed = FALSE)
 	if(!resumed)
 		src.current_run = all_uis.Copy()

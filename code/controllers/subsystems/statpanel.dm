@@ -31,10 +31,10 @@ SUBSYSTEM_DEF(statpanels)
 			"Map: [using_map.name]",
 			//cached ? "Next Map: [cached.map_name]" : null,
 			//"Next Map: -- Not Available --",
-			"Round ID: [GLOB.round_id ? GLOB.round_id : "NULL"]",
+			"Round ID: [GLOB.round_id ? GLOB.round_id : "NULL"]", // CHOMPEdit
 			"Server Time: [time2text(world.timeofday, "YYYY-MM-DD hh:mm:ss")]",
 			"Round Time: [ROUND_TIME()]",
-			"Station Date: [stationdate2text()], [capitalize(GLOB.world_time_season)]",
+			"Station Date: [stationdate2text()], [capitalize(GLOB.world_time_season)]", // CHOMPEdit
 			"Station Time: [stationtime2text()]",
 			"Time Dilation: [round(SStime_track.time_dilation_current,1)]% AVG:([round(SStime_track.time_dilation_avg_fast,1)]%, [round(SStime_track.time_dilation_avg,1)]%, [round(SStime_track.time_dilation_avg_slow,1)]%)"
 		)
@@ -136,7 +136,7 @@ SUBSYSTEM_DEF(statpanels)
 
 	target.stat_panel.send_message("update_stat", list(
 		global_data = global_data,
-		ping_str = "Ping: [round(target.lastping, 1)]ms (Average: [round(target.avgping, 1)]ms)",
+		ping_str = "Ping: [round(target.lastping, 1)]ms (Average: [round(target.avgping, 1)]ms)", // CHOMPEdit
 		other_str = target.mob?.get_status_tab_items(),
 	))
 
@@ -173,7 +173,7 @@ SUBSYSTEM_DEF(statpanels)
 	target.stat_panel.send_message("update_examine", examine_update)
 
 /datum/controller/subsystem/statpanels/proc/set_tickets_tab(client/target)
-	var/list/tickets = GLOB.tickets.stat_entry(target)
+	var/list/tickets = GLOB.tickets.stat_entry(target) // CHOMPEdit
 	target.stat_panel.send_message("update_tickets", tickets)
 
 /datum/controller/subsystem/statpanels/proc/set_SDQL2_tab(client/target)
@@ -278,7 +278,7 @@ SUBSYSTEM_DEF(statpanels)
 		list("Instances:", "[num2text(world.contents.len, 10)]"),
 		list("World Time:", "[world.time]"),
 		list("Globals:", GLOB.stat_entry(), "\ref[GLOB]"),
-		list("[config]:", config.stat_entry(), "\ref[config]"),
+		list("[config]:", config.stat_entry(), "\ref[config]"), // CHOMPEdit
 		list("Byond:", "(FPS:[world.fps]) (TickCount:[world.time/world.tick_lag]) (TickDrift:[round(Master.tickdrift,1)]([round((Master.tickdrift/(world.time/world.tick_lag))*100,0.1)]%)) (Internal Tick Usage: [round(MAPTICK_LAST_INTERNAL_TICK_USAGE,0.1)]%)"),
 		list("Master Controller:", Master.stat_entry(), "\ref[Master]"),
 		list("Failsafe Controller:", Failsafe.stat_entry(), "\ref[Failsafe]"),

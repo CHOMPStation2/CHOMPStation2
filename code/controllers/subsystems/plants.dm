@@ -22,11 +22,11 @@ SUBSYSTEM_DEF(plants)
 	var/list/processing = list()
 	var/list/currentrun = list()
 
-//CHOMPEdit Begin
 /datum/controller/subsystem/plants/stat_entry(msg)
 	msg = "P:[processing.len]|S:[seeds.len]"
 	return ..()
 
+//CHOMPEdit Begin
 /datum/controller/subsystem/plants/Initialize()
 	setup()
 	return SS_INIT_SUCCESS

@@ -73,13 +73,13 @@
 // Called in robotize(), replaced() and removed() to update our modular limb verbs.
 /mob/living/carbon/human/proc/refresh_modular_limb_verbs()
 	if(length(get_modular_limbs(return_first_found = TRUE, validate_proc = /obj/item/organ/external/proc/can_attach_modular_limb_here)))
-		add_verb(src,/mob/living/carbon/human/proc/attach_limb_verb) //CHOMPEdit TGPanel
+		add_verb(src, /mob/living/carbon/human/proc/attach_limb_verb)
 	else
-		remove_verb(src,/mob/living/carbon/human/proc/attach_limb_verb) //CHOMPEdit TGPanel
+		remove_verb(src, /mob/living/carbon/human/proc/attach_limb_verb)
 	if(length(get_modular_limbs(return_first_found = TRUE, validate_proc = /obj/item/organ/external/proc/can_remove_modular_limb)))
-		add_verb(src,/mob/living/carbon/human/proc/detach_limb_verb) //CHOMPEdit TGPanel
+		add_verb(src, /mob/living/carbon/human/proc/detach_limb_verb)
 	else
-		remove_verb(src,/mob/living/carbon/human/proc/detach_limb_verb) //CHOMPEdit TGPanel
+		remove_verb(src, /mob/living/carbon/human/proc/detach_limb_verb)
 
 // Proc helper for attachment verb.
 /mob/living/carbon/human/proc/check_can_attach_modular_limb(var/obj/item/organ/external/E)

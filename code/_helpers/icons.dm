@@ -95,7 +95,6 @@
 
 	return isnull(alpha) ? rgb(r, g, b) : rgb(r, g, b, alpha)
 
-//CHOMPEdit Begin
 // Ported from /tg/station
 // Creates a single icon from a given /atom or /image.  Only the first argument is required.
 // appearance_flags indicates whether appearance_flags should be respected (at the cost of about 10-20% perf)
@@ -297,7 +296,6 @@
 		return final_icon
 
 	#undef PROCESS_OVERLAYS_OR_UNDERLAYS
-//CHOMPEdit End
 
 /proc/getIconMask(atom/A)//By yours truly. Creates a dynamic mask for a mob/whatever. /N
 	var/icon/alpha_mask = new(A.icon,A.icon_state)//So we want the default icon and icon state of A.

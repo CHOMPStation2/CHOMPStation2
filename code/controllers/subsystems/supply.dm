@@ -38,11 +38,11 @@ SUBSYSTEM_DEF(supply)
 // Supply shuttle ticker - handles supply point regeneration. Just add points over time.
 /datum/controller/subsystem/supply/fire()
 	points += points_per_process
-//CHOMPEdit Begin
+
 /datum/controller/subsystem/supply/stat_entry(msg)
 	msg = "Points: [points]"
 	return ..()
-//CHOMPEdit End
+
 //To stop things being sent to CentCom which should not be sent to centcomm. Recursively checks for these types.
 /datum/controller/subsystem/supply/proc/forbidden_atoms_check(atom/A)
 	if(isliving(A))
