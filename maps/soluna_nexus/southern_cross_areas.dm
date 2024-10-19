@@ -799,7 +799,6 @@ z
 	lift_floor_name = "Command Deck"
 	lift_announce_str = "Arriving at Command Deck: Bridge. Meeting Room. Command Quarters. AI Core. Solars."
 
-
 //Deck One (Z-1)
 
 /area/engineering/auxiliary_engineering
@@ -1505,6 +1504,7 @@ z
 	dynamic_lighting = 0
 	ambience = AMBIENCE_SPACE
 
+
 // Shuttles
 
 //NT response shuttle
@@ -1785,6 +1785,7 @@ End Chompstation Edit*/
 	name = "\improper Merchant Vessel - Away"
 
 //Small Escape Pods
+
 
 /area/shuttle/escape_pod1
 	name = "\improper Escape Pod One"
@@ -3437,6 +3438,11 @@ End Chompstation Edit*/
 
 /area/SouthernCrossV2/Domicile/Chomp_Hydroponics
     name = "\improper Chomp Hydroponics"
+    icon_state = "gaming"
+    flags = RAD_SHIELDED
+
+/area/SouthernCrossV2/Domicile/Chomp_Stage
+    name = "\improper Chomp Convention Stage"
     icon_state = "gaming"
     flags = RAD_SHIELDED
 
