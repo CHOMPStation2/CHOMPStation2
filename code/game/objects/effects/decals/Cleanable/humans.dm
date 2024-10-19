@@ -258,7 +258,7 @@ var/global/list/image/splatter_cache=list()
 	virus2 |= new /datum/disease2/disease
 	virus2[1].makerandom()
 	*/
-/obj/effect/decal/cleanable/mucus/mapped/Destroy()
+// /obj/effect/decal/cleanable/mucus/mapped/Destroy()
 	/* CHOMPEdit
 	virus2.Cut()
 	return ..()
