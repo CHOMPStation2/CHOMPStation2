@@ -360,11 +360,7 @@
 				dat += span_bold("[capitalize(O)]:") + " [N] [lowertext(O)]\s<BR>"
 			else
 				if (N==1)
-<<<<<<< HEAD
-					dat +={span_bold("[capitalize(O)]:") + " [N] [items_measures[O]]<BR>"
-=======
 					dat += span_bold("[capitalize(O)]:") + " [N] [items_measures[O]]<BR>"
->>>>>>> 7be625e0cb... some more small things (#16491)
 				else
 					dat += span_bold("[capitalize(O)]:") + " [N] [items_measures_p[O]]<BR>"
 
