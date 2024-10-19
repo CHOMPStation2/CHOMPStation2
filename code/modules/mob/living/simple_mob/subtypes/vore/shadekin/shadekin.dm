@@ -134,7 +134,7 @@
 
 	update_icon()
 
-	add_verb(src,/mob/proc/adjust_hive_range) //CHOMPEdit TGPanel
+	add_verb(src, /mob/proc/adjust_hive_range)
 
 	return ..()
 
@@ -231,7 +231,6 @@
 	add_overlay(tailimage)
 	add_overlay(eye_icon_state)
 
-//ChompEDIT START - TGPanel
 /mob/living/simple_mob/shadekin/update_misc_tabs()
 	..()
 	var/list/L = list()
@@ -247,7 +246,6 @@
 
 		L[++L.len] = list("[A.ability_name]", A.ability_name, img, A.atom_button_text(), REF(A))
 	misc_tabs["Shadekin"] = L
-//ChompEDIT END
 
 //They phase back to the dark when killed
 /mob/living/simple_mob/shadekin/death(gibbed, deathmessage = "phases to somewhere far away!")

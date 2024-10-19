@@ -54,7 +54,9 @@
 /turf/simulated/floor/tiled/milspec,
 /area/submap/frozenlab)
 "m" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/ravanger,
+/mob/living/simple_mob/humanoid/eclipse/lunar/ravanger{
+	loot_list = list(/obj/item/slime_extract/sepia = 1, /obj/item/bone/skull = 100, /obj/item/storage/belt/medical/alien = 20, /obj/item/reagent_containers/glass/beaker/bluespace = 20)
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/submap/frozenlab)
 "n" = (
@@ -82,8 +84,6 @@
 /area/template_noop)
 "s" = (
 /obj/structure/table/steel,
-/obj/random/firstaid,
-/obj/random/maintenance/medical,
 /obj/random/maintenance/security,
 /turf/simulated/floor/tiled/milspec,
 /area/submap/frozenlab)
@@ -105,6 +105,12 @@
 /mob/living/simple_mob/humanoid/eclipse/solar/cryomancer,
 /turf/simulated/floor/snow,
 /area/template_noop)
+"x" = (
+/obj/structure/table/steel,
+/obj/random/firstaid,
+/obj/random/maintenance/security,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/frozenlab)
 "z" = (
 /obj/machinery/portable_atmospherics/canister/oxygen/prechilled,
 /obj/machinery/light{
@@ -126,8 +132,12 @@
 /turf/simulated/floor/tiled/milspec,
 /area/submap/frozenlab)
 "G" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle,
-/turf/simulated/floor/tiled/milspec,
+/obj/structure/table/steel,
+/turf/simulated/floor/outdoors/shelfice{
+	nitrogen = 82.1472;
+	oxygen = 21.8366;
+	temperature = 293.15
+	},
 /area/submap/frozenlab)
 "H" = (
 /obj/random/material/refined,
@@ -137,6 +147,14 @@
 /obj/item/stack/material/void_opal,
 /turf/simulated/floor/snow,
 /area/template_noop)
+"J" = (
+/obj/structure/table/steel,
+/obj/random/maintenance/security,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/frozenlab)
 "L" = (
 /obj/machinery/atmospherics/unary/freezer,
 /turf/simulated/floor/outdoors/shelfice{
@@ -147,7 +165,6 @@
 /area/submap/frozenlab)
 "M" = (
 /obj/structure/table/steel,
-/obj/random/maintenance/medical,
 /obj/random/maintenance/security,
 /obj/machinery/light{
 	dir = 8
@@ -550,7 +567,7 @@ D
 D
 D
 c
-W
+G
 T
 a
 a
@@ -604,7 +621,7 @@ D
 D
 D
 c
-R
+G
 T
 a
 a
@@ -714,7 +731,7 @@ D
 D
 c
 c
-G
+m
 a
 a
 a
@@ -770,8 +787,8 @@ D
 D
 c
 c
-X
-s
+J
+x
 c
 z
 a

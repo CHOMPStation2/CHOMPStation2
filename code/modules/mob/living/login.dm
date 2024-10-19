@@ -15,17 +15,17 @@
 	AddComponent(/datum/component/character_setup)
 
 	// Vore stuff
-	add_verb(src,/mob/living/proc/escapeOOC) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/proc/lick) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/proc/smell) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/proc/switch_scaling) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/proc/center_offset) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/proc/mute_entry) //CHOMPEdit TGPanel //CHOMPEdit
-	add_verb(src,/mob/living/proc/liquidbelly_visuals) //CHOMPEdit TGPanel //CHOMPEdit
-	add_verb(src,/mob/living/proc/fix_vore_effects) //CHOMPEdit TGPanel //CHOMPedit
+	add_verb(src, /mob/living/proc/escapeOOC)
+	add_verb(src, /mob/living/proc/lick)
+	add_verb(src, /mob/living/proc/smell)
+	add_verb(src, /mob/living/proc/switch_scaling)
+	add_verb(src, /mob/living/proc/center_offset)
+	add_verb(src, /mob/living/proc/mute_entry) //CHOMPEdit
+	add_verb(src, /mob/living/proc/liquidbelly_visuals) //CHOMPEdit
+	add_verb(src, /mob/living/proc/fix_vore_effects) //CHOMPedit
 
 	if(!no_vore)
-		add_verb(src,/mob/living/verb/vorebelly_printout) //CHOMPEdit TGPanel
+		add_verb(src, /mob/living/proc/vorebelly_printout)
 		if(!vorePanel)
 			AddComponent(/datum/component/vore_panel)
 

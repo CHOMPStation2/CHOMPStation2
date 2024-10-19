@@ -37,14 +37,14 @@ var/list/admin_datums = list()
 		owner = C
 		owner.holder = src
 		owner.add_admin_verbs()	//TODO
-		owner.init_verbs() //re-initialize the verb list //CHOMPEdit
+		owner.init_verbs() //re-initialize the verb list
 		GLOB.admins |= C
 
 /datum/admins/proc/disassociate()
 	if(owner)
 		GLOB.admins -= owner
 		owner.remove_admin_verbs()
-		owner.init_verbs() //CHOMPEdit
+		owner.init_verbs() //re-initialize the verb list
 		owner.deadmin_holder = owner.holder
 		owner.holder = null
 

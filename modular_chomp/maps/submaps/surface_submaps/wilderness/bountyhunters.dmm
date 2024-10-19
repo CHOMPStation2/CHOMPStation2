@@ -149,7 +149,6 @@
 /area/submap/BountyHunters)
 "rt" = (
 /obj/structure/table/steel,
-/obj/random/projectile,
 /obj/machinery/recharger,
 /obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/concrete,
@@ -188,8 +187,8 @@
 /area/submap/BountyHunters)
 "uu" = (
 /obj/structure/table/steel,
-/obj/random/maintenance/medical,
 /obj/effect/floor_decal/corner/grey/diagonal,
+/obj/random/material/precious,
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
 "uC" = (

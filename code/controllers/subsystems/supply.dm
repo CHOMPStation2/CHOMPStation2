@@ -38,11 +38,11 @@ SUBSYSTEM_DEF(supply)
 // Supply shuttle ticker - handles supply point regeneration. Just add points over time.
 /datum/controller/subsystem/supply/fire()
 	points += points_per_process
-//CHOMPEdit Begin
+
 /datum/controller/subsystem/supply/stat_entry(msg)
 	msg = "Points: [points]"
 	return ..()
-//CHOMPEdit End
+
 //To stop things being sent to CentCom which should not be sent to centcomm. Recursively checks for these types.
 /datum/controller/subsystem/supply/proc/forbidden_atoms_check(atom/A)
 	if(isliving(A))
@@ -121,6 +121,11 @@ SUBSYSTEM_DEF(supply)
 						EC.contents[EC.contents.len]["quantity"] = cashmoney.worth
 						EC.value += EC.contents[EC.contents.len]["value"]
 
+					// CHOMPAdd Start - Sell salvage
+					if(istype(A, /obj/item/salvage))
+						var/obj/item/salvage/salvagedStuff = A
+						EC.contents[EC.contents.len]["value"] = salvagedStuff.worth
+					// CHOMPAdd End
 
 
 			// Make a log of it, but it wasn't shipped properly, and so isn't worth anything

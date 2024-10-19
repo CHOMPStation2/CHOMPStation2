@@ -243,7 +243,7 @@
 		return TRUE
 
 /obj/vehicle/proc/explode()
-	src.visible_message(span_red("<B>[src] blows apart!</B>"), 1)
+	src.visible_message(span_bolddanger("[src] blows apart!"), 1)
 	playsound(src, 'modular_chomp/sound/effects/explosions/vehicleexplosion.ogg', 100, 8, 3) //CHOMPedit: New sound effects.
 	var/turf/Tsec = get_turf(src)
 

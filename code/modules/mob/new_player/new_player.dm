@@ -22,7 +22,7 @@
 
 /mob/new_player/New()
 	mob_list += src
-	add_verb(src,/mob/proc/insidePanel) //CHOMPEdit TGPanel
+	add_verb(src, /mob/proc/insidePanel)
 	//CHOMPEdit Begin
 	if(length(GLOB.newplayer_start))
 		forceMove(pick(GLOB.newplayer_start))
@@ -45,22 +45,22 @@
 /mob/new_player/proc/new_player_panel_proc()
 	var/output = "<div align='center'>"
 
-	output += "<b>Map:</b> [using_map.full_name]<br>"
-	output += "<b>Station Time:</b> [stationtime2text()]<br>"
+	output += span_bold("Map:") + " [using_map.full_name]<br>"
+	output += span_bold("Station Time:") + " [stationtime2text()]<br>"
 
 	if(!ticker || ticker.current_state <= GAME_STATE_PREGAME)
-		output += "<b>Server Initializing!</b>"
+		output += span_bold("Server Initializing!")
 	else
-		output += "<b>Round Duration:</b> [roundduration2text()]<br>"
+		output += span_bold("Round Duration:") + " [roundduration2text()]<br>"
 	output += "<hr>"
 
 	output += "<p><a href='byond://?src=\ref[src];show_preferences=1'>Character Setup</A></p>"
 
 	if(!ticker || ticker.current_state <= GAME_STATE_PREGAME)
 		if(ready)
-			output += "<p>\[ <span class='linkOn'><b>Ready</b></span> | <a href='byond://?src=\ref[src];ready=0'>Not Ready</a> \]</p>" //ChompEDIT - fixed height
+			output += "<p>\[ " + span_linkOn(span_bold("Ready")) + " | <a href='byond://?src=\ref[src];ready=0'>Not Ready</a> \]</p>" //ChompEDIT - fixed height
 		else
-			output += "<p>\[ <a href='byond://?src=\ref[src];ready=1'>Ready</a> | <span class='linkOn'><b>Not Ready</b></span> \]</p>" //ChompEDIT - fixed height
+			output += "<p>\[ <a href='byond://?src=\ref[src];ready=1'>Ready</a> | " + span_linkOn(span_bold("Not Ready")) + " \]</p>" //ChompEDIT - fixed height
 		output += "<p><s>Join Game!</s></p>" //ChompEDIT - fixed height
 
 	else
@@ -128,15 +128,14 @@
 	panel.open()
 	return
 
-//CHOMPEdit Begin
 /mob/new_player/get_status_tab_items()
 	. = ..()
 	. += ""
 
 	. += "Game Mode: [SSticker.hide_mode ? "Secret" : "[config.mode_names[master_mode]]"]"
 
-	//if(SSvote.mode)
-	//	. += "Vote: [capitalize(SSvote.mode)] Time Left: [SSvote.time_remaining] s"
+	// if(SSvote.mode)
+	// 	. += "Vote: [capitalize(SSvote.mode)] Time Left: [SSvote.time_remaining] s"
 
 	if(SSticker.current_state == GAME_STATE_INIT)
 		. += "Time To Start: Server Initializing"
@@ -160,7 +159,6 @@
 				. += "[player.key] [player.ready ? "(Playing as: [refJob ? refJob.title : "Unknown"])" : null]"
 			totalPlayers++
 			if(player.ready)totalPlayersReady++
-//CHOMPEdit End
 
 /mob/new_player/Topic(href, href_list[])
 	if(!client)	return 0
@@ -211,7 +209,7 @@
 			observer.real_name = client.prefs.real_name
 			observer.name = observer.real_name
 			if(!client.holder && !CONFIG_GET(flag/antag_hud_allowed))           // For new ghosts we remove the verb from even showing up if it's not allowed. // CHOMPEdit
-				remove_verb(observer, /mob/observer/dead/verb/toggle_antagHUD) //CHOMPEdit        // Poor guys, don't know what they are missing!
+				remove_verb(observer, /mob/observer/dead/verb/toggle_antagHUD)        // Poor guys, don't know what they are missing!
 			observer.key = key
 			observer.set_respawn_timer(time_till_respawn()) // Will keep their existing time if any, or return 0 and pass 0 into set_respawn_timer which will use the defaults
 			observer.client.init_verbs()
@@ -310,7 +308,7 @@
 			var/sql = "INSERT INTO erro_privacy VALUES (null, Now(), :t_ckey, :t_option)" //CHOMPEdit TGSQL
 			var/datum/db_query/query_insert = SSdbcore.NewQuery(sql,sqlargs) //CHOMPEdit TGSQL
 			query_insert.Execute()
-			to_chat(usr, "<b>Thank you for your vote!</b>")
+			to_chat(usr, span_bold("Thank you for your vote!"))
 			qdel(query_insert)
 			usr << browse(null,"window=privacypoll")
 
@@ -420,7 +418,7 @@
 		dat += "<br>"
 		dat += "[body]"
 		dat += "<br>"
-		dat += "<font size='2'><i>Last written by [F["author"]], on [F["timestamp"]].</i></font>"
+		dat += span_normal(span_italics("Last written by [F["author"]], on [F["timestamp"]]."))
 		dat += "</center></body></html>"
 		var/datum/browser/popup = new(src, "Server News", "Server News", 450, 300, src)
 		popup.set_content(dat)
@@ -631,6 +629,7 @@
 
 	character.client.init_verbs() // init verbs for the late join
 
+	character.client.init_verbs()
 	qdel(src) // Delete new_player mob
 
 /mob/new_player/proc/AnnounceCyborg(var/mob/living/character, var/rank, var/join_message, var/channel, var/zlevel)
@@ -645,7 +644,7 @@
 	var/name = client.prefs.be_random_name ? "friend" : client.prefs.real_name
 
 	var/dat = "<html><body><center>"
-	dat += "<b>Welcome, [name].<br></b>"
+	dat += span_bold("Welcome, [name].<br>")
 	dat += "Round Duration: [roundduration2text()]<br>"
 
 	if(emergency_shuttle) //In case NanoTrasen decides reposess CentCom's shuttles.

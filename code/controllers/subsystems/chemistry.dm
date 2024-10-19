@@ -20,11 +20,9 @@ SUBSYSTEM_DEF(chemistry)
 	initialize_chemical_reactions()
 	return SS_INIT_SUCCESS // CHOMPEdit
 
-//CHOMPEdit Begin
 /datum/controller/subsystem/chemistry/stat_entry(msg)
 	msg = "C: [chemical_reagents.len] | R: [chemical_reactions.len]"
 	return ..()
-//CHOMPEdit End
 
 //Chemical Reactions - Initialises all /decl/chemical_reaction into a list
 // It is filtered into multiple lists within a list.
