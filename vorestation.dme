@@ -4710,7 +4710,6 @@
 #include "maps\southern_cross\structures\closets\research.dm"
 #include "maps\southern_cross\structures\closets\security.dm"
 #include "maps\southern_cross\turfs\outdoors.dm"
-#include "maps\southern_sun\southern_cross.dm"
 #include "maps\submaps\_helpers.dm"
 #include "maps\submaps\_readme.dm"
 #include "maps\~map_system\maps.dm"
