@@ -1,0 +1,9 @@
+author: "TheCaramelion"
+delete-after: True
+changes:
+  - maptweak: "Places lights on Distillery, Chemistry and Cryo"
+  - maptweak: "Genetics receiving all items throw into disposals"
+  - maptweak: "Replaced roller beds next to the scanners"
+  - maptweak: "Fixed virology door buttons"
+  - maptweak: "Changed wrong tables in Genetics and Chemistry"
+  - maptweak: "Manifold in Distillery is now hidden"
