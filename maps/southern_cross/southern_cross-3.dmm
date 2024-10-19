@@ -48016,18 +48016,12 @@
 /turf/simulated/wall,
 /area/rnd/storage)
 "eNU" = (
-/obj/structure/table/glass,
 /obj/structure/reagent_dispensers/virusfood{
 	pixel_x = 30
 	},
-/obj/item/reagent_containers/glass/beaker/large,
 /obj/machinery/camera/network/medbay{
 	c_tag = "MED - Virology Starboard";
 	dir = 8
-	},
-/obj/item/storage/box/monkeycubes{
-	pixel_x = -7;
-	pixel_y = -3
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -55029,12 +55023,15 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/dockhallway)
 "iqP" = (
-/obj/machinery/computer/diseasesplicer{
-	dir = 1
-	},
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/blue/border,
 /obj/machinery/light,
+/obj/structure/table/standard,
+/obj/item/storage/box/monkeycubes{
+	pixel_x = -7;
+	pixel_y = -3
+	},
+/obj/item/reagent_containers/glass/beaker/large,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "iqT" = (
@@ -56206,8 +56203,6 @@
 /area/hallway/primary/seconddeck/dockhallway)
 "iYU" = (
 /obj/structure/closet/crate/freezer,
-/obj/item/virusdish/random,
-/obj/item/virusdish/random,
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
@@ -56277,9 +56272,14 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/hallway/secondary/docking_hallway2)
 "iZI" = (
-/obj/machinery/computer/centrifuge,
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/blue/border,
+/obj/structure/table/standard,
+/obj/item/storage/fancy/vials,
+/obj/item/reagent_containers/syringe/antiviral,
+/obj/item/reagent_containers/syringe/antiviral,
+/obj/item/reagent_containers/syringe/antiviral,
+/obj/item/storage/lockbox/vials,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "iZV" = (
@@ -62396,6 +62396,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 4
 	},
+/obj/structure/bed/chair/office/dark,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "mpx" = (
@@ -63295,7 +63296,6 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/research_foyer)
 "mSO" = (
-/obj/structure/bed/chair/office/dark,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -63807,13 +63807,13 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "ngg" = (
-/obj/machinery/disease2/incubator,
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/paleblue/border,
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = -22
 	},
+/obj/machinery/computer/pandemic,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "nhc" = (
@@ -69661,7 +69661,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/research)
 "qrI" = (
-/obj/machinery/disease2/isolator,
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/paleblue/border,
 /obj/machinery/light,
@@ -75193,18 +75192,11 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 1
 	},
-/obj/structure/table/standard,
-/obj/item/storage/lockbox/vials,
-/obj/item/reagent_containers/syringe/antiviral,
-/obj/item/reagent_containers/syringe/antiviral,
-/obj/item/reagent_containers/syringe/antiviral,
-/obj/item/storage/fancy/vials,
-/obj/item/antibody_scanner,
-/obj/item/antibody_scanner,
 /obj/item/radio/intercom/department/medbay{
 	dir = 1;
 	pixel_y = 21
 	},
+/obj/machinery/computer/pandemic,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "tKB" = (
@@ -80281,7 +80273,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/medbay_fore)
 "wZh" = (
-/obj/machinery/disease2/diseaseanalyser,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 6
 	},
