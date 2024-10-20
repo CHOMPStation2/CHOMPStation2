@@ -1,0 +1,6 @@
+author: "ShadowLarkens"
+delete-after: True
+changes:
+  - qol: "Add bapi-dmm, a rust maploader, to reduce init time by 90 seconds."
+  - qol: "Moved tracy init to before-world-New."
+  - rscdel: "No more pretending to support map rotation"
