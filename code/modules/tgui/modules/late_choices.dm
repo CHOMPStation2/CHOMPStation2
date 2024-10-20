@@ -80,6 +80,11 @@
 			if(!character_old_enough_for_job(user.client.prefs, job))
 				continue
 
+			//CHOMPEdit Begin - Check species job bans... (Only used for shadekin)
+			if(job.is_species_banned(user.client.prefs.species, user.client.prefs.organ_data["brain"]))
+				continue
+			//CHOMPEdit End
+
 			var/active = 0
 			// Only players with the job assigned and AFK for less than 10 minutes count as active
 			for(var/mob/M in player_list)
@@ -116,7 +121,7 @@
 		if("join")
 			var/job = params["job"]
 
-			if(!config.enter_allowed)
+			if(!CONFIG_GET(flag/enter_allowed)) // CHOMPEdit
 				to_chat(user, span_notice("There is an administrative lock on entering the game!"))
 				return
 			else if(ticker && ticker.mode && ticker.mode.explosion_in_progress)
