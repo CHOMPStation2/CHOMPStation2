@@ -63,6 +63,7 @@
 								  "Phoron Dragon" = /mob/living/simple_mob/vore/aggressive/dragon/virgo3b,
 								  "Space Dragon" = /mob/living/simple_mob/vore/aggressive/dragon/space,
 								  "Crypt Drake" = /mob/living/simple_mob/vore/cryptdrake,
+								  //"Gryphon" = /mob/living/simple_mob/vore/gryphon,//CHOMPedit: more mobs
 								  "Weretiger" = /mob/living/simple_mob/vore/weretiger,
 								  "Lesser Large Dragon" = /mob/living/simple_mob/vore/bigdragon/friendly/maintpred,	//CHOMPStation add.
 								  "Catslug" = /mob/living/simple_mob/vore/alienanimals/catslug,
