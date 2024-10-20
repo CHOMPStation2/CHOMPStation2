@@ -81,7 +81,6 @@
 	if(inoperable())
 		return
 
-
 	. = TRUE
 
 	switch(action)
@@ -369,6 +368,7 @@
 			to_chat(user, span_warning("A beaker is already loaded into the machine!"))
 			return
 
+		user.drop_item()
 		beaker = I
 		beaker.loc = src
 		to_chat(usr, span_notice("You add the beaker to the machine."))

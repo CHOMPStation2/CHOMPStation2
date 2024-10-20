@@ -102,6 +102,30 @@
 				M.ContractDisease(D)
 	if(data && data["antibodies"])
 		M.antibodies |= data["antibodies"]
+
+/datum/reagent/blood/mix_data(newdata, newamount)
+	if(!data || !newdata)
+		return
+
+	if(data["viruses"] || newdata["viruses"])
+		var/list/mix1 = data["viruses"]
+		var/list/mix2 = newdata["viruses"]
+
+		var/list/to_mix = list()
+
+		for(var/datum/disease/AD in mix1)
+			to_mix += AD
+		for(var/datum/disease/AD in mix2)
+			to_mix += AD
+
+		var/datum/disease/advance/AD = Advance_Mix(to_mix)
+		if(AD)
+			var/list/preserve = list(AD)
+			for(var/D in data["viruses"])
+				if(!istype(D, /datum/disease/advance))
+					preserve += D
+			data["viruses"] = preserve
+
 	// CHOMPEdit End - Virology Rework
 
 /datum/reagent/blood/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)

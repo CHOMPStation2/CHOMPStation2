@@ -87,18 +87,19 @@ const CommonCultureActions = () => {
     <>
       <Button
         icon="eject"
-        content="Eject"
         disabled={!beakerLoaded}
         onClick={() => act('eject_beaker')}
-      />
+      >
+        Eject
+      </Button>
       <Button.Confirm
         icon="trash-alt"
         confirmIcon="eraser"
-        content="Destroy"
-        confirmContent="Destroy"
         disabled={!beakerLoaded}
         onClick={() => act('destroy_eject_beaker')}
-      />
+      >
+        Destroy
+      </Button.Confirm>
     </>
   );
 };
@@ -139,13 +140,15 @@ const CultureInformationSection = () => {
               ))}
             </Tabs>
           </Flex.Item>
-          <StrainInformationSection
-            strain={selectedStrain}
-            strainIndex={selectedStrainIndex}
-          />
-          {selectedStrain.symptoms?.length > 0 && (
-            <StrainSymptomsSection strain={selectedStrain} />
-          )}
+          <Flex.Item grow>
+            <StrainInformationSection
+              strain={selectedStrain}
+              strainIndex={selectedStrainIndex}
+            />
+            {selectedStrain && selectedStrain.symptoms.length > 0 && (
+              <StrainSymptomsSection strain={selectedStrain} />
+            )}
+          </Flex.Item>
         </Flex>
       </Section>
     </Stack.Item>
@@ -156,7 +159,7 @@ const StrainInformationSection = ({
   strain,
   strainIndex,
 }: {
-  strain: Strain;
+  strain: Strain | undefined;
   strainIndex: number;
 }) => {
   const { act, data } = useBackend<Data>();
@@ -171,15 +174,49 @@ const StrainInformationSection = ({
             <Button
               icon={synthesisCooldown ? 'spinner' : 'clone'}
               iconSpin={synthesisCooldown}
-              content="Clone"
               disabled={synthesisCooldown}
               onClick={() => act('clone_strain', { strain_index: strainIndex })}
-            />
+            >
+              Clone
+            </Button>
             <CommonCultureActions />
           </>
         }
       >
-        <StrainInformation strain={strain} strainIndex={strainIndex} />
+        {strain ? (
+          <StrainInformation strain={strain} strainIndex={strainIndex} />
+        ) : (
+          <NoticeBox>No strain information available.</NoticeBox>
+        )}
+      </Section>
+    </Flex.Item>
+  );
+};
+
+const StrainSymptomsSection = ({ strain }: { strain: Strain }) => {
+  const symptoms = strain.symptoms;
+
+  return (
+    <Flex.Item grow>
+      <Section title="Infection Symptoms" fill>
+        <Table>
+          <Table.Row header>
+            <Table.Cell>Name</Table.Cell>
+            <Table.Cell>Stealth</Table.Cell>
+            <Table.Cell>Resistance</Table.Cell>
+            <Table.Cell>Stage Speed</Table.Cell>
+            <Table.Cell>Transmissibility</Table.Cell>
+          </Table.Row>
+          {symptoms.map((symptom, index) => (
+            <Table.Row key={index}>
+              <Table.Cell>{symptom.name}</Table.Cell>
+              <Table.Cell>{symptom.stealth}</Table.Cell>
+              <Table.Cell>{symptom.resistance}</Table.Cell>
+              <Table.Cell>{symptom.stageSpeed}</Table.Cell>
+              <Table.Cell>{symptom.transmissibility}</Table.Cell>
+            </Table.Row>
+          ))}
+        </Table>
       </Section>
     </Flex.Item>
   );
@@ -213,10 +250,11 @@ const StrainInformation = ({
           {isAdvanced && (
             <Button
               icon="pen"
-              content="Name Disease"
               onClick={() => act('name_strain', { strain_index: strainIndex })}
               style={{ marginLeft: 'auto' }}
-            />
+            >
+              Name Disease
+            </Button>
           )}
         </Flex>
       </LabeledList.Item>
@@ -237,35 +275,6 @@ const StrainInformation = ({
         {possibleTreatments || 'None'}
       </LabeledList.Item>
     </LabeledList>
-  );
-};
-
-const StrainSymptomsSection = ({ strain }: { strain: Strain }) => {
-  const symptoms = strain.symptoms;
-
-  return (
-    <Flex.Item grow>
-      <Section title="Infection Symptoms" fill>
-        <Table>
-          <Table.Row header>
-            <Table.Cell>Name</Table.Cell>
-            <Table.Cell>Stealth</Table.Cell>
-            <Table.Cell>Resistance</Table.Cell>
-            <Table.Cell>Stage Speed</Table.Cell>
-            <Table.Cell>Transmissibility</Table.Cell>
-          </Table.Row>
-          {symptoms.map((symptom, index) => (
-            <Table.Row key={index}>
-              <Table.Cell>{symptom.name}</Table.Cell>
-              <Table.Cell>{symptom.stealth}</Table.Cell>
-              <Table.Cell>{symptom.resistance}</Table.Cell>
-              <Table.Cell>{symptom.stageSpeed}</Table.Cell>
-              <Table.Cell>{symptom.transmissibility}</Table.Cell>
-            </Table.Row>
-          ))}
-        </Table>
-      </Section>
-    </Flex.Item>
   );
 };
 

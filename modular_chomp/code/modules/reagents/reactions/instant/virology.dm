@@ -55,7 +55,6 @@
 		if(D)
 			D.Evolve(level_min, level_max)
 
-
 /decl/chemical_reaction/instant/mix_virus/mix_virus_2
 	name = "Mix Virus 2"
 	id = "mixvirus2"

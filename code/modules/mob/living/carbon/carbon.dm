@@ -13,7 +13,7 @@
 /mob/living/carbon/Life()
 	..()
 
-	handle_diseases() // CHOMPEdit
+	// handle_viruses() // CHOMPEdit
 
 	// Increase germ_level regularly
 	if(germ_level < GERM_LEVEL_AMBIENT && prob(30))	//if you're just standing there, you shouldn't get more germs beyond an ambient level

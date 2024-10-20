@@ -293,8 +293,6 @@ GLOBAL_LIST_INIT(advance_cures, list(
 // Mix a list of advance diseases and return the mixed result.
 /proc/Advance_Mix(list/D_list)
 
-//	to_chat(world, "Mixing!!!!")
-
 	var/list/diseases = list()
 
 	for(var/datum/disease/advance/A in D_list)

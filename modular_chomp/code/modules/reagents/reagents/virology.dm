@@ -1,3 +1,22 @@
+/datum/reagent/vaccine
+	name = "Vaccine"
+	id = "vaccine"
+	color = "#C81040"
+	taste_description = "antibodies"
+
+/datum/reagent/vaccine/affect_blood(mob/living/carbon/M, alien, removed)
+	if(islist(data))
+		for(var/thing in M.viruses)
+			var/datum/disease/D = thing
+			if(D.GetDiseaseID() in data)
+				D.cure()
+		M.resistances |= data
+
+/datum/reagent/vaccines/mix_data(newdata, newamount)
+	if(islist(newdata))
+		var/list/newdatalist = newdata
+		data |= newdatalist.Copy()
+
 /datum/reagent/mutagen/mutagenvirusfood
 	name = "Mutagenic agar"
 	id = "mutagenvirusfood"

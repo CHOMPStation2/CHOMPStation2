@@ -64,7 +64,7 @@ GLOBAL_LIST_INIT(diseases, subtypesof(/datum/disease))
 /datum/disease/proc/handle_stage_advance(has_cure = FALSE)
 	if(!has_cure && prob(stage_prob))
 		stage = min(stage + 1, max_stages)
-		if(!discovered && stage >= CEILING(max_stages + discovery_threshold, 1))
+		if(!discovered && stage >= CEILING(max_stages * discovery_threshold, 1))
 			discovered = TRUE
 			BITSET(affected_mob.hud_updateflag, STATUS_HUD)
 

@@ -251,10 +251,12 @@
 		 // CHOMPEdit Start - Viro Rework
 		if(C.viruses.len)
 			for (var/datum/disease/virus in C.viruses)
-				if(virus.visibility_flags & HIDDEN_SCANNER)
+				if(virus.visibility_flags & HIDDEN_SCANNER || D.visibility_flags & HIDDEN_PANDEMIC)
 					continue
 				if(virus.discovered)
-					dat += span_warning("Warning: Pathogen [virus.name] detected in subject's blood. Known cure: [virus.cure_text]")
+					dat += span_warning("Warning: [virus.name] detected in subject's blood.")
+					dat += "<br>"
+					dat += span_warning("Severity: [virus.severity]")
 					dat += "<br>"
 				else
 					dat += span_warning("Warning: Unknown pathogen detected in subject's blood.")
