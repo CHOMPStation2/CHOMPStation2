@@ -7,12 +7,12 @@
 	set name = "Mentorhelp"
 
 	if(say_disabled)	//This is here to try to identify lag problems
-		to_chat(usr, "<span class='danger'>Speech is currently admin-disabled.</span>")
+		to_chat(usr, span_danger("Speech is currently admin-disabled."))
 		return
 
 	//handle muting and automuting
 	if(prefs.muted & MUTE_ADMINHELP)
-		to_chat(src, "<span class='danger'>Error: Mentor-PM: You cannot send adminhelps (Muted).</span>")
+		to_chat(src, span_danger("Error: Mentor-PM: You cannot send adminhelps (Muted)."))
 		return
 	if(handle_spam_prevention(msg,MUTE_ADMINHELP))
 		return
@@ -34,10 +34,10 @@
 			if(current_ticket)
 				log_admin("Mentorhelp: [key_name(src)]: [msg]")
 				current_ticket.MessageNoRecipient(msg)
-				to_chat(usr, "<span class='adminnotice'><span class='mentor'>Mentor-PM to-<b>Mentors</b>: [msg]</span></span>")
+				to_chat(usr, span_adminnotice(span_mentor("Mentor-PM to-" + span_bold("Mentors") + ": [msg]")))
 				return
 			else
-				to_chat(usr, "<span class='warning'>Ticket not found, creating new one...</span>")
+				to_chat(usr, span_warning("Ticket not found, creating new one..."))
 		else
 			current_ticket.AddInteraction("[usr.ckey] opened a new ticket.")
 			current_ticket.Resolve()
@@ -62,7 +62,7 @@
 	GLOB.tickets.BrowseTickets(browse_to)
 
 /proc/message_mentors(var/msg)
-	msg = "<span class='mentor_channel'><span class='prefix'>Mentor:</span> <span class=\"message\">[msg]</span></span>"
+	msg = span_mentor_channel(span_prefix("Mentor:") + span_message("[msg]"))
 
 	for(var/client/C in GLOB.mentors)
 		to_chat(C, msg)
@@ -78,12 +78,12 @@
 	set name = "Adminhelp"
 
 	if(say_disabled)	//This is here to try to identify lag problems
-		to_chat(usr, "<span class='danger'>Speech is currently admin-disabled.</span>")
+		to_chat(usr, span_danger("Speech is currently admin-disabled."))
 		return
 
 	//handle muting and automuting
 	if(prefs.muted & MUTE_ADMINHELP)
-		to_chat(src, "<span class='danger'>Error: Admin-PM: You cannot send adminhelps (Muted).</span>")
+		to_chat(src, span_danger("Error: Admin-PM: You cannot send adminhelps (Muted)."))
 		return
 	if(handle_spam_prevention(msg,MUTE_ADMINHELP))
 		return
@@ -104,10 +104,10 @@
 		if(input == "Yes")
 			if(current_ticket)
 				current_ticket.MessageNoRecipient(msg)
-				to_chat(usr, "<span class='adminnotice'>PM to-<b>Admins</b>: [msg]</span>")
+				to_chat(usr, span_adminnotice("PM to-" + span_bold("Admins") + ": [msg]"))
 				return
 			else
-				to_chat(usr, "<span class='warning'>Ticket not found, creating new one...</span>")
+				to_chat(usr, span_warning("Ticket not found, creating new one..."))
 		else
 			current_ticket.AddInteraction("[key_name_admin(usr)] opened a new ticket.")
 			current_ticket.Close()
@@ -162,14 +162,14 @@
 
 	//handle muting and automuting
 	if(prefs.muted & MUTE_ADMINHELP)
-		to_chat(usr, "<span class='danger'>Error: You cannot request spice (muted from adminhelps).</span>")
+		to_chat(usr, span_danger("Error: You cannot request spice (muted from adminhelps)."))
 		return
 
 	if(tgui_alert(usr, "Are you sure you want to request the admins spice things up for you? You accept the consequences if you do.","Spicy!",list("Yes","No")) == "Yes")
 		message_admins("[ADMIN_FULLMONTY(usr)] has requested the round be spiced up a little.")
-		to_chat(usr, "<span class='notice'>You have requested some more spice in your round.</span>")
+		to_chat(usr, span_notice("You have requested some more spice in your round."))
 	else
-		to_chat(usr, "<span class='notice'>Spice request cancelled.</span>")
+		to_chat(usr, span_notice("Spice request cancelled."))
 		return
 
 	//if they requested spice, then remove spice verb temporarily to prevent spamming

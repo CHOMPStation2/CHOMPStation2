@@ -37,7 +37,7 @@
 		//ADMIN THINGS//
 		////////////////
 	/// hides the byond verb panel as we use our own custom version
-	show_verb_panel = FALSE //CHOMPEdit
+	show_verb_panel = FALSE
 	///Contains admin info. Null if client is not an admin.
 	var/datum/admins/holder = null
 	var/datum/admins/deadmin_holder = null
@@ -123,7 +123,6 @@
 
 	// Runechat messages
 	var/list/seen_messages
-	//CHOMPEdit Begin
 	/// our current tab
 	var/stat_tab
 
@@ -141,7 +140,6 @@
 	var/list/misc_cache = list()
 
 	var/atom/examine_icon //Holder for examine icon, useful for statpanel
-	//CHOMPEdit End
 
 	//Hide top bars
 	var/fullscreen = FALSE

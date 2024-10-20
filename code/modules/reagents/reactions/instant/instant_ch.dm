@@ -145,13 +145,13 @@
 			if(H.hasnutriment()) // make sure it actually has the conditions to revive
 				if(H.revive_ready >= 1) // if it's not reviving, start doing so
 					H.revive_ready = REVIVING_READY // overrides the normal cooldown
-					H.visible_message("<span class='info'>[H] shudders briefly, then relaxes, faint movements stirring within.</span>")
+					H.visible_message(span_info("[H] shudders briefly, then relaxes, faint movements stirring within."))
 					H.chimera_regenerate()
 				else if (/mob/living/carbon/human/proc/hatch in H.verbs)// already reviving, check if they're ready to hatch
 					H.chimera_hatch()
-					H.visible_message("<span class='danger'><p><font size=4>[H] violently convulses and then bursts open, revealing a new, intact copy in the pool of viscera.</font></p></span>") // Hope you were wearing waterproofs, doc...
+					H.visible_message(span_danger(span_huge("[H] violently convulses and then bursts open, revealing a new, intact copy in the pool of viscera."))) // Hope you were wearing waterproofs, doc...
 					H.adjustBrainLoss(10) // they're reviving from dead, so take 10 brainloss
 				else //they're already reviving but haven't hatched. Give a little message to tell them to wait.
-					H.visible_message("<span class='info'>[H] stirs faintly, but doesn't appear to be ready to wake up yet.</span>")
+					H.visible_message(span_info("[H] stirs faintly, but doesn't appear to be ready to wake up yet."))
 			else
-				H.visible_message("<span class='info'>[H] twitches for a moment, but remains still.</span>") // no nutriment
+				H.visible_message(span_info("[H] twitches for a moment, but remains still.")) // no nutriment

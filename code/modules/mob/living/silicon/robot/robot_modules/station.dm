@@ -168,10 +168,10 @@ var/global/list/robot_modules = list(
 	added_networks.Cut()
 
 /obj/item/robot_module/proc/add_subsystems(var/mob/living/silicon/robot/R)
-	add_verb(R,subsystems) //CHOMPEdit TGPanel
+	add_verb(R, subsystems)
 
 /obj/item/robot_module/proc/remove_subsystems(var/mob/living/silicon/robot/R)
-	remove_verb(R,subsystems)  //CHOMPEdit
+	remove_verb(R, subsystems)
 
 /obj/item/robot_module/proc/apply_status_flags(var/mob/living/silicon/robot/R)
 	if(!can_be_pushed)

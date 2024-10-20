@@ -52,11 +52,11 @@
 		return
 
 	if(panel_open)
-		to_chat(user, SPAN_WARNING("Close the panel first!"))
+		to_chat(user, span_warning("Close the panel first!"))
 		return
 
 	if(printing)
-		to_chat(user, SPAN_WARNING("\The [src] is busy!"))
+		to_chat(user, span_warning("\The [src] is busy!"))
 		return
 
 	interact(user)
@@ -74,13 +74,13 @@
 		var/total = abs(foodItem.reagents.total_volume-foodItem.reagents.get_free_space())
 
 		if(!container)
-			to_chat(user, SPAN_WARNING("There is no container!"))
+			to_chat(user, span_warning("There is no container!"))
 			return
 
 		if(container && container.reagents)
 			if(!container.reagents.has_reagent("nutriment", (total*efficiency)))
 				playsound(src, "sound/machines/buzz-sigh.ogg", 25, 0)
-				to_chat(user, SPAN_WARNING("Not enough nutriment available!"))
+				to_chat(user, span_warning("Not enough nutriment available!"))
 				return
 
 			container.reagents.remove_reagent("nutriment", (total*efficiency))
@@ -99,7 +99,7 @@
 				if(foodItem.reagents.has_reagent("supermatter"))
 					self_destruct()
 
-			visible_message(SPAN_NOTICE("\The [src] begins to shape a nutriment slurry."))
+			visible_message(span_notice("\The [src] begins to shape a nutriment slurry."))
 
 			sleep(print_delay/speed)
 
@@ -115,7 +115,7 @@
 				foodItem.forceMove(get_turf(src))
 
 	else
-		to_chat(user, SPAN_WARNING("There is no food to replicate!"))
+		to_chat(user, span_warning("There is no food to replicate!"))
 
 
 /obj/machinery/food_replicator/attackby(obj/item/O, mob/user)
@@ -135,7 +135,7 @@
 		return
 	if(istype(O, /obj/item/reagent_containers/glass))
 		if(!isnull(container))
-			to_chat(user, SPAN_WARNING("There is already a reagent container inserted!"))
+			to_chat(user, span_warning("There is already a reagent container inserted!"))
 			return
 
 		user.drop_item()
@@ -220,7 +220,7 @@
 	return FALSE
 
 /obj/machinery/food_replicator/proc/self_destruct()
-	visible_message(SPAN_WARNING("Whirrs and spouts, starting to heat up!"))
+	visible_message(span_warning("Whirrs and spouts, starting to heat up!"))
 	playsound(src, pick('sound/effects/Glassbr1.ogg', 'sound/effects/Glassbr2.ogg', 'sound/effects/Glassbr3.ogg'), 50, 1)
 
 	message_admins("[src] attempted to create an EX donk pocket at [x], [y], [z], last touched by [fingerprintslast]")

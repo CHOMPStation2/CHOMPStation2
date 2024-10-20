@@ -236,8 +236,8 @@
 /datum/modifier/adrenaline
 	name = "Adrenaline Rush"
 	desc = "A rush of adrenaline, usually caused by near death in situations."
-	on_created_text = "<span class='danger'>You suddenly feel adrenaline pumping through your veins as your body refuses to give up! You feel stronger, and faster, and the pain fades away quickly.</span>"
-	on_expired_text = "<span class='danger'>You feel your body finally give in once more as the adrenaline subsides. The pain returns in full blast, along with your strength fading once more.</span>"
+	on_created_text = span_danger("You suddenly feel adrenaline pumping through your veins as your body refuses to give up! You feel stronger, and faster, and the pain fades away quickly.")
+	on_expired_text = span_danger("You feel your body finally give in once more as the adrenaline subsides. The pain returns in full blast, along with your strength fading once more.")
 
 	disable_duration_percent = 0		//Immune to being disabled.
 	pain_immunity = TRUE				//Immune to pain
@@ -281,8 +281,8 @@
 /datum/modifier/adrenaline_recovery
 	name = "Adrenaline detox"
 	desc = "After an adrenaline rush, one will find themselves suffering from adrenaline detox, which is their body recovering from an intense adrenaline rush."
-	on_created_text = "<span class='danger'>Your body aches and groans, forcing you into a period of rest as it recovers from the intense adrenaline rush.</span>"
-	on_expired_text = "<span class='notice'>You finally recover from your adrenaline rush, your body returning to its normal state.</span>"
+	on_created_text = span_danger("Your body aches and groans, forcing you into a period of rest as it recovers from the intense adrenaline rush.")
+	on_expired_text = span_notice("You finally recover from your adrenaline rush, your body returning to its normal state.")
 
 	disable_duration_percent = 1.35
 	outgoing_melee_damage_percent = 0.75

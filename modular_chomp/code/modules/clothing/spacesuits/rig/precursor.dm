@@ -43,30 +43,30 @@
 
 /obj/item/rig/ch/precursor/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
 	if(prob(block_chance))
-		user.visible_message("<span class='danger'>\The [src] completely absorbs [attack_text]!</span>")
+		user.visible_message(span_danger("\The [src] completely absorbs [attack_text]!"))
 		return TRUE
 	return FALSE
 
 /obj/item/clothing/suit/space/rig/ch/precursor/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
 	if(prob(block_chance))
-		user.visible_message("<span class='danger'>\The [src] completely absorbs [attack_text]!</span>")
+		user.visible_message(span_danger("\The [src] completely absorbs [attack_text]!"))
 		return TRUE
 	return FALSE
 
 /obj/item/clothing/head/helmet/space/rig/ch/precursor/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
 	if(prob(block_chance))
-		user.visible_message("<span class='danger'>\The [src] completely absorbs [attack_text]!</span>")
+		user.visible_message(span_danger("\The [src] completely absorbs [attack_text]!"))
 		return TRUE
 	return FALSE
 
 /obj/item/clothing/gloves/gauntlets/rig/ch/precursor/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
 	if(prob(block_chance))
-		user.visible_message("<span class='danger'>\The [src] completely absorbs [attack_text]!</span>")
+		user.visible_message(span_danger("\The [src] completely absorbs [attack_text]!"))
 		return TRUE
 	return FALSE
 
 /obj/item/clothing/shoes/magboots/rig/ch/precursor/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
 	if(prob(block_chance))
-		user.visible_message("<span class='danger'>\The [src] completely absorbs [attack_text]!</span>")
+		user.visible_message(span_danger("\The [src] completely absorbs [attack_text]!"))
 		return TRUE
 	return FALSE

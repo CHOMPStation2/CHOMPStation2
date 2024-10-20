@@ -91,10 +91,10 @@
 	if(istype(id) && lockable)
 		if(check_access(id))
 			locked = !locked
-			to_chat(user, "<span class='warning'>You [locked ? "enable" : "disable"] the safety lock on \the [src].</span>")
+			to_chat(user, span_warning("You [locked ? "enable" : "disable"] the safety lock on \the [src]."))
 		else
-			to_chat(user, "<span class='warning'>Access denied.</span>")
-		user.visible_message("<span class='notice'>[user] swipes \the [I] against \the [src].</span>")
+			to_chat(user, span_warning("Access denied."))
+		user.visible_message(span_notice("[user] swipes \the [I] against \the [src]."))
 	else
 		return ..()
 
@@ -102,13 +102,13 @@
 	..()
 	if(lockable)
 		locked = !locked
-		to_chat(user, "<span class='warning'>You [locked ? "enable" : "disable"] the safety lock on \the [src]!</span>")
+		to_chat(user, span_warning("You [locked ? "enable" : "disable"] the safety lock on \the [src]!"))
 
 /obj/item/gun/energy/locked/special_check(mob/user)
 	if(locked)
 		var/turf/T = get_turf(src)
 		if(T.z in using_map.station_levels)
-			to_chat(user, "<span class='warning'>The safety device prevents the gun from firing this close to the facility.</span>")
+			to_chat(user, span_warning("The safety device prevents the gun from firing this close to the facility."))
 			return 0
 	return ..()
 
@@ -133,11 +133,11 @@
 	var/phase_power = 15
 
 	projectile_type = /obj/item/projectile/beam/phaser
-	//CHOMP Edit: Changed beam type to new phaser beam type.  
+	//CHOMP Edit: Changed beam type to new phaser beam type.
 	firemodes = list(
 		list(mode_name="lethal", fire_delay=10, projectile_type=/obj/item/projectile/beam/phaser, charge_cost = 80), //Chompedit Reduced cost
 		list(mode_name="low-power", fire_delay=5, projectile_type=/obj/item/projectile/beam/phaser/light, charge_cost = 40), //Chompedit Reduced cost
-	)  //CHOMPedit Adjusts cost and fire delay to match adjusted beams. 
+	)  //CHOMPedit Adjusts cost and fire delay to match adjusted beams.
 	recoil_mode = 0 //CHOMP Addition: Removes recoil for micros.
 
 /obj/item/gun/energy/locked/frontier/unload_ammo(var/mob/user)
@@ -145,8 +145,8 @@
 		return
 	recharging = 1
 	update_icon()
-	user.visible_message("<span class='notice'>[user] opens \the [src] and starts pumping the handle.</span>", \
-						"<span class='notice'>You open \the [src] and start pumping the handle.</span>")
+	user.visible_message(span_notice("[user] opens \the [src] and starts pumping the handle."), \
+						span_notice("You open \the [src] and start pumping the handle."))
 	while(recharging)
 		if(!do_after(user, 10, src))
 			break
@@ -295,7 +295,7 @@
 	icon = 'icons/obj/gun_vr.dmi'
 	icon_state = "handbowkill"
 	item_state = null
-	phase_power = 20 
+	phase_power = 20
 
 	w_class = ITEMSIZE_SMALL
 	charge_cost = 200 //Chompedit Reduced cost

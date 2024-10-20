@@ -75,7 +75,7 @@ GLOBAL_VAR_INIT(ENERGY_DAMAGE_ORGAN_FACTOR,0.035)
 
 		var/absorber = ballistic_armor ? "armor" : "body"	//There is a super tiny chance that small rounds can get deflected without armor, so this is just incase.
 
-		to_chat(src,"<span class='warning'>You feel the energy of the bullet painfully transfered [pain_hit] as your [absorber] deflects it!</span>")
+		to_chat(src,span_warning("You feel the energy of the bullet painfully transfered [pain_hit] as your [absorber] deflects it!"))
 		apply_damage(hurt_value_pain,HALLOSS,def_zone)
 		if(hurt_value_bruise)
 			apply_damage(hurt_value_bruise,BRUTE,def_zone)
@@ -281,7 +281,7 @@ GLOBAL_VAR_INIT(ENERGY_DAMAGE_ORGAN_FACTOR,0.035)
 
 /mob/living/proc/armor_penetration_probability(var/armor, var/obj/item/projectile/bullet/P)
 	var/bullet_ap_value = (1+((P.armor_penetration)/BULLET_AP_DIVISOR))
-	var/ap_value = P.velocity * bullet_ap_value * (P.grains / P.diam)**(2/3) / AP_DIVISOR 
+	var/ap_value = P.velocity * bullet_ap_value * (P.grains / P.diam)**(2/3) / AP_DIVISOR
 	var/armor_value = ARMOR_Y_INTERCEPT + ARMOR_SLOPE * armor
 	var/penetration_chance = 100 / (1 + PENETRATION_PROBABILITY_EXP_BASE**(-PENETRATION_PROBABILITY_EXP_MULT*(ap_value - armor_value)))
 	return penetration_chance

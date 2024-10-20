@@ -33,7 +33,14 @@
 	var/datum/dna2/record/R = current_project.mydna
 	var/mob/living/carbon/human/H = new /mob/living/carbon/human(src, R.dna.species)
 	if(current_project.locked)
-		H.resleeve_lock = current_project.ckey
+		H.resleeve_lock = current_project.ckey //CHOMPAdd, keep the lock
+		/*CHOMPRemove Start
+		if(current_project.ckey)
+			H.resleeve_lock = current_project.ckey
+		else
+			// Ensure even body scans without an attached ckey respect locking
+			H.resleeve_lock = "@badckey"
+		*///CHOMPRemove End
 
 	//Fix the external organs
 	for(var/part in current_project.limb_data)
@@ -191,6 +198,7 @@
 		occupant = null
 		if(locked)
 			locked = 0
+		update_icon()
 		return
 
 	return
@@ -199,6 +207,12 @@
 	if(occupant)
 		return 100 * ((occupant.health + abs(CONFIG_GET(number/health_threshold_dead))) / (occupant.maxHealth + abs(CONFIG_GET(number/health_threshold_dead)))) // CHOMPEdit
 	return 0
+
+/obj/machinery/clonepod/transhuman/examine(mob/user, infix, suffix)
+	. = ..()
+	if(occupant)
+		var/completion = get_completion()
+		. += "Progress: [round(completion)]% [chat_progress_bar(round(completion), TRUE)]"
 
 //Synthetic version
 /obj/machinery/transhuman/synthprinter
@@ -293,7 +307,14 @@
 	var/datum/dna2/record/R = current_project.mydna
 	var/mob/living/carbon/human/H = new /mob/living/carbon/human(src, R.dna.species)
 	if(current_project.locked)
-		H.resleeve_lock = current_project.ckey
+		H.resleeve_lock = current_project.ckey //CHOMPAdd, keep the lock
+		/*CHOMPRemove Start
+		if(current_project.ckey)
+			H.resleeve_lock = current_project.ckey
+		else
+			// Ensure even body scans without an attached ckey respect locking
+			H.resleeve_lock = "@badckey"
+		*///CHOMPRemove End
 
 	//Fix the external organs
 	for(var/part in current_project.limb_data)
@@ -391,7 +412,7 @@
 /obj/machinery/transhuman/synthprinter/attackby(obj/item/W as obj, mob/user as mob)
 	src.add_fingerprint(user)
 	if(busy)
-		to_chat(user, "<span class='notice'>\The [src] is busy. Please wait for completion of previous operation.</span>")
+		to_chat(user, span_notice("\The [src] is busy. Please wait for completion of previous operation."))
 		return
 	if(default_deconstruction_screwdriver(user, W))
 		return
@@ -400,15 +421,15 @@
 	if(default_part_replacement(user, W))
 		return
 	if(panel_open)
-		to_chat(user, "<span class='notice'>You can't load \the [src] while it's opened.</span>")
+		to_chat(user, span_notice("You can't load \the [src] while it's opened."))
 		return
 	if(!istype(W, /obj/item/stack/material))
-		to_chat(user, "<span class='notice'>You cannot insert this item into \the [src]!</span>")
+		to_chat(user, span_notice("You cannot insert this item into \the [src]!"))
 		return
 
 	var/obj/item/stack/material/S = W
 	if(!(S.material.name in stored_material))
-		to_chat(user, "<span class='warning'>\The [src] doesn't accept [S.material]!</span>")
+		to_chat(user, span_warning("\The [src] doesn't accept [S.material]!"))
 		return
 
 	var/amnt = S.perunit
@@ -537,7 +558,7 @@
 		C.removePersonality()
 		qdel(C)
 		sleevecards++
-		to_chat(user, "<span class='notice'>You store \the [C] in \the [src].</span>")
+		to_chat(user, span_notice("You store \the [C] in \the [src]."))
 		return
 
 	return ..()
@@ -554,13 +575,13 @@
 	if(!ishuman(user) && !isrobot(user))
 		return 0 //not a borg or human
 	if(panel_open)
-		to_chat(user, "<span class='notice'>Close the maintenance panel first.</span>")
+		to_chat(user, span_notice("Close the maintenance panel first."))
 		return 0 //panel open
 
 	if(O.buckled)
 		return 0
 	if(O.has_buckled_mobs())
-		to_chat(user, span("warning", "\The [O] has other entities attached to it. Remove them first."))
+		to_chat(user, span_warning("\The [O] has other entities attached to it. Remove them first."))
 		return
 
 	if(put_mob(O))
@@ -591,7 +612,7 @@
 
 	//In case they already had a mind!
 	if(occupant && occupant.mind)
-		to_chat(occupant, "<span class='warning'>You feel your mind being overwritten...</span>")
+		to_chat(occupant, span_warning("You feel your mind being overwritten..."))
 		log_and_message_admins("was resleeve-wiped from their body.",occupant.mind)
 		occupant.ghostize()
 
@@ -613,8 +634,8 @@
 	occupant.apply_vore_prefs() //Cheap hack for now to give them SOME bellies.
 	if(MR.one_time)
 		var/how_long = round((world.time - MR.last_update)/10/60)
-		to_chat(occupant, "<span class='danger'>Your mind backup was a 'one-time' backup. \
-		You will not be able to remember anything since the backup, [how_long] minutes ago.</span>")
+		to_chat(occupant, span_danger("Your mind backup was a 'one-time' backup. \
+		You will not be able to remember anything since the backup, [how_long] minutes ago."))
 
 	//Re-supply a NIF if one was backed up with them.
 	if(MR.nif_path)
@@ -637,9 +658,9 @@
 
 	//Inform them and make them a little dizzy.
 	if(confuse_amount + blur_amount <= 16)
-		to_chat(occupant, "<span class='notice'>You feel a small pain in your head as you're given a new backup implant. Your new body feels comfortable already, however.</span>")
+		to_chat(occupant, span_notice("You feel a small pain in your head as you're given a new backup implant. Your new body feels comfortable already, however."))
 	else
-		to_chat(occupant, "<span class='warning'>You feel a small pain in your head as you're given a new backup implant. Oh, and a new body. It's disorienting, to say the least.</span>")
+		to_chat(occupant, span_warning("You feel a small pain in your head as you're given a new backup implant. Oh, and a new body. It's disorienting, to say the least."))
 
 	occupant.confused = max(occupant.confused, confuse_amount)
 	occupant.eye_blurry = max(occupant.eye_blurry, blur_amount)
@@ -666,10 +687,10 @@
 
 /obj/machinery/transhuman/resleever/proc/put_mob(mob/living/carbon/human/M as mob)
 	if(!ishuman(M))
-		to_chat(usr, "<span class='warning'>\The [src] cannot hold this!</span>")
+		to_chat(usr, span_warning("\The [src] cannot hold this!"))
 		return
 	if(src.occupant)
-		to_chat(usr, "<span class='warning'>\The [src] is already occupied!</span>")
+		to_chat(usr, span_warning("\The [src] is already occupied!"))
 		return
 	if(M.client)
 		M.client.perspective = EYE_PERSPECTIVE

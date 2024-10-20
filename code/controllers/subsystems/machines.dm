@@ -32,7 +32,7 @@ SUBSYSTEM_DEF(machines)
 
 /datum/controller/subsystem/machines/Initialize() // CHOMPEdit
 	makepowernets()
-	admin_notice("<span class='danger'>Initializing atmos machinery.</span>", R_DEBUG)
+	admin_notice(span_danger("Initializing atmos machinery."), R_DEBUG)
 	setup_atmos_machinery(all_machines)
 	fire()
 	return SS_INIT_SUCCESS // CHOMPEdit
@@ -82,7 +82,6 @@ SUBSYSTEM_DEF(machines)
 			T.broadcast_status()
 		CHECK_TICK
 
-//CHOMPEdit Begin
 /datum/controller/subsystem/machines/stat_entry(msg)
 	msg = "C:{"
 	msg += "PI:[round(cost_pipenets,1)]|"
@@ -96,7 +95,6 @@ SUBSYSTEM_DEF(machines)
 	msg += "PO:[SSmachines.powerobjs.len]|"
 	msg += "MC/MS:[round((cost ? SSmachines.processing_machines.len/cost_machinery : 0),0.1)]"
 	return ..()
-// CHOMPEdit End
 
 /datum/controller/subsystem/machines/proc/process_pipenets(resumed = 0)
 	if (!resumed)

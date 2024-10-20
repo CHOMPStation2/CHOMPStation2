@@ -237,7 +237,6 @@
 "W" = (
 /obj/structure/closet/cabinet,
 /obj/random/mre,
-/obj/random/medical/lite,
 /turf/simulated/floor/carpet,
 /area/submap/Drugd)
 

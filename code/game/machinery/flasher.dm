@@ -39,9 +39,9 @@
 		add_fingerprint(user)
 		disable = !disable
 		if(disable)
-			user.visible_message("<span class='warning'>[user] has disconnected the [src]'s flashbulb!</span>", "<span class='warning'>You disconnect the [src]'s flashbulb!</span>")
+			user.visible_message(span_warning("[user] has disconnected the [src]'s flashbulb!"), span_warning("You disconnect the [src]'s flashbulb!"))
 		if(!disable)
-			user.visible_message("<span class='warning'>[user] has connected the [src]'s flashbulb!</span>", "<span class='warning'>You connect the [src]'s flashbulb!</span>")
+			user.visible_message(span_warning("[user] has connected the [src]'s flashbulb!"), span_warning("You connect the [src]'s flashbulb!"))
 
 //Let the AI trigger them directly.
 /obj/machinery/flasher/attack_ai()
@@ -105,7 +105,7 @@
 
 	var/atom/movable/AM = WF.resolve()
 	if(isnull(AM))
-		log_debug("DEBUG: HasProximity called with [AM] on [src] ([usr]).")
+		log_debug("DEBUG: HasProximity called without reference on [src].")
 		return
 // CHOMPEdit End
 	if(disable || !anchored || (last_flash && world.time < last_flash + 150))
@@ -122,12 +122,12 @@
 		anchored = !anchored
 
 		if(!anchored)
-			user.show_message(text("<span class='warning'>[src] can now be moved.</span>"))
+			user.show_message(span_warning("[src] can now be moved."))
 			cut_overlays()
 			unsense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity)) // CHOMPEdit
 
 		else if(anchored)
-			user.show_message(text("<span class='warning'>[src] is now secured.</span>"))
+			user.show_message(span_warning("[src] is now secured."))
 			add_overlay("[base_state]-s")
 			sense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity)) // CHOMPEdit
 

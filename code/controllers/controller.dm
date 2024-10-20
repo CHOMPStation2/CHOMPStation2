@@ -16,4 +16,4 @@
 
 /datum/controller/proc/Recover()
 
-/datum/controller/proc/stat_entry(msg) //CHOMPEdit
+/datum/controller/proc/stat_entry(msg)

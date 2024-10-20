@@ -173,7 +173,7 @@
 				hunger += 5
 		else
 			food.Weaken(5)
-			food.visible_message("<span class='danger'>\The [src] pounces on \the [food]!</span>!")
+			food.visible_message(span_danger("\The [src] pounces on \the [food]!"))
 			target_mob = food
 			EatTarget()
 			hunger = 0
@@ -222,8 +222,8 @@
 	. = ..()
 	if(!riding_datum)
 		riding_datum = new /datum/riding/simple_mob(src)
-	add_verb(src,/mob/living/simple_mob/proc/animal_mount) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/proc/toggle_rider_reins) //CHOMPEdit TGPanel
+	add_verb(src, /mob/living/simple_mob/proc/animal_mount)
+	add_verb(src, /mob/living/proc/toggle_rider_reins)
 	movement_cooldown = 0
 
 /mob/living/simple_mob/vore/aggressive/rat/MouseDrop_T(mob/living/M, mob/living/user)

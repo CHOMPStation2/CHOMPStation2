@@ -193,21 +193,21 @@
 		if(edible == 1)
 			HasSliceMissing()
 			if(slices <= 0)
-				to_chat(usr, span("warning", "The cake hums away quietly as the singulo powered goodness slowly recovers the large amount of lost mass, best to give it a moment before cutting another slice."))
+				to_chat(usr, span_warning("The cake hums away quietly as the singulo powered goodness slowly recovers the large amount of lost mass, best to give it a moment before cutting another slice."))
 				return
 			else
-				to_chat(user, "<span class='notice'>You cut a slice of the cake. The slice looks like the cake was just baked, and you can see before your eyes as the spot where you cut the slice slowly regenerates!</span>")
+				to_chat(user, span_notice("You cut a slice of the cake. The slice looks like the cake was just baked, and you can see before your eyes as the spot where you cut the slice slowly regenerates!"))
 				slices = slices - 1
 				new /obj/item/reagent_containers/food/snacks/thecakeslice(src.loc)
 
 		else
-			to_chat(user, "<span class='notice'>It looks so good... But it feels so wrong to eat it before it's finished...</span>")
+			to_chat(user, span_notice("It looks so good... But it feels so wrong to eat it before it's finished..."))
 			return
 	if(istype(W,/obj/item/thecake_layer))
 		var/obj/item/thecake_layer/C = W
 		if(C.layer_stage == 5)
 			for(var/mob/O in view(src, null))
-				O.show_message("<span class='warning'>It has been done! \The Infinity Cake has been assembled!</span>",1)
+				O.show_message(span_warning("It has been done! \The Infinity Cake has been assembled!"),1)
 			qdel(W)
 			stage++
 			desc = desclist[stage]
@@ -215,15 +215,15 @@
 			edible = 1
 			name = "The Infinity Cake!"
 		else if(stage == maxstages)
-			to_chat(usr, span("warning", "The cake is already done!"))
+			to_chat(usr, span_warning("The cake is already done!"))
 		else if(stage == C.layer_stage)
-			to_chat(usr, span("warning", "You add another layer to the cake, nice."))
+			to_chat(usr, span_warning("You add another layer to the cake, nice."))
 			qdel(W)
 			stage++
 			desc = desclist[stage]
 			icon_state = "thecake_stage-[stage]"
 		else
-			to_chat(usr, span("warning", "Hmm, doesnt seem like this layer is supposed to be added there?"))
+			to_chat(usr, span_warning("Hmm, doesnt seem like this layer is supposed to be added there?"))
 
 // Chaos cake
 
@@ -496,7 +496,7 @@
 				new /obj/item/reagent_containers/food/snacks/chaoscakeslice(src.loc)
 
 		else
-			to_chat(user, "<span class='notice'>It looks so good... But it feels so wrong to eat it before it's finished...</span>")
+			to_chat(user, span_notice("It looks so good... But it feels so wrong to eat it before it's finished..."))
 			return
 	if(istype(W,/obj/item/chaoscake_layer))
 		var/obj/item/chaoscake_layer/C = W
@@ -542,11 +542,11 @@
 
 /obj/structure/theonepizza/attackby(var/obj/item/W, var/mob/living/user)
 	if(istype(W,/obj/item/material/knife))
-		user.visible_message("<b>\The [user]</b> starts to slowly cut through The One Pizza.", "<span class='notice'>You start to slowly cut through The One Pizza.</span>")
+		user.visible_message(span_bold("\The [user]") + " starts to slowly cut through The One Pizza.", span_notice("You start to slowly cut through The One Pizza."))
 		if(do_after(user, slicetime, exclusive = TASK_USER_EXCLUSIVE))
 			if(!src)
 				return		// We got disappeared already
-			user.visible_message("<b>\The [user]</b> successfully cuts The One Pizza.", "<span class='notice'>You successfully cut The One Pizza.</span>")
+			user.visible_message(span_infoplain(span_bold("\The [user]") + " successfully cuts The One Pizza."), span_notice("You successfully cut The One Pizza."))
 			for(var/slicetype in slicelist)
 				new slicetype(src.loc)
 			qdel(src)

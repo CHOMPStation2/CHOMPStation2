@@ -33,11 +33,11 @@
 	if(!choice)
 		return
 	tf_type = tf_possible_types[choice]
-	to_chat(usr, "<span class='notice'>You selected [choice].</span>")
+	to_chat(usr, span_notice("You selected [choice]."))
 
 /obj/item/gun/energy/mouseray/Fire(atom/target, mob/living/user, clickparams, pointblank, reflex)
 	if(world.time < cooldown)
-		to_chat(usr, "<span class='warning'>\The [src] isn't ready yet.</span>")
+		to_chat(usr, span_warning("\The [src] isn't ready yet."))
 		return
 	. = ..()
 
@@ -286,6 +286,7 @@
 	new_mob.nutrition_message_visible = nutrition_message_visible
 	new_mob.allow_spontaneous_tf = allow_spontaneous_tf
 	new_mob.eating_privacy_global = eating_privacy_global
+	new_mob.allow_mimicry = allow_mimicry
 	new_mob.text_warnings = text_warnings
 	new_mob.allow_mind_transfer = allow_mind_transfer
 
@@ -358,7 +359,7 @@
 		return
 	if(target != firer)	//If you shot yourself, you probably want to be TFed so don't bother with prefs.
 		if(!M.allow_spontaneous_tf && !tf_admin_pref_override)
-			firer.visible_message("<span class='warning'>\The [src] buzzes impolitely.</span>")
+			firer.visible_message(span_warning("\The [src] buzzes impolitely."))
 			return
 	if(M.tf_mob_holder)
 		var/mob/living/ourmob = M.tf_mob_holder
@@ -399,10 +400,10 @@
 			M.forceMove(ourmob)
 		else
 			qdel(target) //CHOMPEdit End
-		firer.visible_message("<span class='notice'>\The [shot_from] boops pleasantly.</span>")
+		firer.visible_message(span_notice("\The [shot_from] boops pleasantly."))
 		return
 	else
-		firer.visible_message("<span class='warning'>\The [shot_from] buzzes impolitely.</span>")
+		firer.visible_message(span_warning("\The [shot_from] buzzes impolitely."))
 
 /obj/item/gun/energy/mouseray/admin		//NEVER GIVE THIS TO ANYONE
 	name = "experimental metamorphosis ray"
@@ -499,7 +500,7 @@
 
 /obj/item/gun/energy/mouseray/metamorphosis/advanced/random/Fire(atom/target, mob/living/user, clickparams, pointblank, reflex)
 	if(world.time < cooldown)
-		to_chat(usr, "<span class='warning'>\The [src] isn't ready yet.</span>")
+		to_chat(usr, span_warning("\The [src] isn't ready yet."))
 		return
 	var/choice = pick(tf_possible_types)
 	tf_type = tf_possible_types[choice]

@@ -36,7 +36,7 @@
 
 	if(!resetmode)
 		resetmode = 1
-		to_chat(usr, "Painter reset.")
+		to_chat(usr, span_infoplain("Painter reset."))
 	else
 		var/color_input = input(usr,"","Choose Light Color",setcolor) as color|null
 		if(color_input)
@@ -47,7 +47,7 @@
 			var/setcolorB = num2hex(setcolorRGB[3] * dimming, 2)
 			setnightcolor = addtext("#", setcolorR, setcolorG, setcolorB)
 			resetmode = 0
-			to_chat(usr, "Painter color set.")
+			to_chat(usr, span_infoplain("Painter color set."))
 
 
 /obj/item/lightpainter/proc/ColorLight(var/obj/machinery/light/target, var/mob/living/U)
@@ -55,11 +55,11 @@
 	src.add_fingerprint(U)
 
 	if(resetmode)
-		to_chat(U, "<span class='notice'>You reset the color of the [target.get_fitting_name()].</span>")
+		to_chat(U, span_notice("You reset the color of the [target.get_fitting_name()]."))
 		target.brightness_color = dcolor
 		target.brightness_color_ns = dnightcolor
 	else
-		to_chat(U, "<span class='notice'>You set the color of the [target.get_fitting_name()].</span>")
+		to_chat(U, span_notice("You set the color of the [target.get_fitting_name()]."))
 
 		target.brightness_color = setcolor
 		target.brightness_color_ns = setnightcolor

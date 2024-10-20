@@ -76,6 +76,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
+/obj/effect/map_helper/airlock/sensor/ext_sensor,
 /turf/simulated/floor/plating,
 /area/shuttle/lonehomeship)
 "eY" = (
@@ -364,6 +365,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 5
 	},
+/obj/effect/map_helper/airlock/sensor/int_sensor,
 /turf/simulated/floor/plating,
 /area/shuttle/lonehomeship)
 "yQ" = (
@@ -670,7 +672,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating/external,
-/area/space)
+/area/shuttle/lonehomeship)
 
 (1,1,1) = {"
 iU

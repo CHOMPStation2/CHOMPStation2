@@ -75,7 +75,7 @@
 		W.forceMove(src)
 		coin = W
 		categories |= CAT_COIN
-		to_chat(user, "<span class='notice'>You insert \the [W] into \the [src].</span>")
+		to_chat(user, span_notice("You insert \the [W] into \the [src]."))
 		SStgui.update_uis(src)
 		return
 	else
@@ -92,12 +92,12 @@
 
 		// This is not a status display message, since it's something the character
 		// themselves is meant to see BEFORE putting the money in
-		to_chat(usr, "[icon2html(cashmoney,user.client)] <span class='warning'>That is not enough money.</span>")
+		to_chat(usr, "[icon2html(cashmoney,user.client)] " + span_warning("That is not enough money."))
 		return 0
 
 	if(istype(cashmoney, /obj/item/spacecash))
 
-		visible_message("<span class='info'>\The [usr] inserts some cash into \the [src].</span>")
+		visible_message(span_info("\The [usr] inserts some cash into \the [src]."))
 		cashmoney.worth -= currently_vending.price
 
 		if(cashmoney.worth <= 0)
@@ -186,20 +186,20 @@
 				return FALSE
 
 			if(!coin)
-				to_chat(usr, "<span class='filter_notice'>There is no coin in this machine.</span>")
+				to_chat(usr, span_filter_notice("There is no coin in this machine."))
 				return
 
 			coin.forceMove(src.loc)
 			if(!usr.get_active_hand())
 				usr.put_in_hands(coin)
 
-			to_chat(usr, "<span class='notice'>You remove \the [coin] from \the [src].</span>")
+			to_chat(usr, span_notice("You remove \the [coin] from \the [src]."))
 			coin = null
 			categories &= ~CAT_COIN
 			return TRUE
 		if("vend")
 			if(!vend_ready)
-				to_chat(usr, "<span class='warning'>[src] is busy!</span>")
+				to_chat(usr, span_warning("[src] is busy!"))
 				return
 
 			var/key = text2num(params["vend"])
@@ -218,7 +218,7 @@
 				return TRUE
 
 			if(issilicon(usr)) //If the item is not free, provide feedback if a synth is trying to buy something.
-				to_chat(usr, "<span class='danger'>Lawed unit recognized.  Lawed units cannot complete this transaction.  Purchase canceled.</span>")
+				to_chat(usr, span_danger("Lawed unit recognized.  Lawed units cannot complete this transaction.  Purchase canceled."))
 				return
 			if(!ishuman(usr))
 				return
@@ -229,7 +229,7 @@
 			var/obj/item/card/id/C = H.GetIdCard()
 
 			if(!vendor_account || vendor_account.suspended)
-				to_chat(usr, "<span class='filter_notice'>Vendor account offline. Unable to process transaction.</span>")
+				to_chat(usr, span_filter_notice("Vendor account offline. Unable to process transaction."))
 				flick("[icon_state]-deny",src)
 				vend_ready = TRUE
 				return
@@ -247,10 +247,10 @@
 			else if(istype(C, /obj/item/card))
 				paid = pay_with_card(C, usr)
 			/*else if(usr.can_advanced_admin_interact())
-				to_chat(usr, "<span class='notice'>Vending object due to admin interaction.</span>")
+				to_chat(usr, span_notice("Vending object due to admin interaction."))
 				paid = TRUE*/
 			else
-				to_chat(usr, "<span class='warning'>Payment failure: you have no ID or other method of payment.</span>")
+				to_chat(usr, span_warning("Payment failure: you have no ID or other method of payment."))
 				vend_ready = TRUE
 				flick("[icon_state]-deny",src)
 				return TRUE // we set this because they shouldn't even be able to get this far, and we want the UI to update.
@@ -258,7 +258,7 @@
 				vend(currently_vending, usr) // vend will handle vend_ready
 				. = TRUE
 			else
-				to_chat(usr, "<span class='warning'>Payment failure: unable to process payment.</span>")
+				to_chat(usr, span_warning("Payment failure: unable to process payment."))
 				vend_ready = TRUE
 
 /mob/living/simple_mob/humanoid/starhunter/trader/proc/vend(datum/stored_item/vending_product/R, mob/user)
@@ -266,7 +266,7 @@
 		return
 
 	if(!R.amount)
-		to_chat(user, "<span class='warning'>[src] has ran out of that product.</span>")
+		to_chat(user, span_warning("[src] has ran out of that product."))
 		vend_ready = TRUE
 		return
 
@@ -275,7 +275,7 @@
 
 	if(R.category & CAT_COIN)
 		if(!coin)
-			to_chat(user, "<span class='notice'>You need to insert a coin to get this item.</span>")
+			to_chat(user, span_notice("You need to insert a coin to get this item."))
 			return
 		else
 			qdel(coin)
@@ -300,7 +300,7 @@
 	if(!user.unEquip(W))
 		return
 
-	to_chat(user, "<span class='notice'>You insert \the [W] in the product receptor.</span>")
+	to_chat(user, span_notice("You insert \the [W] in the product receptor."))
 	R.add_product(W)
 	if(has_logs)
 		do_logging(R, user)
@@ -308,10 +308,10 @@
 	SStgui.update_uis(src)
 
 /mob/living/simple_mob/humanoid/starhunter/trader/proc/pay_with_ewallet(var/obj/item/spacecash/ewallet/wallet)
-	visible_message("<span class='info'>\The [usr] swipes \the [wallet] through \the [src].</span>")
+	visible_message(span_info("\The [usr] swipes \the [wallet] through \the [src]."))
 	playsound(src, 'sound/machines/id_swipe.ogg', 50, 1)
 	if(currently_vending.price > wallet.worth)
-		to_chat(usr, "<span class='warning'>Insufficient funds on chargecard.</span>")
+		to_chat(usr, span_warning("Insufficient funds on chargecard."))
 		return 0
 	else
 		wallet.worth -= currently_vending.price
@@ -325,16 +325,16 @@
  * successful, 0 if failed
  */
 /mob/living/simple_mob/humanoid/starhunter/trader/proc/pay_with_card(obj/item/card/id/I, mob/M)
-	visible_message("<span class='info'>[M] swipes a card through [src].</span>")
+	visible_message(span_info("[M] swipes a card through [src]."))
 	playsound(src, 'sound/machines/id_swipe.ogg', 50, 1)
 
 	var/datum/money_account/customer_account = get_account(I.associated_account_number)
 	if(!customer_account)
-		to_chat(M, "<span class='warning'>Error: Unable to access account. Please contact technical support if problem persists.</span>")
+		to_chat(M, span_warning("Error: Unable to access account. Please contact technical support if problem persists."))
 		return FALSE
 
 	if(customer_account.suspended)
-		to_chat(M, "<span class='warning'>Unable to access account: account suspended.</span>")
+		to_chat(M, span_warning("Unable to access account: account suspended."))
 		return FALSE
 
 	// Have the customer punch in the PIN before checking if there's enough money. Prevents people from figuring out acct is
@@ -344,11 +344,11 @@
 		customer_account = attempt_account_access(I.associated_account_number, attempt_pin, 2)
 
 		if(!customer_account)
-			to_chat(M, "<span class='warning'>Unable to access account: incorrect credentials.</span>")
+			to_chat(M, span_warning("Unable to access account: incorrect credentials."))
 			return FALSE
 
 	if(currently_vending.price > customer_account.money)
-		to_chat(M, "<span class='warning'>Insufficient funds in account.</span>")
+		to_chat(M, span_warning("Insufficient funds in account."))
 		return FALSE
 
 	// Okay to move the money at this point

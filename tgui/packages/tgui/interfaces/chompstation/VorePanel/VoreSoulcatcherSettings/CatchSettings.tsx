@@ -1,7 +1,6 @@
 import { BooleanLike } from 'common/react';
-
-import { useBackend } from '../../../../backend';
-import { Box, Button, LabeledList } from '../../../../components';
+import { useBackend } from 'tgui/backend';
+import { Box, Button, LabeledList } from 'tgui/components';
 
 export const CatchSettings = (props: {
   catch_self: BooleanLike;

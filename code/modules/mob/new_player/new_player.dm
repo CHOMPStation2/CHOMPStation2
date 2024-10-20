@@ -22,7 +22,7 @@
 
 /mob/new_player/New()
 	mob_list += src
-	add_verb(src,/mob/proc/insidePanel) //CHOMPEdit TGPanel
+	add_verb(src, /mob/proc/insidePanel)
 	//CHOMPEdit Begin
 	if(length(GLOB.newplayer_start))
 		forceMove(pick(GLOB.newplayer_start))
@@ -45,22 +45,22 @@
 /mob/new_player/proc/new_player_panel_proc()
 	var/output = "<div align='center'>"
 
-	output += "<b>Map:</b> [using_map.full_name]<br>"
-	output += "<b>Station Time:</b> [stationtime2text()]<br>"
+	output += span_bold("Map:") + " [using_map.full_name]<br>"
+	output += span_bold("Station Time:") + " [stationtime2text()]<br>"
 
 	if(!ticker || ticker.current_state <= GAME_STATE_PREGAME)
-		output += "<b>Server Initializing!</b>"
+		output += span_bold("Server Initializing!")
 	else
-		output += "<b>Round Duration:</b> [roundduration2text()]<br>"
+		output += span_bold("Round Duration:") + " [roundduration2text()]<br>"
 	output += "<hr>"
 
 	output += "<p><a href='byond://?src=\ref[src];show_preferences=1'>Character Setup</A></p>"
 
 	if(!ticker || ticker.current_state <= GAME_STATE_PREGAME)
 		if(ready)
-			output += "<p>\[ <span class='linkOn'><b>Ready</b></span> | <a href='byond://?src=\ref[src];ready=0'>Not Ready</a> \]</p>" //ChompEDIT - fixed height
+			output += "<p>\[ " + span_linkOn(span_bold("Ready")) + " | <a href='byond://?src=\ref[src];ready=0'>Not Ready</a> \]</p>" //ChompEDIT - fixed height
 		else
-			output += "<p>\[ <a href='byond://?src=\ref[src];ready=1'>Ready</a> | <span class='linkOn'><b>Not Ready</b></span> \]</p>" //ChompEDIT - fixed height
+			output += "<p>\[ <a href='byond://?src=\ref[src];ready=1'>Ready</a> | " + span_linkOn(span_bold("Not Ready")) + " \]</p>" //ChompEDIT - fixed height
 		output += "<p><s>Join Game!</s></p>" //ChompEDIT - fixed height
 
 	else
@@ -127,15 +127,15 @@
 	panel.set_content(output)
 	panel.open()
 	return
-//CHOMPEdit Begin
+
 /mob/new_player/get_status_tab_items()
 	. = ..()
 	. += ""
 
 	. += "Game Mode: [SSticker.hide_mode ? "Secret" : "[config.mode_names[master_mode]]"]"
 
-	if(SSvote.mode)
-		. += "Vote: [capitalize(SSvote.mode)] Time Left: [SSvote.time_remaining] s"
+	// if(SSvote.mode)
+	// 	. += "Vote: [capitalize(SSvote.mode)] Time Left: [SSvote.time_remaining] s"
 
 	if(SSticker.current_state == GAME_STATE_INIT)
 		. += "Time To Start: Server Initializing"
@@ -159,7 +159,6 @@
 				. += "[player.key] [player.ready ? "(Playing as: [refJob ? refJob.title : "Unknown"])" : null]"
 			totalPlayers++
 			if(player.ready)totalPlayersReady++
-//CHOMPEdit End
 
 /mob/new_player/Topic(href, href_list[])
 	if(!client)	return 0
@@ -198,10 +197,10 @@
 			close_spawn_windows()
 			var/obj/O = locate("landmark*Observer-Start")
 			if(istype(O))
-				to_chat(src, "<span class='notice'>Now teleporting.</span>")
+				to_chat(src, span_notice("Now teleporting."))
 				observer.forceMove(O.loc)
 			else
-				to_chat(src, "<span class='danger'>Could not locate an observer spawn point. Use the Teleport verb to jump to the station map.</span>")
+				to_chat(src, span_danger("Could not locate an observer spawn point. Use the Teleport verb to jump to the station map."))
 
 			announce_ghost_joinleave(src)
 
@@ -210,7 +209,7 @@
 			observer.real_name = client.prefs.real_name
 			observer.name = observer.real_name
 			if(!client.holder && !CONFIG_GET(flag/antag_hud_allowed))           // For new ghosts we remove the verb from even showing up if it's not allowed. // CHOMPEdit
-				remove_verb(observer, /mob/observer/dead/verb/toggle_antagHUD) //CHOMPEdit        // Poor guys, don't know what they are missing!
+				remove_verb(observer, /mob/observer/dead/verb/toggle_antagHUD)        // Poor guys, don't know what they are missing!
 			observer.key = key
 			observer.set_respawn_timer(time_till_respawn()) // Will keep their existing time if any, or return 0 and pass 0 into set_respawn_timer which will use the defaults
 			observer.client.init_verbs()
@@ -226,9 +225,9 @@
 
 		var/time_till_respawn = time_till_respawn()
 		if(time_till_respawn == -1) // Special case, never allowed to respawn
-			to_chat(usr, "<span class='warning'>Respawning is not allowed!</span>")
+			to_chat(usr, span_warning("Respawning is not allowed!"))
 		else if(time_till_respawn) // Nonzero time to respawn
-			to_chat(usr, "<span class='warning'>You can't respawn yet! You need to wait another [round(time_till_respawn/10/60, 0.1)] minutes.</span>")
+			to_chat(usr, span_warning("You can't respawn yet! You need to wait another [round(time_till_respawn/10/60, 0.1)] minutes."))
 			return
 /*
 		if(client.prefs.species != "Human" && !check_rights(R_ADMIN, 0)) //VORESTATION EDITS: THE COMMENTED OUT AREAS FROM LINE 154 TO 178
@@ -249,15 +248,15 @@
 		for (var/mob/living/carbon/human/C in mob_list)
 			var/char_name = client.prefs.real_name
 			if(char_name == C.real_name)
-				to_chat(usr, "<span class='notice'>There is a character that already exists with the same name - <b>[C.real_name]</b>, please join with a different one, or use Quit the Round with the previous character.</span>") //VOREStation Edit
+				to_chat(usr, span_notice("There is a character that already exists with the same name - <b>[C.real_name]</b>, please join with a different one, or use Quit the Round with the previous character.")) //VOREStation Edit
 				return
 		*/ //Vorestation Removal End
 
 		if(!CONFIG_GET(flag/enter_allowed)) // CHOMPEdit
-			to_chat(usr, "<span class='notice'>There is an administrative lock on entering the game!</span>")
+			to_chat(usr, span_notice("There is an administrative lock on entering the game!"))
 			return
 		else if(ticker && ticker.mode && ticker.mode.explosion_in_progress)
-			to_chat(usr, "<span class='danger'>The station is currently exploding. Joining would go poorly.</span>")
+			to_chat(usr, span_danger("The station is currently exploding. Joining would go poorly."))
 			return
 
 		if(!is_alien_whitelisted(src, GLOB.all_species[client.prefs.species]))
@@ -309,7 +308,7 @@
 			var/sql = "INSERT INTO erro_privacy VALUES (null, Now(), :t_ckey, :t_option)" //CHOMPEdit TGSQL
 			var/datum/db_query/query_insert = SSdbcore.NewQuery(sql,sqlargs) //CHOMPEdit TGSQL
 			query_insert.Execute()
-			to_chat(usr, "<b>Thank you for your vote!</b>")
+			to_chat(usr, span_bold("Thank you for your vote!"))
 			qdel(query_insert)
 			usr << browse(null,"window=privacypoll")
 
@@ -419,7 +418,7 @@
 		dat += "<br>"
 		dat += "[body]"
 		dat += "<br>"
-		dat += "<font size='2'><i>Last written by [F["author"]], on [F["timestamp"]].</i></font>"
+		dat += span_normal(span_italics("Last written by [F["author"]], on [F["timestamp"]]."))
 		dat += "</center></body></html>"
 		var/datum/browser/popup = new(src, "Server News", "Server News", 450, 300, src)
 		popup.set_content(dat)
@@ -471,7 +470,7 @@
 		to_chat(usr, span_red("The round is either not ready, or has already finished..."))
 		return 0
 	if(!CONFIG_GET(flag/enter_allowed)) // CHOMPEdit
-		to_chat(usr, "<span class='notice'>There is an administrative lock on entering the game!</span>")
+		to_chat(usr, span_notice("There is an administrative lock on entering the game!"))
 		return 0
 	if(!IsJobAvailable(rank))
 		tgui_alert_async(src,"[rank] is not available. Please try another.")
@@ -630,6 +629,7 @@
 
 	character.client.init_verbs() // init verbs for the late join
 
+	character.client.init_verbs()
 	qdel(src) // Delete new_player mob
 
 /mob/new_player/proc/AnnounceCyborg(var/mob/living/character, var/rank, var/join_message, var/channel, var/zlevel)
@@ -644,7 +644,7 @@
 	var/name = client.prefs.be_random_name ? "friend" : client.prefs.real_name
 
 	var/dat = "<html><body><center>"
-	dat += "<b>Welcome, [name].<br></b>"
+	dat += span_bold("Welcome, [name].<br>")
 	dat += "Round Duration: [roundduration2text()]<br>"
 
 	if(emergency_shuttle) //In case NanoTrasen decides reposess CentCom's shuttles.
@@ -776,13 +776,8 @@
 	return new_character
 
 /mob/new_player/proc/ViewManifest()
-	var/dat = "<div align='center'>"
-	dat += data_core.get_manifest(OOC = 1)
-
-	//src << browse(dat, "window=manifest;size=370x420;can_close=1")
-	var/datum/browser/popup = new(src, "Crew Manifest", "Crew Manifest", 370, 420, src)
-	popup.set_content(dat)
-	popup.open()
+	var/datum/tgui_module/crew_manifest/self_deleting/S = new(src)
+	S.tgui_interact(src)
 
 /mob/new_player/Move()
 	return 0

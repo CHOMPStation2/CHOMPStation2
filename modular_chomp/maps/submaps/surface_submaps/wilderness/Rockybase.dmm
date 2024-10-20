@@ -1140,6 +1140,12 @@
 /obj/effect/gibspawner/human,
 /turf/template_noop,
 /area/template_noop)
+"Hx" = (
+/obj/structure/ghost_pod/manual/lost_drone/dogborg{
+	activated = 1
+	},
+/turf/simulated/floor/holofloor/lino,
+/area/submap/Rockybase)
 
 (1,1,1) = {"
 aa
@@ -1763,7 +1769,7 @@ ai
 ai
 ai
 at
-aE
+Hx
 aE
 bm
 at

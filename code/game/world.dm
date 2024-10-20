@@ -1,19 +1,5 @@
 #define RECOMMENDED_VERSION 513
-// CHOMPedit Start - Tracy
-/proc/prof_init()
-	var/lib
-
-	switch(world.system_type)
-		if(MS_WINDOWS) lib = "prof.dll"
-		if(UNIX) lib = "libprof.so"
-		else CRASH("unsupported platform")
-
-	var/init = call_ext(lib, "init")()
-	if("0" != init) CRASH("[lib] init error: [init]")
-// CHOMPedit End
-
 /world/New()
-	//prof_init() // CHOMPedit - Uncomment to enable Tracy. Requires https://github.com/mafemergency/byond-tracy/
 	world_startup_time = world.timeofday
 	rollover_safety_date = world.realtime - world.timeofday // 00:00 today (ish, since floating point error with world.realtime) of today
 	to_world_log("Map Loading Complete")
@@ -478,10 +464,10 @@ var/world_topic_spam_protect_time = world.timeofday
 		if (usr)
 			log_admin("[key_name(usr)] Has requested an immediate world restart via client side debugging tools")
 			message_admins("[key_name_admin(usr)] Has requested an immediate world restart via client side debugging tools")
-			to_world("<span class='boldannounce'>[key_name_admin(usr)] has requested an immediate world restart via client side debugging tools</span>")
+			to_world(span_boldannounce("[key_name_admin(usr)] has requested an immediate world restart via client side debugging tools"))
 
 		else
-			to_world("<span class='boldannounce'>Rebooting world immediately due to host request</span>")
+			to_world(span_boldannounce("Rebooting world immediately due to host request"))
 	else
 		Master.Shutdown()	//run SS shutdowns
 		for(var/client/C in GLOB.clients)
@@ -594,9 +580,9 @@ var/world_topic_spam_protect_time = world.timeofday
 	var/s = ""
 
 	if (config && CONFIG_GET(string/servername)) // CHOMPEdit
-		s += "<b>[CONFIG_GET(string/servername)]</b> &#8212; " // CHOMPEdit
+		s += span_bold("[CONFIG_GET(string/servername)]") + " &#8212; " // CHOMPEdit
 
-	s += "<b>[station_name()]</b>";
+	s += span_bold("[station_name()]");
 	s += " ("
 	s += "<a href=\"https://\">" //Change this to wherever you want the hub to link to.
 //	s += "[game_version]"
@@ -610,7 +596,7 @@ var/world_topic_spam_protect_time = world.timeofday
 		if(master_mode)
 			features += master_mode
 	else
-		features += "<b>STARTING</b>"
+		features += span_bold("STARTING")
 
 	if (!CONFIG_GET(flag/enter_allowed))
 		features += "closed"

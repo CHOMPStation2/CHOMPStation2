@@ -81,7 +81,7 @@ var/list/adminfaxes = list()	//cache for faxes that have been sent to admins
 	if(L.stat || L.restrained())
 		return
 	if(last_fax_role_request && (world.time - last_fax_role_request < 5 MINUTES))
-		to_chat(L, "<span class='warning'>The global automated relays are still recalibrating. Try again later or relay your request in written form for processing.</span>")
+		to_chat(L, span_warning("The global automated relays are still recalibrating. Try again later or relay your request in written form for processing."))
 		return
 
 	var/confirmation = tgui_alert(L, "Are you sure you want to send automated crew request?", "Confirmation", list("Yes", "No", "Cancel"))
@@ -119,7 +119,7 @@ var/list/adminfaxes = list()	//cache for faxes that have been sent to admins
 
 	var/datum/department/ping_dept = SSjob.get_ping_role(role)
 	if(!ping_dept)
-		to_chat(L, "<span class='warning'>Selected job cannot be requested for \[ERRORDEPTNOTFOUND] reason. Please report this to system administrator.</span>")
+		to_chat(L, span_warning("Selected job cannot be requested for \[ERRORDEPTNOTFOUND] reason. Please report this to system administrator."))
 		return
 	var/message_color = "#FFFFFF"
 	var/ping_name = null
@@ -145,13 +145,13 @@ var/list/adminfaxes = list()	//cache for faxes that have been sent to admins
 		if(DEPARTMENT_TALON)
 			ping_name = "Offmap"
 	if(!ping_name)
-		to_chat(L, "<span class='warning'>Selected job cannot be requested for \[ERRORUNKNOWNDEPT] reason. Please report this to system administrator.</span>")
+		to_chat(L, span_warning("Selected job cannot be requested for \[ERRORUNKNOWNDEPT] reason. Please report this to system administrator."))
 		return
 	message_color = ping_dept.color
 
 	message_chat_rolerequest(message_color, ping_name, reason, role)
 	last_fax_role_request = world.time
-	to_chat(L, "<span class='notice'>Your request was transmitted.</span>")
+	to_chat(L, span_notice("Your request was transmitted."))
 
 /obj/machinery/photocopier/faxmachine/tgui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
@@ -222,7 +222,7 @@ var/list/adminfaxes = list()	//cache for faxes that have been sent to admins
 					return
 				copyitem.forceMove(loc)
 				usr.put_in_hands(copyitem)
-				to_chat(usr, "<span class='notice'>You take \the [copyitem] out of \the [src].</span>")
+				to_chat(usr, span_notice("You take \the [copyitem] out of \the [src]."))
 				copyitem = null
 		if("send_automated_staff_request")
 			request_roles()
@@ -306,6 +306,18 @@ Extracted to its own procedure for easier logic handling with paper bundles.
 		department = input
 		if( !(("[department]" in alldepartments) || ("[department]" in admin_departments)) && !(department == "Unknown"))
 			alldepartments |= department
+	else if(istype(O, /obj/item/toner))
+		if(toner <= 10) //allow replacing when low toner is affecting the print darkness
+			user.drop_item()
+			to_chat(user, span_notice("You insert the toner cartridge into \the [src]."))
+			playsound(loc, 'sound/machines/click.ogg', 50, 1)
+			var/obj/item/toner/T = O
+			toner += T.toner_amount
+			qdel(O)
+		else
+			to_chat(user, span_notice("This cartridge is not yet ready for replacement! Use up the rest of the toner."))
+			playsound(loc, 'sound/machines/buzz-two.ogg', 75, 1)
+		return
 
 	return ..()
 
@@ -406,9 +418,11 @@ Extracted to its own procedure for easier logic handling with paper bundles.
 				. += P.info
 
 /obj/machinery/photocopier/faxmachine/proc/message_admins(var/mob/sender, var/faxname, var/obj/item/sent, var/reply_type, font_colour="#006100")
-	var/msg = "<span class='notice'><b><font color='[font_colour]'>[faxname]: </font>[get_options_bar(sender, 2,1,1)]"
-	msg += "(<a href='?_src_=holder;[HrefToken()];FaxReply=\ref[sender];originfax=\ref[src];replyorigin=[reply_type]'>REPLY</a>)</b>: "
-	msg += "Receiving '[sent.name]' via secure connection ... <a href='?_src_=holder;[HrefToken(TRUE)];AdminFaxView=\ref[sent]'>view message</a></span>"
+	var/msg = "<font color='[font_colour]'>[faxname]: </font>[get_options_bar(sender, 2,1,1)]"
+	msg += "(<a href='?_src_=holder;[HrefToken()];FaxReply=\ref[sender];originfax=\ref[src];replyorigin=[reply_type]'>REPLY</a>)"
+	msg = span_bold(msg) + ": "
+	msg += "Receiving '[sent.name]' via secure connection ... <a href='?_src_=holder;[HrefToken(TRUE)];AdminFaxView=\ref[sent]'>view message</a>"
+	msg = span_notice(msg)
 
 	for(var/client/C in GLOB.admins)
 		if(check_rights((R_ADMIN|R_MOD|R_EVENT),0,C))

@@ -304,9 +304,9 @@
 /area/submap/plontden)
 "HB" = (
 /obj/structure/closet/cabinet,
-/obj/random/contraband/nofail,
-/obj/random/contraband/nofail,
-/obj/random/contraband/nofail,
+/obj/random/contraband,
+/obj/random/contraband,
+/obj/random/contraband,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/plontden)
 "HD" = (

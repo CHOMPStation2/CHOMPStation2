@@ -3,9 +3,6 @@
 /obj/item/clothing/glasses/thermal/plain/eyepatch,
 /obj/structure/closet/crate,
 /obj/item/stolenpackage,
-/obj/item/stolenpackage,
-/obj/random/energy/highend,
-/obj/item/stolenpackage,
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 4
 	},
@@ -13,7 +10,6 @@
 /area/submap/piratefortress)
 "aE" = (
 /obj/structure/table/reinforced,
-/obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/piratefortress)
@@ -48,8 +44,6 @@
 /area/submap/piratefortress)
 "ck" = (
 /obj/structure/closet/crate/secure/loot,
-/obj/item/stolenpackage,
-/obj/item/card/emag,
 /obj/item/rig_module/mounted/energy_blade,
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 4
@@ -122,7 +116,6 @@
 /obj/structure/table/reinforced,
 /obj/random/maintenance/security,
 /obj/random/maintenance/security,
-/obj/random/energy/highend,
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 6
 	},
@@ -369,11 +362,11 @@
 /obj/item/clothing/glasses/graviton/medgravpatch,
 /obj/structure/closet/crate,
 /obj/item/stolenpackage,
-/obj/random/energy/highend,
 /obj/item/stolenpackage,
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 4
 	},
+/obj/random/projectile/shotgun,
 /turf/simulated/floor/tiled/red,
 /area/submap/piratefortress)
 "vr" = (
@@ -470,7 +463,6 @@
 "xX" = (
 /obj/structure/table/gold,
 /obj/item/aliencoin/gold,
-/obj/random/energy/highend,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/piratefortress)
@@ -523,11 +515,6 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/red,
-/area/submap/piratefortress)
-"BT" = (
-/obj/structure/table/reinforced,
-/obj/random/projectile,
-/turf/simulated/floor/tiled/yellow,
 /area/submap/piratefortress)
 "Di" = (
 /obj/item/dnainjector/telemut,
@@ -754,11 +741,6 @@
 /obj/structure/window/reinforced,
 /turf/simulated/floor/plating,
 /area/submap/piratefortress)
-"QI" = (
-/obj/structure/table/reinforced,
-/obj/random/energy/highend,
-/turf/simulated/floor/tiled/yellow,
-/area/submap/piratefortress)
 "QM" = (
 /obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/tiled/yellow,
@@ -777,8 +759,6 @@
 /area/submap/piratefortress)
 "Su" = (
 /obj/structure/closet/secure_closet/engineering_electrical,
-/obj/item/stolenpackage,
-/obj/item/stolenpackage,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/submap/piratefortress)
 "Td" = (
@@ -792,7 +772,6 @@
 /area/submap/piratefortress)
 "TJ" = (
 /obj/structure/table/reinforced,
-/obj/random/projectile/shotgun,
 /obj/random/maintenance/security,
 /obj/random/maintenance/security,
 /obj/effect/floor_decal/corner/paleblue/border{
@@ -2097,7 +2076,7 @@ cg
 DD
 oX
 PJ
-BT
+pA
 aE
 pA
 aE
@@ -2146,7 +2125,7 @@ pA
 aE
 vr
 aE
-QI
+pA
 ft
 oX
 xk

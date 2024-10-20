@@ -50,10 +50,6 @@
 /obj/item/stack/rods,
 /turf/simulated/floor/water/contaminated,
 /area/submap/ChemSpill2)
-"p" = (
-/obj/random/firstaid,
-/turf/simulated/floor/outdoors/dirt/sif,
-/area/submap/ChemSpill2)
 "q" = (
 /obj/random/tech_supply,
 /obj/random/energy,
@@ -521,7 +517,7 @@ e
 b
 b
 b
-p
+t
 q
 b
 b
@@ -587,7 +583,7 @@ b
 b
 b
 b
-t
+b
 b
 b
 f

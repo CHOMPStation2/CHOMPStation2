@@ -389,7 +389,6 @@
 	},
 /area/submap/DeathDen)
 "CJ" = (
-/obj/random/maintenance/medical,
 /obj/random/junk,
 /obj/effect/decal/cleanable/dirt,
 /obj/random/maintenance/engineering,
@@ -568,7 +567,6 @@
 /obj/structure/window/reinforced/tinted/frosted{
 	dir = 8
 	},
-/obj/item/gun/projectile/shotgun/doublebarrel/sawn,
 /turf/simulated/floor/tiled/freezer,
 /area/submap/DeathDen)
 "Mz" = (

@@ -283,7 +283,7 @@ CREATE TABLE IF NOT EXISTS `vr_player_hours` (
   `ckey` varchar(32) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
   `department` varchar(64) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
   `hours` double NOT NULL,
-  `total_hours` double(22,0) NOT NULL,
+  `total_hours` double NOT NULL DEFAULT 0,
   PRIMARY KEY (`ckey`,`department`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 

@@ -70,7 +70,7 @@
 
 /mob/living/simple_mob/mechanical/hivebot/precusor/chrono/proc/launch_microsingularity(atom/target)
 	set waitfor = FALSE
-	visible_message(span("warning", "\The [src] drops a ticking time bomb!"))
+	visible_message(span_warning("\The [src] drops a ticking time bomb!"))
 
 	var/obj/item/grenade/G = new grenade_type(get_turf(src))
 	if(istype(G))
@@ -82,7 +82,7 @@
 
 /mob/living/simple_mob/mechanical/hivebot/precusor/chrono/proc/launch_rockets(atom/target)
 	set waitfor = FALSE
-	visible_message(span("warning", "\The [src] creates weak looking hivebots!"))
+	visible_message(span_warning("\The [src] creates weak looking hivebots!"))
 
 	var/obj/item/grenade/G = new grenade_type2(get_turf(src))
 	if(istype(G))
@@ -95,7 +95,7 @@
 
 /mob/living/simple_mob/mechanical/hivebot/precusor/chrono/proc/electric_defense(atom/target)
 	var/turf/T = get_turf(target)
-	visible_message(span("warning", "\The [src] fires an energetic sphere into the air!"))
+	visible_message(span_warning("\The [src] fires an energetic sphere into the air!"))
 	playsound(src, 'sound/weapons/Laser.ogg', 50, 1)
 	face_atom(T)
 	var/obj/item/projectile/arc/microsingulo/sphere = new(loc)

@@ -376,3 +376,9 @@
 	mappath = "modular_chomp/maps/submaps/shelters/XenobotanySetup-19x11.dmm"
 	name = "Xenobotany Lab"
 	description = "A cozy little lab made for plant life."
+
+/datum/map_template/shelter/superpose/SecondLifeBar
+	shelter_id = "SecondLifeBar"
+	mappath = "modular_chomp/maps/submaps/shelters/secondlifebar-19x25.dmm"
+	name = "Second Life Bar"
+	description = "A bar for all your hedonistics needs, only the sky is the limit~"

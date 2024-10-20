@@ -29,21 +29,21 @@
 		to_chat(user, "The machine is destroyed.")
 
 	if(P.weather_holder == /datum/weather/sif/sandstorm)
-		visible_message(span_orange("<B>The [src] begins to tremble before something emerges!.</B>"))
+		visible_message(span_bolddanger(span_orange("The [src] begins to tremble before something emerges!.")))
 		uses = 0
 		new /mob/living/simple_mob/vore/weatherbeast/sandstorm (src.loc)
 
 	if(P.weather_holder == /datum/weather/sif/toxinrain)
-		visible_message(span_orange("<B>The [src] begins to tremble before something emerges!.</B>"))
+		visible_message(span_bolddanger(span_orange("The [src] begins to tremble before something emerges!.")))
 		uses = 0
 		new /mob/living/simple_mob/vore/weatherbeast/acidrain (src.loc)
 
 	if(P.weather_holder == /datum/weather/sif/midnightfog)
-		visible_message(span_orange("<B>The [src] begins to tremble before something emerges!.</B>"))
+		visible_message(span_bolddanger(span_orange("The [src] begins to tremble before something emerges!.")))
 		uses = 0
 		new /mob/living/simple_mob/vore/weatherbeast/darkmist (src.loc)
 
 	if(P.weather_holder == /datum/weather/sif/starryrift)
-		visible_message(span_orange("<B>The [src] begins to tremble before something emerges!.</B>"))
+		visible_message(span_bolddanger(span_orange("The [src] begins to tremble before something emerges!.")))
 		uses = 0
 		new /mob/living/simple_mob/vore/weatherbeast/starsky (src.loc)
