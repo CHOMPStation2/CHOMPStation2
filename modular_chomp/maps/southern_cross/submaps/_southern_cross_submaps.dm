@@ -103,13 +103,13 @@
 /datum/map_template/sc_lateload/thor
 	name = "Thor Surface"
 	desc = "The jungle like surface of Sif's moon"
-	mappath = 'maps/southern_cross/overmap/planets/thor/thor.dmm'
+	mappath = 'modular_chomp/maps/southern_cross/overmap/planets/thor/thor.dmm'
 	associated_map_datum = /datum/planet/thor
 
 /datum/map_template/sc_lateload/tyr
 	name = "Desert Valley"
 	desc = "An anomalous valley within tyr"
-	mappath = 'maps/southern_sun/overmap/planets/tyr/tyr.dmm'
+	mappath = 'modular_chomp/maps/southern_cross/overmap/planets/tyr/tyr.dmm'
 	associated_map_datum = /datum/planet/tyr
 
 
