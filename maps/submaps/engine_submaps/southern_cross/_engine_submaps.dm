@@ -2,7 +2,7 @@
 // This is so CI can validate PoIs, and ensure future changes don't break PoIs, as PoIs are loaded at runtime and the compiler can't catch errors.
 // When adding a new engine, please add it to this list.
 // Polaris: R-UST and Singulo are commented out as their current submap does not line up with the control room.
-#if MAP_TEST
+#ifdef MAP_TEST
 // #include "engine_rust.dmm"
 // #include "engine_singulo.dmm"
 #include "engine_sme.dmm"

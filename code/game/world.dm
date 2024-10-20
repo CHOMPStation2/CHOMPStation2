@@ -68,7 +68,7 @@
 
 	. = ..()
 
-#if UNIT_TEST
+#ifdef UNIT_TEST
 	log_unit_test("Unit Tests Enabled.  This will destroy the world when testing is complete.")
 	log_unit_test("If you did not intend to enable this please check code/__defines/unit_testing.dm")
 #endif
@@ -90,7 +90,7 @@
 
 	spawn(1)
 		master_controller.setup()
-#if UNIT_TEST
+#ifdef UNIT_TEST
 		initialize_unit_tests()
 #endif
 
