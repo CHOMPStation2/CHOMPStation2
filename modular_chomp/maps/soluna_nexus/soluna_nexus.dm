@@ -5,11 +5,12 @@
 	// CHOMPStation Edits Start: Disabling specific includes as vorestation.dme has them already loading via #includes there. UPDATE THIS if that changes.
 	#include "soluna_nexus_areas.dm"
 	#include "../southern_cross/southern_cross_areas_planet.dm"
-	#include "../southern_cross/southern_cross_defines.dm"
+	#include "soluna_nexus_defines.dm"
+	#include "../southern_cross/southern_cross_sif_defines.dm"
 	#include "soluna_nexus_elevator.dm"
 	#include "../southern_cross/southern_cross_events.dm"
 	#include "../southern_cross/southern_cross_overrides.dm"
-	#include "../southern_cross/southern_cross_presets.dm"
+	#include "soluna_nexus_presets.dm"
 	#include "soluna_nexus_shuttles.dm"
 	#include "../southern_cross/southern_cross_shuttles_ch.dm"
 	#include "../southern_cross/shuttles/crew_shuttles.dm"
@@ -66,7 +67,7 @@
 //PLANETS, installations, sectors, ships, etc for the overmap, I want put here. Add new comments and includes when you make new planets
 	#include "../southern_cross/overmap/shuttles.dm"
 	//SIF - Planet
-	#include "../southern_cross/overmap/sectors.dm" //This is actually the sector for Sif. This also includes places like the main station and the surface
+	#include "overmap/sectors.dm" //This is actually the sector for Sif. This also includes places like the main station and the surface
 	#include "../southern_cross/overmap/planets/kara/kara_OM_only.dm" //Kara, but just an OM icon
 	/* //Disabled due to low usage. These are heavy mini-station-like Z layers too.
 	//KARA - Planet
