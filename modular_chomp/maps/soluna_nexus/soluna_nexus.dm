@@ -67,7 +67,8 @@
 //PLANETS, installations, sectors, ships, etc for the overmap, I want put here. Add new comments and includes when you make new planets
 	#include "../southern_cross/overmap/shuttles.dm"
 	//SIF - Planet
-	#include "overmap/sectors.dm" //This is actually the sector for Sif. This also includes places like the main station and the surface
+	#include "overmap/sectors_sn.dm" //This is actually the sector for SN.
+	#include "../southern_cross/overmap/sectors_sif.dm" //This is actually the sector for Sif.
 	#include "../southern_cross/overmap/planets/kara/kara_OM_only.dm" //Kara, but just an OM icon
 	/* //Disabled due to low usage. These are heavy mini-station-like Z layers too.
 	//KARA - Planet
