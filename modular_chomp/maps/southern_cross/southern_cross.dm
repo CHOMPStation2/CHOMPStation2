@@ -6,6 +6,7 @@
 	#include "southern_cross_areas_planet.dm"
 	#include "southern_cross_areas.dm"
 	#include "southern_cross_defines.dm"
+	#include "southern_cross_sif_defines.dm"
 	#include "southern_cross_elevator.dm"
 	#include "southern_cross_events.dm"
 	#include "southern_cross_overrides.dm"
