@@ -51,7 +51,7 @@
 
 
 /datum/action/innate/xeno_ch
-	check_flags = AB_CHECK_RESTRAINED | AB_CHECK_STUNNED | AB_CHECK_ALIVE
+	check_flags = AB_CHECK_RESTRAINED | AB_CHECK_STUNNED | AB_CHECK_CONSCIOUS
 	button_icon = 'modular_chomp/icons/mob/xeno_screen.dmi'
 	var/mob/living/simple_mob/xeno_ch/parent_xeno
 

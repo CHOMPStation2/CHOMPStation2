@@ -272,7 +272,7 @@
 	auto_loading_type = CLOSED_BOLT
 	muzzle_velocity = 810
 	w_class = ITEMSIZE_HUGE
-	action_button_name = "Use Scope"
+	actions_types = list(/datum/action/item_action/use_scope)
 	accuracy = -30
 	scoped_accuracy = 50
 	one_handed_penalty = 70
@@ -529,7 +529,7 @@
 	name = "Scoped Mosin Nagant"
 	icon_state = "scopedmosin"
 	desc = "A reproduction of some old russian bolt-action rifle from some backwater rimworld. Smells strongly of cosmoline. The inscriptions on it are in pan-slavic. This one has a scope attached to it. Chambered in 7.62x54mmR."
-	action_button_name = "Use Scope"
+	actions_types = list(/datum/action/item_action/use_scope)
 	accuracy = -15
 	scoped_accuracy = 50
 	one_handed_penalty = 70
@@ -594,7 +594,7 @@
 	projectile_type = /obj/item/projectile/bullet/rifle/a338
 	load_method = MAGAZINE
 	muzzle_velocity = 936
-	action_button_name = "Use Scope"
+	actions_types = list(/datum/action/item_action/use_scope)
 	accuracy = -30
 	scoped_accuracy = 50
 	w_class = ITEMSIZE_HUGE
@@ -631,7 +631,7 @@
 	projectile_type = /obj/item/projectile/bullet/rifle/a145 //the old round type was ass
 	load_method = MAGAZINE
 	muzzle_velocity = 825
-	action_button_name = "Use Scope"
+	actions_types = list(/datum/action/item_action/use_scope)
 	accuracy = -60
 	scoped_accuracy = 15
 	w_class = ITEMSIZE_HUGE
