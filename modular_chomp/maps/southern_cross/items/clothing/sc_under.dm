@@ -5,10 +5,10 @@
 	desc = "A blue and grey NanoTrasen flight suit. Warm and practical, it feels cozy."
 	icon_state = "pilot1"
 	worn_state = "pilot1"
-	item_icons = list(slot_w_uniform_str = 'maps/southern_cross/icons/mob/sc_under.dmi')
-	icon = 'maps/southern_cross/icons/obj/sc_uniforms.dmi'
+	item_icons = list(slot_w_uniform_str = 'modular_chomp/maps/southern_cross/icons/mob/sc_under.dmi')
+	icon = 'modular_chomp/maps/southern_cross/icons/obj/sc_uniforms.dmi'
 	sprite_sheets = list(
-		SPECIES_TESHARI = 'maps/southern_cross/icons/mob/species/teshari/sc_uniform.dmi'
+		SPECIES_TESHARI = 'modular_chomp/maps/southern_cross/icons/mob/species/teshari/sc_uniform.dmi'
 	)
 	starting_accessories = list(/obj/item/clothing/accessory/storage/webbing/pilot1)
 
@@ -22,10 +22,10 @@
 	worn_state = "pilot2"
 	rolled_down = 0
 	rolled_sleeves = 0
-	item_icons = list(slot_w_uniform_str = 'maps/southern_cross/icons/mob/sc_under.dmi')
-	icon = 'maps/southern_cross/icons/obj/sc_uniforms.dmi'
+	item_icons = list(slot_w_uniform_str = 'modular_chomp/maps/southern_cross/icons/mob/sc_under.dmi')
+	icon = 'modular_chomp/maps/southern_cross/icons/obj/sc_uniforms.dmi'
 	sprite_sheets = list(
-		SPECIES_TESHARI = 'maps/southern_cross/icons/mob/species/teshari/sc_uniform.dmi'
+		SPECIES_TESHARI = 'modular_chomp/maps/southern_cross/icons/mob/species/teshari/sc_uniform.dmi'
 	)
 	starting_accessories = list(/obj/item/clothing/accessory/storage/webbing/pilot2)
 
