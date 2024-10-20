@@ -8,6 +8,8 @@
 	var/show_hidden_jobs = 0	//Show jobs that are set to "Never" in preferences
 	var/has_respawned = FALSE	//Determines if we're using RESPAWN_MESSAGE
 	var/datum/browser/panel
+	var/datum/tgui_module/crew_manifest/manifest = null
+	var/datum/tgui_module/late_choices/late_choices_dialog = null
 	universal_speak = 1
 
 	invisibility = 101
@@ -35,6 +37,10 @@
 /mob/new_player/Destroy()
 	if(panel)
 		QDEL_NULL(panel)
+	if(manifest)
+		QDEL_NULL(manifest)
+	if(late_choices_dialog)
+		QDEL_NULL(late_choices_dialog)
 	. = ..()
 
 /mob/new_player/verb/new_player_panel()
@@ -241,6 +247,7 @@
 	if(href_list["manifest"])
 		ViewManifest()
 
+<<<<<<< HEAD
 	if(href_list["SelectedJob"])
 
 		/* Vorestation Removal Start
@@ -272,6 +279,8 @@
 		AttemptLateSpawn(href_list["SelectedJob"],client.prefs.spawnpoint)
 		return
 
+=======
+>>>>>>> ee0c4adbff... Convert late spawn UI to TGUI (#16498)
 	if(href_list["privacy_poll"])
 		establish_db_connection()
 		if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
@@ -641,6 +650,7 @@
 		global_announcer.autosay("A new[rank ? " [rank]" : " visitor" ] [join_message ? join_message : "has arrived on the station"].", "Arrivals Announcement Computer", channel, zlevels)
 
 /mob/new_player/proc/LateChoices()
+<<<<<<< HEAD
 	var/name = client.prefs.be_random_name ? "friend" : client.prefs.real_name
 
 	var/dat = "<html><body><center>"
@@ -692,6 +702,11 @@
 	dat += "</center>"
 	src << browse(dat, "window=latechoices;size=300x640;can_close=1")
 
+=======
+	if(!late_choices_dialog)
+		late_choices_dialog = new(src)
+	late_choices_dialog.tgui_interact(src)
+>>>>>>> ee0c4adbff... Convert late spawn UI to TGUI (#16498)
 
 /mob/new_player/proc/create_character(var/turf/T)
 	spawning = 1
@@ -776,13 +791,16 @@
 	return new_character
 
 /mob/new_player/proc/ViewManifest()
-	var/datum/tgui_module/crew_manifest/self_deleting/S = new(src)
-	S.tgui_interact(src)
+	if(!manifest)
+		manifest = new(src)
+	manifest.tgui_interact(src)
 
 /mob/new_player/Move()
 	return 0
 
 /mob/new_player/proc/close_spawn_windows()
+	manifest?.close_ui()
+	late_choices_dialog?.close_ui()
 
 	src << browse(null, "window=latechoices") //closes late choices window
 	src << browse(null, "window=preferences_window") //VOREStation Edit?
