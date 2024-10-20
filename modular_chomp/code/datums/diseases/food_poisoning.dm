@@ -59,7 +59,7 @@
 				to_chat(affected_mob, span_danger("You feel sick."))
 			if(prob(5))
 				if(affected_mob.nutrition > 10)
-					affected_mob.say("*vomit")
+					affected_mob.emote("vomit")
 				else
 					to_chat(affected_mob, "Your stomach lurches painfully")
 					affected_mob.visible_message(span_danger("[affected_mob] gags and retches!"))

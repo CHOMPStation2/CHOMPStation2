@@ -32,7 +32,7 @@ BONUS
 			if(1, 2, 3)
 				to_chat(M, span_warning(pick("You swallow excess mucus", "You lightly cough.")))
 			else
-				M.say("*cough")
+				M.emote("cough")
 				var/obj/item/I = M.get_active_hand()
 				if(I && I.w_class == ITEMSIZE_SMALL)
 					M.drop_item()

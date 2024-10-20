@@ -41,7 +41,7 @@
 					span_danger("[affected_mob] coughs up butterflies!"),
 					span_userdanger("You cough up butterflies!")
 				)
-				affected_mob.say("*cough")
+				affected_mob.emote("cough")
 				for(var/i in 1 to 2)
 					var/mob/living/simple_mob/animal/sif/glitterfly/B = new(affected_mob.loc)
 					addtimer(CALLBACK(B, TYPE_PROC_REF(/mob/living/simple_mob/animal/sif/glitterfly, decompose)), rand(5, 25) SECONDS)

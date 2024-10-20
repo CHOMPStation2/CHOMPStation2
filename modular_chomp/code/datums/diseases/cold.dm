@@ -29,9 +29,9 @@
 				cure()
 				return
 			if(prob(1))
-				affected_mob.say("*sneeze")
+				affected_mob.emote("sneeze")
 			if(prob(1))
-				affected_mob.say("*cough")
+				affected_mob.emote("cough")
 			if(prob(1))
 				to_chat(affected_mob, span_notice("Your throat feels sore."))
 			if(prob(1))
@@ -50,9 +50,9 @@
 				cure()
 				return
 			if(prob(1))
-				affected_mob.say("*sneeze")
+				affected_mob.emote("sneeze")
 			if(prob(1))
-				affected_mob.say("*cough")
+				affected_mob.emote("cough")
 			if(prob(1))
 				to_chat(affected_mob, span_notice("Your throat feels sore."))
 			if(prob(1))

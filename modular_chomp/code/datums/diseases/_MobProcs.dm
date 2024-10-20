@@ -18,11 +18,13 @@
 	if(istype(D, /datum/disease/advance) && count_by_type(viruses, /datum/disease/advance) > 0)
 		return FALSE
 
-	if(isSynthetic() && !D.infect_synthetics)
-		return FALSE
-
 	if(!(type in D.viable_mobtypes))
 		return -1
+
+	if(isSynthetic())
+		if(D.infect_synthetics)
+			return TRUE
+		return FALSE
 
 	return TRUE
 
@@ -51,7 +53,6 @@
 			DD.vars[V] = D.vars[V]
 
 	log_admin("[key_name(usr)] has contracted the virus \"[DD]\"")
-
 
 /mob/living/carbon/ContractDisease(datum/disease/D)
 	if(!CanContractDisease(D))
