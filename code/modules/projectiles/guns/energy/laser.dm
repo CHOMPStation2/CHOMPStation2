@@ -329,18 +329,11 @@
 	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 5, TECH_POWER = 4)
 	projectile_type = /obj/item/projectile/beam/sniper
 	slot_flags = SLOT_BACK
-<<<<<<< HEAD
-	action_button_name = "Use Scope"
+	actions_types = list(/datum/action/item_action/use_scope)
 	//Begin CHOMPstation Edit for making this thing not trash
 	//battery_lock = 0
 	charge_cost = 360
 	fire_delay = 40
-=======
-	actions_types = list(/datum/action/item_action/use_scope)
-	battery_lock = 1
-	charge_cost = 600
-	fire_delay = 35
->>>>>>> bcc107c7cd... Ports tgstation/tgstation/pull/15673 (#16495)
 	force = 10
 	w_class = ITEMSIZE_HUGE // So it can't fit in a backpack.
 	accuracy = -30 //shooting at the hip

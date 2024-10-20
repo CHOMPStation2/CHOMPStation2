@@ -7,12 +7,8 @@
 	pickup_sound = 'sound/items/pickup/ring.ogg'
 	throwforce = 0
 	force = 0
-<<<<<<< HEAD
-	action_button_name = "Command"
-	w_class = ITEMSIZE_SMALL //CHOMPEdit
-=======
 	actions_types = list(/datum/action/item_action/command)
->>>>>>> bcc107c7cd... Ports tgstation/tgstation/pull/15673 (#16495)
+	w_class = ITEMSIZE_SMALL //CHOMPEdit
 
 	var/active = FALSE					//Is it set up?
 	var/mob/living/owner				//Reference to the owner

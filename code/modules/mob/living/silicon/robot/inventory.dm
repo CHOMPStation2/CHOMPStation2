@@ -289,13 +289,10 @@
 			pounce.icon_state = initial(pounce.icon_state)
 			pounce.desc = initial(pounce.desc)
 			pounce.bluespace = initial(pounce.bluespace)
-<<<<<<< HEAD
 	*/ //ChompEDIT END
-=======
 	if(O)
 		for(var/datum/action/A as anything in O.actions)
 			A.Grant(src)
->>>>>>> bcc107c7cd... Ports tgstation/tgstation/pull/15673 (#16495)
 
 /mob/living/silicon/robot/put_in_hands(var/obj/item/W) // No hands.
 	W.forceMove(get_turf(src))
