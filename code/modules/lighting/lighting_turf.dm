@@ -142,6 +142,7 @@
 /turf/proc/has_dynamic_lighting()
 	var/area/A = loc
 	return (IS_DYNAMIC_LIGHTING(src) && IS_DYNAMIC_LIGHTING(A))
+<<<<<<< HEAD
 
 /turf/proc/generate_missing_corners()
 
@@ -177,3 +178,5 @@
 			lighting_corner_NW = new/datum/lighting_corner(src, NORTH|WEST)
 	//CHOMPEdit End
 	lighting_corners_initialised = TRUE
+=======
+>>>>>>> 8c2d326214... Micro-opt lighting (#16482)
