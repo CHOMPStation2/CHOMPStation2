@@ -3,7 +3,7 @@
 /datum/map_template/sc_lateload/northern_star
 	name = "Kara - Z1 Northern Star"
 	desc = "The Northern Star mines."
-	mappath = 'maps/southern_cross/overmap/planets/kara/northern_star/northern_star_mine.dmm'
+	mappath = "maps/southern_cross/overmap/planets/kara/northern_star/northern_star_mine.dmm"
 	associated_map_datum = /datum/map_z_level/sc_lateload/northern_star
 
 /datum/map_z_level/sc_lateload/northern_star

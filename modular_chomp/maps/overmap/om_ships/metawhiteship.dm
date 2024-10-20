@@ -7,7 +7,7 @@
 /datum/map_template/om_ships/metawhiteship
 	name = "OM Ship - Meta White Ship"
 	desc = "A small privately-owned vessel."
-	mappath = 'metawhiteship30x21.dmm'
+	mappath = "modular_chomp/maps/overmap/om_ships/metawhiteship30x21.dmm"
 	annihilate = TRUE
 
 // The shuttle's area(s)
@@ -81,7 +81,7 @@
 
 /datum/map_template/shelter/superpose/metawhiteship
 	shelter_id = "MetaWhiteShip"
-	mappath = 'metawhiteship30x21.dmm'
+	mappath = "modular_chomp/maps/overmap/om_ships/metawhiteship30x21.dmm"
 	name = "MetaMaterial Salvage Ship"
 	description = "A medium size salvage whiteship"
 	superpose = FALSE

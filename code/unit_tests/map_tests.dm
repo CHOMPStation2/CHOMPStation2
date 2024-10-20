@@ -123,6 +123,30 @@
 
 	return 1
 
+/datum/unit_test/template_noops
+	name = "MAP: Template no-ops (all maps)"
+
+/datum/unit_test/template_noops/start_test()
+
+	var/list/log = list()
+
+	var/turf_noop_count = 0
+	for(var/turf/template_noop/T in world)
+		turf_noop_count++
+		log += "+-- Template Turf @ [T.x], [T.y], [T.z] ([T.loc])"
+
+	var/area_noop_count = 0
+	for(var/area/template_noop/A in world)
+		area_noop_count++
+		log += "+-- Template Area"
+
+	if(turf_noop_count || area_noop_count)
+		fail("Map contained [turf_noop_count] template turfs and [area_noop_count] template areas at round-start.\n" + log.Join("\n"))
+	else
+		pass("No template turfs or areas.")
+
+	return 1
+
 /datum/unit_test/active_edges
 	name = "MAP: Active edges (all maps)"
 

@@ -7,7 +7,7 @@
 /datum/map_template/om_ships/pizzashuttle
 	name = "OM Ship - Pizza Delivery Shuttle"
 	desc = "A small moderate condition pizza parlor on the go."
-	mappath = 'pizzashuttle-11x13.dmm'
+	mappath = "modular_chomp/maps/overmap/om_ships/pizzashuttle-11x13.dmm"
 	annihilate = TRUE
 
 // The shuttle's area(s)
@@ -53,7 +53,7 @@
 
 /datum/map_template/shelter/superpose/pizzashuttle
 	shelter_id = "PizzaShuttle"
-	mappath = 'pizzashuttle-11x13.dmm'
+	mappath = "modular_chomp/maps/overmap/om_ships/pizzashuttle-11x13.dmm"
 	name = "Pizza Gut Shuttle"
 	description = "A medium size pizza resturaunt ship."
 	superpose = FALSE
