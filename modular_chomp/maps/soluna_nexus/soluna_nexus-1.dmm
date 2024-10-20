@@ -44720,7 +44720,7 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/SouthernCrossV2/Maints/Deck1_Cargo_Chamber1)
 "nxq" = (
-/obj/turbolift_map_holder/southern_cross/port,
+/obj/turbolift_map_holder/soluna_nexus/port,
 /turf/simulated/floor/plating/eris/under,
 /area/SouthernCrossV2/Maints/Room_88)
 "nxr" = (
@@ -46781,7 +46781,7 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/SouthernCrossV2/Maints/ab_GeneralStore)
 "odp" = (
-/obj/turbolift_map_holder/southern_cross/starboard,
+/obj/turbolift_map_holder/soluna_nexus/starboard,
 /turf/simulated/floor/plating/eris/under,
 /area/SouthernCrossV2/Maints/Room_88)
 "odq" = (
@@ -53769,7 +53769,7 @@
 /turf/simulated/floor/airless,
 /area/SouthernCrossV2/Science/Research_Ship_Bay)
 "qqZ" = (
-/obj/turbolift_map_holder/southern_cross/center,
+/obj/turbolift_map_holder/soluna_nexus/center,
 /turf/simulated/floor/plating/eris/under,
 /area/SouthernCrossV2/Maints/Room_88)
 "qra" = (
@@ -61461,7 +61461,7 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Maints/Market_Stall_2)
 "sZN" = (
-/obj/turbolift_map_holder/southern_cross/cargo{
+/obj/turbolift_map_holder/soluna_nexus/cargo{
 	dir = 1
 	},
 /turf/unsimulated/mask,
@@ -64129,7 +64129,7 @@
 /turf/simulated/floor/tiled,
 /area/SouthernCrossV2/Commons/For_Transit_Foyer)
 "tWK" = (
-/obj/turbolift_map_holder/southern_cross/aft,
+/obj/turbolift_map_holder/soluna_nexus/aft,
 /turf/simulated/floor/plating/eris/under,
 /area/SouthernCrossV2/Maints/Room_88)
 "tWM" = (
@@ -74969,7 +74969,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/SouthernCrossV2/Harbor/Dock3)
 "xMb" = (
-/obj/turbolift_map_holder/southern_cross/forward,
+/obj/turbolift_map_holder/soluna_nexus/forward,
 /turf/simulated/floor/plating/eris/under,
 /area/SouthernCrossV2/Maints/Room_88)
 "xMB" = (
