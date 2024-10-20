@@ -484,5 +484,15 @@
 		"southern_cross_nanomap_z9.png"		= 'icons/_nanomaps/southern_cross_nanomap_z9.png',
 		"southern_cross_nanomap_z10.png"		= 'icons/_nanomaps/southern_cross_nanomap_z10.png',
 		"southern_cross_nanomap_z11.png"		= 'icons/_nanomaps/southern_cross_nanomap_z11.png',
+
+		"soluna_nexus_nanomap_z1.png"		= 'icons/_nanomaps/soluna_nexus_nanomap_z1.png',
+		"soluna_nexus_nanomap_z2.png"		= 'icons/_nanomaps/soluna_nexus_nanomap_z2.png',
+		"soluna_nexus_nanomap_z3.png"		= 'icons/_nanomaps/soluna_nexus_nanomap_z3.png',
+		"soluna_nexus_nanomap_z4.png"		= 'icons/_nanomaps/southern_cross_nanomap_z4.png',
+		"soluna_nexus_nanomap_z5.png"		= 'icons/_nanomaps/southern_cross_nanomap_z5.png',
+		"soluna_nexus_nanomap_z6.png"		= 'icons/_nanomaps/soluna_nexus_nanomap_z6.png',
+		"soluna_nexus_nanomap_z7.png"		= 'icons/_nanomaps/soluna_nexus_nanomap_z7.png',
+		"soluna_nexus_nanomap_z8.png"		= 'icons/_nanomaps/soluna_nexus_nanomap_z8.png',
+		"soluna_nexus_nanomap_z9.png"		= 'icons/_nanomaps/southern_cross_nanomap_z9.png',
 		// CHOMP Edit End
 	)

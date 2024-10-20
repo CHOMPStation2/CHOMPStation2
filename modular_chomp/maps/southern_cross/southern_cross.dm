@@ -3,6 +3,7 @@
 #if !defined(USING_MAP_DATUM)
 
 	// CHOMPStation Edits Start: Disabling specific includes as vorestation.dme has them already loading via #includes there. UPDATE THIS if that changes.
+	#include "southern_cross_areas_planet.dm"
 	#include "southern_cross_areas.dm"
 	#include "southern_cross_defines.dm"
 	#include "southern_cross_elevator.dm"
