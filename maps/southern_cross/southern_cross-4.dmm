@@ -7798,6 +7798,8 @@
 /area/hallway/primary/thirddeck/aftdoorm)
 "fFk" = (
 /obj/structure/table/steel,
+/obj/item/virusdish/random,
+/obj/item/virusdish/random,
 /obj/item/surgical/scalpel,
 /obj/item/surgical/cautery,
 /obj/item/surgical/FixOVein,
