@@ -44,6 +44,19 @@
 		if(!temp || !temp.is_usable())
 			to_chat(H, span_warning("You can't use your hand."))
 			return
+
+		// CHOMPEdit Start - Virus spread
+		for(var/thing in viruses)
+			var/datum/disease/D = thing
+			if(D.IsSpreadByTouch())
+				H.ContractDisease(D)
+
+		for(var/thing in H.viruses)
+			var/datum/disease/D = thing
+			if(D.IsSpreadByTouch())
+				ContractDisease(D)
+		// CHOMPEdit End
+
 	if(H.lying)
 		return
 	M.break_cloak()
@@ -63,10 +76,12 @@
 		if(H != src && check_shields(0, null, H, H.zone_sel.selecting, H.name))
 			H.do_attack_animation(src)
 			return FALSE
-
+	// CHOMPEdit Start
 	if(istype(M,/mob/living/carbon))
-		var/mob/living/carbon/C = M
-		C.spread_disease_to(src, "Contact")
+		for(var/datum/disease/D in M.viruses)
+			if(D.spread_flags & CONTACT_HANDS)
+				ContractDisease(D)
+	// CHOMPEdit End
 
 	switch(M.a_intent)
 		if(I_HELP)

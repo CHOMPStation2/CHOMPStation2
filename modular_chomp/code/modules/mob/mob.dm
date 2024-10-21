@@ -4,6 +4,8 @@
 	var/enabled = TRUE //Pauses a mob if disabled (Prevents life ticks from happening)
 	var/died_in_vr = FALSE //For virtual reality sleepers
 	var/last_move_time = 0 //For movement smoothing
+	var/list/viruses = list()
+	var/list/resistances = list()
 
 /mob/is_incorporeal()
 	if(incorporeal_move)

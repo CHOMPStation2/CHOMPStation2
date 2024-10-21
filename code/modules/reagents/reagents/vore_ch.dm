@@ -52,6 +52,7 @@
 /datum/reagent/radium/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(issmall(M)) removed *= 2
 	M.apply_effect(10 * removed, IRRADIATE, 0) // Radium may increase your chances to cure a disease
+	/*
 	if(M.virus2.len)
 		for(var/ID in M.virus2)
 			var/datum/disease2/disease/V = M.virus2[ID]
@@ -65,10 +66,12 @@
 						absorbed = 1
 					if(!absorbed)
 						M.adjustToxLoss(100)
+*/
 
 /datum/reagent/radium/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
 	if(issmall(M)) removed *= 2
 	M.apply_effect(10 * removed, IRRADIATE, 0) // Radium may increase your chances to cure a disease
+	/*
 	if(M.virus2.len)
 		for(var/ID in M.virus2)
 			var/datum/disease2/disease/V = M.virus2[ID]
@@ -82,3 +85,4 @@
 						absorbed = 1
 					if(!absorbed)
 						M.adjustToxLoss(100)
+*/

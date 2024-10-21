@@ -189,7 +189,7 @@
 		occupantData["health"] = H.health
 		occupantData["maxHealth"] = H.getMaxHealth()
 
-		occupantData["hasVirus"] = H.virus2.len
+		occupantData["hasVirus"] = H.viruses.len // CHOMPEdit
 
 		occupantData["bruteLoss"] = H.getBruteLoss()
 		occupantData["oxyLoss"] = H.getOxyLoss()
@@ -379,7 +379,7 @@
 		dat += (occupant.health > (occupant.getMaxHealth() / 2) ? span_blue(health_text) : span_red(health_text))
 		dat += "<br>"
 
-		if(occupant.virus2.len)
+		if(occupant.viruses.len) // CHOMPEdit
 			dat += span_red("Viral pathogen detected in blood stream.") + "<BR>"
 
 		var/damage_string = null
