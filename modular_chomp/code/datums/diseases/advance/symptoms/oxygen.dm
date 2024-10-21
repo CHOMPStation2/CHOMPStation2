@@ -10,7 +10,7 @@ Self-Respiration
 	Fatal Level.
 
 Bonus
-	The body generates salbutamol.
+	The body generates dexalin.
 
 //////////////////////////////////////
 */

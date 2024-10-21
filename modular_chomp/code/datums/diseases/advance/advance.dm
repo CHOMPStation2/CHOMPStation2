@@ -316,7 +316,6 @@ GLOBAL_LIST_INIT(advance_cures, list(
 		D2.Mix(D1)
 
 	// Should be only 1 entry left, but if not let's only return a single entry
-	// to_chat(world, "END MIXING!!!!!")
 	var/datum/disease/advance/to_return = pick(diseases)
 	to_return.Refresh(1)
 	return to_return

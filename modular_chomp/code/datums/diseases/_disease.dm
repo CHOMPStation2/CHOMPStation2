@@ -66,7 +66,7 @@ GLOBAL_LIST_INIT(diseases, subtypesof(/datum/disease))
 		stage = min(stage + 1, max_stages)
 		if(!discovered && stage >= CEILING(max_stages * discovery_threshold, 1))
 			discovered = TRUE
-			BITSET(affected_mob.hud_updateflag, STATUS_HUD)
+			affected_mob.hud_updateflag |= << STATUS_HUD
 
 /datum/disease/proc/handle_cure_testing(has_cure = FALSE)
 	if(has_cure && prob(cure_chance))
@@ -125,8 +125,6 @@ GLOBAL_LIST_INIT(diseases, subtypesof(/datum/disease))
 						break
 					var/direction = get_dir(current, target)
 					var/turf/next = get_step(current, direction)
-					if(!current.CanZASPass(direction) || next.CanZASPass(turn(direction, 100)))
-						break
 					current = next
 
 /datum/disease/proc/cure()

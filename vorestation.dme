@@ -4751,6 +4751,7 @@
 #include "modular_chomp\code\datums\diseases\advance\symptoms\oxygen.dm"
 #include "modular_chomp\code\datums\diseases\advance\symptoms\sneeze.dm"
 #include "modular_chomp\code\datums\diseases\advance\symptoms\symptoms.dm"
+#include "modular_chomp\code\datums\diseases\advance\symptoms\telepathy.dm"
 #include "modular_chomp\code\datums\diseases\advance\symptoms\vision.dm"
 #include "modular_chomp\code\datums\diseases\advance\symptoms\weigh.dm"
 #include "modular_chomp\code\datums\elements\footstep.dm"
