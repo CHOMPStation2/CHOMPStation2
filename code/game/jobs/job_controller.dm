@@ -57,10 +57,14 @@ var/global/datum/controller/occupations/job_master
 		if(!job.player_old_enough(player.client))
 			return 0
 		//VOREStation Add
-		if(!job.player_has_enough_playtime(player.client))
+		// CHOMPEdit Start
+		if(!job.player_has_enough_playtime(player.client) || !is_job_whitelisted(player, rank))
 			return 0
+		/*
 		if(!is_job_whitelisted(player, rank))
 			return 0
+		*/
+		// CHOMPEdit End
 		//VOREStation Add End
 
 		var/position_limit = job.total_positions
