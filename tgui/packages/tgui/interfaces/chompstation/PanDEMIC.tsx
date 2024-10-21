@@ -106,7 +106,7 @@ const CommonCultureActions = () => {
 
 const CultureInformationSection = () => {
   const { act, data } = useBackend<Data>();
-  const { selectedStrainIndex, strains } = data;
+  const { selectedStrainIndex, strains, synthesisCooldown } = data;
 
   if (strains.length === 0) {
     return (
@@ -116,66 +116,20 @@ const CultureInformationSection = () => {
     );
   }
 
-  const selectedStrain = strains[selectedStrainIndex - 1];
-
   return (
     <Stack.Item grow>
       <Section
         title="Culture Information"
         fill
-        buttons={<CommonCultureActions />}
-      >
-        <Flex direction="column" style={{ height: '100%' }}>
-          <Flex.Item>
-            <Tabs>
-              {strains.map((strain, i) => (
-                <Tabs.Tab
-                  key={i}
-                  icon="virus"
-                  selected={selectedStrainIndex - 1 === i}
-                  onClick={() => act('switch_strain', { strain_index: i + 1 })}
-                >
-                  {strain.commonName ?? 'Unknown'}
-                </Tabs.Tab>
-              ))}
-            </Tabs>
-          </Flex.Item>
-          <Flex.Item grow>
-            <StrainInformationSection
-              strain={selectedStrain}
-              strainIndex={selectedStrainIndex}
-            />
-            {selectedStrain && selectedStrain.symptoms.length > 0 && (
-              <StrainSymptomsSection strain={selectedStrain} />
-            )}
-          </Flex.Item>
-        </Flex>
-      </Section>
-    </Stack.Item>
-  );
-};
-
-const StrainInformationSection = ({
-  strain,
-  strainIndex,
-}: {
-  strain: Strain | undefined;
-  strainIndex: number;
-}) => {
-  const { act, data } = useBackend<Data>();
-  const synthesisCooldown = data.synthesisCooldown;
-
-  return (
-    <Flex.Item>
-      <Section
-        title="Strain Information"
         buttons={
           <>
             <Button
               icon={synthesisCooldown ? 'spinner' : 'clone'}
               iconSpin={synthesisCooldown}
               disabled={synthesisCooldown}
-              onClick={() => act('clone_strain', { strain_index: strainIndex })}
+              onClick={() =>
+                act('clone_strain', { strain_index: selectedStrainIndex })
+              }
             >
               Clone
             </Button>
@@ -183,12 +137,56 @@ const StrainInformationSection = ({
           </>
         }
       >
-        {strain ? (
-          <StrainInformation strain={strain} strainIndex={strainIndex} />
+        <Flex direction="column" style={{ height: '100%' }}>
+          <StrainInformationSection
+            strains={strains}
+            selectedStrainIndex={selectedStrainIndex}
+          />
+        </Flex>
+      </Section>
+    </Stack.Item>
+  );
+};
+
+const StrainInformationSection = ({
+  strains,
+  selectedStrainIndex,
+}: {
+  strains: Strain[];
+  selectedStrainIndex: number;
+}) => {
+  const { act } = useBackend<Data>();
+  const selectedStrain = strains[selectedStrainIndex - 1];
+
+  return (
+    <Flex.Item>
+      <Tabs>
+        {strains.map((strain, index) => (
+          <Tabs.Tab
+            key={index}
+            icon="virus"
+            selected={selectedStrainIndex - 1 === index}
+            onClick={() => act('switch_strain', { strain_index: index + 1 })}
+          >
+            {strain.commonName}
+          </Tabs.Tab>
+        ))}
+      </Tabs>
+
+      <Section title="Strain Information">
+        {selectedStrain ? (
+          <StrainInformation
+            strain={selectedStrain}
+            strainIndex={selectedStrainIndex}
+          />
         ) : (
           <NoticeBox>No strain information available.</NoticeBox>
         )}
       </Section>
+
+      {selectedStrain && selectedStrain.symptoms.length > 0 && (
+        <StrainSymptomsSection strain={selectedStrain} />
+      )}
     </Flex.Item>
   );
 };
@@ -229,8 +227,7 @@ const StrainInformation = ({
   strain: Strain;
   strainIndex: number;
 }) => {
-  const { act, data } = useBackend<Data>();
-  const { beakerContainsVirus } = data;
+  const { act } = useBackend<Data>();
   const {
     commonName,
     description,
@@ -248,13 +245,25 @@ const StrainInformation = ({
         <Flex align="center">
           {commonName ?? 'Unknown'}
           {isAdvanced && (
-            <Button
-              icon="pen"
-              onClick={() => act('name_strain', { strain_index: strainIndex })}
-              style={{ marginLeft: 'auto' }}
-            >
-              Name Disease
-            </Button>
+            <>
+              <Button
+                icon="pen"
+                onClick={() =>
+                  act('name_strain', { strain_index: strainIndex })
+                }
+                style={{ marginLeft: 'auto' }}
+              >
+                Name Disease
+              </Button>
+              <Button
+                icon="print"
+                onClick={() =>
+                  act('print_release_forms', { strain_index: strainIndex })
+                }
+              >
+                Print
+              </Button>
+            </>
           )}
         </Flex>
       </LabeledList.Item>
