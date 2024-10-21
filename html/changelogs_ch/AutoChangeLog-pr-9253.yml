@@ -1,8 +1,0 @@
-author: "BigBadE"
-delete-after: True
-changes:
-  - rscadd: "Gryphon simplemob with sprites, bellies, and a custom AI"
-  - bugfix: "Properly made check_vore work for lazily loaded bellies"
-  - bugfix: "Fixed the double exclamation mark in the bump text"
-  - image: "Added the gryphon, belly, and throat sprites"
-  - code_imp: "Added a custom AI for the gryphon"
