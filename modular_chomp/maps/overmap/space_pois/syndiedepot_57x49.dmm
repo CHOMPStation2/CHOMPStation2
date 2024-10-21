@@ -275,7 +275,6 @@
 "ce" = (
 /obj/machinery/light/small{
 	dir = 4;
-	tag = "icon-bulb1 (EAST)"
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/submap/syndiedepotinner)

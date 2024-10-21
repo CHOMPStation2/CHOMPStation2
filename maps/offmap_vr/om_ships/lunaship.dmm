@@ -240,7 +240,6 @@
 /area/lunaship/hallway_starboard)
 "eh" = (
 /obj/structure/lattice,
-/obj/structure/lattice,
 /turf/space,
 /area/space)
 "er" = (
