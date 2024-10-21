@@ -249,7 +249,7 @@
 	item_state = "sniper"
 	item_state_slots = list(slot_r_hand_str = "lsniper", slot_l_hand_str = "lsniper")
 	wielded_item_state = "lsniper-wielded"
-	action_button_name = "Use Scope"
+	actions_types = list(/datum/action/item_action/use_scope)
 	w_class = ITEMSIZE_LARGE
 	item_icons = list(slot_l_hand_str = 'icons/mob/items/lefthand_guns.dmi', slot_r_hand_str = 'icons/mob/items/righthand_guns.dmi')
 	accuracy = -15 //better than most snipers but still has penalty

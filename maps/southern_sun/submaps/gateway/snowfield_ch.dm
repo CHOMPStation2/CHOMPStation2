@@ -457,7 +457,7 @@
 	load_method = MAGAZINE
 	muzzle_velocity = 880
 	w_class = ITEMSIZE_HUGE
-	action_button_name = "Use Scope"
+	actions_types = list(/datum/action/item_action/use_scope)
 	accuracy = 10
 	scoped_accuracy = 20
 	one_handed_penalty = 65
@@ -480,7 +480,7 @@
 	icon_state = "rocket"
 	item_state = "rocket"
 	w_class = ITEMSIZE_HUGE //CHOMP Edit.
-	action_button_name = "Use Scope"
+	actions_types = list(/datum/action/item_action/use_scope)
 	scoped_accuracy = 20
 	one_handed_penalty = 150 //Good luck shooting one handed.
 	throw_speed = 2
