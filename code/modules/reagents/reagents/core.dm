@@ -77,6 +77,8 @@
 		var/list/vlist = data["viruses"]
 		if(vlist.len)
 			for(var/ID in vlist)
+				if(!ID)
+					continue
 				var/datum/disease/D = vlist[ID]
 				if((D.spread_flags & SPECIAL) || (D.spread_flags & NON_CONTAGIOUS))
 					continue
@@ -119,14 +121,13 @@
 			to_mix += AD
 
 		var/datum/disease/advance/AD = Advance_Mix(to_mix)
-		if(AD)
-			var/list/preserve = list(AD)
-			for(var/D in data["viruses"])
-				if(!istype(D, /datum/disease/advance))
-					preserve += D
-			data["viruses"] = preserve
+		var/list/preserve = list(AD)
+		for(var/D in to_mix)
+			if(!istype(D, /datum/disease/advance))
+				preserve += D
+		data["viruses"] = preserve
 
-	// CHOMPEdit End - Virology Rework
+	// CHOMPEdit End
 
 /datum/reagent/blood/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_SLIME)	//They don't have blood, so it seems weird that they would instantly 'process' the chemical like another species does.

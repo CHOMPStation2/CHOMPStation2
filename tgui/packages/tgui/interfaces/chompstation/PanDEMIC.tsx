@@ -137,7 +137,7 @@ const CultureInformationSection = () => {
           </>
         }
       >
-        <Flex direction="column" style={{ height: '100%' }}>
+        <Flex fill direction="column">
           <StrainInformationSection
             strains={strains}
             selectedStrainIndex={selectedStrainIndex}
