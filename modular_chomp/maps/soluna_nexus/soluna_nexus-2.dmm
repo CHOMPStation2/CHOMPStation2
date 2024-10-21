@@ -42923,9 +42923,12 @@
 /turf/simulated/floor/carpet/bcarpet,
 /area/SouthernCrossV2/Security/Lobby)
 "cTE" = (
-/obj/structure/flora/lily2,
-/turf/simulated/floor/water/deep/indoors,
-/area/SouthernCrossV2/Commons/Port_2_Deck_Central_Corridor_1)
+/obj/structure/table/bench/padded,
+/obj/effect/floor_decal/spline/plain{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/dark,
+/area/SouthernCrossV2/Commons/Star_2_Deck_Central_Corridor_1)
 "cTF" = (
 /obj/effect/floor_decal/steeldecal/steel_decals_central5{
 	dir = 8
@@ -44640,8 +44643,12 @@
 /turf/simulated/floor/carpet/brown,
 /area/SouthernCrossV2/Domicile/Chomp_Dinner_2)
 "dpQ" = (
-/turf/simulated/floor/water/deep/indoors,
-/area/SouthernCrossV2/Commons/Star_2_Deck_Central_Corridor_1)
+/obj/structure/table/bench/padded,
+/obj/effect/floor_decal/spline/plain{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/dark,
+/area/SouthernCrossV2/Commons/Port_2_Deck_Central_Corridor_1)
 "dpZ" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -83970,6 +83977,13 @@
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
 /area/SouthernCrossV2/Maints/Deck2_Security_AftPortCorridor1)
+"npV" = (
+/obj/structure/table/bench/padded,
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/SouthernCrossV2/Commons/Star_2_Deck_Central_Corridor_1)
 "npW" = (
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/machinery/portable_atmospherics/canister/air,
@@ -106158,10 +106172,11 @@
 /turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Security/Lobby)
 "tcC" = (
-/obj/structure/railing,
-/obj/effect/floor_decal/spline/plain,
-/obj/structure/flora/lily3,
-/turf/simulated/floor/water/deep/indoors,
+/obj/structure/table/bench/padded,
+/obj/effect/floor_decal/spline/plain{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Commons/Port_2_Deck_Central_Corridor_1)
 "tcW" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -119121,14 +119136,11 @@
 /turf/simulated/wall,
 /area/SouthernCrossV2/Maints/Deck2_Cargo_AftCorridor1)
 "wCM" = (
-/obj/structure/railing{
-	dir = 1
-	},
+/obj/structure/table/bench/padded,
 /obj/effect/floor_decal/spline/plain{
-	dir = 1
+	dir = 9
 	},
-/obj/structure/flora/underwater/grass4,
-/turf/simulated/floor/water/deep/indoors,
+/turf/simulated/floor/tiled/dark,
 /area/SouthernCrossV2/Commons/Star_2_Deck_Central_Corridor_1)
 "wCT" = (
 /turf/simulated/floor/tiled,
@@ -124374,6 +124386,13 @@
 	},
 /turf/simulated/floor/wood/sif,
 /area/SouthernCrossV2/Domicile/Midnight_Bar)
+"xYh" = (
+/obj/structure/table/bench/padded,
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/SouthernCrossV2/Commons/Port_2_Deck_Central_Corridor_1)
 "xYl" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -149700,7 +149719,7 @@ chy
 aSh
 aSh
 suW
-cTE
+bsr
 tlY
 aSh
 aSh
@@ -149957,9 +149976,9 @@ vVP
 nDU
 aSh
 aSh
-suW
-bsr
-tcC
+nZo
+drh
+uKu
 aSh
 aSh
 mAf
@@ -150215,9 +150234,9 @@ iis
 nXS
 aSh
 aSh
-nZo
-drh
-uKu
+nHH
+qWX
+nXE
 aSh
 aSh
 lvy
@@ -150473,9 +150492,9 @@ iis
 oqA
 aSh
 aSh
-nHH
-qWX
-nXE
+dpQ
+xYh
+tcC
 aSh
 aSh
 wnR
@@ -160277,9 +160296,9 @@ kLW
 gMy
 aZE
 aZE
-lcc
-aON
-fVJ
+wCM
+npV
+cTE
 aZE
 aZE
 qQq
@@ -160535,9 +160554,9 @@ mHY
 gwb
 aZE
 aZE
-dKB
-mKF
-muk
+lcc
+aON
+fVJ
 aZE
 aZE
 pSn
@@ -160793,9 +160812,9 @@ mKm
 wjt
 aZE
 aZE
-wCM
-dpQ
-gAe
+dKB
+mKF
+muk
 aZE
 aZE
 tto
@@ -161311,7 +161330,7 @@ qDS
 qDS
 qsz
 nfq
-muk
+gAe
 qDS
 qDS
 nID

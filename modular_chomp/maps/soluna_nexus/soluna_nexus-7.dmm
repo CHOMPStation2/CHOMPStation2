@@ -4151,7 +4151,7 @@
 "dhc" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	dir = 8;
-	id_tag = "cryostorage_recovery";
+	id_tag = "cryostorage_shuttle_recovery";
 	tag_door = "cryostorage_recovery_hatch";
 	req_one_access = list(13);
 	frequency = 1380;
