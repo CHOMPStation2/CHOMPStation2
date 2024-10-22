@@ -1,4 +1,4 @@
 author: "CHOMPStation2"
 delete-after: True
 changes:
-  - qol: "Action buttons are slowly getting better."
+  - bugfix: "Crew manifest not showing up"

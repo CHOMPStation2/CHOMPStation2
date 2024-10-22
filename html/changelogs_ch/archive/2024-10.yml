@@ -223,3 +223,22 @@
   - maptweak: Fixed virology door buttons
   - maptweak: Changed wrong tables in Genetics and Chemistry
   - maptweak: Manifold in Distillery is now hidden
+2024-10-21:
+  BigBadE:
+  - rscadd: Gryphon simplemob with sprites, bellies, and a custom AI
+  - bugfix: Properly made check_vore work for lazily loaded bellies
+  - bugfix: Fixed the double exclamation mark in the bump text
+  - image: Added the gryphon, belly, and throat sprites
+  - code_imp: Added a custom AI for the gryphon
+  CHOMPStation2:
+  - bugfix: Runtime in rig/dropped
+  - rscadd: Overmap helm controls now show the ship in a little map element
+  - qol: Action buttons are slowly getting better.
+  - rscadd: Latejoin UI is now fancy TGUI
+  ShadowLarkens:
+  - qol: Add bapi-dmm, a rust maploader, to reduce init time by 90 seconds.
+  - qol: Moved tracy init to before-world-New.
+  - rscdel: No more pretending to support map rotation
+2024-10-22:
+  Darlantanis:
+  - bugfix: makes leopardmander maw autotransfer functional
