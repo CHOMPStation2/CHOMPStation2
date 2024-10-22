@@ -1045,717 +1045,671 @@
 
 //ALL THE NEW AREAS FOR NEW STATION! KAS
 
-/area/SouthernCrossV2 // Parent for var inheritence
-    name = "\improper SouthernCross Areas"
-    icon_state = "yellow"
-//    requires_power = FALSE
-
 //BRIDGE AREAS
 
-/area/SouthernCrossV2/Bridge/
+/area/bridge
     icon_state = "bridge"
     holomap_color = HOLOMAP_AREACOLOR_COMMAND
     ambience = AMBIENCE_ARRIVALS
     sound_env = LARGE_ENCLOSED
     lightswitch = 0
 
-/area/SouthernCrossV2/Bridge/HoP_Office
+/area/bridge/HoP_Office
     name = "\improper HoP Office"
     icon_state = "bridge"
 
-/area/SouthernCrossV2/Bridge/AI_Core_Chamber
+/area/bridge/AI_Core_Chamber
     name = "\improper AI Core Chamber"
     icon_state = "bridge"
     sound_env = AMBIENCE_AI
 
-/area/SouthernCrossV2/Bridge/AI_Upload_Hall
+/area/bridge/AI_Upload_Hall
     name = "\improper AI Upload Hall"
     icon_state = "bridge"
     sound_env = AMBIENCE_AI
 
-/area/SouthernCrossV2/Bridge/Cyborg_Station
+/area/bridge/Cyborg_Station
     name = "\improper Cyborg Station"
     icon_state = "bridge"
     sound_env = AMBIENCE_AI
 
-/area/SouthernCrossV2/Bridge/Server_Room
+/area/bridge/Server_Room
     name = "\improper Server Room"
     icon_state = "bridge"
     sound_env = AMBIENCE_AI
 
-/area/SouthernCrossV2/Bridge/Deck3_Corridor
+/area/bridge/Deck3_Corridor
     name = "\improper 3 Deck Corridor"
     icon_state = "bridge"
     lightswitch = 1
 
-/area/SouthernCrossV2/Bridge/HoP_Quarters
+/area/bridge/sleeping
+    icon_state = "bridge"
+    flags = RAD_SHIELDED
+    limit_mob_size = FALSE
+    block_suit_sensors = TRUE
+    block_tracking = TRUE
+    soundproofed = TRUE
+    forbid_events = TRUE
+
+/area/bridge/sleeping/HoP_Quarters
     name = "\improper HoP Quarters"
-    icon_state = "bridge"
-    flags = RAD_SHIELDED
-    limit_mob_size = FALSE
-    block_suit_sensors = TRUE
-    block_tracking = TRUE
-    soundproofed = TRUE
-    forbid_events = TRUE
 
-/area/SouthernCrossV2/Bridge/CE_Quarters
+/area/bridge/sleeping/CE_Quarters
     name = "\improper CE Quarters"
-    icon_state = "bridge"
-    flags = RAD_SHIELDED
-    limit_mob_size = FALSE
-    block_suit_sensors = TRUE
-    block_tracking = TRUE
-    soundproofed = TRUE
-    forbid_events = TRUE
 
-/area/SouthernCrossV2/Bridge/CMO_Quarters
+/area/bridge/sleeping/CMO_Quarters
     name = "\improper CMO Quarters"
-    icon_state = "bridge"
-    flags = RAD_SHIELDED
-    limit_mob_size = FALSE
-    block_suit_sensors = TRUE
-    block_tracking = TRUE
-    soundproofed = TRUE
-    forbid_events = TRUE
-
-/area/SouthernCrossV2/Bridge/RD_Quarters
+/area/bridge/sleeping/RD_Quarters
     name = "\improper RD Quarters"
-    icon_state = "bridge"
-    flags = RAD_SHIELDED
-    limit_mob_size = FALSE
-    block_suit_sensors = TRUE
-    block_tracking = TRUE
-    soundproofed = TRUE
-    forbid_events = TRUE
 
-/area/SouthernCrossV2/Bridge/HoS_Quarters
+/area/bridge/sleeping/HoS_Quarters
     name = "\improper HoS Quarters"
-    icon_state = "bridge"
-    flags = RAD_SHIELDED
-    limit_mob_size = FALSE
-    block_suit_sensors = TRUE
-    block_tracking = TRUE
-    soundproofed = TRUE
-    forbid_events = TRUE
 
-/area/SouthernCrossV2/Bridge/Secretary_Quarters
+/area/bridge/sleeping/Secretary_Quarters
     name = "\improper Secretary Quarters"
-    icon_state = "bridge"
-    flags = RAD_SHIELDED
-    limit_mob_size = FALSE
-    block_suit_sensors = TRUE
-    block_tracking = TRUE
-    soundproofed = TRUE
-    forbid_events = TRUE
 
-/area/SouthernCrossV2/Bridge/Leisure_Room
+/area/bridge/sleeping/Captain_Quarters
+    name = "\improper Captain Quarters"
+
+/area/bridge/Leisure_Room
     name = "\improper Leisure Room"
     icon_state = "bridge"
 
-/area/SouthernCrossV2/Bridge/Breakroom
+/area/bridge/Breakroom
     name = "\improper Breakroom"
     icon_state = "bridge"
 
-/area/SouthernCrossV2/Bridge/Control_Atrium
+/area/bridge/Control_Atrium
     name = "\improper Control Atrium"
     icon_state = "bridge"
 
-/area/SouthernCrossV2/Bridge/Captain_Office
+/area/bridge/Captain_Office
     name = "\improper Captain Office"
     icon_state = "bridge"
 
-/area/SouthernCrossV2/Bridge/Captain_Quarters
-    name = "\improper Captain Quarters"
-    icon_state = "bridge"
-    flags = RAD_SHIELDED
-    limit_mob_size = FALSE
-    block_suit_sensors = TRUE
-    block_tracking = TRUE
-    soundproofed = TRUE
-    forbid_events = TRUE
-
-/area/SouthernCrossV2/Bridge/Conference_Room
+/area/bridge/Conference_Room
     name = "\improper Conference Room"
     icon_state = "bridge"
 
-/area/SouthernCrossV2/Bridge/Embassy
+/area/bridge/Embassy
     name = "\improper Embassy"
     icon_state = "bridge"
 
-/area/SouthernCrossV2/Bridge/Firstaid_Post
+/area/bridge/Firstaid_Post
     name = "\improper FirstAid Post"
     icon_state = "bridge"
 
-/area/SouthernCrossV2/Bridge/Vault_Reception
+/area/bridge/Vault_Reception
     name = "\improper Vault Reception"
     icon_state = "bridge"
 
-/area/SouthernCrossV2/Bridge/Vault
+/area/bridge/Vault
     name = "\improper Vault"
     icon_state = "bridge"
 
 //SECURITY AREAS
 
-/area/SouthernCrossV2/Security
+/area/security
     icon_state = "security"
     holomap_color = HOLOMAP_AREACOLOR_SECURITY
     ambience = AMBIENCE_HIGHSEC
     sound_env = STANDARD_STATION
     lightswitch = 0
 
-/area/SouthernCrossV2/Security/Aft_Security_Post
+/area/security/Aft_Security_Post
     name = "\improper Aft Security Post"
     icon_state = "security"
 
-/area/SouthernCrossV2/Security/Reception
+/area/security/Reception
     name = "\improper Reception"
     icon_state = "security"
 
-/area/SouthernCrossV2/Security/Deck2_1_Corridor
+/area/security/Deck2_1_Corridor
 	name = "\improper 2 Deck 1 Corridor"
 	icon_state = "security"
 
-/area/SouthernCrossV2/Security/Deck2_2_Corridor
+/area/security/Deck2_2_Corridor
     name = "\improper 2 Deck 2 Corridor"
     icon_state = "security"
 
-/area/SouthernCrossV2/Security/Forensics_Office
+/area/security/Forensics_Office
     name = "\improper Forensics Office"
     icon_state = "security"
 
-/area/SouthernCrossV2/Security/Internal_Affairs_Office
+/area/security/Internal_Affairs_Office
     name = "\improper Internal Affairs Office"
     icon_state = "security"
 
-/area/SouthernCrossV2/Security/HoS_Office
+/area/security/HoS_Office
     name = "\improper HoS Office"
     icon_state = "security"
 
-/area/SouthernCrossV2/Security/Wardens_Office
+/area/security/Wardens_Office
     name = "\improper Wardens Office"
     icon_state = "security"
 
-/area/SouthernCrossV2/Security/Equipment_Storage
+/area/security/Equipment_Storage
     name = "\improper Equipment Storage"
     icon_state = "security"
 
-/area/SouthernCrossV2/Security/Restroom
+/area/security/Restroom
     name = "\improper Restroom"
     icon_state = "security"
     lightswitch = 1
 
-/area/SouthernCrossV2/Security/Lobby
+/area/security/Lobby
     name = "\improper Lobby"
     icon_state = "security"
 
-/area/SouthernCrossV2/Security/Boardroom
+/area/security/Boardroom
     name = "\improper Boardroom"
     icon_state = "security"
 
-/area/SouthernCrossV2/Security/Locker_Room
+/area/security/Locker_Room
     name = "\improper Locker Room"
     icon_state = "security"
 
-/area/SouthernCrossV2/Security/Firing_Range
+/area/security/Firing_Range
     name = "\improper Firing Range"
     icon_state = "security"
 
-/area/SouthernCrossV2/Security/Storage_Room
+/area/security/Storage_Room
     name = "\improper Storage Room"
     icon_state = "security"
 
-/area/SouthernCrossV2/Security/Shuttlebay_Storage
+/area/security/Shuttlebay_Storage
     name = "\improper Shuttlebay Storage"
     icon_state = "security"
 
-/area/SouthernCrossV2/Security/Processing_Room
+/area/security/Processing_Room
     name = "\improper Processing Room"
     icon_state = "security"
 
-/area/SouthernCrossV2/Security/Evidence_Storage
+/area/security/Evidence_Storage
     name = "\improper Evidence Storage"
     icon_state = "security"
 
-/area/SouthernCrossV2/Security/Armory
+/area/security/Armory
     name = "\improper Armory"
     icon_state = "security"
 
-/area/SouthernCrossV2/Security/Brig
+/area/security/Brig
     name = "\improper Brig"
     icon_state = "security"
 
-/area/SouthernCrossV2/Security/Prison_Wing
+/area/security/Prison_Wing
     name = "\improper Prison Wing"
     icon_state = "security"
 
-/area/SouthernCrossV2/Security/Visitation_Room
+/area/security/Visitation_Room
     name = "\improper Visitation Room"
     icon_state = "security"
 
-/area/SouthernCrossV2/Security/Quantum_Pad_Checkpoint
+/area/security/Quantum_Pad_Checkpoint
     name = "\improper Quantum Pad Checkpoint"
     icon_state = "security"
     lightswitch = 1
 
-/area/SouthernCrossV2/Security/Quantum_Pad_Storage
+/area/security/Quantum_Pad_Storage
     name = "\improper Quantum Pad Storage"
     icon_state = "security"
 
-/area/SouthernCrossV2/Security/Exploration_Ship_Bay
+/area/security/Exploration_Ship_Bay
     name = "\improper Exploration Ship Bay"
     icon_state = "security"
     ambience = AMBIENCE_HANGAR
 
-/area/SouthernCrossV2/Security/Exploration_Sling_Shuttle
+/area/security/Exploration_Sling_Shuttle
     name = "\improper Station Shuttle to Exploration Carrier"
     icon_state = "security"
     ambience = AMBIENCE_HANGAR
 
-/area/SouthernCrossV2/Security/Transit_Turrets
+/area/security/Transit_Turrets
     name = "\improper Transit Turrets"
     icon_state = "security"
 
 //MEDICAL AREAS
 
-/area/SouthernCrossV2/Medical
+/area/medical
     icon_state = "medbay"
     holomap_color = HOLOMAP_AREACOLOR_MEDICAL
     ambience = AMBIENCE_GENERIC
     sound_env = STANDARD_STATION
     lightswitch = 0
 
-/area/SouthernCrossV2/Medical/For_Medical_Post
+/area/medical/For_Medical_Post
     name = "\improper For Medical Post"
     icon_state = "medbay"
 
-/area/SouthernCrossV2/Medical/Aft_Medical_Post
+/area/medical/Aft_Medical_Post
     name = "\improper Aft Medical Post"
     icon_state = "medbay"
 
-/area/SouthernCrossV2/Medical/Port_Medical_Post
+/area/medical/Port_Medical_Post
     name = "\improper Port Medical Post"
     icon_state = "medbay"
 
-/area/SouthernCrossV2/Medical/EMT_Bay
+/area/medical/EMT_Bay
     name = "\improper EMT Bay"
     icon_state = "medbay"
 
-/area/SouthernCrossV2/Medical/Reception
+/area/medical/Reception
     name = "\improper Reception"
     icon_state = "medbay"
 
-/area/SouthernCrossV2/Medical/FirstAid_Storage
+/area/medical/FirstAid_Storage
     name = "\improper FirstAid Storage"
     icon_state = "medbay"
 
-/area/SouthernCrossV2/Medical/Chemistry
+/area/medical/Chemistry
     name = "\improper Chemistry"
     icon_state = "medbay"
 
-/area/SouthernCrossV2/Medical/Distillery
+/area/medical/Distillery
     name = "\improper Distillery"
     icon_state = "medbay"
 
-/area/SouthernCrossV2/Medical/Treatment_Hall
+/area/medical/Treatment_Hall
     name = "\improper Treatment Hall"
     icon_state = "medbay"
 
-/area/SouthernCrossV2/Medical/Surgery_Viewing
+/area/medical/Surgery_Viewing
     name = "\improper Surgery Viewing"
     icon_state = "medbay"
 
-/area/SouthernCrossV2/Medical/Surgery_Room_1
+/area/medical/Surgery_Room_1
     name = "\improper Surgery Room 1"
     icon_state = "medbay"
 
-/area/SouthernCrossV2/Medical/Surgery_Room_2
+/area/medical/Surgery_Room_2
     name = "\improper Surgery Room 2"
     icon_state = "medbay"
 
-/area/SouthernCrossV2/Medical/Deck2_Evac_Corridor
+/area/medical/Deck2_Evac_Corridor
 	name = "\improper 2 Deck Evac Corridor"
 	icon_state = "medbay"
 
-/area/SouthernCrossV2/Medical/Deck2_Corridor
+/area/medical/Deck2_Corridor
     name = "\improper 2 Deck Corridor"
     icon_state = "medbay"
 
-/area/SouthernCrossV2/Medical/Patient_Ward
+/area/medical/Patient_Ward
     name = "\improper Patient Ward"
     icon_state = "medbay"
 
-/area/SouthernCrossV2/Medical/Dressing_Room
+/area/medical/Dressing_Room
     name = "\improper Dressing Room"
     icon_state = "medbay"
 
-/area/SouthernCrossV2/Medical/Locker_Room
+/area/medical/Locker_Room
     name = "\improper Locker Room"
     icon_state = "medbay"
 
-/area/SouthernCrossV2/Medical/CMO_Office
+/area/medical/CMO_Office
     name = "\improper CMO Office"
     icon_state = "medbay"
 
-/area/SouthernCrossV2/Medical/Stairwell
+/area/medical/Stairwell
     name = "\improper Stairwell"
     icon_state = "medbay"
 
-/area/SouthernCrossV2/Medical/Morgue
+/area/medical/Morgue
     name = "\improper Morgue"
     icon_state = "medbay"
     ambience = AMBIENCE_GHOSTLY
 
-/area/SouthernCrossV2/Medical/Resleeving
+/area/medical/Resleeving
     name = "\improper Resleeving"
     icon_state = "medbay"
 
-/area/SouthernCrossV2/Medical/Lounge
+/area/medical/Lounge
     name = "\improper Lounge"
     icon_state = "medbay"
 
-/area/SouthernCrossV2/Medical/Patient_1
+/area/medical/Patient_1
     name = "\improper Patient 1"
     icon_state = "medbay"
 
-/area/SouthernCrossV2/Medical/Patient_2
+/area/medical/Patient_2
     name = "\improper Patient 2"
     icon_state = "medbay"
 
-/area/SouthernCrossV2/Medical/Patient_3
+/area/medical/Patient_3
     name = "\improper Patient 3"
     icon_state = "medbay"
 
-/area/SouthernCrossV2/Medical/Patient_4
+/area/medical/Patient_4
     name = "\improper Patient 4"
     icon_state = "medbay"
 
-/area/SouthernCrossV2/Medical/Psych_Room_1
+/area/medical/Psych_Room_1
     name = "\improper Psych Room 1"
     icon_state = "medbay"
 
-/area/SouthernCrossV2/Medical/Psych_Room_2
+/area/medical/Psych_Room_2
     name = "\improper Psych Room 2"
     icon_state = "medbay"
 
-/area/SouthernCrossV2/Medical/Virology
+/area/medical/Virology
     name = "\improper Virology"
     icon_state = "medbay"
 
-/area/SouthernCrossV2/Medical/Genetics_Lab
+/area/medical/Genetics_Lab
     name = "\improper Genetics Lab"
     icon_state = "medbay"
 
-/area/SouthernCrossV2/Medical/Surgery_Storage
+/area/medical/Surgery_Storage
     name = "\improper Surgery Storage"
     icon_state = "medbay"
 
-/area/SouthernCrossV2/Medical/Deck3_Corridor
+/area/medical/Deck3_Corridor
     name = "\improper 3 Deck Corridor"
     icon_state = "medbay"
 
-/area/SouthernCrossV2/Medical/Autoresleeving
+/area/medical/Autoresleeving
     name = "\improper Autoresleeving"
     icon_state = "medbay"
     ambience = AMBIENCE_GHOSTLY
 
-/area/SouthernCrossV2/Medical/Restrooms
+/area/medical/Restrooms
     name = "\improper Restrooms"
     icon_state = "medbay"
     lightswitch = 1
 
 //SCIENCE AREAS
 
-/area/SouthernCrossV2/Science
+/area/rnd
     icon_state = "research"
     holomap_color = HOLOMAP_AREACOLOR_SCIENCE
     ambience = AMBIENCE_ENGINEERING
     sound_env = LARGE_SOFTFLOOR
     lightswitch = 0
 
-/area/SouthernCrossV2/Science/Research_Lab
+/area/rnd/Research_Lab
     name = "\improper Research Lab"
     icon_state = "research"
 
-/area/SouthernCrossV2/Science/Robotics_Lab
+/area/rnd/Robotics_Lab
     name = "\improper Robotics Lab"
     icon_state = "research"
 
-/area/SouthernCrossV2/Science/Mech_Bay
+/area/rnd/Mech_Bay
     name = "\improper Mech Bay"
     icon_state = "research"
 
-/area/SouthernCrossV2/Science/Locker_Room
+/area/rnd/Locker_Room
     name = "\improper Locker Room"
     icon_state = "research"
 
-/area/SouthernCrossV2/Science/Server_Room
+/area/rnd/Server_Room
     name = "\improper Server Room"
     icon_state = "research"
 
-/area/SouthernCrossV2/Science/Circuitry_Den
+/area/rnd/Circuitry_Den
     name = "\improper Circuitry Den"
     icon_state = "research"
 
-/area/SouthernCrossV2/Science/Testing_Lab
+/area/rnd/Testing_Lab
     name = "\improper Testing Lab"
     icon_state = "research"
 
-/area/SouthernCrossV2/Science/Toxins_Storage
+/area/rnd/Toxins_Storage
     name = "\improper Toxins Storage"
     icon_state = "research"
 
-/area/SouthernCrossV2/Science/Toxins_Mixing_Room
+/area/rnd/Toxins_Mixing_Room
     name = "\improper Toxins Mixing Room"
     icon_state = "research"
 
-/area/SouthernCrossV2/Science/Toxins_Viewing_Port
+/area/rnd/Toxins_Viewing_Port
     name = "\improper Toxins Viewing Port"
     icon_state = "research"
 
-/area/SouthernCrossV2/Science/RD_Office
+/area/rnd/RD_Office
     name = "\improper RD Office"
     icon_state = "research"
 
-/area/SouthernCrossV2/Science/Observation_Hall
+/area/rnd/Observation_Hall
     name = "\improper Observation Hall"
     icon_state = "research"
 
-/area/SouthernCrossV2/Science/PA_Chamber
+/area/rnd/PA_Chamber
     name = "\improper PA Chamber"
     icon_state = "research"
 
-/area/SouthernCrossV2/Science/Research_Ship_Bay
+/area/rnd/Research_Ship_Bay
     name = "\improper Research Ship Bay"
     icon_state = "research"
     ambience = AMBIENCE_HANGAR
 
-/area/SouthernCrossV2/Science/Xenobiology_Lab
+/area/rnd/Xenobiology_Lab
     name = "\improper Xenobiology Lab"
     icon_state = "research"
 
-/area/SouthernCrossV2/Science/Xenobotany_Lab
+/area/rnd/Xenobotany_Lab
     name = "\improper Xenobotany Lab"
     icon_state = "research"
 
-/area/SouthernCrossV2/Science/Xenobotany_Isolation_Chamber
+/area/rnd/Xenobotany_Isolation_Chamber
     name = "\improper Xenobotany Isolation Chamber"
     icon_state = "research"
 
-/area/SouthernCrossV2/Science/Testing_Chamber
+/area/rnd/Testing_Chamber
     name = "\improper Testing Chamber"
     icon_state = "research"
 
-/area/SouthernCrossV2/Science/PA_Access
+/area/rnd/PA_Access
     name = "\improper Testing PA Access"
     icon_state = "research"
 
-/area/SouthernCrossV2/Science/Deck2_Corridor
+/area/rnd/Deck2_Corridor
     name = "\improper 2 Deck Corridor"
     icon_state = "research"
 
 
 //ENGINEERING AREAS
 
-/area/SouthernCrossV2/Engineering
+/area/engineering
     icon_state = "engineering"
     holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
     ambience = AMBIENCE_ENGINEERING
     sound_env = LARGE_ENCLOSED
     lightswitch = 0
 
-/area/SouthernCrossV2/Engineering/Central_Engineering_Post
+/area/engineering/Central_Engineering_Post
     name = "\improper Central Engineering Post"
     icon_state = "engineering"
     lightswitch = 1
 
-/area/SouthernCrossV2/Engineering/GravGen_Room
+/area/engineering/GravGen_Room
     name = "\improper GravGen Room"
     icon_state = "engineering"
 
-/area/SouthernCrossV2/Engineering/Telecomms_Foyer
+/area/engineering/Telecomms_Foyer
     name = "\improper Telecomms Foyer"
     icon_state = "engineering"
     ambience = AMBIENCE_AI
 
-/area/SouthernCrossV2/Engineering/Telecomms_Control_Room
+/area/engineering/Telecomms_Control_Room
     name = "\improper Telecomms Control Room"
     icon_state = "engineering"
     ambience = AMBIENCE_AI
 
-/area/SouthernCrossV2/Engineering/Telecomms_Network
+/area/engineering/Telecomms_Network
     name = "\improper Telecomms Network"
     icon_state = "engineering"
     ambience = AMBIENCE_AI
     lightswitch = 1
 
-/area/SouthernCrossV2/Engineering/Reception
+/area/engineering/Reception
     name = "\improper Reception"
     icon_state = "engineering"
 
-/area/SouthernCrossV2/Engineering/Engineering_EVA
+/area/engineering/Engineering_EVA
     name = "\improper Engineering EVA"
     icon_state = "engineering"
 
-/area/SouthernCrossV2/Engineering/Locker_Room
+/area/engineering/Locker_Room
     name = "\improper Locker Room"
     icon_state = "engineering"
 
-/area/SouthernCrossV2/Engineering/Engineering_Workshop
+/area/engineering/Engineering_Workshop
     name = "\improper Engineering Workshop"
     icon_state = "engineering"
 
-/area/SouthernCrossV2/Engineering/Deck2_1_Corridor
+/area/engineering/Deck2_1_Corridor
     name = "\improper 2 Deck 1 Corridor"
     icon_state = "engineering"
 
-/area/SouthernCrossV2/Engineering/Deck2_2_Corridor
+/area/engineering/Deck2_2_Corridor
     name = "\improper 2 Deck 2 Corridor"
     icon_state = "engineering"
 
-/area/SouthernCrossV2/Engineering/Deck2_Evac_Corridor
+/area/engineering/Deck2_Evac_Corridor
     name = "\improper 2 Deck Evac Corridor"
     icon_state = "engineering"
 
-/area/SouthernCrossV2/Engineering/Storage
+/area/engineering/Storage
     name = "\improper Storage"
     icon_state = "engineering"
 
-/area/SouthernCrossV2/Engineering/Drone_Fab
+/area/engineering/Drone_Fab
     name = "\improper Drone Fab"
     icon_state = "engineering"
 
-/area/SouthernCrossV2/Engineering/Canister_Storage
+/area/engineering/Canister_Storage
     name = "\improper Canister Storage"
     icon_state = "engineering"
 
-/area/SouthernCrossV2/Engineering/Mech_Bay
+/area/engineering/Mech_Bay
     name = "\improper Mech Bay"
     icon_state = "engineering"
 
-/area/SouthernCrossV2/Engineering/Technical_Storage
+/area/engineering/Technical_Storage
     name = "\improper Technical Storage"
     icon_state = "engineering"
 
-/area/SouthernCrossV2/Engineering/CE_Office
+/area/engineering/CE_Office
     name = "\improper CE Office"
     icon_state = "engineering"
 
-/area/SouthernCrossV2/Engineering/Deck3_1_Corridor
+/area/engineering/Deck3_1_Corridor
     name = "\improper 3 Deck 1 Corridor"
     icon_state = "engineering"
 
-/area/SouthernCrossV2/Engineering/Deck3_2_Corridor
+/area/engineering/Deck3_2_Corridor
     name = "\improper 3 Deck 2 Corridor"
     icon_state = "engineering"
 
-/area/SouthernCrossV2/Engineering/Atmospherics_Chamber
+/area/engineering/Atmospherics_Chamber
     name = "\improper Atmospherics Chamber"
     icon_state = "engineering"
     ambience = AMBIENCE_ATMOS
 
-/area/SouthernCrossV2/Engineering/Atmospherics_Control_Room
+/area/engineering/Atmospherics_Control_Room
     name = "\improper Atmospherics Control Room"
     icon_state = "engineering"
 
-/area/SouthernCrossV2/Engineering/Atmospherics_Substation
+/area/engineering/Atmospherics_Substation
     name = "\improper Atmospherics Substation"
     icon_state = "engineering"
 
-/area/SouthernCrossV2/Engineering/Engine1_Chamber
+/area/engineering/Engine1_Chamber
     name = "\improper 1 Engine Chamber"
     icon_state = "engineering"
 
-/area/SouthernCrossV2/Engineering/Engine1_Control_Room
+/area/engineering/Engine1_Control_Room
     name = "\improper 1 Engine Control Room"
     icon_state = "engineering"
 
-/area/SouthernCrossV2/Engineering/Engine1_Access_Hall
+/area/engineering/Engine1_Access_Hall
     name = "\improper 1 Engine Access Hall"
     icon_state = "engineering"
 
-/area/SouthernCrossV2/Engineering/Engine1_Substation
+/area/engineering/Engine1_Substation
     name = "\improper 1 Engine Substation"
     icon_state = "engineering"
 
-/area/SouthernCrossV2/Engineering/Engine2_Chamber
+/area/engineering/Engine2_Chamber
     name = "\improper 2 Engine Chamber"
     icon_state = "engineering"
 
-/area/SouthernCrossV2/Engineering/Engine3_Control_Room
+/area/engineering/Engine3_Control_Room
     name = "\improper 2 Engine Control Room"
     icon_state = "engineering"
 
-/area/SouthernCrossV2/Engineering/Engine2_Access_Hall
+/area/engineering/Engine2_Access_Hall
     name = "\improper 2 Engine Access Hall"
     icon_state = "engineering"
 
-/area/SouthernCrossV2/Engineering/Engine2_Substation
+/area/engineering/Engine2_Substation
     name = "\improper 2 Engine Substation"
     icon_state = "engineering"
 
-/area/SouthernCrossV2/Engineering/Engine2_Canister_Storage
+/area/engineering/Engine2_Canister_Storage
     name = "\improper 2 Engine Canister Storage"
     icon_state = "engineering"
 
-/area/SouthernCrossV2/Engineering/Engine2_Waste_Handling
+/area/engineering/Engine2_Waste_Handling
     name = "\improper 2 Engine Waste Handling"
     icon_state = "engineering"
 
-/area/SouthernCrossV2/Engineering/Construction_Area
+/area/engineering/Construction_Area
     name = "\improper Construction Area"
     icon_state = "engineering"
 
-/area/SouthernCrossV2/Engineering/Airlock_Access
+/area/engineering/Airlock_Access
     name = "\improper Airlock Access"
     icon_state = "engineering"
 
-/area/SouthernCrossV2/Engineering/Engine_Tech_Storage
+/area/engineering/Engine_Tech_Storage
     name = "\improper Engine Tech Storage"
     icon_state = "engineering"
 
-/area/SouthernCrossV2/Engineering/Breakroom
+/area/engineering/Breakroom
     name = "\improper Engineering Breakroom"
     icon_state = "engineering"
 
-/area/SouthernCrossV2/Engineering/Solar_Control_ForPort
+/area/engineering/Solar_Control_ForPort
     name = "\improper Solar Control ForPort"
     icon_state = "engineering"
     ambience = AMBIENCE_SPACE
 
-/area/SouthernCrossV2/Engineering/Solar_Control_ForStar
+/area/engineering/Solar_Control_ForStar
     name = "\improper Solar Control ForStar"
     icon_state = "engineering"
     ambience = AMBIENCE_SPACE
 
-/area/SouthernCrossV2/Engineering/Solar_Control_AftPort
+/area/engineering/Solar_Control_AftPort
     name = "\improper Solar Control AftPort"
     icon_state = "engineering"
     ambience = AMBIENCE_SPACE
 
-/area/SouthernCrossV2/Engineering/Solar_Control_AftStar
+/area/engineering/Solar_Control_AftStar
     name = "\improper Solar Control AftStar"
     icon_state = "engineering"
     ambience = AMBIENCE_SPACE
 
-/area/SouthernCrossV2/Engineering/Solar_Array_ForPort
+/area/engineering/Solar_Array_ForPort
     name = "\improper Solar Array ForPort"
     icon_state = "engineering"
     ambience = AMBIENCE_SPACE
     dynamic_lighting = 0
 
-/area/SouthernCrossV2/Engineering/Solar_Array_ForStar
+/area/engineering/Solar_Array_ForStar
     name = "\improper Solar Array ForStar"
     icon_state = "engineering"
     ambience = AMBIENCE_SPACE
     dynamic_lighting = 0
 
-/area/SouthernCrossV2/Engineering/Solar_Array_AftPort
+/area/engineering/Solar_Array_AftPort
     name = "\improper Solar Array AftPort"
     icon_state = "engineering"
     ambience = AMBIENCE_SPACE
     dynamic_lighting = 0
 
-/area/SouthernCrossV2/Engineering/Solar_Array_AftStar
+/area/engineering/Solar_Array_AftStar
     name = "\improper Solar Array AftStar"
     icon_state = "engineering"
     ambience = AMBIENCE_SPACE
@@ -1763,796 +1717,719 @@
 
 //CARGO AREAS
 
-/area/SouthernCrossV2/Cargo
+/area/quartermaster
     icon_state = "quart"
     holomap_color = HOLOMAP_AREACOLOR_CARGO
     ambience = AMBIENCE_HANGAR
     sound_env = SOUND_ENVIRONMENT_HANGAR
     lightswitch = 0
 
-/area/SouthernCrossV2/Cargo/For_Tool_Storage
+/area/quartermaster/For_Tool_Storage
     name = "\improper For Tool Storage"
     icon_state = "quart"
 
-/area/SouthernCrossV2/Cargo/Star_Tool_Storage
+/area/quartermaster/Star_Tool_Storage
     name = "\improper Star Tool Storage"
     icon_state = "quart"
 
-/area/SouthernCrossV2/Cargo/Aft_Tool_Storage
+/area/quartermaster/Aft_Tool_Storage
     name = "\improper Aft Tool Storage"
     icon_state = "quart"
 
-/area/SouthernCrossV2/Cargo/Reception
+/area/quartermaster/Reception
     name = "\improper Reception"
     icon_state = "quart"
 
-/area/SouthernCrossV2/Cargo/Packaging_Room
+/area/quartermaster/Packaging_Room
     name = "\improper Packaging Room"
     icon_state = "quart"
 
-/area/SouthernCrossV2/Cargo/Recycling
+/area/quartermaster/Recycling
     name = "\improper Recycling"
     icon_state = "quart"
 
-/area/SouthernCrossV2/Cargo/Warehouse
+/area/quartermaster/Warehouse
     name = "\improper Warehouse"
     icon_state = "quart"
 
-/area/SouthernCrossV2/Cargo/Deck2_Stairwell
+/area/quartermaster/Deck2_Stairwell
     name = "\improper 2 Deck Stairwell"
     icon_state = "quart"
 
-/area/SouthernCrossV2/Cargo/Deck1_Stairwell
+/area/quartermaster/Deck1_Stairwell
     name = "\improper 1 Deck Stairwell"
     icon_state = "quart"
 
-/area/SouthernCrossV2/Cargo/Supply_Ship_Bay
+/area/quartermaster/Supply_Ship_Bay
     name = "\improper Supply Ship Bay"
     icon_state = "quart"
     ambience = AMBIENCE_HANGAR
 
-/area/SouthernCrossV2/Cargo/Depot1
+/area/quartermaster/Depot1
     name = "\improper 1 Depot"
     icon_state = "quart"
 
-/area/SouthernCrossV2/Cargo/Depot2
+/area/quartermaster/Depot2
     name = "\improper 2 Depot"
     icon_state = "quart"
 
-/area/SouthernCrossV2/Cargo/Mining_Ship_Bay
+/area/quartermaster/Mining_Ship_Bay
     name = "\improper Mining Ship Bay"
     icon_state = "quart"
     ambience = AMBIENCE_HANGAR
 
-/area/SouthernCrossV2/Cargo/Mining_EVA
+/area/quartermaster/Mining_EVA
     name = "\improper Mail Room"
     icon_state = "quart"
 
-/area/SouthernCrossV2/Cargo/Waste_Disposals
+/area/quartermaster/Waste_Disposals
     name = "\improper Waste Disposals"
     icon_state = "quart"
 
-/area/SouthernCrossV2/Cargo/QM_Office
+/area/quartermaster/QM_Office
     name = "\improper QM Office"
     icon_state = "quart"
 
-/area/SouthernCrossV2/Cargo/Mail_Room
+/area/quartermaster/Mail_Room
     name = "\improper Mail Room"
     icon_state = "quart"
 
-/area/SouthernCrossV2/Cargo/Deck1_Corridor
+/area/quartermaster/Deck1_Corridor
     name = "\improper Mail Room"
     icon_state = "quart"
 
-/area/SouthernCrossV2/Cargo/Breakroom
+/area/quartermaster/Breakroom
     name = "\improper Cargo Breakroom"
     icon_state = "quart"
 
 //DOMICILE AREAS
 
-/area/SouthernCrossV2/Domicile
+/area/crew_quarters
     icon_state = "gaming"
     ambience = AMBIENCE_GENERIC
     sound_env = SOUND_ENVIRONMENT_HALLWAY
     lightswitch = 0
 
-/area/SouthernCrossV2/Domicile/Holodeck
+/area/crew_quarters/Holodeck
     name = "\improper Holodeck"
     icon_state = "gaming"
 
-/area/SouthernCrossV2/Domicile/Midnight_Bar
+/area/crew_quarters/Midnight_Bar
     name = "\improper Midnight Bar"
     icon_state = "gaming"
     flags = RAD_SHIELDED
 
-/area/SouthernCrossV2/Domicile/Midnight_Kitchen
+/area/crew_quarters/Midnight_Kitchen
     name = "\improper Midnight Kitchen"
     icon_state = "gaming"
     flags = RAD_SHIELDED
 
-/area/SouthernCrossV2/Domicile/Gallery
+/area/crew_quarters/Gallery
     name = "\improper Gallery"
     icon_state = "gaming"
 
-/area/SouthernCrossV2/Domicile/VR
+/area/crew_quarters/VR
     name = "\improper VR"
     icon_state = "gaming"
 
-/area/SouthernCrossV2/Domicile/Gym
+/area/crew_quarters/Gym
     name = "\improper Gym"
     icon_state = "gaming"
 
-/area/SouthernCrossV2/Domicile/Gym_Sauna
+/area/crew_quarters/Gym_Sauna
     name = "\improper Gym Sauna"
     icon_state = "gaming"
 
-/area/SouthernCrossV2/Domicile/Chapel_Lobby
+/area/crew_quarters/Chapel_Lobby
     name = "\improper Chapel Lobby"
     icon_state = "gaming"
     ambience = AMBIENCE_CHAPEL
 
-/area/SouthernCrossV2/Domicile/Chapel_Morgue
+/area/crew_quarters/Chapel_Morgue
     name = "\improper Chapel Morgue"
     icon_state = "gaming"
     ambience = AMBIENCE_CHAPEL
 
-/area/SouthernCrossV2/Domicile/Chapel_Office
+/area/crew_quarters/Chapel_Office
     name = "\improper Chapel Office"
     icon_state = "gaming"
     ambience = AMBIENCE_CHAPEL
 
-/area/SouthernCrossV2/Domicile/Central_Restroom
+/area/crew_quarters/Central_Restroom
     name = "\improper Central Restroom"
     icon_state = "gaming"
     flags = RAD_SHIELDED
     lightswitch = 1
 
-/area/SouthernCrossV2/Domicile/For_Restroom
+/area/crew_quarters/For_Restroom
     name = "\improper For Restroom"
     icon_state = "gaming"
     flags = RAD_SHIELDED
     lightswitch = 1
 
-/area/SouthernCrossV2/Domicile/Star_Restroom
+/area/crew_quarters/Star_Restroom
     name = "\improper Star Restroom"
     icon_state = "gaming"
     flags = RAD_SHIELDED
     lightswitch = 1
 
-/area/SouthernCrossV2/Domicile/Aft_Restroom
+/area/crew_quarters/Aft_Restroom
     name = "\improper Aft Restroom"
     icon_state = "gaming"
     flags = RAD_SHIELDED
     lightswitch = 1
 
-/area/SouthernCrossV2/Domicile/Port_Restroom
+/area/crew_quarters/Port_Restroom
     name = "\improper Port Restroom"
     icon_state = "gaming"
     flags = RAD_SHIELDED
     lightswitch = 1
 
-/area/SouthernCrossV2/Domicile/Library
+/area/crew_quarters/Library
     name = "\improper Library"
     icon_state = "gaming"
     ambience = AMBIENCE_SPACE
 
-/area/SouthernCrossV2/Domicile/Library_Cafe
+/area/crew_quarters/Library_Cafe
     name = "\improper Library Cafe"
     icon_state = "gaming"
     ambience = AMBIENCE_SPACE
 
-/area/SouthernCrossV2/Domicile/Library_Office
+/area/crew_quarters/Library_Office
     name = "\improper Library Office"
     icon_state = "gaming"
     ambience = AMBIENCE_SPACE
 
-/area/SouthernCrossV2/Domicile/Rec_Lounge
+/area/crew_quarters/Rec_Lounge
     name = "\improper Rec Lounge"
     icon_state = "gaming"
 
-/area/SouthernCrossV2/Domicile/Office_Lounge
+/area/crew_quarters/Office_Lounge
     name = "\improper Office Lounge"
     icon_state = "gaming"
 
-/area/SouthernCrossV2/Domicile/Chomp_Hydroponics
+/area/crew_quarters/Chomp_Hydroponics
     name = "\improper Chomp Hydroponics"
     icon_state = "gaming"
     flags = RAD_SHIELDED
 
-/area/SouthernCrossV2/Domicile/Chomp_Stage
+/area/crew_quarters/Chomp_Stage
     name = "\improper Chomp Convention Stage"
     icon_state = "gaming"
     flags = RAD_SHIELDED
 
-/area/SouthernCrossV2/Domicile/Chomp_Kitchen
+/area/crew_quarters/Chomp_Kitchen
     name = "\improper Chomp Kitchen"
     icon_state = "gaming"
     flags = RAD_SHIELDED
 
-/area/SouthernCrossV2/Domicile/Chomp_Dinner_1
+/area/crew_quarters/Chomp_Dinner_1
     name = "\improper Chomp Dinner 1"
     icon_state = "gaming"
     flags = RAD_SHIELDED
     lightswitch = 1
 
-/area/SouthernCrossV2/Domicile/Chomp_Dinner_2
+/area/crew_quarters/Chomp_Dinner_2
     name = "\improper Chomp Dinner 2"
     icon_state = "gaming"
     flags = RAD_SHIELDED
     lightswitch = 1
 
-/area/SouthernCrossV2/Domicile/Chomp_Lounge
+/area/crew_quarters/Chomp_Lounge
     name = "\improper Chomp Lounge"
     icon_state = "gaming"
     flags = RAD_SHIELDED
 
-/area/SouthernCrossV2/Domicile/Public_Hydroponics
+/area/crew_quarters/Public_Hydroponics
     name = "\improper Public Hydroponics"
     icon_state = "gaming"
 
-/area/SouthernCrossV2/Domicile/Botanical_Shop
+/area/crew_quarters/Botanical_Shop
     name = "\improper Botanical Shop"
     icon_state = "gaming"
 
-/area/SouthernCrossV2/Domicile/Observation_Atrium
+/area/crew_quarters/Observation_Atrium
     name = "\improper Observation Atrium"
     icon_state = "gaming"
 
-/area/SouthernCrossV2/Domicile/Observation_Lounge
+/area/crew_quarters/Observation_Lounge
     name = "\improper Observation Lounge"
     icon_state = "gaming"
 
-/area/SouthernCrossV2/Domicile/Public_Garden
+/area/crew_quarters/Public_Garden
     name = "\improper Public Garden"
     icon_state = "gaming"
 
-/area/SouthernCrossV2/Domicile/Dormitory_01
+/area/crew_quarters/sleeping
+    flags = RAD_SHIELDED
+    lightswitch = 0
+    limit_mob_size = FALSE
+    block_suit_sensors = TRUE
+    block_tracking = TRUE
+    soundproofed = TRUE
+    forbid_events = TRUE
+    icon_state = "gaming"
+
+/area/crew_quarters/sleeping/Dormitory_01
     name = "\improper Dormitory 01"
-    icon_state = "gaming"
-    flags = RAD_SHIELDED
-    lightswitch = 0
-    limit_mob_size = FALSE
-    block_suit_sensors = TRUE
-    block_tracking = TRUE
-    soundproofed = TRUE
-    forbid_events = TRUE
 
-/area/SouthernCrossV2/Domicile/Dormitory_02
+/area/crew_quarters/sleeping/Dormitory_02
     name = "\improper Dormitory 02"
-    icon_state = "gaming"
-    flags = RAD_SHIELDED
-    lightswitch = 0
-    limit_mob_size = FALSE
-    block_suit_sensors = TRUE
-    block_tracking = TRUE
-    soundproofed = TRUE
-    forbid_events = TRUE
 
-/area/SouthernCrossV2/Domicile/Dormitory_03
+/area/crew_quarters/sleeping/Dormitory_03
     name = "\improper Dormitory 03"
-    icon_state = "gaming"
-    flags = RAD_SHIELDED
-    lightswitch = 0
-    limit_mob_size = FALSE
-    block_suit_sensors = TRUE
-    block_tracking = TRUE
-    soundproofed = TRUE
-    forbid_events = TRUE
 
-/area/SouthernCrossV2/Domicile/Dormitory_04
+/area/crew_quarters/sleeping/Dormitory_04
     name = "\improper Dormitory 04"
-    icon_state = "gaming"
-    flags = RAD_SHIELDED
-    limit_mob_size = FALSE
-    block_suit_sensors = TRUE
-    block_tracking = TRUE
-    soundproofed = TRUE
-    forbid_events = TRUE
 
-/area/SouthernCrossV2/Domicile/Dormitory_05
+/area/crew_quarters/sleeping/Dormitory_05
     name = "\improper Dormitory 05"
-    icon_state = "gaming"
-    flags = RAD_SHIELDED
-    limit_mob_size = FALSE
-    block_suit_sensors = TRUE
-    block_tracking = TRUE
-    soundproofed = TRUE
-    forbid_events = TRUE
 
-/area/SouthernCrossV2/Domicile/Dormitory_06
+/area/crew_quarters/sleeping/Dormitory_06
     name = "\improper Dormitory 06"
-    icon_state = "gaming"
-    flags = RAD_SHIELDED
-    limit_mob_size = FALSE
-    block_suit_sensors = TRUE
-    block_tracking = TRUE
-    soundproofed = TRUE
-    forbid_events = TRUE
 
-/area/SouthernCrossV2/Domicile/Dormitory_07
+/area/crew_quarters/sleeping/Dormitory_07
     name = "\improper Dormitory 07"
-    icon_state = "gaming"
-    flags = RAD_SHIELDED
-    limit_mob_size = FALSE
-    block_suit_sensors = TRUE
-    block_tracking = TRUE
-    soundproofed = TRUE
-    forbid_events = TRUE
 
-/area/SouthernCrossV2/Domicile/Dormitory_08
+/area/crew_quarters/sleeping/Dormitory_08
     name = "\improper Dormitory 08"
-    icon_state = "gaming"
-    flags = RAD_SHIELDED
-    limit_mob_size = FALSE
-    block_suit_sensors = TRUE
-    block_tracking = TRUE
-    soundproofed = TRUE
-    forbid_events = TRUE
 
-/area/SouthernCrossV2/Domicile/Dormitory_09
+/area/crew_quarters/sleeping/Dormitory_09
     name = "\improper Dormitory 09"
-    icon_state = "gaming"
-    flags = RAD_SHIELDED
-    limit_mob_size = FALSE
-    block_suit_sensors = TRUE
-    block_tracking = TRUE
-    soundproofed = TRUE
-    forbid_events = TRUE
 
-/area/SouthernCrossV2/Domicile/Dormitory_10
+/area/crew_quarters/sleeping/Dormitory_10
     name = "\improper Dormitory 10"
-    icon_state = "gaming"
-    flags = RAD_SHIELDED
-    limit_mob_size = FALSE
-    block_suit_sensors = TRUE
-    block_tracking = TRUE
-    soundproofed = TRUE
-    forbid_events = TRUE
 
-/area/SouthernCrossV2/Domicile/Dormitory_11
+/area/crew_quarters/sleeping/Dormitory_11
     name = "\improper Dormitory 11"
-    icon_state = "gaming"
-    flags = RAD_SHIELDED
-    limit_mob_size = FALSE
-    block_suit_sensors = TRUE
-    block_tracking = TRUE
-    soundproofed = TRUE
-    forbid_events = TRUE
 
-/area/SouthernCrossV2/Domicile/Dormitory_12
+/area/crew_quarters/sleeping/Dormitory_12
     name = "\improper Dormitory 12"
-    icon_state = "gaming"
-    flags = RAD_SHIELDED
-    limit_mob_size = FALSE
-    block_suit_sensors = TRUE
-    block_tracking = TRUE
-    soundproofed = TRUE
-    forbid_events = TRUE
 
-/area/SouthernCrossV2/Domicile/Dorm_Corridor_1
+/area/crew_quarters/Dorm_Corridor_1
     name = "\improper Dorm Corridor 1"
     icon_state = "gaming"
     lightswitch = 1
 
-/area/SouthernCrossV2/Domicile/Dorm_Corridor_2
+/area/crew_quarters/Dorm_Corridor_2
     name = "\improper Dorm Corridor 2"
     icon_state = "gaming"
     lightswitch = 1
 
-/area/SouthernCrossV2/Domicile/Dorm_Corridor_3
+/area/crew_quarters/Dorm_Corridor_3
     name = "\improper Dorm Corridor 3"
     icon_state = "gaming"
     lightswitch = 1
 
-/area/SouthernCrossV2/Domicile/Dorm_Corridor_4
+/area/crew_quarters/Dorm_Corridor_4
     name = "\improper Dorm Corridor 4"
     icon_state = "gaming"
     lightswitch = 1
 
-/area/SouthernCrossV2/Domicile/Dorm_Foyer
+/area/crew_quarters/Dorm_Foyer
     name = "\improper Dorm Foyer"
     icon_state = "gaming"
     lightswitch = 1
 
-/area/SouthernCrossV2/Domicile/Public_Gateway
+/area/crew_quarters/Public_Gateway
     name = "\improper Public Gateway"
     icon_state = "gaming"
 
-/area/SouthernCrossV2/Domicile/Emergency_EVA
+/area/crew_quarters/Emergency_EVA
     name = "\improper Emergency EVA"
     icon_state = "gaming"
 
-/area/SouthernCrossV2/Domicile/Public_EVA
+/area/crew_quarters/Public_EVA
     name = "\improper Public EVA"
     icon_state = "gaming"
 
-/area/SouthernCrossV2/Domicile/Custodial_Office
+/area/crew_quarters/Custodial_Office
     name = "\improper Custodial Office"
     icon_state = "gaming"
 
 //COMMONS AREAS
-/area/SouthernCrossV2/Commons
+/area/hallway
     icon_state = "hallA"
     ambience = AMBIENCE_GENERIC
     sound_env = MEDIUM_SOFTFLOOR
 
-/area/SouthernCrossV2/Commons/ForPort_1_Deck_Observatory
+/area/hallway/ForPort_1_Deck_Observatory
     name = "\improper ForPort 1 Deck Observatory"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/ForStar_1_Deck_Observatory
+/area/hallway/ForStar_1_Deck_Observatory
     name = "\improper ForStar 1 Deck Observatory"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/AftPort_1_Deck_Observatory
+/area/hallway/AftPort_1_Deck_Observatory
     name = "\improper AftPort 1 Deck Observatory"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/AftStar_1_Deck_Observatory
+/area/hallway/AftStar_1_Deck_Observatory
     name = "\improper AftStar 1 Deck Observatory"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/ForPort_2_Deck_Observatory
+/area/hallway/ForPort_2_Deck_Observatory
     name = "\improper ForPort 2 Deck Observatory"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/ForStar_2_Deck_Observatory
+/area/hallway/ForStar_2_Deck_Observatory
     name = "\improper ForStar 2 Deck Observatory"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/AftPort_2_Deck_Observatory
+/area/hallway/AftPort_2_Deck_Observatory
     name = "\improper AftPort 2 Deck Observatory"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/AftStar_2_Deck_Observatory
+/area/hallway/AftStar_2_Deck_Observatory
     name = "\improper AftStar 2 Deck Observatory"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/For_Transit_Foyer
+/area/hallway/For_Transit_Foyer
     name = "\improper For Transit Foyer"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Star_Transit_Foyer
+/area/hallway/Star_Transit_Foyer
     name = "\improper Star Transit Foyer"
     icon_state = "hallA"
     flags = RAD_SHIELDED
 
-/area/SouthernCrossV2/Commons/Aft_Transit_Lobby
+/area/hallway/Aft_Transit_Lobby
     name = "\improper Aft Transit Lobby"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Port_Transit_Foyer
+/area/hallway/Port_Transit_Foyer
     name = "\improper Port Transit Foyer"
     icon_state = "hallA"
     flags = RAD_SHIELDED
 
-/area/SouthernCrossV2/Commons/For_1_Deck_Stairwell
+/area/hallway/For_1_Deck_Stairwell
     name = "\improper For 1 Deck Stairwell"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/For_2_Deck_Stairwell
+/area/hallway/For_2_Deck_Stairwell
     name = "\improper For 2 Deck Stairwell"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/For_3_Deck_Stairwell
+/area/hallway/For_3_Deck_Stairwell
     name = "\improper For 3 Deck Stairwell"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Star_1_Deck_Stairwell
+/area/hallway/Star_1_Deck_Stairwell
     name = "\improper Star 1 Deck Stairwell"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Star_2_Deck_Stairwell
+/area/hallway/Star_2_Deck_Stairwell
     name = "\improper Star 2 Deck Stairwell"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Star_3_Deck_Stairwell
+/area/hallway/Star_3_Deck_Stairwell
     name = "\improper Star 3 Deck Stairwell"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Aft_1_Deck_Stairwell
+/area/hallway/Aft_1_Deck_Stairwell
     name = "\improper Aft 1 Deck Stairwell"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Aft_2_Deck_Stairwell
+/area/hallway/Aft_2_Deck_Stairwell
     name = "\improper Aft 2 Deck Stairwell"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Aft_3_Deck_Stairwell
+/area/hallway/Aft_3_Deck_Stairwell
     name = "\improper Aft 3 Deck Stairwell"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Port_1_Deck_Stairwell
+/area/hallway/Port_1_Deck_Stairwell
     name = "\improper Port 1 Deck Stairwell"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Port_2_Deck_Stairwell
+/area/hallway/Port_2_Deck_Stairwell
     name = "\improper Port 2 Deck Stairwell"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Port_3_Deck_Stairwell
+/area/hallway/Port_3_Deck_Stairwell
     name = "\improper Port 3 Deck Stairwell"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/For_2_Deck_Central_Corridor_1
+/area/hallway/For_2_Deck_Central_Corridor_1
     name = "\improper For 2 Deck Central Corridor 1"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/For_2_Deck_Central_Corridor_2
+/area/hallway/For_2_Deck_Central_Corridor_2
     name = "\improper For 2 Deck Central Corridor 2"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Star_2_Deck_Central_Corridor_1
+/area/hallway/Star_2_Deck_Central_Corridor_1
     name = "\improper Star 2 Deck Central Corridor 1"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Star_2_Deck_Central_Corridor_2
+/area/hallway/Star_2_Deck_Central_Corridor_2
     name = "\improper Star 2 Deck Central Corridor 2"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Aft_2_Deck_Central_Corridor_1
+/area/hallway/Aft_2_Deck_Central_Corridor_1
     name = "\improper Aft 2 Deck Central Corridor 1"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Aft_2_Deck_Central_Corridor_2
+/area/hallway/Aft_2_Deck_Central_Corridor_2
     name = "\improper Aft 2 Deck Central Corridor 2"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Port_2_Deck_Central_Corridor_1
+/area/hallway/Port_2_Deck_Central_Corridor_1
     name = "\improper Port 2 Deck Central Corridor 1"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Port_2_Deck_Central_Corridor_2
+/area/hallway/Port_2_Deck_Central_Corridor_2
     name = "\improper Port 2 Deck Central Corridor 2"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Aft_3_Deck_Central_Corridor_1
+/area/hallway/Aft_3_Deck_Central_Corridor_1
     name = "\improper Aft 3 Deck Central Corridor 1"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Aft_3_Deck_Central_Corridor_2
+/area/hallway/Aft_3_Deck_Central_Corridor_2
     name = "\improper Aft 3 Deck Central Corridor 2"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/For_2_Deck_Corridor_1
+/area/hallway/For_2_Deck_Corridor_1
     name = "\improper For 2 Deck Corridor 1"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/For_2_Deck_Corridor_2
+/area/hallway/For_2_Deck_Corridor_2
     name = "\improper For 2 Deck Corridor 2"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Star_2_Deck_Corridor_1
+/area/hallway/Star_2_Deck_Corridor_1
     name = "\improper Star 2 Deck Corridor 1"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Star_2_Deck_Corridor_2
+/area/hallway/Star_2_Deck_Corridor_2
     name = "\improper Star 2 Deck Corridor 2"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Aft_2_Deck_Corridor_1
+/area/hallway/Aft_2_Deck_Corridor_1
     name = "\improper Aft 2 Deck Corridor 1"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Aft_2_Deck_Corridor_2
+/area/hallway/Aft_2_Deck_Corridor_2
     name = "\improper Aft 2 Deck Corridor 2"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Port_2_Deck_Corridor_1
+/area/hallway/Port_2_Deck_Corridor_1
     name = "\improper Port 2 Deck Corridor 1"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Port_2_Deck_Corridor_2
+/area/hallway/Port_2_Deck_Corridor_2
     name = "\improper Port 2 Deck Corridor 2"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Aft_2_Deck_Lobby
+/area/hallway/Aft_2_Deck_Lobby
     name = "\improper Aft 2 Deck Lobby"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Aft_2_Deck_Shuttlebay_Corridor
+/area/hallway/Aft_2_Deck_Shuttlebay_Corridor
     name = "\improper Aft 2 Deck Shuttlebay Corridor"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Central_1_Deck_Hall
+/area/hallway/Central_1_Deck_Hall
     name = "\improper Central 1 Deck Hall"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Central_2_Deck_Hall
+/area/hallway/Central_2_Deck_Hall
     name = "\improper Central 2 Deck Hall"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Central_3_Deck_Hall
+/area/hallway/Central_3_Deck_Hall
     name = "\improper Central 3 Deck Hall"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Cryostorage_Lounge
+/area/hallway/Cryostorage_Lounge
     name = "\improper Cryostorage Lounge"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Deck1_Transit_Hall
+/area/hallway/Deck1_Transit_Hall
     name = "\improper 1 Deck Transit Hall"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Deck1_Corridor
+/area/hallway/Deck1_Corridor
     name = "\improper 1 Deck Corridor"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/For_Locker_Room
+/area/hallway/For_Locker_Room
     name = "\improper For Locker Room"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Planetside_Equipment
+/area/hallway/Planetside_Equipment
     name = "\improper Planetside Equipment"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Star_Breakroom
+/area/hallway/Star_Breakroom
     name = "\improper Star Breakroom"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Port_Breakroom
+/area/hallway/Port_Breakroom
     name = "\improper Port Breakroom"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Port_1Deck_Central_Corridor_1
+/area/hallway/Port_1Deck_Central_Corridor_1
     name = "\improper Port Deck1 Central Corridor 1"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Port_1Deck_Central_Corridor_2
+/area/hallway/Port_1Deck_Central_Corridor_2
     name = "\improper Port Deck1 Central Corridor 2"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Star_1Deck_Central_Corridor_1
+/area/hallway/Star_1Deck_Central_Corridor_1
     name = "\improper Star Deck1 Central Corridor 1"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Star_1Deck_Central_Corridor_2
+/area/hallway/Star_1Deck_Central_Corridor_2
     name = "\improper Star Deck1 Central Corridor 2"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Port_1Deck_Atrium
+/area/hallway/Port_1Deck_Atrium
     name = "\improper Port Deck1 Atrium"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Star_1Deck_Atrium
+/area/hallway/Star_1Deck_Atrium
     name = "\improper Star Deck1 Atrium"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Stairwell_For
+/area/hallway/Stairwell_For
     name = "\improper Stairwell Forward"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Stairwell_Star
+/area/hallway/Stairwell_Star
     name = "\improper Stairwell Starboard"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Stairwell_Aft
+/area/hallway/Stairwell_Aft
     name = "\improper Stairwell Aft"
     icon_state = "hallA"
 
-/area/SouthernCrossV2/Commons/Stairwell_Port
+/area/hallway/Stairwell_Port
     name = "\improper Stairwell Port"
     icon_state = "hallA"
 
 
 //HARBOR AREAS
 
-/area/SouthernCrossV2/Harbor
+/area/harbor
     icon_state = "hangar"
     ambience = AMBIENCE_ARRIVALS
     sound_env = SOUND_ENVIRONMENT_HANGAR
 
 
-/area/SouthernCrossV2/Harbor/Dock1
+/area/harbor/Dock1
     name = "\improper 1 Dock"
     icon_state = "hangar"
     flags = RAD_SHIELDED
 
-/area/SouthernCrossV2/Harbor/Dock2
+/area/harbor/Dock2
     name = "\improper 2 Dock"
     icon_state = "hangar"
     flags = RAD_SHIELDED
 
-/area/SouthernCrossV2/Harbor/Dock3
+/area/harbor/Dock3
     name = "\improper 3 Dock"
     icon_state = "hangar"
     flags = RAD_SHIELDED
 
-/area/SouthernCrossV2/Harbor/Dock4
+/area/harbor/Dock4
     name = "\improper 4 Dock"
     icon_state = "hangar"
     flags = RAD_SHIELDED
 
-/area/SouthernCrossV2/Harbor/Dock5
+/area/harbor/Dock5
     name = "\improper 5 Dock"
     icon_state = "hangar"
     flags = RAD_SHIELDED
 
-/area/SouthernCrossV2/Harbor/Ship_Bay1
+/area/harbor/Ship_Bay1
     name = "\improper 1 Ship Bay"
     icon_state = "hangar"
     ambience = AMBIENCE_HANGAR
 
-/area/SouthernCrossV2/Harbor/Ship_Bay2
+/area/harbor/Ship_Bay2
     name = "\improper 2 Ship Bay"
     icon_state = "hangar"
     ambience = AMBIENCE_HANGAR
 
-/area/SouthernCrossV2/Harbor/Ship_Bay3
+/area/harbor/Ship_Bay3
     name = "\improper 3 Ship Bay"
     icon_state = "hangar"
     ambience = AMBIENCE_HANGAR
 
-/area/SouthernCrossV2/Harbor/Ship_Bay4
+/area/harbor/Ship_Bay4
     name = "\improper 4 Ship Bay"
     icon_state = "hangar"
     ambience = AMBIENCE_HANGAR
 
-/area/SouthernCrossV2/Harbor/Port_Docking_Foyer
+/area/harbor/Port_Docking_Foyer
     name = "\improper Port Docking Foyer"
     icon_state = "hangar"
     flags = RAD_SHIELDED
 
-/area/SouthernCrossV2/Harbor/Star_Docking_Foyer
+/area/harbor/Star_Docking_Foyer
     name = "\improper Star Docking Foyer"
     icon_state = "hangar"
     flags = RAD_SHIELDED
 
-/area/SouthernCrossV2/Harbor/Fueling_Post
+/area/harbor/Fueling_Post
     name = "\improper Fueling Post"
     icon_state = "hangar"
 
-/area/SouthernCrossV2/Harbor/Fueling_Storage
+/area/harbor/Fueling_Storage
     name = "\improper Fueling Storage"
     icon_state = "hangar"
 
-/area/SouthernCrossV2/Harbor/For_Shuttlebay
+/area/harbor/For_Shuttlebay
     name = "\improper For Shuttlebay"
     icon_state = "hangar"
 
-/area/SouthernCrossV2/Harbor/Star_Shuttlebay
+/area/harbor/Star_Shuttlebay
     name = "\improper Star Shuttlebay"
     icon_state = "hangar"
 
-/area/SouthernCrossV2/Harbor/Aft_Shuttlebay
+/area/harbor/Aft_Shuttlebay
     name = "\improper Aft Shuttlebay"
     icon_state = "hangar"
 
-/area/SouthernCrossV2/Harbor/Port_Shuttlebay
+/area/harbor/Port_Shuttlebay
     name = "\improper Port Shuttlebay"
     icon_state = "hangar"
 
-/area/SouthernCrossV2/Harbor/For_3_Deck_Airlock_Access_1
+/area/harbor/For_3_Deck_Airlock_Access_1
     name = "\improper For 3 Deck Airlock Access 1"
     icon_state = "hangar"
 
-/area/SouthernCrossV2/Harbor/For_3_Deck_Airlock_Access_2
+/area/harbor/For_3_Deck_Airlock_Access_2
     name = "\improper For 3 Deck Airlock Access 2"
     icon_state = "hangar"
 
-/area/SouthernCrossV2/Harbor/Star_2_Deck_Airlock_Access
+/area/harbor/Star_2_Deck_Airlock_Access
     name = "\improper Star 2 Deck Airlock Access"
     icon_state = "hangar"
 
-/area/SouthernCrossV2/Harbor/Star_3_Deck_Airlock_Access
+/area/harbor/Star_3_Deck_Airlock_Access
     name = "\improper Star 3 Deck Airlock Access"
     icon_state = "hangar"
 
-/area/SouthernCrossV2/Harbor/Aft_3_Deck_Airlock_Access
+/area/harbor/Aft_3_Deck_Airlock_Access
     name = "\improper Aft 3 Deck Airlock Access"
     icon_state = "hangar"
 
-/area/SouthernCrossV2/Harbor/Aft_2_Deck_Airlock_Access
+/area/harbor/Aft_2_Deck_Airlock_Access
     name = "\improper Aft 2 Deck Airlock Access"
     icon_state = "hangar"
 
-/area/SouthernCrossV2/Harbor/Port_3_Deck_Airlock_Access
+/area/harbor/Port_3_Deck_Airlock_Access
     name = "\improper Port 3 Deck Airlock Access"
     icon_state = "hangar"
 
 //EVACUATION AREAS
 
-/area/SouthernCrossV2/Evac
+/area/shuttle
     icon_state = "shuttle2"
     requires_power = FALSE
     flags = RAD_SHIELDED
@@ -2560,1212 +2437,1212 @@
     sound_env = SMALL_SOFTFLOOR
     base_turf = /turf/simulated/floor/airless
 
-/area/SouthernCrossV2/Evac/Pod01
+/area/shuttle/Pod01
     name = "\improper 01 Pod"
     icon_state = "shuttle2"
 
-/area/SouthernCrossV2/Evac/Pod02
+/area/shuttle/Pod02
     name = "\improper 02 Pod"
     icon_state = "shuttle2"
 
-/area/SouthernCrossV2/Evac/Pod03
+/area/shuttle/Pod03
     name = "\improper 03 Pod"
     icon_state = "shuttle2"
 
-/area/SouthernCrossV2/Evac/Pod04
+/area/shuttle/Pod04
     name = "\improper 04 Pod"
     icon_state = "shuttle2"
 
-/area/SouthernCrossV2/Evac/Pod05
+/area/shuttle/Pod05
     name = "\improper 05 Pod"
     icon_state = "shuttle2"
 
-/area/SouthernCrossV2/Evac/Pod06
+/area/shuttle/Pod06
     name = "\improper 06 Pod"
     icon_state = "shuttle2"
 
-/area/SouthernCrossV2/Evac/Pod07
+/area/shuttle/Pod07
     name = "\improper 07 Pod"
     icon_state = "shuttle2"
 
-/area/SouthernCrossV2/Evac/Pod08
+/area/shuttle/Pod08
     name = "\improper 08 Pod"
     icon_state = "shuttle2"
 
-/area/SouthernCrossV2/Evac/Pod09
+/area/shuttle/Pod09
     name = "\improper 09 Pod"
     icon_state = "shuttle2"
 
-/area/SouthernCrossV2/Evac/Pod10
+/area/shuttle/Pod10
     name = "\improper 10 Pod"
     icon_state = "shuttle2"
 
-/area/SouthernCrossV2/Evac/Pod11
+/area/shuttle/Pod11
     name = "\improper 11 Pod"
     icon_state = "shuttle2"
 
-/area/SouthernCrossV2/Evac/Pod12
+/area/shuttle/Pod12
     name = "\improper 12 Pod"
     icon_state = "shuttle2"
 
-/area/SouthernCrossV2/Evac/Pod13
+/area/shuttle/Pod13
     name = "\improper 13 Pod"
     icon_state = "shuttle2"
 
-/area/SouthernCrossV2/Evac/Pod14
+/area/shuttle/Pod14
     name = "\improper 14 Pod"
     icon_state = "shuttle2"
 
-/area/SouthernCrossV2/Evac/Cryogenic_Shuttle
+/area/shuttle/Cryogenic_Shuttle
     name = "\improper Cryogenic Shuttle"
     icon_state = "shuttle2"
 
-/area/SouthernCrossV2/Evac/Star_Transport_Shuttle
+/area/shuttle/Star_Transport_Shuttle
     name = "\improper Star Transport Shuttle"
     icon_state = "shuttle2"
 
-/area/SouthernCrossV2/Evac/Port_Transport_Shuttle
+/area/shuttle/Port_Transport_Shuttle
     name = "\improper Port Transport Shuttle"
     icon_state = "shuttle2"
 
-/area/SouthernCrossV2/Evac/Medical_Shuttle
+/area/shuttle/Medical_Shuttle
     name = "\improper Medical Shuttle"
     icon_state = "shuttle2"
 
-/area/SouthernCrossV2/Evac/Engineering_Shuttle
+/area/shuttle/Engineering_Shuttle
     name = "\improper Engineering Shuttle"
     icon_state = "shuttle2"
 
 //MAINTENANCE AREAS
 
-/area/SouthernCrossV2/Maints
+/area/maintenance
     icon_state = "fsmaint"
     flags = RAD_SHIELDED
     ambience = AMBIENCE_MAINTENANCE
     sound_env = SOUND_ENVIRONMENT_SEWER_PIPE
 
-/area/SouthernCrossV2/Maints/ab_StripBar
+/area/maintenance/ab_StripBar
     name = "\improper abandoned StripBar"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/ab_Medical
+/area/maintenance/ab_Medical
     name = "\improper abandoned Medical"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/ab_Surgery
+/area/maintenance/ab_Surgery
     name = "\improper abandoned Surgery"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/ab_GeneralStore
+/area/maintenance/ab_GeneralStore
     name = "\improper abandoned GeneralStore"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/ab_Kitchen
+/area/maintenance/ab_Kitchen
     name = "\improper abandoned Kitchen"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/ab_Hydroponics
+/area/maintenance/ab_Hydroponics
     name = "\improper abandoned Hydroponics"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/ab_SportsField
+/area/maintenance/ab_SportsField
     name = "\improper abandoned SportsField"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/ab_CardTrading
+/area/maintenance/ab_CardTrading
     name = "\improper abandoned CardTrading"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/ab_ChuteTrade
+/area/maintenance/ab_ChuteTrade
     name = "\improper abandoned ChuteTrade"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/ab_Theater
+/area/maintenance/ab_Theater
     name = "\improper abandoned Theater"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/ab_Pdance
+/area/maintenance/ab_Pdance
     name = "\improper abandoned Pdance"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/ab_Chapel
+/area/maintenance/ab_Chapel
     name = "\improper abandoned Chapel"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/ab_TeshDen
+/area/maintenance/ab_TeshDen
     name = "\improper abandoned TeshDen"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Market_Stall_1
+/area/maintenance/Market_Stall_1
     name = "\improper Market Stall 1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Market_Stall_2
+/area/maintenance/Market_Stall_2
     name = "\improper Market Stall 2"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Market_Stall_3
+/area/maintenance/Market_Stall_3
     name = "\improper Market Stall 3"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Market_Stall_4
+/area/maintenance/Market_Stall_4
     name = "\improper Market Stall 4"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Market_Stall_5
+/area/maintenance/Market_Stall_5
     name = "\improper Market Stall 5"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Market_Stall_6
+/area/maintenance/Market_Stall_6
     name = "\improper Market Stall 6"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck1_Port_Corridor
+/area/maintenance/Deck1_Port_Corridor
     name = "\improper Deck1 Port Corridor"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck1_Star_Corridor
+/area/maintenance/Deck1_Star_Corridor
     name = "\improper Deck1 Star Corridor"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck1_ForPort_Corridor1
+/area/maintenance/Deck1_ForPort_Corridor1
     name = "\improper Deck1 ForPort Corridor1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck1_ForPort_Corridor2
+/area/maintenance/Deck1_ForPort_Corridor2
     name = "\improper Deck1 ForPort Corridor2"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck1_ForPort_Corridor3
+/area/maintenance/Deck1_ForPort_Corridor3
     name = "\improper Deck1 ForPort Corridor3"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck1_ForPort_Chamber1
+/area/maintenance/Deck1_ForPort_Chamber1
     name = "\improper Deck1 ForPort Chamber1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck1_ForStar_Corridor1
+/area/maintenance/Deck1_ForStar_Corridor1
     name = "\improper Deck1 ForStar Corridor1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck1_ForStar_Corridor2
+/area/maintenance/Deck1_ForStar_Corridor2
     name = "\improper Deck1 ForStar Corridor2"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck1_ForStar_Corridor3
+/area/maintenance/Deck1_ForStar_Corridor3
     name = "\improper Deck1 ForStar Corridor3"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck1_ForStar_Chamber1
+/area/maintenance/Deck1_ForStar_Chamber1
     name = "\improper Deck1 ForStar Chamber1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck1_ForStar_Chamber2
+/area/maintenance/Deck1_ForStar_Chamber2
     name = "\improper Deck1 ForStar Chamber2"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck1_ForStar_Chamber3
+/area/maintenance/Deck1_ForStar_Chamber3
     name = "\improper Deck1 ForStar Chamber3"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck1_AftStar1_Corridor1
+/area/maintenance/Deck1_AftStar1_Corridor1
     name = "\improper Deck1 AftStar1 Corridor1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck1_AftStar1_Corridor2
+/area/maintenance/Deck1_AftStar1_Corridor2
     name = "\improper Deck1 AftStar1 Corridor2"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck1_AftStar1_Corridor3
+/area/maintenance/Deck1_AftStar1_Corridor3
     name = "\improper Deck1 AftStar1 Corridor3"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck1_AftPort_Corridor1
+/area/maintenance/Deck1_AftPort_Corridor1
     name = "\improper Deck1 AftPort Corridor1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck1_AftPort_Corridor2
+/area/maintenance/Deck1_AftPort_Corridor2
     name = "\improper Deck1 AftPort Corridor2"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck1_AftPort_Corridor3
+/area/maintenance/Deck1_AftPort_Corridor3
     name = "\improper Deck1 AftPort Corridor3"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck1_AftPort_Chamber1
+/area/maintenance/Deck1_AftPort_Chamber1
     name = "\improper Deck1 AftPort Chamber1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck1_AftPort_Chamber2
+/area/maintenance/Deck1_AftPort_Chamber2
     name = "\improper Deck1 AftPort Chamber2"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck1_AftPort_Chamber3
+/area/maintenance/Deck1_AftPort_Chamber3
     name = "\improper Deck1 AftPort Chamber3"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck1_Cargo_Corridor1
+/area/maintenance/Deck1_Cargo_Corridor1
     name = "\improper Deck1 Cargo Corridor1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck1_Cargo_Corridor2
+/area/maintenance/Deck1_Cargo_Corridor2
     name = "\improper Deck1 Cargo Corridor2"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck1_Cargo_Corridor3
+/area/maintenance/Deck1_Cargo_Corridor3
     name = "\improper Deck1 Cargo Corridor3"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck1_Cargo_Chamber1
+/area/maintenance/Deck1_Cargo_Chamber1
     name = "\improper Deck1 Cargo Chamber1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck1_Security_PortCorridor1
+/area/maintenance/Deck1_Security_PortCorridor1
     name = "\improper Deck1 Security PortCorridor1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck1_Security_PortCorridor2
+/area/maintenance/Deck1_Security_PortCorridor2
     name = "\improper Deck1 Security PortCorridor2"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck1_Security_PortChamber1
+/area/maintenance/Deck1_Security_PortChamber1
     name = "\improper Deck1 Security PortChamber1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck1_Security_PortChamber2
+/area/maintenance/Deck1_Security_PortChamber2
     name = "\improper Deck1 Security PortChamber2"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck1_Security_PortChamber3
+/area/maintenance/Deck1_Security_PortChamber3
     name = "\improper Deck1 Security PortChamber3"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck1_Security_StarCorridor1
+/area/maintenance/Deck1_Security_StarCorridor1
     name = "\improper Deck1 Security StarCorridor1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck1_Security_StarCorridor2
+/area/maintenance/Deck1_Security_StarCorridor2
     name = "\improper Deck1 Security StarCorridor2"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck1_Security_StarCorridor3
+/area/maintenance/Deck1_Security_StarCorridor3
     name = "\improper Deck1 Security StarCorridor3"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck1_Security_StarChamber1
+/area/maintenance/Deck1_Security_StarChamber1
     name = "\improper Deck1 Security StarChamber1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck1_Security_StarChamber2
+/area/maintenance/Deck1_Security_StarChamber2
     name = "\improper Deck1 Security StarChamber2"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck1_Science_ForCorridor1
+/area/maintenance/Deck1_Science_ForCorridor1
     name = "\improper Deck1 Science ForCorridor1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck1_Science_AftCorridor1
+/area/maintenance/Deck1_Science_AftCorridor1
     name = "\improper Deck1 Science AftCorridor1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_For_Corridor
+/area/maintenance/Deck2_For_Corridor
     name = "\improper Deck2 For Corridor"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_ForStar_Corridor
+/area/maintenance/Deck2_ForStar_Corridor
     name = "\improper Deck2 ForStar Corridor"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Star_Corridor
+/area/maintenance/Deck2_Star_Corridor
     name = "\improper Deck2 Star Corridor"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_AftStar_Corridor
+/area/maintenance/Deck2_AftStar_Corridor
     name = "\improper Deck2 AftStar Corridor"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Aft_Corridor
+/area/maintenance/Deck2_Aft_Corridor
     name = "\improper Deck2 Aft Corridor"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_AftPort_Corridor
+/area/maintenance/Deck2_AftPort_Corridor
     name = "\improper Deck2 AftPort Corridor"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Port_Corridor
+/area/maintenance/Deck2_Port_Corridor
     name = "\improper Deck2 Port Corridor"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_ForPort_Corridor
+/area/maintenance/Deck2_ForPort_Corridor
     name = "\improper Deck2 ForPort Corridor"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Security_StarCorridor1
+/area/maintenance/Deck2_Security_StarCorridor1
     name = "\improper Deck2 Security StarCorridor1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Security_AftStarCorridor1
+/area/maintenance/Deck2_Security_AftStarCorridor1
     name = "\improper Deck2 Security AftStarCorridor1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Security_AftStarCorridor2
+/area/maintenance/Deck2_Security_AftStarCorridor2
     name = "\improper Deck2 Security AftStarCorridor2"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Security_AftPortCorridor1
+/area/maintenance/Deck2_Security_AftPortCorridor1
     name = "\improper Deck2 Security AftPortCorridor1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Security_AftPortCorridor2
+/area/maintenance/Deck2_Security_AftPortCorridor2
     name = "\improper Deck2 Security AftPortCorridor2"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Security_ForPortCorridor1
+/area/maintenance/Deck2_Security_ForPortCorridor1
     name = "\improper Deck2 Security ForPortCorridor1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Security_ForPortChamber1
+/area/maintenance/Deck2_Security_ForPortChamber1
     name = "\improper Deck2 Security ForPortChamber1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Security_ForCorridor1
+/area/maintenance/Deck2_Security_ForCorridor1
     name = "\improper Deck2 Security ForCorridor1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Security_ForCorridor2
+/area/maintenance/Deck2_Security_ForCorridor2
     name = "\improper Deck2 Security ForCorridor2"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Security_ForCorridor3
+/area/maintenance/Deck2_Security_ForCorridor3
     name = "\improper Deck2 Security ForCorridor3"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Security_PortCorridor1
+/area/maintenance/Deck2_Security_PortCorridor1
     name = "\improper Deck2 Security PortCorridor1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Security_ForCorridor1
+/area/maintenance/Deck2_Security_ForCorridor1
     name = "\improper Deck2 Security ForCorridor1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Security_ForStar_Chamber
+/area/maintenance/Deck2_Security_ForStar_Chamber
     name = "\improper Deck2 Security ForStar Chamber"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Science_ForCorridor1
+/area/maintenance/Deck2_Science_ForCorridor1
     name = "\improper Deck2 Science ForCorridor1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Science_StarCorridor1
+/area/maintenance/Deck2_Science_StarCorridor1
     name = "\improper Deck2 Science StarCorridor1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Science_StarCorridor2
+/area/maintenance/Deck2_Science_StarCorridor2
     name = "\improper Deck2 Science StarCorridor2"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Science_StarChamber1
+/area/maintenance/Deck2_Science_StarChamber1
     name = "\improper Deck2 Science StarChamber1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Science_ForPort_Corridor
+/area/maintenance/Deck2_Science_ForPort_Corridor
     name = "\improper Deck2 Science ForPort Corridor"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Science_ForPort_Chamber
+/area/maintenance/Deck2_Science_ForPort_Chamber
     name = "\improper Deck2 Science ForPort Chamber"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Medical_AftPortChamber1
+/area/maintenance/Deck2_Medical_AftPortChamber1
     name = "\improper Deck2 Medical AftPortChamber1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Medical_AftPortCorridor1
+/area/maintenance/Deck2_Medical_AftPortCorridor1
     name = "\improper Deck2 Medical AftPortCorridor1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Medical_AftCorridor1
+/area/maintenance/Deck2_Medical_AftCorridor1
     name = "\improper Deck2 Medical AftCorridor1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Medical_AftCorridor2
+/area/maintenance/Deck2_Medical_AftCorridor2
     name = "\improper Deck2 Medical AftCorridor2"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Medical_AftStarChamber1
+/area/maintenance/Deck2_Medical_AftStarChamber1
     name = "\improper Deck2 Medical AftStarChamber1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Civilian_ForStarCorridor1
+/area/maintenance/Deck2_Civilian_ForStarCorridor1
     name = "\improper Deck2 Civilian ForStarCorridor1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Civilian_ForStarCorridor2
+/area/maintenance/Deck2_Civilian_ForStarCorridor2
     name = "\improper Deck2 Civilian ForStarCorridor2"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Civilian_StarCorridor1
+/area/maintenance/Deck2_Civilian_StarCorridor1
     name = "\improper Deck2 Civilian StarCorridor1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Civilian_StarChamber1
+/area/maintenance/Deck2_Civilian_StarChamber1
     name = "\improper Deck2 Civilian StarChamber1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Civilian_StarChamber2
+/area/maintenance/Deck2_Civilian_StarChamber2
     name = "\improper Deck2 Civilian StarChamber2"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Civilian_AftCorridor1
+/area/maintenance/Deck2_Civilian_AftCorridor1
     name = "\improper Deck2 Civilian AftCorridor1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Civilian_AftPortCorridor1
+/area/maintenance/Deck2_Civilian_AftPortCorridor1
     name = "\improper Deck2 Civilian AftPortCorridor1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Civilian_PortChamber1
+/area/maintenance/Deck2_Civilian_PortChamber1
     name = "\improper Deck2 Civilian PortChamber1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Civilian_PortChamber2
+/area/maintenance/Deck2_Civilian_PortChamber2
     name = "\improper Deck2 Civilian PortChamber2"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Civilian_ForPortCorridor1
+/area/maintenance/Deck2_Civilian_ForPortCorridor1
     name = "\improper Deck2 Civilian ForPortCorridor1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Civilian_ForPortCorridor2
+/area/maintenance/Deck2_Civilian_ForPortCorridor2
     name = "\improper Deck2 Civilian ForPortCorridor2"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Civilian_ForPortChamber1
+/area/maintenance/Deck2_Civilian_ForPortChamber1
     name = "\improper Deck2 Civilian ForPortChamber1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Cargo_StarChamber1
+/area/maintenance/Deck2_Cargo_StarChamber1
     name = "\improper Deck2 Cargo StarChamber1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Cargo_AftStarChamber1
+/area/maintenance/Deck2_Cargo_AftStarChamber1
     name = "\improper Deck2 Cargo AftStarChamber1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Cargo_AftStarCorridor1
+/area/maintenance/Deck2_Cargo_AftStarCorridor1
     name = "\improper Deck2 Cargo AftStarCorridor1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Cargo_AftCorridor1
+/area/maintenance/Deck2_Cargo_AftCorridor1
     name = "\improper Deck2 Cargo AftCorridor1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Cargo_AftCorridor2
+/area/maintenance/Deck2_Cargo_AftCorridor2
     name = "\improper Deck2 Cargo AftCorridor2"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Cargo_AftPortCorridor1
+/area/maintenance/Deck2_Cargo_AftPortCorridor1
     name = "\improper Deck2 Cargo AftPortCorridor1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Engineering_PortCorridor1
+/area/maintenance/Deck2_Engineering_PortCorridor1
     name = "\improper Deck2 Engineering PortCorridor1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Engineering_PortCorridor2
+/area/maintenance/Deck2_Engineering_PortCorridor2
     name = "\improper Deck2 Engineering PortCorridor2"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Engineering_PortChamber1
+/area/maintenance/Deck2_Engineering_PortChamber1
     name = "\improper Deck2 Engineering PortChamber1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Engineering_PortChamber2
+/area/maintenance/Deck2_Engineering_PortChamber2
     name = "\improper Deck2 Engineering PortChamber2"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Engineering_ForStarChamber1
+/area/maintenance/Deck2_Engineering_ForStarChamber1
     name = "\improper Deck2 Engineering ForStarChamber1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Engineering_ForStarChamber2
+/area/maintenance/Deck2_Engineering_ForStarChamber2
     name = "\improper Deck2 Engineering ForStarChamber2"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck2_Engineering_ForStarCorridor1
+/area/maintenance/Deck2_Engineering_ForStarCorridor1
     name = "\improper Deck2 Engineering ForStarCorridor1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Bridge_ForChamber1
+/area/maintenance/Deck3_Bridge_ForChamber1
     name = "\improper Deck3 Bridge ForChamber1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Bridge_ForStarCorridor1
+/area/maintenance/Deck3_Bridge_ForStarCorridor1
     name = "\improper Deck3 Bridge ForStarCorridor1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Bridge_ForStarCorridor2
+/area/maintenance/Deck3_Bridge_ForStarCorridor2
     name = "\improper Deck3 Bridge ForStarCorridor2"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Bridge_ForStarCorridor3
+/area/maintenance/Deck3_Bridge_ForStarCorridor3
     name = "\improper Deck3 Bridge ForStarCorridor3"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Bridge_ForStarChamber1
+/area/maintenance/Deck3_Bridge_ForStarChamber1
     name = "\improper Deck3 Bridge ForStarChamber1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Bridge_AftStarCorridor1
+/area/maintenance/Deck3_Bridge_AftStarCorridor1
     name = "\improper Deck3 Bridge AftStarCorridor1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Bridge_AftPortCorridor1
+/area/maintenance/Deck3_Bridge_AftPortCorridor1
     name = "\improper Deck3 Bridge AftPortCorridor1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Bridge_ForStarCorridor1
+/area/maintenance/Deck3_Bridge_ForStarCorridor1
     name = "\improper Deck3 Bridge ForStarCorridor1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Bridge_ForStarCorridor2
+/area/maintenance/Deck3_Bridge_ForStarCorridor2
     name = "\improper Deck3 Bridge ForStarCorridor2"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Bridge_ForStarCorridor3
+/area/maintenance/Deck3_Bridge_ForStarCorridor3
     name = "\improper Deck3 Bridge ForStarCorridor3"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Bridge_ForPort_Chamber1
+/area/maintenance/Deck3_Bridge_ForPort_Chamber1
     name = "\improper Deck3 Bridge ForPort Chamber1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Bridge_ForPort_Corridor1
+/area/maintenance/Deck3_Bridge_ForPort_Corridor1
     name = "\improper Deck3 Bridge ForPort Corridor1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Bridge_ForPort_Corridor2
+/area/maintenance/Deck3_Bridge_ForPort_Corridor2
     name = "\improper Deck3 Bridge ForPort Corridor2"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Medical_ForChamber1
+/area/maintenance/Deck3_Medical_ForChamber1
     name = "\improper Deck3 Medical ForChamber1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Medical_ForChamber2
+/area/maintenance/Deck3_Medical_ForChamber2
     name = "\improper Deck3 Medical ForChamber2"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Medical_ForChamber3
+/area/maintenance/Deck3_Medical_ForChamber3
     name = "\improper Deck3 Medical ForChamber3"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Medical_ForStarChamber1
+/area/maintenance/Deck3_Medical_ForStarChamber1
     name = "\improper Deck3 Medical ForStarChamber1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Medical_ForStarChamber2
+/area/maintenance/Deck3_Medical_ForStarChamber2
     name = "\improper Deck3 Medical ForStarChamber2"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Medical_ForStarChamber3
+/area/maintenance/Deck3_Medical_ForStarChamber3
     name = "\improper Deck3 Medical ForStarChamber3"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Medical_StarCorridor1
+/area/maintenance/Deck3_Medical_StarCorridor1
     name = "\improper Deck3 Medical StarCorridor1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Medical_AftStarChamber1
+/area/maintenance/Deck3_Medical_AftStarChamber1
     name = "\improper Deck3 Medical AftStarChamber1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Medical_AftCorridor1
+/area/maintenance/Deck3_Medical_AftCorridor1
     name = "\improper Deck3 Medical AftCorridor1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Medical_AftCorridor2
+/area/maintenance/Deck3_Medical_AftCorridor2
     name = "\improper Deck3 Medical AftCorridor2"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Medical_AftPortCorridor1
+/area/maintenance/Deck3_Medical_AftPortCorridor1
     name = "\improper Deck3 Medical AftPortCorridor1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Medical_AftPortChamber1
+/area/maintenance/Deck3_Medical_AftPortChamber1
     name = "\improper Deck3 Medical AftPortChamber1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Medical_AftPortChamber2
+/area/maintenance/Deck3_Medical_AftPortChamber2
     name = "\improper Deck3 Medical AftPortChamber2"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Medical_PortChamber1
+/area/maintenance/Deck3_Medical_PortChamber1
     name = "\improper Deck3 Medical PortChamber1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Medical_PortChamber2
+/area/maintenance/Deck3_Medical_PortChamber2
     name = "\improper Deck3 Medical PortChamber2"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Medical_ForPortChamber1
+/area/maintenance/Deck3_Medical_ForPortChamber1
     name = "\improper Deck3 Medical ForPortChamber1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Medical_ForPortChamber2
+/area/maintenance/Deck3_Medical_ForPortChamber2
     name = "\improper Deck3 Medical ForPortChamber2"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Dorms_ForCorridor1
+/area/maintenance/Deck3_Dorms_ForCorridor1
     name = "\improper Deck3 Dorms ForCorridor1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Dorms_ForStarChamber1
+/area/maintenance/Deck3_Dorms_ForStarChamber1
     name = "\improper Deck3 Dorms ForStarChamber1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Dorms_ForStarChamber2
+/area/maintenance/Deck3_Dorms_ForStarChamber2
     name = "\improper Deck3 Dorms ForStarChamber2"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Dorms_StarCorridor1
+/area/maintenance/Deck3_Dorms_StarCorridor1
     name = "\improper Deck3 Dorms StarCorridor1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Dorms_StarCorridor2
+/area/maintenance/Deck3_Dorms_StarCorridor2
     name = "\improper Deck3 Dorms StarCorridor2"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Dorms_StarChamber1
+/area/maintenance/Deck3_Dorms_StarChamber1
     name = "\improper Deck3 Dorms StarChamber1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Dorms_StarChamber2
+/area/maintenance/Deck3_Dorms_StarChamber2
     name = "\improper Deck3 Dorms StarChamber2"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Dorms_AftCorridor1
+/area/maintenance/Deck3_Dorms_AftCorridor1
     name = "\improper Deck3 Dorms AftCorridor1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Dorms_AftCorridor2
+/area/maintenance/Deck3_Dorms_AftCorridor2
     name = "\improper Deck3 Dorms AftCorridor2"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Dorms_AftPortChamber1
+/area/maintenance/Deck3_Dorms_AftPortChamber1
     name = "\improper Deck3 Dorms AftPortChamber1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Dorms_AftPortChamber2
+/area/maintenance/Deck3_Dorms_AftPortChamber2
     name = "\improper Deck3 Dorms AftPortChamber2"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Dorms_PortCorridor1
+/area/maintenance/Deck3_Dorms_PortCorridor1
     name = "\improper Deck3 Dorms PortCorridor1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Dorms_PortChamber1
+/area/maintenance/Deck3_Dorms_PortChamber1
     name = "\improper Deck3 Dorms PortChamber1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Dorms_ForStarChamber1
+/area/maintenance/Deck3_Dorms_ForStarChamber1
     name = "\improper Deck3 Dorms ForStarChamber1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Dorms_ForStarChamber2
+/area/maintenance/Deck3_Dorms_ForStarChamber2
     name = "\improper Deck3 Dorms ForStarChamber2"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Dorms_ForPort_Corridor1
+/area/maintenance/Deck3_Dorms_ForPort_Corridor1
     name = "\improper Deck3 Dorms ForPort Corridor1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Dorms_ForPort_Chamber1
+/area/maintenance/Deck3_Dorms_ForPort_Chamber1
     name = "\improper Deck3 Dorms ForPort Chamber1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Engineering_ForCorridor1
+/area/maintenance/Deck3_Engineering_ForCorridor1
     name = "\improper Deck3 Engineering ForCorridor1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Engineering_ForStarChamber1
+/area/maintenance/Deck3_Engineering_ForStarChamber1
     name = "\improper Deck3 Engineering ForStarChamber1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Engineering_ForStarChamber2
+/area/maintenance/Deck3_Engineering_ForStarChamber2
     name = "\improper Deck3 Engineering ForStarChamber2"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Engineering_StarChamber1
+/area/maintenance/Deck3_Engineering_StarChamber1
     name = "\improper Deck3 Engineering StarChamber1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Engineering_AftStarCorridor1
+/area/maintenance/Deck3_Engineering_AftStarCorridor1
     name = "\improper Deck3 Engineering AftStarCorridor1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Engineering_AftStarCorridor2
+/area/maintenance/Deck3_Engineering_AftStarCorridor2
     name = "\improper Deck3 Engineering AftStarCorridor2"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Engineering_AftStarChamber1
+/area/maintenance/Deck3_Engineering_AftStarChamber1
     name = "\improper Deck3 Engineering AftStarChamber1"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Engineering_AftStarChamber2
+/area/maintenance/Deck3_Engineering_AftStarChamber2
     name = "\improper Deck3 Engineering AftStarChamber2"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Engineering_AftStarChamber3
+/area/maintenance/Deck3_Engineering_AftStarChamber3
     name = "\improper Deck3 Engineering AftStarChamber3"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Center_Star
+/area/maintenance/Deck3_Center_Star
     name = "\improper Deck3 Center Star"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Deck3_Center_Port
+/area/maintenance/Deck3_Center_Port
     name = "\improper Deck3 Center Port"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Distro_Central
+/area/maintenance/Distro_Central
     name = "\improper Distro Central"
     icon_state = "engineering"
     ambience = AMBIENCE_ATMOS
 
-/area/SouthernCrossV2/Maints/Distro_Harbor
+/area/maintenance/Distro_Harbor
     name = "\improper Distro Harbor"
     icon_state = "engineering"
     ambience = AMBIENCE_ATMOS
 
-/area/SouthernCrossV2/Maints/Distro_Civilian
+/area/maintenance/Distro_Civilian
     name = "\improper Distro Civilian"
     icon_state = "engineering"
     ambience = AMBIENCE_ATMOS
 
-/area/SouthernCrossV2/Maints/Research_Substation
+/area/maintenance/Research_Substation
     name = "\improper Research Substation"
     icon_state = "engineering"
     ambience = AMBIENCE_SUBSTATION
     lightswitch = 1
 
-/area/SouthernCrossV2/Maints/Medical_Substation
+/area/maintenance/Medical_Substation
     name = "\improper Medical Substation"
     icon_state = "engineering"
     ambience = AMBIENCE_SUBSTATION
     lightswitch = 1
 
-/area/SouthernCrossV2/Maints/Dorms_Substation
+/area/maintenance/Dorms_Substation
     name = "\improper Dorms Substation"
     icon_state = "engineering"
     ambience = AMBIENCE_SUBSTATION
     lightswitch = 1
 
-/area/SouthernCrossV2/Maints/Domicile_Substation
+/area/maintenance/Domicile_Substation
     name = "\improper Domicile Substation"
     icon_state = "engineering"
     ambience = AMBIENCE_SUBSTATION
     lightswitch = 1
 
-/area/SouthernCrossV2/Maints/Harbor_Substation
+/area/maintenance/Harbor_Substation
     name = "\improper Harbor Substation"
     icon_state = "engineering"
     ambience = AMBIENCE_SUBSTATION
     lightswitch = 1
 
-/area/SouthernCrossV2/Maints/Telecomms_Substation
+/area/maintenance/Telecomms_Substation
     name = "\improper Telecomms Substation"
     icon_state = "engineering"
     ambience = AMBIENCE_SUBSTATION
     lightswitch = 1
 
-/area/SouthernCrossV2/Maints/Security_Substation
+/area/maintenance/Security_Substation
     name = "\improper Security Substation"
     icon_state = "engineering"
     ambience = AMBIENCE_SUBSTATION
     lightswitch = 1
 
-/area/SouthernCrossV2/Maints/Bridge_Substation
+/area/maintenance/Bridge_Substation
     name = "\improper Bridge Substation"
     icon_state = "engineering"
     ambience = AMBIENCE_SUBSTATION
     lightswitch = 1
 
-/area/SouthernCrossV2/Maints/AI_Substation
+/area/maintenance/AI_Substation
     name = "\improper AI Substation"
     icon_state = "engineering"
     ambience = AMBIENCE_SUBSTATION
     lightswitch = 1
 
-/area/SouthernCrossV2/Maints/Cargo_Substation
+/area/maintenance/Cargo_Substation
     name = "\improper Cargo Substation"
     icon_state = "engineering"
     ambience = AMBIENCE_SUBSTATION
     lightswitch = 1
 
-/area/SouthernCrossV2/Maints/Engineering_Substation
+/area/maintenance/Engineering_Substation
     name = "\improper Engineering Substation"
     icon_state = "engineering"
     ambience = AMBIENCE_SUBSTATION
     lightswitch = 1
 
 //Temp Testing areas
-/area/SouthernCrossV2/Maints/Room_01
+/area/maintenance/Room_01
     name = "\improper Room 01"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_02
+/area/maintenance/Room_02
     name = "\improper Room 02"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_03
+/area/maintenance/Room_03
     name = "\improper Room 03"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_04
+/area/maintenance/Room_04
     name = "\improper Room 04"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_05
+/area/maintenance/Room_05
     name = "\improper Room 05"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_06
+/area/maintenance/Room_06
     name = "\improper Room 06"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_07
+/area/maintenance/Room_07
     name = "\improper Room 07"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_08
+/area/maintenance/Room_08
     name = "\improper Room 08"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_09
+/area/maintenance/Room_09
     name = "\improper Room 09"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_10
+/area/maintenance/Room_10
     name = "\improper Room 10"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_11
+/area/maintenance/Room_11
     name = "\improper Room 11"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_12
+/area/maintenance/Room_12
     name = "\improper Room 12"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_13
+/area/maintenance/Room_13
     name = "\improper Room 13"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_14
+/area/maintenance/Room_14
     name = "\improper Room 14"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_15
+/area/maintenance/Room_15
     name = "\improper Room 15"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_16
+/area/maintenance/Room_16
     name = "\improper Room 16"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_17
+/area/maintenance/Room_17
     name = "\improper Room 17"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_18
+/area/maintenance/Room_18
     name = "\improper Room 18"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_19
+/area/maintenance/Room_19
     name = "\improper Room 19"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_20
+/area/maintenance/Room_20
     name = "\improper Room 20"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_21
+/area/maintenance/Room_21
     name = "\improper Room 21"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_22
+/area/maintenance/Room_22
     name = "\improper Room 22"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_23
+/area/maintenance/Room_23
     name = "\improper Room 23"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_24
+/area/maintenance/Room_24
     name = "\improper Room 24"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_25
+/area/maintenance/Room_25
     name = "\improper Room 25"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_26
+/area/maintenance/Room_26
     name = "\improper Room 26"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_27
+/area/maintenance/Room_27
     name = "\improper Room 27"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_28
+/area/maintenance/Room_28
     name = "\improper Room 28"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_29
+/area/maintenance/Room_29
     name = "\improper Room 29"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_30
+/area/maintenance/Room_30
     name = "\improper Room 30"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_31
+/area/maintenance/Room_31
     name = "\improper Room 31"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_32
+/area/maintenance/Room_32
     name = "\improper Room 32"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_33
+/area/maintenance/Room_33
     name = "\improper Room 33"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_34
+/area/maintenance/Room_34
     name = "\improper Room 34"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_35
+/area/maintenance/Room_35
     name = "\improper Room 35"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_36
+/area/maintenance/Room_36
     name = "\improper Room 36"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_37
+/area/maintenance/Room_37
     name = "\improper Room 37"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_38
+/area/maintenance/Room_38
     name = "\improper Room 38"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_39
+/area/maintenance/Room_39
     name = "\improper Room 39"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_40
+/area/maintenance/Room_40
     name = "\improper Room 40"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_41
+/area/maintenance/Room_41
     name = "\improper Room 41"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_42
+/area/maintenance/Room_42
     name = "\improper Room 42"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_43
+/area/maintenance/Room_43
     name = "\improper Room 43"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_44
+/area/maintenance/Room_44
     name = "\improper Room 44"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_45
+/area/maintenance/Room_45
     name = "\improper Room 45"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_46
+/area/maintenance/Room_46
     name = "\improper Room 46"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_47
+/area/maintenance/Room_47
     name = "\improper Room 47"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_48
+/area/maintenance/Room_48
     name = "\improper Room 48"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_49
+/area/maintenance/Room_49
     name = "\improper Room 49"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_50
+/area/maintenance/Room_50
     name = "\improper Room 50"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_51
+/area/maintenance/Room_51
     name = "\improper Room 51"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_52
+/area/maintenance/Room_52
     name = "\improper Room 52"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_53
+/area/maintenance/Room_53
     name = "\improper Room 53"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_54
+/area/maintenance/Room_54
     name = "\improper Room 54"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_55
+/area/maintenance/Room_55
     name = "\improper Room 55"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_56
+/area/maintenance/Room_56
     name = "\improper Room 56"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_57
+/area/maintenance/Room_57
     name = "\improper Room 57"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_58
+/area/maintenance/Room_58
     name = "\improper Room 58"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_59
+/area/maintenance/Room_59
     name = "\improper Room 59"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_60
+/area/maintenance/Room_60
     name = "\improper Room 60"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_61
+/area/maintenance/Room_61
     name = "\improper Room 61"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_62
+/area/maintenance/Room_62
     name = "\improper Room 62"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_63
+/area/maintenance/Room_63
     name = "\improper Room 63"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_64
+/area/maintenance/Room_64
     name = "\improper Room 64"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_65
+/area/maintenance/Room_65
     name = "\improper Room 65"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_66
+/area/maintenance/Room_66
     name = "\improper Room 66"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_67
+/area/maintenance/Room_67
     name = "\improper Room 67"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_68
+/area/maintenance/Room_68
     name = "\improper Room 68"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_69
+/area/maintenance/Room_69
     name = "\improper Room 69"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_70
+/area/maintenance/Room_70
     name = "\improper Room 70"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_71
+/area/maintenance/Room_71
     name = "\improper Room 71"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_72
+/area/maintenance/Room_72
     name = "\improper Room 72"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_73
+/area/maintenance/Room_73
     name = "\improper Room 73"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_74
+/area/maintenance/Room_74
     name = "\improper Room 74"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_75
+/area/maintenance/Room_75
     name = "\improper Room 75"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_76
+/area/maintenance/Room_76
     name = "\improper Room 76"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_77
+/area/maintenance/Room_77
     name = "\improper Room 77"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_78
+/area/maintenance/Room_78
     name = "\improper Room 78"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_79
+/area/maintenance/Room_79
     name = "\improper Room 79"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_80
+/area/maintenance/Room_80
     name = "\improper Room 80"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_81
+/area/maintenance/Room_81
     name = "\improper Room 81"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_82
+/area/maintenance/Room_82
     name = "\improper Room 82"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_83
+/area/maintenance/Room_83
     name = "\improper Room 83"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_84
+/area/maintenance/Room_84
     name = "\improper Room 84"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_85
+/area/maintenance/Room_85
     name = "\improper Room 85"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_86
+/area/maintenance/Room_86
     name = "\improper Room 86"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_87
+/area/maintenance/Room_87
     name = "\improper Room 87"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_88
+/area/maintenance/Room_88
     name = "\improper Room 88"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_89
+/area/maintenance/Room_89
     name = "\improper Room 89"
     icon_state = "fsmaint"
 
-/area/SouthernCrossV2/Maints/Room_90
+/area/maintenance/Room_90
     name = "\improper Room 90"
     icon_state = "fsmaint"
