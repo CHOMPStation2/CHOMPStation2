@@ -30,7 +30,11 @@
 	if(byond_version < RECOMMENDED_VERSION)
 		to_world_log("Your server's byond version does not meet the recommended requirements for this server. Please update BYOND")
 
+<<<<<<< HEAD
 	TgsNew(new /datum/tgs_event_handler/impl, TGS_SECURITY_TRUSTED) // CHOMPEdit - tgs event handler
+=======
+	TgsNew()
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 
 	config.Load(params[OVERRIDE_CONFIG_DIRECTORY_PARAMETER])
 
@@ -108,7 +112,11 @@
 	// (i.e. basically nothing should be added before load_admins() in here)
 
 	// Try to set round ID
+<<<<<<< HEAD
 	SSdbcore.InitializeRound() // CHOMPEdit
+=======
+	//SSdbcore.InitializeRound() TODO: Implement roundid on database subsystem and uncomment
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 
 	//apply a default value to config.python_path, if needed
 	if (!CONFIG_GET(string/python_path))
@@ -661,7 +669,11 @@ var/failed_old_db_connections = 0
 	//CHOMPEdit End
 	return 1
 
+<<<<<<< HEAD
 /*/proc/setup_database_connection() CHOMPEdit TGSQL
+=======
+/proc/setup_database_connection()
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 	if(!CONFIG_GET(flag/sql_enabled))
 		return 0
 	if(failed_db_connections > FAILED_DB_CONNECTION_CUTOFF)	//If it failed to establish a connection more than 5 times in a row, don't bother attempting to conenct anymore.
@@ -696,10 +708,22 @@ var/failed_old_db_connections = 0
 	return .*/
 
 //This proc ensures that the connection to the feedback database (global variable dbcon) is established
+<<<<<<< HEAD
 /proc/establish_db_connection() //CHOMPEdit TGSQL
 	return SSdbcore.Connect()
 
 /* CHOMPedit
+=======
+/proc/establish_db_connection()
+	if(failed_db_connections > FAILED_DB_CONNECTION_CUTOFF)
+		return 0
+
+	if(!dbcon || !dbcon.IsConnected())
+		return setup_database_connection()
+	else
+		return 1
+
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 // Cleans up DB connections and recreates them
 /proc/reset_database_connections()
 	var/list/results = list("-- Resetting DB connections --")

@@ -245,7 +245,14 @@ ALLOW_HOLIDAYS
 
 ##Defines the ticklag for the world. Ticklag is the amount of time between game ticks (aka byond ticks) (in 1/10ths of a second).
 ##	This also controls the client network update rate, as well as the default client fps
+<<<<<<< HEAD
 TICKLAG 0.25
+
+##Can also be set as per-second value, the following value is identical to the above.
+#FPS 20
+=======
+TICKLAG 0.5
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 
 ##Can also be set as per-second value, the following value is identical to the above.
 #FPS 20
@@ -498,7 +505,11 @@ RADIATION_MATERIAL_RESISTANCE_DIVISOR 16
 ## 0:1 subtraction:division for computing effective radiation on a turf
 ## 0 / RAD_RESIST_CALC_DIV = Each turf absorbs some fraction of the working radiation level
 ## 1 / RAD_RESIST_CALC_SUB = Each turf absorbs a fixed amount of radiation
+<<<<<<< HEAD
 RADIATION_RESISTANCE_CALC_MODE 0
+=======
+RADIATION_RESISTANCE_CALC_MODE 1
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 
 ## IP Reputation Checking
 # Enable/disable IP reputation checking (present/nonpresent)

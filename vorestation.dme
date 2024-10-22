@@ -185,7 +185,10 @@
 #include "code\_global_vars\_regexes.dm"
 #include "code\_global_vars\bitfields.dm"
 #include "code\_global_vars\configuration.dm"
+<<<<<<< HEAD
 #include "code\_global_vars\logging_ch.dm"
+=======
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 #include "code\_global_vars\misc.dm"
 #include "code\_global_vars\mobs.dm"
 #include "code\_global_vars\time_vars.dm"
@@ -357,7 +360,10 @@
 #include "code\controllers\configuration\config_entry.dm"
 #include "code\controllers\configuration\configuration.dm"
 #include "code\controllers\configuration\legacy.dm"
+<<<<<<< HEAD
 #include "code\controllers\configuration\entries\chompstation.dm"
+=======
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 #include "code\controllers\configuration\entries\dbconfig.dm"
 #include "code\controllers\configuration\entries\game_options.dm"
 #include "code\controllers\configuration\entries\general.dm"
@@ -1505,7 +1511,10 @@
 #include "code\game\objects\items\weapons\trays.dm"
 #include "code\game\objects\items\weapons\weaponry.dm"
 #include "code\game\objects\items\weapons\weldbackpack.dm"
+<<<<<<< HEAD
 #include "code\game\objects\items\weapons\weldbackpack_ch.dm"
+=======
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 #include "code\game\objects\items\weapons\wiki_manuals.dm"
 #include "code\game\objects\items\weapons\circuitboards\broken.dm"
 #include "code\game\objects\items\weapons\circuitboards\circuitboard.dm"

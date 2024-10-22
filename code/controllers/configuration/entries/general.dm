@@ -60,9 +60,12 @@
 /// logs graffiti
 /datum/config_entry/flag/log_graffiti
 
+<<<<<<< HEAD
 /// logs all timers in buckets on automatic bucket reset (Useful for timer debugging)
 /datum/config_entry/flag/log_timers_on_bucket_reset
 
+=======
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 // FIXME: Unused
 ///datum/config_entry/string/nudge_script_path // where the nudge.py script is located
 //	default = "nudge.py"
@@ -577,7 +580,11 @@
 /// 0 / RAD_RESIST_CALC_DIV = Each turf absorbs some fraction of the working radiation level
 /// 1 / RAD_RESIST_CALC_SUB = Each turf absorbs a fixed amount of radiation
 /datum/config_entry/flag/radiation_resistance_calc_mode
+<<<<<<< HEAD
 	default = RAD_RESIST_CALC_DIV // CHOMPEdit
+=======
+	default = RAD_RESIST_CALC_SUB
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 
 /datum/config_entry/flag/radiation_resistance_calc_mode/ValidateAndSet(str_val)
 	if(!VASProcCallGuard(str_val))

@@ -44,9 +44,12 @@ LOG_PDA
 ## log graffiti drawings
 LOG_GRAFFITI
 
+<<<<<<< HEAD
 ## Log all timers on timer auto reset
 # LOG_TIMERS_ON_BUCKET_RESET
 
+=======
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 ## log world.log messages
 # LOG_WORLD_OUTPUT
 
