@@ -30,7 +30,7 @@
 
 // Relic Base
 #ifdef USE_MAP_RELIC_BASE
-#include "../soluna_nexus/relic_base.dm"
+#include "../relic_base/relic_base.dm"
 #endif
 
 #ifdef USE_MAP_MINITEST
