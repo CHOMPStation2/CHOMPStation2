@@ -117,7 +117,7 @@
 	desc = "Asteroid-bound mercenary listening post"
 	mappath = "maps/gateway_vr/listeningpost.dmm"
 
-#include "../../../../maps/ateway_vr/variable/honlethhighlands.dm"
+#include "../../../../maps/gateway_vr/variable/honlethhighlands.dm"
 /datum/map_template/thor_lateload/gateway/honlethhighlands_a
 	name = "Gateway - Honleth Highlands A"
 	desc = "The cold surface of some planet."
