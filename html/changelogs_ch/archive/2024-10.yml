@@ -239,3 +239,6 @@
   - qol: Add bapi-dmm, a rust maploader, to reduce init time by 90 seconds.
   - qol: Moved tracy init to before-world-New.
   - rscdel: No more pretending to support map rotation
+2024-10-22:
+  Darlantanis:
+  - bugfix: makes leopardmander maw autotransfer functional
