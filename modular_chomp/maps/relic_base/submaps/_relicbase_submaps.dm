@@ -66,7 +66,7 @@
 /datum/map_template/thor_lateload/gateway/darkrps
 	name = "Gateway - Abandoned City"
 	desc = "An abandoned city overrun with piracy and mercernaries."
-	mappath = 'maps/relic_base/submaps/gateway/darkrps.dmm'
+	mappath = "modular_chomp/maps/relic_base/submaps/gateway/darkrps.dmm"
 	associated_map_datum = /datum/map_z_level/thor_lateload/gateway_destination
 
 #include "gateway/BaseBlep.dm"
@@ -74,28 +74,28 @@
 	name = "Base Blep"
 	desc = "A brand new but already lost base at the end of a squishy canyon"
 
-	mappath = 'maps/relic_base/submaps/gateway/BaseBlep.dmm'
+	mappath = "modular_chomp/maps/relic_base/submaps/gateway/BaseBlep.dmm"
 	associated_map_datum = /datum/map_z_level/thor_lateload/gateway_destination
 
 #include "gateway/maddnesslab.dm"
 /datum/map_template/thor_lateload/gateway/maddnesslab
 	name = "Maddness Lab"
 	desc = "An ancient base brimming with creations of maddness"
-	mappath = 'maps/relic_base/submaps/gateway/maddnesslab.dmm'
+	mappath = "modular_chomp/maps/relic_base/submaps/gateway/maddnesslab.dmm"
 	associated_map_datum = /datum/map_z_level/thor_lateload/gateway_destination
 
 #include "gateway/carpfarm.dm"
 /datum/map_template/thor_lateload/gateway/carpfarm
 	name = "Carp Farm"
 	desc = "Asteroid base surrounded by carp"
-	mappath = 'maps/relic_base/submaps/gateway/carpfarm.dmm'
+	mappath = "modular_chomp/maps/relic_base/submaps/gateway/carpfarm.dmm"
 	associated_map_datum = /datum/map_z_level/thor_lateload/gateway_destination
 
 #include "gateway/hiddeneclipse.dm"
 /datum/map_template/thor_lateload/gateway/hiddeneclipse
 	name = "Distant Mining Facility"
 	desc = "Asteroid mining facility, lost to unknown horrors"
-	mappath = 'maps/relic_base/submaps/gateway/hiddeneclipse.dmm'
+	mappath = "modular_chomp/maps/relic_base/submaps/gateway/hiddeneclipse.dmm"
 	associated_map_datum = /datum/map_z_level/thor_lateload/gateway_destination
 
 //Gateway maps from Virgo!
@@ -103,58 +103,58 @@
 /datum/map_template/thor_lateload/gateway/carpfarm
 	name = "Gateway - Carp Farm"
 	desc = "Asteroid base surrounded by carp"
-	mappath = 'maps/gateway_vr/carpfarm.dmm'
+	mappath = "maps/gateway_vr/carpfarm.dmm"
 
 #include "../../gateway_vr/snowfield.dm"
 /datum/map_template/thor_lateload/gateway/snowfield
 	name = "Gateway - Snow Field"
 	desc = "An old base in middle of snowy wasteland"
-	mappath = 'maps/gateway_vr/snowfield.dmm'
+	mappath = "maps/gateway_vr/snowfield.dmm"
 
 #include "../../gateway_vr/listeningpost.dm"
 /datum/map_template/thor_lateload/gateway/listeningpost
 	name = "Gateway - Listening Post"
 	desc = "Asteroid-bound mercenary listening post"
-	mappath = 'maps/gateway_vr/listeningpost.dmm'
+	mappath = "maps/gateway_vr/listeningpost.dmm"
 
 #include "../../gateway_vr/variable/honlethhighlands.dm"
 /datum/map_template/thor_lateload/gateway/honlethhighlands_a
 	name = "Gateway - Honleth Highlands A"
 	desc = "The cold surface of some planet."
-	mappath = 'maps/gateway_vr/variable/honlethhighlands_a.dmm'
+	mappath = "maps/gateway_vr/variable/honlethhighlands_a.dmm"
 
 /datum/map_template/thor_lateload/gateway/honlethhighlands_b
 	name = "Gateway - Honleth Highlands B"
 	desc = "The cold surface of some planet."
-	mappath = 'maps/gateway_vr/variable/honlethhighlands_b.dmm'
+	mappath = "maps/gateway_vr/variable/honlethhighlands_b.dmm"
 
 
 #include "../../gateway_vr/variable/arynthilake.dm"
 /datum/map_template/thor_lateload/gateway/arynthilake
 	name = "Gateway - Arynthi Lake A"
 	desc = "A grassy surface with some abandoned structures."
-	mappath = 'maps/gateway_vr/variable/arynthilake_a.dmm'
+	mappath = "maps/gateway_vr/variable/arynthilake_a.dmm"
 
 /datum/map_template/thor_lateload/gateway/arynthilakeunderground
 	name = "Gateway - Arynthi Lake Underground A"
 	desc = "A grassy surface with some abandoned structures."
-	mappath = 'maps/gateway_vr/variable/arynthilakeunderground_a.dmm'
+	mappath = "maps/gateway_vr/variable/arynthilakeunderground_a.dmm"
 
 /datum/map_template/thor_lateload/gateway/arynthilake_b
 	name = "Gateway - Arynthi Lake B"
 	desc = "A grassy surface with some abandoned structures."
-	mappath = 'maps/gateway_vr/variable/arynthilake_b.dmm'
+	mappath = "maps/gateway_vr/variable/arynthilake_b.dmm"
 
 /datum/map_template/thor_lateload/gateway/arynthilakeunderground_b
 	name = "Gateway - Arynthi Lake Underground B"
 	desc = "A grassy surface with some abandoned structures."
-	mappath = 'maps/gateway_vr/variable/arynthilakeunderground_b.dmm'
+	mappath = "maps/gateway_vr/variable/arynthilakeunderground_b.dmm"
 
 #include "../../gateway_vr/wildwest.dm"
 /datum/map_template/thor_lateload/gateway/wildwest
 	name = "Gateway - Wild West"
 	desc = "A classic."
-	mappath = 'maps/gateway_vr/wildwest.dmm'
+	mappath = "maps/gateway_vr/wildwest.dmm"
 
 // Redgate submaps go here, taken straight up from virgo
 /datum/map_template/thor_lateload/redgate
@@ -176,53 +176,53 @@
 /datum/map_template/thor_lateload/redgate/teppi_ranch
 	name = "Redgate - Teppi Ranch"
 	desc = "An abandoned teppi ranch!"
-	mappath = 'maps/redgate/teppiranch.dmm'
+	mappath = "maps/redgate/teppiranch.dmm"
 
 /datum/map_template/thor_lateload/redgate/innland
 	name = "Redgate - Innland"
 	desc = "Caves and grass and a tavern, woah!"
-	mappath = 'maps/redgate/innland.dmm'
+	mappath = "maps/redgate/innland.dmm"
 
 /datum/map_template/thor_lateload/redgate/darkadventure
 	name = "Redgate - Dark Adventure"
 	desc = "This place seems broken!"
-	mappath = 'maps/redgate/darkadventure.dmm'
+	mappath = "maps/redgate/darkadventure.dmm"
 
 /datum/map_template/thor_lateload/redgate/stardog
 	name = "Redgate - Star Dog"
 	desc = "That's a big dog!"
-	mappath = 'maps/relic_base/submaps/redgate/stardog.dmm'
+	mappath = "modular_chomp/maps/relic_base/submaps/redgate/stardog.dmm"
 
 #include "../../redgate/eggnogtown.dm"
 /datum/map_template/common_lateload/redgate/eggnogtown
 	name = "Redgate - Eggnog Town"
 	desc = "A comfortable snowy town."
-	mappath = 'maps/redgate/eggnogtown.dmm'
+	mappath = "maps/redgate/eggnogtown.dmm"
 
 /datum/map_template/common_lateload/redgate/eggnogtownunderground
 	name = "Redgate - Eggnog Town Underground"
 	desc = "A comfortable snowy town."
-	mappath = 'maps/redgate/eggnogtownunderground.dmm'
+	mappath = "maps/redgate/eggnogtownunderground.dmm"
 
 /datum/map_template/thor_lateload/redgate/hotsprings
 	name = "Redgate - Hotsprings"
 	desc = "This place is rather cosy for somewhere so abandoned!"
-	mappath = 'maps/relic_base/submaps/redgate/hotsprings.dmm'
+	mappath = "modular_chomp/maps/relic_base/submaps/redgate/hotsprings.dmm"
 
 /datum/map_template/thor_lateload/redgate/cybercity
 	name = "Redgate - Rain City"
 	desc = "A strange city on lockdown."
-	mappath = 'maps/relic_base/submaps/redgate/cybercity.dmm'
+	mappath = "modular_chomp/maps/relic_base/submaps/redgate/cybercity.dmm"
 
 /datum/map_template/thor_lateload/redgate/islands
 	name = "Redgate - Islands"
 	desc = "A series of islands out in the ocean."
-	mappath = 'maps/redgate/islands.dmm'
+	mappath = "maps/redgate/islands.dmm"
 
 /datum/map_template/thor_lateload/redgate/islands_underwater
 	name = "Redgate - Islands Underwater"
 	desc = "A series of islands out in the ocean."
-	mappath = 'maps/redgate/islands_underwater.dmm'
+	mappath = "maps/redgate/islands_underwater.dmm"
 
 /obj/effect/landmark/map_data/islands
 	height = 2
@@ -230,12 +230,12 @@
 /datum/map_template/thor_lateload/redgate/train
 	name = "Redgate - Moving Train"
 	desc = "A long train travelling to who-knows-where."
-	mappath = 'maps/redgate/train.dmm'
+	mappath = "maps/redgate/train.dmm"
 
 /datum/map_template/thor_lateload/redgate/train_upper
 	name = "Redgate - Moving Train Upper Level"
 	desc = "A long train travelling to who-knows-where."
-	mappath = 'maps/redgate/train_upper.dmm'
+	mappath = "maps/redgate/train_upper.dmm"
 
 /obj/effect/landmark/map_data/train
 	height = 2
@@ -243,12 +243,12 @@
 /datum/map_template/thor_lateload/redgate/fantasy
 	name = "Redgate - Fantasy Town"
 	desc = "A fantasy town full of low tech stuff."
-	mappath = 'maps/relic_base/submaps/redgate/fantasy.dmm'
+	mappath = "modular_chomp/maps/relic_base/submaps/redgate/fantasy.dmm"
 
 /datum/map_template/thor_lateload/redgate/fantasy_dungeon
 	name = "Redgate - Fantasy Dungeon"
 	desc = "A fantasy dungeon with lots of monsters and loot."
-	mappath = 'maps/relic_base/submaps/redgate/fantasy_dungeon.dmm'
+	mappath = "modular_chomp/maps/relic_base/submaps/redgate/fantasy_dungeon.dmm"
 
 /obj/effect/landmark/map_data/fantasy
 	height = 2
@@ -256,22 +256,22 @@
 /datum/map_template/thor_lateload/redgate/laserdome
 	name = "Redgate - Laserdome"
 	desc = "A large orbital station with recreational facilities, namely a pair of laser tag arenas."
-	mappath = 'maps/redgate/laserdome.dmm'
+	mappath = "maps/redgate/laserdome.dmm"
 
 /datum/map_template/thor_lateload/redgate/falls
 	name = "Redgate - Cascading Falls"
 	desc = "A world made up almost entirely of water, sprinkled with obscure marble structures."
-	mappath = 'maps/relic_base/submaps/redgate/falls.dmm'
+	mappath = "modular_chomp/maps/relic_base/submaps/redgate/falls.dmm"
 
 /datum/map_template/common_lateload/redgate/jungle
 	name = "Redgate - Jungle"
 	desc = "A fantasy town full of low tech stuff."
-	mappath = 'maps/relic_base/submaps/redgate/jungle.dmm'
+	mappath = "modular_chomp/maps/relic_base/submaps/redgate/jungle.dmm"
 
 /datum/map_template/common_lateload/redgate/jungle_underground
 	name = "Redgate - Jungle Underground"
 	desc = "A fantasy dungeon with lots of monsters and loot."
-	mappath = 'maps/relic_base/submaps/redgate/jungle_underground.dmm'
+	mappath = "modular_chomp/maps/relic_base/submaps/redgate/jungle_underground.dmm"
 
 /obj/effect/landmark/map_data/jungle
 	height = 2
