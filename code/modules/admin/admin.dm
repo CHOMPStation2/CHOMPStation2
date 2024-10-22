@@ -903,12 +903,18 @@ var/datum/announcement/minor/admin_min_announcer = new
 	set desc="Whether persistent data will be saved from now on."
 	set name="Toggle Persistent Data"
 	CONFIG_SET(flag/persistence_disabled, !CONFIG_GET(flag/persistence_disabled))
+<<<<<<< HEAD
 	/* CHOMP Edit: the entire world doesn't need to know.
+=======
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 	if(!CONFIG_GET(flag/persistence_disabled))
 		to_world(span_world("Persistence is now enabled."))
 	else
 		to_world(span_world("Persistence is no longer enabled."))
+<<<<<<< HEAD
 	*/
+=======
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 	message_admins(span_blue("[key_name_admin(usr)] toggled persistence to [CONFIG_GET(flag/persistence_disabled) ? "Off" : "On"]."), 1)
 	log_admin("[key_name(usr)] toggled persistence to [CONFIG_GET(flag/persistence_disabled) ? "Off" : "On"].")
 	world.update_status()

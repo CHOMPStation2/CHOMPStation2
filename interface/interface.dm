@@ -2,7 +2,11 @@
 /client/verb/wiki(query as text)
 	set name = "wiki"
 	set desc = "Type what you want to know about.  This will open the wiki on your web browser."
+<<<<<<< HEAD
 	set category = "OOC.Resources" //CHOMPEdit
+=======
+	set category = "OOC"
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 	if(CONFIG_GET(string/wikiurl))
 		if(query)
 			if(CONFIG_GET(string/wikisearchurl))

@@ -7,7 +7,11 @@ var/datum/controller/transfer_controller/transfer_controller
 	var/shift_last_vote = 0 //VOREStation Edit
 /datum/controller/transfer_controller/New()
 	timerbuffer = CONFIG_GET(number/vote_autotransfer_initial)
+<<<<<<< HEAD
 	shift_hard_end = CONFIG_GET(number/vote_autotransfer_initial) + (CONFIG_GET(number/vote_autotransfer_interval) * 2) //CHOMPStation Edit //Change this "1" to how many extend votes you want there to be. //Note: Fuck you whoever just slapped a number here instead of using the FUCKING CONFIG LIKE ALL THE OTHER NUMBERS HERE
+=======
+	shift_hard_end = CONFIG_GET(number/vote_autotransfer_initial) + (CONFIG_GET(number/vote_autotransfer_interval) * 0) //VOREStation Edit //Change this "1" to how many extend votes you want there to be.
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 	shift_last_vote = shift_hard_end - CONFIG_GET(number/vote_autotransfer_interval) //VOREStation Edit
 	START_PROCESSING(SSprocessing, src)
 

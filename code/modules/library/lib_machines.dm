@@ -45,7 +45,11 @@
 			<A href='?src=\ref[src];search=1'>\[Start Search\]</A><BR>"}
 		if(1)
 			establish_db_connection()
+<<<<<<< HEAD
 			if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
+=======
+			if(!dbcon_old.IsConnected())
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 				dat += span_red(span_bold("ERROR") + ": Unable to contact External Archive. Please contact your system administrator for assistance.") + "<BR>"
 			else if(!SQLquery)
 				dat += span_red(span_bold("ERROR") + ": Malformed search request. Please contact your system administrator for assistance.") + "<BR>"
@@ -442,7 +446,11 @@
 						tgui_alert_async(usr, "This book has been rejected from the database. Aborting!")
 					else
 						establish_db_connection()
+<<<<<<< HEAD
 						if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
+=======
+						if(!dbcon_old.IsConnected())
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 							tgui_alert_async(usr, "Connection to Archive has been severed. Aborting.")
 						else
 							/*
@@ -468,7 +476,11 @@
 	if(href_list["targetid"])
 		var/sqlid = sanitizeSQL(href_list["targetid"])
 		establish_db_connection()
+<<<<<<< HEAD
 		if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
+=======
+		if(!dbcon_old.IsConnected())
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 			tgui_alert_async(usr, "Connection to Archive has been severed. Aborting.")
 		if(bibledelay)
 			for (var/mob/V in hearers(src))
@@ -493,7 +505,22 @@
 				B.item_state = B.icon_state
 				src.visible_message("[src]'s printer hums as it produces a completely bound book. How did it do that?")
 				break
+<<<<<<< HEAD
 			qdel(query) //CHOMPEdit TGSQL
+=======
+
+	if(href_list["delid"])
+		if(!check_rights(R_ADMIN))
+			return
+		var/sqlid = sanitizeSQL(href_list["delid"])
+		establish_db_connection()
+		if(!dbcon_old.IsConnected())
+			tgui_alert_async(usr, "Connection to Archive has been severed. Aborting.")
+		else
+			var/DBQuery/query = dbcon_old.NewQuery("DELETE FROM library WHERE id=[sqlid]")
+			query.Execute()
+			log_admin("[usr.key] has deleted the book [sqlid]")	//VOREStation Addition
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 
 	if(href_list["orderbyid"])
 		var/orderid = tgui_input_number(usr, "Enter your order:")
