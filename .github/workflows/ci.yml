@@ -166,7 +166,7 @@ jobs:
       - name: Compile away missions
         run: tools/ci/compile_and_run.sh
         env:
-          EXTRA_ARGS: "-DAWAY_MISSION_TEST -DUSE_MAP_TETHER" # Only Tether has support for all away missions
+          EXTRA_ARGS: "-DAWAY_MISSION_TEST" # Only Tether has support for all away missions
           RUN: "0"
 
   tests_successful:
