@@ -42,7 +42,7 @@
 
 	// CHOMPStation Edits End - Un-disable these includes if vorestation.dme ever removes them from their #includes.
 
-	#if !AWAY_MISSION_TEST //Don't include these for just testing away missions if the flag is set to true in /code/_away_mission_tests.dm
+	#ifndef AWAY_MISSION_TEST //Don't include these for just testing away missions if the flag is set to true in /code/_away_mission_tests.dm
 //		#include "southern_cross-0.dmm" // Deck 0
 		#include "soluna_nexus-1.dmm" //Deck 1 z1
 		#include "soluna_nexus-2.dmm" //Deck 2 z2
@@ -92,6 +92,6 @@
 
 #elif !defined(MAP_OVERRIDE)
 
-	#warn A map has already been included, ignoring Southern Cross
+	#warn A map has already been included, ignoring Soluna Nexus
 
 #endif

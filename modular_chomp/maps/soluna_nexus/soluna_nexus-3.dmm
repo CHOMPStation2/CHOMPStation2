@@ -16730,7 +16730,7 @@
 /area/space)
 "foz" = (
 /turf/unsimulated/mask,
-/area/maintenance/Room_88)
+/area/hallway/Aft_1_Deck_Stairwell)
 "foO" = (
 /obj/structure/cable/green{
 	d1 = 4;

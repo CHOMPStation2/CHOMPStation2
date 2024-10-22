@@ -14874,7 +14874,7 @@
 /area/maintenance/Deck2_Science_StarCorridor1)
 "aTa" = (
 /turf/unsimulated/mask,
-/area/maintenance/Room_89)
+/area/hallway/Aft_2_Deck_Stairwell)
 "aTb" = (
 /obj/structure/cable/green{
 	d1 = 4;
