@@ -44722,7 +44722,7 @@
 "nxq" = (
 /obj/turbolift_map_holder/soluna_nexus/port,
 /turf/simulated/floor/plating/eris/under,
-/area/maintenance/Room_88)
+/area/hallway/Aft_1_Deck_Stairwell)
 "nxr" = (
 /obj/structure/cable{
 	d1 = 2;
@@ -46783,7 +46783,7 @@
 "odp" = (
 /obj/turbolift_map_holder/soluna_nexus/starboard,
 /turf/simulated/floor/plating/eris/under,
-/area/maintenance/Room_88)
+/area/hallway/Aft_1_Deck_Stairwell)
 "odq" = (
 /obj/structure/bed/chair/oldsofa/left{
 	dir = 1
@@ -46853,7 +46853,7 @@
 /area/maintenance/Deck1_Cargo_Chamber1)
 "oex" = (
 /turf/simulated/floor/plating/eris/under,
-/area/maintenance/Room_88)
+/area/hallway/Aft_1_Deck_Stairwell)
 "oeC" = (
 /obj/machinery/camera/network/security{
 	dir = 8;
@@ -53771,7 +53771,7 @@
 "qqZ" = (
 /obj/turbolift_map_holder/soluna_nexus/center,
 /turf/simulated/floor/plating/eris/under,
-/area/maintenance/Room_88)
+/area/hallway/Aft_1_Deck_Stairwell)
 "qra" = (
 /obj/machinery/mineral/stacking_unit_console,
 /turf/simulated/wall/r_wall,
@@ -64131,7 +64131,7 @@
 "tWK" = (
 /obj/turbolift_map_holder/soluna_nexus/aft,
 /turf/simulated/floor/plating/eris/under,
-/area/maintenance/Room_88)
+/area/hallway/Aft_1_Deck_Stairwell)
 "tWM" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/arrows{
@@ -74971,7 +74971,7 @@
 "xMb" = (
 /obj/turbolift_map_holder/soluna_nexus/forward,
 /turf/simulated/floor/plating/eris/under,
-/area/maintenance/Room_88)
+/area/hallway/Aft_1_Deck_Stairwell)
 "xMB" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume,
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
