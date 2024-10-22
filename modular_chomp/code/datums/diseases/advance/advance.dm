@@ -330,9 +330,12 @@ GLOBAL_LIST_INIT(advance_cures, list(
 		if(length(preserve))
 			R.data["viruses"] = preserve
 
-/proc/AdminCreateVirus(client/user)
+/client/proc/AdminCreateVirus()
+	set category = "Admin.Game"
+	set name = "Create Advanced Virus"
+	set desc = "Create an advanced virus and release it."
 
-	if(!user)
+	if(!is_admin())
 		return
 
 	var/i = VIRUS_SYMPTOM_LIMIT
@@ -344,8 +347,8 @@ GLOBAL_LIST_INIT(advance_cures, list(
 	symptoms += "Done"
 	symptoms += GLOB.list_symptoms.Copy()
 	do
-		if(user)
-			var/symptom = input(user, "Choose a symptom to add ([i] remaining)", "Choose a Symptom") in symptoms
+		if(usr)
+			var/symptom = tgui_input_list(usr, "Choose a symptom to add ([i] remaining)", "Choose a Symptom", symptoms)
 			if(isnull(symptom))
 				return
 			else if(istext(symptom))
@@ -359,7 +362,7 @@ GLOBAL_LIST_INIT(advance_cures, list(
 
 	if(length(D.symptoms) > 0)
 
-		var/new_name = stripped_input(user, "Name your new disease.", "New Name")
+		var/new_name = tgui_input_text(usr, "Name your new disease.", "New Name")
 		if(!new_name)
 			return
 		D.AssignName(new_name)
@@ -370,7 +373,7 @@ GLOBAL_LIST_INIT(advance_cures, list(
 
 		for(var/thing in shuffle(human_mob_list))
 			var/mob/living/carbon/human/H = thing
-			if(H.stat == DEAD || !isStationLevel(H.z))
+			if(H.stat == DEAD)
 				continue
 			if(!H.HasDisease(D))
 				H.ForceContractDisease(D)
@@ -379,7 +382,7 @@ GLOBAL_LIST_INIT(advance_cures, list(
 		var/list/name_symptoms = list()
 		for(var/datum/symptom/S in D.symptoms)
 			name_symptoms += S.name
-		message_admins("[key_name_admin(user)] has triggered a custom virus outbreak of [D.name]! It has these symptoms: [english_list(name_symptoms)]")
+		message_admins("[key_name_admin(usr)] has triggered a custom virus outbreak of [D.name]! It has these symptoms: [english_list(name_symptoms)]")
 
 /datum/disease/advance/proc/totalStageSpeed()
 	var/total_stage_speed = 0

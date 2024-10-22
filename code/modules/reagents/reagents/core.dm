@@ -115,17 +115,18 @@
 
 		var/list/to_mix = list()
 
-		for(var/datum/disease/AD in mix1)
+		for(var/datum/disease/advance/AD in mix1)
 			to_mix += AD
-		for(var/datum/disease/AD in mix2)
+		for(var/datum/disease/advance/AD in mix2)
 			to_mix += AD
 
 		var/datum/disease/advance/AD = Advance_Mix(to_mix)
-		var/list/preserve = list(AD)
-		for(var/D in to_mix)
-			if(!istype(D, /datum/disease/advance))
-				preserve += D
-		data["viruses"] = preserve
+		if(AD)
+			var/list/preserve = list(AD)
+			for(var/D in data["viruses"])
+				if(!istype(D, /datum/disease/advance))
+					preserve += D
+			data["viruses"] = preserve
 
 	// CHOMPEdit End
 

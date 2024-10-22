@@ -104,11 +104,11 @@
 		dat += span_bold("Bone Fracture") + " - Splint the fractured limb. Commence a bone repair operation or administer Osteodaxon after treating the physical trauma.<br>"
 	// CHOMPEdit Start
 	if(M.viruses.len)
-		var/detected = FALSE
 		for(var/datum/disease/D in M.viruses)
-			if(D.discovered && !detected)
-				dat += span_bold("Viral Infection") + " - Inform a Virologist or the Chief Medical Officer and administer antiviral chemicals such as Corophizine and Spaceacilin. Limit exposure to other personnel.<br>"
-				detected = TRUE
+			if(D.visibility_flags & HIDDEN_SCANNER)
+				continue
+			else
+				dat += span_bold("Viral Infection") + " - Inform a Virologist or the Chief Medical Officer and administer antiviral chemicals such as Spaceacilin. Limit exposure to other personnel.<br>"
 	// CHOMPEdit End
 	if(robotparts)
 		dat += span_bold("Robotic Body Parts") + " - Inform the Robotics department."

@@ -66,7 +66,7 @@ GLOBAL_LIST_INIT(diseases, subtypesof(/datum/disease))
 		stage = min(stage + 1, max_stages)
 		if(!discovered && stage >= CEILING(max_stages * discovery_threshold, 1))
 			discovered = TRUE
-			affected_mob.hud_updateflag |= << STATUS_HUD
+			BITSET(affected_mob.hud_updateflag, STATUS_HUD)
 
 /datum/disease/proc/handle_cure_testing(has_cure = FALSE)
 	if(has_cure && prob(cure_chance))

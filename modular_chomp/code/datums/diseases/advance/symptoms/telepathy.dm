@@ -32,4 +32,4 @@ Bonus
 				if(!H.dna.GetSEState(REMOTETALKBLOCK))
 					H.dna.SetSEState(REMOTETALKBLOCK, 1)
 					domutcheck(H, null, MUTCHK_FORCED)
-					to_chat(affected_mob, span_notice("Your mind expands..."))
+					to_chat(H, span_notice("Your mind expands..."))

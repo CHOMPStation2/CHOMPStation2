@@ -379,8 +379,14 @@
 		dat += (occupant.health > (occupant.getMaxHealth() / 2) ? span_blue(health_text) : span_red(health_text))
 		dat += "<br>"
 
-		if(occupant.viruses.len) // CHOMPEdit
-			dat += span_red("Viral pathogen detected in blood stream.") + "<BR>"
+		// CHOMPEdit Start - Viro rework
+		if(occupant.viruses.len)
+			for(var/datum/disease/D in occupant.viruses)
+				if(D.visibility_flags & HIDDEN_SCANNER)
+					continue
+				else
+					dat += span_red("Viral pathogen detected in blood stream.") + "<BR>"
+		// CHOMPEdit End
 
 		var/damage_string = null
 		damage_string = "\t-Brute Damage %: [occupant.getBruteLoss()]"
