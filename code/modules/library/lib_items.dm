@@ -207,7 +207,10 @@ Book Cart End
 	else
 		to_chat(user, "This book is completely blank!")
 
+<<<<<<< HEAD
 /// Proc that handles sending the book information to the user, as well as some housekeeping stuff.
+=======
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 /obj/item/book/proc/display_content(mob/living/user)
 	user << browse("<TT><I>Penned by [author].</I></TT> <BR>" + "[dat]", "window=book")
 

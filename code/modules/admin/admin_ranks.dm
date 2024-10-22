@@ -70,10 +70,15 @@ var/list/admin_ranks = list()								//list of all ranks with associated rights
 	GLOB.admins.Cut()
 	load_admin_ranks() //CHOMP Edit: moved this from "f(config.admin_legacy_system)" and put it here instead, literally just moved it 3 lines.
 
+<<<<<<< HEAD
 	if(CONFIG_GET(flag/admin_legacy_system)) // CHOMPEdit
 		//Clear profile access
 		for(var/A in world.GetConfig("admin"))
 			world.SetConfig("APP/admin", A, null)
+=======
+	if(CONFIG_GET(flag/admin_legacy_system))
+		load_admin_ranks()
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 
 		//load text from file
 		var/list/Lines = file2list("config/admins.txt")

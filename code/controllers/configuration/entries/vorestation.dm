@@ -34,7 +34,11 @@
 
 /// Hours
 /datum/config_entry/number/pto_cap
+<<<<<<< HEAD
 	default = 200 // CHOMPEdit
+=======
+	default = 100
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 	protection = CONFIG_ENTRY_LOCKED
 
 /datum/config_entry/flag/require_flavor

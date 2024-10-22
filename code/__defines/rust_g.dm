@@ -91,6 +91,7 @@
 #define md5(thing) (isfile(thing) ? rustg_hash_file(RUSTG_HASH_MD5, "[thing]") : rustg_hash_string(RUSTG_HASH_MD5, thing))
 #endif
 
+<<<<<<< HEAD
 /**
  * Sets up the Aho-Corasick automaton with its default options.
  *
@@ -150,6 +151,8 @@
 	RUSTG_CALL(RUST_G, "cnoise_generate")(percentage, smoothing_iterations, birth_limit, death_limit, width, height)
 
 
+=======
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 #define RUSTG_HTTP_METHOD_GET "get"
 #define RUSTG_HTTP_METHOD_PUT "put"
 #define RUSTG_HTTP_METHOD_DELETE "delete"
@@ -159,6 +162,7 @@
 #define rustg_http_request_blocking(method, url, body, headers, options) RUSTG_CALL(RUST_G, "http_request_blocking")(method, url, body, headers, options)
 #define rustg_http_request_async(method, url, body, headers, options) RUSTG_CALL(RUST_G, "http_request_async")(method, url, body, headers, options)
 #define rustg_http_check_request(req_id) RUSTG_CALL(RUST_G, "http_check_request")(req_id)
+<<<<<<< HEAD
 
 #define RUSTG_JOB_NO_RESULTS_YET "NO RESULTS YET"
 #define RUSTG_JOB_NO_SUCH_JOB "NO SUCH JOB"
@@ -187,6 +191,36 @@
 #define rustg_sql_connected(handle) RUSTG_CALL(RUST_G, "sql_connected")(handle)
 #define rustg_sql_disconnect_pool(handle) RUSTG_CALL(RUST_G, "sql_disconnect_pool")(handle)
 #define rustg_sql_check_query(job_id) RUSTG_CALL(RUST_G, "sql_check_query")("[job_id]")
+=======
+
+#define RUSTG_JOB_NO_RESULTS_YET "NO RESULTS YET"
+#define RUSTG_JOB_NO_SUCH_JOB "NO SUCH JOB"
+#define RUSTG_JOB_ERROR "JOB PANICKED"
+
+#define rustg_json_is_valid(text) (RUSTG_CALL(RUST_G, "json_is_valid")(text) == "true")
+
+#define rustg_log_write(fname, text, format) LIBCALL(RUST_G, "log_write")(fname, text, format)
+/proc/rustg_log_close_all() return LIBCALL(RUST_G, "log_close_all")()
+
+#define rustg_noise_get_at_coordinates(seed, x, y) RUSTG_CALL(RUST_G, "noise_get_at_coordinates")(seed, x, y)
+
+/*
+ * Takes in a string and json_encode()"d lists to produce a sanitized string.
+ * This function operates on whitelists, there is currently no way to blacklist.
+ * Args:
+ * * text: the string to sanitize.
+ * * attribute_whitelist_json: a json_encode()'d list of HTML attributes to allow in the final string.
+ * * tag_whitelist_json: a json_encode()'d list of HTML tags to allow in the final string.
+ */
+#define rustg_sanitize_html(text, attribute_whitelist_json, tag_whitelist_json) RUSTG_CALL(RUST_G, "sanitize_html")(text, attribute_whitelist_json, tag_whitelist_json)
+
+#define rustg_sql_connect_pool(options) LIBCALL(RUST_G, "sql_connect_pool")(options)
+#define rustg_sql_query_async(handle, query, params) LIBCALL(RUST_G, "sql_query_async")(handle, query, params)
+#define rustg_sql_query_blocking(handle, query, params) LIBCALL(RUST_G, "sql_query_blocking")(handle, query, params)
+#define rustg_sql_connected(handle) LIBCALL(RUST_G, "sql_connected")(handle)
+#define rustg_sql_disconnect_pool(handle) LIBCALL(RUST_G, "sql_disconnect_pool")(handle)
+#define rustg_sql_check_query(job_id) LIBCALL(RUST_G, "sql_check_query")("[job_id]")
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 
 #define rustg_time_microseconds(id) text2num(RUSTG_CALL(RUST_G, "time_microseconds")(id))
 #define rustg_time_milliseconds(id) text2num(RUSTG_CALL(RUST_G, "time_milliseconds")(id))

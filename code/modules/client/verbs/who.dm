@@ -114,7 +114,11 @@
 	msg = span_bold("Current Admins ([num_admins_online]):") + "\n" + msg
 
 	if(CONFIG_GET(flag/show_mods))
+<<<<<<< HEAD
 		msg += "\n" + span_bold(" Current Moderators ([num_mods_online]):") + "\n" + modmsg // CHOMPEdit
+=======
+		msg += "\n" + span_bold(" Current Game Masters ([num_mods_online]):") + "\n" + modmsg
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 
 	if(CONFIG_GET(flag/show_devs))
 		msg += "\n" + span_bold(" Current Developers ([num_devs_online]):") + "\n" + devmsg

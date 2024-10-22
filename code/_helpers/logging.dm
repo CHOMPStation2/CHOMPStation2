@@ -42,9 +42,14 @@
 		WRITE_LOG(diary, "PRAY: [key_name(source)]: [text]")
 
 /proc/log_debug(text)
+<<<<<<< HEAD
 	//if (CONFIG_GET(flag/log_debug)) // CHOMPRemove
 	//	WRITE_LOG(debug_log, "DEBUG: [sanitize(text)]") // CHOMPRemove
 	WRITE_LOG(debug_log, "DEBUG: [sanitize(text)]")
+=======
+	if (CONFIG_GET(flag/log_debug))
+		WRITE_LOG(debug_log, "DEBUG: [sanitize(text)]")
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 
 	for(var/client/C in GLOB.admins)
 		if(C.prefs?.read_preference(/datum/preference/toggle/show_debug_logs))
@@ -260,9 +265,14 @@
 
 /proc/log_to_dd(text)
 	to_world_log(text) //this comes before the config check because it can't possibly runtime
+<<<<<<< HEAD
 	//if(CONFIG_GET(flag/log_world_output)) // CHOMPRemove
 	//	WRITE_LOG(diary, "DD_OUTPUT: [text]") // CHOMPRemove
 	WRITE_LOG(diary, "DD_OUTPUT: [text]")
+=======
+	if(CONFIG_GET(flag/log_world_output))
+		WRITE_LOG(diary, "DD_OUTPUT: [text]")
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 
 /proc/log_error(text)
 	to_world_log(text)
