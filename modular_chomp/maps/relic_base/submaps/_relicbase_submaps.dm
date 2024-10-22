@@ -99,25 +99,25 @@
 	associated_map_datum = /datum/map_z_level/thor_lateload/gateway_destination
 
 //Gateway maps from Virgo!
-#include "../../../maps/gateway_vr/carpfarm.dm"
+#include "../../../../maps/gateway_vr/carpfarm.dm"
 /datum/map_template/thor_lateload/gateway/carpfarm
 	name = "Gateway - Carp Farm"
 	desc = "Asteroid base surrounded by carp"
 	mappath = "maps/gateway_vr/carpfarm.dmm"
 
-#include "../../../maps/gateway_vr/snowfield.dm"
+#include "../../../../maps/gateway_vr/snowfield.dm"
 /datum/map_template/thor_lateload/gateway/snowfield
 	name = "Gateway - Snow Field"
 	desc = "An old base in middle of snowy wasteland"
 	mappath = "maps/gateway_vr/snowfield.dmm"
 
-#include "../../../maps/gateway_vr/listeningpost.dm"
+#include "../../../../maps/gateway_vr/listeningpost.dm"
 /datum/map_template/thor_lateload/gateway/listeningpost
 	name = "Gateway - Listening Post"
 	desc = "Asteroid-bound mercenary listening post"
 	mappath = "maps/gateway_vr/listeningpost.dmm"
 
-#include "../../../maps/ateway_vr/variable/honlethhighlands.dm"
+#include "../../../../maps/ateway_vr/variable/honlethhighlands.dm"
 /datum/map_template/thor_lateload/gateway/honlethhighlands_a
 	name = "Gateway - Honleth Highlands A"
 	desc = "The cold surface of some planet."
@@ -129,7 +129,7 @@
 	mappath = "maps/gateway_vr/variable/honlethhighlands_b.dmm"
 
 
-#include "../../../maps/gateway_vr/variable/arynthilake.dm"
+#include "../../../../maps/gateway_vr/variable/arynthilake.dm"
 /datum/map_template/thor_lateload/gateway/arynthilake
 	name = "Gateway - Arynthi Lake A"
 	desc = "A grassy surface with some abandoned structures."
@@ -150,7 +150,7 @@
 	desc = "A grassy surface with some abandoned structures."
 	mappath = "maps/gateway_vr/variable/arynthilakeunderground_b.dmm"
 
-#include "../../../maps/gateway_vr/wildwest.dm"
+#include "../../../../maps/gateway_vr/wildwest.dm"
 /datum/map_template/thor_lateload/gateway/wildwest
 	name = "Gateway - Wild West"
 	desc = "A classic."
@@ -193,7 +193,7 @@
 	desc = "That's a big dog!"
 	mappath = "modular_chomp/maps/relic_base/submaps/redgate/stardog.dmm"
 
-#include "../../redgate/eggnogtown.dm"
+#include "../../../../maps/redgate/eggnogtown.dm"
 /datum/map_template/common_lateload/redgate/eggnogtown
 	name = "Redgate - Eggnog Town"
 	desc = "A comfortable snowy town."
