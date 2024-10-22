@@ -5124,7 +5124,7 @@
 #include "modular_chomp\maps\overmap\om_ships\offmap.dm"
 #include "modular_chomp\maps\overmap\space_pois\space_areas.dm"
 #include "modular_chomp\maps\overmap\space_pois\space_pois.dm"
-#include "modular_chomp\maps\soluna_nexus\soluna_nexus.dm"
+#include "modular_chomp\maps\southern_cross\southern_cross.dm"
 #include "modular_chomp\maps\southern_cross\items\encryptionkey_sc.dm"
 #include "modular_chomp\maps\southern_cross\items\headset_sc.dm"
 #include "modular_chomp\maps\southern_cross\items\clothing\sc_accessory.dm"
