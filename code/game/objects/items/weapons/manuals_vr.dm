@@ -6,7 +6,11 @@
 	author = "NanoTrasen"
 	title = "Standard Operating Procedure"
 
+<<<<<<< HEAD
 /obj/item/book/manual/standard_operating_procedure/Initialize() // CHOMPEdit
+=======
+/obj/item/book/manual/standard_operating_procedure/Initialize()
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 	..()
 	dat = {"
 
@@ -29,7 +33,11 @@
 	author = "Jeremiah Acacius"
 	title = "Corporate Regulations"
 
+<<<<<<< HEAD
 /obj/item/book/manual/command_guide/Initialize() // CHOMPEdit
+=======
+/obj/item/book/manual/command_guide/Initialize()
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 	..()
 	dat = {"
 

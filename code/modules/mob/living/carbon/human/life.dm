@@ -558,7 +558,11 @@
 
 	if(!breath || (breath.total_moles == 0))
 		failed_last_breath = 1
+<<<<<<< HEAD
 		if(health > CONFIG_GET(number/health_threshold_crit)) // CHOMPEdit
+=======
+		if(health > CONFIG_GET(number/health_threshold_crit))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 			adjustOxyLoss(HUMAN_MAX_OXYLOSS)
 		else
 			adjustOxyLoss(HUMAN_CRIT_MAX_OXYLOSS)
@@ -1264,7 +1268,11 @@
 	else				//ALIVE. LIGHTS ARE ON
 		updatehealth()	//TODO
 
+<<<<<<< HEAD
 		if(health <= CONFIG_GET(number/health_threshold_dead) || (should_have_organ("brain") && !has_brain())) // CHOMPEdit
+=======
+		if(health <= CONFIG_GET(number/health_threshold_dead) || (should_have_organ("brain") && !has_brain()))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 			death()
 			blinded = 1
 			silent = 0
@@ -1272,7 +1280,11 @@
 			return 1
 
 		//UNCONSCIOUS. NO-ONE IS HOME
+<<<<<<< HEAD
 		if((getOxyLoss() > (species.total_health/2)) || (health <= (CONFIG_GET(number/health_threshold_crit) * species.crit_mod))) // CHOMPEdit
+=======
+		if((getOxyLoss() > (species.total_health/2)) || (health <= CONFIG_GET(number/health_threshold_crit)))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 			Paralyse(3)
 
 		if(hallucination)
@@ -1652,7 +1664,11 @@
 			//clear_fullscreen("belly3") //Chomp disable, using our own implementation
 			//clear_fullscreen("belly4") //Chomp disable, using our own implementation
 
+<<<<<<< HEAD
 		if(CONFIG_GET(flag/welder_vision)) // CHOMPEdit
+=======
+		if(CONFIG_GET(flag/welder_vision))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 			var/found_welder
 			if(species.short_sighted)
 				found_welder = 1
@@ -1903,9 +1919,21 @@
 /mob/living/carbon/human/handle_shock()
 	..()
 	if(status_flags & GODMODE)	return 0	//godmode
+<<<<<<< HEAD
 	//CHOMPEdit - couple of fixes here. Fixes synths being stuck in permenant shock.
 	if(traumatic_shock >= 80 && can_feel_pain())
 		shock_stage += 1
+=======
+	if(!can_feel_pain()) return
+
+	if(health < CONFIG_GET(number/health_threshold_softcrit))// health 0 makes you immediately collapse
+		shock_stage = max(shock_stage, 61)
+
+	if(traumatic_shock >= 80)
+		shock_stage += 1
+	else if(health < CONFIG_GET(number/health_threshold_softcrit))
+		shock_stage = max(shock_stage, 61)
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 	else
 		shock_stage = min(shock_stage, 160)
 		shock_stage = max(shock_stage-1, 0)
@@ -2093,7 +2121,11 @@
 		if(stat == DEAD)
 			holder.icon_state = "-100" 	// X_X
 		else
+<<<<<<< HEAD
 			holder.icon_state = RoundHealth((health-CONFIG_GET(number/health_threshold_crit))/(getMaxHealth()-CONFIG_GET(number/health_threshold_crit))*100) // CHOMPEdit
+=======
+			holder.icon_state = RoundHealth((health-CONFIG_GET(number/health_threshold_crit))/(getMaxHealth()-CONFIG_GET(number/health_threshold_crit))*100)
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		if(block_hud)
 			holder.icon_state = "hudblank"
 		apply_hud(HEALTH_HUD, holder)

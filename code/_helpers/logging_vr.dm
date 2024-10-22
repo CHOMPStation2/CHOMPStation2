@@ -1,5 +1,9 @@
 /proc/log_nsay(text, inside, mob/speaker)
+<<<<<<< HEAD
 	if (CONFIG_GET(flag/log_say)) // CHOMPEdit
+=======
+	if (CONFIG_GET(flag/log_say))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		WRITE_LOG(diary, "NSAY (NIF:[inside]): [speaker.simple_info_line()]: [html_decode(text)]")
 	//CHOMPEdit Begin
 	if(speaker.client)
@@ -17,7 +21,11 @@
 	//CHOMPEdit End
 
 /proc/log_nme(text, inside, mob/speaker)
+<<<<<<< HEAD
 	if (CONFIG_GET(flag/log_emote)) // CHOMPEdit
+=======
+	if (CONFIG_GET(flag/log_emote))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		WRITE_LOG(diary, "NME (NIF:[inside]): [speaker.simple_info_line()]: [html_decode(text)]")
 	//CHOMPEdit Begin
 	if(speaker.client)
@@ -35,7 +43,11 @@
 	//CHOMPEdit End
 
 /proc/log_subtle(text, mob/speaker)
+<<<<<<< HEAD
 	if (CONFIG_GET(flag/log_emote)) // CHOMPEdit
+=======
+	if (CONFIG_GET(flag/log_emote))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		WRITE_LOG(diary, "SUBTLE: [speaker.simple_info_line()]: [html_decode(text)]")
 	//CHOMPEdit Begin
 	if(speaker.client)

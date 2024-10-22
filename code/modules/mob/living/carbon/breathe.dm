@@ -2,7 +2,11 @@
 
 //Start of a breath chain, calls breathe()
 /mob/living/carbon/handle_breathing()
+<<<<<<< HEAD
 	if(air_master.current_cycle%4==2 || failed_last_breath || (health < CONFIG_GET(number/health_threshold_crit))) 	//First, resolve location and get a breath // CHOMPEdit
+=======
+	if(air_master.current_cycle%4==2 || failed_last_breath || (health < CONFIG_GET(number/health_threshold_crit))) 	//First, resolve location and get a breath
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		breathe()
 
 /mob/living/carbon/proc/breathe()
@@ -12,7 +16,11 @@
 	var/datum/gas_mixture/breath = null
 
 	//First, check if we can breathe at all
+<<<<<<< HEAD
 	if(health < CONFIG_GET(number/health_threshold_crit) && !(CE_STABLE in chem_effects)) //crit aka circulatory shock // CHOMPEdit
+=======
+	if(health < CONFIG_GET(number/health_threshold_crit) && !(CE_STABLE in chem_effects)) //crit aka circulatory shock
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		AdjustLosebreath(1)
 
 	if(losebreath>0) //Suffocating so do not take a breath

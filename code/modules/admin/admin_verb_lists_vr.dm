@@ -593,7 +593,11 @@ var/list/admin_verbs_event_manager = list(
 		if(holder.rights & R_SERVER)		add_verb(src, admin_verbs_server)
 		if(holder.rights & R_DEBUG)
 			add_verb(src, admin_verbs_debug)
+<<<<<<< HEAD
 			if(CONFIG_GET(flag/debugparanoid) && !(holder.rights & R_ADMIN)) // CHOMPEdit
+=======
+			if(CONFIG_GET(flag/debugparanoid) && !(holder.rights & R_ADMIN))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 				remove_verb(src, admin_verbs_paranoid_debug)			//Right now it's just callproc but we can easily add others later on.
 		if(holder.rights & R_POSSESS)		add_verb(src, admin_verbs_possess)
 		if(holder.rights & R_PERMISSIONS)	add_verb(src, admin_verbs_permissions)

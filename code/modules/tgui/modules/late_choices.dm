@@ -121,7 +121,11 @@
 		if("join")
 			var/job = params["job"]
 
+<<<<<<< HEAD
 			if(!CONFIG_GET(flag/enter_allowed)) // CHOMPEdit
+=======
+			if(!CONFIG_GET(flag/enter_allowed))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 				to_chat(user, span_notice("There is an administrative lock on entering the game!"))
 				return
 			else if(ticker && ticker.mode && ticker.mode.explosion_in_progress)

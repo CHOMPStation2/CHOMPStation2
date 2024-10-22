@@ -43,10 +43,48 @@
 #define RUSTG_CALL call_ext
 #else
 #define RUSTG_CALL call
+<<<<<<< HEAD
 #endif
 
 /// Gets the version of rust_g
 /proc/rustg_get_version() return RUSTG_CALL(RUST_G, "get_version")()
+=======
+#endif
+
+/// Gets the version of rust_g
+/proc/rustg_get_version() return RUSTG_CALL(RUST_G, "get_version")()
+
+#define rustg_dmi_strip_metadata(fname) RUSTG_CALL(RUST_G, "dmi_strip_metadata")(fname)
+#define rustg_dmi_create_png(path, width, height, data) RUSTG_CALL(RUST_G, "dmi_create_png")(path, width, height, data)
+#define rustg_dmi_resize_png(path, width, height, resizetype) RUSTG_CALL(RUST_G, "dmi_resize_png")(path, width, height, resizetype)
+/**
+ * input: must be a path, not an /icon; you have to do your own handling if it is one, as icon objects can't be directly passed to rustg.
+ *
+ * output: json_encode'd list. json_decode to get a flat list with icon states in the order they're in inside the .dmi
+ */
+#define rustg_dmi_icon_states(fname) RUSTG_CALL(RUST_G, "dmi_icon_states")(fname)
+
+#define rustg_file_read(fname) RUSTG_CALL(RUST_G, "file_read")(fname)
+#define rustg_file_exists(fname) (RUSTG_CALL(RUST_G, "file_exists")(fname) == "true")
+#define rustg_file_write(text, fname) RUSTG_CALL(RUST_G, "file_write")(text, fname)
+#define rustg_file_append(text, fname) RUSTG_CALL(RUST_G, "file_append")(text, fname)
+#define rustg_file_get_line_count(fname) text2num(RUSTG_CALL(RUST_G, "file_get_line_count")(fname))
+#define rustg_file_seek_line(fname, line) RUSTG_CALL(RUST_G, "file_seek_line")(fname, "[line]")
+
+#ifdef RUSTG_OVERRIDE_BUILTINS
+#define file2text(fname) rustg_file_read("[fname]")
+#define text2file(text, fname) rustg_file_append(text, "[fname]")
+#endif
+
+/// Returns the git hash of the given revision, ex. "HEAD".
+#define rustg_git_revparse(rev) RUSTG_CALL(RUST_G, "rg_git_revparse")(rev)
+
+/**
+ * Returns the date of the given revision in the format YYYY-MM-DD.
+ * Returns null if the revision is invalid.
+ */
+#define rustg_git_commit_date(rev) RUSTG_CALL(RUST_G, "rg_git_commit_date")(rev)
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 
 
 /**
@@ -129,6 +167,7 @@
 	#define text2file(text, fname) rustg_file_append(text, "[fname]")
 #endif
 
+<<<<<<< HEAD
 /// Returns the git hash of the given revision, ex. "HEAD".
 #define rustg_git_revparse(rev) RUSTG_CALL(RUST_G, "rg_git_revparse")(rev)
 
@@ -138,6 +177,8 @@
  */
 #define rustg_git_commit_date(rev) RUSTG_CALL(RUST_G, "rg_git_commit_date")(rev)
 
+=======
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 #define RUSTG_HTTP_METHOD_GET "get"
 #define RUSTG_HTTP_METHOD_PUT "put"
 #define RUSTG_HTTP_METHOD_DELETE "delete"
@@ -154,6 +195,7 @@
 
 #define rustg_json_is_valid(text) (RUSTG_CALL(RUST_G, "json_is_valid")(text) == "true")
 
+<<<<<<< HEAD
 #define rustg_log_write(fname, text, format) RUSTG_CALL(RUST_G, "log_write")(fname, text, format)
 /proc/rustg_log_close_all() return RUSTG_CALL(RUST_G, "log_close_all")()
 
@@ -200,3 +242,60 @@
 	#define url_decode(text) rustg_url_decode(text)
 #endif
 
+=======
+#define rustg_log_write(fname, text, format) LIBCALL(RUST_G, "log_write")(fname, text, format)
+/proc/rustg_log_close_all() return LIBCALL(RUST_G, "log_close_all")()
+
+#define rustg_noise_get_at_coordinates(seed, x, y) RUSTG_CALL(RUST_G, "noise_get_at_coordinates")(seed, x, y)
+
+/*
+ * Takes in a string and json_encode()"d lists to produce a sanitized string.
+ * This function operates on whitelists, there is currently no way to blacklist.
+ * Args:
+ * * text: the string to sanitize.
+ * * attribute_whitelist_json: a json_encode()'d list of HTML attributes to allow in the final string.
+ * * tag_whitelist_json: a json_encode()'d list of HTML tags to allow in the final string.
+ */
+#define rustg_sanitize_html(text, attribute_whitelist_json, tag_whitelist_json) RUSTG_CALL(RUST_G, "sanitize_html")(text, attribute_whitelist_json, tag_whitelist_json)
+
+#define rustg_sql_connect_pool(options) LIBCALL(RUST_G, "sql_connect_pool")(options)
+#define rustg_sql_query_async(handle, query, params) LIBCALL(RUST_G, "sql_query_async")(handle, query, params)
+#define rustg_sql_query_blocking(handle, query, params) LIBCALL(RUST_G, "sql_query_blocking")(handle, query, params)
+#define rustg_sql_connected(handle) LIBCALL(RUST_G, "sql_connected")(handle)
+#define rustg_sql_disconnect_pool(handle) LIBCALL(RUST_G, "sql_disconnect_pool")(handle)
+#define rustg_sql_check_query(job_id) LIBCALL(RUST_G, "sql_check_query")("[job_id]")
+
+#define rustg_time_microseconds(id) text2num(RUSTG_CALL(RUST_G, "time_microseconds")(id))
+#define rustg_time_milliseconds(id) text2num(RUSTG_CALL(RUST_G, "time_milliseconds")(id))
+#define rustg_time_reset(id) RUSTG_CALL(RUST_G, "time_reset")(id)
+
+/// Returns the timestamp as a string
+/proc/rustg_unix_timestamp()
+	return RUSTG_CALL(RUST_G, "unix_timestamp")()
+
+#define rustg_raw_read_toml_file(path) json_decode(RUSTG_CALL(RUST_G, "toml_file_to_json")(path) || "null")
+
+/proc/rustg_read_toml_file(path)
+	var/list/output = rustg_raw_read_toml_file(path)
+	if (output["success"])
+		return json_decode(output["content"])
+	else
+		CRASH(output["content"])
+
+#define rustg_raw_toml_encode(value) json_decode(RUSTG_CALL(RUST_G, "toml_encode")(json_encode(value)))
+
+/proc/rustg_toml_encode(value)
+	var/list/output = rustg_raw_toml_encode(value)
+	if (output["success"])
+		return output["content"]
+	else
+		CRASH(output["content"])
+
+#define rustg_url_encode(text) RUSTG_CALL(RUST_G, "url_encode")("[text]")
+#define rustg_url_decode(text) RUSTG_CALL(RUST_G, "url_decode")(text)
+
+#ifdef RUSTG_OVERRIDE_BUILTINS
+	#define url_encode(text) rustg_url_encode(text)
+	#define url_decode(text) rustg_url_decode(text)
+#endif
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))

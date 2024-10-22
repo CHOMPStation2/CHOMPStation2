@@ -84,7 +84,11 @@
 		return ..()
 
 /obj/structure/trash_pile/attack_ghost(mob/observer/user as mob)
+<<<<<<< HEAD
 	if(CONFIG_GET(flag/disable_player_mice)) // CHOMPEdit
+=======
+	if(CONFIG_GET(flag/disable_player_mice))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		to_chat(user, span_warning("Spawning as a mouse is currently disabled."))
 		return
 
@@ -116,7 +120,11 @@
 	host = new /mob/living/simple_mob/animal/passive/mouse(get_turf(src))
 
 	if(host)
+<<<<<<< HEAD
 		if(CONFIG_GET(flag/uneducated_mice)) // CHOMPEdit
+=======
+		if(CONFIG_GET(flag/uneducated_mice))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 			host.universal_understand = 0
 		announce_ghost_joinleave(src, 0, "They are now a mouse.")
 		host.ckey = user.ckey

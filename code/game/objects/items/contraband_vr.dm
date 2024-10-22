@@ -59,7 +59,11 @@
 					/obj/item/toy/nanotrasenballoon,
 					/obj/item/toy/syndicateballoon,
 					/obj/item/aiModule/syndicate,
+<<<<<<< HEAD
 					/obj/item/book/manual/wiki/engineering_hacking, // CHOMPEdit
+=======
+					/obj/item/book/manual/wiki/engineering_hacking,
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 					/obj/item/card/emag,
 					/obj/item/card/emag_broken,
 					/obj/item/card/id/syndicate,

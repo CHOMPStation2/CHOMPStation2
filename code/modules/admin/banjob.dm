@@ -21,9 +21,15 @@ var/jobban_keylist[0]		//to store the keys & ranks
 		*/
 
 		if (guest_jobbans(rank))
+<<<<<<< HEAD
 			if(CONFIG_GET(flag/guest_jobban) && IsGuestKey(M.key)) // CHOMPEdit
 				return "Guest Job-ban"
 			if(CONFIG_GET(flag/usewhitelist) && !check_whitelist(M)) // CHOMPEdit
+=======
+			if(CONFIG_GET(flag/guest_jobban) && IsGuestKey(M.key))
+				return "Guest Job-ban"
+			if(CONFIG_GET(flag/usewhitelist) && !check_whitelist(M))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 				return "Whitelisted Job"
 
 		return ckey_is_jobbanned(M.ckey, rank)
@@ -59,7 +65,11 @@ DEBUG
 	return 1
 
 /proc/jobban_loadbanfile()
+<<<<<<< HEAD
 	if(CONFIG_GET(flag/ban_legacy_system)) // CHOMPEdit
+=======
+	if(CONFIG_GET(flag/ban_legacy_system))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		var/savefile/S=new("data/job_full.ban")
 		S["keys[0]"] >> jobban_keylist
 		log_admin("Loading jobban_rank")
@@ -72,7 +82,11 @@ DEBUG
 		if(!establish_db_connection())
 			error("Database connection failed. Reverting to the legacy ban system.")
 			log_misc("Database connection failed. Reverting to the legacy ban system.")
+<<<<<<< HEAD
 			CONFIG_SET(flag/ban_legacy_system, TRUE) // CHOMPedit
+=======
+			CONFIG_SET(flag/ban_legacy_system, TRUE)
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 			jobban_loadbanfile()
 			return
 

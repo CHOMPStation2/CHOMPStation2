@@ -17,7 +17,11 @@
 		age = _age
 
 /obj/item/trash/Initialize(mapload)
+<<<<<<< HEAD
 	if(!mapload || !CONFIG_GET(flag/persistence_ignore_mapload)) // CHOMPEdit
+=======
+	if(!mapload || !CONFIG_GET(flag/persistence_ignore_mapload))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		SSpersistence.track_value(src, /datum/persistent/filth/trash)
 	. = ..()
 

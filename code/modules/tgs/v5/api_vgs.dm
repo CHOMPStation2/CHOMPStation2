@@ -10,7 +10,11 @@ GLOBAL_DATUM(vgs, /datum/tgs_api)
 		return
 
 	// If we don't have a configured access identifier we aren't meant to use VGS
+<<<<<<< HEAD
 	if(!CONFIG_GET(string/vgs_access_identifier)) // CHOMPEdit
+=======
+	if(!CONFIG_GET(string/vgs_access_identifier))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		TGS_INFO_LOG("Skipping VGS: No access identifier configured")
 		return
 
@@ -60,9 +64,15 @@ GLOBAL_DATUM(vgs, /datum/tgs_api)
 
 // Override to prevent error messages from the lack of revision/test_merge information, and to use config isntead of params.
 /datum/tgs_api/v5/vgs1/OnWorldNew()
+<<<<<<< HEAD
 	if(CONFIG_GET(number/vgs_server_port)) // CHOMPEdit
 		server_port = CONFIG_GET(number/vgs_server_port) // CHOMPEdit
 	access_identifier = CONFIG_GET(string/vgs_access_identifier) // CHOMPEdit
+=======
+	if(CONFIG_GET(number/vgs_server_port))
+		server_port = CONFIG_GET(number/vgs_server_port)
+	access_identifier = CONFIG_GET(string/vgs_access_identifier)
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 
 	var/list/bridge_response = Bridge(DMAPI5_BRIDGE_COMMAND_STARTUP, list(DMAPI5_PARAMETER_CUSTOM_COMMANDS = ListCustomCommands())) //CHOMPEdit TGS update
 	if(!istype(bridge_response))

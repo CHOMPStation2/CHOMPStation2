@@ -6,7 +6,11 @@ SUBSYSTEM_DEF(inactivity)
 	var/number_kicked = 0
 
 /datum/controller/subsystem/inactivity/fire(resumed = FALSE)
+<<<<<<< HEAD
 	if (!CONFIG_GET(number/kick_inactive)) // CHOMPEdit
+=======
+	if (!CONFIG_GET(number/kick_inactive))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		can_fire = FALSE
 		return
 	if (!resumed)
@@ -15,8 +19,13 @@ SUBSYSTEM_DEF(inactivity)
 	while(client_list.len)
 		var/client/C = client_list[client_list.len]
 		client_list.len--
+<<<<<<< HEAD
 		if(C.is_afk(CONFIG_GET(number/kick_inactive) MINUTES) && can_kick(C)) // CHOMPEdit
 			to_chat_immediate(C, world.time, span_warning("You have been inactive for more than [CONFIG_GET(number/kick_inactive)] minute\s and have been disconnected.")) // CHOMPEdit
+=======
+		if(C.is_afk(CONFIG_GET(number/kick_inactive) MINUTES) && can_kick(C))
+			to_chat_immediate(C, world.time, span_warning("You have been inactive for more than [CONFIG_GET(number/kick_inactive)] minute\s and have been disconnected."))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 
 			var/information
 			if(C.mob)

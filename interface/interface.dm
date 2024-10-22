@@ -2,16 +2,28 @@
 /client/verb/wiki(query as text)
 	set name = "wiki"
 	set desc = "Type what you want to know about.  This will open the wiki on your web browser."
+<<<<<<< HEAD
 	set category = "OOC.Resources" //CHOMPEdit
 	if(CONFIG_GET(string/wikiurl)) // CHOMPEdit
 		if(query)
 			if(CONFIG_GET(string/wikisearchurl)) // CHOMPEdit
 				var/output = replacetext(CONFIG_GET(string/wikisearchurl), "%s", url_encode(query)) // CHOMPEdit
+=======
+	set category = "OOC"
+	if(CONFIG_GET(string/wikiurl))
+		if(query)
+			if(CONFIG_GET(string/wikisearchurl))
+				var/output = replacetext(CONFIG_GET(string/wikisearchurl), "%s", url_encode(query))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 				src << link(output)
 			else
 				to_chat(src, span_warning(" The wiki search URL is not set in the server configuration."))
 		else
+<<<<<<< HEAD
 			src << link(CONFIG_GET(string/wikiurl)) // CHOMPEdit
+=======
+			src << link(CONFIG_GET(string/wikiurl))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 	else
 		to_chat(src, span_warning("The wiki URL is not set in the server configuration."))
 		return
@@ -20,10 +32,17 @@
 	set name = "forum"
 	set desc = "Visit the forum."
 	set hidden = 1
+<<<<<<< HEAD
 	if(CONFIG_GET(string/forumurl)) // CHOMPEdit
 		if(tgui_alert(usr, "This will open the forum in your browser. Are you sure?","Visit Website",list("Yes","No")) != "Yes")
 			return
 		src << link(CONFIG_GET(string/forumurl)) // CHOMPEdit
+=======
+	if(CONFIG_GET(string/forumurl))
+		if(tgui_alert(usr, "This will open the forum in your browser. Are you sure?","Visit Website",list("Yes","No")) != "Yes")
+			return
+		src << link(CONFIG_GET(string/forumurl))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 	else
 		to_chat(src, span_warning("The forum URL is not set in the server configuration."))
 		return
@@ -33,10 +52,17 @@
 	set desc = "Show Server Rules."
 	set hidden = 1
 
+<<<<<<< HEAD
 	if(CONFIG_GET(string/rulesurl)) // CHOMPEdit
 		if(tgui_alert(usr, "This will open the rules in your browser. Are you sure?","Visit Website",list("Yes","No")) != "Yes")
 			return
 		src << link(CONFIG_GET(string/rulesurl)) // CHOMPEdit
+=======
+	if(CONFIG_GET(string/rulesurl))
+		if(tgui_alert(usr, "This will open the rules in your browser. Are you sure?","Visit Website",list("Yes","No")) != "Yes")
+			return
+		src << link(CONFIG_GET(string/rulesurl))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 	else
 		to_chat(src, span_danger("The rules URL is not set in the server configuration."))
 	return
@@ -46,10 +72,17 @@
 	set desc = "See the map."
 	set hidden = 1
 
+<<<<<<< HEAD
 	if(CONFIG_GET(string/mapurl)) // CHOMPEdit
 		if(tgui_alert(usr, "This will open the map in your browser. Are you sure?","Visit Website",list("Yes","No")) != "Yes")
 			return
 		src << link(CONFIG_GET(string/mapurl)) // CHOMPEdit
+=======
+	if(CONFIG_GET(string/mapurl))
+		if(tgui_alert(usr, "This will open the map in your browser. Are you sure?","Visit Website",list("Yes","No")) != "Yes")
+			return
+		src << link(CONFIG_GET(string/mapurl))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 	else
 		to_chat(src, span_danger("The map URL is not set in the server configuration."))
 	return
@@ -59,10 +92,17 @@
 	set desc = "Visit the GitHub"
 	set hidden = 1
 
+<<<<<<< HEAD
 	if(CONFIG_GET(string/githuburl)) // CHOMPEdit
 		if(tgui_alert(usr, "This will open the GitHub in your browser. Are you sure?","Visit Website",list("Yes","No")) != "Yes")
 			return
 		src << link(CONFIG_GET(string/githuburl)) // CHOMPEdit
+=======
+	if(CONFIG_GET(string/githuburl))
+		if(tgui_alert(usr, "This will open the GitHub in your browser. Are you sure?","Visit Website",list("Yes","No")) != "Yes")
+			return
+		src << link(CONFIG_GET(string/githuburl))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 	else
 		to_chat(src, span_danger("The GitHub URL is not set in the server configuration."))
 	return
@@ -72,10 +112,17 @@
 	set desc = "Visit the discord"
 	set hidden = 1
 
+<<<<<<< HEAD
 	if(CONFIG_GET(string/discordurl)) // CHOMPEdit
 		if(tgui_alert(usr, "This will open the Discord in your browser. Are you sure?","Visit Website",list("Yes","No")) != "Yes")
 			return
 		src << link(CONFIG_GET(string/discordurl)) // CHOMPEdit
+=======
+	if(CONFIG_GET(string/discordurl))
+		if(tgui_alert(usr, "This will open the Discord in your browser. Are you sure?","Visit Website",list("Yes","No")) != "Yes")
+			return
+		src << link(CONFIG_GET(string/discordurl))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 	else
 		to_chat(src, span_danger("The Discord URL is not set in the server configuration."))
 	return
@@ -85,10 +132,17 @@
 	set desc = "Visit the patreon"
 	set hidden = 1
 
+<<<<<<< HEAD
 	if(CONFIG_GET(string/patreonurl)) // CHOMPEdit
 		if(tgui_alert(usr, "This will open the Patreon in your browser. Are you sure?","Visit Website",list("Yes","No")) != "Yes")
 			return
 		src << link(CONFIG_GET(string/patreonurl)) // CHOMPEdit
+=======
+	if(CONFIG_GET(string/patreonurl))
+		if(tgui_alert(usr, "This will open the Patreon in your browser. Are you sure?","Visit Website",list("Yes","No")) != "Yes")
+			return
+		src << link(CONFIG_GET(string/patreonurl))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 	else
 		to_chat(src, span_danger("The Patreon URL is not set in the server configuration."))
 	return

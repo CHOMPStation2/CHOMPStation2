@@ -224,7 +224,10 @@
 		if(SS_SLEEPING)
 			state = SS_PAUSING
 
+<<<<<<< HEAD
 // CHOMPEdit Start
+=======
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 /// Called after the config has been loaded or reloaded.
 /datum/controller/subsystem/proc/OnConfigLoad()
 

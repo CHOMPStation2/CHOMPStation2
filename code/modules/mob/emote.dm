@@ -16,7 +16,11 @@
 		return
 
 	if(!src.client.holder)
+<<<<<<< HEAD
 		if(!CONFIG_GET(flag/dsay_allowed)) // CHOMPEdit
+=======
+		if(!CONFIG_GET(flag/dsay_allowed))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 			to_chat(src, span_danger("Deadchat is globally muted."))
 			return
 

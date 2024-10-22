@@ -6,7 +6,11 @@ Reason: Replaced with "Tickets System"
 */
 
 /datum/admin_help/proc/send2adminchat()
+<<<<<<< HEAD
 	if(!CONFIG_GET(string/chat_webhook_url)) // CHOMPEdit
+=======
+	if(!CONFIG_GET(string/chat_webhook_url))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		return
 
 	var/list/adm = get_admin_counts()
@@ -15,12 +19,16 @@ Reason: Replaced with "Tickets System"
 
 	spawn(0) //Unreliable world.Exports()
 		var/query_string = "type=adminhelp"
-		query_string += "&key=[url_encode(config.chat_webhook_key)]"
+		query_string += "&key=[url_encode(CONFIG_GET(string/chat_webhook_key))]"
 		query_string += "&from=[url_encode(key_name(initiator))]"
 		query_string += "&msg=[url_encode(html_decode(name))]"
 		query_string += "&admin_number=[allmins.len]"
 		query_string += "&admin_number_afk=[afkmins.len]"
+<<<<<<< HEAD
 		world.Export("[CONFIG_GET(string/chat_webhook_url)]?[query_string]") // CHOMPEdit
+=======
+		world.Export("[CONFIG_GET(string/chat_webhook_url)]?[query_string]")
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 
 /client/verb/adminspice()
 	set category = "Admin"

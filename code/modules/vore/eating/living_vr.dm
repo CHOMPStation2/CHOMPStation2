@@ -429,7 +429,11 @@
 	var/list/charlist = list()
 
 	var/default
+<<<<<<< HEAD
 	for(var/i in 1 to CONFIG_GET(number/character_slots)) //CHOMPEdit
+=======
+	for(var/i in 1 to CONFIG_GET(number/character_slots))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		var/list/save_data = savefile.get_entry("character[i]", list())
 		var/name = save_data["real_name"]
 		var/nickname = save_data["nickname"]

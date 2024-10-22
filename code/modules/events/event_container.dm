@@ -28,7 +28,11 @@ var/global/list/severity_to_string = list(EVENT_LEVEL_MUNDANE = "Mundane", EVENT
 	if(!next_event_time)
 		set_event_delay()
 
+<<<<<<< HEAD
 	if(delayed || !CONFIG_GET(flag/allow_random_events)) // CHOMPEdit
+=======
+	if(delayed || !CONFIG_GET(flag/allow_random_events))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		next_event_time += (world.time - last_world_time)
 	else if(world.time > next_event_time)
 		start_event()
@@ -85,13 +89,20 @@ var/global/list/severity_to_string = list(EVENT_LEVEL_MUNDANE = "Mundane", EVENT
 	var/last_time = last_event_time[EM]
 	if(last_time)
 		var/time_passed = world.time - last_time
+<<<<<<< HEAD
 		var/weight_modifier = max(0, round((CONFIG_GET(number/expected_round_length) - time_passed) / 300)) // CHOMPEdit
+=======
+		var/weight_modifier = max(0, round((CONFIG_GET(number/expected_round_length) - time_passed) / 300))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		weight = weight - weight_modifier
 
 	return weight
 
 /datum/event_container/proc/set_event_delay()
+<<<<<<< HEAD
 	// CHOMPEdit Start
+=======
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 	var/list/event_delays
 
 	switch(severity)
@@ -106,7 +117,10 @@ var/global/list/severity_to_string = list(EVENT_LEVEL_MUNDANE = "Mundane", EVENT
 	if(next_event_time == 0 && event_delays)
 		var/lower = (event_delays["lower"] MINUTES)
 		var/upper = (event_delays["upper"] MINUTES)
+<<<<<<< HEAD
 		// CHOMPEdit End
+=======
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		var/event_delay = rand(lower, upper)
 		next_event_time = world.time + event_delay
 	// Otherwise, follow the standard setup process
@@ -125,7 +139,11 @@ var/global/list/severity_to_string = list(EVENT_LEVEL_MUNDANE = "Mundane", EVENT
 				playercount_modifier = 0.8
 		playercount_modifier = playercount_modifier * delay_modifier
 
+<<<<<<< HEAD
 		var/event_delay = rand(CONFIG_GET(number_list/event_delay_lower)[severity] MINUTES, CONFIG_GET(number_list/event_delay_upper)[severity] MINUTES) * playercount_modifier // CHOMPEdit
+=======
+		var/event_delay = rand(CONFIG_GET(number_list/event_delay_lower)[severity] MINUTES, CONFIG_GET(number_list/event_delay_upper)[severity] MINUTES) * playercount_modifier
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		next_event_time = world.time + event_delay
 
 	log_debug("Next event of severity [severity_to_string[severity]] in [(next_event_time - world.time)/600] minutes.")

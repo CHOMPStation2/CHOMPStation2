@@ -4,6 +4,10 @@ $include game_options.txt
 $include dbconfig.txt
 $include logging.txt
 $include resources.txt
+<<<<<<< HEAD
+=======
+$include sqlite.txt
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 
 # You can use the @ character at the beginning of a config option to lock it from being edited in-game
 # Example usage:
@@ -244,7 +248,14 @@ ALLOW_HOLIDAYS
 
 ##Defines the ticklag for the world. Ticklag is the amount of time between game ticks (aka byond ticks) (in 1/10ths of a second).
 ##	This also controls the client network update rate, as well as the default client fps
+<<<<<<< HEAD
 TICKLAG 0.25
+
+##Can also be set as per-second value, the following value is identical to the above.
+#FPS 20
+=======
+TICKLAG 0.5
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 
 ##Can also be set as per-second value, the following value is identical to the above.
 #FPS 20
@@ -307,7 +318,11 @@ GHOST_INTERACTION
 ## This helps security and stability on Linux, but you need to compile the library first.
 #USE_LIB_NUDGE
 
+<<<<<<< HEAD
 ## Uncommen to allow ghosts to write in blood during Cult rounds.
+=======
+## Uncomment to allow ghosts to write in blood during Cult rounds.
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 CULT_GHOSTWRITER
 
 ## Sets the minimum number of cultists needed for ghosts to write in blood.
@@ -497,7 +512,11 @@ RADIATION_MATERIAL_RESISTANCE_DIVISOR 16
 ## 0:1 subtraction:division for computing effective radiation on a turf
 ## 0 / RAD_RESIST_CALC_DIV = Each turf absorbs some fraction of the working radiation level
 ## 1 / RAD_RESIST_CALC_SUB = Each turf absorbs a fixed amount of radiation
+<<<<<<< HEAD
 RADIATION_RESISTANCE_CALC_MODE 0
+=======
+RADIATION_RESISTANCE_CALC_MODE 1
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 
 ## IP Reputation Checking
 # Enable/disable IP reputation checking (present/nonpresent)
@@ -558,7 +577,12 @@ JUKEBOX_TRACK_FILES config/jukebox.json
 # Suggested BYOND client build (minor component, e.g. 1560)
 #SUGGESTED_BYOND_BUILD 1561
 
+# Controls whether robots may recolour their modules once/module reset by giving them the recolour module verb
+# Admins may manually give them the verb even if disabled
+# Uncomment to enable
+#ALLOW_ROBOT_RECOLOR
 
+<<<<<<< HEAD
 #### Asset settings ####
 ## Asset Transport
 ## The normal way of getting assets to clients is to use the internal byond system. This can be slow and delay the opening of interface windows. It also doesn't allow the internal IE windows byond uses to cache anything.
@@ -603,6 +627,8 @@ JUKEBOX_TRACK_FILES config/jukebox.json
 # Uncomment to enable
 #ALLOW_ROBOT_RECOLOR
 
+=======
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 # Controls whether simple mobs may recolour themselves once/spawn by giving them the recolour verb
 # Admins may manually give them the verb even if disabled
 # Uncomment to enable

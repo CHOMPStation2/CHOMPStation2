@@ -41,7 +41,11 @@
 	return ((H && H.isSynthetic()) ? "encounters a hardware fault and suddenly reboots!" : knockout_message)
 
 /datum/species/proc/get_death_message(var/mob/living/carbon/human/H)
+<<<<<<< HEAD
 	if(CONFIG_GET(flag/show_human_death_message)) // CHOMPEdit
+=======
+	if(CONFIG_GET(flag/show_human_death_message))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		return ((H && H.isSynthetic()) ? "gives one shrill beep before falling lifeless." : death_message)
 	else
 		return DEATHGASP_NO_MESSAGE

@@ -179,4 +179,8 @@
 	return ..()
 
 /datum/category_item/player_setup_item/player_global/ui/proc/can_select_ooc_color(var/mob/user)
+<<<<<<< HEAD
 	return CONFIG_GET(flag/allow_admin_ooccolor) && check_rights(R_ADMIN|R_EVENT|R_FUN, 0, user) // CHOMPEdit
+=======
+	return CONFIG_GET(flag/allow_admin_ooccolor) && check_rights(R_ADMIN|R_EVENT|R_FUN, 0, user)
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))

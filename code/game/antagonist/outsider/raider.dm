@@ -152,7 +152,11 @@ var/datum/antagonist/raider/raiders
 	var/win_msg = ""
 
 	//No objectives, go straight to the feedback.
+<<<<<<< HEAD
 	if(CONFIG_GET(flag/objectives_disabled) || !global_objectives.len) // CHOMPEdit
+=======
+	if(CONFIG_GET(flag/objectives_disabled) || !global_objectives.len)
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		return
 
 	var/success = global_objectives.len

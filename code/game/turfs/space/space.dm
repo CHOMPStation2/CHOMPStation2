@@ -13,7 +13,11 @@
 	var/forced_dirs = 0 //Force this one to pretend it's an overedge turf
 
 /turf/space/Initialize()
+<<<<<<< HEAD
 	if(CONFIG_GET(flag/starlight)) // CHOMPEdit
+=======
+	if(CONFIG_GET(flag/starlight))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		update_starlight()
 
 	//Sprite stuff only beyond here
@@ -75,7 +79,11 @@
 
 /turf/space/proc/update_starlight()
 	if(locate(/turf/simulated) in orange(src,1))
+<<<<<<< HEAD
 		set_light(CONFIG_GET(flag/starlight)) // CHOMPEdit
+=======
+		set_light(CONFIG_GET(flag/starlight))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 	else
 		set_light(0)
 

@@ -3,7 +3,11 @@
 		hadevent = 1
 		message_admins("The apocalypse has begun! (this holiday event can be disabled by toggling events off within 60 seconds)")
 		spawn(600)
+<<<<<<< HEAD
 			if(!CONFIG_GET(flag/allow_random_events))	return // CHOMPEdit
+=======
+			if(!CONFIG_GET(flag/allow_random_events))	return
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 			Show2Group4Delay(ScreenText(null,"<center><font color='red' size='8'>GAME OVER</font></center>"),null,150)
 			for(var/i=1,i<=4,i++)
 				spawn_dynamic_event()

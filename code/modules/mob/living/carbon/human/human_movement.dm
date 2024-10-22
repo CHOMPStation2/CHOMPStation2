@@ -116,7 +116,11 @@
 			. *= 0.5
 		. -= chem_effects[CE_SPEEDBOOST]	// give 'em a buff on top.
 
+<<<<<<< HEAD
 	. = max(HUMAN_LOWEST_SLOWDOWN, . + CONFIG_GET(number/human_delay))	// Minimum return should be the same as force_max_speed // CHOMPEdit
+=======
+	. = max(HUMAN_LOWEST_SLOWDOWN, . + CONFIG_GET(number/human_delay))	// Minimum return should be the same as force_max_speed
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 	. += ..()
 
 /mob/living/carbon/human/Moved()
@@ -259,6 +263,7 @@
 
 // Handle footstep sounds
 /mob/living/carbon/human/handle_footstep(var/turf/T)
+<<<<<<< HEAD
 	/*CHOMPEdit - This is an Element now
 	if(!istype(T) || is_incorporeal() || !CONFIG_GET(number/footstep_volume) || !T.footstep_sounds || !T.footstep_sounds.len) // CHOMPEdit
 		return	//CHOMPEdit - Condensed some return checks
@@ -268,6 +273,19 @@
 		footstep_sounds = T.footstep_sounds["human"] // Probably doesn't have species sounds, use the default // TODO: replace this with a define, unfortunately SPECIES_HUMAN is "Human" instead of "human"
 		if(!footstep_sounds)
 			return // CHOMPedit end
+=======
+	if(!istype(T))
+		return
+	if(is_incorporeal())
+		return
+	if(!CONFIG_GET(number/footstep_volume) || !T.footstep_sounds || !T.footstep_sounds.len)
+		return
+	// Future Upgrades - Multi species support
+	var/list/footstep_sounds = T.footstep_sounds["human"]
+	if(!footstep_sounds)
+		return
+
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 	var/S = pick(footstep_sounds)
 	GLOB.step_taken_shift_roundstat++
 	if(!S) return
@@ -286,7 +304,11 @@
 	if(step_count % 2 == 0)	//CHOMPAdd, since I removed the returns up above, need this to track each odd step.
 		return
 
+<<<<<<< HEAD
 	var/volume = CONFIG_GET(number/footstep_volume) // CHOMPEdit
+=======
+	var/volume = CONFIG_GET(number/footstep_volume)
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 
 	// Reduce volume while walking or barefoot
 	if(!shoes || m_intent == "walk")

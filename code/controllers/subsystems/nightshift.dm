@@ -11,7 +11,11 @@ SUBSYSTEM_DEF(nightshift)
 	var/high_security_mode = FALSE
 
 /datum/controller/subsystem/nightshift/Initialize()
+<<<<<<< HEAD
 	if(!CONFIG_GET(flag/enable_night_shifts)) // CHOMPEdit
+=======
+	if(!CONFIG_GET(flag/enable_night_shifts))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		can_fire = FALSE
 	/*
 	if(config.randomize_shift_time)

@@ -27,7 +27,11 @@
 	selectable = 0
 
 /datum/ai_laws/nanotrasen/malfunction/New()
+<<<<<<< HEAD
 	set_zeroth_law(CONFIG_GET(string/law_zero)) // CHOMPEdit
+=======
+	set_zeroth_law(CONFIG_GET(string/law_zero))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 	..()
 
 /************* NanoTrasen Aggressive *************/

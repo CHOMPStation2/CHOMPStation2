@@ -48,8 +48,13 @@
 				pref.alternate_languages -= language
 
 	if(isnull(pref.language_prefixes) || !pref.language_prefixes.len)
+<<<<<<< HEAD
 		var/list/prefixes = CONFIG_GET(str_list/language_prefixes) // CHOMPEdit
 		pref.language_prefixes = prefixes.Copy() // CHOMPEdit
+=======
+		var/list/prefixes = CONFIG_GET(str_list/language_prefixes)
+		pref.language_prefixes = prefixes.Copy()
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 	for(var/prefix in pref.language_prefixes)
 		if(prefix in forbidden_prefixes)
 			pref.language_prefixes -= prefix
@@ -145,8 +150,13 @@
 			pref.language_prefixes = keys
 			return TOPIC_REFRESH
 	else if(href_list["reset_prefix"])
+<<<<<<< HEAD
 		var/list/prefixes = CONFIG_GET(str_list/language_prefixes) // CHOMPEdit
 		pref.language_prefixes = prefixes.Copy() // CHOMPEdit
+=======
+		var/list/prefixes = CONFIG_GET(str_list/language_prefixes)
+		pref.language_prefixes = prefixes.Copy()
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		return TOPIC_REFRESH
 
 	else if(href_list["set_custom_key"])

@@ -299,10 +299,17 @@
 	H.updatehealth()
 
 	if(H.isSynthetic())
+<<<<<<< HEAD
 		if(H.health + H.getOxyLoss() + H.getToxLoss() <= CONFIG_GET(number/health_threshold_dead)) // CHOMPEdit
 			return "buzzes, \"Resuscitation failed - Severe damage detected. Begin manual repair before further attempts futile.\""
 
 	else if(H.health + H.getOxyLoss() <= CONFIG_GET(number/health_threshold_dead) || (HUSK in H.mutations) || !H.can_defib) // CHOMPEdit
+=======
+		if(H.health + H.getOxyLoss() + H.getToxLoss() <= CONFIG_GET(number/health_threshold_dead))
+			return "buzzes, \"Resuscitation failed - Severe damage detected. Begin manual repair before further attempts futile.\""
+
+	else if(H.health + H.getOxyLoss() <= CONFIG_GET(number/health_threshold_dead) || (HUSK in H.mutations) || !H.can_defib)
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		return "buzzes, \"Resuscitation failed - Severe tissue damage makes recovery of patient impossible via defibrillator. Further attempts futile.\""
 
 	var/bad_vital_organ = check_vital_organs(H)
@@ -435,7 +442,11 @@
 	H.apply_damage(burn_damage_amt, BURN, BP_TORSO)
 
 	//set oxyloss so that the patient is just barely in crit, if possible
+<<<<<<< HEAD
 	var/barely_in_crit = CONFIG_GET(number/health_threshold_crit) - 1 // CHOMPEdit
+=======
+	var/barely_in_crit = CONFIG_GET(number/health_threshold_crit) - 1
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 	var/adjust_health = barely_in_crit - H.health //need to increase health by this much
 	H.adjustOxyLoss(-adjust_health)
 
@@ -520,8 +531,13 @@
 		return // Still no brain.
 
 	// If the brain'd `defib_timer` var gets below this number, brain damage will happen at a linear rate.
+<<<<<<< HEAD
 	// This is measures in `Life()` ticks. E.g. 10 minute defib timer = 6000 world.time units = 3000 `Life()` ticks.
 	var/brain_damage_timer = ((CONFIG_GET(number/defib_timer) MINUTES) / 2) - ((CONFIG_GET(number/defib_braindamage_timer) MINUTES) / 2) // CHOMPEdit
+=======
+	// This is measures in `Life()` ticks. E.g. 10 minute defib timer = 300 `Life()` ticks.				// Original math was VERY off. Life() tick occurs every ~2 seconds, not every 2 world.time ticks.
+	var/brain_damage_timer = ((CONFIG_GET(number/defib_timer) MINUTES) / 20) - ((CONFIG_GET(number/defib_braindamage_timer) MINUTES) / 20)
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 
 	if(brain.defib_timer > brain_damage_timer)
 		return // They got revived before brain damage got a chance to set in.
