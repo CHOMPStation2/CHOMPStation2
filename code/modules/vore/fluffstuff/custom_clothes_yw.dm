@@ -907,7 +907,7 @@
 	var/hoodtype = null //so the chaplain hoodie or other hoodies can override this
 	var/suittoggled = 0
 	var/hooded = 0
-	action_button_name = "Toggle Hood"
+	actions_types = list(/datum/action/item_action/toggle_hood)
 	icon = 'icons/vore/custom_clothes_yw.dmi'
 	icon_override = 'icons/vore/custom_onmob_yw.dmi'
 
@@ -1659,7 +1659,7 @@
 	icon_state = "avigoggles_i"
 	item_state = "avigoggles"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
-	action_button_name = "Flip Aviation Goggles"
+	actions_types = list(/datum/action/item_action/toggle_goggles)
 	item_flags = AIRTIGHT
 	var/up = 0
 
@@ -1703,7 +1703,7 @@
 	item_state = "kbraid_outfit_s"
 	body_parts_covered = UPPER_TORSO|ARMS|FEET
 	hoodtype = /obj/item/clothing/head/hood/kbraid_hood
-	action_button_name = "Toggle Headphones"
+	actions_types = list(/datum/action/item_action/toggle_hood)
 
 /obj/item/clothing/head/hood/kbraid_hood
 	name = "Earphones"
