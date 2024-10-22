@@ -1,4 +1,4 @@
-#if MAP_TEST
+#ifdef MAP_TEST
 #include "bloodcit.dmm"
 #include "unfinishedoutpost.dmm"
 #include "eclipseprison.dmm"
