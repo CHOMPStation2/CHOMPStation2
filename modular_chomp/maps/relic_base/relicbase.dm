@@ -38,6 +38,7 @@
 	// #include "structures/closets/research.dm"
 	// #include "structures/closets/security.dm"
 	//#include "turfs/outdoors.dm" //Must be in the dme for CI to work properly
+	#include "turfs/outdoors.dm"
 	#include "turfs/redgates.dm"
 	#include "overmap/shuttles.dm"
 	#include "overmap/sectors.dm"

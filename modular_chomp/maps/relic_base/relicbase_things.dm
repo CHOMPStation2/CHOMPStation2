@@ -2,12 +2,12 @@
 // Garage Doors:
 /obj/machinery/door/blast/shutters/garage
 	name = "Garage Door"
-	open_sound = 'sound/machines/door/garagedooropen.ogg'
-	close_sound = 'sound/machines/door/garagedoorclose.ogg'
+	open_sound = 'modular_chomp/sound/machines/door/garagedooropen.ogg'
+	close_sound = 'modular_chomp/sound/machines/door/garagedoorclose.ogg'
 
 /obj/machinery/door/blast/gate/thin
-	open_sound = 'sound/machines/door/gateopen.ogg'
-	close_sound = 'sound/machines/door/gateclose.ogg'
+	open_sound = 'modular_chomp/sound/machines/door/gateopen.ogg'
+	close_sound = 'modular_chomp/sound/machines/door/gateclose.ogg'
 
 /obj/machinery/camera/network/exterior
 	network = list(NETWORK_EXTERIOR)
@@ -77,11 +77,11 @@
 	floor_name = "deeprock"
 	sand_icon_state = "basalt"
 	rock_icon_state = "deeprock"
-	sand_icon_path = 'icons/turf/thor_ch.dmi'
-	rock_icon_path = 'icons/turf/thor_ch.dmi'
+	sand_icon_path = 'modular_chomp/icons/turf/thor.dmi'
+	rock_icon_path = 'modular_chomp/icons/turf/thor.dmi'
 	rock_side_icon_state = "deeprock_side"
 	desc = "Dark black basalt. Rich in exotic minerals."
-	icon = 'icons/turf/thor_ch.dmi'
+	icon = 'modular_chomp/icons/turf/thor.dmi'
 	icon_state = "deeprock"
 
 /turf/simulated/mineral/thor/ignore_oregen
@@ -97,7 +97,7 @@
 	name = "basalt"
 	floor_name = "basalt"
 	desc = "Loose, rocky basalt. It crumbles to sand under the slightest bit of force."
-	icon = 'icons/turf/thor_ch.dmi'
+	icon = 'modular_chomp/icons/turf/thor.dmi'
 	icon_state = "basalt0"
 	temperature = 393.15
 	density = FALSE
@@ -118,20 +118,20 @@
 	name = "basalt"
 	desc = "Loose, rocky basalt. It crumbles to sand under the slightest bit of force."
 	icon_state = "basalt0"
-	icon = 'icons/turf/thor_ch.dmi'
+	icon = 'modular_chomp/icons/turf/thor.dmi'
 
 /turf/simulated/mineral/thor/mines
 	name = "dark rock"
 	desc = "Dark black basalt. Rich in exotic minerals."
 	icon_state = "deeprock"
-	icon = 'icons/turf/thor_ch.dmi'
+	icon = 'modular_chomp/icons/turf/thor.dmi'
 	temperature = 393.15
 
 /turf/unsimulated/mineral/thor/mines
 	name = "impassable dark rock"
 	desc = "Dark black basalt. Packed impossibly tightly, no way to get past this."
 	icon_state = "deeprock-solid"
-	icon = 'icons/turf/thor_ch.dmi'
+	icon = 'modular_chomp/icons/turf/thor.dmi'
 	temperature = 393.15
 
 /turf/simulated/mineral/thor/floor/ignore_mapgen/cave
