@@ -55,7 +55,7 @@ GLOBAL_DATUM_INIT(mhelp_tickets, /datum/mentor_help_tickets, new)
 	var/list/dat = list("<html><head><title>[title]</title></head>")
 	dat += "<A HREF='?_src_=mentorholder;[HrefToken()];mhelp_tickets=[state]'>Refresh</A><br><br>"
 	for(var/datum/mentor_help/MH as anything in l2b)
-		dat += "<span class='adminnotice'><span class='adminhelp'>Ticket #[MH.id]</span>: <A HREF='?_src_=mentorholder;mhelp=\ref[MH];[HrefToken()];mhelp_action=ticket'>[MH.initiator_ckey]: [MH.name]</A></span><br>"
+		dat += span_adminnotice(span_adminhelp("Ticket #[MH.id]") + " <A HREF='?_src_=mentorholder;mhelp=\ref[MH];[HrefToken()];mhelp_action=ticket'>[MH.initiator_ckey]: [MH.name]</A>") + "<br>"
 
 	usr << browse(dat.Join(), "window=mhelp_list[state];size=600x480")
 
@@ -163,7 +163,7 @@ GLOBAL_DATUM_INIT(mhelp_tickets, /datum/mentor_help_tickets, new)
 	log_admin("Mentorhelp: [key_name(C)]: [msg]")
 	MessageNoRecipient(msg)
 	//show it to the person adminhelping too
-	to_chat(C, "<i><span class='mentor'>Mentor-PM to-<b>Mentors</b>: [name]</span></i>")
+	to_chat(C, span_mentor(span_italics("Mentor-PM to-" + span_bold("Mentors") + ": [name]")))
 
 	GLOB.mhelp_tickets.active_tickets += src
 
@@ -287,9 +287,9 @@ GLOBAL_DATUM_INIT(mhelp_tickets, /datum/mentor_help_tickets, new)
 		dat += "<br>Closed at: [gameTimestamp(wtime = closed_at)] (Approx [(world.time - closed_at) / 600] minutes ago)"
 	dat += "<br><br>"
 	if(initiator)
-		dat += "<b>Actions:</b> [Context(ref_src)]<br>"
+		dat += span_bold("Actions:") + " [Context(ref_src)]<br>"
 	else
-		dat += "<b>DISCONNECTED</b>[GLOB.TAB][ClosureLinks(ref_src)]<br>"
+		dat += span_bold("DISCONNECTED") + "[GLOB.TAB][ClosureLinks(ref_src)]<br>"
 	dat += "<br><b>Log:</b><br><br>"
 	for(var/I in _interactions)
 		dat += "[I]<br>"
@@ -444,9 +444,9 @@ GLOBAL_DATUM_INIT(mhelp_tickets, /datum/mentor_help_tickets, new)
 		"Send to discord?", list("Admin-help!", "Still mentorhelp!", "Cancel"))
 		if(choice == "Admin-help!")
 			usr.client.adminhelp(msg)
-			remove_verb(src,/client/verb/mentorhelp)  //CHOMPEdit
+			remove_verb(src, /client/verb/mentorhelp)
 			spawn(1200)
-				add_verb(src,/client/verb/mentorhelp ) // 2 minute cd to prevent abusing this to spam admins. //CHOMPEdit
+				add_verb(src, /client/verb/mentorhelp) // 2 minute cd to prevent abusing this to spam admins.
 			return
 		else if(!choice || choice == "Cancel")
 			return
@@ -454,9 +454,9 @@ GLOBAL_DATUM_INIT(mhelp_tickets, /datum/mentor_help_tickets, new)
 
 
 	//remove out adminhelp verb temporarily to prevent spamming of admins.
-	remove_verb(src, /client/verb/mentorhelp) //CHOMPEdit
+	remove_verb(src, /client/verb/mentorhelp)
 	spawn(600)
-		add_verb(src, /client/verb/mentorhelp) //CHOMPEdit	// 1 minute cool-down for mentorhelps
+		add_verb(src, /client/verb/mentorhelp)	// 1 minute cool-down for mentorhelps
 
 	feedback_add_details("admin_verb","Mentorhelp") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	if(current_mentorhelp)

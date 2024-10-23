@@ -1,5 +1,0 @@
-author: "CHOMPStation2"
-delete-after: True
-changes:
-  - rscadd: "Verdigris, an in-tree rust module - responsible for cellular automata currently, and more soon!"
-  - rscadd: "Server starts faster thanks to Verdigris generating ore turfs much faster."

@@ -41,7 +41,7 @@
 		return
 	. = ..()
 	lets_register_our_signals()
-	add_verb(src,/mob/living/dominated_brain/proc/resist_control) //CHOMPEdit TGPanel
+	add_verb(src, /mob/living/dominated_brain/proc/resist_control)
 
 /mob/living/dominated_brain/Life()
 	. = ..()
@@ -128,7 +128,7 @@
 		prey_goes_here.ooc_notes_maybes = prey_ooc_maybes
 		prey_goes_here.ooc_notes_style = prey_ooc_style
 		//CHOMPEdit End
-		add_verb(prey_goes_here,/mob/living/dominated_brain/proc/cease_this_foolishness) //CHOMPEdit TGPanel
+		add_verb(prey_goes_here, /mob/living/dominated_brain/proc/cease_this_foolishness)
 
 
 	else		//The prey body does not exist, let's put them in the back seat instead!
@@ -153,7 +153,7 @@
 	///////////////////
 
 	// Handle Pred
-	remove_verb(pred_body,/mob/proc/release_predator)  //CHOMPEdit
+	remove_verb(pred_body, /mob/proc/release_predator)
 
 	//Now actually put the people in the mobs
 	prey_goes_here.ckey = src.prey_ckey
@@ -190,7 +190,7 @@
 		langlist -= languages
 		for(var/datum/language/L in langlist)
 			if(L.flags & HIVEMIND)
-				add_verb(src,/mob/proc/adjust_hive_range) //CHOMPEdit TGPanel
+				add_verb(src, /mob/proc/adjust_hive_range)
 		temp_languages |= langlist
 		languages |= langlist
 
@@ -311,7 +311,7 @@
 	pred.ooc_notes_style = pred_brain.prey_ooc_style
 	//CHOMPEdit End
 
-	add_verb(pred,/mob/proc/release_predator) //CHOMPEdit TGPanel
+	add_verb(pred, /mob/proc/release_predator)
 
 	//Now actually put the people in the mobs
 	pred_brain.ckey = pred_brain.pred_ckey
@@ -348,7 +348,7 @@
 			else
 				continue
 	to_chat(src, span_danger("You haven't been taken over, and shouldn't have this verb. I'll clean that up for you. Report this on the github, it is a bug."))
-	remove_verb(src,/mob/proc/release_predator) //CHOMPEdit TGPanel
+	remove_verb(src, /mob/proc/release_predator)
 
 /mob/living/dominated_brain/proc/resist_control()
 	set category = "Abilities.Vore" //CHOMPEdit
@@ -457,7 +457,7 @@
 	//CHOMPEdit End
 	db.prey_ooc_likes = M.ooc_notes_likes
 	db.prey_ooc_dislikes = M.ooc_notes_dislikes
-	add_verb(db,/mob/living/dominated_brain/proc/cease_this_foolishness) //CHOMPEdit TGPanel
+	add_verb(db, /mob/living/dominated_brain/proc/cease_this_foolishness)
 
 	absorb_langs()
 
@@ -495,7 +495,7 @@
 		to_chat(src, span_warning("You can sense your body... but it is not contained within [pred_body]... You cannot return to it at this time."))
 	else
 		to_chat(src, span_warning("Your body seems to no longer exist, so, you cannot return to it."))
-		remove_verb(src,/mob/living/dominated_brain/proc/cease_this_foolishness) //CHOMPEdit TGPanel
+		remove_verb(src, /mob/living/dominated_brain/proc/cease_this_foolishness)
 
 /mob/living/proc/lend_prey_control()
 	set category = "Abilities.Vore" //CHOMPEdit
@@ -595,7 +595,7 @@
 	pred.ooc_notes_style = pred_brain.prey_ooc_style
 	//CHOMPEdit End
 
-	add_verb(pred,/mob/proc/release_predator) //CHOMPEdit TGPanel
+	add_verb(pred, /mob/proc/release_predator)
 
 	//Now actually put the people in the mobs
 	pred_brain.ckey = pred_brain.pred_ckey

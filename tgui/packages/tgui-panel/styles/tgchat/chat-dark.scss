@@ -371,6 +371,10 @@ img.icon.bigicon {
   font-weight: bold;
 }
 
+.world {
+  font-weight: bold;
+}
+
 .say,
 .emote,
 .emotesubtle,
@@ -668,6 +672,10 @@ img.icon.bigicon {
 
 .green {
   color: #059223;
+}
+
+.darkgreen {
+  color: #008000;
 }
 
 .grey {
@@ -1419,6 +1427,10 @@ $border-width-px: $border-width * 1px;
   color: #816540;
   word-spacing: 4pt;
   font-family: 'Segoe Script Bold', 'Segoe Script', sans-serif, Verdana;
+}
+
+.marish {
+  color: #9e31a4;
 }
 
 .shadekin {

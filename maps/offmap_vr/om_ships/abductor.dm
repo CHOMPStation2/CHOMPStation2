@@ -1,5 +1,5 @@
 // Compile in the map for CI testing if we're testing compileability of all the maps
-#if MAP_TEST
+#ifdef MAP_TEST
 #include "abductor.dmm"
 #endif
 
@@ -7,7 +7,7 @@
 /datum/map_template/om_ships/abductor
 	name = "OM Ship - Abductor Ship (New Z)"
 	desc = "A ship for spooky aliens to kidnap farmers and unfortunate spacemen."
-	mappath = 'abductor.dmm'
+	mappath = "maps/offmap_vr/om_ships/abductor.dmm"
 
 /area/abductor
 	requires_power = 0
@@ -85,4 +85,3 @@ You will find a dispenser within the room you started in which contains some bas
 /obj/machinery/power/rtg/abductor/built/abductor
 	name = "Void Core"
 	power_gen = 5000000
-

@@ -4,7 +4,7 @@
 	set name = "Advanced Who"
 	set category = "OOC.Resources" //CHOMPEdit
 
-	var/msg = "<b>Current Players:</b>\n"
+	var/msg = span_bold("Current Players:") + "\n"
 
 	var/list/Lines = list()
 
@@ -12,14 +12,14 @@
 		for(var/client/C in GLOB.clients)
 			var/entry = "<tr><td>[C.key]"
 			if(C.holder && C.holder.fakekey)
-				entry += " <i>(as [C.holder.fakekey])</i>"
+				entry += " " + span_italics("(as [C.holder.fakekey])")
 
 			entry += "</td><td>"
 
 			if(C.mob.real_name)
 				switch(C.mob.stat)
 					if(UNCONSCIOUS)
-						entry += span_darkgray("<b>Unconscious</b>") // these are literally all spans so I can apply .inverted to them because black on dark grey isn't legible
+						entry += span_darkgray(span_bold("Unconscious")) // these are literally all spans so I can apply .inverted to them because black on dark grey isn't legible
 
 					if(DEAD)
 						if(isobserver(C.mob))
@@ -27,7 +27,7 @@
 							if(O.started_as_observer)
 								entry += span_gray("Observing")
 							else
-								entry += span_black("<b>Died</b>")
+								entry += span_black(span_bold("Died"))
 
 					else
 						entry += span_green("Playing")
@@ -35,7 +35,7 @@
 				entry += " as [C.mob.real_name]"
 
 			else if(isnewplayer(C.mob))
-				entry += span_blue("<b>In lobby</b>")
+				entry += span_blue(span_bold("In lobby"))
 
 			entry += "</td><td>"
 
@@ -46,9 +46,9 @@
 				age = 0
 
 			if(age <= 1)
-				age = span_red("<b>[age]</b>")
+				age = span_red(span_bold("[age]"))
 			else if(age < 10)
-				age = span_orange("<b>[age]</b>")
+				age = span_orange(span_bold("[age]"))
 
 			entry += "Age: [age]"
 			entry += "</td><td>"
@@ -93,7 +93,7 @@
 	for(var/line in sortList(Lines))
 		msg += "[line]"
 	msg += "</table>"
-	msg += "<b>Total Players: [length(Lines)]</b>"
-	msg = span_filter_notice("" + msg + "")
+	msg += span_bold("Total Players: [length(Lines)]")
+	msg = span_filter_notice(msg)
 	to_chat(src, msg)
 YW EDIT STOP*/
