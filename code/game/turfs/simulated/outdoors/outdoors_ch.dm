@@ -39,6 +39,8 @@
 
 /turf/simulated/floor/outdoors/dirt/sif
 
+/turf/simulated/floor/outdoors/dirt/sif/planetuse
+
 /turf/simulated/floor/outdoors/grass/sif/forest/planetuse
 
 /turf/simulated/floor/outdoors/rocks/sif/planetuse
