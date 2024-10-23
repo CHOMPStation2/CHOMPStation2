@@ -242,3 +242,8 @@
 2024-10-22:
   Darlantanis:
   - bugfix: makes leopardmander maw autotransfer functional
+2024-10-23:
+  CHOMPStation2:
+  - bugfix: Crew manifest not showing up
+  Darlantanis:
+  - bugfix: fixes slug death state
