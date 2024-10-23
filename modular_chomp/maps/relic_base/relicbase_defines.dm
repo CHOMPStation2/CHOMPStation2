@@ -16,9 +16,9 @@
 
 
 
-#define Z_LEVEL_FUELDEPOT				12
-#define Z_LEVEL_GATEWAY					13
-#define Z_LEVEL_REDGATE					14
+#define Z_LEVEL_FUELDEPOT				14
+#define Z_LEVEL_GATEWAY					15
+#define Z_LEVEL_REDGATE					16
 
 // Camera Network Additions
 #define NETWORK_EXTERIOR "Exterior" // Exterior Cameras
