@@ -1,7 +1,7 @@
 //Hello! You want to make your own shuttle? This ship here is the most baseline thing you can create, its as easy as copying this file, changing its name,
 //and ctrl+H-ing "Generic Shuttle" to your ship's display name, and "generic_shuttle" to whatever filepath you wish. Be sure all shuttle_tags between match or else the game will freak out. No duplicate names!
 // Compile in the map for CI testing if we're testing compileability of all the maps
-#if MAP_TEST
+#ifdef MAP_TEST
 #include "generic_shuttle.dmm"
 #endif
 
