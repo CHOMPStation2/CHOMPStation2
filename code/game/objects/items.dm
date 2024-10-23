@@ -137,8 +137,8 @@
 		m.update_inv_r_hand()
 		m.update_inv_l_hand()
 		src.loc = null
-	for(var/datum/action/A as anything in actions)
-		A.Remove(user)
+	for(var/X in actions)
+		qdel(X)
 	return ..()
 
 // Check if target is reasonable for us to operate on.
@@ -338,8 +338,7 @@
 	if(zoom)
 		zoom() //binoculars, scope, etc
 	appearance_flags &= ~NO_CLIENT_COLOR
-	for(var/X in actions)
-		var/datum/action/A = X
+	for(var/datum/action/A as anything in actions)
 		A.Remove(user)
 
 // called just as an item is picked up (loc is not yet changed)
