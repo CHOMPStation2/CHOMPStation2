@@ -1,5 +1,4 @@
 /*
-/*
 //////////////////////////////////////
 
 Necrotic Agent
@@ -25,7 +24,8 @@ Bonus
 	level = 6
 	severity = 3
 
-/datum/symptom/necrotic_agent/Activate(datum/disease/advance/A)
-	..()
-	A.allow_dead = 1
-*/
+/datum/symptom/necrotic_agent/Start(datum/disease/advance/A)
+	A.allow_dead = TRUE
+
+/datum/symptom/necrotic_agent/End(datum/disease/advance/A)
+	A.allow_dead = FALSE

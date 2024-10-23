@@ -36,12 +36,12 @@
 	color = "#D18AA5"
 
 /datum/reagent/phoron_dust/phoronvirusfood
-	name = "Virus phoron food"
+	name = "Phoronic virus food"
 	id = "phoronvirusfood"
 	description = "mutates blood"
 	color = "#A69DA9"
 
 /datum/reagent/phoron_dust/phoronvirusfood/weak
-	name = "Weakened virus phoron food"
+	name = "Weakened phoronic virus food"
 	id = "weakphoronvirusfood"
 	color = "#CEC3C6"

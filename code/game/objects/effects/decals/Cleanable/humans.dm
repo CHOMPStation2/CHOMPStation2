@@ -254,14 +254,11 @@ var/global/list/image/splatter_cache=list()
 //This version should be used for admin spawns and pre-mapped virus vectors (e.g. in PoIs), this version does not dry
 /obj/effect/decal/cleanable/mucus/mapped/Initialize()
 	. = ..()
-	/* CHOMPEdit
-	virus2 |= new /datum/disease2/disease
-	virus2[1].makerandom()
-	*/
-// /obj/effect/decal/cleanable/mucus/mapped/Destroy()
-	/* CHOMPEdit
-	virus2.Cut()
-	return ..()
-	*/
+// CHOMPEdit Start - Viro Rework
+	viruses |= new /datum/disease/advance
 
+/obj/effect/decal/cleanable/mucus/mapped/Destroy()
+	viruses.Cut()
+	return ..()
+// CHOMPEdit End
 #undef DRYING_TIME

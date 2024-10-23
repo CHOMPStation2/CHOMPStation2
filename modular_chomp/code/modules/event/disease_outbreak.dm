@@ -26,7 +26,7 @@ GLOBAL_LIST_EMPTY(current_pending_diseases)
 				virus = /datum/disease/cold
 		chosen_disease = new virus()
 	else
-		if(severity == EVENT_LEVEL_MODERATE)
+		if(severity == EVENT_LEVEL_MAJOR)
 			chosen_disease = create_virus(severity * pick(2,3))	//50% chance for a major disease instead of a moderate one
 		else
 			chosen_disease = create_virus(severity * 2)

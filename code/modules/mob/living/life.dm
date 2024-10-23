@@ -35,11 +35,6 @@
 		//Random events (vomiting etc)
 		handle_random_events()
 
-		// CHOMPAdd - Viruses
-		if(LAZYLEN(viruses))
-			handle_diseases()
-		// CHOMPEnd
-
 		. = 1
 
 		if(client)
@@ -55,6 +50,11 @@
 
 	//Chemicals in the body, this is moved over here so that blood can be added after death
 	handle_chemicals_in_body()
+
+	// CHOMPAdd - Viruses
+	if(LAZYLEN(viruses))
+		handle_diseases()
+	// CHOMPEnd
 
 	//Handle temperature/pressure differences between body and environment
 	if(environment)
