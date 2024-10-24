@@ -25,3 +25,22 @@
 
 /turf/simulated/floor/outdoors/fur
 	demote_to = null
+
+// General sif turf defines for unit test, overridden in map for specific values
+/turf/simulated/floor/plating/sif/planetuse
+
+/turf/simulated/mineral/floor/sif
+
+/turf/simulated/mineral/floor/ignore_mapgen/sif
+
+/turf/simulated/floor/plating/sif/planetuse
+
+/turf/simulated/floor/outdoors/snow/sif/planetuse
+
+/turf/simulated/floor/outdoors/dirt/sif
+
+/turf/simulated/floor/outdoors/dirt/sif/planetuse
+
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse
+
+/turf/simulated/floor/outdoors/rocks/sif/planetuse

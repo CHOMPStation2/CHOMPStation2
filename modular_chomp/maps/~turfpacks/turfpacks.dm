@@ -57,6 +57,20 @@
 #undef TURFPACK_PHORON
 #undef TURFPACK_CO2
 
+
+// If those are not defined on a station map, use SC defaults
+#ifndef TEMPERATURE_SIF
+	#define TEMPERATURE_SIF 243.15
+#endif
+
+#ifndef MOLES_O2SIF
+	#define MOLES_O2SIF (114.50978 * 0.181)
+#endif
+
+#ifndef MOLES_N2SIF
+	#define MOLES_N2SIF (114.50978 * 0.819)
+#endif
+
 // SIF ATMOS
 #define TURFPACK_PACKNAME sif
 #define TURFPACK_TEMP TEMPERATURE_SIF

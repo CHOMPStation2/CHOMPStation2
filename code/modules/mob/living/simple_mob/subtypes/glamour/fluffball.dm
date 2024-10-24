@@ -42,11 +42,11 @@
 	vore_standing_too = 1
 
 /mob/living/simple_mob/vore/fluffball/init_vore()
- 	//CHONOEdit Start
+ 	//CHOMPEdit Start
 	if(!voremob_loaded)
 		return
 	.=..()
-	//CHONOEdit End
+	//CHOMPEdit End
 	var/obj/belly/B = vore_selected
 	B.name = "tail"
 	B.desc = "The small critter seems to suddenly panic, lunging at you with its massive fluffy tail, using it like a weapon. Despite the appearance of the tail, it seems to be much larger on the inside, suddenly engulfing you completely in a world of endless softness. Inside, you are bound up nice and tight in an oddly comfortable prison of hair, it ripples over your body tickling every bit of exposed body on offer."
