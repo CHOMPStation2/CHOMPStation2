@@ -34,3 +34,15 @@
 	reagent_state = LIQUID
 	color = "#CF3600"
 	strength = 0
+
+/datum/reagent/salmonella
+	name = "Salmonella"
+	id = "salmonella"
+	description = "A nasty bacteria found in spoiled food."
+	reagent_state = LIQUID
+	color = "#1E4600"
+	taste_mult = 0
+
+/datum/reagent/salmonella/on_mob_life(mob/living/carbon/M)
+	M.ForceContractDisease(new /datum/disease/food_poisoning(0))
+	return ..()

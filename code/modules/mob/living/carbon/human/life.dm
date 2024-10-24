@@ -508,9 +508,14 @@
 /mob/living/carbon/human/handle_post_breath(datum/gas_mixture/breath)
 	..()
 	//spread some viruses while we are at it
-	if(breath && virus2.len > 0 && prob(10))
-		for(var/mob/living/carbon/M in view(1,src))
-			src.spread_disease_to(M)
+	// CHOMPEdit Start - Virology Rework
+	if(breath && viruses.len > 0 && prob(10))
+		for(var/datum/disease/D in viruses)
+			if((D.spread_flags & SPECIAL) || (D.spread_flags & NON_CONTAGIOUS))
+				continue
+			for(var/mob/living/carbon/M in view(1,src))
+				ContractDisease(D)
+	// CHOMPEdit End
 
 
 /mob/living/carbon/human/get_breath_from_internal(volume_needed=BREATH_VOLUME)
@@ -2112,10 +2117,12 @@
 
 	if (BITTEST(hud_updateflag, STATUS_HUD))
 		var/foundVirus = 0
-		for (var/ID in virus2)
-			if (ID in virusDB)
+		// CHOMPedit Start - Virology Rework
+		for (var/datum/disease/D in viruses)
+			if(D.discovered)
 				foundVirus = 1
 				break
+		// CHOMPEdit End
 
 		var/image/holder = grab_hud(STATUS_HUD)
 		var/image/holder2 = grab_hud(STATUS_HUD_OOC)
@@ -2137,8 +2144,12 @@
 End Chomp edit */
 		else
 			holder.icon_state = "hudhealthy"
-			if(virus2.len)
-				holder2.icon_state = "hudill"
+			// CHOMPedit Start - Viro Rework
+			if(viruses.len)
+				for(var/datum/disease/D in viruses)
+					if(D.discovered)
+						holder2.icon_state = "hudill"
+			// CHOMPedit End
 			else
 				holder2.icon_state = "hudhealthy"
 		if(block_hud)

@@ -33,8 +33,10 @@
 /obj/machinery/smartfridge/virology/accept_check(var/obj/item/O as obj)
 	if(istype(O,/obj/item/reagent_containers/glass/beaker/vial/))
 		return 1
+	/* CHOMPEdit Start
 	if(istype(O,/obj/item/virusdish/))
 		return 1
+	*/ // CHOMPEdit End
 	return 0
 
 /obj/machinery/smartfridge/secure/virology
@@ -46,8 +48,10 @@
 /obj/machinery/smartfridge/secure/virology/accept_check(var/obj/item/O as obj)
 	if(istype(O,/obj/item/reagent_containers/glass/beaker/vial/))
 		return 1
+	/* CHOMPEdit Start
 	if(istype(O,/obj/item/virusdish/))
 		return 1
+	*/ // CHOMPEdit End
 	return 0
 
 /*

@@ -99,6 +99,6 @@
 		icon_state = "holo_medical"
 
 /obj/structure/holosign/barrier/medical/proc/CheckHuman(mob/living/carbon/human/H)
-	if(isemptylist(H.virus2) && !istype(H.species, /datum/species/xenochimera))
+	if(isemptylist(H.viruses) && !istype(H.species, /datum/species/xenochimera))
 		return TRUE
 	return FALSE

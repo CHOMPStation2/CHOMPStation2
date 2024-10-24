@@ -132,7 +132,8 @@ var/list/admin_verbs_admin = list(
 	/client/proc/toggle_spawning_with_recolour,
 	/client/proc/start_vote,
 	/client/proc/reload_jobwhitelist, //ChompADD
-	/client/proc/reload_alienwhitelist //ChompADD
+	/client/proc/reload_alienwhitelist, //ChompADD
+	/client/proc/AdminCreateVirus // CHOMPAdd
 	)
 
 var/list/admin_verbs_ban = list(
@@ -192,7 +193,7 @@ var/list/admin_verbs_spawn = list(
 	/client/proc/cmd_admin_droppod_spawn,
 	/client/proc/respawn_character,
 	/client/proc/spawn_character_mob,  //VOREStation Add,
-	/client/proc/virus2_editor,
+	// /client/proc/virus2_editor, - CHOMPEdit
 	/client/proc/spawn_chemdisp_cartridge,
 	/client/proc/map_template_load,
 	/client/proc/map_template_upload,
@@ -432,7 +433,8 @@ var/list/admin_verbs_mod = list(
 	/client/proc/start_vote,
 	/datum/admins/proc/quick_nif, //CHOMPStation Add,
 	/client/proc/reload_jobwhitelist, //ChompADD
-	/client/proc/reload_alienwhitelist //ChompADD
+	/client/proc/reload_alienwhitelist, //ChompADD
+	/client/proc/AdminCreateVirus // CHOMPAdd
 )
 
 var/list/admin_verbs_event_manager = list(
@@ -580,7 +582,8 @@ var/list/admin_verbs_event_manager = list(
 	/datum/admins/proc/quick_nif, //CHOMPStation Add,
 	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
 	/client/proc/reload_jobwhitelist, //ChompADD
-	/client/proc/reload_alienwhitelist //ChompADD
+	/client/proc/reload_alienwhitelist, //ChompADD
+	/client/proc/AdminCreateVirus // CHOMPAdd
 )
 
 /client/proc/add_admin_verbs()
