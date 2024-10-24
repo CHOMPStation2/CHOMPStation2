@@ -247,3 +247,6 @@
   - bugfix: Crew manifest not showing up
   Darlantanis:
   - bugfix: fixes slug death state
+2024-10-24:
+  ShadowLarkens:
+  - bugfix: Better error handling in bapi-dmm
