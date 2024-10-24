@@ -109,9 +109,10 @@ def main(args):
     for map_filename in (args.maps or glob.glob("**/*.dmm", recursive = True)):
         print(map_filename, end = " ")
 
-        if ("maps/redgate/" not in map_filename) and ("maps/gateway_vr/" not in map_filename) and ("modular_chomp/maps/" not in map_filename):
-            print(yellow("SKIPPED"))
-            continue
+        if (not args.maps):
+            if ("maps/redgate/" not in map_filename) and ("maps/gateway_vr/" not in map_filename) and ("modular_chomp/maps/" not in map_filename):
+                print(yellow("SKIPPED"))
+                continue
 
         success = True
         all_failures: list[MaplintError] = []
