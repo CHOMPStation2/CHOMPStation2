@@ -103,7 +103,7 @@ def main(args):
             traceback.print_exc()
             any_failed = True
 
-    for map_filename in (args.maps or glob.glob("maps/**/*.dmm", recursive = True) or glob.glob("modular_chomp/maps/**/*.dmm", recursive = True)):
+    for map_filename in (args.maps or glob.glob("maps/redgate/**/*.dmm", recursive = True) or glob.glob("maps/gateway_vr/**/*.dmm", recursive = True) or glob.glob("modular_chomp/maps/**/*.dmm", recursive = True)):
         print(map_filename, end = " ")
 
         success = True
