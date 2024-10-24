@@ -199,7 +199,7 @@
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	frequency = 1380;
 	id_tag = "adminshuttle_docker";
-	pixel_x = -30;
+	pixel_x = -30
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/shuttle/adminshuttle)
@@ -2852,7 +2852,7 @@
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	frequency = 1380;
 	id_tag = "adminshuttle_bay";
-	pixel_x = 30;
+	pixel_x = 30
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/adminships/engine_bay)

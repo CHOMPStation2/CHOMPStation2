@@ -172,8 +172,7 @@
 "aU" = (
 /obj/structure/bed/chair{
 	dir = 4;
-	icon_state = "chair";
-	tag = "icon-chair (EAST)"
+	icon_state = "chair"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 295.15
@@ -190,8 +189,7 @@
 "aW" = (
 /obj/structure/bed/chair{
 	dir = 8;
-	icon_state = "chair";
-	tag = "icon-chair (WEST)"
+	icon_state = "chair"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 295.15

@@ -512,12 +512,6 @@
 	},
 /turf/simulated/floor/plating/bor4,
 /area/cryogaia_away/aerostat/inside)
-"bo" = (
-/obj/structure/grille,
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat/inside)
 "bp" = (
 /obj/effect/floor_decal/industrial/warning/dust/corner{
 	dir = 4
@@ -9399,7 +9393,7 @@ bf
 bf
 ac
 ac
-bo
+bf
 bf
 ac
 ac
@@ -9592,7 +9586,7 @@ bf
 bf
 ac
 ac
-bo
+bf
 bf
 ac
 ac
@@ -11512,11 +11506,11 @@ aw
 aw
 aw
 ac
-bo
+bf
 bf
 ac
 ac
-bo
+bf
 bf
 ac
 be
@@ -11584,11 +11578,11 @@ aw
 bq
 ac
 ac
-bo
+bf
 bf
 ac
 ac
-bo
+bf
 bf
 ac
 aw
@@ -11938,11 +11932,11 @@ aw
 aw
 aw
 ac
-bo
+bf
 bf
 ac
 ac
-bo
+bf
 bf
 ac
 be
@@ -12010,11 +12004,11 @@ aw
 bq
 ac
 ac
-bo
+bf
 bf
 ac
 ac
-bo
+bf
 bf
 ac
 aw
@@ -14278,7 +14272,7 @@ bf
 bf
 ac
 ac
-bo
+bf
 bf
 ac
 ac
@@ -14369,7 +14363,7 @@ bf
 bf
 ac
 ac
-bo
+bf
 bf
 ac
 ac

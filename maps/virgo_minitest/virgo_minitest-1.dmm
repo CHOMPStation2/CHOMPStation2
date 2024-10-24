@@ -3439,7 +3439,6 @@
 /area/engineering/engine_room)
 "kT" = (
 /obj/structure/lattice,
-/obj/structure/lattice,
 /turf/space,
 /area/space)
 "kU" = (
@@ -4485,10 +4484,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/engine_monitoring)
-"wW" = (
-/obj/structure/lattice,
-/turf/space,
-/area/space)
 "wY" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/cyan{
 	dir = 4
@@ -11907,8 +11902,8 @@ aa
 aa
 OV
 VK
-wW
-wW
+kT
+kT
 VK
 US
 Vk
@@ -11920,8 +11915,8 @@ VK
 Vk
 US
 iy
-wW
-wW
+kT
+kT
 VK
 VK
 aa
@@ -12015,9 +12010,9 @@ VK
 BX
 VK
 aa
-wW
+kT
 aa
-wW
+kT
 aa
 VK
 BX
@@ -12116,11 +12111,11 @@ aa
 VK
 US
 VK
-wW
+kT
 BO
 VK
 BO
-wW
+kT
 VK
 US
 VK
@@ -12213,8 +12208,8 @@ aa
 aa
 tW
 VK
-wW
-wW
+kT
+kT
 vf
 US
 VK
@@ -12226,8 +12221,8 @@ aa
 VK
 US
 iy
-wW
-wW
+kT
+kT
 VK
 tW
 aa
@@ -12320,11 +12315,11 @@ aa
 VK
 US
 VK
-wW
+kT
 BO
 VK
 BO
-wW
+kT
 VK
 US
 VK
@@ -12423,9 +12418,9 @@ VK
 BX
 VK
 aa
-wW
+kT
 aa
-wW
+kT
 aa
 VK
 BX
@@ -12519,8 +12514,8 @@ aa
 aa
 tW
 VK
-wW
-wW
+kT
+kT
 VK
 US
 Vk
@@ -12532,8 +12527,8 @@ VK
 Vk
 US
 iy
-wW
-wW
+kT
+kT
 VK
 tW
 aa
@@ -12740,9 +12735,9 @@ VK
 VK
 VK
 tW
-wW
-wW
-wW
+kT
+kT
+kT
 Zp
 aa
 aa
@@ -12844,7 +12839,7 @@ Dd
 Gk
 aa
 aa
-wW
+kT
 aa
 aa
 aa
@@ -12946,7 +12941,7 @@ xp
 Vd
 Vd
 aa
-wW
+kT
 aa
 aa
 aa
@@ -13048,7 +13043,7 @@ nO
 LN
 Vd
 aa
-wW
+kT
 aa
 aa
 aa
@@ -13150,7 +13145,7 @@ pZ
 Vd
 Vd
 aa
-wW
+kT
 aa
 aa
 aa
@@ -13252,7 +13247,7 @@ Ox
 Vd
 aa
 aa
-wW
+kT
 aa
 aa
 aa
@@ -13354,7 +13349,7 @@ KX
 Vd
 aa
 aa
-wW
+kT
 aa
 aa
 aa
@@ -13456,7 +13451,7 @@ Vd
 Vd
 Vd
 aa
-wW
+kT
 aa
 aa
 aa
@@ -13558,7 +13553,7 @@ PO
 PO
 Vd
 aa
-wW
+kT
 aa
 aa
 aa
@@ -13660,7 +13655,7 @@ PO
 Sd
 Vd
 aa
-wW
+kT
 aa
 aa
 aa
@@ -13762,7 +13757,7 @@ Vd
 Vd
 Vd
 aa
-wW
+kT
 aa
 aa
 aa
@@ -13864,7 +13859,7 @@ aa
 aa
 aa
 aa
-wW
+kT
 aa
 aa
 aa
@@ -13966,7 +13961,7 @@ fH
 aa
 aa
 aa
-wW
+kT
 aa
 aa
 aa
@@ -14068,7 +14063,7 @@ fH
 aa
 aa
 aa
-wW
+kT
 aa
 aa
 aa
@@ -14170,7 +14165,7 @@ fH
 aa
 aa
 aa
-wW
+kT
 aa
 aa
 aa
@@ -14272,7 +14267,7 @@ aa
 aa
 aa
 aa
-wW
+kT
 aa
 aa
 aa
@@ -14374,7 +14369,7 @@ aa
 aa
 aa
 aa
-wW
+kT
 aa
 aa
 aa
@@ -14476,7 +14471,7 @@ aa
 aa
 aa
 aa
-wW
+kT
 aa
 aa
 aa
@@ -14578,7 +14573,7 @@ tz
 aa
 aa
 aa
-wW
+kT
 aa
 aa
 aa
@@ -14680,7 +14675,7 @@ tz
 aa
 aa
 aa
-wW
+kT
 aa
 aa
 aa
@@ -14782,7 +14777,7 @@ tz
 aa
 aa
 aa
-wW
+kT
 aa
 aa
 aa
@@ -14882,14 +14877,14 @@ qQ
 lx
 tz
 Zp
-wW
-wW
-wW
-wW
-wW
-wW
+kT
+kT
+kT
+kT
+kT
+kT
 Zp
-wW
+kT
 aa
 aa
 aa
@@ -15093,7 +15088,7 @@ II
 GB
 pL
 Vj
-wW
+kT
 aa
 aa
 aa
@@ -15164,11 +15159,11 @@ aa
 aa
 aa
 aa
-wW
-wW
-wW
-wW
-wW
+kT
+kT
+kT
+kT
+kT
 od
 Si
 Si
@@ -15195,7 +15190,7 @@ II
 GB
 Jo
 Vj
-wW
+kT
 aa
 aa
 aa
@@ -15266,7 +15261,7 @@ aa
 aa
 aa
 aa
-wW
+kT
 Pp
 pL
 Pp
@@ -15288,7 +15283,7 @@ Im
 Si
 od
 aa
-wW
+kT
 oG
 II
 GB
@@ -15297,7 +15292,7 @@ II
 GB
 pL
 Vj
-wW
+kT
 aa
 aa
 aa
@@ -15368,7 +15363,7 @@ aa
 aa
 aa
 aa
-wW
+kT
 Vj
 Vj
 Vj
@@ -15389,7 +15384,7 @@ Si
 vh
 mP
 od
-wW
+kT
 kT
 Pp
 II
@@ -15399,7 +15394,7 @@ II
 GB
 Jo
 Vj
-wW
+kT
 aa
 aa
 aa
@@ -15470,7 +15465,7 @@ aa
 aa
 aa
 aa
-wW
+kT
 sf
 sf
 sf
@@ -15492,7 +15487,7 @@ MJ
 zq
 od
 aa
-wW
+kT
 oG
 II
 GB
@@ -15501,7 +15496,7 @@ II
 GB
 pL
 Vj
-wW
+kT
 aa
 aa
 aa
@@ -15572,7 +15567,7 @@ aa
 aa
 aa
 aa
-wW
+kT
 Vj
 Vj
 Vj
@@ -15594,7 +15589,7 @@ jW
 Tx
 od
 aa
-wW
+kT
 Pp
 II
 GB
@@ -15603,7 +15598,7 @@ II
 GB
 Jo
 Vj
-wW
+kT
 aa
 aa
 aa
@@ -15674,7 +15669,7 @@ aa
 aa
 aa
 aa
-wW
+kT
 xZ
 xZ
 xZ
@@ -15696,7 +15691,7 @@ RL
 zs
 rE
 aa
-wW
+kT
 oG
 II
 GB
@@ -15705,7 +15700,7 @@ II
 GB
 pL
 Vj
-wW
+kT
 aa
 aa
 aa
@@ -15776,7 +15771,7 @@ aa
 aa
 aa
 aa
-wW
+kT
 qd
 pY
 pY
@@ -15798,7 +15793,7 @@ Hb
 uq
 od
 aa
-wW
+kT
 Pp
 II
 GB
@@ -15807,7 +15802,7 @@ II
 GB
 Jo
 Vj
-wW
+kT
 aa
 aa
 aa
@@ -15878,7 +15873,7 @@ aa
 aa
 aa
 aa
-wW
+kT
 AI
 AI
 AI
@@ -15900,7 +15895,7 @@ GM
 Tz
 od
 od
-wW
+kT
 oG
 II
 GB
@@ -15909,7 +15904,7 @@ II
 GB
 pL
 Vj
-wW
+kT
 aa
 aa
 aa
@@ -15980,7 +15975,7 @@ aa
 aa
 aa
 aa
-wW
+kT
 Vj
 Vj
 Vj
@@ -16082,7 +16077,7 @@ aa
 aa
 aa
 aa
-wW
+kT
 sf
 sf
 sf
@@ -16184,7 +16179,7 @@ aa
 aa
 aa
 aa
-wW
+kT
 Vj
 Vj
 Vj
@@ -16206,7 +16201,7 @@ od
 od
 od
 od
-wW
+kT
 Pp
 II
 GB
@@ -16215,7 +16210,7 @@ II
 GB
 Jo
 Vj
-wW
+kT
 aa
 aa
 aa
@@ -16286,7 +16281,7 @@ aa
 aa
 aa
 aa
-wW
+kT
 oG
 Jo
 oG
@@ -16308,7 +16303,7 @@ od
 Ed
 Qs
 tz
-wW
+kT
 oG
 II
 GB
@@ -16317,7 +16312,7 @@ II
 GB
 pL
 Vj
-wW
+kT
 aa
 aa
 aa
@@ -16388,11 +16383,11 @@ aa
 aa
 aa
 aa
-wW
-wW
-wW
-wW
-wW
+kT
+kT
+kT
+kT
+kT
 od
 od
 od
@@ -16410,7 +16405,7 @@ od
 Ed
 Ed
 tz
-wW
+kT
 Pp
 II
 GB
@@ -16419,7 +16414,7 @@ II
 GB
 Jo
 Vj
-wW
+kT
 aa
 aa
 aa
@@ -16512,7 +16507,7 @@ JB
 lx
 lx
 tz
-wW
+kT
 oG
 II
 GB
@@ -16521,7 +16516,7 @@ II
 GB
 pL
 Vj
-wW
+kT
 aa
 aa
 aa
@@ -16614,7 +16609,7 @@ JB
 lx
 lx
 tz
-wW
+kT
 Pp
 II
 GB
@@ -16623,7 +16618,7 @@ II
 GB
 Jo
 Vj
-wW
+kT
 aa
 aa
 aa
@@ -16725,7 +16720,7 @@ II
 GB
 pL
 Vj
-wW
+kT
 aa
 aa
 aa
@@ -16818,7 +16813,7 @@ od
 mo
 Oy
 tz
-wW
+kT
 Pp
 II
 GB
@@ -16827,7 +16822,7 @@ II
 GB
 Jo
 Vj
-wW
+kT
 aa
 aa
 aa
@@ -16920,7 +16915,7 @@ od
 mo
 zA
 tz
-wW
+kT
 oG
 II
 GB
@@ -16929,7 +16924,7 @@ II
 GB
 pL
 Vj
-wW
+kT
 aa
 aa
 aa
@@ -17022,7 +17017,7 @@ od
 tz
 tz
 tz
-wW
+kT
 Pp
 II
 GB
@@ -17031,7 +17026,7 @@ II
 GB
 Jo
 Vj
-wW
+kT
 aa
 aa
 aa
@@ -17226,16 +17221,16 @@ aa
 aa
 aa
 aa
-wW
+kT
 Zp
-wW
-wW
-wW
-wW
-wW
-wW
+kT
+kT
+kT
+kT
+kT
+kT
 Zp
-wW
+kT
 aa
 aa
 aa

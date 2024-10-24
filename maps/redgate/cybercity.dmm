@@ -1759,12 +1759,10 @@
 /area/redgate/city/house1)
 "cwc" = (
 /obj/structure/railing{
-	dir = 8;
-	icon_state = "railing0"
+	dir = 8
 	},
 /obj/structure/railing{
-	dir = 1;
-	icon_state = "railing0"
+	dir = 1
 	},
 /turf/simulated/floor/water/indoors,
 /area/redgate/city/spa)
@@ -5201,8 +5199,7 @@
 /area/redgate/city/streets)
 "gZv" = (
 /obj/structure/railing{
-	dir = 8;
-	icon_state = "railing0"
+	dir = 8
 	},
 /obj/structure/bonfire/permanent,
 /obj/effect/mist,
@@ -5297,8 +5294,7 @@
 /area/redgate/city/offlicense)
 "heW" = (
 /obj/structure/railing{
-	dir = 1;
-	icon_state = "railing0"
+	dir = 1
 	},
 /obj/structure/flora/lily3,
 /turf/simulated/floor/water/indoors,
@@ -6168,8 +6164,7 @@
 /area/redgate/city/workshop)
 "imV" = (
 /obj/structure/railing{
-	dir = 1;
-	icon_state = "railing0"
+	dir = 1
 	},
 /turf/simulated/floor/water/indoors,
 /area/redgate/city/spa)
@@ -7261,21 +7256,11 @@
 "jGZ" = (
 /obj/structure/closet/wardrobe/chemistry_white,
 /obj/item/storage/bag/chemistry,
-/obj/item/clothing/accessory/solgov/department/research/jumper{
-	desc = "Insignia denoting assignment to the research department."
-	},
-/obj/item/clothing/accessory/solgov/department/research/jumper{
-	desc = "Insignia denoting assignment to the research department."
-	},
-/obj/item/clothing/accessory/solgov/department/research/jumper{
-	desc = "Insignia denoting assignment to the research department."
-	},
-/obj/item/clothing/accessory/solgov/department/research/jumper{
-	desc = "Insignia denoting assignment to the research department."
-	},
-/obj/item/clothing/accessory/solgov/department/research/jumper{
-	desc = "Insignia denoting assignment to the research department."
-	},
+/obj/item/clothing/accessory/solgov/department/research/jumper,
+/obj/item/clothing/accessory/solgov/department/research/jumper,
+/obj/item/clothing/accessory/solgov/department/research/jumper,
+/obj/item/clothing/accessory/solgov/department/research/jumper,
+/obj/item/clothing/accessory/solgov/department/research/jumper,
 /obj/item/clothing/suit/storage/toggle/labcoat,
 /obj/item/clothing/suit/storage/toggle/labcoat,
 /obj/item/clothing/suit/storage/toggle/labcoat,
@@ -7361,7 +7346,6 @@
 /turf/simulated/floor/wood/alt,
 /area/redgate/city/restaurant)
 "jNC" = (
-/obj/structure/table/alien,
 /obj/structure/table/alien,
 /turf/simulated/shuttle/floor/alienplating/blue/half{
 	dir = 1
@@ -8390,8 +8374,7 @@
 "lah" = (
 /obj/structure/railing,
 /obj/structure/railing{
-	dir = 4;
-	icon_state = "railing0"
+	dir = 4
 	},
 /turf/simulated/floor/water/indoors,
 /area/redgate/city/spa)
@@ -9824,12 +9807,10 @@
 /area/redgate/city/waterworks)
 "mRD" = (
 /obj/structure/railing{
-	dir = 1;
-	icon_state = "railing0"
+	dir = 1
 	},
 /obj/structure/railing{
-	dir = 4;
-	icon_state = "railing0"
+	dir = 4
 	},
 /turf/simulated/floor/water/indoors,
 /area/redgate/city/spa)
@@ -12859,8 +12840,7 @@
 /area/redgate/city/bar2)
 "qKc" = (
 /obj/structure/railing{
-	dir = 8;
-	icon_state = "railing0"
+	dir = 8
 	},
 /obj/structure/railing,
 /obj/structure/flora/lily3,
@@ -13602,7 +13582,6 @@
 /obj/effect/fake_sun{
 	do_sun = 0;
 	do_weather = 1;
-	light_power = 1;
 	weather_visuals_icon_state = "storm"
 	},
 /turf/simulated/wall/tgmc/durawall,
@@ -14262,7 +14241,6 @@
 /area/redgate/city/tarot)
 "sAV" = (
 /obj/structure/table/standard,
-/obj/structure/table/standard,
 /turf/simulated/floor/tiled/white,
 /area/redgate/city/scughouse)
 "sCb" = (
@@ -14381,8 +14359,7 @@
 /area/redgate/city/streets)
 "sMI" = (
 /obj/structure/railing{
-	dir = 1;
-	icon_state = "railing0"
+	dir = 1
 	},
 /obj/structure/flora/lily1,
 /turf/simulated/floor/water/indoors,
@@ -15571,9 +15548,7 @@
 /turf/simulated/floor/wood/alt,
 /area/redgate/city/cafe)
 "uoW" = (
-/obj/structure/closet/secure_closet/engineering_electrical/double{
-	anchored = 1
-	},
+/obj/structure/closet/secure_closet/engineering_electrical/double,
 /turf/simulated/floor/tiled/eris/dark/orangecorner,
 /area/redgate/city/engine)
 "upg" = (
@@ -17538,8 +17513,7 @@
 "wSa" = (
 /obj/structure/bonfire/permanent,
 /obj/structure/railing{
-	dir = 8;
-	icon_state = "railing0"
+	dir = 8
 	},
 /obj/effect/mist,
 /turf/simulated/floor/water/indoors,
@@ -17625,8 +17599,7 @@
 /area/redgate/city/streets)
 "wWS" = (
 /obj/structure/railing{
-	dir = 8;
-	icon_state = "railing0"
+	dir = 8
 	},
 /obj/effect/mist,
 /turf/simulated/floor/water/indoors,

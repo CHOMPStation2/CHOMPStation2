@@ -1958,8 +1958,7 @@
 "gG" = (
 /obj/machinery/power/port_gen/pacman,
 /obj/structure/cable{
-	icon_state = "0-2";
-	
+	icon_state = "0-2"
 	},
 /turf/simulated/floor,
 /area/awaymission/snow_outpost/outside)

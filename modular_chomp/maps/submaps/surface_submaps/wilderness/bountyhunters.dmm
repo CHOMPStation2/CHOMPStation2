@@ -126,6 +126,17 @@
 /obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
+"qu" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/machinery/door/blast/regular{
+	id = "bountycellB"
+	},
+/turf/simulated/floor/concrete,
+/area/submap/BountyHunters)
 "qG" = (
 /obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/concrete,
@@ -147,12 +158,6 @@
 	},
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
-"rt" = (
-/obj/structure/table/steel,
-/obj/machinery/recharger,
-/obj/effect/floor_decal/corner/grey/diagonal,
-/turf/simulated/floor/concrete,
-/area/submap/BountyHunters)
 "sL" = (
 /obj/structure/table/steel,
 /obj/random/maintenance/foodstuff,
@@ -165,30 +170,6 @@
 	pixel_y = 0
 	},
 /obj/effect/floor_decal/corner/grey/diagonal,
-/turf/simulated/floor/concrete,
-/area/submap/BountyHunters)
-"ub" = (
-/obj/structure/grille,
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced,
-/obj/machinery/door/blast/regular{
-	id = "bountycellB"
-	},
-/turf/simulated/floor/concrete,
-/area/submap/BountyHunters)
-"uu" = (
-/obj/structure/table/steel,
-/obj/effect/floor_decal/corner/grey/diagonal,
-/obj/random/material/precious,
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
 "uC" = (
@@ -246,6 +227,29 @@
 "zl" = (
 /turf/simulated/wall/r_concrete,
 /area/submap/BountyHunters)
+"zA" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/machinery/door/blast/regular{
+	id = "bountycellB"
+	},
+/turf/simulated/floor/concrete,
+/area/submap/BountyHunters)
+"CV" = (
+/obj/structure/table/steel,
+/obj/machinery/recharger,
+/obj/effect/floor_decal/corner/grey/diagonal,
+/turf/simulated/floor/concrete,
+/area/submap/BountyHunters)
 "DI" = (
 /obj/machinery/button/remote/blast_door{
 	id = "bountycellB"
@@ -273,6 +277,21 @@
 	},
 /obj/machinery/power/port_gen/pacman,
 /obj/effect/floor_decal/corner/grey/diagonal,
+/turf/simulated/floor/concrete,
+/area/submap/BountyHunters)
+"FQ" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced,
+/obj/machinery/door/blast/regular{
+	id = "bountycellB"
+	},
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
 "Gi" = (
@@ -365,18 +384,6 @@
 	},
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
-"Nc" = (
-/obj/structure/grille,
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced,
-/obj/machinery/door/blast/regular{
-	id = "bountycellB"
-	},
-/turf/simulated/floor/concrete,
-/area/submap/BountyHunters)
 "NE" = (
 /obj/structure/railing,
 /obj/effect/floor_decal/corner/grey/diagonal,
@@ -447,6 +454,12 @@
 /obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
+"Sb" = (
+/obj/structure/table/steel,
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/random/material/precious,
+/turf/simulated/floor/concrete,
+/area/submap/BountyHunters)
 "SR" = (
 /obj/machinery/power/smes/buildable/point_of_interest,
 /obj/structure/cable/green{
@@ -478,22 +491,6 @@
 	id = "bountycellA"
 	},
 /obj/machinery/door/airlock,
-/turf/simulated/floor/concrete,
-/area/submap/BountyHunters)
-"Uz" = (
-/obj/structure/grille,
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced,
-/obj/machinery/door/blast/regular{
-	id = "bountycellB"
-	},
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
 "VU" = (
@@ -804,8 +801,8 @@ aZ
 Zm
 zl
 sL
-rt
-uu
+CV
+Sb
 fW
 qG
 qG
@@ -912,8 +909,8 @@ aZ
 Zm
 zl
 sL
-uu
-rt
+Sb
+CV
 GI
 qG
 qG
@@ -991,7 +988,7 @@ Zm
 Zm
 aZ
 Zm
-ub
+zA
 qG
 qG
 qG
@@ -1018,7 +1015,7 @@ Zm
 Zm
 aZ
 Zm
-Nc
+qu
 qG
 mi
 qG
@@ -1045,7 +1042,7 @@ Zm
 Zm
 aZ
 Zm
-Uz
+FQ
 qG
 qG
 qG

@@ -4,8 +4,7 @@
 /area/template_noop)
 "b" = (
 /obj/structure/window/reinforced{
-	dir = 4;
-	tag = "icon-rwindow (EAST)"
+	dir = 4
 	},
 /turf/template_noop,
 /area/submap/derelict2)
@@ -15,19 +14,16 @@
 /area/submap/derelict2)
 "d" = (
 /obj/structure/window/reinforced{
-	dir = 8;
-	tag = "icon-rwindow (WEST)"
+	dir = 8
 	},
 /turf/template_noop,
 /area/submap/derelict2)
 "e" = (
 /obj/structure/window/reinforced{
-	dir = 4;
-	tag = "icon-rwindow (EAST)"
+	dir = 4
 	},
 /obj/structure/window/reinforced{
-	dir = 8;
-	tag = "icon-rwindow (WEST)"
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/submap/derelict2)
@@ -44,8 +40,7 @@
 /area/submap/derelict2)
 "h" = (
 /obj/machinery/light/small{
-	dir = 1;
-	tag = "icon-bulb1 (NORTH)"
+	dir = 1
 	},
 /obj/machinery/power/apc{
 	dir = 8;
@@ -63,8 +58,7 @@
 /area/submap/derelict2)
 "j" = (
 /obj/machinery/light/small{
-	dir = 4;
-	tag = "icon-bulb1 (EAST)"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/asteroid_steel/airless{
 	temperature = 293.15
@@ -77,8 +71,7 @@
 "l" = (
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
-	dir = 1;
-	tag = "icon-rwindow (NORTH)"
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/submap/derelict2)
@@ -112,15 +105,13 @@
 /area/submap/derelict2)
 "p" = (
 /obj/structure/window/reinforced{
-	dir = 1;
-	tag = "icon-rwindow (NORTH)"
+	dir = 1
 	},
 /turf/template_noop,
 /area/submap/derelict2)
 "q" = (
 /obj/machinery/light/small{
-	dir = 8;
-	tag = "icon-bulb1 (WEST)"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/asteroid_steel/airless{
 	temperature = 293.15

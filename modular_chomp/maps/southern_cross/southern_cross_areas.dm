@@ -719,7 +719,7 @@
 	icon_state = "docking_hallway"
 
 /area/maintenance/thirddeck/dormsport
-	name = "Third Deck Aft Starboard Maintenance"
+	name = "Third Deck Aft Port Maintenance"
 	icon_state = "asmaint"
 
 /area/maintenance/thirddeck/dormsstarboard
@@ -732,7 +732,7 @@
 	icon_state = "asmaint"
 //CHOMPedit end
 /area/maintenance/thirddeck/dormsaft
-	name = "Third Deck Aft Starboard Maintenance"
+	name = "Third Deck Aft Maintenance"
 	icon_state = "asmaint"
 
 /area/maintenance/thirddeck/hiddenkitchen

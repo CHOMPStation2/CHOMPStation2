@@ -65,8 +65,7 @@
 	dir = 4
 	},
 /obj/structure/shuttle/engine/heater{
-	dir = 8;
-	tag = "icon-heater (WEST)"
+	dir = 8
 	},
 /turf/simulated/shuttle/plating,
 /area/submap/intactemptyship)
@@ -351,8 +350,7 @@
 /area/submap/intactemptyship)
 "MK" = (
 /obj/structure/shuttle/engine/propulsion{
-	dir = 8;
-	tag = "icon-propulsion (EAST)"
+	dir = 8
 	},
 /turf/simulated/shuttle/plating,
 /area/submap/intactemptyship)

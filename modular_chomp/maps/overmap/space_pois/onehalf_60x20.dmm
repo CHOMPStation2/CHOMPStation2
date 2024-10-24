@@ -7,8 +7,7 @@
 /obj/structure/cable{
 	d1 = 2;
 	d2 = 4;
-	icon_state = "2-4";
-	tag = ""
+	icon_state = "2-4"
 	},
 /turf/template_noop,
 /area/submap/onehalf)
@@ -17,8 +16,7 @@
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
-	icon_state = "4-8";
-	tag = ""
+	icon_state = "4-8"
 	},
 /turf/template_noop,
 /area/submap/onehalf)
@@ -27,8 +25,7 @@
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 8;
-	icon_state = "1-8";
-	tag = ""
+	icon_state = "1-8"
 	},
 /turf/template_noop,
 /area/submap/onehalf)
@@ -37,14 +34,12 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "white";
-	tag = "icon-white"
+	icon_state = "white"
 	},
 /area/submap/onehalf)
 "am" = (
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "white";
-	tag = "icon-white"
+	icon_state = "white"
 	},
 /area/submap/onehalf)
 "an" = (
@@ -55,8 +50,7 @@
 	},
 /obj/item/storage/firstaid/fire,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "white";
-	tag = "icon-white"
+	icon_state = "white"
 	},
 /area/submap/onehalf)
 "ao" = (
@@ -95,8 +89,7 @@
 "aA" = (
 /obj/structure/bed/roller,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "white";
-	tag = "icon-white"
+	icon_state = "white"
 	},
 /area/submap/onehalf)
 "aB" = (
@@ -110,8 +103,7 @@
 	},
 /obj/item/storage/firstaid/combat,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "white";
-	tag = "icon-white"
+	icon_state = "white"
 	},
 /area/submap/onehalf)
 "aC" = (
@@ -149,20 +141,17 @@
 /obj/machinery/iv_drip,
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "white";
-	tag = "icon-white"
+	icon_state = "white"
 	},
 /area/submap/onehalf)
 "aK" = (
 /obj/structure/cable{
 	d1 = 2;
 	d2 = 4;
-	icon_state = "2-4";
-	tag = ""
+	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "white";
-	tag = "icon-white"
+	icon_state = "white"
 	},
 /area/submap/onehalf)
 "aL" = (
@@ -220,8 +209,7 @@
 	name = "Medical"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "white";
-	tag = "icon-white"
+	icon_state = "white"
 	},
 /area/submap/onehalf)
 "aW" = (
@@ -256,8 +244,7 @@
 /obj/item/reagent_containers/blood/OPlus,
 /obj/item/reagent_containers/blood/OPlus,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "white";
-	tag = "icon-white"
+	icon_state = "white"
 	},
 /area/submap/onehalf)
 "aZ" = (
@@ -296,8 +283,7 @@
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
-	icon_state = "4-8";
-	tag = ""
+	icon_state = "4-8"
 	},
 /obj/structure/cable{
 	d1 = 1;
@@ -309,22 +295,19 @@
 /area/submap/onehalf)
 "be" = (
 /obj/structure/disposalpipe/broken{
-	dir = 4;
-	tag = "icon-pipe-b (EAST)"
+	dir = 4
 	},
 /obj/item/stack/cable_coil/cut,
 /turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/onehalf)
 "bg" = (
 /obj/structure/disposalpipe/junction{
-	dir = 4;
-	tag = "icon-pipe-j1 (EAST)"
+	dir = 4
 	},
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
-	icon_state = "4-8";
-	tag = ""
+	icon_state = "4-8"
 	},
 /obj/structure/cable{
 	d1 = 1;
@@ -340,15 +323,13 @@
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
-	icon_state = "4-8";
-	tag = ""
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/onehalf)
 "bi" = (
 /obj/structure/disposalpipe/broken{
-	dir = 4;
-	tag = "icon-pipe-b (EAST)"
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/submap/onehalf)
@@ -359,8 +340,7 @@
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
-	icon_state = "4-8";
-	tag = ""
+	icon_state = "4-8"
 	},
 /obj/structure/cable{
 	d1 = 2;
@@ -376,8 +356,7 @@
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
-	icon_state = "4-8";
-	tag = ""
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/onehalf)
@@ -388,8 +367,7 @@
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
-	icon_state = "4-8";
-	tag = ""
+	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/glass{
 	name = "Central Access"
@@ -403,8 +381,7 @@
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 8;
-	icon_state = "1-8";
-	tag = ""
+	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/onehalf)
@@ -566,8 +543,7 @@
 /area/submap/onehalf)
 "bZ" = (
 /obj/structure/disposalpipe/junction{
-	dir = 1;
-	tag = "icon-pipe-j1 (NORTH)"
+	dir = 1
 	},
 /obj/item/material/shard,
 /turf/simulated/floor/plating,
@@ -655,8 +631,7 @@
 	dir = 4
 	},
 /obj/item/material/shard{
-	icon_state = "small";
-	tag = "icon-small"
+	icon_state = "small"
 	},
 /turf/template_noop,
 /area/submap/onehalf)
@@ -680,8 +655,7 @@
 "cq" = (
 /obj/structure/bed/chair{
 	dir = 8;
-	icon_state = "chair";
-	tag = "icon-chair (WEST)"
+	icon_state = "chair"
 	},
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/rust,
@@ -690,8 +664,7 @@
 "cs" = (
 /obj/structure/bed/chair{
 	dir = 1;
-	icon_state = "chair";
-	tag = "icon-chair (NORTH)"
+	icon_state = "chair"
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/asteroid_steel/airless,
@@ -700,8 +673,7 @@
 /obj/structure/cable{
 	d1 = 2;
 	d2 = 4;
-	icon_state = "2-4";
-	tag = ""
+	icon_state = "2-4"
 	},
 /obj/structure/cable{
 	d1 = 1;
@@ -726,8 +698,7 @@
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
-	icon_state = "4-8";
-	tag = ""
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
 /area/submap/onehalf)
@@ -743,8 +714,7 @@
 "cy" = (
 /obj/structure/lattice,
 /obj/item/material/shard{
-	icon_state = "medium";
-	tag = "icon-medium"
+	icon_state = "medium"
 	},
 /turf/template_noop,
 /area/submap/onehalf)
@@ -800,12 +770,10 @@
 "cH" = (
 /obj/structure/lattice,
 /obj/structure/disposalpipe/broken{
-	dir = 1;
-	tag = "icon-pipe-b (NORTH)"
+	dir = 1
 	},
 /obj/structure/disposalpipe/broken{
-	dir = 8;
-	tag = "icon-pipe-b (WEST)"
+	dir = 8
 	},
 /turf/template_noop,
 /area/submap/onehalf)
@@ -970,8 +938,7 @@
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
-	icon_state = "4-8";
-	tag = ""
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
 /area/submap/onehalf)
@@ -981,14 +948,12 @@
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
-	icon_state = "4-8";
-	tag = ""
+	icon_state = "4-8"
 	},
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
-	icon_state = "4-8";
-	tag = ""
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
 /area/submap/onehalf)
@@ -1010,12 +975,10 @@
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
-	icon_state = "4-8";
-	tag = ""
+	icon_state = "4-8"
 	},
 /obj/item/material/shard{
-	icon_state = "medium";
-	tag = "icon-medium"
+	icon_state = "medium"
 	},
 /turf/template_noop,
 /area/submap/onehalf)
@@ -1024,8 +987,7 @@
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
-	icon_state = "4-8";
-	tag = ""
+	icon_state = "4-8"
 	},
 /obj/structure/cable{
 	d1 = 1;
@@ -1040,14 +1002,12 @@
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
-	icon_state = "4-8";
-	tag = ""
+	icon_state = "4-8"
 	},
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 8;
-	icon_state = "1-8";
-	tag = ""
+	icon_state = "1-8"
 	},
 /turf/template_noop,
 /area/submap/onehalf)
@@ -1095,8 +1055,7 @@
 /area/template_noop)
 "iE" = (
 /obj/structure/disposalpipe/broken{
-	dir = 8;
-	tag = "icon-pipe-b (WEST)"
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/submap/onehalf)
@@ -1154,8 +1113,7 @@
 "oC" = (
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "white";
-	tag = "icon-white"
+	icon_state = "white"
 	},
 /area/submap/onehalf)
 "pK" = (
@@ -1210,8 +1168,7 @@
 "DD" = (
 /obj/structure/bed/chair{
 	dir = 8;
-	icon_state = "chair";
-	tag = "icon-chair (WEST)"
+	icon_state = "chair"
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/asteroid_steel/airless,
@@ -1229,8 +1186,7 @@
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
-	icon_state = "4-8";
-	tag = ""
+	icon_state = "4-8"
 	},
 /mob/living/simple_mob/animal/space/carp,
 /turf/simulated/floor/tiled/asteroid_steel/airless,
@@ -1242,8 +1198,7 @@
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
-	icon_state = "4-8";
-	tag = ""
+	icon_state = "4-8"
 	},
 /obj/machinery/vending/sovietvend,
 /turf/simulated/floor/tiled/asteroid_steel/airless,
@@ -1339,16 +1294,14 @@
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
-	icon_state = "4-8";
-	tag = ""
+	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/onehalf)
 "Sp" = (
 /obj/structure/disposalpipe/broken{
-	dir = 8;
-	tag = "icon-pipe-b (WEST)"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/onehalf)

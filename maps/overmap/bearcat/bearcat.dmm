@@ -48,30 +48,6 @@
 	},
 /turf/simulated/floor,
 /area/ship/scrap/command)
-"ae" = (
-/obj/structure/window/reinforced{
-	dir = 5;
-	health = 1e+007
-	},
-/obj/structure/grille,
-/obj/structure/grille,
-/obj/machinery/door/poddoor{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "scraplock";
-	name = "External Blast Doors";
-	opacity = 0
-	},
-/obj/structure/window/reinforced{
-	dir = 5;
-	health = 1e+007
-	},
-/obj/structure/window/reinforced{
-	dir = 5;
-	health = 1e+007
-	},
-/turf/simulated/floor,
-/area/ship/scrap/command)
 "af" = (
 /obj/machinery/light{
 	 icon_state = "tube1";
@@ -6794,7 +6770,7 @@ aa
 aa
 aa
 aa
-ae
+ac
 ac
 ac
 ac
