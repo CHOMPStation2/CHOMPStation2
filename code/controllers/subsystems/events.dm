@@ -41,11 +41,9 @@ SUBSYSTEM_DEF(events)
 		var/datum/event_container/EC = event_containers[i]
 		EC.process()
 
-//CHOMPEdit Begin
 /datum/controller/subsystem/events/stat_entry(msg)
 	msg = "E:[active_events.len]"
 	return ..()
-//CHOMPEdit End
 
 /datum/controller/subsystem/events/Recover()
 	if(SSevents.active_events)

@@ -1,5 +1,5 @@
 // Compile in the map for CI testing if we're testing compileability of all the maps
-#if MAP_TEST
+#ifdef MAP_TEST
 #include "whiteship.dmm"
 #include "whiteship-26x33.dmm"
 #endif
@@ -8,7 +8,7 @@
 /datum/map_template/om_ships/whiteship
 	name = "OM Ship - Science White Ship"
 	desc = "A large titanium science ship."
-	mappath = 'whiteship.dmm'
+	mappath = "modular_chomp/maps/overmap/om_ships/whiteship.dmm"
 	annihilate = TRUE
 
 // The shuttle's area(s)
@@ -93,7 +93,7 @@
 //Player accessable superposed pod
 /datum/map_template/shelter/superpose/whiteship2
 	shelter_id = "WhiteShipII"
-	mappath = 'whiteship-26x33.dmm'
+	mappath = "modular_chomp/maps/overmap/om_ships/whiteship-26x33.dmm"
 	name = "White Ship Mk II"
 	description = "A large titanium ship."
 	superpose = FALSE

@@ -73,7 +73,7 @@
 			to_chat(src, span_warning("You are no longer able to use this, it's been more than 10 minutes since an admin on IRC has responded to you"))
 			return
 		if(mute_irc)
-			to_chat(src, "<span class='warning'You cannot use this as your client has been muted from sending messages to the admins on IRC</span>")
+			to_chat(usr, span_warning("You cannot use this as your client has been muted from sending messages to the admins on IRC"))
 			return
 		send2adminirc(href_list["irc_msg"])
 		return
@@ -115,6 +115,8 @@
 			qdel(query) //CHOMPEdit TGSQL
 		return
 	//VOREStation Add End
+	if(href_list["reload_statbrowser"])
+		stat_panel.reinitialize()
 
 	if(href_list["reload_statbrowser"]) //CHOMPEdit
 		stat_panel.reinitialize() //CHOMPEdit
@@ -705,7 +707,7 @@
 		if(!istext(verb_to_init.category))
 			continue
 		panel_tabs |= verb_to_init.category
-		verblist[++verblist.len] = list(verb_to_init.category, verb_to_init.name)
+		verblist[++verblist.len] = list(verb_to_init.category, verb_to_init.name, verb_to_init.desc)
 	src.stat_panel.send_message("init_verbs", list(panel_tabs = panel_tabs, verblist = verblist))
 
 /client/proc/check_panel_loaded()

@@ -3,7 +3,7 @@
 
 /mob/living/silicon/ai/Initialize()
 	if(CONFIG_GET(flag/allow_ai_shells)) // CHOMPEdit
-		add_verb(src,/mob/living/silicon/ai/proc/deploy_to_shell_act) //CHOMPEdit TGPanel
+		add_verb(src, /mob/living/silicon/ai/proc/deploy_to_shell_act)
 	return ..()
 
 /mob/living/silicon/ai/proc/deploy_to_shell(var/mob/living/silicon/robot/target)

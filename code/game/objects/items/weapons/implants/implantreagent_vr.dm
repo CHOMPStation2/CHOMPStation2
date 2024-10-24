@@ -47,7 +47,7 @@
 		else
 			return
 	else
-		remove_verb(imp_in,assigned_proc) //CHOMPEdit TGPanel
+		remove_verb(imp_in, assigned_proc)
 		return
 
 	if(reagents)
