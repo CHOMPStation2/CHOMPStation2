@@ -274,7 +274,7 @@
 /area/submap/syndiedepotinner)
 "ce" = (
 /obj/machinery/light/small{
-	dir = 4;
+	dir = 4
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/submap/syndiedepotinner)

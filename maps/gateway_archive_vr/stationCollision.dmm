@@ -2577,7 +2577,7 @@
 	pixel_x = -28
 	},
 /obj/structure/cable{
-	icon_state = "0-4";
+	icon_state = "0-4"
 	},
 /turf/simulated/floor,
 /area/awaymission/midblock)
@@ -3126,7 +3126,7 @@
 	pixel_x = -28
 	},
 /obj/structure/cable{
-	icon_state = "0-4";
+	icon_state = "0-4"
 	},
 /turf/simulated/floor{
 	icon_state = "red";
@@ -3918,7 +3918,7 @@
 "ko" = (
 /obj/structure/cable{
 	icon_state = "0-2";
-	pixel_y = 1;
+	pixel_y = 1
 	},
 /obj/machinery/gateway/centeraway{
 	calibrated = 0

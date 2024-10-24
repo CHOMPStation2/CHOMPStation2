@@ -424,10 +424,6 @@
 	icon_state = "dark"
 	},
 /area/submap/gasthelizards)
-"Dd" = (
-/obj/structure/lattice,
-/turf/template_noop,
-/area/template_noop)
 "Ek" = (
 /obj/structure/closet/crate/freezer,
 /obj/machinery/light{
@@ -757,14 +753,14 @@ nP
 nP
 nP
 nP
-Dd
-Dd
-Dd
-Dd
+oI
+oI
+oI
+oI
 nP
-Dd
-Dd
-Dd
+oI
+oI
+oI
 nP
 nP
 nP
@@ -791,8 +787,8 @@ nP
 st
 nP
 nP
-Dd
-Dd
+oI
+oI
 sO
 sO
 sO
@@ -800,7 +796,7 @@ sO
 sO
 sO
 sO
-Dd
+oI
 nP
 nP
 nP
@@ -823,10 +819,10 @@ nP
 (4,1,1) = {"
 nP
 nP
-Dd
-Dd
-Dd
-Dd
+oI
+oI
+oI
+oI
 sO
 FR
 ZQ
@@ -834,8 +830,8 @@ UN
 xV
 Eq
 sO
-Dd
-Dd
+oI
+oI
 nP
 nP
 nP
@@ -856,7 +852,7 @@ nP
 "}
 (5,1,1) = {"
 nP
-Dd
+oI
 nP
 sO
 sO
@@ -891,7 +887,7 @@ nP
 (6,1,1) = {"
 nP
 nP
-Dd
+oI
 sO
 aJ
 iM
@@ -904,7 +900,7 @@ VP
 lq
 fR
 th
-Dd
+oI
 nP
 nP
 jR
@@ -924,8 +920,8 @@ nP
 "}
 (7,1,1) = {"
 nP
-Dd
-Dd
+oI
+oI
 sO
 bP
 FP
@@ -938,7 +934,7 @@ FR
 sO
 sO
 sO
-Dd
+oI
 nP
 nP
 jR
@@ -959,7 +955,7 @@ nP
 (8,1,1) = {"
 nP
 nP
-Dd
+oI
 sO
 no
 np
@@ -970,9 +966,9 @@ FG
 fr
 sO
 sO
-Dd
-Dd
-Dd
+oI
+oI
+oI
 nP
 jR
 jR
@@ -992,8 +988,8 @@ nP
 "}
 (9,1,1) = {"
 nP
-Dd
-Dd
+oI
+oI
 sO
 bP
 FP
@@ -1003,10 +999,10 @@ jv
 VP
 vu
 sO
-Dd
-Dd
+oI
+oI
 nP
-Dd
+oI
 jR
 jR
 jR
@@ -1037,10 +1033,10 @@ jv
 VP
 TS
 sO
-Dd
+oI
 st
 nP
-Dd
+oI
 jR
 jR
 jR
@@ -1060,8 +1056,8 @@ nP
 "}
 (11,1,1) = {"
 nP
-Dd
-Dd
+oI
+oI
 sO
 bP
 FP
@@ -1071,10 +1067,10 @@ wR
 VP
 kA
 sO
-Dd
+oI
 nP
 nP
-Dd
+oI
 nP
 nP
 jR
@@ -1094,7 +1090,7 @@ nP
 "}
 (12,1,1) = {"
 nP
-Dd
+oI
 nP
 sO
 no
@@ -1105,10 +1101,10 @@ jv
 VP
 Wo
 sO
-Dd
+oI
 nP
 nP
-Dd
+oI
 nP
 nP
 jR
@@ -1129,7 +1125,7 @@ nP
 (13,1,1) = {"
 nP
 nP
-Dd
+oI
 sO
 nr
 vV
@@ -1139,10 +1135,10 @@ VP
 VP
 Wo
 sO
-Dd
+oI
 nP
 nP
-Dd
+oI
 nP
 jR
 jR
@@ -1163,7 +1159,7 @@ nP
 (14,1,1) = {"
 nP
 nP
-Dd
+oI
 sO
 sO
 sO
@@ -1173,10 +1169,10 @@ sO
 Mb
 sO
 sO
-Dd
+oI
 nP
 nP
-Dd
+oI
 nP
 mT
 mT
@@ -1197,8 +1193,8 @@ nP
 (15,1,1) = {"
 nP
 nP
-Dd
-Dd
+oI
+oI
 sO
 SG
 Ce
@@ -1210,7 +1206,7 @@ sO
 nP
 st
 nP
-Dd
+oI
 nP
 nP
 mT
@@ -1231,8 +1227,8 @@ nP
 (16,1,1) = {"
 nP
 nP
-Dd
-Dd
+oI
+oI
 sO
 Ek
 LW
@@ -1241,13 +1237,13 @@ Ce
 lh
 Tx
 sO
-Dd
-Dd
-Dd
 oI
-Dd
-Dd
-Dd
+oI
+oI
+oI
+oI
+oI
+oI
 jR
 jR
 jR
@@ -1255,10 +1251,10 @@ jR
 jR
 jR
 jR
-Dd
-Dd
-Dd
-Dd
+oI
+oI
+oI
+oI
 nP
 nP
 "}
@@ -1266,7 +1262,7 @@ nP
 nP
 nP
 nP
-Dd
+oI
 sO
 jl
 lh
@@ -1275,10 +1271,10 @@ Yd
 Qi
 Sv
 sO
-Dd
-Dd
+oI
+oI
 nP
-Dd
+oI
 nP
 nP
 nP
@@ -1300,7 +1296,7 @@ nP
 nP
 nP
 nP
-Dd
+oI
 sO
 sO
 sO
@@ -1309,12 +1305,12 @@ sO
 sO
 sO
 sO
-Dd
-Dd
+oI
+oI
 nV
 nV
 nV
-Dd
+oI
 nP
 nP
 nP
@@ -1344,15 +1340,15 @@ nP
 nP
 nP
 nP
-Dd
+oI
 YH
 YH
 YH
-Dd
+oI
 nP
 nP
 UQ
-Dd
+oI
 nP
 nP
 nP
@@ -1370,11 +1366,11 @@ nP
 st
 nP
 nP
-Dd
-Dd
+oI
+oI
 nP
 nP
-Dd
+oI
 vi
 vi
 vi
@@ -1408,7 +1404,7 @@ nP
 nP
 nP
 nP
-Dd
+oI
 vi
 vi
 vi
@@ -1421,7 +1417,7 @@ vi
 vi
 vi
 vi
-Dd
+oI
 nP
 nP
 nP
@@ -1455,7 +1451,7 @@ yW
 vi
 vi
 vi
-Dd
+oI
 nP
 nP
 nP
@@ -1544,7 +1540,7 @@ nP
 nP
 nP
 nP
-Dd
+oI
 vi
 vi
 YH
@@ -1612,7 +1608,7 @@ nP
 nP
 nP
 nP
-Dd
+oI
 vi
 vi
 YH
@@ -1714,7 +1710,7 @@ nP
 nP
 nP
 nP
-Dd
+oI
 vi
 vi
 vi
@@ -1783,17 +1779,17 @@ nP
 nP
 nP
 UQ
-Dd
+oI
 nP
-Dd
-Dd
-Dd
+oI
+oI
+oI
 nP
-Dd
-Dd
-Dd
+oI
+oI
+oI
 UQ
-Dd
+oI
 nP
 nP
 nP

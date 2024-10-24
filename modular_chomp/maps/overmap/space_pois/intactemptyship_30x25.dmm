@@ -65,7 +65,7 @@
 	dir = 4
 	},
 /obj/structure/shuttle/engine/heater{
-	dir = 8;
+	dir = 8
 	},
 /turf/simulated/shuttle/plating,
 /area/submap/intactemptyship)
@@ -350,7 +350,7 @@
 /area/submap/intactemptyship)
 "MK" = (
 /obj/structure/shuttle/engine/propulsion{
-	dir = 8;
+	dir = 8
 	},
 /turf/simulated/shuttle/plating,
 /area/submap/intactemptyship)

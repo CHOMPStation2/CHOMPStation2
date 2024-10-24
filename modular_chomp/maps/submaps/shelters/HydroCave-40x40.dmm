@@ -269,7 +269,7 @@
 "iD" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1;
-	initialize_directions = 14;
+	initialize_directions = 14
 	},
 /turf/simulated/wall,
 /area/survivalpod/superpose/HydroCave)
@@ -517,7 +517,7 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1;
-	initialize_directions = 14;
+	initialize_directions = 14
 	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/HydroCave)
@@ -628,7 +628,7 @@
 "pG" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8;
-	initialize_directions = 7;
+	initialize_directions = 7
 	},
 /obj/machinery/newscaster{
 	pixel_x = -30
@@ -660,7 +660,7 @@
 "qN" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1;
-	initialize_directions = 14;
+	initialize_directions = 14
 	},
 /turf/simulated/floor/tiled/red,
 /area/survivalpod/superpose/HydroCave)
@@ -686,7 +686,7 @@
 "rD" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8;
-	initialize_directions = 7;
+	initialize_directions = 7
 	},
 /turf/simulated/floor/carpet,
 /area/survivalpod/superpose/HydroCave)
@@ -758,7 +758,7 @@
 "tt" = (
 /obj/structure/disposalpipe/junction{
 	dir = 4;
-	icon_state = "pipe-j2";
+	icon_state = "pipe-j2"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/survivalpod/superpose/HydroCave)
@@ -798,7 +798,7 @@
 "wi" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8;
-	initialize_directions = 7;
+	initialize_directions = 7
 	},
 /obj/structure/closet/secure_closet{
 	desc = "It's a secure locker for personnel. The first card swiped gains control.";
@@ -829,7 +829,7 @@
 "wz" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8;
-	initialize_directions = 7;
+	initialize_directions = 7
 	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/HydroCave)
@@ -945,7 +945,7 @@
 "Aa" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1;
-	initialize_directions = 14;
+	initialize_directions = 14
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
@@ -1114,7 +1114,7 @@
 "Ff" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8;
-	initialize_directions = 7;
+	initialize_directions = 7
 	},
 /obj/structure/reagent_dispensers/peppertank{
 	pixel_y = 30
@@ -1233,7 +1233,7 @@
 "HB" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1;
-	initialize_directions = 14;
+	initialize_directions = 14
 	},
 /turf/simulated/wall/r_wall,
 /area/survivalpod/superpose/HydroCave)
@@ -1296,7 +1296,7 @@
 "IY" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1;
-	initialize_directions = 14;
+	initialize_directions = 14
 	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/HydroCave)
@@ -1695,7 +1695,7 @@
 	dir = 4
 	},
 /obj/structure/window/basic{
-	dir = 8;
+	dir = 8
 	},
 /obj/random/trash,
 /obj/machinery/floodlight,
@@ -1772,7 +1772,7 @@
 "TX" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1;
-	initialize_directions = 14;
+	initialize_directions = 14
 	},
 /turf/simulated/floor/tiled,
 /area/survivalpod/superpose/HydroCave)
@@ -1850,7 +1850,7 @@
 	},
 /obj/structure/reagent_dispensers/fueltank,
 /obj/structure/window/basic{
-	dir = 4;
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/HydroCave)
@@ -1890,7 +1890,7 @@
 "Xj" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1;
-	initialize_directions = 14;
+	initialize_directions = 14
 	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/HydroCave)

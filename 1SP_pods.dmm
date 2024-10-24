@@ -26580,13 +26580,6 @@
 /obj/random/meat,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/Farm)
-"rug" = (
-/obj/structure/hull_corner{
-	dir = 4
-	},
-/obj/structure/lattice,
-/turf/template_noop,
-/area/template_noop)
 "ruW" = (
 /obj/structure/flora/tree/sif,
 /turf/template_noop,
@@ -37137,7 +37130,7 @@ iru
 xFS
 oPZ
 uHE
-rug
+bbP
 nko
 rZR
 ktQ
@@ -37395,7 +37388,7 @@ wWX
 lUH
 uHE
 uHE
-rug
+bbP
 rZR
 rZR
 ktQ

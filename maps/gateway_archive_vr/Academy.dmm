@@ -45,7 +45,7 @@
 "aj" = (
 /obj/structure/cable{
 	icon_state = "0-2";
-	pixel_y = 1;
+	pixel_y = 1
 	},
 /obj/machinery/power/apc{
 	dir = 1;
@@ -581,7 +581,7 @@
 /obj/machinery/autolathe,
 /obj/structure/cable{
 	icon_state = "0-2";
-	pixel_y = 1;
+	pixel_y = 1
 	},
 /turf/simulated/floor,
 /area/awaymission/academy/classrooms)
@@ -1030,7 +1030,7 @@
 /obj/machinery/mech_bay_recharge_port,
 /obj/structure/cable{
 	icon_state = "0-2";
-	pixel_y = 1;
+	pixel_y = 1
 	},
 /turf/simulated/floor/plating,
 /area/awaymission/academy/classrooms)
@@ -1041,7 +1041,7 @@
 /obj/machinery/computer/mech_bay_power_console,
 /obj/structure/cable{
 	icon_state = "0-2";
-	pixel_y = 1;
+	pixel_y = 1
 	},
 /turf/simulated/floor/greengrid,
 /area/awaymission/academy/classrooms)
@@ -1348,7 +1348,7 @@
 /area/awaymission/academy/classrooms)
 "eh" = (
 /obj/structure/cable{
-	icon_state = "0-2";
+	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
 	dir = 1;
@@ -2006,7 +2006,7 @@
 "fO" = (
 /obj/structure/cable{
 	icon_state = "0-2";
-	pixel_y = 1;
+	pixel_y = 1
 	},
 /turf/simulated/floor{
 	 icon_state = "vault"
@@ -2496,7 +2496,7 @@
 /area/awaymission/academy/academyaft)
 "he" = (
 /obj/structure/cable{
-	icon_state = "0-2";
+	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
 	dir = 1;
@@ -2511,7 +2511,7 @@
 /obj/structure/grille,
 /obj/structure/cable{
 	icon_state = "0-2";
-	pixel_y = 1;
+	pixel_y = 1
 	},
 /turf/simulated/floor/plating,
 /area/awaymission/academy/academyaft)
@@ -2596,7 +2596,7 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	icon_state = "0-4";
+	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
 /area/awaymission/academy/academyaft)
@@ -3615,7 +3615,7 @@
 	req_access = ""
 	},
 /obj/structure/cable{
-	icon_state = "0-2";
+	icon_state = "0-2"
 	},
 /turf/simulated/floor/carpet,
 /area/awaymission/academy/academygate)
@@ -3626,7 +3626,7 @@
 "jY" = (
 /obj/structure/cable{
 	icon_state = "0-2";
-	pixel_y = 1;
+	pixel_y = 1
 	},
 /turf/simulated/floor/plating,
 /area/awaymission/academy/academygate)

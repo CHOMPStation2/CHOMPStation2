@@ -1,0 +1,5 @@
+/area/derelict/eva{name="Derelict Annex";} : /area/derelict/eva/annex
+/area/gateway/arynthilake/underground/intocave{enter_message="There is some light filtering from the center of this patch of sand. You could probably climb up from there.";} : /area/gateway/arynthilake/underground/intocave/entrance
+/area/maintenance/thirddeck/dormsaft{name="Third Deck Aft Maintenance";} : /area/maintenance/thirddeck/dormsaft
+/area/maintenance/thirddeck/dormsport{name="Third Deck Aft Port Maintenance";} : /area/maintenance/thirddeck/dormsport
+/area/submap/AbandonedLab{requires_power=0;} : /area/submap/AbandonedLab
