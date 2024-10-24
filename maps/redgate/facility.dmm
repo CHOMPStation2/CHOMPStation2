@@ -16,11 +16,6 @@
 	},
 /turf/simulated/floor/wood/alt,
 /area/redgate/facility/office7)
-"aca" = (
-/obj/structure/table/standard,
-/obj/structure/table/standard,
-/turf/simulated/floor/tiled/white,
-/area/redgate/facility/nw)
 "adz" = (
 /obj/structure/window/basic/full,
 /turf/simulated/floor/wood/alt,
@@ -95,8 +90,7 @@
 	pixel_y = 4
 	},
 /obj/machinery/light{
-	dir = 1;
-	stat = 0
+	dir = 1
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/redgate/facility/ne)
@@ -107,8 +101,7 @@
 /area/redgate/facility/cell14)
 "alo" = (
 /obj/machinery/light{
-	dir = 1;
-	stat = 0
+	dir = 1
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/redgate/facility/ne)
@@ -3909,8 +3902,7 @@
 "fAP" = (
 /obj/structure/flora/ausbushes/fullgrass,
 /obj/machinery/light{
-	dir = 1;
-	stat = 0
+	dir = 1
 	},
 /turf/simulated/floor/grass,
 /area/redgate/facility/cell3)
@@ -4692,9 +4684,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/redgate/facility/tram)
 "gAt" = (
-/obj/structure/closet/secure_closet/engineering_electrical/double{
-	anchored = 1
-	},
+/obj/structure/closet/secure_closet/engineering_electrical/double,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/redgate/facility/cell29)
 "gAV" = (
@@ -4908,7 +4898,6 @@
 /turf/simulated/wall/tgmc/whitewall,
 /area/redgate/facility/ne)
 "gPW" = (
-/obj/structure/table/standard,
 /obj/structure/table/standard,
 /obj/random/forgotten_tram,
 /turf/simulated/floor/tiled/white,
@@ -5632,8 +5621,7 @@
 /area/redgate/facility/nw)
 "hLq" = (
 /obj/machinery/light{
-	dir = 1;
-	stat = 0
+	dir = 1
 	},
 /turf/simulated/floor/grass,
 /area/redgate/facility/cell3)
@@ -6191,7 +6179,6 @@
 /area/redgate/facility/ne)
 "itM" = (
 /obj/structure/table/hardwoodtable,
-/obj/structure/table/hardwoodtable,
 /obj/machinery/light{
 	dir = 1
 	},
@@ -6506,8 +6493,7 @@
 "iRl" = (
 /obj/item/modular_computer/console,
 /obj/machinery/light{
-	dir = 1;
-	stat = 0
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/redgate/facility/ne)
@@ -6516,8 +6502,7 @@
 /obj/machinery/microwave,
 /obj/effect/floor_decal/corner/grey/diagonal,
 /obj/machinery/light{
-	dir = 1;
-	stat = 0
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/redgate/facility/nw)
@@ -8690,13 +8675,6 @@
 /obj/random/mug,
 /turf/simulated/floor/carpet/blucarpet,
 /area/redgate/facility/office9)
-"miQ" = (
-/obj/machinery/light{
-	dir = 1;
-	stat = 0
-	},
-/turf/simulated/floor/grass,
-/area/redgate/facility/cell13)
 "mjq" = (
 /obj/structure/flora/ausbushes/fernybush,
 /turf/simulated/floor/water/pool,
@@ -9859,13 +9837,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/redgate/facility/sw)
-"nPs" = (
-/obj/machinery/door/airlock/angled_tgmc/cell{
-	dir = 4;
-	req_one_access = null
-	},
-/turf/simulated/floor/tiled/steel,
-/area/redgate/facility/cell12)
 "nRx" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -13253,7 +13224,6 @@
 /area/redgate/facility/cell23)
 "sIR" = (
 /obj/machinery/door/airlock/angled_tgmc/personal{
-	id_tag = null;
 	name = "Research Facility"
 	},
 /turf/simulated/floor/tiled/white,
@@ -13815,9 +13785,7 @@
 /turf/simulated/floor/atoll,
 /area/redgate/facility/cell16)
 "txy" = (
-/obj/machinery/light{
-	stat = 0
-	},
+/obj/machinery/light,
 /turf/simulated/floor/tiled/steel,
 /area/redgate/facility/cell11)
 "txD" = (
@@ -14491,8 +14459,7 @@
 /obj/machinery/appliance/cooker/oven,
 /obj/effect/floor_decal/corner/grey/diagonal,
 /obj/machinery/light{
-	dir = 1;
-	stat = 0
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/redgate/facility/nw)
@@ -14591,8 +14558,7 @@
 /obj/structure/table/reinforced,
 /obj/structure/salvageable/personal,
 /obj/machinery/light{
-	dir = 1;
-	stat = 0
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/redgate/facility/cell25)
@@ -14691,12 +14657,6 @@
 /obj/random/forgotten_tram,
 /turf/simulated/floor/tiled/white,
 /area/redgate/facility/entrance)
-"uHO" = (
-/obj/structure/table/hardwoodtable,
-/obj/structure/table/hardwoodtable,
-/obj/item/modular_computer/laptop/preset/custom_loadout/rugged,
-/turf/simulated/floor/wood/alt,
-/area/redgate/facility/ne)
 "uIp" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
@@ -16473,8 +16433,7 @@
 /area/redgate/facility/cell11)
 "xiY" = (
 /obj/machinery/light{
-	dir = 1;
-	stat = 0
+	dir = 1
 	},
 /turf/simulated/floor/tiled/steel,
 /area/redgate/facility/cell11)
@@ -17280,8 +17239,7 @@
 	pixel_y = 1
 	},
 /obj/machinery/light{
-	dir = 1;
-	stat = 0
+	dir = 1
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/redgate/facility/ne)
@@ -24142,7 +24100,7 @@ vio
 xxi
 dvk
 jZu
-aca
+iHH
 buD
 wJW
 fnR
@@ -24284,7 +24242,7 @@ vio
 xxi
 dvk
 jZu
-aca
+iHH
 tCX
 wJW
 fnR
@@ -29432,7 +29390,7 @@ hTz
 gqM
 oce
 oce
-nPs
+mSi
 oce
 oce
 nfd
@@ -31413,7 +31371,7 @@ hTY
 mPf
 nzw
 kuI
-miQ
+lcG
 gzb
 gzb
 gzb
@@ -36350,7 +36308,7 @@ eCT
 eYi
 fmS
 pQc
-uHO
+eKY
 uta
 hAX
 fVF
