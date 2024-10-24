@@ -108,7 +108,6 @@
 /area/awaymission/snow_outpost/powered)
 "aw" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/cyan{
-	icon_state = "map";
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
@@ -145,8 +144,7 @@
 /area/awaymission/snow_outpost/powered)
 "aA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 5;
-	icon_state = "intact"
+	dir = 5
 	},
 /turf/simulated/floor/tiled/white,
 /area/awaymission/snow_outpost/powered)
@@ -178,7 +176,6 @@
 /area/awaymission/snow_outpost/powered)
 "aG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	icon_state = "intact";
 	dir = 10
 	},
 /turf/simulated/floor/tiled/white,
@@ -199,7 +196,6 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	pixel_x = 0;
 	pixel_y = 28
 	},
 /turf/simulated/floor/bluegrid{
@@ -272,9 +268,7 @@
 /area/awaymission/snow_outpost/powered)
 "aX" = (
 /obj/machinery/firealarm{
-	dir = 2;
 	layer = 3.3;
-	pixel_x = 0;
 	pixel_y = 26
 	},
 /mob/living/simple_mob/humanoid/merc/ranged/ionrifle,
@@ -310,7 +304,6 @@
 "be" = (
 /obj/machinery/telecomms/broadcaster,
 /obj/machinery/light/flicker{
-	icon_state = "tube1";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
@@ -323,7 +316,6 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	pixel_x = 0;
 	pixel_y = 28
 	},
 /turf/simulated/floor/tiled/white,
@@ -339,7 +331,6 @@
 	pixel_x = 24
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	icon_state = "intact";
 	dir = 10
 	},
 /turf/simulated/floor/tiled/white,
@@ -435,26 +426,22 @@
 /area/awaymission/snow_outpost/powered)
 "bB" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	icon_state = "intact";
 	dir = 9
 	},
 /obj/machinery/light/flicker{
-	icon_state = "tube1";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/awaymission/snow_outpost/powered)
 "bC" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/cyan{
-	icon_state = "map";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/awaymission/snow_outpost/powered)
 "bD" = (
 /obj/machinery/atmospherics/unary/vent_pump{
-	dir = 4;
-	use_power = 0
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/awaymission/snow_outpost/powered)
@@ -483,8 +470,7 @@
 /area/awaymission/snow_outpost/powered)
 "bH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 4;
-	icon_state = "intact"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/awaymission/snow_outpost/powered)
@@ -494,14 +480,11 @@
 /area/awaymission/snow_outpost/powered)
 "bJ" = (
 /obj/machinery/firealarm{
-	dir = 2;
 	layer = 3.3;
-	pixel_x = 0;
 	pixel_y = 26
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 4;
-	icon_state = "intact"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/awaymission/snow_outpost/powered)
@@ -515,8 +498,6 @@
 	external_pressure_bound = 140;
 	external_pressure_bound_default = 140;
 	icon_state = "map_vent_out";
-	pressure_checks = 1;
-	pressure_checks_default = 1;
 	use_power = 1
 	},
 /turf/simulated/floor/tiled/white,
@@ -536,8 +517,7 @@
 /obj/machinery/door/airlock/silver,
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 4;
-	icon_state = "intact"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/awaymission/snow_outpost/powered)
@@ -565,7 +545,6 @@
 /area/awaymission/snow_outpost/powered)
 "bQ" = (
 /obj/machinery/atmospherics/unary/vent_scrubber{
-	icon_state = "map_scrubber_off";
 	dir = 1
 	},
 /obj/machinery/light/flicker,
@@ -832,7 +811,6 @@
 /obj/structure/bed,
 /obj/item/bedsheet,
 /obj/machinery/light{
-	icon_state = "tube1";
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -890,7 +868,6 @@
 /area/awaymission/snow_outpost/powered)
 "dg" = (
 /obj/machinery/light{
-	icon_state = "tube1";
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -970,7 +947,6 @@
 /area/awaymission/snow_outpost/powered)
 "dx" = (
 /obj/machinery/light{
-	icon_state = "tube1";
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -990,8 +966,7 @@
 /area/awaymission/snow_outpost/dark)
 "dA" = (
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/awaymission/snow_outpost/powered)
@@ -1006,7 +981,6 @@
 /area/awaymission/snow_outpost/powered)
 "dD" = (
 /obj/machinery/light{
-	icon_state = "tube1";
 	dir = 1
 	},
 /turf/simulated/floor,
@@ -1052,23 +1026,9 @@
 /mob/living/simple_mob/humanoid/merc/ranged/smg/poi,
 /turf/simulated/floor/snow/snow2,
 /area/awaymission/snow_outpost/outside/nospawn)
-"dN" = (
-/turf/simulated/floor/snow/snow2,
-/turf/simulated/shuttle/wall/dark{
-	icon_state = "dark6";
-	name = "Unknown Shuttle"
-	},
-/area/awaymission/snow_outpost/outside/nospawn)
 "dO" = (
 /turf/simulated/shuttle/wall/dark{
 	icon_state = "dark0";
-	name = "Unknown Shuttle"
-	},
-/area/awaymission/snow_outpost/outside/nospawn)
-"dP" = (
-/turf/simulated/floor/snow/snow2,
-/turf/simulated/shuttle/wall/dark{
-	icon_state = "dark10";
 	name = "Unknown Shuttle"
 	},
 /area/awaymission/snow_outpost/outside/nospawn)
@@ -1078,7 +1038,6 @@
 /area/awaymission/snow_outpost/outside/nospawn)
 "dR" = (
 /obj/structure/shuttle/engine/heater{
-	icon_state = "heater";
 	dir = 4
 	},
 /turf/simulated/shuttle/wall/dark{
@@ -1120,7 +1079,6 @@
 /area/awaymission/snow_outpost/powered)
 "dV" = (
 /obj/machinery/door/airlock/external{
-	density = 1;
 	frequency = 1331;
 	id_tag = "merc_shuttle_outer";
 	name = "Ship External Access";
@@ -1130,7 +1088,6 @@
 /area/awaymission/snow_outpost/powered)
 "dW" = (
 /obj/effect/floor_decal/corner/green/border{
-	icon_state = "bordercolor";
 	dir = 9
 	},
 /turf/simulated/floor/tiled/white,
@@ -1138,7 +1095,6 @@
 "dX" = (
 /obj/machinery/gibber,
 /obj/effect/floor_decal/corner/green/border{
-	icon_state = "bordercolor";
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
@@ -1148,7 +1104,6 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/green/border{
-	icon_state = "bordercolor";
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
@@ -1158,7 +1113,6 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/green/border{
-	icon_state = "bordercolor";
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
@@ -1166,18 +1120,10 @@
 "ea" = (
 /obj/machinery/body_scanconsole,
 /obj/effect/floor_decal/corner/green/border{
-	icon_state = "bordercolor";
 	dir = 5
 	},
 /turf/simulated/floor/tiled/white,
 /area/awaymission/snow_outpost/powered)
-"eb" = (
-/turf/simulated/floor/tiled/steel,
-/turf/simulated/shuttle/wall/dark{
-	icon_state = "dark5";
-	name = "Unknown Shuttle"
-	},
-/area/awaymission/snow_outpost/outside/nospawn)
 "ec" = (
 /turf/simulated/floor/tiled/steel_grid,
 /area/awaymission/snow_outpost/powered)
@@ -1205,7 +1151,6 @@
 /area/awaymission/snow_outpost/powered)
 "eh" = (
 /obj/effect/floor_decal/corner/green/border{
-	icon_state = "bordercolor";
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
@@ -1224,20 +1169,17 @@
 "el" = (
 /obj/machinery/organ_printer/flesh,
 /obj/effect/floor_decal/corner/green/border{
-	icon_state = "bordercolor";
 	dir = 5
 	},
 /turf/simulated/floor/tiled/white,
 /area/awaymission/snow_outpost/powered)
 "em" = (
-/turf/simulated/floor/tiled/steel,
 /turf/simulated/shuttle/wall/dark{
 	icon_state = "dark9";
 	name = "Unknown Shuttle"
 	},
 /area/awaymission/snow_outpost/powered)
 "en" = (
-/turf/simulated/floor/tiled/steel,
 /turf/simulated/shuttle/wall/dark{
 	icon_state = "dark6";
 	name = "Unknown Shuttle"
@@ -1252,8 +1194,7 @@
 "ep" = (
 /obj/structure/table/steel,
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/awaymission/snow_outpost/powered)
@@ -1285,12 +1226,9 @@
 /area/awaymission/snow_outpost/powered)
 "ev" = (
 /obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1";
-	pixel_x = 0
+	dir = 4
 	},
 /obj/effect/floor_decal/corner/green/border{
-	icon_state = "bordercolor";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
@@ -1315,9 +1253,7 @@
 /area/awaymission/snow_outpost/powered)
 "eA" = (
 /obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1";
-	pixel_x = 0
+	dir = 4
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
@@ -1328,7 +1264,6 @@
 /obj/structure/table/standard,
 /obj/item/storage/firstaid/surgery,
 /obj/effect/floor_decal/corner/green/border{
-	icon_state = "bordercolor";
 	dir = 10
 	},
 /turf/simulated/floor/tiled/white,
@@ -1361,14 +1296,12 @@
 /obj/structure/table/standard,
 /obj/item/storage/box/masks,
 /obj/effect/floor_decal/corner/green/border{
-	icon_state = "bordercolor";
 	dir = 6
 	},
 /turf/simulated/floor/tiled/white,
 /area/awaymission/snow_outpost/powered)
 "eH" = (
 /obj/machinery/light{
-	icon_state = "tube1";
 	dir = 8
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -1396,7 +1329,6 @@
 /turf/simulated/floor/tiled/white,
 /area/awaymission/snow_outpost/powered)
 "eL" = (
-/turf/simulated/floor/tiled/steel,
 /turf/simulated/shuttle/wall/dark{
 	icon_state = "dark10";
 	name = "Unknown Shuttle"
@@ -1451,8 +1383,7 @@
 "eV" = (
 /obj/structure/table/steel,
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /turf/simulated/floor/tiled/yellow,
 /area/awaymission/snow_outpost/powered)
@@ -1478,7 +1409,6 @@
 /area/awaymission/snow_outpost/powered)
 "eY" = (
 /obj/machinery/light{
-	icon_state = "tube1";
 	dir = 8
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -1494,9 +1424,7 @@
 /area/awaymission/snow_outpost/dark)
 "fa" = (
 /obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1";
-	pixel_x = 0
+	dir = 4
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -1644,14 +1572,12 @@
 "fz" = (
 /obj/machinery/atmospherics/pipe/tank/oxygen,
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /turf/simulated/floor/tiled/yellow,
 /area/awaymission/snow_outpost/powered)
 "fA" = (
 /obj/machinery/light{
-	icon_state = "tube1";
 	dir = 8
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -1681,9 +1607,7 @@
 /area/awaymission/snow_outpost/powered)
 "fE" = (
 /obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1";
-	pixel_x = 0
+	dir = 4
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
@@ -1710,8 +1634,7 @@
 /obj/structure/table/steel,
 /obj/item/gun/projectile/pistol,
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/awaymission/snow_outpost/powered)
@@ -1721,16 +1644,9 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snow_outpost/powered)
-"fL" = (
-/obj/structure/bed,
-/obj/item/bedsheet,
-/obj/structure/bed,
-/turf/simulated/floor/tiled/steel,
-/area/awaymission/snow_outpost/powered)
 "fM" = (
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/awaymission/snow_outpost/powered)
@@ -1986,8 +1902,7 @@
 /area/awaymission/snow_outpost/dark)
 "gF" = (
 /obj/structure/cable{
-	icon_state = "1-2";
-	pixel_y = 0
+	icon_state = "1-2"
 	},
 /turf/simulated/shuttle/floor/alienplating,
 /area/awaymission/snow_outpost/dark)
@@ -2012,8 +1927,7 @@
 /area/awaymission/snow_outpost/dark)
 "gI" = (
 /obj/structure/cable{
-	icon_state = "4-8";
-	pixel_x = 0
+	icon_state = "4-8"
 	},
 /turf/simulated/shuttle/floor/alienplating,
 /area/awaymission/snow_outpost/dark)
@@ -2389,34 +2303,27 @@
 /area/awaymission/snow_outpost/outside)
 "ii" = (
 /obj/structure/bed/chair{
-	icon_state = "chair_preview";
 	dir = 1
 	},
 /obj/machinery/status_display{
-	density = 0;
 	layer = 4;
-	pixel_x = -32;
-	pixel_y = 0
+	pixel_x = -32
 	},
 /obj/structure/loot_pile/maint/junk,
 /turf/simulated/floor/water,
 /area/awaymission/snow_outpost/outside)
 "ij" = (
 /obj/structure/bed/chair{
-	icon_state = "chair_preview";
 	dir = 1
 	},
 /obj/effect/decal/remains/posi,
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1";
-	pixel_y = 0
+	dir = 8
 	},
 /obj/machinery/vending/wallmed1{
 	layer = 3.3;
 	name = "Emergency NanoMed";
-	pixel_x = 28;
-	pixel_y = 0
+	pixel_x = 28
 	},
 /obj/item/clothing/shoes/brown,
 /obj/item/clothing/under/mbill,
@@ -2425,7 +2332,6 @@
 /area/awaymission/snow_outpost/outside)
 "ik" = (
 /obj/structure/bed/chair{
-	icon_state = "chair_preview";
 	dir = 1
 	},
 /obj/structure/closet/walllocker/emerglocker/east,
@@ -2479,7 +2385,6 @@
 /area/awaymission/snow_outpost/outside)
 "iu" = (
 /obj/structure/shuttle/engine/propulsion/burst{
-	icon_state = "propulsion";
 	dir = 8
 	},
 /turf/simulated/shuttle/wall,
@@ -2521,13 +2426,10 @@
 /area/awaymission/snow_outpost/outside)
 "iz" = (
 /obj/machinery/status_display{
-	density = 0;
 	layer = 4;
-	pixel_x = 0;
 	pixel_y = -32
 	},
 /obj/structure/bed/chair{
-	icon_state = "chair_preview";
 	dir = 8
 	},
 /obj/effect/decal/remains,
@@ -2604,13 +2506,10 @@
 	external_pressure_bound = 140;
 	external_pressure_bound_default = 140;
 	icon_state = "map_vent_out";
-	pressure_checks = 1;
-	pressure_checks_default = 1;
 	use_power = 1
 	},
 /obj/item/stack/material/phoron,
 /obj/machinery/light/flicker{
-	icon_state = "tube1";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
@@ -2626,14 +2525,12 @@
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snow_outpost/powered)
 "iU" = (
-/turf/simulated/floor/snow/snow2,
 /turf/simulated/shuttle/wall/dark{
 	icon_state = "dark5";
 	name = "Unknown Shuttle"
 	},
 /area/awaymission/snow_outpost/outside/nospawn)
 "iV" = (
-/turf/simulated/floor/snow/snow2,
 /turf/simulated/shuttle/wall/dark{
 	icon_state = "dark9";
 	name = "Unknown Shuttle"
@@ -2701,15 +2598,13 @@
 /area/awaymission/snow_outpost/dark)
 "ri" = (
 /obj/machinery/light/flicker{
-	icon_state = "tube1";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/awaymission/snow_outpost/powered)
 "rs" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 4;
-	icon_state = "intact"
+	dir = 4
 	},
 /obj/machinery/light/flicker,
 /turf/simulated/floor/tiled/white,
@@ -2740,7 +2635,6 @@
 /area/awaymission/snow_outpost/dark)
 "zF" = (
 /obj/machinery/light/flicker{
-	icon_state = "tube1";
 	dir = 8
 	},
 /turf/simulated/floor/snow/snow2,
@@ -2751,13 +2645,6 @@
 	outdoors = 0
 	},
 /area/awaymission/snow_outpost/dark)
-"DR" = (
-/turf/simulated/floor/tiled/steel,
-/turf/simulated/shuttle/wall/dark{
-	icon_state = "dark9";
-	name = "Unknown Shuttle"
-	},
-/area/awaymission/snow_outpost/outside/nospawn)
 "EA" = (
 /turf/simulated/shuttle/wall/dark{
 	icon_state = "dark0";
@@ -2766,7 +2653,6 @@
 /area/awaymission/snow_outpost/powered)
 "EV" = (
 /obj/machinery/light{
-	icon_state = "tube1";
 	dir = 1
 	},
 /turf/simulated/floor/tiled/old_tile/white,
@@ -2797,7 +2683,6 @@
 /area/awaymission/snow_outpost/outside/nospawn)
 "KI" = (
 /obj/machinery/light/flicker{
-	icon_state = "tube1";
 	dir = 1
 	},
 /turf/simulated/floor/snow/snow2,
@@ -2811,7 +2696,6 @@
 "MR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan,
 /obj/machinery/light/flicker{
-	icon_state = "tube1";
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
@@ -2823,7 +2707,6 @@
 /area/awaymission/snow_outpost/powered)
 "NH" = (
 /obj/machinery/light/flicker{
-	icon_state = "tube1";
 	dir = 4
 	},
 /turf/simulated/floor/snow/snow2,
@@ -2848,7 +2731,6 @@
 /area/awaymission/snow_outpost/outside/nospawn)
 "SO" = (
 /obj/machinery/light{
-	icon_state = "tube1";
 	dir = 8
 	},
 /turf/simulated/floor/tiled/old_tile/white,
@@ -15402,7 +15284,7 @@ fe
 fe
 fn
 dO
-eb
+iU
 uy
 uy
 uy
@@ -15545,7 +15427,7 @@ eX
 eX
 fq
 EA
-eb
+iU
 uy
 uy
 uy
@@ -15673,10 +15555,10 @@ ab
 ab
 cd
 RF
-dN
+en
 dO
 dO
-eb
+iU
 en
 EA
 eH
@@ -15688,7 +15570,7 @@ eR
 fm
 fA
 EA
-eb
+iU
 en
 dO
 dO
@@ -16241,7 +16123,7 @@ ab
 dH
 ab
 uy
-dP
+eL
 dO
 EA
 ed
@@ -17392,7 +17274,7 @@ fb
 fw
 EA
 fF
-fL
+fF
 fF
 fF
 dO
@@ -18087,7 +17969,7 @@ ab
 ab
 ab
 uy
-dN
+en
 dO
 EA
 ek
@@ -18517,7 +18399,7 @@ dO
 dO
 EA
 EA
-DR
+iV
 uy
 eL
 EA
@@ -18526,7 +18408,7 @@ fd
 fd
 fp
 EA
-DR
+iV
 uy
 eL
 dO
@@ -18667,7 +18549,7 @@ dR
 dR
 dR
 dR
-DR
+iV
 uy
 uy
 uy
@@ -18797,7 +18679,7 @@ cd
 cd
 cd
 ab
-dP
+eL
 dR
 dR
 uy
