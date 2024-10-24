@@ -13,6 +13,9 @@ def green(text):
 def red(text):
     return "\033[31m" + str(text) + "\033[0m"
 
+def yellow(text):
+    return "\033[33m" + str(text) + "\033[0m"
+
 def process_dmm(map_filename, lints: dict[str, lint.Lint]) -> list[MaplintError]:
     problems: list[MaplintError] = []
 
@@ -103,8 +106,12 @@ def main(args):
             traceback.print_exc()
             any_failed = True
 
-    for map_filename in (args.maps or (glob.glob("maps/redgate/**/*.dmm", recursive = True) and glob.glob("maps/gateway_vr/**/*.dmm", recursive = True) and glob.glob("modular_chomp/maps/**/*.dmm", recursive = True))):
+    for map_filename in (args.maps or glob.glob("**/*.dmm", recursive = True)):
         print(map_filename, end = " ")
+
+        if ("maps/redgate/" not in map_filename) and ("maps/gateway_vr/" not in map_filename) and ("modular_chomp/maps/" not in map_filename):
+            print(yellow("SKIPPED"))
+            continue
 
         success = True
         all_failures: list[MaplintError] = []
