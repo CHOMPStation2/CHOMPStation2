@@ -8,7 +8,7 @@
 		return
 
 	if(!adult_form)
-		remove_verb(src,/mob/living/carbon/alien/verb/evolve) //CHOMPEdit TGPanel
+		remove_verb(src, /mob/living/carbon/alien/verb/evolve)
 		return
 
 	if(handcuffed || legcuffed)

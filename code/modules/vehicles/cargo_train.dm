@@ -70,7 +70,7 @@
 /obj/vehicle/train/trolley/attackby(obj/item/W as obj, mob/user as mob)
 	if(open && W.has_tool_quality(TOOL_WIRECUTTER))
 		passenger_allowed = !passenger_allowed
-		user.visible_message("<span class='notice'>[user] [passenger_allowed ? "cuts" : "mends"] a cable in [src].</span>","<span class='notice'>You [passenger_allowed ? "cut" : "mend"] the load limiter cable.</span>")
+		user.visible_message(span_notice("[user] [passenger_allowed ? "cuts" : "mends"] a cable in [src]."),span_notice("You [passenger_allowed ? "cut" : "mend"] the load limiter cable."))
 	else
 		..()
 
@@ -174,8 +174,8 @@
 
 	if(is_train_head() && istype(load, /mob/living/carbon/human))
 		var/mob/living/carbon/human/D = load
-		to_chat(D, span_red("<B>You ran over [M]!</B>"))
-		visible_message(span_red("<B>\The [src] ran over [M]!</B>"))
+		to_chat(D, span_bolddanger("You ran over [M]!"))
+		visible_message(span_bolddanger("\The [src] ran over [M]!"))
 		add_attack_logs(D,M,"Ran over with [src.name]")
 		attack_log += text("\[[time_stamp()]\] [span_red("ran over [M.name] ([M.ckey]), driven by [D.name] ([D.ckey])")]")
 	else

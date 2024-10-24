@@ -40,7 +40,7 @@
 	required = /obj/item/slime_extract/sepia
 
 /decl/chemical_reaction/instant/slime/secertslime/on_reaction(var/datum/reagents/holder)
-	holder.my_atom.visible_message("<span class='warning'>Infused with the mixture, the core begins to quiver and grow, and soon a new baby slime emerges from it!</span>")
+	holder.my_atom.visible_message(span_warning("Infused with the mixture, the core begins to quiver and grow, and soon a new baby slime emerges from it!"))
 	new /mob/living/simple_mob/slime/xenobio/redspace(get_turf(holder.my_atom))
 	..()
 
@@ -53,7 +53,7 @@
 	required = /obj/item/slime_extract/sepia
 
 /decl/chemical_reaction/instant/slime/sepia_new_slime/on_reaction(var/datum/reagents/holder)
-	holder.my_atom.visible_message("<span class='warning'>Infused with slime jelly, the core begins to quiver and grow, and soon a new baby slime emerges from it!</span>")
+	holder.my_atom.visible_message(span_warning("Infused with slime jelly, the core begins to quiver and grow, and soon a new baby slime emerges from it!"))
 	new /mob/living/simple_mob/slime/xenobio/sepia(get_turf(holder.my_atom))
 	..()
 
@@ -203,7 +203,7 @@
 	required = /obj/item/slime_extract/dark
 
 /decl/chemical_reaction/instant/slime/dark_carpotoxin/on_reaction(var/datum/reagents/holder)
-	holder.my_atom.visible_message("<span class='warning'>Infused with slime jelly, the core begins to quiver and grow, and soon a new baby slime emerges from it!</span>")
+	holder.my_atom.visible_message(span_warning("Infused with slime jelly, the core begins to quiver and grow, and soon a new baby slime emerges from it!"))
 	new /mob/living/simple_mob/slime/xenobio/oceanic(get_turf(holder.my_atom))
 	..()
 
@@ -313,8 +313,8 @@
 	name = "Aura Healing Tide"
 	desc = "You are filled with an overwhelming energy."
 
-	on_created_text = "<span class='critical'>Your body begins to focus on recovering!</span>"
-	on_expired_text = "<span class='notice'>The healing subsides.</span>"
+	on_created_text = span_critical("Your body begins to focus on recovering!")
+	on_expired_text = span_notice("The healing subsides.")
 	stacks = MODIFIER_STACK_FORBID
 	aura_max_distance = 4
 
@@ -374,7 +374,7 @@
 	required = /obj/item/slime_extract/plague
 
 /decl/chemical_reaction/instant/slime/warplague/on_reaction(var/datum/reagents/holder)
-	holder.my_atom.visible_message("<span class='warning'>Infused with slime jelly, the core begins to quiver and grow, and soon a new baby slime emerges from it!</span>")
+	holder.my_atom.visible_message(span_warning("Infused with slime jelly, the core begins to quiver and grow, and soon a new baby slime emerges from it!"))
 	new /mob/living/simple_mob/slime/xenobio/nuclear(get_turf(holder.my_atom))
 	..()
 
@@ -408,8 +408,8 @@
 	name = "Radiation Hide"
 	desc = "Your body defensivly warps."
 
-	on_created_text = "<span class='critical'>Your body strangly mutates!</span>"
-	on_expired_text = "<span class='notice'>Your body returns to normal.</span>"
+	on_created_text = span_critical("Your body strangly mutates!")
+	on_expired_text = span_notice("Your body returns to normal.")
 	stacks = MODIFIER_STACK_FORBID
 	aura_max_distance = 4
 
@@ -435,7 +435,7 @@
 /decl/chemical_reaction/instant/slime/nuclear_radpulse/on_reaction(var/datum/reagents/holder)
 	log_and_message_admins("Green extract reaction (radiation pulse) has been activated in [get_area(holder.my_atom)].  Last fingerprints: [holder.my_atom.fingerprintslast]")
 	playsound(holder.my_atom, 'sound/effects/phasein.ogg', 75, 1)
-	holder.my_atom.visible_message("<span class='danger'>\The [holder.my_atom] begins to vibrate violently!</span>")
+	holder.my_atom.visible_message(span_danger("\The [holder.my_atom] begins to vibrate violently!"))
 	spawn(5 SECONDS)
 		SSradiation.flat_radiate(src, 30, 7, TRUE)
 	..()
@@ -513,7 +513,7 @@
 	required = /obj/item/slime_extract/dream
 
 /decl/chemical_reaction/instant/slime/nightmareslime/on_reaction(var/datum/reagents/holder)
-	holder.my_atom.visible_message("<span class='warning'>Infused with slime jelly, the core begins to quiver and grow, and soon a new baby slime emerges from it!</span>")
+	holder.my_atom.visible_message(span_warning("Infused with slime jelly, the core begins to quiver and grow, and soon a new baby slime emerges from it!"))
 	new /mob/living/simple_mob/slime/xenobio/nightmare(get_turf(holder.my_atom))
 	..()
 
@@ -630,7 +630,7 @@
 	required = /obj/item/slime_extract/redspace
 
 /decl/chemical_reaction/instant/slime/redspace_sound/on_reaction(var/datum/reagents/holder)
-	holder.my_atom.visible_message("<span class='warning'>Infused with the mixture, the core begins to quiver and grow, and soon a new baby slime emerges from it!</span>")
+	holder.my_atom.visible_message(span_warning("Infused with the mixture, the core begins to quiver and grow, and soon a new baby slime emerges from it!"))
 	new /mob/living/simple_mob/slime/xenobio/sound(get_turf(holder.my_atom))
 	..()
 
@@ -664,8 +664,8 @@
 	name = "Soothing Song"
 	desc = "Your body is soothed."
 
-	on_created_text = "<span class='critical'>Your mind is put to rest!</span>"
-	on_expired_text = "<span class='notice'>Your mind functions normally.</span>"
+	on_created_text = span_critical("Your mind is put to rest!")
+	on_expired_text = span_notice("Your mind functions normally.")
 	stacks = MODIFIER_STACK_FORBID
 	aura_max_distance = 4
 
@@ -709,7 +709,7 @@
 	required = /obj/item/slime_extract/sound
 
 /decl/chemical_reaction/instant/slime/soundwater/on_reaction(var/datum/reagents/holder)
-	holder.my_atom.visible_message("<span class='warning'>Infused with the mixture, the core begins to quiver and grow, and soon a new baby slime emerges from it!</span>")
+	holder.my_atom.visible_message(span_warning("Infused with the mixture, the core begins to quiver and grow, and soon a new baby slime emerges from it!"))
 	new /mob/living/simple_mob/slime/xenobio/sound(get_turf(holder.my_atom))
 	..()
 

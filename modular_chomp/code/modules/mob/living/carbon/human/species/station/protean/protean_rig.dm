@@ -53,7 +53,7 @@
 			addtimer(CALLBACK(src, PROC_REF(AssimilateBag), P, 1, P.back), 3)
 			myprotean = P
 		else
-			to_chat(P, "<span class='notice'>You should have spawned with a backpack to assimilate into your RIG. Try clicking it with a backpack.</span>")
+			to_chat(P, span_notice("You should have spawned with a backpack to assimilate into your RIG. Try clicking it with a backpack."))
 	..(newloc)
 
 /obj/item/rig/protean/Destroy()
@@ -75,12 +75,12 @@
 		B.forceMove(src)
 		rig_storage = B
 		P.drop_item(B)
-		to_chat(P, "<span class='notice'>[B] has been integrated into the [src].</span>")
+		to_chat(P, span_notice("[B] has been integrated into the [src]."))
 		if(spawned)	//This feels very dumb to have a second if but I'm lazy
 			P.equip_to_slot_if_possible(src, slot_back)
 		src.Moved()
 	else
-		to_chat(P,"<span class ='warning'>Your rigsuit can only assimilate a backpack into itself. If you are seeing this message, and you do not have a rigsuit, tell a coder.</span>")
+		to_chat(P,span_warning("Your rigsuit can only assimilate a backpack into itself. If you are seeing this message, and you do not have a rigsuit, tell a coder."))
 
 /obj/item/rig/protean/verb/RemoveBag()
 	set name = "Remove Stored Bag"
@@ -243,14 +243,14 @@
 				if(W.is_screwdriver())
 					playsound(src, W.usesound, 50, 1)
 					if(do_after(user,50,src,exclusive = TASK_ALL_EXCLUSIVE))
-						to_chat(user, "<span class='notice'>You unscrew the maintenace panel on the [src].</span>")
+						to_chat(user, span_notice("You unscrew the maintenace panel on the [src]."))
 						dead +=1
 				return
 			if(2)
 				if(istype(W, /obj/item/protean_reboot))//placeholder
 					if(do_after(user,50,src,exclusive = TASK_ALL_EXCLUSIVE))
 						playsound(src, 'sound/items/Deconstruct.ogg', 50, 1)
-						to_chat(user, "<span class='notice'>You carefully slot [W] in the [src].</span>")
+						to_chat(user, span_notice("You carefully slot [W] in the [src]."))
 						dead +=1
 						qdel(W)
 				return
@@ -258,14 +258,14 @@
 				if(istype(W, /obj/item/stack/nanopaste))
 					if(do_after(user,50,src,exclusive = TASK_ALL_EXCLUSIVE))
 						playsound(src, 'sound/effects/ointment.ogg', 50, 1)
-						to_chat(user, "<span class='notice'>You slather the interior confines of the [src] with the [W].</span>")
+						to_chat(user, span_notice("You slather the interior confines of the [src] with the [W]."))
 						dead +=1
 						W?:use(1)
 				return
 			if(4)
 				if(istype(W, /obj/item/shockpaddles))
 					if(W?:can_use(user))
-						to_chat(user, "<span class='notice'>You hook up the [W] to the contact points in the maintenance assembly</span>")
+						to_chat(user, span_notice("You hook up the [W] to the contact points in the maintenance assembly"))
 						if(do_after(user,50,src,exclusive = TASK_ALL_EXCLUSIVE))
 							playsound(src, 'sound/machines/defib_charge.ogg', 50, 0)
 							if(do_after(user,10,src))
@@ -398,7 +398,7 @@
 				var/datum/species/protean/S
 				S = H.species
 				S.pseudodead = 0
-				to_chat(myprotean, "<span class='notice'>You have finished reconstituting.</span>")
+				to_chat(myprotean, span_notice("You have finished reconstituting."))
 				playsound(src.loc, 'sound/machines/ding.ogg', 50, 1)
 		dead = 0
 
@@ -413,7 +413,7 @@
 
 /obj/item/rig/protean/force_rest(var/mob/user)
 	wearer.lay_down()
-	to_chat(user, "<span class='notice'>\The [wearer] is now [wearer.resting ? "resting" : "getting up"].</span>")
+	to_chat(user, span_notice("\The [wearer] is now [wearer.resting ? "resting" : "getting up"]."))
 
 /obj/item/cell/protean
 	name = "Protean power cell"
@@ -456,11 +456,11 @@
 		return 0	//We don't do that here.
 	if(offline || !cell || !cell.charge || locked_down)
 		if(user)
-			to_chat(user, "<span class='warning'>Your host rig is unpowered and unresponsive.</span>")
+			to_chat(user, span_warning("Your host rig is unpowered and unresponsive."))
 		return 0
 	if(!wearer || (wearer.back != src && wearer.belt != src))
 		if(user)
-			to_chat(user, "<span class='warning'>Your host rig is not being worn.</span>")
+			to_chat(user, span_warning("Your host rig is not being worn."))
 		return 0
 	return 1
 
@@ -495,9 +495,9 @@
 	if(!R || assimilated_rig)
 		return
 	if(istype(R, /obj/item/rig/protean))
-		to_chat(user, "<span class='warning'>The world is not ready for such a technological singularity.</span>")
+		to_chat(user, span_warning("The world is not ready for such a technological singularity."))
 		return
-	to_chat(user, "<span class='notice'>You assimilate the [R] into the [src]. Mimicking its stats and appearance.</span>")
+	to_chat(user, span_notice("You assimilate the [R] into the [src]. Mimicking its stats and appearance."))
 	for(var/obj/item/piece in list(gloves,helmet,boots,chest))
 		piece.armor = R.armor.Copy()
 		piece.max_pressure_protection = R.max_pressure_protection

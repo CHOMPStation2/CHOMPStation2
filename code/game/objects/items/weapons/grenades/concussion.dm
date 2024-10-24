@@ -17,14 +17,14 @@
 /obj/proc/concussion_blast(atom/target, var/radius = 5)
 	var/turf/T = get_turf(target)
 	if(is_below_sound_pressure(T))
-		visible_message("<span class='notice'>Whump.</span>")
+		visible_message(span_notice("Whump."))
 		return
 	playsound(src, 'sound/effects/bang.ogg', 75, 1, -3)
 	if(istype(T))
 		for(var/mob/living/L in orange(T, radius))
 			if(ishuman(L))
 				var/mob/living/carbon/human/H = L
-				to_chat(H, "<span class='critical'>WHUMP.</span>")
+				to_chat(H, span_critical("WHUMP."))
 
 				var/ear_safety = 0
 
@@ -70,14 +70,14 @@
 					H.deaf_loop.start() // CHOMPStation Add: Ear Ringing/Deafness
 
 				if(H.ear_damage >= 15)
-					to_chat(H, "<span class='danger'>Your ears start to ring badly!</span>")
+					to_chat(H, span_danger("Your ears start to ring badly!"))
 					H.deaf_loop.start() // CHOMPStation Add: Ear Ringing/Deafness
 
 					if(prob(H.ear_damage - 5))
-						to_chat(H, "<span class='danger'>You can't hear anything!</span>")
+						to_chat(H, span_danger("You can't hear anything!"))
 						H.sdisabilities |= DEAF
 				else if(H.ear_damage >= 5)
-					to_chat(H, "<span class='danger'>Your ears start to ring!</span>")
+					to_chat(H, span_danger("Your ears start to ring!"))
 					H.deaf_loop.start() // CHOMPStation Add: Ear Ringing/Deafness
 			if(istype(L, /mob/living/silicon/robot))
 				var/mob/living/silicon/robot/R = L
@@ -86,5 +86,5 @@
 						L.client.spinleft()
 					else
 						L.client.spinright()
-				to_chat(R, "<span class='critical'>Gyroscopic failure.</span>")
+				to_chat(R, span_critical("Gyroscopic failure."))
 	return

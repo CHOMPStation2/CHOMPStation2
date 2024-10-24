@@ -2,8 +2,8 @@
 	name = "Eletrical Surge"
 	desc = "You are filled with an overwhelming energy."
 
-	on_created_text = "<span class='critical'>You feel an overwhelimg energy surge through your body!</span>"
-	on_expired_text = "<span class='notice'>The surge subsides.</span>"
+	on_created_text = span_critical("You feel an overwhelimg energy surge through your body!")
+	on_expired_text = span_notice("The surge subsides.")
 	stacks = MODIFIER_STACK_EXTEND
 	evasion = 20
 	accuracy = -30
@@ -14,8 +14,8 @@
 	name = "Healing Tide"
 	desc = "You are filled with an overwhelming energy."
 
-	on_created_text = "<span class='critical'>Your body begins to focus on recovering!</span>"
-	on_expired_text = "<span class='notice'>The healing subsides.</span>"
+	on_created_text = span_critical("Your body begins to focus on recovering!")
+	on_expired_text = span_notice("The healing subsides.")
 	stacks = MODIFIER_STACK_EXTEND
 
 	metabolism_percent = 0.5
@@ -25,8 +25,8 @@
 	name = "Radiation Hide"
 	desc = "Your body defensivly warps."
 
-	on_created_text = "<span class='critical'>Your body strangly mutates!</span>"
-	on_expired_text = "<span class='notice'>Your body returns to normal.</span>"
+	on_created_text = span_critical("Your body strangly mutates!")
+	on_expired_text = span_notice("Your body returns to normal.")
 	stacks = MODIFIER_STACK_EXTEND
 
 	icon_scale_x_percent = 1.2
@@ -42,8 +42,8 @@
 
 	client_color = "#808080" //Za worldo
 
-	on_created_text = "<span class='critical'>The world arounds you slows down!</span>"
-	on_expired_text = "<span class='notice'>The world returns to normal.</span>"
+	on_created_text = span_critical("The world arounds you slows down!")
+	on_expired_text = span_notice("The world returns to normal.")
 	stacks = MODIFIER_STACK_EXTEND
 
 	slowdown = -3
@@ -57,8 +57,8 @@
 	name = "Protective Numbing"
 	desc = "Your senses feel everything."
 
-	on_created_text = "<span class='critical'>Your body becomes numb!</span>"
-	on_expired_text = "<span class='notice'>Sensation returns to your body.</span>"
+	on_created_text = span_critical("Your body becomes numb!")
+	on_expired_text = span_notice("Sensation returns to your body.")
 	stacks = MODIFIER_STACK_EXTEND
 
 	heat_protection = 1

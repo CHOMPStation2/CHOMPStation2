@@ -46,6 +46,8 @@
 	var/opening = FALSE
 	// If the mail has been scanned with a mail scanner
 	var/scanned
+	// Does it have a colored envelope?
+	var/colored_envelope
 
 /obj/item/mail/container_resist(mob/living/M)
 	if(istype(M, /mob/living/voice)) return
@@ -142,6 +144,11 @@
 
 /obj/item/mail/update_icon()
 	. = ..()
+	cut_overlays()
+	if(colored_envelope)
+		var/image/envelope = image(icon, icon_state)
+		envelope.color = colored_envelope
+		add_overlay(envelope)
 	var/bonus_stamp_offset = 0
 	for(var/stamp in stamps)
 		var/image/stamp_image = image(
@@ -220,9 +227,7 @@
 
 	var/list/goodies = generic_goodies
 	if(this_job)
-		var/image/envelope = image(icon, icon_state)
-		envelope.color = this_job.get_mail_color()
-		add_overlay(envelope)
+		colored_envelope = this_job.get_mail_color()
 		if(!preset_goodies)
 			var/list/job_goodies = this_job.get_mail_goodies(new_recipient, current_title)
 			if(LAZYLEN(job_goodies))
@@ -253,7 +258,6 @@
 
 	if(!check_rights(R_SPAWN)) return
 
-	var/obj/item/mail/new_mail = new
 	var/list/types = typesof(/atom)
 	var/list/matches = new()
 	var/list/recipients = list()
@@ -277,14 +281,16 @@
 
 	recipients = tgui_input_list(usr, "Choose recipient", "Recipients", recipients, recipients)
 
-	if(recipients)
-		new_mail.initialize_for_recipient(recipients, TRUE)
-		new chosen(new_mail)
+	if(!recipients)
+		return
 
 	var/shuttle_spawn = tgui_alert(usr, "Spawn mail at location or in the shuttle?", "Spawn mail", list("Location", "Shuttle"))
 	if(!shuttle_spawn)
 		return
 	if(shuttle_spawn == "Shuttle")
+		var/obj/item/mail/new_mail = new
+		new_mail.initialize_for_recipient(recipients, TRUE)
+		new chosen(new_mail)
 		SSmail.admin_mail += new_mail
 		log_and_message_admins("spawned [chosen] inside an envelope at the shuttle")
 	else
@@ -359,7 +365,7 @@
 
 /obj/item/mail_scanner/examine(mob/user)
 	. = ..()
-	. += SPAN_NOTICE("Scan a letter to log it into the active database, then scan the person you wish to hand the letter to. Correctly scanning the recipient of the letter logged into the active database will add points to the supply budget.")
+	. += span_notice("Scan a letter to log it into the active database, then scan the person you wish to hand the letter to. Correctly scanning the recipient of the letter logged into the active database will add points to the supply budget.")
 
 /obj/item/mail_scanner/attack()
 	return
@@ -386,15 +392,15 @@
 		var/mob/living/recipient = saved.recipient
 
 		if(M.stat == DEAD)
-			to_chat(user, SPAN_WARNING("Consent Verification failed: You can't deliver mail to a corpse!"))
+			to_chat(user, span_warning("Consent Verification failed: You can't deliver mail to a corpse!"))
 			playsound(loc, 'modular_chomp/sound/items/mail/maildenied.ogg', 50, TRUE)
 			return
 		if(M.real_name != recipient.real_name)
-			to_chat(user, SPAN_WARNING("Identity Verification failed: Target is not authorized recipient of this envelope!"))
+			to_chat(user, span_warning("Identity Verification failed: Target is not authorized recipient of this envelope!"))
 			playsound(loc, 'modular_chomp/sound/items/mail/maildenied.ogg', 50, TRUE)
 			return
 		if(!M.client)
-			to_chat(user, SPAN_WARNING("Consent Verification failed: The scanner does not accept orders from SSD crewmemmbers!"))
+			to_chat(user, span_warning("Consent Verification failed: The scanner does not accept orders from SSD crewmemmbers!"))
 			playsound(loc, 'modular_chomp/sound/items/mail/maildenied.ogg', 50, TRUE)
 			return
 
@@ -402,7 +408,7 @@
 		saved = null
 
 		cargo_points = rand(5, 10)
-		to_chat(user, SPAN_NOTICE("Succesful delivery acknowledged! [cargo_points] points added to Supply."))
+		to_chat(user, span_notice("Succesful delivery acknowledged! [cargo_points] points added to Supply."))
 		playsound(loc, 'modular_chomp/sound/items/mail/mailapproved.ogg', 50, TRUE)
 		SSsupply.points += cargo_points
 
@@ -435,7 +441,6 @@
 			/obj/item/reagent_containers/food/snacks/donkpocket/teriyaki,
 			/obj/item/toy/figure,
 			/obj/item/contraband,
-			/obj/item/,
 			/obj/item/tool/screwdriver/sdriver,
 			/obj/item/storage/briefcase/target_toy
 		))

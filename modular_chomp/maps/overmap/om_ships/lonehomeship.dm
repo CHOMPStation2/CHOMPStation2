@@ -1,5 +1,5 @@
 // Compile in the map for CI testing if we're testing compileability of all the maps
-#if MAP_TEST
+#ifdef MAP_TEST
 #include "lonehomeship-20x13.dmm"
 #endif
 
@@ -7,7 +7,7 @@
 /datum/map_template/om_ships/lonehomeship
 	name = "OM Ship - Lonehome Shuttle"
 	desc = "A small privately-owned vessel."
-	mappath = 'lonehomeship-20x13.dmm'
+	mappath = "modular_chomp/maps/overmap/om_ships/lonehomeship-20x13.dmm"
 	annihilate = TRUE
 
 // The shuttle's area(s)
@@ -53,7 +53,7 @@
 
 /datum/map_template/shelter/superpose/lonehomeship
 	shelter_id = "LoneHomeShip"
-	mappath = 'lonehomeship-20x13.dmm'
+	mappath = "modular_chomp/maps/overmap/om_ships/lonehomeship-20x13.dmm"
 	name = "Personal Home Ship"
 	description = "A cozy RV like ship meant for long hauls in the desert... if the desert was space."
 	superpose = FALSE

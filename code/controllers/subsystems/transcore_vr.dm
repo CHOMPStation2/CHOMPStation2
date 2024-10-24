@@ -126,7 +126,6 @@ SUBSYSTEM_DEF(transcore)
 		if(MC_TICK_CHECK)
 			return
 
-//CHOMPEdit Begin
 /datum/controller/subsystem/transcore/stat_entry(msg)
 	msg = "$:{"
 	msg += "IM:[round(cost_implants,1)]|"
@@ -142,7 +141,6 @@ SUBSYSTEM_DEF(transcore)
 		msg += "DFI:[default_db.implants.len]"
 	msg += "} "
 	return ..()
-// CHOMPEdit End
 
 /datum/controller/subsystem/transcore/Recover()
 	for(var/key in SStranscore.databases)

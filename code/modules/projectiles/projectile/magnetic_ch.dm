@@ -30,6 +30,6 @@
 		var/mob/living/M = A
 		if(istype(M) && M.maxHealth<=200)
 			M.dust()
-		visible_message("<span class='warning'>\The [src] impacts energetically with its target and shatters in a violent explosion!</span>")
+		visible_message(span_warning("\The [src] impacts energetically with its target and shatters in a violent explosion!"))
 		explosion(src.loc, 3, 4, 5, 10)
 	..(A)

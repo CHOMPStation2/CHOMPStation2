@@ -31,7 +31,9 @@
 /turf/simulated/floor/tiled/yellow,
 /area/submap/eclipseblob)
 "ez" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/ravanger,
+/mob/living/simple_mob/humanoid/eclipse/lunar/ravanger{
+	loot_list = list(/obj/item/slime_extract/sepia = 1, /obj/item/bone/skull = 100, /obj/item/stack/material/void_opal = 50)
+	},
 /turf/simulated/floor/tiled/red,
 /area/submap/eclipseblob)
 "eG" = (
@@ -58,6 +60,13 @@
 /obj/structure/blob/normal,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseblob)
+"fJ" = (
+/obj/structure/table/steel,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/turf/simulated/floor/tiled/red,
+/area/submap/eclipseblob)
 "gb" = (
 /obj/effect/floor_decal/corner/black/diagonal,
 /turf/simulated/floor/tiled/dark,
@@ -74,12 +83,6 @@
 /area/submap/eclipseblob)
 "hH" = (
 /obj/structure/table/steel,
-/obj/random/maintenance/foodstuff,
-/obj/random/maintenance/foodstuff,
-/obj/random/maintenance/foodstuff,
-/obj/random/maintenance/foodstuff,
-/obj/random/maintenance/foodstuff,
-/obj/random/maintenance/foodstuff,
 /turf/simulated/floor/tiled/red,
 /area/submap/eclipseblob)
 "iI" = (
@@ -91,7 +94,9 @@
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseblob)
 "jl" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/hellhound,
+/mob/living/simple_mob/humanoid/eclipse/solar/hellhound{
+	loot_list = list(/obj/item/slime_extract/sepia = 1, /obj/item/bone/skull = 100, /obj/item/stack/material/void_opal = 50)
+	},
 /turf/simulated/floor/tiled/yellow,
 /area/submap/eclipseblob)
 "jt" = (
@@ -162,12 +167,6 @@
 "sE" = (
 /obj/structure/table/steel,
 /obj/random/maintenance/foodstuff,
-/obj/random/maintenance/foodstuff,
-/obj/random/maintenance/foodstuff,
-/obj/random/maintenance/foodstuff,
-/obj/random/maintenance/foodstuff,
-/obj/random/maintenance/foodstuff,
-/obj/item/stack/material/void_opal,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/eclipseblob)
 "tF" = (
@@ -222,10 +221,6 @@
 /obj/structure/table/steel,
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
-/obj/random/maintenance/foodstuff,
-/obj/random/maintenance/foodstuff,
-/obj/random/maintenance/foodstuff,
-/obj/random/maintenance/foodstuff,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/eclipseblob)
 "Ej" = (
@@ -248,6 +243,15 @@
 /obj/effect/floor_decal/corner/black/diagonal,
 /obj/item/slime_extract/dark_blue,
 /turf/simulated/floor/tiled/dark,
+/area/submap/eclipseblob)
+"Ic" = (
+/obj/structure/table/steel,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/turf/simulated/floor/tiled/yellow,
 /area/submap/eclipseblob)
 "In" = (
 /turf/simulated/shuttle/wall/voidcraft/lightblue,
@@ -739,7 +743,7 @@ np
 In
 Cy
 hH
-Cy
+sE
 In
 gb
 gb
@@ -857,9 +861,9 @@ np
 np
 np
 In
-sE
-hH
 Cy
+fJ
+Ic
 In
 gb
 gb

@@ -116,6 +116,7 @@
 	var/noise_freq = 42500					// Tasty sound prefs.
 	var/item_digest_logs = FALSE			// Chat messages for digested items.
 	var/storing_nutrition = FALSE			// Storing gained nutrition as paste instead of absorbing it.
+	var/belchchance = 0						// % Chance of pred belching on prey struggle
 
 	var/list/belly_surrounding = list()		// A list of living mobs surrounded by this belly, including inside containers, food, on mobs, etc. Exclusing inside other bellies.
 

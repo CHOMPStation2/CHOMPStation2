@@ -19,11 +19,9 @@ SUBSYSTEM_DEF(mobs)
 	var/slept_mobs = 0
 	var/list/process_z = list()
 
-//CHOMPEdit Begin
 /datum/controller/subsystem/mobs/stat_entry(msg)
 	msg = "P: [global.mob_list.len] | S: [slept_mobs]"
 	return ..()
-//CHOMPEdit End
 
 /datum/controller/subsystem/mobs/fire(resumed = 0)
 	if (!resumed)

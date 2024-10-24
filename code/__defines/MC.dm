@@ -74,12 +74,10 @@
 #define SS_PAUSED 3		/// paused by mc_tick_check
 #define SS_SLEEPING 4	/// fire() slept.
 #define SS_PAUSING 5 	/// in the middle of pausing
-//CHOMPEdit Begin
 // Subsystem init stages
 #define INITSTAGE_EARLY 1 //! Early init stuff that doesn't need to wait for mapload
 #define INITSTAGE_MAIN 2 //! Main init stage
 #define INITSTAGE_MAX 2 //! Highest initstage.
-//CHOMPEdit End
 
 #define SUBSYSTEM_DEF(X) GLOBAL_REAL(SS##X, /datum/controller/subsystem/##X);\
 /datum/controller/subsystem/##X/New(){\

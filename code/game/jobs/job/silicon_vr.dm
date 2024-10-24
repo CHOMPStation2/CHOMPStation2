@@ -1,6 +1,7 @@
 /datum/job/ai
 	disallow_jobhop = TRUE
 	pto_type = PTO_CIVILIAN
+	dept_time_required = 20 // CHOMPEdit
 
 /datum/job/cyborg
 	pto_type = PTO_CYBORG

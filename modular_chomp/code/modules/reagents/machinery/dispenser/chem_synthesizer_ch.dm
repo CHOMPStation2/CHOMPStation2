@@ -151,32 +151,32 @@
 /obj/machinery/chemical_synthesizer/proc/add_cartridge(obj/item/reagent_containers/chem_disp_cartridge/C, mob/user)
 	if(!panel_open)
 		if(user)
-			to_chat(user, "<span class='warning'>\The panel is locked!</span>")
+			to_chat(user, span_warning("\The panel is locked!"))
 		return
 
 	if(!istype(C))
 		if(user)
-			to_chat(user, "<span class='warning'>\The [C] will not fit in \the [src]!</span>")
+			to_chat(user, span_warning("\The [C] will not fit in \the [src]!"))
 		return
 
 	if(cartridges.len >= SYNTHESIZER_MAX_CARTRIDGES)
 		if(user)
-			to_chat(user, "<span class='warning'>\The [src] does not have any slots open for \the [C] to fit into!</span>")
+			to_chat(user, span_warning("\The [src] does not have any slots open for \the [C] to fit into!"))
 		return
 
 	if(!C.label)
 		if(user)
-			to_chat(user, "<span class='warning'>\The [C] does not have a label!</span>")
+			to_chat(user, span_warning("\The [C] does not have a label!"))
 		return
 
 	if(cartridges[C.label])
 		if(user)
-			to_chat(user, "<span class='warning'>\The [src] already contains a cartridge with that label!</span>")
+			to_chat(user, span_warning("\The [src] already contains a cartridge with that label!"))
 		return
 
 	if(user)
 		user.drop_from_inventory(C)
-		to_chat(user, "<span class='notice'>You add \the [C] to \the [src].</span>")
+		to_chat(user, span_notice("You add \the [C] to \the [src]."))
 
 	C.loc = src
 	cartridges[C.label] = C
@@ -204,7 +204,7 @@
 			return
 		var/obj/item/reagent_containers/chem_disp_cartridge/C = remove_cartridge(label)
 		if(C)
-			to_chat(user, "<span class='notice'>You remove \the [C] from \the [src].</span>")
+			to_chat(user, span_notice("You remove \the [C] from \the [src]."))
 			C.loc = loc
 			playsound(src, W.usesound, 50, 1)
 			return
@@ -212,22 +212,22 @@
 	// We don't need a busy check here as the catalyst slot must be occupied for the machine to function.
 	if(istype(W, /obj/item/reagent_containers/glass))
 		if(catalyst)
-			to_chat(user, "<span class='warning'>There is already \a [catalyst] in \the [src] catalyst slot!</span>")
+			to_chat(user, span_warning("There is already \a [catalyst] in \the [src] catalyst slot!"))
 			return
 		if(stat & (BROKEN|NOPOWER))
-			to_chat(user, "<span class='warning'>The clamp will not secure the catalyst while the machine is down!</span>")
+			to_chat(user, span_warning("The clamp will not secure the catalyst while the machine is down!"))
 			return
 
 		var/obj/item/reagent_containers/RC = W
 
 		if(!RC.is_open_container())
-			to_chat(user, "<span class='warning'>You don't see how \the [src] could extract reagents from \the [RC].</span>")
+			to_chat(user, span_warning("You don't see how \the [src] could extract reagents from \the [RC]."))
 			return
 
 		catalyst =  RC
 		user.drop_from_inventory(RC)
 		RC.loc = src
-		to_chat(user, "<span class='notice'>You set \the [RC] on \the [src].</span>")
+		to_chat(user, span_notice("You set \the [RC] on \the [src]."))
 		update_icon()
 		return
 
@@ -379,7 +379,7 @@
 		if("add_recipe")
 			// Allows the user to add a recipe. Kinda vital for this machine to do anything useful.
 			if(recipes.len >= SYNTHESIZER_MAX_RECIPES)
-				to_chat(usr, "<span class='warning'>Maximum recipes exceeded!</span>")
+				to_chat(usr, span_warning("Maximum recipes exceeded!"))
 				return
 			if(!production_mode)
 				babystep_recipe(usr)
@@ -394,7 +394,7 @@
 					if(index in recipes)
 						recipes.Remove(list(index)) // Fuck off Byond.
 			else
-				to_chat(usr, "<span class='warning'>You cannot remove recipes while the machine is running!</span>")
+				to_chat(usr, span_warning("You cannot remove recipes while the machine is running!"))
 		if("exp_recipe")
 			// Allows the user to export recipes to chat formatted for easy importing.
 			var/index = params["exp_index"]
@@ -402,7 +402,7 @@
 		if("add_queue")
 			// Adds recipes to the queue.
 			if(queue.len >= SYNTHESIZER_MAX_QUEUE)
-				to_chat(usr, "<span class='warning'>Synthesizer queue full!</span>")
+				to_chat(usr, span_warning("Synthesizer queue full!"))
 				return
 			var/index = params["qa_index"]
 			// If you forgot, this is a string returned by the user pressing the "add to queue" button on a recipe.
@@ -623,13 +623,13 @@
 
 	// If we're missing a cartridge somehow or lack space for the next step, stall. It's now up to the chemist to fix this.
 	if(!cartridges[label])
-		visible_message("<span class='warning'>The [src] beeps loudly, flashing a 'cartridge missing' error!</span>", "You hear loud beeping!")
+		visible_message(span_warning("The [src] beeps loudly, flashing a 'cartridge missing' error!"), "You hear loud beeping!")
 		playsound(src, 'sound/weapons/smg_empty_alarm.ogg', 40)
 		stall()
 		return
 
 	if(quantity > reagents.get_free_space())
-		visible_message("<span class='warning'>The [src] beeps loudly, flashing a 'maximum volume exceeded' error!</span>", "You hear loud beeping!")
+		visible_message(span_warning("The [src] beeps loudly, flashing a 'maximum volume exceeded' error!"), "You hear loud beeping!")
 		playsound(src, 'sound/weapons/smg_empty_alarm.ogg', 40)
 		stall()
 		return
@@ -637,7 +637,7 @@
 	// If there isn't enough reagent left for this step, try again in a minute.
 	var/obj/item/reagent_containers/chem_disp_cartridge/C = cartridges[label]
 	if(quantity > C.reagents.total_volume)
-		visible_message("<span class='notice'>The [src] flashes an 'insufficient reagents' warning.</span>")
+		visible_message(span_notice("The [src] flashes an 'insufficient reagents' warning."))
 		addtimer(CALLBACK(src, PROC_REF(perform_reaction), r_id, step), 1 MINUTE)
 		return
 

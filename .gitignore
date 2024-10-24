@@ -159,3 +159,6 @@ package-lock.json
 /tools/build/dm_versions.json
 
 config/jobwhitelist.txt
+
+#ignore tracy dll
+prof.dll

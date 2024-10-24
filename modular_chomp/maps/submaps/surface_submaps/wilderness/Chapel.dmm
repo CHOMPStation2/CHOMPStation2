@@ -293,7 +293,6 @@
 /area/submap/Chapel1)
 "bf" = (
 /obj/structure/closet/coffin,
-/obj/random/contraband,
 /obj/effect/decal/remains/mouse,
 /obj/effect/decal/remains/unathi,
 /turf/simulated/floor/wood/sif,

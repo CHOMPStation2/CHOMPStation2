@@ -21,7 +21,7 @@
 		return 0
 	if (emote == "smile")
 		src.uses--
-		to_chat(source,"<span class='notice'>You suddenly feel as if you can understand other languages!</span>")
+		to_chat(source,span_notice("You suddenly feel as if you can understand other languages!"))
 		source.add_language(LANGUAGE_UNATHI)
 		source.add_language(LANGUAGE_SIIK)
 		source.add_language(LANGUAGE_SKRELLIAN)
@@ -104,7 +104,7 @@
 				var/static/regex/size_mult = new/regex("\\d+")
 				if(size_mult.Find(msg))
 					var/resizing_value = text2num(size_mult.match)
-					H.resize(CLAMP(resizing_value/100 , 0.25, 2))
+					H.resize(CLAMP(resizing_value/100 , RESIZE_MINIMUM_DORMS, RESIZE_MAXIMUM_DORMS), uncapped = H.has_large_resize_bounds()) //CHOMPEdit - Let resize handle size limits. It's meant to do that.
 
 
 
@@ -166,10 +166,10 @@ Due to the small chemical capacity of the implant, the life of the implant is re
 		var/newlaws = tgui_input_text(user, "Please Input Laws", "Compliance Laws", "", multiline = TRUE, prevent_enter = TRUE)
 		newlaws = sanitize(newlaws,2048)
 		if(newlaws)
-			to_chat(user,"You set the laws to: <br><span class='notice'>[newlaws]</span>")
+			to_chat(user,"You set the laws to: <br>" + span_notice("[newlaws]"))
 			implant.laws = newlaws //Organic
 	else //No using other implants.
-		to_chat(user,"<span class='notice'>A red warning pops up on the implanter's micro-screen: 'INVALID IMPLANT DETECTED.'</span>")
+		to_chat(user,span_notice("A red warning pops up on the implanter's micro-screen: 'INVALID IMPLANT DETECTED.'"))
 
 
 /obj/item/implant/compliance
@@ -197,12 +197,12 @@ Due to the small chemical capacity of the implant, the life of the implant is re
 
 	var/mob/living/carbon/human/target = source
 	if(!target.nif || target.nif.stat != NIF_WORKING) //No nif or their NIF is broken.
-		to_chat(target, "<span class='notice'>You suddenly feel compelled to follow the following commands: [laws]</span>")
-		to_chat(target, "<span class='notice'>((OOC NOTE: Commands that go against server rules should be disregarded and ahelped.))</span>")
-		to_chat(target, "<span class='notice'>((OOC NOTE: Your new commands can be checked at any time by using the 'notes' command in chat. Additionally, if you did not agree to this, you are not compelled to follow the implant.))</span>")
+		to_chat(target, span_notice("You suddenly feel compelled to follow the following commands: [laws]"))
+		to_chat(target, span_notice("((OOC NOTE: Commands that go against server rules should be disregarded and ahelped.))"))
+		to_chat(target, span_notice("((OOC NOTE: Your new commands can be checked at any time by using the 'notes' command in chat. Additionally, if you did not agree to this, you are not compelled to follow the implant.))"))
 		target.add_memory(laws)
 		return
 	else //You got a nif...Upload time.
 		new nif_payload(target.nif,laws)
-		to_chat(target, "<span class='notice'>((OOC NOTE: Commands that go against server rules should be disregarded and ahelped.))</span>")
-		to_chat(target, "<span class='notice'>((OOC NOTE: If you did not agree to this, you are not compelled to follow the laws.))</span>")
+		to_chat(target, span_notice("((OOC NOTE: Commands that go against server rules should be disregarded and ahelped.))"))
+		to_chat(target, span_notice("((OOC NOTE: If you did not agree to this, you are not compelled to follow the laws.))"))

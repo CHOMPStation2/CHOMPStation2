@@ -35,7 +35,7 @@
 	if(set_input)
 		if(set_input == "output destination")
 			if(vac_owner && user != vac_owner)
-				to_chat(user, "<span class='warning'>Only designated owner can change this setting.</span>")
+				to_chat(user, span_warning("Only designated owner can change this setting."))
 				return
 			var/vac_options = list("Vore Belly", "Trash Bag") //Dont show option for borg belly if the user isnt even a borg. QOL!
 			if(isrobot(user))
@@ -50,7 +50,7 @@
 							if(istype(S))
 								output_dest = S
 								return
-					to_chat(user, "<span class='warning'>Borg belly not found.</span>")
+					to_chat(user, span_warning("Borg belly not found."))
 				if("Trash Bag")
 					if(isrobot(user))
 						var/mob/living/silicon/robot/R = user
@@ -63,7 +63,7 @@
 						if(istype(T))
 							output_dest = T
 							return
-					to_chat(user, "<span class='warning'>Trash bag not found.</span>")
+					to_chat(user, span_warning("Trash bag not found."))
 				if("Vore Belly")
 					if(user.vore_selected)
 						output_dest = user.vore_selected
@@ -84,20 +84,20 @@
 			vac_power = 0
 			icon_state = "sucker-0"
 			output_dest = null
-			to_chat(user, "<span class='warning'>Trash bag not found. Shutting down.</span>")
+			to_chat(user, span_warning("Trash bag not found. Shutting down."))
 			return
 		var/obj/item/storage/bag/trash/B = output_dest
 		if(LAZYLEN(B.contents) >= B.max_storage_space) //A bit more lenient than the w_class system to avoid complicated spaghetti.
-			to_chat(user, "<span class='warning'>Trash bag full. Empty trash bag contents to continue.</span>")
+			to_chat(user, span_warning("Trash bag full. Empty trash bag contents to continue."))
 			return
 	if(istype(output_dest,/obj/item/dogborg/sleeper))
 		var/obj/item/dogborg/sleeper/B = output_dest
 		if(LAZYLEN(B.contents) >= B.max_item_count)
-			to_chat(user, "<span class='warning'>[B.name] full. Empty or process contents to continue.</span>")
+			to_chat(user, span_warning("[B.name] full. Empty or process contents to continue."))
 			return
 		if(B.ore_storage)
 			if(B.current_capacity >= B.max_ore_storage)
-				to_chat(user, "<span class='warning'>Ore storage full. Deposit ore contents to a box continue.</span>")
+				to_chat(user, span_warning("Ore storage full. Deposit ore contents to a box continue."))
 				return
 	if(isbelly(output_dest))
 		var/turf/T = get_turf(output_dest)
@@ -107,12 +107,12 @@
 			vac_power = 0
 			icon_state = "sucker-0"
 			output_dest = null
-			to_chat(user, "<span class='warning'>Target destination not found. Shutting down.</span>")
+			to_chat(user, span_warning("Target destination not found. Shutting down."))
 			return
 	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 	var/auto_setting = 1
 	if(isturf(target))
-		user.visible_message("<span class='filter_notice'>[user] begins vacuuming the mess off \the [target.name]...</span>", "<span class='notice'>You begin vacuuming the mess off \the [target.name]...</span>")
+		user.visible_message(span_filter_notice("[user] begins vacuuming the mess off \the [target.name]..."), span_notice("You begin vacuuming the mess off \the [target.name]..."))
 		var/list/suckables = list()
 		if(vac_power >= 1)
 			for(var/obj/effect/decal/cleanable/C in target)
@@ -184,7 +184,7 @@
 				if(istype(output_dest,/obj/item/storage/bag/trash))
 					var/obj/item/storage/bag/trash/B = output_dest
 					if(LAZYLEN(B.contents) >= B.max_storage_space)
-						to_chat(user, "<span class='warning'>Trash bag full. Empty trash bag contents to continue.</span>")
+						to_chat(user, span_warning("Trash bag full. Empty trash bag contents to continue."))
 						return
 				if(vac_conga < 100)
 					vac_conga += 3
@@ -220,7 +220,7 @@
 			else
 				auto_setting = vac_power
 			playsound(src, 'sound/machines/kitchen/candymaker/candymaker-mid1.ogg', auto_setting * 20, 1, -1)
-			user.visible_message("<span class='filter_notice'>[user] vacuums up \the [target.name].</span>", "<span class='notice'>You vacuum up \the [target.name]...</span>")
+			user.visible_message(span_filter_notice("[user] vacuums up \the [target.name]."), span_notice("You vacuum up \the [target.name]..."))
 			I.SpinAnimation(5,1)
 			spawn(5)
 				if(!I.Adjacent(user) || src.loc != user || vac_power < 2) //Cancel if moved/unpowered/dropped
@@ -231,7 +231,7 @@
 				I.forceMove(output_dest)
 	else if(istype(target,/obj/effect/decal/cleanable))
 		playsound(src, 'sound/machines/kitchen/candymaker/candymaker-mid1.ogg', auto_setting * 20, 1, -1)
-		user.visible_message("<span class='filter_notice'>[user] vacuums up \the [target.name].</span>", "<span class='notice'>You vacuum up \the [target.name]...</span>")
+		user.visible_message(span_filter_notice("[user] vacuums up \the [target.name]."), span_notice("You vacuum up \the [target.name]..."))
 		qdel(target)
 	else if(isliving(target))
 		var/mob/living/L = target
@@ -247,7 +247,7 @@
 			auto_setting = 6
 		if(valid_to_suck)
 			playsound(src, 'sound/machines/kitchen/candymaker/candymaker-mid1.ogg', auto_setting * 20, 1, -1)
-			user.visible_message("<span class='filter_notice'>[user] vacuums up \the [target.name].</span>", "<span class='notice'>You vacuum up \the [target.name]...</span>")
+			user.visible_message(span_filter_notice("[user] vacuums up \the [target.name]."), span_notice("You vacuum up \the [target.name]..."))
 			L.SpinAnimation(5,1)
 			spawn(5)
 				if(!L.Adjacent(user) || src.loc != user || vac_power < 2) //Cancel if moved/unpowered/dropped

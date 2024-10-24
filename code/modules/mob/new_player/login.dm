@@ -29,8 +29,8 @@ var/obj/effect/lobby_image = new /obj/effect/lobby_image
 /mob/new_player/Login()
 	update_Login_details()	//handles setting lastKnownIP and computer_id for use by the ban systems as well as checking for multikeying
 	if(join_motd)
-		join_motd = GLOB.is_valid_url.Replace(join_motd,"<span class='linkify'>$1</span>")
-		to_chat(src, "<div class=\"motd\">[join_motd]</div>")
+		join_motd = GLOB.is_valid_url.Replace(join_motd,span_linkify("$1"))
+		to_chat(src, examine_block("<div class=\"motd\">[join_motd]</div>"))
 
 	if(has_respawned)
 		to_chat(usr, CONFIG_GET(string/respawn_message)) // CHOMPEdit
@@ -50,7 +50,7 @@ var/obj/effect/lobby_image = new /obj/effect/lobby_image
 	created_for = ckey
 
 	new_player_panel()
-	client.init_verbs() //ChompEDIT - TGPanel
+	client.init_verbs()
 	spawn(40)
 		if(client)
 			handle_privacy_poll()
@@ -88,7 +88,7 @@ var/obj/effect/lobby_image = new /obj/effect/lobby_image
 		tgui_alert_async(src, message, "BYOND Client Version Warning")
 
 		// So we can be more wordy and give links.
-		to_chat(src, "<span class='danger'>Your client version has known issues.</span> Please consider using a different version: <a href='https://www.byond.com/download/build/'>https://www.byond.com/download/build/</a>.")
+		to_chat(src, span_userdanger("Your client version has known issues.") + " Please consider using a different version: <a href='https://www.byond.com/download/build/'>https://www.byond.com/download/build/</a>.")
 		var/chat_message = ""
 		if(CONFIG_GET(number/suggested_byond_version)) // CHOMPEdit
 			chat_message += "We suggest using version [CONFIG_GET(number/suggested_byond_version)]." // CHOMPEdit

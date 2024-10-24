@@ -6,6 +6,8 @@
 	slot_flags = SLOT_BELT | SLOT_HOLSTER
 	var/print_cooldown = 1 MINUTE
 	var/last_print
+	pickup_sound = 'sound/items/pickup/device.ogg'
+	drop_sound = 'sound/items/drop/device.ogg'
 	w_class = ITEMSIZE_SMALL //CHOMP Add because something so small, trivial, and used for silly RP should not be practically gigantic.
 
 /obj/item/ticket_printer/attack_self(mob/user)
@@ -13,7 +15,7 @@
 	if(last_print + print_cooldown <= world.time)
 		print_a_ticket(user)
 	else
-		to_chat(user, "<span class = 'warning'>\The [src] is not ready to print another ticket yet.</span>")
+		to_chat(user, span_warning("\The [src] is not ready to print another ticket yet."))
 
 /obj/item/ticket_printer/proc/print_a_ticket(mob/user)
 

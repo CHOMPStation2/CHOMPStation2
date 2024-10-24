@@ -15,7 +15,7 @@
 
 /decl/emote/human/deathgasp/do_emote(mob/living/carbon/human/user)
 	if(istype(user) && user.species.get_death_message(user) == DEATHGASP_NO_MESSAGE)
-		to_chat(user, SPAN_WARNING("Your species has no deathgasp."))
+		to_chat(user, span_warning("Your species has no deathgasp."))
 		return
 	. = ..()
 

@@ -123,7 +123,7 @@
 	flapping = H.flapping
 	H.toggle_tail(FALSE, FALSE)
 	H.toggle_wing(FALSE, FALSE)
-	H.visible_message("<span class='warning'>[H]'s skin rapidly [adjective] as they turn to [material]!</span>", "<span class='warning'>Your skin abruptly [adjective] as you turn to [material]!</span>")
+	H.visible_message(span_warning("[H]'s skin rapidly [adjective] as they turn to [material]!"), span_warning("Your skin abruptly [adjective] as you turn to [material]!"))
 	H.forceMove(src)
 	H.SetBlinded(0)
 	H.SetSleeping(0)
@@ -142,7 +142,7 @@
 	if (can_revert)
 		unpetrify(deleting = FALSE) //don't delete if we're already deleting!
 	else
-		visible_message("<span class='warning'>The [identifier] loses shape and crumbles into a pile of [material]!</span>")
+		visible_message(span_warning("The [identifier] loses shape and crumbles into a pile of [material]!"))
 	. = ..()
 
 /obj/structure/gargoyle/process()
@@ -205,10 +205,10 @@
 			var/f = (original_int - obj_integrity) / 10
 			for (var/x in 1 to 10)
 				gargoyle.adjustBruteLoss(f)
-			hurtmessage = " <b>You feel your body take the damage that was dealt while being [material]!</b>"
+			hurtmessage = " " + span_bold("You feel your body take the damage that was dealt while being [material]!")
 	gargoyle.updatehealth()
 	alpha = 0
-	gargoyle.visible_message("<span class='warning'>[gargoyle]'s skin rapidly reverts, returning them to normal!</span>", "<span class='warning'>Your skin reverts, freeing your movement once more![hurtmessage]</span>")
+	gargoyle.visible_message(span_warning("[gargoyle]'s skin rapidly reverts, returning them to normal!"), span_warning("Your skin reverts, freeing your movement once more![hurtmessage]"))
 	gargoyle = null
 	if (deleting)
 		qdel(src)
@@ -235,25 +235,25 @@
 
 /obj/structure/gargoyle/attack_generic(var/mob/user, var/damage, var/attack_message = "hits")
 	user.do_attack_animation(src)
-	visible_message("<span class='danger'>[user] [attack_message] the [src]!</span>")
+	visible_message(span_danger("[user] [attack_message] the [src]!"))
 	damage(damage)
 
 /obj/structure/gargoyle/attackby(var/obj/item/W as obj, var/mob/living/user as mob)
 	if(W.is_wrench())
 		if (isspace(loc) || isopenspace(loc))
-			to_chat(user, "<span class='warning'>You can't anchor that here!</span>")
+			to_chat(user, span_warning("You can't anchor that here!"))
 			anchored = FALSE
 			return ..()
 		playsound(src, W.usesound, 50, 1)
 		if (do_after(user, (2 SECONDS) * W.toolspeed, target = src))
-			to_chat(user, "<span class='notice'>You [anchored ? "un" : ""]anchor the [src].</span>")
+			to_chat(user, span_notice("You [anchored ? "un" : ""]anchor the [src]."))
 			anchored = !anchored
 	else if(!isrobot(user) && gargoyle && gargoyle.vore_selected && gargoyle.trash_catching)
 		if(istype(W,/obj/item/grab || /obj/item/holder))
 			gargoyle.vore_attackby(W, user)
 			return
 		if(gargoyle.adminbus_trash || is_type_in_list(W,edible_trash) && W.trash_eatable && !is_type_in_list(W,item_vore_blacklist))
-			to_chat(user, "<span class='warning'>You slip [W] into [gargoyle]'s [lowertext(gargoyle.vore_selected.name)] .</span>")
+			to_chat(user, span_warning("You slip [W] into [gargoyle]'s [lowertext(gargoyle.vore_selected.name)] ."))
 			user.drop_item()
 			W.forceMove(gargoyle.vore_selected)
 			return

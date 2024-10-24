@@ -70,9 +70,11 @@
 	vore_default_item_mode = IM_DIGEST
 
 /mob/living/simple_mob/vore/squirrel/init_vore()
-	if(!voremob_loaded) //CHOMPAdd
-		return //CHOMPAdd
-	.=..() //CHOMPEdit
+ 	//CHONOEdit Start
+	if(!voremob_loaded)
+		return
+	.=..()
+	//CHONOEdit End
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.digest_mode = DM_SELECT
@@ -213,7 +215,7 @@
 	set category = "Abilities.Settings" //CHOMPEdit
 	set desc = "You can set your color!"
 	if(picked_color)
-		to_chat(src, "<span class='notice'>You have already picked a color! If you picked the wrong color, ask an admin to change your picked_color variable to 0.</span>")
+		to_chat(src, span_notice("You have already picked a color! If you picked the wrong color, ask an admin to change your picked_color variable to 0."))
 		return
 	var/newcolor = input(usr, "Choose a color.", "", color) as color|null
 	if(newcolor)

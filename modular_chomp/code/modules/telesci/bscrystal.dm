@@ -5,7 +5,7 @@
 		var/mob/living/carbon/human/H = M
 		if(H.get_species() == SPECIES_SHADEKIN && (H.ability_flags & AB_PHASE_SHIFTED))
 			var/turf/T = get_turf(src)
-			visible_message("<span class='notice'>[src] fizzles and disappears as something interacts with it!</span>")
+			visible_message(span_notice("[src] fizzles and disappears as something interacts with it!"))
 			playsound(src, pick('sound/effects/Glassbr1.ogg', 'sound/effects/Glassbr2.ogg', 'sound/effects/Glassbr3.ogg'), 50, 1)
 			var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread()
 			s.set_up(5, 1, T)

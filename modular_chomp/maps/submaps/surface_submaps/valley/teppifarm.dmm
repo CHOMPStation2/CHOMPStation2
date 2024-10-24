@@ -61,7 +61,7 @@
 /area/submap/teppifarm)
 "r" = (
 /obj/structure/table/woodentable,
-/obj/random/contraband/nofail,
+/obj/random/contraband,
 /turf/simulated/floor/wood/alt,
 /area/submap/teppifarm)
 "s" = (
@@ -98,7 +98,6 @@
 "A" = (
 /obj/structure/table/rack,
 /obj/item/melee/umbrella/random,
-/obj/item/gun/energy/taser/xeno,
 /turf/simulated/floor/wood/alt,
 /area/submap/teppifarm)
 "B" = (
@@ -173,7 +172,6 @@
 /obj/effect/decal/cleanable/blood/oil/streak,
 /obj/structure/table/rack,
 /obj/item/melee/umbrella/random,
-/obj/item/gun/energy/taser/xeno,
 /turf/simulated/floor/wood/alt,
 /area/submap/teppifarm)
 "W" = (

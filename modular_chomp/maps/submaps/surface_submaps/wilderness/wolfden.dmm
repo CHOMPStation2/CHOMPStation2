@@ -121,13 +121,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/WolfDen)
-"A" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/random/maintenance/security,
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0
-	},
-/area/submap/WolfDen)
 "C" = (
 /obj/random/trash_pile,
 /turf/simulated/floor/outdoors/dirt,
@@ -175,7 +168,6 @@
 	},
 /area/submap/WolfDen)
 "O" = (
-/obj/random/gun/random,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
@@ -257,7 +249,7 @@ o
 o
 d
 O
-X
+O
 o
 o
 o
@@ -278,7 +270,7 @@ o
 Z
 o
 v
-A
+I
 w
 e
 J

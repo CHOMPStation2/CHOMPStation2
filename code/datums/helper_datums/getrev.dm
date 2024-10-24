@@ -58,25 +58,25 @@
 	set desc = "Check the current server code revision"
 
 	if(!GLOB.revdata)
-		to_chat(src, "<span class='warning'>Please wait until server initializations are complete.</span>")
+		to_chat(src, span_warning("Please wait until server initializations are complete."))
 		return
 
 	var/list/msg = list()
 
 	if(GLOB.revdata.revision)
-		msg += "<b>Server revision:</b> B:[GLOB.revdata.branch] D:[GLOB.revdata.date]"
+		msg += span_bold("Server revision:") + " B:[GLOB.revdata.branch] D:[GLOB.revdata.date]"
 		if(CONFIG_GET(string/githuburl)) // CHOMPEdit
-			msg += "<b>Commit:</b> <a href='[CONFIG_GET(string/githuburl)]/commit/[GLOB.revdata.revision]'>[GLOB.revdata.revision]</a>" // CHOMPEdit
+			msg += span_bold("Commit:") + " <a href='[CONFIG_GET(string/githuburl)]/commit/[GLOB.revdata.revision]'>[GLOB.revdata.revision]</a>" // CHOMPEdit
 		else
-			msg += "<b>Commit:</b> [GLOB.revdata.revision]" // CHOMPEdit - Actually SHOW the revision
+			msg += span_bold("Commit:") + " [GLOB.revdata.revision]" // CHOMPEdit - Actually SHOW the revision
 	else
-		msg += "<b>Server revision:</b> Unknown"
+		msg += span_bold("Server revision:") + " Unknown"
 
 	if(world.TgsAvailable())
 		var/datum/tgs_version/version = world.TgsVersion()
-		msg += "<b>TGS version:</b> [version.raw_parameter]"
+		msg += span_bold("TGS version:") + " [version.raw_parameter]"
 		var/datum/tgs_version/api_version = world.TgsApiVersion()
-		msg += "<b>DMAPI version:</b> [api_version.raw_parameter]"
+		msg += span_bold("DMAPI version:") + " [api_version.raw_parameter]"
 
 	if(GLOB.revdata.testmerge.len)
 		msg += GLOB.revdata.GetTestMergeInfo()

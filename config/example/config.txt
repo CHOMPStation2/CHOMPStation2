@@ -244,7 +244,7 @@ ALLOW_HOLIDAYS
 
 ##Defines the ticklag for the world. Ticklag is the amount of time between game ticks (aka byond ticks) (in 1/10ths of a second).
 ##	This also controls the client network update rate, as well as the default client fps
-TICKLAG 0.5
+TICKLAG 0.25
 
 ##Can also be set as per-second value, the following value is identical to the above.
 #FPS 20
@@ -466,11 +466,6 @@ PTO_CAP 50
 
 # Forbids players from joining if they have no set General flavor text
 REQUIRE_FLAVOR
-
-## Uncomment to enable submaps to have their orientation rotated randomly during map generation.
-## Submap rotation is an experimental feature and can cause bugs and weirdness if certain objects inside the submap are coded poorly.
-## Submaps can still be rotated when loading manually with the admin verbs, if desired.
-# RANDOM_SUBMAP_ORIENTATION
 
 ## Uncomment to allow the AI job to use 'AI Shells', a new type of borg that lets the AI hop into and out of them at will.
 ## This has some balance implications, and so it might not be desirable for all servers.

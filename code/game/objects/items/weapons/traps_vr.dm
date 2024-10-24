@@ -8,11 +8,11 @@
 	if(ishuman(src.loc))
 		var/mob/living/carbon/human/H = src.loc
 		if(H.wear_mask == src)
-			add_verb(H,/mob/living/proc/shred_limb_temp) //CHOMPEdit TGPanel
+			add_verb(H, /mob/living/proc/shred_limb_temp)
 		else
-			remove_verb(H,/mob/living/proc/shred_limb_temp) //CHOMPEdit TGPanel
+			remove_verb(H, /mob/living/proc/shred_limb_temp)
 	..()
 
 /obj/item/beartrap/dropped(var/mob/user)
-	remove_verb(user,/mob/living/proc/shred_limb_temp) //CHOMPEdit TGPanel
+	remove_verb(user, /mob/living/proc/shred_limb_temp)
 	..()

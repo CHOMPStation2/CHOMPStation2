@@ -79,7 +79,7 @@
 	if(H && H.gloves == src)
 		wearer = H
 		if(wearer.can_feel_pain())
-			to_chat(H, "<span class='danger'>You feel strange as hunger vanishes!</span>")
+			to_chat(H, span_danger("You feel strange as hunger vanishes!"))
 			wearer.custom_pain("Your hands feel strange!",1)
 	..()
 
@@ -87,7 +87,7 @@
 	..()
 	if(wearer)
 		if(wearer.can_feel_pain())
-			to_chat(wearer, "<span class='danger'>You feel hungry!</span>")
+			to_chat(wearer, span_danger("You feel hungry!"))
 			wearer.custom_pain("Your hands feel strange",1)
 		wearer = null
 
@@ -123,7 +123,7 @@
 /obj/item/clothing/suit/armor/buffvest/proc/activate_ability(var/mob/living/wearer)
 	cooldown = world.time + cooldown_duration
 	to_chat(wearer, flavor_activate)
-	to_chat(wearer, "<span class='danger'>The inside of your head hurts...</span>")
+	to_chat(wearer, span_danger("The inside of your head hurts..."))
 	wearer.adjustBrainLoss(brainloss_cost)
 	wearer.add_modifier(/datum/modifier/aura/candy_blue, 30 SECONDS)
 
@@ -131,16 +131,19 @@
 	..()
 	if(istype(H) && H.head == src && H.is_sentient())
 		START_PROCESSING(SSobj, src)
-		to_chat(H, flavor_equip)
+		if(flavor_equip)
+			to_chat(H, span_info(flavor_equip))
 
 /obj/item/clothing/suit/armor/buffvest/dropped(var/mob/living/carbon/human/H)
 	..()
 	STOP_PROCESSING(SSobj, src)
 	if(H.is_sentient())
 		if(loc == H) // Still inhand.
-			to_chat(H, flavor_unequip)
+			if(flavor_unequip)
+				to_chat(H, span_info(flavor_unequip))
 		else
-			to_chat(H, flavor_drop)
+			if(flavor_drop)
+				to_chat(H, span_info(flavor_drop))
 
 /obj/item/clothing/suit/armor/buffvest/Destroy()
 	STOP_PROCESSING(SSobj, src)

@@ -305,6 +305,12 @@
 /obj/machinery/portable_atmospherics/hydroponics,
 /turf/simulated/floor/wood,
 /area/submap/DJOutpost1)
+"W" = (
+/obj/structure/ghost_pod/manual/lost_drone/dogborg{
+	activated = 1
+	},
+/turf/template_noop,
+/area/template_noop)
 
 (1,1,1) = {"
 a
@@ -552,7 +558,7 @@ a
 o
 u
 C
-a
+W
 a
 a
 a

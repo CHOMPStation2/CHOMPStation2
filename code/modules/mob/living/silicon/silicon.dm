@@ -76,8 +76,8 @@
 			src.take_organ_damage(0,5,emp=1)
 			Confuse(2)
 	flash_eyes(affect_silicon = 1)
-	to_chat(src, "<span class='danger'><B>*BZZZT*</B></span>")
-	to_chat(src, "<span class='danger'>Warning: Electromagnetic pulse detected.</span>")
+	to_chat(src, span_bolddanger("*BZZZT*"))
+	to_chat(src, span_danger("Warning: Electromagnetic pulse detected."))
 	..()
 
 /mob/living/silicon/stun_effect_act(var/stun_amount, var/agony_amount)
@@ -91,9 +91,9 @@
 
 		shock_damage *= siemens_coeff	//take reduced damage
 		take_overall_damage(0, shock_damage)
-		visible_message("<span class='warning'>[src] was shocked by \the [source]!</span>", \
-			"<span class='danger'>Energy pulse detected, system damaged!</span>", \
-			"<span class='warning'>You hear an electrical crack.</span>")
+		visible_message(span_warning("[src] was shocked by \the [source]!"), \
+			span_danger("Energy pulse detected, system damaged!"), \
+			span_warning("You hear an electrical crack."))
 		if(prob(20))
 			Stun(2)
 		return
@@ -132,24 +132,22 @@
 // this function shows the health of the AI in the Status panel
 //ChompEDIT START - TGPanel
 /mob/living/silicon/proc/show_system_integrity()
-	. = list()
 	if(!src.stat)
-		. += "System integrity: [round((health/getMaxHealth())*100)]%"
+		. = "System integrity: [round((health/getMaxHealth())*100)]%"
 	else
-		. += "Systems nonfunctional"
+		. = "Systems nonfunctional"
 
 
 // This is a pure virtual function, it should be overwritten by all subclasses
 /mob/living/silicon/proc/show_malf_ai()
-	. = list()
+	return ""
 
 // this function displays the shuttles ETA in the status panel if the shuttle has been called
 /mob/living/silicon/proc/show_emergency_shuttle_eta()
-	. = list()
 	if(emergency_shuttle)
 		var/eta_status = emergency_shuttle.get_status_panel_eta()
 		if(eta_status)
-			. += "[eta_status]"
+			. = "[eta_status]"
 
 
 // This adds the basic clock, shuttle recall timer, and malf_ai info to all silicon lifeforms
@@ -159,14 +157,13 @@
 	. += show_emergency_shuttle_eta()
 	. += show_system_integrity()
 	. += show_malf_ai()
-//ChompEDIT END
 
 /* VOREStation Removal
 // this function displays the stations manifest in a separate window
 /mob/living/silicon/proc/show_station_manifest()
 	var/dat = "<div align='center'>"
 	if(!data_core)
-		to_chat(src, "<span class='notice'>There is no data to form a manifest with. Contact your Nanotrasen administrator.</span>")
+		to_chat(src, span_notice("There is no data to form a manifest with. Contact your Nanotrasen administrator."))
 		return
 	dat += data_core.get_manifest(1) //The 1 makes it monochrome.
 
@@ -178,7 +175,7 @@
 //can't inject synths
 /mob/living/silicon/can_inject(var/mob/user, var/error_msg, var/target_zone, var/ignore_thickness = FALSE)
 	if(error_msg)
-		to_chat(user, "<span class='alert'>The armoured plating is too tough.</span>")
+		to_chat(user, span_warning("The armoured plating is too tough."))
 	return 0
 
 
@@ -227,7 +224,7 @@
 				default_str = " - <a href='byond://?src=\ref[src];default_lang=\ref[L]'>set default</a>"
 
 			var/synth = (L in speech_synthesizer_langs)
-			. += "<b>[L.name] ([get_language_prefix()][L.key])</b>[synth ? default_str : null]<br>Speech Synthesizer: <i>[synth ? "YES" : "NOT SUPPORTED"]</i><br>[L.desc]<br><br>"
+			. += span_bold("[L.name] ([get_language_prefix()][L.key])") + "[synth ? default_str : null]<br>Speech Synthesizer: <i>[synth ? "YES" : "NOT SUPPORTED"]</i><br>[L.desc]<br><br>"
 
 /mob/living/silicon/proc/toggle_sensor_mode() //VOREStation Add to make borgs use omni starts here - Tank, clueless bird
 	if(sensor_type)
@@ -342,7 +339,7 @@
 					alarm_raised = 1
 					if(!reported)
 						reported = 1
-						to_chat(src, "<span class='warning'>--- [AH.category] Detected ---</span>")
+						to_chat(src, span_warning("--- [AH.category] Detected ---"))
 					raised_alarm(A)
 
 		for(var/datum/alarm_handler/AH in queued_alarms)
@@ -352,24 +349,24 @@
 				if(alarms[A] == -1)
 					if(!reported)
 						reported = 1
-						to_chat(src, "<span class='notice'>--- [AH.category] Cleared ---</span>")
+						to_chat(src, span_notice("--- [AH.category] Cleared ---"))
 					to_chat(src, "\The [A.alarm_name()].")
 
 		if(alarm_raised)
-			to_chat(src, "<span class='filter_notice'><A HREF=?src=\ref[src];showalerts=1>\[Show Alerts\]</A></span>")
+			to_chat(src, span_filter_notice("<A HREF=?src=\ref[src];showalerts=1>\[Show Alerts\]</A>"))
 
 		for(var/datum/alarm_handler/AH in queued_alarms)
 			var/list/alarms = queued_alarms[AH]
 			alarms.Cut()
 
 /mob/living/silicon/proc/raised_alarm(var/datum/alarm/A)
-	to_chat(src, "<span class='filter_warning'>[A.alarm_name()]!</span>")
+	to_chat(src, span_filter_warning("[A.alarm_name()]!"))
 
 /mob/living/silicon/ai/raised_alarm(var/datum/alarm/A)
 	var/cameratext = ""
 	for(var/obj/machinery/camera/C in A.cameras())
 		cameratext += "[(cameratext == "")? "" : "|"]<A HREF=?src=\ref[src];switchcamera=\ref[C]>[C.c_tag]</A>"
-	to_chat(src, "<span class='filter_warning'>[A.alarm_name()]! ([(cameratext)? cameratext : "No Camera"])</span>")
+	to_chat(src, span_filter_warning("[A.alarm_name()]! ([(cameratext)? cameratext : "No Camera"])"))
 
 
 /mob/living/silicon/proc/is_traitor()

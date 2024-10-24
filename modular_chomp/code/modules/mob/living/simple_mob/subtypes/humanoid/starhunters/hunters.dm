@@ -18,7 +18,7 @@
 
 /mob/living/simple_mob/humanoid/starhunter/hunter/bullet_act(obj/item/projectile/P)
 	if(istype(P, /obj/item/projectile/energy/lightpillar))
-		visible_message(span_orange("<B>[P] seems ineffective!.</B>")) //immune to their own attack
+		visible_message(span_bolddanger(span_orange("[P] seems ineffective!."))) //immune to their own attack
 	else
 		..()
 
@@ -89,7 +89,7 @@
 	*/
 	if(ranged_cooldown_time) //If you have a non-zero number in a mob's variables, this pattern begins.
 		if(ranged_cooldown <= world.time) //Further down, a timer keeps adding to the ranged_cooldown variable automatically.
-			visible_message("<span class='danger'><b>\The [src]</b> fires at \the [A]!</span>") //Leave notice of shooting.
+			visible_message(span_danger(span_bold("\The [src]") + " fires at \the [A]!")) //Leave notice of shooting.
 			shoot(A) //Perform the shoot action
 			if(casingtype) //If the mob is designated to leave casings...
 				new casingtype(loc) //... leave the casing.
@@ -98,7 +98,7 @@
 		return TRUE	//End these commands here.
 	// CHOMPAddition End
 
-	visible_message("<span class='danger'><b>\The [src]</b> fires at \the [orig_targ]!</span>")
+	visible_message(span_danger(span_bold("\The [src]") + " fires at \the [orig_targ]!"))
 	shoot(A)
 	if(casingtype)
 		new casingtype(loc)
