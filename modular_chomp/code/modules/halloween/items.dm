@@ -45,6 +45,7 @@
 	icon_state = "fullcandy"
 
 	var/searching = FALSE
+	var/has_candy = TRUE
 
 	var/list/candy = list(
 		/obj/item/reagent_containers/food/snacks/chocolatebar,
@@ -72,29 +73,62 @@
 
 	var/thegoods
 
+	if(!has_candy)
+		to_chat(user, span_warning("There is no candy! Someone took too many..."))
+		return
+
 	if(searching)
-		to_chat(user, SPAN_WARNING("Someone is already looking through \the [src]!"))
+		to_chat(user, span_warning("Someone is already looking through \the [src]!"))
 		return
 
 	searching = TRUE
 
-	do_after(user, 5 SECONDS)
+	if(!do_after(user, 5 SECONDS))
+		return
 
-	if(user.ckey in treated)
+	if(treated[user.ckey])
 		var/choice = tgui_alert(user, "You already took one! Take more?", "Take another...", list("Reach in...", "Leave it!"))
 		if(choice == "Reach in...")
 			if(prob(35))
 				thegoods = pick(badcandy)
+				to_chat(user, span_danger("That's one too many! The bowl is empty now..."))
+				empty()
 			else
 				thegoods = pick(candy)
 	else
 		thegoods = pick(candy)
-		treated += user.ckey
+		treated[user.ckey] = TRUE
 
 	searching = FALSE
 
 	var/goodie = new thegoods(src)
 	user.put_in_hands(goodie)
+
+/obj/structure/candybowl/attackby(obj/item/O, mob/user)
+	. = ..()
+	if(istype(O, /obj/item/reagent_containers/food/snacks) && !has_candy)
+		to_chat(user, span_notice("You add \the [O] to the bowl."))
+		if(prob(20))
+			fill()
+		qdel(O)
+
+/obj/structure/candybowl/proc/empty()
+	var/newname = "empty " + initial(name)
+	name = newname
+	desc = "An empty bowl! Someone took too many candies..."
+	icon_state = "nocandy"
+	has_candy = FALSE
+	searching = FALSE
+
+	update_icon()
+
+/obj/structure/candybowl/proc/fill()
+	name = initial(name)
+	desc = initial(desc)
+	icon_state = "fullcandy"
+	has_candy = TRUE
+
+	update_icon()
 
 /obj/structure/candybowl/medical
 	name = "medical candy bowl"
@@ -151,3 +185,32 @@
 		/obj/item/reagent_containers/food/snacks/chocolatepiece/white,
 		/obj/item/reagent_containers/food/snacks/candy_corn
 	)
+
+/obj/structure/boxpile
+	name = "box pile"
+	desc = "It's a bunch of costume boxes! Maybe one could fit you..."
+	icon = 'modular_chomp/icons/obj/halloween/trash64x64.dmi'
+	icon_state = "bigboxes"
+
+	anchored = TRUE
+
+	var/list/ckeys_that_took = list()
+	var/list/costumes
+
+/obj/structure/boxpile/Initialize()
+	. = ..()
+
+	costumes = typesof(/obj/item/storage/box/halloween/)
+
+/obj/structure/boxpile/attack_hand(mob/living/user)
+	if(!do_after(user, 5 SECONDS, exclusive = TASK_USER_EXCLUSIVE))
+		return
+	if(!user.ckey)
+		return
+	if(ckeys_that_took[user.ckey])
+		to_chat(user, span_notice("Nothing else fits you here!"))
+		return
+	to_chat(user, span_notice("After looking around, you found a costume that fits you!"))
+	ckeys_that_took[user.ckey] = TRUE
+	var/obj/item/box = pick(costumes)
+	new box(loc)
