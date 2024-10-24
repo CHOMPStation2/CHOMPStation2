@@ -8,7 +8,10 @@
  *			angle2dir
  */
 
+<<<<<<< HEAD
 // CHOMPEdit Start
+=======
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 //Splits the text of a file at seperator and returns them in a list.
 //returns an empty list if the file doesn't exist
 /world/proc/file2list(filename, seperator="\n", trim = TRUE)
@@ -36,7 +39,10 @@
 			return "turf"
 		else //regex everything else (works for /proc too)
 			return lowertext(replacetext("[the_type]", "[type2parent(the_type)]/", ""))
+<<<<<<< HEAD
 // CHOMPEdit End
+=======
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 
 // Returns an integer given a hexadecimal number string as input.
 /proc/hex2num(hex)

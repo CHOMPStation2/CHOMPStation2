@@ -1,12 +1,20 @@
 /datum/antagonist/proc/create_global_objectives()
+<<<<<<< HEAD
 	if(CONFIG_GET(flag/objectives_disabled)) // CHOMPEdit
+=======
+	if(CONFIG_GET(flag/objectives_disabled))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		return 0
 	if(global_objectives && global_objectives.len)
 		return 0
 	return 1
 
 /datum/antagonist/proc/create_objectives(var/datum/mind/player)
+<<<<<<< HEAD
 	if(CONFIG_GET(flag/objectives_disabled)) // CHOMPEdit
+=======
+	if(CONFIG_GET(flag/objectives_disabled))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		return 0
 	if(create_global_objectives() || global_objectives.len)
 		player.objectives |= global_objectives
@@ -17,7 +25,11 @@
 
 /datum/antagonist/proc/check_victory()
 	var/result = 1
+<<<<<<< HEAD
 	if(CONFIG_GET(flag/objectives_disabled)) // CHOMPEdit
+=======
+	if(CONFIG_GET(flag/objectives_disabled))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		return 1
 	if(global_objectives && global_objectives.len)
 		for(var/datum/objective/O in global_objectives)

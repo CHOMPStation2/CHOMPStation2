@@ -148,10 +148,17 @@ var/global/list/additional_antag_types = list()
 			playerC++
 
 	if(master_mode=="secret")
+<<<<<<< HEAD
 		if(playerC < CONFIG_GET(keyed_list/player_requirements_secret)[config_tag]) // CHOMPEdit
 			return 0
 	else
 		if(playerC < CONFIG_GET(keyed_list/player_requirements)[config_tag]) // CHOMPEdit
+=======
+		if(playerC < CONFIG_GET(keyed_list/player_requirements_secret)[config_tag])
+			return 0
+	else
+		if(playerC < CONFIG_GET(keyed_list/player_requirements)[config_tag])
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 			return 0
 
 	if(!(antag_templates && antag_templates.len))
@@ -273,7 +280,11 @@ var/global/list/additional_antag_types = list()
 		for(var/datum/antagonist/antag in antag_templates)
 			if(!antag.antags_are_dead())
 				return 0
+<<<<<<< HEAD
 		if(CONFIG_GET(flag/continuous_rounds)) // CHOMPEdit
+=======
+		if(CONFIG_GET(flag/continuous_rounds))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 			emergency_shuttle.auto_recall = 0
 			return 0
 		return 1
@@ -473,7 +484,11 @@ var/global/list/additional_antag_types = list()
 
 /datum/game_mode/proc/create_antagonists()
 
+<<<<<<< HEAD
 	if(!CONFIG_GET(flag/traitor_scaling)) // CHOMPEdit
+=======
+	if(!CONFIG_GET(flag/traitor_scaling))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		antag_scaling_coeff = 0
 
 	if(antag_tags && antag_tags.len)

@@ -10,8 +10,13 @@ var/savefile/Banlist
 
 	. = list()
 	var/appeal
+<<<<<<< HEAD
 	if(config && CONFIG_GET(string/banappeals)) // CHOMPEdit
 		appeal = "\nFor more information on your ban, or to appeal, head to <a href='[CONFIG_GET(string/banappeals)]'>[CONFIG_GET(string/banappeals)]</a>" // CHOMPEdit
+=======
+	if(config && CONFIG_GET(string/banappeals))
+		appeal = "\nFor more information on your ban, or to appeal, head to <a href='[CONFIG_GET(string/banappeals)]'>[CONFIG_GET(string/banappeals)]</a>"
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 	Banlist.cd = "/base"
 	if( "[ckey][id]" in Banlist.dir )
 		Banlist.cd = "[ckey][id]"

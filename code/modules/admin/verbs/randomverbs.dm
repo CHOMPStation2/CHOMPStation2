@@ -173,7 +173,11 @@
 
 /proc/cmd_admin_mute(mob/M as mob, mute_type, automute = 0)
 	if(automute)
+<<<<<<< HEAD
 		if(!CONFIG_GET(flag/automute_on)) // CHOMPEdit
+=======
+		if(!CONFIG_GET(flag/automute_on))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 			return
 	else
 		if(!usr || !usr.client)
@@ -321,7 +325,11 @@ Ccomp's first proc.
 		return
 
 	var/action=""
+<<<<<<< HEAD
 	if(CONFIG_GET(flag/antag_hud_allowed)) // CHOMPEdit
+=======
+	if(CONFIG_GET(flag/antag_hud_allowed))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		for(var/mob/observer/dead/g in get_ghosts())
 			if(!g.client.holder)						//Remove the verb from non-admin ghosts
 				remove_verb(g, /mob/observer/dead/verb/toggle_antagHUD)
@@ -329,7 +337,11 @@ Ccomp's first proc.
 				g.antagHUD = 0						// Disable it on those that have it enabled
 				g.has_enabled_antagHUD = 2				// We'll allow them to respawn
 				to_chat(g, span_boldwarning("The Administrator has disabled AntagHUD "))
+<<<<<<< HEAD
 		CONFIG_SET(flag/antag_hud_allowed, FALSE) // CHOMPEdit
+=======
+		CONFIG_SET(flag/antag_hud_allowed, FALSE)
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		to_chat(src, span_boldwarning("AntagHUD usage has been disabled"))
 		action = "disabled"
 	else
@@ -337,7 +349,11 @@ Ccomp's first proc.
 			if(!g.client.holder)						// Add the verb back for all non-admin ghosts
 				add_verb(g, /mob/observer/dead/verb/toggle_antagHUD)
 			to_chat(g, span_boldnotice("The Administrator has enabled AntagHUD"))	// Notify all observers they can now use AntagHUD
+<<<<<<< HEAD
 		CONFIG_SET(flag/antag_hud_allowed, TRUE) // CHOMPEdit
+=======
+		CONFIG_SET(flag/antag_hud_allowed, TRUE)
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		action = "enabled"
 		to_chat(src, span_boldnotice("AntagHUD usage has been enabled"))
 
@@ -356,11 +372,19 @@ Ccomp's first proc.
 		return
 
 	var/action=""
+<<<<<<< HEAD
 	if(CONFIG_GET(flag/antag_hud_restricted)) // CHOMPEdit
 		for(var/mob/observer/dead/g in get_ghosts())
 			to_chat(g, span_boldnotice("The administrator has lifted restrictions on joining the round if you use AntagHUD"))
 		action = "lifted restrictions"
 		CONFIG_SET(flag/antag_hud_restricted, FALSE) // CHOMPEdit
+=======
+	if(CONFIG_GET(flag/antag_hud_restricted))
+		for(var/mob/observer/dead/g in get_ghosts())
+			to_chat(g, span_boldnotice("The administrator has lifted restrictions on joining the round if you use AntagHUD"))
+		action = "lifted restrictions"
+		CONFIG_SET(flag/antag_hud_restricted, FALSE)
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		to_chat(src, span_boldnotice("AntagHUD restrictions have been lifted"))
 	else
 		for(var/mob/observer/dead/g in get_ghosts())
@@ -369,7 +393,11 @@ Ccomp's first proc.
 			g.antagHUD = 0
 			g.has_enabled_antagHUD = 0
 		action = "placed restrictions"
+<<<<<<< HEAD
 		CONFIG_SET(flag/antag_hud_restricted, TRUE) // CHOMPEdit
+=======
+		CONFIG_SET(flag/antag_hud_restricted, TRUE)
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		to_chat(src, span_boldwarning("AntagHUD restrictions have been enabled"))
 
 	log_admin("[key_name(usr)] has [action] on joining the round if they use AntagHUD")
@@ -634,7 +662,11 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	if(!istype(M))
 		tgui_alert_async(usr, "Cannot revive a ghost")
 		return
+<<<<<<< HEAD
 	if(CONFIG_GET(flag/allow_admin_rev)) // CHOMPEdit
+=======
+	if(CONFIG_GET(flag/allow_admin_rev))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		M.revive()
 
 		log_admin("[key_name(usr)] healed / revived [key_name(M)]")
@@ -1029,12 +1061,21 @@ Traitors and the like can also be revived with the previous role mostly intact.
 
 	if(!check_rights(R_SERVER))	return //VOREStation Edit
 
+<<<<<<< HEAD
 	if(!CONFIG_GET(flag/allow_random_events)) // CHOMPEdit
 		CONFIG_SET(flag/allow_random_events, TRUE) // CHOMPEdit
 		to_chat(usr, "Random events enabled")
 		message_admins("Admin [key_name_admin(usr)] has enabled random events.", 1)
 	else
 		CONFIG_SET(flag/allow_random_events, FALSE) // CHOMPEdit
+=======
+	if(!CONFIG_GET(flag/allow_random_events))
+		CONFIG_SET(flag/allow_random_events, TRUE)
+		to_chat(usr, "Random events enabled")
+		message_admins("Admin [key_name_admin(usr)] has enabled random events.", 1)
+	else
+		CONFIG_SET(flag/allow_random_events, FALSE)
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		to_chat(usr, "Random events disabled")
 		message_admins("Admin [key_name_admin(usr)] has disabled random events.", 1)
 	feedback_add_details("admin_verb","TRE") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!

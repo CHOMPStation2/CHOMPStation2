@@ -277,7 +277,11 @@ var/list/sacrificed = list()
 					H.sdisabilities &= ~BLIND
 			for(var/obj/item/organ/E in H.bad_external_organs)
 				var/obj/item/organ/external/affected = E
+<<<<<<< HEAD
 				if((affected.damage < affected.min_broken_damage * CONFIG_GET(number/organ_health_multiplier)) && (affected.status & ORGAN_BROKEN)) // CHOMPEdit
+=======
+				if((affected.damage < affected.min_broken_damage * CONFIG_GET(number/organ_health_multiplier)) && (affected.status & ORGAN_BROKEN))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 					affected.status &= ~ORGAN_BROKEN
 				for(var/datum/wound/W in affected.wounds)
 					if(istype(W, /datum/wound/internal_bleeding))

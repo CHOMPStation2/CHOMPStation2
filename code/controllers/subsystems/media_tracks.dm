@@ -19,7 +19,11 @@ SUBSYSTEM_DEF(media_tracks)
 	return SS_INIT_SUCCESS // CHOMPEdit
 
 /datum/controller/subsystem/media_tracks/proc/load_tracks()
+<<<<<<< HEAD
 	for(var/filename in CONFIG_GET(str_list/jukebox_track_files)) // CHOMPEdit
+=======
+	for(var/filename in CONFIG_GET(str_list/jukebox_track_files))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		report_progress("Loading jukebox track: [filename]")
 
 		if(!fexists(filename))

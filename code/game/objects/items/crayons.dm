@@ -111,7 +111,11 @@
 			to_chat(user, "You finish drawing.")
 
 			var/msg = "[user.client.key] ([user]) has drawn [drawtype] (with [src]) at [target.x],[target.y],[target.z]."
+<<<<<<< HEAD
 			if(CONFIG_GET(flag/log_graffiti)) // CHOMPEdit
+=======
+			if(CONFIG_GET(flag/log_graffiti))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 				message_admins(msg)
 			log_game(msg) //We will log it anyways.
 

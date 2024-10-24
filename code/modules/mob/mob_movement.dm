@@ -24,9 +24,15 @@
 		if("run")
 			if(drowsyness > 0)
 				. += 6
+<<<<<<< HEAD
 			. += CONFIG_GET(number/run_speed) // CHOMPEdit
 		if("walk")
 			. += CONFIG_GET(number/walk_speed) // CHOMPEdit
+=======
+			. += CONFIG_GET(number/run_speed)
+		if("walk")
+			. += CONFIG_GET(number/walk_speed)
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 
 /client/proc/client_dir(input, direction=-1)
 	return turn(input, direction*dir2angle(dir))

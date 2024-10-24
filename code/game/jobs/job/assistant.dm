@@ -24,7 +24,11 @@
 	)	*/	//VOREStation Removal: no alt-titles for visitors
 
 /datum/job/assistant/get_access()
+<<<<<<< HEAD
 	if(CONFIG_GET(flag/assistant_maint)) // CHOMPEdit
+=======
+	if(CONFIG_GET(flag/assistant_maint))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		return list(access_maint_tunnels)
 	else
 		return list()

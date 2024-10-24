@@ -57,14 +57,22 @@
 
 	icon_state = "drone_fab_active"
 	var/elapsed = world.time - time_last_drone
+<<<<<<< HEAD
 	drone_progress = round((elapsed / CONFIG_GET(number/drone_build_time)) * 100) // CHOMPEdit
+=======
+	drone_progress = round((elapsed / CONFIG_GET(number/drone_build_time)) * 100)
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 
 	if(drone_progress >= 100)
 		visible_message("\The [src] voices a strident beep, indicating a drone chassis is prepared.")
 
 /obj/machinery/drone_fabricator/examine(mob/user)
 	. = ..()
+<<<<<<< HEAD
 	if(produce_drones && drone_progress >= 100 && istype(user,/mob/observer/dead) && CONFIG_GET(flag/allow_drone_spawn) && count_drones() < CONFIG_GET(number/max_maint_drones)) // CHOMPEdit
+=======
+	if(produce_drones && drone_progress >= 100 && istype(user,/mob/observer/dead) && CONFIG_GET(flag/allow_drone_spawn) && count_drones() < CONFIG_GET(number/max_maint_drones))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		. += "<br><B>A drone is prepared. Select 'Join As Drone' from the Ghost tab to spawn as a maintenance drone.</B>"
 
 /obj/machinery/drone_fabricator/proc/create_drone(var/client/player)
@@ -72,7 +80,11 @@
 	if(stat & NOPOWER)
 		return
 
+<<<<<<< HEAD
 	if(!produce_drones || !CONFIG_GET(flag/allow_drone_spawn) || count_drones() >= CONFIG_GET(number/max_maint_drones)) // CHOMPEdit
+=======
+	if(!produce_drones || !CONFIG_GET(flag/allow_drone_spawn) || count_drones() >= CONFIG_GET(number/max_maint_drones))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		return
 
 	if(player && !istype(player.mob,/mob/observer/dead))
@@ -102,7 +114,11 @@
 		to_chat(src, span_danger("The game hasn't started yet!"))
 		return
 
+<<<<<<< HEAD
 	if(!CONFIG_GET(flag/allow_drone_spawn)) // CHOMPEdit
+=======
+	if(!CONFIG_GET(flag/allow_drone_spawn))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		to_chat(src, span_danger("That verb is not currently permitted."))
 		return
 
@@ -117,7 +133,11 @@
 		return
 
 	// VOREStation Addition Start
+<<<<<<< HEAD
 	if(CONFIG_GET(flag/use_age_restriction_for_jobs) && isnum(src.client.player_age)) // CHOMPEdit
+=======
+	if(CONFIG_GET(flag/use_age_restriction_for_jobs) && isnum(src.client.player_age))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		var/time_till_play = max(0, 3 - src.client.player_age)
 		if(time_till_play)
 			to_chat(usr, span_danger("You have not been playing on the server long enough to join as drone."))

@@ -27,7 +27,11 @@
 	if(!length(message))
 		return FALSE
 
+<<<<<<< HEAD
 	if(CONFIG_GET(flag/disable_webhook_embeds)) // CHOMPEdit
+=======
+	if(CONFIG_GET(flag/disable_webhook_embeds))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		var/list/embed_content
 		for(var/list/embed in message["embeds"])
 			if(embed["title"])

@@ -1365,13 +1365,21 @@
 /mob/living/silicon/robot/proc/add_robot_verbs()
 	add_verb(src, robot_verbs_default)
 	add_verb(src, silicon_subsystems)
+<<<<<<< HEAD
 	if(CONFIG_GET(flag/allow_robot_recolor)) // CHOMPEdit
+=======
+	if(CONFIG_GET(flag/allow_robot_recolor))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		add_verb(src, /mob/living/silicon/robot/proc/ColorMate)
 
 /mob/living/silicon/robot/proc/remove_robot_verbs()
 	remove_verb(src, robot_verbs_default)
 	remove_verb(src, silicon_subsystems)
+<<<<<<< HEAD
 	if(CONFIG_GET(flag/allow_robot_recolor)) // CHOMPEdit
+=======
+	if(CONFIG_GET(flag/allow_robot_recolor))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		remove_verb(src, /mob/living/silicon/robot/proc/ColorMate)
 
 // Uses power from cyborg's cell. Returns 1 on success or 0 on failure.

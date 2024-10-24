@@ -32,4 +32,8 @@ SQLITE_FEEDBACK_COOLDOWN 0
 ## This is very unreliable due to how the age system works in general, but it might still be helpful.
 ## Set this to how many days you want someone to have to wait when they first join.
 ## Setting to zero will disable this restriction.
+<<<<<<< HEAD
 SQLITE_FEEDBACK_MIN_AGE 7
+=======
+SQLITE_FEEDBACK_MIN_AGE 7
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))

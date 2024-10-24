@@ -18,12 +18,20 @@
 /datum/radiation_source/proc/update_rad_power(var/new_power = null)
 	if(new_power == null || new_power == rad_power)
 		return // No change
+<<<<<<< HEAD
 	else if(new_power <= CONFIG_GET(number/radiation_lower_limit)) // CHOMPEdit
+=======
+	else if(new_power <= CONFIG_GET(number/radiation_lower_limit))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		qdel(src) // Decayed to nothing
 	else
 		rad_power = new_power
 		if(!flat)
+<<<<<<< HEAD
 			range = min(round(sqrt(rad_power / CONFIG_GET(number/radiation_lower_limit))), 31)  // R = rad_power / dist**2 - Solve for dist // CHOMPEdit
+=======
+			range = min(round(sqrt(rad_power / CONFIG_GET(number/radiation_lower_limit))), 31)  // R = rad_power / dist**2 - Solve for dist
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 	return
 
 /turf
@@ -38,7 +46,11 @@
 		else if(O.density) //So open doors don't get counted
 			var/datum/material/M = O.get_material()
 			if(!M)	continue
+<<<<<<< HEAD
 			cached_rad_resistance += (M.weight + M.radiation_resistance) / CONFIG_GET(number/radiation_material_resistance_divisor) // CHOMPEdit
+=======
+			cached_rad_resistance += (M.weight + M.radiation_resistance) / CONFIG_GET(number/radiation_material_resistance_divisor)
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 	// Looks like storing the contents length is meant to be a basic check if the cache is stale due to items enter/exiting.  Better than nothing so I'm leaving it as is. ~Leshana
 	SSradiation.resistance_cache[src] = (length(contents) + 1)
 	return
@@ -49,7 +61,11 @@
 	temp_rad_resistance += material.weight + material.radiation_resistance
 	if(reinf_material)
 		temp_rad_resistance += reinf_material.weight + reinf_material.radiation_resistance
+<<<<<<< HEAD
 	cached_rad_resistance = (density ? (temp_rad_resistance) / CONFIG_GET(number/radiation_material_resistance_divisor) : 0) // CHOMPEdit
+=======
+	cached_rad_resistance = (density ? (temp_rad_resistance) / CONFIG_GET(number/radiation_material_resistance_divisor) : 0)
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 	return
 
 /turf/simulated/mineral/calc_rad_resistance()

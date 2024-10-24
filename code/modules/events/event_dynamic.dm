@@ -24,7 +24,11 @@ var/list/event_last_fired = list()
 
 //Always triggers an event when called, dynamically chooses events based on job population
 /proc/spawn_dynamic_event()
+<<<<<<< HEAD
 	if(!CONFIG_GET(flag/allow_random_events)) // CHOMPEdit
+=======
+	if(!CONFIG_GET(flag/allow_random_events))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		return
 
 	var/minutes_passed = world.time/600

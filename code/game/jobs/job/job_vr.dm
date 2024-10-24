@@ -30,7 +30,11 @@
 	return (available_in_playhours(C) == 0)
 
 /datum/job/proc/available_in_playhours(client/C)
+<<<<<<< HEAD
 	if(C && CONFIG_GET(flag/use_playtime_restriction_for_jobs) && dept_time_required) // CHOMPEdit
+=======
+	if(C && CONFIG_GET(flag/use_playtime_restriction_for_jobs) && dept_time_required)
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		if(isnum(C.play_hours[pto_type])) // Has played that department before
 			return max(0, dept_time_required - C.play_hours[pto_type])
 		else // List doesn't have that entry, maybe never played, maybe invalid PTO type (you should fix that...)
@@ -41,7 +45,11 @@
 
 // Captain gets every department combined
 /datum/job/captain/available_in_playhours(client/C)
+<<<<<<< HEAD
 	if(C && CONFIG_GET(flag/use_playtime_restriction_for_jobs) && dept_time_required) // CHOMPEdit
+=======
+	if(C && CONFIG_GET(flag/use_playtime_restriction_for_jobs) && dept_time_required)
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		var/remaining_time_needed = dept_time_required
 		for(var/key in C.play_hours)
 			if(isnum(C.play_hours[key]) && !(key == PTO_TALON))
@@ -51,7 +59,11 @@
 
 // HoP gets civilian, cargo, and exploration combined
 /datum/job/hop/available_in_playhours(client/C)
+<<<<<<< HEAD
 	if(C && CONFIG_GET(flag/use_playtime_restriction_for_jobs) && dept_time_required) // CHOMPEdit
+=======
+	if(C && CONFIG_GET(flag/use_playtime_restriction_for_jobs) && dept_time_required)
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		var/remaining_time_needed = dept_time_required
 		if(isnum(C.play_hours[PTO_CIVILIAN]))
 			remaining_time_needed = max(0, remaining_time_needed - C.play_hours[PTO_CIVILIAN])

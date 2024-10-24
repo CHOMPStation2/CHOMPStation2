@@ -52,11 +52,19 @@
 			ToRban_update()
 		if("toggle")
 			if(config)
+<<<<<<< HEAD
 				if(CONFIG_GET(flag/ToRban)) // CHOMPEdit
 					CONFIG_SET(flag/ToRban, FALSE) // CHOMPEdit
 					message_admins(span_red("ToR banning disabled."))
 				else
 					CONFIG_SET(flag/ToRban, TRUE) // CHOMPEdit
+=======
+				if(CONFIG_GET(flag/ToRban))
+					CONFIG_SET(flag/ToRban, FALSE)
+					message_admins(span_red("ToR banning disabled."))
+				else
+					CONFIG_SET(flag/ToRban, TRUE)
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 					message_admins(span_green("ToR banning enabled."))
 		if("show")
 			var/savefile/F = new(TORFILE)

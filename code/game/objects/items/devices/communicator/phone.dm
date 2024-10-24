@@ -290,7 +290,11 @@
 	if(confirm != "Yes")
 		return
 
+<<<<<<< HEAD
 	if(CONFIG_GET(flag/antag_hud_restricted) && has_enabled_antagHUD == 1) // CHOMPEdit
+=======
+	if(CONFIG_GET(flag/antag_hud_restricted) && has_enabled_antagHUD == 1)
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		to_chat(src, span_danger("You have used the antagHUD and cannot respawn or use communicators!"))
 		return
 

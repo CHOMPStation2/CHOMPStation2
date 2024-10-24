@@ -5,6 +5,7 @@
 	due_date = 0 // Game time in 1/10th seconds
 	unique = 1   // 0 - Normal book, 1 - Should not be treated as normal book, unable to be copied, unable to be modified
 
+<<<<<<< HEAD
 /* CHOMPEdit Start
 /obj/item/book/manual/engineering_construction
 	name = "Station Repairs and Construction"
@@ -29,6 +30,8 @@
 		"}
 */ // CHOMPEdit End
 
+=======
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 /obj/item/book/manual/engineering_particle_accelerator
 	name = "Particle Accelerator User's Guide"
 	icon_state ="bookParticleAccelerator"
@@ -320,6 +323,7 @@
 				</body>
 			</html>"}			// CHOMPedit END : Updating the R-UST manual
 
+<<<<<<< HEAD
 /* CHOMPEdit Start
 /obj/item/book/manual/engineering_hacking
 	name = "Hacking"
@@ -344,6 +348,8 @@
 		"}
 */ // CHOMPEdit End
 
+=======
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 /obj/item/book/manual/engineering_singularity_safety
 	name = "Singularity Safety in Special Circumstances"
 	icon_state ="bookEngineeringSingularitySafety"
@@ -677,6 +683,7 @@
 			</html>
 			"}
 
+<<<<<<< HEAD
 /* CHOMPEdit Start
 /obj/item/book/manual/robotics_manual
 	name = "Guide to Robotics"
@@ -697,6 +704,8 @@
 		"}
 */ // CHOMPEdit End
 
+=======
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 /obj/item/book/manual/robotics_cyborgs
 	name = JOB_CYBORG + "s for Dummies"
 	icon_state = "borgbook"
@@ -902,6 +911,7 @@
 			</html>
 		"}
 
+<<<<<<< HEAD
 
 /* CHOMPEdit Start
 /obj/item/book/manual/security_space_law
@@ -1000,6 +1010,8 @@
 		"}
 */ // CHOMPEdit End
 
+=======
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 /obj/item/book/manual/chef_recipes
 	name = JOB_CHEF + " Recipes"
 	icon_state = "cooked_book"

@@ -119,7 +119,11 @@ var/list/sounds_cache = list()
 /proc/web_sound(mob/user, input, credit)
 	if(!check_rights(R_SOUNDS))
 		return
+<<<<<<< HEAD
 	var/ytdl = CONFIG_GET(string/invoke_youtubedl) // CHOMPEdit
+=======
+	var/ytdl = CONFIG_GET(string/invoke_youtubedl)
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 	if(!ytdl)
 		to_chat(user, span_boldwarning("Youtube-dl was not configured, action unavailable"), confidential = TRUE) //Check config.txt for the INVOKE_YOUTUBEDL value
 		return
@@ -220,7 +224,11 @@ var/list/sounds_cache = list()
 	if(!check_rights(R_SOUNDS))
 		return
 
+<<<<<<< HEAD
 	var/ytdl = CONFIG_GET(string/invoke_youtubedl) // CHOMPEdit
+=======
+	var/ytdl = CONFIG_GET(string/invoke_youtubedl)
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 	if(!ytdl)
 		to_chat(src, span_boldwarning("Youtube-dl was not configured, action unavailable"), confidential = TRUE) //Check config.txt for the INVOKE_YOUTUBEDL value
 		return

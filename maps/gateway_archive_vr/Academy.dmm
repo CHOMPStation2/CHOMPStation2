@@ -2101,7 +2101,7 @@
 /area/awaymission/academy/classrooms)
 "gc" = (
 /obj/structure/bookcase,
-/obj/item/book/manual/engineering_hacking,
+/obj/item/book/manual/wiki/engineering_hacking,
 /turf/simulated/floor/wood,
 /area/awaymission/academy/classrooms)
 "gd" = (
@@ -2331,8 +2331,8 @@
 "gH" = (
 /obj/structure/bookcase,
 /obj/item/book/manual/barman_recipes,
-/obj/item/book/manual/security_space_law,
-/obj/item/book/manual/security_space_law,
+/obj/item/book/manual/wiki/security_space_law,
+/obj/item/book/manual/wiki/security_space_law,
 /turf/simulated/floor/wood,
 /area/awaymission/academy/classrooms)
 "gI" = (

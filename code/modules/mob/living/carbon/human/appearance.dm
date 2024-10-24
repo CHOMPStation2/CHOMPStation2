@@ -180,7 +180,11 @@
 	for(var/current_species_name in GLOB.all_species)
 		var/datum/species/current_species = GLOB.all_species[current_species_name]
 
+<<<<<<< HEAD
 		if(check_whitelist && CONFIG_GET(flag/usealienwhitelist) && !check_rights(R_ADMIN|R_EVENT, 0, src)) //If we're using the whitelist, make sure to check it! // CHOMPEdit
+=======
+		if(check_whitelist && CONFIG_GET(flag/usealienwhitelist) && !check_rights(R_ADMIN|R_EVENT, 0, src)) //If we're using the whitelist, make sure to check it!
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 			if(!(current_species.spawn_flags & SPECIES_CAN_JOIN))
 				continue
 			if(whitelist.len && !(current_species_name in whitelist))

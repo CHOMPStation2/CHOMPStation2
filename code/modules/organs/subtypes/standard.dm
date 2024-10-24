@@ -283,7 +283,11 @@
 	var/eyes_over_markings = FALSE //VOREStation edit
 
 /obj/item/organ/external/head/Initialize()
+<<<<<<< HEAD
 	if(CONFIG_GET(flag/allow_headgibs)) // CHOMPEdit
+=======
+	if(CONFIG_GET(flag/allow_headgibs))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		cannot_gib = FALSE
 	return ..()
 

@@ -282,7 +282,11 @@
 		dat += "You answer to <b>[job.supervisors]</b> normally."
 
 		dat += "<hr style='clear:left;'>"
+<<<<<<< HEAD
 		if(CONFIG_GET(string/wikiurl)) // CHOMPEdit
+=======
+		if(CONFIG_GET(string/wikiurl))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 			dat += "<a href='?src=\ref[src];job_wiki=[rank]'>Open wiki page in browser</a>"
 
 		var/alt_title = pref.GetPlayerAltTitle(job)
@@ -300,7 +304,11 @@
 
 	else if(href_list["job_wiki"])
 		var/rank = href_list["job_wiki"]
+<<<<<<< HEAD
 		open_link(user,"[CONFIG_GET(string/wikiurl)][rank]") // CHOMPEdit
+=======
+		open_link(user,"[CONFIG_GET(string/wikiurl)][rank]")
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 
 	return ..()
 

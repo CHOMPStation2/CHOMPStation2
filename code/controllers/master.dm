@@ -205,7 +205,11 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 
 	var/start_timeofday = REALTIMEOFDAY
 	// Initialize subsystems.
+<<<<<<< HEAD
 	current_ticklimit = CONFIG_GET(number/tick_limit_mc_init) // CHOMPEdit
+=======
+	current_ticklimit = CONFIG_GET(number/tick_limit_mc_init)
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 	for (var/datum/controller/subsystem/SS in subsystems)
 		if (SS.flags & SS_NO_INIT)
 			continue
@@ -226,7 +230,11 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 	if (!current_runlevel)
 		SetRunLevel(RUNLEVEL_LOBBY)
 
+<<<<<<< HEAD
 	// GLOB.revdata = new // It can load revdata now, from tgs or .git or whatever // CHOMPEDIT
+=======
+	// GLOB.revdata = new // It can load revdata now, from tgs or .git or whatever
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 
 	// Sort subsystems by display setting for easy access.
 	sortTim(subsystems, GLOBAL_PROC_REF(cmp_subsystem_display))
@@ -236,7 +244,11 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 	#else
 	world.sleep_offline = 1
 	#endif
+<<<<<<< HEAD
 	world.change_fps(CONFIG_GET(number/fps)) // CHOMPEdit
+=======
+	world.change_fps(CONFIG_GET(number/fps))
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 	var/initialized_tod = REALTIMEOFDAY
 	sleep(1)
 	initializations_finished_with_no_players_logged_in = initialized_tod < REALTIMEOFDAY - 10
@@ -725,9 +737,15 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 	for(var/datum/controller/subsystem/SS as anything in subsystems)
 		SS.StopLoadingMap()
 
+<<<<<<< HEAD
 // CHOMPEdit Begin
+=======
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 /datum/controller/master/proc/OnConfigLoad()
 	for (var/thing in subsystems)
 		var/datum/controller/subsystem/SS = thing
 		SS.OnConfigLoad()
+<<<<<<< HEAD
 // CHOMPEdit End
+=======
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))

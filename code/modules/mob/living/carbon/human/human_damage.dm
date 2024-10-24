@@ -43,7 +43,11 @@
 	// CHOMPEdit End: Pain
 
 	//TODO: fix husking
+<<<<<<< HEAD
 	if( ((getMaxHealth() - total_burn) < CONFIG_GET(number/health_threshold_dead) * huskmodifier) && stat == DEAD) // CHOMPEdit
+=======
+	if( ((getMaxHealth() - total_burn) < CONFIG_GET(number/health_threshold_dead) * huskmodifier) && stat == DEAD)
+>>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		ChangeToHusk()
 	return
 
