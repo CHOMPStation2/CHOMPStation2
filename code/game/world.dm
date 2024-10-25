@@ -699,6 +699,7 @@ var/failed_old_db_connections = 0
 /proc/establish_db_connection() //CHOMPEdit TGSQL
 	return SSdbcore.Connect()
 
+/* CHOMPedit
 // Cleans up DB connections and recreates them
 /proc/reset_database_connections()
 	var/list/results = list("-- Resetting DB connections --")

@@ -66,9 +66,12 @@
 #define rustg_file_seek_line(fname, line) RUSTG_CALL(RUST_G, "file_seek_line")(fname, "[line]")
 
 #ifdef RUSTG_OVERRIDE_BUILTINS
-	#define file2text(fname) rustg_file_read("[fname]")
-	#define text2file(text, fname) rustg_file_append(text, "[fname]")
+#define file2text(fname) rustg_file_read("[fname]")
+#define text2file(text, fname) rustg_file_append(text, "[fname]")
 #endif
+
+/// Returns the git hash of the given revision, ex. "HEAD".
+#define rustg_git_revparse(rev) RUSTG_CALL(RUST_G, "rg_git_revparse")(rev)
 
 /**
  * Returns the date of the given revision in the format YYYY-MM-DD.
@@ -76,6 +79,17 @@
  */
 #define rustg_git_commit_date(rev) RUSTG_CALL(RUST_G, "rg_git_commit_date")(rev)
 
+#define rustg_hash_string(algorithm, text) LIBCALL(RUST_G, "hash_string")(algorithm, text)
+#define rustg_hash_file(algorithm, fname) LIBCALL(RUST_G, "hash_file")(algorithm, fname)
+
+#define RUSTG_HASH_MD5 "md5"
+#define RUSTG_HASH_SHA1 "sha1"
+#define RUSTG_HASH_SHA256 "sha256"
+#define RUSTG_HASH_SHA512 "sha512"
+
+#ifdef RUSTG_OVERRIDE_BUILTINS
+#define md5(thing) (isfile(thing) ? rustg_hash_file(RUSTG_HASH_MD5, "[thing]") : rustg_hash_string(RUSTG_HASH_MD5, thing))
+#endif
 
 /**
  * Sets up the Aho-Corasick automaton with its default options.
@@ -135,8 +149,6 @@
 #define rustg_cnoise_generate(percentage, smoothing_iterations, birth_limit, death_limit, width, height) \
 	RUSTG_CALL(RUST_G, "cnoise_generate")(percentage, smoothing_iterations, birth_limit, death_limit, width, height)
 
-/// Returns the git hash of the given revision, ex. "HEAD".
-#define rustg_git_revparse(rev) RUSTG_CALL(RUST_G, "rg_git_revparse")(rev)
 
 #define RUSTG_HTTP_METHOD_GET "get"
 #define RUSTG_HTTP_METHOD_PUT "put"
@@ -154,8 +166,8 @@
 
 #define rustg_json_is_valid(text) (RUSTG_CALL(RUST_G, "json_is_valid")(text) == "true")
 
-#define rustg_log_write(fname, text, format) LIBCALL(RUST_G, "log_write")(fname, text, format)
-/proc/rustg_log_close_all() return LIBCALL(RUST_G, "log_close_all")()
+#define rustg_log_write(fname, text, format) RUSTG_CALL(RUST_G, "log_write")(fname, text, format)
+/proc/rustg_log_close_all() return RUSTG_CALL(RUST_G, "log_close_all")()
 
 #define rustg_noise_get_at_coordinates(seed, x, y) RUSTG_CALL(RUST_G, "noise_get_at_coordinates")(seed, x, y)
 
@@ -169,12 +181,12 @@
  */
 #define rustg_sanitize_html(text, attribute_whitelist_json, tag_whitelist_json) RUSTG_CALL(RUST_G, "sanitize_html")(text, attribute_whitelist_json, tag_whitelist_json)
 
-#define rustg_sql_connect_pool(options) LIBCALL(RUST_G, "sql_connect_pool")(options)
-#define rustg_sql_query_async(handle, query, params) LIBCALL(RUST_G, "sql_query_async")(handle, query, params)
-#define rustg_sql_query_blocking(handle, query, params) LIBCALL(RUST_G, "sql_query_blocking")(handle, query, params)
-#define rustg_sql_connected(handle) LIBCALL(RUST_G, "sql_connected")(handle)
-#define rustg_sql_disconnect_pool(handle) LIBCALL(RUST_G, "sql_disconnect_pool")(handle)
-#define rustg_sql_check_query(job_id) LIBCALL(RUST_G, "sql_check_query")("[job_id]")
+#define rustg_sql_connect_pool(options) RUSTG_CALL(RUST_G, "sql_connect_pool")(options)
+#define rustg_sql_query_async(handle, query, params) RUSTG_CALL(RUST_G, "sql_query_async")(handle, query, params)
+#define rustg_sql_query_blocking(handle, query, params) RUSTG_CALL(RUST_G, "sql_query_blocking")(handle, query, params)
+#define rustg_sql_connected(handle) RUSTG_CALL(RUST_G, "sql_connected")(handle)
+#define rustg_sql_disconnect_pool(handle) RUSTG_CALL(RUST_G, "sql_disconnect_pool")(handle)
+#define rustg_sql_check_query(job_id) RUSTG_CALL(RUST_G, "sql_check_query")("[job_id]")
 
 #define rustg_time_microseconds(id) text2num(RUSTG_CALL(RUST_G, "time_microseconds")(id))
 #define rustg_time_milliseconds(id) text2num(RUSTG_CALL(RUST_G, "time_milliseconds")(id))
