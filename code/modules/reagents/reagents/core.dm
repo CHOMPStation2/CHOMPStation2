@@ -114,19 +114,39 @@
 		var/list/mix2 = newdata["viruses"]
 
 		var/list/to_mix = list()
+		var/list/preserve = list()
 
 		for(var/datum/disease/advance/AD in mix1)
 			to_mix += AD
 		for(var/datum/disease/advance/AD in mix2)
 			to_mix += AD
 
-		var/datum/disease/advance/AD = Advance_Mix(to_mix)
-		if(AD)
-			var/list/preserve = list(AD)
-			for(var/D in data["viruses"])
-				if(!istype(D, /datum/disease/advance))
-					preserve += D
-			data["viruses"] = preserve
+		var/datum/disease/advance/mixed_AD = Advance_Mix(to_mix)
+
+		if(mixed_AD)
+			preserve += mixed_AD
+
+		for(var/datum/disease/D1 in mix1)
+			if(!istype(D1, /datum/disease/advance))
+				var/keep = TRUE
+				for(var/datum/disease/D2 in preserve)
+					if(D1.IsSame(D2))
+						keep = FALSE
+						break
+				if(keep)
+					preserve += D1
+
+		for(var/datum/disease/D1 in mix2)
+			if(!istype(D1, /datum/disease/advance))
+				var/keep = TRUE
+				for(var/datum/disease/D2 in preserve)
+					if(D1.IsSame(D2))
+						keep = FALSE
+						break
+				if(keep)
+					preserve += D1
+
+		data["viruses"] = preserve
 
 	// CHOMPEdit End
 

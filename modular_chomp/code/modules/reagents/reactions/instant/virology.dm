@@ -13,14 +13,14 @@
 	result_amount = 1
 
 /decl/chemical_reaction/instant/virus_food_phoron
-	name = "virus phoron"
+	name = "phoronic virus food"
 	id = "phoronvirusfood"
 	result = "phoronvirusfood"
 	required_reagents = list("phoron" = 1, "virusfood" = 1)
 	result_amount = 1
 
 /decl/chemical_reaction/instant/virus_food_phoron_adranol
-	name = "weakened virus phoron"
+	name = "weakened phoronic virus food"
 	id = "weakphoronvirusfood"
 	result = "weakphoronvirusfood"
 	required_reagents = list("adranol" = 1, "phoronvirusfood" = 1)

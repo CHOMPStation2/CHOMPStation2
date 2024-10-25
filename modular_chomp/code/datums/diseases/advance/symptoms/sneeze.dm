@@ -36,4 +36,11 @@ Bonus
 			else
 				M.emote("sneeze")
 				A.spread(5)
+				/*
+				if(prob(30))
+					var/obj/effect/decal/cleanable/mucus/M = new(get_turf(M))
+					for(var/datum/disease/D in M.viruses)
+						M.viruses |= D.Copy()
+				*/
+
 	return

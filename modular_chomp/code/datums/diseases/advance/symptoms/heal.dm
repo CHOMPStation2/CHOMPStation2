@@ -131,7 +131,7 @@ Bonus
 	Very high level.
 
 Bonus
-	Heals brain damage, treats radiation, cleans SE of non-power mutations.
+	Heals brain damage, treats radiation.
 
 //////////////////////////////////////
 */
