@@ -83,7 +83,7 @@
 	set desc = "Lay an egg that will eventually hatch into a new xenomorph larva. Life finds a way."
 	set category = "Abilities.Alien" //CHOMPEdit
 
-	if(!CONFIG_GET(flag/aliens_allowed)) // CHOMPEdit
+	if(!CONFIG_GET(flag/aliens_allowed))
 		to_chat(src, "You begin to lay an egg, but hesitate. You suspect it isn't allowed.")
 		remove_verb(src, /mob/living/carbon/human/proc/lay_egg)
 		return

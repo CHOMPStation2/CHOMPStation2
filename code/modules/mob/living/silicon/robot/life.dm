@@ -82,7 +82,7 @@
 	//if(src.resting) // VOREStation edit. Our borgos would rather not.
 	//	Weaken(5)
 
-	if(health < CONFIG_GET(number/health_threshold_dead) && src.stat != 2) //die only once // CHOMPEdit
+	if(health < CONFIG_GET(number/health_threshold_dead) && src.stat != 2) //die only once
 		death()
 
 	if (src.stat != 2) //Alive.
@@ -246,7 +246,7 @@
 					src.healths.icon_state = "health3"
 				else if(health >= 0)
 					src.healths.icon_state = "health4"
-				else if(health >= CONFIG_GET(number.health_threshold_dead)) // CHOMPEdit
+				else if(health >= CONFIG_GET(number/health_threshold_dead))
 					src.healths.icon_state = "health5"
 				else
 					src.healths.icon_state = "health6"

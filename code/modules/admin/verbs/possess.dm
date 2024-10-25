@@ -3,7 +3,7 @@
 	set category = "Object"
 
 	if(istype(O,/obj/singularity))
-		if(CONFIG_GET(flag/forbid_singulo_possession)) // CHOMPEdit
+		if(CONFIG_GET(flag/forbid_singulo_possession))
 			to_chat(usr, "It is forbidden to possess singularities.")
 			return
 

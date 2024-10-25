@@ -324,13 +324,13 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	set name = "Toggle AntagHUD"
 	set desc = "Toggles AntagHUD allowing you to see who is the antagonist"
 
-	if(!CONFIG_GET(flag/antag_hud_allowed) && !client.holder) // CHOMPEdit
+	if(!CONFIG_GET(flag/antag_hud_allowed) && !client.holder)
 		to_chat(src, span_filter_notice(span_red("Admins have disabled this for this round.")))
 		return
 	if(jobban_isbanned(src, JOB_ANTAGHUD))
 		to_chat(src, span_filter_notice(span_red(span_bold("You have been banned from using this feature"))))
 		return
-	if(CONFIG_GET(flag/antag_hud_restricted) && !has_enabled_antagHUD && !client.holder) // CHOMPEdit
+	if(CONFIG_GET(flag/antag_hud_restricted) && !has_enabled_antagHUD && !client.holder)
 		var/response = tgui_alert(src, "If you turn this on, you will not be able to take any part in the round.","Are you sure you want to turn this feature on?",list("Yes","No"))
 		if(response != "Yes") return
 		can_reenter_corpse = FALSE
@@ -661,7 +661,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	set name = "Become mouse"
 	set category = "Ghost.Join" //CHOMPEdit
 
-	if(CONFIG_GET(flag/disable_player_mice)) // CHOMPEdit
+	if(CONFIG_GET(flag/disable_player_mice))
 		to_chat(src, span_warning("Spawning as a mouse is currently disabled."))
 		return
 
@@ -704,7 +704,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		to_chat(src, span_warning("Unable to find any unwelded vents to spawn mice at."))
 
 	if(host)
-		if(CONFIG_GET(flag/uneducated_mice)) // CHOMPEdit
+		if(CONFIG_GET(flag/uneducated_mice))
 			host.universal_understand = 0
 		announce_ghost_joinleave(src, 0, "They are now a mouse.")
 		host.ckey = src.ckey
@@ -734,7 +734,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	set name = "Write in blood"
 	set desc = "If the round is sufficiently spooky, write a short message in blood on the floor or a wall. Remember, no IC in OOC or OOC in IC."
 
-	if(!CONFIG_GET(flag/cult_ghostwriter)) // CHOMPEdit
+	if(!CONFIG_GET(flag/cult_ghostwriter))
 		to_chat(src, span_filter_notice(span_red("That verb is not currently permitted.")))
 		return
 
@@ -746,7 +746,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 	var/ghosts_can_write
 	if(ticker.mode.name == "cult")
-		if(cult.current_antagonists.len > CONFIG_GET(number/cult_ghostwriter_req_cultists)) // CHOMPEdit
+		if(cult.current_antagonists.len > CONFIG_GET(number/cult_ghostwriter_req_cultists))
 			ghosts_can_write = 1
 
 	if(!ghosts_can_write && !check_rights(R_ADMIN|R_EVENT|R_FUN, 0)) //Let's allow for admins to write in blood for events and the such.
@@ -926,7 +926,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		if(feedback)
 			to_chat(src, span_warning("Your non-dead body prevent you from respawning."))
 		return 0
-	if(CONFIG_GET(flag/antag_hud_restricted) && has_enabled_antagHUD == 1) // CHOMPEdit
+	if(CONFIG_GET(flag/antag_hud_restricted) && has_enabled_antagHUD == 1)
 		if(feedback)
 			to_chat(src, span_warning("antagHUD restrictions prevent you from respawning."))
 		return 0

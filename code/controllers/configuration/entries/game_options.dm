@@ -12,12 +12,10 @@
 /datum/config_entry/flag/limbs_can_break
 
 /datum/config_entry/number/organ_health_multiplier
-	integer = FALSE
-	default = 1.0
+	default = 1
 
 /datum/config_entry/number/organ_regeneration_multiplier
-	integer = FALSE
-	default = 1.0
+	default = 1
 
 // FIXME: Unused
 ///datum/config_entry/flag/revival_pod_plants
