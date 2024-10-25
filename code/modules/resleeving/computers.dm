@@ -338,11 +338,7 @@
 							return
 
 						//Disabled in config.
-<<<<<<< HEAD
-						else if(!CONFIG_GET(flag/revival_cloning)) // CHOMPEdit
-=======
 						else if(!CONFIG_GET(flag/revival_cloning))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 							set_temp("Error: Unable to initiate growing cycle.", "danger")
 							active_br = null
 							return

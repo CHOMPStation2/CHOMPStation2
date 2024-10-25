@@ -11,11 +11,7 @@
 	if(!check_rights(R_ADMIN|R_MOD|R_DEBUG|R_EVENT))
 		return
 
-<<<<<<< HEAD
-	if(!CONFIG_GET(flag/allow_admin_jump)) // CHOMPEdit
-=======
 	if(!CONFIG_GET(flag/allow_admin_jump))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		tgui_alert_async(usr, "Admin jumping disabled")
 		return
 
@@ -40,11 +36,7 @@
 	set category = "Admin.Game" //CHOMPEdit
 	if(!check_rights(R_ADMIN|R_MOD|R_DEBUG|R_EVENT))
 		return
-<<<<<<< HEAD
-	if(CONFIG_GET(flag/allow_admin_jump)) // CHOMPEdit
-=======
 	if(CONFIG_GET(flag/allow_admin_jump))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		log_admin("[key_name(usr)] jumped to [T.x],[T.y],[T.z] in [T.loc]")
 		message_admins("[key_name_admin(usr)] jumped to [T.x],[T.y],[T.z] in [T.loc]", 1)
 		usr.on_mob_jump()
@@ -67,11 +59,7 @@
 
 /// Performs the jumps, also called from admin Topic() for JMP links
 /client/proc/do_jumptomob(var/mob/M)
-<<<<<<< HEAD
-	if(!CONFIG_GET(flag/allow_admin_jump)) // CHOMPEdit
-=======
 	if(!CONFIG_GET(flag/allow_admin_jump))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		tgui_alert_async(usr, "Admin jumping disabled")
 		return
 
@@ -98,11 +86,7 @@
 	if(!check_rights(R_ADMIN|R_MOD|R_DEBUG|R_EVENT))
 		return
 
-<<<<<<< HEAD
-	if (CONFIG_GET(flag/allow_admin_jump)) // CHOMPEdit
-=======
 	if (CONFIG_GET(flag/allow_admin_jump))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		if(src.mob)
 			var/mob/A = src.mob
 			A.on_mob_jump()
@@ -124,11 +108,7 @@
 	if(!check_rights(R_ADMIN|R_MOD|R_DEBUG|R_EVENT))
 		return
 
-<<<<<<< HEAD
-	if(CONFIG_GET(flag/allow_admin_jump)) // CHOMPEdit
-=======
 	if(CONFIG_GET(flag/allow_admin_jump))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		var/list/keys = list()
 		for(var/mob/M in player_list)
 			keys += M.client
@@ -152,11 +132,7 @@
 
 	if(!check_rights(R_ADMIN|R_MOD|R_DEBUG|R_EVENT))
 		return
-<<<<<<< HEAD
-	if(CONFIG_GET(flag/allow_admin_jump)) // CHOMPEdit
-=======
 	if(CONFIG_GET(flag/allow_admin_jump))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		if(!M)	//VOREStation Edit
 			M = tgui_input_list(usr, "Pick a mob:", "Get Mob", mob_list)	//VOREStation Edit
 		if(!M)
@@ -179,11 +155,7 @@
 	if(!check_rights(R_ADMIN|R_MOD|R_DEBUG|R_EVENT))
 		return
 
-<<<<<<< HEAD
-	if(CONFIG_GET(flag/allow_admin_jump)) // CHOMPEdit
-=======
 	if(CONFIG_GET(flag/allow_admin_jump))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		var/list/keys = list()
 		for(var/mob/M in player_list)
 			keys += M.client
@@ -211,11 +183,7 @@
 	if(!check_rights(R_ADMIN|R_MOD|R_DEBUG|R_EVENT))
 		return
 
-<<<<<<< HEAD
-	if(CONFIG_GET(flag/allow_admin_jump)) // CHOMPEdit
-=======
 	if(CONFIG_GET(flag/allow_admin_jump))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		var/area/A = tgui_input_list(usr, "Pick an area:", "Send Mob", return_sorted_areas())
 		if(!A)
 			return
@@ -240,11 +208,7 @@
 	if(!check_rights(R_ADMIN|R_DEBUG|R_EVENT))
 		return
 
-<<<<<<< HEAD
-	if(CONFIG_GET(flag/allow_admin_jump)) // CHOMPEdit
-=======
 	if(CONFIG_GET(flag/allow_admin_jump))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		if(isnull(tx))
 			tx = tgui_input_number(usr, "Select X coordinate", "Move Atom", null, null)
 			if(!tx) return

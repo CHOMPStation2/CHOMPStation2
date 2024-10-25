@@ -93,11 +93,7 @@
 /datum/preferences/proc/create_character_profiles()
 	var/list/profiles = list()
 
-<<<<<<< HEAD
-	for(var/index in 1 to CONFIG_GET(number/character_slots)) //CHOMPEdit
-=======
 	for(var/index in 1 to CONFIG_GET(number/character_slots))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		// TODO: It won't be updated in the savefile yet, so just read the name directly
 		// if(index == default_slot)
 		// 	profiles += read_preference(/datum/preference/name/real_name)

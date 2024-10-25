@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-//GLOBAL_DATUM(revdata, /datum/getrev) // CHOMPEdit
-
-=======
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 /datum/getrev
 	var/branch
 	var/revision
@@ -53,11 +48,7 @@
 		var/details = ": '" + html_encode(tm.title) + "' by " + html_encode(tm.author) + " at commit " + html_encode(copytext_char(cm, 1, 11))
 		if(details && findtext(details, "\[s\]") && (!usr || !usr.client.holder))
 			continue
-<<<<<<< HEAD
-		. += "<a href=\"[CONFIG_GET(string/githuburl)]/pull/[tm.number]\">#[tm.number][details]</a>" // CHOMPEdit
-=======
 		. += "<a href=\"[CONFIG_GET(string/githuburl)]/pull/[tm.number]\">#[tm.number][details]</a>"
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 
 /client/verb/showrevinfo()
 	set category = "OOC.Game" //CHOMPEdit
@@ -72,13 +63,8 @@
 
 	if(GLOB.revdata.revision)
 		msg += span_bold("Server revision:") + " B:[GLOB.revdata.branch] D:[GLOB.revdata.date]"
-<<<<<<< HEAD
-		if(CONFIG_GET(string/githuburl)) // CHOMPEdit
-			msg += span_bold("Commit:") + " <a href='[CONFIG_GET(string/githuburl)]/commit/[GLOB.revdata.revision]'>[GLOB.revdata.revision]</a>" // CHOMPEdit
-=======
 		if(CONFIG_GET(string/githuburl))
 			msg += span_bold("Commit:") + " <a href='[CONFIG_GET(string/githuburl)]/commit/[GLOB.revdata.revision]'>[GLOB.revdata.revision]</a>"
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		else
 			msg += span_bold("Commit:") + " [GLOB.revdata.revision]" // CHOMPEdit - Actually SHOW the revision
 	else

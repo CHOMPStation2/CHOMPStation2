@@ -17,8 +17,4 @@
 /datum/category_item/player_setup_item/player_global/settings/sanitize_preferences()
 	pref.lastchangelog	= sanitize_text(pref.lastchangelog, initial(pref.lastchangelog))
 	pref.lastnews		= sanitize_text(pref.lastnews, initial(pref.lastnews))
-<<<<<<< HEAD
-	pref.default_slot	= sanitize_integer(pref.default_slot, 1, CONFIG_GET(number/character_slots), initial(pref.default_slot)) // CHOMPEdit
-=======
 	pref.default_slot	= sanitize_integer(pref.default_slot, 1, CONFIG_GET(number/character_slots), initial(pref.default_slot))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))

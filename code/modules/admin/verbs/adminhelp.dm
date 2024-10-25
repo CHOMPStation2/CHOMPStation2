@@ -474,17 +474,10 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 	log_admin(msg)
 	AddInteraction("[key_name_admin(usr)] is now handling this ticket.")
 	var/query_string = "type=admintake"
-<<<<<<< HEAD
-	query_string += "&key=[url_encode(CONFIG_GET(string/chat_webhook_key))]" // CHOMPEdit
-	query_string += "&admin=[url_encode(key_name(usr))]"
-	query_string += "&user=[url_encode(key_name(initiator))]"
-	world.Export("[CONFIG_GET(string/chat_webhook_url)]?[query_string]") // CHOMPEdit
-=======
 	query_string += "&key=[url_encode(CONFIG_GET(string/chat_webhook_key))]"
 	query_string += "&admin=[url_encode(key_name(usr))]"
 	query_string += "&user=[url_encode(key_name(initiator))]"
 	world.Export("[CONFIG_GET(string/chat_webhook_url)]?[query_string]")
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 
 
 

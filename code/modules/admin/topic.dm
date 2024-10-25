@@ -178,31 +178,19 @@
 				if(null,"") return
 				if("*New Rank*")
 					new_rank = tgui_input_text(usr, "Please input a new rank", "New custom rank")
-<<<<<<< HEAD
-					if(CONFIG_GET(flag/admin_legacy_system)) // CHOMPEdit
-=======
 					if(CONFIG_GET(flag/admin_legacy_system))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 						new_rank = ckeyEx(new_rank)
 					if(!new_rank)
 						to_chat(usr, span_filter_adminlog(span_warning("Error: Topic 'editrights': Invalid rank")))
 						return
-<<<<<<< HEAD
-					if(CONFIG_GET(flag/admin_legacy_system)) // CHOMPEdit
-=======
 					if(CONFIG_GET(flag/admin_legacy_system))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 						if(admin_ranks.len)
 							if(new_rank in admin_ranks)
 								rights = admin_ranks[new_rank]		//we typed a rank which already exists, use its rights
 							else
 								admin_ranks[new_rank] = 0			//add the new rank to admin_ranks
 				else
-<<<<<<< HEAD
-					if(CONFIG_GET(flag/admin_legacy_system)) // CHOMPEdit
-=======
 					if(CONFIG_GET(flag/admin_legacy_system))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 						new_rank = ckeyEx(new_rank)
 						rights = admin_ranks[new_rank]				//we input an existing rank, use its rights
 
@@ -694,11 +682,7 @@
 			to_chat(usr, span_filter_adminlog(span_warning("You do not have the appropriate permissions to add job bans!")))
 			return
 
-<<<<<<< HEAD
-		if(check_rights(R_MOD,0) && !check_rights(R_ADMIN,0) && !CONFIG_GET(flag/mods_can_job_tempban)) // If mod and tempban disabled // CHOMPEdit
-=======
 		if(check_rights(R_MOD,0) && !check_rights(R_ADMIN,0) && !CONFIG_GET(flag/mods_can_job_tempban)) // If mod and tempban disabled
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 			to_chat(usr, span_filter_adminlog(span_warning("Mod jobbanning is disabled!")))
 			return
 
@@ -801,23 +785,14 @@
 					if(!check_rights(R_MOD,0) && !check_rights(R_BAN, 0))
 						to_chat(usr, span_filter_adminlog(span_warning("You cannot issue temporary job-bans!")))
 						return
-<<<<<<< HEAD
-					if(CONFIG_GET(flag/ban_legacy_system)) // CHOMPEdit
-=======
 					if(CONFIG_GET(flag/ban_legacy_system))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 						to_chat(usr, span_filter_adminlog(span_warning("Your server is using the legacy banning system, which does not support temporary job bans. Consider upgrading. Aborting ban.")))
 						return
 					var/mins = tgui_input_number(usr,"How long (in minutes)?","Ban time",1440)
 					if(!mins)
 						return
-<<<<<<< HEAD
-					if(check_rights(R_MOD, 0) && !check_rights(R_BAN, 0) && mins > CONFIG_GET(number/mod_job_tempban_max)) // CHOMPEdit
-						to_chat(usr, span_filter_adminlog(span_warning("Moderators can only job tempban up to [CONFIG_GET(number/mod_job_tempban_max)] minutes!"))) // CHOMPEdit
-=======
 					if(check_rights(R_MOD, 0) && !check_rights(R_BAN, 0) && mins > CONFIG_GET(number/mod_job_tempban_max))
 						to_chat(usr, span_filter_adminlog(span_warning("Moderators can only job tempban up to [CONFIG_GET(number/mod_job_tempban_max)] minutes!")))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 						return
 					var/reason = sanitize(tgui_input_text(usr,"Reason?","Please State Reason",""))
 					if(!reason)
@@ -869,11 +844,7 @@
 		//Unbanning joblist
 		//all jobs in joblist are banned already OR we didn't give a reason (implying they shouldn't be banned)
 		if(joblist.len) //at least 1 banned job exists in joblist so we have stuff to unban.
-<<<<<<< HEAD
-			if(!CONFIG_GET(flag/ban_legacy_system)) // CHOMPEdit
-=======
 			if(!CONFIG_GET(flag/ban_legacy_system))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 				to_chat(usr, span_filter_adminlog("Unfortunately, database based unbanning cannot be done through this panel"))
 				DB_ban_panel(M.ckey)
 				return
@@ -936,11 +907,7 @@
 			to_chat(usr, span_warning("You do not have the appropriate permissions to add bans!"))
 			return
 
-<<<<<<< HEAD
-		if(check_rights(R_MOD,0) && !check_rights(R_ADMIN, 0) && !CONFIG_GET(flag/mods_can_job_tempban)) // If mod and tempban disabled // CHOMPEdit
-=======
 		if(check_rights(R_MOD,0) && !check_rights(R_ADMIN, 0) && !CONFIG_GET(flag/mods_can_job_tempban)) // If mod and tempban disabled
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 			to_chat(usr, span_warning("Mod jobbanning is disabled!"))
 			return
 
@@ -956,13 +923,8 @@
 				var/mins = tgui_input_number(usr,"How long (in minutes)?","Ban time",1440)
 				if(!mins)
 					return
-<<<<<<< HEAD
-				if(check_rights(R_MOD, 0) && !check_rights(R_BAN, 0) && mins > CONFIG_GET(number/mod_tempban_max)) // CHOMPEdit
-					to_chat(usr, span_warning("Moderators can only job tempban up to [CONFIG_GET(number/mod_tempban_max)] minutes!")) // CHOMPEdit
-=======
 				if(check_rights(R_MOD, 0) && !check_rights(R_BAN, 0) && mins > CONFIG_GET(number/mod_tempban_max))
 					to_chat(usr, span_warning("Moderators can only job tempban up to [CONFIG_GET(number/mod_tempban_max)] minutes!"))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 					return
 				if(mins >= 525600) mins = 525599
 				var/reason = sanitize(tgui_input_text(usr,"Reason?","reason","Griefer"))
@@ -976,13 +938,8 @@
 				feedback_inc("ban_tmp",1)
 				DB_ban_record(BANTYPE_TEMP, M, mins, reason)
 				feedback_inc("ban_tmp_mins",mins)
-<<<<<<< HEAD
-				if(CONFIG_GET(string/banappeals)) // CHOMPEdit
-					to_chat(M, span_filter_system(span_warning("To try to resolve this matter head to [CONFIG_GET(string/banappeals)]"))) // CHOMPEdit
-=======
 				if(CONFIG_GET(string/banappeals))
 					to_chat(M, span_filter_system(span_warning("To try to resolve this matter head to [CONFIG_GET(string/banappeals)]")))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 				else
 					to_chat(M, span_filter_system(span_warning("No ban appeals URL has been set.")))
 				log_admin("[usr.client.ckey] has banned [M.ckey].\nReason: [reason]\nThis will be removed in [mins] minutes.")
@@ -1007,13 +964,8 @@
 						AddBan(M.ckey, M.computer_id, reason, usr.ckey, 0, 0)
 				to_chat(M, span_filter_system(span_critical("You have been banned by [usr.client.ckey].\nReason: [reason].")))
 				to_chat(M, span_filter_system(span_warning("This is a permanent ban.")))
-<<<<<<< HEAD
-				if(CONFIG_GET(string/banappeals)) // CHOMPEdit
-					to_chat(M, span_filter_system(span_warning("To try to resolve this matter head to [CONFIG_GET(string/banappeals)]"))) // CHOMPEdit
-=======
 				if(CONFIG_GET(string/banappeals))
 					to_chat(M, span_filter_system(span_warning("To try to resolve this matter head to [CONFIG_GET(string/banappeals)]")))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 				else
 					to_chat(M, span_filter_system(span_warning("No ban appeals URL has been set.")))
 				ban_unban_log_save("[usr.client.ckey] has permabanned [M.ckey]. - Reason: [reason] - This is a permanent ban.")
@@ -1308,11 +1260,7 @@
 			to_chat(usr, span_filter_adminlog("This can only be used on instances of type /mob/living"))
 			return
 
-<<<<<<< HEAD
-		if(CONFIG_GET(flag/allow_admin_rev)) // CHOMPEdit
-=======
 		if(CONFIG_GET(flag/allow_admin_rev))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 			L.revive()
 			message_admins(span_red("Admin [key_name_admin(usr)] healed / revived [key_name_admin(L)]!"), 1)
 			log_admin("[key_name(usr)] healed / Rrvived [key_name(L)]")
@@ -1420,15 +1368,6 @@
 					to_chat(X, take_msg)
 			to_chat(M, span_filter_pm(span_boldnotice("Your adminhelp is being attended to by [usr.client]. Thanks for your patience!")))
 			// VoreStation Edit Start
-<<<<<<< HEAD
-			if (CONFIG_GET(string/chat_webhook_url)) // CHOMPEdit
-				spawn(0)
-					var/query_string = "type=admintake"
-					query_string += "&key=[url_encode(CONFIG_GET(string/chat_webhook_key))]" // CHOMPEdit
-					query_string += "&admin=[url_encode(key_name(usr.client))]"
-					query_string += "&user=[url_encode(key_name(M))]"
-					world.Export("[CONFIG_GET(string/chat_webhook_url)]?[query_string]") // CHOMPEdit
-=======
 			if (CONFIG_GET(string/chat_webhook_url))
 				spawn(0)
 					var/query_string = "type=admintake"
@@ -1436,7 +1375,6 @@
 					query_string += "&admin=[url_encode(key_name(usr.client))]"
 					query_string += "&user=[url_encode(key_name(M))]"
 					world.Export("[CONFIG_GET(string/chat_webhook_url)]?[query_string]")
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 			// VoreStation Edit End
 		else
 			to_chat(usr, span_warning("Unable to locate mob."))
@@ -1649,11 +1587,7 @@
 	else if(href_list["jumpto"])
 		if(!check_rights(R_ADMIN|R_MOD|R_DEBUG|R_EVENT))
 			return
-<<<<<<< HEAD
-		if(!CONFIG_GET(flag/allow_admin_jump)) // CHOMPEdit
-=======
 		if(!CONFIG_GET(flag/allow_admin_jump))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 			tgui_alert_async(usr, "Admin jumping disabled")
 			return
 
@@ -1673,11 +1607,7 @@
 	else if(href_list["getmob"])
 		if(!check_rights(R_ADMIN|R_MOD|R_DEBUG|R_EVENT))
 			return
-<<<<<<< HEAD
-		if(!CONFIG_GET(flag/allow_admin_jump)) // CHOMPEdit
-=======
 		if(!CONFIG_GET(flag/allow_admin_jump))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 			tgui_alert_async(usr, "Admin jumping disabled")
 			return
 		if(tgui_alert(usr, "Confirm?", "Message", list("Yes", "No")) != "Yes")
@@ -1696,11 +1626,7 @@
 	else if(href_list["sendmob"])
 		if(!check_rights(R_ADMIN|R_MOD|R_DEBUG|R_EVENT))
 			return
-<<<<<<< HEAD
-		if(!CONFIG_GET(flag/allow_admin_jump)) // CHOMPEdit
-=======
 		if(!CONFIG_GET(flag/allow_admin_jump))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 			tgui_alert_async(usr, "Admin jumping disabled")
 			return
 
@@ -1768,11 +1694,7 @@
 	else if(href_list["object_list"])			//this is the laggiest thing ever
 		if(!check_rights(R_SPAWN))	return
 
-<<<<<<< HEAD
-		if(!CONFIG_GET(flag/allow_admin_spawning)) // CHOMPEdit
-=======
 		if(!CONFIG_GET(flag/allow_admin_spawning))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 			to_chat(usr, span_filter_adminlog("Spawning of items is not allowed."))
 			return
 

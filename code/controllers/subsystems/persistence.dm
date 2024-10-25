@@ -27,11 +27,7 @@ SUBSYSTEM_DEF(persistence)
 
 /datum/controller/subsystem/persistence/proc/track_value(var/atom/value, var/track_type)
 
-<<<<<<< HEAD
-	if(CONFIG_GET(flag/persistence_disabled)) //if the config is set to persistence disabled, nothing will save or load. // CHOMPEdit
-=======
 	if(CONFIG_GET(flag/persistence_disabled)) //if the config is set to persistence disabled, nothing will save or load.
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		return
 
 	var/turf/T = get_turf(value)

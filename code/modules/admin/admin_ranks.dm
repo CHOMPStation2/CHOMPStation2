@@ -120,11 +120,7 @@ var/list/admin_ranks = list()								//list of all ranks with associated rights
 		if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
 			error("Failed to connect to database in load_admins(). Reverting to legacy system.")
 			log_misc("Failed to connect to database in load_admins(). Reverting to legacy system.")
-<<<<<<< HEAD
-			CONFIG_SET(flag/admin_legacy_system, TRUE) // CHOMPEdit
-=======
 			CONFIG_SET(flag/admin_legacy_system, TRUE)
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 			load_admins()
 			return
 
@@ -148,11 +144,7 @@ var/list/admin_ranks = list()								//list of all ranks with associated rights
 		if(!admin_datums)
 			error("The database query in load_admins() resulted in no admins being added to the list. Reverting to legacy system.")
 			log_misc("The database query in load_admins() resulted in no admins being added to the list. Reverting to legacy system.")
-<<<<<<< HEAD
-			CONFIG_SET(flag/admin_legacy_system, TRUE) // CHOMPEdit
-=======
 			CONFIG_SET(flag/admin_legacy_system, TRUE)
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 			load_admins()
 			return
 

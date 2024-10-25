@@ -198,11 +198,7 @@
 	return shock_damage
 
 /mob/living/carbon/proc/help_shake_act(mob/living/carbon/M)
-<<<<<<< HEAD
-	if (src.health >= CONFIG_GET(number/health_threshold_crit)) // CHOMPEdit
-=======
 	if (src.health >= CONFIG_GET(number/health_threshold_crit))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		if(src == M && istype(src, /mob/living/carbon/human))
 			var/mob/living/carbon/human/H = src
 			var/datum/gender/T = gender_datums[H.get_visible_gender()]

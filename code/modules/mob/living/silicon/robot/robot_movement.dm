@@ -39,11 +39,7 @@
 	if(nutrition > 1000) //CHOMPAdd
 		. += nutrition / 2000 //CHOMPAdd
 
-<<<<<<< HEAD
-	. += CONFIG_GET(number/robot_delay) // CHOMPEdit
-=======
 	. += CONFIG_GET(number/robot_delay)
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 
 	. += ..()
 

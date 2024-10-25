@@ -18,11 +18,7 @@ SUBSYSTEM_DEF(mapping)
 	world.max_z_changed() // This is to set up the player z-level list, maxz hasn't actually changed (probably)
 	load_map_templates()
 
-<<<<<<< HEAD
-	if(CONFIG_GET(flag/generate_map)) // CHOMPEdit
-=======
 	if(CONFIG_GET(flag/generate_map))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		// Map-gen is still very specific to the map, however putting it here should ensure it loads in the correct order.
 		using_map.perform_map_generation()
 
@@ -54,13 +50,8 @@ SUBSYSTEM_DEF(mapping)
 
 	// Choose an engine type
 	var/datum/map_template/engine/chosen_type = null
-<<<<<<< HEAD
-	if (LAZYLEN(CONFIG_GET(str_list/engine_map))) // CHOMPEdit
-		var/chosen_name = pick(CONFIG_GET(str_list/engine_map)) // CHOMPEdit
-=======
 	if (LAZYLEN(CONFIG_GET(str_list/engine_map)))
 		var/chosen_name = pick(CONFIG_GET(str_list/engine_map))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		chosen_type = map_templates[chosen_name]
 		if(!istype(chosen_type))
 			error("Configured engine map [chosen_name] is not a valid engine map name!")

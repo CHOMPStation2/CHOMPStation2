@@ -43,11 +43,7 @@ GLOBAL_DATUM(gateway_station, /obj/machinery/gateway/centerstation)
 		GLOB.gateway_station = src
 
 	update_icon()
-<<<<<<< HEAD
-	wait = world.time + CONFIG_GET(number/gateway_delay)	//+ thirty minutes default // CHOMPEdit
-=======
 	wait = world.time + CONFIG_GET(number/gateway_delay)	//+ thirty minutes default
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 
 	if(GLOB.gateway_away)
 		awaygate = GLOB.gateway_away

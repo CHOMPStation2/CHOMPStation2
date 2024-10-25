@@ -131,15 +131,9 @@ Book Cart End
 /obj/structure/bookcase/manuals/medical/New()
 	..()
 	new /obj/item/book/manual/medical_cloning(src)
-<<<<<<< HEAD
-	new /obj/item/book/manual/wiki/medical_diagnostics_manual(src) // CHOMPEdit
-	new /obj/item/book/manual/wiki/medical_diagnostics_manual(src) // CHOMPEdit
-	new /obj/item/book/manual/wiki/medical_diagnostics_manual(src) // CHOMPEdit
-=======
 	new /obj/item/book/manual/wiki/medical_diagnostics_manual(src)
 	new /obj/item/book/manual/wiki/medical_diagnostics_manual(src)
 	new /obj/item/book/manual/wiki/medical_diagnostics_manual(src)
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 	update_icon()
 
 
@@ -148,17 +142,10 @@ Book Cart End
 
 /obj/structure/bookcase/manuals/engineering/New()
 	..()
-<<<<<<< HEAD
-	new /obj/item/book/manual/wiki/engineering_construction(src) // CHOMPEdit
-	new /obj/item/book/manual/engineering_particle_accelerator(src)
-	new /obj/item/book/manual/wiki/engineering_hacking(src) // CHOMPEdit
-	new /obj/item/book/manual/wiki/engineering_guide(src) // CHOMPEdit
-=======
 	new /obj/item/book/manual/wiki/engineering_construction(src)
 	new /obj/item/book/manual/engineering_particle_accelerator(src)
 	new /obj/item/book/manual/wiki/engineering_hacking(src)
 	new /obj/item/book/manual/wiki/engineering_guide(src)
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 	new /obj/item/book/manual/atmospipes(src)
 	new /obj/item/book/manual/engineering_singularity_safety(src)
 	new /obj/item/book/manual/evaguide(src)
@@ -212,11 +199,7 @@ Book Cart End
 			to_chat(user, span_notice("The pages of [title] have been cut out!"))
 			return
 	if(src.dat)
-<<<<<<< HEAD
-		display_content(user) // CHOMPEdit
-=======
 		display_content(user)
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		user.visible_message("[user] opens a book titled \"[src.title]\" and begins reading intently.")
 		playsound(src, 'sound/bureaucracy/bookopen.ogg', 50, 1)
 		onclose(user, "book")
@@ -224,16 +207,9 @@ Book Cart End
 	else
 		to_chat(user, "This book is completely blank!")
 
-<<<<<<< HEAD
-// CHOMPEdit Start
 /// Proc that handles sending the book information to the user, as well as some housekeeping stuff.
 /obj/item/book/proc/display_content(mob/living/user)
 	user << browse("<TT><I>Penned by [author].</I></TT> <BR>" + "[dat]", "window=book")
-// CHOMPEdit End
-=======
-/obj/item/book/proc/display_content(mob/living/user)
-	user << browse("<TT><I>Penned by [author].</I></TT> <BR>" + "[dat]", "window=book")
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 
 /obj/item/book/attackby(obj/item/W as obj, mob/user as mob)
 	if(carved)
@@ -325,11 +301,7 @@ Book Cart End
 	if(user.zone_sel.selecting == O_EYES)
 		user.visible_message(span_notice("You open up the book and show it to [M]."), \
 			span_notice(" [user] opens up a book and shows it to [M]."))
-<<<<<<< HEAD
-		display_content(M) // CHOMPEdit
-=======
 		display_content(M)
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		user.setClickCooldown(DEFAULT_QUICK_COOLDOWN) //to prevent spam
 
 /*

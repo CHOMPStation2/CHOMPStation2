@@ -106,21 +106,13 @@
 		to_chat(player.current, span_notice("[leader_welcome_text]"))
 	else
 		to_chat(player.current, span_notice("[welcome_text]"))
-<<<<<<< HEAD
-	if (CONFIG_GET(flag/objectives_disabled)) // CHOMPEdit
-=======
 	if (CONFIG_GET(flag/objectives_disabled))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		to_chat(player.current, span_notice("[antag_text]"))
 
 	if((flags & ANTAG_HAS_NUKE) && !spawned_nuke)
 		create_nuke()
 
-<<<<<<< HEAD
-	if (!CONFIG_GET(flag/objectives_disabled)) // CHOMPEdit
-=======
 	if (!CONFIG_GET(flag/objectives_disabled))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		show_objectives(player)
 	return 1
 

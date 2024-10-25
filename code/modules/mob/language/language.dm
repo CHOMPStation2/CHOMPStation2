@@ -252,21 +252,13 @@
 	if(client && client.prefs.language_prefixes && client.prefs.language_prefixes.len)
 		return client.prefs.language_prefixes[1]
 
-<<<<<<< HEAD
-	return CONFIG_GET(str_list/language_prefixes)[1] // CHOMPEdit
-=======
 	return CONFIG_GET(str_list/language_prefixes)[1]
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 
 /mob/proc/is_language_prefix(var/prefix)
 	if(client && client.prefs.language_prefixes && client.prefs.language_prefixes.len)
 		return prefix in client.prefs.language_prefixes
 
-<<<<<<< HEAD
-	return prefix in CONFIG_GET(str_list/language_prefixes) // CHOMPEdit
-=======
 	return prefix in CONFIG_GET(str_list/language_prefixes)
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 
 //TBD
 /mob/proc/check_lang_data()

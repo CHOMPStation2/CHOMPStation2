@@ -183,11 +183,7 @@
 				recipient << 'sound/effects/adminhelp.ogg'
 
 				//AdminPM popup for ApocStation and anybody else who wants to use it. Set it with POPUP_ADMIN_PM in config.txt ~Carn
-<<<<<<< HEAD
-				if(CONFIG_GET(flag/popup_admin_pm)) // CHOMPEdit
-=======
 				if(CONFIG_GET(flag/popup_admin_pm))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 					spawn()	//so we don't hold the caller proc up
 						var/sender = src
 						var/sendername = key

@@ -88,11 +88,6 @@ var/list/reverse_dir = list( // reverse_dir[dir] = reverse of dir
 )
 var/global/const/SQRT_TWO = 1.41421356237
 
-<<<<<<< HEAD
-// var/datum/configuration/config      = null // CHOMPEdit
-
-=======
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 var/list/combatlog = list()
 var/list/IClog     = list()
 var/list/OOClog    = list()

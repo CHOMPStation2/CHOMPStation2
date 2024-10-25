@@ -89,11 +89,7 @@
 	if(screen == 1)
 		dat += "Select an event to trigger:<ul>"
 		dat += "<li><A href='?src=\ref[src];triggerevent=Red alert'>Red alert</A></li>"
-<<<<<<< HEAD
-		if(!CONFIG_GET(flag/ert_admin_call_only)) // CHOMPEdit
-=======
 		if(!CONFIG_GET(flag/ert_admin_call_only))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 			dat += "<li><A href='?src=\ref[src];triggerevent=Emergency Response Team'>Emergency Response Team</A></li>"
 
 		dat += "<li><A href='?src=\ref[src];triggerevent=Grant Emergency Maintenance Access'>Grant Emergency Maintenance Access</A></li>"
@@ -186,11 +182,7 @@
 			feedback_inc("alert_keycard_auth_ert",1)
 
 /obj/machinery/keycard_auth/proc/is_ert_blocked()
-<<<<<<< HEAD
-	if(CONFIG_GET(flag/ert_admin_call_only)) return 1 // CHOMPEdit
-=======
 	if(CONFIG_GET(flag/ert_admin_call_only)) return 1
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 	return ticker.mode && ticker.mode.ert_disabled
 
 var/global/maint_all_access = 0

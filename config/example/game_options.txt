@@ -47,13 +47,8 @@ REVIVAL_BRAIN_LIFE -1
 
 
 ## These modify the run/walk speed of all mobs before the mob-specific modifiers are applied.
-<<<<<<< HEAD
 RUN_SPEED 2
 WALK_SPEED 4
-=======
-RUN_SPEED 3
-WALK_SPEED 9
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 
 
 ## The variables below affect the movement of specific mob types.

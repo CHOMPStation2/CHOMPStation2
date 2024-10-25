@@ -122,11 +122,7 @@
 		return
 	if(usr.stat || usr.restrained())
 		return
-<<<<<<< HEAD
-	if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction))) // CHOMPEdit
-=======
 	if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction)))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		return
 
 	src.set_dir(turn(src.dir, 270))
@@ -145,11 +141,7 @@
 		return
 	if(usr.stat || usr.restrained())
 		return
-<<<<<<< HEAD
-	if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction))) // CHOMPEdit
-=======
 	if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction)))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		return
 
 	src.set_dir(turn(src.dir, 90))

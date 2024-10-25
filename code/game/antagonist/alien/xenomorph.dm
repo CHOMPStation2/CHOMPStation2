@@ -27,11 +27,7 @@ var/datum/antagonist/xenos/xenomorphs
 		xenomorphs = src
 
 /datum/antagonist/xenos/attempt_random_spawn()
-<<<<<<< HEAD
-	if(CONFIG_GET(flag/aliens_allowed)) ..() // CHOMPEdit
-=======
 	if(CONFIG_GET(flag/aliens_allowed)) ..()
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 
 /datum/antagonist/xenos/proc/get_vents()
 	var/list/vents = list()

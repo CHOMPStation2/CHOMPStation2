@@ -114,11 +114,7 @@
 
 /obj/structure/smoletrack/attack_hand(mob/user)
 	if(user.a_intent == I_DISARM)
-<<<<<<< HEAD
-		if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction))) // CHOMPEdit
-=======
 		if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction)))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 			return
 		to_chat(user, span_notice("[src] was dismantaled into bricks."))
 		playsound(src, 'sound/items/smolesmallbuild.ogg', 50, 1, -1, volume_channel = VOLUME_CHANNEL_MASTER)
@@ -132,11 +128,7 @@
 	set name = "Rotate Road Clockwise"
 	set category = "Object"
 	set src in oview(1)
-<<<<<<< HEAD
-	if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction))) // CHOMPEdit
-=======
 	if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction)))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		return
 	src.set_dir(turn(src.dir, 270))
 
@@ -144,11 +136,7 @@
 	set name = "Rotate Road Counter-Clockwise"
 	set category = "Object"
 	set src in oview(1)
-<<<<<<< HEAD
-	if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction))) // CHOMPEdit
-=======
 	if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction)))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		return
 	src.set_dir(turn(src.dir, 90))
 
@@ -157,11 +145,7 @@
 	set name = "Use Color Pieces"
 	set category = "Object"
 	set src in oview(1)
-<<<<<<< HEAD
-	if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction))) // CHOMPEdit
-=======
 	if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction)))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		return
 	var/new_color = input(usr, "Please select color.", "Paint Color", color) as color|null
 	color = new_color
@@ -173,11 +157,7 @@
 	set name = "Take Road Apart"
 	set category = "Object"
 	set src in oview(1)
-<<<<<<< HEAD
-	if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction))) // CHOMPEdit
-=======
 	if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction)))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		return
 	playsound(src, 'sound/items/smolesmallbuild.ogg', 50, 1, -1, volume_channel = VOLUME_CHANNEL_MASTER)
 	var/turf/simulated/floor/F = get_turf(src)
@@ -231,11 +211,7 @@
 //makes it so buildings can be dismaintaled or GodZilla style attacked
 /obj/structure/smolebuilding/attack_hand(mob/user)
 	if(user.a_intent == I_DISARM)
-<<<<<<< HEAD
-		if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction))) // CHOMPEdit
-=======
 		if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction)))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 			return
 		to_chat(user, span_notice("[src] was dismantaled into bricks."))
 		playsound(src, 'sound/items/smolesmallbuild.ogg', 50, 1, -1, volume_channel = VOLUME_CHANNEL_MASTER)
@@ -246,11 +222,7 @@
 
 	else if (usr.a_intent == I_HURT)
 
-<<<<<<< HEAD
-		if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction))) // CHOMPEdit
-=======
 		if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction)))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 			return
 
 		take_damage()
@@ -302,11 +274,7 @@
 //get material from ruins
 /obj/structure/smoleruins/attack_hand(mob/user)
 	if(user.a_intent == I_DISARM)
-<<<<<<< HEAD
-		if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction))) // CHOMPEdit
-=======
 		if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction)))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 			return
 		to_chat(user, span_notice("[src] was dismantaled into bricks."))
 		playsound(src, 'sound/items/smolelargeunbuild.ogg', 50, 1, volume_channel = VOLUME_CHANNEL_MASTER)
@@ -337,11 +305,7 @@
 	set name = "Use Color Pieces"
 	set category = "Object"
 	set src in oview(1)
-<<<<<<< HEAD
-	if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction))) // CHOMPEdit
-=======
 	if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction)))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		return
 	var/new_color = input(usr, "Please select color.", "Paint Color", color) as color|null
 	color = new_color
@@ -352,11 +316,7 @@
 	set name = "Take Building Apart"
 	set category = "Object"
 	set src in oview(1)
-<<<<<<< HEAD
-	if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction))) // CHOMPEdit
-=======
 	if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction)))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		return
 	playsound(src, 'sound/items/smolesmallbuild.ogg', 50, 1, -1, volume_channel = VOLUME_CHANNEL_MASTER)
 	if(!isnull(loc))

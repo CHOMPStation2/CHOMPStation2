@@ -351,15 +351,9 @@
 	// Special cases, can never respawn
 	if(ticker?.mode?.deny_respawn)
 		time = -1
-<<<<<<< HEAD
-	else if(!CONFIG_GET(flag/abandon_allowed)) // CHOMPEdit
-		time = -1
-	else if(!CONFIG_GET(flag/respawn)) // CHOMPEdit
-=======
 	else if(!CONFIG_GET(flag/abandon_allowed))
 		time = -1
 	else if(!CONFIG_GET(flag/respawn))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		time = -1
 
 	// Special case for observing before game start
@@ -368,11 +362,7 @@
 
 	// Wasn't given a time, use the config time
 	else if(!time)
-<<<<<<< HEAD
-		time = CONFIG_GET(number/respawn_time) // CHOMPEdit
-=======
 		time = CONFIG_GET(number/respawn_time)
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 
 	var/keytouse = ckey
 	// Try harder to find a key to use
@@ -384,11 +374,7 @@
 	GLOB.respawn_timers[keytouse] = world.time + time
 
 /mob/observer/dead/set_respawn_timer()
-<<<<<<< HEAD
-	if(CONFIG_GET(flag/antag_hud_restricted) && has_enabled_antagHUD) // CHOMPEdit
-=======
 	if(CONFIG_GET(flag/antag_hud_restricted) && has_enabled_antagHUD)
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		..(-1)
 	else
 		return // Don't set it, no need

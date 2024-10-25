@@ -43,33 +43,15 @@
 
 //Sender is optional
 /proc/admin_chat_message(var/message = "Debug Message", var/color = "#FFFFFF", var/sender)
-<<<<<<< HEAD
-	if (!CONFIG_GET(string/chat_webhook_url) || !message) // CHOMPEdit
-		return
-	spawn(0)
-		var/query_string = "type=adminalert"
-		query_string += "&key=[url_encode(CONFIG_GET(string/chat_webhook_key))]" // CHOMPEdit
-=======
 	if (!CONFIG_GET(string/chat_webhook_url) || !message)
 		return
 	spawn(0)
 		var/query_string = "type=adminalert"
 		query_string += "&key=[url_encode(CONFIG_GET(string/chat_webhook_key))]"
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		query_string += "&msg=[url_encode(message)]"
 		query_string += "&color=[url_encode(color)]"
 		if(sender)
 			query_string += "&from=[url_encode(sender)]"
-<<<<<<< HEAD
-		world.Export("[CONFIG_GET(string/chat_webhook_url)]?[query_string]") // CHOMPEdit
-
-/proc/admin_action_message(var/admin = "INVALID", var/user = "INVALID", var/action = "INVALID", var/reason = "INVALID", var/time = "INVALID")
-	if (!CONFIG_GET(string/chat_webhook_url) || !action) // CHOMPEdit
-		return
-	spawn(0)
-		var/query_string = "type=adminaction"
-		query_string += "&key=[url_encode(CONFIG_GET(string/chat_webhook_key))]" // CHOMPEdit
-=======
 		world.Export("[CONFIG_GET(string/chat_webhook_url)]?[query_string]")
 
 /proc/admin_action_message(var/admin = "INVALID", var/user = "INVALID", var/action = "INVALID", var/reason = "INVALID", var/time = "INVALID")
@@ -78,14 +60,9 @@
 	spawn(0)
 		var/query_string = "type=adminaction"
 		query_string += "&key=[url_encode(CONFIG_GET(string/chat_webhook_key))]"
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		query_string += "&admin=[url_encode(admin)]"
 		query_string += "&user=[url_encode(user)]"
 		query_string += "&action=[url_encode(action)]"
 		query_string += "&reason=[url_encode(reason)]"
 		query_string += "&time=[url_encode(time)]"
-<<<<<<< HEAD
-		world.Export("[CONFIG_GET(string/chat_webhook_url)]?[query_string]") // CHOMPEdit
-=======
 		world.Export("[CONFIG_GET(string/chat_webhook_url)]?[query_string]")
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))

@@ -30,26 +30,7 @@
 	if(byond_version < RECOMMENDED_VERSION)
 		to_world_log("Your server's byond version does not meet the recommended requirements for this server. Please update BYOND")
 
-<<<<<<< HEAD
 	TgsNew(new /datum/tgs_event_handler/impl, TGS_SECURITY_TRUSTED) // CHOMPEdit - tgs event handler
-	// VgsNew() // VOREStation Edit - VGS // CHOMPEdit - Has to be initialized after config was loaded
-
-	config.Load(params[OVERRIDE_CONFIG_DIRECTORY_PARAMETER]) // CHOMPEdit
-
-	ConfigLoaded() // CHOMPEdit
-	makeDatumRefLists() // CHOMPEdit
-	VgsNew() // CHOMPEdit
-
-	var/servername = CONFIG_GET(string/servername) // CHOMPEdit
-	if(config && servername != null && CONFIG_GET(flag/server_suffix) && world.port > 0) // CHOMPEdit
-		// dumb and hardcoded but I don't care~
-		servername += " #[(world.port % 1000) / 100]" // CHOMPEdit
-		CONFIG_SET(string/servername, servername) // CHOMPEdit
-
-	// TODO - Figure out what this is. Can you assign to world.log?
-	// if(config && CONFIG_GET(flag/log_runtime)) // CHOMPEdit
-=======
-	TgsNew()
 
 	config.Load(params[OVERRIDE_CONFIG_DIRECTORY_PARAMETER])
 
@@ -65,7 +46,6 @@
 
 	// TODO - Figure out what this is. Can you assign to world.log?
 	// if(config && CONFIG_FLAG(flag/log_runtime))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 	// 	log = file("data/logs/runtime/[time2text(world.realtime,"YYYY-MM-DD-(hh-mm-ss)")]-runtime.log")
 
 	GLOB.timezoneOffset = world.timezone * 36000
@@ -114,21 +94,13 @@
 #endif
 
 	spawn(3000)		//so we aren't adding to the round-start lag
-<<<<<<< HEAD
-		if(CONFIG_GET(flag/ToRban)) // CHOMPEdit
-=======
 		if(CONFIG_GET(flag/ToRban))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 			ToRban_autoupdate()
 
 #undef RECOMMENDED_VERSION
 
 	return
 
-<<<<<<< HEAD
-// CHOMPEdit Start
-=======
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 /// Runs after config is loaded but before Master is initialized
 /world/proc/ConfigLoaded()
 	// Everything in here is prioritized in a very specific way.
@@ -136,18 +108,7 @@
 	// (i.e. basically nothing should be added before load_admins() in here)
 
 	// Try to set round ID
-<<<<<<< HEAD
-	SSdbcore.InitializeRound()
-
-	//apply a default value to config.python_path, if needed
-	if (!CONFIG_GET(string/python_path)) // CHOMPEdit
-		if(world.system_type == UNIX)
-			CONFIG_SET(string/python_path, "/usr/bin/env python2") // CHOMPEdit
-		else //probably windows, if not this should work anyway
-			CONFIG_SET(string/python_path, "python") // CHOMPEdit
-// CHOMPEdit End
-=======
-	//SSdbcore.InitializeRound() TODO: Implement roundid on database subsystem and uncomment
+	SSdbcore.InitializeRound() // CHOMPEdit
 
 	//apply a default value to config.python_path, if needed
 	if (!CONFIG_GET(string/python_path))
@@ -155,7 +116,6 @@
 			CONFIG_SET(string/python_path, "/usr/bin/env python2")
 		else //probably windows, if not this should work anyway
 			CONFIG_SET(string/python_path, "python")
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 
 var/world_topic_spam_protect_ip = "0.0.0.0"
 var/world_topic_spam_protect_time = world.timeofday
@@ -183,19 +143,11 @@ var/world_topic_spam_protect_time = world.timeofday
 		var/list/s = list()
 		s["version"] = game_version
 		s["mode"] = master_mode
-<<<<<<< HEAD
-		s["respawn"] = CONFIG_GET(flag/abandon_allowed) // CHOMPEdit
-		s["persistance"] = CONFIG_GET(flag/persistence_disabled) // CHOMPEdit
-		s["enter"] = CONFIG_GET(flag/enter_allowed) // CHOMPEdit
-		s["vote"] = CONFIG_GET(flag/allow_vote_mode) // CHOMPEdit
-		s["ai"] = CONFIG_GET(flag/allow_ai) // CHOMPEdit
-=======
 		s["respawn"] = CONFIG_GET(flag/abandon_allowed)
 		s["persistance"] = CONFIG_GET(flag/persistence_disabled)
 		s["enter"] = CONFIG_GET(flag/enter_allowed)
 		s["vote"] = CONFIG_GET(flag/allow_vote_mode)
 		s["ai"] = CONFIG_GET(flag/allow_ai)
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		s["host"] = host ? host : null
 
 		// This is dumb, but spacestation13.com's banners break if player count isn't the 8th field of the reply, so... this has to go here.
@@ -328,11 +280,7 @@ var/world_topic_spam_protect_time = world.timeofday
 
 	else if(copytext(T,1,5) == "info")
 		var/input[] = params2list(T)
-<<<<<<< HEAD
-		if(input["key"] != CONFIG_GET(string/comms_password)) // CHOMPEdit
-=======
 		if(input["key"] != CONFIG_GET(string/comms_password))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 			if(world_topic_spam_protect_ip == addr && abs(world_topic_spam_protect_time - world.time) < 50)
 
 				spawn(50)
@@ -419,11 +367,7 @@ var/world_topic_spam_protect_time = world.timeofday
 
 
 		var/input[] = params2list(T)
-<<<<<<< HEAD
-		if(input["key"] != CONFIG_GET(string/comms_password)) // CHOMPEdit
-=======
 		if(input["key"] != CONFIG_GET(string/comms_password))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 			if(world_topic_spam_protect_ip == addr && abs(world_topic_spam_protect_time - world.time) < 50)
 
 				spawn(50)
@@ -473,11 +417,7 @@ var/world_topic_spam_protect_time = world.timeofday
 				2. validationkey = the key the bot has, it should match the gameservers commspassword in it's configuration.
 		*/
 		var/input[] = params2list(T)
-<<<<<<< HEAD
-		if(input["key"] != CONFIG_GET(string/comms_password)) // CHOMPEdit
-=======
 		if(input["key"] != CONFIG_GET(string/comms_password))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 			if(world_topic_spam_protect_ip == addr && abs(world_topic_spam_protect_time - world.time) < 50)
 
 				spawn(50)
@@ -492,11 +432,7 @@ var/world_topic_spam_protect_time = world.timeofday
 
 	else if(copytext(T,1,4) == "age")
 		var/input[] = params2list(T)
-<<<<<<< HEAD
-		if(input["key"] != CONFIG_GET(string/comms_password)) // CHOMPEdit
-=======
 		if(input["key"] != CONFIG_GET(string/comms_password))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 			if(world_topic_spam_protect_ip == addr && abs(world_topic_spam_protect_time - world.time) < 50)
 				spawn(50)
 					world_topic_spam_protect_time = world.time
@@ -532,13 +468,8 @@ var/world_topic_spam_protect_time = world.timeofday
 	else
 		Master.Shutdown()	//run SS shutdowns
 		for(var/client/C in GLOB.clients)
-<<<<<<< HEAD
-			if(CONFIG_GET(string/server))	//if you set a server location in config.txt, it sends you there instead of trying to reconnect to the same world address. -- NeoFite // CHOMPEdit
-				C << link("byond://[CONFIG_GET(string/server)]") // CHOMPEdit
-=======
 			if(CONFIG_GET(string/server))	//if you set a server location in config.txt, it sends you there instead of trying to reconnect to the same world address. -- NeoFite
 				C << link("byond://[CONFIG_GET(string/server)]")
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 
 	TgsReboot()
 	log_world("World rebooted at [time_stamp()]")
@@ -572,22 +503,14 @@ var/world_topic_spam_protect_time = world.timeofday
 /world/proc/load_motd()
 	join_motd = file2text("config/motd.txt")
 
-<<<<<<< HEAD
-/* CHOMPEdit Start
-=======
 /* Replaced with configuration controller
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 /proc/load_configuration()
 	config = new /datum/configuration()
 	config.load("config/config.txt")
 	config.load("config/game_options.txt","game_options")
 	config.loadsql("config/dbconfig.txt")
 	config.loadforumsql("config/forumdbconfig.txt")
-<<<<<<< HEAD
-*/ // CHOMPEdit End
-=======
 */
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 
 /hook/startup/proc/loadMods()
 	world.load_mods()
@@ -595,11 +518,7 @@ var/world_topic_spam_protect_time = world.timeofday
 	return 1
 
 /world/proc/load_mods()
-<<<<<<< HEAD
-	if(CONFIG_GET(flag/admin_legacy_system)) // CHOMPEdit
-=======
 	if(CONFIG_GET(flag/admin_legacy_system))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		var/text = file2text("config/moderators.txt")
 		if (!text)
 			error("Failed to load config/mods.txt")
@@ -620,11 +539,7 @@ var/world_topic_spam_protect_time = world.timeofday
 				D.associate(GLOB.directory[ckey])
 
 /world/proc/load_mentors()
-<<<<<<< HEAD
-	if(CONFIG_GET(flag/admin_legacy_system)) // CHOMPEdit
-=======
 	if(CONFIG_GET(flag/admin_legacy_system))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		var/text = file2text("config/mentors.txt")
 		if (!text)
 			error("Failed to load config/mentors.txt")
@@ -661,13 +576,8 @@ var/world_topic_spam_protect_time = world.timeofday
 /world/proc/update_status()
 	var/s = ""
 
-<<<<<<< HEAD
-	if (config && CONFIG_GET(string/servername)) // CHOMPEdit
-		s += span_bold("[CONFIG_GET(string/servername)]") + " &#8212; " // CHOMPEdit
-=======
 	if (config && CONFIG_GET(string/servername))
 		s += span_bold("[CONFIG_GET(string/servername)]") + " &#8212; "
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 
 	s += span_bold("[station_name()]");
 	s += " ("
@@ -688,18 +598,6 @@ var/world_topic_spam_protect_time = world.timeofday
 	if (!CONFIG_GET(flag/enter_allowed))
 		features += "closed"
 
-<<<<<<< HEAD
-	features += CONFIG_GET(flag/abandon_allowed) ? "respawn" : "no respawn" // CHOMPEdit
-
-	features += CONFIG_GET(flag/persistence_disabled) ? "persistence disabled" : "persistence enabled" // CHOMPEdit
-
-	features += CONFIG_GET(flag/persistence_ignore_mapload) ? "persistence mapload disabled" : "persistence mapload enabled" // CHOMPEdit
-
-	if (config && CONFIG_GET(flag/allow_vote_mode)) // CHOMPEdit
-		features += "vote"
-
-	if (config && CONFIG_GET(flag/allow_ai)) // CHOMPEdit
-=======
 	features += CONFIG_GET(flag/abandon_allowed) ? "respawn" : "no respawn"
 
 	features += CONFIG_GET(flag/persistence_disabled) ? "persistence disabled" : "persistence enabled"
@@ -710,7 +608,6 @@ var/world_topic_spam_protect_time = world.timeofday
 		features += "vote"
 
 	if (config && CONFIG_GET(flag/allow_ai))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		features += "AI allowed"
 
 	var/n = 0
@@ -724,13 +621,8 @@ var/world_topic_spam_protect_time = world.timeofday
 		features += "~[n] player"
 
 
-<<<<<<< HEAD
-	if (config && CONFIG_GET(string/hostedby)) // CHOMPEdit
-		features += "hosted by <b>[CONFIG_GET(string/hostedby)]</b>" // CHOMPEdit
-=======
 	if (config && CONFIG_GET(string/hostedby))
 		features += "hosted by <b>[CONFIG_GET(string/hostedby)]</b>"
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 
 	if (features)
 		s += ": [jointext(features, ", ")]"
@@ -744,11 +636,7 @@ var/failed_db_connections = 0
 var/failed_old_db_connections = 0
 
 /hook/startup/proc/connectDB()
-<<<<<<< HEAD
-	if(!CONFIG_GET(flag/sql_enabled)) //CHOMPEdit
-=======
 	if(!CONFIG_GET(flag/sql_enabled))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		to_world_log("SQL connection disabled in config.")
 	else if(establish_db_connection())//CHOMPEdit Begin
 		to_world_log("Feedback database connection established.")
@@ -773,13 +661,8 @@ var/failed_old_db_connections = 0
 	//CHOMPEdit End
 	return 1
 
-<<<<<<< HEAD
 /*/proc/setup_database_connection() CHOMPEdit TGSQL
-	if(!config.sql_enabled)
-=======
-/proc/setup_database_connection()
 	if(!CONFIG_GET(flag/sql_enabled))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		return 0
 	if(failed_db_connections > FAILED_DB_CONNECTION_CUTOFF)	//If it failed to establish a connection more than 5 times in a row, don't bother attempting to conenct anymore.
 		return 0
@@ -816,52 +699,6 @@ var/failed_old_db_connections = 0
 /proc/establish_db_connection() //CHOMPEdit TGSQL
 	return SSdbcore.Connect()
 
-<<<<<<< HEAD
-
-/hook/startup/proc/connectOldDB()
-	if(!CONFIG_GET(flag/sql_enabled)) // CHOMPEdit
-		to_world_log("SQL connection disabled in config.")
-	else if(establish_old_db_connection()) //CHOMPEdit Begin
-		to_world_log("SQL database connection established.")
-	else
-		to_world_log("SQL database connection failed")
-	//CHOMPEdit End
-	return 1
-
-//These two procs are for the old database, while it's being phased out. See the tgstation.sql file in the SQL folder for more information.
-/*/proc/setup_old_database_connection() //CHOMPStation TGSQL
-	if(!config.sql_enabled)
-		return 0
-
-	if(failed_old_db_connections > FAILED_DB_CONNECTION_CUTOFF)	//If it failed to establish a connection more than 5 times in a row, don't bother attempting to conenct anymore.
-		return 0
-
-	if(!dbcon_old)
-		dbcon_old = new()
-
-	var/user = sqllogin
-	var/pass = sqlpass
-	var/db = sqldb
-	var/address = sqladdress
-	var/port = sqlport
-
-	dbcon_old.Connect("dbi:mysql:[db]:[address]:[port]","[user]","[pass]")
-	. = dbcon_old.IsConnected()
-	if ( . )
-		failed_old_db_connections = 0	//If this connection succeeded, reset the failed connections counter.
-	else
-		failed_old_db_connections++		//If it failed, increase the failed connections counter.
-		to_world_log(dbcon.ErrorMsg())
-
-	return .*/
-
-//This proc ensures that the connection to the feedback database (global variable dbcon) is established
-/proc/establish_old_db_connection()
-	return SSdbcore.Connect()
-
-/* CHOMPedit
-=======
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 // Cleans up DB connections and recreates them
 /proc/reset_database_connections()
 	var/list/results = list("-- Resetting DB connections --")
@@ -925,17 +762,10 @@ var/failed_old_db_connections = 0
 
 /proc/get_world_url()
 	. = "byond://"
-<<<<<<< HEAD
-	if(CONFIG_GET(string/serverurl)) // CHOMPEdit
-		. += CONFIG_GET(string/serverurl) // CHOMPEdit
-	else if(CONFIG_GET(string/server)) // CHOMPEdit
-		. += CONFIG_GET(string/server) // CHOMPEdit
-=======
 	if(CONFIG_GET(string/serverurl))
 		. += CONFIG_GET(string/serverurl)
 	else if(CONFIG_GET(string/server))
 		. += CONFIG_GET(string/server)
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 	else
 		. += "[world.address]:[world.port]"
 

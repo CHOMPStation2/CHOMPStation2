@@ -26,15 +26,6 @@
 	*/
 
 /proc/send2mainirc(var/msg)
-<<<<<<< HEAD
-	if(CONFIG_GET(string/main_irc)) // CHOMPEdit
-		send2irc(CONFIG_GET(string/main_irc), msg) // CHOMPEdit
-	return
-
-/proc/send2adminirc(var/msg)
-	if(CONFIG_GET(string/admin_irc)) // CHOMPEdit
-		send2irc(CONFIG_GET(string/admin_irc), msg) // CHOMPEdit
-=======
 	if(CONFIG_GET(string/main_irc))
 		send2irc(CONFIG_GET(string/main_irc), msg)
 	return
@@ -42,14 +33,9 @@
 /proc/send2adminirc(var/msg)
 	if(CONFIG_GET(string/admin_irc))
 		send2irc(CONFIG_GET(string/admin_irc), msg)
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 	return
 
 
 /hook/startup/proc/ircNotify()
-<<<<<<< HEAD
-	send2mainirc("Server starting up on byond://[CONFIG_GET(string/serverurl) ? CONFIG_GET(string/serverurl) : (CONFIG_GET(string/server) ? CONFIG_GET(string/server) : "[world.address]:[world.port]")]") // CHOMPEdit
-=======
 	send2mainirc("Server starting up on byond://[CONFIG_GET(string/serverurl) ? CONFIG_GET(string/serverurl) : (CONFIG_GET(string/server) ? CONFIG_GET(string/server) : "[world.address]:[world.port]")]")
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 	return 1

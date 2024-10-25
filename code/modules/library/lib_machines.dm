@@ -44,13 +44,8 @@
 			<A href='?src=\ref[src];setauthor=1'>Filter by Author: [author]</A><BR>
 			<A href='?src=\ref[src];search=1'>\[Start Search\]</A><BR>"}
 		if(1)
-<<<<<<< HEAD
-			establish_old_db_connection()
-			if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
-=======
 			establish_db_connection()
-			if(!dbcon_old.IsConnected())
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
+			if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
 				dat += span_red(span_bold("ERROR") + ": Unable to contact External Archive. Please contact your system administrator for assistance.") + "<BR>"
 			else if(!SQLquery)
 				dat += span_red(span_bold("ERROR") + ": Malformed search request. Please contact your system administrator for assistance.") + "<BR>"
@@ -446,13 +441,8 @@
 					if(scanner.cache.unique)
 						tgui_alert_async(usr, "This book has been rejected from the database. Aborting!")
 					else
-<<<<<<< HEAD
-						establish_old_db_connection()
-						if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
-=======
 						establish_db_connection()
-						if(!dbcon_old.IsConnected())
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
+						if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
 							tgui_alert_async(usr, "Connection to Archive has been severed. Aborting.")
 						else
 							/*
@@ -477,13 +467,8 @@
 
 	if(href_list["targetid"])
 		var/sqlid = sanitizeSQL(href_list["targetid"])
-<<<<<<< HEAD
-		establish_old_db_connection()
-		if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
-=======
 		establish_db_connection()
-		if(!dbcon_old.IsConnected())
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
+		if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
 			tgui_alert_async(usr, "Connection to Archive has been severed. Aborting.")
 		if(bibledelay)
 			for (var/mob/V in hearers(src))

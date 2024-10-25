@@ -4,11 +4,7 @@
 	lastKnownIP	= client.address
 	computer_id	= client.computer_id
 	log_access_in(client)
-<<<<<<< HEAD
-	if(CONFIG_GET(flag/log_access)) // CHOMPEdit
-=======
 	if(CONFIG_GET(flag/log_access))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		for(var/mob/M in player_list)
 			if(M == src)	continue
 			if( M.key && (M.key != key) )
@@ -24,11 +20,7 @@
 				if( (client.connection != "web") && (M.computer_id == client.computer_id) )
 					if(matches)	matches += " and "
 					matches += "ID ([client.computer_id])"
-<<<<<<< HEAD
-					if(!CONFIG_GET(flag/disable_cid_warn_popup)) // CHOMPEdit
-=======
 					if(!CONFIG_GET(flag/disable_cid_warn_popup))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 						tgui_alert_async(usr, "You appear to have logged in with another key this round, which is not permitted. Please contact an administrator if you believe this message to be in error.")
 				if(matches)
 					if(M.client)

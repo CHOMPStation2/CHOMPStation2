@@ -30,11 +30,7 @@
 		random_icon_states.Remove(W.icon_state)
 	if(random_icon_states.len)
 		icon_state = pick(random_icon_states)
-<<<<<<< HEAD
-	if(!mapload || !CONFIG_GET(flag/persistence_ignore_mapload)) // CHOMPEdit
-=======
 	if(!mapload || !CONFIG_GET(flag/persistence_ignore_mapload))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		SSpersistence.track_value(src, /datum/persistent/graffiti)
 	. = ..()
 

@@ -92,13 +92,8 @@ var/religion_name = null
 			new_station_name += pick("13","XIII","Thirteen")
 
 
-<<<<<<< HEAD
-	if (config && CONFIG_GET(string/servername)) // CHOMPEdit
-		world.name = "[CONFIG_GET(string/servername)]: [name]" // CHOMPEdit
-=======
 	if (config && CONFIG_GET(string/servername))
 		world.name = "[CONFIG_GET(string/servername)]: [name]"
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 	else
 		world.name = new_station_name
 
@@ -109,13 +104,8 @@ var/religion_name = null
 
 	using_map.station_name = name
 
-<<<<<<< HEAD
-	if (config && CONFIG_GET(string/servername)) // CHOMPEdit
-		world.name = "[CONFIG_GET(string/servername)]: [name]" // CHOMPEdit
-=======
 	if (config && CONFIG_GET(string/servername))
 		world.name = "[CONFIG_GET(string/servername)]: [name]"
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 	else
 		world.name = name
 

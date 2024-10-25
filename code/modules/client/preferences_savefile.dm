@@ -204,11 +204,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	if(!slot)
 		slot = default_slot
 
-<<<<<<< HEAD
-	slot = sanitize_integer(slot, 1, CONFIG_GET(number/character_slots), initial(default_slot)) // CHOMPEdit
-=======
 	slot = sanitize_integer(slot, 1, CONFIG_GET(number/character_slots), initial(default_slot))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 	if(slot != default_slot)
 		default_slot = slot
 		savefile.set_entry("default_slot", slot)
@@ -265,11 +261,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 
 	// This basically just changes default_slot without loading the correct data, so the next save call will overwrite
 	// the slot
-<<<<<<< HEAD
-	slot = sanitize_integer(slot, 1, CONFIG_GET(number/character_slots), initial(default_slot)) // CHOMPEdit
-=======
 	slot = sanitize_integer(slot, 1, CONFIG_GET(number/character_slots), initial(default_slot))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 	if(slot != default_slot)
 		default_slot = slot
 		nif_path = nif_durability = nif_savedata = null //VOREStation Add - Don't copy NIF

@@ -24,11 +24,6 @@ var/global/datum/global_init/init = new ()
 	debug_log << "[log_end]\n[log_end]\nStarting up. [time_stamp()][log_end]\n---------------------[log_end]"
 */ //VOREStation Removal End
 	decls_repository = new()
-<<<<<<< HEAD
-	//load_configuration() // CHOMP Edit
-	//makeDatumRefLists() // CHOMP Edit
-=======
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 
 	initialize_integrated_circuits_list()
 

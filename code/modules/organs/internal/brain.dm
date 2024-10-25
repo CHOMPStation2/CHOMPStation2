@@ -33,11 +33,7 @@ GLOBAL_LIST_BOILERPLATE(all_brain_organs, /obj/item/organ/internal/brain)
 	if(!owner || owner.stat == DEAD)
 		defib_timer = max(--defib_timer, 0)
 	else
-<<<<<<< HEAD
 		defib_timer = min(++defib_timer, (CONFIG_GET(number/defib_timer) MINUTES) / 2) // CHOMPEdit
-=======
-		defib_timer = min(++defib_timer, (CONFIG_GET(number/defib_timer) MINUTES) / 20)		// Time vars measure things in ticks. Life tick happens every ~2 seconds, therefore dividing by 20
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 
 /obj/item/organ/internal/brain/proc/can_assist()
 	return can_assist
@@ -82,17 +78,10 @@ GLOBAL_LIST_BOILERPLATE(all_brain_organs, /obj/item/organ/internal/brain)
 		tmp_owner.internal_organs_by_name[organ_tag] = new replace_path(tmp_owner, 1)
 		tmp_owner = null
 
-<<<<<<< HEAD
 /obj/item/organ/internal/brain/Initialize() // CHOMPEdit
 	. = ..() // CHOMPEdit
-	health = CONFIG_GET(number/default_brain_health) // CHOMPEdit
-	defib_timer = (CONFIG_GET(number/defib_timer) MINUTES) / 2 // CHOMPEdit
-=======
-/obj/item/organ/internal/brain/New()
-	..()
 	health = CONFIG_GET(number/default_brain_health)
-	defib_timer = (CONFIG_GET(number/defib_timer) MINUTES) / 20				// Time vars measure things in ticks. Life tick happens every ~2 seconds, therefore dividing by 20
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
+	defib_timer = (CONFIG_GET(number/defib_timer) MINUTES) / 2 // CHOMPEdit
 	spawn(5)
 		if(brainmob)
 			butcherable = FALSE
