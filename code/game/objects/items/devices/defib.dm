@@ -520,13 +520,8 @@
 		return // Still no brain.
 
 	// If the brain'd `defib_timer` var gets below this number, brain damage will happen at a linear rate.
-<<<<<<< HEAD
 	// This is measures in `Life()` ticks. E.g. 10 minute defib timer = 6000 world.time units = 3000 `Life()` ticks.
 	var/brain_damage_timer = ((CONFIG_GET(number/defib_timer) MINUTES) / 2) - ((CONFIG_GET(number/defib_braindamage_timer) MINUTES) / 2) // CHOMPEdit
-=======
-	// This is measures in `Life()` ticks. E.g. 10 minute defib timer = 300 `Life()` ticks.				// Original math was VERY off. Life() tick occurs every ~2 seconds, not every 2 world.time ticks.
-	var/brain_damage_timer = ((CONFIG_GET(number/defib_timer) MINUTES) / 20) - ((CONFIG_GET(number/defib_braindamage_timer) MINUTES) / 20)
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 
 	if(brain.defib_timer > brain_damage_timer)
 		return // They got revived before brain damage got a chance to set in.

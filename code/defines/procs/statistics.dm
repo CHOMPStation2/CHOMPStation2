@@ -1,9 +1,5 @@
 /proc/sql_poll_population()
-<<<<<<< HEAD
 	if(!CONFIG_GET(flag/enable_stat_tracking)) // CHOMPEdit
-=======
-	if(!CONFIG_GET(flag/log_sql))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		return
 	var/admincount = GLOB.admins.len
 	var/playercount = 0
@@ -23,7 +19,6 @@
 
 /proc/sql_report_round_start()
 	// TODO
-<<<<<<< HEAD
 	if(!CONFIG_GET(flag/enable_stat_tracking)) // CHOMPEdit
 		return
 /proc/sql_report_round_end()
@@ -33,17 +28,6 @@
 
 /proc/sql_report_death(var/mob/living/carbon/human/H)
 	if(!CONFIG_GET(flag/enable_stat_tracking)) // CHOMPEdit
-=======
-	if(!CONFIG_GET(flag/log_sql))
-		return
-/proc/sql_report_round_end()
-	// TODO
-	if(!CONFIG_GET(flag/log_sql))
-		return
-
-/proc/sql_report_death(var/mob/living/carbon/human/H)
-	if(!CONFIG_GET(flag/log_sql))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		return
 	if(!H)
 		return
@@ -78,11 +62,7 @@
 
 
 /proc/sql_report_cyborg_death(var/mob/living/silicon/robot/H)
-<<<<<<< HEAD
 	if(!CONFIG_GET(flag/enable_stat_tracking)) // CHOMPEdit
-=======
-	if(!CONFIG_GET(flag/log_sql))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		return
 	if(!H)
 		return
@@ -118,11 +98,7 @@
 
 /proc/statistic_cycle()
 	set waitfor = 0
-<<<<<<< HEAD
 	if(!CONFIG_GET(flag/enable_stat_tracking)) // CHOMPEdit
-=======
-	if(!CONFIG_GET(flag/log_sql))
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		return
 	while(1)
 		sql_poll_population()

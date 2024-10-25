@@ -392,11 +392,7 @@
 	else
 		move_delay = max(0, (-car_limit * active_engines) + train_length - active_engines)	//limits base overweight so you cant overspeed trains
 		move_delay *= (1 / max(1, active_engines)) * 2 										//overweight penalty (scaled by the number of engines)
-<<<<<<< HEAD
 		move_delay += 1 														//base reference speed //CHOMPedit: Move-delay from server config (2) to 1.
-=======
-		move_delay += CONFIG_GET(number/run_speed) 											//base reference speed
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 		move_delay *= 1.1																	//makes cargo trains 10% slower than running when not overweight
 
 /obj/vehicle/train/rover/trolley/update_car(var/train_length, var/active_engines)

@@ -229,21 +229,9 @@
 		while(specific_sanity > 0)
 			specific_sanity--
 
-<<<<<<< HEAD
 			chosen_template.preload_size(chosen_template.mappath)
 			var/width_border = SUBMAP_MAP_EDGE_PAD + round((chosen_template.width) / 2)
 			var/height_border = SUBMAP_MAP_EDGE_PAD + round((chosen_template.height) / 2)																									//VOREStation Edit
-=======
-			var/orientation
-			if(chosen_template.fixed_orientation || !CONFIG_GET(flag/random_submap_orientation))
-				orientation = 0
-			else
-				orientation = pick(list(0, 90, 180, 270))
-
-			chosen_template.preload_size(chosen_template.mappath, orientation)
-			var/width_border = SUBMAP_MAP_EDGE_PAD + round(((orientation%180) ? chosen_template.height : chosen_template.width) / 2) // %180 catches East/West (90,270) rotations on true, North/South (0,180) rotations on false		//VOREStation Edit
-			var/height_border = SUBMAP_MAP_EDGE_PAD + round(((orientation%180) ? chosen_template.width : chosen_template.height) / 2)																									//VOREStation Edit
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 			var/z_level = pick(z_levels)
 			var/turf/T = locate(rand(width_border, world.maxx - width_border), rand(height_border, world.maxy - height_border), z_level)
 			var/valid = TRUE

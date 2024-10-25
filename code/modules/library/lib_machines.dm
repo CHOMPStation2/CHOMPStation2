@@ -493,22 +493,7 @@
 				B.item_state = B.icon_state
 				src.visible_message("[src]'s printer hums as it produces a completely bound book. How did it do that?")
 				break
-<<<<<<< HEAD
 			qdel(query) //CHOMPEdit TGSQL
-=======
-
-	if(href_list["delid"])
-		if(!check_rights(R_ADMIN))
-			return
-		var/sqlid = sanitizeSQL(href_list["delid"])
-		establish_db_connection()
-		if(!dbcon_old.IsConnected())
-			tgui_alert_async(usr, "Connection to Archive has been severed. Aborting.")
-		else
-			var/DBQuery/query = dbcon_old.NewQuery("DELETE FROM library WHERE id=[sqlid]")
-			query.Execute()
-			log_admin("[usr.key] has deleted the book [sqlid]")	//VOREStation Addition
->>>>>>> 242fa3a66b (Ports over configuration controller (#16484))
 
 	if(href_list["orderbyid"])
 		var/orderid = tgui_input_number(usr, "Enter your order:")
