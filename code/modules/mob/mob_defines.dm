@@ -240,4 +240,6 @@
 	/// dict of custom stat tabs with data
 	var/list/list/misc_tabs = list()
 
+	var/list/datum/action/actions
+
 	var/custom_footstep = FOOTSTEP_MOB_SHOE // CHOMPEdit

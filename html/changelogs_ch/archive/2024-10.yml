@@ -247,3 +247,9 @@
   - bugfix: Crew manifest not showing up
   Darlantanis:
   - bugfix: fixes slug death state
+2024-10-24:
+  ShadowLarkens:
+  - bugfix: Better error handling in bapi-dmm
+2024-10-26:
+  Kashargul:
+  - qol: marish language back to pink

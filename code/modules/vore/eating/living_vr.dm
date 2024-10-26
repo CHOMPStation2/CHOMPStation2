@@ -429,7 +429,7 @@
 	var/list/charlist = list()
 
 	var/default
-	for(var/i in 1 to CONFIG_GET(number/character_slots)) //CHOMPEdit
+	for(var/i in 1 to CONFIG_GET(number/character_slots))
 		var/list/save_data = savefile.get_entry("character[i]", list())
 		var/name = save_data["real_name"]
 		var/nickname = save_data["nickname"]

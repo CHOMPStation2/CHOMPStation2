@@ -127,7 +127,7 @@
 	set name = "Display Job bans"
 	set category = "Admin.Investigate" //CHOMPEdit
 	if(holder)
-		if(CONFIG_GET(flag/ban_legacy_system)) // CHOMPEdit
+		if(CONFIG_GET(flag/ban_legacy_system))
 			holder.Jobbans()
 		else
 			holder.DB_ban_panel()
@@ -138,7 +138,7 @@
 	set name = "Unban Panel"
 	set category = "Admin.Game" //CHOMPEdit
 	if(holder)
-		if(CONFIG_GET(flag/ban_legacy_system)) // CHOMPEdit
+		if(CONFIG_GET(flag/ban_legacy_system))
 			holder.unbanpanel()
 		else
 			holder.DB_ban_panel()
@@ -411,8 +411,8 @@
 	set category = "Server.Config" //CHOMPEdit
 	if(!holder)	return
 	if(config)
-		CONFIG_SET(flag/log_hrefs, !CONFIG_GET(flag/log_hrefs)) // CHOMPEdit
-		message_admins(span_bold("[key_name_admin(usr)] [CONFIG_GET(flag/log_hrefs) ? "started" : "stopped"] logging hrefs")) // CHOMPEdit
+		CONFIG_SET(flag/log_hrefs, !CONFIG_GET(flag/log_hrefs))
+		message_admins(span_bold("[key_name_admin(usr)] [CONFIG_GET(flag/log_hrefs) ? "started" : "stopped"] logging hrefs"))
 
 /client/proc/check_ai_laws()
 	set name = "Check AI Laws"
@@ -513,16 +513,16 @@
 	set category = "Server.Game" //CHOMPEdit
 	if(!holder)	return
 	if(config)
-		CONFIG_SET(flag/cult_ghostwriter, !CONFIG_GET(flag/cult_ghostwriter)) // CHOMPEdit
-		message_admins("Admin [key_name_admin(usr)] has [CONFIG_GET(flag/cult_ghostwriter) ? "en" : "dis"]abled ghost writers.", 1) // CHOMPEdit
+		CONFIG_SET(flag/cult_ghostwriter, !CONFIG_GET(flag/cult_ghostwriter))
+		message_admins("Admin [key_name_admin(usr)] has [CONFIG_GET(flag/cult_ghostwriter) ? "en" : "dis"]abled ghost writers.", 1)
 
 /client/proc/toggledrones()
 	set name = "Toggle maintenance drones"
 	set category = "Server.Game" //CHOMPEdit
 	if(!holder)	return
 	if(config)
-		CONFIG_SET(flag/allow_drone_spawn, !CONFIG_GET(flag/allow_drone_spawn)) // CHOMPEdit
-		message_admins("Admin [key_name_admin(usr)] has [CONFIG_GET(flag/allow_drone_spawn) ? "en" : "dis"]abled maintenance drones.", 1) // CHOMPEdit
+		CONFIG_SET(flag/allow_drone_spawn, !CONFIG_GET(flag/allow_drone_spawn))
+		message_admins("Admin [key_name_admin(usr)] has [CONFIG_GET(flag/allow_drone_spawn) ? "en" : "dis"]abled maintenance drones.", 1)
 
 /client/proc/man_up(mob/T as mob in mob_list)
 	set category = "Fun.Do Not" //CHOMPEdit

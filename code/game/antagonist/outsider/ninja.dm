@@ -23,7 +23,7 @@ var/datum/antagonist/ninja/ninjas
 	ninjas = src
 
 /datum/antagonist/ninja/attempt_random_spawn()
-	if(CONFIG_GET(flag/ninjas_allowed)) ..() // CHOMPEdit
+	if(CONFIG_GET(flag/ninjas_allowed)) ..()
 
 /datum/antagonist/ninja/create_objectives(var/datum/mind/ninja)
 
