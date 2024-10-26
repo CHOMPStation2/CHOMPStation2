@@ -65,10 +65,7 @@
 	check_flags = AB_CHECK_RESTRAINED | AB_CHECK_STUNNED | AB_CHECK_CONSCIOUS
 	background_icon = 'icons/effects/actions_mecha.dmi'
 	button_icon = 'icons/effects/actions_mecha.dmi'
-<<<<<<< HEAD
-=======
 	overlay_icon = 'icons/effects/actions_mecha.dmi'
->>>>>>> dc3fd79427 (The final action buttons PR (#16514))
 	var/obj/mecha/chassis
 
 /datum/action/innate/mecha/Destroy()
