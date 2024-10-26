@@ -30,30 +30,15 @@
 /obj/effect/alien/weeds,
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
-"ai" = (
-/turf/template_noop,
-/turf/simulated/shuttle/wall/dark{
-	icon_state = "dark6";
-	name = "Unknown Shuttle"
-	},
-/area/submap/Blackshuttledown)
 "aj" = (
 /turf/simulated/shuttle/wall/dark{
 	icon_state = "dark0";
 	name = "Unknown Shuttle"
 	},
 /area/submap/Blackshuttledown)
-"ak" = (
-/turf/template_noop,
-/turf/simulated/shuttle/wall/dark{
-	icon_state = "dark10";
-	name = "Unknown Shuttle"
-	},
-/area/submap/Blackshuttledown)
 "al" = (
 /obj/structure/shuttle/engine/heater{
-	dir = 4;
-	icon_state = "heater"
+	dir = 4
 	},
 /turf/simulated/shuttle/wall/dark{
 	icon_state = "dark0";
@@ -88,7 +73,6 @@
 /area/submap/Blackshuttledown)
 "ap" = (
 /obj/machinery/door/airlock/external{
-	density = 1;
 	frequency = 1331;
 	id_tag = "merc_shuttle_outer";
 	name = "Ship External Access"
@@ -100,19 +84,16 @@
 /area/submap/Blackshuttledown)
 "aq" = (
 /obj/effect/floor_decal/corner/green/border{
-	dir = 9;
-	icon_state = "bordercolor"
+	dir = 9
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/Blackshuttledown)
 "ar" = (
 /obj/effect/floor_decal/corner/green/border{
-	dir = 1;
-	icon_state = "bordercolor"
+	dir = 1
 	},
 /obj/structure/morgue{
-	dir = 8;
-	icon_state = "morgue1"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/Blackshuttledown)
@@ -121,8 +102,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/green/border{
-	dir = 1;
-	icon_state = "bordercolor"
+	dir = 1
 	},
 /obj/structure/table/standard,
 /obj/random/firstaid,
@@ -135,25 +115,16 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/green/border{
-	dir = 1;
-	icon_state = "bordercolor"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/Blackshuttledown)
 "au" = (
 /obj/machinery/body_scanconsole,
 /obj/effect/floor_decal/corner/green/border{
-	dir = 5;
-	icon_state = "bordercolor"
+	dir = 5
 	},
 /turf/simulated/floor/tiled/white,
-/area/submap/Blackshuttledown)
-"av" = (
-/turf/simulated/floor/tiled/steel,
-/turf/simulated/shuttle/wall/dark{
-	icon_state = "dark5";
-	name = "Unknown Shuttle"
-	},
 /area/submap/Blackshuttledown)
 "aw" = (
 /turf/simulated/floor/tiled/yellow,
@@ -194,8 +165,7 @@
 /area/submap/Blackshuttledown)
 "aB" = (
 /obj/effect/floor_decal/corner/green/border{
-	dir = 8;
-	icon_state = "bordercolor"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/Blackshuttledown)
@@ -218,20 +188,11 @@
 "aF" = (
 /obj/machinery/organ_printer/flesh,
 /obj/effect/floor_decal/corner/green/border{
-	dir = 5;
-	icon_state = "bordercolor"
+	dir = 5
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/Blackshuttledown)
-"aG" = (
-/turf/simulated/floor/tiled/steel,
-/turf/simulated/shuttle/wall/dark{
-	icon_state = "dark9";
-	name = "Unknown Shuttle"
-	},
-/area/submap/Blackshuttledown)
 "aH" = (
-/turf/simulated/floor/tiled/steel,
 /turf/simulated/shuttle/wall/dark{
 	icon_state = "dark6";
 	name = "Unknown Shuttle"
@@ -248,8 +209,7 @@
 /area/submap/Blackshuttledown)
 "aJ" = (
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /obj/structure/closet/crate,
 /obj/item/stolenpackage,
@@ -305,13 +265,10 @@
 /area/submap/Blackshuttledown)
 "aP" = (
 /obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1";
-	pixel_x = 0
+	dir = 4
 	},
 /obj/effect/floor_decal/corner/green/border{
-	dir = 4;
-	icon_state = "bordercolor"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/Blackshuttledown)
@@ -340,9 +297,7 @@
 /area/submap/Blackshuttledown)
 "aU" = (
 /obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1";
-	pixel_x = 0
+	dir = 4
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
@@ -354,8 +309,7 @@
 /obj/structure/table/standard,
 /obj/item/storage/firstaid/surgery,
 /obj/effect/floor_decal/corner/green/border{
-	dir = 10;
-	icon_state = "bordercolor"
+	dir = 10
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/Blackshuttledown)
@@ -387,15 +341,13 @@
 /obj/structure/table/standard,
 /obj/item/storage/box/masks,
 /obj/effect/floor_decal/corner/green/border{
-	dir = 6;
-	icon_state = "bordercolor"
+	dir = 6
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/Blackshuttledown)
 "bb" = (
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1"
+	dir = 8
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
@@ -430,7 +382,6 @@
 /turf/simulated/floor/tiled/white,
 /area/submap/Blackshuttledown)
 "bf" = (
-/turf/simulated/floor/tiled/steel,
 /turf/simulated/shuttle/wall/dark{
 	icon_state = "dark10";
 	name = "Unknown Shuttle"
@@ -482,8 +433,7 @@
 "bn" = (
 /obj/structure/curtain/open/shower/security,
 /obj/structure/window/reinforced/tinted/frosted{
-	dir = 1;
-	icon_state = "fwindow"
+	dir = 1
 	},
 /obj/structure/window/reinforced/tinted/frosted,
 /turf/simulated/floor/tiled/hydro,
@@ -499,8 +449,7 @@
 /area/submap/Blackshuttledown)
 "bp" = (
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /obj/structure/table/steel,
 /obj/random/maintenance/engineering,
@@ -537,8 +486,7 @@
 /area/submap/Blackshuttledown)
 "bs" = (
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1"
+	dir = 8
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -548,9 +496,7 @@
 /area/submap/Blackshuttledown)
 "bt" = (
 /obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1";
-	pixel_x = 0
+	dir = 4
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -573,7 +519,6 @@
 "bw" = (
 /obj/structure/sink{
 	dir = 8;
-	icon_state = "sink";
 	pixel_x = -16
 	},
 /turf/simulated/floor/tiled/hydro,
@@ -723,16 +668,14 @@
 "bS" = (
 /obj/machinery/atmospherics/pipe/tank/oxygen,
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /obj/effect/alien/weeds,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/Blackshuttledown)
 "bT" = (
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1"
+	dir = 8
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 10
@@ -768,9 +711,7 @@
 /area/submap/Blackshuttledown)
 "bX" = (
 /obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1";
-	pixel_x = 0
+	dir = 4
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
@@ -792,13 +733,11 @@
 /area/submap/Blackshuttledown)
 "cb" = (
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /obj/structure/curtain/open/shower/security,
 /obj/structure/window/reinforced/tinted/frosted{
-	dir = 1;
-	icon_state = "fwindow"
+	dir = 1
 	},
 /obj/structure/window/reinforced/tinted/frosted,
 /mob/living/simple_mob/humanoid/merc/ranged/smg/sol{
@@ -808,8 +747,7 @@
 /area/submap/Blackshuttledown)
 "cc" = (
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /obj/structure/bed,
 /turf/simulated/floor/tiled/yellow,
@@ -821,16 +759,9 @@
 /obj/effect/alien/weeds,
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
-"ce" = (
-/obj/structure/bed,
-/obj/item/bedsheet,
-/obj/structure/bed,
-/turf/simulated/floor/tiled/steel,
-/area/submap/Blackshuttledown)
 "cf" = (
 /obj/structure/urinal{
 	dir = 4;
-	icon_state = "urinal";
 	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/hydro,
@@ -842,8 +773,7 @@
 	},
 /obj/structure/curtain,
 /obj/structure/window/reinforced/tinted/frosted{
-	dir = 1;
-	icon_state = "fwindow"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/submap/Blackshuttledown)
@@ -887,14 +817,12 @@
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
 "cp" = (
-/turf/template_noop,
 /turf/simulated/shuttle/wall/dark{
 	icon_state = "dark5";
 	name = "Unknown Shuttle"
 	},
 /area/submap/Blackshuttledown)
 "cq" = (
-/turf/template_noop,
 /turf/simulated/shuttle/wall/dark{
 	icon_state = "dark9";
 	name = "Unknown Shuttle"
@@ -1300,7 +1228,7 @@ bx
 bx
 bG
 aj
-av
+cp
 ab
 ab
 ab
@@ -1338,7 +1266,7 @@ aI
 NI
 bJ
 aj
-av
+cp
 ab
 ab
 ab
@@ -1361,10 +1289,10 @@ ab
 ab
 ad
 ad
-ai
+aH
 aj
 aj
-av
+cp
 aH
 aj
 bb
@@ -1376,7 +1304,7 @@ ct
 Vz
 bT
 aj
-av
+cp
 aH
 aj
 aj
@@ -1509,7 +1437,7 @@ ab
 af
 ab
 ab
-ak
+bf
 aj
 aj
 aN
@@ -1820,7 +1748,7 @@ bu
 bP
 ci
 bY
-ce
+bY
 bY
 bY
 aj
@@ -1990,7 +1918,7 @@ ab
 ab
 ab
 ab
-ai
+aH
 aj
 aj
 aE
@@ -2105,7 +2033,7 @@ aj
 aj
 aj
 aj
-aG
+cq
 ab
 bf
 aj
@@ -2114,7 +2042,7 @@ BR
 uQ
 aD
 aj
-aG
+cq
 ab
 bf
 aj
@@ -2141,7 +2069,7 @@ ab
 aj
 aj
 aj
-aG
+cq
 ab
 ab
 ab
@@ -2150,7 +2078,7 @@ al
 al
 al
 al
-aG
+cq
 ab
 ab
 ab
@@ -2175,7 +2103,7 @@ ad
 ad
 ad
 ab
-ak
+bf
 al
 al
 ab

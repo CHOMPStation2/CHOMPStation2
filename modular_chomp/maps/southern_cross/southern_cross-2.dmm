@@ -3491,7 +3491,7 @@
 	},
 /obj/item/radio/intercom/department/security{
 	dir = 8;
-	icon_override = "secintercom";
+	icon_state = "secintercom";
 	pixel_x = -21
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -11751,7 +11751,7 @@
 	},
 /obj/item/radio/intercom/department/security{
 	dir = 8;
-	icon_override = "secintercom";
+	icon_state = "secintercom";
 	pixel_x = -21
 	},
 /obj/structure/table/reinforced,

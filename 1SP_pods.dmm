@@ -24729,7 +24729,7 @@
 /area/survivalpod/superpose/LoneHome)
 "qaP" = (
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod/superpose/HellCave)
 "qaS" = (
@@ -32663,7 +32663,7 @@
 /area/survivalpod/superpose/GrandLibrary)
 "whZ" = (
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/template_noop)
 "wiQ" = (

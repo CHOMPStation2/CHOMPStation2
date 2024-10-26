@@ -13,7 +13,7 @@
 	name = "Veil of sanity"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "bu" = (
@@ -35,7 +35,7 @@
 	name = "Wires of doubt"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "bG" = (
@@ -54,7 +54,7 @@
 	invisibility = 99
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "bL" = (
@@ -78,7 +78,7 @@
 	name = "Wires of doubt"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "cA" = (
@@ -99,7 +99,7 @@
 	name = "Strings of distress"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "cI" = (
@@ -148,7 +148,7 @@
 	name = "Strings of distress"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "fH" = (
@@ -173,7 +173,7 @@
 	name = "Wires of doubt"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "gW" = (
@@ -227,7 +227,7 @@
 	name = "Wires of doubt"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "hJ" = (
@@ -247,7 +247,7 @@
 	name = "Wires of doubt"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "iK" = (
@@ -267,7 +267,7 @@
 	name = "Veil of sanity"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "lQ" = (
@@ -315,7 +315,7 @@
 	name = "Wires of doubt"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "nA" = (
@@ -407,7 +407,7 @@
 	once = 0
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "sS" = (
@@ -420,7 +420,7 @@
 /obj/effect/map_effect/interval/sound_emitter/geiger/high,
 /obj/effect/map_effect/interval/sound_emitter/thunder,
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "tf" = (
@@ -445,7 +445,7 @@
 	portal_id = 20
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "tt" = (
@@ -503,7 +503,7 @@
 	name = "Veil of sanity"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "wU" = (
@@ -519,7 +519,7 @@
 	name = "Veil of sanity"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "xC" = (
@@ -600,7 +600,7 @@
 	name = "Veil of sanity"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "AR" = (
@@ -617,7 +617,7 @@
 	name = "Veil of sanity"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "Bt" = (
@@ -646,7 +646,7 @@
 	name = "Veil of sanity"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "Cy" = (
@@ -666,7 +666,7 @@
 	name = "Veil of sanity"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "Dn" = (
@@ -707,7 +707,7 @@
 	name = "Wires of doubt"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "Fv" = (
@@ -725,7 +725,7 @@
 	name = "Veil of sanity"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "GI" = (
@@ -758,7 +758,7 @@
 	name = "Strings of distress"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "In" = (
@@ -774,7 +774,7 @@
 	name = "Veil of sanity"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "Iy" = (
@@ -814,7 +814,7 @@
 	name = "Veil of sanity"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "Kb" = (
@@ -854,7 +854,7 @@
 	name = "Strings of distress"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "Lq" = (
@@ -870,7 +870,7 @@
 	name = "Veil of sanity"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "LQ" = (
@@ -892,7 +892,7 @@
 	name = "Veil of sanity"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "LY" = (
@@ -915,7 +915,7 @@
 /area/survivalpod)
 "Mv" = (
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "MT" = (
@@ -956,7 +956,7 @@
 	name = "Strings of distress"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "NV" = (
@@ -967,7 +967,7 @@
 	name = "Veil of sanity"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "PU" = (
@@ -1031,7 +1031,7 @@
 	name = "Wires of doubt"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "Sm" = (
@@ -1077,7 +1077,7 @@
 	once = 0
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "Th" = (
@@ -1092,7 +1092,7 @@
 	name = "Veil of sanity"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "TU" = (
@@ -1148,7 +1148,7 @@
 	name = "Veil of sanity"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "UH" = (
@@ -1165,7 +1165,7 @@
 	name = "Veil of sanity"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "UO" = (
@@ -1213,7 +1213,7 @@
 	name = "Wires of doubt"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "Yn" = (
@@ -1230,7 +1230,7 @@
 	name = "Veil of sanity"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "Yz" = (
@@ -1262,7 +1262,7 @@
 	name = "Strings of distress"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 

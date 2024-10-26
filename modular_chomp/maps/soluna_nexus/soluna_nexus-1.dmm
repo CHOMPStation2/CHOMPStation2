@@ -35385,7 +35385,7 @@
 /obj/structure/filingcabinet/chestdrawer,
 /obj/item/radio/intercom/department/security{
 	dir = 4;
-	icon_override = "secintercom";
+	icon_state = "secintercom";
 	pixel_x = 22;
 	name = "1E-station intercom (Security)"
 	},

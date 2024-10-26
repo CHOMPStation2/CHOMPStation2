@@ -21,9 +21,7 @@
 /area/submap/redshuttledown)
 "cH" = (
 /obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1";
-	pixel_x = 0
+	dir = 4
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
@@ -72,7 +70,6 @@
 /turf/simulated/floor/tiled/white,
 /area/submap/redshuttledown)
 "fV" = (
-/turf/simulated/floor/tiled/steel,
 /turf/simulated/shuttle/wall/dark{
 	icon_state = "dark10";
 	name = "Unknown Shuttle"
@@ -101,8 +98,7 @@
 /obj/structure/table/standard,
 /obj/item/storage/box/masks,
 /obj/effect/floor_decal/corner/green/border{
-	dir = 6;
-	icon_state = "bordercolor"
+	dir = 6
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/redshuttledown)
@@ -121,8 +117,7 @@
 /area/submap/redshuttledown)
 "jh" = (
 /obj/effect/floor_decal/corner/green/border{
-	dir = 8;
-	icon_state = "bordercolor"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/redshuttledown)
@@ -143,13 +138,6 @@
 /obj/machinery/door/blast/regular,
 /turf/simulated/floor/plating,
 /area/submap/redshuttledown)
-"kj" = (
-/obj/structure/bed,
-/obj/item/bedsheet,
-/obj/structure/bed,
-/obj/effect/floor_decal/borderfloor,
-/turf/simulated/floor/tiled/steel,
-/area/submap/redshuttledown)
 "km" = (
 /obj/structure/cliff/automatic{
 	dir = 6
@@ -162,8 +150,7 @@
 	dir = 9
 	},
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
@@ -216,8 +203,7 @@
 "mj" = (
 /obj/machinery/atmospherics/pipe/tank/oxygen,
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /turf/simulated/floor/tiled/yellow,
 /area/submap/redshuttledown)
@@ -240,9 +226,7 @@
 /area/submap/redshuttledown)
 "nk" = (
 /obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1";
-	pixel_x = 0
+	dir = 4
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -340,8 +324,7 @@
 /area/submap/redshuttledown)
 "tn" = (
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /obj/structure/closet/crate,
 /obj/random/grenade/box,
@@ -410,8 +393,7 @@
 /area/submap/redshuttledown)
 "wo" = (
 /obj/machinery/fusion_fuel_injector/mapped{
-	dir = 4;
-	icon_state = "injector0"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/yellow,
 /area/submap/redshuttledown)
@@ -458,9 +440,7 @@
 /area/submap/redshuttledown)
 "wP" = (
 /obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1";
-	pixel_x = 0
+	dir = 4
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
@@ -472,13 +452,6 @@
 	locked = 1
 	},
 /turf/simulated/floor/tiled/steel,
-/area/submap/redshuttledown)
-"wX" = (
-/turf/template_noop,
-/turf/simulated/shuttle/wall/dark{
-	icon_state = "dark10";
-	name = "Unknown Shuttle"
-	},
 /area/submap/redshuttledown)
 "xl" = (
 /obj/structure/table/steel,
@@ -505,16 +478,8 @@
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
 "yv" = (
-/turf/template_noop,
 /turf/simulated/shuttle/wall/dark{
 	icon_state = "dark9";
-	name = "Unknown Shuttle"
-	},
-/area/submap/redshuttledown)
-"za" = (
-/turf/template_noop,
-/turf/simulated/shuttle/wall/dark{
-	icon_state = "dark6";
 	name = "Unknown Shuttle"
 	},
 /area/submap/redshuttledown)
@@ -549,8 +514,7 @@
 /area/submap/redshuttledown)
 "zU" = (
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/submap/redshuttledown)
@@ -560,8 +524,7 @@
 	dir = 10
 	},
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
@@ -587,21 +550,13 @@
 /obj/effect/floor_decal/corner/green/border,
 /turf/simulated/floor/tiled/white,
 /area/submap/redshuttledown)
-"Cu" = (
-/turf/simulated/floor/tiled/steel,
-/turf/simulated/shuttle/wall/dark{
-	icon_state = "dark9";
-	name = "Unknown Shuttle"
-	},
-/area/submap/redshuttledown)
 "Cv" = (
 /turf/template_noop,
 /area/submap/redshuttledown)
 "Cz" = (
 /obj/machinery/organ_printer/flesh,
 /obj/effect/floor_decal/corner/green/border{
-	dir = 5;
-	icon_state = "bordercolor"
+	dir = 5
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/redshuttledown)
@@ -629,8 +584,7 @@
 "EM" = (
 /obj/machinery/body_scanconsole,
 /obj/effect/floor_decal/corner/green/border{
-	dir = 1;
-	icon_state = "bordercolor"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/redshuttledown)
@@ -671,8 +625,7 @@
 /area/submap/redshuttledown)
 "GW" = (
 /obj/effect/floor_decal/corner/green/border{
-	dir = 8;
-	icon_state = "bordercolor"
+	dir = 8
 	},
 /obj/structure/table/standard,
 /obj/item/storage/pill_bottle/combat,
@@ -709,16 +662,14 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/green/border{
-	dir = 1;
-	icon_state = "bordercolor"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/redshuttledown)
 "JN" = (
 /obj/machinery/optable,
 /obj/effect/floor_decal/corner/green/border{
-	dir = 9;
-	icon_state = "bordercolor"
+	dir = 9
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/redshuttledown)
@@ -731,8 +682,7 @@
 /area/submap/redshuttledown)
 "KT" = (
 /obj/structure/shuttle/engine/heater{
-	dir = 4;
-	icon_state = "heater"
+	dir = 4
 	},
 /turf/simulated/shuttle/wall/dark{
 	icon_state = "dark0";
@@ -740,7 +690,6 @@
 	},
 /area/submap/redshuttledown)
 "KX" = (
-/turf/template_noop,
 /turf/simulated/shuttle/wall/dark{
 	icon_state = "dark5";
 	name = "Unknown Shuttle"
@@ -754,8 +703,7 @@
 /area/submap/redshuttledown)
 "LP" = (
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1"
+	dir = 8
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -777,7 +725,6 @@
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
 "Ni" = (
-/turf/simulated/floor/tiled/steel,
 /turf/simulated/shuttle/wall/dark{
 	icon_state = "dark6";
 	name = "Unknown Shuttle"
@@ -834,8 +781,7 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/green/border{
-	dir = 1;
-	icon_state = "bordercolor"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/redshuttledown)
@@ -885,13 +831,6 @@
 /mob/living/simple_mob/mechanical/viscerator/piercing,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/redshuttledown)
-"SH" = (
-/turf/simulated/floor/tiled/steel,
-/turf/simulated/shuttle/wall/dark{
-	icon_state = "dark5";
-	name = "Unknown Shuttle"
-	},
-/area/submap/redshuttledown)
 "To" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 10
@@ -912,15 +851,6 @@
 	dir = 10
 	},
 /turf/template_noop,
-/area/submap/redshuttledown)
-"Vk" = (
-/obj/structure/bed,
-/obj/item/bedsheet,
-/obj/structure/bed,
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
 "VA" = (
 /obj/machinery/door/airlock/glass,
@@ -1004,8 +934,7 @@
 "ZC" = (
 /obj/structure/table/standard,
 /obj/effect/floor_decal/corner/green/border{
-	dir = 10;
-	icon_state = "bordercolor"
+	dir = 10
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/redshuttledown)
@@ -1261,7 +1190,7 @@ jM
 jM
 dd
 ss
-SH
+KX
 Cv
 Cv
 Cv
@@ -1299,7 +1228,7 @@ BA
 Bx
 AD
 ss
-SH
+KX
 Cv
 Cv
 Cv
@@ -1322,10 +1251,10 @@ Cv
 Cv
 Cv
 Cv
-za
+Ni
 ss
 ss
-SH
+KX
 Ni
 ss
 ss
@@ -1337,7 +1266,7 @@ bU
 mR
 ss
 ss
-SH
+KX
 Ni
 ss
 ss
@@ -1470,7 +1399,7 @@ Cv
 Cv
 Cv
 Cv
-wX
+fV
 ss
 ss
 OO
@@ -1551,12 +1480,12 @@ ix
 Ru
 xZ
 ss
-Vk
+MX
 hH
 Eg
 Ow
 hH
-kj
+dL
 ss
 Ii
 Ru
@@ -1951,7 +1880,7 @@ Cv
 Cv
 Cv
 bm
-za
+Ni
 ss
 ss
 WZ
@@ -2066,7 +1995,7 @@ ss
 ss
 ss
 ss
-Cu
+yv
 Cv
 fV
 ss
@@ -2075,7 +2004,7 @@ wo
 wo
 WT
 ss
-Cu
+yv
 Cv
 fV
 ss
@@ -2102,7 +2031,7 @@ Cv
 ss
 ss
 ss
-Cu
+yv
 Cv
 Cv
 Cv
@@ -2111,7 +2040,7 @@ KT
 KT
 KT
 KT
-Cu
+yv
 Cv
 Cv
 Cv
@@ -2136,7 +2065,7 @@ aa
 aa
 rl
 Cv
-wX
+fV
 KT
 KT
 Cv

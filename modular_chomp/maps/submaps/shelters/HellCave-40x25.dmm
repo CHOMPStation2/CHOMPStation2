@@ -271,7 +271,7 @@
 /area/survivalpod/superpose/HellCave)
 "Mv" = (
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod/superpose/HellCave)
 "ML" = (

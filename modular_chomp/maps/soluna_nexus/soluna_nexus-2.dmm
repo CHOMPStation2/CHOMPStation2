@@ -2338,7 +2338,7 @@
 "aeU" = (
 /obj/item/radio/intercom/department/security{
 	dir = 4;
-	icon_override = "secintercom";
+	icon_state = "secintercom";
 	pixel_x = 21
 	},
 /obj/structure/cable{
@@ -2894,7 +2894,7 @@
 	},
 /obj/item/radio/intercom/department/security{
 	dir = 4;
-	icon_override = "secintercom";
+	icon_state = "secintercom";
 	pixel_x = 22;
 	name = "1E-station intercom (Security)"
 	},
@@ -5804,7 +5804,7 @@
 	},
 /obj/item/radio/intercom/department/security{
 	dir = 8;
-	icon_override = "secintercom";
+	icon_state = "secintercom";
 	pixel_x = -22;
 	name = "1W-station intercom (Security)"
 	},
@@ -12642,7 +12642,7 @@
 "aLT" = (
 /obj/item/radio/intercom/department/security{
 	dir = 4;
-	icon_override = "secintercom";
+	icon_state = "secintercom";
 	pixel_x = 22;
 	name = "1E-station intercom (Security)"
 	},
@@ -24768,7 +24768,7 @@
 /obj/structure/table/rack,
 /obj/item/radio/intercom/department/security{
 	dir = 4;
-	icon_override = "secintercom";
+	icon_state = "secintercom";
 	pixel_x = 22;
 	name = "1E-station intercom (Security)"
 	},
@@ -33614,7 +33614,7 @@
 "cfb" = (
 /obj/item/radio/intercom/department/security{
 	dir = 8;
-	icon_override = "secintercom";
+	icon_state = "secintercom";
 	pixel_x = -22;
 	name = "1W-station intercom (Security)"
 	},
@@ -52476,7 +52476,7 @@
 "fld" = (
 /obj/item/radio/intercom/department/security{
 	dir = 4;
-	icon_override = "secintercom";
+	icon_state = "secintercom";
 	pixel_x = 22;
 	name = "1E-station intercom (Security)"
 	},
@@ -82688,7 +82688,7 @@
 	},
 /obj/item/radio/intercom/department/security{
 	dir = 8;
-	icon_override = "secintercom";
+	icon_state = "secintercom";
 	pixel_x = -22;
 	name = "1W-station intercom (Security)"
 	},
@@ -96135,7 +96135,7 @@
 	},
 /obj/item/radio/intercom/department/security{
 	dir = 8;
-	icon_override = "secintercom";
+	icon_state = "secintercom";
 	pixel_x = -22;
 	name = "1W-station intercom (Security)"
 	},

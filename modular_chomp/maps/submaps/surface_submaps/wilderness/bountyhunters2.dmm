@@ -32,8 +32,7 @@
 /area/submap/BountyHunters)
 "cI" = (
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/concrete,
@@ -112,7 +111,6 @@
 /area/submap/BountyHunters)
 "nD" = (
 /obj/structure/table/sifwoodentable,
-/obj/structure/table/sifwoodentable,
 /obj/machinery/light/small{
 	dir = 8
 	},
@@ -138,8 +136,7 @@
 /obj/structure/table/steel,
 /obj/random/maintenance/foodstuff,
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/concrete,
@@ -193,7 +190,6 @@
 	dir = 1
 	},
 /obj/structure/window/reinforced,
-/obj/structure/window/reinforced,
 /obj/machinery/door/blast/regular{
 	id = "bountycellB"
 	},
@@ -241,7 +237,6 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "PAPC";
-	pixel_x = 0;
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
@@ -256,9 +251,6 @@
 	id = "bountycellB"
 	},
 /obj/structure/table/steel,
-/obj/machinery/light/small{
-	dir = 4
-	},
 /obj/machinery/light/small{
 	dir = 4
 	},
@@ -340,8 +332,7 @@
 /area/submap/BountyHunters)
 "IW" = (
 /obj/machinery/power/terminal{
-	dir = 1;
-	icon_state = "term"
+	dir = 1
 	},
 /obj/structure/cable{
 	d2 = 4;
@@ -353,8 +344,7 @@
 "Jn" = (
 /obj/structure/railing,
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/concrete,
@@ -389,9 +379,6 @@
 /area/submap/BountyHunters)
 "OS" = (
 /obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -438,14 +425,8 @@
 /area/submap/BountyHunters)
 "SL" = (
 /obj/structure/table/sifwoodentable,
-/obj/structure/table/sifwoodentable,
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
-	},
-/obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /obj/random/maintenance/morestuff,
 /obj/effect/floor_decal/corner/grey/diagonal,
@@ -494,8 +475,7 @@
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
-	icon_state = "4-8";
-	pixel_x = 0
+	icon_state = "4-8"
 	},
 /mob/living/simple_mob/humanoid/merc/ranged/sniper{
 	name = "bounty sniper"
@@ -518,16 +498,6 @@
 /obj/machinery/door/blast/regular{
 	id = "bountycellA"
 	},
-/turf/simulated/floor/concrete,
-/area/submap/BountyHunters)
-"ZM" = (
-/obj/structure/railing,
-/obj/structure/railing,
-/obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
-	},
-/obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
 
@@ -1065,7 +1035,7 @@ mf
 rC
 rC
 rC
-ZM
+Jn
 PK
 PK
 PK
