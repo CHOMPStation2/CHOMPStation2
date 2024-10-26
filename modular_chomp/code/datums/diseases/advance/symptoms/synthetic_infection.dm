@@ -21,7 +21,7 @@ Bonus
     resistance = 2
     stage_speed = 0
     transmittable = 1
-    level = 2
+    level = 5
     severity = 3
     id = "synthetic_infection"
 

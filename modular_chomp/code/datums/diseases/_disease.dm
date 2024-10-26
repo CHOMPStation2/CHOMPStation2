@@ -84,11 +84,7 @@ GLOBAL_LIST_INIT(diseases, subtypesof(/datum/disease))
 
 	var/cures_found = 0
 	for(var/C_id in cures)
-		if(C_id == "ethanol")
-			for(var/datum/reagent/ethanol/booze in affected_mob.reagents.reagent_list)
-				cures_found++
-				break
-		else if(affected_mob.reagents.has_reagent(C_id))
+		if(affected_mob.reagents.has_reagent(C_id))
 			cures_found++
 
 	if(needs_all_cures && cures_found < length(cures))

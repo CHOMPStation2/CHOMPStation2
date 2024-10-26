@@ -123,3 +123,11 @@
 		var/datum/disease/advance/D = locate(/datum/disease/advance) in B.data["viruses"]
 		if(D)
 			D.Devolve()
+
+/decl/chemical_reaction/instant/antibodies
+	name = "Antibodies"
+	id = "antibodiesmix"
+	result = "antibodies"
+	required_reagents = list("vaccine")
+	catalysts = list("inaprovaline" = 0.1)
+	result_amount = 0.5

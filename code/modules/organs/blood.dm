@@ -303,7 +303,7 @@ var/const/CE_STABLE_THRESHOLD = 0.5
 	// CHOMPEdit Start - Virology Rework
 	var/list/sniffles = injected.data["viruses"]
 	for(var/ID in sniffles)
-		var/datum/disease/D = sniffles[ID]
+		var/datum/disease/D = ID
 		if((D.spread_flags & SPECIAL) || (D.spread_flags & NON_CONTAGIOUS)) // You can't put non-contagius diseases in blood, but just in case
 			continue
 		ContractDisease(D)

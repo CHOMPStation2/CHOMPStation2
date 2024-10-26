@@ -79,7 +79,7 @@
 			for(var/ID in vlist)
 				if(!ID)
 					continue
-				var/datum/disease/D = vlist[ID]
+				var/datum/disease/D = ID
 				if((D.spread_flags & SPECIAL) || (D.spread_flags & NON_CONTAGIOUS))
 					continue
 				M.ContractDisease(D)
@@ -98,12 +98,12 @@
 		var/list/vlist = data["viruses"]
 		if(vlist.len)
 			for(var/ID in vlist)
-				var/datum/disease/D = vlist[ID]
+				var/datum/disease/D = ID
 				if((D.spread_flags & SPECIAL) || (D.spread_flags & NON_CONTAGIOUS))
 					continue
 				M.ContractDisease(D)
-	if(data && data["antibodies"])
-		M.antibodies |= data["antibodies"]
+	if(data && data["resistances"])
+		M.resistances |= data["resistances"]
 
 /datum/reagent/blood/mix_data(newdata, newamount)
 	if(!data || !newdata)

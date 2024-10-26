@@ -221,21 +221,22 @@ GLOBAL_LIST_INIT(advance_cures, list(
 		else
 			severity = "Unknown"
 
-// Will generate a random cure, the less resistance the symptoms have, the harder the cure.
 /datum/disease/advance/proc/GenerateCure(list/properties = list())
     if(properties && length(properties))
-        // Generate a list of all reagents
+        // Generate a list of all reagent types
         var/list/reagent_list = typesof(/datum/reagent)
 
         // Determine the resistance level to select the cure
         var/res = clamp(properties["resistance"] - (length(symptoms) / 2), 1, length(reagent_list))
-        cures = list(reagent_list[res])
 
-        // Get the cure name from the reagent path
-        var/datum/reagent/D = cures[1]
-        cure_text = D.name
+        var/datum/reagent/D = reagent_list[res]
+
+        if(D)
+            cures = list(D.id)
+            cure_text = D.name
 
     return
+
 
 
 // Randomly generate a symptom, has a chance to lose or gain a symptom.

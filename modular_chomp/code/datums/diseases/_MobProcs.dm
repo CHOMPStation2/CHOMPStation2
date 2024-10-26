@@ -69,13 +69,13 @@
 	if(D.spread_flags & CONTACT_HANDS)
 		head_ch = 0
 		body_ch = 0
-		hands_ch = 0
+		hands_ch = 100
 		feet_ch = 0
 	if(D.spread_flags & CONTACT_FEET)
 		head_ch = 0
 		body_ch = 0
 		hands_ch = 0
-		feet_ch = 0
+		feet_ch = 100
 
 	if(prob(15/D.permeability_mod))
 		return
@@ -83,7 +83,14 @@
 	if(nutrition > 300 && prob(nutrition/10))
 		return
 
-	var/target_zone = pick(head_ch;1,body_ch;2,hands_ch;3,feet_ch;4)
+	var/list/zone_weights = list(
+		1 = head_ch,
+		2 = body_ch,
+		3 = hands_ch,
+		4 = feet_ch
+		)
+
+	var/target_zone = pick(zone_weights)
 
 	if(ishuman(src))
 		var/mob/living/carbon/human/H = src

@@ -316,7 +316,6 @@
 			english_symptoms += S.name
 		var/symtoms = english_list(english_symptoms)
 
-
 		var/signature
 		if(tgui_alert(user, "Would you like to add your signature?", "Signature", list("Yes","No")) == "Yes")
 			signature = "<font face=\"Times New Roman\"><i>[user ? user.real_name : "Anonymous"]</i></font>"
@@ -372,7 +371,7 @@
 		beaker = I
 		beaker.loc = src
 		to_chat(usr, span_notice("You add the beaker to the machine."))
-		SStgui.update_uis(src, TRUE)
+		update_tgui_static_data(user)
 		icon_state = "pandemic1"
 	else
 		return ..()
