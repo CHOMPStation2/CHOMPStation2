@@ -29,8 +29,11 @@
 
 #define CEILING(x, y) ( -round(-(x) / (y)) * (y) )
 
+<<<<<<< HEAD
 #define ROUND_UP(x) ( -round(-(x))) // CHOMPEdit
 
+=======
+>>>>>>> aa06b5d8d0 (Fixed 2 static lists (#16525))
 // round() acts like floor(x, 1) by default but can't handle other values
 #define FLOOR(x, y) ( round((x) / (y)) * (y) )
 
