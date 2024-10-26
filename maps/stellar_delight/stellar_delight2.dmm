@@ -2883,17 +2883,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/port)
-"fS" = (
-/obj/structure/cable/blue{
-	icon_state = "4-8"
-	},
-/obj/item/book/manual/command_guide,
-/obj/item/book/manual/standard_operating_procedure,
-/obj/item/book/manual/security_space_law,
-/obj/item/book/manual/sd_guide,
-/obj/structure/closet/walllocker_double/command/north,
-/turf/simulated/floor/wood,
-/area/crew_quarters/captain)
 "fT" = (
 /obj/structure/table/reinforced,
 /obj/fiftyspawner/steel,
@@ -6054,26 +6043,6 @@
 /obj/item/communicator,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/locker)
-"mH" = (
-/obj/structure/table/steel_reinforced,
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/item/book/manual/security_space_law,
-/obj/item/folder/red,
-/obj/item/folder/blue,
-/obj/machinery/power/apc/angled{
-	dir = 8;
-	name = "night shift APC";
-	nightshift_setting = 2
-	},
-/obj/structure/cable/blue{
-	icon_state = "0-2"
-	},
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/effect/landmark/vermin,
-/turf/simulated/floor/wood,
-/area/stellardelight/deck2/briefingroom)
 "mI" = (
 /turf/simulated/wall/bay/r_wall/steel,
 /area/maintenance/stellardelight/deck2/atmos)
@@ -6296,6 +6265,21 @@
 /obj/effect/floor_decal/steeldecal/steel_decals10,
 /turf/simulated/floor/tiled/eris/white/cargo,
 /area/stellardelight/deck2/triage)
+"nk" = (
+/obj/structure/bookcase,
+/obj/item/book/manual/anomaly_spectroscopy,
+/obj/item/book/manual/anomaly_testing,
+/obj/item/book/manual/materials_chemistry_analysis,
+/obj/item/book/manual/resleeving,
+/obj/item/book/manual/standard_operating_procedure,
+/obj/item/book/manual/wiki/security_space_law,
+/obj/item/book/manual/command_guide,
+/obj/item/book/manual,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/medical/psych)
 "nm" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
@@ -7891,6 +7875,26 @@
 	},
 /turf/simulated/floor,
 /area/stellardelight/deck2/aftport)
+"qU" = (
+/obj/structure/table/steel_reinforced,
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/item/book/manual/wiki/security_space_law,
+/obj/item/folder/red,
+/obj/item/folder/blue,
+/obj/machinery/power/apc/angled{
+	dir = 8;
+	name = "night shift APC";
+	nightshift_setting = 2
+	},
+/obj/structure/cable/blue{
+	icon_state = "0-2"
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/landmark/vermin,
+/turf/simulated/floor/wood,
+/area/stellardelight/deck2/briefingroom)
 "qV" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -9024,6 +9028,17 @@
 	},
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck2/starboardsolars)
+"tx" = (
+/obj/structure/cable/blue{
+	icon_state = "4-8"
+	},
+/obj/item/book/manual/command_guide,
+/obj/item/book/manual/standard_operating_procedure,
+/obj/item/book/manual/wiki/security_space_law,
+/obj/item/book/manual/sd_guide,
+/obj/structure/closet/walllocker_double/command/north,
+/turf/simulated/floor/wood,
+/area/crew_quarters/captain)
 "ty" = (
 /obj/effect/floor_decal/industrial/danger{
 	dir = 8
@@ -9119,16 +9134,6 @@
 	},
 /turf/simulated/floor/glass/reinforced,
 /area/stellardelight/deck2/port)
-"tM" = (
-/obj/structure/table/rack,
-/obj/structure/bed/chair/wheelchair{
-	dir = 4
-	},
-/obj/machinery/camera/network/medbay{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/eris/white/bluecorner,
-/area/medical/cmostore)
 "tN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -18645,6 +18650,16 @@
 /obj/item/pickaxe,
 /turf/simulated/floor/tiled/eris/dark/orangecorner,
 /area/engineering/locker_room)
+"Pa" = (
+/obj/structure/table/rack,
+/obj/structure/bed/chair/wheelchair{
+	dir = 4
+	},
+/obj/machinery/camera/network/medbay{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner,
+/area/medical/cmostore)
 "Pb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
 	dir = 6
@@ -22600,21 +22615,6 @@
 /obj/effect/landmark/start/medical,
 /turf/simulated/floor/tiled/eris/white/bluecorner,
 /area/medical/cmostore)
-"XZ" = (
-/obj/structure/bookcase,
-/obj/item/book/manual/anomaly_spectroscopy,
-/obj/item/book/manual/anomaly_testing,
-/obj/item/book/manual/materials_chemistry_analysis,
-/obj/item/book/manual/resleeving,
-/obj/item/book/manual/standard_operating_procedure,
-/obj/item/book/manual/security_space_law,
-/obj/item/book/manual/command_guide,
-/obj/item/book/manual,
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 1
-	},
-/turf/simulated/floor/wood,
-/area/medical/psych)
 "Ya" = (
 /obj/machinery/atmospherics/pipe/simple/visible/universal{
 	name = "Air to Distro"
@@ -31557,7 +31557,7 @@ qn
 hC
 Dx
 yo
-XZ
+nk
 Hr
 Oj
 Ht
@@ -32394,7 +32394,7 @@ fV
 nK
 zH
 xd
-mH
+qU
 Ad
 rF
 GV
@@ -32563,7 +32563,7 @@ EU
 QP
 QN
 Zi
-tM
+Pa
 ko
 Ia
 XY
@@ -34100,7 +34100,7 @@ gC
 rN
 rN
 rN
-fS
+tx
 uP
 IV
 IV

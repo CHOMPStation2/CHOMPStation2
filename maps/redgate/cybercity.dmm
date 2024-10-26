@@ -64,6 +64,14 @@
 	},
 /turf/simulated/floor/carpet/brown,
 /area/redgate/city/hotel)
+"aiz" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/railing,
+/obj/structure/flora/lily3,
+/turf/simulated/floor/water/indoors,
+/area/redgate/city/spa)
 "aiC" = (
 /obj/structure/table/woodentable,
 /turf/simulated/floor/wood,
@@ -376,6 +384,15 @@
 /obj/random/maintenance/foodstuff,
 /turf/simulated/floor/outdoors/sidewalk/slab/city,
 /area/redgate/city/streets)
+"aDt" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/simulated/floor/water/indoors,
+/area/redgate/city/spa)
 "aDw" = (
 /obj/machinery/appliance/cooker/oven,
 /turf/simulated/floor/tiled/white,
@@ -1757,15 +1774,6 @@
 "cvO" = (
 /turf/simulated/floor/tiled/neutral,
 /area/redgate/city/house1)
-"cwc" = (
-/obj/structure/railing{
-	dir = 8
-	},
-/obj/structure/railing{
-	dir = 1
-	},
-/turf/simulated/floor/water/indoors,
-/area/redgate/city/spa)
 "cxg" = (
 /obj/structure/flora/tree/dead{
 	desc = "It's dead though.";
@@ -3353,6 +3361,10 @@
 /obj/structure/table/alien/blue,
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/redgate/city/lasertag)
+"eDb" = (
+/obj/structure/table/standard,
+/turf/simulated/floor/tiled/white,
+/area/redgate/city/scughouse)
 "eDj" = (
 /obj/machinery/atm{
 	pixel_y = 30
@@ -4283,6 +4295,10 @@
 "fMn" = (
 /turf/simulated/floor/wood,
 /area/redgate/city/sims)
+"fMV" = (
+/obj/structure/closet/secure_closet/engineering_electrical/double,
+/turf/simulated/floor/tiled/eris/dark/orangecorner,
+/area/redgate/city/engine)
 "fNc" = (
 /turf/simulated/floor/wood/broken,
 /area/redgate/city/crates)
@@ -5197,14 +5213,6 @@
 /obj/random/mainttoyloot,
 /turf/simulated/floor/wood/alt/tile/broken,
 /area/redgate/city/streets)
-"gZv" = (
-/obj/structure/railing{
-	dir = 8
-	},
-/obj/structure/bonfire/permanent,
-/obj/effect/mist,
-/turf/simulated/floor/water/indoors,
-/area/redgate/city/spa)
 "gZN" = (
 /turf/simulated/floor/tiled/freezer,
 /area/redgate/city/laundry)
@@ -5292,13 +5300,6 @@
 	},
 /turf/simulated/floor/tiled/eris/cafe,
 /area/redgate/city/offlicense)
-"heW" = (
-/obj/structure/railing{
-	dir = 1
-	},
-/obj/structure/flora/lily3,
-/turf/simulated/floor/water/indoors,
-/area/redgate/city/spa)
 "hff" = (
 /obj/structure/undies_wardrobe,
 /turf/simulated/floor/wood,
@@ -6162,12 +6163,6 @@
 /obj/item/electronic_assembly/large/default,
 /turf/simulated/floor/tiled/dark,
 /area/redgate/city/workshop)
-"imV" = (
-/obj/structure/railing{
-	dir = 1
-	},
-/turf/simulated/floor/water/indoors,
-/area/redgate/city/spa)
 "inb" = (
 /obj/machinery/door/airlock/multi_tile/glass{
 	name = "EMT entrance"
@@ -6263,6 +6258,13 @@
 "ivI" = (
 /turf/simulated/floor/grass,
 /area/redgate/city/teppi)
+"ivQ" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/flora/lily3,
+/turf/simulated/floor/water/indoors,
+/area/redgate/city/spa)
 "iwm" = (
 /obj/structure/prop/machine/tgmc_console3,
 /turf/simulated/floor/tiled/milspec,
@@ -7253,23 +7255,6 @@
 /obj/structure/table/fancyblack,
 /turf/simulated/floor/tiled/yellow,
 /area/redgate/city/casino)
-"jGZ" = (
-/obj/structure/closet/wardrobe/chemistry_white,
-/obj/item/storage/bag/chemistry,
-/obj/item/clothing/accessory/solgov/department/research/jumper,
-/obj/item/clothing/accessory/solgov/department/research/jumper,
-/obj/item/clothing/accessory/solgov/department/research/jumper,
-/obj/item/clothing/accessory/solgov/department/research/jumper,
-/obj/item/clothing/accessory/solgov/department/research/jumper,
-/obj/item/clothing/suit/storage/toggle/labcoat,
-/obj/item/clothing/suit/storage/toggle/labcoat,
-/obj/item/clothing/suit/storage/toggle/labcoat,
-/obj/item/clothing/suit/storage/toggle/labcoat,
-/obj/item/clothing/suit/storage/toggle/labcoat,
-/obj/item/clothing/suit/storage/toggle/labcoat,
-/obj/item/clothing/suit/storage/toggle/labcoat,
-/turf/simulated/floor/tiled/white,
-/area/redgate/city/science)
 "jHD" = (
 /obj/machinery/light/flicker,
 /turf/simulated/floor/tiled/white,
@@ -7345,12 +7330,6 @@
 	},
 /turf/simulated/floor/wood/alt,
 /area/redgate/city/restaurant)
-"jNC" = (
-/obj/structure/table/alien,
-/turf/simulated/shuttle/floor/alienplating/blue/half{
-	dir = 1
-	},
-/area/redgate/city/cards)
 "jND" = (
 /obj/structure/railing/grey{
 	dir = 1
@@ -7612,6 +7591,12 @@
 /obj/structure/railing/grey,
 /turf/simulated/floor/water/indoors,
 /area/redgate/city/waterworks)
+"keo" = (
+/obj/structure/table/alien,
+/turf/simulated/shuttle/floor/alienplating/blue/half{
+	dir = 1
+	},
+/area/redgate/city/cards)
 "keS" = (
 /obj/machinery/light,
 /turf/simulated/floor/wood,
@@ -8371,13 +8356,6 @@
 /obj/item/modular_computer/laptop/preset/custom_loadout/cheap,
 /turf/simulated/floor/tiled/white,
 /area/redgate/city/hospital)
-"lah" = (
-/obj/structure/railing,
-/obj/structure/railing{
-	dir = 4
-	},
-/turf/simulated/floor/water/indoors,
-/area/redgate/city/spa)
 "lbi" = (
 /obj/structure/table/rack,
 /obj/item/paint_palette,
@@ -8690,13 +8668,6 @@
 "lud" = (
 /turf/simulated/floor/tiled/kafel_full/blue,
 /area/redgate/city/pizza)
-"luj" = (
-/obj/structure/table/woodentable,
-/obj/item/book/manual/medical_diagnostics_manual{
-	pixel_y = 7
-	},
-/turf/simulated/floor/wood,
-/area/redgate/city/house2)
 "luE" = (
 /obj/structure/bed/chair/sofa/left/beige{
 	dir = 4
@@ -9519,6 +9490,14 @@
 /obj/item/coin/gold,
 /turf/simulated/floor/tiled/techfloor,
 /area/redgate/city/casino)
+"mAE" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/bonfire/permanent,
+/obj/effect/mist,
+/turf/simulated/floor/water/indoors,
+/area/redgate/city/spa)
 "mBu" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 4
@@ -9724,6 +9703,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/redgate/city/hospital)
+"mNf" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/simulated/floor/water/indoors,
+/area/redgate/city/spa)
 "mNg" = (
 /obj/structure/fitness/boxing_ropes/bottom,
 /obj/structure/fitness/boxing_ropes/turnbuckle{
@@ -9805,15 +9790,6 @@
 "mRu" = (
 /turf/simulated/floor/water/digestive_enzymes,
 /area/redgate/city/waterworks)
-"mRD" = (
-/obj/structure/railing{
-	dir = 1
-	},
-/obj/structure/railing{
-	dir = 4
-	},
-/turf/simulated/floor/water/indoors,
-/area/redgate/city/spa)
 "mSf" = (
 /obj/structure/bed/padded,
 /obj/item/bedsheet/purple,
@@ -9947,6 +9923,13 @@
 /obj/random/medical,
 /turf/simulated/floor/tiled/white,
 /area/redgate/city/pharmacy)
+"nbG" = (
+/obj/structure/table/woodentable,
+/obj/item/book/manual/wiki/medical_diagnostics_manual{
+	pixel_y = 7
+	},
+/turf/simulated/floor/wood,
+/area/redgate/city/house2)
 "nca" = (
 /obj/random/carp_plushie,
 /turf/simulated/floor/carpet/purple,
@@ -10670,6 +10653,14 @@
 	},
 /turf/simulated/floor/water/indoors,
 /area/redgate/city/waterworks)
+"ocQ" = (
+/obj/effect/fake_sun{
+	do_sun = 0;
+	do_weather = 1;
+	weather_visuals_icon_state = "storm"
+	},
+/turf/simulated/wall/tgmc/durawall,
+/area/redgate/city/streets)
 "odl" = (
 /obj/effect/floor_decal/corner/red/border,
 /obj/machinery/light,
@@ -11131,6 +11122,13 @@
 /obj/item/storage/box/donut,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/redgate/city/supermarket)
+"oGO" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/flora/lily1,
+/turf/simulated/floor/water/indoors,
+/area/redgate/city/spa)
 "oHL" = (
 /obj/effect/floor_decal/spline/fancy,
 /turf/simulated/floor/water/ocean,
@@ -11410,6 +11408,14 @@
 /obj/item/clothing/under/dress/vneck,
 /turf/simulated/floor/tiled/white,
 /area/redgate/city/clotheshop)
+"oXk" = (
+/obj/structure/bonfire/permanent,
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/effect/mist,
+/turf/simulated/floor/water/indoors,
+/area/redgate/city/spa)
 "oXo" = (
 /turf/simulated/wall/tgmc/window/darkwall,
 /area/redgate/city/bar1)
@@ -12838,14 +12844,6 @@
 /obj/machinery/chemical_dispenser/bar_alc,
 /turf/simulated/floor/wood/alt/tile,
 /area/redgate/city/bar2)
-"qKc" = (
-/obj/structure/railing{
-	dir = 8
-	},
-/obj/structure/railing,
-/obj/structure/flora/lily3,
-/turf/simulated/floor/water/indoors,
-/area/redgate/city/spa)
 "qKl" = (
 /obj/machinery/computer{
 	dir = 4
@@ -13028,6 +13026,13 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/redgate/city/workshop)
+"qVd" = (
+/obj/structure/railing,
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/floor/water/indoors,
+/area/redgate/city/spa)
 "qVN" = (
 /obj/structure/closet,
 /obj/random/mainttoyloot/nofail,
@@ -13578,14 +13583,6 @@
 /obj/structure/bed/chair/wood,
 /turf/simulated/floor/carpet/blue,
 /area/redgate/city/house3)
-"rMi" = (
-/obj/effect/fake_sun{
-	do_sun = 0;
-	do_weather = 1;
-	weather_visuals_icon_state = "storm"
-	},
-/turf/simulated/wall/tgmc/durawall,
-/area/redgate/city/streets)
 "rMS" = (
 /obj/effect/floor_decal/spline/plain/corner{
 	dir = 8
@@ -14239,10 +14236,6 @@
 	},
 /turf/simulated/floor/carpet/brown,
 /area/redgate/city/tarot)
-"sAV" = (
-/obj/structure/table/standard,
-/turf/simulated/floor/tiled/white,
-/area/redgate/city/scughouse)
 "sCb" = (
 /obj/structure/table/woodentable,
 /obj/random/maintenance/clean,
@@ -14357,13 +14350,6 @@
 	},
 /turf/simulated/floor/outdoors/sidewalk/slab/city,
 /area/redgate/city/streets)
-"sMI" = (
-/obj/structure/railing{
-	dir = 1
-	},
-/obj/structure/flora/lily1,
-/turf/simulated/floor/water/indoors,
-/area/redgate/city/spa)
 "sML" = (
 /obj/machinery/door/airlock/glass,
 /turf/simulated/floor/tiled/neutral,
@@ -15547,10 +15533,6 @@
 /obj/machinery/cash_register,
 /turf/simulated/floor/wood/alt,
 /area/redgate/city/cafe)
-"uoW" = (
-/obj/structure/closet/secure_closet/engineering_electrical/double,
-/turf/simulated/floor/tiled/eris/dark/orangecorner,
-/area/redgate/city/engine)
 "upg" = (
 /obj/structure/bed/chair/sofa/corp/corner,
 /turf/simulated/floor/carpet/gaycarpet,
@@ -17191,6 +17173,23 @@
 /obj/random/snack,
 /turf/simulated/floor/tiled/white,
 /area/redgate/city/house12)
+"wtM" = (
+/obj/structure/closet/wardrobe/chemistry_white,
+/obj/item/storage/bag/chemistry,
+/obj/item/clothing/accessory/solgov/department/research/jumper,
+/obj/item/clothing/accessory/solgov/department/research/jumper,
+/obj/item/clothing/accessory/solgov/department/research/jumper,
+/obj/item/clothing/accessory/solgov/department/research/jumper,
+/obj/item/clothing/accessory/solgov/department/research/jumper,
+/obj/item/clothing/suit/storage/toggle/labcoat,
+/obj/item/clothing/suit/storage/toggle/labcoat,
+/obj/item/clothing/suit/storage/toggle/labcoat,
+/obj/item/clothing/suit/storage/toggle/labcoat,
+/obj/item/clothing/suit/storage/toggle/labcoat,
+/obj/item/clothing/suit/storage/toggle/labcoat,
+/obj/item/clothing/suit/storage/toggle/labcoat,
+/turf/simulated/floor/tiled/white,
+/area/redgate/city/science)
 "wtY" = (
 /obj/structure/dirtybed,
 /turf/simulated/floor/wood/alt,
@@ -17504,20 +17503,21 @@
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/redgate/city/waterworks)
+"wRj" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/floor/water/indoors,
+/area/redgate/city/spa)
 "wRp" = (
 /obj/structure/table/rack,
 /obj/item/storage/box/lights/mixed,
 /obj/machinery/light,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/redgate/city/supermarket)
-"wSa" = (
-/obj/structure/bonfire/permanent,
-/obj/structure/railing{
-	dir = 8
-	},
-/obj/effect/mist,
-/turf/simulated/floor/water/indoors,
-/area/redgate/city/spa)
 "wSj" = (
 /obj/structure/bed/chair/sofa/purp{
 	dir = 1
@@ -17597,13 +17597,6 @@
 	},
 /turf/simulated/floor/outdoors/sidewalk/slab/city,
 /area/redgate/city/streets)
-"wWS" = (
-/obj/structure/railing{
-	dir = 8
-	},
-/obj/effect/mist,
-/turf/simulated/floor/water/indoors,
-/area/redgate/city/spa)
 "wXw" = (
 /obj/structure/table/fancyblack,
 /obj/machinery/door/window/eastright{
@@ -17958,6 +17951,13 @@
 	},
 /turf/simulated/floor/wood,
 /area/redgate/city/house2)
+"xDi" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/effect/mist,
+/turf/simulated/floor/water/indoors,
+/area/redgate/city/spa)
 "xDA" = (
 /obj/machinery/light{
 	dir = 1
@@ -18583,7 +18583,7 @@ oRI
 oRI
 oRI
 oRI
-rMi
+ocQ
 "}
 (2,1,1) = {"
 oRI
@@ -19385,7 +19385,7 @@ nqa
 kog
 yeN
 kSZ
-jNC
+keo
 tfH
 tfH
 cba
@@ -20841,7 +20841,7 @@ nqa
 oiA
 erI
 erI
-uoW
+fMV
 cMR
 oiA
 sUA
@@ -22537,8 +22537,8 @@ ifu
 vzq
 iNH
 otK
-cwc
-qKc
+aDt
+aiz
 otK
 qwc
 nqa
@@ -22679,7 +22679,7 @@ qwc
 qwc
 qwc
 wBN
-sMI
+oGO
 vbO
 mFA
 qwc
@@ -22821,7 +22821,7 @@ frf
 vzq
 qwc
 otK
-imV
+mNf
 vbO
 otK
 qwc
@@ -22963,7 +22963,7 @@ ifu
 vzq
 iNH
 otK
-imV
+mNf
 xAj
 otK
 qwc
@@ -23105,7 +23105,7 @@ qwc
 qwc
 qwc
 otK
-imV
+mNf
 vbO
 otK
 qwc
@@ -23247,7 +23247,7 @@ aTW
 otK
 otK
 otK
-heW
+ivQ
 vbO
 otK
 qwc
@@ -23389,7 +23389,7 @@ otK
 oJq
 otK
 otK
-imV
+mNf
 qdE
 otK
 qwc
@@ -23434,7 +23434,7 @@ fpI
 fpI
 vfL
 fpI
-jGZ
+wtM
 rdM
 hEO
 kWt
@@ -23531,8 +23531,8 @@ bcA
 cRW
 cfu
 otK
-mRD
-lah
+wRj
+qVd
 mFA
 qwc
 nqa
@@ -23800,7 +23800,7 @@ wCC
 vDl
 qAi
 raL
-luj
+nbG
 atY
 gYX
 atY
@@ -24218,7 +24218,7 @@ cYD
 eAp
 eAp
 iVK
-sAV
+eDb
 iPk
 nqa
 raL
@@ -24663,13 +24663,13 @@ gcn
 iLu
 nqa
 qwc
-wWS
-gZv
-wWS
+xDi
+mAE
+xDi
 qwc
-wWS
-wSa
-wWS
+xDi
+oXk
+xDi
 qwc
 nqa
 nqa

@@ -24,9 +24,9 @@
 		if("run")
 			if(drowsyness > 0)
 				. += 6
-			. += CONFIG_GET(number/run_speed) // CHOMPEdit
+			. += CONFIG_GET(number/run_speed)
 		if("walk")
-			. += CONFIG_GET(number/walk_speed) // CHOMPEdit
+			. += CONFIG_GET(number/walk_speed)
 
 /client/proc/client_dir(input, direction=-1)
 	return turn(input, direction*dir2angle(dir))

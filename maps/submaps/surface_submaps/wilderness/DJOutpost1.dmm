@@ -159,14 +159,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/submap/DJOutpost1)
-"x" = (
-/obj/structure/bookcase,
-/obj/item/book/codex/lore/vir,
-/obj/item/book/manual/excavation,
-/obj/item/book/manual/engineering_construction,
-/obj/item/storage/bible,
-/turf/simulated/floor/wood,
-/area/submap/DJOutpost1)
 "y" = (
 /obj/item/storage/toolbox/mechanical,
 /turf/simulated/floor/wood,
@@ -305,6 +297,14 @@
 /obj/machinery/portable_atmospherics/hydroponics,
 /turf/simulated/floor/wood,
 /area/submap/DJOutpost1)
+"Y" = (
+/obj/structure/bookcase,
+/obj/item/book/codex/lore/vir,
+/obj/item/book/manual/excavation,
+/obj/item/book/manual/wiki/engineering_construction,
+/obj/item/storage/bible,
+/turf/simulated/floor/wood,
+/area/submap/DJOutpost1)
 
 (1,1,1) = {"
 a
@@ -398,7 +398,7 @@ e
 e
 e
 q
-x
+Y
 b
 e
 e

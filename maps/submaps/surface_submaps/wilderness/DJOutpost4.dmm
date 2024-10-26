@@ -206,13 +206,6 @@
 /obj/item/book/codex/lore/robutt,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DJOutpost1)
-"aF" = (
-/obj/structure/bookcase,
-/obj/item/book/codex/lore/vir,
-/obj/item/book/manual/excavation,
-/obj/item/book/manual/engineering_construction,
-/turf/simulated/floor/tiled/techfloor,
-/area/submap/DJOutpost1)
 "aG" = (
 /obj/machinery/holoplant,
 /turf/simulated/floor/tiled/techfloor,
@@ -352,6 +345,13 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/DJOutpost1)
+"RD" = (
+/obj/structure/bookcase,
+/obj/item/book/codex/lore/vir,
+/obj/item/book/manual/excavation,
+/obj/item/book/manual/wiki/engineering_construction,
+/turf/simulated/floor/tiled/techfloor,
+/area/submap/DJOutpost1)
 
 (1,1,1) = {"
 aa
@@ -445,7 +445,7 @@ al
 ak
 ap
 ap
-aF
+RD
 af
 ap
 ap

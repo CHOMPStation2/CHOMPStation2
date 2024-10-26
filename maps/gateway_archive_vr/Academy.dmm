@@ -42,20 +42,6 @@
 	},
 /turf/simulated/floor/carpet,
 /area/awaymission/academy/headmaster)
-"aj" = (
-/obj/structure/cable{
-	icon_state = "0-2";
-	pixel_y = 1
-	},
-/obj/machinery/power/apc{
-	dir = 1;
-	environ = 0;
-	equipment = 3;
-	locked = 0;
-	req_access = ""
-	},
-/turf/simulated/floor/carpet,
-/area/awaymission/academy/headmaster)
 "ak" = (
 /obj/structure/table/reinforced,
 /turf/simulated/floor/carpet,
@@ -577,14 +563,6 @@
 	icon_state = "showroomfloor"
 	},
 /area/awaymission/academy/headmaster)
-"bS" = (
-/obj/machinery/autolathe,
-/obj/structure/cable{
-	icon_state = "0-2";
-	pixel_y = 1
-	},
-/turf/simulated/floor,
-/area/awaymission/academy/classrooms)
 "bT" = (
 /turf/simulated/floor{
 	icon_state = "floorgrime"
@@ -1026,24 +1004,8 @@
 	icon_state = "white"
 	},
 /area/awaymission/academy/classrooms)
-"dl" = (
-/obj/machinery/mech_bay_recharge_port,
-/obj/structure/cable{
-	icon_state = "0-2";
-	pixel_y = 1
-	},
-/turf/simulated/floor/plating,
-/area/awaymission/academy/classrooms)
 "dm" = (
 /turf/simulated/floor/mech_bay_recharge_floor,
-/area/awaymission/academy/classrooms)
-"dn" = (
-/obj/machinery/computer/mech_bay_power_console,
-/obj/structure/cable{
-	icon_state = "0-2";
-	pixel_y = 1
-	},
-/turf/simulated/floor/greengrid,
 /area/awaymission/academy/classrooms)
 "do" = (
 /obj/machinery/light{
@@ -1342,21 +1304,6 @@
 	},
 /area/awaymission/academy/classrooms)
 "eg" = (
-/turf/simulated/floor{
-	icon_state = "grimy"
-	},
-/area/awaymission/academy/classrooms)
-"eh" = (
-/obj/structure/cable{
-	icon_state = "0-2"
-	},
-/obj/machinery/power/apc{
-	dir = 1;
-	environ = 3;
-	equipment = 3;
-	locked = 0;
-	req_access = ""
-	},
 /turf/simulated/floor{
 	icon_state = "grimy"
 	},
@@ -2003,15 +1950,6 @@
 	 icon_state = "vault"
 	},
 /area/awaymission/academy/classrooms)
-"fO" = (
-/obj/structure/cable{
-	icon_state = "0-2";
-	pixel_y = 1
-	},
-/turf/simulated/floor{
-	 icon_state = "vault"
-	},
-/area/awaymission/academy/classrooms)
 "fP" = (
 /obj/structure/stool/bed/chair,
 /turf/simulated/floor{
@@ -2091,11 +2029,6 @@
 /area/awaymission/academy/classrooms)
 "gb" = (
 /obj/structure/stool/bed/chair/wood/normal,
-/turf/simulated/floor/wood,
-/area/awaymission/academy/classrooms)
-"gc" = (
-/obj/structure/bookcase,
-/obj/item/book/manual/engineering_hacking,
 /turf/simulated/floor/wood,
 /area/awaymission/academy/classrooms)
 "gd" = (
@@ -2322,13 +2255,6 @@
 /obj/item/book/manual/hydroponics_pod_people,
 /turf/simulated/floor/wood,
 /area/awaymission/academy/classrooms)
-"gH" = (
-/obj/structure/bookcase,
-/obj/item/book/manual/barman_recipes,
-/obj/item/book/manual/security_space_law,
-/obj/item/book/manual/security_space_law,
-/turf/simulated/floor/wood,
-/area/awaymission/academy/classrooms)
 "gI" = (
 /obj/structure/stool,
 /turf/simulated/floor{
@@ -2494,27 +2420,6 @@
 	icon_state = "hydrofloor"
 	},
 /area/awaymission/academy/academyaft)
-"he" = (
-/obj/structure/cable{
-	icon_state = "0-2"
-	},
-/obj/machinery/power/apc{
-	dir = 1;
-	environ = 3;
-	equipment = 3;
-	locked = 0;
-	req_access = ""
-	},
-/turf/simulated/floor,
-/area/awaymission/academy/academyaft)
-"hf" = (
-/obj/structure/grille,
-/obj/structure/cable{
-	icon_state = "0-2";
-	pixel_y = 1
-	},
-/turf/simulated/floor/plating,
-/area/awaymission/academy/academyaft)
 "hg" = (
 /turf/simulated/floor{
 	icon_state = "green";
@@ -2588,15 +2493,6 @@
 /obj/structure/cable{
 	icon_state = "1-2";
 	pixel_y = 0
-	},
-/turf/simulated/floor/plating,
-/area/awaymission/academy/academyaft)
-"hs" = (
-/obj/machinery/power/terminal{
-	dir = 8
-	},
-/obj/structure/cable{
-	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
 /area/awaymission/academy/academyaft)
@@ -3606,28 +3502,8 @@
 	},
 /turf/simulated/floor/carpet,
 /area/awaymission/academy/academygate)
-"jW" = (
-/obj/machinery/power/apc{
-	dir = 1;
-	environ = 3;
-	equipment = 3;
-	locked = 0;
-	req_access = ""
-	},
-/obj/structure/cable{
-	icon_state = "0-2"
-	},
-/turf/simulated/floor/carpet,
-/area/awaymission/academy/academygate)
 "jX" = (
 /obj/item/stack/cable_coil/random,
-/turf/simulated/floor/plating,
-/area/awaymission/academy/academygate)
-"jY" = (
-/obj/structure/cable{
-	icon_state = "0-2";
-	pixel_y = 1
-	},
 /turf/simulated/floor/plating,
 /area/awaymission/academy/academygate)
 "jZ" = (
@@ -3728,6 +3604,130 @@
 	icon_state = "warnplate"
 	},
 /area/awaymission/academy/academygate)
+"me" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1
+	},
+/turf/simulated/floor{
+	 icon_state = "vault"
+	},
+/area/awaymission/academy/classrooms)
+"rL" = (
+/obj/structure/bookcase,
+/obj/item/book/manual/barman_recipes,
+/obj/item/book/manual/wiki/security_space_law,
+/obj/item/book/manual/wiki/security_space_law,
+/turf/simulated/floor/wood,
+/area/awaymission/academy/classrooms)
+"sz" = (
+/obj/structure/grille,
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1
+	},
+/turf/simulated/floor/plating,
+/area/awaymission/academy/academyaft)
+"ub" = (
+/obj/machinery/power/apc{
+	dir = 1;
+	environ = 3;
+	equipment = 3;
+	locked = 0;
+	req_access = ""
+	},
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/carpet,
+/area/awaymission/academy/academygate)
+"Bi" = (
+/obj/machinery/computer/mech_bay_power_console,
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1
+	},
+/turf/simulated/floor/greengrid,
+/area/awaymission/academy/classrooms)
+"JY" = (
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/obj/machinery/power/apc{
+	dir = 1;
+	environ = 3;
+	equipment = 3;
+	locked = 0;
+	req_access = ""
+	},
+/turf/simulated/floor{
+	icon_state = "grimy"
+	},
+/area/awaymission/academy/classrooms)
+"Op" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1
+	},
+/turf/simulated/floor/plating,
+/area/awaymission/academy/academygate)
+"Qa" = (
+/obj/machinery/power/terminal{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/plating,
+/area/awaymission/academy/academyaft)
+"QW" = (
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/obj/machinery/power/apc{
+	dir = 1;
+	environ = 3;
+	equipment = 3;
+	locked = 0;
+	req_access = ""
+	},
+/turf/simulated/floor,
+/area/awaymission/academy/academyaft)
+"Tb" = (
+/obj/machinery/autolathe,
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1
+	},
+/turf/simulated/floor,
+/area/awaymission/academy/classrooms)
+"Tj" = (
+/obj/machinery/mech_bay_recharge_port,
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1
+	},
+/turf/simulated/floor/plating,
+/area/awaymission/academy/classrooms)
+"Ua" = (
+/obj/structure/bookcase,
+/obj/item/book/manual/wiki/engineering_hacking,
+/turf/simulated/floor/wood,
+/area/awaymission/academy/classrooms)
+"VI" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1
+	},
+/obj/machinery/power/apc{
+	dir = 1;
+	environ = 0;
+	equipment = 3;
+	locked = 0;
+	req_access = ""
+	},
+/turf/simulated/floor/carpet,
+/area/awaymission/academy/headmaster)
 
 (1,1,1) = {"
 aa
@@ -9622,7 +9622,7 @@ aa
 aa
 bq
 bq
-bS
+Tb
 cg
 co
 cx
@@ -9630,7 +9630,7 @@ cF
 cJ
 cU
 db
-dl
+Tj
 dv
 dE
 db
@@ -9890,7 +9890,7 @@ bz
 cK
 cW
 db
-dn
+Bi
 dx
 dF
 db
@@ -9914,11 +9914,11 @@ bz
 gF
 gV
 ha
-hs
+Qa
 gY
-hs
+Qa
 gY
-hs
+Qa
 gY
 hh
 hl
@@ -10563,7 +10563,7 @@ bx
 bx
 gT
 gV
-he
+QW
 hv
 hJ
 ia
@@ -10823,7 +10823,7 @@ go
 go
 dj
 gV
-hf
+sz
 hx
 hK
 gV
@@ -11465,7 +11465,7 @@ eg
 eg
 fA
 cZ
-gc
+Ua
 cZ
 gd
 cZ
@@ -11585,7 +11585,7 @@ dc
 dp
 cZ
 bC
-eh
+JY
 et
 ej
 eL
@@ -11599,7 +11599,7 @@ gd
 cZ
 gt
 cZ
-gH
+rL
 cZ
 cZ
 fC
@@ -12283,7 +12283,7 @@ jJ
 jO
 jQ
 jT
-jY
+Op
 kb
 ke
 kh
@@ -12932,7 +12932,7 @@ jM
 jM
 jM
 jH
-jW
+ub
 ka
 jU
 jU
@@ -13111,7 +13111,7 @@ aa
 aa
 ab
 ab
-aj
+VI
 ap
 av
 ax
@@ -13284,7 +13284,7 @@ fd
 bC
 bC
 bC
-fO
+me
 gh
 gp
 gp
@@ -14073,7 +14073,7 @@ gJ
 bq
 bq
 gV
-hf
+sz
 hE
 hK
 gV

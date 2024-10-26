@@ -110,7 +110,7 @@
 	key = "9"
 	signlang_verb = list("shifts their ears", "mars subtly", "swivels their ears", "twitches their nose", "leers intently", "hackles their fur")
 	signlang_verb_understood = list("mars")
-	colour = "echosong"
+	colour = "marish"
 	flags = INAUDIBLE
 	ignore_adverb = TRUE
 	machine_understands = FALSE

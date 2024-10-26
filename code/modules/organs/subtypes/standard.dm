@@ -283,7 +283,7 @@
 	var/eyes_over_markings = FALSE //VOREStation edit
 
 /obj/item/organ/external/head/Initialize()
-	if(CONFIG_GET(flag/allow_headgibs)) // CHOMPEdit
+	if(CONFIG_GET(flag/allow_headgibs))
 		cannot_gib = FALSE
 	return ..()
 

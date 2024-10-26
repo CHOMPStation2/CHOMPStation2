@@ -51,6 +51,9 @@
 /// logs world.log to a file
 /datum/config_entry/flag/log_runtime
 
+/// logs sql stuff
+/datum/config_entry/flag/log_sql
+
 /// log to_world_log(messages)
 /datum/config_entry/flag/log_world_output
 
@@ -571,7 +574,7 @@
 /// 0 / RAD_RESIST_CALC_DIV = Each turf absorbs some fraction of the working radiation level
 /// 1 / RAD_RESIST_CALC_SUB = Each turf absorbs a fixed amount of radiation
 /datum/config_entry/flag/radiation_resistance_calc_mode
-	default = RAD_RESIST_CALC_DIV
+	default = RAD_RESIST_CALC_DIV // CHOMPEdit
 
 /datum/config_entry/flag/radiation_resistance_calc_mode/ValidateAndSet(str_val)
 	if(!VASProcCallGuard(str_val))

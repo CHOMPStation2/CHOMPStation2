@@ -125,7 +125,7 @@
 	title = JOB_ALT_FOOL
 
 /datum/job/clown/get_access()
-	if(CONFIG_GET(flag/assistant_maint)) // CHOMPEdit
+	if(CONFIG_GET(flag/assistant_maint))
 		return list(access_maint_tunnels, access_entertainment, access_clown, access_tomfoolery)
 	else
 		return list(access_entertainment, access_clown, access_tomfoolery)
@@ -153,7 +153,7 @@
 	title = JOB_ALT_PASEUR
 
 /datum/job/mime/get_access()
-	if(CONFIG_GET(flag/assistant_maint)) // CHOMPEdit
+	if(CONFIG_GET(flag/assistant_maint))
 		return list(access_maint_tunnels, access_entertainment, access_tomfoolery, access_mime)
 	else
 		return list(access_entertainment, access_tomfoolery, access_mime)

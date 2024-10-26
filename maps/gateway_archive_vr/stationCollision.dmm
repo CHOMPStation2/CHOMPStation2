@@ -2568,19 +2568,6 @@
 	},
 /turf/simulated/floor,
 /area/awaymission/midblock)
-"gG" = (
-/obj/item/ammo_casing/shotgun,
-/obj/machinery/power/apc{
-	cell_type = 5000;
-	dir = 8;
-	name = "Mid Block APC";
-	pixel_x = -28
-	},
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
-/turf/simulated/floor,
-/area/awaymission/midblock)
 "gH" = (
 /obj/item/ammo_casing/shotgun,
 /obj/item/ammo_casing/shotgun,
@@ -2719,16 +2706,6 @@
 /area/awaymission/arrivalblock)
 "gZ" = (
 /obj/machinery/computer/secure_data,
-/turf/simulated/floor{
-	icon_state = "red";
-	dir = 1
-	},
-/area/awaymission/arrivalblock)
-"ha" = (
-/obj/structure/table/standard,
-/obj/item/book/manual/security_space_law,
-/obj/item/melee/baton,
-/obj/item/clothing/head/helmet/warden,
 /turf/simulated/floor{
 	icon_state = "red";
 	dir = 1
@@ -3117,21 +3094,6 @@
 /obj/item/ammo_casing/a10mm,
 /obj/item/ammo_casing/a10mm,
 /turf/simulated/floor,
-/area/awaymission/arrivalblock)
-"ib" = (
-/obj/machinery/power/apc{
-	cell_type = 7500;
-	dir = 8;
-	name = "Arrivals Block APC";
-	pixel_x = -28
-	},
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
-/turf/simulated/floor{
-	icon_state = "red";
-	dir = 8
-	},
 /area/awaymission/arrivalblock)
 "ic" = (
 /obj/structure/cable{
@@ -3912,16 +3874,6 @@
 "kn" = (
 /obj/machinery/gateway{
 	dir = 8
-	},
-/turf/simulated/floor,
-/area/awaymission/gateroom)
-"ko" = (
-/obj/structure/cable{
-	icon_state = "0-2";
-	pixel_y = 1
-	},
-/obj/machinery/gateway/centeraway{
-	calibrated = 0
 	},
 /turf/simulated/floor,
 /area/awaymission/gateroom)
@@ -4711,6 +4663,54 @@
 	},
 /obj/structure/cable{
 	icon_state = "0-8"
+	},
+/turf/simulated/floor,
+/area/awaymission/gateroom)
+"mu" = (
+/obj/structure/table/standard,
+/obj/item/book/manual/wiki/security_space_law,
+/obj/item/melee/baton,
+/obj/item/clothing/head/helmet/warden,
+/turf/simulated/floor{
+	icon_state = "red";
+	dir = 1
+	},
+/area/awaymission/arrivalblock)
+"tq" = (
+/obj/item/ammo_casing/shotgun,
+/obj/machinery/power/apc{
+	cell_type = 5000;
+	dir = 8;
+	name = "Mid Block APC";
+	pixel_x = -28
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor,
+/area/awaymission/midblock)
+"Jy" = (
+/obj/machinery/power/apc{
+	cell_type = 7500;
+	dir = 8;
+	name = "Arrivals Block APC";
+	pixel_x = -28
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor{
+	icon_state = "red";
+	dir = 8
+	},
+/area/awaymission/arrivalblock)
+"PE" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1
+	},
+/obj/machinery/gateway/centeraway{
+	calibrated = 0
 	},
 /turf/simulated/floor,
 /area/awaymission/gateroom)
@@ -5555,7 +5555,7 @@ gC
 gY
 hx
 hJ
-ib
+Jy
 ir
 gC
 iR
@@ -5684,7 +5684,7 @@ aj
 aj
 aj
 gC
-ha
+mu
 hy
 hK
 ic
@@ -6871,7 +6871,7 @@ fy
 by
 fX
 gr
-gG
+tq
 gl
 gl
 gl
@@ -7344,7 +7344,7 @@ iX
 iX
 jz
 jS
-ko
+PE
 ky
 kU
 lg
