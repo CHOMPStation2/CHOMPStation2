@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-#define BUCKET_LEN (round(10*(60/world.tick_lag), 1)) //how many ticks should we keep in the bucket. (1 minutes worth)
-=======
 /// Controls how many buckets should be kept, each representing a tick. (1 minutes worth)
 #define BUCKET_LEN (world.fps*1*60)
->>>>>>> d0b0dd9a46 (Timer subsystem update (#16509))
 /// Helper for getting the correct bucket for a given timer
 #define BUCKET_POS(timer) (((ROUND_UP((timer.timeToRun - timer.timer_subsystem.head_offset) / world.tick_lag)+1) % BUCKET_LEN) || BUCKET_LEN)
 /// Gets the maximum time at which timers will be invoked from buckets, used for deferring to secondary queue
@@ -60,17 +56,12 @@ SUBSYSTEM_DEF(timer)
 	bucket_resolution = world.tick_lag
 
 /datum/controller/subsystem/timer/stat_entry(msg)
-<<<<<<< HEAD
-	msg = "B:[bucket_count] P:[length(second_queue)] H:[length(hashes)] C:[length(clienttime_timers)] S:[length(timer_id_dict)] RST:[bucket_reset_count]" // CHOMPEdit
-=======
 	msg = "B:[bucket_count] P:[length(second_queue)] H:[length(hashes)] C:[length(clienttime_timers)] S:[length(timer_id_dict)] RST:[bucket_reset_count]"
->>>>>>> d0b0dd9a46 (Timer subsystem update (#16509))
 	return ..()
 
 /datum/controller/subsystem/timer/proc/dump_timer_buckets(full = TRUE)
 	var/list/to_log = list("Timer bucket reset. world.time: [world.time], head_offset: [head_offset], practical_offset: [practical_offset]")
 	if (full)
-<<<<<<< HEAD
 		for (var/i in 1 to length(bucket_list))
 			var/datum/timedevent/bucket_head = bucket_list[i]
 			if (!bucket_head)
@@ -89,52 +80,6 @@ SUBSYSTEM_DEF(timer)
 		for(var/I in second_queue)
 			to_log += get_timer_debug_string(I)
 
-	// Dump all the logged data to the world log
-	log_world(to_log.Join("\n"))
-
-/datum/controller/subsystem/timer/fire(resumed = FALSE)
-	// Store local references to datum vars as it is faster to access them
-	var/lit = last_invoke_tick
-	var/list/bucket_list = src.bucket_list
-	var/last_check = world.time - TICKS2DS(BUCKET_LEN * 1.5)
-
-	// If there are no timers being tracked, then consider now to be the last invoked time
-	if(!bucket_count)
-		last_invoke_tick = world.time
-
-	// Check that we have invoked a callback in the last 1.5 minutes of BYOND time,
-	// and throw a warning and reset buckets if this is true
-	if(lit && lit < last_check && head_offset < last_check && last_invoke_warning < last_check)
-		last_invoke_warning = world.time
-		var/msg = "No regular timers processed in the last [BUCKET_LEN * 1.5] ticks[bucket_auto_reset ? ", resetting buckets" : ""]!"
-		message_admins(msg)
-		WARNING(msg)
-		if(bucket_auto_reset)
-			bucket_resolution = 0
-
-		log_world("Timer bucket reset. world.time: [world.time], head_offset: [head_offset], practical_offset: [practical_offset]")
-=======
->>>>>>> d0b0dd9a46 (Timer subsystem update (#16509))
-		for (var/i in 1 to length(bucket_list))
-			var/datum/timedevent/bucket_head = bucket_list[i]
-			if (!bucket_head)
-				continue
-
-			to_log += "Active timers at index [i]:"
-			var/datum/timedevent/bucket_node = bucket_head
-			var/anti_loop_check = 1
-			do
-				to_log += get_timer_debug_string(bucket_node)
-				bucket_node = bucket_node.next
-				anti_loop_check--
-			while(bucket_node && bucket_node != bucket_head && anti_loop_check)
-
-		to_log += "Active timers in the second_queue queue:"
-		for(var/I in second_queue)
-			to_log += get_timer_debug_string(I)
-
-<<<<<<< HEAD
-=======
 	// Dump all the logged data to the world log
 	log_world(to_log.Join("\n"))
 
@@ -159,7 +104,6 @@ SUBSYSTEM_DEF(timer)
 			bucket_resolution = 0
 		dump_timer_buckets(CONFIG_GET(flag/log_timers_on_bucket_reset))
 
->>>>>>> d0b0dd9a46 (Timer subsystem update (#16509))
 	// Process client-time timers
 	if (next_clienttime_timer_index)
 		clienttime_timers.Cut(1, next_clienttime_timer_index+1)
@@ -580,11 +524,7 @@ SUBSYSTEM_DEF(timer)
 		2 = timeToRun,
 		3 = wait,
 		4 = flags,
-<<<<<<< HEAD
-		5 = callBack, /* Safe to hold this directly becasue it's never del'd */
-=======
 		5 = callBack, /* Safe to hold this directly because it's never del'd */
->>>>>>> d0b0dd9a46 (Timer subsystem update (#16509))
 		6 = "[callBack.object]",
 		7 = text_ref(callBack.object),
 		8 = getcallingtype(),
@@ -599,11 +539,7 @@ SUBSYSTEM_DEF(timer)
 		2 = timeToRun,
 		3 = wait,
 		4 = flags,
-<<<<<<< HEAD
-		5 = callBack, /* Safe to hold this directly becasue it's never del'd */
-=======
 		5 = callBack, /* Safe to hold this directly because it's never del'd */
->>>>>>> d0b0dd9a46 (Timer subsystem update (#16509))
 		6 = "[callBack.object]",
 		7 = getcallingtype(),
 		8 = callBack.delegate,
@@ -709,11 +645,7 @@ SUBSYSTEM_DEF(timer)
 				hash_timer.hash = null // but keep it from accidentally deleting us
 			else
 				if (flags & TIMER_OVERRIDE)
-<<<<<<< HEAD
-					hash_timer.hash = null // no need having it delete it's hash if we are going to replace it
-=======
 					hash_timer.hash = null // no need having it delete its hash if we are going to replace it
->>>>>>> d0b0dd9a46 (Timer subsystem update (#16509))
 					qdel(hash_timer)
 				else
 					if (hash_timer.flags & TIMER_STOPPABLE)

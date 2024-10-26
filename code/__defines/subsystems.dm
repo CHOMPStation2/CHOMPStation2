@@ -19,11 +19,7 @@
  * Timing should be based on how timing progresses on clients, not the server.
  *
  * Tracking this is more expensive,
-<<<<<<< HEAD
- * should only be used in conjuction with things that have to progress client side, such as
-=======
  * should only be used in conjunction with things that have to progress client side, such as
->>>>>>> d0b0dd9a46 (Timer subsystem update (#16509))
  * animate() or sound()
  */
 #define TIMER_CLIENT_TIME (1<<2)
@@ -50,13 +46,6 @@
 /// Used to trigger object removal from a processing list
 #define PROCESS_KILL 26
 
-<<<<<<< HEAD
-#define INITIALIZE_HINT_NORMAL   0  //Nothing happens
-#define INITIALIZE_HINT_LATELOAD 1  //Call LateInitialize
-#define INITIALIZE_HINT_QDEL     2  //Call qdel on the atom
-//CHOMPEdit Begin
-//type and all subtypes should always call Initialize in New()
-=======
 
 //! ## Initialization subsystem
 
@@ -84,7 +73,6 @@
 #define INITIALIZE_HINT_QDEL 2
 
 ///type and all subtypes should always immediately call Initialize in New()
->>>>>>> d0b0dd9a46 (Timer subsystem update (#16509))
 #define INITIALIZE_IMMEDIATE(X) ##X/New(loc, ...){\
 	..();\
 	if(!(flags & ATOM_INITIALIZED)) {\
@@ -128,12 +116,8 @@ var/global/list/runlevel_flags = list(RUNLEVEL_LOBBY, RUNLEVEL_SETUP, RUNLEVEL_G
 // Subsystem init_order, from highest priority to lowest priority
 // Subsystems shutdown in the reverse of the order they initialize in
 // The numbers just define the ordering, they are meaningless otherwise.
-<<<<<<< HEAD
 #define INIT_ORDER_TITLE			99	//CHOMPEdit
 #define INIT_ORDER_SERVER_MAINT		93 //CHOMPEdit
-=======
-
->>>>>>> d0b0dd9a46 (Timer subsystem update (#16509))
 #define INIT_ORDER_WEBHOOKS			50
 #define INIT_ORDER_DBCORE			41	//CHOMPEdit
 #define INIT_ORDER_SQLITE			40
@@ -207,11 +191,8 @@ var/global/list/runlevel_flags = list(RUNLEVEL_LOBBY, RUNLEVEL_SETUP, RUNLEVEL_G
 #define FIRE_PRIORITY_CHAT			400
 #define FIRE_PRIORITY_OVERLAYS		500
 #define FIRE_PRIORITY_TIMER			700
-<<<<<<< HEAD
 #define FIRE_PRIORITY_SPEECH_CONTROLLER 900 // CHOMPEdit
 #define FIRE_PRIORITY_DELAYED_VERBS 950 // CHOMPEdit
-=======
->>>>>>> d0b0dd9a46 (Timer subsystem update (#16509))
 #define FIRE_PRIORITY_INPUT			1000 // This must always always be the max highest priority. Player input must never be lost.
 
 /**
@@ -223,9 +204,6 @@ var/global/list/runlevel_flags = list(RUNLEVEL_LOBBY, RUNLEVEL_SETUP, RUNLEVEL_G
 	* * timer_subsystem the subsystem to insert this timer into
 */
 #define addtimer(args...) _addtimer(args, file = __FILE__, line = __LINE__)
-<<<<<<< HEAD
 
 /// The timer key used to know how long subsystem initialization takes // CHOMPEdit
 #define SS_INIT_TIMER_KEY "ss_init" // CHOMPEdit
-=======
->>>>>>> d0b0dd9a46 (Timer subsystem update (#16509))

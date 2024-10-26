@@ -921,24 +921,6 @@ var/global/list/json_cache = list()
 ///Remove an untyped item to a list, taking care to handle list items by wrapping them in a list to remove the footgun
 #define UNTYPED_LIST_REMOVE(list, item) (list -= LIST_VALUE_WRAP_LISTS(item))
 
-<<<<<<< HEAD
-//CHOMPAdd start
-/proc/pick_weight(list/list_to_pick)
-	var/total = 0
-	var/item
-	for(item in list_to_pick)
-		if(!list_to_pick[item])
-			list_to_pick[item] = 0
-		total += list_to_pick[item]
-
-	total = rand(1, total)
-	for(item in list_to_pick)
-		total -= list_to_pick[item]
-		if(total <= 0 && list_to_pick[item])
-			return item
-
-	return null
-=======
 /// Passed into BINARY_INSERT to compare keys
 #define COMPARE_KEY __BIN_LIST[__BIN_MID]
 /// Passed into BINARY_INSERT to compare values
@@ -978,7 +960,23 @@ var/global/list/json_cache = list()
 			__BIN_LIST.Insert(__BIN_MID, INPUT);\
 		};\
 	} while(FALSE)
->>>>>>> d0b0dd9a46 (Timer subsystem update (#16509))
+
+//CHOMPAdd start
+/proc/pick_weight(list/list_to_pick)
+	var/total = 0
+	var/item
+	for(item in list_to_pick)
+		if(!list_to_pick[item])
+			list_to_pick[item] = 0
+		total += list_to_pick[item]
+
+	total = rand(1, total)
+	for(item in list_to_pick)
+		total -= list_to_pick[item]
+		if(total <= 0 && list_to_pick[item])
+			return item
+
+	return null
 
 ///Converts a bitfield to a list of numbers (or words if a wordlist is provided)
 /proc/bitfield_to_list(bitfield = 0, list/wordlist)
@@ -997,7 +995,4 @@ var/global/list/json_cache = list()
 				return_list += bit
 
 	return return_list
-<<<<<<< HEAD
 //CHOMPAdd end
-=======
->>>>>>> d0b0dd9a46 (Timer subsystem update (#16509))
