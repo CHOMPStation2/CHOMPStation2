@@ -961,6 +961,7 @@ var/global/list/json_cache = list()
 		};\
 	} while(FALSE)
 
+<<<<<<< HEAD
 //CHOMPAdd start
 /proc/pick_weight(list/list_to_pick)
 	var/total = 0
@@ -978,6 +979,8 @@ var/global/list/json_cache = list()
 
 	return null
 
+=======
+>>>>>>> d0b0dd9a46 (Timer subsystem update (#16509))
 ///Converts a bitfield to a list of numbers (or words if a wordlist is provided)
 /proc/bitfield_to_list(bitfield = 0, list/wordlist)
 	var/list/return_list = list()
@@ -995,4 +998,7 @@ var/global/list/json_cache = list()
 				return_list += bit
 
 	return return_list
+<<<<<<< HEAD
 //CHOMPAdd end
+=======
+>>>>>>> d0b0dd9a46 (Timer subsystem update (#16509))

@@ -88,12 +88,20 @@
  * Returns [QDEL_HINT_QUEUE]
  */
 /datum/proc/Destroy(force=FALSE)
+<<<<<<< HEAD
 	SHOULD_CALL_PARENT(TRUE)
 	// SHOULD_NOT_SLEEP(TRUE) FIXME: Causing some big issues still
 	tag = null
 	weak_reference = null //ensure prompt GCing of weakref.
 
 	//clear timers
+=======
+	//SHOULD_CALL_PARENT(TRUE)
+	//SHOULD_NOT_SLEEP(TRUE)
+	tag = null
+	weak_reference = null //ensure prompt GCing of weakref.
+
+>>>>>>> d0b0dd9a46 (Timer subsystem update (#16509))
 	if(_active_timers)
 		var/list/timers = _active_timers
 		_active_timers = null
@@ -101,12 +109,15 @@
 			if (timer.spent && !(timer.flags & TIMER_DELETE_ME))
 				continue
 			qdel(timer)
+<<<<<<< HEAD
 
 	#ifdef REFERENCE_TRACKING
 	#ifdef REFERENCE_TRACKING_DEBUG
 	found_refs = null
 	#endif
 	#endif
+=======
+>>>>>>> d0b0dd9a46 (Timer subsystem update (#16509))
 
 	//BEGIN: ECS SHIT
 	var/list/dc = _datum_components
