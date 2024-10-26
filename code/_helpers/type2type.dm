@@ -8,7 +8,6 @@
  *			angle2dir
  */
 
-// CHOMPEdit Start
 //Splits the text of a file at seperator and returns them in a list.
 //returns an empty list if the file doesn't exist
 /world/proc/file2list(filename, seperator="\n", trim = TRUE)
@@ -36,7 +35,6 @@
 			return "turf"
 		else //regex everything else (works for /proc too)
 			return lowertext(replacetext("[the_type]", "[type2parent(the_type)]/", ""))
-// CHOMPEdit End
 
 // Returns an integer given a hexadecimal number string as input.
 /proc/hex2num(hex)

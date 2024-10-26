@@ -135,6 +135,7 @@
 	spark_system = new /datum/effect/effect/system/spark_spread()
 	spark_system.set_up(5, 0, src)
 	spark_system.attach(src)
+	robotact = new(src)
 
 	add_language("Robot Talk", 1)
 	add_language(LANGUAGE_GALCOM, 1)
@@ -283,13 +284,13 @@
 	if (!rbPDA)
 		rbPDA = new/obj/item/pda/ai(src)
 	rbPDA.set_name_and_job(name,"[modtype] [braintype]")
-	add_verb(src, /obj/item/pda/ai/verb/cmd_pda_open_ui) //ChompEDIT - TGPanel
+	add_verb(src, /obj/item/pda/ai/verb/cmd_pda_open_ui)
 
 /mob/living/silicon/robot/proc/setup_communicator()
 	if (!communicator)
 		communicator = new/obj/item/communicator/integrated(src)
 	communicator.register_device(name, "[modtype] [braintype]")
-	add_verb(src, /obj/item/communicator/integrated/verb/activate) //ChompEDIT - TGPanel
+	add_verb(src, /obj/item/communicator/integrated/verb/activate)
 
 //If there's an MMI in the robot, have it ejected when the mob goes away. --NEO
 //Improved /N
@@ -318,6 +319,7 @@
 		revert_shell() // To get it out of the GLOB list.
 	qdel(wires)
 	wires = null
+	QDEL_NULL(robotact)
 	return ..()
 
 // CONTINUE CODING HERE
@@ -379,6 +381,7 @@
 	updatename()
 	hud_used.update_robot_modules_display()
 	notify_ai(ROBOT_NOTIFICATION_NEW_MODULE, module.name)
+	robotact?.update_static_data_for_all_viewers()
 
 /mob/living/silicon/robot/proc/update_braintype()
 	if(istype(mmi, /obj/item/mmi/digital/posibrain))
@@ -465,19 +468,8 @@
 
 	sprite_datum.handle_extra_customization(src)
 
-/mob/living/silicon/robot/proc/self_diagnosis()
-	if(!is_component_functioning("diagnosis unit"))
-		return null
-
-	var/dat = "<HEAD><TITLE>[src.name] Self-Diagnosis Report</TITLE></HEAD><BODY>\n"
-	for (var/V in components)
-		var/datum/robot_component/C = components[V]
-		dat += "<b>[C.name]</b><br><table><tr><td>Brute Damage:</td><td>[C.brute_damage]</td></tr><tr><td>Electronics Damage:</td><td>[C.electronics_damage]</td></tr><tr><td>Powered:</td><td>[(!C.idle_usage || C.is_powered()) ? "Yes" : "No"]</td></tr><tr><td>Toggled:</td><td>[ C.toggled ? "Yes" : "No"]</td></table><br>"
-
-	return dat
-
 /mob/living/silicon/robot/verb/toggle_lights()
-	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
+	set category = "Abilities.Silicon"
 	set name = "Toggle Lights"
 
 	lights_on = !lights_on
@@ -485,46 +477,8 @@
 	handle_light()
 	update_icon()
 
-/mob/living/silicon/robot/verb/self_diagnosis_verb()
-	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
-	set name = "Self Diagnosis"
-
-	if(!is_component_functioning("diagnosis unit"))
-		to_chat(src, span_red("Your self-diagnosis component isn't functioning."))
-
-	var/datum/robot_component/CO = get_component("diagnosis unit")
-	if (!cell_use_power(CO.active_usage))
-		to_chat(src, span_red("Low Power."))
-	var/dat = self_diagnosis()
-	src << browse(dat, "window=robotdiagnosis")
-
-
-/mob/living/silicon/robot/verb/toggle_component()
-	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
-	set name = "Toggle Component"
-	set desc = "Toggle a component, conserving power."
-
-	var/list/installed_components = list()
-	for(var/V in components)
-		if(V == "power cell") continue
-		var/datum/robot_component/C = components[V]
-		if(C.installed)
-			installed_components += V
-
-	var/toggle = tgui_input_list(src, "Which component do you want to toggle?", "Toggle Component", installed_components)
-	if(!toggle)
-		return
-
-	var/datum/robot_component/C = components[toggle]
-	if(C.toggled)
-		C.toggled = 0
-		to_chat(src, span_red("You disable [C.name]."))
-	else
-		C.toggled = 1
-		to_chat(src, span_red("You enable [C.name]."))
-
 /mob/living/silicon/robot/verb/spark_plug() //So you can still sparkle on demand without violence.
-	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
+	set category = "Abilities.Silicon"
 	set name = "Emit Sparks"
 	to_chat(src, span_filter_notice("You harmlessly spark."))
 	spark_system.start()
@@ -532,6 +486,7 @@
 // this function displays jetpack pressure in the stat panel
 //ChompEDIT START - TGPanel
 /mob/living/silicon/robot/proc/show_jetpack_pressure()
+	. = list()
 	// if you have a jetpack, show the internal tank pressure
 	var/obj/item/tank/jetpack/current_jetpack = installed_jetpack()
 	if (current_jetpack)
@@ -574,7 +529,6 @@
 	if(module)
 		for(var/datum/matter_synth/ms in module.synths)
 			. += "[ms.name]: [ms.energy]/[ms.max_energy]"
-//ChompEDIT END
 
 /mob/living/silicon/robot/restrained()
 	return 0
@@ -858,6 +812,7 @@
 	module = null
 	updatename("Default")
 	has_recoloured = FALSE
+	robotact?.update_static_data_for_all_viewers()
 
 /mob/living/silicon/robot/proc/ColorMate()
 	set name = "Recolour Module"
@@ -1101,42 +1056,7 @@
 			add_overlay(open_overlay)
 
 /mob/living/silicon/robot/proc/installed_modules()
-	if(weapon_lock)
-		to_chat(src, span_filter_warning("" + span_red("Weapon lock active, unable to use modules! Count:[weaponlock_time]") + ""))
-		return
-
-	if(!module)
-		pick_module()
-		return
-	var/dat = "<HEAD><TITLE>Modules</TITLE></HEAD><BODY>\n"
-	dat += {"
-	<B>Activated Modules</B>
-	<BR>
-	Module 1: [module_state_1 ? "<A HREF=?src=\ref[src];mod=\ref[module_state_1]>[module_state_1]<A>" : "No Module"]<BR>
-	Module 2: [module_state_2 ? "<A HREF=?src=\ref[src];mod=\ref[module_state_2]>[module_state_2]<A>" : "No Module"]<BR>
-	Module 3: [module_state_3 ? "<A HREF=?src=\ref[src];mod=\ref[module_state_3]>[module_state_3]<A>" : "No Module"]<BR>
-	<BR>
-	<B>Installed Modules</B><BR><BR>"}
-
-
-	for (var/obj in module.modules)
-		if (!obj)
-			dat += text("<B>Resource depleted</B><BR>")
-		else if(activated(obj))
-			dat += text("[obj]: <B>Activated</B><BR>")
-		else
-			dat += text("[obj]: <A HREF=?src=\ref[src];act=\ref[obj]>Activate</A><BR>")
-	if (emagged || emag_items)
-		for (var/obj in module.emag)
-			if (!obj)
-				dat += text("<B>Resource depleted</B><BR>")
-			else if(activated(obj))
-				dat += text("[obj]: <B>Activated</B><BR>")
-			else
-				dat += text("[obj]: <A HREF=?src=\ref[src];act=\ref[obj]>Activate</A><BR>")
-
-	src << browse(dat, "window=robotmod")
-
+	robotact.tgui_interact(src)
 
 /mob/living/silicon/robot/Topic(href, href_list)
 	if(..())
@@ -1149,69 +1069,6 @@
 	if (href_list["showalerts"])
 		subsystem_alarm_monitor()
 		return 1
-
-	if (href_list["mod"])
-		var/obj/item/O = locate(href_list["mod"])
-		if (istype(O) && (O.loc == src))
-			O.attack_self(src)
-		return 1
-
-	if (href_list["act"])
-		var/obj/item/O = locate(href_list["act"])
-		if (!istype(O))
-			return 1
-
-		if(!((O in src.module.modules) || (O in src.module.emag)))
-			return 1
-
-		if(activated(O))
-			to_chat(src, span_filter_notice("Already activated."))
-			return 1
-		if(!module_state_1)
-			module_state_1 = O
-			O.hud_layerise()
-			O.equipped_robot()
-			contents += O
-			if(istype(module_state_1,/obj/item/borg/sight))
-				sight_mode |= module_state_1:sight_mode
-		else if(!module_state_2)
-			module_state_2 = O
-			O.hud_layerise()
-			O.equipped_robot()
-			contents += O
-			if(istype(module_state_2,/obj/item/borg/sight))
-				sight_mode |= module_state_2:sight_mode
-		else if(!module_state_3)
-			module_state_3 = O
-			O.hud_layerise()
-			O.equipped_robot()
-			contents += O
-			if(istype(module_state_3,/obj/item/borg/sight))
-				sight_mode |= module_state_3:sight_mode
-		else
-			to_chat(src, span_filter_notice("You need to disable a module first!"))
-		installed_modules()
-		return 1
-
-	if (href_list["deact"])
-		var/obj/item/O = locate(href_list["deact"])
-		if(activated(O))
-			if(module_state_1 == O)
-				module_state_1 = null
-				contents -= O
-			else if(module_state_2 == O)
-				module_state_2 = null
-				contents -= O
-			else if(module_state_3 == O)
-				module_state_3 = null
-				contents -= O
-			else
-				to_chat(src, span_filter_notice("Module isn't activated."))
-		else
-			to_chat(src, span_filter_notice("Module isn't activated."))
-		installed_modules()
-		return 1
-	return
 
 /mob/living/silicon/robot/proc/radio_menu()
 	radio.interact(src)//Just use the radio's Topic() instead of bullshit special-snowflake code
@@ -1233,7 +1090,7 @@
 
 
 /mob/living/silicon/robot/proc/ResetSecurityCodes()
-	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
+	set category = "Abilities.Silicon"
 	set name = "Reset Identity Codes"
 	set desc = "Scrambles your security and identification codes and resets your current buffers. Unlocks you and permenantly severs you from your AI and the robotics console and will deactivate your camera system."
 
@@ -1242,7 +1099,7 @@
 	if(R)
 		R.UnlinkSelf()
 		to_chat(R, span_filter_notice("Buffers flushed and reset. Camera system shutdown. All systems operational."))
-		remove_verb(src,/mob/living/silicon/robot/proc/ResetSecurityCodes)  //CHOMPEdit
+		remove_verb(src, /mob/living/silicon/robot/proc/ResetSecurityCodes)
 
 /mob/living/silicon/robot/proc/SetLockdown(var/state = 1)
 	// They stay locked down if their wire is cut.
@@ -1353,7 +1210,7 @@
 
 /mob/living/silicon/robot/proc/sensor_mode() //Medical/Security HUD controller for borgs
 	set name = "Toggle Sensor Augmentation" //VOREStation Add
-	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
+	set category = "Abilities.Silicon"
 	set desc = "Augment visual feed with internal sensor overlays."
 	sensor_type = !sensor_type //VOREStation Add
 	to_chat(usr, "You [sensor_type ? "enable" : "disable"] your sensors.") //VOREStation Add
@@ -1363,16 +1220,16 @@
 	return
 
 /mob/living/silicon/robot/proc/add_robot_verbs()
-	add_verb(src,robot_verbs_default) //CHOMPEdit TGPanel
-	add_verb(src,silicon_subsystems) //CHOMPEdit TGPanel
-	if(CONFIG_GET(flag/allow_robot_recolor)) // CHOMPEdit
-		add_verb(src,/mob/living/silicon/robot/proc/ColorMate) //CHOMPEdit TGPanel
+	add_verb(src, robot_verbs_default)
+	add_verb(src, silicon_subsystems)
+	if(CONFIG_GET(flag/allow_robot_recolor))
+		add_verb(src, /mob/living/silicon/robot/proc/ColorMate)
 
 /mob/living/silicon/robot/proc/remove_robot_verbs()
-	remove_verb(src,robot_verbs_default)  //CHOMPEdit
-	remove_verb(src,silicon_subsystems)  //CHOMPEdit
-	if(CONFIG_GET(flag/allow_robot_recolor)) // CHOMPEdit
-		remove_verb(src,/mob/living/silicon/robot/proc/ColorMate ) //ChompEDIT - probable copypaste error //CHOMPEdit
+	remove_verb(src, robot_verbs_default)
+	remove_verb(src, silicon_subsystems)
+	if(CONFIG_GET(flag/allow_robot_recolor))
+		remove_verb(src, /mob/living/silicon/robot/proc/ColorMate)
 
 // Uses power from cyborg's cell. Returns 1 on success or 0 on failure.
 // Properly converts using CELLRATE now! Amount is in Joules.
@@ -1422,16 +1279,16 @@
 		return // No point annoying the AI/s about renames and module resets for shells.
 	switch(notifytype)
 		if(ROBOT_NOTIFICATION_NEW_UNIT) //New Robot
-			to_chat(connected_ai, span_filter_notice("<br><br><span class='notice'>NOTICE - New [lowertext(braintype)] connection detected: <a href='byond://?src=\ref[connected_ai];track2=\ref[connected_ai];track=\ref[src]'>[name]</a></span><br>"))
+			to_chat(connected_ai, span_filter_notice("<br><br>" + span_notice("NOTICE - New [lowertext(braintype)] connection detected: <a href='byond://?src=\ref[connected_ai];track2=\ref[connected_ai];track=\ref[src]'>[name]</a>") + "<br>"))
 		if(ROBOT_NOTIFICATION_NEW_MODULE) //New Module
-			to_chat(connected_ai, span_filter_notice("<br><br><span class='notice'>NOTICE - [braintype] module change detected: [name] has loaded the [first_arg].</span><br>"))
+			to_chat(connected_ai, span_filter_notice("<br><br>" + span_notice("NOTICE - [braintype] module change detected: [name] has loaded the [first_arg].") + "<br>"))
 		if(ROBOT_NOTIFICATION_MODULE_RESET)
-			to_chat(connected_ai, span_filter_notice("<br><br><span class='notice'>NOTICE - [braintype] module reset detected: [name] has unloaded the [first_arg].</span><br>"))
+			to_chat(connected_ai, span_filter_notice("<br><br>" + span_notice("NOTICE - [braintype] module reset detected: [name] has unloaded the [first_arg].") + "<br>"))
 		if(ROBOT_NOTIFICATION_NEW_NAME) //New Name
 			if(first_arg != second_arg)
-				to_chat(connected_ai, span_filter_notice("<br><br><span class='notice'>NOTICE - [braintype] reclassification detected: [first_arg] is now designated as [second_arg].</span><br>"))
+				to_chat(connected_ai, span_filter_notice("<br><br>" + span_notice("NOTICE - [braintype] reclassification detected: [first_arg] is now designated as [second_arg].") + "<br>"))
 		if(ROBOT_NOTIFICATION_AI_SHELL) //New Shell
-			to_chat(connected_ai, span_filter_notice("<br><br><span class='notice'>NOTICE - New AI shell detected: <a href='?src=[REF(connected_ai)];track2=[html_encode(name)]'>[name]</a></span><br>"))
+			to_chat(connected_ai, span_filter_notice("<br><br>" + span_notice("NOTICE - New AI shell detected: <a href='?src=[REF(connected_ai)];track2=[html_encode(name)]'>[name]</a>") + "<br>"))
 
 /mob/living/silicon/robot/proc/disconnect_from_ai()
 	if(connected_ai)
@@ -1472,7 +1329,7 @@
 				log_game("[key_name(user)] assigned as operator on cyborg [key_name(src)]. Syndicate Operator change.")
 				var/datum/gender/TU = gender_datums[user.get_visible_gender()]
 				set_zeroth_law("Only [user.real_name] and people [TU.he] designate[TU.s] as being such are operatives.")
-				to_chat(src, "<b>Obey these laws:</b>")
+				to_chat(src, span_infoplain(span_bold("Obey these laws:")))
 				laws.show_laws(src)
 				to_chat(src, span_danger("ALERT: [user.real_name] is your new master. Obey your new laws and [TU.his] commands."))
 			else
@@ -1492,6 +1349,7 @@
 		sleep(6)
 		if(prob(50))
 			emagged = 1
+			robotact.update_static_data_for_all_viewers()
 			lawupdate = 0
 			disconnect_from_ai()
 			to_chat(user, span_filter_notice("You emag [src]'s interface."))
@@ -1524,7 +1382,7 @@
 				to_chat(src, span_danger("> N"))
 				sleep(20)
 				to_chat(src, span_danger("ERRORERRORERROR"))
-				to_chat(src, "<b>Obey these laws:</b>")
+				to_chat(src, span_infoplain(span_bold("Obey these laws:")))
 				laws.show_laws(src)
 				to_chat(src, span_danger("ALERT: [user.real_name] is your new master. Obey your new laws and [TU.his] commands."))
 				update_icon()
@@ -1783,3 +1641,12 @@
 	return (has_basic_upgrade(given_type) || has_advanced_upgrade(given_type) || has_restricted_upgrade(given_type) || has_no_prod_upgrade(given_type))
 
 #undef CYBORG_POWER_USAGE_MULTIPLIER
+
+/mob/living/silicon/robot/vv_edit_var(var_name, var_value)
+	switch(var_name)
+		if(NAMEOF(src, emagged))
+			robotact?.update_static_data_for_all_viewers()
+		if(NAMEOF(src, emag_items))
+			robotact?.update_static_data_for_all_viewers()
+
+	. = ..()

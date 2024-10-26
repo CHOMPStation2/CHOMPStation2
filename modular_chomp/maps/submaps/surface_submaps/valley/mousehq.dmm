@@ -5,7 +5,9 @@
 /turf/simulated/floor/bmarble,
 /area/submap/mousehq)
 "b" = (
-/mob/living/simple_mob/mechanical/mecha/mouse_tank/manned,
+/mob/living/simple_mob/mechanical/mecha/mouse_tank/manned{
+	loot_list = list(/obj/item/prop/alien/junk = 50)
+	},
 /turf/simulated/floor/bmarble,
 /area/submap/mousehq)
 "c" = (
@@ -27,7 +29,6 @@
 /area/submap/mousehq)
 "g" = (
 /obj/structure/table/alien/blue,
-/obj/item/prop/alien/junk,
 /turf/simulated/floor/bmarble,
 /area/submap/mousehq)
 "h" = (
@@ -117,7 +118,6 @@
 /area/submap/mousehq)
 "x" = (
 /obj/structure/closet/alien,
-/obj/item/prop/alien/junk,
 /turf/simulated/floor/wmarble,
 /area/submap/mousehq)
 "y" = (
@@ -151,8 +151,10 @@
 /turf/simulated/floor/wmarble,
 /area/submap/mousehq)
 "G" = (
-/obj/structure/table/alien/blue,
-/obj/item/prop/alien/junk,
+/mob/living/simple_mob/mechanical/mecha/mouse_tank/livewire/manned,
+/mob/living/simple_mob/mechanical/mecha/mouse_tank/manned{
+	loot_list = list(/obj/item/prop/alien/junk = 50)
+	},
 /turf/simulated/floor/wmarble,
 /area/submap/mousehq)
 "H" = (
@@ -160,7 +162,9 @@
 /turf/simulated/floor/wmarble,
 /area/submap/mousehq)
 "J" = (
-/mob/living/simple_mob/mechanical/mecha/mouse_tank/eraticator/manned,
+/mob/living/simple_mob/mechanical/mecha/mouse_tank/eraticator/manned{
+	loot_list = list(/obj/item/prop/alien/junk = 50)
+	},
 /obj/random/material/refined,
 /turf/simulated/floor/bmarble,
 /area/submap/mousehq)
@@ -168,7 +172,9 @@
 /turf/simulated/mineral/floor/ignore_mapgen/sif,
 /area/submap/mousehq)
 "M" = (
-/mob/living/simple_mob/mechanical/mecha/mouse_tank/eraticator/manned,
+/mob/living/simple_mob/mechanical/mecha/mouse_tank/eraticator/manned{
+	loot_list = list(/obj/item/prop/alien/junk = 50)
+	},
 /turf/simulated/floor/bmarble,
 /area/submap/mousehq)
 "N" = (
@@ -205,8 +211,10 @@
 /turf/simulated/floor/bmarble,
 /area/submap/mousehq)
 "U" = (
-/obj/structure/loot_pile/surface/alien/security,
-/turf/simulated/floor/bmarble,
+/mob/living/simple_mob/mechanical/mecha/mouse_tank/eraticator/manned{
+	loot_list = list(/obj/item/prop/alien/junk = 50)
+	},
+/turf/simulated/floor/wmarble,
 /area/submap/mousehq)
 "V" = (
 /turf/template_noop,
@@ -217,7 +225,9 @@
 /turf/simulated/floor/wmarble,
 /area/submap/mousehq)
 "X" = (
-/mob/living/simple_mob/mechanical/mecha/mouse_tank/manned,
+/mob/living/simple_mob/mechanical/mecha/mouse_tank/manned{
+	loot_list = list(/obj/item/prop/alien/junk = 50)
+	},
 /turf/simulated/floor/wmarble,
 /area/submap/mousehq)
 "Y" = (
@@ -228,7 +238,6 @@
 /area/submap/mousehq)
 "Z" = (
 /obj/structure/closet/alien,
-/obj/item/prop/alien/junk,
 /turf/simulated/floor/bmarble,
 /area/submap/mousehq)
 
@@ -316,7 +325,7 @@ Y
 g
 W
 g
-G
+i
 O
 O
 V
@@ -344,13 +353,13 @@ V
 V
 O
 O
-j
+x
 f
 p
 y
 p
 f
-z
+x
 O
 O
 V
@@ -442,7 +451,7 @@ O
 O
 O
 Z
-N
+U
 y
 H
 y
@@ -450,7 +459,7 @@ D
 y
 H
 y
-N
+U
 Z
 O
 O
@@ -723,7 +732,7 @@ y
 p
 y
 p
-a
+g
 O
 V
 "}
@@ -746,7 +755,7 @@ p
 m
 s
 v
-D
+G
 y
 p
 y
@@ -789,7 +798,7 @@ y
 p
 y
 p
-a
+g
 O
 V
 "}
@@ -876,7 +885,7 @@ K
 O
 r
 y
-N
+U
 t
 O
 y
@@ -1172,8 +1181,8 @@ V
 K
 O
 n
-j
-U
+x
+Z
 e
 O
 O

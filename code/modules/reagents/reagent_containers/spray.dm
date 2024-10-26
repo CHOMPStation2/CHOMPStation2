@@ -143,12 +143,12 @@
 
 /obj/item/reagent_containers/spray/pepper/attack_self(var/mob/user)
 	safety = !safety
-	// to_chat(usr, "<span class = 'notice'>You switch the safety [safety ? "on" : "off"].</span>")
+	// to_chat(usr, span_notice("You switch the safety [safety ? "on" : "off"]."))
 	balloon_alert(usr, "Safety [safety ? "on" : "off"].") // CHOMPEdit - Changed to balloon alert
 
 /obj/item/reagent_containers/spray/pepper/Spray_at(atom/A as mob|obj)
 	if(safety)
-		to_chat(usr, "<span class = 'warning'>The safety is on!</span>")
+		to_chat(usr, span_warning("The safety is on!"))
 		return
 	. = ..()
 

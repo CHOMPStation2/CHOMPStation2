@@ -97,7 +97,7 @@
 	if(!..())
 		return 0
 
-	usr.visible_message(span_filter_notice("<b>[src]</b> points to [A]."))
+	usr.visible_message(span_filter_notice(span_bold("[src]") + " points to [A]."))
 */
 	return ..()
 
@@ -105,7 +105,7 @@
 	if(!..())
 		return FALSE
 
-	visible_message(span_info("<b>[src]</b> points at [pointing_at]."), span_info("You point at [pointing_at]."))
+	visible_message(span_info(span_bold("[src]") + " points at [pointing_at]."), span_info("You point at [pointing_at]."))
 // CHOMPEdit End
 
 /mob/living/verb/succumb()
@@ -741,7 +741,7 @@
 	set category = "OOC.Game" //CHOMPEdit
 	set src in view()
 	//VOREStation Edit Start - Making it so SSD people have prefs with fallback to original style.
-	if(CONFIG_GET(flag/allow_metadata)) // CHOMPEdit
+	if(CONFIG_GET(flag/allow_metadata))
 		if(ooc_notes)
 			ooc_notes_window(usr)
 //			to_chat(usr, span_filter_notice("[src]'s Metainfo:<br>[ooc_notes]"))
@@ -1041,6 +1041,7 @@
 	if(lying != lying_prev)
 		lying_prev = lying
 		update_transform()
+		update_mob_action_buttons()
 		//VOREStation Add
 		if(lying && LAZYLEN(buckled_mobs))
 			for(var/mob/living/L as anything in buckled_mobs)
@@ -1205,7 +1206,7 @@
 				add_attack_logs(src,M,"Thrown via grab to [end_T.x],[end_T.y],[end_T.z]")
 			if(ishuman(M))
 				var/mob/living/carbon/human/N = M
-				if((N.health + N.halloss) < CONFIG_GET(number/health_threshold_crit) || N.stat == DEAD) // CHOMPEdit
+				if((N.health + N.halloss) < CONFIG_GET(number/health_threshold_crit) || N.stat == DEAD)
 					N.adjustBruteLoss(rand(10,30))
 			src.drop_from_inventory(G)
 
@@ -1229,7 +1230,7 @@
 		var/mob/living/carbon/human/H = target
 		if(H.in_throw_mode && H.a_intent == I_HELP && unEquip(I))
 			H.put_in_hands(I) // If this fails it will just end up on the floor, but that's fitting for things like dionaea.
-			visible_message(span_filter_notice("<b>[src]</b> hands \the [H] \a [I]."), span_notice("You give \the [target] \a [I]."))
+			visible_message(span_filter_notice(span_bold("[src]") + " hands \the [H] \a [I]."), span_notice("You give \the [target] \a [I]."))
 		else
 			to_chat(src, span_notice("You offer \the [I] to \the [target]."))
 			do_give(H)

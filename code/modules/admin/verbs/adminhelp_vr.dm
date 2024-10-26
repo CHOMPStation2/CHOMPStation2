@@ -6,7 +6,7 @@ Reason: Replaced with "Tickets System"
 */
 
 /datum/admin_help/proc/send2adminchat()
-	if(!CONFIG_GET(string/chat_webhook_url)) // CHOMPEdit
+	if(!CONFIG_GET(string/chat_webhook_url))
 		return
 
 	var/list/adm = get_admin_counts()
@@ -15,12 +15,12 @@ Reason: Replaced with "Tickets System"
 
 	spawn(0) //Unreliable world.Exports()
 		var/query_string = "type=adminhelp"
-		query_string += "&key=[url_encode(config.chat_webhook_key)]"
+		query_string += "&key=[url_encode(CONFIG_GET(string/chat_webhook_key))]"
 		query_string += "&from=[url_encode(key_name(initiator))]"
 		query_string += "&msg=[url_encode(html_decode(name))]"
 		query_string += "&admin_number=[allmins.len]"
 		query_string += "&admin_number_afk=[afkmins.len]"
-		world.Export("[CONFIG_GET(string/chat_webhook_url)]?[query_string]") // CHOMPEdit
+		world.Export("[CONFIG_GET(string/chat_webhook_url)]?[query_string]")
 
 /client/verb/adminspice()
 	set category = "Admin"
@@ -40,7 +40,7 @@ Reason: Replaced with "Tickets System"
 		return
 
 	//if they requested spice, then remove spice verb temporarily to prevent spamming
-	remove_verb(usr,/client/verb/adminspice)  //CHOMPEdit
+	remove_verb(usr, /client/verb/adminspice)
 	spawn(10 MINUTES)
 		if(usr)		// In case we left in the 10 minute cooldown
-			add_verb(usr,/client/verb/adminspice	) // 10 minute cool-down for spice request //CHOMPEdit
+			add_verb(usr, /client/verb/adminspice)	// 10 minute cool-down for spice request

@@ -164,7 +164,7 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 	// CHOMPEdit End
 
 	// Give button to leave.
-	add_verb(src,/mob/living/silicon/robot/proc/undeploy_act) //CHOMPEdit TGPanel
+	add_verb(src, /mob/living/silicon/robot/proc/undeploy_act)
 	to_chat(AI, span_notice("You have connected to an AI Shell remotely, and are now in control of it.<br>\
 	To return to your core, use the <b>Release Control</b> verb."))
 
@@ -209,12 +209,12 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 /mob/living/silicon/robot/proc/undeploy_act()
 	set name = "Release Control"
 	set desc = "Release control of a remote drone."
-	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
+	set category = "Abilities.Silicon"
 
 	undeploy("Remote session terminated.")
 
 /mob/living/silicon/robot/attack_ai(mob/user)
-	if(shell && CONFIG_GET(flag/allow_ai_shells) && (!connected_ai || connected_ai == user)) // CHOMPEdit
+	if(shell && CONFIG_GET(flag/allow_ai_shells) && (!connected_ai || connected_ai == user))
 		var/mob/living/silicon/ai/AI = user
 		if(istype(AI))		// Just in case we're clicked by a borg
 			AI.deploy_to_shell(src)
@@ -231,6 +231,6 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 	delete_me = TRUE
 
 /obj/effect/landmark/free_ai_shell/Initialize()
-	if(CONFIG_GET(flag/allow_ai_shells) && CONFIG_GET(flag/give_free_ai_shell)) // CHOMPEdit
+	if(CONFIG_GET(flag/allow_ai_shells) && CONFIG_GET(flag/give_free_ai_shell))
 		new /mob/living/silicon/robot/ai_shell(get_turf(src))
 	return ..()

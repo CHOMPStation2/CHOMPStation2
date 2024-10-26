@@ -26,7 +26,7 @@
 			continue // Don't want dead people.
 		var/turf/T = get_turf(L)
 		var/area/A = get_area(L)
-		if(T?.is_outdoors() && istype(A, /area/surface/outside/wilderness)) // VOREStation Edit
+		if(T?.is_outdoors() && istype(A, /area/tether/outpost/exploration_plains)) // VOREStation Edit
 			potential_victims += L
 
 	if(potential_victims.len)

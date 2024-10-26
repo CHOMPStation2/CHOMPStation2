@@ -136,6 +136,8 @@
 		"The drake's thick tongue presses against your form, smothering you with thick, gooey saliva as it pushes you around in it's maw.",
 		"The exotic drake lets out a deep rumble as it idly maws over you, shifting you in a warm, slimy embrace as it passively prepares to send you into a deeper embrace."
 	)
+	B.autotransfer_enabled = TRUE
+	B.autotransferchance = 30
 	B.autotransferwait = 5
 	B.autotransferlocation = "stomach"
 	B.escapetime = 1 SECONDS

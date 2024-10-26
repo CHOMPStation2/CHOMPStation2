@@ -418,9 +418,11 @@ Extracted to its own procedure for easier logic handling with paper bundles.
 				. += P.info
 
 /obj/machinery/photocopier/faxmachine/proc/message_admins(var/mob/sender, var/faxname, var/obj/item/sent, var/reply_type, font_colour="#006100")
-	var/msg = "<span class='notice'><b><font color='[font_colour]'>[faxname]: </font>[get_options_bar(sender, 2,1,1)]"
-	msg += "(<a href='?_src_=holder;[HrefToken()];FaxReply=\ref[sender];originfax=\ref[src];replyorigin=[reply_type]'>REPLY</a>)</b>: "
-	msg += "Receiving '[sent.name]' via secure connection ... <a href='?_src_=holder;[HrefToken(TRUE)];AdminFaxView=\ref[sent]'>view message</a></span>"
+	var/msg = "<font color='[font_colour]'>[faxname]: </font>[get_options_bar(sender, 2,1,1)]"
+	msg += "(<a href='?_src_=holder;[HrefToken()];FaxReply=\ref[sender];originfax=\ref[src];replyorigin=[reply_type]'>REPLY</a>)"
+	msg = span_bold(msg) + ": "
+	msg += "Receiving '[sent.name]' via secure connection ... <a href='?_src_=holder;[HrefToken(TRUE)];AdminFaxView=\ref[sent]'>view message</a>"
+	msg = span_notice(msg)
 
 	for(var/client/C in GLOB.admins)
 		if(check_rights((R_ADMIN|R_MOD|R_EVENT),0,C))
@@ -473,16 +475,16 @@ Extracted to its own procedure for easier logic handling with paper bundles.
 	if (istype(fax, /obj/item/paper))
 		var/obj/item/paper/P = fax
 		var/text = "<HTML><HEAD><TITLE>[P.name]</TITLE></HEAD><BODY>[P.info][P.stamps]</BODY></HTML>";
-		file("[CONFIG_GET(string/fax_export_dir)]/fax_[faxid].html") << text; // CHOMPEdit
+		file("[CONFIG_GET(string/fax_export_dir)]/fax_[faxid].html") << text;
 	else if (istype(fax, /obj/item/photo))
 		var/obj/item/photo/H = fax
-		fcopy(H.img, "[CONFIG_GET(string/fax_export_dir)]/photo_[faxid].png") // CHOMPEdit
+		fcopy(H.img, "[CONFIG_GET(string/fax_export_dir)]/photo_[faxid].png")
 		var/text = "<html><head><title>[H.name]</title></head>" \
 			+ "<body style='overflow:hidden;margin:0;text-align:center'>" \
 			+ "<img src='photo_[faxid].png'>" \
 			+ "[H.scribble ? "<br>Written on the back:<br><i>[H.scribble]</i>" : ""]"\
 			+ "</body></html>"
-		file("[CONFIG_GET(string/fax_export_dir)]/fax_[faxid].html") << text // CHOMPEdit
+		file("[CONFIG_GET(string/fax_export_dir)]/fax_[faxid].html") << text
 	else if (istype(fax, /obj/item/paper_bundle))
 		var/obj/item/paper_bundle/B = fax
 		var/data = ""
@@ -491,7 +493,7 @@ Extracted to its own procedure for easier logic handling with paper bundles.
 			var/page_faxid = export_fax(pageobj)
 			data += "<a href='fax_[page_faxid].html'>Page [page] - [pageobj.name]</a><br>"
 		var/text = "<html><head><title>[B.name]</title></head><body>[data]</body></html>"
-		file("[CONFIG_GET(string/fax_export_dir)]/fax_[faxid].html") << text // CHOMPEdit
+		file("[CONFIG_GET(string/fax_export_dir)]/fax_[faxid].html") << text
 	return faxid
 
 
@@ -500,16 +502,16 @@ Extracted to its own procedure for easier logic handling with paper bundles.
  * Call the chat webhook to transmit a notification of an admin fax to the admin chat.
  */
 /obj/machinery/photocopier/faxmachine/proc/message_chat_admins(var/mob/sender, var/faxname, var/obj/item/sent, var/faxid, font_colour="#006100")
-	if (CONFIG_GET(string/chat_webhook_url)) // CHOMPEdit
+	if (CONFIG_GET(string/chat_webhook_url))
 		spawn(0)
 			var/query_string = "type=fax"
-			query_string += "&key=[url_encode(CONFIG_GET(string/chat_webhook_key))]" // CHOMPEdit
+			query_string += "&key=[url_encode(CONFIG_GET(string/chat_webhook_key))]"
 			query_string += "&faxid=[url_encode(faxid)]"
 			query_string += "&color=[url_encode(font_colour)]"
 			query_string += "&faxname=[url_encode(faxname)]"
 			query_string += "&sendername=[url_encode(sender.name)]"
 			query_string += "&sentname=[url_encode(sent.name)]"
-			world.Export("[CONFIG_GET(string/chat_webhook_url)]?[query_string]") // CHOMPEdit
+			world.Export("[CONFIG_GET(string/chat_webhook_url)]?[query_string]")
 
 
 
@@ -518,12 +520,12 @@ Extracted to its own procedure for easier logic handling with paper bundles.
  * Call the chat webhook to transmit a notification of a job request
  */
 /obj/machinery/photocopier/faxmachine/proc/message_chat_rolerequest(var/font_colour="#006100", var/role_to_ping, var/reason, var/jobname)
-	if(CONFIG_GET(string/chat_webhook_url)) // CHOMPEdit
+	if(CONFIG_GET(string/chat_webhook_url))
 		spawn(0)
 			var/query_string = "type=rolerequest"
-			query_string += "&key=[url_encode(CONFIG_GET(string/chat_webhook_key))]" // CHOMPEdit
+			query_string += "&key=[url_encode(CONFIG_GET(string/chat_webhook_key))]"
 			query_string += "&ping=[url_encode(role_to_ping)]"
 			query_string += "&color=[url_encode(font_colour)]"
 			query_string += "&reason=[url_encode(reason)]"
 			query_string += "&job=[url_encode(jobname)]"
-			world.Export("[CONFIG_GET(string/chat_webhook_url)]?[query_string]") // CHOMPEdit
+			world.Export("[CONFIG_GET(string/chat_webhook_url)]?[query_string]")

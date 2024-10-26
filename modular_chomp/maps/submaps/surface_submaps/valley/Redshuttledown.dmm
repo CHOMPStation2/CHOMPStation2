@@ -11,7 +11,9 @@
 /turf/simulated/floor/tiled/yellow,
 /area/submap/redshuttledown)
 "bU" = (
-/mob/living/simple_mob/humanoid/merc/ranged/space/shotgun/auto,
+/mob/living/simple_mob/humanoid/merc/ranged/space/shotgun/auto{
+	loot_list = list(/obj/item/gun/projectile/automatic/as24 = 100, /obj/item/perfect_tele = 20)
+	},
 /obj/structure/bed/chair/office/dark{
 	dir = 1
 	},
@@ -102,7 +104,6 @@
 	dir = 6;
 	icon_state = "bordercolor"
 	},
-/obj/random/maintenance/medical,
 /turf/simulated/floor/tiled/white,
 /area/submap/redshuttledown)
 "ix" = (
@@ -310,7 +311,6 @@
 /area/submap/redshuttledown)
 "qr" = (
 /obj/structure/table/steel,
-/obj/random/firstaid,
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
 "qT" = (
@@ -347,18 +347,14 @@
 /obj/random/grenade/box,
 /obj/random/grenade/box,
 /obj/item/stolenpackage,
-/obj/item/stolenpackage,
 /obj/item/rig/merc,
 /obj/item/rig/internalaffairs,
-/obj/random/contraband/nofail,
-/obj/random/contraband/nofail,
 /obj/random/maintenance/medical,
 /obj/random/maintenance/morestuff,
 /obj/random/maintenance/misc,
-/obj/random/maintenance/security,
 /obj/random/maintenance/cargo,
 /obj/random/ammo,
-/obj/random/ammo,
+/obj/random/contraband,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/redshuttledown)
 "tv" = (
@@ -396,7 +392,9 @@
 /turf/template_noop,
 /area/submap/redshuttledown)
 "vX" = (
-/mob/living/simple_mob/humanoid/merc/ranged/deagle,
+/mob/living/simple_mob/humanoid/merc/ranged/deagle{
+	loot_list = list(/obj/item/gun/projectile/deagle = 100, /obj/item/perfect_tele = 20)
+	},
 /obj/structure/bed/chair/office/dark{
 	dir = 1
 	},
@@ -501,9 +499,6 @@
 /obj/structure/table/steel,
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
-/obj/random/maintenance/foodstuff,
-/obj/random/maintenance/foodstuff,
-/obj/random/maintenance/foodstuff,
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
 	},
@@ -531,10 +526,6 @@
 /obj/machinery/light,
 /obj/structure/table/steel,
 /obj/random/tool,
-/obj/random/maintenance/research,
-/obj/random/maintenance/engineering,
-/obj/random/material/refined,
-/obj/item/cell/device/weapon/recharge/alien/omni,
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
 "zv" = (
@@ -594,7 +585,6 @@
 /obj/structure/table/standard,
 /obj/item/tank/anesthetic,
 /obj/effect/floor_decal/corner/green/border,
-/obj/random/maintenance/medical,
 /turf/simulated/floor/tiled/white,
 /area/submap/redshuttledown)
 "Cu" = (
@@ -686,7 +676,6 @@
 	},
 /obj/structure/table/standard,
 /obj/item/storage/pill_bottle/combat,
-/obj/random/maintenance/medical,
 /turf/simulated/floor/tiled/white,
 /area/submap/redshuttledown)
 "GZ" = (
@@ -774,7 +763,9 @@
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
 "Mn" = (
-/mob/living/simple_mob/mechanical/mecha/combat/phazon,
+/mob/living/simple_mob/mechanical/mecha/combat/phazon{
+	loot_list = list(/obj/item/cell/device/weapon/recharge/alien/omni = 50)
+	},
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
 "MX" = (
@@ -796,10 +787,7 @@
 /obj/structure/table/steel,
 /obj/item/stack/cable_coil/alien/blood,
 /obj/item/circuitboard/mecha/phazon/main,
-/obj/random/tool/power,
-/obj/random/maintenance/research,
 /obj/random/maintenance/engineering,
-/obj/random/material/precious,
 /obj/item/mecha_parts/mecha_equipment/weapon/energy/taser/rigged,
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
@@ -873,7 +861,6 @@
 /obj/item/clothing/gloves/sterile,
 /obj/item/clothing/gloves/sterile,
 /obj/effect/floor_decal/corner/green/border,
-/obj/random/maintenance/medical,
 /turf/simulated/floor/tiled/white,
 /area/submap/redshuttledown)
 "Sz" = (
@@ -983,9 +970,6 @@
 /obj/random/energy/highend,
 /obj/item/rig/pmc/commander/grey/equipped,
 /obj/item/rig/pmc/commander/grey/equipped,
-/obj/item/card/emag/used,
-/obj/random/contraband/nofail,
-/obj/random/contraband/nofail,
 /obj/random/maintenance/medical,
 /obj/random/maintenance/morestuff,
 /obj/random/maintenance/misc,
@@ -993,6 +977,7 @@
 /obj/random/maintenance/cargo,
 /obj/random/ammo,
 /obj/random/ammo,
+/obj/random/contraband,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/redshuttledown)
 "Yv" = (
@@ -1008,14 +993,6 @@
 	},
 /turf/simulated/floor/tiled/yellow,
 /area/submap/redshuttledown)
-"YR" = (
-/obj/structure/table/steel,
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
-	},
-/obj/item/perfect_tele,
-/turf/simulated/floor/tiled/steel,
-/area/submap/redshuttledown)
 "YZ" = (
 /obj/structure/table/steel,
 /obj/item/material/knife,
@@ -1026,12 +1003,10 @@
 /area/submap/redshuttledown)
 "ZC" = (
 /obj/structure/table/standard,
-/obj/item/storage/firstaid/surgery,
 /obj/effect/floor_decal/corner/green/border{
 	dir = 10;
 	icon_state = "bordercolor"
 	},
-/obj/random/maintenance/medical,
 /turf/simulated/floor/tiled/white,
 /area/submap/redshuttledown)
 "ZN" = (
@@ -1319,7 +1294,7 @@ Ni
 ss
 kx
 GI
-YR
+BA
 BA
 Bx
 AD

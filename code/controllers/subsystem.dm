@@ -224,10 +224,10 @@
 		if(SS_SLEEPING)
 			state = SS_PAUSING
 
-// CHOMPEdit Start
 /// Called after the config has been loaded or reloaded.
 /datum/controller/subsystem/proc/OnConfigLoad()
 
+// CHOMPEdit Start
 /**
  * Used to initialize the subsystem. This is expected to be overriden by subtypes.
  */
@@ -236,14 +236,12 @@
 // CHOMPEdit End
 
 //hook for printing stats to the "MC" statuspanel for admins to see performance and related stats etc.
-//CHOMPEdit Begin
 /datum/controller/subsystem/stat_entry(msg)
 	if(can_fire && !(SS_NO_FIRE & flags))
 		msg = "[round(cost,1)]ms|[round(tick_usage,1)]%([round(tick_overrun,1)]%)|[round(ticks,0.1)]\t[msg]"
 	else
 		msg = "OFFLINE\t[msg]"
 	return msg
-//CHOMPEdit End
 
 /datum/controller/subsystem/proc/state_letter()
 	switch (state)

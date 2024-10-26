@@ -276,11 +276,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/BorgLab)
-"jR" = (
-/obj/effect/floor_decal/techfloor/orange,
-/obj/item/broken_gun/ionrifle,
-/turf/simulated/floor/reinforced,
-/area/submap/BorgLab)
 "kj" = (
 /obj/effect/floor_decal/rust,
 /obj/random/junk,
@@ -547,11 +542,6 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/submap/BorgLab)
-"ub" = (
-/obj/effect/floor_decal/industrial/warning,
-/obj/item/stolenpackage,
-/turf/simulated/floor/reinforced,
 /area/submap/BorgLab)
 "ug" = (
 /obj/machinery/door/window/brigdoor/westright{
@@ -1082,7 +1072,6 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 1
 	},
-/obj/item/broken_gun/laserrifle,
 /turf/simulated/floor/reinforced,
 /area/submap/BorgLab)
 "Pf" = (
@@ -1136,7 +1125,6 @@
 "QW" = (
 /obj/structure/closet/l3closet/general,
 /obj/effect/floor_decal/rust,
-/obj/random/maintenance/medical,
 /obj/random/maintenance/medical,
 /obj/random/maintenance/research,
 /obj/random/maintenance/research,
@@ -1260,7 +1248,6 @@
 	dir = 1
 	},
 /obj/random/maintenance,
-/obj/random/maintenance/medical,
 /obj/effect/floor_decal/rust/color_rustedcee,
 /obj/effect/decal/cleanable/generic,
 /turf/simulated/floor/tiled,
@@ -1360,12 +1347,6 @@
 "Wq" = (
 /obj/structure/sign/department/xenolab,
 /turf/simulated/wall/r_wall,
-/area/submap/BorgLab)
-"WK" = (
-/obj/effect/floor_decal/rust,
-/obj/effect/floor_decal/rust,
-/obj/item/broken_gun/laser_retro,
-/turf/simulated/floor/plating,
 /area/submap/BorgLab)
 "WQ" = (
 /turf/simulated/wall/r_wall,
@@ -1805,7 +1786,7 @@ YZ
 YD
 VU
 tx
-jR
+HA
 WQ
 WQ
 RG
@@ -2092,7 +2073,7 @@ iY
 RG
 WQ
 WQ
-WK
+TU
 xO
 Vc
 mB
@@ -2121,7 +2102,7 @@ WQ
 WQ
 KX
 Nj
-ub
+Vc
 YD
 iS
 Yk

@@ -27,7 +27,7 @@
 /area/submap/warzone)
 "mm" = (
 /obj/structure/table/steel_reinforced,
-/obj/random/contraband/nofail,
+/obj/random/contraband,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/warzone)
 "nj" = (

@@ -6,7 +6,7 @@ SUBSYSTEM_DEF(inactivity)
 	var/number_kicked = 0
 
 /datum/controller/subsystem/inactivity/fire(resumed = FALSE)
-	if (!CONFIG_GET(number/kick_inactive)) // CHOMPEdit
+	if (!CONFIG_GET(number/kick_inactive))
 		can_fire = FALSE
 		return
 	if (!resumed)
@@ -15,8 +15,8 @@ SUBSYSTEM_DEF(inactivity)
 	while(client_list.len)
 		var/client/C = client_list[client_list.len]
 		client_list.len--
-		if(C.is_afk(CONFIG_GET(number/kick_inactive) MINUTES) && can_kick(C)) // CHOMPEdit
-			to_chat_immediate(C, world.time, span_warning("You have been inactive for more than [CONFIG_GET(number/kick_inactive)] minute\s and have been disconnected.")) // CHOMPEdit
+		if(C.is_afk(CONFIG_GET(number/kick_inactive) MINUTES) && can_kick(C))
+			to_chat_immediate(C, world.time, span_warning("You have been inactive for more than [CONFIG_GET(number/kick_inactive)] minute\s and have been disconnected."))
 
 			var/information
 			if(C.mob)
@@ -56,11 +56,9 @@ SUBSYSTEM_DEF(inactivity)
 		if (MC_TICK_CHECK)
 			return
 
-//CHOMPEdit Begin
 /datum/controller/subsystem/inactivity/stat_entry(msg)
 	msg = "Kicked: [number_kicked]"
 	return ..()
-//CHOMPEdit End
 
 /datum/controller/subsystem/inactivity/proc/can_kick(var/client/C)
 	if(C.holder) return FALSE //VOREStation Add - Don't kick admins.

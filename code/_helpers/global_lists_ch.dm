@@ -79,7 +79,7 @@ var/global/list/vr_mob_tf_options = list(
 	"Space ghost" = /mob/living/simple_mob/vore/alienanimals/spooky_ghost,
 	"Teppi" = /mob/living/simple_mob/vore/alienanimals/teppi,
 	"Bee" = /mob/living/simple_mob/vore/bee,
-	//"Dragon" = /mob/living/simple_mob/vore/bigdragon/friendly, //Currently adds 12 bellies to the user when transformed into. Do not uncomment without fixing this.
+	"Dragon" = /mob/living/simple_mob/vore/bigdragon/friendly,
 	"Riftwalker" = /mob/living/simple_mob/vore/demon/wendigo,
 	"Horse" = /mob/living/simple_mob/vore/horse/big,
 	"Morph" = /mob/living/simple_mob/vore/morph,
@@ -96,7 +96,9 @@ var/global/list/vr_mob_tf_options = list(
 	"SWOOPIE XL" = /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie,
 	"Abyss lurker" = /mob/living/simple_mob/vore/vore_hostile/abyss_lurker,
 	"Abyss leaper" = /mob/living/simple_mob/vore/vore_hostile/leaper,
-	"Gelatinous cube" = /mob/living/simple_mob/vore/vore_hostile/gelatinous_cube)
+	"Gelatinous cube" = /mob/living/simple_mob/vore/vore_hostile/gelatinous_cube,
+	"Gryphon" = /mob/living/simple_mob/vore/gryphon
+	)
 
 var/global/list/vr_mob_spawner_options = list(
 	"Parrot" = /mob/living/simple_mob/animal/passive/bird/parrot,
@@ -194,7 +196,8 @@ var/global/list/vr_mob_spawner_options = list(
 	"Sobaka" = /mob/living/carbon/human/sharkm,
 	"Farwa" = /mob/living/carbon/human/farwa,
 	"Neaera" = /mob/living/carbon/human/neaera,
-	"Stok" = /mob/living/carbon/human/stok
+	"Stok" = /mob/living/carbon/human/stok,
+	//"Gryphon" = /mob/living/simple_mob/vore/gryphon // Disabled until tested
 	)
 
 var/global/list/selectable_footstep = list(
