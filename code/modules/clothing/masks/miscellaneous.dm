@@ -63,6 +63,24 @@
 
 	adjust_mask(usr)
 
+/obj/item/clothing/mask/surgical/white
+	icon_state = "sterilew"
+	item_state_slots = list(slot_r_hand_str = "sterilew", slot_l_hand_str = "sterilew")
+
+/obj/item/clothing/mask/surgical/dust
+	name = "dust mask"
+	desc = "A dust mask designed to protect the wearer against construction and/or custodial particulate."
+	icon_state = "dust"
+	item_state_slots = list(slot_r_hand_str = "dust", slot_l_hand_str = "dust")
+	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 30, rad = 0)
+
+/obj/item/clothing/mask/surgical/cloth
+	name = "cloth mask"
+	desc = "A cloth mask designed to protect the wearer against allergens, illnesses, and social interaction."
+	icon_state = "cloth"
+	item_state_slots = list(slot_r_hand_str = "cloth", slot_l_hand_str = "cloth")
+	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 20, rad = 0)
+
 /obj/item/clothing/mask/fakemoustache
 	name = "fake moustache"
 	desc = "Warning: moustache is fake."
@@ -302,8 +320,7 @@
 	w_class = ITEMSIZE_SMALL
 	body_parts_covered = FACE
 	icon_state = "papermask"
-	action_button_name = "Redraw Design"
-	action_button_is_hands_free = TRUE
+	actions_types = list(/datum/action/item_action/hands_free/redraw_design)
 	var/list/papermask_designs = list()
 
 /obj/item/clothing/mask/paper/Initialize(mapload)
@@ -323,7 +340,17 @@
 		"X" = image(icon = src.icon, icon_state = "xmask"),
 		"Bugeyes" = image(icon = src.icon, icon_state = "bugmask"),
 		"Double" = image(icon = src.icon, icon_state = "doublemask"),
-		"Mark" = image(icon = src.icon, icon_state = "markmask")
+		"Mark" = image(icon = src.icon, icon_state = "markmask"),
+		"Line" = image(icon = src.icon, icon_state = "linemask"),
+		"Minus" = image(icon = src.icon, icon_state = "minusmask"),
+		"Four" = image(icon = src.icon, icon_state = "fourmask"),
+		"Diamond" = image(icon = src.icon, icon_state = "diamondmask"),
+		"Cat" = image(icon = src.icon, icon_state = "catmask"),
+		"Big Eyes" = image(icon = src.icon, icon_state = "bigeyemask"),
+		"Good" = image(icon = src.icon, icon_state = "goodmask"),
+		"Bad" = image(icon = src.icon, icon_state = "badmask"),
+		"Happy" = image(icon = src.icon, icon_state = "happymask"),
+		"Sad" = image(icon = src.icon, icon_state = "sadmask")
 		)
 
 /obj/item/clothing/mask/paper/attack_self(mob/user)
@@ -335,15 +362,19 @@
 							"Sleeping" ="sleepingmask", "Heart" = "heartmask", "Core" = "coremask",
 							"Plus" = "plusmask", "Square" ="squaremask", "Bullseye" = "bullseyemask",
 							"Vertical" = "verticalmask", "Horizontal" = "horizontalmask", "X" ="xmask",
-							"Bugeyes" = "bugmask", "Double" = "doublemask", "Mark" = "markmask")
+							"Bugeyes" = "bugmask", "Double" = "doublemask", "Mark" = "markmask",
+							"Line" = "linemask", "Minus" = "minusmask", "Four" = "fourmask",
+							"Diamond" = "diamondmask", "Cat" = "catmask", "Big Eyes" = "bigeyemask",
+							"Good" = "goodmask", "Bad" = "badmask", "Happy" = "happymask", "Sad" = "sadmask"
+							)
 
 	var/choice = show_radial_menu(user, src, papermask_designs, custom_check = FALSE, radius = 36, require_near = TRUE)
 
 	if(src && choice && !user.incapacitated() && in_range(user,src))
 		icon_state = options[choice]
 		user.update_inv_wear_mask()
-		user.update_action_buttons()
-		to_chat(user, "<span class='notice'>Your paper mask now is now [choice].</span>")
+		user.update_action_buttons_icon()
+		to_chat(user, span_notice("Your paper mask now is now [choice]."))
 		return 1
 
 /obj/item/clothing/mask/emotions
@@ -352,8 +383,7 @@
 	w_class = ITEMSIZE_SMALL
 	body_parts_covered = FACE
 	icon_state = "joy"
-	action_button_name = "Redraw Design"
-	action_button_is_hands_free = TRUE
+	actions_types = list(/datum/action/item_action/hands_free/redraw_design)
 	var/static/list/joymask_designs = list()
 
 
@@ -378,8 +408,8 @@
 	if(src && choice && !user.incapacitated() && in_range(user,src))
 		icon_state = options[choice]
 		user.update_inv_wear_mask()
-		user.update_action_buttons()
-		to_chat(user, "<span class='notice'>Your [src] now displays a [choice] emotion.</span>")
+		user.update_action_buttons_icon()
+		to_chat(user, span_notice("Your [src] now displays a [choice] emotion."))
 		return 1
 
 /obj/item/clothing/mask/mouthwheat

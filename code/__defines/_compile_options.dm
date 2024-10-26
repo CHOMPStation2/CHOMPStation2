@@ -8,17 +8,23 @@
 								*/
 
 // ZAS Compile Options
+//#define FIREDBG		// Uncomment to turn on ZAS debugging related to fire stuff.
 //#define ZASDBG	 	// Uncomment to turn on super detailed ZAS debugging that probably won't even compile.
 #define MULTIZAS		// Uncomment to turn on Multi-Z ZAS Support!
 
 // Movement Compile Options
 //#define CARDINAL_INPUT_ONLY // Uncomment to disable diagonal player movement (restore previous cardinal-moves-only behavior)
 
+// CI will override these as appropriate
+// #define MAP_TEST 0
+// #define AWAY_MISSION_TEST 0
+// #define UNIT_TEST 0
+
 // Comment/Uncomment this to turn off/on shuttle code debugging logs
 #define DEBUG_SHUTTLES
 
 // If we are doing the map test build, do not include the main maps, only the submaps.
-#if MAP_TEST
+#ifdef MAP_TEST
 	#define USING_MAP_DATUM /datum/map
 	#define MAP_OVERRIDE 1
 #endif
@@ -27,6 +33,7 @@
 //#define REFERENCE_TRACKING
 #ifdef REFERENCE_TRACKING
 
+//#define FIND_REF_NO_CHECK_TICK //CHOMPEdit new ref tracking
 ///Should we be logging our findings or not
 #define REFERENCE_TRACKING_LOG
 
@@ -38,5 +45,12 @@
 #ifdef GC_FAILURE_HARD_LOOKUP
 #define FIND_REF_NO_CHECK_TICK
 #endif //ifdef GC_FAILURE_HARD_LOOKUP
+
+//CHOMPEdit begin
+#ifdef FIND_REF_NO_CHECK_TICK
+/world
+	loop_checks = FALSE
+#endif
+//CHOMPEdit end
 
 #endif //ifdef REFERENCE_TRACKING

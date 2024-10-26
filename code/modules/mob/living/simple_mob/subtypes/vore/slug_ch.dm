@@ -5,12 +5,12 @@
 	desc = "A giant, cold-tolerant slug. It seems excessively passive."
 	catalogue_data = list(/datum/category_item/catalogue/fauna/slug)
 	tt_desc = "S Arion hortensis"
-	icon = 'icons/mob/vore_ch.dmi'
+	icon = 'modular_chomp/icons/mob/vore_ch.dmi'
 	icon_dead = "slug-dead"
 	icon_living = "slug"
 	icon_state = "slug"
 	faction = "slug" //A faction other than neutral is necessary to get the slug to try eating station crew.
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
+	meat_type = /obj/item/reagent_containers/food/snacks/meat
 	melee_damage_lower = 0
 	melee_damage_upper = 1 //Not intended to pose any sort of threat outside of vore. Other code should stop it from ever attacking but this is an extra safety check.
 	friendly = list("blinks at")
@@ -18,8 +18,8 @@
 	response_disarm = "prods"
 	response_harm = "punches"
 	movement_cooldown = 40 //I guess you could call this a SNAIL'S PACE.
-	maxHealth = 500
-	health = 500
+	maxHealth = 100
+	health = 100
 	attacktext = list("headbutted")
 	minbodytemp = 80
 	ai_holder_type = /datum/ai_holder/simple_mob/passive/slug_ch
@@ -42,6 +42,8 @@
 	var/list/my_slime = list()
 	var/slime_max = 35 //With a slug which moves once every 10 seconds and a 5 minute delete timer, this should never exceed 30.
 	var/mob/living/vore_memory = null
+
+	can_be_drop_prey = FALSE //CHOMP Add
 
 /mob/living/simple_mob/vore/slug //I guess separating the vore variables is a little more organized?
 	vore_bump_chance = 100 //Always attempt a bump nom if possible...
@@ -127,7 +129,7 @@
 		if(missed) // Most likely we have a slow attack and they dodged it or we somehow got moved.
 			add_attack_logs(src, A, "Animal-attacked (dodged)", admin_notify = FALSE)
 			playsound(src, 'sound/rakshasa/Decay1.ogg', 75, 1)
-			visible_message(span("warning", "\The [src] misses."))
+			visible_message(span_warning("\The [src] misses."))
 			return FALSE
 		tryBumpNom(A) //Meant for bump noms but this works as intended here and has sanity checks.
 
@@ -192,7 +194,7 @@
 		return ..()
 	else if(istype(AM, /mob/living))
 		if(prob(50))
-			to_chat(AM, span("warning", "You stick to \the [my_turf]!"))
+			to_chat(AM, span_warning("You stick to \the [my_turf]!"))
 			return FALSE
 	return ..()
 
@@ -201,10 +203,16 @@
 	if(AM.is_incorporeal())
 		return
 
-	if(istype(AM, /mob/living))
+	if(istype(AM, /mob/living/simple_mob))
 		var/mob/living/L = AM
 		if(istype(L, /mob/living/simple_mob/vore/slug))
 			return
+		L.Weaken(10)
+		playsound(src, 'sound/rakshasa/Decay3.ogg', 100, 1)
+		alert_slug(L)
+
+	if(istype(AM, /mob/living/carbon) || istype(AM, /mob/living/silicon))
+		var/mob/living/L = AM
 
 		if(L.m_intent == "run" && !L.buckled)
 			if(has_buckled_mobs())
@@ -212,7 +220,7 @@
 			buckle_mob(L)
 			L.stop_pulling()
 			L.Weaken(2)
-			to_chat(L, "<span class='warning'>You tripped in the sticky substance, sticking to [my_turf]!</span>")
+			to_chat(L, span_warning("You tripped in the sticky substance, sticking to [my_turf]!"))
 			playsound(src, 'sound/rakshasa/Decay3.ogg', 100, 1)
 			alert_slug(L)
 

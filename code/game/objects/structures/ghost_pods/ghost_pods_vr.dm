@@ -11,19 +11,23 @@
 	var/activated = FALSE
 
 /obj/structure/ghost_pod/manual/attack_ghost(var/mob/observer/dead/user)
-	if(jobban_isbanned(user, "GhostRoles"))
-		to_chat(user, "<span class='warning'>You cannot inhabit this creature because you are banned from playing ghost roles.</span>")
+	if(jobban_isbanned(user, JOB_GHOSTROLES))
+		to_chat(user, span_warning("You cannot inhabit this creature because you are banned from playing ghost roles."))
+		return
+
+	//No OOC notes
+	if (not_has_ooc_text(user))
 		return
 
 	if(!remains_active || busy)
 		return
 
 	if(!activated)
-		to_chat(user, "<span class='warning'>\The [src] has not yet been activated.  Sorry.</span>")
+		to_chat(user, span_warning("\The [src] has not yet been activated.  Sorry."))
 		return
 
 	if(used)
-		to_chat(user, "<span class='warning'>Another spirit appears to have gotten to \the [src] before you.  Sorry.</span>")
+		to_chat(user, span_warning("Another spirit appears to have gotten to \the [src] before you.  Sorry."))
 		return
 
 	busy = TRUE
@@ -34,7 +38,7 @@
 		return
 
 	else if(used)
-		to_chat(user, "<span class='warning'>Another spirit appears to have gotten to \the [src] before you.  Sorry.</span>")
+		to_chat(user, span_warning("Another spirit appears to have gotten to \the [src] before you.  Sorry."))
 		busy = FALSE
 		return
 
@@ -48,6 +52,7 @@
 	if(notify)
 		trigger()
 
-/obj/structure/ghost_pod/ghost_activated/Initialize()
+/obj/structure/ghost_pod/ghost_activated/Initialize(var/mapload)
 	. = ..()
-	ghostpod_startup(spawn_active)
+	if(!mapload)
+		ghostpod_startup(spawn_active)

@@ -1,8 +1,8 @@
 /obj/machinery/mecha_part_fabricator/pros
-	icon = 'icons/obj/robotics.dmi'
+	icon = 'icons/obj/robotics_vr.dmi' //VOREStation Edit - New icon
 	icon_state = "prosfab"
 	name = "Prosthetics Fabricator"
-	desc = "A machine used for construction of prosthetics."
+	desc = "A machine used for the construction of prosthetics."
 	density = TRUE
 	anchored = TRUE
 	unacidable = TRUE
@@ -10,14 +10,14 @@
 	idle_power_usage = 20
 	active_power_usage = 5000
 	req_access = list(access_robotics)
-	circuit = /obj/item/weapon/circuitboard/prosthetics
+	circuit = /obj/item/circuitboard/prosthetics
 
 	// Prosfab specific stuff
 	var/manufacturer = null
 	var/species_types = list("Human")
 	var/species = "Human"
 
-	loading_icon_state = "prosfab_loading"
+	loading_icon_state = null
 
 	materials = list(
 		MAT_STEEL = 0,
@@ -61,6 +61,7 @@
 					"Cyborg Parts",
 					"Cyborg Internals",
 					"Cybernetics",
+					"pAI Parts", //VOREStation Add
 					"Implants",
 					"Control Interfaces",
 					"Other",
@@ -133,27 +134,27 @@
 	if(..())
 		return 1
 
-	if(istype(I,/obj/item/weapon/disk/limb))
-		var/obj/item/weapon/disk/limb/D = I
+	if(istype(I,/obj/item/disk/limb))
+		var/obj/item/disk/limb/D = I
 		if(!D.company || !(D.company in all_robolimbs))
-			to_chat(user, "<span class='warning'>This disk seems to be corrupted!</span>")
+			to_chat(user, span_warning("This disk seems to be corrupted!"))
 		else
-			to_chat(user, "<span class='notice'>Installing blueprint files for [D.company]...</span>")
+			to_chat(user, span_notice("Installing blueprint files for [D.company]..."))
 			if(do_after(user,50,src))
 				var/datum/robolimb/R = all_robolimbs[D.company]
 				R.unavailable_to_build = 0
-				to_chat(user, "<span class='notice'>Installed [D.company] blueprints!</span>")
+				to_chat(user, span_notice("Installed [D.company] blueprints!"))
 				qdel(I)
 		return
 
-	if(istype(I,/obj/item/weapon/disk/species))
-		var/obj/item/weapon/disk/species/D = I
+	if(istype(I,/obj/item/disk/species))
+		var/obj/item/disk/species/D = I
 		if(!D.species || !(D.species in GLOB.all_species))
-			to_chat(user, "<span class='warning'>This disk seems to be corrupted!</span>")
+			to_chat(user, span_warning("This disk seems to be corrupted!"))
 		else
-			to_chat(user, "<span class='notice'>Uploading modification files for [D.species]...</span>")
+			to_chat(user, span_notice("Uploading modification files for [D.species]..."))
 			if(do_after(user,50,src))
 				species_types |= D.species
-				to_chat(user, "<span class='notice'>Uploaded [D.species] files!</span>")
+				to_chat(user, span_notice("Uploaded [D.species] files!"))
 				qdel(I)
 		return

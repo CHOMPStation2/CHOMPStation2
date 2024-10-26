@@ -164,10 +164,11 @@
 	'sound/ambience/ai/ai3.ogg'\
 	)
 
-// Peaceful sounds when floating in the void.
+// Peaceful sounds when floating in the void. //CHOMPedit, added title2, my nostalgia okay?
 #define AMBIENCE_SPACE list(\
 	'sound/ambience/space/space_serithi.ogg',\
-	'sound/ambience/space/space1.ogg'\
+	'sound/ambience/space/space1.ogg',\
+	'sound/music/title2.ogg'\
 	)
 
 // Vaguely spooky sounds when around dead things.
@@ -182,9 +183,12 @@
 	'sound/ambience/foreboding/foreboding2.ogg'\
 	)
 
-// Ambience heard when aboveground on Sif and not in a Point of Interest.
+// Ambience heard when aboveground on Sif and not in a Point of Interest. // CHOMPEdit: Changed to Snowbirds Loops 1-4
 #define AMBIENCE_SIF list(\
-	'sound/ambience/sif/sif1.ogg'\
+	'sound/ambience/snow_and_ice/Snowbirds_loop1.ogg',\
+	'sound/ambience/snow_and_ice/Snowbirds_loop2.ogg',\
+	'sound/ambience/snow_and_ice/Snowbirds_loop3.ogg',\
+	'sound/ambience/snow_and_ice/Snowbirds_loop4.ogg'\
 	)
 
 // If we ever add geothermal PoIs or other places that are really hot, this will do.
@@ -209,7 +213,7 @@
 	'sound/ambience/expoutpost/expoutpost3.ogg',\
 	'sound/ambience/expoutpost/expoutpost4.ogg'\
 	)
-	
+
 //CHOMP Edit Sounds for Substation rooms. Just electrical sounds, really.
 #define AMBIENCE_SUBSTATION list(\
 	'sound/ambience/substation/substation1.ogg',\
@@ -221,7 +225,7 @@
 	'sound/ambience/substation/substation7.ogg',\
 	'sound/ambience/substation/substation8.ogg'\
 	)
-	
+
 #define AMBIENCE_HANGAR list(\
 	'sound/ambience/hangar/hangar1.ogg',\
 	'sound/ambience/hangar/hangar2.ogg',\

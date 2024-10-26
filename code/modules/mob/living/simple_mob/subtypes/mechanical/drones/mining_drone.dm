@@ -25,11 +25,11 @@
 	icon_dead = "miningdrone_dead"
 	has_eye_glow = TRUE
 
-	faction = "malf_drone"
+	faction = FACTION_MALF_DRONE
 
 	maxHealth = 50
 	health = 50
-	movement_cooldown = 5
+	movement_cooldown = 1.5
 	hovering = TRUE
 
 	base_attack_cooldown = 2.5 SECONDS
@@ -43,36 +43,38 @@
 	organ_names = /decl/mob_organ_names/miningdrone
 
 	ai_holder_type = /datum/ai_holder/simple_mob/ranged/kiting/threatening
-	say_list_type = /datum/say_list/malf_drone
+	say_list_type = /datum/say_list/malf_drone/mining
 
 	tame_items = list(
-	/obj/item/weapon/ore/verdantium = 90,
-	/obj/item/weapon/ore/hydrogen = 90,
-	/obj/item/weapon/ore/osmium = 70,
-	/obj/item/weapon/ore/diamond = 70,
-	/obj/item/weapon/ore/gold = 55,
-	/obj/item/weapon/ore/silver = 55,
-	/obj/item/weapon/ore/lead = 40,
-	/obj/item/weapon/ore/marble = 30,
-	/obj/item/weapon/ore/coal = 25,
-	/obj/item/weapon/ore/iron = 25,
-	/obj/item/weapon/ore/glass = 15,
-	/obj/item/weapon/ore = 5
+	/obj/item/ore/verdantium = 90,
+	/obj/item/ore/hydrogen = 90,
+	/obj/item/ore/osmium = 70,
+	/obj/item/ore/diamond = 70,
+	/obj/item/ore/gold = 55,
+	/obj/item/ore/silver = 55,
+	/obj/item/ore/lead = 40,
+	/obj/item/ore/marble = 30,
+	/obj/item/ore/coal = 25,
+	/obj/item/ore/iron = 25,
+	/obj/item/ore/glass = 15,
+	/obj/item/ore = 5
 	)
 
 	var/datum/effect/effect/system/ion_trail_follow/ion_trail = null
 	var/obj/item/shield_projector/shields = null
-	var/obj/item/weapon/storage/bag/ore/my_storage = null
+	var/obj/item/storage/bag/ore/my_storage = null
 
 	var/last_search = 0
 	var/search_cooldown = 5 SECONDS
+	var/ignoreunarmed = TRUE
+	var/allowedtools = list(/obj/item/pickaxe, /obj/item/gun/energy/kinetic_accelerator, /obj/item/gun/magnetic/matfed/phoronbore, /obj/item/kinetic_crusher, /obj/item/melee/shock_maul)
 
 /mob/living/simple_mob/mechanical/mining_drone/Initialize()
 	ion_trail = new
 	ion_trail.set_up(src)
 	ion_trail.start()
 
-	my_storage = new /obj/item/weapon/storage/bag/ore(src)
+	my_storage = new /obj/item/storage/bag/ore(src)
 	shields = new /obj/item/shield_projector/rectangle/automatic/drone(src)
 	return ..()
 
@@ -99,11 +101,51 @@
 		return .
 
 	if(!.)
+		if(ai_holder.check_attacker(H)) //it doesn't care how nicely you're geared if you've attacked it
+			return FALSE
+
 		var/has_tool = FALSE
 		var/obj/item/I = H.get_active_hand()
-		if(istype(I,/obj/item/weapon/pickaxe))
-			has_tool = TRUE
+		if(!istype(I,/obj/item))
+			if(ignoreunarmed)
+				return TRUE
+			else //just so they don't attack "miners" for having their mining gear in their offhand
+				var/obj/item/OH = H.get_inactive_hand()
+				if(OH)
+					for (var/path in allowedtools)
+						if(istype(OH,path))
+							has_tool = TRUE
+							break
+		else
+			for (var/path in allowedtools)
+				if(istype(I,path))
+					has_tool = TRUE
+					break
+			if(!has_tool) //if a valid tool not found in main hand, check offhand
+				var/obj/item/OH = H.get_inactive_hand()
+				if(OH)
+					for (var/path in allowedtools)
+						if(istype(OH,path))
+							has_tool = TRUE
+							break
 		return has_tool
+
+// extra IFF aside from the above - will detect and react to the following attacks from allies (necessary as IIsAlly prevents retaliation if true)
+/mob/living/simple_mob/mechanical/mining_drone/attack_hand(mob/living/L)
+	..()
+	if(istype(L) && L.a_intent != I_HELP)
+		if(ai_holder)
+			ai_holder.add_attacker(L)
+
+/mob/living/simple_mob/mechanical/mining_drone/bullet_act(var/obj/item/projectile/P, var/def_zone)
+	..()
+	if(ai_holder && P.firer)
+		ai_holder.add_attacker(P.firer)
+
+/mob/living/simple_mob/mechanical/mining_drone/hit_with_weapon(obj/item/I, mob/living/user, var/effective_force, var/hit_zone)
+	..()
+	if(ai_holder)
+		ai_holder.add_attacker(user)
 
 /mob/living/simple_mob/mechanical/mining_drone/handle_special()
 	if(my_storage && (get_AI_stance() in list(STANCE_APPROACH, STANCE_IDLE, STANCE_FOLLOW)) && !is_AI_busy() && isturf(loc) && (world.time > last_search + search_cooldown) && (my_storage.contents.len < my_storage.max_storage_space))
@@ -113,12 +155,12 @@
 			if(my_storage.contents.len >= my_storage.max_storage_space)
 				break
 
-			if((locate(/obj/item/weapon/ore) in T) && prob(40))
+			if((locate(/obj/item/ore) in T) && prob(40))
 				src.Beam(T, icon_state = "holo_beam", time = 0.5 SECONDS)
 				my_storage.rangedload(T, src)
 
 		if(my_storage.contents.len >= my_storage.max_storage_space)
-			visible_message("<b>\The [src]</b> emits a shrill beep, indicating its storage is full.")
+			visible_message(span_infoplain(span_bold("\The [src]") + " emits a shrill beep, indicating its storage is full."))
 
 		var/obj/structure/ore_box/OB = locate() in view(2, src)
 
@@ -129,3 +171,12 @@
 
 /decl/mob_organ_names/miningdrone
 	hit_zones = list("chassis", "comms array", "sensor suite", "left excavator module", "right excavator module", "maneuvering thruster")
+
+/datum/say_list/malf_drone/mining
+	say_threaten = list("Armed intruder detected.", "Lay down your weapons.", "Mining personnel only.", "Threat detected.", "Mining gear check: negative.")
+
+/mob/living/simple_mob/mechanical/mining_drone/scavenger //more aggro version for the debris field, with a weaker weapon
+	name = "scavenger drone"
+	ignoreunarmed = FALSE
+	allowedtools = list(/obj/item/pickaxe)
+	projectiletype = /obj/item/projectile/energy/excavate/weak

@@ -7,7 +7,7 @@ var/global/list/minor_air_alarms = list()
 /obj/machinery/computer/atmos_alert
 	name = "atmospheric alert computer"
 	desc = "Used to access the station's atmospheric sensors."
-	circuit = /obj/item/weapon/circuitboard/atmos_alert
+	circuit = /obj/item/circuitboard/atmos_alert
 	icon_keyboard = "atmos_key"
 	icon_screen = "alert:0"
 	light_color = "#e6ffff"
@@ -50,12 +50,19 @@ var/global/list/minor_air_alarms = list()
 		var/list/alarms = atmosphere_alarm.major_alarms()
 		if(alarms.len)
 			icon_screen = "alert:2"
+			playsound(src, 'modular_chomp/sound/effects/comp_alert_major.ogg', 70, 1) // CHOMPEdit: Alarm notifications
+			spawn(100) // Wait 10 seconds, then play it again
+				playsound(src, 'modular_chomp/sound/effects/comp_alert_major.ogg', 70, 1) // CHOMPEdit: Alarm notifications
 		else
 			alarms = atmosphere_alarm.minor_alarms()
 			if(alarms.len)
 				icon_screen = "alert:1"
+				playsound(src, 'modular_chomp/sound/effects/comp_alert_minor.ogg', 50, 1) // CHOMPEdit: Alarm notifications
+				spawn(100) // Wait 10 seconds, then play it again
+					playsound(src, 'modular_chomp/sound/effects/comp_alert_minor.ogg', 50, 1) // CHOMPEdit: Alarm notifications
 			else
 				icon_screen = initial(icon_screen)
+				playsound(src, 'modular_chomp/sound/effects/comp_alert_clear.ogg', 50, 1)  // CHOMPEdit: Alarm notifications
 	..()
 
 /obj/machinery/computer/atmos_alert/tgui_act(action, params)

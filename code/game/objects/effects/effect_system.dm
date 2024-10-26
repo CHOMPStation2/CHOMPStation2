@@ -199,6 +199,8 @@ steam.start() -- spawns the effect
 		return 0
 	if(istype(M,/mob/living/carbon/human))
 		var/mob/living/carbon/human/H = M
+		if(!M.get_organ(O_LUNGS)) // CHOMPedit - Making sure smoke doesn't affect lungless people
+			return 0
 		if(H.head && (H.head.item_flags & AIRTIGHT))
 			return 0
 	return 1
@@ -338,9 +340,11 @@ steam.start() -- spawns the effect
 /obj/effect/effect/smoke/elemental/mist
 	name = "misty cloud"
 	desc = "A cloud filled with water vapor."
-	color = "#CCFFFF"
+	color = "#F0FFFF"
 	alpha = 128
 	strength = 1
+	plane = MOB_PLANE
+	layer = ABOVE_MOB_LAYER
 
 /obj/effect/effect/smoke/elemental/mist/affect(mob/living/L)
 	L.water_act(strength)
@@ -542,10 +546,10 @@ steam.start() -- spawns the effect
 		s.start()
 
 		for(var/mob/M in viewers(5, location))
-			to_chat(M, "<span class='warning'>The solution violently explodes.</span>")
+			to_chat(M, span_warning("The solution violently explodes."))
 		for(var/mob/M in viewers(1, location))
 			if (prob (50 * amount))
-				to_chat(M, "<span class='warning'>The explosion knocks you down.</span>")
+				to_chat(M, span_warning("The explosion knocks you down."))
 				M.Weaken(rand(1,5))
 		return
 	else
@@ -568,7 +572,7 @@ steam.start() -- spawns the effect
 			flash = (amount/4) * flashing_factor
 
 		for(var/mob/M in viewers(8, location))
-			to_chat(M, "<span class='warning'>The solution violently explodes.</span>")
+			to_chat(M, span_warning("The solution violently explodes."))
 
 		explosion(
 			location,

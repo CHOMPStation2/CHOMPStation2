@@ -1,3 +1,10 @@
+var/bluespace_item_types = newlist(/obj/item/storage/backpack/holding,
+/obj/item/storage/bag/trash/holding,
+/obj/item/storage/pouch/holding,
+/obj/item/storage/belt/utility/holding,
+/obj/item/storage/belt/medical/holding
+)
+
 //wrapper
 /proc/do_teleport(ateleatom, adestination, aprecision=0, afteleport=1, aeffectin=null, aeffectout=null, asoundin=null, asoundout=null, local=TRUE, bohsafe=FALSE) //CHOMPStation Edit
 	new /datum/teleport/instant/science(arglist(args))
@@ -157,46 +164,52 @@
 
 /datum/teleport/instant/science/setPrecision(aprecision)
 	..()
-	if(bohsafe)
-		return 1
-	if(istype(teleatom, /obj/item/weapon/storage/backpack/holding))
-		precision = rand(1,100)
+	if(bohsafe) //CHOMPedit
+		return 1 //CHOMPedit
 
-	var/list/bagholding = teleatom.search_contents_for(/obj/item/weapon/storage/backpack/holding)
+	var/list/bluespace_things = newlist()
+
+	for (var/item in bluespace_item_types)
+		if (istype(teleatom, item))
+			precision = rand(1, 100)
+		bluespace_things |= teleatom.search_contents_for(item)
+
 	//VOREStation Addition Start: Prevent taurriding abuse
 	if(istype(teleatom, /mob/living))
 		var/mob/living/L = teleatom
 		if(LAZYLEN(L.buckled_mobs))
 			for(var/mob/rider in L.buckled_mobs)
-				bagholding += rider.search_contents_for(/obj/item/weapon/storage/backpack/holding)
+				for (var/item in bluespace_item_types)
+					bluespace_things |= rider.search_contents_for(item)
 	//VOREStation Addition End: Prevent taurriding abuse
-	if(bagholding.len)
-		precision = max(rand(1,100)*bagholding.len,100)
+
+	if(bluespace_things.len)
+		precision = max(rand(1,100)*bluespace_things.len,100)
 		if(istype(teleatom, /mob/living))
 			var/mob/living/MM = teleatom
-			to_chat(MM, "<span class='danger'>The Bluespace interface on your [teleatom] interferes with the teleport!</span>")
+			to_chat(MM, span_danger("The Bluespace interface on your [teleatom] interferes with the teleport!"))
 	return 1
 
 /datum/teleport/instant/science/teleportChecks()
-	if(istype(teleatom, /obj/item/weapon/disk/nuclear)) // Don't let nuke disks get teleported --NeoFite
-		teleatom.visible_message("<span class='danger'>\The [teleatom] bounces off of the portal!</span>")
+	if(istype(teleatom, /obj/item/disk/nuclear)) // Don't let nuke disks get teleported --NeoFite
+		teleatom.visible_message(span_danger("\The [teleatom] bounces off of the portal!"))
 		return 0
 
-	if(!isemptylist(teleatom.search_contents_for(/obj/item/weapon/disk/nuclear)))
+	if(!isemptylist(teleatom.search_contents_for(/obj/item/disk/nuclear)))
 		if(istype(teleatom, /mob/living))
 			var/mob/living/MM = teleatom
-			MM.visible_message("<span class='danger'>\The [MM] bounces off of the portal!</span>","<span class='warning'>Something you are carrying seems to be unable to pass through the portal. Better drop it if you want to go through.</span>")
+			MM.visible_message(span_danger("\The [MM] bounces off of the portal!"),span_warning("Something you are carrying seems to be unable to pass through the portal. Better drop it if you want to go through."))
 		else
-			teleatom.visible_message("<span class='danger'>\The [teleatom] bounces off of the portal!</span>")
+			teleatom.visible_message(span_danger("\The [teleatom] bounces off of the portal!"))
 		return 0
 	/* VOREStation Removal
 	if(destination.z in using_map.admin_levels) //CentCom z-level
 		if(istype(teleatom, /obj/mecha))
 			var/obj/mecha/MM = teleatom
-			to_chat(MM.occupant, "<span class='danger'>\The [MM] would not survive the jump to a location so far away!</span>")
+			to_chat(MM.occupant, span_danger("\The [MM] would not survive the jump to a location so far away!"))
 			return 0
-		if(!isemptylist(teleatom.search_contents_for(/obj/item/weapon/storage/backpack/holding)))
-			teleatom.visible_message("<span class='danger'>\The [teleatom] bounces off of the portal!</span>")
+		if(!isemptylist(teleatom.search_contents_for(/obj/item/storage/backpack/holding)))
+			teleatom.visible_message(span_danger("\The [teleatom] bounces off of the portal!"))
 			return 0
 	*/ //VOREStation Removal End
 	//VOREStation Edit Start
@@ -204,7 +217,7 @@
 	var/turf/dest_turf = get_turf(destination)
 	if(local && !(dest_turf.z in using_map.player_levels))
 		if(istype(teleatom, /mob/living))
-			to_chat(teleatom, "<span class='warning'>The portal refuses to carry you that far away!</span>")
+			to_chat(teleatom, span_warning("The portal refuses to carry you that far away!"))
 		return 0
 	else if(istype(destination.loc, /obj/belly))
 		var/obj/belly/destination_belly = destination.loc
@@ -221,7 +234,7 @@
 		obstructed = 1
 	else if(!((isturf(destination) && !destination.density) || (isturf(destination.loc) && !destination.loc.density)) || !destination.x || !destination.y || !destination.z)	//If we're inside something or outside universe
 		obstructed = 1
-		to_chat(teleatom, "<span class='warning'>Something is blocking way on the other side!</span>")
+		to_chat(teleatom, span_warning("Something is blocking way on the other side!"))
 	if(obstructed)
 		return 0
 	else

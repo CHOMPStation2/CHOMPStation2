@@ -20,6 +20,7 @@
 	desc = "A rectangular steel crate. This one looks particularly unstable."
 	var/mimic_chance = 30
 	var/mimic_active = TRUE
+	var/nest = null	//CHOMPAdd
 
 /obj/structure/closet/crate/mimic/open()
 	if(src.opened)
@@ -27,11 +28,17 @@
 	if(!src.can_open())
 		return 0
 
+	//CHOMPAdd Start
+	if(istype(nest, /obj/structure/mob_spawner))
+		var/obj/structure/mob_spawner/S = nest
+		S.get_used_report(src)
+	//CHOMPAdd End
+
 	if(mimic_active)
 		mimic_active = FALSE
 		if(prob(mimic_chance))
 			var/mob/living/simple_mob/vore/aggressive/mimic/new_mimic = new(loc, src)
-			visible_message("<font color='red'><b>[new_mimic] suddenly growls as it turns out to be a mimic!</b></font>")
+			visible_message(span_bolddanger("[new_mimic] suddenly growls as it turns out to be a mimic!"))
 			forceMove(new_mimic)
 			new_mimic.real_crate = src
 			new_mimic.name = name
@@ -52,7 +59,7 @@
 
 /obj/structure/closet/crate/mimic/damage(var/damage)
 	if(contents.len)
-		visible_message("<font color='red'><b>[src] makes out a crunchy noise as its contents are destroyed!</b></font>")
+		visible_message(span_bolddanger("[src] makes out a crunchy noise as its contents are destroyed!"))
 		for(var/obj/O in src.contents)
 			qdel(O)
 	..()
@@ -77,13 +84,13 @@
 
 	icon_state = "crate"
 	icon_living = "crate"
-	icon = 'icons/mob/animal_ch.dmi' //CHOMPEdit
+	icon = 'modular_chomp/icons/mob/animal_ch.dmi' //CHOMPEdit
 
-	faction = "mimic"
+	faction = FACTION_MIMIC
 
 	maxHealth = 125
 	health = 125
-	movement_cooldown = 7
+	movement_cooldown = 3
 
 	response_help = "touches"
 	response_disarm = "pushes"
@@ -120,6 +127,7 @@
 	swallowTime = 3 SECONDS
 	vore_capacity = 1
 	vore_default_mode = DM_DIGEST
+	can_be_drop_prey = FALSE //CHOMP Add
 
 /datum/ai_holder/mimic
 	wander = FALSE
@@ -130,7 +138,7 @@
 		var/mob/living/L = A
 		if(prob(knockdown_chance))
 			L.Weaken(3)
-			L.visible_message(span("danger", "\The [src] knocks down \the [L]!"))
+			L.visible_message(span_danger("\The [src] knocks down \the [L]!"))
 
 /mob/living/simple_mob/vore/aggressive/mimic/will_show_tooltip()
 	return FALSE

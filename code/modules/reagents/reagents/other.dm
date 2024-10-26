@@ -443,7 +443,7 @@
 	..()
 	if(iscarbon(M))
 		var/mob/living/carbon/C = M
-		C.clean_blood()
+		C.clean_blood(TRUE)
 
 /datum/reagent/space_cleaner/touch_obj(var/obj/O)
 	..()
@@ -456,6 +456,9 @@
 			var/turf/simulated/S = T
 			S.dirt = 0
 		T.clean_blood()
+		for(var/obj/effect/O in T)
+			if(istype(O,/obj/effect/rune) || istype(O,/obj/effect/decal/cleanable) || istype(O,/obj/effect/overlay))
+				qdel(O)
 
 		for(var/mob/living/simple_mob/slime/M in T)
 			M.adjustToxLoss(rand(5, 10))
@@ -506,7 +509,7 @@
 				var/obj/item/clothing/mask/smokable/S = H.wear_mask
 				if(S.lit)
 					S.quench() // No smoking in my medbay!
-					H.visible_message("<span class='notice'>[H]\'s [S.name] is put out.</span>")
+					H.visible_message(span_notice("[H]\'s [S.name] is put out."))
 
 /datum/reagent/lube // TODO: spraying on borgs speeds them up
 	name = "Space Lube"
@@ -665,3 +668,75 @@
 	color = "e6e6e6" //not quite white
 	nutriment_factor = 2 // 5 times worse than nutriment
 //YW Edit End
+
+/datum/reagent/carpet
+	name = "Liquid Carpet"
+	id = "liquidcarpet"
+	description = "Liquified carpet fibers, ready for dyeing."
+	reagent_state = LIQUID
+	color = "#b51d05"
+	taste_description = "carpet"
+
+/datum/reagent/carpet/black
+	name = "Liquid Black Carpet"
+	id = "liquidcarpetb"
+	description = "Black Carpet Fibers, ready for reinforcement."
+	reagent_state = LIQUID
+	color = "#000000"
+	taste_description = "rare and ashy carpet"
+
+/datum/reagent/carpet/blue
+	name = "Liquid Blue Carpet"
+	id = "liquidcarpetblu"
+	description = "Blue Carpet Fibers, ready for reinforcement."
+	reagent_state = LIQUID
+	color = "#3f4aee"
+	taste_description = "commanding carpet"
+
+/datum/reagent/carpet/turquoise
+	name = "Liquid Turquoise Carpet"
+	id = "liquidcarpettur"
+	description = "Turquoise Carpet Fibers, ready for reinforcement."
+	reagent_state = LIQUID
+	color = "#0592b5"
+	taste_description = "water-logged carpet"
+
+/datum/reagent/carpet/sblue
+	name = "Liquid Silver Blue Carpet"
+	id = "liquidcarpetsblu"
+	description = "Silver Blue Carpet Fibers, ready for reinforcement."
+	reagent_state = LIQUID
+	color = "#0011ff"
+	taste_description = "sterile and medicinal carpet"
+
+/datum/reagent/carpet/clown
+	name = "Liquid Clown Carpet"
+	id = "liquidcarpetc"
+	description = "Clown Carpet Fibers.... No clowns were harmed in the making of this."
+	reagent_state = LIQUID
+	color = "#e925be"
+	taste_description = "clown shoes and banana peels"
+
+/datum/reagent/carpet/purple
+	name = "Liquid Purple Carpet"
+	id = "liquidcarpetp"
+	description = "Purple Carpet Fibers, ready for reinforcement."
+	reagent_state = LIQUID
+	color = "#a614d3"
+	taste_description = "bleeding edge carpet research"
+
+/datum/reagent/carpet/orange
+	name = "Liquid Orange Carpet"
+	id = "liquidcarpeto"
+	description = "Orange Carpet Fibers, ready for reinforcement."
+	reagent_state = LIQUID
+	color = "#f16e16"
+	taste_description = "extremely overengineered carpet"
+
+/datum/reagent/essential_oil
+	name = "Essential Oils"
+	id = "essential_oil"
+	description = "A slurry of compounds that contains the basic requirements for life."
+	taste_description = "a mixture of thick, sweet, salty, salty and spicy flavours that all blend together to not be very nice at all"
+	reagent_state = LIQUID
+	color = "#e8e2b0"

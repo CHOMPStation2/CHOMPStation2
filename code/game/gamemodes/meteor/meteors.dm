@@ -13,7 +13,7 @@
 	/obj/effect/meteor/big=3,
 	/obj/effect/meteor/flaming=1,
 	/obj/effect/meteor/irradiated=3
-	) 
+	)
 
 //for threatening meteor event
 /var/list/meteors_threatening = list(
@@ -109,16 +109,16 @@
 	desc = "You should probably run instead of gawking at this."
 	icon = 'icons/obj/meteor.dmi'
 	icon_state = "small"
-	density = 1
-	anchored = 1
+	density = TRUE
+	anchored = TRUE
 	var/hits = 4
 	var/hitpwr = 2 //Level of ex_act to be called on hit.
 	var/dest
 	pass_flags = PASSTABLE
-	var/heavy = 0
+	var/heavy = FALSE
 	var/z_original
 
-	var/meteordrop = /obj/item/weapon/ore/iron
+	var/meteordrop = /obj/item/ore/iron
 	var/dropamt = 2
 
 	// How much damage it does to walls, using take_damage().
@@ -147,7 +147,7 @@
 		get_hit()
 
 /obj/effect/meteor/Destroy()
-	walk(src,0) //this cancels the walk_towards() proc
+	walk(src,FALSE) //this cancels the walk_towards() proc
 	GLOB.meteor_list -= src
 	return ..()
 
@@ -162,10 +162,10 @@
 			ram_turf(get_turf(A))
 			get_hit()
 		else
-			die(0)
+			die(FALSE)
 
 /obj/effect/meteor/CanPass(atom/movable/mover, turf/target)
-	return istype(mover, /obj/effect/meteor) ? 1 : ..()
+	return istype(mover, /obj/effect/meteor) ? TRUE : ..()
 
 /obj/effect/meteor/proc/ram_turf(var/turf/T)
 	//first bust whatever is in the turf
@@ -190,9 +190,9 @@
 /obj/effect/meteor/proc/get_hit()
 	hits--
 	if(hits <= 0)
-		die(1)
+		die(TRUE)
 
-/obj/effect/meteor/proc/die(var/explode = 1)
+/obj/effect/meteor/proc/die(var/explode = TRUE)
 	make_debris()
 	meteor_effect(explode)
 	qdel(src)
@@ -200,11 +200,23 @@
 /obj/effect/meteor/ex_act()
 	return
 
-/obj/effect/meteor/attackby(obj/item/weapon/W as obj, mob/user as mob, params)
-	if(istype(W, /obj/item/weapon/pickaxe))
+/obj/effect/meteor/attackby(obj/item/W as obj, mob/user as mob, params)
+	if(istype(W, /obj/item/pickaxe))
 		qdel(src)
 		return
 	..()
+
+/obj/effect/meteor/bullet_act(var/obj/item/projectile/Proj)
+	if(Proj.excavation_amount)
+		get_hit()
+
+	if(!QDELETED(src))
+		wall_power -= Proj.excavation_amount + Proj.damage + (Proj.hitscan * 25)	// Instant-impact projectiles are inherently better at dealing with meteors.
+
+		if(wall_power <= 0)
+			die(FALSE) // If you kill the meteor, then it dies.
+			return
+	return
 
 /obj/effect/meteor/proc/make_debris()
 	for(var/throws = dropamt, throws > 0, throws--)
@@ -235,7 +247,7 @@
 	pass_flags = PASSTABLE | PASSGRILLE
 	hits = 1
 	hitpwr = 3
-	meteordrop = /obj/item/weapon/ore/glass
+	meteordrop = /obj/item/ore/glass
 	wall_power = 50
 
 // Medium-sized meteors aren't very special and can be stopped easily by r-walls.
@@ -269,7 +281,7 @@
 	icon_state = "flaming"
 	hits = 5
 	heavy = 1
-	meteordrop = /obj/item/weapon/ore/phoron
+	meteordrop = /obj/item/ore/phoron
 	wall_power = 100
 
 /obj/effect/meteor/flaming/meteor_effect(var/explode)
@@ -282,7 +294,7 @@
 	name = "glowing meteor"
 	icon_state = "glowing"
 	heavy = 1
-	meteordrop = /obj/item/weapon/ore/uranium
+	meteordrop = /obj/item/ore/uranium
 	wall_power = 75
 
 
@@ -298,7 +310,7 @@
 	name = "conducting meteor"
 	icon_state = "glowing_blue"
 	desc = "Hide your floppies!"
-	meteordrop = /obj/item/weapon/ore/osmium
+	meteordrop = /obj/item/ore/osmium
 	dropamt = 3
 	wall_power = 80
 
@@ -319,7 +331,7 @@
 	hits = 30
 	hitpwr = 1
 	heavy = 1
-	meteordrop = /obj/item/weapon/ore/phoron
+	meteordrop = /obj/item/ore/phoron
 	wall_power = 150
 
 /obj/effect/meteor/tunguska/meteor_effect(var/explode)

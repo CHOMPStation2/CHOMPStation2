@@ -1,6 +1,8 @@
+//CHOMPEdit this file is unticked, see arms_ch.dm
+
 /datum/category_item/autolathe/arms/syringegun_ammo
 	name = "syringe gun cartridge"
-	path =/obj/item/weapon/syringe_cartridge
+	path =/obj/item/syringe_cartridge
 
 ////////////////
 /*Ammo casings*/
@@ -411,12 +413,6 @@
 	category = list("Arms and Ammunition")
 	hidden = 1
 
-/datum/category_item/autolathe/arms/pistol_clip_10mm
-	name = "ammo clip (10mm)"
-	path =/obj/item/ammo_magazine/clip/c10mm
-	category = list("Arms and Ammunition")
-	hidden = 1
-
 /datum/category_item/autolathe/arms/pistol_clip_50
 	name = "ammo clip (.44)"
 	path =/obj/item/ammo_magazine/clip/c50
@@ -454,10 +450,10 @@
 
 /datum/category_item/autolathe/arms/tacknife
 	name = "tactical knife"
-	path =/obj/item/weapon/material/knife/tacknife
+	path =/obj/item/material/knife/tacknife
 	hidden = 1
 
 /datum/category_item/autolathe/arms/flamethrower
 	name = "flamethrower"
-	path =/obj/item/weapon/flamethrower/full
+	path =/obj/item/flamethrower/full
 	hidden = 1

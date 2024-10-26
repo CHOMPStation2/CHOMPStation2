@@ -5,9 +5,9 @@
 	var/recharge_rate = 10000
 	var/overlay_icon = 'icons/obj/power_vr.dmi'
 
-/obj/machinery/power/smes/buildable/hybrid/attackby(var/obj/item/weapon/W as obj, var/mob/user as mob)
-	if(W.is_screwdriver() || W.is_wirecutter())
-		to_chat(user,"<span class='warning'>\The [src] full of weird alien technology that's best not messed with.</span>")
+/obj/machinery/power/smes/buildable/hybrid/attackby(var/obj/item/W as obj, var/mob/user as mob)
+	if(W.has_tool_quality(TOOL_SCREWDRIVER) || W.has_tool_quality(TOOL_WIRECUTTER))
+		to_chat(user,span_warning("\The [src] full of weird alien technology that's best not messed with."))
 		return 0
 
 /obj/machinery/power/smes/buildable/hybrid/update_icon()
@@ -32,3 +32,5 @@
 /obj/machinery/power/smes/buildable/hybrid/process()
 	charge += min(recharge_rate, capacity - charge)
 	..()
+
+//hey travis wake up

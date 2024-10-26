@@ -1,14 +1,16 @@
+//CHOMPedit: This file has been disabled and moved to the modular_chomp folder. Check that one if you're bug-fixing!
+
 /obj/machinery/vr_sleeper
 	name = "virtual reality sleeper"
 	desc = "A fancy bed with built-in sensory I/O ports and connectors to interface users' minds with their bodies in virtual reality."
 	icon = 'icons/obj/Cryogenic2.dmi'
-	icon_state = "syndipod_0"
+	icon_state = "body_scanner_0"
 
-	var/base_state = "syndipod_"
+	var/base_state = "body_scanner_"
 
 	density = TRUE
 	anchored = TRUE
-	circuit = /obj/item/weapon/circuitboard/vr_sleeper
+	circuit = /obj/item/circuitboard/vr_sleeper
 	var/mob/living/carbon/human/occupant = null
 	var/mob/living/carbon/human/avatar = null
 	var/datum/mind/vr_mind = null
@@ -22,6 +24,7 @@
 	idle_power_usage = 15
 	active_power_usage = 200
 	light_color = "#FF0000"
+
 
 /obj/machinery/vr_sleeper/Initialize()
 	. = ..()
@@ -40,10 +43,10 @@
 	if(stat & (NOPOWER|BROKEN))
 		if(occupant)
 			go_out()
-			visible_message("<b>\The [src]</b> emits a low droning sound, before the pod door clicks open.")
+			visible_message(span_infoplain(span_bold("\The [src]") + " emits a low droning sound, before the pod door clicks open."))
 		return
 	else if(eject_dead && occupant && occupant.stat == DEAD) // If someone dies somehow while inside, spit them out.
-		visible_message("<span class='warning'>\The [src] sounds an alarm, swinging its hatch open.</span>")
+		visible_message(span_warning("\The [src] sounds an alarm, swinging its hatch open."))
 		go_out()
 
 /obj/machinery/vr_sleeper/update_icon()
@@ -54,7 +57,7 @@
 		return 1
 
 	if(usr == occupant)
-		to_chat(usr, "<span class='warning'>You can't reach the controls from the inside.</span>")
+		to_chat(usr, span_warning("You can't reach the controls from the inside."))
 		return
 
 	add_fingerprint(usr)
@@ -67,7 +70,7 @@
 /obj/machinery/vr_sleeper/attackby(var/obj/item/I, var/mob/user)
 	add_fingerprint(user)
 
-	if(occupant && (istype(I, /obj/item/device/healthanalyzer) || istype(I, /obj/item/device/robotanalyzer)))
+	if(occupant && (istype(I, /obj/item/healthanalyzer) || istype(I, /obj/item/robotanalyzer)))
 		I.attack(occupant, user)
 		return
 
@@ -88,9 +91,9 @@
 
 
 
-/obj/machinery/sleeper/relaymove(var/mob/user)
+/obj/machinery/vr_sleeper/relaymove(var/mob/user)
 	..()
-	if(usr.incapacitated())
+	if(user.incapacitated())
 		return
 	go_out()
 
@@ -107,7 +110,7 @@
 		if(prob(15 / ( severity / 4 )) && occupant.species.has_organ[O_BRAIN] && occupant.internal_organs_by_name[O_BRAIN])
 			var/obj/item/organ/O = occupant.internal_organs_by_name[O_BRAIN]
 			O.take_damage(severity * 2)
-			visible_message("<span class='danger'>\The [src]'s internal lighting flashes rapidly, before the hatch swings open with a cloud of smoke.</span>")
+			visible_message(span_danger("\The [src]'s internal lighting flashes rapidly, before the hatch swings open with a cloud of smoke."))
 			smoke.set_up(severity, 0, src)
 			smoke.start("#202020")
 		go_out()
@@ -151,9 +154,9 @@
 	if(stat & (BROKEN|NOPOWER))
 		return
 	if(!ishuman(M))
-		to_chat(user, "<span class='warning'>\The [src] rejects [M] with a sharp beep.</span>")
+		to_chat(user, span_warning("\The [src] rejects [M] with a sharp beep."))
 	if(occupant)
-		to_chat(user, "<span class='warning'>\The [src] is already occupied.</span>")
+		to_chat(user, span_warning("\The [src] is already occupied."))
 		return
 
 	if(M == user)
@@ -163,26 +166,32 @@
 
 	if(do_after(user, 20))
 		if(occupant)
-			to_chat(user, "<span class='warning'>\The [src] is already occupied.</span>")
+			to_chat(user, span_warning("\The [src] is already occupied."))
 			return
 		M.stop_pulling()
 		if(M.client)
 			M.client.perspective = EYE_PERSPECTIVE
 			M.client.eye = src
 		M.loc = src
-		update_use_power(USE_POWER_ACTIVE)
+		// update_use_power(USE_POWER_ACTIVE) //VOREstation edit: borer VR crash fix
 		occupant = M
 
 		update_icon()
 
-		enter_vr()
+		//VOREstation edit - crashes borers
+		if(!M.has_brain_worms())
+			update_use_power(USE_POWER_ACTIVE)
+			enter_vr()
+		else
+			to_chat(user, span_warning("\The [src] rejects [M] with a sharp beep."))
+		//VOREstation edit end
 	return
 
 /obj/machinery/vr_sleeper/proc/go_out(var/forced = TRUE)
 	if(!occupant)
 		return
 
-	if(!forced && avatar && tgui_alert(avatar, "Someone wants to remove you from virtual reality. Do you want to leave?", "Leave VR?", list("Yes", "No")) == "No")
+	if(!forced && avatar && tgui_alert(avatar, "Someone wants to remove you from virtual reality. Do you want to leave?", "Leave VR?", list("Yes", "No")) != "Yes")
 		return
 
 	if(avatar)
@@ -219,7 +228,7 @@
 
 	avatar = occupant.vr_link
 	// If they've already enterred VR, and are reconnecting, prompt if they want a new body
-	if(avatar && tgui_alert(occupant, "You already have a [avatar.stat == DEAD ? "" : "deceased "]Virtual Reality avatar. Would you like to use it?", "New avatar", list("Yes", "No")) == "No")
+	if(avatar && tgui_alert(occupant, "You already have a [avatar.stat == DEAD ? "" : "deceased "]Virtual Reality avatar. Would you like to use it?", "New avatar", list("Yes", "No")) != "Yes")
 		// Delink the mob
 		occupant.vr_link = null
 		avatar = null
@@ -245,15 +254,19 @@
 		if(occupant.species.name != "Promethean" && occupant.species.name != "Human" && mirror_first_occupant)
 			avatar.shapeshifter_change_shape(occupant.species.name)
 		avatar.forceMove(get_turf(S))			// Put the mob on the landmark, instead of inside it
-		avatar.Sleeping(1)
 
+//CHOMPedit start VR fix
 		occupant.enter_vr(avatar)
+		//Yes, I am using a aheal just so your markings transfer over, I could not get .prefs.copy_to working. This is very stupid, and I can't be assed to rewrite this.  Too bad!
+		avatar.revive()
+		avatar.species.equip_survival_gear(avatar)
+		add_verb(avatar, /mob/living/carbon/human/proc/exit_vr) //ahealing removes the prommie verbs and the VR verbs, giving it back
 
+//CHOMPedit end
 		// Prompt for username after they've enterred the body.
-		var/newname = sanitize(input(avatar, "You are entering virtual reality. Your username is currently [src.name]. Would you like to change it to something else?", "Name change") as null|text, MAX_NAME_LEN)
+		var/newname = sanitize(tgui_input_text(avatar, "You are entering virtual reality. Your username is currently [src.name]. Would you like to change it to something else?", "Name change", null, MAX_NAME_LEN), MAX_NAME_LEN)
 		if (newname)
 			avatar.real_name = newname
 
 	else
 		occupant.enter_vr(avatar)
-

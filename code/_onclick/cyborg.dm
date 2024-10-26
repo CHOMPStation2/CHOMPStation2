@@ -46,7 +46,7 @@
 		if(is_component_functioning("camera"))
 			aiCamera.captureimage(A, usr)
 		else
-			to_chat(src, "<span class='userdanger'>Your camera isn't functional.</span>")
+			to_chat(src, span_userdanger("Your camera isn't functional."))
 		return
 
 	/*
@@ -88,7 +88,7 @@
 
 	// cyborgs are prohibited from using storage items so we can I think safely remove (A.loc && isturf(A.loc.loc))
 	if(isturf(A) || isturf(A.loc))
-		if(A.Adjacent(src)) // see adjacent.dm
+		if(A.Adjacent(src) || (W && W.attack_can_reach(src, A, W.reach))) // see adjacent.dm, allows robots to use ranged melee weapons
 
 			var/resolved = A.attackby(W, src, 1)
 			if(!resolved && A && W)

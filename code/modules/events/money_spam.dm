@@ -33,12 +33,12 @@
 	if(useMS)
 		if(prob(5))
 			// /obj/machinery/message_server/proc/send_pda_message(var/recipient = "",var/sender = "",var/message = "")
-			var/obj/item/device/pda/P
+			var/obj/item/pda/P
 			var/list/viables = list()
-			for(var/obj/item/device/pda/check_pda in sortAtom(PDAs))
+			for(var/obj/item/pda/check_pda in sortAtom(PDAs))
 				if (!check_pda.owner || check_pda == src || check_pda.hidden)
 					continue
-				
+
 				var/datum/data/pda/app/messenger/M = check_pda.find_program(/datum/data/pda/app/messenger)
 				if(!M || M.toff)
 					continue
@@ -69,7 +69,7 @@
 					message = pick("Luxury watches for Blowout sale prices!",\
 					"Watches, Jewelry & Accessories, Bags & Wallets !",\
 					"Deposit 100$ and get 300$ totally free!",\
-					" 100K NT.|WOWGOLD �nly $89            <HOT>",\
+					" 100K NT.|WOWGOLD Only $89            <HOT>",\
 					"We have been filed with a complaint from one of your customers in respect of their business relations with you.",\
 					"We kindly ask you to open the COMPLAINT REPORT (attached) to reply on this complaint..")
 				if(4)
@@ -110,11 +110,11 @@
 				for(var/mob/living/silicon/ai/ai in mob_list)
 					// Allows other AIs to intercept the message but the AI won't intercept their own message.
 					if(ai.aiPDA != P && ai.aiPDA != src)
-						ai.show_message("<i>Intercepted message from <b>[sender]</b></i> (Unknown / spam?) <i>to <b>[P:owner]</b>: [message]</i>")
+						ai.show_message(span_italics("Intercepted message from <b>[sender]</b></i> (Unknown / spam?) <i>to <b>[P:owner]</b>: [message]"))
 			*/
 
 			//Commented out because we don't send messages like this anymore.  Instead it will just popup in their chat window.
 			//P.tnote += "<i><b>&larr; From [sender] (Unknown / spam?):</b></i><br>[message]<br>"
 
 			var/datum/data/pda/app/messenger/PM = P.find_program(/datum/data/pda/app/messenger)
-			PM.notify("<b>Message from [sender] (Unknown / spam?), </b>\"[message]\" (Unable to Reply)", 0)
+			PM.notify(span_bold("Message from [sender] (Unknown / spam?), ") + "\"[message]\" (Unable to Reply)", 0)

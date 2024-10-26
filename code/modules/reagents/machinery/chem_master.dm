@@ -1,16 +1,17 @@
 /obj/machinery/chem_master
 	name = "ChemMaster 3000"
-	desc = "Used to seperate and package chemicals in to patches, pills, or bottles. Warranty void if used to create Space Drugs."
+	desc = "Used to separate and package chemicals in to patches, pills, or bottles. Warranty void if used to create Space Drugs."
 	density = TRUE
 	anchored = TRUE
 	unacidable = TRUE
 	icon = 'icons/obj/chemical.dmi'
 	icon_state = "mixer0"
-	circuit = /obj/item/weapon/circuitboard/chem_master
+	circuit = /obj/item/circuitboard/chem_master
 	use_power = USE_POWER_IDLE
 	idle_power_usage = 20
-	var/obj/item/weapon/reagent_containers/beaker = null
-	var/obj/item/weapon/storage/pill_bottle/loaded_pill_bottle = null
+	var/obj/item/reagent_containers/beaker = null
+	var/obj/item/storage/pill_bottle/loaded_pill_bottle = null
+	var/list/pill_bottle_wrappers = null //CHOMPEdit - Enable customizing pill bottle type
 	var/mode = 0
 	var/condi = 0
 	var/useramount = 15 // Last used amount
@@ -42,9 +43,9 @@
 /obj/machinery/chem_master/update_icon()
 	icon_state = "mixer[beaker ? "1" : "0"]"
 
-/obj/machinery/chem_master/attackby(var/obj/item/weapon/B as obj, var/mob/user as mob)
+/obj/machinery/chem_master/attackby(var/obj/item/B as obj, var/mob/user as mob)
 
-	if(istype(B, /obj/item/weapon/reagent_containers/glass) || istype(B, /obj/item/weapon/reagent_containers/food))
+	if(istype(B, /obj/item/reagent_containers/glass) || istype(B, /obj/item/reagent_containers/food))
 
 		if(src.beaker)
 			to_chat(user, "\A [beaker] is already loaded into the machine.")
@@ -55,7 +56,7 @@
 		to_chat(user, "You add \the [B] to the machine.")
 		update_icon()
 
-	else if(istype(B, /obj/item/weapon/storage/pill_bottle))
+	else if(istype(B, /obj/item/storage/pill_bottle))
 
 		if(src.loaded_pill_bottle)
 			to_chat(user, "A \the [loaded_pill_bottle] s already loaded into the machine.")
@@ -83,7 +84,7 @@
 
 /obj/machinery/chem_master/ui_assets(mob/user)
 	return list(
-		get_asset_datum(/datum/asset/chem_master),
+		get_asset_datum(/datum/asset/spritesheet/chem_master),
 	)
 
 /obj/machinery/chem_master/tgui_interact(mob/user, datum/tgui/ui = null)
@@ -112,7 +113,7 @@
 	if(beaker)
 		var/list/beaker_reagents_list = list()
 		data["beaker_reagents"] = beaker_reagents_list
-		for(var/datum/reagent/R in beaker.reagents.reagent_list)
+		for(var/datum/reagent/R in beaker.reagents?.reagent_list)
 			beaker_reagents_list[++beaker_reagents_list.len] = list("name" = R.name, "volume" = R.volume, "description" = R.description, "id" = R.id)
 
 		var/list/buffer_reagents_list = list()
@@ -160,25 +161,27 @@
 
 					arguments["analysis"] = result
 					tgui_modal_message(src, id, "", null, arguments)
-				// if("change_pill_bottle_style")
-				// 	if(!loaded_pill_bottle)
-				// 		return
-				// 	if(!pill_bottle_wrappers)
-				// 		pill_bottle_wrappers = list(
-				// 			"CLEAR" = "Default",
-				// 			COLOR_RED = "Red",
-				// 			COLOR_GREEN = "Green",
-				// 			COLOR_PALE_BTL_GREEN = "Pale green",
-				// 			COLOR_BLUE = "Blue",
-				// 			COLOR_CYAN_BLUE = "Light blue",
-				// 			COLOR_TEAL = "Teal",
-				// 			COLOR_YELLOW = "Yellow",
-				// 			COLOR_ORANGE = "Orange",
-				// 			COLOR_PINK = "Pink",
-				// 			COLOR_MAROON = "Brown"
-				// 		)
-				// 	var/current = pill_bottle_wrappers[loaded_pill_bottle.wrapper_color] || "Default"
-				// 	tgui_modal_choice(src, id, "Please select a pill bottle wrapper:", null, arguments, current, pill_bottle_wrappers)
+				// CHOMPEdit Start - Enable changing pill bottle style
+				if("change_pill_bottle_style")
+					if(!loaded_pill_bottle)
+						return
+					if(!pill_bottle_wrappers)
+						pill_bottle_wrappers = list(
+							"CLEAR" = "Default",
+							COLOR_RED = "Red",
+							COLOR_GREEN = "Green",
+							COLOR_PALE_BTL_GREEN = "Pale green",
+							COLOR_BLUE = "Blue",
+							COLOR_CYAN_BLUE = "Light blue",
+							COLOR_TEAL = "Teal",
+							COLOR_YELLOW = "Yellow",
+							COLOR_ORANGE = "Orange",
+							COLOR_PINK = "Pink",
+							COLOR_MAROON = "Brown"
+						)
+					var/current = pill_bottle_wrappers[loaded_pill_bottle.wrapper_color] || "Default"
+					tgui_modal_choice(src, id, "Please select a pill bottle wrapper:", null, arguments, current, pill_bottle_wrappers)
+				// CHOMPEdit End
 				if("addcustom")
 					if(!beaker || !beaker.reagents.total_volume)
 						return
@@ -209,8 +212,8 @@
 				if("change_pill_style")
 					var/list/choices = list()
 					for(var/i = 1 to MAX_PILL_SPRITE)
-						choices += "pill[i].png"
-					tgui_modal_bento(src, id, "Please select the new style for pills:", null, arguments, pillsprite, choices)
+						choices += "chem_master32x32 pill[i]"
+					tgui_modal_bento_spritesheet(src, id, "Please select the new style for pills:", null, arguments, pillsprite, choices)
 				if("create_patch")
 					if(condi || !reagents.total_volume)
 						return
@@ -226,12 +229,14 @@
 					if(condi || !reagents.total_volume)
 						return
 					tgui_modal_input(src, id, "Please enter the amount of patches to make (max [MAX_MULTI_AMOUNT] at a time):", null, arguments, pillamount, 5)
-				if("create_bottle")
+				if("create_bottle", "create_bottle_two")
 					if(condi || !reagents.total_volume)
 						return
 					var/num = round(text2num(arguments["num"] || 1))
 					if(!num)
 						return
+					if(id == "create_bottle_two")
+						num = 2
 					arguments["num"] = num
 					var/amount_per_bottle = CLAMP(reagents.total_volume / num, 0, MAX_UNITS_PER_BOTTLE)
 					var/default_name = "[reagents.get_master_reagent_name()]"
@@ -244,28 +249,30 @@
 				if("change_bottle_style")
 					var/list/choices = list()
 					for(var/i = 1 to MAX_BOTTLE_SPRITE)
-						choices += "bottle-[i].png"
-					tgui_modal_bento(src, id, "Please select the new style for bottles:", null, arguments, bottlesprite, choices)
+						choices += "chem_master32x32 bottle-[i]"
+					tgui_modal_bento_spritesheet(src, id, "Please select the new style for bottles:", null, arguments, bottlesprite, choices)
 				else
 					return FALSE
 		if(TGUI_MODAL_ANSWER)
 			var/answer = params["answer"]
 			switch(id)
-				// if("change_pill_bottle_style")
-				// 	if(!pill_bottle_wrappers || !loaded_pill_bottle) // wat?
-				// 		return
-				// 	var/color = "CLEAR"
-				// 	for(var/col in pill_bottle_wrappers)
-				// 		var/col_name = pill_bottle_wrappers[col]
-				// 		if(col_name == answer)
-				// 			color = col
-				// 			break
-				// 	if(length(color) && color != "CLEAR")
-				// 		loaded_pill_bottle.wrapper_color = color
-				// 		loaded_pill_bottle.apply_wrap()
-				// 	else
-				// 		loaded_pill_bottle.wrapper_color = null
-				// 		loaded_pill_bottle.cut_overlays()
+				// CHOMPEdit Start - Enable changing pill bottle style
+				if("change_pill_bottle_style")
+					if(!pill_bottle_wrappers || !loaded_pill_bottle) // wat?
+						return
+					var/color = "CLEAR"
+					for(var/col in pill_bottle_wrappers)
+						var/col_name = pill_bottle_wrappers[col]
+						if(col_name == answer)
+							color = col
+							break
+					if(length(color) && color != "CLEAR")
+						loaded_pill_bottle.wrapper_color = color
+						loaded_pill_bottle.update_icon()
+					else
+						loaded_pill_bottle.wrapper_color = null
+						loaded_pill_bottle.cut_overlays()
+				// CHOMPEdit End
 				if("addcustom")
 					var/amount = isgoodnumber(text2num(answer))
 					if(!amount || !arguments["id"])
@@ -281,7 +288,7 @@
 						return
 					if(!length(answer))
 						answer = reagents.get_master_reagent_name()
-					var/obj/item/weapon/reagent_containers/pill/P = new(loc)
+					var/obj/item/reagent_containers/pill/P = new(loc)
 					P.name = "[answer] pack"
 					P.desc = "A small condiment pack. The label says it contains [answer]."
 					P.icon_state = "bouilloncube"//Reskinned monkey cube
@@ -298,10 +305,10 @@
 					var/amount_per_pill = CLAMP(reagents.total_volume / count, 0, MAX_UNITS_PER_PILL)
 					while(count--)
 						if(reagents.total_volume <= 0)
-							to_chat(usr, "<span class='notice'>Not enough reagents to create these pills!</span>")
+							to_chat(usr, span_notice("Not enough reagents to create these pills!"))
 							return
 
-						var/obj/item/weapon/reagent_containers/pill/P = new(loc)
+						var/obj/item/reagent_containers/pill/P = new(loc)
 						P.name = "[answer] pill"
 						P.pixel_x = rand(-7, 7) // Random position
 						P.pixel_y = rand(-7, 7)
@@ -334,10 +341,10 @@
 					// var/is_medical_patch = chemical_safety_check(reagents)
 					while(count--)
 						if(reagents.total_volume <= 0)
-							to_chat(usr, "<span class='notice'>Not enough reagents to create these patches!</span>")
+							to_chat(usr, span_notice("Not enough reagents to create these patches!"))
 							return
 
-						var/obj/item/weapon/reagent_containers/pill/patch/P = new(loc)
+						var/obj/item/reagent_containers/pill/patch/P = new(loc)
 						P.name = "[answer] patch"
 						P.pixel_x = rand(-7, 7) // random position
 						P.pixel_y = rand(-7, 7)
@@ -349,7 +356,7 @@
 					if(condi || !reagents.total_volume)
 						return
 					tgui_act("modal_open", list("id" = "create_patch", "arguments" = list("num" = answer)), ui, state)
-				if("create_bottle")
+				if("create_bottle", "create_bottle_two")
 					if(condi || !reagents.total_volume)
 						return
 					var/count = CLAMP(round(text2num(arguments["num"]) || 0), 0, MAX_MULTI_AMOUNT)
@@ -361,9 +368,9 @@
 					var/amount_per_bottle = CLAMP(reagents.total_volume / count, 0, MAX_UNITS_PER_BOTTLE)
 					while(count--)
 						if(reagents.total_volume <= 0)
-							to_chat(usr, "<span class='notice'>Not enough reagents to create these bottles!</span>")
+							to_chat(usr, span_notice("Not enough reagents to create these bottles!"))
 							return
-						var/obj/item/weapon/reagent_containers/glass/bottle/P = new(loc)
+						var/obj/item/reagent_containers/glass/bottle/P = new(loc)
 						P.name = "[answer] bottle"
 						P.pixel_x = rand(-7, 7) // random position
 						P.pixel_y = rand(-7, 7)
@@ -417,18 +424,18 @@
 			var/datum/reagent/R = reagent_list[idx]
 
 			printing = TRUE
-			visible_message("<span class='notice'>[src] rattles and prints out a sheet of paper.</span>")
+			visible_message(span_notice("[src] rattles and prints out a sheet of paper."))
 			// playsound(loc, 'sound/goonstation/machines/printer_dotmatrix.ogg', 50, 1)
 
-			var/obj/item/weapon/paper/P = new /obj/item/weapon/paper(loc)
+			var/obj/item/paper/P = new /obj/item/paper(loc)
 			P.info = "<center><b>Chemical Analysis</b></center><br>"
-			P.info += "<b>Time of analysis:</b> [worldtime2stationtime(world.time)]<br><br>"
-			P.info += "<b>Chemical name:</b> [R.name]<br>"
+			P.info += span_bold("Time of analysis:") + " [worldtime2stationtime(world.time)]<br><br>"
+			P.info += span_bold("Chemical name:") + " [R.name]<br>"
 			if(istype(R, /datum/reagent/blood))
 				var/datum/reagent/blood/B = R
-				P.info += "<b>Description:</b> N/A<br><b>Blood Type:</b> [B.data["blood_type"]]<br><b>DNA:</b> [B.data["blood_DNA"]]"
+				P.info += span_bold("Description:") + " N/A<br><b>Blood Type:</b> [B.data["blood_type"]]<br><b>DNA:</b> [B.data["blood_DNA"]]"
 			else
-				P.info += "<b>Description:</b> [R.description]"
+				P.info += span_bold("Description:") + " [R.description]"
 			P.info += "<br><br><b>Notes:</b><br>"
 			P.name = "Chemical Analysis - [R.name]"
 			spawn(50)
@@ -469,7 +476,7 @@
 		if("create_condi_bottle")
 			if(!condi || !reagents.total_volume)
 				return
-			var/obj/item/weapon/reagent_containers/food/condiment/P = new(loc)
+			var/obj/item/reagent_containers/food/condiment/P = new(loc)
 			reagents.trans_to_obj(P, 50)
 		else
 			return FALSE

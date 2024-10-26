@@ -9,7 +9,7 @@
 /turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
 /area/borealis2/outdoors/exterior/lake)
 "bn" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/borealis2/outdoors/exterior/explore1)
 "bL" = (
@@ -95,7 +95,7 @@
 "hY" = (
 /obj/effect/decal/cleanable/blood/drip,
 /obj/effect/floor_decal/rust,
-/obj/item/device/geiger/wall{
+/obj/item/geiger/wall{
 	dir = 8;
 	pixel_x = 30
 	},
@@ -395,7 +395,7 @@
 /area/borealis2/outdoors/exterior/explore1)
 "ue" = (
 /obj/effect/floor_decal/rust,
-/obj/item/device/geiger/wall{
+/obj/item/geiger/wall{
 	dir = 8;
 	pixel_x = 30
 	},
@@ -429,7 +429,7 @@
 /turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
 /area/borealis2/outdoors/exterior/lake)
 "vC" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /obj/effect/overlay/snow/floor/pointy{
 	dir = 1
 	},
@@ -790,7 +790,7 @@
 /turf/simulated/wall,
 /area/borealis2/outdoors/exterior/explore1)
 "KT" = (
-/obj/item/device/geiger/wall{
+/obj/item/geiger/wall{
 	dir = 8;
 	pixel_x = 30
 	},
@@ -934,7 +934,7 @@
 /turf/simulated/floor/outdoors/snow/snow/cryogaia,
 /area/borealis2/outdoors/exterior)
 "RK" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /obj/effect/overlay/snow/floor/pointy,
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/borealis2/outdoors/exterior/explore1)

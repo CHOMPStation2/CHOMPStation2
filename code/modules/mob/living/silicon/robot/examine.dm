@@ -1,25 +1,25 @@
 /mob/living/silicon/robot/examine(mob/user)
-	var/custom_infix = custom_name ? ", [modtype] [braintype]" : ""
+	var/custom_infix = custom_name ? ", [modtype][sprite_type ? " [sprite_type]" : ""] [braintype]" : ""
 	. = ..(user, infix = custom_infix)
 
 	if (src.getBruteLoss())
 		if (src.getBruteLoss() < 75)
-			. += "<span class='warning'>It looks slightly dented.</span>"
+			. += span_warning("It looks slightly dented.")
 		else
-			. += "<span class='warning'><B>It looks severely dented!</B></span>"
+			. += span_boldwarning("It looks severely dented!")
 	if (src.getFireLoss())
 		if (src.getFireLoss() < 75)
-			. += "<span class='warning'>It looks slightly charred.</span>"
+			. += span_warning("It looks slightly charred.")
 		else
-			. += "<span class='warning'><B>It looks severely burnt and heat-warped!</B></span>"
+			. += span_boldwarning("It looks severely burnt and heat-warped!")
 
 	if(opened)
-		. += "<span class='warning'>Its cover is open and the power cell is [cell ? "installed" : "missing"].</span>"
+		. += span_warning("Its cover is open and the power cell is [cell ? "installed" : "missing"].")
 	else
 		. += "Its cover is closed."
 
 	if(!has_power)
-		. += "<span class='warning'>It appears to be running on backup power.</span>"
+		. += span_warning("It appears to be running on backup power.")
 
 	switch(src.stat)
 		if(CONSCIOUS)
@@ -27,17 +27,15 @@
 				. += "It appears to be an [deployed ? "active" : "empty"] AI shell."
 			else if(!src.client)
 				. += "It appears to be in stand-by mode." //afk
-		if(UNCONSCIOUS)		. += "<span class='warning'>It doesn't seem to be responding.</span>"
-		if(DEAD)			. += "<span class='deadsay'>It looks completely unsalvageable.</span>"
+		if(UNCONSCIOUS)		. += span_warning("It doesn't seem to be responding.")
+		if(DEAD)			. += span_deadsay("It looks completely unsalvageable.")
 	. += attempt_vr(src,"examine_reagent_bellies",args) //CHOMP reagent bellies
-	
+
 	// VOREStation Edit: Start
 	. += attempt_vr(src,"examine_bellies_borg",args) //VOREStation Edit
-	if(ooc_notes)
-		. += "<span class = 'deptradio'>OOC Notes:</span> <a href='?src=\ref[src];ooc_notes=1'>\[View\]</a>"
 	// VOREStation Edit: End
 
-	. += "*---------*"
+	. += ""
 
 	if(print_flavor_text()) . += "<br>[print_flavor_text()]"
 

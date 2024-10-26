@@ -21,7 +21,7 @@
 				deactivate()
 			return FALSE
 
-		H.visible_message("<span class='warning'>Thin snakelike tendrils grow from [H] and connect to \the [apc].</span>","<span class='notice'>Thin snakelike tendrils grow from you and connect to \the [apc].</span>")
+		H.visible_message(span_warning("Thin snakelike tendrils grow from [H] and connect to \the [apc]."),span_notice("Thin snakelike tendrils grow from you and connect to \the [apc]."))
 
 /datum/nifsoft/apc_recharge/deactivate(var/force = FALSE)
 	if((. = ..()))
@@ -36,7 +36,7 @@
 			return TRUE
 		else
 			nif.notify("APC charging has ended.")
-			H.visible_message("<span class='warning'>[H]'s snakelike tendrils whip back into their body from \the [apc].</span>","<span class='notice'>The APC connector tendrils return to your body.</span>")
+			H.visible_message(span_warning("[H]'s snakelike tendrils whip back into their body from \the [apc]."),span_notice("The APC connector tendrils return to your body."))
 			deactivate()
 			return FALSE
 
@@ -93,7 +93,7 @@
 	desc = "A system that allows one to apply 'laws' to sapient life. Extremely illegal, of course."
 	list_pos = NIF_COMPLIANCE
 	cost = 8200
-	wear = 4
+	wear = 1
 	illegal = TRUE
 	vended = FALSE
 	access = 999 //Prevents anyone from buying it without an emag.
@@ -105,11 +105,11 @@
 
 /datum/nifsoft/compliance/activate()
 	if((. = ..()))
-		to_chat(nif.human,"<span class='danger'>You are compelled to follow these rules: </span>\n<span class='notify'>[laws]</span>")
+		to_chat(nif.human,span_danger("You are compelled to follow these rules:") + "\n" + span_notify("[laws]"))
 
 /datum/nifsoft/compliance/install()
 	if((. = ..()))
-		to_chat(nif.human,"<span class='danger'>You feel suddenly compelled to follow these rules: </span>\n<span class='notify'>[laws]</span>")
+		to_chat(nif.human,span_danger("You feel suddenly compelled to follow these rules:") + "\n" + span_notify("[laws]"))
 
 /datum/nifsoft/compliance/uninstall()
 	nif.notify("ERROR! Unable to comply!",TRUE)
@@ -123,20 +123,20 @@
 	desc = "A system that allows one to change their size, through drastic mass rearrangement. Causes significant wear when installed."
 	list_pos = NIF_SIZECHANGE
 	cost = 375
-	wear = 6
+	wear = 0.5
 
 /datum/nifsoft/sizechange/activate()
 	if((. = ..()))
-		var/new_size = input(usr, "Put the desired size (25-200%), or (1-600%) in dormitory areas.", "Set Size", 200) as num|null
+		var/new_size = tgui_input_number(usr, "Put the desired size (25-200%), or (1-600%) in dormitory areas.", "Set Size", 200, 600, 1)
 
 		if (!nif.human.size_range_check(new_size))
 			if(new_size)
-				to_chat(nif.human,"<span class='notice'>The safety features of the NIF Program prevent you from choosing this size.</span>")
+				to_chat(nif.human,span_notice("The safety features of the NIF Program prevent you from choosing this size."))
 			return
 		else
 			if(nif.human.resize(new_size/100, uncapped=nif.human.has_large_resize_bounds(), ignore_prefs = TRUE))
-				to_chat(nif.human,"<span class='notice'>You set the size to [new_size]%</span>")
-				nif.human.visible_message("<span class='warning'>Swirling grey mist envelops [nif.human] as they change size!</span>","<span class='notice'>Swirling streams of nanites wrap around you as you change size!</span>")
+				to_chat(nif.human,span_notice("You set the size to [new_size]%"))
+				nif.human.visible_message(span_warning("Swirling grey mist envelops [nif.human] as they change size!"),span_notice("Swirling streams of nanites wrap around you as you change size!"))
 		spawn(0)
 			deactivate()
 
@@ -173,3 +173,29 @@
 			var/mob/living/carbon/human/H = human
 			H.hide_alt_appearance("animals", justme)
 			alt_farmanimals -= nif.human
+
+/datum/nifsoft/malware
+	name = "Cool Kidz Toolbar"
+	desc = "Best toolbar in business since 2098."
+	list_pos = NIF_MALWARE
+	cost = 1987
+	wear = 0
+	illegal = TRUE
+	vended = FALSE
+	tick_flags = NIF_ALWAYSTICK
+	var/last_ads
+	can_uninstall = FALSE
+
+/datum/nifsoft/malware/activate()
+	if((. = ..()))
+		to_chat(nif.human,span_danger("Runtime error in 15_misc.dm, line 191."))
+
+/datum/nifsoft/malware/install()
+	if((. = ..()))
+		last_ads = world.time
+
+/datum/nifsoft/malware/life()
+	if((. = ..()))
+		if(nif.human.client && world.time - last_ads > rand(10 MINUTES, 15 MINUTES) && prob(1))
+			last_ads = world.time
+			nif.human.client.create_fake_ad_popup_multiple(/obj/screen/popup/default, 5)

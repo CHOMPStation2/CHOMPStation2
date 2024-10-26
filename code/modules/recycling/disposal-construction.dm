@@ -25,15 +25,15 @@
 	// Disposals handle "bent"/"corner" strangely, handle this specially.
 	if(ptype == DISPOSAL_PIPE_STRAIGHT && (dir in cornerdirs))
 		ptype = DISPOSAL_PIPE_CORNER
-		switch(dir)
-			if(NORTHWEST)
-				dir = WEST
-			if(NORTHEAST)
-				dir = NORTH
-			if(SOUTHWEST)
-				dir = SOUTH
-			if(SOUTHEAST)
-				dir = EAST
+	switch(dir)
+		if(NORTHWEST)
+			dir = WEST
+		if(NORTHEAST)
+			dir = NORTH
+		if(SOUTHWEST)
+			dir = SOUTH
+		if(SOUTHEAST)
+			dir = EAST
 
 	switch(ptype)
 		if(DISPOSAL_PIPE_BIN, DISPOSAL_PIPE_OUTLET, DISPOSAL_PIPE_CHUTE)
@@ -135,6 +135,23 @@
 
 	src.set_dir(turn(src.dir, 270))
 	update()
+
+//VOREstation edit: counter-clockwise rotation
+/obj/structure/disposalconstruct/verb/rotate_counterclockwise()
+	set category = "Object"
+	set name = "Rotate Pipe Counter-Clockwise"
+	set src in view(1)
+
+	if(usr.stat)
+		return
+
+	if(anchored)
+		to_chat(usr, "You must unfasten the pipe before rotating it.")
+		return
+
+	src.set_dir(turn(src.dir, 90))
+	update()
+//VOREstation edit end
 
 /obj/structure/disposalconstruct/verb/flip()
 	set category = "Object"
@@ -246,7 +263,7 @@
 	var/obj/structure/disposalpipe/CP = locate() in T
 
 	// wrench: (un)anchor
-	if(I.is_wrench())
+	if(I.has_tool_quality(TOOL_WRENCH))
 		if(anchored)
 			anchored = FALSE
 			if(ispipe)
@@ -285,9 +302,9 @@
 		update()
 
 	// weldingtool: convert to real pipe
-	else if(istype(I, /obj/item/weapon/weldingtool))
+	else if(I.has_tool_quality(TOOL_WELDER))
 		if(anchored)
-			var/obj/item/weapon/weldingtool/W = I
+			var/obj/item/weldingtool/W = I.get_welder()
 			if(W.remove_fuel(0,user))
 				playsound(src, W.usesound, 100, 1)
 				to_chat(user, "Welding the [nicetype] in place.")
@@ -303,7 +320,7 @@
 						P.base_icon_state = base_state
 						P.set_dir(dir)
 						P.dpdir = dpdir
-						P.updateicon()
+						P.update_icon()
 
 						//Needs some special treatment ;)
 						if(ptype==DISPOSAL_PIPE_SORTER || ptype==DISPOSAL_PIPE_SORTER_FLIPPED)
@@ -322,6 +339,7 @@
 						var/obj/structure/disposaloutlet/P = new /obj/structure/disposaloutlet(src.loc)
 						src.transfer_fingerprints_to(P)
 						P.set_dir(dir)
+						P.target = get_ranged_target_turf(src, dir, 10) //TODO: replace this with a proc parameter or other cleaner
 						var/obj/structure/disposalpipe/trunk/Trunk = CP
 						Trunk.linked = P
 

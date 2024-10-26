@@ -21,6 +21,9 @@
 /mob/living/silicon/robot/proc/uneq_active()
 	if(isnull(module_active))
 		return
+	var/obj/item/I = module_active
+	for(var/datum/action/A as anything in I.actions)
+		A.Remove(src)
 	if(module_state_1 == module_active)
 		if(istype(module_state_1,/obj/item/borg/sight))
 			sight_mode &= ~module_state_1:sight_mode
@@ -51,7 +54,8 @@
 		module_state_3:loc = module
 		module_state_3 = null
 		inv3.icon_state = "inv3"
-	updateicon()
+	after_equip()
+	update_icon()
 	hud_used.update_robot_modules_display()
 
 /mob/living/silicon/robot/proc/uneq_all()
@@ -63,6 +67,9 @@
 		if (client)
 			client.screen -= module_state_1
 		contents -= module_state_1
+		var/obj/item/I = module_state_1
+		for(var/datum/action/A as anything in I.actions)
+			A.Remove(src)
 		module_state_1:loc = module
 		module_state_1 = null
 		inv1.icon_state = "inv1"
@@ -71,6 +78,9 @@
 			sight_mode &= ~module_state_2:sight_mode
 		if (client)
 			client.screen -= module_state_2
+		var/obj/item/I = module_state_2
+		for(var/datum/action/A as anything in I.actions)
+			A.Remove(src)
 		contents -= module_state_2
 		module_state_2:loc = module
 		module_state_2 = null
@@ -80,11 +90,15 @@
 			sight_mode &= ~module_state_3:sight_mode
 		if (client)
 			client.screen -= module_state_3
+		var/obj/item/I = module_state_3
+		for(var/datum/action/A as anything in I.actions)
+			A.Remove(src)
 		contents -= module_state_3
 		module_state_3:loc = module
 		module_state_3 = null
 		inv3.icon_state = "inv3"
-	updateicon()
+	after_equip()
+	update_icon()
 
 /mob/living/silicon/robot/proc/activated(obj/item/O)
 	if(module_state_1 == O)
@@ -210,24 +224,24 @@
 	var/slot_num
 	if(slot_start == 0)
 		slot_num = 1
-		slot_start = 2
 	else
 		slot_num = slot_start + 1
-
-	while(slot_start != slot_num) //If we wrap around without finding any free slots, just give up.
+		if(slot_num > 3)
+			return
+	// Attempt to rotate through the slots until we're past slot 3, or find the next usable slot. Allows skipping empty slots, while still having an empty slot at end of rotation.
+	while(slot_num <= 3)
 		if(module_active(slot_num))
 			select_module(slot_num)
 			return
 		slot_num++
-		if(slot_num > 3) slot_num = 1 //Wrap around.
 
 	return
 
 /mob/living/silicon/robot/proc/activate_module(var/obj/item/O)
-	if(!(locate(O) in src.module.modules) && O != src.module.emag)
+	if(!(locate(O) in src.module.modules) && !(locate(O) in src.module.emag))
 		return
 	if(activated(O))
-		to_chat(src, "<span class='notice'>Already activated</span>")
+		to_chat(src, span_notice("Already activated"))
 		return
 	if(!module_state_1)
 		module_state_1 = O
@@ -251,10 +265,37 @@
 		if(istype(module_state_3,/obj/item/borg/sight))
 			sight_mode |= module_state_3:sight_mode
 	else
-		to_chat(src, "<span class='notice'>You need to disable a module first!</span>")
+		to_chat(src, span_notice("You need to disable a module first!"))
+		return
+	after_equip(O)
+
+/mob/living/silicon/robot/proc/after_equip(var/obj/item/O)
+	if(istype(O, /obj/item/gps))
+		var/obj/item/gps/tracker = O
+		if(tracker.tracking)
+			tracker.tracking = FALSE
+			tracker.toggle_tracking()
+	/* //ChompEDIT START - remove bluespace pounce
+	if(sight_mode & BORGANOMALOUS)
+		var/obj/item/dogborg/pounce/pounce = has_upgrade_module(/obj/item/dogborg/pounce)
+		if(pounce)
+			pounce.name = "bluespace pounce"
+			pounce.icon_state = "bluespace_pounce"
+			pounce.bluespace = TRUE
+	else
+		var/obj/item/dogborg/pounce/pounce = has_upgrade_module(/obj/item/dogborg/pounce)
+		if(pounce)
+			pounce.name = initial(pounce.name)
+			pounce.icon_state = initial(pounce.icon_state)
+			pounce.desc = initial(pounce.desc)
+			pounce.bluespace = initial(pounce.bluespace)
+	*/ //ChompEDIT END
+	if(O)
+		for(var/datum/action/A as anything in O.actions)
+			A.Grant(src)
 
 /mob/living/silicon/robot/put_in_hands(var/obj/item/W) // No hands.
-	W.loc = get_turf(src)
+	W.forceMove(get_turf(src))
 	return 1
 
 /mob/living/silicon/robot/is_holding_item_of_type(typepath)

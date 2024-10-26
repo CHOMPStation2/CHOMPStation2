@@ -43,7 +43,7 @@
 		return
 	affect_ingest(M, alien, removed)
 	//VOREStation Edits Start
-	if(M.isSynthetic() && M.nutrition < 500)
+	if(M.isSynthetic())
 		M.adjust_nutrition((nutriment_factor * removed) * M.species.synthetic_food_coeff)
 	//VOREStation Edits End
 	..()
@@ -58,8 +58,11 @@
 	if(!M.isSynthetic())
 		if(!(M.species.allergens & allergen_type))	//assuming it doesn't cause a horrible reaction, we'll be ok!
 			M.heal_organ_damage(0.5 * removed, 0)
-			M.adjust_nutrition((nutriment_factor * removed) * M.species.organic_food_coeff)
+			M.adjust_nutrition(((nutriment_factor + M.food_preference(allergen_type)) * removed) * M.species.organic_food_coeff) //RS edit
 			M.add_chemical_effect(CE_BLOODRESTORE, 4 * removed)
+	else
+		M.adjust_nutrition(((nutriment_factor + M.food_preference(allergen_type)) * removed) * M.species.synthetic_food_coeff) //RS edit
+
 	//VOREStation Edits Stop
 
 // Aurora Cooking Port Insertion Begin
@@ -71,6 +74,8 @@
 	Generally coatings are intended for deep frying foods
 */
 /datum/reagent/nutriment/coating
+	name = "coating"
+	id = "coating"
 	nutriment_factor = 6 //Less dense than the food itself, but coatings still add extra calories
 	var/messaged = 0
 	var/icon_raw
@@ -83,7 +88,7 @@
 	//We'll assume that the batter isnt going to be regurgitated and eaten by someone else. Only show this once
 	if(data["cooked"] != 1)
 		if (!messaged)
-			to_chat(M, "<span class='warning'>Ugh, this raw [name] tastes disgusting.</span>")
+			to_chat(M, span_warning("Ugh, this raw [name] tastes disgusting."))
 			nutriment_factor *= 0.5
 			messaged = 1
 
@@ -101,7 +106,7 @@
 			data["cooked"] = 0
 		return
 	data["cooked"] = 0
-	if (holder && holder.my_atom && istype(holder.my_atom,/obj/item/weapon/reagent_containers/food/snacks))
+	if (holder && holder.my_atom && istype(holder.my_atom,/obj/item/reagent_containers/food/snacks))
 		data["cooked"] = 1
 		name = cooked_name
 
@@ -233,7 +238,7 @@
 		M.take_organ_damage(0, removed * 1.5 * dfactor)
 		data["temperature"] -= (6 * removed) / (1 + volume*0.1)//Cools off as it burns you
 		if (lastburnmessage+100 < world.time	)
-			to_chat(M, "<span class='danger'>Searing hot oil burns you, wash it off quick!</span>")
+			to_chat(M, span_danger("Searing hot oil burns you, wash it off quick!"))
 			lastburnmessage = world.time
 
 /datum/reagent/nutriment/triglyceride/oil/cooking
@@ -430,6 +435,17 @@
 	reagent_state = SOLID
 	nutriment_factor = 5
 	color = "#302000"
+	allergen_type = ALLERGEN_CHOCOLATE
+
+/datum/reagent/nutriment/chocolate
+	name = "Chocolate"
+	id = "chocolate"
+	description = "Great for cooking or on its own!"
+	taste_description = "chocolate"
+	color = "#582815"
+	nutriment_factor = 5
+	taste_mult = 1.3
+	allergen_type = ALLERGEN_CHOCOLATE
 
 /datum/reagent/nutriment/instantjuice
 	name = "Juice Powder"
@@ -571,7 +587,7 @@
 	..()
 	if(iscarbon(M) && !M.isSynthetic())
 		var/message = pick("Oh god, it smells disgusting here.", "What is that stench?", "That's an awful odor.")
-		to_chat(M, "<span class='alien'>[message]</span>")
+		to_chat(M, span_alien("[message]"))
 		if(prob(CLAMP(amount, 5, 90)))
 			var/mob/living/L = M
 			L.vomit()
@@ -677,6 +693,14 @@
 	description = "A dry mix for making delicious brownies."
 	reagent_state = SOLID
 	color = "#441a03"
+	allergen_type = ALLERGEN_CHOCOLATE
+
+/datum/reagent/cakebatter
+	name = "Cake Batter"
+	id = "cakebatter"
+	description = "A batter for making delicious cakes."
+	reagent_state = LIQUID
+	color = "#F0EDDA"
 
 /datum/reagent/frostoil
 	name = "Frost Oil"
@@ -701,7 +725,7 @@
 		return
 	if(alien == IS_ALRAUNE) // VOREStation Edit: It wouldn't affect plants that much.
 		if(prob(5))
-			to_chat(M, "<span class='rose'>You feel a chilly, tingling sensation in your mouth.</span>")
+			to_chat(M, span_rose("You feel a chilly, tingling sensation in your mouth."))
 		M.bodytemperature -= rand(10, 25)
 		return
 	if(ishuman(M))
@@ -710,12 +734,12 @@
 			return
 	var/effective_dose = (dose * M.species.spice_mod)
 	if((effective_dose < 5) && (dose == metabolism || prob(5)))
-		to_chat(M, "<span class='danger'>Your insides suddenly feel a spreading chill!</span>")
+		to_chat(M, span_danger("Your insides suddenly feel a spreading chill!"))
 	if(effective_dose >= 5)
 		M.apply_effect(2 * M.species.spice_mod, AGONY, 0)
 		M.bodytemperature -= rand(1, 5) * M.species.spice_mod // Really fucks you up, cause it makes you cold.
 		if(prob(5))
-			M.visible_message("<span class='warning'>[M] [pick("dry heaves!","coughs!","splutters!")]</span>", pick("<span class='danger'>You feel like your insides are freezing!</span>", "<span class='danger'>Your insides feel like they're turning to ice!</span>"))
+			M.visible_message(span_warning("[M] [pick("dry heaves!","coughs!","splutters!")]"), pick(span_danger("You feel like your insides are freezing!"), span_danger("Your insides feel like they're turning to ice!")))
 	// holder.remove_reagent("capsaicin", 5) // VOREStation Edit: Nop, we don't instadelete spices for free.
 
 /datum/reagent/frostoil/cryotoxin //A longer lasting version of frost oil.
@@ -746,7 +770,7 @@
 		return
 	if(alien == IS_ALRAUNE) // VOREStation Edit: It wouldn't affect plants that much.
 		if(prob(5))
-			to_chat(M, "<span class='rose'>You feel a pleasant sensation in your mouth.</span>")
+			to_chat(M, span_rose("You feel a pleasant sensation in your mouth."))
 		M.bodytemperature += rand(10, 25)
 		return
 	if(ishuman(M))
@@ -756,12 +780,12 @@
 
 	var/effective_dose = (dose * M.species.spice_mod)
 	if((effective_dose < 5) && (dose == metabolism || prob(5)))
-		to_chat(M, "<span class='danger'>Your insides feel uncomfortably hot!</span>")
+		to_chat(M, span_danger("Your insides feel uncomfortably hot!"))
 	if(effective_dose >= 5)
 		M.apply_effect(2 * M.species.spice_mod, AGONY, 0)
 		M.bodytemperature += rand(1, 5) * M.species.spice_mod // Really fucks you up, cause it makes you overheat, too.
 		if(prob(5))
-			M.visible_message("<span class='warning'>[M] [pick("dry heaves!","coughs!","splutters!")]</span>", pick("<span class='danger'>You feel like your insides are burning!</span>", "<span class='danger'>You feel like your insides are on fire!</span>", "<span class='danger'>You feel like your belly is full of lava!</span>"))
+			M.visible_message(span_warning("[M] [pick("dry heaves!","coughs!","splutters!")]"), pick(span_danger("You feel like your insides are burning!"), span_danger("You feel like your insides are on fire!"), span_danger("You feel like your belly is full of lava!")))
 	// holder.remove_reagent("frostoil", 5)  // VOREStation Edit: Nop, we don't instadelete spices for free.
 
 /datum/reagent/condensedcapsaicin
@@ -841,11 +865,11 @@
 				if(head_covered && chest_covered && groin_covered && legs_covered && arms_covered && hands_covered && feet_covered)
 					break
 	if(eyes_covered && mouth_covered)
-		to_chat(M, "<span class='warning'>Your [safe_thing] protects you from the pepperspray!</span>")
+		to_chat(M, span_warning("Your [safe_thing] protects you from the pepperspray!"))
 		if(alien != IS_SLIME)
 			return
 	else if(eyes_covered)
-		to_chat(M, "<span class='warning'>Your [safe_thing] protects you from most of the pepperspray!</span>")
+		to_chat(M, span_warning("Your [safe_thing] protects you from most of the pepperspray!"))
 		M.eye_blurry = max(M.eye_blurry, effective_strength * 3)
 		M.Blind(effective_strength)
 		M.Stun(5)
@@ -853,12 +877,12 @@
 		if(alien != IS_SLIME)
 			return
 	else if(mouth_covered) // Mouth cover is better than eye cover
-		to_chat(M, "<span class='warning'>Your [safe_thing] protects your face from the pepperspray!</span>")
+		to_chat(M, span_warning("Your [safe_thing] protects your face from the pepperspray!"))
 		M.eye_blurry = max(M.eye_blurry, effective_strength)
 		if(alien != IS_SLIME)
 			return
 	else// Oh dear :D
-		to_chat(M, "<span class='warning'>You're sprayed directly in the eyes with pepperspray!</span>")
+		to_chat(M, span_warning("You're sprayed directly in the eyes with pepperspray!"))
 		M.eye_blurry = max(M.eye_blurry, effective_strength * 5)
 		M.Blind(effective_strength * 2)
 		M.Stun(5)
@@ -868,31 +892,31 @@
 	if(alien == IS_SLIME)
 		if(!head_covered)
 			if(prob(33))
-				to_chat(M, "<span class='warning'>The exposed flesh on your head burns!</span>")
+				to_chat(M, span_warning("The exposed flesh on your head burns!"))
 			M.apply_effect(5 * effective_strength, AGONY, 0)
 		if(!chest_covered)
 			if(prob(33))
-				to_chat(M, "<span class='warning'>The exposed flesh on your chest burns!</span>")
+				to_chat(M, span_warning("The exposed flesh on your chest burns!"))
 			M.apply_effect(5 * effective_strength, AGONY, 0)
 		if(!groin_covered && prob(75))
 			if(prob(33))
-				to_chat(M, "<span class='warning'>The exposed flesh on your groin burns!</span>")
+				to_chat(M, span_warning("The exposed flesh on your groin burns!"))
 			M.apply_effect(3 * effective_strength, AGONY, 0)
 		if(!arms_covered && prob(45))
 			if(prob(33))
-				to_chat(M, "<span class='warning'>The exposed flesh on your arms burns!</span>")
+				to_chat(M, span_warning("The exposed flesh on your arms burns!"))
 			M.apply_effect(3 * effective_strength, AGONY, 0)
 		if(!legs_covered && prob(45))
 			if(prob(33))
-				to_chat(M, "<span class='warning'>The exposed flesh on your legs burns!</span>")
+				to_chat(M, span_warning("The exposed flesh on your legs burns!"))
 			M.apply_effect(3 * effective_strength, AGONY, 0)
 		if(!hands_covered && prob(20))
 			if(prob(33))
-				to_chat(M, "<span class='warning'>The exposed flesh on your hands burns!</span>")
+				to_chat(M, span_warning("The exposed flesh on your hands burns!"))
 			M.apply_effect(effective_strength / 2, AGONY, 0)
 		if(!feet_covered && prob(20))
 			if(prob(33))
-				to_chat(M, "<span class='warning'>The exposed flesh on your feet burns!</span>")
+				to_chat(M, span_warning("The exposed flesh on your feet burns!"))
 			M.apply_effect(effective_strength / 2, AGONY, 0)
 
 /datum/reagent/condensedcapsaicin/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
@@ -901,11 +925,11 @@
 		if(!H.can_feel_pain())
 			return
 	if(dose == metabolism)
-		to_chat(M, "<span class='danger'>You feel like your insides are burning!</span>")
+		to_chat(M, span_danger("You feel like your insides are burning!"))
 	else
 		M.apply_effect(4, AGONY, 0)
 		if(prob(5))
-			M.visible_message("<span class='warning'>[M] [pick("dry heaves!","coughs!","splutters!")]</span>", "<span class='danger'>You feel like your insides are burning!</span>")
+			M.visible_message(span_warning("[M] [pick("dry heaves!","coughs!","splutters!")]"), span_danger("You feel like your insides are burning!"))
 	// holder.remove_reagent("frostoil", 5) // VOREStation Edit: Nop, we don't instadelete spices for free.
 
 /* Drinks */
@@ -934,7 +958,8 @@
 
 /datum/reagent/drink/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	if(!(M.species.allergens & allergen_type))
-		M.adjust_nutrition(nutrition * removed)
+		var/bonus = M.food_preference(allergen_type)
+		M.adjust_nutrition((nutrition + bonus) * removed) //RS edit
 	M.dizziness = max(0, M.dizziness + adj_dizzy)
 	M.drowsyness = max(0, M.drowsyness + adj_drowsy)
 	M.AdjustSleeping(adj_sleepy)
@@ -949,7 +974,7 @@
 	if(alien == IS_SLIME && water_based)
 		M.adjustToxLoss(removed * 2)
 	*/ //VOREStation Removal End
-	
+
 /datum/reagent/drink/overdose(var/mob/living/carbon/M, var/alien) //Add special interactions here in the future if desired.
 	..()
 
@@ -1002,6 +1027,16 @@
 /datum/reagent/drink/juice/carrot/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
 	M.reagents.add_reagent("imidazoline", removed * 0.2)
+
+/datum/reagent/drink/juice/lettuce
+	name = "Lettuce Juice"
+	id = "lettucejuice"
+	description = "It's mostly water, just a bit more lettucy."
+	taste_description = "fresh greens"
+	color = "#29df4b"
+
+	glass_name = "lettuce juice"
+	glass_desc = "This is just lettuce water. Fresh but boring."
 
 /datum/reagent/drink/juice
 	name = "Grape Juice"
@@ -1091,7 +1126,7 @@
 	glass_desc = "Vitamins! Yay!"
 	allergen_type = ALLERGEN_FRUIT //Oranges are fruit
 
-/datum/reagent/drink/orangejuice/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/drink/juice/orange/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
 	if(alien == IS_DIONA)
 		return
@@ -1193,6 +1228,7 @@
 
 	glass_name = "chocolate milk"
 	glass_desc = "Deliciously fattening!"
+	allergen_type = ALLERGEN_CHOCOLATE
 
 /datum/reagent/drink/milk/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -1207,7 +1243,8 @@
 			if(O.status & ORGAN_BROKEN)
 				O.mend_fracture()
 				H.custom_pain("You feel the agonizing power of calcium mending your bones!",60)
-				H.AdjustWeakened(1)
+				H.adjustHalLoss(60) // CHOMPAdd - Get hallos damaged
+				H.AdjustStunned(1) // CHOMPEdit - Crawling again, weakened to stunned
 				break // Only mend one bone, whichever comes first in the list
 	//VOREStation Edit End
 
@@ -1603,18 +1640,18 @@
 /datum/reagent/drink/decaf
 	name = "Decaf Coffee"
 	id = "decaf"
-	description = "Coffee with all the wake-up sucked out."
-	taste_description = "bad coffee"
+	description = "Coffee with at least 97% of its caffeine content removed. All of the flavor, none of the kick!" // CHOMPEdit - In defense of decaf coffee
+	taste_description = "coffee" // CHOMPEdit - In defense of decaf coffee
 	taste_mult = 1.3
 	color = "#482000"
 	adj_temp = 25
 
 	cup_icon_state = "cup_coffee"
 	cup_name = "cup of decaf"
-	cup_desc = "Basically just brown, bitter water."
+	cup_desc = "Just as bitter as regular coffee, but it won't keep you up at night!" // CHOMPEdit - In defense of decaf coffee
 
 	glass_name = "decaf coffee"
-	glass_desc = "Basically just brown, bitter water."
+	glass_desc = "Just as bitter as regular coffee, but it won't keep you up at night!" // CHOMPEdit - In defense of decaf coffee
 	allergen_type = ALLERGEN_COFFEE //Decaf coffee is still coffee, just less stimulating.
 
 /datum/reagent/drink/hot_coco
@@ -1633,6 +1670,7 @@
 	cup_icon_state = "cup_coco"
 	cup_name = "cup of hot chocolate"
 	cup_desc = "Made with love! And cocoa beans."
+	allergen_type = ALLERGEN_CHOCOLATE
 
 /datum/reagent/drink/soda/sodawater
 	name = "Soda Water"
@@ -1783,7 +1821,7 @@
 	glass_desc = "Glorious brainfreezing mixture."
 	allergen_type = ALLERGEN_DAIRY //Made with dairy products
 
-/datum/reagent/milkshake/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/drink/milkshake/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
 
 	var/effective_dose = dose/2
@@ -1814,7 +1852,7 @@
 
 	glass_name = "Chocolate Milkshake"
 	glass_desc = "A refreshing chocolate milkshake, just like mom used to make."
-	allergen_type = ALLERGEN_DAIRY //Made with dairy products
+	allergen_type = ALLERGEN_DAIRY|ALLERGEN_CHOCOLATE //Made with dairy products
 
 /datum/reagent/drink/milkshake/berryshake
 	name = "Berry Milkshake"
@@ -2550,7 +2588,7 @@
 /datum/reagent/ethanol/ale
 	name = "Ale"
 	id = "ale"
-	description = "A dark alchoholic beverage made by malted barley and yeast."
+	description = "A dark alcoholic beverage made by malted barley and yeast."
 	taste_description = "hearty barley ale"
 	color = "#4C3100"
 	strength = 50
@@ -2576,9 +2614,11 @@
 
 /datum/reagent/ethanol/beer/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
-	if(alien == IS_DIONA)
-		return
-	M.jitteriness = max(M.jitteriness - 3, 0)
+	if(M.species.robo_ethanol_drunk || !(M.isSynthetic()))
+		if(alien == IS_DIONA)
+			return
+		M.adjust_nutrition((M.food_preference(allergen_type) / 2) * removed) //RS edit
+		M.jitteriness = max(M.jitteriness - 3, 0)
 
 /datum/reagent/ethanol/beer/lite
 	name = "Lite Beer"
@@ -2638,7 +2678,8 @@
 	..()
 	if(alien == IS_DIONA)
 		return
-	M.dizziness +=5
+	if(M.species.robo_ethanol_drunk || !(M.isSynthetic()))
+		M.dizziness +=5
 
 /datum/reagent/ethanol/firepunch
 	name = "Fire Punch"
@@ -2670,18 +2711,19 @@
 	allergen_type = ALLERGEN_COFFEE|ALLERGEN_STIMULANT //Contains coffee or is made from coffee
 
 /datum/reagent/ethanol/coffee/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_DIONA)
-		return
-	..()
-	M.dizziness = max(0, M.dizziness - 5)
-	M.drowsyness = max(0, M.drowsyness - 3)
-	M.AdjustSleeping(-2)
-	if(M.bodytemperature > 310)
-		M.bodytemperature = max(310, M.bodytemperature - (5 * TEMPERATURE_DAMAGE_COEFFICIENT))
+	if(!(M.isSynthetic()))
+		if(alien == IS_DIONA)
+			return
+		..()
+		M.dizziness = max(0, M.dizziness - 5)
+		M.drowsyness = max(0, M.drowsyness - 3)
+		M.AdjustSleeping(-2)
+		if(M.bodytemperature > 310)
+			M.bodytemperature = max(310, M.bodytemperature - (5 * TEMPERATURE_DAMAGE_COEFFICIENT))
 
-	//if(alien == IS_TAJARA)
-		//M.adjustToxLoss(0.5 * removed)
-		//M.make_jittery(4) //extra sensitive to caffine
+		//if(alien == IS_TAJARA)
+			//M.adjustToxLoss(0.5 * removed)
+			//M.make_jittery(4) //extra sensitive to caffine
 
 /datum/reagent/ethanol/coffee/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	//if(alien == IS_TAJARA)
@@ -2695,7 +2737,8 @@
 	//if(alien == IS_TAJARA)
 		//M.adjustToxLoss(4 * REM)
 		//M.apply_effect(3, STUTTER) //VOREStation Edit end
-	M.make_jittery(5)
+	if(!(M.isSynthetic()))
+		M.make_jittery(5)
 
 /datum/reagent/ethanol/coffee/kahlua
 	name = "Kahlua"
@@ -2799,12 +2842,14 @@
 
 /datum/reagent/ethanol/thirteenloko/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
-	if(alien == IS_DIONA)
-		return
-	M.drowsyness = max(0, M.drowsyness - 7)
-	if (M.bodytemperature > 310)
-		M.bodytemperature = max(310, M.bodytemperature - (5 * TEMPERATURE_DAMAGE_COEFFICIENT))
-	M.make_jittery(5)
+
+	if(!(M.isSynthetic()))
+		if(alien == IS_DIONA)
+			return
+		M.drowsyness = max(0, M.drowsyness - 7)
+		if (M.bodytemperature > 310)
+			M.bodytemperature = max(310, M.bodytemperature - (5 * TEMPERATURE_DAMAGE_COEFFICIENT))
+		M.make_jittery(5)
 
 /datum/reagent/ethanol/vermouth
 	name = "Vermouth"
@@ -2834,7 +2879,8 @@
 
 /datum/reagent/ethanol/vodka/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
-	M.apply_effect(max(M.radiation - 1 * removed, 0), IRRADIATE, check_protection = 0)
+	if(!(M.isSynthetic()))
+		M.apply_effect(max(M.radiation - 1 * removed, 0), IRRADIATE, check_protection = 0)
 
 /datum/reagent/ethanol/whiskey
 	name = "Whiskey"
@@ -2903,16 +2949,18 @@
 
 /datum/reagent/ethanol/pwine/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
-	if(dose > 30)
-		M.adjustToxLoss(2 * removed)
-	if(dose > 60 && ishuman(M) && prob(5))
-		var/mob/living/carbon/human/H = M
-		var/obj/item/organ/internal/heart/L = H.internal_organs_by_name[O_HEART]
-		if (L && istype(L))
-			if(dose < 120)
-				L.take_damage(10 * removed, 0)
-			else
-				L.take_damage(100, 0)
+
+	if(!(M.isSynthetic()))
+		if(dose > 30)
+			M.adjustToxLoss(2 * removed)
+		if(dose > 60 && ishuman(M) && prob(5))
+			var/mob/living/carbon/human/H = M
+			var/obj/item/organ/internal/heart/L = H.internal_organs_by_name[O_HEART]
+			if (L && istype(L))
+				if(dose < 120)
+					L.take_damage(10 * removed, 0)
+				else
+					L.take_damage(100, 0)
 
 /datum/reagent/ethanol/wine/champagne
 	name = "Champagne"
@@ -3070,7 +3118,7 @@
 /datum/reagent/ethanol/bananahonk
 	name = "Banana Mama"
 	id = "bananahonk"
-	description = "A drink from Clown Heaven."
+	description = "A drink from " + JOB_CLOWN + " Heaven."
 	taste_description = "bananas and sugar"
 	nutriment_factor = 1
 	color = "#FFFF91"
@@ -3111,7 +3159,9 @@
 
 /datum/reagent/ethanol/beepsky_smash/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
-	M.Stun(2)
+
+	if(M.species.robo_ethanol_drunk || !(M.isSynthetic()))
+		M.Stun(2)
 
 /datum/reagent/ethanol/bilk
 	name = "Bilk"
@@ -3203,7 +3253,7 @@
 	glass_desc = "Damn, the bartender even stirred it, not shook it."
 
 	allergen_type = ALLERGEN_FRUIT //Made from gin(fruit) and vermouth(fruit)
-  
+
 /datum/reagent/ethanol/cuba_libre
 	name = "Cuba Libre"
 	id = "cubalibre"
@@ -3537,7 +3587,9 @@
 
 /datum/reagent/ethanol/neurotoxin/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
-	M.Weaken(3)
+
+	if(M.species.robo_ethanol_drunk || !(M.isSynthetic()))
+		M.Weaken(3)
 
 /datum/reagent/ethanol/patron
 	name = "Patron"
@@ -3592,7 +3644,7 @@
 /datum/reagent/ethanol/silencer
 	name = "Silencer"
 	id = "silencer"
-	description = "A drink from Mime Heaven."
+	description = "A drink from " + JOB_MIME + " Heaven."
 	taste_description = "a pencil eraser"
 	taste_mult = 1.2
 	nutriment_factor = 1
@@ -3714,7 +3766,7 @@
 /datum/reagent/ethanol/vodkatonic
 	name = "Vodka and Tonic"
 	id = "vodkatonic"
-	description = "For when a gin and tonic isn't russian enough."
+	description = "For when a gin and tonic isn't Russian enough."
 	taste_description = "tart bitterness"
 	color = "#0064C8" // rgb: 0, 100, 200
 	strength = 15
@@ -3791,16 +3843,18 @@
 
 /datum/reagent/ethanol/unathiliquor/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
-	if(alien == IS_DIONA)
-		return
 
-	var/drug_strength = 10
-	if(alien == IS_SKRELL)
-		drug_strength = drug_strength * 0.8
+	if(M.species.robo_ethanol_drunk || !(M.isSynthetic()))
+		if(alien == IS_DIONA)
+			return
 
-	M.druggy = max(M.druggy, drug_strength)
-	if(prob(10) && isturf(M.loc) && !istype(M.loc, /turf/space) && M.canmove && !M.restrained())
-		step(M, pick(cardinal))
+		var/drug_strength = 10
+		if(alien == IS_SKRELL)
+			drug_strength = drug_strength * 0.8
+
+		M.druggy = max(M.druggy, drug_strength)
+		if(prob(10) && isturf(M.loc) && !istype(M.loc, /turf/space) && M.canmove && !M.restrained())
+			step(M, pick(cardinal))
 
 /datum/reagent/ethanol/sakebomb
 	name = "Sake Bomb"
@@ -4023,7 +4077,7 @@
 
 	allergen_type = ALLERGEN_GRAINS|ALLERGEN_FRUIT //Made from manhattan(whiskey(grains), vermouth(fruit))
 
-/datum/reagent/drink/soemmerfire/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/ethanol/soemmerfire/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
 	if(alien == IS_DIONA)
 		return
@@ -4093,7 +4147,7 @@
 	glass_name = "Vox's Delight"
 	glass_desc = "Not recommended if you enjoy having organs."
 
-/datum/reagent/drink/voxdelight/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/ethanol/voxdelight/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
 	if(alien == IS_DIONA)
 		return
@@ -4167,7 +4221,7 @@
 
 	allergen_type = ALLERGEN_GRAINS //Made from vodka(grains)
 
-/datum/reagent/drink/slimeshot/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/ethanol/slimeshot/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
 	if(alien == IS_DIONA)
 		return
@@ -4333,24 +4387,26 @@
 
 /datum/reagent/ethanol/godka/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
-	M.apply_effect(max(M.radiation - 5 * removed, 0), IRRADIATE, check_protection = 0)
-	if(ishuman(M))
-		var/mob/living/carbon/human/H = M
-		if(H.species.has_organ[O_LIVER])
-			var/obj/item/organ/L = H.internal_organs_by_name[O_LIVER]
-			if(!L)
-				return
-			var/adjust_liver = rand(-3, 2)
-			if(prob(L.damage))
-				to_chat(M, "<span class='cult'>You feel woozy...</span>")
-			L.damage = max(L.damage + (adjust_liver * removed), 0)
-	var/adjust_tox = rand(-4, 2)
-	M.adjustToxLoss(adjust_tox * removed)
+
+	if(!(M.isSynthetic()))
+		M.apply_effect(max(M.radiation - 5 * removed, 0), IRRADIATE, check_protection = 0)
+		if(ishuman(M))
+			var/mob/living/carbon/human/H = M
+			if(H.species.has_organ[O_LIVER])
+				var/obj/item/organ/L = H.internal_organs_by_name[O_LIVER]
+				if(!L)
+					return
+				var/adjust_liver = rand(-3, 2)
+				if(prob(L.damage))
+					to_chat(M, span_cult("You feel woozy..."))
+				L.damage = max(L.damage + (adjust_liver * removed), 0)
+		var/adjust_tox = rand(-4, 2)
+		M.adjustToxLoss(adjust_tox * removed)
 
 /datum/reagent/ethanol/holywine
 	name = "Angel Ichor"
 	id = "holywine"
-	description = "A premium alchoholic beverage made from distilled angel blood."
+	description = "A premium alcoholic beverage made from distilled angel blood."
 	taste_description = "wings in a glass, and a hint of grape"
 	color = "#C4921E"
 	strength = 20
@@ -4497,10 +4553,11 @@
 /datum/reagent/ethanol/deathbell/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
 
-	if(dose * strength >= strength) // Early warning
-		M.make_dizzy(24) // Intentionally higher than normal to compensate for it's previous effects.
-	if(dose * strength >= strength * 2.5) // Slurring takes longer. Again, intentional.
-		M.slurring = max(M.slurring, 30)
+	if(M.species.robo_ethanol_drunk || !(M.isSynthetic()))
+		if(dose * strength >= strength) // Early warning
+			M.make_dizzy(24) // Intentionally higher than normal to compensate for it's previous effects.
+		if(dose * strength >= strength * 2.5) // Slurring takes longer. Again, intentional.
+			M.slurring = max(M.slurring, 30)
 
 /datum/reagent/nutriment/magicdust
 	name = "Magic Dust"
@@ -4512,7 +4569,11 @@
 	nutriment_factor = 40 //very filling
 	color = "#d169b2"
 
-//ADDITIONS BELOW THIS LINE MADE ON 04/03/2021
+/datum/reagent/nutriment/magicdust/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+	..()
+	playsound(M, 'sound/items/hooh.ogg', 50, 1, -1)
+	if(prob(5))
+		to_chat(M, span_warning("You feel like you've been gnomed..."))
 
 /datum/reagent/drink/soda/kompot
 	name = "Kompot"

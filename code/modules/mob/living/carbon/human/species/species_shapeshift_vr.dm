@@ -1,6 +1,10 @@
+/datum/species/shapeshifter
+	base_species = SPECIES_HUMAN
+	selects_bodytype = SELECTS_BODYTYPE_SHAPESHIFTER
+
 /mob/living/carbon/human/proc/shapeshifter_select_ears()
 	set name = "Select Ears"
-	set category = "Abilities"
+	set category = "Abilities.Shapeshift" //CHOMPEdit
 
 	if(stat || world.time < last_special)
 		return
@@ -54,7 +58,7 @@
 
 /mob/living/carbon/human/proc/shapeshifter_select_tail()
 	set name = "Select Tail"
-	set category = "Abilities"
+	set category = "Abilities.Shapeshift" //CHOMPEdit
 
 	if(stat || world.time < last_special)
 		return
@@ -108,7 +112,7 @@
 
 /mob/living/carbon/human/proc/shapeshifter_select_wings()
 	set name = "Select Wings"
-	set category = "Abilities"
+	set category = "Abilities.Shapeshift" //CHOMPEdit
 
 	if(stat || world.time < last_special)
 		return
@@ -164,7 +168,7 @@
 /mob/living/carbon/human/proc/promethean_select_opaqueness()
 
 	set name = "Toggle Transparency"
-	set category = "Abilities"
+	set category = "Abilities.Shapeshift" //CHOMPEdit
 
 	if(stat || world.time < last_special)
 		return
@@ -173,6 +177,17 @@
 
 	for(var/obj/item/organ/external/L as anything in src.organs)
 		L.transparent = !L.transparent
-	visible_message("<span class='notice'>\The [src]'s internal composition seems to change.</span>")
+	visible_message(span_notice("\The [src]'s internal composition seems to change."))
 	update_icons_body()
 	update_hair()
+
+/mob/living/carbon/human/proc/shapeshifter_change_shape(var/new_species = null, var/visible = TRUE) //not sure if this needs to be moved to a separate file but
+	if(!new_species)
+		return
+
+	dna.base_species = new_species
+	species.base_species = new_species
+	wrapped_species_by_ref["\ref[src]"] = new_species
+	if (visible)
+		visible_message(span_filter_notice(span_bold("\The [src]") + " shifts and contorts, taking the form of \a [new_species]!"))
+		regenerate_icons()

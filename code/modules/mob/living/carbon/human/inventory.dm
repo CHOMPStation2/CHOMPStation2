@@ -14,7 +14,7 @@ This saves us from having to call add_fingerprint() any time something is put in
 		var/mob/living/carbon/human/H = src
 		var/obj/item/I = H.get_active_hand()
 		if(!I)
-			to_chat(H, "<span class='notice'>You are not holding anything to equip.</span>")
+			to_chat(H, span_notice("You are not holding anything to equip."))
 			return
 
 		var/moved = FALSE
@@ -29,7 +29,7 @@ This saves us from having to call add_fingerprint() any time something is put in
 
 		// No?! Well, give up.
 		if(!moved)
-			to_chat(H, "<span class='warning'>You are unable to equip that.</span>")
+			to_chat(H, span_warning("You are unable to equip that."))
 
 		// Update hand icons
 		else
@@ -40,8 +40,8 @@ This saves us from having to call add_fingerprint() any time something is put in
 
 /mob/living/carbon/human/equip_to_storage(obj/item/newitem, user_initiated = FALSE)
 	// Try put it in their belt first
-	if(istype(src.belt,/obj/item/weapon/storage))
-		var/obj/item/weapon/storage/wornbelt = src.belt
+	if(istype(src.belt,/obj/item/storage))
+		var/obj/item/storage/wornbelt = src.belt
 		if(wornbelt.can_be_inserted(newitem, 1))
 			if(user_initiated)
 				wornbelt.handle_item_insertion(newitem)
@@ -222,7 +222,6 @@ This saves us from having to call add_fingerprint() any time something is put in
 	else
 		return 0
 
-	update_action_buttons()
 	return 1
 
 
@@ -357,7 +356,7 @@ This saves us from having to call add_fingerprint() any time something is put in
 					if(C.attempt_attach_accessory(A, src))
 						return
 		else
-			to_chat(src, "<font color='red'>You are trying to equip this item to an unsupported inventory slot. How the heck did you manage that? Stop it...</font>")
+			to_chat(src, span_red("You are trying to equip this item to an unsupported inventory slot. How the heck did you manage that? Stop it..."))
 			return
 
 	if((W == src.l_hand) && (slot != slot_l_hand))
@@ -369,13 +368,16 @@ This saves us from having to call add_fingerprint() any time something is put in
 
 	W.hud_layerise()
 
-	if(W.action_button_name)
-		update_action_buttons()
-
 	if(W.zoom)
 		W.zoom()
 
 	W.in_inactive_hand(src)
+
+	//VOREStation Addition Start
+	if(istype(W, /obj/item))
+		var/obj/item/I = W
+		I.equip_special()
+	//VOREStation Addition End
 
 	return 1
 
@@ -395,7 +397,7 @@ This saves us from having to call add_fingerprint() any time something is put in
 			covering = src.wear_suit
 
 	if(covering && (covering.body_parts_covered & (I.body_parts_covered|check_flags)))
-		to_chat(user, "<span class='warning'>\The [covering] is in the way.</span>")
+		to_chat(user, span_warning("\The [covering] is in the way."))
 		return 0
 	return 1
 

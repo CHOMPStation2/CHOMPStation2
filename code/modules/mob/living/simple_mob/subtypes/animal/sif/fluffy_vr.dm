@@ -13,7 +13,7 @@
 	maxHealth = 20 //don't want Fluff to die on a missclick
 	health = 20
 
-	movement_cooldown = 5
+	movement_cooldown = 1.5
 	makes_dirt = 0
 
 	see_in_dark = 5
@@ -30,7 +30,7 @@
 	maxbodytemp = 323		//Above 50 Degrees Celcius
 
 	meat_amount = 1
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
+	meat_type = /obj/item/reagent_containers/food/snacks/meat
 
 	say_list_type = /datum/say_list/fluffy_vr
 	ai_holder_type = /datum/ai_holder/simple_mob/passive

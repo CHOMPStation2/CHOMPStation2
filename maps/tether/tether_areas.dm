@@ -180,6 +180,14 @@
 	name = "\improper Third Floor Hallway"
 	icon_state = "dk_yellow"
 
+/area/tether/surfacebase/surface_three_hall/west
+	name = "\improper Third Floor Hallway - West"
+	icon_state = "dk_yellow"
+
+/area/tether/surfacebase/surface_three_hall/nwest
+	name = "\improper Third Floor Hallway - Northwest"
+	icon_state = "dk_yellow"
+
 /area/tether/surfacebase/north_stairs_one
 	name = "\improper North Stairwell First Floor"
 	icon_state = "dk_yellow"
@@ -215,6 +223,9 @@
 /area/tether/surfacebase/barbackmaintenance
 	name = "\improper Bar Back Maintenance"
 	icon_state = "red"
+/area/tether/surfacebase/arcade
+	name = "\improper Arcade"
+	icon_state = "green"
 
 /area/tether/surfacebase/public_garden_lg
 	name = "\improper Public Garden Looking Glass"
@@ -336,8 +347,8 @@
 /area/maintenance/substation/SurfMedsubstation
 	name = "\improper SurfMed Substation"
 	icon_state = "green"
-/area/maintenance/substation/cargostoresubstation
-	name = "\improper Cargo Store Substation"
+/area/maintenance/substation/surfaceservicesubstation
+	name = "\improper Surface Services Substation"
 	icon_state = "green"
 
 /area/tether/surfacebase/lowernorthhall
@@ -437,6 +448,8 @@
 	name = "\improper Medical Central Hall"
 /area/tether/surfacebase/medical/lowerhall
 	name = "\improper Medical Lower Hall"
+/area/tether/surfacebase/medical/autoresleeving
+	name = "\improper Medical Auto Resleeving"
 	//North SurfMed3-2 Stairwell
 /area/tether/surfacebase/medical/uppernorthstairwell
 	name = "\improper Medical Stairwell"
@@ -475,11 +488,20 @@
 
 /area/tether/surfacebase/entertainment
 	name = "\improper Entertainment Auditorium"
-	icon_state = "library"
+	icon_state = "entertainment"
 
 /area/tether/surfacebase/entertainment/stage
 	name = "\improper Entertainment Stage"
-	icon_state = "library"
+
+/area/tether/surfacebase/entrepreneur
+	name = "\improper Shared Office"
+	icon_state = "entertainment"
+
+/area/tether/surfacebase/entrepreneur/session
+	name = "\improper Shared Office Session Room"
+
+/area/tether/surfacebase/entrepreneur/meeting
+	name = "\improper Shared Office Meeting Room"
 
 /area/tether/surfacebase/funny/clownoffice
 	name = "\improper Clown's Office"
@@ -499,7 +521,6 @@
 
 /area/tether/surfacebase/entertainment/backstage
 	name = "\improper Entertainment Backstage"
-	icon_state = "library"
 
 /area/tether/surfacebase/botanystorage
 	name = "\improper Botany Storage"
@@ -634,6 +655,13 @@
 
 /area/engineering/atmos/gas_storage
 	name = "Atmospherics Gas Storage"
+	icon_state = "atmos"
+
+/area/maintenance/engineering/atmos/airlock
+	name = "\improper Atmospherics Airlock"
+	icon_state = "atmos"
+/area/maintenance/engineering/atmos/airlock/gas
+	name = "\improper Atmospherics Airlock Gas Storage"
 	icon_state = "atmos"
 
 /area/engineering/atmos_intake
@@ -976,6 +1004,7 @@
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/maintDorm2
 	name = "\improper Construction Dorm 2"
@@ -984,6 +1013,7 @@
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/maintDorm3
 	name = "\improper Construction Dorm 3"
@@ -992,6 +1022,7 @@
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/maintDorm4
 	name = "\improper Construction Dorm 4"
@@ -1000,138 +1031,161 @@
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/vistor_room_1
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/vistor_room_2
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/vistor_room_3
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/vistor_room_4
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/vistor_room_5
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/vistor_room_6
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/vistor_room_7
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/vistor_room_8
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/vistor_room_9
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/vistor_room_10
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/vistor_room_11
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/vistor_room_12
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/Dorm_1
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/Dorm_2
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/Dorm_3
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/Dorm_4
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/Dorm_5
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/Dorm_6
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/Dorm_7
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/Dorm_8
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/Dorm_9
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/Dorm_10
 	flags = RAD_SHIELDED | BLUE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/Dorm_1/holo
 	name = "\improper Dorm 1 Holodeck"
@@ -1157,6 +1211,7 @@
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/spacedorm2
 	name = "\improper Visitor Lodging 2"
@@ -1166,6 +1221,7 @@
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/spacedorm3
 	name = "\improper Visitor Lodging 3"
@@ -1175,6 +1231,7 @@
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/crew_quarters/sleep/spacedorm4
 	name = "\improper Visitor Lodging 4"
@@ -1184,6 +1241,7 @@
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/holodeck/holodorm/source_basic
 	name = "\improper Holodeck Source"
@@ -1191,6 +1249,7 @@
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/holodeck/holodorm/source_desert
 	name = "\improper Holodeck Source"
@@ -1198,6 +1257,7 @@
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/holodeck/holodorm/source_seating
 	name = "\improper Holodeck Source"
@@ -1205,6 +1265,7 @@
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/holodeck/holodorm/source_beach
 	name = "\improper Holodeck Source"
@@ -1212,6 +1273,7 @@
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/holodeck/holodorm/source_garden
 	name = "\improper Holodeck Source"
@@ -1219,6 +1281,7 @@
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/holodeck/holodorm/source_boxing
 	name = "\improper Holodeck Source"
@@ -1226,6 +1289,7 @@
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/holodeck/holodorm/source_snow
 	name = "\improper Holodeck Source"
@@ -1233,6 +1297,7 @@
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/holodeck/holodorm/source_space
 	name = "\improper Holodeck Source"
@@ -1240,6 +1305,7 @@
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/holodeck/holodorm/source_off
 	name = "\improper Holodeck Source"
@@ -1247,6 +1313,7 @@
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
+	block_tracking = TRUE
 
 /area/ai_core_foyer
 	name = "\improper AI Core Access"
@@ -1450,6 +1517,9 @@
 /area/shuttle/excursion/power
 	name = "\improper Excursion Shuttle Power"
 
+/*
+ * Tourbus
+ */
 /area/shuttle/tourbus
 	requires_power = 1
 	icon_state = "shuttle2"
@@ -1461,6 +1531,9 @@
 /area/shuttle/tourbus/cockpit
 	name = "\improper Tour Bus Cockpit"
 
+/*
+ * Medbus
+ */
 /area/shuttle/medivac
 	requires_power = 1
 	icon_state = "shuttle2"
@@ -1474,6 +1547,9 @@
 /area/shuttle/medivac/engines
 	name = "\improper Medivac Engines"
 
+/*
+ * Secbus
+ */
 /area/shuttle/securiship
 	requires_power = 1
 	icon_state = "shuttle2"
@@ -1604,31 +1680,6 @@
 
 /area/bigship/teleporter
 	name = "Bigship Teleporter Room"
-
-//////// Abductor Areas ////////
-/area/unknown
-	requires_power = 0
-	flags = RAD_SHIELDED
-	icon_state = "red2"
-	limit_mob_size = FALSE
-
-/area/unknown/dorm1
-	name = "Unknown Dorm 1"
-
-/area/unknown/dorm2
-	name = "Unknown Dorm 2"
-
-/area/unknown/dorm3
-	name = "Unknown Dorm 3"
-
-/area/unknown/dorm4
-	name = "Unknown Dorm 4"
-
-/area/unknown/dorm5
-	name = "Unknown Dorm 5"
-
-/area/unknown/dorm6
-	name = "Unknown Dorm 6"
 
 // ERT/Deathsquad Shuttle
 /area/shuttle/specialops/centcom

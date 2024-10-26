@@ -12,7 +12,7 @@
 	this new species for any differences in behavior or biology beyond the increase in size. \
 	<br>\
 	This species of snake is nonvenomous and use their large bodies to primarily subdue their prey. \
-	Nonvenomous snakes either swallow prey alive or kill them by constriction - this is dependant on the prey. \
+	Nonvenomous snakes either swallow prey alive or kill them by constriction - this is dependent on the prey. \
 	<br>\
 	This snake is extremely hostile to all wildlife and living beings and should be avoided at all costs. \
 	People who spot these creatures are urged to inform the nearest militant entity so that they can be \
@@ -31,7 +31,7 @@
 	icon = 'icons/mob/vore64x64.dmi'
 	vis_height = 64
 
-	faction = "snake"
+	faction = FACTION_SNAKE
 	maxHealth = 200
 	health = 200
 
@@ -39,7 +39,7 @@
 	melee_damage_upper = 12
 
 	meat_amount = 6
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
+	meat_type = /obj/item/reagent_containers/food/snacks/meat
 
 	response_help = "pats"
 	response_disarm = "tries to shove"
@@ -53,6 +53,9 @@
 	pixel_y = -16
 
 	ai_holder_type = /datum/ai_holder/simple_mob/melee
+
+	can_be_drop_prey = FALSE //CHOMP Add
+	allow_mind_transfer = TRUE
 
 // Activate Noms!
 /mob/living/simple_mob/vore/aggressive/giant_snake

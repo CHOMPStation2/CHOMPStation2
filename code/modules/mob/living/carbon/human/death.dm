@@ -48,7 +48,10 @@
 	BITSET(hud_updateflag, LIFE_HUD)
 
 	//Handle species-specific deaths.
-	species.handle_death(src)
+	//CHOMPEdit start - Enable not-actually-dying being a species effect
+	if(species.handle_death(src))
+		return
+	//CHOMPEdit end
 	animate_tail_stop()
 	stop_flying() //VOREStation Edit.
 
@@ -77,39 +80,51 @@
 			B.host_brain.name = "host brain"
 			B.host_brain.real_name = "host brain"
 
-		verbs -= /mob/living/carbon/proc/release_control
+		remove_verb(src, /mob/living/carbon/proc/release_control)
 
 	callHook("death", list(src, gibbed))
+
+	// CHOMPAdd - Shoe steppy. I was going to make a hook but- It isn't much.
+	if(istype(loc, /obj/item/clothing/shoes))
+		mind?.vore_death = TRUE
+	// CHOMPEdit End
 
 	if(mind)
 		// SSgame_master.adjust_danger(gibbed ? 40 : 20)  // VOREStation Edit - We don't use SSgame_master yet.
 		for(var/mob/observer/dead/O in mob_list)
-			if(O.client && O.client.is_preference_enabled(/datum/client_preference/show_dsay))
-				to_chat(O, "<span class='deadsay'><b>[src]</b> has died in <b>[get_area(src)]</b>. [ghost_follow_link(src, O)] </span>")
+			if(O.client?.prefs?.read_preference(/datum/preference/toggle/show_dsay))
+				to_chat(O, span_deadsay(span_bold("[src]") + " has died in " + span_bold("[get_area(src)]")  + ". [ghost_follow_link(src, O)] "))
 
+	/* // CHOMPEdit Start: Replacing this with our own death sounds. :3
 	if(!gibbed && species.death_sound)
 		playsound(src, species.death_sound, 80, 1, 1)
+	*/
+	if(!gibbed && !isbelly(loc))
+		playsound(src, pick(get_species_sound(get_gendered_sound(src))["death"]), src.species.death_volume, 1, 20, volume_channel = VOLUME_CHANNEL_DEATH_SOUNDS)
+	// CHOMPEdit End
 
 	if(ticker && ticker.mode)
 		sql_report_death(src)
 		ticker.mode.check_win()
 
 	if(wearing_rig)
-		wearing_rig.notify_ai("<span class='danger'>Warning: user death event. Mobility control passed to integrated intelligence system.</span>")
+		wearing_rig.notify_ai(span_danger("Warning: user death event. Mobility control passed to integrated intelligence system."))
 
 	// If the body is in VR, move the mind back to the real world
 	if(vr_holder)
+		src.died_in_vr = TRUE //CHOMPedit, so avatar.dm can delete bodies
 		src.exit_vr()
 		src.vr_holder.vr_link = null
 		for(var/obj/item/W in src)
 			src.drop_from_inventory(W)
+
 
 	// If our mind is in VR, bring it back to the real world so it can die with its body
 	if(vr_link)
 		vr_link.exit_vr()
 		vr_link.vr_holder = null
 		vr_link = null
-		to_chat(src, "<span class='danger'>Everything abruptly stops.</span>")
+		to_chat(src, span_danger("Everything abruptly stops."))
 
 	return ..(gibbed,species.get_death_message(src))
 
@@ -124,6 +139,7 @@
 
 	mutations.Add(HUSK)
 	status_flags |= DISFIGURED	//makes them unknown without fucking up other stuff like admintools
+	remove_blood(560) //CHOMPedit
 	update_icons_body()
 	return
 

@@ -39,7 +39,8 @@
 /obj/structure/prop/vv_edit_var(var_name, var_value)
 	if(var_name == "state")
 		change_state(var_value)
-
+	else
+		..()
 
 //Misc stuff that fits no category
 
@@ -50,6 +51,13 @@
 	icon = 'icons/obj/props/decor64x64.dmi'
 	icon_state = "ship_memorial"
 	bound_width = 64
+
+/obj/structure/prop/big_skeleton
+	name = "large skeleton"
+	desc = "Whatever it is, it doesn't look too healthy."
+	icon = 'icons/obj/props/decor96x96.dmi'
+	icon_state = "big_skeleton"
+	density = 0
 
 /**
  *

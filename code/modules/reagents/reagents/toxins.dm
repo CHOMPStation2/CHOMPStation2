@@ -120,7 +120,7 @@
 	if(alien == IS_SLIME)
 		M.adjust_fire_stacks(removed * 10)
 		if(prob(10))
-			to_chat(M, "<span class='critical'>You feel something boiling within you!</span>")
+			to_chat(M, span_critical("You feel something boiling within you!"))
 			spawn(rand(30, 60))
 				M.IgniteMob()
 
@@ -186,12 +186,12 @@
 	taste_mult = 0.6
 	reagent_state = LIQUID
 	color = "#CF3600"
-	strength = 20
-	metabolism = REM * 2
+	strength = 15 //CHOMPEdit this shit needs to be changed sheesh
+	metabolism = REM * 0.5 //CHOMPEdit holy balls
 
 /datum/reagent/toxin/cyanide/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
-	M.adjustOxyLoss(20 * removed)
+	M.adjustOxyLoss(10 * removed) //CHOMPEdit the fucking toxins are already crazy enough, calm down
 	M.Sleeping(1)
 
 /datum/reagent/toxin/mold
@@ -254,7 +254,7 @@
 		var/mob/living/carbon/human/H = M
 		var/obj/item/organ/internal/heart/ht = H.internal_organs_by_name[O_HEART]
 		ht?.take_damage(1)
-		to_chat(M, "<span class='warning'>Huh... Is this what a heart attack feels like?</span>")
+		to_chat(M, span_warning("Huh... Is this what a heart attack feels like?"))
 
 /datum/reagent/toxin/potassium_chloride
 	name = "Potassium Chloride"
@@ -416,7 +416,7 @@
 		if(locate(/obj/effect/overlay/wallrot) in W)
 			for(var/obj/effect/overlay/wallrot/E in W)
 				qdel(E)
-			W.visible_message("<span class='notice'>The fungi are completely dissolved by the solution!</span>")
+			W.visible_message(span_notice("The fungi are completely dissolved by the solution!"))
 
 /datum/reagent/toxin/plantbgone/touch_obj(var/obj/O, var/volume)
 	..()
@@ -485,6 +485,16 @@
 	power = 2
 	meltdose = 30
 
+/datum/reagent/acid/diet_digestive //CHOMPAdd
+	name = "Diluted digestive acid"
+	id = "diet_stomacid"
+	description = "Some form of digestive slurry."
+	taste_description = "vomit"
+	reagent_state = LIQUID
+	color = "#664330"
+	power = 0.4
+	meltdose = 150
+
 /datum/reagent/thermite/venom
 	name = "Pyrotoxin"
 	id = "thermite_v"
@@ -501,11 +511,11 @@
 	if(alien == IS_DIONA)
 		return
 	if(prob(10))
-		to_chat(M, "<span class='warning'>Your veins feel like they're on fire!</span>")
+		to_chat(M, span_warning("Your veins feel like they're on fire!"))
 		M.adjust_fire_stacks(0.1)
 	else if(prob(5))
 		M.IgniteMob()
-		to_chat(M, "<span class='critical'>Some of your veins rupture, the exposed blood igniting!</span>")
+		to_chat(M, span_critical("Some of your veins rupture, the exposed blood igniting!"))
 
 /datum/reagent/condensedcapsaicin/venom
 	name = "Irritant toxin"
@@ -523,9 +533,9 @@
 	if(prob(50))
 		M.apply_effect(4, AGONY, 0)
 		if(prob(20))
-			to_chat(M, "<span class='danger'>You feel like your insides are burning!</span>")
+			to_chat(M, span_danger("You feel like your insides are burning!"))
 		else if(prob(20))
-			M.visible_message("<span class='warning'>[M] [pick("dry heaves!","coughs!","splutters!","rubs at their eyes!")]</span>")
+			M.visible_message(span_warning("[M] [pick("dry heaves!","coughs!","splutters!","rubs at their eyes!")]"))
 	else
 		M.eye_blurry = max(M.eye_blurry, 10)
 
@@ -545,7 +555,7 @@
 		M.apply_effect(5, AGONY, 0)
 		M.adjustToxLoss(3 * removed)
 		if(prob(10))
-			to_chat(M, "<span class='warning'>Your cellular mass hardens for a moment.</span>")
+			to_chat(M, span_warning("Your cellular mass hardens for a moment."))
 			M.Stun(6)
 		return
 	if(alien == IS_SKRELL)
@@ -623,7 +633,7 @@
 			M.UpdateAppearance()
 		if(prob(removed * 40)) //Additionally, let's make it so there's an 8% chance per tick for a random cosmetic/not guranteed good/bad mutation.
 			randmuti(M)//This should equate to 4 random cosmetic mutations per 10 injected/20 ingested/30 touching units
-			to_chat(M, "<span class='warning'>You feel odd!</span>")
+			to_chat(M, span_warning("You feel odd!"))
 	M.apply_effect(10 * removed, IRRADIATE, 0)
 
 /datum/reagent/slimejelly
@@ -646,7 +656,7 @@
 			M.add_chemical_effect(CE_PAINKILLER, 60)
 	else
 		if(prob(10))
-			to_chat(M, "<span class='danger'>Your insides are burning!</span>")
+			to_chat(M, span_danger("Your insides are burning!"))
 			M.adjustToxLoss(rand(100, 300) * removed)
 		else if(prob(40))
 			M.heal_organ_damage(25 * removed, 0)
@@ -691,6 +701,7 @@
 			M.eye_blurry = max(M.eye_blurry, 30)
 			if(prob(20))
 				M.ear_deaf = max(M.ear_deaf, 4)
+				M.deaf_loop.start() // CHOMPStation Add: Ear Ringing/Deafness
 				M.Confuse(2)
 			else
 				M.Weaken(2)
@@ -735,6 +746,7 @@
 		if(alien == IS_SLIME)
 			if(prob(30))
 				M.ear_deaf = max(M.ear_deaf, 4)
+				M.deaf_loop.start() // CHOMPStation Add: Ear Ringing/Deafness
 			M.eye_blurry = max(M.eye_blurry, 60)
 			M.Weaken(30)
 			M.Confuse(40)
@@ -761,34 +773,6 @@
 	glass_desc = "A freezing pint of beer"
 
 /* Drugs */
-
-/datum/reagent/space_drugs
-	name = "Space drugs"
-	id = "space_drugs"
-	description = "An illegal chemical compound used as drug."
-	taste_description = "bitterness"
-	taste_mult = 0.4
-	reagent_state = LIQUID
-	color = "#60A584"
-	metabolism = REM * 0.5
-	overdose = REAGENTS_OVERDOSE
-
-/datum/reagent/space_drugs/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_DIONA)
-		return
-
-	var/drug_strength = 15 * M.species.chem_strength_tox
-	if(alien == IS_SKRELL)
-		drug_strength = drug_strength * 0.8
-
-	if(alien == IS_SLIME)
-		drug_strength = drug_strength * 1.2
-
-	M.druggy = max(M.druggy, drug_strength)
-	if(prob(10) && isturf(M.loc) && !istype(M.loc, /turf/space) && M.canmove && !M.restrained())
-		step(M, pick(cardinal))
-	if(prob(7))
-		M.emote(pick("twitch", "drool", "moan", "giggle"))
 
 /datum/reagent/serotrotium
 	name = "Serotrotium"
@@ -892,85 +876,6 @@
 
 	M.hallucination = max(M.hallucination, drug_strength)
 
-/datum/reagent/psilocybin
-	name = "Psilocybin"
-	id = "psilocybin"
-	description = "A strong psycotropic derived from certain species of mushroom."
-	taste_description = "mushroom"
-	color = "#E700E7"
-	overdose = REAGENTS_OVERDOSE
-	metabolism = REM * 0.5
-
-/datum/reagent/psilocybin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_DIONA)
-		return
-
-	var/threshold = 1 * M.species.chem_strength_tox
-	if(alien == IS_SKRELL)
-		threshold = 1.2
-
-	if(alien == IS_SLIME)
-		threshold = 0.8
-
-	M.druggy = max(M.druggy, 30)
-
-	var/effective_dose = dose
-	if(issmall(M)) effective_dose *= 2
-	if(effective_dose < 1 * threshold)
-		M.apply_effect(3, STUTTER)
-		M.make_dizzy(5)
-		if(prob(5))
-			M.emote(pick("twitch", "giggle"))
-	else if(effective_dose < 2 * threshold)
-		M.apply_effect(3, STUTTER)
-		M.make_jittery(5)
-		M.make_dizzy(5)
-		M.druggy = max(M.druggy, 35)
-		if(prob(10))
-			M.emote(pick("twitch", "giggle"))
-	else
-		M.apply_effect(3, STUTTER)
-		M.make_jittery(10)
-		M.make_dizzy(10)
-		M.druggy = max(M.druggy, 40)
-		if(prob(15))
-			M.emote(pick("twitch", "giggle"))
-
-/datum/reagent/nicotine
-	name = "Nicotine"
-	id = "nicotine"
-	description = "A highly addictive stimulant extracted from the tobacco plant."
-	taste_description = "bitterness"
-	reagent_state = LIQUID
-	color = "#181818"
-
-/datum/reagent/talum_quem
-	name = "Talum-quem"
-	id = "talum_quem"
-	description = " A very carefully tailored hallucinogen, for use of the Talum-Katish."
-	taste_description = "bubblegum"
-	taste_mult = 1.6
-	reagent_state = LIQUID
-	color = "#db2ed8"
-	metabolism = REM * 0.5
-	overdose = REAGENTS_OVERDOSE
-
-/datum/reagent/talum_quem/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_DIONA)
-		return
-
-	var/drug_strength = 29 * M.species.chem_strength_tox
-	if(alien == IS_SKRELL)
-		drug_strength = drug_strength * 0.8
-	else
-		M.adjustToxLoss(10 * removed) //Given incorporations of other toxins with similiar damage, this seems right.
-
-	M.druggy = max(M.druggy, drug_strength)
-	if(prob(10) && isturf(M.loc) && !istype(M.loc, /turf/space) && M.canmove && !M.restrained())
-		step(M, pick(cardinal))
-	if(prob(7))
-		M.emote(pick("twitch", "drool", "moan", "giggle"))
-
 /* Transformations */
 
 /datum/reagent/slimetoxin
@@ -1000,7 +905,7 @@
 			M.UpdateAppearance()
 		if(prob(removed * 40))
 			randmuti(M)
-			to_chat(M, "<span class='warning'>You feel odd!</span>")
+			to_chat(M, span_warning("You feel odd!"))
 	M.apply_effect(16 * removed, IRRADIATE, 0)
 
 /datum/reagent/aslimetoxin
@@ -1030,7 +935,7 @@
 			M.UpdateAppearance()
 		if(prob(removed * 40))
 			randmuti(M)
-			to_chat(M, "<span class='warning'>You feel odd!</span>")
+			to_chat(M, span_warning("You feel odd!"))
 	M.apply_effect(6 * removed, IRRADIATE, 0)
 
 /*

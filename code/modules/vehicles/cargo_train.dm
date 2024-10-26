@@ -15,10 +15,10 @@
 	var/speed_mod = 1.1
 	var/car_limit = 3		//how many cars an engine can pull before performance degrades
 	active_engines = 1
-	var/obj/item/weapon/key/key
-	var/key_type = /obj/item/weapon/key/cargo_train
+	var/obj/item/key/key
+	var/key_type = /obj/item/key/cargo_train
 
-/obj/item/weapon/key/cargo_train
+/obj/item/key/cargo_train
 	name = "key"
 	desc = "A keyring with a small steel key, and a yellow fob reading \"Choo Choo!\"."
 	icon = 'icons/obj/vehicles.dmi'
@@ -44,10 +44,11 @@
 //-------------------------------------------
 /obj/vehicle/train/engine/New()
 	..()
-	cell = new /obj/item/weapon/cell/high(src)
+	cell = new /obj/item/cell/high(src)
 	key = new key_type(src)
 	var/image/I = new(icon = 'icons/obj/vehicles_vr.dmi', icon_state = "cargo_engine_overlay", layer = src.layer + 0.2) //over mobs		//VOREStation edit
 	add_overlay(I)
+	update_icon()
 	turn_off()	//so engine verbs are correctly set
 
 /obj/vehicle/train/engine/Move(var/turf/destination)
@@ -66,14 +67,14 @@
 
 	return ..()
 
-/obj/vehicle/train/trolley/attackby(obj/item/weapon/W as obj, mob/user as mob)
-	if(open && W.is_wirecutter())
+/obj/vehicle/train/trolley/attackby(obj/item/W as obj, mob/user as mob)
+	if(open && W.has_tool_quality(TOOL_WIRECUTTER))
 		passenger_allowed = !passenger_allowed
-		user.visible_message("<span class='notice'>[user] [passenger_allowed ? "cuts" : "mends"] a cable in [src].</span>","<span class='notice'>You [passenger_allowed ? "cut" : "mend"] the load limiter cable.</span>")
+		user.visible_message(span_notice("[user] [passenger_allowed ? "cuts" : "mends"] a cable in [src]."),span_notice("You [passenger_allowed ? "cut" : "mend"] the load limiter cable."))
 	else
 		..()
 
-/obj/vehicle/train/engine/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/vehicle/train/engine/attackby(obj/item/W as obj, mob/user as mob)
 	if(istype(W, key_type))
 		if(!key)
 			user.drop_item()
@@ -99,10 +100,10 @@
 		icon_state = initial(icon_state)
 */
 
-/obj/vehicle/train/trolley/insert_cell(var/obj/item/weapon/cell/C, var/mob/living/carbon/human/H)
+/obj/vehicle/train/trolley/insert_cell(var/obj/item/cell/C, var/mob/living/carbon/human/H)
 	return
 
-/obj/vehicle/train/engine/insert_cell(var/obj/item/weapon/cell/C, var/mob/living/carbon/human/H)
+/obj/vehicle/train/engine/insert_cell(var/obj/item/cell/C, var/mob/living/carbon/human/H)
 	..()
 	update_stats()
 
@@ -129,6 +130,8 @@
 /obj/vehicle/train/engine/turn_on()
 	if(!key)
 		return
+	if(!cell)
+		return
 	else
 		..()
 		update_stats()
@@ -153,6 +156,9 @@
 		verbs += /obj/vehicle/train/engine/verb/stop_engine
 
 /obj/vehicle/train/RunOver(var/mob/living/M)
+	if(pulledby == M) // VOREstation edit: Don't destroy people pulling vehicles up stairs
+		return
+
 	var/list/parts = list(BP_HEAD, BP_TORSO, BP_L_LEG, BP_R_LEG, BP_L_ARM, BP_R_ARM)
 
 	M.apply_effects(5, 5)
@@ -161,19 +167,19 @@
 
 /obj/vehicle/train/trolley/RunOver(var/mob/living/M)
 	..()
-	attack_log += text("\[[time_stamp()]\] <font color='red'>ran over [M.name] ([M.ckey])</font>")
+	attack_log += text("\[[time_stamp()]\] [span_red("ran over [M.name] ([M.ckey])")]")
 
 /obj/vehicle/train/engine/RunOver(var/mob/living/M)
 	..()
 
 	if(is_train_head() && istype(load, /mob/living/carbon/human))
 		var/mob/living/carbon/human/D = load
-		to_chat(D, "<font color='red'><B>You ran over [M]!</B></font>")
-		visible_message("<B><font color='red'>\The [src] ran over [M]!</B></font>")
+		to_chat(D, span_bolddanger("You ran over [M]!"))
+		visible_message(span_bolddanger("\The [src] ran over [M]!"))
 		add_attack_logs(D,M,"Ran over with [src.name]")
-		attack_log += text("\[[time_stamp()]\] <font color='red'>ran over [M.name] ([M.ckey]), driven by [D.name] ([D.ckey])</font>")
+		attack_log += text("\[[time_stamp()]\] [span_red("ran over [M.name] ([M.ckey]), driven by [D.name] ([D.ckey])")]")
 	else
-		attack_log += text("\[[time_stamp()]\] <font color='red'>ran over [M.name] ([M.ckey])</font>")
+		attack_log += text("\[[time_stamp()]\] [span_red("ran over [M.name] ([M.ckey])")]")
 
 
 //-------------------------------------------
@@ -182,7 +188,10 @@
 /obj/vehicle/train/engine/relaymove(mob/user, direction)
 	if(user != load)
 		return 0
-
+  // Start CHOMPStation Edit
+	if(user.paralysis || user.sleeping)
+		return 0
+  // End CHOMPStation Edit
 	if(is_train_head())
 		if(direction == reverse_direction(dir) && tow)
 			return 0
@@ -216,7 +225,7 @@
 
 /obj/vehicle/train/engine/verb/start_engine()
 	set name = "Start engine"
-	set category = "Vehicle"
+	set category = "Object.Vehicle" //ChompEDIT - TGPanel
 	set src in view(0)
 
 	if(!istype(usr, /mob/living/carbon/human))
@@ -230,14 +239,16 @@
 	if (on)
 		to_chat(usr, "You start [src]'s engine.")
 	else
-		if(cell.charge < charge_use)
+		if(!cell)
+			to_chat(usr, "[src] doesn't appear to have a power cell!")
+		else if(cell.charge < charge_use)
 			to_chat(usr, "[src] is out of power.")
 		else
 			to_chat(usr, "[src]'s engine won't start.")
 
 /obj/vehicle/train/engine/verb/stop_engine()
 	set name = "Stop engine"
-	set category = "Vehicle"
+	set category = "Object.Vehicle" //ChompEDIT - TGPanel
 	set src in view(0)
 
 	if(!istype(usr, /mob/living/carbon/human))
@@ -253,7 +264,7 @@
 
 /obj/vehicle/train/engine/verb/remove_key()
 	set name = "Remove key"
-	set category = "Vehicle"
+	set category = "Object.Vehicle" //ChompEDIT - TGPanel
 	set src in view(0)
 
 	if(!istype(usr, /mob/living/carbon/human))
@@ -377,7 +388,7 @@
 	else
 		move_delay = max(0, (-car_limit * active_engines) + train_length - active_engines)	//limits base overweight so you cant overspeed trains
 		move_delay *= (1 / max(1, active_engines)) * 2 										//overweight penalty (scaled by the number of engines)
-		move_delay += config.run_speed 														//base reference speed
+		move_delay += CONFIG_GET(number/run_speed) 											//base reference speed
 		move_delay *= speed_mod																//makes cargo trains 10% slower than running when not overweight
 
 /obj/vehicle/train/trolley/update_car(var/train_length, var/active_engines)

@@ -68,7 +68,7 @@
 		CtrlClickOn(A)
 		return 1
 
-	if(stat || paralysis || stunned || weakened)
+	if(stat || paralysis || stunned) //CHOMPedit, removed weakened to allow item use while crawling
 		return
 
 	face_atom(A) // change direction to face what you clicked on
@@ -84,12 +84,10 @@
 		RestrainedClickOn(A)
 		return 1
 
-	if(in_throw_mode)
-		if(isturf(A) || isturf(A.loc))
-			throw_item(A)
-			trigger_aiming(TARGET_CAN_CLICK)
-			return 1
+	if(in_throw_mode && (isturf(A) || isturf(A.loc)) && throw_item(A))
+		trigger_aiming(TARGET_CAN_CLICK)
 		throw_mode_off()
+		return TRUE
 
 	var/obj/item/W = get_active_hand()
 
@@ -102,7 +100,7 @@
 	//Atoms on your person
 	// A is your location but is not a turf; or is on you (backpack); or is on something on you (box in backpack); sdepth is needed here because contents depth does not equate inventory storage depth.
 	var/sdepth = A.storage_depth(src)
-	if((!isturf(A) && A == loc) || (sdepth != -1 && sdepth <= 1))
+	if((!isturf(A) && A == loc) || (sdepth <= MAX_STORAGE_REACH)) // CHOMPedit: Boxes can be interacted with inside of larger inventories.
 		if(W)
 			var/resolved = W.resolve_attackby(A, src, click_parameters = params)
 			if(!resolved && A && W)
@@ -134,7 +132,7 @@
 	//Atoms on turfs (not on your person)
 	// A is a turf or is on a turf, or in something on a turf (pen in a box); but not something in something on a turf (pen in a box in a backpack)
 	sdepth = A.storage_depth_turf()
-	if(isturf(A) || isturf(A.loc) || (sdepth != -1 && sdepth <= 1))
+	if(isturf(A) || isturf(A.loc) || (sdepth <= MAX_STORAGE_REACH)) // CHOMPedit: Storage reach depth.
 		if(A.Adjacent(src) || (W && W.attack_can_reach(src, A, W.reach)) ) // see adjacent.dm
 			if(W)
 				// Return 1 in attackby() to prevent afterattack() effects (when safely moving items for example)
@@ -160,7 +158,7 @@
 	next_click = max(world.time + timeout, next_click)
 
 /mob/proc/checkClickCooldown()
-	if(next_click > world.time && !config.no_click_cooldown)
+	if(next_click > world.time && !CONFIG_GET(flag/no_click_cooldown))
 		return FALSE
 	return TRUE
 
@@ -191,6 +189,10 @@
 		return 0
 
 	if(stat)
+		return 0
+
+	// prevent picking up items while being in them
+	if(istype(A, /obj/item) && A == loc)
 		return 0
 
 	return 1
@@ -284,15 +286,8 @@
 /atom/proc/AltClick(var/mob/user)
 	var/turf/T = get_turf(src)
 	if(T && user.TurfAdjacent(T))
-		user.ToggleTurfTab(T)
+		user.set_listed_turf(T)
 	return 1
-	
-/mob/proc/ToggleTurfTab(var/turf/T)
-	if(listed_turf == T)
-		listed_turf = null
-	else
-		listed_turf = T
-		client.statpanel = "Turf"
 
 /mob/proc/TurfAdjacent(var/turf/T)
 	return T.AdjacentQuick(src)
@@ -335,7 +330,7 @@
 		nutrition = max(nutrition - rand(1,5),0)
 		handle_regular_hud_updates()
 	else
-		to_chat(src, "<span class='warning'>You're out of energy!  You need food!</span>")
+		to_chat(src, span_warning("You're out of energy!  You need food!"))
 
 // Simple helper to face what you clicked on, in case it should be needed in more than one place
 /mob/proc/face_atom(var/atom/A)
@@ -362,6 +357,10 @@
 	layer = LAYER_HUD_UNDER
 	mouse_opacity = 2
 	screen_loc = "SOUTHWEST to NORTHEAST"
+
+/obj/screen/click_catcher/Initialize(mapload, ...)
+	. = ..()
+	verbs.Cut()
 
 /obj/screen/click_catcher/Click(location, control, params)
 	var/list/modifiers = params2list(params)

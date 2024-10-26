@@ -1,6 +1,6 @@
 /datum/component/personal_crafting/Initialize()
 	if(ismob(parent))
-		RegisterSignal(parent, COMSIG_MOB_CLIENT_LOGIN, .proc/create_mob_button)
+		RegisterSignal(parent, COMSIG_MOB_CLIENT_LOGIN, PROC_REF(create_mob_button))
 
 /datum/component/personal_crafting/proc/create_mob_button(mob/user, client/CL)
 	// SIGNAL_HANDLER
@@ -12,7 +12,7 @@
 	C.alpha = H.ui_alpha
 	LAZYADD(H.other_important, C)
 	CL.screen += C
-	RegisterSignal(C, COMSIG_CLICK, .proc/component_ui_interact)
+	RegisterSignal(C, COMSIG_CLICK, PROC_REF(component_ui_interact))
 
 /datum/component/personal_crafting
 	var/busy
@@ -92,8 +92,8 @@
 				.["tool_qualities"] |= item.tool_qualities
 				.["other"][item.type] += 1
 			else
-				if(istype(item, /obj/item/weapon/reagent_containers))
-					var/obj/item/weapon/reagent_containers/container = item
+				if(istype(item, /obj/item/reagent_containers))
+					var/obj/item/reagent_containers/container = item
 					// if(container.is_drainable())
 					if(container.is_open_container()) // this isn't exactly the same
 						for(var/datum/reagent/reagent in container.reagents.reagent_list)
@@ -157,7 +157,7 @@
 
 	for(var/obj/item/contained_item in source.contents)
 		// if(contained_item.GetComponent(/datum/component/storage))
-		if(istype(contained_item, /obj/item/weapon/storage)) // cursed
+		if(istype(contained_item, /obj/item/storage)) // cursed
 			for(var/obj/item/subcontained_item in contained_item.contents)
 				available_tools[subcontained_item.type] = TRUE
 				for(var/behavior in subcontained_item.tool_qualities)
@@ -279,28 +279,28 @@
 		if(amt <= 0)//since machinery can have 0 aka CRAFTING_MACHINERY_USE - i.e. use it, don't consume it!
 			continue
 
-		// If the path is in R.parts, we want to grab those to stuff into the product		
+		// If the path is in R.parts, we want to grab those to stuff into the product
 		var/amt_to_transfer = 0
 		if(is_path_in_list(path_key, R.parts))
 			amt_to_transfer = R.parts[path_key]
 
-		
+
 		// Reagent: gotta go sniffing in all the beakers
 		if(ispath(path_key, /datum/reagent))
 			var/datum/reagent/reagent = path_key
 			var/id = initial(reagent.id)
 
-			for(var/obj/item/weapon/reagent_containers/RC in surroundings)				
+			for(var/obj/item/reagent_containers/RC in surroundings)
 				// Found everything we need
 				if(amt <= 0 && amt_to_transfer <= 0)
-					break	
+					break
 
 				// If we need to keep any to put in the new object, pull it out
 				if(amt_to_transfer > 0)
 					var/A = RC.reagents.trans_id_to(parts["reagents"], id, amt_to_transfer)
 					amt_to_transfer -= A
 					amt -= A
-				
+
 				// If we need to consume some amount of it
 				if(amt > 0)
 					var/datum/reagent/RG = RC.reagents.get_reagent(id)
@@ -322,27 +322,27 @@
 						parts["items"] += split
 						amt_to_transfer -= split.get_amount()
 						amt -= split.get_amount()
-				
+
 				if(amt > 0)
 					var/A = min(amt, S.get_amount())
 					if(S.use(A))
 						amt -= A
-				
+
 
 		else // Just a regular item. Find them all and delete them
 			for(var/atom/movable/I in surroundings)
 				if(amt <= 0 && amt_to_transfer <= 0)
 					break
-				
+
 				if(!istype(I, path_key))
 					continue
-				
+
 				// Special case: the reagents may be needed for other recipes
-				if(istype(I, /obj/item/weapon/reagent_containers))
-					var/obj/item/weapon/reagent_containers/RC = I
+				if(istype(I, /obj/item/reagent_containers))
+					var/obj/item/reagent_containers/RC = I
 					if(RC.reagents.total_volume > 0)
 						continue
-				
+
 				// We're using it for something
 				amt--
 
@@ -351,15 +351,15 @@
 					parts["items"] += I
 					amt_to_transfer--
 					continue
-					
+
 				// Snowflake handling of reagent containers and storage atoms.
 				// If we consumed them in our crafting, we should dump their contents out before qdeling them.
-				if(istype(I, /obj/item/weapon/reagent_containers))
-					var/obj/item/weapon/reagent_containers/container = I
+				if(istype(I, /obj/item/reagent_containers))
+					var/obj/item/reagent_containers/container = I
 					container.reagents.clear_reagents()
 					// container.reagents.expose(container.loc, TOUCH)
-				else if(istype(I, /obj/item/weapon/storage))
-					var/obj/item/weapon/storage/container = I
+				else if(istype(I, /obj/item/storage))
+					var/obj/item/storage/container = I
 					container.spill()
 					container.close_all()
 				qdel(I)
@@ -369,7 +369,7 @@
 	// SIGNAL_HANDLER
 
 	if(user == parent)
-		INVOKE_ASYNC(src, .proc/tgui_interact, user)
+		INVOKE_ASYNC(src, PROC_REF(tgui_interact), user)
 
 /datum/component/personal_crafting/tgui_state(mob/user)
 	return GLOB.tgui_not_incapacitated_turf_state
@@ -468,10 +468,10 @@
 					user.put_in_hands(result)
 				else
 					result.forceMove(user.drop_location())
-				to_chat(user, "<span class='notice'>[TR.name] constructed.</span>")
+				to_chat(user, span_notice("[TR.name] constructed."))
 				TR.on_craft_completion(user, result)
 			else
-				to_chat(user, "<span class='warning'>Construction failed[result]</span>")
+				to_chat(user, span_warning("Construction failed[result]"))
 			busy = FALSE
 		if("toggle_recipes")
 			display_craftable_only = !display_craftable_only
@@ -499,7 +499,7 @@
 			//Also these are typepaths so sadly we can't just do "[a]"
 			L += "[req[req_atom]] [initial(req_atom.name)]"
 		req_text += L.Join(" OR ")
-		
+
 	for(var/obj/machinery/content as anything in R.machinery)
 		req_text += "[R.reqs[content]] [initial(content.name)]"
 	if(R.additional_req_text)

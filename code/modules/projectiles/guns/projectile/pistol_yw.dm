@@ -1,5 +1,5 @@
 /******GLOCK******/
-/obj/item/weapon/gun/projectile/automatic/glock
+/obj/item/gun/projectile/automatic/glock
 	name = "Glock G18"
 	desc = "A automatic handgun that uses .9mm rounds."
 	icon_state = "glock"
@@ -16,7 +16,7 @@
 	list(mode_name="short bursts",	burst=5, move_delay=6, burst_accuracy = list(0,-1,-1,-2,-2), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2))
 	)
 
-/obj/item/weapon/gun/projectile/automatic/glock/update_icon()
+/obj/item/gun/projectile/automatic/glock/update_icon()
 	..()
 	if(ammo_magazine)
 		icon_state = "[initial(icon_state)]"
@@ -25,7 +25,7 @@
 
 
 /*******PPK*******/
-/obj/item/weapon/gun/projectile/ppk
+/obj/item/gun/projectile/ppk
 	name = "PPK"
 	desc = "A handgun that uses .9mm rounds."
 	icon_state = "ppk"
@@ -37,7 +37,7 @@
 	magazine_type = /obj/item/ammo_magazine/m9mm
 	allowed_magazines = list(/obj/item/ammo_magazine/m9mm)
 
-/obj/item/weapon/gun/projectile/ppk/update_icon()
+/obj/item/gun/projectile/ppk/update_icon()
 	..()
 	if(ammo_magazine)
 		icon_state = "[initial(icon_state)]"
@@ -46,7 +46,7 @@
 
 
 /*******M2024*******/
-/obj/item/weapon/gun/projectile/m2024
+/obj/item/gun/projectile/m2024
 	name = "Custom M2024"
 	desc = "Customized model of old yet reliable sol .45 handgun with the name 'M2024'. Used to be popular, still appreciated for it's effectiveness."
 	icon_state = "m2024"
@@ -58,7 +58,7 @@
 	magazine_type = /obj/item/ammo_magazine/m2024
 	allowed_magazines = list(/obj/item/ammo_magazine/m2024,/obj/item/ammo_magazine/m45)
 
-/obj/item/weapon/gun/projectile/m2024/update_icon()
+/obj/item/gun/projectile/m2024/update_icon()
 	..()
 	if(ammo_magazine)
 		icon_state = "[initial(icon_state)]"
@@ -66,7 +66,7 @@
 		icon_state = "[initial(icon_state)]-empty"
 
 /*******M1911 Custom fluff*******/
-/obj/item/weapon/gun/projectile/fluff/m1911
+/obj/item/gun/projectile/fluff/m1911
 	name = "M1911 Custom"
 	desc = "A modernized, customized M1911 pistol with a rail for attachments such as flashlight or laser sight (fooken laser sights). It's engraved, and the engraving says, 'For honorable duty.' It's original, Sol Gov firearm from Earth, not a cheap mars replica."
 	icon_state = "m1911"
@@ -78,7 +78,7 @@
 	magazine_type = /obj/item/ammo_magazine/m45
 	allowed_magazines = list(/obj/item/ammo_magazine/m45)
 
-/obj/item/weapon/gun/projectile/m2024/update_icon()
+/obj/item/gun/projectile/m2024/update_icon()
 	..()
 	if(ammo_magazine)
 		icon_state = "[initial(icon_state)]"

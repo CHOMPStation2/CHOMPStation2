@@ -51,7 +51,7 @@
 	var/age = user.age
 	var/gender = user.gender
 	/* no dbstuff yet
-	var/DBQuery/cquery = dbcon.NewQuery("SELECT * from jobban WHERE ckey='[user.ckey]'")
+	var/datum/db_query/cquery = dbcon.NewQuery("SELECT * from jobban WHERE ckey='[user.ckey]'")
 	if(!cquery.Execute()) return
 	else
 		while(cquery.NextRow())
@@ -69,10 +69,10 @@
 
 	<b><u>Black Marks</u></b>:<br> "}
 	for(var/A in marks)
-		text += "<span class='danger'>[A]</span><br>"
-	to_chat(user, "<span class='notice'>You feel a sting as the scanner extracts some of your blood.</span>")
+		text += span_danger("[A]") + "<br>"
+	to_chat(user, span_notice("You feel a sting as the scanner extracts some of your blood."))
 	var/turf/T = get_step(src,outputdir)
-	var/obj/item/weapon/paper/print = new(T)
+	var/obj/item/paper/print = new(T)
 	print.name = "[mname] Report"
 	print.info = text
 	print.stamped = 1

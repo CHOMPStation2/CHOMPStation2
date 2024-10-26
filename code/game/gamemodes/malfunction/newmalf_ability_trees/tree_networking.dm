@@ -57,7 +57,7 @@
 			to_chat(user, "You already control this APC!")
 			return
 		else if(A.aidisabled)
-			to_chat(user, "<span class='notice'>Unable to connect to APC. Please verify wire connection and try again.</span>")
+			to_chat(user, span_notice("Unable to connect to APC. Please verify wire connection and try again."))
 			return
 	else
 		return
@@ -77,9 +77,9 @@
 		if(A.hacker == user)
 			to_chat(user, "Hack successful. You now have full control over the APC.")
 		else
-			to_chat(user, "<span class='notice'>Hack failed. Connection to APC has been lost. Please verify wire connection and try again.</span>")
+			to_chat(user, span_notice("Hack failed. Connection to APC has been lost. Please verify wire connection and try again."))
 	else
-		to_chat(user, "<span class='notice'>Hack failed. Unable to locate APC. Please verify the APC still exists.</span>")
+		to_chat(user, span_notice("Hack failed. Unable to locate APC. Please verify the APC still exists."))
 	user.hacking = 0
 
 
@@ -93,8 +93,8 @@
 	if(!ability_prechecks(user, price))
 		return
 
-	var/title = input(usr, "Select message title: ")
-	var/text = input(usr, "Select message text: ")
+	var/title = tgui_input_text(usr, "Select message title: ")
+	var/text = tgui_input_text(usr, "Select message text: ")
 	if(!title || !text || !ability_pay(user, price))
 		to_chat(user, "Hack Aborted")
 		return
@@ -203,7 +203,7 @@
 	user.hack_can_fail = 0
 	user.hacking = 0
 	user.system_override = 2
-	user.verbs += new/datum/game_mode/malfunction/verb/ai_destroy_station()
+	add_verb(user, new /datum/game_mode/malfunction/verb/ai_destroy_station())
 
 
 // END ABILITY VERBS

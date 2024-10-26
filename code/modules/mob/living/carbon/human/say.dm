@@ -1,4 +1,6 @@
 /mob/living/carbon/human/GetAltName()
+	if(ability_flags & AB_PHASE_SHIFTED)
+		return ""
 	if(name != GetVoice())
 		return " (as [get_id_name("Unknown")])"
 
@@ -82,8 +84,8 @@
 
 /mob/living/carbon/human/GetVoice()
 	var/voice_sub
-	if(istype(get_rig(),/obj/item/weapon/rig))
-		var/obj/item/weapon/rig/rig = get_rig()
+	if(istype(get_rig(),/obj/item/rig))
+		var/obj/item/rig/rig = get_rig()
 		// todo: fix this shit
 		if(rig.speech && rig.speech.voice_holder && rig.speech.voice_holder.active && rig.speech.voice_holder.voice)
 			voice_sub = rig.speech.voice_holder.voice
@@ -129,7 +131,7 @@
 			message_data[2] = pick(M.say_verbs)
 			. = 1
 
-	if(CE_SPEEDBOOST in chem_effects || is_jittery) // motor mouth
+	else if(CE_SPEEDBOOST in chem_effects || is_jittery) // motor mouth
 		// Despite trying to url/html decode these, byond is just being bad and I dunno.
 		var/static/regex/speedboost_initial = new (@"&[a-z]{2,5};|&#\d{2};","g")
 		// Not herestring because bad vs code syntax highlight panics at apostrophe
@@ -137,6 +139,7 @@
 		for(var/datum/multilingual_say_piece/S in message_data[1])
 			S.message = speedboost_initial.Replace(S.message, "")
 			S.message = speedboost_main.Replace(S.message, "")
+		. = 1
 	else
 		. = ..(message_data)
 
@@ -144,12 +147,12 @@
 	switch(message_mode)
 		if("intercom")
 			if(!restrained())
-				for(var/obj/item/device/radio/intercom/I in view(1))
+				for(var/obj/item/radio/intercom/I in view(1))
 					I.talk_into(src, message_pieces, null, verb)
 					I.add_fingerprint(src)
 					used_radios += I
 		if("headset")
-			var/obj/item/device/radio/R = null
+			var/obj/item/radio/R = null
 			if(isradio(l_ear))
 				R = l_ear
 				if(R.talk_into(src, message_pieces, null, verb))
@@ -162,7 +165,7 @@
 					used_radios += R
 					return
 		if("right ear")
-			var/obj/item/device/radio/R = null
+			var/obj/item/radio/R = null
 			if(isradio(r_ear))
 				R = r_ear
 			if(isradio(r_hand))
@@ -171,7 +174,7 @@
 				if(R.talk_into(src, message_pieces, null, verb))
 					used_radios += R
 		if("left ear")
-			var/obj/item/device/radio/R = null
+			var/obj/item/radio/R = null
 			if(isradio(l_ear))
 				R = l_ear
 			if(isradio(l_hand))
@@ -192,20 +195,20 @@
 
 /mob/living/carbon/human/handle_speech_sound()
 	var/list/returns[2]
-	if(species.speech_sounds && species.speech_sounds.len && prob(species.speech_chance))		//VOREStation Edit: Sanity Check
+	if(speech_sound_enabled && species.speech_sounds && species.speech_sounds.len && prob(species.speech_chance))		//VOREStation Edit: Sanity Check //CHOMPStation Edit: add ability to disable speech sounds with a verb
 		returns[1] = sound(pick(species.speech_sounds))
 		returns[2] = 50
 	return returns
 
 /mob/living/carbon/human/binarycheck()
 	. = FALSE
-	var/obj/item/device/radio/headset/R = null
-	if(istype(l_ear, /obj/item/device/radio/headset))
+	var/obj/item/radio/headset/R = null
+	if(istype(l_ear, /obj/item/radio/headset))
 		R = l_ear
 		if(R.translate_binary)
 			. = TRUE
 
-	if(istype(r_ear, /obj/item/device/radio/headset))
+	if(istype(r_ear, /obj/item/radio/headset))
 		R = r_ear
 		if(R.translate_binary)
 			. = TRUE

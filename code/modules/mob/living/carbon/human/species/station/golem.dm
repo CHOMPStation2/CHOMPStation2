@@ -11,8 +11,8 @@
 	spawn_flags = SPECIES_IS_RESTRICTED
 	siemens_coefficient = 0
 
-	male_scream_sound = null //CHOMPedit
-	female_scream_sound = null //CHOMPedit
+	// male_scream_sound = null //CHOMPedit
+	// female_scream_sound = null //CHOMPedit
 
 	assisted_langs = list()
 
@@ -34,8 +34,8 @@
 
 /datum/species/golem/handle_post_spawn(var/mob/living/carbon/human/H)
 	if(H.mind)
-		H.mind.assigned_role = "Golem"
-		H.mind.special_role = "Golem"
+		H.mind.assigned_role = JOB_GOLEM
+		H.mind.special_role = JOB_GOLEM
 	H.real_name = "adamantine golem ([rand(1, 1000)])"
 	H.name = H.real_name
 	..()

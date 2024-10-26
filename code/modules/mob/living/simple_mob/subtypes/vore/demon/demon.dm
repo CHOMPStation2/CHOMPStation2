@@ -3,7 +3,7 @@
 
 /mob/living/simple_mob/vore/demon
 	name = "Rift Walker"
-	desc = "A large bipedal creature, body a mix of dark fur and scales. Marks on the creatures body pulse slowly with red light"
+	desc = "A large bipedal creature, its body has a mixture of dark fur and scales. Marks on the creature's body pulse slowly with red light." // CHOMPEdit: TYPOS.
 
 	icon_state = "boxfox"
 	icon_living = "boxfox"
@@ -12,10 +12,10 @@
 	icon = 'icons/mob/demon_vr.dmi'
 	vis_height = 47
 
-	faction = "demon"
+	faction = FACTION_DEMON
 	maxHealth = 30
 	health = 30
-	movement_cooldown = 0
+	movement_cooldown = -2
 
 	see_in_dark = 10
 	seedarkness = FALSE
@@ -46,6 +46,8 @@
 	var/shift_state = AB_SHIFT_NONE
 	var/last_shift = 0
 	var/is_shifting = FALSE
+	
+	can_be_drop_prey = FALSE //CHOMP Add
 
 /mob/living/simple_mob/vore/demon/init_vore()
 	if(!voremob_loaded)

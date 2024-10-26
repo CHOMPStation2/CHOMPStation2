@@ -83,7 +83,7 @@
 	has_suit.add_overlay(get_inv_overlay())
 
 	if(user)
-		to_chat(user, "<span class='notice'>You attach \the [src] to \the [has_suit].</span>")
+		to_chat(user, span_notice("You attach \the [src] to \the [has_suit]."))
 		add_fingerprint(user)
 
 /obj/item/clothing/accessory/proc/on_removed(var/mob/user)
@@ -156,6 +156,38 @@
 	name = "horrible tie"
 	desc = "A neosilk clip-on tie. This one is disgusting."
 	icon_state = "horribletie"
+
+/obj/item/clothing/accessory/bowtie
+	name = "red bow tie"
+	desc = "Snazzy!"
+	icon_state = "redbowtie"
+	slot = ACCESSORY_SLOT_TIE
+
+/obj/item/clothing/accessory/bowtie/black
+	name = "black bow tie"
+	icon_state = "blackbowtie"
+
+/obj/item/clothing/accessory/bowtie/white
+	name = "white bow tie"
+	icon_state = "whitebowtie"
+
+/obj/item/clothing/accessory/maid_neck
+	name = "maid neck cover"
+	desc = "A neckpiece for a maid costume, it smells faintly of disappointment."
+	icon_state = "maid_neck"
+
+/obj/item/clothing/accessory/maidcorset
+	name = "maid corset"
+	desc = "The final touch that holds it all together."
+	icon_state = "maidcorset"
+
+/obj/item/clothing/accessory/maid_arms
+	name = "maid arm covers"
+	desc = "Cylindrical looking tubes that go over your arms, weird."
+	slot_flags = SLOT_OCLOTHING | SLOT_GLOVES | SLOT_TIE
+	body_parts_covered = ARMS
+	description_info = "Wearable as gloves, or attachable to uniforms. May visually conflict with actual gloves when attached to uniforms. Caveat emptor."
+	icon_state = "maid_arms"
 
 /obj/item/clothing/accessory/stethoscope
 	name = "stethoscope"
@@ -284,7 +316,11 @@
 
 /obj/item/clothing/accessory/medal/gold/heroism
 	name = "medal of exceptional heroism"
-	desc = "An extremely rare golden medal awarded only by high ranking officials. To recieve such a medal is the highest honor and as such, very few exist. This medal is almost never awarded to anybody but distinguished veteran staff."
+	desc = "An extremely rare golden medal awarded only by high ranking officials. To receive such a medal is the highest honor and as such, very few exist. This medal is almost never awarded to anybody but distinguished veteran staff."
+
+/obj/item/clothing/accessory/medal/gold/casino
+	name = "medal of true lucky winner"
+	desc = "A gaudy golden medal with a logo of a casino engraved on top. The only achievement you had to earn this was great luck or great richness, neither of which is an achievement. Still, it instills a feeling of hope and smell of fresh bagels."
 
 // Base type for 'medals' found in a "dungeon" submap, as a sort of trophy to celebrate the player's conquest.
 /obj/item/clothing/accessory/medal/dungeon
@@ -457,6 +493,78 @@
 	icon_state = "sash"
 	slot = ACCESSORY_SLOT_OVER
 
+/obj/item/clothing/accessory/wristband
+	name = "wristband"
+	desc = "A simple plastic wristband."
+	icon = 'icons/inventory/accessory/item.dmi'
+	icon_state = "wristband"
+	w_class = ITEMSIZE_TINY
+	slot_flags = SLOT_TIE
+	slot = ACCESSORY_SLOT_DECOR
+
+/obj/item/clothing/accessory/wristbandcollection
+	name = "wristband collection"
+	desc = "A mix of colourable plastic wristbands."
+	icon = 'icons/inventory/accessory/item.dmi'
+	icon_state = "wristband_collection"
+	w_class = ITEMSIZE_TINY
+	slot_flags = SLOT_TIE
+	slot = ACCESSORY_SLOT_DECOR
+
+/obj/item/clothing/accessory/wristbandcollection/pink
+	name = "wristband collection"
+	desc = "A mix of colourable plastic wristbands."
+	icon = 'icons/inventory/accessory/item.dmi'
+	icon_state = "wristband_collection2"
+	w_class = ITEMSIZE_TINY
+	slot_flags = SLOT_TIE
+	slot = ACCESSORY_SLOT_DECOR
+
+/obj/item/clothing/accessory/wristbandcollection/les
+	name = "wristband collection"
+	desc = "A mix of colourable plastic wristbands."
+	icon = 'icons/inventory/accessory/item.dmi'
+	icon_state = "wristband_collection3"
+	w_class = ITEMSIZE_TINY
+	slot_flags = SLOT_TIE
+	slot = ACCESSORY_SLOT_DECOR
+
+/obj/item/clothing/accessory/wristbandcollection/trans
+	name = "wristband collection"
+	desc = "A mix of colourable plastic wristbands."
+	icon = 'icons/inventory/accessory/item.dmi'
+	icon_state = "wristband_collection4"
+	w_class = ITEMSIZE_TINY
+	slot_flags = SLOT_TIE
+	slot = ACCESSORY_SLOT_DECOR
+
+/obj/item/clothing/accessory/wristbandcollection/bi
+	name = "wristband collection"
+	desc = "A mix of colourable plastic wristbands."
+	icon = 'icons/inventory/accessory/item.dmi'
+	icon_state = "wristband_collection5"
+	w_class = ITEMSIZE_TINY
+	slot_flags = SLOT_TIE
+	slot = ACCESSORY_SLOT_DECOR
+
+/obj/item/clothing/accessory/wristbandcollection/ace
+	name = "wristband collection"
+	desc = "A mix of colourable plastic wristbands."
+	icon = 'icons/inventory/accessory/item.dmi'
+	icon_state = "wristband_collection6"
+	w_class = ITEMSIZE_TINY
+	slot_flags = SLOT_TIE
+	slot = ACCESSORY_SLOT_DECOR
+
+/obj/item/clothing/accessory/wristband_spiked
+	name = "wristband (spiked)"
+	desc = "A black wristband with short spikes around it."
+	icon = 'icons/inventory/accessory/item.dmi'
+	icon_state = "wristband_spiked"
+	w_class = ITEMSIZE_TINY
+	slot_flags = SLOT_TIE
+	slot = ACCESSORY_SLOT_DECOR
+
 //Gaiter scarves
 /obj/item/clothing/accessory/gaiter
 	name = "red neck gaiter"
@@ -469,7 +577,7 @@
 	item_flags = FLEXIBLEMATERIAL
 	var/breath_masked = FALSE
 	var/obj/item/clothing/mask/breath/breathmask
-	action_button_name = "Pull On Gaiter"
+	actions_types = list(/datum/action/item_action/pull_on_gaiter)
 
 /obj/item/clothing/accessory/gaiter/update_clothing_icon()
 	. = ..()
@@ -479,7 +587,7 @@
 
 /obj/item/clothing/accessory/gaiter/attackby(obj/item/I, mob/user)
 	if(istype(I, /obj/item/clothing/mask/breath))
-		to_chat(user, SPAN_NOTICE("You tuck [I] behind [src]."))
+		to_chat(user, span_notice("You tuck [I] behind [src]."))
 		breathmask = I
 		breath_masked = TRUE
 		user.drop_from_inventory(I, drop_location())
@@ -490,7 +598,7 @@
 /obj/item/clothing/accessory/gaiter/AltClick(mob/user)
 	. = ..()
 	if(breath_masked && breathmask)
-		to_chat(user, SPAN_NOTICE("You pull [breathmask] out from behind [src], and it drops to your feet."))
+		to_chat(user, span_notice("You pull [breathmask] out from behind [src], and it drops to your feet."))
 		breathmask.forceMove(drop_location())
 		breathmask = null
 		breath_masked = FALSE
@@ -510,7 +618,7 @@
 		body_parts_covered &= ~FACE
 		if(breath_masked)
 			item_flags &= ~AIRTIGHT
-	to_chat(user, SPAN_NOTICE(gaiterstring))
+	to_chat(user, span_notice(gaiterstring))
 	qdel(mob_overlay) // we're gonna need to refresh these
 	update_clothing_icon()	//so our mob-overlays update
 
@@ -525,3 +633,116 @@
 /obj/item/clothing/accessory/gaiter/green
 	name = "green neck gaiter"
 	icon_state = "gaiter_green"
+
+/obj/item/clothing/accessory/gaiter/blue
+	name = "blue neck gaiter"
+	icon_state = "gaiter_blue"
+
+/obj/item/clothing/accessory/gaiter/purple
+	name = "purple neck gaiter"
+	icon_state = "gaiter_purple"
+
+/obj/item/clothing/accessory/gaiter/orange
+	name = "orange neck gaiter"
+	icon_state = "gaiter_orange"
+
+/obj/item/clothing/accessory/gaiter/charcoal
+	name = "charcoal neck gaiter"
+	icon_state = "gaiter_charcoal"
+
+/obj/item/clothing/accessory/gaiter/snow
+	name = "white neck gaiter"
+	icon_state = "gaiter_snow"
+
+/obj/item/clothing/accessory/gaiter/half //functions like a gaiter
+	name = "black half-mask"
+	icon_state = "half_mask"
+
+/*
+ * Pride Pins
+ */
+/obj/item/clothing/accessory/pride
+	name = "pride pin"
+	desc = "A pin displaying pride in one's identity."
+	icon_state = "pride"
+	slot = ACCESSORY_SLOT_MEDAL
+
+/obj/item/clothing/accessory/pride/bi
+	name = "bisexual pride pin"
+	icon_state = "pride_bi"
+
+/obj/item/clothing/accessory/pride/trans
+	name = "transgender pride pin"
+	icon_state = "pride_trans"
+
+/obj/item/clothing/accessory/pride/ace
+	name = "asexual pride pin"
+	icon_state = "pride_ace"
+
+/obj/item/clothing/accessory/pride/enby
+	name = "nonbinary pride pin"
+	icon_state = "pride_enby"
+
+/obj/item/clothing/accessory/pride/pan
+	name = "pansexual pride pin"
+	icon_state = "pride_pan"
+
+/obj/item/clothing/accessory/pride/lesbian
+	name = "lesbian pride pin"
+	icon_state = "pride_lesbian"
+
+/obj/item/clothing/accessory/pride/intersex
+	name = "intersex pride pin"
+	icon_state = "pride_intersex"
+
+/obj/item/clothing/accessory/pride/vore
+	name = "vore pride pin"
+	icon_state = "pride_vore"
+
+// ranger ponchos
+
+/obj/item/clothing/accessory/poncho/roles/ranger
+	name = "red ranger poncho"
+	desc = "A rugged all-weather poncho, perfectly coloured to match a popular line of neck gaiters. You could probably use it as a tent in a pinch!"
+	icon_state = "rangerponcho_red"
+	item_state = "rangerponcho_red"
+
+/obj/item/clothing/accessory/poncho/roles/ranger/tan
+	name = "tan ranger poncho"
+	icon_state = "rangerponcho_tan"
+	item_state = "rangerponcho_tan"
+
+/obj/item/clothing/accessory/poncho/roles/ranger/gray
+	name = "gray ranger poncho"
+	icon_state = "rangerponcho_gray"
+	item_state = "rangerponcho_gray"
+
+/obj/item/clothing/accessory/poncho/roles/ranger/green
+	name = "green ranger poncho"
+	icon_state = "rangerponcho_green"
+	item_state = "rangerponcho_green"
+
+/obj/item/clothing/accessory/poncho/roles/ranger/blue
+	name = "blue ranger poncho"
+	icon_state = "rangerponcho_blue"
+	item_state = "rangerponcho_blue"
+
+/obj/item/clothing/accessory/poncho/roles/ranger/purple
+	name = "purple ranger poncho"
+	icon_state = "rangerponcho_purple"
+	item_state = "rangerponcho_purple"
+
+/obj/item/clothing/accessory/poncho/roles/ranger/orange
+	name = "orange ranger poncho"
+	icon_state = "rangerponcho_orange"
+	item_state = "rangerponcho_orange"
+
+/obj/item/clothing/accessory/poncho/roles/ranger/charcoal
+	name = "charcoal ranger poncho"
+	icon_state = "rangerponcho_charcoal"
+	item_state = "rangerponcho_charcoal"
+
+/obj/item/clothing/accessory/poncho/roles/ranger/snow
+	name = "white ranger poncho"
+	icon_state = "rangerponcho_snow"
+	item_state = "rangerponcho_snow"

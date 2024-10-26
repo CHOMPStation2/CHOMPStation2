@@ -28,7 +28,7 @@
 
 	valid_mobs = list(/mob/living/simple_mob/animal/sif/sakimm/polar, /mob/living/simple_mob/animal/sif/diyaab/polar,
 					/mob/living/simple_mob/animal/sif/shantak/polar, /mob/living/simple_mob/animal/space/bear/polar,
-					/mob/living/simple_mob/animal/wolf)
+					/mob/living/simple_mob/vore/wolf)
 	valid_flora = list(/obj/structure/flora/tree/pine, /obj/structure/flora/tree/pine, /obj/structure/flora/tree/pine,
 					/obj/structure/flora/tree/dead, /obj/structure/flora/grass/brown, /obj/structure/flora/grass/green,
 					/obj/structure/flora/grass/both, /obj/structure/flora/bush, /obj/structure/flora/ausbushes/grassybush,
@@ -82,7 +82,7 @@
 	minbodytemp = 0
 
 	//speak_chance = 1 //VORESTATION AI TEMPORARY REMOVAL
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/bearmeat
+	meat_type = /obj/item/reagent_containers/food/snacks/bearmeat
 /datum/say_list/polar_bear
 	speak = list("RAWR!","Rawr!","GRR!","Growl!")
 	emote_hear = list("rawrs","grumbles","grawls")

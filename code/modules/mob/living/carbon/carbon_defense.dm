@@ -41,7 +41,7 @@
 // Attacking someone with a weapon while they are neck-grabbed
 /mob/living/carbon/proc/check_neckgrab_attack(obj/item/W, mob/user, var/hit_zone)
 	if(user.a_intent == I_HURT)
-		for(var/obj/item/weapon/grab/G in src.grabbed_by)
+		for(var/obj/item/grab/G in src.grabbed_by)
 			if(G.assailant == user)
 				if(G.state >= GRAB_AGGRESSIVE)
 					if(hit_zone == BP_TORSO && shank_attack(W, G, user))
@@ -53,12 +53,12 @@
 
 
 // Knifing
-/mob/living/carbon/proc/attack_throat(obj/item/W, obj/item/weapon/grab/G, mob/user)
+/mob/living/carbon/proc/attack_throat(obj/item/W, obj/item/grab/G, mob/user)
 
 	if(!W.edge || !W.force || W.damtype != BRUTE)
 		return 0 //unsuitable weapon
 
-	user.visible_message("<span class='danger'>\The [user] begins to slit [src]'s throat with \the [W]!</span>")
+	user.visible_message(span_danger("\The [user] begins to slit [src]'s throat with \the [W]!"))
 
 	user.next_move = world.time + 20 //also should prevent user from triggering this repeatedly
 	if(!do_after(user, 20))
@@ -87,9 +87,9 @@
 
 	if(total_damage)
 		if(oxyloss >= 40)
-			user.visible_message("<span class='danger'>\The [user] slit [src]'s throat open with \the [W]!</span>")
+			user.visible_message(span_danger("\The [user] slit [src]'s throat open with \the [W]!"))
 		else
-			user.visible_message("<span class='danger'>\The [user] cut [src]'s neck with \the [W]!</span>")
+			user.visible_message(span_danger("\The [user] cut [src]'s neck with \the [W]!"))
 
 		if(W.hitsound)
 			playsound(src, W.hitsound, 50, 1, -1)
@@ -101,12 +101,12 @@
 
 	return 1
 
-/mob/living/carbon/proc/shank_attack(obj/item/W, obj/item/weapon/grab/G, mob/user, hit_zone)
+/mob/living/carbon/proc/shank_attack(obj/item/W, obj/item/grab/G, mob/user, hit_zone)
 
 	if(!W.sharp || !W.force || W.damtype != BRUTE)
 		return 0 //unsuitable weapon
 
-	user.visible_message("<span class='danger'>\The [user] plunges \the [W] into \the [src]!</span>")
+	user.visible_message(span_danger("\The [user] plunges \the [W] into \the [src]!"))
 
 	var/damage = shank_armor_helper(W, G, user)
 	apply_damage(damage, W.damtype, "torso", 0, sharp=W.sharp, edge=W.edge)
@@ -118,7 +118,7 @@
 
 	return 1
 
-/mob/living/carbon/proc/shank_armor_helper(obj/item/W, obj/item/weapon/grab/G, mob/user)
+/mob/living/carbon/proc/shank_armor_helper(obj/item/W, obj/item/grab/G, mob/user)
 	var/damage = W.force
 	var/damage_mod = 1
 	if(W.edge)
@@ -153,3 +153,38 @@
 	damage = damage * damage_mod
 
 	return damage
+
+/*
+ * CHOMPEdit Start: Pain/etc calculations, but more efficient:tm: - this should work for literally anything that applies to health. Far better than slapping emote("pain") everywhere like scream does.
+ * The reason we're doing this here is to enable carbons to handle pain differently if they need to - in this case, we're going to check if we're synthetic here, anyways. Essentially a dupe of human_damage.dm's updatehealth()
+ * Human updatehealth() doesn't call parent, so we can safely ignore human checks, but we're going to put sanity in anyways
+*/
+/mob/living/carbon/updatehealth()
+	if(status_flags & GODMODE)
+		health = 100
+		set_stat(CONSCIOUS)
+	else
+		var/initialhealth = health // CHOMPEdit: Getting our health before this check
+		health = getMaxHealth() - getOxyLoss() - getToxLoss() - getFireLoss() - getBruteLoss() - getCloneLoss() - halloss
+		if(!((ishuman(src)) || (issilicon(src))) && can_feel_pain() || ((src.isSynthetic() && synth_cosmetic_pain))) // Only run this if we're non-human/non-silicon + can feel pain, bc humans already do this. human_damage doesn't call parent, but sanity is better here.
+			if(health < initialhealth) // Did we lose health?
+				// Yes. How much by?
+				var/damage = initialhealth - health // Get our damage (say, 200 - 180 = 20, etc etc)
+				var/pain_noise
+				if(species)
+					pain_noise = (damage * species.pain_mod) // Multiply the incoming damage by our mod. 50 damage becomes 25 x 0.6 on highest strength, meaning prob 15. 50 x 1.4 means prob 35, etc.
+				else // Sanity, in case we don't have a species
+					pain_noise = (damage * rand(0.5, 1.5)) // Multiply damage by our rand mod. 50 damage becomes 50 x 0.5, means prob 25. 50 x 1.5 means prob 75, etc.
+				switch(damage)
+					if(-INFINITY to 0)
+						return
+					if(1 to 25)
+						if(prob(pain_noise) && !isbelly(loc)) // No pain noises inside bellies.
+							emote("pain")
+					if(26 to 50)
+						if(prob(pain_noise * 1.5) && !isbelly(loc)) // No pain noises inside bellies.
+							emote("pain")
+					if(51 to INFINITY)
+						if(prob(pain_noise * 3)  && !isbelly(loc)) // More likely, most severe damage. No pain noises inside bellies.
+							emote("pain")
+	// CHOMPEdit End: Pain

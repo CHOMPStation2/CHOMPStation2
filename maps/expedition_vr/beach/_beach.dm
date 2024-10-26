@@ -42,13 +42,13 @@
 			deep_count++
 	// Sanity check.
 	if(surface_count < 100)
-		admin_notice("<span class='danger'>Insufficient surface minerals. Rerolling...</span>", R_DEBUG)
+		admin_notice(span_danger("Insufficient surface minerals. Rerolling..."), R_DEBUG)
 		return 0
 	else if(rare_count < 50)
-		admin_notice("<span class='danger'>Insufficient rare minerals. Rerolling...</span>", R_DEBUG)
+		admin_notice(span_danger("Insufficient rare minerals. Rerolling..."), R_DEBUG)
 		return 0
 	else if(deep_count < 50)
-		admin_notice("<span class='danger'>Insufficient deep minerals. Rerolling...</span>", R_DEBUG)
+		admin_notice(span_danger("Insufficient deep minerals. Rerolling..."), R_DEBUG)
 		return 0
 	else
 		return 1
@@ -78,21 +78,22 @@
 // Note that if your map has step teleports, mobs may wander through them accidentally and not know how to get back
 /obj/tether_away_spawner/beach_outside
 	name = "Beach Outside Spawner" //Just a name
-	faction = "beach_out" //Sets all the mobs to this faction so they don't infight
+	faction = FACTION_BEACH_OUT //Sets all the mobs to this faction so they don't infight
 	atmos_comp = TRUE //Sets up their atmos tolerances to work in this setting, even if they don't normally (20% up/down tolerance for each gas, and heat)
 	prob_spawn = 50 //Chance of this spawner spawning a mob (once this is missed, the spawner is 'depleted' and won't spawn anymore)
 	prob_fall = 25 //Chance goes down by this much each time it spawns one (not defining and prob_spawn 100 means they spawn as soon as one dies)
 	//guard = 40 //They'll stay within this range (not defining this disables them staying nearby and they will wander the map (and through step teleports))
 	mobs_to_pick_from = list(
 		/mob/living/simple_mob/vore/fennec = 300,
+		/mob/living/simple_mob/vore/seagull = 200,
 		/mob/living/simple_mob/animal/passive/snake/python = 100,
-		/mob/living/simple_mob/vore/alienanimals/teppi = 10,
-		/mob/living/simple_mob/vore/alienanimals/teppi/baby = 1
+		/mob/living/simple_mob/vore/alienanimals/teppi = 10, //ChompADD
+		/mob/living/simple_mob/vore/alienanimals/teppi/baby = 1 //ChompADD
 	)
 
 /obj/tether_away_spawner/beach_outside_friendly
 	name = "Fennec Spawner"
-	faction = "fennec"
+	faction = FACTION_FENNEC
 	atmos_comp = TRUE
 	prob_spawn = 100
 	prob_fall = 25
@@ -103,7 +104,7 @@
 
 /obj/tether_away_spawner/beach_cave
 	name = "Beach Cave Spawner"
-	faction = "beach_cave"
+	faction = FACTION_BEACH_CAVE
 	atmos_comp = TRUE
 	prob_spawn = 100
 	prob_fall = 40

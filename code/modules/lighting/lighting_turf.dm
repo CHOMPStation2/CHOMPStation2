@@ -6,6 +6,7 @@
 
 	var/tmp/lighting_corners_initialised = FALSE
 
+	var/tmp/outdoors_adjacent = FALSE
 	///Our lighting object.
 	var/tmp/datum/lighting_object/lighting_object
 	///Lighting Corner datums.
@@ -95,11 +96,21 @@
 
 ///Setter for the byond luminosity var
 /turf/proc/set_luminosity(new_luminosity, force)
-	// SSplanets handles outdoor turfs
-	if(is_outdoors() && !force)
+	/*CHOMP Removal Begin
+	if((is_outdoors() && !force) || outdoors_adjacent)
+		if(check_for_sun()) //If another system handles our lighting, don't interfere
+			return
+	*/ //CHOMP Removal End
+	if(((is_outdoors() && !force) || outdoors_adjacent) && (z in fake_sunlight_zs)) //Special exception for fakesun lit tiles
 		return
-	
+
 	luminosity = new_luminosity
+
+///Checks planets and fake_suns to see if our turf should be handled by either
+/turf/proc/check_for_sun()
+	if((SSplanets && SSplanets.z_to_planet.len >= z && SSplanets.z_to_planet[z]) || (z in fake_sunlight_zs))
+		return TRUE
+	return FALSE
 
 ///Calculate on which directions this turfs block view.
 /turf/proc/recalculate_directional_opacity()
@@ -111,7 +122,7 @@
 		return
 	directional_opacity = NONE
 	for(var/atom/movable/opacity_source as anything in opacity_sources)
-		if(opacity_source.flags & ON_BORDER)
+		if(opacity_source && opacity_source.flags & ON_BORDER)
 			directional_opacity |= opacity_source.dir
 		else //If fulltile and opaque, then the whole tile blocks view, no need to continue checking.
 			directional_opacity = ALL_CARDINALS
@@ -134,16 +145,35 @@
 
 /turf/proc/generate_missing_corners()
 
+	//CHOMPEdit Begin
+	var/turf/n = get_step(src,NORTH)
+	var/turf/s = get_step(src,SOUTH)
+	var/turf/w = get_step(src,WEST)
+	var/turf/e = get_step(src,EAST)
+
+
 	if (!lighting_corner_NE)
-		lighting_corner_NE = new/datum/lighting_corner(src, NORTH|EAST)
+		if(n && n.lighting_corner_SE)
+			lighting_corner_NE = n.lighting_corner_SE
+		else
+			lighting_corner_NE = new/datum/lighting_corner(src, NORTH|EAST)
 
 	if (!lighting_corner_SE)
-		lighting_corner_SE = new/datum/lighting_corner(src, SOUTH|EAST)
+		if(e && e.lighting_corner_SW)
+			lighting_corner_SE = e.lighting_corner_SW
+		else
+			lighting_corner_SE = new/datum/lighting_corner(src, SOUTH|EAST)
 
 	if (!lighting_corner_SW)
-		lighting_corner_SW = new/datum/lighting_corner(src, SOUTH|WEST)
+		if(s && s.lighting_corner_NW)
+			lighting_corner_SW = s.lighting_corner_NW
+		else
+			lighting_corner_SW = new/datum/lighting_corner(src, SOUTH|WEST)
 
 	if (!lighting_corner_NW)
-		lighting_corner_NW = new/datum/lighting_corner(src, NORTH|WEST)
-
+		if(w && w.lighting_corner_NE)
+			lighting_corner_NW = s.lighting_corner_NE
+		else
+			lighting_corner_NW = new/datum/lighting_corner(src, NORTH|WEST)
+	//CHOMPEdit End
 	lighting_corners_initialised = TRUE

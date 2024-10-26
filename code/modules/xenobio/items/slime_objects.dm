@@ -9,7 +9,7 @@
 
 /obj/item/slime_cube/attack_self(mob/user as mob)
 	if(!searching)
-		to_chat(user, "<span class='warning'>You stare at the slimy cube, watching as some activity occurs.</span>")
+		to_chat(user, span_warning("You stare at the slimy cube, watching as some activity occurs."))
 		icon_state = "slime cube active"
 		searching = 1
 		request_player()
@@ -45,19 +45,19 @@
 		searching = 0
 		var/turf/T = get_turf_or_move(src.loc)
 		for (var/mob/M in viewers(T))
-			M.show_message("<span class='warning'>The activity in the cube dies down. Maybe it will spark another time.</span>")
+			M.show_message(span_warning("The activity in the cube dies down. Maybe it will spark another time."))
 
 /obj/item/slime_cube/proc/transfer_personality(var/mob/candidate)
 	announce_ghost_joinleave(candidate, 0, "They are a promethean now.")
 	src.searching = 2
 	var/mob/living/carbon/human/S = new(get_turf(src))
 	S.client = candidate.client
-	to_chat(S, "<b>You are a promethean, brought into existence on [station_name()].</b>")
-	S.mind.assigned_role = "Promethean"
+	to_chat(S, span_infoplain(span_bold("You are a promethean, brought into existence on [station_name()].")))
+	S.mind.assigned_role = JOB_PROMETHEAN
 	S.set_species("Promethean")
 	S.shapeshifter_set_colour("#2398FF")
-	visible_message("<span class='warning'>The monkey cube suddenly takes the shape of a humanoid!</span>")
-	var/newname = sanitize(input(S, "You are a Promethean. Would you like to change your name to something else?", "Name change") as null|text, MAX_NAME_LEN)
+	visible_message(span_warning("The monkey cube suddenly takes the shape of a humanoid!"))
+	var/newname = sanitize(tgui_input_text(S, "You are a Promethean. Would you like to change your name to something else?", "Name change", null, MAX_NAME_LEN), MAX_NAME_LEN)
 	if(newname)
 		S.real_name = newname
 		S.name = S.real_name
@@ -65,7 +65,6 @@
 	if(S.mind)
 		S.mind.name = S.name
 	qdel(src)
-
 
 
 // More or less functionally identical to the telecrystal tele.
@@ -81,12 +80,12 @@
 	force = 1 //Needs a token force to ensure you can attack because for some reason you can't attack with 0 force things
 
 /obj/item/slime_crystal/apply_hit_effect(mob/living/target, mob/living/user, var/hit_zone)
-	target.visible_message("<span class='warning'>\The [target] has been teleported with \the [src] by \the [user]!</span>")
+	target.visible_message(span_warning("\The [target] has been teleported with \the [src] by \the [user]!"))
 	safe_blink(target, 14)
 	qdel(src)
 
 /obj/item/slime_crystal/attack_self(mob/user)
-	user.visible_message("<span class='warning'>\The [user] teleports themselves with \the [src]!</span>")
+	user.visible_message(span_warning("\The [user] teleports themselves with \the [src]!"))
 	safe_blink(user, 14)
 	qdel(src)
 
@@ -97,11 +96,12 @@
 	if(AM.anchored)
 		return
 
-	AM.visible_message("<span class='warning'>\The [AM] has been teleported with \the [src]!</span>")
+	AM.visible_message(span_warning("\The [AM] has been teleported with \the [src]!"))
 	safe_blink(AM, 14)
 	qdel(src)
 
-/obj/item/weapon/disposable_teleporter/slime
+
+/obj/item/disposable_teleporter/slime
 	name = "greater slime crystal"
 	desc = "A larger, gooier crystal."
 	description_info = "This will teleport you to a specific area once, when used in-hand."
@@ -112,17 +112,109 @@
 	origin_tech = list(TECH_MAGNET = 5, TECH_BLUESPACE = 4)
 
 
-
 // Very filling food.
-/obj/item/weapon/reagent_containers/food/snacks/slime
+/obj/item/reagent_containers/food/snacks/slime
 	name = "slimy clump"
-	desc = "A glob of slime that is thick as honey.  For the brave Xenobiologist."
+	desc = "A glob of slime that is thick as honey.  For the brave " + JOB_XENOBIOLOGIST + "."
 	icon_state = "honeycomb"
 	filling_color = "#FFBB00"
-	center_of_mass = list("x"=17, "y"=10)
+	center_of_mass_x = 17 //CHOMPEdit
+	center_of_mass_y= 10 //CHOMPEdit
 	nutriment_amt = 25 // Very filling.
 	nutriment_desc = list("slime" = 10, "sweetness" = 10, "bliss" = 5)
 
-/obj/item/weapon/reagent_containers/food/snacks/slime/Initialize()
+/obj/item/reagent_containers/food/snacks/slime/Initialize()
 	. = ..()
 	bitesize = 5
+
+
+//Flashlight
+
+/obj/item/flashlight/slime
+	gender = PLURAL
+	name = "glowing slime extract"
+	desc = "A slimy ball that appears to be glowing from bioluminesence."
+	icon = 'icons/obj/lighting.dmi'
+	icon_state = "floor1" //not a slime extract sprite but... something close enough!
+	item_state = "slime"
+	light_color = "#FFF423"
+	w_class = ITEMSIZE_TINY
+	light_range = 6
+	on = 1 //Bio-luminesence has one setting, on.
+	power_use = 0
+	light_system = STATIC_LIGHT
+
+/obj/item/flashlight/slime/Initialize()
+	.=..()
+	set_light(light_range, light_power, light_color)
+
+/obj/item/flashlight/slime/update_brightness()
+	return
+
+/obj/item/flashlight/slime/attack_self(mob/user)
+	return //Bio-luminescence does not toggle.
+
+
+//Radiation Emitter
+
+/obj/item/slime_irradiator
+	name = "glowing slime extract"
+	desc = "A slimy ball that appears to be glowing from bioluminesence."
+	icon = 'icons/mob/slimes_vr.dmi'
+	icon_state = "irradiator"
+	light_color = "#00FF00"
+	light_power = 0.4
+	light_range = 2
+	w_class = ITEMSIZE_TINY
+
+/obj/item/slime_irradiator/New()
+	START_PROCESSING(SSobj, src)
+	set_light(light_range, light_power, light_color)
+	return ..()
+
+/obj/item/slime_irradiator/process()
+	SSradiation.radiate(src, 5)
+
+/obj/item/slime_irradiator/Destroy()
+	STOP_PROCESSING(SSobj, src)
+	return ..()
+
+
+//BS Pouch
+/obj/item/storage/backpack/holding/slime
+	name = "bluespace slime pouch"
+	desc = "A slimy pouch that opens into a localized pocket of bluespace."
+	icon_state = "slimepouch"
+
+
+
+//Slime Chems
+
+/datum/reagent/myelamine/slime
+	name = "Agent A"
+	id = "slime_bleed_fixer"
+	description = "A slimy liquid which appears to rapidly clot internal hemorrhages by increasing the effectiveness of platelets at low quantities.  Toxic in high quantities."
+	taste_description = "slime"
+	overdose = 5
+
+/datum/reagent/osteodaxon/slime
+	name = "Agent B"
+	id = "slime_bone_fixer"
+	description = "A slimy liquid which can be used to heal bone fractures at low quantities.  Toxic in high quantities."
+	taste_description = "slime"
+	overdose = 5
+
+/datum/reagent/peridaxon/slime
+	name = "Agent C"
+	id = "slime_organ_fixer"
+	description = "A slimy liquid which is used to encourage recovery of internal organs and nervous systems in low quantities.  Toxic in high quantities."
+	taste_description = "slime"
+	overdose = 5
+
+/datum/reagent/nutriment/glucose/slime
+	name = "Slime Goop"
+	id = "slime_goop"
+	description = "A slimy liquid, with very compelling smell. Extremely nutritious."
+	color = "#FABA3A"
+	nutriment_factor = 30
+	taste_description = "slimy nectar"

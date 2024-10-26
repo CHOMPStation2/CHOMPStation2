@@ -1,0 +1,56 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/simulated/mineral/floor/sif,
+/area/submap/terror)
+"b" = (
+/mob/living/simple_mob/humanoid/eclipse/solar/froststalker,
+/turf/simulated/mineral/floor/sif,
+/area/submap/terror)
+"s" = (
+/mob/living/simple_mob/humanoid/eclipse/solar/teslanoodle,
+/turf/simulated/mineral/floor/sif,
+/area/submap/terror)
+"z" = (
+/mob/living/simple_mob/humanoid/eclipse/lunar/pummler,
+/turf/simulated/mineral/floor/sif,
+/area/submap/terror)
+"E" = (
+/mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle,
+/turf/simulated/mineral/floor/sif,
+/area/submap/terror)
+
+(1,1,1) = {"
+a
+a
+E
+a
+a
+"}
+(2,1,1) = {"
+a
+b
+a
+z
+a
+"}
+(3,1,1) = {"
+a
+a
+a
+a
+a
+"}
+(4,1,1) = {"
+a
+b
+a
+z
+a
+"}
+(5,1,1) = {"
+a
+a
+s
+a
+a
+"}

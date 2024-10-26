@@ -11,7 +11,7 @@
 
 	maxHealth = 200
 	health = 200
-	movement_cooldown = 5
+	movement_cooldown = 1.5
 	see_in_dark = 3
 
 	armor = list(
@@ -39,7 +39,7 @@
 	pixel_y = 0
 
 	meat_amount = 15 //Infinite meat!
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
+	meat_type = /obj/item/reagent_containers/food/snacks/meat
 
 	max_buckled_mobs = 1 //Yeehaw
 	can_buckle = TRUE
@@ -49,6 +49,8 @@
 
 	say_list_type = /datum/say_list/hippo
 	ai_holder_type = /datum/ai_holder/simple_mob/retaliate
+
+	can_be_drop_prey = FALSE //CHOMP Add
 
 // Activate Noms!
 /mob/living/simple_mob/vore/hippo //I don't know why it's in a seperate line but everyone does it so i do it
@@ -70,9 +72,9 @@
 	. = ..()
 	if(!riding_datum)
 		riding_datum = new /datum/riding/simple_mob(src)
-	verbs |= /mob/living/simple_mob/proc/animal_mount
-	verbs |= /mob/living/proc/toggle_rider_reins
-	movement_cooldown = 3
+	add_verb(src, /mob/living/simple_mob/proc/animal_mount)
+	add_verb(src, /mob/living/proc/toggle_rider_reins)
+	movement_cooldown = 0
 
 /mob/living/simple_mob/vore/hippo/MouseDrop_T(mob/living/M, mob/living/user)
 	return

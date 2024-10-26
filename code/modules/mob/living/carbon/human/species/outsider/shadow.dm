@@ -12,8 +12,9 @@
 	has_organ = list()
 	siemens_coefficient = 0
 
-	male_scream_sound = null //CHOMPedit It has no mouth yet it must scream
-	female_scream_sound = null //CHOMPedit
+	// CHOMPedit: No sounds for this species
+	// male_scream_sound = null //CHOMPedit It has no mouth yet it must scream
+	// female_scream_sound = null //CHOMPedit
 
 	blood_color = "#CCCCCC"
 	flesh_color = "#AAAAAA"

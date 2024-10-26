@@ -27,7 +27,6 @@
 	max_micro_weapon_equip = 1
 	//add_req_access = 0
 	//operation_req_access = list(access_hos)
-	damage_absorption = list("brute"=1,"fire"=1,"bullet"=1,"laser"=1,"energy"=1,"bomb"=1)
 	var/am = "d3c2fbcadca903a41161ccc9df9cf948"
 	damage_minimum = 0				//Incoming damage lower than this won't actually deal damage. Scrapes shouldn't be a real thing.
 	minimum_penetration = 0		//Incoming damage won't be fully applied if you don't have at least 20. Almost all AP clears this.
@@ -82,8 +81,8 @@
 					else
 						return
 				M.updatehealth()
-			src.occupant_message("You hit [target].")
-			src.visible_message("<font color='red'><b>[src.name] hits [target].</b></font>")
+			src.occupant_message(span_attack("You hit [target]."))
+			src.visible_message(span_bolddanger("[src.name] hits [target]."))
 		else
 			step_away(M,src)
 			src.occupant_message("You push [target] out of the way.")
@@ -98,8 +97,8 @@
 		if(damtype == "brute")
 			for(var/target_type in src.destroyable_obj)
 				if(istype(target, target_type) && hascall(target, "attackby"))
-					src.occupant_message("You hit [target].")
-					src.visible_message("<font color='red'><b>[src.name] hits [target]</b></font>")
+					src.occupant_message(span_attack("You hit [target]."))
+					src.visible_message(span_bolddanger("[src.name] hits [target]."))
 					if(!istype(target, /turf/simulated/wall))
 						target:attackby(src,src.occupant)
 					else
@@ -122,16 +121,16 @@
 
 /obj/mecha/micro/move_inside()
 	var/mob/living/carbon/C = usr
-	if (C.size_multiplier >= 0.5)
-		to_chat(C, "<span class='warning'>You can't fit in this suit!</span>")
+	if (C.get_effective_size(TRUE) >= 0.5)
+		to_chat(C, span_warning("You can't fit in this suit!"))
 		return
 	else
 		..()
 
 /obj/mecha/micro/move_inside_passenger()
 	var/mob/living/carbon/C = usr
-	if (C.size_multiplier >= 0.5)
-		to_chat(C, "<span class='warning'>You can't fit in this suit!</span>")
+	if (C.get_effective_size(TRUE) >= 0.5)
+		to_chat(C, span_warning("You can't fit in this suit!"))
 		return
 	else
 		..()
@@ -157,4 +156,3 @@
 
 /obj/effect/decal/mecha_wreckage/micro
 	icon = 'icons/mecha/micro.dmi' */
-

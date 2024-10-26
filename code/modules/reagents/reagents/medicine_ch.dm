@@ -142,7 +142,7 @@
 /datum/reagent/bullvalene //This is for the third sap. It converts Brute Oxy and burn into slightly less toxins.
 	name = "bullvalene"
 	id = "bullvalene"
-	description = "witty pending description. Converts brute and burn into toxin. Or at least is supposed to."
+	description = "A catalytic chemical that can treat a wide variety of ailments at the cost of toxifying the host's body."
 	taste_description = "sulfur"
 	reagent_state = LIQUID
 	color = "#163851"

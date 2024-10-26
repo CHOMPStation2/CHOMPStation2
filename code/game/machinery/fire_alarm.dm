@@ -23,8 +23,18 @@ FIRE ALARM
 	var/last_process = 0
 	panel_open = FALSE
 	var/seclevel
-	circuit = /obj/item/weapon/circuitboard/firealarm
+	circuit = /obj/item/circuitboard/firealarm
 	var/alarms_hidden = FALSE //If the alarms from this machine are visible on consoles
+
+	var/datum/looping_sound/alarm/fire_alarm/soundloop // CHOMPEdit: Soundloops
+	var/datum/looping_sound/alarm/engineering_alarm/engalarm // CHOMPEdit: Soundloops
+	var/datum/looping_sound/alarm/sm_critical_alarm/critalarm // CHOMPEdit: Soundloops
+	var/datum/looping_sound/alarm/sm_causality_alarm/causality // CHOMPEdit: Soundloops
+
+	var/firewarn = FALSE // CHOMPEdit: Looping Alarms
+	var/engwarn = FALSE // CHOMPEdit: Looping Alarms
+	var/critwarn = FALSE // CHOMPEdit: Looping Alarms
+	var/causalitywarn = FALSE // CHOMPEdit: Looping Alarms
 
 /obj/machinery/firealarm/alarms_hidden
 	alarms_hidden = TRUE
@@ -50,6 +60,19 @@ FIRE ALARM
 
 	if(z in using_map.contact_levels)
 		set_security_level(security_level ? get_security_level() : "green")
+
+	soundloop = new(list(src), FALSE) // CHOMPEdit: Create soundloop
+	engalarm = new(list(src), FALSE) // CHOMPEdit: Create soundloop
+	critalarm = new(list(src), FALSE) // CHOMPEdit: Create soundloop
+	causality = new(list(src), FALSE) // CHOMPEdit: Create soundloop
+
+/obj/machinery/firealarm/Destroy()
+	reset()		//CHOMPEdit alarm needs to go when destroyed
+	QDEL_NULL(soundloop) // CHOMPEdit: Just clearing the loop here
+	QDEL_NULL(engalarm) // CHOMPEdit: Clearing the loop here too
+	QDEL_NULL(critalarm) // CHOMPEdit: Clearing the loop here too
+	QDEL_NULL(causality) // CHOMPEdit: Clearing the loop here too
+	return ..()
 
 /obj/machinery/firealarm/proc/offset_alarm()
 	pixel_x = (dir & 3) ? 0 : (dir == 4 ? 26 : -26)
@@ -88,14 +111,14 @@ FIRE ALARM
 			if("blue")	set_light(l_range = 2, l_power = 0.25, l_color = "#1024A9")
 			if("red")	set_light(l_range = 4, l_power = 0.9, l_color = "#ff0000")
 			if("delta")	set_light(l_range = 4, l_power = 0.9, l_color = "#FF6633")
-	
+
 	. += mutable_appearance(icon, fire_state)
 	. += emissive_appearance(icon, fire_state)
-	
+
 	if(seclevel)
 		. += mutable_appearance(icon, "overlay_[seclevel]")
 		. += emissive_appearance(icon, "overlay_[seclevel]")
-	
+
 	add_overlay(.)
 
 /obj/machinery/firealarm/fire_act(datum/gas_mixture/air, temperature, volume)
@@ -124,12 +147,12 @@ FIRE ALARM
 		return
 
 	if(panel_open)
-		if(istype(W, /obj/item/device/multitool))
+		if(istype(W, /obj/item/multitool))
 			detecting = !(detecting)
 			if(detecting)
-				user.visible_message("<span class='notice'>\The [user] has reconnected [src]'s detecting unit!</span>", "<span class='notice'>You have reconnected [src]'s detecting unit.</span>")
+				user.visible_message(span_notice("\The [user] has reconnected [src]'s detecting unit!"), span_notice("You have reconnected [src]'s detecting unit."))
 			else
-				user.visible_message("<span class='notice'>\The [user] has disconnected [src]'s detecting unit!</span>", "<span class='notice'>You have disconnected [src]'s detecting unit.</span>")
+				user.visible_message(span_notice("\The [user] has disconnected [src]'s detecting unit!"), span_notice("You have disconnected [src]'s detecting unit."))
 		return
 
 	alarm()
@@ -159,6 +182,24 @@ FIRE ALARM
 	..()
 	spawn(rand(0,15))
 		update_icon()
+		// CHOMPEdit Start: Looping Red/Violet/Orange Alarms
+		if(!soundloop)
+			return
+		if(stat & (NOPOWER | BROKEN)) // Are we broken or out of power?
+			soundloop.stop() // Stop the loop once we're out of power
+			engalarm.stop() // Stop these bc we're out of power
+			critalarm.stop() // Stop these, out of power
+			causality.stop() // etc etc
+		else
+			if(firewarn)
+				soundloop.start()
+			if(engwarn)
+				engalarm.start()
+			if(critwarn)
+				critalarm.start()
+			if(causalitywarn)
+				causality.start()
+		// CHOMPEdit End
 
 /obj/machinery/firealarm/attack_hand(mob/user as mob)
 	if(user.stat || stat & (NOPOWER | BROKEN))
@@ -177,6 +218,8 @@ FIRE ALARM
 	var/area/area = get_area(src)
 	for(var/obj/machinery/firealarm/FA in area)
 		fire_alarm.clearAlarm(src.loc, FA)
+		FA.soundloop.stop() // CHOMPEdit: Soundloop
+		FA.firewarn = FALSE // CHOMPEdit: Soundloop Fix
 	update_icon()
 	if(user)
 		log_game("[user] reset a fire alarm at [COORD(src)]")
@@ -187,8 +230,10 @@ FIRE ALARM
 	var/area/area = get_area(src)
 	for(var/obj/machinery/firealarm/FA in area)
 		fire_alarm.triggerAlarm(loc, FA, duration, hidden = alarms_hidden)
+		FA.soundloop.start() // CHOMPEdit: Soundloop
+		FA.firewarn = TRUE // CHOMPEdit: Soundloop Fix
 	update_icon()
-	playsound(src, 'sound/machines/airalarm.ogg', 25, 0, 4, volume_channel = VOLUME_CHANNEL_ALARMS)
+	// playsound(src, 'sound/machines/airalarm.ogg', 25, 0, 4, volume_channel = VOLUME_CHANNEL_ALARMS) // CHOMPEdit: Disable as per soundloop
 	if(user)
 		log_game("[user] triggered a fire alarm at [COORD(src)]")
 
@@ -201,7 +246,7 @@ FIRE ALARM
 FIRE ALARM CIRCUIT
 Just a object used in constructing fire alarms
 
-/obj/item/weapon/firealarm_electronics
+/obj/item/firealarm_electronics
 	name = "fire alarm electronics"
 	icon = 'icons/obj/doors/door_assembly.dmi'
 	icon_state = "door_electronics"

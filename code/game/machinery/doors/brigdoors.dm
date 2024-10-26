@@ -94,7 +94,7 @@
 	for(var/obj/machinery/door/window/brigdoor/door in targets)
 		if(door.density)
 			continue
-		INVOKE_ASYNC(door, /obj/machinery/door/window/brigdoor.proc/close)
+		INVOKE_ASYNC(door, TYPE_PROC_REF(/obj/machinery/door/window/brigdoor, close))
 
 	for(var/obj/structure/closet/secure_closet/brig/C in targets)
 		if(C.broken)
@@ -118,7 +118,7 @@
 	for(var/obj/machinery/door/window/brigdoor/door in targets)
 		if(!door.density)
 			continue
-		INVOKE_ASYNC(door, /obj/machinery/door/window/brigdoor.proc/open)
+		INVOKE_ASYNC(door, TYPE_PROC_REF(/obj/machinery/door/window/brigdoor, open))
 
 	for(var/obj/structure/closet/secure_closet/brig/C in targets)
 		if(C.broken)
@@ -179,7 +179,7 @@
 	. = TRUE
 
 	if(!allowed(usr))
-		to_chat(usr, "<span class='warning'>Access denied.</span>")
+		to_chat(usr, span_warning("Access denied."))
 		return FALSE
 
 	switch(action)
@@ -292,3 +292,9 @@
 #undef FONT_COLOR
 #undef FONT_STYLE
 #undef CHARS_PER_LINE
+
+#undef MAX_TIMER
+
+#undef PRESET_SHORT
+#undef PRESET_MEDIUM
+#undef PRESET_LONG

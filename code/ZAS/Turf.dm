@@ -45,6 +45,24 @@
 
 				air_master.connect(sim, src)
 
+// CHOMPAdd
+#define GET_ZONE_NEIGHBOURS(T, ret) \
+	ret = 0; \
+	if (T.zone) { \
+		for (var/_gzn_dir in GLOB.gzn_check) { \
+			var/turf/simulated/other = get_step(T, _gzn_dir); \
+			if (istype(other) && other.zone == T.zone) { \
+				var/block; \
+				ATMOS_CANPASS_TURF(block, other, T); \
+				if (!(block & AIR_BLOCKED)) { \
+					ret |= _gzn_dir; \
+				} \
+			} \
+		} \
+	}
+
+// CHOMPEnd
+
 /*
 	Simple heuristic for determining if removing the turf from it's zone will not partition the zone (A very bad thing).
 	Instead of analyzing the entire zone, we only check the nearest 3x3 turfs surrounding the src turf.
@@ -52,8 +70,8 @@
 */
 
 /turf/simulated/proc/can_safely_remove_from_zone()
-
-
+	// CHOMPEdit Start
+	/*
 	if(!zone) return 1
 
 	var/check_dirs = get_zone_neighbours(src)
@@ -64,15 +82,37 @@
 	#else
 	var/to_check = cornerdirs
 	#endif
+*/
 
-	for(var/dir in to_check)
+	if(!zone)
+		return TRUE
+
+	var/check_dirs
+	GET_ZONE_NEIGHBOURS(src, check_dirs)
+	. = check_dirs
+
+	if (!(. & (. - 1)))
+		return TRUE
+
+	for(var/dir in GLOB.csrfz_check) // CHOMPEdit
 		//for each pair of "adjacent" cardinals (e.g. NORTH and WEST, but not NORTH and SOUTH)
 		if((dir & check_dirs) == dir)
+		/*
 			//check that they are connected by the corner turf
 			var/connected_dirs = get_zone_neighbours(get_step(src, dir))
 			if(connected_dirs && (dir & reverse_dir[connected_dirs]) == dir)
 				unconnected_dirs &= ~dir //they are, so unflag the cardinals in question
+			*/
+			var/turf/simulated/T = get_step(src, dir)
+			if (!istype(T))
+				. &= ~dir
+				continue
 
+			var/connected_dirs
+			GET_ZONE_NEIGHBOURS(T, connected_dirs)
+			if(connected_dirs && (dir & GLOB.reverse_dir[connected_dirs]) == dir)
+				. &= ~dir //they are, so unflag the cardinals in question
+/*
 	//it is safe to remove src from the zone if all cardinals are connected by corner turfs
 	return !unconnected_dirs
 
@@ -89,6 +129,9 @@
 			var/turf/simulated/other = get_step(T, dir)
 			if(istype(other) && other.zone == T.zone && !(other.c_airblock(T) & AIR_BLOCKED) && get_dist(src, other) <= 1)
 				. |= dir
+*/
+	. = !.
+// CHOMPEdit End
 
 /turf/simulated/update_air_properties()
 
@@ -96,7 +139,8 @@
 		c_copy_air()
 		zone = null //Easier than iterating through the list at the zone.
 
-	var/s_block = c_airblock(src)
+	var/s_block // CHOMPEdit
+	ATMOS_CANPASS_TURF(s_block, src, src)
 	if(s_block & AIR_BLOCKED)
 		#ifdef ZASDBG
 		if(verbose) to_world("Self-blocked.")
@@ -106,6 +150,7 @@
 			var/zone/z = zone
 
 			if(can_safely_remove_from_zone()) //Helps normal airlocks avoid rebuilding zones all the time
+				c_copy_air() // CHOMPAdd
 				z.remove(src)
 			else
 				z.rebuild()
@@ -160,9 +205,9 @@
 		if(istype(unsim, /turf/simulated))
 
 			var/turf/simulated/sim = unsim
-			sim.open_directions |= reverse_dir[d]
+			sim.open_directions |= GLOB.reverse_dir[d] // CHOMPEdit
 
-			if(air_master.has_valid_zone(sim))
+			if(TURF_HAS_VALID_ZONE(sim)) // CHOMPEdit
 
 				//Might have assigned a zone, since this happens for each direction.
 				if(!zone)
@@ -195,7 +240,7 @@
 					if(verbose) to_world("Connecting to [sim.zone]")
 					#endif
 
-					air_master.connect(src, sim)
+					SSair.connect(src, sim) // CHOMPEdit
 
 
 			#ifdef ZASDBG
@@ -210,7 +255,7 @@
 			if(!postponed) postponed = list()
 			postponed.Add(unsim)
 
-	if(!air_master.has_valid_zone(src)) //Still no zone, make a new one.
+	if(!TURF_HAS_VALID_ZONE(src)) //Still no zone, make a new one. CHOMPEdit
 		var/zone/newzone = new/zone()
 		newzone.add(src)
 
@@ -223,7 +268,7 @@
 	//At this point, a zone should have happened. If it hasn't, don't add more checks, fix the bug.
 
 	for(var/turf/T in postponed)
-		air_master.connect(src, T)
+		SSair.connect(src, T) // CHOMPEdit
 
 /turf/proc/post_update_air_properties()
 	if(connections) connections.update_all()

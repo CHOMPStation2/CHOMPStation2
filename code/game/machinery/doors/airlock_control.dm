@@ -1,5 +1,3 @@
-#define AIRLOCK_CONTROL_RANGE 22
-
 // This code allows for airlocks to be controlled externally by setting an id_tag and comm frequency (disables ID access)
 /obj/machinery/door/airlock
 	var/id_tag
@@ -257,7 +255,7 @@
 
 /obj/machinery/access_button/attackby(obj/item/I as obj, mob/user as mob)
 	//Swiping ID on the access button
-	if (istype(I, /obj/item/weapon/card/id) || istype(I, /obj/item/device/pda))
+	if (istype(I, /obj/item/card/id) || istype(I, /obj/item/pda))
 		attack_hand(user)
 		return
 	..()
@@ -265,7 +263,7 @@
 /obj/machinery/access_button/attack_hand(mob/user)
 	add_fingerprint(usr)
 	if(!allowed(user))
-		to_chat(user, "<span class='warning'>Access Denied</span>")
+		to_chat(user, span_warning("Access Denied"))
 
 	else if(radio_connection)
 		var/datum/signal/signal = new

@@ -16,6 +16,7 @@
 	if(owner)
 		my_mob = owner
 		update_abilities(0, owner)
+		overlays.Add(closed_state)
 	else
 		message_admins("ERROR: ability_master's New() was not given an owner argument.  This is a bug.")
 
@@ -183,6 +184,13 @@
 	if(!ability_master)	//VOREStation Edit: S H A D E K I N
 		ability_master = new /obj/screen/movable/ability_master(src)
 
+
+/mob/Destroy()
+	if(ability_master)
+		QDEL_NULL(ability_master)
+	. = ..()
+
+
 ///////////ACTUAL ABILITIES////////////
 //This is what you click to do things//
 ///////////////////////////////////////
@@ -283,7 +291,7 @@
 	if(!mob)
 		return // Paranoid.
 	if(isnull(slot) || !isnum(slot))
-		to_chat(src, "<span class='warning'>.activate_ability requires a number as input, corrisponding to the slot you wish to use.</span>")
+		to_chat(src, span_warning(".activate_ability requires a number as input, corrisponding to the slot you wish to use."))
 		return // Bad input.
 	if(!mob.ability_master)
 		return // No abilities.
@@ -305,7 +313,7 @@
 	if(object_used && verb_to_call)
 		call(object_used,verb_to_call)(arguments_to_use)
 //		call(object_used,verb_to_call)(arguments_to_use)
-//		to_world("Attempted to call([object_used],[verb_to_call])([arguments_to_use])")
+//		to_world(span_world("Attempted to call([object_used],[verb_to_call])([arguments_to_use])"))
 //		if(hascall(object_used, verb_to_call))
 //			call(object_used,verb_to_call)(arguments_to_use)
 //		else

@@ -14,13 +14,18 @@
 #define VANTAG_KIDNAP  "vantag_kidnap"
 #define VANTAG_KILL    "vantag_kill"
 
+// ColorMate states
+#define COLORMATE_TINT 1
+#define COLORMATE_HSV 2
+#define COLORMATE_MATRIX 3
+
 #define DEPARTMENT_OFFDUTY			"Off-Duty"
 
 #define ANNOUNCER_NAME "Facility PA"
 
 //For custom species
 #define STARTING_SPECIES_POINTS 1 //CHOMPEdit
-#define MAX_SPECIES_TRAITS 8	//CHOMPEdit
+#define MAX_SPECIES_TRAITS 6	//CHOMPEdit - Cap positive traits at 6, given negatives are unlimited.
 
 // Xenochimera thing mostly
 #define REVIVING_NOW		-1
@@ -36,9 +41,6 @@
 #define SHUTTLE_CRASHED 3 // Yup that can happen now
 
 #define BLUE_SHIELDED 2 // Shield from bluespace teleportation (telescience)
-
-//Assistant/Visitor/Whatever
-#define USELESS_JOB "Visitor"
 
 //Herm Gender
 #define HERM "herm"
@@ -58,6 +60,7 @@
 #define PTO_CARGO			"Cargo"
 #define PTO_CIVILIAN		"Civilian"
 #define PTO_CYBORG			"Cyborg"
+#define PTO_TALON			"Talon Contractor"
 
 #define DEPARTMENT_TALON	"ITV Talon"
 

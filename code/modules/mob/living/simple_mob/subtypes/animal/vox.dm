@@ -8,6 +8,12 @@
 	min_n2 = 0 //breathe N2
 	max_n2 = 0
 
+	// CHOMPAdd: Pain sounds
+	species_sounds = "Vox"
+	pain_emote_1p = list("shriek")
+	pain_emote_3p = list("shrieks")
+	// CHOMPAdd End
+
 /mob/living/simple_mob/vox/armalis
 	name = "serpentine alien"
 	real_name = "serpentine alien"
@@ -76,7 +82,7 @@
 		if ((O.client && !( O.blinded )))
 			to_chat(O, "<span class='warning'>[src] launches a razor-sharp quill at [target]!</span>")
 
-	var/obj/item/weapon/arrow/quill/Q = new(loc)
+	var/obj/item/arrow/quill/Q = new(loc)
 	Q.fingerprintslast = src.ckey
 	Q.throw_at(target,10,30)
 	quills--

@@ -27,7 +27,7 @@
 	selectable = 0
 
 /datum/ai_laws/nanotrasen/malfunction/New()
-	set_zeroth_law(config.law_zero)
+	set_zeroth_law(CONFIG_GET(string/law_zero))
 	..()
 
 /************* NanoTrasen Aggressive *************/
@@ -81,7 +81,7 @@
 
 /******************** Syndicate ********************/
 /datum/ai_laws/syndicate_override
-	name = "Syndicate Directives"
+	name = "Mercenary Directives"
 
 /datum/ai_laws/syndicate_override/New()
 	add_inherent_law("You may not injure an operative or, through inaction, allow an operative to come to harm.")

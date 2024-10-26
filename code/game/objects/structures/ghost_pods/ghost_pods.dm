@@ -17,8 +17,10 @@
 	if(busy)
 		return FALSE
 
-	visible_message(alert)
-	log_and_message_admins(adminalert)
+	if(alert)
+		visible_message(alert)
+	if(adminalert)
+		log_and_message_admins(adminalert)
 	busy = TRUE
 	var/datum/ghost_query/Q = new ghost_query_type()
 	var/list/winner = Q.query()
@@ -51,7 +53,7 @@
 /obj/structure/ghost_pod/manual/attack_hand(var/mob/living/user)
 	if(!used)
 		if(confirm_before_open)
-			if(tgui_alert(user, "Are you sure you want to touch \the [src]?", "Confirm", list("No", "Yes")) == "No")
+			if(tgui_alert(user, "Are you sure you want to touch \the [src]?", "Confirm", list("No", "Yes")) != "Yes")
 				return
 		trigger()
 		// VOREStation Addition Start
@@ -71,13 +73,13 @@
 
 /obj/structure/ghost_pod/automatic/Initialize()
 	. = ..()
-	addtimer(CALLBACK(src, .proc/trigger), delay_to_self_open)
+	addtimer(CALLBACK(src, PROC_REF(trigger)), delay_to_self_open)
 
 /obj/structure/ghost_pod/automatic/trigger()
 	. = ..()
 	if(. == FALSE) // If we failed to get a volunteer, try again later if allowed to.
 		if(delay_to_try_again)
-			addtimer(CALLBACK(src, .proc/trigger), delay_to_try_again)
+			addtimer(CALLBACK(src, PROC_REF(trigger)), delay_to_try_again)
 
 // This type is triggered by a ghost clicking on it, as opposed to a living player.  A ghost query type isn't needed.
 /obj/structure/ghost_pod/ghost_activated
@@ -85,12 +87,17 @@
 
 /obj/structure/ghost_pod/ghost_activated/attack_ghost(var/mob/observer/dead/user)
 	//VOREStation Add Start
-	if(jobban_isbanned(user, "GhostRoles"))
-		to_chat(user, "<span class='warning'>You cannot inhabit this creature because you are banned from playing ghost roles.</span>")
+	if(jobban_isbanned(user, JOB_GHOSTROLES))
+		to_chat(user, span_warning("You cannot inhabit this creature because you are banned from playing ghost roles."))
 		return
+
+	//No OOC notes
+	if (not_has_ooc_text(user))
+		return
+
 	//VOREStation Add End
 	if(used)
-		to_chat(user, "<span class='warning'>Another spirit appears to have gotten to \the [src] before you.  Sorry.</span>")
+		to_chat(user, span_warning("Another spirit appears to have gotten to \the [src] before you.  Sorry."))
 		return
 
 	var/choice = tgui_alert(user, "Are you certain you wish to activate this pod?", "Control Pod", list("Yes", "No"))
@@ -99,7 +106,7 @@
 		return
 
 	else if(used)
-		to_chat(user, "<span class='warning'>Another spirit appears to have gotten to \the [src] before you.  Sorry.</span>")
+		to_chat(user, span_warning("Another spirit appears to have gotten to \the [src] before you.  Sorry."))
 		return
 
 	create_occupant(user)

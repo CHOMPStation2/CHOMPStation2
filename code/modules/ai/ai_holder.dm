@@ -15,16 +15,18 @@
 	var/ai_holder_type = null // Which ai_holder datum to give to the mob when initialized. If null, nothing happens.
 
 /mob/living/Initialize()
-	if(ai_holder_type)
-		ai_holder = new ai_holder_type(src)
-		if(istype(src, /mob/living/carbon/human))
-			var/mob/living/carbon/human/H = src
-			H.hud_used = new /datum/hud(H)
-			H.create_mob_hud(H.hud_used)
+	if(!ai_holder)
+		initialize_ai_holder()
 	return ..()
 
 /mob/living/Destroy()
-	QDEL_NULL(ai_holder)
+	if(ai_holder)
+		ai_holder.holder = null
+		ai_holder.UnregisterSignal(src,COMSIG_MOB_STATCHANGE)
+		if(ai_holder.faction_friends && ai_holder.faction_friends.len) //This list is shared amongst the faction
+			ai_holder.faction_friends -= src
+			ai_holder.faction_friends = null
+		QDEL_NULL(ai_holder)
 	return ..()
 
 /mob/living/Login()
@@ -36,6 +38,22 @@
 	if(!stat && !key && ai_holder)
 		ai_holder.manage_processing(AI_PROCESSING)
 	return ..()
+
+//Extracted from mob/living/Initialize() so that we may call it at any time after a mob was created
+/mob/living/proc/initialize_ai_holder()
+	if(ai_holder)	//Making double sure we clean up and properly GC the original ai_holder
+		var/old_holder = ai_holder
+		ai_holder = null
+		qdel(old_holder)
+	if(ai_holder_type)
+		ai_holder = new ai_holder_type(src)
+		if(!ai_holder)
+			log_debug("[src] could not initialize ai_holder of type [ai_holder_type]")
+			return
+		if(istype(src, /mob/living/carbon/human))
+			var/mob/living/carbon/human/H = src
+			H.hud_used = new /datum/hud(H)
+			H.create_mob_hud(H.hud_used)
 
 /datum/ai_holder
 	var/mob/living/holder = null		// The mob this datum is going to control.
@@ -83,7 +101,7 @@
 		if(!check_rights(R_ADMIN))
 			return
 		if(snapshot)
-			to_chat(usr, "<span class='error'>Someone (or you) may have started a mass edit on this AI datum already. Refresh the VV window to get the option to end the mass edit instead.</span>")
+			to_chat(usr, span_warning("Someone (or you) may have started a mass edit on this AI datum already. Refresh the VV window to get the option to end the mass edit instead."))
 			href_list["datumrefresh"] = "\ref[src]"
 			return
 		snapshot = vars.Copy() //'vars' appears to be special in that vars.Copy produces a flat list of keys with no values. It seems that 'vars[key]' is handled somewhere in the byond engine differently than normal lists.
@@ -125,7 +143,7 @@
 			snapshot[key] = thing
 
 		VARSET_IN(src, snapshot, null, 2 MINUTES) // Safety
-		to_chat(usr, "<span class='notice'>Variable snapshot saved. Begin editing the datum, and end the mass edit from the dropdown menu within 2 minutes. Note that editing the contents of lists is not supported.</span>")
+		to_chat(usr, span_notice("Variable snapshot saved. Begin editing the datum, and end the mass edit from the dropdown menu within 2 minutes. Note that editing the contents of lists is not supported."))
 		href_list["datumrefresh"] = "\ref[src]"
 
 	IF_VV_OPTION("mass_edit_finish")
@@ -149,14 +167,13 @@
 			diff += key
 
 		if(!diff.len)
-			to_chat(usr, "<span class='warning'>You don't appear to have changed anything on the AI datum you were editing.</span>")
+			to_chat(usr, span_warning("You don't appear to have changed anything on the AI datum you were editing."))
 			href_list["datumrefresh"] = "\ref[src]"
 		else
-			var/message = "<span class='notice'>These differences were detected in your varedit. If you notice any that you didn't change, please redo your edit:<br>"
+			var/message = "These differences were detected in your varedit. If you notice any that you didn't change, please redo your edit:<br>"
 			for(var/key in diff)
-				message += "<b>- [key]:</b> [before[key]] => [after[key]]<br>"
-			message += "</span>"
-			to_chat(usr,message)
+				message += span_bold("- [key]:") + " [before[key]] => [after[key]]<br>"
+			to_chat(usr,span_notice(message))
 
 		var/original_type = holder.type
 		var/list/levels_working = GetConnectedZlevels(holder.z)
@@ -191,18 +208,18 @@
 		var/list/selected = choices[choice]
 		for(var/mob/living/L as anything in selected)
 			if(!istype(L))
-				to_chat(usr,"<span class='warning'>Skipping incompatible mob: [L] [ADMIN_COORDJMP(L)]</span>")
+				to_chat(usr,span_warning("Skipping incompatible mob: [L] [ADMIN_COORDJMP(L)]"))
 				continue
 			if(!L.ai_holder)
-				to_chat(usr,"<span class='warning'>Skipping due to no AI: [L] [ADMIN_COORDJMP(L)]</span>")
+				to_chat(usr,span_warning("Skipping due to no AI: [L] [ADMIN_COORDJMP(L)]"))
 				continue
 			for(var/newvar in diff)
 				if(newvar in L.ai_holder.vars)
 					L.ai_holder.vars[newvar] = after[newvar]
 				else
-					to_chat(usr,"<span class='warning'>Skipping unavailable var '[newvar]' on: [L] [ADMIN_COORDJMP(L)]</span>")
+					to_chat(usr,span_warning("Skipping unavailable var '[newvar]' on: [L] [ADMIN_COORDJMP(L)]"))
 
-		to_chat(usr,"<span class='notice'>Mass AI edit done.</span>")
+		to_chat(usr,span_notice("Mass AI edit done."))
 		href_list["datumrefresh"] = "\ref[src]"
 
 /datum/ai_holder/New(var/new_holder)
@@ -210,7 +227,7 @@
 	holder = new_holder
 	home_turf = get_turf(holder)
 	manage_processing(AI_PROCESSING)
-	GLOB.stat_set_event.register(holder, src, .proc/holder_stat_change)
+	RegisterSignal(holder, COMSIG_MOB_STATCHANGE, PROC_REF(holder_stat_change))
 	..()
 
 /datum/ai_holder/Destroy()
@@ -366,6 +383,18 @@
 				holder.resist()
 			else
 				C.open()
+		/* CHOMPRemove Start
+		else if(isbelly(holder_loc))
+			ai_log("handle_stance_tactical() : Inside a belly, will move out to turf if owner is stat.", AI_LOG_TRACE)
+			var/obj/belly/B = holder_loc
+			var/mob/living/L = B.owner
+			if(B.owner?.stat)
+				var/mob/living/holder = src.holder
+				ai_log("handle_stance_tactical() : Owner was stat, moving.", AI_LOG_TRACE)
+				holder.forceMove(get_turf(L))
+				holder.visible_message(span_danger("[src] climbs out of [L], ready to continue fighting!"))
+				playsound(holder, 'sound/effects/splat.ogg')
+		*///CHOMPRemove End
 
 		// Should we flee?
 		if(should_flee())
@@ -436,7 +465,7 @@
 			if(speak_chance) // In the long loop since otherwise it wont shut up.
 				handle_idle_speaking()
 
-			if(hostile)
+			if(hostile || vore_hostile)
 				ai_log("handle_stance_strategical() : STANCE_IDLE, going to find_target().", AI_LOG_TRACE)
 				find_target()
 
@@ -459,11 +488,11 @@
 				walk_to_target()
 		if(STANCE_MOVE)
 			if(hostile && find_target()) // This will switch its stance.
-				ai_log("handle_stance_strategical() : STANCE_MOVE, found target and was inturrupted.", AI_LOG_TRACE)
+				ai_log("handle_stance_strategical() : STANCE_MOVE, found target and was interrupted.", AI_LOG_TRACE)
 				return
 		if(STANCE_FOLLOW)
 			if(hostile && find_target()) // This will switch its stance.
-				ai_log("handle_stance_strategical() : STANCE_FOLLOW, found target and was inturrupted.", AI_LOG_TRACE)
+				ai_log("handle_stance_strategical() : STANCE_FOLLOW, found target and was interrupted.", AI_LOG_TRACE)
 				return
 			else if(leader)
 				ai_log("handle_stance_strategical() : STANCE_FOLLOW, going to calculate_path([leader]).", AI_LOG_TRACE)
@@ -506,3 +535,8 @@
 #undef AI_NO_PROCESS
 #undef AI_PROCESSING
 #undef AI_FASTPROCESSING
+
+#undef START_AIPROCESSING
+#undef STOP_AIPROCESSING
+#undef START_AIFASTPROCESSING
+#undef STOP_AIFASTPROCESSING

@@ -4,7 +4,7 @@
 	var/last_emote_summary
 
 /mob/proc/get_available_emotes()
-	return global._default_mob_emotes
+	return global._default_mob_emotes.Copy()
 
 /mob/proc/can_emote(var/emote_type)
 	return (stat == CONSCIOUS)
@@ -21,12 +21,20 @@
 
 	if(usr == src) //client-called emote
 		if (client && (client.prefs.muted & MUTE_IC))
-			to_chat(src, "<span class='warning'>You cannot send IC messages (muted).</span>")
+			to_chat(src, span_warning("You cannot send IC messages (muted)."))
 			return
 
 		if(world.time < next_emote)
-			to_chat(src, SPAN_WARNING("You cannot use another emote yet."))
+			to_chat(src, span_warning("You cannot use another emote yet."))
 			return
+		//VOREStation Addition Start
+		if(forced_psay)
+			pme(message)
+			return
+		if(autowhisper)
+			return me_verb_subtle(message)
+
+		//VOREStation Addition End
 
 		if(act == "help")
 			if(world.time >= next_emote_refresh)
@@ -37,11 +45,11 @@
 					if(emote_datum.mob_can_use(src))
 						usable_emotes[emote_datum.key] = emote_datum
 				last_emote_summary = english_list(sortAssoc(usable_emotes))
-			to_chat(src,"<b>Usable emotes:</b> [last_emote_summary].")
+			to_chat(src,span_bold("Usable emotes:") + " [last_emote_summary].")
 			return
 
 		if(!can_emote(m_type))
-			to_chat(src, SPAN_WARNING("You cannot currently [m_type == AUDIBLE_MESSAGE ? "audibly" : "visually"] emote!"))
+			to_chat(src, span_warning("You cannot currently [m_type == AUDIBLE_MESSAGE ? "audibly" : "visually"] emote!"))
 			return
 
 		if(act == "me")
@@ -49,11 +57,11 @@
 
 		if(act == "custom")
 			if(!message)
-				message = sanitize_or_reflect(input(src,"Choose an emote to display.") as text|null, src) //VOREStation Edit - Reflect too long messages, within reason
+				message = sanitize_or_reflect(tgui_input_text(src,"Choose an emote to display."), src) //VOREStation Edit - Reflect too long messages, within reason
 			if(!message)
 				return
 			if (!m_type)
-				if(tgui_alert(src, "Is this an audible emote?", "Emote", list("Yes", "No")) == "No")
+				if(tgui_alert(src, "Is this an audible emote?", "Emote", list("Yes", "No")) != "Yes")
 					m_type = VISIBLE_MESSAGE
 				else
 					m_type = AUDIBLE_MESSAGE
@@ -75,11 +83,11 @@
 
 	var/decl/emote/use_emote = get_emote_by_key(act)
 	if(!istype(use_emote))
-		to_chat(src, SPAN_WARNING("Unknown emote '[act]'. Type <b>say *help</b> for a list of usable emotes."))
+		to_chat(src, span_warning("Unknown emote '[act]'. Type <b>say *help</b> for a list of usable emotes. ([act] [message])")) //CHOMPEdit - Add full message in the event you used * instead of ! or something like that
 		return
 
 	if(!use_emote.mob_can_use(src))
-		to_chat(src, SPAN_WARNING("You cannot use the emote '[act]'. Type <b>say *help</b> for a list of usable emotes."))
+		to_chat(src, span_warning("You cannot use the emote '[act]'. Type <b>say *help</b> for a list of usable emotes."))
 		return
 
 	if(m_type != use_emote.message_type && use_emote.conscious && stat != CONSCIOUS)
@@ -87,12 +95,12 @@
 
 	if(use_emote.message_type == AUDIBLE_MESSAGE && is_muzzled())
 		var/muffle_message = use_emote.emote_message_muffled || "makes a muffled sound."
-		audible_message("<b>\The [src]</b> [muffle_message]", runemessage = "[muffle_message]")
+		audible_message(span_bold("\The [src]") + " [muffle_message]", runemessage = "[muffle_message]")
 		return
 
 	next_emote = world.time + use_emote.emote_delay
 	use_emote.do_emote(src, message)
-	for (var/obj/item/weapon/implant/I in src)
+	for (var/obj/item/implant/I in src)
 		if (I.implanted)
 			I.trigger(act, src)
 
@@ -122,7 +130,8 @@
 	// Oh shit, we got this far! Let's see... did the user attempt to use more than one token?
 	if(findtext(subtext, "*"))
 		// abort abort!
-		to_chat(emoter, SPAN_WARNING("You may use only one \"["*"]\" symbol in your emote."))
+		to_chat(emoter, span_warning("You may use only one \"["*"]\" symbol in your emote."))
+		to_chat(emoter, span_warning(message))
 		return
 
 	if(pretext)
@@ -149,7 +158,7 @@
 	nametext = html_encode(nametext)
 	subtext = html_encode(subtext)
 	// Store the player's name in a nice bold, naturalement
-	nametext = "<B>[emoter]</B>"
+	nametext = span_bold("[emoter]")
 	return list("pretext" = pretext, "nametext" = nametext, "subtext" = subtext)
 
 /mob/proc/custom_emote(var/m_type = VISIBLE_MESSAGE, var/message, var/range = world.view)
@@ -160,7 +169,7 @@
 
 	var/input
 	if(!message)
-		input = sanitize(input(src,"Choose an emote to display.") as text|null)
+		input = sanitize(tgui_input_text(src,"Choose an emote to display."))
 	else
 		input = message
 
@@ -179,17 +188,33 @@
 
 	if(input)
 		log_emote(message,src) //Log before we add junk
-		message = "<span class='emote'><B>[src]</B> [input]</span>"
+		if(usr && usr.client)
+			message = span_emote(span_bold("[src]") + " [input]")
+		else
+			message = span_npc_emote(span_bold("[src]") + " [input]")
 	else
 		return
 
 	if(message)
 		message = encode_html_emphasis(message)
 
+		/*	CHOMPRemove - Not needed if you set your defaults right
+		var/ourfreq = null
+		if(isliving(src))
+			var/mob/living/L = src
+			if(L.voice_freq > 0 )
+				ourfreq = L.voice_freq
+		*/
+
+
 		// Hearing gasp and such every five seconds is not good emotes were not global for a reason.
 		// Maybe some people are okay with that.
 		var/turf/T = get_turf(src)
+
 		if(!T) return
+
+		if(client)
+			playsound(T, pick(voice_sounds_list), 75, TRUE, falloff = 1 , is_global = TRUE, frequency = voice_freq, ignore_walls = TRUE, preference = /datum/preference/toggle/emote_sounds) //CHOMPEdit - use say prefs instead //ChompEDIT - also ignore walls
 		var/list/in_range = get_mobs_and_objs_in_view_fast(T,range,2,remote_ghosts = client ? TRUE : FALSE)
 		var/list/m_viewers = in_range["mobs"]
 		var/list/o_viewers = in_range["objs"]
@@ -198,8 +223,15 @@
 			spawn(0) // It's possible that it could be deleted in the meantime, or that it runtimes.
 				if(M)
 					if(isobserver(M))
-						message = "<span class='emote'><B>[src]</B> ([ghost_follow_link(src, M)]) [input]</span>"
-					M.show_message(message, m_type)
+						message = span_emote(span_bold("[src]") + " ([ghost_follow_link(src, M)]) [input]")
+					if(usr && usr.client && M && !(get_z(usr) == get_z(M)))
+						message = span_multizsay("[message]")
+					//CHOMPEdit Start - If you are in the same tile, right next to, or being held by a person doing an emote, you should be able to see it while blind
+					if(m_type != AUDIBLE_MESSAGE && (src.Adjacent(M) || (istype(src.loc, /obj/item/holder) && src.loc.loc == M)))
+						M.show_message(message)
+					else
+						M.show_message(message, m_type)
+					//CHOMPEdit End
 					M.create_chat_message(src, "[runemessage]", FALSE, list("emote"), (m_type == AUDIBLE_MESSAGE))
 
 		for(var/obj/O as anything in o_viewers)

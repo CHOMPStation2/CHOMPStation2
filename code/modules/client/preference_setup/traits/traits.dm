@@ -5,8 +5,13 @@ var/list/trait_categories = list() // The categories available for the trait men
 /hook/startup/proc/populate_trait_list()
 
 	//create a list of trait datums
-	for(var/trait_type in typesof(/datum/trait) - list(/datum/trait, /datum/trait/modifier))
+	for(var/trait_type as anything in subtypesof(/datum/trait))
+		if (is_abstract(trait_type))
+			continue
 		var/datum/trait/T = new trait_type
+		if(!T.is_available())
+			qdel(T)
+			continue
 
 		if(!T.name)
 			error("Trait Menu - Missing name: [T.type]")
@@ -30,11 +35,11 @@ var/list/trait_categories = list() // The categories available for the trait men
 	sort_order = 1
 	var/current_tab = "Physical"
 
-/datum/category_item/player_setup_item/traits/load_character(var/savefile/S)
-	S["traits"] >> pref.traits
+/datum/category_item/player_setup_item/traits/load_character(list/save_data)
+	pref.traits = save_data["traits"]
 
-/datum/category_item/player_setup_item/traits/save_character(var/savefile/S)
-	S["traits"] << pref.traits
+/datum/category_item/player_setup_item/traits/save_character(list/save_data)
+	save_data["traits"] = pref.traits
 
 
 /datum/category_item/player_setup_item/traits/content()
@@ -53,7 +58,7 @@ var/list/trait_categories = list() // The categories available for the trait men
 			. += " |"
 
 		if(category == current_tab)
-			. += " <span class='linkOn'>[category]</span> "
+			. += " " + span_linkOn("[category]") + " "
 		else
 			. += " <a href='?src=\ref[src];select_category=[category]'>[category]</a> "
 	. += "</center></td></tr>"
@@ -102,19 +107,19 @@ var/list/trait_categories = list() // The categories available for the trait men
 
 	for(var/trait_name in pref.traits)
 		if(!trait_datums[trait_name])
-			to_chat(preference_mob, "<span class='warning'>You cannot have more than one of trait: [trait_name]</span>")
+			to_chat(preference_mob, span_warning("You cannot have more than one of trait: [trait_name]"))
 			pref.traits -= trait_name
 		else
 			var/datum/trait/T = trait_datums[trait_name]
 			var/invalidity = T.test_for_invalidity(src)
 			if(invalidity)
 				pref.traits -= trait_name
-				to_chat(preference_mob, "<span class='warning'>You cannot take the [trait_name] trait.  Reason: [invalidity]</span>")
+				to_chat(preference_mob, span_warning("You cannot take the [trait_name] trait.  Reason: [invalidity]"))
 
 			var/conflicts = T.test_for_trait_conflict(pref.traits)
 			if(conflicts)
 				pref.traits -= trait_name
-				to_chat(preference_mob, "<span class='warning'>The [trait_name] trait is mutually exclusive with [conflicts].</span>")
+				to_chat(preference_mob, span_warning("The [trait_name] trait is mutually exclusive with [conflicts]."))
 
 /datum/category_item/player_setup_item/traits/OnTopic(href, href_list, user)
 	if(href_list["toggle_trait"])
@@ -124,12 +129,12 @@ var/list/trait_categories = list() // The categories available for the trait men
 		else
 			var/invalidity = T.test_for_invalidity(src)
 			if(invalidity)
-				to_chat(user, "<span class='warning'>You cannot take the [T.name] trait.  Reason: [invalidity]</span>")
+				to_chat(user, span_warning("You cannot take the [T.name] trait.  Reason: [invalidity]"))
 				return TOPIC_NOACTION
 
 			var/conflicts = T.test_for_trait_conflict(pref.traits)
 			if(conflicts)
-				to_chat(user, "<span class='warning'>The [T.name] trait is mutually exclusive with [conflicts].</span>")
+				to_chat(user, span_warning("The [T.name] trait is mutually exclusive with [conflicts]."))
 				return TOPIC_NOACTION
 
 			pref.traits += T.name
@@ -141,6 +146,7 @@ var/list/trait_categories = list() // The categories available for the trait men
 
 
 /datum/trait
+	abstract_type = /datum/trait
 	var/name = null							// Name to show on UI
 	var/desc = null							// Description of what it does, also shown on UI.
 	var/list/mutually_exclusive = list()	// List of trait types which cannot be taken alongside this trait.
@@ -172,6 +178,9 @@ var/list/trait_categories = list() // The categories available for the trait men
 		result = english_list(conflicts)
 
 	return result
+
+/datum/trait/proc/is_available()
+	return TRUE
 
 // Similar to above, but uses the above two procs, in one place.
 // Returns TRUE is everything is well.

@@ -2,41 +2,51 @@
 	name = "Occupation"
 	sort_order = 1
 
-/datum/category_item/player_setup_item/occupation/load_character(var/savefile/S)
-	S["alternate_option"]	>> pref.alternate_option
-	S["job_civilian_high"]	>> pref.job_civilian_high
-	S["job_civilian_med"]	>> pref.job_civilian_med
-	S["job_civilian_low"]	>> pref.job_civilian_low
-	S["job_medsci_high"]	>> pref.job_medsci_high
-	S["job_medsci_med"]		>> pref.job_medsci_med
-	S["job_medsci_low"]		>> pref.job_medsci_low
-	S["job_engsec_high"]	>> pref.job_engsec_high
-	S["job_engsec_med"]		>> pref.job_engsec_med
-	S["job_engsec_low"]		>> pref.job_engsec_low
+/datum/category_item/player_setup_item/occupation/load_character(list/save_data)
+	pref.alternate_option	= save_data["alternate_option"]
+	pref.job_civilian_high	= save_data["job_civilian_high"]
+	pref.job_civilian_med	= save_data["job_civilian_med"]
+	pref.job_civilian_low	= save_data["job_civilian_low"]
+	pref.job_medsci_high	= save_data["job_medsci_high"]
+	pref.job_medsci_med		= save_data["job_medsci_med"]
+	pref.job_medsci_low		= save_data["job_medsci_low"]
+	pref.job_engsec_high	= save_data["job_engsec_high"]
+	pref.job_engsec_med		= save_data["job_engsec_med"]
+	pref.job_engsec_low		= save_data["job_engsec_low"]
 	//VOREStation Add
-	S["job_talon_low"]		>> pref.job_talon_low
-	S["job_talon_med"]		>> pref.job_talon_med
-	S["job_talon_high"]		>> pref.job_talon_high
+	pref.job_talon_low		= save_data["job_talon_low"]
+	pref.job_talon_med		= save_data["job_talon_med"]
+	pref.job_talon_high		= save_data["job_talon_high"]
 	//VOREStation Add End
-	S["player_alt_titles"]	>> pref.player_alt_titles
+	pref.player_alt_titles	= check_list_copy(save_data["player_alt_titles"])
+	//CHOMPStation Add
+	pref.job_other_low	= save_data["job_other_low"]
+	pref.job_other_med	= save_data["job_other_med"]
+	pref.job_other_high	= save_data["job_other_high"]
+	//CHOMPStation Add End
 
-/datum/category_item/player_setup_item/occupation/save_character(var/savefile/S)
-	S["alternate_option"]	<< pref.alternate_option
-	S["job_civilian_high"]	<< pref.job_civilian_high
-	S["job_civilian_med"]	<< pref.job_civilian_med
-	S["job_civilian_low"]	<< pref.job_civilian_low
-	S["job_medsci_high"]	<< pref.job_medsci_high
-	S["job_medsci_med"]		<< pref.job_medsci_med
-	S["job_medsci_low"]		<< pref.job_medsci_low
-	S["job_engsec_high"]	<< pref.job_engsec_high
-	S["job_engsec_med"]		<< pref.job_engsec_med
-	S["job_engsec_low"]		<< pref.job_engsec_low
+/datum/category_item/player_setup_item/occupation/save_character(list/save_data)
+	save_data["alternate_option"]	= pref.alternate_option
+	save_data["job_civilian_high"]	= pref.job_civilian_high
+	save_data["job_civilian_med"]	= pref.job_civilian_med
+	save_data["job_civilian_low"]	= pref.job_civilian_low
+	save_data["job_medsci_high"]	= pref.job_medsci_high
+	save_data["job_medsci_med"]		= pref.job_medsci_med
+	save_data["job_medsci_low"]		= pref.job_medsci_low
+	save_data["job_engsec_high"]	= pref.job_engsec_high
+	save_data["job_engsec_med"]		= pref.job_engsec_med
+	save_data["job_engsec_low"]		= pref.job_engsec_low
 	//VOREStation Add
-	S["job_talon_low"]		<< pref.job_talon_low
-	S["job_talon_med"]		<< pref.job_talon_med
-	S["job_talon_high"]		<< pref.job_talon_high
+	save_data["job_talon_low"]		= pref.job_talon_low
+	save_data["job_talon_med"]		= pref.job_talon_med
+	save_data["job_talon_high"]		= pref.job_talon_high
 	//VOREStation Add End
-	S["player_alt_titles"]	<< pref.player_alt_titles
+	save_data["player_alt_titles"]	= check_list_copy(pref.player_alt_titles)
+	//CHOMPStation Add
+	save_data["job_other_low"]	= pref.job_other_low
+	save_data["job_other_med"]	= pref.job_other_med
+	save_data["job_other_high"]	= pref.job_other_high
+	//CHOMPStation Add Endarkens/revert-16279-revert-16253-reprefs
 
 /datum/category_item/player_setup_item/occupation/sanitize_character()
 	pref.alternate_option	= sanitize_integer(pref.alternate_option, 0, 2, initial(pref.alternate_option))
@@ -54,6 +64,11 @@
 	pref.job_talon_med 		= sanitize_integer(pref.job_talon_med, 0, 65535, initial(pref.job_talon_med))
 	pref.job_talon_low 		= sanitize_integer(pref.job_talon_low, 0, 65535, initial(pref.job_talon_low))
 	//VOREStation Add End
+	//CHOMPStation Add
+	pref.job_other_high		= sanitize_integer(pref.job_other_high, 0, 65535, initial(pref.job_other_high))
+	pref.job_other_med		= sanitize_integer(pref.job_other_med, 0, 65535, initial(pref.job_other_med))
+	pref.job_other_low		= sanitize_integer(pref.job_other_low, 0, 65535, initial(pref.job_other_low))
+	//CHOMPStation Add End
 	if(!(pref.player_alt_titles)) pref.player_alt_titles = new()
 
 	if(!job_master)
@@ -70,7 +85,7 @@
 
 	. = list()
 	. += "<tt><center>"
-	. += "<b>Choose occupation chances</b><br>Unavailable occupations are crossed out.<br>"
+	. += span_bold("Choose occupation chances") + "<br>Unavailable occupations are crossed out.<br>"
 	. += "<script type='text/javascript'>function setJobPrefRedirect(level, rank) { window.location.href='?src=\ref[src];level=' + level + ';set_job=' + encodeURIComponent(rank); return false; }</script>"
 	. += "<table width='100%' cellpadding='1' cellspacing='0'><tr><td width='20%' valign='top'>" // Table within a table for alignment, also allows you to easily add more columns.
 	. += "<table width='100%' cellpadding='1' cellspacing='0'>"
@@ -133,12 +148,12 @@
 		lastJob = job
 		. += "<a href='?src=\ref[src];job_info=[rank]'>"
 		if(jobban_isbanned(user, rank))
-			if(config.usewhitelist && !check_whitelist(user))
+			if(CONFIG_GET(flag/usewhitelist) && !check_whitelist(user)) // CHOMPedit start
 				. += "<del>[rank]</del></td><td><b> \[WHITELISTED]</b></td></tr>"
 				continue
 			else
 				. += "<del>[rank]</del></td><td><b> \[BANNED]</b></td></tr>"
-				continue
+				continue // CHOMPedit end
 		if(!job.player_old_enough(user.client))
 			var/available_in_days = job.available_in_days(user.client)
 			. += "<del>[rank]</del></td></a><td> \[IN [(available_in_days)] DAYS]</td></tr>"
@@ -161,8 +176,8 @@
 		if((pref.job_civilian_low & ASSISTANT) && job.type != /datum/job/assistant)
 			. += "<font color=grey>[rank]</font></a></td><td></td></tr>"
 			continue
-		if((rank in SSjob.get_job_titles_in_department(DEPARTMENT_COMMAND) ) || (rank == "AI"))//Bold head jobs
-			. += "<b>[rank]</b></a>"
+		if((rank in SSjob.get_job_titles_in_department(DEPARTMENT_COMMAND) ) || (rank == JOB_AI))//Bold head jobs
+			. += span_bold("[rank]") + "</a>"
 		else
 			. += "[rank]</a>"
 
@@ -214,11 +229,11 @@
 
 	switch(pref.alternate_option)
 		if(GET_RANDOM_JOB)
-			. += "<u><a href='?src=\ref[src];job_alternative=1'>Get random job if preferences unavailable</a></u>"
+			. += span_underline("<a href='?src=\ref[src];job_alternative=1'>Get random job if preferences unavailable</a>")
 		if(BE_ASSISTANT)
-			. += "<u><a href='?src=\ref[src];job_alternative=1'>Be assistant if preference unavailable</a></u>"
+			. += span_underline("<a href='?src=\ref[src];job_alternative=1'>Be assistant if preference unavailable</a>")
 		if(RETURN_TO_LOBBY)
-			. += "<u><a href='?src=\ref[src];job_alternative=1'>Return to lobby if preference unavailable</a></u>"
+			. += span_underline("<a href='?src=\ref[src];job_alternative=1'>Return to lobby if preference unavailable</a>")
 
 	. += "<a href='?src=\ref[src];reset_jobs=1'>\[Reset\]</a></center>"
 	. += "</tt>"
@@ -240,7 +255,7 @@
 		var/datum/job/job = locate(href_list["select_alt_title"])
 		if (job)
 			var/choices = list(job.title) + job.alt_titles
-			var/choice = tgui_input_list(usr, "Choose a title for [job.title].", "Choose Title", choices, pref.GetPlayerAltTitle(job))
+			var/choice = tgui_input_list(user, "Choose a title for [job.title].", "Choose Title", choices, pref.GetPlayerAltTitle(job)) //ChompEDIT - usr removal
 			if(choice && CanUseTopic(user))
 				SetPlayerAltTitle(job, choice)
 				return (pref.equip_preview_mob ? TOPIC_REFRESH_UPDATE_PREVIEW : TOPIC_REFRESH)
@@ -256,18 +271,18 @@
 
 		dat += "<p style='background-color: [job.selection_color]'><br><br><p>"
 		if(job.alt_titles)
-			dat += "<i><b>Alternate titles:</b> [english_list(job.alt_titles)].</i>"
+			dat += span_italics(span_bold("Alternate titles:") + " [english_list(job.alt_titles)].")
 		send_rsc(user, job.get_job_icon(), "job[ckey(rank)].png")
 		dat += "<img src=job[ckey(rank)].png width=96 height=96 style='float:left;'>"
 		if(job.departments)
-			dat += "<b>Departments:</b> [english_list(job.departments)]."
+			dat += span_bold("Departments:") + " [english_list(job.departments)]."
 			if(LAZYLEN(job.departments_managed))
 				dat += "You manage these departments: [english_list(job.departments_managed)]"
 
 		dat += "You answer to <b>[job.supervisors]</b> normally."
 
 		dat += "<hr style='clear:left;'>"
-		if(config.wikiurl)
+		if(CONFIG_GET(string/wikiurl))
 			dat += "<a href='?src=\ref[src];job_wiki=[rank]'>Open wiki page in browser</a>"
 
 		var/alt_title = pref.GetPlayerAltTitle(job)
@@ -285,7 +300,7 @@
 
 	else if(href_list["job_wiki"])
 		var/rank = href_list["job_wiki"]
-		open_link(user,"[config.wikiurl][rank]")
+		open_link(user,"[CONFIG_GET(string/wikiurl)][rank]")
 
 	return ..()
 
@@ -320,6 +335,7 @@
 	pref.job_medsci_high = 0
 	pref.job_engsec_high = 0
 	pref.job_talon_high = 0 //VOREStation Add
+	pref.job_other_high = 0 //CHOMPStation Add
 
 // Level is equal to the desired new level of the job. So for a value of 4, we want to disable the job.
 /datum/category_item/player_setup_item/occupation/proc/SetJobDepartment(var/datum/job/job, var/level)
@@ -377,6 +393,20 @@
 				if(3)
 					pref.job_talon_low |= job.flag
 		VOREStation Add End*/
+		//CHOMPStation Add
+		if(OTHER)
+			pref.job_other_low &= ~job.flag
+			pref.job_other_med &= ~job.flag
+			pref.job_other_high &= ~job.flag
+			switch(level)
+				if(1)
+					reset_jobhigh()
+					pref.job_other_high = job.flag
+				if(2)
+					pref.job_other_med |= job.flag
+				if(3)
+					pref.job_other_low |= job.flag
+		//CHOMPStation Add End
 
 	return 1
 
@@ -398,6 +428,12 @@
 	pref.job_talon_med = 0
 	pref.job_talon_low = 0
 	//VOREStation Add End
+
+	//CHOMPStation Add
+	pref.job_other_high = 0
+	pref.job_other_med = 0
+	pref.job_other_low = 0
+	//CHOMPStation Add End
 
 	pref.player_alt_titles.Cut()
 
@@ -431,4 +467,14 @@
 					return job_engsec_med
 				if(3)
 					return job_engsec_low
+		//CHOMPStation Add
+		if(OTHER)
+			switch(level)
+				if(1)
+					return job_other_high
+				if(2)
+					return job_other_med
+				if(3)
+					return job_other_low
+		//CHOMPStation Add End
 	return 0

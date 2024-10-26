@@ -24,7 +24,7 @@
 	else
 		to_chat(user, "Error, no route to host.")
 
-/obj/machinery/button/remote/attackby(obj/item/weapon/W, mob/user as mob)
+/obj/machinery/button/remote/attackby(obj/item/W, mob/user as mob)
 	return attack_hand(user)
 
 /obj/machinery/button/remote/emag_act(var/remaining_charges, var/mob/user)
@@ -43,7 +43,7 @@
 		return
 
 	if(!allowed(user) && (wires & 1))
-		to_chat(user, "<span class='warning'>Access Denied</span>")
+		to_chat(user, span_warning("Access Denied"))
 		flick("doorctrl-denied",src)
 		return
 
@@ -148,6 +148,41 @@
 				spawn(0)
 					M.close()
 					return
+
+//CHOMP Add start
+/obj/machinery/button/remote/blast_door/bear
+	name = "stuffed bear"
+	icon = 'icons/obj/stationobjs_vr.dmi'
+	icon_state = "stuffedbear"
+	desc = "A stuffed and mounted bear. Quite a statement piece, but holds a curious glare."
+	density = 1
+
+/obj/machinery/button/remote/blast_door/bear/attack_hand(mob/user as mob) //code to stop bear ever reverting to standard button sprites
+	if(..())
+		return
+
+	add_fingerprint(user)
+	if(stat & (NOPOWER|BROKEN))
+		return
+
+	if(!allowed(user) && (wires & 1))
+		to_chat(user, "<span class='warning'>Access Denied</span>")
+		flick("doorctrl-denied",src)
+		return
+
+	use_power(5)
+	icon_state = "stuffedbear"
+	desiredstate = !desiredstate
+	trigger(user)
+	spawn(15)
+		update_icon()
+
+/obj/machinery/button/remote/blast_door/bear/update_icon()
+	if(stat & NOPOWER)
+		icon_state = "stuffedbear"
+	else
+		icon_state = "stuffedbear"
+//CHOMP Add end
 
 /*
 	Emitter remote control

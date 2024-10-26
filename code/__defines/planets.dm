@@ -8,10 +8,22 @@
 #define WEATHER_HAIL				"hail"
 #define WEATHER_WINDY				"windy"
 #define WEATHER_HOT					"hot"
+#define WEATHER_FOG					"fog"
 #define WEATHER_BLOOD_MOON			"blood moon" // For admin fun or cult later on.
 #define WEATHER_EMBERFALL			"emberfall" // More adminbuse, from TG. Harmless.
 #define WEATHER_ASH_STORM			"ash storm" // Ripped from TG, like the above. Less harmless.
+#define WEATHER_ASH_STORM_SAFE		"light ash storm" //Safe version of the ash storm. Dimmer.
 #define WEATHER_FALLOUT				"fallout" // Modified emberfall, actually harmful. Admin only.
+#define WEATHER_FALLOUT_TEMP		"short-term fallout" // Nuclear fallout that actually ends. Firework-only
+#define WEATHER_CONFETTI			"confetti" // Firework-only
+#define WEATHER_EERIE_WIND			"breezy winds"
+#define WEATHER_SANDSTORM			"sandstorm"
+#define WEATHER_TOXIN_RAIN			"toxic rain"
+#define WEATHER_STARRY_RIFT			"starry skies"
+#define WEATHER_MIDNIGHT_FOG		"heavy fog"
+#define WEATHER_DOWNPOURWARNING		"early extreme monsoon"
+#define WEATHER_DOWNPOUR			"extreme monsoon"
+#define WEATHER_DOWNPOURFATAL		"lethal monsoon"
 
 #define MOON_PHASE_NEW_MOON			"new moon"
 #define MOON_PHASE_WAXING_CRESCENT	"waxing crescent"

@@ -35,7 +35,7 @@
 	T.amount = starting_funds
 	if(!source_db)
 		//set a random date, time and location some time over the past few decades
-		T.date = "[num2text(rand(1,28))] [pick("January","February","March","April","May","June","July","August","September","October","November","December")], 23[rand(12,19)]"		// VOREStation Edit: lore-compliant dates
+		T.date = "[num2text(rand(1,28))] [pick("January","February","March","April","May","June","July","August","September","October","November","December")], 23[rand(12,19)]"
 		T.time = "[rand(0,24)]:[rand(11,59)]"
 		T.source_terminal = "NTGalaxyNet Terminal #[rand(111,1111)]"
 
@@ -51,10 +51,10 @@
 		//create a sealed package containing the account details
 		var/obj/item/smallDelivery/P = new /obj/item/smallDelivery(source_db.loc)
 
-		var/obj/item/weapon/paper/R = new /obj/item/weapon/paper(P)
+		var/obj/item/paper/R = new /obj/item/paper(P)
 		P.wrapped = R
 		R.name = "Account information: [M.owner_name]"
-		R.info = "<b>Account details (confidential)</b><br><hr><br>"
+		R.info = span_bold("Account details (confidential)") + "<br><hr><br>"
 		R.info += "<i>Account holder:</i> [M.owner_name]<br>"
 		R.info += "<i>Account number:</i> [M.account_number]<br>"
 		R.info += "<i>Account pin:</i> [M.remote_access_pin]<br>"
@@ -68,7 +68,7 @@
 		stampoverlay.icon_state = "paper_stamp-cent"
 		if(!R.stamped)
 			R.stamped = new
-		R.stamped += /obj/item/weapon/stamp
+		R.stamped += /obj/item/stamp
 		R.add_overlay(stampoverlay)
 		R.stamps += "<HR><i>This paper has been stamped by the Accounts Database.</i>"
 

@@ -112,6 +112,13 @@
 	icon_gib = "bear-gib"
 	vore_icons = SA_ICON_LIVING
 
+/mob/living/simple_mob/animal/space/bear/brown/beastmode
+	movement_cooldown = 2
+
+	melee_damage_lower = 5
+	melee_damage_upper = 15
+	attack_armor_pen = 0
+
 /mob/living/simple_mob/animal/space/carp
 	icon = 'icons/mob/vore.dmi'
 	vore_active = 1
@@ -158,7 +165,7 @@
 /* //VOREStation AI Temporary removal
 /mob/living/simple_mob/animal/passive/cat/PunchTarget()
 	if(istype(target_mob,/mob/living/simple_mob/animal/passive/mouse))
-		visible_message("<span class='warning'>\The [src] pounces on \the [target_mob]!]</span>")
+		visible_message(span_warning("\The [src] pounces on \the [target_mob]!]"))
 		target_mob.Stun(5)
 		return EatTarget()
 	else ..()
@@ -188,10 +195,10 @@
 /* //VOREStation AI Temporary Removal
 /mob/living/simple_mob/animal/passive/cat/fluff/EatTarget()
 	var/mob/living/TM = target_mob
-	prey_excludes += TM //so they won't immediately re-eat someone who struggles out (or gets newspapered out) as soon as they're ate
+	LAZYSET(prey_excludes, TM, world.time) //so they won't immediately re-eat someone who struggles out (or gets newspapered out) as soon as they're ate
 	spawn(3600) // but if they hang around and get comfortable, they might get ate again
 		if(src && TM)
-			prey_excludes -= TM
+			LAZYREMOVE(prey_excludes, TM)
 	..() // will_eat check is carried out before EatTarget is called, so prey on the prey_excludes list isn't a problem.
 */
 
@@ -223,10 +230,11 @@
 	response_disarm = "gently pushes aside"
 	response_harm = "hits"
 
-
+// Chomp EDIT
 /mob/living/simple_mob/hostile/carp/pike
 	vore_active = 1
 	// NO VORE SPRITES
+// Chomp EDIT END
 
 /mob/living/simple_mob/animal/space/carp/holographic
 	vore_icons = 0 // NO VORE SPRITES
@@ -238,7 +246,7 @@
 	if(!voremob_loaded)
 		return
 	. = ..()
-	var/safe = (faction == "neutral")
+	var/safe = (faction == FACTION_NEUTRAL)
 	for(var/obj/belly/B as anything in vore_organs)
 		B.digest_mode = safe ? DM_HOLD : vore_default_mode
 
@@ -248,4 +256,4 @@
 		B.digest_mode = safe ? DM_HOLD : vore_default_mode
 
 /mob/living/simple_mob/animal/passive/mouse
-	faction = "mouse" //Giving mice a faction so certain mobs can get along with them.
+	faction = FACTION_MOUSE //Giving mice a faction so certain mobs can get along with them.

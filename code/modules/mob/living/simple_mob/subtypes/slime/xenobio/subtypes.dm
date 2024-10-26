@@ -46,8 +46,8 @@
 	if(isliving(A))
 		var/mob/living/L = A
 		L.inflict_heat_damage(is_adult ? 10 : 5)
-		to_chat(src, span("span", "You burn \the [L]."))
-		to_chat(L, span("danger", "You've been burned by \the [src]!"))
+		to_chat(src, span_danger("You burn \the [L]."))
+		to_chat(L, span_danger("You've been burned by \the [src]!"))
 		L.adjust_fire_stacks(1)
 		if(prob(12))
 			L.IgniteMob()
@@ -154,8 +154,8 @@
 	if(isliving(A))
 		var/mob/living/L = A
 		L.inflict_shock_damage(is_adult ? 10 : 5)
-		to_chat(src, span("span", "You shock \the [L]."))
-		to_chat(L, span("danger", "You've been shocked by \the [src]!"))
+		to_chat(src, span_danger("You shock \the [L]."))
+		to_chat(L, span_danger("You've been shocked by \the [src]!"))
 
 /mob/living/simple_mob/slime/xenobio/yellow/handle_special()
 	if(stat == CONSCIOUS)
@@ -188,7 +188,7 @@
 		)
 
 /mob/living/simple_mob/slime/xenobio/dark_purple/proc/ignite()
-	visible_message(span("critical", "\The [src] erupts in an inferno!"))
+	visible_message(span_critical("\The [src] erupts in an inferno!"))
 	for(var/turf/simulated/target_turf in view(2, src))
 		target_turf.assume_gas("phoron", 30, 1500+T0C)
 		spawn(0)
@@ -210,7 +210,7 @@
 	else
 		..()
 
-/mob/living/simple_mob/slime/xenobio/dark_purple/attackby(var/obj/item/weapon/W, var/mob/user)
+/mob/living/simple_mob/slime/xenobio/dark_purple/attackby(var/obj/item/W, var/mob/user)
 	if(istype(W) && W.force && W.damtype == BURN)
 		log_and_message_admins("[src] ignited due to being hit with a burning weapon ([W]) by [key_name(user)].")
 		ignite()
@@ -264,8 +264,8 @@
 	if(isliving(A))
 		var/mob/living/L = A
 		chill(L)
-		to_chat(src, span("span", "You chill \the [L]."))
-		to_chat(L, span("danger", "You've been chilled by \the [src]!"))
+		to_chat(src, span_danger("You chill \the [L]."))
+		to_chat(L, span_danger("You've been chilled by \the [src]!"))
 
 
 /mob/living/simple_mob/slime/xenobio/dark_blue/proc/chill(mob/living/L)
@@ -293,7 +293,7 @@
 
 /mob/living/simple_mob/slime/xenobio/silver/bullet_act(var/obj/item/projectile/P, var/def_zone)
 	if(istype(P,/obj/item/projectile/beam) || istype(P, /obj/item/projectile/energy))
-		visible_message(span("danger", "\The [src] reflects \the [P]!"))
+		visible_message(span_danger("\The [src] reflects \the [P]!"))
 
 		// Find a turf near or on the original location to bounce to
 		var/new_x = P.starting.x + pick(0, 0, 0, -1, 1, -2, 2)
@@ -334,7 +334,7 @@
 /mob/living/simple_mob/slime/xenobio/bluespace/do_special_attack(atom/A)
 	// Teleport attack.
 	if(!A)
-		to_chat(src, span("warning", "There's nothing to teleport to."))
+		to_chat(src, span_warning("There's nothing to teleport to."))
 		return FALSE
 
 	var/list/nearby_things = range(1, A)
@@ -351,12 +351,12 @@
 		if(valid_turf)
 			valid_turfs.Add(potential_turf)
 
-	var/turf/T = get_turf(src)
-	var/turf/target_turf = pick(valid_turfs)
-
-	if(!target_turf)
-		to_chat(src, span("warning", "There wasn't an unoccupied spot to teleport to."))
+	if(!(valid_turfs.len))
+		to_chat(src, span_warning("There wasn't an unoccupied spot to teleport to."))
 		return FALSE
+
+	var/turf/target_turf = pick(valid_turfs)
+	var/turf/T = get_turf(src)
 
 	var/datum/effect/effect/system/spark_spread/s1 = new /datum/effect/effect/system/spark_spread
 	s1.set_up(5, 1, T)
@@ -364,14 +364,14 @@
 	s2.set_up(5, 1, target_turf)
 
 
-	T.visible_message(span("notice", "\The [src] vanishes!"))
+	T.visible_message(span_notice("\The [src] vanishes!"))
 	s1.start()
 
 	forceMove(target_turf)
 	playsound(target_turf, 'sound/effects/phasein.ogg', 50, 1)
-	to_chat(src, span("notice", "You teleport to \the [target_turf]."))
+	to_chat(src, span_notice("You teleport to \the [target_turf]."))
 
-	target_turf.visible_message(span("warning", "\The [src] appears!"))
+	target_turf.visible_message(span_warning("\The [src] appears!"))
 	s2.start()
 
 	if(Adjacent(A))
@@ -410,14 +410,14 @@
 	if(isliving(A) && a_intent == I_HURT)
 		var/mob/living/L = A
 		if(L.mob_size <= MOB_MEDIUM)
-			visible_message(span("danger", "\The [src] sends \the [L] flying with the impact!"))
+			visible_message(span_danger("\The [src] sends \the [L] flying with the impact!"))
 			playsound(src, "punch", 50, 1)
 			L.Weaken(1)
 			var/throwdir = get_dir(src, L)
 			L.throw_at(get_edge_target_turf(L, throwdir), 3, 1, src)
 		else
-			to_chat(L, span("warning", "\The [src] hits you with incredible force, but you remain in place."))
-			visible_message(span("danger", "\The [src] hits \the [L] with incredible force, to no visible effect!")) // CHOMPEdit: Visible/audible feedback for *resisting* the slam.
+			to_chat(L, span_warning("\The [src] hits you with incredible force, but you remain in place."))
+			visible_message(span_danger("\The [src] hits \the [L] with incredible force, to no visible effect!")) // CHOMPEdit: Visible/audible feedback for *resisting* the slam.
 			playsound(src, "punch", 50, 1) // CHOMPEdit: Visible/audible feedback for *resisting* the slam.
 
 
@@ -441,15 +441,16 @@
 		/mob/living/simple_mob/slime/xenobio/amber
 	)
 
-/* VOREStation Edit. We've had enough server crashes.
 /mob/living/simple_mob/slime/xenobio/amber/handle_special()
 	if(stat != DEAD)
 		feed_aura()
 	..()
 
 /mob/living/simple_mob/slime/xenobio/amber/proc/feed_aura()
-	for(var/mob/living/L in view(2, src))
-		if(L == src) // Don't feed themselves, or it is impossible to stop infinite slimes without killing all of the ambers.
+	for(var/mob/living/L in view(1, src))
+		if(L.stat == DEAD || !IIsAlly(L))
+			continue
+		if(L == src || istype(L, /mob/living/simple_mob/slime/xenobio/amber)) // Don't feed themselves, or it is impossible to stop infinite slimes without killing all of the ambers.
 			continue
 		if(istype(L, /mob/living/simple_mob/slime/xenobio))
 			var/mob/living/simple_mob/slime/xenobio/X = L
@@ -459,7 +460,6 @@
 			if(H.isSynthetic())
 				continue
 			H.nutrition = between(0, H.nutrition + rand(15, 25), 800)
-*/
 
 /mob/living/simple_mob/slime/xenobio/cerulean
 	desc = "This slime is generally superior in a wide range of attributes, compared to the common slime.  The jack of all trades, but master of none."
@@ -474,7 +474,7 @@
 	melee_damage_lower = 10
 	melee_damage_upper = 30
 
-	movement_cooldown = 0 // This actually isn't any faster due to AI limitations that hopefully the timer subsystem can fix in the future.
+	movement_cooldown = -1 // This actually isn't any faster due to AI limitations that hopefully the timer subsystem can fix in the future.
 
 	slime_mutation = list(
 		/mob/living/simple_mob/slime/xenobio/dark_blue,
@@ -490,7 +490,8 @@
 	color = "#FF3333"
 	slime_color = "red"
 	coretype = /obj/item/slime_extract/red
-	movement_cooldown = 0 // See above.
+	movement_cooldown = -1 // See above.
+	untamable = TRUE // Will enrage if disciplined.
 
 	description_info = "This slime is faster than the others.  Attempting to discipline this slime will always cause it to go rabid and berserk."
 
@@ -501,7 +502,7 @@
 			/mob/living/simple_mob/slime/xenobio/orange
 		)
 
-	ai_holder_type = /datum/ai_holder/simple_mob/xenobio_slime/red // Will enrage if disciplined.
+	ai_holder_type = /datum/ai_holder/simple_mob/xenobio_slime
 
 
 /mob/living/simple_mob/slime/xenobio/green
@@ -570,8 +571,8 @@
 	stacks = MODIFIER_STACK_FORBID
 	aura_max_distance = 2
 
-	on_created_text = "<span class='warning'>Twinkling spores of goo surround you.  It makes you feel healthier.</span>"
-	on_expired_text = "<span class='notice'>The spores of goo have faded, although you feel much healthier than before.</span>"
+	on_created_text = span_warning("Twinkling spores of goo surround you.  It makes you feel healthier.")
+	on_expired_text = span_notice("The spores of goo have faded, although you feel much healthier than before.")
 
 /datum/modifier/aura/slime_heal/tick()
 	if(holder.stat == DEAD)
@@ -581,10 +582,10 @@
 		var/mob/living/carbon/human/H = holder
 		for(var/obj/item/organ/external/E in H.organs)
 			var/obj/item/organ/external/O = E
-			O.heal_damage(2, 2, 0, 1)
+			O.heal_damage(1, 1, 0, 1) //CHOMPEdit, heal halved
 	else
-		holder.adjustBruteLoss(-2)
-		holder.adjustFireLoss(-2)
+		holder.adjustBruteLoss(-1) //CHOMPEdit, heal halved
+		holder.adjustFireLoss(-1) //CHOMPEdit, heal halved
 
 	holder.adjustToxLoss(-2)
 	holder.adjustOxyLoss(-2)
@@ -675,7 +676,7 @@
 	else
 		..()
 
-/mob/living/simple_mob/slime/xenobio/oil/attackby(obj/item/weapon/W, mob/living/user)
+/mob/living/simple_mob/slime/xenobio/oil/attackby(obj/item/W, mob/living/user)
 	if(istype(W) && W.force && W.damtype == BURN)
 		log_and_message_admins("[src] exploded due to being hit with a burning weapon ([W]) by [key_name(user)].")
 		explode()
@@ -778,7 +779,7 @@
 // The RD's pet slime.
 /mob/living/simple_mob/slime/xenobio/rainbow/kendrick
 	name = "Kendrick"
-	desc = "The Research Director's pet slime.  It shifts colors constantly."
+	desc = "The " + JOB_RESEARCH_DIRECTOR + "'s pet slime.  It shifts colors constantly."
 	rainbow_core_candidate = FALSE
 	// Doing pacify() in initialize() won't actually pacify the AI due to the ai_holder not existing due to parent initialize() not being called yet.
 	// Instead lets just give them an ai_holder that does that for us.
@@ -787,3 +788,16 @@
 /mob/living/simple_mob/slime/xenobio/rainbow/kendrick/Initialize()
 	pacify() // So the physical mob also gets made harmless.
 	return ..()
+
+//ChompAdd Begins
+// A pacified pink slime for either Admin-spawning or putting in a casino reward or capture crystal.
+/mob/living/simple_mob/slime/xenobio/pink/sana
+	name = "Sana"
+	desc = "A pink slime that seems to be oddly friendly, and doesn't seem interested in eating your face like the rest of them."
+	rainbow_core_candidate = FALSE
+	ai_holder_type = /datum/ai_holder/simple_mob/xenobio_slime/passive
+
+/mob/living/simple_mob/slime/xenobio/pink/sana/Initialize()
+	pacify() // So the physical mob also gets made harmless.
+	return ..()
+//ChompAdd End

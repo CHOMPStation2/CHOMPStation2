@@ -62,6 +62,7 @@
 			//Moving around with fractured ribs won't do you any good
 				if (prob(10) && !stat && can_feel_pain() && chem_effects[CE_PAINKILLER] < 50 && E.is_broken() && E.internal_organs.len)
 					custom_pain("Pain jolts through your broken [E.encased ? E.encased : E.name], staggering you!", 50)
+					emote("pain") // CHOMPStation Add: You SHOULD make a noise here.
 					drop_item(loc)
 					Stun(2)
 
@@ -110,9 +111,9 @@
 	// Canes and crutches help you stand (if the latter is ever added)
 	// One cane mitigates a broken leg+foot, or a missing foot.
 	// Two canes are needed for a lost leg. If you are missing both legs, canes aren't gonna help you.
-	if (l_hand && istype(l_hand, /obj/item/weapon/cane))
+	if (l_hand && istype(l_hand, /obj/item/cane))
 		stance_damage -= 2
-	if (r_hand && istype(r_hand, /obj/item/weapon/cane))
+	if (r_hand && istype(r_hand, /obj/item/cane))
 		stance_damage -= 2
 
 	// standing is poor
@@ -132,7 +133,7 @@
 		for(var/limb_tag in list(BP_L_HAND, BP_L_ARM))
 			var/obj/item/organ/external/E = get_organ(limb_tag)
 			if(!E)
-				visible_message("<span class='danger'>Lacking a functioning left hand, \the [src] drops \the [l_hand].</span>")
+				visible_message(span_danger("Lacking a functioning left hand, \the [src] drops \the [l_hand]."))
 				drop_from_inventory(l_hand)
 				break
 
@@ -140,7 +141,7 @@
 		for(var/limb_tag in list(BP_R_HAND, BP_R_ARM))
 			var/obj/item/organ/external/E = get_organ(limb_tag)
 			if(!E)
-				visible_message("<span class='danger'>Lacking a functioning right hand, \the [src] drops \the [r_hand].</span>")
+				visible_message(span_danger("Lacking a functioning right hand, \the [src] drops \the [r_hand]."))
 				drop_from_inventory(r_hand)
 				break
 
@@ -166,6 +167,8 @@
 			if(!isbelly(loc)) //VOREStation Add
 				var/emote_scream = pick("screams in pain and ", "lets out a sharp cry and ", "cries out and ")
 				custom_emote(VISIBLE_MESSAGE, "[(can_feel_pain()) ? "" : emote_scream ]drops what they were holding in their [E.name]!")
+				if(can_feel_pain())
+					emote("pain") // CHOMPStation Add: You SHOULD make a noise here.
 
 		else if(E.is_malfunctioning())
 			switch(E.body_part)
@@ -203,7 +206,7 @@
 /mob/living/carbon/human/proc/set_gender(var/g)
 	if(g != gender)
 		gender = g
-	
+
 	if(dna.GetUIState(DNA_UI_GENDER) ^ gender == FEMALE) // XOR will catch both cases where they do not match
 		dna.SetUIState(DNA_UI_GENDER, gender == FEMALE)
 		sync_organ_dna(dna)

@@ -31,6 +31,7 @@
 	var/obj/screen/ling/chems/ling_chem_display = null
 	var/obj/screen/wizard/energy/wiz_energy_display = null
 	var/obj/screen/wizard/instability/wiz_instability_display = null
+	var/obj/screen/autowhisper_display = null
 
 	var/datum/plane_holder/plane_holder = null
 	var/list/vis_enabled = null		// List of vision planes that should be graphically visible (list of their VIS_ indexes).
@@ -94,6 +95,7 @@
 	var/list/pinned = list()            // List of things pinning this creature to walls (see living_defense.dm)
 	var/list/embedded = list()          // Embedded items, since simple mobs don't have organs.
 	var/list/languages = list()         // For speaking/listening.
+	var/list/language_keys = list()		// List of language keys indexing languages
 	var/species_language = null			// For species who want reset to use a specified default.
 	var/only_species_language  = 0		// For species who can only speak their default and no other languages. Does not affect understanding.
 	var/list/speak_emote = list("says") // Verbs used when speaking. Defaults to 'say' if speak_emote is null.
@@ -151,9 +153,11 @@
 
 	var/voice_name = "unidentifiable voice"
 
-	var/faction = "neutral" //Used for checking whether hostile simple animals will attack you, possibly more stuff later
+	var/faction = FACTION_NEUTRAL //Used for checking whether hostile simple animals will attack you, possibly more stuff later
 
 	var/can_be_antagged = FALSE // To prevent pAIs/mice/etc from getting antag in autotraitor and future auto- modes. Uses inheritance instead of a bunch of typechecks.
+	var/away_from_keyboard = FALSE	//are we at, or away, from our keyboard?
+	var/manual_afk = FALSE			//did we set afk manually or was it automatic?
 
 //Generic list for proc holders. Only way I can see to enable certain verbs/procs. Should be modified if needed.
 	var/proc_holder_list[] = list()//Right now unused.
@@ -215,8 +219,7 @@
 
 	var/get_rig_stats = 0 //Moved from computer.dm
 
-	var/typing
-	var/obj/effect/decal/typing_indicator
+	var/custom_speech_bubble = "default"
 
 	var/low_priority = FALSE //Skip processing life() if there's just no players on this Z-level
 
@@ -232,4 +235,11 @@
 
 	var/list/progressbars = null //VOREStation Edit
 
-	var/datum/focus //What receives our keyboard inputs. src by default // VOREStation Add - Key Handling
+	var/datum/focus //What receives our keyboard inputs. src by default
+
+	/// dict of custom stat tabs with data
+	var/list/list/misc_tabs = list()
+
+	var/list/datum/action/actions
+
+	var/custom_footstep = FOOTSTEP_MOB_SHOE // CHOMPEdit

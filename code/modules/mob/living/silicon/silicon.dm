@@ -5,7 +5,7 @@
 	var/const/MAIN_CHANNEL = "Main Frequency"
 	var/lawchannel = MAIN_CHANNEL // Default channel on which to state laws
 	var/list/stating_laws = list()// Channels laws are currently being stated on
-	var/obj/item/device/radio/common_radio
+	var/obj/item/radio/common_radio
 
 	has_huds = TRUE
 	var/list/speech_synthesizer_langs = list()	//which languages can be vocalized by the speech synthesizer
@@ -15,15 +15,17 @@
 	var/speak_exclamation = "declares"
 	var/speak_query = "queries"
 	var/pose //Yes, now AIs can pose too.
-	var/obj/item/device/camera/siliconcam/aiCamera = null //photography
+	var/obj/item/camera/siliconcam/aiCamera = null //photography
 	var/local_transmit //If set, can only speak to others of the same type within a short range.
 
 	var/next_alarm_notice
 	var/list/datum/alarm/queued_alarms = new()
 
 	var/list/access_rights
-	var/obj/item/weapon/card/id/idcard
-	var/idcard_type = /obj/item/weapon/card/id/synthetic
+	var/obj/item/card/id/idcard
+	var/idcard_type = /obj/item/card/id/synthetic
+
+	var/sensor_type = 0 //VOREStation add - silicon omni "is sensor on or nah"
 
 	var/hudmode = null
 
@@ -31,9 +33,11 @@
 	silicon_mob_list |= src
 	..()
 	add_language(LANGUAGE_GALCOM)
-	set_default_language(GLOB.all_languages[LANGUAGE_GALCOM])
+	apply_default_language(GLOB.all_languages[LANGUAGE_GALCOM]) //CHOMPEdit
 	init_id()
 	init_subsystems()
+
+	AddElement(/datum/element/footstep, FOOTSTEP_MOB_SHOE, 1, -6) // CHOMPAdd
 
 /mob/living/silicon/Destroy()
 	silicon_mob_list -= src
@@ -72,8 +76,8 @@
 			src.take_organ_damage(0,5,emp=1)
 			Confuse(2)
 	flash_eyes(affect_silicon = 1)
-	to_chat(src, "<span class='danger'><B>*BZZZT*</B></span>")
-	to_chat(src, "<span class='danger'>Warning: Electromagnetic pulse detected.</span>")
+	to_chat(src, span_bolddanger("*BZZZT*"))
+	to_chat(src, span_danger("Warning: Electromagnetic pulse detected."))
 	..()
 
 /mob/living/silicon/stun_effect_act(var/stun_amount, var/agony_amount)
@@ -87,9 +91,9 @@
 
 		shock_damage *= siemens_coeff	//take reduced damage
 		take_overall_damage(0, shock_damage)
-		visible_message("<span class='warning'>[src] was shocked by \the [source]!</span>", \
-			"<span class='danger'>Energy pulse detected, system damaged!</span>", \
-			"<span class='warning'>You hear an electrical crack.</span>")
+		visible_message(span_warning("[src] was shocked by \the [source]!"), \
+			span_danger("Energy pulse detected, system damaged!"), \
+			span_warning("You hear an electrical crack."))
 		if(prob(20))
 			Stun(2)
 		return
@@ -126,39 +130,40 @@
 
 
 // this function shows the health of the AI in the Status panel
+//ChompEDIT START - TGPanel
 /mob/living/silicon/proc/show_system_integrity()
 	if(!src.stat)
-		stat(null, text("System integrity: [round((health/getMaxHealth())*100)]%"))
+		. = "System integrity: [round((health/getMaxHealth())*100)]%"
 	else
-		stat(null, text("Systems nonfunctional"))
+		. = "Systems nonfunctional"
 
 
 // This is a pure virtual function, it should be overwritten by all subclasses
 /mob/living/silicon/proc/show_malf_ai()
-	return 0
+	return ""
 
 // this function displays the shuttles ETA in the status panel if the shuttle has been called
 /mob/living/silicon/proc/show_emergency_shuttle_eta()
 	if(emergency_shuttle)
 		var/eta_status = emergency_shuttle.get_status_panel_eta()
 		if(eta_status)
-			stat(null, eta_status)
+			. = "[eta_status]"
 
 
 // This adds the basic clock, shuttle recall timer, and malf_ai info to all silicon lifeforms
-/mob/living/silicon/Stat()
-	if(statpanel("Status"))
-		show_emergency_shuttle_eta()
-		show_system_integrity()
-		show_malf_ai()
-	..()
+/mob/living/silicon/get_status_tab_items()
+	. = ..()
+	. += ""
+	. += show_emergency_shuttle_eta()
+	. += show_system_integrity()
+	. += show_malf_ai()
 
 /* VOREStation Removal
 // this function displays the stations manifest in a separate window
 /mob/living/silicon/proc/show_station_manifest()
 	var/dat = "<div align='center'>"
 	if(!data_core)
-		to_chat(src, "<span class='notice'>There is no data to form a manifest with. Contact your Nanotrasen administrator.</span>")
+		to_chat(src, span_notice("There is no data to form a manifest with. Contact your Nanotrasen administrator."))
 		return
 	dat += data_core.get_manifest(1) //The 1 makes it monochrome.
 
@@ -170,7 +175,7 @@
 //can't inject synths
 /mob/living/silicon/can_inject(var/mob/user, var/error_msg, var/target_zone, var/ignore_thickness = FALSE)
 	if(error_msg)
-		to_chat(user, "<span class='alert'>The armoured plating is too tough.</span>")
+		to_chat(user, span_warning("The armoured plating is too tough."))
 	return 0
 
 
@@ -219,68 +224,54 @@
 				default_str = " - <a href='byond://?src=\ref[src];default_lang=\ref[L]'>set default</a>"
 
 			var/synth = (L in speech_synthesizer_langs)
-			. += "<b>[L.name] ([get_language_prefix()][L.key])</b>[synth ? default_str : null]<br>Speech Synthesizer: <i>[synth ? "YES" : "NOT SUPPORTED"]</i><br>[L.desc]<br><br>"
+			. += span_bold("[L.name] ([get_language_prefix()][L.key])") + "[synth ? default_str : null]<br>Speech Synthesizer: <i>[synth ? "YES" : "NOT SUPPORTED"]</i><br>[L.desc]<br><br>"
 
-/mob/living/silicon/proc/toggle_sensor_mode()
-	var/sensor_type = tgui_input_list(usr, "Please select sensor type.", "Sensor Integration", list("Security","Medical","Disable"))
-	switch(sensor_type)
-		if ("Security")
-			if(plane_holder)
-				//Enable Security planes
-				plane_holder.set_vis(VIS_CH_ID,TRUE)
-				plane_holder.set_vis(VIS_CH_WANTED,TRUE)
-				plane_holder.set_vis(VIS_CH_IMPLOYAL,TRUE)
-				plane_holder.set_vis(VIS_CH_IMPTRACK,TRUE)
-				plane_holder.set_vis(VIS_CH_IMPCHEM,TRUE)
+/mob/living/silicon/proc/toggle_sensor_mode() //VOREStation Add to make borgs use omni starts here - Tank, clueless bird
+	if(sensor_type)
+		if(plane_holder)
+			//Enable the planes, its basically just AR-Bs
+			plane_holder.set_vis(VIS_CH_ID,TRUE)
+			plane_holder.set_vis(VIS_CH_WANTED,TRUE)
+			plane_holder.set_vis(VIS_CH_IMPLOYAL,TRUE) //antag related so prob not useful but leaving them in
+			plane_holder.set_vis(VIS_CH_IMPTRACK,TRUE)
+			plane_holder.set_vis(VIS_CH_IMPCHEM,TRUE)
+			plane_holder.set_vis(VIS_CH_STATUS_R,TRUE)
+			plane_holder.set_vis(VIS_CH_HEALTH_VR,TRUE)
+			plane_holder.set_vis(VIS_CH_BACKUP,TRUE) //backup stuff from silicon_vr is here now
+			return TRUE
 
-				//Disable Medical planes
-				plane_holder.set_vis(VIS_CH_STATUS,FALSE)
-				plane_holder.set_vis(VIS_CH_HEALTH,FALSE)
+	else
+		if(plane_holder)
+			//Disable the planes
+			plane_holder.set_vis(VIS_CH_ID,FALSE)
+			plane_holder.set_vis(VIS_CH_WANTED,FALSE)
+			plane_holder.set_vis(VIS_CH_IMPLOYAL,FALSE)
+			plane_holder.set_vis(VIS_CH_IMPTRACK,FALSE)
+			plane_holder.set_vis(VIS_CH_IMPCHEM,FALSE)
+			plane_holder.set_vis(VIS_CH_STATUS_R,FALSE)
+			plane_holder.set_vis(VIS_CH_HEALTH_VR,FALSE)
+			plane_holder.set_vis(VIS_CH_BACKUP,FALSE)
+			return FALSE
 
-			to_chat(src, "<span class='notice'>Security records overlay enabled.</span>")
-		if ("Medical")
-			if(plane_holder)
-				//Disable Security planes
-				plane_holder.set_vis(VIS_CH_ID,FALSE)
-				plane_holder.set_vis(VIS_CH_WANTED,FALSE)
-				plane_holder.set_vis(VIS_CH_IMPLOYAL,FALSE)
-				plane_holder.set_vis(VIS_CH_IMPTRACK,FALSE)
-				plane_holder.set_vis(VIS_CH_IMPCHEM,FALSE)
-
-				//Enable Medical planes
-				plane_holder.set_vis(VIS_CH_STATUS,TRUE)
-				plane_holder.set_vis(VIS_CH_HEALTH,TRUE)
-
-			to_chat(src, "<span class='notice'>Life signs monitor overlay enabled.</span>")
-		if ("Disable")
-			if(plane_holder)
-				//Disable Security planes
-				plane_holder.set_vis(VIS_CH_ID,FALSE)
-				plane_holder.set_vis(VIS_CH_WANTED,FALSE)
-				plane_holder.set_vis(VIS_CH_IMPLOYAL,FALSE)
-				plane_holder.set_vis(VIS_CH_IMPTRACK,FALSE)
-				plane_holder.set_vis(VIS_CH_IMPCHEM,FALSE)
-
-				//Disable Medical planes
-				plane_holder.set_vis(VIS_CH_STATUS,FALSE)
-				plane_holder.set_vis(VIS_CH_HEALTH,FALSE)
-			to_chat(src, "Sensor augmentations disabled.")
-
-	hudmode = sensor_type //This is checked in examine.dm on humans, so they can see medical/security records depending on mode
+//hudmode = sensor_type //This is checked in examine.dm on humans, so they can see medical/security records depending on mode
+//I made it work like omnis with records by adding stuff to examine.dm
+//VOREStation Add ends here
 
 /mob/living/silicon/verb/pose()
 	set name = "Set Pose"
 	set desc = "Sets a description which will be shown when someone examines you."
-	set category = "IC"
+	set category = "IC.Settings" //CHOMPEdit
 
-	pose =  sanitize(input(usr, "This is [src]. It is...", "Pose", null)  as text)
+	pose =  strip_html_simple(tgui_input_text(usr, "This is [src]. It is...", "Pose", null))
 
 /mob/living/silicon/verb/set_flavor()
 	set name = "Set Flavour Text"
 	set desc = "Sets an extended description of your character's features."
-	set category = "IC"
+	set category = "IC.Settings" //CHOMPEdit
 
-	flavor_text =  sanitize(input(usr, "Please enter your new flavour text.", "Flavour text", null)  as text)
+	var/new_flavortext = strip_html_simple(tgui_input_text(usr, "Please enter your new flavour text.", "Flavour text", flavor_text, multiline = TRUE))
+	if(new_flavortext)
+		flavor_text = new_flavortext
 
 /mob/living/silicon/binarycheck()
 	return 1
@@ -348,7 +339,7 @@
 					alarm_raised = 1
 					if(!reported)
 						reported = 1
-						to_chat(src, "<span class='warning'>--- [AH.category] Detected ---</span>")
+						to_chat(src, span_warning("--- [AH.category] Detected ---"))
 					raised_alarm(A)
 
 		for(var/datum/alarm_handler/AH in queued_alarms)
@@ -358,24 +349,24 @@
 				if(alarms[A] == -1)
 					if(!reported)
 						reported = 1
-						to_chat(src, "<span class='notice'>--- [AH.category] Cleared ---</span>")
+						to_chat(src, span_notice("--- [AH.category] Cleared ---"))
 					to_chat(src, "\The [A.alarm_name()].")
 
 		if(alarm_raised)
-			to_chat(src, "<A HREF=?src=\ref[src];showalerts=1>\[Show Alerts\]</A>")
+			to_chat(src, span_filter_notice("<A HREF=?src=\ref[src];showalerts=1>\[Show Alerts\]</A>"))
 
 		for(var/datum/alarm_handler/AH in queued_alarms)
 			var/list/alarms = queued_alarms[AH]
 			alarms.Cut()
 
 /mob/living/silicon/proc/raised_alarm(var/datum/alarm/A)
-	to_chat(src, "[A.alarm_name()]!")
+	to_chat(src, span_filter_warning("[A.alarm_name()]!"))
 
 /mob/living/silicon/ai/raised_alarm(var/datum/alarm/A)
 	var/cameratext = ""
 	for(var/obj/machinery/camera/C in A.cameras())
 		cameratext += "[(cameratext == "")? "" : "|"]<A HREF=?src=\ref[src];switchcamera=\ref[C]>[C.c_tag]</A>"
-	to_chat(src, "[A.alarm_name()]! ([(cameratext)? cameratext : "No Camera"])")
+	to_chat(src, span_filter_warning("[A.alarm_name()]! ([(cameratext)? cameratext : "No Camera"])"))
 
 
 /mob/living/silicon/proc/is_traitor()

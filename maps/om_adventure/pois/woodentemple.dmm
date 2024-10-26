@@ -20,7 +20,7 @@
 /turf/simulated/floor/outdoors/grass,
 /area/om_adventure/poi/woodentemple)
 "f" = (
-/obj/item/weapon/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
 /turf/simulated/floor,
 /area/om_adventure/poi/woodentemple)
 "g" = (
@@ -28,7 +28,7 @@
 /turf/simulated/floor/wood,
 /area/om_adventure/poi/woodentemple)
 "j" = (
-/obj/item/weapon/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
 /turf/simulated/floor/wood,
 /area/om_adventure/poi/woodentemple)
 "k" = (
@@ -78,7 +78,7 @@
 /turf/simulated/floor/wood,
 /area/om_adventure/poi/woodentemple)
 "C" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/simulated/floor/wood,
 /area/om_adventure/poi/woodentemple)
 "E" = (
@@ -133,6 +133,20 @@
 "U" = (
 /obj/structure/bed/chair/sofa/pew/left{
 	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/om_adventure/poi/woodentemple)
+"W" = (
+/obj/move_trader_landmark{
+	dir = 8;
+	trader_type = /obj/trader/general
+	},
+/turf/simulated/floor/wood,
+/area/om_adventure/poi/woodentemple)
+"X" = (
+/obj/move_trader_landmark{
+	dir = 4;
+	trader_type = /obj/trader/general
 	},
 /turf/simulated/floor/wood,
 /area/om_adventure/poi/woodentemple)
@@ -220,7 +234,7 @@ C
 j
 d
 A
-d
+X
 m
 N
 Q
@@ -450,7 +464,7 @@ k
 k
 d
 A
-d
+W
 U
 b
 Q

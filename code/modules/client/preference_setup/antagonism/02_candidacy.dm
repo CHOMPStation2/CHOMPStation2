@@ -16,6 +16,7 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 	"diona" = 1,										// 12
 	"mutineer" = 1,										// 13
 	"loyalist" = 1,										// 14
+	"GHOST" = 0,										// CHOMPEDIT - add seperate section for ghost roles
 	"pAI candidate" = 1,								// 15
 	//VOREStation Add
 	"lost drone" = 1,									// 16
@@ -23,6 +24,7 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 	"morph" = 1,										// 18
 	"corgi" = 1,										// 19
 	"cursed sword" = 1,									// 20
+	"Ship Survivor" = 1,								// 21
 	//VOREStation Add End
 )
 
@@ -30,28 +32,33 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 	name = "Candidacy"
 	sort_order = 2
 
-/datum/category_item/player_setup_item/antagonism/candidacy/load_character(var/savefile/S)
-	S["be_special"]	>> pref.be_special
+/datum/category_item/player_setup_item/antagonism/candidacy/load_character(list/save_data)
+	pref.be_special = save_data["be_special"]
 
-/datum/category_item/player_setup_item/antagonism/candidacy/save_character(var/savefile/S)
-	S["be_special"]	<< pref.be_special
+/datum/category_item/player_setup_item/antagonism/candidacy/save_character(list/save_data)
+	save_data["be_special"] = pref.be_special
 
 /datum/category_item/player_setup_item/antagonism/candidacy/sanitize_character()
 	pref.be_special	= sanitize_integer(pref.be_special, 0, 16777215, initial(pref.be_special)) //VOREStation Edit - 24 bits of support
 
 /datum/category_item/player_setup_item/antagonism/candidacy/content(var/mob/user)
-	if(jobban_isbanned(user, "Syndicate"))
-		. += "<b>You are banned from antagonist roles.</b>"
+	if(jobban_isbanned(user, JOB_SYNDICATE))
+		. += span_bold("You are banned from antagonist roles.")
 		pref.be_special = 0
 	else
 		var/n = 0
 		for (var/i in special_roles)
 			if(special_roles[i]) //if mode is available on the server
-				if(jobban_isbanned(user, i) || (i == "positronic brain" && jobban_isbanned(user, "AI") && jobban_isbanned(user, "Cyborg")) || (i == "pAI candidate" && jobban_isbanned(user, "pAI")))
-					. += "<b>Be [i]:</b> <font color=red><b> \[BANNED]</b></font><br>"
+				if(jobban_isbanned(user, i) || (i == "positronic brain" && jobban_isbanned(user, JOB_AI) && jobban_isbanned(user, JOB_CYBORG)) || (i == "pAI candidate" && jobban_isbanned(user, JOB_PAI)))
+					. += span_bold("Be [i]:") + " <font color=red><b> \[BANNED]</b></font><br>"
 				else
-					. += "<b>Be [i]:</b> <a href='?src=\ref[src];be_special=[n]'><b>[pref.be_special&(1<<n) ? "Yes" : "No"]</b></a><br>"
-			n++
+					. += span_bold("Be [i]:") + " <a href='?src=\ref[src];be_special=[n]'>" + span_bold("[pref.be_special&(1<<n) ? "Yes" : "No"]") + " </a><br>"
+			// CHOMPEdit Start -  Add header for Ghost roles section
+			if(i == "GHOST")
+				. += "<h4>" + span_underline("GHOST ROLES") + " - Roles that are joinable as ghosts, but not true antags.</h4><br>"
+			else
+			//CHOMPEdit End
+				n++
 
 /datum/category_item/player_setup_item/antagonism/candidacy/OnTopic(var/href,var/list/href_list, var/mob/user)
 	if(href_list["be_special"])

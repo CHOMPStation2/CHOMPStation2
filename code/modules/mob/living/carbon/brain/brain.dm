@@ -9,6 +9,8 @@
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "brain1"
 	no_vore = TRUE //VOREStation Edit - PLEASE. lol.
+	can_pain_emote = FALSE // CHOMPEdit: Sanity/safety
+	low_priority = TRUE //CHOMPEdit
 
 /mob/living/carbon/brain/Initialize()
 	. = ..()
@@ -25,7 +27,7 @@
 	return ..()
 
 /mob/living/carbon/brain/say_understands(var/other)//Goddamn is this hackish, but this say code is so odd
-	if(istype(container, /obj/item/device/mmi))
+	if(istype(container, /obj/item/mmi))
 		if(issilicon(other))
 			return TRUE
 	if(ishuman(other))
@@ -35,7 +37,7 @@
 	return ..()
 
 /mob/living/carbon/brain/update_canmove()
-	if(in_contents_of(/obj/mecha) || istype(loc, /obj/item/device/mmi))
+	if(in_contents_of(/obj/mecha) || istype(loc, /obj/item/mmi))
 		canmove = 1
 		use_me = 1
 	else
@@ -43,30 +45,38 @@
 	return canmove
 
 /mob/living/carbon/brain/isSynthetic()
-	return istype(loc, /obj/item/device/mmi)
+	return istype(loc, /obj/item/mmi)
 
 /mob/living/carbon/brain/runechat_holder(datum/chatmessage/CM)
 	if(isturf(loc))
 		return ..()
-		
+
 	return loc
 
-/mob/living/carbon/brain/set_typing_indicator(var/state)
-	if(isturf(loc))
-		return ..()
+// Vorestation edit start
 
-	if(!is_preference_enabled(/datum/client_preference/show_typing_indicator))
-		loc.cut_overlay(typing_indicator, TRUE)
-		return
+/mob/living/carbon/brain/verb/backup_ping()
+	set category = "IC.Game" //CHOMPEdit
+	set name = "Notify Transcore"
+	set desc = "Your body is gone. Notify robotics to be resleeved!"
+	var/datum/transcore_db/db = SStranscore.db_by_mind_name(mind.name)
+	if(db)
+		var/datum/transhuman/mind_record/record = db.backed_up[src.mind.name]
+		if(!(record.dead_state == MR_DEAD))
+			if((world.time - timeofhostdeath ) > 5 MINUTES)	//Allows notify transcore to be used if you have an entry but for some reason weren't marked as dead
+				record.dead_state = MR_DEAD				//Such as if you got scanned but didn't take an implant. It's a little funky, but I mean, you got scanned
+				db.notify(record)						//So you probably will want to let someone know if you die.
+				record.last_notification = world.time
+				to_chat(src, span_notice("New notification has been sent."))
+			else
+				to_chat(src, span_warning("Your backup is not past-due yet."))
+		else if((world.time - record.last_notification) < 5 MINUTES)
+			to_chat(src, span_warning("Too little time has passed since your last notification."))
+		else
+			db.notify(record)
+			record.last_notification = world.time
+			to_chat(src, span_notice("New notification has been sent."))
+	else
+		to_chat(src,span_warning("No backup record could be found, sorry."))
 
-	if(!typing_indicator)
-		init_typing_indicator("[speech_bubble_appearance()]_typing")
-
-	if(state && !typing)
-		loc.add_overlay(typing_indicator, TRUE)
-		typing = TRUE
-	else if(typing)
-		loc.cut_overlay(typing_indicator, TRUE)
-		typing = FALSE
-
-	return state
+// VS edit ends

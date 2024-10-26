@@ -10,7 +10,7 @@
 	clicksound = "keyboard"
 	clickvol = 30
 
-	circuit = /obj/item/weapon/circuitboard/autolathe
+	circuit = /obj/item/circuitboard/autolathe
 
 	var/static/datum/category_collection/autolathe/autolathe_recipes
 
@@ -30,7 +30,7 @@
 	var/filtertext
 
 /obj/machinery/autolathe/Initialize()
-	AddComponent(/datum/component/material_container, subtypesof(/datum/material), 0, MATCONTAINER_EXAMINE, _after_insert = CALLBACK(src, .proc/AfterMaterialInsert))
+	AddComponent(/datum/component/material_container, subtypesof(/datum/material), 0, MATCONTAINER_EXAMINE, _after_insert = CALLBACK(src, PROC_REF(AfterMaterialInsert)))
 	. = ..()
 	if(!autolathe_recipes)
 		autolathe_recipes = new()
@@ -99,17 +99,17 @@
 		return wires.Interact(user)
 
 	if(disabled)
-		to_chat(user, "<span class='danger'>\The [src] is disabled!</span>")
+		to_chat(user, span_danger("\The [src] is disabled!"))
 		return
 
 	if(shocked)
 		shock(user, 50)
-	
+
 	tgui_interact(user)
 
 /obj/machinery/autolathe/attackby(var/obj/item/O as obj, var/mob/user as mob)
 	if(busy)
-		to_chat(user, "<span class='notice'>\The [src] is busy. Please wait for completion of previous operation.</span>")
+		to_chat(user, span_notice("\The [src] is busy. Please wait for completion of previous operation."))
 		return
 
 	if(default_deconstruction_screwdriver(user, O))
@@ -125,7 +125,7 @@
 
 	if(panel_open)
 		//Don't eat multitools or wirecutters used on an open lathe.
-		if(O.is_multitool() || O.is_wirecutter())
+		if(O.has_tool_quality(TOOL_MULTITOOL) || O.has_tool_quality(TOOL_WIRECUTTER))
 			wires.Interact(user)
 			return
 
@@ -135,7 +135,7 @@
 	if(istype(O,/obj/item/ammo_magazine/clip) || istype(O,/obj/item/ammo_magazine/s357) || istype(O,/obj/item/ammo_magazine/s38) || istype (O,/obj/item/ammo_magazine/s44)/* VOREstation Edit*/) // Prevents ammo recycling exploit with speedloaders.
 		to_chat(user, "\The [O] is too hazardous to recycle with the autolathe!")
 		return
-	
+
 	return ..()
 
 /obj/machinery/autolathe/attack_hand(mob/user as mob)
@@ -150,7 +150,7 @@
 	add_fingerprint(usr)
 
 	if(busy)
-		to_chat(usr, "<span class='notice'>The autolathe is busy. Please wait for completion of previous operation.</span>")
+		to_chat(usr, span_notice("The autolathe is busy. Please wait for completion of previous operation."))
 		return
 	switch(action)
 		if("make")
@@ -176,13 +176,13 @@
 					if(!isnull(materials.get_material_amount(material)) && materials.get_material_amount(material) < round(making.resources[material] * coeff))
 						max_sheets = 0
 				//Build list of multipliers for sheets.
-				multiplier = input(usr, "How many do you want to print? (0-[max_sheets])") as num|null
-				if(!multiplier || multiplier <= 0 || multiplier > max_sheets || tgui_status(usr, state) != STATUS_INTERACTIVE)
+				multiplier = tgui_input_number(usr, "How many do you want to print? (0-[max_sheets])", null, null, max_sheets, 0)
+				if(!multiplier || multiplier <= 0 || (multiplier != round(multiplier)) || multiplier > max_sheets || tgui_status(usr, state) != STATUS_INTERACTIVE)
 					return FALSE
 
 			//Check if we still have the materials.
 			var/coeff = (making.no_scale ? 1 : mat_efficiency) //stacks are unaffected by production coefficient
-			
+
 			for(var/datum/material/used_material as anything in making.resources)
 				var/amount_needed = making.resources[used_material] * coeff * multiplier
 				materials_used[used_material] = amount_needed
@@ -190,7 +190,7 @@
 			if(LAZYLEN(materials_used))
 				if(!materials.has_materials(materials_used))
 					return
-				
+
 				materials.use_materials(materials_used)
 
 			busy = making.name
@@ -256,9 +256,9 @@
 	..()
 	mb_rating = 0
 	man_rating = 0
-	for(var/obj/item/weapon/stock_parts/matter_bin/MB in component_parts)
+	for(var/obj/item/stock_parts/matter_bin/MB in component_parts)
 		mb_rating += MB.rating
-	for(var/obj/item/weapon/stock_parts/manipulator/M in component_parts)
+	for(var/obj/item/stock_parts/manipulator/M in component_parts)
 		man_rating += M.rating
 
 	var/datum/component/material_container/materials = GetComponent(/datum/component/material_container)
@@ -282,4 +282,4 @@
 	. = ..()
 	var/datum/component/material_container/materials = GetComponent(/datum/component/material_container)
 	if(in_range(user, src) || isobserver(user))
-		. += "<span class='notice'>The status display reads: Storing up to <b>[materials.max_amount]</b> material units.<br>Material consumption at <b>[mat_efficiency*100]%</b>.</span>"
+		. += span_notice("The status display reads: Storing up to <b>[materials.max_amount]</b> material units.<br>Material consumption at <b>[mat_efficiency*100]%</b>.")

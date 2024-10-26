@@ -39,6 +39,7 @@
 		alert.icon_state = "itembased"
 		var/image/I = image(icon = new_master.icon, icon_state = new_master.icon_state, dir = SOUTH)
 		I.plane = PLANE_PLAYER_HUD_ABOVE
+		I.color = new_master.color
 		alert.add_overlay(I)
 		alert.master = new_master
 	else
@@ -52,7 +53,7 @@
 	animate(alert, transform = matrix(), time = 2.5, easing = CUBIC_EASING)
 
 	if(alert.timeout)
-		addtimer(CALLBACK(src, .proc/alert_timeout, alert, category), alert.timeout)
+		addtimer(CALLBACK(src, PROC_REF(alert_timeout), alert, category), alert.timeout)
 		alert.timeout = world.time + alert.timeout - world.tick_lag
 	return alert
 
@@ -134,10 +135,10 @@ The box in your backpack has an oxygen tank and breath mask in it."
 	desc = "You're not getting enough phoron. Find some good air before you pass out!"
 	icon_state = "not_enough_tox"
 
-/obj/screen/alert/tox_in_air
-	name = "Choking (Phoron)"
-	desc = "There's highly flammable, toxic phoron in the air and you're breathing it in. Find some fresh air. \
-The box in your backpack has an oxygen tank and gas mask in it."
+/obj/screen/alert/tox_in_air											// CHOMP EDIT : Oxygen is toxic to phoron breathers and nitrogen breathers. I'm tired of seeing "You're choking on phoron!" when it's not phoron.
+	name = "Choking (Toxic)"										// CHOMP EDIT
+	desc = "There's a dangerous toxin in the air and you're breathing it in. Find some fresh air. \
+Your emergency supply kit should have an air tank and gas mask in it!"						// CHOMP EDIT
 	icon_state = "too_much_tox"
 
 /obj/screen/alert/not_enough_fuel
@@ -153,12 +154,12 @@ The box in your backpack has an oxygen tank and gas mask in it."
 
 
 /obj/screen/alert/fat
-	name = "Fat"
-	desc = "You ate too much food, lardass. Run around the station and lose some weight."
+	name = "Full"
+	desc = "You've eaten more than you can handle, maybe you should slow down?"
 	icon_state = "fat"
 
 /obj/screen/alert/fat/vampire
-	desc = "You drank too much blood, lardass. Run around the station and lose some weight."
+	desc = "You've had more than enough blood, for now."
 	icon_state = "v_fat"
 
 /obj/screen/alert/fat/synth
@@ -171,7 +172,7 @@ The box in your backpack has an oxygen tank and gas mask in it."
 	icon_state = "hungry"
 
 /obj/screen/alert/hungry/vampire
-	desc = "You could use a bloodsnack or two."
+	desc = "You could go for a bite right now..."
 	icon_state = "v_hungry"
 
 /obj/screen/alert/hungry/synth
@@ -179,8 +180,8 @@ The box in your backpack has an oxygen tank and gas mask in it."
 	icon_state = "c_hungry"
 
 /obj/screen/alert/starving
-	name = "Starving"
-	desc = "You're severely malnourished. The hunger pains make moving around a chore."
+	name = "Very Hungry"
+	desc = "You're starving. You barely have enough energy to move around."
 	icon_state = "starving"
 
 /obj/screen/alert/starving/vampire
@@ -191,6 +192,11 @@ The box in your backpack has an oxygen tank and gas mask in it."
 	desc = "Your battery is about to die! Charge it ASAP!"
 	icon_state = "c_starving"
 
+/obj/screen/alert/warm
+	name = "Too Warm"
+	desc = "You're uncomfortably warm. Take off some clothes or tweak the thermostat a few degrees cooler."
+	icon_state = "mildhot"
+
 /obj/screen/alert/hot
 	name = "Too Hot"
 	desc = "You're flaming hot! Get somewhere cooler and take off any insulating clothing like a fire suit."
@@ -198,6 +204,11 @@ The box in your backpack has an oxygen tank and gas mask in it."
 
 /obj/screen/alert/hot/robot
 	desc = "The air around you is too hot for a humanoid. Be careful to avoid exposing them to this enviroment."
+
+/obj/screen/alert/chilly
+	name = "Too Chilly"
+	desc = "You're uncomfortably cold. Rug up or tweak the thermostat a few degrees higher."
+	icon_state = "mildcold"
 
 /obj/screen/alert/cold
 	name = "Too Cold"
@@ -245,7 +256,7 @@ or something covering your eyes."
 
 /obj/screen/alert/high
 	name = "High"
-	desc = "Whoa man, you're tripping balls! Careful you don't get addicted... if you aren't already."
+	desc = "Whoa, you're tripping balls!"
 	icon_state = "high"
 
 /obj/screen/alert/embeddedobject
@@ -286,8 +297,8 @@ or shoot a gun to move around via Newton's 3rd Law of Motion."
 //ALIENS
 
 /obj/screen/alert/alien_tox
-	name = "Plasma"
-	desc = "There's flammable plasma in the air. If it lights up, you'll be toast."
+	name = "Phoron"
+	desc = "There's flammable phoron in the air. If it lights up, you'll be toast."
 	icon_state = "alien_tox"
 	alerttooltipstyle = "alien"
 
@@ -339,7 +350,7 @@ Recharging stations are available in robotics, the dormitory bathrooms, and the 
 
 /obj/screen/alert/locked
 	name = "Locked Down"
-	desc = "Unit has been remotely locked down. Usage of a Robotics Control Console like the one in the Research Director's \
+	desc = "Unit has been remotely locked down. Usage of a Robotics Control Console like the one in the " + JOB_RESEARCH_DIRECTOR + "'s \
 office by your AI master or any qualified human may resolve this matter. Robotics may provide further assistance if necessary."
 	icon_state = "locked"
 	no_underlay = TRUE
@@ -422,16 +433,16 @@ so as to remain in compliance with the most up-to-date laws."
 		return 1
 	for(var/i = 1, i <= alerts.len, i++)
 		var/obj/screen/alert/alert = alerts[alerts[i]]
-		
+
 		if(alert.icon_state in cached_icon_states(ui_style))
 			alert.icon = ui_style
-		
+
 		else if(!alert.no_underlay)
 			var/image/I = image(icon = ui_style, icon_state = "template")
 			I.color = ui_color
 			I.alpha = ui_alpha
 			alert.underlays = list(I)
-		
+
 		switch(i)
 			if(1)
 				. = ui_alert1
@@ -457,10 +468,11 @@ so as to remain in compliance with the most up-to-date laws."
 		return
 	var/paramslist = params2list(params)
 	if(paramslist["shift"]) // screen objects don't do the normal Click() stuff so we'll cheat
-		to_chat(usr,"<span class='boldnotice'>[name]</span> - <span class='info'>[desc]</span>")
+		to_chat(usr,span_boldnotice(name) + " - " + span_info(desc))
 		return
 	if(master)
 		return usr.client.Click(master, location, control, params)
+	..() // VOREStation Edit: Pass through to click_vr
 
 /obj/screen/alert/Destroy()
 	..()

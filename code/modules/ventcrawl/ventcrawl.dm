@@ -5,15 +5,17 @@ var/list/ventcrawl_machinery = list(
 
 // Vent crawling whitelisted items, whoo
 /mob/living/var/list/can_enter_vent_with = list(
-	/obj/item/weapon/implant,
-	/obj/item/device/radio/borg,
-	/obj/item/weapon/holder,
+	/obj/item/implant,
+	/obj/item/radio/borg,
+	/obj/item/radio/headset/mob_headset,
+	/obj/item/holder,
 	/obj/machinery/camera,
 	/obj/belly,
+	/obj/soulgem, // CHOMPAdd
 	/obj/screen,
 	/atom/movable/emissive_blocker
 	)
-	//VOREStation Edit : added /obj/belly, to this list, CI is complaining about this in his indentation check
+	//VOREStation Edit : added /obj/belly, to this list, CI is complaining about this in his indentation check. Added mob_headset for those with radios so there's no weirdness.
 	//mob/living/simple_mob/borer, //VORESTATION AI TEMPORARY REMOVAL REPLACE BACK IN LIST WHEN RESOLVED //VOREStation Edit
 
 /mob/living/var/list/icon/pipes_shown = list()
@@ -26,17 +28,26 @@ var/list/ventcrawl_machinery = list(
 	if(!client)
 		return FALSE
 	if(!(/mob/living/proc/ventcrawl in verbs))
-		to_chat(src, "<span class='warning'>You don't possess the ability to ventcrawl!</span>")
+		to_chat(src, span_warning("You don't possess the ability to ventcrawl!"))
 		return FALSE
 	if(pulling)
-		to_chat(src, "<span class='warning'>You cannot bring \the [pulling] into the vent with you!</span>")
+		to_chat(src, span_warning("You cannot bring \the [pulling] into the vent with you!"))
 		return FALSE
 	if(incapacitated())
-		to_chat(src, "<span class='warning'>You cannot ventcrawl in your current state!</span>")
+		to_chat(src, span_warning("You cannot ventcrawl in your current state!"))
 		return FALSE
 	if(buckled)
-		to_chat(src, "<span class='warning'>You cannot ventcrawl while buckled!</span>")
+		to_chat(src, span_warning("You cannot ventcrawl while buckled!"))
 		return FALSE
+	if(restrict_vore_ventcrawl)
+		var/foundstuff = FALSE
+		for(var/obj/belly/B in vore_organs)
+			if(B.contents.len)
+				foundstuff = TRUE
+				break
+		if(foundstuff)
+			to_chat(src, span_warning("You cannot ventcrawl while full!"))
+			return FALSE
 	return ventcrawl_carry()
 
 /mob/living/Login()
@@ -49,7 +60,7 @@ var/list/ventcrawl_machinery = list(
 
 /mob/living/simple_mob/slime/xenobio/can_ventcrawl()
 	if(victim)
-		to_chat(src, "<span class='warning'>You cannot ventcrawl while feeding.</span>")
+		to_chat(src, span_warning("You cannot ventcrawl while feeding."))
 		return FALSE
 	. = ..()
 
@@ -57,7 +68,10 @@ var/list/ventcrawl_machinery = list(
 	//Ability master easy test for allowed (cheaper than istype)
 	if(carried_item == ability_master)
 		return 1
-
+	if(isanimal(src))
+		var/mob/living/simple_mob/S = src
+		if(carried_item == S.myid)	//VOREStation Edit
+			return 1	//VOREStation Edit
 	//Try to find it in our allowed list (istype includes subtypes)
 	var/listed = FALSE
 	for(var/test_type in can_enter_vent_with)
@@ -77,12 +91,19 @@ var/list/ventcrawl_machinery = list(
 /mob/living/carbon/human/is_allowed_vent_crawl_item(var/obj/item/carried_item)
 	if(carried_item in organs)
 		return 1
+	if(species.name == SPECIES_REPLICANT_CREW)
+		if(istype(carried_item, /obj/item/clothing/under))
+			return 1 //Allow them to not vent crawl naked
+		if(istype(carried_item, /obj/item))
+			var/obj/item/I = carried_item
+			if(I.w_class <= 2)
+				return 1 //Allow them to carry items that fit in pockets
 	return ..()
 
 /mob/living/proc/ventcrawl_carry()
 	for(var/atom/A in contents)
 		if(!is_allowed_vent_crawl_item(A))
-			to_chat(src, "<span class='warning'>You can't carry \the [A] while ventcrawling!</span>")
+			to_chat(src, span_warning("You can't carry \the [A] while ventcrawling!"))
 			return FALSE
 	return TRUE
 
@@ -142,23 +163,23 @@ var/list/ventcrawl_machinery = list(
 
 				switch(vent_found.air_contents.temperature)
 					if(0 to BODYTEMP_COLD_DAMAGE_LIMIT)
-						to_chat(src, "<span class='danger'>You feel a painful freeze coming from the vent!</span>")
+						to_chat(src, span_danger("You feel a painful freeze coming from the vent!"))
 					if(BODYTEMP_COLD_DAMAGE_LIMIT to T0C)
-						to_chat(src, "<span class='warning'>You feel an icy chill coming from the vent.</span>")
+						to_chat(src, span_warning("You feel an icy chill coming from the vent."))
 					if(T0C + 40 to BODYTEMP_HEAT_DAMAGE_LIMIT)
-						to_chat(src, "<span class='warning'>You feel a hot wash coming from the vent.</span>")
+						to_chat(src, span_warning("You feel a hot wash coming from the vent."))
 					if(BODYTEMP_HEAT_DAMAGE_LIMIT to INFINITY)
-						to_chat(src, "<span class='danger'>You feel a searing heat coming from the vent!</span>")
+						to_chat(src, span_danger("You feel a searing heat coming from the vent!"))
 
 				switch(vent_found.air_contents.return_pressure())
 					if(0 to HAZARD_LOW_PRESSURE)
-						to_chat(src, "<span class='danger'>You feel a rushing draw pulling you into the vent!</span>")
+						to_chat(src, span_danger("You feel a rushing draw pulling you into the vent!"))
 					if(HAZARD_LOW_PRESSURE to WARNING_LOW_PRESSURE)
-						to_chat(src, "<span class='warning'>You feel a strong drag pulling you into the vent.</span>")
+						to_chat(src, span_warning("You feel a strong drag pulling you into the vent."))
 					if(WARNING_HIGH_PRESSURE to HAZARD_HIGH_PRESSURE)
-						to_chat(src, "<span class='warning'>You feel a strong current pushing you away from the vent.</span>")
+						to_chat(src, span_warning("You feel a strong current pushing you away from the vent."))
 					if(HAZARD_HIGH_PRESSURE to INFINITY)
-						to_chat(src, "<span class='danger'>You feel a roaring wind pushing you away from the vent!</span>")
+						to_chat(src, span_danger("You feel a roaring wind pushing you away from the vent!"))
 
 			fade_towards(vent_found,45)
 			prepping_to_ventcrawl = 1
@@ -169,7 +190,7 @@ var/list/ventcrawl_machinery = list(
 			if(!can_ventcrawl())
 				return
 
-			visible_message("<B>[src] scrambles into the ventilation ducts!</B>", "You climb into the ventilation system.")
+			visible_message(span_infoplain(span_bold("[src] scrambles into the ventilation ducts!")), span_infoplain("You climb into the ventilation system."))
 
 			forceMove(vent_found)
 			add_ventcrawl(vent_found)

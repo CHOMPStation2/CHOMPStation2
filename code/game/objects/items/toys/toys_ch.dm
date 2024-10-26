@@ -17,3 +17,75 @@
 	icon = 'icons/obj/toy_ch.dmi'
 	icon_state = "station"
 	toysay = "Attention! Alert level elevated to blue."
+
+/obj/item/toy/plushie/green_fox
+    name = "green fox plushie"
+    icon = 'icons/obj/toy_ch.dmi'
+    icon_state = "greenfox"
+    pokephrase = "Weh!"
+
+/obj/item/toy/plushie/red_dragon
+	name = "red dragon plushie"
+	icon = 'icons/obj/toy_ch.dmi'
+	icon_state = "reddragon"
+	pokephrase = "RAWR!"
+
+/obj/item/toy/plushie/green_dragon
+	name = "green dragon plushie"
+	icon = 'icons/obj/toy_ch.dmi'
+	icon_state = "greendragon"
+	pokephrase = "GRR!"
+
+/obj/item/toy/plushie/purple_dragon
+	name = "purple dragon plushie"
+	icon = 'icons/obj/toy_ch.dmi'
+	icon_state = "purpledragon"
+	pokephrase = "GRAH!"
+
+/obj/item/toy/plushie/white_eastdragon
+	name = "white eastern dragon plushie"
+	icon = 'icons/obj/toy_ch.dmi'
+	icon_state = "whiteeasterndragon"
+	pokephrase = "Rooar!"
+
+/obj/item/toy/plushie/red_eastdragon
+	name = "red eastern dragon plushie"
+	icon = 'icons/obj/toy_ch.dmi'
+	icon_state = "redeasterndragon"
+	pokephrase = "Whoosh!"
+
+/obj/item/toy/plushie/green_eastdragon
+	name = "green eastern dragon plushie"
+	icon = 'icons/obj/toy_ch.dmi'
+	icon_state = "greeneasterndragon"
+	pokephrase = "Fwoomp!"
+
+/obj/item/toy/plushie/gold_eastdragon
+	name = "golden eastern dragon plushie"
+	desc = "A soft plushie of a shiny golden dragon. Made of Real* gold!"
+	icon = 'icons/obj/toy_ch.dmi'
+	icon_state = "goldeasterndragon"
+	pokephrase = "Shine!"
+
+/obj/item/toy/plushie/teppi
+	name = "teppi plushie"
+	desc = "A soft, fluffy plushie made out of real teppi fur!"
+	icon = 'icons/obj/toy_ch.dmi'
+	icon_state = "teppi"
+	pokephrase = "Gyooooooooh!"
+
+/obj/item/toy/plushie/teppi/alt
+	name = "teppi plush"
+	desc = "No teppi were harmed in the creation of this plushie."
+	icon_state = "teppialt"
+
+/obj/item/toy/plushie/teppi/attack_self(mob/user as mob)
+	if(user.a_intent == I_HURT || user.a_intent == I_GRAB)
+		playsound(user, 'sound/voice/teppi/roar.ogg', 10, 0)
+	else
+		var/teppi_noise = pick(
+			'sound/voice/teppi/whine1.ogg',
+			'sound/voice/teppi/whine2.ogg')
+		playsound(user, teppi_noise, 10, 0)
+		src.visible_message(span_notice("Gyooooooooh!"))
+	return ..()

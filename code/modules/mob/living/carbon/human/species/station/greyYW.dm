@@ -19,7 +19,7 @@
 	species_language = LANGUAGE_PSIONIC
 	secondary_langs = list(LANGUAGE_PSIONIC)
 	name_language = null // Use the first-name last-name generator rather than a language scrambler
-	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_SKRELLIAN, LANGUAGE_SKRELLIANFAR, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)
+	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_SKRELLIAN, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)
 	flesh_color = "#a598ad"
 	blood_color = "#A200FF"
 	brute_mod = 1.25
@@ -27,8 +27,8 @@
 	darksight = 5
 	reagent_tag = IS_GREY
 
-	male_scream_sound = null //CHOMPedit
-	female_scream_sound = null //CHOMPedit
+	// male_scream_sound = null //CHOMPedit
+	// female_scream_sound = null //CHOMPedit
 
 	min_age = 18
 	max_age = 130

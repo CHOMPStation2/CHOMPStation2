@@ -468,90 +468,138 @@ var/const/standard_monitor_styles = "blank=ipc_blank;\
 	parts = list(BP_L_ARM, BP_R_ARM, BP_L_HAND, BP_R_HAND, BP_L_LEG, BP_R_LEG, BP_L_FOOT, BP_R_FOOT)
 	modular_bodyparts = MODULAR_BODYPART_PROSTHETIC
 
-/obj/item/weapon/disk/limb
+/obj/item/disk/limb
 	name = "Limb Blueprints"
 	desc = "A disk containing the blueprints for prosthetics."
 	icon = 'icons/obj/discs_vr.dmi' //VOREStation Edit
 	icon_state = "data-white" //VOREStation Edit
 	var/company = ""
 
-/obj/item/weapon/disk/limb/New(var/newloc)
+/datum/robolimb/wooden/teshari
+	company = "Morgan Trading Co - Teshari"
+	icon = 'icons/mob/human_races/cyberlimbs/prosthesis/wooden_teshari.dmi'
+	species_cannot_use = list(SPECIES_UNATHI, SPECIES_PROMETHEAN, SPECIES_DIONA, SPECIES_HUMAN, SPECIES_VOX, SPECIES_HUMAN_VATBORN, SPECIES_TAJ, SPECIES_SKRELL, SPECIES_ZADDAT)
+	species_alternates = list(SPECIES_HUMAN = "Morgan Trading Co")
+	suggested_species = SPECIES_TESHARI
+
+/datum/robolimb/wooden/sif
+	company = "Morgan Trading Co - Sif wood"
+	desc = "A simplistic, metal-banded, wood-panelled prosthetic. This one is covered in Sivian wood!"
+	icon = 'icons/mob/human_races/cyberlimbs/prosthesis/wooden_sif.dmi'
+
+/datum/robolimb/wooden/sif/teshari
+	company = "Morgan Trading Co - Sif wood - Teshari"
+	icon = 'icons/mob/human_races/cyberlimbs/prosthesis/wooden_sif_teshari.dmi'
+	species_cannot_use = list(SPECIES_UNATHI, SPECIES_PROMETHEAN, SPECIES_DIONA, SPECIES_HUMAN, SPECIES_VOX, SPECIES_HUMAN_VATBORN, SPECIES_TAJ, SPECIES_SKRELL, SPECIES_ZADDAT)
+	species_alternates = list(SPECIES_HUMAN = "Morgan Trading Co")
+	suggested_species = SPECIES_TESHARI
+
+/datum/robolimb/replika
+	company = "Replikant"
+	desc = "An advanced biomechanical prosthetic with pegs for feet."
+	icon = 'icons/mob/human_races/cyberlimbs/replikant/replikant.dmi'
+	lifelike = 1
+	unavailable_to_build = 1
+	modular_bodyparts = MODULAR_BODYPART_PROSTHETIC
+	parts = list(BP_L_LEG, BP_R_LEG, BP_L_FOOT, BP_R_FOOT)
+
+/datum/robolimb/replika2
+	company = "Replikant - 2nd Gen"
+	desc = "Modern, second-generation biomechanical prosthetics with pegs for feet."
+	icon = 'icons/mob/human_races/cyberlimbs/replikant/replikant2.dmi'
+	lifelike = 1
+	unavailable_to_build = 1
+	modular_bodyparts = MODULAR_BODYPART_PROSTHETIC
+	parts = list(BP_L_LEG, BP_R_LEG, BP_L_FOOT, BP_R_FOOT)
+
+/* CHOMPRemove Start
+/datum/robolimb/digi
+	company = "DSI Digitigrade Legs" //yup that's how I'm fixing this, you NEED to have digi on or else oh god it looks weird
+	desc = "Synthflesh-wrapped robotic digitigrade legs, for the animal in all of us."
+	icon = 'icons/mob/human_races/r_digi.dmi'
+	lifelike = 1
+	unavailable_to_build = 1
+	skin_tone = 1
+	parts = list(BP_L_LEG, BP_R_LEG, BP_L_FOOT, BP_R_FOOT)
+*/// CHOMPRemove End
+
+/obj/item/disk/limb/New(var/newloc)
 	..()
 	if(company)
 		name = "[company] [initial(name)]"
 
-/obj/item/weapon/disk/limb/bishop
+/obj/item/disk/limb/bishop
 	company = "Bishop"
 	catalogue_data = list(/datum/category_item/catalogue/information/organization/bishop)
 
-/obj/item/weapon/disk/limb/cybersolutions
+/obj/item/disk/limb/cybersolutions
 	company = "Cyber Solutions"
 
-/obj/item/weapon/disk/limb/grayson
+/obj/item/disk/limb/grayson
 	company = "Grayson"
 
-/obj/item/weapon/disk/limb/hephaestus
+/obj/item/disk/limb/hephaestus
 	company = "Hephaestus"
 	catalogue_data = list(/datum/category_item/catalogue/information/organization/hephaestus)
 
-/obj/item/weapon/disk/limb/morpheus
+/obj/item/disk/limb/morpheus
 	company = "Morpheus"
 	catalogue_data = list(/datum/category_item/catalogue/information/organization/morpheus)
 
-/obj/item/weapon/disk/limb/veymed
+/obj/item/disk/limb/veymed
 	company = "Vey-Med"
 	catalogue_data = list(/datum/category_item/catalogue/information/organization/vey_med)
 
 // Bus disk for Diona mech parts.
-/obj/item/weapon/disk/limb/veymed/diona
+/obj/item/disk/limb/veymed/diona
 	company = "Skrellian Exoskeleton"
 
-/obj/item/weapon/disk/limb/wardtakahashi
+/obj/item/disk/limb/wardtakahashi
 	company = "Ward-Takahashi"
 	catalogue_data = list(/datum/category_item/catalogue/information/organization/ward_takahashi)
 
-/obj/item/weapon/disk/limb/xion
+/obj/item/disk/limb/xion
 	company = "Xion"
 	catalogue_data = list(/datum/category_item/catalogue/information/organization/xion)
 
-/obj/item/weapon/disk/limb/zenghu
+/obj/item/disk/limb/zenghu
 	company = "Zeng-Hu"
 	catalogue_data = list(/datum/category_item/catalogue/information/organization/zeng_hu)
 
-/obj/item/weapon/disk/limb/nanotrasen
+/obj/item/disk/limb/nanotrasen
 	company = "NanoTrasen"
 	catalogue_data = list(/datum/category_item/catalogue/information/organization/nanotrasen)
 
-/obj/item/weapon/disk/species
+/obj/item/disk/species
 	name = "Species Bioprints"
 	desc = "A disk containing the blueprints for species-specific prosthetics."
 	icon = 'icons/obj/cloning.dmi'
 	icon_state = "datadisk2"
 	var/species = SPECIES_HUMAN
 
-/obj/item/weapon/disk/species/Initialize()
+/obj/item/disk/species/Initialize()
 	. = ..()
 	if(species)
 		name = "[species] [initial(name)]"
 
-/obj/item/weapon/disk/species/skrell
+/obj/item/disk/species/skrell
 	species = SPECIES_SKRELL
 
-/obj/item/weapon/disk/species/unathi
+/obj/item/disk/species/unathi
 	species = SPECIES_UNATHI
 
-/obj/item/weapon/disk/species/tajaran
+/obj/item/disk/species/tajaran
 	species = SPECIES_TAJ
 
-/obj/item/weapon/disk/species/teshari
+/obj/item/disk/species/teshari
 	species = SPECIES_TESHARI
 
 // In case of bus, presently.
-/obj/item/weapon/disk/species/diona
+/obj/item/disk/species/diona
 	species = SPECIES_DIONA
 
-/obj/item/weapon/disk/species/zaddat
+/obj/item/disk/species/zaddat
 	species = SPECIES_ZADDAT
 
-/obj/item/weapon/disk/limb/cenilimicybernetics
+/obj/item/disk/limb/cenilimicybernetics
 	company = "Cenilimi Cybernetics"

@@ -1,7 +1,3 @@
-#define FORWARD -1
-#define BACKWARD 1
-
-
 // As of August 4th, 2018, these datums are only used in Mech construction.
 /datum/construction
 	var/list/steps
@@ -41,16 +37,19 @@
 	var/list/L = steps[steps.len]
 	switch(L["key"])
 		if(IS_SCREWDRIVER)
-			if(I.is_screwdriver())
+			if(I.has_tool_quality(TOOL_SCREWDRIVER))
 				return steps.len
 		if(IS_CROWBAR)
-			if(I.is_crowbar())
+			if(I.has_tool_quality(TOOL_CROWBAR))
 				return steps.len
 		if(IS_WIRECUTTER)
-			if(I.is_wirecutter())
+			if(I.has_tool_quality(TOOL_WIRECUTTER))
 				return steps.len
 		if(IS_WRENCH)
-			if(I.is_wrench())
+			if(I.has_tool_quality(TOOL_WRENCH))
+				return steps.len
+		if(IS_WELDER)
+			if(I.has_tool_quality(IS_WELDER))
 				return steps.len
 
 	if(istype(I, L["key"]))
@@ -108,30 +107,36 @@
 
 	switch(L["key"])
 		if(IS_SCREWDRIVER)
-			if(I.is_screwdriver())
+			if(I.has_tool_quality(TOOL_SCREWDRIVER))
 				return FORWARD
 		if(IS_CROWBAR)
-			if(I.is_crowbar())
+			if(I.has_tool_quality(TOOL_CROWBAR))
 				return FORWARD
 		if(IS_WIRECUTTER)
-			if(I.is_wirecutter())
+			if(I.has_tool_quality(TOOL_WIRECUTTER))
 				return FORWARD
 		if(IS_WRENCH)
-			if(I.is_wrench())
+			if(I.has_tool_quality(TOOL_WRENCH))
+				return FORWARD
+		if(IS_WELDER)
+			if(I.has_tool_quality(IS_WELDER))
 				return FORWARD
 
 	switch(L["backkey"])
 		if(IS_SCREWDRIVER)
-			if(I.is_screwdriver())
+			if(I.has_tool_quality(TOOL_SCREWDRIVER))
 				return BACKWARD
 		if(IS_CROWBAR)
-			if(I.is_crowbar())
+			if(I.has_tool_quality(TOOL_CROWBAR))
 				return BACKWARD
 		if(IS_WIRECUTTER)
-			if(I.is_wirecutter())
+			if(I.has_tool_quality(TOOL_WIRECUTTER))
 				return BACKWARD
 		if(IS_WRENCH)
-			if(I.is_wrench())
+			if(I.has_tool_quality(TOOL_WRENCH))
+				return BACKWARD
+		if(IS_WELDER)
+			if(I.has_tool_quality(IS_WELDER))
 				return BACKWARD
 
 	if(istype(I, L["key"]))

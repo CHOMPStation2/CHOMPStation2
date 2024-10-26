@@ -19,10 +19,10 @@
 				if(L.zone_sel.selecting == BP_GROIN) //CHOMPEdit
 					if(L.vore_bellyrub(src))
 						return
-				L.visible_message("<span class='notice'>\The [L] [response_help] \the [src].</span>")
+				L.visible_message(span_notice("\The [L] [response_help] \the [src]."))
 
 		if(I_DISARM)
-			L.visible_message("<span class='notice'>\The [L] [response_disarm] \the [src].</span>")
+			L.visible_message(span_notice("\The [L] [response_disarm] \the [src]."))
 			L.do_attack_animation(src)
 			//TODO: Push the mob away or something
 
@@ -32,10 +32,10 @@
 			if (!(status_flags & CANPUSH))
 				return
 			if(!incapacitated(INCAPACITATION_ALL) && prob(grab_resist))
-				L.visible_message("<span class='warning'>\The [L] tries to grab \the [src] but fails!</span>")
+				L.visible_message(span_warning("\The [L] tries to grab \the [src] but fails!"))
 				return
 
-			var/obj/item/weapon/grab/G = new /obj/item/weapon/grab(L, src)
+			var/obj/item/grab/G = new /obj/item/grab(L, src)
 
 			L.put_in_active_hand(G)
 
@@ -43,13 +43,28 @@
 			G.affecting = src
 			LAssailant = L
 
-			L.visible_message("<span class='warning'>\The [L] has grabbed [src] passively!</span>")
+			L.visible_message(span_warning("\The [L] has grabbed [src] passively!"))
 			L.do_attack_animation(src)
 
 		if(I_HURT)
 			var/armor = run_armor_check(def_zone = null, attack_flag = "melee")
-			apply_damage(damage = harm_intent_damage, damagetype = BURN, def_zone = null, blocked = armor, blocked = resistance, used_weapon = null, sharp = FALSE, edge = FALSE)
-			L.visible_message("<span class='warning'>\The [L] [response_harm] \the [src]!</span>")
+			if(istype(L,/mob/living/carbon/human)) //VOREStation EDIT START Is it a human?
+				var/mob/living/carbon/human/attacker = L //We are a human!
+				var/datum/unarmed_attack/attack = attacker.get_unarmed_attack(src, BP_TORSO) //What attack are we using? Also, just default to attacking the chest.
+				var/rand_damage = rand(1, 5) //Like normal human attacks, let's randomize the damage...
+				var/real_damage = rand_damage //Let's go ahead and start calculating our damage.
+				var/hit_dam_type = attack.damage_type //Let's get the type of damage. Brute? Burn? Defined by the unarmed_attack.
+				real_damage += attack.get_unarmed_damage(attacker) //Add the damage that their special attack has. Some have 0. Some have 15.
+				if(real_damage <= damage_threshold)
+					L.visible_message(span_warning("\The [L] uselessly hits \the [src]!"))
+					L.do_attack_animation(src)
+					return
+				apply_damage(damage = real_damage, damagetype = hit_dam_type, def_zone = null, blocked = armor, blocked = resistance, used_weapon = null, sharp = FALSE, edge = FALSE)
+				L.visible_message(span_warning("\The [L] [pick(attack.attack_verb)] \the [src]!"))
+				L.do_attack_animation(src)
+				return //VOREStation EDIT END
+			apply_damage(damage = harm_intent_damage, damagetype = BRUTE, def_zone = null, blocked = armor, blocked = resistance, used_weapon = null, sharp = FALSE, edge = FALSE) //VOREStation EDIT Somebody set this to burn instead of brute.
+			L.visible_message(span_warning("\The [L] [response_harm] \the [src]!"))
 			L.do_attack_animation(src)
 
 	return
@@ -64,10 +79,10 @@
 			if(health < getMaxHealth())
 				if(MED.use(1))
 					adjustBruteLoss(-MED.heal_brute)
-					visible_message("<b>\The [user]</b> applies the [MED] on [src].")
+					visible_message(span_infoplain(span_bold("\The [user]") + " applies the [MED] on [src]."))
 		else
 			var/datum/gender/T = gender_datums[src.get_visible_gender()]
-			to_chat(user, "<span class='notice'>\The [src] is dead, medical items won't bring [T.him] back to life.</span>") // the gender lookup is somewhat overkill, but it functions identically to the obsolete gender macros and future-proofs this code
+			to_chat(user, span_notice("\The [src] is dead, medical items won't bring [T.him] back to life.")) // the gender lookup is somewhat overkill, but it functions identically to the obsolete gender macros and future-proofs this code
 	if(can_butcher(user, O))	//if the animal can be butchered, do so and return. It's likely to be gibbed.
 		harvest(user, O)
 		return
@@ -77,13 +92,13 @@
 			livestock_harvest(O, user)
 			return
 		else
-			to_chat(user, "<span class='notice'>\The [src] can't be [harvest_verb] so soon.</span>")
+			to_chat(user, span_notice("\The [src] can't be [harvest_verb] so soon."))
 			return
 
 	if(can_tame(O, user))
-		to_chat(user, "<span class='notice'>You offer \the [src] \the [O].</span>")
+		to_chat(user, span_notice("You offer \the [src] \the [O]."))
 		if(tame_prob(O, user))
-			to_chat(user, "<span class='notice'>\The [src] appears to accept \the [O], seemingly calmed.</span>")
+			to_chat(user, span_notice("\The [src] appears to accept \the [O], seemingly calmed."))
 			do_tame(O,user)
 		else
 			fail_tame(O, user)
@@ -99,11 +114,11 @@
 	//Animals can't be stunned(?)
 	if(O.damtype == HALLOSS)
 		effective_force = 0
-	if(supernatural && istype(O,/obj/item/weapon/nullrod))
+	if(supernatural && istype(O,/obj/item/nullrod))
 		effective_force *= 2
 		purge = 3
 	if(O.force <= resistance)
-		to_chat(user,"<span class='danger'>This weapon is ineffective, it does no damage.</span>")
+		to_chat(user,span_danger("This weapon is ineffective, it does no damage."))
 		return 2 //???
 
 	. = ..()
@@ -178,7 +193,8 @@
 
 // Electricity
 /mob/living/simple_mob/electrocute_act(var/shock_damage, var/obj/source, var/siemens_coeff = 1.0, var/def_zone = null)
-	shock_damage *= siemens_coeff
+	var/zap = min((1-get_shock_protection()), siemens_coeff) //CHOMPEdit - for some reason simple mobs just never properly checked for shock resist? Whatever, take whichever is lower.
+	shock_damage *= zap
 	if(shock_damage < 1)
 		return 0
 
@@ -279,7 +295,7 @@
 		inflict_shock_damage(200) // Mobs that are very beefy or resistant to shock may survive getting struck.
 		updatehealth()
 		if(health <= 0)
-			visible_message(span("critical", "\The [src] disintegrates into ash!"))
+			visible_message(span_critical("\The [src] disintegrates into ash!"))
 			ash()
 			return // No point deafening something that wont exist.
 
@@ -291,7 +307,7 @@
 	if(!client)
 		updatehealth()
 		if(health <= 0)
-			visible_message(span("critical", "\The [src] flashes into ash as the lava consumes them!"))
+			visible_message(span_critical("\The [src] flashes into ash as the lava consumes them!"))
 			ash()
 
 // Injections.
@@ -299,4 +315,3 @@
 	if(ignore_thickness)
 		return TRUE
 	return !thick_armor
-

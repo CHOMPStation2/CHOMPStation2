@@ -48,7 +48,10 @@
 	var/radio_filter_out
 	var/radio_filter_in
 
-	var/datum/looping_sound/air_pump/soundloop
+	//var/datum/looping_sound/air_pump/soundloop
+	var/static/start_sound = 'sound/machines/air_pump/airpumpstart.ogg'
+	var/static/stop_sound = 'sound/machines/air_pump/airpumpshutdown.ogg'
+
 
 /obj/machinery/atmospherics/unary/vent_pump/on
 	use_power = USE_POWER_IDLE
@@ -78,7 +81,7 @@
 
 /obj/machinery/atmospherics/unary/vent_pump/Initialize()
 	. = ..()
-	soundloop = new(list(src), FALSE)
+	//soundloop = new(list(src), FALSE)
 
 /obj/machinery/atmospherics/unary/vent_pump/New()
 	..()
@@ -91,12 +94,19 @@
 		assign_uid()
 		id_tag = num2text(uid)
 
+/obj/machinery/atmospherics/unary/vent_pump/proc/update_area()
+	initial_loc = get_area(loc)
+	area_uid = "\ref[initial_loc]"
+	assign_uid()
+	id_tag = num2text(uid)
+
+
 /obj/machinery/atmospherics/unary/vent_pump/Destroy()
 	unregister_radio(src, frequency)
 	if(initial_loc)
 		initial_loc.air_vent_info -= id_tag
 		initial_loc.air_vent_names -= id_tag
-	QDEL_NULL(soundloop)
+	//QDEL_NULL(soundloop)
 	return ..()
 
 /obj/machinery/atmospherics/unary/vent_pump/high_volume
@@ -155,10 +165,15 @@
 
 	if(welded)
 		vent_icon += "weld"
+		playsound(src, stop_sound, 25, ignore_walls = FALSE, preference = /datum/preference/toggle/air_pump_noise)
+
 	else if(!use_power || !node || (stat & (NOPOWER|BROKEN)))
 		vent_icon += "off"
+		playsound(src, stop_sound, 25, ignore_walls = FALSE, preference = /datum/preference/toggle/air_pump_noise)
 	else
 		vent_icon += "[pump_direction ? "out" : "in"]"
+		playsound(src, start_sound, 25, ignore_walls = FALSE, preference = /datum/preference/toggle/air_pump_noise)
+
 
 	add_overlay(icon_manager.get_atmos_icon("device", , , vent_icon))
 
@@ -182,15 +197,11 @@
 
 /obj/machinery/atmospherics/unary/vent_pump/proc/can_pump()
 	if(stat & (NOPOWER|BROKEN))
-		soundloop.stop()
 		return 0
 	if(!use_power)
-		soundloop.stop() 
 		return 0
 	if(welded)
-		soundloop.stop()
 		return 0
-	soundloop.start()
 	return 1
 
 /obj/machinery/atmospherics/unary/vent_pump/process()
@@ -379,25 +390,25 @@
 	return
 
 /obj/machinery/atmospherics/unary/vent_pump/attackby(obj/item/W, mob/user)
-	if(istype(W, /obj/item/weapon/weldingtool))
-		var/obj/item/weapon/weldingtool/WT = W
+	if(W.has_tool_quality(TOOL_WELDER))
+		var/obj/item/weldingtool/WT = W.get_welder()
 		if (WT.remove_fuel(0,user))
-			to_chat(user, "<span class='notice'>Now welding the vent.</span>")
+			to_chat(user, span_notice("Now welding the vent."))
 			if(do_after(user, 20 * WT.toolspeed))
 				if(!src || !WT.isOn()) return
 				playsound(src, WT.usesound, 50, 1)
 				if(!welded)
-					user.visible_message("<b>\The [user]</b> welds the vent shut.", "<span class='notice'>You weld the vent shut.</span>", "You hear welding.")
+					user.visible_message(span_bold("\The [user]") + " welds the vent shut.", span_notice("You weld the vent shut."), "You hear welding.")
 					welded = 1
 					update_icon()
 				else
-					user.visible_message("<span class='notice'>[user] unwelds the vent.</span>", "<span class='notice'>You unweld the vent.</span>", "You hear welding.")
+					user.visible_message(span_notice("[user] unwelds the vent."), span_notice("You unweld the vent."), "You hear welding.")
 					welded = 0
 					update_icon()
 			else
-				to_chat(user, "<span class='notice'>The welding tool needs to be on to start this task.</span>")
+				to_chat(user, span_notice("The welding tool needs to be on to start this task."))
 		else
-			to_chat(user, "<span class='warning'>You need more welding fuel to complete this task.</span>")
+			to_chat(user, span_warning("You need more welding fuel to complete this task."))
 			return 1
 	else
 		..()
@@ -417,26 +428,26 @@
 	if(old_stat != stat)
 		update_icon()
 
-/obj/machinery/atmospherics/unary/vent_pump/attackby(var/obj/item/weapon/W as obj, var/mob/user as mob)
-	if (!W.is_wrench())
+/obj/machinery/atmospherics/unary/vent_pump/attackby(var/obj/item/W as obj, var/mob/user as mob)
+	if (!W.has_tool_quality(TOOL_WRENCH))
 		return ..()
 	if (!(stat & NOPOWER) && use_power)
-		to_chat(user, "<span class='warning'>You cannot unwrench \the [src], turn it off first.</span>")
+		to_chat(user, span_warning("You cannot unwrench \the [src], turn it off first."))
 		return 1
 	var/turf/T = src.loc
 	if (node && node.level==1 && isturf(T) && !T.is_plating())
-		to_chat(user, "<span class='warning'>You must remove the plating first.</span>")
+		to_chat(user, span_warning("You must remove the plating first."))
 		return 1
 	if(!can_unwrench())
-		to_chat(user, "<span class='warning'>You cannot unwrench \the [src], it is too exerted due to internal pressure.</span>")
+		to_chat(user, span_warning("You cannot unwrench \the [src], it is too exerted due to internal pressure."))
 		add_fingerprint(user)
 		return 1
 	playsound(src, W.usesound, 50, 1)
-	to_chat(user, "<span class='notice'>You begin to unfasten \the [src]...</span>")
+	to_chat(user, span_notice("You begin to unfasten \the [src]..."))
 	if (do_after(user, 40 * W.toolspeed))
 		user.visible_message( \
-			"<b>\The [user]</b> unfastens \the [src].", \
-			"<span class='notice'>You have unfastened \the [src].</span>", \
+			span_infoplain(span_bold("\The [user]") + " unfastens \the [src]."), \
+			span_notice("You have unfastened \the [src]."), \
 			"You hear a ratchet.")
 		deconstruct()
 

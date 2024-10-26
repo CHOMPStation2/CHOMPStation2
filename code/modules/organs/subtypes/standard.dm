@@ -9,7 +9,7 @@
 	organ_tag = BP_TORSO
 	icon_name = "torso"
 	max_damage = 100
-	min_broken_damage = 35
+	min_broken_damage = 60 // CHOMPEdit: Increase all min_broken_damage (Ribs should take more force to break)
 	w_class = ITEMSIZE_HUGE
 	body_part = UPPER_TORSO
 	vital = 1
@@ -59,7 +59,7 @@
 	organ_tag = BP_GROIN
 	icon_name = "groin"
 	max_damage = 100
-	min_broken_damage = 35
+	min_broken_damage = 50 // CHOMPEdit: Increase all min_broken_damage
 	w_class = ITEMSIZE_LARGE
 	body_part = LOWER_TORSO
 	vital = 1
@@ -89,7 +89,7 @@
 	name = "left arm"
 	icon_name = "l_arm"
 	max_damage = 80
-	min_broken_damage = 30
+	min_broken_damage = 40 // CHOMPEdit: Flat doubling of all min_broken_damage
 	w_class = ITEMSIZE_NORMAL
 	body_part = ARM_LEFT
 	parent_organ = BP_TORSO
@@ -129,7 +129,7 @@
 	name = "left leg"
 	icon_name = "l_leg"
 	max_damage = 80
-	min_broken_damage = 30
+	min_broken_damage = 40 // CHOMPEdit: Increase all min_broken_damage
 	w_class = ITEMSIZE_NORMAL
 	body_part = LEG_LEFT
 	icon_position = LEFT
@@ -168,7 +168,7 @@
 	name = "left foot"
 	icon_name = "l_foot"
 	max_damage = 50
-	min_broken_damage = 15
+	min_broken_damage = 30 // CHOMPEdit: Increase all min_broken_damage
 	w_class = ITEMSIZE_SMALL
 	body_part = FOOT_LEFT
 	icon_position = LEFT
@@ -213,7 +213,7 @@
 	name = "left hand"
 	icon_name = "l_hand"
 	max_damage = 50
-	min_broken_damage = 15
+	min_broken_damage = 30 // CHOMPEdit: Increase all min_broken_damage
 	w_class = ITEMSIZE_SMALL
 	body_part = HAND_LEFT
 	parent_organ = BP_L_ARM
@@ -262,7 +262,7 @@
 	name = "head"
 	slot_flags = SLOT_BELT
 	max_damage = 75
-	min_broken_damage = 35
+	min_broken_damage = 50 // CHOMPEdit: Increase all min_broken_damage
 	w_class = ITEMSIZE_NORMAL
 	body_part = HEAD
 	vital = 1
@@ -277,12 +277,13 @@
 	var/head_offset = 0
 	var/eye_icon = "eyes_s"
 	var/eye_icon_location = 'icons/mob/human_face.dmi'
+	var/eye_icon_override = FALSE		// if true, we dont reset our icon back to default
 	force = 3
 	throwforce = 7
 	var/eyes_over_markings = FALSE //VOREStation edit
 
 /obj/item/organ/external/head/Initialize()
-	if(config.allow_headgibs)
+	if(CONFIG_GET(flag/allow_headgibs))
 		cannot_gib = FALSE
 	return ..()
 
@@ -335,11 +336,11 @@
 
 /obj/item/organ/external/head/attackby(obj/item/I as obj, mob/user as mob)
 	if(istype(I, /obj/item/toy/plushie) || istype(I, /obj/item/organ/external/head))
-		user.visible_message("<span class='notice'>[user] makes \the [I] kiss \the [src]!.</span>", \
-		"<span class='notice'>You make \the [I] kiss \the [src]!.</span>")
+		user.visible_message(span_notice("[user] makes \the [I] kiss \the [src]!."), \
+		span_notice("You make \the [I] kiss \the [src]!."))
 	return ..()
 
-/obj/item/organ/external/head/get_icon()
+/obj/item/organ/external/head/get_icon(var/skeletal, var/can_apply_transparency = TRUE)
 	..()
 
 	//The overlays are not drawn on the mob, they are used for if the head is removed and becomes an item
@@ -386,9 +387,11 @@
 
 	//Head markings
 	for(var/M in markings)
+		if (!markings[M]["on"])
+			continue
 		var/datum/sprite_accessory/marking/mark_style = markings[M]["datum"]
 		var/icon/mark_s = new/icon("icon" = mark_style.icon, "icon_state" = "[mark_style.icon_state]-[organ_tag]")
-		mark_s.Blend(markings[M]["color"], mark_style.color_blend_mode) 
+		mark_s.Blend(markings[M]["color"], mark_style.color_blend_mode)
 		add_overlay(mark_s) //So when it's not on your body, it has icons
 		mob_icon.Blend(mark_s, ICON_OVERLAY) //So when it's on your body, it has icons
 		icon_cache_key += "[M][markings[M]["color"]]"
@@ -399,6 +402,9 @@
 		icon_cache_key += "[eye_icon]"
 
 	add_overlay(get_hair_icon())
+
+	if (transparent && can_apply_transparency) //VOREStation Edit: transparent instead of nonsolid
+		mob_icon += rgb(,,,180) //do it here so any markings become transparent as well
 
 	return mob_icon
 

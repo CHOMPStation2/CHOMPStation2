@@ -22,7 +22,7 @@
 	wreckage = /obj/structure/loot_pile/mecha/odysseus
 
 	maxHealth = 120
-	movement_cooldown = 0
+	movement_cooldown = -1
 	turn_sound = 'sound/mecha/mechmove01.ogg'
 
 	melee_damage_lower = 5
@@ -53,7 +53,7 @@
 
 		var/target_zone = pick(BP_TORSO,BP_TORSO,BP_TORSO,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_HEAD)
 		if(L.can_inject(src, null, target_zone))
-			to_chat(L, span("warning", "You feel a tiny prick."))
+			to_chat(L, span_warning("You feel a tiny prick."))
 			if(L.get_poison_protection() < 1)
 				L.add_modifier(/datum/modifier/poisoned, 30 SECONDS)
 				L.inflict_poison_damage(5)
@@ -71,7 +71,7 @@
 		var/mob/living/L = target
 		if(!L.can_inject(null, null, def_zone, piercing))
 			return FALSE
-		to_chat(L, span("warning", "You feel a tiny prick."))
+		to_chat(L, span_warning("You feel a tiny prick."))
 	return ..() // This will add the modifier and return the correct value.
 
 
@@ -79,6 +79,3 @@
 /obj/item/projectile/fake_syringe/poison
 	modifier_type_to_apply = /datum/modifier/poisoned
 	modifier_duration = 1 MINUTE // About 30 damage per stack over a minute.
-
-
-

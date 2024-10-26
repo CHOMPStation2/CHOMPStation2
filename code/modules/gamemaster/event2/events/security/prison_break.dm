@@ -201,11 +201,11 @@
 	global_announcer.autosay(message, my_department, DEPARTMENT_ENGINEERING)
 
 	for(var/mob/living/silicon/ai/A in player_list)
-		to_chat(A, span("danger", "Malicious program detected in the [area_display_name] lighting and airlock control systems by [my_department]. \
+		to_chat(A, span_danger("Malicious program detected in the [area_display_name] lighting and airlock control systems by [my_department]. \
 		Disabling the main breaker in the APCs will protect the APC's room from being compromised."))
 
 	var/time_to_flicker = start_delay - 10 SECONDS
-	addtimer(CALLBACK(src, .proc/flicker_area), time_to_flicker)
+	addtimer(CALLBACK(src, PROC_REF(flicker_area)), time_to_flicker)
 
 
 /datum/event2/event/prison_break/proc/flicker_area()

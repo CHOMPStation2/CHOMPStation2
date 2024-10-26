@@ -15,7 +15,7 @@
 	var/mob/lasteditor
 	var/list/viewingcode = list()
 	var/obj/machinery/telecomms/server/SelectedServer
-	circuit = /obj/item/weapon/circuitboard/comm_traffic
+	circuit = /obj/item/circuitboard/comm_traffic
 	req_access = list(access_tcomsat)
 
 	var/network = "NULL"		// the network to probe
@@ -127,7 +127,7 @@
 	add_fingerprint(usr)
 	usr.set_machine(src)
 	if(!src.allowed(usr) && !emagged)
-		to_chat(usr, "<span class='warning'>ACCESS DENIED.</span>")
+		to_chat(usr, span_warning("ACCESS DENIED."))
 		return
 
 	if(href_list["viewserver"])
@@ -192,7 +192,8 @@
 
 	if(href_list["network"])
 
-		var/newnet = input(usr, "Which network do you want to view?", "Comm Monitor", network) as null|text
+		var/newnet = tgui_input_text(usr, "Which network do you want to view?", "Comm Monitor", network, 15)
+		newnet = sanitize(newnet,15)
 
 		if(newnet && ((usr in range(1, src) || issilicon(usr))))
 			if(length(newnet) > 15)
@@ -212,6 +213,6 @@
 	if(!emagged)
 		playsound(src, 'sound/effects/sparks4.ogg', 75, 1)
 		emagged = 1
-		to_chat(user, "<span class='notice'>You you disable the security protocols</span>")
+		to_chat(user, span_notice("You you disable the security protocols"))
 		src.updateUsrDialog()
 		return 1

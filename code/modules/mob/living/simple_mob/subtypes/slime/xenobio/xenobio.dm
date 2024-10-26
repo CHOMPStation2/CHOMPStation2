@@ -11,6 +11,9 @@
 	var/mob/living/victim = null // the person the slime is currently feeding on
 	var/rainbow_core_candidate = TRUE // If false, rainbow cores cannot make this type randomly.
 	var/mutation_chance = 30 // CHOMPedit Odds of spawning as a new color when reproducing.  Can be modified by certain xenobio products.  Carried across generations of slimes.
+	var/split_amount = 5 //Chompedit: increased from 4 to 5 to make xenobio faster and deadlier.  Amount of children we will normally have. Half of that for dead adult slimes. Is NOT carried across generations.
+	var/untamable = FALSE //Makes slime untamable via discipline.
+	var/untamable_inheirit = FALSE //Makes slime inheirit its untamability.
 	var/list/slime_mutation = list(
 		/mob/living/simple_mob/slime/xenobio/orange,
 		/mob/living/simple_mob/slime/xenobio/metal,
@@ -53,7 +56,6 @@
 	AI.obedience = max(previous_AI.obedience - 1, 0)
 	AI.resentment = max(previous_AI.resentment - 1, 0)
 	AI.rabid = previous_AI.rabid
-
 
 /mob/living/simple_mob/slime/xenobio/update_icon()
 	icon_living = "[icon_state_override ? "[icon_state_override] slime" : "slime"] [is_adult ? "adult" : "baby"][victim ? " eating" : ""]"
@@ -107,6 +109,21 @@
 	update_icon()
 	update_name()
 
+/mob/living/simple_mob/slime/xenobio/proc/make_baby()
+	if(!is_adult)
+		return
+
+	is_adult = FALSE
+	melee_damage_lower = round(melee_damage_lower / 2) // 20
+	melee_damage_upper = round(melee_damage_upper / 2) // 30
+	maxHealth = initial(maxHealth)
+	health = clamp(health, 0, maxHealth)
+	max_nutrition = initial(max_nutrition)
+	nutrition = 400
+	amount_grown = 0
+	update_icon()
+	update_name()
+
 /mob/living/simple_mob/slime/xenobio/proc/update_name()
 	if(harmless) // Docile slimes are generally named, so we shouldn't mess with it.
 		return
@@ -142,13 +159,20 @@
 		var/datum/ai_holder/simple_mob/xenobio_slime/AI = ai_holder
 		AI.enrage()
 
+/mob/living/simple_mob/slime/xenobio/proc/relax()
+	if(harmless)
+		return
+	if(has_AI())
+		var/datum/ai_holder/simple_mob/xenobio_slime/AI = ai_holder
+		AI.relax()
+
 /mob/living/simple_mob/slime/xenobio/proc/pacify()
 	harmless = TRUE
 	if(has_AI())
 		var/datum/ai_holder/simple_mob/xenobio_slime/AI = ai_holder
 		AI.pacify()
 
-	faction = "neutral"
+	faction = FACTION_NEUTRAL
 
 	// If for whatever reason the mob AI (or player) decides to try to attack something anyways.
 	melee_damage_upper = 0
@@ -163,20 +187,20 @@
 	set desc = "This will let you evolve from baby to adult slime."
 
 	if(stat)
-		to_chat(src, span("warning", "I must be conscious to do this..."))
+		to_chat(src, span_warning("I must be conscious to do this..."))
 		return
 
 	if(harmless)
-		to_chat(src, span("warning", "I have been pacified. I cannot evolve..."))
+		to_chat(src, span_warning("I have been pacified. I cannot evolve..."))
 		return
 
 	if(!is_adult)
 		if(amount_grown >= 10)
 			make_adult()
 		else
-			to_chat(src, span("warning", "I am not ready to evolve yet..."))
+			to_chat(src, span_warning("I am not ready to evolve yet..."))
 	else
-		to_chat(src, span("warning", "I have already evolved..."))
+		to_chat(src, span_warning("I have already evolved..."))
 
 
 /mob/living/simple_mob/slime/xenobio/verb/reproduce()
@@ -184,11 +208,11 @@
 	set desc = "This will make you split into four new slimes."
 
 	if(stat)
-		to_chat(src, span("warning", "I must be conscious to do this..."))
+		to_chat(src, span_warning("I must be conscious to do this..."))
 		return
 
 	if(harmless)
-		to_chat(src, span("warning", "I have been pacified. I cannot reproduce..."))
+		to_chat(src, span_warning("I have been pacified. I cannot reproduce..."))
 		return
 
 	if(is_adult)
@@ -201,20 +225,24 @@
 				if(T.density) // No walls.
 					continue
 				for(var/atom/movable/AM in T)
-					if(AM.density || istype(AM, /mob/living/simple_mob/slime))
+					if(istype(AM, /mob/living/simple_mob/slime) || !(AM.CanPass(src, T)))
+						free = FALSE
+						break
+				for(var/atom/movable/AM in get_turf(src))
+					if(!(AM.CanPass(src, T)) && !(AM == src))
 						free = FALSE
 						break
 
 				if(free)
 					free_tiles++
 
-			if(free_tiles < 3) // Three free tiles are needed, as four slimes are made and the 4th tile is from the center tile that the current slime occupies.
-				to_chat(src, span("warning", "It is too cramped here to reproduce..."))
+			if(free_tiles < split_amount-1) // Three free tiles are needed, as four slimes are made and the 4th tile is from the center tile that the current slime occupies.
+				to_chat(src, span_warning("It is too cramped here to reproduce..."))
 				return
 
 			var/list/babies = list()
-			for(var/i = 1 to 4)
-				babies.Add(make_new_slime())
+			for(var/i = 1 to split_amount)
+				babies.Add(make_new_slime(no_step = i))
 
 			var/mob/living/simple_mob/slime/new_slime = pick(babies)
 			new_slime.universal_speak = universal_speak
@@ -224,12 +252,12 @@
 				new_slime.key = src.key
 			qdel(src)
 		else
-			to_chat(src, span("warning", "I am not ready to reproduce yet..."))
+			to_chat(src, span_warning("I am not ready to reproduce yet..."))
 	else
-		to_chat(src, span("warning", "I have not evolved enough to reproduce yet..."))
+		to_chat(src, span_warning("I have not evolved enough to reproduce yet..."))
 
 // Used when reproducing or dying.
-/mob/living/simple_mob/slime/xenobio/proc/make_new_slime(var/desired_type)
+/mob/living/simple_mob/slime/xenobio/proc/make_new_slime(var/desired_type, var/no_step)
 	var/t = src.type
 	if(desired_type)
 		t = desired_type
@@ -245,10 +273,14 @@
 
 	if(!istype(baby, /mob/living/simple_mob/slime/xenobio/rainbow))
 		baby.unity = unity
+	if(untamable_inheirit)
+		baby.untamable = untamable
+	baby.untamable_inheirit = untamable_inheirit
 	baby.faction = faction
 	baby.friends = friends.Copy()
 
-	step_away(baby, src)
+	if(no_step != 1)
+		step_away(baby, src)
 	return baby
 
 /mob/living/simple_mob/slime/xenobio/get_description_interaction()

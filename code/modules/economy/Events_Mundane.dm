@@ -15,7 +15,7 @@
 	"Pens proclaim pencils obsolete, 'lead is dead'.",\
 	"Rock and paper sues scissors for discrimination.",\
 	"Steak tell-all book reveals he never liked sitting by potato.",\
-	"Woodchuck stops counting how many times he�s chucked 'Never again'.",\
+	"Woodchuck stops counting how many times he's chucked 'Never again'.",\
 	"[affected_dest.name] clerk first person able to pronounce '@*$%!'.",\
 	"[affected_dest.name] delis serving boiled paperback dictionaries, 'Adjectives chewy' customers declare.",\
 	"[affected_dest.name] weather deemed 'boring'; meteors and rad storms to be imported.",\
@@ -29,10 +29,10 @@
 	"New bowling lane that shoots mini-meteors at bowlers very popular.",\
 	"[pick("Unathi","Spacer")] gets tattoo of "+using_map.starsys_name+" on chest '[pick("[using_map.boss_short]","star","starship","asteroid")] tickles most'.",\
 	"Skrell marries computer; wedding attended by 100 modems.",\
-	"Chef reports successfully using harmonica as cheese grater.",\
+	JOB_CHEF + " reports successfully using harmonica as cheese grater.",\
 	"[using_map.company_name] invents handkerchief that says 'Bless you' after sneeze.",\
-	"Clone accused of posing for other clones�s school photo.",\
-	"Clone accused of stealing other clones�s employee of the month award.",\
+	"Clone accused of posing for other clones's school photo.",\
+	"Clone accused of stealing other clones's employee of the month award.",\
 	"Woman robs station with hair dryer; crewmen love new style.",\
 	"This space for rent.",\
 	"[affected_dest.name] Baker Wins Pickled Crumpet Toss Three Years Running",\

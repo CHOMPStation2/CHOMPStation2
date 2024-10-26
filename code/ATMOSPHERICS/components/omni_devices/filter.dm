@@ -131,8 +131,8 @@
 	if(portData.len)
 		data["ports"] = portData
 	if(output)
-		data["set_flow_rate"] = round(set_flow_rate*10)		//because nanoui can't handle rounded decimals.
-		data["last_flow_rate"] = round(last_flow_rate*10)
+		data["set_flow_rate"] = round(set_flow_rate)
+		data["last_flow_rate"] = round(last_flow_rate)
 
 	return data
 
@@ -154,7 +154,7 @@
 /obj/machinery/atmospherics/omni/atmos_filter/tgui_act(action, params)
 	if(..())
 		return TRUE
-	
+
 	switch(action)
 		if("power")
 			if(!configuring)
@@ -170,7 +170,7 @@
 		if("set_flow_rate")
 			if(!configuring || use_power)
 				return
-			var/new_flow_rate = input(usr,"Enter new flow rate limit (0-[max_flow_rate]L/s)","Flow Rate Control",set_flow_rate) as num
+			var/new_flow_rate = tgui_input_number(usr,"Enter new flow rate limit (0-[max_flow_rate]L/s)","Flow Rate Control",set_flow_rate,max_flow_rate,0)
 			set_flow_rate = between(0, new_flow_rate, max_flow_rate)
 			. = TRUE
 		if("switch_mode")

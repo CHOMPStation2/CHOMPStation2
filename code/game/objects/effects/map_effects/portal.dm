@@ -51,7 +51,7 @@ when portals are shortly lived, or when portals are made to be obvious with spec
 	plane = TURF_PLANE
 	layer = ABOVE_TURF_LAYER
 	appearance_flags = NONE
-	
+
 	var/obj/effect/map_effect/portal/counterpart = null // The portal line or master that this is connected to, on the 'other side'.
 
 	// Information used to apply `pixel_[x|y]` offsets so that the visuals line up.
@@ -71,8 +71,8 @@ when portals are shortly lived, or when portals are made to be obvious with spec
 
 // Called when something touches the portal, and usually teleports them to the other side.
 /obj/effect/map_effect/portal/Crossed(atom/movable/AM)
-	if(AM.is_incorporeal())
-		return
+	/*if(AM.is_incorporeal())
+		return CHOMPEdit: This is why phased critters couldn't enter z transits */
 	..()
 	if(!AM)
 		return
@@ -93,7 +93,7 @@ when portals are shortly lived, or when portals are made to be obvious with spec
 		//	pulled.forceMove(get_turf(counterpart))
 			pulled.forceMove(counterpart.get_focused_turf())
 			L.forceMove(counterpart.get_focused_turf())
-			L.start_pulling(pulled)
+			L.continue_pulling(pulled)
 		else
 			L.forceMove(counterpart.get_focused_turf())
 	else
@@ -241,7 +241,7 @@ when portals are shortly lived, or when portals are made to be obvious with spec
 	var/list/mobs_to_relay = in_range["mobs"]
 
 	for(var/mob/mob as anything in mobs_to_relay)
-		var/rendered = "<span class='message'>[text]</span>"
+		var/rendered = span_message("[text]")
 		mob.show_message(rendered)
 
 	..()
@@ -250,7 +250,7 @@ when portals are shortly lived, or when portals are made to be obvious with spec
 /obj/effect/map_effect/portal/master/show_message(msg, type, alt, alt_type)
 	if(!counterpart)
 		return
-	var/rendered = "<span class='message'>[msg]</span>"
+	var/rendered = span_message("[msg]")
 	var/turf/T = counterpart.get_focused_turf()
 	var/list/in_range = get_mobs_and_objs_in_view_fast(T, world.view, 0)
 	var/list/mobs_to_relay = in_range["mobs"]
@@ -273,7 +273,7 @@ when portals are shortly lived, or when portals are made to be obvious with spec
 		var/message = combined["formatted"]
 		var/name_used = M.GetVoice()
 		var/rendered = null
-		rendered = "<span class='game say'><span class='name'>[name_used]</span> [message]</span>"
+		rendered = span_game(span_say("[span_name(name_used)] [message]"))
 		mob.show_message(rendered, 2)
 
 	..()

@@ -7,6 +7,8 @@ var/list/admin_verbs_default = list(
 	/client/proc/cmd_admin_say,			//VOREStation Add,
 	/client/proc/cmd_mod_say,			//VOREStation Add,
 	/client/proc/cmd_event_say,			//VOREStation Add,
+	/client/proc/cmd_mentor_ticket_panel,
+	/client/proc/cmd_mentor_say,
 //	/client/proc/hide_verbs,			//hides all our adminverbs, //VOREStation Remove,
 //	/client/proc/hide_most_verbs,		//hides all our hideable adminverbs, //VOREStation Remove,
 //	/client/proc/debug_variables,		//allows us to -see- the variables of any instance in the game. +VAREDIT needed to modify, //VOREStation Remove,
@@ -16,6 +18,7 @@ var/list/admin_verbs_default = list(
 //	/client/proc/cmd_mod_say,
 //	/client/proc/deadchat				//toggles deadchat on/off,
 //	/client/proc/toggle_ahelp_sound,
+	/client/proc/debugstatpanel,
 	)
 
 var/list/admin_verbs_admin = list(
@@ -73,6 +76,7 @@ var/list/admin_verbs_admin = list(
 	/client/proc/check_ai_laws,			//shows AI and borg laws,
 	/client/proc/rename_silicon,		//properly renames silicons,
 	/client/proc/manage_silicon_laws,	// Allows viewing and editing silicon laws. ,
+	/client/proc/modify_robot,
 	/client/proc/check_antagonists,
 	/client/proc/admin_memo,			//admin memo system. show/delete/write. +SERVER needed to delete admin memos of others,
 	/client/proc/dsay,					//talk in deadchat using our ckey/fakekey,
@@ -112,9 +116,7 @@ var/list/admin_verbs_admin = list(
 	/client/proc/change_human_appearance_self,	// Allows the human-based mob itself change its basic appearance ,
 	/client/proc/change_security_level,
 	/client/proc/view_chemical_reaction_logs,
-	/client/proc/makePAI,
-	/client/proc/toggle_debug_logs,
-	/client/proc/toggle_attack_logs,
+	/client/proc/makepAI,
 	/datum/admins/proc/paralyze_mob,
 	/client/proc/fixatmos,
 	/datum/admins/proc/quick_nif, //VOREStation Add,
@@ -122,7 +124,15 @@ var/list/admin_verbs_admin = list(
 	/datum/admins/proc/set_uplink, //VOREStation Add,
 	/datum/admins/proc/sendFax,
 	/client/proc/despawn_player,
-	/datum/admins/proc/view_feedback
+	/datum/admins/proc/view_feedback,
+	/client/proc/make_mentor,
+	/client/proc/unmake_mentor,
+	/client/proc/removetickets,
+	/client/proc/delbook,
+	/client/proc/toggle_spawning_with_recolour,
+	/client/proc/start_vote,
+	/client/proc/reload_jobwhitelist, //ChompADD
+	/client/proc/reload_alienwhitelist //ChompADD
 	)
 
 var/list/admin_verbs_ban = list(
@@ -133,7 +143,9 @@ var/list/admin_verbs_ban = list(
 var/list/admin_verbs_sounds = list(
 	/client/proc/play_local_sound,
 	/client/proc/play_sound,
-	/client/proc/play_server_sound
+	/client/proc/play_server_sound,
+	/client/proc/play_web_sound,
+	/client/proc/play_z_sound
 	)
 
 var/list/admin_verbs_fun = list(
@@ -153,11 +165,21 @@ var/list/admin_verbs_fun = list(
 	/client/proc/roll_dices,
 	/datum/admins/proc/call_supply_drop,
 	/datum/admins/proc/call_drop_pod,
-	/client/proc/smite,
-	/client/proc/smite_vr, //VOREStation Add,
+//	/client/proc/smite,  //Replaced by player_effects
+	/client/proc/player_effects,
 	/client/proc/admin_lightning_strike,
 	/client/proc/resize, //VOREStation Add,
-	/client/proc/cmd_admin_droppod_deploy
+	/client/proc/tgui_admin_lists, //CHOMPStation Add
+	/client/proc/cmd_admin_droppod_deploy,
+	/client/proc/adminorbit, //VOREStation Add
+	/client/proc/add_mob_for_narration,	//VOREStation Add
+	/client/proc/remove_mob_for_narration,	//VOREStation Add
+	/client/proc/narrate_mob,	//VOREStation Add
+	/client/proc/narrate_mob_args, //VOREStation Add
+	/client/proc/getPlayerStatus, //VORESTation Add
+	/client/proc/manage_event_triggers,
+	/client/proc/fake_pdaconvos
+
 	)
 
 var/list/admin_verbs_spawn = list(
@@ -166,6 +188,7 @@ var/list/admin_verbs_spawn = list(
 	/datum/admins/proc/check_custom_items,
 	/datum/admins/proc/spawn_plant,
 	/datum/admins/proc/spawn_atom,		//allows us to spawn instances,
+	/datum/admins/proc/spawn_mail,	// CHOMPStation Add
 	/client/proc/cmd_admin_droppod_spawn,
 	/client/proc/respawn_character,
 	/client/proc/spawn_character_mob,  //VOREStation Add,
@@ -173,7 +196,12 @@ var/list/admin_verbs_spawn = list(
 	/client/proc/spawn_chemdisp_cartridge,
 	/client/proc/map_template_load,
 	/client/proc/map_template_upload,
-	/client/proc/map_template_load_on_new_z
+	/client/proc/map_template_load_on_new_z,
+	/client/proc/eventkit_open_mob_spawner,
+	/client/proc/generic_structure, //VOREStation Add
+	/client/proc/generic_item, //VOREStation Add
+	/client/proc/create_gm_message,
+	/client/proc/remove_gm_message
 	)
 
 var/list/admin_verbs_server = list(
@@ -207,6 +235,7 @@ var/list/admin_verbs_server = list(
 	)
 
 var/list/admin_verbs_debug = list(
+	/client/proc/reload_configuration, // CHOMPEdit
 	/client/proc/getruntimelog,                     //allows us to access runtime logs to somebody,
 	/client/proc/cmd_admin_list_open_jobs,
 	/client/proc/Debug2,
@@ -223,7 +252,7 @@ var/list/admin_verbs_debug = list(
 	/client/proc/cmd_debug_tog_aliens,
 	/client/proc/cmd_display_del_log,
 	/client/proc/cmd_display_init_log,
-	/client/proc/cmd_display_overlay_log,
+	// /client/proc/cmd_display_overlay_log,
 	/client/proc/air_report,
 	/client/proc/reload_admins,
 	/client/proc/reload_eventMs,
@@ -243,7 +272,6 @@ var/list/admin_verbs_debug = list(
 	/client/proc/jumptomob,
 	/client/proc/jumptocoord,
 	/client/proc/dsay,
-	/client/proc/toggle_debug_logs,
 	/client/proc/admin_ghost,			//allows us to ghost/reenter body at will,
 	/datum/admins/proc/show_player_panel,	//shows an interface for individual players, with various links (links require additional flags, //VOREStation Add,
 	/client/proc/player_panel_new, //shows an interface for all players, with links to various panels, //VOREStation Add,
@@ -260,7 +288,12 @@ var/list/admin_verbs_debug = list(
 	/datum/admins/proc/change_time,
 	/client/proc/admin_give_modifier,
 	/client/proc/simple_DPS,
-	/datum/admins/proc/view_feedback
+	/datum/admins/proc/view_feedback,
+	/client/proc/stop_sounds,
+	/datum/admins/proc/quick_nif, //CHOMPStation Add,
+	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
+	/client/proc/reload_jobwhitelist, //ChompADD
+	/client/proc/reload_alienwhitelist //ChompADD
 	)
 
 var/list/admin_verbs_paranoid_debug = list(
@@ -307,6 +340,7 @@ var/list/admin_verbs_hideable = list(
 	/client/proc/play_local_sound,
 	/client/proc/play_sound,
 	/client/proc/play_server_sound,
+	/client/proc/play_web_sound,
 	/client/proc/object_talk,
 	/datum/admins/proc/cmd_admin_dress,
 	/client/proc/cmd_admin_gib_self,
@@ -356,7 +390,8 @@ var/list/admin_verbs_hideable = list(
 	/proc/possess,
 	/proc/release,
 	/datum/admins/proc/set_uplink, //VOREStation Add,
-	/datum/admins/proc/set_tcrystals
+	/datum/admins/proc/set_tcrystals,
+	/client/proc/stop_sounds
 	)
 var/list/admin_verbs_mod = list(
 	/client/proc/cmd_admin_pm_context,	//right-click adminPM interface,
@@ -384,7 +419,6 @@ var/list/admin_verbs_mod = list(
 	/client/proc/check_antagonists,
 	/client/proc/aooc,
 	/client/proc/jobbans,
-	/client/proc/toggle_attack_logs,
 	/client/proc/cmd_admin_subtle_message, 	//send an message to somebody as a 'voice in their head',
 	/datum/admins/proc/paralyze_mob,
 	/client/proc/cmd_admin_direct_narrate,
@@ -394,7 +428,11 @@ var/list/admin_verbs_mod = list(
 	/client/proc/getserverlog,			//allows us to fetch server logs (diary) for other days,
 	/datum/admins/proc/view_persistent_data,
 	/datum/admins/proc/view_txt_log,	//shows the server log (diary) for today,
-	/datum/admins/proc/view_atk_log		//shows the server combat-log, doesn't do anything presently,
+	/datum/admins/proc/view_atk_log,		//shows the server combat-log, doesn't do anything presently,
+	/client/proc/start_vote,
+	/datum/admins/proc/quick_nif, //CHOMPStation Add,
+	/client/proc/reload_jobwhitelist, //ChompADD
+	/client/proc/reload_alienwhitelist //ChompADD
 )
 
 var/list/admin_verbs_event_manager = list(
@@ -495,6 +533,7 @@ var/list/admin_verbs_event_manager = list(
 	/client/proc/check_ai_laws,                     //shows AI and borg laws,
 	/client/proc/rename_silicon,            //properly renames silicons,
 	/client/proc/manage_silicon_laws,       // Allows viewing and editing silicon laws. ,
+	/client/proc/modify_robot,
 	/client/proc/check_antagonists,
 	/client/proc/admin_memo,                        //admin memo system. show/delete/write. +SERVER needed to delete admin memos of others,
 	/client/proc/dsay,                                      //talk in deadchat using our ckey/fakekey,
@@ -518,9 +557,7 @@ var/list/admin_verbs_event_manager = list(
 	/client/proc/change_human_appearance_admin,     // Allows an admin to change the basic appearance of human-based mobs ,
 	/client/proc/change_human_appearance_self,      // Allows the human-based mob itself change its basic appearance ,
 	/client/proc/change_security_level,
-	/client/proc/makePAI,
-	/client/proc/toggle_debug_logs,
-	/client/proc/toggle_attack_logs,
+	/client/proc/makepAI,
 	/datum/admins/proc/paralyze_mob,
 	/client/proc/fixatmos,
 	/datum/admins/proc/sendFax,
@@ -537,33 +574,39 @@ var/list/admin_verbs_event_manager = list(
 	/client/proc/cmd_admin_delete,		//delete an instance/object/mob/etc,
 	/client/proc/cmd_debug_del_all,
 	/client/proc/toggle_random_events,
-	/client/proc/modify_server_news
-
+	/client/proc/modify_server_news,
+	/client/proc/toggle_spawning_with_recolour,
+	/client/proc/start_vote,
+	/datum/admins/proc/quick_nif, //CHOMPStation Add,
+	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
+	/client/proc/reload_jobwhitelist, //ChompADD
+	/client/proc/reload_alienwhitelist //ChompADD
 )
 
 /client/proc/add_admin_verbs()
 	if(holder)
-		verbs += admin_verbs_default
-		if(holder.rights & R_BUILDMODE)		verbs += /client/proc/togglebuildmodeself
-		if(holder.rights & R_ADMIN)			verbs += admin_verbs_admin
-		if(holder.rights & R_BAN)			verbs += admin_verbs_ban
-		if(holder.rights & R_FUN)			verbs += admin_verbs_fun
-		if(holder.rights & R_SERVER)		verbs += admin_verbs_server
+		add_verb(src, admin_verbs_default)
+		if(holder.rights & R_BUILDMODE)		add_verb(src, /client/proc/togglebuildmodeself)
+		if(holder.rights & R_ADMIN)			add_verb(src, admin_verbs_admin)
+		if(holder.rights & R_BAN)			add_verb(src, admin_verbs_ban)
+		if(holder.rights & R_FUN)			add_verb(src, admin_verbs_fun)
+		if(holder.rights & R_SERVER)		add_verb(src, admin_verbs_server)
 		if(holder.rights & R_DEBUG)
-			verbs += admin_verbs_debug
-			if(config.debugparanoid && !(holder.rights & R_ADMIN))
-				verbs.Remove(admin_verbs_paranoid_debug)			//Right now it's just callproc but we can easily add others later on.
-		if(holder.rights & R_POSSESS)		verbs += admin_verbs_possess
-		if(holder.rights & R_PERMISSIONS)	verbs += admin_verbs_permissions
-		if(holder.rights & R_STEALTH)		verbs += /client/proc/stealth
-		if(holder.rights & R_REJUVINATE)	verbs += admin_verbs_rejuv
-		if(holder.rights & R_SOUNDS)		verbs += admin_verbs_sounds
-		if(holder.rights & R_SPAWN)			verbs += admin_verbs_spawn
-		if(holder.rights & R_MOD)			verbs += admin_verbs_mod
-		if(holder.rights & R_EVENT)			verbs += admin_verbs_event_manager
+			add_verb(src, admin_verbs_debug)
+			if(CONFIG_GET(flag/debugparanoid) && !(holder.rights & R_ADMIN))
+				remove_verb(src, admin_verbs_paranoid_debug)			//Right now it's just callproc but we can easily add others later on.
+		if(holder.rights & R_POSSESS)		add_verb(src, admin_verbs_possess)
+		if(holder.rights & R_PERMISSIONS)	add_verb(src, admin_verbs_permissions)
+		if(holder.rights & R_STEALTH)		add_verb(src, /client/proc/stealth)
+		if(holder.rights & R_REJUVINATE)	add_verb(src, admin_verbs_rejuv)
+		if(holder.rights & R_SOUNDS)		add_verb(src, admin_verbs_sounds)
+		if(holder.rights & R_SPAWN)			add_verb(src, admin_verbs_spawn)
+		if(holder.rights & R_MOD)			add_verb(src, admin_verbs_mod)
+		if(holder.rights & R_EVENT)			add_verb(src, admin_verbs_event_manager)
 
+//CHOMPEdit Begin
 /client/proc/remove_admin_verbs()
-	verbs.Remove(
+	remove_verb(src, list(
 		admin_verbs_default,
 		/client/proc/togglebuildmodeself,
 		admin_verbs_admin,
@@ -578,4 +621,5 @@ var/list/admin_verbs_event_manager = list(
 		admin_verbs_sounds,
 		admin_verbs_spawn,
 		debug_verbs
-		)
+		))
+//CHOMPEdit End

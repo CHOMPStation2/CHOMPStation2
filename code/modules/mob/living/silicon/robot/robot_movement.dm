@@ -1,24 +1,26 @@
 /mob/living/silicon/robot/get_jetpack()
 	if(module)
-		for(var/obj/item/weapon/tank/jetpack/J in module.modules)
+		for(var/obj/item/tank/jetpack/J in module.modules)
 			return J
 
 /mob/living/silicon/robot/Check_Shoegrip()
 	return module && module.no_slip
 
+/* CHOMPedit: Nuking slipping.
 /mob/living/silicon/robot/Process_Spaceslipping(var/prob_slip)
-	var/obj/item/weapon/tank/jetpack/thrust = get_jetpack()
+	var/obj/item/tank/jetpack/thrust = get_jetpack()
 	if(thrust?.can_thrust(0.01))
 		return 0
 	if(module && module.no_slip)
 		return 0
 	..(prob_slip)
+*/// CHOMPedit end.
 
 /mob/living/silicon/robot/Process_Spacemove(var/check_drift = 0)
 	if(..())//Can move due to other reasons, don't use jetpack fuel
 		return 1
 
-	var/obj/item/weapon/tank/jetpack/thrust = get_jetpack()
+	var/obj/item/tank/jetpack/thrust = get_jetpack()
 	if(thrust && (!check_drift || (check_drift && thrust.stabilization_on)) && thrust.do_thrust(0.01))
 		inertia_dir = 0
 		return 1
@@ -34,8 +36,10 @@
 
 	if(get_restraining_bolt())	// Borgs with Restraining Bolts move slower.
 		. += 1
+	if(nutrition > 1000) //CHOMPAdd
+		. += nutrition / 2000 //CHOMPAdd
 
-	. += config.robot_delay
+	. += CONFIG_GET(number/robot_delay)
 
 	. += ..()
 
@@ -55,19 +59,19 @@
 		return
 
 	//Borgs and drones can use their mining bags ~automagically~ if they're deployed in a slot. Only mining bags, as they're optimized for mass use.
-	if(istype(module_state_1, /obj/item/weapon/storage/bag/ore) || istype(module_state_2, /obj/item/weapon/storage/bag/ore) || istype(module_state_3, /obj/item/weapon/storage/bag/ore))
-		var/obj/item/weapon/storage/bag/ore/B = null
-		if(istype(module_state_1, /obj/item/weapon/storage/bag/ore)) //First orebag has priority, if they for some reason have multiple.
+	if(istype(module_state_1, /obj/item/storage/bag/ore) || istype(module_state_2, /obj/item/storage/bag/ore) || istype(module_state_3, /obj/item/storage/bag/ore))
+		var/obj/item/storage/bag/ore/B = null
+		if(istype(module_state_1, /obj/item/storage/bag/ore)) //First orebag has priority, if they for some reason have multiple.
 			B = module_state_1
-		else if(istype(module_state_2, /obj/item/weapon/storage/bag/ore))
+		else if(istype(module_state_2, /obj/item/storage/bag/ore))
 			B = module_state_2
-		else if(istype(module_state_3, /obj/item/weapon/storage/bag/ore))
+		else if(istype(module_state_3, /obj/item/storage/bag/ore))
 			B = module_state_3
 		var/turf/tile = loc
 		if(isturf(tile))
 			B.gather_all(tile, src, 1) //Shhh, unless the bag fills, don't spam the borg's chat with stuff that's going on every time they move!
 
-	if(istype(module, /obj/item/weapon/robot_module/robot/janitor) && isturf(loc))
+	if(scrubbing && isturf(loc))
 		var/turf/tile = loc
 		tile.clean_blood()
 		if (istype(tile, /turf/simulated))
@@ -96,4 +100,4 @@
 						cleaned_human.shoes.clean_blood()
 						cleaned_human.update_inv_shoes(0)
 					cleaned_human.clean_blood(1)
-					to_chat(cleaned_human, "<span class='warning'>[src] cleans your face!</span>")
+					to_chat(cleaned_human, span_warning("[src] cleans your face!"))

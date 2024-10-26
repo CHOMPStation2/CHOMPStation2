@@ -1,7 +1,8 @@
-/**
- * tgui external
+/*!
+ * External tgui definitions, such as src_object APIs.
  *
- * Contains all external tgui declarations.
+ * Copyright (c) 2020 Aleksej Komarov
+ * SPDX-License-Identifier: MIT
  */
 
 /**
@@ -35,6 +36,7 @@
  * public
  *
  * Static Data to be sent to the UI.
+ *
  * Static data differs from normal data in that it's large data that should be
  * sent infrequently. This is implemented optionally for heavy uis that would
  * be sending a lot of redundant data frequently. Gets squished into one
@@ -67,6 +69,17 @@
 /**
  * public
  *
+ * Will force an update on static data for all viewers.
+ * Should be done manually whenever something happens to
+ * change static data.
+ */
+/datum/proc/update_static_data_for_all_viewers()
+	for (var/datum/tgui/window as anything in open_tguis)
+		window.send_full_update()
+
+/**
+ * public
+ *
  * Called on a UI when the UI receieves a href.
  * Think of this as Topic().
  *
@@ -81,6 +94,17 @@
 	// If UI is not interactive or usr calling Topic is not the UI user, bail.
 	if(!ui || ui.status != STATUS_INTERACTIVE)
 		return TRUE
+
+/**
+ * public
+ *
+ * Called on a UI when the UI crashed.
+ *
+ * required payload list A list of the payload supposed to be set on the regular UI.
+ */
+/datum/proc/tgui_fallback(list/payload)
+	SHOULD_CALL_PARENT(TRUE)
+	SEND_SIGNAL(src, COMSIG_UI_FALLBACK, usr)
 
 /**
  * public
@@ -118,7 +142,6 @@
  * Associative list of JSON-encoded shared states that were set by
  * tgui clients.
  */
-
 /datum/var/list/tgui_shared_states
 
 /**
@@ -160,7 +183,7 @@
 /client/verb/tgui_fix_white()
 	set desc = "Only use this if you have a broken TGUI window occupying your screen!"
 	set name = "Fix TGUI"
-	set category = "OOC"
+	set category = "OOC.Debug" //CHOMPEdit
 
 	if(alert(src, "Only use this verb if you have a white TGUI window stuck on your screen.", "Fix TGUI", "Continue", "Nevermind") != "Continue") // Not tgui_alert since we're fixing tgui
 		return
@@ -182,8 +205,7 @@
 	// Name the verb, and hide it from the user panel.
 	set name = "uiclose"
 	set hidden = TRUE
-
-	var/mob/user = src && src.mob
+	var/mob/user = src?.mob
 	if(!user)
 		return
 	// Close all tgui datums based on window_id.

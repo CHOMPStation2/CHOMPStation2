@@ -35,11 +35,11 @@
 	icon_scale_x = 1.5
 	icon_scale_y = 1.5
 
-	faction = "crabs"
+	faction = FACTION_CRABS
 
 	maxHealth = 200
 	health = 200
-	movement_cooldown = 10
+	movement_cooldown = 4
 	movement_sound = 'sound/weapons/heavysmash.ogg'
 	movement_shake_radius = 5
 
@@ -72,7 +72,7 @@
 	attack_edge = TRUE
 	melee_attack_delay = 1 SECOND
 
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/crabmeat
+	meat_type = /obj/item/reagent_containers/food/snacks/crabmeat
 	meat_amount = 6
 
 	response_help  = "pets"
@@ -88,6 +88,7 @@
 	say_list_type = /datum/say_list/crab
 
 	var/weaken_amount = 2 // Be careful with this number. High values will equal a permastun.
+	
 
 // Stuns the thing that got hit briefly.
 /mob/living/simple_mob/animal/sif/hooligan_crab/apply_melee_effects(atom/A)
@@ -100,9 +101,9 @@
 		if(was_stunned) // Try to prevent chain-stuns by having them thrown.
 			var/throwdir = get_dir(src, L)
 			L.throw_at(get_edge_target_turf(L, throwdir), 5, 1, src)
-			visible_message(span("danger", "\The [src] hurls \the [L] away!"))
+			visible_message(span_danger("\The [src] hurls \the [L] away!"))
 		else
-			visible_message(span("danger", "\The [src] crushes \the [L]!"))
+			visible_message(span_danger("\The [src] crushes \the [L]!"))
 
 // The AI for hooligan crabs. Follows people for awhile.
 /datum/ai_holder/simple_mob/melee/hooligan
@@ -119,5 +120,5 @@
 		if(prob(10))
 			for(var/mob/living/L in hearers(holder))
 				if(!istype(L, holder)) // Don't follow other hooligan crabs.
-					holder.visible_message("<b>\The [holder]</b> starts to follow \the [L].")
+					holder.visible_message(span_infoplain(span_bold("\The [holder]") + " starts to follow \the [L]."))
 					set_follow(L, rand(20 SECONDS, 40 SECONDS))

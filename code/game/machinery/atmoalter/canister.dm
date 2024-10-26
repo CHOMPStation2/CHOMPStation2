@@ -168,7 +168,12 @@ update_flag
 
 	if (src.health <= 10)
 		var/atom/location = src.loc
+		var/obj/machinery/atmospherics/portables_connector/port = locate() in location // CHOMPEdit - Finds if there's a port
 		location.assume_air(air_contents)
+
+		if(port && anchored) // CHOMPEdit - if it blew up, frees up the port
+			disconnect()
+			anchored = 0
 
 		src.destroyed = 1
 		playsound(src, 'sound/effects/spray.ogg', 10, 1, -3)
@@ -238,14 +243,30 @@ update_flag
 		healthcheck()
 	..()
 
-/obj/machinery/portable_atmospherics/canister/attackby(var/obj/item/weapon/W as obj, var/mob/user as mob)
-	if(!W.is_wrench() && !istype(W, /obj/item/weapon/tank) && !istype(W, /obj/item/device/analyzer) && !istype(W, /obj/item/device/pda))
-		visible_message("<span class='warning'>\The [user] hits \the [src] with \a [W]!</span>")
+/obj/machinery/portable_atmospherics/canister/attackby(var/obj/item/W as obj, var/mob/user as mob)
+	if(W.has_tool_quality(TOOL_WELDER)) //Vorestart: Deconstructable Canisters
+		var/obj/item/weldingtool/WT = W.get_welder()
+		if(!WT.remove_fuel(0, user))
+			to_chat(user, "The welding tool must be on to complete this task.")
+			return
+		if(air_contents.return_pressure() > 1 && !destroyed) // Empty or broken cans are able to be deconstructed
+			to_chat(user, span_warning("\The [src]'s internal pressure is too high! Empty the canister before attempting to weld it apart."))
+			return
+		playsound(src, WT.usesound, 50, 1)
+		if(do_after(user, 20 * WT.toolspeed))
+			if(!src || !WT.isOn()) return
+			to_chat(user, span_notice("You deconstruct the [src]."))
+			new /obj/item/stack/material/steel( src.loc, 10)
+			qdel(src)
+			return
+	//Voreend
+	if(!W.has_tool_quality(TOOL_WRENCH) && !istype(W, /obj/item/tank) && !istype(W, /obj/item/analyzer) && !istype(W, /obj/item/pda))
+		visible_message(span_warning("\The [user] hits \the [src] with \a [W]!"))
 		src.health -= W.force
 		src.add_fingerprint(user)
 		healthcheck()
 
-	if(istype(user, /mob/living/silicon/robot) && istype(W, /obj/item/weapon/tank/jetpack))
+	if(istype(user, /mob/living/silicon/robot) && istype(W, /obj/item/tank/jetpack))
 		var/datum/gas_mixture/thejetpack = W:air_contents
 		var/env_pressure = thejetpack.return_pressure()
 		var/pressure_delta = min(10*ONE_ATMOSPHERE - env_pressure, (air_contents.return_pressure() - env_pressure)/2)
@@ -332,7 +353,7 @@ update_flag
 				pressure = 10*ONE_ATMOSPHERE
 				. = TRUE
 			else if(pressure == "input")
-				pressure = input(usr, "New release pressure ([ONE_ATMOSPHERE/10]-[10*ONE_ATMOSPHERE] kPa):", name, release_pressure) as num|null
+				pressure = tgui_input_number(usr, "New release pressure ([ONE_ATMOSPHERE/10]-[10*ONE_ATMOSPHERE] kPa):", name, release_pressure, 10*ONE_ATMOSPHERE, ONE_ATMOSPHERE/10)
 				if(!isnull(pressure) && !..())
 					. = TRUE
 			else if(text2num(pressure) != null)
@@ -343,14 +364,14 @@ update_flag
 		if("valve")
 			if(valve_open)
 				if(holding)
-					release_log += "Valve was <b>closed</b> by [usr] ([usr.ckey]), stopping the transfer into the [holding]<br>"
+					release_log += "Valve was " + span_bold("closed") + " by [usr] ([usr.ckey]), stopping the transfer into the [holding]<br>"
 				else
-					release_log += "Valve was <b>closed</b> by [usr] ([usr.ckey]), stopping the transfer into the <font color='red'><b>air</b></font><br>"
+					release_log += "Valve was " + span_bold("closed") + " by [usr] ([usr.ckey]), stopping the transfer into the " + span_red(span_bold("air")) + "<br>"
 			else
 				if(holding)
-					release_log += "Valve was <b>opened</b> by [usr] ([usr.ckey]), starting the transfer into the [holding]<br>"
+					release_log += "Valve was " + span_bold("opened") + " by [usr] ([usr.ckey]), starting the transfer into the [holding]<br>"
 				else
-					release_log += "Valve was <b>opened</b> by [usr] ([usr.ckey]), starting the transfer into the <font color='red'><b>air</b></font><br>"
+					release_log += "Valve was " + span_bold("opened") + " by [usr] ([usr.ckey]), starting the transfer into the " + span_red(span_bold("air")) + "<br>"
 					log_open()
 			valve_open = !valve_open
 			. = TRUE
@@ -358,8 +379,8 @@ update_flag
 			if(holding)
 				if(valve_open)
 					valve_open = 0
-					release_log += "Valve was <b>closed</b> by [usr] ([usr.ckey]), stopping the transfer into the [holding]<br>"
-				if(istype(holding, /obj/item/weapon/tank))
+					release_log += "Valve was " + span_bold("closed") + " by [usr] ([usr.ckey]), stopping the transfer into the [holding]<br>"
+				if(istype(holding, /obj/item/tank))
 					holding.manipulated_by = usr.real_name
 				holding.loc = loc
 				holding = null
@@ -368,21 +389,21 @@ update_flag
 	add_fingerprint(usr)
 	update_icon()
 
-/obj/machinery/portable_atmospherics/canister/phoron/New()
+/obj/machinery/portable_atmospherics/canister/phoron/Initialize() //ChompEDIT New --> Initialize
 	..()
 
 	src.air_contents.adjust_gas("phoron", MolesForPressure())
 	src.update_icon()
 	return 1
 
-/obj/machinery/portable_atmospherics/canister/oxygen/New()
+/obj/machinery/portable_atmospherics/canister/oxygen/Initialize() //ChompEDIT New --> Initialize
 	..()
 
 	src.air_contents.adjust_gas("oxygen", MolesForPressure())
 	src.update_icon()
 	return 1
 
-/obj/machinery/portable_atmospherics/canister/oxygen/prechilled/New()
+/obj/machinery/portable_atmospherics/canister/oxygen/prechilled/Initialize() //ChompEDIT New --> Initialize
 	..()
 
 	src.air_contents.adjust_gas("oxygen", MolesForPressure())
@@ -390,7 +411,7 @@ update_flag
 	src.update_icon()
 	return 1
 
-/obj/machinery/portable_atmospherics/canister/nitrous_oxide/New()
+/obj/machinery/portable_atmospherics/canister/nitrous_oxide/Initialize() //ChompEDIT New --> Initialize
 	..()
 
 	air_contents.adjust_gas("nitrous_oxide", MolesForPressure())
@@ -407,7 +428,7 @@ update_flag
 		air_contents = new
 	return 1
 
-/obj/machinery/portable_atmospherics/canister/nitrogen/New()
+/obj/machinery/portable_atmospherics/canister/nitrogen/Initialize() //ChompEDIT New --> Initialize
 
 	..()
 
@@ -415,14 +436,14 @@ update_flag
 	src.update_icon()
 	return 1
 
-/obj/machinery/portable_atmospherics/canister/carbon_dioxide/New()
+/obj/machinery/portable_atmospherics/canister/carbon_dioxide/Initialize() //ChompEDIT New --> Initialize
 	..()
 	src.air_contents.adjust_gas("carbon_dioxide", MolesForPressure())
 	src.update_icon()
 	return 1
 
 
-/obj/machinery/portable_atmospherics/canister/air/New()
+/obj/machinery/portable_atmospherics/canister/air/Initialize() //ChompEDIT New --> Initialize
 	..()
 	var/list/air_mix = StandardAirMix()
 	src.air_contents.adjust_multi("oxygen", air_mix["oxygen"], "nitrogen", air_mix["nitrogen"])
@@ -432,19 +453,19 @@ update_flag
 
 //R-UST port
 // Special types used for engine setup admin verb, they contain double amount of that of normal canister.
-/obj/machinery/portable_atmospherics/canister/nitrogen/engine_setup/New()
+/obj/machinery/portable_atmospherics/canister/nitrogen/engine_setup/Initialize() //ChompEDIT New --> Initialize
 	..()
 	src.air_contents.adjust_gas("nitrogen", MolesForPressure())
 	src.update_icon()
 	return 1
 
-/obj/machinery/portable_atmospherics/canister/carbon_dioxide/engine_setup/New()
+/obj/machinery/portable_atmospherics/canister/carbon_dioxide/engine_setup/Initialize() //ChompEDIT New --> Initialize
 	..()
 	src.air_contents.adjust_gas("carbon_dioxide", MolesForPressure())
 	src.update_icon()
 	return 1
 
-/obj/machinery/portable_atmospherics/canister/phoron/engine_setup/New()
+/obj/machinery/portable_atmospherics/canister/phoron/engine_setup/Initialize() //ChompEDIT New --> Initialize
 	..()
 	src.air_contents.adjust_gas("phoron", MolesForPressure())
 	src.update_icon()

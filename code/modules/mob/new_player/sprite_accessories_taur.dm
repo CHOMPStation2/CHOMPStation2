@@ -1,5 +1,12 @@
+/datum/sprite_accessory/tail
+    var/vore_tail_sprite_variant = ""
+    var/belly_variant_when_loaf = FALSE
+    var/fullness_icons = 0
+    var/struggle_anim = FALSE
+    var/bellies_icon_path = 'modular_chomp/icons/mob/vore/Taur_Bellies.dmi' //CHOMPEdit
+
 /datum/riding/taur
-	keytype = /obj/item/weapon/material/twohanded/riding_crop // Crack!
+	keytype = /obj/item/material/twohanded/riding_crop // Crack!
 	nonhuman_key_exemption = FALSE	// If true, nonhumans who can't hold keys don't need them, like borgs and simplemobs.
 	key_name = "a riding crop"		// What the 'keys' for the thing being rided on would be called.
 	only_one_driver = TRUE			// If true, only the person in 'front' (first on list of riding mobs) can drive.
@@ -21,7 +28,7 @@
 
 /datum/riding/taur/force_dismount(mob/M)
 	. = ..()
-	ridden.visible_message("<span class='notice'>[M] stops riding [ridden]!</span>")
+	ridden.visible_message(span_notice("[M] stops riding [ridden]!"))
 
 //Hoooo boy.
 /datum/riding/taur/get_offsets(pass_index) // list(dir = x, y, layer)
@@ -61,7 +68,7 @@
 	if(M in buckled_mobs)
 		return FALSE
 //	if(M.size_multiplier > size_multiplier * 1.2)
-//		to_chat(M,"<span class='warning'>This isn't a pony show! You need to be bigger for them to ride.</span>")
+//		to_chat(M,span_warning("This isn't a pony show! You need to be bigger for them to ride."))
 //		return FALSE
 	if(M.loc != src.loc)
 		if(M.Adjacent(src))
@@ -70,7 +77,7 @@
 	var/mob/living/carbon/human/H = M
 
 	if(istaurtail(H.tail_style))
-		to_chat(src,"<span class='warning'>Too many legs. TOO MANY LEGS!!</span>")
+		to_chat(src,span_warning("Too many legs. TOO MANY LEGS!!"))
 		return FALSE
 
 	. = ..()
@@ -83,7 +90,7 @@
 
 /mob/living/carbon/human/proc/taur_mount(var/mob/living/M in living_mobs(1))
 	set name = "Taur Mount/Dismount"
-	set category = "Abilities"
+	set category = "Abilities.General" //CHOMPEdit
 	set desc = "Let people ride on you."
 
 	if(LAZYLEN(buckled_mobs))
@@ -96,10 +103,10 @@
 	if(!can_buckle || !istype(M) || !M.Adjacent(src) || M.buckled)
 		return
 	if(buckle_mob(M))
-		visible_message("<span class='notice'>[M] starts riding [name]!</span>")
+		visible_message(span_notice("[M] starts riding [name]!"))
 
 /mob/living/carbon/human/attack_hand(mob/user as mob)
-	if(LAZYLEN(buckled_mobs))
+	if(LAZYLEN(buckled_mobs) && riding_datum) //CHOMPEdit
 		//We're getting off!
 		if(user in buckled_mobs)
 			riding_datum.force_dismount(user)
@@ -191,6 +198,11 @@
 	suit_sprites = 'icons/mob/taursuits_horse.dmi'
 	icon_sprite_tag = "horse"
 
+/datum/sprite_accessory/tail/taur/horse/horse_2c
+	name = "Horse & colorable tail (Taur)"
+	extra_overlay = "horse_markings"
+	//icon_sprite_tag = "wolf2c"
+
 /datum/sprite_accessory/tail/taur/horse/synthhorse
 	name = "SynthHorse dual-color (Taur)"
 	icon_state = "synthhorse_s"
@@ -280,6 +292,11 @@
 	suit_sprites = 'icons/mob/taursuits_slug.dmi'
 	icon_sprite_tag = "slug"
 
+/datum/sprite_accessory/tail/taur/slug/snail
+	name = "Snail (Taur)"
+	icon_state = "slug_s"
+	extra_overlay = "snail_shell_marking"
+
 /datum/sprite_accessory/tail/taur/frog
 	name = "Frog (Taur)"
 	icon_state = "frog_s"
@@ -328,3 +345,21 @@
 	icon_state = "mermaid_s"
 	can_ride = 0
 	icon_sprite_tag = "mermaid"
+
+/datum/sprite_accessory/tail/taur/noodle
+	name = "Eastern Dragon (Taur)"
+	icon_state = "noodle_s"
+	extra_overlay = "noodle_markings"
+	suit_sprites = 'icons/mob/taursuits_noodle.dmi'
+	clip_mask_state = "taur_clip_mask_noodle"
+	icon_sprite_tag = "noodle"
+
+/datum/sprite_accessory/tail/taur/zorgoia
+	name = "Zorgoia (Taur)"
+	icon = 'icons/mob/human_races/sprite_accessories/taurs.dmi'
+	icon_state = "zorgoia"
+	extra_overlay = "zorgoia_fluff"
+
+/datum/sprite_accessory/tail/taur/zorgoia/fat
+	name = "Zorgoia (Fat Taur)"
+	extra_overlay = "zorgoia_fat"

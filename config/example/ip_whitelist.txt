@@ -1,0 +1,4 @@
+# this file is for exempting certain groups of keys from recieving the "you're already in the game go away" message when they connect with the same IP (ie, living together)
+# each group should be on the same line, separated by a comma (and nothing else), and each group should be on a separate line
+# EXAMPLE (remove the # and it would be valid):
+#somekey1,somekey2,somekey3

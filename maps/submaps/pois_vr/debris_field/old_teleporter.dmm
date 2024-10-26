@@ -31,13 +31,12 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/airless,
 /area/submap/debrisfield/old_tele)
 "g" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/simulated/floor/airless,
 /area/submap/debrisfield/old_tele)
 "h" = (
@@ -63,13 +62,11 @@
 /turf/simulated/floor/airless,
 /area/submap/debrisfield/old_tele)
 "m" = (
-/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/mechanical,
 /turf/simulated/floor/airless,
 /area/submap/debrisfield/old_tele)
 "n" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/airless,

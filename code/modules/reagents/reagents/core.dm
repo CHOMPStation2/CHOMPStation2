@@ -46,12 +46,12 @@
 	var/effective_dose = dose
 	if(issmall(M)) effective_dose *= 2
 
-	var/is_vampire = 0 //VOREStation Edit START
+	var/is_vampire = FALSE //VOREStation Edit START
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
-		if(H.species.organic_food_coeff == 0)
-			H.adjust_nutrition(removed)
-			is_vampire = 1 //VOREStation Edit END
+		if(H.species.bloodsucker)
+			H.adjust_nutrition(removed*30)
+			is_vampire = TRUE //VOREStation Edit END
 	if(alien == IS_SLIME)	// Treat it like nutriment for the jello, but not equivalent.
 		if(data["species"] == M.species.name)	// Unless it's Promethean goo, then refill this one's goo.
 			M.inject_blood(src, volume * volume_mod)
@@ -61,14 +61,14 @@
 		M.heal_organ_damage(0.2 * removed * volume_mod, 0)	// More 'effective' blood means more usable material.
 		M.adjust_nutrition(20 * removed * volume_mod)
 		M.add_chemical_effect(CE_BLOODRESTORE, 4 * removed)
-		M.adjustToxLoss(removed / 2)	// Still has some water in the form of plasma.
+		//M.adjustToxLoss(removed / 2)	// Still has some water in the form of plasma. | CHOMP EDIT - No. Soda does not kill a prommie, their own blood should not either.
 		return
 
 	if(effective_dose > 5)
-		if(is_vampire == 0) //VOREStation Edit.
+		if(!is_vampire) //VOREStation Edit.
 			M.adjustToxLoss(removed) //VOREStation Edit.
 	if(effective_dose > 15)
-		if(is_vampire == 0) //VOREStation Edit.
+		if(!is_vampire) //VOREStation Edit.
 			M.adjustToxLoss(removed) //VOREStation Edit.
 	if(data && data["virus2"])
 		var/list/vlist = data["virus2"]
@@ -156,6 +156,7 @@
 	..()
 
 #define WATER_LATENT_HEAT 19000 // How much heat is removed when applied to a hot turf, in J/unit (19000 makes 120 u of water roughly equivalent to 4L)
+
 /datum/reagent/water
 	name = "Water"
 	id = "water"
@@ -189,19 +190,19 @@
 		var/removed_heat = between(0, volume * WATER_LATENT_HEAT, -environment.get_thermal_energy_change(min_temperature))
 		environment.add_thermal_energy(-removed_heat)
 		if (prob(5))
-			T.visible_message("<span class='warning'>The water sizzles as it lands on \the [T]!</span>")
+			T.visible_message(span_warning("The water sizzles as it lands on \the [T]!"))
 
 	else if(volume >= 10)
 		T.wet_floor(1)
 
 /datum/reagent/water/touch_obj(var/obj/O, var/amount)
 	..()
-	if(istype(O, /obj/item/weapon/reagent_containers/food/snacks/monkeycube))
-		var/obj/item/weapon/reagent_containers/food/snacks/monkeycube/cube = O
+	if(istype(O, /obj/item/reagent_containers/food/snacks/monkeycube))
+		var/obj/item/reagent_containers/food/snacks/monkeycube/cube = O
 		if(!cube.wrapped)
 			cube.Expand()
-	else if(istype(O, /obj/item/weapon/reagent_containers/food/snacks/cube))
-		var/obj/item/weapon/reagent_containers/food/snacks/cube/cube = O
+	else if(istype(O, /obj/item/reagent_containers/food/snacks/cube))
+		var/obj/item/reagent_containers/food/snacks/cube/cube = O
 		cube.Expand()
 	else
 		O.water_act(amount / 5)
@@ -213,7 +214,7 @@
 		if(istype(L, /mob/living/simple_mob/slime))
 			var/mob/living/simple_mob/slime/S = L
 			S.adjustToxLoss(15 * amount)
-			S.visible_message("<span class='warning'>[S]'s flesh sizzles where the water touches it!</span>", "<span class='danger'>Your flesh burns in the water!</span>")
+			S.visible_message(span_warning("[S]'s flesh sizzles where the water touches it!"), span_danger("Your flesh burns in the water!"))
 
 		// Then extinguish people on fire.
 		var/needed = max(0,L.fire_stacks) * 5
@@ -229,7 +230,7 @@
 					var/obj/item/clothing/mask/smokable/S = H.wear_mask
 					if(S.lit)
 						S.quench()
-						H.visible_message("<span class='notice'>[H]\'s [S.name] is put out.</span>")
+						H.visible_message(span_notice("[H]\'s [S.name] is put out."))
 
 //YWedit start, readds promethean damage that was removed by vorestation.
 /datum/reagent/water/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
@@ -246,9 +247,11 @@
 
 /datum/reagent/water/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_SLIME && prob(10))
-		M.visible_message("<span class='warning'>[M]'s flesh sizzles where the water touches it!</span>", "<span class='danger'>Your flesh burns in the water!</span>")
+		M.visible_message(span_warning("[M]'s flesh sizzles where the water touches it!"), span_danger("Your flesh burns in the water!"))
 	..()
   //VOREStation Edit End,
+
+#undef WATER_LATENT_HEAT
 
 /datum/reagent/fuel
 	name = "Welding fuel"

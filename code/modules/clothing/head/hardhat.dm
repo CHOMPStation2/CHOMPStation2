@@ -19,7 +19,7 @@
 	armor = list(melee = 30, bullet = 5, laser = 20,energy = 10, bomb = 20, bio = 10, rad = 20)
 	flags_inv = 0
 	siemens_coefficient = 0.9
-	action_button_name = "Toggle Head-light"
+	actions_types = list(/datum/action/item_action/toggle_head_light)
 	w_class = ITEMSIZE_NORMAL
 	ear_protection = 1
 	drop_sound = 'sound/items/drop/helm.ogg'
@@ -76,9 +76,55 @@
 
 /obj/item/clothing/head/hardhat/firefighter/chief
 	name = "chief firefighter helmet"
-	desc = "A helmet with face mask specially designed for firefighting. This one is in the colors of the Chief Engineer. It's airtight and has a port for internals."
+	desc = "A helmet with face mask specially designed for firefighting. This one is in the colors of the " + JOB_CHIEF_ENGINEER + ". It's airtight and has a port for internals."
 	icon_state = "helmet_firefighter_ce"
 	max_heat_protection_temperature = FIRE_HELMET_MAX_HEAT_PROTECTION_TEMPERATURE + 10000
+
+/obj/item/clothing/head/hardhat/old
+	name = "classic hard hat"
+	icon_state = "hardhat0_old_yellow"
+	light_overlay = "hardhat_light_old"
+
+/obj/item/clothing/head/hardhat/orange/old
+	name = "classic orange hard hat"
+	icon_state = "hardhat0_old_orange"
+	light_overlay = "hardhat_light_old"
+
+/obj/item/clothing/head/hardhat/white/old
+	name = "classic sleek hard hat"
+	icon_state = "hardhat0_old_white"
+	light_overlay = "hardhat_light_old"
+
+/obj/item/clothing/head/hardhat/dblue/old
+	name = "classic blue hard hat"
+	icon_state = "hardhat0_old_dblue"
+	light_overlay = "hardhat_light_old"
+
+/obj/item/clothing/head/hardhat/red/old
+	name = "classic fire helmet"
+	icon_state = "hardhat0_old_red"
+	light_overlay = "hardhat_light_old"
+
+/obj/item/clothing/head/hardhat/firefighter/old
+	name = "classic firefighter helmet"
+	icon_state = "helmet_firefighter_old"
+	sprite_sheets = list(
+		SPECIES_TAJARAN = 'icons/inventory/head/mob_tajaran.dmi'
+		)
+
+/obj/item/clothing/head/hardhat/firefighter/atmos/old
+	name = "classic atmospheric firefighter helmet"
+	icon_state = "atmos_fire_old"
+	sprite_sheets = list(
+		SPECIES_TAJARAN = 'icons/inventory/head/mob_tajaran.dmi'
+		)
+
+/obj/item/clothing/head/hardhat/firefighter/chief/old
+	name = "classic chief firefighter helmet"
+	icon_state = "helmet_firefighter_ce_old"
+	sprite_sheets = list(
+		SPECIES_TAJARAN = 'icons/inventory/head/mob_tajaran.dmi'
+		)
 
 /*
  * Ranger Hats

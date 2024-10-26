@@ -11,7 +11,7 @@
 
 	var/list/obj/machinery/am_shielding/linked_shielding
 	var/list/obj/machinery/am_shielding/linked_cores
-	var/obj/item/weapon/am_containment/fueljar
+	var/obj/item/am_containment/fueljar
 	var/update_shield_icons = 0
 	var/stability = 100
 	var/exploding = 0
@@ -140,7 +140,7 @@
 
 /obj/machinery/power/am_control_unit/attackby(obj/item/W, mob/user)
 	if(!istype(W) || !user) return
-	if(W.is_wrench())
+	if(W.has_tool_quality(TOOL_WRENCH))
 		if(!anchored)
 			playsound(src, W.usesound, 75, 1)
 			user.visible_message("[user.name] secures the [src.name] to the floor.", \
@@ -156,12 +156,12 @@
 			src.anchored = FALSE
 			disconnect_from_network()
 		else
-			to_chat(user, "<font color='red'>Once bolted and linked to a shielding unit it the [src.name] is unable to be moved!</font>")
+			to_chat(user, span_red("Once bolted and linked to a shielding unit it the [src.name] is unable to be moved!"))
 		return
 
-	if(istype(W, /obj/item/weapon/am_containment))
+	if(istype(W, /obj/item/am_containment))
 		if(fueljar)
-			to_chat(user, "<font color='red'>There is already a [fueljar] inside!</font>")
+			to_chat(user, span_red("There is already a [fueljar] inside!"))
 			return
 		fueljar = W
 		user.remove_from_mob(W)

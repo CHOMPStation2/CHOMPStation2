@@ -1,12 +1,12 @@
 /mob/living/simple_mob/vore/demon
 	name = "Rift Walker"
-	desc = "A large bipedal creature, body a mix of dark fur and scales. Marks on the creatures body pulse slowly with red light"
+	desc = "A large bipedal creature, its body has a mixture of dark fur and scales. Marks on the creature's body pulse slowly with red light."
 
 	icon_state = "boxfox"
 	icon_living = "boxfox"
 	icon_dead = "dead"
 	icon_rest = "boxfox_rest"
-	icon = 'icons/mob/demon_ch.dmi'
+	icon = 'modular_chomp/icons/mob/demon_ch.dmi'
 	vis_height = 47
 
 	faction = "demon"
@@ -18,7 +18,7 @@
 	has_hands = TRUE
 	seedarkness = FALSE
 	attack_sound = 'sound/misc/demonattack.ogg'
-	has_langs = list(LANGUAGE_GALCOM,LANGUAGE_SHADEKIN,LANGUAGE_CULT)
+	has_langs = list(LANGUAGE_GALCOM,LANGUAGE_DAEMON,LANGUAGE_SHADEKIN,LANGUAGE_CULT)
 
 	melee_damage_lower = 20
 	melee_damage_upper = 15
@@ -58,6 +58,7 @@
 
 	var/enable_autolaugh = FALSE //Whether user controlled mob will laugh when interacting automatically.
 	var/laugh = 'sound/misc/demonlaugh.ogg' //Yknow maybe someone wants a custom laugh, you never know.
+	injury_enrages = TRUE
 
 /mob/living/simple_mob/vore/demon/init_vore()
 	if(!voremob_loaded)
@@ -116,7 +117,7 @@
 
 /mob/living/simple_mob/vore/demon/proc/inject_poison(mob/living/L, target_zone)
 	if(prob(poison_chance))
-		to_chat(L, "<span class='warning'>You feel a tiny prick.</span>")
+		to_chat(L, span_warning("You feel a tiny prick."))
 		L.reagents.add_reagent(poison_type, poison_per_bite)
 
 /mob/living/simple_mob/vore/demon/death()

@@ -5,16 +5,18 @@
 	icon_state = "rod"
 	fire_sound = 'sound/weapons/railgun.ogg'
 	damage = 65
-	stun = 1
-	weaken = 1
+	stun = 0 // CHOMPedit: Guaranteed stuns from a gun bad.
+	weaken = 0 // CHOMPedit: Guaranteed stuns from a gun bad.
 	penetrating = 5
 	armor_penetration = 70
+	hud_state = "alloy_spike"
 
 /obj/item/projectile/bullet/magnetic/slug
 	name = "slug"
 	icon_state = "gauss_silenced"
 	damage = 75
 	armor_penetration = 90
+	hud_state = "alloy_spike"
 
 /obj/item/projectile/bullet/magnetic/flechette
 	name = "flechette"
@@ -22,6 +24,7 @@
 	fire_sound = 'sound/weapons/rapidslice.ogg'
 	damage = 20
 	armor_penetration = 100
+	hud_state = "alloy_spike"
 
 /obj/item/projectile/bullet/magnetic/flechette/small
 	name = "small flechette"
@@ -29,12 +32,23 @@
 	fire_sound = 'sound/weapons/rapidslice.ogg'
 	damage = 12
 	armor_penetration = 100
+	hud_state = "alloy_spike"
+
+/obj/item/projectile/bullet/magnetic/flechette/small/khi
+	name = "small carbyne flechette"
+	icon_state = "flechette"
+	fire_sound = 'sound/weapons/rapidslice.ogg'
+	damage = 18
+	armor_penetration = 100
+	penetrating = 10
+	hud_state = "alloy_spike"
 
 /obj/item/projectile/bullet/magnetic/flechette/hunting
 	name = "shredder slug"
 	armor_penetration = 30
 	SA_bonus_damage = 40
 	SA_vulnerability = SA_ANIMAL
+	hud_state = "alloy_spike"
 
 /obj/item/projectile/bullet/magnetic/heated
 	name = "slug"
@@ -46,6 +60,7 @@
 	embed_chance = 0
 	armor_penetration = 40
 	penetrating = 1
+	hud_state = "alloy_spike"
 
 /obj/item/projectile/bullet/magnetic/heated/weak
 	icon_state = "gauss_silenced"
@@ -54,6 +69,7 @@
 	embed_chance = 0
 	armor_penetration = 30
 	penetrating = 0
+	hud_state = "alloy_spike"
 
 /obj/item/projectile/bullet/magnetic/fuelrod
 	name = "fuel rod"
@@ -68,6 +84,7 @@
 	embed_chance = 0
 	armor_penetration = 40
 	range = 20
+	hud_state = "rocket_he"
 
 	var/searing = 0 //Does this fuelrod ignore shields?
 	var/detonate_travel = 0 //Will this fuelrod explode when it reaches maximum distance?
@@ -101,10 +118,10 @@
 /obj/item/projectile/bullet/magnetic/fuelrod/on_impact(var/atom/A) //Future-proofing, again. In the event new fuel rods are introduced, and have special effects for when they stop flying.
 	if(src.loc)
 		if(detonate_travel && detonate_mob)
-			visible_message("<span class='warning'>\The [src] shatters in a violent explosion!</span>")
+			visible_message(span_warning("\The [src] shatters in a violent explosion!"))
 			explosion(src.loc, 1, 1, 3, 4)
 		else if(detonate_travel)
-			visible_message("<span class='warning'>\The [src] explodes in a shower of embers!</span>")
+			visible_message(span_warning("\The [src] explodes in a shower of embers!"))
 			explosion(src.loc, -1, 1, 2, 3)
 	..(A)
 
@@ -114,6 +131,7 @@
 	flammability = -1
 	armor_penetration = 50
 	penetrating = 3
+	hud_state = "rocket_ap"
 
 /obj/item/projectile/bullet/magnetic/fuelrod/phoron
 	name = "blazing fuel rod"
@@ -125,6 +143,7 @@
 	penetrating = 5
 	irradiate = 20
 	detonate_mob = 1
+	hud_state = "rocket_fire"
 
 /obj/item/projectile/bullet/magnetic/fuelrod/supermatter
 	name = "painfully incandescent fuel rod"
@@ -141,10 +160,11 @@
 	detonate_travel = 1
 	detonate_mob = 1
 	energetic_impact = 1
+	hud_state = "rocket_thermobaric"
 
 /obj/item/projectile/bullet/magnetic/fuelrod/supermatter/on_hit(var/atom/target, var/blocked = 0, var/def_zone = null) //You cannot touch the supermatter without disentigrating. Assumedly, this is true for condensed rods of it flying at relativistic speeds.
 	if(istype(target,/turf/simulated/wall) || istype(target,/mob/living))
-		target.visible_message("<span class='danger'>The [src] burns a perfect hole through \the [target] with a blinding flash!</span>")
+		target.visible_message(span_danger("The [src] burns a perfect hole through \the [target] with a blinding flash!"))
 		playsound(target, 'sound/effects/teleport.ogg', 40, 0)
 	return ..(target, blocked, def_zone)
 
@@ -161,6 +181,7 @@
 	check_armour = "melee"
 	irradiate = 20
 	range = 6
+	hud_state = "plasma_rifle_blast"
 
 /obj/item/projectile/bullet/magnetic/bore/Initialize(loc, range_mod) // i'm gonna be real honest i dunno how this works but it does
 	. = ..()

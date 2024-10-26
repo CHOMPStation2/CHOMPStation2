@@ -18,10 +18,10 @@
 
 	assisted_langs = list()
 
-	male_cough_sounds = list('sound/effects/mob_effects/m_cougha.ogg','sound/effects/mob_effects/m_coughb.ogg', 'sound/effects/mob_effects/m_coughc.ogg')
-	female_cough_sounds = list('sound/effects/mob_effects/f_cougha.ogg','sound/effects/mob_effects/f_coughb.ogg')
-	male_sneeze_sound = 'sound/effects/mob_effects/sneeze.ogg'
-	female_sneeze_sound = 'sound/effects/mob_effects/f_sneeze.ogg'
+	// male_cough_sounds = list('sound/effects/mob_effects/m_cougha.ogg','sound/effects/mob_effects/m_coughb.ogg', 'sound/effects/mob_effects/m_coughc.ogg')
+	// female_cough_sounds = list('sound/effects/mob_effects/f_cougha.ogg','sound/effects/mob_effects/f_coughb.ogg')
+	// male_sneeze_sound = 'sound/effects/mob_effects/sneeze.ogg'
+	// female_sneeze_sound = 'sound/effects/mob_effects/f_sneeze.ogg'
 
 	valid_transform_species = list(SPECIES_HUMAN, SPECIES_HUMAN_VATBORN, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_SKRELL, SPECIES_DIONA, SPECIES_TESHARI, SPECIES_VOX, SPECIES_MONKEY, SPECIES_SKELETON)
 
@@ -34,8 +34,12 @@
 		/mob/living/carbon/human/proc/shapeshifter_select_hair,
 		/mob/living/carbon/human/proc/shapeshifter_select_hair_colors,
 		/mob/living/carbon/human/proc/shapeshifter_select_gender,
+		/mob/living/carbon/human/proc/shapeshifter_select_wings,
+		/mob/living/carbon/human/proc/shapeshifter_select_tail,
+		/mob/living/carbon/human/proc/shapeshifter_select_ears,
+		/mob/living/proc/set_size,
 		/mob/living/carbon/human/proc/regenerate,
-		/mob/living/carbon/human/proc/shapeshifter_change_opacity,
+		/mob/living/carbon/human/proc/promethean_select_opaqueness,
 		/mob/living/carbon/human/proc/exit_vr
 		)
 
@@ -49,7 +53,7 @@
 /mob/living/carbon/human/proc/shapeshifter_change_opacity()
 
 	set name = "Toggle Opacity"
-	set category = "Abilities"
+	set category = "Abilities.Shapeshifter" //CHOMPEdit
 
 	if(stat || world.time < last_special)
 		return
@@ -75,18 +79,23 @@
 	src.vr_link = avatar // Can't reuse vr_holder so that death can automatically eject users from VR
 
 	// Move the mind
-	avatar.Sleeping(1)
+	// avatar.Sleeping(1) So vox don't drop their can, also feels arbitrary
 	src.mind.transfer_to(avatar)
-	to_chat(avatar, "<b>You have enterred Virtual Reality!\nAll normal gameplay rules still apply.\nWounds you suffer here won't persist when you leave VR, but some of the pain will.\nYou can leave VR at any time by using the \"Exit Virtual Reality\" verb in the Abilities tab, or by ghosting.\nYou can modify your appearance by using various \"Change \[X\]\" verbs in the Abilities tab.</b>")
-	to_chat(avatar, "<span class='notice'> You black out for a moment, and wake to find yourself in a new body in virtual reality.</span>") // So this is what VR feels like?
+	to_chat(avatar, span_infoplain(span_bold("You have enterred Virtual Reality!\nAll normal gameplay rules still apply.\nWounds you suffer here won't persist when you leave VR, but some of the pain will.\nYou can leave VR at any time by using the \"Exit Virtual Reality\" verb in the Abilities tab, or by ghosting."))) //No more prommie VR thing, so removed tidbit about changing appearance
+	to_chat(avatar, span_notice(" You black out for a moment, and wake to find yourself in a new body in virtual reality.")) // So this is what VR feels like?
 
 // exit_vr is called on the vr mob, and puts the mind back into the original mob
 /mob/living/carbon/human/proc/exit_vr()
 	set name = "Exit Virtual Reality"
-	set category = "Abilities"
+	set category = "Abilities.VR" //CHOMPEdit
 
 	if(!vr_holder)
 		return
+	if(tfed_into_mob_check()) //CHOMPedit start: make sure we're not TFed and revert if we are before checking for a mind.
+		var/mob/living/M = loc
+		if(istype(M)) // Sanity check, though shouldn't be needed since this is already checked by the proc.
+			M.revert_mob_tf() // CHOMPedit end
+
 	if(!mind)
 		return
 
@@ -99,13 +108,13 @@
 	// Move the mind back to the original mob
 //	vr_holder.Sleeping(1)
 	src.mind.transfer_to(vr_holder)
-	to_chat(vr_holder, "<span class='notice'>You black out for a moment, and wake to find yourself back in your own body.</span>")
+	to_chat(vr_holder, span_notice("You black out for a moment, and wake to find yourself back in your own body."))
 	// Two-thirds damage is transferred as agony for /humans
 	// Getting hurt in VR doesn't damage the physical body, but you still got hurt.
 	if(ishuman(vr_holder) && total_damage)
 		var/mob/living/carbon/human/V = vr_holder
 		V.stun_effect_act(0, total_damage*2/3, null)												// 200 damage leaves the user in paincrit for several seconds, agony reaches 0 after around 2m.
-		to_chat(vr_holder, "<span class='warning'>Pain from your time in VR lingers.</span>")		// 250 damage leaves the user unconscious for several seconds in addition to paincrit
+		to_chat(vr_holder, span_warning("Pain from your time in VR lingers."))		// 250 damage leaves the user unconscious for several seconds in addition to paincrit
 
 	// Maintain a link with the mob, but don't use teleop
 	vr_holder.vr_link = src
@@ -114,3 +123,13 @@
 	if(istype(vr_holder.loc, /obj/machinery/vr_sleeper))
 		var/obj/machinery/vr_sleeper/V = vr_holder.loc
 		V.go_out()
+
+	if(died_in_vr)
+		spawn(3000) //Delete the body after 5 minutes to make sure mob subsystem doesn't cry
+			var/list/slots = list(slot_back,slot_handcuffed,slot_l_store,slot_r_store,slot_wear_mask,slot_l_hand,slot_r_hand,slot_wear_id,slot_glasses,slot_gloves,slot_head,slot_shoes,slot_belt,slot_wear_suit,slot_w_uniform,slot_s_store,slot_l_ear,slot_r_ear)
+			for(var/slot in slots)
+				var/obj/item/I = get_equipped_item(slot = slot)
+				if(I)
+					unEquip(I,force = TRUE)
+			release_vore_contents(include_absorbed = TRUE, silent = TRUE)
+			qdel(src)

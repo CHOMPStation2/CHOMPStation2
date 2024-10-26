@@ -4,9 +4,9 @@
 /datum/song/proc/instrument_status_ui()
 	. = list()
 	. += "<div class='statusDisplay'>"
-	. += "<b><a href='?src=[REF(src)];switchinstrument=1'>Current instrument</a>:</b> "
+	. += span_bold("<a href='?src=[REF(src)];switchinstrument=1'>Current instrument</a>:") + " "
 	if(!using_instrument)
-		. += "<span class='danger'>No instrument loaded!</span><br>"
+		. += span_danger("No instrument loaded!") + "<br>"
 	else
 		. += "[using_instrument.name]<br>"
 	. += "Playback Settings:<br>"
@@ -23,7 +23,7 @@
 			modetext = "<a href='?src=[REF(src)];setexpfalloff=1'>Exponential Falloff Factor</a>: [sustain_exponential_dropoff]% per decisecond<br>"
 	. += "<a href='?src=[REF(src)];setsustainmode=1'>Sustain Mode</a>: [smt]<br>"
 	. += modetext
-	. += using_instrument?.ready()? "Status: <span class='good'>Ready</span><br>" : "Status: <span class='bad'>!Instrument Definition Error!</span><br>"
+	. += using_instrument?.ready()? ("Status: " + span_green("Ready") + "<br>") : ("Status: " + span_red("!Instrument Definition Error!") + "<br>")
 	. += "Instrument Type: [legacy? "Legacy" : "Synthesized"]<br>"
 	. += "<a href='?src=[REF(src)];setvolume=1'>Volume</a>: [volume]<br>"
 	. += "<a href='?src=[REF(src)];setdropoffvolume=1'>Volume Dropoff Threshold</a>: [sustain_dropoff_volume]<br>"
@@ -38,20 +38,20 @@
 	if(lines.len > 0)
 		dat += "<H3>Playback</H3>"
 		if(!playing)
-			dat += "<A href='?src=[REF(src)];play=1'>Play</A> <SPAN CLASS='linkOn'>Stop</SPAN><BR><BR>"
+			dat += "<A href='?src=[REF(src)];play=1'>Play</A> " + span_linkOn("Stop") + "<BR><BR>"
 			dat += "Repeat Song: "
-			dat += repeat > 0 ? "<A href='?src=[REF(src)];repeat=-10'>-</A><A href='?src=[REF(src)];repeat=-1'>-</A>" : "<SPAN CLASS='linkOff'>-</SPAN><SPAN CLASS='linkOff'>-</SPAN>"
+			dat += repeat > 0 ? "<A href='?src=[REF(src)];repeat=-10'>-</A><A href='?src=[REF(src)];repeat=-1'>-</A>" : (span_linkOff("-") + span_linkOff("-"))
 			dat += " [repeat] times "
-			dat += repeat < max_repeats ? "<A href='?src=[REF(src)];repeat=1'>+</A><A href='?src=[REF(src)];repeat=10'>+</A>" : "<SPAN CLASS='linkOff'>+</SPAN><SPAN CLASS='linkOff'>+</SPAN>"
+			dat += repeat < max_repeats ? "<A href='?src=[REF(src)];repeat=1'>+</A><A href='?src=[REF(src)];repeat=10'>+</A>" : (span_linkOff("+") + span_linkOff("+"))
 			dat += "<BR>"
 		else
-			dat += "<SPAN CLASS='linkOn'>Play</SPAN> <A href='?src=[REF(src)];stop=1'>Stop</A><BR>"
-			dat += "Repeats left: <B>[repeat]</B><BR>"
+			dat += span_linkOn("Play") + " <A href='?src=[REF(src)];stop=1'>Stop</A><BR>"
+			dat += "Repeats left: " + span_bold("[repeat]") + "<BR>"
 	if(!editing)
-		dat += "<BR><B><A href='?src=[REF(src)];edit=2'>Show Editor</A></B><BR>"
+		dat += "<BR>" + span_bold("<A href='?src=[REF(src)];edit=2'>Show Editor</A>") + "<BR>"
 	else
 		dat += "<H3>Editing</H3>"
-		dat += "<B><A href='?src=[REF(src)];edit=1'>Hide Editor</A></B>"
+		dat += span_bold("<A href='?src=[REF(src)];edit=1'>Hide Editor</A>")
 		dat += " <A href='?src=[REF(src)];newsong=1'>Start a New Song</A>"
 		dat += " <A href='?src=[REF(src)];import=1'>Import a Song</A><BR><BR>"
 		var/bpm = round(600 / tempo)
@@ -62,7 +62,7 @@
 			dat += "Line [linecount]: <A href='?src=[REF(src)];modifyline=[linecount]'>Edit</A> <A href='?src=[REF(src)];deleteline=[linecount]'>X</A> [line]<BR>"
 		dat += "<A href='?src=[REF(src)];newline=1'>Add Line</A><BR><BR>"
 		if(help)
-			dat += "<B><A href='?src=[REF(src)];help=1'>Hide Help</A></B><BR>"
+			dat += span_bold("<A href='?src=[REF(src)];help=1'>Hide Help</A>") + "<BR>"
 			dat += {"
 					Lines are a series of chords, separated by commas (,), each with notes separated by hyphens (-).<br>
 					Every note in a chord will play together, with chord timed by the tempo.<br>
@@ -71,7 +71,7 @@
 					By default, every note is natural and in octave 3. Defining otherwise is remembered for each note.<br>
 					Example: <i>C,D,E,F,G,A,B</i> will play a C major scale.<br>
 					After a note has an accidental placed, it will be remembered: <i>C,C4,C,C3</i> is <i>C3,C4,C4,C3</i><br>
-					Chords can be played simply by seperating each note with a hyphon: <i>A-C#,Cn-E,E-G#,Gn-B</i><br>
+					Chords can be played simply by separating each note with a hyphen: <i>A-C#,Cn-E,E-G#,Gn-B</i><br>
 					A pause may be denoted by an empty chord: <i>C,E,,C,G</i><br>
 					To make a chord be a different time, end it with /x, where the chord length will be length<br>
 					defined by tempo / x: <i>C,G/2,E/4</i><br>
@@ -81,7 +81,7 @@
 					A song may only contain up to [MUSIC_MAXLINES] lines.<br>
 					"}
 		else
-			dat += "<B><A href='?src=[REF(src)];help=2'>Show Help</A></B><BR>"
+			dat += span_bold("<A href='?src=[REF(src)];help=2'>Show Help</A>") + "<BR>"
 
 	var/datum/browser/popup = new(user, "instrument", parent?.name || "instrument", 700, 500)
 	popup.set_content(dat.Join(""))
@@ -130,13 +130,13 @@
 	else if(href_list["import"])
 		var/t = ""
 		do
-			t = html_encode(input(usr, "Please paste the entire song, formatted:", text("[]", name), t)  as message)
+			t = html_encode(tgui_input_text(usr, "Please paste the entire song, formatted:", text("[]", name), t, multiline = TRUE, prevent_enter = TRUE))
 			if(!in_range(parent, usr))
 				return
 
 			if(length_char(t) >= MUSIC_MAXLINES * MUSIC_MAXLINECHARS)
 				var/cont = tgui_alert(usr, "Your message is too long! Would you like to continue editing it?", "Too long!", list("Yes", "No"))
-				if(cont == "No")
+				if(cont != "Yes")
 					break
 		while(length_char(t) > MUSIC_MAXLINES * MUSIC_MAXLINECHARS)
 		ParseSong(t)
@@ -160,10 +160,10 @@
 		tempo = sanitize_tempo(tempo + text2num(href_list["tempo"]))
 
 	else if(href_list["play"])
-		INVOKE_ASYNC(src, .proc/start_playing, usr)
+		INVOKE_ASYNC(src, PROC_REF(start_playing), usr)
 
 	else if(href_list["newline"])
-		var/newline = html_encode(input(usr, "Enter your line: ", parent.name) as text|null)
+		var/newline = html_encode(tgui_input_text(usr, "Enter your line: ", parent.name))
 		if(!newline || !in_range(parent, usr))
 			return
 		if(lines.len > MUSIC_MAXLINES)
@@ -191,22 +191,22 @@
 		stop_playing()
 
 	else if(href_list["setlinearfalloff"])
-		var/amount = input(usr, "Set linear sustain duration in seconds", "Linear Sustain Duration") as null|num
+		var/amount = tgui_input_number(usr, "Set linear sustain duration in seconds", "Linear Sustain Duration", round_value=FALSE)
 		if(!isnull(amount))
 			set_linear_falloff_duration(round(amount * 10, world.tick_lag))
 
 	else if(href_list["setexpfalloff"])
-		var/amount = input(usr, "Set exponential sustain factor", "Exponential sustain factor") as null|num
+		var/amount = tgui_input_number(usr, "Set exponential sustain factor", "Exponential sustain factor", round_value=FALSE)
 		if(!isnull(amount))
 			set_exponential_drop_rate(round(amount, 0.00001))
 
 	else if(href_list["setvolume"])
-		var/amount = input(usr, "Set volume", "Volume") as null|num
+		var/amount = tgui_input_number(usr, "Set volume", "Volume")
 		if(!isnull(amount))
 			set_volume(round(amount, 1))
 
 	else if(href_list["setdropoffvolume"])
-		var/amount = input(usr, "Set dropoff threshold", "Dropoff Threshold Volume") as null|num
+		var/amount = tgui_input_number(usr, "Set dropoff threshold", "Dropoff Threshold Volume", round_value=FALSE)
 		if(!isnull(amount))
 			set_dropoff_volume(round(amount, 0.01))
 
@@ -233,7 +233,7 @@
 			set_instrument(choice)
 
 	else if(href_list["setnoteshift"])
-		var/amount = input(usr, "Set note shift", "Note Shift") as null|num
+		var/amount = tgui_input_number(usr, "Set note shift", "Note Shift", null, note_shift_max, note_shift_min)
 		if(!isnull(amount))
 			note_shift = clamp(amount, note_shift_min, note_shift_max)
 

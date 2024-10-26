@@ -1,6 +1,7 @@
 /obj/machinery/artifact/predefined/hungry_statue
 	name = "alien artifact"
 	desc = "A large alien device."
+	icon = 'icons/obj/xenoarchaeology.dmi' //CHOMP Fix
 
 	artifact_master = /datum/component/artifact_master/hungry_statue
 

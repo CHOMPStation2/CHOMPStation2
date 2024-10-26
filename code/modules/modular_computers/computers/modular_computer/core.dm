@@ -55,7 +55,7 @@
 /obj/item/modular_computer/Destroy()
 	kill_program(1)
 	STOP_PROCESSING(SSobj, src)
-	for(var/obj/item/weapon/computer_hardware/CH in src.get_all_components())
+	for(var/obj/item/computer_hardware/CH in src.get_all_components())
 		uninstall_component(null, CH)
 		qdel(CH)
 	return ..()
@@ -86,9 +86,9 @@
 			. += emissive_appearance(overlay_icon, icon_state_screensaver)
 		set_light(0)
 		return add_overlay(.)
-	
+
 	set_light(light_strength)
-	
+
 	if(active_program)
 		var/program_state = active_program.program_icon_state ? active_program.program_icon_state : icon_state_menu
 		. += mutable_appearance(overlay_icon, program_state)
@@ -98,7 +98,7 @@
 	else
 		. += mutable_appearance(overlay_icon, icon_state_menu)
 		. += emissive_appearance(overlay_icon, icon_state_menu)
-	
+
 	return add_overlay(.)
 
 /obj/item/modular_computer/proc/turn_on(var/mob/user)
@@ -119,6 +119,7 @@
 		else
 			to_chat(user, "You press the power button and start up \the [src]")
 		enable_computer(user)
+		playsound(src, 'modular_chomp/sound/machines/console_power_on.ogg', 60, 1, volume_channel = VOLUME_CHANNEL_MACHINERY)
 
 	else // Unpowered
 		if(issynth)
@@ -190,7 +191,7 @@
 		P = hard_drive.find_file_by_name(prog)
 
 	if(!P || !istype(P)) // Program not found or it's not executable program.
-		to_chat(user, "<span class='danger'>\The [src]'s screen shows \"I/O ERROR - Unable to run [prog]\" warning.</span>")
+		to_chat(user, span_danger("\The [src]'s screen shows \"I/O ERROR - Unable to run [prog]\" warning."))
 		return
 
 	P.computer = src
@@ -205,11 +206,11 @@
 		return
 
 	if(idle_threads.len >= processor_unit.max_idle_programs+1)
-		to_chat(user, "<span class='notice'>\The [src] displays a \"Maximal CPU load reached. Unable to run another program.\" error</span>")
+		to_chat(user, span_notice("\The [src] displays a \"Maximal CPU load reached. Unable to run another program.\" error"))
 		return
 
 	if(P.requires_ntnet && !get_ntnet_status(P.requires_ntnet_feature)) // The program requires NTNet connection, but we are not connected to NTNet.
-		to_chat(user, "<span class='danger'>\The [src]'s screen shows \"NETWORK ERROR - Unable to connect to NTNet. Please retry. If problem persists contact your system administrator.\" warning.</span>")
+		to_chat(user, span_danger("\The [src]'s screen shows \"NETWORK ERROR - Unable to connect to NTNet. Please retry. If problem persists contact your system administrator.\" warning."))
 		return
 
 	if(active_program)
@@ -292,3 +293,9 @@
 		autorun.stored_data = null
 	else
 		autorun.stored_data = program
+
+/obj/item/modular_computer/proc/find_file_by_uid(var/uid)
+	if(hard_drive)
+		. = hard_drive.find_file_by_uid(uid)
+	if(portable_drive && !.)
+		. = portable_drive.find_file_by_uid(uid)

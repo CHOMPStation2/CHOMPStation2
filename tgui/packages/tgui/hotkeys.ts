@@ -5,6 +5,7 @@
  */
 
 import * as keycodes from 'common/keycodes';
+
 import { globalEvents, KeyEvent } from './events';
 import { createLogger } from './logging';
 
@@ -31,6 +32,9 @@ const hotKeysAcquired = [
 // State of passed-through keys.
 const keyState: Record<string, boolean> = {};
 
+// Custom listeners for key events
+const keyListeners: ((key: KeyEvent) => void)[] = [];
+
 /**
  * Converts a browser keycode to BYOND keycode.
  */
@@ -48,6 +52,7 @@ const keyCodeToByond = (keyCode: number) => {
   if (keyCode === 40) return 'South';
   if (keyCode === 45) return 'Insert';
   if (keyCode === 46) return 'Delete';
+  // prettier-ignore
   if (keyCode >= 48 && keyCode <= 57 || keyCode >= 65 && keyCode <= 90) {
     return String.fromCharCode(keyCode);
   }
@@ -78,9 +83,12 @@ const handlePassthrough = (key: KeyEvent) => {
     return;
   }
   // NOTE: Alt modifier is pretty bad and sticky in IE11.
-  if (key.event.defaultPrevented
-      || key.isModifierKey()
-      || hotKeysAcquired.includes(key.code)) {
+  // prettier-ignore
+  if (
+    key.event.defaultPrevented
+    || key.isModifierKey()
+    || hotKeysAcquired.includes(key.code)
+  ) {
     return;
   }
   const byondKeyCode = keyCodeToByond(key.code);
@@ -96,14 +104,14 @@ const handlePassthrough = (key: KeyEvent) => {
   // KeyDown
   if (key.isDown() && !keyState[byondKeyCode]) {
     keyState[byondKeyCode] = true;
-    const command = `TguiKeyDown "${byondKeyCode}"`;
+    const command = `KeyDown "${byondKeyCode}"`;
     logger.debug(command);
     return Byond.command(command);
   }
   // KeyUp
   if (key.isUp() && keyState[byondKeyCode]) {
     keyState[byondKeyCode] = false;
-    const command = `TguiKeyUp "${byondKeyCode}"`;
+    const command = `KeyUp "${byondKeyCode}"`;
     logger.debug(command);
     return Byond.command(command);
   }
@@ -132,7 +140,7 @@ export const releaseHeldKeys = () => {
     if (keyState[byondKeyCode]) {
       keyState[byondKeyCode] = false;
       logger.log(`releasing key "${byondKeyCode}"`);
-      Byond.command(`TguiKeyUp "${byondKeyCode}"`);
+      Byond.command(`KeyUp "${byondKeyCode}"`);
     }
   }
 };
@@ -163,6 +171,7 @@ export const setupHotKeys = () => {
     }
     // Insert macros
     const escapedQuotRegex = /\\"/g;
+    // prettier-ignore
     const unescape = (str: string) => str
       .substring(1, str.length - 1)
       .replace(escapedQuotRegex, '"');
@@ -178,6 +187,35 @@ export const setupHotKeys = () => {
     releaseHeldKeys();
   });
   globalEvents.on('key', (key: KeyEvent) => {
+    for (const keyListener of keyListeners) {
+      keyListener(key);
+    }
     handlePassthrough(key);
   });
+};
+
+/**
+ * Registers for any key events, such as key down or key up.
+ * This should be preferred over directly connecting to keydown/keyup
+ * as it lets tgui prevent the key from reaching BYOND.
+ *
+ * If using in a component, prefer KeyListener, which automatically handles
+ * stopping listening when unmounting.
+ *
+ * @param callback The function to call whenever a key event occurs
+ * @returns A callback to stop listening
+ */
+export const listenForKeyEvents = (callback: (key: KeyEvent) => void) => {
+  keyListeners.push(callback);
+
+  let removed = false;
+
+  return () => {
+    if (removed) {
+      return;
+    }
+
+    removed = true;
+    keyListeners.splice(keyListeners.indexOf(callback), 1);
+  };
 };

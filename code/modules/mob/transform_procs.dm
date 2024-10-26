@@ -36,7 +36,7 @@
 	dna.SetSEState(MONKEYBLOCK,1)
 	dna.SetSEValueRange(MONKEYBLOCK,0xDAC, 0xFFF)
 
-	to_chat(src, "<B>You are now [species.name]. </B>")
+	to_chat(src, span_infoplain(span_bold("You are now [species.name]. ")))
 	qdel(animation)
 
 	return src
@@ -50,7 +50,7 @@
 		return
 	for(var/t in organs)
 		qdel(t)
-	
+
 	//VOREStation Edit Start - Hologram examine flavor
 	var/mob/living/silicon/ai/O = ..(move)
 	if(O)
@@ -79,7 +79,7 @@
 	if(move)
 		var/obj/loc_landmark
 		for(var/obj/effect/landmark/start/sloc in landmarks_list)
-			if (sloc.name != "AI")
+			if (sloc.name != JOB_AI)
 				continue
 			if ((locate(/mob/living) in sloc.loc) || (locate(/obj/structure/AIcore) in sloc.loc))
 				continue
@@ -93,7 +93,7 @@
 		if (!loc_landmark)
 			to_chat(src, "Oh god sorry we can't find an unoccupied AI spawn location, so we're spawning you on top of someone.")
 			for(var/obj/effect/landmark/start/sloc in landmarks_list)
-				if (sloc.name == "AI")
+				if (sloc.name == JOB_AI)
 					loc_landmark = sloc
 
 		newloc = loc_landmark.loc
@@ -131,6 +131,10 @@
 			O.add_language(LANGUAGE_ROOTGLOBAL, 1)
 		if(LANGUAGE_ROOTLOCAL in B.alternate_languages)
 			O.add_language(LANGUAGE_ROOTLOCAL, 1)
+// CHOMPedit Start - Hivemind is now available
+		if(LANGUAGE_HIVEMIND in B.alternate_languages)
+			O.add_language(LANGUAGE_HIVEMIND, 1)
+// CHOMPedit End
 
 	O.on_mob_init()
 
@@ -157,18 +161,12 @@
 
 	var/mob/living/silicon/robot/O = new /mob/living/silicon/robot( loc )
 
-	// cyborgs produced by Robotize get an automatic power cell
-	O.cell = new(O)
-	O.cell.maxcharge = 7500
-	O.cell.charge = 7500
-
-
 	O.gender = gender
 	O.invisibility = 0
 
 	if(mind)		//TODO
 		mind.transfer_to(O)
-		if(O.mind.assigned_role == "Cyborg")
+		if(O.mind.assigned_role == JOB_CYBORG)
 			O.mind.original = O
 		else if(mind && mind.special_role)
 			O.mind.store_memory("In case you look at this after being borged, the objectives are only here until I find a way to make them not show up for you, as I can't simply delete them without screwing up round-end reporting. --NeoFite")
@@ -176,14 +174,14 @@
 		O.key = key
 
 	O.loc = loc
-	O.job = "Cyborg"
-	if(O.mind.assigned_role == "Cyborg")
-		if(O.mind.role_alt_title == "Robot")
-			O.mmi = new /obj/item/device/mmi/digital/posibrain(O)
-		else if(O.mind.role_alt_title == "Drone")
-			O.mmi = new /obj/item/device/mmi/digital/robot(O)
+	O.job = JOB_CYBORG
+	if(O.mind.assigned_role == JOB_CYBORG)
+		if(O.mind.role_alt_title == JOB_ALT_ROBOT)
+			O.mmi = new /obj/item/mmi/digital/posibrain(O)
+		else if(O.mind.role_alt_title == JOB_ALT_DRONE)
+			O.mmi = new /obj/item/mmi/digital/robot(O)
 		else
-			O.mmi = new /obj/item/device/mmi(O)
+			O.mmi = new /obj/item/mmi(O)
 
 		O.mmi.transfer_identity(src)
 
@@ -191,11 +189,12 @@
 		var/datum/preferences/B = O.client.prefs
 		for(var/language in B.alternate_languages)
 			O.add_language(language)
-		O.resize(B.size_multiplier, animate = TRUE, ignore_prefs = TRUE)		//VOREStation Addition: add size prefs to borgs
-		O.fuzzy = B.fuzzy								//VOREStation Addition: add size prefs to borgs
+		O.resize(B.size_multiplier, animate = TRUE, ignore_prefs = TRUE)
+		O.fuzzy = B.fuzzy
+		O.custom_speech_bubble = B.custom_speech_bubble
 
 	callHook("borgify", list(O))
-	O.Namepick()
+	O.namepick()
 
 	spawn(0)	// Mobs still instantly del themselves, thus we need to spawn or O will never be returned
 		qdel(src)
@@ -221,7 +220,7 @@
 	new_xeno.a_intent = I_HURT
 	new_xeno.key = key
 
-	to_chat(new_xeno, "<B>You are now an alien.</B>")
+	to_chat(new_xeno, span_infoplain(span_bold("You are now an alien.")))
 	qdel(src)
 	return
 
@@ -243,7 +242,7 @@
 	new_corgi.a_intent = I_HURT
 	new_corgi.key = key
 
-	to_chat(new_corgi, "<B>You are now a Corgi. Yap Yap!</B>")
+	to_chat(new_corgi, span_infoplain(span_bold("You are now a Corgi. Yap Yap!")))
 	qdel(src)
 	return
 
@@ -253,7 +252,7 @@
 	var/mobpath = tgui_input_list(usr, "Which type of mob should [src] turn into?", "Choose a type", mobtypes)
 
 	if(!safe_animal(mobpath))
-		to_chat(usr, "<font color='red'>Sorry but this mob type is currently unavailable.</font>")
+		to_chat(usr, span_red("Sorry but this mob type is currently unavailable."))
 		return
 
 	if(transforming)
@@ -287,7 +286,7 @@
 	var/mobpath = tgui_input_list(usr, "Which type of mob should [src] turn into?", "Choose a type", mobtypes)
 
 	if(!safe_animal(mobpath))
-		to_chat(usr, "<font color='red'>Sorry but this mob type is currently unavailable.</font>")
+		to_chat(usr, span_red("Sorry but this mob type is currently unavailable."))
 		return
 
 	var/mob/new_mob = new mobpath(src.loc)
@@ -336,6 +335,3 @@
 
 	//Not in here? Must be untested!
 	return 0
-
-
-

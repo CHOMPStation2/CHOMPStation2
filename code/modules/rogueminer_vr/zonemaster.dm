@@ -171,8 +171,8 @@
 	#define XENOARCH_SPAWN_CHANCE 0.3
 	#define DIGSITESIZE_LOWER 4
 	#define DIGSITESIZE_UPPER 12
-	#define ARTIFACTSPAWNNUM_LOWER 6
-	#define ARTIFACTSPAWNNUM_UPPER 12 //Replace with difficulty-based ones.
+	#define ARTIFACTSPAWNNUM_LOWER 1
+	#define ARTIFACTSPAWNNUM_UPPER 1 //Replace with difficulty-based ones.
 
 	if(!M.mineral && prob(rm_controller.diffstep_chances[rm_controller.diffstep])) //Difficulty translates directly into ore chance
 		rm_controller.dbg("ZM(par): Adding mineral to [M.x],[M.y].")
@@ -302,7 +302,7 @@
 			var/mobchoice = pickweight(rm_controller.mobs["tier[rm_controller.diffstep]"])
 			rm_controller.dbg("ZM(p): Picked [mobchoice] to spawn.")
 			var/mob/living/newmob = new mobchoice(get_turf(SP))
-			newmob.faction = "asteroid_belt"
+			newmob.faction = FACTION_ASTEROID_BELT
 			spawned_mobs += newmob
 			if(delay)
 				sleep(delay)

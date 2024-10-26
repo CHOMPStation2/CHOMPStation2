@@ -37,7 +37,6 @@
 		"LOSE WEIGHT THREE TIMES FASTER WITH THESE LOW-G MANEUVERS!",
 		"SHOCKING FIGURES REVEAL MORE TEENS DIE TO UNATHI HONOUR DUELS THAN GUN VIOLENCE",
 		"MY DAUGHTER JOINED A NEURAL COLLECTIVE AND NOW SHE CAN TASTE SPACETIME: FULL STORY INSIDE",
-		"WERE THE NAZIS PSYCHIC? ONE HISTORIAN TELLS ALL",
 		"TAJARANS: CUTE AND CUDDLY, OR INFILTRATING THE GOVERNMENT? FIND OUT MORE INSIDE",
 		"IS THE SOLAR GOVERNMENT CREATING AN AI SUPERINTELLIGENCE NEAR MERCURY? ONE EXPERT REVEALS SHOCKING INSIDER DETAILS!",
 		"TOP TEN HISTORICAL FIGURES THAT WERE TWO PROMETHEANS IN A TRENCHCOAT",
@@ -87,7 +86,7 @@
 		to_chat(user, "The headline screams, \"[headline]\"")
 
 /obj/item/tabloid/attack_self(mob/user)
-	user.visible_message(SPAN_NOTICE("\The [user] leafs idly through \the [src]."))
+	user.visible_message(span_notice("\The [user] leafs idly through \the [src]."))
 	if(headline)
 		to_chat(user, "Most of it is the usual tabloid garbage, but the headline story, \"[headline]\", holds your attention for awhile.")
 		if(tabloid_headlines[headline])

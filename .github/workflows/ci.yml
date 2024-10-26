@@ -8,90 +8,173 @@ env:
   BASENAME: "vorestation"
 
 jobs:
-  file_tests:
+  run_linters:
+    if: ( !contains(github.event.head_commit.message, '[ci skip]') )
     name: Run Linters
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
+    concurrency:
+      group: run_linters-${{ github.head_ref || github.run_id }}
+      cancel-in-progress: true
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
+      # Caches
       - name: Ensure +x on CI directory
         run: |
           chmod -R +x ./tools/ci
+      - name: Restore SpacemanDMM cache
+        uses: actions/cache@v4
+        with:
+          path: ~/SpacemanDMM
+          key: ${{ runner.os }}-spacemandmm-${{ hashFiles('dependencies.sh') }}
+          restore-keys: |
+            ${{ runner.os }}-spacemandmm-
+      - name: Restore Yarn cache
+        uses: actions/cache@v4
+        with:
+          path: tgui/.yarn/cache
+          key: ${{ runner.os }}-yarn-${{ hashFiles('tgui/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+      - name: Restore Node cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.nvm
+          key: ${{ runner.os }}-node-${{ hashFiles('dependencies.sh') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Restore Bootstrap cache
+        uses: actions/cache@v4
+        with:
+          path: tools/bootstrap/.cache
+          key: ${{ runner.os }}-bootstrap-${{ hashFiles('tools/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-bootstrap-
+      - name: Restore Rust cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cargo
+          key: ${{ runner.os }}-rust-${{ hashFiles('tools/ci/ci_dependencies.sh')}}
+          restore-keys: |
+            ${{ runner.os }}-rust-
+      - name: Restore Cutter cache
+        uses: actions/cache@v4
+        with:
+          path: tools/icon_cutter/cache
+          key: ${{ runner.os }}-cutter-${{ hashFiles('dependencies.sh') }}
+      # End Caches
       - name: Install Tools
         run: |
+          pip3 install setuptools
           bash tools/ci/install_build_deps.sh
+          bash tools/ci/install_ripgrep.sh
+          bash tools/ci/install_spaceman_dmm.sh dreamchecker
+          tools/bootstrap/python -c ''
       - name: Run Tests
         run: |
           tools/ci/validate_files.sh
-          tools/ci/build_tgui.sh
+      - name: Run DreamChecker
+        shell: bash
+        run: ~/dreamchecker 2>&1 | bash tools/ci/annotate_dm.sh
+      - name: Run TGUI Checks
+        run: tools/build/build --ci lint tgui-test
 
-#  dreamchecker:
-#    name: DreamChecker
-#    runs-on: ubuntu-20.04
-#    steps:
-#      - uses: actions/checkout@v2
-#
-#      - name: Cache SpacemanDMM
-#        uses: actions/cache@v2
-#        with:
-#          path: ~/SpacemanDMM
-#          key: ${{ runner.os }}-dreamchecker-${{ hashFiles('dependencies.sh')}}
-#          restore-keys: ${{ runner.os }}-dreamchecker
-#      
-#      - name: Install Dependencies
-#        run: |
-#          tools/ci/install_spaceman_dmm.sh dreamchecker
-#          
-#      - name: Run Linter
-#        id: linter
-#        run: |
-#          ~/dreamchecker > ${GITHUB_WORKSPACE}/output-annotations.txt 2>&1
-#          
-#      - name: Annotate Linter
-#        uses: yogstation13/DreamAnnotate@v1
-#        if: always()
-#        with: 
-#          outputFile: output-annotations.txt
-
-  unit_tests:
-    name: Integration Tests
+  dreamchecker:
+    name: DreamChecker
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
+
+      - name: Restore SpacemanDMM Cache
+        uses: actions/cache@v4
+        with:
+          path: ~/SpacemanDMM
+          key: ${{ runner.os }}-dreamchecker-${{ hashFiles('dependencies.sh')}}
+          restore-keys: ${{ runner.os }}-dreamchecker
+
+      - name: Install Dependencies
+        run: |
+          tools/ci/install_spaceman_dmm.sh dreamchecker
+
+      - name: Run Linter
+        id: linter
+        run: |
+          ~/dreamchecker > ${GITHUB_WORKSPACE}/output-annotations.txt 2>&1
+
+      - name: Annotate Linter
+        uses: yogstation13/DreamAnnotate@v2
+        if: always()
+        with:
+          outputFile: output-annotations.txt
+
+  unit_tests:
+    timeout-minutes: 30
+    if: ( !contains(github.event.head_commit.message, '[ci skip]') )
+    strategy:
+      matrix:
+        map: ['USE_MAP_SOUTHERN_CROSS', 'USE_MAP_SOLUNA_NEXUS']
+    # name: Integration Tests (${{ matrix.map }})
+    name: Integration Tests
+    # needs: ['run_linters', 'dreamchecker']
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
       - name: Ensure +x on CI directory
         run: |
           chmod -R +x ./tools/ci
-      - name: Setup Cache
-        uses: actions/cache@v2
+      - name: Restore BYOND Cache
+        uses: actions/cache@v4
         with:
-          path: $HOME/BYOND
+          path: $HOME/byond
           key: ${{ runner.os }}-byond
       - name: Install RUST_G Dependencies
         run: |
           sudo dpkg --add-architecture i386
           sudo apt update || true
+          sudo apt install gcc-multilib
           sudo apt install zlib1g-dev:i386 libssl-dev:i386
           ldd librust_g.so
+          ldd libbapi_dmm_reader.so
+          ldd libverdigris.so
       - name: Unit Tests
         run: |
           tools/ci/install_byond.sh
           tools/ci/compile_and_run.sh
         env:
-          TEST_DEFINE: "UNIT_TEST"
-          TEST_FILE: "code/_unit_tests.dm"
+          EXTRA_ARGS: "-DUNIT_TEST -D${{ matrix.map }}"
           RUN: "1"
-      - name: Compile POIs (no run)
+
+  extra_map_tests:
+    name: Map Tests
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Ensure +x on CI directory
         run: |
-          tools/ci/install_byond.sh
-          tools/ci/compile_and_run.sh
+          chmod -R +x ./tools/ci
+      - name: Restore BYOND Cache
+        uses: actions/cache@v4
+        with:
+          path: $HOME/byond
+          key: ${{ runner.os }}-byond
+      - name: Install BYOND
+        run: tools/ci/install_byond.sh
+      - name: Compile POIs
+        run: tools/ci/compile_and_run.sh
         env:
-          TEST_DEFINE: "MAP_TEST"
-          TEST_FILE: "code/_map_tests.dm"
+          EXTRA_ARGS: "-DMAP_TEST"
           RUN: "0"
-      - name: Compile away missions (no run)
+      - name: Compile away missions
+        run: tools/ci/compile_and_run.sh
+        env:
+          EXTRA_ARGS: "-DAWAY_MISSION_TEST -DMAP_TEST"
+          RUN: "0"
+
+  tests_successful:
+    if: ( !contains(github.event.head_commit.message, '[ci skip]') )
+    name: Integration Tests
+    needs: ['run_linters', 'dreamchecker', 'unit_tests', 'extra_map_tests']
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Report Success
         run: |
-          tools/ci/install_byond.sh
-          tools/ci/compile_and_run.sh
-        env:
-          TEST_DEFINE: "AWAY_MISSION_TEST"
-          TEST_FILE: "code/_away_mission_tests.dm"
-          RUN: "0"
+          echo "Jobs Successful!"

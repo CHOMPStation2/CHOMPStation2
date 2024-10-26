@@ -21,6 +21,15 @@
 /obj/structure/prop/statue/statue5
 	icon_state = "artwork_statue_5"
 
+//sunken ship mast
+
+/obj/structure/prop/statue/sunkensail
+	name = "sail mast"
+	desc = "A long since collapsed mast with a sail draped over it."
+	icon = 'icons/obj/props/decor64x64.dmi'
+	icon_state = "sunkensail"
+	density = FALSE
+
 //TGMC Ship Mast
 
 /obj/structure/prop/statue/stump_plaque
@@ -49,7 +58,7 @@
 	desc = "A sculpture made of pure phoron. It is covered in a lacquer that prevents erosion and renders it fireproof. It's safe. Probably."
 	icon_state = "phoronic"
 	layer = ABOVE_WINDOW_LAYER
-	interaction_message = "<span class = 'notice'>Cool to touch and unbelievable smooth. You can almost see your reflection in it.</span>"
+	interaction_message = span_notice("Cool to touch and unbelievable smooth. You can almost see your reflection in it.")
 
 /obj/structure/prop/statue/phoron/New()
 	set_light(2, 3, "#cc66ff")

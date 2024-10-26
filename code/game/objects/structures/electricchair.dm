@@ -11,8 +11,8 @@
 	add_overlay(image('icons/obj/objects.dmi', src, "echair_over", MOB_LAYER + 1, dir))
 	return
 
-/obj/structure/bed/chair/e_chair/attackby(obj/item/weapon/W as obj, mob/user as mob)
-	if(W.is_wrench())
+/obj/structure/bed/chair/e_chair/attackby(obj/item/W as obj, mob/user as mob)
+	if(W.has_tool_quality(TOOL_WRENCH))
 		var/obj/structure/bed/chair/C = new /obj/structure/bed/chair(loc)
 		playsound(src, W.usesound, 50, 1)
 		C.set_dir(dir)
@@ -34,7 +34,7 @@
 	else
 		on = 1
 		icon_state = "echair1"
-	to_chat(usr, "<span class='notice'>You switch [on ? "on" : "off"] [src].</span>")
+	to_chat(usr, span_notice("You switch [on ? "on" : "off"] [src]."))
 	return
 
 /obj/structure/bed/chair/e_chair/rotate_clockwise()
@@ -58,7 +58,7 @@
 		return
 	A.use_power_oneoff(5000, EQUIP)
 	var/light = A.power_light
-	A.updateicon()
+	A.update_icon()
 
 	flick("echair1", src)
 	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
@@ -67,12 +67,12 @@
 	if(has_buckled_mobs())
 		for(var/mob/living/L as anything in buckled_mobs)
 			L.burn_skin(85)
-			to_chat(L, "<span class='danger'>You feel a deep shock course through your body!</span>")
+			to_chat(L, span_danger("You feel a deep shock course through your body!"))
 			sleep(1)
 			L.burn_skin(85)
 			L.Stun(600)
-	visible_message("<span class='danger'>The electric chair went off!</span>", "<span class='danger'>You hear a deep sharp shock!</span>")
+	visible_message(span_danger("The electric chair went off!"), span_danger("You hear a deep sharp shock!"))
 
 	A.power_light = light
-	A.updateicon()
+	A.update_icon()
 	return

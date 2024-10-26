@@ -12,9 +12,16 @@
 /area/om_adventure/poi/medicalcenter)
 "m" = (
 /obj/structure/bed/padded,
-/obj/item/weapon/bedsheet/medical,
+/obj/item/bedsheet/medical,
 /obj/structure/curtain/medical,
 /obj/tether_away_spawner/spookyland,
+/turf/simulated/floor/tiled/eris/white/orangecorner,
+/area/om_adventure/poi/medicalcenter)
+"p" = (
+/obj/move_trader_landmark{
+	dir = 4;
+	trader_type = /obj/trader/general
+	},
 /turf/simulated/floor/tiled/eris/white/orangecorner,
 /area/om_adventure/poi/medicalcenter)
 "q" = (
@@ -43,8 +50,12 @@
 /turf/simulated/floor/tiled/eris/white/orangecorner,
 /area/om_adventure/poi/medicalcenter)
 "z" = (
-/obj/structure/bed/chair/sofa/blue/left{
+/obj/structure/bed/chair/sofa/left/blue{
 	dir = 8
+	},
+/obj/move_trader_landmark{
+	dir = 8;
+	trader_type = /obj/trader/general
 	},
 /turf/simulated/floor/tiled/eris/white/orangecorner,
 /area/om_adventure/poi/medicalcenter)
@@ -52,7 +63,7 @@
 /turf/simulated/wall/eris/r_wall,
 /area/om_adventure/poi/medicalcenter)
 "C" = (
-/obj/structure/bed/chair/sofa/blue/right,
+/obj/structure/bed/chair/sofa/right/blue,
 /turf/simulated/floor/tiled/eris/white/orangecorner,
 /area/om_adventure/poi/medicalcenter)
 "D" = (
@@ -68,7 +79,7 @@
 /turf/simulated/floor/tiled/eris/white/orangecorner,
 /area/om_adventure/poi/medicalcenter)
 "G" = (
-/obj/structure/table/glass,
+/obj/trader/capture_crystal,
 /obj/machinery/light{
 	dir = 8
 	},
@@ -81,7 +92,7 @@
 /area/om_adventure/poi/medicalcenter)
 "I" = (
 /obj/structure/bed/padded,
-/obj/item/weapon/bedsheet/medical,
+/obj/item/bedsheet/medical,
 /obj/structure/curtain/medical,
 /turf/simulated/floor/tiled/eris/white/orangecorner,
 /area/om_adventure/poi/medicalcenter)
@@ -111,7 +122,7 @@
 /turf/simulated/floor/tiled/eris/white/orangecorner,
 /area/om_adventure/poi/medicalcenter)
 "Z" = (
-/obj/structure/bed/chair/sofa/blue/corner,
+/obj/structure/bed/chair/sofa/corner/blue,
 /obj/tether_away_spawner/spookyland,
 /turf/simulated/floor/tiled/eris/white/orangecorner,
 /area/om_adventure/poi/medicalcenter)
@@ -207,7 +218,7 @@ q
 H
 q
 A
-q
+p
 W
 q
 k

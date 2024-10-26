@@ -11,6 +11,7 @@
 	damage_type = BURN
 	pass_flags = PASSTABLE | PASSGRILLE
 	check_armour = "laser"
+	hud_state = "alloy_spike"
 
 /obj/item/projectile/energy/gaussweak
 	name = "gauss bolt"
@@ -23,6 +24,7 @@
 	damage_type = BURN
 	pass_flags = PASSTABLE | PASSGRILLE
 	check_armour = "laser"
+	hud_state = "alloy_spike"
 
 /obj/item/projectile/energy/gaussrifle
 	name = "gauss bolt"
@@ -36,6 +38,8 @@
 	pass_flags = PASSTABLE | PASSGRILLE
 	penetrating = 0
 	check_armour = "laser"
+	hud_state = "alloy_spike"
+
 //End of gaussguns//
 
 //Stun projectile for HOSgun
@@ -48,6 +52,8 @@
 	agony = 65
 	damage_type = HALLOSS
 	stutter = 10
+	hud_state = "taser"
+
 //plasma weaponry
 /obj/item/projectile/energy/Plasma
 	name = "Plasma Blast"
@@ -57,3 +63,4 @@
 	damage_type = BURN
 	pass_flags = PASSGRILLE
 	check_armour = "laser"
+	hud_state = "plasma_rifle_blast"

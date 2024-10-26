@@ -20,7 +20,7 @@
 /client/verb/toggle_autohiss()
 	set name = "Toggle Auto-Hiss"
 	set desc = "Toggle automatic hissing as Unathi and r-rolling as Taj"
-	set category = "OOC"
+	set category = "OOC.Game Settings" //CHOMPEdit
 
 	autohiss_mode = (autohiss_mode + 1) % AUTOHISS_NUM
 	switch(autohiss_mode)
@@ -53,8 +53,33 @@
 	autohiss_basic_map = list(
 			"r" = list("rr", "rrr", "rrrr")
 		)
-	autohiss_exempt = list(LANGUAGE_SIIK,LANGUAGE_AKHANI)
+	autohiss_exempt = list(LANGUAGE_SIIK,LANGUAGE_AKHANI,LANGUAGE_ALAI)
 
+/datum/species/zaddat
+	autohiss_basic_map = list(
+			"f" = list("v","vh"),
+			"ph" = list("v", "vh")
+		)
+	autohiss_extra_map = list(
+			"s" = list("z", "zz", "zzz"),
+			"ce" = list("z", "zz"),
+			"ci" = list("z", "zz"),
+			"v" = list("vv", "vvv")
+		)
+	autohiss_exempt = list(LANGUAGE_ZADDAT,LANGUAGE_VESPINAE)
+
+/datum/species/zaddat
+	autohiss_basic_map = list(
+			"f" = list("v","vh"),
+			"ph" = list("v", "vh")
+		)
+	autohiss_extra_map = list(
+			"s" = list("z", "zz", "zzz"),
+			"ce" = list("z", "zz"),
+			"ci" = list("z", "zz"),
+			"v" = list("vv", "vvv")
+		)
+	autohiss_exempt = list(LANGUAGE_ZADDAT)
 
 //Yawn Wider Edit.
 /datum/species/spider

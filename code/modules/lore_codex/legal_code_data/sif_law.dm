@@ -20,7 +20,7 @@
 /datum/lore/codex/category/law_minor_violations
 	name = "Minor Violations (Law)"
 	data = "Here is a list of the less severe violations of local Sif Law that might occur on your facility.  A fax to the Sif Governmental Authority \
-	is required to be sent within 24 hours of a violation being comitted, for minor violations listed here."
+	is required to be sent within 24 hours of a violation being committed, for minor violations listed here."
 	children = list(
 		/datum/lore/codex/page/law/theft,
 		/datum/lore/codex/page/law/assault,
@@ -35,7 +35,7 @@
 /datum/lore/codex/page/law/assault/add_content()
 	name = "Assault"
 	definition = "To threaten use of physical force against someone while also having the capability and/or intent to carry out that threat."
-	suggested_punishments = "Seperation of offender from the threatened person.  Brig time of 10 minutes for first offense.  \
+	suggested_punishments = "Separation of offender from the threatened person.  Brig time of 10 minutes for first offense.  \
 	Repeat offenders can be brigged for up to (10 minutes times number of previous assault charges).  Demotion at discretion of Superior."
 	notes = "Not to be confused with [quick_link("Battery")], which covers actual physical injury. The threat must be viable and serious; \
 	two people threatening to punch each other out over comms wouldn't fall under this."
@@ -93,7 +93,7 @@
 	suggested_punishments = "200 thaler fine.  Give Drone a temporary paper stating that it is a drone, if the ID was lost.  Fax VirGov.  Inform owner of \
 	Drone if possible.  Instruct Drone to obtain new ID at its earliest opportunity, if it was lost."
 	notes = "This is only applicable to Drone intelligences which possess autonomous capability.  It must be proven that the offender is a Drone, which can be \
-	accomplished in various ways, generally with the expertise of a Roboticist.  Lawbound synthetics, maintenance drones, and \
+	accomplished in various ways, generally with the expertise of a " + JOB_ROBOTICIST + ".  Lawbound synthetics, maintenance drones, and \
 	simple bots do not require an ID card.  No fine or VirGov fax should be sent if the Drone's ID was lost due to theft and the ID is able to be recovered."
 	mandated = TRUE
 
@@ -150,14 +150,14 @@
 	definition = "Stealing money that is entrusted to you by a corporation or person."
 	suggested_punishments = "Hold until Transfer.  Termination.  Reimbursement of embezzled funds.  Fax Central Command and VirGov."
 	notes = "This includes funneling Departmental, Facility, or Crew funds into the offender's account.  It also includes pocketing \
-	transactions directly that are meant to go to a seperate account."
+	transactions directly that are meant to go to a separate account."
 	mandated = TRUE
 
 /datum/lore/codex/page/law/excessive_force/add_content()
 	name = "Excessive Force"
 	definition = "Using more force than what is required to safely detain someone, using force against a helpless or incapacitated person, \
 	or using force against an unarmed and compliant person."
-	suggested_punishments = "Demotion.  Termination at discretion of Superior, or Station Director.  Send notice to Central Command if a Head of Security had used excessive force."
+	suggested_punishments = "Demotion.  Termination at discretion of Superior, or " + JOB_SITE_MANAGER + ".  Send notice to Central Command if a " + JOB_HEAD_OF_SECURITY + " had used excessive force."
 	notes = "This charge also is applicible to non-Security personnel acting in self defense.  \
 	Persons whom have caused a person to die as a result of excessive force should have [quick_link("Manslaughter")] applied instead, if the circumstances were \
 	unjustified."
@@ -168,7 +168,7 @@
 	definition = "To kill a sapient being without intent."
 	suggested_punishments = "Hold until Transfer, if unjustified.  Fax VirGov."
 	notes = "Includes provoked manslaughter, negligent manslaughter, and impassioned killing.  The important distinction between this \
-	and [quick_link("Murder")] is intent.  Manslaughter can be justified if force was nessecary and it was intented to prevent further loss of life or \
+	and [quick_link("Murder")] is intent.  Manslaughter can be justified if force was necessary and it was intended to prevent further loss of life or \
 	grievous injury to self or others, however persons involved in the kill will still be required to answer to higher legal authority \
 	after the shift."
 	mandated = TRUE
@@ -205,7 +205,7 @@
 	definition = "Creating an intelligence from an codeline that has not been registered with, or audited by, the Emergent Intelligence Oversight (EIO)."
 	suggested_punishments = "Decommissioning of the newly created Drone.  Investigation of Drone to determine level of intelligence, if possible.  \
 	Hold until Transfer for the creator."
-	notes = "It must be proven that the Drone is in fact a Drone, which can be accomplished in various ways, generally with the expertise of a Roboticist.  \
+	notes = "It must be proven that the Drone is in fact a Drone, which can be accomplished in various ways, generally with the expertise of a " + JOB_ROBOTICIST + ".  \
 	It must also be proven that the Drone's codeline is also unregistered. Intelligences produced from a Maintenance Drone Fabricator, \
 	the Research department, and through other regular means are by default already registered.  Very simple machines such as securitrons do not require registration.\
 	<br><br>\

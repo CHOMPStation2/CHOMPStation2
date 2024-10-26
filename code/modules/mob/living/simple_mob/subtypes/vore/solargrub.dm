@@ -15,8 +15,7 @@ List of things solar grubs should be able to do:
 	Therefore, if you see the grubs, kill them while they're small, or things might escalate." // TODO: PORT SOLAR MOTHS - Rykka
 	value = CATALOGUER_REWARD_EASY
 
-#define SINK_POWER 1
-var/global/list/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawstamp*
+var/global/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawstamp*
 
 /mob/living/simple_mob/vore/solargrub
 	name = "juvenile solargrub"
@@ -33,16 +32,16 @@ var/global/list/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawst
 	var/adult_forms = "/mob/living/simple_mob/vore/solarmoth" // CHOMPEDIT VAR that decides what mob the queen form is. ex /mob/living/simple_mob/subtypes/vore/solarmoth
 	// CHOMPEDIT End, Rykka waz here. *pawstamp*
 
-	faction = "grubs"
+	faction = FACTION_GRUBS
 	maxHealth = 50 //grubs can take a lot of harm
 	health = 50
 
 	melee_damage_lower = 1
 	melee_damage_upper = 3	//low damage, but poison and stuns are strong
 
-	movement_cooldown = 8
+	movement_cooldown = 3
 
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat/grubmeat
+	meat_type = /obj/item/reagent_containers/food/snacks/meat/grubmeat
 	meat_amount = 6
 
 	response_help = "pokes"
@@ -59,6 +58,11 @@ var/global/list/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawst
 	var/obj/structure/cable/attached        // the attached cable
 	var/shock_chance = 10 // Beware
 	var/powerdraw = 100000 // previous value 150000 // CHOMPStation Addition, Rykka waz here. *pawstamp*
+	var/tracked = FALSE
+
+	can_be_drop_prey = FALSE //CHOMP Add
+	allow_mind_transfer = TRUE
+	glow_override = TRUE
 
 /datum/say_list/solargrub
 	emote_see = list("squelches", "squishes")
@@ -78,7 +82,7 @@ var/global/list/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawst
 		if(attached)
 			set_AI_busy(TRUE)
 			if(prob(2))
-				src.visible_message("<b>\The [src]</b> begins to sink power from the net.")
+				src.visible_message(span_infoplain(span_bold("\The [src]") + " begins to sink power from the net."))
 			if(prob(5))
 				var/datum/effect/effect/system/spark_spread/sparks = new /datum/effect/effect/system/spark_spread()
 				sparks.set_up(5, 0, get_turf(src))
@@ -100,11 +104,12 @@ var/global/list/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawst
 			PN = null
 
 		// CHOMPEDIT Start, Rykka waz here. *pawstamp*
-		if(prob(1) && charge >= 32000 && can_evolve == 1 && moth_amount <= 1) //it's reading from the moth_amount global list to determine if it can evolve. There should only ever be a maxcap of 1 existing solar moth alive at any time. TODO: make the code decrease the list after 1 has spawned this shift.
+		if(prob(1) && charge >= 32000 && can_evolve == 1 && moth_amount < 1) //it's reading from the moth_amount global list to determine if it can evolve. There should only ever be a maxcap of 1 existing solar moth alive at any time. TODO: make the code decrease the list after 1 has spawned this shift.
 			anchored = 0
 			PN = attached.powernet
 			release_vore_contents()
-			prey_excludes.Cut()
+			if(prey_excludes)
+				prey_excludes.Cut()
 			moth_amount = moth_amount + 1
 			death_star()
 
@@ -140,7 +145,7 @@ var/global/list/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawst
 			var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
 			s.set_up(5, 1, L)
 			s.start()
-			visible_message("<span class='danger'>The grub releases a powerful shock!</span>")
+			visible_message(span_danger("The grub releases a powerful shock!"))
 		else
 			if(L.reagents)
 				var/target_zone = pick(BP_TORSO,BP_TORSO,BP_TORSO,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_HEAD)
@@ -150,7 +155,7 @@ var/global/list/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawst
 // Does actual poison injection, after all checks passed.
 /mob/living/simple_mob/vore/solargrub/proc/inject_poison(mob/living/L, target_zone)
 	if(prob(poison_chance))
-		to_chat(L, "<span class='warning'>You feel a small shock rushing through your veins.</span>")
+		to_chat(L, span_warning("You feel a small shock rushing through your veins."))
 		L.reagents.add_reagent(poison_type, poison_per_bite)
 
 /mob/living/simple_mob/vore/solargrub/death()
@@ -167,6 +172,8 @@ var/global/list/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawst
 	if(. == 0 && !is_dead())
 		set_light(2.5, 1, COLOR_YELLOW)
 		return 1
+	else if(is_dead())
+		glow_override = FALSE
 
 /mob/living/simple_mob/vore/solargrub/init_vore()
 	if(!voremob_loaded)

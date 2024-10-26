@@ -2,10 +2,10 @@
 	name = "Pulsar"
 	desc = "Emits electronic pulses to destroy, disable, or otherwise harm devices and machines.  Be sure to not hit yourself with this."
 	cost = 100
-	obj_path = /obj/item/weapon/spell/spawner/pulsar
+	obj_path = /obj/item/spell/spawner/pulsar
 	category = OFFENSIVE_SPELLS
 
-/obj/item/weapon/spell/spawner/pulsar
+/obj/item/spell/spawner/pulsar
 	name = "pulsar"
 	desc = "Be sure to not hit yourself!"
 	icon_state = "radiance"
@@ -13,22 +13,23 @@
 	aspect = ASPECT_EMP
 	spawner_type = /obj/effect/temporary_effect/pulse/pulsar
 
-/obj/item/weapon/spell/spawner/pulsar/New()
+/obj/item/spell/spawner/pulsar/New()
 	..()
 	set_light(3, 2, l_color = "#2ECCFA")
 
-/obj/item/weapon/spell/spawner/pulsar/on_ranged_cast(atom/hit_atom, mob/user)
+/obj/item/spell/spawner/pulsar/on_ranged_cast(atom/hit_atom, mob/user)
 	if(within_range(hit_atom) && pay_energy(4000))
 		adjust_instability(8)
 		..()
 
-/obj/item/weapon/spell/spawner/pulsar/on_throw_cast(atom/hit_atom, mob/user)
+/obj/item/spell/spawner/pulsar/on_throw_cast(atom/hit_atom, mob/user)
 	empulse(hit_atom, 1, 1, 1, 1, log=1)
 
 // Does something every so often. Deletes itself when pulses_remaining hits zero.
 /obj/effect/temporary_effect/pulse
 	var/pulses_remaining = 3
 	var/pulse_delay = 2 SECONDS
+	var/pulsetimer
 
 /obj/effect/temporary_effect/pulse/Initialize()
 	..()
@@ -37,14 +38,20 @@
 /obj/effect/temporary_effect/pulse/LateInitialize()
 	pulse_loop()
 
+/obj/effect/temporary_effect/pulse/Destroy()
+	deltimer(pulsetimer)
+	pulsetimer = null
+	. = ..()
+
 /obj/effect/temporary_effect/pulse/proc/pulse_loop()
 	set waitfor = FALSE
-	
-	while(pulses_remaining)
-		sleep(pulse_delay)
-		on_pulse()
+
+	if(pulses_remaining > 0)
+		pulsetimer = addtimer(CALLBACK(src, PROC_REF(pulse_loop)), pulse_delay, TIMER_STOPPABLE)
 		pulses_remaining--
-	qdel(src)
+		on_pulse()
+	else
+		qdel(src)
 
 // Override for specific effects.
 /obj/effect/temporary_effect/pulse/proc/on_pulse()
@@ -63,10 +70,3 @@
 
 /obj/effect/temporary_effect/pulse/pulsar/on_pulse()
 	empulse(src, 1, 1, 2, 2, log = 1)
-
-
-
-
-
-
-

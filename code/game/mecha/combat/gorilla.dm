@@ -1,8 +1,8 @@
 
 /obj/mecha/combat/gorilla
-	desc = "<b><font color='red'>BLITZKRIEEEEEEEG!</font></b>"
-	name = "Sd.Kfz. 269 Mechakampfwagen Gorilla Ausf. A"
-	icon = 'icons/mecha/AxisMech.dmi'
+	desc = span_red(span_bold("BLITZKRIEEEEEEEG!")) // CHOMPEdit
+	name = "Sd.Kfz. 269 Mechakampfwagen Gorilla Ausf. A" // CHOMPEdit
+	icon = 'icons/mecha/AxisMech.dmi' // CHOMPEdit
 	icon_state = "pzrmech"
 	initial_icon = "pzrmech"
 	pixel_x = -16
@@ -11,8 +11,7 @@
 	maxhealth = 5000
 	opacity = 0 // Because there's big tall legs to look through. Also it looks fucky if this is set to 1.
 	deflect_chance = 50
-	damage_absorption = list("brute"=0.1,"fire"=0.7,"bullet"=0.1,"laser"=0.6,"energy"=0.7,"bomb"=0.7) //values show how much damage will pass through, not how much will be absorbed.
-	max_temperature = 35000
+	max_temperature = 35000 //Just a bit better than the Durand.
 	infra_luminosity = 3
 	wreckage = /obj/effect/decal/mecha_wreckage/gorilla
 	add_req_access = 0
@@ -115,7 +114,7 @@
 
 /obj/mecha/combat/gorilla/get_stats_part()
 	var/output = ..()
-	output += {"<b>Smoke:</b> [smoke_reserve]"}
+	output += span_bold("Smoke:") + {"[smoke_reserve]"}
 	return output
 
 
@@ -133,7 +132,7 @@
 
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/cannon
 	name = "8.8cm KwK 47"
-	desc = "<i>Precision German engineering!</i>" // Why would you ever take this off the mech, anyway?
+	desc = span_italics("Precision German engineering!") // Why would you ever take this off the mech, anyway?
 	icon_state = "mecha_uac2"
 	equip_cooldown = 60 // 6 seconds
 	projectile = /obj/item/projectile/bullet/cannon

@@ -12,12 +12,12 @@
 	set category = "Object"
 	set src in view(1)
 
-	if(usr.incapacitated() || !istype(usr, /mob/living))
-		to_chat(usr, "<span class='warning'>You can't do that.</span>")
+	if(usr.incapacitated() || !istype(usr, /mob/living) || istype(usr, /mob/living/simple_mob)) //CHOMPEdit - Preventing simple_mobs from interacting
+		to_chat(usr, span_warning("You can't do that."))
 		return
 
 	if(!Adjacent(usr))
-		to_chat(usr, "<span class='warning'>You can't reach it.</span>")
+		to_chat(usr, span_warning("You can't reach it."))
 		return
 
 	if(enabled)
@@ -36,12 +36,12 @@
 	set category = "Object"
 	set src in view(1)
 
-	if(usr.incapacitated() || !istype(usr, /mob/living))
-		to_chat(usr, "<span class='warning'>You can't do that.</span>")
+	if(usr.incapacitated() || !istype(usr, /mob/living) || istype(usr, /mob/living/simple_mob)) //CHOMPEdit - Preventing simple_mobs from interacting
+		to_chat(usr, span_warning("You can't do that."))
 		return
 
 	if(!Adjacent(usr))
-		to_chat(usr, "<span class='warning'>You can't reach it.</span>")
+		to_chat(usr, span_warning("You can't reach it."))
 		return
 
 	proc_eject_id(usr)
@@ -52,12 +52,12 @@
 	set category = "Object"
 	set src in view(1)
 
-	if(usr.incapacitated() || !istype(usr, /mob/living))
-		to_chat(usr, "<span class='warning'>You can't do that.</span>")
+	if(usr.incapacitated() || !istype(usr, /mob/living) || istype(usr, /mob/living/simple_mob)) //CHOMPEdit - Preventing simple_mobs from interacting
+		to_chat(usr, span_warning("You can't do that."))
 		return
 
 	if(!Adjacent(usr))
-		to_chat(usr, "<span class='warning'>You can't reach it.</span>")
+		to_chat(usr, span_warning("You can't reach it."))
 		return
 
 	proc_eject_usb(usr)
@@ -120,9 +120,9 @@
 	else if(!enabled && screen_on)
 		turn_on(user)
 
-/obj/item/modular_computer/attackby(var/obj/item/weapon/W as obj, var/mob/user as mob)
-	if(istype(W, /obj/item/weapon/card/id)) // ID Card, try to insert it.
-		var/obj/item/weapon/card/id/I = W
+/obj/item/modular_computer/attackby(var/obj/item/W as obj, var/mob/user as mob)
+	if(istype(W, /obj/item/card/id)) // ID Card, try to insert it.
+		var/obj/item/card/id/I = W
 		if(!card_slot)
 			to_chat(user, "You try to insert \the [I] into \the [src], but it does not have an ID card slot installed.")
 			return
@@ -136,17 +136,17 @@
 		update_uis()
 		to_chat(user, "You insert \the [I] into \the [src].")
 		return
-	if(istype(W, /obj/item/weapon/paper) || istype(W, /obj/item/weapon/paper_bundle))
+	if(istype(W, /obj/item/paper) || istype(W, /obj/item/paper_bundle))
 		if(!nano_printer)
 			return
 		nano_printer.attackby(W, user)
-	if(istype(W, /obj/item/weapon/computer_hardware))
-		var/obj/item/weapon/computer_hardware/C = W
+	if(istype(W, /obj/item/computer_hardware))
+		var/obj/item/computer_hardware/C = W
 		if(C.hardware_size <= max_hardware_size)
 			try_install_component(user, C)
 		else
 			to_chat(user, "This component is too large for \the [src].")
-	if(W.is_wrench())
+	if(W.has_tool_quality(TOOL_WRENCH))
 		var/list/components = get_all_components()
 		if(components.len)
 			to_chat(user, "Remove all components from \the [src] before disassembling it.")
@@ -155,8 +155,8 @@
 		src.visible_message("\The [src] has been disassembled by [user].")
 		qdel(src)
 		return
-	if(istype(W, /obj/item/weapon/weldingtool))
-		var/obj/item/weapon/weldingtool/WT = W
+	if(W.has_tool_quality(TOOL_WELDER))
+		var/obj/item/weldingtool/WT = W.get_welder()
 		if(!WT.isOn())
 			to_chat(user, "\The [W] is off.")
 			return
@@ -171,13 +171,13 @@
 			to_chat(user, "You repair \the [src].")
 		return
 
-	if(W.is_screwdriver())
+	if(W.has_tool_quality(TOOL_SCREWDRIVER))
 		var/list/all_components = get_all_components()
 		if(!all_components.len)
 			to_chat(user, "This device doesn't have any components installed.")
 			return
 		var/list/component_names = list()
-		for(var/obj/item/weapon/computer_hardware/H in all_components)
+		for(var/obj/item/computer_hardware/H in all_components)
 			component_names.Add(H.name)
 
 		var/choice = tgui_input_list(usr, "Which component do you want to uninstall?", "Computer maintenance", component_names)
@@ -188,7 +188,7 @@
 		if(!Adjacent(usr))
 			return
 
-		var/obj/item/weapon/computer_hardware/H = find_hardware_by_name(choice)
+		var/obj/item/computer_hardware/H = find_hardware_by_name(choice)
 
 		if(!H)
 			return

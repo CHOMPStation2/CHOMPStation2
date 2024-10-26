@@ -16,7 +16,7 @@
 	anchored = TRUE
 
 /obj/effect/decal/cleanable/ash/attack_hand(mob/user as mob)
-	to_chat(user, "<span class='notice'>[src] sifts through your fingers.</span>")
+	to_chat(user, span_notice("[src] sifts through your fingers."))
 	var/turf/simulated/floor/F = get_turf(src)
 	if (istype(F))
 		F.dirt += 4
@@ -37,6 +37,25 @@
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "dirt"
 	mouse_opacity = 0
+
+/obj/effect/decal/cleanable/dirt/Initialize(var/mapload, var/_age, var/dirt)
+	.=..()
+	var/turf/simulated/our_turf = src.loc
+	if(our_turf && istype(our_turf) && our_turf.can_dirty)
+		our_turf.dirt = clamp(max(age ? (dirt ? dirt : 101) : our_turf.dirt, our_turf.dirt), 0, 101)
+		var/calcalpha = our_turf.dirt > 50 ? min((our_turf.dirt - 50) * 5, 255) : 0
+		var/alreadyfound = FALSE
+		for (var/obj/effect/decal/cleanable/dirt/alreadythere in our_turf) //in case of multiple
+			if (alreadythere == src)
+				continue
+			else if (alreadyfound)
+				qdel(alreadythere)
+				continue
+			alreadyfound = TRUE
+			alreadythere.alpha = calcalpha //don't need to constantly recalc for all of them in it because it'll just max if a non-persistent dirt overlay gets added, and then the new dirt overlay will be deleted
+		if (alreadyfound)
+			return INITIALIZE_HINT_QDEL
+		alpha = calcalpha
 
 /obj/effect/decal/cleanable/flour
 	name = "flour"
@@ -128,3 +147,17 @@
 	icon = 'icons/effects/blood.dmi'
 	icon_state = "mfloor1"
 	random_icon_states = list("mfloor1", "mfloor2", "mfloor3", "mfloor4", "mfloor5", "mfloor6", "mfloor7")
+
+/obj/effect/decal/cleanable/confetti
+	name = "confetti"
+	desc = "Tiny bits of colored paper thrown about for the janitor to enjoy!"
+	gender = PLURAL
+	density = FALSE
+	anchored = TRUE
+	icon = 'icons/effects/effects.dmi'
+	icon_state = "confetti"
+
+/obj/effect/decal/cleanable/confetti/attack_hand(mob/user)
+	to_chat(user, span_notice("You start to meticulously pick up the confetti."))
+	if(do_after(user, 60))
+		qdel(src)

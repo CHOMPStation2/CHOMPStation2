@@ -6,15 +6,12 @@
 /turf/simulated/mineral/vacuum,
 /area/space)
 "c" = (
-/mob/living/simple_mob/mechanical/mining_drone{
-	faction = "poi_mining_drones"
-	},
+/mob/living/simple_mob/mechanical/mining_drone/scavenger,
 /turf/simulated/floor/airless,
 /area/submap/debrisfield/mining_outpost)
 "d" = (
 /obj/machinery/power/rtg,
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/airless,
@@ -79,13 +76,13 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/airless,
 /area/submap/debrisfield/mining_outpost)
 "p" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
+/mob/living/simple_mob/mechanical/mining_drone/scavenger,
 /turf/space,
 /area/space)
 "q" = (
@@ -111,7 +108,7 @@
 /turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/debrisfield/mining_outpost)
 "u" = (
-/obj/item/weapon/ore,
+/obj/item/ore,
 /obj/effect/floor_decal/asteroid,
 /turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/debrisfield/mining_outpost)
@@ -119,7 +116,7 @@
 /turf/template_noop,
 /area/space)
 "w" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /obj/structure/grille/broken,
 /obj/item/stack/rods,
 /turf/simulated/floor/airless,
@@ -152,7 +149,7 @@
 /turf/simulated/floor/tiled/airless,
 /area/submap/debrisfield/mining_outpost)
 "D" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /obj/effect/floor_decal/steeldecal/steel_decals_central5{
 	dir = 4
 	},
@@ -186,7 +183,7 @@
 	},
 /obj/item/stack/medical/bruise_pack,
 /obj/item/stack/medical/ointment,
-/obj/item/weapon/storage/mre/random,
+/obj/item/storage/mre/random,
 /obj/effect/floor_decal/rust/part_rusted3,
 /turf/simulated/floor/tiled/airless,
 /area/submap/debrisfield/mining_outpost)
@@ -197,7 +194,7 @@
 /turf/simulated/floor/tiled/airless,
 /area/submap/debrisfield/mining_outpost)
 "I" = (
-/obj/item/weapon/storage/toolbox/syndicate,
+/obj/item/storage/toolbox/syndicate,
 /obj/structure/table/rack/steel,
 /turf/simulated/floor/tiled/airless,
 /area/submap/debrisfield/mining_outpost)
@@ -262,9 +259,9 @@ v
 a
 B
 f
-c
 f
 c
+f
 f
 f
 "}

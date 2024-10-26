@@ -175,13 +175,13 @@
 		if(weedlevel > 0)
 			nymph.reagents.add_reagent("glucose", weedlevel)
 			weedlevel = 0
-			nymph.visible_message("<font color='blue'><b>[nymph]</b> begins rooting through [src], ripping out weeds and eating them noisily.</font>","<font color='blue'>You begin rooting through [src], ripping out weeds and eating them noisily.</font>")
+			nymph.visible_message(span_notice(span_bold("[nymph]") + " begins rooting through [src], ripping out weeds and eating them noisily."),span_notice("You begin rooting through [src], ripping out weeds and eating them noisily."))
 		else if(nymph.nutrition > 100 && nutrilevel < 10)
 			nymph.nutrition -= ((10-nutrilevel)*5)
 			nutrilevel = 10
-			nymph.visible_message("<font color='blue'><b>[nymph]</b> secretes a trickle of green liquid, refilling [src].</font>","<font color='blue'>You secrete a trickle of green liquid, refilling [src].</font>")
+			nymph.visible_message(span_notice(span_bold("[nymph]") + " secretes a trickle of green liquid, refilling [src]."),span_notice("You secrete a trickle of green liquid, refilling [src]."))
 		else
-			nymph.visible_message("<font color='blue'><b>[nymph]</b> rolls around in [src] for a bit.</font>","<font color='blue'>You roll around in [src] for a bit.</font>")
+			nymph.visible_message(span_notice(span_bold("[nymph]") + " rolls around in [src] for a bit."),span_notice("You roll around in [src] for a bit."))
 		return
 
 /obj/machinery/portable_atmospherics/hydroponics/Initialize()
@@ -344,7 +344,7 @@
 
 	if(closed_system)
 		if(user)
-			to_chat(user, "You can't harvest from the plant while the lid is shut.")
+			to_chat(user, span_filter_notice("You can't harvest from the plant while the lid is shut."))
 		return
 
 	if(user)
@@ -372,7 +372,7 @@
 	if(!user || !dead) return
 
 	if(closed_system)
-		to_chat(user, "You can't remove the dead plant while the lid is shut.")
+		to_chat(user, span_filter_notice("You can't remove the dead plant while the lid is shut."))
 		return
 
 	seed = null
@@ -383,16 +383,19 @@
 	mutation_mod = 0
 	age_mod = 0 //CHOMPedit
 
-	to_chat(user, "You remove the dead plant.")
+	to_chat(user, span_filter_notice("You remove the dead plant."))
 	lastproduce = 0
 	check_health()
 	return
 
 // If a weed growth is sufficient, this proc is called.
 /obj/machinery/portable_atmospherics/hydroponics/proc/weed_invasion()
+	var/previous_plant
 
 	//Remove the seed if something is already planted.
-	if(seed) seed = null
+	if(seed)
+		previous_plant = seed.display_name
+		seed = null
 	seed = SSplants.seeds[pick(list("reishi","nettle","amanita","mushrooms","plumphelmet","towercap","harebells","weeds"))]
 	if(!seed) return //Weed does not exist, someone fucked up.
 
@@ -406,7 +409,7 @@
 	pestlevel = 0
 	sampled = 0
 	update_icon()
-	visible_message("<span class='notice'>[src] has been overtaken by [seed.display_name].</span>")
+	visible_message(span_notice("\The [previous_plant ? previous_plant : initial(name)] has been overtaken by [seed.display_name]."))
 
 	return
 
@@ -426,7 +429,7 @@
 	// harvested yet and it's safe to assume it's restricted to this tray.
 	if(!isnull(SSplants.seeds[seed.name]))
 		seed = seed.diverge()
-	seed.mutate(severity,get_turf(src))
+		seed.mutate(severity,get_turf(src))
 
 	return
 
@@ -440,11 +443,11 @@
 		return
 	if(ishuman(usr) || istype(usr, /mob/living/silicon/robot))
 		if(labelled)
-			to_chat(usr, "You remove the label.")
+			to_chat(usr, span_filter_notice("You remove the label."))
 			labelled = null
 			update_icon()
 		else
-			to_chat(usr, "There is no label to remove.")
+			to_chat(usr, span_filter_notice("There is no label to remove."))
 	return
 
 /obj/machinery/portable_atmospherics/hydroponics/verb/setlight()
@@ -458,7 +461,7 @@
 		var/new_light = tgui_input_list(usr, "Specify a light level.", "Light Level", list(0,1,2,3,4,5,6,7,8,9,10))
 		if(new_light)
 			tray_light = new_light
-			to_chat(usr, "You set the tray to a light level of [tray_light] lumens.")
+			to_chat(usr, span_filter_notice("You set the tray to a light level of [tray_light] lumens."))
 	return
 
 /obj/machinery/portable_atmospherics/hydroponics/proc/check_level_sanity()
@@ -495,7 +498,7 @@
 	weedlevel = 0
 
 	update_icon()
-	visible_message("<span class='danger'>The </span><span class='notice'>[previous_plant]</span><span class='danger'> has suddenly mutated into </span><span class='notice'>[seed.display_name]!</span>")
+	visible_message(span_danger("The " + span_notice("[previous_plant]") + " has suddenly mutated into " + span_notice("[seed.display_name]") + "!"))
 
 	return
 
@@ -504,18 +507,18 @@
 	if(O.is_open_container())
 		return 0
 
-	if(O.is_wirecutter() || istype(O, /obj/item/weapon/surgical/scalpel))
+	if(O.has_tool_quality(TOOL_WIRECUTTER) || istype(O, /obj/item/surgical/scalpel))
 
 		if(!seed)
-			to_chat(user, "There is nothing to take a sample from in \the [src].")
+			to_chat(user, span_filter_notice("There is nothing to take a sample from in \the [src]."))
 			return
 
 		if(sampled)
-			to_chat(user, "You have already sampled from this plant.")
+			to_chat(user, span_filter_notice("You have already sampled from this plant."))
 			return
 
 		if(dead)
-			to_chat(user, "The plant is dead.")
+			to_chat(user, span_filter_notice("The plant is dead."))
 			return
 
 		// Create a sample.
@@ -532,22 +535,22 @@
 
 		return
 
-	else if(istype(O, /obj/item/weapon/reagent_containers/syringe))
+	else if(istype(O, /obj/item/reagent_containers/syringe))
 
-		var/obj/item/weapon/reagent_containers/syringe/S = O
+		var/obj/item/reagent_containers/syringe/S = O
 
 		if (S.mode == 1)
 			if(seed)
 				return ..()
 			else
-				to_chat(user, "There's no plant to inject.")
+				to_chat(user, span_filter_notice("There's no plant to inject."))
 				return 1
 		else
 			if(seed)
 				//Leaving this in in case we want to extract from plants later.
-				to_chat(user, "You can't get any extract out of this plant.")
+				to_chat(user, span_filter_notice("You can't get any extract out of this plant."))
 			else
-				to_chat(user, "There's nothing to draw something from.")
+				to_chat(user, span_filter_notice("There's nothing to draw something from."))
 			return 1
 
 	else if (istype(O, /obj/item/seeds))
@@ -558,48 +561,48 @@
 			user.remove_from_mob(O)
 
 			if(!S.seed)
-				to_chat(user, "The packet seems to be empty. You throw it away.")
+				to_chat(user, span_filter_notice("The packet seems to be empty. You throw it away."))
 				qdel(O)
 				return
 
-			to_chat(user, "You plant the [S.seed.seed_name] [S.seed.seed_noun].")
+			to_chat(user, span_filter_notice("You plant the [S.seed.seed_name] [S.seed.seed_noun]."))
 			plant_seeds(S)
 
 		else
-			to_chat(user, "<span class='danger'>\The [src] already has seeds in it!</span>")
+			to_chat(user, span_danger("\The [src] already has seeds in it!"))
 
-	else if (istype(O, /obj/item/weapon/material/minihoe))  // The minihoe
+	else if (istype(O, /obj/item/material/minihoe))  // The minihoe
 
 		if(weedlevel > 0)
-			user.visible_message("<span class='danger'>[user] starts uprooting the weeds.</span>", "<span class='danger'>You remove the weeds from the [src].</span>")
+			user.visible_message(span_danger("[user] starts uprooting the weeds."), span_danger("You remove the weeds from the [src]."))
 			weedlevel = 0
 			update_icon()
 		else
-			to_chat(user, "<span class='danger'>This plot is completely devoid of weeds. It doesn't need uprooting.</span>")
+			to_chat(user, span_danger("This plot is completely devoid of weeds. It doesn't need uprooting."))
 
-	else if (istype(O, /obj/item/weapon/storage/bag/plants))
+	else if (istype(O, /obj/item/storage/bag/plants))
 
 		attack_hand(user)
 
-		var/obj/item/weapon/storage/bag/plants/S = O
-		for (var/obj/item/weapon/reagent_containers/food/snacks/grown/G in locate(user.x,user.y,user.z))
+		var/obj/item/storage/bag/plants/S = O
+		for (var/obj/item/reagent_containers/food/snacks/grown/G in locate(user.x,user.y,user.z))
 			if(!S.can_be_inserted(G))
 				return
 			S.handle_item_insertion(G, 1)
 
-	else if ( istype(O, /obj/item/weapon/plantspray) )
+	else if ( istype(O, /obj/item/plantspray) )
 
-		var/obj/item/weapon/plantspray/spray = O
+		var/obj/item/plantspray/spray = O
 		user.remove_from_mob(O)
 		toxins += spray.toxicity
 		pestlevel -= spray.pest_kill_str
 		weedlevel -= spray.weed_kill_str
-		to_chat(user, "You spray [src] with [O].")
+		to_chat(user, span_filter_notice("You spray [src] with [O]."))
 		playsound(src, 'sound/effects/spray3.ogg', 50, 1, -6)
 		qdel(O)
 		check_health()
 
-	else if(mechanical && O.is_wrench())
+	else if(mechanical && O.has_tool_quality(TOOL_WRENCH))
 
 		//If there's a connector here, the portable_atmospherics setup can handle it.
 		if(locate(/obj/machinery/atmospherics/portables_connector/) in loc)
@@ -607,23 +610,23 @@
 
 		playsound(src, O.usesound, 50, 1)
 		anchored = !anchored
-		to_chat(user, "You [anchored ? "wrench" : "unwrench"] \the [src].")
+		to_chat(user, span_filter_notice("You [anchored ? "wrench" : "unwrench"] \the [src]."))
 
-	else if(istype(O,/obj/item/device/multitool))
+	else if(istype(O,/obj/item/multitool))
 		if(!anchored)
-			to_chat(user, "<span class='warning'>Anchor it first!</span>")
+			to_chat(user, span_warning("Anchor it first!"))
 			return
 		if(frozen == -1)
-			to_chat(user, "<span class='warning'>You see no way to use \the [O] on [src].</span>")
+			to_chat(user, span_warning("You see no way to use \the [O] on [src]."))
 			return
-		to_chat(user, "<span class='notice'>You [frozen ? "disable" : "enable"] the cryogenic freezing.</span>")
+		to_chat(user, span_notice("You [frozen ? "disable" : "enable"] the cryogenic freezing."))
 		frozen = !frozen
 		update_icon()
 		return
 
 	else if(O.force && seed)
 		user.setClickCooldown(user.get_attack_speed(O))
-		user.visible_message("<span class='danger'>\The [seed.display_name] has been attacked by [user] with \the [O]!</span>")
+		user.visible_message(span_danger("\The [seed.display_name] has been attacked by [user] with \the [O]!"))
 		if(!dead)
 			health -= O.force
 			check_health()
@@ -641,7 +644,7 @@
 	if(istype(usr,/mob/living/silicon))
 		return
 	if(frozen == 1)
-		to_chat(user, "<span class='warning'>Disable the cryogenic freezing first!</span>")
+		to_chat(user, span_warning("Disable the cryogenic freezing first!"))
 	if(harvest)
 		harvest(user)
 	else if(dead)
@@ -651,7 +654,7 @@
 	. = ..()
 
 	if(seed)
-		. += "<span class='notice'>[seed.display_name] are growing here.</span>"
+		. += span_notice("[seed.display_name] are growing here.")
 	else
 		. += "It is empty."
 
@@ -663,15 +666,15 @@
 
 	if(seed)
 		if(weedlevel >= 5)
-			. += "It is <span class='danger'>infested with weeds</span>!"
+			. += "It is " + span_danger("infested with weeds") + "!"
 		if(pestlevel >= 5)
-			. += "It is <span class='danger'>infested with tiny worms</span>!"
+			. += "It is " + span_danger("infested with tiny worms") + "!"
 		if(dead)
-			. += "It has <span class='danger'>a dead plant</span>!"
+			. += "It has " + span_danger("a dead plant") + "!"
 		else if(health <= (seed.get_trait(TRAIT_ENDURANCE)/ 2))
-			. += "It has <span class='danger'>an unhealthy plant</span>!"
+			. += "It has " + span_danger("an unhealthy plant") + "!"
 	if(frozen == 1)
-		. += "<span class='notice'>It is cryogenically frozen.</span>"
+		. += span_notice("It is cryogenically frozen.")
 	if(mechanical)
 		var/turf/T = loc
 		var/datum/gas_mixture/environment
@@ -709,7 +712,7 @@
 
 /obj/machinery/portable_atmospherics/hydroponics/proc/close_lid(var/mob/living/user)
 	closed_system = !closed_system
-	to_chat(user, "You [closed_system ? "close" : "open"] the tray's lid.")
+	to_chat(user, span_filter_notice("You [closed_system ? "close" : "open"] the tray's lid."))
 	update_icon()
 
 #undef AGE_MOD_MAX //CHOMPedit

@@ -27,15 +27,15 @@
 	if(!T)
 		warning("Drop pod wasn't spawned on a turf")
 		return
-	
+
 	moveToNullspace()
 	icon_state = "[initial(icon_state)]_falling"
-	
+
 	// Show warning on 3x3 area centred on our drop spot
 	var/list/turfs_nearby = block(get_step(T, SOUTHWEST), get_step(T, NORTHEAST))
 	for(var/turf/TN in turfs_nearby)
 		new /obj/effect/temporary_effect/shuttle_landing(TN)
-	
+
 	// Wait a minute
 	sleep(4 SECONDS)
 
@@ -54,7 +54,7 @@
 	T.hotspot_expose(900)
 	sleep(1 SECOND)
 	filters = null
-	
+
 	// CRONCH
 	playsound(src, 'sound/effects/meteorimpact.ogg', 50, 1)
 	if(!polite)
@@ -65,7 +65,7 @@
 	else
 		for(var/turf/simulated/floor/F in view(1, T))
 			F.burn_tile(900)
-		
+
 	for(var/obj/O in T)
 		if(O == src)
 			continue
@@ -76,14 +76,14 @@
 	// Landed! Simmer
 	plane = initial(plane)
 	icon_state = "[initial(icon_state)]"
-	
+
 	if(auto_open)
 		sleep(2 SECONDS)
 		open_pod()
 		visible_message("\The [src] pops open!")
 	else
 		for(var/mob/M in src)
-			to_chat(M, "<span class='danger'>You've landed! Open the hatch if you think it's safe! \The [src] has enough air to last for a while...</span>")
+			to_chat(M, span_danger("You've landed! Open the hatch if you think it's safe! \The [src] has enough air to last for a while..."))
 
 /obj/structure/drop_pod/proc/open_pod()
 	if(finished)
@@ -99,21 +99,21 @@
 /obj/structure/drop_pod/attack_hand(mob/living/user)
 	if(istype(user) && (Adjacent(user) || (user in src)) && !user.incapacitated())
 		if(finished)
-			to_chat(user, "<span class='warning'>Nothing left to do with it now. Maybe you can break it down into materials.</span>")
+			to_chat(user, span_warning("Nothing left to do with it now. Maybe you can break it down into materials."))
 		else
 			open_pod()
-			user.visible_message("<b>[user]</b> opens \the [src]!","You open \the [src]!")
+			user.visible_message(span_infoplain(span_bold("[user]") + " opens \the [src]!"),span_infoplain("You open \the [src]!"))
 
 /obj/structure/drop_pod/attackby(obj/item/O, mob/user)
-	if(O.is_wrench())
+	if(O.has_tool_quality(TOOL_WRENCH))
 		if(finished)
-			to_chat(user, "<span class='notice'>You start breaking down \the [src].</span>")
+			to_chat(user, span_notice("You start breaking down \the [src]."))
 			if(do_after(user, 10 SECONDS, src, exclusive = TASK_ALL_EXCLUSIVE))
 				new /obj/item/stack/material/plasteel(loc, 10)
 				playsound(user, O.usesound, 50, 1)
 				qdel(src)
 		else
-			to_chat(user, "<span class='warning'>\The [src] hasn't been opened yet. Do that first.</span>")
+			to_chat(user, span_warning("\The [src] hasn't been opened yet. Do that first."))
 	return ..()
 
 /obj/structure/drop_pod/return_air()

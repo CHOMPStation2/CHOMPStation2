@@ -14,8 +14,8 @@
 	icon_screen = "medcomp"
 	light_color = "#315ab4"
 	req_one_access = list(access_medical, access_forensics_lockers, access_robotics)
-	circuit = /obj/item/weapon/circuitboard/med_data
-	var/obj/item/weapon/card/id/scan = null
+	circuit = /obj/item/circuitboard/med_data
+	var/obj/item/card/id/scan = null
 	var/authenticated = null
 	var/rank = null
 	var/screen = null
@@ -33,6 +33,7 @@
 	field_edit_questions = list(
 		// General
 		"sex" = "Please select new sex:",
+		"species" = "Please input new species:",
 		"age" = "Please input new age:",
 		"fingerprint" = "Please input new fingerprint hash:",
 		"p_stat" = "Please select new physical status:",
@@ -40,6 +41,7 @@
 		// Medical
 		"id_gender" = "Please select new gender identity:",
 		"blood_type" = "Please select new blood type:",
+		"blood_reagent" = "Please select new blood basis:",
 		"b_dna" = "Please input new DNA:",
 		"mi_dis" = "Please input new minor disabilities:",
 		"mi_dis_d" = "Please summarize minor disabilities:",
@@ -84,7 +86,7 @@
 	return
 
 /obj/machinery/computer/med_data/attackby(var/obj/item/O, var/mob/user)
-	if(istype(O, /obj/item/weapon/card/id) && !scan && user.unEquip(O))
+	if(istype(O, /obj/item/card/id) && !scan && user.unEquip(O))
 		O.loc = src
 		scan = O
 		to_chat(user, "You insert \the [O].")
@@ -137,6 +139,7 @@
 					fields[++fields.len] = FIELD("Name", active1.fields["name"], null)
 					fields[++fields.len] = FIELD("ID", active1.fields["id"], null)
 					fields[++fields.len] = FIELD("Sex", active1.fields["sex"], "sex")
+					fields[++fields.len] = FIELD("Species", active1.fields["species"], "species")
 					fields[++fields.len] = FIELD("Age", "[active1.fields["age"]]", "age")
 					fields[++fields.len] = FIELD("Fingerprint", active1.fields["fingerprint"], "fingerprint")
 					fields[++fields.len] = FIELD("Physical Status", active1.fields["p_stat"], "p_stat")
@@ -157,6 +160,7 @@
 					medical["fields"] = fields
 					fields[++fields.len] = MED_FIELD("Gender identity", active2.fields["id_gender"], "id_gender", TRUE)
 					fields[++fields.len] = MED_FIELD("Blood Type", active2.fields["b_type"], "blood_type", FALSE)
+					fields[++fields.len] = MED_FIELD("Blood Basis", active2.fields["blood_reagent"], "blood_reagent", FALSE)
 					fields[++fields.len] = MED_FIELD("DNA", active2.fields["b_dna"], "b_dna", TRUE)
 					fields[++fields.len] = MED_FIELD("Brain Type", active2.fields["brain_type"], "brain_type", TRUE)
 					fields[++fields.len] = MED_FIELD("Important Notes", active2.fields["notes"], "notes", TRUE)
@@ -220,7 +224,7 @@
 				scan = null
 			else
 				var/obj/item/I = usr.get_active_hand()
-				if(istype(I, /obj/item/weapon/card/id))
+				if(istype(I, /obj/item/card/id))
 					usr.drop_item()
 					I.forceMove(src)
 					scan = I
@@ -232,7 +236,7 @@
 					rank = scan.assignment
 			else if(login_type == LOGIN_TYPE_AI && isAI(usr))
 				authenticated = usr.name
-				rank = "AI"
+				rank = JOB_AI
 			else if(login_type == LOGIN_TYPE_ROBOT && isrobot(usr))
 				authenticated = usr.name
 				var/mob/living/silicon/robot/R = usr
@@ -299,6 +303,7 @@
 					R.fields["id"] = active1.fields["id"]
 					R.name = "Medical Record #[R.fields["id"]]"
 					R.fields["b_type"] = "Unknown"
+					R.fields["blood_reagent"] = "Unknown"
 					R.fields["b_dna"] = "Unknown"
 					R.fields["mi_dis"] = "None"
 					R.fields["mi_dis_d"] = "No minor disabilities have been declared."
@@ -346,7 +351,7 @@
 					printing = TRUE
 					// playsound(loc, 'sound/goonstation/machines/printer_dotmatrix.ogg', 50, TRUE)
 					SStgui.update_uis(src)
-					addtimer(CALLBACK(src, .proc/print_finish), 5 SECONDS)
+					addtimer(CALLBACK(src, PROC_REF(print_finish)), 5 SECONDS)
 			else
 				return FALSE
 
@@ -413,21 +418,23 @@
   * Called when the print timer finishes
   */
 /obj/machinery/computer/med_data/proc/print_finish()
-	var/obj/item/weapon/paper/P = new(loc)
-	P.info = "<center><b>Medical Record</b></center><br>"
+	var/obj/item/paper/P = new(loc)
+	P.info = "<center>" + span_bold("Medical Record") + "</center><br>"
 	if(istype(active1, /datum/data/record) && data_core.general.Find(active1))
 		P.info += {"Name: [active1.fields["name"]] ID: [active1.fields["id"]]
 		<br>\nSex: [active1.fields["sex"]]
+		<br>\nSpecies: [active1.fields["species"]]
 		<br>\nAge: [active1.fields["age"]]
 		<br>\nFingerprint: [active1.fields["fingerprint"]]
 		<br>\nPhysical Status: [active1.fields["p_stat"]]
 		<br>\nMental Status: [active1.fields["m_stat"]]<br>"}
 	else
-		P.info += "<b>General Record Lost!</b><br>"
+		P.info += span_bold("General Record Lost!") + "<br>"
 	if(istype(active2, /datum/data/record) && data_core.medical.Find(active2))
 		P.info += {"<br>\n<center><b>Medical Data</b></center>
 		<br>\nGender Identity: [active2.fields["id_gender"]]
 		<br>\nBlood Type: [active2.fields["b_type"]]
+		<br>\nBlood Basis: [active2.fields["blood_reagent"]]
 		<br>\nDNA: [active2.fields["b_dna"]]<br>\n
 		<br>\nMinor Disabilities: [active2.fields["mi_dis"]]
 		<br>\nDetails: [active2.fields["mi_dis_d"]]<br>\n
@@ -444,7 +451,7 @@
 		for(var/c in active2.fields["comments"])
 			P.info += "[c["header"]]<br>[c["text"]]<br>"
 	else
-		P.info += "<b>Medical Record Lost!</b><br>"
+		P.info += span_bold("Medical Record Lost!") + "<br>"
 	P.info += "</tt>"
 	P.name = "paper - 'Medical Record: [active1.fields["name"]]'"
 	printing = FALSE
@@ -500,8 +507,14 @@
 	icon_state = "pcu_med"
 	icon_keyboard = "pcu_key"
 	light_color = "#5284e7"
-	circuit = /obj/item/weapon/circuitboard/med_data/pcu
+	circuit = /obj/item/circuitboard/med_data/pcu
 	density = FALSE
+
+#undef MED_DATA_R_LIST
+#undef MED_DATA_MAINT
+#undef MED_DATA_RECORD
+#undef MED_DATA_V_DATA
+#undef MED_DATA_MEDBOT
 
 #undef FIELD
 #undef MED_FIELD

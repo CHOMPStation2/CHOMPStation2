@@ -1,34 +1,61 @@
 /mob/proc/say(var/message, var/datum/language/speaking = null, var/whispering = 0)
 	return
 
-/mob/verb/whisper(message as text)
+/mob/verb/whisper(message as text)  //CHOMPEdit
 	set name = "Whisper"
-	set category = "IC"
+	// set category = "IC.Subtle" //CHOMPEdit
+	set hidden = 1
+	//VOREStation Addition Start
+	if(forced_psay)
+		psay(message)
+		return
+	//VOREStation Addition End
 
 	usr.say(message,whispering=1)
 
-/mob/verb/say_verb(message as text)
+/mob/verb/say_verb(message as text) //CHOMPEdit
 	set name = "Say"
-	set category = "IC"
+	// set category = "IC.Chat" //CHOMPEdit
+	set instant = TRUE // CHOMPEdit
+	set hidden = 1
+	//VOREStation Addition Start
+	if(forced_psay)
+		psay(message)
+		return
+	//VOREStation Addition End
 
-	set_typing_indicator(FALSE)
-	usr.say(message)
+	client?.stop_thinking()
+	// CHOMPEdit Start
+	//queue this message because verbs are scheduled to process after SendMaps in the tick and speech is pretty expensive when it happens.
+	//by queuing this for next tick the mc can compensate for its cost instead of having speech delay the start of the next tick
+	if(message)
+		QUEUE_OR_CALL_VERB_FOR(VERB_CALLBACK(src, TYPE_PROC_REF(/mob, say), message), SSspeech_controller)
+	// CHOMPEdit End
 
-/mob/verb/me_verb(message as message)
+/mob/verb/me_verb(message as message) //CHOMPEdit
 	set name = "Me"
-	set category = "IC"
+	// set category = "IC.Chat" //CHOMPEdit
+	set desc = "Emote to nearby people (and your pred/prey)"
+	set hidden = 1
 
 	if(say_disabled)	//This is here to try to identify lag problems
-		to_chat(usr, "<font color='red'>Speech is currently admin-disabled.</font>")
+		to_chat(usr, span_red("Speech is currently admin-disabled."))
 		return
+	//VOREStation Addition Start
+	if(forced_psay)
+		pme(message)
+		return
+	//VOREStation Addition End
 
 	//VOREStation Edit Start
 	if(muffled)
 		return me_verb_subtle(message)
+	if(autowhisper)
+		return me_verb_subtle(message)
 	message = sanitize_or_reflect(message,src) //VOREStation Edit - Reflect too-long messages (within reason)
 	//VOREStation Edit End
 
-	set_typing_indicator(FALSE)
+	client?.stop_thinking()
 	if(use_me)
 		custom_emote(usr.emote_type, message)
 	else
@@ -36,24 +63,24 @@
 
 /mob/proc/say_dead(var/message)
 	if(say_disabled)	//This is here to try to identify lag problems
-		to_chat(usr, "<span class='danger'>Speech is currently admin-disabled.</span>")
+		to_chat(usr, span_danger("Speech is currently admin-disabled."))
 		return
 
 	if(!client)
 		return // Clientless mobs shouldn't be trying to talk in deadchat.
 
 	if(!client.holder)
-		if(!config.dsay_allowed)
-			to_chat(src, "<span class='danger'>Deadchat is globally muted.</span>")
+		if(!CONFIG_GET(flag/dsay_allowed))
+			to_chat(src, span_danger("Deadchat is globally muted."))
 			return
 
-	if(!is_preference_enabled(/datum/client_preference/show_dsay))
-		to_chat(usr, "<span class='danger'>You have deadchat muted.</span>")
+	if(!client?.prefs?.read_preference(/datum/preference/toggle/show_dsay))
+		to_chat(usr, span_danger("You have deadchat muted."))
 		return
 
 	message = encode_html_emphasis(message)
 
-	say_dead_direct("[pick("complains","moans","whines","laments","blubbers")], <span class='message'>\"[message]\"</span>", src)
+	say_dead_direct("[pick("complains","moans","whines","laments","blubbers")], " + span_message("\"[message]\""), src)
 
 /mob/proc/say_understands(var/mob/other, var/datum/language/speaking = null)
 	if(stat == DEAD)
@@ -62,6 +89,15 @@
 	//Universal speak makes everything understandable, for obvious reasons.
 	else if(universal_speak || universal_understand)
 		return TRUE
+
+	//VOREStation Addition Start
+	if(isliving(src))
+		var/mob/living/L = src
+		if(isbelly(L.loc) && L.absorbed)
+			var/mob/living/P = L.loc.loc
+			if(P.say_understands(other, speaking))
+				return TRUE
+	//VOREStation Addition End
 
 	//Languages are handled after.
 	if(!speaking)
@@ -82,8 +118,21 @@
 	if(speaking.flags & NONVERBAL)
 		if(sdisabilities & BLIND || blinded)
 			return FALSE
-		if(!other || !(other in view(src)))
+		if(!other) //CHOMPEdit - Fixes seeing non-verbal languages while being held
 			return FALSE
+		//CHOMPEdit Start - Fixes seeing non-verbal languages while being held
+		if(istype(other.loc, /obj/item/holder))
+			if(istype(src.loc, /obj/item/holder))
+				if(!(other.loc in view(src.loc.loc)))
+					return FALSE
+			else if(!(other.loc in view(src)))
+				return FALSE
+		else if(istype(src.loc, /obj/item/holder))
+			if((!other) in view(src.loc.loc))
+				return FALSE
+		else if((!other) in view(src))
+			return FALSE
+		//CHOMPEdit End
 
 	//Language check.
 	for(var/datum/language/L in languages)
@@ -156,6 +205,8 @@
 			// Okay, we're definitely now trying to invoke a language (probably)
 			// This "[]" is probably unnecessary but BYOND will runtime if a number is used
 			var/datum/language/L = GLOB.language_keys["[language_key]"]
+			if((language_key in language_keys) && language_keys[language_key])
+				L = language_keys[language_key]
 
 			// MULTILINGUAL_SPACE enforces a space after the language key
 			if(client && (client.prefs.multilingual_mode == MULTILINGUAL_SPACE) && (text2ascii(copytext(selection, 3, 4)) != 32)) // If we're looking for a space and we don't find one
@@ -225,7 +276,7 @@
 
 		// There are a few things that will make us want to ignore all other languages in - namely, HIVEMIND languages.
 		var/datum/language/L = current[1]
-		if(L && (L.flags & HIVEMIND || L.flags & SIGNLANG))
+		if(L && (L.flags & HIVEMIND || L.flags & SIGNLANG || L.flags & INAUDIBLE))
 			return new /datum/multilingual_say_piece(L, trim(sanitize(strip_prefixes(message))))
 
 		if(i + 1 > length(prefix_locations)) // We are out of lookaheads, that means the rest of the message is in cur lang

@@ -7,7 +7,7 @@
 	icon_keyboard = "security_key"
 	icon_screen = "cameras"
 	light_color = "#a91515"
-	circuit = /obj/item/weapon/circuitboard/security
+	circuit = /obj/item/circuitboard/security
 
 	var/mapping = 0//For the overview file, interesting bit of code.
 	var/list/network = list()
@@ -46,7 +46,7 @@
 
 /obj/machinery/computer/security/attack_ai(mob/user)
 	if(isAI(user))
-		to_chat(user, "<span class='notice'>You realise its kind of stupid to access a camera console when you have the entire camera network at your metaphorical fingertips</span>")
+		to_chat(user, span_notice("You realise its kind of stupid to access a camera console when you have the entire camera network at your metaphorical fingertips"))
 		return
 	attack_hand(user)
 
@@ -69,6 +69,8 @@
 	circuit = null
 
 GLOBAL_LIST_EMPTY(entertainment_screens)
+GLOBAL_LIST_EMPTY(bodycamera_screens) // CHOMPEdit
+
 /obj/machinery/computer/security/telescreen/entertainment
 	name = "entertainment monitor"
 	desc = "Damn, why do they never have anything interesting on these things? (Alt-click to toggle the display)"
@@ -78,12 +80,12 @@ GLOBAL_LIST_EMPTY(entertainment_screens)
 	light_color = "#FFEEDB"
 	light_range_on = 2
 	network = list(NETWORK_THUNDER)
-	circuit = /obj/item/weapon/circuitboard/security/telescreen/entertainment
+	circuit = /obj/item/circuitboard/security/telescreen/entertainment
 	camera_datum_type = /datum/tgui_module/camera/bigscreen
-	
-	var/obj/item/device/radio/radio = null
+
+	var/obj/item/radio/radio = null
 	var/obj/effect/overlay/vis/pinboard
-	var/weakref/showing
+	var/datum/weakref/showing
 
 	var/enabled = TRUE // on or off
 
@@ -93,7 +95,10 @@ GLOBAL_LIST_EMPTY(entertainment_screens)
 	var/static/icon/mask = icon('icons/obj/entertainment_monitor.dmi', "mask")
 
 	add_overlay("glass")
-	
+
+	pinboard = SSvis_overlays.add_vis_overlay(src, icon = icon, iconstate = "pinboard", layer = 0.1, add_appearance_flags = KEEP_TOGETHER, add_vis_flags = VIS_INHERIT_ID|VIS_INHERIT_PLANE, unique = TRUE)
+	pinboard.add_filter("screen cutter", 1, alpha_mask_filter(icon = mask))
+	/*
 	pinboard = new()
 	pinboard.icon = icon
 	pinboard.icon_state = "pinboard"
@@ -102,6 +107,7 @@ GLOBAL_LIST_EMPTY(entertainment_screens)
 	pinboard.appearance_flags = KEEP_TOGETHER
 	pinboard.add_filter("screen cutter", 1, alpha_mask_filter(icon = mask))
 	vis_contents += pinboard
+	*/
 
 	. = ..()
 
@@ -133,9 +139,14 @@ GLOBAL_LIST_EMPTY(entertainment_screens)
 	if(modifiers["alt"])
 		if(isliving(usr) && Adjacent(usr) && !usr.incapacitated())
 			toggle()
-			visible_message("<b>[usr]</b> toggles [src] [enabled ? "on" : "off"].","You toggle [src] [enabled ? "on" : "off"].", runemessage = "click")
-	else
+			visible_message(span_infoplain(span_bold("[usr]") + " toggles [src] [enabled ? "on" : "off"]."),span_info("You toggle [src] [enabled ? "on" : "off"]."), runemessage = "click")
+	//CHOMPEdit start - Changing click to only come into play when shift or alt clicking. These things are ANNOYING.
+			return
+	if(modifiers["shift"])
 		attack_hand(usr)
+		return
+	..()
+	//CHOMPEdit end
 
 /obj/machinery/computer/security/telescreen/entertainment/update_icon()
 	return // NUH
@@ -147,7 +158,7 @@ GLOBAL_LIST_EMPTY(entertainment_screens)
 		stop_showing()
 	if(stat & NOPOWER)
 		return
-	showing = weakref(thing)
+	showing = WEAKREF(thing)
 	pinboard.vis_contents = list(thing)
 
 /obj/machinery/computer/security/telescreen/entertainment/proc/stop_showing()
@@ -155,7 +166,7 @@ GLOBAL_LIST_EMPTY(entertainment_screens)
 	pinboard.vis_contents = null
 	showing = null
 
-/obj/machinery/computer/security/telescreen/entertainment/proc/maybe_stop_showing(weakref/thingref)
+/obj/machinery/computer/security/telescreen/entertainment/proc/maybe_stop_showing(datum/weakref/thingref)
 	if(showing == thingref)
 		stop_showing()
 
@@ -167,13 +178,146 @@ GLOBAL_LIST_EMPTY(entertainment_screens)
 	else if(enabled)
 		radio?.on = TRUE
 
+// CHOMPEdit Start - Bodycams
+/obj/machinery/computer/security/telescreen/bodycamera
+	name = "bodycamera monitor"
+	desc = "Damn, why do they never have anything interesting on these things? (Alt-click to toggle the display)"
+	icon = 'icons/obj/entertainment_monitor.dmi'
+	icon_state = "screen"
+	icon_screen = null
+	light_color = "#FFEEDB"
+	light_range_on = 2
+	network = list(NETWORK_BODYCAM)
+	circuit = /obj/item/circuitboard/security/telescreen/bodycamera
+	camera_datum_type = /datum/tgui_module/camera/bigscreen
+
+	var/obj/item/radio/bradio = null
+	var/obj/effect/overlay/vis/bpinboard
+	var/datum/weakref/showing
+	var/datum/weakref/the_camera
+
+	var/enabled = TRUE // on or off
+
+/obj/machinery/computer/security/telescreen/bodycamera/Initialize()
+	GLOB.bodycamera_screens += src
+
+	var/static/icon/mask = icon('icons/obj/entertainment_monitor.dmi', "mask")
+
+	add_overlay("glass")
+
+	bpinboard = SSvis_overlays.add_vis_overlay(src, icon = icon, iconstate = "pinboard", layer = 0.1, add_appearance_flags = KEEP_TOGETHER, add_vis_flags = VIS_INHERIT_ID|VIS_INHERIT_PLANE, unique = TRUE)
+	bpinboard.add_filter("screen cutter", 1, alpha_mask_filter(icon = mask))
+	vis_contents += bpinboard
+	/*
+	bpinboard = new()
+	bpinboard.icon = icon
+	bpinboard.icon_state = "pinboard"
+	bpinboard.layer = 0.1
+	bpinboard.vis_flags = VIS_UNDERLAY|VIS_INHERIT_ID|VIS_INHERIT_PLANE
+	bpinboard.appearance_flags = KEEP_TOGETHER
+	bpinboard.add_filter("screen cutter", 1, alpha_mask_filter(icon = mask))
+	vis_contents += bpinboard
+	*/
+
+	. = ..()
+
+	bradio = new(src)
+	bradio.listening = TRUE
+	bradio.broadcasting = FALSE
+	bradio.set_frequency(BDCM_FREQ)
+	bradio.canhear_range = world.view // Same as default sight range.
+	power_change()
+
+/obj/machinery/computer/security/telescreen/bodycamera/Destroy()
+	if(showing)
+		stop_showing()
+	vis_contents.Cut()
+	qdel_null(bpinboard)
+	qdel_null(bradio)
+	return ..()
+
+/obj/machinery/computer/security/telescreen/bodycamera/proc/bodycam_toggle()
+	enabled = !enabled
+	if(!enabled)
+		stop_showing()
+		bradio?.on = FALSE
+	else if(operable())
+		bradio?.on = TRUE
+
+/obj/machinery/computer/security/telescreen/bodycamera/Click(location, control, params)
+	var/list/modifiers = params2list(params)
+	if(modifiers["alt"])
+		if(isliving(usr) && Adjacent(usr) && !usr.incapacitated())
+			bodycam_toggle()
+			visible_message("<b>[usr]</b> toggles [src] [enabled ? "on" : "off"].","You toggle [src] [enabled ? "on" : "off"].", runemessage = "click")
+	//CHOMPEdit start - Changing click to only come into play when shift or alt clicking. These things are ANNOYING.
+			return
+	if(modifiers["shift"])
+		attack_hand(usr)
+		return
+	..()
+	//CHOMPEdit end
+
+/obj/machinery/computer/security/telescreen/bodycamera/update_icon()
+	return // NUH
+
+/obj/machinery/computer/security/telescreen/bodycamera/process()
+	if(!showing || !the_camera)
+		stop_showing()
+		return
+	var/atom/them = showing.resolve()
+	var/obj/item/clothing/accessory/bodycam/bo_cam = the_camera.resolve()
+	var/turf/here = get_turf(them)
+	var/turf/there = get_turf(bo_cam)
+	if(here != there)
+		stop_showing()
+
+/obj/machinery/computer/security/telescreen/bodycamera/proc/show_thing(atom/thing, obj/item/clothing/accessory/bodycam/other_thing)
+	if(!enabled)
+		return
+	if(showing)
+		stop_showing()
+	if(stat & NOPOWER)
+		return
+	if(!thing || !other_thing)
+		return
+	the_camera = WEAKREF(other_thing)
+	var/tries = 10
+	var/atom/recursive_loc = thing
+	while(--tries)
+		recursive_loc = thing.loc
+		if(!istype(recursive_loc, /atom/movable))
+			break
+	thing = recursive_loc // should get the topmost atom, which *should* be a mob, or a locker, or something that isnt just ~clothes~
+	showing = WEAKREF(thing)
+	bpinboard.vis_contents = list(thing)
+
+/obj/machinery/computer/security/telescreen/bodycamera/proc/stop_showing()
+	// Reverse of the above
+	bpinboard.vis_contents = null
+	showing = null
+	the_camera = null
+
+/obj/machinery/computer/security/telescreen/bodycamera/proc/maybe_stop_showing(datum/weakref/thingref)
+	if(showing == thingref)
+		stop_showing()
+
+/obj/machinery/computer/security/telescreen/bodycamera/power_change()
+	..()
+	if(stat & NOPOWER)
+		bradio?.on = FALSE
+		stop_showing()
+	else if(enabled)
+		bradio?.on = TRUE
+// CHOMPEdit End
+
 /obj/machinery/computer/security/wooden_tv
 	name = "security camera monitor"
 	desc = "An old TV hooked into the station's camera network."
 	icon_state = "television"
 	icon_keyboard = null
 	icon_screen = "detective_tv"
-	circuit = /obj/item/weapon/circuitboard/security/tv
+	circuit = /obj/item/circuitboard/security/tv
 	light_color = "#3848B3"
 	light_power_on = 0.5
 
@@ -183,7 +327,7 @@ GLOBAL_LIST_EMPTY(entertainment_screens)
 	icon_keyboard = "mining_key"
 	icon_screen = "mining"
 	network = list("Mining Outpost")
-	circuit = /obj/item/weapon/circuitboard/security/mining
+	circuit = /obj/item/circuitboard/security/mining
 	light_color = "#F9BBFC"
 
 /obj/machinery/computer/security/engineering
@@ -191,7 +335,7 @@ GLOBAL_LIST_EMPTY(entertainment_screens)
 	desc = "Used to monitor fires and breaches."
 	icon_keyboard = "power_key"
 	icon_screen = "engie_cams"
-	circuit = /obj/item/weapon/circuitboard/security/engineering
+	circuit = /obj/item/circuitboard/security/engineering
 	light_color = "#FAC54B"
 
 /obj/machinery/computer/security/engineering/get_default_networks()

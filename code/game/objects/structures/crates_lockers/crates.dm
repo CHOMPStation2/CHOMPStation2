@@ -10,6 +10,9 @@
 	var/points_per_crate = 5
 	var/rigged = 0
 
+	open_sound = 'sound/effects/crate_open.ogg'
+	close_sound = 'sound/effects/crate_close.ogg'
+
 /obj/structure/closet/crate/can_open()
 	return 1
 
@@ -22,7 +25,7 @@
 	if(!src.can_open())
 		return 0
 
-	if(rigged && locate(/obj/item/device/radio/electropack) in src)
+	if(rigged && locate(/obj/item/radio/electropack) in src)
 		if(isliving(usr))
 			var/mob/living/L = usr
 			if(L.electrocute_act(17, src))
@@ -32,7 +35,7 @@
 				if(usr.stunned)
 					return 2
 
-	playsound(src, 'sound/machines/click.ogg', 15, 1, -3)
+	playsound(src, open_sound, 50, 1, -3)
 	for(var/obj/O in src)
 		O.forceMove(get_turf(src))
 	src.opened = 1
@@ -48,7 +51,7 @@
 	if(!src.can_close())
 		return 0
 
-	playsound(src, 'sound/machines/click.ogg', 15, 1, -3)
+	playsound(src, close_sound, 50, 1, -3)
 	var/itemcount = 0
 	for(var/obj/O in get_turf(src))
 		if(itemcount >= storage_capacity)
@@ -65,6 +68,14 @@
 	src.opened = 0
 	update_icon()
 	return 1
+
+/obj/structure/closet/crate/MouseDrop_T(mob/target, mob/user)
+	// Adds climbing from drag, You can't put yourself in crates with a drag anyway... Nore anyone else actually.
+	var/mob/living/H = user
+	if(istype(H) && can_climb(H) && target == user)
+		do_climb(target)
+	else
+		return ..()
 
 /obj/structure/closet/crate/verb/rotate_clockwise()
 	set name = "Rotate Crate Clockwise"
@@ -86,35 +97,39 @@
 
 	src.set_dir(turn(src.dir, 90))
 
-/obj/structure/closet/crate/attackby(obj/item/weapon/W as obj, mob/user as mob)
-	if(opened)
+/obj/structure/closet/crate/attackby(obj/item/W as obj, mob/user as mob)
+	if(W.has_tool_quality(TOOL_WRENCH) && istype(src,/obj/structure/closet/crate/bin))
+		return ..()
+	else if(opened)
 		if(isrobot(user))
 			return
 		if(W.loc != user) // This should stop mounted modules ending up outside the module.
 			return
+		if(istype(W, /obj/item/grab)) //VOREstation edit: we don't want to drop grabs into the crate
+			return
 		user.drop_item()
 		if(W)
 			W.forceMove(src.loc)
-	else if(istype(W, /obj/item/weapon/packageWrap))
+	else if(istype(W, /obj/item/packageWrap))
 		return
 	else if(istype(W, /obj/item/stack/cable_coil))
 		var/obj/item/stack/cable_coil/C = W
 		if(rigged)
-			to_chat(user, "<span class='notice'>[src] is already rigged!</span>")
+			to_chat(user, span_notice("[src] is already rigged!"))
 			return
 		if (C.use(1))
-			to_chat(user , "<span class='notice'>You rig [src].</span>")
+			to_chat(user , span_notice("You rig [src]."))
 			rigged = 1
 			return
-	else if(istype(W, /obj/item/device/radio/electropack))
+	else if(istype(W, /obj/item/radio/electropack))
 		if(rigged)
-			to_chat(user , "<span class='notice'>You attach [W] to [src].</span>")
+			to_chat(user , span_notice("You attach [W] to [src]."))
 			user.drop_item()
 			W.forceMove(src)
 			return
-	else if(W.is_wirecutter())
+	else if(W.has_tool_quality(TOOL_WIRECUTTER))
 		if(rigged)
-			to_chat(user , "<span class='notice'>You cut away the wiring.</span>")
+			to_chat(user , span_notice("You cut away the wiring."))
 			playsound(src, W.usesound, 100, 1)
 			rigged = 0
 			return
@@ -164,15 +179,15 @@
 
 /obj/structure/closet/crate/secure/proc/togglelock(mob/user as mob)
 	if(src.opened)
-		to_chat(user, "<span class='notice'>Close the crate first.</span>")
+		to_chat(user, span_notice("Close the crate first."))
 		return
 	if(src.broken)
-		to_chat(user, "<span class='warning'>The crate appears to be broken.</span>")
+		to_chat(user, span_warning("The crate appears to be broken."))
 		return
 	if(src.allowed(user))
 		set_locked(!locked, user)
 	else
-		to_chat(user, "<span class='notice'>Access Denied</span>")
+		to_chat(user, span_notice("Access Denied"))
 
 /obj/structure/closet/crate/secure/proc/set_locked(var/newlocked, mob/user = null)
 	if(locked == newlocked) return
@@ -180,7 +195,7 @@
 	locked = newlocked
 	if(user)
 		for(var/mob/O in viewers(user, 3))
-			O.show_message( "<span class='notice'>The crate has been [locked ? null : "un"]locked by [user].</span>", 1)
+			O.show_message( span_notice("The crate has been [locked ? null : "un"]locked by [user]."), 1)
 	update_icon()
 
 /obj/structure/closet/crate/secure/verb/verb_togglelock()
@@ -195,7 +210,7 @@
 		src.add_fingerprint(usr)
 		src.togglelock(usr)
 	else
-		to_chat(usr, "<span class='warning'>This mob type can't use this verb.</span>")
+		to_chat(usr, span_warning("This mob type can't use this verb."))
 
 /obj/structure/closet/crate/secure/attack_hand(mob/user as mob)
 	src.add_fingerprint(user)
@@ -204,10 +219,10 @@
 	else
 		src.toggle(user)
 
-/obj/structure/closet/crate/secure/attackby(obj/item/weapon/W as obj, mob/user as mob)
-	if(is_type_in_list(W, list(/obj/item/weapon/packageWrap, /obj/item/stack/cable_coil, /obj/item/device/radio/electropack, /obj/item/weapon/tool/wirecutters)))
+/obj/structure/closet/crate/secure/attackby(obj/item/W as obj, mob/user as mob)
+	if(is_type_in_list(W, list(/obj/item/packageWrap, /obj/item/stack/cable_coil, /obj/item/radio/electropack, /obj/item/tool/wirecutters)))
 		return ..()
-	if(istype(W, /obj/item/weapon/melee/energy/blade))
+	if(istype(W, /obj/item/melee/energy/blade))
 		emag_act(INFINITY, user)
 	if(!opened)
 		src.togglelock(user)
@@ -219,7 +234,7 @@
 		playsound(src, "sparks", 60, 1)
 		locked = 0
 		broken = 1
-		to_chat(user, "<span class='notice'>You unlock \the [src].</span>")
+		to_chat(user, span_notice("You unlock \the [src]."))
 		update_icon()
 		return 1
 
@@ -276,23 +291,23 @@
 	desc = "A crate with rapid construction device."
 
 	starts_with = list(
-		/obj/item/weapon/rcd_ammo = 3,
-		/obj/item/weapon/rcd)
+		/obj/item/rcd_ammo = 3,
+		/obj/item/rcd)
 
 /obj/structure/closet/crate/solar
 	name = "solar pack crate"
 
 	starts_with = list(
 		/obj/item/solar_assembly = 21,
-		/obj/item/weapon/circuitboard/solar_control,
-		/obj/item/weapon/tracker_electronics,
-		/obj/item/weapon/paper/solar)
+		/obj/item/circuitboard/solar_control,
+		/obj/item/tracker_electronics,
+		/obj/item/paper/solar)
 
 /obj/structure/closet/crate/cooper
 	name = "Cooper's Stache"
 
 	starts_with = list(
-		/obj/item/weapon/reagent_containers/food/snacks/cheesewedge = 6,
+		/obj/item/reagent_containers/food/snacks/cheesewedge = 6,
 		/obj/item/stack/material/gold = 1)
 /obj/structure/closet/crate/freezer
 	name = "freezer"
@@ -308,6 +323,14 @@
 /obj/structure/closet/crate/freezer/nanotrasen
 	desc = "A freezer stamped with the logo of NanoTrasen."
 	closet_appearance = /decl/closet_appearance/crate/freezer/nanotrasen
+
+/obj/structure/closet/crate/freezer/veymed
+	desc = "A freezer stamped with the logo of Vey-Medical."
+	closet_appearance = /decl/closet_appearance/crate/freezer/veymed
+
+/obj/structure/closet/crate/freezer/zenghu
+	desc = "A freezer stamped with the logo of Zeng-Hu Pharmaceuticals."
+	closet_appearance = /decl/closet_appearance/crate/freezer/zenghu
 
 /obj/structure/closet/crate/freezer/return_air()
 	var/datum/gas_mixture/gas = (..())
@@ -430,6 +453,18 @@
 /obj/structure/closet/crate/zenghu
 	desc = "A sterile crate marked with the logo of Zeng-Hu Pharmaceuticals."
 	closet_appearance = /decl/closet_appearance/crate/zenghu
+
+/obj/structure/closet/crate/coyote_salvage
+	desc = "A supply crate marked with Coyote Salvage Corp colours."
+	closet_appearance = /decl/closet_appearance/crate/coyotesalvage
+
+/obj/structure/closet/crate/nukies
+	desc = "A luridly-coloured supply crate with Nukies! branding. Is it legal to have this here?"
+	closet_appearance = /decl/closet_appearance/crate/nukies
+
+/obj/structure/closet/crate/desatti
+	desc = "A strikingly-coloured supply crate with Desatti Catering branding."
+	closet_appearance = /decl/closet_appearance/crate/desatti
 
 // Brands/subsidiaries
 
@@ -696,5 +731,41 @@
 
 /obj/structure/closet/crate/hydroponics/prespawned
 	starts_with = list(
-		/obj/item/weapon/reagent_containers/spray/plantbgone = 2,
-		/obj/item/weapon/material/minihoe)
+		/obj/item/reagent_containers/spray/plantbgone = 2,
+		/obj/item/material/minihoe)
+
+//Laundry Cart
+/obj/structure/closet/crate/laundry
+	name = "Laundry Cart"
+	desc = "A cart with a large fabric bin on it used for transporting large amounts of clothes."
+	icon = 'icons/obj/closets/laundry.dmi'
+	closet_appearance = null
+	open_sound = 'sound/effects/rustle1.ogg'
+	close_sound = 'sound/effects/rustle2.ogg'
+
+//Wooden Crate
+/obj/structure/closet/crate/wooden
+	name = "wooden crate"
+	desc = "A crate made from wood and lined with straw. Cheapest form of storage."
+	icon = 'icons/obj/closets/wooden.dmi'
+	closet_appearance = null
+	open_sound = 'sound/effects/wooden_closet_open.ogg'
+	close_sound = 'sound/effects/wooden_closet_close.ogg'
+
+//Chest
+/obj/structure/closet/crate/chest
+	name = "chest"
+	desc = "A fancy chest made from wood and lined with red velvet."
+	icon = 'icons/obj/closets/chest.dmi'
+	closet_appearance = null
+	open_sound = 'sound/effects/wooden_closet_open.ogg'
+	close_sound = 'sound/effects/wooden_closet_close.ogg'
+
+//Mining Cart
+/obj/structure/closet/crate/miningcar
+	name = "mining cart"
+	desc = "A mining car. This one doesn't work on rails, but has to be dragged."
+	icon = 'icons/obj/closets/miningcar.dmi'
+	closet_appearance = null
+	open_sound = 'sound/effects/wooden_closet_open.ogg'
+	close_sound = 'sound/effects/wooden_closet_close.ogg'

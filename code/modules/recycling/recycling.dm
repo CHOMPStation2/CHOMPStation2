@@ -3,9 +3,15 @@
 	active_power_usage = 500
 	density = TRUE
 	anchored = TRUE
-	
+
 	var/working = FALSE
-	
+	var/negative_dir = null	//VOREStation Addition
+	var/hand_fed = TRUE //CHOMPAdd
+
+/obj/machinery/recycling/Initialize() //CHOMPAdd
+	. = ..()
+	default_apply_parts()
+
 /obj/machinery/recycling/process()
 	return PROCESS_KILL // these are all stateful
 
@@ -21,9 +27,9 @@
 /obj/machinery/recycling/attackby(obj/item/O, mob/user)
 	if(!isliving(user) || !Adjacent(user))
 		return
-	
+
 	if(working)
-		to_chat("<span class='warning'>\The [src] is busy! Wait until it's idle.</span>")
+		to_chat(user, span_warning("\The [src] is busy! Wait until it's idle."))
 		return
 
 	if(default_deconstruction_screwdriver(user, O))
@@ -32,14 +38,15 @@
 		return
 	if(default_part_replacement(user, O))
 		return
-	
+	if(!hand_fed) //CHOMPAdd
+		return
 	var/mob/living/M = user
 	if(can_accept_item(O))
 		M.drop_from_inventory(O)
 		take_item(O)
-		M.visible_message("<b>[M]</b> inserts [O] into [src].", "You insert [O] into [src].")
+		M.visible_message(span_infoplain(span_bold("[M]") + " inserts [O] into [src]."), span_info("You insert [O] into [src]."))
 	else
-		to_chat(user, "<span class='warning'>\The [src] can't accept [O] for recycling.</span>")
+		to_chat(user, span_warning("\The [src] can't accept [O] for recycling."))
 
 // Conveyors etc
 /obj/machinery/recycling/Bumped(atom/A)
@@ -65,7 +72,7 @@
 	description_info = "This machine is the first step in turning things back into their materials. There's a bit of loss, depending on how upgraded it is. The output of this machine goes into the sorter."
 	icon = 'icons/obj/recycling.dmi'
 	icon_state = "crusher"
-	circuit = /obj/item/weapon/circuitboard/recycler_crusher
+	circuit = /obj/item/circuitboard/recycler_crusher
 
 	working = FALSE
 	var/effic_factor = 0.5
@@ -73,9 +80,9 @@
 /obj/machinery/recycling/crusher/RefreshParts()
 	. = ..()
 	var/total_rating = 0
-	for(var/obj/item/weapon/stock_parts/matter_bin/M in component_parts)
+	for(var/obj/item/stock_parts/matter_bin/M in component_parts)
 		total_rating += M.rating
-	for(var/obj/item/weapon/stock_parts/manipulator/M in component_parts)
+	for(var/obj/item/stock_parts/manipulator/M in component_parts)
 		total_rating += M.rating
 
 	total_rating *= 0.1
@@ -85,17 +92,38 @@
 /obj/machinery/recycling/crusher/can_accept_item(obj/item/O)
 	if(LAZYLEN(O.matter))
 		return ..()
-	return FALSE
+	//VOREStation Addition Start - Let's the machine decide to put things it can't accept somewhere else.
+	else if(negative_dir && isitem(O) && !ishuman(O.loc))
+		O.forceMove(get_step(src, negative_dir))
+	else
+		return FALSE
+	//VOREStation Addition End
 
 /obj/machinery/recycling/crusher/take_item(obj/item/O)
 	. = ..()
+	var/trash = 1//CHOMPEDIT: Trash multiplier
 	working = TRUE
 	icon_state = "crusher-process"
 	update_use_power(USE_POWER_ACTIVE)
 	sleep(5 SECONDS)
 	var/list/modified_mats = list()
+	if(istype(O,/obj/item/trash))//CHOMPEDIT Start: Trash multiplier
+		trash = 5 //CHOMPEDIT: Trash good
+	if(istype(O,/obj/item/stack))
+		var/obj/item/stack/S = O
+		trash = S.amount
 	for(var/mat in O.matter)
-		modified_mats[mat] = O.matter[mat]*effic_factor
+		modified_mats[mat] = O.matter[mat] * effic_factor * trash//CHOMPEDIT: Trash multiplier
+	var/turf/T = get_step(src, dir)
+	for(var/obj/item/debris_pack/D in T.contents)
+		if(istype(D))
+			for(var/mat in modified_mats)
+				D.matter[mat] += modified_mats[mat]
+			update_use_power(USE_POWER_IDLE)
+			icon_state = "crusher"
+			qdel(O)
+			working = FALSE
+			return //CHOMPEdit End
 	new /obj/item/debris_pack(get_step(src, dir), modified_mats)
 	update_use_power(USE_POWER_IDLE)
 	icon_state = "crusher"
@@ -111,7 +139,7 @@
 	description_info = "The output of the recycling crusher should go into this machine, and it will output material dust, which can go into the sheet stamper to make sheets."
 	icon = 'icons/obj/recycling.dmi'
 	icon_state = "sorter"
-	circuit = /obj/item/weapon/circuitboard/recycler_sorter
+	circuit = /obj/item/circuitboard/recycler_sorter
 
 	var/list/materials = list()
 	working = FALSE
@@ -126,7 +154,7 @@
 	working = TRUE
 	icon_state = "sorter-process"
 	update_use_power(USE_POWER_ACTIVE)
-	sleep(5 SECONDS)
+	sleep(2 SECONDS) //CHOMPEdit
 	sort_item(O)
 	dispense_if_possible()
 	update_use_power(USE_POWER_IDLE)
@@ -143,8 +171,8 @@
 
 /obj/machinery/recycling/sorter/proc/dispense_if_possible()
 	for(var/mat in materials)
-		while(materials[mat] >= SHEET_MATERIAL_AMOUNT)
-			materials[mat] -= SHEET_MATERIAL_AMOUNT
+		while(materials[mat] >= (SHEET_MATERIAL_AMOUNT))
+			materials[mat] -= (SHEET_MATERIAL_AMOUNT)
 			new /obj/item/material_dust(get_step(src, dir), mat)
 			sleep(2 SECONDS)
 
@@ -157,7 +185,7 @@
 	description_info = "This machine is the last step in the recycling process. The output of a debris sorter should be fed into this machine and it will produce material sheets."
 	icon = 'icons/obj/recycling.dmi'
 	icon_state = "stamper"
-	circuit = /obj/item/weapon/circuitboard/recycler_stamper
+	circuit = /obj/item/circuitboard/recycler_stamper
 
 /obj/machinery/recycling/stamper/can_accept_item(obj/item/O)
 	if(istype(O, /obj/item/material_dust))
@@ -184,7 +212,7 @@
 		playsound(src, 'sound/machines/buzz-sigh.ogg', 50, 0)
 		warning("Dust in [src] had material_name [D.material_name], which can't be made into stacks")
 		return
-	
+
 	var/stacktype = M.stack_type
 	var/turf/T = get_step(src, dir)
 	var/obj/item/stack/S = locate(stacktype) in T

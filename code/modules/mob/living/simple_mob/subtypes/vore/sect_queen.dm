@@ -34,14 +34,15 @@
 	vis_height = 64
 	has_eye_glow = TRUE
 	vore_eyes = TRUE
+	custom_eye_color = "#FF0000"
 
-	faction = "insects"
+	faction = FACTION_INSECTS
 	maxHealth = 200
 	health = 200
 	see_in_dark = 8
 
 	meat_amount = 8
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/xenomeat/spidermeat
+	meat_type = /obj/item/reagent_containers/food/snacks/xenomeat/spidermeat
 
 	melee_damage_lower = 8
 	melee_damage_upper = 16
@@ -83,6 +84,23 @@
 
 	ai_holder_type = /datum/ai_holder/simple_mob/melee
 	say_list_type = /datum/say_list/sect_queen
+
+	allow_mind_transfer = TRUE
+
+/mob/living/simple_mob/vore/sect_queen/Login()
+	. = ..()
+	add_verb(src,  /mob/living/simple_mob/vore/sect_queen/proc/set_abdomen_color)
+
+/mob/living/simple_mob/vore/sect_queen/proc/set_abdomen_color()
+	set name = "Set Glow Color"
+	set desc = "Customize your eyes and abdomen glow color."
+	set category = "Abilities.Sect Queen" //CHOMPEdit
+
+	var/new_color = input(src, "Please select color.", "Glow Color", custom_eye_color) as color|null
+	if(new_color)
+		custom_eye_color = new_color
+		remove_eyes()
+		add_eyes()
 
 /datum/say_list/sect_queen
 	say_got_target = list("chitters angrily!")

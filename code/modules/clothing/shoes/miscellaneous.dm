@@ -48,6 +48,11 @@
 
 	wizard_garb = 1
 
+/obj/item/clothing/shoes/sandals
+	desc = "A pair of simple sandals."
+	name = "sandals"
+	icon_state = "sandals_recolor"
+
 /obj/item/clothing/shoes/flipflop
 	name = "flip flops"
 	desc = "A pair of foam flip flops. For those not afraid to show a little ankle."
@@ -92,9 +97,10 @@
 	icon_state = "clown"
 	slowdown = SHOES_SLOWDOWN+0.5
 	force = 0
-	var/footstep = 1	//used for squeeks whilst walking
+	//CHOMPRemove - removed built in squeak sounds
 	species_restricted = null
 
+/*	CHOMPEdit - Replaced with squeak component
 /obj/item/clothing/shoes/clown_shoes/handle_movement(var/turf/walking, var/running)
 	if(running)
 		if(footstep >= 2)
@@ -104,6 +110,7 @@
 			footstep++
 	else
 		playsound(src, "clownstep", 20, 1)
+*/
 
 /obj/item/clothing/shoes/cult
 	name = "boots"
@@ -144,7 +151,7 @@
 	item_state_slots = list(slot_r_hand_str = "slippers", slot_l_hand_str = "slippers")
 
 /obj/item/clothing/shoes/laceup
-	name = "black oxford  shoes"
+	name = "black oxford shoes"
 	icon_state = "oxford_black"
 
 /obj/item/clothing/shoes/laceup/grey
@@ -227,10 +234,30 @@
 /obj/item/clothing/shoes/boots/ranger/yellow
 	bootcolor = "yellow"
 
-/obj/item/clothing/shoes/primitive
-	name = "primitive shoes"
-	desc = "Some patched together rags. Better than being barefoot."
-	icon_state = "rag"
-	force = 0
-	drop_sound = 'sound/items/drop/clothing.ogg'
-	pickup_sound = 'sound/items/pickup/clothing.ogg'
+/*
+ * 80s
+ */
+
+/obj/item/clothing/shoes/sneakerspurple
+	name = "purple sneakers"
+	desc = "A stylish, expensive pair of purple sneakers."
+	icon_state = "sneakerspurple"
+	item_state = "sneakerspurple"
+
+/obj/item/clothing/shoes/sneakersblue
+	name = "blue sneakers"
+	desc = "A stylish, expensive pair of blue sneakers."
+	icon_state = "sneakersblue"
+	item_state = "sneakersblue"
+
+/obj/item/clothing/shoes/sneakersred
+	name = "red sneakers"
+	desc = "A stylish, expensive pair of red sneakers."
+	icon_state = "sneakersred"
+	item_state = "sneakersred"
+
+/obj/item/clothing/shoes/ballet
+	name = "pointe shoes"
+	desc = "These shoes feature long lace straps and flattened off toes. Great for the most elegant of dances!"
+	icon_state = "ballet"
+	item_state = "ballet"

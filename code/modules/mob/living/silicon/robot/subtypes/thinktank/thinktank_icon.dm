@@ -1,11 +1,11 @@
 /mob/living/silicon/robot/platform/update_icon()
-	updateicon()
+	update_icon()
 
-/mob/living/silicon/robot/platform/updateicon()
+/mob/living/silicon/robot/platform/update_icon()
 
 	cut_overlays()
 	underlays.Cut()
-	var/obj/item/weapon/robot_module/robot/platform/tank_module = module
+	var/obj/item/robot_module/robot/platform/tank_module = module
 	if(!istype(tank_module))
 		icon = initial(icon)
 		icon_state = initial(icon_state)
@@ -58,11 +58,11 @@
 		I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 		add_overlay(I)
 
-/mob/living/silicon/robot/platform/proc/try_paint(var/obj/item/device/floor_painter/painting, var/mob/user)
+/mob/living/silicon/robot/platform/proc/try_paint(var/obj/item/floor_painter/painting, var/mob/user)
 
-	var/obj/item/weapon/robot_module/robot/platform/tank_module = module
+	var/obj/item/robot_module/robot/platform/tank_module = module
 	if(!istype(tank_module))
-		to_chat(user, SPAN_WARNING("\The [src] is not paintable."))
+		to_chat(user, span_warning("\The [src] is not paintable."))
 		return FALSE
 
 	var/list/options = list("Eyes", "Armour", "Body", "Clear Colors")
@@ -106,4 +106,4 @@
 			else
 				. = FALSE
 	if(.)
-		updateicon()
+		update_icon()

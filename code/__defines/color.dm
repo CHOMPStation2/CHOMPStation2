@@ -7,7 +7,7 @@
 #define COLOR_MAROON           "#800000"
 #define COLOR_PURPLE           "#800080"
 #define COLOR_VIOLET           "#9933ff"
-#define COLOR_OLIVE            "#52613b" // VOREStation Edit
+#define COLOR_OLIVE            "#52613b"
 #define COLOR_BROWN_ORANGE     "#824b28"
 #define COLOR_DARK_ORANGE      "#b95a00"
 #define COLOR_GRAY40           "#666666"
@@ -92,6 +92,10 @@
 #define COLOR_LIGHT_VIOLET     "#e7bfff"
 #define COLOR_SAN_MARINO_BLUE  "#4b75ab"
 #define COLOR_HALF_TRANSPARENT_BLACK    "#0000007A"
+#define COLOR_NUKIES_GREEN     "#43fe00"
+#define COLOR_NUKIES_YELLOW    "#ffe900"
+#define COLOR_DESATTI_PRPLOW   "#3300cc"
+#define COLOR_DESATTI_PRPHI    "#6600cc"
 
 #define	PIPE_COLOR_GREY        "#808080"
 #define	PIPE_COLOR_RED         "#ff0000"

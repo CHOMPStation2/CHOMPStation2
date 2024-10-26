@@ -17,10 +17,10 @@
 	icon_living = "startreader"
 	icon_dead = "startreader_dead"
 
-	faction = "space turtle"
+	faction = FACTION_SPACE_TURTLE
 	maxHealth = 1000
 	health = 1000
-	movement_cooldown = 20
+	movement_cooldown = 10
 
 	see_in_dark = 10
 
@@ -86,13 +86,17 @@
 	var/flipped = FALSE
 	var/flip_cooldown = 0
 
+	can_be_drop_prey = FALSE //CHOMP Add
+
 /datum/say_list/startreader
 	emote_see = list("bobs", "digs around","gnashes at something","yawns","snaps at something")
 	emote_hear = list("thrumms","clicks","rattles","groans","burbles")
 
 
 /mob/living/simple_mob/vore/alienanimals/startreader/init_vore()
-	..()
+	if(!voremob_loaded) //CHOMPAdd
+		return //CHOMPAdd
+	.=..() //CHOMPEdit
 	var/obj/belly/B = vore_selected
 	B.name = "gastric sac"
 	B.desc = "It's cramped and hot! You're forced into a small ball as your shape is squeezed into the slick, wet chamber. Despite being swallowed into the creature, you find that you actually stretch out of the top a ways, and can JUST BARELY wiggle around..."
@@ -110,12 +114,13 @@
 	violent_breakthrough = TRUE
 
 /mob/living/simple_mob/vore/alienanimals/startreader/apply_melee_effects(mob/living/L)
+	if(!isliving(L))
+		return
 	if(L.weakened) //Don't stun people while they're already stunned! That's SILLY!
 		return
 	if(prob(15))
-		if(isliving(L))
-			visible_message("<span class='danger'>\The [src] trips \the [L]!</span>!")
-			L.weakened += rand(1,10)
+		visible_message(span_danger("\The [src] trips \the [L]!"))
+		L.weakened += rand(1,10)
 
 /mob/living/simple_mob/vore/alienanimals/startreader/Life()
 	. = ..()
@@ -123,7 +128,7 @@
 		flip_cooldown = 0
 		flipped = FALSE
 		handle_flip()
-		visible_message("<span class='notice'>\The [src] rights itself!!!</span>")
+		visible_message(span_notice("\The [src] rights itself!!!"))
 		return
 	if(flip_cooldown)
 		flip_cooldown --

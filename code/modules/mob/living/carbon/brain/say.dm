@@ -3,7 +3,7 @@
 	if(silent)
 		return
 
-	message = sanitize(message)
+	//message = sanitize(message) //CHOMPEdit: This causes.... so many more problems then it fixes. Also should just be handled in the super function
 
 	if(!(container && container.can_speak))
 		return //Certain objects can speak, like MMIs. Most others cannot. -Q
@@ -19,11 +19,11 @@
 /mob/living/carbon/brain/handle_message_mode(message_mode, message, verb, speaking, used_radios)
 	..()
 	if(message_mode)
-		var/obj/item/device/mmi/R = container
+		var/obj/item/mmi/R = container
 		if(R.radio && R.radio.radio_enabled)
 			if(message_mode == "general")
 				message_mode = null
 			return R.radio.talk_into(src, message, message_mode, verb, speaking)
 		else
-			to_chat(src, "<span class='danger'>Your radio is disabled.</span>")
+			to_chat(src, span_danger("Your radio is disabled."))
 			return 0

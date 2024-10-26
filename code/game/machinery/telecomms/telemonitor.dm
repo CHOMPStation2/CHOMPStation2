@@ -14,7 +14,7 @@
 	var/screen = 0				// the screen number:
 	var/list/machinelist = list()	// the machines located by the computer
 	var/obj/machinery/telecomms/SelectedMachine
-	circuit = /obj/item/weapon/circuitboard/comm_monitor
+	circuit = /obj/item/circuitboard/comm_monitor
 
 	var/network = "NULL"		// the network to probe
 
@@ -26,13 +26,13 @@
 	data["network"] = network
 	data["temp"] = temp
 
-	var/list/machinelist = list()
+	var/list/machinelistData = list()
 	for(var/obj/machinery/telecomms/T in machinelist)
-		machinelist.Add(list(list(
+		machinelistData.Add(list(list(
 			"id" = T.id,
 			"name" = T.name,
 		)))
-	data["machinelist"] = machinelist
+	data["machinelist"] = machinelistData
 
 	data["selectedMachine"] = null
 	if(SelectedMachine)
@@ -100,7 +100,8 @@
 			. = TRUE
 
 		if("network")
-			var/newnet = input(usr, "Which network do you want to view?", "Comm Monitor", network) as null|text
+			var/newnet = tgui_input_text(usr, "Which network do you want to view?", "Comm Monitor", network, 15)
+			newnet = sanitize(newnet,15) //Honestly, I'd be amazed if someone managed to do HTML in 15 chars.
 			if(newnet && ((usr in range(1, src) || issilicon(usr))))
 				if(length(newnet) > 15)
 					set_temp("FAILED: NETWORK TAG STRING TOO LENGTHY", "bad")
@@ -108,7 +109,7 @@
 				network = newnet
 				machinelist = list()
 				set_temp("NEW NETWORK TAG SET IN ADDRESS \[[network]\]", "good")
-			
+
 			. = TRUE
 
 		if("cleartemp")
@@ -120,7 +121,7 @@
 	if(!emagged)
 		playsound(src, 'sound/effects/sparks4.ogg', 75, 1)
 		emagged = 1
-		to_chat(user, "<span class='notice'>You you disable the security protocols</span>")
+		to_chat(user, span_notice("You you disable the security protocols"))
 		src.updateUsrDialog()
 		return 1
 

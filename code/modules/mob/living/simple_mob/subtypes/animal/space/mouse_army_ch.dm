@@ -3,7 +3,7 @@
 	real_name = "mouse"
 	desc = "It's a small militarized rodent."
 	tt_desc = "E Mus musculus"
-	icon = 'icons/mob/animal_ch.dmi'
+	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
 	icon_state = "mouse_gray"
 	item_state = "mouse_gray"
 	icon_living = "mouse_gray"
@@ -35,8 +35,8 @@
 	//Mob melee settings
 	melee_damage_lower = 5
 	melee_damage_upper = 15
-	list/attacktext = list("attacked", "chomped", "gnawed on")
-	list/friendly = list("baps", "nuzzles")
+	attacktext = list("attacked", "chomped", "gnawed on")
+	friendly = list("baps", "nuzzles")
 	attack_armor_type = "melee"
 	attack_sharp = 1
 	attack_edge = 1
@@ -54,8 +54,8 @@
 
 	has_langs = list("Mouse")
 
-	holder_type = /obj/item/weapon/holder/mouse
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
+	holder_type = /obj/item/holder/mouse
+	meat_type = /obj/item/reagent_containers/food/snacks/meat
 
 	say_list_type = /datum/say_list/mouse
 
@@ -63,11 +63,16 @@
 
 	var/rank //pyro, operative, ammo, stealth. more to come. Do not leave blank.
 
+	can_be_drop_prey = FALSE //CHOMP Add
+	species_sounds = "Mouse"
+	pain_emote_1p = list("squeak", "squik") // CHOMP Addition: Pain/etc sounds
+	pain_emote_1p = list("squeaks", "squiks") // CHOMP Addition: Pain/etc sounds
+
 /mob/living/simple_mob/animal/space/mouse_army/New()
 	..()
 
-	verbs += /mob/living/proc/ventcrawl
-	verbs += /mob/living/proc/hide
+	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel
 
 	if(name == initial(name))
 		name = "[name] ([rand(1, 1000)])"
@@ -88,7 +93,7 @@
 	if( ishuman(AM) )
 		if(!stat)
 			var/mob/M = AM
-			M.visible_message("<font color='blue'>\icon[src] Squeek!</font>")
+			M.visible_message(span_blue("[icon2html(src,viewers(M))] Squeek!"))
 			playsound(src, 'sound/effects/mouse_squeak.ogg', 35, 1)
 	..()
 
@@ -163,7 +168,7 @@
 	var/ruptured = 0
 
 /mob/living/simple_mob/animal/space/mouse_army/pyro/death()
-	visible_message("<span class='critical'>\The [src]'s tank groans!</span>")
+	visible_message(span_critical("\The [src]'s tank groans!"))
 	var/delay = rand(1, 3)
 	spawn(0)
 		// Flash black and red as a warning.
@@ -176,7 +181,7 @@
 
 	spawn(rand (1,5))
 		if(!ruptured)
-			visible_message("<span class='critical'>\The [src]'s tank ruptures!</span>")
+			visible_message(span_critical("\The [src]'s tank ruptures!"))
 			ruptured = 1
 			adjust_fire_stacks(2)
 			IgniteMob()
@@ -221,7 +226,7 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
 
 /mob/living/simple_mob/animal/space/mouse_army/ammo/death()
-	visible_message("<span class='critical'>\The [src]'s body begins to rupture!</span>")
+	visible_message(span_critical("\The [src]'s body begins to rupture!"))
 	var/delay = rand(explosion_delay_lower, explosion_delay_upper)
 	spawn(0)
 		// Flash black and red as a warning.
@@ -234,7 +239,7 @@
 
 	spawn(rand(1,5))
 		if(src && !exploded)
-			visible_message("<span class='critical'>\The [src]'s body detonates!</span>")
+			visible_message(span_critical("\The [src]'s body detonates!"))
 			exploded = 1
 			explosion(src.loc, explosion_dev_range, explosion_heavy_range, explosion_light_range, explosion_flash_range)
 			qdel(src)
@@ -312,7 +317,7 @@
 		if(isliving(A))
 			var/mob/living/L = A
 			L.Weaken(cloaked_weaken_amount)
-			to_chat(L, span("danger", "\The [src] ambushes you!"))
+			to_chat(L, span_danger("\The [src] ambushes you!"))
 			playsound(L, 'sound/weapons/spiderlunge.ogg', 75, 1)
 	uncloak()
 	..()
@@ -358,7 +363,7 @@
 	name = "\improper Whisker Tank"
 	desc = "A shockingly functional, miniaturized tank. Its inventor is unknown, but widely reviled."
 	catalogue_data = list(/datum/category_item/catalogue/technology/mouse_tank)
-	icon = 'icons/mob/animal_ch.dmi'
+	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
 	icon_state = "whisker"
 	wreckage = /obj/structure/loot_pile/mecha/mouse_tank
 	faction = "mouse_army"

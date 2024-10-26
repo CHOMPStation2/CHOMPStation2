@@ -8,10 +8,10 @@
 	enhancement_desc = "Summoned entities will never harm their summoner."
 	spell_power_desc = "The strength and endurance of the summoned creature will be greater."
 	cost = 100
-	obj_path = /obj/item/weapon/spell/summon/summon_creature
+	obj_path = /obj/item/spell/summon/summon_creature
 	category = UTILITY_SPELLS
 
-/obj/item/weapon/spell/summon/summon_creature
+/obj/item/spell/summon/summon_creature
 	name = "summon creature"
 	desc = "Chitter chitter."
 	summoned_mob_type = null
@@ -30,7 +30,6 @@
 		"BAT"			=	/mob/living/simple_mob/animal/space/bats,
 		"SPIDER"		=	/mob/living/simple_mob/animal/giant_spider,
 		"SPIDER HUNTER"	=	/mob/living/simple_mob/animal/giant_spider/hunter,
-		"SPIDER NURSE"	=	/mob/living/simple_mob/animal/giant_spider/nurse,
 		"CARP"			=	/mob/living/simple_mob/animal/space/carp,
 		"BEAR"			=	/mob/living/simple_mob/animal/space/bear
 		)
@@ -38,9 +37,9 @@
 	instability_cost = 10
 	energy_cost = 1000
 
-/obj/item/weapon/spell/summon/summon_creature/on_summon(var/mob/living/simple_mob/summoned)
+/obj/item/spell/summon/summon_creature/on_summon(var/mob/living/simple_mob/summoned)
 	if(check_for_scepter())
-//		summoned.faction = "technomancer"
+//		summoned.faction = FACTION_TECHNOMANCER
 		summoned.friends += owner
 
 	// Makes their new pal big and strong, if they have spell power.

@@ -19,7 +19,7 @@ GLOBAL_LIST_INIT(bibleitemstates, list(
 	"ithaqua", "scientology", "melted",
 	"necronomicon", "bible", "clipboard"))
 
-/obj/item/weapon/storage/bible
+/obj/item/storage/bible
 	name = "bible"
 	desc = "Apply to head repeatedly."
 	icon_state ="bible"
@@ -36,31 +36,36 @@ GLOBAL_LIST_INIT(bibleitemstates, list(
 	use_sound = 'sound/bureaucracy/bookopen.ogg'
 	drop_sound = 'sound/bureaucracy/bookclose.ogg'
 
-/obj/item/weapon/storage/bible/attack_self(mob/living/carbon/human/user)
-	if(GLOB.bible_icon_state)
-		icon_state = GLOB.bible_icon_state
-		item_state = GLOB.bible_item_state
-		return FALSE
-	if(user?.mind?.assigned_role != "Chaplain")
+/obj/item/storage/bible/attack_self(mob/living/carbon/human/user)
+
+	if(user?.mind?.assigned_role != JOB_CHAPLAIN)
 		return FALSE
 
-	var/list/skins = list()
-	for(var/i in 1 to GLOB.biblestates.len)
-		var/image/bible_image = image(icon = 'icons/obj/storage.dmi', icon_state = GLOB.biblestates[i])
-		skins += list("[GLOB.biblenames[i]]" = bible_image)
-
-	var/choice = show_radial_menu(user, src, skins, custom_check = CALLBACK(src, .proc/check_menu, user), radius = 40, require_near = TRUE)
-	if(!choice)
+	if (!user.mind.my_religion)
 		return FALSE
-	var/bible_index = GLOB.biblenames.Find(choice)
-	if(!bible_index)
-		return FALSE
-	icon_state = GLOB.biblestates[bible_index]
-	item_state = GLOB.bibleitemstates[bible_index]
 
-	GLOB.bible_icon_state = icon_state
-	GLOB.bible_item_state = item_state
-	feedback_set_details("religion_book", "[choice]")
+	if (!user.mind.my_religion.configured)
+		var/list/skins = list()
+		for(var/i in 1 to GLOB.biblestates.len)
+			var/image/bible_image = image(icon = 'icons/obj/storage.dmi', icon_state = GLOB.biblestates[i])
+			skins += list("[GLOB.biblenames[i]]" = bible_image)
+
+		var/choice = show_radial_menu(user, src, skins, custom_check = CALLBACK(src, PROC_REF(check_menu), user), radius = 40, require_near = TRUE)
+		if(!choice)
+			return FALSE
+		var/bible_index = GLOB.biblenames.Find(choice)
+		if(!bible_index)
+			return FALSE
+
+		user.mind.my_religion.bible_icon_state = GLOB.biblestates[bible_index]
+		user.mind.my_religion.bible_item_state = GLOB.bibleitemstates[bible_index]
+		user.mind.my_religion.configured = TRUE
+
+	deity_name = user.mind.my_religion.deity
+	name = user.mind.my_religion.bible_name
+	icon_state = user.mind.my_religion.bible_icon_state
+	item_state = user.mind.my_religion.bible_item_state
+	to_chat(user, span_notice("You invoke [user.mind.my_religion.deity] and prepare a copy of [src]."))
 
 /**
   * Checks if we are allowed to interact with a radial menu
@@ -68,8 +73,8 @@ GLOBAL_LIST_INIT(bibleitemstates, list(
   * Arguments:
   * * user The mob interacting with the menu
   */
-/obj/item/weapon/storage/bible/proc/check_menu(mob/living/carbon/human/user)
-	if(GLOB.bible_icon_state)
+/obj/item/storage/bible/proc/check_menu(mob/living/carbon/human/user)
+	if(user.mind.my_religion.configured)
 		return FALSE
 	if(!istype(user))
 		return FALSE
@@ -77,34 +82,34 @@ GLOBAL_LIST_INIT(bibleitemstates, list(
 		return FALSE
 	if(user.incapacitated())
 		return FALSE
-	if(user.mind.assigned_role != "Chaplain")
+	if(user.mind.assigned_role != JOB_CHAPLAIN)
 		return FALSE
 	return TRUE
 
-/obj/item/weapon/storage/bible/booze
+/obj/item/storage/bible/booze
 	name = "bible"
 	desc = "To be applied to the head repeatedly."
 	icon_state ="bible"
 
-/obj/item/weapon/storage/bible/booze/New()
+/obj/item/storage/bible/booze/New()
 	starts_with = list(
-		/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer,
-		/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer,
-		/obj/item/weapon/spacecash/c100,
-		/obj/item/weapon/spacecash/c100,
-		/obj/item/weapon/spacecash/c100
+		/obj/item/reagent_containers/food/drinks/bottle/small/beer,
+		/obj/item/reagent_containers/food/drinks/bottle/small/beer,
+		/obj/item/spacecash/c100,
+		/obj/item/spacecash/c100,
+		/obj/item/spacecash/c100
 	)
 
-/obj/item/weapon/storage/bible/afterattack(atom/A, mob/user as mob, proximity)
+/obj/item/storage/bible/afterattack(atom/A, mob/user as mob, proximity)
 	if(!proximity) return
-	if(user.mind && (user.mind.assigned_role == "Chaplain"))
+	if(user.mind && (user.mind.assigned_role == JOB_CHAPLAIN))
 		if(A.reagents && A.reagents.has_reagent("water")) //blesses all the water in the holder
-			to_chat(user, "<span class='notice'>You bless [A].</span>")
+			to_chat(user, span_notice("You bless [A]."))
 			var/water2holy = A.reagents.get_reagent_amount("water")
 			A.reagents.del_reagent("water")
 			A.reagents.add_reagent("holywater",water2holy)
 
-/obj/item/weapon/storage/bible/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/item/storage/bible/attackby(obj/item/W as obj, mob/user as mob)
 	if (src.use_sound)
 		playsound(src, src.use_sound, 50, 1, -5)
 	..()

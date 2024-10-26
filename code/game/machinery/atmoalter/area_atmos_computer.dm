@@ -4,7 +4,7 @@
 	icon_keyboard = "atmos_key"
 	icon_screen = "area_atmos"
 	light_color = "#e6ffff"
-	circuit = /obj/item/weapon/circuitboard/area_atmos
+	circuit = /obj/item/circuitboard/area_atmos
 
 	var/list/connectedscrubbers = list()
 	var/status = ""
@@ -48,13 +48,13 @@
 			"load" = scrubber.last_power_draw,
 			"area" = get_area(scrubber),
 		)))
-	
+
 	return list("scrubbers" = working)
 
 /obj/machinery/computer/area_atmos/tgui_act(action, params)
 	if(..())
 		return TRUE
-	
+
 	switch(action)
 		if("toggle")
 			var/scrub_id = params["id"]
@@ -66,10 +66,10 @@
 			S.update_icon()
 			. = TRUE
 		if("allon")
-			INVOKE_ASYNC(src, .proc/toggle_all, TRUE)
+			INVOKE_ASYNC(src, PROC_REF(toggle_all), TRUE)
 			. = TRUE
 		if("alloff")
-			INVOKE_ASYNC(src, .proc/toggle_all, FALSE)
+			INVOKE_ASYNC(src, PROC_REF(toggle_all), FALSE)
 			. = TRUE
 		if("scan")
 			scanscrubbers()
@@ -78,7 +78,7 @@
 	add_fingerprint(usr)
 
 /obj/machinery/computer/area_atmos/proc/toggle_all(on)
-	for(var/id in connectedscrubbers)	
+	for(var/id in connectedscrubbers)
 		var/obj/machinery/portable_atmospherics/powered/scrubber/huge/S = connectedscrubbers["[id]"]
 		if(!validscrubber(S))
 			connectedscrubbers -= S

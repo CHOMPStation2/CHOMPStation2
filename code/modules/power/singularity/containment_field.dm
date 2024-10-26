@@ -9,7 +9,10 @@
 	density = FALSE
 	unacidable = TRUE
 	use_power = USE_POWER_OFF
-	light_range = 4
+	light_on = TRUE
+	light_range = 2
+	light_power = 0.5
+	light_color = "#5BA8FF"
 	var/obj/machinery/field_generator/FG1 = null
 	var/obj/machinery/field_generator/FG2 = null
 	var/list/shockdirs
@@ -18,7 +21,7 @@
 /obj/machinery/containment_field/Initialize()
 	. = ..()
 	shockdirs = list(turn(dir,90),turn(dir,-90))
-	sense_proximity(callback = /atom/proc/HasProximity)
+	sense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity)) // CHOMPEdit
 
 /obj/machinery/containment_field/set_dir(new_dir)
 	. = ..()
@@ -26,7 +29,7 @@
 		shockdirs = list(turn(dir,90),turn(dir,-90))
 
 /obj/machinery/containment_field/Destroy()
-	unsense_proximity(callback = /atom/proc/HasProximity)
+	unsense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity)) // CHOMPEdit
 	if(FG1 && !FG1.clean_up)
 		FG1.cleanup()
 	if(FG2 && !FG2.clean_up)
@@ -49,7 +52,16 @@
 		return
 	shock(L)
 
-/obj/machinery/containment_field/HasProximity(turf/T, atom/movable/AM, old_loc)
+// CHOMPEdit Start
+/obj/machinery/containment_field/HasProximity(turf/T, datum/weakref/WF, old_loc)
+	SIGNAL_HANDLER
+	if(isnull(WF))
+		return
+	var/atom/movable/AM = WF.resolve()
+	if(isnull(AM))
+		log_debug("DEBUG: HasProximity called without reference on [src].")
+		return
+// CHOMPEdit End
 	if(!istype(AM, /mob/living) || AM:incorporeal_move)
 		return 0
 	if(!(get_dir(src,AM) in shockdirs))

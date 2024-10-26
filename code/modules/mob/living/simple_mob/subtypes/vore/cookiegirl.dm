@@ -16,10 +16,12 @@
 	melee_damage_upper = 5
 
 	meat_amount = 10
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/cookiesnack
+	meat_type = /obj/item/reagent_containers/food/snacks/cookie
 
 	say_list_type = /datum/say_list/cookiegirl
 	ai_holder_type = /datum/ai_holder/simple_mob/passive/cookiegirl
+
+	faction = FACTION_COOKIEGIRL
 
 	// Activate Noms!
 /mob/living/simple_mob/vore/cookiegirl
@@ -31,6 +33,7 @@
 	vore_default_mode = DM_HOLD // They're cookiepeople, what do you expect?
 	vore_digest_chance = 10 // Gonna become as sweet as sugar, soon.
 	vore_icons = SA_ICON_LIVING | SA_ICON_REST
+	can_be_drop_prey = FALSE //CHOMP Add
 
 /datum/ai_holder/simple_mob/passive/cookiegirl/on_hear_say(mob/living/speaker, message)
 

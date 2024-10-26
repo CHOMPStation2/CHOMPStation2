@@ -40,7 +40,7 @@
 /datum/sprite_accessory/wing/moth
 	name = "moth wings"
 	desc = ""
-	icon_state = "moth"
+	icon_state = "moth"//deprecated but leave these here to not break character slots
 
 /datum/sprite_accessory/wing/mothc
 	name = "moth wings, colorable"
@@ -151,3 +151,10 @@
 	desc = ""
 	icon_state = "cyberdoe_s"
 	do_colouration = 0
+
+/datum/sprite_accessory/wing/mantisarms
+	name = "Mantis arms"
+	desc = ""
+	icon_state = "mantisarms_s"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY

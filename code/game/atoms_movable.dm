@@ -16,9 +16,9 @@
 	var/moved_recently = 0
 	var/mob/pulledby = null
 	var/item_state = null // Used to specify the item state for the on-mob overlays.
-	var/icon_scale_x = 1 // Used to scale icons up or down horizonally in update_transform().
-	var/icon_scale_y = 1 // Used to scale icons up or down vertically in update_transform().
-	var/icon_rotation = 0 // Used to rotate icons in update_transform()
+	var/icon_scale_x = DEFAULT_ICON_SCALE_X // Used to scale icons up or down horizonally in update_transform().
+	var/icon_scale_y = DEFAULT_ICON_SCALE_Y // Used to scale icons up or down vertically in update_transform().
+	var/icon_rotation = DEFAULT_ICON_ROTATION // Used to rotate icons in update_transform()
 	var/icon_expected_height = 32
 	var/icon_expected_width = 32
 	var/old_x = 0
@@ -45,8 +45,11 @@
 			render_target = ref(src)
 			em_block = new(src, render_target)
 			add_overlay(list(em_block), TRUE)
+			RegisterSignal(em_block, COMSIG_PARENT_QDELETING, PROC_REF(emblocker_gc)) //CHOMPEdit deal with emblocker deleting. see atoms_movable_ch.dm
 	if(opacity)
 		AddElement(/datum/element/light_blocking)
+	if(icon_scale_x != DEFAULT_ICON_SCALE_X || icon_scale_y != DEFAULT_ICON_SCALE_Y || icon_rotation != DEFAULT_ICON_ROTATION)
+		update_transform()
 	switch(light_system)
 		if(STATIC_LIGHT)
 			update_light()
@@ -165,7 +168,7 @@
 			// place due to a Crossed, Bumped, etc. call will interrupt
 			// the second half of the diagonal movement, or the second attempt
 			// at a first half if step() fails because we hit something.
-			glide_for(movetime * 2)
+			glide_for(movetime * SQRT_2) //CHOMPEDIT - proper diagonal movement
 			if (direct & NORTH)
 				if (direct & EAST)
 					if (step(src, NORTH) && moving_diagonally)
@@ -218,7 +221,7 @@
 
 	// If we moved, call Moved() on ourselves
 	if(.)
-		Moved(oldloc, direct, FALSE, movetime ? movetime : ( (TICKS2DS(WORLD_ICON_SIZE/glide_size)) * (moving_diagonally ? (0.5) : 1) ) )
+		Moved(oldloc, direct, FALSE, movetime ? movetime : MOVE_GLIDE_CALC(glide_size, moving_diagonally) ) //CHOMPEDIT - proper diagonal movement
 
 	// Update timers/cooldown stuff
 	move_speed = world.time - l_move_time
@@ -238,7 +241,7 @@
 	for (var/datum/light_source/light as anything in light_sources) // Cycle through the light sources on this atom and tell them to update.
 		light.source_atom.update_light()
 
-	SEND_SIGNAL(src, COMSIG_MOVABLE_MOVED, old_loc, direction)
+	//SEND_SIGNAL(src, COMSIG_MOVABLE_MOVED, old_loc, direction) CHOMPEdit - Why was this comsig here twice?
 
 	return TRUE
 
@@ -374,7 +377,7 @@
 		return TRUE
 
 /atom/movable/proc/onTransitZ(old_z,new_z)
-	GLOB.z_moved_event.raise_event(src, old_z, new_z)
+	SEND_SIGNAL(src, COMSIG_OBSERVER_Z_MOVED, old_z, new_z)
 	SEND_SIGNAL(src, COMSIG_MOVABLE_Z_CHANGED, old_z, new_z)
 	for(var/atom/movable/AM as anything in src) // Notify contents of Z-transition. This can be overridden IF we know the items contents do not care.
 		AM.onTransitZ(old_z,new_z)
@@ -415,6 +418,7 @@
 			if(A == src) continue
 			if(istype(A,/mob/living))
 				if(A:lying) continue
+				if(A.is_incorporeal()) continue // CHOMPEdit - For phased entities
 				src.throw_impact(A,speed)
 			if(isobj(A))
 				if(!A.density || A.throwpass)

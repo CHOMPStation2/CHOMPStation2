@@ -1,8 +1,3 @@
-#define STATE_DEFAULT	1
-#define STATE_MESSAGELIST	2
-#define STATE_VIEWMESSAGE	3
-#define STATE_STATUSDISPLAY	4
-#define STATE_ALERT_LEVEL	5
 /datum/computer_file/program/comm
 	filename = "comm"
 	filedesc = "Command and Communications Program"
@@ -12,10 +7,11 @@
 	tguimodule_path =  /datum/tgui_module/communications/ntos
 	extended_desc = "Used to command and control. Can relay long-range communications. This program can not be run on tablet computers."
 	required_access = access_heads
-	requires_ntnet = 1
+	requires_ntnet = TRUE
 	size = 12
 	usage_flags = PROGRAM_CONSOLE | PROGRAM_LAPTOP
 	network_destination = "long-range communication array"
+	category = PROG_COMMAND
 	var/datum/comm_message_listener/message_core = new
 
 /datum/computer_file/program/comm/clone()

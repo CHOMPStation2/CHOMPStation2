@@ -6,11 +6,11 @@
 	density = TRUE
 	anchored = TRUE
 	unacidable = TRUE
-	circuit = /obj/item/weapon/circuitboard/recharge_station
+	circuit = /obj/item/circuitboard/recharge_station
 	use_power = USE_POWER_IDLE
 	idle_power_usage = 50
 	var/mob/occupant = null
-	var/obj/item/weapon/cell/cell = null
+	var/obj/item/cell/cell = null
 	var/icon_update_tick = 0	// Used to rebuild the overlay only once every 10 ticks
 	var/charging = 0
 
@@ -72,9 +72,12 @@
 /obj/machinery/recharge_station/proc/process_occupant()
 	if(isrobot(occupant))
 		var/mob/living/silicon/robot/R = occupant
-		if(R.module)
+		var/overcharged = FALSE
+		if(R.cell.maxcharge < R.cell.charge)
+			overcharged = TRUE
+		if(R.module && !overcharged)
 			R.module.respawn_consumable(R, charging_power * CELLRATE / 250) //consumables are magical, apparently
-		if(R.cell && !R.cell.fully_charged())
+		if(R.cell && !R.cell.fully_charged() && !overcharged)
 			var/diff = min(R.cell.maxcharge - R.cell.charge, charging_power * CELLRATE) // Capped by charging_power / tick
 			var/charge_used = cell.use(diff)
 			R.cell.give(charge_used)
@@ -84,6 +87,16 @@
 			R.adjustBruteLoss(-weld_rate)
 		if(wire_rate && R.getFireLoss() && cell.checked_use(wire_power_use * wire_rate * CELLRATE))
 			R.adjustFireLoss(-wire_rate)
+
+	//VOREStation Add Start
+	else if(ispAI(occupant))
+		var/mob/living/silicon/pai/P = occupant
+
+		if(P.nutrition < 400)
+			P.nutrition = min(P.nutrition+10, 400)
+			cell.use(7000/450*10)
+	//VOREStation Add End
+
 	else if(ishuman(occupant))
 		var/mob/living/carbon/human/H = occupant
 
@@ -100,28 +113,29 @@
 
 			// Also recharge their internal battery.
 			if(H.isSynthetic() && H.nutrition < 500) //VOREStation Edit
-				H.nutrition = min(H.nutrition+10, 500) //VOREStation Edit
+				H.nutrition = min(H.nutrition+(10*(1-min(H.species.synthetic_food_coeff, 0.9))), 500) //VOREStation Edit
 				cell.use(7000/450*10)
 
 			// And clear up radiation
-			if(H.radiation > 0)
-				H.radiation = max(H.radiation - rand(5, 15), 0)
+			if(H.radiation > 0 || H.accumulated_rads > 0)
+				H.radiation = max(H.radiation - 25, 0)
+				H.accumulated_rads = max(H.accumulated_rads - 25, 0)
 
 		if(H.wearing_rig) // stepping into a borg charger to charge your rig and fix your shit
-			var/obj/item/weapon/rig/wornrig = H.get_rig()
+			var/obj/item/rig/wornrig = H.get_rig()
 			if(wornrig) // just to make sure
 				for(var/obj/item/rig_module/storedmod in wornrig.installed_modules)
 					if(weld_rate && storedmod.damage && cell.checked_use(weld_power_use * weld_rate * CELLRATE))
-						to_chat(H, "<span class='notice'>[storedmod] is repaired!</span>")
+						to_chat(H, span_notice("[storedmod] is repaired!"))
 						storedmod.damage = 0
 				if(wornrig.chest)
 					var/obj/item/clothing/suit/space/rig/rigchest = wornrig.chest
 					if(weld_rate && rigchest.damage && cell.checked_use(weld_power_use * weld_rate * CELLRATE))
 						rigchest.breaches = list()
 						rigchest.calc_breach_damage()
-						to_chat(H, "<span class='notice'>[rigchest] is repaired!</span>")
+						to_chat(H, span_notice("[rigchest] is repaired!"))
 				if(wornrig.cell)
-					var/obj/item/weapon/cell/rigcell = wornrig.cell
+					var/obj/item/cell/rigcell = wornrig.cell
 					var/diff = min(rigcell.maxcharge - rigcell.charge, charging_power * CELLRATE) // Capped by charging_power / tick
 					var/charge_used = cell.use(diff)
 					rigcell.give(charge_used)
@@ -157,8 +171,8 @@
 			return
 		if(default_part_replacement(user, O))
 			return
-		if (istype(O, /obj/item/weapon/grab) && get_dist(src,user)<2)
-			var/obj/item/weapon/grab/G = O
+		if (istype(O, /obj/item/grab) && get_dist(src,user)<2)
+			var/obj/item/grab/G = O
 			if(istype(G.affecting,/mob/living))
 				var/mob/living/M = G.affecting
 				qdel(O)
@@ -177,12 +191,12 @@
 	var/man_rating = 0
 	var/cap_rating = 0
 
-	for(var/obj/item/weapon/stock_parts/P in component_parts)
-		if(istype(P, /obj/item/weapon/stock_parts/capacitor))
+	for(var/obj/item/stock_parts/P in component_parts)
+		if(istype(P, /obj/item/stock_parts/capacitor))
 			cap_rating += P.rating
-		if(istype(P, /obj/item/weapon/stock_parts/manipulator))
+		if(istype(P, /obj/item/stock_parts/manipulator))
 			man_rating += P.rating
-	cell = locate(/obj/item/weapon/cell) in component_parts
+	cell = locate(/obj/item/cell) in component_parts
 
 	charging_power = 40000 + 40000 * cap_rating
 	restore_power_active = 10000 + 15000 * cap_rating
@@ -198,7 +212,7 @@
 		desc += "<br>It is capable of repairing burn damage."
 
 /obj/machinery/recharge_station/proc/build_overlays()
-	cut_overlay()
+	cut_overlays()
 	switch(round(chargepercentage()))
 		if(1 to 20)
 			add_overlay("statn_c0")
@@ -248,7 +262,7 @@
 			return
 
 		if(istype(R, /mob/living/silicon/robot/platform))
-			to_chat(R, SPAN_WARNING("You are too large to fit into \the [src]."))
+			to_chat(R, span_warning("You are too large to fit into \the [src]."))
 			return
 
 		add_fingerprint(R)
@@ -257,6 +271,21 @@
 		occupant = R
 		update_icon()
 		return 1
+
+	//VOREStation Add Start
+	else if(istype(L, /mob/living/silicon/pai))
+		var/mob/living/silicon/pai/P = L
+
+		if(P.incapacitated())
+			return
+
+		add_fingerprint(P)
+		P.reset_view(src)
+		P.forceMove(src)
+		occupant = P
+		update_icon()
+		return 1
+	//VOREStation Add End
 
 	else if(istype(L,  /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = L

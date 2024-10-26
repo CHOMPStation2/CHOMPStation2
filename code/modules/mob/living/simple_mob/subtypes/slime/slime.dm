@@ -31,9 +31,9 @@ var/list/_slime_default_emotes = list(
 	glow_intensity = 2
 	gender = NEUTER
 
-	faction = "slime" // Note that slimes are hostile to other slimes of different color regardless of faction (unless Unified).
+	faction = FACTION_SLIME // Note that slimes are hostile to other slimes of different color regardless of faction (unless Unified).
 	maxHealth = 150
-	movement_cooldown = 0
+	movement_cooldown = -1
 	pass_flags = PASSTABLE
 	makes_dirt = FALSE	// Goop
 	mob_class = MOB_CLASS_SLIME
@@ -80,10 +80,20 @@ var/list/_slime_default_emotes = list(
 	var/injection_amount = 5 // This determines how much.
 	var/mood = ":3" // Icon to use to display 'mood', as an overlay.
 
-	can_enter_vent_with = list(/obj/item/clothing/head)
+	can_enter_vent_with = list(/obj/item/clothing/head,
+			/obj/soulgem // CHOMPAdd
+		)
+
+	can_be_drop_prey = FALSE //CHOMP Add
+
+	// CHOMPAdd: Pain Sounds
+	species_sounds = "Slime"
+	pain_emote_1p = list("squish", "squelch")
+	pain_emote_3p = list("squishes", "squelches")
+	// CHOMPAdd End
 
 /mob/living/simple_mob/slime/get_available_emotes()
-	return global._slime_default_emotes
+	return global._slime_default_emotes.Copy()
 
 /datum/say_list/slime
 	speak = list("Blorp...", "Blop...")
@@ -91,7 +101,7 @@ var/list/_slime_default_emotes = list(
 	emote_hear = list("squishes")
 
 /mob/living/simple_mob/slime/Initialize()
-	verbs += /mob/living/proc/ventcrawl
+	add_verb(src, /mob/living/proc/ventcrawl)
 	update_mood()
 	glow_color = color
 	handle_light()
@@ -140,7 +150,9 @@ var/list/_slime_default_emotes = list(
 		var/hat_state = hat.item_state ? hat.item_state : hat.icon_state
 		var/image/I = image('icons/inventory/head/mob.dmi', src, hat_state)
 		I.pixel_y = -7 // Slimes are small.
-		I.appearance_flags = RESET_COLOR
+		I.color = hat.color
+		I.appearance_flags = RESET_COLOR | KEEP_APART
+		I.blend_mode = BLEND_OVERLAY
 		add_overlay(I)
 
 // Controls the 'mood' overlay. Overrided in subtypes for specific behaviour.
@@ -199,7 +211,7 @@ var/list/_slime_default_emotes = list(
 
 	// Otherwise they're probably fighting the slime.
 	if(prob(25) && can_miss)	//VOREStation Edit
-		visible_message(span("warning", "\The [user]'s [I] passes right through \the [src]!"))
+		visible_message(span_warning("\The [user]'s [I] passes right through \the [src]!"))
 		user.setClickCooldown(user.get_attack_speed(I))
 		return
 	..()
@@ -212,26 +224,26 @@ var/list/_slime_default_emotes = list(
 // Hat simulator
 /mob/living/simple_mob/slime/proc/give_hat(var/obj/item/clothing/head/new_hat, var/mob/living/user)
 	if(!istype(new_hat))
-		to_chat(user, span("warning", "\The [new_hat] isn't a hat."))
+		to_chat(user, span_warning("\The [new_hat] isn't a hat."))
 		return
 	if(hat)
-		to_chat(user, span("warning", "\The [src] is already wearing \a [hat]."))
+		to_chat(user, span_warning("\The [src] is already wearing \a [hat]."))
 		return
 	else
 		user.drop_item(new_hat)
 		hat = new_hat
 		new_hat.forceMove(src)
-		to_chat(user, span("notice", "You place \a [new_hat] on \the [src].  How adorable!"))
+		to_chat(user, span_notice("You place \a [new_hat] on \the [src].  How adorable!"))
 		update_icon()
 		return
 
 /mob/living/simple_mob/slime/proc/remove_hat(var/mob/living/user)
 	if(!hat)
-		to_chat(user, "<span class='warning'>\The [src] doesn't have a hat to remove.</span>")
+		to_chat(user, span_warning("\The [src] doesn't have a hat to remove."))
 	else
 		hat.forceMove(get_turf(src))
 		user.put_in_hands(hat)
-		to_chat(user, "<span class='warning'>You take away \the [src]'s [hat.name].  How mean.</span>")
+		to_chat(user, span_warning("You take away \the [src]'s [hat.name].  How mean."))
 		hat = null
 		update_icon()
 
@@ -247,7 +259,7 @@ var/list/_slime_default_emotes = list(
 
 /mob/living/simple_mob/slime/proc/squish()
 	playsound(src, 'sound/effects/slime_squish.ogg', 50, 0)
-	visible_message("<b>\The [src]</b> squishes!")
+	visible_message(span_infoplain(span_bold("\The [src]") + " squishes!"))
 
 /decl/mob_organ_names/slime
 	hit_zones = list("cytoplasmic membrane")

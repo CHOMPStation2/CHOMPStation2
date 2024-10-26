@@ -27,8 +27,8 @@
 	var/radial_name = null	// The augment's name in the Radial Menu.
 	var/radial_state = null	// Icon state for the augment's radial icon.
 
-	var/aug_cooldown = 30 SECONDS
-	var/last_activate = null
+	var/aug_cooldown = 1 SECONDS //CHOMPedit, no reason for it to be 30 seconds, the powerful implants already have their own values
+	var/cooldown = null
 
 /obj/item/organ/internal/augment/Initialize()
 	. = ..()
@@ -59,13 +59,13 @@
 		return
 
 	if(aug_cooldown)
-		if(last_activate <= world.time + aug_cooldown)
-			last_activate = world.time
+		if(cooldown <= world.time)
+			cooldown = world.time + aug_cooldown
 		else
 			return
 
 	if(robotic && owner.get_restraining_bolt())
-		to_chat(owner, "<span class='warning'>\The [src] doesn't respond.</span>")
+		to_chat(owner, span_warning("\The [src] doesn't respond."))
 		return
 
 	var/item_to_equip = integrated_object
@@ -88,7 +88,7 @@
 	var/obj/item/organ/my_augment = null	// Used to reference the object's host organ.
 
 /obj/item/dropped(mob/user)
-	. = ..()
+	. = ..(user)
 	if(src)
 		if(destroy_on_drop && !QDELETED(src))
 			qdel(src)
@@ -153,11 +153,11 @@
 	if(buckled)
 		var/obj/Ob = buckled
 		if(Ob.buckle_lying)
-			to_chat(M, "<span class='notice'>You cannot use your augments when restrained.</span>")
+			to_chat(M, span_notice("You cannot use your augments when restrained."))
 			return 0
 
 	if((slot == slot_l_hand && l_hand) || (slot == slot_r_hand && r_hand))
-		to_chat(M,"<span class='warning'>Your hand is full.  Drop something first.</span>")
+		to_chat(M,span_warning("Your hand is full.  Drop something first."))
 		return 0
 
 	var/del_if_failure = destroy_on_drop

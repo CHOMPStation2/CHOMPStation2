@@ -38,7 +38,7 @@
 					return test_result
 
 
-			if(UT_NORMAL || UT_NORMAL_COLD)
+			if(UT_NORMAL,UT_NORMAL_COLD)
 				if(abs(pressure - ONE_ATMOSPHERE) > 10)
 					test_result["msg"] = "Pressure out of bounds: [pressure] | [t_msg]"
 					return test_result
@@ -121,3 +121,7 @@
 /datum/unit_test/zas_area_test/cargo_bay
 	name = "ZAS: Cargo Bay"
 	area_path = /area/quartermaster/storage
+
+#undef UT_NORMAL
+#undef UT_VACUUM
+#undef UT_NORMAL_COLD

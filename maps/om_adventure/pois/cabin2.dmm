@@ -30,6 +30,13 @@
 /obj/random/multiple/underdark/treasure,
 /turf/simulated/floor/bmarble,
 /area/om_adventure/poi/cabin2)
+"m" = (
+/obj/move_trader_landmark{
+	dir = 8;
+	trader_type = /obj/trader/general
+	},
+/turf/template_noop,
+/area/template_noop)
 "n" = (
 /obj/tether_away_spawner/spookyland,
 /turf/simulated/floor/wood,
@@ -53,7 +60,7 @@
 /turf/simulated/floor/wood,
 /area/om_adventure/poi/cabin2)
 "t" = (
-/obj/structure/bed/chair/sofa/brown/corner,
+/obj/structure/bed/chair/sofa/corner/brown,
 /turf/simulated/floor/carpet/bcarpet,
 /area/om_adventure/poi/cabin2)
 "u" = (
@@ -64,7 +71,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/om_adventure/poi/cabin2)
 "v" = (
-/obj/structure/bed/chair/sofa/brown/left{
+/obj/structure/bed/chair/sofa/left/brown{
 	dir = 8
 	},
 /turf/simulated/floor/carpet/bcarpet,
@@ -76,7 +83,7 @@
 /area/om_adventure/poi/cabin2)
 "x" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/browndouble,
+/obj/item/bedsheet/browndouble,
 /obj/structure/curtain/black,
 /turf/simulated/floor/carpet,
 /area/om_adventure/poi/cabin2)
@@ -124,8 +131,12 @@
 /turf/simulated/floor/wood,
 /area/om_adventure/poi/cabin2)
 "K" = (
-/obj/structure/bed/chair/sofa/brown/right{
+/obj/structure/bed/chair/sofa/right/brown{
 	dir = 4
+	},
+/obj/move_trader_landmark{
+	dir = 4;
+	trader_type = /obj/trader/general
 	},
 /turf/simulated/floor/carpet/bcarpet,
 /area/om_adventure/poi/cabin2)
@@ -149,7 +160,7 @@
 /turf/simulated/floor/bmarble,
 /area/om_adventure/poi/cabin2)
 "P" = (
-/obj/structure/bed/chair/sofa/brown/corner{
+/obj/structure/bed/chair/sofa/corner/brown{
 	dir = 1
 	},
 /turf/simulated/floor/carpet/bcarpet,
@@ -250,7 +261,7 @@ H
 r
 Q
 M
-a
+m
 z
 a
 M

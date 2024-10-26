@@ -30,12 +30,12 @@
 				CALLBACK(src, .some_proc_here)
 
 		when the above doesn't apply:
-			.proc/procname
+			PROC_REF(procname)
 			Example:
-				CALLBACK(src, .proc/some_proc_here)
+				CALLBACK(src, PROC_REF(some_proc_here))
 
 		proc defined on a parent of a some type:
-			Example: /some/type/.proc/some_proc_here
+			Example: /some/type/PROC_REF(some_proc_here)
 
 		Other wise you will have to do the full typepath of the proc (/type/of/thing/proc/procname)
 */
@@ -44,7 +44,7 @@
 	var/datum/object = GLOBAL_PROC
 	var/delegate
 	var/list/arguments
-	var/weakref/user
+	var/datum/weakref/user
 
 /datum/callback/New(thingtocall, proctocall, ...)
 	if (thingtocall)
@@ -53,7 +53,7 @@
 	if (length(args) > 2)
 		arguments = args.Copy(3)
 	if(usr)
-		user = weakref(usr)
+		user = WEAKREF(usr)
 
 /world/proc/ImmediateInvokeAsync(thingtocall, proctocall, ...)
 	set waitfor = FALSE
@@ -70,7 +70,7 @@
 
 /datum/callback/proc/Invoke(...)
 	if(!usr)
-		var/weakref/W = user
+		var/datum/weakref/W = user
 		if(W)
 			var/mob/M = W.resolve()
 			if(M)
@@ -94,7 +94,7 @@
 	set waitfor = FALSE
 
 	if(!usr)
-		var/weakref/W = user
+		var/datum/weakref/W = user
 		if(W)
 			var/mob/M = W.resolve()
 			if(M)

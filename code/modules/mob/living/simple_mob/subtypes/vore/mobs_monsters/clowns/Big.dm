@@ -1,6 +1,6 @@
-/mob/living/simple_mob/mobs_monsters/clowns/big
+/mob/living/simple_mob/clowns/big
 	tt_desc = "E Homo sapiens corydon horrificus" //this clown is stronk
-	faction = "clown"
+	faction = FACTION_CLOWN
 
 	maxHealth = 200
 	health = 200
@@ -16,10 +16,8 @@
 
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/angryclowns
 
-	loot_list = list(/obj/item/weapon/bikehorn = 100)
+	loot_list = list(/obj/item/bikehorn = 100)
 
-
-/mob/living/simple_mob/mobs_monsters/clowns/big
 	min_oxy = 0
 	max_oxy = 500
 	min_tox = 0

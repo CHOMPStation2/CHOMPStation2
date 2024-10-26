@@ -7,12 +7,12 @@
 	icon_dead = "bear_dead"
 	icon_gib = "bear_gib"
 
-	faction = "russian"
+	faction = FACTION_RUSSIAN
 
 	maxHealth = 125
 	health = 125
 
-	movement_cooldown = 0.5 SECONDS
+	movement_cooldown = -1
 
 	melee_damage_lower = 15
 	melee_damage_upper = 35
@@ -22,10 +22,13 @@
 	melee_attack_delay = 1 SECOND
 	attacktext = list("mauled")
 
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/bearmeat
+	meat_type = /obj/item/reagent_containers/food/snacks/bearmeat
 	meat_amount = 8
 
 	say_list_type = /datum/say_list/bear
+
+	can_be_drop_prey = FALSE //CHOMP Add
+	allow_mind_transfer = TRUE
 
 /datum/say_list/bear
 	speak = list("RAWR!","Rawr!","GRR!","Growl!")
@@ -42,6 +45,6 @@
 /mob/living/simple_mob/animal/space/bear/verb/berserk()
 	set name = "Berserk"
 	set desc = "Enrage and become vastly stronger for a period of time, however you will be weaker afterwards."
-	set category = "Abilities"
+	set category = "Abilities.Bear" //CHOMPEdit
 
 	add_modifier(/datum/modifier/berserk, 30 SECONDS)

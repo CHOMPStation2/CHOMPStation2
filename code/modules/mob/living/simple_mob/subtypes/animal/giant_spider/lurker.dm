@@ -33,7 +33,7 @@
 
 	poison_per_bite = 5
 
-	movement_cooldown = 5
+	movement_cooldown = 1.5
 
 	melee_damage_lower = 10
 	melee_damage_upper = 10
@@ -102,8 +102,8 @@
 	if(cloaked)
 		if(isliving(A))
 			var/mob/living/L = A
-			L.Weaken(cloaked_weaken_amount)
-			to_chat(L, span("danger", "\The [src] ambushes you!"))
+			L.add_modifier(/datum/modifier/entangled, 2 SECONDS) //L.Weaken(cloaked_weaken_amount) CHOMPEdit: Trying to remove hardstuns
+			to_chat(L, span_danger("\The [src] ambushes you!"))
 			playsound(src, 'sound/weapons/spiderlunge.ogg', 75, 1)
 	uncloak()
 	..() // For the poison.

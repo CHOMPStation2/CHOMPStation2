@@ -14,7 +14,7 @@
 	tends to get deflected after slicing into someone's flesh, and as such they tend to not cut deeply. \
 	The simplistic AI inside compensates for this by using the tendency to bounce away after \
 	slicing as an evasive tactic to avoid harm. This allows the viscerator to cut up the target, \
-	fly to the side, and then repeat, potentially causing the target to die from many seperate wounds."
+	fly to the side, and then repeat, potentially causing the target to die from many separate wounds."
 	value = CATALOGUER_REWARD_EASY
 
 /mob/living/simple_mob/mechanical/viscerator
@@ -27,10 +27,10 @@
 	icon_living = "viscerator_attack"
 	hovering = TRUE // Won't trigger landmines.
 
-	faction = "syndicate"
+	faction = FACTION_SYNDICATE
 	maxHealth = 15
 	health = 15
-	movement_cooldown = 0
+	movement_cooldown = -2
 
 	pass_flags = PASSTABLE
 	mob_swap_flags = 0
@@ -57,14 +57,14 @@
 // Used for a special grenade, to ensure they don't attack the wrong thing.
 /mob/living/simple_mob/mechanical/viscerator/mercenary/IIsAlly(mob/living/L)
 	. = ..()
-	if(!.) // Not friendly, see if they're a baddie first.
+	if(!. && isliving(L)) // Not friendly, see if they're a baddie first.
 		if(L.mind && mercs.is_antagonist(L.mind))
 			return TRUE
 
 // Similar to above but for raiders.
 /mob/living/simple_mob/mechanical/viscerator/raider/IIsAlly(mob/living/L)
 	. = ..()
-	if(!.) // Not friendly, see if they're a baddie first.
+	if(!. && isliving(L)) // Not friendly, see if they're a baddie first.
 		if(L.mind && raiders.is_antagonist(L.mind))
 			return TRUE
 
@@ -73,7 +73,7 @@
 	icon_state = "viscerator_b_attack"
 	icon_living = "viscerator_b_attack"
 
-	faction = "station"
+	faction = FACTION_STATION
 	maxHealth = 20
 	health = 20
 
@@ -83,7 +83,7 @@
 
 /mob/living/simple_mob/mechanical/viscerator/station/IIsAlly(mob/living/L)
 	. = ..()
-	if(!.)
+	if(!. && isliving(L))
 		if(isrobot(L)) // They ignore synths.
 			return TRUE
 		if(istype(L, /mob/living/simple_mob/mechanical/ward/monitor/crew))	// Also ignore friendly monitor wards
@@ -94,7 +94,7 @@
 /mob/living/simple_mob/mechanical/viscerator/piercing
 	attack_armor_pen = 20
 	base_attack_cooldown = 10 // One attack a second or so.
-	movement_cooldown = 0.5
+	movement_cooldown = -1
 
 /decl/mob_organ_names/viscerator
 	hit_zones = list("chassis", "rotor blades", "sensor array")

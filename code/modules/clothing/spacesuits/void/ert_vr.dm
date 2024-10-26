@@ -3,10 +3,10 @@
 	desc = "Utilizing cutting edge tech from Hephaestus, the Mark VII is the latest and greatest in semi-powered personal protection systems; like the civilian AutoLok suit, the Mark VII can automatically adapt to fit most species without issue via RFID tags. This significantly reduces the time required for response teams to suit up, as it eliminates the need for dedicated cycler units. It also has an integrated, unremovable helmet. Standard air tanks, suit coolers, and magboots may be installed and removed as needed."
 	icon_state = "ertsuit"
 	item_state = "ertsuit"
-	armor = list(melee = 60, bullet = 50, laser = 30,energy = 15, bomb = 30, bio = 100, rad = 100)
+	armor = list(melee = 65, bullet = 55, laser = 55,energy = 15, bomb = 50, bio = 100, rad = 100)
 	slowdown = 0.5
 	siemens_coefficient = 0.5
-	species_restricted = list("exclude",SPECIES_DIONA,SPECIES_VOX,SPECIES_TESHARI)	//this thing can autoadapt
+	species_restricted = list("exclude",SPECIES_DIONA,SPECIES_VOX,SPECIES_TESHARI,SPECIES_ALTEVIAN)	//this thing can autoadapt
 	icon = 'icons/inventory/suit/item_vr.dmi'
 	default_worn_icon = 'icons/inventory/suit/mob_vr.dmi'
 	w_class = ITEMSIZE_NORMAL //the mark vii packs itself down when not in use, thanks future-materials
@@ -15,6 +15,7 @@
 	min_pressure_protection = 0 * ONE_ATMOSPHERE
 	max_pressure_protection = 15* ONE_ATMOSPHERE
 	max_heat_protection_temperature = SPACE_SUIT_MAX_HEAT_PROTECTION_TEMPERATURE+10000
+	allowed = list(/obj/item/flashlight,/obj/item/tank,/obj/item/suit_cooling_unit,/obj/item/gun,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/melee/baton,/obj/item/melee/energy/sword,/obj/item/handcuffs)
 
 /obj/item/clothing/suit/space/void/responseteam/command
 	name = "Mark VII-C Emergency Response Team Commander Suit"
@@ -69,14 +70,14 @@
 	if(!isliving(user))
 		return
 
-	if(istype(W, /obj/item/clothing/accessory) || istype(W, /obj/item/weapon/hand_labeler))
+	if(istype(W, /obj/item/clothing/accessory) || istype(W, /obj/item/hand_labeler))
 		return ..()
 
 	if(user.get_inventory_slot(src) == slot_wear_suit)
-		to_chat(user, "<span class='warning'>You cannot modify \the [src] while it is being worn.</span>")
+		to_chat(user, span_warning("You cannot modify \the [src] while it is being worn."))
 		return
 
-	if(W.is_screwdriver())
+	if(W.has_tool_quality(TOOL_SCREWDRIVER))
 		if(boots || tank || cooler)
 			var/choice = tgui_input_list(usr, "What component would you like to remove?", "Remove Component", list(boots,tank,cooler))
 			if(!choice) return
@@ -107,7 +108,7 @@
 	desc = "As a vital part of the Mark VII suit, the integral helmet cannot be removed - so don't try."
 	icon_state = "erthelmet"
 	item_state = "erthelmet"
-	species_restricted = list("exclude",SPECIES_DIONA,SPECIES_VOX,SPECIES_TESHARI)	//this thing can autoadapt too
+	species_restricted = list("exclude",SPECIES_DIONA,SPECIES_VOX,SPECIES_TESHARI,SPECIES_ALTEVIAN)	//this thing can autoadapt too
 	armor = list(melee = 60, bullet = 50, laser = 30,energy = 15, bomb = 30, bio = 100, rad = 100)
 	siemens_coefficient = 0.5
 	icon = 'icons/inventory/head/item_vr.dmi'
@@ -170,6 +171,7 @@
 	sprite_sheets = list(
 		SPECIES_HUMAN			= 'icons/inventory/suit/mob_vr.dmi',
 		SPECIES_TAJ 			= 'icons/inventory/suit/mob_vr_tajaran.dmi',
+		SPECIES_LLEILL 			= 'icons/inventory/suit/mob_vr_tajaran.dmi',
 		SPECIES_SKRELL 			= 'icons/inventory/suit/mob_vr_skrell.dmi',
 		SPECIES_UNATHI 			= 'icons/inventory/suit/mob_vr_unathi.dmi',
 		SPECIES_XENOHYBRID 		= 'icons/inventory/suit/mob_vr_unathi.dmi',
@@ -200,13 +202,15 @@
 		SPECIES_NEVREAN			= 'icons/inventory/suit/item_vr.dmi',
 		SPECIES_RAPALA			= 'icons/inventory/suit/item_vr.dmi',
 		SPECIES_ALRAUNE			= 'icons/inventory/suit/item_vr.dmi',
-		SPECIES_ZADDAT			= 'icons/inventory/suit/item_vr.dmi'
+		SPECIES_ZADDAT			= 'icons/inventory/suit/item_vr.dmi',
+		SPECIES_LLEILL			= 'icons/inventory/suit/item_vr.dmi'
 		)
 
 /obj/item/clothing/head/helmet/space/void/responseteam
 	sprite_sheets = list(
 		SPECIES_HUMAN			= 'icons/inventory/head/mob_vr.dmi',
 		SPECIES_TAJ 			= 'icons/inventory/head/mob_vr_tajaran.dmi',
+		SPECIES_LLEILL 			= 'icons/inventory/suit/mob_vr_tajaran.dmi',
 		SPECIES_SKRELL 			= 'icons/inventory/head/mob_vr_skrell.dmi',
 		SPECIES_UNATHI 			= 'icons/inventory/head/mob_vr_unathi.dmi',
 		SPECIES_XENOHYBRID 		= 'icons/inventory/head/mob_vr_unathi.dmi',
@@ -237,5 +241,6 @@
 		SPECIES_NEVREAN			= 'icons/inventory/head/item_vr.dmi',
 		SPECIES_RAPALA			= 'icons/inventory/head/item_vr.dmi',
 		SPECIES_ALRAUNE			= 'icons/inventory/head/item_vr.dmi',
-		SPECIES_ZADDAT			= 'icons/inventory/head/item_vr.dmi'
+		SPECIES_ZADDAT			= 'icons/inventory/head/item_vr.dmi',
+		SPECIES_LLEILL			= 'icons/inventory/suit/item_vr.dmi'
 		)

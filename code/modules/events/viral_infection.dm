@@ -4,6 +4,9 @@ var/global/list/event_viruses = list() // so that event viruses are kept around 
 	var/list/viruses = list()
 
 /datum/event/viral_infection/setup()
+	if(prob(50))
+		kill()
+		return
 	announceWhen = rand(0, 3000)
 	endWhen = announceWhen + 1
 
@@ -19,16 +22,18 @@ var/global/list/event_viruses = list() // so that event viruses are kept around 
 		viruses += D
 
 /datum/event/viral_infection/announce()
-	var/level
+	/*var/level
 	if (severity == EVENT_LEVEL_MUNDANE)
 		return
 	else if (severity == EVENT_LEVEL_MODERATE)
 		level = pick("one", "two", "three", "four")
 	else
-		level = "five"
+		level = "five"*/
+	// Chomp removal
 
 	if (severity == EVENT_LEVEL_MAJOR || prob(60))
-		command_announcement.Announce("Confirmed outbreak of level [level] biohazard aboard \the [station_name()]. All personnel must contain the outbreak.", "Biohazard Alert", new_sound = 'sound/AI/outbreak5.ogg')
+		command_announcement.Announce("Confirmed outbreak of level 7 biohazard aboard \the [station_name()]. All personnel must contain the outbreak.", "Viral Outbreak", new_sound = 'sound/AI/outbreak7.ogg')
+		// Chomp edit: Changed "Biohazard Alert" to "Viral Outbreak" and also changed level level 5 to level 7. Lower = More urgent.
 
 /datum/event/viral_infection/start()
 	if(!viruses.len) return
@@ -58,7 +63,7 @@ var/global/list/event_viruses = list() // so that event viruses are kept around 
 	var/list/used_viruses_links = list()
 	var/list/used_viruses_text = list()
 	for(var/datum/disease2/disease/D in used_viruses)
-		used_viruses_links += "<a href='?src=\ref[D];info=1'>[D.name()]</a>"
+		used_viruses_links += "<a href='?src=\ref[D];[HrefToken()];info=1'>[D.name()]</a>"
 		used_viruses_text += D.name()
 
 	var/list/used_candidates_links = list()

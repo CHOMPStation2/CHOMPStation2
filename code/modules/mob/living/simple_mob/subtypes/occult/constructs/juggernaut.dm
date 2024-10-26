@@ -23,7 +23,7 @@
 	mob_size = MOB_HUGE
 
 
-	movement_cooldown = 6 //Not super fast, but it might catch up to someone in armor who got punched once or twice.
+	movement_cooldown = 2 //Not super fast, but it might catch up to someone in armor who got punched once or twice.
 
 //	environment_smash = 2	// Whatever this gets renamed to, Juggernauts need to break things
 
@@ -50,7 +50,7 @@
 	..()
 
 /mob/living/simple_mob/construct/juggernaut/bullet_act(var/obj/item/projectile/P)
-	var/reflectchance = 80 - round(P.damage/3)
+	var/reflectchance = 100 - round(P.damage*2) //chompEDIT: We have lower damage values now
 	if(prob(reflectchance))
 		var/damage_mod = rand(2,4)
 		var/projectile_dam_type = P.damage_type
@@ -58,17 +58,17 @@
 		var/armorcheck = run_armor_check(null, P.check_armour)
 		var/soakedcheck = get_armor_soak(null, P.check_armour)
 		if(!(istype(P, /obj/item/projectile/energy) || istype(P, /obj/item/projectile/beam)))
-			visible_message("<span class='danger'>The [P.name] bounces off of [src]'s shell!</span>", \
-						"<span class='userdanger'>The [P.name] bounces off of [src]'s shell!</span>")
-			new /obj/item/weapon/material/shard/shrapnel(src.loc)
+			visible_message(span_danger("The [P.name] bounces off of [src]'s shell!"), \
+						span_userdanger("The [P.name] bounces off of [src]'s shell!"))
+			new /obj/item/material/shard/shrapnel(src.loc)
 			if(!(P.damage_type == BRUTE || P.damage_type == BURN))
 				projectile_dam_type = BRUTE
 				incoming_damage = round(incoming_damage / 4) //Damage from strange sources is converted to brute for physical projectiles, though severely decreased.
 			apply_damage(incoming_damage, projectile_dam_type, null, armorcheck, soakedcheck, is_sharp(P), has_edge(P), P)
 			return -1 //Doesn't reflect non-beams or non-energy projectiles. They just smack and drop with little to no effect.
 		else
-			visible_message("<span class='danger'>The [P.name] gets reflected by [src]'s shell!</span>", \
-						"<span class='userdanger'>The [P.name] gets reflected by [src]'s shell!</span>")
+			visible_message(span_danger("The [P.name] gets reflected by [src]'s shell!"), \
+						span_userdanger("The [P.name] gets reflected by [src]'s shell!"))
 			damage_mod = rand(3,5)
 			incoming_damage = (round(P.damage / damage_mod) - (round((P.damage / damage_mod) * 0.3)))
 			if(!(P.damage_type == BRUTE || P.damage_type == BURN))
@@ -125,10 +125,10 @@
 							)
 
 /mob/living/simple_mob/construct/juggernaut/behemoth/bullet_act(var/obj/item/projectile/P)
-	var/reflectchance = 80 - round(P.damage/3)
+	var/reflectchance = 100 - round(P.damage*2) //chompEDIT: We have lower damage values now
 	if(prob(reflectchance))
-		visible_message("<span class='danger'>The [P.name] gets reflected by [src]'s shell!</span>", \
-						"<span class='userdanger'>The [P.name] gets reflected by [src]'s shell!</span>")
+		visible_message(span_danger("The [P.name] gets reflected by [src]'s shell!"), \
+						span_userdanger("The [P.name] gets reflected by [src]'s shell!"))
 
 		// Find a turf near or on the original location to bounce to
 		if(P.starting)

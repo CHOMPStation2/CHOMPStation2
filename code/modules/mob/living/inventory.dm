@@ -2,14 +2,14 @@
 	var/hand = null
 	var/obj/item/l_hand = null
 	var/obj/item/r_hand = null
-	var/obj/item/weapon/back = null//Human/Monkey
-	var/obj/item/weapon/tank/internal = null//Human/Monkey
+	var/obj/item/back = null//Human/Monkey
+	var/obj/item/tank/internal = null//Human/Monkey
 	var/obj/item/clothing/mask/wear_mask = null//Carbon
 
 /mob/living/equip_to_storage(obj/item/newitem, user_initiated = FALSE)
 	// Try put it in their backpack
-	if(istype(src.back,/obj/item/weapon/storage))
-		var/obj/item/weapon/storage/backpack = src.back
+	if(istype(src.back,/obj/item/storage))
+		var/obj/item/storage/backpack = src.back
 		if(backpack.can_be_inserted(newitem, 1))
 			if(user_initiated)
 				backpack.handle_item_insertion(newitem)
@@ -18,13 +18,25 @@
 			return src.back
 
 	// Try to place it in any item that can store stuff, on the mob.
-	for(var/obj/item/weapon/storage/S in src.contents)
+	for(var/obj/item/storage/S in src.contents)
 		if (S.can_be_inserted(newitem, 1))
 			if(user_initiated)
 				S.handle_item_insertion(newitem)
 			else
 				newitem.forceMove(S)
 			return S
+
+	//CHOMPedit - protean rigsuit integrated backpack, behold, jank!
+	if(istype(src.back,/obj/item/rig))	//This would be much cooler if we had componentized storage datums
+		var/obj/item/rig/R = src.back
+		if(R.rig_storage)
+			var/obj/item/storage/backpack = R.rig_storage
+			if(backpack.can_be_inserted(newitem, 1))
+				if(user_initiated)
+					backpack.handle_item_insertion(newitem)
+				else
+					newitem.forceMove(src.back)
+				return backpack
 	return 0
 
 //Returns the thing in our active hand
@@ -48,15 +60,15 @@
 		item_dropped = r_hand
 		. = drop_r_hand(Target)
 
-	if (istype(item_dropped) && !QDELETED(item_dropped) && is_preference_enabled(/datum/client_preference/drop_sounds))
-		addtimer(CALLBACK(src, .proc/make_item_drop_sound, item_dropped), 1)
+	if (istype(item_dropped) && !QDELETED(item_dropped) && check_sound_preference(/datum/preference/toggle/drop_sounds))
+		addtimer(CALLBACK(src, PROC_REF(make_item_drop_sound), item_dropped), 1)
 
 /mob/proc/make_item_drop_sound(obj/item/I)
 	if(QDELETED(I))
 		return
 
 	if(I.drop_sound)
-		playsound(I, I.drop_sound, 25, 0, preference = /datum/client_preference/drop_sounds)
+		playsound(I, I.drop_sound, 25, 0, preference = /datum/preference/toggle/drop_sounds)
 
 
 //Drops the item in our left hand
@@ -119,17 +131,17 @@
 	// We're the first!
 	if(!L)
 		L = list()
-	
+
 	// Lefty grab!
-	if (istype(l_hand, /obj/item/weapon/grab))
-		var/obj/item/weapon/grab/G = l_hand
+	if (istype(l_hand, /obj/item/grab))
+		var/obj/item/grab/G = l_hand
 		L |= G.affecting
 		if(mobchain_limit-- > 0)
 			G.affecting?.ret_grab(L, mobchain_limit) // Recurse! They can update the list. It's the same instance as ours.
-	
+
 	// Righty grab!
-	if (istype(r_hand, /obj/item/weapon/grab))
-		var/obj/item/weapon/grab/G = r_hand
+	if (istype(r_hand, /obj/item/grab))
+		var/obj/item/grab/G = r_hand
 		L |= G.affecting
 		if(mobchain_limit-- > 0)
 			G.affecting?.ret_grab(L, mobchain_limit) // Same as lefty!
@@ -144,7 +156,7 @@
 
 	if(!checkClickCooldown())
 		return
-	
+
 	setClickCooldown(1)
 
 	if(istype(loc,/obj/mecha)) return
@@ -264,7 +276,7 @@
 	data["slots"] = slots
 
 	data["internals"] = host.internals
-	data["internalsValid"] = istype(host.wear_mask, /obj/item/clothing/mask) && istype(host.back, /obj/item/weapon/tank)
+	data["internalsValid"] = istype(host.wear_mask, /obj/item/clothing/mask) && istype(host.back, /obj/item/tank)
 
 	return data
 
@@ -272,7 +284,7 @@
 	if(..())
 		return TRUE
 
-	// If anyone wants the inventory panel to actually work, 
+	// If anyone wants the inventory panel to actually work,
 	// add code to handle actions "mask", "l_hand", "r_hand", "back", "pockets", and "internals" here
 	// No mobs other than humans actually supported stripping or putting stuff on before the /datum/inventory_panel was
 	// created, so feature parity demands not adding that and risking breaking stuff
@@ -340,17 +352,17 @@
 	data["specialSlots"] = specialSlots
 
 	data["internals"] = H.internals
-	data["internalsValid"] = (istype(H.wear_mask, /obj/item/clothing/mask) || istype(H.head, /obj/item/clothing/head/helmet/space)) && (istype(H.back, /obj/item/weapon/tank) || istype(H.belt, /obj/item/weapon/tank) || istype(H.s_store, /obj/item/weapon/tank))
+	data["internalsValid"] = (istype(H.wear_mask, /obj/item/clothing/mask) || istype(H.head, /obj/item/clothing/head/helmet/space)) && (istype(H.back, /obj/item/tank) || istype(H.belt, /obj/item/tank) || istype(H.s_store, /obj/item/tank))
 
 	data["sensors"] = FALSE
 	if(istype(suit) && suit.has_sensor == 1)
 		data["sensors"] = TRUE
-	
+
 	data["handcuffed"] = FALSE
 	if(H.handcuffed)
 		data["handcuffed"] = TRUE
 		data["handcuffedParams"] = list("slot" = slot_handcuffed)
-	
+
 	data["legcuffed"] = FALSE
 	if(H.legcuffed)
 		data["legcuffed"] = TRUE

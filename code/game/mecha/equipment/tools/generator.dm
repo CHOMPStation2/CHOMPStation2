@@ -9,6 +9,7 @@
 	var/coeff = 100
 	var/obj/item/stack/material/fuel
 	var/fuel_type = /obj/item/stack/material/phoron
+	var/fuel_amount = 0
 	var/max_fuel = 150000
 	var/fuel_per_cycle_idle = 100
 	var/fuel_per_cycle_active = 500
@@ -18,7 +19,7 @@
 
 /obj/item/mecha_parts/mecha_equipment/generator/Initialize()
 	. = ..()
-	fuel = new fuel_type(src, 0)
+	fuel = new fuel_type(src)
 
 /obj/item/mecha_parts/mecha_equipment/generator/Destroy()
 	qdel(fuel)
@@ -28,7 +29,7 @@
 	if(!chassis)
 		set_ready_state(TRUE)
 		return PROCESS_KILL
-	if(fuel.get_amount() <= 0)
+	if(fuel_amount <= 0)
 		log_message("Deactivated - no fuel.")
 		set_ready_state(TRUE)
 		return PROCESS_KILL
@@ -42,7 +43,7 @@
 	if(cur_charge<chassis.cell.maxcharge)
 		use_fuel = fuel_per_cycle_active
 		chassis.give_power(power_per_cycle)
-	fuel.set_amount(min(use_fuel/fuel.perunit, fuel.get_amount()), TRUE) // allows fuel to get to 0
+	fuel_amount -= min(use_fuel, fuel_amount) // allows fuel to get to 0
 	update_equip_info()
 
 /obj/item/mecha_parts/mecha_equipment/generator/detach()
@@ -67,7 +68,7 @@
 /obj/item/mecha_parts/mecha_equipment/generator/get_equip_info()
 	var/output = ..()
 	if(output)
-		return "[output] \[[fuel]: [round(fuel.get_amount()*fuel.perunit,0.1)] cm<sup>3</sup>\] - <a href='?src=\ref[src];toggle=1'>[(datum_flags & DF_ISPROCESSING)?"Dea":"A"]ctivate</a>"
+		return "[output] \[[fuel]: [fuel_amount] cm<sup>3</sup>\] - <a href='?src=\ref[src];toggle=1'>[(datum_flags & DF_ISPROCESSING)?"Dea":"A"]ctivate</a>"
 	return
 
 /obj/item/mecha_parts/mecha_equipment/generator/action(target)
@@ -75,7 +76,7 @@
 		var/result = load_fuel(target)
 		var/message
 		if(isnull(result))
-			message = "<span class='warning'>[fuel] traces in target minimal. [target] cannot be used as fuel.</span>"
+			message = span_warning("[fuel] traces in target minimal. [target] cannot be used as fuel.")
 		else if(!result)
 			message = "Unit is full."
 		else
@@ -85,14 +86,16 @@
 	return
 
 /obj/item/mecha_parts/mecha_equipment/generator/proc/load_fuel(var/obj/item/stack/material/P)
-	if(P.type == fuel.type && P.get_amount())
-		var/to_load = max(max_fuel - fuel.get_amount()*fuel.perunit,0)
-		if(to_load)
-			var/units = min(max(round(to_load / P.perunit),1),P.get_amount())
-			if(units)
-				fuel.add(units)
-				P.use(units)
-				return units
+	if(P.type == fuel_type && P.get_amount())
+		var/to_load = max(max_fuel - fuel_amount,0)
+		if(to_load >= 2000)
+			if(to_load > P.get_amount() * 2000)
+				to_load = P.get_amount() * 2000
+			var/sheets = round(to_load / 2000, 1)
+			if(P.get_amount() >= sheets)
+				fuel_amount += sheets * 2000
+				P.use(sheets)
+				return sheets * 2000
 		else
 			return 0
 	return
@@ -100,7 +103,7 @@
 /obj/item/mecha_parts/mecha_equipment/generator/attackby(weapon,mob/user)
 	var/result = load_fuel(weapon)
 	if(isnull(result))
-		user.visible_message("[user] tries to shove [weapon] into [src]. What a dumb-ass.","<span class='warning'>[fuel] traces minimal. [weapon] cannot be used as fuel.</span>")
+		user.visible_message("[user] tries to shove [weapon] into [src]. What a dumb-ass.",span_warning("[fuel] traces minimal. [weapon] cannot be used as fuel."))
 	else if(!result)
 		to_chat(user, "Unit is full.")
 	else

@@ -24,8 +24,8 @@
 	// Allows us to create "north bump" "south bump" etc. named objects, for more comfortable mapping.
 	name = "telescreen"
 
-/obj/item/modular_computer/telescreen/attackby(var/obj/item/weapon/W as obj, var/mob/user as mob)
-	if(W.is_crowbar())
+/obj/item/modular_computer/telescreen/attackby(var/obj/item/W as obj, var/mob/user as mob)
+	if(W.has_tool_quality(TOOL_CROWBAR))
 		if(anchored)
 			shutdown_computer()
 			anchored = FALSE

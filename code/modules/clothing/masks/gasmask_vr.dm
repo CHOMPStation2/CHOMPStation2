@@ -1,3 +1,4 @@
+/* ChompRemoval: Oops that's a glogged implementation (intentional). Im going to properly implement obj/clothing/mask/gas/clear instead.
 // Our clear gas masks don't hide faces, but changing the var on mask/gas would require un-chaging it on all children. This is nicer.
 /obj/item/clothing/mask/gas/New()
 	if(type == /obj/item/clothing/mask/gas)
@@ -9,7 +10,7 @@
 	icon = 'icons/inventory/face/item.dmi'
 	icon_override = 'icons/inventory/face/mob.dmi'
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE
-
+*/
 /obj/item/clothing/mask/gas/imperial
 	name = "imperial soldier facemask"
 	desc = "A close-fitting tactical mask that can be connected to an air supply."
@@ -18,3 +19,8 @@
 	icon_override = 'icons/inventory/face/mob_vr.dmi'
 	body_parts_covered = FACE|EYES
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE
+
+/obj/item/clothing/mask/gas/plaguedoctor
+	sprite_sheets = list(
+		SPECIES_TESHARI = 'icons/inventory/face/mob_vr_teshari.dmi'
+		)

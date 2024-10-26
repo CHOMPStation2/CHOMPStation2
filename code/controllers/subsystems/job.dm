@@ -10,19 +10,27 @@ SUBSYSTEM_DEF(job)
 	var/list/department_datums = list()
 	var/debug_messages = FALSE
 
+	var/savepath = "data/job_camp_list.json"	// CHOMPadd
+	var/list/shift_keys = list()				// CHOMPadd
+	var/list/restricted_keys = list()			// CHOMPadd
 
-/datum/controller/subsystem/job/Initialize(timeofday)
+
+/datum/controller/subsystem/job/Initialize() // CHOMPEdit
 	if(!department_datums.len)
 		setup_departments()
 	if(!occupations.len)
 		setup_occupations()
-	return ..()
+	//CHOMPadd begin
+	if(CONFIG_GET(number/job_camp_time_limit))
+		load_camp_lists()
+	//CHOMPadd end
+	return SS_INIT_SUCCESS // CHOMPEdit
 
-/datum/controller/subsystem/job/proc/setup_occupations(faction = "Station")
+/datum/controller/subsystem/job/proc/setup_occupations(faction = FACTION_STATION)
 	occupations = list()
 	var/list/all_jobs = subtypesof(/datum/job)
 	if(!all_jobs.len)
-		to_chat(world, span("warning", "Error setting up jobs, no job datums found"))
+		to_chat(world, span_warning("Error setting up jobs, no job datums found"))
 		return FALSE
 
 	for(var/J in all_jobs)
@@ -37,11 +45,11 @@ SUBSYSTEM_DEF(job)
 		if(LAZYLEN(job.departments))
 			add_to_departments(job)
 
-	sortTim(occupations, /proc/cmp_job_datums)
+	sortTim(occupations, GLOBAL_PROC_REF(cmp_job_datums))
 	for(var/D in department_datums)
 		var/datum/department/dept = department_datums[D]
-		sortTim(dept.jobs, /proc/cmp_job_datums, TRUE)
-		sortTim(dept.primary_jobs, /proc/cmp_job_datums, TRUE)
+		sortTim(dept.jobs, GLOBAL_PROC_REF(cmp_job_datums), TRUE)
+		sortTim(dept.primary_jobs, GLOBAL_PROC_REF(cmp_job_datums), TRUE)
 
 	return TRUE
 
@@ -69,7 +77,7 @@ SUBSYSTEM_DEF(job)
 		var/datum/department/D = new t()
 		department_datums[D.name] = D
 
-	sortTim(department_datums, /proc/cmp_department_datums, TRUE)
+	sortTim(department_datums, GLOBAL_PROC_REF(cmp_department_datums), TRUE)
 
 /datum/controller/subsystem/job/proc/get_all_department_datums()
 	var/list/dept_datums = list()
@@ -131,12 +139,34 @@ SUBSYSTEM_DEF(job)
 
 	return department_datums[primary_department]
 
+/datum/controller/subsystem/job/proc/get_ping_role(var/role)
+	var/datum/job/J = get_job(role)
+	if(J.requestable)
+		return get_primary_department_of_job(J)
+
 // Someday it might be good to port code/game/jobs/job_controller.dm to here and clean it up.
-
-
-
-
 
 /datum/controller/subsystem/job/proc/job_debug_message(message)
 	if(debug_messages)
 		log_debug("JOB DEBUG: [message]")
+
+//CHOMPadd start
+/datum/controller/subsystem/job/proc/load_camp_lists()
+	if(fexists(savepath))
+		restricted_keys = json_decode(file2text(savepath))
+		fdel(savepath)
+
+/datum/controller/subsystem/job/Shutdown(Addr, Natural)
+	. = ..()
+	if(fexists(savepath))
+		fdel(savepath)
+	var/json_to_file = json_encode(shift_keys)
+	if(!json_to_file)
+		log_debug("Saving: [savepath] failed jsonencode")
+		return
+
+	//Write it out
+	rustg_file_write(json_to_file, savepath)
+	if(!fexists(savepath))
+		log_debug("Saving: failed to save [savepath]")
+//CHOMPadd end

@@ -24,7 +24,7 @@
 
 /turf/unsimulated/wall/planetary/Destroy()
 	SSplanets.removeTurf(src)
-	..()
+	return ..()
 
 /turf/unsimulated/wall/planetary/proc/set_temperature(var/new_temperature)
 	if(new_temperature == temperature)
@@ -67,4 +67,3 @@
 	oxygen = MOLES_O2STANDARD
 	nitrogen = MOLES_N2STANDARD
 	temperature = 310.92 // About 37.7C / 100F
-

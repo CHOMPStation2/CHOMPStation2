@@ -23,9 +23,9 @@
 	metal = ismetal
 	playsound(src, 'sound/effects/bubbles2.ogg', 80, 1, -3)
 	if(dries) //VOREStation Add
-		addtimer(CALLBACK(src, .proc/post_spread), 3 + metal * 3)
-		addtimer(CALLBACK(src, .proc/pre_harden), 12 SECONDS)
-		addtimer(CALLBACK(src, .proc/harden), 15 SECONDS)
+		addtimer(CALLBACK(src, PROC_REF(post_spread)), 3 + metal * 3)
+		addtimer(CALLBACK(src, PROC_REF(pre_harden)), 12 SECONDS)
+		addtimer(CALLBACK(src, PROC_REF(harden)), 15 SECONDS)
 
 /obj/effect/effect/foam/proc/post_spread()
 	process()
@@ -38,7 +38,7 @@
 	if(metal)
 		var/obj/structure/foamedmetal/M = new(src.loc)
 		M.metal = metal
-		M.updateicon()
+		M.update_icon()
 	flick("[icon_state]-disolve", src)
 	QDEL_IN(src, 5)
 
@@ -151,7 +151,7 @@
 	update_nearby_tiles(1)
 	return ..()
 
-/obj/structure/foamedmetal/proc/updateicon()
+/obj/structure/foamedmetal/update_icon()
 	if(metal == 1)
 		icon_state = "metalfoam"
 	else
@@ -168,23 +168,23 @@
 
 /obj/structure/foamedmetal/attack_hand(var/mob/user)
 	if ((HULK in user.mutations) || (prob(75 - metal * 25)))
-		user.visible_message("<span class='warning'>[user] smashes through the foamed metal.</span>", "<span class='notice'>You smash through the metal foam wall.</span>")
+		user.visible_message(span_warning("[user] smashes through the foamed metal."), span_notice("You smash through the metal foam wall."))
 		qdel(src)
 	else
-		to_chat(user, "<span class='notice'>You hit the metal foam but bounce off it.</span>")
+		to_chat(user, span_notice("You hit the metal foam but bounce off it."))
 	return
 
 /obj/structure/foamedmetal/attackby(var/obj/item/I, var/mob/user)
-	if(istype(I, /obj/item/weapon/grab))
-		var/obj/item/weapon/grab/G = I
+	if(istype(I, /obj/item/grab))
+		var/obj/item/grab/G = I
 		G.affecting.loc = src.loc
-		visible_message("<span class='warning'>[G.assailant] smashes [G.affecting] through the foamed metal wall.</span>")
+		visible_message(span_warning("[G.assailant] smashes [G.affecting] through the foamed metal wall."))
 		qdel(I)
 		qdel(src)
 		return
 
 	if(prob(I.force * 20 - metal * 25))
-		user.visible_message("<span class='warning'>[user] smashes through the foamed metal.</span>", "<span class='notice'>You smash through the foamed metal with \the [I].</span>")
+		user.visible_message(span_warning("[user] smashes through the foamed metal."), span_notice("You smash through the foamed metal with \the [I]."))
 		qdel(src)
 	else
-		to_chat(user, "<span class='notice'>You hit the metal foam to no effect.</span>")
+		to_chat(user, span_notice("You hit the metal foam to no effect."))

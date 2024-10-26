@@ -36,7 +36,7 @@
 		return
 	if(!target)
 		if(isliving(user))
-			to_chat(user, "<span class='notice'>Your hand scatters \the [src]...</span>")
+			to_chat(user, span_notice("Your hand scatters \the [src]..."))
 			qdel(src)	//Delete portals which aren't set that people mess with.
 		else return		//do not send ghosts, zshadows, ai eyes, etc
 	else if(isliving(user) || istype(user, /mob/observer/dead) && user?.client?.holder)	//unless they're staff
@@ -45,7 +45,7 @@
 
 /obj/structure/portal_event/attack_ghost(var/mob/observer/dead/user)
 	if(!target && user?.client?.holder)
-		to_chat(user, "<span class='notice'>Selecting 'Portal Here' will create and link a portal at your location, while 'Target Here' will create an object that is only visible to ghosts which will act as the target, again at your location. Each option will give you the ability to change portal types, but for all options except 'Select Type' you only get one shot at it, so be sure to experiment with 'Select Type' first if you're not familiar with them.</span>")
+		to_chat(user, span_notice("Selecting 'Portal Here' will create and link a portal at your location, while 'Target Here' will create an object that is only visible to ghosts which will act as the target, again at your location. Each option will give you the ability to change portal types, but for all options except 'Select Type' you only get one shot at it, so be sure to experiment with 'Select Type' first if you're not familiar with them."))
 		var/response = tgui_alert(user, "You appear to be staff. This portal has no exit point. If you want to make one, move to where you want it to go, and click the appropriate option, see chat for more info, otherwise click 'Cancel'", "Unbound Portal", list("Cancel","Portal Here","Target Here", "Select Type"))
 		if(response == "Portal Here")
 			target = new type(get_turf(user), src)
@@ -67,7 +67,8 @@
 		if(response == "Select Type")
 			icon_state = select_portal_subtype(user)
 			return
-		message_admins("The [src]([x],[y],[z]) was given [target]([target.x],[target.y],[target.z]) as a target, and should be ready to use.")
+		if(target)
+			message_admins("The [src]([x],[y],[z]) was given [target]([target.x],[target.y],[target.z]) as a target, and should be ready to use.")
 	else if(user?.client?.holder)
 		src.teleport(user)
 	else return
@@ -92,7 +93,7 @@
 	if(portal_type == "Weird Green")
 		portal_icon_selection = "type-b-portal"
 	if(portal_type == "Pulsing")
-		var/portal_subtype = tgui_alert(user, "Which subtype would you prefer?", "Subtype Selection", list("Blue","Red","Blue/Red Mix", "Yellow"))
+		var/portal_subtype = tgui_alert(user, "Which subtype would you prefer?", "Subtype Selection", list("Blue","Red","Blue/Red Mix", "Yellow", "White"))
 		if(portal_subtype == "Blue")
 			portal_icon_selection = "type-c-blue-portal"
 		if(portal_subtype == "Red")
@@ -101,6 +102,8 @@
 			portal_icon_selection = "type-c-mix-portal"
 		if(portal_subtype == "Yellow")
 			portal_icon_selection = "type-c-yellow-portal"
+		if(portal_subtype == "White")
+			portal_icon_selection = "type-c-white-portal"
 	return portal_icon_selection
 
 /obj/structure/portal_event/proc/teleport(atom/movable/M as mob|obj)
@@ -109,7 +112,7 @@
 	if (M.anchored&&istype(M, /obj/mecha))
 		return
 	if (!target)
-		to_chat(M, "<span class='notice'>\The [src] scatters as you pass through it...</span>")
+		to_chat(M, span_notice("\The [src] scatters as you pass through it..."))
 		qdel(src)
 		return
 	if (!istype(M, /atom/movable))
@@ -129,12 +132,12 @@
 	if(portalfind)
 		var/possible_turfs = place.AdjacentTurfs()
 		if(isemptylist(possible_turfs))
-			to_chat(M, "<span class='notice'>Something blocks your way.</span>")
+			to_chat(M, span_notice("Something blocks your way."))
 			return
 		temptarg = pick(possible_turfs)
-		do_noeffect_teleport(M, temptarg, 0)
+		do_safe_teleport(M, temptarg, 0)
 	else if (istype(M, /atom/movable))
-		do_noeffect_teleport(M, target, 0)
+		do_safe_teleport(M, target, 0)
 
 /obj/structure/portal_event/Destroy()
 	if(target)
@@ -146,7 +149,7 @@
 			P.target = null
 		qdel_null(target)
 	. = ..()
-	
+
 /obj/structure/portal_target
 	name = "portal destination"
 	desc = "you shouldn't see this unless you're a ghost"
@@ -199,13 +202,13 @@
 				var/list/mob_contents = list() //Things which are actually drained as a result of the above not being null.
 				mob_contents |= L // The recursive check below does not add the object being checked to its list.
 				mob_contents |= recursive_content_check(L, mob_contents, recursion_limit = 3, client_check = 0, sight_check = 0, include_mobs = 1, include_objects = 1, ignore_show_messages = 1)
-				for(var/obj/item/weapon/holder/I in mob_contents)
-					var/obj/item/weapon/holder/H = I
+				for(var/obj/item/holder/I in mob_contents)
+					var/obj/item/holder/H = I
 					var/mob/living/MI = H.held_mob
 					MI.forceMove(get_turf(H))
 					if(!issilicon(MI)) //Don't drop borg modules...
 						for(var/obj/item/II in MI)
-							if(istype(II,/obj/item/weapon/implant) || istype(II,/obj/item/device/nif))
+							if(istype(II,/obj/item/implant) || istype(II,/obj/item/nif))
 								continue
 							MI.drop_from_inventory(II, dest.loc)
 					var/obj/effect/landmark/finaldest = pick(awayabductors)
@@ -213,9 +216,9 @@
 					sleep(1)
 					MI.Paralyse(10)
 					MI << 'sound/effects/bamf.ogg'
-					to_chat(MI,"<span class='warning'>You're starting to come to. You feel like you've been out for a few minutes, at least...</span>")
+					to_chat(MI,span_warning("You're starting to come to. You feel like you've been out for a few minutes, at least..."))
 				for(var/obj/item/I in L)
-					if(istype(I,/obj/item/weapon/implant) || istype(I,/obj/item/device/nif))
+					if(istype(I,/obj/item/implant) || istype(I,/obj/item/nif))
 						continue
 					L.drop_from_inventory(I, dest.loc)
 			var/obj/effect/landmark/finaldest = pick(awayabductors)
@@ -223,5 +226,5 @@
 			sleep(1)
 			L.Paralyse(10)
 			L << 'sound/effects/bamf.ogg'
-			to_chat(L,"<span class='warning'>You're starting to come to. You feel like you've been out for a few minutes, at least...</span>")
+			to_chat(L,span_warning("You're starting to come to. You feel like you've been out for a few minutes, at least..."))
 	return

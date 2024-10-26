@@ -6,6 +6,7 @@
 	if(stat >= DEAD)
 		return FALSE
 
+	handle_sleeping()
 	handle_stunned()
 	handle_weakened()
 	handle_paralysed()
@@ -64,10 +65,10 @@
 		if(-INFINITY to 50)
 			throw_alert("nutrition", /obj/screen/alert/starving)
 
-//VOREStation ADD START - I made this for catslugs but tbh it's probably cool to give to everything. 
+//VOREStation ADD START - I made this for catslugs but tbh it's probably cool to give to everything.
 //Gives all simplemobs passive healing as long as they can find food.
 //Slow enough that it should affect combat basically not at all
-	
+
 /mob/living/simple_mob/proc/do_healing()
 	if(nutrition < 150)
 		return
@@ -156,10 +157,10 @@
 	//Atmos effect
 	if(bodytemperature < minbodytemp)
 		adjustFireLoss(cold_damage_per_tick)
-		throw_alert("temp", /obj/screen/alert/cold, 3)
+		throw_alert("temp", /obj/screen/alert/cold, COLD_ALERT_SEVERITY_MAX)
 	else if(bodytemperature > maxbodytemp)
 		adjustFireLoss(heat_damage_per_tick)
-		throw_alert("temp", /obj/screen/alert/hot, 3)
+		throw_alert("temp", /obj/screen/alert/hot, HOT_ALERT_SEVERITY_MAX)
 	else
 		clear_alert("temp")
 
@@ -179,6 +180,9 @@
 	if(purge)
 		purge -= 1
 
+/mob/living/simple_mob/
+	var/update_icon_timer
+
 /mob/living/simple_mob/death(gibbed, deathmessage = "dies!")
 	density = FALSE //We don't block even if we did before
 
@@ -190,7 +194,14 @@
 			if(prob(loot_list[path]))
 				new path(get_turf(src))
 
-	spawn(3) //We'll update our icon in a sec
-		update_icon()
+	update_icon_timer = addtimer(CALLBACK(src, PROC_REF(callback_update_icon)), 3, TIMER_STOPPABLE)
 
 	return ..(gibbed,deathmessage)
+
+/mob/living/simple_mob/proc/callback_update_icon()
+	update_icon()
+
+/mob/living/simple_mob/Destroy()
+	deltimer(update_icon_timer)
+	update_icon_timer = null
+	. = ..()

@@ -17,14 +17,14 @@
 	organ_names = /decl/mob_organ_names/penguin
 
 	meat_amount = 3
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat/chicken
+	meat_type = /obj/item/reagent_containers/food/snacks/meat/chicken
 
 	harm_intent_damage = 5
 	melee_damage_lower = 10
 	melee_damage_upper = 15
 	attacktext = list("pecked")
 
-	has_langs = list("Bird")
+	has_langs = list(LANGUAGE_ANIMAL)
 
 /mob/living/simple_mob/animal/passive/penguin/tux
 	name = "Tux"

@@ -85,10 +85,12 @@
 /proc/is_admin(var/mob/user)
 	return check_rights(R_ADMIN|R_EVENT, 0, user) != 0
 
-
+/**
+ * Moved into its own file as part of port from CHOMP.
+ *
 /proc/hsl2rgb(h, s, l)
 	return //TODO: Implement
-
+*/
 /*
 	Miss Chance
 */
@@ -132,7 +134,7 @@
 // Emulates targetting a specific body part, and miss chances
 // May return null if missed
 // miss_chance_mod may be negative.
-/proc/get_zone_with_miss_chance(zone, var/mob/target, var/miss_chance_mod = 0, var/ranged_attack=0)
+/proc/get_zone_with_miss_chance(zone, var/mob/target, var/miss_chance_mod = 0, var/ranged_attack=0, var/force_hit = FALSE)
 	zone = check_zone(zone)
 
 	if(!ranged_attack)
@@ -140,9 +142,12 @@
 		if(target.buckled || target.lying)
 			return zone
 		// if your target is being grabbed aggressively by someone you cannot miss either
-		for(var/obj/item/weapon/grab/G in target.grabbed_by)
+		for(var/obj/item/grab/G in target.grabbed_by)
 			if(G.state >= GRAB_AGGRESSIVE)
 				return zone
+
+	if(force_hit)
+		return zone
 
 	var/miss_chance = 10
 	if (zone in base_miss_chance)
@@ -205,11 +210,12 @@
 			if(lowertext(newletter)=="s")	newletter="ch"
 			if(lowertext(newletter)=="a")	newletter="ah"
 			if(lowertext(newletter)=="c")	newletter="k"
-		switch(rand(1,15))
+		switch(rand(1,9))
 			if(1,3,5,8)	newletter="[lowertext(newletter)]"
-			if(2,4,6,15)	newletter="[uppertext(newletter)]"
+			//if(2,4,6,15)	newletter="[uppertext(newletter)]"
+			if(2,4,6,9)	newletter="[uppertext(newletter)]"
 			if(7)	newletter+="'"
-			//if(9,10)	newletter="<b>[newletter]</b>"
+			//if(9,10)	newletter=span_bold("[newletter]")
 			//if(11,12)	newletter="<big>[newletter]</big>"
 			//if(13)	newletter="<small>[newletter]</small>"
 		newphrase+="[newletter]";counter-=1
@@ -405,7 +411,7 @@ var/list/intents = list(I_HELP,I_DISARM,I_GRAB,I_HURT)
 		return // Can't talk in deadchat if you can't see it.
 
 	for(var/mob/M in player_list)
-		if(M.client && ((!istype(M, /mob/new_player) && M.stat == DEAD) || (M.client.holder && M.client.holder.rights)) && M.is_preference_enabled(/datum/client_preference/show_dsay))
+		if(M.client && ((!istype(M, /mob/new_player) && M.stat == DEAD) || (M.client.holder && M.client.holder.rights && M.client?.prefs?.read_preference(/datum/preference/toggle/holder/show_staff_dsay))) && M.client?.prefs?.read_preference(/datum/preference/toggle/show_dsay))
 			var/follow
 			var/lname
 			if(M.forbid_seeing_deadchat && !M.client.holder)
@@ -430,12 +436,12 @@ var/list/intents = list(I_HELP,I_DISARM,I_GRAB,I_HURT)
 						lname = "[keyname] ([name])"
 					else										// Everyone else (dead people who didn't ghost yet, etc.)
 						lname = name
-				lname = "<span class='name'>[lname]</span> "
-			to_chat(M, "<span class='deadsay'>" + create_text_tag("dead", "DEAD:", M.client) + " [lname][follow][message]</span>")
+				lname = span_name("[lname]") + " "
+			to_chat(M, span_deadsay("" + create_text_tag("dead", "DEAD:", M.client) + " [lname][follow][message]"))
 
 /proc/say_dead_object(var/message, var/obj/subject = null)
 	for(var/mob/M in player_list)
-		if(M.client && ((!istype(M, /mob/new_player) && M.stat == DEAD) || (M.client.holder && M.client.holder.rights)) && M.is_preference_enabled(/datum/client_preference/show_dsay))
+		if(M.client && ((!istype(M, /mob/new_player) && M.stat == DEAD) || (M.client.holder && M.client.holder.rights && M.client?.prefs?.read_preference(/datum/preference/toggle/holder/show_staff_dsay))) && M.client?.prefs?.read_preference(/datum/preference/toggle/show_dsay))
 			var/follow
 			var/lname = "Game Master"
 			if(M.forbid_seeing_deadchat && !M.client.holder)
@@ -444,8 +450,8 @@ var/list/intents = list(I_HELP,I_DISARM,I_GRAB,I_HURT)
 			if(subject)
 				lname = "[subject.name] ([subject.x],[subject.y],[subject.z])"
 
-			lname = "<span class='name'>[lname]</span> "
-			to_chat(M, "<span class='deadsay'>" + create_text_tag("event_dead", "EVENT:", M.client) + " [lname][follow][message]</span>")
+			lname = span_name("[lname]") + " "
+			to_chat(M, span_deadsay("" + create_text_tag("event_dead", "EVENT:", M.client) + " [lname][follow][message]"))
 
 //Announces that a ghost has joined/left, mainly for use with wizards
 /proc/announce_ghost_joinleave(O, var/joined_ghosts = 1, var/message = "")
@@ -478,9 +484,13 @@ var/list/intents = list(I_HELP,I_DISARM,I_GRAB,I_HURT)
 		if(!name)
 			name = (C.holder && C.holder.fakekey) ? C.holder.fakekey : C.key
 		if(joined_ghosts)
-			say_dead_direct("The ghost of <span class='name'>[name]</span> now [pick("skulks","lurks","prowls","creeps","stalks")] among the dead. [message]")
+			//say_dead_direct("The ghost of " + span_name("[name]") + " now [pick("skulks","lurks","prowls","creeps","stalks")] among the dead. [message]") //ChompEDIT - Removed for ghost privacy
+			log_and_message_admins("<span class='name'>[name]</span> entered ghost/observe mode. [message]") //ChompEDIT
+
 		else
-			say_dead_direct("<span class='name'>[name]</span> no longer [pick("skulks","lurks","prowls","creeps","stalks")] in the realm of the dead. [message]")
+			//say_dead_direct(span_name("[name]") + " no longer [pick("skulks","lurks","prowls","creeps","stalks")] in the realm of the dead. [message]") //ChompEDIT - Removed for ghost privacy
+			log_and_message_admins("<span class='name'>[name]</span> left ghost/observe mode. [message]") //ChompEDIT
+
 
 /mob/proc/switch_to_camera(var/obj/machinery/camera/C)
 	if (!C.can_use() || stat || (get_dist(C, src) > 1 || machine != src || blinded || !canmove))
@@ -524,24 +534,24 @@ var/list/intents = list(I_HELP,I_DISARM,I_GRAB,I_HURT)
 		return SAFE_PERP
 
 	//Agent cards lower threatlevel.
-	var/obj/item/weapon/card/id/id = GetIdCard()
-	if(id && istype(id, /obj/item/weapon/card/id/syndicate))
+	var/obj/item/card/id/id = GetIdCard()
+	if(id && istype(id, /obj/item/card/id/syndicate))
 		threatcount -= 2
 	// A proper	CentCom id is hard currency.
-	else if(id && istype(id, /obj/item/weapon/card/id/centcom))
+	else if(id && istype(id, /obj/item/card/id/centcom))
 		return SAFE_PERP
 
 	if(check_access && !access_obj.allowed(src))
 		threatcount += 4
 
 	if(auth_weapons && !access_obj.allowed(src))
-		if(istype(l_hand, /obj/item/weapon/gun) || istype(l_hand, /obj/item/weapon/melee) && !istype(l_hand, /obj/item/weapon/gun/energy/floragun) && !istype(l_hand, /obj/item/weapon/gun/energy/sizegun) && !istype(l_hand, /obj/item/weapon/gun/launcher/confetti_cannon) && !istype(l_hand, /obj/item/weapon/gun/energy/lasertag)) //CHOMP Edit: Specific guns to the exclusion list.
+		if(istype(l_hand, /obj/item/gun) || istype(l_hand, /obj/item/melee) && !istype(l_hand, /obj/item/gun/energy/floragun) && !istype(l_hand, /obj/item/gun/energy/sizegun) && !istype(l_hand, /obj/item/gun/launcher/confetti_cannon) && !istype(l_hand, /obj/item/gun/energy/lasertag)) //CHOMP Edit: Specific guns to the exclusion list.
 			threatcount += 4
 
-		if(istype(r_hand, /obj/item/weapon/gun) || istype(r_hand, /obj/item/weapon/melee))
+		if(istype(r_hand, /obj/item/gun) || istype(r_hand, /obj/item/melee))
 			threatcount += 4
 
-		if(istype(belt, /obj/item/weapon/gun) || istype(belt, /obj/item/weapon/melee))
+		if(istype(belt, /obj/item/gun) || istype(belt, /obj/item/melee))
 			threatcount += 2
 
 		if(species.name != SPECIES_HUMAN)
@@ -604,33 +614,33 @@ var/list/intents = list(I_HELP,I_DISARM,I_GRAB,I_HURT)
 
 //The base miss chance for the different defence zones
 var/list/global/base_miss_chance = list(
-	"head" = 40,
-	"torso" = 10,
-	"groin" = 20,
-	"l_leg" = 20,
-	"r_leg" = 20,
-	"l_arm" = 20,
-	"r_arm" = 20,
-	"l_hand" = 50,
-	"r_hand" = 50,
-	"l_foot" = 50,
-	"r_foot" = 50,
-) //CHOMPEDIT - Changed "chest" to "torso", as chest is a typo. How long has this bug been here?
+	BP_HEAD = 40,
+	BP_TORSO = 10,
+	BP_GROIN = 20,
+	BP_L_LEG = 20,
+	BP_R_LEG = 20,
+	BP_L_ARM = 20,
+	BP_R_ARM = 20,
+	BP_L_HAND = 50,
+	BP_R_HAND = 50,
+	BP_L_FOOT = 50,
+	BP_R_FOOT = 50,
+)
 
 //Used to weight organs when an organ is hit randomly (i.e. not a directed, aimed attack).
 //Also used to weight the protection value that armour provides for covering that body part when calculating protection from full-body effects.
 var/list/global/organ_rel_size = list(
-	"head" = 25,
-	"chest" = 70,
-	"groin" = 30,
-	"l_leg" = 25,
-	"r_leg" = 25,
-	"l_arm" = 25,
-	"r_arm" = 25,
-	"l_hand" = 10,
-	"r_hand" = 10,
-	"l_foot" = 10,
-	"r_foot" = 10,
+	BP_HEAD = 25,
+	BP_TORSO = 70,
+	BP_GROIN = 30,
+	BP_L_LEG = 25,
+	BP_R_LEG = 25,
+	BP_L_ARM = 25,
+	BP_R_ARM = 25,
+	BP_L_HAND = 10,
+	BP_R_HAND = 10,
+	BP_L_FOOT = 10,
+	BP_R_FOOT = 10,
 )
 
 /mob/proc/flash_eyes(intensity = FLASH_PROTECTION_MODERATE, override_blindness_check = FALSE, affect_silicon = FALSE, visual = FALSE, type = /obj/screen/fullscreen/flash)

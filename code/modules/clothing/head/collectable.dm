@@ -29,7 +29,7 @@
 
 /obj/item/clothing/head/collectable/chef
 	name = "collectable chef's hat"
-	desc = "A rare Chef's Hat meant for hat collectors!"
+	desc = "A rare " + JOB_CHEF + "'s Hat meant for hat collectors!"
 	icon_state = "chefhat"
 
 /obj/item/clothing/head/collectable/paper
@@ -108,7 +108,7 @@
 /obj/item/clothing/head/collectable/hardhat
 	name = "collectable hard hat"
 	desc = "WARNING! Offers no real protection, or luminosity, but it is damn fancy!"
-	icon_state = "hardhat0_yellow"
+	icon_state = "hardhat0_old_yellow"
 	body_parts_covered = 0
 
 /obj/item/clothing/head/collectable/HoS

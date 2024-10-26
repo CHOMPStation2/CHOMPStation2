@@ -3,9 +3,9 @@
 	name = "wet leather"
 	desc = "This leather has been cleaned but still needs to be dried."
 	description_info = "To finish tanning the leather, you need to dry it. \
-						You could place it under a <b><font color='red'>fire</font></b>, \
-						put it in a <b><font color='blue'>drying rack</font></b>, \
-						or build a <b><font color='brown'>tanning rack</font></b> from steel or wooden boards."
+						You could place it under a " + span_bold(span_red("fire")) + ", \
+						put it in a " + span_bold(span_blue("drying rack")) + ", \
+						or build a " + span_bold(span_brown("tanning rack")) + " from steel or wooden boards."
 	singular_name = "wet leather piece"
 	icon_state = "sheet-wetleather"
 	var/wetness = 30 //Reduced when exposed to high temperautres

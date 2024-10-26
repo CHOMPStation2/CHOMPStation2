@@ -6,10 +6,12 @@
 	program_key_state = "generic_key"
 	program_menu_icon = "mail-closed"
 	size = 7
-	requires_ntnet = 1
-	available_on_ntnet = 1
+	requires_ntnet = TRUE
+	available_on_ntnet = TRUE
 	var/stored_login = ""
 	var/stored_password = ""
+	usage_flags = PROGRAM_ALL
+	category = PROG_OFFICE
 
 	tguimodule_path = /datum/tgui_module/email_client
 
@@ -38,7 +40,7 @@
 /datum/computer_file/program/email_client/proc/new_mail_notify()
 	var/turf/T = get_turf(computer) // Because visible_message is being a butt
 	if(T)
-		T.visible_message("<span class='notice'>[computer] beeps softly, indicating a new email has been received.</span>")
+		T.visible_message(span_notice("[computer] beeps softly, indicating a new email has been received."))
 	playsound(computer, 'sound/misc/server-ready.ogg', 100, 0)
 
 /datum/computer_file/program/email_client/process_tick()

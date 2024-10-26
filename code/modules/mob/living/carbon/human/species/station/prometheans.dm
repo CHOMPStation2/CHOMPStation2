@@ -30,27 +30,30 @@ var/datum/species/shapeshifter/promethean/prometheans
 	spawn_flags		 = SPECIES_CAN_JOIN
 	health_hud_intensity = 2
 	num_alternate_languages = 3
+	language = LANGUAGE_PROMETHEAN
 	species_language = LANGUAGE_PROMETHEAN
 	secondary_langs = list(LANGUAGE_PROMETHEAN, LANGUAGE_SOL_COMMON)	// For some reason, having this as their species language does not allow it to be chosen.
 	assisted_langs = list(LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)	// Prometheans are weird, let's just assume they can use basically any language.
 
 	blood_name = "gelatinous ooze"
+	blood_reagents = "slimejelly"
 
 	breath_type = null
 	poison_type = null
 
 	speech_bubble_appearance = "slime"
 
-	male_cough_sounds = list('sound/effects/slime_squish.ogg')
-	female_cough_sounds = list('sound/effects/slime_squish.ogg')
+	// male_cough_sounds = list('sound/effects/slime_squish.ogg')
+	// female_cough_sounds = list('sound/effects/slime_squish.ogg')
+	species_sounds = "Slime"
 
 	min_age =		1
 	max_age =		16
 
 	economic_modifier = 3
 
-	male_scream_sound = null //CHOMPedit
-	female_scream_sound = null //CHOMPedit
+	// male_scream_sound = null //CHOMPedit
+	// female_scream_sound = null //CHOMPedit
 
 	gluttonous =	1
 	virus_immune =	1
@@ -60,6 +63,9 @@ var/datum/species/shapeshifter/promethean/prometheans
 	oxy_mod =		0
 	flash_mod =		0.5 //No centralized, lensed eyes.
 	item_slowdown_mod = 1.33
+	throwforce_absorb_threshold = 10
+
+	chem_strength_alcohol = 0.5
 
 	cloning_modifier = /datum/modifier/cloning_sickness/promethean
 
@@ -131,22 +137,24 @@ var/datum/species/shapeshifter/promethean/prometheans
 		/decl/emote/visible/vibrate
 	)
 
+	footstep = FOOTSTEP_MOB_SLIME // CHOMPEdit
+
 /datum/species/shapeshifter/promethean/New()
 	..()
 	prometheans = src
 
 /datum/species/shapeshifter/promethean/equip_survival_gear(var/mob/living/carbon/human/H)
-	var/boxtype = pick(list(/obj/item/weapon/storage/toolbox/lunchbox,
-							/obj/item/weapon/storage/toolbox/lunchbox/heart,
-							/obj/item/weapon/storage/toolbox/lunchbox/cat,
-							/obj/item/weapon/storage/toolbox/lunchbox/nt,
-							/obj/item/weapon/storage/toolbox/lunchbox/mars,
-							/obj/item/weapon/storage/toolbox/lunchbox/cti,
-							/obj/item/weapon/storage/toolbox/lunchbox/nymph,
-							/obj/item/weapon/storage/toolbox/lunchbox/syndicate))	//Only pick the empty types
-	var/obj/item/weapon/storage/toolbox/lunchbox/L = new boxtype(get_turf(H))
-	new /obj/item/weapon/reagent_containers/food/snacks/candy/proteinbar(L)
-	new /obj/item/weapon/tool/prybar/red(L) //VOREStation Add,
+	var/boxtype = pick(list(/obj/item/storage/toolbox/lunchbox,
+							/obj/item/storage/toolbox/lunchbox/heart,
+							/obj/item/storage/toolbox/lunchbox/cat,
+							/obj/item/storage/toolbox/lunchbox/nt,
+							/obj/item/storage/toolbox/lunchbox/mars,
+							/obj/item/storage/toolbox/lunchbox/cti,
+							/obj/item/storage/toolbox/lunchbox/nymph,
+							/obj/item/storage/toolbox/lunchbox/syndicate))	//Only pick the empty types
+	var/obj/item/storage/toolbox/lunchbox/L = new boxtype(get_turf(H))
+	new /obj/item/reagent_containers/food/snacks/candy/proteinbar(L)
+	new /obj/item/tool/prybar/red(L) //VOREStation Add,
 	if(H.backbag == 1)
 		H.equip_to_slot_or_del(L, slot_r_hand)
 	else
@@ -154,10 +162,10 @@ var/datum/species/shapeshifter/promethean/prometheans
 
 /datum/species/shapeshifter/promethean/hug(var/mob/living/carbon/human/H, var/mob/living/target)
 	var/static/list/parent_handles = list("head", "r_hand", "l_hand", "mouth")
-	
+
 	if(H.zone_sel.selecting in parent_handles)
 		return ..()
-	
+
 	var/t_him = "them"
 	if(ishuman(target))
 		var/mob/living/carbon/human/T = target
@@ -173,8 +181,8 @@ var/datum/species/shapeshifter/promethean/prometheans
 			if(FEMALE)
 				t_him = "her"
 
-	H.visible_message("<b>\The [H]</b> glomps [target] to make [t_him] feel better!", \
-					"<span class='notice'>You glomp [target] to make [t_him] feel better!</span>")
+	H.visible_message(span_infoplain(span_bold("\The [H]") + " glomps [target] to make [t_him] feel better!"), \
+					span_notice("You glomp [target] to make [t_him] feel better!"))
 	H.apply_stored_shock_to(target)
 
 /datum/species/shapeshifter/promethean/handle_death(var/mob/living/carbon/human/H)
@@ -209,14 +217,25 @@ var/datum/species/shapeshifter/promethean/prometheans
 				if(S.dirt > 50)
 					S.dirt = 0
 					H.adjust_nutrition(rand(10, 20))
-		if(H.clean_blood(1))
-			H.adjust_nutrition(rand(5, 15))
-		if(H.r_hand)
-			if(H.r_hand.clean_blood())
-				H.adjust_nutrition(rand(5, 15))
-		if(H.l_hand)
-			if(H.l_hand.clean_blood())
-				H.adjust_nutrition(rand(5, 15))
+		if(H.feet_blood_color || LAZYLEN(H.feet_blood_DNA))
+			LAZYCLEARLIST(H.feet_blood_DNA)
+			H.feet_blood_DNA = null
+			H.feet_blood_color = null
+			H.adjust_nutrition(rand(3, 10))
+		if(H.bloody_hands)
+			LAZYCLEARLIST(H.blood_DNA)
+			H.blood_DNA = null
+			H.hand_blood_color = null
+			H.bloody_hands = 0
+			H.adjust_nutrition(rand(3, 10))
+		if(!(H.gloves || (H.wear_suit && (H.wear_suit.body_parts_covered & HANDS))))
+			if(H.r_hand)
+				if(H.r_hand.clean_blood())
+					H.adjust_nutrition(rand(5, 15))
+			if(H.l_hand)
+				if(H.l_hand.clean_blood())
+					H.adjust_nutrition(rand(5, 15))
+/*
 		if(H.head)
 			if(H.head.clean_blood())
 				H.update_inv_head(0)
@@ -229,6 +248,10 @@ var/datum/species/shapeshifter/promethean/prometheans
 			if(H.w_uniform.clean_blood())
 				H.update_inv_w_uniform(0)
 				H.adjust_nutrition(rand(5, 15))
+*/
+		// Prometheans themselves aren't very safe places for other biota.
+		H.germ_level = 0
+		H.update_bloodied()
 		//End cleaning code.
 
 		var/datum/gas_mixture/environment = T.return_air()
@@ -345,6 +368,6 @@ var/datum/species/shapeshifter/promethean/prometheans
 		if(11 to 20)
 			return "[t_she] glowing gently with moderate levels of electrical activity.\n"
 		if(21 to 35)
-			return "<span class='warning'>[t_she] glowing brightly with high levels of electrical activity.</span>"
+			return span_warning("[t_she] glowing brightly with high levels of electrical activity.")
 		if(35 to INFINITY)
-			return "<span class='danger'>[t_she] radiating massive levels of electrical activity!</span>"
+			return span_danger("[t_she] radiating massive levels of electrical activity!")

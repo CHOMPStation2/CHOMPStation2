@@ -377,7 +377,7 @@
 /turf/simulated/shuttle/plating,
 /area/awaymission/syndishuttle)
 "bs" = (
-/obj/item/weapon/storage/toolbox/syndicate,
+/obj/item/storage/toolbox/syndicate,
 /turf/simulated/shuttle/plating,
 /area/awaymission/syndishuttle)
 "bt" = (
@@ -437,7 +437,7 @@
 /area/awaymission/syndishuttle)
 "bD" = (
 /obj/structure/table/standard,
-/obj/item/weapon/paper/sc_safehint_paper_shuttle,
+/obj/item/paper/sc_safehint_paper_shuttle,
 /turf/simulated/shuttle/floor{
 	icon_state = "floor4"
 	},
@@ -475,7 +475,7 @@
 	},
 /area/awaymission/research)
 "bJ" = (
-/obj/item/weapon/shard,
+/obj/item/shard,
 /mob/living/carbon/alien/larva{
 	bruteloss = 25;
 	fireloss = 175;
@@ -669,7 +669,7 @@
 	},
 /area/awaymission/research)
 "ck" = (
-/obj/item/weapon/shard{
+/obj/item/shard{
 	icon_state = "small"
 	},
 /mob/living/carbon/alien/larva{
@@ -683,10 +683,10 @@
 	},
 /area/awaymission/research)
 "cl" = (
-/obj/item/weapon/shard{
+/obj/item/shard{
 	icon_state = "medium"
 	},
-/obj/item/weapon/shard{
+/obj/item/shard{
 	icon_state = "small"
 	},
 /obj/effect/alien/weeds/node,
@@ -697,9 +697,9 @@
 /area/awaymission/research)
 "cm" = (
 /obj/structure/table/standard,
-/obj/item/weapon/clipboard,
-/obj/item/weapon/paper,
-/obj/item/weapon/paper,
+/obj/item/clipboard,
+/obj/item/paper,
+/obj/item/paper,
 /turf/simulated/floor{
 	icon_state = "showroomfloor"
 	},
@@ -874,8 +874,8 @@
 /area/awaymission/research)
 "cJ" = (
 /obj/structure/table/standard,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen,
+/obj/item/paper_bin,
+/obj/item/pen,
 /turf/simulated/floor{
 	icon_state = "showroomfloor"
 	},
@@ -901,7 +901,7 @@
 	name = "Syndicate agent remains"
 	},
 /obj/item/clothing/suit/storage/labcoat,
-/obj/item/weapon/clipboard{
+/obj/item/clipboard{
 	pixel_x = -7;
 	pixel_y = -4
 	},
@@ -1086,7 +1086,7 @@
 /obj/item/clothing/suit/armor/riot,
 /obj/item/clothing/head/helmet/swat,
 /obj/effect/decal/remains/human,
-/obj/item/weapon/gun/energy/laser/practice/sc_laser,
+/obj/item/gun/energy/laser/practice/sc_laser,
 /turf/simulated/floor{
 	icon_state = "showroomfloor"
 	},
@@ -1107,7 +1107,7 @@
 /obj/item/clothing/suit/armor/riot,
 /obj/item/clothing/head/helmet/swat,
 /obj/effect/decal/remains/human,
-/obj/item/weapon/gun/energy/laser/practice/sc_laser,
+/obj/item/gun/energy/laser/practice/sc_laser,
 /turf/simulated/floor{
 	icon_state = "dark"
 	},
@@ -1153,8 +1153,6 @@
 /area/awaymission/northblock)
 "dp" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/airless{
@@ -1166,8 +1164,6 @@
 	name = "Security Airlock"
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -1175,8 +1171,6 @@
 /area/awaymission/research)
 "dr" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -1192,8 +1186,6 @@
 	name = "Windoor"
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -1203,8 +1195,6 @@
 /area/awaymission/research)
 "dt" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor{
@@ -1265,8 +1255,6 @@
 /area/awaymission/northblock)
 "dB" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/airless{
@@ -1346,7 +1334,7 @@
 /obj/item/clothing/suit/armor/riot,
 /obj/item/clothing/head/helmet/swat,
 /obj/effect/decal/remains/human,
-/obj/item/weapon/gun/energy/laser/practice/sc_laser,
+/obj/item/gun/energy/laser/practice/sc_laser,
 /turf/simulated/floor{
 	icon_state = "showroomfloor"
 	},
@@ -1436,8 +1424,6 @@
 /area/awaymission/northblock)
 "dV" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/airless{
@@ -1463,7 +1449,7 @@
 /obj/item/stack/cable_coil{
 	amount = 5
 	},
-/obj/item/weapon/tool/screwdriver,
+/obj/item/tool/screwdriver,
 /turf/simulated/floor{
 	icon_state = "showroomfloor"
 	},
@@ -1504,7 +1490,7 @@
 	dir = 8
 	},
 /obj/structure/grille,
-/obj/item/weapon/shard,
+/obj/item/shard,
 /turf/simulated/floor/plating,
 /area/awaymission/northblock)
 "ee" = (
@@ -1626,8 +1612,6 @@
 /area/awaymission/northblock)
 "eu" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor,
@@ -1635,8 +1619,6 @@
 "ev" = (
 /obj/machinery/door/airlock/command,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -1644,8 +1626,6 @@
 /area/awaymission/northblock)
 "ew" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -1655,8 +1635,6 @@
 /area/awaymission/northblock)
 "ex" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -1664,8 +1642,6 @@
 /area/awaymission/northblock)
 "ey" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -1675,8 +1651,6 @@
 /area/awaymission/northblock)
 "ez" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -1686,8 +1660,6 @@
 /area/awaymission/northblock)
 "eA" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -1698,8 +1670,6 @@
 /area/awaymission/northblock)
 "eB" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -1709,13 +1679,9 @@
 /area/awaymission/northblock)
 "eC" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/airless{
@@ -1791,7 +1757,7 @@
 	dir = 8
 	},
 /obj/structure/grille,
-/obj/item/weapon/shard{
+/obj/item/shard{
 	icon_state = "small"
 	},
 /turf/simulated/floor/plating,
@@ -1825,8 +1791,6 @@
 /area/awaymission/northblock)
 "eP" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/airless{
@@ -1835,7 +1799,7 @@
 /area/awaymission/northblock)
 "eQ" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/food/snacks/grown/potato,
+/obj/item/reagent_containers/food/snacks/grown/potato,
 /obj/item/stack/cable_coil{
 	amount = 1
 	},
@@ -1868,7 +1832,7 @@
 	dir = 1
 	},
 /obj/structure/table/standard,
-/obj/item/weapon/book/manual/research_and_development,
+/obj/item/book/manual/research_and_development,
 /turf/simulated/floor{
 	icon_state = "showroomfloor"
 	},
@@ -1957,8 +1921,6 @@
 /area/awaymission/northblock)
 "fe" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/airless{
@@ -1967,15 +1929,15 @@
 /area/awaymission/northblock)
 "ff" = (
 /obj/structure/table/standard,
-/obj/item/weapon/stock_parts/capacitor,
-/obj/item/weapon/stock_parts/capacitor{
+/obj/item/stock_parts/capacitor,
+/obj/item/stock_parts/capacitor{
 	pixel_x = -3
 	},
-/obj/item/weapon/stock_parts/scanning_module{
+/obj/item/stock_parts/scanning_module{
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/weapon/stock_parts/scanning_module{
+/obj/item/stock_parts/scanning_module{
 	pixel_y = -3
 	},
 /turf/simulated/floor{
@@ -1992,16 +1954,16 @@
 /area/awaymission/research)
 "fh" = (
 /obj/structure/table/standard,
-/obj/item/weapon/stock_parts/manipulator,
-/obj/item/weapon/stock_parts/manipulator{
+/obj/item/stock_parts/manipulator,
+/obj/item/stock_parts/manipulator{
 	pixel_x = -3;
 	pixel_y = 3
 	},
-/obj/item/weapon/stock_parts/micro_laser{
+/obj/item/stock_parts/micro_laser{
 	pixel_x = -3;
 	pixel_y = -3
 	},
-/obj/item/weapon/stock_parts/micro_laser{
+/obj/item/stock_parts/micro_laser{
 	pixel_x = 3;
 	pixel_y = 3
 	},
@@ -2055,17 +2017,17 @@
 	pixel_x = -3;
 	pixel_y = 5
 	},
-/obj/item/weapon/cell/crap,
+/obj/item/cell/crap,
 /turf/simulated/floor{
 	icon_state = "showroomfloor"
 	},
 /area/awaymission/research)
 "fo" = (
 /obj/structure/table/standard,
-/obj/item/weapon/stock_parts/matter_bin{
+/obj/item/stock_parts/matter_bin{
 	pixel_x = 3
 	},
-/obj/item/weapon/stock_parts/matter_bin{
+/obj/item/stock_parts/matter_bin{
 	pixel_x = -3
 	},
 /turf/simulated/floor{
@@ -2113,8 +2075,6 @@
 /area/awaymission/midblock)
 "fw" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/airless{
@@ -2123,11 +2083,11 @@
 /area/awaymission/midblock)
 "fx" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/toolbox/mechanical,
-/obj/item/weapon/storage/toolbox/mechanical{
+/obj/item/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/mechanical{
 	pixel_y = 5
 	},
-/obj/item/weapon/stock_parts/console_screen,
+/obj/item/stock_parts/console_screen,
 /turf/simulated/floor{
 	icon_state = "showroomfloor"
 	},
@@ -2174,8 +2134,8 @@
 /area/awaymission/research)
 "fC" = (
 /obj/structure/table/standard,
-/obj/item/device/analyzer,
-/obj/item/device/mass_spectrometer{
+/obj/item/analyzer,
+/obj/item/mass_spectrometer{
 	pixel_x = 5;
 	pixel_y = 5
 	},
@@ -2185,12 +2145,12 @@
 /area/awaymission/research)
 "fD" = (
 /obj/structure/table/holotable,
-/obj/item/weapon/gun/energy/floragun{
+/obj/item/gun/energy/floragun{
 	pixel_x = 2;
 	pixel_y = 3
 	},
 /obj/machinery/light,
-/obj/item/weapon/gun/energy/taser{
+/obj/item/gun/energy/taser{
 	pixel_x = -2;
 	pixel_y = -2
 	},
@@ -2200,7 +2160,7 @@
 /area/awaymission/research)
 "fE" = (
 /obj/structure/target_stake,
-/obj/item/weapon/grown/sunflower,
+/obj/item/grown/sunflower,
 /turf/simulated/floor{
 	icon_state = "showroomfloor"
 	},
@@ -2225,7 +2185,7 @@
 	},
 /obj/item/clothing/shoes/syndigaloshes,
 /obj/effect/decal/cleanable/blood/splatter,
-/obj/item/weapon/gun/projectile/silenced/sc_silenced,
+/obj/item/gun/projectile/silenced/sc_silenced,
 /turf/simulated/floor{
 	icon_state = "grimy"
 	},
@@ -2239,8 +2199,6 @@
 /area/awaymission/midblock)
 "fI" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/airless{
@@ -2249,8 +2207,6 @@
 /area/awaymission/midblock)
 "fJ" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -2260,8 +2216,6 @@
 /area/awaymission/midblock)
 "fK" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/airless{
@@ -2347,14 +2301,14 @@
 /area/awaymission/arrivalblock)
 "fU" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp/green{
+/obj/item/flashlight/lamp/green{
 	pixel_x = -3;
 	pixel_y = 5
 	},
-/obj/item/weapon/paper{
+/obj/item/paper{
 	pixel_x = 3
 	},
-/obj/item/weapon/pen{
+/obj/item/pen{
 	pixel_x = 10;
 	pixel_y = 10
 	},
@@ -2372,8 +2326,6 @@
 /area/awaymission/northblock)
 "fW" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/airless,
@@ -2446,7 +2398,7 @@
 	},
 /area/awaymission/northblock)
 "gh" = (
-/obj/item/weapon/storage/secure/safe/sc_ssafe{
+/obj/item/storage/secure/safe/sc_ssafe{
 	pixel_x = 4;
 	pixel_y = -26
 	},
@@ -2456,19 +2408,17 @@
 /area/awaymission/northblock)
 "gi" = (
 /obj/structure/stool/bed,
-/obj/item/weapon/bedsheet/captain,
+/obj/item/bedsheet/captain,
 /obj/item/clothing/under/rank/captain,
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/blood/splatter,
-/obj/item/weapon/gun/energy/laser/retro/sc_retro,
+/obj/item/gun/energy/laser/retro/sc_retro,
 /turf/simulated/floor{
 	icon_state = "grimy"
 	},
 /area/awaymission/northblock)
 "gj" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/airless{
@@ -2522,8 +2472,8 @@
 /area/awaymission/midblock)
 "gs" = (
 /obj/structure/table/standard,
-/obj/item/weapon/book/manual/barman_recipes,
-/obj/item/weapon/reagent_containers/food/drinks/shaker,
+/obj/item/book/manual/barman_recipes,
+/obj/item/reagent_containers/food/drinks/shaker,
 /turf/simulated/floor,
 /area/awaymission/midblock)
 "gt" = (
@@ -2628,7 +2578,7 @@
 	},
 /obj/structure/cable{
 	icon_state = "0-4";
-	d2 = 4
+	
 	},
 /turf/simulated/floor,
 /area/awaymission/midblock)
@@ -2637,8 +2587,6 @@
 /obj/item/ammo_casing/shotgun,
 /obj/item/ammo_casing/shotgun,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -2649,20 +2597,16 @@
 /obj/effect/decal/remains/human,
 /obj/item/clothing/under/rank/bartender,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
 /obj/effect/decal/cleanable/blood/splatter,
-/obj/item/weapon/gun/projectile/shotgun/pump/sc_pump,
+/obj/item/gun/projectile/shotgun/pump/sc_pump,
 /turf/simulated/floor,
 /area/awaymission/midblock)
 "gJ" = (
 /obj/structure/table/standard,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -2671,8 +2615,6 @@
 "gK" = (
 /obj/structure/stool,
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor,
@@ -2711,7 +2653,7 @@
 /area/awaymission/midblock)
 "gQ" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/holywater,
+/obj/item/reagent_containers/food/drinks/bottle/holywater,
 /turf/simulated/floor{
 	icon_state = "dark"
 	},
@@ -2785,8 +2727,8 @@
 /area/awaymission/arrivalblock)
 "ha" = (
 /obj/structure/table/standard,
-/obj/item/weapon/book/manual/security_space_law,
-/obj/item/weapon/melee/baton,
+/obj/item/book/manual/wiki/security_space_law,
+/obj/item/melee/baton,
 /obj/item/clothing/head/helmet/warden,
 /turf/simulated/floor{
 	icon_state = "red";
@@ -2827,7 +2769,7 @@
 /area/awaymission/midblock)
 "hf" = (
 /obj/structure/stool/bed,
-/obj/item/weapon/bedsheet/blue,
+/obj/item/bedsheet/blue,
 /obj/structure/window/reinforced/tinted{
 	dir = 1
 	},
@@ -2846,7 +2788,7 @@
 /area/awaymission/midblock)
 "hh" = (
 /obj/structure/stool/bed,
-/obj/item/weapon/bedsheet/purple,
+/obj/item/bedsheet/purple,
 /obj/structure/window/reinforced/tinted{
 	dir = 1
 	},
@@ -2855,7 +2797,7 @@
 /area/awaymission/midblock)
 "hi" = (
 /obj/structure/stool/bed,
-/obj/item/weapon/bedsheet/purple,
+/obj/item/bedsheet/purple,
 /obj/structure/window/reinforced/tinted{
 	dir = 1
 	},
@@ -2880,8 +2822,6 @@
 "hm" = (
 /obj/structure/stool,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
@@ -2981,8 +2921,8 @@
 	dir = 8
 	},
 /obj/item/clothing/suit/space/syndicate,
-/obj/item/weapon/paper/sc_safehint_paper_prison,
-/obj/item/weapon/gun/projectile/shotgun/pump/sc_pump,
+/obj/item/paper/sc_safehint_paper_prison,
+/obj/item/gun/projectile/shotgun/pump/sc_pump,
 /turf/simulated/floor,
 /area/awaymission/arrivalblock)
 "hA" = (
@@ -3016,8 +2956,6 @@
 	icon_state = "tube1"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/airless,
@@ -3030,9 +2968,9 @@
 /area/awaymission/midblock)
 "hF" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
-/obj/item/weapon/reagent_containers/food/condiment/peppermill,
-/obj/item/weapon/reagent_containers/food/condiment/saltshaker{
+/obj/item/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/condiment/peppermill,
+/obj/item/reagent_containers/food/condiment/saltshaker{
 	pixel_x = 4;
 	pixel_y = 4
 	},
@@ -3045,8 +2983,6 @@
 /area/awaymission/midblock)
 "hH" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
@@ -3075,13 +3011,13 @@
 /area/awaymission/arrivalblock)
 "hL" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/fancy/donut_box,
+/obj/item/storage/fancy/donut_box,
 /turf/simulated/floor,
 /area/awaymission/arrivalblock)
 "hM" = (
 /obj/structure/table/standard,
-/obj/item/weapon/handcuffs,
-/obj/item/device/flash,
+/obj/item/handcuffs,
+/obj/item/flash,
 /turf/simulated/floor,
 /area/awaymission/arrivalblock)
 "hN" = (
@@ -3092,13 +3028,13 @@
 /area/awaymission/arrivalblock)
 "hO" = (
 /obj/structure/stool/bed,
-/obj/item/weapon/bedsheet/blue,
+/obj/item/bedsheet/blue,
 /obj/effect/decal/remains/human,
 /turf/simulated/floor,
 /area/awaymission/midblock)
 "hP" = (
 /obj/structure/stool/bed,
-/obj/item/weapon/bedsheet/purple,
+/obj/item/bedsheet/purple,
 /turf/simulated/floor,
 /area/awaymission/midblock)
 "hQ" = (
@@ -3107,14 +3043,12 @@
 /area/awaymission/midblock)
 "hR" = (
 /obj/structure/table/standard,
-/obj/item/weapon/book/manual/chef_recipes,
-/obj/item/weapon/kitchen/rollingpin,
+/obj/item/book/manual/chef_recipes,
+/obj/item/kitchen/rollingpin,
 /turf/simulated/floor,
 /area/awaymission/midblock)
 "hS" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/blood/splatter,
@@ -3122,8 +3056,8 @@
 /area/awaymission/midblock)
 "hT" = (
 /obj/effect/decal/remains/human,
-/obj/item/weapon/butch,
-/obj/item/weapon/kitchenknife,
+/obj/item/butch,
+/obj/item/kitchenknife,
 /obj/item/clothing/head/chefhat,
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/simulated/floor,
@@ -3139,10 +3073,10 @@
 	name = "Syndicate agent remains"
 	},
 /obj/item/ammo_casing/a10mm,
-/obj/item/weapon/paper/sc_safehint_paper_caf,
+/obj/item/paper/sc_safehint_paper_caf,
 /obj/item/clothing/under/syndicate,
 /obj/effect/decal/cleanable/blood/splatter,
-/obj/item/weapon/gun/projectile/automatic/c20r/sc_c20r,
+/obj/item/gun/projectile/automatic/c20r/sc_c20r,
 /turf/simulated/floor,
 /area/awaymission/midblock)
 "hW" = (
@@ -3194,7 +3128,7 @@
 	},
 /obj/structure/cable{
 	icon_state = "0-4";
-	d2 = 4
+	
 	},
 /turf/simulated/floor{
 	icon_state = "red";
@@ -3203,8 +3137,6 @@
 /area/awaymission/arrivalblock)
 "ic" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -3215,8 +3147,6 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -3225,8 +3155,6 @@
 "ie" = (
 /obj/effect/decal/remains/human,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -3241,8 +3169,6 @@
 	req_access_txt = "0"
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -3250,8 +3176,6 @@
 /area/awaymission/arrivalblock)
 "ig" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -3259,13 +3183,9 @@
 /area/awaymission/midblock)
 "ih" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/airless{
@@ -3300,11 +3220,9 @@
 /obj/item/ammo_casing/a10mm,
 /obj/item/clothing/under/syndicate,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/item/weapon/gun/projectile/automatic/c20r/sc_c20r,
+/obj/item/gun/projectile/automatic/c20r/sc_c20r,
 /turf/simulated/floor,
 /area/awaymission/midblock)
 "im" = (
@@ -3359,7 +3277,7 @@
 /area/awaymission/arrivalblock)
 "iu" = (
 /obj/structure/stool/bed,
-/obj/item/weapon/bedsheet/blue,
+/obj/item/bedsheet/blue,
 /turf/simulated/floor,
 /area/awaymission/midblock)
 "iv" = (
@@ -3399,14 +3317,12 @@
 /obj/item/ammo_casing/a10mm,
 /obj/item/clothing/under/syndicate,
 /obj/effect/decal/cleanable/blood/splatter,
-/obj/item/weapon/gun/projectile/automatic/c20r/sc_c20r,
+/obj/item/gun/projectile/automatic/c20r/sc_c20r,
 /turf/simulated/floor,
 /area/awaymission/midblock)
 "iC" = (
 /obj/item/ammo_casing/a10mm,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/blood/splatter,
@@ -3421,7 +3337,7 @@
 /obj/item/ammo_casing/a10mm,
 /obj/item/clothing/under/syndicate,
 /obj/effect/decal/cleanable/blood/splatter,
-/obj/item/weapon/gun/projectile/automatic/c20r/sc_c20r,
+/obj/item/gun/projectile/automatic/c20r/sc_c20r,
 /turf/simulated/floor,
 /area/awaymission/midblock)
 "iE" = (
@@ -3442,7 +3358,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/item/weapon/shard{
+/obj/item/shard{
 	icon_state = "medium"
 	},
 /obj/item/stack/rods,
@@ -3490,8 +3406,6 @@
 "iM" = (
 /obj/machinery/door/airlock/glass,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
@@ -3505,11 +3419,11 @@
 	dir = 8
 	},
 /obj/structure/grille,
-/obj/item/weapon/shard,
+/obj/item/shard,
 /turf/simulated/shuttle/plating,
 /area/awaymission/arrivalblock)
 "iP" = (
-/obj/item/weapon/shard{
+/obj/item/shard{
 	icon_state = "small"
 	},
 /obj/item/stack/rods,
@@ -3555,8 +3469,6 @@
 /area/awaymission/southblock)
 "iW" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/airless,
@@ -3640,16 +3552,12 @@
 /area/awaymission/southblock)
 "jl" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/airless,
 /area/awaymission/southblock)
 "jm" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -3660,8 +3568,6 @@
 	pixel_y = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -3669,14 +3575,10 @@
 /area/awaymission/southblock)
 "jo" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/airless,
@@ -3686,8 +3588,6 @@
 	pixel_y = -32
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -3695,21 +3595,15 @@
 /area/awaymission/southblock)
 "jq" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/airless,
 /area/awaymission/southblock)
 "jr" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/airless,
@@ -3731,8 +3625,6 @@
 	name = "Airlock"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
@@ -3752,8 +3644,6 @@
 "jy" = (
 /obj/machinery/door/airlock/glass,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
@@ -3826,8 +3716,6 @@
 /area/awaymission/southblock)
 "jJ" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
@@ -3852,7 +3740,7 @@
 /area/awaymission/southblock)
 "jN" = (
 /obj/structure/table/standard,
-/obj/item/weapon/pen,
+/obj/item/pen,
 /turf/simulated/floor{
 	icon_state = "whitehall";
 	dir = 1
@@ -4002,7 +3890,7 @@
 /area/awaymission/southblock)
 "kk" = (
 /obj/structure/table/standard,
-/obj/item/weapon/paper_bin,
+/obj/item/paper_bin,
 /turf/simulated/floor{
 	icon_state = "whitehall";
 	dir = 2
@@ -4019,8 +3907,6 @@
 	icon_state = "tube1"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
@@ -4035,7 +3921,7 @@
 /obj/structure/cable{
 	icon_state = "0-2";
 	pixel_y = 1;
-	d2 = 2
+	
 	},
 /obj/machinery/gateway/centeraway{
 	calibrated = 0
@@ -4112,8 +3998,6 @@
 /area/awaymission/gateroom)
 "ky" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/gateway,
@@ -4147,7 +4031,7 @@
 /area/awaymission/southblock)
 "kD" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /turf/simulated/floor/wood,
 /area/awaymission/southblock)
 "kE" = (
@@ -4212,7 +4096,7 @@
 /turf/simulated/floor,
 /area/awaymission/arrivalblock)
 "kN" = (
-/obj/item/weapon/melee/energy/sword/red,
+/obj/item/melee/energy/sword/red,
 /obj/item/clothing/shoes/syndigaloshes,
 /obj/item/clothing/under/syndicate,
 /obj/effect/decal/remains/human{
@@ -4220,7 +4104,7 @@
 	icon_state = "remains";
 	name = "Syndicate agent remains"
 	},
-/obj/item/weapon/paper/sc_safehint_paper_hydro,
+/obj/item/paper/sc_safehint_paper_hydro,
 /turf/simulated/floor,
 /area/awaymission/arrivalblock)
 "kO" = (
@@ -4248,11 +4132,11 @@
 /area/awaymission/southblock)
 "kS" = (
 /obj/structure/table/standard,
-/obj/item/weapon/paper/pamphlet{
+/obj/item/paper/pamphlet{
 	pixel_x = 2;
 	pixel_y = 2
 	},
-/obj/item/weapon/paper/pamphlet{
+/obj/item/paper/pamphlet{
 	pixel_x = -2;
 	pixel_y = -2
 	},
@@ -4272,8 +4156,6 @@
 /area/awaymission/gateroom)
 "kU" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/landmark{
@@ -4286,7 +4168,7 @@
 /area/awaymission/gateroom)
 "kV" = (
 /obj/structure/table/standard,
-/obj/item/device/camera,
+/obj/item/camera,
 /turf/simulated/floor{
 	 icon_state = "warningcorner";
 	dir = 4
@@ -4364,8 +4246,6 @@
 /area/awaymission/gateroom)
 "lg" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/landmark{
@@ -4399,7 +4279,7 @@
 "lk" = (
 /obj/structure/stool/bed,
 /obj/structure/window/reinforced/tinted,
-/obj/item/weapon/bedsheet/medical,
+/obj/item/bedsheet/medical,
 /obj/structure/window/reinforced/tinted{
 	dir = 1
 	},
@@ -4432,11 +4312,11 @@
 /area/awaymission/arrivalblock)
 "lp" = (
 /obj/structure/table/standard,
-/obj/item/weapon/book/manual/hydroponics_pod_people,
+/obj/item/book/manual/hydroponics_pod_people,
 /turf/simulated/floor,
 /area/awaymission/arrivalblock)
 "lq" = (
-/obj/item/weapon/grown/deathnettle,
+/obj/item/grown/deathnettle,
 /obj/item/clothing/shoes/brown,
 /obj/item/clothing/under/rank/hydroponics,
 /obj/effect/decal/remains/human,
@@ -4463,7 +4343,7 @@
 "lt" = (
 /obj/structure/stool/bed,
 /obj/structure/window/reinforced/tinted,
-/obj/item/weapon/bedsheet/medical,
+/obj/item/bedsheet/medical,
 /turf/simulated/floor{
 	icon_state = "whitehall";
 	dir = 4
@@ -4551,7 +4431,7 @@
 /area/awaymission/arrivalblock)
 "lE" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/glass/bucket,
 /turf/simulated/floor,
 /area/awaymission/arrivalblock)
 "lF" = (
@@ -4571,7 +4451,7 @@
 	dir = 1
 	},
 /obj/effect/decal/remains/human,
-/obj/item/weapon/tank/anesthetic,
+/obj/item/tank/anesthetic,
 /obj/item/clothing/mask/breath,
 /turf/simulated/floor{
 	icon_state = "white"
@@ -4588,7 +4468,7 @@
 "lJ" = (
 /obj/structure/stool/bed,
 /obj/structure/window/reinforced/tinted,
-/obj/item/weapon/bedsheet/medical,
+/obj/item/bedsheet/medical,
 /obj/effect/decal/remains/human,
 /turf/simulated/floor{
 	icon_state = "whitehall";
@@ -4598,16 +4478,12 @@
 "lK" = (
 /obj/effect/decal/remains/human,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
 /area/awaymission/southblock)
 "lL" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/highsecurity{
@@ -4620,15 +4496,12 @@
 /area/awaymission/gateroom)
 "lN" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor,
 /area/awaymission/gateroom)
 "lO" = (
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/smes/magical{
@@ -4643,8 +4516,8 @@
 /area/awaymission/arrivalblock)
 "lQ" = (
 /obj/structure/table/standard,
-/obj/item/weapon/shovel/spade,
-/obj/item/weapon/reagent_containers/spray/plantbgone,
+/obj/item/shovel/spade,
+/obj/item/reagent_containers/spray/plantbgone,
 /turf/simulated/floor,
 /area/awaymission/arrivalblock)
 "lR" = (
@@ -4684,16 +4557,12 @@
 /area/awaymission/southblock)
 "lW" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor,
 /area/awaymission/southblock)
 "lX" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -4701,8 +4570,6 @@
 /area/awaymission/southblock)
 "lY" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -4713,13 +4580,9 @@
 /area/awaymission/southblock)
 "lZ" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -4730,8 +4593,6 @@
 /area/awaymission/southblock)
 "ma" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -4742,8 +4603,6 @@
 /area/awaymission/southblock)
 "mb" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -4752,8 +4611,6 @@
 /area/awaymission/gateroom)
 "mc" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -4761,19 +4618,13 @@
 /area/awaymission/gateroom)
 "md" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor,
@@ -4783,7 +4634,6 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor,
@@ -4798,12 +4648,12 @@
 /obj/structure/closet/crate/medical{
 	name = "Surgical Tools"
 	},
-/obj/item/weapon/cautery,
-/obj/item/weapon/circular_saw,
-/obj/item/weapon/hemostat,
-/obj/item/weapon/retractor,
-/obj/item/weapon/surgicaldrill,
-/obj/item/weapon/scalpel,
+/obj/item/cautery,
+/obj/item/circular_saw,
+/obj/item/hemostat,
+/obj/item/retractor,
+/obj/item/surgicaldrill,
+/obj/item/scalpel,
 /turf/simulated/floor{
 	icon_state = "white"
 	},
@@ -4850,8 +4700,6 @@
 /area/awaymission/southblock)
 "mn" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/machinery/light/small,
@@ -4865,7 +4713,6 @@
 	pixel_y = 0
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor,

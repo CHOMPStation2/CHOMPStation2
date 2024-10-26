@@ -1,5 +1,3 @@
-#define span(class, text) ("<span class='[class]'>[text]</span>")
-
 #define get_turf(A) get_step(A,0)
 
 #define get_x(A) (get_step(A, 0)?.x || 0)
@@ -12,7 +10,7 @@
 
 // #define to_chat(target, message) target << message Not anymore!
 //#define to_chat to_chat_filename=__FILE__;to_chat_line=__LINE__;to_chat_src=src;__to_chat
-#define to_chat __to_chat
+//#define to_chat __to_chat
 #define to_world(message) to_chat(world, message)
 #define to_world_log(message) world.log << message
 // TODO - Baystation has this log to crazy places. For now lets just world.log, but maybe look into it later.
@@ -26,6 +24,7 @@
 // From TG, might be useful to have.
 // Didn't port SEND_TEXT() since to_chat() appears to serve the same purpose.
 #define DIRECT_OUTPUT(A, B) A << B
+#define DIRECT_INPUT(A, B) A >> B
 #define SEND_IMAGE(target, image) DIRECT_OUTPUT(target, image)
 #define SEND_SOUND(target, sound) DIRECT_OUTPUT(target, sound)
 //#define WRITE_LOG is in logging.dm
@@ -43,3 +42,5 @@
 #define WORLD_ICON_SIZE 32 //Needed for the R-UST port
 
 #define PIXEL_MULTIPLIER WORLD_ICON_SIZE/32 //Needed for the R-UST port
+
+#define JOINTEXT(X) jointext(X, null)

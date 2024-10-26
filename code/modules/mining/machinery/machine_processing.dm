@@ -12,7 +12,7 @@
 	density = TRUE
 	anchored = TRUE
 
-	var/obj/item/weapon/card/id/inserted_id	// Inserted ID card, for points
+	var/obj/item/card/id/inserted_id	// Inserted ID card, for points
 
 	var/obj/machinery/mineral/processing_unit/machine = null
 	var/show_all_ores = FALSE
@@ -35,15 +35,15 @@
 	if(..())
 		return
 	if(!allowed(user))
-		to_chat(user, "<span class='warning'>Access denied.</span>")
+		to_chat(user, span_warning("Access denied."))
 		return
 	tgui_interact(user)
 
 /obj/machinery/mineral/processing_unit_console/attackby(var/obj/item/I, var/mob/user)
-	if(istype(I, /obj/item/weapon/card/id))
+	if(istype(I, /obj/item/card/id))
 		if(!powered())
 			return
-		if(!inserted_id && user.unEquip(I))
+		if(!inserted_id && (user.unEquip(I) || isrobot(user)))
 			I.forceMove(src)
 			inserted_id = I
 			SStgui.update_uis(src)
@@ -69,7 +69,7 @@
 	else
 		data["has_id"] = FALSE
 
-	
+
 	var/list/ores = list()
 	for(var/ore in machine.ores_processing)
 		if(!machine.ores_stored[ore] && !show_all_ores)
@@ -124,20 +124,20 @@
 			. = TRUE
 		if("claim")
 			if(istype(inserted_id))
-				if(access_mining_station in inserted_id.access)
+				if(access_mining_station in inserted_id.GetAccess())
 					inserted_id.mining_points += machine.points
 					machine.points = 0
 				else
-					to_chat(usr, "<span class='warning'>Required access not found.</span>")
+					to_chat(usr, span_warning("Required access not found."))
 			. = TRUE
 		if("insert")
-			var/obj/item/weapon/card/id/I = usr.get_active_hand()
+			var/obj/item/card/id/I = usr.get_active_hand()
 			if(istype(I))
 				usr.drop_item()
 				I.forceMove(src)
 				inserted_id = I
 			else
-				to_chat(usr, "<span class='warning'>No valid ID.</span>")
+				to_chat(usr, span_warning("No valid ID."))
 			. = TRUE
 		if("speed_toggle")
 			machine.toggle_speed()
@@ -179,7 +179,6 @@
 		"silver" = 16,
 		"gold" = 18,
 		"marble" = 20,
-		"rutile" = 20,
 		"uranium" = 30,
 		"diamond" = 50,
 		"platinum" = 40,
@@ -194,7 +193,7 @@
 		var/ore/OD = GLOB.ore_data[ore]
 		ores_processing[OD.name] = 0
 		ores_stored[OD.name] = 0
-	
+
 	// TODO - Eschew input/output machinery and just use dirs ~Leshana
 	//Locate our output and input machinery.
 	for (var/dir in cardinal)
@@ -236,10 +235,28 @@
 	var/list/tick_alloys = list()
 
 	//Grab some more ore to process this tick.
-	for(var/obj/item/weapon/ore/O in input.loc)
+	for(var/obj/structure/ore_box/OB in input.loc)
+		for(var/ore in OB.stored_ore)
+			if(OB.stored_ore[ore] > 0)
+				var/ore_amount = OB.stored_ore[ore]									// How many ores does the box have?
+				ores_stored[ore] += ore_amount 										// Add the ore to the machine.
+				points += (ore_values[ore]*points_mult*ore_amount) 					// Give Points! VOREStation Edit - or give lots of points! or less points! or no points!
+				OB.stored_ore[ore] = 0 												// Set the value of the ore in the box to 0.
+
+
+	for(var/obj/item/ore_chunk/ore_chunk in input.loc) //Special ore chunk item. For conveyor belt. Completely unneeded but keeps asthetics.
+		for(var/ore in ore_chunk.stored_ore)
+			if(ore_chunk.stored_ore[ore] > 0)
+				var/ore_amount = ore_chunk.stored_ore[ore]
+				ores_stored[ore] += ore_amount
+				points += (ore_values[ore]*points_mult*ore_amount)
+				ore_chunk.stored_ore[ore] = 0
+			qdel(ore_chunk)
+
+	for(var/obj/item/ore/O in input.loc)
 		if(!isnull(ores_stored[O.material]))
 			ores_stored[O.material]++
-			points += (ore_values[O.material]*points_mult) // Give Points! VOREStation Edit - or give lots of points! or less points! or no points!
+			points += (ore_values[O.material]*points_mult)
 		qdel(O)
 
 	if(!active)
@@ -320,7 +337,7 @@
 			else
 				ores_stored[metal]--
 				sheets++
-				new /obj/item/weapon/ore/slag(output.loc)
+				new /obj/item/ore/slag(output.loc)
 		else
 			continue
 
@@ -330,4 +347,3 @@
 #undef PROCESS_SMELT
 #undef PROCESS_COMPRESS
 #undef PROCESS_ALLOY
-

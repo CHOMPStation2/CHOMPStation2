@@ -9,10 +9,10 @@
 	icon_rest = null
 	icon = 'icons/mob/bigcat.dmi'
 
-	faction = "panther"
+	faction = FACTION_PANTHER
 	maxHealth = 150
 	health = 150
-	movement_cooldown = 2
+	movement_cooldown = -1
 
 	response_help = "pats"
 	response_disarm = "gently pushes aside"
@@ -30,6 +30,9 @@
 	default_pixel_x = -16
 
 	has_hands = 1
+
+	can_be_drop_prey = FALSE //CHOMP Add
+	allow_mind_transfer = TRUE
 
 // Nomnomn
 /mob/living/simple_mob/vore/weretiger

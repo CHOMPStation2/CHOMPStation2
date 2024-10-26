@@ -15,7 +15,7 @@
 	var/toxloss = 0.0	//Toxic damage caused by being poisoned or radiated
 	var/fireloss = 0.0	//Burn damage caused by being way too hot, too cold or burnt.
 	var/cloneloss = 0	//Damage caused by being cloned or ejected from the cloner early. slimes also deal cloneloss damage to victims
-	var/brainloss = 0	//'Retardation' damage caused by someone hitting you in the head with a bible or being infected with brainrot.
+	var/brainloss = 0	//Thought-scrambly damage caused by someone hitting you in the head with a bible or being infected with brainrot.
 	var/halloss = 0		//Hallucination damage. 'Fake' damage obtained through hallucinating or the holodeck. Sleeping should cause it to wear off.
 
 	var/nutrition = 400
@@ -39,7 +39,6 @@
 	var/mob_always_swap = 0
 
 	var/mob/living/cameraFollow = null
-	var/list/datum/action/actions = list()
 
 	var/tod = null // Time of death
 	var/update_slimes = 1
@@ -55,7 +54,8 @@
 
 	var/image/dsoverlay = null //Overlay used for darksight eye adjustments
 
-	var/glow_toggle = 0					// If they're glowing!
+	var/glow_toggle = FALSE					// If they're glowing!
+	var/glow_override = FALSE				// Ignore the manual toggle
 	var/glow_range = 2
 	var/glow_intensity = null
 	var/glow_color = "#FFFFFF"			// The color they're glowing!
@@ -80,4 +80,28 @@
 	var/flying = 0				// Allows flight
 	var/inventory_panel_type = /datum/inventory_panel
 	var/datum/inventory_panel/inventory_panel
-	var/last_resist_time = 0 // world.time of the most recent resist that wasn't on cooldown. 
+	var/last_resist_time = 0 // world.time of the most recent resist that wasn't on cooldown.
+	var/tiredness = 0					//For vore draining
+	var/fear = 0 						//For fear effects and phobias
+	var/last_fear_sound = 0				//For making sure the heartbeats don't play over each other
+
+	var/list/fear_message_self = list(
+									"Your heart is racing, it feels like it's going burst from your chest.",
+									"Your stomach clenches and churns with anxiety.",
+									"It's getting hard to breathe, you're panting heavily.",
+									"You feel your eyes straining.",
+									"A sharp shiver runs down your spine.",
+									"You feel like you are drowning.",
+									"You feel your palms clamming up.",
+									"Your legs feel weak, you can barely control them.",
+									"You have difficulty even swallowing."
+									)
+	var/list/fear_message_other = list(
+									"'s eyes are darting around the room rapidly.",
+									" looks like they are shivering, literally shaking.",
+									" is breathing rapidly.",
+									" looks profoundly uncomfortable.",
+									"s literally trembling in front of you.",
+									"'s hands are shaking.",
+									" is rocking slightly from side to side."
+									)

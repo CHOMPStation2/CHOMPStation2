@@ -17,13 +17,13 @@
 			if((body_parts_covered & ARMS) && istype(H.gloves, /obj/item/clothing))
 				var/obj/item/clothing/G = H.gloves
 				if(G.body_parts_covered & ARMS)
-					to_chat(H, "<span class='warning'>You can't wear \the [src] with \the [G], it's in the way.</span>")
+					to_chat(H, span_warning("You can't wear \the [src] with \the [G], it's in the way."))
 					S.accessories -= src
 					return
 			else if((body_parts_covered & LEGS) && istype(H.shoes, /obj/item/clothing))
 				var/obj/item/clothing/Sh = H.shoes
 				if(Sh.body_parts_covered & LEGS)
-					to_chat(H, "<span class='warning'>You can't wear \the [src] with \the [Sh], it's in the way.</span>")
+					to_chat(H, span_warning("You can't wear \the [src] with \the [Sh], it's in the way."))
 					S.accessories -= src
 					return
 	..()
@@ -167,7 +167,7 @@
 		if(!(def_zone in list(BP_TORSO, BP_GROIN)))
 			reflectchance /= 2
 		if(P.starting && prob(reflectchance))
-			visible_message("<span class='danger'>\The [user]'s [src.name] reflects [attack_text]!</span>")
+			visible_message(span_danger("\The [user]'s [src.name] reflects [attack_text]!"))
 
 
 			var/new_x = P.starting.x + pick(0, 0, 0, 0, 0, -1, 1, -2, 2)
@@ -213,7 +213,7 @@
 	desc = "A pair of green arm pads reinforced with armor plating. Attaches to a plate carrier."
 	icon_state = "armguards_green"
 	armor = list(melee = 30, bullet = 20, laser = 20, energy = 20, bomb = 35, bio = 75, rad = 35)
-
+	
 /obj/item/clothing/accessory/armor/armguards/merc
 	name = "heavy arm guards"
 	desc = "A pair of red-trimmed black arm pads reinforced with heavy armor plating. Attaches to a plate carrier."
@@ -336,8 +336,8 @@
 	icon_state = "comtag"
 
 /obj/item/clothing/accessory/armor/tag/nt
-	name = "\improper CORPORATE SECURITY tag"
-	desc = "An armor tag with the words CORPORATE SECURITY printed in red lettering on it."
+	name = "\improper NANOTRASEN tag"
+	desc = "An armor tag with the word NANOTRASEN printed in red lettering on it and an accompanying company logo."
 	icon_state = "nanotag"
 
 /obj/item/clothing/accessory/armor/tag/pcrc
@@ -345,9 +345,9 @@
 	desc = "An armor tag with the words PROXIMA CENTAURI RISK CONTROL printed in cyan lettering on it."
 	icon_state = "pcrctag"
 
-/obj/item/clothing/accessory/armor/tag/saare
-	name = "\improper SAARE tag"
-	desc = "An armor tag with the acronym SAARE printed in olive-green lettering on it."
+/obj/item/clothing/accessory/armor/tag/hedberg
+	name = "\improper HEDBERG-HAMMARSTROM tag"
+	desc = "An armor tag with the name HEDBERG-HAMMARSTROM printed in olive-green lettering on it."
 	icon_state = "saaretag"
 
 /obj/item/clothing/accessory/armor/tag/opos

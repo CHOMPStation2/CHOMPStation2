@@ -39,7 +39,9 @@
 				"rad" = 0
 				)
 
-	has_langs = list("Coulrian")
+	has_langs = list(LANGUAGE_ANIMAL)
+	
+	can_be_drop_prey = FALSE //CHOMP Add
 
 /mob/living/simple_mob/animal/passive/honkpet/attack_hand(mob/living/user as mob)
 	if(user.a_intent == I_DISARM)
@@ -54,7 +56,7 @@
 	icon_state = "dave1"
 	icon_living = "dave1"
 	icon_dead = "dave_dead"
-	movement_cooldown = 300
+	movement_cooldown = 100
 
 	maxHealth = 1500
 	health = 1500

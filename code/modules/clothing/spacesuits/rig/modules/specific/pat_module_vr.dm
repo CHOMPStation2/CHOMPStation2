@@ -24,7 +24,7 @@
 
 /*
 	var/message = "[H] has activated \a [src] in [get_area(T)] at position [T.x],[T.y],[T.z], giving them full access for medical rescue."
-	var/obj/item/device/radio/headset/a = new /obj/item/device/radio/headset/heads/captain(null)
+	var/obj/item/radio/headset/a = new /obj/item/radio/headset/heads/captain(null)
 	a.icon = icon
 	a.icon_state = icon_state
 	a.autosay(message, "Security Subsystem", "Command")
@@ -37,16 +37,17 @@
 		return 0
 
 	var/mob/living/carbon/human/H = holder.wearer
-	to_chat(H,"<span class='notice'>You activate the P.A.T. module.</span>")
-	GLOB.moved_event.register(H, src, /obj/item/rig_module/pat_module/proc/boop)
+	to_chat(H,span_notice("You activate the P.A.T. module."))
+	H.AddComponent(/datum/component/recursive_move)
+	RegisterSignal(H, COMSIG_OBSERVER_MOVED, /obj/item/rig_module/pat_module/proc/boop)
 
 /obj/item/rig_module/pat_module/deactivate()
 	if(!..())
 		return 0
 
 	var/mob/living/carbon/human/H = holder.wearer
-	to_chat(H,"<span class='notice'>Your disable the P.A.T. module.</span>")
-	GLOB.moved_event.unregister(H, src)
+	to_chat(H,span_notice("Your disable the P.A.T. module."))
+	UnregisterSignal(H, COMSIG_OBSERVER_MOVED)
 
 /obj/item/rig_module/pat_module/proc/boop(var/mob/living/carbon/human/user,var/turf/To,var/turf/Tn)
 	if(!istype(user) || !istype(To) || !istype(Tn))
@@ -74,10 +75,10 @@
 
 	//Okay, we either found an airlock or we're about to give up.
 	if(!A || !A.density || !A.can_open() || !..())
-		to_chat(H,"<span class='warning'>Unable to comply! Energy too low, or not facing a working airlock!</span>")
+		to_chat(H,span_warning("Unable to comply! Energy too low, or not facing a working airlock!"))
 		return 0
 
-	H.visible_message("<span class='warning'>[H] begins overriding the airlock!</span>","<span class='notice'>You begin overriding the airlock!</span>")
+	H.visible_message(span_warning("[H] begins overriding the airlock!"),span_notice("You begin overriding the airlock!"))
 	if(do_after(H,6 SECONDS,A) && A.density)
 		A.open()
 

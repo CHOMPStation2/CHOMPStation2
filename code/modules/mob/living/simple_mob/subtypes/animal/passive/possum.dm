@@ -19,8 +19,8 @@
 	if(!ispath(critter, /mob/living/simple_mob))
 		return INITIALIZE_HINT_QDEL
 
-	var/obj/item/weapon/holder/critter_holder = initial(critter.holder_type)
-	if(!ispath(critter_holder, /obj/item/weapon/holder))
+	var/obj/item/holder/critter_holder = initial(critter.holder_type)
+	if(!ispath(critter_holder, /obj/item/holder))
 		return INITIALIZE_HINT_QDEL
 
 	var/mob/M = loc
@@ -88,7 +88,7 @@
 
 /datum/ai_holder/simple_mob/passive/possum/poppy/on_hear_say(mob/living/speaker, message)
 	. = ..()
-	addtimer(CALLBACK(src, .proc/check_keywords, message), rand(1 SECOND, 3 SECONDS))
+	addtimer(CALLBACK(src, PROC_REF(check_keywords), message), rand(1 SECOND, 3 SECONDS))
 
 /datum/ai_holder/simple_mob/passive/possum/poppy/proc/check_keywords(var/message)
 	var/mob/living/simple_mob/animal/passive/opossum/poss = holder
@@ -132,7 +132,7 @@
 	maxbodytemp = 323
 	universal_speak = FALSE
 	universal_understand = TRUE
-	holder_type = /obj/item/weapon/holder/possum
+	holder_type = /obj/item/holder/possum
 	mob_size = MOB_SMALL
 	can_pull_size = 2
 	can_pull_mobs = MOB_PULL_SMALLER
@@ -159,16 +159,16 @@
 		var/datum/ai_holder/simple_mob/passive/possum/poss_ai = ai_holder
 		if(!client && istype(poss_ai))
 			if(!poss_ai.is_angry)
-				visible_message("<b>\The [src]</b> hisses!")
+				visible_message(span_infoplain(span_bold("\The [src]") + " hisses!"))
 				poss_ai.is_angry = TRUE
 				poss_ai.be_angery_until = world.time + rand(30 SECONDS, 1 MINUTE)
 			else
-				visible_message("<b>\The [src]</b> dies!")
+				visible_message(span_infoplain(span_bold("\The [src]") + " dies!"))
 				resting = TRUE
 				poss_ai.play_dead_until = world.time + rand(1 MINUTE, 2 MINUTES)
 		update_icon()
 
-/mob/living/simple_mob/animal/passive/opossum/updateicon()
+/mob/living/simple_mob/animal/passive/opossum/update_icon()
 	update_icon()
 
 /mob/living/simple_mob/animal/passive/opossum/update_icon()
@@ -185,8 +185,8 @@
 
 /mob/living/simple_mob/animal/passive/opossum/Initialize()
 	. = ..()
-	verbs += /mob/living/proc/ventcrawl
-	verbs += /mob/living/proc/hide
+	add_verb(src, /mob/living/proc/ventcrawl)
+	add_verb(src, /mob/living/proc/hide)
 
 /mob/living/simple_mob/animal/passive/opossum/poppy
 	name = "Poppy the Safety Possum"
@@ -198,7 +198,7 @@
 	icon_rest = "poppy_dead"
 	tt_desc = "Didelphis astrum salutem"
 	organ_names = /decl/mob_organ_names/poppy
-	holder_type = /obj/item/weapon/holder/possum/poppy
+	holder_type = /obj/item/holder/possum/poppy
 	ai_holder_type = /datum/ai_holder/simple_mob/passive/possum/poppy
 
 /decl/mob_organ_names/possum

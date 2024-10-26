@@ -1,5 +1,5 @@
 // Compile in the map for CI testing if we're testing compileability of all the maps
-#if MAP_TEST
+#ifdef MAP_TEST
 #include "mercship.dmm"
 #endif
 
@@ -8,7 +8,7 @@
 /datum/map_template/om_ships/syndicatecarrier
 	name = "OM Ship - Generic Cruiser (New Z)"
 	desc = "Mercenary Ship."
-	mappath = 'mercship.dmm'
+	mappath = "maps/offmap_vr/om_ships/mercship.dmm"
 
 	// The ship's area(s)
 /area/ship/mercenary
@@ -74,6 +74,7 @@
 	vessel_size = SHIP_SIZE_SMALL
 	initial_generic_waypoints = list("carrier_fore", "carrier_aft", "carrier_port", "carrier_starboard", "base_dock")
 	initial_restricted_waypoints = list("Carrier's Ship's Boat" = list("omship_spawn_mercboat"))
+	known = FALSE
 
 	unowned_areas = list(/area/shuttle/mercboat)
 

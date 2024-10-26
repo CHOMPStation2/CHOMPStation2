@@ -18,6 +18,19 @@
 	desc = "It has WIZZARD written across it in sequins. Comes with a cool beard."
 	icon_state = "wizard-fake"
 	body_parts_covered = HEAD|FACE
+	siemens_coefficient = 1
+
+/obj/item/clothing/head/wizard/fake/realistic
+	desc = "A cool-looking 'magic' hat."
+	icon_state = "wizard"
+	body_parts_covered = HEAD
+
+/obj/item/clothing/head/wizard/fake/realistic/colorable
+	desc = "A cool-looking 'magic' hat."
+	icon_state = "wizard-white"
+	sprite_sheets = list(
+		SPECIES_TESHARI = 'icons/inventory/head/mob_vr_teshari.dmi'
+		)
 
 /obj/item/clothing/head/wizard/marisa
 	name = "Witch Hat"
@@ -52,7 +65,7 @@
 	gas_transfer_coefficient = 0.01 // IT'S MAGICAL OKAY JEEZ +1 TO NOT DIE
 	permeability_coefficient = 0.01
 	armor = list(melee = 30, bullet = 20, laser = 20,energy = 20, bomb = 20, bio = 20, rad = 20)
-	allowed = list(/obj/item/weapon/teleportation_scroll)
+	allowed = list(/obj/item/teleportation_scroll)
 	flags_inv = HIDEJUMPSUIT|HIDETIE|HIDEHOLSTER
 	siemens_coefficient = 0.8
 	wizard_garb = 1

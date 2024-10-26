@@ -23,7 +23,7 @@
 	name = "[name] (ID [id])"
 
 /obj/machinery/portable_atmospherics/powered/pump/huge/attack_hand(var/mob/user)
-	to_chat(user, "<span class='notice'>You can't directly interact with this machine. Use the pump control console.</span>")
+	to_chat(user, span_notice("You can't directly interact with this machine. Use the pump control console."))
 
 /obj/machinery/portable_atmospherics/powered/pump/huge/update_icon()
 	cut_overlays()
@@ -83,25 +83,25 @@
 		update_connected_network()
 
 /obj/machinery/portable_atmospherics/powered/pump/huge/attackby(var/obj/item/I, var/mob/user)
-	if(I.is_wrench())
+	if(I.has_tool_quality(TOOL_WRENCH))
 		if(on)
-			to_chat(user, "<span class='warning'>Turn \the [src] off first!</span>")
+			to_chat(user, span_warning("Turn \the [src] off first!"))
 			return
 
 		anchored = !anchored
 		playsound(src, I.usesound, 50, 1)
-		to_chat(user, "<span class='notice'>You [anchored ? "wrench" : "unwrench"] \the [src].</span>")
+		to_chat(user, span_notice("You [anchored ? "wrench" : "unwrench"] \the [src]."))
 
 		return
 
 	//doesn't use power cells
-	if(istype(I, /obj/item/weapon/cell))
+	if(istype(I, /obj/item/cell))
 		return
-	if (I.is_screwdriver())
+	if (I.has_tool_quality(TOOL_SCREWDRIVER))
 		return
 
 	//doesn't hold tanks
-	if(istype(I, /obj/item/weapon/tank))
+	if(istype(I, /obj/item/tank))
 		return
 
 	..()
@@ -111,8 +111,8 @@
 	name = "Stationary Air Pump"
 
 /obj/machinery/portable_atmospherics/powered/pump/huge/stationary/attackby(var/obj/item/I, var/mob/user)
-	if(I.is_wrench())
-		to_chat(user, "<span class='warning'>The bolts are too tight for you to unscrew!</span>")
+	if(I.has_tool_quality(TOOL_WRENCH))
+		to_chat(user, span_warning("The bolts are too tight for you to unscrew!"))
 		return
 
 	..()

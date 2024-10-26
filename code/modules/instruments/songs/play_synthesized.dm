@@ -74,12 +74,12 @@
 			vol = volume,
 			vary = FALSE,
 			frequency = K.frequency,
-			falloff = null,
+			falloff = FALLOFF_SOUNDS, //CHOMPEdit
 			is_global = null,
 			channel = channel,
 			pressure_affected = null,
 			S = copy,
-			preference = /datum/client_preference/instrument_toggle,
+			preference = /datum/preference/toggle/instrument_toggle,
 			volume_channel = VOLUME_CHANNEL_INSTRUMENTS)
 		// Could do environment and echo later but not for now
 
@@ -141,8 +141,8 @@
 		if(dead)
 			channels_playing -= channel
 			channels_idle += channel
-			for(var/mob/M as anything in hearing_mobs)
+			for(var/mob/M in hearing_mobs)
 				M.stop_sound_channel(channelnumber)
 		else
-			for(var/mob/M as anything in hearing_mobs)
+			for(var/mob/M in hearing_mobs)
 				M.set_sound_channel_volume(channelnumber, (current_volume * 0.01) * volume * using_instrument.volume_multiplier)

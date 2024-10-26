@@ -9,29 +9,29 @@
 
 /datum/supply_pack/eng/lightbulbs
 	name = "Replacement lights"
-	contains = list(/obj/item/weapon/storage/box/lights/mixed = 3)
+	contains = list(/obj/item/storage/box/lights/mixed = 3)
 	cost = 10
 	containertype = /obj/structure/closet/crate/galaksi
 	containername = "Replacement lights"
 
 /datum/supply_pack/eng/smescoil
 	name = "Superconducting Magnetic Coil"
-	contains = list(/obj/item/weapon/smes_coil)
-	cost = 75
+	contains = list(/obj/item/smes_coil)
+	cost = 20 //CHOMPEdit - Reduced cost from 75 to 20 to be more in line with the rest of the engineering supplies
 	containertype = /obj/structure/closet/crate/focalpoint
 	containername = "Superconducting Magnetic Coil crate"
 
 /datum/supply_pack/eng/smescoil/super_capacity
 	name = "Superconducting Capacitance Coil"
-	contains = list(/obj/item/weapon/smes_coil/super_capacity)
-	cost = 90
+	contains = list(/obj/item/smes_coil/super_capacity)
+	cost = 35 //CHOMPEdit - Reduced cost from 90 to 35 to be more in line with the rest of the engineering supplies
 	containertype = /obj/structure/closet/crate/focalpoint
 	containername = "Superconducting Capacitance Coil crate"
 
 /datum/supply_pack/eng/smescoil/super_io
 	name = "Superconducting Transmission Coil"
-	contains = list(/obj/item/weapon/smes_coil/super_io)
-	cost = 90
+	contains = list(/obj/item/smes_coil/super_io)
+	cost = 35 //CHOMPEdit - Reduced cost from 90 to 35 to be more in line with the rest of the engineering supplies
 	containertype = /obj/structure/closet/crate/focalpoint
 	containername = "Superconducting Transmission Coil crate"
 
@@ -77,13 +77,27 @@
 	containertype = /obj/structure/closet/crate/focalpoint
 	containername = "advanced hull shield generator crate"
 
+/datum/supply_pack/eng/point_defense_cannon_circuit
+	name = "Point Defense Turret Circuit"
+	contains = list(/obj/item/circuitboard/pointdefense = 2)
+	cost = 20
+	containertype = /obj/structure/closet/crate/heph
+	containername = "point defense turret circuit crate"
+
+/datum/supply_pack/eng/point_defense_control_circuit
+	name = "Point Defense Controller Circuit"
+	contains = list(/obj/item/circuitboard/pointdefense_control = 1)
+	cost = 30
+	containertype = /obj/structure/closet/crate/heph
+	containername = "point defense mainframe circuit crate"
+
 /datum/supply_pack/eng/electrical
 	name = "Electrical maintenance crate"
 	contains = list(
-			/obj/item/weapon/storage/toolbox/electrical = 2,
+			/obj/item/storage/toolbox/electrical = 2,
 			/obj/item/clothing/gloves/yellow = 2,
-			/obj/item/weapon/cell = 2,
-			/obj/item/weapon/cell/high = 2
+			/obj/item/cell = 2,
+			/obj/item/cell/high = 2
 			)
 	cost = 10
 	containertype = /obj/structure/closet/crate/ward
@@ -92,7 +106,7 @@
 /datum/supply_pack/eng/e_welders
 	name = "Electric welder crate"
 	contains = list(
-			/obj/item/weapon/weldingtool/electric = 3
+			/obj/item/weldingtool/electric = 3
 			)
 	cost = 15
 	containertype = /obj/structure/closet/crate/ward
@@ -101,7 +115,7 @@
 /datum/supply_pack/eng/mechanical
 	name = "Mechanical maintenance crate"
 	contains = list(
-			/obj/item/weapon/storage/belt/utility/full = 3,
+			/obj/item/storage/belt/utility/full = 3,
 			/obj/item/clothing/suit/storage/hazardvest = 3,
 			/obj/item/clothing/head/welding = 2,
 			/obj/item/clothing/head/hardhat
@@ -121,9 +135,9 @@
 	name = "Solar Pack crate"
 	contains  = list(
 			/obj/item/solar_assembly = 21,
-			/obj/item/weapon/circuitboard/solar_control,
-			/obj/item/weapon/tracker_electronics,
-			/obj/item/weapon/paper/solar
+			/obj/item/circuitboard/solar_control,
+			/obj/item/tracker_electronics,
+			/obj/item/paper/solar
 			)
 	cost = 20
 	containertype = /obj/structure/closet/crate/einstein
@@ -135,7 +149,7 @@
 	cost = 10
 	containertype = /obj/structure/closet/crate/secure/einstein
 	containername = "Emitter crate"
-	access = access_ce
+	access = access_engine //CHOMPedit
 
 /datum/supply_pack/eng/engine/field_gen
 	name = "Field Generator crate"
@@ -178,10 +192,11 @@
 			)
 	containertype = /obj/structure/closet/crate/secure/einstein
 	containername = "Particle Accelerator crate"
-	access = access_ce
+	access = list(access_ce, access_research) // CHOMPEdit
+	one_access = TRUE //CHOMPAdd
 
 /datum/supply_pack/eng/shield_gen
-	contains = list(/obj/item/weapon/circuitboard/shield_gen)
+	contains = list(/obj/item/circuitboard/shield_gen)
 	name = "Bubble shield generator circuitry"
 	cost = 30
 	containertype = /obj/structure/closet/crate/secure/focalpoint
@@ -189,7 +204,7 @@
 	access = access_ce
 
 /datum/supply_pack/eng/shield_gen_ex
-	contains = list(/obj/item/weapon/circuitboard/shield_gen_ex)
+	contains = list(/obj/item/circuitboard/shield_gen_ex)
 	name = "Hull shield generator circuitry"
 	cost = 30
 	containertype = /obj/structure/closet/crate/secure/focalpoint
@@ -197,7 +212,7 @@
 	access = access_ce
 
 /datum/supply_pack/eng/shield_cap
-	contains = list(/obj/item/weapon/circuitboard/shield_cap)
+	contains = list(/obj/item/circuitboard/shield_cap)
 	name = "Bubble shield capacitor circuitry"
 	cost = 30
 	containertype = /obj/structure/closet/crate/secure/focalpoint
@@ -206,7 +221,7 @@
 
 /datum/supply_pack/eng/smbig
 	name = "Supermatter Core"
-	contains = list(/obj/machinery/power/supermatter)
+	contains = list(/obj/machinery/power/supermatter/station) // CHOMPEdit: Station SM for Cargo Orders
 	cost = 150
 	containertype = /obj/structure/closet/crate/secure/phoron
 	containername = "Supermatter crate (CAUTION)"
@@ -255,10 +270,10 @@
 	containertype = /obj/structure/closet/crate/secure/focalpoint
 	access = access_tech_storage
 	contains = list(
-			/obj/item/weapon/stock_parts/micro_laser,
-			/obj/item/weapon/stock_parts/capacitor,
-			/obj/item/weapon/stock_parts/matter_bin,
-			/obj/item/weapon/circuitboard/pacman
+			/obj/item/stock_parts/micro_laser,
+			/obj/item/stock_parts/capacitor,
+			/obj/item/stock_parts/matter_bin,
+			/obj/item/circuitboard/pacman
 			)
 
 /datum/supply_pack/eng/super_pacman_parts
@@ -268,10 +283,10 @@
 	containertype = /obj/structure/closet/crate/secure/focalpoint
 	access = access_tech_storage
 	contains = list(
-			/obj/item/weapon/stock_parts/micro_laser,
-			/obj/item/weapon/stock_parts/capacitor,
-			/obj/item/weapon/stock_parts/matter_bin,
-			/obj/item/weapon/circuitboard/pacman/super
+			/obj/item/stock_parts/micro_laser,
+			/obj/item/stock_parts/capacitor,
+			/obj/item/stock_parts/matter_bin,
+			/obj/item/circuitboard/pacman/super
 			)
 
 /datum/supply_pack/eng/fusion_core
@@ -281,9 +296,9 @@
 	containertype = /obj/structure/closet/crate/secure/einstein
 	access = access_engine
 	contains = list(
-			/obj/item/weapon/book/manual/rust_engine,
+			/obj/item/book/manual/rust_engine,
 			/obj/machinery/power/fusion_core,
-			/obj/item/weapon/circuitboard/fusion_core
+			/obj/item/circuitboard/fusion_core
 			)
 
 /datum/supply_pack/eng/fusion_fuel_injector
@@ -295,7 +310,7 @@
 	contains = list(
 			/obj/machinery/fusion_fuel_injector,
 			/obj/machinery/fusion_fuel_injector,
-			/obj/item/weapon/circuitboard/fusion_injector
+			/obj/item/circuitboard/fusion_injector
 			)
 
 /datum/supply_pack/eng/gyrotron
@@ -306,7 +321,7 @@
 	access = access_engine
 	contains = list(
 			/obj/machinery/power/emitter/gyrotron,
-			/obj/item/weapon/circuitboard/gyrotron
+			/obj/item/circuitboard/gyrotron
 			)
 
 /datum/supply_pack/eng/fusion_fuel_compressor
@@ -314,7 +329,14 @@
 	cost = 10
 	containername = "Fusion Fuel Compressor circuitry crate"
 	containertype = /obj/structure/closet/crate/einstein
-	contains = list(/obj/item/weapon/circuitboard/fusion_fuel_compressor)
+	contains = list(/obj/item/circuitboard/fusion_fuel_compressor)
+
+/datum/supply_pack/eng/deuterium
+	name = "Deuterium crate"
+	cost = 50
+	containername = "Deuterium crate"
+	containertype = /obj/structure/closet/crate/einstein
+	contains = list(/obj/fiftyspawner/deuterium)
 
 /datum/supply_pack/eng/tritium
 	name = "Tritium crate"
@@ -322,3 +344,60 @@
 	containername = "Tritium crate"
 	containertype = /obj/structure/closet/crate/einstein
 	contains = list(/obj/fiftyspawner/tritium)
+
+/datum/supply_pack/eng/modern_shield
+	name = "Modern Shield Construction Kit"
+	contains = list(
+		/obj/item/circuitboard/shield_generator,
+		/obj/item/stock_parts/capacitor,
+		/obj/item/stock_parts/micro_laser,
+		/obj/item/smes_coil,
+		/obj/item/stock_parts/console_screen,
+		/obj/item/stock_parts/subspace/amplifier
+		)
+	cost = 80
+	containertype = /obj/structure/closet/crate/focalpoint
+	containername = "shield generator construction kit crate"
+
+/datum/supply_pack/eng/thermoregulator
+	contains = list(/obj/machinery/power/thermoregulator)
+	name = "Thermal Regulator"
+	cost = 30
+	containertype = /obj/structure/closet/crate/large
+	containername = "thermal regulator crate"
+	access = access_atmospherics
+
+/datum/supply_pack/eng/radsuit
+	contains = list(
+			/obj/item/clothing/suit/radiation = 3,
+			/obj/item/clothing/head/radiation = 3
+			)
+
+/datum/supply_pack/eng/dosimeter
+	contains = list(/obj/item/storage/box/dosimeter = 6)
+	name = "Dosimeters"
+	cost = 10
+	containertype = /obj/structure/closet/crate
+	containername = "dosimeter crate"
+
+/datum/supply_pack/eng/algae
+	contains = list(/obj/item/stack/material/algae/ten)
+	name = "Algae Sheets (10)"
+	cost = 20
+	containertype = /obj/structure/closet/crate
+	containername = "algae sheets crate"
+
+/datum/supply_pack/eng/engine/tesla_gen
+	name = "Tesla Generator crate"
+	contains = list(/obj/machinery/the_singularitygen/tesla)
+	containertype = /obj/structure/closet/crate/secure/engineering
+	containername = "Tesla Generator crate"
+	access = access_ce
+
+/datum/supply_pack/eng/inducer
+	contains = list(/obj/item/inducer = 3)
+	name = "inducer"
+	cost = 90	//Relatively expensive
+	containertype = /obj/structure/closet/crate/xion
+	containername = "Inducers crate"
+	access = access_engine

@@ -10,7 +10,7 @@
 	icon_state = "restruct_0"
 	density = TRUE
 	anchored = TRUE
-	circuit = /obj/item/weapon/circuitboard/slimereplicator
+	circuit = /obj/item/circuitboard/slimereplicator
 	var/obj/item/xenoproduct/slime/core/core = null
 	var/inuse
 	var/occupiedcolor = "#22FF22"
@@ -24,11 +24,11 @@
 
 /obj/machinery/slime/replicator/attackby(var/obj/item/W, var/mob/user)
 	//Let's try to deconstruct first.
-	if(W.is_screwdriver() && !inuse)
+	if(W.has_tool_quality(TOOL_SCREWDRIVER) && !inuse)
 		default_deconstruction_screwdriver(user, W)
 		return
 
-	if(W.is_crowbar())
+	if(W.has_tool_quality(TOOL_CROWBAR))
 		default_deconstruction_crowbar(user, W)
 		return
 
@@ -38,10 +38,10 @@
 		return ..()
 
 	if(core)
-		to_chat(user, "<span class='warning'>[src] is already filled!</span>")
+		to_chat(user, span_warning("[src] is already filled!"))
 		return
 	if(panel_open)
-		to_chat(user, "<span class='warning'>Close the panel first!</span>")
+		to_chat(user, span_warning("Close the panel first!"))
 	core = G
 	user.drop_from_inventory(G)
 	G.forceMove(src)
@@ -57,7 +57,7 @@
 
 /obj/machinery/slime/replicator/proc/replicate_slime()
 	if(!src.core)
-		src.visible_message("[bicon(src)] [src] pings unhappily.")
+		src.visible_message("[icon2html(src,viewers(src))] [src] pings unhappily.")
 	else if(inuse)
 		return
 
@@ -130,14 +130,13 @@
 	return
 
 //Circuit board below,
-/obj/item/weapon/circuitboard/slimereplicator
+/obj/item/circuitboard/slimereplicator
 	name = T_BOARD("Slime replicator")
 	build_path = "/obj/machinery/slime/replicator"
 	board_type = "machine"
 	origin_tech = list(TECH_DATA = 3, TECH_BIO = 3)
 	req_components = list(
-							/obj/item/weapon/stock_parts/manipulator = 2,
-							/obj/item/weapon/stock_parts/matter_bin = 1,
-							/obj/item/weapon/stock_parts/micro_laser = 1
+							/obj/item/stock_parts/manipulator = 2,
+							/obj/item/stock_parts/matter_bin = 1,
+							/obj/item/stock_parts/micro_laser = 1
 							)
-

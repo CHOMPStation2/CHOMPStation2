@@ -22,7 +22,7 @@
 
 /obj/machinery/portable_atmospherics/powered/scrubber/New()
 	..()
-	cell = new/obj/item/weapon/cell/apc(src)
+	cell = new/obj/item/cell/apc(src)
 
 /obj/machinery/portable_atmospherics/powered/scrubber/emp_act(severity)
 	if(stat & (BROKEN|NOPOWER))
@@ -109,7 +109,7 @@
 	data["on"] = on ? 1 : 0
 	data["connected"] = connected_port ? 1 : 0
 	data["pressure"] = round(air_contents.return_pressure() > 0 ? air_contents.return_pressure() : 0)
-	
+
 	data["rate"] = round(volume_rate)
 	data["minrate"] = round(minrate)
 	data["maxrate"] = round(maxrate)
@@ -174,7 +174,7 @@
 	name = "[name] (ID [id])"
 
 /obj/machinery/portable_atmospherics/powered/scrubber/huge/attack_hand(var/mob/user as mob)
-		to_chat(user, "<span class='notice'>You can't directly interact with this machine. Use the scrubber control console.</span>")
+		to_chat(user, span_notice("You can't directly interact with this machine. Use the scrubber control console."))
 
 /obj/machinery/portable_atmospherics/powered/scrubber/huge/update_icon()
 	src.overlays = 0
@@ -201,7 +201,7 @@
 		update_use_power(new_use_power)
 	if(!on)
 		return
-	
+
 	var/power_draw = -1
 
 	var/datum/gas_mixture/environment = loc.return_air()
@@ -218,25 +218,25 @@
 		update_connected_network()
 
 /obj/machinery/portable_atmospherics/powered/scrubber/huge/attackby(var/obj/item/I as obj, var/mob/user as mob)
-	if(I.is_wrench())
+	if(I.has_tool_quality(TOOL_WRENCH))
 		if(on)
-			to_chat(user, "<span class='warning'>Turn \the [src] off first!</span>")
+			to_chat(user, span_warning("Turn \the [src] off first!"))
 			return
 
 		anchored = !anchored
 		playsound(src, I.usesound, 50, 1)
-		to_chat(user, "<span class='notice'>You [anchored ? "wrench" : "unwrench"] \the [src].</span>")
+		to_chat(user, span_notice("You [anchored ? "wrench" : "unwrench"] \the [src]."))
 
 		return
 
 	//doesn't use power cells
-	if(istype(I, /obj/item/weapon/cell))
+	if(istype(I, /obj/item/cell))
 		return
-	if(I.is_screwdriver())
+	if(I.has_tool_quality(TOOL_SCREWDRIVER))
 		return
 
 	//doesn't hold tanks
-	if(istype(I, /obj/item/weapon/tank))
+	if(istype(I, /obj/item/tank))
 		return
 
 	..()
@@ -250,8 +250,8 @@
 	desc += "This one seems to be tightly secured with large bolts."
 
 /obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary/attackby(var/obj/item/I as obj, var/mob/user as mob)
-	if(I.is_wrench())
-		to_chat(user, "<span class='warning'>The bolts are too tight for you to unscrew!</span>")
+	if(I.has_tool_quality(TOOL_WRENCH))
+		to_chat(user, span_warning("The bolts are too tight for you to unscrew!"))
 		return
 
 	..()

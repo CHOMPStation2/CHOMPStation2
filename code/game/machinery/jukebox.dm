@@ -3,11 +3,6 @@
 // Rewritten by Leshana from existing Polaris code, merging in D2K5 and N3X15 work
 //
 
-#define JUKEMODE_NEXT        1 // Advance to next song in the track list
-#define JUKEMODE_RANDOM      2 // Not shuffle, randomly picks next each time.
-#define JUKEMODE_REPEAT_SONG 3 // Play the same song over and over
-#define JUKEMODE_PLAY_ONCE   4 // Play, then stop.
-
 /obj/machinery/media/jukebox
 	name = "space jukebox"
 	desc = "Filled with songs both past and present!"
@@ -20,8 +15,9 @@
 	use_power = USE_POWER_IDLE
 	idle_power_usage = 10
 	active_power_usage = 100
-	circuit = /obj/item/weapon/circuitboard/jukebox
+	circuit = /obj/item/circuitboard/jukebox
 	clicksound = 'sound/machines/buttonbeep.ogg'
+	volume = 0.5 //CHOMPEdit
 
 	// Vars for hacking
 	var/datum/wires/jukebox/wires = null
@@ -29,7 +25,7 @@
 	var/freq = 0 // Currently no effect, will return in phase II of mediamanager.
 	//VOREStation Add
 	var/loop_mode = JUKEMODE_PLAY_ONCE			// Behavior when finished playing a song
-	var/list/obj/item/device/juke_remote/remotes
+	var/list/obj/item/juke_remote/remotes
 	//VOREStation Add End
 	var/datum/track/current_track
 
@@ -85,13 +81,13 @@
 	if(current_track && playing)
 		media_url = current_track.url
 		media_start_time = world.time
-		audible_message("<span class='notice'>\The [src] begins to play [current_track.display()].</span>", runemessage = "[current_track.display()]")
+		audible_message(span_notice("\The [src] begins to play [current_track.display()]."), runemessage = "[current_track.display()]")
 	else
 		media_url = ""
 		media_start_time = 0
 	update_music()
 	//VOREStation Add
-	for(var/obj/item/device/juke_remote/remote as anything in remotes)
+	for(var/obj/item/juke_remote/remote as anything in remotes)
 		remote.update_music()
 	//VOREStation Add End
 
@@ -108,14 +104,14 @@
 		return
 	if(default_deconstruction_crowbar(user, W))
 		return
-	if(W.is_wirecutter())
+	if(W.has_tool_quality(TOOL_WIRECUTTER))
 		return wires.Interact(user)
-	if(istype(W, /obj/item/device/multitool))
+	if(istype(W, /obj/item/multitool))
 		return wires.Interact(user)
-	if(W.is_wrench())
+	if(W.has_tool_quality(TOOL_WRENCH))
 		if(playing)
 			StopPlaying()
-		user.visible_message("<span class='warning'>[user] has [anchored ? "un" : ""]secured \the [src].</span>", "<span class='notice'>You [anchored ? "un" : ""]secure \the [src].</span>")
+		user.visible_message(span_warning("[user] has [anchored ? "un" : ""]secured \the [src]."), span_notice("You [anchored ? "un" : ""]secure \the [src]."))
 		anchored = !anchored
 		playsound(src, W.usesound, 50, 1)
 		power_change()
@@ -163,10 +159,10 @@
 
 /obj/machinery/media/jukebox/tgui_status(mob/user)
 	if(inoperable())
-		to_chat(user, "<span class='warning'>[src] doesn't appear to function.</span>")
+		to_chat(user, span_warning("[src] doesn't appear to function."))
 		return STATUS_CLOSE
 	if(!anchored)
-		to_chat(user, "<span class='warning'>You must secure [src] first.</span>")
+		to_chat(user, span_warning("You must secure [src] first."))
 		return STATUS_CLOSE
 	. = ..()
 
@@ -195,6 +191,7 @@
 	for(var/datum/track/T in getTracksList())
 		tgui_tracks.Add(list(T.toTguiList()))
 	data["tracks"] = tgui_tracks
+	data["admin"] = is_admin(user)
 
 	return data
 
@@ -230,6 +227,7 @@
 					M.SetSleeping(0)
 					M.stuttering += 20
 					M.ear_deaf += 30
+					M.deaf_loop.start() // CHOMPStation Add: Ear Ringing/Deafness
 					M.Weaken(3)
 					if(prob(30))
 						M.Stun(10)
@@ -243,6 +241,13 @@
 			else
 				StartPlaying()
 			return TRUE
+		if("add_new_track")
+			SSmedia_tracks.add_track(usr, params["url"], params["title"], text2num(params["duration"]) * 10, params["artist"], params["genre"], text2num(params["secret"]), text2num(params["lobby"]))
+		if("remove_new_track")
+			var/datum/track/track_to_remove = locate(params["ref"]) in getTracksList()
+			if(track_to_remove == current_track && playing)
+				StopPlaying()
+			SSmedia_tracks.remove_track(usr, track_to_remove)
 
 /obj/machinery/media/jukebox/attack_ai(mob/user as mob)
 	return src.attack_hand(user)
@@ -252,7 +257,7 @@
 
 /obj/machinery/media/jukebox/proc/explode()
 	walk_to(src,0)
-	src.visible_message("<span class='danger'>\The [src] blows apart!</span>", 1)
+	src.visible_message(span_danger("\The [src] blows apart!"), 1)
 
 	explosion(src.loc, 0, 0, 1, rand(1,2), 1)
 
@@ -270,10 +275,10 @@
 		return
 	if(default_deconstruction_crowbar(user, W))
 		return
-	if(W.is_wrench())
+	if(W.has_tool_quality(TOOL_WRENCH))
 		if(playing)
 			StopPlaying()
-		user.visible_message("<span class='warning'>[user] has [anchored ? "un" : ""]secured \the [src].</span>", "<span class='notice'>You [anchored ? "un" : ""]secure \the [src].</span>")
+		user.visible_message(span_warning("[user] has [anchored ? "un" : ""]secured \the [src]."), span_notice("You [anchored ? "un" : ""]secure \the [src]."))
 		anchored = !anchored
 		playsound(src, W.usesound, 50, 1)
 		power_change()
@@ -285,7 +290,7 @@
 	if(!emagged)
 		emagged = 1
 		StopPlaying()
-		visible_message("<span class='danger'>\The [src] makes a fizzling sound.</span>")
+		visible_message(span_danger("\The [src] makes a fizzling sound."))
 		update_icon()
 		return 1
 
@@ -401,20 +406,20 @@
 		return
 
 	// Required
-	var/url = input(C, "REQUIRED: Provide URL for track", "Track URL") as text|null
+	var/url = tgui_input_text(C, "REQUIRED: Provide URL for track", "Track URL")
 	if(!url)
 		return
 
-	var/title = input(C, "REQUIRED: Provide title for track", "Track Title") as text|null
+	var/title = tgui_input_text(C, "REQUIRED: Provide title for track", "Track Title")
 	if(!title)
 		return
 
-	var/duration = input(C, "REQUIRED: Provide duration for track (in deciseconds, aka seconds*10)", "Track Duration") as num|null
+	var/duration = tgui_input_number(C, "REQUIRED: Provide duration for track (in deciseconds, aka seconds*10)", "Track Duration")
 	if(!duration)
 		return
 
 	// Optional
-	var/artist = input(C, "Optional: Provide artist for track", "Track Artist") as text|null
+	var/artist = tgui_input_text(C, "Optional: Provide artist for track", "Track Artist")
 	if(isnull(artist)) // Cancel rather than empty string
 		return
 
@@ -428,7 +433,7 @@
 	if(!check_rights(R_FUN|R_ADMIN))
 		return
 
-	var/track = input(C, "Input track title or URL to remove (must be exact)", "Remove Track") as text|null
+	var/track = tgui_input_text(C, "Input track title or URL to remove (must be exact)", "Remove Track")
 	if(!track)
 		return
 
@@ -438,7 +443,7 @@
 			qdel(T)
 			return
 
-	to_chat(C, "<span class='warning>Couldn't find a track matching the specified parameters.</span>")
+	to_chat(C, span_warning("Couldn't find a track matching the specified parameters."))
 
 /obj/machinery/media/jukebox/ghost/vv_get_dropdown()
 	. = ..()

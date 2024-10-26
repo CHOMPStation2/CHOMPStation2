@@ -17,11 +17,13 @@
 /turf/simulated/floor/smole/Entered(atom/A)
 	if(isliving(A))
 		var/mob/living/L = A
-		if(L.hovering) // Flying things shouldn't make footprints.
+		if(L.hovering || L.flying) // Flying things shouldn't make footprints.
+			if(L.flying)
+				L.adjust_nutrition(-0.5)
 			return ..()
-		if(L.get_effective_size() <= RESIZE_NORMAL)
+		if(L.get_effective_size(FALSE) <= RESIZE_NORMAL)
 			return ..()
-		if(L.get_effective_size() >= RESIZE_A_BIGNORMAL)
+		if(L.get_effective_size(FALSE) >= RESIZE_A_BIGNORMAL)
 			playsound(src, 'sound/effects/footstep/giantstep_gigga.ogg', 35, 1, -1, volume_channel = VOLUME_CHANNEL_MASTER)
 			var/mdir = "[A.dir]"
 			crossed_dirs[mdir] = 1
@@ -84,7 +86,7 @@
 	w_class = ITEMSIZE_SMALL
 
 //smolebrick case to make for easy bricks.
-/obj/item/weapon/storage/smolebrickcase
+/obj/item/storage/smolebrickcase
 	name = "smolebrick case"
 	desc = "You feel the power of imagination."
 	icon = 'icons/vore/smoleworld_vr.dmi'
@@ -112,9 +114,9 @@
 
 /obj/structure/smoletrack/attack_hand(mob/user)
 	if(user.a_intent == I_DISARM)
-		if(ismouse(usr) || (isobserver(usr) && !config.ghost_interaction))
+		if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction)))
 			return
-		to_chat(user, "<span class='notice'>[src] was dismantaled into bricks.</span>")
+		to_chat(user, span_notice("[src] was dismantaled into bricks."))
 		playsound(src, 'sound/items/smolesmallbuild.ogg', 50, 1, -1, volume_channel = VOLUME_CHANNEL_MASTER)
 		var/turf/simulated/floor/F = get_turf(src)
 		if(istype(F))
@@ -126,16 +128,24 @@
 	set name = "Rotate Road Clockwise"
 	set category = "Object"
 	set src in oview(1)
-	if(ismouse(usr) || (isobserver(usr) && !config.ghost_interaction))
+	if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction)))
 		return
 	src.set_dir(turn(src.dir, 270))
+
+/obj/structure/smoletrack/verb/rotate_counterclockwise()
+	set name = "Rotate Road Counter-Clockwise"
+	set category = "Object"
+	set src in oview(1)
+	if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction)))
+		return
+	src.set_dir(turn(src.dir, 90))
 
 //color roads
 /obj/structure/smoletrack/verb/colorpieces()
 	set name = "Use Color Pieces"
 	set category = "Object"
 	set src in oview(1)
-	if(ismouse(usr) || (isobserver(usr) && !config.ghost_interaction))
+	if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction)))
 		return
 	var/new_color = input(usr, "Please select color.", "Paint Color", color) as color|null
 	color = new_color
@@ -147,7 +157,7 @@
 	set name = "Take Road Apart"
 	set category = "Object"
 	set src in oview(1)
-	if(ismouse(usr) || (isobserver(usr) && !config.ghost_interaction))
+	if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction)))
 		return
 	playsound(src, 'sound/items/smolesmallbuild.ogg', 50, 1, -1, volume_channel = VOLUME_CHANNEL_MASTER)
 	var/turf/simulated/floor/F = get_turf(src)
@@ -194,14 +204,16 @@
 	density = TRUE
 	anchored = TRUE
 	color = "#ffffff"
+	micro_target = TRUE	//Now micros can enter and navigate these things!!!
 	var/health = 75
 	var/damage
+
 //makes it so buildings can be dismaintaled or GodZilla style attacked
 /obj/structure/smolebuilding/attack_hand(mob/user)
 	if(user.a_intent == I_DISARM)
-		if(ismouse(usr) || (isobserver(usr) && !config.ghost_interaction))
+		if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction)))
 			return
-		to_chat(user, "<span class='notice'>[src] was dismantaled into bricks.</span>")
+		to_chat(user, span_notice("[src] was dismantaled into bricks."))
 		playsound(src, 'sound/items/smolesmallbuild.ogg', 50, 1, -1, volume_channel = VOLUME_CHANNEL_MASTER)
 		if(!isnull(loc))
 			new /obj/item/stack/material/smolebricks(loc)
@@ -210,14 +222,14 @@
 
 	else if (usr.a_intent == I_HURT)
 
-		if(ismouse(usr) || (isobserver(usr) && !config.ghost_interaction))
+		if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction)))
 			return
 
 		take_damage()
 		playsound(src, 'sound/items/smolebuildinghit2.ogg', 50, 1)
 		user.do_attack_animation(src)
-		usr.visible_message("<span class='danger'>\The [usr] bangs against \the [src]!</span>",
-							"<span class='danger'>You bang against \the [src]!</span>",
+		usr.visible_message(span_danger("\The [usr] bangs against \the [src]!"),
+							span_danger("You bang against \the [src]!"),
 							"You hear a banging sound.")
 	else
 		usr.visible_message("[usr.name] knocks on the [src.name].",
@@ -236,14 +248,14 @@
 	return
 //results of attacks will remove building and spawn in ruins.
 /obj/structure/smolebuilding/proc/dismantle()
-	visible_message("<span class='danger'>\The [src] falls apart!</span>")
+	visible_message(span_danger("\The [src] falls apart!"))
 	playsound(src, 'sound/items/smolebuildingdestoryed.ogg', 50, 1, -1, volume_channel = VOLUME_CHANNEL_MASTER)
 	new /obj/structure/smoleruins(loc)
 	qdel(src)
 	return
 
 //checks for items and does the same as dismaintle but spawns material instead.
-/obj/structure/smolebuilding/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/structure/smolebuilding/attackby(obj/item/W as obj, mob/user as mob)
 	dismantle()
 	return
 //checks for projectile damage and does the same as dismaintle but spawns material instead.
@@ -252,7 +264,7 @@
 	return
 //is the same as dismaintal but instead of ruins it just makes it all explode
 /obj/structure/smolebuilding/proc/displode()
-	visible_message("<span class='danger'>\The [src] explodes into pieces!</span>")
+	visible_message(span_danger("\The [src] explodes into pieces!"))
 	playsound(src, 'sound/items/smolebuildingdestoryedshort.ogg', 50, 1, -1, volume_channel = VOLUME_CHANNEL_MASTER)
 	new /obj/item/stack/material/smolebricks(loc)
 	new /obj/item/stack/material/smolebricks(loc)
@@ -262,9 +274,9 @@
 //get material from ruins
 /obj/structure/smoleruins/attack_hand(mob/user)
 	if(user.a_intent == I_DISARM)
-		if(ismouse(usr) || (isobserver(usr) && !config.ghost_interaction))
+		if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction)))
 			return
-		to_chat(user, "<span class='notice'>[src] was dismantaled into bricks.</span>")
+		to_chat(user, span_notice("[src] was dismantaled into bricks."))
 		playsound(src, 'sound/items/smolelargeunbuild.ogg', 50, 1, volume_channel = VOLUME_CHANNEL_MASTER)
 		if(!isnull(loc))
 			new /obj/item/stack/material/smolebricks(loc)
@@ -272,7 +284,7 @@
 		qdel(src)
 
 //Ruins go asplode same as buildings if attacked
-/obj/structure/smoleruins/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/structure/smoleruins/attackby(obj/item/W as obj, mob/user as mob)
 	displode()
 	return
 
@@ -281,7 +293,7 @@
 	return
 
 /obj/structure/smoleruins/proc/displode()
-	visible_message("<span class='danger'>\The [src] explodes into pieces!</span>")
+	visible_message(span_danger("\The [src] explodes into pieces!"))
 	playsound(src, 'sound/items/smolebuildingdestoryedshort.ogg', 50, 1, -1, volume_channel = VOLUME_CHANNEL_MASTER)
 	new /obj/item/stack/material/smolebricks(loc)
 	new /obj/item/stack/material/smolebricks(loc)
@@ -293,7 +305,7 @@
 	set name = "Use Color Pieces"
 	set category = "Object"
 	set src in oview(1)
-	if(ismouse(usr) || (isobserver(usr) && !config.ghost_interaction))
+	if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction)))
 		return
 	var/new_color = input(usr, "Please select color.", "Paint Color", color) as color|null
 	color = new_color
@@ -304,7 +316,7 @@
 	set name = "Take Building Apart"
 	set category = "Object"
 	set src in oview(1)
-	if(ismouse(usr) || (isobserver(usr) && !config.ghost_interaction))
+	if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction)))
 		return
 	playsound(src, 'sound/items/smolesmallbuild.ogg', 50, 1, -1, volume_channel = VOLUME_CHANNEL_MASTER)
 	if(!isnull(loc))
@@ -365,8 +377,8 @@
 //	. = ..()
 //	if(.)
 //
-//		if(M.get_effective_size() > RESIZE_TINY)
-//			to_chat(M, SPAN_WARNING("You are to big to fit in \the [src]."))
+//		if(M.get_effective_size(TRUE) > RESIZE_TINY)
+//			to_chat(M, span_warning("You are to big to fit in \the [src]."))
 	//		. = FALSE
 //
 //
@@ -389,13 +401,13 @@
 	name = "asteriod"
 	desc = "Several chunks of sugar crumbs that looks like asteriods."
 
-/obj/item/weapon/bikehorn/tinytether
+/obj/item/bikehorn/tinytether
 	icon = 'icons/vore/smoleworld_vr.dmi'
 	icon_state = "tether_trash"
 	name = "tether"
 	desc = "Its a tiny bit of plastic in the shape of the tether. There seems to be a small button on top."
 
-/obj/item/weapon/bikehorn/tinytether/attack_self(mob/user as mob)
+/obj/item/bikehorn/tinytether/attack_self(mob/user as mob)
 	if(spam_flag == 0)
 		spam_flag = 1
 		playsound(src, 'sound/items/tinytether.ogg', 30, 1, volume_channel = VOLUME_CHANNEL_MASTER)
@@ -404,7 +416,7 @@
 			spam_flag = 0
 	return
 
-/obj/item/weapon/reagent_containers/food/snacks/snackplanet/moon
+/obj/item/reagent_containers/food/snacks/snackplanet/moon
 	name = "moon"
 	desc = "A firm solid mass of white powdery sugar in the shape of a moon!"
 	icon = 'icons/vore/smoleworld_vr.dmi'
@@ -414,18 +426,18 @@
 	nutriment_desc = list("sugar" = 2)
 	drop_sound = 'sound/items/drop/basketball.ogg'
 
-/obj/item/weapon/reagent_containers/food/snacks/snackplanet/virgo3b
+/obj/item/reagent_containers/food/snacks/snackplanet/virgo3b
 	name = "Virgo 3B"
 	desc = "A sticky jelly jaw breaker in the shape of Virgo-3B, it even has a tiny tether!"
 	icon = 'icons/vore/smoleworld_vr.dmi'
 	icon_state = "sp_Virgo3B"
 	bitesize = 3
-	trash = /obj/item/weapon/bikehorn/tinytether
+	trash = /obj/item/bikehorn/tinytether
 	nutriment_amt = 2
 	nutriment_desc = list("spicy" = 2, "tang" = 2)
 	drop_sound = 'sound/items/drop/basketball.ogg'
 
-/obj/item/weapon/reagent_containers/food/snacks/snackplanet/phoron
+/obj/item/reagent_containers/food/snacks/snackplanet/phoron
 	name = "phoron giant"
 	desc = "A spicy jaw breaker that seems to swirl in the light."
 	icon = 'icons/vore/smoleworld_vr.dmi'
@@ -436,7 +448,7 @@
 	nutriment_desc = list("spicy" = 2)
 	drop_sound = 'sound/items/drop/basketball.ogg'
 
-/obj/item/weapon/reagent_containers/food/snacks/snackplanet/virgoprime
+/obj/item/reagent_containers/food/snacks/snackplanet/virgoprime
 	name = "Virgo Prime"
 	desc = "It's a orange jaw breaker in the shape of Virgo Prime!"
 	icon = 'icons/vore/smoleworld_vr.dmi'
@@ -447,7 +459,7 @@
 	nutriment_desc = list("salty" = 2)
 	drop_sound = 'sound/items/drop/basketball.ogg'
 
-/obj/item/weapon/storage/bagoplanets
+/obj/item/storage/bagoplanets
 	name = "bag o' planets"
 	desc = "A cosmic bag of fist-sized candy planets."
 	icon = 'icons/vore/smoleworld_vr.dmi'
@@ -457,7 +469,7 @@
 	max_storage_space = ITEMSIZE_COST_SMALL * 7 // most code copied from toolbox
 	drop_sound = 'sound/items/drop/food.ogg'
 	pickup_sound = 'sound/items/pickup/food.ogg'
-	starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/snackplanet/phoron,
-	/obj/item/weapon/reagent_containers/food/snacks/snackplanet/virgo3b,/obj/item/weapon/reagent_containers/food/snacks/snackplanet/moon,
-	/obj/item/weapon/reagent_containers/food/snacks/snackplanet/virgoprime
+	starts_with = list(/obj/item/reagent_containers/food/snacks/snackplanet/phoron,
+	/obj/item/reagent_containers/food/snacks/snackplanet/virgo3b,/obj/item/reagent_containers/food/snacks/snackplanet/moon,
+	/obj/item/reagent_containers/food/snacks/snackplanet/virgoprime
 	)

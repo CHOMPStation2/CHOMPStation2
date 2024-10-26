@@ -17,23 +17,28 @@
 
 	mob_size = MOB_SMALL
 
-	has_langs = list("Dog")
+	has_langs = list(LANGUAGE_ANIMAL)
 
 	say_list_type = /datum/say_list/dog
 
 	meat_amount = 3
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat/corgi
+	meat_type = /obj/item/reagent_containers/food/snacks/meat/corgi
 
 	var/obj/item/inventory_head
 	var/obj/item/inventory_back
 
+	// CHOMPAdd: :c
+	species_sounds = "Canine"
+	pain_emote_1p = list("yelp", "whine", "bark", "growl")
+	pain_emote_3p = list("yelps", "whines", "barks", "growls")
+
 
 /mob/living/simple_mob/animal/passive/dog/attackby(var/obj/item/O as obj, var/mob/user as mob)
-	if(istype(O, /obj/item/weapon/newspaper))
+	if(istype(O, /obj/item/newspaper))
 		if(!stat)
 			for(var/mob/M in viewers(user, null))
 				if ((M.client && !( M.blinded )))
-					M.show_message("<font color='blue'>[user] baps [name] on the nose with the rolled up [O]</font>")
+					M.show_message(span_blue("[user] baps [name] on the nose with the rolled up [O]."))
 			spawn(0)
 				for(var/i in list(1,2,4,8,4,2,1,2))
 					set_dir(i)
@@ -67,7 +72,7 @@
 
 
 
-/obj/item/weapon/reagent_containers/food/snacks/meat/corgi
+/obj/item/reagent_containers/food/snacks/meat/corgi
 	name = "corgi meat"
 	desc = "Tastes like... well, you know..."
 
@@ -88,7 +93,7 @@
 	icon_state = "corgi"
 	icon_living = "corgi"
 	icon_dead = "corgi_dead"
-	holder_type = /obj/item/weapon/holder/corgi
+	holder_type = /obj/item/holder/corgi
 	organ_names = /decl/mob_organ_names/corgi
 
 /mob/living/simple_mob/animal/passive/dog/corgi/puppy
@@ -98,12 +103,12 @@
 	icon_state = "puppy"
 	icon_living = "puppy"
 	icon_dead = "puppy_dead"
-	holder_type = /obj/item/weapon/holder/corgi
+	holder_type = /obj/item/holder/corgi
 
 //pupplies cannot wear anything.
 /mob/living/simple_mob/animal/passive/dog/corgi/puppy/Topic(href, href_list)
 	if(href_list["remove_inv"] || href_list["add_inv"])
-		to_chat(usr, "<font color='red'>You can't fit this on [src]</font>")
+		to_chat(usr, span_red("You can't fit this on [src]!"))
 		return
 	..()
 
@@ -125,7 +130,7 @@
 	var/turns_since_scan = 0
 	var/obj/movement_target
 	makes_dirt = FALSE	//VOREStation edit: no more dirt
-	holder_type = /obj/item/weapon/holder/corgi
+	holder_type = /obj/item/holder/corgi
 
 /mob/living/simple_mob/animal/passive/dog/corgi/Ian/Life()
 	..()
@@ -141,7 +146,7 @@
 				movement_target = null
 			if( !movement_target || !(movement_target.loc in oview(src, 3)) )
 				movement_target = null
-				for(var/obj/item/weapon/reagent_containers/food/snacks/S in oview(src,3))
+				for(var/obj/item/reagent_containers/food/snacks/S in oview(src,3))
 					if(isturf(S.loc) || ishuman(S.loc))
 						movement_target = S
 						break
@@ -190,12 +195,12 @@
 	response_harm   = "kicks"
 	var/turns_since_scan = 0
 	var/puppies = 0
-	holder_type = /obj/item/weapon/holder/lisa
+	holder_type = /obj/item/holder/lisa
 
 //Lisa already has a cute bow!
 /mob/living/simple_mob/animal/passive/dog/corgi/Lisa/Topic(href, href_list)
 	if(href_list["remove_inv"] || href_list["add_inv"])
-		to_chat(usr, "<font color='red'>[src] already has a cute bow!</font>")
+		to_chat(usr, span_red("[src] already has a cute bow!"))
 		return
 	..()
 
@@ -240,7 +245,7 @@
 	icon_dead = "narsian_dead"
 
 	makes_dirt = FALSE
-	holder_type = /obj/item/weapon/holder/narsian
+	holder_type = /obj/item/holder/narsian
 
 /mob/living/simple_mob/animal/passive/dog/void_puppy
 	name = "void puppy"
@@ -248,7 +253,7 @@
 	icon_state = "void_puppy"
 	icon_living = "void_puppy"
 	icon_dead = "void_puppy_dead"
-	holder_type = /obj/item/weapon/holder/void_puppy
+	holder_type = /obj/item/holder/void_puppy
 
 /mob/living/simple_mob/animal/passive/dog/bullterrier
 	name = "bull terrier"
@@ -257,7 +262,7 @@
 	icon_living = "bullterrier"
 	icon_dead = "bullterrier_dead"
 	icon_rest = null
-	holder_type = /obj/item/weapon/holder/bullterrier
+	holder_type = /obj/item/holder/bullterrier
 
 // Tamaskans
 /mob/living/simple_mob/animal/passive/dog/tamaskan

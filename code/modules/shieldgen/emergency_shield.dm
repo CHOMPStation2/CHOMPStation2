@@ -24,7 +24,7 @@
 
 /obj/machinery/shield/proc/check_failure()
 	if (src.health <= 0)
-		visible_message("<b>\The [src]</b> dissipates!")
+		visible_message(span_boldnotice("\The [src]") + " dissipates!")
 		qdel(src)
 		return
 
@@ -39,7 +39,7 @@
 	update_nearby_tiles()
 	..()
 
-/obj/machinery/shield/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/machinery/shield/attackby(obj/item/W as obj, mob/user as mob)
 	if(!istype(W)) return
 
 	//Calculate damage
@@ -93,7 +93,7 @@
 
 /obj/machinery/shield/hitby(AM as mob|obj)
 	//Let everyone know we've been hit!
-	visible_message("<span class='danger'>\The [src] was hit by [AM].</span>")
+	visible_message(span_danger("\The [src] was hit by [AM]."))
 
 	//Super realistic, resource-intensive, real-time damage calculations.
 	var/tforce = 0
@@ -259,14 +259,14 @@
 		return
 
 	if (src.active)
-		user.visible_message("<font color='blue'>[bicon(src)] [user] deactivated the shield generator.</font>", \
-			"<font color='blue'>[bicon(src)] You deactivate the shield generator.</font>", \
+		user.visible_message(span_blue("[icon2html(src,viewers(src))] [user] deactivated the shield generator."), \
+			span_blue("[icon2html(src,user.client)] You deactivate the shield generator."), \
 			"You hear heavy droning fade out.")
 		src.shields_down()
 	else
 		if(anchored)
-			user.visible_message("<font color='blue'>[bicon(src)] [user] activated the shield generator.</font>", \
-				"<font color='blue'>[bicon(src)] You activate the shield generator.</font>", \
+			user.visible_message(span_blue("[icon2html(src,viewers(src))] [user] activated the shield generator."), \
+				span_blue("[icon2html(src, user.client)] You activate the shield generator."), \
 				"You hear heavy droning.")
 			src.shields_up()
 		else
@@ -279,51 +279,51 @@
 		update_icon()
 		return 1
 
-/obj/machinery/shieldgen/attackby(obj/item/weapon/W as obj, mob/user as mob)
-	if(W.is_screwdriver())
+/obj/machinery/shieldgen/attackby(obj/item/W as obj, mob/user as mob)
+	if(W.has_tool_quality(TOOL_SCREWDRIVER))
 		playsound(src, W.usesound, 100, 1)
 		if(is_open)
-			to_chat(user, "<font color='blue'>You close the panel.</font>")
+			to_chat(user, span_blue("You close the panel."))
 			is_open = 0
 		else
-			to_chat(user, "<font color='blue'>You open the panel and expose the wiring.</font>")
+			to_chat(user, span_blue("You open the panel and expose the wiring."))
 			is_open = 1
 
 	else if(istype(W, /obj/item/stack/cable_coil) && malfunction && is_open)
 		var/obj/item/stack/cable_coil/coil = W
-		to_chat(user, "<span class='notice'>You begin to replace the wires.</span>")
+		to_chat(user, span_notice("You begin to replace the wires."))
 		//if(do_after(user, min(60, round( ((getMaxHealth()/health)*10)+(malfunction*10) ))) //Take longer to repair heavier damage
 		if(do_after(user, 30))
 			if (coil.use(1))
 				health = max_health
 				malfunction = 0
-				to_chat(user, "<span class='notice'>You repair the [src]!</span>")
+				to_chat(user, span_notice("You repair the [src]!"))
 				update_icon()
 
-	else if(W.is_wrench())
+	else if(W.has_tool_quality(TOOL_WRENCH))
 		if(locked)
 			to_chat(user, "The bolts are covered, unlocking this would retract the covers.")
 			return
 		if(anchored)
 			playsound(src, W.usesound, 100, 1)
-			to_chat(user, "<font color='blue'>You unsecure the [src] from the floor!</font>")
+			to_chat(user, span_blue("You unsecure the [src] from the floor!"))
 			if(active)
-				to_chat(user, "<font color='blue'>The [src] shuts off!</font>")
+				to_chat(user, span_blue("The [src] shuts off!"))
 				src.shields_down()
 			anchored = FALSE
 		else
 			if(istype(get_turf(src), /turf/space)) return //No wrenching these in space!
 			playsound(src, W.usesound, 100, 1)
-			to_chat(user, "<font color='blue'>You secure the [src] to the floor!</font>")
+			to_chat(user, span_blue("You secure the [src] to the floor!"))
 			anchored = TRUE
 
 
-	else if(istype(W, /obj/item/weapon/card/id) || istype(W, /obj/item/device/pda))
+	else if(istype(W, /obj/item/card/id) || istype(W, /obj/item/pda))
 		if(src.allowed(user))
 			src.locked = !src.locked
 			to_chat(user, "The controls are now [src.locked ? "locked." : "unlocked."]")
 		else
-			to_chat(user, "<font color='red'>Access denied.</font>")
+			to_chat(user, span_red("Access denied."))
 
 	else
 		..()

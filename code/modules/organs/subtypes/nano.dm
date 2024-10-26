@@ -90,9 +90,16 @@
 	parent_organ = BP_TORSO
 	vital = TRUE
 	organ_verbs = list(
-		/mob/living/carbon/human/proc/self_diagnostics,
-		/mob/living/carbon/human/proc/reagent_purge
+		/mob/living/carbon/human/proc/self_diagnostics
 	)
+
+/obj/item/organ/internal/nano/orchestrator/robotize()
+	. = ..()
+	icon_state = "orchestrator"
+
+/obj/item/organ/internal/nano/orchestrator/mechassist()
+	. = ..()
+	icon_state = "orchestrator"
 
 /obj/item/organ/internal/nano/refactory
 	name = "refactory module"
@@ -104,6 +111,17 @@
 
 	var/list/materials = list(MAT_STEEL = 0)
 	var/max_storage = 10000
+	organ_verbs = list(
+		/mob/living/carbon/human/proc/reagent_purge
+	)
+
+/obj/item/organ/internal/nano/refactory/robotize()
+	. = ..()
+	icon_state = "refactory"
+
+/obj/item/organ/internal/nano/refactory/mechassist()
+	. = ..()
+	icon_state = "refactory"
 
 /obj/item/organ/internal/nano/refactory/proc/get_stored_material(var/material)
 	if(status & ORGAN_DEAD)
@@ -146,7 +164,7 @@
 	icon_state = "posi"
 	parent_organ = BP_TORSO
 
-	brain_type = /obj/item/device/mmi/digital/posibrain/nano
+	brain_type = /obj/item/mmi/digital/posibrain/nano
 
 /obj/item/organ/internal/mmi_holder/posibrain/nano/robotize()
 	. = ..()
@@ -166,28 +184,28 @@
 	stored_mmi.brainmob.languages = owner.languages
 
 // The 'out on the ground' object, not the organ holder
-/obj/item/device/mmi/digital/posibrain/nano
+/obj/item/mmi/digital/posibrain/nano
 	name = "protean posibrain"
 	desc = "A more advanced version of the standard posibrain, typically found in protean bodies."
 	icon = 'icons/mob/species/protean/protean.dmi'
 	icon_state = "posi"
 
-/obj/item/device/mmi/digital/posibrain/nano/Initialize()
+/obj/item/mmi/digital/posibrain/nano/Initialize()
 	. = ..()
 	icon_state = "posi"
 
-/obj/item/device/mmi/digital/posibrain/nano/request_player()
+/obj/item/mmi/digital/posibrain/nano/request_player()
 	icon_state = initial(icon_state)
 	return //We don't do this stuff
 
-/obj/item/device/mmi/digital/posibrain/nano/reset_search()
+/obj/item/mmi/digital/posibrain/nano/reset_search()
 	icon_state = initial(icon_state)
 	return //Don't do this either because of the above
 
-/obj/item/device/mmi/digital/posibrain/nano/transfer_personality()
+/obj/item/mmi/digital/posibrain/nano/transfer_personality()
 	. = ..()
 	icon_state = "posi1"
 
-/obj/item/device/mmi/digital/posibrain/nano/transfer_identity()
+/obj/item/mmi/digital/posibrain/nano/transfer_identity()
 	. = ..()
 	icon_state = "posi1"

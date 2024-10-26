@@ -34,7 +34,7 @@
 		<B>Captain Willis 06:13:15:</B> (Expletives), I'm turning us around. Put out a distress call to Control, we'll be back in Sif orbit in a couple of minutes.<BR>
 		**
 		<BR>
-		<B>V.I.S Traffic Control 06:15:49:</B> MBT-540 we are recieving you. Your atmospheric sensors are reading potentially harmful toxins in your cargo bay. Advise locking down interior cargo bay doors. Please stand by.<BR>
+		<B>V.I.S Traffic Control 06:15:49:</B> MBT-540 we are receiving you. Your atmospheric sensors are reading potentially harmful toxins in your cargo bay. Advise locking down interior cargo bay doors. Please stand by.<BR>
 		<B>Captain Adisu 06:16:10:</B> Understood. <BR> ** <BR><B>V.I.S Traffic Control 06:27:02: </B> MBT-540, we have no docking bays available at this time, are you equipped for atmospheric re-entry?<BR>
 		<B>Captain Willis 06:27:12:</B> We-We are shielded. But we have fuel and air for-<BR>
 		<B>V.I.S Traffic Control 06:27:17:</B> Please make an emergency landing at the coordinates provided and standby for further information.<BR>
@@ -172,7 +172,7 @@
 		<B>END LOG</B><BR>
 		<BR>
 		<B>CATALOGUER VOICE RECOGNITION RESULTS:</B><BR>
-		No match found for either speaker, but contextual clues and use of Old Earth russian (\'brat\', approximately \'brother\' or \'pal\') suggests out-of-sector criminal elements.
+		No match found for either speaker, but contextual clues and use of Old Earth Russian (\'brat\', approximately \'brother\' or \'pal\') suggests out-of-sector criminal elements.
 	"}
 
 /obj/structure/prop/blackbox/gecko_wreck
@@ -249,3 +249,61 @@
 		<B>SPEAKER THREE:</B> Predicted to be Allie Wells, human, niece of Captain Wells. 90% confidence.<BR>
 		<B>SPEAKER FOUR, \"MAX\":</B> Predicted to be Maxwell Ulysses Sarevic, zorren, known smuggler, and wanted in the Elysian Colonies for liberation of slaves and, quote, \'harshing my vibe, and being a, like, <U>total lamer</U>, dude\', unquote. 99% confidence.
 	"}
+
+//CHOMPADD start - Snowfield blackbox. Could move this to snowfield_ch.dm tbh.
+
+/obj/structure/prop/blackbox/snowfield_base
+	catalogue_data = list(/datum/category_item/catalogue/information/blackbox/snowfield_base)
+
+/datum/category_item/catalogue/information/blackbox/snowfield_base
+	name = "Black Box Data - CCCP Sector 108 Base"
+	desc = {"
+		<BR>
+		<B>SYSTEM ACTIVATED. BEGINNING LOG.</B><BR>
+		ACTIVATION TIME : <B>03:00. APRIL 10. WEDNESDAY. 1979.</B><BR><BR><BR>
+		<B>AWAITING LOGIN.</B><BR>
+		<U><B>RANK 6R ACCESS</B> IDENTIFIED.</U><B> Awaiting rank 6S input within 5 seconds.</B><BR>
+		<U><B>RANK 6S ACCESS</B> IDENTIFIED.</U> Authorization time : 2.74 seconds. <B>Awaiting rank 7 input within 5 seconds.</B><BR>
+		<U><B>RANK 7 ACCSS</B> IDENTIFIED.</U> Authorization time : 1.89 seconds. <B>Contacting to High command.</B><BR>
+		<U><B>HIGH COMMAND RESPOND RECIEVED.</U></B> Authorization time : 31.67 seconds.<BR><BR>
+		<U><B>OPERATION TUNGUSKA INITIATED.</U></B><BR>
+		ACTIVATION TIME : <B>03:01. APRIL 10. WEDNESDAY. 1979.</B><BR><BR><BR>
+		<U><B>INITIATING SYSTEM DIAGNOSIS</U></B><BR>
+		<B>TUNGUSKA SUPERMATTER INTEGRITY :</B> NORMAL<BR>
+		<B>TUNGUSKA POWER LEVEL :</B> NORMAL<BR>
+		<B>TUNGUSKA BACKUP POWER LEVEL :</B> NORMAL<BR>
+		<B>TUNGUSKA COOLANT LEVEL :</B> NORMAL<BR><BR>
+		<U><B>TUNGUSTA ACTIVATED.</U></B><BR><BR>
+		<B>BLAST DOOR SOFTWARE CONNECTION :</B> NORMAL<BR>
+		<B>GATEWAY POWER LEVEL :</B> NORMAL<BR>
+		<B>GATEWAY CONNECTION :</B> NORMAL<BR>
+		<B>GATEWAY COORDINATION :</B> FAILED<BR>
+		<B>INITIATING COORDINATION RECAL1B&@T...</B><BR>
+		<B>SYSTEM ERROR.</B><BR>
+		<U><B>SYSTEM TOTAL FAILURE.</U></B><BR><BR>
+		<B>AUTOMATED SHUTDOWN ON TUNGUSKA.</B><BR>
+		RESTARTING. . . . . <B>FAILED.</B><BR>
+		RESTARTING. . . . . <B>FAILED.</B><BR>
+		RESTARTING. . . . . <B>FA!LED.</B><BR>
+		RE$TART1^. . . . .<BR><BR><BR><BR>
+		U^a+h0. . . G@+eway %ct!va*ed . . . . .<BR><BR>
+		Unkn0wn m3$sag3 1nc0m!n9. . . . . .<BR><BR>
+		- - L1!0? H3-lo Th!s working?<BR>
+		Ah. Lovely.<BR>
+		Well, this thing over here shouldn't be here to begin with, as far as I can tell.<BR>
+		Nor we, exactly.<BR>
+		But! Since it is also causing a mess on our side, we tried to be in the 'accurate time' as best as possible to stop this keep on going.<BR>
+		Juuust enough to stop this time paradox. Maybe. Someone got to stop it, you see.<BR>
+		Hey, don't blame us, by the way. Passing through time is near impossible even for us, and it is a chore to do so.<BR>
+		But, some dumb-ass has dropped through time and causing a crack on our clock, allowing this gateway to get 'something.'<BR>
+		Details?... You don't want to know much. I am sure you are.<BR>
+		Who am I to decide?... Well. Some may know, but likely not, especially 'you' are on the 'current time' when this is getting recorded.<BR>
+		Nochkuk shall be the name, if you are overly curious about. Not that it really matters if you know who I am, however.<BR>
+		Ah, speech has gone too much and time is precious. Time to let my servants to have their fun, now. Try not to break the time1iNE, mmm?<BR>
+		They hungEr f0r 61o0d, @nd we w1lL vi$-t you 1f y0u do A9aIN.<BR><BR><BR>
+		<B>M&1N P0#ER $HU+TING DOWN. . . . .</B><BR>
+		<B>%AV!NG RECORD . . . . . SAVED.</B><BR>
+		<B>SWITCHING MODE TO : <U>ENERGY-SAVING MODE.</U></B>
+	"}
+
+//CHOMPADD end

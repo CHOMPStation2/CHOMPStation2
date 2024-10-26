@@ -1,5 +1,5 @@
 // Compile in the map for CI testing if we're testing compileability of all the maps
-#if MAP_TEST
+#ifdef MAP_TEST
 #include "aro3.dmm"
 #endif
 
@@ -7,7 +7,7 @@
 /datum/map_template/om_ships/aro3
 	name = "OM Ship - Aronai 3.0 (New Z)"
 	desc = "It's Aronai! As a spaceship."
-	mappath = 'aro3.dmm'
+	mappath = "maps/offmap_vr/om_ships/aro3.dmm"
 
 /area/aro3
 	requires_power = 1
@@ -88,7 +88,7 @@
 	color = "#00aaff" //Bluey
 	vessel_mass = 8000
 	vessel_size = SHIP_SIZE_SMALL
-	initial_generic_waypoints = list("aronai3_fore", "aronai3_aft", "aronai3_port", "aronai3_starboard")
+	initial_generic_waypoints = list("aronai3_foreport", "aronai3_forestbd", "aronai3_aftport", "aronai3_aftstbd")
 	initial_restricted_waypoints = list("Aro's Boat" = list("omship_spawn_aroboat3"))
 	fore_dir = NORTH
 	known = FALSE

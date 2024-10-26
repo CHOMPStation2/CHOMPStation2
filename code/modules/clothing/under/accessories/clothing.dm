@@ -104,6 +104,44 @@
 			)
 
 /*
+ * 80s
+ */
+
+/obj/item/clothing/accessory/tropical
+	name = "black tropical shirt"
+	desc = "A classic themed neosilk tropical shirt. This one makes you feel like an animal."
+	icon_state = "animalstyle"
+	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
+	slot_flags = SLOT_OCLOTHING | SLOT_TIE
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO
+	siemens_coefficient = 0.9
+	w_class = ITEMSIZE_NORMAL
+	slot = ACCESSORY_SLOT_OVER
+
+/obj/item/clothing/accessory/tropical/green
+	name = "puke-green tropical shirt"
+	desc = "A classic themed neosilk tropical shirt. This one makes you look like puke."
+	icon_state = "tropicopuke"
+
+/obj/item/clothing/accessory/tropical/pink
+	name = "pink tropical shirt"
+	desc = "A classic themed neosilk tropical shirt. This one makes you feel nostalgic."
+	icon_state = "3005vintage"
+
+/obj/item/clothing/accessory/tropical/blue
+	name = "blue tropical shirt"
+	desc = "A classic themed neosilk tropical shirt. This one makes you feel out of touch."
+	icon_state = "miamivice"
+
+/obj/item/clothing/accessory/tropical_random/New()
+	return pick(
+			prob(2);/obj/item/clothing/accessory/tropical,
+			prob(2);/obj/item/clothing/accessory/tropical/green,
+			prob(2);/obj/item/clothing/accessory/tropical/pink,
+			prob(2);/obj/item/clothing/accessory/tropical/blue
+			)
+
+/*
  * Chaps
  */
 
@@ -128,7 +166,7 @@
 	item_state = "classicponcho"
 	icon_override = 'icons/inventory/accessory/mob.dmi'
 	var/fire_resist = T0C+100
-	allowed = list(/obj/item/weapon/tank/emergency/oxygen)
+	allowed = list(/obj/item/tank/emergency/oxygen)
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
 	slot_flags = SLOT_OCLOTHING | SLOT_TIE
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS|LEGS
@@ -330,7 +368,7 @@
 	item_state = "vest"
 	icon_override = 'icons/inventory/accessory/mob.dmi'
 	item_state_slots = list(slot_r_hand_str = "wcoat", slot_l_hand_str = "wcoat")
-	allowed = list(/obj/item/weapon/pen, /obj/item/weapon/paper, /obj/item/device/flashlight, /obj/item/weapon/tank/emergency/oxygen, /obj/item/weapon/storage/fancy/cigarettes, /obj/item/weapon/storage/box/matches, /obj/item/weapon/reagent_containers/food/drinks/flask)
+	allowed = list(/obj/item/pen, /obj/item/paper, /obj/item/flashlight, /obj/item/tank/emergency/oxygen, /obj/item/storage/fancy/cigarettes, /obj/item/storage/box/matches, /obj/item/reagent_containers/food/drinks/flask)
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
 	slot_flags = SLOT_OCLOTHING | SLOT_TIE
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
@@ -470,7 +508,7 @@
 
 /obj/item/clothing/accessory/asymmetric
 	name = "blue asymmetrical jacket"
-	desc = "Insultingly avant-garde in prussian blue."
+	desc = "Insultingly avant-garde in Prussian blue."
 	icon_state = "asym_blue"
 
 /obj/item/clothing/accessory/asymmetric/purple
@@ -504,3 +542,39 @@
 /obj/item/clothing/accessory/cowboy_vest/grey
 	name = "grey cowboy vest"
 	icon_state = "cowboyvest_grey"
+
+//Replikant Vests
+
+/obj/item/clothing/accessory/replika
+	name = "generic"
+	desc = "generic"
+	icon = 'icons/inventory/accessory/item.dmi'
+	icon_state = "klbr"
+	icon_override = 'icons/inventory/accessory/mob.dmi'
+	item_state_slots = list(SLOT_ID_RIGHT_HAND = "armor", SLOT_ID_LEFT_HAND = "armor")
+	allowed = list(/obj/item/gun,/obj/item/reagent_containers/spray/pepper,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/melee/baton,/obj/item/handcuffs,/obj/item/flashlight/maglight,/obj/item/clothing/head/helmet)
+	slot_flags = SLOT_OCLOTHING | SLOT_TIE
+	body_parts_covered = UPPER_TORSO|ARMS
+	siemens_coefficient = 0.9
+	w_class = ITEMSIZE_NORMAL
+	slot = ACCESSORY_SLOT_OVER
+
+/obj/item/clothing/accessory/replika/klbr
+	name = "controller replikant chestplate"
+	desc = "A sloped titanium-composite chest plate fitted for use by 2nd generation biosynthetics. The right shoulder has been painted an imposing shade of red."
+	icon_state = "klbr"
+
+/obj/item/clothing/accessory/replika/lstr
+	name = "combat-engineer replikant chestplate"
+	desc = "A sloped titanium-composite chest plate fitted for use by 2nd generation biosynthetics. This plain-white version is a staple of biosynths assinged to combat-engineering duties."
+	icon_state = "lstr"
+
+/obj/item/clothing/accessory/replika/stcr
+	name = "security-controller replikant chestplate"
+	desc = "A sloped titanium-composite chest plate fitted for use by 2nd generation biosynthetics. This version sports multiple red adjustable straps and a lack of shoulder pads."
+	icon_state = "stcr"
+
+/obj/item/clothing/accessory/replika/star
+	name = "security-technician replikant chestplate"
+	desc = "A sloped titanium-composite chest plate with a matte black finish, fitted for use by 2nd generation biosynthetics. Comes with red adjustable straps."
+	icon_state = "star"
