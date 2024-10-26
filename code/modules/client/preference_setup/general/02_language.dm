@@ -48,8 +48,8 @@
 				pref.alternate_languages -= language
 
 	if(isnull(pref.language_prefixes) || !pref.language_prefixes.len)
-		var/list/prefixes = CONFIG_GET(str_list/language_prefixes) // CHOMPEdit
-		pref.language_prefixes = prefixes.Copy() // CHOMPEdit
+		var/list/prefixes = CONFIG_GET(str_list/language_prefixes)
+		pref.language_prefixes = prefixes.Copy()
 	for(var/prefix in pref.language_prefixes)
 		if(prefix in forbidden_prefixes)
 			pref.language_prefixes -= prefix
@@ -145,8 +145,8 @@
 			pref.language_prefixes = keys
 			return TOPIC_REFRESH
 	else if(href_list["reset_prefix"])
-		var/list/prefixes = CONFIG_GET(str_list/language_prefixes) // CHOMPEdit
-		pref.language_prefixes = prefixes.Copy() // CHOMPEdit
+		var/list/prefixes = CONFIG_GET(str_list/language_prefixes)
+		pref.language_prefixes = prefixes.Copy()
 		return TOPIC_REFRESH
 
 	else if(href_list["set_custom_key"])

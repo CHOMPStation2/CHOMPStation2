@@ -121,7 +121,7 @@
 		if("join")
 			var/job = params["job"]
 
-			if(!CONFIG_GET(flag/enter_allowed)) // CHOMPEdit
+			if(!CONFIG_GET(flag/enter_allowed))
 				to_chat(user, span_notice("There is an administrative lock on entering the game!"))
 				return
 			else if(ticker && ticker.mode && ticker.mode.explosion_in_progress)

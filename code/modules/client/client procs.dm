@@ -122,7 +122,7 @@
 		stat_panel.reinitialize() //CHOMPEdit
 
 	//Logs all hrefs
-	if(config && CONFIG_GET(flag/log_hrefs) && href_logfile) // CHOMPEdit
+	if(config && CONFIG_GET(flag/log_hrefs) && href_logfile)
 		WRITE_LOG(href_logfile, "[src] (usr:[usr])</small> || [hsrc ? "[hsrc] " : ""][href]")
 
 	//byond bug ID:2256651
@@ -192,7 +192,7 @@
 	if(byond_version < MIN_CLIENT_VERSION)		//Out of date client.
 		return null
 
-	if(!CONFIG_GET(flag/guests_allowed) && IsGuestKey(key)) // CHOMPEdit
+	if(!CONFIG_GET(flag/guests_allowed) && IsGuestKey(key))
 		alert(src,"This server doesn't allow guest accounts to play. Please go to https://www.byond.com/ and register for a key.","Guest") // Not tgui_alert
 		del(src)
 		return
@@ -297,7 +297,7 @@
 		if(CONFIG_GET(flag/aggressive_changelog)) // CHOMPEdit
 			src.changes()
 
-	if(CONFIG_GET(flag/paranoia_logging)) // CHOMPEdit
+	if(CONFIG_GET(flag/paranoia_logging))
 		var/alert = FALSE //VOREStation Edit start.
 		if(isnum(player_age) && player_age == 0)
 			log_and_message_admins("PARANOIA: [key_name(src)] has connected here for the first time.")
@@ -426,29 +426,30 @@
 
 	//Panic bunker code
 	if (isnum(player_age) && player_age == 0) //first connection
-		if (CONFIG_GET(flag/panic_bunker) && !holder && !deadmin_holder) // CHOMPEdit
+		if (CONFIG_GET(flag/panic_bunker) && !holder && !deadmin_holder)
 			log_adminwarn("Failed Login: [key] - New account attempting to connect during panic bunker")
 			message_admins(span_adminnotice("Failed Login: [key] - New account attempting to connect during panic bunker"))
 			disconnect_with_message("Sorry but the server is currently not accepting connections from never before seen players.")
 			return 0
 
 	// IP Reputation Check
-	if(CONFIG_GET(flag/ip_reputation)) // CHOMPEdit
-		if(CONFIG_GET(flag/ipr_allow_existing) && player_age >= CONFIG_GET(number/ipr_minimum_age)) // CHOMPEdit
+	if(CONFIG_GET(flag/ip_reputation))
+		if(CONFIG_GET(flag/ipr_allow_existing) && player_age >= CONFIG_GET(number/ipr_minimum_age))
 			log_admin("Skipping IP reputation check on [key] with [address] because of player age")
 		else if(update_ip_reputation()) //It is set now
-			if(ip_reputation >= CONFIG_GET(number/ipr_bad_score)) //It's bad // CHOMPEdit
+			if(ip_reputation >= CONFIG_GET(number/ipr_bad_score)) //It's bad
+
 				//Log it
-				if(CONFIG_GET(flag/paranoia_logging)) //We don't block, but we want paranoia log messages // CHOMPEdit
+				if(CONFIG_GET(flag/paranoia_logging)) //We don't block, but we want paranoia log messages
 					log_and_message_admins("[key] at [address] has bad IP reputation: [ip_reputation]. Will be kicked if enabled in config.")
 				else //We just log it
 					log_admin("[key] at [address] has bad IP reputation: [ip_reputation]. Will be kicked if enabled in config.")
 
 				//Take action if required
-				if(CONFIG_GET(flag/ipr_block_bad_ips) && CONFIG_GET(flag/ipr_allow_existing)) //We allow players of an age, but you don't meet it // CHOMPEdit
-					disconnect_with_message("Sorry, we only allow VPN/Proxy/Tor usage for players who have spent at least [CONFIG_GET(number/ipr_minimum_age)] days on the server. If you are unable to use the internet without your VPN/Proxy/Tor, please contact an admin out-of-game to let them know so we can accommodate this.") // CHOMPEdit
+				if(CONFIG_GET(flag/ipr_block_bad_ips) && CONFIG_GET(flag/ipr_allow_existing)) //We allow players of an age, but you don't meet it
+					disconnect_with_message("Sorry, we only allow VPN/Proxy/Tor usage for players who have spent at least [CONFIG_GET(number/ipr_minimum_age)] days on the server. If you are unable to use the internet without your VPN/Proxy/Tor, please contact an admin out-of-game to let them know so we can accommodate this.")
 					return 0
-				else if(CONFIG_GET(flag/ipr_block_bad_ips)) //We don't allow players of any particular age // CHOMPEdit
+				else if(CONFIG_GET(flag/ipr_block_bad_ips)) //We don't allow players of any particular age
 					disconnect_with_message("Sorry, we do not accept connections from users via VPN/Proxy/Tor connections. If you believe this is in error, contact an admin out-of-game.")
 					return 0
 		else
@@ -510,7 +511,7 @@
 		src << browse('code/modules/asset_cache/validate_assets.html', "window=asset_cache_browser")
 
 		//Precache the client with all other assets slowly, so as to not block other browse() calls
-		if (CONFIG_GET(flag/asset_simple_preload)) // CHOMPEdit
+		if (CONFIG_GET(flag/asset_simple_preload))
 			addtimer(CALLBACK(SSassets.transport, TYPE_PROC_REF(/datum/asset_transport, send_assets_slow), src, SSassets.transport.preload), 5 SECONDS)
 
 /mob/proc/MayRespawn()
@@ -557,7 +558,7 @@
 //You're welcome to replace this proc with your own that does your own cool stuff.
 //Just set the client's ip_reputation var and make sure it makes sense with your config settings (higher numbers are worse results)
 /client/proc/update_ip_reputation()
-	var/request = "https://check.getipintel.net/check.php?ip=[address]&contact=[CONFIG_GET(string/ipr_email)]" // CHOMPEdit
+	var/request = "https://check.getipintel.net/check.php?ip=[address]&contact=[CONFIG_GET(string/ipr_email)]"
 	var/http[] = world.Export(request)
 
 	/* Debug
@@ -573,7 +574,7 @@
 	//429 is rate limit exceeded
 	if(text2num(http["STATUS"]) == 429)
 		log_and_message_admins("getipintel.net reports HTTP status 429. IP reputation checking is now disabled. If you see this, let a developer know.")
-		CONFIG_SET(flag/ip_reputation, FALSE) // CHOMPEdit
+		CONFIG_SET(flag/ip_reputation, FALSE)
 		return FALSE
 
 	var/content = file2text(http["CONTENT"]) //world.Export actually returns a file object in CONTENT
@@ -604,7 +605,7 @@
 
 		log_and_message_admins(ipr_error)
 		if(fatal)
-			CONFIG_SET(flag/ip_reputation, FALSE) // CHOMPEdit
+			CONFIG_SET(flag/ip_reputation, FALSE)
 			log_and_message_admins("With this error, IP reputation checking is disabled for this shift. Let a developer know.")
 		return FALSE
 

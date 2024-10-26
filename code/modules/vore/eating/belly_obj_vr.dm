@@ -1122,7 +1122,7 @@
 	var/obj/item/mmi/hasMMI // CHOMPEdit - Adjust how MMI's are handled
 
 	//Drop all items into the belly.
-	if(CONFIG_GET(flag/items_survive_digestion)) // CHOMPEdit
+	if(CONFIG_GET(flag/items_survive_digestion))
 		for(var/obj/item/W in M)
 			if(istype(W, /obj/item/organ/internal/mmi_holder/posibrain))
 				var/obj/item/organ/internal/mmi_holder/MMI = W

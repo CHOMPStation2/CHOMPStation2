@@ -20,7 +20,7 @@ SUBSYSTEM_DEF(lighting)
 
 /datum/controller/subsystem/lighting/Initialize() // CHOMPEdit
 	if(!subsystem_initialized)
-		if (CONFIG_GET(flag/starlight)) // CHOMPEdit
+		if (CONFIG_GET(flag/starlight))
 			for(var/area/A in world)
 				if (A.dynamic_lighting == DYNAMIC_LIGHTING_IFSTARLIGHT)
 					A.luminosity = 0

@@ -12,6 +12,7 @@
 	mouse_drag_pointer = 'icons/effects/mouse_pointers/screen_drag.dmi'
 	var/snap2grid = FALSE
 	var/moved = FALSE
+	var/locked = FALSE
 	var/x_off = -16
 	var/y_off = -16
 
@@ -23,6 +24,8 @@
 
 
 /obj/screen/movable/MouseDrop(over_object, src_location, over_location, src_control, over_control, params)
+	if(locked) // no! i am locked! begone!
+		return
 	var/position = mouse_params_to_position(params)
 	if(!position)
 		return
@@ -78,6 +81,8 @@
 		. = num+1
 	else if(findtext(X,"CENTER"))
 		. = view_dist+1
+	else
+		. = text2num(X)
 
 /obj/screen/movable/proc/encode_screen_Y(Y)
 	var/view_dist = world.view
@@ -106,6 +111,8 @@
 		. = num+1
 	else if(findtext(Y,"CENTER"))
 		. = view_dist+1
+	else
+		. = text2num(Y)
 
 //Debug procs
 /client/proc/test_movable_UI()
