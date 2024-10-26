@@ -62162,12 +62162,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
-"mjF" = (
-/obj/structure/disposalpipe/trunk{
-	dir = 4
-	},
-/turf/simulated/wall/r_wall,
-/area/medical/medical_lockerroom)
 "mjR" = (
 /obj/item/roller,
 /obj/structure/table/glass,
@@ -74502,9 +74496,12 @@
 	dir = 4;
 	pixel_x = -37
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/obj/machinery/disposal/wall{
+	dir = 4;
+	pixel_x = -37
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/genetics)
@@ -78282,8 +78279,8 @@
 /obj/machinery/embedded_controller/radio/airlock/access_controller{
 	id_tag = "SC-ALCvirology";
 	name = "Virology Access Console";
-	tag_exterior_door = "SC-ALEvirology";
-	tag_interior_door = "SC-ALIvirology";
+	tag_exterior_door = "virology_airlock_exterior";
+	tag_interior_door = "virology_airlock_interior";
 	dir = 1;
 	pixel_y = -23
 	},
@@ -133041,7 +133038,7 @@ oMg
 sKv
 oMg
 jMw
-mjF
+qNE
 qNE
 qNE
 qNE
