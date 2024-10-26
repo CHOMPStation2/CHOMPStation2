@@ -235,8 +235,11 @@
 #include "code\_helpers\verbs.dm"
 #include "code\_helpers\view.dm"
 #include "code\_helpers\visual_filters.dm"
+<<<<<<< HEAD
 #include "code\_helpers\widelists_ch.dm"
 #include "code\_helpers\graphs\astar_ch.dm"
+=======
+>>>>>>> dc3fd79427 (The final action buttons PR (#16514))
 #include "code\_helpers\weakref.dm"
 #include "code\_helpers\icons\flatten.dm"
 #include "code\_helpers\logging\debug.dm"
