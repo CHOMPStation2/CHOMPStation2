@@ -8817,7 +8817,7 @@
 	},
 /obj/item/radio/intercom/department/security{
 	dir = 4;
-	icon_override = "secintercom";
+	icon_state= "secintercom";
 	pixel_x = 21
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -12628,7 +12628,7 @@
 "aMy" = (
 /obj/item/radio/intercom/department/security{
 	dir = 4;
-	icon_override = "secintercom";
+	icon_state= "secintercom";
 	pixel_x = 21
 	},
 /obj/structure/table/standard,
@@ -21006,7 +21006,7 @@
 /obj/structure/table/standard,
 /obj/item/radio/intercom/department/security{
 	dir = 4;
-	icon_override = "secintercom";
+	icon_state= "secintercom";
 	pixel_x = 21
 	},
 /obj/item/bodybag/cryobag{
@@ -22667,7 +22667,7 @@
 	},
 /obj/item/radio/intercom/department/security{
 	dir = 4;
-	icon_override = "secintercom";
+	icon_state= "secintercom";
 	pixel_x = 21
 	},
 /obj/machinery/newscaster{
@@ -30245,7 +30245,7 @@
 "bOD" = (
 /obj/item/radio/intercom/department/security{
 	dir = 4;
-	icon_override = "secintercom";
+	icon_state= "secintercom";
 	pixel_x = 21
 	},
 /obj/structure/noticeboard{
@@ -30522,7 +30522,7 @@
 "bPV" = (
 /obj/item/radio/intercom/department/security{
 	dir = 4;
-	icon_override = "secintercom";
+	icon_state= "secintercom";
 	pixel_x = 21
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -34512,7 +34512,7 @@
 /obj/structure/filingcabinet,
 /obj/item/radio/intercom/department/security{
 	dir = 8;
-	icon_override = "secintercom";
+	icon_state= "secintercom";
 	pixel_x = -21
 	},
 /obj/machinery/ai_status_display{
@@ -64716,7 +64716,7 @@
 	},
 /obj/item/radio/intercom/department/security{
 	dir = 8;
-	icon_override = "secintercom";
+	icon_state= "secintercom";
 	pixel_x = -21
 	},
 /obj/effect/floor_decal/borderfloor{
