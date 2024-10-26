@@ -16,7 +16,6 @@ Bonus
 */
 
 /datum/symptom/damage_converter
-
 	name = "Toxic Compensation"
 	stealth = 1
 	resistance = -4

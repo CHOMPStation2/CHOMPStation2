@@ -17,7 +17,6 @@ Bonus
 */
 
 /datum/symptom/sneeze
-
 	name = "Sneezing"
 	stealth = -2
 	resistance = 3

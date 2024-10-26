@@ -16,7 +16,6 @@ Bonus
 */
 
 /datum/symptom/visionloss
-
 	name = "Hyphema"
 	stealth = -1
 	resistance = -4

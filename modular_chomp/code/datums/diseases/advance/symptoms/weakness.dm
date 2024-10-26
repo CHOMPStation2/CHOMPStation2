@@ -16,7 +16,6 @@ Bonus
 */
 
 /datum/symptom/weakness
-
 	name = "Weakness"
 	stealth = -1
 	resistance = -1

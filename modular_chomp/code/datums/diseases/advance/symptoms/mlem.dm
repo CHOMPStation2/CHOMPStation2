@@ -17,7 +17,6 @@ BONUS
 */
 
 /datum/symptom/mlem
-
 	name = "Mlemington"
 	stealth = 0
 	resistance = 3

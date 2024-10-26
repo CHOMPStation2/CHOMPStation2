@@ -16,7 +16,6 @@ Bonus
 */
 
 /datum/symptom/flesh_eating
-
 	name = "Necrotizing Fasciitis"
 	stealth = -3
 	resistance = -4

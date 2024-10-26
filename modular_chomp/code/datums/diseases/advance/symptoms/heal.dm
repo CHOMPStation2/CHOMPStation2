@@ -16,7 +16,6 @@ Bonus
 */
 
 /datum/symptom/heal
-
 	name = "Toxic Filter"
 	stealth = 1
 	resistance = -4

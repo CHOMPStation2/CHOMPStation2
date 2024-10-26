@@ -16,7 +16,6 @@ Bonus
 */
 
 /datum/symptom/fever
-
 	name = "Fever"
 	stealth = 0
 	resistance = 3

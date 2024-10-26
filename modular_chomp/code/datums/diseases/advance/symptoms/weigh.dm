@@ -17,7 +17,6 @@ Bonus
 */
 
 /datum/symptom/weight_loss
-
 	name = "Weight Loss"
 	stealth = -3
 	resistance = -2

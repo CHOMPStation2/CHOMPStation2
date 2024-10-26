@@ -17,7 +17,6 @@ BONUS
 */
 
 /datum/symptom/mlem
-
 	name = "Spyndrome"
 	stealth = 2
 	resistance = 0

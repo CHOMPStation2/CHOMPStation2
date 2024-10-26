@@ -16,7 +16,6 @@ Bonus
 */
 
 /datum/symptom/fire
-
 	name = "Spontaneous Combustion"
 	stealth = 1
 	resistance = -4

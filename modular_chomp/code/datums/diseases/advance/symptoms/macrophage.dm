@@ -12,31 +12,29 @@
 	var/phagecounter = 10
 
 /datum/symptom/macrophage/Start(datum/disease/advance/A)
-	if(!..())
-		return
 	netspeed = max(1, A.stage)
 	if(A.severity >= HARMFUL)
 		gigagerms = TRUE
 
 /datum/symptom/macrophage/Activate(datum/disease/advance/A)
-	if(!..())
-		return
-	var/mob/living/M = A.affected_mob
-	switch(A.stage)
-		if(1, 2, 3)
-			to_chat(M, span_notice("Your skin crawls."))
-		if(4)
-			M.visible_message(span_danger("Lumps form on [M]'s skin!"), span_userdanger("You cringe in pain as lumps form and move around on your skin!"))
-		if(5)
-			phagecounter -= max(2, A.totalStageSpeed())
-			if(gigagerms && phagecounter <= 0)
-				Burst(A, M, TRUE)
-				phagecounter += 10
-			while(phagecounter <= 0)
-				phagecounter += 5
-				Burst(A, M)
+	..()
+	if(prob(SYMPTOM_ACTIVATION_PROB))
+		var/mob/living/M = A.affected_mob
+		switch(A.stage)
+			if(1, 2, 3)
+				to_chat(M, span_notice("Your skin crawls."))
+			if(4)
+				M.visible_message(span_danger("Lumps form on [M]'s skin!"), span_userdanger("You cringe in pain as lumps form and move around on your skin!"))
+			if(5 && prob(50))
+				phagecounter -= max(2, A.totalStageSpeed())
+				if(gigagerms && phagecounter <= 0)
+					Burst(A, M, TRUE)
+					phagecounter += 10
+				while(phagecounter <= 0)
+					phagecounter += 5
+					Burst(A, M)
 
-/datum/symptom/macrophage/proc/Burst(datum/disease/advance/A, var/mob/living/A, var/mob/living/M, var/gigagerms = FALSE)
+/datum/symptom/macrophage/proc/Burst(datum/disease/advance/A, var/mob/living/M, var/gigagerms = FALSE)
 	var/mob/living/simple_mob/vore/aggressive/macrophage/phage
 	phage = new(M.loc)
 	M.apply_damage(rand(1, 7))

@@ -17,7 +17,6 @@ Bonus
 
 /// Not the egg
 /datum/symptom/dizzy
-
 	name = "Dizziness"
 	stealth = 2
 	resistance = -2

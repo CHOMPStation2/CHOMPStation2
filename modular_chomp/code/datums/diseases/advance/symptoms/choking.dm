@@ -16,7 +16,6 @@ Bonus
 */
 
 /datum/symptom/choking
-
 	name = "Choking"
 	stealth = -3
 	resistance = -2

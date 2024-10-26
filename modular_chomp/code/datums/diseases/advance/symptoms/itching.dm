@@ -17,7 +17,6 @@ BONUS
 */
 
 /datum/symptom/itching
-
 	name = "Itching"
 	stealth = 0
 	resistance = 3

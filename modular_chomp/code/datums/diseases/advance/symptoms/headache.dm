@@ -17,7 +17,6 @@ BONUS
 */
 
 /datum/symptom/headache
-
 	name = "Headache"
 	stealth = -1
 	resistance = 4

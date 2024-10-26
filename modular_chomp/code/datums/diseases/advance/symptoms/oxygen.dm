@@ -16,7 +16,6 @@ Bonus
 */
 
 /datum/symptom/oxygen
-
 	name = "Self-Respiration"
 	stealth = 1
 	resistance = -3

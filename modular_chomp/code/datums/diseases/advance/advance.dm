@@ -223,21 +223,10 @@ GLOBAL_LIST_INIT(advance_cures, list(
 
 /datum/disease/advance/proc/GenerateCure(list/properties = list())
     if(properties && length(properties))
-        // Generate a list of all reagent types
-        var/list/reagent_list = typesof(/datum/reagent)
-
-        // Determine the resistance level to select the cure
-        var/res = clamp(properties["resistance"] - (length(symptoms) / 2), 1, length(reagent_list))
-
-        var/datum/reagent/D = reagent_list[res]
-
-        if(D)
-            cures = list(D.id)
-            cure_text = D.name
-
+        var/res = clamp(properties["resistance"] - (length(symptoms) / 2), 1, length(GLOB.advance_cures))
+        cures = list(GLOB.advance_cures[res])
+        cure_text = cures[1]
     return
-
-
 
 // Randomly generate a symptom, has a chance to lose or gain a symptom.
 /datum/disease/advance/proc/Evolve(min_level, max_level)

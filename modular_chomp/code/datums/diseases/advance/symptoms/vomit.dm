@@ -16,7 +16,6 @@ Bonus
 */
 
 /datum/symptom/vomit
-
 	name = "Vomiting"
 	stealth = -2
 	resistance = 0
