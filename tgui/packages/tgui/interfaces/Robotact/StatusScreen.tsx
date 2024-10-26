@@ -1,9 +1,13 @@
 import { useBackend } from 'tgui/backend';
 import {
   Box,
+<<<<<<< HEAD
   ColorBox,
   ImageButton,
   Input,
+=======
+  ImageButton,
+>>>>>>> 9e53689ec7 (Replace most legacy robot interfaces with a unified interface (#16517))
   LabeledList,
   NoticeBox,
   ProgressBar,
@@ -166,9 +170,15 @@ const Configuration = (props) => {
 };
 
 const Status = (props) => {
+<<<<<<< HEAD
   const { act, data } = useBackend<Data>();
 
   const { charge, max_charge, health, max_health, light_color } = data;
+=======
+  const { data } = useBackend<Data>();
+
+  const { charge, max_charge, health, max_health } = data;
+>>>>>>> 9e53689ec7 (Replace most legacy robot interfaces with a unified interface (#16517))
 
   return (
     <Section title="Status" fill>
@@ -201,6 +211,7 @@ const Status = (props) => {
             }}
           />
         </LabeledList.Item>
+<<<<<<< HEAD
         <LabeledList.Item label="Light color">
           <Box inline>
             <ColorBox mr={1} color={light_color} />
@@ -212,6 +223,8 @@ const Status = (props) => {
             />
           </Box>
         </LabeledList.Item>
+=======
+>>>>>>> 9e53689ec7 (Replace most legacy robot interfaces with a unified interface (#16517))
       </LabeledList>
     </Section>
   );

@@ -62,7 +62,10 @@
 	data["max_charge"] = R.cell?.maxcharge
 	data["health"] = R.health
 	data["max_health"] = R.getMaxHealth()
+<<<<<<< HEAD
 	data["light_color"] = R.robot_light_col
+=======
+>>>>>>> 9e53689ec7 (Replace most legacy robot interfaces with a unified interface (#16517))
 
 	data["weapon_lock"] = R.weapon_lock
 
@@ -112,11 +115,14 @@
 	var/mob/living/silicon/robot/R = host
 
 	switch(action)
+<<<<<<< HEAD
 		if("set_light_col")
 			var/new_color = params["value"]
 			if(findtext(new_color, GLOB.is_color))
 				R.robot_light_col = new_color
 			. = TRUE
+=======
+>>>>>>> 9e53689ec7 (Replace most legacy robot interfaces with a unified interface (#16517))
 		if("select_module")
 			R.pick_module()
 			. = TRUE

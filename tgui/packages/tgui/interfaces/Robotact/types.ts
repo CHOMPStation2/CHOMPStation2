@@ -30,8 +30,11 @@ export type Data = {
   health: number;
   max_health: number;
 
+<<<<<<< HEAD
   light_color: string;
 
+=======
+>>>>>>> 9e53689ec7 (Replace most legacy robot interfaces with a unified interface (#16517))
   // Modules
   modules_static: Module[];
   emag_modules_static: Module[];
