@@ -46,6 +46,7 @@
 
 #define reverseList(L) reverseRange(L.Copy())
 
+<<<<<<< HEAD
 // CHOMPEdit Start
 /// Passed into BINARY_INSERT to compare keys
 #define COMPARE_KEY __BIN_LIST[__BIN_MID]
@@ -88,4 +89,6 @@
 	} while(FALSE)
 // CHOMPEdit End
 
+=======
+>>>>>>> d0b0dd9a46 (Timer subsystem update (#16509))
 #define islist(L) istype(L, /list)
