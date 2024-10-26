@@ -27,6 +27,7 @@
 
 #define SIGN(x) ( (x)!=0 ? (x) / abs(x) : 0 )
 
+#define ROUND_UP(x) ( -round(-(x)))
 #define CEILING(x, y) ( -round(-(x) / (y)) * (y) )
 
 #define ROUND_UP(x) ( -round(-(x))) // CHOMPEdit
