@@ -33,7 +33,7 @@ Bonus
 			if(1, 2)
 				to_chat(M, span_warning("[pick("You feel weak.", "You feel lazy.")]"))
 			if(3, 4)
-				to_chat(M, span_warning("<b>[pick("You feel very frail.", "You think you might faint.")]"))
+				to_chat(M, span_warning("<b>[pick("You feel very frail.", "You think you might faint.")]</b>"))
 				M.Weaken(10)
 			else
 				to_chat(M, span_userdanger("[pick("You feel tremendously weak!", "Your body trembles as exhaustion creeps over you.")]"))
