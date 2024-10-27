@@ -217,7 +217,6 @@
 "xK" = (
 /obj/effect/decal/remains/human,
 /obj/item/clothing/under/syndicate,
-/obj/random/projectile/scrapped_gun,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/GreatWolfDen)
 "yi" = (
@@ -507,7 +506,7 @@
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/GreatWolfDen)
 "SO" = (
-/obj/item/telecube/mated,
+/obj/random/projectile/scrapped_smg,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/GreatWolfDen)
 "SQ" = (
@@ -545,13 +544,11 @@
 /area/template_noop)
 "Vq" = (
 /obj/structure/loot_pile/surface/bones,
-/obj/random/projectile/scrapped_gun,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/GreatWolfDen)
 "WH" = (
 /obj/structure/loot_pile/surface/bones,
 /obj/item/storage/toolbox/syndicate,
-/obj/random/projectile/scrapped_gun,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/GreatWolfDen)
 "WR" = (
@@ -598,7 +595,6 @@
 /obj/structure/loot_pile/surface/bones,
 /obj/effect/landmark/loot_spawn/low,
 /obj/effect/decal/cleanable/dirt,
-/obj/random/projectile/scrapped_gun,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/GreatWolfDen)
 
