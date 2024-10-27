@@ -4445,6 +4445,10 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/structure/candybowl/engineering{
+	pixel_x = 15;
+	pixel_y = -10
+	},
 /turf/simulated/floor/carpet,
 /area/engineering/break_room)
 "aly" = (
@@ -5394,6 +5398,7 @@
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 4
 	},
+/obj/effect/landmark/carved_pumpkin_spawn,
 /turf/simulated/floor/tiled,
 /area/engineering/foyer)
 "apb" = (
@@ -9263,6 +9268,7 @@
 /obj/effect/floor_decal/corner/yellow/bordercorner{
 	dir = 1
 	},
+/obj/effect/landmark/carved_pumpkin_spawn,
 /turf/simulated/floor/tiled,
 /area/engineering/foyer)
 "aBp" = (
@@ -17961,6 +17967,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/hallway/primary/seconddeck/fpcenter)
+"bda" = (
+/obj/effect/landmark/carved_pumpkin_spawn,
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
 "bdb" = (
 /obj/machinery/computer/timeclock/premade/east,
 /turf/simulated/floor/tiled/dark,
@@ -19004,6 +19014,7 @@
 /obj/machinery/camera/network/second_deck{
 	c_tag = "Second Deck - Center Stair Access"
 	},
+/obj/effect/landmark/carved_pumpkin_spawn,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/stairwell)
 "bgF" = (
@@ -20846,6 +20857,7 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 4
 	},
+/obj/structure/candybowl/medical,
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "blS" = (
@@ -22066,6 +22078,7 @@
 	dir = 8
 	},
 /obj/item/stool/padded,
+/obj/effect/landmark/carved_pumpkin_spawn,
 /turf/simulated/floor/tiled/white,
 /area/medical/foyer)
 "bpo" = (
@@ -22573,6 +22586,8 @@
 /obj/effect/floor_decal/corner/paleblue/bordercorner2{
 	dir = 10
 	},
+/obj/effect/spider/stickyweb,
+/obj/item/toy/plushie/spider,
 /turf/simulated/floor/tiled/white,
 /area/medical/foyer)
 "brg" = (
@@ -24743,6 +24758,7 @@
 	},
 /obj/item/mail/blank,
 /obj/item/mail/blank,
+/obj/structure/candybowl/cargo,
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
 "bxA" = (
@@ -30515,6 +30531,7 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 4
 	},
+/obj/effect/landmark/carved_pumpkin_spawn,
 /turf/simulated/floor/tiled,
 /area/security/lobby)
 "bPZ" = (
@@ -31171,6 +31188,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/red/border,
+/obj/structure/candybowl/security,
 /turf/simulated/floor/tiled,
 /area/security/lobby)
 "bSF" = (
@@ -32585,6 +32603,7 @@
 	pixel_x = -2;
 	pixel_y = -2
 	},
+/obj/item/flame/candle/everburn,
 /turf/simulated/floor/wood,
 /area/crew_quarters/cafeteria)
 "bWR" = (
@@ -33682,6 +33701,7 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 10
 	},
+/obj/effect/landmark/carved_pumpkin_spawn,
 /turf/simulated/floor/tiled,
 /area/security/lobby)
 "cbk" = (
@@ -36108,6 +36128,7 @@
 	pixel_x = -5;
 	pixel_y = -2
 	},
+/obj/item/flame/candle/everburn,
 /turf/simulated/floor/wood,
 /area/crew_quarters/cafeteria)
 "chY" = (
@@ -37857,11 +37878,11 @@
 /area/hallway/primary/seconddeck/aft)
 "cnF" = (
 /obj/structure/table/marble,
-/obj/item/reagent_containers/food/snacks/pie,
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment,
+/obj/item/reagent_containers/food/snacks/sliceable/pumpkinpie,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/cafeteria)
 "cnI" = (
@@ -45464,6 +45485,7 @@
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 8
 	},
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
 "dyd" = (
@@ -47428,6 +47450,7 @@
 /obj/effect/floor_decal/corner/brown/bordercorner{
 	dir = 1
 	},
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
 "eEU" = (
@@ -52021,6 +52044,7 @@
 /obj/machinery/atm{
 	pixel_y = 30
 	},
+/obj/effect/landmark/carved_pumpkin_spawn,
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
 "gQB" = (
@@ -61474,6 +61498,7 @@
 	pixel_x = 2
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/candybowl,
 /turf/simulated/floor/wood,
 /area/crew_quarters/cafeteria)
 "lRG" = (
@@ -61743,6 +61768,8 @@
 	layer = 4;
 	pixel_x = -32
 	},
+/obj/effect/spider/stickyweb,
+/obj/item/toy/plushie/spider,
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
 "lWH" = (
@@ -62162,12 +62189,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
-"mjF" = (
-/obj/structure/disposalpipe/trunk{
-	dir = 4
-	},
-/turf/simulated/wall/r_wall,
-/area/medical/medical_lockerroom)
 "mjR" = (
 /obj/item/roller,
 /obj/structure/table/glass,
@@ -63292,6 +63313,9 @@
 /obj/effect/floor_decal/corner/purple/bordercorner{
 	dir = 1
 	},
+/obj/structure/flora/skeleton{
+	pixel_y = 14
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research_foyer)
 "mSO" = (
@@ -63456,6 +63480,8 @@
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 5
 	},
+/obj/effect/landmark/carved_pumpkin_spawn,
+/obj/effect/decal/cleanable/cobweb2,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research_foyer)
 "mVG" = (
@@ -64312,6 +64338,10 @@
 	id = "sc-ChimeMed";
 	name = "Medbay Doorbell"
 	},
+/obj/item/flame/candle/everburn{
+	pixel_x = 1;
+	pixel_y = -2
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/foyer)
 "nwl" = (
@@ -65130,6 +65160,10 @@
 /obj/machinery/door/window/eastleft{
 	name = "Robotics Desk";
 	req_access = list(29)
+	},
+/obj/item/flame/candle/everburn{
+	pixel_x = -6;
+	pixel_y = 10
 	},
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
@@ -66556,6 +66590,7 @@
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 6
 	},
+/obj/structure/candybowl/science,
 /turf/simulated/floor/tiled/white,
 /area/rnd/lab)
 "oJW" = (
@@ -66582,6 +66617,7 @@
 /obj/effect/floor_decal/corner/purple/bordercorner2{
 	dir = 9
 	},
+/obj/effect/landmark/carved_pumpkin_spawn,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research_foyer)
 "oKu" = (
@@ -72189,6 +72225,10 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 4
 	},
+/obj/structure/flora/skeleton{
+	pixel_y = 0;
+	pixel_x = -5
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/foyer)
 "rXY" = (
@@ -74502,9 +74542,12 @@
 	dir = 4;
 	pixel_x = -37
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/obj/machinery/disposal/wall{
+	dir = 4;
+	pixel_x = -37
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/genetics)
@@ -78282,8 +78325,8 @@
 /obj/machinery/embedded_controller/radio/airlock/access_controller{
 	id_tag = "SC-ALCvirology";
 	name = "Virology Access Console";
-	tag_exterior_door = "SC-ALEvirology";
-	tag_interior_door = "SC-ALIvirology";
+	tag_exterior_door = "virology_airlock_exterior";
+	tag_interior_door = "virology_airlock_interior";
 	dir = 1;
 	pixel_y = -23
 	},
@@ -114219,7 +114262,7 @@ bOd
 bVw
 qgm
 sYg
-crq
+bda
 crq
 crq
 tge
@@ -133041,7 +133084,7 @@ oMg
 sKv
 oMg
 jMw
-mjF
+qNE
 qNE
 qNE
 qNE
