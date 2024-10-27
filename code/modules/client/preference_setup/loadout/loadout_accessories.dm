@@ -569,3 +569,14 @@ Talon pin
 	)
 	gear_tweaks += new/datum/gear_tweak/path(wristband_lists)
 	gear_tweaks += gear_tweak_free_color_choice
+<<<<<<< HEAD
+=======
+
+/datum/gear/accessory/bunny_tail
+	display_name = "bunny tail, colorable"
+	path = /obj/item/clothing/accessory/bunny_tail
+
+/datum/gear/accessory/bunny_tail/New()
+	..()
+	gear_tweaks += gear_tweak_free_color_choice
+>>>>>>> 8f2a31927a (Merge pull request #16528 from SatinIsle/bunny-things)
