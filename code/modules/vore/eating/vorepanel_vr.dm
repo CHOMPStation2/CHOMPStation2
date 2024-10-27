@@ -665,6 +665,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			host.vore_selected = NB
 			unsaved_changes = TRUE
 			return TRUE
+<<<<<<< HEAD
 		//CHOMPAdd Start
 		if("importpanel")
 			var/panel_choice = tgui_input_list(usr, "Belly Import", "Pick an option", list("Import all bellies from VRDB","Import one belly from VRDB"))
@@ -1822,6 +1823,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			unsaved_changes = TRUE
 			return TRUE
 		//CHOMPAdd End
+=======
+		if("importpanel")
+			import_belly(host)
+			return TRUE
+>>>>>>> 8d02f877a4 (Belly import upport (#16454))
 		if("bellypick")
 			host.vore_selected = locate(params["bellypick"])
 			return TRUE
