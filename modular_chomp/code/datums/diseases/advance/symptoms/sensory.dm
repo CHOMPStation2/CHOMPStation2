@@ -60,4 +60,4 @@ Bonus
 					M.reagents.add_reagent("imidazoline", 5)
 			else
 				if(prob(SYMPTOM_ACTIVATION_PROB))
-					to_chat(M, span_notice("[pick("Your eyes feel great.","You feel like your eyes can focus more clearly.", "You don't feel the need to blink.")]"))
+					to_chat(M, span_notice(pick("Your eyes feel great.","You feel like your eyes can focus more clearly.", "You don't feel the need to blink.")))

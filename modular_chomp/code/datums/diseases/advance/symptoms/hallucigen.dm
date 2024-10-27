@@ -30,11 +30,11 @@ Bonus
 		var/mob/living/carbon/M = A.affected_mob
 		switch(A.stage)
 			if(1, 2)
-				to_chat(M, span_warning("[pick("Something appears in your peripheral vision, then winks out.", "You hear a faint whisper with no source.", "Your head aches.")]"))
+				to_chat(M, span_warning(pick("Something appears in your peripheral vision, then winks out.", "You hear a faint whisper with no source.", "Your head aches.")))
 			if(3, 4)
 				to_chat(M, span_warning("<b>[pick("Something is following you.", "You are being watched.", "You hear a whisper in your ear.", "Thumping footsteps slam toward you from nowhere.")]</b>"))
 			else
-				to_chat(M, span_userdanger("[pick("Oh, your head...", "Your head pounds.", "They're everywhere! Run!", "Something in the shadows...")]"))
+				to_chat(M, span_userdanger(pick("Oh, your head...", "Your head pounds.", "They're everywhere! Run!", "Something in the shadows...")))
 				M.hallucination = rand(5, 10)
 
 	return

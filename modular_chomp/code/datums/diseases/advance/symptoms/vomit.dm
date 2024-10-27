@@ -29,6 +29,6 @@ Bonus
 		return
 	var/mob/living/M = A.affected_mob
 	if(prob(2))
-		to_chat(M, span_warning("[pick("you feel nauseated.", "You feel like you're going to throw up!")]"))
+		to_chat(M, span_warning(pick("you feel nauseated.", "You feel like you're going to throw up!")))
 	if(prob(SYMPTOM_ACTIVATION_PROB))
 		M.vomit()

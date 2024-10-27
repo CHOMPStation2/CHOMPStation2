@@ -31,7 +31,7 @@ Bonus
 		var/mob/living/M = A.affected_mob
 		switch(A.stage)
 			if(1, 2, 3, 4)
-				to_chat(M, span_warning("[pick("You feel hungry.", "You crave for food.")]"))
+				to_chat(M, span_warning(pick("You feel hungry.", "You crave for food.")))
 			else
 				to_chat(M, span_warning("<i>[pick("So hungry...", "You'd kill someone for a bite of food...", "Hunger cramps seize you...")]</i>"))
 				M.adjust_nutrition(-20)
