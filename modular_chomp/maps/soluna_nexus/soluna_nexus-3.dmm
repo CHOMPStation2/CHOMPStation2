@@ -6204,7 +6204,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/Deck3_Engineering_AftStarChamber3)
 "cju" = (
-/obj/machinery/computer/diseasesplicer,
 /obj/machinery/camera/network/research{
 	c_tag = "D3-Med-Virology2";
 	network = list("Medical")
@@ -6215,6 +6214,7 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 1
 	},
+/obj/structure/table/standard,
 /turf/simulated/floor/tiled/white{
 	color = "#8bbbd5"
 	},
@@ -15812,13 +15812,13 @@
 /turf/simulated/wall,
 /area/crew_quarters/Dorm_Corridor_4)
 "fcL" = (
-/obj/machinery/computer/centrifuge,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 4
 	},
+/obj/structure/table/glass,
 /turf/simulated/floor/tiled/white{
 	color = "#8bbbd5"
 	},
@@ -22385,15 +22385,15 @@
 /area/bridge/Deck3_Corridor)
 "hfh" = (
 /obj/structure/closet/crate/freezer,
-/obj/item/virusdish/random{
-	pixel_y = -1;
-	pixel_x = -2
-	},
-/obj/item/virusdish/random{
-	pixel_y = 2;
-	pixel_x = -3
-	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/item/reagent_containers/glass/bottle/culture/cold{
+	pixel_x = 5;
+	pixel_y = -4
+	},
+/obj/item/reagent_containers/glass/bottle/culture/flu{
+	pixel_x = -7;
+	pixel_y = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/Virology)
 "hfi" = (
@@ -34952,14 +34952,6 @@
 	},
 /turf/simulated/floor/wood/alt,
 /area/bridge/Embassy)
-"ljJ" = (
-/obj/structure/bed/chair/office/dark{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/white{
-	color = "#8bbbd5"
-	},
-/area/medical/Virology)
 "ljQ" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/arrows/yellow,
@@ -35559,8 +35551,15 @@
 /area/maintenance/Deck3_Engineering_AftStarChamber1)
 "luF" = (
 /obj/structure/closet/crate/freezer,
-/obj/item/virusdish/random,
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/item/reagent_containers/glass/bottle/culture/flu{
+	pixel_x = -7;
+	pixel_y = 4
+	},
+/obj/item/reagent_containers/glass/bottle/culture/cold{
+	pixel_x = 5;
+	pixel_y = -4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/Virology)
 "lvk" = (
@@ -38639,22 +38638,6 @@
 /obj/random/maintenance/misc,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck3_Bridge_AftPortCorridor1)
-"mkP" = (
-/obj/structure/table/glass,
-/obj/item/antibody_scanner{
-	pixel_y = -3
-	},
-/obj/item/antibody_scanner{
-	pixel_x = -2
-	},
-/obj/item/antibody_scanner{
-	pixel_y = 4;
-	pixel_x = -4
-	},
-/turf/simulated/floor/tiled/white{
-	color = "#8bbbd5"
-	},
-/area/medical/Virology)
 "mlm" = (
 /obj/structure/railing/grey{
 	dir = 1
@@ -46381,13 +46364,13 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/bridge/sleeping/Captain_Quarters)
 "oJi" = (
-/obj/machinery/disease2/diseaseanalyser,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 1
 	},
+/obj/structure/table/standard,
 /turf/simulated/floor/tiled/white{
 	color = "#8bbbd5"
 	},
@@ -46570,12 +46553,14 @@
 /turf/simulated/floor/plating,
 /area/maintenance/Deck3_Dorms_ForCorridor1)
 "oKY" = (
-/obj/machinery/smartfridge/secure/virology,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 1
+	},
+/obj/machinery/smartfridge/secure/chemistry{
+	name = "\improper Smart Pathogenic Storage"
 	},
 /turf/simulated/floor/tiled/white{
 	color = "#8bbbd5"
@@ -46646,18 +46631,6 @@
 	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/bridge/Captain_Office)
-"oLL" = (
-/obj/machinery/disease2/isolator,
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/paleblue/border{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/white{
-	color = "#8bbbd5"
-	},
-/area/medical/Virology)
 "oLW" = (
 /obj/effect/catwalk_plated/techmaint,
 /obj/structure/cable/green{
@@ -47190,13 +47163,13 @@
 /turf/simulated/floor/tiled/dark,
 /area/engineering/Engine1_Control_Room)
 "oWv" = (
-/obj/machinery/disease2/incubator,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 4
 	},
+/obj/structure/table/standard,
 /turf/simulated/floor/tiled/white{
 	color = "#8bbbd5"
 	},
@@ -56053,7 +56026,6 @@
 /turf/simulated/wall/r_wall,
 /area/hallway/For_3_Deck_Stairwell)
 "rMJ" = (
-/obj/machinery/disease2/incubator,
 /obj/machinery/light{
 	dir = 4;
 	name = "1E-light fixture"
@@ -56064,6 +56036,7 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 4
 	},
+/obj/machinery/computer/pandemic,
 /turf/simulated/floor/tiled/white{
 	color = "#8bbbd5"
 	},
@@ -56149,22 +56122,6 @@
 	},
 /turf/simulated/floor/wood/alt,
 /area/crew_quarters/sleeping/Dormitory_11)
-"rNY" = (
-/obj/machinery/disease2/isolator,
-/obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
-	},
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/paleblue/border{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/white{
-	color = "#8bbbd5"
-	},
-/area/medical/Virology)
 "rOA" = (
 /obj/structure/bed/chair/sofa/corner/sif_ora{
 	dir = 4
@@ -128073,9 +128030,9 @@ rRU
 oTl
 buC
 cju
-ljJ
+iCX
 oTl
-mkP
+cwT
 eDf
 xyN
 nZm
@@ -128852,7 +128809,7 @@ oTG
 iCX
 iCX
 iCX
-iCX
+oTG
 iCX
 jZn
 nJi
@@ -129105,8 +129062,8 @@ qlN
 qlN
 ncF
 nJi
-oLL
-rNY
+oWv
+rMJ
 fcL
 lDj
 uYx
