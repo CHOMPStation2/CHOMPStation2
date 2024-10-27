@@ -91,14 +91,14 @@
 
 		if(islist(belly_data["addons"]))
 			new_belly.mode_flags = 0
-			//new_belly.slow_digestion = FALSE // Not implemented on virgo
-			//new_belly.speedy_mob_processing = FALSE // Not implemented on virgo
+			new_belly.slow_digestion = FALSE // Not implemented on virgo -> CHOMPEnable
+			new_belly.speedy_mob_processing = FALSE // Not implemented on virgo -> CHOMPEnable
 			STOP_PROCESSING(SSbellies, new_belly)
-			// STOP_PROCESSING(SSobj, new_belly) // Not implemented on virgo
+			STOP_PROCESSING(SSobj, new_belly) // Not implemented on virgo -> CHOMPEnable
 			START_PROCESSING(SSbellies, new_belly)
 			for(var/addon in belly_data["addons"])
 				new_belly.mode_flags += new_belly.mode_flag_list[addon]
-				/* Not implemented on virgo
+				// Not implemented on virgo -> CHOMPEnable Start
 				switch(addon)
 					if("Slow Body Digestion")
 						new_belly.slow_digestion = TRUE
@@ -106,7 +106,7 @@
 						new_belly.speedy_mob_processing = TRUE
 						STOP_PROCESSING(SSbellies, new_belly)
 						START_PROCESSING(SSobj, new_belly)
-				*/
+				//CHOMPEnable End
 
 		// Descriptions
 		if(istext(belly_data["desc"]))
@@ -405,14 +405,14 @@
 			if(new_can_taste == 1)
 				new_belly.can_taste = TRUE
 
-		/* Not implemented on virgo
+		// Not implemented on virgo -> CHOMPEnable Start
 		if(isnum(belly_data["is_feedable"]))
 			var/new_is_feedable = belly_data["is_feedable"]
 			if(new_is_feedable == 0)
 				new_belly.is_feedable = FALSE
 			if(new_is_feedable == 1)
 				new_belly.is_feedable = TRUE
-		*/
+		// CHOMPEnable End
 
 		if(isnum(belly_data["contaminates"]))
 			var/new_contaminates = belly_data["contaminates"]
@@ -469,33 +469,33 @@
 			var/new_emote_time = belly_data["emote_time"]
 			new_belly.emote_time = CLAMP(new_emote_time, 60, 600)
 
-		// new_belly.set_zero_digestion_damage() // Not implemented on virgo; needed for importing a belly to overwrite an existing belly; otherwise pre-existing values throw off the unused digestion damage.
+		new_belly.set_zero_digestion_damage() // Not implemented on virgo; CHOMPEnale needed for importing a belly to overwrite an existing belly; otherwise pre-existing values throw off the unused digestion damage.
 
 		if(isnum(belly_data["digest_brute"]))
 			var/new_digest_brute = belly_data["digest_brute"]
-			new_belly.digest_brute = CLAMP(new_digest_brute, 0, 6)
+			new_belly.digest_brute = CLAMP(new_digest_brute, 0, new_belly.get_unused_digestion_damage()) // CHOMP Edit; clamped to unused damage instead of 6
 
 		if(isnum(belly_data["digest_burn"]))
 			var/new_digest_burn = belly_data["digest_burn"]
-			new_belly.digest_burn = CLAMP(new_digest_burn, 0, 6)
+			new_belly.digest_burn = CLAMP(new_digest_burn, 0, new_belly.get_unused_digestion_damage()) // CHOMP Edit; clamped to unused damage instead of 6
 
 		if(isnum(belly_data["digest_oxy"]))
 			var/new_digest_oxy = belly_data["digest_oxy"]
-			new_belly.digest_oxy = CLAMP(new_digest_oxy, 0, 12)
+			new_belly.digest_oxy = CLAMP(new_digest_oxy, 0, new_belly.get_unused_digestion_damage()) // CHOMP Edit; clamped to unused damage instead of 12
 
 		if(isnum(belly_data["digest_tox"]))
 			var/new_digest_tox = belly_data["digest_tox"]
-			new_belly.digest_tox = CLAMP(new_digest_tox, 0, 6)
+			new_belly.digest_tox = CLAMP(new_digest_tox, 0, new_belly.get_unused_digestion_damage()) // CHOMP Edit; clamped to unused damage instead of 6
 
 		if(isnum(belly_data["digest_clone"]))
 			var/new_digest_clone = belly_data["digest_clone"]
-			new_belly.digest_clone = CLAMP(new_digest_clone, 0, 6)
+			new_belly.digest_clone = CLAMP(new_digest_clone, 0, new_belly.get_unused_digestion_damage()) // CHOMP Edit; clamped to unused damage instead of 6
 
 		if(isnum(belly_data["shrink_grow_size"]))
 			var/new_shrink_grow_size = belly_data["shrink_grow_size"]
 			new_belly.shrink_grow_size = CLAMP(new_shrink_grow_size, 0.25, 2)
 
-		/* Not implemented on virgo
+		// Not implemented on virgo -> CHOMPEnable Start
 		if(isnum(belly_data["vorespawn_blacklist"]))
 			var/new_vorespawn_blacklist = belly_data["vorespawn_blacklist"]
 			if(new_vorespawn_blacklist == 0)
@@ -516,7 +516,7 @@
 				new_vorespawn_absorbed |= VS_FLAG_ABSORB_YES
 				new_vorespawn_absorbed |= VS_FLAG_ABSORB_PREY
 			new_belly.vorespawn_absorbed = new_vorespawn_absorbed
-		*/
+		// CHOMPEnable End
 
 		if(istext(belly_data["egg_type"]))
 			var/new_egg_type = sanitize(belly_data["egg_type"],MAX_MESSAGE_LEN,0,0,0)
@@ -524,8 +524,8 @@
 				if(new_egg_type in global_vore_egg_types)
 					new_belly.egg_type = new_egg_type
 
-		/* Not implemented on virgo
-		if(istext(belly_data["egg_name"])) //CHOMPAdd Start
+		// Not implemented on virgo -> CHOMPEnable Start
+		if(istext(belly_data["egg_name"]))
 			var/new_egg_name = html_encode(belly_data["egg_name"])
 			if(new_egg_name)
 				new_egg_name = readd_quotes(new_egg_name)
@@ -566,7 +566,7 @@
 				new_belly.item_digest_logs = FALSE
 			if(new_item_digest_logs == 1)
 				new_belly.item_digest_logs = TRUE
-			*/
+			// CHOMPEnable End
 
 		if(istext(belly_data["selective_preference"]))
 			var/new_selective_preference = belly_data["selective_preference"]
@@ -575,14 +575,14 @@
 			if(new_selective_preference == "Absorb")
 				new_belly.selective_preference = DM_ABSORB
 
-		/* Not implemented on virgo
+		// Not implemented on virgo -> CHOMPEnable Start
 		if(isnum(belly_data["private_struggle"]))
 			var/new_private_struggle = belly_data["private_struggle"]
 			if(new_private_struggle == 0)
 				new_belly.private_struggle = FALSE
 			if(new_private_struggle == 1)
 				new_belly.private_struggle = TRUE
-		*/
+			// CHOMPEnable End
 
 		if(istext(belly_data["eating_privacy_local"]))
 			var/new_eating_privacy_local = html_encode(belly_data["eating_privacy_local"])
@@ -638,15 +638,15 @@
 				if (!new_belly.fancy_vore && (new_release_sound in classic_release_sounds))
 					new_belly.release_sound = new_release_sound
 
-		/* Not implemented on virgo
+		// Not implemented on virgo -> CHOMPEnable Start
 		if(isnum(belly_data["sound_volume"]))
 			var/new_sound_volume = belly_data["sound_volume"]
 			new_belly.sound_volume = sanitize_integer(new_sound_volume, 0, 100, initial(new_belly.sound_volume))
 
-		if(isnum(belly_data["noise_freq"])) //CHOMPAdd Start
+		if(isnum(belly_data["noise_freq"]))
 			var/new_noise_freq = belly_data["noise_freq"]
 			new_belly.noise_freq = sanitize_integer(new_noise_freq, MIN_VOICE_FREQ, MAX_VOICE_FREQ, initial(new_belly.noise_freq))
-		*/
+		// CHOMPEnable End
 
 		// Visuals
 		if(isnum(belly_data["affects_vore_sprites"]))
@@ -715,10 +715,8 @@
 		if(istext(belly_data["belly_sprite_to_affect"]))
 			var/new_belly_sprite_to_affect = sanitize(belly_data["belly_sprite_to_affect"],MAX_MESSAGE_LEN,0,0,0)
 			if(new_belly_sprite_to_affect)
-				if(ishuman(host))
-					var/mob/living/carbon/human/H = host
-					if (new_belly_sprite_to_affect in H.vore_icon_bellies)
-						new_belly.belly_sprite_to_affect = new_belly_sprite_to_affect
+				if (new_belly_sprite_to_affect in host.vore_icon_bellies) // CHOMPEdit, all, not only human
+					new_belly.belly_sprite_to_affect = new_belly_sprite_to_affect
 
 		if(istext(belly_data["undergarment_chosen"]))
 			var/new_undergarment_chosen = sanitize(belly_data["undergarment_chosen"],MAX_MESSAGE_LEN,0,0,0)
@@ -728,7 +726,7 @@
 						new_belly.undergarment_chosen = U.name
 						break
 
-		/* Not implemented on virgo
+		// Not implemented on virgo -> CHOMPEnable Start
 		var/datum/category_group/underwear/UWC = global_underwear.categories_by_name[new_belly.undergarment_chosen]
 		var/invalid_if_none = TRUE
 		for(var/datum/category_item/underwear/U in UWC.items)
@@ -749,7 +747,7 @@
 		if(istext(belly_data["undergarment_color"]))
 			var/new_undergarment_color = sanitize_hexcolor(belly_data["undergarment_color"],new_belly.undergarment_color)
 			new_belly.undergarment_color = new_undergarment_color
-		*/
+		// CHOMPEnable End
 		/* These don't seem to actually be available yet
 		if(istext(belly_data["tail_to_change_to"]))
 			var/new_tail_to_change_to = sanitize(belly_data["tail_to_change_to"],MAX_MESSAGE_LEN,0,0,0)
@@ -773,21 +771,17 @@
 			var/new_belly_fullscreen_color = sanitize_hexcolor(belly_data["belly_fullscreen_color"],new_belly.belly_fullscreen_color)
 			new_belly.belly_fullscreen_color = new_belly_fullscreen_color
 
-		if(istext(belly_data["belly_fullscreen_color_secondary"]))
-			var/new_belly_fullscreen_color_secondary = sanitize_hexcolor(belly_data["belly_fullscreen_color_secondary"],new_belly.belly_fullscreen_color_secondary)
-			new_belly.belly_fullscreen_color_secondary = new_belly_fullscreen_color_secondary
-		else if (istext(belly_data["belly_fullscreen_color2"])) // Inter server support between virgo and chomp!
-			var/new_belly_fullscreen_color_secondary = sanitize_hexcolor(belly_data["belly_fullscreen_color2"],new_belly.belly_fullscreen_color_secondary)
-			new_belly.belly_fullscreen_color_secondary = new_belly_fullscreen_color_secondary
+		// CHOMPEdit Start
+		if(istext(belly_data["belly_fullscreen_color2"]))
+			var/new_belly_fullscreen_color2 = sanitize_hexcolor(belly_data["belly_fullscreen_color2"],new_belly.belly_fullscreen_color2)
+			new_belly.belly_fullscreen_color2 = new_belly_fullscreen_color2
 
-		if(istext(belly_data["belly_fullscreen_color_trinary"]))// Inter server support between virgo and chomp!
-			var/new_belly_fullscreen_color_trinary = sanitize_hexcolor(belly_data["belly_fullscreen_color_trinary"],new_belly.belly_fullscreen_color_trinary)
-			new_belly.belly_fullscreen_color_trinary = new_belly_fullscreen_color_trinary
-		else if(istext(belly_data["belly_fullscreen_color3"]))
-			var/new_belly_fullscreen_color_trinary = sanitize_hexcolor(belly_data["belly_fullscreen_color3"],new_belly.belly_fullscreen_color_trinary)
-			new_belly.belly_fullscreen_color_trinary = new_belly_fullscreen_color_trinary
+		if(istext(belly_data["belly_fullscreen_color3"]))
+			var/new_belly_fullscreen_color3 = sanitize_hexcolor(belly_data["belly_fullscreen_color3"],new_belly.belly_fullscreen_color3)
+			new_belly.belly_fullscreen_color3 = new_belly_fullscreen_color3
+		//CHOMPEdit End
 
-		/* Not implemented on virgo
+		// Not implemented on virgo -> CHOMPEnable Start
 		if(istext(belly_data["belly_fullscreen_color4"]))
 			var/new_belly_fullscreen_color4 = sanitize_hexcolor(belly_data["belly_fullscreen_color4"],new_belly.belly_fullscreen_color4)
 			new_belly.belly_fullscreen_color4 = new_belly_fullscreen_color4
@@ -795,7 +789,7 @@
 		if(istext(belly_data["belly_fullscreen_alpha"]))
 			var/new_belly_fullscreen_alpha = sanitize_integer(belly_data["belly_fullscreen_alpha"],0,255,initial(new_belly.belly_fullscreen_alpha))
 			new_belly.belly_fullscreen_alpha = new_belly_fullscreen_alpha
-		*/
+		// CHOMPEnable End
 
 		if(isnum(belly_data["colorization_enabled"]))
 			var/new_colorization_enabled = belly_data["colorization_enabled"]
@@ -811,7 +805,7 @@
 			if(new_disable_hud == 1)
 				new_belly.disable_hud = TRUE
 
-		var/possible_fullscreens = icon_states('icons/mob/screen_full_colorized_vore.dmi')
+		var/possible_fullscreens = icon_states('modular_chomp/icons/mob/screen_full_vore_ch.dmi') // CHOMPEdit
 		if(!new_belly.colorization_enabled)
 			possible_fullscreens = icon_states('icons/mob/screen_full_vore.dmi')
 			possible_fullscreens -= "a_synth_flesh_mono"
@@ -879,7 +873,7 @@
 				if(new_transferlocation_secondary == new_belly.name)
 					new_belly.transferlocation_secondary = null
 
-		/* Not implemented on virgo
+		// Not implemented on virgo -> CHOMPEnable Start
 		if(islist(belly_data["autotransfer_whitelist"]))
 			new_belly.autotransfer_whitelist = 0
 			for(var/at_flag in belly_data["autotransfer_whitelist"])
@@ -899,7 +893,7 @@
 			new_belly.autotransfer_secondary_blacklist = 0
 			for(var/at_flag in belly_data["autotransfer_secondary_blacklist"])
 				new_belly.autotransfer_secondary_blacklist += new_belly.autotransfer_flags_list[at_flag]
-		*/
+		// CHOMPEnable End
 
 		if(isnum(belly_data["absorbchance"]))
 			var/new_absorbchance = belly_data["absorbchance"]
@@ -909,14 +903,14 @@
 			var/new_digestchance = belly_data["digestchance"]
 			new_belly.digestchance = sanitize_integer(new_digestchance, 0, 100, initial(new_belly.digestchance))
 
-		/* Not implemented on virgo
+		// Not implemented on virgo -> CHOMPEnable Start
 		if(isnum(belly_data["autotransfer_enabled"]))
 			var/new_autotransfer_enabled = belly_data["autotransfer_enabled"]
 			if(new_autotransfer_enabled == 0)
 				new_belly.autotransfer_enabled = FALSE
 			if(new_autotransfer_enabled == 1)
 				new_belly.autotransfer_enabled = TRUE
-		*/
+		// CHOMPEnable End
 
 		if(isnum(belly_data["autotransferwait"]))
 			var/new_autotransferwait = belly_data["autotransferwait"]
@@ -938,7 +932,7 @@
 				if(new_autotransferlocation == new_belly.name)
 					new_belly.autotransferlocation = null
 
-		/* Not implemented on virgo
+		// Not implemented on virgo -> CHOMPEnable Start
 		if(islist(belly_data["autotransferextralocation"]))
 			var/new_autotransferextralocation = belly_data["autotransferextralocation"]
 			if(new_autotransferextralocation)
@@ -1173,14 +1167,12 @@
 			var/new_fullness5_messages = sanitize(jointext(belly_data["fullness5_messages"],"\n\n"),MAX_MESSAGE_LEN,0,0,0)
 			if(new_fullness5_messages)
 				new_belly.set_reagent_messages(new_fullness5_messages,"full5")
-		*/
+		// CHOMPEnable End
 
 		// After import updates
 		new_belly.items_preserved.Cut()
-		// new_belly.update_internal_overlay() // Signal not implemented!
+		new_belly.update_internal_overlay() // Signal not implemented! CHOMPEnable
 
-	if(ishuman(host))
-		var/mob/living/carbon/human/H = host
-		H.update_fullness()
+	host.update_fullness() // CHOMPEdit, all, not only human
 	host.updateVRPanel()
 	unsaved_changes = TRUE
