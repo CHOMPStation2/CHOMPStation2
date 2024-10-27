@@ -1427,7 +1427,7 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "Like a leash you can see those strings trying to hold you back, hesitating at the thought only to exasperate the sensation of the reality you are in. . . this may not be an illusion.";
 	name = "Strings of distress"
 	},
@@ -3082,7 +3082,7 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb/dark{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
 	name = "Wires of doubt"
 	},
@@ -3365,7 +3365,7 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb/dark{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
 	name = "Wires of doubt"
 	},
@@ -3878,7 +3878,7 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb/dark{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
 	name = "Wires of doubt"
 	},
@@ -9190,7 +9190,7 @@
 /area/space)
 "glz" = (
 /obj/effect/spider/stickyweb/dark{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
 	name = "Wires of doubt"
 	},
@@ -11191,7 +11191,7 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb/dark{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
 	name = "Wires of doubt"
 	},
@@ -11759,7 +11759,7 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "Like a leash you can see those strings trying to hold you back, hesitating at the thought only to exasperate the sensation of the reality you are in. . . this may not be an illusion.";
 	name = "Strings of distress"
 	},
@@ -12498,7 +12498,7 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb/dark{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
 	name = "Wires of doubt"
 	},
@@ -13467,7 +13467,7 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb/dark{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
 	name = "Wires of doubt"
 	},
@@ -15745,7 +15745,7 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb/dark{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
 	name = "Wires of doubt"
 	},
@@ -20004,7 +20004,7 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "Like a leash you can see those strings trying to hold you back, hesitating at the thought only to exasperate the sensation of the reality you are in. . . this may not be an illusion.";
 	name = "Strings of distress"
 	},
@@ -22228,7 +22228,7 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb/dark{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
 	name = "Wires of doubt"
 	},
@@ -22815,7 +22815,7 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb/dark{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
 	name = "Wires of doubt"
 	},
@@ -23485,7 +23485,7 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb/dark{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
 	name = "Wires of doubt"
 	},
@@ -24656,7 +24656,7 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "Like a leash you can see those strings trying to hold you back, hesitating at the thought only to exasperate the sensation of the reality you are in. . . this may not be an illusion.";
 	name = "Strings of distress"
 	},
@@ -26446,7 +26446,7 @@
 /area/space)
 "rcM" = (
 /obj/effect/spider/stickyweb/dark{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
 	name = "Wires of doubt"
 	},
@@ -27024,7 +27024,7 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "Like a leash you can see those strings trying to hold you back, hesitating at the thought only to exasperate the sensation of the reality you are in. . . this may not be an illusion.";
 	name = "Strings of distress"
 	},
@@ -27934,7 +27934,7 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb/dark{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
 	name = "Wires of doubt"
 	},
@@ -31919,7 +31919,7 @@
 /area/space)
 "uzS" = (
 /obj/effect/spider/stickyweb{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "Like a leash you can see those strings trying to hold you back, hesitating at the thought only to exasperate the sensation of the reality you are in. . . this may not be an illusion.";
 	name = "Strings of distress"
 	},
@@ -31980,7 +31980,7 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb/dark{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
 	name = "Wires of doubt"
 	},
@@ -32075,7 +32075,7 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb/dark{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
 	name = "Wires of doubt"
 	},
@@ -34156,7 +34156,7 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "Like a leash you can see those strings trying to hold you back, hesitating at the thought only to exasperate the sensation of the reality you are in. . . this may not be an illusion.";
 	name = "Strings of distress"
 	},
@@ -34980,7 +34980,7 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb/dark{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
 	name = "Wires of doubt"
 	},
@@ -35090,7 +35090,7 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "Like a leash you can see those strings trying to hold you back, hesitating at the thought only to exasperate the sensation of the reality you are in. . . this may not be an illusion.";
 	name = "Strings of distress"
 	},
@@ -35370,7 +35370,7 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb/dark{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
 	name = "Wires of doubt"
 	},
@@ -35708,7 +35708,7 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "Like a leash you can see those strings trying to hold you back, hesitating at the thought only to exasperate the sensation of the reality you are in. . . this may not be an illusion.";
 	name = "Strings of distress"
 	},
@@ -36875,7 +36875,7 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "Like a leash you can see those strings trying to hold you back, hesitating at the thought only to exasperate the sensation of the reality you are in. . . this may not be an illusion.";
 	name = "Strings of distress"
 	},

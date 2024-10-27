@@ -55135,9 +55135,7 @@
 	},
 /area/survivalpod)
 "qef" = (
-/obj/item/reagent_containers/glass/beaker/stopperedbottle{
-	desc = s
-	},
+/obj/item/reagent_containers/glass/beaker/stopperedbottle,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -63532,9 +63530,7 @@
 /turf/simulated/floor/atoll,
 /area/survivalpod)
 "sGg" = (
-/obj/item/storage/vore_egg/human{
-	desc = s
-	},
+/obj/item/storage/vore_egg/human,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -81239,7 +81235,6 @@
 /area/survivalpod)
 "xLZ" = (
 /mob/living/simple_mob/vore/alienanimals/space_ghost{
-	desc = s;
 	ai_holder_type = null
 	},
 /turf/simulated/floor/atoll,
