@@ -577,4 +577,7 @@ Talon pin
 /datum/gear/accessory/bunny_tail/New()
 	..()
 	gear_tweaks += gear_tweak_free_color_choice
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8f2a31927a (Merge pull request #16528 from SatinIsle/bunny-things)
