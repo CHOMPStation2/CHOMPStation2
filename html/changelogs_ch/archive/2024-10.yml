@@ -253,3 +253,20 @@
 2024-10-26:
   Kashargul:
   - qol: marish language back to pink
+2024-10-27:
+  CHOMPStation2StaffMirrorBot:
+  - qol: The autolathe UI has been redesigned and optimized.
+  - rscadd: Legacy robot UIs replaced with Robotact, a new all-in-one UI for all things
+      robot.
+  - qol: Statpanel now uses /tg/'s latest styles and can have it's font size adjusted.
+  - rscadd: Action buttons are now able to be grouped and sorted under the new Action
+      Palette.
+  TheCaramelion:
+  - rscadd: Ghost costume
+  - rscadd: Candy bowls
+  - rscadd: THE costume box pile
+  - rscadd: Costume boxes
+  - rscadd: Candy bags
+  - maptweak: Candles, cobwebs, spiders, and candy all over the map.
+  tacoguy7765093:
+  - maptweak: Fixes viro airlock and genetics disposals.
