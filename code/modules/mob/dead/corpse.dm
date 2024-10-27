@@ -90,20 +90,19 @@
 						M.g_ears3 = color_rgb_list[2]
 						M.b_ears3 = color_rgb_list[3]
 			M.update_hair()
-<<<<<<< HEAD
+
 	//CHOMPAdd Start
 	if(hair)
 		M.h_style = hair
 		M.update_hair()
 	//CHOMPAdd End
-=======
+
 	// handle secondary ears
 	if(length(ear_secondary_type) && (ear_secondary_type[1] in global.ear_styles_list))
 		M.ear_secondary_style = global.ear_styles_list[ear_secondary_type[1]]
 		if(length(ear_secondary_type) > 1)
 			M.ear_secondary_colors = ear_secondary_type.Copy(2, min(length(GLOB.fancy_sprite_accessory_color_channel_names), length(ear_secondary_type)) + 1)
 
->>>>>>> b36015d52a (Adds a second ear slot. (#16513))
 	if(wing_type && wing_type.len)
 		if(wing_type[1] in wing_styles_list)
 			M.wing_style = wing_styles_list[wing_type[1]]
