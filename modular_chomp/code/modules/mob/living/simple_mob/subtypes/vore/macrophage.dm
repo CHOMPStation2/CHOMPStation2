@@ -32,8 +32,14 @@
 
 	ai_holder_type = /datum/ai_holder/simple_mob/melee
 
-/mob/living/simple_mob/vore/aggressive/macrophage/New()
-	icon_state = "macrophage-[rand(2, 4)]"
+/mob/living/simple_mob/vore/aggressive/macrophage/green
+	icon_state = "macrophage-2"
+
+/mob/living/simple_mob/vore/aggressive/macrophage/pink
+	icon_state = "macrophage-3"
+
+/mob/living/simple_mob/vore/aggressive/macrophage/blue
+	icon_state = "macrophage-4"
 
 /obj/belly/macrophage
 	name = "capsid"

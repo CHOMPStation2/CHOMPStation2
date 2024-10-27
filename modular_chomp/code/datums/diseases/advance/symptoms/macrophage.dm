@@ -1,3 +1,20 @@
+/*
+//////////////////////////////////////
+
+Macrophages
+
+	Very noticeable.
+	Lowers resistance slightly.
+	Decreases stage speed.
+	Increases transmittablity
+	Fatal leve.
+
+BONUS
+	The virus grows and ceases to be microscopic.
+
+//////////////////////////////////////
+*/
+
 /datum/symptom/macrophage
 	name = "Macrophage"
 	stealth = -4
@@ -25,7 +42,7 @@
 				to_chat(M, span_notice("Your skin crawls."))
 			if(4)
 				M.visible_message(span_danger("Lumps form on [M]'s skin!"), span_userdanger("You cringe in pain as lumps form and move around on your skin!"))
-			if(5 && prob(50))
+			if(5)
 				phagecounter -= max(2, A.totalStageSpeed())
 				if(gigagerms && phagecounter <= 0)
 					Burst(A, M, TRUE)
