@@ -84,7 +84,10 @@
 	searching = TRUE
 
 	if(!do_after(user, 5 SECONDS))
+		searching = FALSE
 		return
+
+	searching = FALSE
 
 	if(treated[user.ckey])
 		var/choice = tgui_alert(user, "You already took one! Take more?", "Take another...", list("Reach in...", "Leave it!"))
@@ -98,8 +101,6 @@
 	else
 		thegoods = pick(candy)
 		treated[user.ckey] = TRUE
-
-	searching = FALSE
 
 	var/goodie = new thegoods(src)
 	user.put_in_hands(goodie)
