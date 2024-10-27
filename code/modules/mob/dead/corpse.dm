@@ -90,11 +90,14 @@
 						M.g_ears3 = color_rgb_list[2]
 						M.b_ears3 = color_rgb_list[3]
 			M.update_hair()
+<<<<<<< HEAD
 	//CHOMPAdd Start
 	if(hair)
 		M.h_style = hair
 		M.update_hair()
 	//CHOMPAdd End
+=======
+>>>>>>> b36015d52a (Adds a second ear slot. (#16513))
 	// handle secondary ears
 	if(length(ear_secondary_type) && (ear_secondary_type[1] in global.ear_styles_list))
 		M.ear_secondary_style = global.ear_styles_list[ear_secondary_type[1]]
