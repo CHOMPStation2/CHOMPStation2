@@ -270,3 +270,11 @@
   - maptweak: Candles, cobwebs, spiders, and candy all over the map.
   tacoguy7765093:
   - maptweak: Fixes viro airlock and genetics disposals.
+2024-10-28:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: You can now deploy hardsuit helms over top of your normal headwear, the
+      same as magboots.
+  Kashargul:
+  - bugfix: xenoarch init ordern
+  TheCaramelion:
+  - bugfix: Fixed halloween candy bowls becoming stuck
