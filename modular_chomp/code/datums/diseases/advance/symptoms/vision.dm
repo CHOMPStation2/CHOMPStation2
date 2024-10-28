@@ -35,7 +35,7 @@ Bonus
 			if(1, 2)
 				to_chat(M, span_warning("Your eyes itch."))
 			if(3, 4)
-				to_chat(M, span_warning("<b>Your eyes burn!</b>"))
+				to_chat(M, span_boldwarning("Your eyes burn!"))
 				M.eye_blurry = 20
 				eyes.take_damage(1)
 			else

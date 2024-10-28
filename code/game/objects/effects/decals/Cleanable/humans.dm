@@ -245,7 +245,6 @@ var/global/list/image/splatter_cache=list()
 
 	var/list/datum/disease/viruses = list() // CHOMPEdit
 	var/dry = 0 // Keeps the lag down
-	var/sampled = FALSE
 
 /obj/effect/decal/cleanable/mucus/Initialize()
 	. = ..()

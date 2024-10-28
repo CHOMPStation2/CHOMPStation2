@@ -370,7 +370,7 @@
 		user.drop_item()
 		beaker = I
 		beaker.loc = src
-		to_chat(usr, span_notice("You add the beaker to the machine."))
+		to_chat(user, span_notice("You add the beaker to the machine."))
 		update_tgui_static_data(user)
 		icon_state = "pandemic1"
 	else
