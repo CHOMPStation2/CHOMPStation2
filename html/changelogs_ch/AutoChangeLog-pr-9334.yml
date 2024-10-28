@@ -1,0 +1,6 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - bugfix: "Alt-click menu is visually correct again"
+  - bugfix: "Clicking on an embedded controller in the alt click menu no longer runtimes"
+  - bugfix: "Clicking on a mob in the alt click menu now works"
