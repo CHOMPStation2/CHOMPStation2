@@ -227,7 +227,7 @@
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/marking/ch/trex_lowerjaw
-	name = trex lower jaw
+	name = "trex lower jaw"
 	icon_state = "trex_lowerjaw"
 	body_parts = list(BP_HEAD)
 	color_blend_mode = ICON_MULTIPLY
