@@ -163,7 +163,7 @@ Maybe later, gotta figure out a way to click yourself when in a locker etc.
 					new_mob.vore_organs += B
 				new_mob.nutrition = src.nutrition
 
-				src.soulgem.transfer_self(new_mob) //CHOMPAdd Soulcatcher
+				src.soulgem?.transfer_self(new_mob) //CHOMPAdd Soulcatcher
 
 			new_mob.ckey = src.ckey
 			if(new_mob.tf_form_ckey)
