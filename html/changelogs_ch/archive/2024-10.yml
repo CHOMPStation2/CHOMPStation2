@@ -278,3 +278,8 @@
   - bugfix: xenoarch init ordern
   TheCaramelion:
   - bugfix: Fixed halloween candy bowls becoming stuck
+2024-10-29:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Alt-click menu is visually correct again
+  - bugfix: Clicking on an embedded controller in the alt click menu no longer runtimes
+  - bugfix: Clicking on a mob in the alt click menu now works
