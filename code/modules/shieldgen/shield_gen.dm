@@ -271,7 +271,6 @@
 				continue
 			E = new(O, src)
 			field.Add(E)
-		covered_turfs = null
 // CHOMPAdd End
 
 /obj/machinery/shield_gen/update_icon()
