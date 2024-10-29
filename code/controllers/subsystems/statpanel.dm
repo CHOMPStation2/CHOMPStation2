@@ -418,6 +418,8 @@ SUBSYSTEM_DEF(statpanels)
 		return PROCESS_KILL
 
 /datum/object_window_info/proc/start_turf_tracking()
+	if(isshell(parent.mob) || isai(parent.mob))
+		return
 	if(actively_tracking)
 		stop_turf_tracking()
 	var/static/list/connections = list(
@@ -430,6 +432,8 @@ SUBSYSTEM_DEF(statpanels)
 	actively_tracking = TRUE
 
 /datum/object_window_info/proc/stop_turf_tracking()
+	if(isshell(parent.mob) || isai(parent.mob))
+		return
 	qdel(GetComponent(/datum/component/connect_mob_behalf))
 	UnregisterSignal(parent.mob.listed_turf, COMSIG_ATOM_ENTERED)
 	UnregisterSignal(parent.mob.listed_turf, COMSIG_ATOM_EXITED)
