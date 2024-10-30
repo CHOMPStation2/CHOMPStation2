@@ -4,16 +4,22 @@
 /turf/unsimulated/wall/planetary/normal/thor,
 /area/surface/outpost/wall/checkpoint)
 "aah" = (
-/obj/effect/map_effect/portal/line/side_a,
+/obj/effect/map_effect/portal/line/side_a{
+	dir = 4
+	},
 /turf/unsimulated/wall/planetary/normal/thor,
 /area/surface/outpost/wall/checkpoint)
 "aao" = (
-/obj/effect/map_effect/portal/line/side_a,
+/obj/effect/map_effect/portal/line/side_a{
+	dir = 4
+	},
 /turf/simulated/shuttle/wall/voidcraft,
 /area/surface/outpost/wall/checkpoint)
 "aap" = (
 /obj/effect/map_effect/perma_light/concentrated/incandescent,
-/obj/effect/map_effect/portal/line/side_a,
+/obj/effect/map_effect/portal/line/side_a{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/surface/outpost/wall/checkpoint)
 "aar" = (
@@ -6791,6 +6797,12 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/security/armoury)
+"cWb" = (
+/obj/effect/map_effect/portal/line/side_a{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel_dirty,
+/area/surface/outpost/wall/checkpoint)
 "cWk" = (
 /obj/structure/filingcabinet,
 /obj/item/radio/intercom{
@@ -29865,6 +29877,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/medical/surgery)
+"mkL" = (
+/obj/effect/map_effect/portal/line/side_a{
+	dir = 4
+	},
+/turf/simulated/shuttle/wall/voidcraft/hard_corner,
+/area/surface/outpost/wall/checkpoint)
 "mkR" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/tiled/steel_dirty,
@@ -52966,6 +52984,13 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/civilian/fishing)
 "vwo" = (
+/obj/effect/map_effect/portal/master/side_a{
+	portal_id = "outpost_to_mines";
+	dir = 4
+	},
+/obj/effect/map_effect/portal/line/side_a{
+	dir = 4
+	},
 /turf/unsimulated/wall/planetary/normal/thor,
 /area/surface/outpost/wall/checkpoint)
 "vwr" = (
@@ -60796,13 +60821,13 @@ tMO
 tUG
 dJR
 vwo
-aBh
-abg
-abg
-abg
-abg
-aBh
-vwo
+mkL
+cWb
+cWb
+cWb
+cWb
+mkL
+aah
 tMO
 tMO
 tMO
