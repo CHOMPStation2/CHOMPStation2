@@ -151,6 +151,12 @@
 /datum/belly_overlays/vbo_maw23
 	belly_icon = 'modular_chomp/icons/mob/vore_fullscreens/VBO_maw23.dmi'
 
+/datum/belly_overlays/vbo_maw24
+	belly_icon = 'modular_chomp/icons/mob/vore_fullscreens/VBO_maw24.dmi'
+
+/datum/belly_overlays/vbo_maw25
+	belly_icon = 'modular_chomp/icons/mob/vore_fullscreens/VBO_maw25.dmi'
+
 /datum/belly_overlays/vbo_notbelly
 	belly_icon = 'modular_chomp/icons/mob/vore_fullscreens/VBO_notbelly.dmi'
 
