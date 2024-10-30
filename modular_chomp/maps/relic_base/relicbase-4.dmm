@@ -6815,8 +6815,7 @@
 	frequency = 1380;
 	master_tag = "shuttle3_shuttle";
 	name = "exterior access button";
-	pixel_y = 26;
-	req_access = null
+	pixel_y = 26
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/shuttle3/start)
@@ -10127,8 +10126,7 @@
 	frequency = 1380;
 	master_tag = "shuttle3_shuttle";
 	name = "interior access button";
-	pixel_y = -26;
-	req_access = null
+	pixel_y = -26
 	},
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 6
@@ -12067,7 +12065,6 @@
 	dir = 10
 	},
 /obj/structure/closet/secure_closet/guncabinet/sidearm{
-	anchored = 1;
 	starts_with = null
 	},
 /obj/item/ammo_magazine/m9mm/rubber,
@@ -12580,6 +12577,19 @@
 /obj/structure/table/glass,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
+"kSh" = (
+/obj/machinery/embedded_controller/radio/airlock/docking_port_multi{
+	dir = 1;
+	frequency = 1380;
+	id_tag = "escape_dock_ssouth_airlock";
+	master_tag = "d2_w1_a_airlock";
+	req_one_access = list(13);
+	pixel_y = -24
+	},
+/turf/simulated/floor/tiled/techmaint{
+	outdoors = 1
+	},
+/area/surface/outside/plains/outpost)
 "kTi" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -15545,7 +15555,6 @@
 "nsL" = (
 /obj/machinery/door/airlock/hatch{
 	icon_state = "door_locked";
-	id_tag = null;
 	locked = 1;
 	name = "AI Core";
 	req_access = list(16)
@@ -18890,7 +18899,6 @@
 	id = "expshuttle3_door_L";
 	name = "Side Hatch Control";
 	pixel_y = -26;
-	req_one_access = null;
 	specialfunctions = 4
 	},
 /turf/simulated/shuttle/floor/black,
@@ -19417,7 +19425,6 @@
 	dir = 9
 	},
 /obj/structure/closet/secure_closet/guncabinet/sidearm{
-	anchored = 1;
 	starts_with = null
 	},
 /obj/item/ammo_magazine/m9mm/rubber,
@@ -22514,7 +22521,6 @@
 	name = "Cell 2 Door";
 	pixel_x = 27;
 	pixel_y = -1;
-	req_access = null;
 	req_one_access = list(2,4)
 	},
 /obj/machinery/button/flasher{
@@ -24084,7 +24090,6 @@
 	name = "Cell 1 Door";
 	pixel_x = 27;
 	pixel_y = -1;
-	req_access = null;
 	req_one_access = list(2,4)
 	},
 /obj/machinery/button/flasher{
@@ -26321,7 +26326,6 @@
 "vOy" = (
 /obj/machinery/door/airlock/hatch{
 	icon_state = "door_locked";
-	id_tag = null;
 	locked = 1;
 	name = "AI Core";
 	req_access = list(16)
@@ -52765,8 +52769,8 @@ jLH
 jLH
 jLH
 jLH
-jLH
-jLH
+kSh
+wjN
 vrx
 nMa
 bxY

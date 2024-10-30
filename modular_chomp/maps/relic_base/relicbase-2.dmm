@@ -5393,60 +5393,13 @@
 "eFF" = (
 /obj/machinery/embedded_controller/radio/airlock/docking_port_multi{
 	frequency = 1380;
-	id_tag = "escape_dock_snorth_airlock";
-	master_tag = "escape_dock";
-	pixel_y = 27;
-	req_one_access = list(13);
-	tag_airlock_mech_sensor = null;
-	tag_airpump = null;
-	tag_chamber_sensor = null;
-	tag_exterior_door = null;
-	tag_interior_door = null;
-	tag_shuttle_mech_sensor = null
-	},
-/obj/machinery/embedded_controller/radio/airlock/docking_port_multi{
-	frequency = 1380;
-	id_tag = "escape_dock_north_airlock";
-	master_tag = "escape_dock";
-	pixel_y = 27;
-	req_one_access = list(13);
-	tag_airlock_mech_sensor = null;
-	tag_airpump = null;
-	tag_chamber_sensor = null;
-	tag_exterior_door = null;
-	tag_interior_door = null;
-	tag_shuttle_mech_sensor = null
-	},
-/obj/machinery/embedded_controller/radio/airlock/docking_port_multi{
-	dir = 1;
-	frequency = 1380;
 	id_tag = "arrivals_dock_south_airlock";
 	master_tag = "arrivals_dock";
-	pixel_y = -27;
-	req_one_access = list(13);
-	tag_airlock_mech_sensor = null;
-	tag_airpump = null;
-	tag_chamber_sensor = null;
-	tag_exterior_door = null;
-	tag_interior_door = null;
-	tag_shuttle_mech_sensor = null
-	},
-/obj/machinery/embedded_controller/radio/airlock/docking_port_multi{
-	dir = 1;
-	frequency = 1380;
-	id_tag = "escape_dock_ssouth_airlock";
-	master_tag = "escape_dock";
-	pixel_y = -27;
-	req_one_access = list(13);
-	tag_airlock_mech_sensor = null;
-	tag_airpump = null;
-	tag_chamber_sensor = null;
-	tag_exterior_door = null;
-	tag_interior_door = null;
-	tag_shuttle_mech_sensor = null
+	pixel_y = 24;
+	req_one_access = list(13)
 	},
 /turf/simulated/floor/tiled/steel_dirty,
-/area/hallway/primary/seconddeck/dockhallway{
+/area/hallway/primary/firstdeck/auxdockaft{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "eGu" = (
@@ -14756,6 +14709,20 @@
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"pmL" = (
+/obj/effect/floor_decal/rust,
+/obj/machinery/embedded_controller/radio/airlock/docking_port_multi{
+	dir = 4;
+	frequency = 1380;
+	id_tag = "escape_dock_ssouth_airlock";
+	master_tag = "escape_dock";
+	req_one_access = list(13);
+	pixel_x = -24
+	},
+/turf/simulated/floor/tiled/steel_dirty,
+/area/hallway/primary/seconddeck/dockhallway{
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+	})
 "pno" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
 /obj/machinery/meter,
@@ -17749,10 +17716,8 @@
 /obj/machinery/atmospherics/omni/mixer{
 	active_power_usage = 7500;
 	tag_east = 2;
-	tag_east_con = null;
 	tag_north = 1;
 	tag_north_con = 0.21;
-	tag_south_con = null;
 	tag_west = 1;
 	tag_west_con = 0.79
 	},
@@ -18564,10 +18529,8 @@
 "tOH" = (
 /obj/machinery/atmospherics/omni/mixer{
 	tag_east = 2;
-	tag_east_con = null;
 	tag_north = 1;
 	tag_north_con = 0.5;
-	tag_south_con = null;
 	tag_west = 1;
 	tag_west_con = 0.5;
 	use_power = 0
@@ -74819,7 +74782,7 @@ rlb
 aal
 bhE
 aal
-bhE
+eFF
 bhE
 bhE
 cBz
@@ -75102,7 +75065,7 @@ htn
 ioq
 iYV
 cfS
-jLw
+pmL
 jTn
 aaq
 kbU
@@ -75603,7 +75566,7 @@ rlb
 rlb
 rlb
 aaq
-eFF
+gTm
 aaq
 fsS
 fNP

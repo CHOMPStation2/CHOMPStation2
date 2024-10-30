@@ -304,15 +304,10 @@
 	frequency = 1331;
 	id_tag = "vox_west_control";
 	pixel_x = 27;
-	req_access = list(150);
-	tag_airpump = null;
-	tag_chamber_sensor = null;
-	tag_exterior_door = null;
-	tag_interior_door = null
+	req_access = list(150)
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 8;
-	id_tag = null
+	dir = 8
 	},
 /obj/machinery/light/small,
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
@@ -753,8 +748,7 @@
 /area/syndicate_station)
 "ala" = (
 /obj/effect/floor_decal/spline/fancy/wood{
-	dir = 9;
-	icon_state = "spline_fancy"
+	dir = 9
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/centcom/terminal)
@@ -929,8 +923,7 @@
 /area/holodeck/source_chess)
 "auX" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 8;
-	id_tag = null
+	dir = 8
 	},
 /obj/machinery/light/small,
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
@@ -1513,19 +1506,13 @@
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/skipjack)
 "aHc" = (
-/obj/machinery/door/airlock/hatch{
-	frequency = null;
-	id_tag = null;
-	req_access = null
-	},
+/obj/machinery/door/airlock/hatch,
 /obj/effect/map_helper/airlock/button/ext_button,
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/machinery/access_button{
 	dir = 1;
-	master_tag = null;
 	pixel_x = -27;
-	pixel_y = 7;
-	req_one_access = null
+	pixel_y = 7
 	},
 /turf/simulated/shuttle/plating,
 /area/shuttle/skipjack)
@@ -1731,7 +1718,6 @@
 /area/holodeck/source_chess)
 "aUi" = (
 /obj/machinery/airlock_sensor{
-	id_tag = null;
 	pixel_y = 27
 	},
 /obj/effect/shuttle_landmark{
@@ -1817,10 +1803,7 @@
 /area/shuttle/syndicate)
 "aZj" = (
 /obj/machinery/door/airlock/voidcraft/vertical{
-	frequency = null;
-	id_tag = null;
-	name = "Ship External Hatch";
-	req_access = null
+	name = "Ship External Hatch"
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
@@ -2965,12 +2948,9 @@
 /area/centcom/evac)
 "cmS" = (
 /obj/machinery/door/airlock/external{
-	frequency = null;
 	icon_state = "door_locked";
-	id_tag = null;
 	locked = 1;
-	name = "Ship Hatch";
-	req_access = null
+	name = "Ship Hatch"
 	},
 /obj/effect/map_helper/airlock/door/ext_door,
 /turf/simulated/shuttle/floor/black,
@@ -4034,8 +4014,7 @@
 /area/centcom/medical)
 "dyT" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 8;
-	id_tag = null
+	dir = 8
 	},
 /obj/machinery/button/remote/blast_door{
 	id = "smindicate";
@@ -4452,19 +4431,13 @@
 	},
 /area/centcom/main_hall)
 "dWp" = (
-/obj/machinery/door/airlock/hatch{
-	frequency = null;
-	id_tag = null;
-	req_access = null
-	},
+/obj/machinery/door/airlock/hatch,
 /obj/effect/map_helper/airlock/button/ext_button,
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/machinery/access_button{
 	dir = 1;
-	master_tag = null;
 	pixel_x = 27;
-	pixel_y = 7;
-	req_access = null
+	pixel_y = 7
 	},
 /turf/simulated/shuttle/plating,
 /area/shuttle/skipjack)
@@ -4821,20 +4794,14 @@
 /obj/machinery/atmospherics/pipe/manifold/visible{
 	dir = 8
 	},
-/obj/machinery/door/airlock/voidcraft/vertical{
-	frequency = null;
-	id_tag = null;
-	req_access = null
-	},
+/obj/machinery/door/airlock/voidcraft/vertical,
 /obj/effect/map_helper/airlock/door/int_door,
 /obj/effect/map_helper/airlock/button/int_button,
 /obj/machinery/access_button{
 	dir = 8;
-	master_tag = null;
 	name = "interior access button";
 	pixel_x = -7;
-	pixel_y = 27;
-	req_access = null
+	pixel_y = 27
 	},
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/shuttle/syndicate)
@@ -5149,6 +5116,23 @@
 	},
 /turf/unsimulated/beach/sand,
 /area/beach)
+"eIE" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/black/border{
+	dir = 8
+	},
+/obj/machinery/embedded_controller/radio/airlock/docking_port_multi{
+	dir = 4;
+	frequency = 1380;
+	id_tag = "escape_dock_ssouth_airlock";
+	master_tag = "centcom_dock";
+	req_one_access = list(13);
+	pixel_x = -24
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/centcom/terminal)
 "eKh" = (
 /obj/structure/undies_wardrobe,
 /turf/simulated/floor/tiled/techmaint,
@@ -5777,36 +5761,16 @@
 /area/centcom/security)
 "fHf" = (
 /obj/structure/table/rack/gun_rack/steel,
-/obj/item/storage/pouch/holding{
-	remove_delay = 0
-	},
-/obj/item/storage/pouch/holding{
-	remove_delay = 0
-	},
-/obj/item/storage/pouch/holding{
-	remove_delay = 0
-	},
-/obj/item/storage/pouch/holding{
-	remove_delay = 0
-	},
-/obj/item/storage/pouch/holding{
-	remove_delay = 0
-	},
-/obj/item/storage/pouch/holding{
-	remove_delay = 0
-	},
-/obj/item/storage/pouch/holding{
-	remove_delay = 0
-	},
-/obj/item/storage/pouch/holding{
-	remove_delay = 0
-	},
-/obj/item/storage/pouch/holding{
-	remove_delay = 0
-	},
-/obj/item/storage/pouch/holding{
-	remove_delay = 0
-	},
+/obj/item/storage/pouch/holding,
+/obj/item/storage/pouch/holding,
+/obj/item/storage/pouch/holding,
+/obj/item/storage/pouch/holding,
+/obj/item/storage/pouch/holding,
+/obj/item/storage/pouch/holding,
+/obj/item/storage/pouch/holding,
+/obj/item/storage/pouch/holding,
+/obj/item/storage/pouch/holding,
+/obj/item/storage/pouch/holding,
 /turf/simulated/floor/redgrid/off,
 /area/centcom/specops)
 "fHI" = (
@@ -6410,19 +6374,14 @@
 "gDm" = (
 /obj/machinery/atmospherics/pipe/simple/visible,
 /obj/machinery/door/airlock/external{
-	frequency = null;
 	icon_state = "door_locked";
-	id_tag = null;
 	locked = 1;
-	name = "Ship Hatch";
-	req_access = null
+	name = "Ship Hatch"
 	},
 /obj/machinery/access_button{
 	dir = 1;
-	master_tag = null;
 	pixel_x = -27;
-	pixel_y = 7;
-	req_one_access = null
+	pixel_y = 7
 	},
 /obj/effect/map_helper/airlock/button/int_button,
 /obj/effect/map_helper/airlock/door/int_door,
@@ -6941,18 +6900,13 @@
 /area/ninja_dojo/dojo)
 "hdC" = (
 /obj/machinery/access_button{
-	master_tag = null;
 	pixel_x = 27;
-	pixel_y = -7;
-	req_one_access = null
+	pixel_y = -7
 	},
 /obj/machinery/door/airlock/external{
-	frequency = null;
 	icon_state = "door_locked";
-	id_tag = null;
 	locked = 1;
-	name = "Ship Hatch";
-	req_access = null
+	name = "Ship Hatch"
 	},
 /obj/effect/map_helper/airlock/button/ext_button,
 /obj/effect/map_helper/airlock/door/ext_door,
@@ -7071,8 +7025,7 @@
 /area/holodeck/source_picnicarea)
 "hlP" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 4;
-	id_tag = null
+	dir = 4
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/shuttle/floor/voidcraft/dark,
@@ -8311,11 +8264,7 @@
 /turf/simulated/shuttle/floor,
 /area/centcom/evac)
 "iHl" = (
-/obj/machinery/door/airlock/hatch{
-	frequency = null;
-	id_tag = null;
-	req_access = null
-	},
+/obj/machinery/door/airlock/hatch,
 /obj/machinery/atmospherics/pipe/simple/visible,
 /obj/effect/map_helper/airlock/door/int_door,
 /turf/simulated/shuttle/plating,
@@ -8597,12 +8546,10 @@
 	},
 /obj/machinery/airlock_sensor{
 	dir = 8;
-	id_tag = null;
 	pixel_x = 27
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 1;
-	id_tag = null
+	dir = 1
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/effect/map_helper/airlock/sensor/chamber_sensor,
@@ -9727,11 +9674,7 @@
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/merchant)
 "klw" = (
-/obj/machinery/door/airlock/voidcraft/vertical{
-	frequency = null;
-	id_tag = null;
-	req_access = null
-	},
+/obj/machinery/door/airlock/voidcraft/vertical,
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 4
 	},
@@ -9739,11 +9682,9 @@
 /obj/effect/map_helper/airlock/button/int_button,
 /obj/machinery/access_button{
 	dir = 4;
-	master_tag = null;
 	name = "interior access button";
 	pixel_x = 7;
-	pixel_y = 27;
-	req_access = null
+	pixel_y = 27
 	},
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/shuttle/syndicate)
@@ -10487,8 +10428,7 @@
 /area/centcom/evac)
 "kWs" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 4;
-	id_tag = null
+	dir = 4
 	},
 /obj/machinery/airlock_sensor{
 	dir = 8;
@@ -11335,10 +11275,8 @@
 /obj/machinery/atmospherics/pipe/simple/visible,
 /obj/machinery/access_button{
 	dir = 4;
-	master_tag = null;
 	pixel_x = -25;
-	pixel_y = 6;
-	req_one_access = null
+	pixel_y = 6
 	},
 /obj/effect/map_helper/airlock/button/int_button,
 /turf/simulated/shuttle/plating,
@@ -11940,7 +11878,6 @@
 "mEm" = (
 /obj/machinery/airlock_sensor{
 	dir = 8;
-	id_tag = null;
 	pixel_x = 27
 	},
 /obj/effect/map_helper/airlock/sensor/chamber_sensor,
@@ -14757,20 +14694,15 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/voidcraft/vertical{
-	frequency = null;
-	id_tag = null;
-	name = "Ship Internal Hatch";
-	req_access = null
+	name = "Ship Internal Hatch"
 	},
 /obj/effect/map_helper/airlock/door/int_door,
 /obj/effect/map_helper/airlock/button/int_button,
 /obj/machinery/access_button{
 	dir = 4;
-	master_tag = null;
 	name = "interior access button";
 	pixel_x = 7;
-	pixel_y = 27;
-	req_access = null
+	pixel_y = 27
 	},
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/shuttle/ninja)
@@ -14782,10 +14714,8 @@
 /obj/machinery/atmospherics/pipe/simple/visible,
 /obj/machinery/access_button{
 	dir = 8;
-	master_tag = null;
 	pixel_x = 25;
-	pixel_y = 6;
-	req_access = null
+	pixel_y = 6
 	},
 /obj/effect/map_helper/airlock/button/int_button,
 /turf/simulated/shuttle/plating,
@@ -14893,7 +14823,6 @@
 	broadcasting = 1;
 	dir = 1;
 	frequency = 1443;
-	listening = 0;
 	name = "Spec Ops Intercom";
 	pixel_y = 22
 	},
@@ -15734,15 +15663,10 @@
 	frequency = 1331;
 	id_tag = "skipjack_shuttle";
 	pixel_x = -27;
-	req_access = list(150);
-	tag_airpump = null;
-	tag_chamber_sensor = null;
-	tag_exterior_door = null;
-	tag_interior_door = null
+	req_access = list(150)
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 4;
-	id_tag = null
+	dir = 4
 	},
 /obj/machinery/light/small,
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
@@ -16210,11 +16134,7 @@
 	name = "Outer Airlock";
 	opacity = 0
 	},
-/obj/machinery/door/airlock/voidcraft{
-	frequency = null;
-	id_tag = null;
-	req_access = null
-	},
+/obj/machinery/door/airlock/voidcraft,
 /obj/structure/fans/tiny,
 /obj/effect/map_helper/airlock/door/ext_door,
 /turf/simulated/shuttle/plating,
@@ -16449,7 +16369,6 @@
 "siV" = (
 /obj/machinery/airlock_sensor{
 	dir = 4;
-	id_tag = null;
 	pixel_x = -27
 	},
 /obj/effect/shuttle_landmark{
@@ -18075,9 +17994,7 @@
 /turf/simulated/shuttle/floor/white,
 /area/centcom/evac)
 "ujD" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	id_tag = null
-	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume,
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/shuttle/plating,
 /area/shuttle/skipjack)
@@ -18551,8 +18468,7 @@
 	req_access = list(150)
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 4;
-	id_tag = null
+	dir = 4
 	},
 /obj/machinery/button/remote/blast_door{
 	id = "blastninja";
@@ -19482,8 +19398,7 @@
 /area/tdome/tdomeadmin)
 "vGb" = (
 /obj/effect/floor_decal/spline/fancy/wood{
-	dir = 10;
-	icon_state = "spline_fancy"
+	dir = 10
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/centcom/terminal)
@@ -21491,12 +21406,9 @@
 /area/centcom/specops)
 "xYj" = (
 /obj/machinery/door/airlock/external{
-	frequency = null;
 	icon_state = "door_locked";
-	id_tag = null;
 	locked = 1;
-	name = "Ship Hatch";
-	req_access = null
+	name = "Ship Hatch"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible,
 /obj/effect/map_helper/airlock/door/int_door,
@@ -21574,19 +21486,14 @@
 /area/skipjack_station)
 "yhb" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 1;
-	id_tag = null
+	dir = 1
 	},
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	dir = 4;
 	frequency = 1331;
 	id_tag = "trade2_control";
 	pixel_x = -25;
-	req_access = list(150);
-	tag_airpump = null;
-	tag_chamber_sensor = null;
-	tag_exterior_door = null;
-	tag_interior_door = null
+	req_access = list(150)
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/shuttle/floor/black,
@@ -37277,7 +37184,7 @@ kND
 wBO
 nrt
 xVE
-nrt
+eIE
 wBO
 nrt
 cuj
