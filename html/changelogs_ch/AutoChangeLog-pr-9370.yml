@@ -1,0 +1,7 @@
+author: "Kazzc"
+delete-after: True
+changes:
+  - code_imp: "adds relic base for unit tests with some fixed issues on that map to make it pass"
+  - code_imp: "fix pirate gun using a global local list..."
+  - bugfix: "multiple init_vore procs not being sane"
+  - bugfix: "seasonal autumn flora using the wrong name"
