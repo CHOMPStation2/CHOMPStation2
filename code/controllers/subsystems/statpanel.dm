@@ -430,8 +430,9 @@ SUBSYSTEM_DEF(statpanels)
 	RegisterSignal(actively_tracking, COMSIG_ATOM_EXITED, PROC_REF(turflist_changed))
 
 /datum/object_window_info/proc/stop_turf_tracking()
-	if(actively_tracking)
+	if(GetComponent(/datum/component/connect_mob_behalf))
 		qdel(GetComponent(/datum/component/connect_mob_behalf))
+	if(actively_tracking)
 		UnregisterSignal(actively_tracking, COMSIG_ATOM_ENTERED)
 		UnregisterSignal(actively_tracking, COMSIG_ATOM_EXITED)
 		actively_tracking = null
