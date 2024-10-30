@@ -253,7 +253,7 @@
 	location = FERRY_LOCATION_OFFSITE
 	shuttle_area = /area/shuttle/arrival/pre_game
 	landmark_offsite = "arrivals_offsite"
-	landmark_station = "arrivals_station";
+	landmark_station = "arrivals_station"
 	docking_controller_tag = "arrivals_shuttle"
 	move_time = SHUTTLE_TRANSIT_DURATION_RETURN
 
@@ -277,7 +277,7 @@
 	shuttle_area = /area/shuttle/escape/centcom
 	landmark_offsite = "escape_offsite"
 	landmark_station = "escape_station"
-	landmark_transition = "escape_transit";
+	landmark_transition = "escape_transit"
 	docking_controller_tag = "escape_shuttle"
 	move_time = SHUTTLE_TRANSIT_DURATION_RETURN
 
