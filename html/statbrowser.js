@@ -62,6 +62,7 @@ function createStatusTab(name) {
 	button.onclick = function () {
 		tab_change(name);
 		this.blur();
+		statcontentdiv.focus();
 	};
 	button.id = name;
 	button.textContent = name;
@@ -500,7 +501,7 @@ function draw_listedturf() {
 		table.appendChild(b);
 		table.appendChild(document.createElement("br"));
 	}
-	document.getElementById("statcontent").appendChild(table);
+	statcontentdiv.appendChild(table);
 }
 
 function remove_listedturf() {

@@ -2382,7 +2382,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/obj/machinery/button/windowtint{
+/obj/machinery/button/windowtint/multitint{
 	id = "sc-WTheadsauna";
 	pixel_y = 27
 	},
@@ -8525,26 +8525,22 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/Lounge)
 "cVS" = (
-/obj/machinery/door/firedoor/glass,
-/obj/effect/floor_decal/industrial/hatch/blue,
-/obj/structure/grille,
-/obj/structure/window/basic/full,
-/obj/structure/window/basic,
-/obj/structure/window/basic{
+/obj/structure/railing/grey,
+/obj/structure/lattice,
+/obj/machinery/shield_diffuser,
+/turf/space,
+/area/space)
+"cWO" = (
+/obj/structure/railing/grey{
 	dir = 8
 	},
-/obj/structure/window/basic{
+/obj/structure/railing/grey{
 	dir = 1
 	},
-/obj/structure/window/basic{
-	dir = 4
-	},
-/obj/structure/sign/directions/kitchen{
-	layer = 3.5;
-	dir = 1
-	},
-/turf/simulated/floor/plating,
-/area/hallway/Central_3_Deck_Hall)
+/obj/structure/lattice,
+/obj/machinery/shield_diffuser,
+/turf/space,
+/area/space)
 "cXl" = (
 /obj/machinery/portable_atmospherics/powered/pump/huge,
 /obj/machinery/atmospherics/portables_connector{
@@ -11768,11 +11764,13 @@
 /turf/simulated/floor/tiled,
 /area/engineering/Deck3_1_Corridor)
 "dZQ" = (
-/obj/structure/sign/department/bar{
-	desc = "Sign of some important station compartment."
+/obj/structure/railing/grey{
+	dir = 4
 	},
-/turf/simulated/wall,
-/area/crew_quarters/Chomp_Dinner_2)
+/obj/structure/lattice,
+/obj/machinery/shield_diffuser,
+/turf/space,
+/area/space)
 "dZU" = (
 /obj/structure/table/bench/sifwooden,
 /obj/machinery/button/remote/airlock{
@@ -16730,7 +16728,7 @@
 /area/space)
 "foz" = (
 /turf/unsimulated/mask,
-/area/hallway/Aft_1_Deck_Stairwell)
+/area/hallway/For_3_Deck_Stairwell)
 "foO" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -18968,6 +18966,9 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/Deck3_Center_Star)
+"fXe" = (
+/turf/unsimulated/mask,
+/area/hallway/Port_3_Deck_Stairwell)
 "fXj" = (
 /obj/structure/cable/yellow{
 	d2 = 4;
@@ -36782,6 +36783,13 @@
 	pixel_y = 5
 	},
 /obj/structure/table/rack/shelf,
+/obj/machinery/button/remote/airlock{
+	dir = 1;
+	pixel_y = -24;
+	name = "1S-Bolt control";
+	id = "sc-DBheadsauna";
+	specialfunctions = 4
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/bridge/Leisure_Room)
 "lOe" = (
@@ -37205,11 +37213,16 @@
 /turf/simulated/open,
 /area/maintenance/Deck3_Bridge_ForStarCorridor1)
 "lTV" = (
-/obj/structure/sign/department/bar{
-	desc = "Sign of some important station compartment."
+/obj/structure/railing/grey{
+	dir = 4
 	},
-/turf/simulated/wall,
-/area/crew_quarters/Chomp_Dinner_1)
+/obj/structure/railing/grey{
+	dir = 1
+	},
+/obj/structure/lattice,
+/obj/machinery/shield_diffuser,
+/turf/space,
+/area/space)
 "lTW" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
@@ -40251,9 +40264,12 @@
 /turf/simulated/floor/carpet/sblucarpet,
 /area/medical/Psych_Room_2)
 "mMn" = (
+/obj/structure/railing/grey{
+	dir = 8
+	},
 /obj/structure/lattice,
 /obj/machinery/shield_diffuser,
-/turf/simulated/floor/airless,
+/turf/space,
 /area/space)
 "mMo" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -42742,6 +42758,13 @@
 	},
 /turf/simulated/floor/carpet/gaycarpet,
 /area/bridge/Embassy)
+"nDl" = (
+/obj/structure/railing/grey{
+	dir = 8
+	},
+/obj/machinery/shield_diffuser,
+/turf/simulated/floor/reinforced/airless,
+/area/space)
 "nDs" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
@@ -61311,6 +61334,9 @@
 /obj/structure/railing,
 /turf/simulated/open,
 /area/hallway/Star_Breakroom)
+"twW" = (
+/turf/unsimulated/mask,
+/area/hallway/Star_3_Deck_Stairwell)
 "txl" = (
 /obj/machinery/power/port_gen/pacman,
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -64770,6 +64796,9 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/Engine2_Chamber)
+"uDB" = (
+/turf/unsimulated/mask,
+/area/hallway/Aft_3_Deck_Stairwell)
 "uDF" = (
 /obj/structure/railing/grey{
 	color = "yellow";
@@ -73666,7 +73695,7 @@
 	name = "Sauna";
 	tintable = 1;
 	id_tint = "sc-WTheadsauna";
-	id_tag = "sc-DBsauna"
+	id_tag = "sc-DBheadsauna"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/bridge/Leisure_Room)
@@ -75691,6 +75720,9 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/Deck3_Dorms_StarCorridor1)
+"xPE" = (
+/turf/unsimulated/mask,
+/area/hallway/Central_3_Deck_Hall)
 "xPF" = (
 /obj/effect/catwalk_plated/techmaint,
 /obj/random/trash,
@@ -85967,7 +85999,7 @@ apc
 apc
 apc
 aqj
-mMn
+cDl
 aqj
 apc
 apc
@@ -86077,7 +86109,7 @@ apc
 apc
 apc
 aqj
-mMn
+cDl
 aqj
 apc
 apc
@@ -86224,9 +86256,9 @@ apc
 apc
 apc
 apc
-mMn
+cDl
 mmN
-mMn
+cDl
 apc
 apc
 apc
@@ -86334,9 +86366,9 @@ apc
 apc
 apc
 apc
-mMn
+cDl
 jwm
-mMn
+cDl
 apc
 apc
 apc
@@ -91696,11 +91728,11 @@ cFY
 pII
 gfL
 kBB
-foz
-foz
-foz
-foz
-foz
+fXe
+fXe
+fXe
+fXe
+fXe
 cHp
 uDZ
 ufa
@@ -91954,11 +91986,11 @@ ydb
 uLp
 fhW
 kBB
-foz
-foz
-foz
-foz
-foz
+fXe
+fXe
+fXe
+fXe
+fXe
 cHp
 lyY
 ufa
@@ -92212,11 +92244,11 @@ aFn
 veY
 aFn
 kBB
-foz
-foz
-foz
-foz
-foz
+fXe
+fXe
+fXe
+fXe
+fXe
 cHp
 cpu
 fpl
@@ -92470,11 +92502,11 @@ mcL
 evv
 mVi
 uhz
-foz
-foz
-foz
-foz
-foz
+fXe
+fXe
+fXe
+fXe
+fXe
 cHp
 frv
 jAj
@@ -92728,11 +92760,11 @@ nik
 vYL
 fTh
 uhz
-foz
-foz
-foz
-foz
-foz
+fXe
+fXe
+fXe
+fXe
+fXe
 cHp
 pAy
 vdm
@@ -97947,9 +97979,9 @@ apc
 apc
 apc
 apc
-apc
-apc
-apc
+aqj
+cDl
+aqj
 apc
 apc
 apc
@@ -98205,9 +98237,9 @@ apc
 jub
 jub
 jub
-jub
+dZQ
 xFs
-jub
+dZQ
 jub
 jub
 jub
@@ -98736,8 +98768,8 @@ prP
 elz
 pmn
 pmn
-jub
-apc
+dZQ
+aqj
 apc
 apc
 apc
@@ -98995,7 +99027,7 @@ iZZ
 iZZ
 iZZ
 usd
-qTC
+lTV
 jub
 jub
 apc
@@ -103990,7 +104022,7 @@ apc
 phb
 phb
 apc
-apc
+aqj
 apc
 qpl
 xes
@@ -104248,7 +104280,7 @@ apc
 phb
 apc
 apc
-jub
+dZQ
 jub
 poc
 oRH
@@ -104337,7 +104369,7 @@ eGw
 tGp
 uur
 dVC
-lTV
+xZl
 euY
 euY
 vVp
@@ -104505,7 +104537,7 @@ apc
 phb
 phb
 apc
-qpl
+cVS
 rTA
 lzD
 lzD
@@ -106402,11 +106434,11 @@ fmC
 glv
 pOL
 fMV
-foz
-foz
-foz
-foz
-foz
+xPE
+xPE
+xPE
+xPE
+xPE
 fQX
 glb
 llg
@@ -106459,11 +106491,11 @@ qwD
 vJa
 vLA
 ecD
-foz
-foz
-foz
-foz
-foz
+uDB
+uDB
+uDB
+uDB
+uDB
 qzn
 kif
 wnv
@@ -106660,11 +106692,11 @@ bTy
 glv
 vUt
 fMV
-foz
-foz
-foz
-foz
-foz
+xPE
+xPE
+xPE
+xPE
+xPE
 fPj
 glw
 bmj
@@ -106717,11 +106749,11 @@ qwD
 vJa
 kcY
 sGr
-foz
-foz
-foz
-foz
-foz
+uDB
+uDB
+uDB
+uDB
+uDB
 qzn
 ptV
 pQL
@@ -106918,11 +106950,11 @@ bTy
 glv
 rsu
 fMV
-foz
-foz
-foz
-foz
-foz
+xPE
+xPE
+xPE
+xPE
+xPE
 fPG
 gnX
 gOc
@@ -106975,11 +107007,11 @@ fIV
 ibG
 hBe
 lDi
-foz
-foz
-foz
-foz
-foz
+uDB
+uDB
+uDB
+uDB
+uDB
 qzn
 htr
 wBa
@@ -107176,11 +107208,11 @@ bTy
 glv
 bnp
 fMV
-foz
-foz
-foz
-foz
-foz
+xPE
+xPE
+xPE
+xPE
+xPE
 fQG
 gpl
 bmj
@@ -107233,11 +107265,11 @@ qwD
 vJa
 xsQ
 nyD
-foz
-foz
-foz
-foz
-foz
+uDB
+uDB
+uDB
+uDB
+uDB
 qzn
 gpH
 pxR
@@ -107434,11 +107466,11 @@ fmC
 glv
 fyW
 fMV
-foz
-foz
-foz
-foz
-foz
+xPE
+xPE
+xPE
+xPE
+xPE
 fMV
 nIu
 iyI
@@ -107491,11 +107523,11 @@ qwD
 vJa
 tRd
 nrt
-foz
-foz
-foz
-foz
-foz
+uDB
+uDB
+uDB
+uDB
+uDB
 qzn
 sfB
 kAz
@@ -108465,7 +108497,7 @@ wUV
 xAP
 iaG
 kpt
-cVS
+hKr
 eyi
 fIA
 loO
@@ -109149,7 +109181,7 @@ apc
 phb
 phb
 apc
-qpl
+cVS
 rTA
 lzD
 lzD
@@ -109408,7 +109440,7 @@ apc
 phb
 apc
 apc
-nhz
+mMn
 nhz
 oRO
 oRH
@@ -109497,7 +109529,7 @@ fgj
 xJc
 aJK
 dMh
-dZQ
+cXM
 bmm
 bmm
 uDO
@@ -109666,7 +109698,7 @@ apc
 phb
 phb
 apc
-apc
+aqj
 apc
 qpl
 xGh
@@ -114991,7 +115023,7 @@ lrU
 lrU
 lrU
 usd
-uOo
+cWO
 nhz
 nhz
 apc
@@ -115248,8 +115280,8 @@ riY
 lhV
 ttG
 ttG
-ttG
-apc
+nDl
+aqj
 apc
 apc
 apc
@@ -115748,9 +115780,9 @@ apc
 nhz
 nhz
 nhz
-nhz
+mMn
 grW
-nhz
+mMn
 nhz
 nhz
 nhz
@@ -116006,9 +116038,9 @@ apc
 apc
 apc
 apc
-apc
-apc
-apc
+aqj
+cDl
+aqj
 apc
 apc
 apc
@@ -121108,11 +121140,11 @@ xrZ
 ixG
 aQw
 gKO
-foz
-foz
-foz
-foz
-foz
+twW
+twW
+twW
+twW
+twW
 gKO
 fjQ
 fjQ
@@ -121366,11 +121398,11 @@ xrZ
 ixG
 ipE
 gKO
-foz
-foz
-foz
-foz
-foz
+twW
+twW
+twW
+twW
+twW
 gKO
 fjQ
 fjQ
@@ -121624,11 +121656,11 @@ xrZ
 lLm
 aAd
 gKO
-foz
-foz
-foz
-foz
-foz
+twW
+twW
+twW
+twW
+twW
 gKO
 fjQ
 tGr
@@ -121882,11 +121914,11 @@ xrZ
 iSQ
 fGy
 gKO
-foz
-foz
-foz
-foz
-foz
+twW
+twW
+twW
+twW
+twW
 gKO
 hfj
 hOs
@@ -122140,11 +122172,11 @@ xrZ
 iSQ
 aQw
 gKO
-foz
-foz
-foz
-foz
-foz
+twW
+twW
+twW
+twW
+twW
 gKO
 fjQ
 fjQ
@@ -127504,9 +127536,9 @@ apc
 apc
 apc
 apc
-mMn
+cDl
 naz
-mMn
+cDl
 apc
 apc
 apc
@@ -127518,9 +127550,9 @@ apc
 apc
 apc
 apc
-mMn
+cDl
 naz
-mMn
+cDl
 apc
 apc
 apc
@@ -127600,9 +127632,9 @@ apc
 apc
 apc
 apc
-mMn
+cDl
 biI
-mMn
+cDl
 apc
 apc
 apc
@@ -127614,9 +127646,9 @@ apc
 apc
 apc
 apc
-mMn
+cDl
 biI
-mMn
+cDl
 apc
 apc
 apc
@@ -127763,7 +127795,7 @@ apc
 apc
 apc
 aqj
-mMn
+cDl
 aqj
 apc
 apc
@@ -127777,7 +127809,7 @@ apc
 apc
 apc
 aqj
-mMn
+cDl
 aqj
 apc
 apc
@@ -127859,7 +127891,7 @@ apc
 apc
 apc
 aqj
-mMn
+cDl
 aqj
 apc
 apc
@@ -127873,7 +127905,7 @@ apc
 apc
 apc
 aqj
-mMn
+cDl
 aqj
 apc
 apc

@@ -115,8 +115,8 @@
 	. = ..()
 	for(var/path in actions_types)
 		add_item_action(path)
-	/* if(islist(origin_tech)) // CHOMPAdded section, removed because it has a major flaw. If an item has a different origin list than the other items of the same type, they coulf all get that modified list
-		origin_tech = typelist(NAMEOF(src, origin_tech), origin_tech) */
+	if(islist(origin_tech))
+		origin_tech = typelist(NAMEOF(src, origin_tech), origin_tech)
 	if(embed_chance < 0)
 		if(sharp)
 			embed_chance = max(5, round(force/w_class))
