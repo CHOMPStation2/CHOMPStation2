@@ -22,7 +22,6 @@
 /area/submap/BountyHunters)
 "cL" = (
 /obj/structure/table/sifwoodentable,
-/obj/structure/table/sifwoodentable,
 /obj/machinery/light/small{
 	dir = 8
 	},
