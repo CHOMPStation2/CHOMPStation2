@@ -283,3 +283,18 @@
   - bugfix: Alt-click menu is visually correct again
   - bugfix: Clicking on an embedded controller in the alt click menu no longer runtimes
   - bugfix: Clicking on a mob in the alt click menu now works
+2024-10-31:
+  Hunter-Dovetail:
+  - rscadd: VBO_maw24
+  - rscadd: VBO_maw25
+  - rscadd: '"trex_upperjaw"'
+  - rscadd: '"trex_lowerjaw"'
+  - bugfix: VBOanim_belly9
+  - bugfix: VBOanim_belly10
+  - bugfix: full_hippohead (sprite)
+  Kazzc:
+  - code_imp: adds relic base for unit tests with some fixed issues on that map to
+      make it pass
+  - code_imp: fix pirate gun using a global local list...
+  - bugfix: multiple init_vore procs not being sane
+  - bugfix: seasonal autumn flora using the wrong name
