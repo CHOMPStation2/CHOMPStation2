@@ -1,0 +1,6 @@
+author: "Kashargul"
+delete-after: True
+changes:
+  - bugfix: "baby teppies can no longer be taken over, due to how growing self deletes them"
+  - bugfix: "several MC crashes"
+  - bugfix: "runtimes in blob ids"
