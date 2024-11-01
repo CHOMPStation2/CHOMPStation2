@@ -45,7 +45,7 @@
 
 /datum/robot_sprite/dogborg/tall/command/fmeka
 	name = "NIKA"
-	sprite_icon_state = "fmmekaunity"
+	sprite_icon_state = "fmekaunity"
 	has_eye_light_sprites = TRUE
 	has_custom_open_sprites = TRUE
 	has_vore_belly_sprites = TRUE
