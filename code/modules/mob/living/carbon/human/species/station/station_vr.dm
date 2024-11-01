@@ -325,7 +325,7 @@
 	deform = 'icons/mob/human_races/r_def_lizard_vr.dmi'
 	tail_animation = 'icons/mob/species/unathi/tail_vr.dmi'
 	color_mult = 1
-	min_age = 18
+	min_age = 40 //ChompEDIT - Unathi lore minimal adult age. 
 	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair)
 	gluttonous = 0
 	inherent_verbs = list(/mob/living/proc/shred_limb)
