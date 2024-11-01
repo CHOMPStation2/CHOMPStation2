@@ -7135,7 +7135,9 @@
 /obj/machinery/door/airlock/angled_bay/standard/glass/common{
 	dir = 4;
 	name = "Hydroponics";
-	req_access = list(28)
+	req_access = list(28);
+	tintable = 1;
+	id_tint = "sc-WTkitchen"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/Chomp_Kitchen)
@@ -12344,11 +12346,6 @@
 /obj/effect/floor_decal/carpet,
 /turf/simulated/floor/carpet/geo,
 /area/crew_quarters/Gallery)
-"aKY" = (
-/obj/structure/lattice,
-/obj/machinery/shield_diffuser,
-/turf/simulated/floor/plating/turfpack/airless,
-/area/space)
 "aKZ" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/arrows/yellow,
@@ -14616,11 +14613,6 @@
 /turf/simulated/open,
 /area/maintenance/Deck2_Port_Corridor)
 "aSp" = (
-/obj/machinery/power/apc{
-	dir = 8;
-	name = "west bump";
-	pixel_x = -24
-	},
 /obj/machinery/light_switch{
 	dir = 4;
 	name = "W-light switch";
@@ -14629,6 +14621,16 @@
 	},
 /obj/structure/cable/green,
 /obj/machinery/atmospherics/pipe/simple/hidden/black,
+/obj/machinery/button/windowtint/multitint{
+	pixel_y = -11;
+	pixel_x = -27;
+	id = "sc-WTsauna"
+	},
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
 /turf/simulated/floor/wood/alt/panel,
 /area/crew_quarters/Gym_Sauna)
 "aSq" = (
@@ -14874,7 +14876,7 @@
 /area/maintenance/Deck2_Science_StarCorridor1)
 "aTa" = (
 /turf/unsimulated/mask,
-/area/hallway/Aft_2_Deck_Stairwell)
+/area/hallway/Central_2_Deck_Hall)
 "aTb" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -17312,7 +17314,9 @@
 /obj/machinery/door/airlock/angled_bay/standard/glass/common{
 	dir = 4;
 	name = "Kitchen";
-	req_access = list(28)
+	req_access = list(28);
+	tintable = 1;
+	id_tint = "sc-WTkitchen"
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -20990,13 +20994,6 @@
 	pixel_x = 11;
 	pixel_y = -27
 	},
-/obj/machinery/button/windowtint{
-	id = "sc-WTkitchen";
-	name = "S-window tint control";
-	pixel_x = -12;
-	pixel_y = -26;
-	range = 10
-	},
 /obj/structure/cable/green{
 	d2 = 4;
 	icon_state = "0-4"
@@ -21018,6 +21015,12 @@
 	d1 = 1;
 	d2 = 4;
 	icon_state = "1-4"
+	},
+/obj/machinery/button/windowtint/multitint{
+	pixel_y = -26;
+	pixel_x = -12;
+	id = "sc-WTkitchen";
+	range = 10
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/Chomp_Kitchen)
@@ -22939,14 +22942,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/medical/Chemistry)
-"btk" = (
-/obj/machinery/button/windowtint{
-	id = "sc-WTsauna";
-	pixel_x = 27;
-	range = 11
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/crew_quarters/Gym_Sauna)
 "btq" = (
 /obj/item/paper_bin{
 	pixel_x = 5
@@ -42924,9 +42919,7 @@
 /area/security/Lobby)
 "cTE" = (
 /obj/structure/table/bench/padded,
-/obj/effect/floor_decal/spline/plain{
-	dir = 10
-	},
+/obj/effect/floor_decal/spline/plain/cee,
 /turf/simulated/floor/tiled/dark,
 /area/hallway/Star_2_Deck_Central_Corridor_1)
 "cTF" = (
@@ -44644,8 +44637,8 @@
 /area/crew_quarters/Chomp_Dinner_2)
 "dpQ" = (
 /obj/structure/table/bench/padded,
-/obj/effect/floor_decal/spline/plain{
-	dir = 5
+/obj/effect/floor_decal/spline/plain/cee{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/Port_2_Deck_Central_Corridor_1)
@@ -59717,7 +59710,8 @@
 	dir = 4;
 	pixel_x = -24;
 	name = "1W-Bolt control";
-	id = "sc-DBsauna"
+	id = "sc-DBsauna";
+	specialfunctions = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 6
@@ -65961,6 +65955,9 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/Breakroom)
+"ixK" = (
+/turf/unsimulated/mask,
+/area/hallway/Star_2_Deck_Stairwell)
 "ixX" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/random/maintenance/security,
@@ -73208,10 +73205,19 @@
 /turf/simulated/floor/plating,
 /area/maintenance/Deck2_Medical_AftPortCorridor1)
 "krL" = (
-/obj/structure/lattice,
-/obj/machinery/shield_diffuser,
-/turf/simulated/floor/airless,
-/area/space)
+/obj/structure/sign/directions/kitchen{
+	dir = 1;
+	pixel_y = 9
+	},
+/obj/structure/sign/directions/cryo{
+	dir = 1
+	},
+/obj/structure/sign/directions/science/exploration{
+	pixel_y = -9;
+	dir = 1
+	},
+/turf/simulated/wall/r_wall,
+/area/maintenance/Deck2_Port_Corridor)
 "krQ" = (
 /obj/structure/table/steel,
 /obj/item/form_printer{
@@ -75958,6 +75964,9 @@
 	color = "#989898"
 	},
 /area/hallway/Port_Transit_Foyer)
+"ldn" = (
+/turf/unsimulated/mask,
+/area/hallway/Port_2_Deck_Stairwell)
 "ldq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
@@ -83981,6 +83990,9 @@
 /obj/structure/table/bench/padded,
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/Star_2_Deck_Central_Corridor_1)
@@ -96205,14 +96217,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/Deck2_Security_ForStar_Chamber)
-"qBX" = (
-/obj/machinery/pointdefense{
-	id_tag = "PD Primary"
-	},
-/obj/structure/cable/white,
-/obj/effect/catwalk_plated/white,
-/turf/simulated/floor/airless,
-/area/space)
 "qBY" = (
 /obj/structure/cable/white{
 	d1 = 4;
@@ -98977,10 +98981,6 @@
 /obj/structure/sign/directions/dock{
 	layer = 3.5;
 	dir = 6
-	},
-/obj/structure/sign/directions/science/exploration{
-	pixel_y = -9;
-	dir = 1
 	},
 /turf/simulated/wall,
 /area/crew_quarters/Office_Lounge)
@@ -103319,6 +103319,9 @@
 /obj/random/trash,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck2_Civilian_AftCorridor1)
+"sqR" = (
+/turf/unsimulated/mask,
+/area/hallway/For_2_Deck_Stairwell)
 "sqT" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -106173,9 +106176,7 @@
 /area/security/Lobby)
 "tcC" = (
 /obj/structure/table/bench/padded,
-/obj/effect/floor_decal/spline/plain{
-	dir = 6
-	},
+/obj/effect/floor_decal/spline/plain/cee,
 /turf/simulated/floor/tiled/dark,
 /area/hallway/Port_2_Deck_Central_Corridor_1)
 "tcW" = (
@@ -119137,8 +119138,8 @@
 /area/maintenance/Deck2_Cargo_AftCorridor1)
 "wCM" = (
 /obj/structure/table/bench/padded,
-/obj/effect/floor_decal/spline/plain{
-	dir = 9
+/obj/effect/floor_decal/spline/plain/cee{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/Star_2_Deck_Central_Corridor_1)
@@ -120992,6 +120993,9 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/Testing_Lab)
+"xcc" = (
+/turf/unsimulated/mask,
+/area/hallway/Aft_2_Deck_Stairwell)
 "xcl" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -121496,7 +121500,7 @@
 	},
 /obj/structure/closet/emcloset,
 /turf/simulated/floor/tiled/steel_ridged,
-/area/hallway/For_2_Deck_Central_Corridor_2)
+/area/hallway/For_2_Deck_Central_Corridor_1)
 "xiQ" = (
 /turf/simulated/wall,
 /area/maintenance/Deck2_Engineering_PortChamber1)
@@ -124390,6 +124394,9 @@
 /obj/structure/table/bench/padded,
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/Port_2_Deck_Central_Corridor_1)
@@ -138173,8 +138180,8 @@ aaa
 aaa
 aaa
 aaf
-aKY
-aaf
+onO
+onO
 aaa
 cCw
 mAT
@@ -138183,11 +138190,11 @@ mAT
 cCw
 aaa
 aaa
-aaa
+onO
 dqa
 bCe
 dqa
-aaa
+onO
 aaa
 aaa
 aaa
@@ -138203,11 +138210,11 @@ aaa
 aaa
 aaa
 aaa
-aaa
+onO
 dqa
 bCe
 dqa
-aaa
+onO
 aaa
 aaa
 aaa
@@ -138430,9 +138437,9 @@ aaa
 aaa
 aaa
 aaa
-aKY
+gWp
 bCe
-aKY
+aaf
 aaa
 cCw
 aYr
@@ -138688,7 +138695,7 @@ aaa
 aaa
 aaa
 aaa
-aaf
+onO
 sOr
 aaf
 aaa
@@ -139506,7 +139513,7 @@ hPY
 feR
 mAT
 aaf
-krL
+gWp
 aaf
 aaa
 aaa
@@ -139764,8 +139771,8 @@ lhM
 jED
 bxU
 bmS
-qBX
-krL
+cVD
+onO
 aaa
 aaa
 aaa
@@ -140022,7 +140029,7 @@ cCw
 cCw
 cCw
 aaf
-krL
+gWp
 aaf
 aaa
 aaa
@@ -140171,11 +140178,11 @@ ahz
 hJb
 tZE
 tAt
-aTa
-aTa
-aTa
-aTa
-aTa
+ldn
+ldn
+ldn
+ldn
+ldn
 tAt
 lfN
 bcp
@@ -140429,11 +140436,11 @@ ahz
 cdH
 cdH
 tAt
-aTa
-aTa
-aTa
-aTa
-aTa
+ldn
+ldn
+ldn
+ldn
+ldn
 tAt
 cdH
 lNq
@@ -140687,11 +140694,11 @@ cQN
 mNU
 iiA
 tAt
-aTa
-aTa
-aTa
-aTa
-aTa
+ldn
+ldn
+ldn
+ldn
+ldn
 tAt
 okh
 vVx
@@ -140945,11 +140952,11 @@ bnN
 nqW
 oSA
 tAt
-aTa
-aTa
-aTa
-aTa
-aTa
+ldn
+ldn
+ldn
+ldn
+ldn
 tAt
 baC
 pLe
@@ -141203,11 +141210,11 @@ alP
 aUV
 aOt
 tAt
-aTa
-aTa
-aTa
-aTa
-aTa
+ldn
+ldn
+ldn
+ldn
+ldn
 tAt
 uVN
 flL
@@ -145182,7 +145189,7 @@ bFD
 bFD
 bFD
 aaf
-krL
+gWp
 aaf
 aaa
 aaa
@@ -145440,8 +145447,8 @@ rPT
 sjb
 lqm
 bmS
-qBX
-krL
+cVD
+onO
 aaa
 aaa
 aaa
@@ -145698,7 +145705,7 @@ izi
 jrp
 myK
 aaf
-krL
+gWp
 aaf
 aaa
 aaa
@@ -152816,7 +152823,7 @@ mFn
 aQt
 sdq
 aTY
-sdq
+krL
 bcM
 mQh
 ksl
@@ -154820,11 +154827,11 @@ sKU
 dNj
 sRN
 bdK
-aTa
-aTa
-aTa
-aTa
-aTa
+sqR
+sqR
+sqR
+sqR
+sqR
 amR
 abe
 eCM
@@ -154934,11 +154941,11 @@ dvr
 tkC
 cdt
 mvC
-aTa
-aTa
-aTa
-aTa
-aTa
+xcc
+xcc
+xcc
+xcc
+xcc
 dSY
 mdZ
 qRs
@@ -155078,11 +155085,11 @@ sKU
 wAm
 umv
 bdK
-aTa
-aTa
-aTa
-aTa
-aTa
+sqR
+sqR
+sqR
+sqR
+sqR
 amR
 abf
 aeQ
@@ -155192,11 +155199,11 @@ dvr
 tkC
 tDO
 ciz
-aTa
-aTa
-aTa
-aTa
-aTa
+xcc
+xcc
+xcc
+xcc
+xcc
 dSY
 fhX
 qXc
@@ -155246,7 +155253,7 @@ woz
 piv
 ptE
 aaf
-krL
+gWp
 aaf
 aaa
 aaa
@@ -155336,11 +155343,11 @@ sKU
 wmx
 azG
 bdK
-aTa
-aTa
-aTa
-aTa
-aTa
+sqR
+sqR
+sqR
+sqR
+sqR
 amR
 abg
 aeQ
@@ -155450,11 +155457,11 @@ cmC
 tkC
 cmT
 qLX
-aTa
-aTa
-aTa
-aTa
-aTa
+xcc
+xcc
+xcc
+xcc
+xcc
 dSY
 xha
 qXc
@@ -155504,8 +155511,8 @@ nOM
 vrq
 dQS
 bmS
-qBX
-krL
+cVD
+onO
 aaa
 aaa
 aaa
@@ -155594,11 +155601,11 @@ sKU
 cCy
 bSS
 bdK
-aTa
-aTa
-aTa
-aTa
-aTa
+sqR
+sqR
+sqR
+sqR
+sqR
 amR
 abf
 aeQ
@@ -155708,11 +155715,11 @@ dvr
 tkC
 cjN
 aAs
-aTa
-aTa
-aTa
-aTa
-aTa
+xcc
+xcc
+xcc
+xcc
+xcc
 dSY
 vSv
 qXc
@@ -155762,7 +155769,7 @@ oie
 lUy
 wff
 aaf
-krL
+gWp
 aaf
 aaa
 aaa
@@ -155852,11 +155859,11 @@ sKU
 hwI
 ldd
 bdK
-aTa
-aTa
-aTa
-aTa
-aTa
+sqR
+sqR
+sqR
+sqR
+sqR
 amR
 xBk
 kUC
@@ -155966,11 +155973,11 @@ dvr
 tkC
 hZr
 brt
-aTa
-aTa
-aTa
-aTa
-aTa
+xcc
+xcc
+xcc
+xcc
+xcc
 dSY
 vSv
 qXc
@@ -162182,7 +162189,7 @@ xXo
 aUh
 cqT
 bAT
-btk
+cSC
 bxr
 xXo
 xXo
@@ -165306,7 +165313,7 @@ uKc
 dHd
 itt
 aaf
-krL
+gWp
 aaf
 aaa
 aaa
@@ -165565,7 +165572,7 @@ xBZ
 mli
 bmS
 cVD
-krL
+onO
 aaa
 aaa
 aaa
@@ -165822,7 +165829,7 @@ uhD
 uhD
 uhD
 aaf
-krL
+gWp
 aaf
 aaa
 aaa
@@ -169583,11 +169590,11 @@ lXK
 qfL
 nXl
 ukV
-aTa
-aTa
-aTa
-aTa
-aTa
+ixK
+ixK
+ixK
+ixK
+ixK
 ukV
 vxe
 mXo
@@ -169841,11 +169848,11 @@ xeF
 glD
 nYu
 ssp
-aTa
-aTa
-aTa
-aTa
-aTa
+ixK
+ixK
+ixK
+ixK
+ixK
 ukV
 vyA
 rKE
@@ -170099,11 +170106,11 @@ jeI
 tdm
 hku
 lDe
-aTa
-aTa
-aTa
-aTa
-aTa
+ixK
+ixK
+ixK
+ixK
+ixK
 ukV
 sBX
 nYU
@@ -170357,11 +170364,11 @@ jeI
 iUv
 ntq
 ukV
-aTa
-aTa
-aTa
-aTa
-aTa
+ixK
+ixK
+ixK
+ixK
+ixK
 ukV
 ntq
 ncm
@@ -170615,11 +170622,11 @@ xIp
 gAB
 qwK
 ukV
-aTa
-aTa
-aTa
-aTa
-aTa
+ixK
+ixK
+ixK
+ixK
+ixK
 ukV
 tIw
 poO
@@ -170982,7 +170989,7 @@ qcZ
 qcZ
 qcZ
 aaf
-krL
+gWp
 aaf
 aaa
 aaa
@@ -171241,7 +171248,7 @@ wGp
 vVm
 bmS
 cVD
-krL
+onO
 aaa
 aaa
 aaa
@@ -171498,7 +171505,7 @@ fVB
 pQm
 sbk
 aaf
-krL
+gWp
 aaf
 aaa
 aaa
@@ -172228,7 +172235,7 @@ aaa
 aaa
 aaa
 aaa
-aaf
+onO
 sOr
 aaf
 aaa
@@ -172486,7 +172493,7 @@ aaa
 aaa
 aaa
 aaa
-aKY
+gWp
 xBF
 aaf
 aaa
@@ -172745,8 +172752,8 @@ aaa
 aaa
 aaa
 aaf
-aKY
-aaf
+onO
+onO
 aaa
 qcZ
 sbk
@@ -172755,11 +172762,11 @@ sbk
 qcZ
 aaa
 aaa
-aaa
+onO
 dqa
 oBS
 dqa
-aaa
+onO
 aaa
 aaa
 aaa
@@ -172775,11 +172782,11 @@ aaa
 aaa
 aaa
 aaa
-aaa
+onO
 dqa
 oBS
 dqa
-aaa
+onO
 aaa
 aaa
 aaa

@@ -535,8 +535,7 @@
 		onclose(usr, "[name]")
 	if(href_list["flavor_change"])
 		update_flavor_text()
-//	..()
-	return
+	return ..()
 
 
 /mob/proc/pull_damage()

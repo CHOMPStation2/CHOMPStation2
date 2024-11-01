@@ -1,0 +1,8 @@
+2024-11-01:
+  Hunter-Dovetail:
+  - bugfix: trex_upper/lowerjaw
+  Kashargul:
+  - bugfix: baby teppies can no longer be taken over, due to how growing self deletes
+      them
+  - bugfix: several MC crashes
+  - bugfix: runtimes in blob ids
