@@ -249,3 +249,10 @@
 
 /datum/belly_overlays/yet_another_tumby
 	belly_icon = 'modular_chomp/icons/mob/vore_fullscreens/yet_another_tumby.dmi'
+
+//Compatibility assets due to renames...
+/datum/belly_overlays/anim_belly
+	belly_icon = 'modular_chomp/icons/mob/vore_fullscreens/VBOanim_belly1.dmi'
+
+/datum/belly_overlays/a_anim_belly
+	belly_icon = 'modular_chomp/icons/mob/vore_fullscreens/VBOanim_belly1.dmi'
