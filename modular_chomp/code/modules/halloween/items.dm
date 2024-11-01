@@ -91,6 +91,8 @@
 
 	if(treated[user.ckey])
 		var/choice = tgui_alert(user, "You already took one! Take more?", "Take another...", list("Reach in...", "Leave it!"))
+		if(!choice)
+			return
 		if(choice == "Reach in...")
 			if(prob(35))
 				thegoods = pick(badcandy)
