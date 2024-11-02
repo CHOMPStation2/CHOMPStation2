@@ -1,0 +1,5 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - rscadd: "Roboticist has a new alt title: Software Engineer - \"A Software Engineer specializes in working with software and firmware. They also often deal with integrated circuits.\""
+  - rscadd: "Engineer has a new alt title: Computer Technician - \"A Computer Technician fulfills similar duties to other engineers, but specializes in working with software and computers. They also often deal with integrated circuits.\""
