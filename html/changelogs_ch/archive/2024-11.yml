@@ -6,3 +6,8 @@
       them
   - bugfix: several MC crashes
   - bugfix: runtimes in blob ids
+2024-11-02:
+  Kashargul:
+  - bugfix: command nika will no longer be invisible
+  Raeschen:
+  - bugfix: Unathi min age increased to 40 for lore reasons
