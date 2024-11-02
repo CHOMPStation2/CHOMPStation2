@@ -65,18 +65,18 @@ class HubStorageBackend {
   }
 
   async get(key) {
-    const value = await window.hubStorage.getItem('virgo-' + key);
+    const value = await window.hubStorage.getItem('chomp-' + key); // CHOMPEdit
     if (typeof value === 'string') {
       return JSON.parse(value);
     }
   }
 
   set(key, value) {
-    window.hubStorage.setItem('virgo-' + key, JSON.stringify(value));
+    window.hubStorage.setItem('chomp-' + key, JSON.stringify(value)); // CHOMPEdit
   }
 
   remove(key) {
-    window.hubStorage.removeItem('virgo-' + key);
+    window.hubStorage.removeItem('chomp-' + key); // CHOMPEdit
   }
 
   clear() {
