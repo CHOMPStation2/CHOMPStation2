@@ -49,6 +49,20 @@
 	cost = 0 //CHOMP Edit
 	var_changes = list("flags" = NO_MINOR_CUT) //Checked the flag is only used by shard stepping.
 
+/datum/trait/neutral/small_mouth_extreme
+	name = "Slow Eater"
+	desc = "It takes four times as many bites to finish food as it does for most people."
+	cost = 0
+	var_changes = list("bite_mod" = 0.25)
+	custom_only = FALSE
+
+/datum/trait/neutral/small_mouth
+	name = "Slow Eater, Minor"
+	desc = "It takes twice as many bites to finish food as it does for most people."
+	cost = 0
+	var_changes = list("bite_mod" = 0.5)
+	custom_only = FALSE
+
 /datum/trait/neutral/big_mouth
 	name = "Fast Eater, Minor"
 	desc = "It takes half as many bites to finish food as it does for most people."
