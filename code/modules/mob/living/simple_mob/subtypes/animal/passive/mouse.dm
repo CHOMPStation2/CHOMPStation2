@@ -170,8 +170,8 @@
 	icon_state = "mouse_rat"
 	icon_rest = "mouse_rat_sleep"
 	holder_type = /obj/item/holder/mouse/rat
-	maxHealth = 20
-	health = 20
+	maxHealth = 5
+	health = 5
 
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
 
