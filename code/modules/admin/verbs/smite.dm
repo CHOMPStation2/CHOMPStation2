@@ -64,6 +64,7 @@
 			var/mob/living/simple_mob/shadekin/red/shadekin = new(Ts)
 			//Abuse of shadekin
 			shadekin.real_name = shadekin.name
+			shadekin.voremob_loaded = TRUE // CHOMPAdd
 			shadekin.init_vore()
 			shadekin.ability_flags |= 0x1
 			shadekin.phase_shift()
