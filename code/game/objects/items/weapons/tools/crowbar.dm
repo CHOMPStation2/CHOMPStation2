@@ -25,6 +25,7 @@
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "red_crowbar"
 	item_state = "crowbar_red"
+	force = 10
 
 /obj/item/tool/crowbar/old
 	icon = 'icons/obj/tools.dmi'
