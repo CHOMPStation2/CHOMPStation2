@@ -87,7 +87,13 @@ SUBSYSTEM_DEF(persist)
 		var/sql_dpt = sql_sanitize_text(department_earning)
 		var/sql_bal = text2num("[C.department_hours[department_earning]]")
 		var/sql_total = text2num("[C.play_hours[department_earning]]")
-		query_stack += list("ckey, department, hours, total_hours" = "[sql_ckey], [sql_dpt], [sql_bal], [sql_total]") //CHOMPEdit TGSQL
+		var/list/entry = list(
+			"ckey" = sql_ckey,
+			"department" = sql_dpt,
+			"hours" = sql_bal,
+			"total_hours" = sql_total
+			)
+		query_stack += list(entry) //CHOMPEdit TGSQL
 		if (MC_TICK_CHECK)
 			return
 	 //CHOMPAdd Start TGSQL
