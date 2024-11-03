@@ -98,7 +98,7 @@ SUBSYSTEM_DEF(persist)
 			return
 	 //CHOMPAdd Start TGSQL
 	if(query_stack.len)
-		SSdbcore.MassInsert(format_table_name("vr_player_hours"), query_stack, duplikate_key = "ON DUPLICATE KEY UPDATE hours = VALUES(hours), total_hours = VALUES(total_hours)")
+		SSdbcore.MassInsert(format_table_name("vr_player_hours"), query_stack, duplicate_key = "ON DUPLICATE KEY UPDATE hours = VALUES(hours), total_hours = VALUES(total_hours)")
 		query_stack.Cut()
 	 //CHOMPAdd End TGSQL
 
