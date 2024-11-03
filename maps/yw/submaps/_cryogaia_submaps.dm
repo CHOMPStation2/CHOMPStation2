@@ -23,7 +23,7 @@
 
 //////////////////////////////////////////////////////////////////////////////
 /// Away Missions
-#if AWAY_MISSION_TEST
+#ifdef AWAY_MISSION_TEST
 #include "cryogaia_plains/cryogaia_plains.dmm"
 #include "beach/beach.dmm"
 #include "beach/cave.dmm"
@@ -148,7 +148,7 @@
 
 //////////////////////////////////////////////////////////////////////////////////////
 // Admin-use z-levels for loading whenever an admin feels like
-#if AWAY_MISSION_TEST
+#ifdef AWAY_MISSION_TEST
 #include "admin_use/spa.dmm"
 #endif
 

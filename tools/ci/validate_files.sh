@@ -80,6 +80,13 @@ echo -e "${RED}DISABLED"
 #   FAILED=1
 # fi
 
+part "improperly pathed static lists"
+if $grep -i 'var/list/static/.*' $code_files; then
+	echo
+	echo -e "${RED}ERROR: Found incorrect static list definition 'var/list/static/', it should be 'var/static/list/' instead.${NC}"
+	st=1
+fi;
+
 part "changelog"
 #Checking for a change to html/changelogs/example.yml
 md5sum -c - <<< "0c56937110d88f750a32d9075ddaab8b *html/changelogs_ch/example.yml" # CHOMPedit - Better changelogs
@@ -91,7 +98,7 @@ fi
 
 part "color macros"
 #Checking for color macros
-(num=`$grep -n '\\\\(red|blue|green|black|b|i[^mct])' $code_files | wc -l`; echo "$num escapes (expecting ${MACRO_COUNT} or less)"; [ $num -le ${MACRO_COUNT} ])
+(num=`$grep -n '\\\\(red|blue|green|black|b|i[^mnct])' $code_files | wc -l`; echo "$num escapes (expecting ${MACRO_COUNT} or less)"; [ $num -le ${MACRO_COUNT} ]) # CHOMPEdit, we alos need to ignore item paths
 retVal=$?
 if [ $retVal -ne 0 ]; then
   echo -e "${RED}Do not use any byond color macros (such as \blue), they are deprecated.${NC}"

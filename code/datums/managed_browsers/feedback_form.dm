@@ -19,7 +19,7 @@ GENERAL_PROTECT_DATUM(/datum/managed_browser/feedback_form)
 	var/feedback_hide_author = FALSE
 
 /datum/managed_browser/feedback_form/New(client/new_client)
-	feedback_topic = CONFIG_GET(str_list/sqlite_feedback_topics)[1] // CHOMPEdit
+	feedback_topic = CONFIG_GET(str_list/sqlite_feedback_topics)[1]
 	..(new_client)
 
 /datum/managed_browser/feedback_form/Destroy()
@@ -29,7 +29,7 @@ GENERAL_PROTECT_DATUM(/datum/managed_browser/feedback_form)
 
 // Privacy option is allowed if both the config allows it, and the pepper file exists and isn't blank.
 /datum/managed_browser/feedback_form/proc/can_be_private()
-	return CONFIG_GET(flag/sqlite_feedback_privacy) && SSsqlite.get_feedback_pepper() // CHOMPEdit
+	return CONFIG_GET(flag/sqlite_feedback_privacy) && SSsqlite.get_feedback_pepper()
 
 /datum/managed_browser/feedback_form/display()
 	if(!my_client)
@@ -70,11 +70,11 @@ GENERAL_PROTECT_DATUM(/datum/managed_browser/feedback_form)
 		dat += my_client.ckey
 	dat += "<br>"
 
-	var/list/sqlite_feedback_topics = CONFIG_GET(str_list/sqlite_feedback_topics) // CHOMPEdit
-	if(sqlite_feedback_topics.len > 1) // CHOMPEdit
+	var/list/sqlite_feedback_topics = CONFIG_GET(str_list/sqlite_feedback_topics)
+	if(sqlite_feedback_topics.len > 1)
 		dat += "Topic: [href(src, list("feedback_choose_topic" = 1), feedback_topic)]<br>"
 	else
-		dat += "Topic: [sqlite_feedback_topics[1]]<br>" // CHOMPEdit
+		dat += "Topic: [sqlite_feedback_topics[1]]<br>"
 
 	dat += "<br>"
 	if(feedback_body)
@@ -85,7 +85,7 @@ GENERAL_PROTECT_DATUM(/datum/managed_browser/feedback_form)
 	dat += href(src, list("feedback_edit_body" = 1), "Edit")
 	dat += "<hr>"
 
-	if(CONFIG_GET(number/sqlite_feedback_cooldown)) // CHOMPEdit
+	if(CONFIG_GET(number/sqlite_feedback_cooldown))
 		dat += "<i>Please note that you will have to wait [CONFIG_GET(number/sqlite_feedback_cooldown)] day\s before \
 		being able to write more feedback after submitting.</i><br>"
 
@@ -113,7 +113,7 @@ GENERAL_PROTECT_DATUM(/datum/managed_browser/feedback_form)
 		return
 
 	if(href_list["feedback_choose_topic"])
-		feedback_topic = tgui_input_list(my_client, "Choose the topic you want to submit your feedback under.", "Feedback Topic", CONFIG_GET(str_list/sqlite_feedback_topics)) // CHOMPEdit
+		feedback_topic = tgui_input_list(my_client, "Choose the topic you want to submit your feedback under.", "Feedback Topic", CONFIG_GET(str_list/sqlite_feedback_topics))
 		display()
 		return
 

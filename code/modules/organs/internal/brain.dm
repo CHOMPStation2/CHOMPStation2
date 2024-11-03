@@ -80,7 +80,7 @@ GLOBAL_LIST_BOILERPLATE(all_brain_organs, /obj/item/organ/internal/brain)
 
 /obj/item/organ/internal/brain/Initialize() // CHOMPEdit
 	. = ..() // CHOMPEdit
-	health = CONFIG_GET(number/default_brain_health) // CHOMPEdit
+	health = CONFIG_GET(number/default_brain_health)
 	defib_timer = (CONFIG_GET(number/defib_timer) MINUTES) / 2 // CHOMPEdit
 	spawn(5)
 		if(brainmob)

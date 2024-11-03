@@ -27,7 +27,7 @@
 	selectable = 0
 
 /datum/ai_laws/nanotrasen/malfunction/New()
-	set_zeroth_law(CONFIG_GET(string/law_zero)) // CHOMPEdit
+	set_zeroth_law(CONFIG_GET(string/law_zero))
 	..()
 
 /************* NanoTrasen Aggressive *************/
