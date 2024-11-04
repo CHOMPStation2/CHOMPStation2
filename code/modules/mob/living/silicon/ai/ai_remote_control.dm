@@ -69,11 +69,7 @@
 		target.post_deploy()
 
 /mob/living/silicon/ai/proc/deploy_to_shell_act()
-<<<<<<< HEAD
-	set category = "AI.Commands" //CHOMPEdit
-=======
 	set category = "AI.Commands"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Deploy to Shell"
 	deploy_to_shell() // This is so the AI is not prompted with a list of all mobs when using the 'real' proc.
 

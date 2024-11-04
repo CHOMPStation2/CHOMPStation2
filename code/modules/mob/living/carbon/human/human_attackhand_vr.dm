@@ -3,11 +3,7 @@
 
 /mob/living/carbon/human/verb/check_attacks()
 	set name = "Check Attacks"
-<<<<<<< HEAD
-	set category = "IC.Game" //CHOMPEdit
-=======
 	set category = "IC.Game"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set src = usr
 
 	var/dat = span_bold("<font size = 5>Known Attacks</font>") + "<br/><br/>"

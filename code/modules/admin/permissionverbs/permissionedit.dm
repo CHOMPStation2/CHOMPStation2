@@ -1,9 +1,5 @@
 /client/proc/edit_admin_permissions()
-<<<<<<< HEAD
-	set category = "Admin.Secrets" //CHOMPEdit
-=======
 	set category = "Admin.Secrets"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Permissions Panel"
 	set desc = "Edit admin permissions"
 	if(!check_rights(R_PERMISSIONS))	return

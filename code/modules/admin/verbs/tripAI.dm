@@ -1,9 +1,5 @@
 /client/proc/triple_ai()
-<<<<<<< HEAD
-	set category = "Fun.Event Kit" //CHOMPEdit
-=======
 	set category = "Fun.Event Kit"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Create AI Triumvirate"
 
 	if(ticker.current_state > GAME_STATE_PREGAME)

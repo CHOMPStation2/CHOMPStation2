@@ -54,11 +54,7 @@
 
 /client/verb/change_volume()
 	set name = "Set Volume"
-<<<<<<< HEAD
-	set category = "OOC.Client Settings" //CHOMPEdit
-=======
 	set category = "OOC.Client Settings"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set desc = "Set jukebox volume"
 	set_new_volume(usr)
 

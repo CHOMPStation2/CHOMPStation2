@@ -1,9 +1,5 @@
 /mob/verb/pray()
-<<<<<<< HEAD
-	set category = "IC.Game" //CHOMPEdit
-=======
 	set category = "IC.Game"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Pray"
 
 	if(say_disabled)	//This is here to try to identify lag problems

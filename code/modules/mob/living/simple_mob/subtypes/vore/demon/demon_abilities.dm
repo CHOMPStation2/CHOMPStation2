@@ -1,11 +1,7 @@
 /mob/living/simple_mob/vore/demon/verb/blood_crawl()
 	set name = "Bloodcrawl"
 	set desc = "Shift out of reality using blood as your gateway"
-<<<<<<< HEAD
-	set category = "Abilities.Demon" //CHOMPEdit
-=======
 	set category = "Abilities.Demon"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	var/turf/T = get_turf(src)
 	if(!T.CanPass(src,T) || loc != T)
@@ -116,11 +112,7 @@
 /mob/living/simple_mob/vore/demon/verb/phase_shift()
 	set name = "Phase Shift"
 	set desc = "Shift out of reality temporarily"
-<<<<<<< HEAD
-	set category = "Abilities.Demon" //CHOMPEdit
-=======
 	set category = "Abilities.Demon"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 
 	var/turf/T = get_turf(src)

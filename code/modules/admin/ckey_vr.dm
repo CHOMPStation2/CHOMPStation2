@@ -1,11 +1,6 @@
 // Command to set the ckey of a mob without requiring VV permission
-<<<<<<< HEAD
-/client/proc/setckey(var/mob/M in mob_list) //YW modif, removed caps from setckey
-	set category = "Admin.Game" //CHOMPEdit
-=======
 /client/proc/SetCKey(var/mob/M in mob_list)
 	set category = "Admin.Game"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Set CKey"
 	set desc = "Mob to teleport"
 	if(!src.holder)

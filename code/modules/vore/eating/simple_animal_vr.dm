@@ -14,11 +14,7 @@
 //
 /mob/living/simple_mob/proc/animal_nom(mob/living/T in living_mobs_in_view(1))
 	set name = "Animal Nom"
-<<<<<<< HEAD
-	set category = "Abilities.Vore" // Moving this to abilities from IC as it's more fitting there  //CHOMPEdit
-=======
 	set category = "Abilities.Vore" // Moving this to abilities from IC as it's more fitting there
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set desc = "Since you can't grab, you get a verb!"
 
 	if(vore_active && !voremob_loaded) //CHOMPedit: On-demand belly loading.
@@ -52,11 +48,7 @@
 /mob/living/simple_mob/proc/toggle_digestion()
 	set name = "Toggle Animal's Digestion"
 	set desc = "Enables digestion on this mob for 20 minutes."
-<<<<<<< HEAD
-	set category = "OOC.Mob Settings" //CHOMPEdit
-=======
 	set category = "OOC.Mob Settings"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set src in oview(1)
 
 	var/mob/living/carbon/human/user = usr
@@ -85,11 +77,7 @@
 /mob/living/simple_mob/proc/toggle_fancygurgle()
 	set name = "Toggle Animal's Gurgle sounds"
 	set desc = "Switches between Fancy and Classic sounds on this mob."
-<<<<<<< HEAD
-	set category = "OOC.Mob Settings" //CHOMPEdit
-=======
 	set category = "OOC.Mob Settings"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set src in oview(1)
 
 	var/mob/living/user = usr	//I mean, At least ghosts won't use it.

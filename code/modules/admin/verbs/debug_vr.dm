@@ -1,9 +1,5 @@
 /datum/admins/proc/quick_nif()
-<<<<<<< HEAD
-	set category = "Fun.Add Nif" //CHOMPEdit
-=======
 	set category = "Fun.Add Nif"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Quick NIF"
 	set desc = "Spawns a NIF into someone in quick-implant mode."
 

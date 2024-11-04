@@ -1,10 +1,6 @@
 /mob/living/proc/toggle_rider_reins()
 	set name = "Give Reins"
-<<<<<<< HEAD
-	set category = "Abilities.General" //CHOMPEdit
-=======
 	set category = "Abilities.General"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set desc = "Let people riding on you control your movement."
 
 	if(riding_datum)

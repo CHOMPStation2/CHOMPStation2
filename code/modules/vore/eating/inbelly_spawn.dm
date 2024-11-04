@@ -1,9 +1,5 @@
 /mob/observer/dead/verb/spawn_in_belly()
-<<<<<<< HEAD
-	set category = "Ghost.Join" //CHOMPEdit
-=======
 	set category = "Ghost.Join"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Spawn In Belly"
 	set desc = "Spawn in someone's belly."
 

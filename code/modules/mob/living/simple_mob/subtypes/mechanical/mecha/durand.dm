@@ -60,11 +60,7 @@
 /mob/living/simple_mob/mechanical/mecha/combat/durand/verb/toggle_defense_mode()
 	set name = "Toggle Defense Mode"
 	set desc = "Toggles a special mode which makes you immobile and much more resilient."
-<<<<<<< HEAD
-	set category = "Abilities.Durand" //CHOMPEdit
-=======
 	set category = "Abilities.Durand"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	set_defense_mode(!defense_mode)
 

@@ -24,11 +24,7 @@
 	emote_see = list("honks")
 
 /mob/living/simple_mob/clowns/big/c_shift/honkelemental/verb/spawn_egg()
-<<<<<<< HEAD
-	set category = "Abilities.Clown" //CHOMPEdit
-=======
 	set category = "Abilities.Clown"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Spawn Clown Egg"
 	set desc = "Spawns an egg that a player can touch, which will call on ghosts to spawn as clowns."
 

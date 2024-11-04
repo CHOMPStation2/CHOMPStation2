@@ -212,11 +212,7 @@
 /mob/living/verb/climb_down()
 	set name = "Climb down wall"
 	set desc = "attempt to climb down the wall you are standing on, in direction you're looking"
-<<<<<<< HEAD
-	set category = "IC.Game" //CHOMPEdit
-=======
 	set category = "IC.Game"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	var/fall_chance = 0	//Increased if we can't actually climb
 	var/turf/our_turf = get_turf(src) //floor we're standing on

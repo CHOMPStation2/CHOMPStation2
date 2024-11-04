@@ -2,11 +2,7 @@
 /client/verb/wiki(query as text)
 	set name = "wiki"
 	set desc = "Type what you want to know about.  This will open the wiki on your web browser."
-<<<<<<< HEAD
-	set category = "OOC.Resources" //CHOMPEdit
-=======
 	set category = "OOC.Resources"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	if(CONFIG_GET(string/wikiurl))
 		if(query)
 			if(CONFIG_GET(string/wikisearchurl))
@@ -99,11 +95,7 @@
 
 /client/verb/hotkeys_help()
 	set name = "hotkeys-help"
-<<<<<<< HEAD
-	set category = "OOC.Resources" //CHOMPEdit
-=======
 	set category = "OOC.Resources"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	var/admin = {"<font color='AD5AAD'>
 Admin:

@@ -107,18 +107,10 @@
 	var/last_asset_job = 0
 	var/last_completed_asset_job = 0
 
-<<<<<<< HEAD
-	//CHOMPAdd Start Panel Ping
-=======
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	///Last ping of the client
 	var/lastping = 0
 	///Average ping of the client
 	var/avgping = 0
-<<<<<<< HEAD
-	//CHOMPAdd End
-=======
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
  	///world.time they connected
 	var/connection_time

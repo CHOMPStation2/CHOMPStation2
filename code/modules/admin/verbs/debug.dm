@@ -1,9 +1,5 @@
 /client/proc/Debug2()
-<<<<<<< HEAD
-	set category = "Debug.Investigate" //CHOMPEdit
-=======
 	set category = "Debug.Investigate"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Debug-Game"
 	if(!check_rights(R_DEBUG))	return
 
@@ -22,11 +18,7 @@
 
 /client/proc/simple_DPS()
 	set name = "Simple DPS"
-<<<<<<< HEAD
-	set category = "Debug.Investigate" //CHOMPEdit
-=======
 	set category = "Debug.Investigate"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set desc = "Gives a really basic idea of how much hurt something in-hand does."
 
 	var/obj/item/I = null
@@ -81,11 +73,7 @@
 		return
 
 /client/proc/Cell()
-<<<<<<< HEAD
-	set category = "Debug.Investigate" //CHOMPEdit
-=======
 	set category = "Debug.Investigate"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Cell"
 	if(!mob)
 		return
@@ -106,11 +94,7 @@
 	feedback_add_details("admin_verb","ASL") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/cmd_admin_robotize(var/mob/M in mob_list)
-<<<<<<< HEAD
-	set category = "Fun.Event Kit" //CHOMPEdit
-=======
 	set category = "Fun.Event Kit"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Make Robot"
 
 	if(!ticker)
@@ -125,11 +109,7 @@
 		tgui_alert_async(usr, "Invalid mob")
 
 /client/proc/cmd_admin_animalize(var/mob/M in mob_list)
-<<<<<<< HEAD
-	set category = "Fun.Event Kit" //CHOMPEdit
-=======
 	set category = "Fun.Event Kit"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Make Simple Animal"
 
 	if(!ticker)
@@ -150,11 +130,7 @@
 
 
 /client/proc/makepAI()
-<<<<<<< HEAD
-	set category = "Fun.Event Kit" //CHOMPEdit
-=======
 	set category = "Fun.Event Kit"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Make pAI"
 	set desc = "Spawn someone in as a pAI!"
 	if(!check_rights(R_ADMIN|R_EVENT|R_DEBUG))
@@ -185,11 +161,7 @@
 	feedback_add_details("admin_verb","MPAI") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/cmd_admin_alienize(var/mob/M in mob_list)
-<<<<<<< HEAD
-	set category = "Fun.Event Kit" //CHOMPEdit
-=======
 	set category = "Fun.Event Kit"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Make Alien"
 
 	if(!ticker)
@@ -208,11 +180,7 @@
 
 //TODO: merge the vievars version into this or something maybe mayhaps
 /client/proc/cmd_debug_del_all()
-<<<<<<< HEAD
-	set category = "Debug.Dangerous" //CHOMPEdit
-=======
 	set category = "Debug.Dangerous"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Del-All"
 
 	// to prevent REALLY stupid deletions
@@ -227,11 +195,7 @@
 	feedback_add_details("admin_verb","DELA") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/cmd_debug_make_powernets()
-<<<<<<< HEAD
-	set category = "Debug.Dangerous" //CHOMPEdit
-=======
 	set category = "Debug.Dangerous"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Make Powernets"
 	SSmachines.makepowernets()
 	log_admin("[key_name(src)] has remade the powernet. SSmachines.makepowernets() called.")
@@ -239,11 +203,7 @@
 	feedback_add_details("admin_verb","MPWN") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/cmd_debug_tog_aliens()
-<<<<<<< HEAD
-	set category = "Server.Game" //CHOMPEdit
-=======
 	set category = "Server.Game"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Toggle Aliens"
 
 	CONFIG_SET(flag/aliens_allowed, !CONFIG_GET(flag/aliens_allowed))
@@ -252,11 +212,7 @@
 	feedback_add_details("admin_verb","TAL") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/cmd_display_del_log()
-<<<<<<< HEAD
-	set category = "Debug.Investigate" //CHOMPEdit
-=======
 	set category = "Debug.Investigate"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Display del() Log"
 	set desc = "Display del's log of everything that's passed through it."
 
@@ -286,11 +242,7 @@
 	usr << browse(dellog.Join(), "window=dellog")
 
 /client/proc/cmd_display_init_log()
-<<<<<<< HEAD
-	set category = "Debug.Investigate" //CHOMPEdit
-=======
 	set category = "Debug.Investigate"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Display Initialize() Log"
 	set desc = "Displays a list of things that didn't handle Initialize() properly"
 
@@ -321,11 +273,7 @@
 		. = lines.Join("\n")
 
 /client/proc/cmd_admin_grantfullaccess(var/mob/M in mob_list)
-<<<<<<< HEAD
-	set category = "Admin.Events" //CHOMPEdit
-=======
 	set category = "Admin.Events"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Grant Full Access"
 
 	if (!ticker)
@@ -356,11 +304,7 @@
 	message_admins(span_blue("[key_name_admin(usr)] has granted [M.key] full access."), 1)
 
 /client/proc/cmd_assume_direct_control(var/mob/M in mob_list)
-<<<<<<< HEAD
-	set category = "Admin.Game" //CHOMPEdit
-=======
 	set category = "Admin.Game"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Assume direct control"
 	set desc = "Direct intervention"
 
@@ -381,11 +325,7 @@
 
 /client/proc/take_picture(var/atom/A in world)
 	set name = "Save PNG"
-<<<<<<< HEAD
-	set category = "Debug.Misc" //CHOMPEdit
-=======
 	set category = "Debug.Misc"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set desc = "Opens a dialog to save a PNG of any object in the game."
 
 	if(!check_rights(R_DEBUG))
@@ -482,11 +422,7 @@
 		to_world("* [areatype]")
 
 /datum/admins/proc/cmd_admin_dress(input in getmobs())
-<<<<<<< HEAD
-	set category = "Fun.Event Kit" //CHOMPEdit
-=======
 	set category = "Fun.Event Kit"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Select equipment"
 
 	if(!check_rights(R_FUN))
@@ -518,11 +454,7 @@
 
 /client/proc/startSinglo()
 
-<<<<<<< HEAD
-	set category = "Debug.Game" //CHOMPEdit
-=======
 	set category = "Debug.Game"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Start Singularity"
 	set desc = "Sets up the singularity and all machines to get power flowing through the station"
 
@@ -649,11 +581,7 @@
 
 
 /client/proc/cmd_debug_mob_lists()
-<<<<<<< HEAD
-	set category = "Debug.Investigate" //CHOMPEdit
-=======
 	set category = "Debug.Investigate"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Debug Mob Lists"
 	set desc = "For when you just gotta know"
 
@@ -672,11 +600,7 @@
 			to_chat(usr, span_filter_debuglogs(jointext(GLOB.clients,",")))
 
 /client/proc/cmd_debug_using_map()
-<<<<<<< HEAD
-	set category = "Debug.Investigate" //CHOMPEdit
-=======
 	set category = "Debug.Investigate"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Debug Map Datum"
 	set desc = "Debug the map metadata about the currently compiled in map."
 
@@ -701,11 +625,7 @@
 		tgui_alert_async(usr, "Invalid mob")
 
 /datum/admins/proc/view_runtimes()
-<<<<<<< HEAD
-	set category = "Debug.Investigate" //CHOMPEdit
-=======
 	set category = "Debug.Investigate"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "View Runtimes"
 	set desc = "Open the Runtime Viewer"
 
@@ -715,11 +635,7 @@
 	error_cache.showTo(usr)
 
 /datum/admins/proc/change_weather()
-<<<<<<< HEAD
-	set category = "Debug.Events" //CHOMPEdit
-=======
 	set category = "Debug.Events"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Change Weather"
 	set desc = "Changes the current weather."
 
@@ -737,11 +653,7 @@
 			log_admin(log)
 
 /datum/admins/proc/toggle_firework_override()
-<<<<<<< HEAD
-	set category = "Fun.Event Kit" //CHOMPEdit
-=======
 	set category = "Fun.Event Kit"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Toggle Weather Firework Override"
 	set desc = "Toggles ability for weather fireworks to affect weather on planet of choice."
 
@@ -756,11 +668,7 @@
 		log_admin(log)
 
 /datum/admins/proc/change_time()
-<<<<<<< HEAD
-	set category = "Debug.Events" //CHOMPEdit
-=======
 	set category = "Debug.Events"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Change Planet Time"
 	set desc = "Changes the time of a planet."
 

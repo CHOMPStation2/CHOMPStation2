@@ -90,11 +90,7 @@
 
 /mob/living/carbon/human/proc/taur_mount(var/mob/living/M in living_mobs(1))
 	set name = "Taur Mount/Dismount"
-<<<<<<< HEAD
-	set category = "Abilities.General" //CHOMPEdit
-=======
 	set category = "Abilities.General"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set desc = "Let people ride on you."
 
 	if(LAZYLEN(buckled_mobs))

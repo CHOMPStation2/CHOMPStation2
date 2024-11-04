@@ -363,11 +363,7 @@
 
 /mob/living/simple_mob/proc/ColorMate()
 	set name = "Recolour"
-<<<<<<< HEAD
-	set category = "Abilities.Settings" //CHOMPEdit
-=======
 	set category = "Abilities.Settings"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set desc = "Allows to recolour once."
 
 	if(!has_recoloured)
@@ -380,11 +376,7 @@
 
 /mob/living/simple_mob/proc/hunting_vision()
 	set name = "Track Prey Through Walls"
-<<<<<<< HEAD
-	set category = "Abilities.Mob" //ChompEDIT
-=======
 	set category = "Abilities.Mob"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set desc = "Uses you natural predatory instincts to seek out prey even through walls, or your natural survival instincts to spot predators from a distance."
 
 	if(hunting_cooldown + 5 MINUTES < world.time)
@@ -399,11 +391,7 @@
 
 /mob/living/simple_mob/proc/hunting_vision_plus()
 	set name = "Thermal vision toggle"
-<<<<<<< HEAD
-	set category = "Abilities.Mob" //ChompEDIT
-=======
 	set category = "Abilities.Mob"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set desc = "Uses you natural predatory instincts to seek out prey even through walls, or your natural survival instincts to spot predators from a distance."
 
 	if(!isthermal)

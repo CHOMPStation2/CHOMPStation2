@@ -396,11 +396,7 @@
 	HUD.inventory_shown = 0
 
 /mob/living/carbon/human/verb/toggle_hotkey_verbs()
-<<<<<<< HEAD
-	set category = "OOC.Client Settings" //CHOMPEdit
-=======
 	set category = "OOC.Client Settings"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Toggle hotkey buttons"
 	set desc = "This disables or enables the user interface buttons which can be used with hotkeys."
 

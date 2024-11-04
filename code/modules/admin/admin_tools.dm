@@ -1,9 +1,5 @@
 /client/proc/cmd_admin_check_player_logs(mob/living/M as mob in mob_list)
-<<<<<<< HEAD
-	set category = "Admin.Logs" //CHOMPEdit
-=======
 	set category = "Admin.Logs"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Check Player Attack Logs"
 	set desc = "Check a player's attack logs."
 	show_cmd_admin_check_player_logs(M) //CHOMPEdit
@@ -43,11 +39,7 @@
 	feedback_add_details("admin_verb","PL") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/cmd_admin_check_dialogue_logs(mob/living/M as mob in mob_list)
-<<<<<<< HEAD
-	set category = "Admin.Logs" //CHOMPEdit
-=======
 	set category = "Admin.Logs"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Check Player Dialogue Logs"
 	set desc = "Check a player's dialogue logs."
 	show_cmd_admin_check_dialogue_logs(M) //CHOMPEdit

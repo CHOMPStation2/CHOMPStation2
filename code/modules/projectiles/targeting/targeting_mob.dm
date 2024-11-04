@@ -4,11 +4,7 @@
 /mob/verb/toggle_gun_mode()
 	set name = "Toggle Gun Mode"
 	set desc = "Begin or stop aiming."
-<<<<<<< HEAD
-	set category = "IC.Game" //CHOMPEdit
-=======
 	set category = "IC.Game"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(isliving(src))
 		var/mob/living/M = src

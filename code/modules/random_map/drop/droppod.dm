@@ -149,11 +149,7 @@
 			drop.forceMove(T)
 
 /datum/admins/proc/call_drop_pod()
-<<<<<<< HEAD
-	set category = "Fun.Drop Pod" //CHOMPEdit
-=======
 	set category = "Fun.Drop Pod"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set desc = "Call an immediate drop pod on your location."
 	set name = "Call Drop Pod"
 

@@ -91,11 +91,7 @@ world/New()
 
 // display only the reports that haven't been handled
 /client/proc/display_admin_reports()
-<<<<<<< HEAD
-	set category = "Admin.Moderation" //CHOMPEdit
-=======
 	set category = "Admin.Moderation"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Display Admin Reports"
 	if(!src.holder) return
 
@@ -123,11 +119,7 @@ world/New()
 
 
 /client/proc/Report(mob/M as mob in world)
-<<<<<<< HEAD
-	set category = "Admin.Moderation" //CHOMPEdit
-=======
 	set category = "Admin.Moderation"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	if(!src.holder)
 		return
 

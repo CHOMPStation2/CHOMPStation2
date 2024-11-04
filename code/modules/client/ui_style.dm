@@ -37,11 +37,7 @@ var/global/list/all_tooltip_styles = list(
 
 /client/verb/change_ui()
 	set name = "Change UI"
-<<<<<<< HEAD
-	set category = "Preferences.Game" //CHOMPEdit
-=======
 	set category = "Preferences.Game"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set desc = "Configure your user interface"
 
 	if(!ishuman(usr))

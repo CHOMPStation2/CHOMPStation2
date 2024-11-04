@@ -360,11 +360,7 @@
 
 /mob/living/silicon/pai/lay_down()
 	set name = "Rest"
-<<<<<<< HEAD
-	set category = "IC.Game" //CHOMPEdit
-=======
 	set category = "IC.Game"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	// Pass lying down or getting up to our pet human, if we're in a rig.
 	if(istype(src.loc,/obj/item/paicard))

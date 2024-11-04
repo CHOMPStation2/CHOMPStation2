@@ -136,11 +136,7 @@ SUBSYSTEM_DEF(statpanels)
 
 	target.stat_panel.send_message("update_stat", list(
 		global_data = global_data,
-<<<<<<< HEAD
-		ping_str = "Ping: [round(target.lastping, 1)]ms (Average: [round(target.avgping, 1)]ms)", // CHOMPEdit
-=======
 		ping_str = "Ping: [round(target.lastping, 1)]ms (Average: [round(target.avgping, 1)]ms)",
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 		other_str = target.mob?.get_status_tab_items(),
 	))
 

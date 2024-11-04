@@ -81,11 +81,7 @@
 
 //Shows today's server log
 /datum/admins/proc/view_txt_log()
-<<<<<<< HEAD
-	set category = "Admin.Logs" //CHOMPEdit
-=======
 	set category = "Admin.Logs"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Show Server Log"
 	set desc = "Shows today's server log."
 
@@ -100,11 +96,7 @@
 
 //Shows today's attack log
 /datum/admins/proc/view_atk_log()
-<<<<<<< HEAD
-	set category = "Admin.Logs" //CHOMPEdit
-=======
 	set category = "Admin.Logs"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Show Server Attack Log"
 	set desc = "Shows today's server attack log."
 

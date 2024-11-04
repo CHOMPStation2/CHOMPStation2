@@ -630,11 +630,7 @@
 /obj/item/clothing/shoes/proc/draw_knife()
 	set name = "Draw Boot Knife"
 	set desc = "Pull out your boot knife."
-<<<<<<< HEAD
-	set category = "IC.Game" //CHOMPEdit
-=======
 	set category = "IC.Game"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set src in usr
 
 	if(usr.stat || usr.restrained() || usr.incapacitated())

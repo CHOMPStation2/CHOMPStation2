@@ -8,11 +8,7 @@
 /mob/living/proc/hide()
 	set name = "Hide"
 	set desc = "Allows to hide beneath tables or certain items. Toggled on or off."
-<<<<<<< HEAD
-	set category = "Abilities.General" //CHOMPEdit
-=======
 	set category = "Abilities.General"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(stat == DEAD || paralysis || weakened || stunned || restrained() || buckled || LAZYLEN(grabbed_by) || has_buckled_mobs()) //VORE EDIT: Check for has_buckled_mobs() (taur riding)
 		return

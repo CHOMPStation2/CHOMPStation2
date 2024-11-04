@@ -94,11 +94,7 @@
 
 /mob/observer/dead/verb/join_as_drone()
 
-<<<<<<< HEAD
-	set category = "Ghost.Join" //CHOMPEdit
-=======
 	set category = "Ghost.Join"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Join As Drone"
 	set desc = "If there is a powered, enabled fabricator in the game world with a prepared chassis, join as a maintenance drone."
 

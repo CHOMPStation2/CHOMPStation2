@@ -1,9 +1,5 @@
 /datum/admins/proc/capture_map(tx as null|num, ty as null|num, tz as null|num, range as null|num)
-<<<<<<< HEAD
-	set category = "Server.Game" //CHOMPEdit
-=======
 	set category = "Server.Game"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Capture Map Part"
 	set desc = "Usage: Capture-Map-Part target_x_cord target_y_cord target_z_cord range (captures part of a map originating from bottom left corner)"
 

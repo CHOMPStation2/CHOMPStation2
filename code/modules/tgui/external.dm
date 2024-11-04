@@ -183,11 +183,7 @@
 /client/verb/tgui_fix_white()
 	set desc = "Only use this if you have a broken TGUI window occupying your screen!"
 	set name = "Fix TGUI"
-<<<<<<< HEAD
-	set category = "OOC.Debug" //CHOMPEdit
-=======
 	set category = "OOC.Debug"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(alert(src, "Only use this verb if you have a white TGUI window stuck on your screen.", "Fix TGUI", "Continue", "Nevermind") != "Continue") // Not tgui_alert since we're fixing tgui
 		return

@@ -389,11 +389,7 @@ var/to_chat_src
 
 /client/proc/vchat_export_log()
 	set name = "Export chatlog"
-<<<<<<< HEAD
-	set category = "OOC.Chat" //CHOMPEdit
-=======
 	set category = "OOC.Chat"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(chatOutput.broken)
 		to_chat(src, span_warning("Error: VChat isn't processing your messages!"))

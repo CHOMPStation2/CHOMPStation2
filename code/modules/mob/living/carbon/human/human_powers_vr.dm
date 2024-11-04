@@ -1,11 +1,7 @@
 /mob/living/carbon/human/proc/reagent_purge()
 	set name = "Purge Reagents"
 	set desc = "Empty yourself of any reagents you may have consumed or come into contact with."
-<<<<<<< HEAD
-	set category = "IC.Game" //CHOMPEdit
-=======
 	set category = "IC.Game"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(stat == DEAD) return
 
@@ -21,11 +17,7 @@
 /mob/living/carbon/human/verb/toggle_eyes_layer()
 	set name = "Switch Eyes/Monitor Layer"
 	set desc = "Toggle rendering of eyes/monitor above markings."
-<<<<<<< HEAD
-	set category = "IC.Settings" //CHOMPEdit
-=======
 	set category = "IC.Settings"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(stat)
 		to_chat(src, span_warning("You must be awake and standing to perform this action!"))

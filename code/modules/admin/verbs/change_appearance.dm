@@ -1,11 +1,7 @@
 /client/proc/change_human_appearance_admin()
 	set name = "Change Mob Appearance - Admin"
 	set desc = "Allows you to change the mob appearance"
-<<<<<<< HEAD
-	set category = "Admin.Events" //CHOMPEdit
-=======
 	set category = "Admin.Events"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(!check_rights(R_FUN)) return
 
@@ -19,11 +15,7 @@
 /client/proc/change_human_appearance_self()
 	set name = "Change Mob Appearance - Self"
 	set desc = "Allows the mob to change its appearance"
-<<<<<<< HEAD
-	set category = "Admin.Events" //CHOMPEdit
-=======
 	set category = "Admin.Events"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(!check_rights(R_FUN)) return
 
@@ -45,11 +37,7 @@
 
 /client/proc/editappear()
 	set name = "Edit Appearance"
-<<<<<<< HEAD
-	set category = "Fun.Event Kit" //CHOMPEdit
-=======
 	set category = "Fun.Event Kit"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(!check_rights(R_FUN))	return
 

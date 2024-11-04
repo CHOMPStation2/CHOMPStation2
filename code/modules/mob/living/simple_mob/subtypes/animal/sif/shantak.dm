@@ -79,11 +79,7 @@
 /mob/living/simple_mob/animal/sif/shantak/leader/verb/rally_pack()
 	set name = "Rally Pack"
 	set desc = "Commands your fellow packmembers to follow you, the leader."
-<<<<<<< HEAD
-	set category = "Abilities.Shantak" //CHOMPEdit
-=======
 	set category = "Abilities.Shantak"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	for(var/mob/living/simple_mob/animal/sif/shantak/S in hearers(7, src))
 		if(istype(S, /mob/living/simple_mob/animal/sif/shantak/leader)) // Leaders won't follow other leaders. Also avoids trying to follow ourselves.

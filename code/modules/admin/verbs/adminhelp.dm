@@ -678,11 +678,7 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 //admin proc
 /client/proc/cmd_admin_ticket_panel()
 	set name = "Show Ticket List"
-<<<<<<< HEAD
-	set category = "Admin.Misc" //CHOMPEdit
-=======
 	set category = "Admin.Misc"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(!check_rights(R_ADMIN|R_MOD|R_DEBUG|R_EVENT, TRUE))
 		return

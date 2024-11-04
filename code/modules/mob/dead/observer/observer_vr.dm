@@ -1,9 +1,5 @@
 /mob/observer/dead/verb/nifjoin()
-<<<<<<< HEAD
-	set category = "Ghost.Join" //CHOMPEdit
-=======
 	set category = "Ghost.Join"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Join Into Soulcatcher"
 	set desc = "Select a player with a working NIF + Soulcatcher NIFSoft to join into it."
 
@@ -62,11 +58,7 @@
 		SC.catch_mob(src) //This will result in us being deleted so...
 
 /mob/observer/dead/verb/backup_ping()
-<<<<<<< HEAD
-	set category = "Ghost.Join" //CHOMPEdit
-=======
 	set category = "Ghost.Join"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Notify Transcore"
 	set desc = "If your past-due backup notification was missed or ignored, you can use this to send a new one."
 
@@ -94,11 +86,7 @@
 		to_chat(src,span_warning("No backup record could be found, sorry."))
 // CHOMPEdit: Revert Removal
 /mob/observer/dead/verb/backup_delay()
-<<<<<<< HEAD
-	set category = "Ghost.Settings" //CHOMPEdit
-=======
 	set category = "Ghost.Settings"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Cancel Transcore Notification"
 	set desc = "You can use this to avoid automatic backup notification happening. Manual notification can still be used."
 
@@ -117,11 +105,7 @@
 		to_chat(src,span_warning("No backup record could be found, sorry."))
 
 /mob/observer/dead/verb/findghostpod() //Moves the ghost instead of just changing the ghosts's eye -Nodrak
-<<<<<<< HEAD
-	set category = "Ghost.Join" //CHOMPEdit
-=======
 	set category = "Ghost.Join"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Find Ghost Pod"
 	set desc = "Find an active ghost pod"
 	set popup_menu = FALSE
@@ -148,11 +132,7 @@
 			to_chat(src, span_filter_notice("This ghost pod is not located in the game world."))
 
 /mob/observer/dead/verb/findautoresleever()
-<<<<<<< HEAD
-	set category = "Ghost.Join" //CHOMPEdit
-=======
 	set category = "Ghost.Join"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Find Auto Resleever"
 	set desc = "Find a Auto Resleever"
 	set popup_menu = FALSE

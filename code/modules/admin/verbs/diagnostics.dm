@@ -1,9 +1,5 @@
 /client/proc/air_report()
-<<<<<<< HEAD
-	set category = "Debug.Investigate" //CHOMPEdit
-=======
 	set category = "Debug.Investigate"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Show Air Report"
 
 	if(!master_controller || !air_master)
@@ -104,11 +100,7 @@
 
 /client/proc/reload_admins()
 	set name = "Reload Admins"
-<<<<<<< HEAD
-	set category = "Debug.Server" //CHOMPEdit
-=======
 	set category = "Debug.Server"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(!check_rights(R_SERVER))	return
 
@@ -118,11 +110,7 @@
 
 /client/proc/reload_eventMs()
 	set name = "Reload Event Managers"
-<<<<<<< HEAD
-	set category = "Debug.Server" //CHOMPEdit
-=======
 	set category = "Debug.Server"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(!check_rights(R_SERVER)) return
 
@@ -133,11 +121,7 @@
 //todo:
 /client/proc/jump_to_dead_group()
 	set name = "Jump to dead group"
-<<<<<<< HEAD
-	set category = "Debug.Game" //CHOMPEdit
-=======
 	set category = "Debug.Game"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 		/*
 	if(!holder)
 		to_chat(src, "Only administrators may use this command.")
@@ -159,11 +143,7 @@
 /client/proc/kill_airgroup()
 	set name = "Kill Local Airgroup"
 	set desc = "Use this to allow manual manupliation of atmospherics."
-<<<<<<< HEAD
-	set category = "Debug.Dangerous" //CHOMPEdit
-=======
 	set category = "Debug.Dangerous"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	/*
 	if(!holder)
 		to_chat(src, "Only administrators may use this command.")
@@ -186,11 +166,7 @@
 /client/proc/print_jobban_old()
 	set name = "Print Jobban Log"
 	set desc = "This spams all the active jobban entries for the current round to standard output."
-<<<<<<< HEAD
-	set category = "Debug.Investigate" //CHOMPEdit
-=======
 	set category = "Debug.Investigate"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	to_chat(usr, span_bold("Jobbans active in this round."))
 	for(var/t in jobban_keylist)
@@ -199,11 +175,7 @@
 /client/proc/print_jobban_old_filter()
 	set name = "Search Jobban Log"
 	set desc = "This searches all the active jobban entries for the current round and outputs the results to standard output."
-<<<<<<< HEAD
-	set category = "Debug.Investigate" //CHOMPEdit
-=======
 	set category = "Debug.Investigate"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	var/job_filter = tgui_input_text(usr, "Contains what?","Job Filter")
 	if(!job_filter)

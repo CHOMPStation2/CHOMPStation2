@@ -285,11 +285,7 @@
 
 /mob/verb/memory()
 	set name = "Notes"
-<<<<<<< HEAD
-	set category = "IC.Game" //CHOMPEdit
-=======
 	set category = "IC.Game"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	if(mind)
 		mind.show_memory(src)
 	else
@@ -297,11 +293,7 @@
 
 /mob/verb/add_memory(msg as message)
 	set name = "Add Note"
-<<<<<<< HEAD
-	set category = "IC.Game" //CHOMPEdit
-=======
 	set category = "IC.Game"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	msg = sanitize(msg)
 
@@ -389,11 +381,7 @@
 
 /mob/verb/abandon_mob()
 	set name = "Return to Menu"
-<<<<<<< HEAD
-	set category = "OOC.Game" //CHOMPEdit
-=======
 	set category = "OOC.Game"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(stat != DEAD || !ticker)
 		to_chat(usr, span_boldnotice("You must be dead to use this!"))
@@ -474,15 +462,10 @@
 
 /client/verb/changes()
 	set name = "Changelog"
-<<<<<<< HEAD
-	set category = "OOC.Resources" //CHOMPEdit
+	set category = "OOC.Resources"
 	// CHOMPedit Start - Better Changelog
 	//src << browse('html/changelog.html', "window=changes;size=675x650")
 	//return
-=======
-	set category = "OOC.Resources"
-	src << link("https://wiki.vore-station.net/Changelog")
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(!GLOB.changelog_tgui)
 		GLOB.changelog_tgui = new /datum/changelog()
@@ -495,11 +478,7 @@
 
 /mob/verb/observe()
 	set name = "Observe"
-<<<<<<< HEAD
-	set category = "OOC.Game" //CHOMPEdit
-=======
 	set category = "OOC.Game"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	var/is_admin = 0
 
 	if(client.holder && (client.holder.rights & R_ADMIN|R_EVENT))
@@ -541,11 +520,7 @@
 
 /mob/verb/cancel_camera()
 	set name = "Cancel Camera View"
-<<<<<<< HEAD
-	set category = "OOC.Game" //CHOMPEdit
-=======
 	set category = "OOC.Game"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	unset_machine()
 	reset_view(null)
 
@@ -569,11 +544,7 @@
 /mob/verb/stop_pulling()
 
 	set name = "Stop Pulling"
-<<<<<<< HEAD
-	set category = "IC.Game" //CHOMPEdit
-=======
 	set category = "IC.Game"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(pulling)
 		if(ishuman(pulling))
@@ -1031,11 +1002,7 @@
 /mob/verb/face_direction()
 
 	set name = "Face Direction"
-<<<<<<< HEAD
-	set category = "IC.Game" //CHOMPEdit
-=======
 	set category = "IC.Game"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set src = usr
 
 	set_face_dir()

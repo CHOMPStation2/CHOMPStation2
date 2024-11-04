@@ -442,11 +442,7 @@
 
 /mob/living/silicon/robot/verb/namepick()
 	set name = "Pick Name"
-<<<<<<< HEAD
-	set category = "Abilities.Settings" //ChompEDIT - TGPanel
-=======
 	set category = "Abilities.Settings"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(custom_name)
 		to_chat(usr, "You can't pick another custom name. [isshell(src) ? "" : "Go ask for a name change."]")
@@ -464,11 +460,7 @@
 
 /mob/living/silicon/robot/verb/extra_customization()
 	set name = "Customize Appearance"
-<<<<<<< HEAD
-	set category = "Abilities.Settings" //ChompEDIT - TGPanel
-=======
 	set category = "Abilities.Settings"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set desc = "Customize your appearance (assuming your chosen sprite allows)."
 
 	if(!sprite_datum || !sprite_datum.has_extra_customization)
@@ -523,11 +515,7 @@
 // function to toggle VTEC once installed
 /mob/living/silicon/robot/proc/toggle_vtec()
 	set name = "Toggle VTEC"
-<<<<<<< HEAD
-	set category = "Abilities.Silicon" //CHOMPEdit
-=======
 	set category = "Abilities.Silicon"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	vtec_active = !vtec_active
 	hud_used.toggle_vtec_control()
 	to_chat(src, span_filter_notice("VTEC module [vtec_active  ? "enabled" : "disabled"]."))
@@ -829,11 +817,7 @@
 
 /mob/living/silicon/robot/proc/ColorMate()
 	set name = "Recolour Module"
-<<<<<<< HEAD
-	set category = "Abilities.Settings" //ChompEDIT - TGPanel
-=======
 	set category = "Abilities.Settings"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set desc = "Allows to recolour once."
 
 	if(!has_recoloured)
@@ -1445,11 +1429,7 @@
 /mob/living/silicon/robot/verb/rest_style()
 	set name = "Switch Rest Style"
 	set desc = "Select your resting pose."
-<<<<<<< HEAD
-	set category = "IC.Settings" //CHOMPEdit
-=======
 	set category = "IC.Settings"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(!sprite_datum || !sprite_datum.has_rest_sprites || sprite_datum.rest_sprite_options.len < 1)
 		to_chat(src, span_notice("Your current appearance doesn't have any resting styles!"))
@@ -1467,11 +1447,7 @@
 
 /mob/living/silicon/robot/verb/robot_nom(var/mob/living/T in living_mobs_in_view(1)) //CHOMPEdit
 	set name = "Robot Nom"
-<<<<<<< HEAD
-	set category = "Abilities.Vore" //CHOMPEdit
-=======
 	set category = "Abilities.Vore"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set desc = "Allows you to eat someone."
 
 	if (stat != CONSCIOUS)
@@ -1545,11 +1521,7 @@
 
 /mob/living/silicon/robot/proc/robot_mount(var/mob/living/M in living_mobs(1))
 	set name = "Robot Mount/Dismount"
-<<<<<<< HEAD
-	set category = "Abilities.General" //CHOMPEdit
-=======
 	set category = "Abilities.General"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set desc = "Let people ride on you."
 
 	if(LAZYLEN(buckled_mobs))

@@ -4,11 +4,7 @@
 
 /mob/living/carbon/human/proc/shapeshifter_select_ears()
 	set name = "Select Ears"
-<<<<<<< HEAD
-	set category = "Abilities.Shapeshift" //CHOMPEdit
-=======
 	set category = "Abilities.Shapeshift"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(stat || world.time < last_special)
 		return
@@ -93,11 +89,7 @@
 
 /mob/living/carbon/human/proc/shapeshifter_select_tail()
 	set name = "Select Tail"
-<<<<<<< HEAD
-	set category = "Abilities.Shapeshift" //CHOMPEdit
-=======
 	set category = "Abilities.Shapeshift"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(stat || world.time < last_special)
 		return
@@ -151,11 +143,7 @@
 
 /mob/living/carbon/human/proc/shapeshifter_select_wings()
 	set name = "Select Wings"
-<<<<<<< HEAD
-	set category = "Abilities.Shapeshift" //CHOMPEdit
-=======
 	set category = "Abilities.Shapeshift"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(stat || world.time < last_special)
 		return
@@ -211,11 +199,7 @@
 /mob/living/carbon/human/proc/promethean_select_opaqueness()
 
 	set name = "Toggle Transparency"
-<<<<<<< HEAD
-	set category = "Abilities.Shapeshift" //CHOMPEdit
-=======
 	set category = "Abilities.Shapeshift"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(stat || world.time < last_special)
 		return

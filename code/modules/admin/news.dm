@@ -11,11 +11,7 @@
 
 /client/proc/modify_server_news()
 	set name = "Modify Public News"
-<<<<<<< HEAD
-	set category = "Server.Game" //CHOMPEdit
-=======
 	set category = "Server.Game"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(!check_rights(0))
 		return

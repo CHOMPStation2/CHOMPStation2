@@ -116,11 +116,7 @@
 
 /mob/living/verb/print_healthbars()
 	set name = "Print Prey Healthbars"
-<<<<<<< HEAD
-	set category = "Abilities.Vore" //CHOMPEdit
-=======
 	set category = "Abilities.Vore"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	var/nuffin = TRUE
 

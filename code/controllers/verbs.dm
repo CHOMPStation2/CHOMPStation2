@@ -38,11 +38,7 @@
 
 // Debug verbs.
 /client/proc/restart_controller(controller in list("Master", "Failsafe"))
-<<<<<<< HEAD
-	set category = "Debug.Dangerous" //CHOMPEdit
-=======
 	set category = "Debug.Dangerous"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Restart Controller"
 	set desc = "Restart one of the various periodic loop controllers for the game (be careful!)"
 
@@ -59,11 +55,7 @@
 	message_admins("Admin [key_name_admin(usr)] has restarted the [controller] controller.")
 
 /client/proc/debug_antagonist_template(antag_type in all_antag_types)
-<<<<<<< HEAD
-	set category = "Debug.Investigate" //CHOMPEdit
-=======
 	set category = "Debug.Investigate"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Debug Antagonist"
 	set desc = "Debug an antagonist template."
 
@@ -73,11 +65,7 @@
 		message_admins("Admin [key_name_admin(usr)] is debugging the [antag.role_text] template.")
 
 /client/proc/debug_controller()
-<<<<<<< HEAD
-	set category = "Debug.Investigate" //CHOMPEdit
-=======
 	set category = "Debug.Investigate"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Debug Controller"
 	set desc = "Debug the various subsystems/controllers for the game (be careful!)"
 

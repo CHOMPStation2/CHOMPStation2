@@ -47,11 +47,7 @@
 /obj/item/clothing/mask/monitor/verb/set_monitor_state()
 	set name = "Set Monitor State"
 	set desc = "Choose an icon for your monitor."
-<<<<<<< HEAD
-	set category = "IC.Game" //CHOMPEdit
-=======
 	set category = "IC.Game"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	set src in usr
 	var/mob/living/carbon/human/H = loc

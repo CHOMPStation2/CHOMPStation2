@@ -19,10 +19,5 @@
 
 /client/verb/ping()
 	set name = "Ping"
-<<<<<<< HEAD
-	set category = "OOC.Debug" //CHOMPEdit
-	winset(src, null, "command=.display_ping+[world.time+world.tick_lag*world.tick_usage/100]")
-=======
 	set category = "OOC.Debug"
 	winset(src, null, "command=.display_ping+[world.time+world.tick_lag*TICK_USAGE_REAL/100]")
->>>>>>> 4879a52633 (Server maint subsystem (#16518))

@@ -476,11 +476,7 @@
 /mob/living/silicon/pai/verb/toggle_gender_identity_vr()
 	set name = "Set Gender Identity"
 	set desc = "Sets the pronouns when examined and performing an emote."
-<<<<<<< HEAD
-	set category = "IC.Settings" //CHOMPEdit
-=======
 	set category = "IC.Settings"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	var/new_gender_identity = tgui_input_list(usr, "Please select a gender Identity:", "Set Gender Identity", list(FEMALE, MALE, NEUTER, PLURAL, HERM))
 	if(!new_gender_identity)
 		return 0
@@ -490,11 +486,7 @@
 /mob/living/silicon/pai/verb/pai_hide()
 	set name = "Hide"
 	set desc = "Allows to hide beneath tables or certain items. Toggled on or off."
-<<<<<<< HEAD
-	set category = "Abilities.General" //CHOMPEdit
-=======
 	set category = "Abilities.pAI"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	hide()
 	if(status_flags & HIDING)

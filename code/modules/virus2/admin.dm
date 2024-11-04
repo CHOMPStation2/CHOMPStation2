@@ -32,11 +32,7 @@
 /datum/admins/var/datum/virus2_editor/virus2_editor_datum = new
 /client/proc/virus2_editor()
 	set name = "Virus Editor"
-<<<<<<< HEAD
-	set category = "Admin.Events" //CHOMPEdit
-=======
 	set category = "Admin.Events"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	if(!holder || !check_rights(R_SPAWN)) return // spawn privileges to create viruses
 
 	holder.virus2_editor_datum.show_ui(src)

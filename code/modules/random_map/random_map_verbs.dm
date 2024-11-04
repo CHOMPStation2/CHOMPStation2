@@ -13,11 +13,7 @@
 		M.display_map(usr)
 
 /client/proc/delete_random_map()
-<<<<<<< HEAD
-	set category = "Debug.Events" //CHOMPEdit
-=======
 	set category = "Debug.Events"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Delete Random Map"
 	set desc = "Delete a random map."
 
@@ -34,11 +30,7 @@
 		qdel(M)
 
 /client/proc/create_random_map()
-<<<<<<< HEAD
-	set category = "Debug.Events" //CHOMPEdit
-=======
 	set category = "Debug.Events"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Create Random Map"
 	set desc = "Create a random map."
 
@@ -62,11 +54,7 @@
 		log_admin("[key_name(usr)] has created [M.name].")
 
 /client/proc/apply_random_map()
-<<<<<<< HEAD
-	set category = "Debug.Events" //CHOMPEdit
-=======
 	set category = "Debug.Events"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Apply Random Map"
 	set desc = "Apply a map to the game world."
 
@@ -91,11 +79,7 @@
 		M.apply_to_map()
 
 /client/proc/overlay_random_map()
-<<<<<<< HEAD
-	set category = "Debug.Events" //CHOMPEdit
-=======
 	set category = "Debug.Events"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Overlay Random Map"
 	set desc = "Apply a map to another map."
 

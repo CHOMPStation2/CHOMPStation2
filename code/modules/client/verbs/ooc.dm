@@ -1,11 +1,7 @@
 
 /client/verb/ooc(msg as text)
 	set name = "OOC"
-<<<<<<< HEAD
-	set category = "OOC.Chat" //CHOMPEdit
-=======
 	set category = "OOC.Chat"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(say_disabled)	//This is here to try to identify lag problems
 		to_chat(usr, span_warning("Speech is currently admin-disabled."))
@@ -88,11 +84,7 @@
 /client/verb/looc(msg as text)
 	set name = "LOOC"
 	set desc = "Local OOC, seen only by those in view."
-<<<<<<< HEAD
-	set category = "OOC.Chat" //CHOMPEdit
-=======
 	set category = "OOC.Chat"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(say_disabled)	//This is here to try to identify lag problems
 		to_chat(usr, span_danger("Speech is currently admin-disabled."))
@@ -206,11 +198,7 @@
 
 /client/verb/fit_viewport()
 	set name = "Fit Viewport"
-<<<<<<< HEAD
-	set category = "OOC.Client Settings" //CHOMPEdit
-=======
 	set category = "OOC.Client Settings"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set desc = "Fit the width of the map window to match the viewport"
 
 	// Fetch aspect ratio

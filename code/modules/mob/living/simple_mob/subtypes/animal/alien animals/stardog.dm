@@ -187,22 +187,14 @@
 /mob/living/simple_mob/vore/overmap/stardog/verb/eject()
 	set name = "Eject"
 	set desc = "Stop controlling the dog and return to your own body."
-<<<<<<< HEAD
-	set category = "Abilities.Stardog" //CHOMPEdit
-=======
 	set category = "Abilities.Stardog"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	control_node.eject()
 
 /mob/living/simple_mob/vore/overmap/stardog/verb/eat_space_weather()
 	set name = "Eat Space Weather"
 	set desc = "Eat carp or rocks!"
-<<<<<<< HEAD
-	set category = "Abilities.Stardog" //CHOMPEdit
-=======
 	set category = "Abilities.Stardog"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	var/obj/effect/overmap/event/E
 	var/nut = 0
@@ -305,11 +297,7 @@
 /mob/living/simple_mob/vore/overmap/stardog/verb/transition()	//Don't ask how it works. I don't know. I didn't think about it. I just thought it would be cool.
 	set name = "Transition"
 	set desc = "Attempt to go to the location you have arrived at, or return to space!"
-<<<<<<< HEAD
-	set category = "Abilities.Stardog" //CHOMPEdit
-=======
 	set category = "Abilities.Stardog"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	if(nutrition <= 500)
 		to_chat(src, span_warning("You're too hungry..."))
 		return
@@ -463,11 +451,7 @@
 /turf/simulated/floor/outdoors/fur/verb/pet()
 	set name = "Pet Fur"
 	set desc = "Pet the fur!"
-<<<<<<< HEAD
-	set category = "IC.Stardog" //CHOMPEdit
-=======
 	set category = "IC.Stardog"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set src in oview(1)
 
 	usr.visible_message(span_notice("\The [usr] pets \the [src]."), span_notice("You pet \the [src]."), runemessage = "pet pat...")
@@ -482,11 +466,7 @@
 /turf/simulated/floor/outdoors/fur/verb/emote_beyond(message as message)	//Now even the stars will know your sin.
 	set name = "Emote Beyond"
 	set desc = "Emote to those beyond the fur!"
-<<<<<<< HEAD
-	set category = "IC.Chat" //CHOMPEdit
-=======
 	set category = "IC.Chat"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set src in oview(1)
 
 	if(!isliving(usr))
@@ -1159,11 +1139,7 @@
 /obj/machinery/computer/ship/navigation/verb/emote_beyond(message as message)	//I could have put this into any other file but right here will do
 	set name = "Emote Beyond"
 	set desc = "Emote to those beyond the ship!"
-<<<<<<< HEAD
-	set category = "IC.Chat" //CHOMPEdit
-=======
 	set category = "IC.Chat"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set src in oview(7)
 
 	if(!isliving(usr))

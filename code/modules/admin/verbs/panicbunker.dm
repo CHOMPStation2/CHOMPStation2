@@ -1,9 +1,5 @@
 /client/proc/panicbunker()
-<<<<<<< HEAD
-	set category = "Server.Config" //CHOMPEdit
-=======
 	set category = "Server.Config"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Toggle Panic Bunker"
 
 	if(!check_rights(R_ADMIN))
@@ -21,11 +17,7 @@
 	feedback_add_details("admin_verb","PANIC") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/paranoia_logging()
-<<<<<<< HEAD
-	set category = "Server.Config" //CHOMPEdit
-=======
 	set category = "Server.Config"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "New Player Warnings"
 
 	if(!check_rights(R_ADMIN))
@@ -39,11 +31,7 @@
 	feedback_add_details("admin_verb","PARLOG") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/ip_reputation()
-<<<<<<< HEAD
-	set category = "Server.Config" //CHOMPEdit
-=======
 	set category = "Server.Config"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Toggle IP Rep Checks"
 
 	if(!check_rights(R_ADMIN))

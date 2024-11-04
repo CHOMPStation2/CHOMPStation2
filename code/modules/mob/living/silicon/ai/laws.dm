@@ -1,9 +1,5 @@
 /mob/living/silicon/ai/proc/show_laws_verb()
-<<<<<<< HEAD
-	set category = "AI.Commands" //CHOMPEdit
-=======
 	set category = "AI.Commands"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Show Laws"
 	src.show_laws()
 
@@ -26,10 +22,6 @@
 			R.show_laws()
 
 /mob/living/silicon/ai/proc/ai_checklaws()
-<<<<<<< HEAD
-	set category = "AI.Commands" //CHOMPEdit
-=======
 	set category = "AI.Commands"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "State Laws"
 	subsystem_law_manager()

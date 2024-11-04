@@ -41,11 +41,7 @@ Controlled by the player_tips subsystem under code/controllers/subsystems/player
 /mob/living/verb/request_automated_advice()
 	set name = "Request Automated Advice"
 	set desc = "Sends you advice from a list of possibilities. You can choose to request a specific topic."
-<<<<<<< HEAD
-	set category = "OOC.Game Settings" //CHOMPEdit
-=======
 	set category = "OOC.Game Settings"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	var/choice = tgui_input_list(src, "What topic would you like to receive advice on?", "Select Topic", list("none","general","gameplay","roleplay","lore","cancel"))
 	if(choice == "cancel")

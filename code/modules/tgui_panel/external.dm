@@ -10,11 +10,7 @@
  */
 /client/verb/fix_tgui_panel()
 	set name = "Fix chat"
-<<<<<<< HEAD
-	set category = "OOC.Debug" //CHOMPEdit
-=======
 	set category = "OOC.Debug"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	var/action
 	log_tgui(src, "Started fixing.", context = "verb/fix_tgui_panel")
 
@@ -48,11 +44,7 @@
 
 /client/verb/refresh_tgui()
 	set name = "Refresh TGUI"
-<<<<<<< HEAD
-	set category = "OOC.Debug" //CHOMPEdit
-=======
 	set category = "OOC.Debug"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	for(var/window_id in tgui_windows)
 		var/datum/tgui_window/window = tgui_windows[window_id]

@@ -31,11 +31,7 @@
 
 /mob/living/simple_mob/animal/verb/set_flavour_text()
 	set name = "Set Flavour Text"
-<<<<<<< HEAD
-	set category = "IC.Settings" //CHOMPEdit
-=======
 	set category = "IC.Settings"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set desc = "Set your flavour text."
 	set src = usr
 	var/new_flavour_text = sanitize((input("Please describe yourself.", "Flavour Text", flavor_text) as message|null), MAX_MESSAGE_LEN)

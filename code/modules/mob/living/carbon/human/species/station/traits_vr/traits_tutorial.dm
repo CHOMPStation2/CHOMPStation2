@@ -27,11 +27,7 @@ TGUI frontend path: tgui\packages\tgui\interfaces\TraitTutorial.tsx
 /mob/living/carbon/human/proc/trait_tutorial()
 	set name = "Explain Custom Traits"
 	set desc = "Click this verb to obtain a detailed tutorial on your selected traits. "
-<<<<<<< HEAD
-	set category = "Abilities.General" //CHOMPEdit
-=======
 	set category = "Abilities.General"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	var/datum/tgui_module/trait_tutorial_tgui/fancy_UI
 	if(!fancy_UI)
 		fancy_UI = new /datum/tgui_module/trait_tutorial_tgui/ //Preventing a bunch of instances being spawned all over the place. Hopefully

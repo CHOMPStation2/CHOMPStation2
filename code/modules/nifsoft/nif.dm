@@ -697,11 +697,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 /mob/living/carbon/human/proc/set_nif_examine()
 	set name = "NIF Appearance"
 	set desc = "If your NIF alters your appearance in some way, describe it here."
-<<<<<<< HEAD
-	set category = "OOC.Game Settings" //CHOMPEdit
-=======
 	set category = "OOC.Game Settings"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(!nif)
 		remove_verb(src, /mob/living/carbon/human/proc/set_nif_examine)

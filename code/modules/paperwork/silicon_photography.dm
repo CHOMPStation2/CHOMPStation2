@@ -95,11 +95,7 @@
 	injectmasteralbum(p)
 
 /mob/living/silicon/ai/proc/take_image()
-<<<<<<< HEAD
-	set category = "AI.Commands" //CHOMPEdit
-=======
 	set category = "AI.Commands"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Take Image"
 	set desc = "Takes an image"
 
@@ -107,11 +103,7 @@
 		aiCamera.toggle_camera_mode()
 
 /mob/living/silicon/ai/proc/view_images()
-<<<<<<< HEAD
-	set category = "AI.Commands" //CHOMPEdit
-=======
 	set category = "AI.Commands"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "View Images"
 	set desc = "View images"
 
@@ -119,11 +111,7 @@
 		aiCamera.viewpictures()
 
 /mob/living/silicon/ai/proc/delete_images()
-<<<<<<< HEAD
-	set category = "AI.Commands" //CHOMPEdit
-=======
 	set category = "AI.Commands"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Delete Image"
 	set desc = "Delete image"
 

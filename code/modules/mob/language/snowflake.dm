@@ -4,11 +4,7 @@
 /mob/proc/adjust_hive_range()
 	set name = "Adjust Special Language Range"
 	set desc = "Changes the range you will transmit your hive language to!"
-<<<<<<< HEAD
-	set category = "IC.Settings" //CHOMPEdit
-=======
 	set category = "IC.Settings"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	var/option = tgui_alert(src, "What range?", "Adjust special language range", list("Global","This Z level","Local", "Subtle"))
 

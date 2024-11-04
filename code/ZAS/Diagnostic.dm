@@ -1,9 +1,5 @@
 /client/proc/ZoneTick()
-<<<<<<< HEAD
-	set category = "Debug.Misc" //CHOMPEdit
-=======
 	set category = "Debug.Misc"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Process Atmos"
 	set desc = "Manually run a single tick of the air subsystem"
 
@@ -99,10 +95,6 @@
 			to_chat(mob, "both turfs can merge.")
 
 /client/proc/ZASSettings()
-<<<<<<< HEAD
-	set category = "Debug.Dangerous" //CHOMPEdit
-=======
 	set category = "Debug.Dangerous"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	vsc.SetDefault(mob)

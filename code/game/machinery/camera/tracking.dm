@@ -26,11 +26,7 @@
 
 
 /mob/living/silicon/ai/proc/ai_camera_list(var/camera in get_camera_list())
-<<<<<<< HEAD
-	set category = "AI.Camera Control" //CHOMPEdit
-=======
 	set category = "AI.Camera Control"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Show Camera List"
 
 	if(check_unable())
@@ -45,11 +41,7 @@
 	return
 
 /mob/living/silicon/ai/proc/ai_store_location(loc as text)
-<<<<<<< HEAD
-	set category = "AI.Camera Control" //CHOMPEdit
-=======
 	set category = "AI.Camera Control"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Store Camera Location"
 	set desc = "Stores your current camera location by the given name"
 
@@ -78,11 +70,7 @@
 	return sortList(stored_locations)
 
 /mob/living/silicon/ai/proc/ai_goto_location(loc in sorted_stored_locations())
-<<<<<<< HEAD
-	set category = "AI.Camera Control" //CHOMPEdit
-=======
 	set category = "AI.Camera Control"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Goto Camera Location"
 	set desc = "Returns to the selected camera location"
 
@@ -94,11 +82,7 @@
 	src.eyeobj.setLoc(L)
 
 /mob/living/silicon/ai/proc/ai_remove_location(loc in sorted_stored_locations())
-<<<<<<< HEAD
-	set category = "AI.Camera Control" //CHOMPEdit
-=======
 	set category = "AI.Camera Control"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Delete Camera Location"
 	set desc = "Deletes the selected camera location"
 
@@ -145,11 +129,7 @@
 	return targets
 
 /mob/living/silicon/ai/proc/ai_camera_track(var/target_name in trackable_mobs())
-<<<<<<< HEAD
-	set category = "AI.Camera Control" //CHOMPEdit
-=======
 	set category = "AI.Camera Control"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Follow With Camera"
 	set desc = "Select who you would like to track."
 

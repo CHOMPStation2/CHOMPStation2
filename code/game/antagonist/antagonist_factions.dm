@@ -1,10 +1,6 @@
 /mob/living/proc/convert_to_rev(mob/M as mob in oview(src))
 	set name = "Convert Bourgeoise"
-<<<<<<< HEAD
-	set category = "Abilities.Antag" //CHOMPEdit
-=======
 	set category = "Abilities.Antag"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	if(!M.mind)
 		return
 	convert_to_faction(M.mind, revs)
@@ -48,11 +44,7 @@
 
 /mob/living/proc/convert_to_loyalist(mob/M as mob in oview(src))
 	set name = "Convert Recidivist"
-<<<<<<< HEAD
-	set category = "Abilities.Antag" //CHOMPEdit
-=======
 	set category = "Abilities.Antag"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	if(!M.mind)
 		return
 	convert_to_faction(M.mind, loyalists)

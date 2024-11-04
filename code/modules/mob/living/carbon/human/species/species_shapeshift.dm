@@ -79,11 +79,7 @@ var/list/wrapped_species_by_ref = list()
 /mob/living/carbon/human/proc/shapeshifter_select_hair()
 
 	set name = "Select Hair"
-<<<<<<< HEAD
-	set category = "Abilities.Shapeshift" //CHOMPEdit
-=======
 	set category = "Abilities.Shapeshift"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(stat || world.time < last_special)
 		return
@@ -127,11 +123,7 @@ var/list/wrapped_species_by_ref = list()
 /mob/living/carbon/human/proc/shapeshifter_select_gender()
 
 	set name = "Select Gender"
-<<<<<<< HEAD
-	set category = "Abilities.Shapeshift" //CHOMPEdit
-=======
 	set category = "Abilities.Shapeshift"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(stat || world.time < last_special)
 		return
@@ -153,11 +145,7 @@ var/list/wrapped_species_by_ref = list()
 /mob/living/carbon/human/proc/shapeshifter_select_shape()
 
 	set name = "Select Body Shape"
-<<<<<<< HEAD
-	set category = "Abilities.Shapeshift" //CHOMPEdit
-=======
 	set category = "Abilities.Shapeshift"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(stat || world.time < last_special)
 		return
@@ -184,11 +172,7 @@ var/list/wrapped_species_by_ref = list()
 /mob/living/carbon/human/proc/shapeshifter_select_colour()
 
 	set name = "Select Body Colour"
-<<<<<<< HEAD
-	set category = "Abilities.Shapeshift" //CHOMPEdit
-=======
 	set category = "Abilities.Shapeshift"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(stat || world.time < last_special)
 		return
@@ -226,11 +210,7 @@ var/list/wrapped_species_by_ref = list()
 /mob/living/carbon/human/proc/shapeshifter_select_hair_colors()
 
 	set name = "Select Hair Colors"
-<<<<<<< HEAD
-	set category = "Abilities.Shapeshift" //CHOMPEdit
-=======
 	set category = "Abilities.Shapeshift"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(stat || world.time < last_special)
 		return
@@ -329,11 +309,7 @@ var/list/wrapped_species_by_ref = list()
 /mob/living/carbon/human/proc/shapeshifter_select_eye_colour()
 
 	set name = "Select Eye Color"
-<<<<<<< HEAD
-	set category = "Abilities.Shapeshift" //CHOMPEdit
-=======
 	set category = "Abilities.Shapeshift"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(stat || world.time < last_special)
 		return

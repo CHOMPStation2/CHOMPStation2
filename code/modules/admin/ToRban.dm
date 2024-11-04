@@ -45,11 +45,7 @@
 
 /client/proc/ToRban(task in list("update","toggle","show","remove","remove all","find"))
 	set name = "ToRban"
-<<<<<<< HEAD
-	set category = "Server.Config" //CHOMPEdit
-=======
 	set category = "Server.Config"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	if(!holder)	return
 	switch(task)
 		if("update")

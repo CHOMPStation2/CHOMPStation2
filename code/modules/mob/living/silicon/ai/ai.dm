@@ -350,11 +350,7 @@ var/list/ai_verbs_default = list(
 		update_use_power(USE_POWER_ACTIVE)
 
 /mob/living/silicon/ai/proc/pick_icon()
-<<<<<<< HEAD
-	set category = "AI.Settings" //CHOMPEdit
-=======
 	set category = "AI.Settings"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Set AI Core Display"
 	if(stat || aiRestorePowerRoutine)
 		return
@@ -366,11 +362,7 @@ var/list/ai_verbs_default = list(
 
 /mob/living/silicon/ai/var/message_cooldown = 0
 /mob/living/silicon/ai/proc/ai_announcement()
-<<<<<<< HEAD
-	set category = "AI.Station Commands" //CHOMPEdit
-=======
 	set category = "AI.Station Commands"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Make Station Announcement"
 	if(check_unable(AI_CHECK_WIRELESS | AI_CHECK_RADIO))
 		return
@@ -391,11 +383,7 @@ var/list/ai_verbs_default = list(
 		message_cooldown = 0
 
 /mob/living/silicon/ai/proc/ai_call_shuttle()
-<<<<<<< HEAD
-	set category = "AI.Station Commands" //CHOMPEdit
-=======
 	set category = "AI.Station Commands"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Call Emergency Shuttle"
 	if(check_unable(AI_CHECK_WIRELESS))
 		return
@@ -416,11 +404,7 @@ var/list/ai_verbs_default = list(
 		post_status(src, "shuttle", user = src)
 
 /mob/living/silicon/ai/proc/ai_recall_shuttle()
-<<<<<<< HEAD
-	set category = "AI.Station Commands" //CHOMPEdit
-=======
 	set category = "AI.Station Commands"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Recall Emergency Shuttle"
 
 	if(check_unable(AI_CHECK_WIRELESS))
@@ -436,11 +420,7 @@ var/list/ai_verbs_default = list(
 /mob/living/silicon/ai/var/emergency_message_cooldown = 0
 
 /mob/living/silicon/ai/proc/ai_emergency_message()
-<<<<<<< HEAD
-	set category = "AI.Station Commands" //CHOMPEdit
-=======
 	set category = "AI.Station Commands"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Send Emergency Message"
 
 	if(check_unable(AI_CHECK_WIRELESS))
@@ -561,11 +541,7 @@ var/list/ai_verbs_default = list(
 	return 1
 
 /mob/living/silicon/ai/cancel_camera()
-<<<<<<< HEAD
-	set category = "AI.Camera Control" //CHOMPEdit
-=======
 	set category = "AI.Camera Control"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Cancel Camera View"
 	view_core()
 
@@ -588,11 +564,7 @@ var/list/ai_verbs_default = list(
 	return cameralist
 
 /mob/living/silicon/ai/proc/ai_network_change(var/network in get_camera_network_list())
-<<<<<<< HEAD
-	set category = "AI.Commands" //CHOMPEdit
-=======
 	set category = "AI.Camera Control"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Jump To Network"
 	unset_machine()
 
@@ -615,11 +587,7 @@ var/list/ai_verbs_default = list(
 //End of code by Mord_Sith
 
 /mob/living/silicon/ai/proc/ai_statuschange()
-<<<<<<< HEAD
-	set category = "AI.Settings" //CHOMPEdit
-=======
 	set category = "AI.Settings"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "AI Status"
 
 	if(check_unable(AI_CHECK_WIRELESS))
@@ -632,11 +600,7 @@ var/list/ai_verbs_default = list(
 /mob/living/silicon/ai/proc/ai_hologram_change()
 	set name = "Change Hologram"
 	set desc = "Change the default hologram available to AI to something else."
-<<<<<<< HEAD
-	set category = "AI.Settings" //CHOMPEdit
-=======
 	set category = "AI.Settings"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(check_unable())
 		return
@@ -773,11 +737,7 @@ var/list/ai_verbs_default = list(
 /mob/living/silicon/ai/proc/toggle_camera_light()
 	set name = "Toggle Camera Light"
 	set desc = "Toggles the light on the camera the AI is looking through."
-<<<<<<< HEAD
-	set category = "AI.Camera Control" //CHOMPEdit
-=======
 	set category = "AI.Camera Control"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	if(check_unable())
 		return
 
@@ -851,11 +811,7 @@ var/list/ai_verbs_default = list(
 /mob/living/silicon/ai/proc/control_integrated_radio()
 	set name = "Radio Settings"
 	set desc = "Allows you to change settings of your radio."
-<<<<<<< HEAD
-	set category = "AI.Settings" //CHOMPEdit
-=======
 	set category = "AI.Settings"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(check_unable(AI_CHECK_RADIO))
 		return
@@ -866,11 +822,7 @@ var/list/ai_verbs_default = list(
 
 /mob/living/silicon/ai/proc/sensor_mode()
 	set name = "Toggle Sensor Augmentation" //VOREStation Add
-<<<<<<< HEAD
-	set category = "AI.Settings" //CHOMPEdit
-=======
 	set category = "AI.Settings"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set desc = "Augment visual feed with internal sensor overlays"
 	sensor_type = !sensor_type //VOREStation Add
 	to_chat(usr, "You [sensor_type ? "enable" : "disable"] your sensors.") //VOREStation Add
@@ -878,11 +830,7 @@ var/list/ai_verbs_default = list(
 
 /mob/living/silicon/ai/proc/toggle_hologram_movement()
 	set name = "Toggle Hologram Movement"
-<<<<<<< HEAD
-	set category = "AI.Settings" //CHOMPEdit
-=======
 	set category = "AI.Settings"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set desc = "Toggles hologram movement based on moving with your virtual eye."
 
 	hologram_follow = !hologram_follow
@@ -974,11 +922,7 @@ var/list/ai_verbs_default = list(
 // Pass lying down or getting up to our pet human, if we're in a rig.
 /mob/living/silicon/ai/lay_down()
 	set name = "Rest"
-<<<<<<< HEAD
-	set category = "IC.Game" //CHOMPEdit
-=======
 	set category = "IC.Game"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	resting = 0
 	var/obj/item/rig/rig = src.get_rig()
@@ -1061,20 +1005,12 @@ var/list/ai_verbs_default = list(
 
 /mob/living/silicon/ai/proc/toggle_multicam_verb()
 	set name = "Toggle Multicam"
-<<<<<<< HEAD
-	set category = "AI.Camera Control" //CHOMPEdit
-=======
 	set category = "AI.Camera Control"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	toggle_multicam()
 
 /mob/living/silicon/ai/proc/add_multicam_verb()
 	set name = "Add Multicam Viewport"
-<<<<<<< HEAD
-	set category = "AI.Camera Control" //CHOMPEdit
-=======
 	set category = "AI.Camera Control"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	drop_new_multicam()
 
 //Special subtype kept around for global announcements

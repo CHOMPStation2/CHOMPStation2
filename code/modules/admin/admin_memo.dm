@@ -4,11 +4,7 @@
 //switch verb so we don't spam up the verb lists with like, 3 verbs for this feature.
 /client/proc/admin_memo(task in list("write","show","delete"))
 	set name = "Memo"
-<<<<<<< HEAD
-	set category = "Server.Admin" //CHOMPEdit
-=======
 	set category = "Server.Admin"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	#ifndef ENABLE_MEMOS
 	return
 	#endif

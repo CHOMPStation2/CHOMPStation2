@@ -1,11 +1,7 @@
 //Verbs after this point.
 /mob/living/carbon/alien/diona/proc/merge()
 
-<<<<<<< HEAD
-	set category = "Abilities.Diona" //CHOMPEdit
-=======
 	set category = "Abilities.Diona"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Merge with gestalt"
 	set desc = "Merge with another diona."
 
@@ -45,11 +41,7 @@
 
 /mob/living/carbon/alien/diona/proc/split()
 
-<<<<<<< HEAD
-	set category = "Abilities.Diona" //CHOMPEdit
-=======
 	set category = "Abilities.Diona"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Split from gestalt"
 	set desc = "Split away from your gestalt as a lone nymph."
 

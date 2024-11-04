@@ -41,11 +41,7 @@
 
 /mob/living/silicon/ai/verb/holo_nom()
 	set name = "Hardlight Nom"
-<<<<<<< HEAD
-	set category = "AI.Vore" //CHOMPEdit
-=======
 	set category = "AI.Vore"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set desc = "Wrap up a person in hardlight holograms."
 
 	// Wrong state
@@ -84,11 +80,7 @@
 //I basically have to do this, you know?
 /mob/living/silicon/ai/examinate(atom/A as mob|obj|turf in view(eyeobj))
 	set name = "Examine"
-<<<<<<< HEAD
-	set category = "IC.Game" //CHOMPEdit
-=======
 	set category = "IC.Game"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	A.examine(src)
 */

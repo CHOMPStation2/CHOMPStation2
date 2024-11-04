@@ -41,11 +41,7 @@
 /mob/living/carbon/human/proc/prommie_blobform()
 	set name = "Toggle Blobform"
 	set desc = "Switch between amorphous and humanoid forms."
-<<<<<<< HEAD
-	set category = "Abilities.Promethean" //CHOMPEdit
-=======
 	set category = "Abilities.Promethean"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set hidden = FALSE
 
 	var/atom/movable/to_locate = temporary_form || src

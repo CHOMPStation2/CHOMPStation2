@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-#define ASSET_CROSS_ROUND_CACHE_DIRECTORY "cache/assets" //CHOMPEdit, moved there as we clear the tmp folder like TG does
-=======
 #define ASSET_CROSS_ROUND_CACHE_DIRECTORY "cache/assets"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 //These datums are used to populate the asset cache, the proc "register()" does this.
 //Place any asset datums you create in asset_list_items.dm

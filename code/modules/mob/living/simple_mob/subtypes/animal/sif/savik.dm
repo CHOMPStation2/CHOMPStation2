@@ -80,11 +80,7 @@
 /mob/living/simple_mob/animal/sif/savik/verb/berserk()
 	set name = "Berserk"
 	set desc = "Enrage and become vastly stronger for a period of time, however you will be weaker afterwards."
-<<<<<<< HEAD
-	set category = "Abilities.Savik" //CHOMPEdit
-=======
 	set category = "Abilities.Savik"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	add_modifier(/datum/modifier/berserk, 30 SECONDS)
 
