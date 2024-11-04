@@ -18,7 +18,7 @@ SUBSYSTEM_DEF(server_maint)
 /*/datum/controller/subsystem/server_maint/PreInit()
 	world.hub_password = "" *///quickly! before the hubbies see us.
 
-/datum/controller/subsystem/server_maint/Initialize()
+/datum/controller/subsystem/server_maint/Initialize() // CHOMPEdit
 	if (fexists("tmp/"))
 		fdel("tmp/")
 	//if (CONFIG_GET(flag/hub))
@@ -91,7 +91,7 @@ SUBSYSTEM_DEF(server_maint)
 	if (fexists("tmp/"))
 		fdel("tmp/")
 	//kick_clients_in_lobby(span_boldannounce("The round came to an end with you in the lobby."), TRUE) //second parameter ensures only afk clients are kicked
-	var/server = null//CONFIG_GET(string/server) todo properly later once config controller is updated
+	var/server = CONFIG_GET(string/server)
 	for(var/thing in GLOB.clients)
 		if(!thing)
 			continue

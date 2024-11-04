@@ -404,7 +404,7 @@
 
 /mob/living/simple_mob/proc/animal_mount(var/mob/living/M in living_mobs(1))
 	set name = "Animal Mount/Dismount"
-	set category = "Abilities.Mob" //CHOMPEdit
+	set category = "Abilities.Mob"
 	set desc = "Let people ride on you."
 
 	if(LAZYLEN(buckled_mobs))
@@ -439,7 +439,7 @@
 
 /mob/living/simple_mob/proc/leap()
 	set name = "Pounce Target"
-	set category = "Abilities.Mob" //CHOMPEdit
+	set category = "Abilities.Mob"
 	set desc = "Select a target to pounce at."
 
 	if(last_special > world.time)

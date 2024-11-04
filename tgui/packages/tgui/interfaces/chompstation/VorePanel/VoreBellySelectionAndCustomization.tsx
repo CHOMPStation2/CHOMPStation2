@@ -1,6 +1,7 @@
 import { BooleanLike } from 'common/react';
 import { useBackend } from 'tgui/backend';
-import { Box, Divider, Flex, Icon, Section, Tabs } from 'tgui/components';
+import { Box, Divider, Icon, Section, Tabs } from 'tgui/components';
+import { Stack } from 'tgui-core/components';
 
 import { digestModeToColor } from './constants';
 import { bellyData, hostMob, selectedData } from './types';
@@ -9,7 +10,6 @@ import { VoreSelectedBelly } from './VoreSelectedBelly';
 export const VoreBellySelectionAndCustomization = (props: {
   our_bellies: bellyData[];
   selected: selectedData | null;
-  unsaved_changes: BooleanLike;
   show_pictures: BooleanLike;
   host_mobtype: hostMob;
   icon_overflow: BooleanLike;
@@ -21,16 +21,15 @@ export const VoreBellySelectionAndCustomization = (props: {
     our_bellies,
     selected,
     show_pictures,
-    unsaved_changes,
     host_mobtype,
     icon_overflow,
     vore_words,
   } = props;
 
   return (
-    <Flex height={unsaved_changes ? '78%' : '83%'}>
-      <Flex.Item shrink>
-        <Section title="My Bellies" scrollable fill width="200px">
+    <Stack fill>
+      <Stack.Item shrink basis="20%">
+        <Section title="My Bellies" scrollable fill>
           <Tabs vertical>
             <Tabs.Tab onClick={() => act('newbelly')}>
               New
@@ -45,9 +44,9 @@ export const VoreBellySelectionAndCustomization = (props: {
               <Icon name="file-import" ml={0.5} />
             </Tabs.Tab>
             <Divider />
-            {our_bellies.map((belly, i) => (
+            {our_bellies.map((belly) => (
               <Tabs.Tab
-                key={i}
+                key={belly.name}
                 selected={!!belly.selected}
                 textColor={digestModeToColor[belly.digest_mode]}
                 onClick={() => act('bellypick', { bellypick: belly.ref })}
@@ -56,7 +55,7 @@ export const VoreBellySelectionAndCustomization = (props: {
                   inline
                   textColor={
                     (belly.selected && digestModeToColor[belly.digest_mode]) ||
-                    undefined
+                    null
                   }
                 >
                   {belly.name} ({belly.contents})
@@ -65,10 +64,10 @@ export const VoreBellySelectionAndCustomization = (props: {
             ))}
           </Tabs>
         </Section>
-      </Flex.Item>
-      <Flex.Item grow>
+      </Stack.Item>
+      <Stack.Item grow>
         {selected && (
-          <Section scrollable fill title={selected.belly_name}>
+          <Section title={selected.belly_name} fill scrollable>
             <VoreSelectedBelly
               vore_words={vore_words}
               belly={selected}
@@ -78,7 +77,7 @@ export const VoreBellySelectionAndCustomization = (props: {
             />
           </Section>
         )}
-      </Flex.Item>
-    </Flex>
+      </Stack.Item>
+    </Stack>
   );
 };
