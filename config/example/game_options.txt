@@ -23,7 +23,11 @@ ORGAN_HEALTH_MULTIPLIER 1.0
 
 ## multiplier which influences how fast organs regenerate naturally
 ## 1.0 means normal, 0.5 means half
+<<<<<<< HEAD
 ORGAN_REGENERATION_MULTIPLIER 0.75
+=======
+ORGAN_REGENERATION_MULTIPLIER 0.5
+>>>>>>> 92c6fc1e5c (fix regeneration multipliers (#16561))
 
 ### REVIVAL ###
 
