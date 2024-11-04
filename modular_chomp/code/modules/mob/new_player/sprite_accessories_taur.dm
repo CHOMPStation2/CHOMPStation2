@@ -334,3 +334,18 @@
 	can_loaf = TRUE
 	icon_loaf = 'icons/mob/vore/taurs_ch_loaf.dmi'
 	loaf_offset = 5
+
+/datum/sprite_accessory/tail/taur/longtail
+	//hide body parts list() makes it so no limbs are hidden
+	//made its own child so we can reuse this
+	offset_x = -16
+	hide_body_parts = list()
+
+
+/datum/sprite_accessory/tail/taur/longtail/dragonmaidtail_ch
+	name = "Dragon maid Tail"
+	icon = 'modular_chomp/icons/mob/vore/Tails64x32.dmi'
+	icon_state = "Dragon_maid_tail"
+	fullness_icons = 3
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
