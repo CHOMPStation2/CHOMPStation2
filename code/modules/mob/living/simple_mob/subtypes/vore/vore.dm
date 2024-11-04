@@ -79,11 +79,7 @@
 /mob/living/simple_mob/proc/set_name()
 	set name = "Set Name"
 	set desc = "Sets your mobs name. You only get to do this once."
-<<<<<<< HEAD
-	set category = "Abilities.Settings" //CHOMPEdit
-=======
 	set category = "Abilities.Settings"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	if(limit_renames && nameset)
 		to_chat(src, span_userdanger("You've already set your name. Ask an admin to toggle \"nameset\" to 0 if you really must."))
 		return
@@ -97,11 +93,7 @@
 /mob/living/simple_mob/proc/set_desc()
 	set name = "Set Description"
 	set desc = "Set your description."
-<<<<<<< HEAD
-	set category = "Abilities.Settings" //CHOMPEdit
-=======
 	set category = "Abilities.Settings"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	var/newdesc
 	newdesc = sanitizeSafe(tgui_input_text(src,"Set your description. Max 4096 chars.", "Description set","", prevent_enter = TRUE), MAX_MESSAGE_LEN)
 	if(newdesc)

@@ -142,11 +142,7 @@
 /mob/living/simple_mob/vore/leopardmander/exotic/proc/toggle_glow()
 	set name = "Toggle Glow"
 	set desc = "Switch between glowing and not glowing."
-<<<<<<< HEAD
-	set category = "Abilities.Leopardmander" //CHOMPEdit
-=======
 	set category = "Abilities.Leopardmander"
->>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	glow_toggle = !glow_toggle
 
