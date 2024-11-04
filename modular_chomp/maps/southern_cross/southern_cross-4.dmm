@@ -2285,11 +2285,6 @@
 /obj/machinery/light/small,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/foreport)
-"bRz" = (
-/obj/effect/floor_decal/corner/orange/diagonal,
-/obj/effect/landmark/carved_pumpkin_spawn,
-/turf/simulated/floor/tiled,
-/area/crew_quarters/cafeteria)
 "bRW" = (
 /obj/item/stool/padded,
 /obj/item/storage/toolbox/mechanical,
@@ -7628,13 +7623,6 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
-"fAe" = (
-/obj/machinery/floor_light{
-	anchored = 1
-	},
-/obj/effect/landmark/carved_pumpkin_spawn,
-/turf/simulated/floor/tiled,
-/area/crew_quarters/cafeteria)
 "fAn" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -11307,17 +11295,6 @@
 /obj/structure/fitness/punchingbag,
 /turf/simulated/floor/boxing/gym,
 /area/crew_quarters/seconddeck/gym)
-"iCy" = (
-/obj/effect/floor_decal/corner/orange/diagonal,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/effect/landmark/carved_pumpkin_spawn,
-/turf/simulated/floor/tiled,
-/area/crew_quarters/cafeteria)
 "iCJ" = (
 /obj/machinery/computer/operating{
 	dir = 4
@@ -12183,23 +12160,6 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/bridge)
-"jsX" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/floor_light{
-	anchored = 1
-	},
-/obj/item/flame/candle/black{
-	lit = 1;
-	pixel_x = 8;
-	pixel_y = -3
-	},
-/obj/item/flame/candle/everburn,
-/turf/simulated/floor/tiled,
-/area/crew_quarters/cafeteria)
 "jtv" = (
 /obj/structure/table/wooden_reinforced,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -13291,13 +13251,6 @@
 /obj/item/clothing/under/swimsuit/striped,
 /turf/simulated/floor/tiled,
 /area/maintenance/thirddeck/aftport)
-"kmp" = (
-/obj/machinery/floor_light{
-	anchored = 1
-	},
-/obj/structure/candybowl,
-/turf/simulated/floor/tiled,
-/area/crew_quarters/cafeteria)
 "knK" = (
 /obj/machinery/power/apc{
 	dir = 8;
@@ -16381,7 +16334,6 @@
 /obj/effect/floor_decal/corner_steel_grid{
 	dir = 6
 	},
-/obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/cafeteria)
 "mXH" = (
@@ -17821,8 +17773,6 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
-/obj/effect/spider/stickyweb,
-/obj/item/toy/plushie/spider,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cafeteria)
 "nWq" = (
@@ -18305,18 +18255,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/solars/aftstarboardsolar)
-"olM" = (
-/obj/machinery/floor_light{
-	anchored = 1
-	},
-/obj/item/flame/candle/black{
-	lit = 1;
-	pixel_x = -8;
-	pixel_y = -6
-	},
-/obj/item/flame/candle/everburn,
-/turf/simulated/floor/tiled,
-/area/crew_quarters/cafeteria)
 "omc" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
@@ -18553,16 +18491,6 @@
 	},
 /turf/simulated/floor/reinforced/turfpack/airless,
 /area/thirddeck/roof)
-"ouj" = (
-/obj/machinery/floor_light{
-	anchored = 1
-	},
-/obj/structure/boxpile{
-	pixel_x = 15;
-	pixel_y = 15
-	},
-/turf/simulated/floor/tiled,
-/area/crew_quarters/cafeteria)
 "ouE" = (
 /obj/structure/sign/warning/high_voltage{
 	pixel_y = 32
@@ -24262,7 +24190,6 @@
 	dir = 1
 	},
 /obj/machinery/vr_sleeper,
-/obj/item/toy/plushie/spider,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/crew_quarters/thirddeck/vrroom)
 "sUG" = (
@@ -24734,12 +24661,6 @@
 	name = "A warning sign which reads 'UNDER CONSTRUCTION'.";
 	pixel_x = -32
 	},
-/obj/item/flame/candle/black{
-	lit = 1;
-	pixel_y = -10;
-	pixel_x = 7
-	},
-/obj/item/flame/candle/everburn,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cafeteria)
 "tia" = (
@@ -26189,7 +26110,6 @@
 	name = "Station Intercom (General)";
 	pixel_y = -22
 	},
-/obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cafeteria)
 "usi" = (
@@ -26197,7 +26117,6 @@
 	pixel_x = 30
 	},
 /obj/effect/floor_decal/corner/orange/diagonal,
-/obj/item/flame/candle/everburn,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cafeteria)
 "usq" = (
@@ -62568,7 +62487,7 @@ fDV
 wVH
 odE
 thN
-iCy
+odE
 tSO
 nVn
 wzy
@@ -62824,10 +62743,10 @@ rTI
 rTI
 rTI
 oYU
-fAe
 dSS
-ouj
-jsX
+dSS
+dSS
+asO
 urW
 wzy
 mFN
@@ -63084,7 +63003,7 @@ smF
 bJT
 dSS
 dSS
-kmp
+dSS
 asO
 uqx
 wzy
@@ -63340,11 +63259,11 @@ gZM
 sxE
 xvg
 wTp
-olM
+dSS
 dSS
 dSS
 asO
-bRz
+rTI
 xVf
 wxU
 dQi
@@ -63599,7 +63518,7 @@ fKC
 xvg
 btH
 sVX
-bRz
+rTI
 ttw
 tTr
 usi
