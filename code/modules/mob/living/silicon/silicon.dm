@@ -260,14 +260,14 @@
 /mob/living/silicon/verb/pose()
 	set name = "Set Pose"
 	set desc = "Sets a description which will be shown when someone examines you."
-	set category = "IC.Settings" //CHOMPEdit
+	set category = "IC.Settings"
 
 	pose =  strip_html_simple(tgui_input_text(usr, "This is [src]. It is...", "Pose", null))
 
 /mob/living/silicon/verb/set_flavor()
 	set name = "Set Flavour Text"
 	set desc = "Sets an extended description of your character's features."
-	set category = "IC.Settings" //CHOMPEdit
+	set category = "IC.Settings"
 
 	var/new_flavortext = strip_html_simple(tgui_input_text(usr, "Please enter your new flavour text.", "Flavour text", flavor_text, multiline = TRUE))
 	if(new_flavortext)

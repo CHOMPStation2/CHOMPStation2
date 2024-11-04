@@ -442,7 +442,7 @@
 
 /mob/living/silicon/robot/verb/namepick()
 	set name = "Pick Name"
-	set category = "Abilities.Settings" //ChompEDIT - TGPanel
+	set category = "Abilities.Settings"
 
 	if(custom_name)
 		to_chat(usr, "You can't pick another custom name. [isshell(src) ? "" : "Go ask for a name change."]")
@@ -460,7 +460,7 @@
 
 /mob/living/silicon/robot/verb/extra_customization()
 	set name = "Customize Appearance"
-	set category = "Abilities.Settings" //ChompEDIT - TGPanel
+	set category = "Abilities.Settings"
 	set desc = "Customize your appearance (assuming your chosen sprite allows)."
 
 	if(!sprite_datum || !sprite_datum.has_extra_customization)
@@ -515,7 +515,7 @@
 // function to toggle VTEC once installed
 /mob/living/silicon/robot/proc/toggle_vtec()
 	set name = "Toggle VTEC"
-	set category = "Abilities.Silicon" //CHOMPEdit
+	set category = "Abilities.Silicon"
 	vtec_active = !vtec_active
 	hud_used.toggle_vtec_control()
 	to_chat(src, span_filter_notice("VTEC module [vtec_active  ? "enabled" : "disabled"]."))
@@ -817,7 +817,7 @@
 
 /mob/living/silicon/robot/proc/ColorMate()
 	set name = "Recolour Module"
-	set category = "Abilities.Settings" //ChompEDIT - TGPanel
+	set category = "Abilities.Settings"
 	set desc = "Allows to recolour once."
 
 	if(!has_recoloured)
@@ -1429,7 +1429,7 @@
 /mob/living/silicon/robot/verb/rest_style()
 	set name = "Switch Rest Style"
 	set desc = "Select your resting pose."
-	set category = "IC.Settings" //CHOMPEdit
+	set category = "IC.Settings"
 
 	if(!sprite_datum || !sprite_datum.has_rest_sprites || sprite_datum.rest_sprite_options.len < 1)
 		to_chat(src, span_notice("Your current appearance doesn't have any resting styles!"))
@@ -1447,7 +1447,7 @@
 
 /mob/living/silicon/robot/verb/robot_nom(var/mob/living/T in living_mobs_in_view(1)) //CHOMPEdit
 	set name = "Robot Nom"
-	set category = "Abilities.Vore" //CHOMPEdit
+	set category = "Abilities.Vore"
 	set desc = "Allows you to eat someone."
 
 	if (stat != CONSCIOUS)
@@ -1521,7 +1521,7 @@
 
 /mob/living/silicon/robot/proc/robot_mount(var/mob/living/M in living_mobs(1))
 	set name = "Robot Mount/Dismount"
-	set category = "Abilities.General" //CHOMPEdit
+	set category = "Abilities.General"
 	set desc = "Let people ride on you."
 
 	if(LAZYLEN(buckled_mobs))

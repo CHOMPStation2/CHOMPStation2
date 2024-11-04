@@ -103,7 +103,7 @@
 	src.eyeobj.setLoc(src)
 
 /mob/living/silicon/ai/proc/toggle_acceleration()
-	set category = "AI.Settings" //CHOMPEdit
+	set category = "AI.Settings"
 	set name = "Toggle Camera Acceleration"
 
 	if(!eyeobj)

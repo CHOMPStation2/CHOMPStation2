@@ -1,5 +1,5 @@
 /client/verb/export_chat()
-	set category = "OOC.Chat" //CHOMPEdit
+	set category = "OOC.Chat"
 	set name = "Export Chatlog"
 	set desc = "Allows to trigger the chat export"
 

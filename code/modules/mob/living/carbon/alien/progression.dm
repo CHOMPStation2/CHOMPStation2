@@ -2,7 +2,7 @@
 
 	set name = "Evolve"
 	set desc = "Evolve into your adult form."
-	set category = "Abilities.General" //CHOMPEdit
+	set category = "Abilities.General"
 
 	if(stat != CONSCIOUS)
 		return
