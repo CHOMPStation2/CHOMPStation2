@@ -342,7 +342,7 @@
 	hide_body_parts = list()
 
 
-/datum/sprite_accessory/tail/taur/longtail/Dragonmaidtail_ch
+/datum/sprite_accessory/tail/taur/longtail/dragonmaidtail_ch
 	name = "Dragon maid Tail"
 	icon = 'modular_chomp/icons/mob/vore/Tails64x32.dmi'
 	icon_state = "Dragon_maid_tail"

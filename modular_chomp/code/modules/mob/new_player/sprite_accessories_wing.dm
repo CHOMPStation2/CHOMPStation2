@@ -250,7 +250,7 @@
 	color_blend_mode = ICON_MULTIPLY
 	wing_offset = 16
 
-/datum/sprite_accessory/wing/Large_Harpy_wings_Ch
+/datum/sprite_accessory/wing/large_harpy_wings_ch
 	name = "Harpy arm-wings(Large)"
 	desc = ""
 	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/wings64.dmi'
