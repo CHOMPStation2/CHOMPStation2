@@ -93,6 +93,9 @@
 /datum/ai_holder/simple_mob/merc/guard_limit
 	guard_limit = TRUE
 
+/datum/ai_holder/simple_mob/merc/guard_limit
+	guard_limit = TRUE
+
 /datum/ai_holder/simple_mob/merc/ranged
 	pointblank = TRUE		// They get close? Just shoot 'em!
 	firing_lanes = TRUE		// But not your buddies!

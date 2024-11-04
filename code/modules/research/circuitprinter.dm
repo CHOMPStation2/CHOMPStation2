@@ -178,6 +178,7 @@ using metal and glass, it uses glass and reagents (usually sulphuric acid).
 	if(queue.len >= index)
 		queue.Cut(index, index + 1)
 		return
+<<<<<<< HEAD
 
 //CHOMPAdd Start, Locked Designs
 /obj/machinery/r_n_d/circuit_imprinter/proc/allowedToBuild(var/datum/design/D)
@@ -186,6 +187,8 @@ using metal and glass, it uses glass and reagents (usually sulphuric acid).
 		return 0
 	return 1
 //CHOMPAdd End, Locked Designs
+=======
+>>>>>>> 2b4b12633e (Merge pull request #16563 from VOREStation/master)
 
 /obj/machinery/r_n_d/circuit_imprinter/proc/canBuild(var/datum/design/D)
 	for(var/M in D.materials)

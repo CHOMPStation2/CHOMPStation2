@@ -201,6 +201,7 @@
 	if(queue.len >= index)
 		queue.Cut(index, index + 1)
 		return
+<<<<<<< HEAD
 
 //CHOMPAdd Start, Locked Designs
 /obj/machinery/r_n_d/protolathe/proc/allowedToBuild(var/datum/design/D)
@@ -209,6 +210,8 @@
 		return 0
 	return 1
 //CHOMPAdd End, Locked Designs
+=======
+>>>>>>> 2b4b12633e (Merge pull request #16563 from VOREStation/master)
 
 /obj/machinery/r_n_d/protolathe/proc/canBuild(var/datum/design/D)
 	for(var/M in D.materials)

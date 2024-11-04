@@ -65,18 +65,30 @@ class HubStorageBackend {
   }
 
   async get(key) {
+<<<<<<< HEAD
     const value = await window.hubStorage.getItem('chomp-' + key); // CHOMPEdit
+=======
+    const value = await window.hubStorage.getItem('virgo-' + key);
+>>>>>>> 2b4b12633e (Merge pull request #16563 from VOREStation/master)
     if (typeof value === 'string') {
       return JSON.parse(value);
     }
   }
 
   set(key, value) {
+<<<<<<< HEAD
     window.hubStorage.setItem('chomp-' + key, JSON.stringify(value)); // CHOMPEdit
   }
 
   remove(key) {
     window.hubStorage.removeItem('chomp-' + key); // CHOMPEdit
+=======
+    window.hubStorage.setItem('virgo-' + key, JSON.stringify(value));
+  }
+
+  remove(key) {
+    window.hubStorage.removeItem('virgo-' + key);
+>>>>>>> 2b4b12633e (Merge pull request #16563 from VOREStation/master)
   }
 
   clear() {
