@@ -116,8 +116,12 @@ var/global/list/runlevel_flags = list(RUNLEVEL_LOBBY, RUNLEVEL_SETUP, RUNLEVEL_G
 // Subsystem init_order, from highest priority to lowest priority
 // Subsystems shutdown in the reverse of the order they initialize in
 // The numbers just define the ordering, they are meaningless otherwise.
+<<<<<<< HEAD
 #define INIT_ORDER_TITLE			99	//CHOMPEdit
 #define INIT_ORDER_SERVER_MAINT		93 //CHOMPEdit
+=======
+#define INIT_ORDER_SERVER_MAINT		93
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 #define INIT_ORDER_WEBHOOKS			50
 #define INIT_ORDER_DBCORE			41	//CHOMPEdit
 #define INIT_ORDER_SQLITE			40
@@ -171,7 +175,11 @@ var/global/list/runlevel_flags = list(RUNLEVEL_LOBBY, RUNLEVEL_SETUP, RUNLEVEL_G
 #define FIRE_PRIORITY_VOTE			8
 #define FIRE_PRIORITY_INSTRUMENTS	9
 #define FIRE_PRIORITY_PING			10
+<<<<<<< HEAD
 #define FIRE_PRIORITY_SERVER_MAINT	10 //CHOMPEdit
+=======
+#define FIRE_PRIORITY_SERVER_MAINT	10
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 #define FIRE_PRIORITY_AI			10
 #define FIRE_PRIORITY_GARBAGE		15
 #define FIRE_PRIORITY_ASSETS 		20

@@ -6,7 +6,11 @@
 /client/proc/getPlayerStatus()
 	set name = "Report Player Status"
 	set desc = "Get information on all active players in-game."
+<<<<<<< HEAD
 	set category = "Fun.Event Kit" //ChompEDIT
+=======
+	set category = "Fun.Event Kit"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(!check_rights(R_FUN)) return
 

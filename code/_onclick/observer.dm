@@ -2,7 +2,11 @@
 /mob/observer/dead/verb/toggle_inquisition() // warning: unexpected inquisition
 	set name = "Toggle Inquisitiveness"
 	set desc = "Sets whether your ghost examines everything on click by default"
+<<<<<<< HEAD
 	set category = "Ghost.Settings" //CHOMPEdit
+=======
+	set category = "Ghost.Settings"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	if(!client) return
 	client.inquisitive_ghost = !client.inquisitive_ghost
 	if(client.inquisitive_ghost)

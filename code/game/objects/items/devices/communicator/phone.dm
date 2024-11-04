@@ -272,7 +272,11 @@
 // Parameters: None
 // Description: Allows ghosts to call communicators, if they meet all the requirements.
 /mob/observer/dead/verb/join_as_voice()
+<<<<<<< HEAD
 	set category = "Ghost.Message" //CHOMPEdit
+=======
+	set category = "Ghost.Message"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Call Communicator"
 	set desc = "If there is a communicator available, send a request to speak through it.  This will reset your respawn timer, if someone picks up."
 

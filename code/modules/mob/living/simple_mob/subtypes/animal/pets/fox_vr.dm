@@ -110,7 +110,11 @@
 
 /mob/living/simple_mob/animal/passive/fox/renault/verb/become_friends()
 	set name = "Become Friends"
+<<<<<<< HEAD
 	set category = "IC.Game" //CHOMPEdit
+=======
+	set category = "IC.Game"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set src in view(1)
 
 	var/mob/living/L = usr
@@ -169,7 +173,11 @@
 
 /mob/living/simple_mob/animal/passive/fox/fluff/verb/friend()
 	set name = "Become Friends"
+<<<<<<< HEAD
 	set category = "IC.Game" //CHOMPEdit
+=======
+	set category = "IC.Game"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set src in view(1)
 
 	if(friend && usr == friend)

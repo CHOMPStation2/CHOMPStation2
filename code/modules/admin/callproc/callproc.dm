@@ -1,5 +1,9 @@
 /client/proc/callproc()
+<<<<<<< HEAD
 	set category = "Debug.Events" //CHOMPEdit
+=======
+	set category = "Debug.Events"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Advanced ProcCall"
 	set waitfor = 0
 
@@ -131,7 +135,11 @@ GLOBAL_PROTECT(AdminProcCallSpamPrevention)
 #endif
 
 /client/proc/callproc_datum(datum/A as null|area|mob|obj|turf)
+<<<<<<< HEAD
 	set category = "Debug.Events" //CHOMPEdit
+=======
+	set category = "Debug.Events"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Atom ProcCall"
 	set waitfor = 0
 

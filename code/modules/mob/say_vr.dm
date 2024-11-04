@@ -4,7 +4,11 @@
 
 /mob/verb/me_verb_subtle(message as message) //This would normally go in say.dm //CHOMPEdit
 	set name = "Subtle"
+<<<<<<< HEAD
 	// set category = "IC.Subtle" //CHOMPEdit
+=======
+	set category = "IC.Subtle"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set desc = "Emote to nearby people (and your pred/prey)"
 	set hidden = 1
 
@@ -27,7 +31,11 @@
 
 /mob/verb/me_verb_subtle_custom(message as message) // Literally same as above but with mode_selection set to true //CHOMPEdit
 	set name = "Subtle (Custom)"
+<<<<<<< HEAD
 	// set category = "IC.Subtle" //CHOMPEdit
+=======
+	set category = "IC.Subtle"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set desc = "Emote to nearby people, with ability to choose which specific portion of people you wish to target."
 
 	if(say_disabled)	//This is here to try to identify lag problems
@@ -260,8 +268,13 @@
 
 ///// PSAY /////
 
+<<<<<<< HEAD
 /mob/verb/psay(message as text) //CHOMPEdit
 	// set category = "IC.Subtle" //CHOMPEdit
+=======
+/mob/verb/psay(message as text)
+	set category = "IC.Subtle"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Psay"
 	set desc = "Talk to people affected by complete absorbed or dominate predator/prey."
 
@@ -366,8 +379,13 @@
 
 ///// PME /////
 
+<<<<<<< HEAD
 /mob/verb/pme(message as message) //CHOMPEdit
 	// set category = "IC.Subtle" //CHOMPEdit
+=======
+/mob/verb/pme(message as message)
+	set category = "IC.Subtle"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Pme"
 	set desc = "Emote to people affected by complete absorbed or dominate predator/prey."
 
@@ -470,8 +488,13 @@
 		M.forced_psay = FALSE
 		M.me_verb(message)
 
+<<<<<<< HEAD
 /mob/living/verb/player_narrate(message as message) //CHOMPEdit
 	// set category = "IC.Chat" //CHOMPEdit
+=======
+/mob/living/verb/player_narrate(message as message)
+	set category = "IC.Chat"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Narrate (Player)"
 	set desc = "Narrate an action or event! An alternative to emoting, for when your emote shouldn't start with your name!"
 
@@ -517,7 +540,11 @@
 
 /mob/verb/select_speech_bubble()
 	set name = "Select Speech Bubble"
+<<<<<<< HEAD
 	set category = "OOC.Chat Settings" //CHOMPEdit
+=======
+	set category = "OOC.Chat Settings"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	var/new_speech_bubble = tgui_input_list(src, "Pick new voice (default for automatic selection)", "Character Preference", selectable_speech_bubbles)
 	if(new_speech_bubble)

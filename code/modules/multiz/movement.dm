@@ -1,13 +1,21 @@
 /mob/verb/up()
 	set name = "Move Upwards"
+<<<<<<< HEAD
 	set category = "IC.Game" //CHOMPEdit
+=======
+	set category = "IC.Game"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(zMove(UP))
 		to_chat(src, span_notice("You move upwards."))
 
 /mob/verb/down()
 	set name = "Move Down"
+<<<<<<< HEAD
 	set category = "IC.Game" //CHOMPEdit
+=======
+	set category = "IC.Game"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(zMove(DOWN))
 		to_chat(src, span_notice("You move down."))

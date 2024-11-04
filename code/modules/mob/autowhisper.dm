@@ -1,7 +1,11 @@
 /mob/living/verb/toggle_autowhisper()
 	set name = "Autowhisper Toggle"
 	set desc = "Toggle whether you will automatically whisper/subtle"
+<<<<<<< HEAD
 	set category = "IC.Settings" //CHOMPEdit
+=======
+	set category = "IC.Settings"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	autowhisper = !autowhisper
 	if(autowhisper_display)
@@ -25,7 +29,11 @@
 /mob/living/verb/autowhisper_mode()
 	set name = "Autowhisper Mode"
 	set desc = "Set the mode your emotes will default to while using Autowhisper"
+<<<<<<< HEAD
 	set category = "IC.Settings" //CHOMPEdit
+=======
+	set category = "IC.Settings"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 
 	var/choice = tgui_input_list(src, "Select Custom Subtle Mode", "Custom Subtle Mode", list("Adjacent Turfs (Default)", "My Turf", "My Table", "Current Belly (Prey)", "Specific Belly (Pred)", "Specific Person", "Psay/Pme"))

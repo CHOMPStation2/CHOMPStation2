@@ -1,5 +1,9 @@
 /client/proc/map_template_load()
+<<<<<<< HEAD
 	set category = "Debug.Events" //CHOMPEdit
+=======
+	set category = "Debug.Events"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Map template - Place At Loc"
 
 	var/datum/map_template/template
@@ -32,7 +36,11 @@
 		usr.client.images -= preview
 
 /client/proc/map_template_load_on_new_z()
+<<<<<<< HEAD
 	set category = "Debug.Events" //CHOMPEdit
+=======
+	set category = "Debug.Events"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Map template - New Z"
 
 	var/datum/map_template/template
@@ -55,7 +63,11 @@
 
 
 /client/proc/map_template_upload()
+<<<<<<< HEAD
 	set category = "Debug.Events" //CHOMPEdit
+=======
+	set category = "Debug.Events"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Map Template - Upload"
 
 	var/map = input(usr, "Choose a Map Template to upload to template storage","Upload Map Template") as null|file

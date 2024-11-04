@@ -156,7 +156,11 @@
 
 /mob/living/proc/set_size()
 	set name = "Adjust Mass"
+<<<<<<< HEAD
 	set category = "Abilities.General" //Seeing as prometheans have an IC reason to be changing mass. //CHOMPEdit
+=======
+	set category = "Abilities.General" //Seeing as prometheans have an IC reason to be changing mass.
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	var/nagmessage = "Adjust your mass to be a size between 25 to 200% (or 1% to 600% in dormitories). (DO NOT ABUSE)"
 	var/default = size_multiplier * 100
@@ -416,7 +420,11 @@
 /mob/living/verb/toggle_pickups()
 	set name = "Toggle Micro Pick-up"
 	set desc = "Toggles whether your help-intent action attempts to pick up the micro or pet/hug/help them. Does not disable participation in pick-up mechanics entirely, refer to Vore Panel preferences for that."
+<<<<<<< HEAD
 	set category = "IC.Settings" //CHOMPEdit
+=======
+	set category = "IC.Settings"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	pickup_active = !pickup_active
 	to_chat(src, span_filter_notice("You will [pickup_active ? "now" : "no longer"] attempt to pick up mobs when clicking them with help intent."))

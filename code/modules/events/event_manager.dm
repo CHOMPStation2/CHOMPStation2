@@ -224,7 +224,11 @@
 
 /client/proc/forceEvent(var/type in SSevents.allEvents)
 	set name = "Trigger Event (Debug Only)"
+<<<<<<< HEAD
 	set category = "Debug.Dangerous" //CHOMPEdit
+=======
+	set category = "Debug.Dangerous"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(!holder)
 		return
@@ -235,6 +239,10 @@
 
 /client/proc/event_manager_panel()
 	set name = "Event Manager Panel"
+<<<<<<< HEAD
 	set category = "Admin.Events" //CHOMPEdit
+=======
+	set category = "Admin.Events"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	SSevents.Interact(usr)
 	feedback_add_details("admin_verb","EMP") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!

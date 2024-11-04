@@ -26,7 +26,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 
 /mob/proc/insidePanel()
 	set name = "Vore Panel"
+<<<<<<< HEAD
 	set category = "IC.Vore" //CHOMPEdit
+=======
+	set category = "IC.Vore"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(SSticker.current_state == GAME_STATE_INIT)
 		return

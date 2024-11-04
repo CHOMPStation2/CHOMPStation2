@@ -262,7 +262,11 @@ GLOBAL_LIST_BOILERPLATE(all_deactivated_AI_cores, /obj/structure/AIcore/deactiva
 
 /client/proc/empty_ai_core_toggle_latejoin()
 	set name = "Toggle AI Core Latejoin"
+<<<<<<< HEAD
 	set category = "Admin.Silicon" //CHOMPEdit
+=======
+	set category = "Admin.Silicon"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	var/list/cores = list()
 	for(var/obj/structure/AIcore/deactivated/D in GLOB.all_deactivated_AI_cores)

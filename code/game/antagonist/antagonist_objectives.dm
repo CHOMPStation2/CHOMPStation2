@@ -32,7 +32,11 @@
 
 /mob/living/proc/write_ambition()
 	set name = "Set Ambition"
+<<<<<<< HEAD
 	set category = "IC.Antag" //CHOMPEdit
+=======
+	set category = "IC.Antag"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set src = usr
 
 	if(!mind)

@@ -1,7 +1,11 @@
 /client/proc/admin_lightning_strike()
 	set name = "Lightning Strike"
 	set desc = "Causes lightning to strike on your tile. This can be made to hurt things on or nearby it severely."
+<<<<<<< HEAD
 	set category = "Fun.Do Not" //CHOMPEdit
+=======
+	set category = "Fun.Do Not"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(!check_rights(R_FUN))
 		return

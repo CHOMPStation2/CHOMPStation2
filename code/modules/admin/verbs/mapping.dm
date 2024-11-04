@@ -167,7 +167,11 @@ var/list/debug_verbs = list (
 
 
 /client/proc/enable_debug_verbs()
+<<<<<<< HEAD
 	set category = "Debug.Misc" //CHOMPEdit
+=======
+	set category = "Debug.Misc"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Debug verbs"
 
 	if(!check_rights(R_DEBUG)) return
@@ -177,7 +181,11 @@ var/list/debug_verbs = list (
 	feedback_add_details("admin_verb","mDV") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/hide_debug_verbs()
+<<<<<<< HEAD
 	set category = "Debug.Misc" //CHOMPEdit
+=======
+	set category = "Debug.Misc"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Hide Debug verbs"
 
 	if(!check_rights(R_DEBUG)) return
@@ -209,7 +217,11 @@ var/list/debug_verbs = list (
 
 
 /client/proc/testZAScolors()
+<<<<<<< HEAD
 	set category = "Mapping" //CHOMPEdit
+=======
+	set category = "Mapping.ZAS"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Check ZAS connections"
 
 	if(!check_rights(R_DEBUG)) return
@@ -258,7 +270,11 @@ var/list/debug_verbs = list (
 		testZAScolors_turfs += T
 
 /client/proc/testZAScolors_remove()
+<<<<<<< HEAD
 	set category = "Mapping" //CHOMPEdit
+=======
+	set category = "Mapping.ZAS"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Remove ZAS connection colors"
 
 	testZAScolors_turfs.Cut()
@@ -270,7 +286,11 @@ var/list/debug_verbs = list (
 				images.Remove(i)
 
 /client/proc/rebootAirMaster()
+<<<<<<< HEAD
 	set category = "Mapping" //CHOMPEdit
+=======
+	set category = "Mapping.ZAS"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Reboot ZAS"
 
 	if(tgui_alert(usr, "This will destroy and remake all zone geometry on the whole map.","Reboot ZAS",list("Reboot ZAS","Nevermind")) == "Reboot ZAS")

@@ -536,13 +536,21 @@
 
 /client/verb/character_setup()
 	set name = "Character Setup"
+<<<<<<< HEAD
 	set category = "Preferences.Character" //CHOMPEdit
+=======
+	set category = "Preferences.Character"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	if(prefs)
 		prefs.ShowChoices(usr)
 
 /client/verb/game_options()
 	set name = "Game Options"
+<<<<<<< HEAD
 	set category = "Preferences.Game" //CHOMPEdit
+=======
+	set category = "Preferences.Character"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	if(prefs)
 		prefs.tgui_interact(usr)
 
@@ -644,7 +652,11 @@
 
 /client/verb/toggle_fullscreen()
 	set name = "Toggle Fullscreen"
+<<<<<<< HEAD
 	set category = "OOC.Client Settings" //CHOMPEdit
+=======
+	set category = "OOC.Client Settings"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	fullscreen = !fullscreen
 
@@ -666,7 +678,11 @@
 /*CHOMPRemove Start, we use TGPanel
 /client/verb/toggle_verb_panel()
 	set name = "Toggle Verbs"
+<<<<<<< HEAD
 	set category = "OOC.Client Settings" //CHOMPEdit
+=======
+	set category = "OOC.Client Settings"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	show_verb_panel = !show_verb_panel
 
@@ -676,7 +692,11 @@
 /*
 /client/verb/toggle_status_bar()
 	set name = "Toggle Status Bar"
+<<<<<<< HEAD
 	set category = "OOC.Client Settings" //CHOMPEdit
+=======
+	set category = "OOC.Client Settings"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	show_status_bar = !show_status_bar
 
@@ -688,7 +708,11 @@
 
 /client/verb/show_active_playtime()
 	set name = "Active Playtime"
+<<<<<<< HEAD
 	set category = "IC.Game"
+=======
+	set category = "OOC.Game"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(!play_hours.len)
 		to_chat(src, span_warning("Persistent playtime disabled!"))

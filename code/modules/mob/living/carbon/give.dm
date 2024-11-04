@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 /mob/living/verb/give(var/mob/living/target in living_mobs_in_view(1))
 	set category = "IC.Game" //CHOMPEdit
+=======
+/mob/living/verb/give(var/mob/living/target in living_mobs(1))
+	set category = "IC.Game"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Give"
 
 	do_give(target)

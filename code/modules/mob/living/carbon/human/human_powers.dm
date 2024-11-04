@@ -4,7 +4,11 @@
 /mob/living/carbon/human/proc/tie_hair()
 	set name = "Tie Hair"
 	set desc = "Style your hair."
+<<<<<<< HEAD
 	set category = "IC.Game" //CHOMPEdit
+=======
+	set category = "IC.Game"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(incapacitated())
 		to_chat(src, span_warning("You can't mess with your hair right now!"))
@@ -34,7 +38,11 @@
 			to_chat(src, span_notice("You're already using that style."))
 
 /mob/living/carbon/human/proc/tackle()
+<<<<<<< HEAD
 	set category = "Abilities.General" //CHOMPEdit
+=======
+	set category = "Abilities.General"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Tackle"
 	set desc = "Tackle someone down."
 
@@ -81,7 +89,11 @@
 			O.show_message(span_warning(span_red(span_bold("[src] [failed ? "tried to tackle" : "has tackled"] down [T]!"))), 1)
 
 /mob/living/carbon/human/proc/commune()
+<<<<<<< HEAD
 	set category = "Abilities.General" //CHOMPEdit
+=======
+	set category = "Abilities.General"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Commune with creature"
 	set desc = "Send a telepathic message to an unlucky recipient."
 
@@ -119,7 +131,11 @@
 /mob/living/carbon/human/proc/regurgitate()
 	set name = "Regurgitate"
 	set desc = "Empties the contents of your stomach"
+<<<<<<< HEAD
 	set category = "Abilities.General" //CHOMPEdit
+=======
+	set category = "Abilities.General"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(stomach_contents.len)
 		for(var/mob/M in src)
@@ -132,7 +148,11 @@
 /mob/living/carbon/human/proc/psychic_whisper(mob/M as mob in oview())
 	set name = "Psychic Whisper"
 	set desc = "Whisper silently to someone over a distance."
+<<<<<<< HEAD
 	set category = "Abilities.General" //CHOMPEdit
+=======
+	set category = "Abilities.General"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	var/msg = sanitize(tgui_input_text(usr, "Message:", "Psychic Whisper"))
 	if(msg)
@@ -144,7 +164,11 @@
 /mob/living/carbon/human/proc/diona_split_nymph()
 	set name = "Split"
 	set desc = "Split your humanoid form into its constituent nymphs."
+<<<<<<< HEAD
 	set category = "Abilities.Diona" //CHOMPEdit
+=======
+	set category = "Abilities.Diona"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	diona_split_into_nymphs(5)	// Separate proc to void argments being supplied when used as a verb
 
 /mob/living/carbon/human/proc/diona_split_into_nymphs(var/number_of_resulting_nymphs)
@@ -204,7 +228,11 @@
 /mob/living/carbon/human/proc/self_diagnostics()
 	set name = "Self-Diagnostics"
 	set desc = "Run an internal self-diagnostic to check for damage."
+<<<<<<< HEAD
 	set category = "Abilities.General" //CHOMPEdit
+=======
+	set category = "Abilities.General"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(stat == DEAD) return
 
@@ -247,7 +275,11 @@
 /mob/living/carbon/human/proc/sonar_ping()
 	set name = "Listen In"
 	set desc = "Allows you to listen in to movement and noises around you."
+<<<<<<< HEAD
 	set category = "Abilities.General" //CHOMPEdit
+=======
+	set category = "Abilities.General"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(incapacitated())
 		to_chat(src, span_warning("You need to recover before you can use this ability."))
@@ -291,7 +323,11 @@
 /mob/living/carbon/human/proc/regenerate()
 	set name = "Regenerate"
 	set desc = "Allows you to regrow limbs and heal organs after a period of rest."
+<<<<<<< HEAD
 	set category = "Abilities.General" //CHOMPEdit
+=======
+	set category = "Abilities.General"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(nutrition < 250)
 		to_chat(src, span_warning("You lack the biomass to begin regeneration!"))
@@ -355,7 +391,11 @@
 /mob/living/carbon/human/proc/setmonitor_state()
 	set name = "Set monitor display"
 	set desc = "Set your monitor display"
+<<<<<<< HEAD
 	set category = "IC.Settings" //CHOMPEdit
+=======
+	set category = "IC.Settings"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	if(stat)
 		to_chat(src,span_warning("You must be awake and standing to perform this action!"))
 		return

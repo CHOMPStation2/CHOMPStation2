@@ -2,7 +2,11 @@
 var/const/commandos_possible = 6 //if more Commandos are needed in the future
 
 /client/proc/strike_team()
+<<<<<<< HEAD
 	set category = "Fun.Event Kit" //CHOMPEdit
+=======
+	set category = "Fun.Event Kit"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Spawn Strike Team"
 	set desc = "Spawns a strike team if you want to run an admin event."
 

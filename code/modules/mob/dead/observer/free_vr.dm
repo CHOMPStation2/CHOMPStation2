@@ -8,7 +8,11 @@ var/global/list/prevent_respawns = list()
 
 /mob/observer/dead/verb/cleanup()
 	set name = "Quit This Round"
+<<<<<<< HEAD
 	set category = "OOC.Game" //CHOMPEdit
+=======
+	set category = "OOC.Game"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set desc = "Free your job slot, remove yourself from the manifest, and prevent respawning as this character for this round."
 
 	var/confirm = tgui_alert(usr, "This will free up your job slot, remove you from the manifest, and allow you to respawn as this character. You can rejoin as another \

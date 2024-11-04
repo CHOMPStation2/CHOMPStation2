@@ -1,5 +1,9 @@
 /client/proc/fixatmos()
+<<<<<<< HEAD
 	set category = "Admin.Game" //CHOMPEdit
+=======
+	set category = "Admin.Game"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Fix Atmospherics Grief"
 
 	if(!check_rights(R_ADMIN|R_DEBUG|R_EVENT)) return

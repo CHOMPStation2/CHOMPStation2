@@ -3,7 +3,11 @@
 
 /mob/verb/whisper(message as text)  //CHOMPEdit
 	set name = "Whisper"
+<<<<<<< HEAD
 	// set category = "IC.Subtle" //CHOMPEdit
+=======
+	set category = "IC.Subtle"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set hidden = 1
 	//VOREStation Addition Start
 	if(forced_psay)
@@ -15,8 +19,12 @@
 
 /mob/verb/say_verb(message as text) //CHOMPEdit
 	set name = "Say"
+<<<<<<< HEAD
 	// set category = "IC.Chat" //CHOMPEdit
 	set instant = TRUE // CHOMPEdit
+=======
+	set category = "IC.Chat"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set hidden = 1
 	//VOREStation Addition Start
 	if(forced_psay)
@@ -34,7 +42,11 @@
 
 /mob/verb/me_verb(message as message) //CHOMPEdit
 	set name = "Me"
+<<<<<<< HEAD
 	// set category = "IC.Chat" //CHOMPEdit
+=======
+	set category = "IC.Chat"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set desc = "Emote to nearby people (and your pred/prey)"
 	set hidden = 1
 

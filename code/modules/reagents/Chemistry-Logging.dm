@@ -16,7 +16,11 @@
 
 /client/proc/view_chemical_reaction_logs()
 	set name = "Show Chemical Reactions"
+<<<<<<< HEAD
 	set category = "Admin.Investigate" //CHOMPEdit
+=======
+	set category = "Admin.Investigate"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(!check_rights(R_ADMIN|R_MOD))
 		return

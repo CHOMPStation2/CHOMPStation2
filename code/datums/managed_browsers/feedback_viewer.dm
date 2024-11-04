@@ -2,7 +2,11 @@
 	var/datum/managed_browser/feedback_viewer/feedback_viewer = null
 
 /datum/admins/proc/view_feedback()
+<<<<<<< HEAD
 	set category = "Admin.Misc" //CHOMPEdit
+=======
+	set category = "Admin.Misc"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "View Feedback"
 	set desc = "Open the Feedback Viewer"
 

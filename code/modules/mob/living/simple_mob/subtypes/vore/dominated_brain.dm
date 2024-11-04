@@ -196,7 +196,11 @@
 
 //Welcome to the adapted borer code.
 /mob/proc/dominate_predator()
+<<<<<<< HEAD
 	set category = "Abilities.Vore" //CHOMPEdit
+=======
+	set category = "Abilities.Vore"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Dominate Predator"
 	set desc = "Connect to and dominate the brain of your predator."
 	var/is_mob = FALSE //CHOMPAdd - tracks if character is a non player mob
@@ -328,7 +332,11 @@
 //CHOMPEdit End
 
 /mob/proc/release_predator()
+<<<<<<< HEAD
 	set category = "Abilities.Vore" //CHOMPEdit
+=======
+	set category = "Abilities.Vore"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Restore Control"
 	set desc = "Release control of your predator's body."
 
@@ -351,7 +359,11 @@
 	remove_verb(src, /mob/proc/release_predator)
 
 /mob/living/dominated_brain/proc/resist_control()
+<<<<<<< HEAD
 	set category = "Abilities.Vore" //CHOMPEdit
+=======
+	set category = "Abilities.Vore"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Resist Control"
 	set desc = "Attempt to resist control."
 	if(pred_body.ckey == pred_ckey)
@@ -370,7 +382,11 @@
 		to_chat(src, span_warning("\The [pred_body] is already dominated, and cannot be controlled at this time."))
 
 /mob/living/proc/dominate_prey()
+<<<<<<< HEAD
 	set category = "Abilities.Vore" //CHOMPEdit
+=======
+	set category = "Abilities.Vore"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Dominate Prey"
 	set desc = "Connect to and dominate the brain of your prey."
 
@@ -471,7 +487,11 @@
 	//CHOMPEdit End
 
 /mob/living/dominated_brain/proc/cease_this_foolishness()
+<<<<<<< HEAD
 	set category = "Abilities.Vore" //CHOMPEdit
+=======
+	set category = "Abilities.Vore"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Return to Body"
 	set desc = "If your body is inside of your predator still, attempts to re-insert yourself into it."
 
@@ -498,7 +518,11 @@
 		remove_verb(src, /mob/living/dominated_brain/proc/cease_this_foolishness)
 
 /mob/living/proc/lend_prey_control()
+<<<<<<< HEAD
 	set category = "Abilities.Vore" //CHOMPEdit
+=======
+	set category = "Abilities.Vore"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Give Prey Control"
 	set desc = "Allow prey control of your body."
 

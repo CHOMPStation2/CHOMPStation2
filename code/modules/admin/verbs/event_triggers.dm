@@ -4,7 +4,11 @@ Eventkit verb to be used to spawn the obj/effect/landmarks defined under code\ga
 /client/proc/manage_event_triggers()
 	set name = "Manage Event Triggers"
 	set desc = "Open dialogue to create or delete narration/notification triggers"
+<<<<<<< HEAD
 	set category = "Fun.Event Kit" //CHOMPEdit
+=======
+	set category = "Fun.Event Kit"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(!check_rights(R_FUN)) return
 

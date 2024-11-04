@@ -10,7 +10,11 @@
 
 
 /datum/admins/proc/setup_supermatter()
+<<<<<<< HEAD
 	set category = "Debug.Game" //CHOMPEdit
+=======
+	set category = "Debug.Game"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Setup Supermatter"
 	set desc = "Allows you to start the Supermatter engine."
 

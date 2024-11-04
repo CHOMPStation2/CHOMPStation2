@@ -1,5 +1,9 @@
 /client/proc/debug_variables(datum/D in world)
+<<<<<<< HEAD
 	set category = "Debug.Investigate" //CHOMPEdit
+=======
+	set category = "Debug.Investigate"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "View Variables"
 	//set src in world
 	var/static/cookieoffset = rand(1, 9999) //to force cookies to reset after the round.

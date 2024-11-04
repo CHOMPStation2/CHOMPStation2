@@ -1,7 +1,11 @@
 /mob/living/proc/vertical_nom()
 	set name = "Nom from Above"
 	set desc = "Allows you to eat people who are below your tile or adjacent one. Requires passability."
+<<<<<<< HEAD
 	set category = "Abilities.Vore" //CHOMPEdit
+=======
+	set category = "Abilities.Vore"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(stat == DEAD || paralysis || weakened || stunned)
 		to_chat(src, span_notice("You cannot do that while in your current state."))

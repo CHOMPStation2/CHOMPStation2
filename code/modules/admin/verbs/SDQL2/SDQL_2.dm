@@ -188,7 +188,11 @@ Example: USING PROCCALL = BLOCKING, SELECT = FORCE_NULLS, PRIORITY = HIGH SELECT
 		CRASH("SDQL2 fatal error");};
 
 /client/proc/SDQL2_query(query_text as message)
+<<<<<<< HEAD
 	set category = "Debug.Misc" //CHOMPEdit
+=======
+	set category = "Debug.Misc"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	if(!check_rights(R_DEBUG))  //Shouldn't happen... but just to be safe.
 		message_admins(span_danger("ERROR: Non-admin [key_name(usr)] attempted to execute a SDQL query!"))
 		log_admin("Non-admin [key_name(usr)] attempted to execute a SDQL query!")

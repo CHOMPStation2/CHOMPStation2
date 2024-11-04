@@ -56,7 +56,11 @@
 // Vorestation edit start
 
 /mob/living/carbon/brain/verb/backup_ping()
+<<<<<<< HEAD
 	set category = "IC.Game" //CHOMPEdit
+=======
+	set category = "IC.Game"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Notify Transcore"
 	set desc = "Your body is gone. Notify robotics to be resleeved!"
 	var/datum/transcore_db/db = SStranscore.db_by_mind_name(mind.name)

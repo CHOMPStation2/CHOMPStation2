@@ -1,7 +1,11 @@
 // Originally a debug verb, made it a proper adminverb for ~fun~
 /client/proc/makePAI(turf/t in view(), name as text, pai_key as null|text)
 	set name = "Make pAI"
+<<<<<<< HEAD
 	set category = "Admin.Events" //CHOMPEdit
+=======
+	set category = "Admin.Events"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(!check_rights(R_ADMIN|R_EVENT|R_DEBUG))
 		return

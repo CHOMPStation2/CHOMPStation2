@@ -28,7 +28,11 @@
 //ADMINVERBS
 /client/proc/investigate_show( subject in list("hrefs","notes","singulo","telesci") )
 	set name = "Investigate"
+<<<<<<< HEAD
 	set category = "Admin.Investigate" //CHOMPEdit
+=======
+	set category = "Admin.Investigate"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	if(!holder)	return
 	switch(subject)
 		if("singulo", "telesci")			//general one-round-only stuff

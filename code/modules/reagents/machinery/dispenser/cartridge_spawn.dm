@@ -1,6 +1,10 @@
 /client/proc/spawn_chemdisp_cartridge(size in list("small", "medium", "large"), reagent in SSchemistry.chemical_reagents)
 	set name = "Spawn Chemical Dispenser Cartridge"
+<<<<<<< HEAD
 	set category = "Admin.Events" //CHOMPEdit
+=======
+	set category = "Admin.Events"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	var/obj/item/reagent_containers/chem_disp_cartridge/C
 	switch(size)

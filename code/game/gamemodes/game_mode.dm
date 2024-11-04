@@ -577,7 +577,11 @@ var/global/list/additional_antag_types = list()
 
 /mob/verb/check_round_info()
 	set name = "Check Round Info"
+<<<<<<< HEAD
 	set category = "OOC.Game" //CHOMPEdit
+=======
+	set category = "OOC.Game"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(!ticker || !ticker.mode)
 		to_chat(usr, span_warning("Something is terribly wrong; there is no gametype."))

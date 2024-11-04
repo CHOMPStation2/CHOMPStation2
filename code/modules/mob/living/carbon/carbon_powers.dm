@@ -1,7 +1,11 @@
 //Brain slug proc for voluntary removal of control.
 /mob/living/carbon/proc/release_control()
 
+<<<<<<< HEAD
 	set category = "Abilities.Brainslug" //CHOMPEdit
+=======
+	set category = "Abilities.Brainslug"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Release Control"
 	set desc = "Release control of your host's body."
 
@@ -21,7 +25,11 @@
 
 //Brain slug proc for tormenting the host.
 /mob/living/carbon/proc/punish_host()
+<<<<<<< HEAD
 	set category = "Abilities.Brainslug" //CHOMPEdit
+=======
+	set category = "Abilities.Brainslug"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Torment host"
 	set desc = "Punish your host with agony."
 
@@ -39,7 +47,11 @@
 			to_chat(B.host_brain, span_danger("<FONT size=3>Horrific, burning agony lances through you, ripping a soundless scream from your trapped mind!</FONT>"))
 
 /mob/living/carbon/proc/spawn_larvae()
+<<<<<<< HEAD
 	set category = "Abilities.Brainslug" //CHOMPEdit
+=======
+	set category = "Abilities.Brainslug"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Reproduce"
 	set desc = "Spawn several young."
 

@@ -22,7 +22,11 @@
 
 //AI verb and proc for sending PDA messages.
 /obj/item/pda/ai/verb/cmd_pda_open_ui()
+<<<<<<< HEAD
 	set category = "Abilities.AI" //ChompEDIT - TGPanel
+=======
+	set category = "Abilities.AI"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Use PDA"
 	set src in usr
 

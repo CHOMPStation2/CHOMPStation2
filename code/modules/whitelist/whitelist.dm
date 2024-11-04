@@ -5,7 +5,11 @@
 /client/verb/print_whitelist()
 	set name = "Show Whitelist Entries"
 	set desc = "Print the set of things you're whitelisted for."
+<<<<<<< HEAD
 	set category = "OOC.Client Settings" //CHOMPEdit
+=======
+	set category = "OOC.Client settings"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	to_chat(src, "You are whitelisted for:")
 	to_chat(src, jointext(get_whitelists_list(), "\n"))

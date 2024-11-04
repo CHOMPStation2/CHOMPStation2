@@ -51,7 +51,11 @@
 		. += "<a href=\"[CONFIG_GET(string/githuburl)]/pull/[tm.number]\">#[tm.number][details]</a>"
 
 /client/verb/showrevinfo()
+<<<<<<< HEAD
 	set category = "OOC.Game" //CHOMPEdit
+=======
+	set category = "OOC.Game"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Show Server Revision"
 	set desc = "Check the current server code revision"
 

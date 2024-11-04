@@ -2,7 +2,11 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 
 /client/verb/show_character_directory()
 	set name = "Character Directory"
+<<<<<<< HEAD
 	set category = "OOC.Game" //CHOMPEdit
+=======
+	set category = "OOC.Game"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set desc = "Shows a listing of all active characters, along with their associated OOC notes, flavor text, and more."
 
 	// This is primarily to stop malicious users from trying to lag the server by spamming this verb

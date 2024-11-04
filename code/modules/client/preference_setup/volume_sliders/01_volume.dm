@@ -97,7 +97,11 @@
 
 /client/verb/volume_panel()
 	set name = "Volume Panel"
+<<<<<<< HEAD
 	set category = "Preferences.Sounds" //CHOMPEdit
+=======
+	set category = "Preferences.Sounds"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set desc = "Allows you to adjust volume levels on the fly."
 
 	if(!volume_panel)

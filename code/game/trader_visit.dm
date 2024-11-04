@@ -5,7 +5,11 @@ var/can_call_traders = 1
 
 /client/proc/trader_ship()
 	set name = "Dispatch Beruang Trader Ship"
+<<<<<<< HEAD
 	set category = "Fun.Event Kit" //CHOMPEdit
+=======
+	set category = "Fun.Event Kit"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set desc = "Invite players to join the Beruang."
 
 	if(!holder)
@@ -36,7 +40,11 @@ var/can_call_traders = 1
 /client/verb/JoinTraders()
 
 	set name = "Join Trader Visit"
+<<<<<<< HEAD
 	set category = "IC.Event" //CHOMPEdit
+=======
+	set category = "IC.Event"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(!MayRespawn(1))
 		to_chat(usr, span_warning("You cannot join the traders."))

@@ -34,7 +34,11 @@ var/global/datum/book_manager/book_mgr = new()
 /client/proc/delbook()
 	set name = "Delete Book"
 	set desc = "Permamently deletes a book from the database."
+<<<<<<< HEAD
 	set category = "Admin.Moderation" //CHOMPEdit
+=======
+	set category = "Admin.Moderation"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	if(!src.holder)
 		to_chat(src, "Only administrators may use this command.")
 		return

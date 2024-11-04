@@ -1,5 +1,9 @@
 /client/proc/roll_dices()
+<<<<<<< HEAD
 	set category = "Fun.Event Kit" //CHOMPEdit
+=======
+	set category = "Fun.Event Kit"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Roll Dice"
 	if(!check_rights(R_FUN))
 		return

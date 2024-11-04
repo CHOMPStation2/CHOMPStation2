@@ -247,7 +247,11 @@
 
 /mob/living/simple_mob/vore/morph/proc/morph_color()
 	set name = "Pick Color"
+<<<<<<< HEAD
 	set category = "Abilities.Settings" //CHOMPEdit
+=======
+	set category = "Abilities.Settings"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set desc = "You can set your color!"
 	var/newcolor = input(usr, "Choose a color.", "", color) as color|null
 	if(newcolor)
@@ -257,7 +261,11 @@
 
 /mob/living/simple_mob/vore/morph/proc/take_over_prey()
 	set name = "Take Over Prey"
+<<<<<<< HEAD
 	set category = "Abilities.Morph" //CHOMPEdit
+=======
+	set category = "Abilities.Morph"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set desc = "Take command of your prey's body."
 	if(morphed)
 		to_chat(src, span_warning("You must restore to your original form first!"))

@@ -2,7 +2,11 @@
 /* YW EDIT START
 /client/verb/who_advanced()
 	set name = "Advanced Who"
+<<<<<<< HEAD
 	set category = "OOC.Resources" //CHOMPEdit
+=======
+	set category = "OOC.Resources"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	var/msg = span_bold("Current Players:") + "\n"
 

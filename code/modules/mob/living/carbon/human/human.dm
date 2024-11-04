@@ -72,7 +72,14 @@
 
 /mob/living/carbon/human/Destroy()
 	human_mob_list -= src
+<<<<<<< HEAD
 	QDEL_NULL_LIST(organs)
+=======
+	/* //REMOVE - this is done on mob/living/Destroy
+	for(var/organ in organs)
+		qdel(organ)
+	*/
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	if(nif)
 		QDEL_NULL(nif)	//VOREStation Add
 	worn_clothing.Cut()
@@ -948,7 +955,7 @@
 
 /mob/living/carbon/human/proc/remotesay()
 	set name = "Project mind"
-	set category = "Superpower"
+	set category = "Abilities.Superpower"
 
 	if(stat!=CONSCIOUS)
 		reset_view(0)
@@ -977,7 +984,7 @@
 
 /mob/living/carbon/human/proc/remoteobserve()
 	set name = "Remote View"
-	set category = "Superpower"
+	set category = "Abilities.Superpower"
 
 	if(stat!=CONSCIOUS)
 		remoteview_target = null
@@ -1341,7 +1348,11 @@
 		return 0
 
 /mob/living/carbon/human/proc/bloody_doodle()
+<<<<<<< HEAD
 	set category = "IC.Game" //CHOMPEdit
+=======
+	set category = "IC.Game"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Write in blood"
 	set desc = "Use blood on your hands to write a short message on the floor or a wall, murder mystery style."
 
@@ -1655,7 +1666,11 @@
 /mob/living/carbon/human/verb/pull_punches()
 	set name = "Pull Punches"
 	set desc = "Try not to hurt them."
+<<<<<<< HEAD
 	set category = "IC.Game" //CHOMPEdit
+=======
+	set category = "IC.Game"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	if(stat) return
 	pulling_punches = !pulling_punches

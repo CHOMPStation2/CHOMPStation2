@@ -1,7 +1,11 @@
 /client/proc/smite(var/mob/living/carbon/human/target in player_list)
 	set name = "Smite"
 	set desc = "Abuse a player with various 'special treatments' from a list."
+<<<<<<< HEAD
 	set category = "Fun.Do Not" //CHOMPEdit
+=======
+	set category = "Fun.Do Not"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	if(!check_rights(R_FUN))
 		return
 

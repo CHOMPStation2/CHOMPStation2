@@ -524,7 +524,11 @@
 				if(new_egg_type in global_vore_egg_types)
 					new_belly.egg_type = new_egg_type
 
+<<<<<<< HEAD
 		// Not implemented on virgo -> CHOMPEnable Start
+=======
+		/* Not implemented on virgo
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 		if(istext(belly_data["egg_name"]))
 			var/new_egg_name = html_encode(belly_data["egg_name"])
 			if(new_egg_name)

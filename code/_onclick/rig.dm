@@ -10,7 +10,11 @@
 /client/verb/toggle_hardsuit_mode()
 	set name = "Toggle Hardsuit Activation Mode"
 	set desc = "Switch between hardsuit activation modes."
+<<<<<<< HEAD
 	set category = "OOC.Game Settings" //CHOMPEdit
+=======
+	set category = "OOC.Game Settings"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	hardsuit_click_mode++
 	if(hardsuit_click_mode > MAX_HARDSUIT_CLICK_MODE)

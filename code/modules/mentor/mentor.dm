@@ -43,7 +43,11 @@ var/list/mentor_verbs_default = list(
 		remove_verb(src, mentor_verbs_default)
 
 /client/proc/make_mentor()
+<<<<<<< HEAD
 	set category = "Admin.Secrets" //CHOMPEdit
+=======
+	set category = "Admin.Secrets"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Make Mentor"
 	if(!holder)
 		to_chat(src, span_admin_pm_warning("Error: Only administrators may use this command."))
@@ -73,7 +77,11 @@ var/list/mentor_verbs_default = list(
 	// CHOMPedit End
 
 /client/proc/unmake_mentor()
+<<<<<<< HEAD
 	set category = "Admin.Secrets" //CHOMPEdit
+=======
+	set category = "Admin.Secrets"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Unmake Mentor"
 	if(!holder)
 		to_chat(src, span_admin_pm_warning("Error: Only administrators may use this command."))
@@ -97,7 +105,11 @@ var/list/mentor_verbs_default = list(
 	// CHOMPedit End
 
 /client/proc/cmd_mentor_say(msg as text)
+<<<<<<< HEAD
 	set category = "Admin.Chat" //CHOMPEdit
+=======
+	set category = "Admin.Chat"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name ="Mentorsay"
 
 	//check rights
@@ -139,7 +151,11 @@ var/list/mentor_verbs_default = list(
 	mentor_commands(href, href_list, usr)
 
 /client/proc/cmd_dementor()
+<<<<<<< HEAD
 	set category = "Admin.Misc" //CHOMPEdit
+=======
+	set category = "Admin.Misc"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "De-mentor"
 
 	if(tgui_alert(usr, "Confirm self-dementor for the round? You can't re-mentor yourself without someone promoting you.","Dementor",list("Yes","No")) == "Yes")

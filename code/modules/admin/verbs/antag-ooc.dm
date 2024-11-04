@@ -1,5 +1,9 @@
 /client/proc/aooc(msg as text)
+<<<<<<< HEAD
 	set category = "OOC.Chat" //CHOMPEdit
+=======
+	set category = "OOC.Chat"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "AOOC"
 	set desc = "Antagonist OOC"
 

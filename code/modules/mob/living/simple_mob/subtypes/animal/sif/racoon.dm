@@ -78,7 +78,11 @@
 /mob/living/simple_mob/animal/sif/sakimm/verb/remove_hat()
 	set name = "Remove Hat"
 	set desc = "Remove the animal's hat. You monster."
+<<<<<<< HEAD
 	set category = "Abilities.Sakimm" //CHOMPEdit
+=======
+	set category = "Abilities.Sakimm"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set src in view(1)
 
 	drop_hat(usr)
@@ -101,7 +105,11 @@
 /mob/living/simple_mob/animal/sif/sakimm/verb/give_hat()
 	set name = "Give Hat"
 	set desc = "Give the animal a hat. You hero."
+<<<<<<< HEAD
 	set category = "Abilities.Sakimm" //CHOMPEdit
+=======
+	set category = "Abilities.Sakimm"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set src in view(1)
 
 	take_hat(usr)

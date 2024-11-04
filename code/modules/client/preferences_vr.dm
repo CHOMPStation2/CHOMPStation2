@@ -20,7 +20,11 @@
 //Why weren't these in game toggles already?
 /client/verb/toggle_capture_crystal()
 	set name = "Toggle Catchable"
+<<<<<<< HEAD
 	set category = "Preferences.Character" //CHOMPEdit
+=======
+	set category = "Preferences.Character"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set desc = "Toggles being catchable with capture crystals."
 
 	var/mob/living/L = mob

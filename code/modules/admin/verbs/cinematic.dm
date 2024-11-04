@@ -1,6 +1,10 @@
 /client/proc/cinematic(var/cinematic as anything in list("explosion",null))
 	set name = "Cinematic"
+<<<<<<< HEAD
 	set category = "Fun.Do Not" //CHOMPEdit
+=======
+	set category = "Fun.Do Not"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set desc = "Shows a cinematic."	// Intended for testing but I thought it might be nice for events on the rare occasion Feel free to comment it out if it's not wanted.
 
 	if(!check_rights(R_FUN))

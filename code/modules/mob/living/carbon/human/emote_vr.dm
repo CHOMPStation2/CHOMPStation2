@@ -1,7 +1,11 @@
 /mob/living/carbon/human/verb/toggle_resizing_immunity()
 	set name = "Toggle Resizing Immunity"
 	set desc = "Toggles your ability to resist resizing attempts"
+<<<<<<< HEAD
 	set category = "IC.Settings" //CHOMPEdit
+=======
+	set category = "IC.Settings"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 
 	resizable = !resizable
 	to_chat(src, span_notice("You are now [resizable ? "susceptible" : "immune"] to being resized."))
@@ -35,7 +39,11 @@
 /mob/living/carbon/human/verb/toggle_gender_identity_vr()
 	set name = "Set Gender Identity"
 	set desc = "Sets the pronouns when examined and performing an emote."
+<<<<<<< HEAD
 	set category = "IC.Settings" //CHOMPEdit
+=======
+	set category = "IC.Settings"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	var/new_gender_identity = tgui_input_list(usr, "Please select a gender Identity:", "Set Gender Identity", list(FEMALE, MALE, NEUTER, PLURAL, HERM))
 	if(!new_gender_identity)
 		return 0
@@ -44,14 +52,22 @@
 
 /mob/living/carbon/human/verb/switch_tail_layer()
 	set name = "Switch tail layer"
+<<<<<<< HEAD
 	set category = "IC.Game" //CHOMPEdit
+=======
+	set category = "IC.Game"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set desc = "Switch tail layer on top."
 	tail_alt = !tail_alt
 	update_tail_showing()
 
 /mob/living/carbon/human/verb/hide_wings_vr()
 	set name = "Show/Hide wings"
+<<<<<<< HEAD
 	set category = "IC.Settings" //CHOMPEdit
+=======
+	set category = "IC.Settings"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set desc = "Hide your wings, or show them if you already hid them."
 	wings_hidden = !wings_hidden
 	update_wing_showing()
@@ -64,7 +80,11 @@
 
 /mob/living/carbon/human/verb/hide_tail_vr()
 	set name = "Show/Hide tail"
+<<<<<<< HEAD
 	set category = "IC.Game" //CHOMPEdit
+=======
+	set category = "IC.Settings"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set desc = "Hide your tail, or show it if you already hid it."
 	if(!tail_style) //Just some checks.
 		to_chat(src,span_notice("You have no tail to hide!"))

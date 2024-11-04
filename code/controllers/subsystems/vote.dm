@@ -400,7 +400,11 @@ SUBSYSTEM_DEF(vote)
 	usr.client.vote()
 
 /client/verb/vote()
+<<<<<<< HEAD
 	set category = "OOC.Game" //CHOMPEdit
+=======
+	set category = "OOC.Game"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set name = "Vote"
 
 	if(SSvote)

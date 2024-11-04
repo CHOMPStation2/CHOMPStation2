@@ -1,6 +1,10 @@
 /client/proc/recipe_dump()
 	set name = "Generate Recipe Dump"
+<<<<<<< HEAD
 	set category = "Server.Admin" //CHOMPEdit
+=======
+	set category = "Server.Admin"
+>>>>>>> 4879a52633 (Server maint subsystem (#16518))
 	set desc = "Dumps food and drink recipe info and images for wiki or other use."
 
 	if(!holder)
