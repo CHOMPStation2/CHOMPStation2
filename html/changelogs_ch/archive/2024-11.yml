@@ -31,3 +31,14 @@
 2024-11-04:
   Kashargul:
   - admin: fix shadekin vore smite
+2024-11-05:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Vore panel no longer overflows when inside panel description is really
+      long.
+  - bugfix: Smartfridge overflowing it's table with long names
+  Darlantanis:
+  - bugfix: rotten egg init no longer applies to unrotten eggs
+  Kashargul:
+  - bugfix: playtime db writes
+  tesseracting:
+  - rscadd: Added two neutral traits for slower eating, standard and lesser.
