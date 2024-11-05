@@ -173,7 +173,14 @@ SUBSYSTEM_DEF(statpanels)
 	target.stat_panel.send_message("update_examine", examine_update)
 
 /datum/controller/subsystem/statpanels/proc/set_tickets_tab(client/target)
+<<<<<<< HEAD
 	var/list/tickets = GLOB.tickets.stat_entry(target) // CHOMPEdit
+=======
+	var/list/tickets = list()
+	if(check_rights(R_ADMIN|R_SERVER|R_MOD,FALSE,target)) //Prevents non-staff from opening the list of ahelp tickets
+		tickets += GLOB.ahelp_tickets.stat_entry(target)
+	tickets += GLOB.mhelp_tickets.stat_entry(target)
+>>>>>>> aea42effe5 (Restricts ahelp ticket view (#16551))
 	target.stat_panel.send_message("update_tickets", tickets)
 
 /datum/controller/subsystem/statpanels/proc/set_SDQL2_tab(client/target)
