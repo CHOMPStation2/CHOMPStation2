@@ -28493,7 +28493,8 @@
 	dir = 4;
 	pixel_x = -24;
 	name = "1W-Bolt control";
-	id = "sc-DBCpatient01"
+	id = "sc-DBCpatient01";
+	specialfunctions = 4
 	},
 /turf/simulated/floor/wood/alt,
 /area/medical/Patient_1)
@@ -29907,7 +29908,8 @@
 /obj/machinery/button/remote/airlock{
 	id = "sc-DBCpatient03";
 	name = "1N-Bolt control";
-	pixel_y = 24
+	pixel_y = 24;
+	specialfunctions = 4
 	},
 /obj/structure/cable/green{
 	d1 = 2;
@@ -38375,7 +38377,8 @@
 /obj/machinery/button/remote/airlock{
 	pixel_y = 24;
 	name = "1N-Bolt control";
-	id = "sc-DBresleevingstall3"
+	id = "sc-DBresleevingstall3";
+	specialfunctions = 4
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/medical/Restrooms)
@@ -46078,7 +46081,8 @@
 /obj/machinery/button/remote/airlock{
 	pixel_y = 24;
 	name = "1N-Bolt control";
-	id = "sc-DBresleevingstall2"
+	id = "sc-DBresleevingstall2";
+	specialfunctions = 4
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/medical/Restrooms)
