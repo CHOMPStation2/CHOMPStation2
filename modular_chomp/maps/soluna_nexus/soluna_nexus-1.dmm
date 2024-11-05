@@ -28768,9 +28768,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/Exploration_Sling_Shuttle)
 "hIE" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 4
-	},
+/obj/machinery/atmospherics/pipe/manifold4w/hidden,
 /obj/effect/floor_decal/steeldecal/steel_decals_central2{
 	dir = 4;
 	color = "#989898"
@@ -45669,6 +45667,8 @@
 	dir = 8;
 	color = "#989898"
 	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume,
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/dark,
 /area/harbor/Dock4)
 "nML" = (
@@ -46672,6 +46672,10 @@
 	dir = 8;
 	color = "#989898"
 	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 1
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/dark,
 /area/harbor/Dock4)
 "ocs" = (
@@ -48096,6 +48100,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central2{
 	dir = 8;
 	color = "#989898"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/harbor/Dock4)
@@ -49935,9 +49942,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/Port_1Deck_Atrium)
 "pfw" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 8
-	},
+/obj/machinery/atmospherics/pipe/manifold4w/hidden,
 /obj/effect/floor_decal/steeldecal/steel_decals_central2{
 	dir = 8;
 	color = "#989898"
@@ -52395,6 +52400,8 @@
 	dir = 4;
 	color = "#989898"
 	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume,
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/dark,
 /area/harbor/Dock1)
 "pSA" = (
@@ -55374,6 +55381,10 @@
 	dir = 4;
 	color = "#989898"
 	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 1
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/dark,
 /area/harbor/Dock1)
 "qTI" = (
@@ -61498,6 +61509,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central2{
 	dir = 4;
 	color = "#989898"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/harbor/Dock1)
@@ -89344,7 +89358,7 @@ cmI
 aaf
 aBe
 cNg
-cNg
+kgv
 cNg
 aBe
 aaa
@@ -123400,7 +123414,7 @@ htS
 aaf
 oAw
 eVQ
-eVQ
+cMm
 eVQ
 oAw
 aaa

@@ -8979,7 +8979,8 @@
 	dir = 8;
 	pixel_x = 24;
 	name = "1E-Bolt control";
-	id = "sc-DBCstall3"
+	id = "sc-DBCstall3";
+	specialfunctions = 4
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/Central_Restroom)
@@ -10367,7 +10368,8 @@
 	name = "Office Door Control";
 	req_access = list(20);
 	pixel_y = 24;
-	pixel_x = -6
+	pixel_x = -6;
+	specialfunctions = 4
 	},
 /obj/machinery/button/remote/airlock{
 	desc = "A remote control switch for the Starboard Bridge Doors.";
@@ -10375,7 +10377,8 @@
 	name = "Bridge Door Control";
 	req_access = list(20);
 	pixel_x = 5;
-	pixel_y = 24
+	pixel_y = 24;
+	specialfunctions = 4
 	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/bridge/Captain_Office)
@@ -21268,7 +21271,8 @@
 	dir = 8;
 	pixel_x = 24;
 	name = "1E-Bolt control";
-	id = "sc-DBCstall2"
+	id = "sc-DBCstall2";
+	specialfunctions = 4
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/Central_Restroom)
@@ -21303,7 +21307,8 @@
 	dir = 8;
 	pixel_x = 24;
 	name = "1E-Bolt control";
-	id = "sc-DBCstall1"
+	id = "sc-DBCstall1";
+	specialfunctions = 4
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/Central_Restroom)
@@ -47258,7 +47263,8 @@
 /obj/machinery/button/remote/airlock{
 	pixel_y = 24;
 	name = "1N-Bolt control";
-	id = "sc-DBresleevingstall1"
+	id = "sc-DBresleevingstall1";
+	specialfunctions = 4
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/medical/Restrooms)
@@ -59681,7 +59687,8 @@
 	dir = 4;
 	pixel_x = -24;
 	name = "1W-Bolt control";
-	id = "sc-DBCpatient04"
+	id = "sc-DBCpatient04";
+	specialfunctions = 4
 	},
 /turf/simulated/floor/wood/alt/parquet,
 /area/medical/Patient_2)
@@ -62615,7 +62622,8 @@
 	dir = 8;
 	pixel_x = 24;
 	name = "1E-Bolt control";
-	id = "sc-DBCpatient02"
+	id = "sc-DBCpatient02";
+	specialfunctions = 4
 	},
 /turf/simulated/floor/wood/alt/parquet,
 /area/medical/Patient_3)
