@@ -90457,7 +90457,8 @@
 /obj/machinery/door/airlock/angled_bay/hatch/atmos{
 	dir = 4;
 	name = "Technical Storage";
-	req_one_access = list(10,23,30,56,70)
+	req_one_access = list(10,23,30,56,70);
+	req_access = null
 	},
 /obj/structure/cable/green{
 	d1 = 4;
