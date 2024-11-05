@@ -285,7 +285,7 @@
 
 /mob/verb/memory()
 	set name = "Notes"
-	set category = "IC.Game" //CHOMPEdit
+	set category = "IC.Game"
 	if(mind)
 		mind.show_memory(src)
 	else
@@ -293,7 +293,7 @@
 
 /mob/verb/add_memory(msg as message)
 	set name = "Add Note"
-	set category = "IC.Game" //CHOMPEdit
+	set category = "IC.Game"
 
 	msg = sanitize(msg)
 
@@ -351,9 +351,9 @@
 	// Special cases, can never respawn
 	if(ticker?.mode?.deny_respawn)
 		time = -1
-	else if(!CONFIG_GET(flag/abandon_allowed)) // CHOMPEdit
+	else if(!CONFIG_GET(flag/abandon_allowed))
 		time = -1
-	else if(!CONFIG_GET(flag/respawn)) // CHOMPEdit
+	else if(!CONFIG_GET(flag/respawn))
 		time = -1
 
 	// Special case for observing before game start
@@ -362,7 +362,7 @@
 
 	// Wasn't given a time, use the config time
 	else if(!time)
-		time = CONFIG_GET(number/respawn_time) // CHOMPEdit
+		time = CONFIG_GET(number/respawn_time)
 
 	var/keytouse = ckey
 	// Try harder to find a key to use
@@ -374,14 +374,14 @@
 	GLOB.respawn_timers[keytouse] = world.time + time
 
 /mob/observer/dead/set_respawn_timer()
-	if(CONFIG_GET(flag/antag_hud_restricted) && has_enabled_antagHUD) // CHOMPEdit
+	if(CONFIG_GET(flag/antag_hud_restricted) && has_enabled_antagHUD)
 		..(-1)
 	else
 		return // Don't set it, no need
 
 /mob/verb/abandon_mob()
 	set name = "Return to Menu"
-	set category = "OOC.Game" //CHOMPEdit
+	set category = "OOC.Game"
 
 	if(stat != DEAD || !ticker)
 		to_chat(usr, span_boldnotice("You must be dead to use this!"))
@@ -462,7 +462,7 @@
 
 /client/verb/changes()
 	set name = "Changelog"
-	set category = "OOC.Resources" //CHOMPEdit
+	set category = "OOC.Resources"
 	// CHOMPedit Start - Better Changelog
 	//src << browse('html/changelog.html', "window=changes;size=675x650")
 	//return
@@ -478,7 +478,7 @@
 
 /mob/verb/observe()
 	set name = "Observe"
-	set category = "OOC.Game" //CHOMPEdit
+	set category = "OOC.Game"
 	var/is_admin = 0
 
 	if(client.holder && (client.holder.rights & R_ADMIN|R_EVENT))
@@ -520,7 +520,7 @@
 
 /mob/verb/cancel_camera()
 	set name = "Cancel Camera View"
-	set category = "OOC.Game" //CHOMPEdit
+	set category = "OOC.Game"
 	unset_machine()
 	reset_view(null)
 
@@ -535,8 +535,7 @@
 		onclose(usr, "[name]")
 	if(href_list["flavor_change"])
 		update_flavor_text()
-//	..()
-	return
+	return ..()
 
 
 /mob/proc/pull_damage()
@@ -545,7 +544,7 @@
 /mob/verb/stop_pulling()
 
 	set name = "Stop Pulling"
-	set category = "IC.Game" //CHOMPEdit
+	set category = "IC.Game"
 
 	if(pulling)
 		if(ishuman(pulling))
@@ -1003,7 +1002,7 @@
 /mob/verb/face_direction()
 
 	set name = "Face Direction"
-	set category = "IC.Game" //CHOMPEdit
+	set category = "IC.Game"
 	set src = usr
 
 	set_face_dir()

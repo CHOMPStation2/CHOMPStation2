@@ -30,7 +30,7 @@
 	affected_turf.lighting_object = src
 	affected_turf.set_luminosity(0)
 
-	if(config.starlight)
+	if(CONFIG_GET(flag/starlight))
 		for(var/turf/space/space_tile in RANGE_TURFS(1, affected_turf))
 			space_tile.update_starlight()
 
@@ -85,17 +85,9 @@
 		//anything that passes the first case is very likely to pass the second, and addition is a little faster in this case
 		current_underlay.icon_state = "transparent"
 		current_underlay.color = null
-<<<<<<< HEAD
-		affected_turf.underlays |= current_underlay
-=======
->>>>>>> 8c2d326214... Micro-opt lighting (#16482)
 	else if(!set_luminosity)
 		current_underlay.icon_state = "dark"
 		current_underlay.color = null
-<<<<<<< HEAD
-		affected_turf.underlays |= current_underlay
-=======
->>>>>>> 8c2d326214... Micro-opt lighting (#16482)
 	else
 		current_underlay.icon_state = "gradient"
 		current_underlay.color = null //CHOMPEdit
@@ -107,14 +99,9 @@
 			00, 00, 00, 01
 		)
 
-<<<<<<< HEAD
-		affected_turf.underlays |= current_underlay
-
-=======
 	// Of note. Most of the cost in this proc is here, I think because color matrix'd underlays DO NOT cache well, which is what adding to underlays does
 	// We use underlays because objects on each tile would fuck with maptick. if that ever changes, use an object for this instead
 	affected_turf.underlays += current_underlay
->>>>>>> 8c2d326214... Micro-opt lighting (#16482)
 	affected_turf.set_luminosity(set_luminosity)
 
 /datum/lighting_object/proc/removefromturf()

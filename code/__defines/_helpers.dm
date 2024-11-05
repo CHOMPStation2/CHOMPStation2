@@ -14,4 +14,3 @@
 #define ICON_SIZE_X 32
 /// The Y/Height dimension of ICON_SIZE. This will more than likely be the smaller axis.
 #define ICON_SIZE_Y 32
-yy

@@ -1,4 +1,5 @@
-#define BUCKET_LEN (round(10*(60/world.tick_lag), 1)) //how many ticks should we keep in the bucket. (1 minutes worth)
+/// Controls how many buckets should be kept, each representing a tick. (1 minutes worth)
+#define BUCKET_LEN (world.fps*1*60)
 /// Helper for getting the correct bucket for a given timer
 #define BUCKET_POS(timer) (((ROUND_UP((timer.timeToRun - timer.timer_subsystem.head_offset) / world.tick_lag)+1) % BUCKET_LEN) || BUCKET_LEN)
 /// Gets the maximum time at which timers will be invoked from buckets, used for deferring to secondary queue
@@ -55,7 +56,7 @@ SUBSYSTEM_DEF(timer)
 	bucket_resolution = world.tick_lag
 
 /datum/controller/subsystem/timer/stat_entry(msg)
-	msg = "B:[bucket_count] P:[length(second_queue)] H:[length(hashes)] C:[length(clienttime_timers)] S:[length(timer_id_dict)] RST:[bucket_reset_count]" // CHOMPEdit
+	msg = "B:[bucket_count] P:[length(second_queue)] H:[length(hashes)] C:[length(clienttime_timers)] S:[length(timer_id_dict)] RST:[bucket_reset_count]"
 	return ..()
 
 /datum/controller/subsystem/timer/proc/dump_timer_buckets(full = TRUE)
@@ -101,25 +102,7 @@ SUBSYSTEM_DEF(timer)
 		WARNING(msg)
 		if(bucket_auto_reset)
 			bucket_resolution = 0
-
-		log_world("Timer bucket reset. world.time: [world.time], head_offset: [head_offset], practical_offset: [practical_offset]")
-		for (var/i in 1 to length(bucket_list))
-			var/datum/timedevent/bucket_head = bucket_list[i]
-			if (!bucket_head)
-				continue
-
-			log_world("Active timers at index [i]:")
-
-			var/datum/timedevent/bucket_node = bucket_head
-			var/anti_loop_check = 1000
-			do
-				log_world(get_timer_debug_string(bucket_node))
-				bucket_node = bucket_node.next
-				anti_loop_check--
-			while(bucket_node && bucket_node != bucket_head && anti_loop_check)
-		log_world("Active timers in the second_queue queue:")
-		for(var/I in second_queue)
-			log_world(get_timer_debug_string(I))
+		dump_timer_buckets(CONFIG_GET(flag/log_timers_on_bucket_reset))
 
 	// Process client-time timers
 	if (next_clienttime_timer_index)
@@ -541,7 +524,7 @@ SUBSYSTEM_DEF(timer)
 		2 = timeToRun,
 		3 = wait,
 		4 = flags,
-		5 = callBack, /* Safe to hold this directly becasue it's never del'd */
+		5 = callBack, /* Safe to hold this directly because it's never del'd */
 		6 = "[callBack.object]",
 		7 = text_ref(callBack.object),
 		8 = getcallingtype(),
@@ -556,7 +539,7 @@ SUBSYSTEM_DEF(timer)
 		2 = timeToRun,
 		3 = wait,
 		4 = flags,
-		5 = callBack, /* Safe to hold this directly becasue it's never del'd */
+		5 = callBack, /* Safe to hold this directly because it's never del'd */
 		6 = "[callBack.object]",
 		7 = getcallingtype(),
 		8 = callBack.delegate,
@@ -662,7 +645,7 @@ SUBSYSTEM_DEF(timer)
 				hash_timer.hash = null // but keep it from accidentally deleting us
 			else
 				if (flags & TIMER_OVERRIDE)
-					hash_timer.hash = null // no need having it delete it's hash if we are going to replace it
+					hash_timer.hash = null // no need having it delete its hash if we are going to replace it
 					qdel(hash_timer)
 				else
 					if (hash_timer.flags & TIMER_STOPPABLE)

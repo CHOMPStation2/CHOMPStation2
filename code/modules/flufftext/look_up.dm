@@ -2,7 +2,7 @@
 
 /mob/living/verb/look_up()
 	set name = "Look Up"
-	set category = "IC.Game" //CHOMPEdit
+	set category = "IC.Game"
 	set desc = "Look above you, and hope there's no ceiling spiders."
 
 	to_chat(usr, "You look upwards...")

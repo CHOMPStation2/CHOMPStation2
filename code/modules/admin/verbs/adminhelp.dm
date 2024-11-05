@@ -474,10 +474,10 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 	log_admin(msg)
 	AddInteraction("[key_name_admin(usr)] is now handling this ticket.")
 	var/query_string = "type=admintake"
-	query_string += "&key=[url_encode(CONFIG_GET(string/chat_webhook_key))]" // CHOMPEdit
+	query_string += "&key=[url_encode(CONFIG_GET(string/chat_webhook_key))]"
 	query_string += "&admin=[url_encode(key_name(usr))]"
 	query_string += "&user=[url_encode(key_name(initiator))]"
-	world.Export("[CONFIG_GET(string/chat_webhook_url)]?[query_string]") // CHOMPEdit
+	world.Export("[CONFIG_GET(string/chat_webhook_url)]?[query_string]")
 
 
 
@@ -678,7 +678,7 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 //admin proc
 /client/proc/cmd_admin_ticket_panel()
 	set name = "Show Ticket List"
-	set category = "Admin.Misc" //CHOMPEdit
+	set category = "Admin.Misc"
 
 	if(!check_rights(R_ADMIN|R_MOD|R_DEBUG|R_EVENT, TRUE))
 		return

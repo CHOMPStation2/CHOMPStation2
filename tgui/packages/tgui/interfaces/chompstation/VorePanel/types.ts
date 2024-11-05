@@ -29,15 +29,15 @@ export type hostMob = {
 
 export type insideData = {
   absorbed: BooleanLike;
-  belly_name: string;
-  belly_mode: string;
-  desc: string;
-  pred: string;
-  ref: string;
-  liq_lvl: number;
-  liq_reagent_type: string;
-  liuq_name: string;
-  contents: contentData[];
+  belly_name?: string;
+  belly_mode?: string;
+  desc?: string;
+  pred?: string;
+  ref?: string;
+  liq_lvl?: number;
+  liq_reagent_type?: string;
+  liuq_name?: string;
+  contents?: contentData[];
 };
 
 export type contentData = {

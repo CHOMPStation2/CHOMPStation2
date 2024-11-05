@@ -37,6 +37,7 @@
 		/mob/living/carbon/human/proc/shapeshifter_select_wings,
 		/mob/living/carbon/human/proc/shapeshifter_select_tail,
 		/mob/living/carbon/human/proc/shapeshifter_select_ears,
+		/mob/living/carbon/human/proc/shapeshifter_select_secondary_ears,
 		/mob/living/proc/set_size,
 		/mob/living/carbon/human/proc/regenerate,
 		/mob/living/carbon/human/proc/promethean_select_opaqueness,
@@ -53,7 +54,7 @@
 /mob/living/carbon/human/proc/shapeshifter_change_opacity()
 
 	set name = "Toggle Opacity"
-	set category = "Abilities.Shapeshifter" //CHOMPEdit
+	set category = "Abilities.Shapeshifter"
 
 	if(stat || world.time < last_special)
 		return
@@ -87,7 +88,7 @@
 // exit_vr is called on the vr mob, and puts the mind back into the original mob
 /mob/living/carbon/human/proc/exit_vr()
 	set name = "Exit Virtual Reality"
-	set category = "Abilities.VR" //CHOMPEdit
+	set category = "Abilities.VR"
 
 	if(!vr_holder)
 		return
@@ -124,12 +125,16 @@
 		var/obj/machinery/vr_sleeper/V = vr_holder.loc
 		V.go_out()
 
+//CHOMPAdd Start
 	if(died_in_vr)
-		spawn(3000) //Delete the body after 5 minutes to make sure mob subsystem doesn't cry
-			var/list/slots = list(slot_back,slot_handcuffed,slot_l_store,slot_r_store,slot_wear_mask,slot_l_hand,slot_r_hand,slot_wear_id,slot_glasses,slot_gloves,slot_head,slot_shoes,slot_belt,slot_wear_suit,slot_w_uniform,slot_s_store,slot_l_ear,slot_r_ear)
-			for(var/slot in slots)
-				var/obj/item/I = get_equipped_item(slot = slot)
-				if(I)
-					unEquip(I,force = TRUE)
-			release_vore_contents(include_absorbed = TRUE, silent = TRUE)
-			qdel(src)
+		addtimer(CALLBACK(src, PROC_REF(cleanup_vr)), 3000, TIMER_DELETE_ME) //Delete the body after 5 minutes
+
+/mob/living/carbon/human/proc/cleanup_vr()
+	var/list/slots = list(slot_back,slot_handcuffed,slot_l_store,slot_r_store,slot_wear_mask,slot_l_hand,slot_r_hand,slot_wear_id,slot_glasses,slot_gloves,slot_head,slot_shoes,slot_belt,slot_wear_suit,slot_w_uniform,slot_s_store,slot_l_ear,slot_r_ear)
+	for(var/slot in slots)
+		var/obj/item/I = get_equipped_item(slot = slot)
+		if(I)
+			unEquip(I,force = TRUE)
+	release_vore_contents(include_absorbed = TRUE, silent = TRUE)
+	qdel(src)
+//CHOMPAdd End

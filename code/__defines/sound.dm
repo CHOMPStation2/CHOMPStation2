@@ -241,3 +241,10 @@
 	'sound/ambience/engineering/engineering3.ogg',\
 	'sound/ambience/atmospherics/atmospherics1.ogg'\
 	)
+
+// CHOMPEdit: New Planet Ambience
+#define AMBIENCE_THOR list(\
+	'modular_chomp/sound/ambience/thor/birds_stinger1.ogg',\
+	'modular_chomp/sound/ambience/thor/birds_stinger2.ogg',\
+	'modular_chomp/sound/ambience/thor/birds_stinger3.ogg'\
+)

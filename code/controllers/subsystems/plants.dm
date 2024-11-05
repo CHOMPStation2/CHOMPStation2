@@ -150,7 +150,7 @@ SUBSYSTEM_DEF(plants)
 
 // Debug for testing seed genes.
 /client/proc/show_plant_genes()
-	set category = "Debug.Investigate" //CHOMPEdit
+	set category = "Debug.Investigate"
 	set name = "Show Plant Genes"
 	set desc = "Prints the round's plant gene masks."
 

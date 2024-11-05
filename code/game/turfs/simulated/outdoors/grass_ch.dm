@@ -126,6 +126,20 @@ GLOBAL_LIST_INIT(grass_animals,list(
 	"smokestar" = list(
 		/mob/living/simple_mob/vore/smokestar/drider = 1
 		),
+	"thor_real" = list(
+		/mob/living/simple_mob/vore/aggressive/frog = 5,
+		/mob/living/simple_mob/animal/sif/glitterfly = 35,
+		/mob/living/simple_mob/vore/otie = 15,
+		/mob/living/simple_mob/vore/otie/feral = 5,
+		/mob/living/simple_mob/vore/fennec = 20,
+		/mob/living/simple_mob/animal/passive/lizard = 20,
+		/mob/living/simple_mob/animal/passive/armadillo = 10,
+		/mob/living/simple_mob/animal/passive/opossum = 10,
+		/mob/living/simple_mob/animal/passive/mouse/jerboa = 5,
+		/mob/living/simple_mob/vore/wolf/direwolf = 5,
+		/mob/living/simple_mob/vore/aggressive/rat = 5,
+		/mob/living/simple_mob/vore/horse/big = 10
+		),
 ))
 
 GLOBAL_LIST_INIT(grass_grass,list(
@@ -211,6 +225,20 @@ GLOBAL_LIST_INIT(grass_grass,list(
 		/obj/structure/flora/ausbushes/sparsegrass,
 		/obj/structure/flora/ausbushes/fullgrass
 		),
+	"thor_real" = list(
+		/obj/structure/flora/ausbushes/sparsegrass,
+		/obj/structure/flora/ausbushes/fullgrass,
+		/obj/structure/flora/ausbushes/lavendergrass,
+		/obj/structure/flora/ausbushes/genericbush,
+		/obj/structure/flora/ausbushes/grassybush,
+		/obj/structure/flora/ausbushes/sunnybush,
+		/obj/structure/flora/ausbushes/brflowers,
+		/obj/structure/flora/ausbushes/ppflowers,
+		/obj/structure/flora/ausbushes/ywflowers,
+		/obj/structure/flora/tree/jungle_small,
+		/obj/structure/flora/tree/jungle,
+		/obj/structure/flora/ausbushes/leafybush,
+		)
 ))
 
 GLOBAL_LIST_INIT(grass_trees, list(
@@ -224,7 +252,7 @@ GLOBAL_LIST_INIT(grass_trees, list(
 		/obj/structure/flora/tree/jungle_small,
 		/obj/structure/flora/tree/jungle
 		),
-	"seasonalfall" = list(
+	"seasonalautumn" = list(
 		/obj/structure/flora/tree/bigtree
 		),
 	"seasonalwinter" = list(

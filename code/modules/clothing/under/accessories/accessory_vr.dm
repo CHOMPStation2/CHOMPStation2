@@ -733,7 +733,7 @@
 	desc = "The latest fashion innovations by the Nanotrasen Uniform & Fashion Department have provided the brilliant invention of slicing a regular cloak in half! All the ponce, half the cost!"
 	icon_state = "roughcloak"
 	item_state = "roughcloak"
-	action_button_name = "Adjust Cloak"
+	actions_types = list(/datum/action/item_action/adjust_cloak)
 
 /obj/item/clothing/accessory/poncho/roles/cloak/half/update_clothing_icon()
 	. = ..()
@@ -1004,7 +1004,7 @@
 	desc = "Aim for the Heart, Ramon."
 	icon_state = "neo_ranger"
 	item_state = "neo_ranger"
-	action_button_name = "Adjust Poncho"
+	actions_types = list(/datum/action/item_action/adjust_poncho)
 
 /obj/item/clothing/accessory/poncho/roles/neo_ranger/update_clothing_icon()
 	. = ..()
@@ -1052,3 +1052,13 @@
 	desc = "A studded belt for holding your pants up and looking cool."
 	icon_state = "belt_studded"
 	item_state = "belt_studded"
+
+/obj/item/clothing/accessory/bunny_tail
+	name = "Bunny Tail"
+	desc = "A little fluffy bunny tail to spice up your outfit."
+	icon = 'icons/inventory/accessory/item.dmi'
+	icon_override = 'icons/inventory/accessory/mob.dmi'
+	icon_state = "bunny_tail"
+	item_state = "bunny_tail"
+	slot_flags = SLOT_TIE | SLOT_BELT
+	slot = ACCESSORY_SLOT_DECOR
