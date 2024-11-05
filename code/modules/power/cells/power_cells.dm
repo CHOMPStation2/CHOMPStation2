@@ -17,6 +17,7 @@
 	icon_state = "crap"
 	maxcharge = 500
 	matter = list(MAT_STEEL = 700, MAT_GLASS = 40)
+	robot_durability = 20
 
 /obj/item/cell/crap/update_icon() //No visible charge indicator
 	return
@@ -51,6 +52,7 @@
 	icon_state = "high"
 	maxcharge = 10000
 	matter = list(MAT_STEEL = 700, MAT_GLASS = 60)
+	robot_durability = 55
 
 /obj/item/cell/high/empty/Initialize() //ChompEDIT New --> Initialize
 	..()
@@ -66,6 +68,7 @@
 	icon_state = "super"
 	maxcharge = 20000
 	matter = list(MAT_STEEL = 700, MAT_GLASS = 70)
+	robot_durability = 60
 
 /obj/item/cell/super/empty/Initialize() //ChompEDIT New --> Initialize
 	..()
@@ -80,6 +83,7 @@
 	description_fluff = "Almost as good as a hyper."
 	icon_state = "super" //We don't want roboticists confuse it with a low standard cell
 	maxcharge = 25000
+	robot_durability = 65
 
 /*
  * Hyper
@@ -90,6 +94,7 @@
 	icon_state = "hyper"
 	maxcharge = 30000
 	matter = list(MAT_STEEL = 700, MAT_GLASS = 80)
+	robot_durability = 70
 
 /obj/item/cell/hyper/empty/Initialize() //ChompEDIT New --> Initialize
 	..()
@@ -144,6 +149,7 @@
 	origin_tech =  null
 	maxcharge = 30000 //determines how badly mobs get shocked
 	matter = list(MAT_STEEL = 700, MAT_GLASS = 80)
+	robot_durability = 200
 
 /obj/item/cell/infinite/check_charge()
 	return 1
@@ -162,6 +168,7 @@
 	charge = 100
 	maxcharge = 300
 	minor_fault = 1
+	robot_durability = 30
 
 /*
  * Slime
