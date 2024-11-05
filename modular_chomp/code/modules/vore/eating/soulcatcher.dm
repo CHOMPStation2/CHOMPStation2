@@ -63,7 +63,7 @@
 	if(istype(linked_belly))
 		UnregisterSignal(linked_belly, COMSIG_BELLY_UPDATE_VORE_FX)
 		linked_belly = null
-	..()
+	. = ..()
 
 // Sends messages to the owner of the soulcatcher
 /obj/soulgem/proc/notify_holder(var/message)

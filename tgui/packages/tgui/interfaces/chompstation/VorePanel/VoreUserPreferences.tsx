@@ -12,7 +12,6 @@ import { VoreUserPreferencesSpawn } from './VoreUserPreferencesTabs/VoreUserPref
 import { VoreUserPreferencesSpontaneous } from './VoreUserPreferencesTabs/VoreUserPreferencesSpontaneous';
 
 export const VoreUserPreferences = (props: {
-  unsaved_changes: BooleanLike;
   prefs: prefData;
   selected: selectedData | null;
   show_pictures: BooleanLike;
@@ -20,8 +19,7 @@ export const VoreUserPreferences = (props: {
 }) => {
   const { act } = useBackend();
 
-  const { unsaved_changes, prefs, selected, show_pictures, icon_overflow } =
-    props;
+  const { prefs, selected, show_pictures, icon_overflow } = props;
   const {
     digestable,
     absorbable,
@@ -706,7 +704,7 @@ export const VoreUserPreferences = (props: {
   };
 
   return (
-    <Section scrollable fill height={unsaved_changes ? '78%' : '83%'} nowrap>
+    <Section scrollable fill>
       <VoreUserPreferencesMechanical
         show_pictures={show_pictures}
         icon_overflow={icon_overflow}

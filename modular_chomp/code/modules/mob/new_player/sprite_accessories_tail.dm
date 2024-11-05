@@ -51,3 +51,10 @@
 /datum/sprite_accessory/tail/featheredraptor/twotone
 	name = "feathered Raptor, duel colorable"
 	extra_overlay = "feather_raptor-overlay"
+
+/datum/sprite_accessory/tail/succubustail_ch
+	name = "Succubus Tail"
+	icon = 'modular_chomp/icons/mob/vore/tails.dmi'
+	icon_state = "Succubustail"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY

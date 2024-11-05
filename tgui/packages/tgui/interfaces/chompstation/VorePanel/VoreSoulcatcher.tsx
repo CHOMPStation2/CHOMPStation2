@@ -1,4 +1,3 @@
-import { BooleanLike } from 'common/react';
 import { useBackend } from 'tgui/backend';
 import {
   Box,
@@ -17,21 +16,20 @@ import { GlobalSettings } from './VoreSoulcatcherSettings/GlobalSettings';
 import { SoulOptions } from './VoreSoulcatcherSettings/SoulOptions';
 
 export const VoreSoulcatcher = (props: {
-  unsaved_changes: BooleanLike;
   soulcatcher: soulcatcherData | null;
   our_bellies: Required<bellyData[]> & {
     map(arg0: (belly: bellyData) => DropdownEntry): DropdownEntry[];
   };
   abilities: abilities;
 }) => {
-  const { unsaved_changes, soulcatcher, our_bellies, abilities } = props;
+  const { soulcatcher, our_bellies, abilities } = props;
 
   const getBellies = our_bellies.map((belly) => {
     return { ...belly, displayText: belly.name, value: belly.ref };
   });
 
   return (
-    <Section scrollable height={unsaved_changes ? '78%' : '83%'}>
+    <Section scrollable fill>
       {soulcatcher && (
         <VoreSoulcatcherSection
           soulcatcher={soulcatcher}

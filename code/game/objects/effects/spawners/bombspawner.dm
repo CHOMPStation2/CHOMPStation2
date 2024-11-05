@@ -1,5 +1,5 @@
 /client/proc/spawn_tanktransferbomb()
-	set category = "Debug.Game" //CHOMPEdit
+	set category = "Debug.Game"
 	set desc = "Spawn a tank transfer valve bomb"
 	set name = "Instant TTV"
 

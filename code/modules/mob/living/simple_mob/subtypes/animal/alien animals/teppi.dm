@@ -975,7 +975,7 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 //
 /mob/living/simple_mob/vore/alienanimals/teppi/proc/produce_offspring()
 	set name = "Produce Offspring"
-	set category = "Abilities.Teppi" //CHOMPEdit
+	set category = "Abilities.Teppi"
 	set desc = "You can have babies if the conditions are right."
 	if(prevent_breeding)
 		to_chat(src, span_notice("You have elected to not participate in breeding mechanics, and so cannot complete that action."))
@@ -1017,7 +1017,7 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 
 /mob/living/simple_mob/vore/alienanimals/teppi/proc/toggle_producing_offspring()
 	set name = "Toggle Producing Offspring"
-	set category = "Abilities.Teppi" //CHOMPEdit
+	set category = "Abilities.Teppi"
 	set desc = "You can toggle whether or not you can produce offspring."
 	if(!prevent_breeding)
 		to_chat(src, span_notice("You disable breeding."))

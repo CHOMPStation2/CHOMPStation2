@@ -277,14 +277,14 @@ I think I covered everything.
 /mob/living/simple_mob/vore/bigdragon/proc/toggle_glow()
 	set name = "Toggle Glow"
 	set desc = "Switch between glowing and not glowing."
-	set category = "Abilities.Settings" //CHOMPEdit
+	set category = "Abilities.Settings"
 
 	glow_toggle = !glow_toggle
 
 /mob/living/simple_mob/vore/bigdragon/proc/sprite_toggle()
 	set name = "Toggle Small Sprite"
 	set desc = "Switches your sprite to a smaller variant so you can see what you're doing. Others will always see your standard sprite instead. "
-	set category = "Abilities.Settings" //CHOMPEdit
+	set category = "Abilities.Settings"
 
 	if(!small)
 		var/image/I = image(icon = small_icon, icon_state = small_icon_state, loc = src)
@@ -299,7 +299,7 @@ I think I covered everything.
 /mob/living/simple_mob/vore/bigdragon/proc/flame_toggle()
 	set name = "Toggle breath attack"
 	set desc = "Toggles whether you will breath attack on harm intent (If you have one)."
-	set category = "Abilities.Settings" //CHOMPEdit
+	set category = "Abilities.Settings"
 
 	if(norange)
 		to_chat(src, span_userdanger("You don't have a breath attack!"))
@@ -311,7 +311,7 @@ I think I covered everything.
 /mob/living/simple_mob/vore/bigdragon/proc/special_toggle()
 	set name = "Toggle special attacks"
 	set desc = "Toggles whether you will tail spin and charge (If you have them)."
-	set category = "Abilities.Settings" //CHOMPEdit
+	set category = "Abilities.Settings"
 
 	if(nospecial)
 		to_chat(src, span_userdanger("You don't have special attacks!"))
@@ -422,7 +422,7 @@ I think I covered everything.
 /mob/living/simple_mob/vore/bigdragon/proc/set_style()
 	set name = "Set Dragon Style"
 	set desc = "Customise your icons."
-	set category = "Abilities.Settings" //CHOMPEdit
+	set category = "Abilities.Settings"
 
 	var/list/options = list("Underbelly","Body","Ears","Mane","Horns","Eyes")
 	for(var/option in options)

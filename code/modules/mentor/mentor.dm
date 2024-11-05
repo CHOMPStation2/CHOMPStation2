@@ -43,7 +43,7 @@ var/list/mentor_verbs_default = list(
 		remove_verb(src, mentor_verbs_default)
 
 /client/proc/make_mentor()
-	set category = "Admin.Secrets" //CHOMPEdit
+	set category = "Admin.Secrets"
 	set name = "Make Mentor"
 	if(!holder)
 		to_chat(src, span_admin_pm_warning("Error: Only administrators may use this command."))
@@ -73,7 +73,7 @@ var/list/mentor_verbs_default = list(
 	// CHOMPedit End
 
 /client/proc/unmake_mentor()
-	set category = "Admin.Secrets" //CHOMPEdit
+	set category = "Admin.Secrets"
 	set name = "Unmake Mentor"
 	if(!holder)
 		to_chat(src, span_admin_pm_warning("Error: Only administrators may use this command."))
@@ -97,7 +97,7 @@ var/list/mentor_verbs_default = list(
 	// CHOMPedit End
 
 /client/proc/cmd_mentor_say(msg as text)
-	set category = "Admin.Chat" //CHOMPEdit
+	set category = "Admin.Chat"
 	set name ="Mentorsay"
 
 	//check rights
@@ -139,7 +139,7 @@ var/list/mentor_verbs_default = list(
 	mentor_commands(href, href_list, usr)
 
 /client/proc/cmd_dementor()
-	set category = "Admin.Misc" //CHOMPEdit
+	set category = "Admin.Misc"
 	set name = "De-mentor"
 
 	if(tgui_alert(usr, "Confirm self-dementor for the round? You can't re-mentor yourself without someone promoting you.","Dementor",list("Yes","No")) == "Yes")
@@ -180,12 +180,15 @@ var/list/mentor_verbs_default = list(
 	set name = "Request help"
 	set hidden = 1
 
-	var/mhelp = tgui_alert(usr, "Select the help you need.","Request for Help",list("Adminhelp","Mentorhelp")) == "Mentorhelp"
+	var/mhelp = tgui_alert(usr, "Select the help you need.","Request for Help",list("Adminhelp","Mentorhelp"))
 	if(!mhelp)
 		return
-	var/msg = tgui_input_text(usr, "Input your request for help.", "Request for Help", multiline = TRUE)
 
-	if (mhelp)
+	var/msg = tgui_input_text(usr, "Input your request for help.", "Request for Help ([mhelp])", multiline = TRUE)
+	if(!msg)
+		return
+
+	if (mhelp == "Mentorhelp")
 		mentorhelp(msg)
 		return
 

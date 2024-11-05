@@ -126,7 +126,7 @@
 /mob/living/simple_mob/animal/space/space_worm/head/verb/toggle_devour()
 	set name = "Toggle Feeding"
 	set desc = "Extends your teeth for 30 seconds so that you can chew through mobs and structures alike."
-	set category = "Abilities.Worm" //CHOMPEdit
+	set category = "Abilities.Worm"
 
 	if(world.time < time_maw_opened + maw_cooldown)
 		if(open_maw)

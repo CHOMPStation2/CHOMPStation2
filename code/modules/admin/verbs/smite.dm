@@ -1,7 +1,7 @@
 /client/proc/smite(var/mob/living/carbon/human/target in player_list)
 	set name = "Smite"
 	set desc = "Abuse a player with various 'special treatments' from a list."
-	set category = "Fun.Do Not" //CHOMPEdit
+	set category = "Fun.Do Not"
 	if(!check_rights(R_FUN))
 		return
 
@@ -64,6 +64,7 @@
 			var/mob/living/simple_mob/shadekin/red/shadekin = new(Ts)
 			//Abuse of shadekin
 			shadekin.real_name = shadekin.name
+			shadekin.voremob_loaded = TRUE // CHOMPAdd
 			shadekin.init_vore()
 			shadekin.ability_flags |= 0x1
 			shadekin.phase_shift()
@@ -117,6 +118,7 @@
 			target.transforming = TRUE //Cheap hack to stop them from moving
 			var/mob/living/simple_mob/shadekin/shadekin = new kin_type(Tt)
 			shadekin.real_name = shadekin.name
+			shadekin.voremob_loaded = TRUE // CHOMPAdd
 			shadekin.init_vore()
 			shadekin.can_be_drop_pred = TRUE
 			shadekin.dir = SOUTH

@@ -351,7 +351,7 @@ var/list/_simple_mob_default_emotes = list(
 /mob/living/carbon/human/verb/pose()
 	set name = "Set Pose"
 	set desc = "Sets a description which will be shown when someone examines you."
-	set category = "IC.Settings" //CHOMPEdit
+	set category = "IC.Settings"
 
 	var/datum/gender/T = gender_datums[get_visible_gender()]
 
@@ -360,7 +360,7 @@ var/list/_simple_mob_default_emotes = list(
 /mob/living/carbon/human/verb/set_flavor()
 	set name = "Set Flavour Text"
 	set desc = "Sets an extended description of your character's features."
-	set category = "IC.Settings" //CHOMPEdit
+	set category = "IC.Settings"
 
 	var/HTML = "<body>"
 	HTML += "<tt><center>"

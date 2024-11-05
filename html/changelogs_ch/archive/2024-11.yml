@@ -6,3 +6,39 @@
       them
   - bugfix: several MC crashes
   - bugfix: runtimes in blob ids
+2024-11-02:
+  Kashargul:
+  - bugfix: command nika will no longer be invisible
+  Raeschen:
+  - bugfix: Unathi min age increased to 40 for lore reasons
+2024-11-03:
+  CHOMPStation2StaffMirrorBot:
+  - qol: fixed water cooler bottles being terrible and bad (they're now made out of
+      plastic and hold a lot more water)
+  - code_imp: Codebase is now capable of running under 516.
+  - qol: Atmospherics now uses /Initialize instead of /New.
+  - rscadd: 'Roboticist has a new alt title: Software Engineer - "A Software Engineer
+      specializes in working with software and firmware. They also often deal with
+      integrated circuits."'
+  - rscadd: 'Engineer has a new alt title: Computer Technician - "A Computer Technician
+      fulfills similar duties to other engineers, but specializes in working with
+      software and computers. They also often deal with integrated circuits."'
+  - bugfix: In-repo StrongDMM updated
+  Kashargul:
+  - bugfix: blob / protean ooc notes not properly transferring
+  Raeschen:
+  - bugfix: Increase Skrell min age to 19
+2024-11-04:
+  Kashargul:
+  - admin: fix shadekin vore smite
+2024-11-05:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Vore panel no longer overflows when inside panel description is really
+      long.
+  - bugfix: Smartfridge overflowing it's table with long names
+  Darlantanis:
+  - bugfix: rotten egg init no longer applies to unrotten eggs
+  Kashargul:
+  - bugfix: playtime db writes
+  tesseracting:
+  - rscadd: Added two neutral traits for slower eating, standard and lesser.

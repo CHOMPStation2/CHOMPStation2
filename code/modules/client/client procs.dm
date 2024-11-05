@@ -185,6 +185,10 @@
 	//CONNECT//
 	///////////
 /client/New(TopicData)
+	// TODO: Remove version check with 516
+	if(byond_version >= 516) // Enable 516 compat browser storage mechanisms
+		winset(src, null, "browser-options=[DEFAULT_CLIENT_BROWSER_OPTIONS]")
+
 	TopicData = null							//Prevent calls to client.Topic from connect
 
 	if(!(connection in list("seeker", "web")))					//Invalid connection type.
@@ -313,6 +317,12 @@
 		//VOREStation Edit end.
 	fully_created = TRUE
 	attempt_auto_fit_viewport()
+
+	// TODO: Remove version check with 516
+	if(byond_version >= 516)
+		// Now that we're fully initialized, use our prefs
+		if(prefs?.read_preference(/datum/preference/toggle/browser_dev_tools))
+			winset(src, null, "browser-options=[DEFAULT_CLIENT_BROWSER_OPTIONS],devtools")
 
 	//////////////
 	//DISCONNECT//
@@ -526,13 +536,13 @@
 
 /client/verb/character_setup()
 	set name = "Character Setup"
-	set category = "Preferences.Character" //CHOMPEdit
+	set category = "Preferences.Character"
 	if(prefs)
 		prefs.ShowChoices(usr)
 
 /client/verb/game_options()
 	set name = "Game Options"
-	set category = "Preferences.Game" //CHOMPEdit
+	set category = "Preferences.Game"
 	if(prefs)
 		prefs.tgui_interact(usr)
 
@@ -634,7 +644,7 @@
 
 /client/verb/toggle_fullscreen()
 	set name = "Toggle Fullscreen"
-	set category = "OOC.Client Settings" //CHOMPEdit
+	set category = "OOC.Client Settings"
 
 	fullscreen = !fullscreen
 
@@ -656,7 +666,7 @@
 /*CHOMPRemove Start, we use TGPanel
 /client/verb/toggle_verb_panel()
 	set name = "Toggle Verbs"
-	set category = "OOC.Client Settings" //CHOMPEdit
+	set category = "OOC.Client Settings"
 
 	show_verb_panel = !show_verb_panel
 
@@ -666,7 +676,7 @@
 /*
 /client/verb/toggle_status_bar()
 	set name = "Toggle Status Bar"
-	set category = "OOC.Client Settings" //CHOMPEdit
+	set category = "OOC.Client Settings"
 
 	show_status_bar = !show_status_bar
 
@@ -678,7 +688,7 @@
 
 /client/verb/show_active_playtime()
 	set name = "Active Playtime"
-	set category = "IC.Game"
+	set category = "OOC.Game"
 
 	if(!play_hours.len)
 		to_chat(src, span_warning("Persistent playtime disabled!"))
