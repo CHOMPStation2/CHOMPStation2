@@ -249,8 +249,11 @@
 		/obj/item/flashlight,
 		/obj/item/cell/device,
 		/obj/item/extinguisher/mini,
+<<<<<<< HEAD
 		/obj/item/ammo_casing/macrobattery, // CHOMPedit: Macrobatteries for the Curabitur can fit into medbelts.
 		/obj/item/antibody_scanner, // VOREstation edit start
+=======
+>>>>>>> 9077c940c4 (Better Viro (#16536))
 		/obj/item/sleevemate,
 		/obj/item/mass_spectrometer,
 		/obj/item/surgical,
