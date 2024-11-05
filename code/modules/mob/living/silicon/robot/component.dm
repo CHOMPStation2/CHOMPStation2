@@ -302,8 +302,6 @@
 	desc = "A modular, multi-frequency radio used by robots and exosuits to enable communication systems. Comes with built-in subspace receivers."
 	icon_state = "radio"
 	icon_state_broken = "radio_broken"
-<<<<<<< HEAD
-=======
 	idle_usage = 15
 	active_usage = 75
 	max_damage = 40
@@ -342,4 +340,3 @@
 	desc = "A pair of flexible, adaptable armor plates, used to protect the internals of robots."
 	max_damage = 220
 	color = COLOR_OFF_WHITE
->>>>>>> a1576977cc (Robot upgrades (#16481))
