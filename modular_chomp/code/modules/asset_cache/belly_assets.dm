@@ -241,7 +241,6 @@
 /datum/belly_overlays/brown_internals_hole
 	belly_icon = 'modular_chomp/icons/mob/vore_fullscreens/brown_internals_hole.dmi'
 
-
 /datum/belly_overlays/da_tumby
 	belly_icon = 'modular_chomp/icons/mob/vore_fullscreens/da_tumby.dmi'
 
