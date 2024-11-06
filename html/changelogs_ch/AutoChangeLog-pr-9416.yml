@@ -1,0 +1,9 @@
+author: "tacoguy7765093"
+delete-after: True
+changes:
+  - maptweak: "Door bolts should bolt instead of open doors now."
+  - maptweak: "Fuel Depot is a valid spawn again"
+  - maptweak: "Overmap ships can dock on the station again"
+  - maptweak: "Replaced ERT level hardsuits in armory with security voidsuits, armory rebalance coming soon."
+  - maptweak: "Robotics can access tech storage again"
+  - maptweak: "Doubled the amount of vents at the large airlocks"
