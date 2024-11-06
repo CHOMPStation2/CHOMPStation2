@@ -4424,22 +4424,6 @@
 "ajM" = (
 /turf/simulated/wall,
 /area/security/Reception)
-"ajN" = (
-/obj/structure/table/rack,
-/obj/item/rig/pmc/security/green/equipped{
-	pixel_y = 6;
-	req_access = list()
-	},
-/obj/item/rig/pmc/security/green/equipped{
-	pixel_y = 1;
-	req_access = list()
-	},
-/obj/item/rig/pmc/security/green/equipped{
-	pixel_y = -4;
-	req_access = list()
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/security/Armory)
 "ajO" = (
 /obj/structure/extinguisher_cabinet{
 	name = "1N-extinguisher cabinet";
@@ -12024,20 +12008,19 @@
 /area/crew_quarters/Chomp_Kitchen)
 "aKh" = (
 /obj/structure/table/rack,
-/obj/item/rig/pmc/commander/green/equipped{
-	pixel_y = 6
+/obj/item/clothing/suit/space/void/security/alt{
+	pixel_x = -9
 	},
-/obj/item/rig/pmc/commander/green/equipped{
-	pixel_y = 6;
-	req_access = list()
+/obj/item/clothing/suit/space/void/security/alt{
+	pixel_x = 4
 	},
-/obj/item/rig/pmc/security/green/equipped{
-	pixel_y = 1;
-	req_access = list()
+/obj/item/clothing/head/helmet/space/void/security/alt{
+	pixel_y = 0;
+	pixel_x = 6
 	},
-/obj/item/rig/pmc/security/green/equipped{
-	pixel_y = -4;
-	req_access = list()
+/obj/item/clothing/head/helmet/space/void/security/alt{
+	pixel_y = 0;
+	pixel_x = -8
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/Armory)
@@ -23798,21 +23781,42 @@
 /area/crew_quarters/Rec_Lounge)
 "bwa" = (
 /obj/structure/table/rack,
-/obj/item/rig/pmc/medical/green/equipped{
-	pixel_y = 6
-	},
-/obj/item/rig/pmc/medical/green/equipped{
-	pixel_y = 6;
-	req_access = list()
-	},
-/obj/item/rig/pmc/medical/green/equipped{
-	pixel_y = 1;
-	req_access = list()
-	},
-/obj/item/rig/pmc/medical/green/equipped{
+/obj/item/clothing/shoes/magboots{
 	pixel_y = -4;
-	req_access = list()
+	pixel_x = 1
 	},
+/obj/item/clothing/shoes/magboots{
+	pixel_x = -5;
+	pixel_y = -4
+	},
+/obj/item/clothing/shoes/magboots{
+	pixel_y = -4;
+	pixel_x = -1
+	},
+/obj/item/clothing/shoes/magboots{
+	pixel_y = -4;
+	pixel_x = 3
+	},
+/obj/item/tank/jetpack/carbondioxide{
+	pixel_y = 7;
+	pixel_x = 3
+	},
+/obj/item/tank/jetpack/carbondioxide{
+	pixel_y = 7;
+	pixel_x = -8
+	},
+/obj/item/tank/jetpack/carbondioxide{
+	pixel_y = 7;
+	pixel_x = -5
+	},
+/obj/item/tank/jetpack/carbondioxide{
+	pixel_y = 7;
+	pixel_x = -2
+	},
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/Armory)
 "bwd" = (
@@ -90452,8 +90456,9 @@
 	},
 /obj/machinery/door/airlock/angled_bay/hatch/atmos{
 	dir = 4;
-	req_access = list(11,24);
-	name = "Technical Storage"
+	name = "Technical Storage";
+	req_one_access = list(10,23,30,56,70);
+	req_access = null
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -98424,24 +98429,12 @@
 /turf/simulated/floor/plating,
 /area/maintenance/Deck2_Cargo_AftCorridor2)
 "rgn" = (
-/obj/structure/table/rack,
-/obj/item/rig/pmc/engineer/green/equipped{
-	pixel_y = 6;
-	req_access = list()
-	},
-/obj/item/rig/pmc/engineer/green/equipped{
-	pixel_y = 1;
-	req_access = list()
-	},
-/obj/item/rig/pmc/engineer/green/equipped{
-	pixel_y = -5;
-	req_access = list()
-	},
 /obj/machinery/firealarm{
 	dir = 8;
 	pixel_x = -25;
 	name = "W-fire alarm"
 	},
+/obj/structure/dispenser/oxygen,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/Armory)
 "rgJ" = (
@@ -156357,7 +156350,7 @@ bDc
 jrF
 hYT
 aKh
-ajN
+aKh
 bwa
 rgn
 aRi
