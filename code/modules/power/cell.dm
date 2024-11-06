@@ -39,12 +39,7 @@
 /obj/item/cell/Initialize()
 	. = ..()
 	c_uid = cell_uid++
-<<<<<<< HEAD
-	charge = maxcharge
-	//update_icon() //CHOMPRemove
-=======
 	update_icon()
->>>>>>> 2bc9005f63 (migrate power cells to initialize (#16567))
 	if(self_recharge)
 		START_PROCESSING(SSobj, src)
 

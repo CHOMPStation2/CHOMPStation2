@@ -2,12 +2,7 @@
 /*
  * Empty
  */
-<<<<<<< HEAD
-/obj/item/cell/empty/Initialize() //ChompEDIT New --> Initialize
-	..()
-=======
 /obj/item/cell/empty
->>>>>>> 2bc9005f63 (migrate power cells to initialize (#16567))
 	charge = 0
 
 /*
@@ -27,12 +22,7 @@
 /obj/item/cell/crap/update_icon() //No visible charge indicator
 	return
 
-<<<<<<< HEAD
-/obj/item/cell/crap/empty/Initialize() //ChompEDIT New --> Initialize
-	..()
-=======
 /obj/item/cell/crap/empty
->>>>>>> 2bc9005f63 (migrate power cells to initialize (#16567))
 	charge = 0
 
 /*
@@ -66,12 +56,7 @@
 	matter = list(MAT_STEEL = 700, MAT_GLASS = 60)
 	robot_durability = 55
 
-<<<<<<< HEAD
-/obj/item/cell/high/empty/Initialize() //ChompEDIT New --> Initialize
-	..()
-=======
 /obj/item/cell/high/empty
->>>>>>> 2bc9005f63 (migrate power cells to initialize (#16567))
 	charge = 0
 
 /*
@@ -86,12 +71,7 @@
 	matter = list(MAT_STEEL = 700, MAT_GLASS = 70)
 	robot_durability = 60
 
-<<<<<<< HEAD
-/obj/item/cell/super/empty/Initialize() //ChompEDIT New --> Initialize
-	..()
-=======
 /obj/item/cell/super/empty
->>>>>>> 2bc9005f63 (migrate power cells to initialize (#16567))
 	charge = 0
 
 /*
@@ -117,12 +97,7 @@
 	matter = list(MAT_STEEL = 700, MAT_GLASS = 80)
 	robot_durability = 70
 
-<<<<<<< HEAD
-/obj/item/cell/hyper/empty/Initialize() //ChompEDIT New --> Initialize
-	..()
-=======
 /obj/item/cell/hyper/empty
->>>>>>> 2bc9005f63 (migrate power cells to initialize (#16567))
 	charge = 0
 
 /*

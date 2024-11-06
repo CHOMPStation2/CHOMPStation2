@@ -72,13 +72,10 @@
 /obj/item/cell/device/weapon
 	name = "weapon power cell"
 	desc = "A small power cell designed to power handheld weaponry."
-<<<<<<< HEAD
-=======
 	icon_state = "weapon_cell"
 	charge = 2400
 	maxcharge = 2400
 	charge_amount = 20
->>>>>>> 2bc9005f63 (migrate power cells to initialize (#16567))
 
 /obj/item/cell/device/weapon/empty
 	charge = 0
@@ -200,20 +197,6 @@
 /obj/item/cell/device/weapon/recharge/alien/update_icon()
 	return // No overlays please.
 
-<<<<<<< HEAD
-//YAWN Addtion
-/obj/item/cell/device/weapon/recharge/alien/omni
-	name = "omni weapon power cell"
-	desc = "A mix between alien technology and phoron tech. Seems to fit in almost any cell slot..."
-	charge_amount = 90 // 5%.
-	maxcharge = 1800
-	charge_delay = 50 SECONDS
-	origin_tech = list(TECH_POWER = 6, TECH_ENGINEERING = 4, TECH_PHORON = 3)
-
-/obj/item/cell/device/weapon/recharge/alien/omni/empty/Initialize()
-	. = ..()
-	charge = 0
-=======
 /obj/item/cell/device/weapon/recharge/alien/attack_self(var/mob/user)
 	user.remove_from_mob(src)
 	to_chat(user, span_notice("You swap [src] to 'machinery cell' mode."))
@@ -229,4 +212,16 @@
 	icon = 'icons/obj/power_vr.dmi'
 	icon_state = "cellb"
 	swaps_to = /obj/item/cell/void/hybrid
->>>>>>> 2bc9005f63 (migrate power cells to initialize (#16567))
+
+//YAWN Addtion
+/obj/item/cell/device/weapon/recharge/alien/omni
+	name = "omni weapon power cell"
+	desc = "A mix between alien technology and phoron tech. Seems to fit in almost any cell slot..."
+	charge_amount = 90 // 5%.
+	charge = 1800
+	maxcharge = 1800
+	charge_delay = 50 SECONDS
+	origin_tech = list(TECH_POWER = 6, TECH_ENGINEERING = 4, TECH_PHORON = 3)
+
+/obj/item/cell/device/weapon/recharge/alien/omni/empty
+	charge = 0
