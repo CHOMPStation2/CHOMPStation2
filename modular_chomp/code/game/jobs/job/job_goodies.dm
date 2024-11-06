@@ -514,11 +514,11 @@
 
 /datum/alt_title/virologist
 	mail_goodies = list(
-		/obj/item/virusdish/random = 200,
 		/obj/item/storage/pill_bottle/spaceacillin = 150,
 		/obj/item/clothing/mask/surgical = 150,
 		/obj/item/clothing/gloves/sterile/latex = 150,
-		/obj/item/reagent_containers/hypospray/autoinjector/biginjector/toxin = 100,
+		/obj/item/reagent_containers/glass/bottle/culture/cold = 150,
+		/obj/item/reagent_containers/glass/bottle/culture/flu = 150,
 		/obj/item/reagent_containers/blood/OMinus = 100,
 	)
 

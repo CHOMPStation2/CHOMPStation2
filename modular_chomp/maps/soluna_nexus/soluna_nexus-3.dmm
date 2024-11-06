@@ -6161,7 +6161,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/Deck3_Engineering_AftStarChamber3)
 "cju" = (
-/obj/machinery/computer/diseasesplicer,
 /obj/machinery/camera/network/research{
 	c_tag = "D3-Med-Virology2";
 	network = list("Medical")
@@ -6172,6 +6171,7 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 1
 	},
+/obj/machinery/computer/pandemic,
 /turf/simulated/floor/tiled/white{
 	color = "#8bbbd5"
 	},
@@ -13428,9 +13428,9 @@
 /obj/item/radio/intercom/department/medbay{
 	pixel_y = -22
 	},
-/obj/structure/table/glass,
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/paleblue/border,
+/obj/machinery/computer/pandemic,
 /turf/simulated/floor/tiled/white{
 	color = "#8bbbd5"
 	},
@@ -15680,13 +15680,13 @@
 /turf/simulated/wall,
 /area/crew_quarters/Dorm_Corridor_4)
 "fcL" = (
-/obj/machinery/computer/centrifuge,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 4
 	},
+/obj/structure/table/glass,
 /turf/simulated/floor/tiled/white{
 	color = "#8bbbd5"
 	},
@@ -22200,19 +22200,6 @@
 /obj/effect/floor_decal/corner/blue/bordercorner,
 /turf/simulated/floor/tiled,
 /area/bridge/Deck3_Corridor)
-"hfh" = (
-/obj/structure/closet/crate/freezer,
-/obj/item/virusdish/random{
-	pixel_y = -1;
-	pixel_x = -2
-	},
-/obj/item/virusdish/random{
-	pixel_y = 2;
-	pixel_x = -3
-	},
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/simulated/floor/tiled/dark,
-/area/medical/Virology)
 "hfi" = (
 /obj/machinery/atmospherics/valve/digital/open{
 	name = "Hot Loop Waste Gas Management Switch";
@@ -30969,6 +30956,11 @@
 	},
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/paleblue/border,
+/obj/item/reagent_containers/glass/bottle/culture/cold{
+	pixel_y = 5;
+	pixel_x = -5
+	},
+/obj/item/reagent_containers/glass/bottle/culture/flu,
 /turf/simulated/floor/tiled/white{
 	color = "#8bbbd5"
 	},
@@ -35244,7 +35236,6 @@
 /area/maintenance/Deck3_Engineering_AftStarChamber1)
 "luF" = (
 /obj/structure/closet/crate/freezer,
-/obj/item/virusdish/random,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/dark,
 /area/medical/Virology)
@@ -38303,22 +38294,6 @@
 /obj/random/maintenance/misc,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck3_Bridge_AftPortCorridor1)
-"mkP" = (
-/obj/structure/table/glass,
-/obj/item/antibody_scanner{
-	pixel_y = -3
-	},
-/obj/item/antibody_scanner{
-	pixel_x = -2
-	},
-/obj/item/antibody_scanner{
-	pixel_y = 4;
-	pixel_x = -4
-	},
-/turf/simulated/floor/tiled/white{
-	color = "#8bbbd5"
-	},
-/area/medical/Virology)
 "mlm" = (
 /obj/structure/railing/grey{
 	dir = 1
@@ -45981,13 +45956,18 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/bridge/sleeping/Captain_Quarters)
 "oJi" = (
-/obj/machinery/disease2/diseaseanalyser,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 1
 	},
+/obj/structure/table/glass,
+/obj/item/reagent_containers/glass/bottle/culture/cold{
+	pixel_y = 5;
+	pixel_x = -5
+	},
+/obj/item/reagent_containers/glass/bottle/culture/flu,
 /turf/simulated/floor/tiled/white{
 	color = "#8bbbd5"
 	},
@@ -46246,18 +46226,6 @@
 	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/bridge/Captain_Office)
-"oLL" = (
-/obj/machinery/disease2/isolator,
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/paleblue/border{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/white{
-	color = "#8bbbd5"
-	},
-/area/medical/Virology)
 "oLW" = (
 /obj/effect/catwalk_plated/techmaint,
 /obj/structure/cable/green{
@@ -46786,7 +46754,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/engineering/Engine1_Control_Room)
 "oWv" = (
-/obj/machinery/disease2/incubator,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 4
 	},
@@ -55583,21 +55550,6 @@
 	},
 /turf/simulated/wall/r_wall,
 /area/hallway/For_3_Deck_Stairwell)
-"rMJ" = (
-/obj/machinery/disease2/incubator,
-/obj/machinery/light{
-	dir = 4
-	},
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/paleblue/border{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/white{
-	color = "#8bbbd5"
-	},
-/area/medical/Virology)
 "rMZ" = (
 /obj/structure/table/marble,
 /obj/machinery/chemical_dispenser/bar_soft/full{
@@ -55680,7 +55632,6 @@
 /turf/simulated/floor/wood/alt,
 /area/crew_quarters/sleeping/Dormitory_11)
 "rNY" = (
-/obj/machinery/disease2/isolator,
 /obj/machinery/light{
 	dir = 4
 	},
@@ -126420,7 +126371,7 @@ ezK
 csD
 rzY
 rzY
-hfh
+luF
 luF
 nJi
 iNK
@@ -127442,7 +127393,7 @@ buC
 cju
 ljJ
 oTl
-mkP
+cwT
 eDf
 xyN
 nZm
@@ -128215,9 +128166,9 @@ mSM
 ncF
 oKY
 oas
+iCX
+iCX
 oTG
-iCX
-iCX
 iCX
 iCX
 iCX
@@ -128472,12 +128423,12 @@ qlN
 qlN
 ncF
 nJi
-oLL
+oWv
 rNY
 fcL
 lDj
 uYx
-rMJ
+rNY
 oWv
 nJi
 nJi
