@@ -1,10 +1,7 @@
 /mob/living
 	var/datum/language/default_language
 
-<<<<<<< HEAD
 //CHOMPEdit Start 515 and tgui list
-=======
->>>>>>> 9077c940c4 (Better Viro (#16536))
 /mob/living/verb/set_default_language()
 	set name = "Set Default Language"
 	set category = "IC.Settings"
@@ -13,20 +10,12 @@
 
 	apply_default_language(language)
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 9077c940c4 (Better Viro (#16536))
 // Silicons can't neccessarily speak everything in their languages list
 /mob/living/silicon/set_default_language()
 	var/language = tgui_input_list(usr, "Select your default language", "Available languages", speech_synthesizer_langs)
 	// Silicons have no species language usually. So let's default them to GALCOM
 	if(!language)
-<<<<<<< HEAD
-		to_chat(src, "<span class='notice'>You will now speak your standard default language, common, if you do not specify a language when speaking.</span>")
-=======
 		to_chat(src, span_notice("You will now speak your standard default language, common, if you do not specify a language when speaking."))
->>>>>>> 9077c940c4 (Better Viro (#16536))
 		for(var/datum/language/lang in speech_synthesizer_langs)
 			if(lang.name == LANGUAGE_GALCOM)
 				default_language = lang
@@ -52,10 +41,7 @@
 		to_chat(src, span_notice("You will now speak whatever your standard default language is if you do not specify one when speaking."))
 	default_language = language
 
-<<<<<<< HEAD
 //CCHOMPEdit End
-=======
->>>>>>> 9077c940c4 (Better Viro (#16536))
 /mob/living/verb/check_default_language()
 	set name = "Check Default Language"
 	set category = "IC.Game"

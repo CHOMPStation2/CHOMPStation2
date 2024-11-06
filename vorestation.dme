@@ -57,11 +57,8 @@
 #include "code\__defines\cooldowns.dm"
 #include "code\__defines\crafting.dm"
 #include "code\__defines\damage_organs.dm"
-<<<<<<< HEAD
 #include "code\__defines\database.dm"
-=======
 #include "code\__defines\diseases.dm"
->>>>>>> 9077c940c4 (Better Viro (#16536))
 #include "code\__defines\dna.dm"
 #include "code\__defines\economy_misc.dm"
 #include "code\__defines\equipment_vendor.dm"
@@ -2610,7 +2607,6 @@
 #include "code\modules\events\spontaneous_appendicitis.dm"
 #include "code\modules\events\spontaneous_appendicitis_vr.dm"
 #include "code\modules\events\supply_demand_vr.dm"
-#include "code\modules\events\viral_infection.dm"
 #include "code\modules\events\wallrot.dm"
 #include "code\modules\events\wormholes.dm"
 #include "code\modules\examine\examine.dm"
@@ -3631,13 +3627,9 @@
 #include "code\modules\mob\living\simple_mob\subtypes\vore\horse.dm"
 #include "code\modules\mob\living\simple_mob\subtypes\vore\jelly.dm"
 #include "code\modules\mob\living\simple_mob\subtypes\vore\lamia.dm"
-<<<<<<< HEAD
 #include "code\modules\mob\living\simple_mob\subtypes\vore\leopardmander_ch.dm"
 #include "code\modules\mob\living\simple_mob\subtypes\vore\lizardman.dm"
-=======
-#include "code\modules\mob\living\simple_mob\subtypes\vore\leopardmander.dm"
 #include "code\modules\mob\living\simple_mob\subtypes\vore\macrophage.dm"
->>>>>>> 9077c940c4 (Better Viro (#16536))
 #include "code\modules\mob\living\simple_mob\subtypes\vore\meowl.dm"
 #include "code\modules\mob\living\simple_mob\subtypes\vore\mimic.dm"
 #include "code\modules\mob\living\simple_mob\subtypes\vore\mimic_ch.dm"
@@ -4246,11 +4238,8 @@
 #include "code\modules\reagents\reagent_containers\spray_vr.dm"
 #include "code\modules\reagents\reagent_containers\syringes.dm"
 #include "code\modules\reagents\reagent_containers\unidentified_hypospray.dm"
-<<<<<<< HEAD
 #include "code\modules\reagents\reagent_containers\food\drinks\bluespacecoffee.dm"
-=======
 #include "code\modules\reagents\reagent_containers\virology.dm"
->>>>>>> 9077c940c4 (Better Viro (#16536))
 #include "code\modules\reagents\reagents\_helpers.dm"
 #include "code\modules\reagents\reagents\_reagents.dm"
 #include "code\modules\reagents\reagents\core.dm"
@@ -4266,11 +4255,8 @@
 #include "code\modules\reagents\reagents\other_ch.dm"
 #include "code\modules\reagents\reagents\other_vr.dm"
 #include "code\modules\reagents\reagents\toxins.dm"
-<<<<<<< HEAD
-#include "code\modules\reagents\reagents\vore_ch.dm"
-=======
 #include "code\modules\reagents\reagents\virology.dm"
->>>>>>> 9077c940c4 (Better Viro (#16536))
+#include "code\modules\reagents\reagents\vore_ch.dm"
 #include "code\modules\reagents\reagents\vore_vr.dm"
 #include "code\modules\recycling\conveyor2.dm"
 #include "code\modules\recycling\disposal-construction.dm"
@@ -4825,7 +4811,6 @@
 #include "modular_chomp\code\game\objects\mob_spawner.dm"
 #include "modular_chomp\code\game\objects\effects\dark_growth.dm"
 #include "modular_chomp\code\game\objects\effects\step_triggers.dm"
-#include "modular_chomp\code\game\objects\effects\decals\Cleanable\humans.dm"
 #include "modular_chomp\code\game\objects\items\contraband.dm"
 #include "modular_chomp\code\game\objects\items\holosign_creator.dm"
 #include "modular_chomp\code\game\objects\items\petrifier.dm"
@@ -4926,7 +4911,6 @@
 #include "modular_chomp\code\modules\event\dangerinfestation.dm"
 #include "modular_chomp\code\modules\event\event_container_ch.dm"
 #include "modular_chomp\code\modules\event\heavydangerinfestation.dm"
-#include "modular_chomp\code\modules\event\infectedroom.dm"
 #include "modular_chomp\code\modules\event\meatyores.dm"
 #include "modular_chomp\code\modules\exploration\bossloots.dm"
 #include "modular_chomp\code\modules\exploration\lootsafe.dm"
@@ -5158,9 +5142,6 @@
 #include "modular_chomp\code\modules\tickets\tickets.dm"
 #include "modular_chomp\code\modules\tickets\tickets_player_ui.dm"
 #include "modular_chomp\code\modules\tickets\tickets_ui.dm"
-#include "modular_chomp\code\modules\virus2\disease2.dm"
-#include "modular_chomp\code\modules\virus2\effect.dm"
-#include "modular_chomp\code\modules\virus2\item_devices.dm"
 #include "modular_chomp\code\modules\vore\eating\exportpanel_ch.dm"
 #include "modular_chomp\code\modules\vore\eating\soulcatcher.dm"
 #include "modular_chomp\code\modules\vore\eating\soulcatcher_mob.dm"
