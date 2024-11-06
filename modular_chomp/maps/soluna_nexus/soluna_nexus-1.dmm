@@ -238,15 +238,12 @@
 /turf/simulated/floor/tiled,
 /area/harbor/Dock5)
 "abe" = (
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /turf/simulated/floor/glass,
 /area/hallway/Port_1Deck_Atrium)
 "abh" = (
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume,
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
@@ -287,9 +284,7 @@
 /obj/item/seeds/glowshroom{
 	icon_state = "seed"
 	},
-/turf/simulated/floor/outdoors/grass/sif/forest/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Star_1Deck_Atrium)
 "abs" = (
 /turf/simulated/wall/r_wall,
@@ -530,8 +525,7 @@
 	pixel_x = -24
 	},
 /obj/machinery/firealarm{
-	pixel_y = 25;
-	name = "N-fire alarm"
+	pixel_y = 25
 	},
 /obj/structure/cable/green{
 	d2 = 4;
@@ -569,7 +563,6 @@
 "acK" = (
 /obj/machinery/firealarm{
 	dir = 8;
-	name = "W-fire alarm";
 	pixel_x = -25
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -1056,8 +1049,7 @@
 /area/quartermaster/Depot1)
 "afV" = (
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /obj/structure/table/bench/sifwooden/padded,
 /turf/simulated/floor/tiled/white,
@@ -1377,8 +1369,7 @@
 	pixel_y = 32
 	},
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -1446,8 +1437,7 @@
 /obj/machinery/portable_atmospherics/canister/empty/phoron,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
@@ -1519,7 +1509,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/firealarm{
 	dir = 8;
-	name = "W-fire alarm";
 	pixel_x = -25
 	},
 /obj/machinery/suit_storage_unit/mining_alt,
@@ -1664,7 +1653,6 @@
 "aip" = (
 /obj/machinery/firealarm{
 	dir = 1;
-	name = "S-fire alarm";
 	pixel_y = -25
 	},
 /obj/machinery/alarm{
@@ -1766,7 +1754,6 @@
 /obj/machinery/light_switch{
 	pixel_x = 27;
 	pixel_y = -12;
-	name = "E-light switch";
 	dir = 8
 	},
 /obj/effect/floor_decal/borderfloorblack{
@@ -1793,8 +1780,7 @@
 "aiP" = (
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/Deck1_Transit_Hall)
@@ -1844,8 +1830,7 @@
 	pixel_x = -3
 	},
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
@@ -2045,7 +2030,6 @@
 /area/space)
 "ake" = (
 /obj/structure/extinguisher_cabinet{
-	name = "1N-extinguisher cabinet";
 	pixel_y = 28
 	},
 /turf/simulated/floor/tiled/dark,
@@ -2304,8 +2288,7 @@
 	dir = 1
 	},
 /obj/machinery/newscaster{
-	pixel_y = -30;
-	name = "1S-newscaster"
+	pixel_y = -30
 	},
 /turf/simulated/floor/wood/alt/panel,
 /area/rnd/Observation_Hall)
@@ -2334,8 +2317,7 @@
 	},
 /obj/machinery/firealarm{
 	dir = 4;
-	pixel_x = 25;
-	name = "E-fire alarm"
+	pixel_x = 25
 	},
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
@@ -2394,7 +2376,6 @@
 	},
 /obj/structure/table/reinforced,
 /obj/item/radio/intercom{
-	name = "1S-Station Intercom (General)";
 	pixel_y = -22
 	},
 /obj/effect/floor_decal/borderfloorwhite,
@@ -2842,8 +2823,7 @@
 /area/maintenance/Deck1_ForPort_Corridor2)
 "aoI" = (
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -2872,9 +2852,7 @@
 /obj/structure/bed/chair/wood{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/grass/sif/forest/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass,
 /area/hallway/Port_1Deck_Atrium)
 "ape" = (
 /obj/structure/cable/green{
@@ -2964,8 +2942,7 @@
 	dir = 1
 	},
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -2994,8 +2971,7 @@
 /area/harbor/Fueling_Storage)
 "apY" = (
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -3056,9 +3032,7 @@
 /area/shuttle/echidna)
 "aql" = (
 /obj/structure/flora/ausbushes/sparsegrass,
-/turf/simulated/floor/outdoors/grass/sif/forest/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Star_1Deck_Atrium)
 "aqp" = (
 /obj/structure/flora/lily2,
@@ -3143,9 +3117,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/grass/sif/forest/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass,
 /area/hallway/Port_1Deck_Atrium)
 "aqK" = (
 /obj/structure/disposalpipe/segment,
@@ -3254,8 +3226,7 @@
 /obj/structure/bed/chair/wheelchair/smallmotor,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/harbor/Star_Docking_Foyer)
@@ -3405,7 +3376,6 @@
 /obj/structure/table/reinforced,
 /obj/item/radio/intercom{
 	dir = 1;
-	name = "1N-Station Intercom (General)";
 	pixel_y = 22
 	},
 /obj/item/tool/crowbar/red{
@@ -3430,8 +3400,7 @@
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 10
@@ -3656,8 +3625,7 @@
 "aun" = (
 /obj/structure/closet/wardrobe/suit,
 /obj/machinery/status_display{
-	pixel_y = -32;
-	name = "S-status display"
+	pixel_y = -32
 	},
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/green/border,
@@ -3667,7 +3635,6 @@
 /obj/machinery/lapvend,
 /obj/machinery/firealarm{
 	dir = 1;
-	name = "S-fire alarm";
 	pixel_y = -25
 	},
 /obj/effect/floor_decal/borderfloorblack,
@@ -3681,7 +3648,6 @@
 	},
 /obj/machinery/light_switch{
 	dir = 1;
-	name = "S-light switch";
 	pixel_x = 11;
 	pixel_y = -27
 	},
@@ -3730,8 +3696,7 @@
 	},
 /obj/machinery/door/window/westleft,
 /obj/machinery/status_display{
-	pixel_y = -32;
-	name = "S-status display"
+	pixel_y = -32
 	},
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/effect/floor_decal/borderfloorblack,
@@ -3817,44 +3782,28 @@
 /turf/simulated/floor/tiled,
 /area/hallway/Stairwell_Aft)
 "avb" = (
-/obj/item/gun/energy/locked/frontier/rifle{
-	pixel_y = 9
-	},
-/obj/item/cell/device/weapon{
-	pixel_y = 4
-	},
-/obj/item/cell/device/weapon{
-	pixel_y = 2
-	},
-/obj/item/cell/device/weapon,
 /obj/structure/closet/secure_closet/guncabinet{
 	req_one_access = list(1,19)
 	},
-/obj/item/ammo_magazine/clip/c762{
-	pixel_y = -7;
-	pixel_x = 5
+/obj/item/gun/energy/taser{
+	pixel_y = 7
 	},
-/obj/item/gun/energy/locked/frontier/rifle{
-	pixel_y = 6
-	},
-/obj/item/ammo_magazine/clip/c762{
-	pixel_y = -7;
+/obj/item/gun/energy/taser{
+	pixel_y = 4;
 	pixel_x = 2
 	},
-/obj/item/ammo_magazine/clip/c762{
-	pixel_y = -7;
-	pixel_x = -1
+/obj/item/melee/baton{
+	pixel_y = -3
 	},
-/obj/item/gun/projectile/shotgun/pump/rifle{
-	pixel_y = -2
+/obj/item/melee/baton{
+	pixel_y = -6;
+	pixel_x = 1
 	},
-/obj/item/gun/projectile/shotgun/pump/rifle{
-	pixel_y = -5
+/obj/item/cell/device/weapon{
+	pixel_y = -7
 	},
-/obj/machinery/recharger/wallcharger{
-	pixel_x = 4;
-	pixel_y = 23;
-	name = "1N-wall recharger"
+/obj/item/cell/device/weapon{
+	pixel_y = -4
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 9
@@ -3890,8 +3839,7 @@
 	},
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -3908,7 +3856,6 @@
 	},
 /obj/machinery/light_switch{
 	dir = 1;
-	name = "S-light switch";
 	pixel_x = 11;
 	pixel_y = -27
 	},
@@ -4032,13 +3979,11 @@
 	dir = 4
 	},
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/item/radio/intercom{
 	dir = 1;
-	name = "1N-Station Intercom (General)";
 	pixel_y = 22
 	},
 /turf/simulated/floor/tiled/monotile,
@@ -4124,7 +4069,6 @@
 /area/shuttle/escape_pod1/station)
 "awC" = (
 /obj/structure/extinguisher_cabinet{
-	name = "1N-extinguisher cabinet";
 	pixel_y = 28
 	},
 /turf/simulated/floor/glass,
@@ -4247,7 +4191,6 @@
 "axP" = (
 /obj/item/radio/intercom{
 	dir = 1;
-	name = "1N-Station Intercom (General)";
 	pixel_y = 22
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -4268,8 +4211,7 @@
 	dir = 8
 	},
 /obj/machinery/ai_status_display{
-	pixel_y = 32;
-	name = "1N-AI display"
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/dark,
 /area/harbor/Star_Docking_Foyer)
@@ -4280,7 +4222,6 @@
 /obj/structure/table/glass,
 /obj/item/radio/intercom{
 	dir = 4;
-	name = "1E-Station Intercom (General)";
 	pixel_x = 22
 	},
 /turf/simulated/floor/tiled/dark,
@@ -4391,8 +4332,7 @@
 /area/maintenance/Deck1_Science_AftCorridor1)
 "azk" = (
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /turf/simulated/floor/glass,
 /area/hallway/Deck1_Transit_Hall)
@@ -4539,10 +4479,6 @@
 	pixel_x = 9;
 	pixel_y = -9
 	},
-/obj/item/t_scanner/upgraded{
-	pixel_x = 11;
-	pixel_y = 3
-	},
 /obj/item/clothing/glasses/meson{
 	pixel_x = -6;
 	pixel_y = -13
@@ -4550,9 +4486,6 @@
 /obj/item/clothing/glasses/welding{
 	pixel_x = -6;
 	pixel_y = -8
-	},
-/obj/structure/closet/crate/large/nanotrasen{
-	req_one_access = list(10)
 	},
 /obj/item/stack/material/plasteel{
 	amount = 30;
@@ -4569,12 +4502,19 @@
 	pixel_x = -8;
 	pixel_y = 7
 	},
-/obj/item/clothing/gloves/yellow{
-	pixel_x = -7;
-	pixel_y = 2
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/item/t_scanner{
+	pixel_y = 3;
+	pixel_x = 11
 	},
 /obj/item/multitool{
 	pixel_x = 4
+	},
+/obj/structure/closet/crate/secure/large/nanotrasen{
+	req_access = list(10)
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 6
@@ -4682,11 +4622,9 @@
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/Xenobotany_Lab)
 "aBD" = (
-/obj/structure/flora/tree/sif,
-/turf/simulated/floor/outdoors/grass/sif/turfpack/station{
-	outdoors = -1
-	},
-/area/hallway/Star_1Deck_Atrium)
+/obj/structure/table/fancyblack,
+/turf/simulated/floor/grass2/turfpack/station,
+/area/hallway/Port_1Deck_Atrium)
 "aBE" = (
 /obj/random/junk,
 /obj/effect/floor_decal/rust,
@@ -4731,8 +4669,7 @@
 "aBU" = (
 /obj/machinery/firealarm{
 	dir = 8;
-	pixel_x = -25;
-	name = "W-fire alarm"
+	pixel_x = -25
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -4934,8 +4871,7 @@
 	pixel_x = 24
 	},
 /obj/machinery/firealarm{
-	pixel_y = 25;
-	name = "N-fire alarm"
+	pixel_y = 25
 	},
 /obj/structure/cable/green{
 	d2 = 8;
@@ -5095,9 +5031,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
-/turf/simulated/floor/outdoors/grass/sif/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Port_1Deck_Atrium)
 "aEI" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -5158,8 +5092,7 @@
 /area/maintenance/ab_ChuteTrade)
 "aFd" = (
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
@@ -5253,8 +5186,7 @@
 /area/harbor/Dock3)
 "aFG" = (
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -5281,9 +5213,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
-/turf/simulated/floor/outdoors/grass/sif/forest/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass,
 /area/hallway/Port_1Deck_Atrium)
 "aGe" = (
 /obj/machinery/alarm{
@@ -5350,7 +5280,6 @@
 "aGB" = (
 /obj/machinery/firealarm{
 	dir = 8;
-	name = "W-fire alarm";
 	pixel_x = -25
 	},
 /obj/effect/floor_decal/borderfloorwhite{
@@ -5378,7 +5307,6 @@
 "aHg" = (
 /obj/machinery/firealarm{
 	pixel_y = -25;
-	name = "S-fire alarm";
 	dir = 1
 	},
 /obj/effect/floor_decal/borderfloor/corner,
@@ -5448,9 +5376,7 @@
 /obj/machinery/sleeper{
 	dir = 4
 	},
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/large_escape_pod2/station)
 "aIi" = (
@@ -5504,8 +5430,7 @@
 	dir = 8
 	},
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/large_escape_pod1/station)
@@ -5553,7 +5478,6 @@
 	},
 /obj/machinery/light_switch{
 	dir = 1;
-	name = "S-light switch";
 	pixel_x = 11;
 	pixel_y = -27
 	},
@@ -5675,9 +5599,7 @@
 /area/hallway/Stairwell_Port)
 "aJT" = (
 /obj/structure/closet/emcloset,
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /turf/simulated/floor/tiled/steel_ridged{
 	color = "#989898"
 	},
@@ -5900,9 +5822,7 @@
 "aLf" = (
 /obj/structure/flora/tree/sif,
 /obj/structure/flora/ausbushes/sparsegrass,
-/turf/simulated/floor/outdoors/grass/sif/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Star_1Deck_Atrium)
 "aLh" = (
 /turf/simulated/floor/tiled/hydro,
@@ -5971,7 +5891,6 @@
 	pixel_y = 4
 	},
 /obj/machinery/ai_status_display{
-	name = "1N-AI display";
 	pixel_y = 32
 	},
 /obj/effect/floor_decal/borderfloorblack{
@@ -6031,9 +5950,7 @@
 "aLA" = (
 /obj/machinery/portable_atmospherics/canister/empty,
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/brown/border,
 /turf/simulated/floor/tiled/dark,
@@ -6117,7 +6034,6 @@
 /obj/machinery/light_switch{
 	pixel_x = 11;
 	pixel_y = -27;
-	name = "S-light switch";
 	dir = 1
 	},
 /obj/structure/cable/white{
@@ -6191,7 +6107,6 @@
 "aMD" = (
 /obj/item/radio/intercom{
 	dir = 8;
-	name = "1W-Station Intercom (General)";
 	pixel_x = -22
 	},
 /obj/effect/floor_decal/borderfloorwhite{
@@ -6208,7 +6123,6 @@
 "aMJ" = (
 /obj/machinery/firealarm{
 	dir = 1;
-	name = "S-fire alarm";
 	pixel_y = -25
 	},
 /obj/structure/cable/green{
@@ -6320,7 +6234,6 @@
 	dir = 10
 	},
 /obj/machinery/ai_status_display{
-	name = "1S-AI display";
 	pixel_y = -32
 	},
 /turf/simulated/floor/tiled/dark,
@@ -6412,8 +6325,7 @@
 /obj/structure/reagent_dispensers/fueltank/high,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/status_display{
-	pixel_y = -32;
-	name = "S-status display"
+	pixel_y = -32
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/rnd/Xenobotany_Isolation_Chamber)
@@ -6455,7 +6367,6 @@
 /area/maintenance/Deck1_AftPort_Corridor2)
 "aNG" = (
 /obj/structure/extinguisher_cabinet{
-	name = "1N-extinguisher cabinet";
 	pixel_y = 28
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -6504,8 +6415,7 @@
 /area/quartermaster/Supply_Ship_Bay)
 "aNY" = (
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /obj/structure/table/bench/sifwooden/padded,
 /turf/simulated/floor/tiled/white,
@@ -6528,7 +6438,6 @@
 "aOm" = (
 /obj/structure/closet/secure_closet/miner,
 /obj/item/radio/intercom{
-	name = "1S-Station Intercom (General)";
 	pixel_y = -22
 	},
 /obj/effect/floor_decal/borderfloorblack,
@@ -6671,9 +6580,7 @@
 /turf/simulated/shuttle/floor,
 /area/shuttle/cryo/station)
 "aPE" = (
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
 	},
@@ -6705,7 +6612,6 @@
 	},
 /obj/structure/extinguisher_cabinet{
 	dir = 1;
-	name = "1S-extinguisher cabinet";
 	pixel_y = -27
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -6749,19 +6655,16 @@
 	dir = 4
 	},
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/PA_Chamber)
 "aQp" = (
 /obj/machinery/firealarm{
-	pixel_y = 25;
-	name = "N-fire alarm"
+	pixel_y = 25
 	},
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
@@ -6800,16 +6703,14 @@
 /area/harbor/Dock2)
 "aQW" = (
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /obj/structure/table/bench/sifwooden/padded,
 /turf/simulated/floor/tiled/white,
 /area/harbor/Dock3)
 "aQX" = (
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /obj/structure/cable/green{
 	d1 = 1;
@@ -6880,9 +6781,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/grass/sif/forest/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass,
 /area/hallway/Port_1Deck_Atrium)
 "aRv" = (
 /obj/structure/filingcabinet/security,
@@ -6894,8 +6793,7 @@
 /obj/item/storage/toolbox/emergency,
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/cryo/station)
@@ -6937,8 +6835,7 @@
 "aRL" = (
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /obj/structure/cable/green{
 	d1 = 2;
@@ -7035,9 +6932,7 @@
 /obj/structure/bed/chair/sofa/left/beige{
 	dir = 1
 	},
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /turf/simulated/floor/glass/reinforced,
 /area/hallway/ForPort_1_Deck_Observatory)
 "aSk" = (
@@ -7065,8 +6960,7 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/firealarm{
 	dir = 8;
-	pixel_x = -25;
-	name = "W-fire alarm"
+	pixel_x = -25
 	},
 /turf/simulated/floor/plating,
 /area/rnd/Xenobotany_Isolation_Chamber)
@@ -7117,8 +7011,7 @@
 	},
 /obj/machinery/status_display{
 	layer = 4;
-	pixel_y = 32;
-	name = "N-status display"
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/Xenobotany_Lab)
@@ -7181,7 +7074,6 @@
 /area/security/Aft_Security_Post)
 "aTt" = (
 /obj/machinery/ai_status_display{
-	name = "1N-AI display";
 	pixel_y = 32
 	},
 /obj/machinery/door/firedoor/glass/hidden/steel{
@@ -7418,9 +7310,7 @@
 "aVh" = (
 /obj/structure/flora/ausbushes/genericbush,
 /obj/structure/flora/ausbushes/sparsegrass,
-/turf/simulated/floor/outdoors/grass/sif/forest/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Star_1Deck_Atrium)
 "aVi" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -7465,8 +7355,7 @@
 /area/hallway/Cryostorage_Lounge)
 "aVs" = (
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -7514,12 +7403,10 @@
 /area/space)
 "aVy" = (
 /obj/machinery/newscaster{
-	name = "1N-newscaster";
 	pixel_y = 28
 	},
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/borderfloor{
@@ -7633,7 +7520,6 @@
 /area/harbor/Fueling_Post)
 "aWa" = (
 /obj/machinery/ai_status_display{
-	name = "1N-AI display";
 	pixel_y = 32
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -7786,9 +7672,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_Security_StarCorridor1)
 "aWS" = (
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/green/border,
 /turf/simulated/floor/tiled,
@@ -7849,8 +7733,7 @@
 	color = "#0000ff"
 	},
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
@@ -7998,8 +7881,7 @@
 /area/harbor/Dock5)
 "baw" = (
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -8043,9 +7925,7 @@
 /area/maintenance/Deck1_Security_PortCorridor2)
 "baX" = (
 /obj/effect/catwalk_plated,
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /turf/simulated/floor/plating,
 /area/engineering/Telecomms_Foyer)
 "baY" = (
@@ -8479,8 +8359,7 @@
 	pixel_x = 5
 	},
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
@@ -8634,8 +8513,7 @@
 	pixel_x = -5
 	},
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /obj/structure/table/steel_reinforced,
 /obj/effect/floor_decal/borderfloorblack{
@@ -9092,8 +8970,7 @@
 	dir = 4
 	},
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/Port_1Deck_Atrium)
@@ -9115,8 +8992,7 @@
 "btZ" = (
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /obj/structure/cable/green{
 	d1 = 1;
@@ -9177,7 +9053,6 @@
 	},
 /obj/machinery/firealarm{
 	pixel_y = -25;
-	name = "S-fire alarm";
 	dir = 1
 	},
 /obj/structure/cable/green{
@@ -9213,9 +9088,7 @@
 /area/maintenance/Market_Stall_6)
 "bvo" = (
 /obj/structure/table/reinforced,
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /obj/machinery/computer/security/telescreen{
 	desc = "Used for watching the Particle Accelerator chamber.";
 	layer = 4;
@@ -9433,7 +9306,6 @@
 	},
 /obj/machinery/status_display{
 	layer = 4;
-	name = "N-status display";
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/white,
@@ -9474,8 +9346,7 @@
 /area/maintenance/Deck1_Star_Corridor)
 "bzX" = (
 /obj/structure/extinguisher_cabinet{
-	pixel_y = 28;
-	name = "1N-extinguisher cabinet"
+	pixel_y = 28
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
@@ -9614,8 +9485,7 @@
 	dir = 6
 	},
 /obj/machinery/status_display{
-	pixel_y = -32;
-	name = "S-status display"
+	pixel_y = -32
 	},
 /turf/simulated/floor/tiled/dark,
 /area/quartermaster/Supply_Ship_Bay)
@@ -9739,8 +9609,7 @@
 /area/maintenance/Deck1_Security_PortChamber1)
 "bDN" = (
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /obj/machinery/computer/security/telescreen/entertainment{
 	name = "1E-entertainment monitor";
@@ -9765,8 +9634,7 @@
 "bDS" = (
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /obj/structure/disposalpipe/sortjunction/wildcard{
 	dir = 4
@@ -10009,8 +9877,7 @@
 "bHB" = (
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/harbor/Star_Docking_Foyer)
@@ -10221,9 +10088,7 @@
 	pixel_x = 1
 	},
 /obj/structure/table/fancyblack,
-/turf/simulated/floor/outdoors/grass/sif/forest/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Port_1Deck_Atrium)
 "bMe" = (
 /obj/effect/floor_decal/steeldecal/steel_decals_central2{
@@ -10284,7 +10149,6 @@
 "bNk" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 27;
-	name = "1E-extinguisher cabinet";
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -10338,7 +10202,6 @@
 /area/hallway/Port_1Deck_Atrium)
 "bOk" = (
 /obj/machinery/newscaster{
-	name = "1N-newscaster";
 	pixel_y = 28
 	},
 /obj/machinery/camera/network/security{
@@ -10362,8 +10225,7 @@
 "bOS" = (
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /obj/machinery/computer/security/telescreen/entertainment{
 	pixel_y = -4;
@@ -10483,8 +10345,7 @@
 /obj/structure/table/standard,
 /obj/item/tool/wirecutters/clippers/trimmers,
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/maintenance/Market_Stall_1)
@@ -10555,7 +10416,6 @@
 /obj/machinery/light_switch{
 	pixel_x = 27;
 	pixel_y = -12;
-	name = "E-light switch";
 	dir = 8
 	},
 /obj/structure/cable/green{
@@ -10625,8 +10485,7 @@
 /area/maintenance/Deck1_ForStar_Corridor3)
 "bSu" = (
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -10647,8 +10506,7 @@
 /area/quartermaster/Supply_Ship_Bay)
 "bSz" = (
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -10689,8 +10547,7 @@
 /area/maintenance/Deck1_AftStar1_Corridor2)
 "bST" = (
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -10708,6 +10565,10 @@
 /obj/effect/floor_decal/corner/purple/border,
 /turf/simulated/floor/tiled,
 /area/rnd/Observation_Hall)
+"bTk" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/wall/r_wall,
+/area/maintenance/Deck1_ForStar_Corridor2)
 "bTL" = (
 /obj/structure/railing/grey{
 	dir = 1
@@ -10761,8 +10622,7 @@
 /obj/structure/window/basic,
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/large_escape_pod1/station)
@@ -10902,7 +10762,6 @@
 "bYa" = (
 /obj/machinery/firealarm{
 	dir = 8;
-	name = "W-fire alarm";
 	pixel_x = -25
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -11072,7 +10931,6 @@
 	},
 /obj/machinery/light_switch{
 	dir = 8;
-	name = "E-light switch";
 	pixel_x = 27;
 	pixel_y = -12
 	},
@@ -11112,7 +10970,6 @@
 	dir = 1
 	},
 /obj/item/radio/intercom{
-	name = "1S-Station Intercom (General)";
 	pixel_y = -22
 	},
 /turf/simulated/floor/carpet/sblucarpet/turfpack/station,
@@ -11311,7 +11168,6 @@
 "cgH" = (
 /obj/item/radio/intercom{
 	dir = 8;
-	name = "1W-Station Intercom (General)";
 	pixel_x = -22
 	},
 /turf/simulated/floor/tiled/hydro,
@@ -11401,8 +11257,7 @@
 	},
 /obj/structure/window/basic,
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/large_escape_pod2/station)
@@ -11485,7 +11340,6 @@
 	dir = 1
 	},
 /obj/machinery/firealarm{
-	name = "N-fire alarm";
 	pixel_y = 25
 	},
 /turf/simulated/floor/tiled,
@@ -11921,8 +11775,7 @@
 "cpG" = (
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden,
@@ -12283,7 +12136,6 @@
 /area/hallway/Stairwell_Port)
 "cxF" = (
 /obj/machinery/firealarm{
-	name = "N-fire alarm";
 	pixel_y = 25
 	},
 /turf/simulated/floor/glass/reinforced,
@@ -13204,8 +13056,7 @@
 /area/rnd/Xenobotany_Isolation_Chamber)
 "cOQ" = (
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume,
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
@@ -13258,8 +13109,7 @@
 "cPL" = (
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
@@ -13544,8 +13394,7 @@
 /obj/item/vac_attachment,
 /obj/structure/closet/jequipcloset,
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
@@ -13558,8 +13407,7 @@
 "cUy" = (
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -14089,9 +13937,7 @@
 "ddb" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/hand_labeler,
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/brown/border,
 /turf/simulated/floor/tiled/dark,
@@ -14177,9 +14023,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/grass/sif/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Port_1Deck_Atrium)
 "dem" = (
 /obj/random/junk,
@@ -14322,8 +14166,7 @@
 "dgp" = (
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /obj/structure/cable/white{
 	d1 = 4;
@@ -14460,7 +14303,6 @@
 /obj/machinery/atmospherics/pipe/simple/visible,
 /obj/item/radio/intercom{
 	dir = 4;
-	name = "1E-Station Intercom (General)";
 	pixel_x = 22
 	},
 /turf/simulated/floor/tiled/white,
@@ -14714,7 +14556,6 @@
 "dnB" = (
 /obj/item/radio/intercom{
 	dir = 1;
-	name = "1N-Station Intercom (General)";
 	pixel_y = 22
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -14811,7 +14652,6 @@
 /area/harbor/Fueling_Storage)
 "doV" = (
 /obj/machinery/ai_status_display{
-	name = "1N-AI display";
 	pixel_y = 32
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -14883,8 +14723,7 @@
 /area/shuttle/escape_pod13/station)
 "dpV" = (
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
@@ -15142,9 +14981,7 @@
 /turf/simulated/wall/r_wall,
 /area/engineering/Telecomms_Foyer)
 "dvj" = (
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
@@ -15270,8 +15107,7 @@
 /area/security/Exploration_Ship_Bay)
 "dwT" = (
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
@@ -15285,9 +15121,7 @@
 /obj/random/junk,
 /obj/effect/catwalk_plated/dark,
 /obj/structure/table/steel,
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /obj/random/maintenance/misc,
 /turf/simulated/floor/plating,
 /area/maintenance/ab_ChuteTrade)
@@ -15462,7 +15296,6 @@
 /area/rnd/Xenobiology_Lab)
 "dzI" = (
 /obj/structure/extinguisher_cabinet{
-	name = "1N-extinguisher cabinet";
 	pixel_y = 28
 	},
 /obj/effect/floor_decal/borderfloorblack{
@@ -15519,8 +15352,7 @@
 /area/hallway/Port_1Deck_Atrium)
 "dAE" = (
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
@@ -15611,8 +15443,7 @@
 /area/hallway/Central_1_Deck_Hall)
 "dBV" = (
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/maintenance/Market_Stall_3)
@@ -15818,8 +15649,7 @@
 /area/engineering/Telecomms_Network)
 "dGh" = (
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /turf/simulated/floor/glass/reinforced,
 /area/hallway/ForStar_1_Deck_Observatory)
@@ -16108,8 +15938,7 @@
 /area/hallway/For_Transit_Foyer)
 "dLu" = (
 /obj/machinery/firealarm{
-	pixel_y = 25;
-	name = "N-fire alarm"
+	pixel_y = 25
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -16330,9 +16159,7 @@
 /obj/item/seeds/rose{
 	icon_state = "seed"
 	},
-/turf/simulated/floor/outdoors/grass/sif/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Port_1Deck_Atrium)
 "dPk" = (
 /obj/effect/floor_decal/borderfloorwhite{
@@ -16345,8 +16172,7 @@
 /area/rnd/Xenobiology_Lab)
 "dPz" = (
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /obj/effect/floor_decal/borderfloorblack/corner,
 /obj/effect/floor_decal/corner/blue/bordercorner,
@@ -16354,9 +16180,7 @@
 /area/engineering/Telecomms_Control_Room)
 "dPH" = (
 /obj/structure/table/steel_reinforced,
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = -22
@@ -16385,8 +16209,7 @@
 /area/hallway/Star_1Deck_Central_Corridor_1)
 "dQd" = (
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/maintenance/ab_GeneralStore)
@@ -16582,7 +16405,6 @@
 /area/maintenance/Deck1_AftPort_Corridor3)
 "dTG" = (
 /obj/machinery/firealarm{
-	name = "N-fire alarm";
 	pixel_y = 25
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -16610,9 +16432,7 @@
 	pixel_x = 9
 	},
 /obj/structure/table/fancyblack,
-/turf/simulated/floor/outdoors/grass/sif/forest/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass,
 /area/hallway/Port_1Deck_Atrium)
 "dTR" = (
 /obj/machinery/door/firedoor/border_only,
@@ -16628,8 +16448,7 @@
 /area/maintenance/Deck1_ForPort_Corridor2)
 "dTS" = (
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /turf/simulated/floor/wood/alt/parquet/turfpack/station,
 /area/hallway/Cryostorage_Lounge)
@@ -16653,7 +16472,6 @@
 /area/maintenance/ab_StripBar)
 "dUu" = (
 /obj/machinery/firealarm{
-	name = "N-fire alarm";
 	pixel_y = 25
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -16933,8 +16751,7 @@
 	dir = 8
 	},
 /obj/machinery/ai_status_display{
-	pixel_y = 32;
-	name = "1N-AI display"
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/white,
 /area/harbor/Dock2)
@@ -16981,8 +16798,7 @@
 "dWj" = (
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -17157,12 +16973,10 @@
 "dWU" = (
 /obj/machinery/seed_storage/xenobotany,
 /obj/machinery/ai_status_display{
-	name = "1N-AI display";
 	pixel_y = 32
 	},
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/Xenobotany_Lab)
@@ -17395,7 +17209,6 @@
 /area/hallway/Planetside_Equipment)
 "dXv" = (
 /obj/machinery/firealarm{
-	name = "N-fire alarm";
 	pixel_y = 25
 	},
 /turf/simulated/floor/glass/reinforced,
@@ -17428,8 +17241,7 @@
 "dXF" = (
 /obj/structure/table/woodentable,
 /obj/machinery/newscaster{
-	pixel_y = 28;
-	name = "1N-newscaster"
+	pixel_y = 28
 	},
 /turf/simulated/floor/carpet/blue,
 /area/harbor/Port_Docking_Foyer)
@@ -17448,9 +17260,7 @@
 "dXI" = (
 /obj/structure/ore_box,
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /turf/simulated/floor/tiled/dark,
 /area/quartermaster/Mining_Ship_Bay)
 "dXK" = (
@@ -17459,7 +17269,6 @@
 	},
 /obj/machinery/firealarm{
 	dir = 8;
-	name = "W-fire alarm";
 	pixel_x = -25
 	},
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -17477,8 +17286,7 @@
 "dXM" = (
 /obj/machinery/firealarm{
 	dir = 4;
-	pixel_x = 25;
-	name = "E-fire alarm"
+	pixel_x = 25
 	},
 /turf/simulated/floor/tiled/dark,
 /area/quartermaster/Mining_Ship_Bay)
@@ -17513,8 +17321,7 @@
 "dXQ" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
@@ -17742,12 +17549,9 @@
 /obj/structure/bed/chair/sofa/green{
 	dir = 1
 	},
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /obj/machinery/status_display{
-	pixel_y = -32;
-	name = "S-status display"
+	pixel_y = -32
 	},
 /turf/simulated/floor/wood/alt/panel,
 /area/rnd/Observation_Hall)
@@ -17764,7 +17568,6 @@
 "dYE" = (
 /obj/machinery/disposal,
 /obj/item/radio/intercom{
-	name = "1S-Station Intercom (General)";
 	pixel_y = -22
 	},
 /obj/structure/disposalpipe/trunk{
@@ -17780,18 +17583,14 @@
 /obj/structure/bed/chair/sofa/green{
 	dir = 1
 	},
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /obj/machinery/ai_status_display{
-	pixel_y = -32;
-	name = "1S-AI display"
+	pixel_y = -32
 	},
 /turf/simulated/floor/wood/alt/panel,
 /area/rnd/Observation_Hall)
 "dYJ" = (
 /obj/item/radio/intercom{
-	name = "1S-Station Intercom (General)";
 	pixel_y = -22
 	},
 /obj/effect/floor_decal/borderfloorblack,
@@ -17853,8 +17652,7 @@
 	pixel_x = -14
 	},
 /obj/machinery/firealarm{
-	pixel_y = 25;
-	name = "N-fire alarm"
+	pixel_y = 25
 	},
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 4
@@ -18088,8 +17886,7 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/Telecomms_Control_Room)
@@ -18164,9 +17961,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/grass/sif/forest/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass,
 /area/hallway/Port_1Deck_Atrium)
 "eaj" = (
 /obj/machinery/portable_atmospherics/canister/empty/phoron,
@@ -18255,8 +18050,7 @@
 	},
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/large_escape_pod2/station)
@@ -18287,7 +18081,6 @@
 	},
 /obj/item/radio/intercom{
 	dir = 4;
-	name = "1E-Station Intercom (General)";
 	pixel_x = 22
 	},
 /turf/simulated/floor/tiled,
@@ -18308,9 +18101,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/spacebus)
 "eaG" = (
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
 	},
@@ -18394,7 +18185,6 @@
 	pixel_y = -2;
 	pixel_x = -6
 	},
-/obj/item/stock_parts/capacitor/hyper,
 /obj/item/stock_parts/manipulator/nano{
 	pixel_y = 2;
 	pixel_x = 4
@@ -18416,8 +18206,7 @@
 	name = "Circuitry"
 	},
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /turf/simulated/floor,
 /area/maintenance/Telecomms_Substation)
@@ -18460,8 +18249,7 @@
 "eaV" = (
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -18535,13 +18323,11 @@
 /obj/machinery/deployable/barrier,
 /obj/effect/floor_decal/industrial/hatch/red,
 /obj/machinery/firealarm{
-	pixel_y = 25;
-	name = "N-fire alarm"
+	pixel_y = 25
 	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
@@ -18554,8 +18340,7 @@
 "ebj" = (
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /turf/simulated/floor/glass/reinforced,
 /area/security/Quantum_Pad_Checkpoint)
@@ -18962,9 +18747,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/hallway/Central_1_Deck_Hall)
 "ejO" = (
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -18983,7 +18766,6 @@
 /obj/effect/floor_decal/corner/white/border,
 /obj/machinery/firealarm{
 	dir = 1;
-	name = "S-fire alarm";
 	pixel_y = -25
 	},
 /turf/simulated/floor/tiled,
@@ -19116,9 +18898,7 @@
 /obj/item/seeds/lustflower{
 	icon_state = "seed"
 	},
-/turf/simulated/floor/outdoors/grass/sif/forest/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass,
 /area/hallway/Port_1Deck_Atrium)
 "emE" = (
 /obj/effect/floor_decal/steeldecal/steel_decals_central2{
@@ -19340,7 +19120,6 @@
 	},
 /obj/machinery/firealarm{
 	dir = 1;
-	name = "S-fire alarm";
 	pixel_y = -25
 	},
 /turf/simulated/floor/tiled,
@@ -19373,9 +19152,7 @@
 "esa" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/structure/flora/tree/sif,
-/turf/simulated/floor/outdoors/grass/sif/forest/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Star_1Deck_Atrium)
 "esc" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
@@ -19418,7 +19195,6 @@
 	},
 /obj/machinery/light_switch{
 	dir = 1;
-	name = "S-light switch";
 	pixel_x = 11;
 	pixel_y = -27
 	},
@@ -19494,8 +19270,7 @@
 	dir = 4
 	},
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/rnd/Xenobiology_Lab)
@@ -19624,7 +19399,6 @@
 /obj/machinery/light_switch{
 	pixel_x = -27;
 	pixel_y = 12;
-	name = "W-light switch";
 	dir = 4
 	},
 /obj/structure/cable/green,
@@ -19710,8 +19484,7 @@
 	dir = 4
 	},
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/harbor/Dock3)
@@ -19841,8 +19614,7 @@
 "eBZ" = (
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
@@ -19973,8 +19745,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/light{
-	dir = 8;
-	name = "1E-light fixture"
+	dir = 8
 	},
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
@@ -19984,7 +19755,6 @@
 	},
 /obj/item/radio/intercom{
 	dir = 8;
-	name = "1W-Station Intercom (General)";
 	pixel_x = -22
 	},
 /turf/simulated/floor/tiled,
@@ -20129,16 +19899,12 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/Supply_Ship_Bay)
 "eHg" = (
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /turf/simulated/floor/glass/reinforced,
 /area/hallway/AftPort_1_Deck_Observatory)
 "eHi" = (
 /obj/structure/table/wooden_reinforced,
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /turf/simulated/floor/plating,
 /area/maintenance/ab_CardTrading)
 "eHl" = (
@@ -20168,8 +19934,7 @@
 "eHx" = (
 /obj/machinery/disposal,
 /obj/machinery/ai_status_display{
-	pixel_y = -32;
-	name = "1S-AI display"
+	pixel_y = -32
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 4
@@ -20331,11 +20096,9 @@
 "eKl" = (
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /obj/machinery/ai_status_display{
-	name = "1W-AI display";
 	pixel_x = -32
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -20353,8 +20116,7 @@
 	},
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
@@ -20454,7 +20216,6 @@
 "eLq" = (
 /obj/machinery/vending/snack,
 /obj/machinery/ai_status_display{
-	name = "1N-AI display";
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/dark,
@@ -20535,7 +20296,6 @@
 /area/hallway/Central_1_Deck_Hall)
 "eNk" = (
 /obj/machinery/ai_status_display{
-	name = "1E-AI display";
 	pixel_x = 32
 	},
 /obj/structure/cable/green{
@@ -20794,8 +20554,7 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
@@ -21083,8 +20842,7 @@
 "eWd" = (
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
@@ -21356,7 +21114,6 @@
 "eZW" = (
 /obj/machinery/firealarm{
 	dir = 1;
-	name = "S-fire alarm";
 	pixel_y = -25
 	},
 /obj/structure/cable/green{
@@ -21382,7 +21139,6 @@
 	dir = 4
 	},
 /obj/structure/extinguisher_cabinet{
-	name = "1N-extinguisher cabinet";
 	pixel_y = 28
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -21504,8 +21260,7 @@
 	name = "fire-safety closet"
 	},
 /obj/machinery/status_display{
-	pixel_x = -32;
-	name = "W-status display"
+	pixel_x = -32
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
@@ -21517,8 +21272,7 @@
 /area/rnd/Observation_Hall)
 "fcU" = (
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 6
@@ -21680,8 +21434,7 @@
 	dir = 4
 	},
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/large_escape_pod2/station)
@@ -21783,9 +21536,7 @@
 	pixel_x = 1
 	},
 /obj/structure/table/fancyblack,
-/turf/simulated/floor/outdoors/grass/sif/forest/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass,
 /area/hallway/Port_1Deck_Atrium)
 "fiK" = (
 /obj/structure/disposalpipe/segment,
@@ -22064,12 +21815,10 @@
 /area/rnd/Observation_Hall)
 "fnu" = (
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /obj/machinery/status_display{
-	pixel_x = 32;
-	name = "E-status display"
+	pixel_x = 32
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -22115,7 +21864,6 @@
 "foi" = (
 /obj/machinery/firealarm{
 	dir = 1;
-	name = "S-fire alarm";
 	pixel_y = -25
 	},
 /obj/structure/cable{
@@ -22482,8 +22230,7 @@
 "fwR" = (
 /obj/effect/catwalk_plated/white,
 /obj/machinery/firealarm{
-	pixel_y = 25;
-	name = "N-fire alarm"
+	pixel_y = 25
 	},
 /turf/simulated/floor/plating,
 /area/harbor/Ship_Bay4)
@@ -22622,7 +22369,6 @@
 "fzE" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 27;
-	name = "1E-extinguisher cabinet";
 	dir = 8
 	},
 /obj/structure/cable/green{
@@ -22650,7 +22396,6 @@
 /obj/machinery/light_switch{
 	pixel_x = -27;
 	pixel_y = 12;
-	name = "W-light switch";
 	dir = 4
 	},
 /obj/structure/cable/green{
@@ -22695,45 +22440,34 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/Mining_Ship_Bay)
 "fBA" = (
-/obj/item/gun/energy/locked/frontier/rifle{
-	pixel_y = 9
-	},
-/obj/item/cell/device/weapon{
-	pixel_y = 4
-	},
-/obj/item/cell/device/weapon{
-	pixel_y = 2
-	},
-/obj/item/cell/device/weapon,
 /obj/structure/closet/secure_closet/guncabinet{
 	req_one_access = list(1,19)
-	},
-/obj/item/ammo_magazine/clip/c762{
-	pixel_y = -7;
-	pixel_x = 5
-	},
-/obj/item/gun/energy/locked/frontier/rifle{
-	pixel_y = 6
-	},
-/obj/item/ammo_magazine/clip/c762{
-	pixel_y = -7;
-	pixel_x = 2
-	},
-/obj/item/ammo_magazine/clip/c762{
-	pixel_y = -7;
-	pixel_x = -1
-	},
-/obj/item/gun/projectile/shotgun/pump/rifle{
-	pixel_y = -2
-	},
-/obj/item/gun/projectile/shotgun/pump/rifle{
-	pixel_y = -5
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/red/border{
 	dir = 1
+	},
+/obj/item/gun/energy/taser{
+	pixel_y = 7
+	},
+/obj/item/gun/energy/taser{
+	pixel_y = 4;
+	pixel_x = 2
+	},
+/obj/item/melee/baton{
+	pixel_y = -3
+	},
+/obj/item/melee/baton{
+	pixel_y = -6;
+	pixel_x = 1
+	},
+/obj/item/cell/device/weapon{
+	pixel_y = -7
+	},
+/obj/item/cell/device/weapon{
+	pixel_y = -4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/Aft_Security_Post)
@@ -22784,7 +22518,6 @@
 "fCD" = (
 /obj/machinery/firealarm{
 	dir = 4;
-	name = "E-fire alarm";
 	pixel_x = 25
 	},
 /obj/effect/floor_decal/borderfloorblack{
@@ -22965,7 +22698,6 @@
 	},
 /obj/structure/extinguisher_cabinet{
 	dir = 1;
-	name = "1S-extinguisher cabinet";
 	pixel_y = -27
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -23131,8 +22863,7 @@
 "fKK" = (
 /obj/machinery/conveyor,
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/Mining_Ship_Bay)
@@ -23235,8 +22966,7 @@
 	dir = 4
 	},
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/rnd/Xenobiology_Lab)
@@ -23378,7 +23108,6 @@
 	},
 /obj/machinery/iv_drip,
 /obj/machinery/ai_status_display{
-	name = "1S-AI display";
 	pixel_y = -32
 	},
 /turf/simulated/shuttle/floor/white,
@@ -23522,8 +23251,7 @@
 "fRL" = (
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -24028,7 +23756,6 @@
 /obj/structure/cable/white,
 /obj/machinery/light_switch{
 	dir = 1;
-	name = "S-light switch";
 	pixel_x = 11;
 	pixel_y = -27
 	},
@@ -24233,7 +23960,6 @@
 "gaf" = (
 /obj/machinery/firealarm{
 	dir = 8;
-	name = "W-fire alarm";
 	pixel_x = -25
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -24301,8 +24027,7 @@
 	dir = 4
 	},
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/rnd/Xenobiology_Lab)
@@ -24459,8 +24184,7 @@
 /obj/machinery/computer/secure_data,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
@@ -24534,7 +24258,8 @@
 	layer = 2.5
 	},
 /obj/machinery/door/airlock/angled_bay/standard/color/security{
-	req_access = null
+	req_access = null;
+	req_one_access = list(19,1)
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/hallway/Stairwell_For)
@@ -24687,7 +24412,6 @@
 /obj/structure/closet/secure_closet/security,
 /obj/machinery/status_display{
 	layer = 4;
-	name = "N-status display";
 	pixel_y = 32
 	},
 /obj/effect/floor_decal/borderfloorblack{
@@ -24721,8 +24445,7 @@
 /area/quartermaster/Supply_Ship_Bay)
 "giw" = (
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -24827,9 +24550,7 @@
 /obj/machinery/sleeper{
 	dir = 8
 	},
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/large_escape_pod1/station)
 "gkN" = (
@@ -24944,8 +24665,7 @@
 	},
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/ab_StripBar)
@@ -24987,8 +24707,7 @@
 	dir = 1
 	},
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/Telecomms_Foyer)
@@ -25476,8 +25195,7 @@
 "gxx" = (
 /obj/effect/catwalk_plated/white,
 /obj/machinery/firealarm{
-	pixel_y = 25;
-	name = "N-fire alarm"
+	pixel_y = 25
 	},
 /turf/simulated/floor/plating,
 /area/harbor/Ship_Bay3)
@@ -25538,7 +25256,6 @@
 	pixel_y = 24
 	},
 /obj/machinery/light_switch{
-	name = "N-light switch";
 	pixel_x = 12;
 	pixel_y = 27
 	},
@@ -25844,9 +25561,7 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /turf/simulated/floor/tiled/dark,
 /area/quartermaster/Mining_Ship_Bay)
 "gEd" = (
@@ -25860,7 +25575,6 @@
 	},
 /obj/machinery/light_switch{
 	dir = 1;
-	name = "S-light switch";
 	pixel_x = 11;
 	pixel_y = -27
 	},
@@ -25985,9 +25699,7 @@
 "gHQ" = (
 /obj/structure/table/standard,
 /obj/random_multi/single_item/hand_tele,
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/blue/border,
 /turf/simulated/floor/tiled/dark,
@@ -26017,9 +25729,7 @@
 /obj/machinery/chemical_dispenser/kettle/full{
 	pixel_y = 7
 	},
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /turf/simulated/floor/tiled/white{
 	nitrogen = 101.3;
 	oxygen = 0;
@@ -26076,8 +25786,7 @@
 "gKh" = (
 /obj/machinery/firealarm{
 	dir = 8;
-	pixel_x = -25;
-	name = "W-fire alarm"
+	pixel_x = -25
 	},
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/purple/border,
@@ -26314,7 +26023,6 @@
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/machinery/status_display{
 	layer = 4;
-	name = "N-status display";
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/dark,
@@ -26361,7 +26069,6 @@
 	},
 /obj/machinery/light_switch{
 	dir = 1;
-	name = "S-light switch";
 	pixel_x = 11;
 	pixel_y = -27
 	},
@@ -26385,9 +26092,7 @@
 "gQI" = (
 /obj/effect/catwalk_plated/techmaint,
 /obj/machinery/porta_turret/industrial/teleport_defense,
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /turf/simulated/floor/plating,
 /area/security/Quantum_Pad_Checkpoint)
 "gQV" = (
@@ -26485,8 +26190,7 @@
 "gSP" = (
 /obj/machinery/firealarm{
 	dir = 8;
-	pixel_x = -25;
-	name = "W-fire alarm"
+	pixel_x = -25
 	},
 /obj/structure/cable/green{
 	d1 = 1;
@@ -26669,7 +26373,6 @@
 /area/shuttle/spacebus)
 "gUz" = (
 /obj/machinery/ai_status_display{
-	name = "1W-AI display";
 	pixel_x = -32
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -26910,7 +26613,6 @@
 /obj/structure/table/glass,
 /obj/item/radio/intercom{
 	dir = 4;
-	name = "1E-Station Intercom (General)";
 	pixel_x = 22
 	},
 /turf/simulated/floor/tiled/dark,
@@ -27095,8 +26797,7 @@
 /obj/machinery/portable_atmospherics/canister/empty/nitrous_oxide,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/status_display{
-	pixel_x = -32;
-	name = "W-status display"
+	pixel_x = -32
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
@@ -27268,7 +26969,6 @@
 "hga" = (
 /obj/item/radio/intercom{
 	dir = 1;
-	name = "1N-Station Intercom (General)";
 	pixel_y = 22
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -27381,7 +27081,6 @@
 /area/maintenance/Market_Stall_3)
 "hhP" = (
 /obj/machinery/status_display{
-	name = "S-status display";
 	pixel_y = -32
 	},
 /obj/effect/floor_decal/borderfloor/corner,
@@ -27619,7 +27318,6 @@
 "hon" = (
 /obj/item/radio/intercom{
 	dir = 8;
-	name = "1W-Station Intercom (General)";
 	pixel_x = -22
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -27753,8 +27451,7 @@
 	pixel_x = 22
 	},
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -27975,8 +27672,7 @@
 "htY" = (
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
@@ -28285,7 +27981,7 @@
 	sort_tag = "Resleeving";
 	dir = 2
 	},
-/turf/simulated/wall,
+/turf/simulated/wall/r_wall,
 /area/maintenance/Deck1_ForStar_Corridor2)
 "hzI" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -28309,9 +28005,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/grass/sif/forest/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass,
 /area/hallway/Port_1Deck_Atrium)
 "hAh" = (
 /obj/structure/closet/emcloset/legacy,
@@ -28395,8 +28089,7 @@
 	dir = 4
 	},
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/large_escape_pod1/station)
@@ -28762,7 +28455,6 @@
 	},
 /obj/item/radio/intercom{
 	dir = 1;
-	name = "1N-Station Intercom (General)";
 	pixel_y = 22
 	},
 /turf/simulated/floor/tiled/dark,
@@ -29360,9 +29052,7 @@
 /obj/item/seeds/sunflowerseed{
 	icon_state = "seed"
 	},
-/turf/simulated/floor/outdoors/grass/sif/forest/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass,
 /area/hallway/Port_1Deck_Atrium)
 "hVG" = (
 /obj/structure/sign/directions/cargo{
@@ -29419,9 +29109,7 @@
 /obj/structure/bed/chair/wood{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/grass/sif/forest/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass,
 /area/hallway/Port_1Deck_Atrium)
 "hWv" = (
 /obj/machinery/light/small{
@@ -29637,20 +29325,12 @@
 /obj/effect/catwalk_plated/white,
 /turf/simulated/floor/tiled/dark,
 /area/harbor/Ship_Bay4)
-"iau" = (
-/obj/structure/flora/sif/eyes,
-/turf/simulated/floor/outdoors/grass/sif/forest/turfpack/station{
-	outdoors = -1
-	},
-/area/hallway/Star_1Deck_Atrium)
 "iaC" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/grass/sif/forest/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass,
 /area/hallway/Port_1Deck_Atrium)
 "iaE" = (
 /turf/simulated/wall,
@@ -29659,7 +29339,6 @@
 /obj/machinery/vending/desatti,
 /obj/machinery/status_display{
 	layer = 4;
-	name = "N-status display";
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/dark,
@@ -29847,8 +29526,7 @@
 /area/maintenance/Deck1_AftPort_Corridor3)
 "iev" = (
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /obj/machinery/door/firedoor/glass/hidden/steel,
 /turf/simulated/floor/tiled/techmaint,
@@ -30040,8 +29718,7 @@
 	dir = 8
 	},
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/Distro_Harbor)
@@ -30248,7 +29925,7 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/wall,
+/turf/simulated/wall/r_wall,
 /area/maintenance/Deck1_ForStar_Corridor2)
 "ilD" = (
 /obj/machinery/door/firedoor/border_only,
@@ -30344,8 +30021,7 @@
 	},
 /obj/machinery/light_switch{
 	pixel_x = 12;
-	pixel_y = 27;
-	name = "N-light switch"
+	pixel_y = 27
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -30410,9 +30086,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/ab_SportsField)
 "inz" = (
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -30477,9 +30151,7 @@
 /obj/structure/bed/chair/wood{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/grass/sif/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Port_1Deck_Atrium)
 "ipa" = (
 /obj/structure/table/glass,
@@ -30684,8 +30356,7 @@
 /obj/structure/table/glass,
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /obj/effect/floor_decal/corner/purple/diagonal,
 /obj/effect/floor_decal/corner/purple/diagonal{
@@ -30701,8 +30372,7 @@
 "isR" = (
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -30792,8 +30462,7 @@
 	id = "SC-CBcargobay2"
 	},
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/Supply_Ship_Bay)
@@ -31075,7 +30744,6 @@
 /obj/effect/floor_decal/industrial/outline/blue,
 /obj/machinery/firealarm{
 	dir = 8;
-	name = "W-fire alarm";
 	pixel_x = -25
 	},
 /turf/simulated/floor/tiled/dark,
@@ -31083,8 +30751,7 @@
 "iAV" = (
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -31191,9 +30858,7 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /turf/simulated/floor/tiled/dark,
 /area/quartermaster/Mining_Ship_Bay)
 "iDD" = (
@@ -31260,9 +30925,7 @@
 	name = "Scrable";
 	faction = "nanotrasen"
 	},
-/turf/simulated/floor/outdoors/grass/sif/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Star_1Deck_Atrium)
 "iEf" = (
 /obj/random/junk,
@@ -31371,8 +31034,7 @@
 /area/shuttle/large_escape_pod1/station)
 "iJo" = (
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -31390,9 +31052,7 @@
 "iJv" = (
 /obj/machinery/portable_atmospherics/canister/empty/nitrous_oxide,
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/brown/border,
 /turf/simulated/floor/tiled/dark,
@@ -31588,9 +31248,7 @@
 /obj/item/seeds/rose{
 	icon_state = "seed"
 	},
-/turf/simulated/floor/outdoors/grass/sif/forest/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass,
 /area/hallway/Port_1Deck_Atrium)
 "iOk" = (
 /obj/effect/floor_decal/steeldecal/steel_decals10{
@@ -31661,8 +31319,7 @@
 "iPp" = (
 /obj/machinery/disposal,
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 8
@@ -31878,9 +31535,7 @@
 	req_access = list(47)
 	},
 /obj/item/multitool,
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
 	},
@@ -32649,9 +32304,7 @@
 /obj/item/seeds/siflettuce{
 	icon_state = "seed"
 	},
-/turf/simulated/floor/outdoors/grass/sif/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Star_1Deck_Atrium)
 "jkR" = (
 /obj/machinery/door/firedoor/glass,
@@ -32707,7 +32360,6 @@
 	},
 /obj/machinery/light_switch{
 	dir = 4;
-	name = "W-light switch";
 	pixel_x = -27;
 	pixel_y = 12
 	},
@@ -32912,8 +32564,7 @@
 	dir = 8
 	},
 /obj/machinery/ai_status_display{
-	pixel_y = 32;
-	name = "1N-AI display"
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/white,
 /area/harbor/Dock3)
@@ -32962,8 +32613,7 @@
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/ai_status_display{
-	pixel_y = -32;
-	name = "1S-AI display"
+	pixel_y = -32
 	},
 /turf/simulated/floor/plating,
 /area/rnd/Xenobotany_Isolation_Chamber)
@@ -33005,7 +32655,6 @@
 	},
 /obj/machinery/iv_drip,
 /obj/machinery/ai_status_display{
-	name = "1N-AI display";
 	pixel_y = 32
 	},
 /turf/simulated/shuttle/floor/white,
@@ -33024,7 +32673,6 @@
 "jqw" = (
 /obj/machinery/status_display{
 	layer = 4;
-	name = "N-status display";
 	pixel_y = 32
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -33148,7 +32796,6 @@
 "jsR" = (
 /obj/item/radio/intercom{
 	dir = 1;
-	name = "1N-Station Intercom (General)";
 	pixel_y = 22
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -33433,7 +33080,6 @@
 "jzJ" = (
 /obj/machinery/firealarm{
 	dir = 1;
-	name = "S-fire alarm";
 	pixel_y = -25
 	},
 /obj/effect/floor_decal/borderfloor/corner,
@@ -33496,9 +33142,7 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/Supply_Ship_Bay)
 "jAH" = (
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /turf/simulated/floor/glass,
 /area/hallway/Star_1Deck_Atrium)
 "jAM" = (
@@ -33782,8 +33426,7 @@
 	},
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden,
@@ -33843,7 +33486,6 @@
 	},
 /obj/machinery/light_switch{
 	dir = 1;
-	name = "S-light switch";
 	pixel_x = 11;
 	pixel_y = -27
 	},
@@ -33919,7 +33561,6 @@
 /area/hallway/Port_1Deck_Atrium)
 "jGg" = (
 /obj/item/radio/intercom{
-	name = "1S-Station Intercom (General)";
 	pixel_y = -22
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -33986,7 +33627,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/ai_status_display{
-	name = "1E-AI display";
 	pixel_x = 32
 	},
 /obj/structure/cable/white{
@@ -34110,8 +33750,7 @@
 "jJV" = (
 /obj/structure/table/woodentable,
 /obj/machinery/newscaster{
-	pixel_y = 28;
-	name = "1N-newscaster"
+	pixel_y = 28
 	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/harbor/Star_Docking_Foyer)
@@ -34155,7 +33794,6 @@
 	pixel_x = -8
 	},
 /obj/machinery/ai_status_display{
-	name = "1W-AI display";
 	pixel_x = -32
 	},
 /obj/effect/floor_decal/borderfloorwhite{
@@ -34511,8 +34149,7 @@
 	dir = 4
 	},
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/rnd/Xenobiology_Lab)
@@ -35065,9 +34702,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_Cargo_Corridor1)
 "kbc" = (
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/green/border,
 /turf/simulated/floor/tiled,
@@ -35120,7 +34755,6 @@
 /obj/effect/floor_decal/corner/lightgrey/border,
 /obj/machinery/firealarm{
 	dir = 1;
-	name = "S-fire alarm";
 	pixel_y = -25
 	},
 /turf/simulated/floor/tiled,
@@ -35390,8 +35024,7 @@
 /obj/item/radio/intercom/department/security{
 	dir = 4;
 	icon_override = "secintercom";
-	pixel_x = 22;
-	name = "1E-station intercom (Security)"
+	pixel_x = 22
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
@@ -35416,8 +35049,7 @@
 /area/hallway/Aft_Transit_Lobby)
 "kjp" = (
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
@@ -35535,8 +35167,7 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /turf/simulated/floor/tiled/dark,
 /area/quartermaster/Mining_EVA)
@@ -35891,7 +35522,6 @@
 "ktb" = (
 /obj/machinery/firealarm{
 	dir = 1;
-	name = "S-fire alarm";
 	pixel_y = -25
 	},
 /obj/effect/floor_decal/borderfloor,
@@ -35991,9 +35621,7 @@
 /turf/simulated/floor/tiled,
 /area/maintenance/ab_Hydroponics)
 "kvV" = (
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /turf/simulated/floor/tiled,
 /area/maintenance/Market_Stall_5)
 "kwi" = (
@@ -36030,8 +35658,7 @@
 /area/maintenance/Deck1_Security_StarChamber1)
 "kwt" = (
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable{
@@ -36216,7 +35843,6 @@
 /obj/machinery/light_switch{
 	pixel_x = -27;
 	pixel_y = 12;
-	name = "W-light switch";
 	dir = 4
 	},
 /obj/structure/cable/white{
@@ -36245,8 +35871,7 @@
 "kAD" = (
 /obj/effect/catwalk_plated/white,
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/harbor/Ship_Bay3)
@@ -36344,9 +35969,7 @@
 /area/maintenance/Deck1_AftStar1_Corridor3)
 "kDc" = (
 /obj/structure/table/fancyblack,
-/turf/simulated/floor/outdoors/grass/sif/forest/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass,
 /area/hallway/Port_1Deck_Atrium)
 "kDj" = (
 /obj/structure/cable/blue{
@@ -36418,7 +36041,6 @@
 /obj/machinery/light_switch{
 	pixel_x = 27;
 	pixel_y = -12;
-	name = "E-light switch";
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -36515,7 +36137,6 @@
 	},
 /obj/machinery/light_switch{
 	dir = 1;
-	name = "S-light switch";
 	pixel_x = 11;
 	pixel_y = -27
 	},
@@ -36558,8 +36179,7 @@
 	},
 /obj/machinery/light_switch{
 	pixel_x = 12;
-	pixel_y = 27;
-	name = "N-light switch"
+	pixel_y = 27
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/For_Locker_Room)
@@ -36620,8 +36240,7 @@
 /obj/structure/dispenser/phoron,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /obj/machinery/alarm{
 	dir = 8;
@@ -36768,9 +36387,7 @@
 "kKy" = (
 /obj/structure/flora/ausbushes/brflowers,
 /obj/structure/flora/ausbushes/brflowers,
-/turf/simulated/floor/outdoors/grass/sif/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Port_1Deck_Atrium)
 "kKD" = (
 /obj/random/maintenance/clean,
@@ -36978,9 +36595,7 @@
 /obj/structure/prop/statue/stump_plaque{
 	desc = "A wooden stump adorned with a little plaque. -Sif's botanical garden-"
 	},
-/turf/simulated/floor/outdoors/grass/sif/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Star_1Deck_Atrium)
 "kPu" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -37050,8 +36665,7 @@
 /area/rnd/Observation_Hall)
 "kRj" = (
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /obj/structure/table/bench/sifwooden/padded,
 /turf/simulated/floor/tiled/white,
@@ -37070,9 +36684,7 @@
 	pixel_y = 10;
 	name = "Zwei"
 	},
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /turf/simulated/floor/tiled,
 /area/harbor/Dock5)
 "kRy" = (
@@ -37086,9 +36698,7 @@
 /area/rnd/PA_Chamber)
 "kRH" = (
 /obj/structure/flora/rocks1,
-/turf/simulated/floor/outdoors/grass/sif/forest/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Star_1Deck_Atrium)
 "kSm" = (
 /obj/structure/cable{
@@ -37101,7 +36711,6 @@
 "kSv" = (
 /obj/machinery/firealarm{
 	dir = 8;
-	name = "W-fire alarm";
 	pixel_x = -25
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -37131,8 +36740,7 @@
 /area/crew_quarters/Custodial_Office)
 "kSY" = (
 /obj/machinery/status_display{
-	pixel_x = 32;
-	name = "E-status display"
+	pixel_x = 32
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -37242,6 +36850,7 @@
 /obj/machinery/light_construct/small{
 	dir = 4
 	},
+/obj/item/headpods,
 /turf/simulated/floor/tiled/kafel_full{
 	nitrogen = 101.3;
 	oxygen = 0;
@@ -37420,8 +37029,7 @@
 	},
 /obj/machinery/door/window/westleft,
 /obj/machinery/ai_status_display{
-	pixel_y = -32;
-	name = "1S-AI display"
+	pixel_y = -32
 	},
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/industrial/hatch/blue,
@@ -37638,8 +37246,7 @@
 	dir = 4
 	},
 /obj/machinery/ai_status_display{
-	pixel_y = 32;
-	name = "1N-AI display"
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/dark,
 /area/harbor/Port_Docking_Foyer)
@@ -37691,9 +37298,7 @@
 /obj/structure/railing/grey{
 	color = "yellow"
 	},
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /obj/machinery/door/firedoor/glass/hidden/steel{
 	dir = 2
 	},
@@ -37782,8 +37387,7 @@
 "lcF" = (
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /turf/simulated/floor/tiled,
 /area/maintenance/ab_GeneralStore)
@@ -37866,9 +37470,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_ForStar_Corridor3)
 "leN" = (
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
@@ -38014,8 +37616,7 @@
 /obj/structure/closet/emcloset,
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /turf/simulated/floor/tiled/steel_ridged{
 	color = "#989898"
@@ -38283,8 +37884,7 @@
 "llY" = (
 /obj/structure/table/standard,
 /obj/machinery/newscaster{
-	pixel_y = -30;
-	name = "1S-newscaster"
+	pixel_y = -30
 	},
 /obj/item/towel/random{
 	pixel_y = 10;
@@ -38337,8 +37937,7 @@
 "lmN" = (
 /obj/machinery/status_display{
 	layer = 4;
-	pixel_y = 32;
-	name = "N-status display"
+	pixel_y = 32
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -38423,7 +38022,6 @@
 	},
 /obj/machinery/light_switch{
 	dir = 1;
-	name = "S-light switch";
 	pixel_x = 11;
 	pixel_y = -27
 	},
@@ -38565,7 +38163,6 @@
 /area/maintenance/Deck1_AftPort_Chamber2)
 "lps" = (
 /obj/machinery/firealarm{
-	name = "N-fire alarm";
 	pixel_y = 25
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -38587,8 +38184,7 @@
 	},
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/Distro_Harbor)
@@ -38736,8 +38332,7 @@
 /area/maintenance/Deck1_Security_PortChamber2)
 "lun" = (
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /turf/simulated/floor/glass/reinforced,
 /area/hallway/Port_1Deck_Central_Corridor_1)
@@ -38849,9 +38444,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
-/turf/simulated/floor/outdoors/grass/sif/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Port_1Deck_Atrium)
 "lwN" = (
 /obj/machinery/door/firedoor/border_only,
@@ -39006,8 +38599,7 @@
 /area/rnd/Research_Ship_Bay)
 "lzq" = (
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
@@ -39016,7 +38608,6 @@
 	dir = 1
 	},
 /obj/machinery/ai_status_display{
-	name = "1N-AI display";
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/dark,
@@ -39107,8 +38698,7 @@
 /area/maintenance/Deck1_AftStar1_Corridor1)
 "lAG" = (
 /obj/machinery/ai_status_display{
-	pixel_x = 32;
-	name = "1E-AI display"
+	pixel_x = 32
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -39775,12 +39365,10 @@
 	pixel_y = 4
 	},
 /obj/machinery/newscaster{
-	pixel_y = 28;
-	name = "1N-newscaster"
+	pixel_y = 28
 	},
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/Xenobotany_Lab)
@@ -39933,8 +39521,7 @@
 /area/security/Exploration_Ship_Bay)
 "lQf" = (
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /obj/effect/floor_decal/shuttle/loading{
 	dir = 8;
@@ -40184,7 +39771,6 @@
 "lTi" = (
 /obj/machinery/firealarm{
 	dir = 1;
-	name = "S-fire alarm";
 	pixel_y = -25
 	},
 /obj/structure/cable{
@@ -40196,8 +39782,7 @@
 /area/maintenance/Market_Stall_4)
 "lTm" = (
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -40227,7 +39812,6 @@
 	},
 /obj/machinery/light_switch{
 	dir = 4;
-	name = "W-light switch";
 	pixel_x = -27;
 	pixel_y = 12
 	},
@@ -40271,8 +39855,7 @@
 "lTO" = (
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 8
@@ -40501,8 +40084,7 @@
 /area/maintenance/ab_Kitchen)
 "lXH" = (
 /obj/machinery/newscaster{
-	pixel_y = 28;
-	name = "1N-newscaster"
+	pixel_y = 28
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
@@ -40723,9 +40305,7 @@
 /area/hallway/Port_1Deck_Atrium)
 "maQ" = (
 /obj/structure/flora/ausbushes/fullgrass,
-/turf/simulated/floor/outdoors/grass/sif/forest/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Star_1Deck_Atrium)
 "maR" = (
 /obj/effect/catwalk_plated/techmaint,
@@ -40811,7 +40391,6 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/lightgrey/border,
 /obj/machinery/newscaster{
-	name = "1S-newscaster";
 	pixel_y = -30
 	},
 /turf/simulated/floor/tiled,
@@ -40988,9 +40567,7 @@
 /turf/simulated/floor/plating,
 /area/hallway/Stairwell_For)
 "mgT" = (
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /turf/simulated/floor/plating,
 /area/hallway/For_Transit_Foyer)
 "mhu" = (
@@ -41090,7 +40667,6 @@
 	},
 /obj/item/radio/intercom{
 	dir = 8;
-	name = "1W-Station Intercom (General)";
 	pixel_x = -22
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -41404,8 +40980,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/firealarm{
 	dir = 4;
-	pixel_x = 25;
-	name = "E-fire alarm"
+	pixel_x = 25
 	},
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/Market_Stall_6)
@@ -41510,8 +41085,7 @@
 	dir = 4
 	},
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/Distro_Central)
@@ -41562,7 +41136,6 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/item/radio/intercom{
 	dir = 8;
-	name = "1W-Station Intercom (General)";
 	pixel_x = -22
 	},
 /turf/simulated/floor/plating,
@@ -41616,8 +41189,7 @@
 "mrx" = (
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /obj/effect/floor_decal/corner/purple/diagonal,
 /obj/effect/floor_decal/corner/purple/diagonal{
@@ -41716,7 +41288,6 @@
 /area/harbor/Dock3)
 "mtA" = (
 /obj/machinery/ai_status_display{
-	name = "1E-AI display";
 	pixel_x = 32
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -41760,7 +41331,6 @@
 	},
 /obj/machinery/firealarm{
 	dir = 8;
-	name = "W-fire alarm";
 	pixel_x = -25
 	},
 /turf/simulated/floor/tiled/dark,
@@ -41780,9 +41350,7 @@
 "mun" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /obj/effect/floor_decal/spline/fancy/wood,
-/turf/simulated/floor/outdoors/grass/sif/forest/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass,
 /area/hallway/Port_1Deck_Atrium)
 "muA" = (
 /obj/effect/floor_decal/borderfloorblack,
@@ -42083,9 +41651,7 @@
 /obj/structure/bed/chair/sofa/right/beige{
 	dir = 1
 	},
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /turf/simulated/floor/glass/reinforced,
 /area/hallway/ForStar_1_Deck_Observatory)
 "mxn" = (
@@ -42096,8 +41662,7 @@
 	},
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /turf/simulated/floor/tiled,
 /area/harbor/Port_Docking_Foyer)
@@ -42119,9 +41684,7 @@
 /turf/space,
 /area/space)
 "myr" = (
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
@@ -42260,8 +41823,7 @@
 	pixel_x = 6
 	},
 /obj/machinery/status_display{
-	pixel_x = -32;
-	name = "W-status display"
+	pixel_x = -32
 	},
 /obj/machinery/camera/network/security{
 	dir = 5;
@@ -42329,9 +41891,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 5
 	},
-/turf/simulated/floor/outdoors/grass/sif/forest/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass,
 /area/hallway/Port_1Deck_Atrium)
 "mBt" = (
 /obj/effect/floor_decal/borderfloor{
@@ -42492,7 +42052,6 @@
 /area/maintenance/Deck1_Security_StarCorridor1)
 "mED" = (
 /obj/machinery/ai_status_display{
-	name = "1W-AI display";
 	pixel_x = -32
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -42551,8 +42110,7 @@
 /obj/item/mop/advanced,
 /obj/item/reagent_containers/glass/bucket,
 /obj/machinery/newscaster{
-	pixel_x = -28;
-	name = "1W-newscaster"
+	pixel_x = -28
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
@@ -42619,7 +42177,6 @@
 	},
 /obj/machinery/status_display{
 	layer = 4;
-	name = "N-status display";
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/white,
@@ -42701,8 +42258,7 @@
 "mIl" = (
 /obj/machinery/firealarm{
 	dir = 4;
-	pixel_x = 25;
-	name = "E-fire alarm"
+	pixel_x = 25
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
@@ -42883,9 +42439,7 @@
 	pixel_y = 8;
 	pixel_x = -4
 	},
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/purple/border,
 /turf/simulated/floor/tiled/white,
@@ -42954,7 +42508,6 @@
 /obj/machinery/vending/snack,
 /obj/item/radio/intercom{
 	dir = 4;
-	name = "1E-Station Intercom (General)";
 	pixel_x = 22
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -43080,8 +42633,7 @@
 /area/maintenance/Deck1_Science_AftCorridor1)
 "mOg" = (
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /turf/simulated/floor/glass/reinforced,
 /area/hallway/Star_1Deck_Central_Corridor_1)
@@ -43238,7 +42790,6 @@
 /obj/machinery/light_switch{
 	pixel_x = 27;
 	pixel_y = -12;
-	name = "E-light switch";
 	dir = 8
 	},
 /obj/structure/cable/green{
@@ -43457,8 +43008,7 @@
 	dir = 8
 	},
 /obj/machinery/ai_status_display{
-	pixel_y = 32;
-	name = "1N-AI display"
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/white,
 /area/harbor/Dock4)
@@ -43783,7 +43333,6 @@
 /area/maintenance/Deck1_Security_StarCorridor2)
 "naS" = (
 /obj/machinery/ai_status_display{
-	name = "1S-AI display";
 	pixel_y = -32
 	},
 /obj/effect/floor_decal/borderfloor/corner{
@@ -43871,7 +43420,6 @@
 "ndt" = (
 /obj/item/radio/intercom{
 	dir = 1;
-	name = "1N-Station Intercom (General)";
 	pixel_y = 22
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -44072,7 +43620,6 @@
 /obj/effect/floor_decal/corner/white/border,
 /obj/machinery/firealarm{
 	dir = 1;
-	name = "S-fire alarm";
 	pixel_y = -25
 	},
 /turf/simulated/floor/tiled,
@@ -44134,8 +43681,7 @@
 "nkB" = (
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -44265,8 +43811,7 @@
 /area/quartermaster/Deck1_Corridor)
 "noF" = (
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/AftStar_1_Deck_Observatory)
@@ -44425,9 +43970,7 @@
 /area/shuttle/spacebus)
 "nrb" = (
 /obj/structure/flora/sif/eyes,
-/turf/simulated/floor/outdoors/grass/sif/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Star_1Deck_Atrium)
 "nrf" = (
 /obj/effect/decal/cleanable/flour,
@@ -44522,9 +44065,7 @@
 /obj/structure/railing/grey{
 	color = "yellow"
 	},
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /obj/machinery/door/firedoor/glass/hidden/steel{
 	dir = 2
 	},
@@ -44682,7 +44223,6 @@
 "nvF" = (
 /obj/item/radio/intercom{
 	dir = 4;
-	name = "1E-Station Intercom (General)";
 	pixel_x = 22
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -44704,7 +44244,6 @@
 	},
 /obj/item/radio/intercom{
 	dir = 1;
-	name = "1N-Station Intercom (General)";
 	pixel_y = 22
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -44780,7 +44319,6 @@
 "nyb" = (
 /obj/machinery/firealarm{
 	pixel_y = -25;
-	name = "S-fire alarm";
 	dir = 1
 	},
 /obj/effect/floor_decal/borderfloor/corner{
@@ -44858,9 +44396,7 @@
 /area/maintenance/ab_Hydroponics)
 "nzf" = (
 /obj/structure/flora/tree/sif,
-/turf/simulated/floor/outdoors/grass/sif/forest/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Star_1Deck_Atrium)
 "nzv" = (
 /turf/simulated/floor/tiled/techfloor,
@@ -44945,9 +44481,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 10
 	},
-/turf/simulated/floor/outdoors/grass/sif/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Port_1Deck_Atrium)
 "nBE" = (
 /obj/machinery/door/firedoor/border_only,
@@ -45082,7 +44616,6 @@
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/machinery/status_display{
 	layer = 4;
-	name = "N-status display";
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/dark,
@@ -45457,7 +44990,6 @@
 "nKL" = (
 /obj/effect/catwalk_plated,
 /obj/machinery/ai_status_display{
-	name = "1S-AI display";
 	pixel_y = -32
 	},
 /turf/simulated/floor/plating,
@@ -45494,8 +45026,7 @@
 /area/harbor/Dock1)
 "nLa" = (
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden,
@@ -46121,9 +45652,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /turf/simulated/floor/plating,
 /area/maintenance/Market_Stall_6)
 "nVk" = (
@@ -46244,11 +45773,13 @@
 /turf/simulated/floor/plating,
 /area/maintenance/Distro_Harbor)
 "nWh" = (
-/obj/machinery/smartfridge/secure{
-	req_access = list(47)
+/obj/effect/catwalk_plated,
+/obj/structure/fireaxecabinet{
+	pixel_y = -29;
+	name = "1S-fire axe cabinet"
 	},
-/turf/simulated/wall/r_wall,
-/area/rnd/Observation_Hall)
+/turf/simulated/floor/plating,
+/area/engineering/Telecomms_Foyer)
 "nWy" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/dark,
@@ -46370,7 +45901,6 @@
 	pixel_y = 24
 	},
 /obj/machinery/light_switch{
-	name = "N-light switch";
 	pixel_x = 12;
 	pixel_y = 27
 	},
@@ -46413,9 +45943,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/lightgrey/border,
 /turf/simulated/floor/tiled,
@@ -46802,8 +46330,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/rnd/Xenobiology_Lab)
@@ -47076,8 +46603,7 @@
 /area/maintenance/ab_Hydroponics)
 "okz" = (
 /obj/machinery/status_display{
-	pixel_x = 32;
-	name = "E-status display"
+	pixel_x = 32
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -47145,7 +46671,6 @@
 "olG" = (
 /obj/machinery/firealarm{
 	dir = 8;
-	name = "W-fire alarm";
 	pixel_x = -25
 	},
 /obj/structure/cable/green{
@@ -47188,7 +46713,6 @@
 /obj/machinery/portable_atmospherics/canister/empty/oxygen,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/ai_status_display{
-	name = "1W-AI display";
 	pixel_x = -32
 	},
 /obj/effect/floor_decal/borderfloorblack{
@@ -47238,8 +46762,7 @@
 /obj/effect/catwalk_plated/dark,
 /obj/machinery/telecomms/server/presets/unused,
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /turf/simulated/floor/plating{
 	nitrogen = 100;
@@ -47436,7 +46959,6 @@
 	},
 /obj/machinery/light_switch{
 	dir = 1;
-	name = "S-light switch";
 	pixel_x = 11;
 	pixel_y = -27
 	},
@@ -47727,8 +47249,7 @@
 "ovx" = (
 /obj/structure/bed/chair/sofa/lime,
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /turf/simulated/floor/wood/alt/panel{
 	nitrogen = 101.3;
@@ -48145,8 +47666,7 @@
 	dir = 8
 	},
 /obj/machinery/firealarm{
-	pixel_y = 25;
-	name = "N-fire alarm"
+	pixel_y = 25
 	},
 /turf/simulated/floor/glass,
 /area/hallway/Star_1Deck_Atrium)
@@ -48322,7 +47842,6 @@
 	},
 /obj/machinery/firealarm{
 	dir = 8;
-	name = "W-fire alarm";
 	pixel_x = -25
 	},
 /turf/simulated/floor/tiled,
@@ -48397,9 +47916,7 @@
 /area/hallway/Central_1_Deck_Hall)
 "oFF" = (
 /obj/machinery/mineral/stacking_machine,
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /turf/simulated/floor/plating,
 /area/quartermaster/Mining_Ship_Bay)
 "oGl" = (
@@ -48477,8 +47994,7 @@
 	dir = 8
 	},
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/Central_1_Deck_Hall)
@@ -48577,8 +48093,7 @@
 /area/maintenance/Deck1_AftPort_Chamber2)
 "oIN" = (
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
@@ -48632,8 +48147,7 @@
 "oJL" = (
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /turf/simulated/floor/glass,
 /area/hallway/Deck1_Transit_Hall)
@@ -48862,7 +48376,6 @@
 "oMN" = (
 /obj/item/radio/intercom{
 	dir = 8;
-	name = "1W-Station Intercom (General)";
 	pixel_x = -22
 	},
 /obj/effect/floor_decal/borderfloor/corner{
@@ -48892,8 +48405,7 @@
 /area/maintenance/Deck1_Cargo_Corridor1)
 "oNg" = (
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /turf/simulated/floor/glass/reinforced,
 /area/harbor/Dock5)
@@ -48956,7 +48468,6 @@
 	},
 /obj/machinery/light_switch{
 	dir = 8;
-	name = "E-light switch";
 	pixel_x = 27;
 	pixel_y = -12
 	},
@@ -49200,8 +48711,7 @@
 	dir = 1
 	},
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/Deck1_Transit_Hall)
@@ -49601,7 +49111,6 @@
 /area/quartermaster/Depot1)
 "oZp" = (
 /obj/machinery/status_display{
-	name = "W-status display";
 	pixel_x = -32
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -49678,9 +49187,7 @@
 /turf/simulated/wall/r_wall,
 /area/maintenance/ab_Kitchen)
 "paZ" = (
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -49800,7 +49307,6 @@
 	pixel_x = -3
 	},
 /obj/machinery/newscaster{
-	name = "1S-newscaster";
 	pixel_y = -30
 	},
 /turf/simulated/floor/tiled/kafel_full/blue,
@@ -49922,7 +49428,6 @@
 /area/shuttle/echidna)
 "pfi" = (
 /obj/machinery/ai_status_display{
-	name = "1W-AI display";
 	pixel_x = -32
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -49978,9 +49483,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 9
 	},
-/turf/simulated/floor/outdoors/grass/sif/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Port_1Deck_Atrium)
 "pgf" = (
 /obj/machinery/door/firedoor/border_only,
@@ -50185,8 +49688,7 @@
 	dir = 8
 	},
 /obj/machinery/ai_status_display{
-	pixel_y = 32;
-	name = "1N-AI display"
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/white,
 /area/harbor/Dock1)
@@ -50265,8 +49767,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/status_display{
-	pixel_x = -32;
-	name = "W-status display"
+	pixel_x = -32
 	},
 /obj/structure/cable/white{
 	d1 = 1;
@@ -50713,7 +50214,6 @@
 "poY" = (
 /obj/machinery/disposal,
 /obj/item/radio/intercom{
-	name = "1S-Station Intercom (General)";
 	pixel_y = -22
 	},
 /obj/structure/disposalpipe/trunk{
@@ -50853,7 +50353,6 @@
 /area/maintenance/Deck1_AftStar1_Corridor3)
 "prB" = (
 /obj/machinery/firealarm{
-	name = "N-fire alarm";
 	pixel_y = 25
 	},
 /obj/structure/cable/green{
@@ -50878,9 +50377,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/white/bordercorner,
 /turf/simulated/floor/tiled,
@@ -50902,11 +50399,50 @@
 	},
 /area/maintenance/ab_Kitchen)
 "psu" = (
-/obj/structure/flora/rocks2,
-/turf/simulated/floor/outdoors/grass/sif/forest/turfpack/station{
-	outdoors = -1
+/obj/item/stack/material/phoron{
+	amount = 25;
+	pixel_x = 9;
+	pixel_y = -9
 	},
-/area/hallway/Star_1Deck_Atrium)
+/obj/item/clothing/glasses/meson{
+	pixel_x = -6;
+	pixel_y = -13
+	},
+/obj/item/clothing/glasses/welding{
+	pixel_x = -6;
+	pixel_y = -8
+	},
+/obj/item/stack/material/plasteel{
+	amount = 30;
+	pixel_y = 1;
+	pixel_x = -8
+	},
+/obj/item/stack/material/steel{
+	amount = 50;
+	pixel_y = 4;
+	pixel_x = -8
+	},
+/obj/item/stack/material/glass{
+	amount = 50;
+	pixel_x = -8;
+	pixel_y = 7
+	},
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/item/t_scanner{
+	pixel_y = 3;
+	pixel_x = 11
+	},
+/obj/item/multitool{
+	pixel_x = 4
+	},
+/obj/structure/closet/crate/secure/large/nanotrasen{
+	req_access = list(10)
+	},
+/turf/simulated/floor/plating,
+/area/space)
 "psG" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -50960,9 +50496,7 @@
 /turf/simulated/wall,
 /area/crew_quarters/Public_EVA)
 "puG" = (
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
@@ -51011,9 +50545,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/Aft_1_Deck_Stairwell)
 "pvi" = (
-/turf/simulated/floor/outdoors/grass/sif/forest/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Star_1Deck_Atrium)
 "pvk" = (
 /obj/machinery/door/firedoor/multi_tile/glass{
@@ -51045,12 +50577,6 @@
 /obj/random/maintenance/clean,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_Star_Corridor)
-"pvA" = (
-/obj/structure/flora/ausbushes/sparsegrass,
-/turf/simulated/floor/outdoors/grass/sif/turfpack/station{
-	outdoors = -1
-	},
-/area/hallway/Star_1Deck_Atrium)
 "pvG" = (
 /obj/structure/railing,
 /obj/structure/flora/ausbushes/fullgrass,
@@ -51088,7 +50614,6 @@
 /obj/structure/table/steel,
 /obj/item/radio/intercom{
 	dir = 1;
-	name = "1N-Station Intercom (General)";
 	pixel_y = 22
 	},
 /obj/effect/floor_decal/borderfloorblack{
@@ -51241,9 +50766,7 @@
 /area/harbor/Dock5)
 "pzk" = (
 /obj/structure/flora/ausbushes/brflowers,
-/turf/simulated/floor/outdoors/grass/sif/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Port_1Deck_Atrium)
 "pzK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -51551,7 +51074,6 @@
 	},
 /obj/item/radio/intercom{
 	dir = 4;
-	name = "1E-Station Intercom (General)";
 	pixel_x = 22
 	},
 /turf/simulated/floor/tiled/dark,
@@ -51589,8 +51111,7 @@
 	dir = 1
 	},
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
@@ -51710,9 +51231,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/Central_1_Deck_Hall)
 "pIs" = (
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/white/border,
 /turf/simulated/floor/tiled/dark,
@@ -51720,7 +51239,6 @@
 "pIt" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -28;
-	name = "1W-extinguisher cabinet";
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -51887,8 +51405,7 @@
 "pLm" = (
 /obj/machinery/vending/hydroseeds,
 /obj/machinery/firealarm{
-	pixel_y = 25;
-	name = "N-fire alarm"
+	pixel_y = 25
 	},
 /turf/simulated/floor/tiled,
 /area/maintenance/Market_Stall_1)
@@ -51945,8 +51462,7 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/portable_atmospherics/canister/empty,
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/rnd/PA_Chamber)
@@ -52015,9 +51531,7 @@
 /obj/item/seeds/rose{
 	icon_state = "seed"
 	},
-/turf/simulated/floor/outdoors/grass/sif/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Port_1Deck_Atrium)
 "pOq" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -52078,8 +51592,7 @@
 /area/rnd/Research_Ship_Bay)
 "pOF" = (
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -52549,11 +52062,6 @@
 	pixel_y = 23;
 	name = "1N-wall recharger"
 	},
-/obj/machinery/recharger/wallcharger{
-	pixel_x = 4;
-	pixel_y = 33;
-	name = "1N-wall recharger"
-	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
 	},
@@ -52845,9 +52353,7 @@
 	nutriment_amt = 1
 	},
 /obj/structure/table/fancyblack,
-/turf/simulated/floor/outdoors/grass/sif/forest/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass,
 /area/hallway/Port_1Deck_Atrium)
 "pYg" = (
 /obj/structure/table/bench/sifwooden/padded,
@@ -52877,8 +52383,7 @@
 "pYC" = (
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /turf/simulated/floor/plating,
 /area/hallway/Port_1Deck_Atrium)
@@ -53016,9 +52521,7 @@
 /area/maintenance/Deck1_Cargo_Corridor2)
 "qbg" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/brown/border,
 /turf/simulated/floor/tiled/dark,
@@ -53105,9 +52608,7 @@
 /area/maintenance/ab_StripBar)
 "qdT" = (
 /obj/effect/floor_decal/spline/fancy/wood,
-/turf/simulated/floor/outdoors/grass/sif/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Port_1Deck_Atrium)
 "qed" = (
 /obj/structure/cable{
@@ -53122,8 +52623,7 @@
 /obj/item/mop/advanced,
 /obj/item/reagent_containers/glass/bucket,
 /obj/machinery/light{
-	dir = 8;
-	name = "1E-light fixture"
+	dir = 8
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
@@ -53231,7 +52731,6 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/brown/border,
 /obj/item/radio/intercom{
-	name = "1S-Station Intercom (General)";
 	pixel_y = -22
 	},
 /turf/simulated/floor/tiled,
@@ -53366,8 +52865,7 @@
 "qhH" = (
 /obj/machinery/firealarm{
 	dir = 4;
-	pixel_x = 25;
-	name = "E-fire alarm"
+	pixel_x = 25
 	},
 /obj/structure/cable/green{
 	d1 = 1;
@@ -53416,9 +52914,7 @@
 /area/rnd/Research_Ship_Bay)
 "qiR" = (
 /obj/structure/flora/ausbushes/brflowers,
-/turf/simulated/floor/outdoors/grass/sif/forest/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass,
 /area/hallway/Port_1Deck_Atrium)
 "qjA" = (
 /obj/structure/disposalpipe/segment{
@@ -53432,9 +52928,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
-/turf/simulated/floor/outdoors/grass/sif/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Port_1Deck_Atrium)
 "qjR" = (
 /obj/effect/catwalk_plated/techmaint,
@@ -53596,9 +53090,7 @@
 /area/maintenance/Deck1_AftPort_Chamber1)
 "qnA" = (
 /obj/structure/flora/ausbushes/ywflowers,
-/turf/simulated/floor/outdoors/grass/sif/forest/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass,
 /area/hallway/Port_1Deck_Atrium)
 "qnC" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
@@ -53630,7 +53122,6 @@
 	},
 /obj/machinery/status_display{
 	layer = 4;
-	name = "N-status display";
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/white,
@@ -53871,8 +53362,7 @@
 /area/security/Exploration_Sling_Shuttle)
 "qrL" = (
 /obj/machinery/firealarm{
-	pixel_y = 25;
-	name = "N-fire alarm"
+	pixel_y = 25
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
@@ -53934,9 +53424,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /turf/simulated/floor/tiled/dark,
 /area/harbor/Dock3)
 "qtH" = (
@@ -53970,8 +53458,7 @@
 /area/quartermaster/Mining_Ship_Bay)
 "quc" = (
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /turf/simulated/floor/glass/reinforced,
 /area/hallway/ForPort_1_Deck_Observatory)
@@ -54059,7 +53546,6 @@
 "qvD" = (
 /obj/machinery/firealarm{
 	dir = 1;
-	name = "S-fire alarm";
 	pixel_y = -25
 	},
 /obj/effect/floor_decal/borderfloorwhite,
@@ -54359,8 +53845,7 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/portable_atmospherics/canister/nitrogen,
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/PA_Chamber)
@@ -54436,8 +53921,7 @@
 /area/shuttle/needle)
 "qGi" = (
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/maintenance/Market_Stall_2)
@@ -54457,7 +53941,6 @@
 /obj/machinery/vending/snix,
 /obj/item/radio/intercom{
 	dir = 8;
-	name = "1W-Station Intercom (General)";
 	pixel_x = -22
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -54470,8 +53953,7 @@
 /area/harbor/Dock3)
 "qGK" = (
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /obj/structure/disposalpipe/sortjunction/wildcard/flipped{
 	dir = 8
@@ -54757,10 +54239,6 @@
 	pixel_x = 9;
 	pixel_y = -9
 	},
-/obj/item/t_scanner/upgraded{
-	pixel_x = 11;
-	pixel_y = 3
-	},
 /obj/item/clothing/glasses/meson{
 	pixel_x = -6;
 	pixel_y = -13
@@ -54768,9 +54246,6 @@
 /obj/item/clothing/glasses/welding{
 	pixel_x = -6;
 	pixel_y = -8
-	},
-/obj/structure/closet/crate/large/nanotrasen{
-	req_one_access = list(10)
 	},
 /obj/item/stack/material/plasteel{
 	amount = 30;
@@ -54787,13 +54262,6 @@
 	pixel_x = -8;
 	pixel_y = 7
 	},
-/obj/item/clothing/gloves/yellow{
-	pixel_x = -7;
-	pixel_y = 2
-	},
-/obj/item/multitool{
-	pixel_x = 4
-	},
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
@@ -54802,6 +54270,16 @@
 /obj/structure/cable/green{
 	d2 = 8;
 	icon_state = "0-8"
+	},
+/obj/item/t_scanner{
+	pixel_y = 3;
+	pixel_x = 11
+	},
+/obj/item/multitool{
+	pixel_x = 4
+	},
+/obj/structure/closet/crate/secure/large/nanotrasen{
+	req_access = list(10)
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/Distro_Central)
@@ -55369,9 +54847,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_Science_AftCorridor1)
 "qTw" = (
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /obj/machinery/airlock_sensor{
 	pixel_y = -24;
 	dir = 1
@@ -55482,8 +54958,7 @@
 	name = "Drei"
 	},
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/harbor/Star_Docking_Foyer)
@@ -55492,9 +54967,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 6
 	},
-/turf/simulated/floor/outdoors/grass/sif/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Port_1Deck_Atrium)
 "qUU" = (
 /obj/effect/floor_decal/arrivals/right,
@@ -55604,8 +55077,7 @@
 "qVM" = (
 /obj/effect/catwalk_plated/white,
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/harbor/Ship_Bay4)
@@ -55635,8 +55107,7 @@
 "qWM" = (
 /obj/machinery/firealarm{
 	dir = 8;
-	pixel_x = -25;
-	name = "W-fire alarm"
+	pixel_x = -25
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
@@ -55836,8 +55307,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/status_display{
-	pixel_x = 32;
-	name = "E-status display"
+	pixel_x = 32
 	},
 /obj/structure/cable/white{
 	d1 = 1;
@@ -55963,8 +55433,7 @@
 /area/engineering/Telecomms_Network)
 "rbp" = (
 /obj/machinery/firealarm{
-	pixel_y = 25;
-	name = "N-fire alarm"
+	pixel_y = 25
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -56144,8 +55613,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/Central_1_Deck_Hall)
@@ -56235,7 +55703,6 @@
 "reM" = (
 /obj/structure/closet/l3closet/scientist/double,
 /obj/machinery/ai_status_display{
-	name = "1W-AI display";
 	pixel_x = -32
 	},
 /obj/effect/floor_decal/borderfloorblack{
@@ -56371,9 +55838,7 @@
 /area/maintenance/Deck1_Security_StarCorridor2)
 "rhu" = (
 /obj/structure/flora/ausbushes/ywflowers,
-/turf/simulated/floor/outdoors/grass/sif/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Port_1Deck_Atrium)
 "rhK" = (
 /obj/structure/disposalpipe/segment{
@@ -56507,7 +55972,7 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/wall,
+/turf/simulated/wall/r_wall,
 /area/maintenance/ab_Kitchen)
 "rkp" = (
 /obj/structure/table,
@@ -56678,8 +56143,7 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /turf/simulated/floor/plating,
 /area/harbor/Fueling_Post)
@@ -56718,7 +56182,6 @@
 	},
 /obj/machinery/firealarm{
 	dir = 1;
-	name = "S-fire alarm";
 	pixel_y = -25
 	},
 /turf/simulated/floor/tiled,
@@ -56781,9 +56244,7 @@
 /obj/item/seeds/lustflower{
 	icon_state = "seed"
 	},
-/turf/simulated/floor/outdoors/grass/sif/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Port_1Deck_Atrium)
 "rqj" = (
 /obj/machinery/alarm{
@@ -56872,8 +56333,7 @@
 /area/rnd/Observation_Hall)
 "rrm" = (
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/Stairwell_For)
@@ -57020,9 +56480,7 @@
 /area/maintenance/Harbor_Substation)
 "rtA" = (
 /obj/structure/closet/secure_closet/personal,
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /obj/effect/floor_decal/borderfloorblack/corner,
 /obj/effect/floor_decal/corner/red/bordercorner,
 /turf/simulated/floor/tiled/dark,
@@ -57275,7 +56733,6 @@
 	RCon_tag = "Tcoms Substation Bypass"
 	},
 /obj/machinery/status_display{
-	name = "S-status display";
 	pixel_y = -32
 	},
 /turf/simulated/floor/plating,
@@ -57457,8 +56914,7 @@
 "rzO" = (
 /obj/structure/closet/secure_closet/security,
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
@@ -57865,7 +57321,6 @@
 /obj/machinery/light_switch{
 	pixel_x = -27;
 	pixel_y = 12;
-	name = "W-light switch";
 	dir = 4
 	},
 /obj/structure/cable/white{
@@ -57949,7 +57404,8 @@
 	},
 /obj/machinery/power/emitter/antique{
 	dir = 4;
-	anchored = 1
+	anchored = 1;
+	id = "SC-PARoomEmitter"
 	},
 /obj/structure/cable/green,
 /turf/simulated/floor/tiled/techfloor,
@@ -57960,8 +57416,7 @@
 	dir = 1
 	},
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /obj/machinery/door/firedoor/glass/hidden/steel{
 	dir = 1
@@ -58004,9 +57459,7 @@
 /area/maintenance/ab_GeneralStore)
 "rLd" = (
 /obj/effect/floor_decal/spline/fancy/wood,
-/turf/simulated/floor/outdoors/grass/sif/forest/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass,
 /area/hallway/Port_1Deck_Atrium)
 "rLt" = (
 /obj/effect/floor_decal/borderfloor{
@@ -58067,7 +57520,6 @@
 	},
 /obj/machinery/light_switch{
 	dir = 8;
-	name = "E-light switch";
 	pixel_x = 27;
 	pixel_y = -12
 	},
@@ -58136,7 +57588,6 @@
 "rPG" = (
 /obj/item/radio/intercom{
 	dir = 1;
-	name = "1N-Station Intercom (General)";
 	pixel_y = 22
 	},
 /turf/simulated/floor/glass/reinforced,
@@ -58223,8 +57674,7 @@
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /turf/simulated/floor/tiled/dark,
 /area/harbor/Port_Docking_Foyer)
@@ -58403,8 +57853,7 @@
 /area/quartermaster/Mining_Ship_Bay)
 "rUM" = (
 /obj/machinery/status_display{
-	pixel_x = -32;
-	name = "W-status display"
+	pixel_x = -32
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -58568,8 +58017,7 @@
 /area/rnd/Xenobiology_Lab)
 "rXO" = (
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 8
@@ -58785,8 +58233,7 @@
 "saS" = (
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/For_Locker_Room)
@@ -58809,8 +58256,7 @@
 	},
 /obj/machinery/status_display{
 	layer = 4;
-	pixel_y = 32;
-	name = "N-status display"
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/For_Locker_Room)
@@ -58888,9 +58334,7 @@
 	pixel_y = -2;
 	pixel_x = 2
 	},
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /obj/machinery/airlock_sensor{
 	pixel_y = -24;
 	dir = 1
@@ -59009,7 +58453,6 @@
 "sdp" = (
 /obj/machinery/firealarm{
 	pixel_y = -25;
-	name = "S-fire alarm";
 	dir = 1
 	},
 /turf/simulated/floor/wood/alt/parquet/turfpack/station,
@@ -59099,9 +58542,7 @@
 /turf/simulated/shuttle/floor,
 /area/shuttle/escape_pod13/station)
 "seB" = (
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /turf/simulated/floor/glass/reinforced,
 /area/hallway/AftStar_1_Deck_Observatory)
 "seD" = (
@@ -59140,7 +58581,6 @@
 	dir = 8
 	},
 /obj/machinery/status_display{
-	name = "W-status display";
 	pixel_x = -32
 	},
 /turf/simulated/floor/tiled,
@@ -59269,8 +58709,7 @@
 /obj/structure/table/standard,
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
@@ -59427,7 +58866,6 @@
 /area/maintenance/Deck1_AftPort_Chamber2)
 "skF" = (
 /obj/item/radio/intercom{
-	name = "1S-Station Intercom (General)";
 	pixel_y = -22
 	},
 /obj/effect/floor_decal/borderfloor,
@@ -59745,7 +59183,6 @@
 /obj/machinery/light_switch{
 	pixel_x = -27;
 	pixel_y = 12;
-	name = "W-light switch";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -59924,8 +59361,7 @@
 	dir = 4
 	},
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
@@ -59946,7 +59382,6 @@
 	},
 /obj/machinery/light_switch{
 	dir = 1;
-	name = "S-light switch";
 	pixel_x = 11;
 	pixel_y = -27
 	},
@@ -60148,9 +59583,7 @@
 /obj/structure/sign/warning/high_voltage{
 	pixel_y = -32
 	},
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /turf/simulated/floor/plating,
 /area/engineering/Telecomms_Foyer)
 "sAE" = (
@@ -60383,9 +59816,7 @@
 /area/security/Aft_Security_Post)
 "sEE" = (
 /obj/structure/flora/ausbushes/ppflowers,
-/turf/simulated/floor/outdoors/grass/sif/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Port_1Deck_Atrium)
 "sEM" = (
 /obj/machinery/alarm{
@@ -60404,9 +59835,7 @@
 /obj/item/seeds/sunflowerseed{
 	icon_state = "seed"
 	},
-/turf/simulated/floor/outdoors/grass/sif/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Port_1Deck_Atrium)
 "sET" = (
 /obj/machinery/alarm{
@@ -60438,8 +59867,7 @@
 	},
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /turf/simulated/floor/carpet/sblucarpet/turfpack/station,
 /area/hallway/Cryostorage_Lounge)
@@ -60483,14 +59911,11 @@
 /obj/item/seeds/poppyseed{
 	icon_state = "seed"
 	},
-/turf/simulated/floor/outdoors/grass/sif/forest/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass,
 /area/hallway/Port_1Deck_Atrium)
 "sGw" = (
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -60547,9 +59972,7 @@
 /turf/simulated/floor/plating,
 /area/harbor/Ship_Bay1)
 "sHh" = (
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/green/border,
@@ -60707,7 +60130,6 @@
 	},
 /obj/machinery/status_display{
 	layer = 4;
-	name = "N-status display";
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled,
@@ -60893,9 +60315,7 @@
 /turf/simulated/floor/tiled/hydro,
 /area/maintenance/ab_Hydroponics)
 "sMI" = (
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/white/border,
 /turf/simulated/floor/tiled/dark,
@@ -61204,8 +60624,7 @@
 /area/maintenance/Deck1_Cargo_Chamber1)
 "sSr" = (
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -61382,8 +60801,7 @@
 /area/hallway/Star_1Deck_Atrium)
 "sXr" = (
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/AftPort_1_Deck_Observatory)
@@ -62293,7 +61711,6 @@
 "tpj" = (
 /obj/machinery/door/firedoor/glass/hidden/steel,
 /obj/machinery/status_display{
-	name = "E-status display";
 	pixel_x = 32
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -62360,8 +61777,7 @@
 "tqg" = (
 /obj/machinery/door/firedoor/glass/hidden/steel,
 /obj/machinery/ai_status_display{
-	pixel_x = 32;
-	name = "1E-AI display"
+	pixel_x = 32
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/hallway/Deck1_Corridor)
@@ -62402,9 +61818,7 @@
 /obj/item/seeds/rose/blood{
 	icon_state = "seed"
 	},
-/turf/simulated/floor/outdoors/grass/sif/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Port_1Deck_Atrium)
 "tqB" = (
 /obj/item/reagent_containers/food/snacks/monkeycube/wrapped/stokcube,
@@ -62544,7 +61958,6 @@
 	},
 /obj/machinery/status_display{
 	layer = 4;
-	name = "N-status display";
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/white,
@@ -62569,8 +61982,7 @@
 	req_one_access = list(7,47)
 	},
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
@@ -62583,9 +61995,7 @@
 "tsU" = (
 /obj/structure/flora/ausbushes/ppflowers,
 /obj/structure/flora/ausbushes/ywflowers,
-/turf/simulated/floor/outdoors/grass/sif/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Port_1Deck_Atrium)
 "tts" = (
 /obj/structure/lattice,
@@ -62842,7 +62252,8 @@
 	layer = 2.5
 	},
 /obj/machinery/door/airlock/angled_bay/standard/color/security{
-	req_access = null
+	req_access = null;
+	req_one_access = list(19,1)
 	},
 /obj/structure/cable/green{
 	d1 = 1;
@@ -62921,9 +62332,7 @@
 /obj/item/seeds/poppyseed{
 	icon_state = "seed"
 	},
-/turf/simulated/floor/outdoors/grass/sif/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Port_1Deck_Atrium)
 "tzt" = (
 /obj/machinery/door/firedoor/glass,
@@ -62974,13 +62383,12 @@
 /obj/effect/floor_decal/corner/mauve/border{
 	dir = 4
 	},
-/obj/random/soap,
+/obj/random/soap_common,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/Custodial_Office)
 "tzZ" = (
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -63048,9 +62456,7 @@
 /obj/item/seeds/sifbulb{
 	icon_state = "seed"
 	},
-/turf/simulated/floor/outdoors/grass/sif/forest/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Star_1Deck_Atrium)
 "tAZ" = (
 /obj/machinery/power/apc{
@@ -63060,7 +62466,6 @@
 	},
 /obj/machinery/firealarm{
 	pixel_y = -25;
-	name = "S-fire alarm";
 	dir = 1
 	},
 /obj/structure/cable/green{
@@ -63110,17 +62515,14 @@
 /obj/item/seeds/shrinkshroom{
 	icon_state = "seed"
 	},
-/turf/simulated/floor/outdoors/grass/sif/forest/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Star_1Deck_Atrium)
 "tCf" = (
 /turf/simulated/wall,
 /area/maintenance/ab_ChuteTrade)
 "tCi" = (
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /turf/simulated/floor/glass/reinforced,
 /area/security/Quantum_Pad_Checkpoint)
@@ -63208,7 +62610,6 @@
 /obj/machinery/light_switch{
 	pixel_x = 27;
 	pixel_y = -12;
-	name = "E-light switch";
 	dir = 8
 	},
 /obj/effect/floor_decal/borderfloor/corner{
@@ -63236,9 +62637,7 @@
 /area/hallway/Star_1Deck_Atrium)
 "tDP" = (
 /obj/structure/flora/rocks2,
-/turf/simulated/floor/outdoors/grass/sif/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Star_1Deck_Atrium)
 "tDY" = (
 /obj/structure/reagent_dispensers/foam,
@@ -63599,7 +62998,6 @@
 /area/engineering/Telecomms_Control_Room)
 "tLK" = (
 /obj/machinery/status_display{
-	name = "W-status display";
 	pixel_x = -32
 	},
 /turf/simulated/floor/glass/reinforced,
@@ -63826,8 +63224,7 @@
 /area/rnd/Xenobotany_Lab)
 "tQH" = (
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_AftPort_Chamber2)
@@ -63869,9 +63266,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_ForPort_Chamber1)
 "tRr" = (
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /turf/simulated/floor/tiled,
 /area/maintenance/Market_Stall_4)
 "tRt" = (
@@ -63892,8 +63287,7 @@
 "tRR" = (
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /obj/structure/table/standard,
 /obj/machinery/cell_charger{
@@ -63914,7 +63308,6 @@
 /area/rnd/Xenobiology_Lab)
 "tSh" = (
 /obj/machinery/ai_status_display{
-	name = "1E-AI display";
 	pixel_x = 32
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -64065,7 +63458,6 @@
 "tUx" = (
 /obj/machinery/firealarm{
 	dir = 8;
-	name = "W-fire alarm";
 	pixel_x = -25
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -64231,8 +63623,7 @@
 /obj/structure/closet/crate/large,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/status_display{
-	pixel_x = -32;
-	name = "W-status display"
+	pixel_x = -32
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
@@ -64286,9 +63677,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/hallway/Port_1Deck_Atrium)
 "tZQ" = (
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
@@ -64360,8 +63749,7 @@
 	dir = 4
 	},
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/rnd/Xenobiology_Lab)
@@ -64430,8 +63818,7 @@
 /area/rnd/Xenobiology_Lab)
 "ubt" = (
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/Quantum_Pad_Checkpoint)
@@ -64555,9 +63942,7 @@
 "udx" = (
 /obj/structure/flora/ausbushes/ppflowers,
 /obj/structure/flora/ausbushes/brflowers,
-/turf/simulated/floor/outdoors/grass/sif/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Port_1Deck_Atrium)
 "udF" = (
 /obj/effect/floor_decal/borderfloorblack,
@@ -64823,8 +64208,7 @@
 /area/maintenance/Deck1_Cargo_Corridor3)
 "uhW" = (
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /turf/simulated/floor/carpet/blue,
 /area/harbor/Port_Docking_Foyer)
@@ -64986,7 +64370,6 @@
 	},
 /obj/machinery/light_switch{
 	dir = 1;
-	name = "S-light switch";
 	pixel_x = 11;
 	pixel_y = -27
 	},
@@ -65168,8 +64551,7 @@
 	},
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -65221,9 +64603,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/grass/sif/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Port_1Deck_Atrium)
 "uqt" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -65252,7 +64632,6 @@
 	dir = 4
 	},
 /obj/machinery/newscaster{
-	name = "1S-newscaster";
 	pixel_y = -30
 	},
 /obj/effect/floor_decal/borderfloorblack/corner,
@@ -65284,7 +64663,6 @@
 "urj" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 27;
-	name = "1E-extinguisher cabinet";
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -65506,8 +64884,7 @@
 /area/harbor/Dock1)
 "uvr" = (
 /obj/machinery/status_display{
-	pixel_x = 32;
-	name = "E-status display"
+	pixel_x = 32
 	},
 /obj/structure/cable/green{
 	d1 = 1;
@@ -65551,8 +64928,7 @@
 "uvW" = (
 /obj/machinery/firealarm{
 	dir = 4;
-	pixel_x = 25;
-	name = "E-fire alarm"
+	pixel_x = 25
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -65621,7 +64997,6 @@
 /obj/machinery/light_switch{
 	pixel_x = 27;
 	pixel_y = -12;
-	name = "E-light switch";
 	dir = 8
 	},
 /obj/structure/cable/green,
@@ -65684,9 +65059,7 @@
 	dir = 1;
 	pixel_y = -28
 	},
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/crew_quarters/For_Restroom)
 "uzg" = (
@@ -66014,7 +65387,6 @@
 	pixel_y = 24
 	},
 /obj/machinery/light_switch{
-	name = "N-light switch";
 	pixel_x = 12;
 	pixel_y = 27
 	},
@@ -66223,12 +65595,9 @@
 	dir = 5
 	},
 /obj/item/radio/intercom{
-	name = "1S-Station Intercom (General)";
 	pixel_y = -22
 	},
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/purple/border,
 /turf/simulated/floor/tiled/white,
@@ -66312,7 +65681,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/wall,
+/turf/simulated/wall/r_wall,
 /area/maintenance/ab_Kitchen)
 "uKn" = (
 /obj/structure/table/standard,
@@ -66416,9 +65785,7 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/closet/crate/freezer/nanotrasen,
 /obj/random/maintenance/cargo,
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/brown/border,
 /turf/simulated/floor/tiled/dark,
@@ -66630,7 +65997,6 @@
 /obj/machinery/light_switch{
 	pixel_x = -27;
 	pixel_y = 12;
-	name = "W-light switch";
 	dir = 4
 	},
 /obj/structure/cable/white{
@@ -66668,18 +66034,14 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
-/turf/simulated/floor/outdoors/grass/sif/forest/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass,
 /area/hallway/Port_1Deck_Atrium)
 "uRj" = (
 /obj/item/laserdome_flag/red,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/ab_SportsField)
 "uRD" = (
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -66698,7 +66060,6 @@
 /obj/effect/floor_decal/corner/white/border,
 /obj/machinery/firealarm{
 	dir = 1;
-	name = "S-fire alarm";
 	pixel_y = -25
 	},
 /turf/simulated/floor/tiled,
@@ -66709,8 +66070,7 @@
 /area/hallway/Port_1Deck_Atrium)
 "uSp" = (
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -66795,7 +66155,6 @@
 /obj/machinery/light_switch{
 	pixel_x = 27;
 	pixel_y = -12;
-	name = "E-light switch";
 	dir = 8
 	},
 /obj/structure/cable/green,
@@ -66960,8 +66319,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/light{
-	dir = 8;
-	name = "1E-light fixture"
+	dir = 8
 	},
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
@@ -66990,8 +66348,7 @@
 	dir = 1
 	},
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /obj/machinery/door/firedoor/glass/hidden/steel{
 	dir = 1
@@ -67001,7 +66358,6 @@
 "uXa" = (
 /obj/item/radio/intercom{
 	dir = 8;
-	name = "1W-Station Intercom (General)";
 	pixel_x = -22
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -67147,7 +66503,6 @@
 "uZJ" = (
 /obj/structure/extinguisher_cabinet{
 	dir = 1;
-	name = "1S-extinguisher cabinet";
 	pixel_y = -27
 	},
 /obj/effect/floor_decal/borderfloor/corner,
@@ -67181,9 +66536,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/Distro_Harbor)
 "vaz" = (
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 8
 	},
@@ -67413,7 +66766,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/ai_status_display{
-	name = "1W-AI display";
 	pixel_x = -32
 	},
 /obj/structure/cable/white{
@@ -67754,7 +67106,6 @@
 	},
 /obj/structure/extinguisher_cabinet{
 	dir = 8;
-	name = "1E-extinguisher cabinet";
 	pixel_x = 27
 	},
 /obj/effect/floor_decal/borderfloorblack{
@@ -67852,7 +67203,6 @@
 	},
 /obj/machinery/light_switch{
 	dir = 8;
-	name = "E-light switch";
 	pixel_x = 27;
 	pixel_y = -12
 	},
@@ -67897,7 +67247,6 @@
 	},
 /obj/machinery/light_switch{
 	dir = 1;
-	name = "S-light switch";
 	pixel_x = 11;
 	pixel_y = -27
 	},
@@ -68064,9 +67413,7 @@
 /obj/item/seeds/lustflower{
 	icon_state = "seed"
 	},
-/turf/simulated/floor/outdoors/grass/sif/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Port_1Deck_Atrium)
 "voF" = (
 /obj/structure/shuttle/engine/heater,
@@ -68507,9 +67854,7 @@
 /obj/effect/landmark{
 	name = "lightsout"
 	},
-/turf/simulated/floor/outdoors/grass/sif/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Port_1Deck_Atrium)
 "vvi" = (
 /obj/effect/floor_decal/borderfloorwhite/corner{
@@ -68541,9 +67886,7 @@
 "vwb" = (
 /obj/structure/reagent_dispensers/foam,
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /turf/simulated/floor/plating,
 /area/maintenance/Distro_Central)
 "vwq" = (
@@ -68557,7 +67900,6 @@
 	},
 /obj/item/radio/intercom{
 	dir = 8;
-	name = "1W-Station Intercom (General)";
 	pixel_x = -22
 	},
 /obj/effect/floor_decal/corner/purple/diagonal,
@@ -68610,7 +67952,6 @@
 	},
 /obj/machinery/light_switch{
 	dir = 1;
-	name = "S-light switch";
 	pixel_x = 11;
 	pixel_y = -27
 	},
@@ -68637,7 +67978,6 @@
 /obj/structure/closet/malf/suits,
 /obj/structure/extinguisher_cabinet{
 	dir = 1;
-	name = "1S-extinguisher cabinet";
 	pixel_y = -27
 	},
 /obj/effect/floor_decal/borderfloorblack,
@@ -68898,8 +68238,7 @@
 /area/quartermaster/Mining_Ship_Bay)
 "vBl" = (
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/purple/bordercorner,
@@ -68908,7 +68247,6 @@
 "vBs" = (
 /obj/machinery/status_display{
 	layer = 4;
-	name = "N-status display";
 	pixel_y = 32
 	},
 /obj/machinery/door/firedoor/glass/hidden/steel{
@@ -69065,7 +68403,6 @@
 "vDc" = (
 /obj/machinery/firealarm{
 	pixel_y = -25;
-	name = "S-fire alarm";
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -69541,9 +68878,7 @@
 /obj/structure/bed/chair/wood{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/grass/sif/forest/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass,
 /area/hallway/Port_1Deck_Atrium)
 "vMr" = (
 /obj/effect/catwalk_plated/techmaint,
@@ -69566,9 +68901,7 @@
 /area/maintenance/Deck1_Security_PortCorridor1)
 "vMv" = (
 /obj/structure/flora/sif/tendrils,
-/turf/simulated/floor/outdoors/grass/sif/forest/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Star_1Deck_Atrium)
 "vMw" = (
 /obj/effect/floor_decal/industrial/outline/cut_corners/blue,
@@ -69645,7 +68978,6 @@
 "vNk" = (
 /obj/item/radio/intercom{
 	dir = 4;
-	name = "1E-Station Intercom (General)";
 	pixel_x = 22
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -69739,8 +69071,7 @@
 /area/maintenance/Deck1_AftStar1_Corridor2)
 "vOZ" = (
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
@@ -69795,8 +69126,7 @@
 "vQw" = (
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
@@ -69906,8 +69236,7 @@
 /area/maintenance/ab_GeneralStore)
 "vTb" = (
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -70018,9 +69347,7 @@
 "vUn" = (
 /obj/structure/flora/ausbushes/ppflowers,
 /obj/effect/floor_decal/spline/fancy/wood,
-/turf/simulated/floor/outdoors/grass/sif/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Port_1Deck_Atrium)
 "vUq" = (
 /obj/random/junk,
@@ -70135,7 +69462,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /obj/item/radio/intercom{
 	dir = 4;
-	name = "1E-Station Intercom (General)";
 	pixel_x = 22
 	},
 /obj/effect/floor_decal/borderfloorwhite,
@@ -70313,9 +69639,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
@@ -70349,8 +69673,7 @@
 /obj/structure/table/rack/shelf,
 /obj/machinery/firealarm{
 	dir = 8;
-	pixel_x = -25;
-	name = "W-fire alarm"
+	pixel_x = -25
 	},
 /obj/item/clothing/mask/gas{
 	pixel_y = 5;
@@ -70393,9 +69716,7 @@
 /turf/simulated/floor/tiled/white,
 /area/maintenance/ab_Medical)
 "vZY" = (
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /obj/structure/table/reinforced,
 /obj/item/clipboard{
 	pixel_x = -3
@@ -70449,8 +69770,7 @@
 /area/quartermaster/Deck1_Corridor)
 "wax" = (
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /obj/effect/floor_decal/shuttle/loading{
 	dir = 1;
@@ -70811,9 +70131,7 @@
 "whF" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /obj/effect/floor_decal/spline/fancy/wood,
-/turf/simulated/floor/outdoors/grass/sif/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Port_1Deck_Atrium)
 "wie" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -70834,7 +70152,6 @@
 	},
 /obj/machinery/firealarm{
 	dir = 1;
-	name = "S-fire alarm";
 	pixel_y = -25
 	},
 /turf/simulated/floor/wood/alt/parquet,
@@ -70875,8 +70192,7 @@
 /area/shuttle/escape_pod3/station)
 "wiP" = (
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -70937,9 +70253,7 @@
 /area/hallway/Aft_1_Deck_Stairwell)
 "wjR" = (
 /obj/structure/flora/ausbushes/fernybush,
-/turf/simulated/floor/outdoors/grass/sif/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Star_1Deck_Atrium)
 "wjT" = (
 /obj/structure/cable/green{
@@ -70957,11 +70271,6 @@
 /obj/random/cutout,
 /turf/simulated/floor/tiled,
 /area/maintenance/ab_GeneralStore)
-"wjZ" = (
-/turf/simulated/floor/outdoors/grass/sif/turfpack/station{
-	outdoors = -1
-	},
-/area/hallway/Star_1Deck_Atrium)
 "wkg" = (
 /obj/item/toy/baseball,
 /turf/simulated/floor/grass2/turfpack/station,
@@ -71242,8 +70551,7 @@
 	dir = 1
 	},
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /obj/machinery/door/firedoor/glass/hidden/steel{
 	dir = 1
@@ -71409,8 +70717,7 @@
 /obj/fiftyspawner/retrocarpet,
 /obj/fiftyspawner/retrocarpet_red,
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
@@ -71433,8 +70740,7 @@
 /obj/structure/closet/emcloset,
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /turf/simulated/floor/tiled/steel_ridged{
 	color = "#989898"
@@ -71615,7 +70921,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/item/radio/intercom{
 	dir = 4;
-	name = "1E-Station Intercom (General)";
 	pixel_x = 22
 	},
 /obj/effect/floor_decal/borderfloorblack/corner,
@@ -71709,7 +71014,6 @@
 "wAp" = (
 /obj/item/radio/intercom{
 	dir = 1;
-	name = "1N-Station Intercom (General)";
 	pixel_y = 22
 	},
 /obj/effect/floor_decal/borderfloorblack{
@@ -71833,9 +71137,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /turf/simulated/floor/plating,
 /area/rnd/Xenobotany_Isolation_Chamber)
 "wCY" = (
@@ -72454,7 +71756,6 @@
 /obj/structure/bed/chair/oldsofa/left,
 /obj/item/radio/intercom{
 	dir = 1;
-	name = "1N-Station Intercom (General)";
 	pixel_y = 22
 	},
 /turf/simulated/floor/carpet/sblucarpet/turfpack/station,
@@ -72547,8 +71848,7 @@
 	pixel_x = 22
 	},
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden,
@@ -72676,6 +71976,11 @@
 	},
 /obj/effect/floor_decal/corner/red/border{
 	dir = 10
+	},
+/obj/machinery/recharger/wallcharger{
+	pixel_x = 4;
+	pixel_y = -30;
+	name = "1S-wall recharger"
 	},
 /turf/simulated/floor/tiled/monotile{
 	color = "#989898"
@@ -72896,8 +72201,7 @@
 /obj/machinery/portable_atmospherics/canister/empty/oxygen,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
@@ -73079,8 +72383,7 @@
 /area/hallway/Aft_1_Deck_Stairwell)
 "wZo" = (
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
@@ -73195,7 +72498,6 @@
 	},
 /obj/machinery/light_switch{
 	dir = 1;
-	name = "S-light switch";
 	pixel_x = 11;
 	pixel_y = -27
 	},
@@ -73256,8 +72558,7 @@
 /area/maintenance/Deck1_ForStar_Chamber2)
 "xcz" = (
 /obj/machinery/newscaster{
-	pixel_x = -28;
-	name = "1W-newscaster"
+	pixel_x = -28
 	},
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 8
@@ -73293,8 +72594,7 @@
 	dir = 1
 	},
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/Telecomms_Foyer)
@@ -73343,9 +72643,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
-/turf/simulated/floor/outdoors/grass/sif/forest/turfpack/station{
-	outdoors = -1
-	},
+/turf/simulated/floor/grass,
 /area/hallway/Port_1Deck_Atrium)
 "xdz" = (
 /obj/machinery/button/remote/blast_door{
@@ -73388,8 +72686,7 @@
 /area/harbor/Fueling_Post)
 "xdS" = (
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /obj/effect/floor_decal/borderfloorwhite/corner{
 	dir = 4
@@ -73499,8 +72796,7 @@
 	dir = 1
 	},
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /obj/machinery/door/firedoor/glass/hidden/steel{
 	dir = 1
@@ -73517,7 +72813,6 @@
 /obj/machinery/light_switch{
 	pixel_x = -27;
 	pixel_y = 12;
-	name = "W-light switch";
 	dir = 4
 	},
 /obj/machinery/button/windowtint{
@@ -73687,8 +72982,7 @@
 /area/rnd/PA_Chamber)
 "xjp" = (
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -73895,7 +73189,6 @@
 "xmI" = (
 /obj/machinery/firealarm{
 	dir = 8;
-	name = "W-fire alarm";
 	pixel_x = -25
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -74092,9 +73385,7 @@
 /area/harbor/Ship_Bay4)
 "xqr" = (
 /obj/structure/table/steel,
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /obj/item/stack/cable_coil{
 	pixel_x = -5;
 	pixel_y = 5
@@ -74157,8 +73448,7 @@
 /area/maintenance/Deck1_ForStar_Corridor2)
 "xrK" = (
 /obj/machinery/light{
-	dir = 4;
-	name = "1E-light fixture"
+	dir = 4
 	},
 /obj/machinery/alarm{
 	dir = 8;
@@ -74184,13 +73474,11 @@
 /obj/machinery/vending/event/costume,
 /obj/item/radio/intercom{
 	dir = 8;
-	name = "1W-Station Intercom (General)";
 	pixel_x = -22
 	},
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
@@ -74289,8 +73577,7 @@
 /area/quartermaster/Supply_Ship_Bay)
 "xtn" = (
 /obj/machinery/ai_status_display{
-	pixel_x = 32;
-	name = "1E-AI display"
+	pixel_x = 32
 	},
 /turf/simulated/floor/glass/reinforced,
 /area/security/Quantum_Pad_Checkpoint)
@@ -74518,7 +73805,6 @@
 	dir = 1
 	},
 /obj/machinery/ai_status_display{
-	name = "1N-AI display";
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled,
@@ -74543,8 +73829,7 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/light{
 	dir = 8;
-	layer = 3;
-	name = "1W-light fixture"
+	layer = 3
 	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/ab_SportsField)
@@ -74774,7 +74059,6 @@
 /obj/machinery/light_switch{
 	pixel_x = 27;
 	pixel_y = -12;
-	name = "E-light switch";
 	dir = 8
 	},
 /turf/simulated/floor/plating{
@@ -74890,8 +74174,7 @@
 "xIE" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
@@ -75191,9 +74474,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/harbor/Ship_Bay1)
 "xPO" = (
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
@@ -75289,9 +74570,7 @@
 /area/maintenance/ab_Medical)
 "xRw" = (
 /obj/structure/dispenser/oxygen,
-/obj/machinery/light{
-	name = "1S-light fixture"
-	},
+/obj/machinery/light,
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/lightgrey/border,
 /turf/simulated/floor/tiled/dark,
@@ -75586,7 +74865,6 @@
 "xWo" = (
 /obj/item/radio/intercom{
 	dir = 8;
-	name = "1W-Station Intercom (General)";
 	pixel_x = -22
 	},
 /obj/effect/floor_decal/borderfloorwhite{
@@ -76066,7 +75344,6 @@
 /obj/machinery/light_switch{
 	pixel_x = -27;
 	pixel_y = 12;
-	name = "W-light switch";
 	dir = 4
 	},
 /obj/structure/cable/white{
@@ -76265,7 +75542,6 @@
 	},
 /obj/machinery/firealarm{
 	dir = 1;
-	name = "S-fire alarm";
 	pixel_y = -25
 	},
 /obj/structure/disposalpipe/segment{
@@ -76320,7 +75596,6 @@
 	pixel_y = 24
 	},
 /obj/machinery/light_switch{
-	name = "N-light switch";
 	pixel_x = 12;
 	pixel_y = 27
 	},
@@ -76422,8 +75697,7 @@
 /obj/structure/table/glass,
 /obj/item/clipboard,
 /obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
+	dir = 1
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -94450,7 +93724,7 @@ xrX
 uRT
 xdx
 voc
-kDc
+aBD
 fiF
 voc
 qdT
@@ -104603,7 +103877,7 @@ chQ
 ekA
 iKg
 aaa
-aaa
+psu
 aaa
 aaa
 aaa
@@ -106055,7 +105329,7 @@ aFf
 rFW
 mdg
 iLt
-uad
+nWh
 jYA
 oex
 oex
@@ -114802,11 +114076,11 @@ wOF
 dHE
 aCO
 gSY
-aCO
-aCO
-aCO
+dXG
+dXG
+dXG
 dMi
-aCO
+dXG
 agl
 jDS
 vgh
@@ -115065,7 +114339,7 @@ dXG
 kyf
 efy
 exI
-kuG
+agl
 kuG
 vEL
 kuG
@@ -115323,7 +114597,7 @@ dXG
 auI
 oyL
 ntZ
-kuG
+agl
 gBw
 vgh
 qMi
@@ -115581,7 +114855,7 @@ dXG
 ubX
 dFb
 tbL
-kuG
+agl
 awK
 pnz
 feA
@@ -115833,13 +115107,13 @@ aOh
 nRj
 aOh
 ilx
-fVh
+bTk
 hzy
-fVh
-fVh
-fVh
-fVh
-fVh
+bTk
+bTk
+bTk
+bTk
+bTk
 fVh
 sxL
 fyP
@@ -116379,13 +115653,13 @@ pvi
 pvi
 pvi
 pvi
-psu
+tDP
 qHG
 npu
 tAW
-wjZ
-wjZ
-wjZ
+pvi
+pvi
+pvi
 akg
 qrc
 ijM
@@ -116634,16 +115908,16 @@ efI
 ijM
 abq
 aLf
-wjZ
-pvA
-wjZ
+pvi
+aql
+pvi
 pvi
 qHG
 npu
 pvi
 kRH
-wjZ
-wjZ
+pvi
+pvi
 osw
 fqS
 ijM
@@ -116895,12 +116169,12 @@ mYa
 kXb
 iEe
 nrb
-pvA
+aql
 qHG
 npu
 tBN
 pvi
-iau
+nrb
 pvi
 osw
 wEw
@@ -118190,8 +117464,8 @@ qHG
 npu
 adY
 kEx
-wjZ
-wjZ
+pvi
+pvi
 dIc
 ygN
 ijM
@@ -118447,9 +117721,9 @@ pat
 qHG
 npu
 tCH
-pvA
+aql
 wjR
-wjZ
+pvi
 osw
 sea
 ijM
@@ -118704,10 +117978,10 @@ pvi
 tBN
 qHG
 npu
-pvA
+aql
 nrb
-wjZ
-pvA
+pvi
+aql
 osw
 jpu
 ijM
@@ -118959,12 +118233,12 @@ jkC
 kRH
 maQ
 nzf
-wjZ
+pvi
 qHG
 npu
 tDP
-wjZ
-wjZ
+pvi
+pvi
 pvi
 oZI
 bco
@@ -119212,16 +118486,16 @@ awX
 awX
 awX
 awX
-aBD
+nzf
 aql
 pvi
 pvi
-wjZ
+pvi
 tAW
 qHG
 npu
-wjZ
-wjZ
+pvi
+pvi
 pvi
 pvi
 qHB
@@ -123617,7 +122891,7 @@ nZM
 bqm
 pXi
 beQ
-nWh
+hwu
 fAa
 olG
 gsI
