@@ -68,8 +68,8 @@
 	health = 50
 	movement_cooldown = 10
 
-	melee_damage_lower = 10
-	melee_damage_upper = 20
+	melee_damage_lower = 8
+	melee_damage_upper = 8
 	attack_armor_pen = 0 
 
 	armor = list(
@@ -159,12 +159,12 @@
 	icon_state = "cmimicopen"
 	icon_living = "cmimicopen"
 
-	maxHealth = 150
-	health = 150
+	maxHealth = 50
+	health = 50
 	movement_cooldown = 7
 
-	melee_damage_lower = 10
-	melee_damage_upper = 20
+	melee_damage_lower = 8
+	melee_damage_upper = 8
 	attack_armor_pen =  25 // NOM NOM
 
 	armor = list(
