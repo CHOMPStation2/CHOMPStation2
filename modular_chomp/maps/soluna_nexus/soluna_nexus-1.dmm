@@ -16251,7 +16251,6 @@
 /area/quartermaster/Supply_Ship_Bay)
 "dQz" = (
 /obj/effect/floor_decal/rust,
-/obj/item/ruinedvirusdish,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/ab_Medical)
@@ -27362,11 +27361,7 @@
 	},
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/rust,
-/obj/item/virusdish/random,
 /obj/structure/table/rack,
-/obj/item/virusdish/random{
-	pixel_y = 4
-	},
 /turf/simulated/floor/tiled/white,
 /area/maintenance/ab_Medical)
 "hpn" = (
@@ -43922,8 +43917,6 @@
 /area/quartermaster/Depot2)
 "nqa" = (
 /obj/structure/table/steel,
-/obj/item/virusdish/random,
-/obj/item/virusdish/random,
 /obj/item/surgical/scalpel,
 /obj/item/surgical/cautery,
 /obj/item/surgical/FixOVein,
@@ -55577,7 +55570,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_Science_ForCorridor1)
 "rdb" = (
-/obj/item/ruinedvirusdish,
 /obj/random/humanoidremains,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/ab_Medical)
@@ -57773,9 +57765,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/ab_StripBar)
 "rTM" = (
-/obj/item/virusdish/random{
-	pixel_y = 4
-	},
 /obj/structure/table/reinforced,
 /turf/simulated/floor/tiled/white,
 /area/maintenance/ab_Medical)
