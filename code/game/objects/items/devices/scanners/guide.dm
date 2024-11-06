@@ -101,11 +101,6 @@
 	if(M.getCloneLoss())
 		dat += span_bold("Genetic Damage") + " - Utilize cryogenic pod with appropriate chemicals (i.e. Cryoxadone) and below 70 K, or give Rezadone.<br>"
 	if(bone)
-<<<<<<< HEAD
-		dat += span_bold("Bone Fracture") + " - Splint the fractured limb. Commence a bone repair operation or administer Osteodaxon after treating the physical trauma.<br>"
-	if(M.virus2.len)
-		dat += span_bold("Viral Infection") + " - Inform a Virologist or the Chief Medical Officer and administer antiviral chemicals such as Corophizine and Spaceacilin. Limit exposure to other personnel.<br>"
-=======
 		dat += span_bold("Bone fracture") + " - Splint damaged area. Treat with bone repair surgery or Osteodaxon after treating brute damage.<br>"
 	if(M.viruses.len)
 		for(var/datum/disease/D in M.GetViruses())
@@ -113,7 +108,6 @@
 				continue
 			else
 				dat += span_bold("Viral Infection") + " - Inform a Virologist or the Chief Medical Officer and administer antiviral chemicals such as Spaceacilin. Limit exposure to other personnel.<br>"
->>>>>>> 9077c940c4 (Better Viro (#16536))
 	if(robotparts)
 		dat += span_bold("Robotic Body Parts") + " - Inform the Robotics department."
 

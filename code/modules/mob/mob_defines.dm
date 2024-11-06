@@ -241,9 +241,6 @@
 
 	var/list/datum/action/actions
 
-<<<<<<< HEAD
 	var/custom_footstep = FOOTSTEP_MOB_SHOE // CHOMPEdit
-=======
 	var/list/viruses
 	var/list/resistances
->>>>>>> 9077c940c4 (Better Viro (#16536))

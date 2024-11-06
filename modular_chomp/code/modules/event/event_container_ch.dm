@@ -83,7 +83,6 @@
 		// Temporary power failure, but mitigatead by subgrids
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Grid Check",				/datum/event/grid_check, 				0,		list(ASSIGNMENT_SCIENTIST = 10, ASSIGNMENT_ENGINEER = 25), 1),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Grub Infestation",			/datum/event/grub_infestation,			-20,	list(ASSIGNMENT_SECURITY = 40, ASSIGNMENT_ENGINEER = 40), 1),
-		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Infected Room",			/datum/event/infectedroom,				-30,	list(ASSIGNMENT_MEDICAL = 30, ASSIGNMENT_JANITOR = 10, ASSIGNMENT_ANY = 1), 	1, min_jobs = list(ASSIGNMENT_MEDICAL = 2)),
 		// Pure RP fun, no mechanical effects.
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Ion Storm",				/datum/event/ionstorm, 					-125,	list(ASSIGNMENT_AI = 80, ASSIGNMENT_CYBORG = 50, ASSIGNMENT_ENGINEER = 15, ASSIGNMENT_SCIENTIST = 5), min_jobs = list(ASSIGNMENT_CYBORG = 3)),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Jellyfish School",			/datum/event/jellyfish_migration,		5,		list(ASSIGNMENT_ANY = 1, ASSIGNMENT_SECURITY = 5, ASSIGNMENT_MEDICAL = 3), 1),
@@ -122,9 +121,10 @@
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Atmos Leak",					/datum/event/atmos_leak, 				5,		list(ASSIGNMENT_ENGINEER = 35), 1),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Blob",						/datum/event/blob, 						-100,	list(ASSIGNMENT_SECURITY = 40, ASSIGNMENT_HOS = 10, ASSIGNMENT_WARDEN = 10, ASSIGNMENT_ENGINEER = 5), 1, min_jobs = list(ASSIGNMENT_SECURITY = 1)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Carp Migration",				/datum/event/carp_migration,			-110,	list(ASSIGNMENT_SECURITY = 50, ASSIGNMENT_HOS = 10, ASSIGNMENT_WARDEN = 10), 1, min_jobs = list(ASSIGNMENT_SECURITY = 3)),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Disease Outbreak",			/datum/event/disease_outbreak,			-30,	list(ASSIGNMENT_MEDICAL = 30, ASSIGNMENT_ANY = 1), 	1, min_jobs = list(ASSIGNMENT_MEDICAL = 2)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Exotic Horde Infestation",	/datum/event/highdangerinfestation, 	-50,	list(ASSIGNMENT_ENGINEER = 20, ASSIGNMENT_SCIENCE = 5, ASSIGNMENT_ANY = 2)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Horde Infestation",			/datum/event/horde_infestation, 		-60,	list(ASSIGNMENT_SECURITY = 20, ASSIGNMENT_HOS = 10, ASSIGNMENT_WARDEN = 10, ASSIGNMENT_ANY = 3), 0),
-		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Infected Room",				/datum/event/infectedroom,				-50,	list(ASSIGNMENT_MEDICAL = 25, ASSIGNMENT_JANITOR = 10, ASSIGNMENT_ANY = 1), 	1, min_jobs = list(ASSIGNMENT_MEDICAL = 2)),
+		// new /datum/event_meta(EVENT_LEVEL_MAJOR, "Infected Room",				/datum/event/infectedroom,				-50,	list(ASSIGNMENT_MEDICAL = 25, ASSIGNMENT_JANITOR = 10, ASSIGNMENT_ANY = 1), 	1, min_jobs = list(ASSIGNMENT_MEDICAL = 2)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Jellyfish Migration",			/datum/event/jellyfish_migration,		5,		list(ASSIGNMENT_ANY = 1, ASSIGNMENT_SECURITY = 5, ASSIGNMENT_MEDICAL = 3), 1),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Meaty Ores Wave",				/datum/event/meteor_wave/meatyores,		-90,	list(ASSIGNMENT_ENGINEER = 50, ASSIGNMENT_MEDICAL = 10, ASSIGNMENT_ANY = 1),	1, min_jobs = list(ASSIGNMENT_ENGINEER = 1)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Meteor Wave",					/datum/event/meteor_wave,				-90,	list(ASSIGNMENT_ENGINEER = 50, ASSIGNMENT_MEDICAL = 10, ASSIGNMENT_ANY = 1),	1, min_jobs = list(ASSIGNMENT_ENGINEER = 1)),
@@ -138,7 +138,7 @@
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Spider Infestation",			/datum/event/spider_infestation, 		-60,	list(ASSIGNMENT_SECURITY = 20, ASSIGNMENT_HOS = 10, ASSIGNMENT_WARDEN = 10, ASSIGNMENT_ANY = 3), 0),
 		//Metroids moved into horde infestation
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Metroid Infestation",			/datum/event/metroid_infestation,		-100,	list(ASSIGNMENT_SECURITY = 30, ASSIGNMENT_SCIENCE = 20, ASSIGNMENT_HOS = 15, ASSIGNMENT_WARDEN = 15, ASSIGNMENT_ANY = 2), 1 , min_jobs = list(ASSIGNMENT_SECURITY = 2, ASSIGNMENT_SCIENCE = 1)),
-		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Viral Infection",				/datum/event/viral_infection,			-50,	list(ASSIGNMENT_MEDICAL = 25), 	1, min_jobs = list(ASSIGNMENT_MEDICAL = 2)),
+		// new /datum/event_meta(EVENT_LEVEL_MAJOR, "Viral Infection",				/datum/event/viral_infection,			-50,	list(ASSIGNMENT_MEDICAL = 25), 	1, min_jobs = list(ASSIGNMENT_MEDICAL = 2)),
 
 		//Needs Xenobio containment breach fixed
 		//new /datum/event_meta(EVENT_LEVEL_MAJOR, "Xenobiology Breach",		/datum/event/prison_break/xenobiology,	-10,	list(ASSIGNMENT_SCIENCE = 30, ASSIGNMENT_ENGINEER = 20), 1),

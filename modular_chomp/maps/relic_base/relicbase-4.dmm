@@ -5589,7 +5589,6 @@
 	},
 /area/surface/outside/plains/outpost)
 "eSK" = (
-/obj/machinery/disease2/diseaseanalyser,
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
 	},
@@ -10862,7 +10861,6 @@
 /turf/simulated/floor/reinforced,
 /area/surface/outside/plains/outpost)
 "jCV" = (
-/obj/machinery/disease2/isolator,
 /obj/machinery/light{
 	dir = 1
 	},
@@ -12892,7 +12890,6 @@
 	},
 /area/surface/outside/plains/outpost)
 "lff" = (
-/obj/machinery/computer/centrifuge,
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
 	},
@@ -14910,16 +14907,6 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating,
 /area/surface/outpost/civilian/emergency_storage)
-"mUq" = (
-/obj/machinery/computer/diseasesplicer,
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/green/border{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/white,
-/area/medical/virology)
 "mUH" = (
 /turf/simulated/floor/water/deep/pool{
 	outdoors = 1
@@ -18956,16 +18943,7 @@
 /turf/simulated/floor/bmarble,
 /area/security/nuke_storage)
 "pYU" = (
-/obj/machinery/disease2/incubator,
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/green/border{
-	dir = 1
-	},
+/obj/machinery/computer/pandemic,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "pYZ" = (
@@ -21184,7 +21162,6 @@
 /area/security/security_lockerroom)
 "rwX" = (
 /obj/structure/closet/crate/freezer,
-/obj/item/virusdish/random,
 /obj/item/storage/secure/safe{
 	pixel_x = 5;
 	pixel_y = 32
@@ -21195,6 +21172,11 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 1
 	},
+/obj/item/reagent_containers/glass/bottle/culture/cold{
+	pixel_x = 5;
+	pixel_y = -5
+	},
+/obj/item/reagent_containers/glass/bottle/culture/flu,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "rxX" = (
@@ -27105,7 +27087,6 @@
 /area/engineering/engine_waste)
 "wGv" = (
 /obj/structure/table/glass,
-/obj/item/antibody_scanner,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "wGw" = (
@@ -69229,7 +69210,7 @@ pur
 kQA
 lff
 otQ
-vGI
+wGv
 pQW
 jAv
 pTI
@@ -69484,9 +69465,9 @@ udi
 uPP
 pur
 kQA
+jCV
+vGI
 pYU
-otQ
-otQ
 cjU
 wgI
 kQA
@@ -69998,7 +69979,7 @@ cnf
 pfp
 rGO
 kQA
-mUq
+eSK
 otQ
 ekk
 acl

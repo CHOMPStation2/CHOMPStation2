@@ -578,15 +578,12 @@ var/list/admin_verbs_event_manager = list(
 	/client/proc/modify_server_news,
 	/client/proc/toggle_spawning_with_recolour,
 	/client/proc/start_vote,
-<<<<<<< HEAD
+	/client/proc/AdminCreateVirus,
+	/client/proc/ReleaseVirus,
 	/datum/admins/proc/quick_nif, //CHOMPStation Add,
 	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
 	/client/proc/reload_jobwhitelist, //ChompADD
 	/client/proc/reload_alienwhitelist //ChompADD
-=======
-	/client/proc/AdminCreateVirus,
-	/client/proc/ReleaseVirus
->>>>>>> 9077c940c4 (Better Viro (#16536))
 )
 
 /client/proc/add_admin_verbs()

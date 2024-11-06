@@ -48,13 +48,10 @@
 		/obj/structure/frame,
 		/obj/machinery/radiocarbon_spectrometer,
 		/obj/machinery/portable_atmospherics/powered/reagent_distillery,
-<<<<<<< HEAD
 		/obj/machinery/feeder,
+		/obj/machinery/computer/pandemic,
 		/obj/machinery/chemical_synthesizer, //CHOMPedit,
 		/obj/machinery/food_replicator // CHOMPAdd
-=======
-		/obj/machinery/computer/pandemic
->>>>>>> 9077c940c4 (Better Viro (#16536))
 		)
 //CHOMP Addition for feeder in the above list. I am paranoid about comments within lists so this is outside.
 
