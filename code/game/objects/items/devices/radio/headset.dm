@@ -469,19 +469,19 @@
 
 /obj/item/radio/headset/qm
 	name = "qm radio headset"
-	desc = "A headset used by the QM."
+	desc = "A headset used by the QM." // CHOMPAdd
 	icon_state = "cargo_headset"
 	ks2type = /obj/item/encryptionkey/qm
 
 /obj/item/radio/headset/alt/qm
 	name = "qm bowman headset"
-	desc = "A bowman headset used by the QM."
+	desc = "A bowman headset used by the QM." // CHOMPAdd
 	icon_state = "cargo_headset_alt"
 	ks2type = /obj/item/encryptionkey/qm
 
 /obj/item/radio/headset/earbud/qm
 	name = "qm earbud"
-	desc = "A tiny earbud used by the QM."
+	desc = "A tiny earbud used by the QM." // CHOMPAdd
 	icon_state = "cargo_earbud"
 	ks2type = /obj/item/encryptionkey/qm
 

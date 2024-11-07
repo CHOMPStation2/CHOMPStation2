@@ -105,3 +105,10 @@
 	desc = "A headset with combined medical and science functionality."
 	icon_state = "med_headset"
 	ks2type = /obj/item/encryptionkey/headset_medsci
+
+/obj/item/radio/headset/volunteer
+	name = "volunteer's headset"
+	desc = "A headset used by volunteers to expedition teams, has access to the Away Team channel."
+	icon_state = "pilot_headset"
+	adhoc_fallback = TRUE
+	ks2type = /obj/item/encryptionkey/explorer

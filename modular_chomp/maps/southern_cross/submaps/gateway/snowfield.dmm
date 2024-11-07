@@ -2927,7 +2927,7 @@
 /area/awaymission/snowfield/outside)
 "cDP" = (
 /obj/structure/closet/secure_closet/warden{
-	starts_with = list(/obj/item/clothing/gloves/combat,/obj/item/clothing/accessory/holster,/obj/item/storage/belt/security,/obj/item/shield/riot,/obj/item/ammo_magazine/akm=2,/obj/item/gun/projectile/automatic/serdy/krinkov,/obj/item/clothing/head/beret/sec/corporate/warden,/obj/item/clothing/head/helmet/warden/hat,/obj/item/clothing/head/helmet/warden,/obj/item/clothing/suit/armor/swat/officer,/obj/item/radio/headset/heads/hos/alt,/obj/item/radio/headset/heads/hos,/obj/item/storage/backpack/security,/obj/item/storage/backpack/satchel/sec,/obj/item/clothing/shoes/boots/marine,/obj/item/ammo_magazine/s357=2,/obj/item/gun/projectile/revolver/nagant/skinned,/obj/item/clothing/under/soviet,/obj/item/reagent_containers/spray/pepper,/obj/item/melee/classic_baton)
+	starts_with = list(/obj/item/clothing/gloves/combat,/obj/item/clothing/accessory/holster,/obj/item/storage/belt/security,/obj/item/shield/riot,/obj/item/ammo_magazine/akm=2,/obj/item/gun/projectile/automatic/serdy/krinkov,/obj/item/clothing/head/beret/sec/corporate/warden,/obj/item/clothing/head/helmet/warden/hat,/obj/item/clothing/head/helmet/warden,/obj/item/clothing/suit/armor/swat/officer,/obj/item/radio/headset/alt/heads/hos,/obj/item/radio/headset/heads/hos,/obj/item/storage/backpack/security,/obj/item/storage/backpack/satchel/sec,/obj/item/clothing/shoes/boots/marine,/obj/item/ammo_magazine/s357=2,/obj/item/gun/projectile/revolver/nagant/skinned,/obj/item/clothing/under/soviet,/obj/item/reagent_containers/spray/pepper,/obj/item/melee/classic_baton)
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/steel,

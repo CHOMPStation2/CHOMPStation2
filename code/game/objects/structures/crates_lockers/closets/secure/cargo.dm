@@ -106,7 +106,7 @@
 	closet_appearance = /decl/closet_appearance/secure_closet/lumber
 
 	starts_with = list(
-		/obj/item/radio/headset/headset_mine,
+		/obj/item/radio/headset/miner,
 		/obj/item/clothing/under/overalls,
 		/obj/item/clothing/gloves/light_brown,
 		/obj/item/clothing/gloves/black,
