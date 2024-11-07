@@ -583,15 +583,15 @@
 	icon_state = "pilot_headset_alt"
 
 /obj/item/radio/headset/explorer
-	name = "explorer's headset" //CHOMP explo keep
-	desc = "Headset used by explorers for exploring. Access to the explorer channel." //CHOMP explo keep
+	name = "away team member's headset"
+	desc = "Headset used by the away team for exploring. Access to the away team channel." // CHOMPAdd
 	icon_state = "exp_headset"
 	adhoc_fallback = TRUE
 	ks2type = /obj/item/encryptionkey/explorer
 
 /obj/item/radio/headset/alt/explorer
-	name = "explorer's bowman headset" //CHOMP explo keep
-	desc = "Bowman headset used by explorers for exploring. Access to the explorer channel." //CHOMP explo keep
+	name = "away team's bowman headset"
+	desc = "Bowman headset used by the away team for exploring. Access to the away team channel." // CHOMPAdd
 	icon_state = "exp_headset_alt"
 
 /obj/item/radio/headset/sar
