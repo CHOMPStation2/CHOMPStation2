@@ -99,3 +99,9 @@
 	desc = "A headset with combined medical and security functionality."
 	icon_state = "med_headset"
 	ks2type = /obj/item/encryptionkey/headset_medsec
+
+/obj/item/radio/headset/headset_medsci
+	name = "medical research radio headset"
+	desc = "A headset with combined medical and science functionality."
+	icon_state = "med_headset"
+	ks2type = /obj/item/encryptionkey/headset_medsci
