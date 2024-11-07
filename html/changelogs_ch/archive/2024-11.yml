@@ -42,3 +42,28 @@
   - bugfix: playtime db writes
   tesseracting:
   - rscadd: Added two neutral traits for slower eating, standard and lesser.
+2024-11-07:
+  CHOMPStation2StaffMirrorBot:
+  - qol: makes ashtrays visible in map editors
+  - rscadd: added "modified" and "non-standard" variants of the hacktool, which have
+      different sprites to make them more obvious. the non-standard also starts in
+      hackmode
+  - qol: the hacker contraband set comes with the modified multitool
+  - qol: the modified multitool variant can spawn in abandoned crates slightly more
+      often at a slightly lower cost, as it's more obvious as contraband
+  Darlantanis:
+  - qol: bliss no longer forces crawling
+  FluffMedic:
+  - balance: nerfs airlock and closest mimics
+  Kashargul:
+  - bugfix: fixes 2 missing vbo asset datums
+  - bugfix: blobs deleting their IDs
+  tacoguy7765093:
+  - maptweak: Door bolts should bolt instead of open doors now.
+  - maptweak: Fuel Depot is a valid spawn again
+  - maptweak: Overmap ships can dock on the station again
+  - maptweak: Replaced ERT level hardsuits in armory with security voidsuits, armory
+      rebalance coming soon.
+  - maptweak: Robotics can access tech storage again
+  - maptweak: Doubled the amount of vents at the large airlocks
+  - balance: 'red crowbar: 6 -> 10 damage'

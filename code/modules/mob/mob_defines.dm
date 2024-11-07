@@ -242,3 +242,5 @@
 	var/list/datum/action/actions
 
 	var/custom_footstep = FOOTSTEP_MOB_SHOE // CHOMPEdit
+	var/list/viruses
+	var/list/resistances
