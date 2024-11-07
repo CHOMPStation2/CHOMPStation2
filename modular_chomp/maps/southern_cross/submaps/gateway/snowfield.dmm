@@ -3129,7 +3129,7 @@
 	dir = 1
 	},
 /obj/structure/closet/secure_closet/security{
-	starts_with = list(/obj/item/clothing/gloves/black,/obj/item/clothing/accessory/holster,/obj/item/storage/belt/security,/obj/item/clothing/head/beret/sec/corporate/officer,/obj/item/clothing/head/helmet,/obj/item/radio/headset/headset_sec/alt,/obj/item/radio/headset/headset_sec,/obj/item/radio/off,/obj/item/storage/backpack/security,/obj/item/storage/backpack/satchel/sec,/obj/item/clothing/shoes/boots/marine,/obj/item/clothing/suit/armor/bulletproof,/obj/item/clothing/under/soviet,/obj/item/reagent_containers/spray/pepper,/obj/item/melee/classic_baton,/obj/item/ammo_magazine/makarov=2,/obj/item/gun/projectile/serdy_pistols/makarov)
+	starts_with = list(/obj/item/clothing/gloves/black,/obj/item/clothing/accessory/holster,/obj/item/storage/belt/security,/obj/item/clothing/head/beret/sec/corporate/officer,/obj/item/clothing/head/helmet,/obj/item/radio/headset/alt/headset_sec,/obj/item/radio/headset/headset_sec,/obj/item/radio/off,/obj/item/storage/backpack/security,/obj/item/storage/backpack/satchel/sec,/obj/item/clothing/shoes/boots/marine,/obj/item/clothing/suit/armor/bulletproof,/obj/item/clothing/under/soviet,/obj/item/reagent_containers/spray/pepper,/obj/item/melee/classic_baton,/obj/item/ammo_magazine/makarov=2,/obj/item/gun/projectile/serdy_pistols/makarov)
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/security/security_lockerroom)
@@ -4635,7 +4635,7 @@
 "dWX" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/closet/secure_closet/security{
-	starts_with = list(/obj/item/clothing/gloves/black,/obj/item/clothing/accessory/holster,/obj/item/storage/belt/security,/obj/item/clothing/head/beret/sec/corporate/officer,/obj/item/clothing/head/helmet,/obj/item/radio/headset/headset_sec/alt,/obj/item/radio/headset/headset_sec,/obj/item/radio/off,/obj/item/storage/backpack/security,/obj/item/storage/backpack/satchel/sec,/obj/item/clothing/shoes/boots/marine,/obj/item/clothing/suit/armor/bulletproof,/obj/item/clothing/under/soviet,/obj/item/reagent_containers/spray/pepper,/obj/item/melee/classic_baton,/obj/item/ammo_magazine/makarov=2,/obj/item/gun/projectile/serdy_pistols/makarov)
+	starts_with = list(/obj/item/clothing/gloves/black,/obj/item/clothing/accessory/holster,/obj/item/storage/belt/security,/obj/item/clothing/head/beret/sec/corporate/officer,/obj/item/clothing/head/helmet,/obj/item/radio/headset/alt/headset_sec,/obj/item/radio/headset/headset_sec,/obj/item/radio/off,/obj/item/storage/backpack/security,/obj/item/storage/backpack/satchel/sec,/obj/item/clothing/shoes/boots/marine,/obj/item/clothing/suit/armor/bulletproof,/obj/item/clothing/under/soviet,/obj/item/reagent_containers/spray/pepper,/obj/item/melee/classic_baton,/obj/item/ammo_magazine/makarov=2,/obj/item/gun/projectile/serdy_pistols/makarov)
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/security/security_lockerroom)
@@ -11086,7 +11086,7 @@
 /area/awaymission/snowfield/dorms/dorm7)
 "jtR" = (
 /obj/structure/closet/secure_closet/security{
-	starts_with = list(/obj/item/clothing/gloves/black,/obj/item/clothing/accessory/holster,/obj/item/storage/belt/security,/obj/item/clothing/head/beret/sec/corporate/officer,/obj/item/clothing/head/helmet,/obj/item/radio/headset/headset_sec/alt,/obj/item/radio/headset/headset_sec,/obj/item/radio/off,/obj/item/storage/backpack/security,/obj/item/storage/backpack/satchel/sec,/obj/item/clothing/shoes/boots/marine,/obj/item/clothing/suit/armor/bulletproof,/obj/item/clothing/under/soviet,/obj/item/reagent_containers/spray/pepper,/obj/item/melee/classic_baton,/obj/item/ammo_magazine/makarov=2,/obj/item/gun/projectile/serdy_pistols/makarov)
+	starts_with = list(/obj/item/clothing/gloves/black,/obj/item/clothing/accessory/holster,/obj/item/storage/belt/security,/obj/item/clothing/head/beret/sec/corporate/officer,/obj/item/clothing/head/helmet,/obj/item/radio/headset/alt/headset_sec,/obj/item/radio/headset/headset_sec,/obj/item/radio/off,/obj/item/storage/backpack/security,/obj/item/storage/backpack/satchel/sec,/obj/item/clothing/shoes/boots/marine,/obj/item/clothing/suit/armor/bulletproof,/obj/item/clothing/under/soviet,/obj/item/reagent_containers/spray/pepper,/obj/item/melee/classic_baton,/obj/item/ammo_magazine/makarov=2,/obj/item/gun/projectile/serdy_pistols/makarov)
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/window/reinforced,
@@ -11339,7 +11339,7 @@
 	dir = 1
 	},
 /obj/structure/closet/secure_closet/detective{
-	starts_with = list(/obj/item/clothing/gloves/forensic,/obj/item/clothing/accessory/holster,/obj/item/storage/belt/security,/obj/item/clothing/head/fedora,/obj/item/clothing/head/fedora/brown,/obj/item/clothing/suit/storage/det_trench,/obj/item/clothing/suit/storage/det_trench/grey,/obj/item/clothing/suit/armor/bulletproof,/obj/item/radio/headset/headset_sec/alt,/obj/item/radio/headset/headset_sec,/obj/item/radio/off,/obj/item/storage/backpack/security,/obj/item/storage/backpack/satchel/sec,/obj/item/clothing/shoes/boots/marine,/obj/item/clothing/under/soviet,/obj/item/melee/classic_baton,/obj/item/reagent_containers/spray/pepper,/obj/item/flash,/obj/item/ammo_magazine/s357=2,/obj/item/gun/projectile/revolver/nagant)
+	starts_with = list(/obj/item/clothing/gloves/forensic,/obj/item/clothing/accessory/holster,/obj/item/storage/belt/security,/obj/item/clothing/head/fedora,/obj/item/clothing/head/fedora/brown,/obj/item/clothing/suit/storage/det_trench,/obj/item/clothing/suit/storage/det_trench/grey,/obj/item/clothing/suit/armor/bulletproof,/obj/item/radio/headset/alt/headset_sec,/obj/item/radio/headset/headset_sec,/obj/item/radio/off,/obj/item/storage/backpack/security,/obj/item/storage/backpack/satchel/sec,/obj/item/clothing/shoes/boots/marine,/obj/item/clothing/under/soviet,/obj/item/melee/classic_baton,/obj/item/reagent_containers/spray/pepper,/obj/item/flash,/obj/item/ammo_magazine/s357=2,/obj/item/gun/projectile/revolver/nagant)
 	},
 /turf/simulated/floor/lino,
 /area/awaymission/snowfield/security/detective)
@@ -24451,7 +24451,7 @@
 "vaq" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/closet/secure_closet/security{
-	starts_with = list(/obj/item/clothing/gloves/black,/obj/item/clothing/accessory/holster,/obj/item/storage/belt/security,/obj/item/clothing/head/beret/sec/corporate/officer,/obj/item/clothing/head/helmet,/obj/item/radio/headset/headset_sec/alt,/obj/item/radio/headset/headset_sec,/obj/item/radio/off,/obj/item/storage/backpack/security,/obj/item/storage/backpack/satchel/sec,/obj/item/clothing/shoes/boots/marine,/obj/item/clothing/suit/armor/bulletproof,/obj/item/clothing/under/soviet,/obj/item/reagent_containers/spray/pepper,/obj/item/melee/classic_baton,/obj/item/ammo_magazine/makarov=2,/obj/item/gun/projectile/serdy_pistols/makarov)
+	starts_with = list(/obj/item/clothing/gloves/black,/obj/item/clothing/accessory/holster,/obj/item/storage/belt/security,/obj/item/clothing/head/beret/sec/corporate/officer,/obj/item/clothing/head/helmet,/obj/item/radio/headset/alt/headset_sec,/obj/item/radio/headset/headset_sec,/obj/item/radio/off,/obj/item/storage/backpack/security,/obj/item/storage/backpack/satchel/sec,/obj/item/clothing/shoes/boots/marine,/obj/item/clothing/suit/armor/bulletproof,/obj/item/clothing/under/soviet,/obj/item/reagent_containers/spray/pepper,/obj/item/melee/classic_baton,/obj/item/ammo_magazine/makarov=2,/obj/item/gun/projectile/serdy_pistols/makarov)
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor/grid,
