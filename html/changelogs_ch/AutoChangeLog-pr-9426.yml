@@ -1,6 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - rscadd: "added \"modified\" and \"non-standard\" variants of the hacktool, which have different sprites to make them more obvious. the non-standard also starts in hackmode"
-  - qol: "the hacker contraband set comes with the modified multitool"
-  - qol: "the modified multitool variant can spawn in abandoned crates slightly more often at a slightly lower cost, as it's more obvious as contraband"
