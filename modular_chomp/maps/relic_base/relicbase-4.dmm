@@ -1501,7 +1501,7 @@
 /obj/random_multi/single_item/captains_spare_id,
 /obj/structure/closet/secure_closet/captains{
 	name = "station director's locker";
-	starts_with = list(/obj/item/storage/backpack/dufflebag/captain,/obj/item/clothing/head/helmet,/obj/item/clothing/suit/storage/vest,/obj/item/cartridge/captain,/obj/item/storage/lockbox/medal,/obj/item/radio/headset/heads/captain,/obj/item/radio/headset/heads/captain/alt,/obj/item/melee/telebaton,/obj/item/flash,/obj/item/storage/box/ids,/obj/item/melee/rapier,/obj/item/clothing/accessory/holster/machete/rapier)
+	starts_with = list(/obj/item/storage/backpack/dufflebag/captain,/obj/item/clothing/head/helmet,/obj/item/clothing/suit/storage/vest,/obj/item/cartridge/captain,/obj/item/storage/lockbox/medal,/obj/item/radio/headset/heads/captain,/obj/item/radio/headset/alt/heads/captain,/obj/item/melee/telebaton,/obj/item/flash,/obj/item/storage/box/ids,/obj/item/melee/rapier,/obj/item/clothing/accessory/holster/machete/rapier)
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1

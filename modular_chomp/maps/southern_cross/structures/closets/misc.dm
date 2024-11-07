@@ -49,7 +49,7 @@
 		/obj/item/clothing/shoes/boots/winter/explorer,
 		/obj/item/clothing/gloves/black,
 		/obj/item/radio/headset/explorer,
-		/obj/item/radio/headset/explorer/alt, //CHOMPADD
+		/obj/item/radio/headset/alt/explorer, //CHOMPADD
 		/obj/item/flashlight,
 		/obj/item/gps/explorer,
 		/obj/item/storage/box/flare,
@@ -122,7 +122,7 @@
 		/obj/item/clothing/mask/gas/half,
 		/obj/item/clothing/shoes/black,
 		/obj/item/clothing/gloves/fingerless,
-		/obj/item/radio/headset/pilot/alt,
+		/obj/item/radio/headset/alt/pilot,
 		/obj/item/flashlight,
 		/obj/item/reagent_containers/food/snacks/liquidfood,
 		/obj/item/reagent_containers/food/drinks/cans/waterbottle,
