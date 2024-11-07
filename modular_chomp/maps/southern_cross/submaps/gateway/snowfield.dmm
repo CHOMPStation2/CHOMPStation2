@@ -1178,7 +1178,7 @@
 	},
 /obj/structure/closet/secure_closet/paramedic{
 	req_access = list(33);
-	starts_with = list(/obj/item/storage/backpack/dufflebag/emt,/obj/item/storage/box/autoinjectors,/obj/item/storage/box/syringes,/obj/item/reagent_containers/glass/bottle/inaprovaline,/obj/item/reagent_containers/glass/bottle/antitoxin,/obj/item/storage/belt/medical/emt,/obj/item/clothing/mask/gas,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/clothing/suit/storage/toggle/labcoat/emt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical/para,/obj/item/radio/headset/headset_med/alt,/obj/item/storage/briefcase/inflatable,/obj/item/flashlight,/obj/item/tank/emergency/oxygen/engi,/obj/item/radio/off,/obj/item/tool/crowbar,/obj/item/extinguisher/mini,/obj/item/storage/box/freezer,/obj/item/clothing/accessory/storage/white_vest,/obj/item/taperoll/medical)
+	starts_with = list(/obj/item/storage/backpack/dufflebag/emt,/obj/item/storage/box/autoinjectors,/obj/item/storage/box/syringes,/obj/item/reagent_containers/glass/bottle/inaprovaline,/obj/item/reagent_containers/glass/bottle/antitoxin,/obj/item/storage/belt/medical/emt,/obj/item/clothing/mask/gas,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/clothing/suit/storage/toggle/labcoat/emt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical/para,/obj/item/radio/headset/alt/headset_med,/obj/item/storage/briefcase/inflatable,/obj/item/flashlight,/obj/item/tank/emergency/oxygen/engi,/obj/item/radio/off,/obj/item/tool/crowbar,/obj/item/extinguisher/mini,/obj/item/storage/box/freezer,/obj/item/clothing/accessory/storage/white_vest,/obj/item/taperoll/medical)
 	},
 /obj/effect/floor_decal/industrial/outline,
 /turf/simulated/floor/tiled/neutral,
@@ -3998,7 +3998,7 @@
 /obj/effect/floor_decal/industrial/outline,
 /obj/structure/closet/secure_closet/medical3{
 	req_access = list(33);
-	starts_with = list(/obj/item/clothing/under/rank/medical,/obj/item/clothing/under/rank/nurse,/obj/item/clothing/under/rank/orderly,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat/modern,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/radio/headset/headset_med,/obj/item/radio/headset/headset_med/alt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical,/obj/item/clothing/shoes/boots/winter/medical,/obj/item/clothing/under/rank/nursesuit,/obj/item/clothing/head/nursehat,/obj/item/storage/box/freezer=3,/obj/item/storage/belt/medical)
+	starts_with = list(/obj/item/clothing/under/rank/medical,/obj/item/clothing/under/rank/nurse,/obj/item/clothing/under/rank/orderly,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat/modern,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/radio/headset/headset_med,/obj/item/radio/headset/alt/headset_med,/obj/item/clothing/suit/storage/hooded/wintercoat/medical,/obj/item/clothing/shoes/boots/winter/medical,/obj/item/clothing/under/rank/nursesuit,/obj/item/clothing/head/nursehat,/obj/item/storage/box/freezer=3,/obj/item/storage/belt/medical)
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/medical_locker)
@@ -5078,7 +5078,7 @@
 /obj/effect/floor_decal/industrial/outline,
 /obj/structure/closet/secure_closet/medical3{
 	req_access = list(33);
-	starts_with = list(/obj/item/clothing/under/rank/medical,/obj/item/clothing/under/rank/nurse,/obj/item/clothing/under/rank/orderly,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat/modern,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/radio/headset/headset_med,/obj/item/radio/headset/headset_med/alt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical,/obj/item/clothing/shoes/boots/winter/medical,/obj/item/clothing/under/rank/nursesuit,/obj/item/clothing/head/nursehat,/obj/item/storage/box/freezer=3,/obj/item/storage/belt/medical)
+	starts_with = list(/obj/item/clothing/under/rank/medical,/obj/item/clothing/under/rank/nurse,/obj/item/clothing/under/rank/orderly,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat/modern,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/radio/headset/headset_med,/obj/item/radio/headset/alt/headset_med,/obj/item/clothing/suit/storage/hooded/wintercoat/medical,/obj/item/clothing/shoes/boots/winter/medical,/obj/item/clothing/under/rank/nursesuit,/obj/item/clothing/head/nursehat,/obj/item/storage/box/freezer=3,/obj/item/storage/belt/medical)
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/medical_locker)
@@ -12292,7 +12292,7 @@
 /obj/item/soap,
 /obj/structure/closet/secure_closet/medical3{
 	req_access = list(33);
-	starts_with = list(/obj/item/clothing/under/rank/medical,/obj/item/clothing/under/rank/nurse,/obj/item/clothing/under/rank/orderly,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat/modern,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/radio/headset/headset_med,/obj/item/radio/headset/headset_med/alt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical,/obj/item/clothing/shoes/boots/winter/medical,/obj/item/clothing/under/rank/nursesuit,/obj/item/clothing/head/nursehat,/obj/item/storage/box/freezer=3,/obj/item/storage/belt/medical)
+	starts_with = list(/obj/item/clothing/under/rank/medical,/obj/item/clothing/under/rank/nurse,/obj/item/clothing/under/rank/orderly,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat/modern,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/radio/headset/headset_med,/obj/item/radio/headset/alt/headset_med,/obj/item/clothing/suit/storage/hooded/wintercoat/medical,/obj/item/clothing/shoes/boots/winter/medical,/obj/item/clothing/under/rank/nursesuit,/obj/item/clothing/head/nursehat,/obj/item/storage/box/freezer=3,/obj/item/storage/belt/medical)
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/medical_locker)
@@ -14069,7 +14069,7 @@
 /obj/effect/floor_decal/industrial/outline,
 /obj/structure/closet/secure_closet/medical3{
 	req_access = list(33);
-	starts_with = list(/obj/item/clothing/under/rank/medical,/obj/item/clothing/under/rank/nurse,/obj/item/clothing/under/rank/orderly,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat/modern,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/radio/headset/headset_med,/obj/item/radio/headset/headset_med/alt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical,/obj/item/clothing/shoes/boots/winter/medical,/obj/item/clothing/under/rank/nursesuit,/obj/item/clothing/head/nursehat,/obj/item/storage/box/freezer=3,/obj/item/storage/belt/medical)
+	starts_with = list(/obj/item/clothing/under/rank/medical,/obj/item/clothing/under/rank/nurse,/obj/item/clothing/under/rank/orderly,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat/modern,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/radio/headset/headset_med,/obj/item/radio/headset/alt/headset_med,/obj/item/clothing/suit/storage/hooded/wintercoat/medical,/obj/item/clothing/shoes/boots/winter/medical,/obj/item/clothing/under/rank/nursesuit,/obj/item/clothing/head/nursehat,/obj/item/storage/box/freezer=3,/obj/item/storage/belt/medical)
 	},
 /obj/item/soap,
 /turf/simulated/floor/tiled/neutral,
@@ -20879,7 +20879,7 @@
 	},
 /obj/structure/closet/secure_closet/paramedic{
 	req_access = list(33);
-	starts_with = list(/obj/item/storage/backpack/dufflebag/emt,/obj/item/storage/box/autoinjectors,/obj/item/storage/box/syringes,/obj/item/reagent_containers/glass/bottle/inaprovaline,/obj/item/reagent_containers/glass/bottle/antitoxin,/obj/item/storage/belt/medical/emt,/obj/item/clothing/mask/gas,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/clothing/suit/storage/toggle/labcoat/emt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical/para,/obj/item/radio/headset/headset_med/alt,/obj/item/storage/briefcase/inflatable,/obj/item/flashlight,/obj/item/tank/emergency/oxygen/engi,/obj/item/radio/off,/obj/item/tool/crowbar,/obj/item/extinguisher/mini,/obj/item/storage/box/freezer,/obj/item/clothing/accessory/storage/white_vest,/obj/item/taperoll/medical)
+	starts_with = list(/obj/item/storage/backpack/dufflebag/emt,/obj/item/storage/box/autoinjectors,/obj/item/storage/box/syringes,/obj/item/reagent_containers/glass/bottle/inaprovaline,/obj/item/reagent_containers/glass/bottle/antitoxin,/obj/item/storage/belt/medical/emt,/obj/item/clothing/mask/gas,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/clothing/suit/storage/toggle/labcoat/emt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical/para,/obj/item/radio/headset/alt/headset_med,/obj/item/storage/briefcase/inflatable,/obj/item/flashlight,/obj/item/tank/emergency/oxygen/engi,/obj/item/radio/off,/obj/item/tool/crowbar,/obj/item/extinguisher/mini,/obj/item/storage/box/freezer,/obj/item/clothing/accessory/storage/white_vest,/obj/item/taperoll/medical)
 	},
 /obj/effect/floor_decal/industrial/outline,
 /obj/machinery/light{
@@ -24059,7 +24059,7 @@
 	},
 /obj/structure/closet/secure_closet/paramedic{
 	req_access = list(33);
-	starts_with = list(/obj/item/storage/backpack/dufflebag/emt,/obj/item/storage/box/autoinjectors,/obj/item/storage/box/syringes,/obj/item/reagent_containers/glass/bottle/inaprovaline,/obj/item/reagent_containers/glass/bottle/antitoxin,/obj/item/storage/belt/medical/emt,/obj/item/clothing/mask/gas,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/clothing/suit/storage/toggle/labcoat/emt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical/para,/obj/item/radio/headset/headset_med/alt,/obj/item/storage/briefcase/inflatable,/obj/item/flashlight,/obj/item/tank/emergency/oxygen/engi,/obj/item/radio/off,/obj/item/tool/crowbar,/obj/item/extinguisher/mini,/obj/item/storage/box/freezer,/obj/item/clothing/accessory/storage/white_vest,/obj/item/taperoll/medical)
+	starts_with = list(/obj/item/storage/backpack/dufflebag/emt,/obj/item/storage/box/autoinjectors,/obj/item/storage/box/syringes,/obj/item/reagent_containers/glass/bottle/inaprovaline,/obj/item/reagent_containers/glass/bottle/antitoxin,/obj/item/storage/belt/medical/emt,/obj/item/clothing/mask/gas,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/clothing/suit/storage/toggle/labcoat/emt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical/para,/obj/item/radio/headset/alt/headset_med,/obj/item/storage/briefcase/inflatable,/obj/item/flashlight,/obj/item/tank/emergency/oxygen/engi,/obj/item/radio/off,/obj/item/tool/crowbar,/obj/item/extinguisher/mini,/obj/item/storage/box/freezer,/obj/item/clothing/accessory/storage/white_vest,/obj/item/taperoll/medical)
 	},
 /obj/effect/floor_decal/industrial/outline,
 /turf/simulated/floor/tiled/neutral,
@@ -26126,7 +26126,7 @@
 /obj/effect/floor_decal/industrial/outline,
 /obj/structure/closet/secure_closet/medical3{
 	req_access = list(33);
-	starts_with = list(/obj/item/clothing/under/rank/medical,/obj/item/clothing/under/rank/nurse,/obj/item/clothing/under/rank/orderly,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat/modern,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/radio/headset/headset_med,/obj/item/radio/headset/headset_med/alt,/obj/item/clothing/suit/storage/hooded/wintercoat/medical,/obj/item/clothing/shoes/boots/winter/medical,/obj/item/clothing/under/rank/nursesuit,/obj/item/clothing/head/nursehat,/obj/item/storage/box/freezer=3,/obj/item/storage/belt/medical)
+	starts_with = list(/obj/item/clothing/under/rank/medical,/obj/item/clothing/under/rank/nurse,/obj/item/clothing/under/rank/orderly,/obj/item/clothing/suit/storage/toggle/labcoat,/obj/item/clothing/suit/storage/toggle/labcoat/modern,/obj/item/clothing/suit/storage/toggle/fr_jacket,/obj/item/radio/headset/headset_med,/obj/item/radio/headset/alt/headset_med,/obj/item/clothing/suit/storage/hooded/wintercoat/medical,/obj/item/clothing/shoes/boots/winter/medical,/obj/item/clothing/under/rank/nursesuit,/obj/item/clothing/head/nursehat,/obj/item/storage/box/freezer=3,/obj/item/storage/belt/medical)
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/medical_locker)
