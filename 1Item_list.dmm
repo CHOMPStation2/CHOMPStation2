@@ -19426,7 +19426,7 @@
 	},
 /area/survivalpod)
 "fLV" = (
-/obj/item/radio/headset/explorer/alt,
+/obj/item/radio/headset/alt/explorer,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},

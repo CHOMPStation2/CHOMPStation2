@@ -45,7 +45,7 @@
 		/obj/item/clothing/under/rank/khi/sec/pilot,
 		/obj/item/clothing/gloves/fingerless,
 		/obj/item/cartridge/security,
-		/obj/item/radio/headset/headset_sec/alt,
+		/obj/item/radio/headset/alt/headset_sec,
 		/obj/item/storage/belt/security,
 		/obj/item/clothing/glasses/sunglasses/sechud,
 		/obj/item/storage/box/flare,

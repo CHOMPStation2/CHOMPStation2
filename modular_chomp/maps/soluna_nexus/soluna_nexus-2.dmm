@@ -2985,7 +2985,7 @@
 "agw" = (
 /obj/structure/closet/secure_closet/cargotech{
 	name = "mailman's locker";
-	starts_with = list(/obj/item/clothing/under/rank/mailman,/obj/item/clothing/head/mailman,/obj/item/clothing/shoes/black,/obj/item/radio/headset/headset_cargo,/obj/item/radio/headset/headset_cargo/alt,/obj/item/storage/bag/mail,/obj/item/destTagger)
+	starts_with = list(/obj/item/clothing/under/rank/mailman,/obj/item/clothing/head/mailman,/obj/item/clothing/shoes/black,/obj/item/radio/headset/cargo,/obj/item/radio/headset/alt/cargo,/obj/item/storage/bag/mail,/obj/item/destTagger)
 	},
 /obj/item/clothing/under/rank/mailman2,
 /obj/item/clothing/under/rank/mailman,
@@ -99235,23 +99235,23 @@
 	pixel_y = -1;
 	pixel_x = 5
 	},
-/obj/item/radio/headset/headset_med/alt{
+/obj/item/radio/headset/alt/headset_med{
 	pixel_y = 10;
 	pixel_x = -7
 	},
-/obj/item/radio/headset/headset_med/alt{
+/obj/item/radio/headset/alt/headset_med{
 	pixel_y = 6;
 	pixel_x = -7
 	},
-/obj/item/radio/headset/headset_med/alt{
+/obj/item/radio/headset/alt/headset_med{
 	pixel_y = 2;
 	pixel_x = -7
 	},
-/obj/item/radio/headset/headset_med/alt{
+/obj/item/radio/headset/alt/headset_med{
 	pixel_y = -2;
 	pixel_x = -7
 	},
-/obj/item/radio/headset/headset_med/alt{
+/obj/item/radio/headset/alt/headset_med{
 	pixel_y = -6;
 	pixel_x = -7
 	},
