@@ -5271,7 +5271,7 @@
 /area/awaymission/snowfield/public/toolstroage2)
 "ewG" = (
 /obj/structure/closet/secure_closet/engineering_personal{
-	starts_with = list(/obj/item/clothing/accessory/storage/brown_vest,/obj/item/storage/toolbox/mechanical,/obj/item/radio/headset/headset_eng,/obj/item/radio/headset/headset_eng/alt,/obj/item/clothing/suit/storage/hazardvest,/obj/item/clothing/mask/gas,/obj/item/cartridge/engineering,/obj/item/taperoll/engineering,/obj/item/clothing/head/hardhat,/obj/item/clothing/suit/storage/hooded/wintercoat/engineering,/obj/item/clothing/shoes/boots/winter/engineering,/obj/item/tank/emergency/oxygen/engi,/obj/item/storage/belt/utility,/obj/item/reagent_containers/spray/windowsealant)
+	starts_with = list(/obj/item/clothing/accessory/storage/brown_vest,/obj/item/storage/toolbox/mechanical,/obj/item/radio/headset/headset_eng,/obj/item/radio/headset/alt/headset_eng,/obj/item/clothing/suit/storage/hazardvest,/obj/item/clothing/mask/gas,/obj/item/cartridge/engineering,/obj/item/taperoll/engineering,/obj/item/clothing/head/hardhat,/obj/item/clothing/suit/storage/hooded/wintercoat/engineering,/obj/item/clothing/shoes/boots/winter/engineering,/obj/item/tank/emergency/oxygen/engi,/obj/item/storage/belt/utility,/obj/item/reagent_containers/spray/windowsealant)
 	},
 /obj/structure/window/reinforced{
 	dir = 4;
@@ -7361,7 +7361,7 @@
 /area/awaymission/snowfield/dorms/panicroom)
 "gsi" = (
 /obj/structure/closet/secure_closet/engineering_personal{
-	starts_with = list(/obj/item/clothing/accessory/storage/brown_vest,/obj/item/storage/toolbox/mechanical,/obj/item/radio/headset/headset_eng,/obj/item/radio/headset/headset_eng/alt,/obj/item/clothing/suit/storage/hazardvest,/obj/item/clothing/mask/gas,/obj/item/cartridge/engineering,/obj/item/taperoll/engineering,/obj/item/clothing/head/hardhat,/obj/item/clothing/suit/storage/hooded/wintercoat/engineering,/obj/item/clothing/shoes/boots/winter/engineering,/obj/item/tank/emergency/oxygen/engi,/obj/item/storage/belt/utility,/obj/item/reagent_containers/spray/windowsealant)
+	starts_with = list(/obj/item/clothing/accessory/storage/brown_vest,/obj/item/storage/toolbox/mechanical,/obj/item/radio/headset/headset_eng,/obj/item/radio/headset/alt/headset_eng,/obj/item/clothing/suit/storage/hazardvest,/obj/item/clothing/mask/gas,/obj/item/cartridge/engineering,/obj/item/taperoll/engineering,/obj/item/clothing/head/hardhat,/obj/item/clothing/suit/storage/hooded/wintercoat/engineering,/obj/item/clothing/shoes/boots/winter/engineering,/obj/item/tank/emergency/oxygen/engi,/obj/item/storage/belt/utility,/obj/item/reagent_containers/spray/windowsealant)
 	},
 /obj/structure/window/reinforced{
 	dir = 4;
@@ -13840,7 +13840,7 @@
 /area/awaymission/snowfield/medical/staff_room)
 "lDj" = (
 /obj/structure/closet/secure_closet/engineering_personal{
-	starts_with = list(/obj/item/clothing/accessory/storage/brown_vest,/obj/item/storage/toolbox/mechanical,/obj/item/radio/headset/headset_eng,/obj/item/radio/headset/headset_eng/alt,/obj/item/clothing/suit/storage/hazardvest,/obj/item/clothing/mask/gas,/obj/item/cartridge/engineering,/obj/item/taperoll/engineering,/obj/item/clothing/head/hardhat,/obj/item/clothing/suit/storage/hooded/wintercoat/engineering,/obj/item/clothing/shoes/boots/winter/engineering,/obj/item/tank/emergency/oxygen/engi,/obj/item/storage/belt/utility,/obj/item/reagent_containers/spray/windowsealant)
+	starts_with = list(/obj/item/clothing/accessory/storage/brown_vest,/obj/item/storage/toolbox/mechanical,/obj/item/radio/headset/headset_eng,/obj/item/radio/headset/alt/headset_eng,/obj/item/clothing/suit/storage/hazardvest,/obj/item/clothing/mask/gas,/obj/item/cartridge/engineering,/obj/item/taperoll/engineering,/obj/item/clothing/head/hardhat,/obj/item/clothing/suit/storage/hooded/wintercoat/engineering,/obj/item/clothing/shoes/boots/winter/engineering,/obj/item/tank/emergency/oxygen/engi,/obj/item/storage/belt/utility,/obj/item/reagent_containers/spray/windowsealant)
 	},
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
