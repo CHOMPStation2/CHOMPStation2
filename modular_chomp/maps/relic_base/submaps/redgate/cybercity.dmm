@@ -11027,7 +11027,7 @@
 "oyK" = (
 /obj/structure/undies_wardrobe,
 /turf/simulated/floor/tiled/freezer,
-/area/redgate/city/laundry))
+/area/redgate/city/laundry)
 "ozN" = (
 /obj/machinery/light{
 	dir = 1
