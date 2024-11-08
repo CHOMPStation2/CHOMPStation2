@@ -159,8 +159,8 @@
 // Redgate submaps go here, taken straight up from virgo
 
 #ifdef AWAY_MISSION_TEST
-#include "redgate/abandonedisland.dmm"
-#include "redgate/falls/falls.dmm"
+#include "redgate/cybercity.dmm"
+#include "redgate/falls.dmm"
 #include "redgate/fantasy_dungeon.dmm"
 #include "redgate/fantasy.dmm"
 #include "redgate/hotsprings.dmm"
