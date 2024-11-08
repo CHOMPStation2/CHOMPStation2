@@ -136,7 +136,9 @@ jobs:
           ldd libbapi_dmm_reader.so
           ldd libverdigris.so
       - name: Compile POIs
-        run: tools/ci/compile_and_run.sh
+        run: |
+          tools/ci/install_byond.sh
+          tools/ci/compile_and_run.sh
         env:
           EXTRA_ARGS: "-DMAP_TEST -D${{ matrix.map }}"
           RUN: "0"
