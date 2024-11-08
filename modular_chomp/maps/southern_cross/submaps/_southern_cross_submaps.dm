@@ -21,7 +21,7 @@
 #include 'gateway/maddnesslab.dmm'
 #include 'gateway/snowfield.dmm'
 #include 'gateway/hiddeneclipse.dmm'
-#include "modular_chomp/maps/virtual_reality/constructVR.dmm"
+#include "../../../constructVR.dmm"
 #endif
 
 
