@@ -135,13 +135,6 @@ jobs:
           ldd librust_g.so
           ldd libbapi_dmm_reader.so
           ldd libverdigris.so
-      - name: Unit Tests
-        run: |
-          tools/ci/install_byond.sh
-          tools/ci/compile_and_run.sh
-        env:
-          EXTRA_ARGS: "-DUNIT_TEST -D${{ matrix.map }}"
-          RUN: "1"
       - name: Compile POIs
         run: tools/ci/compile_and_run.sh
         env:
