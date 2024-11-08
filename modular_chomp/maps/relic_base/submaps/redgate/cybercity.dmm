@@ -149,7 +149,7 @@
 	dir = 1
 	},
 /obj/structure/table/woodentable,
-/obj/item/tape/random,
+/obj/item/rectape/random,
 /turf/simulated/floor/wood,
 /area/redgate/city/library)
 "anE" = (
@@ -740,7 +740,7 @@
 /area/redgate/city/police)
 "aYz" = (
 /obj/structure/table/woodentable,
-/obj/item/tape/random,
+/obj/item/rectape/random,
 /obj/machinery/light_switch{
 	pixel_y = 24
 	},
@@ -3641,10 +3641,8 @@
 /turf/simulated/floor/water/digestive_enzymes,
 /area/redgate/city/waterworks)
 "eSM" = (
-/obj/machinery/disease2/incubator,
-/obj/machinery/light{
-	dir = 1
-	},
+/obj/structure/table/standard,
+/obj/item/book/manual/virology,
 /turf/simulated/floor/tiled/white,
 /area/redgate/city/science)
 "eTR" = (
@@ -4172,7 +4170,7 @@
 /area/redgate/city/waterworks)
 "fEr" = (
 /obj/structure/table/glass,
-/obj/random/tetheraid,
+/obj/random/firstaid,
 /turf/simulated/floor/tiled/white,
 /area/redgate/city/hospital)
 "fEG" = (
@@ -4455,10 +4453,10 @@
 /turf/simulated/wall/tgmc/window/darkwall,
 /area/redgate/city/house1)
 "gbg" = (
-/obj/machinery/light/floortube,
-/obj/structure/casino_table/blackjack_r{
+/obj/structure/casino_table/blackjack_l{
 	dir = 4
 	},
+/obj/machinery/light/floortube,
 /turf/simulated/floor/carpet/purple,
 /area/redgate/city/casino)
 "gbV" = (
@@ -5006,7 +5004,7 @@
 /obj/structure/closet,
 /obj/item/folder/red,
 /obj/item/folder/red,
-/obj/item/tape/random,
+/obj/item/rectape/random,
 /obj/random/powercell/device,
 /turf/simulated/floor/tiled/red,
 /area/redgate/city/corporation)
@@ -7440,6 +7438,7 @@
 "jRE" = (
 /obj/structure/closet/l3closet/scientist,
 /obj/item/reagent_containers/glass/beaker/vial/random,
+/obj/random/slimecore,
 /turf/simulated/floor/tiled/white,
 /area/redgate/city/science)
 "jRK" = (
@@ -8708,6 +8707,9 @@
 /area/redgate/city/pizza)
 "luj" = (
 /obj/structure/table/woodentable,
+/obj/item/book/manual/wiki/medical_diagnostics_manual{
+	pixel_y = 7
+	},
 /turf/simulated/floor/wood,
 /area/redgate/city/house2)
 "luE" = (
@@ -11030,6 +11032,13 @@
 /obj/structure/undies_wardrobe,
 /turf/simulated/floor/tiled/freezer,
 /area/redgate/city/laundry)
+"ozN" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/prop/machine/disease_analyser,
+/turf/simulated/floor/tiled/white,
+/area/redgate/city/science)
 "ozW" = (
 /obj/machinery/light{
 	dir = 1
@@ -13298,6 +13307,7 @@
 /obj/item/grenade/spawnergrenade/casino/cow,
 /obj/item/grenade/spawnergrenade/casino/fennec,
 /obj/item/grenade/spawnergrenade/casino/fox,
+/obj/item/grenade/spawnergrenade/casino/goldcrest,
 /obj/item/grenade/spawnergrenade/casino/otie,
 /obj/item/grenade/spawnergrenade/casino/penguin,
 /obj/item/grenade/spawnergrenade/casino/redpanda,
@@ -14356,8 +14366,8 @@
 /turf/simulated/floor/tiled/neutral,
 /area/redgate/city/house10)
 "sLw" = (
-/obj/machinery/computer/centrifuge,
 /obj/machinery/light,
+/obj/machinery/computer/pandemic,
 /turf/simulated/floor/tiled/white,
 /area/redgate/city/science)
 "sLB" = (
@@ -16839,6 +16849,10 @@
 /obj/machinery/door/airlock/glass,
 /turf/simulated/floor/wood/alt,
 /area/redgate/city/cafe)
+"vTy" = (
+/mob/living/bot/farmbot,
+/turf/simulated/floor/grass,
+/area/redgate/city/teppi)
 "vTJ" = (
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 10
@@ -17006,7 +17020,7 @@
 /turf/simulated/floor/tiled/eris/dark/gray_platform,
 /area/redgate/city/engine)
 "wgN" = (
-/obj/machinery/disease2/diseaseanalyser,
+/obj/structure/prop/machine/centrifuge,
 /turf/simulated/floor/tiled/white,
 /area/redgate/city/science)
 "wgO" = (
@@ -17379,7 +17393,10 @@
 /turf/simulated/floor/tiled/steel_dirty,
 /area/redgate/city/dodgypharmacy)
 "wIw" = (
-/obj/machinery/computer/diseasesplicer,
+/obj/structure/reagent_dispensers/virusfood{
+	pixel_y = 29
+	},
+/obj/structure/prop/machine/incubator,
 /turf/simulated/floor/tiled/white,
 /area/redgate/city/science)
 "wIy" = (
@@ -17627,7 +17644,7 @@
 /obj/machinery/door/window/eastright{
 	dir = 8
 	},
-/obj/item/book/codex/casino,
+/obj/item/book/manual/casino,
 /turf/simulated/floor/tiled/yellow,
 /area/redgate/city/casino)
 "wXV" = (
@@ -17794,11 +17811,11 @@
 /turf/simulated/floor/tiled/eris/white/brown_perforated,
 /area/redgate/city/lasertag)
 "xmT" = (
+/obj/structure/casino_table/blackjack_r{
+	dir = 4
+	},
 /obj/machinery/light/floortube{
 	dir = 1
-	},
-/obj/structure/casino_table/blackjack_l{
-	dir = 4
 	},
 /turf/simulated/floor/carpet/purple,
 /area/redgate/city/casino)
@@ -17928,7 +17945,7 @@
 /obj/random/medical/pillbottle,
 /obj/random/medical/pillbottle,
 /obj/random/medical/pillbottle,
-/obj/random/tetheraid,
+/obj/random/firstaid,
 /turf/simulated/floor/tiled/white,
 /area/redgate/city/hospital)
 "xwF" = (
@@ -18184,8 +18201,8 @@
 /area/redgate/city/gym)
 "xUz" = (
 /obj/structure/table/rack,
-/obj/random/tetheraid,
-/obj/random/tetheraid,
+/obj/random/firstaid,
+/obj/random/firstaid,
 /turf/simulated/floor/tiled/eris/white/bluecorner,
 /area/redgate/city/hospital)
 "xVb" = (
@@ -23042,10 +23059,10 @@ lyJ
 jNE
 kfL
 rdM
+ozN
+fpI
+fpI
 eSM
-fpI
-fpI
-uEa
 rdM
 btI
 kWt
@@ -27135,9 +27152,9 @@ aII
 aUA
 xmT
 goE
-lZj
-cuU
 caL
+cuU
+lZj
 goE
 gbg
 aUA
@@ -30933,7 +30950,7 @@ ivI
 ivI
 ivI
 ivI
-ivI
+vTy
 ivI
 ivI
 tKT
