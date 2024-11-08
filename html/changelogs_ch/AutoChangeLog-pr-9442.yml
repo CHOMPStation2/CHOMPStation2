@@ -1,0 +1,4 @@
+author: "Kashargul"
+delete-after: True
+changes:
+  - rscadd: "fixed a wrong sprite state in the cjhound fullness 1 icon"
