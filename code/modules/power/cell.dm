@@ -43,12 +43,6 @@
 	if(self_recharge)
 		START_PROCESSING(SSobj, src)
 
-//CHOMPAdd Start
-/obj/item/cell/Initialize()
-	. = ..()
-	update_icon()
-//CHOMPAdd End
-
 /obj/item/cell/Destroy()
 	if(self_recharge)
 		STOP_PROCESSING(SSobj, src)
