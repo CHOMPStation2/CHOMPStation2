@@ -25,7 +25,7 @@
 					/obj/item/storage/pouch/holster = 5,
 				// Misc
 					/obj/item/radio/headset/explorer = 10,
-					/obj/item/radio/headset/explorer/alt = 10,
+					/obj/item/radio/headset/alt/explorer = 10,
 					/obj/item/clothing/mask/gas/explorer = 10,
 					/obj/item/storage/backpack/satchel/explorer = 10,
 					/obj/item/storage/backpack/dufflebag/explorer = 10,
