@@ -17,10 +17,10 @@
 #include "../overmap/space/fueldepot.dmm"
 #include "../overmap/planets/thor/thor.dmm" //The datum is in southern_cross_defines.dm
 #include "../overmap/planets/tyr/tyr.dmm"
-#include 'gateway/BaseBlep.dmm'
-#include 'gateway/maddnesslab.dmm'
-#include 'gateway/snowfield.dmm'
-#include 'gateway/hiddeneclipse.dmm'
+#include "gateway/BaseBlep.dmm"
+#include "gateway/maddnesslab.dmm"
+#include "gateway/snowfield.dmm"
+#include "gateway/hiddeneclipse.dmm"
 #include "../../../constructVR.dmm"
 #endif
 
