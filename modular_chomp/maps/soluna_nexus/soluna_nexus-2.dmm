@@ -276,7 +276,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/wall,
+/turf/simulated/wall/r_wall,
 /area/security/Evidence_Storage)
 "aay" = (
 /obj/structure/cable/white{
@@ -284,7 +284,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/wall,
+/turf/simulated/wall/r_wall,
 /area/security/Evidence_Storage)
 "aaA" = (
 /obj/item/ammo_magazine/m9mm/compact/flash{
@@ -614,12 +614,13 @@
 	dir = 1;
 	pixel_y = 5
 	},
-/obj/machinery/light{
-	dir = 8;
-	layer = 3
-	},
 /obj/structure/window/titanium,
 /obj/effect/floor_decal/spline/fancy/wood,
+/obj/machinery/light/spot{
+	dir = 8;
+	color = "#ccc9ff";
+	desc = "An extra bright lighting fixture."
+	},
 /turf/simulated/floor/carpet/oracarpet,
 /area/hallway/Port_Transit_Foyer)
 "abb" = (
@@ -2238,7 +2239,7 @@
 "aeK" = (
 /obj/structure/lattice,
 /obj/effect/catwalk_plated/white,
-/obj/mecha/combat/fighter/pinnace/loaded{
+/obj/mecha/combat/fighter/pinnace{
 	dir = 8
 	},
 /turf/space,
@@ -4240,13 +4241,13 @@
 /turf/simulated/floor/plating/turfpack/airless,
 /area/space)
 "ajw" = (
-/obj/structure/window/reinforced/tinted/frosted{
-	dir = 4
-	},
 /obj/structure/table/reinforced,
 /obj/item/storage/smolebrickcase{
 	pixel_y = 5;
 	pixel_x = 4
+	},
+/obj/structure/window/basic{
+	dir = 4
 	},
 /turf/simulated/floor/carpet/brown/turfpack/station,
 /area/security/Prison_Wing)
@@ -4419,7 +4420,7 @@
 "ajY" = (
 /obj/machinery/turretid/lethal{
 	pixel_x = -29;
-	req_access = list(29);
+	req_access = list(3);
 	control_area = "\improper Armory"
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -6020,6 +6021,7 @@
 /area/hallway/Aft_2_Deck_Central_Corridor_1)
 "aqh" = (
 /obj/machinery/light/small,
+/obj/structure/reagent_dispensers/watertank,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck2_Civilian_ForPortCorridor1)
 "aqi" = (
@@ -8037,15 +8039,17 @@
 /area/hallway/Star_2_Deck_Central_Corridor_2)
 "axv" = (
 /obj/structure/bed/chair/sofa/left/blue,
-/obj/machinery/light{
-	dir = 4
-	},
 /obj/structure/window/titanium{
 	dir = 1;
 	layer = 3
 	},
 /obj/effect/floor_decal/spline/fancy{
 	dir = 1
+	},
+/obj/machinery/light/spot{
+	dir = 4;
+	color = "#ccc9ff";
+	desc = "An extra bright lighting fixture."
 	},
 /turf/simulated/floor/carpet/sblucarpet,
 /area/hallway/Star_Transit_Foyer)
@@ -8252,7 +8256,7 @@
 /turf/simulated/floor/carpet/blue2,
 /area/security/Internal_Affairs_Office)
 "ayk" = (
-/turf/simulated/wall,
+/turf/simulated/wall/r_wall,
 /area/security/HoS_Office)
 "ayl" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -11176,7 +11180,9 @@
 /area/hallway/For_2_Deck_Stairwell)
 "aHJ" = (
 /obj/machinery/mech_recharger,
-/obj/mecha/working/hoverpod/shuttlepod,
+/obj/mecha/working/hoverpod/shuttlepod{
+	req_one_access = list(47)
+	},
 /obj/effect/floor_decal/milspec/box,
 /obj/machinery/status_display{
 	layer = 4;
@@ -11723,7 +11729,8 @@
 /area/security/Evidence_Storage)
 "aJP" = (
 /obj/machinery/door/window/northleft{
-	layer = 2.9
+	layer = 2.9;
+	req_one_access = list(48)
 	},
 /obj/structure/table/steel,
 /obj/machinery/door/firedoor/glass/hidden/steel{
@@ -11752,13 +11759,13 @@
 /obj/machinery/vending/fitness{
 	dir = 1
 	},
-/obj/structure/window/reinforced/tinted/frosted,
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/green/border{
 	dir = 4
 	},
+/obj/structure/window/basic,
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/Gym)
 "aJY" = (
@@ -12953,7 +12960,7 @@
 /obj/machinery/mech_recharger{
 	icon = 'icons/turf/shuttle_alien_blue.dmi'
 	},
-/obj/mecha/combat/fighter/baron/loaded{
+/obj/mecha/combat/fighter/baron{
 	dir = 1
 	},
 /turf/space,
@@ -16131,9 +16138,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/rnd/RD_Office)
 "aXp" = (
-/obj/machinery/light{
-	dir = 1
-	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
@@ -17112,11 +17116,11 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/machinery/door/blast/shutters{
-	dir = 4;
-	name = "Kitchen Shutters";
+/obj/machinery/door/blast/gate/thin{
 	id = "sc-GCkitchen";
-	layer = 3.3
+	layer = 3.3;
+	name = "Dinner Shutters";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/Chomp_Kitchen)
@@ -18687,7 +18691,7 @@
 /area/quartermaster/QM_Office)
 "bfS" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/autolathe,
+/obj/machinery/lapvend,
 /turf/simulated/floor/tiled/steel_grid,
 /area/quartermaster/Aft_Tool_Storage)
 "bfV" = (
@@ -19092,6 +19096,9 @@
 /obj/structure/table/reinforced,
 /obj/machinery/status_display{
 	pixel_y = -32
+	},
+/obj/machinery/keycard_auth{
+	pixel_x = -26
 	},
 /turf/simulated/floor/carpet,
 /area/bridge/HoP_Office)
@@ -20460,6 +20467,14 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/Deck2_Security_AftStarCorridor2)
+"blj" = (
+/obj/structure/cable/white{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/wall/r_wall,
+/area/security/Evidence_Storage)
 "blk" = (
 /turf/simulated/wall/r_wall,
 /area/quartermaster/Warehouse)
@@ -20695,12 +20710,6 @@
 	d1 = 1;
 	d2 = 4;
 	icon_state = "1-4"
-	},
-/obj/machinery/button/windowtint/multitint{
-	pixel_y = -26;
-	pixel_x = -12;
-	id = "sc-WTkitchen";
-	range = 12
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/Chomp_Kitchen)
@@ -23244,12 +23253,9 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/hallway/ForPort_2_Deck_Observatory)
 "bvr" = (
-/obj/item/radio/intercom{
-	dir = 1;
-	pixel_y = 22
-	},
-/turf/simulated/floor/boxing/gym,
-/area/crew_quarters/Gym)
+/obj/structure/reagent_dispensers/watertank,
+/turf/simulated/floor/plating,
+/area/maintenance/Deck2_ForStar_Corridor)
 "bvu" = (
 /turf/simulated/wall/r_wall,
 /area/quartermaster/Waste_Disposals)
@@ -24902,7 +24908,7 @@
 	layer = 10.1;
 	dir = 8
 	},
-/obj/mecha/combat/fighter/allure/loaded{
+/obj/mecha/combat/fighter/allure{
 	dir = 1
 	},
 /turf/space,
@@ -25519,10 +25525,10 @@
 /turf/simulated/floor/plating,
 /area/hallway/Port_2_Deck_Corridor_1)
 "bCV" = (
-/obj/structure/window/reinforced/tinted/frosted{
+/obj/structure/table/reinforced,
+/obj/structure/window/basic{
 	dir = 4
 	},
-/obj/structure/table/reinforced,
 /turf/simulated/floor/carpet/bcarpet/turfpack/station,
 /area/security/Prison_Wing)
 "bDc" = (
@@ -26981,11 +26987,10 @@
 /obj/item/storage/box/lights/mixed,
 /obj/item/storage/box/lights/mixed,
 /obj/item/flashlight,
-/obj/item/storage/belt/utility/full/multitool,
 /obj/item/cell/high,
-/obj/item/multitool,
 /obj/item/cell/high,
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/item/storage/belt/utility,
 /turf/simulated/floor/tiled/steel_grid,
 /area/quartermaster/For_Tool_Storage)
 "bJo" = (
@@ -29598,9 +29603,7 @@
 /turf/simulated/wall,
 /area/maintenance/Deck2_Civilian_ForPortCorridor2)
 "bTi" = (
-/obj/structure/ladder/updown{
-	pixel_y = 3
-	},
+/obj/structure/ladder/up,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/sign/small/warning/emerg_only{
 	desc = "Ladder for emergency use only";
@@ -30031,7 +30034,9 @@
 "bUN" = (
 /obj/machinery/mech_recharger,
 /obj/effect/floor_decal/milspec/box,
-/obj/mecha/combat/gygax/old,
+/obj/mecha/combat/gygax/old{
+	req_access = list(1)
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/security/Armory)
 "bUP" = (
@@ -30808,16 +30813,17 @@
 /area/rnd/Toxins_Mixing_Room)
 "bXb" = (
 /obj/structure/bed/chair/sofa/right/blue,
-/obj/machinery/light{
-	dir = 8;
-	layer = 3
-	},
 /obj/structure/window/titanium{
 	dir = 1;
 	layer = 3
 	},
 /obj/effect/floor_decal/spline/fancy{
 	dir = 1
+	},
+/obj/machinery/light/spot{
+	dir = 8;
+	color = "#ccc9ff";
+	desc = "An extra bright lighting fixture."
 	},
 /turf/simulated/floor/carpet/sblucarpet,
 /area/hallway/Star_Transit_Foyer)
@@ -31877,8 +31883,14 @@
 /turf/simulated/floor/boxing/gym,
 /area/security/Prison_Wing)
 "cbj" = (
-/obj/machinery/autolathe,
+/obj/structure/closet/toolcloset,
+/obj/item/storage/box/lights/mixed,
+/obj/item/storage/box/lights/mixed,
+/obj/item/flashlight,
+/obj/item/cell/high,
+/obj/item/cell/high,
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/item/storage/belt/utility,
 /obj/machinery/firealarm{
 	pixel_y = 25
 	},
@@ -39945,7 +39957,8 @@
 /area/hallway/ForStar_2_Deck_Observatory)
 "cCe" = (
 /obj/machinery/door/window/southright{
-	layer = 2.9
+	layer = 2.9;
+	req_one_access = list(48)
 	},
 /obj/structure/table/steel,
 /obj/machinery/door/firedoor/glass/hidden/steel{
@@ -40063,10 +40076,10 @@
 /turf/simulated/floor/plating,
 /area/maintenance/Deck2_Security_StarCorridor1)
 "cCC" = (
-/obj/structure/window/reinforced/tinted/frosted{
+/obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
-/obj/effect/floor_decal/spline/fancy/wood{
+/obj/structure/window/basic{
 	dir = 1
 	},
 /turf/simulated/floor/wood/alt/parquet,
@@ -43165,6 +43178,10 @@
 	name = "Timmothy"
 	},
 /obj/structure/table/bench/marble,
+/obj/machinery/light/spot{
+	color = "#ccc9ff";
+	desc = "An extra bright lighting fixture."
+	},
 /turf/simulated/floor/carpet/bcarpet,
 /area/security/Lobby)
 "ddS" = (
@@ -43229,6 +43246,10 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/Prison_Wing)
+"deZ" = (
+/obj/structure/reagent_dispensers/watertank,
+/turf/simulated/floor/plating,
+/area/maintenance/Deck2_Medical_AftPortChamber1)
 "dfc" = (
 /obj/structure/bed/chair/comfy/beige{
 	dir = 4
@@ -44366,7 +44387,7 @@
 	name = "Brig Lockdown";
 	pixel_x = 26;
 	pixel_y = 38;
-	req_access = list(2)
+	req_access = list(3)
 	},
 /obj/machinery/button/remote/blast_door{
 	dir = 8;
@@ -44374,7 +44395,7 @@
 	name = "Privacy Shutters";
 	pixel_x = 26;
 	pixel_y = 27;
-	req_access = list(2)
+	req_access = list(3)
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
@@ -46205,8 +46226,8 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
-/obj/machinery/firealarm{
-	pixel_y = 25
+/obj/machinery/light{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/For_2_Deck_Central_Corridor_2)
@@ -46403,10 +46424,10 @@
 /obj/item/bedsheet/orangedouble{
 	pixel_y = 1
 	},
-/obj/structure/window/reinforced/tinted/frosted{
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/structure/window/basic{
 	dir = 4
 	},
-/obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/carpet/bcarpet/turfpack/station,
 /area/security/Prison_Wing)
 "dTp" = (
@@ -48794,7 +48815,7 @@
 /obj/machinery/alarm{
 	pixel_y = 25
 	},
-/obj/structure/reagent_dispensers/fueltank,
+/obj/structure/reagent_dispensers/watertank,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck2_Engineering_ForStarChamber2)
 "ezZ" = (
@@ -50187,6 +50208,9 @@
 	},
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
+	},
+/obj/machinery/firealarm{
+	pixel_y = 25
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/For_2_Deck_Central_Corridor_2)
@@ -51802,11 +51826,11 @@
 "fjU" = (
 /obj/structure/table/marble,
 /obj/item/toy/chewtoy,
-/obj/machinery/door/blast/shutters{
-	dir = 8;
-	name = "Kitchen Shutters";
+/obj/machinery/door/blast/gate/thin{
 	id = "sc-GCkitchen";
-	layer = 3.3
+	layer = 3.3;
+	name = "Dinner Shutters";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/Chomp_Dinner_1)
@@ -52665,6 +52689,22 @@
 	},
 /turf/simulated/floor/tiled,
 /area/medical/Treatment_Hall)
+"fuO" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/catwalk_plated/techmaint,
+/obj/random/junk,
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/Deck2_For_Corridor)
 "fuR" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -57643,6 +57683,9 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/security/Deck2_1_Corridor)
 "gCr" = (
@@ -57731,13 +57774,13 @@
 /turf/simulated/floor/tiled,
 /area/security/Firing_Range)
 "gCT" = (
-/obj/machinery/lapvend,
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/white/border{
 	dir = 1
 	},
+/obj/machinery/vending/cola/soft,
 /turf/simulated/floor/tiled/steel_grid,
 /area/hallway/Aft_2_Deck_Corridor_2)
 "gDc" = (
@@ -58894,11 +58937,11 @@
 /obj/machinery/cash_register/civilian{
 	dir = 4
 	},
-/obj/machinery/door/blast/shutters{
-	dir = 8;
-	name = "Kitchen Shutters";
+/obj/machinery/door/blast/gate/thin{
 	id = "sc-GCkitchen";
-	layer = 3.3
+	layer = 3.3;
+	name = "Dinner Shutters";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/Chomp_Dinner_1)
@@ -59905,10 +59948,10 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
-/obj/structure/window/reinforced/tinted/frosted{
+/obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
-/obj/effect/floor_decal/spline/fancy/wood{
+/obj/structure/window/basic{
 	dir = 1
 	},
 /turf/simulated/floor/wood/alt/parquet,
@@ -64738,7 +64781,9 @@
 /obj/machinery/status_display{
 	pixel_y = -32
 	},
-/obj/mecha/medical/odysseus/old,
+/obj/mecha/medical/odysseus/old{
+	req_one_access = list(5)
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/medical/EMT_Bay)
 "isH" = (
@@ -66877,15 +66922,15 @@
 /area/medical/Patient_Ward)
 "iTv" = (
 /obj/structure/table/marble,
-/obj/machinery/door/blast/shutters{
-	dir = 8;
-	name = "Kitchen Shutters";
-	id = "sc-GCkitchen";
-	layer = 3.3
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 1;
 	icon_state = "pipe-c"
+	},
+/obj/machinery/door/blast/gate/thin{
+	id = "sc-GCkitchen";
+	layer = 3.3;
+	name = "Dinner Shutters";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/Chomp_Dinner_1)
@@ -68736,6 +68781,10 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/Armory)
+"jrH" = (
+/obj/structure/reagent_dispensers/watertank,
+/turf/simulated/floor/plating,
+/area/maintenance/Deck2_Civilian_StarCorridor1)
 "jrP" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -69085,6 +69134,18 @@
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/carpet/brown,
 /area/engineering/Breakroom)
+"jxV" = (
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
+	},
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/Deck2_For_Corridor)
 "jxY" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/borderfloor/corner{
@@ -71288,6 +71349,10 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/Armory)
+"kdP" = (
+/obj/structure/reagent_dispensers/watertank,
+/turf/simulated/floor/plating,
+/area/maintenance/Deck2_AftPort_Corridor)
 "kec" = (
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/hatch/blue,
@@ -71715,9 +71780,6 @@
 /turf/simulated/floor/wood/sif,
 /area/crew_quarters/Midnight_Bar)
 "kip" = (
-/obj/structure/window/reinforced/tinted/frosted{
-	dir = 1
-	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
@@ -71725,6 +71787,9 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/obj/structure/window/basic{
 	dir = 1
 	},
 /turf/simulated/floor/wood/alt/parquet,
@@ -72360,8 +72425,17 @@
 "kqM" = (
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/hatch/blue,
-/obj/effect/wingrille_spawn/reinforced/polarized{
-	id = "sc-WTkitchen"
+/obj/structure/grille,
+/obj/structure/window/basic/full,
+/obj/structure/window/basic,
+/obj/structure/window/basic{
+	dir = 8
+	},
+/obj/structure/window/basic{
+	dir = 1
+	},
+/obj/structure/window/basic{
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
@@ -72403,6 +72477,7 @@
 /turf/simulated/floor/tiled,
 /area/crew_quarters/Emergency_EVA)
 "kru" = (
+/obj/structure/reagent_dispensers/watertank,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck2_Medical_AftPortCorridor1)
 "krL" = (
@@ -77895,7 +77970,7 @@
 /obj/machinery/vending/cola/soft{
 	dir = 1
 	},
-/obj/structure/window/reinforced/tinted/frosted,
+/obj/structure/window/basic,
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/Gym)
 "lSj" = (
@@ -78547,8 +78622,17 @@
 "lYw" = (
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/hatch/blue,
-/obj/effect/wingrille_spawn/reinforced/polarized{
-	id = "sc-WTkitchen"
+/obj/structure/grille,
+/obj/structure/window/basic/full,
+/obj/structure/window/basic,
+/obj/structure/window/basic{
+	dir = 8
+	},
+/obj/structure/window/basic{
+	dir = 1
+	},
+/obj/structure/window/basic{
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -79798,7 +79882,7 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/Chomp_Kitchen)
 "msQ" = (
-/obj/structure/reagent_dispensers/fueltank,
+/obj/structure/reagent_dispensers/watertank,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck2_Security_AftStarCorridor2)
 "msX" = (
@@ -80698,6 +80782,7 @@
 /obj/machinery/alarm{
 	pixel_y = 25
 	},
+/obj/structure/reagent_dispensers/watertank,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck2_Civilian_ForStarCorridor1)
 "mGI" = (
@@ -83609,7 +83694,7 @@
 /turf/simulated/wall,
 /area/security/Forensics_Office)
 "nxC" = (
-/turf/simulated/wall,
+/turf/simulated/wall/r_wall,
 /area/bridge/HoP_Office)
 "nxR" = (
 /obj/machinery/portable_atmospherics/canister/nitrogen,
@@ -88292,11 +88377,13 @@
 	dir = 1;
 	pixel_y = 5
 	},
-/obj/machinery/light{
-	dir = 4
-	},
 /obj/structure/window/titanium,
 /obj/effect/floor_decal/spline/fancy,
+/obj/machinery/light/spot{
+	dir = 4;
+	color = "#ccc9ff";
+	desc = "An extra bright lighting fixture."
+	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/hallway/Star_Transit_Foyer)
 "oOS" = (
@@ -88475,11 +88562,12 @@
 	dir = 1;
 	pixel_y = 5
 	},
-/obj/machinery/light{
-	dir = 8;
-	layer = 3
-	},
 /obj/structure/window/titanium,
+/obj/machinery/light/spot{
+	dir = 8;
+	color = "#ccc9ff";
+	desc = "An extra bright lighting fixture."
+	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/hallway/Star_Transit_Foyer)
 "oSe" = (
@@ -88787,6 +88875,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/structure/reagent_dispensers/watertank,
 /turf/simulated/floor/plating,
 /area/maintenance/Distro_Civilian)
 "oWn" = (
@@ -89335,12 +89424,12 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/rnd/RD_Office)
 "pcH" = (
-/obj/structure/window/reinforced/tinted/frosted{
-	dir = 4
-	},
 /obj/item/lego,
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
+	},
+/obj/structure/window/basic{
+	dir = 4
 	},
 /turf/simulated/floor/carpet/brown/turfpack/station,
 /area/security/Prison_Wing)
@@ -92203,15 +92292,16 @@
 /area/crew_quarters/Gym)
 "pPd" = (
 /obj/structure/bed/chair/sofa/right/blue,
-/obj/machinery/light{
-	dir = 8;
-	layer = 3
-	},
 /obj/structure/window/titanium{
 	dir = 1
 	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
+	},
+/obj/machinery/light/spot{
+	dir = 8;
+	color = "#ccc9ff";
+	desc = "An extra bright lighting fixture."
 	},
 /turf/simulated/floor/carpet/brown,
 /area/hallway/Port_Transit_Foyer)
@@ -92549,11 +92639,11 @@
 /obj/machinery/cash_register/civilian{
 	dir = 8
 	},
-/obj/machinery/door/blast/shutters{
-	dir = 4;
-	name = "Kitchen Shutters";
+/obj/machinery/door/blast/gate/thin{
 	id = "sc-GCkitchen";
-	layer = 3.3
+	layer = 3.3;
+	name = "Dinner Shutters";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/Chomp_Kitchen)
@@ -93289,6 +93379,10 @@
 /obj/structure/fitness/punchingbag,
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
+	},
+/obj/item/radio/intercom{
+	dir = 1;
+	pixel_y = 22
 	},
 /turf/simulated/floor/boxing/gym,
 /area/crew_quarters/Gym)
@@ -94590,11 +94684,11 @@
 	nutriment_desc = list("sweet    bread" = 3, "tamarind" = 2, "gummy" = 1);
 	pixel_y = 10
 	},
-/obj/machinery/door/blast/shutters{
-	dir = 4;
-	name = "Kitchen Shutters";
+/obj/machinery/door/blast/gate/thin{
 	id = "sc-GCkitchen";
-	layer = 3.3
+	layer = 3.3;
+	name = "Dinner Shutters";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/Chomp_Kitchen)
@@ -99131,11 +99225,11 @@
 /area/hallway/Star_2_Deck_Corridor_1)
 "rBr" = (
 /obj/structure/table/marble,
-/obj/machinery/door/blast/shutters{
-	dir = 8;
-	name = "Kitchen Shutters";
+/obj/machinery/door/blast/gate/thin{
 	id = "sc-GCkitchen";
-	layer = 3.3
+	layer = 3.3;
+	name = "Dinner Shutters";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/Chomp_Dinner_1)
@@ -99266,7 +99360,9 @@
 "rCN" = (
 /obj/machinery/mech_recharger,
 /obj/effect/floor_decal/milspec/box,
-/obj/mecha/working/ripley/mining/old,
+/obj/mecha/working/ripley/mining/old{
+	req_one_access = list(11,24)
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/Mech_Bay)
 "rCR" = (
@@ -99949,11 +100045,8 @@
 /turf/simulated/floor/tiled,
 /area/hallway/Star_Transit_Foyer)
 "rKQ" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/simulated/floor/glass,
-/area/security/Lobby)
+/turf/simulated/wall/r_wall,
+/area/security/Internal_Affairs_Office)
 "rKU" = (
 /obj/structure/sign/directions/eva,
 /obj/structure/sign/directions/engineering/gravgen{
@@ -101481,7 +101574,7 @@
 /turf/simulated/floor/carpet/bcarpet,
 /area/security/Lobby)
 "sgY" = (
-/obj/structure/window/reinforced/tinted/frosted{
+/obj/structure/window/basic{
 	dir = 4
 	},
 /turf/simulated/floor/carpet/bcarpet/turfpack/station,
@@ -105529,15 +105622,8 @@
 /turf/simulated/floor/lino,
 /area/crew_quarters/Chapel_Office)
 "tiT" = (
-/obj/structure/closet/toolcloset,
-/obj/item/storage/box/lights/mixed,
-/obj/item/storage/box/lights/mixed,
-/obj/item/flashlight,
-/obj/item/cell/high,
-/obj/item/multitool,
-/obj/item/cell/high,
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/item/storage/belt/utility/full,
+/obj/structure/reagent_dispensers/watertank,
 /turf/simulated/floor/tiled/steel_grid,
 /area/quartermaster/Star_Tool_Storage)
 "tjb" = (
@@ -106964,9 +107050,6 @@
 	pixel_x = 5;
 	pixel_y = -3
 	},
-/obj/structure/window/reinforced/tinted/frosted{
-	dir = 8
-	},
 /obj/machinery/light,
 /obj/item/tape_roll{
 	pixel_x = -8;
@@ -106979,6 +107062,9 @@
 /obj/item/sticky_pad/random{
 	pixel_y = 9;
 	pixel_x = -6
+	},
+/obj/structure/window/basic{
+	dir = 8
 	},
 /turf/simulated/floor/wood/alt/parquet,
 /area/crew_quarters/Gym)
@@ -107634,14 +107720,16 @@
 /area/hallway/Port_2_Deck_Central_Corridor_2)
 "tPA" = (
 /obj/structure/bed/chair/sofa/left/blue,
-/obj/machinery/light{
-	dir = 4
-	},
 /obj/structure/window/titanium{
 	dir = 1
 	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
+	},
+/obj/machinery/light/spot{
+	dir = 4;
+	color = "#ccc9ff";
+	desc = "An extra bright lighting fixture."
 	},
 /turf/simulated/floor/carpet/brown,
 /area/hallway/Port_Transit_Foyer)
@@ -109556,10 +109644,10 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/Deck2_Engineering_PortCorridor2)
 "umT" = (
-/obj/structure/window/reinforced/tinted/frosted{
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/structure/window/basic{
 	dir = 4
 	},
-/obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/carpet/bcarpet/turfpack/station,
 /area/security/Prison_Wing)
 "umX" = (
@@ -110469,6 +110557,7 @@
 	dir = 4;
 	pixel_x = -22
 	},
+/obj/structure/reagent_dispensers/watertank,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck2_ForPort_Corridor)
 "uCt" = (
@@ -111446,8 +111535,17 @@
 "uSr" = (
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/hatch/blue,
-/obj/effect/wingrille_spawn/reinforced/polarized{
-	id = "sc-WTkitchen"
+/obj/structure/grille,
+/obj/structure/window/basic/full,
+/obj/structure/window/basic,
+/obj/structure/window/basic{
+	dir = 8
+	},
+/obj/structure/window/basic{
+	dir = 1
+	},
+/obj/structure/window/basic{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/Chomp_Kitchen)
@@ -113220,14 +113318,17 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/hallway/Port_Transit_Foyer)
 "vqB" = (
-/obj/structure/lattice,
-/obj/effect/catwalk_plated/white,
-/obj/machinery/mech_recharger{
-	icon = 'icons/turf/shuttle_alien_blue.dmi'
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
-/obj/mecha/combat/fighter/scoralis/loaded,
-/turf/space,
-/area/harbor/Star_Shuttlebay)
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/green/border,
+/obj/machinery/light/floortube{
+	dir = 1;
+	pixel_y = 3
+	},
+/turf/simulated/floor/tiled,
+/area/crew_quarters/Gym)
 "vqQ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -113509,6 +113610,9 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/ForPort_2_Deck_Observatory)
+"vuK" = (
+/turf/simulated/wall/r_wall,
+/area/security/Evidence_Storage)
 "vuU" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -114471,8 +114575,8 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/Star_Tool_Storage)
 "vID" = (
-/obj/machinery/autolathe,
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/autolathe,
 /turf/simulated/floor/tiled/steel_grid,
 /area/quartermaster/Star_Tool_Storage)
 "vIQ" = (
@@ -116331,15 +116435,15 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
 	},
-/obj/structure/window/reinforced/tinted/frosted{
-	dir = 4
-	},
 /obj/structure/table/standard,
 /obj/machinery/light,
 /obj/item/reagent_containers/food/snacks/foam_banana,
 /obj/item/reagent_containers/food/snacks/foam_shrimp{
 	pixel_y = 5;
 	pixel_x = -5
+	},
+/obj/structure/window/basic{
+	dir = 4
 	},
 /turf/simulated/floor/wood/alt,
 /area/crew_quarters/Gym)
@@ -116687,19 +116791,11 @@
 /turf/simulated/floor/wood/sif,
 /area/crew_quarters/Rec_Lounge)
 "wna" = (
-/obj/structure/railing/grey{
-	color = "yellow";
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/zpipe/up/scrubbers{
 	dir = 1
 	},
-/obj/structure/railing/grey{
-	color = "yellow";
-	dir = 8
-	},
-/obj/structure/lattice,
-/turf/simulated/open,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/plating,
 /area/maintenance/Deck2_Aft_Corridor)
 "wnb" = (
 /obj/machinery/light/small,
@@ -116880,6 +116976,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/maintenance/ab_TeshDen)
+"woF" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/boxing/gym,
+/area/crew_quarters/Gym)
 "woJ" = (
 /obj/machinery/power/apc{
 	dir = 1;
@@ -116943,7 +117045,7 @@
 	dir = 8;
 	pixel_x = 22
 	},
-/obj/random/trash,
+/obj/structure/reagent_dispensers/watertank,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck2_Civilian_AftCorridor1)
 "wpP" = (
@@ -117330,6 +117432,7 @@
 /area/harbor/Star_2_Deck_Airlock_Access)
 "wuA" = (
 /obj/machinery/light/small,
+/obj/structure/reagent_dispensers/watertank,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck2_Cargo_AftStarChamber1)
 "wuC" = (
@@ -118287,6 +118390,7 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
+/obj/structure/reagent_dispensers/watertank,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck2_For_Corridor)
 "wHC" = (
@@ -119489,11 +119593,11 @@
 /area/maintenance/Deck2_Science_ForCorridor1)
 "wYI" = (
 /obj/structure/table/marble,
-/obj/machinery/door/blast/shutters{
-	dir = 4;
-	name = "Kitchen Shutters";
+/obj/machinery/door/blast/gate/thin{
 	id = "sc-GCkitchen";
-	layer = 3.3
+	layer = 3.3;
+	name = "Dinner Shutters";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/Chomp_Kitchen)
@@ -120013,6 +120117,9 @@
 /obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 1
 	},
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/For_2_Deck_Central_Corridor_2)
 "xft" = (
@@ -120305,13 +120412,13 @@
 	dir = 4;
 	layer = 3
 	},
-/obj/machinery/door/blast/shutters{
-	dir = 8;
-	name = "Kitchen Shutters";
-	id = "sc-GCkitchen";
-	layer = 3.3
-	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/door/blast/gate/thin{
+	id = "sc-GCkitchen";
+	layer = 3.3;
+	name = "Dinner Shutters";
+	dir = 4
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/Chomp_Dinner_1)
 "xjG" = (
@@ -122252,11 +122359,8 @@
 /turf/simulated/floor/plating,
 /area/maintenance/Deck2_AftPort_Corridor)
 "xMg" = (
-/obj/structure/railing/grey{
-	color = "yellow";
-	dir = 1
-	},
-/turf/simulated/open,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/plating,
 /area/maintenance/Deck2_Aft_Corridor)
 "xMr" = (
 /turf/simulated/floor/tiled/white,
@@ -122333,11 +122437,13 @@
 	dir = 1;
 	pixel_y = 5
 	},
-/obj/machinery/light{
-	dir = 4
-	},
 /obj/structure/window/titanium,
 /obj/effect/floor_decal/spline/fancy/wood,
+/obj/machinery/light/spot{
+	dir = 4;
+	color = "#ccc9ff";
+	desc = "An extra bright lighting fixture."
+	},
 /turf/simulated/floor/carpet/oracarpet,
 /area/hallway/Port_Transit_Foyer)
 "xOn" = (
@@ -150794,7 +150900,7 @@ byz
 bum
 aAT
 oZk
-aYe
+kdP
 bQz
 ctj
 ctj
@@ -152410,7 +152516,7 @@ tQg
 ejC
 tQg
 wpH
-gDg
+sqb
 xtd
 vGB
 bKO
@@ -153333,7 +153439,7 @@ kzJ
 oCX
 wBy
 kzJ
-oCX
+fuO
 kzJ
 oCX
 kzJ
@@ -153591,7 +153697,7 @@ bkY
 emF
 bAm
 aoA
-aoA
+jxV
 emF
 bsn
 cmj
@@ -154089,7 +154195,7 @@ aJm
 tHl
 ddO
 ccH
-rKQ
+aJm
 aJm
 qPi
 cCb
@@ -155227,7 +155333,7 @@ kXk
 cin
 lwJ
 aWM
-rfR
+jrH
 eGw
 iKC
 cEi
@@ -157433,10 +157539,10 @@ sSp
 aax
 bxg
 afR
-ahu
-ahu
-ahu
-ahu
+rKQ
+rKQ
+rKQ
+rKQ
 ahu
 aKZ
 aPp
@@ -157985,7 +158091,7 @@ aaa
 kLW
 qrT
 ikY
-iEX
+bvr
 sDy
 arK
 arK
@@ -158841,13 +158947,13 @@ cnD
 aWM
 vaY
 qPt
-tYk
+woF
 tYk
 tYk
 tYk
 mrF
 edf
-gdA
+vqB
 hTF
 reH
 pMu
@@ -159236,7 +159342,7 @@ mfM
 smP
 dYz
 apc
-aZB
+blj
 adP
 agf
 agf
@@ -159494,7 +159600,7 @@ ber
 ohP
 aJO
 xUK
-sSp
+vuK
 rNC
 agi
 ait
@@ -159752,7 +159858,7 @@ sSp
 sSp
 sSp
 sSp
-sSp
+vuK
 ayk
 ayk
 ayk
@@ -159873,7 +159979,7 @@ xGd
 vhw
 mkf
 qPt
-bvr
+iJt
 tYk
 tYk
 tYk
@@ -160131,13 +160237,13 @@ xGd
 vhw
 cnN
 qPt
-iJt
+woF
 tYk
 tYk
 tYk
 mrF
 edf
-gdA
+vqB
 hTF
 reH
 pMu
@@ -164211,7 +164317,7 @@ aRh
 bwl
 yfv
 bBC
-bBC
+deZ
 byg
 sNN
 puB
@@ -168290,7 +168396,7 @@ aaa
 xRY
 slm
 pxs
-vqB
+hmH
 aWJ
 lSj
 bcb
