@@ -506,8 +506,12 @@
 					/obj/item/gun/energy/stunrevolver = 4,
 					/obj/item/reagent_containers/spray/pepper = 6,
 					/obj/item/taperoll/police = 6,
+<<<<<<< HEAD
 					/obj/item/clothing/glasses/omnihud/sec = 6,
 					/obj/item/clothing/accessory/bodycam = 10) // CHOMPAdd
+=======
+					/obj/item/clothing/glasses/omnihud/sec = 6)
+>>>>>>> 25da980123 (we really don't need initialize here (#16583))
 	contraband = list(/obj/item/clothing/glasses/sunglasses = 2,
 					/obj/item/storage/box/donut = 2,
 					/obj/item/implanter/compliance = 1)
