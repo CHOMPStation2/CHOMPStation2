@@ -78,3 +78,6 @@
   - rscadd: fixed a wrong sprite state in the cjhound fullness 1 icon
   TheGreatKitsune:
   - bugfix: Fixes a typo in text people will probably never see
+2024-11-10:
+  CHOMPStation2StaffMirrorBot:
+  - qol: restored syndie headset sprites
