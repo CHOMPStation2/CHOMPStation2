@@ -25,12 +25,19 @@
 	store_per_type = TRUE
 	target_type = /obj/machinery/smartfridge/sheets
 
+	var/min_retained = 75	//minimum percentage of current stock for retention
+	var/max_retained = 80	//maximum percentage of current stock for retention
 	var/stacks_go_missing = FALSE // Variable rate depletion of stacks inter-round
+	var/minimum_storage_reserve = FALSE	// ...but still try to maintain a minimum reserve?
 
 /datum/persistent/storage/smartfridge/sheet_storage/lossy
 	name = "sheet storage lossy"
-	max_storage = 250
+	min_retained = 50 //CHOMPedit: Altering how many items can be held between rounds.
+	max_retained = 50 //CHOMPedit: Altering how many items can be held between rounds.
+	min_storage = 1	//if the amount is at or below this, don't cull //CHOMPedit: Altering how many items can be held between rounds.
+	max_storage = 2500	//if the amount is above this, cull it to this amount THEN do math //CHOMPedit: Altering how many items can be held between rounds.
 	stacks_go_missing = TRUE
+	minimum_storage_reserve = TRUE
 
 /datum/persistent/storage/smartfridge/sheet_storage/variable_max
 	name = "variable max storage"
@@ -65,8 +72,10 @@
 
 		// Delete some stacks if we want
 		if(stacks_go_missing)
-			var/fuzzy = rand(55,65)*0.01 // loss of 35-45% with rounding down
-			count = round(count*fuzzy)
+			var/fuzzy = rand(min_retained,max_retained)*0.01 // loss of 35-45% with rounding down
+			if(!minimum_storage_reserve || (count > min_storage && minimum_storage_reserve))
+				count = round(count*fuzzy)
+
 			if(count <= 0)
 				continue
 
@@ -97,7 +106,7 @@
 				. += A
 
 /datum/persistent/storage/smartfridge/produce/create_item(var/seedtype)
-	return new /obj/item/weapon/reagent_containers/food/snacks/grown(null, seedtype) // Smartfridge will be stock()ed with it, loc is unimportant
+	return new /obj/item/reagent_containers/food/snacks/grown(null, seedtype) // Smartfridge will be stock()ed with it, loc is unimportant
 
 /datum/persistent/storage/smartfridge/produce/get_storage_list(var/obj/machinery/smartfridge/produce/entry)
 	if(!istype(entry))
@@ -108,7 +117,7 @@
 		if(prob(go_missing_chance))
 			continue
 		if(LAZYLEN(I.instances))
-			var/obj/item/weapon/reagent_containers/food/snacks/grown/G = I.instances[1]
+			var/obj/item/reagent_containers/food/snacks/grown/G = I.instances[1]
 			if(!istype(G))
 				continue
 			.[G.plantname] = I.get_amount() // Store the seed type, because that's what's used to generate the fruit

@@ -1,10 +1,11 @@
-import { useBackend } from '../backend';
-import { Window } from '../layouts';
-import { Button, Section, Table, Knob } from '../components';
 import { BooleanLike } from 'common/react';
 
+import { useBackend } from '../backend';
+import { Button, Knob, Section, Table } from '../components';
+import { Window } from '../layouts';
+
 export const GyrotronControl = () => (
-  <Window width={627} height={700} resizable>
+  <Window width={627} height={700}>
     <Window.Content>
       <GyrotronControlContent />
     </Window.Content>
@@ -25,8 +26,8 @@ type Data = {
   }[];
 };
 
-export const GyrotronControlContent = (props, context) => {
-  const { act, data } = useBackend<Data>(context);
+export const GyrotronControlContent = (props) => {
+  const { act, data } = useBackend<Data>();
 
   const { gyros } = data;
 
@@ -34,12 +35,11 @@ export const GyrotronControlContent = (props, context) => {
     <Section
       title="Gyrotrons"
       buttons={
-        <Button
-          icon="pencil-alt"
-          content={'Set Tag'}
-          onClick={() => act('set_tag')}
-        />
-      }>
+        <Button icon="pencil-alt" onClick={() => act('set_tag')}>
+          Set Tag
+        </Button>
+      }
+    >
       <Table>
         <Table.Row header>
           <Table.Cell>Name</Table.Cell>
@@ -57,7 +57,6 @@ export const GyrotronControlContent = (props, context) => {
             <Table.Cell>
               <Button
                 icon="power-off"
-                content={gyro.active ? 'Online' : 'Offline'}
                 selected={gyro.active}
                 disabled={!gyro.deployed}
                 onClick={() =>
@@ -65,11 +64,13 @@ export const GyrotronControlContent = (props, context) => {
                     gyro: gyro.ref,
                   })
                 }
-              />
+              >
+                {gyro.active ? 'Online' : 'Offline'}
+              </Button>
             </Table.Cell>
             <Table.Cell>
               <Knob
-                forcedInputWidth="60px"
+                width="60px"
                 size={1.25}
                 color={!!gyro.active && 'yellow'}
                 value={gyro.fire_delay}
@@ -87,7 +88,7 @@ export const GyrotronControlContent = (props, context) => {
             </Table.Cell>
             <Table.Cell>
               <Knob
-                forcedInputWidth="60px"
+                width="60px"
                 size={1.25}
                 color={!!gyro.active && 'yellow'}
                 value={gyro.strength}

@@ -1,0 +1,133 @@
+2024-05-02:
+  cadyn:
+  - refactor: murder the lists
+2024-05-03:
+  cadyn:
+  - server: default for rad resistance is back to being divide
+2024-05-05:
+  cadyn:
+  - refactor: shandlers do two initial runs during RUNLEVEL_LOBBY
+  - bugfix: sunlight in VR
+2024-05-06:
+  TheCaramelion:
+  - bugfix: Fixed circuitry detecting phased entities
+  Upstream:
+  - admin: added 3 more admin spawn rubber duckies (grey, green and pink).
+  - admin: added a variable to rubber duckies called "honk text" that allows it to
+      put an audible message in chat when honked.
+  - rscadd: Adds drop vore to mob falling objects
+  - admin: Added new buildmode (DROP). Left click to drop objects safely, rightclick
+      to drop destructively. Not compatible with turfs.
+  Verkister:
+  - bugfix: Fixed empty hand interactions not working on borgs with forced buckling.
+2024-05-07:
+  tacoguy7765093:
+  - bugfix: Superpose LoneHome not spawning
+  - maptweak: Mechfab ship access, plasteel given, 1 of 2 emags removed.
+  - maptweak: Mechfab ship cryopod now teleports you out of the round
+  - maptweak: Cultist ship power works now
+  - maptweak: Space Bar space POI airlock maptweaked
+  - maptweak: maptweaked the USSP that crashes the server
+  - bugfix: Downtown gateway slab IDs not opening doors
+  - maptweak: Thor Junker Shuttle extra engine console removed
+2024-05-10:
+  Upstream:
+  - rscadd: Adds inhand sprites for rubber duckies
+  - rscadd: Added customizable fluff licenses
+2024-05-11:
+  FluffMedic:
+  - qol: trash piles can be walked over
+2024-05-13:
+  FluffMedic:
+  - qol: Made the rad collectors engi access required instead of Chief engi
+  Irixue:
+  - rscadd: Colorable luna moth wings
+  MeepleMuncher:
+  - rscadd: Red, green, and purple dragon plushies.
+  StrangeWeirdKitten:
+  - rscadd: Protean's rigsuit control will mimic assimilated rigsuits
+  tacoguy7765093:
+  - bugfix: Known OM planets show up in helm now.
+  - maptweak: Stargazer modified for easier fuel canister swapping.
+  - sound: Planet arrival sound now plays for planets too.
+  - maptweak: VR ThirdLife bar dorms have bathrooms
+  - maptweak: Access changes in VR thirdlife bar
+  - sound: Removed the wailing souls from the Thirdlife bar
+  - qol: Vac-Pacs are now belt and back equippable.
+  - bugfix: Vap-Pac is less proper. Same with the generic headset.
+  - maptweak: Escape pods should actually allow people to enter them now.
+2024-05-14:
+  Raeschen:
+  - balance: Size bracelets capped to 200 when emagging
+2024-05-15:
+  FluffMedic:
+  - bugfix: dream slimes giving radioactive material instead of their intended
+  - bugfix: Nightmare slimes not killing you
+  - qol: Made nightmare slimes more forgiving
+  - bugfix: Removed some lines of obsolete code
+  Raeschen:
+  - balance: Buff red-eye kin energy gain in dark from 0.1 to 0.5
+  - balance: Buff orange-eye kin energy gain in dark from 0.25 to 0.5
+  TheCaramelion:
+  - rscadd: Churros as a food item
+  - bugfix: Fixes ZAS debug overlays not properly overlaying over everything they
+      should
+  - code_imp: Some minor weirdness fixes to logic.
+  - qol: Makes gas overlays marginally less laggy by caching icons and using effects
+      instead of atoms to render
+  - code_imp: Turns get_zone_neighbors into a define
+  - rscadd: ATMOS_CANPASS_TURF
+2024-05-16:
+  Kashargul:
+  - rscadd: cdn testserver script from tg
+  - qol: sorts our verbs
+  - bugfix: fixes ghostjump
+  - bugfix: fixes runtime in cmd_admin_z_narrate
+  - code_imp: Porting server maint subsystem from TG to remove nulls from important
+      lists
+  - rscadd: Ping to the panel
+  ReoDaProtovali:
+  - rscadd: Unlock succubus bite
+  TheCaramelion:
+  - bugfix: Gas overlays get removed when there's not enough gas
+  - bugfix: ZAS zones not separating properly when airlocks open/close
+  cadyn:
+  - code_imp: adds proc profile_memory to be able to diagnose where memory is being
+      used
+  - bugfix: several memory optimizations
+  - bugfix: try to fix planetary lighting issues again
+2024-05-17:
+  FluffMedic:
+  - rscadd: The asteroid gateway now has a different and functioning portal puzzle.
+      Filled in some blank spaces a smidge.
+  - bugfix: Two eclipse sprites no longer go invisible in one direction.
+  SlaysInCode:
+  - rscadd: One SP-Pod.
+  Verkister:
+  - bugfix: Fixed reclaimed nutrition pile gains not scaling with absorbing vorgan's
+      nutrition percent settings.
+2024-05-18:
+  Kashargul:
+  - bugfix: fixed an exploit to freely gain infinite supermatter sheets
+2024-05-19:
+  MeepleMuncher:
+  - rscadd: 4 eastern dragon plushies
+  - rscadd: Dragon plushies to the vendor
+2024-05-21:
+  tacoguy7765093:
+  - maptweak: Crash fix in the DJ inn
+2024-05-22:
+  FluffMedic:
+  - bugfix: laser staff used the wrong projectile path
+2024-05-24:
+  FluffMedic:
+  - bugfix: fixed medi-sci maints
+  - maptweak: some valley POIs are a smidge diffrent
+  tacoguy7765093:
+  - rscadd: Added a new latex marking for digi paws
+2024-05-28:
+  Verkister:
+  - bugfix: Fixed unathi size 1 bellysprites not working.
+2024-05-30:
+  TheCaramelion:
+  - bugfix: Fixed slug glue breaking agresive mobs AI

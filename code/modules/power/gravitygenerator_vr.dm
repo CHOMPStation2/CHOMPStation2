@@ -111,7 +111,7 @@ GLOBAL_LIST_EMPTY(gravity_generators)
 /obj/machinery/gravity_generator/main
 	icon_state = "on_8"
 	idle_power_usage = 0
-	active_power_usage = 3000
+	active_power_usage = 30000 // CHOMPEdit - Gravity consumption change
 	power_channel = ENVIRON
 	sprite_number = 8
 	use_power = USE_POWER_IDLE
@@ -205,16 +205,16 @@ GLOBAL_LIST_EMPTY(gravity_generators)
 	switch(broken_state)
 		if(GRAV_NEEDS_SCREWDRIVER)
 			if(I.has_tool_quality(TOOL_SCREWDRIVER))
-				to_chat(user, "<span class='notice'>You secure the screws of the framework.</span>")
+				to_chat(user, span_notice("You secure the screws of the framework."))
 				playsound(src, I.usesound, 75, 1)
 				broken_state++
 				update_icon()
 				return
 		if(GRAV_NEEDS_WELDING)
 			if(I.has_tool_quality(TOOL_WELDER))
-				var/obj/item/weapon/weldingtool/W = I.get_welder()
+				var/obj/item/weldingtool/W = I.get_welder()
 				if(W.remove_fuel(0,user))
-					to_chat(user, "<span class='notice'>You mend the damaged framework.</span>")
+					to_chat(user, span_notice("You mend the damaged framework."))
 					broken_state++
 					update_icon()
 				return
@@ -223,16 +223,16 @@ GLOBAL_LIST_EMPTY(gravity_generators)
 				var/obj/item/stack/material/plasteel/PS = I
 				if(PS.get_amount() >= 10)
 					PS.use(10)
-					to_chat(user, "<span class='notice'>You add the plating to the framework.</span>")
+					to_chat(user, span_notice("You add the plating to the framework."))
 					playsound(src, 'sound/machines/click.ogg', 75, 1)
 					broken_state++
 					update_icon()
 				else
-					to_chat(user, "<span class='warning'>You need 10 sheets of plasteel!</span>")
+					to_chat(user, span_warning("You need 10 sheets of plasteel!"))
 				return
 		if(GRAV_NEEDS_WRENCH)
 			if(I.has_tool_quality(TOOL_WRENCH))
-				to_chat(user, "<span class='notice'>You secure the plating to the framework.</span>")
+				to_chat(user, span_notice("You secure the plating to the framework."))
 				playsound(src, I.usesound, 75, 1)
 				set_fix()
 				return
@@ -319,7 +319,7 @@ GLOBAL_LIST_EMPTY(gravity_generators)
 	if(SSticker.IsRoundInProgress())
 		if(new_state) // If we turned on and the game is live.
 			if(gravity_in_level() == FALSE)
-				alert = TRUE
+				// alert = TRUE CHOMPEdit - No alarm! Gravity is fine :)
 				investigate_log("was brought online and is now producing gravity for this level.", "gravity")
 				message_admins("The gravity generator was brought online [ADMIN_JMP(src)]")
 		else
@@ -393,7 +393,7 @@ GLOBAL_LIST_EMPTY(gravity_generators)
 	for(var/mob/M as anything in player_list)
 		if(!(M.z in levels))
 			continue
-		M.update_gravity(M.mob_has_gravity())
+		M.update_gravity(M.mob_get_gravity())
 		shake_camera(M, 15, 1)
 		M.playsound_local(src, null, 50, 1, 0.5, S = alert_sound)
 
@@ -436,8 +436,8 @@ GLOBAL_LIST_EMPTY(gravity_generators)
 			areas += A
 
 // Misc
-/*
-/obj/item/paper/guides/jobs/engi/gravity_gen
+// CHOMPEdit - Taking out the comments on this. It will be needed.
+/obj/item/paper/guide/gravity/
 	name = "paper- 'Generate your own gravity!'"
 	info = {"<h1>Gravity Generator Instructions For Dummies</h1>
 	<p>Surprisingly, gravity isn't that hard to make! All you have to do is inject deadly radioactive minerals into a ball of
@@ -451,7 +451,7 @@ GLOBAL_LIST_EMPTY(gravity_generators)
 	<li>Mend the damaged framework with a welding tool.</li>
 	<li>Add additional plasteel plating.</li>
 	<li>Secure the additional plating with a wrench.</li></ol>"}
-*/
+
 #undef POWER_IDLE
 #undef POWER_UP
 #undef POWER_DOWN

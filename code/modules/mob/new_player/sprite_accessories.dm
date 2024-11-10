@@ -17,6 +17,14 @@
 	conversion in savefile.dm
 */
 
+/**
+ * Color channel names; this is used in things like character setup, editors, etc.
+ *
+ * * The length of this is also used to sanitize color channel list lengths. This should never be longer than the
+ *   maximum number of color channels possible across all sprite accessories.
+ */
+GLOBAL_LIST_INIT(fancy_sprite_accessory_color_channel_names, list("Primary", "Secondary", "Tertiary", "Quaternary"))
+
 /datum/sprite_accessory
 
 	var/icon			// the icon file the accessory is located in
@@ -43,6 +51,12 @@
 	var/em_block = FALSE
 
 	var/list/hide_body_parts = list() //Uses organ tag defines. Bodyparts in this list do not have their icons rendered, allowing for more spriter freedom when doing taur/digitigrade stuff.
+
+/**
+ * Gets the number of color channels we have.
+ */
+/datum/sprite_accessory/proc/get_color_channel_count()
+	return do_colouration ? 1 : 0
 
 /*
 ////////////////////////////
@@ -666,6 +680,21 @@
 /datum/sprite_accessory/hair/glossy
 	name = "Glossy"
 	icon_state = "hair_glossy"
+	flags = HAIR_TIEABLE
+
+/datum/sprite_accessory/hair/gloomyshort
+	name = "Gloomy Bangs, Short"
+	icon_state = "hair_gloomy_short"
+	flags = HAIR_TIEABLE
+
+/datum/sprite_accessory/hair/gloomymedium
+	name = "Gloomy Bangs, Medium"
+	icon_state = "hair_gloomy_medium"
+	flags = HAIR_TIEABLE
+
+/datum/sprite_accessory/hair/gloomylong
+	name = "Gloomy Bangs, Long"
+	icon_state = "hair_gloomy_long"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/halfbang
@@ -3636,7 +3665,7 @@ shaved
 	species_allowed = list(SPECIES_TESHARI)
 
 /datum/sprite_accessory/marking/bandage/r_foot/r_foot3
-	name = "Bandage, Rufgt Foot 3"
+	name = "Bandage, Right Foot 3"
 	icon_state = "bandage3"
 
 /datum/sprite_accessory/marking/bandage/r_foot/r_foot3/teshari
@@ -3715,3 +3744,9 @@ shaved
 	icon_state = "Voxscales"
 	color_blend_mode = ICON_MULTIPLY
 	body_parts = list(BP_R_ARM,BP_L_ARM,BP_R_HAND,BP_L_HAND,BP_R_LEG,BP_L_LEG,BP_R_FOOT,BP_L_FOOT)
+
+/datum/sprite_accessory/marking/vox/dinomuzzle
+	name = "Vox Dinosaur Muzzle"
+	icon_state = "vox_muzzle"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_HEAD)

@@ -2,6 +2,7 @@
 	var/obj/effect/overmap/visitable/ship/linked
 	var/list/viewers
 	var/extra_view = 0
+	var/map_view_used = FALSE
 
 /datum/tgui_module/ship/New()
 	. = ..()
@@ -17,6 +18,24 @@
 				unlook(M)
 	. = ..()
 
+/datum/tgui_module/ship/tgui_interact(mob/user, datum/tgui/ui, datum/tgui/parent_ui)
+	ui = SStgui.try_update_ui(user, src, ui)
+	if(!ui)
+		if(linked)
+			user.client.register_map_obj(linked.cam_screen)
+			for(var/plane in linked.cam_plane_masters)
+				user.client.register_map_obj(plane)
+			user.client.register_map_obj(linked.cam_background)
+			linked.update_screen()
+
+		ui = new(user, src, tgui_id, name, parent_ui)
+		ui.open()
+
+/datum/tgui_module/ship/tgui_data(mob/user, datum/tgui/ui, datum/tgui_state/state)
+	var/list/data = ..()
+	data["mapRef"] = linked?.map_name
+	return data
+
 /datum/tgui_module/ship/tgui_status(mob/user)
 	. = ..()
 	if(. > STATUS_DISABLED)
@@ -29,6 +48,9 @@
 	. = ..()
 	user.unset_machine()
 	unlook(user)
+
+	// Unregister map objects
+	user.client?.clear_map(linked?.map_name)
 
 /datum/tgui_module/ship/proc/sync_linked()
 	var/obj/effect/overmap/visitable/ship/sector = get_overmap_sector(get_z(tgui_host()))
@@ -55,13 +77,18 @@
 		user.set_machine(src)
 		user.reset_view(linked)
 	user.set_viewsize(world.view + extra_view)
-	GLOB.moved_event.register(user, src, /datum/tgui_module/ship/proc/unlook)
+	user.AddComponent(/datum/component/recursive_move)
+	if(!map_view_used)
+		RegisterSignal(user, COMSIG_OBSERVER_MOVED, /datum/tgui_module/ship/proc/unlook)
+		map_view_used = TRUE
 	LAZYDISTINCTADD(viewers, WEAKREF(user))
 
 /datum/tgui_module/ship/proc/unlook(var/mob/user)
 	user.reset_view()
 	user.set_viewsize() // reset to default
-	GLOB.moved_event.unregister(user, src, /datum/tgui_module/ship/proc/unlook)
+	if(map_view_used)
+		UnregisterSignal(user, COMSIG_OBSERVER_MOVED)
+		map_view_used = FALSE
 	LAZYREMOVE(viewers, WEAKREF(user))
 
 /datum/tgui_module/ship/proc/viewing_overmap(mob/user)
@@ -89,7 +116,7 @@
 
 		// NTOS Path
 		if(!sync_linked())
-			to_chat(user, "<span class='warning'>You don't appear to be on a spaceship...</span>")
+			to_chat(user, span_warning("You don't appear to be on a spaceship..."))
 			if(ui)
 				ui.close(can_be_suspended = FALSE)
 			if(ntos)
@@ -313,15 +340,15 @@
 				sec_name = "Sector #[known_sectors.len]"
 			R.fields["name"] = sec_name
 			if(sec_name in known_sectors)
-				to_chat(usr, "<span class='warning'>Sector with that name already exists, please input a different name.</span>")
+				to_chat(usr, span_warning("Sector with that name already exists, please input a different name."))
 				return TRUE
 			switch(params["add"])
 				if("current")
 					R.fields["x"] = linked.x
 					R.fields["y"] = linked.y
 				if("new")
-					var/newx = tgui_input_number(usr, "Input new entry x coordinate", "Coordinate input", linked.x)
-					var/newy = tgui_input_number(usr, "Input new entry y coordinate", "Coordinate input", linked.y)
+					var/newx = tgui_input_number(usr, "Input new entry x coordinate", "Coordinate input", linked.x, world.maxx, 1)
+					var/newy = tgui_input_number(usr, "Input new entry y coordinate", "Coordinate input", linked.y, world.maxy, 1)
 					R.fields["x"] = CLAMP(newx, 1, world.maxx)
 					R.fields["y"] = CLAMP(newy, 1, world.maxy)
 			known_sectors[sec_name] = R
@@ -336,12 +363,12 @@
 
 		if("setcoord")
 			if(params["setx"])
-				var/newx = tgui_input_number(usr, "Input new destiniation x coordinate", "Coordinate input", dx)
+				var/newx = tgui_input_number(usr, "Input new destiniation x coordinate", "Coordinate input", dx, world.maxx, 1)
 				if(newx)
 					dx = CLAMP(newx, 1, world.maxx)
 
 			if(params["sety"])
-				var/newy = tgui_input_number(usr, "Input new destiniation y coordinate", "Coordinate input", dy)
+				var/newy = tgui_input_number(usr, "Input new destiniation y coordinate", "Coordinate input", dy, world.maxy, 1)
 				if(newy)
 					dy = CLAMP(newy, 1, world.maxy)
 			. = TRUE
@@ -357,7 +384,7 @@
 			. = TRUE
 
 		if("speedlimit")
-			var/newlimit = tgui_input_number(usr, "Input new speed limit for autopilot (0 to brake)", "Autopilot speed limit", speedlimit*1000)
+			var/newlimit = tgui_input_number(usr, "Input new speed limit for autopilot (0 to brake)", "Autopilot speed limit", speedlimit*1000, 100000)
 			if(newlimit)
 				speedlimit = CLAMP(newlimit/1000, 0, 100)
 			. = TRUE
@@ -438,7 +465,7 @@
 		/* END ENGINES */
 		/* SENSORS */
 		if("range")
-			var/nrange = tgui_input_number(usr, "Set new sensors range", "Sensor range", sensors.range)
+			var/nrange = tgui_input_number(usr, "Set new sensors range", "Sensor range", sensors.range, world.view, round_value = FALSE)
 			if(nrange)
 				sensors.set_range(CLAMP(nrange, 1, world.view))
 			. = TRUE

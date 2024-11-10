@@ -47,37 +47,36 @@
 		data["loc_y"] = usr.y
 		data["loc_z"] = usr.z
 
-	data["path"] = path;
 	data["use_custom_ai"] = use_custom_ai
+	if(new_path)
+		data["path"] = path;
+		if(path)
+			var/mob/M = new path()
+			if(M)
+				data["path_name"] = M.name
+				data["desc"] = M.desc
+				data["flavor_text"] = M.flavor_text
+				if(istype(M, /mob/living))
+					var/mob/living/L = M
 
+					// AI Stuff
+					ai_type = (L.ai_holder_type ? L.ai_holder_type : /datum/ai_holder/simple_mob/inert)
+					faction = (L.faction ? L.faction : "neutral")
+					intent  = (L.a_intent ? L.a_intent : I_HELP)
+					new_path = FALSE
 
-	if(path)
-		var/mob/M = new path()
-		if(M)
-			data["default_path_name"] = M.name
-			data["default_desc"] = M.desc
-			data["default_flavor_text"] = M.flavor_text
-			if(new_path && istype(M, /mob/living))
-				var/mob/living/L = M
-
-				// AI Stuff
-				ai_type = (L.ai_holder_type ? L.ai_holder_type : /datum/ai_holder/simple_mob/inert)
-				faction = (L.faction ? L.faction : "neutral")
-				intent  = (L.a_intent ? L.a_intent : I_HELP)
-				new_path = FALSE
-
-				data["max_health"] = L.maxHealth
-				data["health"] = L.health
-				if(istype(L, /mob/living/simple_mob))
-					var/mob/living/simple_mob/S = L
-					data["melee_damage_lower"] = S.melee_damage_lower ? S.melee_damage_lower : 0
-					data["melee_damage_upper"] = S.melee_damage_upper ? S.melee_damage_upper : 0
-					qdel(S)
-				qdel(L)
-		qdel(M)
-		data["ai_type"] = ai_type
-		data["faction"] = faction
-		data["intent"]	= intent
+					data["max_health"] = L.maxHealth
+					data["health"] = L.health
+					if(istype(L, /mob/living/simple_mob))
+						var/mob/living/simple_mob/S = L
+						data["melee_damage_lower"] = S.melee_damage_lower ? S.melee_damage_lower : 0
+						data["melee_damage_upper"] = S.melee_damage_upper ? S.melee_damage_upper : 0
+						qdel(S)
+					qdel(L)
+			qdel(M)
+	data["ai_type"] = ai_type
+	data["faction"] = faction
+	data["intent"]	= intent
 
 
 	return data
@@ -125,12 +124,12 @@
 			var/z = params["z"]
 
 			if(!name)
-				to_chat(usr, "<span class='warning'>Name cannot be empty.</span>")
+				to_chat(usr, span_warning("Name cannot be empty."))
 				return FALSE
 
 			var/turf/T = locate(x, y, z)
 			if(!T)
-				to_chat(usr, "<span class='warning'>Those coordinates are outside the boundaries of the map.</span>")
+				to_chat(usr, span_warning("Those coordinates are outside the boundaries of the map."))
 				return FALSE
 
 			for(var/i = 0, i < amount, i++)
@@ -181,7 +180,7 @@
 						M.size_multiplier = size_mul
 						M.update_icon()
 					else
-						to_chat(usr, "<span class='warning'>Size Multiplier not applied: ([size_mul]) is not a valid input.</span>")
+						to_chat(usr, span_warning("Size Multiplier not applied: ([size_mul]) is not a valid input."))
 
 					M.forceMove(T)
 
@@ -194,7 +193,7 @@
 	qdel(src)
 
 /client/proc/eventkit_open_mob_spawner()
-	set category = "Fun" //ChompEDIT - "EventKit" --> "Fun", less tab spam
+	set category = "Fun.Event Kit"
 	set name = "Open Mob Spawner"
 	set desc = "Opens an advanced version of the mob spawner."
 

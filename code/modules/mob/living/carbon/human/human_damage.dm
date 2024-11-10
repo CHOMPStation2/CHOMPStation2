@@ -16,6 +16,8 @@
 		total_burn  += O.burn_dam
 
 	// CHOMPEdit Start: Pain/etc calculations, but more efficient:tm: - this should work for literally anything that applies to health. Far better than slapping emote("pain") everywhere like scream does.
+	if(health > getMaxHealth()) //Overhealth
+		health = getMaxHealth()
 	var/initialhealth = health // CHOMPEdit: Getting our health before this check
 	health = getMaxHealth() - getOxyLoss() - getToxLoss() - getCloneLoss() - total_burn - total_brute
 	if(can_feel_pain() || ((isSynthetic() && synth_cosmetic_pain))) // Are we capable of feeling pain?
@@ -26,7 +28,7 @@
 			switch(damage)
 				if(-INFINITY to 0)
 					//TODO: fix husking
-					if( ((getMaxHealth() - total_burn) < config.health_threshold_dead * huskmodifier) && stat == DEAD)
+					if( ((getMaxHealth() - total_burn) < CONFIG_GET(number/health_threshold_dead) * huskmodifier) && stat == DEAD) // CHOMPEdit
 						ChangeToHusk()
 					return
 				if(1 to 25)
@@ -41,7 +43,7 @@
 	// CHOMPEdit End: Pain
 
 	//TODO: fix husking
-	if( ((getMaxHealth() - total_burn) < config.health_threshold_dead * huskmodifier) && stat == DEAD)
+	if( ((getMaxHealth() - total_burn) < CONFIG_GET(number/health_threshold_dead) * huskmodifier) && stat == DEAD)
 		ChangeToHusk()
 	return
 
@@ -240,7 +242,7 @@
 	if(HULK in mutations)	return
 	// Notify our AI if they can now control the suit.
 	if(wearing_rig && !stat && paralysis < amount) //We are passing out right this second.
-		wearing_rig.notify_ai("<span class='danger'>Warning: user consciousness failure. Mobility control passed to integrated intelligence system.</span>")
+		wearing_rig.notify_ai(span_danger("Warning: user consciousness failure. Mobility control passed to integrated intelligence system."))
 	..()
 
 /mob/living/carbon/human/proc/Stasis(amount)
@@ -292,21 +294,21 @@
 			if (candidates.len)
 				var/obj/item/organ/external/O = pick(candidates)
 				O.mutate()
-				to_chat(src, "<span class='notice'>Something is not right with your [O.name]...</span>")
+				to_chat(src, span_notice("Something is not right with your [O.name]..."))
 				return
 	else
 		if (prob(heal_prob))
 			for (var/obj/item/organ/external/O in organs)
 				if (O.status & ORGAN_MUTATED)
 					O.unmutate()
-					to_chat(src, "<span class='notice'>Your [O.name] is shaped normally again.</span>")
+					to_chat(src, span_notice("Your [O.name] is shaped normally again."))
 					return
 
 	if (getCloneLoss() < 1)
 		for (var/obj/item/organ/external/O in organs)
 			if (O.status & ORGAN_MUTATED)
 				O.unmutate()
-				to_chat(src, "<span class='notice'>Your [O.name] is shaped normally again.</span>")
+				to_chat(src, span_notice("Your [O.name] is shaped normally again."))
 	BITSET(hud_updateflag, HEALTH_HUD)
 
 // Defined here solely to take species flags into account without having to recast at mob/living level.
@@ -575,7 +577,7 @@ This function restores all organs.
 	if((damagetype != BRUTE) && (damagetype != BURN))
 		if(damagetype == HALLOSS)
 			if((damage > 25 && prob(20)) || (damage > 50 && prob(60)))
-				if(organ && organ.organ_can_feel_pain() && !isbelly(loc) && !istype(loc, /obj/item/device/dogborg/sleeper)) //VOREStation Add
+				if(organ && organ.organ_can_feel_pain() && !isbelly(loc) && !istype(loc, /obj/item/dogborg/sleeper)) //VOREStation Add
 					emote("scream")
 		..(damage, damagetype, def_zone, blocked, soaked)
 		return 1

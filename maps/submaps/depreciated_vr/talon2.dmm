@@ -8,8 +8,7 @@
 	},
 /obj/machinery/alarm/talon{
 	dir = 8;
-	pixel_x = 22;
-	pixel_y = 0
+	pixel_x = 22
 	},
 /turf/simulated/floor/carpet,
 /area/space)
@@ -19,17 +18,14 @@
 	},
 /obj/machinery/alarm/talon{
 	dir = 8;
-	pixel_x = 22;
-	pixel_y = 0
+	pixel_x = 22
 	},
 /turf/simulated/floor/carpet,
 /area/space)
 "aj" = (
 /obj/structure/railing,
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1";
-	pixel_y = 0
+	dir = 8
 	},
 /turf/simulated/open,
 /area/space)
@@ -40,8 +36,7 @@
 /obj/machinery/portable_atmospherics/powered/scrubber,
 /obj/machinery/alarm/talon{
 	dir = 8;
-	pixel_x = 22;
-	pixel_y = 0
+	pixel_x = 22
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/space)
@@ -53,8 +48,7 @@
 	},
 /obj/machinery/alarm/talon{
 	dir = 8;
-	pixel_x = 22;
-	pixel_y = 0
+	pixel_x = 22
 	},
 /turf/simulated/floor/tiled/eris/steel,
 /area/space)
@@ -74,8 +68,7 @@
 /area/space)
 "aq" = (
 /obj/machinery/atmospherics/portables_connector/aux{
-	dir = 1;
-	icon_state = "map_connector-aux"
+	dir = 1
 	},
 /obj/machinery/portable_atmospherics/canister/air/airlock,
 /turf/simulated/floor/plating/eris/under,
@@ -104,15 +97,13 @@
 /area/space)
 "az" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/bluedouble,
+/obj/item/bedsheet/bluedouble,
 /turf/simulated/floor/carpet/blucarpet,
 /area/space)
 "aA" = (
 /obj/structure/table/woodentable,
 /obj/machinery/firealarm{
-	dir = 2;
 	layer = 3.3;
-	pixel_x = 0;
 	pixel_y = 26
 	},
 /turf/simulated/floor/carpet/blucarpet,
@@ -124,9 +115,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1";
-	pixel_y = 0
+	dir = 8
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/eris/steel,
@@ -163,8 +152,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /turf/simulated/floor/plating/eris/under,
 /area/space)
@@ -183,11 +171,12 @@
 /area/space)
 "aL" = (
 /obj/machinery/light/small{
-	dir = 1;
-	icon_state = "bulb1"
+	dir = 1
 	},
 /obj/structure/closet/secure_closet/talon_captain,
-/obj/item/device/radio/off,
+/obj/item/radio/off{
+	channels = list("Talon" = 1)
+	},
 /turf/simulated/floor/wood,
 /area/space)
 "aN" = (
@@ -199,8 +188,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atm{
-	pixel_x = 32;
-	step_x = 0
+	pixel_x = 32
 	},
 /turf/simulated/floor/tiled/eris/steel,
 /area/space)
@@ -226,9 +214,7 @@
 "aP" = (
 /obj/machinery/alarm/talon{
 	dir = 4;
-	icon_state = "alarm0";
-	pixel_x = -22;
-	pixel_y = 0
+	pixel_x = -22
 	},
 /obj/structure/table/standard,
 /turf/simulated/floor/wood,
@@ -241,8 +227,7 @@
 /area/space)
 "aS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9;
-	pixel_y = 0
+	dir = 9
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -260,8 +245,7 @@
 /area/space)
 "aU" = (
 /obj/machinery/vending/dinnerware{
-	dir = 1;
-	icon_state = "dinnerware"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/eris/steel/gray_perforated,
 /area/space)
@@ -280,8 +264,7 @@
 /area/space)
 "aX" = (
 /obj/structure/bed/chair/bay/chair{
-	dir = 1;
-	icon_state = "bay_chair_preview"
+	dir = 1
 	},
 /turf/simulated/floor/wood,
 /area/space)
@@ -298,15 +281,12 @@
 	},
 /obj/machinery/alarm/talon{
 	dir = 4;
-	icon_state = "alarm0";
-	pixel_x = -22;
-	pixel_y = 0
+	pixel_x = -22
 	},
 /obj/structure/table/standard,
 /obj/structure/closet/hydrant{
-	pixel_x = 0;
 	pixel_y = 32;
-	starts_with = list(/obj/item/clothing/suit/fire/firefighter = 2, /obj/item/clothing/mask/gas = 2, /obj/item/device/flashlight = 2, /obj/item/weapon/tank/oxygen/red = 2, /obj/item/weapon/extinguisher = 2, /obj/item/clothing/head/hardhat/red = 2)
+	starts_with = list(/obj/item/clothing/suit/fire/firefighter = 2, /obj/item/clothing/mask/gas = 2, /obj/item/flashlight = 2, /obj/item/tank/oxygen/red = 2, /obj/item/extinguisher = 2, /obj/item/clothing/head/hardhat/red = 2)
 	},
 /turf/simulated/floor/tiled/eris/dark/violetcorener,
 /area/space)
@@ -338,8 +318,7 @@
 	dir = 6
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -356,8 +335,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -368,7 +346,7 @@
 /obj/structure/table/steel,
 /obj/structure/closet/hydrant{
 	pixel_x = -32;
-	starts_with = list(/obj/item/clothing/suit/fire/firefighter = 2, /obj/item/clothing/mask/gas = 2, /obj/item/device/flashlight = 2, /obj/item/weapon/tank/oxygen/red = 2, /obj/item/weapon/extinguisher = 2, /obj/item/clothing/head/hardhat/red = 2)
+	starts_with = list(/obj/item/clothing/suit/fire/firefighter = 2, /obj/item/clothing/mask/gas = 2, /obj/item/flashlight = 2, /obj/item/tank/oxygen/red = 2, /obj/item/extinguisher = 2, /obj/item/clothing/head/hardhat/red = 2)
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/space)
@@ -377,7 +355,9 @@
 	dir = 1
 	},
 /obj/structure/closet/secure_closet/talon_engineer,
-/obj/item/device/radio/off,
+/obj/item/radio/off{
+	channels = list("Talon" = 1)
+	},
 /turf/simulated/floor/wood,
 /area/space)
 "bg" = (
@@ -385,7 +365,9 @@
 	dir = 1
 	},
 /obj/structure/closet/secure_closet/talon_pilot,
-/obj/item/device/radio/off,
+/obj/item/radio/off{
+	channels = list("Talon" = 1)
+	},
 /turf/simulated/floor/wood,
 /area/space)
 "bh" = (
@@ -406,8 +388,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/door/firedoor/glass/talon,
 /obj/machinery/door/airlock/command{
@@ -428,8 +409,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -530,8 +510,7 @@
 /area/space)
 "bu" = (
 /obj/machinery/light/small{
-	dir = 8;
-	pixel_x = 0
+	dir = 8
 	},
 /turf/simulated/floor/wood,
 /area/space)
@@ -549,7 +528,9 @@
 	dir = 1
 	},
 /obj/structure/closet/secure_closet/talon_doctor,
-/obj/item/device/radio/off,
+/obj/item/radio/off{
+	channels = list("Talon" = 1)
+	},
 /turf/simulated/floor/wood,
 /area/space)
 "bx" = (
@@ -557,14 +538,12 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc/talon{
-	cell_type = /obj/item/weapon/cell/apc;
 	dir = 8;
 	name = "west bump";
 	pixel_x = -28
 	},
 /obj/structure/bed/chair/bay/chair{
-	dir = 1;
-	icon_state = "bay_chair_preview"
+	dir = 1
 	},
 /turf/simulated/floor/wood,
 /area/space)
@@ -573,7 +552,9 @@
 	dir = 1
 	},
 /obj/structure/closet/secure_closet/talon_guard,
-/obj/item/device/radio/off,
+/obj/item/radio/off{
+	channels = list("Talon" = 1)
+	},
 /turf/simulated/floor/wood,
 /area/space)
 "bz" = (
@@ -592,7 +573,6 @@
 /area/space)
 "bA" = (
 /obj/machinery/power/apc/talon{
-	cell_type = /obj/item/weapon/cell/apc;
 	dir = 8;
 	name = "west bump";
 	pixel_x = -28
@@ -601,15 +581,13 @@
 	icon_state = "0-4"
 	},
 /obj/structure/table/standard,
-/obj/item/weapon/paper/talon_shields,
+/obj/item/paper/talon_shields,
 /turf/simulated/floor/tiled/eris/dark/violetcorener,
 /area/space)
 "bB" = (
 /obj/machinery/alarm/talon{
 	dir = 4;
-	icon_state = "alarm0";
-	pixel_x = -22;
-	pixel_y = 0
+	pixel_x = -22
 	},
 /turf/simulated/floor/wood,
 /area/space)
@@ -629,8 +607,7 @@
 /area/space)
 "bF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -640,28 +617,9 @@
 	pixel_y = -24
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-s"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/eris/steel,
-<<<<<<< HEAD:maps/offmap_vr/talon/talon2.dmm
-/area/talon/decktwo/central_hallway)
-||||||| parent of 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/offmap_vr/talon/talon2.dmm
-/area/talon/decktwo/central_hallway)
-"bG" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/catwalk,
-/obj/machinery/alarm/talon{
-	dir = 8;
-	pixel_x = 22
-	},
-/turf/simulated/floor/plating/eris/under,
-/area/talon/maintenance/decktwo_port)
-=======
 /area/space)
 "bG" = (
 /obj/structure/cable/green{
@@ -676,7 +634,6 @@
 	},
 /turf/simulated/floor/plating/eris/under,
 /area/space)
->>>>>>> 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/submaps/depreciated_vr/talon2.dmm
 "bH" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -704,27 +661,9 @@
 	},
 /obj/structure/table/woodentable,
 /obj/item/modular_computer/tablet/preset/custom_loadout/advanced,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen,
+/obj/item/paper_bin,
+/obj/item/pen,
 /turf/simulated/floor/carpet/blucarpet,
-<<<<<<< HEAD:maps/offmap_vr/talon/talon2.dmm
-/area/talon/decktwo/cap_room)
-||||||| parent of 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/offmap_vr/talon/talon2.dmm
-/area/talon/decktwo/cap_room)
-"bL" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/catwalk,
-/obj/machinery/alarm/talon{
-	dir = 4;
-	pixel_x = -24
-	},
-/turf/simulated/floor/plating/eris/under,
-/area/talon/maintenance/decktwo_starboard)
-=======
 /area/space)
 "bL" = (
 /obj/structure/cable/green{
@@ -739,36 +678,9 @@
 	},
 /turf/simulated/floor/plating/eris/under,
 /area/space)
->>>>>>> 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/submaps/depreciated_vr/talon2.dmm
 "bM" = (
 /obj/item/modular_computer/console/preset/talon,
 /turf/simulated/floor/carpet/blucarpet,
-<<<<<<< HEAD:maps/offmap_vr/talon/talon2.dmm
-/area/talon/decktwo/cap_room)
-||||||| parent of 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/offmap_vr/talon/talon2.dmm
-/area/talon/decktwo/cap_room)
-"bN" = (
-/obj/structure/catwalk,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/alarm/talon{
-	dir = 8;
-	pixel_x = 22
-	},
-/turf/simulated/floor/plating/eris/under,
-/area/talon/maintenance/decktwo_port)
-"bO" = (
-/obj/structure/catwalk,
-/obj/machinery/alarm/talon{
-	dir = 4;
-	pixel_x = -24
-	},
-/turf/simulated/floor/plating/eris/under,
-/area/talon/maintenance/decktwo_starboard)
-=======
 /area/space)
 "bN" = (
 /obj/structure/catwalk,
@@ -791,11 +703,9 @@
 	},
 /turf/simulated/floor/plating/eris/under,
 /area/space)
->>>>>>> 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/submaps/depreciated_vr/talon2.dmm
 "bP" = (
 /obj/structure/extinguisher_cabinet{
 	dir = 8;
-	icon_state = "extinguisher_closed";
 	pixel_x = 30
 	},
 /obj/structure/disposalpipe/segment{
@@ -809,20 +719,6 @@
 	dir = 1
 	},
 /turf/simulated/floor/carpet/blucarpet,
-<<<<<<< HEAD:maps/offmap_vr/talon/talon2.dmm
-/area/talon/decktwo/cap_room)
-||||||| parent of 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/offmap_vr/talon/talon2.dmm
-/area/talon/decktwo/cap_room)
-"bS" = (
-/obj/structure/catwalk,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/turf/simulated/floor/plating/eris/under,
-/area/talon/maintenance/decktwo_port)
-=======
 /area/space)
 "bS" = (
 /obj/structure/catwalk,
@@ -833,33 +729,12 @@
 	},
 /turf/simulated/floor/plating/eris/under,
 /area/space)
->>>>>>> 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/submaps/depreciated_vr/talon2.dmm
 "bT" = (
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
-	dir = 10;
-	icon_state = "intact-scrubbers"
+	dir = 10
 	},
 /obj/structure/catwalk,
 /obj/machinery/light/small{
-<<<<<<< HEAD:maps/offmap_vr/talon/talon2.dmm
-	dir = 4;
-	pixel_y = 0
-||||||| parent of 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/offmap_vr/talon/talon2.dmm
-	dir = 4
-	},
-/turf/simulated/floor/plating/eris/under,
-/area/talon/maintenance/decktwo_aft)
-"bU" = (
-/obj/machinery/atmospherics/pipe/simple/visible/supply{
-	dir = 4
-	},
-/obj/structure/catwalk,
-/obj/machinery/atmospherics/pipe/simple/visible/aux{
-	dir = 6
-	},
-/obj/machinery/alarm/talon{
-	pixel_y = 22
-=======
 	dir = 4
 	},
 /turf/simulated/floor/plating/eris/under,
@@ -874,7 +749,6 @@
 	},
 /obj/machinery/alarm/talon{
 	pixel_y = 22
->>>>>>> 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/submaps/depreciated_vr/talon2.dmm
 	},
 /turf/simulated/floor/plating/eris/under,
 /area/space)
@@ -883,8 +757,7 @@
 	icon_state = "1-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -897,51 +770,16 @@
 /area/space)
 "bW" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
 /obj/machinery/oxygen_pump{
 	dir = 1;
-	icon_state = "oxygen_tank";
 	pixel_y = -30
 	},
 /turf/simulated/floor/wood,
-<<<<<<< HEAD:maps/offmap_vr/talon/talon2.dmm
-/area/talon/decktwo/bar)
-"cb" = (
-/turf/simulated/wall/rshull,
-/area/talon/maintenance/decktwo_port)
-"cc" = (
-/turf/simulated/wall,
-/area/talon/decktwo/central_hallway)
-||||||| parent of 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/offmap_vr/talon/talon2.dmm
-/area/talon/decktwo/bar)
-"bX" = (
-/obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
-	dir = 4
-	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/catwalk,
-/obj/structure/window/reinforced,
-/obj/machinery/alarm/talon{
-	pixel_y = 22
-	},
-/turf/simulated/floor/plating/eris/under,
-/area/talon/maintenance/decktwo_aft)
-"cb" = (
-/turf/simulated/wall/rshull,
-/area/talon/maintenance/decktwo_port)
-"cc" = (
-/turf/simulated/wall,
-/area/talon/decktwo/central_hallway)
-=======
 /area/space)
 "bX" = (
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
@@ -959,7 +797,6 @@
 	},
 /turf/simulated/floor/plating/eris/under,
 /area/space)
->>>>>>> 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/submaps/depreciated_vr/talon2.dmm
 "cd" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -1038,7 +875,6 @@
 /area/space)
 "cs" = (
 /obj/structure/cable/heavyduty{
-	dir = 2;
 	icon_state = "0-4"
 	},
 /obj/structure/cable/yellow{
@@ -1055,36 +891,7 @@
 /obj/structure/railing,
 /obj/structure/lattice,
 /turf/simulated/open,
-<<<<<<< HEAD:maps/offmap_vr/talon/talon2.dmm
-/area/talon/decktwo/central_hallway)
-"cz" = (
-/obj/structure/railing,
-/turf/simulated/open,
-/area/talon/decktwo/central_hallway)
-"cA" = (
-/obj/structure/railing,
-/obj/structure/railing{
-	dir = 4;
-	icon_state = "railing0"
-	},
-/turf/simulated/open,
-/area/talon/decktwo/central_hallway)
-||||||| parent of 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/offmap_vr/talon/talon2.dmm
-/area/talon/decktwo/central_hallway)
-"cz" = (
-/obj/structure/railing,
-/turf/simulated/open,
-/area/talon/decktwo/central_hallway)
-"cA" = (
-/obj/structure/railing,
-/obj/structure/railing{
-	dir = 4
-	},
-/turf/simulated/open,
-/area/talon/decktwo/central_hallway)
-=======
 /area/space)
->>>>>>> 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/submaps/depreciated_vr/talon2.dmm
 "cB" = (
 /obj/structure/sign/deck2{
 	pixel_y = 28
@@ -1115,30 +922,25 @@
 "cP" = (
 /obj/machinery/alarm/talon{
 	dir = 4;
-	icon_state = "alarm0";
-	pixel_x = -22;
-	pixel_y = 0
+	pixel_x = -22
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/eris/steel,
 /area/space)
 "cR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
 /obj/structure/cable/green,
 /obj/machinery/power/apc/talon{
-	dir = 2;
 	name = "south bump";
 	pixel_y = -24
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-s"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/eris/steel,
 /area/space)
@@ -1158,48 +960,7 @@
 /obj/structure/table/woodentable,
 /obj/item/modular_computer/laptop/preset/custom_loadout/standard/talon/pilot,
 /turf/simulated/floor/carpet,
-<<<<<<< HEAD:maps/offmap_vr/talon/talon2.dmm
-/area/talon/decktwo/pilot_room)
-"dL" = (
-/obj/structure/cable/green{
-	icon_state = "0-2"
-	},
-/obj/machinery/power/apc/talon{
-	cell_type = /obj/item/weapon/cell/apc;
-	dir = 8;
-	name = "west bump";
-	pixel_x = -28
-	},
-/obj/structure/bed/chair/office/light{
-	dir = 1
-	},
-/turf/simulated/floor/carpet,
-/area/talon/decktwo/eng_room)
-"dM" = (
-/turf/simulated/floor/carpet,
-/area/talon/decktwo/eng_room)
-||||||| parent of 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/offmap_vr/talon/talon2.dmm
-/area/talon/decktwo/pilot_room)
-"dL" = (
-/obj/structure/cable/green{
-	icon_state = "0-2"
-	},
-/obj/machinery/power/apc/talon{
-	dir = 8;
-	name = "west bump";
-	pixel_x = -28
-	},
-/obj/structure/bed/chair/office/light{
-	dir = 1
-	},
-/turf/simulated/floor/carpet,
-/area/talon/decktwo/eng_room)
-"dM" = (
-/turf/simulated/floor/carpet,
-/area/talon/decktwo/eng_room)
-=======
 /area/space)
->>>>>>> 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/submaps/depreciated_vr/talon2.dmm
 "dQ" = (
 /obj/structure/table/steel,
 /obj/machinery/button/remote/blast_door{
@@ -1212,9 +973,7 @@
 "dT" = (
 /obj/machinery/alarm/talon{
 	dir = 4;
-	icon_state = "alarm0";
-	pixel_x = -22;
-	pixel_y = 0
+	pixel_x = -22
 	},
 /obj/effect/landmark/start{
 	name = "Talon Pilot"
@@ -1234,8 +993,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/light/small{
-	dir = 8;
-	pixel_y = 0
+	dir = 8
 	},
 /obj/machinery/suit_cycler/vintage/tengi,
 /turf/simulated/floor/wood,
@@ -1255,8 +1013,7 @@
 /area/space)
 "ef" = (
 /obj/machinery/camera/network/talon{
-	dir = 9;
-	icon_state = "camera"
+	dir = 9
 	},
 /obj/machinery/pointdefense_control{
 	id_tag = "talon_pd"
@@ -1265,8 +1022,7 @@
 /area/space)
 "eg" = (
 /obj/machinery/light/small{
-	dir = 8;
-	pixel_x = 0
+	dir = 8
 	},
 /obj/machinery/suit_cycler/vintage/tpilot,
 /turf/simulated/floor/wood,
@@ -1301,8 +1057,7 @@
 /area/space)
 "eQ" = (
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
-	dir = 10;
-	icon_state = "intact-scrubbers"
+	dir = 10
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/eris/under,
@@ -1313,7 +1068,7 @@
 /turf/simulated/floor/carpet,
 /area/space)
 "eW" = (
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/structure/bed/padded,
 /obj/machinery/firealarm{
 	dir = 4;
@@ -1331,7 +1086,7 @@
 /turf/simulated/floor/tiled/eris/steel,
 /area/space)
 "fa" = (
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/structure/bed/padded,
 /obj/machinery/firealarm{
 	dir = 8;
@@ -1363,7 +1118,6 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc/talon{
-	cell_type = /obj/item/weapon/cell/apc;
 	dir = 8;
 	name = "west bump";
 	pixel_x = -28
@@ -1386,9 +1140,7 @@
 "fr" = (
 /obj/machinery/alarm/talon{
 	dir = 4;
-	icon_state = "alarm0";
-	pixel_x = -22;
-	pixel_y = 0
+	pixel_x = -22
 	},
 /obj/effect/landmark/start{
 	name = "Talon Guard"
@@ -1429,15 +1181,13 @@
 	},
 /obj/machinery/light_switch{
 	dir = 4;
-	icon_state = "light1";
 	pixel_x = -24
 	},
 /turf/simulated/floor/wood,
 /area/space)
 "fB" = (
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /obj/machinery/suit_cycler/vintage/tmedic,
 /turf/simulated/floor/wood,
@@ -1451,8 +1201,7 @@
 /area/space)
 "fF" = (
 /obj/machinery/light/small{
-	dir = 8;
-	pixel_x = 0
+	dir = 8
 	},
 /obj/machinery/suit_cycler/vintage/tguard,
 /turf/simulated/floor/wood,
@@ -1534,8 +1283,7 @@
 /area/space)
 "go" = (
 /obj/structure/railing{
-	dir = 4;
-	icon_state = "railing0"
+	dir = 4
 	},
 /turf/simulated/open,
 /area/space)
@@ -1562,8 +1310,7 @@
 /area/space)
 "gD" = (
 /obj/structure/railing{
-	dir = 4;
-	icon_state = "railing0"
+	dir = 4
 	},
 /obj/structure/railing{
 	dir = 1
@@ -1583,8 +1330,7 @@
 /area/space)
 "gL" = (
 /obj/structure/railing{
-	dir = 4;
-	icon_state = "railing0"
+	dir = 4
 	},
 /obj/structure/lattice,
 /turf/simulated/open,
@@ -1599,29 +1345,14 @@
 	},
 /obj/effect/map_helper/airlock/sensor/int_sensor,
 /obj/machinery/atmospherics/pipe/simple/visible/aux{
-	dir = 10;
-	icon_state = "intact-aux"
+	dir = 10
 	},
 /turf/simulated/floor/plating/eris/under,
 /area/space)
 "gT" = (
 /obj/structure/railing,
 /turf/simulated/open,
-<<<<<<< HEAD:maps/offmap_vr/talon/talon2.dmm
-/area/talon/maintenance/decktwo_aft)
-"gU" = (
-/obj/structure/railing,
-/obj/structure/railing{
-	dir = 4;
-	icon_state = "railing0"
-	},
-/turf/simulated/open,
-/area/talon/maintenance/decktwo_aft)
-||||||| parent of 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/offmap_vr/talon/talon2.dmm
-/area/talon/maintenance/decktwo_aft)
-=======
 /area/space)
->>>>>>> 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/submaps/depreciated_vr/talon2.dmm
 "gV" = (
 /obj/structure/railing,
 /obj/structure/railing{
@@ -1641,8 +1372,7 @@
 	dir = 1
 	},
 /obj/structure/railing{
-	dir = 4;
-	icon_state = "railing0"
+	dir = 4
 	},
 /turf/simulated/open,
 /area/space)
@@ -1661,8 +1391,7 @@
 /area/space)
 "hz" = (
 /obj/structure/railing{
-	dir = 4;
-	icon_state = "railing0"
+	dir = 4
 	},
 /obj/structure/railing,
 /turf/simulated/open,
@@ -1670,8 +1399,7 @@
 "hE" = (
 /obj/structure/lattice,
 /obj/machinery/atmospherics/pipe/zpipe/down/supply{
-	dir = 4;
-	icon_state = "down-supply"
+	dir = 4
 	},
 /obj/machinery/door/firedoor/glass/talon,
 /turf/simulated/open,
@@ -1679,8 +1407,7 @@
 "hF" = (
 /obj/structure/lattice,
 /obj/machinery/atmospherics/pipe/zpipe/down/scrubbers{
-	dir = 8;
-	icon_state = "down-scrubbers"
+	dir = 8
 	},
 /obj/machinery/door/firedoor/glass/talon,
 /obj/structure/disposalpipe/down{
@@ -1717,8 +1444,7 @@
 /area/space)
 "ik" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -1754,29 +1480,24 @@
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/industrial/warning/dust/corner{
-	dir = 1;
-	icon_state = "warningcorner_dust"
+	dir = 1
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/space)
 "iw" = (
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/eris/under,
 /area/space)
 "ix" = (
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1";
-	pixel_y = 0
+	dir = 8
 	},
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
-	dir = 1;
-	icon_state = "pipe-t"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/eris/steel,
 /area/space)
@@ -1812,8 +1533,7 @@
 /area/space)
 "iV" = (
 /obj/machinery/computer/ship/engines{
-	dir = 1;
-	icon_state = "computer"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/eris/dark/violetcorener,
 /area/space)
@@ -1826,11 +1546,9 @@
 "jz" = (
 /obj/structure/cable/green{
 	d2 = 8;
-	dir = 2;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc/talon{
-	dir = 2;
 	name = "south bump";
 	pixel_y = -28;
 	req_access = list(67)
@@ -1856,7 +1574,7 @@
 	},
 /obj/structure/railing,
 /obj/structure/table/standard,
-/obj/item/device/bluespaceradio/talon_prelinked,
+/obj/item/bluespaceradio/talon_prelinked,
 /turf/simulated/floor/tiled/eris/dark/violetcorener,
 /area/space)
 "jQ" = (
@@ -1865,8 +1583,7 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-s"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/eris/steel,
 /area/space)
@@ -1878,8 +1595,7 @@
 	dir = 6
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-s"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/eris/steel,
 /area/space)
@@ -1920,8 +1636,7 @@
 	},
 /obj/structure/catwalk,
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /turf/simulated/floor/plating/eris/under,
 /area/space)
@@ -2013,8 +1728,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/camera/network/talon{
-	dir = 9;
-	icon_state = "camera"
+	dir = 9
 	},
 /turf/simulated/floor/tiled/eris/steel,
 /area/space)
@@ -2030,8 +1744,7 @@
 "mD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5;
-	icon_state = "intact-scrubbers"
+	dir = 5
 	},
 /turf/simulated/floor/tiled/eris/steel,
 /area/space)
@@ -2059,16 +1772,14 @@
 	icon_state = "pipe-j2"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/structure/window/reinforced,
 /turf/simulated/floor/plating/eris/under,
 /area/space)
 "mR" = (
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -2131,9 +1842,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1";
-	pixel_y = 0
+	dir = 8
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/eris/steel,
@@ -2227,8 +1936,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-s"
+	dir = 4
 	},
 /turf/simulated/floor/wood,
 /area/space)
@@ -2251,15 +1959,13 @@
 /area/space)
 "qi" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-s"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/eris/steel,
 /area/space)
@@ -2275,7 +1981,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/sign/directions/roomnum{
 	dir = 4;
-	icon_state = "roomnum";
 	pixel_x = 32;
 	pixel_y = -9
 	},
@@ -2295,23 +2000,20 @@
 "rb" = (
 /obj/structure/disposalpipe/trunk,
 /obj/machinery/disposal/deliveryChute{
-	dir = 4;
-	icon_state = "intake"
+	dir = 4
 	},
 /obj/effect/floor_decal/rust/steel_decals_rusted1{
 	dir = 8
 	},
 /obj/effect/floor_decal/rust/steel_decals_rusted1{
-	dir = 4;
-	icon_state = "steel_decals_rusted1"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
 "re" = (
 /obj/structure/catwalk,
 /obj/machinery/atmospherics/pipe/simple/visible/aux{
-	dir = 6;
-	icon_state = "intact-aux"
+	dir = 6
 	},
 /turf/simulated/floor/plating/eris/under,
 /area/space)
@@ -2336,13 +2038,11 @@
 /area/space)
 "rH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-s"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/eris/steel,
 /area/space)
@@ -2357,7 +2057,7 @@
 /area/space)
 "rU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/item/weapon/stool/baystool/padded,
+/obj/item/stool/baystool/padded,
 /turf/simulated/floor/tiled/eris/cafe,
 /area/space)
 "rW" = (
@@ -2373,8 +2073,7 @@
 /area/space)
 "sm" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -2396,7 +2095,7 @@
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},
-/obj/machinery/pointdefense{
+/obj/machinery/power/pointdefense{
 	id_tag = "talon_pd"
 	},
 /obj/effect/floor_decal/techfloor{
@@ -2413,8 +2112,7 @@
 	},
 /obj/machinery/door/airlock/maintenance/common,
 /obj/machinery/atmospherics/pipe/simple/visible/aux{
-	dir = 4;
-	icon_state = "intact-aux"
+	dir = 4
 	},
 /turf/simulated/floor/plating/eris/under,
 /area/space)
@@ -2441,8 +2139,7 @@
 "sQ" = (
 /obj/structure/catwalk,
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /obj/structure/cable/green{
 	d1 = 1;
@@ -2470,7 +2167,7 @@
 /area/space)
 "tN" = (
 /obj/structure/table/steel,
-/obj/item/weapon/paper/dockingcodes,
+/obj/item/paper/dockingcodes,
 /turf/simulated/floor/tiled/eris/dark/cyancorner,
 /area/space)
 "tO" = (
@@ -2495,8 +2192,7 @@
 	},
 /obj/structure/catwalk,
 /obj/machinery/atmospherics/pipe/simple/visible/aux{
-	dir = 10;
-	icon_state = "intact-aux"
+	dir = 10
 	},
 /turf/simulated/floor/plating/eris/under,
 /area/space)
@@ -2510,19 +2206,18 @@
 	icon_state = "0-4"
 	},
 /obj/structure/closet/crate/plastic,
-/obj/item/device/flashlight,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/device/flashlight/glowstick,
-/obj/item/device/flashlight/glowstick,
-/obj/item/device/flashlight/glowstick,
-/obj/item/weapon/storage/box/metalfoam,
-/obj/item/device/survivalcapsule/luxury,
+/obj/item/flashlight,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/flashlight/glowstick,
+/obj/item/flashlight/glowstick,
+/obj/item/flashlight/glowstick,
+/obj/item/storage/box/metalfoam,
+/obj/item/survivalcapsule/luxury,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/space)
 "uz" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -2560,10 +2255,9 @@
 /turf/simulated/floor/tiled/eris/steel,
 /area/space)
 "uM" = (
-/obj/item/weapon/stool/baystool/padded,
+/obj/item/stool/baystool/padded,
 /obj/machinery/camera/network/talon{
-	dir = 6;
-	icon_state = "camera"
+	dir = 6
 	},
 /turf/simulated/floor/tiled/eris/cafe,
 /area/space)
@@ -2577,7 +2271,6 @@
 "vj" = (
 /obj/machinery/conveyor{
 	dir = 8;
-	icon_state = "conveyor0";
 	id = "talontrash"
 	},
 /obj/machinery/door/blast/regular{
@@ -2591,22 +2284,19 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/structure/sign/directions/evac{
 	pixel_y = -38
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-s"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/eris/steel,
 /area/space)
 "vB" = (
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-s"
+	dir = 4
 	},
 /turf/simulated/floor/wood,
 /area/space)
@@ -2641,8 +2331,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/eris/steel,
 /area/space)
@@ -2652,28 +2341,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/eris/cafe,
-<<<<<<< HEAD:maps/offmap_vr/talon/talon2.dmm
-/area/talon/decktwo/bar)
-"ws" = (
-/obj/machinery/alarm/talon{
-	dir = 4;
-	icon_state = "alarm0";
-	pixel_x = -22;
-	pixel_y = 0
-	},
-/obj/structure/catwalk,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/turf/simulated/floor/plating/eris/under,
-/area/talon/maintenance/decktwo_port)
-||||||| parent of 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/offmap_vr/talon/talon2.dmm
-/area/talon/decktwo/bar)
-=======
 /area/space)
->>>>>>> 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/submaps/depreciated_vr/talon2.dmm
 "wE" = (
 /obj/structure/cable/green{
 	dir = 1;
@@ -2686,15 +2354,13 @@
 /area/space)
 "wW" = (
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-s"
+	dir = 4
 	},
 /turf/simulated/wall/rshull,
 /area/space)
 "wZ" = (
 /obj/structure/disposalpipe/trunk{
-	dir = 4;
-	icon_state = "pipe-t"
+	dir = 4
 	},
 /obj/structure/disposaloutlet,
 /turf/simulated/floor/plating/eris/under/airless,
@@ -2714,17 +2380,6 @@
 /turf/simulated/floor/hull/airless,
 /area/space)
 "xi" = (
-<<<<<<< HEAD:maps/offmap_vr/talon/talon2.dmm
-/obj/machinery/computer/shuttle_control/explore/talon_lifeboat{
-	dir = 4;
-	icon_state = "computer"
-	},
-||||||| parent of 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/offmap_vr/talon/talon2.dmm
-/obj/machinery/computer/shuttle_control/explore/talon_lifeboat{
-	dir = 4
-	},
-=======
->>>>>>> 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/submaps/depreciated_vr/talon2.dmm
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/space)
 "xn" = (
@@ -2772,27 +2427,7 @@
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/hull/airless,
-<<<<<<< HEAD:maps/offmap_vr/talon/talon2.dmm
-/area/talon/maintenance/decktwo_solars)
-"yd" = (
-/obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
-	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/catwalk,
-/obj/structure/window/reinforced,
-/turf/simulated/floor/plating/eris/under,
-/area/talon/maintenance/decktwo_aft)
-||||||| parent of 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/offmap_vr/talon/talon2.dmm
-/area/talon/maintenance/decktwo_solars)
-=======
 /area/space)
->>>>>>> 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/submaps/depreciated_vr/talon2.dmm
 "ym" = (
 /obj/machinery/light_switch{
 	dir = 1;
@@ -2803,12 +2438,10 @@
 /area/space)
 "yF" = (
 /obj/structure/disposalpipe/trunk{
-	dir = 1;
-	icon_state = "pipe-t"
+	dir = 1
 	},
 /obj/structure/disposaloutlet{
-	dir = 8;
-	icon_state = "outlet"
+	dir = 8
 	},
 /obj/structure/window/reinforced{
 	dir = 4
@@ -2817,8 +2450,7 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/rust/steel_decals_rusted1{
-	dir = 4;
-	icon_state = "steel_decals_rusted1"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
@@ -2897,8 +2529,7 @@
 "zW" = (
 /obj/structure/catwalk,
 /obj/machinery/atmospherics/pipe/simple/visible/aux{
-	dir = 5;
-	icon_state = "intact-aux"
+	dir = 5
 	},
 /turf/simulated/floor/plating/eris/under,
 /area/space)
@@ -2924,7 +2555,6 @@
 "As" = (
 /obj/structure/bed/chair/bay/comfy/blue{
 	dir = 1;
-	icon_state = "bay_comfychair_preview";
 	pixel_y = 5
 	},
 /turf/simulated/floor/tiled/eris/dark/cyancorner,
@@ -2961,9 +2591,7 @@
 "AD" = (
 /obj/machinery/alarm/talon{
 	dir = 4;
-	icon_state = "alarm0";
-	pixel_x = -22;
-	pixel_y = 0
+	pixel_x = -22
 	},
 /turf/simulated/floor/tiled/eris/dark/cyancorner,
 /area/space)
@@ -2989,15 +2617,13 @@
 "AX" = (
 /obj/structure/catwalk,
 /obj/machinery/light/small{
-	dir = 8;
-	pixel_x = 0
+	dir = 8
 	},
 /turf/simulated/floor/plating/eris/under,
 /area/space)
 "Bb" = (
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -3037,7 +2663,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/oxygen_pump{
 	dir = 8;
-	icon_state = "oxygen_tank";
 	pixel_x = -30
 	},
 /obj/structure/disposalpipe/segment,
@@ -3045,8 +2670,7 @@
 /area/space)
 "Cg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/light/small{
 	dir = 1
@@ -3080,7 +2704,7 @@
 /turf/simulated/floor/tiled/eris/steel,
 /area/space)
 "CB" = (
-/obj/machinery/pointdefense{
+/obj/machinery/power/pointdefense{
 	id_tag = "talon_pd"
 	},
 /obj/structure/cable/green{
@@ -3120,7 +2744,7 @@
 /area/space)
 "CN" = (
 /obj/structure/bed/padded,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/structure/closet/autolok_wall{
 	pixel_x = 27
 	},
@@ -3174,14 +2798,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
-/obj/item/weapon/stool/baystool/padded,
+/obj/item/stool/baystool/padded,
 /turf/simulated/floor/tiled/eris/cafe,
 /area/space)
 "Dr" = (
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1";
-	pixel_y = 0
+	dir = 8
 	},
 /turf/simulated/floor/tiled/eris/steel,
 /area/space)
@@ -3199,8 +2821,7 @@
 	icon_state = "2-4"
 	},
 /obj/machinery/camera/network/talon{
-	dir = 6;
-	icon_state = "camera"
+	dir = 6
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/hull/airless,
@@ -3218,7 +2839,6 @@
 "EA" = (
 /obj/machinery/conveyor{
 	dir = 8;
-	icon_state = "conveyor0";
 	id = "talontrash"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -3239,7 +2859,6 @@
 "Fu" = (
 /obj/structure/extinguisher_cabinet{
 	dir = 4;
-	icon_state = "extinguisher_closed";
 	pixel_x = -30
 	},
 /obj/structure/disposalpipe/segment,
@@ -3247,8 +2866,7 @@
 /area/space)
 "FA" = (
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -3307,27 +2925,23 @@
 "Gi" = (
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
-	dir = 4;
-	icon_state = "pipe-t"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/eris/steel,
 /area/space)
 "Gm" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
 /obj/machinery/oxygen_pump{
 	dir = 1;
-	icon_state = "oxygen_tank";
 	pixel_y = -30
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-s"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/eris/steel,
 /area/space)
@@ -3356,8 +2970,7 @@
 /obj/machinery/door/airlock/maintenance/common,
 /obj/machinery/door/firedoor/glass/talon,
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-s"
+	dir = 4
 	},
 /turf/simulated/floor/plating/eris/under,
 /area/space)
@@ -3471,8 +3084,7 @@
 	},
 /obj/structure/catwalk,
 /obj/machinery/light/small{
-	dir = 8;
-	pixel_x = 0
+	dir = 8
 	},
 /turf/simulated/floor/plating/eris/under,
 /area/space)
@@ -3487,8 +3099,7 @@
 /area/space)
 "IX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -3497,8 +3108,7 @@
 	pixel_y = -31
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-s"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/eris/steel,
 /area/space)
@@ -3516,20 +3126,17 @@
 /area/space)
 "Jh" = (
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/structure/catwalk,
 /obj/structure/sign/securearea{
-	pixel_x = 0;
 	pixel_y = 30
 	},
 /turf/simulated/floor/plating/eris/under,
 /area/space)
 "Jo" = (
 /obj/machinery/camera/network/talon{
-	dir = 4;
-	icon_state = "camera"
+	dir = 4
 	},
 /obj/structure/table/steel,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -3537,38 +3144,20 @@
 "Ju" = (
 /obj/structure/catwalk,
 /obj/machinery/atmospherics/pipe/simple/visible/aux{
-	dir = 9;
-	icon_state = "intact-aux"
+	dir = 9
 	},
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -24
 	},
 /turf/simulated/floor/plating/eris/under,
-<<<<<<< HEAD:maps/offmap_vr/talon/talon2.dmm
-/area/talon/maintenance/decktwo_aft)
-"Jw" = (
-/obj/machinery/alarm/talon{
-	dir = 8;
-	pixel_x = 22;
-	pixel_y = 0
-	},
-/obj/structure/catwalk,
-/turf/simulated/floor/plating/eris/under,
-/area/talon/maintenance/decktwo_starboard)
-||||||| parent of 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/offmap_vr/talon/talon2.dmm
-/area/talon/maintenance/decktwo_aft)
-=======
 /area/space)
->>>>>>> 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/submaps/depreciated_vr/talon2.dmm
 "JF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9;
-	pixel_y = 0
+	dir = 9
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5;
-	icon_state = "intact-scrubbers"
+	dir = 5
 	},
 /obj/structure/cable/green{
 	d1 = 1;
@@ -3594,8 +3183,7 @@
 /area/space)
 "KE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -3615,8 +3203,7 @@
 /area/space)
 "KR" = (
 /obj/machinery/chemical_dispenser/bar_alc/full{
-	dir = 8;
-	icon_state = "booze_dispenser"
+	dir = 8
 	},
 /obj/structure/table/marble,
 /obj/structure/cable/green{
@@ -3652,7 +3239,7 @@
 	pixel_y = 32;
 	shut_up = 0
 	},
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/structure/bed/padded,
 /obj/structure/closet/autolok_wall{
 	pixel_x = 27
@@ -3673,8 +3260,7 @@
 	},
 /obj/structure/catwalk,
 /obj/machinery/light/small{
-	dir = 8;
-	pixel_x = 0
+	dir = 8
 	},
 /turf/simulated/floor/plating/eris/under,
 /area/space)
@@ -3751,7 +3337,6 @@
 	},
 /obj/structure/extinguisher_cabinet{
 	dir = 8;
-	icon_state = "extinguisher_closed";
 	pixel_x = 30
 	},
 /turf/simulated/floor/tiled/eris/steel,
@@ -3764,8 +3349,7 @@
 "Nm" = (
 /obj/machinery/door/firedoor/glass/talon,
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-s"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/eris/techmaint_panels,
 /area/space)
@@ -3774,8 +3358,7 @@
 	dir = 8
 	},
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /obj/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -3785,7 +3368,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
-/obj/item/weapon/storage/dicecup/loaded,
+/obj/item/storage/dicecup/loaded,
 /turf/simulated/floor/tiled/eris/cafe,
 /area/space)
 "NE" = (
@@ -3793,7 +3376,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/oxygen_pump{
 	dir = 4;
-	icon_state = "oxygen_tank";
 	pixel_x = 30
 	},
 /turf/simulated/floor/tiled/eris/steel,
@@ -3816,8 +3398,7 @@
 	icon_state = "pipe-c"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
-	dir = 10;
-	icon_state = "intact-scrubbers"
+	dir = 10
 	},
 /turf/simulated/floor/plating/eris/under,
 /area/space)
@@ -3828,8 +3409,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/camera/network/talon{
-	dir = 10;
-	icon_state = "camera"
+	dir = 10
 	},
 /turf/simulated/floor/tiled/eris/dark/cyancorner,
 /area/space)
@@ -3855,7 +3435,6 @@
 /area/space)
 "Ou" = (
 /obj/structure/cable/heavyduty{
-	dir = 2;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/hull/airless,
@@ -3865,7 +3444,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
-/obj/item/weapon/stool/baystool/padded,
+/obj/item/stool/baystool/padded,
 /obj/structure/cable/green{
 	dir = 1;
 	icon_state = "4-8"
@@ -3893,7 +3472,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/sign/directions/roomnum{
 	dir = 1;
-	icon_state = "roomnum";
 	pixel_x = -31;
 	pixel_y = -9
 	},
@@ -3905,40 +3483,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/hull/airless,
-<<<<<<< HEAD:maps/offmap_vr/talon/talon2.dmm
-/area/talon/maintenance/decktwo_solars)
-"OY" = (
-/obj/structure/catwalk,
-/obj/structure/cable/green{
-	d2 = 8;
-	dir = 2;
-	icon_state = "0-8"
-	},
-/obj/machinery/power/apc/talon{
-	dir = 4;
-	name = "east bump";
-	pixel_x = 24
-	},
-/turf/simulated/floor/plating/eris/under,
-/area/talon/maintenance/decktwo_starboard)
-||||||| parent of 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/offmap_vr/talon/talon2.dmm
-/area/talon/maintenance/decktwo_solars)
-"OY" = (
-/obj/structure/catwalk,
-/obj/structure/cable/green{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/obj/machinery/power/apc/talon{
-	dir = 4;
-	name = "east bump";
-	pixel_x = 24
-	},
-/turf/simulated/floor/plating/eris/under,
-/area/talon/maintenance/decktwo_starboard)
-=======
 /area/space)
->>>>>>> 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/submaps/depreciated_vr/talon2.dmm
 "Pb" = (
 /obj/structure/cable/green{
 	icon_state = "2-8"
@@ -3957,8 +3502,7 @@
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/industrial/warning/dust/corner{
-	dir = 1;
-	icon_state = "warningcorner_dust"
+	dir = 1
 	},
 /turf/simulated/floor/hull/airless,
 /area/space)
@@ -3977,8 +3521,7 @@
 	pixel_y = 32
 	},
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /turf/simulated/floor/tiled/eris/white,
 /area/space)
@@ -4005,7 +3548,6 @@
 /obj/structure/catwalk,
 /obj/structure/cable/green{
 	d2 = 8;
-	dir = 2;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc/talon{
@@ -4071,7 +3613,7 @@
 /turf/simulated/floor/hull/airless,
 /area/space)
 "RA" = (
-/obj/machinery/pointdefense{
+/obj/machinery/power/pointdefense{
 	id_tag = "talon_pd"
 	},
 /obj/effect/floor_decal/techfloor{
@@ -4084,24 +3626,7 @@
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/hull/airless,
-<<<<<<< HEAD:maps/offmap_vr/talon/talon2.dmm
-/area/talon/maintenance/decktwo_solars)
-"RD" = (
-/obj/machinery/atmospherics/pipe/simple/visible/supply{
-	dir = 4
-	},
-/obj/structure/catwalk,
-/obj/machinery/atmospherics/pipe/simple/visible/aux{
-	dir = 6;
-	icon_state = "intact-aux"
-	},
-/turf/simulated/floor/plating/eris/under,
-/area/talon/maintenance/decktwo_aft)
-||||||| parent of 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/offmap_vr/talon/talon2.dmm
-/area/talon/maintenance/decktwo_solars)
-=======
 /area/space)
->>>>>>> 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/submaps/depreciated_vr/talon2.dmm
 "RH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/railing{
@@ -4116,15 +3641,13 @@
 /area/space)
 "RQ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-s"
+	dir = 4
 	},
 /obj/machinery/door/firedoor/glass{
 	dir = 2
@@ -4132,7 +3655,7 @@
 /turf/simulated/floor/tiled/eris/techmaint_panels,
 /area/space)
 "Sb" = (
-/obj/machinery/pointdefense{
+/obj/machinery/power/pointdefense{
 	id_tag = "talon_pd"
 	},
 /obj/structure/cable/green{
@@ -4151,28 +3674,7 @@
 	name = "Talon Captain"
 	},
 /turf/simulated/floor/carpet/blucarpet,
-<<<<<<< HEAD:maps/offmap_vr/talon/talon2.dmm
-/area/talon/decktwo/cap_room)
-"SV" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/alarm/talon{
-	dir = 4;
-	icon_state = "alarm0";
-	pixel_x = -22;
-	pixel_y = 0
-	},
-/obj/structure/catwalk,
-/turf/simulated/floor/plating/eris/under,
-/area/talon/maintenance/decktwo_port)
-||||||| parent of 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/offmap_vr/talon/talon2.dmm
-/area/talon/decktwo/cap_room)
-=======
 /area/space)
->>>>>>> 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/submaps/depreciated_vr/talon2.dmm
 "Tg" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -4180,8 +3682,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/camera/network/talon{
-	dir = 9;
-	icon_state = "camera"
+	dir = 9
 	},
 /turf/simulated/floor/tiled/eris/steel,
 /area/space)
@@ -4268,8 +3769,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-s"
+	dir = 4
 	},
 /turf/simulated/floor/wood,
 /area/space)
@@ -4300,7 +3800,6 @@
 /area/space)
 "Us" = (
 /obj/structure/cable/heavyduty{
-	dir = 2;
 	icon_state = "0-4"
 	},
 /obj/structure/cable/yellow{
@@ -4318,7 +3817,6 @@
 "Uv" = (
 /obj/structure/cable/heavyduty,
 /obj/structure/cable/heavyduty{
-	dir = 2;
 	icon_state = "0-4"
 	},
 /obj/structure/cable/heavyduty{
@@ -4332,8 +3830,7 @@
 /area/space)
 "UJ" = (
 /obj/machinery/camera/network/talon{
-	dir = 4;
-	icon_state = "camera"
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/eris/steel,
@@ -4344,7 +3841,6 @@
 	},
 /obj/structure/extinguisher_cabinet{
 	dir = 4;
-	icon_state = "extinguisher_closed";
 	pixel_x = -30
 	},
 /obj/structure/disposalpipe/segment,
@@ -4404,8 +3900,7 @@
 "Vz" = (
 /obj/structure/catwalk,
 /obj/machinery/atmospherics/pipe/simple/visible/aux{
-	dir = 4;
-	icon_state = "intact-aux"
+	dir = 4
 	},
 /turf/simulated/floor/plating/eris/under,
 /area/space)
@@ -4467,7 +3962,7 @@
 "WS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/item/weapon/stool/baystool/padded,
+/obj/item/stool/baystool/padded,
 /turf/simulated/floor/tiled/eris/cafe,
 /area/space)
 "WZ" = (
@@ -4586,41 +4081,19 @@
 	icon_state = "pipe-j2"
 	},
 /turf/simulated/floor/tiled/eris/steel,
-<<<<<<< HEAD:maps/offmap_vr/talon/talon2.dmm
-/area/talon/decktwo/central_hallway)
-"Yz" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/alarm/talon{
-	dir = 8;
-	pixel_x = 22;
-	pixel_y = 0
-	},
-/obj/structure/catwalk,
-/turf/simulated/floor/plating/eris/under,
-/area/talon/maintenance/decktwo_starboard)
-||||||| parent of 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/offmap_vr/talon/talon2.dmm
-/area/talon/decktwo/central_hallway)
-=======
 /area/space)
->>>>>>> 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/submaps/depreciated_vr/talon2.dmm
 "YA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/structure/sign/department/shield{
 	pixel_y = -31
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-s"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/eris/steel,
 /area/space)
@@ -4629,7 +4102,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/sign/directions/roomnum{
 	dir = 8;
-	icon_state = "roomnum";
 	pixel_x = 32;
 	pixel_y = -9
 	},
@@ -4637,8 +4109,7 @@
 /area/space)
 "YE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9;
-	pixel_y = 0
+	dir = 9
 	},
 /turf/simulated/floor/tiled/eris/steel,
 /area/space)
@@ -13003,33 +12474,17 @@ ht
 ch
 MV
 kS
-<<<<<<< HEAD:maps/offmap_vr/talon/talon2.dmm
-dm
-dm
-dm
-SV
-dm
-dm
-||||||| parent of 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/offmap_vr/talon/talon2.dmm
-dm
-dm
-dm
-bG
-dm
-dm
-=======
 fx
 fx
 fx
 bG
 fx
 fx
->>>>>>> 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/submaps/depreciated_vr/talon2.dmm
 fh
 fx
 FG
 sQ
-lx
+bN
 Qt
 lx
 lx
@@ -13037,19 +12492,9 @@ lx
 aI
 lx
 lx
-<<<<<<< HEAD:maps/offmap_vr/talon/talon2.dmm
-lx
-ws
-Lo
-||||||| parent of 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/offmap_vr/talon/talon2.dmm
-bN
-bS
-Lo
-=======
 bN
 bS
 QA
->>>>>>> 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/submaps/depreciated_vr/talon2.dmm
 hu
 Hs
 hE
@@ -13619,7 +13064,7 @@ hu
 PG
 aH
 hu
-RD
+bU
 aq
 ht
 ao
@@ -14183,7 +13628,7 @@ go
 go
 go
 go
-gU
+hX
 WG
 gC
 gn
@@ -14751,16 +14196,8 @@ Jh
 gD
 gL
 go
-<<<<<<< HEAD:maps/offmap_vr/talon/talon2.dmm
-gU
-mm
-||||||| parent of 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/offmap_vr/talon/talon2.dmm
-hX
-mm
-=======
 hX
 QA
->>>>>>> 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/submaps/depreciated_vr/talon2.dmm
 gC
 gT
 Mk
@@ -15615,7 +15052,7 @@ hu
 Os
 jy
 hu
-yd
+bX
 rb
 qG
 ao
@@ -16164,14 +15601,14 @@ LH
 fx
 fx
 fx
-Yz
+bL
 fx
 fx
 fh
 fx
 mJ
 AX
-QA
+bO
 Az
 QA
 QA
@@ -16179,15 +15616,9 @@ QA
 AX
 QA
 QA
+bO
 QA
-<<<<<<< HEAD:maps/offmap_vr/talon/talon2.dmm
-Jw
-OY
-||||||| parent of 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/offmap_vr/talon/talon2.dmm
-OY
-=======
 Qi
->>>>>>> 4954315575... Merge pull request #10228 from KillianKirilenko/kk-ships2:maps/submaps/depreciated_vr/talon2.dmm
 hu
 NX
 hF

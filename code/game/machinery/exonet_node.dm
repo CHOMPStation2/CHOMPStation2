@@ -16,7 +16,7 @@
 
 	var/list/logs = list() // Gets written to by exonet's send_message() function.
 
-	circuit = /obj/item/weapon/circuitboard/telecomms/exonet_node
+	circuit = /obj/item/circuitboard/telecomms/exonet_node
 
 	var/datum/looping_sound/tcomms/soundloop // CHOMPStation Add: Hummy noises
 	var/noisy = TRUE // CHOMPStation Add: Hummy noises, this starts on
@@ -49,6 +49,7 @@
 
 /obj/machinery/exonet_node/Destroy() // CHOMPAdd: Just in case.
 	QDEL_NULL(soundloop) // CHOMPAdd: Exonet noises
+	return ..()
 
 // Proc: update_icon()
 // Parameters: None

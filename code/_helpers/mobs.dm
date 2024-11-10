@@ -1,3 +1,39 @@
+//CHOMPEdit Begin
+/atom/movable/proc/get_mob()
+	if(buckled_mobs) return buckled_mobs.Copy()
+
+/obj/mecha/get_mob()
+	return occupant
+
+/obj/vehicle_old/train/get_mob()
+	return buckled_mobs
+
+/mob/get_mob()
+	return src
+
+/mob/living/bot/mulebot/get_mob()
+	if(load && istype(load, /mob/living))
+		return list(src, load)
+	return src
+
+/proc/mobs_in_view(range, source)
+	var/list/mobs = list()
+	for(var/atom/movable/AM in view(range, source))
+		var/M = AM.get_mob()
+		if(M)
+			mobs += M
+
+	return mobs
+
+/proc/mobs_in_xray_view(range, source)
+	var/list/mobs = list()
+	for(var/atom/movable/AM in orange(range, source))
+		var/M = AM.get_mob()
+		if(M)
+			mobs += M
+
+	return mobs
+//CHOMPEdit End
 /proc/random_hair_style(gender, species = SPECIES_HUMAN)
 	var/h_style = "Bald"
 
@@ -122,18 +158,21 @@ Proc for attack log creation, because really why not
 
 	if(ismob(user)) //CHOMPEdit Begin
 		if(SSdbcore.Connect())
-			user.attack_log += text("\[[time_stamp()]\] <font color='red'>Attacked [target_str]: [what_done]</font>")
-			var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_attacklog (id, time, ckey, mob, message) VALUES (null, NOW(), :t_ckey, :t_mob, :t_content)", list("t_ckey" = user.ckey, "t_mob" = user.real_name, "t_content" = "<font color='red'>Attacked [target_str]: [what_done]</font>"))
-			query_insert.Execute(async=use_async)
-			qdel(query_insert)
+			user.attack_log += text("\[[time_stamp()]\] [span_red("Attacked [target_str]: [what_done]")]")
+			var/datum/db_query/query_insert = SSdbcore.NewQuery("INSERT INTO erro_attacklog (id, time, ckey, mob, message) VALUES (null, NOW(), :t_ckey, :t_mob, :t_content)", list("t_ckey" = user.ckey, "t_mob" = user.real_name, "t_content" = "<font color='red'>Attacked [target_str]: [what_done]</font>"))
+			spawn() //Change this to a spawn so it doesn't hold us up
+				query_insert.Execute(async=use_async)
+				qdel(query_insert)
 		//if(SSdbcore.Connect())
 		//	rustg_sql_query_async(SSdbcore.connection, "INSERT INTO erro_attacklog (id, time, ckey, mob, message) VALUES (null, NOW(), :t_ckey, :t_mob, :t_content)", json_encode(list("t_ckey" = user.ckey, "t_mob" = user.real_name, "t_content" = "<font color='red'>Attacked [target_str]: [what_done]</font>")))
 	if(ismob(target))
 		if(SSdbcore.Connect())
-			target.attack_log += text("\[[time_stamp()]\] <font color='orange'>Attacked by [user_str]: [what_done]</font>")
-			var/DBQuery/query_insert = SSdbcore.NewQuery("INSERT INTO erro_attacklog (id, time, ckey, mob, message) VALUES (null, NOW(), :t_ckey, :t_mob, :t_content)", list("t_ckey" = target.ckey, "t_mob" = target.real_name, "t_content" = "<font color='orange'>Attacked by [user_str]: [what_done]</font>"))
-			query_insert.Execute(async=use_async)
-			qdel(query_insert)
+			target.attack_log += text("\[[time_stamp()]\] [span_orange("Attacked by [user_str]: [what_done]")]")
+			var/datum/db_query/query_insert = SSdbcore.NewQuery("INSERT INTO erro_attacklog (id, time, ckey, mob, message) VALUES (null, NOW(), :t_ckey, :t_mob, :t_content)", list("t_ckey" = target.ckey, "t_mob" = target.real_name, "t_content" = "<font color='orange'>Attacked by [user_str]: [what_done]</font>"))
+			spawn() //Change this to a spawn so it doesn't hold us up
+				if(query_insert)
+					query_insert.Execute(async=use_async)
+				qdel(query_insert)
 		//if(SSdbcore.Connect())
 		//	rustg_sql_query_async(SSdbcore.connection, "INSERT INTO erro_attacklog (id, time, ckey, mob, message) VALUES (null, NOW(), :t_ckey, :t_mob, :t_content)", json_encode(list("t_ckey" = target.ckey, "t_mob" = target.real_name, "t_content" = "<font color='orange'>Attacked by [user_str]: [what_done]</font>")))
 	//CHOMPEdit End
@@ -149,7 +188,7 @@ Proc for attack log creation, because really why not
 	return (thing in R.module.modules)
 
 /proc/get_exposed_defense_zone(var/atom/movable/target)
-	var/obj/item/weapon/grab/G = locate() in target
+	var/obj/item/grab/G = locate() in target
 	if(G && G.state >= GRAB_NECK) //works because mobs are currently not allowed to upgrade to NECK if they are grabbing two people.
 		return pick(BP_HEAD, BP_L_HAND, BP_R_HAND, BP_L_FOOT, BP_R_FOOT, BP_L_ARM, BP_R_ARM, BP_L_LEG, BP_R_LEG)
 	else
@@ -161,10 +200,10 @@ Proc for attack log creation, because really why not
 	if(!time)
 		return TRUE //Done!
 	if(user.status_flags & DOING_TASK)
-		to_chat(user, "<span class='warning'>You're in the middle of doing something else already.</span>")
+		to_chat(user, span_warning("You're in the middle of doing something else already."))
 		return FALSE //Performing an exclusive do_after or do_mob already
 	if(target?.flags & IS_BUSY)
-		to_chat(user, "<span class='warning'>Someone is already doing something with \the [target].</span>")
+		to_chat(user, span_warning("Someone is already doing something with \the [target]."))
 		return FALSE
 	var/user_loc = user.loc
 	var/target_loc = target.loc
@@ -227,10 +266,10 @@ Proc for attack log creation, because really why not
 	if(!delay)
 		return TRUE //Okay. Done.
 	if(user.status_flags & DOING_TASK)
-		to_chat(user, "<span class='warning'>You're in the middle of doing something else already.</span>")
+		to_chat(user, span_warning("You're in the middle of doing something else already."))
 		return FALSE //Performing an exclusive do_after or do_mob already
 	if(target?.flags & IS_BUSY)
-		to_chat(user, "<span class='warning'>Someone is already doing something with \the [target].</span>")
+		to_chat(user, span_warning("Someone is already doing something with \the [target]."))
 		return FALSE
 
 	var/atom/target_loc = null
@@ -312,7 +351,7 @@ Proc for attack log creation, because really why not
 	for(var/mob/living/L in viewers)
 		living += L
 		if(count_held)
-			for(var/obj/item/weapon/holder/H in L.contents)
+			for(var/obj/item/holder/H in L.contents)
 				if(istype(H.held_mob, /mob/living))
 					living += H.held_mob //CHOMPEdit End
 	return living
@@ -335,7 +374,7 @@ Proc for attack log creation, because really why not
 		cached_character_icons[cachekey] = .
 
 /proc/not_has_ooc_text(mob/user)
-	if (config.allow_Metadata && (!user.client?.prefs?.metadata || length(user.client.prefs.metadata) < 15))
-		to_chat(user, "<span class='warning'>Please set informative OOC notes related to RP/ERP preferences. Set them using the 'OOC Notes' button on the 'General' tab in character setup.</span>")
+	if (CONFIG_GET(flag/allow_metadata) && (!user.client?.prefs?.metadata || length(user.client.prefs.metadata) < 15))
+		to_chat(user, span_warning("Please set informative OOC notes related to RP/ERP preferences. Set them using the 'OOC Notes' button on the 'General' tab in character setup."))
 		return TRUE
 	return FALSE

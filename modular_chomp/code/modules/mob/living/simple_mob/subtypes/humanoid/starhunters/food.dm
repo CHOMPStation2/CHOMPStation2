@@ -11,8 +11,8 @@
 	. = ..()
 	if(!riding_datum)
 		riding_datum = new /datum/riding/simple_mob(src)
-	verbs |= /mob/living/simple_mob/proc/animal_mount
-	verbs |= /mob/living/proc/toggle_rider_reins
+	add_verb(src,/mob/living/simple_mob/proc/animal_mount) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/toggle_rider_reins) //CHOMPEdit TGPanel
 	movement_cooldown = 1
 
 /mob/living/simple_mob/humanoid/starhunter/hunter/druid/MouseDrop_T(mob/living/M, mob/living/user)
@@ -49,8 +49,8 @@
 	. = ..()
 	if(!riding_datum)
 		riding_datum = new /datum/riding/simple_mob(src)
-	verbs |= /mob/living/simple_mob/proc/animal_mount
-	verbs |= /mob/living/proc/toggle_rider_reins
+	add_verb(src,/mob/living/simple_mob/proc/animal_mount) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/toggle_rider_reins) //CHOMPEdit TGPanel
 	movement_cooldown = 1
 
 /mob/living/simple_mob/humanoid/starhunter/hunter/champion/MouseDrop_T(mob/living/M, mob/living/user)
@@ -88,8 +88,8 @@
 	. = ..()
 	if(!riding_datum)
 		riding_datum = new /datum/riding/simple_mob(src)
-	verbs |= /mob/living/simple_mob/proc/animal_mount
-	verbs |= /mob/living/proc/toggle_rider_reins
+	add_verb(src,/mob/living/simple_mob/proc/animal_mount) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/toggle_rider_reins) //CHOMPEdit TGPanel
 	movement_cooldown = 1
 
 /mob/living/simple_mob/humanoid/starhunter/hunter/avatar/MouseDrop_T(mob/living/M, mob/living/user)
@@ -112,4 +112,3 @@
 		"Every clench of the predator's stomach grinds powerful digestive fluids into your body, forcibly churning away your strength!",
 		"The caustic red acid splashes, and washes over your frame, your sense of smell being overwhelmed by acid and sulfur as you're turned to nutrion.",
 		"Every swift swap of the predator's hips sends you slamming against the glowing red sides, your vision blurring further as you contunie to weaken." ,)
-

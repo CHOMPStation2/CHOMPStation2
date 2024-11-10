@@ -1,5 +1,5 @@
 // Compile in the map for CI testing if we're testing compileability of all the maps
-#if MAP_TEST
+#ifdef MAP_TEST
 #include "adminship.dmm"
 #endif
 
@@ -7,7 +7,7 @@
 /datum/map_template/admin_ships/admin
 	name = "ADM Ship - Administrator ship (New Z)"
 	desc = "A NT Administration ship."
-	mappath = 'adminship.dmm'
+	mappath = "maps/yw/submaps/admin_ships/adminship.dmm"
 
 // The shuttle's area(s)
 /area/ship/adminships

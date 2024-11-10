@@ -2,7 +2,7 @@
 	//This is so that if a race is using the chimera revive they can't use it more than once.
 	//Shouldn't really be seen in play too often, but it's case an admin event happens and they give a non chimera the chimera revive. Only one person can use the chimera revive at a time per race.
 	//var/reviving = 0 //commented out 'cause moved to mob
-	holder_type = /obj/item/weapon/holder/micro //This allows you to pick up crew
+	holder_type = /obj/item/holder/micro //This allows you to pick up crew
 	min_age = 18
 	descriptors = list()
 
@@ -42,6 +42,16 @@
 	var/can_climb = FALSE
 	var/climbing_delay = 1.5	// We climb with a quarter delay
 
+	var/list/food_preference = list() //RS edit
+	var/food_preference_bonus = 0
+
+
+	// For Lleill and Hanner
+	var/lleill_energy = 200
+	var/lleill_energy_max = 200
+
+/datum/species/unathi
+	vore_belly_default_variant = "L"
 
 /datum/species/proc/give_numbing_bite() //Holy SHIT this is hacky, but it works. Updating a mob's attacks mid game is insane.
 	unarmed_attacks = list()
@@ -57,7 +67,7 @@
 		var/list/nif_savedata = H.nif.save_data.Copy()*/
 		..()
 		H.nif = null //A previous call during the rejuvenation path deleted it, so we no longer should have it here
-		/*var/obj/item/device/nif/nif = new type(H,durability,nif_savedata)
+		/*var/obj/item/nif/nif = new type(H,durability,nif_savedata)
 		nif.nifsofts = nifsofts*/
 	else
 		..()
@@ -101,21 +111,24 @@
 
 	return new_copy
 
+//We REALLY don't need to go through every variable. Doing so makes this lag like hell on 515
 /datum/species/proc/copy_variables(var/datum/species/S, var/list/whitelist)
 	//List of variables to ignore, trying to copy type will runtime.
-	var/list/blacklist = list("type", "loc", "client", "ckey")
+	//var/list/blacklist = list("type", "loc", "client", "ckey")
 	//Makes thorough copy of species datum.
-	for(var/i in vars)
+	for(var/i in whitelist)
 		if(!(i in S.vars)) //Don't copy incompatible vars.
 			continue
 		if(S.vars[i] != vars[i] && !islist(vars[i])) //If vars are same, no point in copying.
-			if(i in blacklist)
-				continue
-			if(whitelist)//If whitelist is provided, only vars in the list will be copied.
-				if(i in whitelist)
-					S.vars[i] = vars[i]
-				continue
 			S.vars[i] = vars[i]
 
 /datum/species/get_bodytype()
 	return base_species
+
+/datum/species/proc/update_vore_belly_def_variant()
+	// Determine the actual vore_belly_default_variant, if the base species in the VORE tab is set
+	switch (base_species)
+		if("Teshari")
+			vore_belly_default_variant = "T"
+		if("Unathi")
+			vore_belly_default_variant = "L"

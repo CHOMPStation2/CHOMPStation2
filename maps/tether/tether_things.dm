@@ -115,7 +115,7 @@
 
 /obj/effect/step_trigger/lost_in_space/Trigger(var/atom/movable/A) //replacement for shuttle dump zones because there's no empty space levels to dump to
 	if(ismob(A))
-		to_chat(A, "<span class='danger'>[deathmessage]</span>")
+		to_chat(A, span_danger("[deathmessage]"))
 	qdel(A)
 
 /obj/effect/step_trigger/lost_in_space/bluespace
@@ -212,7 +212,7 @@
 
 	var/mob/living/carbon/human/user = AM
 
-	var/choice = tgui_alert(user, "Do you want to depart via the tram? Your character will leave the round.","Departure",list("Yes","No"))
+	var/choice = tgui_alert(usr, "Do you want to depart via the tram? Your character will leave the round.","Departure",list("Yes","No"))
 	if(user && Adjacent(user) && choice == "Yes")
 		var/mob/observer/dead/newghost = user.ghostize()
 		newghost.timeofdeath = world.time
@@ -257,10 +257,6 @@
 	name = "dorm seven holodeck control"
 	projection_area = /area/crew_quarters/sleep/Dorm_7/holo
 
-/obj/machinery/computer/HolodeckControl/holodorm/warship
-	name = "warship holodeck control"
-	projection_area = /area/mothership/holodeck/holo
-
 // Our map is small, if the supermatter is ejected lets not have it just blow up somewhere else
 /obj/machinery/power/supermatter/touch_map_edge()
 	qdel(src)
@@ -276,44 +272,6 @@
 
 	return ..(user)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-/obj/structure/closet/secure_closet/guncabinet/excursion
-	name = "expedition weaponry cabinet"
-	req_one_access = list(access_explorer,access_armory)
-
-/obj/structure/closet/secure_closet/guncabinet/excursion/New()
-	..()
-	for(var/i = 1 to 3)
-		new /obj/item/weapon/gun/energy/locked/frontier(src)
-	for(var/i = 1 to 2)
-		new /obj/item/weapon/gun/energy/locked/frontier/holdout(src)
-
-||||||| parent of 55ee669869... Merge pull request #11710 from Very-Soft/SDremaster
-/obj/structure/closet/secure_closet/guncabinet/excursion
-	name = "expedition weaponry cabinet"
-	req_one_access = list(access_explorer,access_armory)
-
-/obj/structure/closet/secure_closet/guncabinet/excursion/New()
-	..()
-	for(var/i = 1 to 2)
-		new /obj/item/weapon/gun/energy/locked/frontier(src)
-	for(var/i = 1 to 2)
-		new /obj/item/weapon/gun/energy/locked/frontier/holdout(src)
-
-=======
->>>>>>> 55ee669869... Merge pull request #11710 from Very-Soft/SDremaster
-// Used at centcomm for the elevator
-/obj/machinery/cryopod/robot/door/dorms
-	spawnpoint_type = /datum/spawnpoint/tram
-
-||||||| parent of 2bb3d46cf5... Merge pull request #11734 from Heroman3003/sd-with-modules
-// Used at centcomm for the elevator
-/obj/machinery/cryopod/robot/door/dorms
-	spawnpoint_type = /datum/spawnpoint/tram
-
-=======
->>>>>>> 2bb3d46cf5... Merge pull request #11734 from Heroman3003/sd-with-modules
 //Tether-unique network cameras
 /obj/machinery/camera/network/tether
 	network = list(NETWORK_TETHER)
@@ -330,9 +288,9 @@
 // ### Wall Machines On Full Windows ###
 // To make sure wall-mounted machines placed on full-tile windows are clickable they must be above the window
 //
-/obj/item/device/radio/intercom
+/obj/item/radio/intercom
 	layer = ABOVE_WINDOW_LAYER
-/obj/item/weapon/storage/secure/safe
+/obj/item/storage/secure/safe
 	layer = ABOVE_WINDOW_LAYER
 /obj/machinery/airlock_sensor
 	layer = ABOVE_WINDOW_LAYER
@@ -388,6 +346,5 @@
 	prob_spawn = 75
 	prob_fall = 50
 	mobs_to_pick_from = list(
-		/mob/living/simple_mob/animal/passive/gaslamp = 300,
-		/mob/living/simple_mob/vore/alienanimals/teppi = 4
+		/mob/living/simple_mob/animal/passive/gaslamp = 300
 		)

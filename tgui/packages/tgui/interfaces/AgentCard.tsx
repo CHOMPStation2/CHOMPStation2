@@ -1,4 +1,5 @@
 import { BooleanLike } from 'common/react';
+
 import { useBackend } from '../backend';
 import { Button, Section, Table } from '../components';
 import { Window } from '../layouts';
@@ -8,8 +9,8 @@ type Data = {
   electronic_warfare: BooleanLike;
 };
 
-export const AgentCard = (props, context) => {
-  const { act, data } = useBackend<Data>(context);
+export const AgentCard = (props) => {
+  const { act, data } = useBackend<Data>();
 
   const { entries, electronic_warfare } = data;
 
@@ -35,13 +36,12 @@ export const AgentCard = (props, context) => {
         <Section title="Electronic Warfare">
           <Button.Checkbox
             checked={electronic_warfare}
-            content={
-              electronic_warfare
-                ? 'Electronic warfare is enabled. This will prevent you from being tracked by the AI.'
-                : 'Electronic warfare disabled.'
-            }
             onClick={() => act('electronic_warfare')}
-          />
+          >
+            {electronic_warfare
+              ? 'Electronic warfare is enabled. This will prevent you from being tracked by the AI.'
+              : 'Electronic warfare disabled.'}
+          </Button.Checkbox>
         </Section>
       </Window.Content>
     </Window>

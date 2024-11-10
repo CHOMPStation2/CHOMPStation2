@@ -8,7 +8,7 @@
 	but their presence bolstering others of their kind."
 	value = CATALOGUER_REWARD_MEDIUM
 
-//Someone remind me to get someone to make actual sprites for this things.
+//Someone remind me to get someone to make actual sprites for this things. //Combat refactor walkback wont touch these, idk the balance and afaik theyre a swarm mob
 /mob/living/simple_mob/vore/candy
 	name = "candy critter"
 	desc = "A creature made of candy"
@@ -50,8 +50,8 @@
 	. = ..()
 	if(!riding_datum)
 		riding_datum = new /datum/riding/simple_mob(src)
-	verbs |= /mob/living/simple_mob/proc/animal_mount
-	verbs |= /mob/living/proc/toggle_rider_reins
+	add_verb(src,/mob/living/simple_mob/proc/animal_mount) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/toggle_rider_reins) //CHOMPEdit TGPanel
 	movement_cooldown = 1
 
 /mob/living/simple_mob/vore/candy/bluecabold/MouseDrop_T(mob/living/M, mob/living/user)
@@ -76,8 +76,8 @@
 	. = ..()
 	if(!riding_datum)
 		riding_datum = new /datum/riding/simple_mob(src)
-	verbs |= /mob/living/simple_mob/proc/animal_mount
-	verbs |= /mob/living/proc/toggle_rider_reins
+	add_verb(src,/mob/living/simple_mob/proc/animal_mount) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/toggle_rider_reins) //CHOMPEdit TGPanel
 	movement_cooldown = 1
 
 /mob/living/simple_mob/vore/candy/redcabold/MouseDrop_T(mob/living/M, mob/living/user)
@@ -102,8 +102,8 @@
 	. = ..()
 	if(!riding_datum)
 		riding_datum = new /datum/riding/simple_mob(src)
-	verbs |= /mob/living/simple_mob/proc/animal_mount
-	verbs |= /mob/living/proc/toggle_rider_reins
+	add_verb(src,/mob/living/simple_mob/proc/animal_mount) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/toggle_rider_reins) //CHOMPEdit TGPanel
 	movement_cooldown = 1
 
 /mob/living/simple_mob/vore/candy/yellowcabold/MouseDrop_T(mob/living/M, mob/living/user)
@@ -128,8 +128,8 @@
 	. = ..()
 	if(!riding_datum)
 		riding_datum = new /datum/riding/simple_mob(src)
-	verbs |= /mob/living/simple_mob/proc/animal_mount
-	verbs |= /mob/living/proc/toggle_rider_reins
+	add_verb(src,/mob/living/simple_mob/proc/animal_mount) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/toggle_rider_reins) //CHOMPEdit TGPanel
 	movement_cooldown = 1
 
 /mob/living/simple_mob/vore/candy/orangecabold/MouseDrop_T(mob/living/M, mob/living/user)
@@ -154,8 +154,8 @@
 	. = ..()
 	if(!riding_datum)
 		riding_datum = new /datum/riding/simple_mob(src)
-	verbs |= /mob/living/simple_mob/proc/animal_mount
-	verbs |= /mob/living/proc/toggle_rider_reins
+	add_verb(src,/mob/living/simple_mob/proc/animal_mount) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/toggle_rider_reins) //CHOMPEdit TGPanel
 	movement_cooldown = 1
 
 /mob/living/simple_mob/vore/candy/purplecabold/MouseDrop_T(mob/living/M, mob/living/user)
@@ -180,8 +180,8 @@
 	. = ..()
 	if(!riding_datum)
 		riding_datum = new /datum/riding/simple_mob(src)
-	verbs |= /mob/living/simple_mob/proc/animal_mount
-	verbs |= /mob/living/proc/toggle_rider_reins
+	add_verb(src,/mob/living/simple_mob/proc/animal_mount) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/toggle_rider_reins) //CHOMPEdit TGPanel
 	movement_cooldown = 1
 
 /mob/living/simple_mob/vore/candy/marshmellowserpent/MouseDrop_T(mob/living/M, mob/living/user)
@@ -241,14 +241,14 @@
 	if(isliving(A) && a_intent == I_HURT)
 		var/mob/living/L = A
 		if(L.mob_size <= MOB_MEDIUM)
-			visible_message(span("danger", "\The [src] sends \the [L] flying with the impact!"))
+			visible_message(span_danger("\The [src] sends \the [L] flying with the impact!"))
 			playsound(src, "punch", 50, 1)
 			L.Weaken(1)
 			var/throwdir = get_dir(src, L)
 			L.throw_at(get_edge_target_turf(L, throwdir), 3, 1, src)
 		else
-			to_chat(L, span("warning", "\The [src] hits you with incredible force, but you remain in place."))
-			visible_message(span("danger", "\The [src] hits \the [L] with incredible force, to no visible effect!")) // CHOMPEdit: Visible/audible feedback for *resisting* the slam.
+			to_chat(L, span_warning("\The [src] hits you with incredible force, but you remain in place."))
+			visible_message(span_danger("\The [src] hits \the [L] with incredible force, to no visible effect!")) // CHOMPEdit: Visible/audible feedback for *resisting* the slam.
 			playsound(src, "punch", 50, 1)
 
 /mob/living/simple_mob/vore/candy/yellowcabold //Speeds folks
@@ -352,13 +352,13 @@
 	loot_list = list(/obj/item/clothing/head/psy_crown/candycrown = 30,
 			/obj/item/clothing/gloves/stamina = 30,
 			/obj/item/clothing/suit/armor/buffvest = 30,
-			/obj/item/weapon/melee/cullingcane = 30
+			/obj/item/melee/cullingcane = 30
 			)
 
 /mob/living/simple_mob/vore/candy/marshmellowserpent/do_special_attack(atom/A)
 	set_AI_busy(TRUE)
 	do_windup_animation(A, 20)
-	addtimer(CALLBACK(src, .proc/chargeend, A), 20)
+	addtimer(CALLBACK(src, PROC_REF(chargeend), A), 20)
 
 /mob/living/simple_mob/vore/candy/marshmellowserpent/proc/chargeend(atom/A)
 	if(stat) //you are dead
@@ -441,7 +441,7 @@
 
 	melee_damage_lower = 25
 	melee_damage_upper = 35
-	var/grenade_type = /obj/item/weapon/grenade/concussion
+	var/grenade_type = /obj/item/grenade/concussion
 	var/grenade_timer = 1
 
 	special_attack_min_range = 1
@@ -465,28 +465,28 @@
 			debuff_combo(A)
 
 /mob/living/simple_mob/vore/candy/ouroboros/proc/summon_combo(atom/target)
-	visible_message(span("warning", "\The [src] calls for help!"))
+	visible_message(span_warning("\The [src] calls for help!"))
 	new /obj/random/mob/candycritter (src.loc)
 	new /obj/random/mob/candycritter (src.loc)
 	sleep(2.0 SECONDS)
-	visible_message(span("warning", "\The [src] calls for help!"))
+	visible_message(span_warning("\The [src] calls for help!"))
 	new /obj/random/mob/candycritter (src.loc)
 	new /obj/random/mob/candycritter (src.loc)
 	new /obj/random/mob/candycritter (src.loc)
 	sleep(1.5 SECONDS)
-	visible_message(span("warning", "\The [src] calls for help!"))
+	visible_message(span_warning("\The [src] calls for help!"))
 	new /obj/random/mob/candycritter (src.loc)
 	new /obj/random/mob/candycritter (src.loc)
 	new /obj/random/mob/candycritter (src.loc)
 	new /obj/random/mob/candycritter (src.loc)
 	sleep(1.0 SECONDS)
-	visible_message(span("warning", "\The [src] calls for help!"))
+	visible_message(span_warning("\The [src] calls for help!"))
 	new /obj/random/mob/candycritter (src.loc)
 	new /obj/random/mob/candycritter (src.loc)
 	new /obj/random/mob/candycritter (src.loc)
 	new /obj/random/mob/candycritter (src.loc)
 	new /obj/random/mob/candycritter (src.loc)
-	visible_message(span("warning", "\The [src] begins to heal!"))
+	visible_message(span_warning("\The [src] begins to heal!"))
 	sleep(3.5 SECONDS)
 	adjustBruteLoss(-35)
 	adjustFireLoss(-35)
@@ -523,9 +523,9 @@
 			new /obj/random/mob/candycritter (src.loc)
 
 /mob/living/simple_mob/vore/candy/ouroboros/proc/debuff_combo(atom/target)
-	visible_message(span("warning", "\The [src] prepares to let out a thunderous roar!"))
+	visible_message(span_warning("\The [src] prepares to let out a thunderous roar!"))
 	sleep(2.5 SECONDS)
-	var/obj/item/weapon/grenade/G = new grenade_type(get_turf(src))
+	var/obj/item/grenade/G = new grenade_type(get_turf(src))
 	if(istype(G))
 		G.throw_at(G.throw_range, G.throw_speed, src)
 		G.det_time = grenade_timer	//CHOMPEdit
@@ -647,15 +647,15 @@
 /mob/living/simple_mob/vore/candy/peppermint/attackby(var/obj/item/O as obj, var/mob/user as mob)
 	if(O.force)
 		if(prob(80))
-			visible_message("<span class='danger'>\The [src] deflects \the [O] with its shell!</span>")
+			visible_message(span_danger("\The [src] deflects \the [O] with its shell!"))
 			if(user)
 				ai_holder.react_to_attack(user)
 			return
 		else
 			..()
 	else
-		to_chat(user, "<span class='warning'>This weapon is ineffective, it does no damage.</span>")
-		visible_message("<span class='warning'>\The [user] gently taps [src] with \the [O].</span>")
+		to_chat(user, span_warning("This weapon is ineffective, it does no damage."))
+		visible_message(span_warning("\The [user] gently taps [src] with \the [O]."))
 
 /*
 /mob/living/simple_mob/vore/candy/worm
@@ -682,8 +682,8 @@
 	. = ..()
 	if(!riding_datum)
 		riding_datum = new /datum/riding/simple_mob(src)
-	verbs |= /mob/living/simple_mob/proc/animal_mount
-	verbs |= /mob/living/proc/toggle_rider_reins
+	add_verb(src,/mob/living/simple_mob/proc/animal_mount) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/toggle_rider_reins) //CHOMPEdit TGPanel
 	movement_cooldown = 1
 
 /mob/living/simple_mob/vore/candy/worm/MouseDrop_T(mob/living/M, mob/living/user)
@@ -708,8 +708,8 @@
 	. = ..()
 	if(!riding_datum)
 		riding_datum = new /datum/riding/simple_mob(src)
-	verbs |= /mob/living/simple_mob/proc/animal_mount
-	verbs |= /mob/living/proc/toggle_rider_reins
+	add_verb(src,/mob/living/simple_mob/proc/animal_mount) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/proc/toggle_rider_reins) //CHOMPEdit TGPanel
 	movement_cooldown = 1
 
 /mob/living/simple_mob/vore/candy/peppermint/MouseDrop_T(mob/living/M, mob/living/user)

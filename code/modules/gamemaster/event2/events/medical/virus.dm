@@ -44,13 +44,13 @@
 
 /datum/event2/event/virus/set_up()
 	for(var/mob/living/carbon/human/H in player_list)
-		if(H.client && !H.isSynthetic() && H.stat != DEAD && !player_is_antag(H.mind) && !isbelly(H.loc))
+		if(H.client && !H.isSynthetic() && H.stat != DEAD && !player_is_antag(H.mind) && !isbelly(H.loc) && !H.species.get_virus_immune(H)) // CHOMPEdit - Make sure they're not immune
 			candidates += H
 	candidates = shuffle(candidates)
 
 /datum/event2/event/virus/announce()
-	command_announcement.Announce("Confirmed outbreak of level 7 biohazard aboard \the [location_name()]. \
-	All personnel must contain the outbreak.", "Biohazard Alert", new_sound = 'sound/AI/outbreak7.ogg')
+	command_announcement.Announce("Confirmed outbreak of level 7 biohazard aboard \the [location_name()]. All personnel must contain the outbreak.", "Viral Outbreak", new_sound = 'sound/AI/outbreak7.ogg')
+	// Chomp edit: Changed "Biohazard Alert" to "Viral Outbreak"
 
 /datum/event2/event/virus/start()
 	if(!candidates.len)

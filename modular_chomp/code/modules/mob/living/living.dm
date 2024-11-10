@@ -45,7 +45,7 @@
 	// QDEL_NULL(stunnedloop)
 
 /mob/living/proc/vs_animate(var/belly_to_animate)
-  return
+	return
 
 /*
 Maybe later, gotta figure out a way to click yourself when in a locker etc.
@@ -53,13 +53,13 @@ Maybe later, gotta figure out a way to click yourself when in a locker etc.
 /mob/living/proc/click_self()
 	set name = "Click Self"
 	set desc = "Clicks yourself. Useful when you can't see yourself."
-	set category = "IC"
+	set category = "IC.Game"
 
 	ClickOn(src)
 
 /mob/living/New(var/newloc)
 	..()
-	verbs |= /mob/living/proc/click_self
+	add_verb(src,/mob/living/proc/click_self) //CHOMPEdit TGPanel
 */
 
 /mob/living/proc/handle_vorefootstep(m_intent, turf/T) // Moved from living_ch.dm
@@ -113,10 +113,10 @@ Maybe later, gotta figure out a way to click yourself when in a locker etc.
 		var/mob/living/new_mob
 		if(shapeshifting && src.tf_form)
 			new_mob = src.tf_form
-			new_mob.verbs |= /mob/living/proc/shapeshift_form
+			add_verb(new_mob,/mob/living/proc/shapeshift_form) //CHOMPEdit TGPanel
 			new_mob.tf_form = src
 			new_mob.forceMove(src.loc)
-			visible_message("<span class='warning'>[src] twists and contorts, shapeshifting into a different form!</span>")
+			visible_message(span_warning("[src] twists and contorts, shapeshifting into a different form!"))
 			if(new_mob.ckey)
 				new_mob.tf_form_ckey = new_mob.ckey
 		else
@@ -163,6 +163,8 @@ Maybe later, gotta figure out a way to click yourself when in a locker etc.
 					new_mob.vore_organs += B
 				new_mob.nutrition = src.nutrition
 
+				src.soulgem?.transfer_self(new_mob) //CHOMPAdd Soulcatcher
+
 			new_mob.ckey = src.ckey
 			if(new_mob.tf_form_ckey)
 				src.ckey = new_mob.tf_form_ckey
@@ -179,10 +181,10 @@ Maybe later, gotta figure out a way to click yourself when in a locker etc.
 
 /mob/living/proc/shapeshift_form()
 	set name = "Shapeshift Form"
-	set category = "Abilities"
+	set category = "Abilities.Shapeshift"
 	set desc = "Shape shift between set mob forms. (Requires a spawned mob to be varedited into the user's tf_form var as mob reference.)"
 	if(!istype(tf_form))
-		to_chat(src, "<span class='notice'>No shapeshift form set. (Requires a spawned mob to be varedited into the user's tf_form var as mob reference.)</span>")
+		to_chat(src, span_notice("No shapeshift form set. (Requires a spawned mob to be varedited into the user's tf_form var as mob reference.)"))
 		return
 	else
 		transform_into_mob(tf_form, TRUE, TRUE, TRUE)
@@ -191,3 +193,41 @@ Maybe later, gotta figure out a way to click yourself when in a locker etc.
 	. = ..()
 	if(size_multiplier != 1 || icon_scale_x != 1 && center_offset > 0)
 		update_transform(TRUE)
+
+//ChompEDIT START - Removal of usr
+/mob/living/proc/set_metainfo_favs(var/mob/user, var/reopen = TRUE)
+	if(user != src)
+		return
+	var/new_metadata = strip_html_simple(tgui_input_text(user, "Enter any information you'd like others to see relating to your FAVOURITE roleplay preferences. This will not be saved permanently unless you click save in the OOC notes panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(ooc_notes_favs), multiline = TRUE,  prevent_enter = TRUE))
+	if(new_metadata && CanUseTopic(user))
+		if(new_metadata == "!clear")
+			new_metadata = ""
+		ooc_notes_favs = new_metadata
+		client.prefs.metadata_favs = new_metadata
+		to_chat(user, span_filter_notice("OOC note favs have been updated. Don't forget to save!"))
+		log_admin("[key_name(user)] updated their OOC note favs mid-round.")
+		if(reopen)
+			ooc_notes_window(user)
+
+/mob/living/proc/set_metainfo_maybes(var/mob/user, var/reopen = TRUE)
+	if(user != src)
+		return
+	var/new_metadata = strip_html_simple(tgui_input_text(user, "Enter any information you'd like others to see relating to your MAYBE roleplay preferences. This will not be saved permanently unless you click save in the OOC notes panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(ooc_notes_maybes), multiline = TRUE,  prevent_enter = TRUE))
+	if(new_metadata && CanUseTopic(user))
+		if(new_metadata == "!clear")
+			new_metadata = ""
+		ooc_notes_maybes = new_metadata
+		client.prefs.metadata_maybes = new_metadata
+		to_chat(user, span_filter_notice("OOC note maybes have been updated. Don't forget to save!"))
+		log_admin("[key_name(user)] updated their OOC note maybes mid-round.")
+		if(reopen)
+			ooc_notes_window(user)
+
+/mob/living/proc/set_metainfo_ooc_style(var/mob/user, var/reopen = TRUE)
+	if(user != src)
+		return
+	ooc_notes_style = !ooc_notes_style
+	client.prefs.matadata_ooc_style = !client.prefs.matadata_ooc_style
+	if(reopen)
+		ooc_notes_window(user)
+//ChompEDIT END - Removal of usr

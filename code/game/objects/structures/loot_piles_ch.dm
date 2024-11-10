@@ -99,10 +99,17 @@
 		)
 
 	rare_loot = list(
-		/obj/item/weapon/gun/projectile/gyropistol,
+		/obj/item/gun/projectile/gyropistol,
 		/obj/item/mecha_parts/mecha_equipment/generator/nuclear
 		)
 
 /obj/structure/loot_pile/mecha/ripley/pirate
 	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
 	icon_state = "pirate-broken"
+
+
+/obj/structure/loot_pile/maint/technical
+	density = FALSE
+
+/obj/structure/loot_pile/maint/boxfort
+	density = FALSE

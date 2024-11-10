@@ -1,0 +1,300 @@
+2024-10-01:
+  Missile597:
+  - rscadd: Added shield diffusers to airlocks at the docks
+  - rscadd: Added shield diffusers around a few point defence turrets so that their
+      diagonal angles don't get blocked off by shields.
+  - rscadd: Added a powernet sensor for the mains (master) grid and tweaked the names
+      of a few others.
+  - rscadd: Added a few meters onto pipes in the supermatter engine that could be
+      useful, and I forgot to add some before
+  - rscdel: Trimmed some redundant wires around shield gens
+  - qol: Increased the amount of signs around shield gen rooms to make them more obvious
+      and easier to find
+  - balance: Closed the hole above misc science with glass for the meantime to prevent
+      easy break-ins
+  - bugfix: Added terminals to the cell rack PSU's in engineering so they can actually
+      recharge now. Removed a few of them though cause they had way too many.
+  - bugfix: Fixed the shutters in Xenobio to be solid and opaque instead of see through
+      at round start.
+  - bugfix: Fixed the oxygen tank in atmos that had the vent and injector the wrong
+      way around
+  - bugfix: Fixed a valve and adaptor that were the wrong way around in the command
+      emergency atmos station
+  - maptweak: Remapped the centre shield gen spot to be ready to hook up to mains
+  - maptweak: Remapped the secondary engine airlock to be a bit more effective at
+      cycling in AND out without wasting air (hopefully).
+  - maptweak: Properly isolated the dorms area with it's own private distro and returned
+      the southern side of the map to the distro loop which had been previously disconnected
+      (previously dorms were still connected to the southern station parts including
+      parts of medical, but the whole of these rooms were cut off from distro. Now
+      it's all reconnected except specifically deck 3's dorm rooms which feed from
+      their own atmos tank)
+  - maptweak: Replaced the air tank in engineering's suit storage with an oxygen tank
+      so it can be used for internals refill
+  - spellcheck: Fixed a typo in the CE office, RIP emergecny bag of holding
+2024-10-02:
+  CHOMPStation2:
+  - balance: Hanner no longer have NO_SCAN.
+  - qol: face of glamour uses a new pref, allow_mimicry
+  - qol: domination no longer checks resleeve lock
+  - qol: morph uses new pref, allow _mimicry,
+  - rscadd: The Grower Pod now shows progress bars when you examine it.
+  Darlantanis:
+  - bugfix: adds missing vore init check to kelpie
+2024-10-03:
+  CHOMPStation2:
+  - qol: fixed a stray pixel on the inner thighs marking
+  - rscadd: new inner thighs marking
+  Darlantanis:
+  - bugfix: fixes kelpie init again
+  FluffMedic:
+  - bugfix: fixes some null messaging
+  NickBelmont:
+  - rscadd: Belch chance parameter to the interactions tab of the vorepanel
+  - rscadd: Prey resisting can trigger a belch emote if interactions are set up to
+      allow it.
+  TheCaramelion:
+  - maptweak: Fixes tape spawning in place of recording tape
+2024-10-04:
+  Asher-42:
+  - qol: swapped chest transparency toggle for proteans to make everything but their
+      head stransparent to allow for a metal shell.
+  CHOMPStation2:
+  - bugfix: Tooltips in the body scanner now work again.
+  - bugfix: The patient monitor/OR console has a scrollbar that works now.
+  - bugfix: Resleeving console OOC notes no longer overflow and a bunch of other random
+      little things
+  - bugfix: Medical records console has a proper scroller now.
+  Kashargul:
+  - bugfix: runtime flood from graffiti and makes them persist properly
+  - bugfix: pitcher plant vore excludes
+  - bugfix: mails have colours again
+  - bugfix: icon overflow on mail
+  - bugfix: nulls being passable after the tgui input selection
+  TheGreatKitsune:
+  - bugfix: Removed ability for ghosts to make sound with bags.
+2024-10-05:
+  CHOMPStation2:
+  - refactor: Belly message formatting has been unified into one proc.
+  - rscadd: 'All formatted belly messages can now use a number of new %replacements,
+      which choose from a list of preset words. You can see all of the words that
+      will be used in a new help menu next to the belly description, but this PR adds
+      the following: %goo, %happybelly, %fat, %dick, %boob, %pussy, %grip, %cozy,
+      %angry, %acid, %snack, %hot'
+  - rscadd: For example, %goo will be replaced randomly with "muck", or "goo", or
+      "sludge", or "slime", or another 10 different options - this random replacement
+      happens every time a message is printed, so it's really helpful for idle messages!
+  - bugfix: NanoMap components (air alarm computer, crew monitor) have been much improved.
+  - bugfix: You can now use W/S and Up Arrow/Down Arrow to zoom on a NanoMap.
+  - bugfix: NanoMap zooming should be centered more correctly.
+  - bugfix: Tooltips show up when hovering over icons in a NanoMap.
+  - bugfix: The Atmospherics Control interface occasionally started to scroll weirdly
+      in map ivew.
+  - qol: The R&D Console has had a major facelift!
+  - bugfix: The R&D Console will no longer automatically pop open it's UI against
+      your will when it's done building stuff.
+  Kashargul:
+  - rscadd: bluespace disruptor for admin event use
+  - bugfix: AI shells getting out of sync with the AI during ion storms
+  - qol: better styling of the vorepanel
+  - bugfix: a rare crash condition after reloading bellies
+  - bugfix: Bodycam screen view now updates on move
+  TheCaramelion:
+  - bugfix: Removed a default object from the junk mail
+  - bugfix: Verb vote placed in the correct verb panel location
+2024-10-06:
+  Hunter-Dovetail:
+  - rscadd: hippo_head body marking!
+  Kashargul:
+  - bugfix: chomp specific auto transfer dest placeholder
+  TheCaramelion:
+  - bugfix: Geneticist now gain PTO
+2024-10-07:
+  CHOMPStation2:
+  - rscadd: Circuit assemblies now use a visual coding system.
+  FluffMedic:
+  - rscadd: The planet of Tyr, an anomalous valley landing spot. Replacement for valley.
+      Beta stage
+  TheCaramelion:
+  - qol: Heads of staff now use time instead of whitelists
+2024-10-08:
+  FluffMedic:
+  - bugfix: fixes a tyr softlock, and planetary turf things
+  Kashargul:
+  - code_imp: converts our spans
+  - qol: phased kin can now be clicked
+2024-10-09:
+  tacoguy7765093:
+  - rscadd: Head positions have anti job camping now
+2024-10-10:
+  Kashargul:
+  - bugfix: missing subcategory in tyr crafting leading to crafting UI crashes
+2024-10-11:
+  FluffMedic:
+  - rscadd: A new hidden boss has been added to Tyr,
+  - balance: Some Tyr items and creatures have been altered
+  Kashargul:
+  - code_imp: database query deletion fix
+  Missile597:
+  - rscadd: Added reaction for Paralysing Fluid
+  - rscadd: Added reaction for Numbing Enzyme
+  - rscadd: Added reaction for Deuterium solidification
+  - balance: Reduced the cost of the SMES coil crates. Standard coils are changed
+      75 -> 20. Upgraded coils are changed 90 -> 35
+2024-10-12:
+  Hunter-Dovetail:
+  - rscadd: VBO_maw23
+  - rscadd: VBOanim_belly8
+  - rscadd: VBOanim_belly9
+  - rscadd: VBOanim_belly10
+  TheCaramelion:
+  - balance: Adjusted the time needed for various job positions
+2024-10-13:
+  CHOMPStation2:
+  - rscadd: '%digestedprey in a belly message will give the number of prey digested
+      in that specific belly in the same shift.'
+  - rscadd: The mechanical vore preferences UI is now in dark mode and is color coded
+      to easily distinguish yes and no
+  - rscadd: Crew Manifest now uses pretty TGUI in lobby and for ghosts.
+  - rscadd: 'The latest and greatest from the hit studio TotallyNotMalware:tm:, Fishy
+      Fishy 905:tm: has been brought to a local NtOS:tm: software repository near
+      you. (It''s a stardew valley fishing minigame!)'
+  - bugfix: Just clicking on a port will no longer crash the circuit UI
+  - qol: Removed broken click to connect ports, UI now expects you to always hold
+      down the mouse button while connecting ports
+  - rscadd: ATMs now use a fancy new UI
+  Kashargul:
+  - qol: moves all belly dmis to datums to get the icon cache path from
+2024-10-14:
+  CHOMPStation2:
+  - rscadd: You can now modify internal tank settings from the RIG UI.
+  - qol: RIG UI top buttons shifted about and minimized.
+  tacoguy7765093:
+  - maptweak: Fixed area issues and maphelpers in the lone home shuttle
+2024-10-15:
+  AzulKitsune:
+  - bugfix: 'fixed the size implant not supporting larger/smaller sizes in dorms.
+
+      :cl:'
+  CHOMPStation2:
+  - rscadd: TGUI Say now has a slider for how tall you want the window to be by default.
+  - rscadd: TGUI Say can now be disabled just for me/subtle.
+  FluffMedic:
+  - qol: made tyr caverns caverns
+  Kashargul:
+  - rscdel: old assembly UI
+  TheCaramelion:
+  - maptweak: Revamped Chemistry
+  - maptweak: Revamped Patient rooms
+  - maptweak: Revamped Destillery room
+  - maptweak: Revamped Medical storage
+  - maptweak: Virology is now on Deck 2
+  - maptweak: Genetics is now on Deck 2
+  - maptweak: Morgue is now on Deck 1
+  - maptweak: Cryo has been expanded
+  - maptweak: Medical has now two scanners and two sleepers
+  - rscadd: Added "salvage items" that can be found with mobs or in specific PoIs
+  - balance: Reduced the amount of guns and weapons found in exploration Pois
+2024-10-17:
+  Etheo:
+  - bugfix: Fixed Marish to be better and more lore accurate.
+  tacoguy7765093:
+  - rscadd: Added a new outsider pod called SecondLifeBar with nearly every scene
+      tool.
+2024-10-18:
+  CHOMPStation2:
+  - rscadd: The entire upper right quadrant of the game window has been replaced with
+      a new stat/verb panel that doesn't lag the client to death.
+  - rscadd: Verdigris, an in-tree rust module - responsible for cellular automata
+      currently, and more soon!
+  - rscadd: Server starts faster thanks to Verdigris generating ore turfs much faster.
+2024-10-19:
+  CHOMPStation2:
+  - rscadd: Action buttons now have a mouse cursor override when being dragged to
+      show where you will drop them.
+  - bugfix: You can actually move action buttons around again and they'll stay there,
+      until you shift-click on them.
+  Kashargul:
+  - bugfix: prussian blue in the chomp override
+  TheCaramelion:
+  - maptweak: Places lights on Distillery, Chemistry and Cryo
+  - maptweak: Genetics receiving all items throw into disposals
+  - maptweak: Replaced roller beds next to the scanners
+  - maptweak: Fixed virology door buttons
+  - maptweak: Changed wrong tables in Genetics and Chemistry
+  - maptweak: Manifold in Distillery is now hidden
+2024-10-21:
+  BigBadE:
+  - rscadd: Gryphon simplemob with sprites, bellies, and a custom AI
+  - bugfix: Properly made check_vore work for lazily loaded bellies
+  - bugfix: Fixed the double exclamation mark in the bump text
+  - image: Added the gryphon, belly, and throat sprites
+  - code_imp: Added a custom AI for the gryphon
+  CHOMPStation2:
+  - bugfix: Runtime in rig/dropped
+  - rscadd: Overmap helm controls now show the ship in a little map element
+  - qol: Action buttons are slowly getting better.
+  - rscadd: Latejoin UI is now fancy TGUI
+  ShadowLarkens:
+  - qol: Add bapi-dmm, a rust maploader, to reduce init time by 90 seconds.
+  - qol: Moved tracy init to before-world-New.
+  - rscdel: No more pretending to support map rotation
+2024-10-22:
+  Darlantanis:
+  - bugfix: makes leopardmander maw autotransfer functional
+2024-10-23:
+  CHOMPStation2:
+  - bugfix: Crew manifest not showing up
+  Darlantanis:
+  - bugfix: fixes slug death state
+2024-10-24:
+  ShadowLarkens:
+  - bugfix: Better error handling in bapi-dmm
+2024-10-26:
+  Kashargul:
+  - qol: marish language back to pink
+2024-10-27:
+  CHOMPStation2StaffMirrorBot:
+  - qol: The autolathe UI has been redesigned and optimized.
+  - rscadd: Legacy robot UIs replaced with Robotact, a new all-in-one UI for all things
+      robot.
+  - qol: Statpanel now uses /tg/'s latest styles and can have it's font size adjusted.
+  - rscadd: Action buttons are now able to be grouped and sorted under the new Action
+      Palette.
+  TheCaramelion:
+  - rscadd: Ghost costume
+  - rscadd: Candy bowls
+  - rscadd: THE costume box pile
+  - rscadd: Costume boxes
+  - rscadd: Candy bags
+  - maptweak: Candles, cobwebs, spiders, and candy all over the map.
+  tacoguy7765093:
+  - maptweak: Fixes viro airlock and genetics disposals.
+2024-10-28:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: You can now deploy hardsuit helms over top of your normal headwear, the
+      same as magboots.
+  Kashargul:
+  - bugfix: xenoarch init ordern
+  TheCaramelion:
+  - bugfix: Fixed halloween candy bowls becoming stuck
+2024-10-29:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Alt-click menu is visually correct again
+  - bugfix: Clicking on an embedded controller in the alt click menu no longer runtimes
+  - bugfix: Clicking on a mob in the alt click menu now works
+2024-10-31:
+  Hunter-Dovetail:
+  - rscadd: VBO_maw24
+  - rscadd: VBO_maw25
+  - rscadd: '"trex_upperjaw"'
+  - rscadd: '"trex_lowerjaw"'
+  - bugfix: VBOanim_belly9
+  - bugfix: VBOanim_belly10
+  - bugfix: full_hippohead (sprite)
+  Kazzc:
+  - code_imp: adds relic base for unit tests with some fixed issues on that map to
+      make it pass
+  - code_imp: fix pirate gun using a global local list...
+  - bugfix: multiple init_vore procs not being sane
+  - bugfix: seasonal autumn flora using the wrong name

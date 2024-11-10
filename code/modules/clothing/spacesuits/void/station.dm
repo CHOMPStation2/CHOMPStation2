@@ -9,6 +9,7 @@
 	min_pressure_protection = 0  * ONE_ATMOSPHERE
 	max_pressure_protection = 15 * ONE_ATMOSPHERE
 	max_heat_protection_temperature = SPACE_SUIT_MAX_HEAT_PROTECTION_TEMPERATURE+5000
+	camera_networks = list(NETWORK_ENGINEERING)
 
 /obj/item/clothing/suit/space/void/engineering
 	name = "engineering voidsuit"
@@ -16,7 +17,7 @@
 	icon_state = "rig-engineering"
 	item_state_slots = list(slot_r_hand_str = "eng_voidsuit", slot_l_hand_str = "eng_voidsuit")
 	armor = list(melee = 30, bullet = 5, laser = 20, energy = 5, bomb = 35, bio = 100, rad = 70)
-	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/device/suit_cooling_unit,/obj/item/weapon/storage/bag/ore,/obj/item/device/t_scanner,/obj/item/weapon/pickaxe, /obj/item/weapon/rcd)
+	allowed = list(/obj/item/flashlight,/obj/item/tank,/obj/item/suit_cooling_unit,/obj/item/storage/bag/ore,/obj/item/t_scanner,/obj/item/pickaxe, /obj/item/rcd)
 	min_pressure_protection = 0  * ONE_ATMOSPHERE
 	max_pressure_protection = 15 * ONE_ATMOSPHERE
 	max_heat_protection_temperature = SPACE_SUIT_MAX_HEAT_PROTECTION_TEMPERATURE+5000
@@ -99,7 +100,7 @@
 	desc = "A hand-me-down salvage voidsuit. It has obviously had a lot of repair work done to its radiation shielding."
 	icon_state = "rig-engineeringsav"
 	armor = list(melee = 50, bullet = 15, laser = 25, energy = 15, bomb = 45, bio = 100, rad = 100)
-	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/device/suit_cooling_unit,/obj/item/weapon/storage/toolbox,/obj/item/weapon/storage/briefcase/inflatable,/obj/item/device/t_scanner,/obj/item/weapon/rcd)
+	allowed = list(/obj/item/flashlight,/obj/item/tank,/obj/item/suit_cooling_unit,/obj/item/storage/toolbox,/obj/item/storage/briefcase/inflatable,/obj/item/t_scanner,/obj/item/rcd)
 	slowdown = 0.5
 
 //Mining
@@ -110,13 +111,14 @@
 	item_state_slots = list(slot_r_hand_str = "mining_helm", slot_l_hand_str = "mining_helm")
 	armor = list(melee = 50, bullet = 15, laser = 25, energy = 15, bomb = 55, bio = 100, rad = 50)
 	light_overlay = "helmet_light_dual"
+	camera_networks = list(NETWORK_CARGO)
 
 /obj/item/clothing/suit/space/void/mining
 	name = "mining voidsuit"
 	desc = "A special suit that protects against hazardous, low pressure environments. Has reinforced plating."
 	icon_state = "rig-mining"
 	item_state_slots = list(slot_r_hand_str = "mining_voidsuit", slot_l_hand_str = "mining_voidsuit")
-	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/device/suit_cooling_unit,/obj/item/weapon/pickaxe)
+	allowed = list(/obj/item/flashlight,/obj/item/tank,/obj/item/suit_cooling_unit,/obj/item/pickaxe)
 	armor = list(melee = 50, bullet = 15, laser = 25, energy = 15, bomb = 55, bio = 100, rad = 50)
 	breach_threshold = 14 //These are kinda thicc
 	resilience = 0.15 //Armored
@@ -142,13 +144,14 @@
 	icon_state = "rig0-medical"
 	item_state_slots = list(slot_r_hand_str = "medical_helm", slot_l_hand_str = "medical_helm")
 	armor = list(melee = 30, bullet = 5, laser = 20, energy = 5, bomb = 25, bio = 100, rad = 80)
+	camera_networks = list(NETWORK_MEDICAL)
 
 /obj/item/clothing/suit/space/void/medical
 	name = "medical voidsuit"
 	desc = "A special suit that protects against hazardous, low pressure environments. Has minor radiation shielding."
 	icon_state = "rig-medical"
 	item_state_slots = list(slot_r_hand_str = "medical_voidsuit", slot_l_hand_str = "medical_voidsuit")
-	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/device/suit_cooling_unit,/obj/item/weapon/storage/firstaid,/obj/item/device/healthanalyzer,/obj/item/stack/medical)
+	allowed = list(/obj/item/flashlight,/obj/item/tank,/obj/item/suit_cooling_unit,/obj/item/storage/firstaid,/obj/item/healthanalyzer,/obj/item/stack/medical)
 	armor = list(melee = 30, bullet = 5, laser = 20, energy = 5, bomb = 25, bio = 100, rad = 80)
 
 //Medical EMT Voidsuit
@@ -274,6 +277,7 @@
 	armor = list(melee = 50, bullet = 25, laser = 25, energy = 15, bomb = 45, bio = 100, rad = 10)
 	siemens_coefficient = 0.7
 	light_overlay = "helmet_light_dual"
+	camera_networks = list(NETWORK_SECURITY)
 
 /obj/item/clothing/suit/space/void/security
 	name = "security voidsuit"
@@ -281,7 +285,7 @@
 	icon_state = "rig-sec"
 	item_state_slots = list(slot_r_hand_str = "sec_voidsuit", slot_l_hand_str = "sec_voidsuit")
 	armor = list(melee = 50, bullet = 25, laser = 25, energy = 15, bomb = 45, bio = 100, rad = 10)
-	allowed = list(/obj/item/weapon/gun,/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/device/suit_cooling_unit,/obj/item/weapon/melee/baton)
+	allowed = list(/obj/item/gun,/obj/item/flashlight,/obj/item/tank,/obj/item/suit_cooling_unit,/obj/item/melee/baton)
 	siemens_coefficient = 0.7
 	breach_threshold = 14 //These are kinda thicc
 	resilience = 0.15 //Armored
@@ -332,6 +336,7 @@
 	light_overlay = "helmet_light_dual"
 	min_pressure_protection = 0 * ONE_ATMOSPHERE
 	max_pressure_protection = 20* ONE_ATMOSPHERE
+	camera_networks = list(NETWORK_ENGINEERING)
 
 /obj/item/clothing/suit/space/void/atmos
 	name = "atmos voidsuit"
@@ -374,12 +379,12 @@
 
 /obj/item/clothing/suit/space/void/exploration
 	name = "exploration voidsuit"
-	desc = "A hazard and radiation resistant voidsuit, featuring the Explorer emblem on its chest plate. Designed for exploring unknown planetary environments."
+	desc = "A hazard and radiation resistant voidsuit, featuring the " + JOB_EXPLORER + " emblem on its chest plate. Designed for exploring unknown planetary environments."
 	icon_state = "void_explorer"
 	item_state_slots = list(slot_r_hand_str = "skrell_suit_black", slot_l_hand_str = "skrell_suit_black")
 	armor = list(melee = 50, bullet = 15, laser = 35, energy = 25, bomb = 30, bio = 100, rad = 70)
-	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/device/suit_cooling_unit,/obj/item/stack/flag,/obj/item/device/healthanalyzer,/obj/item/device/gps,/obj/item/device/radio/beacon, \
-	/obj/item/weapon/shovel,/obj/item/ammo_magazine,/obj/item/weapon/gun)
+	allowed = list(/obj/item/flashlight,/obj/item/tank,/obj/item/suit_cooling_unit,/obj/item/stack/flag,/obj/item/healthanalyzer,/obj/item/gps,/obj/item/radio/beacon, \
+	/obj/item/shovel,/obj/item/ammo_magazine,/obj/item/gun)
 	breach_threshold = 14 //These are kinda thicc
 	resilience = 0.15 //Armored
 
@@ -396,12 +401,12 @@
 
 /obj/item/clothing/suit/space/void/expedition_medical
 	name = "field medic voidsuit"
-	desc = "A hazard and radiation resistant voidsuit, featuring the Explorer emblem and a green cross on its chest plate. Seems to be a little lighter and more flexible than the regular explorer issue."
+	desc = "A hazard and radiation resistant voidsuit, featuring the " + JOB_EXPLORER + " emblem and a green cross on its chest plate. Seems to be a little lighter and more flexible than the regular explorer issue."
 	icon_state = "void_exp_medic"
 	item_state_slots = list(slot_r_hand_str = "skrell_suit_black", slot_l_hand_str = "skrell_suit_black")
 	armor = list(melee = 50, bullet = 15, laser = 25, energy = 15, bomb = 30, bio = 100, rad = 90)
-	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/device/suit_cooling_unit,/obj/item/stack/flag,/obj/item/device/healthanalyzer,/obj/item/device/gps,/obj/item/device/radio/beacon, \
-	/obj/item/weapon/shovel,/obj/item/ammo_magazine,/obj/item/weapon/gun,/obj/item/weapon/storage/firstaid,/obj/item/stack/medical)
+	allowed = list(/obj/item/flashlight,/obj/item/tank,/obj/item/suit_cooling_unit,/obj/item/stack/flag,/obj/item/healthanalyzer,/obj/item/gps,/obj/item/radio/beacon, \
+	/obj/item/shovel,/obj/item/ammo_magazine,/obj/item/gun,/obj/item/storage/firstaid,/obj/item/stack/medical)
 	breach_threshold = 14 //These are kinda thicc
 	resilience = 0.15 //Armored
 	max_heat_protection_temperature = SPACE_SUIT_MAX_HEAT_PROTECTION_TEMPERATURE+5000
@@ -426,6 +431,7 @@
 	item_state_slots = list(slot_r_hand_str = "atmos_helm", slot_l_hand_str = "atmos_helm")
 	armor = list(melee = 40, bullet = 10, laser = 25, energy = 15, bomb = 25, bio = 100, rad = 60)
 	light_overlay = "helmet_light_dual"
+	camera_networks = list(NETWORK_CIVILIAN)
 
 /obj/item/clothing/suit/space/void/pilot
 	desc = "An atmos resistant voidsuit for space and planet exploration."
@@ -433,7 +439,7 @@
 	item_state_slots = list(slot_r_hand_str = "atmos_voidsuit", slot_l_hand_str = "atmos_voidsuit")
 	name = "pilot voidsuit"
 	armor = list(melee = 40, bullet = 10, laser = 25, energy = 15, bomb = 25, bio = 100, rad = 60)
-	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/device/suit_cooling_unit,/obj/item/weapon/storage/toolbox,/obj/item/weapon/storage/briefcase/inflatable)
+	allowed = list(/obj/item/flashlight,/obj/item/tank,/obj/item/suit_cooling_unit,/obj/item/storage/toolbox,/obj/item/storage/briefcase/inflatable)
 
 /obj/item/clothing/head/helmet/space/void/pilot/alt
 	icon_state = "rig0_pilot2"

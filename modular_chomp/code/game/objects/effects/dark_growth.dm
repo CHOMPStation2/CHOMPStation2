@@ -7,26 +7,53 @@
 	var/health = 10
 	var/obj/structure/prop/dark_node/linked_node = null
 
+/obj/effect/dark/Initialize(mapload)
+	. = ..()
+	if(prob(5))
+		add_glow()
+
+/obj/effect/dark/proc/add_glow()
+	var/flip = rand(1,2)
+	var/choice
+	var/choiceb
+	if(flip == 1)
+		choice = "overlay-[rand(1,6)]"
+	if(flip == 2)
+		choice = "overlay-[rand(7,12)]"
+	var/image/i = image('icons/turf/flooring/weird_vr.dmi', choice)
+	i.plane = PLANE_LIGHTING_ABOVE
+	add_overlay(i)
+	if(prob(10))
+		if(flip == 1)
+			choiceb = "overlay-[rand(7,12)]"
+		if(flip == 2)
+			choiceb = "overlay-[rand(1,6)]"
+		var/image/ii = image('icons/turf/flooring/weird_vr.dmi', choiceb)
+		add_overlay(ii)
+
 /obj/effect/dark/Crossed(O)
 	. = ..()
 	if(!isliving(O))
 		return
+	cut_overlays()
+	if(prob(5))
+		add_glow()
 	if(istype(O, /mob/living/carbon/human))
 		var/mob/living/carbon/human/L = O
 		if(istype(L.species, /datum/species/crew_shadekin))
 			L.halloss += 5
 			if(prob(50))
-				to_chat(L, "<span class='danger'>The more you move through this darkness, the more you can feel a throbbing, shooting ache in your bones.</span>")
+				to_chat(L, span_danger("The more you move through this darkness, the more you can feel a throbbing, shooting ache in your bones."))
 			if(prob(5))
 				L.visible_message("[L]'s body gives off a faint, sparking, haze...", "Your body gives off a faint, sparking, haze...", runemessage = "gives off a faint, sparking haze")
 		else if(istype(L.species, /datum/species/shadekin))
 			var/obj/item/organ/internal/brain/shadekin/B = L.internal_organs_by_name["brain"]
 			B.dark_energy += 10
 			if(prob(10))
-				to_chat(L, "<span class='notice'>You can feel the energy flowing into you!</span>")
+				to_chat(L, span_notice("You can feel the energy flowing into you!"))
 		else
 			if(prob(0.25))
-				to_chat(L, "<span class='danger'>The darkness seethes under your feet...</span>")
+				to_chat(L, span_danger("The darkness seethes under your feet..."))
 				L.hallucination += 50
 
 /obj/effect/dark/proc/light_check()
@@ -88,8 +115,14 @@
 		dark_tile.unlinked()
 	return ..()
 
+/obj/effect/dark/Destroy()
+	if(linked_node)
+		linked_node.children_effects -= src
+		linked_node = null
+	. = ..()
+
 /obj/effect/dark/process()
-	set background = 1
+	//set background = 1
 	var/turf/U = get_turf(src)
 
 	if(isspace(U))
@@ -119,7 +152,7 @@
 
 
 /obj/structure/prop/dark_node/process()
-	set background = 1
+	//set background = 1
 
 	if(!(locate(/obj/effect/dark) in get_turf(src)))
 		var/new_dark_tile = new /obj/effect/dark/floor(get_turf(src), src)

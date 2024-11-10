@@ -2,10 +2,10 @@ var/checked_for_inactives = 0
 var/inactive_keys = "None<br>"
 
 /client/proc/check_customitem_activity()
-	set category = "Admin"
+	set category = "Admin.Investigate"
 	set name = "Check activity of players with custom items"
 
-	var/dat = "<b>Inactive players with custom items</b><br>"
+	var/dat = span_bold("Inactive players with custom items") + "<br>"
 	dat += "<br>"
 	dat += "The list below contains players with custom items that have not logged\
 	 in for the past two months, or have not logged in since this system was implemented.\
@@ -55,7 +55,7 @@ var/inactive_keys = "None<br>"
 	//run a query to get all ckeys inactive for over 2 months
 	var/list/inactive_ckeys = list()
 	if(ckeys_with_customitems.len)
-		var/DBQuery/query_inactive = SSdbcore.NewQuery("SELECT ckey, lastseen FROM erro_player WHERE datediff(Now(), lastseen) > 60") //CHOMPEdit TGSQL
+		var/datum/db_query/query_inactive = SSdbcore.NewQuery("SELECT ckey, lastseen FROM erro_player WHERE datediff(Now(), lastseen) > 60") //CHOMPEdit TGSQL
 		query_inactive.Execute()
 		while(query_inactive.NextRow())
 			var/cur_ckey = query_inactive.item[1]
@@ -68,16 +68,16 @@ var/inactive_keys = "None<br>"
 	//if there are ckeys left over, check whether they have a database entry at all
 	if(ckeys_with_customitems.len)
 		for(var/cur_ckey in ckeys_with_customitems)
-			var/DBQuery/query_inactive = SSdbcore.NewQuery("SELECT ckey FROM erro_player WHERE ckey = :t_ckey", list("t_ckey" = cur_ckey)) //CHOMPEdit TGSQL
+			var/datum/db_query/query_inactive = SSdbcore.NewQuery("SELECT ckey FROM erro_player WHERE ckey = :t_ckey", list("t_ckey" = cur_ckey)) //CHOMPEdit TGSQL
 			query_inactive.Execute()
-			if(!query_inactive.RowCount())
+			if(!length(query_inactive.rows)) //CHOMPEdit TGSQL
 				inactive_ckeys += cur_ckey
 			qdel(query_inactive) //CHOMPEdit TGSQL
 	if(inactive_ckeys.len)
 		inactive_keys = ""
 		for(var/cur_key in inactive_ckeys)
 			if(inactive_ckeys[cur_key])
-				inactive_keys += "<b>[cur_key]</b> - [inactive_ckeys[cur_key]]<br>"
+				inactive_keys += span_bold("[cur_key]") + " - [inactive_ckeys[cur_key]]<br>"
 			else
 				inactive_keys += "[cur_key] - no database entry<br>"
 

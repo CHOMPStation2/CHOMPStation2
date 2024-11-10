@@ -15,13 +15,11 @@ del: Removed old things
 qol: made something easier to use
 balance: rebalanced something
 fix: fixed a few things
-remap: tweaked something in a map
-soundadd: added audio or sound effects
-sounddel: removed audio or sound effects
-imageadd: added some icons or images
-imagedel: removed some icons or images
+maptweak: tweaked something in a map
+sound: added/modified/removed audio or sound effects
+image: added/modified/removed some icons or images
 spellcheck: fixed a few typos
-code_imp: changed some code
+code: changed some code
 refactor: refactored some code
 config: changed some config setting
 admin: messed with admin stuff

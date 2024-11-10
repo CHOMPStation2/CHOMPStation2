@@ -19,12 +19,12 @@
 	icon = 'icons/mob/alienanimals_x32.dmi'
 	color = "#76462c"
 
-	faction = "animal"
+	faction = FACTION_ANIMAL
 	maxHealth = 40
 	health = 40
 	movement_cooldown = -1
 	meat_amount = 1
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
+	meat_type = /obj/item/reagent_containers/food/snacks/meat
 
 	response_help = "pets"
 	response_disarm = "slaps"
@@ -52,6 +52,8 @@
 	var/do_seasons = TRUE
 	picked_color = FALSE //CHOMPedit: removed "var/" since we already have this defined for all simple_mobs.
 
+	allow_mind_transfer = TRUE
+
 /////////////////////////////////////// Vore stuff///////////////////////////////////////////
 
 	swallowTime = 4 SECONDS
@@ -68,9 +70,11 @@
 	vore_default_item_mode = IM_DIGEST
 
 /mob/living/simple_mob/vore/squirrel/init_vore()
-	if(!voremob_loaded) //CHOMPAdd
-		return //CHOMPAdd
-	.=..() //CHOMPEdit
+ 	//CHOMPEdit Start
+	if(!voremob_loaded)
+		return
+	.=..()
+	//CHOMPEdit End
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.digest_mode = DM_SELECT
@@ -153,7 +157,7 @@
 /mob/living/simple_mob/vore/squirrel/Initialize()
 	. = ..()
 	if(do_seasons)
-		switch(world_time_season)
+		switch(GLOB.world_time_season) // CHOMPEdit - Managed Globals
 			if("spring")
 				if(prob(1))
 					winterize()
@@ -208,10 +212,10 @@
 
 /mob/living/simple_mob/vore/squirrel/verb/squirrel_color()
 	set name = "Pick Color"
-	set category = "Abilities"
+	set category = "Abilities.Settings"
 	set desc = "You can set your color!"
 	if(picked_color)
-		to_chat(src, "<span class='notice'>You have already picked a color! If you picked the wrong color, ask an admin to change your picked_color variable to 0.</span>")
+		to_chat(src, span_notice("You have already picked a color! If you picked the wrong color, ask an admin to change your picked_color variable to 0."))
 		return
 	var/newcolor = input(usr, "Choose a color.", "", color) as color|null
 	if(newcolor)

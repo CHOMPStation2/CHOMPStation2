@@ -1021,6 +1021,7 @@ var/global/list/semirandom_mob_spawner_decisions = list()
 	overwrite_hostility = 1
 	mob_hostile = 0
 	mob_retaliate = 0
+	mob_ghostjoin = 25 //25% chance to be ghost joinable
 
 /obj/random/mob/semirandom_mob_spawner/vore/passive/b
 	mob_faction = "pasvoreb"
@@ -1033,6 +1034,7 @@ var/global/list/semirandom_mob_spawner_decisions = list()
 	overwrite_hostility = 1
 	mob_hostile = 0
 	mob_retaliate = 1
+	mob_ghostjoin = 25 //25% chance to be ghost joinable
 
 /obj/random/mob/semirandom_mob_spawner/vore/retaliate/b
 	mob_faction = "retvoreb"

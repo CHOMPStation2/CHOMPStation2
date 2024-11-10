@@ -25,7 +25,7 @@
 						/area/mine,
 						/area/vacant/vacant_shop,
 						/area/rnd/research_storage, // This should probably be fixed,
-						/area/security/riot_control // This should probably be fixed,
+						/area/security/riot_control, // This should probably be fixed,
 						)
 
 	var/list/exempt_from_apc = typesof(/area/construction,
@@ -116,6 +116,30 @@
 		fail("\[[bad_tests] / [wire_test_count]\] Some turfs had overlapping wires going the same direction.")
 	else
 		pass("All \[[wire_test_count]\] wires had no overlapping cables going the same direction.")
+
+	return 1
+
+/datum/unit_test/template_noops
+	name = "MAP: Template no-ops (all maps)"
+
+/datum/unit_test/template_noops/start_test()
+
+	var/list/log = list()
+
+	var/turf_noop_count = 0
+	for(var/turf/template_noop/T in world)
+		turf_noop_count++
+		log += "+-- Template Turf @ [T.x], [T.y], [T.z] ([T.loc])"
+
+	var/area_noop_count = 0
+	for(var/area/template_noop/A in world)
+		area_noop_count++
+		log += "+-- Template Area"
+
+	if(turf_noop_count || area_noop_count)
+		fail("Map contained [turf_noop_count] template turfs and [area_noop_count] template areas at round-start.\n" + log.Join("\n"))
+	else
+		pass("No template turfs or areas.")
 
 	return 1
 

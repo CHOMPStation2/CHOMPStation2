@@ -1,3 +1,4 @@
+/* Combat refactor walkback
 /obj/machinery/porta_turret
 	health = 40				//the turret's health
 	maxhealth = 40			//turrets maximal health.
@@ -18,17 +19,17 @@
 	name = "defense turret"
 	desc = "This variant appears to be much more durable, with a rugged outer coating."
 	req_one_access = list(access_heads)
-	installation = /obj/item/weapon/gun/energy/gun/burst
+	installation = /obj/item/gun/energy/gun/burst
 	health = 125
 	maxhealth = 125
 
-
+*/
 /obj/machinery/porta_turret/obelisk
 	name = "defense obelisk"
 	catalogue_data = list(/datum/category_item/catalogue/technology/turret)
 	anchored = TRUE
 
-	circuit = /obj/item/weapon/circuitboard/defenseonelisk
+	circuit = /obj/item/circuitboard/defenseonelisk
 
 	catalogue_data = null
 
@@ -52,7 +53,7 @@
 	maxhealth = 300			//turrets maximal health.
 	auto_repair = TRUE		//if 1 the turret slowly repairs itself.
 
-	installation = /obj/item/weapon/gun/energy/pulse_rifle
+	installation = /obj/item/gun/energy/pulse_rifle
 	reqpower = 50000
 	turret_type = "normal"
 	icon_color = "blue"
@@ -75,7 +76,7 @@
 	timeout = 1		// When a turret pops up, then finds nothing to shoot at, this number decrements until 0, when it pops down.
 	can_salvage = FALSE
 
-/obj/item/weapon/circuitboard/defenseonelisk
+/obj/item/circuitboard/defenseonelisk
 	name = "paradox rift generator circuit"
 	build_path = /obj/machinery/paradoxrift
 	board_type = new /datum/frame/frame_types/machine

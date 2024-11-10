@@ -1,0 +1,83 @@
+2024-11-01:
+  Hunter-Dovetail:
+  - bugfix: trex_upper/lowerjaw
+  Kashargul:
+  - bugfix: baby teppies can no longer be taken over, due to how growing self deletes
+      them
+  - bugfix: several MC crashes
+  - bugfix: runtimes in blob ids
+2024-11-02:
+  Kashargul:
+  - bugfix: command nika will no longer be invisible
+  Raeschen:
+  - bugfix: Unathi min age increased to 40 for lore reasons
+2024-11-03:
+  CHOMPStation2StaffMirrorBot:
+  - qol: fixed water cooler bottles being terrible and bad (they're now made out of
+      plastic and hold a lot more water)
+  - code_imp: Codebase is now capable of running under 516.
+  - qol: Atmospherics now uses /Initialize instead of /New.
+  - rscadd: 'Roboticist has a new alt title: Software Engineer - "A Software Engineer
+      specializes in working with software and firmware. They also often deal with
+      integrated circuits."'
+  - rscadd: 'Engineer has a new alt title: Computer Technician - "A Computer Technician
+      fulfills similar duties to other engineers, but specializes in working with
+      software and computers. They also often deal with integrated circuits."'
+  - bugfix: In-repo StrongDMM updated
+  Kashargul:
+  - bugfix: blob / protean ooc notes not properly transferring
+  Raeschen:
+  - bugfix: Increase Skrell min age to 19
+2024-11-04:
+  Kashargul:
+  - admin: fix shadekin vore smite
+2024-11-05:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Vore panel no longer overflows when inside panel description is really
+      long.
+  - bugfix: Smartfridge overflowing it's table with long names
+  Darlantanis:
+  - bugfix: rotten egg init no longer applies to unrotten eggs
+  Kashargul:
+  - bugfix: playtime db writes
+  tesseracting:
+  - rscadd: Added two neutral traits for slower eating, standard and lesser.
+2024-11-07:
+  CHOMPStation2StaffMirrorBot:
+  - qol: makes ashtrays visible in map editors
+  - rscadd: added "modified" and "non-standard" variants of the hacktool, which have
+      different sprites to make them more obvious. the non-standard also starts in
+      hackmode
+  - qol: the hacker contraband set comes with the modified multitool
+  - qol: the modified multitool variant can spawn in abandoned crates slightly more
+      often at a slightly lower cost, as it's more obvious as contraband
+  Darlantanis:
+  - qol: bliss no longer forces crawling
+  FluffMedic:
+  - balance: nerfs airlock and closest mimics
+  Kashargul:
+  - bugfix: fixes 2 missing vbo asset datums
+  - bugfix: blobs deleting their IDs
+  tacoguy7765093:
+  - maptweak: Door bolts should bolt instead of open doors now.
+  - maptweak: Fuel Depot is a valid spawn again
+  - maptweak: Overmap ships can dock on the station again
+  - maptweak: Replaced ERT level hardsuits in armory with security voidsuits, armory
+      rebalance coming soon.
+  - maptweak: Robotics can access tech storage again
+  - maptweak: Doubled the amount of vents at the large airlocks
+  - balance: 'red crowbar: 6 -> 10 damage'
+2024-11-08:
+  CHOMPStation2StaffMirrorBot:
+  - qol: refactored headset IDs and misc. details, shouldn't be player-visible
+  - rscadd: added "earbud" headsets, which are the same as normal ones but invisible
+      on-mob
+2024-11-09:
+  Kashargul:
+  - code_imp: finishes up the cell cleanup
+  - rscadd: fixed a wrong sprite state in the cjhound fullness 1 icon
+  TheGreatKitsune:
+  - bugfix: Fixes a typo in text people will probably never see
+2024-11-10:
+  CHOMPStation2StaffMirrorBot:
+  - qol: restored syndie headset sprites

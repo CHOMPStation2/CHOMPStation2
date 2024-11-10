@@ -35,8 +35,9 @@ SUBSYSTEM_DEF(tgui)
 /datum/controller/subsystem/tgui/Shutdown()
 	close_all_uis()
 
-/datum/controller/subsystem/tgui/stat_entry()
-	..("P:[all_uis.len]")
+/datum/controller/subsystem/tgui/stat_entry(msg)
+	msg = "P:[all_uis.len]"
+	return ..()
 
 /datum/controller/subsystem/tgui/fire(resumed = FALSE)
 	if(!resumed)
@@ -266,13 +267,13 @@ SUBSYSTEM_DEF(tgui)
  *
  * return int The number of UIs closed.
  */
-/datum/controller/subsystem/tgui/proc/close_user_uis(mob/user, datum/src_object)
+/datum/controller/subsystem/tgui/proc/close_user_uis(mob/user, datum/src_object, logout = FALSE)
 	var/count = 0
 	if(length(user?.tgui_open_uis) == 0)
 		return count
 	for(var/datum/tgui/ui in user.tgui_open_uis)
 		if(isnull(src_object) || ui.src_object == src_object)
-			ui.close()
+			ui.close(logout = logout)
 			count++
 	return count
 
@@ -318,7 +319,7 @@ SUBSYSTEM_DEF(tgui)
  * return int The number of UIs closed.
  */
 /datum/controller/subsystem/tgui/proc/on_logout(mob/user)
-	close_user_uis(user)
+	close_user_uis(user, logout = TRUE)
 
 /**
  * private

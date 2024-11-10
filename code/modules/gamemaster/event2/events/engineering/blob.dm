@@ -143,8 +143,8 @@
 			multiblob = TRUE
 
 		var/list/lines = list()
-		lines += "Confirmed outbreak of level [7 + danger_level] biohazard[multiblob ? "s": ""] \
-		aboard [location_name()]. All personnel must contain the outbreak."
+		//lines += "Confirmed outbreak of level [7 + danger_level] biohazard[multiblob ? "s": ""]
+		lines += "Confirmed outbreak of level 5 biohazard[multiblob ? "s": ""] aboard [location_name()]. All personnel must contain the outbreak."
 
 		if(danger_level >= BLOB_DIFFICULTY_MEDIUM) // Tell them what kind of blob it is if it's tough.
 			lines += "The biohazard[multiblob ? "s have": " has"] been identified as [english_list(blob_type_names)]."
@@ -157,4 +157,6 @@
 		if(danger_level >= BLOB_DIFFICULTY_SUPERHARD)
 			lines += "Extreme caution is advised."
 
-		command_announcement.Announce(lines.Join("\n"), "Biohazard Alert", new_sound = 'sound/AI/outbreak7.ogg')
+		//command_announcement.Announce(lines.Join("\n"), "Biohazard Alert", new_sound = 'sound/AI/outbreak7.ogg')
+		command_announcement.Announce(lines.Join("\n"), "Hazardous Biomass - URGENT!", new_sound = 'sound/AI/outbreak5.ogg')
+		// Chomp edit - Better wording and also made the alert level 5. Lower number = More urgent.

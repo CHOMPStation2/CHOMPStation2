@@ -1,6 +1,11 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "ao" = (
-/turf/simulated/shuttle/wall/dark/hard_corner,
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/wood,
 /area/survivalpod/superpose/PirateShip)
 "aH" = (
 /obj/effect/floor_decal/industrial/danger/corner{
@@ -19,7 +24,7 @@
 /area/survivalpod/superpose/PirateShip)
 "bZ" = (
 /obj/structure/sign/flag/pirate,
-/turf/simulated/shuttle/wall/dark/hard_corner,
+/turf/simulated/wall/rplastihull,
 /area/survivalpod/superpose/PirateShip)
 "cc" = (
 /obj/machinery/light{
@@ -35,6 +40,10 @@
 /obj/machinery/power/apc/alarms_hidden{
 	pixel_y = -28
 	},
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/PirateShip)
 "dc" = (
@@ -44,22 +53,22 @@
 /turf/simulated/floor/tiled,
 /area/survivalpod/superpose/PirateShip)
 "dr" = (
-/obj/machinery/door/firedoor,
-/obj/machinery/atmospherics/pipe/manifold/visible{
-	dir = 4
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
 	},
-/obj/machinery/door/airlock/glass_external/public,
 /turf/simulated/floor/tiled/dark,
 /area/survivalpod/superpose/PirateShip)
 "eb" = (
 /obj/machinery/disperser/middle{
 	dir = 4
 	},
-/turf/simulated/shuttle/wall/dark,
+/turf/simulated/wall/rplastihull,
 /area/survivalpod/superpose/PirateShip)
 "fd" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/pirate,
+/obj/item/bedsheet/pirate,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/PirateShip)
 "fh" = (
@@ -84,16 +93,19 @@
 /turf/template_noop,
 /area/template_noop)
 "ha" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 4
+/obj/machinery/power/port_gen/pacman/super,
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
 	},
+/obj/fiftyspawner/uranium,
 /turf/simulated/floor/tiled/dark,
 /area/survivalpod/superpose/PirateShip)
 "hM" = (
 /obj/machinery/disperser/middle{
 	dir = 8
 	},
-/turf/simulated/shuttle/wall/dark,
+/turf/simulated/wall/rplastihull,
 /area/survivalpod/superpose/PirateShip)
 "iP" = (
 /obj/structure/shuttle/engine/propulsion{
@@ -111,6 +123,11 @@
 "js" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/survivalpod/superpose/PirateShip)
 "jW" = (
@@ -162,14 +179,20 @@
 /turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/PirateShip)
 "mv" = (
-/obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/glass_external/public,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/power/smes,
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/survivalpod/superpose/PirateShip)
 "mR" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen,
+/obj/item/paper_bin,
+/obj/item/pen,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/PirateShip)
 "nb" = (
@@ -190,35 +213,35 @@
 /turf/simulated/floor/tiled/dark,
 /area/survivalpod/superpose/PirateShip)
 "pz" = (
-/obj/item/weapon/storage/backpack/messenger,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/material/knife/tacknife/survival,
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/trauma,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/oxy,
-/obj/item/weapon/flame/lighter/random,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/device/radio,
+/obj/item/storage/backpack/messenger,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/material/knife/tacknife/survival,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/cell/device/hyper,
+/obj/item/reagent_containers/hypospray/autoinjector/trauma,
+/obj/item/reagent_containers/hypospray/autoinjector/oxy,
+/obj/item/flame/lighter/random,
+/obj/item/storage/box/survival/space,
+/obj/item/radio,
 /obj/item/clothing/accessory/storage/black_drop_pouches,
-/obj/item/weapon/reagent_containers/pill/dylovene,
-/obj/item/weapon/reagent_containers/pill/dylovene,
-/obj/item/device/flashlight/maglight,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/flare,
+/obj/item/reagent_containers/pill/dylovene,
+/obj/item/reagent_containers/pill/dylovene,
+/obj/item/flashlight/maglight,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/flare,
 /obj/random/soap,
-/obj/item/weapon/gun/energy/locked/frontier/holdout/unlocked,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/pda,
-/obj/item/weapon/storage/mre/menu11,
-/obj/item/weapon/storage/mre/menu11,
-/obj/item/device/starcaster_news,
+/obj/item/gun/energy/locked/frontier/holdout/unlocked,
+/obj/item/fbp_backup_cell,
+/obj/item/pda,
+/obj/item/storage/mre/menu11,
+/obj/item/storage/mre/menu11,
+/obj/item/starcaster_news,
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
 	},
-/obj/item/device/suit_cooling_unit/emergency,
-/obj/item/device/gps,
+/obj/item/suit_cooling_unit/emergency,
+/obj/item/gps,
 /obj/structure/closet{
 	name = "Survival closet"
 	},
@@ -233,14 +256,15 @@
 /obj/random/maintenance/engineering,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/PirateShip)
-"sh" = (
-/obj/machinery/atmospherics/pipe/simple/hidden,
-/turf/simulated/shuttle/wall/dark,
-/area/survivalpod/superpose/PirateShip)
 "tq" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock{
 	id_tag = "pshiproom3"
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/PirateShip)
@@ -330,11 +354,17 @@
 /obj/structure/sign/flag/pirate{
 	pixel_y = 29
 	},
-/obj/machinery/door/firedoor,
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 10
+/obj/machinery/power/terminal{
+	dir = 4
 	},
-/obj/machinery/door/airlock/glass_external/public,
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/survivalpod/superpose/PirateShip)
 "Ey" = (
@@ -380,7 +410,7 @@
 /area/survivalpod/superpose/PirateShip)
 "JF" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/pirate,
+/obj/item/bedsheet/pirate,
 /obj/machinery/button/remote/airlock{
 	id = "pshiproom1";
 	name = "Bolt Control";
@@ -391,16 +421,20 @@
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/PirateShip)
 "Kc" = (
-/obj/structure/sign/flag/pirate,
-/turf/simulated/shuttle/wall/dark,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/wood,
 /area/survivalpod/superpose/PirateShip)
 "Ki" = (
 /obj/structure/closet/crate/wooden,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/rum,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/rum,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/rum,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/rum,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/rum,
+/obj/item/reagent_containers/food/drinks/bottle/rum,
+/obj/item/reagent_containers/food/drinks/bottle/rum,
+/obj/item/reagent_containers/food/drinks/bottle/rum,
+/obj/item/reagent_containers/food/drinks/bottle/rum,
+/obj/item/reagent_containers/food/drinks/bottle/rum,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/PirateShip)
 "Kk" = (
@@ -410,14 +444,14 @@
 /obj/structure/closet/secure_closet/guncabinet{
 	locked = 0
 	},
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle/scoped,
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle,
-/obj/item/weapon/storage/box/syndie_kit{
+/obj/item/gun/projectile/shotgun/pump/rifle/scoped,
+/obj/item/gun/projectile/shotgun/pump/rifle,
+/obj/item/storage/box/syndie_kit{
 	max_storage_space = 20;
 	name = "box of 7.62mm clips";
 	starts_with = list(/obj/item/ammo_magazine/clip/c762=10)
 	},
-/obj/item/weapon/storage/box/syndie_kit{
+/obj/item/storage/box/syndie_kit{
 	max_storage_space = 20;
 	name = "box of 7.62mm clips";
 	starts_with = list(/obj/item/ammo_magazine/clip/c762=10)
@@ -446,11 +480,12 @@
 /turf/simulated/shuttle/plating/skipjack,
 /area/survivalpod/superpose/PirateShip)
 "MA" = (
-/obj/machinery/portable_atmospherics/canister/air/airlock,
-/obj/machinery/atmospherics/portables_connector{
-	dir = 1
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/dark,
 /area/survivalpod/superpose/PirateShip)
 "MH" = (
 /obj/structure/table/woodentable,
@@ -475,7 +510,7 @@
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/PirateShip)
 "NN" = (
-/turf/simulated/shuttle/wall/dark,
+/turf/simulated/wall/rplastihull,
 /area/survivalpod/superpose/PirateShip)
 "PQ" = (
 /obj/structure/fans,
@@ -483,12 +518,12 @@
 /area/survivalpod/superpose/PirateShip)
 "PS" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/piratedouble,
+/obj/item/bedsheet/piratedouble,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/PirateShip)
 "Qd" = (
-/obj/item/device/gps/computer,
-/turf/simulated/shuttle/wall/dark,
+/obj/item/gps/computer,
+/turf/simulated/wall/rplastihull,
 /area/survivalpod/superpose/PirateShip)
 "Qw" = (
 /obj/machinery/light{
@@ -566,7 +601,7 @@ cf
 cf
 cf
 cf
-ao
+NN
 NN
 NN
 cf
@@ -626,18 +661,18 @@ cf
 (3,1,1) = {"
 cf
 cf
-ao
 NN
 NN
 NN
 NN
-Kc
+NN
+bZ
 NN
 NN
-ao
-mv
-mv
-ao
+NN
+NN
+NN
+NN
 hM
 NN
 kJ
@@ -701,8 +736,8 @@ Ki
 NN
 Ev
 dr
-sh
-MA
+NN
+zL
 zL
 zL
 Ap
@@ -712,7 +747,7 @@ zL
 zm
 Xl
 Kk
-ao
+NN
 kJ
 NN
 cf
@@ -726,12 +761,12 @@ NN
 KK
 To
 cB
-ao
+NN
 NN
 Ym
 NN
-ao
-Qw
+NN
+mv
 Mr
 Xy
 zL
@@ -757,13 +792,13 @@ NN
 PQ
 To
 To
-To
+ao
 tq
-To
-To
-To
+Kc
+Kc
+Kc
 js
-Mr
+MA
 Mr
 Xy
 zL
@@ -790,11 +825,11 @@ Qd
 To
 To
 kM
-ao
+NN
 NN
 iY
 NN
-ao
+NN
 Qw
 Mr
 Xy
@@ -840,7 +875,7 @@ zL
 aH
 Fg
 Kk
-ao
+NN
 kJ
 NN
 cf
@@ -882,18 +917,18 @@ cf
 (11,1,1) = {"
 cf
 cf
-ao
 NN
 NN
 NN
 NN
-Kc
+NN
+bZ
 NN
 NN
-ao
+NN
 lU
 lU
-ao
+NN
 eb
 NN
 kJ
@@ -950,7 +985,7 @@ cf
 cf
 cf
 cf
-ao
+NN
 NN
 NN
 cf

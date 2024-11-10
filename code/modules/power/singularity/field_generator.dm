@@ -44,11 +44,11 @@ field_generator power level display
 	. = ..()
 	switch(state)
 		if(0)
-			. += "<span class='warning'>It is not secured in place!</span>"
+			. += span_warning("It is not secured in place!")
 		if(1)
-			. += "<span class='warning'>It has been bolted down securely, but not welded into place.</span>"
+			. += span_warning("It has been bolted down securely, but not welded into place.")
 		if(2)
-			. += "<span class='notice'>It has been bolted down securely and welded down into place.</span>"
+			. += span_notice("It has been bolted down securely and welded down into place.")
 
 /obj/machinery/field_generator/update_icon()
 	cut_overlays()
@@ -133,13 +133,13 @@ field_generator power level display
 					"You hear ratchet")
 				src.anchored = FALSE
 			if(2)
-				to_chat(user, "<font color='red'>The [src.name] needs to be unwelded from the floor.</font>")
+				to_chat(user, span_red("The [src.name] needs to be unwelded from the floor."))
 				return
 	else if(W.has_tool_quality(TOOL_WELDER))
-		var/obj/item/weapon/weldingtool/WT = W.get_welder()
+		var/obj/item/weldingtool/WT = W.get_welder()
 		switch(state)
 			if(0)
-				to_chat(user, "<font color='red'>The [src.name] needs to be wrenched to the floor.</font>")
+				to_chat(user, span_red("The [src.name] needs to be wrenched to the floor."))
 				return
 			if(1)
 				if (WT.remove_fuel(0,user))
@@ -227,7 +227,7 @@ field_generator power level display
 		return 1
 	else
 		for(var/mob/M in viewers(src))
-			M.show_message("<font color='red'>\The [src] shuts down!</font>")
+			M.show_message(span_red("\The [src] shuts down!"))
 		turn_off()
 		log_game("FIELDGEN([x],[y],[z]) Lost power and was ON.")
 		investigate_log("ran out of power and <font color='red'>deactivated</font>","singulo")

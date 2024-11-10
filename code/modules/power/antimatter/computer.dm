@@ -45,7 +45,7 @@
 			src.state = STATE_DEFAULT
 		if("login")
 			var/mob/M = usr
-			var/obj/item/weapon/card/id/I = M.get_active_hand()
+			var/obj/item/card/id/I = M.get_active_hand()
 			if (I && istype(I))
 				if(src.check_access(I))
 					authenticated = 1
@@ -93,3 +93,6 @@
 	user << browse(dat, "window=communications;size=400x500")
 	onclose(user, "communications")
 
+#undef STATE_DEFAULT
+#undef STATE_INJECTOR
+#undef STATE_ENGINE

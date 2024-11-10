@@ -8,7 +8,7 @@
 	icon = 'icons/turf/floors.dmi'
 	icon_state = "sky_slow"
 	dir = SOUTH
-	initialized = FALSE
+	//initialized = FALSE CHOMPRemoval
 	var/does_skyfall = TRUE
 	var/list/skyfall_levels
 

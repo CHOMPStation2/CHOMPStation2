@@ -2,21 +2,17 @@
 "cD" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/random/gun/random,
-/obj/random/rigsuit,
-/obj/random/gun/random,
 /obj/machinery/light/poi{
 	dir = 1
 	},
+/obj/item/rig/baymed,
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
 "cH" = (
-/mob/living/simple_mob/humanoid/merc/ranged/ionrifle{
-	health = 15;
-	maxHealth = 15
-	},
 /obj/machinery/light/poi{
 	dir = 8
 	},
+/obj/effect/landmark/corpse/syndicatesoldier,
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
 "cK" = (
@@ -46,9 +42,9 @@
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
 "fA" = (
-/obj/random/mob/merc/all,
-/obj/structure/bed/chair/bay/shuttle,
-/turf/simulated/floor/tiled/red,
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/effect/landmark/corpse/syndicatesoldier,
+/turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
 "fD" = (
 /obj/machinery/door/airlock/external,
@@ -56,31 +52,28 @@
 /area/submap/piratevox)
 "fL" = (
 /obj/structure/table/standard,
-/obj/item/weapon/flame/lighter/zippo/rainbow,
+/obj/item/flame/lighter/zippo/rainbow,
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
 "fV" = (
 /obj/structure/table/standard,
 /obj/random/maintenance/medical,
-/obj/random/maintenance/medical,
-/obj/random/gun/random,
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
 "gp" = (
-/obj/machinery/door/airlock/phoron,
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/machinery/door/airlock/external,
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
 "hj" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/random/gun/random,
-/obj/random/rigsuit,
-/obj/random/gun/random,
 /obj/machinery/light/poi,
+/obj/item/rig/baymed,
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
 "hB" = (
@@ -151,12 +144,11 @@
 /area/submap/piratevox)
 "pK" = (
 /obj/structure/table/standard,
-/obj/random/gun/random,
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
 "pV" = (
 /obj/structure/table/standard,
-/obj/item/weapon/card/emag/used,
+/obj/item/card/emag/used,
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
 "rp" = (
@@ -171,16 +163,16 @@
 "to" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/random/gun/random,
-/obj/random/rigsuit,
 /obj/random/gun/random,
+/obj/item/rig/bayeng,
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
 "tX" = (
 /obj/structure/table/standard,
-/obj/item/weapon/grenade/chem_grenade/cleaner,
-/obj/item/weapon/grenade/chem_grenade/cleaner,
+/obj/item/grenade/chem_grenade/cleaner,
+/obj/item/grenade/chem_grenade/cleaner,
 /obj/item/rig_module/mounted/mop,
-/obj/item/weapon/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/glass/bucket,
 /obj/machinery/light/poi{
 	dir = 4
 	},
@@ -200,15 +192,8 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
-"xe" = (
-/obj/structure/bed/chair/office{
-	dir = 1
-	},
-/mob/living/simple_mob/humanoid/merc/voxpirate/boarder,
-/turf/simulated/floor/tiled/white,
-/area/submap/piratevox)
 "xr" = (
-/turf/simulated/wall/rplastitanium,
+/turf/simulated/wall/rpshull,
 /area/submap/piratevox)
 "ye" = (
 /turf/template_noop,
@@ -230,10 +215,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
-"AS" = (
-/obj/machinery/door/airlock/phoron,
-/turf/simulated/floor/tiled/white,
-/area/submap/piratevox)
 "AV" = (
 /mob/living/simple_mob/humanoid/merc/voxpirate/technician,
 /turf/simulated/floor/tiled/white,
@@ -242,15 +223,15 @@
 /obj/structure/shuttle/engine/heater{
 	dir = 8
 	},
-/turf/simulated/shuttle/wall,
+/turf/simulated/wall/rplastitanium,
 /area/submap/piratevox)
 "Cm" = (
 /turf/template_noop,
 /area/template_noop)
 "Dg" = (
-/obj/structure/table/standard,
-/obj/random/firstaid,
-/obj/random/medical/pillbottle,
+/obj/structure/table/rack/shelf/steel,
+/obj/random/gun/random,
+/obj/item/rig/bayeng,
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
 "Dt" = (
@@ -258,20 +239,17 @@
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
 "DI" = (
-/mob/living/simple_mob/humanoid/merc/ranged/deagle,
 /obj/structure/bed/chair/office{
 	dir = 4
 	},
+/obj/effect/landmark/corpse/syndicatecommando,
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
 "FN" = (
-/mob/living/simple_mob/humanoid/merc/melee/sword/poi{
-	health = 15;
-	maxHealth = 15
-	},
 /obj/machinery/light/poi{
 	dir = 4
 	},
+/obj/effect/landmark/corpse/syndicatesoldier,
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
 "Iu" = (
@@ -282,15 +260,12 @@
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
 "LG" = (
-/mob/living/simple_mob/humanoid/merc/ranged{
-	health = 15;
-	maxHealth = 15
-	},
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/effect/landmark/corpse/syndicatesoldier,
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
 "LP" = (
@@ -313,17 +288,14 @@
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
 "Op" = (
-/mob/living/simple_mob/humanoid/merc/ranged{
-	health = 15;
-	maxHealth = 15
-	},
+/obj/effect/landmark/corpse/syndicatesoldier,
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
 "Os" = (
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
 "OH" = (
-/mob/living/simple_mob/humanoid/merc/voxpirate/boarder,
+/obj/effect/landmark/mobcorpse/vox/boarder_m,
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
 "Rr" = (
@@ -333,7 +305,7 @@
 /turf/simulated/shuttle/wall,
 /area/submap/piratevox)
 "SL" = (
-/turf/simulated/shuttle/wall,
+/turf/simulated/wall/rplastitanium,
 /area/submap/piratevox)
 "Tk" = (
 /mob/living/simple_mob/humanoid/merc/voxpirate/boarder,
@@ -391,29 +363,17 @@
 /obj/structure/bed/chair/bay/shuttle,
 /turf/simulated/floor/tiled/red,
 /area/submap/piratevox)
-"Wj" = (
-/obj/structure/table/standard,
-/obj/random/maintenance/medical,
-/obj/random/maintenance/medical,
-/turf/simulated/floor/tiled/white,
-/area/submap/piratevox)
 "WN" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/spray/cleaner,
-/obj/item/weapon/reagent_containers/spray/cleaner,
+/obj/item/reagent_containers/spray/cleaner,
+/obj/item/reagent_containers/spray/cleaner,
 /obj/item/rig_module/cleaner_launcher,
-/obj/item/weapon/mop/advanced,
+/obj/item/mop/advanced,
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
 "Xl" = (
 /obj/effect/decal/cleanable/blood/splatter,
-/mob/living/simple_mob/humanoid/merc/voxpirate/boarder,
-/turf/simulated/floor/tiled/white,
-/area/submap/piratevox)
-"YI" = (
-/obj/structure/table/standard,
-/obj/random/contraband/nofail,
-/obj/random/medical/pillbottle,
+/obj/effect/landmark/mobcorpse/vox/boarder_m,
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
 "YQ" = (
@@ -429,10 +389,10 @@
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
 "ZP" = (
-/mob/living/simple_mob/humanoid/merc/voxpirate/boarder,
 /obj/structure/bed/chair/office{
 	dir = 1
 	},
+/obj/effect/landmark/mobcorpse/vox/boarder_m,
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
 "ZU" = (
@@ -571,7 +531,7 @@ Cm
 Cm
 SL
 mE
-Os
+Op
 Tl
 SL
 Cm
@@ -586,8 +546,8 @@ SL
 Cm
 Cm
 SL
-rS
-Os
+Xl
+Op
 mE
 SL
 Cm
@@ -602,7 +562,7 @@ Cm
 Cm
 SL
 mE
-xe
+ZP
 Os
 SL
 SL
@@ -639,11 +599,11 @@ SL
 Os
 WN
 SL
-AV
 Os
 Os
 Os
-AV
+Os
+Os
 SL
 Dt
 iJ
@@ -666,15 +626,15 @@ SL
 cD
 Os
 Os
-AS
+fD
 Os
 tX
 SL
-OH
+Os
 Os
 iN
 Os
-Xl
+LP
 SL
 it
 VO
@@ -694,7 +654,7 @@ Cm
 Cm
 Cm
 SL
-to
+Dg
 AV
 Os
 SL
@@ -703,7 +663,7 @@ SL
 SL
 SL
 SL
-AS
+fD
 SL
 SL
 SL
@@ -711,7 +671,7 @@ SL
 SL
 SL
 pD
-AV
+OH
 to
 SL
 Cm
@@ -725,7 +685,7 @@ Cm
 Cm
 Cm
 SL
-Dg
+An
 Op
 Os
 SL
@@ -743,7 +703,7 @@ Os
 SL
 pD
 Op
-YI
+An
 SL
 Cm
 Cm
@@ -756,10 +716,10 @@ Cm
 Cm
 Cm
 SL
-Dg
+pK
 ZP
 Os
-AS
+fD
 Tl
 Op
 Os
@@ -774,7 +734,7 @@ Ap
 gp
 iU
 Tk
-YI
+pK
 SL
 Cm
 Cm
@@ -787,7 +747,7 @@ Cm
 Cm
 Cm
 SL
-Dg
+pK
 ki
 LP
 SL
@@ -795,9 +755,9 @@ Os
 ki
 Os
 Os
-AV
+OH
 Os
-AV
+OH
 Os
 Os
 ki
@@ -805,7 +765,7 @@ Os
 SL
 Os
 YQ
-YI
+An
 SL
 Cm
 Cm
@@ -858,9 +818,9 @@ xr
 xr
 xr
 Os
-LP
+fA
 Os
-SL
+xr
 xr
 xr
 Cm
@@ -889,7 +849,7 @@ xr
 VU
 VU
 VU
-Tl
+OH
 VU
 VU
 VU
@@ -950,9 +910,9 @@ Cm
 xr
 VU
 VU
-fA
+VU
 Os
-fA
+VU
 VU
 VU
 xr
@@ -982,7 +942,7 @@ xr
 xr
 xr
 ki
-Os
+Op
 YQ
 xr
 xr
@@ -1013,7 +973,7 @@ ye
 UL
 SL
 SL
-AS
+fD
 SL
 SL
 UL
@@ -1042,11 +1002,11 @@ Cm
 uQ
 UL
 UL
-Wj
+pK
 hB
 Os
 hB
-Wj
+pK
 UL
 UL
 uQ
@@ -1072,13 +1032,13 @@ Cm
 ye
 UL
 UL
-Wj
+fV
 LP
 Os
 Tl
 Os
 Os
-Wj
+fV
 UL
 UL
 ye
@@ -1102,7 +1062,7 @@ Cm
 Cm
 UL
 UL
-Wj
+pK
 rp
 Os
 Os
@@ -1110,7 +1070,7 @@ Os
 Os
 Os
 OH
-Wj
+An
 cK
 UL
 Cm
@@ -1132,7 +1092,7 @@ Cm
 Cm
 ye
 SL
-Wj
+pK
 Os
 Os
 Os
@@ -1142,7 +1102,7 @@ Os
 Os
 Os
 LP
-Wj
+fV
 SL
 ye
 Cm
@@ -1256,7 +1216,7 @@ Cm
 Cm
 ye
 SL
-Wj
+pK
 Os
 Os
 Os
@@ -1266,7 +1226,7 @@ LP
 Os
 Os
 Os
-Wj
+pK
 SL
 ye
 Cm
@@ -1288,7 +1248,7 @@ Cm
 Cm
 UL
 UL
-Wj
+An
 OH
 Os
 Os
@@ -1296,7 +1256,7 @@ Os
 Os
 Os
 rp
-Wj
+pK
 UL
 UL
 Cm
@@ -1320,13 +1280,13 @@ Cm
 Cm
 UL
 UL
-Wj
+pK
 LP
 Os
-AV
+OH
 LP
 Os
-Wj
+fV
 UL
 UL
 Cm
@@ -1356,7 +1316,7 @@ fV
 pJ
 pK
 pJ
-fV
+An
 UL
 UL
 uQ

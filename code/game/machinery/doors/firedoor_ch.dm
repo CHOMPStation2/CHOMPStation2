@@ -5,3 +5,9 @@
 	glass = 1
 	open_sound = 'sound/machines/firewide1o.ogg'
 	close_sound = 'sound/machines/firewide1c.ogg'
+
+/obj/machinery/door/firedoor/border_only/can_pathfinding_exit(atom/movable/actor, dir, datum/pathfinding/search)
+	return (src.dir != dir) || ..()
+
+/obj/machinery/door/firedoor/border_only/can_pathfinding_enter(atom/movable/actor, dir, datum/pathfinding/search)
+	return (src.dir != dir) || ..()

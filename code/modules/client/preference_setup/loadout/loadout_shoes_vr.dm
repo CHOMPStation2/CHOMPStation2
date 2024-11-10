@@ -1,6 +1,3 @@
-/datum/gear/shoes/boots/winter/medical
-	allowed_roles = list("Medical Doctor","Chief Medical Officer","Chemist","Paramedic","Geneticist", "Psychiatrist", "Field Medic") //CHOMP keep explo
-
 /datum/gear/shoes/black/cuffs
 	display_name = "legwraps, black"
 	path = /obj/item/clothing/shoes/black/cuffs
@@ -50,13 +47,24 @@
 	display_name = "Adjust - No Shoes"
 	path = /obj/item/clothing/shoes/none
 	cost = 0
-	
+
 /obj/item/clothing/shoes/none
 	name = "No Shoes"
 	desc = "shoeless?"
 	icon_state = ""
 	species_restricted = null
-	
+
 /obj/item/clothing/shoes/none/Initialize()
-	. = INITIALIZE_HINT_QDEL //Fuck them shoes
-	..()
+	. = ..()
+	if(istype(loc, /mob)) // are we in a mob?
+		var/mob/m = loc
+		m.drop_from_inventory(src, get_turf(m))
+	if(contents.len) // spill out contents (e.g. microholders)
+		for(var/atom/movable/thing in contents)
+			thing.loc = get_turf(src)
+	moveToNullspace() // go to nullspace
+	spawn(1)
+		qdel(src) // die
+
+/obj/item/clothing/shoes/none/make_worn_icon(body_type, slot_name, inhands, default_icon, default_layer, icon/clip_mask) // override this to ensure that no worn icon is generated
+	return

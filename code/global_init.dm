@@ -23,9 +23,7 @@ var/global/datum/global_init/init = new ()
 	debug_log = file("[log_path]-debug.log")
 	debug_log << "[log_end]\n[log_end]\nStarting up. [time_stamp()][log_end]\n---------------------[log_end]"
 */ //VOREStation Removal End
-	decls_repository = new()	
-	load_configuration()
-	makeDatumRefLists()
+	decls_repository = new()
 
 	initialize_integrated_circuits_list()
 
@@ -33,4 +31,5 @@ var/global/datum/global_init/init = new ()
 
 /datum/global_init/Destroy()
 	global.init = null
+	..()
 	return 2 // QDEL_HINT_IWILLGC

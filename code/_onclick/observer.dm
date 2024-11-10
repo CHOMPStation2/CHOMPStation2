@@ -2,13 +2,13 @@
 /mob/observer/dead/verb/toggle_inquisition() // warning: unexpected inquisition
 	set name = "Toggle Inquisitiveness"
 	set desc = "Sets whether your ghost examines everything on click by default"
-	set category = "Ghost"
+	set category = "Ghost.Settings"
 	if(!client) return
 	client.inquisitive_ghost = !client.inquisitive_ghost
 	if(client.inquisitive_ghost)
-		to_chat(src, "<span class='notice'>You will now examine everything you click on.</span>")
+		to_chat(src, span_notice("You will now examine everything you click on."))
 	else
-		to_chat(src, "<span class='notice'>You will no longer examine things you click on.</span>")
+		to_chat(src, span_notice("You will no longer examine things you click on."))
 
 /mob/observer/dead/DblClickOn(var/atom/A, var/params)
 	if(client.buildmode)
@@ -24,7 +24,8 @@
 		ManualFollow(A)
 	// Otherwise jump
 	else
-		following = null
+		if(following)
+			stop_following()
 		forceMove(get_turf(A))
 
 /mob/observer/dead/ClickOn(var/atom/A, var/params)
@@ -40,7 +41,7 @@
 	if(modifiers["alt"]) // alt and alt-gr (rightalt)
 		var/turf/T = get_turf(A)
 		if(T && TurfAdjacent(T))
-			ToggleTurfTab(T)
+			set_listed_turf(T)
 			return
 	// You are responsible for checking config.ghost_interaction when you override this function
 	// Not all of them require checking, see below
@@ -68,9 +69,9 @@
 
 // VOREStation Edit Begin
 
-/obj/machinery/gateway/centerstation/attack_ghost(mob/user as mob) 
-	if(awaygate) 
-		if(user.client.holder) 
+/obj/machinery/gateway/centerstation/attack_ghost(mob/user as mob)
+	if(awaygate)
+		if(user.client.holder)
 			user.loc = awaygate.loc
 		else if(active)
 			user.loc = awaygate.loc

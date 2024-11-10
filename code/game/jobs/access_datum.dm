@@ -127,7 +127,7 @@
 /var/const/access_captain = 20
 /datum/access/captain
 	id = access_captain
-	desc = "Site Manager"
+	desc = JOB_SITE_MANAGER
 	region = ACCESS_REGION_COMMAND
 
 /var/const/access_all_personal_lockers = 21
@@ -187,7 +187,7 @@
 /var/const/access_rd = 30
 /datum/access/rd
 	id = access_rd
-	desc = "Research Director"
+	desc = JOB_RESEARCH_DIRECTOR
 	region = ACCESS_REGION_RESEARCH
 
 /var/const/access_cargo = 31
@@ -247,13 +247,13 @@
 /var/const/access_cmo = 40
 /datum/access/cmo
 	id = access_cmo
-	desc = "Chief Medical Officer"
+	desc = JOB_CHIEF_MEDICAL_OFFICER
 	region = ACCESS_REGION_COMMAND
 
 /var/const/access_qm = 41
 /datum/access/qm
 	id = access_qm
-	desc = "Quartermaster"
+	desc = JOB_QUARTERMASTER
 	region = ACCESS_REGION_SUPPLY
 
 /var/const/access_network = 42
@@ -262,8 +262,18 @@
 	desc = "Station Network"
 	region = ACCESS_REGION_RESEARCH
 
-// /var/const/free_access_id = 43 // taken in VR
-// /var/const/free_access_id = 44 // taken in VR
+var/const/access_explorer = 43
+/datum/access/explorer
+	id = access_explorer
+	desc = JOB_EXPLORER
+	region = ACCESS_REGION_GENERAL
+ //CHOMP explo keep removed a wide comment field on this line
+/var/const/access_pathfinder = 44
+/datum/access/pathfinder
+	id = access_pathfinder
+	desc = JOB_PATHFINDER
+	region = ACCESS_REGION_GENERAL
+ //CHOMP explo keep removed the closing wide comment field on this line. KEEP THE PATHFINDER
 
 /var/const/access_surgery = 45
 /datum/access/surgery
@@ -321,19 +331,19 @@
 /var/const/access_ce = 56
 /datum/access/ce
 	id = access_ce
-	desc = "Chief Engineer"
+	desc = JOB_CHIEF_ENGINEER
 	region = ACCESS_REGION_ENGINEERING
 
 /var/const/access_hop = 57
 /datum/access/hop
 	id = access_hop
-	desc = "Head of Personnel"
+	desc = JOB_HEAD_OF_PERSONNEL
 	region = ACCESS_REGION_COMMAND
 
 /var/const/access_hos = 58
 /datum/access/hos
 	id = access_hos
-	desc = "Head of Security"
+	desc = JOB_HEAD_OF_SECURITY
 	region = ACCESS_REGION_SECURITY
 
 /var/const/access_RC_announce = 59 //Request console announcements
@@ -369,7 +379,7 @@
 /var/const/access_psychiatrist = 64 // Psychiatrist's office
 /datum/access/psychiatrist
 	id = access_psychiatrist
-	desc = "Psychiatrist's Office"
+	desc = JOB_PSYCHIATRIST + "'s Office"
 	region = ACCESS_REGION_MEDBAY
 
 /var/const/access_xenoarch = 65
@@ -383,6 +393,24 @@
 	id = access_medical_equip
 	desc = "Medical Equipment"
 	region = ACCESS_REGION_MEDBAY
+
+var/const/access_pilot = 67
+/datum/access/pilot
+	id = access_pilot
+	desc = JOB_PILOT
+	region = ACCESS_REGION_GENERAL
+
+/var/const/access_entertainment = 72
+/datum/access/entertainment
+	id = access_entertainment
+	desc = "Entertainment Backstage"
+	region = ACCESS_REGION_GENERAL
+
+/var/const/access_xenobotany = 77
+/datum/access/xenobotany
+	id = access_xenobotany
+	desc = "Xenobotany Garden"
+	region = ACCESS_REGION_RESEARCH
 
 /******************
 * Central Command *
@@ -402,7 +430,7 @@
 /var/const/access_cent_specops = 103//Special Ops.
 /datum/access/cent_specops
 	id = access_cent_specops
-	desc = "Emergency Response Team Prep"
+	desc = JOB_EMERGENCY_RESPONSE_TEAM + " Prep"
 	access_type = ACCESS_TYPE_CENTCOM
 
 /var/const/access_cent_medical = 104//Medical/Research
@@ -432,7 +460,7 @@
 /var/const/access_cent_creed = 108//Creed's office.
 /datum/access/cent_creed
 	id = access_cent_creed
-	desc = "Emergency Response Team Administration"
+	desc = JOB_EMERGENCY_RESPONSE_TEAM + " Administration"
 	access_type = ACCESS_TYPE_CENTCOM
 
 /var/const/access_cent_captain = 109//Captain's office/ID comp/AI.
@@ -441,12 +469,31 @@
 	desc = "Central Command Administration"
 	access_type = ACCESS_TYPE_CENTCOM
 
+/var/const/access_clown = 136
+/datum/access/clown
+	id = access_clown
+	desc = JOB_CLOWN + " Office"
+	region = ACCESS_REGION_GENERAL
+
+/var/const/access_tomfoolery = 137
+/datum/access/tomfoolery
+	id = access_tomfoolery
+	desc = "Tomfoolery Closet"
+	region = ACCESS_REGION_GENERAL
+
+/var/const/access_mime = 138
+/datum/access/mime
+	id = access_mime
+	desc = JOB_MIME + " Office"
+	region = ACCESS_REGION_GENERAL
+
 /***************
 * Antag access *
 ***************/
 /var/const/access_syndicate = 150//General Syndicate Access
 /datum/access/syndicate
 	id = access_syndicate
+	desc = "Syndicate"
 	access_type = ACCESS_TYPE_SYNDICATE
 
 /*******
@@ -461,11 +508,13 @@
 /var/const/access_crate_cash = 200
 /datum/access/crate_cash
 	id = access_crate_cash
+	desc = "Crate cash"
 	access_type = ACCESS_TYPE_NONE
 
 /var/const/access_trader = 160//General Beruang Trader Access
 /datum/access/trader
 	id = access_trader
+	desc = "Trader"
 	access_type = ACCESS_TYPE_PRIVATE
 
 /var/const/access_alien = 300 // For things like crashed ships.
@@ -473,3 +522,15 @@
 	id = access_alien
 	desc = "#%_^&*@!"
 	access_type = ACCESS_TYPE_PRIVATE
+
+/var/const/access_talon = 301
+/datum/access/talon
+	id = access_talon
+	desc = "Talon"
+	access_type = ACCESS_TYPE_PRIVATE
+
+/var/const/access_lost = 511 // For outsider borgs
+/datum/access/lost
+	id = access_lost
+	desc = "Lost"
+	access_type = ACCESS_TYPE_NONE

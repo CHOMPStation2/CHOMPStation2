@@ -31,7 +31,7 @@
 /area/submap/cave/AMine1)
 "i" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /turf/simulated/floor/tiled,
 /area/submap/cave/AMine1)
 "j" = (
@@ -40,7 +40,7 @@
 /area/submap/cave/AMine1)
 "k" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/machinery/light{
 	dir = 1;
 	icon_state = "tube1"
@@ -57,40 +57,40 @@
 /turf/simulated/floor/tiled,
 /area/submap/cave/AMine1)
 "n" = (
-/obj/item/weapon/ore/gold,
+/obj/item/ore/gold,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/AMine1)
 "o" = (
-/obj/item/weapon/ore/gold,
-/obj/item/weapon/ore/gold,
-/obj/item/weapon/ore/gold,
-/obj/item/weapon/ore/gold,
-/obj/item/weapon/ore/gold,
-/obj/item/weapon/ore/gold,
-/obj/item/weapon/ore/gold,
-/obj/item/weapon/ore/gold,
-/obj/item/weapon/ore/gold,
-/obj/item/weapon/ore/gold,
-/obj/item/weapon/ore/gold,
-/obj/item/weapon/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/AMine1)
 "p" = (
-/obj/item/weapon/ore/gold,
-/obj/item/weapon/ore/gold,
-/obj/item/weapon/ore/gold,
-/obj/item/weapon/ore/gold,
-/obj/item/weapon/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/AMine1)
 "q" = (
 /obj/structure/table/standard,
-/obj/item/device/flashlight/lamp,
+/obj/item/flashlight/lamp,
 /turf/simulated/floor/tiled,
 /area/submap/cave/AMine1)
 "r" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/machinery/light,
 /turf/simulated/floor/tiled,
 /area/submap/cave/AMine1)
@@ -112,8 +112,8 @@
 /area/submap/cave/AMine1)
 "v" = (
 /obj/structure/table/standard,
-/obj/item/weapon/cell/high,
-/obj/item/weapon/cell/high,
+/obj/item/cell/high,
+/obj/item/cell/high,
 /turf/simulated/floor,
 /area/submap/cave/AMine1)
 "w" = (
@@ -163,7 +163,7 @@
 /area/submap/cave/AMine1)
 "G" = (
 /obj/structure/table/rack,
-/obj/item/weapon/pickaxe/drill,
+/obj/item/pickaxe/drill,
 /turf/simulated/floor/tiled,
 /area/submap/cave/AMine1)
 "H" = (
@@ -192,7 +192,7 @@
 /turf/simulated/floor/tiled,
 /area/submap/cave/AMine1)
 "M" = (
-/obj/item/weapon/stool,
+/obj/item/stool,
 /turf/simulated/floor/tiled,
 /area/submap/cave/AMine1)
 "N" = (

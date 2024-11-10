@@ -7,8 +7,6 @@
 "aZ" = (
 /obj/structure/table/darkglass,
 /obj/item/ammo_casing/microbattery/medical/burn3,
-/obj/random/maintenance/medical,
-/obj/random/maintenance/medical,
 /turf/simulated/floor/tiled/dark,
 /area/submap/fallenlab)
 "bH" = (
@@ -25,10 +23,20 @@
 /mob/living/simple_mob/mechanical/cyber_horror/grey,
 /turf/simulated/floor/tiled/dark,
 /area/submap/fallenlab)
+"dg" = (
+/obj/structure/table/standard,
+/obj/random/maintenance/engineering,
+/obj/effect/floor_decal/corner/red/diagonal,
+/turf/simulated/floor/tiled/dark,
+/area/submap/fallenlab)
 "dx" = (
 /obj/effect/floor_decal/corner/red/diagonal,
-/mob/living/simple_mob/mechanical/cyber_horror/grey,
-/turf/simulated/floor/tiled/dark,
+/mob/living/simple_mob/mechanical/cyber_horror/grey{
+	loot_list = list(/obj/item/gun/projectile/cell_loaded/medical = 5)
+	},
+/turf/simulated/floor/tiled/dark{
+	loot_list = list(/obj/item/gun/projectile/cell_loaded/medical = 5)
+	},
 /area/submap/fallenlab)
 "eq" = (
 /obj/structure/closet/toolcloset,
@@ -50,10 +58,12 @@
 /turf/simulated/floor/tiled/dark,
 /area/submap/fallenlab)
 "fr" = (
-/mob/living/simple_mob/mechanical/cyber_horror/tajaran,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/corner/orange/diagonal,
+/mob/living/simple_mob/mechanical/cyber_horror/tajaran{
+	loot_list = list(/obj/item/gun/projectile/cell_loaded/medical = 5)
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/fallenlab)
 "fL" = (
@@ -86,8 +96,6 @@
 "gP" = (
 /obj/structure/table/standard,
 /obj/item/ammo_casing/microbattery/medical/haste,
-/obj/random/material/refined,
-/obj/random/material/precious,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/dark,
 /area/submap/fallenlab)
@@ -181,7 +189,9 @@
 /turf/simulated/floor/tiled/dark,
 /area/submap/fallenlab)
 "rL" = (
-/mob/living/simple_mob/mechanical/cyber_horror/tajaran,
+/mob/living/simple_mob/mechanical/cyber_horror/tajaran{
+	loot_list = list(/obj/item/gun/projectile/cell_loaded/medical = 5)
+	},
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
 /area/submap/fallenlab)
@@ -189,6 +199,7 @@
 /obj/machinery/optable,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/corner/orange/diagonal,
+/obj/random/maintenance/medical,
 /turf/simulated/floor/tiled/dark,
 /area/submap/fallenlab)
 "sg" = (
@@ -209,7 +220,7 @@
 /area/submap/fallenlab)
 "sS" = (
 /obj/structure/table/standard,
-/obj/item/device/nif,
+/obj/item/nif,
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
 /obj/effect/floor_decal/corner/orange/diagonal,
@@ -241,19 +252,17 @@
 "vt" = (
 /obj/machinery/optable,
 /obj/effect/floor_decal/corner/orange/diagonal,
+/obj/random/maintenance/medical,
 /turf/simulated/floor/tiled/dark,
 /area/submap/fallenlab)
 "wi" = (
-/obj/structure/table/standard,
-/obj/item/weapon/gun/projectile/cell_loaded/medical,
-/obj/random/maintenance/medical,
-/obj/random/maintenance/engineering,
+/obj/structure/table/darkglass,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
 /area/submap/fallenlab)
 "xo" = (
 /obj/structure/table/darkglass,
-/obj/item/weapon/storage/toolbox/syndicate/powertools,
+/obj/item/storage/toolbox/syndicate/powertools,
 /obj/random/maintenance/research,
 /obj/random/maintenance/research,
 /obj/effect/floor_decal/corner/orange/diagonal,
@@ -369,9 +378,11 @@
 /turf/simulated/floor/tiled/dark,
 /area/submap/fallenlab)
 "Iw" = (
-/mob/living/simple_mob/mechanical/cyber_horror/tajaran,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/corner/orange/diagonal,
+/mob/living/simple_mob/mechanical/cyber_horror/tajaran{
+	loot_list = list(/obj/item/gun/projectile/cell_loaded/medical = 5)
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/fallenlab)
 "Ix" = (
@@ -386,10 +397,7 @@
 /area/submap/fallenlab)
 "KI" = (
 /obj/structure/table/darkglass,
-/obj/random/maintenance/medical,
-/obj/random/maintenance/medical,
 /obj/effect/floor_decal/corner/red/diagonal,
-/obj/random/medical,
 /turf/simulated/floor/tiled/dark,
 /area/submap/fallenlab)
 "KR" = (
@@ -419,13 +427,14 @@
 "Ni" = (
 /obj/structure/table/standard,
 /obj/item/ammo_casing/microbattery/medical/haste,
-/obj/random/maintenance/medical,
 /obj/random/maintenance/engineering,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
 /area/submap/fallenlab)
 "NT" = (
-/mob/living/simple_mob/mechanical/cyber_horror/vox,
+/mob/living/simple_mob/mechanical/cyber_horror/vox{
+	loot_list = list(/obj/item/gun/projectile/cell_loaded/medical = 5)
+	},
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/dark,
 /area/submap/fallenlab)
@@ -443,7 +452,9 @@
 /turf/simulated/floor/tiled/dark,
 /area/submap/fallenlab)
 "PB" = (
-/mob/living/simple_mob/mechanical/cyber_horror/ling_cyber_horror,
+/mob/living/simple_mob/mechanical/cyber_horror/ling_cyber_horror{
+	loot_list = list(/obj/item/gun/projectile/cell_loaded/medical = 5)
+	},
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
 /area/submap/fallenlab)
@@ -453,14 +464,15 @@
 /turf/simulated/floor/tiled/dark,
 /area/submap/fallenlab)
 "QH" = (
-/mob/living/simple_mob/mechanical/cyber_horror/tajaran,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/corner/red/diagonal,
+/mob/living/simple_mob/mechanical/cyber_horror/tajaran{
+	loot_list = list(/obj/item/gun/projectile/cell_loaded/medical = 5)
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/fallenlab)
 "Rg" = (
 /obj/structure/table/standard,
-/obj/random/material/refined,
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/dark,
 /area/submap/fallenlab)
@@ -498,6 +510,13 @@
 "Uf" = (
 /obj/machinery/clonepod,
 /obj/effect/floor_decal/corner/orange/diagonal,
+/turf/simulated/floor/tiled/dark,
+/area/submap/fallenlab)
+"Uv" = (
+/obj/effect/floor_decal/corner/orange/diagonal,
+/mob/living/simple_mob/mechanical/cyber_horror/tajaran{
+	loot_list = list(/obj/item/gun/projectile/cell_loaded/medical = 5)
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/fallenlab)
 "UG" = (
@@ -621,7 +640,7 @@ cQ
 bH
 ki
 Gi
-rL
+Uv
 bH
 Cx
 bH
@@ -981,7 +1000,7 @@ Gi
 bH
 kW
 bH
-qK
+wi
 Gi
 SX
 "}
@@ -1027,7 +1046,7 @@ Rg
 dx
 kh
 bH
-tI
+Rg
 Gi
 es
 lh
@@ -1035,8 +1054,8 @@ Yn
 lh
 es
 Gi
-wi
-fY
+sg
+dg
 Ni
 fY
 Gi

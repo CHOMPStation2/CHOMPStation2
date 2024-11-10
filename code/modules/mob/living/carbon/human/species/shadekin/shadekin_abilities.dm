@@ -9,13 +9,13 @@
 /mob/living/carbon/human/proc/shadekin_ability_check()
 	var/datum/species/shadekin/SK = species
 	if(!istype(SK))
-		to_chat(src, "<span class='warning'>Only a shadekin can use that!</span>")
+		to_chat(src, span_warning("Only a shadekin can use that!"))
 		return FALSE
 	else if(stat)
-		to_chat(src, "<span class='warning'>Can't use that ability in your state!</span>")
+		to_chat(src, span_warning("Can't use that ability in your state!"))
 		return FALSE
 	else if((ability_flags & AB_DARK_RESPITE || has_modifier_of_type(/datum/modifier/dark_respite)) && !(ability_flags & AB_PHASE_SHIFTED))
-		to_chat(src, "<span class='warning'>You can't use that so soon after an emergency warp!</span>")
+		to_chat(src, span_warning("You can't use that so soon after an emergency warp!"))
 		return FALSE
 	return TRUE
 //CHOMPEdit End
@@ -41,20 +41,21 @@
 	verbpath = /mob/living/carbon/human/proc/phase_shift
 	ability_icon_state = "tech_passwall"
 
+/* //ChompEDIT - Moved to modular_chomp
 /mob/living/carbon/human/proc/phase_shift()
 	set name = "Phase Shift (100)"
 	set desc = "Shift yourself out of alignment with realspace to travel quickly to different areas."
-	set category = "Shadekin"
+	set category = "Abilities.Shadekin"
 
 	var/ability_cost = 100
 
 	var/darkness = 1
 	var/turf/T = get_turf(src)
 	if(!T)
-		to_chat(src,"<span class='warning'>You can't use that here!</span>")
+		to_chat(src,span_warning("You can't use that here!"))
 		return FALSE
 	if((get_area(src).flags & PHASE_SHIELDED))	//CHOMPAdd - Mapping tools to control phasing
-		to_chat(src,"<span class='warning'>This area is preventing you from phasing!</span>")
+		to_chat(src,span_warning("This area is preventing you from phasing!"))
 		return FALSE
 
 	if(ability_flags & AB_PHASE_SHIFTING)
@@ -69,7 +70,7 @@
 		if(istype(thing, /mob/living/carbon/human))
 			var/mob/living/carbon/human/watchers = thing
 			if(watchers in oviewers(7,src) && watchers.species != SPECIES_SHADEKIN)	// And they can see us... //CHOMPEDIT - (And aren't themselves a shadekin)
-				if(!(watchers.stat) && !isbelly(watchers.loc) && !istype(watchers.loc, /obj/item/weapon/holder))	// And they are alive and not being held by someone...
+				if(!(watchers.stat) && !isbelly(watchers.loc) && !istype(watchers.loc, /obj/item/holder))	// And they are alive and not being held by someone...
 					watcher++	// They are watching us!
 		else if(istype(thing, /mob/living/silicon/robot))
 			var/mob/living/silicon/robot/watchers = thing
@@ -91,23 +92,23 @@
 		log_debug("[src] attempted to shift with [watcher] observers with a  cost of [ability_cost] in a darkness level of [darkness]")
 	//CHOMPEdit start - inform about the observers affecting phasing
 	if(darkness<=0.4 && watcher>=2)
-		to_chat(src, "<span class='warning'>You have a few observers in a well-lit area! This may prevent phasing. (Working cameras count towards observers)</span>")
+		to_chat(src, span_warning("You have a few observers in a well-lit area! This may prevent phasing. (Working cameras count towards observers)"))
 	else if(watcher>=3)
-		to_chat(src, "<span class='warning'>You have a large number of observers! This may prevent phasing. (Working cameras count towards observers)</span>")
+		to_chat(src, span_warning("You have a large number of observers! This may prevent phasing. (Working cameras count towards observers)"))
 	//CHOMPEdit end
 
 
 	var/datum/species/shadekin/SK = species
 	/* CHOMPEdit start - general shadekin ability check
 	if(!istype(SK))
-		to_chat(src, "<span class='warning'>Only a shadekin can use that!</span>")
+		to_chat(src, span_warning("Only a shadekin can use that!"))
 		return FALSE
 	else if(stat)
-		to_chat(src, "<span class='warning'>Can't use that ability in your state!</span>")
+		to_chat(src, span_warning("Can't use that ability in your state!"))
 		return FALSE
 	//CHOMPEdit Start - Dark Respite
 	else if((ability_flags & AB_DARK_RESPITE || has_modifier_of_type(/datum/modifier/dark_respite)) && !(ability_flags & AB_PHASE_SHIFTED))
-		to_chat(src, "<span class='warning'>You can't use that so soon after an emergency warp!</span>")
+		to_chat(src, span_warning("You can't use that so soon after an emergency warp!"))
 		return FALSE
 	*/
 	if(!shadekin_ability_check())
@@ -115,12 +116,12 @@
 		//CHOMPEdit End
 	//CHOMPEdit Start - Prevent bugs when spamming phase button
 	else if(SK.doing_phase)
-		to_chat(src, "<span class='warning'>You are already trying to phase!</span>")
+		to_chat(src, span_warning("You are already trying to phase!"))
 		return FALSE
 	//CHOMPEdit End
 
 	else if(shadekin_get_energy() < ability_cost && !(ability_flags & AB_PHASE_SHIFTED))
-		to_chat(src, "<span class='warning'>Not enough energy for that ability!</span>")
+		to_chat(src, span_warning("Not enough energy for that ability!"))
 		return FALSE
 
 	if(!(ability_flags & AB_PHASE_SHIFTED))
@@ -128,7 +129,7 @@
 	playsound(src, 'sound/effects/stealthoff.ogg', 75, 1)
 
 	if(!T.CanPass(src,T) || loc != T)
-		to_chat(src,"<span class='warning'>You can't use that here!</span>")
+		to_chat(src,span_warning("You can't use that here!"))
 		return FALSE
 
 	forceMove(T)
@@ -178,13 +179,18 @@
 		remove_modifiers_of_type(/datum/modifier/shadekin_phase) //CHOMPEdit - Shadekin probably shouldn't be hit while phasing
 
 		//Potential phase-in vore
-		if(can_be_drop_pred) //Toggleable in vore panel
+		if(can_be_drop_pred || can_be_drop_prey) //Toggleable in vore panel
 			var/list/potentials = living_mobs(0)
 			if(potentials.len)
 				var/mob/living/target = pick(potentials)
-				if(istype(target) && target.devourable && target.can_be_drop_prey && vore_selected)
+				if(can_be_drop_pred && istype(target) && target.devourable && target.can_be_drop_prey && target.phase_vore && vore_selected && phase_vore)
 					target.forceMove(vore_selected)
-					to_chat(target,"<span class='warning'>\The [src] phases in around you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!</span>")
+					to_chat(target, span_vwarning("\The [src] phases in around you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!"))
+					to_chat(src, span_vwarning("You phase around [target], [vore_selected.vore_verb]ing them into your [vore_selected.name]!"))
+				else if(can_be_drop_prey && istype(target) && devourable && target.can_be_drop_pred && target.phase_vore && target.vore_selected && phase_vore)
+					forceMove(target.vore_selected)
+					to_chat(target, span_vwarning("\The [src] phases into you, [target.vore_selected.vore_verb]ing them into your [target.vore_selected.name]!"))
+					to_chat(src, span_vwarning("You phase into [target], having them [target.vore_selected.vore_verb] you into their [target.vore_selected.name]!"))
 
 		ability_flags &= ~AB_PHASE_SHIFTING
 
@@ -199,12 +205,12 @@
 		//CHOMPEdit end
 
 		//CHOMPEdit start - Add gentle phasing
-		if(SK.phase_gentle) // gentle case: No light destruction. Flicker in 4 tile radius for 3s. Weaken for 3sec after
+		if(SK.phase_gentle) // gentle case: No light destruction. Flicker in 4 tile radius once.
 			for(var/obj/machinery/light/L in machines)
 				if(L.z != z || get_dist(src,L) > 4)
 					continue
-				L.flicker(3)
-			src.Stun(3)
+				L.flicker(1)
+			src.Stun(1)
 		else
 			//CHOMPEdit end
 			for(var/obj/machinery/light/L in machines)
@@ -259,43 +265,24 @@
 		force_max_speed = TRUE
 		ability_flags &= ~AB_PHASE_SHIFTING
 	SK.doing_phase = FALSE //CHOMPEdit - Prevent bugs when spamming phase button
-
-//CHOMPEdit start - gentle phasing for carbonkin
-//toggle proc for toggling gentle/normal phasing
-/mob/living/carbon/human/proc/phase_strength_toggle()
-	set name = "Toggle Phase Strength"
-	set desc = "Toggle strength of phase. Gentle but slower, or faster but destructive to lights."
-	set category = "Shadekin"
-
-	var/datum/species/shadekin/SK = species
-	if(!istype(SK))
-		to_chat(src, "<span class='warning'>Only a shadekin can use that!</span>")
-		return FALSE
-
-	if(SK.phase_gentle)
-		to_chat(src, "<span class='notice'>Phasing toggled to Normal. You may damage lights.</span>")
-		SK.phase_gentle = 0
-	else
-		to_chat(src, "<span class='notice'>Phasing toggled to Gentle. You won't damage lights, but concentrating on that incurs a short stun.</span>")
-		SK.phase_gentle = 1
-//CHOMPEdit End
+*/ //ChompEDIT END - moved to modular_chomp
 
 //CHOMPEdit Start - Toggle to Nutrition conversion
 /mob/living/carbon/human/proc/nutrition_conversion_toggle()
 	set name = "Toggle Energy <-> Nutrition conversions"
 	set desc = "Toggle dark energy and nutrition being converted into each other when full"
-	set category = "Shadekin"
+	set category = "Abilities.Shadekin" //ChompEDIT - TGPanel
 
 	var/datum/species/shadekin/SK = species
 	if(!istype(SK))
-		to_chat(src, "<span class='warning'>Only a shadekin can use that!</span>")
+		to_chat(src, span_warning("Only a shadekin can use that!"))
 		return FALSE
 
 	if(SK.nutrition_energy_conversion)
-		to_chat(src, "<span class='notice'>Nutrition and dark energy conversions disabled.</span>")
+		to_chat(src, span_notice("Nutrition and dark energy conversions disabled."))
 		SK.nutrition_energy_conversion = 0
 	else
-		to_chat(src, "<span class='notice'>Nutrition and dark energy conversions enabled.</span>")
+		to_chat(src, span_notice("Nutrition and dark energy conversions enabled."))
 		SK.nutrition_energy_conversion = 1
 //CHOMPEdit End
 
@@ -321,31 +308,31 @@
 /mob/living/carbon/human/proc/regenerate_other()
 	set name = "Regenerate Other (50)"
 	set desc = "Spend energy to heal physical wounds in another creature."
-	set category = "Shadekin"
+	set category = "Abilities.Shadekin"
 
 	var/ability_cost = 50
 
 	/* CHOMPEdit start - general shadekin ability check
 	var/datum/species/shadekin/SK = species
 	if(!istype(SK))
-		to_chat(src, "<span class='warning'>Only a shadekin can use that!</span>")
+		to_chat(src, span_warning("Only a shadekin can use that!"))
 		return FALSE
 	else if(stat)
-		to_chat(src, "<span class='warning'>Can't use that ability in your state!</span>")
+		to_chat(src, span_warning("Can't use that ability in your state!"))
 		return FALSE
 	//CHOMPEdit Start - Dark Respite
 	else if((ability_flags & AB_DARK_RESPITE || has_modifier_of_type(/datum/modifier/dark_respite)) && !(ability_flags & AB_PHASE_SHIFTED))
-		to_chat(src, "<span class='warning'>You can't use that so soon after an emergency warp!</span>")
+		to_chat(src, span_warning("You can't use that so soon after an emergency warp!"))
 		return FALSE
 	*/
 	if(!shadekin_ability_check())
 		return FALSE
 		//CHOMPEdit End
 	else if(shadekin_get_energy() < ability_cost)
-		to_chat(src, "<span class='warning'>Not enough energy for that ability!</span>")
+		to_chat(src, span_warning("Not enough energy for that ability!"))
 		return FALSE
 	else if(ability_flags & AB_PHASE_SHIFTED)
-		to_chat(src, "<span class='warning'>You can't use that while phase shifted!</span>")
+		to_chat(src, span_warning("You can't use that while phase shifted!"))
 		return FALSE
 
 	var/list/viewed = oview(1)
@@ -353,7 +340,7 @@
 	for(var/mob/living/L in viewed)
 		targets += L
 	if(!targets.len)
-		to_chat(src,"<span class='warning'>Nobody nearby to mend!</span>")
+		to_chat(src,span_warning("Nobody nearby to mend!"))
 		return FALSE
 
 	var/mob/living/target = tgui_input_list(src,"Pick someone to mend:","Mend Other", targets)
@@ -363,7 +350,7 @@
 	target.add_modifier(/datum/modifier/shadekin/heal_boop,1 MINUTE)
 	playsound(src, 'sound/effects/EMPulse.ogg', 75, 1)
 	shadekin_adjust_energy(-ability_cost)
-	visible_message("<span class='notice'>\The [src] gently places a hand on \the [target]...</span>")
+	visible_message(span_notice("\The [src] gently places a hand on \the [target]..."))
 	face_atom(target)
 	return TRUE
 
@@ -372,8 +359,8 @@
 	desc = "You feel serene and well rested."
 	mob_overlay_state = "green_sparkles"
 
-	on_created_text = "<span class='notice'>Sparkles begin to appear around you, and all your ills seem to fade away.</span>"
-	on_expired_text = "<span class='notice'>The sparkles have faded, although you feel much healthier than before.</span>"
+	on_created_text = span_notice("Sparkles begin to appear around you, and all your ills seem to fade away.")
+	on_expired_text = span_notice("The sparkles have faded, although you feel much healthier than before.")
 	stacks = MODIFIER_STACK_EXTEND
 
 /datum/modifier/shadekin/heal_boop/tick()
@@ -399,31 +386,31 @@
 /mob/living/carbon/human/proc/create_shade()
 	set name = "Create Shade (25)"
 	set desc = "Create a field of darkness that follows you."
-	set category = "Shadekin"
+	set category = "Abilities.Shadekin"
 
 	var/ability_cost = 25
 
 	/* CHOMPEdit start - general shadekin ability check
 	var/datum/species/shadekin/SK = species
 	if(!istype(SK))
-		to_chat(src, "<span class='warning'>Only a shadekin can use that!</span>")
+		to_chat(src, span_warning("Only a shadekin can use that!"))
 		return FALSE
 	else if(stat)
-		to_chat(src, "<span class='warning'>Can't use that ability in your state!</span>")
+		to_chat(src, span_warning("Can't use that ability in your state!"))
 		return FALSE
 	//CHOMPEdit Start - Dark Respite
 	else if((ability_flags & AB_DARK_RESPITE || has_modifier_of_type(/datum/modifier/dark_respite)) && !(ability_flags & AB_PHASE_SHIFTED))
-		to_chat(src, "<span class='warning'>You can't use that so soon after an emergency warp!</span>")
+		to_chat(src, span_warning("You can't use that so soon after an emergency warp!"))
 		return FALSE
 	*/
 	if(!shadekin_ability_check())
 		return FALSE
 		//CHOMPEdit End
 	else if(shadekin_get_energy() < ability_cost)
-		to_chat(src, "<span class='warning'>Not enough energy for that ability!</span>")
+		to_chat(src, span_warning("Not enough energy for that ability!"))
 		return FALSE
 	else if(ability_flags & AB_PHASE_SHIFTED)
-		to_chat(src, "<span class='warning'>You can't use that while phase shifted!</span>")
+		to_chat(src, span_warning("You can't use that while phase shifted!"))
 		return FALSE
 
 	playsound(src, 'sound/effects/bamf.ogg', 75, 1)
@@ -437,8 +424,8 @@
 	desc = "Darkness envelops you."
 	mob_overlay_state = ""
 
-	on_created_text = "<span class='notice'>You drag part of The Dark into realspace, enveloping yourself.</span>"
-	on_expired_text = "<span class='warning'>You lose your grasp on The Dark and realspace reasserts itself.</span>"
+	on_created_text = span_notice("You drag part of The Dark into realspace, enveloping yourself.")
+	on_expired_text = span_warning("You lose your grasp on The Dark and realspace reasserts itself.")
 	stacks = MODIFIER_STACK_EXTEND
 	var/mob/living/simple_mob/shadekin/my_kin
 
@@ -473,7 +460,7 @@
 /mob/living/carbon/human/proc/dark_tunneling()
 	set name = "Dark Tunneling (100) (Once)"
 	set desc = "Make a passage to the dark."
-	set category = "Shadekin"
+	set category = "Abilities.Shadekin" //ChompEDIT - TGPanel
 
 	var/template_id = "dark_portal"
 	var/datum/map_template/shelter/template
@@ -483,24 +470,24 @@
 	/* CHOMPEdit start - general shadekin ability check
 	var/datum/species/shadekin/SK = species
 	if(!istype(SK))
-		to_chat(src, "<span class='warning'>Only a shadekin can use that!</span>")
+		to_chat(src, span_warning("Only a shadekin can use that!"))
 		return FALSE
 	else if(stat)
-		to_chat(src, "<span class='warning'>Can't use that ability in your state!</span>")
+		to_chat(src, span_warning("Can't use that ability in your state!"))
 		return FALSE
 	//CHOMPEdit Start - Dark Respite
 	else if((ability_flags & AB_DARK_RESPITE || has_modifier_of_type(/datum/modifier/dark_respite)) && !(ability_flags & AB_PHASE_SHIFTED))
-		to_chat(src, "<span class='warning'>You can't use that so soon after an emergency warp!</span>")
+		to_chat(src, span_warning("You can't use that so soon after an emergency warp!"))
 		return FALSE
 	*/
 	if(!shadekin_ability_check())
 		return FALSE
 		//CHOMPEdit End
 	else if(ability_flags & AB_PHASE_SHIFTED)
-		to_chat(src, "<span class='warning'>You can't use that while phase shifted!</span>")
+		to_chat(src, span_warning("You can't use that while phase shifted!"))
 		return FALSE
 	else if(ability_flags & AB_DARK_TUNNEL)
-		to_chat(src, "<span class='warning'>You have already made a tunnel to the Dark!</span>")
+		to_chat(src, span_warning("You have already made a tunnel to the Dark!"))
 		return FALSE
 
 	if(!template)
@@ -515,13 +502,13 @@
 	switch(status)
 		//Not allowed due to /area technical reasons
 		if(SHELTER_DEPLOY_BAD_AREA)
-			to_chat(src, "<span class='warning'>A tunnel to the Dark will not function in this area.</span>")
+			to_chat(src, span_warning("A tunnel to the Dark will not function in this area."))
 
 		//Anchored objects or no space
 		if(SHELTER_DEPLOY_BAD_TURFS, SHELTER_DEPLOY_ANCHORED_OBJECTS)
 			var/width = template.width
 			var/height = template.height
-			to_chat(src, "<span class='warning'>There is not enough open area for a tunnel to the Dark to form! You need to clear a [width]x[height] area!</span>")
+			to_chat(src, span_warning("There is not enough open area for a tunnel to the Dark to form! You need to clear a [width]x[height] area!"))
 
 	if(status != SHELTER_DEPLOY_ALLOWED)
 		return FALSE
@@ -532,10 +519,10 @@
 	smoke.set_up(10, 0, T)
 	smoke.start()
 
-	src.visible_message("<span class='notice'>[src] begins pulling dark energies around themselves.</span>")
+	src.visible_message(span_notice("[src] begins pulling dark energies around themselves."))
 	if(do_after(src, 600)) //60 seconds
 		playsound(src, 'sound/effects/phasein.ogg', 100, 1)
-		src.visible_message("<span class='notice'>[src] finishes pulling dark energies around themselves, creating a portal.</span>")
+		src.visible_message(span_notice("[src] finishes pulling dark energies around themselves, creating a portal."))
 
 		log_and_message_admins("[key_name_admin(src)] created a tunnel to the dark at [get_area(T)]!")
 		template.annihilate_plants(deploy_location)
@@ -556,33 +543,33 @@
 /mob/living/carbon/human/proc/dark_respite()
 	set name = "Dark Respite (Only in Dark)"
 	set desc = "Focus yourself on healing any injuries sustained."
-	set category = "Shadekin"
+	set category = "Abilities.Shadekin" //ChompEDIT - TGPanel
 
 	var/datum/species/shadekin/SK = species
 	if(!istype(SK))
-		to_chat(src, "<span class='warning'>Only a shadekin can use that!</span>")
+		to_chat(src, span_warning("Only a shadekin can use that!"))
 		return FALSE
 	else if(!istype(get_area(src), /area/shadekin))
-		to_chat(src, "<span class='warning'>Can only trigger Dark Respite in the Dark!</span>")
+		to_chat(src, span_warning("Can only trigger Dark Respite in the Dark!"))
 		return FALSE
 	else if(stat)
-		to_chat(src, "<span class='warning'>Can't use that ability in your state!</span>")
+		to_chat(src, span_warning("Can't use that ability in your state!"))
 		return FALSE
 	else if(ability_flags & AB_DARK_RESPITE)
-		to_chat(src, "<span class='warning'>You can't use that so soon after an emergency warp!</span>")
+		to_chat(src, span_warning("You can't use that so soon after an emergency warp!"))
 		return FALSE
 	else if(has_modifier_of_type(/datum/modifier/dark_respite) && !SK.manual_respite)
-		to_chat(src, "<span class='warning'>You cannot manually end a Dark Respite triggered by an emergency warp!</span>")
+		to_chat(src, span_warning("You cannot manually end a Dark Respite triggered by an emergency warp!"))
 	else if(ability_flags & AB_PHASE_SHIFTED)
-		to_chat(src, "<span class='warning'>You can't use that while phase shifted!</span>")
+		to_chat(src, span_warning("You can't use that while phase shifted!"))
 		return FALSE
 
 	if(has_modifier_of_type(/datum/modifier/dark_respite))
-		to_chat(src, "<span class='Notice'>You stop focusing the Dark on healing yourself.</span>")
+		to_chat(src, span_notice("You stop focusing the Dark on healing yourself."))
 		SK.manual_respite = FALSE
 		remove_a_modifier_of_type(/datum/modifier/dark_respite)
 		return TRUE
-	to_chat(src, "<span class='Notice'>You start focusing the Dark on healing yourself. (Leave the dark or trigger the ability again to end this.)</span>")
+	to_chat(src, span_notice("You start focusing the Dark on healing yourself. (Leave the dark or trigger the ability again to end this.)"))
 	SK.manual_respite = TRUE
 	add_modifier(/datum/modifier/dark_respite)
 	return TRUE
@@ -597,3 +584,195 @@
 	. = ..()
 	blacklisted_turfs = typecacheof(list(/turf/unsimulated))
 	blacklisted_areas = typecacheof(list(/area/centcom, /area/shadekin))
+
+/obj/effect/abstract/dark_maw
+	var/mob/living/owner = null
+	var/obj/belly/target = null
+	icon = 'modular_chomp/icons/obj/Shadekin_powers_2.dmi'
+	icon_state = "dark_maw_waiting"
+
+/obj/effect/abstract/dark_maw/New(loc, var/mob/living/user, var/trigger_now = 0)
+	. = ..()
+	if(istype(user))
+		owner = user
+		target = owner.vore_selected
+
+	if(!isturf(loc))
+		return INITIALIZE_HINT_QDEL
+	var/turf/T = loc
+	if(T.get_lumcount() >= 0.5)
+		visible_message(span_notice("A set of shadowy lines flickers away in the light."))
+		icon_state = "dark_maw_used"
+		qdel(src)
+		return
+
+	var/mob/living/target_user = null
+	for(var/mob/living/L in T)
+		if(L != owner && !L.incorporeal_move)
+			target_user = L
+			break
+	if(istype(target_user))
+		triggered_by(target_user, 1)
+		// to trigger rebuild
+	else if(trigger_now)
+		icon_state = "dark_maw_used"
+		flick("dark_maw_tr", src)
+		visible_message(span_warning("A set of crystals suddenly springs from the ground and shadowy tendrils wrap around nothing before vanishing."))
+		spawn(30)
+			qdel(src)
+	else
+		var/mob/living/carbon/human/carbon_owner = owner
+		var/mob/living/simple_mob/shadekin/sm_owner = owner
+		if(istype(carbon_owner))
+			var/datum/species/shadekin/SK = carbon_owner.species
+			if(istype(SK))
+				SK.active_dark_maws += src
+		else if(istype(sm_owner))
+			sm_owner.active_dark_maws += src
+		flick("dark_maw", src)
+		START_PROCESSING(SSobj, src)
+
+/obj/effect/abstract/dark_maw/Destroy()
+	STOP_PROCESSING(SSobj, src)
+	if(istype(owner))
+		var/mob/living/carbon/human/carbon_owner = owner
+		var/mob/living/simple_mob/shadekin/sm_owner = owner
+		if(istype(carbon_owner))
+			var/datum/species/shadekin/SK = carbon_owner.species
+			if(istype(SK))
+				SK.active_dark_maws -= src
+		else if(istype(sm_owner))
+			sm_owner.active_dark_maws -= src
+	return ..()
+
+/obj/effect/abstract/dark_maw/Crossed(O)
+	. = ..()
+	if(!isliving(O))
+		return
+	if(icon_state != "dark_maw_waiting")
+		return
+	var/mob/living/L = O
+	if(!L.incorporeal_move && (!owner || L != owner))
+		triggered_by(L)
+
+/obj/effect/abstract/dark_maw/process()
+	var/turf/T = get_turf(src)
+	if(!istype(T) || T.get_lumcount() >= 0.5)
+		dispel()
+
+/obj/effect/abstract/dark_maw/proc/dispel()
+	if(icon_state == "dark_maw_waiting")
+		visible_message(span_notice("A set of shadowy lines flickers away in the light."))
+	else
+		visible_message(span_notice("The crystals and shadowy tendrils dissipate with the light shone on it."))
+	icon_state = "dark_maw_used"
+	qdel(src)
+
+/obj/effect/abstract/dark_maw/proc/triggered_by(var/mob/living/L, var/triggered_instantly = 0)
+	STOP_PROCESSING(SSobj, src)
+	icon_state = "dark_maw_used"
+	flick("dark_maw_tr", src)
+	L.AdjustStunned(4)
+	visible_message(span_warning("A set of crystals spring out of the ground and shadowy tendrils start wrapping around [L]."))
+	if(owner && !triggered_instantly)
+		to_chat(owner, span_warning("A dark maw you deployed has triggered!"))
+	spawn(10)
+		var/will_vore = 1
+		if(!owner || !(target in owner) || !L.devourable || !L.can_be_drop_prey || !owner.can_be_drop_pred || !L.phase_vore)
+			will_vore = 0
+		if(!src || src.gc_destroyed)
+			//We got deleted probably, do nothing more
+		else if(L.loc != get_turf(src))
+			visible_message(span_notice("The shadowy tendrils fail to catch anything and dissipate."))
+			qdel(src)
+		else if(will_vore)
+			visible_message(span_warning("The shadowy tendrils grab around [L] and drag them into the floor, leaving nothing behind."))
+			L.forceMove(target)
+			qdel(src)
+		else
+			var/obj/effect/energy_net/dark/net = new /obj/effect/energy_net/dark(get_turf(src))
+			if(net.buckle_mob(L))
+				visible_message(span_warning("The shadowy tendrils wrap around [L] and traps them in a net of dark energy."))
+			else
+				visible_message(span_notice("The shadowy tendrils wrap around [L] and then dissipate, leaving them in place."))
+			qdel(src)
+
+/obj/effect/energy_net/dark
+	name = "dark net"
+	desc = "It's a net made of dark energy."
+	icon = 'modular_chomp/icons/obj/Shadekin_powers_2.dmi'
+	icon_state = "dark_net"
+
+	escape_time = 30 SECONDS
+
+/obj/effect/energy_net/dark/user_unbuckle_mob(mob/living/buckled_mob, mob/user)
+	if(istype(user,/mob/living/simple_mob/shadekin))
+		visible_message(span_danger("[user] dissipates \the [src] with a touch!"))
+		unbuckle_mob(buckled_mob)
+		return
+	else if(istype(user,/mob/living/carbon/human))
+		var/mob/living/carbon/human/H = user
+		var/datum/species/shadekin/SK = H.species
+		if(istype(SK))
+			visible_message(span_danger("[user] dissipates \the [src] with a touch!"))
+			unbuckle_mob(buckled_mob)
+			return
+	. = ..()
+
+/obj/effect/energy_net/dark/process()
+	. = ..()
+	var/turf/T = get_turf(src)
+	if(!istype(T) || T.get_lumcount() >= 0.6)
+		visible_message(span_notice("The tangle of dark tendrils fades away in the light."))
+		qdel(src)
+
+/datum/power/shadekin/dark_maw
+	name = "Dark Maw (20)"
+	desc = "Create a trap to capture others, or steal people from phase"
+	verbpath = /mob/living/carbon/human/proc/dark_maw
+	ability_icon_state = "dark_maw_ic"
+
+/mob/living/carbon/human/proc/dark_maw()
+	set name = "Dark Maw (20)"
+	set desc = "Create a trap to capture others, or steal people from phase"
+	set category = "Abilities.Shadekin" //ChompEDIT - TGPanel
+
+	var/ability_cost = 20
+
+	if(!shadekin_ability_check())
+		return FALSE
+	else if(shadekin_get_energy() < ability_cost)
+		to_chat(src, span_warning("Not enough energy for that ability!"))
+		return FALSE
+	var/turf/T = get_turf(src)
+	if(!istype(T))
+		to_chat(src, span_warning("You don't seem to be able to set a trap here!"))
+		return FALSE
+	else if(T.get_lumcount() >= 0.5)
+		to_chat(src, span_warning("There is too much light here for your trap to last!"))
+		return FALSE
+
+	if(do_after(src, 10))
+		if(ability_flags & AB_PHASE_SHIFTED)
+			new /obj/effect/abstract/dark_maw(loc, src, 1)
+		else
+			new /obj/effect/abstract/dark_maw(loc, src)
+		shadekin_adjust_energy(-ability_cost)
+
+
+		return TRUE
+	else
+		return FALSE
+
+/mob/living/carbon/human/proc/clear_dark_maws()
+	set name = "Dispel dark maws"
+	set desc = "Dispel any active dark maws in place"
+	set category = "Abilities.Shadekin" //ChompEDIT - TGPanel
+
+	var/datum/species/shadekin/SK = species
+	if(!istype(SK))
+		to_chat(src, span_warning("Only a shadekin can use that!"))
+		return FALSE
+
+	for(var/obj/effect/abstract/dark_maw/dm in SK.active_dark_maws)
+		dm.dispel()

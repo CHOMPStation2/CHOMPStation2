@@ -50,8 +50,8 @@
 		//set not to bug them because the chem is activating
 		M.gender_change_cooldown = 1
 		M.visible_message(
-			"<span class='notice'>[M] suddenly twitches as some of their features seem to contort and reshape.</span>",
-			"<span class='notice'>You lose focus as warmth spreads throughout your chest and abdomen.</span>"
+			span_notice("[M] suddenly twitches as some of their features seem to contort and reshape."),
+			span_notice("You lose focus as warmth spreads throughout your chest and abdomen.")
 		)
 		//wait 30 seconds, growth takes time yo
 		spawn(300)
@@ -61,7 +61,7 @@
 			if (alert(M,"This chemical will change your gender, proceed?", "Warning", "Yes", "No") == "Yes")
 				M.change_gender_identity(gender_change)
 				M.change_gender(gender_change)
-				M << "<span class='warning'>You feel like a new person.</span>" //success
+				M << span_warning("You feel like a new person.") //success
 
 //Chemist expansion
 //deathblood
@@ -345,8 +345,8 @@
 	name = "liquidhealer"
 	desc = "You are filled with an overwhelming healing."
 
-	on_created_text = "<span class='critical'>You feel your body's natural healing quick into overdrive!</span>"
-	on_expired_text = "<span class='notice'>Your body returns to normal.</span>"
+	on_created_text = span_critical("You feel your body's natural healing quick into overdrive!")
+	on_expired_text = span_notice("Your body returns to normal.")
 
 	incoming_healing_percent = 1.2
 
@@ -391,3 +391,34 @@
 	M.heal_organ_damage(4 * removed * chem_effective, 4 * removed * chem_effective)
 	M.adjustToxLoss(-2 * removed * chem_effective)
 	M.add_chemical_effect(CE_PAINKILLER, 10 * M.species.chem_strength_pain)
+
+/datum/reagent/dryagent
+	name = "Dry Agent"
+	id = "dryagent"
+	description = "A desiccant. Can be used to dry things."
+	taste_description = "dryness"
+	reagent_state = LIQUID
+	color = "#A70FFF"
+	scannable = 1
+	overdose = REAGENTS_OVERDOSE
+
+/datum/reagent/dryagent/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	var/chem_effective = 1 * M.species.chem_strength_heal
+	if(alien == IS_SLIME)
+		chem_effective = 1.25
+		M.adjustFireLoss(2 * removed * chem_effective) // Why are you giving this to Prometheans or Dionas. You're going to DRY them.
+
+/datum/reagent/dryagent/touch_obj(obj/O, amount)
+	if(istype(O, /obj/item/clothing/shoes/galoshes) && O.loc)
+		new /obj/item/clothing/shoes/dry_galoshes(O.loc)
+		qdel(O)
+		remove_self(10)
+
+/datum/reagent/dryagent/touch_turf(var/turf/T)
+	..()
+	if(volume >= 5)
+		if(istype(T, /turf/simulated/floor))
+			var/turf/simulated/floor/F = T
+			if(F.wet)
+				F.wet = 0
+	return

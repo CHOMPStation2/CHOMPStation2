@@ -107,14 +107,14 @@
 // Job Cloaks
 /obj/item/clothing/suit/storage/teshari/cloak/jobs/cap
 	name = "site manager cloak"
-	desc = "A soft Teshari cloak made for the Site Manager"
+	desc = "A soft Teshari cloak made for the " + JOB_SITE_MANAGER
 	icon_state = "tesh_cloak_cap"
 
 //Cargo
 
 /obj/item/clothing/suit/storage/teshari/cloak/jobs/qm
 	name = "quartermaster cloak"
-	desc = "A soft Teshari cloak made for the Quartermaster"
+	desc = "A soft Teshari cloak made for the " + JOB_QUARTERMASTER
 	icon_state = "tesh_cloak_qm"
 
 /obj/item/clothing/suit/storage/teshari/cloak/jobs/cargo
@@ -131,7 +131,7 @@
 
 /obj/item/clothing/suit/storage/teshari/cloak/jobs/ce
 	name = "cheif engineer cloak"
-	desc = "A soft Teshari cloak made the Chief Engineer"
+	desc = "A soft Teshari cloak made for the "+ JOB_CHIEF_ENGINEER
 	icon_state = "tesh_cloak_ce"
 
 /obj/item/clothing/suit/storage/teshari/cloak/jobs/engineer
@@ -141,7 +141,7 @@
 
 /obj/item/clothing/suit/storage/teshari/cloak/jobs/atmos
 	name = "atmospherics cloak"
-	desc = "A soft Teshari cloak made for the Atmospheric Technician"
+	desc = "A soft Teshari cloak made for the " + JOB_ATMOSPHERIC_TECHNICIAN
 	icon_state = "tesh_cloak_atmos"
 
 //Medical
@@ -158,29 +158,29 @@
 
 /obj/item/clothing/suit/storage/teshari/cloak/jobs/chemistry
 	name = "chemist cloak"
-	desc = "A soft Teshari cloak made for the Chemist"
+	desc = "A soft Teshari cloak made for the " + JOB_CHEMIST
 	icon_state = "tesh_cloak_chem"
 
 /obj/item/clothing/suit/storage/teshari/cloak/jobs/viro
 	name = "virologist cloak"
-	desc = "A soft Teshari cloak made for the Virologist"
+	desc = "A soft Teshari cloak made for the " + JOB_ALT_VIROLOGIST
 	icon_state = "tesh_cloak_viro"
 
 /obj/item/clothing/suit/storage/teshari/cloak/jobs/para
 	name = "paramedic cloak"
-	desc = "A soft Teshari cloak made for the Paramedic"
+	desc = "A soft Teshari cloak made for the " + JOB_PARAMEDIC
 	icon_state = "tesh_cloak_para"
 
 /obj/item/clothing/suit/storage/teshari/cloak/jobs/psych
 	name = " psychiatrist cloak"
-	desc = "A soft Teshari cloak made for the Psychiatrist"
+	desc = "A soft Teshari cloak made for the " + JOB_PSYCHIATRIST
 	icon_state = "tesh_cloak_psych"
 
 //Science
 
 /obj/item/clothing/suit/storage/teshari/cloak/jobs/rd
 	name = "research director cloak"
-	desc = "A soft Teshari cloak made for the Research Director"
+	desc = "A soft Teshari cloak made for the " + JOB_RESEARCH_DIRECTOR
 	icon_state = "tesh_cloak_rd"
 
 /obj/item/clothing/suit/storage/teshari/cloak/jobs/sci
@@ -190,16 +190,16 @@
 
 /obj/item/clothing/suit/storage/teshari/cloak/jobs/robo
 	name = "roboticist cloak"
-	desc = "A soft Teshari cloak made for the Roboticist"
+	desc = "A soft Teshari cloak made for the " + JOB_ROBOTICIST
 	icon_state = "tesh_cloak_robo"
 
 //Security
 
 /obj/item/clothing/suit/storage/teshari/cloak/jobs/hos
 	name = "head of security cloak"
-	desc = "A soft Teshari cloak made for the Head of Security. This one is made with stronger fibers." //CHOMPedot
+	desc = "A soft Teshari cloak made for the " + JOB_HEAD_OF_SECURITY + ". This one is made with stronger fibers." //CHOMPedot
 	icon_state = "tesh_cloak_hos"
-	allowed = list(/obj/item/weapon/gun/energy,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/weapon/gun/projectile,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/handcuffs,/obj/item/device/flashlight/maglight,/obj/item/clothing/head/helmet) //CHOMPedit start
+	allowed = list(/obj/item/gun/energy,/obj/item/reagent_containers/spray/pepper,/obj/item/gun/projectile,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/melee/baton,/obj/item/handcuffs,/obj/item/flashlight/maglight,/obj/item/clothing/head/helmet) //CHOMPedit start
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 	item_flags = THICKMATERIAL
 	siemens_coefficient = 0.6
@@ -209,7 +209,7 @@
 	name = "security cloak"
 	desc = "A soft Teshari cloak made for the Security department. This one is made with stronger fibers." //CHOMPedit
 	icon_state = "tesh_cloak_sec"
-	allowed = list(/obj/item/weapon/gun/energy,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/weapon/gun/projectile,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/handcuffs,/obj/item/device/flashlight/maglight,/obj/item/clothing/head/helmet) //CHOMPedit start
+	allowed = list(/obj/item/gun/energy,/obj/item/reagent_containers/spray/pepper,/obj/item/gun/projectile,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/melee/baton,/obj/item/handcuffs,/obj/item/flashlight/maglight,/obj/item/clothing/head/helmet) //CHOMPedit start
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 	item_flags = THICKMATERIAL
 	siemens_coefficient = 0.6
@@ -217,14 +217,14 @@
 
 /obj/item/clothing/suit/storage/teshari/cloak/jobs/iaa
 	name = "internal affairs cloak"
-	desc = "A soft Teshari cloak made for the Internal Affairs Agent"
+	desc = "A soft Teshari cloak made for the " + JOB_INTERNAL_AFFAIRS_AGENT
 	icon_state = "tesh_cloak_iaa"
 
 //Service
 
 /obj/item/clothing/suit/storage/teshari/cloak/jobs/hop
 	name = "head of personnel cloak"
-	desc = "A soft Teshari cloak made for the Head of Personnel"
+	desc = "A soft Teshari cloak made for the " + JOB_HEAD_OF_PERSONNEL
 	icon_state = "tesh_cloak_hop"
 
 /obj/item/clothing/suit/storage/teshari/cloak/jobs/service
@@ -266,9 +266,9 @@
 	item_state_slots = list(slot_r_hand_str = "tesh_hcloak_bo", slot_l_hand_str = "tesh_hcloak_bo")
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
 	flags_inv = HIDEHOLSTER|HIDETIE
-	action_button_name = "Toggle Cloak Hood"
+	actions_types = list(/datum/action/item_action/toggle_hood)
 	hoodtype = /obj/item/clothing/head/tesh_hood
-	allowed = list (/obj/item/weapon/pen, /obj/item/weapon/paper, /obj/item/device/flashlight,/obj/item/weapon/tank/emergency/oxygen, /obj/item/weapon/storage/fancy/cigarettes, /obj/item/weapon/storage/box/matches, /obj/item/weapon/reagent_containers/food/drinks/flask)
+	allowed = list (/obj/item/pen, /obj/item/paper, /obj/item/flashlight,/obj/item/tank/emergency/oxygen, /obj/item/storage/fancy/cigarettes, /obj/item/storage/box/matches, /obj/item/reagent_containers/food/drinks/flask)
 
 /obj/item/clothing/head/tesh_hood
 	name = "Cloak Hood"
@@ -634,7 +634,7 @@
 
 /obj/item/clothing/suit/storage/teshari/beltcloak/jobs/ce
 	name = "chief engineer belted cloak"
-	desc = "A soft Teshari cloak made the Chief Engineer"
+	desc = "A soft Teshari cloak made for the " + JOB_CHIEF_ENGINEER
 	icon_state = "tesh_beltcloak_ce"
 
 /obj/item/clothing/suit/storage/teshari/beltcloak/jobs/engineer
@@ -644,12 +644,12 @@
 
 /obj/item/clothing/suit/storage/teshari/beltcloak/jobs/atmos
 	name = "atmospherics belted cloak"
-	desc = "A soft Teshari cloak made for the Atmospheric Technician"
+	desc = "A soft Teshari cloak made for the " + JOB_ATMOSPHERIC_TECHNICIAN
 	icon_state = "tesh_beltcloak_atmos"
 
 /obj/item/clothing/suit/storage/teshari/beltcloak/jobs/cmo
 	name = "chief medical officer belted  cloak"
-	desc = "A soft Teshari cloak made the Chief Medical Officer"
+	desc = "A soft Teshari cloak made the " + JOB_CHIEF_MEDICAL_OFFICER
 	icon_state = "tesh_beltcloak_cmo"
 
 /obj/item/clothing/suit/storage/teshari/beltcloak/jobs/medical
@@ -659,17 +659,17 @@
 
 /obj/item/clothing/suit/storage/teshari/beltcloak/jobs/chemistry
 	name = "chemist belted cloak"
-	desc = "A soft Teshari cloak made for the Chemist"
+	desc = "A soft Teshari cloak made for the " + JOB_CHEMIST
 	icon_state = "tesh_beltcloak_chem"
 
 /obj/item/clothing/suit/storage/teshari/beltcloak/jobs/viro
 	name = "virologist belted cloak"
-	desc = "A soft Teshari cloak made for the Virologist"
+	desc = "A soft Teshari cloak made for the " + JOB_ALT_VIROLOGIST
 	icon_state = "tesh_beltcloak_viro"
 
 /obj/item/clothing/suit/storage/teshari/beltcloak/jobs/para
 	name = "paramedic belted cloak"
-	desc = "A soft Teshari cloak made for the Paramedic"
+	desc = "A soft Teshari cloak made for the " + JOB_PARAMEDIC
 	icon_state = "tesh_beltcloak_para"
 
 /obj/item/clothing/suit/storage/teshari/beltcloak/jobs/sci
@@ -679,14 +679,14 @@
 
 /obj/item/clothing/suit/storage/teshari/beltcloak/jobs/robo
 	name = "roboticist belted cloak"
-	desc = "A soft Teshari cloak made for the Roboticist"
+	desc = "A soft Teshari cloak made for the " + JOB_ROBOTICIST
 	icon_state = "tesh_beltcloak_robo"
 
 /obj/item/clothing/suit/storage/teshari/beltcloak/jobs/sec
 	name = "security belted cloak"
 	desc = "A soft Teshari cloak made for the Security department. This one is made with stronger fibers." //CHOMPedit
 	icon_state = "tesh_beltcloak_sec"
-	allowed = list(/obj/item/weapon/gun/energy,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/weapon/gun/projectile,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/handcuffs,/obj/item/device/flashlight/maglight,/obj/item/clothing/head/helmet) //CHOMPedit start
+	allowed = list(/obj/item/gun/energy,/obj/item/reagent_containers/spray/pepper,/obj/item/gun/projectile,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/melee/baton,/obj/item/handcuffs,/obj/item/flashlight/maglight,/obj/item/clothing/head/helmet) //CHOMPedit start
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 	item_flags = THICKMATERIAL
 	siemens_coefficient = 0.6
@@ -694,7 +694,7 @@
 
 /obj/item/clothing/suit/storage/teshari/beltcloak/jobs/qm
 	name = "quartermaster belted cloak"
-	desc = "A soft Teshari cloak made for the Quartermaster"
+	desc = "A soft Teshari cloak made for the " + JOB_QUARTERMASTER
 	icon_state = "tesh_beltcloak_qm"
 
 /obj/item/clothing/suit/storage/teshari/beltcloak/jobs/service
@@ -704,19 +704,19 @@
 
 /obj/item/clothing/suit/storage/teshari/beltcloak/jobs/iaa
 	name = "internal affairs belted cloak"
-	desc = "A soft Teshari cloak made for the Internal Affairs Agent"
+	desc = "A soft Teshari cloak made for the " + JOB_INTERNAL_AFFAIRS_AGENT
 	icon_state = "tesh_beltcloak_iaa"
 
 /obj/item/clothing/suit/storage/teshari/beltcloak/jobs/wrdn
 	name = "warden belted cloak"
-	desc = "A soft Teshari cloak made for the Warden"
+	desc = "A soft Teshari cloak made for the " + JOB_WARDEN
 	icon_state = "tesh_beltcloak_wrdn"
 
 /obj/item/clothing/suit/storage/teshari/beltcloak/jobs/hos
 	name = "security chief belted cloak"
-	desc = "A soft Teshari cloak made for the Head of Security. This one is made with stronger fibers." //CHOMPedit
+	desc = "A soft Teshari cloak made for the " + JOB_HEAD_OF_SECURITY + ". This one is made with stronger fibers." //CHOMPedit
 	icon_state = "tesh_beltcloak_hos"
-	allowed = list(/obj/item/weapon/gun/energy,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/weapon/gun/projectile,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/handcuffs,/obj/item/device/flashlight/maglight,/obj/item/clothing/head/helmet) //CHOMPedit start
+	allowed = list(/obj/item/gun/energy,/obj/item/reagent_containers/spray/pepper,/obj/item/gun/projectile,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/melee/baton,/obj/item/handcuffs,/obj/item/flashlight/maglight,/obj/item/clothing/head/helmet) //CHOMPedit start
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 	item_flags = THICKMATERIAL
 	siemens_coefficient = 0.6
@@ -724,6 +724,5 @@
 
 /obj/item/clothing/suit/storage/teshari/beltcloak/jobs/jani
 	name = "janitor belted cloak"
-	desc = "A soft Teshari cloak made for the Janitor"
+	desc = "A soft Teshari cloak made for the " + JOB_JANITOR
 	icon_state = "tesh_beltcloak_jani"
-

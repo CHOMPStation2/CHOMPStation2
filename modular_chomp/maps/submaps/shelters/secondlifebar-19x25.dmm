@@ -1,0 +1,1935 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aR" = (
+/obj/effect/floor_decal/corner/purple/border{
+	color = "#f700ff";
+	dir = 5
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/secondlifebar)
+"bD" = (
+/obj/structure/closet/crate/freezer,
+/turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/secondlifebar)
+"bG" = (
+/obj/effect/floor_decal/corner/purple/bordercorner{
+	color = "#f700ff";
+	dir = 1
+	},
+/obj/effect/decal/cleanable/fruit_smudge,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/secondlifebar)
+"cl" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/shuttle/floor/purple,
+/area/survivalpod/superpose/secondlifebar)
+"cp" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 6
+	},
+/turf/simulated/floor/carpet/gaycarpet,
+/area/survivalpod/superpose/secondlifebar)
+"cq" = (
+/obj/effect/floor_decal/corner/purple/border{
+	color = "#f700ff";
+	dir = 8
+	},
+/obj/machinery/light/floortube{
+	overlay_color = "#e060e0";
+	brightness_color_ns = "#9C439C";
+	light_color = "#e060e0";
+	brightness_color = "#e060e0";
+	name = "tinted light fixture";
+	dir = 8
+	},
+/obj/structure/bed/pillowpile/red,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/secondlifebar)
+"cA" = (
+/obj/effect/floor_decal/corner/purple/bordercorner{
+	color = "#f700ff";
+	dir = 4
+	},
+/obj/effect/decal/cleanable/fruit_smudge,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/secondlifebar)
+"cH" = (
+/obj/item/gps,
+/obj/item/sticky_pad/random,
+/obj/item/starcaster_news,
+/obj/item/pen/blue,
+/obj/item/pda,
+/obj/item/card/id/external,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/gun/energy/locked/frontier/holdout/unlocked,
+/obj/item/material/knife/tacknife/survival,
+/obj/item/clothing/accessory/permit/gun,
+/obj/item/camera,
+/obj/item/binoculars,
+/obj/item/threadneedle,
+/obj/random/soap,
+/obj/item/towel/random,
+/obj/item/bodybag/cryobag,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/color/yellow,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/flame/lighter/random,
+/obj/item/cell/device/hyper,
+/obj/item/cell/device/hyper,
+/obj/item/extinguisher/mini,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/reagent_containers/pill/spaceacillin,
+/obj/item/reagent_containers/pill/spaceacillin,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/suit_cooling_unit/emergency,
+/obj/item/stack/nanopaste,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/storage/backpack/messenger,
+/obj/item/clothing/accessory/storage/black_drop_pouches,
+/obj/item/clothing/accessory/poncho/thermal,
+/obj/item/storage/box/survival/comp,
+/obj/item/storage/toolbox/brass,
+/obj/item/storage/box/khcrystal,
+/obj/structure/closet/walllocker_double/south,
+/obj/item/storage/firstaid/o2,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/secondlifebar)
+"cQ" = (
+/obj/effect/decal/remains,
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/secondlifebar)
+"dv" = (
+/turf/simulated/floor/tiled/milspec/raised,
+/area/survivalpod/superpose/secondlifebar)
+"ei" = (
+/obj/structure/table/darkglass,
+/obj/machinery/chemical_dispenser/bar_soft{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/purple,
+/area/survivalpod/superpose/secondlifebar)
+"ej" = (
+/obj/item/bedsheet/pillow/teal,
+/turf/simulated/floor/carpet/gaycarpet,
+/area/survivalpod/superpose/secondlifebar)
+"ep" = (
+/obj/structure/table/darkglass,
+/obj/item/bodysnatcher{
+	pixel_y = 2;
+	pixel_x = 5
+	},
+/obj/item/bodysnatcher{
+	pixel_y = 4;
+	pixel_x = -2
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/secondlifebar)
+"fM" = (
+/turf/simulated/floor/carpet/gaycarpet,
+/area/survivalpod/superpose/secondlifebar/dorms)
+"fY" = (
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 8
+	},
+/obj/structure/window/reinforced/tinted/frosted,
+/obj/machinery/door/window/eastright,
+/obj/structure/curtain/open/shower,
+/turf/simulated/floor/tiled/kafel_full,
+/area/survivalpod/superpose/secondlifebar)
+"gi" = (
+/obj/item/melee/chainofcommand/curator_whip,
+/obj/structure/table/darkglass,
+/obj/item/clothing/accessory/shiny/socks/poly,
+/obj/item/clothing/accessory/shiny/gloves/poly,
+/obj/item/clothing/under/shiny/catsuit,
+/obj/item/clothing/head/shiny_hood/closed,
+/obj/item/clothing/head/shiny_hood,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/bcarpet,
+/area/survivalpod/superpose/secondlifebar/dorms)
+"gl" = (
+/turf/simulated/wall/sandstone{
+	color = "purple"
+	},
+/area/survivalpod/superpose/secondlifebar)
+"gE" = (
+/obj/machinery/door/airlock/freezer{
+	name = "Restroom Stall";
+	id_tag = "Cutiestorage1"
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/survivalpod/superpose/secondlifebar)
+"gN" = (
+/obj/structure/closet/crate/bin,
+/turf/simulated/floor/tiled/old_tile,
+/area/survivalpod/superpose/secondlifebar)
+"gQ" = (
+/obj/effect/map_effect/perma_light/brighter{
+	light_color = "#e060e0";
+	light_power = 1;
+	light_range = 6
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/secondlifebar)
+"hi" = (
+/obj/machinery/vending/deluxe_dinner{
+	req_access = null;
+	dir = 4
+	},
+/obj/structure/sign/poster/custom{
+	dir = 8
+	},
+/obj/structure/noticeboard{
+	pixel_x = -26;
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/purple,
+/area/survivalpod/superpose/secondlifebar)
+"hv" = (
+/obj/machinery/door/airlock/gold{
+	id_tag = "cutiedorm1"
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/secondlifebar/dorms)
+"hK" = (
+/turf/simulated/floor/tiled/old_tile,
+/area/survivalpod/superpose/secondlifebar/dorms)
+"hO" = (
+/turf/simulated/floor/tiled/old_tile,
+/area/survivalpod/superpose/secondlifebar)
+"iA" = (
+/obj/structure/table/darkglass,
+/obj/item/material/whip,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/milspec/raised,
+/area/survivalpod/superpose/secondlifebar)
+"jw" = (
+/obj/structure/closet/crate/bin,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/secondlifebar)
+"kv" = (
+/obj/effect/floor_decal/corner/purple/border{
+	color = "#f700ff";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/secondlifebar)
+"kA" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 5
+	},
+/obj/item/toy/plushie/shark,
+/obj/machinery/petrification{
+	pixel_x = 21
+	},
+/turf/simulated/floor/carpet/gaycarpet,
+/area/survivalpod/superpose/secondlifebar)
+"kE" = (
+/obj/structure/bed/chair/oldsofa/left{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/fancy,
+/turf/simulated/floor/carpet/oracarpet,
+/area/survivalpod/superpose/secondlifebar)
+"kI" = (
+/obj/item/bedsheet/pillow/red,
+/turf/simulated/floor/carpet/gaycarpet,
+/area/survivalpod/superpose/secondlifebar)
+"kJ" = (
+/obj/structure/table/darkglass,
+/obj/item/gun/energy/sizegun,
+/turf/simulated/floor/tiled/milspec/raised,
+/area/survivalpod/superpose/secondlifebar)
+"kP" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 9
+	},
+/obj/effect/decal/cleanable/fruit_smudge,
+/turf/simulated/floor/carpet/gaycarpet,
+/area/survivalpod/superpose/secondlifebar)
+"la" = (
+/obj/structure/bed/pillowpile/yellow,
+/obj/item/toy/plushie/borgplushie/drake/jani,
+/obj/item/toy/plushie/red_fox{
+	pixel_y = -8;
+	pixel_x = 7
+	},
+/turf/simulated/floor/carpet/gaycarpet,
+/area/survivalpod/superpose/secondlifebar)
+"ll" = (
+/obj/structure/flora/ausbushes/grassybush,
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/secondlifebar)
+"lw" = (
+/obj/machinery/media/jukebox,
+/turf/simulated/floor/tiled/milspec/raised,
+/area/survivalpod/superpose/secondlifebar)
+"lX" = (
+/obj/structure/table/darkglass,
+/obj/item/clothing/under/shiny/catsuit/poly,
+/obj/item/clothing/head/shiny_hood/closed/poly,
+/obj/item/clothing/head/shiny_hood/poly,
+/obj/structure/sign/poster/custom,
+/turf/simulated/floor/carpet/bcarpet,
+/area/survivalpod/superpose/secondlifebar/dorms)
+"nq" = (
+/obj/structure/flora/ausbushes/grassybush,
+/obj/structure/sign/double/barsign{
+	pixel_y = 32
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/secondlifebar)
+"ns" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/template_noop,
+/area/survivalpod/superpose/secondlifebar)
+"od" = (
+/obj/structure/bed/pillowpile/green,
+/obj/item/toy/plushie/pink_fox{
+	pixel_x = -5;
+	pixel_y = -13
+	},
+/obj/item/bedsheet/pillow/teal,
+/obj/item/toy/plushie/borgplushie/drake/med,
+/turf/simulated/floor/carpet/gaycarpet,
+/area/survivalpod/superpose/secondlifebar)
+"ok" = (
+/obj/structure/table/steel,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/secondlifebar)
+"ow" = (
+/obj/structure/bed/chair/oldsofa,
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_y = 28;
+	name = "1N-entertainment monitor"
+	},
+/turf/simulated/floor/carpet/oracarpet,
+/area/survivalpod/superpose/secondlifebar)
+"oL" = (
+/turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/secondlifebar)
+"oX" = (
+/obj/structure/curtain/black{
+	pixel_y = -32;
+	anchored = 1
+	},
+/turf/simulated/floor/flock,
+/area/survivalpod/superpose/secondlifebar)
+"oZ" = (
+/obj/structure/bed/chair/oldsofa/right{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/fancy{
+	dir = 10
+	},
+/turf/simulated/floor/carpet/oracarpet,
+/area/survivalpod/superpose/secondlifebar)
+"pF" = (
+/obj/structure/table/darkglass,
+/obj/item/spacecash/c1,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/secondlifebar)
+"pG" = (
+/obj/effect/floor_decal/corner/purple/border{
+	color = "#f700ff";
+	dir = 8
+	},
+/obj/structure/bed/pillowpile/yellow,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/secondlifebar)
+"pU" = (
+/obj/machinery/feeder,
+/turf/simulated/floor/tiled/milspec/raised,
+/area/survivalpod/superpose/secondlifebar)
+"qK" = (
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/secondlifebar)
+"rg" = (
+/obj/machinery/door/airlock/gold,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/secondlifebar)
+"rw" = (
+/obj/structure/toilet{
+	dir = 4
+	},
+/obj/structure/sign/atmos{
+	pixel_x = -32
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/secondlifebar)
+"rE" = (
+/obj/structure/table/hardwoodtable,
+/obj/item/deck/cards,
+/turf/simulated/floor/carpet/oracarpet,
+/area/survivalpod/superpose/secondlifebar)
+"rJ" = (
+/obj/structure/bed/pillowpile/red,
+/obj/item/toy/plushie/foxbear,
+/obj/item/toy/plushie/marble_fox{
+	pixel_x = -17;
+	pixel_y = -8
+	},
+/obj/item/toy/plushie/teshari/y_yw{
+	pixel_y = -5;
+	pixel_x = 7
+	},
+/obj/item/toy/plushie/snakeplushie{
+	pixel_y = -21
+	},
+/obj/effect/map_effect/perma_light/brighter{
+	light_color = "#e060e0";
+	light_power = 1;
+	light_range = 6
+	},
+/turf/simulated/floor/carpet/gaycarpet,
+/area/survivalpod/superpose/secondlifebar)
+"rP" = (
+/obj/machinery/power/rtg/advanced,
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/secondlifebar)
+"sd" = (
+/obj/effect/map_effect/perma_light/brighter{
+	light_color = "#e060e0";
+	light_power = 1;
+	light_range = 6
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/secondlifebar)
+"se" = (
+/obj/structure/bed/pillowpile/teal,
+/obj/item/toy/plushie/borgplushie/drake/trauma{
+	pixel_y = -5;
+	pixel_x = 5
+	},
+/obj/item/bedsheet/pillow/white,
+/obj/item/toy/plushie/teshari/w_yw,
+/obj/item/toy/plushie/shark{
+	pixel_y = 3;
+	pixel_x = -15
+	},
+/obj/effect/map_effect/perma_light/brighter{
+	light_color = "#e060e0";
+	light_power = 1;
+	light_range = 6
+	},
+/turf/simulated/floor/carpet/gaycarpet,
+/area/survivalpod/superpose/secondlifebar)
+"sh" = (
+/obj/machinery/vending/deluxe_boozeomat{
+	req_access = null;
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/purple,
+/area/survivalpod/superpose/secondlifebar)
+"sz" = (
+/turf/simulated/floor/carpet/gaycarpet,
+/area/survivalpod/superpose/secondlifebar)
+"sG" = (
+/obj/machinery/gibber{
+	name = "high-performance gibber";
+	emagged = 1
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/secondlifebar)
+"sT" = (
+/obj/machinery/button/remote/airlock{
+	id = "cutiedorm2";
+	name = "Bolt Control";
+	specialfunctions = 4;
+	dir = 2;
+	pixel_y = 24
+	},
+/obj/item/toy/balloon,
+/obj/item/toy/plushie/green_fox{
+	pixel_y = -3;
+	pixel_x = 1
+	},
+/turf/simulated/floor/carpet/gaycarpet,
+/area/survivalpod/superpose/secondlifebar/dorms)
+"ta" = (
+/obj/effect/floor_decal/corner/purple/border{
+	color = "#f700ff";
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/secondlifebar)
+"tr" = (
+/obj/structure/bed/double/padded,
+/obj/item/bedsheet/hosdouble,
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/secondlifebar/dorms)
+"tH" = (
+/obj/structure/table/darkglass,
+/obj/structure/curtain/black,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/secondlifebar)
+"tT" = (
+/obj/effect/floor_decal/corner/purple/border{
+	color = "#f700ff";
+	dir = 9
+	},
+/obj/structure/bed/pillowpile/white,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/secondlifebar)
+"uQ" = (
+/obj/structure/closet/secure_closet/freezer/meat,
+/turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/secondlifebar)
+"uY" = (
+/obj/structure/table/bench/marble,
+/obj/item/reagent_containers/glass/beaker/mayo{
+	pixel_y = 5
+	},
+/obj/effect/decal/cleanable/fruit_smudge,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/secondlifebar)
+"vm" = (
+/obj/machinery/replicator/clothing,
+/obj/item/toy/plushie/bigcat{
+	desc = "A big, fluffy looking cat that just looks very huggable. Though, there's an odd feeling to them..";
+	name = "Odd Cat Plushie"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/secondlifebar)
+"vp" = (
+/obj/item/gun/energy/mouseray/metamorphosis,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/secondlifebar)
+"vN" = (
+/obj/structure/table/darkglass,
+/obj/structure/stripper_pole,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/secondlifebar)
+"wT" = (
+/obj/structure/table/standard,
+/obj/item/material/knife/butch{
+	pixel_x = 3;
+	pixel_y = -2
+	},
+/obj/item/material/knife/hook{
+	pixel_x = -3;
+	pixel_y = 3
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/secondlifebar)
+"wZ" = (
+/obj/structure/table/darkglass,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/secondlifebar)
+"xw" = (
+/obj/item/clothing/under/sexybunny_white,
+/obj/structure/table/rack/shelf/steel,
+/obj/item/clothing/mask/gas/sexymime,
+/obj/item/clothing/under/sexymime/dress,
+/obj/item/clothing/under/dress/maid/sexy,
+/obj/item/clothing/under/sexyclown,
+/obj/item/storage/box/fluff/swimsuit/cowbikini,
+/obj/item/storage/box/fluff/swimsuit/strippergreen,
+/obj/item/storage/box/fluff/swimsuit/stripperpink,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/secondlifebar)
+"xR" = (
+/obj/structure/kitchenspike,
+/turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/secondlifebar)
+"xZ" = (
+/obj/structure/sink{
+	pixel_y = 16
+	},
+/obj/structure/mirror{
+	pixel_y = 32
+	},
+/obj/random/trash,
+/turf/simulated/floor/tiled/old_tile,
+/area/survivalpod/superpose/secondlifebar)
+"yi" = (
+/obj/structure/bed/chair/oldsofa,
+/turf/simulated/floor/carpet/oracarpet,
+/area/survivalpod/superpose/secondlifebar)
+"yY" = (
+/obj/item/toy/balloon,
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/secondlifebar/dorms)
+"zs" = (
+/obj/structure/table/darkglass,
+/obj/item/storage/box/glasses/meta/metapint{
+	pixel_y = 2;
+	pixel_x = -2
+	},
+/obj/item/storage/box/glasses/meta/metapint{
+	pixel_y = 4;
+	pixel_x = -4
+	},
+/obj/item/storage/box/glasses/meta/metapint{
+	pixel_y = 6;
+	pixel_x = -6
+	},
+/obj/machinery/button/windowtint{
+	id = "SP-stripbar";
+	pixel_x = -27;
+	pixel_y = -13;
+	range = 25
+	},
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 8;
+	pixel_x = -24
+	},
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/simulated/shuttle/floor/purple,
+/area/survivalpod/superpose/secondlifebar)
+"zI" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/simulated/floor/carpet/gaycarpet,
+/area/survivalpod/superpose/secondlifebar)
+"zL" = (
+/obj/structure/table/darkglass,
+/obj/item/paper_bin,
+/obj/item/pen/red,
+/obj/item/pen{
+	pixel_x = 0;
+	pixel_y = -3
+	},
+/obj/item/pen/blue{
+	pixel_x = 0;
+	pixel_y = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/secondlifebar)
+"AI" = (
+/obj/structure/table/darkglass,
+/obj/item/gun/energy/mouseray/metamorphosis/advanced/random,
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_y = 28;
+	name = "1N-entertainment monitor"
+	},
+/turf/simulated/floor/tiled/milspec/raised,
+/area/survivalpod/superpose/secondlifebar)
+"Bi" = (
+/obj/machinery/vending/loadout/gadget,
+/obj/effect/map_effect/perma_light/brighter{
+	light_color = "#e060e0";
+	light_power = 1;
+	light_range = 6
+	},
+/turf/simulated/floor/tiled/milspec/raised,
+/area/survivalpod/superpose/secondlifebar)
+"Bw" = (
+/turf/template_noop,
+/area/template_noop)
+"BJ" = (
+/obj/structure/bed/chair/oldsofa/corner,
+/turf/simulated/floor/carpet/oracarpet,
+/area/survivalpod/superpose/secondlifebar)
+"BK" = (
+/obj/effect/floor_decal/corner/purple/border{
+	color = "#f700ff";
+	dir = 10
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/secondlifebar)
+"BN" = (
+/obj/structure/table/darkglass,
+/obj/item/gun/energy/mouseray/metamorphosis/advanced,
+/turf/simulated/floor/tiled/milspec/raised,
+/area/survivalpod/superpose/secondlifebar)
+"BX" = (
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/secondlifebar)
+"Cp" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/obj/structure/sign/poster/custom{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/gaycarpet,
+/area/survivalpod/superpose/secondlifebar)
+"CG" = (
+/obj/machinery/door/airlock/gold{
+	id_tag = "cutiedorm2"
+	},
+/turf/simulated/floor/carpet/gaycarpet,
+/area/survivalpod/superpose/secondlifebar/dorms)
+"Ds" = (
+/obj/effect/decal/cleanable/fruit_smudge,
+/turf/simulated/floor/tiled/old_tile,
+/area/survivalpod/superpose/secondlifebar/dorms)
+"Eg" = (
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/secondlifebar)
+"EB" = (
+/turf/simulated/wall/gold,
+/area/survivalpod/superpose/secondlifebar)
+"EG" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/gaycarpet,
+/area/survivalpod/superpose/secondlifebar)
+"ER" = (
+/obj/structure/table/darkglass,
+/obj/item/gun/projectile/shotgun/pump{
+	hud_enabled = 0
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/pellet{
+	pixel_x = 5;
+	pixel_y = 7
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/blank{
+	pixel_x = -6;
+	pixel_y = 7
+	},
+/obj/item/clothing/mask/demon,
+/obj/structure/sign/poster/custom{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/purple,
+/area/survivalpod/superpose/secondlifebar)
+"Fs" = (
+/obj/structure/grille/rustic,
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/secondlifebar)
+"FT" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/obj/item/toy/plushie/teppi,
+/turf/simulated/floor/carpet/gaycarpet,
+/area/survivalpod/superpose/secondlifebar)
+"Gg" = (
+/turf/simulated/shuttle/floor/purple,
+/area/survivalpod/superpose/secondlifebar)
+"Gj" = (
+/obj/effect/map_effect/perma_light/brighter{
+	light_color = "#e060e0";
+	light_power = 1;
+	light_range = 6
+	},
+/obj/machinery/door/window/eastright{
+	dir = 2
+	},
+/turf/simulated/floor/tiled/milspec/raised,
+/area/survivalpod/superpose/secondlifebar)
+"Gl" = (
+/obj/structure/table/hardwoodtable,
+/obj/item/storage/pill_bottle/dice,
+/turf/simulated/floor/carpet/oracarpet,
+/area/survivalpod/superpose/secondlifebar)
+"Go" = (
+/obj/structure/table/darkglass,
+/obj/machinery/chemical_dispenser/deluxe/full,
+/turf/simulated/shuttle/floor/purple,
+/area/survivalpod/superpose/secondlifebar)
+"GO" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/shuttle/floor/purple,
+/area/survivalpod/superpose/secondlifebar)
+"GQ" = (
+/obj/item/toy/plushie/black_fox{
+	name = "latex black fox"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/secondlifebar)
+"GT" = (
+/obj/structure/table/standard,
+/obj/random/soap_common,
+/turf/simulated/floor/tiled/old_tile,
+/area/survivalpod/superpose/secondlifebar)
+"GU" = (
+/obj/machinery/door/airlock/gold,
+/turf/simulated/floor/flock,
+/area/survivalpod/superpose/secondlifebar)
+"Ho" = (
+/obj/structure/sink{
+	pixel_y = 16
+	},
+/obj/structure/mirror{
+	pixel_y = 32
+	},
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/survivalpod/superpose/secondlifebar)
+"Ht" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/template_noop,
+/area/survivalpod/superpose/secondlifebar)
+"Hw" = (
+/obj/effect/floor_decal/spline/fancy,
+/turf/simulated/floor/carpet/oracarpet,
+/area/survivalpod/superpose/secondlifebar)
+"HV" = (
+/obj/structure/bed/pillowpile/orange,
+/obj/effect/floor_decal/corner/purple/border{
+	color = "#f700ff";
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/secondlifebar)
+"HZ" = (
+/obj/item/bedsheet/pillow,
+/turf/simulated/floor/carpet/gaycarpet,
+/area/survivalpod/superpose/secondlifebar)
+"Ip" = (
+/obj/structure/table/darkglass,
+/obj/item/glass_jar,
+/obj/item/spacecash/c1,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/secondlifebar)
+"It" = (
+/obj/structure/table/darkglass,
+/obj/item/clothing/under/swimsuit/stripper/stripper_pink,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/secondlifebar)
+"IM" = (
+/obj/structure/bed/chair/oldsofa/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/fancy{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/oracarpet,
+/area/survivalpod/superpose/secondlifebar)
+"IT" = (
+/obj/structure/bed/chair/oldsofa{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/fancy{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/oracarpet,
+/area/survivalpod/superpose/secondlifebar)
+"Jj" = (
+/obj/structure/bed/pillowpile/orange,
+/turf/simulated/floor/tiled/milspec/raised,
+/area/survivalpod/superpose/secondlifebar)
+"Jv" = (
+/obj/structure/bed/pillowpile/orange,
+/turf/simulated/floor/carpet/gaycarpet,
+/area/survivalpod/superpose/secondlifebar/dorms)
+"JY" = (
+/obj/effect/floor_decal/corner/purple/bordercorner{
+	color = "#f700ff";
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/secondlifebar)
+"Ky" = (
+/obj/effect/floor_decal/corner/purple/bordercorner{
+	color = "#f700ff";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/secondlifebar)
+"KC" = (
+/obj/effect/decal/cleanable/fruit_smudge,
+/obj/structure/bed/double/padded,
+/obj/item/bedsheet/iandouble,
+/turf/simulated/floor/carpet/gaycarpet,
+/area/survivalpod/superpose/secondlifebar/dorms)
+"KH" = (
+/obj/structure/table/darkglass,
+/obj/item/handcuffs/fuzzy{
+	pixel_y = 9
+	},
+/obj/item/handcuffs/legcuffs/fuzzy{
+	pixel_y = 12;
+	pixel_x = -3
+	},
+/obj/item/clothing/under/fluff/latexmaid{
+	pixel_y = -4;
+	pixel_x = -8
+	},
+/obj/item/clothing/mask/muzzle/ballgag{
+	pixel_y = -9;
+	pixel_x = 9
+	},
+/obj/item/clothing/mask/muzzle/ballgag/ringgag{
+	pixel_y = -1;
+	pixel_x = 9
+	},
+/obj/item/handcuffs/fuzzy{
+	pixel_y = 9
+	},
+/obj/item/handcuffs/legcuffs/fuzzy{
+	pixel_y = 12;
+	pixel_x = -3
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/bcarpet,
+/area/survivalpod/superpose/secondlifebar/dorms)
+"KI" = (
+/obj/structure/table/darkglass,
+/obj/item/storage/box/glasses/rocks{
+	pixel_y = -2;
+	pixel_x = -4
+	},
+/obj/item/storage/box/glasses/square{
+	pixel_y = -2;
+	pixel_x = 12
+	},
+/obj/item/storage/secure/briefcase/money,
+/turf/simulated/shuttle/floor/purple,
+/area/survivalpod/superpose/secondlifebar)
+"KJ" = (
+/obj/machinery/door/airlock/gold,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/secondlifebar)
+"KX" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/secondlifebar)
+"Le" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/secondlifebar)
+"Lq" = (
+/obj/structure/toilet{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/survivalpod/superpose/secondlifebar/dorms)
+"LG" = (
+/obj/item/bedsheet/pillow/orange,
+/turf/simulated/floor/carpet/gaycarpet,
+/area/survivalpod/superpose/secondlifebar)
+"LO" = (
+/obj/effect/map_effect/perma_light/brighter{
+	light_color = "#e060e0";
+	light_power = 1;
+	light_range = 6
+	},
+/turf/simulated/shuttle/floor/purple,
+/area/survivalpod/superpose/secondlifebar)
+"LQ" = (
+/obj/structure/bed/pillowpile/yellow,
+/turf/simulated/floor/tiled/milspec/raised,
+/area/survivalpod/superpose/secondlifebar)
+"Ma" = (
+/obj/structure/table/darkglass,
+/obj/item/toy/tennis/purple{
+	pixel_x = -6
+	},
+/obj/item/toy/tennis/blue{
+	pixel_x = 4
+	},
+/turf/simulated/floor/tiled/milspec/raised,
+/area/survivalpod/superpose/secondlifebar)
+"MC" = (
+/turf/simulated/floor/flock,
+/area/survivalpod/superpose/secondlifebar)
+"MX" = (
+/obj/structure/bed/chair/oldsofa{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/oracarpet,
+/area/survivalpod/superpose/secondlifebar)
+"Ng" = (
+/obj/item/gun/energy/mouseray/metamorphosis/advanced/random,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/blood/oil/streak,
+/turf/simulated/floor/tiled/old_tile,
+/area/survivalpod/superpose/secondlifebar)
+"Ns" = (
+/obj/structure/table/darkglass,
+/obj/item/reagent_containers/pill/zoom,
+/obj/item/reagent_containers/pill/zoom{
+	pixel_y = 7;
+	pixel_x = -1
+	},
+/obj/item/reagent_containers/pill/zoom{
+	pixel_y = 4;
+	pixel_x = 4
+	},
+/obj/item/glass_extra/straw,
+/turf/simulated/floor/tiled/milspec/raised,
+/area/survivalpod/superpose/secondlifebar)
+"NK" = (
+/obj/structure/sink{
+	pixel_y = 16
+	},
+/obj/structure/mirror{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/survivalpod/superpose/secondlifebar/dorms)
+"NY" = (
+/obj/structure/table/rack/steel,
+/obj/random/soap_common,
+/obj/random/soap_common,
+/obj/item/towel/random,
+/obj/item/gun/energy/sizegun,
+/turf/simulated/floor/tiled/old_tile,
+/area/survivalpod/superpose/secondlifebar/dorms)
+"Ob" = (
+/obj/machinery/door/airlock/freezer{
+	name = "Bathroom"
+	},
+/turf/simulated/floor/carpet/gaycarpet,
+/area/survivalpod/superpose/secondlifebar/dorms)
+"Of" = (
+/obj/structure/table/darkglass,
+/obj/item/card/id,
+/turf/simulated/floor/tiled/milspec/raised,
+/area/survivalpod/superpose/secondlifebar)
+"Oo" = (
+/obj/structure/table/darkglass,
+/obj/item/mindbinder{
+	pixel_y = 2;
+	pixel_x = 5
+	},
+/obj/item/mindbinder{
+	pixel_y = 4;
+	pixel_x = -2
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/secondlifebar)
+"OB" = (
+/obj/structure/flora/ausbushes/ppflowers,
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/secondlifebar)
+"OD" = (
+/obj/structure/table/darkglass,
+/obj/item/glass_jar,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/secondlifebar)
+"OM" = (
+/obj/effect/decal/cleanable/fruit_smudge,
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/secondlifebar/dorms)
+"ON" = (
+/obj/structure/toilet{
+	dir = 8
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/survivalpod/superpose/secondlifebar)
+"Pc" = (
+/obj/machinery/power/rtg/advanced,
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/secondlifebar)
+"Po" = (
+/obj/effect/floor_decal/corner/purple/border{
+	color = "#f700ff";
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/secondlifebar)
+"Pr" = (
+/obj/structure/bed/pillowpile/white,
+/turf/simulated/floor/tiled/milspec/raised,
+/area/survivalpod/superpose/secondlifebar)
+"Px" = (
+/obj/machinery/door/airlock/gold,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/unsimulated/shuttle/floor/purple,
+/area/survivalpod/superpose/secondlifebar)
+"PO" = (
+/obj/machinery/vending/loadout/loadout_misc{
+	emagged = 1
+	},
+/turf/simulated/floor/tiled/milspec/raised,
+/area/survivalpod/superpose/secondlifebar)
+"Qm" = (
+/obj/item/clothing/under/dress/dress_saloon,
+/obj/item/clothing/under/sexybunny_white/sexybunny_black,
+/obj/item/clothing/mask/gas/sexyclown,
+/obj/structure/table/rack/shelf/steel,
+/obj/item/clothing/suit/sexyminer,
+/obj/item/clothing/under/sexymime,
+/obj/item/clothing/under/dress/dress_yellow,
+/obj/item/clothing/suit/iasexy,
+/obj/item/storage/box/fluff/swimsuit,
+/obj/item/storage/box/fluff/swimsuit/blue,
+/obj/item/storage/box/fluff/swimsuit/white,
+/obj/item/storage/box/fluff/swimsuit/risque,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/secondlifebar)
+"Qp" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/secondlifebar)
+"Qx" = (
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/secondlifebar/dorms)
+"QD" = (
+/obj/structure/flora/ausbushes/lavendergrass,
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/secondlifebar)
+"QL" = (
+/obj/effect/decal/remains,
+/turf/simulated/floor/tiled/old_tile,
+/area/survivalpod/superpose/secondlifebar)
+"QZ" = (
+/obj/random/trash,
+/turf/simulated/floor/tiled/old_tile,
+/area/survivalpod/superpose/secondlifebar)
+"Ra" = (
+/obj/structure/table/darkglass,
+/obj/effect/map_effect/perma_light/brighter{
+	light_color = "#e060e0";
+	light_power = 1;
+	light_range = 6
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/secondlifebar)
+"RQ" = (
+/obj/machinery/shower{
+	pixel_y = 16
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 8
+	},
+/obj/machinery/door/window/eastleft,
+/obj/structure/curtain/open/shower,
+/turf/simulated/floor/tiled/kafel_full,
+/area/survivalpod/superpose/secondlifebar)
+"RU" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 10
+	},
+/turf/simulated/floor/carpet/gaycarpet,
+/area/survivalpod/superpose/secondlifebar)
+"Sm" = (
+/obj/structure/table/darkglass,
+/obj/item/handcuffs/legcuffs/fuzzy,
+/obj/item/handcuffs/legcuffs/fuzzy,
+/obj/item/handcuffs/legcuffs/fuzzy,
+/obj/item/handcuffs/legcuffs/fuzzy,
+/obj/item/handcuffs/legcuffs/fuzzy,
+/obj/item/handcuffs/fuzzy,
+/obj/item/handcuffs/fuzzy,
+/obj/item/handcuffs/fuzzy,
+/obj/item/handcuffs/fuzzy,
+/obj/item/handcuffs/fuzzy,
+/obj/item/handcuffs/legcuffs/fuzzy,
+/obj/item/handcuffs/legcuffs/fuzzy,
+/obj/item/toy/balloon,
+/turf/simulated/floor/tiled/milspec/raised,
+/area/survivalpod/superpose/secondlifebar)
+"SE" = (
+/obj/effect/floor_decal/corner/purple/border{
+	color = "#f700ff";
+	dir = 5
+	},
+/obj/structure/bed/pillowpile/orange,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/secondlifebar)
+"Tv" = (
+/obj/item/toy/balloon,
+/turf/simulated/floor/tiled/old_tile,
+/area/survivalpod/superpose/secondlifebar/dorms)
+"TG" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/item/toy/plushie/vox,
+/turf/simulated/floor/carpet/gaycarpet,
+/area/survivalpod/superpose/secondlifebar)
+"TM" = (
+/obj/effect/map_effect/perma_light/brighter{
+	light_color = "#e060e0";
+	light_power = 1;
+	light_range = 6
+	},
+/turf/simulated/floor/flock,
+/area/survivalpod/superpose/secondlifebar)
+"TT" = (
+/obj/effect/floor_decal/industrial/stand_clear,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/secondlifebar)
+"UW" = (
+/obj/effect/floor_decal/corner/purple/border{
+	color = "#f700ff";
+	dir = 4
+	},
+/obj/effect/decal/cleanable/fruit_smudge,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/secondlifebar)
+"Va" = (
+/obj/structure/undies_wardrobe,
+/obj/item/towel/random{
+	pixel_x = -5;
+	pixel_y = 11
+	},
+/obj/item/towel/random{
+	pixel_x = 5;
+	pixel_y = 11
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/survivalpod/superpose/secondlifebar)
+"VF" = (
+/obj/structure/bed/pillowpile,
+/obj/effect/floor_decal/corner/purple/border{
+	color = "#f700ff";
+	dir = 6
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/secondlifebar)
+"VW" = (
+/obj/item/clothing/accessory/shiny/gloves,
+/obj/item/clothing/accessory/shiny/socks,
+/obj/item/clothing/head/shiny_hood,
+/obj/item/clothing/head/shiny_hood/closed,
+/obj/item/clothing/under/shiny/catsuit,
+/obj/item/handcuffs/fuzzy,
+/obj/item/handcuffs/legcuffs/fuzzy,
+/obj/item/material/twohanded/riding_crop,
+/obj/item/tape_roll,
+/obj/item/stack/cable_coil/random,
+/obj/item/clothing/under/fluff/latexmaid,
+/obj/item/melee/fluff/holochain/mass,
+/obj/item/clothing/accessory/collar/shock,
+/obj/item/clothing/glasses/sunglasses/blindfold,
+/obj/item/clothing/mask/muzzle,
+/obj/item/clothing/mask/muzzle/ballgag,
+/obj/item/clothing/mask/muzzle/ballgag/ringgag,
+/obj/item/clothing/under/skinsuit,
+/obj/item/clothing/under/skinsuit/fem,
+/obj/item/clothing/under/skinsuit/fem/gray,
+/obj/item/clothing/under/skinsuit/fem/leotard,
+/obj/item/clothing/under/skinsuit/fem/leotard/gray,
+/obj/item/clothing/under/skinsuit/gray,
+/obj/item/clothing/under/skinsuit/leotard,
+/obj/item/clothing/under/skinsuit/leotard/gray,
+/obj/item/clothing/under/rank/nullsuit/civ,
+/obj/item/clothing/accessory/shiny/gloves/poly,
+/obj/item/clothing/accessory/shiny/socks/poly,
+/obj/item/clothing/head/shiny_hood/poly,
+/obj/item/clothing/head/shiny_hood/closed/poly,
+/obj/item/clothing/under/shiny/catsuit/poly,
+/obj/structure/table/darkglass,
+/obj/item/toy/balloon,
+/turf/simulated/floor/tiled/milspec/raised,
+/area/survivalpod/superpose/secondlifebar)
+"VZ" = (
+/obj/structure/toilet{
+	pixel_y = 12
+	},
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/survivalpod/superpose/secondlifebar)
+"Wo" = (
+/obj/structure/grille/rustic,
+/obj/structure/window/reinforced/polarized/full{
+	id = "SP-stripbar"
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/secondlifebar)
+"Ws" = (
+/obj/effect/decal/cleanable/fruit_smudge,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/secondlifebar)
+"Wt" = (
+/obj/structure/table/darkglass,
+/obj/machinery/chemical_dispenser/bar_coffee/full{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/purple,
+/area/survivalpod/superpose/secondlifebar)
+"Wz" = (
+/obj/structure/table/darkglass,
+/obj/item/gun/energy/sizegun,
+/obj/machinery/recharger,
+/turf/simulated/floor/tiled/milspec/raised,
+/area/survivalpod/superpose/secondlifebar)
+"Xl" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/item/digestion_remains/skull/teshari,
+/obj/effect/decal/cleanable/blood/oil,
+/turf/simulated/floor/tiled/old_tile,
+/area/survivalpod/superpose/secondlifebar/dorms)
+"Xn" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/turf/simulated/floor/carpet/gaycarpet,
+/area/survivalpod/superpose/secondlifebar)
+"Xp" = (
+/obj/structure/bed/pillowpile/red,
+/turf/simulated/floor/tiled/milspec/raised,
+/area/survivalpod/superpose/secondlifebar)
+"Xt" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/structure/sink{
+	pixel_y = 16
+	},
+/obj/structure/mirror{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/survivalpod/superpose/secondlifebar/dorms)
+"XG" = (
+/obj/machinery/button/remote/airlock{
+	id = "cutiedorm1";
+	name = "Bolt Control";
+	specialfunctions = 4;
+	dir = 2;
+	pixel_y = 24
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/secondlifebar/dorms)
+"XI" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/gaycarpet,
+/area/survivalpod/superpose/secondlifebar)
+"Yh" = (
+/obj/effect/floor_decal/corner/purple/bordercorner{
+	color = "#f700ff";
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/secondlifebar)
+"Yk" = (
+/turf/simulated/wall/sandstone{
+	color = "purple"
+	},
+/area/survivalpod/superpose/secondlifebar/dorms)
+"Yv" = (
+/obj/effect/floor_decal/corner/purple/bordercorner{
+	color = "#f700ff"
+	},
+/turf/simulated/floor/tiled/milspec/raised,
+/area/survivalpod/superpose/secondlifebar)
+"Yx" = (
+/obj/structure/table/hardwoodtable,
+/turf/simulated/floor/carpet/oracarpet,
+/area/survivalpod/superpose/secondlifebar)
+"YS" = (
+/obj/structure/bed/pillowpile/green,
+/obj/effect/floor_decal/corner/purple/border{
+	color = "#f700ff";
+	dir = 9
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/secondlifebar)
+"YY" = (
+/obj/structure/closet/secure_closet/freezer/fridge,
+/turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/secondlifebar)
+"Zg" = (
+/obj/structure/sign/poster/custom,
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/secondlifebar/dorms)
+"Zh" = (
+/obj/machinery/door/airlock/freezer{
+	name = "Bathroom"
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/secondlifebar/dorms)
+"ZF" = (
+/obj/structure/table/rack/steel,
+/obj/random/soap_common,
+/obj/item/towel/random,
+/obj/item/gun/energy/sizegun,
+/turf/simulated/floor/tiled/old_tile,
+/area/survivalpod/superpose/secondlifebar/dorms)
+"ZP" = (
+/obj/structure/toilet{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/survivalpod/superpose/secondlifebar/dorms)
+
+(1,1,1) = {"
+gl
+gl
+gl
+gl
+gl
+gl
+gl
+Wo
+Wo
+Wo
+gl
+gl
+gl
+gl
+Wo
+gl
+Wo
+gl
+gl
+gl
+gl
+gl
+Bw
+Bw
+Bw
+"}
+(2,1,1) = {"
+Pc
+gl
+wT
+oL
+uQ
+gl
+Wt
+Go
+ei
+sh
+hi
+zs
+lw
+dv
+vp
+rw
+qK
+zL
+Yk
+NK
+Lq
+Yk
+Yk
+gl
+Bw
+"}
+(3,1,1) = {"
+ok
+gl
+xR
+gQ
+bD
+gl
+ER
+Gg
+Gg
+Gg
+Gg
+GO
+Ma
+dv
+qK
+Ws
+Ws
+wZ
+Yk
+Xl
+hK
+NY
+Yk
+QD
+Bw
+"}
+(4,1,1) = {"
+rP
+gl
+sG
+oL
+YY
+gl
+KI
+Gg
+LO
+Gg
+Gg
+GO
+Gj
+dv
+Ws
+uY
+TT
+sd
+Yk
+Yk
+Zh
+Yk
+Yk
+QD
+Bw
+"}
+(5,1,1) = {"
+BX
+KJ
+Le
+Le
+Le
+Px
+cl
+cl
+cl
+cl
+cl
+iA
+Wz
+dv
+Ws
+Ws
+Ws
+qK
+Yk
+OM
+Qx
+yY
+Yk
+ll
+Bw
+"}
+(6,1,1) = {"
+gl
+gl
+gl
+rg
+gl
+gl
+AI
+Of
+Ns
+kJ
+Ma
+BN
+Jj
+dv
+qK
+qK
+qK
+qK
+hv
+Qx
+OM
+Zg
+Yk
+QD
+Bw
+"}
+(7,1,1) = {"
+gl
+VW
+qK
+qK
+qK
+rg
+dv
+LQ
+dv
+Pr
+dv
+Xp
+Yv
+Po
+Po
+cA
+qK
+qK
+Yk
+XG
+KH
+tr
+Yk
+nq
+ns
+"}
+(8,1,1) = {"
+Wo
+Sm
+qK
+qK
+cH
+gl
+aR
+HV
+Po
+UW
+Po
+Po
+VF
+wZ
+wZ
+SE
+JY
+qK
+Yk
+Yk
+Yk
+Yk
+Yk
+Eg
+EB
+"}
+(9,1,1) = {"
+Wo
+Qm
+qK
+sd
+wZ
+tH
+wZ
+OD
+It
+OD
+wZ
+wZ
+OD
+wZ
+vN
+wZ
+kv
+qK
+Wo
+MC
+MC
+oX
+Fs
+Eg
+Qp
+"}
+(10,1,1) = {"
+Wo
+xw
+qK
+qK
+wZ
+tH
+pF
+Ra
+vN
+pF
+Ra
+vN
+wZ
+pF
+wZ
+Ra
+kv
+qK
+GU
+MC
+TM
+MC
+GU
+Eg
+Eg
+"}
+(11,1,1) = {"
+gl
+VW
+qK
+qK
+wZ
+tH
+wZ
+OD
+wZ
+OD
+wZ
+wZ
+Ip
+pF
+vN
+wZ
+kv
+qK
+Wo
+MC
+MC
+oX
+Fs
+Eg
+KX
+"}
+(12,1,1) = {"
+gl
+gl
+gl
+gl
+gl
+gl
+YS
+ta
+ta
+pG
+ta
+cq
+BK
+wZ
+pF
+tT
+bG
+qK
+Yk
+Yk
+Yk
+Yk
+Yk
+cQ
+EB
+"}
+(13,1,1) = {"
+gl
+gl
+RQ
+fY
+Va
+gl
+vm
+qK
+Ws
+qK
+qK
+qK
+Yh
+ta
+ta
+Ky
+qK
+qK
+Yk
+Jv
+gi
+lX
+Yk
+Eg
+Ht
+"}
+(14,1,1) = {"
+gl
+Ho
+QZ
+hO
+hO
+rg
+qK
+qK
+qK
+qK
+qK
+qK
+kP
+EG
+EG
+EG
+RU
+qK
+CG
+fM
+fM
+fM
+Yk
+OB
+Bw
+"}
+(15,1,1) = {"
+gl
+GT
+hO
+QZ
+gN
+gl
+IM
+IT
+IT
+oZ
+qK
+qK
+Xn
+od
+la
+kI
+zI
+jw
+Yk
+sT
+fM
+KC
+Yk
+OB
+Bw
+"}
+(16,1,1) = {"
+gl
+xZ
+hO
+Ng
+hO
+gl
+ow
+rE
+Yx
+Hw
+sd
+qK
+Xn
+rJ
+se
+ej
+TG
+Bi
+Yk
+Yk
+Ob
+Yk
+Yk
+ll
+Bw
+"}
+(17,1,1) = {"
+gl
+gl
+gE
+gl
+gE
+gl
+yi
+Gl
+Yx
+Hw
+qK
+GQ
+Xn
+HZ
+LG
+sz
+zI
+pU
+Yk
+Xt
+Tv
+ZF
+Yk
+QD
+Bw
+"}
+(18,1,1) = {"
+gl
+VZ
+QL
+gl
+ON
+gl
+BJ
+MX
+MX
+kE
+ep
+Oo
+kA
+Cp
+XI
+FT
+cp
+PO
+Yk
+Ds
+ZP
+Yk
+Yk
+gl
+Bw
+"}
+(19,1,1) = {"
+gl
+gl
+gl
+gl
+gl
+gl
+gl
+Wo
+Wo
+Wo
+gl
+gl
+gl
+gl
+Wo
+Wo
+Wo
+gl
+gl
+gl
+gl
+gl
+Bw
+Bw
+Bw
+"}

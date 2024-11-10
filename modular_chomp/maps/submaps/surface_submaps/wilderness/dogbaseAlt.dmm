@@ -26,7 +26,7 @@
 /obj/effect/decal/remains/deer,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/random/contraband/nofail,
+/obj/random/contraband,
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/submap/DogBase)
 "bF" = (
@@ -101,13 +101,13 @@
 /obj/effect/decal/cleanable/filth,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/bone/ribs,
+/obj/item/bone/ribs,
 /obj/random/maintenance/research,
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/submap/DogBase)
 "eQ" = (
 /obj/structure/janitorialcart,
-/obj/item/weapon/storage/bag/trash,
+/obj/item/storage/bag/trash,
 /obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
@@ -169,7 +169,7 @@
 "hV" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/bone/leg,
+/obj/item/bone/leg,
 /mob/living/simple_mob/animal/giant_spider/nurse{
 	faction = "syndicate";
 	name = "trained giant spider"
@@ -183,7 +183,7 @@
 /area/submap/DogBase)
 "ir" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/gun/projectile/pistol,
+/obj/item/gun/projectile/pistol,
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
 "iW" = (
@@ -191,7 +191,6 @@
 /obj/effect/decal/remains/deer,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/random/maintenance/medical,
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/submap/DogBase)
 "ja" = (
@@ -230,9 +229,6 @@
 /area/submap/DogBase)
 "lt" = (
 /obj/structure/closet/secure_closet/guncabinet,
-/obj/random/projectile,
-/obj/random/projectile,
-/obj/effect/landmark/loot_spawn,
 /obj/effect/floor_decal/corner/red/border{
 	dir = 1;
 	icon_state = "bordercolor"
@@ -241,7 +237,7 @@
 /area/submap/DogBase)
 "lJ" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
 "md" = (
@@ -276,7 +272,7 @@
 /area/submap/DogBase)
 "oa" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
 	},
@@ -300,13 +296,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/submap/DogBase)
-"pg" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 9
-	},
-/obj/effect/landmark/loot_spawn,
-/turf/simulated/floor/tiled/dark,
-/area/submap/DogBase)
 "pT" = (
 /obj/machinery/light{
 	dir = 1
@@ -322,7 +311,7 @@
 /obj/effect/decal/cleanable/filth,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/bone,
+/obj/item/bone,
 /obj/random/maintenance/security,
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/submap/DogBase)
@@ -344,7 +333,6 @@
 /area/submap/DogBase)
 "sm" = (
 /obj/structure/closet/secure_closet/guncabinet,
-/obj/random/projectile,
 /obj/random/projectile,
 /obj/effect/floor_decal/corner/red/border{
 	dir = 1;
@@ -415,7 +403,7 @@
 /obj/structure/dogbed,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/bone,
+/obj/item/bone,
 /obj/random/maintenance/security,
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/submap/DogBase)
@@ -436,7 +424,7 @@
 /area/submap/DogBase)
 "yS" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
@@ -478,14 +466,6 @@
 	faction = "syndicate"
 	},
 /turf/simulated/floor,
-/area/submap/DogBase)
-"CX" = (
-/obj/structure/table/woodentable,
-/obj/item/stolenpackage,
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
 "Dz" = (
 /obj/effect/floor_decal/corner/red/border{
@@ -548,13 +528,13 @@
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/template_noop)
 "GP" = (
-/obj/item/weapon/storage/belt/janitor,
+/obj/item/storage/belt/janitor,
 /obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
 "Hh" = (
 /obj/machinery/power/apc{
-	cell_type = /obj/item/weapon/cell/super;
+	cell_type = /obj/item/cell/super;
 	dir = 8;
 	name = "Unknown APC";
 	pixel_x = -24
@@ -614,7 +594,7 @@
 /area/submap/DogBase)
 "KH" = (
 /obj/structure/table/woodentable,
-/obj/random/contraband/nofail,
+/obj/random/contraband,
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
 "KW" = (
@@ -631,18 +611,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/submap/DogBase)
-"LV" = (
-/obj/structure/table/woodentable,
-/obj/item/device/radio/phone,
-/obj/random/contraband/nofail,
-/turf/simulated/floor/tiled/dark,
-/area/submap/DogBase)
 "MF" = (
 /obj/structure/dogbed,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/bone,
-/obj/random/contraband/nofail,
+/obj/item/bone,
+/obj/random/contraband,
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/submap/DogBase)
 "MW" = (
@@ -684,7 +658,7 @@
 /area/submap/DogBase)
 "PI" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
@@ -701,7 +675,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/remains/human,
-/obj/random/contraband/nofail,
+/obj/random/contraband,
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/submap/DogBase)
 "Qj" = (
@@ -816,7 +790,7 @@
 	dir = 1;
 	icon_state = "bordercolor"
 	},
-/obj/random/cash/huge,
+/obj/random/cash,
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
 "UM" = (
@@ -828,7 +802,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
-/obj/random/cash/huge,
+/obj/random/cash,
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
 "Vi" = (
@@ -880,7 +854,7 @@
 /area/template_noop)
 "YI" = (
 /obj/structure/table/woodentable,
-/obj/random/cash/big,
+/obj/random/cash,
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
 "YK" = (
@@ -905,7 +879,7 @@
 /area/submap/DogBase)
 "Zn" = (
 /obj/structure/table/woodentable,
-/obj/item/device/radio/phone,
+/obj/item/radio/phone,
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
 "ZC" = (
@@ -1247,7 +1221,7 @@ dn
 dp
 Vi
 tE
-pg
+to
 JD
 JD
 ky
@@ -1313,7 +1287,7 @@ XA
 tE
 fP
 kl
-LV
+Zn
 RO
 ja
 ao
@@ -1334,7 +1308,7 @@ Ge
 gW
 gW
 tE
-CX
+NA
 ja
 bb
 Sc
@@ -1398,7 +1372,7 @@ Ge
 gW
 gW
 tE
-CX
+NA
 ja
 YI
 Sc

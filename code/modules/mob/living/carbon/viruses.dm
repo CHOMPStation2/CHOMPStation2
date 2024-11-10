@@ -13,22 +13,22 @@
 				var/obj/effect/decal/cleanable/blood/B = O
 				if(B.virus2.len)
 					for (var/ID in B.virus2)
-						var/datum/disease2/disease/V = B.virus2[ID]
-						infect_virus2(src,V)
+					//	var/datum/disease2/disease/V = B.virus2[ID] - CHOMPEdit
+						infect_virus2(src,ID)	// CHOMPEdit: Fixes virus not spreading
 
 			else if(istype(O,/obj/effect/decal/cleanable/mucus))
 				var/obj/effect/decal/cleanable/mucus/M = O
 				if(M.virus2.len)
 					for (var/ID in M.virus2)
-						var/datum/disease2/disease/V = M.virus2[ID]
-						infect_virus2(src,V)
+					//	var/datum/disease2/disease/V = M.virus2[ID] - CHOMPEdit
+						infect_virus2(src,ID) //	CHOMPEdit: Fixes virus not spreading
 
 			else if(istype(O,/obj/effect/decal/cleanable/vomit))
 				var/obj/effect/decal/cleanable/vomit/Vom = O
 				if(Vom.virus2.len)
 					for (var/ID in Vom.virus2)
-						var/datum/disease2/disease/V = Vom.virus2[ID]
-						infect_virus2(src,V)
+					//	var/datum/disease2/disease/V = Vom.virus2[ID]
+						infect_virus2(src,ID) // CHOMPEdit: Fixes virus not spreading
 
 	if(virus2.len)
 		for (var/ID in virus2)

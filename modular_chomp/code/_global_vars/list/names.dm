@@ -1,0 +1,5 @@
+GLOBAL_LIST_INIT(verbs, world.file2list("modular_chomp/strings/names/verbs.txt"))
+GLOBAL_LIST_INIT(ing_verbs, world.file2list("modular_chomp/strings/names/ing_verbs.txt"))
+GLOBAL_LIST_INIT(adverbs, world.file2list("modular_chomp/strings/names/adverbs.txt"))
+GLOBAL_LIST_INIT(adjectives, world.file2list("modular_chomp/strings/names/adjectives.txt"))
+GLOBAL_LIST_INIT(dream_strings, world.file2list("modular_chomp/strings/dreamstrings.txt"))

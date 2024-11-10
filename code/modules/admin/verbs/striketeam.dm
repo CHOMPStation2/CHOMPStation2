@@ -2,7 +2,7 @@
 var/const/commandos_possible = 6 //if more Commandos are needed in the future
 
 /client/proc/strike_team()
-	set category = "Fun"
+	set category = "Fun.Event Kit"
 	set name = "Spawn Strike Team"
 	set desc = "Spawns a strike team if you want to run an admin event."
 
@@ -11,11 +11,11 @@ var/const/commandos_possible = 6 //if more Commandos are needed in the future
 		return
 
 	if(!ticker)
-		to_chat(usr, "<font color='red'>The game hasn't started yet!</font>")
+		to_chat(usr, span_red("The game hasn't started yet!"))
 		return
 
 	if(world.time < 6000)
-		to_chat(usr, "<font color='red'>There are [(6000-world.time)/10] seconds remaining before it may be called.</font>")
+		to_chat(usr, span_red("There are [(6000-world.time)/10] seconds remaining before it may be called."))
 		return
 
 	var/datum/antagonist/deathsquad/team
@@ -33,7 +33,7 @@ var/const/commandos_possible = 6 //if more Commandos are needed in the future
 			return
 
 	if(team.deployed)
-		to_chat(usr, "<font color='red'>Someone is already sending a team.</font>")
+		to_chat(usr, span_red("Someone is already sending a team."))
 		return
 
 	if(tgui_alert(usr, "Do you want to send in a strike team? Once enabled, this is irreversible.","Strike Team",list("Yes","No"))!="Yes")
@@ -45,7 +45,7 @@ var/const/commandos_possible = 6 //if more Commandos are needed in the future
 	while(!choice)
 		choice = sanitize(tgui_input_text(src, "Please specify which mission the strike team shall undertake.", "Specify Mission", ""))
 		if(!choice)
-			if(tgui_alert(usr, "Error, no mission set. Do you want to exit the setup process?","Strike Team",list("Yes","No"))=="Yes")
+			if(tgui_alert(usr, "Error, no mission set. Do you want to exit the setup process?","Strike Team",list("Yes","No"))!="No")
 				return
 	consider_ert_load() //VOREStation Add
 

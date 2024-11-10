@@ -2,11 +2,13 @@
 	Global associative list for caching humanoid icons.
 	Index format m or f, followed by a string of 0 and 1 to represent bodyparts followed by husk fat hulk skeleton 1 or 0.
 */
-var/global/list/human_icon_cache = list() //key is incredibly complex, see update_icons_body()
-var/global/list/tail_icon_cache = list() //key is [species.race_key][r_skin][g_skin][b_skin]
-var/global/list/wing_icon_cache = list() // See tail.
-var/global/list/light_overlay_cache = list() //see make_worn_icon() on helmets
-var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
+//ChompEDIT START - change to managed GLOB
+GLOBAL_LIST_EMPTY(human_icon_cache) //key is incredibly complex, see update_icons_body()
+GLOBAL_LIST_EMPTY(tail_icon_cache) //key is [species.race_key][r_skin][g_skin][b_skin]
+GLOBAL_LIST_EMPTY(wing_icon_cache) // See tail.
+GLOBAL_LIST_EMPTY(light_overlay_cache) //see make_worn_icon() on helmets
+GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
+//ChompEDIT END
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 // # Human Icon Updating System
@@ -60,6 +62,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 // These are used as the layers for the icons, as well as indexes in a list that holds onto them.
 // Technically the layers used are all -100+layer to make them FLOAT_LAYER overlays.
 //CHOMPEDIT: edit the file human/update_icons.dm in the modular_chomp folder as well, if you update these (and clothing/clothing.dm line 789, the hardcoded layer there in /obj/item/clothing/suit/make_worn_icon)
+/*CHOMPRemove Start: Global here!
 //Human Overlays Indexes/////////
 #define MUTATIONS_LAYER			1		//Mutations like fat, and lasereyes
 #define TAIL_LOWER_LAYER		2		//Tail as viewed from the south //CHOMPStation edit - underneath bodyparts
@@ -103,6 +106,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 #define TARGETED_LAYER			40		//'Aimed at' overlay layer
 #define TOTAL_LAYERS			40		//CHOMPStation edit. <---- KEEP THIS UPDATED, should always equal the highest number here, used to initialize a list.
 //////////////////////////////////
+*///CHOMPRemove End
 
 //These two are only used for gargoyles currently
 #define HUMAN_BODY_LAYERS list(MUTATIONS_LAYER, TAIL_LOWER_LAYER, WING_LOWER_LAYER, BODYPARTS_LAYER, SKIN_LAYER, BLOOD_LAYER, MOB_DAM_LAYER, TAIL_UPPER_LAYER, HAIR_LAYER, HAIR_ACCESSORY_LAYER, EYES_LAYER, WING_LAYER, VORE_BELLY_LAYER, VORE_TAIL_LAYER, TAIL_UPPER_LAYER_ALT)
@@ -170,9 +174,9 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 			M.Translate(cent_offset * desired_scale_x, (vis_height/2)*(desired_scale_y-1)) //CHOMPEdit
 		else
 			M.Scale(desired_scale_x, desired_scale_y)
-			if(isnull(resting_dir))
-				resting_dir = pick(FALSE, TRUE)
-			if(resting_dir)
+			if(isnull(rest_dir))
+				rest_dir = pick(FALSE, TRUE)
+			if(rest_dir)
 				M.Translate((1 / desired_scale_x * -4) + (desired_scale_x * cent_offset), 0)
 				M.Turn(-90)
 			else
@@ -226,13 +230,13 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 		if(O.damage_state == "00") continue
 		var/icon/DI
 		var/cache_index = "[O.damage_state]/[O.icon_name]/[species.get_blood_colour(src)]/[species.get_bodytype(src)]"
-		if(damage_icon_parts[cache_index] == null)
+		if(GLOB.damage_icon_parts[cache_index] == null) //ChompEDIT Managed GLOB
 			DI = icon(species.get_damage_overlays(src), O.damage_state)			// the damage icon for whole human
 			DI.Blend(icon(species.get_damage_mask(src), O.icon_name), ICON_MULTIPLY)	// mask with this organ's pixels
 			DI.Blend(species.get_blood_colour(src), ICON_MULTIPLY)
-			damage_icon_parts[cache_index] = DI
+			GLOB.damage_icon_parts[cache_index] = DI //ChompEDIT Managed GLOB
 		else
-			DI = damage_icon_parts[cache_index]
+			DI = GLOB.damage_icon_parts[cache_index] //ChompEDIT Managed GLOB
 
 		standing_image.add_overlay(DI)
 
@@ -348,12 +352,13 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 
 	icon_key = "[icon_key][husk ? 1 : 0][fat ? 1 : 0][hulk ? 1 : 0][skeleton ? 1 : 0]"
 	var/icon/base_icon
-	if(human_icon_cache[icon_key])
-		base_icon = human_icon_cache[icon_key]
+
+	if(GLOB.human_icon_cache[icon_key])
+		base_icon = GLOB.human_icon_cache[icon_key]
 	else
 		//BEGIN CACHED ICON GENERATION.
 		var/obj/item/organ/external/chest = get_organ(BP_TORSO)
-		base_icon = chest.get_icon(skeleton, !wholeicontransparent)
+		base_icon = new(chest?.get_icon(skeleton, !wholeicontransparent)) //ChompEDIT NEW icon, not referencing original
 
 		var/apply_extra_transparency_leg = organs_by_name[BP_L_LEG] && organs_by_name[BP_R_LEG]
 		var/apply_extra_transparency_foot = organs_by_name[BP_L_FOOT] && organs_by_name[BP_R_FOOT]
@@ -379,7 +384,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 		for(var/obj/item/organ/external/part in organs)
 			if(isnull(part) || part.is_stump() || part == chest || part.is_hidden_by_sprite_accessory()) //VOREStation Edit allowing tails to prevent bodyparts rendering, granting more spriter freedom for taur/digitigrade stuff.
 				continue
-			var/icon/temp = part.get_icon(skeleton, !wholeicontransparent)
+			var/icon/temp = new(part.get_icon(skeleton, !wholeicontransparent)) //ChompEDIT NEW icon, not referencing original
 
 			if((part.organ_tag in list(BP_L_LEG, BP_R_LEG, BP_L_FOOT, BP_R_FOOT)) && Cutter)
 				temp.Blend(Cutter, ICON_AND, x = icon_x_offset, y = icon_y_offset)
@@ -395,10 +400,14 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 				if(!(part.icon_position & RIGHT))
 					temp2.Insert(new/icon(temp,dir=WEST),dir=WEST)
 				base_icon.Blend(temp2, ICON_OVERLAY)
+				/* //ChompEDIT START - icon crashes
 				temp2.Insert(temp2,"blank",dir=NORTH) //faaaaairly certain this is more efficient than reloading temp2, doing this so we don't blend the icons twice (it matters more in transparent limbs)
 				temp2.Insert(temp2,"blank",dir=SOUTH)
 				temp2.Insert(temp2,"blank",dir=EAST)
 				temp2.Insert(temp2,"blank",dir=WEST)
+				*/
+				temp2 = new(species.icon_template ? species.icon_template : 'icons/mob/human.dmi', icon_state = "blank")
+				//ChompEDIT END
 				if(part.icon_position & LEFT)
 					temp2.Insert(new/icon(temp,dir=EAST),dir=EAST)
 				if(part.icon_position & RIGHT)
@@ -430,9 +439,9 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 			husk_over.Blend(mask, ICON_ADD)
 			base_icon.Blend(husk_over, ICON_OVERLAY)
 
-		human_icon_cache[icon_key] = base_icon
+		GLOB.human_icon_cache[icon_key] = base_icon
 
-	//END CACHED ICON GENERATION.
+	//END CACHED ICON GENERATION. //ChompEDIT END
 	stand_icon.Blend(base_icon,ICON_OVERLAY)
 
 	var/image/body = image(stand_icon)
@@ -569,7 +578,8 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 		if(ears_s.Height() > face_standing.Height()) // Tol ears
 			face_standing.Crop(1, 1, face_standing.Width(), ears_s.Height())
 		face_standing.Blend(ears_s, ICON_OVERLAY)
-		if(ear_style?.em_block)
+		// todo: these should be considered separately, but it'd take a slight refactor to how sprite acc's are rendered (or atleast ears)
+		if(ear_style?.em_block || ear_secondary_style?.em_block)
 			em_block_ears = em_block_image_generic(image(ears_s))
 
 	var/image/semifinal = image(face_standing, layer = BODY_LAYER+HAIR_LAYER, "pixel_y" = head_organ.head_offset)
@@ -806,18 +816,18 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 		return //Why bother, if no ear sprites
 
 	if(hide_headset) //CHOMPEdit Start
-		if(l_ear && istype(l_ear, /obj/item/device/radio/headset)) //No need to generate blank images if only headsets are present.
-			if(!r_ear || istype(r_ear, /obj/item/device/radio/headset))
+		if(l_ear && istype(l_ear, /obj/item/radio/headset)) //No need to generate blank images if only headsets are present.
+			if(!r_ear || istype(r_ear, /obj/item/radio/headset))
 				return
-		if(r_ear && istype(r_ear, /obj/item/device/radio/headset))
-			if(!l_ear || istype(l_ear, /obj/item/device/radio/headset))
+		if(r_ear && istype(r_ear, /obj/item/radio/headset))
+			if(!l_ear || istype(l_ear, /obj/item/radio/headset))
 				return
 
 	// Blank image upon which to layer left & right overlays.
 	var/image/both = image(icon = 'icons/effects/effects.dmi', icon_state = "nothing", layer = BODY_LAYER+EARS_LAYER)
 
 	if(l_ear)
-		if(istype(l_ear, /obj/item/device/radio/headset))
+		if(istype(l_ear, /obj/item/radio/headset))
 			if(!hide_headset)
 				var/image/standing = l_ear.make_worn_icon(body_type = species.get_bodytype(src), slot_name = slot_l_ear_str, default_icon = INV_EARS_DEF_ICON, default_layer = EARS_LAYER)
 				both.add_overlay(standing)
@@ -826,7 +836,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 			both.add_overlay(standing)
 
 	if(r_ear)
-		if(istype(r_ear, /obj/item/device/radio/headset))
+		if(istype(r_ear, /obj/item/radio/headset))
 			if(!hide_headset)
 				var/image/standing = r_ear.make_worn_icon(body_type = species.get_bodytype(src), slot_name = slot_r_ear_str, default_icon = INV_EARS_DEF_ICON, default_layer = EARS_LAYER)
 				both.add_overlay(standing)
@@ -916,8 +926,8 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 
 	//Toggle for belt layering with uniform
 	var/belt_layer = BELT_LAYER
-	if(istype(belt, /obj/item/weapon/storage/belt))
-		var/obj/item/weapon/storage/belt/ubelt = belt
+	if(istype(belt, /obj/item/storage/belt))
+		var/obj/item/storage/belt/ubelt = belt
 		if(ubelt.show_above_suit)
 			belt_layer = BELT_LAYER_ALT
 
@@ -989,7 +999,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 
 	var/icon/c_mask = tail_style?.clip_mask
 	if(c_mask)
-		if(istype(back, /obj/item/weapon/storage/backpack/saddlebag) || istype(back, /obj/item/weapon/storage/backpack/saddlebag_common))
+		if(istype(back, /obj/item/storage/backpack/saddlebag) || istype(back, /obj/item/storage/backpack/saddlebag_common))
 			c_mask = null
 
 	overlays_standing[BACK_LAYER] = back.make_worn_icon(body_type = species.get_bodytype(src), slot_name = slot_back_str, default_icon = INV_BACK_DEF_ICON, default_layer = BACK_LAYER, clip_mask = c_mask)
@@ -1105,7 +1115,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 		apply_layer(tail_layer)
 		return
 
-	var/species_tail = species.get_tail(src) // Species tail icon_state prefix.
+	var/species_tail = species?.get_tail(src) // Species tail icon_state prefix.
 
 	//This one is actually not that bad I guess.
 	if(species_tail && !(wear_suit && wear_suit.flags_inv & HIDETAIL))
@@ -1118,7 +1128,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 //TODO: Is this the appropriate place for this, and not on species...?
 /mob/living/carbon/human/proc/get_tail_icon()
 	var/icon_key = "[species.get_race_key(src)][r_skin][g_skin][b_skin][r_hair][g_hair][b_hair]"
-	var/icon/tail_icon = tail_icon_cache[icon_key]
+	var/icon/tail_icon = GLOB.tail_icon_cache[icon_key] //ChompEDIT Managed GLOB
 	if(!tail_icon)
 		//generate a new one
 		var/species_tail_anim = species.get_tail_animation(src)
@@ -1132,7 +1142,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 			var/icon/hair_icon = icon('icons/effects/species.dmi', "[species.get_tail(src)]_[use_species_tail]")
 			hair_icon.Blend(rgb(r_hair, g_hair, b_hair), species.color_mult ? ICON_MULTIPLY : ICON_ADD)				//Check for species color_mult
 			tail_icon.Blend(hair_icon, ICON_OVERLAY)
-		tail_icon_cache[icon_key] = tail_icon
+		GLOB.tail_icon_cache[icon_key] = tail_icon //ChompEDIT Managed GLOB
 
 	return tail_icon
 
@@ -1347,10 +1357,12 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 /mob/living/carbon/human/proc/get_ears_overlay()
 	//If you are FBP with ear style and didn't set a custom one
 	var/datum/robolimb/model = isSynthetic()
-	if(istype(model) && model.includes_ears && !ear_style)
+	if(istype(model) && model.includes_ears && !ear_style && !ear_secondary_style)
 		var/icon/ears_s = new/icon("icon" = synthetic.icon, "icon_state" = "ears")
 		ears_s.Blend(rgb(src.r_ears, src.g_ears, src.b_ears), species.color_mult ? ICON_MULTIPLY : ICON_ADD)
 		return ears_s
+
+	var/icon/rendered
 
 	if(ear_style && !(head && (head.flags_inv & BLOCKHEADHAIR)))
 		var/icon/ears_s = new/icon("icon" = ear_style.icon, "icon_state" = ear_style.icon_state)
@@ -1366,9 +1378,35 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 			overlay.Blend(rgb(src.r_ears3, src.g_ears3, src.b_ears3), ear_style.color_blend_mode)
 			ears_s.Blend(overlay, ICON_OVERLAY)
 			qdel(overlay)
-		return ears_s
-	return null
+		rendered = ears_s
 
+	// todo: this is utterly horrible but i don't think i should be violently refactoring sprite acc rendering in a feature PR ~silicons
+	if(ear_secondary_style && !(head && (head.flags_inv & BLOCKHEADHAIR)))
+		var/icon/ears_s = new/icon("icon" = ear_secondary_style.icon, "icon_state" = ear_secondary_style.icon_state)
+		if(ear_secondary_style.do_colouration)
+			var/color = LAZYACCESS(ear_secondary_colors, 1)
+			if(color)
+				ears_s.Blend(color, ear_secondary_style.color_blend_mode)
+		if(ear_secondary_style.extra_overlay)
+			var/icon/overlay = new/icon("icon" = ear_secondary_style.icon, "icon_state" = ear_secondary_style.extra_overlay)
+			var/color = LAZYACCESS(ear_secondary_colors, 2)
+			if(color)
+				overlay.Blend(color, ear_secondary_style.color_blend_mode)
+			ears_s.Blend(overlay, ICON_OVERLAY)
+			qdel(overlay)
+		if(ear_secondary_style.extra_overlay2) //MORE COLOURS IS BETTERER
+			var/icon/overlay = new/icon("icon" = ear_secondary_style.icon, "icon_state" = ear_secondary_style.extra_overlay2)
+			var/color = LAZYACCESS(ear_secondary_colors, 3)
+			if(color)
+				overlay.Blend(color, ear_secondary_style.color_blend_mode)
+			ears_s.Blend(overlay, ICON_OVERLAY)
+			qdel(overlay)
+		if(!rendered)
+			rendered = ears_s
+		else
+			rendered.Blend(ears_s, ICON_OVERLAY)
+
+	return rendered
 
 /mob/living/carbon/human/proc/get_tail_image()
 	//If you are FBP with tail style and didn't set a custom one
@@ -1380,15 +1418,15 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 
 	//If you have a custom tail selected
 	if(tail_style && !(wear_suit && wear_suit.flags_inv & HIDETAIL && !istaurtail(tail_style)) && !tail_hidden)
-		var/icon/tail_s = new/icon("icon" = (tail_style.can_loaf && resting) ? tail_style.icon_loaf : tail_style.icon, "icon_state" = (wagging && tail_style.ani_state ? tail_style.ani_state : tail_style.icon_state)) //CHOMPEdit
+		var/icon/tail_s = new/icon("icon" = (tail_style.can_loaf && resting) ? tail_style.icon_loaf : tail_style.icon, "icon_state" = (wagging && tail_style.ani_state ? tail_style.ani_state : tail_style.icon_state))
 		if(tail_style.can_loaf && !is_shifted)
 			pixel_y = (resting) ? -tail_style.loaf_offset*size_multiplier : default_pixel_y //move player down, then taur up, to fit the overlays correctly // VOREStation Edit: Taur Loafing
 		if(tail_style.do_colouration)
 			tail_s.Blend(rgb(src.r_tail, src.g_tail, src.b_tail), tail_style.color_blend_mode)
 		if(tail_style.extra_overlay)
-			var/icon/overlay = new/icon("icon" = (tail_style?.can_loaf && resting) ? tail_style.icon_loaf : tail_style.icon, "icon_state" = tail_style.extra_overlay) //CHOMPEdit
+			var/icon/overlay = new/icon("icon" = (tail_style?.can_loaf && resting) ? tail_style.icon_loaf : tail_style.icon, "icon_state" = tail_style.extra_overlay)
 			if(wagging && tail_style.ani_state)
-				overlay = new/icon("icon" = tail_style.icon, "icon_state" = tail_style.extra_overlay_w)
+				overlay = new/icon("icon" = (tail_style?.can_loaf && resting) ? tail_style.icon_loaf : tail_style.icon, "icon_state" = tail_style.extra_overlay_w)	//RS EDIT
 				overlay.Blend(rgb(src.r_tail2, src.g_tail2, src.b_tail2), tail_style.color_blend_mode)
 				tail_s.Blend(overlay, ICON_OVERLAY)
 				qdel(overlay)
@@ -1398,9 +1436,9 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 				qdel(overlay)
 
 		if(tail_style.extra_overlay2)
-			var/icon/overlay = new/icon("icon" = (tail_style?.can_loaf && resting) ? tail_style.icon_loaf : tail_style.icon, "icon_state" = tail_style.extra_overlay2) //CHOMPEdit
+			var/icon/overlay = new/icon("icon" = (tail_style?.can_loaf && resting) ? tail_style.icon_loaf : tail_style.icon, "icon_state" = tail_style.extra_overlay2)
 			if(wagging && tail_style.ani_state)
-				overlay = new/icon("icon" = tail_style.icon, "icon_state" = tail_style.extra_overlay2_w)
+				overlay = new/icon("icon" = (tail_style?.can_loaf && resting) ? tail_style.icon_loaf : tail_style.icon, "icon_state" = tail_style.extra_overlay2_w)	//RS EDIT
 				overlay.Blend(rgb(src.r_tail3, src.g_tail3, src.b_tail3), tail_style.color_blend_mode)
 				tail_s.Blend(overlay, ICON_OVERLAY)
 				qdel(overlay)
@@ -1419,8 +1457,8 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 			working.pixel_y = tail_style.offset_y
 			if(taurtype.can_ride && !riding_datum)
 				riding_datum = new /datum/riding/taur(src)
-				verbs |= /mob/living/carbon/human/proc/taur_mount
-				verbs |= /mob/living/proc/toggle_rider_reins
+				add_verb(src, /mob/living/carbon/human/proc/taur_mount)
+				add_verb(src, /mob/living/proc/toggle_rider_reins)
 		else if(islongtail(tail_style))
 			working.pixel_x = tail_style.offset_x
 			working.pixel_y = tail_style.offset_y
@@ -1438,39 +1476,115 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	if((. = ..()))
 		update_wing_showing()
 
+/mob/living/carbon/human/proc/update_vore_belly_sprite()
+	if(QDESTROYING(src))
+		return
+
+	remove_layer(VORE_BELLY_LAYER)
+
+	var/image/vore_belly_image = get_vore_belly_image()
+	if(vore_belly_image)
+		vore_belly_image.layer = BODY_LAYER+VORE_BELLY_LAYER
+		overlays_standing[VORE_BELLY_LAYER] = vore_belly_image
+		//CHOMPEdit Disabling this until someone comes up with a less destructive approach. //vore_belly_image.plane = PLANE_CH_STOMACH //This one line of code. This ONE LINE OF CODE TOOK 6 HOURS TO FIGURE OUT. THANK YOU REDCAT.
+		vore_belly_image.appearance_flags = appearance_flags
+
+	apply_layer(VORE_BELLY_LAYER)
+
+/mob/living/carbon/human/proc/get_vore_belly_image()
+	if(!(wear_suit && wear_suit.flags_inv & HIDETAIL))
+		var/vs_fullness = vore_fullness_ex["stomach"]
+		var/icon/vorebelly_s = new/icon(icon = 'modular_chomp/icons/mob/vore/Bellies.dmi', icon_state = "[species.vore_belly_default_variant]Belly[vs_fullness][struggle_anim_stomach ? "" : " idle"]") //CHOMPEdit
+		vorebelly_s.Blend(vore_sprite_color["stomach"], vore_sprite_multiply["stomach"] ? ICON_MULTIPLY : ICON_ADD)
+		var/image/working = image(vorebelly_s)
+		working.overlays += em_block_image_generic(working)
+		return working
+	return null
+
+/mob/living/carbon/human/proc/vore_belly_animation()
+	if(!struggle_anim_stomach)
+		struggle_anim_stomach = TRUE
+		update_vore_belly_sprite()
+		spawn(12)
+			struggle_anim_stomach = FALSE
+			update_vore_belly_sprite()
+
+/mob/living/carbon/human/proc/update_vore_tail_sprite()
+	if(QDESTROYING(src))
+		return
+
+	remove_layer(VORE_TAIL_LAYER)
+
+	var/image/vore_tail_image = get_vore_tail_image()
+	if(vore_tail_image)
+		vore_tail_image.layer = BODY_LAYER+VORE_TAIL_LAYER
+		overlays_standing[VORE_TAIL_LAYER] = vore_tail_image
+		//CHOMPEdit Disabling this until someone comes up with a less destructive approach. //vore_tail_image.plane = PLANE_CH_STOMACH //This one line of code. This ONE LINE OF CODE TOOK 6 HOURS TO FIGURE OUT. THANK YOU REDCAT.
+		vore_tail_image.appearance_flags = appearance_flags
+
+	apply_layer(VORE_TAIL_LAYER)
+
+/mob/living/carbon/human/proc/get_vore_tail_image()
+	if(tail_style && istaurtail(tail_style) && tail_style:vore_tail_sprite_variant)
+		var/vs_fullness = vore_fullness_ex["taur belly"]
+		var/loaf_alt = lying && tail_style:belly_variant_when_loaf
+		var/fullness_icons = min(tail_style.fullness_icons, vs_fullness)
+		var/icon/vorebelly_s = new/icon(icon = tail_style.bellies_icon_path, icon_state = "Taur[tail_style:vore_tail_sprite_variant]-Belly-[fullness_icons][loaf_alt ? " loaf" : (struggle_anim_taur ? "" : " idle")]")
+		vorebelly_s.Blend(vore_sprite_color["taur belly"], vore_sprite_multiply["taur belly"] ? ICON_MULTIPLY : ICON_ADD)
+		var/image/working = image(vorebelly_s)
+		working.pixel_x = -16
+		if(tail_style.em_block)
+			working.overlays += em_block_image_generic(working)
+		return working
+	return null
+
+/mob/living/carbon/human/proc/vore_tail_animation()
+	if(tail_style.struggle_anim && !struggle_anim_taur)
+		struggle_anim_taur = TRUE
+		update_vore_tail_sprite()
+		spawn(12)
+			struggle_anim_taur = FALSE
+			update_vore_tail_sprite()
+
 //Human Overlays Indexes/////////
 /* CHOMPEdit - why are these undefined??
-#undef MUTATIONS_LAYER
-#undef SKIN_LAYER
-#undef MOB_DAM_LAYER
-#undef SURGERY_LAYER
-#undef UNDERWEAR_LAYER
-#undef SHOES_LAYER_ALT
-#undef UNIFORM_LAYER
-#undef ID_LAYER
-#undef SHOES_LAYER
-#undef GLOVES_LAYER
-#undef BELT_LAYER
-#undef SUIT_LAYER
-#undef TAIL_UPPER_LAYER
-#undef TAIL_LOWER_LAYER
-#undef GLASSES_LAYER
-#undef BELT_LAYER_ALT
-#undef SUIT_STORE_LAYER
-#undef BACK_LAYER
-#undef HAIR_LAYER
-#undef EARS_LAYER
-#undef EYES_LAYER
-#undef FACEMASK_LAYER
-#undef HEAD_LAYER
-#undef HANDCUFF_LAYER
-#undef LEGCUFF_LAYER
-#undef L_HAND_LAYER
-#undef R_HAND_LAYER
-#undef VORE_BELLY_LAYER
-#undef MODIFIER_EFFECTS_LAYER
-#undef FIRE_LAYER
-#undef WATER_LAYER
-#undef TARGETED_LAYER
-#undef TOTAL_LAYERS
+# undef MUTATIONS_LAYER
+# undef SKIN_LAYER
+# undef BLOOD_LAYER
+# undef MOB_DAM_LAYER
+# undef SURGERY_LAYER
+# undef UNDERWEAR_LAYER
+# undef SHOES_LAYER_ALT
+# undef UNIFORM_LAYER
+# undef ID_LAYER
+# undef SHOES_LAYER
+# undef GLOVES_LAYER
+# undef BELT_LAYER
+# undef SUIT_LAYER
+# undef TAIL_UPPER_LAYER
+# undef TAIL_LOWER_LAYER
+# undef WING_LOWER_LAYER
+# undef GLASSES_LAYER
+# undef BELT_LAYER_ALT
+# undef SUIT_STORE_LAYER
+# undef BACK_LAYER
+# undef HAIR_LAYER
+# undef HAIR_ACCESSORY_LAYER
+# undef EARS_LAYER
+# undef EYES_LAYER
+# undef FACEMASK_LAYER
+# undef GLASSES_LAYER_ALT
+# undef HEAD_LAYER
+# undef HANDCUFF_LAYER
+# undef LEGCUFF_LAYER
+# undef L_HAND_LAYER
+# undef R_HAND_LAYER
+# undef VORE_BELLY_LAYER
+# undef WING_LAYER
+# undef TAIL_UPPER_LAYER_ALT
+# undef MODIFIER_EFFECTS_LAYER
+# undef FIRE_LAYER
+# undef WATER_LAYER
+# undef TARGETED_LAYER
+# undef TOTAL_LAYERS
 */

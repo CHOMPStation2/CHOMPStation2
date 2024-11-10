@@ -1,5 +1,3 @@
-#define DEFAULT_ROBOT_SPRITE_NAME "M-USE NanoTrasen"
-
 SUBSYSTEM_DEF(robot_sprites)
 	name = "Robot Sprites"
 	init_order = INIT_ORDER_ROBOT_SPRITES
@@ -10,7 +8,7 @@ SUBSYSTEM_DEF(robot_sprites)
 
 /datum/controller/subsystem/robot_sprites/Initialize()
 	initialize_borg_sprites()
-	..()
+	return SS_INIT_SUCCESS // CHOMPEdit
 
 /datum/controller/subsystem/robot_sprites/proc/initialize_borg_sprites()
 

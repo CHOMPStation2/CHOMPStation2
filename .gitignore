@@ -9,6 +9,7 @@ vchat.db*
 #Ignore everything in datafolder and subdirectories
 /data/**/*
 /tmp/**/*
+/cache/**/*
 
 #Ignore byond config folder.
 /cfg/**/*
@@ -129,6 +130,7 @@ cfg/
 #Ignore everything in datafolder and subdirectories
 /data/**/*
 /tmp/**/*
+/cache/**/*
 
 #Visual studio stuff
 *.vscode/*
@@ -144,6 +146,10 @@ cfg/
 *.kdev4*
 *.kate-swp
 
+#extra map stuff
+/_maps/**/backup/
+/_maps/templates.dm
+
 temp.dmi
 
 # JavaScript tools
@@ -154,3 +160,6 @@ package-lock.json
 /tools/build/dm_versions.json
 
 config/jobwhitelist.txt
+
+#ignore tracy dll
+prof.dll

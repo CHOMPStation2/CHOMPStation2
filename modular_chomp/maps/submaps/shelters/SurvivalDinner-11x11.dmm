@@ -1,78 +1,715 @@
-"aj" = (/obj/structure/table/marble,/obj/machinery/door/blast/shutters{dir = 2; id = "SP-kitchen"; layer = 3.3; name = "Kitchen Shutters"},/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/SurvivalDinner)
-"bc" = (/obj/machinery/vending/dinnerware,/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,/area/survivalpod/superpose/SurvivalDinner)
-"ca" = (/obj/machinery/recharger/wallcharger{pixel_y = 35},/obj/machinery/recharger/wallcharger{pixel_y = 22},/turf/simulated/shuttle/plating/skipjack,/area/survivalpod/superpose/SurvivalDinner)
-"cv" = (/obj/machinery/door/airlock/maintenance/cargo,/turf/simulated/floor/tiled/techmaint,/area/survivalpod/superpose/SurvivalDinner)
-"cI" = (/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,/area/survivalpod/superpose/SurvivalDinner)
-"dw" = (/obj/machinery/button/holosign{id = "SP-baropen"; name = "Open Sign"; pixel_x = -27; pixel_y = 5},/obj/machinery/button/remote/blast_door{id = "SP-kitchen"; name = "Kitchen Shutters Control"; pixel_x = -27; pixel_y = -5; req_access = list(28)},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalDinner)
-"dR" = (/turf/simulated/floor/tiled/freezer,/area/survivalpod/superpose/SurvivalDinner)
-"fP" = (/obj/structure/table/standard,/obj/item/weapon/material/kitchen/utensil/fork,/obj/item/weapon/material/kitchen/utensil/spoon{pixel_x = 2},/turf/simulated/floor/wood,/area/survivalpod/superpose/SurvivalDinner)
-"gP" = (/obj/machinery/appliance/cooker/fryer,/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalDinner)
-"jg" = (/obj/structure/table/marble,/obj/machinery/cash_register/civilian{dir = 1},/obj/machinery/door/blast/shutters{dir = 2; id = "SP-kitchen"; layer = 3.3; name = "Kitchen Shutters"},/turf/simulated/shuttle/floor/voidcraft/dark,/area/survivalpod/superpose/SurvivalDinner)
-"jx" = (/turf/simulated/shuttle/wall/voidcraft/survival,/area/survivalpod/superpose/SurvivalDinner)
-"jU" = (/obj/machinery/vending/coffee{dir = 8; pixel_x = 5},/turf/simulated/floor/wood,/area/survivalpod/superpose/SurvivalDinner)
-"kd" = (/obj/structure/sign/mining/survival{dir = 4},/turf/simulated/shuttle/wall/voidcraft/green,/area/survivalpod/superpose/SurvivalDinner)
-"lU" = (/obj/structure/bed/pod,/obj/item/weapon/bedsheet/green,/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalDinner)
-"lY" = (/obj/structure/bed/chair/bay/chair/padded/green{dir = 1},/obj/machinery/computer/security/telescreen/entertainment{icon_state = "screen"; layer = 4; pixel_y = -32},/turf/simulated/floor/wood,/area/survivalpod/superpose/SurvivalDinner)
-"mK" = (/obj/structure/sink/kitchen{dir = 8; pixel_x = -13},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalDinner)
-"nC" = (/obj/structure/sign/mining/survival,/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,/area/survivalpod/superpose/SurvivalDinner)
-"nJ" = (/obj/machinery/vending/cigarette{dir = 8; pixel_x = 5},/turf/simulated/floor/wood,/area/survivalpod/superpose/SurvivalDinner)
-"oj" = (/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalDinner)
-"pf" = (/obj/structure/sign/mining/survival{dir = 8},/turf/simulated/shuttle/wall/voidcraft/green,/area/survivalpod/superpose/SurvivalDinner)
-"pi" = (/obj/structure/window/reinforced/survival_pod{dir = 8},/obj/structure/window/reinforced/survival_pod{dir = 4},/obj/structure/window/reinforced/survival_pod{dir = 1},/obj/structure/window/reinforced/survival_pod,/obj/structure/grille,/obj/structure/curtain/black,/turf/simulated/floor/plating,/area/survivalpod/superpose/SurvivalDinner)
-"pC" = (/obj/structure/table/survival_pod,/obj/structure/window/reinforced/survival_pod{dir = 8},/obj/item/modular_computer/laptop/preset/custom_loadout/standard{pixel_x = 1; pixel_y = 15},/obj/machinery/recharger{pixel_x = -5; pixel_y = -3},/obj/item/pizzavoucher{pixel_x = 7; pixel_y = -4},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalDinner)
-"qj" = (/obj/structure/bed/chair/bay/chair/padded/green{dir = 1},/turf/simulated/floor/wood,/area/survivalpod/superpose/SurvivalDinner)
-"sl" = (/obj/machinery/appliance/cooker/grill,/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalDinner)
-"sz" = (/obj/machinery/vending/cola{dir = 8; pixel_x = 5},/obj/machinery/light{dir = 4},/turf/simulated/floor/wood,/area/survivalpod/superpose/SurvivalDinner)
-"tC" = (/obj/machinery/vending/snack{dir = 4; pixel_x = -6},/turf/simulated/floor/wood,/area/survivalpod/superpose/SurvivalDinner)
-"tN" = (/obj/structure/fans/tiny,/obj/effect/floor_decal/industrial/danger/full,/obj/machinery/door/airlock/voidcraft/vertical,/turf/simulated/floor/tiled/techmaint,/area/survivalpod/superpose/SurvivalDinner)
-"vK" = (/obj/structure/table/marble,/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{pixel_x = -3},/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{pixel_x = 3},/obj/machinery/chemical_dispenser/bar_coffee/full{pixel_y = 17},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalDinner)
-"wc" = (/obj/structure/sign/mining/survival{dir = 1},/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,/area/survivalpod/superpose/SurvivalDinner)
-"xW" = (/obj/structure/table/marble,/obj/machinery/chemical_dispenser/bar_soft/full{pixel_x = 1; pixel_y = 17},/obj/item/weapon/book/manual/chef_recipes,/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalDinner)
-"xX" = (/obj/machinery/appliance/cooker/oven,/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalDinner)
-"ya" = (/obj/effect/floor_decal/techfloor{dir = 8},/obj/effect/floor_decal/industrial/warning{dir = 8},/turf/simulated/shuttle/plating/skipjack,/area/survivalpod/superpose/SurvivalDinner)
-"zf" = (/turf/simulated/floor/wood,/area/survivalpod/superpose/SurvivalDinner)
-"zl" = (/obj/machinery/computer/security/telescreen/entertainment{icon_state = "screen"; pixel_y = 32},/turf/simulated/shuttle/plating/skipjack,/area/survivalpod/superpose/SurvivalDinner)
-"zv" = (/obj/structure/bed/chair/bay/chair/padded/green,/turf/simulated/floor/wood,/area/survivalpod/superpose/SurvivalDinner)
-"Av" = (/turf/simulated/shuttle/wall/voidcraft/green,/area/survivalpod/superpose/SurvivalDinner)
-"Bw" = (/obj/structure/table/standard,/obj/item/device/starcaster_news{pixel_x = 8},/obj/item/device/starcaster_news{pixel_x = -6; pixel_y = 10},/turf/simulated/floor/wood,/area/survivalpod/superpose/SurvivalDinner)
-"CG" = (/obj/machinery/smartfridge/survival_pod{icon = 'icons/obj/vending.dmi'; icon_base = "smartfridge"; icon_contents = "boxes"; icon_state = "smartfridge"; name = "Advanced storage"; pixel_y = -1},/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer,/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer,/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer,/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer,/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer/meteor,/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer/meteor,/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer/meteor,/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer/meteor,/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer/silverdragon,/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer/silverdragon,/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer/silverdragon,/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer/silverdragon,/obj/item/weapon/reagent_containers/food/drinks/bottle/small/litebeer,/obj/item/weapon/reagent_containers/food/drinks/bottle/small/litebeer,/obj/item/weapon/reagent_containers/food/drinks/bottle/small/litebeer,/obj/item/weapon/reagent_containers/food/drinks/bottle/small/litebeer,/obj/item/weapon/reagent_containers/food/condiment/carton/flour,/obj/item/weapon/reagent_containers/food/condiment/carton/flour,/obj/item/weapon/reagent_containers/food/condiment/carton/flour,/obj/item/weapon/reagent_containers/food/condiment/carton/flour,/obj/item/weapon/reagent_containers/food/condiment/sugar,/obj/item/weapon/reagent_containers/food/condiment/sugar,/obj/item/weapon/reagent_containers/food/condiment/sugar,/obj/item/weapon/reagent_containers/food/condiment/sugar,/obj/item/weapon/reagent_containers/food/condiment/spacespice,/obj/item/weapon/reagent_containers/food/condiment/spacespice,/obj/item/weapon/reagent_containers/food/drinks/milk,/obj/item/weapon/reagent_containers/food/drinks/milk,/obj/item/weapon/reagent_containers/food/drinks/milk,/obj/item/weapon/reagent_containers/food/drinks/milk,/obj/item/weapon/reagent_containers/food/drinks/soymilk,/obj/item/weapon/reagent_containers/food/drinks/soymilk,/obj/item/weapon/reagent_containers/food/drinks/soymilk,/obj/item/weapon/reagent_containers/food/drinks/soymilk,/obj/item/weapon/storage/fancy/egg_box,/obj/item/weapon/storage/fancy/egg_box,/obj/item/weapon/storage/fancy/egg_box,/obj/item/weapon/storage/fancy/egg_box,/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/glucose,/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/glucose,/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/glucose,/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/glucose,/obj/item/weapon/reagent_containers/food/snacks/meat/syntiflesh,/obj/item/weapon/reagent_containers/food/snacks/meat/syntiflesh,/obj/item/weapon/reagent_containers/food/snacks/meat/syntiflesh,/obj/item/weapon/reagent_containers/food/snacks/meat/syntiflesh,/obj/item/weapon/reagent_containers/food/snacks/meat/syntiflesh,/obj/item/weapon/reagent_containers/food/snacks/meat/syntiflesh,/obj/item/weapon/reagent_containers/food/snacks/meat/syntiflesh,/obj/item/weapon/reagent_containers/food/snacks/meat/syntiflesh,/obj/item/weapon/reagent_containers/food/snacks/meat/syntiflesh,/obj/item/weapon/reagent_containers/food/snacks/meat/syntiflesh,/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalDinner)
-"DC" = (/obj/structure/table/marble,/obj/item/weapon/reagent_containers/food/snacks/mint,/obj/item/weapon/packageWrap,/obj/item/weapon/reagent_containers/dropper,/obj/machinery/chemical_dispenser/bar_alc/full{pixel_x = -1; pixel_y = 17},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalDinner)
-"EM" = (/obj/structure/disposalpipe/segment,/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,/area/survivalpod/superpose/SurvivalDinner)
-"GB" = (/obj/machinery/smartfridge/survival_pod,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/random,/obj/item/weapon/storage/mre/menu9,/obj/item/weapon/storage/mre/menu9,/obj/item/weapon/storage/mre/menu10,/obj/item/weapon/storage/mre/menu10,/obj/item/weapon/storage/mre/menu11,/obj/item/weapon/storage/mre/menu11,/obj/item/device/fbp_backup_cell,/obj/item/device/fbp_backup_cell,/obj/item/device/fbp_backup_cell,/obj/item/device/fbp_backup_cell,/obj/item/device/fbp_backup_cell,/obj/item/weapon/storage/pill_bottle/antitox,/obj/item/weapon/storage/box/survival/space,/obj/item/device/healthanalyzer,/obj/item/weapon/storage/pill_bottle/dice_nerd,/obj/machinery/light{dir = 1},/obj/item/weapon/storage/firstaid/regular,/obj/item/weapon/extinguisher/mini,/obj/item/weapon/extinguisher/mini,/obj/item/weapon/storage/box/survival/space,/obj/item/weapon/storage/box/survival/space,/obj/item/device/radio,/obj/item/device/radio,/obj/item/device/radio,/obj/item/device/starcaster_news,/obj/item/device/starcaster_news,/obj/item/device/threadneedle,/obj/item/device/flashlight,/obj/item/device/flashlight,/obj/item/weapon/storage/toolbox/emergency,/obj/item/weapon/storage/pill_bottle/spaceacillin,/obj/random/soap,/obj/item/weapon/material/knife/machete/hatchet,/obj/item/weapon/storage/box/flare,/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalDinner)
-"GM" = (/obj/machinery/sleeper/survival_pod,/obj/structure/window/reinforced/survival_pod{dir = 8},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalDinner)
-"Hd" = (/obj/machinery/gibber,/turf/simulated/floor/tiled/freezer,/area/survivalpod/superpose/SurvivalDinner)
-"HI" = (/obj/structure/table/marble,/obj/machinery/microwave{pixel_x = 2; pixel_y = 17},/obj/item/weapon/storage/box/donkpockets{pixel_x = 3; pixel_y = 3},/obj/item/weapon/reagent_containers/glass/beaker{pixel_x = 5},/obj/item/weapon/reagent_containers/food/condiment/enzyme,/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalDinner)
-"Ka" = (/obj/structure/bed/chair/bay/chair/padded/green{dir = 1},/obj/machinery/vending/wallmed1{dir = 1; name = "Emergency NanoMed"; pixel_y = -25},/turf/simulated/floor/wood,/area/survivalpod/superpose/SurvivalDinner)
-"KE" = (/obj/effect/floor_decal/industrial/loading{dir = 1},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalDinner)
-"Lr" = (/obj/structure/disposalpipe/segment,/turf/simulated/shuttle/wall/voidcraft/survival,/area/survivalpod/superpose/SurvivalDinner)
-"LE" = (/obj/machinery/chem_master/condimaster{name = "CondiMaster Neo"; pixel_x = -5},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalDinner)
-"My" = (/obj/structure/sign/mining/survival{dir = 8},/obj/structure/disposalpipe/segment{dir = 4; icon_state = "pipe-c"},/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,/area/survivalpod/superpose/SurvivalDinner)
-"MD" = (/obj/machinery/door/window/survival_pod{dir = 8},/turf/simulated/floor/tiled/freezer,/area/survivalpod/superpose/SurvivalDinner)
-"Pp" = (/obj/machinery/vending/fitness{dir = 4; pixel_x = -5},/obj/machinery/light{dir = 8},/turf/simulated/floor/wood,/area/survivalpod/superpose/SurvivalDinner)
-"QD" = (/obj/item/device/gps/computer,/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalDinner)
-"QP" = (/obj/machinery/disposal,/obj/effect/floor_decal/industrial/warning/full,/obj/structure/disposalpipe/trunk{dir = 8},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalDinner)
-"Rm" = (/obj/machinery/newscaster{pixel_y = 30},/obj/effect/floor_decal/techfloor{dir = 4},/obj/effect/floor_decal/industrial/warning{dir = 4},/turf/simulated/shuttle/plating/skipjack,/area/survivalpod/superpose/SurvivalDinner)
-"RQ" = (/obj/structure/sign/mining/survival{dir = 4},/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,/area/survivalpod/superpose/SurvivalDinner)
-"Su" = (/obj/structure/sign/mining,/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,/area/survivalpod/superpose/SurvivalDinner)
-"SG" = (/turf/simulated/shuttle/plating/skipjack,/area/survivalpod/superpose/SurvivalDinner)
-"SV" = (/obj/structure/table/standard,/obj/item/weapon/deck/cards,/obj/item/weapon/reagent_containers/food/drinks/smallchocmilk{pixel_y = 11},/turf/simulated/floor/wood,/area/survivalpod/superpose/SurvivalDinner)
-"Th" = (/obj/structure/table/marble,/obj/machinery/reagentgrinder{pixel_x = 10; pixel_y = 19},/obj/item/weapon/material/knife/butch,/obj/item/weapon/material/kitchen/rollingpin,/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalDinner)
-"Um" = (/obj/structure/tubes,/obj/machinery/icecream_vat,/obj/machinery/power/apc/alarms_hidden{dir = 4; pixel_x = 20},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalDinner)
-"Wc" = (/obj/structure/table/standard,/obj/item/weapon/deck/cah{pixel_x = 2; pixel_y = 2},/obj/item/weapon/deck/cah/black{pixel_x = -2; pixel_y = -2},/obj/item/weapon/reagent_containers/food/drinks/smallchocmilk{pixel_y = 11},/turf/simulated/floor/wood,/area/survivalpod/superpose/SurvivalDinner)
-"Xo" = (/obj/machinery/media/jukebox,/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,/area/survivalpod/superpose/SurvivalDinner)
-"Yg" = (/obj/structure/fans,/obj/structure/window/reinforced/survival_pod{dir = 8},/turf/simulated/shuttle/floor/voidcraft/light,/area/survivalpod/superpose/SurvivalDinner)
-"ZN" = (/obj/machinery/holosign/bar{id = "SP-baropen"},/turf/simulated/shuttle/wall/voidcraft/green,/area/survivalpod/superpose/SurvivalDinner)
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aj" = (
+/obj/structure/table/marble,
+/obj/machinery/door/blast/shutters{
+	dir = 2;
+	id = "SP-kitchen";
+	layer = 3.3;
+	name = "Kitchen Shutters"
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/SurvivalDinner)
+"bc" = (
+/obj/machinery/vending/dinnerware,
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalDinner)
+"ca" = (
+/obj/machinery/recharger/wallcharger{
+	pixel_y = 35
+	},
+/obj/machinery/recharger/wallcharger{
+	pixel_y = 22
+	},
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/SurvivalDinner)
+"cv" = (
+/obj/machinery/door/airlock/maintenance/cargo,
+/turf/simulated/floor/tiled/techmaint,
+/area/survivalpod/superpose/SurvivalDinner)
+"cI" = (
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalDinner)
+"dw" = (
+/obj/machinery/button/holosign{
+	id = "SP-baropen";
+	name = "Open Sign";
+	pixel_x = -27;
+	pixel_y = 5
+	},
+/obj/machinery/button/remote/blast_door{
+	id = "SP-kitchen";
+	name = "Kitchen Shutters Control";
+	pixel_x = -27;
+	pixel_y = -5;
+	req_access = list(28)
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalDinner)
+"dR" = (
+/turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/SurvivalDinner)
+"fP" = (
+/obj/structure/table/standard,
+/obj/item/material/kitchen/utensil/fork,
+/obj/item/material/kitchen/utensil/spoon{
+	pixel_x = 2
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/SurvivalDinner)
+"gP" = (
+/obj/machinery/appliance/cooker/fryer,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalDinner)
+"jg" = (
+/obj/structure/table/marble,
+/obj/machinery/cash_register/civilian{
+	dir = 1
+	},
+/obj/machinery/door/blast/shutters{
+	dir = 2;
+	id = "SP-kitchen";
+	layer = 3.3;
+	name = "Kitchen Shutters"
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod/superpose/SurvivalDinner)
+"jx" = (
+/turf/simulated/shuttle/wall/voidcraft/survival,
+/area/survivalpod/superpose/SurvivalDinner)
+"jU" = (
+/obj/machinery/vending/coffee{
+	dir = 8;
+	pixel_x = 5
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/SurvivalDinner)
+"kd" = (
+/obj/structure/sign/mining/survival{
+	dir = 4
+	},
+/turf/simulated/shuttle/wall/voidcraft/green,
+/area/survivalpod/superpose/SurvivalDinner)
+"lU" = (
+/obj/structure/bed/pod,
+/obj/item/bedsheet/green,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalDinner)
+"lY" = (
+/obj/structure/bed/chair/bay/chair/padded/green{
+	dir = 1
+	},
+/obj/machinery/computer/security/telescreen/entertainment{
+	icon_state = "screen";
+	layer = 4;
+	pixel_y = -32
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/SurvivalDinner)
+"mK" = (
+/obj/structure/sink/kitchen{
+	dir = 8;
+	pixel_x = -13
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalDinner)
+"nC" = (
+/obj/structure/sign/mining/survival,
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalDinner)
+"nJ" = (
+/obj/machinery/vending/cigarette{
+	dir = 8;
+	pixel_x = 5
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/SurvivalDinner)
+"oj" = (
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalDinner)
+"pf" = (
+/obj/structure/sign/mining/survival{
+	dir = 8
+	},
+/turf/simulated/shuttle/wall/voidcraft/green,
+/area/survivalpod/superpose/SurvivalDinner)
+"pi" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/structure/window/reinforced/survival_pod,
+/obj/structure/grille,
+/obj/structure/curtain/black,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalDinner)
+"pC" = (
+/obj/structure/table/survival_pod,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/obj/item/modular_computer/laptop/preset/custom_loadout/standard{
+	pixel_x = 1;
+	pixel_y = 15
+	},
+/obj/machinery/recharger{
+	pixel_x = -5;
+	pixel_y = -3
+	},
+/obj/item/pizzavoucher{
+	pixel_x = 7;
+	pixel_y = -4
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalDinner)
+"qj" = (
+/obj/structure/bed/chair/bay/chair/padded/green{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/SurvivalDinner)
+"sl" = (
+/obj/machinery/appliance/cooker/grill,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalDinner)
+"sz" = (
+/obj/machinery/vending/cola{
+	dir = 8;
+	pixel_x = 5
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/SurvivalDinner)
+"tC" = (
+/obj/machinery/vending/snack{
+	dir = 4;
+	pixel_x = -6
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/SurvivalDinner)
+"tN" = (
+/obj/structure/fans/tiny,
+/obj/effect/floor_decal/industrial/danger/full,
+/obj/machinery/door/airlock/voidcraft/vertical,
+/turf/simulated/floor/tiled/techmaint,
+/area/survivalpod/superpose/SurvivalDinner)
+"vK" = (
+/obj/structure/table/marble,
+/obj/item/reagent_containers/food/condiment/small/saltshaker{
+	pixel_x = -3
+	},
+/obj/item/reagent_containers/food/condiment/small/peppermill{
+	pixel_x = 3
+	},
+/obj/machinery/chemical_dispenser/bar_coffee/full{
+	pixel_y = 17
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalDinner)
+"wc" = (
+/obj/structure/sign/mining/survival{
+	dir = 1
+	},
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalDinner)
+"xW" = (
+/obj/structure/table/marble,
+/obj/machinery/chemical_dispenser/bar_soft/full{
+	pixel_x = 1;
+	pixel_y = 17
+	},
+/obj/item/book/manual/chef_recipes,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalDinner)
+"xX" = (
+/obj/machinery/appliance/cooker/oven,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalDinner)
+"ya" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/SurvivalDinner)
+"zf" = (
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/SurvivalDinner)
+"zl" = (
+/obj/machinery/computer/security/telescreen/entertainment{
+	icon_state = "screen";
+	pixel_y = 32
+	},
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/SurvivalDinner)
+"zv" = (
+/obj/structure/bed/chair/bay/chair/padded/green,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/SurvivalDinner)
+"Av" = (
+/turf/simulated/shuttle/wall/voidcraft/green,
+/area/survivalpod/superpose/SurvivalDinner)
+"Bw" = (
+/obj/structure/table/standard,
+/obj/item/starcaster_news{
+	pixel_x = 8
+	},
+/obj/item/starcaster_news{
+	pixel_x = -6;
+	pixel_y = 10
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/SurvivalDinner)
+"CG" = (
+/obj/machinery/smartfridge/survival_pod{
+	icon = 'icons/obj/vending.dmi';
+	icon_base = "smartfridge";
+	icon_contents = "boxes";
+	icon_state = "smartfridge";
+	name = "Advanced storage";
+	pixel_y = -1
+	},
+/obj/item/reagent_containers/food/drinks/bottle/small/beer,
+/obj/item/reagent_containers/food/drinks/bottle/small/beer,
+/obj/item/reagent_containers/food/drinks/bottle/small/beer,
+/obj/item/reagent_containers/food/drinks/bottle/small/beer,
+/obj/item/reagent_containers/food/drinks/bottle/small/beer/meteor,
+/obj/item/reagent_containers/food/drinks/bottle/small/beer/meteor,
+/obj/item/reagent_containers/food/drinks/bottle/small/beer/meteor,
+/obj/item/reagent_containers/food/drinks/bottle/small/beer/meteor,
+/obj/item/reagent_containers/food/drinks/bottle/small/beer/silverdragon,
+/obj/item/reagent_containers/food/drinks/bottle/small/beer/silverdragon,
+/obj/item/reagent_containers/food/drinks/bottle/small/beer/silverdragon,
+/obj/item/reagent_containers/food/drinks/bottle/small/beer/silverdragon,
+/obj/item/reagent_containers/food/drinks/bottle/small/litebeer,
+/obj/item/reagent_containers/food/drinks/bottle/small/litebeer,
+/obj/item/reagent_containers/food/drinks/bottle/small/litebeer,
+/obj/item/reagent_containers/food/drinks/bottle/small/litebeer,
+/obj/item/reagent_containers/food/condiment/carton/flour,
+/obj/item/reagent_containers/food/condiment/carton/flour,
+/obj/item/reagent_containers/food/condiment/carton/flour,
+/obj/item/reagent_containers/food/condiment/carton/flour,
+/obj/item/reagent_containers/food/condiment/sugar,
+/obj/item/reagent_containers/food/condiment/sugar,
+/obj/item/reagent_containers/food/condiment/sugar,
+/obj/item/reagent_containers/food/condiment/sugar,
+/obj/item/reagent_containers/food/condiment/spacespice,
+/obj/item/reagent_containers/food/condiment/spacespice,
+/obj/item/reagent_containers/food/drinks/milk,
+/obj/item/reagent_containers/food/drinks/milk,
+/obj/item/reagent_containers/food/drinks/milk,
+/obj/item/reagent_containers/food/drinks/milk,
+/obj/item/reagent_containers/food/drinks/soymilk,
+/obj/item/reagent_containers/food/drinks/soymilk,
+/obj/item/reagent_containers/food/drinks/soymilk,
+/obj/item/reagent_containers/food/drinks/soymilk,
+/obj/item/storage/fancy/egg_box,
+/obj/item/storage/fancy/egg_box,
+/obj/item/storage/fancy/egg_box,
+/obj/item/storage/fancy/egg_box,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/glucose,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/glucose,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/glucose,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/glucose,
+/obj/item/reagent_containers/food/snacks/meat/syntiflesh,
+/obj/item/reagent_containers/food/snacks/meat/syntiflesh,
+/obj/item/reagent_containers/food/snacks/meat/syntiflesh,
+/obj/item/reagent_containers/food/snacks/meat/syntiflesh,
+/obj/item/reagent_containers/food/snacks/meat/syntiflesh,
+/obj/item/reagent_containers/food/snacks/meat/syntiflesh,
+/obj/item/reagent_containers/food/snacks/meat/syntiflesh,
+/obj/item/reagent_containers/food/snacks/meat/syntiflesh,
+/obj/item/reagent_containers/food/snacks/meat/syntiflesh,
+/obj/item/reagent_containers/food/snacks/meat/syntiflesh,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalDinner)
+"DC" = (
+/obj/structure/table/marble,
+/obj/item/reagent_containers/food/snacks/mint,
+/obj/item/packageWrap,
+/obj/item/reagent_containers/dropper,
+/obj/machinery/chemical_dispenser/bar_alc/full{
+	pixel_x = -1;
+	pixel_y = 17
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalDinner)
+"EM" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalDinner)
+"GB" = (
+/obj/machinery/smartfridge/survival_pod,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/menu9,
+/obj/item/storage/mre/menu9,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu11,
+/obj/item/storage/mre/menu11,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/storage/pill_bottle/antitox,
+/obj/item/storage/box/survival/space,
+/obj/item/healthanalyzer,
+/obj/item/storage/pill_bottle/dice_nerd,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/item/storage/firstaid/regular,
+/obj/item/extinguisher/mini,
+/obj/item/extinguisher/mini,
+/obj/item/storage/box/survival/space,
+/obj/item/storage/box/survival/space,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/starcaster_news,
+/obj/item/starcaster_news,
+/obj/item/threadneedle,
+/obj/item/flashlight,
+/obj/item/flashlight,
+/obj/item/storage/toolbox/emergency,
+/obj/item/storage/pill_bottle/spaceacillin,
+/obj/random/soap,
+/obj/item/material/knife/machete/hatchet,
+/obj/item/storage/box/flare,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalDinner)
+"GM" = (
+/obj/machinery/sleeper/survival_pod,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalDinner)
+"Hd" = (
+/obj/machinery/gibber,
+/turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/SurvivalDinner)
+"HI" = (
+/obj/structure/table/marble,
+/obj/machinery/microwave{
+	pixel_x = 2;
+	pixel_y = 17
+	},
+/obj/item/storage/box/donkpockets{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/reagent_containers/glass/beaker{
+	pixel_x = 5
+	},
+/obj/item/reagent_containers/food/condiment/enzyme,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalDinner)
+"Ka" = (
+/obj/structure/bed/chair/bay/chair/padded/green{
+	dir = 1
+	},
+/obj/machinery/vending/wallmed1{
+	dir = 1;
+	name = "Emergency NanoMed";
+	pixel_y = -25
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/SurvivalDinner)
+"KE" = (
+/obj/effect/floor_decal/industrial/loading{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalDinner)
+"Lr" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/shuttle/wall/voidcraft/survival,
+/area/survivalpod/superpose/SurvivalDinner)
+"LE" = (
+/obj/machinery/chem_master/condimaster{
+	name = "CondiMaster Neo";
+	pixel_x = -5
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalDinner)
+"My" = (
+/obj/structure/sign/mining/survival{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalDinner)
+"MD" = (
+/obj/machinery/door/window/survival_pod{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/SurvivalDinner)
+"Pp" = (
+/obj/machinery/vending/fitness{
+	dir = 4;
+	pixel_x = -5
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/SurvivalDinner)
+"QD" = (
+/obj/item/gps/computer,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalDinner)
+"QP" = (
+/obj/machinery/disposal,
+/obj/effect/floor_decal/industrial/warning/full,
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalDinner)
+"Rm" = (
+/obj/machinery/newscaster{
+	pixel_y = 30
+	},
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/SurvivalDinner)
+"RQ" = (
+/obj/structure/sign/mining/survival{
+	dir = 4
+	},
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalDinner)
+"Su" = (
+/obj/structure/sign/mining,
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalDinner)
+"SG" = (
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/SurvivalDinner)
+"SV" = (
+/obj/structure/table/standard,
+/obj/item/deck/cards,
+/obj/item/reagent_containers/food/drinks/smallchocmilk{
+	pixel_y = 11
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/SurvivalDinner)
+"Th" = (
+/obj/structure/table/marble,
+/obj/machinery/reagentgrinder{
+	pixel_x = 10;
+	pixel_y = 19
+	},
+/obj/item/material/knife/butch,
+/obj/item/material/kitchen/rollingpin,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalDinner)
+"Um" = (
+/obj/structure/tubes,
+/obj/machinery/icecream_vat,
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 4;
+	pixel_x = 20
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalDinner)
+"Wc" = (
+/obj/structure/table/standard,
+/obj/item/deck/cah{
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/obj/item/deck/cah/black{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/food/drinks/smallchocmilk{
+	pixel_y = 11
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/SurvivalDinner)
+"Xo" = (
+/obj/machinery/media/jukebox,
+/turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
+/area/survivalpod/superpose/SurvivalDinner)
+"Yg" = (
+/obj/structure/fans,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalDinner)
+"ZN" = (
+/obj/machinery/holosign/bar{
+	id = "SP-baropen"
+	},
+/turf/simulated/shuttle/wall/voidcraft/green,
+/area/survivalpod/superpose/SurvivalDinner)
 
 (1,1,1) = {"
-jxAvAvwcAvAvAvSuAvAvjx
-cIgPslxXCGHILEYgGBQDcI
-piojojojojojojGMKElUpi
-pfmKvKThxWDCojpCojUmkd
-AvdwojojojojojMDdRHdAv
-ZNbcajjgajcIXocIcvcIZN
-tNyaSGSGSGzlSGcaSGRmtN
-MyQPzfzvzvzvzvzvzfnJRQ
-EMPpzffPSVBwWcfPzfszcI
-EMtCzfqjqjlYqjKazfjUcI
-LrAvpiSupiAvpinCpiAvjx
+jx
+cI
+pi
+pf
+Av
+ZN
+tN
+My
+EM
+EM
+Lr
+"}
+(2,1,1) = {"
+Av
+gP
+oj
+mK
+dw
+bc
+ya
+QP
+Pp
+tC
+Av
+"}
+(3,1,1) = {"
+Av
+sl
+oj
+vK
+oj
+aj
+SG
+zf
+zf
+zf
+pi
+"}
+(4,1,1) = {"
+wc
+xX
+oj
+Th
+oj
+jg
+SG
+zv
+fP
+qj
+Su
+"}
+(5,1,1) = {"
+Av
+CG
+oj
+xW
+oj
+aj
+SG
+zv
+SV
+qj
+pi
+"}
+(6,1,1) = {"
+Av
+HI
+oj
+DC
+oj
+cI
+zl
+zv
+Bw
+lY
+Av
+"}
+(7,1,1) = {"
+Av
+LE
+oj
+oj
+oj
+Xo
+SG
+zv
+Wc
+qj
+pi
+"}
+(8,1,1) = {"
+Su
+Yg
+GM
+pC
+MD
+cI
+ca
+zv
+fP
+Ka
+nC
+"}
+(9,1,1) = {"
+Av
+GB
+KE
+oj
+dR
+cv
+SG
+zf
+zf
+zf
+pi
+"}
+(10,1,1) = {"
+Av
+QD
+lU
+Um
+Hd
+cI
+Rm
+nJ
+sz
+jU
+Av
+"}
+(11,1,1) = {"
+jx
+cI
+pi
+kd
+Av
+ZN
+tN
+RQ
+cI
+cI
+jx
 "}

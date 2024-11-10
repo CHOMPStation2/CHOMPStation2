@@ -18,18 +18,22 @@
 /obj/structure/closet/crate/secure/large,
 /obj/random/maintenance,
 /obj/random/maintenance,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "ae" = (
-/obj/item/weapon/storage/box/monkeycubes,
-/obj/item/weapon/storage/box/monkeycubes,
-/obj/item/weapon/storage/box/monkeycubes,
-/obj/item/weapon/storage/toolbox/mechanical,
-/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/storage/box/monkeycubes,
+/obj/item/storage/box/monkeycubes,
+/obj/item/storage/box/monkeycubes,
+/obj/item/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/mechanical,
 /obj/structure/closet/crate/secure/large,
 /obj/random/maintenance,
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "af" = (
 /obj/item/stack/material/cardboard,
@@ -38,17 +42,21 @@
 /obj/structure/closet/crate/secure/large,
 /obj/random/maintenance,
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "ag" = (
-/obj/item/weapon/storage/box/mousetraps,
-/obj/item/weapon/storage/box/mousetraps,
+/obj/item/storage/box/mousetraps,
+/obj/item/storage/box/mousetraps,
 /obj/structure/closet/crate/secure/large,
-/obj/item/weapon/material/knife/tacknife/combatknife,
-/obj/item/weapon/material/knife/tacknife/combatknife,
+/obj/item/material/knife/tacknife/combatknife,
+/obj/item/material/knife/tacknife/combatknife,
 /obj/random/maintenance/medical,
 /obj/random/maintenance/security,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "ah" = (
 /obj/item/stack/material/steel{
@@ -87,7 +95,9 @@
 /obj/random/maintenance/medical,
 /obj/random/maintenance/medical,
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "ai" = (
 /obj/item/stack/material/glass{
@@ -121,51 +131,61 @@
 /obj/item/clothing/shoes/boots/combat,
 /obj/random/maintenance/medical,
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "aj" = (
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/item/weapon/shovel,
+/obj/item/shovel,
 /obj/structure/closet/crate/secure/large,
-/obj/item/device/flashlight/lantern,
+/obj/item/flashlight/lantern,
 /obj/random/maintenance,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "ak" = (
-/obj/item/weapon/storage/box/rxglasses,
-/obj/item/weapon/extinguisher,
-/obj/item/weapon/extinguisher,
+/obj/item/storage/box/rxglasses,
+/obj/item/extinguisher,
+/obj/item/extinguisher,
 /obj/item/clothing/glasses/night,
 /obj/item/clothing/glasses/night,
 /obj/structure/closet/crate/secure/large,
 /obj/random/maintenance,
 /obj/random/maintenance,
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "al" = (
-/obj/item/weapon/storage/box/syringes,
-/obj/item/weapon/storage/box/syringes,
-/obj/item/weapon/storage/box/beakers,
-/obj/item/weapon/storage/box/beakers,
-/obj/item/weapon/storage/box/matches,
-/obj/item/weapon/storage/box/bodybags,
+/obj/item/storage/box/syringes,
+/obj/item/storage/box/syringes,
+/obj/item/storage/box/beakers,
+/obj/item/storage/box/beakers,
+/obj/item/storage/box/matches,
+/obj/item/storage/box/bodybags,
 /obj/item/clothing/glasses/meson,
 /obj/item/clothing/glasses/meson,
 /obj/structure/closet/crate/secure/large,
 /obj/random/maintenance,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "an" = (
-/obj/item/device/defib_kit/loaded,
-/obj/item/weapon/storage/box/autoinjectors,
+/obj/item/defib_kit/loaded,
+/obj/item/storage/box/autoinjectors,
 /obj/structure/closet/crate/secure/large,
 /obj/random/maintenance/medical,
 /obj/random/maintenance/medical,
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "ao" = (
 /obj/machinery/light{
@@ -175,29 +195,41 @@
 /obj/random/maintenance/medical,
 /obj/random/maintenance/medical,
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "ap" = (
 /obj/structure/closet/crate/freezer,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "aq" = (
 /obj/machinery/iv_drip,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "as" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "at" = (
 /obj/machinery/portable_atmospherics/canister/air,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "au" = (
 /obj/machinery/door/airlock/highsecurity{
 	name = "Bunker"
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "av" = (
 /obj/structure/toilet{
@@ -216,40 +248,46 @@
 /turf/simulated/floor/tiled/freezer,
 /area/submap/deepstorage)
 "ax" = (
-/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/mechanical,
 /obj/structure/table/standard,
-/obj/item/device/spaceflare{
+/obj/item/spaceflare{
 	pixel_y = 0;
 	pixel_x = 7
 	},
-/obj/item/device/spaceflare{
+/obj/item/spaceflare{
 	pixel_y = 0;
 	pixel_x = -4
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "ay" = (
 /obj/structure/reagent_dispensers/peppertank{
 	pixel_y = 30
 	},
 /obj/structure/table/standard,
-/obj/item/weapon/gun/projectile/shotgun/doublebarrel,
-/obj/item/weapon/gun/projectile/automatic/wt550/lethal,
+/obj/item/gun/projectile/shotgun/doublebarrel,
+/obj/item/gun/projectile/automatic/wt550/lethal,
 /obj/item/ammo_magazine/m9mmt,
 /obj/item/ammo_magazine/m9mmt,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "aA" = (
 /obj/structure/table/standard,
-/obj/item/device/radio/headset/sar/alt,
-/obj/item/device/radio/headset/sar/alt{
+/obj/item/radio/headset/alt/sar,
+/obj/item/radio/headset/alt/sar{
 	pixel_x = 7
 	},
-/obj/item/device/radio/headset/sar/alt{
+/obj/item/radio/headset/alt/sar{
 	pixel_y = 0;
 	pixel_x = -6
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "aB" = (
 /obj/item/stack/material/steel{
@@ -263,32 +301,40 @@
 /obj/item/stack/cable_coil,
 /obj/item/stack/cable_coil,
 /obj/structure/table/standard,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "aD" = (
 /obj/machinery/light/small{
 	dir = 4
 	},
 /obj/structure/table/standard,
-/obj/item/weapon/storage/firstaid,
-/obj/item/weapon/storage/firstaid/fire{
+/obj/item/storage/firstaid,
+/obj/item/storage/firstaid/fire{
 	pixel_x = 5;
 	pixel_y = 5
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "aE" = (
 /obj/structure/closet/crate/radiation,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "aG" = (
 /obj/structure/closet/crate/secure/large,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/turf/simulated/floor/tiled/asteroid_steel,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "aH" = (
 /obj/machinery/vending/loadout/uniform,
@@ -297,7 +343,7 @@
 "aJ" = (
 /obj/structure/bed,
 /obj/effect/decal/remains/unathi,
-/obj/item/weapon/bedsheet/blue,
+/obj/item/bedsheet/blue,
 /turf/simulated/floor/wood/broken,
 /area/submap/deepstorage)
 "aK" = (
@@ -323,7 +369,9 @@
 /obj/item/clothing/mask/gas,
 /obj/item/clothing/mask/gas,
 /obj/structure/table/standard,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "aN" = (
 /obj/item/stack/medical/bruise_pack,
@@ -332,7 +380,9 @@
 /obj/random/maintenance/medical,
 /obj/random/maintenance/medical,
 /obj/random/maintenance/medical,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "aO" = (
 /obj/structure/closet/radiation,
@@ -345,20 +395,24 @@
 /obj/item/stack/material/phoron{
 	amount = 10
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "aP" = (
 /obj/machinery/light{
 	dir = 4
 	},
 /obj/structure/closet/crate/secure/large,
-/obj/item/weapon/reagent_containers/food/drinks/cans/starkist,
-/obj/item/weapon/reagent_containers/food/drinks/cans/space_mountain_wind,
-/obj/item/weapon/reagent_containers/food/drinks/cans/root_beer,
-/obj/item/weapon/reagent_containers/food/drinks/cans/gingerale,
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola,
+/obj/item/reagent_containers/food/drinks/cans/starkist,
+/obj/item/reagent_containers/food/drinks/cans/space_mountain_wind,
+/obj/item/reagent_containers/food/drinks/cans/root_beer,
+/obj/item/reagent_containers/food/drinks/cans/gingerale,
+/obj/item/reagent_containers/food/drinks/cans/cola,
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "aQ" = (
 /obj/structure/closet/wardrobe/pink,
@@ -371,7 +425,7 @@
 	health = 350;
 	name = "rabid chubby red guard otie"
 	},
-/obj/item/weapon/bedsheet/clown,
+/obj/item/bedsheet/clown,
 /turf/simulated/floor/wood/broken,
 /area/submap/deepstorage)
 "aT" = (
@@ -404,16 +458,22 @@
 /obj/item/ammo_magazine/ammo_box/b12g/pellet{
 	pixel_y = 4
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "aW" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/backpack/dufflebag/syndie/ammo,
-/turf/simulated/floor/tiled/asteroid_steel,
+/obj/item/storage/backpack/dufflebag/syndie/ammo,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "aX" = (
 /obj/machinery/suit_storage_unit,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "aY" = (
 /obj/structure/closet/wardrobe/pink,
@@ -437,22 +497,26 @@
 /obj/machinery/shower{
 	dir = 4
 	},
-/obj/item/weapon/soap,
+/obj/item/soap,
 /turf/simulated/floor/tiled/freezer,
 /area/submap/deepstorage)
 "bc" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "bd" = (
-/obj/item/weapon/storage/box/donkpockets,
-/obj/item/weapon/storage/box/donkpockets,
-/obj/item/weapon/storage/box/donkpockets,
-/obj/item/weapon/storage/box/donkpockets,
-/obj/item/weapon/storage/box/donkpockets,
+/obj/item/storage/box/donkpockets,
+/obj/item/storage/box/donkpockets,
+/obj/item/storage/box/donkpockets,
+/obj/item/storage/box/donkpockets,
+/obj/item/storage/box/donkpockets,
 /obj/structure/closet/crate/secure/large,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "be" = (
 /obj/machinery/door/airlock/highsecurity{
@@ -467,46 +531,62 @@
 	dir = 8
 	},
 /obj/machinery/sleeper/survival_pod,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "bh" = (
 /obj/machinery/light/small{
 	dir = 1
 	},
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "bi" = (
 /obj/machinery/light/small{
 	dir = 4;
 	pixel_y = -8
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "bj" = (
 /obj/machinery/sleeper/survival_pod,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "bk" = (
 /obj/machinery/processor{
 	name = "processor"
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "bl" = (
-/obj/item/weapon/storage/box/matches,
+/obj/item/storage/box/matches,
 /obj/structure/table/standard,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "bm" = (
 /obj/machinery/reagentgrinder,
 /obj/structure/table/standard,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "bn" = (
 /obj/machinery/recharger,
 /obj/structure/table/standard,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "bo" = (
 /obj/machinery/portable_atmospherics/hydroponics,
@@ -525,7 +605,9 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/power/port_gen/pacman,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "bs" = (
 /obj/structure/cable{
@@ -533,19 +615,25 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/obj/machinery/power/smes,
-/turf/simulated/floor/tiled/asteroid_steel,
+/obj/machinery/power/smes/buildable/point_of_interest,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "bu" = (
 /obj/machinery/light/small{
 	dir = 1
 	},
 /obj/structure/dispenser/oxygen,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "bv" = (
 /obj/machinery/biogenerator,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "bw" = (
 /obj/machinery/light,
@@ -554,7 +642,9 @@
 /area/submap/deepstorage)
 "bx" = (
 /obj/machinery/autolathe,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "by" = (
 /obj/structure/cable{
@@ -565,14 +655,18 @@
 /obj/machinery/power/terminal{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "bz" = (
 /obj/structure/reagent_dispensers/fueltank,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "bC" = (
-/obj/item/weapon/storage/box/donkpockets,
+/obj/item/storage/box/donkpockets,
 /obj/effect/floor_decal/corner/brown/diagonal,
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled,
@@ -583,7 +677,9 @@
 /area/submap/deepstorage)
 "bF" = (
 /obj/machinery/seed_extractor,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "bG" = (
 /obj/structure/cable{
@@ -595,7 +691,9 @@
 	pixel_x = -20
 	},
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "bH" = (
 /obj/structure/cable{
@@ -604,7 +702,9 @@
 	icon_state = "4-8";
 	tag = ""
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "bI" = (
 /obj/structure/cable{
@@ -613,11 +713,15 @@
 	icon_state = "1-8";
 	tag = ""
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "bJ" = (
 /obj/structure/reagent_dispensers/watertank,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "bM" = (
 /obj/effect/floor_decal/corner/brown/diagonal,
@@ -626,17 +730,23 @@
 /area/submap/deepstorage)
 "bN" = (
 /obj/machinery/vending/hydronutrients,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "bO" = (
 /obj/machinery/space_heater,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "bP" = (
 /obj/structure/bed/chair/bay/comfy/black{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "bR" = (
 /obj/machinery/smartfridge,
@@ -652,21 +762,29 @@
 /obj/machinery/vending/hydroseeds{
 	slogan_delay = 700
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "bU" = (
 /obj/machinery/light/small{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "bV" = (
 /obj/structure/bed/chair/bay/comfy/black,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "bW" = (
 /obj/structure/frame/computer,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "bX" = (
 /obj/structure/table/reinforced,
@@ -675,11 +793,15 @@
 	layer = 4;
 	pixel_y = -32
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "bY" = (
 /obj/structure/table/reinforced,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "ca" = (
 /turf/simulated/floor/plating,
@@ -708,16 +830,22 @@
 /obj/effect/floor_decal/industrial/danger,
 /turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/deepstorage)
+"dK" = (
+/mob/living/simple_mob/animal/space/carp,
+/turf/simulated/floor/reinforced/airless,
+/area/submap/deepstorage)
 "ea" = (
 /obj/structure/closet/crate/secure/large,
-/obj/item/weapon/reagent_containers/food/drinks/cans/thirteenloko,
-/obj/item/weapon/reagent_containers/food/drinks/cans/space_up,
-/obj/item/weapon/reagent_containers/food/drinks/cans/sodawater,
-/obj/item/weapon/reagent_containers/food/drinks/cans/grape_juice,
-/obj/item/weapon/reagent_containers/food/drinks/cans/dr_gibb_diet,
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola,
+/obj/item/reagent_containers/food/drinks/cans/thirteenloko,
+/obj/item/reagent_containers/food/drinks/cans/space_up,
+/obj/item/reagent_containers/food/drinks/cans/sodawater,
+/obj/item/reagent_containers/food/drinks/cans/grape_juice,
+/obj/item/reagent_containers/food/drinks/cans/dr_gibb_diet,
+/obj/item/reagent_containers/food/drinks/cans/cola,
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "eh" = (
 /obj/machinery/light,
@@ -751,17 +879,21 @@
 	color = "red";
 	icon_state = "mgibbl2"
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "iC" = (
 /obj/structure/closet/crate/secure/large,
-/obj/item/weapon/material/knife/butch,
-/obj/item/weapon/material/kitchen/rollingpin,
-/obj/item/weapon/material/knife/machete/hatchet,
-/obj/item/weapon/material/minihoe,
+/obj/item/material/knife/butch,
+/obj/item/material/kitchen/rollingpin,
+/obj/item/material/knife/machete/hatchet,
+/obj/item/material/minihoe,
 /obj/random/maintenance/medical,
 /obj/random/maintenance/security,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "iM" = (
 /obj/effect/floor_decal/rust,
@@ -769,21 +901,25 @@
 /area/submap/deepstorage)
 "iT" = (
 /obj/structure/closet/crate/secure/large,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/turf/simulated/floor/tiled/asteroid_steel,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "kX" = (
 /obj/structure/closet/crate/secure/large,
-/obj/item/weapon/reagent_containers/food/drinks/cans/thirteenloko,
-/obj/item/weapon/reagent_containers/food/drinks/cans/lemon_lime,
-/obj/item/weapon/reagent_containers/food/drinks/cans/iced_tea,
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola,
-/turf/simulated/floor/tiled/asteroid_steel,
+/obj/item/reagent_containers/food/drinks/cans/thirteenloko,
+/obj/item/reagent_containers/food/drinks/cans/lemon_lime,
+/obj/item/reagent_containers/food/drinks/cans/iced_tea,
+/obj/item/reagent_containers/food/drinks/cans/cola,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "lh" = (
 /obj/structure/bed/chair/backed_red{
@@ -810,10 +946,14 @@
 /obj/structure/closet/crate/secure/large,
 /obj/item/clothing/glasses/night,
 /obj/item/clothing/glasses/night,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "mL" = (
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "pb" = (
 /obj/effect/decal/cleanable/blood/gibs{
@@ -821,7 +961,9 @@
 	icon_state = "mfloor1"
 	},
 /obj/effect/decal/remains/human,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "qc" = (
 /turf/simulated/floor/plating/external,
@@ -855,7 +997,9 @@
 	icon = 'icons/effects/blood.dmi';
 	icon_state = "tracks"
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "tg" = (
 /obj/structure/table/reinforced,
@@ -873,7 +1017,9 @@
 	pixel_x = -1;
 	pixel_y = -3
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "tS" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -890,13 +1036,17 @@
 	color = "red";
 	icon_state = "mfloor2"
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "uE" = (
 /obj/structure/table/standard,
 /obj/random/firstaid,
 /obj/random/firstaid,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "uG" = (
 /obj/effect/floor_decal/corner/brown/diagonal,
@@ -925,8 +1075,10 @@
 /obj/item/ammo_magazine/m9mm/compact,
 /obj/item/ammo_magazine/m9mm/compact,
 /obj/item/ammo_magazine/m9mm/compact,
-/obj/item/weapon/gun/projectile/pistol,
-/turf/simulated/floor/tiled/asteroid_steel,
+/obj/item/gun/projectile/pistol,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "wX" = (
 /obj/random/outcrop,
@@ -934,27 +1086,31 @@
 /area/submap/deepstorage)
 "xi" = (
 /obj/structure/closet/crate/secure/large,
-/obj/item/weapon/reagent_containers/food/drinks/cans/tonic,
-/obj/item/weapon/reagent_containers/food/drinks/cans/tonic,
-/obj/item/weapon/reagent_containers/food/drinks/cans/space_mountain_wind,
-/obj/item/weapon/reagent_containers/food/drinks/cans/sodawater,
-/obj/item/weapon/reagent_containers/food/drinks/cans/root_beer,
-/obj/item/weapon/reagent_containers/food/drinks/cans/grape_juice,
-/obj/item/weapon/reagent_containers/food/drinks/cans/gingerale,
-/obj/item/weapon/reagent_containers/food/drinks/cans/dr_gibb,
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola,
-/turf/simulated/floor/tiled/asteroid_steel,
+/obj/item/reagent_containers/food/drinks/cans/tonic,
+/obj/item/reagent_containers/food/drinks/cans/tonic,
+/obj/item/reagent_containers/food/drinks/cans/space_mountain_wind,
+/obj/item/reagent_containers/food/drinks/cans/sodawater,
+/obj/item/reagent_containers/food/drinks/cans/root_beer,
+/obj/item/reagent_containers/food/drinks/cans/grape_juice,
+/obj/item/reagent_containers/food/drinks/cans/gingerale,
+/obj/item/reagent_containers/food/drinks/cans/dr_gibb,
+/obj/item/reagent_containers/food/drinks/cans/cola,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "yM" = (
 /turf/simulated/wall/r_wall,
 /area/submap/deepstorage)
 "zE" = (
 /obj/structure/closet/crate/secure/large,
-/obj/item/weapon/reagent_containers/food/drinks/cans/starkist,
-/obj/item/weapon/reagent_containers/food/drinks/cans/lemon_lime,
-/obj/item/weapon/reagent_containers/food/drinks/cans/dr_gibb_diet,
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola,
-/turf/simulated/floor/tiled/asteroid_steel,
+/obj/item/reagent_containers/food/drinks/cans/starkist,
+/obj/item/reagent_containers/food/drinks/cans/lemon_lime,
+/obj/item/reagent_containers/food/drinks/cans/dr_gibb_diet,
+/obj/item/reagent_containers/food/drinks/cans/cola,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "Ct" = (
 /obj/effect/floor_decal/corner/brown/diagonal,
@@ -972,7 +1128,9 @@
 	icon_state = "tracks";
 	dir = 10
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "CJ" = (
 /obj/structure/cable{
@@ -994,8 +1152,10 @@
 /turf/simulated/floor/wood/broken,
 /area/submap/deepstorage)
 "DG" = (
-/obj/item/weapon/bedsheet/ce,
-/turf/simulated/floor/tiled/asteroid_steel,
+/obj/item/bedsheet/ce,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "Ex" = (
 /obj/structure/bed,
@@ -1033,15 +1193,17 @@
 /area/submap/deepstorage)
 "Ku" = (
 /obj/structure/closet/crate/secure/large,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "Lm" = (
 /obj/effect/floor_decal/rust,
@@ -1052,16 +1214,20 @@
 	icon = 'icons/effects/blood.dmi';
 	icon_state = "tracks"
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "Mr" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/firstaid/bonemed,
-/obj/item/weapon/storage/firstaid/adv{
+/obj/item/storage/firstaid/bonemed,
+/obj/item/storage/firstaid/adv{
 	pixel_x = 5;
 	pixel_y = 5
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "Ms" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -1083,7 +1249,9 @@
 /area/submap/deepstorage)
 "OI" = (
 /obj/machinery/telecomms/relay/preset/ruskie,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "QK" = (
 /obj/effect/floor_decal/rust,
@@ -1091,7 +1259,9 @@
 /area/submap/deepstorage)
 "QY" = (
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "RQ" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -1101,21 +1271,25 @@
 /area/submap/deepstorage)
 "Sc" = (
 /obj/structure/closet/crate/secure/large,
-/obj/item/weapon/reagent_containers/food/drinks/cans/space_up,
-/obj/item/weapon/reagent_containers/food/drinks/cans/iced_tea,
-/obj/item/weapon/reagent_containers/food/drinks/cans/dr_gibb,
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola,
-/turf/simulated/floor/tiled/asteroid_steel,
+/obj/item/reagent_containers/food/drinks/cans/space_up,
+/obj/item/reagent_containers/food/drinks/cans/iced_tea,
+/obj/item/reagent_containers/food/drinks/cans/dr_gibb,
+/obj/item/reagent_containers/food/drinks/cans/cola,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "SG" = (
 /obj/structure/closet/crate/secure/large,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "TV" = (
 /obj/structure/closet/crate/secure/large,
@@ -1125,7 +1299,9 @@
 /obj/item/clothing/suit/storage/vest/tactical,
 /obj/item/clothing/suit/storage/vest/tactical,
 /obj/item/clothing/suit/storage/vest/tactical,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "Ul" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
@@ -1143,7 +1319,13 @@
 	color = "red";
 	icon_state = "mgibbl4"
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
+/area/submap/deepstorage)
+"VB" = (
+/mob/living/simple_mob/animal/space/carp,
+/turf/simulated/mineral/floor/vacuum,
 /area/submap/deepstorage)
 "XB" = (
 /obj/machinery/portable_atmospherics/hydroponics,
@@ -1153,7 +1335,7 @@
 "XM" = (
 /obj/effect/floor_decal/corner/brown/diagonal,
 /obj/structure/table/standard,
-/obj/item/weapon/storage/mre/random,
+/obj/item/storage/mre/random,
 /turf/simulated/floor/tiled,
 /area/submap/deepstorage)
 "Zi" = (
@@ -1164,7 +1346,9 @@
 	icon = 'icons/effects/blood.dmi';
 	icon_state = "tracks"
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 
 (1,1,1) = {"
@@ -2108,7 +2292,7 @@ ab
 ab
 ab
 ab
-ab
+VB
 ab
 ab
 ab
@@ -2237,7 +2421,7 @@ ab
 ab
 ab
 ab
-ab
+VB
 ab
 ab
 ab
@@ -2462,7 +2646,7 @@ ab
 ab
 ab
 ab
-ab
+VB
 ab
 ab
 ab
@@ -2524,7 +2708,7 @@ ab
 ab
 ab
 ab
-ab
+VB
 ab
 ab
 ab
@@ -2595,7 +2779,7 @@ ab
 ab
 ab
 ab
-ab
+VB
 ab
 ab
 ab
@@ -2650,6 +2834,7 @@ ab
 ab
 ab
 ab
+VB
 ab
 ab
 ab
@@ -2674,8 +2859,7 @@ ab
 ab
 ab
 ab
-ab
-ab
+VB
 ab
 ab
 ab
@@ -2719,7 +2903,7 @@ ab
 ab
 ab
 ab
-ab
+VB
 ab
 ab
 ab
@@ -2918,7 +3102,7 @@ ab
 ab
 ab
 ab
-ab
+VB
 ab
 ab
 ab
@@ -3090,7 +3274,7 @@ ce
 ce
 QK
 ab
-ab
+VB
 ab
 ab
 ab
@@ -3268,7 +3452,7 @@ ab
 ab
 ab
 ab
-ab
+VB
 ab
 ab
 wX
@@ -3396,7 +3580,7 @@ ab
 ab
 ab
 ab
-ab
+VB
 ab
 ab
 ab
@@ -3641,7 +3825,7 @@ ab
 ab
 ab
 ab
-ab
+VB
 ce
 wX
 ab
@@ -4328,12 +4512,12 @@ ab
 ab
 ab
 ab
-ab
+VB
 vI
 vI
 vI
 ab
-ab
+VB
 ab
 ab
 ab
@@ -4578,6 +4762,7 @@ ab
 wX
 ab
 ab
+VB
 ab
 ab
 ab
@@ -4597,8 +4782,7 @@ ab
 ab
 ab
 ab
-ab
-ab
+VB
 ab
 ab
 QK
@@ -4608,7 +4792,7 @@ ab
 vI
 ab
 ab
-vI
+dK
 ab
 ab
 vI
@@ -4793,7 +4977,7 @@ ab
 ab
 ab
 ab
-ab
+VB
 ab
 ab
 ab
@@ -4872,7 +5056,7 @@ ab
 ab
 ab
 ab
-ab
+VB
 ab
 ab
 ab
@@ -5359,7 +5543,7 @@ ab
 ab
 ab
 ab
-ab
+VB
 ab
 ab
 ab
@@ -5484,7 +5668,7 @@ ab
 ab
 ab
 ab
-ab
+VB
 ab
 ab
 ab

@@ -5,16 +5,17 @@
 
 /datum/trait/neutral/mobegglaying/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	H.verbs |= /mob/living/proc/mobegglaying
+	add_verb(H,/mob/living/proc/mobegglaying) //CHOMPEdit TGPanel
 
 /datum/trait/neutral/succubus_bite
 	name = "Succubus Bite"
 	desc = "Allows you to inject your prey with poison, much like a venemous snake."
 	cost = 0
+	custom_only = FALSE	//CHOMPEdit I hate custom only
 
 /datum/trait/neutral/succubus_bite/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	H.verbs |= /mob/living/proc/succubus_bite
+	add_verb(H,/mob/living/proc/succubus_bite) //CHOMPEdit TGPanel
 
 /datum/trait/neutral/nutritiongrow
 	name = "Growing"
@@ -33,6 +34,7 @@
 	desc = "Somehow you are so filthy that tiles get dirty four times as quick from you walking on them."
 	cost = 0
 	var_changes = list("mudking" = TRUE)
+	custom_only = FALSE
 
 /datum/trait/neutral/singularity_metabolism
 	name = "Metabolism, Singularity"
@@ -46,6 +48,20 @@
 	desc = "Makes your nice clawed, scaled, hooved, armored, or otherwise just awfully calloused feet immune to glass shards."
 	cost = 0 //CHOMP Edit
 	var_changes = list("flags" = NO_MINOR_CUT) //Checked the flag is only used by shard stepping.
+
+/datum/trait/neutral/small_mouth_extreme
+	name = "Slow Eater"
+	desc = "It takes four times as many bites to finish food as it does for most people."
+	cost = 0
+	var_changes = list("bite_mod" = 0.25)
+	custom_only = FALSE
+
+/datum/trait/neutral/small_mouth
+	name = "Slow Eater, Minor"
+	desc = "It takes twice as many bites to finish food as it does for most people."
+	cost = 0
+	var_changes = list("bite_mod" = 0.5)
+	custom_only = FALSE
 
 /datum/trait/neutral/big_mouth
 	name = "Fast Eater, Minor"

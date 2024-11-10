@@ -163,7 +163,7 @@
 				M.Weaken(5)
 				var/datum/gender/TM = gender_datums[M.get_visible_gender()]
 				for (var/mob/V in viewers(src))
-					V.show_message("<font color='red'>[M] writhes in pain as [TM.his] vacuoles boil.</font>", 3, "<font color='red'>You hear the crunching of leaves.</font>", 2)
+					V.show_message(span_red("[M] writhes in pain as [TM.his] vacuoles boil."), 3, span_red("You hear the crunching of leaves."), 2)
 			if(prob(35))
 			//	for (var/mob/V in viewers(src)) //Public messages commented out to prevent possible metaish genetics experimentation and stuff. - Cheridan
 			//		V.show_message("<font color='red'>[M] is mutated by the radiation beam.</font>", 3, "<font color='red'> You hear the snapping of twigs.</font>", 2)
@@ -175,13 +175,13 @@
 					domutcheck(M,null)
 			else
 				M.adjustFireLoss(rand(5,15))
-				M.show_message("<font color='red'>The radiation beam singes you!</font>")
+				M.show_message(span_red("The radiation beam singes you!"))
 			//	for (var/mob/V in viewers(src))
 			//		V.show_message("<font color='red'>[M] is singed by the radiation beam.</font>", 3, "<font color='red'> You hear the crackle of burning leaves.</font>", 2)
 	else if(istype(target, /mob/living/carbon/))
 	//	for (var/mob/V in viewers(src))
 	//		V.show_message("The radiation beam dissipates harmlessly through [M]", 3)
-		M.show_message("<font color='blue'>The radiation beam dissipates harmlessly through your body.</font>")
+		M.show_message(span_blue("The radiation beam dissipates harmlessly through your body."))
 	else
 		return 1
 
@@ -218,7 +218,7 @@
 		if((H.species.flags & IS_PLANT) && (M.nutrition < 500))
 			M.adjust_nutrition(30)
 	else if (istype(target, /mob/living/carbon/))
-		M.show_message("<font color='blue'>The radiation beam dissipates harmlessly through your body.</font>")
+		M.show_message(span_blue("The radiation beam dissipates harmlessly through your body."))
 	else
 		return 1
 
@@ -259,7 +259,7 @@
 /obj/item/projectile/bola/on_hit(var/atom/target, var/blocked = 0)
 	if(ishuman(target))
 		var/mob/living/carbon/human/M = target
-		var/obj/item/weapon/handcuffs/legcuffs/bola/B = new(src.loc)
+		var/obj/item/handcuffs/legcuffs/bola/B = new(src.loc)
 		if(!B.place_legcuffs(M,firer))
 			if(B)
 				qdel(B)
@@ -279,7 +279,7 @@
 	if(isturf(target.loc))
 		var/obj/effect/spider/stickyweb/W = locate() in get_turf(target)
 		if(!W && prob(75))
-			visible_message("<span class='danger'>\The [src] splatters a layer of web on \the [target]!</span>")
+			visible_message(span_danger("\The [src] splatters a layer of web on \the [target]!"))
 			new /obj/effect/spider/stickyweb(target.loc)
 	..()
 
@@ -339,17 +339,17 @@
 					target_limb.dislocate()
 
 			if(armor_special > 1)
-				target.visible_message("<span class='cult'>\The [src] slams into \the [target]'s [target_limb], reverberating loudly!</span>")
+				target.visible_message(span_cult("\The [src] slams into \the [target]'s [target_limb], reverberating loudly!"))
 
 			else if(armor_special)
-				target.visible_message("<span class='cult'>\The [src] slams into \the [target]'s [target_limb] with a low rumble!</span>")
+				target.visible_message(span_cult("\The [src] slams into \the [target]'s [target_limb] with a low rumble!"))
 
 	..()
 
 /obj/item/projectile/beam/tungsten/on_impact(var/atom/A)
 	if(istype(A,/turf/simulated/shuttle/wall) || istype(A,/turf/simulated/wall) || (istype(A,/turf/simulated/mineral) && A.density) || istype(A,/obj/mecha) || istype(A,/obj/machinery/door))
 		var/blast_dir = src.dir
-		A.visible_message("<span class='danger'>\The [A] begins to glow!</span>")
+		A.visible_message(span_danger("\The [A] begins to glow!"))
 		spawn(2 SECONDS)
 			var/blastloc = get_step(A, blast_dir)
 			if(blastloc)

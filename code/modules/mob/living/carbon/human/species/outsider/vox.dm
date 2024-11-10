@@ -109,11 +109,11 @@
 
 	H.equip_to_slot_or_del(new /obj/item/clothing/mask/breath(H), slot_wear_mask)
 	if(H.backbag == 1)
-		H.equip_to_slot_or_del(new /obj/item/weapon/tank/nitrogen(H), slot_back) //CHOMPedit
+		H.equip_to_slot_or_del(new /obj/item/tank/nitrogen(H), slot_back) //CHOMPedit
 		H.internal = H.back
 	else
-		H.equip_to_slot_or_del(new /obj/item/weapon/tank/nitrogen(H), slot_r_hand) //CHOMPedit
+		H.equip_to_slot_or_del(new /obj/item/tank/nitrogen(H), slot_r_hand) //CHOMPedit
 		H.internal = H.r_hand
-	H.internal = locate(/obj/item/weapon/tank) in H.contents
-	if(istype(H.internal,/obj/item/weapon/tank) && H.internals)
+	H.internal = locate(/obj/item/tank) in H.contents
+	if(istype(H.internal,/obj/item/tank) && H.internals)
 		H.internals.icon_state = "internal1"

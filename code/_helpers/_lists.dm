@@ -15,6 +15,28 @@
  * Misc
  */
 
+//CHOMPEdit Begin
+///compare two lists, returns TRUE if they are the same
+/proc/compare_list(list/l,list/d)
+	if(!islist(l) || !islist(d))
+		return FALSE
+
+	if(l.len != d.len)
+		return FALSE
+
+	for(var/i in 1 to l.len)
+		if(l[i] != d[i])
+			return FALSE
+
+	return TRUE
+
+/// Returns the top (last) element from the list, does not remove it from the list. Stack functionality.
+/proc/peek(list/target_list)
+	var/list_length = length(target_list)
+	if(list_length != 0)
+		return target_list[list_length]
+//CHOMPEdit End
+
 //Returns a list in plain english as a string
 /proc/english_list(var/list/input, nothing_text = "nothing", and_text = " and ", comma_text = ", ", final_comma_text = ",")
 	// this proc cannot be merged with counting_english_list to maintain compatibility
@@ -26,7 +48,7 @@
 		else  return "[jointext(input, comma_text, 1, -1)][final_comma_text][and_text][input[input.len]]"
 
 //Returns a newline-separated list that counts equal-ish items, outputting count and item names, optionally with icons and specific determiners
-/proc/counting_english_list(var/list/input, output_icons = TRUE, determiners = DET_NONE, nothing_text = "nothing", line_prefix = "\t", first_item_prefix = "\n", last_item_suffix = "\n", and_text = "\n", comma_text = "\n", final_comma_text = ",")
+/proc/counting_english_list(var/list/input, var/mob/user, output_icons = TRUE, determiners = DET_NONE, nothing_text = "nothing", line_prefix = "\t", first_item_prefix = "\n", last_item_suffix = "\n", and_text = "\n", comma_text = "\n", final_comma_text = ",") //CHOMPEdit
 	var/list/counts = list() // counted input items
 	var/list/items = list() // actual objects for later reference (for icons and formatting)
 
@@ -53,7 +75,7 @@
 			// atoms/items/objects can be pretty and whatnot
 			var/atom/A = item
 			if(output_icons && isicon(A.icon) && !ismob(A)) // mobs tend to have unusable icons
-				item_str += "\icon[A][bicon(A)]&nbsp;"
+				item_str += "[icon2html(A,user)]&nbsp;" //CHOMPEdit
 			switch(determiners)
 				if(DET_NONE) item_str += A.name
 				if(DET_DEFINITE) item_str += "\the [A]"
@@ -202,6 +224,13 @@
 	else
 		result = first - second
 	return result
+
+/**
+ * Removes any null entries from the list
+ * Returns TRUE if the list had nulls, FALSE otherwise
+**/
+/proc/list_clear_nulls(list/list_to_clear)
+	return (list_to_clear.RemoveAll(null) > 0)
 
 /*
 Two lists may be different (A!=B) even if they have the same elements.
@@ -882,6 +911,54 @@ var/global/list/json_cache = list()
 		used_key_list[input_key] = 1
 	return input_key
 
+// Generic listoflist safe add and removal macros:
+///If value is a list, wrap it in a list so it can be used with list add/remove operations
+#define LIST_VALUE_WRAP_LISTS(value) (islist(value) ? list(value) : value)
+///Add an untyped item to a list, taking care to handle list items by wrapping them in a list to remove the footgun
+#define UNTYPED_LIST_ADD(list, item) (list += LIST_VALUE_WRAP_LISTS(item))
+///Remove an untyped item to a list, taking care to handle list items by wrapping them in a list to remove the footgun
+#define UNTYPED_LIST_REMOVE(list, item) (list -= LIST_VALUE_WRAP_LISTS(item))
+
+/// Passed into BINARY_INSERT to compare keys
+#define COMPARE_KEY __BIN_LIST[__BIN_MID]
+/// Passed into BINARY_INSERT to compare values
+#define COMPARE_VALUE __BIN_LIST[__BIN_LIST[__BIN_MID]]
+
+/****
+	* Binary search sorted insert
+	* INPUT: Object to be inserted
+	* LIST: List to insert object into
+	* TYPECONT: The typepath of the contents of the list
+	* COMPARE: The object to compare against, usualy the same as INPUT
+	* COMPARISON: The variable on the objects to compare
+	* COMPTYPE: How should the values be compared? Either COMPARE_KEY or COMPARE_VALUE.
+	*/
+#define BINARY_INSERT(INPUT, LIST, TYPECONT, COMPARE, COMPARISON, COMPTYPE) \
+	do {\
+		var/list/__BIN_LIST = LIST;\
+		var/__BIN_CTTL = length(__BIN_LIST);\
+		if(!__BIN_CTTL) {\
+			__BIN_LIST += INPUT;\
+		} else {\
+			var/__BIN_LEFT = 1;\
+			var/__BIN_RIGHT = __BIN_CTTL;\
+			var/__BIN_MID = (__BIN_LEFT + __BIN_RIGHT) >> 1;\
+			var ##TYPECONT/__BIN_ITEM;\
+			while(__BIN_LEFT < __BIN_RIGHT) {\
+				__BIN_ITEM = COMPTYPE;\
+				if(__BIN_ITEM.##COMPARISON <= COMPARE.##COMPARISON) {\
+					__BIN_LEFT = __BIN_MID + 1;\
+				} else {\
+					__BIN_RIGHT = __BIN_MID;\
+				};\
+				__BIN_MID = (__BIN_LEFT + __BIN_RIGHT) >> 1;\
+			};\
+			__BIN_ITEM = COMPTYPE;\
+			__BIN_MID = __BIN_ITEM.##COMPARISON > COMPARE.##COMPARISON ? __BIN_MID : __BIN_MID + 1;\
+			__BIN_LIST.Insert(__BIN_MID, INPUT);\
+		};\
+	} while(FALSE)
+
 //CHOMPAdd start
 /proc/pick_weight(list/list_to_pick)
 	var/total = 0
@@ -898,4 +975,22 @@ var/global/list/json_cache = list()
 			return item
 
 	return null
+
+///Converts a bitfield to a list of numbers (or words if a wordlist is provided)
+/proc/bitfield_to_list(bitfield = 0, list/wordlist)
+	var/list/return_list = list()
+	if(islist(wordlist))
+		var/max = min(wordlist.len, 24)
+		var/bit = 1
+		for(var/i in 1 to max)
+			if(bitfield & bit)
+				return_list += wordlist[i]
+			bit = bit << 1
+	else
+		for(var/bit_number = 0 to 23)
+			var/bit = 1 << bit_number
+			if(bitfield & bit)
+				return_list += bit
+
+	return return_list
 //CHOMPAdd end

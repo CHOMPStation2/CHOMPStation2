@@ -1,8 +1,3 @@
-// Flags for specifying which states we have vore icon_states for.
-#define SA_ICON_LIVING	0x01
-#define SA_ICON_DEAD	0x02
-#define SA_ICON_REST	0x04
-
 /mob/living/simple_mob
 	melee_attack_delay = 1
 	base_attack_cooldown = 10
@@ -56,7 +51,7 @@
 	var/mount_offset_x = 5				// Horizontal riding offset.
 	var/mount_offset_y = 8				// Vertical riding offset
 
-	var/obj/item/device/radio/headset/mob_radio		//Adminbus headset for simplemob shenanigans.
+	var/obj/item/radio/headset/mob_radio		//Adminbus headset for simplemob shenanigans.
 	does_spin = FALSE
 	can_be_drop_pred = TRUE				// Mobs are pred by default.
 	can_be_drop_prey = TRUE				//CHOMP Add This also counts for spontaneous prey for telenoms and phase noms.
@@ -88,7 +83,8 @@
 	var/new_fullness = 0
 	for(var/obj/belly/B as anything in vore_organs)
 		for(var/mob/living/M in B)
-			new_fullness += M.size_multiplier
+			if(!M.absorbed || B.count_absorbed_prey_for_sprite)
+				new_fullness += M.size_multiplier
 	new_fullness = new_fullness / size_multiplier //Divided by pred's size so a macro mob won't get macro belly from a regular prey.
 	new_fullness = new_fullness * belly_size_multiplier // Some mobs are small even at 100% size. Let's account for that.
 	new_fullness = round(new_fullness, 1) // Because intervals of 0.25 are going to make sprite artists cry.
@@ -115,6 +111,10 @@
 			remove_eyes()
 			add_eyes()
 	update_transform()
+
+/mob/living/simple_mob/regenerate_icons()
+	..()
+	update_icon()
 
 /mob/living/simple_mob/proc/will_eat(var/mob/living/M)
 	if(client) //You do this yourself, dick!
@@ -164,7 +164,7 @@
 			return PounceTarget(L, pouncechance)
 
 		// We're not attempting a pounce, if they're down or we can eat standing, do it as long as they're edible. Otherwise, hit normally.
-		if(will_eat(L) && (!L.canmove || vore_standing_too))
+		if(will_eat(L) && (L.lying || vore_standing_too)) //CHOMPEdit
 			return EatTarget(L)
 		else
 			return ..()
@@ -194,12 +194,12 @@
 	vore_pounce_cooldown = world.time + 20 SECONDS // don't attempt another pounce for a while
 	if(prob(successrate)) // pounce success!
 		M.Weaken(5)
-		M.visible_message("<span class='danger'>\The [src] pounces on \the [M]!</span>!")
+		M.visible_message(span_danger("\The [src] pounces on \the [M]!"))
 	else // pounce misses!
-		M.visible_message("<span class='danger'>\The [src] attempts to pounce \the [M] but misses!</span>!")
+		M.visible_message(span_danger("\The [src] attempts to pounce \the [M] but misses!"))
 		playsound(src, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
 
-	if(will_eat(M) && (!M.canmove || vore_standing_too)) //if they're edible then eat them too
+	if(will_eat(M) && (M.lying || vore_standing_too)) //if they're edible then eat them too //CHOMPEdit
 		return EatTarget(M)
 	else
 		return //just leave them
@@ -235,13 +235,26 @@
 	if(!vore_active || no_vore || !voremob_loaded) //CHOMPedit: On-demand belly loading.
 		return
 
+	AddElement(/datum/element/slosh) // Sloshy element
+
+	//CHOMPAdd Start
+	if(!soulgem)
+		soulgem = new(src)
+	//CHOMPAdd End
+
+	/* CHOMPRemove Start, handled with the vore_active var
+	if(!IsAdvancedToolUser())
+		add_verb(src, /mob/living/simple_mob/proc/animal_nom)
+		add_verb(src, /mob/living/proc/shred_limb)
+	*/// CHOMPRemove End
+
 	if(LAZYLEN(vore_organs))
 		return
 
 	// Since they have bellies, add verbs to toggle settings on them.
-	verbs |= /mob/living/simple_mob/proc/toggle_digestion
-	verbs |= /mob/living/simple_mob/proc/toggle_fancygurgle
-	verbs |= /mob/living/proc/vertical_nom
+	add_verb(src, /mob/living/simple_mob/proc/toggle_digestion)
+	add_verb(src, /mob/living/simple_mob/proc/toggle_fancygurgle)
+	add_verb(src, /mob/living/proc/vertical_nom)
 
 	//A much more detailed version of the default /living implementation
 	var/obj/belly/B = new /obj/belly(src)
@@ -302,7 +315,7 @@
 			return FALSE
 		if(tmob.canmove && prob(vore_pounce_chance)) //if they'd pounce for other noms, pounce for these too, otherwise still try and eat them if they hold still
 			tmob.Weaken(5)
-		tmob.visible_message("<span class='danger'>\The [src] [vore_bump_emote] \the [tmob]!</span>!")
+		tmob.visible_message(span_danger("\The [src] [vore_bump_emote] \the [tmob]!"))
 		set_AI_busy(TRUE)
 		spawn()
 			animal_nom(tmob)
@@ -319,7 +332,7 @@
 
 // Riding
 /datum/riding/simple_mob
-	keytype = /obj/item/weapon/material/twohanded/riding_crop // Crack!
+	keytype = /obj/item/material/twohanded/riding_crop // Crack!
 	nonhuman_key_exemption = FALSE	// If true, nonhumans who can't hold keys don't need them, like borgs and simplemobs.
 	key_name = "a riding crop"		// What the 'keys' for the thing being rided on would be called.
 	only_one_driver = TRUE			// If true, only the person in 'front' (first on list of riding mobs) can drive.
@@ -336,7 +349,7 @@
 
 /datum/riding/simple_mob/force_dismount(mob/M)
 	. =..()
-	ridden.visible_message("<span class='notice'>[M] stops riding [ridden]!</span>")
+	ridden.visible_message(span_notice("[M] stops riding [ridden]!"))
 
 /datum/riding/simple_mob/get_offsets(pass_index) // list(dir = x, y, layer)
 	var/mob/living/simple_mob/L = ridden
@@ -363,7 +376,7 @@
 	if(M in buckled_mobs)
 		return FALSE
 	if(M.size_multiplier > size_multiplier * 1.2)
-		to_chat(src,"<span class='warning'>This isn't a pony show! You need to be bigger for them to ride.</span>")
+		to_chat(src,span_warning("This isn't a pony show! You need to be bigger for them to ride."))
 		return FALSE
 
 	var/mob/living/carbon/human/H = M
@@ -391,7 +404,7 @@
 
 /mob/living/simple_mob/proc/animal_mount(var/mob/living/M in living_mobs(1))
 	set name = "Animal Mount/Dismount"
-	set category = "Abilities"
+	set category = "Abilities.Mob"
 	set desc = "Let people ride on you."
 
 	if(LAZYLEN(buckled_mobs))
@@ -403,21 +416,21 @@
 	if(!can_buckle || !istype(M) || !M.Adjacent(src) || M.buckled)
 		return
 	if(buckle_mob(M))
-		visible_message("<span class='notice'>[M] starts riding [name]!</span>")
+		visible_message(span_notice("[M] starts riding [name]!"))
 
 /mob/living/simple_mob/handle_message_mode(message_mode, message, verb, used_radios, speaking, alt_name)
 	//CHOMPEdit - This whole proc tbh
 	if(message_mode)
 		if(message_mode == "intercom")
-			for(var/obj/item/device/radio/intercom/I in view(1, null))
+			for(var/obj/item/radio/intercom/I in view(1, null))
 				I.talk_into(src,message,message_mode,verb,speaking)
 				used_radios += I
 		if(message_mode == "headset")
-			if(mob_radio && istype(mob_radio,/obj/item/device/radio/headset))
+			if(mob_radio && istype(mob_radio,/obj/item/radio/headset))
 				mob_radio.talk_into(src,message,message_mode,verb,speaking)
 				used_radios += mob_radio
 		else
-			if(mob_radio && istype(mob_radio,/obj/item/device/radio/headset))
+			if(mob_radio && istype(mob_radio,/obj/item/radio/headset))
 				if(mob_radio.channels[message_mode])
 					mob_radio.talk_into(src,message,message_mode,verb,speaking)
 					used_radios += mob_radio
@@ -426,7 +439,7 @@
 
 /mob/living/simple_mob/proc/leap()
 	set name = "Pounce Target"
-	set category = "Abilities"
+	set category = "Abilities.Mob"
 	set desc = "Select a target to pounce at."
 
 	if(last_special > world.time)
@@ -459,7 +472,7 @@
 	status_flags |= LEAPING
 	pixel_y = pixel_y + 10
 
-	src.visible_message("<span class='danger'>\The [src] leaps at [T]!</span>")
+	src.visible_message(span_danger("\The [src] leaps at [T]!"))
 	src.throw_at(get_step(get_turf(T),get_turf(src)), 4, 1, src)
 	playsound(src, 'sound/effects/bodyfall1.ogg', 50, 1)
 	pixel_y = default_pixel_y
@@ -469,7 +482,7 @@
 	if(status_flags & LEAPING) status_flags &= ~LEAPING
 
 	if(!src.Adjacent(T))
-		to_chat(src, "<span class='warning'>You miss!</span>")
+		to_chat(src, span_warning("You miss!"))
 		return
 
 	if(ishuman(T))

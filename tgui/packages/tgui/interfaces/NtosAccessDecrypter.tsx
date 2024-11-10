@@ -1,19 +1,20 @@
-import { useBackend } from '../backend';
-import { NtosWindow } from '../layouts';
-import { IdentificationComputerRegions } from './IdentificationComputer';
-import { NoticeBox, Box, Section, Button } from '../components';
 import { BooleanLike } from 'common/react';
 
+import { useBackend } from '../backend';
+import { Box, Button, NoticeBox, Section } from '../components';
+import { NtosWindow } from '../layouts';
+import { IdentificationComputerRegions } from './IdentificationComputer';
+
 type Data = {
-  message: string;
+  message: string | null;
   running: BooleanLike;
   rate: number;
   factor: number;
-  regions: [];
+  regions: string[];
 };
 
-export const NtosAccessDecrypter = (props, context) => {
-  const { act, data } = useBackend<Data>(context);
+export const NtosAccessDecrypter = (props) => {
+  const { act, data } = useBackend<Data>();
 
   const { message, running, rate, factor, regions } = data;
 

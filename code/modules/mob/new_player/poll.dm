@@ -5,7 +5,7 @@
 		return
 	var/voted = 0
 
-	var/DBQuery/query = SSdbcore.NewQuery("SELECT * FROM erro_privacy WHERE ckey=:t_ckey", list("t_ckey" = src.ckey)) //CHOMPEdit TGSQL
+	var/datum/db_query/query = SSdbcore.NewQuery("SELECT * FROM erro_privacy WHERE ckey=:t_ckey", list("t_ckey" = src.ckey)) //CHOMPEdit TGSQL
 	query.Execute()
 	while(query.NextRow())
 		voted = 1
@@ -17,7 +17,7 @@
 /mob/new_player/proc/privacy_poll()
 	var/output = "<div align='center'><B>Player poll</B>"
 	output +="<hr>"
-	output += "<b>We would like to expand our stats gathering.</b>"
+	output += span_bold("We would like to expand our stats gathering.")
 	output += "<br>This however involves gathering data about player behavior, play styles, unique player numbers, play times, etc. Data like that cannot be gathered fully anonymously, which is why we're asking you how you'd feel if player-specific data was gathered. Prior to any of this actually happening, a privacy policy will be discussed, but before that can begin, we'd preliminarily like to know how you feel about the concept."
 	output +="<hr>"
 	output += "How do you feel about the game gathering player-specific statistics? This includes statistics about individual players as well as in-game polling/opinion requests."
@@ -53,7 +53,7 @@
 		if(src.client && src.client.holder)
 			isadmin = 1
 
-		var/DBQuery/select_query = SSdbcore.NewQuery("SELECT id, question FROM erro_poll_question WHERE [(isadmin ? "" : "adminonly = false AND")] Now() BETWEEN starttime AND endtime") //CHOMPEdit TGSQL
+		var/datum/db_query/select_query = SSdbcore.NewQuery("SELECT id, question FROM erro_poll_question WHERE [(isadmin ? "" : "adminonly = false AND")] Now() BETWEEN starttime AND endtime") //CHOMPEdit TGSQL
 		select_query.Execute()
 
 		var/output = "<div align='center'><B>Player polls</B>"
@@ -84,7 +84,7 @@
 	establish_db_connection()
 	if(SSdbcore.IsConnected()) //CHOMPEdit TGSQL
 
-		var/DBQuery/select_query = SSdbcore.NewQuery("SELECT starttime, endtime, question, polltype, multiplechoiceoptions FROM erro_poll_question WHERE id = [pollid]") //CHOMPEdit TGSQL
+		var/datum/db_query/select_query = SSdbcore.NewQuery("SELECT starttime, endtime, question, polltype, multiplechoiceoptions FROM erro_poll_question WHERE id = [pollid]") //CHOMPEdit TGSQL
 		select_query.Execute()
 
 		var/pollstarttime = ""
@@ -103,13 +103,13 @@
 			break
 		qdel(select_query) //CHOMPEdit TGSQL
 		if(!found)
-			to_chat(usr, "<font color='red'>Poll question details not found.</font>")
+			to_chat(usr, span_red("Poll question details not found."))
 			return
 
 		switch(polltype)
 			//Polls that have enumerated options
 			if("OPTION")
-				var/DBQuery/voted_query = SSdbcore.NewQuery("SELECT optionid FROM erro_poll_vote WHERE pollid = [pollid] AND ckey = :t_ckey", list("t_ckey" = usr.ckey)) //CHOMPEdit TGSQL
+				var/datum/db_query/voted_query = SSdbcore.NewQuery("SELECT optionid FROM erro_poll_vote WHERE pollid = [pollid] AND ckey = :t_ckey", list("t_ckey" = usr.ckey)) //CHOMPEdit TGSQL
 				voted_query.Execute()
 
 				var/voted = 0
@@ -121,7 +121,7 @@
 				qdel(voted_query) //CHOMPEdit TGSQL
 				var/list/datum/polloption/options = list()
 
-				var/DBQuery/options_query = SSdbcore.NewQuery("SELECT id, text FROM erro_poll_option WHERE pollid = [pollid]") //CHOMPEdit TGSQL
+				var/datum/db_query/options_query = SSdbcore.NewQuery("SELECT id, text FROM erro_poll_option WHERE pollid = [pollid]") //CHOMPEdit TGSQL
 				options_query.Execute()
 				while(options_query.NextRow())
 					var/datum/polloption/PO = new()
@@ -131,7 +131,7 @@
 				qdel(options_query) //CHOMPEdit TGSQL
 				var/output = "<div align='center'><B>Player poll</B>"
 				output +="<hr>"
-				output += "<b>Question: [pollquestion]</b><br>"
+				output += span_bold("Question: [pollquestion]") + "<br>"
 				output += "<font size='2'>Poll runs from <b>[pollstarttime]</b> until <b>[pollendtime]</b></font><p>"
 
 				if(!voted)	//Only make this a form if we have not voted yet
@@ -145,7 +145,7 @@
 					if(O.optionid && O.optiontext)
 						if(voted)
 							if(votedoptionid == O.optionid)
-								output += "<b>[O.optiontext]</b><br>"
+								output += span_bold("[O.optiontext]") + "<br>"
 							else
 								output += "[O.optiontext]<br>"
 						else
@@ -162,7 +162,7 @@
 
 			//Polls with a text input
 			if("TEXT")
-				var/DBQuery/voted_query = SSdbcore.NewQuery("SELECT replytext FROM erro_poll_textreply WHERE pollid = [pollid] AND ckey = :t_ckey", list("t_ckey" = usr.ckey)) //CHOMPEdit TGSQL
+				var/datum/db_query/voted_query = SSdbcore.NewQuery("SELECT replytext FROM erro_poll_textreply WHERE pollid = [pollid] AND ckey = :t_ckey", list("t_ckey" = usr.ckey)) //CHOMPEdit TGSQL
 				voted_query.Execute()
 
 				var/voted = 0
@@ -175,7 +175,7 @@
 
 				var/output = "<div align='center'><B>Player poll</B>"
 				output +="<hr>"
-				output += "<b>Question: [pollquestion]</b><br>"
+				output += span_bold("Question: [pollquestion]") + "<br>"
 				output += "<font size='2'>Feedback gathering runs from <b>[pollstarttime]</b> until <b>[pollendtime]</b></font><p>"
 
 				if(!voted)	//Only make this a form if we have not voted yet
@@ -204,12 +204,12 @@
 
 			//Polls with a text input
 			if("NUMVAL")
-				var/DBQuery/voted_query = SSdbcore.NewQuery("SELECT o.text, v.rating FROM erro_poll_option o, erro_poll_vote v WHERE o.pollid = [pollid] AND v.ckey = :t_ckey AND o.id = v.optionid", list("t_ckey" = usr.ckey)) //CHOMPEdit TGSQL
+				var/datum/db_query/voted_query = SSdbcore.NewQuery("SELECT o.text, v.rating FROM erro_poll_option o, erro_poll_vote v WHERE o.pollid = [pollid] AND v.ckey = :t_ckey AND o.id = v.optionid", list("t_ckey" = usr.ckey)) //CHOMPEdit TGSQL
 				voted_query.Execute()
 
 				var/output = "<div align='center'><B>Player poll</B>"
 				output +="<hr>"
-				output += "<b>Question: [pollquestion]</b><br>"
+				output += span_bold("Question: [pollquestion]") + "<br>"
 				output += "<font size='2'>Poll runs from <b>[pollstarttime]</b> until <b>[pollendtime]</b></font><p>"
 
 				var/voted = 0
@@ -230,7 +230,7 @@
 					var/minid = 999999
 					var/maxid = 0
 
-					var/DBQuery/option_query = SSdbcore.NewQuery("SELECT id, text, minval, maxval, descmin, descmid, descmax FROM erro_poll_option WHERE pollid = [pollid]") //CHOMPEdit TGSQL
+					var/datum/db_query/option_query = SSdbcore.NewQuery("SELECT id, text, minval, maxval, descmin, descmid, descmax FROM erro_poll_option WHERE pollid = [pollid]") //CHOMPEdit TGSQL
 					option_query.Execute()
 					while(option_query.NextRow())
 						var/optionid = text2num(option_query.item[1])
@@ -273,7 +273,7 @@
 
 				src << browse(output,"window=playerpoll;size=500x500")
 			if("MULTICHOICE")
-				var/DBQuery/voted_query = SSdbcore.NewQuery("SELECT optionid FROM erro_poll_vote WHERE pollid = [pollid] AND ckey = :t_ckey", list("t_ckey" = usr.ckey)) //CHOMPEdit TGSQL
+				var/datum/db_query/voted_query = SSdbcore.NewQuery("SELECT optionid FROM erro_poll_vote WHERE pollid = [pollid] AND ckey = :t_ckey", list("t_ckey" = usr.ckey)) //CHOMPEdit TGSQL
 				voted_query.Execute()
 
 				var/list/votedfor = list()
@@ -286,7 +286,7 @@
 				var/maxoptionid = 0
 				var/minoptionid = 0
 
-				var/DBQuery/options_query = SSdbcore.NewQuery("SELECT id, text FROM erro_poll_option WHERE pollid = [pollid]") //CHOMPEdit TGSQL
+				var/datum/db_query/options_query = SSdbcore.NewQuery("SELECT id, text FROM erro_poll_option WHERE pollid = [pollid]") //CHOMPEdit TGSQL
 				options_query.Execute()
 				while(options_query.NextRow())
 					var/datum/polloption/PO = new()
@@ -304,7 +304,7 @@
 
 				var/output = "<div align='center'><B>Player poll</B>"
 				output +="<hr>"
-				output += "<b>Question: [pollquestion]</b><br>You can select up to [multiplechoiceoptions] options. If you select more, the first [multiplechoiceoptions] will be saved.<br>"
+				output += span_bold("Question: [pollquestion]") + "<br>You can select up to [multiplechoiceoptions] options. If you select more, the first [multiplechoiceoptions] will be saved.<br>"
 				output += "<font size='2'>Poll runs from <b>[pollstarttime]</b> until <b>[pollendtime]</b></font><p>"
 
 				if(!voted)	//Only make this a form if we have not voted yet
@@ -320,7 +320,7 @@
 					if(O.optionid && O.optiontext)
 						if(voted)
 							if(O.optionid in votedfor)
-								output += "<b>[O.optiontext]</b><br>"
+								output += span_bold("[O.optiontext]") + "<br>"
 							else
 								output += "[O.optiontext]<br>"
 						else
@@ -345,7 +345,7 @@
 	establish_db_connection()
 	if(SSdbcore.IsConnected()) //CHOMPEdit TGSQL
 
-		var/DBQuery/select_query = SSdbcore.NewQuery("SELECT starttime, endtime, question, polltype, multiplechoiceoptions FROM erro_poll_question WHERE id = [pollid] AND Now() BETWEEN starttime AND endtime") //CHOMPEdit TGSQL
+		var/datum/db_query/select_query = SSdbcore.NewQuery("SELECT starttime, endtime, question, polltype, multiplechoiceoptions FROM erro_poll_question WHERE id = [pollid] AND Now() BETWEEN starttime AND endtime") //CHOMPEdit TGSQL
 		select_query.Execute()
 
 		var/validpoll = 0
@@ -360,10 +360,10 @@
 			break
 		qdel(select_query) //CHOMPEdit TGSQL
 		if(!validpoll)
-			to_chat(usr, "<font color='red'>Poll is not valid.</font>")
+			to_chat(usr, span_red("Poll is not valid."))
 			return
 
-		var/DBQuery/select_query2 = SSdbcore.NewQuery("SELECT id FROM erro_poll_option WHERE id = [optionid] AND pollid = [pollid]") //CHOMPEdit TGSQL
+		var/datum/db_query/select_query2 = SSdbcore.NewQuery("SELECT id FROM erro_poll_option WHERE id = [optionid] AND pollid = [pollid]") //CHOMPEdit TGSQL
 		select_query2.Execute()
 
 		var/validoption = 0
@@ -372,13 +372,14 @@
 			validoption = 1
 			break
 
+		qdel(select_query2) //CHOMPEdit TGSQL
 		if(!validoption)
-			to_chat(usr, "<font color='red'>Poll option is not valid.</font>")
+			to_chat(usr, span_red("Poll option is not valid."))
 			return
 
 		var/alreadyvoted = 0
 
-		var/DBQuery/voted_query = SSdbcore.NewQuery("SELECT id FROM erro_poll_vote WHERE pollid = [pollid] AND ckey = :t_ckey", list("t_ckey" = usr.ckey)) //CHOMPEdit TGSQL
+		var/datum/db_query/voted_query = SSdbcore.NewQuery("SELECT id FROM erro_poll_vote WHERE pollid = [pollid] AND ckey = :t_ckey", list("t_ckey" = usr.ckey)) //CHOMPEdit TGSQL
 		voted_query.Execute()
 
 		while(voted_query.NextRow())
@@ -387,11 +388,11 @@
 				break
 		qdel(voted_query) //CHOMPEdit TGSQL
 		if(!multichoice && alreadyvoted)
-			to_chat(usr, "<font color='red'>You already voted in this poll.</font>")
+			to_chat(usr, span_red("You already voted in this poll."))
 			return
 
 		if(multichoice && (alreadyvoted >= multiplechoiceoptions))
-			to_chat(usr, "<font color='red'>You already have more than [multiplechoiceoptions] logged votes on this poll. Enough is enough. Contact the database admin if this is an error.</font>")
+			to_chat(usr, span_red("You already have more than [multiplechoiceoptions] logged votes on this poll. Enough is enough. Contact the database admin if this is an error."))
 			return
 
 		var/adminrank = "Player"
@@ -399,10 +400,10 @@
 			adminrank = usr.client.holder.rank
 
 
-		var/DBQuery/insert_query = SSdbcore.NewQuery("INSERT INTO erro_poll_vote (id ,datetime ,pollid ,optionid ,ckey ,ip ,adminrank) VALUES (null, Now(), [pollid], [optionid], :t_ckey, '[usr.client.address]', '[adminrank]')", list("t_ckey" = usr.ckey)) //CHOMPEdit TGSQL
+		var/datum/db_query/insert_query = SSdbcore.NewQuery("INSERT INTO erro_poll_vote (id ,datetime ,pollid ,optionid ,ckey ,ip ,adminrank) VALUES (null, Now(), [pollid], [optionid], :t_ckey, '[usr.client.address]', '[adminrank]')", list("t_ckey" = usr.ckey)) //CHOMPEdit TGSQL
 		insert_query.Execute()
 
-		to_chat(usr, "<font color='blue'>Vote successful.</font>")
+		to_chat(usr, span_blue("Vote successful."))
 		qdel(insert_query) //CHOMPEdit TGSQL
 		usr << browse(null,"window=playerpoll")
 
@@ -416,7 +417,7 @@
 	establish_db_connection()
 	if(SSdbcore.IsConnected()) //CHOMPEdit TGSQL
 
-		var/DBQuery/select_query = SSdbcore.NewQuery("SELECT starttime, endtime, question, polltype FROM erro_poll_question WHERE id = [pollid] AND Now() BETWEEN starttime AND endtime") //CHOMPEdit TGSQL
+		var/datum/db_query/select_query = SSdbcore.NewQuery("SELECT starttime, endtime, question, polltype FROM erro_poll_question WHERE id = [pollid] AND Now() BETWEEN starttime AND endtime") //CHOMPEdit TGSQL
 		select_query.Execute()
 
 		var/validpoll = 0
@@ -428,12 +429,12 @@
 			break
 		qdel(select_query) //CHOMPEdit TGSQL
 		if(!validpoll)
-			to_chat(usr, "<font color='red'>Poll is not valid.</font>")
+			to_chat(usr, span_red("Poll is not valid."))
 			return
 
 		var/alreadyvoted = 0
 
-		var/DBQuery/voted_query = SSdbcore.NewQuery("SELECT id FROM erro_poll_textreply WHERE pollid = [pollid] AND ckey = :t_ckey", list("t_ckey" = usr.ckey)) //CHOMPEdit TGSQL
+		var/datum/db_query/voted_query = SSdbcore.NewQuery("SELECT id FROM erro_poll_textreply WHERE pollid = [pollid] AND ckey = :t_ckey", list("t_ckey" = usr.ckey)) //CHOMPEdit TGSQL
 		voted_query.Execute()
 
 		while(voted_query.NextRow())
@@ -441,7 +442,7 @@
 			break
 		qdel(voted_query) //CHOMPEdit TGSQL
 		if(alreadyvoted)
-			to_chat(usr, "<font color='red'>You already sent your feedback for this poll.</font>")
+			to_chat(usr, span_red("You already sent your feedback for this poll."))
 			return
 
 		var/adminrank = "Player"
@@ -458,10 +459,10 @@
 			to_chat(usr, "The text you entered was blank, contained illegal characters or was too long. Please correct the text and submit again.")
 			return
 
-		var/DBQuery/insert_query = SSdbcore.NewQuery("INSERT INTO erro_poll_textreply (id ,datetime ,pollid ,ckey ,ip ,replytext ,adminrank) VALUES (null, Now(), [pollid], :t_ckey, '[usr.client.address]', :t_reply, '[adminrank]')", list("t_ckey" = usr.ckey, "t_reply" = replytext)) //CHOMPEdit TGSQL
+		var/datum/db_query/insert_query = SSdbcore.NewQuery("INSERT INTO erro_poll_textreply (id ,datetime ,pollid ,ckey ,ip ,replytext ,adminrank) VALUES (null, Now(), [pollid], :t_ckey, '[usr.client.address]', :t_reply, '[adminrank]')", list("t_ckey" = usr.ckey, "t_reply" = replytext)) //CHOMPEdit TGSQL
 		insert_query.Execute()
 
-		to_chat(usr, "<font color='blue'>Feedback logging successful.</font>")
+		to_chat(usr, span_blue("Feedback logging successful."))
 		qdel(insert_query) //CHOMPEdit TGSQL
 		usr << browse(null,"window=playerpoll")
 
@@ -475,7 +476,7 @@
 	establish_db_connection()
 	if(SSdbcore.IsConnected()) //CHOMPEdit TGSQL
 
-		var/DBQuery/select_query = SSdbcore.NewQuery("SELECT starttime, endtime, question, polltype FROM erro_poll_question WHERE id = [pollid] AND Now() BETWEEN starttime AND endtime") //CHOMPEdit TGSQL
+		var/datum/db_query/select_query = SSdbcore.NewQuery("SELECT starttime, endtime, question, polltype FROM erro_poll_question WHERE id = [pollid] AND Now() BETWEEN starttime AND endtime") //CHOMPEdit TGSQL
 		select_query.Execute()
 
 		var/validpoll = 0
@@ -487,10 +488,10 @@
 			break
 		qdel(select_query) //CHOMPEdit TGSQL
 		if(!validpoll)
-			to_chat(usr, "<font color='red'>Poll is not valid.</font>")
+			to_chat(usr, span_red("Poll is not valid."))
 			return
 
-		var/DBQuery/select_query2 = SSdbcore.NewQuery("SELECT id FROM erro_poll_option WHERE id = [optionid] AND pollid = [pollid]") //CHOMPEdit TGSQL
+		var/datum/db_query/select_query2 = SSdbcore.NewQuery("SELECT id FROM erro_poll_option WHERE id = [optionid] AND pollid = [pollid]") //CHOMPEdit TGSQL
 		select_query2.Execute()
 
 		var/validoption = 0
@@ -500,12 +501,12 @@
 			break
 		qdel(select_query2) //CHOMPEdit TGSQL
 		if(!validoption)
-			to_chat(usr, "<font color='red'>Poll option is not valid.</font>")
+			to_chat(usr, span_red("Poll option is not valid."))
 			return
 
 		var/alreadyvoted = 0
 
-		var/DBQuery/voted_query = SSdbcore.NewQuery("SELECT id FROM erro_poll_vote WHERE optionid = [optionid] AND ckey = :t_ckey", list("t_ckey" = usr.ckey)) //CHOMPEdit TGSQL
+		var/datum/db_query/voted_query = SSdbcore.NewQuery("SELECT id FROM erro_poll_vote WHERE optionid = [optionid] AND ckey = :t_ckey", list("t_ckey" = usr.ckey)) //CHOMPEdit TGSQL
 		voted_query.Execute()
 
 		while(voted_query.NextRow())
@@ -513,7 +514,7 @@
 			break
 		qdel(voted_query) //CHOMPEdit TGSQL
 		if(alreadyvoted)
-			to_chat(usr, "<font color='red'>You already voted in this poll.</font>")
+			to_chat(usr, span_red("You already voted in this poll."))
 			return
 
 		var/adminrank = "Player"
@@ -521,9 +522,9 @@
 			adminrank = usr.client.holder.rank
 
 
-		var/DBQuery/insert_query = SSdbcore.NewQuery("INSERT INTO erro_poll_vote (id ,datetime ,pollid ,optionid ,ckey ,ip ,adminrank, rating) VALUES (null, Now(), [pollid], [optionid], '[usr.ckey]', '[usr.client.address]', '[adminrank]', :t_rating)", list("t_ckey" = usr.ckey, "t_rating" = rating)) //CHOMPEdit TGSQL
+		var/datum/db_query/insert_query = SSdbcore.NewQuery("INSERT INTO erro_poll_vote (id ,datetime ,pollid ,optionid ,ckey ,ip ,adminrank, rating) VALUES (null, Now(), [pollid], [optionid], '[usr.ckey]', '[usr.client.address]', '[adminrank]', :t_rating)", list("t_ckey" = usr.ckey, "t_rating" = rating)) //CHOMPEdit TGSQL
 		insert_query.Execute()
 
-		to_chat(usr, "<font color='blue'>Vote successful.</font>")
+		to_chat(usr, span_blue("Vote successful."))
 		qdel(insert_query) //CHOMPEdit TGSQL
 		usr << browse(null,"window=playerpoll")

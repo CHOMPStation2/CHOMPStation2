@@ -1,3 +1,11 @@
+//Images are the ONLY other kind of child of datum that has a loc other than atom
+//Datums DO NOT have a loc themselves. Usually, loc based cleanup is handled by atom/, but it doesn't count here
+//Image is not a child of loc!
+/image/Destroy()
+	loc = null
+	. = ..()
+
+
 /// The image's base transform scale for width.
 /image/var/tf_scale_x
 

@@ -19,30 +19,31 @@
 	opacity = TRUE
 	edge_blending_priority = 7
 	initial_flooring = /decl/flooring/lavaland/ashrock
-	turf_layers = list(/turf/simulated/floor/outdoors/lavaland/ash)
+	//turf_layers = list(/turf/simulated/floor/outdoors/lavaland/ash)
+	demote_to = /turf/simulated/floor/outdoors/lavaland/ash
 	var/last_act = 0
 
 // Stolen from mineral turf code.
-/turf/simulated/floor/outdoors/lavaland/ashrock/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/turf/simulated/floor/outdoors/lavaland/ashrock/attackby(obj/item/W as obj, mob/user as mob)
 	if(!user.IsAdvancedToolUser())
-		to_chat(user, "<span class='warning'>You don't have the dexterity to do this!</span>")
+		to_chat(user, span_warning("You don't have the dexterity to do this!"))
 		return
 
-	if(istype(W, /obj/item/weapon/pickaxe))
+	if(istype(W, /obj/item/pickaxe))
 		if(!istype(user.loc, /turf))
 			return
 
-		var/obj/item/weapon/pickaxe/P = W
+		var/obj/item/pickaxe/P = W
 		if(last_act + P.digspeed > world.time)//prevents message spam
 			return
 		last_act = world.time
 
 		playsound(user, P.drill_sound, 20, 1)
-		to_chat(user, "<span class='notice'>You start [P.drill_verb].</span>")
+		to_chat(user, span_notice("You start [P.drill_verb]."))
 
 		if(do_after(user,P.digspeed))
 
-			to_chat(user, "<span class='notice'>You finish [P.drill_verb] \the [src].</span>")
+			to_chat(user, span_notice("You finish [P.drill_verb] \the [src]."))
 			density = FALSE
 			opacity = FALSE
 			demote() // Converts the turf to the next layer in turf_layers.
@@ -58,7 +59,8 @@
 	icon_state = "basalt0"
 	edge_blending_priority = 3
 	initial_flooring = /decl/flooring/basalt
-	turf_layers = list(/turf/simulated/floor/outdoors/lavaland/ash)
+	//turf_layers = list(/turf/simulated/floor/outdoors/lavaland/ash)
+	demote_to = /turf/simulated/floor/outdoors/lavaland/ash
 
 /turf/simulated/floor/outdoors/lavaland/basalt/get_edge_icon_state()
 	return "basalt0"

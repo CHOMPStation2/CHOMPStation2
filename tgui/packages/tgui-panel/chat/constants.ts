@@ -4,12 +4,12 @@
  * @license MIT
  */
 
-export const MAX_VISIBLE_MESSAGES = 2500;
-export const MAX_PERSISTED_MESSAGES = 1000;
-export const MESSAGE_SAVE_INTERVAL = 10000;
+// export const MAX_VISIBLE_MESSAGES = 2500; No longer a constant
+// export const MAX_PERSISTED_MESSAGES = 1000; No longer a constant
+// export const MESSAGE_SAVE_INTERVAL = 10000; No longer a constant
 export const MESSAGE_PRUNE_INTERVAL = 60000;
-export const COMBINE_MAX_MESSAGES = 5;
-export const COMBINE_MAX_TIME_WINDOW = 5000;
+// export const COMBINE_MAX_MESSAGES = 5; No longer a constant
+// export const COMBINE_MAX_TIME_WINDOW = 5000; No longer a constant
 export const IMAGE_RETRY_DELAY = 250;
 export const IMAGE_RETRY_LIMIT = 10;
 export const IMAGE_RETRY_MESSAGE_AGE = 60000;
@@ -24,8 +24,10 @@ export const MESSAGE_TYPE_INTERNAL = 'internal';
 export const MESSAGE_TYPE_SYSTEM = 'system';
 export const MESSAGE_TYPE_LOCALCHAT = 'localchat';
 export const MESSAGE_TYPE_NPCEMOTE = 'npcemote';
+export const MESSAGE_TYPE_MULTIZCHAT = 'multizsay';
 export const MESSAGE_TYPE_PLOCALCHAT = 'plocalchat';
 export const MESSAGE_TYPE_VORE = 'vore';
+export const MESSAGE_TYPE_HIVEMIND = 'hivemind';
 export const MESSAGE_TYPE_RADIO = 'radio';
 export const MESSAGE_TYPE_NIF = 'nif';
 export const MESSAGE_TYPE_INFO = 'info';
@@ -53,21 +55,27 @@ export const MESSAGE_TYPES = [
     type: MESSAGE_TYPE_SYSTEM,
     name: 'System Messages',
     description: 'Messages from your client, always enabled',
-    selector: '.boldannounce',
+    selector: '.boldannounce, .world, .span_filter_system, .sinister',
     important: true,
   },
   // Basic types
   {
+    type: MESSAGE_TYPE_NPCEMOTE, // Needs to be first
+    name: 'NPC Emotes / Says',
+    description: 'In-character emotes and says from NPCs',
+    selector: '.npcemote, .npcsay',
+  },
+  {
+    type: MESSAGE_TYPE_MULTIZCHAT,
+    name: 'MultiZ Emotes / Says',
+    description: 'In-character emotes and says from levels above/below',
+    selector: '.multizsay',
+  },
+  {
     type: MESSAGE_TYPE_LOCALCHAT,
     name: 'Local',
     description: 'In-character local messages (say, emote, etc)',
-    selector: '.say, .emote, .emotesubtle',
-  },
-  {
-    type: MESSAGE_TYPE_NPCEMOTE,
-    name: 'NPC Emotes',
-    description: 'In-character emotes from NPCs',
-    selector: '.npcemote',
+    selector: '.say, .emote, .emotesubtle, .pnarrate, .filter_say',
   },
   {
     type: MESSAGE_TYPE_PLOCALCHAT,
@@ -82,11 +90,17 @@ export const MESSAGE_TYPES = [
     selector: '.valert, .vwarning, .vnotice, .vdanger',
   },
   {
+    type: MESSAGE_TYPE_HIVEMIND,
+    name: 'Global Say',
+    description: 'All global languages (Hivemind / Binary)',
+    selector: '.hivemind, .binarysay',
+  },
+  {
     type: MESSAGE_TYPE_RADIO,
     name: 'Radio',
     description: 'All departments of radio messages',
     selector:
-      '.alert, .minorannounce, .syndradio, .centradio, .airadio, .comradio, .secradio, .gangradio, .engradio, .medradio, .sciradio, .supradio, .srvradio, .expradio, .radio, .deptradio, .binarysay, .newscaster, .resonate, .abductor, .alien, .changeling',
+      '.alert, .minorannounce, .syndradio, .centradio, .airadio, .comradio, .secradio, .gangradio, .engradio, .medradio, .sciradio, .supradio, .srvradio, .expradio, .radio, .deptradio, .newscaster, .resonate, .abductor, .alien, .changeling',
   },
   {
     type: MESSAGE_TYPE_NIF,
@@ -99,14 +113,14 @@ export const MESSAGE_TYPES = [
     name: 'Info',
     description: 'Non-urgent messages from the game and items',
     selector:
-      '.notice:not(.pm), .adminnotice, .info, .sinister, .cult, .infoplain, .announce, .hear, .smallnotice, .holoparasite, .boldnotice',
+      '.notice:not(.pm):not(.mentor), .adminnotice:not(.pm), .info, .cult, .alium, .infoplain, .announce, .hear, .smallnotice, .holoparasite, .boldnotice, .suicide, .unconscious, .filter_notice',
   },
   {
     type: MESSAGE_TYPE_WARNING,
     name: 'Warnings',
     description: 'Urgent messages from the game and items',
     selector:
-      '.warning:not(.pm), .critical, .userdanger, .italics, .alertsyndie, .warningplain',
+      '.warning:not(.pm):not(.mentor), .boldwarning:not(.pm):not(.mentor), .critical, .userdanger, .alertsyndie, .warningplain, .sinister, .filter_warning',
   },
   {
     type: MESSAGE_TYPE_DEADCHAT,
@@ -118,7 +132,7 @@ export const MESSAGE_TYPES = [
     type: MESSAGE_TYPE_OOC,
     name: 'OOC',
     description: 'The bluewall of global OOC messages',
-    selector: '.ooc, .adminooc, .adminobserverooc, .oocplain',
+    selector: '.ooc, .adminooc, .adminobserverooc, .oocplain, .aooc',
   },
   {
     type: MESSAGE_TYPE_LOOC,
@@ -131,7 +145,7 @@ export const MESSAGE_TYPES = [
     type: MESSAGE_TYPE_ADMINPM,
     name: 'Admin PMs',
     description: 'Messages to/from admins (adminhelp)',
-    selector: '.pm, .adminhelp',
+    selector: '.pm, .adminhelp, .filter_pm',
   },
   {
     type: MESSAGE_TYPE_MENTORPM,
@@ -143,7 +157,8 @@ export const MESSAGE_TYPES = [
     type: MESSAGE_TYPE_COMBAT,
     name: 'Combat Log',
     description: 'Urist McTraitor has stabbed you with a knife!',
-    selector: '.danger',
+    selector:
+      '.danger, .attack, .disarm, .passive, .bolddanger, .filter_combat',
   },
   {
     type: MESSAGE_TYPE_CHATPRINT,
@@ -195,7 +210,6 @@ export const MESSAGE_TYPES = [
     type: MESSAGE_TYPE_ADMINLOG,
     name: 'Admin Log',
     description: 'ADMIN LOG: Urist McAdmin has jumped to coordinates X, Y, Z',
-    selector: '.log_message',
     admin: true,
   },
   {

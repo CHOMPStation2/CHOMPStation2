@@ -17,10 +17,11 @@
 	icon_state = "ship_nosprite"
 	appearance_flags = TILE_BOUND|KEEP_TOGETHER|LONG_GLIDE //VOREStation Edit
 	light_power = 4
+	layer = OBJ_LAYER + 0.1 // make movables a little higher than regular sectors
 
 	unknown_name = "unknown ship"
 	unknown_state = "ship"
-	known = FALSE // Ships start 'unknown' on the map and require scanning
+	known = TRUE // Ships start known by default because most of them should be transmitting ID codes at all times
 
 	var/vessel_mass = 10000             //tonnes, arbitrary number, affects acceleration provided by engines
 	var/vessel_size = SHIP_SIZE_LARGE	//arbitrary number, affects how likely are we to evade meteors
@@ -44,8 +45,9 @@
 	var/last_sound = 0 //The last time a ship sound was played		//VOREStation add
 	var/sound_cooldown = 10 SECONDS		//VOREStation add
 
-	/// Vis contents overlay holding the ship's vector when in motion	
+	/// Vis contents overlay holding the ship's vector when in motion
 	var/obj/effect/overlay/vis/vector
+	render_map = TRUE
 
 /obj/effect/overmap/visitable/ship/Initialize()
 	. = ..()
@@ -72,18 +74,18 @@
 
 /obj/effect/overmap/visitable/ship/get_scan_data(mob/user)
 	. = ..()
-	
+
 	if(!is_still())
 		. += {"\n\[i\]Heading\[/i\]: [get_heading_degrees()]\n\[i\]Velocity\[/i\]: [get_speed() * 1000]"}
 	else
 		. += {"\n\[i\]Vessel was stationary at time of scan.\[/i\]\n"}
-	
+
 	var/life = 0
-	
+
 	for(var/mob/living/L in living_mob_list)
 		if(L.z in map_z) //Things inside things we'll consider shielded, otherwise we'd want to use get_z(L)
 			life++
-	
+
 	. += {"\[i\]Life Signs\[/i\]: [life ? life : "None"]"}
 
 //Projected acceleration based on information from engines
@@ -217,6 +219,7 @@
 			pixel_y = new_pixel_y
 			return
 	animate(src, pixel_x = new_pixel_x, pixel_y = new_pixel_y, time = wait, flags = ANIMATION_END_NOW)
+	update_screen()
 
 // If we get moved, update our internal tracking to account for it
 /obj/effect/overmap/visitable/ship/Moved(atom/old_loc, direction, forced = FALSE)
@@ -229,6 +232,7 @@
 		pixel_y = 0
 	position_x = ((loc.x - 1) * WORLD_ICON_SIZE) + MODULUS(position_x, WORLD_ICON_SIZE)
 	position_y = ((loc.y - 1) * WORLD_ICON_SIZE) + MODULUS(position_y, WORLD_ICON_SIZE)
+	update_screen()
 
 /obj/effect/overmap/visitable/ship/update_icon()
 	if(!is_still())
@@ -301,6 +305,7 @@
 	var/y_to_use = T?.y || "UNK"
 	return "\[X:[x_to_use], Y:[y_to_use], VEL:[get_speed() * 1000], HDG:[get_heading_degrees()]\]"
 
+#undef SHIP_MOVE_RESOLUTION
 #undef MOVING
 #undef SANITIZE_SPEED
 #undef CHANGE_SPEED_BY

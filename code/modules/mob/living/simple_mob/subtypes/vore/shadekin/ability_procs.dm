@@ -2,7 +2,7 @@
 /mob/living/simple_mob/shadekin/proc/phase_shift()
 	var/turf/T = get_turf(src)
 	if(!T.CanPass(src,T) || loc != T)
-		to_chat(src,"<span class='warning'>You can't use that here!</span>")
+		to_chat(src,span_warning("You can't use that here!"))
 		return FALSE
 	if((get_area(src).flags & PHASE_SHIELDED))
 		to_chat(src,"<span class='warning'>This area is preventing you from phasing!</span>")
@@ -48,7 +48,7 @@
 				var/mob/living/target = pick(potentials)
 				if(istype(target) && target.devourable && target.can_be_drop_prey && vore_selected)
 					target.forceMove(vore_selected)
-					to_chat(target,"<span class='warning'>\The [src] phases in around you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!</span>")
+					to_chat(target,span_vwarning("\The [src] phases in around you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!"))
 
 		// Do this after the potential vore, so we get the belly
 		update_icon()
@@ -126,7 +126,7 @@
 	for(var/mob/living/L in viewed)
 		targets += L
 	if(!targets.len)
-		to_chat(src,"<span class='warning'>Nobody nearby to mend!</span>")
+		to_chat(src,span_warning("Nobody nearby to mend!"))
 		return FALSE
 
 	var/mob/living/target = tgui_input_list(src,"Pick someone to mend:","Mend Other", targets)
@@ -134,7 +134,7 @@
 		return FALSE
 
 	target.add_modifier(/datum/modifier/shadekin/heal_boop,1 MINUTE)
-	visible_message("<span class='notice'>\The [src] gently places a hand on \the [target]...</span>")
+	visible_message(span_notice("\The [src] gently places a hand on \the [target]..."))
 	face_atom(target)
 	return TRUE
 
@@ -183,6 +183,27 @@
 		template.load(deploy_location, centered = TRUE)
 		template.update_lighting(deploy_location)
 		ability_flags &= AB_DARK_TUNNEL
+		return TRUE
+	else
+		return FALSE
+//CHOMPEdit End
+
+//CHOMPEdit Begin - Add Dark Maw
+/mob/living/simple_mob/shadekin/proc/dark_maw()
+	var/turf/T = get_turf(src)
+	if(!istype(T))
+		to_chat(src, "<span class='warning'>You don't seem to be able to set a trap here!</span>")
+		return FALSE
+	else if(T.get_lumcount() >= 0.5)
+		to_chat(src, "<span class='warning'>There is too much light here for your trap to last!</span>")
+		return FALSE
+
+	if(do_after(src, 10))
+		if(ability_flags & AB_PHASE_SHIFTED)
+			new /obj/effect/abstract/dark_maw(loc, src, 1)
+		else
+			new /obj/effect/abstract/dark_maw(loc, src)
+
 		return TRUE
 	else
 		return FALSE

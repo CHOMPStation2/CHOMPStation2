@@ -8,8 +8,9 @@
 	severity = rand(2, 4)
 
 /datum/event/viral_outbreak/announce()
-	command_alert("Confirmed outbreak of level 7 biohazard aboard [station_name()]. All personnel must contain the outbreak.", "Biohazard Alert")
+	command_alert("Confirmed outbreak of level 7 biohazard aboard [station_name()]. All personnel must contain the outbreak.", "Viral Outbreak")
 	world << sound('sound/AI/outbreak7.ogg')
+	// Chomp edit: Changed "Biohazard Alert" to "Viral Outbreak" and yes I know this file isn't used anymore but I'm going to be consistent in case it does get used.
 
 /datum/event/viral_outbreak/start()
 	var/list/candidates = list()	//list of candidate keys

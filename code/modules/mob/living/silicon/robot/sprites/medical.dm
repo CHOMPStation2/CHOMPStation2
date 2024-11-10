@@ -74,7 +74,7 @@
 	has_custom_open_sprites = TRUE
 
 /datum/robot_sprite/medical/worm
-	name = "W02M - Surgical" //CHOMPEdit
+	name = "W02M - Crisis" //CHOMPEdit
 	sprite_icon_state = "worm-crisis" //CHOMPEdit
 	has_custom_open_sprites = TRUE
 	sprite_icon = 'modular_chomp/icons/mob/wormborg.dmi' //CHOMPEdit
@@ -103,14 +103,12 @@
 	has_vore_belly_sprites = FALSE
 	rest_sprite_options = list("Default", "Sit")
 
-/* //CHOMPRemoval Start - we dont use the old sprites
 /datum/robot_sprite/dogborg/tall/medical/newmeka
 	name = "MEKA v2"
 	sprite_icon_state = "newmeka"
 	has_eye_light_sprites = TRUE
 	has_custom_open_sprites = TRUE
 	rest_sprite_options = list("Default", "Sit")
-*/ //CHOMPRemoval End
 
 /datum/robot_sprite/dogborg/tall/medical/mmeka
 	name = "NIKO"
@@ -202,13 +200,13 @@
 	else
 		return ..()
 */
-/datum/robot_sprite/dogborg/surgical/do_equipment_glamour(var/obj/item/weapon/robot_module/module)
+/datum/robot_sprite/dogborg/surgical/do_equipment_glamour(var/obj/item/robot_module/module)
 	if(!has_custom_equipment_sprites)
 		return
 
 	..()
 
-	var/obj/item/weapon/shockpaddles/robot/SP = locate() in module.modules
+	var/obj/item/shockpaddles/robot/SP = locate() in module.modules
 	if(SP)
 		SP.name = "paws of life"
 		SP.desc = "Zappy paws. For fixing cardiac arrest."
@@ -241,13 +239,13 @@
 	module_type = "Surgeon"
 	sprite_icon = 'icons/mob/robot/surgical_large.dmi'
 
-/datum/robot_sprite/dogborg/tall/surgical/do_equipment_glamour(var/obj/item/weapon/robot_module/module)
+/datum/robot_sprite/dogborg/tall/surgical/do_equipment_glamour(var/obj/item/robot_module/module)
 	if(!has_custom_equipment_sprites)
 		return
 
 	..()
 
-	var/obj/item/weapon/shockpaddles/robot/SP = locate() in module.modules
+	var/obj/item/shockpaddles/robot/SP = locate() in module.modules
 	if(SP)
 		SP.name = "paws of life"
 		SP.desc = "Zappy paws. For fixing cardiac arrest."
@@ -326,13 +324,13 @@
 	else
 		return ..()
 */
-/datum/robot_sprite/dogborg/crisis/do_equipment_glamour(var/obj/item/weapon/robot_module/module)
+/datum/robot_sprite/dogborg/crisis/do_equipment_glamour(var/obj/item/robot_module/module)
 	if(!has_custom_equipment_sprites)
 		return
 
 	..()
 
-	var/obj/item/weapon/shockpaddles/robot/SP = locate() in module.modules
+	var/obj/item/shockpaddles/robot/SP = locate() in module.modules
 	if(SP)
 		SP.name = "paws of life"
 		SP.desc = "Zappy paws. For fixing cardiac arrest."
@@ -379,13 +377,13 @@
 	module_type = "Crisis"
 	sprite_icon = 'icons/mob/robot/crisis_large.dmi'
 
-/datum/robot_sprite/dogborg/tall/crisis/do_equipment_glamour(var/obj/item/weapon/robot_module/module)
+/datum/robot_sprite/dogborg/tall/crisis/do_equipment_glamour(var/obj/item/robot_module/module)
 	if(!has_custom_equipment_sprites)
 		return
 
 	..()
 
-	var/obj/item/weapon/shockpaddles/robot/SP = locate() in module.modules
+	var/obj/item/shockpaddles/robot/SP = locate() in module.modules
 	if(SP)
 		SP.name = "paws of life"
 		SP.desc = "Zappy paws. For fixing cardiac arrest."

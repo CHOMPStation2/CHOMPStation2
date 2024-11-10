@@ -70,7 +70,7 @@
 /mob/living/simple_mob/metroid/Initialize()
 	nutrition = 100		//Have them start off pretty hungry still.
 	existing_metroids += src //Keep track of how many for the event.
-	verbs += /mob/living/proc/ventcrawl //May not do anything at the moment.
+	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel //May not do anything at the moment.
 	return ..()
 
 /datum/say_list/metroid

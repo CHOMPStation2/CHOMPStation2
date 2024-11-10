@@ -2,11 +2,11 @@
 	name = OUTFIT_JOB_NAME("Pathfinder")
 	shoes = /obj/item/clothing/shoes/boots/winter/explorer
 	uniform = /obj/item/clothing/under/explorer //TODO: Uniforms.
-	l_ear = /obj/item/device/radio/headset/explorer
+	l_ear = /obj/item/radio/headset/explorer
 	id_slot = slot_wear_id
 	pda_slot = slot_l_store
-	pda_type = /obj/item/device/pda/pathfinder
-	id_type = /obj/item/weapon/card/id/explorer/head
+	pda_type = /obj/item/pda/pathfinder
+	id_type = /obj/item/card/id/explorer/head
 	id_pda_assignment = "Pathfinder"
 	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL|OUTFIT_COMPREHENSIVE_SURVIVAL
 	backpack_contents = list(/obj/item/clothing/accessory/permit/gun/planetside = 1)
@@ -17,5 +17,5 @@
 		permit.set_name(H.real_name)
 
 /decl/hierarchy/outfit/job/assistant/explorer
-	id_type = /obj/item/weapon/card/id/explorer
+	id_type = /obj/item/card/id/explorer
 	flags = OUTFIT_HAS_BACKPACK|OUTFIT_COMPREHENSIVE_SURVIVAL

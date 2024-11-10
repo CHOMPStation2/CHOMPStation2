@@ -54,6 +54,7 @@
 	var/list/all_underwear = list()
 	var/list/all_underwear_metadata = list()
 	var/list/hide_underwear = list()
+	var/headset = 1		//Which headset type the player has chosen.
 	var/backbag = 2		//Which backpack type the player has chosen.
 	var/pdachoice = 1	//Which PDA type the player has chosen.
 
@@ -135,6 +136,12 @@
 	var/r_ears3 = 30 //Trust me, we could always use more colour. No japes.
 	var/g_ears3 = 30
 	var/b_ears3 = 30
+
+	/// secondary ears sprite accessory reference
+	var/datum/sprite_accessory/ears/ear_secondary_style
+	/// secondary ears color channels; can be null, or a list of #aabbcc hexcolors
+	var/list/ear_secondary_colors
+
 	var/datum/sprite_accessory/tail/tail_style = null
 	var/r_tail = 30
 	var/g_tail = 30
@@ -161,3 +168,7 @@
 
 	// Custom Species Name
 	var/custom_species
+
+	var/block_hud
+
+	var/phobias		//For holding a list of phobias

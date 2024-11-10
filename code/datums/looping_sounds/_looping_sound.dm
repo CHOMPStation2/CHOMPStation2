@@ -59,6 +59,8 @@
 	return ..()
 
 /datum/looping_sound/proc/start(atom/add_thing, skip_start_sound = FALSE)
+	if(QDELETED(src)) //Chomp runtime
+		return //Chomp runtime
 	if(add_thing)
 		output_atoms |= add_thing
 	if(timerid)
@@ -84,7 +86,7 @@
 	started = FALSE
 
 /datum/looping_sound/proc/sound_loop(starttime)
-	if(max_loops && world.time >= starttime + mid_length * max_loops)
+	if(QDELETED(src) || (max_loops && world.time >= starttime + mid_length * max_loops)) //ChompEDIT - runtime
 		stop()
 		return
 	if(!chance || prob(chance))
@@ -98,12 +100,12 @@
 	if(direct)
 		S.channel = SSsounds.random_available_channel()
 		S.volume = volume
-	for(var/i in 1 to atoms_cache.len)
+	for(var/i in 1 to atoms_cache?.len) //Chomp - runtime
 		var/atom/thing = atoms_cache[i]
 		if(direct)
 			if(ismob(thing))
 				var/mob/M = thing
-				if(pref_check && !M.is_preference_enabled(pref_check))
+				if(!M.check_sound_preference(pref_check))
 					continue
 			SEND_SOUND(thing, S)
 		else

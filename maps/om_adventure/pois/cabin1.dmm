@@ -42,7 +42,7 @@
 /area/om_adventure/poi/cabin1)
 "k" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/flame/candle,
+/obj/item/flame/candle,
 /turf/simulated/floor/bmarble,
 /area/om_adventure/poi/cabin1)
 "r" = (
@@ -61,7 +61,7 @@
 /turf/simulated/floor/plating,
 /area/om_adventure/poi/cabin1)
 "v" = (
-/obj/item/weapon/bedsheet/browndouble,
+/obj/item/bedsheet/browndouble,
 /obj/structure/bed/double/padded,
 /obj/structure/curtain/black,
 /turf/simulated/floor/carpet,
@@ -83,7 +83,7 @@
 /turf/simulated/floor/outdoors/newdirt,
 /area/om_adventure/poi/cabin1)
 "C" = (
-/obj/structure/bed/chair/sofa/brown/corner,
+/obj/structure/bed/chair/sofa/corner/brown,
 /turf/simulated/floor/wood,
 /area/om_adventure/poi/cabin1)
 "D" = (
@@ -92,7 +92,7 @@
 "F" = (
 /obj/structure/table/darkglass,
 /obj/random/awayloot/looseloot,
-/obj/item/weapon/flame/candle,
+/obj/item/flame/candle,
 /turf/simulated/floor/wood,
 /area/om_adventure/poi/cabin1)
 "G" = (
@@ -123,7 +123,7 @@
 /turf/simulated/wall/log,
 /area/om_adventure/poi/cabin1)
 "R" = (
-/obj/structure/bed/chair/sofa/brown/left{
+/obj/structure/bed/chair/sofa/left/brown{
 	dir = 8
 	},
 /obj/move_trader_landmark{
@@ -133,7 +133,7 @@
 /turf/simulated/floor/wood,
 /area/om_adventure/poi/cabin1)
 "S" = (
-/obj/structure/bed/chair/sofa/brown/right,
+/obj/structure/bed/chair/sofa/right/brown,
 /turf/simulated/floor/wood,
 /area/om_adventure/poi/cabin1)
 "T" = (

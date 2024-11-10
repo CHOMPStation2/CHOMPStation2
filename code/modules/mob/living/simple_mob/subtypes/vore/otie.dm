@@ -15,7 +15,7 @@
 	icon_living = "otie"
 	icon_dead = "otie-dead"
 	icon_rest = "otie_rest"
-	faction = "otie"
+	faction = FACTION_OTIE
 	maxHealth = 150
 	health = 150
 	minbodytemp = 200
@@ -47,13 +47,14 @@
 	var/tamed = 0
 	var/tame_chance = 50 //It's a fiddy-fiddy default you may get a buddy pal or you may get mauled and ate. Win-win!
 
-	can_be_drop_prey = FALSE //CHOMP Add
-	// CHOMPAdd: :c
+	allow_mind_transfer = TRUE
+
+	// CHOMPAdd Start :c
+	can_be_drop_prey = FALSE
 	species_sounds = "Canine"
 	pain_emote_1p = list("yelp", "whine", "bark", "growl")
 	pain_emote_3p = list("yelps", "whines", "barks", "growls")
 	// CHOMPAdd End
-
 
 // Activate Noms!
 
@@ -76,7 +77,7 @@
 	icon_living = "photie"
 	icon_dead = "photie-dead"
 	icon_rest = "photie_rest"
-	faction = "virgo3b"
+	faction = FACTION_VIRGO3B
 	tame_chance = 5 // Only a 1 in 20 chance of success. It's feral. What do you expect?
 	// Lazy way of making sure this otie survives outside.
 	min_oxy = 0
@@ -104,7 +105,7 @@
 	icon_living = "hotie"
 	icon_dead = "hotie-dead"
 	icon_rest = "hotie_rest"
-	faction = "cult"
+	faction = FACTION_CULT
 	tame_chance = 20
 	// Lazy way of making sure this otie survives outside.
 	min_oxy = 0
@@ -121,7 +122,7 @@
 /mob/living/simple_mob/vore/otie/red/friendly //gets the pet2tame feature and doesn't kill you right away
 	name = "red otie"
 	desc = "Seems this ominous looking longdog has been infused with wicked infernal forces. This one seems rather peaceful though."
-	faction = "neutral"
+	faction = FACTION_NEUTRAL
 	tamed = 1
 
 /mob/living/simple_mob/vore/otie/red/chubby //gets the pet2tame feature and doesn't kill you right away
@@ -130,13 +131,13 @@
 	icon_state = "hotiec"
 	icon_living = "hotiec"
 	icon_rest = "hotiec_rest"
-	faction = "neutral"
+	faction = FACTION_NEUTRAL
 	tamed = 1
 
 /mob/living/simple_mob/vore/otie/friendly //gets the pet2tame feature and doesn't kill you right away
 	name = "otie"
 	desc = "The classic bioengineered longdog. This one might even tolerate you!"
-	faction = "neutral"
+	faction = FACTION_NEUTRAL
 	tamed = 1
 
 /mob/living/simple_mob/vore/otie/friendly/chubby
@@ -152,7 +153,7 @@
 	icon_state = "cotie"
 	icon_living = "cotie"
 	icon_rest = "cotie_rest"
-	faction = "neutral"
+	faction = FACTION_NEUTRAL
 	tamed = 1
 
 /mob/living/simple_mob/vore/otie/cotie/chubby
@@ -187,7 +188,7 @@
 	icon_living = "sotie"
 	icon_rest = "sotie_rest"
 	icon_dead = "sotie-dead"
-	faction = "neutral"
+	faction = FACTION_NEUTRAL
 	maxHealth = 200 //armored or something
 	health = 200
 	tamed = 1
@@ -241,16 +242,16 @@
 	icon_rest = "hotiesc_rest"
 
 /mob/living/simple_mob/vore/otie/attackby(var/obj/item/O, var/mob/user) // Trade donuts for bellybrig victims.
-	if(istype(O, /obj/item/weapon/reagent_containers/food))
+	if(istype(O, /obj/item/reagent_containers/food))
 		qdel(O)
 		playsound(src,'sound/items/eatfood.ogg', rand(10,50), 1)
 		if(!has_AI())//No autobarf on player control.
 			return
-		if(istype(O, /obj/item/weapon/reagent_containers/food/snacks/donut) && istype(src, /mob/living/simple_mob/vore/otie/security))
-			to_chat(user,"<span class='notice'>The guard pup accepts your offer for their catch.</span>")
+		if(istype(O, /obj/item/reagent_containers/food/snacks/donut) && istype(src, /mob/living/simple_mob/vore/otie/security))
+			to_chat(user,span_notice("The guard pup accepts your offer for their catch."))
 			release_vore_contents()
 		else if(prob(2)) //Small chance to get prey out from non-sec oties.
-			to_chat(user,"<span class='notice'>The pup accepts your offer for their catch.</span>")
+			to_chat(user,span_notice("The pup accepts your offer for their catch."))
 			release_vore_contents()
 		return
 	. = ..()
@@ -285,7 +286,7 @@
 				if(M.zone_sel.selecting == BP_GROIN) //CHOMPEdit
 					if(M.vore_bellyrub(src))
 						return
-				M.visible_message("<span class='notice'>[M] [response_help] \the [src].</span>")
+				M.visible_message(span_notice("[M] [response_help] \the [src]."))
 				if(has_AI())
 					var/datum/ai_holder/AI = ai_holder
 					AI.set_stance(STANCE_IDLE)
@@ -323,8 +324,8 @@
 	. = ..()
 	if(!riding_datum)
 		riding_datum = new /datum/riding/simple_mob(src)
-	verbs |= /mob/living/simple_mob/proc/animal_mount
-	verbs |= /mob/living/proc/toggle_rider_reins
+	add_verb(src, /mob/living/simple_mob/proc/animal_mount)
+	add_verb(src, /mob/living/proc/toggle_rider_reins)
 	movement_cooldown = 0
 
 /mob/living/simple_mob/vore/otie/MouseDrop_T(mob/living/M, mob/living/user)

@@ -19,7 +19,7 @@ var/list/slot_equipment_priority = list( \
 	)
 
 /mob
-	var/obj/item/weapon/storage/s_active = null // Even ghosts can/should be able to peek into boxes on the ground
+	var/obj/item/storage/s_active = null // Even ghosts can/should be able to peek into boxes on the ground
 
 //This proc is called whenever someone clicks an inventory ui slot.
 /mob/proc/attack_ui(var/slot)
@@ -56,7 +56,7 @@ var/list/slot_equipment_priority = list( \
 
 		else
 			if(!disable_warning)
-				to_chat(src, "<font color='red'>You are unable to equip that.</font>") //Only print if del_on_fail is false
+				to_chat(src, span_red("You are unable to equip that.")) //Only print if del_on_fail is false
 		return 0
 
 	equip_to_slot(W, slot, redraw_mob) //This proc should not ever fail.
@@ -114,13 +114,13 @@ var/list/slot_equipment_priority = list( \
 
 //Puts the item into your l_hand if possible and calls all necessary triggers/updates. returns 1 on success.
 /mob/proc/put_in_l_hand(var/obj/item/W)
-	if(lying || !istype(W))
+	if(/*lying || */!istype(W)) // CHOMPEdit - Don't care about lying, give me.
 		return 0
 	return 1
 
 //Puts the item into your r_hand if possible and calls all necessary triggers/updates. returns 1 on success.
 /mob/proc/put_in_r_hand(var/obj/item/W)
-	if(lying || !istype(W))
+	if(/*lying || */!istype(W)) // CHOMPEdit - Don't care about lying, give me.
 		return 0
 	return 1
 
@@ -207,12 +207,6 @@ var/list/slot_equipment_priority = list( \
 //item MUST BE FORCEMOVE'D OR QDEL'D
 /mob/proc/temporarilyRemoveItemFromInventory(obj/item/I, force = FALSE, idrop = TRUE)
 	return u_equip(I, force, null, TRUE, idrop)
-
-///sometimes we only want to grant the item's action if it's equipped in a specific slot.
-/obj/item/proc/item_action_slot_check(slot, mob/user)
-	if(slot == SLOT_BACK || slot == LEGS) //these aren't true slots, so avoid granting actions there
-		return FALSE
-	return TRUE
 
 ///Get the item on the mob in the storage slot identified by the id passed in
 /mob/proc/get_item_by_slot(slot_id)

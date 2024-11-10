@@ -27,14 +27,14 @@
 
 	if(!..())
 		return 0
-	
+
 	var/mob/living/carbon/human/H = holder.wearer
 	var/obj/item/clothing/shoes/boots = holder.boots
 	var/obj/item/clothing/suit/space/rig/chest = holder.chest
 	var/obj/item/clothing/head/helmet/space/rig/helmet = holder.helmet
 	var/obj/item/clothing/gloves/gauntlets/rig/gloves = holder.gloves
 
-	to_chat(H, "<font color='blue'><b>You activate your suit's powered radiation shielding.</b></font>")
+	to_chat(H, span_boldnotice("You activate your suit's powered radiation shielding."))
 	stored_rad_armor = holder.armor["rad"]
 	if(boots)
 		boots.armor["rad"] = 100
@@ -57,7 +57,7 @@
 	var/obj/item/clothing/head/helmet/space/rig/helmet = holder.helmet
 	var/obj/item/clothing/gloves/gauntlets/rig/gloves = holder.gloves
 
-	to_chat(H, "<span class='danger'>You deactivate your suit's powered radiation shielding.</span>")
+	to_chat(H, span_danger("You deactivate your suit's powered radiation shielding."))
 
 	if(boots)
 		boots.armor["rad"] = stored_rad_armor
@@ -107,17 +107,17 @@
 
 	if(!..())
 		return 0
-	
+
 	var/mob/living/carbon/human/H = holder.wearer
 	var/obj/item/clothing/shoes/boots = holder.boots
 	var/obj/item/clothing/suit/space/rig/chest = holder.chest
 	var/obj/item/clothing/head/helmet/space/rig/helmet = holder.helmet
 	var/obj/item/clothing/gloves/gauntlets/rig/gloves = holder.gloves
-	
+
 	stored_max_pressure = holder.max_pressure_protection
 	stored_max_temp = holder.max_heat_protection_temperature
 
-	to_chat(H, "<font color='blue'><b>You activate your suit's powered atmospheric shielding.</b></font>")
+	to_chat(H, span_boldnotice("You activate your suit's powered atmospheric shielding."))
 
 	if(boots)
 		boots.max_pressure_protection = INFINITY
@@ -145,7 +145,7 @@
 	var/obj/item/clothing/head/helmet/space/rig/helmet = holder.helmet
 	var/obj/item/clothing/gloves/gauntlets/rig/gloves = holder.gloves
 
-	to_chat(H, "<span class='danger'><b>You deactivate your suit's powered atmospheric shielding.</b></span>")
+	to_chat(H, span_boldnotice("You deactivate your suit's powered atmospheric shielding."))
 
 	if(boots)
 		boots.max_pressure_protection = stored_max_pressure

@@ -1,8 +1,9 @@
 #define FIRE_PRIORITY_REFLECTOR 20
+
 SUBSYSTEM_DEF(reflector)
 	name = "Reflectors"
 	priority = FIRE_PRIORITY_REFLECTOR
-	flags = SS_BACKGROUND|SS_NO_INIT
+	flags = SS_BACKGROUND | SS_NO_INIT
 	wait = 5
 
 	var/stat_tag = "R" //Used for logging
@@ -21,8 +22,11 @@ SUBSYSTEM_DEF(reflector)
 		if(CHECK_BITFIELD(D.datum_flags, DF_ISPROCESSING))
 			processing |= D
 
-/datum/controller/subsystem/reflector/stat_entry()
-	..("[stat_tag]:[processing.len]")
+//CHOMPEdit Begin
+/datum/controller/subsystem/reflector/stat_entry(msg)
+	msg = "[stat_tag]:[processing.len]"
+	return ..()
+// CHOMPEdit End
 
 /datum/controller/subsystem/reflector/fire(resumed = 0)
 	if (!resumed)
@@ -41,3 +45,5 @@ SUBSYSTEM_DEF(reflector)
 			return
 
 	current_thing = null
+
+#undef FIRE_PRIORITY_REFLECTOR

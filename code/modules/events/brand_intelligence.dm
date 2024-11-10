@@ -68,7 +68,7 @@
 										 "Advertising is legalized lying! But don't let that put you off our great deals!", \
 										 "You don't want to buy anything? Yeah, well I didn't want to buy your mom either."))
 				*/
-				originMachine.speak(pick(rampant_speeches)) //VORESTATION Add - Using this pick instead of the above.
+				originMachine.balloon_alert_visible(pick(rampant_speeches)) //VORESTATION Add - Using this pick instead of the above. CHOMPEdit - Make them TALK
 
 /datum/event/brand_intelligence/end()
 	for(var/obj/machinery/vending/infectedMachine in infectedVendingMachines)

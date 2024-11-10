@@ -27,6 +27,7 @@
 	spawn_flags = SPECIES_IS_RESTRICTED
 
 /datum/species/shadekin
+	digi_allowed = TRUE
 	//spawn_flags = SPECIES_IS_RESTRICTED
 
 //datum/species/protean
@@ -47,9 +48,6 @@
 //Can use digitigrade flags
 /datum/species/shapeshifter/promethean
 	digi_allowed = TRUE
-
-/datum/species/unathi
-	vore_belly_default_variant = "L"
 
 /datum/species/protean
 	digi_allowed = TRUE

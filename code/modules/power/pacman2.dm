@@ -6,8 +6,8 @@
 	name = "Pacman II"
 	desc = "P.A.C.M.A.N. type II portable generator. Uses liquid phoron as a fuel source."
 	power_gen = 4500
-	circuit = /obj/item/weapon/circuitboard/pacman2
-	var/obj/item/weapon/tank/phoron/P = null
+	circuit = /obj/item/circuitboard/pacman2
+	var/obj/item/tank/phoron/P = null
 	var/emagged = 0
 	var/heat = 0
 /*
@@ -36,16 +36,16 @@
 
 	RefreshParts()
 		var/temp_rating = 0
-		for(var/obj/item/weapon/stock_parts/SP in component_parts)
-			if(istype(SP, /obj/item/weapon/stock_parts/matter_bin))
+		for(var/obj/item/stock_parts/SP in component_parts)
+			if(istype(SP, /obj/item/stock_parts/matter_bin))
 				//max_coins = SP.rating * SP.rating * 1000
-			else if(istype(SP, /obj/item/weapon/stock_parts/micro_laser) || istype(SP, /obj/item/weapon/stock_parts/capacitor))
+			else if(istype(SP, /obj/item/stock_parts/micro_laser) || istype(SP, /obj/item/stock_parts/capacitor))
 				temp_rating += SP.rating
 		power_gen = round(initial(power_gen) * (max(2, temp_rating) / 2))
 
 	examine(mob/user)
 		. = ..()
-		. += "<span class='notice'>The generator has [P.air_contents.phoron] units of fuel left, producing [power_gen] per cycle.</span>"
+		. += span_notice("The generator has [P.air_contents.phoron] units of fuel left, producing [power_gen] per cycle.")
 
 	handleInactive()
 		heat -= 2
@@ -61,30 +61,30 @@
 			explosion(get_turf(src), 2, 5, 2, -1)
 
 	attackby(var/obj/item/O as obj, var/mob/user as mob)
-		if(istype(O, /obj/item/weapon/tank/phoron))
+		if(istype(O, /obj/item/tank/phoron))
 			if(P)
-				to_chat(user, "<font color='red'>The generator already has a phoron tank loaded!</font>")
+				to_chat(user, span_red("The generator already has a phoron tank loaded!"))
 				return
 			P = O
 			user.drop_item()
 			O.loc = src
-			to_chat(user, "<font color='blue'>You add the phoron tank to the generator.</font>")
+			to_chat(user, span_blue("You add the phoron tank to the generator."))
 		else if(!active)
 			if(O.has_tool_quality(TOOL_WRENCH))
 				anchored = !anchored
 				playsound(src, 'sound/items/Deconstruct.ogg', 50, 1)
 				if(anchored)
-					to_chat(user, "<font color='blue'>You secure the generator to the floor.</font>")
+					to_chat(user, span_blue("You secure the generator to the floor."))
 				else
-					to_chat(user, "<font color='blue'>You unsecure the generator from the floor.</font>")
+					to_chat(user, span_blue("You unsecure the generator from the floor."))
 				SSmachines.makepowernets()
 			else if(O.has_tool_quality(TOOL_SCREWDRIVER))
 				open = !open
 				playsound(src, O.usesound, 50, 1)
 				if(open)
-					to_chat(user, "<font color='blue'>You open the access panel.</font>")
+					to_chat(user, span_blue("You open the access panel."))
 				else
-					to_chat(user, "<font color='blue'>You close the access panel.</font>")
+					to_chat(user, span_blue("You close the access panel."))
 			else if(O.has_tool_quality(TOOL_CROWBAR) && !open)
 				playsound(src, O.usesound, 50, 1)
 				var/obj/machinery/constructable_frame/machine_frame/new_frame = new /obj/machinery/constructable_frame/machine_frame(src.loc)
@@ -117,7 +117,7 @@
 
 			user.machine = src
 
-			var/dat = text("<b>[name]</b><br>")
+			var/dat = text(span_bold("[name]") + "<br>")
 			if (active)
 				dat += text("Generator: <A href='?src=\ref[src];action=disable'>On</A><br>")
 			else

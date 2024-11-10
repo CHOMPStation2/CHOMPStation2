@@ -110,6 +110,7 @@ var/const/DTH_FREQ	= 1341
 var/const/SYND_FREQ = 1213
 var/const/RAID_FREQ	= 1277
 var/const/ENT_FREQ	= 1461 //entertainment frequency. This is not a diona exclusive frequency.
+var/const/BDCM_FREQ	= 1481 // CHOMPEdit
 
 // department channels
 var/const/PUB_FREQ = 1459
@@ -127,27 +128,30 @@ var/const/SEC_I_FREQ = 1475
 
 var/const/TALON_FREQ = 1363 //VOREStation Add
 var/const/CSN_FREQ = 1365 //VOREStation Add
+var/const/OUT_FREQ = 1367 //CHOMPstation Add
 
 var/list/radiochannels = list(
-	"Common"		= PUB_FREQ,
-	"Science"		= SCI_FREQ,
-	"Command"		= COMM_FREQ,
-	"Medical"		= MED_FREQ,
-	"Engineering"	= ENG_FREQ,
-	"Security" 		= SEC_FREQ,
-	"Response Team" = ERT_FREQ,
-	"Special Ops" 	= DTH_FREQ,
-	"Mercenary" 	= SYND_FREQ,
-	"Raider"		= RAID_FREQ,
-	"Supply" 		= SUP_FREQ,
-	"Service" 		= SRV_FREQ,
-	"Explorer"		= EXP_FREQ, //CHOMP explo keep
-	"AI Private"	= AI_FREQ,
-	"Entertainment" = ENT_FREQ,
-	"Medical(I)"	= MED_I_FREQ,
-	"Security(I)"	= SEC_I_FREQ,
-	"Talon"			= TALON_FREQ, //VOREStation Add
-	"Casino" 		= CSN_FREQ,
+	CHANNEL_COMMON			= PUB_FREQ,
+	CHANNEL_SCIENCE			= SCI_FREQ,
+	CHANNEL_COMMAND			= COMM_FREQ,
+	CHANNEL_MEDICAL			= MED_FREQ,
+	CHANNEL_ENGINEERING		= ENG_FREQ,
+	CHANNEL_SECURITY		= SEC_FREQ,
+	CHANNEL_BODYCAM			= BDCM_FREQ, // CHOMPEdit
+	CHANNEL_RESPONSE_TEAM	= ERT_FREQ,
+	CHANNEL_SPECIAL_OPS		= DTH_FREQ,
+	CHANNEL_MERCENARY		= SYND_FREQ,
+	CHANNEL_RAIDER			= RAID_FREQ,
+	CHANNEL_SUPPLY	 		= SUP_FREQ,
+	CHANNEL_SERVICE 		= SRV_FREQ,
+	CHANNEL_EXPLORATION		= EXP_FREQ,
+	CHANNEL_AI_PRIVATE		= AI_FREQ,
+	CHANNEL_ENTERTAINMENT	= ENT_FREQ,
+	CHANNEL_MEDICAL_1		= MED_I_FREQ,
+	CHANNEL_SECURITY_1		= SEC_I_FREQ,
+	CHANNEL_TALON			= TALON_FREQ, //VOREStation Add
+	CHANNEL_CASINO			= CSN_FREQ,
+	CHANNEL_OUTSIDER		= OUT_FREQ //CHOMPstation Add
 )
 
 // Hey, if anyone ever needs to update tgui/packages/tgui/constants.js with new radio channels
@@ -192,9 +196,9 @@ var/list/CENT_FREQS = list(ERT_FREQ, DTH_FREQ)
 var/list/ANTAG_FREQS = list(SYND_FREQ, RAID_FREQ)
 
 //Department channels, arranged lexically
-var/list/DEPT_FREQS = list(AI_FREQ, COMM_FREQ, ENG_FREQ, ENT_FREQ, MED_FREQ, SEC_FREQ, SCI_FREQ, SRV_FREQ, SUP_FREQ)
+var/list/DEPT_FREQS = list(AI_FREQ, BDCM_FREQ, COMM_FREQ, ENG_FREQ, ENT_FREQ, MED_FREQ, SEC_FREQ, SCI_FREQ, SRV_FREQ, SUP_FREQ) // CHOMPEdit
 
-var/list/OFFMAP_FREQS = list(TALON_FREQ, CSN_FREQ) //VOREStation Add
+var/list/OFFMAP_FREQS = list(TALON_FREQ, CSN_FREQ, OUT_FREQ) //VOREStation Add CHOMPEdit: Added outsider
 
 /proc/frequency_span_class(var/frequency)
 	// Antags!
@@ -212,6 +216,8 @@ var/list/OFFMAP_FREQS = list(TALON_FREQ, CSN_FREQ) //VOREStation Add
 	// department radio formatting (poorly optimized, ugh)
 	if(frequency == SEC_FREQ)
 		return "secradio"
+	if(frequency == BDCM_FREQ) // CHOMPEdit
+		return "bdcmradio"
 	if (frequency == ENG_FREQ)
 		return "engradio"
 	if(frequency == SCI_FREQ)

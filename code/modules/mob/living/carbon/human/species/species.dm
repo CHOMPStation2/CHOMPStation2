@@ -35,8 +35,8 @@
 	var/tail_animation										// If set, the icon to obtain tail animation states from.
 	var/tail_hair
 
-	var/icon_scale_x = 1										// Makes the icon wider/thinner.
-	var/icon_scale_y = 1										// Makes the icon taller/shorter.
+	var/icon_scale_x = DEFAULT_ICON_SCALE_X										// Makes the icon wider/thinner.
+	var/icon_scale_y = DEFAULT_ICON_SCALE_Y										// Makes the icon taller/shorter.
 
 	var/race_key = 0										// Used for mob icon cache string.
 	var/icon/icon_template									// Used for mob icon generation for non-32x32 species.
@@ -109,6 +109,8 @@
 	var/gasp_volume = 50 // Self-explanatory, define this separately on your species if the sound files are louder.
 	var/death_volume = 50 // Self-explanatory, define this separately on your species if the sound files are louder.
 	// var/species_sounds_herm // If you want a custom sound played for other genders, just add them like so
+	var/footstep = FOOTSTEP_MOB_HUMAN
+	var/list/special_step_sounds = null
 	// CHOMPEdit End
 
 	// Combat/health/chem/etc. vars.
@@ -131,7 +133,7 @@
 	var/chem_strength_heal =    1						// Multiplier to most beneficial chem strength
 	var/chem_strength_pain =    1						// Multiplier to painkiller strength (could be used in a negative trait to simulate long-term addiction reducing effects, etc.)
 	var/chem_strength_tox =	    1						// Multiplier to toxic chem strength (inc. chloral/sopo/mindbreaker/etc. thresholds)
-	var/chem_strength_alcohol = 1						// Multiplier to alcohol strength; 0.5 = half, 0 = no effect at all, 2 = double, etc.
+	var/chem_strength_alcohol = 1						// Multiplier to alcohol effect thresholds; higher means more is needed to reach a given effect tier
 
 	var/chemOD_threshold =		1						// Multiplier to overdose threshold; lower = easier overdosing
 	var/chemOD_mod =		1						// Damage modifier for overdose; higher = more damage from ODs
@@ -148,7 +150,7 @@
 	var/vision_flags = SEE_SELF							// Same flags as glasses.
 
 	// Death vars.
-	var/meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat/human
+	var/meat_type = /obj/item/reagent_containers/food/snacks/meat/human
 	var/remains_type = /obj/effect/decal/remains/xeno
 	var/gibbed_anim = "gibbed-h"
 	var/dusted_anim = "dust-h"
@@ -165,6 +167,7 @@
 	var/water_breather = FALSE
 	var/suit_inhale_sound = 'sound/effects/mob_effects/suit_breathe_in.ogg'
 	var/suit_exhale_sound = 'sound/effects/mob_effects/suit_breathe_out.ogg'
+	var/bad_swimmer = FALSE
 
 	var/body_temperature = 310.15							// Species will try to stabilize at this temperature. (also affects temperature processing)
 
@@ -248,6 +251,8 @@
 
 	var/rarity_value = 1									// Relative rarity/collector value for this species.
 	var/economic_modifier = 2								// How much money this species makes
+
+	var/vore_belly_default_variant = "H"
 
 	// Determines the organs that the species spawns with and
 	var/list/has_organ = list(								// which required-organ checks are conducted.
@@ -348,6 +353,9 @@
 		inherent_verbs |= /mob/living/carbon/human/proc/regurgitate
 
 	update_sort_hint()
+// CHOMPadd
+/datum/species/proc/get_footstep_sounds()
+	return footstep
 
 /datum/species/proc/update_sort_hint()
 	if(spawn_flags & SPECIES_IS_RESTRICTED)
@@ -359,26 +367,26 @@
 	return sanitizeName(name, MAX_NAME_LEN, robot)
 
 /datum/species/proc/equip_survival_gear(var/mob/living/carbon/human/H,var/extendedtank = 0,var/comprehensive = 0)
-	var/boxtype = /obj/item/weapon/storage/box/survival //Default survival box
+	var/boxtype = /obj/item/storage/box/survival //Default survival box
 
 	var/synth = H.isSynthetic()
 
 	//Empty box for synths
 	if(synth)
-		boxtype = /obj/item/weapon/storage/box/survival/synth
+		boxtype = /obj/item/storage/box/survival/synth
 
 	//Special box with extra equipment
 	else if(comprehensive)
-		boxtype = /obj/item/weapon/storage/box/survival/comp
+		boxtype = /obj/item/storage/box/survival/comp
 
 	//Create the box
-	var/obj/item/weapon/storage/box/box = new boxtype(H)
+	var/obj/item/storage/box/box = new boxtype(H)
 
 	//If not synth, they get an air tank (if they breathe)
 	if(!synth && breath_type)
 		//Create a tank (if such a thing exists for this species)
-		var/tanktext = "/obj/item/weapon/tank/emergency/" + "[breath_type]"
-		var/obj/item/weapon/tank/emergency/tankpath //Will force someone to come look here if they ever alter this path.
+		var/tanktext = "/obj/item/tank/emergency/" + "[breath_type]"
+		var/obj/item/tank/emergency/tankpath //Will force someone to come look here if they ever alter this path.
 		if(extendedtank)
 			tankpath = text2path(tanktext + "/engi")
 			if(!tankpath) //Is it just that there's no /engi?
@@ -392,7 +400,7 @@
 
 	//If they are synth, they get a smol battery
 	else if(synth)
-		new /obj/item/device/fbp_backup_cell(box)
+		new /obj/item/fbp_backup_cell(box)
 
 	box.calibrate_size()
 
@@ -408,15 +416,17 @@
 		if((organ in H.organs) || (organ in H.internal_organs))
 			qdel(organ)
 
-	if(H.organs)									H.organs.Cut()
-	if(H.internal_organs)				 H.internal_organs.Cut()
-	if(H.organs_by_name)					H.organs_by_name.Cut()
-	if(H.internal_organs_by_name) H.internal_organs_by_name.Cut()
+	if(H.organs)					H.organs.Cut()
+	if(H.internal_organs)			H.internal_organs.Cut()
+	if(H.organs_by_name)			H.organs_by_name.Cut()
+	if(H.internal_organs_by_name) 	H.internal_organs_by_name.Cut()
+	if(H.bad_external_organs)		H.bad_external_organs.Cut()
 
 	H.organs = list()
 	H.internal_organs = list()
 	H.organs_by_name = list()
 	H.internal_organs_by_name = list()
+	H.bad_external_organs = list()
 
 	for(var/limb_type in has_limbs)
 		var/list/organ_data = has_limbs[limb_type]
@@ -435,6 +445,11 @@
 			O.organ_tag = organ_tag
 		H.internal_organs_by_name[organ_tag] = O
 
+	// set butcherable meats from species
+	for(var/obj/item/organ/O in H.organs)
+		O.set_initial_meat()
+	for(var/obj/item/organ/O in H.internal_organs)
+		O.set_initial_meat()
 
 /datum/species/proc/hug(var/mob/living/carbon/human/H, var/mob/living/target)
 
@@ -458,33 +473,33 @@
 	//VOREStation Edit Start - Headpats and Handshakes.
 	if(H.zone_sel.selecting == "head")
 		H.visible_message( \
-			"<span class='notice'>[H] pats [target] on the head.</span>", \
-			"<span class='notice'>You pat [target] on the head.</span>", )
+			span_notice("[H] pats [target] on the head."), \
+			span_notice("You pat [target] on the head."), )
 	else if(H.zone_sel.selecting == "r_hand" || H.zone_sel.selecting == "l_hand")
 		H.visible_message( \
-			"<span class='notice'>[H] shakes [target]'s hand.</span>", \
-			"<span class='notice'>You shake [target]'s hand.</span>", )
+			span_notice("[H] shakes [target]'s hand."), \
+			span_notice("You shake [target]'s hand."), )
 	else if(H.zone_sel.selecting == "mouth")
 		H.visible_message( \
-			"<span class='notice'>[H] boops [target]'s nose.</span>", \
-			"<span class='notice'>You boop [target] on the nose.</span>", )
+			span_notice("[H] boops [target]'s nose."), \
+			span_notice("You boop [target] on the nose."), )
 	else if(H.zone_sel.selecting == BP_GROIN) //CHOMPEdit
 		H.vore_bellyrub(target)
 	//VOREStation Edit End
 	else
-		H.visible_message("<span class='notice'>[H] hugs [target] to make [t_him] feel better!</span>", \
-						"<span class='notice'>You hug [target] to make [t_him] feel better!</span>")
+		H.visible_message(span_notice("[H] hugs [target] to make [t_him] feel better!"), \
+						span_notice("You hug [target] to make [t_him] feel better!"))
 
 /datum/species/proc/remove_inherent_verbs(var/mob/living/carbon/human/H)
 	if(inherent_verbs)
 		for(var/verb_path in inherent_verbs)
-			H.verbs -= verb_path
+			remove_verb(H, verb_path)
 	return
 
 /datum/species/proc/add_inherent_verbs(var/mob/living/carbon/human/H)
 	if(inherent_verbs)
 		for(var/verb_path in inherent_verbs)
-			H.verbs |= verb_path
+			add_verb(H, verb_path)
 	return
 
 /datum/species/proc/handle_post_spawn(var/mob/living/carbon/human/H) //Handles anything not already covered by basic species assignment.
@@ -543,6 +558,10 @@
 /datum/species/proc/can_breathe_water()
 	return water_breather
 
+// Called when standing on a water tile.
+/datum/species/proc/is_bad_swimmer()
+	return bad_swimmer
+
 // Impliments different trails for species depending on if they're wearing shoes.
 /datum/species/proc/get_move_trail(var/mob/living/carbon/human/H)
 	if( H.shoes || ( H.wear_suit && (H.wear_suit.body_parts_covered & FEET) ) )
@@ -572,8 +591,8 @@
 	return FALSE
 
 // Allow species to display interesting information in the human stat panels
-/datum/species/proc/Stat(var/mob/living/carbon/human/H)
-	return
+/datum/species/proc/get_status_tab_items(var/mob/living/carbon/human/H)
+	return ""
 
 /datum/species/proc/handle_water_damage(var/mob/living/carbon/human/H, var/amount = 0)
 	amount *= 1 - H.get_water_protection()
@@ -591,12 +610,15 @@
 			return FALSE
 
 		if(!silent)
-			to_chat(H, SPAN_NOTICE("You manage to lower impact of the fall and land safely."))
-			landing.visible_message("<b>\The [H]</b> lowers down from above, landing safely.")
+			to_chat(H, span_notice("You manage to lower impact of the fall and land safely."))
+			landing.visible_message(span_infoplain(span_bold("\The [H]") + " lowers down from above, landing safely."))
 			playsound(H, "rustle", 25, 1)
 		return TRUE
 
 	return FALSE
 
 /datum/species/proc/post_spawn_special(mob/living/carbon/human/H)
+	return
+
+/datum/species/proc/update_misc_tabs(var/mob/living/carbon/human/H)
 	return

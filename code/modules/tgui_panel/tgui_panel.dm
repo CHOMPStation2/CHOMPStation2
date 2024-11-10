@@ -48,12 +48,13 @@
 		assets = list(
 			get_asset_datum(/datum/asset/simple/tgui_panel),
 		))
-	window.send_asset(get_asset_datum(/datum/asset/simple/fontawesome))
-	window.send_asset(get_asset_datum(/datum/asset/simple/tgfont))
+	window.send_asset(get_asset_datum(/datum/asset/simple/namespaced/fontawesome))
+	window.send_asset(get_asset_datum(/datum/asset/simple/namespaced/tgfont))
 	window.send_asset(get_asset_datum(/datum/asset/spritesheet/chat))
 	// Other setup
 	request_telemetry()
 	addtimer(CALLBACK(src, PROC_REF(on_initialize_timed_out)), 5 SECONDS)
+	window.send_message("testTelemetryCommand")
 
 /**
  * private
@@ -62,7 +63,7 @@
  */
 /datum/tgui_panel/proc/on_initialize_timed_out()
 	// Currently does nothing but sending a message to old chat.
-	// SEND_TEXT(client, "<span class=\"userdanger\">Failed to load fancy chat, click <a href='?src=[REF(src)];reload_tguipanel=1'>HERE</a> to attempt to reload it.</span>")
+	// SEND_TEXT(client, span_userdanger("Failed to load fancy chat, click <a href='?src=[REF(src)];reload_tguipanel=1'>HERE</a> to attempt to reload it."))
 
 /**
  * private
@@ -72,12 +73,17 @@
 /datum/tgui_panel/proc/on_message(type, payload)
 	if(type == "ready")
 		broken = FALSE
+		window.send_message("connected", list("round_id" = GLOB.round_id)) // Sends the round ID to the chat, requires round IDs
 		window.send_message("update", list(
 			"config" = list(
 				"client" = list(
 					"ckey" = client.ckey,
 					"address" = client.address,
 					"computer_id" = client.computer_id,
+				),
+				// CHOMPEdit - "server" section
+				"server" = list(
+					"round_id" = GLOB.round_id,
 				),
 				"window" = list(
 					"fancy" = FALSE,

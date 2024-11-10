@@ -12,7 +12,7 @@
 /area/submap/thehive)
 "f" = (
 /obj/structure/table/marble,
-/obj/item/device/perfect_tele/frontier,
+/obj/item/perfect_tele/frontier,
 /turf/simulated/floor,
 /area/submap/thehive)
 "g" = (
@@ -20,14 +20,14 @@
 /area/submap/thehive)
 "h" = (
 /obj/structure/table/marble,
-/obj/item/device/defib_kit/compact,
+/obj/item/defib_kit/compact,
 /turf/simulated/floor,
 /area/submap/thehive)
 "i" = (
 /obj/effect/alien/weeds,
 /obj/structure/closet/secure_closet/egg/xenomorph,
 /obj/item/stolenpackage,
-/obj/item/weapon/gun/launcher/spikethrower,
+/obj/item/gun/launcher/spikethrower,
 /turf/simulated/mineral/floor/ignore_mapgen/sif,
 /area/submap/thehive)
 "k" = (
@@ -95,7 +95,7 @@
 /obj/effect/alien/weeds,
 /obj/structure/closet/secure_closet/egg/xenomorph,
 /obj/item/stolenpackage,
-/obj/item/weapon/gun/energy/hooklauncher,
+/obj/item/gun/energy/hooklauncher,
 /turf/simulated/mineral/floor/ignore_mapgen/sif,
 /area/submap/thehive)
 "y" = (
@@ -123,12 +123,12 @@
 /obj/effect/alien/weeds,
 /obj/structure/closet/secure_closet/egg/xenomorph,
 /obj/item/stolenpackage,
-/obj/item/weapon/storage/backpack/holding,
+/obj/item/storage/backpack/holding,
 /turf/simulated/mineral/floor/ignore_mapgen/sif,
 /area/submap/thehive)
 "J" = (
 /obj/structure/table/marble,
-/obj/item/weapon/storage/backpack/holding/duffle,
+/obj/item/storage/backpack/holding/duffle,
 /turf/simulated/floor,
 /area/submap/thehive)
 "L" = (
@@ -139,7 +139,7 @@
 /obj/effect/alien/weeds,
 /obj/structure/closet/secure_closet/egg/xenomorph,
 /obj/item/stolenpackage,
-/obj/item/weapon/storage/backpack/holding/slime,
+/obj/item/storage/backpack/holding/slime,
 /turf/simulated/mineral/floor/ignore_mapgen/sif,
 /area/submap/thehive)
 "T" = (
@@ -156,7 +156,7 @@
 /area/submap/thehive)
 "Y" = (
 /obj/structure/table/marble,
-/obj/item/device/bluespaceradio,
+/obj/item/bluespaceradio,
 /turf/simulated/floor,
 /area/submap/thehive)
 

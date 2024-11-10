@@ -1,4 +1,5 @@
 import { BooleanLike } from 'common/react';
+
 import { useBackend } from '../backend';
 import { Box, Button, LabeledList, Section } from '../components';
 import { Window } from '../layouts';
@@ -9,14 +10,14 @@ type Data = {
     id: string;
     active: BooleanLike;
     ref: string;
-    effective_range;
-    reaction_wheel_delay;
-    recharge_time;
+    effective_range: string;
+    reaction_wheel_delay: string;
+    recharge_time: string;
   }[];
 };
 
-export const PointDefenseControl = (props, context) => {
-  const { act, data } = useBackend<Data>(context);
+export const PointDefenseControl = (props) => {
+  const { act, data } = useBackend<Data>();
   const { id, turrets } = data;
   return (
     <Window width={400} height={600}>
@@ -31,10 +32,12 @@ export const PointDefenseControl = (props, context) => {
                   <Button
                     selected={pd.active}
                     icon="power-off"
-                    onClick={() => act('toggle_active', { target: pd.ref })}>
+                    onClick={() => act('toggle_active', { target: pd.ref })}
+                  >
                     {pd.active ? 'Online' : 'Offline'}
                   </Button>
-                }>
+                }
+              >
                 <LabeledList>
                   <LabeledList.Item label="Effective range">
                     {pd.effective_range}

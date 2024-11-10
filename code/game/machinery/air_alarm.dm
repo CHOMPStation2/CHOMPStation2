@@ -58,7 +58,7 @@
 	panel_open = FALSE // If it's been screwdrivered open.
 	var/aidisabled = 0
 	var/shorted = 0
-	circuit = /obj/item/weapon/circuitboard/airalarm
+	circuit = /obj/item/circuitboard/airalarm
 
 	var/datum/wires/alarm/wires
 
@@ -543,7 +543,7 @@
 /obj/machinery/alarm/tgui_data(mob/user, datum/tgui/ui, datum/tgui_state/state)
 	var/list/data = list(
 		"locked" = locked,
-		"siliconUser" = issilicon(user),
+		"siliconUser" = siliconaccess(user) || (isobserver(user) && is_admin(user)), //CHOMPEdit borg access + admin access
 		"remoteUser" = !!ui.parent_ui,
 		"danger_level" = danger_level,
 		"target_temperature" = "[target_temperature - T0C]C",
@@ -593,7 +593,7 @@
 			"danger_level" = TEST_TLV_VALUES
 		)))
 
-	if(!locked || issilicon(user) || data["remoteUser"])
+	if(!locked || siliconaccess(user) || data["remoteUser"] || (isobserver(user) && is_admin(user))) //CHOMPEdit borg access + admin access
 		var/list/list/vents = list()
 		data["vents"] = vents
 		for(var/id_tag in A.air_vent_names)
@@ -694,7 +694,7 @@
 		var/list/selected = TLV["temperature"]
 		var/max_temperature = min(selected[3] - T0C, MAX_TEMPERATURE)
 		var/min_temperature = max(selected[2] - T0C, MIN_TEMPERATURE)
-		var/input_temperature = tgui_input_number(usr, "What temperature would you like the system to mantain? (Capped between [min_temperature] and [max_temperature]C)", "Thermostat Controls", target_temperature - T0C, max_temperature, min_temperature)
+		var/input_temperature = tgui_input_number(usr, "What temperature would you like the system to mantain? (Capped between [min_temperature] and [max_temperature]C)", "Thermostat Controls", target_temperature - T0C, max_temperature, min_temperature, round_value = FALSE)
 		if(isnum(input_temperature))
 			if(input_temperature > max_temperature || input_temperature < min_temperature)
 				to_chat(usr, "Temperature must be between [min_temperature]C and [max_temperature]C")
@@ -706,13 +706,13 @@
 	// Yes, this is kinda snowflaky; however, I would argue it would be far more snowflakey
 	// to include "custom hrefs" and all the other bullshit that nano states have just for the
 	// like, two UIs, that want remote access to other UIs.
-	if((locked && !issilicon(usr) && !istype(state, /datum/tgui_state/air_alarm_remote)) || (issilicon(usr) && aidisabled))
+	if((locked && !(siliconaccess(usr) || (isobserver(usr) && is_admin(usr))) && !istype(state, /datum/tgui_state/air_alarm_remote)) || (issilicon(usr) && aidisabled)) //CHOMPedit borg access
 		return
 
 	var/device_id = params["id_tag"]
 	switch(action)
 		if("lock")
-			if(issilicon(usr) && !wires.is_cut(WIRE_IDSCAN))
+			if((siliconaccess(usr) && !wires.is_cut(WIRE_IDSCAN)) || (isobserver(usr) && is_admin(usr))) //CHOMPEdit borg access + admin acces
 				locked = !locked
 				. = TRUE
 		if( "power",
@@ -748,7 +748,7 @@
 			var/env = params["env"]
 
 			var/name = params["var"]
-			var/value = tgui_input_number(usr, "New [name] for [env]:", name, TLV[env][name])
+			var/value = tgui_input_number(usr, "New [name] for [env]:", name, TLV[env][name], min_value=-1, round_value = FALSE)
 			if(!isnull(value) && !..())
 				if(value < 0)
 					TLV[env][name] = -1
@@ -820,7 +820,7 @@
 	if(alarm_deconstruction_wirecutters(user, W))
 		return
 
-	if(istype(W, /obj/item/weapon/card/id) || istype(W, /obj/item/device/pda))// trying to unlock the interface with an ID card
+	if(istype(W, /obj/item/card/id) || istype(W, /obj/item/pda))// trying to unlock the interface with an ID card
 		togglelock()
 	return ..()
 
@@ -831,9 +831,9 @@
 	else
 		if(allowed(usr) && !wires.is_cut(WIRE_IDSCAN))
 			locked = !locked
-			to_chat(user, "<span class='notice'>You [locked ? "lock" : "unlock"] the Air Alarm interface.</span>")
+			to_chat(user, span_notice("You [locked ? "lock" : "unlock"] the Air Alarm interface."))
 		else
-			to_chat(user, "<span class='warning'>Access denied.</span>")
+			to_chat(user, span_warning("Access denied."))
 		return
 
 /obj/machinery/alarm/AltClick()
@@ -877,3 +877,21 @@
 #undef LOAD_TLV_VALUES
 #undef TEST_TLV_VALUES
 #undef DECLARE_TLV_VALUES
+
+#undef AALARM_MODE_SCRUBBING
+#undef AALARM_MODE_REPLACEMENT
+#undef AALARM_MODE_PANIC
+#undef AALARM_MODE_CYCLE
+#undef AALARM_MODE_FILL
+#undef AALARM_MODE_OFF
+
+#undef AALARM_SCREEN_MAIN
+#undef AALARM_SCREEN_VENT
+#undef AALARM_SCREEN_SCRUB
+#undef AALARM_SCREEN_MODE
+#undef AALARM_SCREEN_SENSORS
+
+#undef AALARM_REPORT_TIMEOUT
+
+#undef MAX_TEMPERATURE
+#undef MIN_TEMPERATURE

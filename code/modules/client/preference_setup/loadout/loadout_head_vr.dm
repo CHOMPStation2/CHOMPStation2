@@ -25,7 +25,7 @@
 /datum/gear/head/detective_alt
 	display_name = "cyberscope headgear, detective"
 	path = /obj/item/clothing/head/helmet/detective_alt
-	allowed_roles = list("Head of Security", "Detective")
+	allowed_roles = list(JOB_HEAD_OF_SECURITY, JOB_DETECTIVE)
 
 /datum/gear/head/bearpelt
 	display_name = "animal pelt selection"
@@ -92,3 +92,9 @@ Talon hats
 /datum/gear/head/tiny_tophat
 	display_name = "tiny tophat"
 	path = /obj/item/clothing/head/tinytophat
+
+//Replikant hat
+
+/datum/gear/head/eulrhat
+	display_name = "Sleek side cap"
+	path = /obj/item/clothing/head/eulrhat

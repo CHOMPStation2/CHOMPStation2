@@ -12,7 +12,7 @@ var/induromol_code = rand(1, 50)
 
 	//called by phorochemputer.dm, returns special message upon creating reagent
 	//mostly dangerous initial reactions, to ensure protective gear is worn
-	proc/initial_reaction(var/obj/item/weapon/reagent_containers/container, var/turf/T, var/volume, var/message)
+	proc/initial_reaction(var/obj/item/reagent_containers/container, var/turf/T, var/volume, var/message)
 		if(reagent_state == GAS)
 			return "WARNING: Gaseous reaction detected! Repeating reaction inadvisable."
 		return message
@@ -130,14 +130,14 @@ var/induromol_code = rand(1, 50)
 						love_name = H.name
 
 				if(love_name)
-					to_chat(M, "<font color='#e3209b'>You see [love_name]...</font>")
+					to_chat(M, span_darkpink("You see [love_name]..."))
 					spawn(0)
 						sleep(10)
-						to_chat(M, "<font color='#e3209b'>They are beautiful</font>")
+						to_chat(M, span_darkpink("They are beautiful"))
 
 						if(M.mind) //give protect objective
 							var/datum/objective/protection = new/datum/objective()
-							protection.explanation_text = "<font color='#e3209b'>Protect [love_name] at all costs</font>"
+							protection.explanation_text = span_darkpink("Protect [love_name] at all costs")
 							M.mind.objectives.Add(protection)
 							var/obj_count = 1
 							to_chat(M, "<span class='notice'>Your current objectives:</span>")
@@ -155,10 +155,10 @@ var/induromol_code = rand(1, 50)
 						"[love_name] seems to be the essence of perfection",
 						"[love_name] can never be allowed to leave your side")
 
-						to_chat(M, "<font color='#e3209b'>[pick(love_messages)]</font>")
+						to_chat(M, span_darkpink("[pick(love_messages)]"))
 
 					else
-						to_chat(M, "<font color='#e3209b'>You begin to build a trouser tent</font>")
+						to_chat(M, span_darkpink("You begin to build a trouser tent"))
 	return ..()
 
 /datum/reagent/phororeagent/love_potion/on_remove(var/atom/A)
@@ -214,7 +214,7 @@ var/induromol_code = rand(1, 50)
 				to_chat(M, "<BR>")
 				break
 
-/obj/item/weapon/reagent_containers/glass/beaker/lovepotion
+/obj/item/reagent_containers/glass/beaker/lovepotion
 	name = "beaker (amorapotio)"
 	prefill = list("amorapotio" = 60)
 
@@ -263,8 +263,8 @@ var/induromol_code = rand(1, 50)
 	var/mob/living/carbon/human/immune
 	for(var/mob/living/carbon/human/H in viewers(T, 2))
 		var/distTo = sqrt(((T.x - H.x) ** 2) + ((T.y - H.y) ** 2))
-		if(distTo < dist && (istype(H.l_hand, /obj/item/weapon/reagent_containers) || \
-				 istype(H.r_hand, /obj/item/weapon/reagent_containers)))
+		if(distTo < dist && (istype(H.l_hand, /obj/item/reagent_containers) || \
+				 istype(H.r_hand, /obj/item/reagent_containers)))
 			immune = H //so reagent spill does not affect user, they already threw up when it was created
 
 	src = null
@@ -296,7 +296,7 @@ var/induromol_code = rand(1, 50)
 							H.lastpuke = 0
 					//	return ..()
 
-/datum/reagent/phororeagent/nasty/initial_reaction(var/obj/item/weapon/reagent_containers/container, var/turf/T, var/volume, var/message)
+/datum/reagent/phororeagent/nasty/initial_reaction(var/obj/item/reagent_containers/container, var/turf/T, var/volume, var/message)
 	for(var/mob/living/carbon/human/H in viewers(T, 7))
 		H << "<span class='warning'>There is something about the reagent from the telepad you find absolutely repulsive.</span>"
 		H.vomit()
@@ -652,9 +652,9 @@ var/induromol_code = rand(1, 50)
 		soapfoam.set_up(12, T, cleaner, 0)
 		soapfoam.start()
 		sleep(50)
-		var/list/soaps = typesof(/obj/item/weapon/soap)// - /obj/item/weapon/soap/fluff/azare_siraj_1
+		var/list/soaps = typesof(/obj/item/soap)// - /obj/item/soap/fluff/azare_siraj_1
 		var/soap_type = pick(soaps)
-		var/obj/item/weapon/soap/S = new soap_type()
+		var/obj/item/soap/S = new soap_type()
 		S.loc = T
 		if(volume >= 50)
 			volume -= 50
@@ -795,7 +795,7 @@ var/induromol_code = rand(1, 50)
 	description = "Creates an unstable electrical field between molecules"
 	color = "#F5EF38"
 
-/datum/reagent/phororeagent/energized_phoron/initial_reaction(var/obj/item/weapon/reagent_containers/container, var/turf/T, var/volume, var/message)
+/datum/reagent/phororeagent/energized_phoron/initial_reaction(var/obj/item/reagent_containers/container, var/turf/T, var/volume, var/message)
 	empulse(T, round(volume / 8), round(volume / 5), 1)
 	src = null
 	spawn(1)
@@ -837,7 +837,7 @@ var/induromol_code = rand(1, 50)
 	description = "Exhibits strange electromagnetic properties"
 	color = "#5D505E"
 
-/datum/reagent/phororeagent/obscuritol/initial_reaction(var/obj/item/weapon/reagent_containers/container, var/turf/T, var/volume, var/message)
+/datum/reagent/phororeagent/obscuritol/initial_reaction(var/obj/item/reagent_containers/container, var/turf/T, var/volume, var/message)
 	var/obj/machinery/light/L
 	for(var/obj/machinery/light/light in orange(3, T))
 		if(light.status != 2) //LIGHT_BROKEN
@@ -954,7 +954,7 @@ var/induromol_code = rand(1, 50)
 /datum/reagent/phororeagent/gaseous
 	reagent_state = GAS
 
-/datum/reagent/phororeagent/gaseous/initial_reaction(var/obj/item/weapon/reagent_containers/container, var/turf/T, var/volume, var/message)
+/datum/reagent/phororeagent/gaseous/initial_reaction(var/obj/item/reagent_containers/container, var/turf/T, var/volume, var/message)
 	var/datum/effect/effect/system/smoke_spread/chem/effect = new/datum/effect/effect/system/smoke_spread/chem()
 	var/datum/reagents/R = new/datum/reagents()
 	R.my_atom = container

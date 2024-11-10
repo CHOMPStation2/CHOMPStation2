@@ -1,0 +1,321 @@
+2024-03-01:
+  TheCaramelion:
+  - balance: Halved the max time Infected Room event gets announced
+  - balance: More mucus per trigger of Infected Room event
+  - bugfix: Infected Room event picking maints as valid area
+  - bugfix: Incorrect announcement level for Infected Room event
+  Upstream:
+  - balance: reduces the loss rate from 35\~45% to 20\~25% of the smart stoage
+  - balance: increases the sheet maxcap from 250 to ~~400~~ 500 of the smart stoage
+  - balance: adds a minimum threshold of 20 to sheet culling to the smart stoage
+2024-03-02:
+  ItsSelis:
+  - qol: Updates DCS backend code.
+  Raeschen:
+  - bugfix: observer_move applied on init (if in a mob) as well as enter and exit
+  SpadesNeil:
+  - refactor: Improves dev sanity by moving values where they should belong.
+  - balance: Reverts excessively high digestion damage values. Will use fallback values,
+      which right now are 0.5 brute 0.5 burn per gurgle tick.
+  - balance: Allows digestion chance on struggle.
+  - balance: Tiny nerf to escape chance because I feel like it.
+  - balance: Allows snakes to bump nom mobs in the same faction.
+  - balance: Snakes digest by default now, except for Noodle, who will hold instead.
+  - balance: Snake bellies now digest food items.
+  - rscadd: Added idle belly emotes.
+  - rscadd: Added struggle emotes.
+  - bugfix: Various tweaks and fixes to remove redundant code.
+  TheCaramelion:
+  - rscadd: Dry Agent reagent
+  - rscadd: Dry galoshes
+2024-03-03:
+  FluffMedic:
+  - bugfix: fix active edges in a few POIS
+  ItsSelis:
+  - qol: Improved some of the dreaming code including it's strings.
+  - qol: Timer subsystem update.
+  Raeschen:
+  - bugfix: Fixes being able to permanently heat up the wilderness/the valley
+  - bugfix: Gargoyle del runtime
+  - bugfix: chatmessage runtime
+  - bugfix: nif runtime
+  - bugfix: tgui runtimes (status and mob logout)
+  - bugfix: globals referencing order mistake in SSmachines
+  - bugfix: Upgrades Timsort
+  - bugfix: Upgrades machinery SS a little in structure
+  - bugfix: Expands find_references functionality with a few extra debug modes
+  - bugfix: A typo in atmos pipes
+  - bugfix: Some CALLs to LIBCALL
+  - bugfix: fixed landmine sprites
+  TheCaramelion:
+  - rscadd: Crawling.
+  - qol: Laying down won't make you drop items in your hands.
+  - qol: You can now equip/unequip items while laying down.
+  Upstream:
+  - rscadd: Added Cascade mode for resonators.
+2024-03-04:
+  Darlantanis:
+  - rscadd: Turfs now support different species footstep sounds
+  - rscadd: Adds new default step sounds for tesharii
+  Raeschen:
+  - bugfix: tickets clientlogout null
+  - bugfix: rig parts severe hard del
+  - bugfix: protean rig hard dels
+  - bugfix: fixed a few more tgui runtimes
+  - bugfix: fixed bigdragon runtime
+  - bugfix: fixed runechat runtime
+  - bugfix: explotable info runtime on obj (usually implants)
+  - bugfix: belly reagent massive runtime
+  - bugfix: cryopod runtime on mobs without mind datums
+  - bugfix: TTS runtime
+  - bugfix: couple of TGUI runtimes (send_full_update, pen
+  - bugfix: obj/belly runtime on cryo
+  - refactor: tweaked client Del -> Destroy behavior
+  Upstream:
+  - bugfix: Fixed a few number inputs to allow floats on the sensor-, helm- and engine
+      console.
+2024-03-05:
+  ItsSelis:
+  - rscdel: Disables some non-essential sounds that would have played on april 1st.
+2024-03-07:
+  Raeschen:
+  - bugfix: various reversions and touchups
+  Verkister:
+  - bugfix: Fixed voremobs not eating pounced mobs.
+2024-03-08:
+  Kashargul:
+  - bugfix: fixed an exploit to reform outside of a belly
+  - bugfix: ooc panel style button showing for others than oneself
+  cadyn:
+  - balance: nerf the shit out of cyanide
+2024-03-09:
+  Raeschen:
+  - bugfix: fixed shuttles not having roofs
+  - bugfix: runtimes
+  - bugfix: fixed ascending through floors
+  cadyn:
+  - code_imp: recursive listening now is a component
+2024-03-10:
+  ItsSelis:
+  - rscadd: VSCode will now show a warning prompt if trying to push a commit to the
+      master branch.
+2024-03-11:
+  ItsSelis:
+  - code_imp: A warning will now be shown that the byond version is outdated if trying
+      to compile the 515 code with 514.
+  Missile597:
+  - rscadd: Added a light replacer in the engineering tools area so you don't have
+      to run all the way to the carrier to fix lights easier anymore
+  - qol: Swapped the solar crate and radiation crate around in engineering storage
+      so the lead is easier to get to. Cause let's be honest, the solar crate is less
+      often used and a pain to move out of the way every round
+  - qol: Swapped the CO2 and Phoron canister start locations around in the carrier
+      R-UST, to make the locations closer to where they're supposed to be and so _certain_
+      engineers don't go blowing up the R-UST with phoron in the hot loop
+  Raeschen:
+  - bugfix: Organ/limb removal on explosion runtime
+  - bugfix: infinite EMP mine recursion
+  - bugfix: holodeck, shootspeed and toggle_active target runtime
+2024-03-12:
+  Aroliacue:
+  - rscadd: Added Viper Combat Armor, a low-tier fluff armor based on Viper Armor
+      from XCOM 2.
+  - rscadd: Added new 'Breasts' markings. Same shape as the standard human ones we
+      already have, but with minor thickness on the side sprites too. Comes in three
+      variants - Standard, Smooth and Reptile.
+  - rscadd: The Naga Alt 3-colour striped taur tail now has a vore sprite.
+  - bugfix: Repathed Naga Alt 3-colour tailsprites, ensuring they'll work with all
+      Naga suits.
+  - image: Added Viper Combat Armor and Breasts sprites.
+  Kashargul:
+  - bugfix: icons duplicating in the vorepanel
+  Raeschen:
+  - qol: Blacklist radio channels from ghost-radio (Entertainment, bodycams)
+  - bugfix: fixed errant red pixels on sergals, visible with digilegs
+  theXDkidoflol:
+  - image: New moth wing types
+2024-03-13:
+  Aroliacue:
+  - image: Fixed Viper Suit sprite being off-center by one pixel.
+  - image: Fixed a bunch of Snake Alt Suitsprites not being displayed properly.
+  ItsSelis:
+  - rscadd: Added stack_end_detector to the master controller
+  - rscadd: Added warning how many times a specific subsystem had slept
+  - rscadd: Linter will now show an error if the subsystem ignite proc is overridden
+  - qol: Changed seed generation
+  - admin: Check Player Attack/Dialog logs, Gib, Resize and Cryo player are now using
+      tgui_input_list's
+  - qol: A few global vars are now properly managed
+  - admin: The loaded whitelists can be now edited in-game (so that players can be
+      whitelisted before the round has to be restarted)
+  TheCaramelion:
+  - bugfix: Stunned effect allowing you to move
+  cadyn:
+  - bugfix: fix icons
+2024-03-14:
+  Aroliacue:
+  - balance: Field Medics no longer have pilot, chemistry or surgery access by default.
+2024-03-15:
+  Kashargul:
+  - bugfix: readds the updated inputs to the right click verbs again (one limitation,
+      on self will always open the tgui selection)
+  Raeschen:
+  - bugfix: fixed a runtime in soundloop
+  - bugfix: Fixes a runtime and makes chat tags (OOC, LOOC, ect) use a cache properly.
+  - bugfix: Job restriction bypass at roundstart
+  - bugfix: fix a cabling mistake in hangar 2
+  TheCaramelion:
+  - balance: Modified Ion Storm requirements to be more common
+  cadyn:
+  - rscadd: Nanomap now renders non-tile objects
+2024-03-16:
+  Raeschen:
+  - rscadd: RLOOC tagging/class
+  ReoDaProtovali:
+  - qol: Makes throw notifications only appear if your pref says yes
+  - rscadd: Added more emotes to synx
+  - rscadd: Added wawa to the wawa-ers
+  TheCaramelion:
+  - bugfix: Broken canisters staying attached to the port
+  - bugfix: Being able to attach broken canisters to ports
+  - rscadd: Balloon Alerts
+  - rscadd: Brand Intelligence machines use Ballon Alerts to speak
+  - rscadd: Balloon Alerts for surgery steps, taste and transferring reagents
+2024-03-17:
+  Kashargul:
+  - bugfix: fixes an issue where the vorebelly contents did not collapse to a list
+      as supposed to for more than 21 ingested items
+  - bugfix: fixes the assets on the chemSynthesizer being not properly initialized
+  - bugfix: fixes ntos icon direct loading on crew monitor
+  - bugfix: finally should resolve all our ntos icon cases
+  Raeschen:
+  - rscadd: Allow digitigrade legs for shadekin
+  - bugfix: nuke bad .procs in callbacks
+  TheCaramelion:
+  - balance: Adds the taste back to normal chat
+  - bugfix: Fulton beacons won't be sent to CentCom
+2024-03-18:
+  Kashargul:
+  - admin: adds an new verb that allows to use tgui inputs on some existing verbs
+  - bugfix: fixed and issue that prevents pulling objects through stairs
+  Raeschen:
+  - bugfix: fixed a couple runtimes related to bellies
+  - bugfix: chemmaster runtime
+2024-03-19:
+  Kashargul:
+  - bugfix: fixes an issue where closing the prompt clears the ooc note section (favs
+      / maybes)
+  Raeschen:
+  - bugfix: fixed upsidedown cargo console
+2024-03-20:
+  Raeschen:
+  - refactor: Remove obj/machinery recursivemove placement + signal registration as
+      a default, instead an optional
+  cadyn:
+  - rscadd: movement smoothing
+  - config: 40fps time
+2024-03-22:
+  Kashargul:
+  - code_imp: converts some more bicons into icon2html
+  - rscdel: tgui_ch
+  TheCaramelion:
+  - rscadd: Use a vial on mucus to take virus samples
+  - balance: Stepping or interacting with mucus/blood/vomit might infect you, if it
+      has viruses
+  - qol: Autoinjectors can now be picked up with the chemistry bag
+  - bugfix: Runtime when Infected Room event triggered
+  - bugfix: Phased shadekins being able to be attacked
+  - bugfix: Bump should ignore phased shadekins now
+  - bugfix: Smoke won't make creatures without lungs cough
+  tacoguy7765093:
+  - balance: Non-CE blueprint charges buffed from 10 -> 25
+2024-03-23:
+  Missile597:
+  - bugfix: fixed stinky invalid direction argument on a wire causing tcomms to not
+      be connected to the power grid. I love dir :)
+  ReoDaProtovali:
+  - rscadd: Teppi speak Teppi again
+  TheCaramelion:
+  - bugfix: Phased kins won't stop people from moving
+2024-03-24:
+  ItsSelis:
+  - qol: Updated styling for admin ooc announcements (Special Verbs > Announce).
+  Kashargul:
+  - bugfix: fixes a wrong glass type given out on a quick selection on the RSF
+  - bugfix: adminjump
+  Raeschen:
+  - bugfix: Black tiles at CC
+  - rscdel: Revert combat refactor magazine sizes
+  - rscadd: '''turfpacks'' system for mappers'
+  ReoDaProtovali:
+  - bugfix: Fixed Micros getting stuck in disposal bins without making every other
+      object you try to put in disposal bins explode
+  TheCaramelion:
+  - bugfix: Borg pounce changed to stun
+2024-03-25:
+  Kashargul:
+  - code_imp: reduces logging
+  - bugfix: dark_maws now dispel properly and have their references cleared
+  - bugfix: dark_maw can no longer be used without costing energy
+  Raeschen:
+  - rscadd: Ghost-follow glides with the target
+  cadyn:
+  - rscadd: TGPanel (cred Selis for port)
+2024-03-26:
+  Kashargul:
+  - bugfix: mecha turret targeting
+  Raeschen:
+  - bugfix: pulsar runtime
+  - bugfix: attempt to fix some ref sources in mob/living and mob/observer/eye
+  - bugfix: broodspiders hard del
+  cadyn:
+  - refactor: refactored orbit code to be less horrible
+  - bugfix: protean powers not showing up when blob form
+2024-03-28:
+  Kashargul:
+  - bugfix: a lot of non rendered icons, especially atmos icons.
+  - bugfix: changing force south to living only due to multiple issues
+  - bugfix: misc panel updating every tick
+  - bugfix: shadekin simple_mob button texts not respecting energy
+  - bugfix: wrong pathing in tgfont, thanks to @cadyn for pointing it out
+  - bugfix: borg chat icons
+  - rscdel: dangerous calls inside the statpanel
+  TheCaramelion:
+  - rscadd: Re-Enabled Aurora Caelus and Space Dust event
+  - rscadd: Two new Ion Laws
+  - rscdel: Commented out a weird ion law
+  TheGreatKitsune:
+  - rscadd: Catslug is now an option on the basic metamorph raygun
+  Virgo113:
+  - sound: New jukebox song
+  cadyn:
+  - bugfix: asset issues that broke chat tags
+  - code_imp: play_sound and porta_turret optimizations
+2024-03-29:
+  Kashargul:
+  - bugfix: missing target in a balloon alert
+  - bugfix: some mecha runtimes
+  - rscadd: adds the ability to customize the "encase in egg" egg size between 25
+      and 200% or keep it at 0 for automatic calculation from 25 to 100%
+  Raeschen:
+  - rscadd: Added *clap sound
+  - rscadd: Added huuuaaaa
+  tacoguy7765093:
+  - rscadd: Added VR spawnpoint for a VR mall.
+  - rscdel: Removed space POI section in VR construct
+2024-03-30:
+  ItsSelis:
+  - qol: Subsystems return a status value after initializing
+  - rscadd: Added verb manager subsystem
+  - rscadd: Added speech controller subsystem
+  - qol: Topics to deleted things get discarded
+  Kashargul:
+  - bugfix: addition for our code to ensure AI prefs are synced between shells and
+      bellies loaded on first deploy
+  Raeschen:
+  - bugfix: statpanel runtimes
+  - bugfix: mob holder runtime
+2024-03-31:
+  ItsSelis:
+  - admin: The stats of Verb Manager and Speech Controller now show inside of the
+      MC tab.

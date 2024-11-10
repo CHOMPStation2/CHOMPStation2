@@ -62,9 +62,15 @@
 //
 
 /datum/action/innate/mecha
-	check_flags = AB_CHECK_RESTRAINED | AB_CHECK_STUNNED | AB_CHECK_ALIVE
+	check_flags = AB_CHECK_RESTRAINED | AB_CHECK_STUNNED | AB_CHECK_CONSCIOUS
+	background_icon = 'icons/effects/actions_mecha.dmi'
 	button_icon = 'icons/effects/actions_mecha.dmi'
+	overlay_icon = 'icons/effects/actions_mecha.dmi'
 	var/obj/mecha/chassis
+
+/datum/action/innate/mecha/Destroy()
+	chassis = null
+	return ..()
 
 /datum/action/innate/mecha/Grant(mob/living/L, obj/mecha/M)
 	if(M)
@@ -78,7 +84,7 @@
 
 /datum/action/innate/mecha/mech_toggle_lights/Activate()
 	button_icon_state = "mech_lights_[chassis.lights ? "off" : "on"]"
-	button.UpdateIcon()
+	build_all_button_icons()
 	chassis.lights()
 
 
@@ -89,7 +95,7 @@
 
 /datum/action/innate/mecha/mech_toggle_internals/Activate()
 	button_icon_state = "mech_internals_[chassis.use_internal_tank ? "off" : "on"]"
-	button.UpdateIcon()
+	build_all_button_icons()
 	chassis.internal_tank()
 
 
@@ -118,7 +124,7 @@
 
 /datum/action/innate/mecha/strafe/Activate()
 	button_icon_state = "mech_strafe_[chassis.strafing ? "off" : "on"]"
-	button.UpdateIcon()
+	build_all_button_icons()
 	chassis.strafing()
 
 
@@ -129,7 +135,7 @@
 
 /datum/action/innate/mecha/mech_defence_mode/Activate()
 	button_icon_state = "mech_defense_mode_[chassis.defence_mode ? "off" : "on"]"
-	button.UpdateIcon()
+	build_all_button_icons()
 	chassis.defence_mode()
 
 
@@ -140,7 +146,7 @@
 
 /datum/action/innate/mecha/mech_overload_mode/Activate()
 	button_icon_state = "mech_overload_[chassis.overload ? "off" : "on"]"
-	button.UpdateIcon()
+	build_all_button_icons()
 	chassis.overload()
 
 
@@ -151,7 +157,7 @@
 
 /datum/action/innate/mecha/mech_smoke/Activate()
 	//button_icon_state = "mech_smoke_[chassis.smoke ? "off" : "on"]"
-	//button.UpdateIcon()	//Dual colors notneeded ATM
+	//build_all_button_icons()	//Dual colors notneeded ATM
 	chassis.smoke()
 
 
@@ -162,7 +168,7 @@
 
 /datum/action/innate/mecha/mech_zoom/Activate()
 	button_icon_state = "mech_zoom_[chassis.zoom ? "off" : "on"]"
-	button.UpdateIcon()
+	build_all_button_icons()
 	chassis.zoom()
 
 
@@ -173,7 +179,7 @@
 
 /datum/action/innate/mecha/mech_toggle_thrusters/Activate()
 	button_icon_state = "mech_thrusters_[chassis.thrusters ? "off" : "on"]"
-	button.UpdateIcon()
+	build_all_button_icons()
 	chassis.thrusters()
 
 
@@ -195,10 +201,10 @@
 		return
 	if(!chassis.selected)
 		chassis.selected = available_equipment[1]
-		chassis.occupant_message("You select [chassis.selected]") 
+		chassis.occupant_message("You select [chassis.selected]")
 		send_byjax(chassis.occupant,"exosuit.browser","eq_list",chassis.get_equipment_list())
 		button_icon_state = "mech_cycle_equip_on"
-		button.UpdateIcon()
+		build_all_button_icons()
 		return
 	var/number = 0
 	for(var/A in available_equipment)
@@ -213,7 +219,7 @@
 				chassis.occupant_message("You switch to [chassis.selected]")
 				button_icon_state = "mech_cycle_equip_on"
 			send_byjax(chassis.occupant,"exosuit.browser","eq_list",chassis.get_equipment_list())
-			button.UpdateIcon()
+			build_all_button_icons()
 			return
 
 
@@ -228,7 +234,7 @@
 
 	button_icon_state = "mech_damtype_[chassis.damtype]"
 	playsound(src, 'sound/mecha/mechmove01.ogg', 50, 1)
-	button.UpdateIcon()
+	build_all_button_icons()
 	chassis.query_damtype()
 
 
@@ -239,7 +245,7 @@
 
 /datum/action/innate/mecha/mech_toggle_phasing/Activate()
 	button_icon_state = "mech_phasing_[chassis.phasing ? "off" : "on"]"
-	button.UpdateIcon()
+	build_all_button_icons()
 	chassis.phasing()
 
 
@@ -250,7 +256,7 @@
 
 /datum/action/innate/mecha/mech_toggle_cloaking/Activate()
 	button_icon_state = "mech_phasing_[chassis.cloaked ? "off" : "on"]"
-	button.UpdateIcon()
+	build_all_button_icons()
 	chassis.toggle_cloaking()
 
 
@@ -277,10 +283,10 @@
 	defence_mode = !defence_mode
 	if(defence_mode)
 		deflect_chance = defence_deflect
-		src.occupant_message("<font color='blue'>You enable [src] defence mode.</font>")
+		src.occupant_message(span_blue("You enable [src] defence mode."))
 	else
 		deflect_chance = initial(deflect_chance)
-		src.occupant_message("<font color='red'>You disable [src] defence mode.</font>")
+		src.occupant_message(span_red("You disable [src] defence mode."))
 	src.log_message("Toggled defence mode.")
 	return
 
@@ -299,17 +305,17 @@
 	if(usr!=src.occupant)
 		return
 	if(health < initial(health) - initial(health)/3)//Same formula as in movement, just beforehand.
-		src.occupant_message("<font color='red'>Leg actuators damage critical, unable to engage overload.</font>")
+		src.occupant_message(span_red("Leg actuators damage critical, unable to engage overload."))
 		overload = 0	//Just to be sure
 		return
 	if(overload)
 		overload = 0
 		step_energy_drain = initial(step_energy_drain)
-		src.occupant_message("<font color='blue'>You disable leg actuators overload.</font>")
+		src.occupant_message(span_blue("You disable leg actuators overload."))
 	else
 		overload = 1
 		step_energy_drain = step_energy_drain*overload_coeff
-		src.occupant_message("<font color='red'>You enable leg actuators overload.</font>")
+		src.occupant_message(span_red("You enable leg actuators overload."))
 	src.log_message("Toggled leg actuators overload.")
 	playsound(src, 'sound/mecha/mechanical_toggle.ogg', 50, 1)
 	return
@@ -327,12 +333,12 @@
 		return
 
 	if(smoke_reserve < 1)
-		src.occupant_message("<font color='red'>You don't have any smoke left in stock!</font>")
+		src.occupant_message(span_red("You don't have any smoke left in stock!"))
 		return
 
 	if(smoke_ready)
 		smoke_reserve--	//Remove ammo
-		src.occupant_message("<font color='red'>Smoke fired. [smoke_reserve] usages left.</font>")
+		src.occupant_message(span_red("Smoke fired. [smoke_reserve] usages left."))
 
 		var/datum/effect/effect/system/smoke_spread/smoke = new /datum/effect/effect/system/smoke_spread()
 		smoke.attach(src)
@@ -360,7 +366,10 @@
 	if(src.occupant.client)
 		src.zoom = !src.zoom
 		src.log_message("Toggled zoom mode.")
-		src.occupant_message("<font color='[src.zoom?"blue":"red"]'>Zoom mode [zoom?"en":"dis"]abled.</font>")
+		if(src.zoom)
+			src.occupant_message(span_blue("Zoom mode enabled."))
+		else
+			src.occupant_message(span_red("Zoom mode disabled."))
 		if(zoom)
 			src.occupant.set_viewsize(12)
 			src.occupant << sound('sound/mecha/imag_enh.ogg',volume=50)
@@ -384,7 +393,10 @@
 		if(get_charge() > 0)
 			thrusters = !thrusters
 			src.log_message("Toggled thrusters.")
-			src.occupant_message("<font color='[src.thrusters?"blue":"red"]'>Thrusters [thrusters?"en":"dis"]abled.</font>")
+			if(src.thrusters)
+				src.occupant_message(span_blue("Thrusters enabled."))
+			else
+				src.occupant_message(span_red("Thrusters disabled."))
 	return
 
 
@@ -400,6 +412,8 @@
 	if(usr!=src.occupant)
 		return
 	var/new_damtype = tgui_alert(src.occupant,"Melee Damage Type","Damage Type",list("Brute","Fire","Toxic"))
+	if(!new_damtype)
+		return
 	switch(new_damtype)
 		if("Brute")
 			damtype = "brute"
@@ -427,7 +441,10 @@
 		return
 	phasing = !phasing
 	send_byjax(src.occupant,"exosuit.browser","phasing_command","[phasing?"Dis":"En"]able phasing")
-	src.occupant_message("<font color=\"[phasing?"#00f\">En":"#f00\">Dis"]abled phasing.</font>")
+	if(phasing)
+		src.occupant_message(span_blue("Enabled phasing."))
+	else
+		src.occupant_message(span_red("Disabled phasing."))
 	return
 
 
@@ -447,7 +464,10 @@
 	else
 		cloak()
 
-	src.occupant_message("<font color=\"[cloaked?"#00f\">En":"#f00\">Dis"]abled cloaking.</font>")
+	if(cloaked)
+		src.occupant_message(span_blue("Enabled cloaking."))
+	else
+		src.occupant_message(span_red("Disabled cloaking."))
 	return
 
 /obj/mecha/verb/toggle_weapons_only_cycle()
@@ -461,5 +481,8 @@
 	if(usr!=src.occupant)
 		return
 	weapons_only_cycle = !weapons_only_cycle
-	src.occupant_message("<font color=\"[weapons_only_cycle?"#00f\">En":"#f00\">Dis"]abled weapons only cycling.</font>")
+	if(weapons_only_cycle)
+		src.occupant_message(span_blue("Enabled weapons only cycling."))
+	else
+		src.occupant_message(span_red("Disabled weapons only cycling."))
 	return
