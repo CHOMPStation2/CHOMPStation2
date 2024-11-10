@@ -157,6 +157,18 @@
 	mappath = "maps/gateway_vr/wildwest.dmm"
 
 // Redgate submaps go here, taken straight up from virgo
+
+#ifdef AWAY_MISSION_TEST
+#include "redgate/cybercity.dmm"
+#include "redgate/falls.dmm"
+#include "redgate/fantasy_dungeon.dmm"
+#include "redgate/fantasy.dmm"
+#include "redgate/hotsprings.dmm"
+#include "redgate/jungle_underground.dmm"
+#include "redgate/jungle.dmm"
+#include "redgate/stardog.dmm"
+#endif
+
 /datum/map_template/thor_lateload/redgate
 	name = "Redgate Submap"
 	desc = "Please do not use this."
