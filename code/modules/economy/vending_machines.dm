@@ -501,17 +501,13 @@
 					/obj/item/flash = 5,
 					/obj/item/reagent_containers/food/snacks/donut/plain = 6,
 					/obj/item/reagent_containers/food/snacks/donut/plain/jelly = 6,
-<<<<<<< HEAD
-					/obj/item/storage/box/evidence = 6, // CHOMPEdit
-					/obj/item/clothing/accessory/bodycam = 10) // CHOMPEdit
-=======
 					/obj/item/storage/box/evidence = 6,
 					/obj/item/gun/energy/taser = 8,
 					/obj/item/gun/energy/stunrevolver = 4,
 					/obj/item/reagent_containers/spray/pepper = 6,
 					/obj/item/taperoll/police = 6,
-					/obj/item/clothing/glasses/omnihud/sec = 6)
->>>>>>> 25da980123 (we really don't need initialize here (#16583))
+					/obj/item/clothing/glasses/omnihud/sec = 6,
+					/obj/item/clothing/accessory/bodycam = 10) // CHOMPAdd
 	contraband = list(/obj/item/clothing/glasses/sunglasses = 2,
 					/obj/item/storage/box/donut = 2,
 					/obj/item/implanter/compliance = 1)
