@@ -1,4 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - qol: "removed the redundant name/desc customize proc from the plain choker (just use name/desc gear tweaks instead)"

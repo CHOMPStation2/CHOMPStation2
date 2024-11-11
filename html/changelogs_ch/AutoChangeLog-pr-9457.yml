@@ -1,4 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - rscadd: "added contraband scanner machine, which can sound an alarm if you walk over it whilst carrying an illegal item"

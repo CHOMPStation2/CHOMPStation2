@@ -81,3 +81,10 @@
 2024-11-10:
   CHOMPStation2StaffMirrorBot:
   - qol: restored syndie headset sprites
+2024-11-11:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: added lockpicks, for opening simple_doors
+  - rscadd: added contraband scanner machine, which can sound an alarm if you walk
+      over it whilst carrying an illegal item
+  - qol: removed the redundant name/desc customize proc from the plain choker (just
+      use name/desc gear tweaks instead)
