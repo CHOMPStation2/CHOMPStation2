@@ -142,37 +142,21 @@ jobs:
         env:
           EXTRA_ARGS: "-DUNIT_TEST -D${{ matrix.map }}"
           RUN: "1"
-
-  extra_map_tests:
-    name: Map Tests
-    runs-on: ubuntu-22.04
-    steps:
-      - uses: actions/checkout@v4
-      - name: Ensure +x on CI directory
-        run: |
-          chmod -R +x ./tools/ci
-      - name: Restore BYOND Cache
-        uses: actions/cache@v4
-        with:
-          path: $HOME/byond
-          key: ${{ runner.os }}-byond
-      - name: Install BYOND
-        run: tools/ci/install_byond.sh
       - name: Compile POIs
         run: tools/ci/compile_and_run.sh
         env:
-          EXTRA_ARGS: "-DMAP_TEST"
+          EXTRA_ARGS: "-DMAP_TEST -D${{ matrix.map }}"
           RUN: "0"
       - name: Compile away missions
         run: tools/ci/compile_and_run.sh
         env:
-          EXTRA_ARGS: "-DAWAY_MISSION_TEST -DMAP_TEST"
+          EXTRA_ARGS: "-DAWAY_MISSION_TEST -D${{ matrix.map }}"
           RUN: "0"
 
   tests_successful:
     if: ( !contains(github.event.head_commit.message, '[ci skip]') )
     name: Integration Tests
-    needs: ['run_linters', 'dreamchecker', 'unit_tests', 'extra_map_tests']
+    needs: ['run_linters', 'dreamchecker', 'unit_tests']
     runs-on: ubuntu-22.04
     steps:
       - name: Report Success

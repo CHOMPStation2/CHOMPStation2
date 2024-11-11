@@ -72,3 +72,19 @@
   - qol: refactored headset IDs and misc. details, shouldn't be player-visible
   - rscadd: added "earbud" headsets, which are the same as normal ones but invisible
       on-mob
+2024-11-09:
+  Kashargul:
+  - code_imp: finishes up the cell cleanup
+  - rscadd: fixed a wrong sprite state in the cjhound fullness 1 icon
+  TheGreatKitsune:
+  - bugfix: Fixes a typo in text people will probably never see
+2024-11-10:
+  CHOMPStation2StaffMirrorBot:
+  - qol: restored syndie headset sprites
+2024-11-11:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: added lockpicks, for opening simple_doors
+  - rscadd: added contraband scanner machine, which can sound an alarm if you walk
+      over it whilst carrying an illegal item
+  - qol: removed the redundant name/desc customize proc from the plain choker (just
+      use name/desc gear tweaks instead)

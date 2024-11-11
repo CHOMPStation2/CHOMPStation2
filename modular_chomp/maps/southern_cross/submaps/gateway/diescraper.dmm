@@ -547,7 +547,7 @@
 /area/awaymission/diescraper/indoors/floor2)
 "bC" = (
 /obj/structure/table/reinforced,
-/obj/item/virusdish/random,
+/obj/item/reagent_containers/glass/bottle/culture/cold,
 /obj/item/defib_kit/loaded,
 /turf/unsimulated/floor/tiled/old_tile/blue,
 /area/awaymission/diescraper/indoors/floor8)
