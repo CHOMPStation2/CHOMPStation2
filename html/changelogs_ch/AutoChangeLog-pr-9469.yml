@@ -1,4 +1,0 @@
-author: "Kashargul"
-delete-after: True
-changes:
-  - maptweak: "fixes the sleep areas on SN to use the global defines"
