@@ -88,3 +88,8 @@
       over it whilst carrying an illegal item
   - qol: removed the redundant name/desc customize proc from the plain choker (just
       use name/desc gear tweaks instead)
+2024-11-12:
+  Kashargul:
+  - maptweak: fixes the sleep areas on SN to use the global defines
+  TomTyph:
+  - rscadd: Angel Halo hat in headgear loadout
