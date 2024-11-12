@@ -108,7 +108,6 @@
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/structure/grille,
-/obj/structure/window/basic/full,
 /obj/structure/window/basic,
 /obj/structure/window/basic{
 	dir = 8
@@ -192,13 +191,8 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
-/obj/structure/window/phoronreinforced/full,
-/obj/structure/window/phoronreinforced,
 /obj/structure/window/phoronreinforced{
 	dir = 8
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 1
 	},
 /obj/structure/window/phoronreinforced{
 	dir = 4
@@ -218,16 +212,12 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
 	},
 /obj/structure/window/titanium{
 	dir = 1
-	},
-/obj/structure/window/titanium{
-	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/hallway/Port_1Deck_Central_Corridor_1)
@@ -245,7 +235,9 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 8
+	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
 	frequency = 1380;
@@ -293,7 +285,6 @@
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/structure/grille,
-/obj/structure/window/basic/full,
 /obj/structure/window/basic,
 /obj/structure/window/basic{
 	dir = 8
@@ -452,13 +443,9 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
-	},
-/obj/structure/window/titanium{
-	dir = 1
 	},
 /obj/structure/window/titanium{
 	dir = 8
@@ -1047,6 +1034,19 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/dark,
 /area/quartermaster/Depot1)
+"afC" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/hallway/Star_1Deck_Central_Corridor_1)
 "afV" = (
 /obj/machinery/light{
 	dir = 1
@@ -1095,7 +1095,6 @@
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/structure/grille,
-/obj/structure/window/basic/full,
 /obj/structure/window/basic,
 /obj/structure/window/basic{
 	dir = 8
@@ -1293,13 +1292,9 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
-	},
-/obj/structure/window/titanium{
-	dir = 1
 	},
 /obj/structure/window/titanium{
 	dir = 8
@@ -1886,7 +1881,6 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
@@ -2167,13 +2161,9 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
-	},
-/obj/structure/window/titanium{
-	dir = 1
 	},
 /obj/structure/window/titanium{
 	dir = 8
@@ -2375,7 +2365,6 @@
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/structure/grille,
-/obj/structure/window/basic/full,
 /obj/structure/window/basic,
 /obj/structure/window/basic{
 	dir = 8
@@ -2536,7 +2525,6 @@
 /turf/simulated/wall/r_wall,
 /area/security/Quantum_Pad_Checkpoint)
 "anv" = (
-/obj/machinery/portable_atmospherics/powered/pump/huge,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
@@ -2544,6 +2532,7 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 8
 	},
+/obj/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/floor/tiled/dark,
 /area/harbor/Fueling_Storage)
 "anw" = (
@@ -2565,13 +2554,9 @@
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/structure/grille,
-/obj/structure/window/basic/full,
 /obj/structure/window/basic,
 /obj/structure/window/basic{
 	dir = 8
-	},
-/obj/structure/window/basic{
-	dir = 1
 	},
 /obj/structure/window/basic{
 	dir = 4
@@ -2741,11 +2726,7 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
-/obj/structure/window/titanium{
-	dir = 4
-	},
 /obj/structure/window/titanium{
 	dir = 1
 	},
@@ -2861,7 +2842,6 @@
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/structure/grille,
-/obj/structure/window/basic/full,
 /obj/structure/window/basic,
 /obj/structure/window/basic{
 	dir = 8
@@ -3031,13 +3011,8 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
-/obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
-	},
-/obj/structure/window/titanium{
-	dir = 1
 	},
 /obj/structure/window/titanium{
 	dir = 8
@@ -3046,10 +3021,10 @@
 /area/harbor/Dock3)
 "aqx" = (
 /obj/effect/floor_decal/industrial/hatch/blue,
-/obj/machinery/portable_atmospherics/powered/pump/huge,
 /obj/machinery/atmospherics/portables_connector{
 	dir = 4
 	},
+/obj/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/floor/plating,
 /area/maintenance/Distro_Harbor)
 "aqD" = (
@@ -3061,7 +3036,6 @@
 	icon_state = "0-2"
 	},
 /obj/structure/grille,
-/obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
 	dir = 1
 	},
@@ -3089,16 +3063,12 @@
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/structure/grille,
-/obj/structure/window/basic/full,
 /obj/structure/window/basic,
 /obj/structure/window/basic{
 	dir = 8
 	},
 /obj/structure/window/basic{
 	dir = 1
-	},
-/obj/structure/window/basic{
-	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/Public_Gateway)
@@ -3227,8 +3197,6 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
-/obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
 	},
@@ -3508,7 +3476,6 @@
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/structure/grille,
-/obj/structure/window/basic/full,
 /obj/structure/window/basic,
 /obj/structure/window/basic{
 	dir = 8
@@ -4087,16 +4054,12 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
 	},
 /obj/structure/window/titanium{
 	dir = 1
-	},
-/obj/structure/window/titanium{
-	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_ForPort_Corridor2)
@@ -4117,11 +4080,7 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
-/obj/structure/window/titanium{
-	dir = 4
-	},
 /obj/structure/window/titanium{
 	dir = 1
 	},
@@ -4564,16 +4523,9 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
 /obj/structure/window/titanium{
-	dir = 4
-	},
-/obj/structure/window/titanium{
 	dir = 1
-	},
-/obj/structure/window/titanium{
-	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/harbor/Dock1)
@@ -5051,13 +5003,8 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
-/obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
-	},
-/obj/structure/window/titanium{
-	dir = 1
 	},
 /obj/structure/window/titanium{
 	dir = 8
@@ -5109,12 +5056,8 @@
 	icon_state = "0-8"
 	},
 /obj/structure/grille,
-/obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
 	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 8
 	},
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
@@ -5216,11 +5159,7 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
-/obj/structure/window/titanium{
-	dir = 4
-	},
 /obj/structure/window/titanium{
 	dir = 1
 	},
@@ -5989,6 +5928,19 @@
 /obj/effect/floor_decal/spline/fancy,
 /turf/simulated/floor/carpet/purcarpet,
 /area/harbor/Star_Docking_Foyer)
+"aLV" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/harbor/Dock3)
 "aLW" = (
 /obj/random/flashlight,
 /turf/simulated/floor/plating,
@@ -6194,6 +6146,22 @@
 	},
 /turf/simulated/floor/plating,
 /area/harbor/Ship_Bay2)
+"aNg" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/harbor/Dock3)
 "aNh" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/retail_scanner/cargo{
@@ -6369,13 +6337,9 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
-	},
-/obj/structure/window/titanium{
-	dir = 1
 	},
 /obj/structure/window/titanium{
 	dir = 8
@@ -6452,7 +6416,6 @@
 	icon_state = "0-8"
 	},
 /obj/structure/grille,
-/obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
 	dir = 1
 	},
@@ -6460,9 +6423,6 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
 /turf/simulated/floor/plating,
 /area/hallway/Planetside_Equipment)
 "aOw" = (
@@ -6497,6 +6457,16 @@
 /obj/effect/floor_decal/corner/orange/border,
 /turf/simulated/floor/tiled,
 /area/engineering/GravGen_Room)
+"aOK" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/Deck1_ForStar_Corridor1)
 "aOM" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/effect/floor_decal/borderfloor{
@@ -7234,6 +7204,19 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_AftStar1_Corridor3)
+"aUv" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/Deck1_ForPort_Corridor1)
 "aUH" = (
 /obj/effect/floor_decal/steeldecal/steel_decals_central5{
 	dir = 1
@@ -7419,7 +7402,6 @@
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/structure/grille,
-/obj/structure/window/basic/full,
 /obj/structure/window/basic,
 /obj/structure/window/basic{
 	dir = 8
@@ -7523,7 +7505,6 @@
 	icon_state = "0-8"
 	},
 /obj/structure/grille,
-/obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
 	dir = 1
 	},
@@ -7531,9 +7512,6 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
 /obj/machinery/door/blast/multi_tile/four_tile_hor_sec{
 	layer = 3.5;
 	id = "sc-GCtelecoms"
@@ -7600,7 +7578,6 @@
 	icon_state = "0-8"
 	},
 /obj/structure/grille,
-/obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
 	dir = 1
 	},
@@ -7897,6 +7874,16 @@
 	},
 /turf/simulated/wall/r_wall,
 /area/maintenance/Deck1_Security_PortCorridor2)
+"baS" = (
+/obj/effect/floor_decal/steeldecal/steel_decals_central2{
+	dir = 8;
+	color = "#989898"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/dark,
+/area/harbor/Dock5)
 "baX" = (
 /obj/effect/catwalk_plated,
 /obj/machinery/light,
@@ -8055,16 +8042,12 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
 	},
 /obj/structure/window/titanium{
 	dir = 1
-	},
-/obj/structure/window/titanium{
-	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/engineering/Telecomms_Control_Room)
@@ -8086,6 +8069,21 @@
 	},
 /turf/simulated/floor/tiled,
 /area/harbor/Dock1)
+"bef" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/harbor/Dock3)
 "beg" = (
 /turf/simulated/wall/r_wall,
 /area/engineering/Telecomms_Control_Room)
@@ -8225,16 +8223,9 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
 /obj/structure/window/titanium{
-	dir = 4
-	},
-/obj/structure/window/titanium{
 	dir = 1
-	},
-/obj/structure/window/titanium{
-	dir = 8
 	},
 /obj/machinery/door/blast/regular/open{
 	layer = 3.5;
@@ -8273,7 +8264,6 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
@@ -8585,7 +8575,6 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
@@ -8817,7 +8806,6 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
@@ -9025,13 +9013,11 @@
 /turf/simulated/floor/tiled,
 /area/hallway/ForStar_1_Deck_Observatory)
 "buZ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central2{
 	dir = 8;
 	color = "#989898"
 	},
+/obj/machinery/atmospherics/pipe/manifold/hidden,
 /turf/simulated/floor/tiled/dark,
 /area/harbor/Dock5)
 "bvd" = (
@@ -9064,6 +9050,23 @@
 	},
 /turf/simulated/wall,
 /area/maintenance/Deck1_AftPort_Chamber1)
+"bvF" = (
+/obj/machinery/door/firedoor/glass,
+/obj/effect/floor_decal/industrial/hatch/blue,
+/obj/structure/grille,
+/obj/structure/window/basic,
+/obj/structure/window/basic{
+	dir = 1
+	},
+/obj/machinery/door/blast/regular/open{
+	layer = 3.5;
+	id = "Car Lockdown";
+	name = "Lockdown Gate";
+	desc = "A heavily reinforced gate, sector lockdown!";
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/quartermaster/Mining_Ship_Bay)
 "bvZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /obj/structure/filingcabinet/chestdrawer,
@@ -9349,6 +9352,18 @@
 /obj/machinery/floodlight,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_Science_ForCorridor1)
+"bAW" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/harbor/Dock1)
 "bBn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 9
@@ -9393,9 +9408,10 @@
 /turf/simulated/wall/r_wall,
 /area/rnd/Xenobotany_Isolation_Chamber)
 "bBM" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 4
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 8
 	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/dark,
 /area/harbor/Dock5)
 "bBQ" = (
@@ -9742,7 +9758,6 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
@@ -9815,6 +9830,29 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/dark,
 /area/quartermaster/Mining_Ship_Bay)
+"bHa" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/door/blast/regular/open{
+	layer = 3.5;
+	id = "Star Lockdown";
+	name = "Lockdown Gate";
+	desc = "A heavily reinforced gate, sector lockdown!";
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/rnd/Xenobotany_Isolation_Chamber)
 "bHe" = (
 /obj/effect/floor_decal/steeldecal/steel_decals_central2{
 	dir = 4
@@ -10000,8 +10038,6 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
-/obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
 	},
@@ -10048,11 +10084,18 @@
 /turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Port_1Deck_Atrium)
 "bMe" = (
-/obj/effect/floor_decal/steeldecal/steel_decals_central2{
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
 	dir = 8
 	},
-/turf/simulated/floor/glass/reinforced,
-/area/hallway/Star_1Deck_Central_Corridor_1)
+/turf/simulated/floor/plating,
+/area/harbor/Dock1)
 "bMh" = (
 /obj/structure/table/woodentable,
 /obj/item/deck/tarot,
@@ -10462,6 +10505,22 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/Supply_Ship_Bay)
+"bSy" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/harbor/Port_Docking_Foyer)
 "bSz" = (
 /obj/machinery/light{
 	dir = 1
@@ -10671,16 +10730,12 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
 	},
 /obj/structure/window/titanium{
 	dir = 1
-	},
-/obj/structure/window/titanium{
-	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/hallway/ForPort_1_Deck_Observatory)
@@ -10692,6 +10747,36 @@
 /obj/machinery/light/small,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_AftStar1_Corridor2)
+"bXf" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/obj/machinery/door/blast/regular/open{
+	layer = 3.5;
+	id = "Port Lockdown";
+	name = "Lockdown Gate";
+	desc = "A heavily reinforced gate, sector lockdown!";
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/quartermaster/Mining_EVA)
+"bXn" = (
+/obj/machinery/door/firedoor/glass,
+/obj/effect/floor_decal/industrial/hatch/blue,
+/obj/structure/grille,
+/obj/structure/window/basic,
+/obj/structure/window/basic{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/crew_quarters/Public_Gateway)
 "bXr" = (
 /obj/structure/bed/chair/office/light,
 /turf/simulated/floor/tiled/white,
@@ -10977,6 +11062,26 @@
 	},
 /turf/simulated/floor/plating,
 /area/harbor/Ship_Bay2)
+"cdn" = (
+/obj/machinery/door/firedoor/glass,
+/obj/effect/floor_decal/industrial/hatch/blue,
+/obj/structure/grille,
+/obj/structure/window/basic{
+	dir = 8
+	},
+/obj/structure/window/basic{
+	dir = 1
+	},
+/obj/structure/window/basic{
+	dir = 4
+	},
+/obj/structure/cable/white{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/quartermaster/Mining_Ship_Bay)
 "cdz" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 1
@@ -11613,7 +11718,6 @@
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/structure/grille,
-/obj/structure/window/basic/full,
 /obj/structure/window/basic,
 /obj/structure/window/basic{
 	dir = 8
@@ -11705,6 +11809,23 @@
 /obj/random/maintenance/cargo,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_AftPort_Chamber3)
+"cpe" = (
+/obj/machinery/door/firedoor/glass,
+/obj/effect/floor_decal/industrial/hatch/blue,
+/obj/structure/grille,
+/obj/structure/window/basic{
+	dir = 8
+	},
+/obj/structure/window/basic{
+	dir = 4
+	},
+/obj/structure/cable/white{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/quartermaster/Mining_Ship_Bay)
 "cpg" = (
 /obj/random/trash,
 /obj/random/maintenance/misc,
@@ -12866,6 +12987,21 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_ForStar_Corridor1)
+"cMu" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/harbor/Star_Docking_Foyer)
 "cMD" = (
 /obj/effect/floor_decal/industrial/stand_clear,
 /obj/structure/railing/grey{
@@ -12889,7 +13025,6 @@
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/structure/grille,
-/obj/structure/window/basic/full,
 /obj/structure/window/basic,
 /obj/structure/window/basic{
 	dir = 8
@@ -13022,7 +13157,9 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 4
+	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
 	frequency = 1380;
@@ -13111,6 +13248,18 @@
 /obj/random/maintenance/research,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_AftPort_Chamber3)
+"cQa" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/hallway/Aft_1_Deck_Stairwell)
 "cQf" = (
 /obj/structure/table/rack,
 /obj/item/seeds/ghostchiliseed{
@@ -13207,7 +13356,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
-/obj/structure/window/phoronreinforced/full,
 /obj/structure/window/phoronreinforced,
 /obj/structure/window/phoronreinforced{
 	dir = 8
@@ -13229,16 +13377,12 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
 	},
 /obj/structure/window/titanium{
 	dir = 1
-	},
-/obj/structure/window/titanium{
-	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/engineering/GravGen_Room)
@@ -13384,6 +13528,21 @@
 "cUA" = (
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_Security_PortChamber2)
+"cUC" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/hallway/Port_1Deck_Atrium)
 "cUK" = (
 /turf/simulated/floor/glass/reinforced,
 /area/hallway/AftStar_1_Deck_Observatory)
@@ -13504,6 +13663,21 @@
 /obj/machinery/gravity_generator/main/station/admin,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/GravGen_Room)
+"cXL" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/hallway/Star_1Deck_Atrium)
 "cXM" = (
 /obj/structure/toilet{
 	dir = 1
@@ -14069,6 +14243,19 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/harbor/Dock2)
+"dfv" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/harbor/Dock2)
 "dfC" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
@@ -14309,6 +14496,24 @@
 	},
 /turf/simulated/wall/r_wall,
 /area/maintenance/ab_Hydroponics)
+"djp" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/obj/machinery/door/blast/regular/open{
+	layer = 3.5;
+	id = "For Lockdown";
+	name = "Lockdown Gate";
+	desc = "A heavily reinforced gate, sector lockdown!"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/Deck1_Security_PortChamber1)
 "djt" = (
 /obj/machinery/hologram/holopad,
 /obj/effect/floor_decal/shuttle/blue{
@@ -15202,6 +15407,32 @@
 /obj/effect/floor_decal/corner/lightgrey/border,
 /turf/simulated/floor/tiled/dark,
 /area/hallway/Planetside_Equipment)
+"dym" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/obj/structure/cable/white{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/door/blast/regular/open{
+	layer = 3.5;
+	id = "Port Lockdown";
+	name = "Lockdown Gate";
+	desc = "A heavily reinforced gate, sector lockdown!"
+	},
+/turf/simulated/floor/plating,
+/area/quartermaster/Supply_Ship_Bay)
 "dyp" = (
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 9
@@ -15451,6 +15682,40 @@
 	},
 /turf/simulated/wall/r_wall,
 /area/harbor/Dock2)
+"dCH" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/obj/machinery/door/blast/regular/open{
+	layer = 3.5;
+	id = "For Lockdown";
+	name = "Lockdown Gate";
+	desc = "A heavily reinforced gate, sector lockdown!"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/Deck1_Security_StarChamber1)
+"dCQ" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/engineering/GravGen_Room)
 "dDc" = (
 /obj/effect/catwalk_plated/techmaint,
 /obj/machinery/porta_turret/industrial/teleport_defense,
@@ -15619,6 +15884,26 @@
 	temperature = 80
 	},
 /area/engineering/Telecomms_Network)
+"dFU" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/obj/machinery/door/blast/regular/open{
+	layer = 3.5;
+	id = "Star Lockdown";
+	name = "Lockdown Gate";
+	desc = "A heavily reinforced gate, sector lockdown!";
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/rnd/PA_Chamber)
 "dGh" = (
 /obj/machinery/light{
 	dir = 1
@@ -16234,16 +16519,12 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
 	},
 /obj/structure/window/titanium{
 	dir = 1
-	},
-/obj/structure/window/titanium{
-	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/hallway/AftPort_1_Deck_Observatory)
@@ -16315,13 +16596,8 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
-/obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
-	},
-/obj/structure/window/titanium{
-	dir = 1
 	},
 /obj/structure/window/titanium{
 	dir = 8
@@ -16372,6 +16648,28 @@
 /obj/structure/reagent_dispensers/foam,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_Science_AftCorridor1)
+"dSZ" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/obj/machinery/door/blast/regular/open{
+	layer = 3.5;
+	id = "Port Lockdown";
+	name = "Lockdown Gate";
+	desc = "A heavily reinforced gate, sector lockdown!"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/Deck1_Cargo_Corridor3)
 "dTn" = (
 /obj/machinery/light/small,
 /obj/random/trash_pile,
@@ -16965,10 +17263,6 @@
 	icon_state = "0-2"
 	},
 /obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -17020,10 +17314,6 @@
 	icon_state = "0-2"
 	},
 /obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -17307,6 +17597,19 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/Research_Ship_Bay)
+"dXT" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/engineering/Telecomms_Control_Room)
 "dXU" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -17365,8 +17668,6 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
-/obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
 	},
@@ -17387,7 +17688,6 @@
 	icon_state = "0-2"
 	},
 /obj/structure/grille,
-/obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
 	dir = 1
 	},
@@ -17427,8 +17727,6 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
-/obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
 	},
@@ -17733,7 +18031,6 @@
 	icon_state = "0-2"
 	},
 /obj/structure/grille,
-/obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
 	dir = 1
 	},
@@ -18121,11 +18418,7 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
-/obj/structure/window/titanium{
-	dir = 4
-	},
 /obj/structure/window/titanium{
 	dir = 1
 	},
@@ -18488,7 +18781,6 @@
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/structure/grille,
-/obj/structure/window/basic/full,
 /obj/structure/window/basic,
 /obj/structure/window/basic{
 	dir = 8
@@ -19414,6 +19706,21 @@
 /obj/random/maintenance/engineering,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_ForStar_Corridor1)
+"eyi" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/Deck1_AftPort_Corridor2)
 "eyu" = (
 /obj/structure/table/standard,
 /obj/item/storage/rollingpapers{
@@ -19518,7 +19825,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
-/obj/structure/window/phoronreinforced/full,
 /obj/structure/window/phoronreinforced,
 /obj/structure/window/phoronreinforced{
 	dir = 8
@@ -20182,6 +20488,32 @@
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/Observation_Hall)
+"eLg" = (
+/obj/effect/floor_decal/industrial/hatch/red,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/cable/white,
+/obj/structure/cable/white{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "SC-BDxenobiolockdown";
+	name = "Containment Blast Doors";
+	opacity = 0;
+	layer = 3.5
+	},
+/turf/simulated/floor/plating,
+/area/rnd/Xenobiology_Lab)
 "eLm" = (
 /obj/machinery/light/small/emergency,
 /obj/structure/cable/white{
@@ -20422,6 +20754,24 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/Custodial_Office)
+"eQv" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/obj/machinery/door/blast/regular/open{
+	layer = 3.5;
+	id = "Port Lockdown";
+	name = "Lockdown Gate";
+	desc = "A heavily reinforced gate, sector lockdown!"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/Deck1_Cargo_Corridor3)
 "eQy" = (
 /obj/structure/table/marble,
 /obj/item/gun/projectile/revolver/capgun,
@@ -20570,7 +20920,6 @@
 "eTN" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/grille,
-/obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
 	dir = 4
@@ -20756,7 +21105,6 @@
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/structure/grille,
-/obj/structure/window/basic/full,
 /obj/structure/window/basic,
 /obj/structure/window/basic{
 	dir = 8
@@ -21133,6 +21481,19 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/Research_Ship_Bay)
+"faU" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/ab_StripBar)
 "faX" = (
 /obj/structure/sink{
 	pixel_y = 16
@@ -21306,7 +21667,6 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
@@ -21368,13 +21728,13 @@
 /turf/simulated/floor/tiled,
 /area/hallway/Stairwell_Port)
 "ffk" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/black{
+	dir = 9
+	},
 /obj/machinery/atmospherics/unary/freezer{
 	icon_state = "freezer_1";
 	set_temperature = 73;
 	use_power = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/black{
-	dir = 9
 	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/Telecomms_Control_Room)
@@ -21407,6 +21767,19 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/Aft_1_Deck_Stairwell)
+"ffT" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/harbor/Fueling_Storage)
 "ffU" = (
 /obj/machinery/sleeper{
 	dir = 4
@@ -21657,7 +22030,6 @@
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/structure/grille,
-/obj/structure/window/basic/full,
 /obj/structure/window/basic,
 /obj/structure/window/basic{
 	dir = 8
@@ -22615,6 +22987,21 @@
 	},
 /turf/simulated/floor/glass/reinforced,
 /area/security/Quantum_Pad_Checkpoint)
+"fGh" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/hallway/AftPort_1_Deck_Observatory)
 "fGi" = (
 /turf/simulated/wall/r_wall,
 /area/maintenance/Deck1_ForPort_Corridor1)
@@ -22703,6 +23090,24 @@
 "fHV" = (
 /turf/simulated/wall,
 /area/security/Quantum_Pad_Storage)
+"fIl" = (
+/obj/effect/floor_decal/industrial/hatch/red,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/cable/white{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/structure/cable/white{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/turf/simulated/floor/plating,
+/area/engineering/Telecomms_Foyer)
 "fIm" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/camera/network/security{
@@ -22844,6 +23249,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/machinery/mineral/input,
 /turf/simulated/floor/plating,
 /area/quartermaster/Mining_Ship_Bay)
 "fKQ" = (
@@ -23135,6 +23541,19 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/Xenobotany_Lab)
+"fQz" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/Deck1_ForPort_Corridor2)
 "fQD" = (
 /obj/structure/closet,
 /obj/random/junk,
@@ -23189,6 +23608,29 @@
 /obj/random/maintenance/engineering,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_Cargo_Corridor1)
+"fQW" = (
+/obj/machinery/door/firedoor/glass,
+/obj/effect/floor_decal/industrial/hatch/blue,
+/obj/structure/grille,
+/obj/structure/window/basic,
+/obj/structure/window/basic{
+	dir = 8
+	},
+/obj/structure/window/basic{
+	dir = 1
+	},
+/obj/structure/window/basic{
+	dir = 4
+	},
+/obj/machinery/door/blast/regular/open{
+	layer = 3.5;
+	id = "Car Lockdown";
+	name = "Lockdown Gate";
+	desc = "A heavily reinforced gate, sector lockdown!";
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/quartermaster/Mining_Ship_Bay)
 "fQX" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -23385,16 +23827,9 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
 /obj/structure/window/titanium{
-	dir = 4
-	},
-/obj/structure/window/titanium{
 	dir = 1
-	},
-/obj/structure/window/titanium{
-	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/hallway/ForStar_1_Deck_Observatory)
@@ -23508,6 +23943,16 @@
 /obj/random/trash,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_Cargo_Corridor2)
+"fVP" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/hallway/AftPort_1_Deck_Observatory)
 "fWg" = (
 /obj/structure/cable{
 	d1 = 2;
@@ -23703,16 +24148,12 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
 	},
 /obj/structure/window/titanium{
 	dir = 1
-	},
-/obj/structure/window/titanium{
-	dir = 8
 	},
 /obj/machinery/door/blast/regular/open{
 	layer = 3.5;
@@ -23854,14 +24295,12 @@
 	icon_state = "0-2"
 	},
 /obj/structure/grille,
-/obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
 	dir = 1
 	},
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
 	dir = 4
 	},
@@ -23949,6 +24388,19 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/Depot1)
+"gaP" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/harbor/Dock4)
 "gbj" = (
 /obj/structure/sign/directions/cargo{
 	dir = 9
@@ -24041,11 +24493,7 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
-/obj/structure/window/titanium{
-	dir = 4
-	},
 /obj/structure/window/titanium{
 	dir = 1
 	},
@@ -24118,10 +24566,6 @@
 	icon_state = "0-2"
 	},
 /obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -24984,8 +25428,6 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
-/obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
 	},
@@ -25683,6 +26125,16 @@
 /obj/effect/floor_decal/corner/blue/border,
 /turf/simulated/floor/tiled/dark,
 /area/engineering/Telecomms_Control_Room)
+"gHS" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/hallway/Port_1Deck_Central_Corridor_1)
 "gIx" = (
 /obj/machinery/vending/wallmed1{
 	dir = 1;
@@ -25691,6 +26143,12 @@
 	},
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/mauve/border,
+/obj/structure/table/steel,
+/obj/item/storage/belt/janitor,
+/obj/item/holosign_creator{
+	pixel_y = 6;
+	pixel_x = 15
+	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/Custodial_Office)
 "gID" = (
@@ -25973,6 +26431,19 @@
 /obj/random/maintenance/misc,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_ForStar_Chamber1)
+"gOu" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/harbor/Dock1)
 "gOv" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 1
@@ -26619,11 +27090,7 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
-/obj/structure/window/titanium{
-	dir = 4
-	},
 /obj/structure/window/titanium{
 	dir = 1
 	},
@@ -26836,6 +27303,19 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_Cargo_Corridor2)
+"hcm" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/Deck1_ForStar_Corridor1)
 "hcx" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -26954,6 +27434,18 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_Security_StarCorridor1)
+"hfM" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/harbor/Port_Docking_Foyer)
 "hga" = (
 /obj/item/radio/intercom{
 	dir = 1;
@@ -27318,6 +27810,28 @@
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_Security_StarChamber2)
+"hoE" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/obj/machinery/door/blast/regular/open{
+	layer = 3.5;
+	id = "For Lockdown";
+	name = "Lockdown Gate";
+	desc = "A heavily reinforced gate, sector lockdown!"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/Deck1_Security_PortChamber1)
 "hoP" = (
 /obj/machinery/camera/network/security{
 	dir = 5;
@@ -27485,8 +27999,6 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
-/obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
 	},
@@ -27526,6 +28038,18 @@
 /obj/random/maintenance/clean,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_AftPort_Chamber3)
+"hrJ" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/Deck1_ForStar_Corridor2)
 "hrV" = (
 /turf/simulated/wall/r_wall,
 /area/maintenance/Deck1_Security_PortChamber3)
@@ -27568,13 +28092,8 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
-/obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
-	},
-/obj/structure/window/titanium{
-	dir = 1
 	},
 /obj/structure/window/titanium{
 	dir = 8
@@ -27848,11 +28367,20 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/Deck1_Security_StarCorridor3)
+"hxj" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/harbor/Dock4)
 "hxs" = (
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/structure/grille,
-/obj/structure/window/basic/full,
 /obj/structure/window/basic,
 /obj/structure/window/basic{
 	dir = 8
@@ -27905,7 +28433,6 @@
 /turf/simulated/wall/r_wall,
 /area/harbor/Dock4)
 "hxU" = (
-/obj/structure/window/phoronreinforced/full,
 /obj/structure/window/reinforced/survival_pod{
 	dir = 1
 	},
@@ -27969,7 +28496,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
-/obj/structure/window/phoronreinforced/full,
 /obj/structure/window/phoronreinforced,
 /obj/structure/window/phoronreinforced{
 	dir = 8
@@ -28568,8 +29094,6 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
-/obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
 	},
@@ -28786,6 +29310,34 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/harbor/Dock3)
+"hPz" = (
+/obj/effect/floor_decal/industrial/hatch/red,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/cable/white,
+/obj/structure/cable/white{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "SC-BDxenobiopen1";
+	name = "Containment Blast Doors";
+	opacity = 0;
+	layer = 3.5
+	},
+/turf/simulated/floor/plating,
+/area/rnd/Xenobiology_Lab)
 "hPA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
@@ -28928,13 +29480,9 @@
 "hRQ" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/grille,
-/obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
 	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 1
 	},
 /obj/structure/window/reinforced{
 	dir = 8
@@ -28942,6 +29490,21 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/rnd/Xenobotany_Isolation_Chamber)
+"hSg" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/Deck1_ForStar_Corridor2)
 "hSi" = (
 /obj/machinery/camera/network/security{
 	dir = 4;
@@ -29145,6 +29708,16 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/harbor/Ship_Bay4)
+"hXv" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/ab_StripBar)
 "hXB" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -29254,7 +29827,6 @@
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/structure/grille,
-/obj/structure/window/basic/full,
 /obj/structure/window/basic,
 /obj/structure/window/basic{
 	dir = 8
@@ -29518,6 +30090,19 @@
 /obj/machinery/door/firedoor/glass/hidden/steel,
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/Supply_Ship_Bay)
+"iex" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/Deck1_ForPort_Chamber1)
 "ieT" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -29615,6 +30200,26 @@
 /obj/random/trash,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_AftStar1_Corridor3)
+"igl" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/phoronreinforced{
+	dir = 8
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 1
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 4
+	},
+/obj/structure/cable/white{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/rnd/Research_Ship_Bay)
 "igo" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -29709,6 +30314,26 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/Distro_Harbor)
+"iic" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/machinery/door/blast/regular/open{
+	layer = 3.5;
+	id = "Port Lockdown";
+	name = "Lockdown Gate";
+	desc = "A heavily reinforced gate, sector lockdown!";
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/quartermaster/Supply_Ship_Bay)
 "iid" = (
 /obj/structure/reagent_dispensers/foam,
 /turf/simulated/floor/plating,
@@ -29918,7 +30543,6 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
@@ -30196,6 +30820,19 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/hallway/Stairwell_For)
+"ips" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/harbor/Port_Docking_Foyer)
 "ipN" = (
 /obj/effect/floor_decal/industrial/arrows/blue{
 	dir = 4
@@ -30388,6 +31025,23 @@
 /obj/random/junk,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_Security_StarCorridor1)
+"itl" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/phoronreinforced{
+	dir = 8
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 4
+	},
+/obj/structure/cable/white{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/rnd/Research_Ship_Bay)
 "itp" = (
 /obj/structure/shuttle/engine/heater,
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
@@ -30475,6 +31129,18 @@
 	temperature = 80
 	},
 /area/engineering/Telecomms_Network)
+"iuJ" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/hallway/AftPort_1_Deck_Observatory)
 "iuY" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/reagent_dispensers/watertank/high,
@@ -30642,8 +31308,11 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
-/obj/effect/catwalk_plated/techmaint,
-/turf/simulated/floor/plating,
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/airlock/maintenance/rnd{
+	name = "Circuitry Access"
+	},
+/turf/simulated/floor/tiled/techmaint,
 /area/maintenance/Deck1_ForStar_Corridor3)
 "iyo" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -30814,7 +31483,6 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
@@ -31393,6 +32061,18 @@
 	icon_state = "orange"
 	},
 /area/shuttle/escape_pod7/station)
+"iQE" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/harbor/Star_Docking_Foyer)
 "iQH" = (
 /obj/structure/ladder/up,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -31864,7 +32544,6 @@
 /turf/simulated/floor/tiled,
 /area/rnd/Observation_Hall)
 "jcH" = (
-/obj/effect/floor_decal/arrivals,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
@@ -31965,7 +32644,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_Science_AftCorridor1)
 "jeQ" = (
-/obj/structure/window/phoronreinforced/full,
 /obj/structure/window/reinforced/survival_pod,
 /obj/structure/window/reinforced/survival_pod{
 	dir = 4
@@ -32218,7 +32896,6 @@
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/structure/grille,
-/obj/structure/window/basic/full,
 /obj/structure/window/basic,
 /obj/structure/window/basic{
 	dir = 8
@@ -32401,7 +33078,6 @@
 	icon_state = "0-8"
 	},
 /obj/structure/grille,
-/obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
 	dir = 1
 	},
@@ -32777,16 +33453,12 @@
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/structure/grille,
-/obj/structure/window/basic/full,
 /obj/structure/window/basic,
 /obj/structure/window/basic{
 	dir = 8
 	},
 /obj/structure/window/basic{
 	dir = 1
-	},
-/obj/structure/window/basic{
-	dir = 4
 	},
 /obj/machinery/door/blast/regular/open{
 	layer = 3.5;
@@ -33125,6 +33797,18 @@
 /obj/effect/floor_decal/techfloor/orange,
 /turf/simulated/floor/tiled/techfloor,
 /area/crew_quarters/Public_Gateway)
+"jAb" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/Deck1_AftStar1_Corridor1)
 "jAk" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -33231,7 +33915,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_Security_StarCorridor3)
 "jDe" = (
-/obj/structure/window/phoronreinforced/full,
 /obj/structure/window/reinforced/survival_pod{
 	dir = 1
 	},
@@ -33376,6 +34059,13 @@
 	dir = 4
 	},
 /obj/effect/map_helper/airlock/door/int_door,
+/obj/machinery/access_button{
+	dir = 1;
+	pixel_y = -24
+	},
+/obj/effect/map_helper/airlock/button/int_button{
+	pixel_y = -14
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
@@ -33842,17 +34532,20 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/Quantum_Pad_Storage)
 "jLb" = (
-/obj/machinery/hologram/holopad,
-/obj/effect/floor_decal/shuttle/blue{
-	pixel_x = -1;
-	pixel_y = 1
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 4
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central2{
-	dir = 4;
-	color = "#989898"
+/obj/structure/window/titanium{
+	dir = 1
 	},
-/turf/simulated/floor/tiled/techmaint,
-/area/harbor/Dock5)
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/harbor/Fueling_Post)
 "jLh" = (
 /mob/living/simple_mob/animal/passive/fish/rockfish{
 	name = "Bon";
@@ -34053,7 +34746,6 @@
 	icon_state = "0-2"
 	},
 /obj/structure/grille,
-/obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
 	dir = 1
 	},
@@ -34160,6 +34852,19 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/rnd/Xenobiology_Lab)
+"jSB" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/Deck1_ForStar_Corridor2)
 "jSJ" = (
 /obj/structure/closet/l3closet/virology,
 /turf/simulated/floor/tiled/kafel_full/blue,
@@ -35003,6 +35708,18 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/harbor/Ship_Bay3)
+"khu" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/Deck1_ForPort_Corridor1)
 "khv" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -35010,15 +35727,21 @@
 /turf/simulated/floor/tiled,
 /area/hallway/Stairwell_Star)
 "khE" = (
-/obj/effect/shuttle_landmark{
-	base_area = /area/space;
-	base_turf = /turf/space;
-	docking_controller = "sc-D1_L5A1_airlock";
-	landmark_tag = "sc-D1_L5A1";
-	name = "Docking Lane 5 Airlock 1"
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 4
 	},
-/turf/space,
-/area/space)
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/harbor/Dock1)
 "kio" = (
 /obj/structure/railing/grey{
 	dir = 4
@@ -35124,7 +35847,6 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
@@ -35273,16 +35995,12 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
 	},
 /obj/structure/window/titanium{
 	dir = 1
-	},
-/obj/structure/window/titanium{
-	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /obj/machinery/door/blast/regular/open{
@@ -35643,7 +36361,6 @@
 	icon_state = "0-8"
 	},
 /obj/structure/grille,
-/obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
 	dir = 1
 	},
@@ -35834,6 +36551,19 @@
 	},
 /turf/simulated/floor/plating,
 /area/rnd/PA_Chamber)
+"kzO" = (
+/obj/machinery/door/firedoor/glass,
+/obj/effect/floor_decal/industrial/hatch/blue,
+/obj/structure/grille,
+/obj/structure/window/basic,
+/obj/structure/window/basic{
+	dir = 1
+	},
+/obj/structure/window/basic{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/crew_quarters/Public_Gateway)
 "kAl" = (
 /obj/machinery/atmospherics/pipe/manifold/visible{
 	dir = 8
@@ -36879,7 +37609,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/ab_StripBar)
 "kUo" = (
-/obj/effect/floor_decal/arrivals,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -37171,7 +37900,6 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
@@ -37245,6 +37973,25 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_Cargo_Corridor1)
+"kZQ" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/obj/machinery/door/blast/regular/open{
+	layer = 3.5;
+	id = "For Lockdown";
+	name = "Lockdown Gate";
+	desc = "A heavily reinforced gate, sector lockdown!"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/Deck1_Security_PortChamber1)
 "kZR" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -37556,6 +38303,18 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/Research_Ship_Bay)
+"lgu" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/harbor/Dock2)
 "lgQ" = (
 /obj/machinery/space_heater,
 /turf/simulated/floor/plating,
@@ -37565,6 +38324,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/black{
 	dir = 1
 	},
+/obj/item/storage/briefcase/inflatable,
 /turf/simulated/floor/tiled/dark,
 /area/engineering/Telecomms_Control_Room)
 "lhu" = (
@@ -38234,6 +38994,19 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_AftStar1_Corridor2)
+"lqN" = (
+/obj/machinery/door/firedoor/glass,
+/obj/effect/floor_decal/industrial/hatch/blue,
+/obj/structure/grille,
+/obj/structure/window/basic,
+/obj/structure/window/basic{
+	dir = 1
+	},
+/obj/structure/window/basic{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/hallway/Planetside_Equipment)
 "lqO" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -38292,7 +39065,6 @@
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/structure/grille,
-/obj/structure/window/basic/full,
 /obj/structure/window/basic,
 /obj/structure/window/basic{
 	dir = 8
@@ -38411,14 +39183,9 @@
 	icon_state = "0-2"
 	},
 /obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
 	dir = 4
 	},
@@ -38494,6 +39261,21 @@
 /obj/structure/cable/green,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_Security_StarCorridor3)
+"lxl" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/hallway/AftStar_1_Deck_Observatory)
 "lxD" = (
 /obj/machinery/door/firedoor/glass/hidden/steel{
 	dir = 2
@@ -38514,16 +39296,12 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
 	},
 /obj/structure/window/titanium{
 	dir = 1
-	},
-/obj/structure/window/titanium{
-	dir = 8
 	},
 /obj/machinery/door/blast/regular/open{
 	layer = 3.5;
@@ -39025,6 +39803,14 @@
 	},
 /turf/simulated/floor/tiled,
 /area/harbor/Dock4)
+"lGW" = (
+/obj/machinery/conveyor{
+	dir = 8;
+	id = "QMLoad"
+	},
+/obj/machinery/mineral/output,
+/turf/simulated/floor/plating,
+/area/quartermaster/Mining_Ship_Bay)
 "lGZ" = (
 /obj/structure/cable/white{
 	d1 = 4;
@@ -39077,6 +39863,19 @@
 /obj/random/maintenance/clean,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_ForStar_Corridor2)
+"lIl" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/hallway/ForStar_1_Deck_Observatory)
 "lIo" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/fiftyspawner/steel,
@@ -39936,6 +40735,21 @@
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
 /area/maintenance/Distro_Harbor)
+"lUx" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/harbor/Dock2)
 "lUC" = (
 /obj/random/trash_pile,
 /obj/random/trash,
@@ -40021,6 +40835,16 @@
 /obj/machinery/atmospherics/binary/pump,
 /turf/simulated/floor/tiled/dark,
 /area/harbor/Fueling_Post)
+"lWV" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/engineering/Telecomms_Control_Room)
 "lXb" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 1
@@ -40253,6 +41077,30 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/Quantum_Pad_Checkpoint)
+"lZN" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/arrows{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/arrows{
+	dir = 4
+	},
+/obj/machinery/door/airlock/angled_bay/external/glass{
+	dir = 4
+	},
+/obj/machinery/access_button{
+	dir = 1;
+	pixel_y = -24
+	},
+/obj/effect/map_helper/airlock/door/int_door,
+/obj/effect/map_helper/airlock/button/int_button{
+	pixel_y = -14
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/harbor/Dock5)
 "lZO" = (
 /obj/structure/table/standard,
 /obj/effect/floor_decal/borderfloorblack{
@@ -40567,16 +41415,12 @@
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/structure/grille,
-/obj/structure/window/basic/full,
 /obj/structure/window/basic,
 /obj/structure/window/basic{
 	dir = 8
 	},
 /obj/structure/window/basic{
 	dir = 1
-	},
-/obj/structure/window/basic{
-	dir = 4
 	},
 /obj/structure/sign/directions/evac{
 	dir = 5;
@@ -41223,6 +42067,16 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/harbor/Dock2)
+"mrM" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/harbor/Dock4)
 "mrR" = (
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating,
@@ -41740,6 +42594,18 @@
 /obj/random/maintenance/clean,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_AftPort_Corridor3)
+"myO" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/hallway/ForPort_1_Deck_Observatory)
 "mzf" = (
 /obj/item/gps{
 	pixel_x = 3;
@@ -41908,6 +42774,19 @@
 	name = "Nitrogen white floor"
 	},
 /area/maintenance/ab_Kitchen)
+"mBn" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/harbor/Dock2)
 "mBs" = (
 /obj/structure/flora/ausbushes/brflowers,
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -42094,7 +42973,6 @@
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/structure/grille,
-/obj/structure/window/basic/full,
 /obj/structure/window/basic,
 /obj/structure/window/basic{
 	dir = 8
@@ -42129,7 +43007,6 @@
 /area/shuttle/cryo/station)
 "mFP" = (
 /obj/structure/mopbucket,
-/obj/item/mop/advanced,
 /obj/item/reagent_containers/glass/bucket,
 /obj/machinery/newscaster{
 	pixel_x = -28
@@ -42140,6 +43017,7 @@
 /obj/effect/floor_decal/corner/mauve/border{
 	dir = 8
 	},
+/obj/item/mop,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/Custodial_Office)
 "mFX" = (
@@ -42347,6 +43225,18 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/quartermaster/Supply_Ship_Bay)
+"mJQ" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/hallway/ForStar_1_Deck_Observatory)
 "mKY" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -42658,6 +43548,29 @@
 	},
 /turf/simulated/floor/glass/reinforced,
 /area/hallway/Star_1Deck_Central_Corridor_1)
+"mOq" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/obj/structure/cable/white{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/door/blast/regular/open{
+	layer = 3.5;
+	id = "Port Lockdown";
+	name = "Lockdown Gate";
+	desc = "A heavily reinforced gate, sector lockdown!"
+	},
+/turf/simulated/floor/plating,
+/area/quartermaster/Supply_Ship_Bay)
 "mOu" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -42683,12 +43596,7 @@
 /obj/effect/floor_decal/corner/mauve/border{
 	dir = 4
 	},
-/obj/structure/table/steel,
-/obj/item/storage/belt/janitor,
-/obj/item/storage/belt/janitor{
-	pixel_x = 2;
-	pixel_y = 6
-	},
+/obj/machinery/r_n_d/protolathe/service,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/Custodial_Office)
 "mOM" = (
@@ -42723,25 +43631,17 @@
 /area/harbor/Dock2)
 "mOX" = (
 /obj/machinery/door/firedoor/border_only,
-/obj/effect/floor_decal/industrial/arrows{
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
 	dir = 8
 	},
-/obj/effect/floor_decal/industrial/arrows{
-	dir = 4
-	},
-/obj/machinery/door/airlock/angled_bay/external/glass{
-	dir = 4
-	},
-/obj/effect/map_helper/airlock/door/int_door,
-/obj/machinery/access_button{
-	dir = 1;
-	pixel_y = -24
-	},
-/obj/effect/map_helper/airlock/button/int_button{
-	pixel_y = -14
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/harbor/Dock5)
+/turf/simulated/floor/plating,
+/area/harbor/Dock2)
 "mPf" = (
 /obj/machinery/door/window/survival_pod{
 	dir = 1
@@ -42958,16 +43858,9 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
 /obj/structure/window/titanium{
-	dir = 4
-	},
-/obj/structure/window/titanium{
 	dir = 1
-	},
-/obj/structure/window/titanium{
-	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/hallway/AftStar_1_Deck_Observatory)
@@ -43191,7 +44084,6 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
@@ -43315,6 +44207,19 @@
 /obj/effect/floor_decal/industrial/danger/corner,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/harbor/Ship_Bay2)
+"mZW" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/harbor/Dock5)
 "nar" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/fiftyspawner/cardboard,
@@ -43712,6 +44617,19 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/Deck1_Corridor)
+"nkG" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/Deck1_AftPort_Corridor2)
 "nlq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
@@ -44268,6 +45186,26 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/PA_Chamber)
+"nwQ" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/obj/machinery/door/blast/regular/open{
+	layer = 3.5;
+	id = "For Lockdown";
+	name = "Lockdown Gate";
+	desc = "A heavily reinforced gate, sector lockdown!";
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/Deck1_Security_StarChamber1)
 "nwU" = (
 /obj/structure/table/bench/sifwooden/padded,
 /turf/simulated/floor/tiled/white,
@@ -44348,6 +45286,16 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/Stairwell_Star)
+"nyc" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/hallway/AftPort_1_Deck_Observatory)
 "nyh" = (
 /obj/structure/disposalpipe/tagger{
 	sort_tag = "transit_crew"
@@ -44537,10 +45485,13 @@
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_ForPort_Corridor1)
 "nBS" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
+/obj/effect/floor_decal/steeldecal/steel_decals_central2{
+	dir = 1
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central2{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -44762,6 +45713,18 @@
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_AftPort_Corridor1)
+"nFc" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/hallway/ForStar_1_Deck_Observatory)
 "nFd" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
@@ -45064,6 +46027,16 @@
 	},
 /turf/simulated/floor/tiled,
 /area/harbor/Dock2)
+"nLf" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/hallway/AftStar_1_Deck_Observatory)
 "nLk" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/arrows/red{
@@ -45353,6 +46326,22 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/quartermaster/Depot1)
+"nQn" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/harbor/Dock4)
 "nQw" = (
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/arrows/blue{
@@ -45634,9 +46623,6 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central2{
 	dir = 8
-	},
-/obj/effect/floor_decal/arrivals{
-	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/Aft_1_Deck_Stairwell)
@@ -46598,17 +47584,25 @@
 /turf/simulated/floor/tiled/eris/steel/bar_dance,
 /area/maintenance/ab_StripBar)
 "ojM" = (
-/obj/machinery/atmospherics/pipe/simple/hidden,
-/obj/structure/cable/white{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 4
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central2{
+/obj/structure/window/titanium{
 	dir = 1
 	},
-/turf/simulated/floor/tiled,
-/area/harbor/Dock5)
+/obj/machinery/door/blast/regular/open{
+	layer = 3.5;
+	id = "Star Lockdown";
+	name = "Lockdown Gate";
+	desc = "A heavily reinforced gate, sector lockdown!";
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/rnd/PA_Chamber)
 "okm" = (
 /turf/simulated/floor/glass/reinforced,
 /area/harbor/Dock4)
@@ -46640,6 +47634,34 @@
 	},
 /turf/simulated/floor/tiled,
 /area/harbor/Dock4)
+"okI" = (
+/obj/effect/floor_decal/industrial/hatch/red,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/cable/white,
+/obj/structure/cable/white{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "SC-BDxenobiopen2";
+	name = "Containment Blast Doors";
+	opacity = 0;
+	layer = 3.5
+	},
+/turf/simulated/floor/plating,
+/area/rnd/Xenobiology_Lab)
 "okJ" = (
 /obj/machinery/alarm{
 	pixel_y = 22
@@ -46670,7 +47692,6 @@
 	icon_state = "0-2"
 	},
 /obj/structure/grille,
-/obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
 	dir = 1
 	},
@@ -46941,7 +47962,6 @@
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/structure/grille,
-/obj/structure/window/basic/full,
 /obj/structure/window/basic,
 /obj/structure/window/basic{
 	dir = 8
@@ -47065,7 +48085,6 @@
 	icon_state = "0-2"
 	},
 /obj/structure/grille,
-/obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
 	dir = 1
 	},
@@ -47376,6 +48395,16 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/Deck1_Cargo_Corridor3)
+"oxa" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/Deck1_AftStar1_Corridor2)
 "oxc" = (
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 10
@@ -47407,7 +48436,6 @@
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/structure/grille,
-/obj/structure/window/basic/full,
 /obj/structure/window/basic,
 /obj/structure/window/basic{
 	dir = 8
@@ -47474,6 +48502,19 @@
 	},
 /turf/simulated/floor,
 /area/shuttle/echidna)
+"oya" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/harbor/Dock5)
 "oyj" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/arrows/yellow,
@@ -47658,8 +48699,6 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
-/obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
 	},
@@ -48517,6 +49556,21 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/Research_Ship_Bay)
+"oOi" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/plating,
+/area/rnd/Xenobotany_Isolation_Chamber)
 "oOk" = (
 /obj/effect/catwalk_plated/techmaint,
 /obj/structure/cable{
@@ -49055,13 +50109,9 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
-	},
-/obj/structure/window/titanium{
-	dir = 1
 	},
 /obj/structure/window/titanium{
 	dir = 8
@@ -49364,6 +50414,19 @@
 /obj/structure/closet/emcloset,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_Security_StarChamber2)
+"pdY" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/harbor/Fueling_Post)
 "pej" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -49426,6 +50489,19 @@
 	},
 /turf/simulated/floor,
 /area/shuttle/echidna)
+"peQ" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/hallway/Aft_1_Deck_Stairwell)
 "peU" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/arrows/yellow,
@@ -50044,13 +51120,9 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
-	},
-/obj/structure/window/titanium{
-	dir = 1
 	},
 /obj/structure/window/titanium{
 	dir = 8
@@ -50223,13 +51295,9 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
-/obj/structure/window/phoronreinforced/full,
 /obj/structure/window/phoronreinforced,
 /obj/structure/window/phoronreinforced{
 	dir = 8
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 1
 	},
 /obj/structure/window/phoronreinforced{
 	dir = 4
@@ -50429,50 +51497,18 @@
 	},
 /area/maintenance/ab_Kitchen)
 "psu" = (
-/obj/item/stack/material/phoron{
-	amount = 25;
-	pixel_x = 9;
-	pixel_y = -9
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 1
 	},
-/obj/item/clothing/glasses/meson{
-	pixel_x = -6;
-	pixel_y = -13
-	},
-/obj/item/clothing/glasses/welding{
-	pixel_x = -6;
-	pixel_y = -8
-	},
-/obj/item/stack/material/plasteel{
-	amount = 30;
-	pixel_y = 1;
-	pixel_x = -8
-	},
-/obj/item/stack/material/steel{
-	amount = 50;
-	pixel_y = 4;
-	pixel_x = -8
-	},
-/obj/item/stack/material/glass{
-	amount = 50;
-	pixel_x = -8;
-	pixel_y = 7
-	},
-/obj/structure/cable/green{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/obj/item/t_scanner{
-	pixel_y = 3;
-	pixel_x = 11
-	},
-/obj/item/multitool{
-	pixel_x = 4
-	},
-/obj/structure/closet/crate/secure/large/nanotrasen{
-	req_access = list(10)
+/obj/structure/window/titanium{
+	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/space)
+/area/harbor/Dock3)
 "psG" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -50493,7 +51529,6 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
@@ -50930,26 +51965,20 @@
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_AftPort_Corridor2)
 "pBU" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/effect/floor_decal/industrial/arrows{
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/phoronreinforced{
 	dir = 8
 	},
-/obj/effect/floor_decal/industrial/arrows{
+/obj/structure/window/phoronreinforced{
+	dir = 1
+	},
+/obj/structure/window/phoronreinforced{
 	dir = 4
 	},
-/obj/machinery/door/airlock/angled_bay/external/glass{
-	dir = 4
-	},
-/obj/machinery/access_button{
-	dir = 1;
-	pixel_y = -24
-	},
-/obj/effect/map_helper/airlock/door/int_door,
-/obj/effect/map_helper/airlock/button/int_button{
-	pixel_y = -14
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/harbor/Dock5)
+/turf/simulated/floor/plating,
+/area/engineering/GravGen_Room)
 "pCf" = (
 /obj/structure/closet/emcloset,
 /obj/structure/disposalpipe/segment{
@@ -51196,6 +52225,14 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_Cargo_Corridor3)
+"pGQ" = (
+/obj/machinery/conveyor{
+	dir = 8;
+	id = "QMLoad"
+	},
+/obj/machinery/mineral/input,
+/turf/simulated/floor/plating,
+/area/quartermaster/Mining_Ship_Bay)
 "pHp" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/arrows,
@@ -51409,13 +52446,9 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
-/obj/structure/window/phoronreinforced/full,
 /obj/structure/window/phoronreinforced,
 /obj/structure/window/phoronreinforced{
 	dir = 8
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 1
 	},
 /obj/structure/window/phoronreinforced{
 	dir = 4
@@ -51525,6 +52558,19 @@
 /obj/random/drinkbottle,
 /turf/simulated/floor/tiled/eris/steel/bar_dance,
 /area/maintenance/ab_StripBar)
+"pMm" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/harbor/Dock4)
 "pMq" = (
 /obj/effect/floor_decal/industrial/loading/white{
 	dir = 8
@@ -51537,10 +52583,33 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/Port_1Deck_Atrium)
+"pMC" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/harbor/Dock1)
 "pML" = (
 /obj/structure/closet/crate/mimic/closet/safe,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_AftPort_Chamber3)
+"pNg" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/hallway/AftStar_1_Deck_Observatory)
 "pNX" = (
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -51689,7 +52758,6 @@
 	dir = 6
 	},
 /obj/structure/table/steel,
-/obj/item/lightreplacer,
 /obj/item/lightreplacer,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/Custodial_Office)
@@ -52659,7 +53727,6 @@
 /area/maintenance/Deck1_AftPort_Chamber3)
 "qee" = (
 /obj/structure/mopbucket,
-/obj/item/mop/advanced,
 /obj/item/reagent_containers/glass/bucket,
 /obj/machinery/light{
 	dir = 8
@@ -52670,6 +53737,7 @@
 /obj/effect/floor_decal/corner/mauve/border{
 	dir = 8
 	},
+/obj/item/mop,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/Custodial_Office)
 "qev" = (
@@ -52851,7 +53919,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_Security_PortCorridor1)
 "qhi" = (
-/obj/structure/window/phoronreinforced/full,
 /obj/structure/window/reinforced/survival_pod{
 	dir = 8
 	},
@@ -53591,6 +54658,21 @@
 /obj/effect/floor_decal/corner/mauve/border,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/Custodial_Office)
+"qvX" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/harbor/Dock5)
 "qwb" = (
 /obj/machinery/computer/general_air_control{
 	dir = 4;
@@ -53610,6 +54692,27 @@
 /obj/structure/frame/computer,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_ForPort_Chamber1)
+"qws" = (
+/obj/effect/floor_decal/industrial/hatch/red,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/cable/white{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/structure/cable/white{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
+/turf/simulated/floor/plating,
+/area/engineering/Telecomms_Foyer)
 "qwt" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -53776,6 +54879,19 @@
 /obj/item/batterer,
 /turf/simulated/floor/tiled,
 /area/maintenance/ab_GeneralStore)
+"qAx" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/hallway/Port_1Deck_Central_Corridor_1)
 "qAD" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -54051,7 +55167,6 @@
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/structure/grille,
-/obj/structure/window/basic/full,
 /obj/structure/window/basic,
 /obj/structure/window/basic{
 	dir = 8
@@ -54215,7 +55330,6 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
@@ -54766,7 +55880,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_ForPort_Chamber1)
 "qSb" = (
-/obj/machinery/portable_atmospherics/powered/scrubber/huge,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 10
@@ -54774,6 +55887,7 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 10
 	},
+/obj/machinery/portable_atmospherics/powered/scrubber,
 /turf/simulated/floor/tiled/dark,
 /area/harbor/Fueling_Storage)
 "qSj" = (
@@ -55009,7 +56123,6 @@
 /turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Port_1Deck_Atrium)
 "qUU" = (
-/obj/effect/floor_decal/arrivals/right,
 /obj/structure/cable/green{
 	d1 = 2;
 	d2 = 4;
@@ -55189,7 +56302,6 @@
 	icon_state = "0-2"
 	},
 /obj/structure/grille,
-/obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
 	dir = 1
 	},
@@ -55217,7 +56329,6 @@
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/structure/grille,
-/obj/structure/window/basic/full,
 /obj/structure/window/basic,
 /obj/structure/window/basic{
 	dir = 8
@@ -55488,6 +56599,21 @@
 	},
 /turf/simulated/floor/tiled,
 /area/harbor/Dock5)
+"rbq" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/harbor/Dock1)
 "rbS" = (
 /obj/machinery/button/remote/blast_door{
 	id = "SC-BDxenobiopen4";
@@ -55514,10 +56640,6 @@
 	icon_state = "0-2"
 	},
 /obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -55577,7 +56699,6 @@
 	icon_state = "0-2"
 	},
 /obj/structure/grille,
-/obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
 	dir = 1
 	},
@@ -55705,14 +56826,12 @@
 	icon_state = "0-2"
 	},
 /obj/structure/grille,
-/obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
 	dir = 1
 	},
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
 	dir = 4
 	},
@@ -55751,6 +56870,18 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/Observation_Hall)
+"reX" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/harbor/Dock4)
 "rfe" = (
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 6
@@ -56054,7 +57185,6 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
@@ -56090,6 +57220,16 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_Security_StarCorridor2)
+"rlJ" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/Deck1_ForPort_Corridor2)
 "rlK" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1
@@ -56421,9 +57561,10 @@
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_Security_StarCorridor2)
 "rsk" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 8
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 4
 	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/dark,
 /area/harbor/Dock5)
 "rsp" = (
@@ -56857,6 +57998,26 @@
 	},
 /turf/simulated/floor/tiled,
 /area/maintenance/Market_Stall_4)
+"rxL" = (
+/obj/machinery/door/firedoor/glass,
+/obj/effect/floor_decal/industrial/hatch/blue,
+/obj/structure/grille,
+/obj/structure/window/basic,
+/obj/structure/window/basic{
+	dir = 1
+	},
+/obj/structure/window/basic{
+	dir = 4
+	},
+/obj/machinery/door/blast/regular/open{
+	layer = 3.5;
+	id = "Car Lockdown";
+	name = "Lockdown Gate";
+	desc = "A heavily reinforced gate, sector lockdown!";
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/quartermaster/Mining_Ship_Bay)
 "rxV" = (
 /obj/machinery/camera/network/security{
 	dir = 5;
@@ -57235,6 +58396,27 @@
 /obj/structure/salvageable/server,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_AftPort_Chamber2)
+"rGY" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/obj/machinery/door/blast/regular/open{
+	layer = 3.5;
+	id = "Star Lockdown";
+	name = "Lockdown Gate";
+	desc = "A heavily reinforced gate, sector lockdown!"
+	},
+/turf/simulated/floor/plating,
+/area/rnd/PA_Chamber)
 "rHo" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
@@ -57597,6 +58779,27 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/rnd/Research_Ship_Bay)
+"rOz" = (
+/obj/effect/floor_decal/industrial/hatch/red,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/cable/white{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/structure/cable/white{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/hallway/Planetside_Equipment)
 "rOG" = (
 /obj/machinery/computer/cryopod{
 	pixel_y = 32
@@ -57731,6 +58934,19 @@
 /obj/random/junk,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_Cargo_Corridor3)
+"rRx" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/Deck1_AftStar1_Corridor2)
 "rRz" = (
 /obj/item/reagent_containers/syringe/steroid,
 /obj/item/material/shard{
@@ -57827,6 +59043,16 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/wood/alt/parquet/turfpack/station,
 /area/hallway/Cryostorage_Lounge)
+"rTR" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/hallway/ForPort_1_Deck_Observatory)
 "rTV" = (
 /obj/machinery/door/firedoor/multi_tile/glass{
 	dir = 1
@@ -57945,16 +59171,9 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
 /obj/structure/window/titanium{
-	dir = 4
-	},
-/obj/structure/window/titanium{
 	dir = 1
-	},
-/obj/structure/window/titanium{
-	dir = 8
 	},
 /obj/machinery/door/blast/regular/open{
 	layer = 3.5;
@@ -58149,6 +59368,19 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/Stairwell_Aft)
+"rZg" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/Deck1_ForStar_Corridor2)
 "rZA" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/arrows/yellow,
@@ -58221,8 +59453,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
-/obj/structure/window/phoronreinforced/full,
-/obj/structure/window/phoronreinforced,
 /obj/structure/window/phoronreinforced{
 	dir = 8
 	},
@@ -58313,6 +59543,19 @@
 /obj/effect/floor_decal/industrial/bot_outline/blue,
 /turf/simulated/floor/plating,
 /area/maintenance/Distro_Harbor)
+"sbw" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/hallway/ForStar_1_Deck_Observatory)
 "sbE" = (
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 10
@@ -58856,9 +60099,9 @@
 /area/maintenance/Deck1_Cargo_Corridor1)
 "skc" = (
 /obj/effect/floor_decal/industrial/hatch/blue,
-/obj/machinery/portable_atmospherics/powered/scrubber/huge,
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/orange/border,
+/obj/machinery/portable_atmospherics/powered/scrubber,
 /turf/simulated/floor/tiled/dark,
 /area/harbor/Fueling_Storage)
 "ske" = (
@@ -59182,6 +60425,19 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/harbor/Dock2)
+"srW" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/harbor/Port_Docking_Foyer)
 "ssc" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -59464,13 +60720,9 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
-	},
-/obj/structure/window/titanium{
-	dir = 1
 	},
 /obj/structure/window/titanium{
 	dir = 8
@@ -59523,6 +60775,19 @@
 /obj/random/maintenance/clean,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_Security_PortCorridor1)
+"szo" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/Deck1_Cargo_Chamber1)
 "szt" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -59726,7 +60991,6 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
@@ -59810,11 +61074,14 @@
 /turf/simulated/floor/tiled,
 /area/hallway/Stairwell_For)
 "sEk" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
+/obj/effect/floor_decal/steeldecal/steel_decals_central2{
+	dir = 1
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central2{
 	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/harbor/Dock5)
@@ -59879,6 +61146,21 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_Cargo_Corridor3)
+"sFb" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/security/Exploration_Sling_Shuttle)
 "sFm" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/white/border,
@@ -59917,13 +61199,9 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
-	},
-/obj/structure/window/titanium{
-	dir = 1
 	},
 /obj/structure/window/titanium{
 	dir = 8
@@ -60354,6 +61632,18 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/Market_Stall_1)
+"sMf" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/harbor/Dock1)
 "sMy" = (
 /obj/random/maintenance/clean,
 /turf/simulated/floor/tiled/hydro,
@@ -60771,16 +62061,12 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
 	},
 /obj/structure/window/titanium{
 	dir = 1
-	},
-/obj/structure/window/titanium{
-	dir = 8
 	},
 /obj/machinery/door/blast/regular/open{
 	layer = 3.5;
@@ -61451,7 +62737,6 @@
 	icon_state = "0-2"
 	},
 /obj/structure/grille,
-/obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
 	dir = 1
 	},
@@ -61597,6 +62882,16 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/harbor/Ship_Bay3)
+"tly" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/engineering/GravGen_Room)
 "tlH" = (
 /obj/machinery/door/firedoor/multi_tile/glass{
 	dir = 1
@@ -61617,7 +62912,6 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
@@ -62591,13 +63885,11 @@
 /turf/simulated/shuttle/floor,
 /area/shuttle/escape_pod2/station)
 "tCF" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central2{
 	dir = 4;
 	color = "#989898"
 	},
+/obj/machinery/atmospherics/pipe/manifold/hidden,
 /turf/simulated/floor/tiled/dark,
 /area/harbor/Dock5)
 "tCH" = (
@@ -62641,6 +63933,26 @@
 /obj/random/tech_supply/component,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_AftStar1_Corridor3)
+"tCY" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/obj/machinery/door/blast/regular/open{
+	layer = 3.5;
+	id = "Star Lockdown";
+	name = "Lockdown Gate";
+	desc = "A heavily reinforced gate, sector lockdown!";
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/rnd/Xenobotany_Lab)
 "tDq" = (
 /obj/machinery/power/apc{
 	dir = 4;
@@ -62990,6 +64302,18 @@
 /obj/random/maintenance/research,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_ForStar_Corridor3)
+"tKu" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/harbor/Dock4)
 "tLd" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -63398,6 +64722,19 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_ForStar_Chamber3)
+"tSH" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/harbor/Star_Docking_Foyer)
 "tSI" = (
 /obj/machinery/light{
 	dir = 4
@@ -63501,6 +64838,21 @@
 /obj/random/maintenance/morestuff,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_AftPort_Chamber3)
+"tUj" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/harbor/Port_Docking_Foyer)
 "tUw" = (
 /obj/machinery/holoposter,
 /turf/simulated/wall/r_wall,
@@ -63531,16 +64883,12 @@
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/structure/grille,
-/obj/structure/window/basic/full,
 /obj/structure/window/basic,
 /obj/structure/window/basic{
 	dir = 8
 	},
 /obj/structure/window/basic{
 	dir = 1
-	},
-/obj/structure/window/basic{
-	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/hallway/Planetside_Equipment)
@@ -63690,6 +65038,18 @@
 	},
 /turf/simulated/floor/tiled,
 /area/maintenance/Market_Stall_6)
+"tYY" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/harbor/Dock4)
 "tZf" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -65038,6 +66398,34 @@
 /obj/structure/sign/hangar/three,
 /turf/simulated/wall/r_wall,
 /area/hallway/Aft_1_Deck_Stairwell)
+"uwu" = (
+/obj/effect/floor_decal/industrial/hatch/red,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/cable/white,
+/obj/structure/cable/white{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "SC-BDxenobiolockdown";
+	name = "Containment Blast Doors";
+	opacity = 0;
+	layer = 3.5
+	},
+/turf/simulated/floor/plating,
+/area/rnd/Xenobiology_Lab)
 "uwx" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
@@ -65367,6 +66755,19 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/harbor/Dock1)
+"uEG" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/hallway/ForPort_1_Deck_Observatory)
 "uEH" = (
 /turf/simulated/shuttle/floor,
 /area/shuttle/cryo/station)
@@ -65558,6 +66959,18 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/Public_Gateway)
+"uHQ" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/harbor/Fueling_Storage)
 "uHY" = (
 /obj/structure/table/steel,
 /obj/item/storage/briefcase/inflatable{
@@ -66785,6 +68198,19 @@
 /obj/structure/closet/emcloset/legacy,
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/expoutpost/station)
+"ver" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/Deck1_AftStar1_Corridor1)
 "vet" = (
 /obj/structure/bed/chair/bay/comfy/purple{
 	dir = 1
@@ -67140,17 +68566,15 @@
 /turf/simulated/floor/tiled/dark,
 /area/rnd/Research_Ship_Bay)
 "viE" = (
-/obj/machinery/hologram/holopad,
-/obj/effect/floor_decal/shuttle/blue{
-	pixel_x = -1;
-	pixel_y = 1
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 1
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central2{
-	dir = 8;
-	color = "#989898"
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/harbor/Dock5)
+/turf/simulated/floor/plating,
+/area/harbor/Dock4)
 "viJ" = (
 /obj/structure/table/standard,
 /obj/random/maintenance/cargo,
@@ -67165,12 +68589,6 @@
 /turf/simulated/wall/r_wall,
 /area/rnd/Xenobiology_Lab)
 "viW" = (
-/obj/item/holosign_creator,
-/obj/structure/table/steel,
-/obj/item/holosign_creator{
-	pixel_y = 5;
-	pixel_x = 2
-	},
 /obj/structure/extinguisher_cabinet{
 	dir = 8;
 	pixel_x = 27
@@ -67180,6 +68598,9 @@
 	},
 /obj/effect/floor_decal/corner/mauve/border{
 	dir = 4
+	},
+/obj/machinery/computer/rdconsole/service{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/Custodial_Office)
@@ -67348,6 +68769,16 @@
 /obj/machinery/shield_diffuser,
 /turf/simulated/floor/tiled/techmaint,
 /area/harbor/Dock4)
+"vkW" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/harbor/Dock3)
 "vlb" = (
 /obj/machinery/door/firedoor/glass/hidden/steel{
 	dir = 2
@@ -67403,6 +68834,16 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/Deck1_AftStar1_Corridor3)
+"vmu" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/hallway/Star_1Deck_Central_Corridor_1)
 "vna" = (
 /obj/machinery/door/firedoor/multi_tile/glass,
 /obj/effect/floor_decal/industrial/arrows/blue,
@@ -67482,6 +68923,26 @@
 	},
 /turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Port_1Deck_Atrium)
+"vof" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/obj/machinery/door/blast/regular/open{
+	layer = 3.5;
+	id = "Star Lockdown";
+	name = "Lockdown Gate";
+	desc = "A heavily reinforced gate, sector lockdown!";
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/Deck1_Science_ForCorridor1)
 "voF" = (
 /obj/structure/shuttle/engine/heater,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
@@ -67558,7 +69019,6 @@
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/rnd/Xenobiology_Lab)
 "vpW" = (
-/obj/structure/window/phoronreinforced/full,
 /obj/structure/window/reinforced/survival_pod{
 	dir = 1
 	},
@@ -68143,13 +69603,9 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
-/obj/structure/window/phoronreinforced/full,
 /obj/structure/window/phoronreinforced,
 /obj/structure/window/phoronreinforced{
 	dir = 8
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 1
 	},
 /obj/structure/window/phoronreinforced{
 	dir = 4
@@ -68352,6 +69808,18 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/Telecomms_Foyer)
+"vBQ" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/hallway/ForPort_1_Deck_Observatory)
 "vBS" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/arrows/red{
@@ -68431,6 +69899,16 @@
 	},
 /turf/simulated/floor/plating,
 /area/rnd/PA_Chamber)
+"vCE" = (
+/obj/effect/floor_decal/steeldecal/steel_decals_central2{
+	dir = 4;
+	color = "#989898"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/dark,
+/area/harbor/Dock5)
 "vCF" = (
 /obj/effect/landmark{
 	name = "blobstart"
@@ -68454,6 +69932,23 @@
 /obj/structure/girder/reinforced,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_ForStar_Corridor1)
+"vCV" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/machinery/door/blast/regular/open{
+	layer = 3.5;
+	id = "Port Lockdown";
+	name = "Lockdown Gate";
+	desc = "A heavily reinforced gate, sector lockdown!";
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/quartermaster/Supply_Ship_Bay)
 "vCX" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
@@ -69287,6 +70782,16 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/Aft_1_Deck_Stairwell)
+"vSu" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/Deck1_Cargo_Chamber1)
 "vSI" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/table,
@@ -69640,6 +71145,11 @@
 "vYi" = (
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_Cargo_Corridor1)
+"vYl" = (
+/obj/machinery/conveyor,
+/obj/machinery/mineral/output,
+/turf/simulated/floor/plating,
+/area/quartermaster/Mining_Ship_Bay)
 "vYv" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 8
@@ -69670,13 +71180,9 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
-	},
-/obj/structure/window/titanium{
-	dir = 1
 	},
 /obj/structure/window/titanium{
 	dir = 8
@@ -69911,6 +71417,18 @@
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_Cargo_Corridor1)
+"wbE" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/harbor/Dock1)
 "wbK" = (
 /obj/random/junk,
 /turf/simulated/floor/plating,
@@ -70087,14 +71605,18 @@
 /turf/simulated/floor/tiled/dark,
 /area/engineering/GravGen_Room)
 "wga" = (
-/obj/effect/floor_decal/steeldecal/steel_decals_central2{
-	dir = 1
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central2{
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
-/area/harbor/Dock5)
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/harbor/Dock3)
 "wgf" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4
@@ -70356,13 +71878,15 @@
 /obj/effect/floor_decal/industrial/arrows/yellow{
 	dir = 1
 	},
-/obj/machinery/door/airlock/maintenance/int,
 /obj/machinery/door/blast/regular/open{
 	layer = 3.5;
 	id = "Sci Lockdown";
 	name = "Lockdown Gate";
 	desc = "A heavily reinforced gate, sector lockdown!";
 	dir = 4
+	},
+/obj/machinery/door/airlock/maintenance/rnd{
+	name = "Circuitry Access"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/hallway/Star_1Deck_Atrium)
@@ -70540,12 +72064,15 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/hallway/Cryostorage_Lounge)
 "wpV" = (
-/obj/machinery/atmospherics/pipe/manifold4w/hidden,
 /obj/structure/cable/white{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central2{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold4w/hidden,
 /turf/simulated/floor/tiled,
 /area/harbor/Dock5)
 "wpY" = (
@@ -70575,11 +72102,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/structure/grille,
-/obj/structure/window/basic/full,
 /obj/structure/window/basic,
-/obj/structure/window/basic{
-	dir = 8
-	},
 /obj/structure/window/basic{
 	dir = 1
 	},
@@ -70829,7 +72352,6 @@
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/structure/grille,
-/obj/structure/window/basic/full,
 /obj/structure/window/basic,
 /obj/structure/window/basic{
 	dir = 8
@@ -70934,7 +72456,6 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
@@ -71160,11 +72681,43 @@
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_ForStar_Corridor3)
 "wBR" = (
-/obj/effect/floor_decal/steeldecal/steel_decals_central2{
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/harbor/Dock2)
+"wBV" = (
+/obj/effect/floor_decal/industrial/hatch/red,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/cable/white,
+/obj/structure/cable/white{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
 	dir = 4
 	},
-/turf/simulated/floor/glass/reinforced,
-/area/hallway/Star_1Deck_Central_Corridor_1)
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "SC-BDxenobiopen5";
+	name = "Containment Blast Doors";
+	opacity = 0;
+	layer = 3.5
+	},
+/turf/simulated/floor/plating,
+/area/rnd/Xenobiology_Lab)
 "wBX" = (
 /obj/effect/floor_decal/industrial/danger{
 	dir = 1
@@ -71258,13 +72811,16 @@
 /turf/simulated/floor/tiled,
 /area/hallway/Aft_Transit_Lobby)
 "wEr" = (
-/obj/effect/floor_decal/steeldecal/steel_decals_central2{
-	dir = 1
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 4
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central2{
+/obj/structure/window/titanium{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/plating,
 /area/harbor/Dock5)
 "wEw" = (
 /obj/structure/bed/chair/sofa/sif_ora{
@@ -71803,13 +73359,9 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
-/obj/structure/window/phoronreinforced/full,
 /obj/structure/window/phoronreinforced,
 /obj/structure/window/phoronreinforced{
 	dir = 8
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 1
 	},
 /obj/structure/window/phoronreinforced{
 	dir = 4
@@ -71998,7 +73550,6 @@
 	icon_state = "0-2"
 	},
 /obj/structure/grille,
-/obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
 	dir = 1
 	},
@@ -72069,13 +73620,8 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
-/obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
-	},
-/obj/structure/window/titanium{
-	dir = 1
 	},
 /obj/structure/window/titanium{
 	dir = 8
@@ -72209,6 +73755,42 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/Mining_Ship_Bay)
+"wUy" = (
+/obj/effect/floor_decal/industrial/hatch/red,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/cable/white,
+/obj/structure/cable/white{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "SC-BDxenobiopen6";
+	name = "Containment Blast Doors";
+	opacity = 0;
+	layer = 3.5
+	},
+/turf/simulated/floor/plating,
+/area/rnd/Xenobiology_Lab)
+"wUA" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/Deck1_ForStar_Corridor2)
 "wVr" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/effect/floor_decal/industrial/loading/white{
@@ -72228,13 +73810,9 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
-	},
-/obj/structure/window/titanium{
-	dir = 1
 	},
 /obj/structure/window/titanium{
 	dir = 8
@@ -72590,11 +74168,7 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
-/obj/structure/window/titanium{
-	dir = 4
-	},
 /obj/structure/window/titanium{
 	dir = 1
 	},
@@ -72741,6 +74315,16 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/Xenobiology_Lab)
+"xdA" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/harbor/Dock1)
 "xdG" = (
 /obj/random/maintenance/security,
 /turf/simulated/floor/tiled,
@@ -73030,11 +74614,14 @@
 /turf/simulated/wall/r_wall,
 /area/hallway/Star_1Deck_Atrium)
 "xiM" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
 	dir = 1
 	},
-/obj/effect/map_helper/airlock/atmos/chamber_pump,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/plating,
 /area/harbor/Dock5)
 "xiN" = (
 /obj/effect/floor_decal/borderfloorwhite/corner,
@@ -73082,7 +74669,6 @@
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/structure/grille,
-/obj/structure/window/basic/full,
 /obj/structure/window/basic,
 /obj/structure/window/basic{
 	dir = 8
@@ -73155,24 +74741,15 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
-/obj/structure/window/titanium{
-	dir = 4
-	},
 /obj/structure/window/titanium{
 	dir = 1
 	},
 /obj/structure/window/titanium{
 	dir = 8
 	},
-/obj/structure/cable/white{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/plating,
-/area/harbor/Dock5)
+/area/harbor/Dock4)
 "xli" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -73319,6 +74896,27 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/harbor/Dock4)
+"xmS" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/obj/machinery/door/blast/regular/open{
+	layer = 3.5;
+	id = "Port Lockdown";
+	name = "Lockdown Gate";
+	desc = "A heavily reinforced gate, sector lockdown!"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/Deck1_Cargo_Corridor3)
 "xmY" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -73365,7 +74963,6 @@
 /turf/simulated/floor/glass,
 /area/hallway/Port_1Deck_Atrium)
 "xoF" = (
-/obj/effect/floor_decal/arrivals/right,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -74873,6 +76470,22 @@
 /obj/machinery/space_heater,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_ForStar_Corridor1)
+"xVo" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/harbor/Dock2)
 "xVw" = (
 /obj/structure/table/glass,
 /obj/item/melee/baton/slime/loaded{
@@ -74891,6 +76504,19 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/Xenobiology_Lab)
+"xVx" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/harbor/Dock1)
 "xVH" = (
 /turf/simulated/floor/tiled,
 /area/security/Quantum_Pad_Checkpoint)
@@ -75122,16 +76748,12 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
 	},
 /obj/structure/window/titanium{
 	dir = 1
-	},
-/obj/structure/window/titanium{
-	dir = 8
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -75165,6 +76787,26 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/Port_1Deck_Atrium)
+"xZE" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment,
+/obj/machinery/door/blast/regular/open{
+	layer = 3.5;
+	id = "Star Lockdown";
+	name = "Lockdown Gate";
+	desc = "A heavily reinforced gate, sector lockdown!"
+	},
+/turf/simulated/floor/plating,
+/area/rnd/Xenobotany_Isolation_Chamber)
 "xZL" = (
 /obj/effect/floor_decal/industrial/hatch/red,
 /obj/machinery/door/window/brigdoor/eastleft{
@@ -75441,15 +77083,17 @@
 	},
 /area/security/Quantum_Pad_Checkpoint)
 "ydb" = (
-/obj/effect/shuttle_landmark{
-	base_area = /area/space;
-	base_turf = /turf/space;
-	docking_controller = "sc-D1_L5A3_airlock";
-	landmark_tag = "sc-D1_L5A3";
-	name = "Docking Lane 5 Airlock 3"
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 4
 	},
-/turf/space,
-/area/space)
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/hallway/AftStar_1_Deck_Observatory)
 "ydF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
@@ -75732,13 +77376,9 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/grille,
-/obj/structure/window/titanium/full,
 /obj/structure/window/titanium,
 /obj/structure/window/titanium{
 	dir = 4
-	},
-/obj/structure/window/titanium{
-	dir = 1
 	},
 /obj/structure/window/titanium{
 	dir = 8
@@ -83483,10 +85123,10 @@ aaa
 aaa
 qVz
 qVz
-syL
+xmS
 syL
 qVz
-syL
+xmS
 syL
 qVz
 qVz
@@ -83988,8 +85628,8 @@ qVz
 qVz
 qVz
 qVz
-syL
-syL
+xmS
+eQv
 syL
 qVz
 qVz
@@ -84010,7 +85650,7 @@ hBK
 ohA
 qVz
 qVz
-syL
+dSZ
 qVz
 qVz
 aaa
@@ -85010,7 +86650,7 @@ aaa
 ixO
 aaa
 aaa
-lxF
+bXf
 acx
 acx
 kkV
@@ -85313,12 +86953,12 @@ aBf
 aBf
 rqS
 rqS
-aNX
-aNX
+dym
+mOq
 aNX
 rqS
-aNX
-aNX
+dym
+mOq
 aNX
 rqS
 gNJ
@@ -85784,7 +87424,7 @@ aaa
 ixO
 aaa
 aaa
-lxF
+bXf
 fLw
 fLw
 jmQ
@@ -86302,8 +87942,8 @@ cSw
 cSw
 cSw
 qsN
-anx
-anx
+cdn
+cpe
 anx
 qsN
 qtH
@@ -88196,17 +89836,17 @@ aaa
 aaa
 aaa
 szS
-aBe
+bMe
 gwU
 tWM
 tWM
-aBe
+bMe
 akd
 aaa
 aaa
-aBe
+bMe
 gwU
-aBe
+bMe
 aaa
 aaa
 aaf
@@ -88214,9 +89854,9 @@ iFw
 aaf
 aaa
 aaa
-aBe
+bMe
 gwU
-aBe
+bMe
 aaa
 aaa
 aaa
@@ -88224,9 +89864,9 @@ aaa
 aaa
 aaa
 aaa
-aBe
+bMe
 gwU
-aBe
+bMe
 aaa
 aaa
 aaa
@@ -89189,7 +90829,7 @@ eHa
 bMN
 dWG
 ddb
-aov
+vCV
 aaa
 aaa
 aaa
@@ -89225,41 +90865,41 @@ aaa
 aaa
 aaa
 cfp
-aBe
+khE
 sCH
 cfp
-aBe
+xVx
 hTg
 eDP
 eZA
-aBe
+xVx
 aaa
 aaa
-aBe
-aBe
+sMf
+pMC
 iZh
-aBe
-aBe
+wbE
+xdA
 aaa
 aaa
 cfp
 aaa
 aaa
-aBe
-aBe
+sMf
+pMC
 iZh
-aBe
-aBe
+wbE
+xdA
 aaa
 aaa
 cfp
 aaa
 aaa
-aBe
-aBe
+sMf
+pMC
 iZh
-aBe
-aBe
+wbE
+xdA
 aaa
 aaa
 aaa
@@ -89447,7 +91087,7 @@ dVZ
 aVn
 jWC
 gia
-aov
+iic
 aaa
 aaa
 aaa
@@ -89492,39 +91132,39 @@ aYG
 fWo
 tPO
 nCw
-aBe
-aBe
+rbq
+pMC
 fsK
 sll
 fsK
-aBe
-aBe
+wbE
+gOu
 cfp
 cfp
 cfp
-aBe
-aBe
+rbq
+pMC
 fsK
 sll
 fsK
-aBe
-aBe
+wbE
+gOu
 cfp
 cfp
 cfp
-aBe
-aBe
+rbq
+pMC
 fsK
 sll
 fsK
-aBe
-aBe
+wbE
+gOu
 cfp
 cfp
-aBe
-aBe
-sCH
-aBe
+rbq
+bAW
+bAW
+gOu
 aaa
 aaa
 aaa
@@ -89671,7 +91311,7 @@ caq
 top
 top
 vai
-jsH
+bvF
 xrX
 xoB
 lRw
@@ -89929,7 +91569,7 @@ nDe
 vBh
 ylm
 vCX
-jsH
+rxL
 xrX
 xoB
 hIf
@@ -89999,8 +91639,8 @@ aaa
 aaa
 aaa
 cfp
-aBe
-aBe
+khE
+khE
 cfp
 kwu
 aAX
@@ -90266,39 +91906,39 @@ aAX
 inz
 cfp
 cfp
-aBe
-aBe
-aBe
+rbq
+bAW
+gOu
 cfp
-aBe
-aBe
-aBe
+rbq
+bAW
+gOu
 cfp
-aBe
+bMe
 hTg
 eDP
-aBe
+bMe
 aCV
 mLv
 aAY
-aBe
+bMe
 eDP
 vgS
-aBe
+bMe
 cfp
 cfp
-aBe
-aBe
-aBe
+rbq
+bAW
+gOu
 cfp
-aBe
-aBe
-aBe
+rbq
+bAW
+gOu
 cfp
-aBe
-aBe
-aBe
-aBe
+rbq
+bAW
+bAW
+gOu
 aaa
 aaa
 aaa
@@ -90514,7 +92154,7 @@ aaa
 aaa
 aaa
 aaa
-aBe
+bMe
 aAY
 eJf
 ais
@@ -90523,7 +92163,7 @@ aAX
 aAX
 wqR
 hww
-aBe
+bMe
 aaa
 aaa
 aaa
@@ -90960,8 +92600,8 @@ qHw
 iuh
 eUo
 jzz
-wsf
-jsH
+lGW
+rxL
 xrX
 xrX
 aaM
@@ -91196,7 +92836,7 @@ aaa
 ixO
 aaa
 aaa
-gZx
+vSu
 tkl
 wcD
 eao
@@ -91288,7 +92928,7 @@ aaa
 aaa
 aaa
 aaa
-aBe
+xVx
 aAY
 gID
 eZD
@@ -91297,7 +92937,7 @@ aAX
 aAX
 wqR
 aAY
-aBe
+xVx
 aaa
 aaa
 aaa
@@ -91306,17 +92946,17 @@ aaa
 aaa
 aaa
 aaa
-aBe
+xVx
 gwU
 tWM
-aBe
+xVx
 aaa
 aaa
 aaa
-aBe
+xVx
 tWM
 edM
-aBe
+xVx
 aaa
 aaa
 aaa
@@ -91454,7 +93094,7 @@ aaa
 ixO
 aaa
 aaa
-gZx
+szo
 fwc
 tkl
 nnV
@@ -91473,11 +93113,11 @@ iXQ
 iXQ
 fKK
 saW
+vYl
 iXQ
 iXQ
-iXQ
-wsf
-jsH
+pGQ
+fQW
 xrX
 xrX
 aaM
@@ -91563,23 +93203,23 @@ aaa
 aaa
 aaa
 aaa
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -91817,27 +93457,27 @@ cfp
 aaa
 aaa
 aaa
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-vXj
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -92062,7 +93702,7 @@ aaa
 aaa
 aaa
 aaa
-aBe
+bMe
 aAY
 rCP
 oBC
@@ -92071,31 +93711,31 @@ aAX
 aAX
 wqR
 aAY
-aBe
+bMe
 aaa
 aaa
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -92332,29 +93972,29 @@ aAY
 aBe
 aaa
 aaa
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -92590,29 +94230,29 @@ aAY
 aBe
 aaa
 aaa
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -92836,7 +94476,7 @@ aaa
 aaa
 aaa
 aaa
-aBe
+xVx
 afV
 eJf
 jFz
@@ -92845,32 +94485,32 @@ aAX
 aAX
 wqR
 hww
-aBe
+xVx
 aaa
 aaa
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-jHx
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -93106,29 +94746,29 @@ cfp
 cfp
 aaa
 aaa
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -93262,7 +94902,7 @@ ixO
 aaa
 aaa
 aaa
-gZx
+vSu
 pZd
 fwc
 fwc
@@ -93364,29 +95004,29 @@ cfp
 aaa
 aaa
 aaa
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -93520,7 +95160,7 @@ ixO
 aaa
 aaa
 aaa
-gZx
+szo
 mWL
 fwc
 fwc
@@ -93575,7 +95215,7 @@ jrU
 tvS
 arR
 lcQ
-eaO
+hXv
 aaa
 aaa
 ixO
@@ -93622,28 +95262,28 @@ aiO
 aaa
 aaa
 aaa
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -93833,7 +95473,7 @@ wub
 eYA
 arR
 bOY
-eaO
+faU
 aaa
 aaa
 ixO
@@ -93881,27 +95521,27 @@ aaa
 aaa
 aaa
 aaa
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -94018,11 +95658,11 @@ aaa
 aaa
 aaa
 aaa
-bWN
-bWN
-bWN
-bWN
-bWN
+vBQ
+myO
+myO
+myO
+uEG
 wiX
 wiX
 aaa
@@ -94104,11 +95744,11 @@ aaa
 aaa
 gSQ
 gSQ
-dQF
-dQF
-dQF
-dQF
-dQF
+fGh
+iuJ
+iuJ
+iuJ
+nyc
 aaa
 aaa
 aaa
@@ -94143,23 +95783,23 @@ aaa
 aaa
 aaa
 aaa
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
-pFU
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -94276,7 +95916,7 @@ aaa
 aaa
 aaa
 aaa
-bWN
+rTR
 iEp
 iEp
 iEp
@@ -94366,7 +96006,7 @@ hak
 hak
 hak
 hak
-dQF
+fVP
 aaa
 aaa
 aaa
@@ -94384,7 +96024,7 @@ aaa
 aaa
 aaa
 aaa
-act
+mOX
 nwU
 dxC
 cTv
@@ -94393,7 +96033,7 @@ xlE
 xlE
 ijD
 ack
-act
+mOX
 aaa
 aaa
 aaa
@@ -94402,17 +96042,17 @@ aaa
 aaa
 aaa
 aaa
-act
+mOX
 acF
 lbO
-act
+mOX
 aaa
 aaa
 aaa
-act
+mOX
 lbO
 kxP
-act
+mOX
 aaa
 aaa
 aaa
@@ -94534,7 +96174,7 @@ aaa
 aaa
 aaa
 aaa
-bWN
+rTR
 quc
 eni
 iEp
@@ -94624,7 +96264,7 @@ dht
 ihk
 jhG
 eHg
-dQF
+fVP
 aaa
 aaa
 aaa
@@ -94642,7 +96282,7 @@ aaa
 aaa
 aaa
 aaa
-act
+wBR
 nwU
 dxC
 cTv
@@ -94651,7 +96291,7 @@ xlE
 xlE
 ijD
 nwU
-act
+wBR
 aaa
 aaa
 aaa
@@ -94660,17 +96300,17 @@ aaa
 aaa
 aaa
 aaa
-act
+wBR
 vQS
 aKj
-act
+wBR
 aaa
 aaa
 aaa
-act
+wBR
 aNx
 aGt
-act
+wBR
 aaa
 aaa
 aaa
@@ -94792,7 +96432,7 @@ aaa
 aaa
 aaa
 aaa
-bWN
+rTR
 iEp
 rKK
 iEp
@@ -94882,7 +96522,7 @@ lom
 hmU
 pwU
 hak
-dQF
+fVP
 aaa
 aaa
 aaa
@@ -94900,7 +96540,7 @@ aaa
 aaa
 aaa
 aaa
-act
+wBR
 kRj
 dxC
 cTv
@@ -94909,7 +96549,7 @@ xlE
 xlE
 ijD
 nwU
-act
+wBR
 aaa
 aaa
 aaa
@@ -94918,17 +96558,17 @@ aaa
 aaa
 aaa
 aaa
-act
+wBR
 eEX
 bMw
-act
+wBR
 aaa
 aaa
 aaa
-act
+wBR
 cZl
 bCH
-act
+wBR
 aaa
 aaa
 aaa
@@ -95062,12 +96702,12 @@ wiX
 wiX
 fGi
 ary
-ary
-ary
+khu
+aUv
 fGi
 ary
-ary
-ary
+khu
+aUv
 fGi
 fGi
 fGi
@@ -95124,13 +96764,13 @@ aVS
 aVS
 aVS
 xYR
+eyi
 dSs
-dSs
-dSs
+nkG
 aNF
+eyi
 dSs
-dSs
-dSs
+nkG
 gSQ
 gSQ
 gSQ
@@ -95158,7 +96798,7 @@ aaa
 aaa
 aaa
 aaa
-act
+dfv
 nwU
 lbL
 awo
@@ -95167,7 +96807,7 @@ xlE
 xlE
 ijD
 ack
-act
+dfv
 aaa
 aaa
 aaa
@@ -95176,17 +96816,17 @@ aaa
 aaa
 aaa
 aaa
-act
+wBR
 lkw
 qRr
-act
+wBR
 aiO
 aiO
 aiO
-act
+wBR
 pJV
 rlK
-act
+wBR
 aaa
 aaa
 aaa
@@ -95426,37 +97066,37 @@ xlE
 dvj
 ggA
 dCC
-act
-act
-act
-aiO
-act
-act
+lUx
+lgu
 act
 aiO
+lUx
+lgu
 act
+aiO
+dfv
 aND
 nIg
-act
+dfv
 mrC
 dfh
 nwU
-act
+dfv
 nIg
 gXp
-act
+dfv
 aiO
 aiO
-act
-act
-act
-aiO
-act
-act
+lUx
+lgu
 act
 aiO
+lUx
+lgu
 act
-act
+aiO
+lUx
+lgu
 wSw
 act
 aaa
@@ -95932,7 +97572,7 @@ aaa
 aaa
 aaa
 aaa
-act
+mOX
 nwU
 vuh
 rUQ
@@ -95940,7 +97580,7 @@ umz
 xlE
 xlE
 lYo
-act
+xVo
 sHW
 aBK
 dXq
@@ -96190,7 +97830,7 @@ aaa
 aaa
 aaa
 aaa
-act
+wBR
 nwU
 dxC
 cTv
@@ -96376,7 +98016,7 @@ rrc
 aaM
 aaM
 aaM
-alh
+cUC
 alh
 qgA
 aaM
@@ -96448,7 +98088,7 @@ aaa
 aaa
 aaa
 aaa
-act
+wBR
 nwU
 dxC
 cTv
@@ -96458,37 +98098,37 @@ xlE
 qAp
 btl
 aiO
-act
-act
+lUx
+lgu
 act
 aiO
 nwU
 nwU
 nwU
 aiO
-act
-act
+lUx
+lgu
 act
 aiO
 ack
 ett
 ack
 aiO
-act
-act
+lUx
+lgu
 act
 aiO
 nwU
 nwU
 nwU
 aiO
-act
-act
+lUx
+lgu
 act
 aiO
-act
-act
-act
+lUx
+lgu
+lgu
 wSw
 act
 aaa
@@ -96602,7 +98242,7 @@ aaa
 ixO
 aaa
 aaa
-awR
+fQz
 ajg
 ske
 cHS
@@ -96706,7 +98346,7 @@ aaa
 aaa
 aaa
 aaa
-act
+dfv
 kRj
 dxC
 cTv
@@ -96720,24 +98360,24 @@ aaa
 aaa
 aaa
 aiO
-act
-act
-act
-aiO
-aaa
-aaa
-aaa
-aiO
-act
-act
+lUx
+lgu
 act
 aiO
 aaa
 aaa
 aaa
 aiO
+lUx
+lgu
 act
-act
+aiO
+aaa
+aaa
+aaa
+aiO
+lUx
+lgu
 act
 aiO
 aaa
@@ -96860,7 +98500,7 @@ aaa
 ixO
 aaa
 aaa
-awR
+rlJ
 tij
 wMB
 tij
@@ -96897,7 +98537,7 @@ bVF
 map
 aSf
 sFQ
-aaX
+qAx
 xAc
 xAc
 xAc
@@ -96972,7 +98612,7 @@ nFh
 xlE
 xlE
 ijD
-act
+mOX
 aaa
 aaa
 aaa
@@ -97155,7 +98795,7 @@ uJo
 aTE
 xXL
 ybW
-aaX
+gHS
 xAc
 xAc
 xAc
@@ -97230,7 +98870,7 @@ akk
 vDr
 aMv
 lQq
-act
+mBn
 aaa
 aaa
 aaa
@@ -97634,7 +99274,7 @@ aaa
 ixO
 aaa
 aaa
-awR
+fQz
 tij
 wMB
 tij
@@ -97740,7 +99380,7 @@ aDi
 aDi
 aDi
 aDi
-yjc
+bSy
 aDi
 hOT
 slX
@@ -98387,7 +100027,7 @@ aaa
 aaa
 oZJ
 hLC
-hLC
+kZQ
 eSR
 phf
 aQG
@@ -98520,7 +100160,7 @@ saP
 kaI
 bEm
 gll
-yjc
+ips
 aaa
 aaa
 aaa
@@ -98641,8 +100281,8 @@ aaa
 aaa
 oZJ
 hLC
-hLC
-hLC
+djp
+kZQ
 oZJ
 afm
 ncr
@@ -98778,7 +100418,7 @@ ilO
 cuX
 bEm
 hoU
-yjc
+srW
 aaa
 aaa
 aaa
@@ -98896,7 +100536,7 @@ aaa
 aaa
 oZJ
 hLC
-hLC
+kZQ
 oZJ
 afm
 ncr
@@ -99291,8 +100931,8 @@ jod
 esZ
 mrr
 aDi
-yjc
-yjc
+tUj
+hfM
 yjc
 aDi
 uDE
@@ -99407,7 +101047,7 @@ aaa
 aaa
 aaa
 oZJ
-hLC
+hoE
 oZJ
 exY
 afm
@@ -99477,7 +101117,7 @@ aTE
 aTE
 aSf
 ybW
-aaX
+qAx
 lun
 xAc
 ovz
@@ -99735,7 +101375,7 @@ hBp
 lmf
 sFQ
 sFQ
-aaX
+gHS
 xAc
 xAc
 ovz
@@ -100059,7 +101699,7 @@ fFD
 fFD
 fFD
 aDi
-yjc
+tUj
 yjc
 hne
 jCD
@@ -101006,10 +102646,10 @@ gLY
 nAs
 pjh
 hqB
-hqB
+iex
 lCS
 hqB
-hqB
+iex
 lCS
 lCS
 abs
@@ -101386,23 +103026,23 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
 aaa
 aaa
 aaa
@@ -101640,27 +103280,27 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+vXj
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
 aaa
 aaa
 aaa
@@ -101897,28 +103537,28 @@ iKg
 aaa
 vuJ
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
 aaa
 aaa
 aaa
@@ -102155,29 +103795,29 @@ iKg
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
 aaa
 aaa
 aaa
@@ -102301,7 +103941,7 @@ aaa
 aaa
 aaa
 aaa
-cRu
+dCQ
 cIr
 nJj
 asV
@@ -102309,7 +103949,7 @@ asV
 asV
 ovF
 hhx
-pKZ
+pBU
 pKZ
 cIR
 bsY
@@ -102413,29 +104053,29 @@ iKg
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
 aaa
 aaa
 aaa
@@ -102559,7 +104199,7 @@ vuJ
 aaa
 aaa
 aaa
-cRu
+tly
 cIr
 pAv
 iTC
@@ -102582,7 +104222,7 @@ qls
 tqY
 epy
 fDx
-aqG
+bXn
 uKF
 anO
 ddh
@@ -102671,29 +104311,29 @@ iKg
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+jHx
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
 aaa
 aaa
 aaa
@@ -102817,7 +104457,7 @@ aaa
 aaa
 aaa
 aaa
-cRu
+tly
 aCp
 pAv
 iTC
@@ -102840,7 +104480,7 @@ qls
 sJC
 epy
 oXp
-aqG
+kzO
 uKF
 avP
 tpZ
@@ -102929,29 +104569,29 @@ iKg
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
 aaa
 aaa
 aaa
@@ -103075,7 +104715,7 @@ aaa
 aaa
 aaa
 aaa
-cRu
+tly
 cIr
 pAv
 iTC
@@ -103187,29 +104827,29 @@ iKg
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
 aaa
 aaa
 aaa
@@ -103341,7 +104981,7 @@ cOl
 cOl
 ipW
 hmG
-pKZ
+pBU
 pKZ
 lax
 aiY
@@ -103445,28 +105085,28 @@ iKg
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
 aaa
 aaa
 aaa
@@ -103704,27 +105344,27 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-khE
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
 aaa
 aaa
 aaa
@@ -103942,8 +105582,8 @@ dgJ
 aTj
 aKi
 bLA
-bLA
-bLA
+uHQ
+ffT
 aKi
 aKi
 aKi
@@ -103959,7 +105599,6 @@ chQ
 ekA
 iKg
 aaa
-psu
 aaa
 aaa
 aaa
@@ -103967,22 +105606,23 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
+pFU
 aaa
 aaa
 aaa
@@ -104182,8 +105822,8 @@ gqi
 lcw
 lcw
 dYn
-dYn
-dYn
+cQa
+peQ
 lcw
 aRU
 eMu
@@ -104225,12 +105865,12 @@ aaa
 aaa
 aaa
 szS
-agL
-wXp
+oya
 wXp
 jEb
-agL
+oya
 akd
+aaa
 aaa
 aaa
 aaa
@@ -104333,12 +105973,12 @@ tpj
 aQY
 blz
 aQY
-aOv
+rOz
 qZw
 fVs
 njm
 xRw
-tUU
+lqN
 jKH
 cVF
 kZC
@@ -104473,24 +106113,24 @@ ibt
 wgO
 rcs
 kSE
-agL
-agL
-agL
-agL
-kSE
-agL
-agL
-agL
+qvX
+wEr
+wEr
 agL
 kSE
+qvX
+wEr
+wEr
 agL
+kSE
+xiM
 iDD
-jLb
 wHM
-agL
+xiM
 iFw
 iFw
 aaf
+aaa
 aaa
 aaa
 aaa
@@ -104632,7 +106272,7 @@ dHq
 dVW
 qkX
 vxR
-aFf
+qws
 aWf
 rFW
 ivU
@@ -104741,14 +106381,14 @@ mdY
 mdY
 bCp
 bap
-agL
+xiM
 cOQ
 rsk
 xiM
-agL
 jlA
 fZW
 iFw
+aaa
 aaa
 aaa
 aaa
@@ -104890,8 +106530,8 @@ ije
 dVX
 qkX
 skH
-aFf
-aFf
+fIl
+fIl
 xde
 bmu
 cPd
@@ -104999,14 +106639,14 @@ sQR
 sQR
 gjp
 dVV
-agL
-oSV
+mZW
+baS
 buZ
-oSV
-agL
+mZW
 jlA
 lGZ
 oRK
+aaa
 aaa
 aaa
 aaa
@@ -105148,8 +106788,8 @@ dIq
 cZt
 qkX
 dFO
-aFf
-aFf
+fIl
+fIl
 rFW
 mdg
 cPd
@@ -105260,11 +106900,11 @@ aJT
 elp
 dXe
 jEu
-mOX
 kSE
+qvX
+wEr
 agL
-xkT
-agL
+aaa
 aaa
 aaa
 aaa
@@ -105518,11 +107158,11 @@ dNN
 bBx
 dhx
 nBS
-wga
 pHp
 rdk
 dgp
 bot
+aaa
 aaa
 aaa
 aaa
@@ -105776,13 +107416,13 @@ fIm
 bry
 sPh
 wpV
-ojM
 buo
 pyv
 bFI
 bot
 aaa
 kAW
+aaa
 aaa
 aaa
 aaa
@@ -105922,7 +107562,7 @@ cjG
 cjG
 fCA
 cCj
-aFf
+qws
 aWf
 rFW
 mdg
@@ -106034,11 +107674,11 @@ dNN
 bBx
 mWi
 sEk
-wEr
 gvO
 sRF
 lFn
 mPv
+aaa
 aaa
 aaa
 aaa
@@ -106180,8 +107820,8 @@ jBl
 dVU
 fCA
 dFO
-aFf
-aFf
+fIl
+fIl
 rFW
 mdg
 oJF
@@ -106291,12 +107931,12 @@ ntT
 aJT
 mmk
 dXe
-jEu
-pBU
+lZN
 kSE
+qvX
+wEr
 agL
-xkT
-agL
+aaa
 aaa
 aaa
 aaa
@@ -106438,8 +108078,8 @@ fXc
 aBh
 fCA
 cjG
-aFf
-aFf
+fIl
+fIl
 gmR
 fSV
 ull
@@ -106547,14 +108187,14 @@ fOX
 fOX
 tcF
 dVV
-agL
-wHM
+oya
+vCE
 tCF
-wHM
-agL
+oya
 jlA
 lGZ
 dLR
+aaa
 aaa
 aaa
 aaa
@@ -106805,14 +108445,14 @@ fHt
 fHt
 pCF
 lvp
-agL
+xiM
 abh
 bBM
 xiM
-agL
 jlA
 deu
 iFw
+aaa
 aaa
 aaa
 aaa
@@ -107053,24 +108693,24 @@ eLq
 mQo
 cAM
 kSE
-agL
-agL
-agL
-agL
-kSE
-agL
-agL
-agL
+qvX
+wEr
+wEr
 agL
 kSE
+qvX
+wEr
+wEr
 agL
+kSE
+xiM
 mkx
-viE
 oSV
-agL
+xiM
 iFw
 iFw
 aaf
+aaa
 aaa
 aaa
 aaa
@@ -107278,8 +108918,8 @@ gqi
 lcw
 lcw
 dYn
-dYn
-dYn
+cQa
+peQ
 lcw
 aEZ
 eMu
@@ -107321,12 +108961,12 @@ aaa
 aaa
 aaa
 szS
-agL
-wXp
+mZW
 wXp
 mlW
-agL
+mZW
 akd
+aaa
 aaa
 aaa
 aaa
@@ -107553,13 +109193,13 @@ nVk
 lYS
 vtD
 aVW
+jLb
 aEU
-aEU
-aEU
+pdY
 aVW
+jLb
 aEU
-aEU
-aEU
+pdY
 aVW
 aVW
 aVW
@@ -107578,20 +109218,20 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
 aaa
 aaa
 aaa
@@ -107720,7 +109360,7 @@ aaa
 aaa
 aaa
 aaa
-bdG
+dXT
 cpH
 doD
 ilo
@@ -107834,22 +109474,22 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-ydb
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+afo
+afo
+afo
+afo
+gXl
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
 aaa
 aaa
 aaa
@@ -107978,7 +109618,7 @@ aaa
 aaa
 aaa
 aaa
-bdG
+lWV
 hDo
 liJ
 uOn
@@ -108091,24 +109731,24 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
 aaa
 aaa
 aaa
@@ -108236,7 +109876,7 @@ aaa
 aaa
 aaa
 aaa
-bdG
+lWV
 tLI
 dZQ
 bzz
@@ -108349,24 +109989,24 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
 aaa
 aaa
 aaa
@@ -108607,24 +110247,24 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+qpp
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
 aaa
 aaa
 aaa
@@ -108865,24 +110505,24 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
 aaa
 aaa
 aaa
@@ -109123,24 +110763,24 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
 aaa
 aaa
 aaa
@@ -109268,7 +110908,7 @@ aaa
 aaa
 aaa
 aaa
-bdG
+dXT
 pVQ
 lXb
 pFS
@@ -109382,22 +111022,22 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
 aaa
 aaa
 aaa
@@ -109526,7 +111166,7 @@ aaa
 aaa
 aaa
 aaa
-bdG
+lWV
 ajD
 dZQ
 dDc
@@ -109642,20 +111282,20 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
+afo
 aaa
 aaa
 aaa
@@ -110577,8 +112217,8 @@ adX
 hAP
 sOr
 adX
-wBR
-wBR
+adX
+adX
 rtQ
 vQi
 ygP
@@ -111291,10 +112931,10 @@ aJl
 qYB
 aJl
 obx
-oYt
+sFb
 oYt
 kJg
-oYt
+sFb
 oYt
 siv
 uUf
@@ -111411,8 +113051,8 @@ xGs
 xGs
 xGs
 cof
-ptP
-ptP
+cMu
+tSH
 hXO
 jDD
 xgm
@@ -111603,7 +113243,7 @@ eav
 eau
 wal
 wal
-aGk
+vmu
 adX
 adX
 ajE
@@ -111861,7 +113501,7 @@ eaw
 eaw
 dgH
 oIG
-aGk
+afC
 mOg
 adX
 ajE
@@ -112191,9 +113831,9 @@ aLS
 aaD
 brr
 cof
-ptP
-ptP
-ptP
+cMu
+iQE
+tSH
 cof
 eab
 eab
@@ -112309,7 +113949,7 @@ aaa
 aaa
 aaa
 aaa
-fXM
+nwQ
 vYL
 aJl
 aJl
@@ -113085,13 +114725,13 @@ aaa
 aaa
 pdh
 pdh
-pmK
-pmK
-pdh
-pmK
+dCH
 pmK
 pdh
+dCH
 pmK
+pdh
+dCH
 pmK
 pdh
 pdh
@@ -113372,7 +115012,7 @@ aaa
 aaa
 aaa
 aaa
-gdk
+hcm
 feH
 tEO
 feH
@@ -114146,7 +115786,7 @@ aaa
 aaa
 aaa
 aaa
-gdk
+aOK
 feH
 tEO
 bGw
@@ -114183,7 +115823,7 @@ eCS
 eaw
 mzf
 oIG
-aGk
+vmu
 adX
 adX
 adX
@@ -114228,7 +115868,7 @@ vUq
 gDq
 oVU
 tyW
-axa
+oxa
 aaa
 aaa
 ixO
@@ -114258,7 +115898,7 @@ hEH
 ghn
 qfh
 tiD
-aqv
+psu
 aaa
 aaa
 aaa
@@ -114404,7 +116044,7 @@ aaa
 aaa
 aaa
 aaa
-gdk
+hcm
 feH
 tEO
 tEO
@@ -114441,7 +116081,7 @@ cit
 qhk
 dgH
 wal
-aGk
+afC
 adX
 adX
 adX
@@ -114486,7 +116126,7 @@ oVU
 oVU
 oVU
 vOL
-axa
+rRx
 aaa
 aaa
 ixO
@@ -114516,7 +116156,7 @@ ahi
 gnl
 gnl
 fST
-aqv
+wga
 aaa
 aaa
 aaa
@@ -114700,13 +116340,13 @@ dkj
 gCn
 dXp
 fjY
-bMe
-bMe
+adX
+adX
 adX
 kEq
 bOT
-bMe
-bMe
+adX
+adX
 ugh
 pQL
 vgc
@@ -114766,7 +116406,7 @@ aaa
 aaa
 aaa
 aaa
-aqv
+psu
 vpF
 fcH
 kXy
@@ -114780,25 +116420,25 @@ aaa
 aaa
 aaa
 pmj
+bef
 aqv
-aqv
-aqv
+aLV
 pmj
 aaa
 aaa
 aaa
 pmj
+bef
 aqv
-aqv
-aqv
+aLV
 pmj
 aaa
 aaa
 aaa
 pmj
+bef
 aqv
-aqv
-aqv
+aLV
 pmj
 aaa
 aaa
@@ -114952,7 +116592,7 @@ ijM
 qFn
 qFn
 qFn
-wVF
+cXL
 wVF
 plz
 qFn
@@ -115024,7 +116664,7 @@ aaa
 aaa
 aaa
 aaa
-aqv
+vkW
 vpF
 fcH
 kXy
@@ -115034,39 +116674,39 @@ gnl
 vBd
 hQV
 pmj
+bef
 aqv
-aqv
-aqv
+aLV
 pmj
 vpF
 vpF
 vpF
 pmj
+bef
 aqv
-aqv
-aqv
+aLV
 pmj
 cJw
 hPd
 cJw
 pmj
+bef
 aqv
-aqv
-aqv
+aLV
 pmj
 vpF
 vpF
 vpF
 pmj
+bef
 aqv
-aqv
-aqv
+aLV
 pmj
+bef
 aqv
 aqv
 aqv
-htm
-aqv
+aLV
 aaa
 aaa
 aaa
@@ -115282,7 +116922,7 @@ aaa
 aaa
 aaa
 aaa
-aqv
+vkW
 aQW
 fcH
 kXy
@@ -115540,7 +117180,7 @@ aaa
 aaa
 aaa
 aaa
-aqv
+wga
 vpF
 kEl
 qeQ
@@ -115548,7 +117188,7 @@ hFI
 gnl
 gnl
 dSy
-aqv
+aNg
 ozZ
 asO
 hmu
@@ -116066,39 +117706,39 @@ gnl
 leN
 oKL
 edb
+bef
 aqv
-aqv
-aqv
+aLV
 pmj
+bef
 aqv
-aqv
-aqv
+aLV
 pmj
-aqv
+psu
 oKx
 oul
-aqv
+psu
 ors
 pYg
 vpF
-aqv
+psu
 oul
 iZU
-aqv
+psu
 pmj
 pmj
+bef
 aqv
-aqv
-aqv
+aLV
 pmj
+bef
 aqv
-aqv
-aqv
+aLV
 pmj
-aqv
+bef
 aqv
 htm
-aqv
+aLV
 aaa
 aaa
 aaa
@@ -116206,7 +117846,7 @@ aaa
 aaa
 aaa
 aaa
-fUe
+sbw
 aNJ
 jVq
 aNJ
@@ -116217,13 +117857,13 @@ aPe
 aPe
 aPe
 tqK
-xbG
-xbG
-xbG
+hSg
+hrJ
+rZg
 tqK
-xbG
-xbG
-xbG
+hSg
+hrJ
+rZg
 tqK
 tqK
 tqK
@@ -116280,12 +117920,12 @@ oIK
 rYm
 rYm
 dYc
-dYc
-dYc
+jAb
+ver
 rYm
 dYc
-dYc
-dYc
+jAb
+ver
 rYm
 apD
 apD
@@ -116296,7 +117936,7 @@ ajZ
 xFV
 wvD
 cUK
-mUs
+pNg
 aaa
 aaa
 aaa
@@ -116314,7 +117954,7 @@ aaa
 aaa
 aaa
 aaa
-aqv
+psu
 vpF
 dgC
 pAh
@@ -116323,7 +117963,7 @@ gnl
 gnl
 fST
 cJw
-aqv
+psu
 aaa
 aaa
 aaa
@@ -116332,17 +117972,17 @@ aaa
 aaa
 aaa
 aaa
-aqv
+vkW
 bYk
 uWK
-aqv
+vkW
 pmj
 pmj
 pmj
-aqv
+vkW
 atP
 ets
-aqv
+vkW
 aaa
 aaa
 aaa
@@ -116572,7 +118212,7 @@ aaa
 aaa
 aaa
 aaa
-aqv
+vkW
 vpF
 fcH
 kXy
@@ -116581,7 +118221,7 @@ gnl
 gnl
 fST
 vpF
-aqv
+vkW
 aaa
 aaa
 aaa
@@ -116590,17 +118230,17 @@ aaa
 aaa
 aaa
 aaa
-aqv
+vkW
 afw
 qtB
-aqv
+vkW
 aaa
 aaa
 aaa
-aqv
+vkW
 eyT
 ksQ
-aqv
+vkW
 aaa
 aaa
 aaa
@@ -116830,7 +118470,7 @@ aaa
 aaa
 aaa
 aaa
-aqv
+vkW
 vpF
 fcH
 kXy
@@ -116839,7 +118479,7 @@ gnl
 gnl
 fST
 vpF
-aqv
+vkW
 aaa
 aaa
 aaa
@@ -116848,17 +118488,17 @@ aaa
 aaa
 aaa
 aaa
-aqv
+vkW
 hPn
 jrj
-aqv
+vkW
 aaa
 aaa
 aaa
-aqv
+vkW
 aVH
 aTA
-aqv
+vkW
 aaa
 aaa
 aaa
@@ -117088,7 +118728,7 @@ aaa
 aaa
 aaa
 aaa
-aqv
+wga
 aQW
 fcH
 kXy
@@ -117097,7 +118737,7 @@ gnl
 gnl
 fST
 cJw
-aqv
+wga
 aaa
 aaa
 aaa
@@ -117106,17 +118746,17 @@ aaa
 aaa
 aaa
 aaa
-aqv
+wga
 bMq
 tNm
-aqv
+wga
 aaa
 aaa
 aaa
-aqv
+wga
 tNm
 vnC
-aqv
+wga
 aaa
 aaa
 aaa
@@ -117238,11 +118878,11 @@ aaa
 aaa
 aaa
 aaa
-fUe
-fUe
-fUe
-fUe
-fUe
+mJQ
+nFc
+nFc
+nFc
+lIl
 aPe
 aPe
 aaa
@@ -117324,11 +118964,11 @@ aaa
 aaa
 apD
 apD
-mUs
-mUs
-mUs
-mUs
-mUs
+lxl
+ydb
+ydb
+ydb
+nLf
 aaa
 aaa
 aaa
@@ -117363,20 +119003,20 @@ aaa
 aaa
 aaa
 aaa
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -117619,22 +119259,22 @@ aaa
 aaa
 aaa
 aaa
-afo
-afo
-afo
-afo
-gXl
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -117876,24 +119516,24 @@ aaa
 aaa
 aaa
 aaa
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -118030,7 +119670,7 @@ aaa
 ixO
 aaa
 aaa
-xbG
+wUA
 gPH
 itq
 uah
@@ -118134,24 +119774,24 @@ aaa
 aaa
 aaa
 aaa
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -118288,7 +119928,7 @@ aaa
 ixO
 aaa
 aaa
-xbG
+jSB
 rYx
 itq
 uah
@@ -118392,24 +120032,24 @@ aaa
 aaa
 aaa
 aaa
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-qpp
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -118636,7 +120276,7 @@ aaa
 aaa
 aaa
 aaa
-oAw
+xkT
 aLz
 nME
 mle
@@ -118645,29 +120285,29 @@ okm
 okm
 ozr
 hdW
-oAw
+xkT
 aaa
 aaa
 aaa
 aaa
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -118894,7 +120534,7 @@ aaa
 aaa
 aaa
 aaa
-oAw
+viE
 aLz
 nME
 mle
@@ -118903,29 +120543,29 @@ okm
 okm
 ozr
 aLz
-oAw
+viE
 aaa
 aaa
 aaa
 aaa
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -119152,7 +120792,7 @@ aaa
 aaa
 aaa
 aaa
-oAw
+viE
 aNY
 nME
 mle
@@ -119161,28 +120801,28 @@ okm
 okm
 ozr
 aLz
-oAw
+viE
 aaa
 aaa
 aaa
 aaa
 aaa
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -119410,7 +121050,7 @@ aaa
 aaa
 aaa
 aaa
-oAw
+pMm
 aLz
 aUK
 hRp
@@ -119419,7 +121059,7 @@ okm
 okm
 ozr
 aLz
-oAw
+pMm
 aaa
 aaa
 aaa
@@ -119427,20 +121067,20 @@ aaa
 aaa
 aaa
 aaa
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
-afo
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -119596,8 +121236,8 @@ ukY
 tKn
 hWv
 ugP
-wBA
-wBA
+vuB
+kpf
 wBA
 ijM
 aMh
@@ -119834,7 +121474,7 @@ aaa
 ixO
 aaa
 aaa
-sVt
+vof
 dMr
 dMr
 fqf
@@ -119854,7 +121494,7 @@ dpG
 wBA
 wVY
 rpo
-kpf
+vuB
 wBA
 xFY
 ijM
@@ -120184,7 +121824,7 @@ aaa
 aaa
 aaa
 aaa
-oAw
+xkT
 aLz
 jVT
 jFN
@@ -120193,7 +121833,7 @@ okm
 okm
 ozr
 aLz
-oAw
+xkT
 aaa
 aaa
 aaa
@@ -120202,17 +121842,17 @@ aaa
 aaa
 aaa
 aaa
-oAw
+xkT
 vkS
 tdE
-oAw
+xkT
 aaa
 aaa
 aaa
-oAw
+xkT
 tdE
 ajy
-oAw
+xkT
 aaa
 aaa
 aaa
@@ -120442,7 +122082,7 @@ aaa
 aaa
 aaa
 aaa
-oAw
+viE
 aLz
 nME
 dwh
@@ -120451,7 +122091,7 @@ okm
 okm
 ozr
 aLz
-oAw
+viE
 aaa
 aaa
 aaa
@@ -120460,17 +122100,17 @@ aaa
 aaa
 aaa
 aaa
-oAw
+viE
 dZR
 cDF
-oAw
+viE
 aaa
 aaa
 aaa
-oAw
+viE
 wBw
 iRS
-oAw
+viE
 aaa
 aaa
 aaa
@@ -120608,7 +122248,7 @@ aaa
 ixO
 aaa
 aaa
-sVt
+vof
 dMr
 dMr
 fqf
@@ -120700,7 +122340,7 @@ aaa
 aaa
 aaa
 aaa
-oAw
+viE
 aLz
 nME
 dwh
@@ -120709,7 +122349,7 @@ okm
 okm
 ozr
 aLz
-oAw
+viE
 aaa
 aaa
 aaa
@@ -120718,17 +122358,17 @@ aaa
 aaa
 aaa
 aaa
-oAw
+viE
 eVQ
 ogJ
-oAw
+viE
 aaa
 aaa
 aaa
-oAw
+viE
 gUZ
 eVQ
-oAw
+viE
 aaa
 aaa
 aaa
@@ -120958,7 +122598,7 @@ aaa
 aaa
 aaa
 aaa
-oAw
+pMm
 aNY
 nME
 dwh
@@ -120967,7 +122607,7 @@ okm
 okm
 ozr
 hdW
-oAw
+pMm
 aaa
 aaa
 aaa
@@ -120976,17 +122616,17 @@ aaa
 aaa
 aaa
 aaa
-oAw
+viE
 xEE
 fqr
-oAw
+viE
 wOk
 wOk
 wOk
-oAw
+viE
 nSe
 xmv
-oAw
+viE
 aaa
 aaa
 aaa
@@ -121227,37 +122867,37 @@ paZ
 wOk
 wOk
 oAw
-oAw
-oAw
+reX
+gaP
 wOk
 oAw
-oAw
-oAw
+reX
+gaP
 wOk
-oAw
+pMm
 gzH
 tGZ
-oAw
+pMm
 moV
 eCo
 aLz
-oAw
+pMm
 tGZ
 mcn
-oAw
+pMm
 wOk
 wOk
 oAw
-oAw
-oAw
+reX
+gaP
 wOk
 oAw
-oAw
-oAw
+reX
+gaP
 wOk
 wOk
 oAw
-oAw
+gaP
 wOk
 aaa
 aaa
@@ -121476,7 +123116,7 @@ aaa
 aaa
 wOk
 oAw
-oAw
+gaP
 wOk
 raD
 okm
@@ -122001,32 +123641,32 @@ kpI
 eJe
 hxK
 oAw
-oAw
+hxj
 vHb
 cIs
 vHb
-oAw
-oAw
+xkT
+nQn
 wOk
 wOk
 wOk
-oAw
-oAw
+nQn
+nQn
 vHb
 cIs
 vHb
-oAw
-oAw
+tYY
+gaP
 wOk
 wOk
 wOk
-oAw
-oAw
+nQn
+nQn
 vHb
 cIs
 vHb
-oAw
-oAw
+tYY
+gaP
 wOk
 wOk
 wOk
@@ -122207,8 +123847,8 @@ taP
 eXA
 iBK
 xhV
-poW
-poW
+igl
+itl
 poW
 jMx
 iBK
@@ -122250,40 +123890,40 @@ aaa
 aaa
 wOk
 oAw
-sGn
+gaP
 wOk
-oAw
+xkT
 gzH
 tGZ
 cHa
-oAw
+xkT
 aaa
 aaa
-oAw
-oAw
+tKu
+hxj
 ikZ
-oAw
-oAw
+tYY
+mrM
 aaa
 aaa
 wOk
 aaa
 aaa
-oAw
-oAw
+tKu
+hxj
 ikZ
-oAw
-oAw
+tYY
+mrM
 aaa
 aaa
 wOk
 aaa
 aaa
-oAw
-oAw
+tKu
+hxj
 ikZ
-oAw
-oAw
+tYY
+mrM
 aaa
 aaa
 aaa
@@ -122510,17 +124150,17 @@ sLG
 iFw
 qIQ
 aaf
-oAw
+viE
 dZR
 hIE
 iRS
-oAw
+viE
 aaa
 aaa
 aaa
-oAw
+viE
 dGJ
-oAw
+viE
 aaa
 aaa
 aaa
@@ -122528,9 +124168,9 @@ wOk
 aaa
 aaa
 aaa
-oAw
+viE
 dGJ
-oAw
+viE
 aaa
 aaa
 aaa
@@ -122538,9 +124178,9 @@ wOk
 aaa
 aaa
 aaa
-oAw
+viE
 dGJ
-oAw
+viE
 aaa
 aaa
 aaa
@@ -122728,7 +124368,7 @@ nXY
 juH
 sHx
 oWj
-bhn
+dFU
 aaa
 aaa
 ixO
@@ -122768,17 +124408,17 @@ aaa
 iFw
 htS
 aaf
-oAw
+viE
 aFG
 cMm
 eVQ
-oAw
+viE
 aaa
 aaa
 aaa
-oAw
+viE
 aFG
-oAw
+viE
 aaa
 aaa
 aaf
@@ -122786,9 +124426,9 @@ bQW
 aaf
 aaa
 aaa
-oAw
+viE
 aFG
-oAw
+viE
 aaa
 aaa
 aaa
@@ -122796,9 +124436,9 @@ ajS
 aaa
 aaa
 aaa
-oAw
+viE
 aFG
-oAw
+viE
 aaa
 aaa
 aaa
@@ -123026,17 +124666,17 @@ aaa
 aaf
 iFw
 iFw
-oAw
+viE
 nMG
 oAe
 ocn
-oAw
+viE
 aaa
 aaa
 aaa
-oAw
+viE
 dml
-oAw
+viE
 aaa
 aaa
 iFw
@@ -123044,9 +124684,9 @@ din
 iFw
 aaa
 aaa
-oAw
+viE
 bCs
-oAw
+viE
 aaa
 aaa
 aaa
@@ -123054,9 +124694,9 @@ aaa
 aaa
 aaa
 aaa
-oAw
+viE
 ooS
-oAw
+viE
 aaa
 aaa
 aaa
@@ -123244,7 +124884,7 @@ xsD
 mUt
 sHx
 jlt
-bhn
+ojM
 aaa
 aaa
 ixO
@@ -123284,17 +124924,17 @@ aaa
 aaa
 aaa
 szS
-oAw
+pMm
 vkS
 tdE
 tdE
-oAw
+pMm
 akd
 aaa
 aaa
-oAw
+pMm
 vkS
-oAw
+pMm
 aaa
 aaa
 aaf
@@ -123302,9 +124942,9 @@ iFw
 aaf
 aaa
 aaa
-oAw
+pMm
 vkS
-oAw
+pMm
 aaa
 aaa
 aaa
@@ -123312,9 +124952,9 @@ aaa
 aaa
 aaa
 aaa
-oAw
+pMm
 vkS
-oAw
+pMm
 aaa
 aaa
 aaa
@@ -123450,7 +125090,7 @@ aaa
 aaa
 ixO
 sVC
-rWq
+tCY
 tqn
 dDV
 aHn
@@ -124018,7 +125658,7 @@ beG
 oTb
 sHx
 uXM
-bhn
+dFU
 aaa
 aaa
 ixO
@@ -124227,25 +125867,25 @@ aaa
 dWC
 fYe
 qCx
-hRQ
+oOi
 hRQ
 qCx
 ieW
 cOF
 qCx
-hRQ
+oOi
 hRQ
 yhx
 tPr
+uwu
 lvu
-lvu
-lvu
+eLg
 tPr
 tPr
 tPr
+uwu
 lvu
-lvu
-lvu
+eLg
 tPr
 ljU
 odG
@@ -124259,9 +125899,9 @@ wFw
 cTd
 tPr
 tPr
+uwu
 lvu
-lvu
-lvu
+eLg
 tPr
 bJq
 hGe
@@ -124534,7 +126174,7 @@ aJn
 oTb
 sHx
 vZY
-bhn
+ojM
 aaa
 aaa
 ixO
@@ -124741,7 +126381,7 @@ aaa
 ixO
 aaa
 aaa
-xZg
+bHa
 tUz
 odX
 oSB
@@ -125306,7 +126946,7 @@ aaF
 wPo
 uXL
 uXL
-vZk
+rGY
 vZk
 iPw
 aaa
@@ -125773,7 +127413,7 @@ aaa
 ixO
 aaa
 aaa
-xZg
+bHa
 kEe
 aaC
 jPG
@@ -126042,7 +127682,7 @@ gBk
 ifA
 uIn
 rxk
-dWV
+hPz
 dWV
 dXP
 dZp
@@ -126068,7 +127708,7 @@ viL
 jPJ
 dkw
 reo
-reo
+wUy
 viY
 qDr
 nXY
@@ -126305,7 +127945,7 @@ mwp
 gXO
 okX
 hGk
-dWY
+okI
 dWY
 gXH
 orU
@@ -126320,7 +127960,7 @@ uau
 viL
 wRN
 xZL
-rca
+wBV
 rca
 lAk
 okX
@@ -126553,7 +128193,7 @@ kQH
 kQH
 kQH
 guf
-guf
+xZE
 kQH
 kQH
 kQH
@@ -126845,7 +128485,7 @@ mwp
 aVf
 eaY
 uXL
-vZk
+rGY
 vZk
 uXL
 iPw
