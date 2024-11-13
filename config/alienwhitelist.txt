@@ -19,6 +19,21 @@ hawkerthegreat - Vox
 hollifex - Diona
 inuzari - Diona
 jademanique - Xenochimera
+<<<<<<< HEAD
+=======
+joltze - Black-Eyed Shadekin
+jparker890 - Vox
+juney7 - Hanner
+kered2 - Protean
+khanivore - Protean
+killjaden - Protean
+kira72 - Xenochimera
+kira72 - Protean
+kiraalitruss - Teppi
+kitchifox - Black-Eyed Shadekin
+konner1055 - Black-Eyed Shadekin
+konner1055 - Protean
+>>>>>>> 399795f997 (Double whitelist (#16602))
 ktccd - Diona
 khanivore - Protean
 mewchild - Diona
@@ -59,3 +74,8 @@ xioen - Xenochimera
 xonkon - Protean
 zalvine - Shadekin Empathy
 zammyman215 - Vox
+<<<<<<< HEAD
+=======
+zeracyfr - Xenochimera
+zwadstheiguana - Diona
+>>>>>>> 399795f997 (Double whitelist (#16602))
