@@ -16570,6 +16570,12 @@
 	},
 /turf/simulated/floor/lino,
 /area/crew_quarters/Chapel_Office)
+"aZa" = (
+/obj/machinery/alarm{
+	pixel_y = 25
+	},
+/turf/simulated/floor/wood,
+/area/maintenance/ab_TeshDen)
 "aZf" = (
 /obj/structure/table/sifwoodentable,
 /obj/item/radio/subspace{
@@ -21242,13 +21248,13 @@
 /turf/simulated/floor/tiled/dark,
 /area/engineering/Engineering_Workshop)
 "bok" = (
-/obj/structure/cable/white{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 22
 	},
-/turf/simulated/floor/wood/broken,
-/area/maintenance/ab_TeshDen)
+/obj/structure/closet/secure_closet/bar,
+/turf/simulated/floor/wood/alt/tile,
+/area/crew_quarters/Midnight_Kitchen)
 "bon" = (
 /obj/effect/catwalk_plated/techmaint,
 /obj/machinery/button/remote/driver{
@@ -31000,10 +31006,20 @@
 /turf/simulated/floor/plating,
 /area/engineering/CE_Office)
 "bYa" = (
-/obj/machinery/alarm{
-	pixel_y = 25
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 4
 	},
-/turf/simulated/floor/wood,
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/obj/item/tape/engineering,
+/turf/simulated/floor/plating,
 /area/maintenance/ab_TeshDen)
 "bYc" = (
 /obj/structure/bed/chair/comfy/brown{
@@ -40459,21 +40475,14 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/Engineering_Workshop)
 "cDS" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/effect/floor_decal/industrial/hatch,
-/obj/structure/grille,
-/obj/structure/window/titanium{
+/obj/machinery/chem_master,
+/obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/structure/window/titanium{
-	dir = 1
+/turf/simulated/floor/tiled/white{
+	color = "#8bbbd5"
 	},
-/obj/structure/window/titanium{
-	dir = 8
-	},
-/obj/structure/barricade,
-/turf/simulated/floor/plating,
-/area/maintenance/ab_TeshDen)
+/area/medical/Chemistry)
 "cDW" = (
 /obj/effect/catwalk_plated/white,
 /turf/space,
@@ -40859,10 +40868,23 @@
 /turf/simulated/floor/tiled/dark,
 /area/rnd/Testing_Lab)
 "cEC" = (
-/obj/structure/table/standard,
-/obj/random/donkpocketbox,
-/turf/simulated/floor/wood,
-/area/maintenance/ab_TeshDen)
+/obj/effect/floor_decal/borderfloor/corner2{
+	dir = 6
+	},
+/obj/effect/floor_decal/borderfloor/corner2{
+	dir = 5
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central2{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/wood/alt/tile,
+/area/crew_quarters/Midnight_Kitchen)
 "cED" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -41966,19 +41988,17 @@
 /turf/simulated/floor/plating,
 /area/harbor/Aft_2_Deck_Airlock_Access)
 "cOC" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/effect/floor_decal/industrial/hatch,
-/obj/structure/grille,
-/obj/structure/window/titanium,
-/obj/structure/window/titanium{
-	dir = 4
+/obj/structure/table/marble,
+/obj/item/packageWrap{
+	pixel_y = 5;
+	pixel_x = -9
 	},
-/obj/structure/window/titanium{
-	dir = 1
+/obj/machinery/chemical_dispenser/bar_coffee/full{
+	dir = 1;
+	pixel_y = -13
 	},
-/obj/item/tape/engineering,
-/turf/simulated/floor/plating,
-/area/maintenance/ab_TeshDen)
+/turf/simulated/floor/wood/alt/tile,
+/area/crew_quarters/Midnight_Kitchen)
 "cOH" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/wood/sif,
@@ -47627,6 +47647,20 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/Deck2_AftPort_Corridor)
+"eix" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/obj/item/tape/engineering,
+/turf/simulated/floor/plating,
+/area/maintenance/ab_TeshDen)
 "eiy" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -48142,9 +48176,15 @@
 /turf/space,
 /area/harbor/For_Shuttlebay)
 "epJ" = (
-/obj/random/trash,
-/turf/simulated/floor/wood/broken,
-/area/maintenance/ab_TeshDen)
+/obj/machinery/door/window/southright{
+	layer = 2.9;
+	name = "Chemistry Desk";
+	req_access = list(33)
+	},
+/turf/simulated/floor/tiled/white{
+	color = "#8bbbd5"
+	},
+/area/medical/Chemistry)
 "eqi" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -63182,19 +63222,15 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/Research_Lab)
 "hSQ" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/effect/floor_decal/industrial/hatch,
-/obj/structure/grille,
-/obj/structure/window/titanium,
-/obj/structure/window/titanium{
-	dir = 4
+/obj/structure/table/marble,
+/obj/machinery/cash_register/civilian,
+/obj/machinery/door/blast/shutters{
+	id = "sc-GCmidnightbar";
+	layer = 3.1;
+	name = "Bar Shutters"
 	},
-/obj/structure/window/titanium{
-	dir = 8
-	},
-/obj/item/tape/engineering,
-/turf/simulated/floor/plating,
-/area/maintenance/ab_TeshDen)
+/turf/simulated/floor/tiled/steel_grid,
+/area/crew_quarters/Midnight_Kitchen)
 "hSV" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
@@ -63408,16 +63444,6 @@
 /obj/structure/table/reinforced,
 /turf/simulated/floor/tiled/dark,
 /area/security/Prison_Wing)
-"hVX" = (
-/obj/machinery/button/remote/blast_door{
-	dir = 8;
-	id = "sc-GCmidnightbar";
-	name = "Bar Shutters Control";
-	pixel_x = 24;
-	req_access = list(28)
-	},
-/turf/simulated/floor/wood/alt/tile,
-/area/crew_quarters/Midnight_Kitchen)
 "hWe" = (
 /obj/effect/catwalk_plated/techmaint,
 /obj/machinery/light/small{
@@ -64303,22 +64329,6 @@
 /obj/random/maintenance/clean,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck2_Security_ForPortChamber1)
-"ifV" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/effect/floor_decal/industrial/hatch,
-/obj/structure/grille,
-/obj/structure/window/titanium{
-	dir = 4
-	},
-/obj/structure/window/titanium{
-	dir = 1
-	},
-/obj/structure/window/titanium{
-	dir = 8
-	},
-/obj/item/tape/engineering,
-/turf/simulated/floor/plating,
-/area/maintenance/ab_TeshDen)
 "igu" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -67654,6 +67664,20 @@
 /obj/machinery/light,
 /turf/simulated/floor/reinforced,
 /area/rnd/Testing_Lab)
+"iVr" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/item/tape/engineering,
+/turf/simulated/floor/plating,
+/area/maintenance/ab_TeshDen)
 "iVx" = (
 /obj/item/clothing/gloves/brown{
 	pixel_y = -1;
@@ -75611,6 +75635,11 @@
 "kYA" = (
 /turf/simulated/floor/tiled/techfloor,
 /area/hallway/Star_Transit_Foyer)
+"kYI" = (
+/obj/structure/disposalpipe/segment,
+/obj/item/stool/baystool/padded,
+/turf/simulated/floor/wood/sif,
+/area/crew_quarters/Midnight_Bar)
 "kYN" = (
 /turf/simulated/floor/tiled,
 /area/hallway/Star_2_Deck_Central_Corridor_2)
@@ -80550,13 +80579,6 @@
 /obj/effect/floor_decal/corner/paleblue/border,
 /turf/simulated/floor/tiled/white,
 /area/medical/CMO_Office)
-"mpC" = (
-/obj/structure/bed/pillowpilefront/teal,
-/obj/machinery/alarm{
-	pixel_y = 25
-	},
-/turf/simulated/floor/wood,
-/area/maintenance/ab_TeshDen)
 "mpT" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -95088,14 +95110,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/monotile,
 /area/engineering/Engineering_Workshop)
-"qhV" = (
-/obj/machinery/alarm{
-	dir = 8;
-	pixel_x = 22
-	},
-/obj/structure/closet/secure_closet/bar,
-/turf/simulated/floor/wood/alt/tile,
-/area/crew_quarters/Midnight_Kitchen)
 "qip" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -102453,23 +102467,21 @@
 /turf/simulated/floor/tiled,
 /area/security/Prison_Wing)
 "rYB" = (
-/obj/effect/floor_decal/borderfloor/corner2{
-	dir = 6
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 4
 	},
-/obj/effect/floor_decal/borderfloor/corner2{
-	dir = 5
+/obj/structure/window/titanium{
+	dir = 1
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central2{
+/obj/structure/window/titanium{
 	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/turf/simulated/floor/wood/alt/tile,
-/area/crew_quarters/Midnight_Kitchen)
+/obj/structure/barricade,
+/turf/simulated/floor/plating,
+/area/maintenance/ab_TeshDen)
 "rYF" = (
 /obj/machinery/alarm{
 	dir = 8;
@@ -105761,15 +105773,13 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/EMT_Bay)
 "sMS" = (
-/obj/machinery/door/window/southright{
-	layer = 2.9;
-	name = "Chemistry Desk";
-	req_access = list(33)
+/obj/structure/cable/white{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/white{
-	color = "#8bbbd5"
-	},
-/area/medical/Chemistry)
+/turf/simulated/floor/wood/broken,
+/area/maintenance/ab_TeshDen)
 "sNa" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -106286,37 +106296,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/Reception)
-"sTT" = (
-/obj/structure/table/marble,
-/obj/item/packageWrap{
-	pixel_y = 5;
-	pixel_x = -9
-	},
-/obj/item/reagent_containers/chem_disp_cartridge/berry{
-	pixel_y = -4;
-	pixel_x = 8
-	},
-/obj/item/reagent_containers/chem_disp_cartridge/hot_coco{
-	pixel_x = 8;
-	pixel_y = -2
-	},
-/obj/item/reagent_containers/chem_disp_cartridge/milk{
-	pixel_x = 8
-	},
-/obj/item/reagent_containers/chem_disp_cartridge/mint{
-	pixel_x = 8;
-	pixel_y = 2
-	},
-/obj/item/reagent_containers/chem_disp_cartridge/tea{
-	pixel_x = 8;
-	pixel_y = 4
-	},
-/obj/item/reagent_containers/chem_disp_cartridge/coffee{
-	pixel_y = 6;
-	pixel_x = 8
-	},
-/turf/simulated/floor/wood/alt/tile,
-/area/crew_quarters/Midnight_Kitchen)
 "sTX" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -112201,15 +112180,6 @@
 /obj/effect/floor_decal/corner/lightgrey/bordercorner,
 /turf/simulated/floor/tiled,
 /area/hallway/Port_2_Deck_Corridor_2)
-"utI" = (
-/obj/machinery/chem_master,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/white{
-	color = "#8bbbd5"
-	},
-/area/medical/Chemistry)
 "utJ" = (
 /obj/vehicle/train/engine{
 	dir = 2
@@ -116815,16 +116785,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/Aft_2_Deck_Lobby)
-"vLL" = (
-/obj/structure/table/marble,
-/obj/machinery/cash_register/civilian,
-/obj/machinery/door/blast/shutters{
-	id = "sc-GCmidnightbar";
-	layer = 3.1;
-	name = "Bar Shutters"
-	},
-/turf/simulated/floor/tiled/steel_grid,
-/area/crew_quarters/Midnight_Kitchen)
 "vLQ" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -118059,6 +118019,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/Star_Tool_Storage)
+"web" = (
+/obj/structure/bed/pillowpilefront/teal,
+/obj/machinery/alarm{
+	pixel_y = 25
+	},
+/turf/simulated/floor/wood,
+/area/maintenance/ab_TeshDen)
 "weu" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -119045,10 +119012,9 @@
 /turf/simulated/floor/plating,
 /area/rnd/Toxins_Storage)
 "woi" = (
-/obj/structure/disposalpipe/segment,
-/obj/item/stool/baystool/padded,
-/turf/simulated/floor/wood/sif,
-/area/crew_quarters/Midnight_Bar)
+/obj/random/trash,
+/turf/simulated/floor/wood/broken,
+/area/maintenance/ab_TeshDen)
 "wop" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -119099,19 +119065,15 @@
 /turf/simulated/floor/plating,
 /area/quartermaster/Breakroom)
 "woz" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/effect/floor_decal/industrial/hatch,
-/obj/structure/grille,
-/obj/structure/window/titanium,
-/obj/structure/window/titanium{
-	dir = 1
+/obj/machinery/button/remote/blast_door{
+	dir = 8;
+	id = "sc-GCmidnightbar";
+	name = "Bar Shutters Control";
+	pixel_x = 24;
+	req_access = list(28)
 	},
-/obj/structure/window/titanium{
-	dir = 8
-	},
-/obj/structure/barricade,
-/turf/simulated/floor/plating,
-/area/maintenance/ab_TeshDen)
+/turf/simulated/floor/wood/alt/tile,
+/area/crew_quarters/Midnight_Kitchen)
 "woF" = (
 /obj/machinery/light{
 	dir = 1
@@ -119396,6 +119358,11 @@
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck2_Cargo_AftCorridor2)
+"wsl" = (
+/obj/structure/table/standard,
+/obj/random/donkpocketbox,
+/turf/simulated/floor/wood,
+/area/maintenance/ab_TeshDen)
 "wsr" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
@@ -120822,6 +120789,20 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/Engineering_EVA)
+"wKZ" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/obj/structure/barricade,
+/turf/simulated/floor/plating,
+/area/maintenance/ab_TeshDen)
 "wLh" = (
 /obj/effect/floor_decal/carpet{
 	dir = 4
@@ -155085,13 +155066,13 @@ aaa
 aaa
 bHD
 rrk
-hSQ
+eix
 bHD
 aaa
 aaa
 aaa
 bHD
-ifV
+bYa
 ptE
 bHD
 aaa
@@ -155343,7 +155324,7 @@ wsr
 bHD
 bHD
 cqv
-cEC
+wsl
 bHD
 aaa
 aaa
@@ -155600,7 +155581,7 @@ lAc
 qKV
 uck
 bHD
-mpC
+web
 fav
 bHD
 aaa
@@ -155839,8 +155820,8 @@ cyF
 plF
 lYV
 plF
-sTT
-dgU
+cOC
+gPC
 bRu
 iAF
 eiA
@@ -156092,7 +156073,7 @@ iwp
 uaB
 cOH
 cOH
-woi
+kYI
 cdC
 rue
 rWH
@@ -156351,12 +156332,12 @@ aMR
 aMR
 aMR
 aMR
-vLL
+hSQ
 plF
 cBr
 sSl
 ciN
-gPC
+dgU
 shD
 eaY
 wMO
@@ -156384,7 +156365,7 @@ auv
 fav
 dzV
 dzV
-woz
+wKZ
 aaf
 gWp
 aaf
@@ -156611,9 +156592,9 @@ aMR
 bMw
 xDr
 plF
-rYB
-hVX
-qhV
+cEC
+woz
+bok
 gPC
 bRi
 pnz
@@ -156636,7 +156617,7 @@ vrq
 vrq
 gKQ
 vrq
-bok
+sMS
 gKQ
 ulC
 nOM
@@ -156900,7 +156881,7 @@ pNb
 pNb
 dzV
 dzV
-cOC
+iVr
 aaf
 gWp
 aaf
@@ -157664,8 +157645,8 @@ dnF
 pDj
 aJi
 bHD
-bYa
-epJ
+aZa
+woi
 bHD
 aaa
 aaa
@@ -158180,7 +158161,7 @@ aaa
 aaa
 aaa
 bHD
-cDS
+rYB
 ptE
 bHD
 aaa
@@ -158188,7 +158169,7 @@ aaa
 aaa
 bHD
 rrk
-hSQ
+eix
 bHD
 aaa
 aaa
@@ -168153,7 +168134,7 @@ tQj
 bkf
 aIY
 aMn
-sMS
+epJ
 avP
 lEI
 crH
@@ -168409,7 +168390,7 @@ sXo
 aQu
 qip
 bkk
-utI
+cDS
 blN
 vKy
 hWu
