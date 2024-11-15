@@ -93,3 +93,6 @@
   - maptweak: fixes the sleep areas on SN to use the global defines
   TomTyph:
   - rscadd: Angel Halo hat in headgear loadout
+2024-11-15:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: adds missing arguments to recursive_content_check()
