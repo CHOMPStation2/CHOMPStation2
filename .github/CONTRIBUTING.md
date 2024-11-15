@@ -45,16 +45,16 @@ Unsure where to begin contributing to Chomp Station? You can start by looking th
     * There is a limited budget of RAM available for permanent maps. This must be carefully rationed. 
 * Entire new station designs MUST be discussed with the community and the staff. Post a floor plan or basic design before committing effort in discord to prevent wasted time. 
 
-### Chomp Station Coding Standards
+## Chomp Station Coding Standards
 
-## General
+### General
 * Do not create joke or meme PRs. The Github is intended to be a sterile location for reviewing technical content.
 * We do not allow any kind of CKEY/personally locked content on this codebase. Anything created must be available to all or none.
     * Our upstream does allow this, and ckey-locked content from them does exist in our code. We try to comment it out where possible. Please report anything missing.
     * If you have ckey locked content from our upstream and would like to make it available to all here, please contact us; this is possible.
 * we do not allow any 'naming' in our coded content. this includes shoutouts, naming a player as an owner or otherwise. All descriptions, names, lore-texts must be free of an individual's name. NPC naming is permitted.
 
-## Codewriting
+### Codewriting
 * Where possible, add changes to the modular_chomp/ subdirectory.
 * For edits to upstream code (Code not inside /modular_chomp):
 		* For single line edits, add //ChompEDIT - description at the end of the line
@@ -65,7 +65,7 @@ Unsure where to begin contributing to Chomp Station? You can start by looking th
 * DO NOT edit anything in the upstream /maps folder 
 * Where possible and applicable, send bugfixes to Virgo (Our upstream) to fix at the source. this is not enforced, however.
 
-## Scene devices
+### Scene devices
 * A scene device or tool is considered any object or coded mechanic designed primarily to service roleplay scenes in-game. Usually, but not limited to roleplay of a private nature.
 * Scene devices must avoid giving a purely mechanical/gameplay advantage of any kind 
 * Scene devices must respect OOC consent where applicable.
