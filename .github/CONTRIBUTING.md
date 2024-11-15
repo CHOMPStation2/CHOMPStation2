@@ -39,7 +39,7 @@ Unsure where to begin contributing to Chomp Station? You can start by looking th
 * Our stationary overmap location files are in [modular_chomp/maps/southern_cross/overmap/].
 * Our random overmap POI files are in [modular_chomp/maps/overmap/].
 * Our surface POI map files (Wilderness, plains, ...) are in [modular_chomp/maps/submaps/surface_submaps/].
-* Map changes must be in tgm format. See the [Mapmerge2 Readme](../tools/mapmerge2/mapmerge tool readme.md) for details, or use [StrongDMM](../tools/StrongDMM/README.md) which can automatically save maps as tgm.
+* Map changes must be in tgm format. See the [Mapmerge2 Readme](../tools/mapmerge2/readme.md) for details, or use [StrongDMM](../tools/StrongDMM/README.md) which can automatically save maps as tgm.
 * PoIs or map templates placed during generation (Mining, plains, wilderness, space...) are generally fair game for editing or creating anew.
 * Maps that are placed permanently (Station, planetary locations) must be subject to discussion. To prevent wasted time, discuss these with the community and staff
     * There is a limited budget of RAM available for permanent maps. This must be carefully rationed. 
