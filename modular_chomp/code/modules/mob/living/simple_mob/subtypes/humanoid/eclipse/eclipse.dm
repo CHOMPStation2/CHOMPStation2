@@ -897,10 +897,13 @@
 	projectiletype = /obj/item/projectile/energy/spikeenergy_ball //using the weapon found upon tyr
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/experimenter/do_special_attack(atom/A)
+	visible_message(span_danger("The [src]'s gauntlet glows silver!"))
+	addtimer(CALLBACK(src, PROC_REF(gravity_pull), A), 1 SECOND, TIMER_DELETE_ME)
+
+/mob/living/simple_mob/humanoid/eclipse/proc/gravity_pull(atom/A)
 	var/D = src
 	var/mob/living/carbon/human/H = A
 	H.throw_at(D, 2, 4) // Just yoinked.
-	visible_message(span_danger("The [src]'s armor glows silver, pulling [A] closer!"))
 
 //The Precursor intative big folks
 /mob/living/simple_mob/humanoid/eclipse/lunar/titanhunter //lunar melee unit

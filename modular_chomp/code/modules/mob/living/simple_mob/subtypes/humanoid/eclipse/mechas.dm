@@ -266,6 +266,7 @@
 	armor = list(melee = 90, bullet = 90, laser = 90, energy = 90, bomb = 90, bio = 100, rad = 100)
 	damage_threshold = 0 //So the wierd armor mechanic works
 	icon_state = "gygax_adv"
+	wreckage = /obj/structure/loot_pile/mecha/odd_gygax
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/antipersonal_unit/updatehealth()
 	. = ..()
@@ -477,6 +478,7 @@
 	armor_soak = list(melee = 25, bullet = 25, laser = 25, energy = 25, bomb = 0, bio = 0, rad = 0)
 	icon_state = "shielded_mining_mecha"
 	shock_resist = 1
+	wreckage = /obj/structure/loot_pile/mecha/odd_ripley
 	var/attackcycle = 1
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/mining_guard/do_special_attack(atom/A)
