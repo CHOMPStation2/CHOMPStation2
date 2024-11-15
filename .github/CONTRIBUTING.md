@@ -56,7 +56,7 @@ Unsure where to begin contributing to Chomp Station? You can start by looking th
 
 ### Codewriting
 * Where possible, add changes to the modular_chomp/ subdirectory.
-* For edits to upstream code (Code not inside /modular_chomp):
+* For edits to upstream code (Code not inside /modular_chomp);
 	  * For single line edits, add //ChompEDIT - description at the end of the line.
 		* For block edits, encapsulate your edit with //ChompEDIT START and //ChompEDIT END.
 		* For removals, comment out the upstream code and but a //ChompEDIT REMOVE - explanation
