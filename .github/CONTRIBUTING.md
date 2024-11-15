@@ -39,12 +39,12 @@ Unsure where to begin contributing to Chomp Station? You can start by looking th
 * Our stationary overmap location files are in [modular_chomp/maps/southern_cross/overmap/].
 * Our random overmap POI files are in [modular_chomp/maps/overmap/].
 * Our surface POI map files (Wilderness, plains, ...) are in [modular_chomp/maps/submaps/surface_submaps/].
-* Map changes must be in tgm format. See the [Mapmerge2 Readme] for details, or use [StrongDMM] which can automatically save maps as tgm.
+* Map changes must be in tgm format. See the [Mapmerge2 Readme](../tools/mapmerge2/mapmerge tool readme.md) for details, or use [StrongDMM](../tools/StrongDMM/README.md) which can automatically save maps as tgm.
 * PoIs or map templates placed during generation (Mining, plains, wilderness, space...) are generally fair game for editing or creating anew.
 * Maps that are placed permanently (Station, planetary locations) must be subject to discussion. To prevent wasted time, discuss these with the community and staff
     * There is a limited budget of RAM available for permanent maps. This must be carefully rationed. 
 * Entire new station designs MUST be discussed with the community and the staff. Post a floor plan or basic design before committing effort in discord to prevent wasted time. 
-* For new atmospherics settings, subtypes of turfs for all turfs can be created with the [turfpacks] system quickly and easily.
+* For new atmospherics settings, subtypes of turfs for all turfs can be created with the [turfpacks](../modular_chomp/maps/~turfpacks/turfpacks.dm) system quickly and easily.
 
 ## Chomp Station Coding Standards
 
@@ -98,7 +98,3 @@ CHOMPStation is licensed under the GNU Affero General Public License version 3, 
 Commits with a git authorship date prior to `1420675200 +0000` (2015/01/08 00:00) are licensed under the GNU General Public License version 3, which can be found in full in LICENSE-GPL3.txt.
 
 All commits whose authorship dates are not prior to `1420675200 +0000` are assumed to be licensed under AGPL v3, if you wish to license under GPL v3 please make this clear in the commit message and any added files.
-
-[Mapmerge2 Readme]: ../tools/mapmerge2/mapmerge tool readme.md
-[StrongDMM]: ../tools/StrongDMM/README.md
-[turfpacks]: ../modular_chomp/maps/~turfpacks/turfpacks.dm
