@@ -44,6 +44,7 @@ Unsure where to begin contributing to Chomp Station? You can start by looking th
 * Maps that are placed permanently (Station, planetary locations) must be subject to discussion. To prevent wasted time, discuss these with the community and staff
     * There is a limited budget of RAM available for permanent maps. This must be carefully rationed. 
 * Entire new station designs MUST be discussed with the community and the staff. Post a floor plan or basic design before committing effort in discord to prevent wasted time. 
+* For new atmospherics settings, subtypes of turfs for all turfs can be created with the [turfpacks] system quickly and easily.
 
 ## Chomp Station Coding Standards
 
@@ -100,3 +101,4 @@ All commits whose authorship dates are not prior to `1420675200 +0000` are assum
 
 [Mapmerge2 Readme]: ../tools/mapmerge2/mapmerge tool readme.md
 [StrongDMM]: ../tools/StrongDMM/README.md
+[turfpacks]: ../modular_chomp/maps/~turfpacks/turfpacks.dm
