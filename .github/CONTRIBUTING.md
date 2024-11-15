@@ -42,33 +42,33 @@ Unsure where to begin contributing to Chomp Station? You can start by looking th
 * Map changes must be in tgm format. See the [Mapmerge2 Readme] for details, or use [StrongDMM] which can automatically save maps as tgm.
 * PoIs or map templates placed during generation (Mining, plains, wilderness, space...) are generally fair game for editing or creating anew.
 * Maps that are placed permanently (Station, planetary locations) must be subject to discussion. To prevent wasted time, discuss these with the community and staff
-	* There is a limited budget of RAM available for permanent maps. This must be carefully rationed. 
+    * There is a limited budget of RAM available for permanent maps. This must be carefully rationed. 
 * Entire new station designs MUST be discussed with the community and the staff. Post a floor plan or basic design before committing effort in discord to prevent wasted time. 
 
 ### Chomp Station Coding Standards
 
 * Do not create joke or meme PRs. The Github is intended to be a sterile location for reviewing technical content.
 * We do not allow any kind of CKEY/personally locked content on this codebase. Anything created must be available to all or none. 
-	* Our upstream does allow this, and ckey-locked content from them does exist in our code. We try to comment it out where possible. Please report anything missing. 
-	* If you have ckey locked content from our upstream and would like to make it available to all here, please contact us; this is possible. 
+    * Our upstream does allow this, and ckey-locked content from them does exist in our code. We try to comment it out where possible. Please report anything missing. 
+    * If you have ckey locked content from our upstream and would like to make it available to all here, please contact us; this is possible. 
 * we do not allow any 'naming' in our coded content. this includes shoutouts, naming a player as an owner or otherwise. All descriptions, names, lore-texts must be free of an individual's name. NPC naming is however permitted. 
 
 * For contributing code, please follow the basic guidelines;
-	* Where possible, add changes to the modular_chomp/ subdirectory.
-	* For edits to upstream code (Code not inside /modular_chomp):
-		* For single line edits, add //ChompEDIT - description at the end of the line
-		* For block edits, encapsulate your edit with //ChompEDIT START and //ChompEDIT END. 
-		* For removals, comment out the upstream code and but a //ChompEDIT REMOVE - explanation
-		* For block removals, use /* and */ with //ChompEDIT REMOVE - explanations
-	* DO NOT edit upstream .dmi (icon) files. Add icon changes in a new file in the /modular_chomp folder and override the object's "icon" and "icon_state" variables. 
-	* DO NOT edit anything in the upstream /maps folder 
-	* Where possible and applicable, send bugfixes to Virgo (Our upstream) to fix at the source. this is not enforced, however.
+    * Where possible, add changes to the modular_chomp/ subdirectory.
+    * For edits to upstream code (Code not inside /modular_chomp):
+        * For single line edits, add //ChompEDIT - description at the end of the line
+        * For block edits, encapsulate your edit with //ChompEDIT START and //ChompEDIT END. 
+        * For removals, comment out the upstream code and but a //ChompEDIT REMOVE - explanation
+        * For block removals, use /* and */ with //ChompEDIT REMOVE - explanations
+    * DO NOT edit upstream .dmi (icon) files. Add icon changes in a new file in the /modular_chomp folder and override the object's "icon" and "icon_state" variables. 
+    * DO NOT edit anything in the upstream /maps folder 
+    * Where possible and applicable, send bugfixes to Virgo (Our upstream) to fix at the source. this is not enforced, however.
 
 * Regarding 'scene devices':
-	* A scene device or tool is considered any object or coded mechanic designed primarily to service roleplay scenes in-game. Usually, but not limited to roleplay of a private nature.
-	* Scene devices must avoid giving a purely mechanical/gameplay advantage of any kind 
-	* Scene devices must respect OOC consent where applicable.
-	* Scene devices must react to the 'OOC Escape' command where possible. 
+    * A scene device or tool is considered any object or coded mechanic designed primarily to service roleplay scenes in-game. Usually, but not limited to roleplay of a private nature.
+    * Scene devices must avoid giving a purely mechanical/gameplay advantage of any kind 
+    * Scene devices must respect OOC consent where applicable.
+    * Scene devices must react to the 'OOC Escape' command where possible. 
 
 
 ### Pull Requests
