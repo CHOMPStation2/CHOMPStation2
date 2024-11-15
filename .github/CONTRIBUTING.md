@@ -48,28 +48,28 @@ Unsure where to begin contributing to Chomp Station? You can start by looking th
 ## Chomp Station Coding Standards
 
 ### General
-* Do not create joke or meme PRs. The Github is intended to be a sterile location for reviewing technical content.
-* We do not allow any kind of CKEY/personally locked content on this codebase. Anything created must be available to all or none.
+* **DO NOT** create joke or meme PRs. The Github is intended to be a sterile location for reviewing technical content.
+* We **DO NOT** allow any kind of CKEY/personally locked content on this codebase. Anything created must be available to all or none.
     * Our upstream does allow this, and ckey-locked content from them does exist in our code. We try to comment it out where possible. Please report anything missing.
     * If you have ckey locked content from our upstream and would like to make it available to all here, please contact us; this is possible.
-* we do not allow any 'naming' in our coded content. this includes shoutouts, naming a player as an owner or otherwise. All descriptions, names, lore-texts must be free of an individual's name. NPC naming is permitted.
+* we **DO NOT** allow any 'naming' in our coded content. this includes shoutouts, naming a player as an owner or otherwise. All descriptions, names, lore-texts must be free of an individual's name. NPC naming is permitted.
 
 ### Codewriting
 * Where possible, add changes to the modular_chomp/ subdirectory.
 * For edits to upstream code (Code not inside /modular_chomp)
-    * For single line edits, add //ChompEDIT - description at the end of the line.
-    * For block edits, encapsulate your edit with //ChompEDIT START and //ChompEDIT END.
-    * For removals, comment out the upstream code and but a //ChompEDIT REMOVE - explanation
-    * For block removals, use /* and */ with //ChompEDIT REMOVE - explanations
-* DO NOT edit upstream .dmi (icon) files. Add icon changes in a new file in the /modular_chomp folder and override the object's "icon" and "icon_state" variables. 
-* DO NOT edit anything in the upstream /maps folder 
+    * For single line edits, add "//ChompEDIT - description" at the end of the line.
+    * For block edits, encapsulate your edit with "//ChompEDIT START - explanation" and "//ChompEDIT END".
+    * For removals, comment out the upstream code and append "//ChompEDIT REMOVE - explanation"
+    * For block removals, use "/*" and "*/" with "//ChompEDIT REMOVE - explanations"
+* **DO NOT** edit upstream .dmi (icon) files. Add icon changes in a new file in the /modular_chomp folder and override the object's "icon" and "icon_state" variables. 
+* **DO NOT** edit anything in the upstream /maps folder 
 * Where possible and applicable, send bugfixes to Virgo (Our upstream) to fix at the source. this is not enforced, however.
 
 ### Scene devices
 * A scene device or tool is considered any object or coded mechanic designed primarily to service roleplay scenes in-game. Usually, but not limited to roleplay of a private nature.
-* Scene devices must avoid giving a purely mechanical/gameplay advantage of any kind 
-* Scene devices must respect OOC consent where applicable.
-* Scene devices must react to the 'OOC Escape' command where possible. 
+* Scene devices **MUST** avoid giving a purely mechanical/gameplay advantage of any kind 
+* Scene devices **MUST** respect OOC consent where applicable.
+* Scene devices **MUST** react to the 'OOC Escape' command where possible. 
 
 
 ### Pull Requests
