@@ -96,3 +96,8 @@
 2024-11-15:
   CHOMPStation2StaffMirrorBot:
   - bugfix: adds missing arguments to recursive_content_check()
+2024-11-16:
+  FluffMedic:
+  - rscadd: Added and altered some things on Tyr
+  tacoguy7765093:
+  - maptweak: Switched maps from Soluna Nexus to Southern Cross
