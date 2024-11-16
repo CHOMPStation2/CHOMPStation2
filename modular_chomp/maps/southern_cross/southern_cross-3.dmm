@@ -75206,10 +75206,14 @@
 	dir = 1
 	},
 /obj/structure/table/standard,
-/obj/machinery/chemical_dispenser/full{
-	pixel_y = 18
+/obj/item/storage/pill_bottle/adranol{
+	pixel_y = 1;
+	pixel_x = -6
 	},
-/obj/item/reagent_containers/chem_disp_cartridge/milk,
+/obj/item/reagent_containers/glass/bottle/mutagen{
+	pixel_y = 9;
+	pixel_x = 7
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "tKB" = (
