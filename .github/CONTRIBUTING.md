@@ -64,6 +64,8 @@ Unsure where to begin contributing to Chomp Station? You can start by looking th
     * For block removals, use "/\*" and "\*/" with "//ChompEDIT REMOVE - explanations"
 * **DO NOT** edit upstream .dmi (icon) files. Add icon changes in a new file in the /modular_chomp folder and override the object's "icon" and "icon_state" variables. 
 * **DO NOT** edit anything in the upstream /maps folder 
+* Avoid the use of the 'usr' variable where possible. Use src or have the proc chain give the user's reference.
+* Use defines where they exist, e.g. string names of jobs, factions, ect. 
 * Where possible and applicable, send bugfixes to Virgo (Our upstream) to fix at the source. this is not enforced, however.
 
 ### Scene devices
@@ -71,6 +73,10 @@ Unsure where to begin contributing to Chomp Station? You can start by looking th
 * Scene devices **MUST** avoid giving a purely mechanical/gameplay advantage of any kind 
 * Scene devices **MUST** respect OOC consent where applicable.
 * Scene devices **MUST** react to the 'OOC Escape' command where possible. 
+
+### TGUI
+* **DO NOT** edit upstream TGUI files. Small changes should be passed to upstream. Large edits require the file to be copied/rewritten in the chompstation subdirectory.
+* **ALL** TGUI files require typescript with properly defined types.
 
 
 ### Pull Requests
