@@ -344,51 +344,6 @@
 	if(icon_selected)
 		return
 	if(module)
-<<<<<<< HEAD
-		return
-	var/list/modules = list()
-	//VOREStatation Edit Start: shell restrictions //CHOMPstaton change to blacklist
-	if(shell)
-		if(restrict_modules_to.len > 0)
-			modules.Add(restrict_modules_to)
-		else
-			modules.Add(robot_module_types)
-			modules.Remove(GLOB.shell_module_blacklist) // CHOMPEdit - Managed Globals
-			//CHOMPedit Add
-			if(crisis || security_level == SEC_LEVEL_RED || crisis_override)
-				to_chat(src, span_red("Crisis mode active. Combat module available."))
-				modules |= emergency_module_types
-			//CHOMPedit end
-	else
-		if(restrict_modules_to.len > 0)
-			modules.Add(restrict_modules_to)
-		else
-			modules.Add(robot_module_types)
-			if(crisis || security_level == SEC_LEVEL_RED || crisis_override)
-				to_chat(src, span_red("Crisis mode active. Combat module available."))
-				modules |= emergency_module_types
-			for(var/module_name in whitelisted_module_types)
-				if(is_borg_whitelisted(src, module_name))
-					modules |= module_name
-	//VOREStatation Edit End: shell restrictions
-	modtype = tgui_input_list(usr, "Please, select a module!", "Robot module", modules)
-
-	if(module)
-		return
-	if(!(modtype in robot_modules))
-		return
-
-	var/module_type = robot_modules[modtype]
-	transform_with_anim()	//VOREStation edit: sprite animation
-	new module_type(src)
-
-	hands.icon_state = get_hud_module_icon()
-	feedback_inc("cyborg_[lowertext(modtype)]",1)
-	updatename()
-	hud_used.update_robot_modules_display()
-	notify_ai(ROBOT_NOTIFICATION_NEW_MODULE, module.name)
-	robotact?.update_static_data_for_all_viewers()
-=======
 		var/list/module_sprites = SSrobot_sprites.get_module_sprites(module, src)
 		if(module_sprites.len == 1 || !client)
 			sprite_datum = module_sprites[1]
@@ -397,7 +352,6 @@
 	if(!selecting_module)
 		var/datum/tgui_module/robot_ui_module/ui = new(src)
 		ui.tgui_interact(src)
->>>>>>> edb46d85c2 (Merge pull request #16589 from Kashargul/moduleSelectionUI)
 
 /mob/living/silicon/robot/proc/update_braintype()
 	if(istype(mmi, /obj/item/mmi/digital/posibrain))
@@ -1139,85 +1093,6 @@
 
 	return
 
-<<<<<<< HEAD
-/mob/living/silicon/robot/proc/choose_icon(var/triesleft)
-	var/robot_species = null
-	if(!SSrobot_sprites)
-		to_chat(src, "Robot Sprites have not been initialized yet. How are you choosing a sprite? Harass a coder.")
-		return
-
-	var/list/module_sprites = SSrobot_sprites.get_module_sprites(modtype, src)
-	if(!module_sprites || !module_sprites.len)
-		to_chat(src, "Your module appears to have no sprite options. Harass a coder.")
-		return
-
-	icon_selected = 0
-	icon_selection_tries = triesleft
-	if(module_sprites.len == 1 || !client)
-		if(!(sprite_datum in module_sprites))
-			sprite_datum = module_sprites[1]
-	else
-		var/selection = tgui_input_list(src, "Select an icon! [triesleft ? "You have [triesleft] more chance\s." : "This is your last try."]", "Robot Icon", module_sprites)
-		sprite_datum = selection
-		if(selection)
-			sprite_datum = selection
-		else
-			sprite_datum = module_sprites[1]
-		//CHOMPEdit Start, allow multi bellies
-		vore_icon_bellies = list() //Clear any belly options that may not exist now
-		vore_capacity_ex = list()
-		vore_fullness_ex = list()
-		if(sprite_datum.belly_capacity_list.len)
-			for(var/belly in sprite_datum.belly_capacity_list) //vore icons list only contains a list of names with no associated data
-				vore_capacity_ex[belly] = sprite_datum.belly_capacity_list[belly] //I dont know why but this wasnt working when I just
-				vore_fullness_ex[belly] = 0 //set the lists equal to the old lists
-				vore_icon_bellies += belly
-			for(var/belly in sprite_datum.belly_light_list)
-				vore_light_states[belly] = 0
-		else if(sprite_datum.has_vore_belly_sprites)
-			vore_capacity_ex = list("sleeper" = 1)
-			vore_fullness_ex = list("sleeper" = 0)
-			vore_icon_bellies = list("sleeper")
-			if(sprite_datum.has_sleeper_light_indicator)
-				vore_light_states = list("sleeepr" = 0)
-				sprite_datum.belly_light_list = list("sleeper")
-		update_fullness() //Set how full the newly defined bellies are, if they're already full
-		//CHOMPEdit End
-		if(!istype(src,/mob/living/silicon/robot/drone))
-			robot_species = sprite_datum.name
-		if(notransform)
-			to_chat(src, "Your current transformation has not finished yet!")
-			choose_icon(icon_selection_tries)
-			return
-		else
-			transform_with_anim()
-
-	var/tempheight = vis_height
-	update_icon()
-	// This is bad but I dunno other way to 'reset' our resize offset based on vis_height changes other than resizing to normal and back.
-	if(tempheight != vis_height)
-		var/tempsize = size_multiplier
-		resize(1)
-		resize(tempsize)
-
-
-	if (module_sprites.len > 1 && triesleft >= 1 && client)
-		icon_selection_tries--
-		var/choice = tgui_alert(usr, "Look at your icon - is this what you want?", "Icon Choice", list("Yes","No"))
-		if(choice == "No")
-			choose_icon(icon_selection_tries)
-			return
-
-
-	icon_selected = 1
-	icon_selection_tries = 0
-	sprite_type = robot_species
-	if(hands)
-		update_hud()
-	to_chat(src, span_filter_notice("Your icon has been set. You now require a module reset to change it."))
-
-=======
->>>>>>> edb46d85c2 (Merge pull request #16589 from Kashargul/moduleSelectionUI)
 /mob/living/silicon/robot/proc/set_default_module_icon()
 	if(!SSrobot_sprites)
 		return
