@@ -56,6 +56,7 @@
 	toytype["Big Red Button"] = /obj/item/toy/redbutton
 	toytype["Garden gnome"] = /obj/item/toy/gnome
 	toytype["Toy AI"] = /obj/item/toy/AI
+	toytype["Hand buzzer"] = /obj/item/clothing/gloves/ring/buzzer/toy // CHOMPAdd
 	toytype["Toy nuke"] = /obj/item/toy/nuke
 	toytype["Toy gibber"] = /obj/item/toy/minigibber
 	toytype["Toy xeno"] = /obj/item/toy/toy_xeno
