@@ -324,28 +324,10 @@
 	pixel_y = 7;
 	pixel_x = -8
 	},
-/obj/item/ammo_magazine/m9mm/compact{
-	pixel_y = 1;
-	pixel_x = 8
-	},
-/obj/item/ammo_magazine/m9mm/compact{
-	pixel_y = 1;
-	pixel_x = 4
-	},
-/obj/item/ammo_magazine/m9mm/compact{
-	pixel_y = 1
-	},
-/obj/item/ammo_magazine/m9mm/compact{
-	pixel_y = 1;
-	pixel_x = -4
-	},
-/obj/item/ammo_magazine/m9mm/compact{
-	pixel_y = 1;
-	pixel_x = -8
-	},
 /obj/machinery/door/window/brigdoor/southleft{
 	layer = 2.9
 	},
+/obj/structure/table/rack,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/Equipment_Storage)
 "aaB" = (
@@ -4917,6 +4899,10 @@
 	dir = 1;
 	pixel_y = -13
 	},
+/obj/item/reagent_containers/food/drinks/shaker{
+	pixel_y = 6;
+	pixel_x = 6
+	},
 /turf/simulated/floor/wood/alt/tile,
 /area/crew_quarters/Midnight_Kitchen)
 "alV" = (
@@ -6460,10 +6446,10 @@
 /turf/simulated/wall,
 /area/hallway/Port_2_Deck_Corridor_2)
 "asn" = (
-/obj/structure/closet/secure_closet/bar,
 /obj/machinery/alarm{
 	pixel_y = 22
 	},
+/obj/machinery/vending/wardrobe/bardrobe,
 /turf/simulated/floor/carpet/purcarpet,
 /area/crew_quarters/Midnight_Kitchen)
 "aso" = (
@@ -12545,26 +12531,12 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/Rec_Lounge)
 "aMm" = (
-/obj/structure/table/glass,
-/obj/item/stack/material/plastic{
-	max_amount = 25;
-	amount = 20;
-	pixel_y = 1;
-	pixel_x = -4
-	},
-/obj/item/stack/material/phoron{
-	amount = 5;
-	pixel_x = 3
-	},
-/obj/item/stack/material/phoron{
-	amount = 5;
-	pixel_y = 8;
-	pixel_x = 3
-	},
-/obj/machinery/light{
+/obj/structure/sink{
 	dir = 8;
-	layer = 3
+	pixel_x = -12;
+	pixel_y = 2
 	},
+/obj/structure/window/reinforced,
 /turf/simulated/floor/tiled/white{
 	color = "#8bbbd5"
 	},
@@ -16598,6 +16570,12 @@
 	},
 /turf/simulated/floor/lino,
 /area/crew_quarters/Chapel_Office)
+"aZa" = (
+/obj/machinery/alarm{
+	pixel_y = 25
+	},
+/turf/simulated/floor/wood,
+/area/maintenance/ab_TeshDen)
 "aZf" = (
 /obj/structure/table/sifwoodentable,
 /obj/item/radio/subspace{
@@ -17185,13 +17163,30 @@
 /turf/simulated/floor/plating,
 /area/maintenance/Deck2_Cargo_AftPortCorridor1)
 "baY" = (
-/obj/structure/table/woodentable,
 /obj/machinery/light,
-/obj/item/clothing/accessory/permit/gun/bar,
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 4;
 	icon_state = "1-4"
+	},
+/obj/structure/table/woodentable,
+/obj/item/toy/figure/bartender{
+	pixel_y = 1
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/stunshell{
+	pixel_x = -9
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/beanbag{
+	pixel_y = 4;
+	pixel_x = -9
+	},
+/obj/item/ammo_magazine/ammo_box/b12g{
+	pixel_y = 9;
+	pixel_x = -9
+	},
+/obj/item/gun/projectile/shotgun/doublebarrel{
+	pixel_y = 9;
+	pixel_x = 7
 	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/crew_quarters/Midnight_Kitchen)
@@ -18049,6 +18044,11 @@
 "bec" = (
 /obj/structure/bed/chair/sofa/corner/brown{
 	dir = 8
+	},
+/obj/machinery/light/small/neon/booze1{
+	dir = 1;
+	pixel_x = -1;
+	pixel_y = -29
 	},
 /turf/simulated/floor/carpet/blue,
 /area/crew_quarters/Midnight_Bar)
@@ -20087,6 +20087,9 @@
 /obj/item/reagent_containers/glass/beaker/large{
 	pixel_x = 2
 	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white{
 	color = "#8bbbd5"
 	},
@@ -20560,6 +20563,9 @@
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
 	dir = 2
+	},
+/obj/structure/window/reinforced{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white{
 	color = "#8bbbd5"
@@ -21242,22 +21248,13 @@
 /turf/simulated/floor/tiled/dark,
 /area/engineering/Engineering_Workshop)
 "bok" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/effect/floor_decal/industrial/hatch,
-/obj/structure/grille,
-/obj/structure/window/titanium,
-/obj/structure/window/titanium{
-	dir = 4
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 22
 	},
-/obj/structure/window/titanium{
-	dir = 1
-	},
-/obj/structure/window/titanium{
-	dir = 8
-	},
-/obj/item/tape/engineering,
-/turf/simulated/floor/plating,
-/area/maintenance/ab_TeshDen)
+/obj/structure/closet/secure_closet/bar,
+/turf/simulated/floor/wood/alt/tile,
+/area/crew_quarters/Midnight_Kitchen)
 "bon" = (
 /obj/effect/catwalk_plated/techmaint,
 /obj/machinery/button/remote/driver{
@@ -21471,15 +21468,11 @@
 /turf/simulated/floor/carpet,
 /area/security/Forensics_Office)
 "bpf" = (
-/obj/structure/sink/countertop{
-	pixel_y = 35;
-	pixel_x = 16;
-	dir = 1
-	},
 /obj/structure/table/marble{
 	color = "grey"
 	},
 /obj/item/hand_labeler,
+/obj/structure/window/reinforced,
 /turf/simulated/floor/tiled/white{
 	color = "#8bbbd5"
 	},
@@ -21730,25 +21723,6 @@
 	},
 /obj/item/ammo_magazine/m45/flash{
 	pixel_y = 7;
-	pixel_x = -8
-	},
-/obj/item/ammo_magazine/m45/hp{
-	pixel_y = 1;
-	pixel_x = 8
-	},
-/obj/item/ammo_magazine/m45/hp{
-	pixel_y = 1;
-	pixel_x = 4
-	},
-/obj/item/ammo_magazine/m45/hp{
-	pixel_y = 1
-	},
-/obj/item/ammo_magazine/m45/hp{
-	pixel_y = 1;
-	pixel_x = -4
-	},
-/obj/item/ammo_magazine/m45/hp{
-	pixel_y = 1;
 	pixel_x = -8
 	},
 /obj/machinery/door/window/brigdoor/southright{
@@ -27772,11 +27746,6 @@
 /area/rnd/Robotics_Lab)
 "bMw" = (
 /obj/machinery/light,
-/obj/machinery/light/small/neon/booze1{
-	dir = 1;
-	pixel_x = -1;
-	pixel_y = -29
-	},
 /turf/simulated/floor/glass,
 /area/crew_quarters/Midnight_Bar)
 "bMy" = (
@@ -31037,28 +31006,21 @@
 /turf/simulated/floor/plating,
 /area/engineering/CE_Office)
 "bYa" = (
-/obj/structure/table/woodentable,
-/obj/item/ammo_magazine/ammo_box/b12g/stunshell{
-	pixel_x = -9
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 4
 	},
-/obj/item/ammo_magazine/ammo_box/b12g/beanbag{
-	pixel_y = 4;
-	pixel_x = -9
+/obj/structure/window/titanium{
+	dir = 1
 	},
-/obj/item/ammo_magazine/ammo_box/b12g{
-	pixel_y = 9;
-	pixel_x = -9
+/obj/structure/window/titanium{
+	dir = 8
 	},
-/obj/item/gun/projectile/shotgun/doublebarrel{
-	pixel_y = 10;
-	pixel_x = 10
-	},
-/obj/item/tool/screwdriver{
-	pixel_y = 4;
-	pixel_x = 8
-	},
-/turf/simulated/floor/carpet/purcarpet,
-/area/crew_quarters/Midnight_Kitchen)
+/obj/item/tape/engineering,
+/turf/simulated/floor/plating,
+/area/maintenance/ab_TeshDen)
 "bYc" = (
 /obj/structure/bed/chair/comfy/brown{
 	dir = 4
@@ -31405,8 +31367,7 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/maintenance/engi{
-	name = "Southern control room";
-	req_one_access = null
+	name = "Southern control room"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/hallway/Aft_2_Deck_Stairwell)
@@ -32592,13 +32553,12 @@
 /area/medical/EMT_Bay)
 "cdC" = (
 /obj/structure/table/marble,
-/obj/machinery/cash_register/civilian,
+/obj/structure/disposalpipe/segment,
 /obj/machinery/door/blast/shutters{
 	id = "sc-GCmidnightbar";
 	layer = 3.1;
 	name = "Bar Shutters"
 	},
-/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/Midnight_Kitchen)
 "cdG" = (
@@ -32660,10 +32620,19 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9
-	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor/corner2{
+	dir = 8
+	},
+/obj/effect/floor_decal/borderfloor/corner2{
+	dir = 10
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central2{
+	dir = 4
+	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/crew_quarters/Midnight_Kitchen)
 "cdO" = (
@@ -38461,6 +38430,7 @@
 	dir = 4;
 	pixel_x = -25
 	},
+/obj/structure/reagent_dispensers/beerkeg,
 /turf/simulated/floor/wood/alt/tile,
 /area/crew_quarters/Midnight_Kitchen)
 "cwF" = (
@@ -39311,6 +39281,20 @@
 /obj/structure/table/marble{
 	color = "grey"
 	},
+/obj/item/stack/material/phoron{
+	amount = 5;
+	pixel_y = 8;
+	pixel_x = 3
+	},
+/obj/item/stack/material/phoron{
+	amount = 5;
+	pixel_x = 3
+	},
+/obj/item/stack/material/plastic{
+	max_amount = 25;
+	amount = 20;
+	pixel_x = -14
+	},
 /turf/simulated/floor/tiled/white{
 	color = "#8bbbd5"
 	},
@@ -39695,15 +39679,6 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
-	},
-/obj/effect/floor_decal/borderfloor/corner2{
-	dir = 5
-	},
-/obj/effect/floor_decal/borderfloor/corner2{
-	dir = 6
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central2{
-	dir = 8
 	},
 /turf/simulated/floor/wood/alt/tile,
 /area/crew_quarters/Midnight_Kitchen)
@@ -40500,16 +40475,14 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/Engineering_Workshop)
 "cDS" = (
-/obj/machinery/alarm{
-	dir = 8;
-	pixel_x = 22
+/obj/machinery/chem_master,
+/obj/structure/window/reinforced{
+	dir = 4
 	},
-/obj/structure/reagent_dispensers/beerkeg,
-/obj/item/storage/box/mixedglasses{
-	pixel_y = 14
+/turf/simulated/floor/tiled/white{
+	color = "#8bbbd5"
 	},
-/turf/simulated/floor/wood/alt/tile,
-/area/crew_quarters/Midnight_Kitchen)
+/area/medical/Chemistry)
 "cDW" = (
 /obj/effect/catwalk_plated/white,
 /turf/space,
@@ -40895,27 +40868,22 @@
 /turf/simulated/floor/tiled/dark,
 /area/rnd/Testing_Lab)
 "cEC" = (
-/obj/item/stack/material/cardboard{
-	amount = 25
+/obj/effect/floor_decal/borderfloor/corner2{
+	dir = 6
 	},
-/obj/item/packageWrap{
-	pixel_x = -4;
-	pixel_y = 6
+/obj/effect/floor_decal/borderfloor/corner2{
+	dir = 5
 	},
-/obj/item/packageWrap{
-	pixel_x = -5;
-	pixel_y = 10
+/obj/effect/floor_decal/steeldecal/steel_decals_central2{
+	dir = 8
 	},
-/obj/item/hand_labeler{
-	pixel_y = 1;
-	pixel_x = 2
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
-/obj/item/tape_roll{
-	pixel_x = 3;
-	pixel_y = -5
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
 	},
-/obj/structure/table/woodentable,
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/wood/alt/tile,
 /area/crew_quarters/Midnight_Kitchen)
 "cED" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -42020,22 +41988,16 @@
 /turf/simulated/floor/plating,
 /area/harbor/Aft_2_Deck_Airlock_Access)
 "cOC" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 1
+/obj/structure/table/marble,
+/obj/item/packageWrap{
+	pixel_y = 5;
+	pixel_x = -9
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
+/obj/machinery/chemical_dispenser/bar_coffee/full{
+	dir = 1;
+	pixel_y = -13
 	},
-/obj/effect/floor_decal/borderfloor/corner2{
-	dir = 8
-	},
-/obj/effect/floor_decal/borderfloor/corner2{
-	dir = 10
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central2{
-	dir = 4
-	},
-/turf/simulated/floor/carpet/purcarpet,
+/turf/simulated/floor/wood/alt/tile,
 /area/crew_quarters/Midnight_Kitchen)
 "cOH" = (
 /obj/structure/disposalpipe/segment,
@@ -46588,6 +46550,11 @@
 /area/hallway/Central_2_Deck_Hall)
 "dTH" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/machinery/door/window/southleft{
+	layer = 2.8;
+	name = "Chemistry Desk";
+	req_access = list(33)
+	},
 /turf/simulated/floor/tiled/white{
 	color = "#8bbbd5"
 	},
@@ -47433,7 +47400,7 @@
 	dir = 1
 	},
 /obj/item/tape/engineering,
-/turf/space,
+/turf/simulated/floor/plating,
 /area/maintenance/ab_TeshDen)
 "efB" = (
 /obj/structure/cable{
@@ -47680,6 +47647,20 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/Deck2_AftPort_Corridor)
+"eix" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/obj/item/tape/engineering,
+/turf/simulated/floor/plating,
+/area/maintenance/ab_TeshDen)
 "eiy" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -48195,20 +48176,15 @@
 /turf/space,
 /area/harbor/For_Shuttlebay)
 "epJ" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/effect/floor_decal/industrial/arrows/yellow,
-/obj/effect/floor_decal/industrial/arrows/yellow{
-	dir = 1
+/obj/machinery/door/window/southright{
+	layer = 2.9;
+	name = "Chemistry Desk";
+	req_access = list(33)
 	},
-/obj/structure/simple_door/wood,
-/obj/item/tape/engineering,
-/obj/structure/cable/white{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+/turf/simulated/floor/tiled/white{
+	color = "#8bbbd5"
 	},
-/turf/simulated/floor/tiled/techmaint,
-/area/maintenance/ab_TeshDen)
+/area/medical/Chemistry)
 "eqi" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -53495,29 +53471,6 @@
 /area/medical/Deck2_Corridor)
 "fCA" = (
 /obj/structure/closet/secure_closet/freezer/kitchen,
-/obj/item/reagent_containers/chem_disp_cartridge/berry{
-	pixel_y = -4;
-	pixel_x = 8
-	},
-/obj/item/reagent_containers/chem_disp_cartridge/hot_coco{
-	pixel_x = 8;
-	pixel_y = -2
-	},
-/obj/item/reagent_containers/chem_disp_cartridge/milk{
-	pixel_x = 8
-	},
-/obj/item/reagent_containers/chem_disp_cartridge/mint{
-	pixel_x = 8;
-	pixel_y = 2
-	},
-/obj/item/reagent_containers/chem_disp_cartridge/tea{
-	pixel_x = 8;
-	pixel_y = 4
-	},
-/obj/item/reagent_containers/chem_disp_cartridge/coffee{
-	pixel_y = 6;
-	pixel_x = 8
-	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/Midnight_Kitchen)
 "fCI" = (
@@ -63269,16 +63222,15 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/Research_Lab)
 "hSQ" = (
-/obj/structure/window/basic{
-	dir = 1
+/obj/structure/table/marble,
+/obj/machinery/cash_register/civilian,
+/obj/machinery/door/blast/shutters{
+	id = "sc-GCmidnightbar";
+	layer = 3.1;
+	name = "Bar Shutters"
 	},
-/obj/structure/table/glass,
-/obj/item/radio/intercom/department/medbay{
-	dir = 8;
-	pixel_x = -22
-	},
-/turf/simulated/floor/tiled/dark,
-/area/medical/Patient_Ward)
+/turf/simulated/floor/tiled/steel_grid,
+/area/crew_quarters/Midnight_Kitchen)
 "hSV" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
@@ -67712,6 +67664,20 @@
 /obj/machinery/light,
 /turf/simulated/floor/reinforced,
 /area/rnd/Testing_Lab)
+"iVr" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/item/tape/engineering,
+/turf/simulated/floor/plating,
+/area/maintenance/ab_TeshDen)
 "iVx" = (
 /obj/item/clothing/gloves/brown{
 	pixel_y = -1;
@@ -68108,8 +68074,7 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/maintenance/engi{
-	name = "Southern control room";
-	req_one_access = null
+	name = "Southern control room"
 	},
 /obj/structure/cable{
 	d1 = 4;
@@ -69779,6 +69744,10 @@
 /area/shuttle/large_escape_pod4/station)
 "jwD" = (
 /obj/machinery/chemical_analyzer,
+/obj/machinery/light{
+	dir = 8;
+	layer = 3
+	},
 /turf/simulated/floor/tiled/white{
 	color = "#8bbbd5"
 	},
@@ -71802,20 +71771,21 @@
 /turf/simulated/floor/carpet/green,
 /area/hallway/Aft_2_Deck_Lobby)
 "jZO" = (
-/obj/structure/table/woodentable,
 /obj/item/radio/intercom{
 	pixel_y = -22
-	},
-/obj/item/reagent_containers/food/drinks/shaker,
-/obj/item/packageWrap,
-/obj/item/toy/figure/bartender{
-	pixel_y = 1;
-	pixel_x = -7
 	},
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/structure/table/woodentable,
+/obj/item/clothing/accessory/permit/gun/bar{
+	pixel_x = -9
+	},
+/obj/item/tool/screwdriver{
+	pixel_y = 4;
+	pixel_x = 8
 	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/crew_quarters/Midnight_Kitchen)
@@ -75665,6 +75635,11 @@
 "kYA" = (
 /turf/simulated/floor/tiled/techfloor,
 /area/hallway/Star_Transit_Foyer)
+"kYI" = (
+/obj/structure/disposalpipe/segment,
+/obj/item/stool/baystool/padded,
+/turf/simulated/floor/wood/sif,
+/area/crew_quarters/Midnight_Bar)
 "kYN" = (
 /turf/simulated/floor/tiled,
 /area/hallway/Star_2_Deck_Central_Corridor_2)
@@ -77626,7 +77601,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/sign/warning/moving_parts,
 /turf/simulated/wall,
 /area/quartermaster/Recycling)
 "lBG" = (
@@ -78776,13 +78750,13 @@
 	pixel_x = -32;
 	pixel_y = -4
 	},
+/obj/machinery/light{
+	dir = 8
+	},
 /obj/machinery/door/blast/shutters{
 	id = "sc-GCmidnightbar";
 	layer = 3.1;
 	name = "Bar Shutters"
-	},
-/obj/machinery/light{
-	dir = 8
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/Midnight_Kitchen)
@@ -81677,7 +81651,8 @@
 /obj/structure/railing/grey{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/dark,
+/obj/structure/sign/warning/moving_parts,
+/turf/simulated/wall,
 /area/quartermaster/Recycling)
 "mGr" = (
 /obj/machinery/conveyor_switch/oneway{
@@ -89926,10 +89901,17 @@
 /turf/simulated/floor/wood/alt/parquet,
 /area/crew_quarters/Office_Lounge)
 "oUx" = (
-/obj/machinery/vending/wardrobe/bardrobe,
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/closet/gmcloset,
+/obj/item/retail_scanner/civilian,
+/obj/item/retail_scanner/civilian,
+/obj/item/clothing/head/that{
+	pixel_x = 4;
+	pixel_y = 6
+	},
+/obj/item/glass_jar,
 /turf/simulated/floor/carpet/purcarpet,
 /area/crew_quarters/Midnight_Kitchen)
 "oUC" = (
@@ -102485,18 +102467,21 @@
 /turf/simulated/floor/tiled,
 /area/security/Prison_Wing)
 "rYB" = (
-/obj/structure/sign/securearea{
-	desc = "Under the painting a plaque reads: 'While the meat grinder may not have spared you, fear not. Not one part of you has gone to waste... You were delicious.'";
-	icon_state = "monkey_painting";
-	name = "Mr. Deempisi portrait";
-	pixel_x = -28;
-	pixel_y = 4
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium{
+	dir = 4
 	},
-/obj/machinery/atmospherics/unary/vent_pump/on{
+/obj/structure/window/titanium{
 	dir = 1
 	},
-/turf/simulated/floor/carpet/purcarpet,
-/area/crew_quarters/Midnight_Kitchen)
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/obj/structure/barricade,
+/turf/simulated/floor/plating,
+/area/maintenance/ab_TeshDen)
 "rYF" = (
 /obj/machinery/alarm{
 	dir = 8;
@@ -105788,12 +105773,13 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/EMT_Bay)
 "sMS" = (
-/obj/structure/table/glass,
-/obj/item/radio/intercom/department/medbay{
-	pixel_y = -22
+/obj/structure/cable/white{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/dark,
-/area/medical/Patient_Ward)
+/turf/simulated/floor/wood/broken,
+/area/maintenance/ab_TeshDen)
 "sNa" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -106263,13 +106249,6 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/Deck2_Security_PortCorridor1)
 "sSl" = (
-/obj/machinery/button/remote/blast_door{
-	dir = 8;
-	id = "sc-GCmidnightbar";
-	name = "Bar Shutters Control";
-	pixel_x = 24;
-	req_access = list(28)
-	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
@@ -109796,10 +109775,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/floor_decal/borderfloor/corner2{
-	dir = 4
+	dir = 1
 	},
 /obj/effect/floor_decal/borderfloor/corner2{
-	dir = 1
+	dir = 4
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central2,
 /turf/simulated/floor/carpet/purcarpet,
@@ -110706,6 +110685,7 @@
 	name = "Chemistry Cleaner";
 	pixel_x = 9
 	},
+/obj/structure/window/reinforced,
 /turf/simulated/floor/tiled/white{
 	color = "#8bbbd5"
 	},
@@ -116702,6 +116682,10 @@
 /area/crew_quarters/Chapel_Morgue)
 "vKy" = (
 /obj/structure/disposalpipe/segment,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white{
 	color = "#8bbbd5"
 	},
@@ -116918,10 +116902,6 @@
 /obj/item/gun/energy/ionrifle/pistol{
 	pixel_y = 7;
 	pixel_x = 5
-	},
-/obj/item/gun/energy/ionrifle/pistol{
-	pixel_y = 3;
-	pixel_x = 4
 	},
 /obj/item/gun/energy/ionrifle/pistol{
 	pixel_y = -1;
@@ -118039,6 +118019,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/Star_Tool_Storage)
+"web" = (
+/obj/structure/bed/pillowpilefront/teal,
+/obj/machinery/alarm{
+	pixel_y = 25
+	},
+/turf/simulated/floor/wood,
+/area/maintenance/ab_TeshDen)
 "weu" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -119025,16 +119012,9 @@
 /turf/simulated/floor/plating,
 /area/rnd/Toxins_Storage)
 "woi" = (
-/obj/structure/closet/gmcloset,
-/obj/item/glass_jar,
-/obj/item/retail_scanner/civilian,
-/obj/item/retail_scanner/civilian,
-/obj/item/clothing/head/that{
-	pixel_x = 4;
-	pixel_y = 6
-	},
-/turf/simulated/floor/carpet/purcarpet,
-/area/crew_quarters/Midnight_Kitchen)
+/obj/random/trash,
+/turf/simulated/floor/wood/broken,
+/area/maintenance/ab_TeshDen)
 "wop" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -119085,12 +119065,15 @@
 /turf/simulated/floor/plating,
 /area/quartermaster/Breakroom)
 "woz" = (
-/obj/machinery/alarm{
-	dir = 4;
-	pixel_x = -22
+/obj/machinery/button/remote/blast_door{
+	dir = 8;
+	id = "sc-GCmidnightbar";
+	name = "Bar Shutters Control";
+	pixel_x = 24;
+	req_access = list(28)
 	},
-/turf/simulated/floor/wood,
-/area/maintenance/ab_TeshDen)
+/turf/simulated/floor/wood/alt/tile,
+/area/crew_quarters/Midnight_Kitchen)
 "woF" = (
 /obj/machinery/light{
 	dir = 1
@@ -119375,6 +119358,11 @@
 /obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck2_Cargo_AftCorridor2)
+"wsl" = (
+/obj/structure/table/standard,
+/obj/random/donkpocketbox,
+/turf/simulated/floor/wood,
+/area/maintenance/ab_TeshDen)
 "wsr" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
@@ -120801,6 +120789,20 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/Engineering_EVA)
+"wKZ" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/structure/grille,
+/obj/structure/window/titanium,
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/structure/window/titanium{
+	dir = 8
+	},
+/obj/structure/barricade,
+/turf/simulated/floor/plating,
+/area/maintenance/ab_TeshDen)
 "wLh" = (
 /obj/effect/floor_decal/carpet{
 	dir = 4
@@ -123034,6 +123036,16 @@
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/structure/sign/securearea{
+	desc = "Under the painting a plaque reads: 'While the meat grinder may not have spared you, fear not. Not one part of you has gone to waste... You were delicious.'";
+	icon_state = "monkey_painting";
+	name = "Mr. Deempisi portrait";
+	pixel_x = -28;
+	pixel_y = 4
 	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/crew_quarters/Midnight_Kitchen)
@@ -155054,15 +155066,15 @@ aaa
 aaa
 bHD
 rrk
-qcp
-ptE
+eix
 bHD
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
+bHD
+bYa
+ptE
+bHD
 aaa
 aaa
 aaa
@@ -155311,16 +155323,16 @@ qcp
 wsr
 bHD
 bHD
+cqv
+wsl
+bHD
+aaa
+aaa
+aaa
+bHD
 mic
-dWN
 tHG
 qGQ
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
 aaa
 aaa
 aaa
@@ -155569,16 +155581,16 @@ lAc
 qKV
 uck
 bHD
+web
+fav
+bHD
+aaa
+aaa
+aaa
+bHD
 hOJ
-pNb
 dWN
 jRu
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
 aaa
 aaa
 aaa
@@ -155808,8 +155820,8 @@ cyF
 plF
 lYV
 plF
-ciN
-dgU
+cOC
+gPC
 bRu
 iAF
 eiA
@@ -155827,16 +155839,16 @@ lHe
 nUC
 ybj
 bHD
-peA
+piv
 dzV
-cqv
+bHD
+aaa
+aaa
+aaa
+bHD
+peA
+auv
 wff
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
 aaa
 aaa
 aaa
@@ -156061,7 +156073,7 @@ iwp
 uaB
 cOH
 cOH
-cOH
+kYI
 cdC
 rue
 rWH
@@ -156092,10 +156104,10 @@ bHD
 bHD
 bHD
 bHD
-aaa
-aaa
-aaa
-aaa
+bHD
+qGP
+bHD
+bHD
 aaa
 aaa
 aaa
@@ -156320,12 +156332,12 @@ aMR
 aMR
 aMR
 aMR
-xDr
+hSQ
 plF
 cBr
 sSl
-cDS
-gPC
+ciN
+dgU
 shD
 eaY
 wMO
@@ -156342,21 +156354,21 @@ dzV
 fav
 kAe
 rBs
+dzV
+dzV
+dzV
+dzV
+fav
+dzV
+dzV
 auv
+fav
 dzV
 dzV
-bHD
-cqv
-woz
-piv
-qGQ
+wKZ
 aaf
 gWp
 aaf
-aaa
-aaa
-aaa
-aaa
 aaa
 aaa
 aaa
@@ -156578,11 +156590,11 @@ aMR
 aMR
 aMR
 bMw
-gPC
-imz
-atA
-gPC
-gPC
+xDr
+plF
+cEC
+woz
+bok
 gPC
 bRi
 pnz
@@ -156600,21 +156612,21 @@ kmP
 vrq
 qEx
 vrq
-ulC
-ulC
 gKQ
-epJ
 vrq
+vrq
+gKQ
+vrq
+sMS
+gKQ
+ulC
 nOM
+gKQ
 vrq
 dQS
 bmS
 cVD
 onO
-aaa
-aaa
-aaa
-aaa
 aaa
 aaa
 aaa
@@ -156837,10 +156849,10 @@ aMR
 aMR
 aMR
 brh
-cEC
-cOC
-rYB
-bYa
+imz
+atA
+gPC
+gPC
 gPC
 fON
 bYP
@@ -156858,21 +156870,21 @@ kAe
 dzV
 fav
 auv
+dzV
+auv
+dzV
+dzV
+dzV
+dzV
+dzV
 pNb
 pNb
 dzV
-bHD
-lZD
-oie
-lUy
-wff
+dzV
+iVr
 aaf
 gWp
 aaf
-aaa
-aaa
-aaa
-aaa
 aaa
 aaa
 aaa
@@ -157118,16 +157130,16 @@ uJd
 uJd
 bHD
 bHD
+qGP
+bHD
+bHD
+bHD
+bHD
+bHD
+bHD
 xZV
 bHD
 bHD
-bHD
-bHD
-bHD
-aaa
-aaa
-aaa
-aaa
 aaa
 aaa
 aaa
@@ -157353,7 +157365,7 @@ deb
 aLB
 aMC
 gPC
-woi
+opg
 trc
 bZx
 jZO
@@ -157376,15 +157388,15 @@ nUC
 sSs
 bHD
 lUy
-auv
+dzV
+bHD
+aaa
+aaa
+aaa
+bHD
+lUy
 dzV
 qGQ
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
 aaa
 aaa
 aaa
@@ -157633,16 +157645,16 @@ dnF
 pDj
 aJi
 bHD
+aZa
+woi
+bHD
+aaa
+aaa
+aaa
+bHD
 vmI
-kAe
 rAI
 gvp
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
 aaa
 aaa
 aaa
@@ -157891,16 +157903,16 @@ ptE
 xwU
 bHD
 bHD
+lZD
+oie
+bHD
+aaa
+aaa
+aaa
+bHD
 anu
-rAI
 vaa
 wff
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
 aaa
 aaa
 aaa
@@ -158149,16 +158161,16 @@ aaa
 aaa
 aaa
 bHD
-rrk
+rYB
 ptE
-bok
 bHD
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
+bHD
+rrk
+eix
+bHD
 aaa
 aaa
 aaa
@@ -168122,7 +168134,7 @@ tQj
 bkf
 aIY
 aMn
-aMn
+epJ
 avP
 lEI
 crH
@@ -168378,7 +168390,7 @@ sXo
 aQu
 qip
 bkk
-fma
+cDS
 blN
 vKy
 hWu
@@ -173545,7 +173557,7 @@ lQC
 qsK
 lhc
 lQC
-hSQ
+lUr
 lRG
 hnT
 reJ
@@ -175097,7 +175109,7 @@ sRL
 ePO
 aiA
 iXo
-sMS
+ksd
 fZU
 mkW
 xwB
