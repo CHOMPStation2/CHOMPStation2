@@ -349,7 +349,7 @@
 	name = "Spider"
 	to_spawn = list(
 					/obj/item/mapping_unit,
-					/obj/item/clothing/gloves/ring/buzzer/toy,
+					/obj/item/clothing/accessory/ring/buzzer/toy,
 					/obj/item/spacecash/c1000,
 					/obj/item/spacecash/c500
 					)

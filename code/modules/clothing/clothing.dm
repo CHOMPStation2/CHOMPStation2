@@ -310,7 +310,7 @@
 	var/wired = 0
 	var/obj/item/cell/cell = 0
 	var/fingerprint_chance = 0	//How likely the glove is to let fingerprints through
-	var/obj/item/clothing/gloves/ring = null		//Covered ring
+	var/obj/item/clothing/accessory/ring = null		//Covered ring
 	var/mob/living/carbon/human/wearer = null	//Used for covered rings when dropping
 	var/glove_level = 2			//What "layer" the glove is on
 	var/overgloves = 0			//Used by gauntlets and arm_guards
@@ -432,7 +432,7 @@
 /////////////////////////////////////////////////////////////////////
 //Rings
 
-/obj/item/clothing/gloves/ring
+/obj/item/clothing/accessory/ring
 	name = "ring"
 	w_class = ITEMSIZE_TINY
 	icon = 'icons/inventory/hands/item.dmi'
