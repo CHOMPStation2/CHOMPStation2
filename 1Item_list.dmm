@@ -13379,7 +13379,7 @@
 	},
 /area/survivalpod)
 "dWy" = (
-/obj/item/clothing/accessory/ring/buzzer/toy,
+/obj/item/clothing/gloves/ring/buzzer/toy,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
