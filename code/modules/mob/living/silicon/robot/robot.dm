@@ -33,8 +33,7 @@
 //Icon stuff
 
 	var/datum/robot_sprite/sprite_datum 				// Sprite datum, holding all our sprite data
-	var/icon_selected = 1								// If icon selection has been completed yet
-	var/icon_selection_tries = 0						// Remaining attempts to select icon before a selection is forced
+	var/icon_selected = FALSE								// If icon selection has been completed yet
 	var/list/sprite_extra_customization = list()
 	var/rest_style = "Default"
 	var/notransform
@@ -48,6 +47,9 @@
 
 	var/shown_robot_modules = 0 //Used to determine whether they have the module menu shown or not
 	var/obj/screen/robot_modules_background
+
+	var/ui_theme
+	var/selecting_module = FALSE
 
 //3 Modules can be activated at any one time.
 	var/obj/item/robot_module/module = null
@@ -339,7 +341,10 @@
 	return module_sprites
 */
 /mob/living/silicon/robot/proc/pick_module()
+	if(icon_selected)
+		return
 	if(module)
+<<<<<<< HEAD
 		return
 	var/list/modules = list()
 	//VOREStatation Edit Start: shell restrictions //CHOMPstaton change to blacklist
@@ -383,6 +388,16 @@
 	hud_used.update_robot_modules_display()
 	notify_ai(ROBOT_NOTIFICATION_NEW_MODULE, module.name)
 	robotact?.update_static_data_for_all_viewers()
+=======
+		var/list/module_sprites = SSrobot_sprites.get_module_sprites(module, src)
+		if(module_sprites.len == 1 || !client)
+			sprite_datum = module_sprites[1]
+			sprite_datum.do_equipment_glamour(module)
+			return
+	if(!selecting_module)
+		var/datum/tgui_module/robot_ui_module/ui = new(src)
+		ui.tgui_interact(src)
+>>>>>>> edb46d85c2 (Merge pull request #16589 from Kashargul/moduleSelectionUI)
 
 /mob/living/silicon/robot/proc/update_braintype()
 	if(istype(mmi, /obj/item/mmi/digital/posibrain))
@@ -448,15 +463,12 @@
 		to_chat(usr, "You can't pick another custom name. [isshell(src) ? "" : "Go ask for a name change."]")
 		return 0
 
-	spawn(0)
-		var/newname
-		newname = sanitizeSafe(tgui_input_text(src,"You are a robot. Enter a name, or leave blank for the default name.", "Name change","", MAX_NAME_LEN), MAX_NAME_LEN)
-		if (newname)
-			custom_name = newname
-			sprite_name = newname
+	var/newname = sanitizeSafe(tgui_input_text(src,"You are a robot. Enter a name, or leave blank for the default name.", "Name change","", MAX_NAME_LEN), MAX_NAME_LEN)
+	if (newname)
+		custom_name = newname
+		sprite_name = newname
 
-		updatename()
-		update_icon()
+	updatename()
 
 /mob/living/silicon/robot/verb/extra_customization()
 	set name = "Customize Appearance"
@@ -810,6 +822,7 @@
 		notify_ai(ROBOT_NOTIFICATION_MODULE_RESET, module.name)
 	module.Reset(src)
 	qdel(module)
+	icon_selected = FALSE
 	module = null
 	updatename("Default")
 	has_recoloured = FALSE
@@ -1126,6 +1139,7 @@
 
 	return
 
+<<<<<<< HEAD
 /mob/living/silicon/robot/proc/choose_icon(var/triesleft)
 	var/robot_species = null
 	if(!SSrobot_sprites)
@@ -1202,6 +1216,8 @@
 		update_hud()
 	to_chat(src, span_filter_notice("Your icon has been set. You now require a module reset to change it."))
 
+=======
+>>>>>>> edb46d85c2 (Merge pull request #16589 from Kashargul/moduleSelectionUI)
 /mob/living/silicon/robot/proc/set_default_module_icon()
 	if(!SSrobot_sprites)
 		return
