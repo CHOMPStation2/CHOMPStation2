@@ -215,14 +215,9 @@
 		/obj/item/cell/device,
 		/obj/item/radio,
 		/obj/item/gps/explorer,
-<<<<<<< HEAD
 		/obj/item/cataloguer/compact, //CHOMP edit
 	//	/obj/item/gun/energy/gun/protector/pilotgun/locked, //CHOMP Removed
-		/obj/item/clothing/gloves/watch/survival,
-=======
-		/obj/item/gun/energy/gun/protector/pilotgun/locked,
 		/obj/item/clothing/accessory/watch/survival,
->>>>>>> 47469a1c2d (Merge pull request #16539 from KillianKirilenko/kk-rings)
 		/obj/item/clothing/accessory/storage/webbing/pilot1,
 		/obj/item/clothing/accessory/storage/webbing/pilot2,
 		/obj/item/emergency_beacon

@@ -2677,11 +2677,8 @@ End CHOMP Removal*/
 
 //Halored: Mercury
 
-<<<<<<< HEAD
-/* /obj/item/clothing/gloves/ring/material/void_opal/fluff/mercury //Chomp REMOVE Start
-=======
+/* Chomp REMOVE Start
 /obj/item/clothing/accessory/ring/material/void_opal/fluff/mercury
->>>>>>> 47469a1c2d (Merge pull request #16539 from KillianKirilenko/kk-rings)
 	name = "Mercury's Mate Ring"
 	desc = "A band of void opal, given to Mercury by Lumen"
 
