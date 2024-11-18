@@ -3643,7 +3643,6 @@
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/research/xenoarcheology/restroom)
 "ho" = (
-/obj/machinery/chemical_dispenser/full,
 /obj/structure/sign/warning/nosmoking_2{
 	pixel_x = -32
 	},
@@ -3831,7 +3830,6 @@
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/research/xenoarcheology/restroom)
 "hH" = (
-/obj/machinery/chem_master,
 /obj/effect/floor_decal/corner/beige{
 	dir = 9
 	},
