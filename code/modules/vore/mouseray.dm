@@ -93,7 +93,7 @@
 		if(!M.allow_spontaneous_tf && !tf_admin_pref_override)
 			return
 	M.drop_both_hands()	//CHOMPAdd - Drop items in hand before transformation
-	if(M.tf_mob_holder && M.tf_mob_holder.loc == M)
+	if(M.tf_mob_holder && M.tf_mob_holder.loc == M) //CHOMPEdit - Extra check to account for Mind Binder usage
 		new /obj/effect/effect/teleport_greyscale(M.loc) //CHOMPEdit Start
 		var/mob/living/ourmob = M.tf_mob_holder
 		if(ourmob.ai_holder)
