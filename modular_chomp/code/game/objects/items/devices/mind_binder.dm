@@ -83,6 +83,8 @@
 				usr.mind.transfer_to(target)
 			if(!target.tf_mob_holder)
 				target.tf_mob_holder = usr
+			if(target.tf_mob_holder == target)
+				target.tf_mob_holder = null
 			self_bind = !self_bind
 			update_icon()
 			to_chat(usr,span_notice("Your mind as been bound to [target]."))
@@ -99,6 +101,8 @@
 			V.mind.transfer_to(target)
 			if(!target.tf_mob_holder)
 				target.tf_mob_holder = V.tf_mob_holder
+			if(target.tf_mob_holder == target)
+				target.tf_mob_holder = null
 			possessed_voice -= V
 			qdel(V)
 			to_chat(usr,span_notice("Mind bound to [target]."))

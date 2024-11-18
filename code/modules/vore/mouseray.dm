@@ -210,6 +210,8 @@
 			to_chat(src,span_notice("You have no body."))
 			tf_mob_holder = null
 			return
+		if(istype(ourmob.loc, /mob/living)) //Check for if body was transformed
+			ourmob = ourmob.loc
 		if(ourmob.ckey)
 			if(ourmob.tf_mob_holder && ourmob.tf_mob_holder == src)
 				//Body Swap
