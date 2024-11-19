@@ -270,15 +270,3 @@
 	emote_message_1p_target = "You prbt at TARGET."
 	emote_message_3p_target = "prbts at TARGET."
 	emote_sound = 'sound/voice/prbt.ogg'
-
-/decl/emote/audible/caw
-	key = "caw"
-	emote_message_1p = "You caw!"
-	emote_message_3p = "caws!"
-	emote_sound = 'sound/voice/caw.ogg'
-
-/decl/emote/audible/birdchirp
-	key = "bchirp" // Stands for Bird Chirp (because it's not a cricket chirp like *chirp, it's a bird chirp)
-	emote_message_1p = "You chirp."
-	emote_message_3p = "chirps."
-	emote_sound = 'sound/voice/bchirp.ogg'
