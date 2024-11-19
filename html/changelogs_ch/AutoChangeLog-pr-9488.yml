@@ -1,0 +1,7 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - qol: "climbing and swimming traits can now modify your speed of climbing and swimming between z-levels, in addition to their standard functions"
+  - rscadd: "added \"pro swimmer\" trait, which increases your movespeed in water and reduces time to traverse between water z-levels when swimming"
+  - qol: "akula now have 50% reduced z-swim time, as if they had the pro-swimmer trait"
+  - qol: "tajara and vasilissans now have 25% reduced ladder/climbing time, as if they had the amateur climber trait"
