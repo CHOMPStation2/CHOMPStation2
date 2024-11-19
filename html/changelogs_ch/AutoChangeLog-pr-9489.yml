@@ -1,0 +1,5 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - qol: "refactored rings, knuckledusters, bracelets, and watches into glove-attached accessories (they can still be worn by themselves!)"
+  - qol: "bracelets are now worn on your hands/wrists rather than being in the neck slot"
