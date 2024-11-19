@@ -71,13 +71,13 @@
 	key = "caw"
 	emote_message_1p = "You caw!"
 	emote_message_3p = "caws!"
-	emote_sound = 'sound/voice/caw.ogg'
+	emote_sound = 'modular_chomp/sound/voice/caw.ogg'
 
 /decl/emote/audible/birdchirp
 	key = "bchirp" // Stands for Bird Chirp (because it's not a cricket chirp like *chirp, it's a bird chirp)
 	emote_message_1p = "You chirp."
 	emote_message_3p = "chirps."
-	emote_sound = 'sound/voice/bchirp.ogg'
+	emote_sound = 'modular_chomp/sound/voice/bchirp.ogg'
 
 /decl/emote/audible/wawa
 	key = "wawa"
