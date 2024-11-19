@@ -716,8 +716,6 @@
 				update_icon()
 			else
 				to_chat(user, span_filter_notice("[span_red("Access denied.")]"))
-				if(user == src) //RS edit: No self-unlocking.
-					to_chat(user, span_filter_notice("You are not allowed to manipulate your own lock."))
 
 	else if(istype(W, /obj/item/borg/upgrade/))
 		var/obj/item/borg/upgrade/U = W
