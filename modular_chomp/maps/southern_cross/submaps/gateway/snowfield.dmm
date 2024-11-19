@@ -3495,7 +3495,7 @@
 "dgr" = (
 /obj/structure/catwalk,
 /obj/structure/table/steel_reinforced,
-/obj/item/clothing/gloves/knuckledusters,
+/obj/item/clothing/accessory/knuckledusters,
 /obj/machinery/light/small{
 	dir = 8
 	},

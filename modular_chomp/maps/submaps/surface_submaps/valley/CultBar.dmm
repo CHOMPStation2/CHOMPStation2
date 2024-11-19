@@ -185,7 +185,7 @@
 /obj/random/maintenance/misc,
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/research,
-/obj/item/clothing/gloves/ring/material/diamond,
+/obj/item/clothing/accessory/ring/material/diamond,
 /turf/simulated/floor/wood/sif,
 /area/submap/CultBar)
 "gu" = (

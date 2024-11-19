@@ -3820,7 +3820,7 @@
 	},
 /area/survivalpod)
 "bfZ" = (
-/obj/item/clothing/gloves/ring/fluff/basir,
+/obj/item/clothing/accessory/ring/fluff/basir,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -10131,7 +10131,7 @@
 	},
 /area/survivalpod)
 "cXK" = (
-/obj/item/clothing/gloves/ring/material/silver,
+/obj/item/clothing/accessory/ring/material/silver,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -11223,7 +11223,7 @@
 /turf/simulated/floor/atoll,
 /area/survivalpod)
 "dmX" = (
-/obj/item/clothing/gloves/ring/seal/mason,
+/obj/item/clothing/accessory/ring/seal/mason,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -11343,7 +11343,7 @@
 	},
 /area/survivalpod)
 "doW" = (
-/obj/item/clothing/gloves/ring/material/gold,
+/obj/item/clothing/accessory/ring/material/gold,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -17062,7 +17062,7 @@
 	},
 /area/survivalpod)
 "eZW" = (
-/obj/item/clothing/gloves/ring/wedding,
+/obj/item/clothing/accessory/ring/wedding,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -24303,7 +24303,7 @@
 	},
 /area/survivalpod)
 "hfZ" = (
-/obj/item/clothing/gloves/ring/engagement,
+/obj/item/clothing/accessory/ring/engagement,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -24397,7 +24397,7 @@
 	},
 /area/survivalpod)
 "hhR" = (
-/obj/item/clothing/gloves/ring/seal/secgen,
+/obj/item/clothing/accessory/ring/seal/secgen,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -26343,7 +26343,7 @@
 /turf/simulated/floor/atoll,
 /area/survivalpod)
 "hKj" = (
-/obj/item/clothing/gloves/ring/material,
+/obj/item/clothing/accessory/ring/material,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -30722,7 +30722,7 @@
 	},
 /area/survivalpod)
 "iYT" = (
-/obj/item/clothing/gloves/ring/reagent/sleepy,
+/obj/item/clothing/accessory/ring/reagent/sleepy,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -31902,7 +31902,7 @@
 	},
 /area/survivalpod)
 "jqj" = (
-/obj/item/clothing/gloves/ring/material/uranium,
+/obj/item/clothing/accessory/ring/material/uranium,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -37214,7 +37214,7 @@
 	},
 /area/survivalpod)
 "kQl" = (
-/obj/item/clothing/gloves/ring/seal,
+/obj/item/clothing/accessory/ring/seal,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -42030,7 +42030,7 @@
 	},
 /area/survivalpod)
 "mnZ" = (
-/obj/item/clothing/gloves/ring/material/plastic,
+/obj/item/clothing/accessory/ring/material/plastic,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -44263,7 +44263,7 @@
 	},
 /area/survivalpod)
 "mVK" = (
-/obj/item/clothing/gloves/ring/material/copper,
+/obj/item/clothing/accessory/ring/material/copper,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -44431,7 +44431,7 @@
 	},
 /area/survivalpod)
 "mXF" = (
-/obj/item/clothing/gloves/ring/material/bronze,
+/obj/item/clothing/accessory/ring/material/bronze,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -51432,7 +51432,7 @@
 	},
 /area/survivalpod)
 "oXA" = (
-/obj/item/clothing/gloves/ring/material/lead,
+/obj/item/clothing/accessory/ring/material/lead,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -51831,7 +51831,7 @@
 	},
 /area/survivalpod)
 "pdx" = (
-/obj/item/clothing/gloves/ring/seal/signet/fluff/phi,
+/obj/item/clothing/accessory/ring/seal/signet/fluff/phi,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -51963,7 +51963,7 @@
 	},
 /area/survivalpod)
 "pfP" = (
-/obj/item/clothing/gloves/ring/cti,
+/obj/item/clothing/accessory/ring/cti,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -53061,7 +53061,7 @@
 /turf/simulated/floor/atoll,
 /area/survivalpod)
 "pwN" = (
-/obj/item/clothing/gloves/ring/buzzer,
+/obj/item/clothing/accessory/ring/buzzer,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -59978,7 +59978,7 @@
 	},
 /area/survivalpod)
 "rCV" = (
-/obj/item/clothing/gloves/ring/material/osmium,
+/obj/item/clothing/accessory/ring/material/osmium,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -63394,7 +63394,7 @@
 	},
 /area/survivalpod)
 "sDH" = (
-/obj/item/clothing/gloves/ring,
+/obj/item/clothing/accessory/ring,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -64446,7 +64446,7 @@
 /turf/simulated/floor/atoll,
 /area/survivalpod)
 "sUz" = (
-/obj/item/clothing/gloves/ring/material/diamond,
+/obj/item/clothing/accessory/ring/material/diamond,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -65522,7 +65522,7 @@
 	},
 /area/survivalpod)
 "tke" = (
-/obj/item/clothing/gloves/ring/material/wood,
+/obj/item/clothing/accessory/ring/material/wood,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -67768,7 +67768,7 @@
 	},
 /area/survivalpod)
 "tTk" = (
-/obj/item/clothing/gloves/ring/material/phoron,
+/obj/item/clothing/accessory/ring/material/phoron,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -69121,7 +69121,7 @@
 	},
 /area/survivalpod)
 "uog" = (
-/obj/item/clothing/gloves/ring/material/iron,
+/obj/item/clothing/accessory/ring/material/iron,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -69379,7 +69379,7 @@
 	},
 /area/survivalpod)
 "usN" = (
-/obj/item/clothing/gloves/ring/material/glass,
+/obj/item/clothing/accessory/ring/material/glass,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -70344,7 +70344,7 @@
 	},
 /area/survivalpod)
 "uHm" = (
-/obj/item/clothing/gloves/ring/seal/signet,
+/obj/item/clothing/accessory/ring/seal/signet,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -71100,7 +71100,7 @@
 	},
 /area/survivalpod)
 "uSd" = (
-/obj/item/clothing/gloves/ring/mariner,
+/obj/item/clothing/accessory/ring/mariner,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -71124,7 +71124,7 @@
 	},
 /area/survivalpod)
 "uSE" = (
-/obj/item/clothing/gloves/knuckledusters,
+/obj/item/clothing/accessory/knuckledusters,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -72343,7 +72343,7 @@
 	},
 /area/survivalpod)
 "vjZ" = (
-/obj/item/clothing/gloves/ring/material/steel,
+/obj/item/clothing/accessory/ring/material/steel,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -74713,7 +74713,7 @@
 	},
 /area/survivalpod)
 "vTI" = (
-/obj/item/clothing/gloves/ring/material/tin,
+/obj/item/clothing/accessory/ring/material/tin,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -75953,7 +75953,7 @@
 	},
 /area/survivalpod)
 "wlP" = (
-/obj/item/clothing/gloves/ring/wedding/silver,
+/obj/item/clothing/accessory/ring/wedding/silver,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -77797,7 +77797,7 @@
 	},
 /area/survivalpod)
 "wNz" = (
-/obj/item/clothing/gloves/ring/material/platinum,
+/obj/item/clothing/accessory/ring/material/platinum,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -82230,7 +82230,7 @@
 	},
 /area/survivalpod)
 "yan" = (
-/obj/item/clothing/gloves/ring/material/titanium,
+/obj/item/clothing/accessory/ring/material/titanium,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
