@@ -30,7 +30,7 @@
 	///whether we are to be added to SSlighting's corners_queue list for an update
 	var/needs_update = FALSE
 
-/datum/lighting_corner/New(x, y, z)
+/datum/lighting_corner/New(x, y, z, dynamic) // CHOMPEdit
 	. = ..()
 
 	src.x = x + 0.5
@@ -72,7 +72,7 @@
 		master_SE = process_next
 		process_next.lighting_corner_NW = src
 
-	if(((SSplanets && SSplanets.z_to_planet.len >= new_turf.z && SSplanets.z_to_planet[new_turf.z]) || SSlighting.get_pshandler_z(new_turf.z)) && new_turf.has_dynamic_lighting()) sunlight = SUNLIGHT_POSSIBLE //CHOMPEdit
+	if(((SSplanets && SSplanets.z_to_planet.len >= z && SSplanets.z_to_planet[z]) || SSlighting.get_pshandler_z(z)) && dynamic) sunlight = SUNLIGHT_POSSIBLE //CHOMPEdit
 
 /datum/lighting_corner/proc/save_master(turf/master, dir)
 	switch (dir)

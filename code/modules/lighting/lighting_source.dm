@@ -147,8 +147,8 @@
 
 //CHOMPEdit Begin
 #define APPLY_CORNER_NEW(C)                      \
-	. = LUM_FALLOFF(C, pixel_turf);              \
-	. *= light_power;                            \
+	. = LUM_FALLOFF(C);         			     \
+	. *= _light_power;                            \
 	var/OLD = effect_str[C];                     \
 	if (. != 0){								 \
 		LAZYADD(C.affecting, src);	 	 		 \
@@ -156,9 +156,9 @@
 	}			 	 		 					 \
 	C.update_lumcount                            \
 	(                                            \
-		(. * lum_r) - (OLD * applied_lum_r),     \
-		(. * lum_g) - (OLD * applied_lum_g),     \
-		(. * lum_b) - (OLD * applied_lum_b)      \
+		(. * _lum_r) - (OLD * _applied_lum_r),     \
+		(. * _lum_g) - (OLD * _applied_lum_g),     \
+		(. * _lum_b) - (OLD * _applied_lum_b)      \
 	);                                           \
 //CHOMPEdit End
 #define REMOVE_CORNER(C)                         \
@@ -193,20 +193,22 @@
 	return view(CEILING(light_range, 1), source_turf)
 
 // Keep in mind. Lighting corners accept the bottom left (northwest) set of cords to them as input
+//CHOMPEdit Start Dynamic light
 #define GENERATE_MISSING_CORNERS(gen_for) \
 	if (!gen_for.lighting_corner_NE) { \
-		gen_for.lighting_corner_NE = new /datum/lighting_corner(gen_for.x, gen_for.y, gen_for.z); \
+		gen_for.lighting_corner_NE = new /datum/lighting_corner(gen_for.x, gen_for.y, gen_for.z, gen_for.has_dynamic_lighting()); \
 	} \
 	if (!gen_for.lighting_corner_SE) { \
-		gen_for.lighting_corner_SE = new /datum/lighting_corner(gen_for.x, gen_for.y - 1, gen_for.z); \
+		gen_for.lighting_corner_SE = new /datum/lighting_corner(gen_for.x, gen_for.y - 1, gen_for.z, gen_for.has_dynamic_lighting()); \
 	} \
 	if (!gen_for.lighting_corner_SW) { \
-		gen_for.lighting_corner_SW = new /datum/lighting_corner(gen_for.x - 1, gen_for.y - 1, gen_for.z); \
+		gen_for.lighting_corner_SW = new /datum/lighting_corner(gen_for.x - 1, gen_for.y - 1, gen_for.z, gen_for.has_dynamic_lighting()); \
 	} \
 	if (!gen_for.lighting_corner_NW) { \
-		gen_for.lighting_corner_NW = new /datum/lighting_corner(gen_for.x - 1, gen_for.y, gen_for.z); \
+		gen_for.lighting_corner_NW = new /datum/lighting_corner(gen_for.x - 1, gen_for.y, gen_for.z, gen_for.has_dynamic_lighting()); \
 	} \
 	gen_for.lighting_corners_initialised = TRUE;
+//CHOMPEdit End
 
 /datum/light_source/proc/update_corners()
 	var/update = FALSE
@@ -297,7 +299,6 @@
 			APPLY_CORNER_NEW(corner)
 			//CHOMPEdit End
 	else
-<<<<<<< HEAD
 		for (var/datum/lighting_corner/corner in new_corners) //CHOMPEdit
 			//CHOMPEdit Begin
 			APPLY_CORNER_NEW(corner)
@@ -305,8 +306,8 @@
 
 		for (var/datum/lighting_corner/corner in corners - new_corners) // Existing corners //CHOMPEdit
 		//CHOMPEdit Begin
-			. = LUM_FALLOFF(corner, pixel_turf);
-			. *= light_power;
+			. = LUM_FALLOFF(corner);
+			. *= _light_power;
 			var/OLD = effect_str[corner];
 			if (. != 0)
 				effect_str[corner] = .
@@ -315,28 +316,11 @@
 				effect_str -= corner
 			corner.update_lumcount						\
 			(											\
-				(. * lum_r) - (OLD * applied_lum_r),	\
-				(. * lum_g) - (OLD * applied_lum_g),	\
-				(. * lum_b) - (OLD * applied_lum_b)		\
+				(. * _lum_r) - (OLD * _applied_lum_r),	\
+				(. * _lum_g) - (OLD * _applied_lum_g),	\
+				(. * _lum_b) - (OLD * _applied_lum_b)	\
 			);
 		//CHOMPEdit End
-=======
-		for (var/datum/lighting_corner/corner as anything in new_corners)
-			APPLY_CORNER(corner)
-			if (. != 0)
-				LAZYADD(corner.affecting, src)
-				effect_str[corner] = .
-
-		// New corners are a subset of corners. so if they're both the same length, there are NO old corners!
-		if(length(corners) != length(new_corners))
-			for (var/datum/lighting_corner/corner as anything in corners - new_corners) // Existing corners
-				APPLY_CORNER(corner)
-				if (. != 0)
-					effect_str[corner] = .
-				else
-					LAZYREMOVE(corner.affecting, src)
-					effect_str -= corner
->>>>>>> 8c2d326214... Micro-opt lighting (#16482)
 
 	var/list/datum/lighting_corner/gone_corners = effect_str - corners
 	for (var/datum/lighting_corner/corner as anything in gone_corners)
@@ -356,4 +340,3 @@
 #undef APPLY_CORNER
 #undef SETUP_CORNERS_REMOVAL_CACHE
 #undef SETUP_CORNERS_CACHE
-#undef GENERATE_MISSING_CORNERS

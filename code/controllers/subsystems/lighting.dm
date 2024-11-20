@@ -1,6 +1,6 @@
 SUBSYSTEM_DEF(lighting)
 	name = "Lighting"
-	wait = 2
+	wait = 1 // CHOMPEdit
 	init_order = INIT_ORDER_LIGHTING
 	flags = SS_TICKER
 	runlevels = RUNLEVELS_DEFAULT | RUNLEVEL_LOBBY //CHOMPEdit Do some work during lobby waiting period. May as well.
