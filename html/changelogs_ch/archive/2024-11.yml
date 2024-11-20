@@ -104,3 +104,18 @@
 2024-11-18:
   CHOMPStation2StaffMirrorBot:
   - rscadd: added "salvage technician" alt title for engineer
+2024-11-20:
+  CHOMPStation2StaffMirrorBot:
+  - qol: climbing and swimming traits can now modify your speed of climbing and swimming
+      between z-levels, in addition to their standard functions
+  - rscadd: added "pro swimmer" trait, which increases your movespeed in water and
+      reduces time to traverse between water z-levels when swimming
+  - qol: akula now have 50% reduced z-swim time, as if they had the pro-swimmer trait
+  - qol: tajara and vasilissans now have 25% reduced ladder/climbing time, as if they
+      had the amateur climber trait
+  - qol: refactored rings, knuckledusters, bracelets, and watches into glove-attached
+      accessories (they can still be worn by themselves!)
+  - qol: bracelets are now worn on your hands/wrists rather than being in the neck
+      slot
+  Fracshun:
+  - qol: OOC Escape now works for most Mind Binder and Body Snatcher interactions
