@@ -1289,7 +1289,7 @@
 
 //Basir Fahim
 
-/obj/item/clothing/gloves/ring/fluff/basir
+/obj/item/clothing/accessory/ring/fluff/basir
 	name = "Sundancer Engagement Ring"
 	desc = "This ring is stylized to have an ornate sun, with a sample of phoron swirling around inside. Keep away from Fire! Inscribed along the band is a sentence in Siik; \"Always yours, my little frost-fire. With love. -Sheri\""
 	icon = 'icons/vore/custom_clothes_yw.dmi'

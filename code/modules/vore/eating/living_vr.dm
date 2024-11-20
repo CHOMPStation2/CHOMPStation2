@@ -662,6 +662,22 @@
 	//You've been turned into an item!
 	else if(tf_mob_holder && istype(src, /mob/living/voice) && istype(src.loc, /obj/item))
 		var/obj/item/item_to_destroy = src.loc //If so, let's destroy the item they just TF'd out of.
+		//CHOMPEdit Start - If tf_mob_holder is not located in src, then it's a Mind Binder OOC Escape
+		var/mob/living/ourmob = tf_mob_holder
+		if(ourmob.loc != src)
+			if(isnull(ourmob.loc))
+				to_chat(src,span_notice("You have no body."))
+				src.tf_mob_holder = null
+				return
+			if(ourmob.ckey)
+				to_chat(src,span_notice("Your body appears to be in someone else's control."))
+				return
+			src.mind.transfer_to(ourmob)
+			item_to_destroy.possessed_voice -= src
+			qdel(src)
+			log_and_message_admins("[key_name(src)] used the OOC escape button to revert back to their original form from being TFed into an object.")
+			return
+		//CHOMPEdit End
 		if(istype(src.loc, /obj/item/clothing)) //Are they in clothes? Delete the item then revert them.
 			qdel(item_to_destroy)
 			log_and_message_admins("[key_name(src)] used the OOC escape button to revert back to their original form from being TFed into an object.")

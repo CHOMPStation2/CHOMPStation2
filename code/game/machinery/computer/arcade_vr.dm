@@ -22,7 +22,7 @@
 							/obj/item/toy/redbutton									= 2,
 							/obj/item/toy/gnome										= 2,
 							/obj/item/toy/AI										= 2,
-							/obj/item/clothing/gloves/ring/buzzer/toy				= 2,
+							/obj/item/clothing/gloves/ring/buzzer/toy				= 2, // CHOMPAdd
 							/obj/item/storage/box/handcuffs/fake				= 2,
 							/obj/item/toy/nuke										= 2,
 							/obj/item/toy/minigibber								= 2,

@@ -723,6 +723,8 @@
 			to_chat(usr, span_filter_notice("You must access the borgs internals!"))
 		else if(!src.module && U.require_module)
 			to_chat(usr, span_filter_notice("The borg must choose a module before it can be upgraded!"))
+		else if(user == src && istype(W,/obj/item/borg/upgrade/utility/reset))
+			to_chat(usr, span_warning("You are restricted from reseting your own module."))
 		else if(U.locked)
 			to_chat(usr, span_filter_notice("The upgrade is locked and cannot be used yet!"))
 		else
@@ -884,7 +886,7 @@
 	else if(istype(M, /mob/living/silicon/robot))
 		var/mob/living/silicon/robot/R = M
 		if(check_access(R.get_active_hand()) || istype(R.get_active_hand(), /obj/item/card/robot))
-			return 1
+			return TRUE
 	return 0
 
 /mob/living/silicon/robot/proc/check_access(obj/item/I)
