@@ -2002,7 +2002,7 @@
 		qdel(V)
 	//CHOMPAdd End
 	qdel(src)
-	return H
+	return H //CHOMPEdit - Return expanded mob for use in On_Consume
 
 /obj/item/reagent_containers/food/snacks/monkeycube/proc/Unwrap(mob/user as mob)
 	icon_state = "monkeycube"
