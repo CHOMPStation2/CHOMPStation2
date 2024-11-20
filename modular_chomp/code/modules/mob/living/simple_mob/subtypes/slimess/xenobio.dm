@@ -267,7 +267,7 @@
 	required = /obj/item/slime_extract/plague
 
 /decl/chemical_reaction/instant/slime/virusdish/on_reaction(var/datum/reagents/holder)
-	new /obj/item/virusdish(get_turf(holder.my_atom))
+	// new /obj/item/virusdish(get_turf(holder.my_atom))
 	..()
 
 /decl/chemical_reaction/instant/slime/obj/item/slime_extract/plague_jelly

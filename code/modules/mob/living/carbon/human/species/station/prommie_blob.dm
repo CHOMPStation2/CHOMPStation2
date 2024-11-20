@@ -447,7 +447,6 @@
 		R.forceMove(blob)
 	if(wear_id)
 		blob.myid = wear_id.GetID()
-		wear_id.forceMove(blob)
 //ChompAdd End
 	//Mail them to nullspace
 	moveToNullspace()

@@ -1083,7 +1083,7 @@
     icon_state = "bridge"
     lightswitch = 1
 
-/area/bridge/sleeping
+/area/bridge/sleep
     icon_state = "bridge"
     flags = RAD_SHIELDED
     limit_mob_size = FALSE
@@ -1092,24 +1092,24 @@
     soundproofed = TRUE
     forbid_events = TRUE
 
-/area/bridge/sleeping/HoP_Quarters
+/area/bridge/sleep/HoP_Quarters
     name = "\improper HoP Quarters"
 
-/area/bridge/sleeping/CE_Quarters
+/area/bridge/sleep/CE_Quarters
     name = "\improper CE Quarters"
 
-/area/bridge/sleeping/CMO_Quarters
+/area/bridge/sleep/CMO_Quarters
     name = "\improper CMO Quarters"
-/area/bridge/sleeping/RD_Quarters
+/area/bridge/sleep/RD_Quarters
     name = "\improper RD Quarters"
 
-/area/bridge/sleeping/HoS_Quarters
+/area/bridge/sleep/HoS_Quarters
     name = "\improper HoS Quarters"
 
-/area/bridge/sleeping/Secretary_Quarters
+/area/bridge/sleep/Secretary_Quarters
     name = "\improper Secretary Quarters"
 
-/area/bridge/sleeping/Captain_Quarters
+/area/bridge/sleep/Captain_Quarters
     name = "\improper Captain Quarters"
 
 /area/bridge/Leisure_Room
@@ -1960,7 +1960,7 @@
     name = "\improper Public Garden"
     icon_state = "gaming"
 
-/area/crew_quarters/sleeping
+/area/crew_quarters/sleep
     flags = RAD_SHIELDED
     lightswitch = 0
     limit_mob_size = FALSE
@@ -1970,40 +1970,40 @@
     forbid_events = TRUE
     icon_state = "gaming"
 
-/area/crew_quarters/sleeping/Dormitory_01
+/area/crew_quarters/sleep/Dormitory_01
     name = "\improper Dormitory 01"
 
-/area/crew_quarters/sleeping/Dormitory_02
+/area/crew_quarters/sleep/Dormitory_02
     name = "\improper Dormitory 02"
 
-/area/crew_quarters/sleeping/Dormitory_03
+/area/crew_quarters/sleep/Dormitory_03
     name = "\improper Dormitory 03"
 
-/area/crew_quarters/sleeping/Dormitory_04
+/area/crew_quarters/sleep/Dormitory_04
     name = "\improper Dormitory 04"
 
-/area/crew_quarters/sleeping/Dormitory_05
+/area/crew_quarters/sleep/Dormitory_05
     name = "\improper Dormitory 05"
 
-/area/crew_quarters/sleeping/Dormitory_06
+/area/crew_quarters/sleep/Dormitory_06
     name = "\improper Dormitory 06"
 
-/area/crew_quarters/sleeping/Dormitory_07
+/area/crew_quarters/sleep/Dormitory_07
     name = "\improper Dormitory 07"
 
-/area/crew_quarters/sleeping/Dormitory_08
+/area/crew_quarters/sleep/Dormitory_08
     name = "\improper Dormitory 08"
 
-/area/crew_quarters/sleeping/Dormitory_09
+/area/crew_quarters/sleep/Dormitory_09
     name = "\improper Dormitory 09"
 
-/area/crew_quarters/sleeping/Dormitory_10
+/area/crew_quarters/sleep/Dormitory_10
     name = "\improper Dormitory 10"
 
-/area/crew_quarters/sleeping/Dormitory_11
+/area/crew_quarters/sleep/Dormitory_11
     name = "\improper Dormitory 11"
 
-/area/crew_quarters/sleeping/Dormitory_12
+/area/crew_quarters/sleep/Dormitory_12
     name = "\improper Dormitory 12"
 
 /area/crew_quarters/Dorm_Corridor_1

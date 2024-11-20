@@ -15,7 +15,7 @@
 		/obj/item/clothing/shoes/brown,
 		/obj/item/cartridge/ce,
 		/obj/item/radio/headset/heads/ce,
-		/obj/item/radio/headset/heads/ce/alt,
+		/obj/item/radio/headset/alt/heads/ce,
 		/obj/item/clothing/suit/storage/hazardvest,
 		/obj/item/clothing/mask/gas,
 		/obj/item/tank/emergency/oxygen/engi,

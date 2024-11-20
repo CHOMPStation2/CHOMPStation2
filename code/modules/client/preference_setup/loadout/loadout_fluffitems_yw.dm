@@ -880,7 +880,7 @@
 //roguenoob
 //Basir Fahim
 /datum/gear/fluff/basir_1
-	path = /obj/item/clothing/gloves/ring/fluff/basir
+	path = /obj/item/clothing/accessory/ring/fluff/basir
 	display_name = "Sundancer Engagement Ring"
 	description = "This ring is stylized to have an ornate sun, with a sample of phoron swirling around inside. Keep away from Fire! Inscribed along the band is a sentence in Siik; \"Always yours, my little frost-fire. With love. -Sheri\""
 	ckeywhitelist = list("roguenoob")

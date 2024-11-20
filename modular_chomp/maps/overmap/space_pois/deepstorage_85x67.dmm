@@ -277,11 +277,11 @@
 /area/submap/deepstorage)
 "aA" = (
 /obj/structure/table/standard,
-/obj/item/radio/headset/sar/alt,
-/obj/item/radio/headset/sar/alt{
+/obj/item/radio/headset/alt/sar,
+/obj/item/radio/headset/alt/sar{
 	pixel_x = 7
 	},
-/obj/item/radio/headset/sar/alt{
+/obj/item/radio/headset/alt/sar{
 	pixel_y = 0;
 	pixel_x = -6
 	},

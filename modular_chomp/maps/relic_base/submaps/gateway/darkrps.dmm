@@ -3887,7 +3887,7 @@
 	},
 /obj/structure/table/rack/shelf/steel,
 /obj/item/clothing/ears/earring/dangle/gold,
-/obj/item/clothing/gloves/ring/material/diamond,
+/obj/item/clothing/accessory/ring/material/diamond,
 /obj/item/instrument/violin/golden,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettobank)
@@ -13498,7 +13498,7 @@
 	},
 /obj/structure/table/rack/shelf/steel,
 /obj/item/clothing/ears/earring/stud/gold,
-/obj/item/clothing/gloves/ring/material/glass,
+/obj/item/clothing/accessory/ring/material/glass,
 /obj/item/toy/plushie/carp/gold,
 /obj/item/stack/material/diamond{
 	amount = 15

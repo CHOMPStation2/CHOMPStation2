@@ -99,3 +99,24 @@
 	desc = "A headset with combined medical and security functionality."
 	icon_state = "med_headset"
 	ks2type = /obj/item/encryptionkey/headset_medsec
+
+/obj/item/radio/headset/headset_medsci
+	name = "medical research radio headset"
+	desc = "A headset with combined medical and science functionality."
+	icon_state = "med_headset"
+	ks2type = /obj/item/encryptionkey/headset_medsci
+
+/obj/item/radio/headset/volunteer
+	name = "volunteer's headset"
+	desc = "A headset used by volunteers to expedition teams, has access to the exploration channel."
+	icon_state = "pilot_headset"
+	adhoc_fallback = TRUE
+	ks2type = /obj/item/encryptionkey/explorer
+
+/obj/item/radio/headset/explorer
+	name = "explorer's headset"
+	desc = "Headset used by explorers for exploring. Access to the explorer channel."
+
+/obj/item/radio/headset/alt/explorer
+	name = "explorer's bowman headset"
+	desc = "Bowman headset used by explorers for exploring. Access to the explorer channel."

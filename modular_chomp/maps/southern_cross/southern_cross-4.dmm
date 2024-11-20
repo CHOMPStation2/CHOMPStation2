@@ -7798,12 +7798,11 @@
 /area/hallway/primary/thirddeck/aftdoorm)
 "fFk" = (
 /obj/structure/table/steel,
-/obj/item/virusdish/random,
-/obj/item/virusdish/random,
 /obj/item/surgical/scalpel,
 /obj/item/surgical/cautery,
 /obj/item/surgical/FixOVein,
 /obj/item/surgical/retractor,
+/obj/item/reagent_containers/glass/bottle/culture/cold,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
 "fFq" = (

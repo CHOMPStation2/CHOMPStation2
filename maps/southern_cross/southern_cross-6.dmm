@@ -1944,7 +1944,7 @@
 "Lt" = (/obj/machinery/computer/communications{dir = 4},/turf/unsimulated/floor{icon_state = "dark"},/area/wizard_station)
 "Lu" = (/obj/structure/bed/chair/comfy/black,/turf/unsimulated/floor{name = "plating"; icon_state = "cult"},/area/syndicate_station)
 "Lv" = (/obj/effect/landmark{name = "Syndicate-Spawn"},/turf/unsimulated/floor{icon_state = "lino"},/area/syndicate_station)
-"Lw" = (/obj/structure/table/standard,/obj/item/radio/headset/syndicate/alt,/obj/item/radio/headset/syndicate/alt,/obj/item/radio/headset/syndicate/alt,/obj/item/radio/headset/syndicate/alt,/turf/unsimulated/floor{icon_state = "lino"},/area/syndicate_station)
+"Lw" = (/obj/structure/table/standard,/obj/item/radio/headset/alt/syndicate,/obj/item/radio/headset/alt/syndicate,/obj/item/radio/headset/alt/syndicate,/obj/item/radio/headset/alt/syndicate,/turf/unsimulated/floor{icon_state = "lino"},/area/syndicate_station)
 "Lx" = (/obj/structure/bed/chair,/turf/unsimulated/floor{name = "plating"; icon_state = "cult"},/area/skipjack_station)
 "Ly" = (/obj/item/tank/vox,/turf/unsimulated/floor{icon_state = "asteroid"},/area/skipjack_station)
 "Lz" = (/obj/structure/table/rack,/obj/item/clothing/shoes/magboots,/obj/item/clothing/suit/space/syndicate/black/orange,/obj/item/clothing/mask/breath,/obj/item/clothing/head/helmet/space/syndicate/black/orange,/turf/unsimulated/floor{icon_state = "dark"},/area/syndicate_station)
