@@ -53,7 +53,7 @@
 //Moved initialization here to make sure that it doesn't happen too early when replacing turfs.
 /datum/sunlight_handler/proc/manualInit()
 	if(!holder.lighting_corners_initialised)
-		holder.generate_missing_corners()
+		GENERATE_MISSING_CORNERS(holder)
 	var/corners = list(holder.lighting_corner_NE,holder.lighting_corner_NW,holder.lighting_corner_SE,holder.lighting_corner_SW)
 	for(var/datum/lighting_corner/corner in corners)
 		if(corner.sunlight == SUNLIGHT_NONE)
@@ -62,7 +62,7 @@
 	sunlight_check()
 
 /datum/sunlight_handler/proc/holder_change()
-	holder.generate_missing_corners() //Somehow corners are self destructing under specific circumstances. Likely race conditions. This is slightly unoptimal but may be necessary.
+	GENERATE_MISSING_CORNERS(holder) //Somehow corners are self destructing under specific circumstances. Likely race conditions. This is slightly unoptimal but may be necessary.
 	sunlight_check() //Also not optimal but made necessary by race conditions
 	sunlight_update()
 	for(var/dir in (cardinal + cornerdirs))
@@ -161,7 +161,7 @@
 		sunlight_update()
 
 /datum/sunlight_handler/proc/sunlight_check()
-	holder.generate_missing_corners() //Somehow corners are self destructing under specific circumstances. Likely race conditions. This is slightly unoptimal but may be necessary.
+	GENERATE_MISSING_CORNERS(holder) //Somehow corners are self destructing under specific circumstances. Likely race conditions. This is slightly unoptimal but may be necessary.
 	set_sleeping(FALSE) //We set sleeping to false just incase. If the conditions are correct, we'll end up going back to sleeping soon enough anyways.
 	var/cur_sunlight = sunlight
 	if(holder.is_outdoors())
@@ -391,3 +391,5 @@
 		return TRUE
 	else
 		return FALSE
+
+#undef GENERATE_MISSING_CORNERS

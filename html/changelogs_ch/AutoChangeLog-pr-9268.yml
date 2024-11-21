@@ -1,0 +1,4 @@
+author: "CHOMPStation2"
+delete-after: True
+changes:
+  - bugfix: "Lighting is slightly faster to calculate"

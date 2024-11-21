@@ -142,38 +142,3 @@
 /turf/proc/has_dynamic_lighting()
 	var/area/A = loc
 	return (IS_DYNAMIC_LIGHTING(src) && IS_DYNAMIC_LIGHTING(A))
-
-/turf/proc/generate_missing_corners()
-
-	//CHOMPEdit Begin
-	var/turf/n = get_step(src,NORTH)
-	var/turf/s = get_step(src,SOUTH)
-	var/turf/w = get_step(src,WEST)
-	var/turf/e = get_step(src,EAST)
-
-
-	if (!lighting_corner_NE)
-		if(n && n.lighting_corner_SE)
-			lighting_corner_NE = n.lighting_corner_SE
-		else
-			lighting_corner_NE = new/datum/lighting_corner(src, NORTH|EAST)
-
-	if (!lighting_corner_SE)
-		if(e && e.lighting_corner_SW)
-			lighting_corner_SE = e.lighting_corner_SW
-		else
-			lighting_corner_SE = new/datum/lighting_corner(src, SOUTH|EAST)
-
-	if (!lighting_corner_SW)
-		if(s && s.lighting_corner_NW)
-			lighting_corner_SW = s.lighting_corner_NW
-		else
-			lighting_corner_SW = new/datum/lighting_corner(src, SOUTH|WEST)
-
-	if (!lighting_corner_NW)
-		if(w && w.lighting_corner_NE)
-			lighting_corner_NW = s.lighting_corner_NE
-		else
-			lighting_corner_NW = new/datum/lighting_corner(src, NORTH|WEST)
-	//CHOMPEdit End
-	lighting_corners_initialised = TRUE

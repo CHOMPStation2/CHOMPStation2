@@ -62,6 +62,12 @@ var/global/list/ashtray_cache = list()
 				STOP_PROCESSING(SSobj, cig)
 				var/obj/item/butt = new cig.type_butt(src)
 				cig.transfer_fingerprints_to(butt)
+				//CHOMPAdd Start - Turn mind bound cigs into butts
+				if(cig.possessed_voice && cig.possessed_voice.len)
+					var/mob/living/voice/V = src.possessed_voice[1]
+					butt.inhabit_item(V, null, V.tf_mob_holder, TRUE)
+					qdel(V)
+				//CHOMPAdd End
 				qdel(cig)
 				W = butt
 				//spawn(1)
@@ -86,7 +92,7 @@ var/global/list/ashtray_cache = list()
 		health = max(0,health - 3)
 		if (contents.len)
 			src.visible_message(span_danger("\The [src] slams into [hit_atom], spilling its contents!"))
-		for (var/obj/item/clothing/mask/smokable/cigarette/O in contents)
+		for (var/obj/item/O in contents) //CHOMPEdit - Dump all items out, so it ejects butts too
 			O.loc = src.loc
 		if (health < 1)
 			shatter()

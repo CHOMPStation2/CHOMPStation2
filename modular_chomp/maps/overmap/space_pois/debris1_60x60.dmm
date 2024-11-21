@@ -806,7 +806,7 @@
 /turf/simulated/floor/plating,
 /area/submap/debris1)
 "ZA" = (
-/obj/item/stack/material/cyborg/steel{
+/obj/item/stack/material/steel{
 	amount = 18
 	},
 /turf/simulated/floor/tiled/airless,
