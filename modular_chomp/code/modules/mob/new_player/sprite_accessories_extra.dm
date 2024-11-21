@@ -215,22 +215,36 @@
 	icon_state = "breasts_reptile"
 
 /datum/sprite_accessory/marking/ch/hippo_head
-	name = "full hippo head"
+	name = "Hippo Snout"
 	icon_state = "hippo_head"
 	body_parts = list(BP_HEAD)
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/marking/ch/trex_upperjaw
-	name = "trex upper jaw"
+	name = "T-Rex Upper Jaw"
 	icon_state = "trex_upperjaw"
 	body_parts = list(BP_HEAD)
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/marking/ch/trex_lowerjaw
-	name = "trex lower jaw"
+	name = "T-Rex Lower Jaw"
 	icon_state = "trex_lowerjaw"
 	body_parts = list(BP_HEAD)
 	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/marking/ch/crocodile_upperjaw
+	name = "Crocodile Upper Jaw"
+	icon_state = "crocodile_upperjaw"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/marking/ch/crocodile_lowerjaw
+	name = "Crocodile Lower Jaw"
+	icon_state = "crocodile_lowerjaw"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+
+
 
 
 /// NEW XENOMORPH SPRITE_ACCESSORIES - Basesprites borrowed from Citadel and tidied up by Makkinindorn, should blend a bit more nicely. ///
