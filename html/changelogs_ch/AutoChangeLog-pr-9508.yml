@@ -1,6 +1,0 @@
-author: "Fracshun"
-delete-after: True
-changes:
-  - rscadd: "Mind binded monkey/mob cubes gain control of the rehydrated mob"
-  - rscadd: "Monkey/mob cubes when eaten can vore the rehydrated mob if spont pred and food vore are enabled"
-  - rscadd: "Mind binded cigs/cigars correctly turn into cig butts when burnt out or used in an ashtray"
