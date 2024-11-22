@@ -126,3 +126,11 @@
       and food vore are enabled
   - rscadd: Mind binded cigs/cigars correctly turn into cig butts when burnt out or
       used in an ashtray
+2024-11-22:
+  CHOMPStation2:
+  - bugfix: Lighting is slightly faster to calculate
+  Hunter-Dovetail:
+  - rscadd: crocodile_upperjaw-head
+  - rscadd: VBO_maw26
+  - bugfix: hippo_head-head
+  - bugfix: trex_upperjaw-head
