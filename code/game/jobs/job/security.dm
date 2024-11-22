@@ -25,7 +25,7 @@
 			            access_heads, access_hos, access_RC_announce, access_keycard_auth, access_gateway, access_external_airlocks)
 	minimum_character_age = 25
 	min_age_by_species = list(SPECIES_HUMAN_VATBORN = 14)
-	minimal_player_age = 14
+	minimal_player_age = 31 //ChompEDIT
 	ideal_character_age = 50
 	ideal_age_by_species = list(SPECIES_HUMAN_VATBORN = 20)
 	banned_job_species = list(SPECIES_TESHARI, SPECIES_DIONA, SPECIES_PROMETHEAN, SPECIES_ZADDAT, "digital", SPECIES_UNATHI, "mechanical")

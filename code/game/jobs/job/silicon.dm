@@ -13,7 +13,7 @@
 	selection_color = "#3F823F"
 	supervisors = "your Laws"
 	req_admin_notify = 1
-	minimal_player_age = 7
+	minimal_player_age = 31 //ChompEDIT
 	account_allowed = 0
 	economic_modifier = 0
 	has_headset = FALSE
