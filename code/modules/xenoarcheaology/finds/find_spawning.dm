@@ -4,7 +4,8 @@
 	icon_state = "ano01"
 	var/find_type = 0
 
-/obj/item/archaeological_find/New(loc, var/new_item_type)
+/obj/item/archaeological_find/Initialize(mapload, var/new_item_type) // CHOMPEdit NEW -> Initialize
+	. = ..()
 	if(new_item_type)
 		find_type = new_item_type
 	else
@@ -576,7 +577,7 @@
 				apply_image_decorations = TRUE
 			if(prob(25))
 				apply_material_decorations = FALSE
-			new_item = new /obj/item/clothing/gloves/ring/material(src.loc)
+			new_item = new /obj/item/clothing/accessory/ring/material(src.loc)
 			item_type = new_item.name
 
 		if(ARCHAEO_CLUB)

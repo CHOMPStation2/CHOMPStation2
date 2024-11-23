@@ -13,8 +13,6 @@
 /mob/living/carbon/Life()
 	..()
 
-	handle_viruses()
-
 	// Increase germ_level regularly
 	if(germ_level < GERM_LEVEL_AMBIENT && prob(30))	//if you're just standing there, you shouldn't get more germs beyond an ambient level
 		germ_level++
@@ -198,7 +196,7 @@
 	return shock_damage
 
 /mob/living/carbon/proc/help_shake_act(mob/living/carbon/M)
-	if (src.health >= CONFIG_GET(number/health_threshold_crit)) // CHOMPEdit
+	if (src.health >= CONFIG_GET(number/health_threshold_crit))
 		if(src == M && istype(src, /mob/living/carbon/human))
 			var/mob/living/carbon/human/H = src
 			var/datum/gender/T = gender_datums[H.get_visible_gender()]
@@ -402,7 +400,10 @@
 		return
 	..()
 	if(istype(A, /mob/living/carbon) && prob(10))
-		spread_disease_to(A, "Contact")
+		var/mob/living/carbon/human/H = A
+		for(var/datum/disease/D in GetViruses())
+			if(D.spread_flags & CONTACT_GENERAL)
+				H.ContractDisease(D)
 
 /mob/living/carbon/cannot_use_vents()
 	return
@@ -465,7 +466,7 @@
 		throw_alert("handcuffed", /obj/screen/alert/restrained/handcuffed, new_master = handcuffed)
 	else
 		clear_alert("handcuffed")
-	update_action_buttons() //some of our action buttons might be unusable when we're handcuffed.
+	update_mob_action_buttons() //some of our action buttons might be unusable when we're handcuffed.
 	update_inv_handcuffed()
 
 // Clears blood overlays
@@ -552,3 +553,12 @@
 	if(allergen_type in species.food_preference)
 		return species.food_preference_bonus
 	return 0
+
+/mob/living/carbon/handle_diseases()
+	for(var/thing in GetViruses())
+		var/datum/disease/D = thing
+		if(prob(D.infectivity))
+			D.spread()
+
+		if(stat != DEAD || D.allow_dead)
+			D.stage_act()

@@ -7,7 +7,7 @@
 	icon_living = null
 	icon_rest = null
 	icon_dead = "zorgoia-death"
-	faction = "zorgoia"
+	faction = FACTION_ZORGOIA
 	maxHealth = 150 //chonk
 	health = 150
 	melee_damage_lower = 5

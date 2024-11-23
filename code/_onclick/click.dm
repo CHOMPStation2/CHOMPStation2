@@ -158,7 +158,7 @@
 	next_click = max(world.time + timeout, next_click)
 
 /mob/proc/checkClickCooldown()
-	if(next_click > world.time && !CONFIG_GET(flag/no_click_cooldown)) // CHOMPEdit
+	if(next_click > world.time && !CONFIG_GET(flag/no_click_cooldown))
 		return FALSE
 	return TRUE
 

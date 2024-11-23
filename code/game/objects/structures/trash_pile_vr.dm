@@ -84,7 +84,7 @@
 		return ..()
 
 /obj/structure/trash_pile/attack_ghost(mob/observer/user as mob)
-	if(CONFIG_GET(flag/disable_player_mice)) // CHOMPEdit
+	if(CONFIG_GET(flag/disable_player_mice))
 		to_chat(user, span_warning("Spawning as a mouse is currently disabled."))
 		return
 
@@ -116,7 +116,7 @@
 	host = new /mob/living/simple_mob/animal/passive/mouse(get_turf(src))
 
 	if(host)
-		if(CONFIG_GET(flag/uneducated_mice)) // CHOMPEdit
+		if(CONFIG_GET(flag/uneducated_mice))
 			host.universal_understand = 0
 		announce_ghost_joinleave(src, 0, "They are now a mouse.")
 		host.ckey = user.ckey
@@ -303,7 +303,7 @@
 					prob(3);/obj/item/cracker,
 					prob(3);/obj/item/material/butterfly,
 					prob(3);/obj/item/material/butterfly/switchblade,
-					prob(3);/obj/item/clothing/gloves/knuckledusters,
+					prob(3);/obj/item/clothing/accessory/knuckledusters,
 					prob(3);/obj/item/clothing/gloves/heavy_engineer,
 					prob(3);/obj/item/reagent_containers/syringe/drugs,
 					prob(2);/obj/item/implanter/sizecontrol,

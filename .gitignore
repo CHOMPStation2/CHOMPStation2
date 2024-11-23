@@ -130,6 +130,7 @@ cfg/
 #Ignore everything in datafolder and subdirectories
 /data/**/*
 /tmp/**/*
+/cache/**/*
 
 #Visual studio stuff
 *.vscode/*
@@ -159,3 +160,6 @@ package-lock.json
 /tools/build/dm_versions.json
 
 config/jobwhitelist.txt
+
+#ignore tracy dll
+prof.dll

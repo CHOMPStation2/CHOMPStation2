@@ -28,7 +28,7 @@
 //ADMINVERBS
 /client/proc/investigate_show( subject in list("hrefs","notes","singulo","telesci") )
 	set name = "Investigate"
-	set category = "Admin.Investigate" //CHOMPEdit
+	set category = "Admin.Investigate"
 	if(!holder)	return
 	switch(subject)
 		if("singulo", "telesci")			//general one-round-only stuff
@@ -39,7 +39,7 @@
 			src << browse(F,"window=investigate[subject];size=800x300")
 
 		if("hrefs")				//persistant logs and stuff
-			if(config && CONFIG_GET(flag/log_hrefs)) // CHOMPEdit
+			if(config && CONFIG_GET(flag/log_hrefs))
 				if(href_logfile)
 					src << browse(href_logfile,"window=investigate[subject];size=800x300")
 				else

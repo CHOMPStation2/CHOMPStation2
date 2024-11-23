@@ -508,9 +508,12 @@
 /mob/living/carbon/human/handle_post_breath(datum/gas_mixture/breath)
 	..()
 	//spread some viruses while we are at it
-	if(breath && virus2.len > 0 && prob(10))
-		for(var/mob/living/carbon/M in view(1,src))
-			src.spread_disease_to(M)
+	if(breath && !isnull(viruses) && prob(10))
+		for(var/datum/disease/D in GetViruses())
+			if((D.spread_flags & SPECIAL) || (D.spread_flags & NON_CONTAGIOUS))
+				continue
+			for(var/mob/living/carbon/M in view(1,src))
+				ContractDisease(D)
 
 
 /mob/living/carbon/human/get_breath_from_internal(volume_needed=BREATH_VOLUME)
@@ -558,7 +561,7 @@
 
 	if(!breath || (breath.total_moles == 0))
 		failed_last_breath = 1
-		if(health > CONFIG_GET(number/health_threshold_crit)) // CHOMPEdit
+		if(health > CONFIG_GET(number/health_threshold_crit))
 			adjustOxyLoss(HUMAN_MAX_OXYLOSS)
 		else
 			adjustOxyLoss(HUMAN_CRIT_MAX_OXYLOSS)
@@ -1264,7 +1267,7 @@
 	else				//ALIVE. LIGHTS ARE ON
 		updatehealth()	//TODO
 
-		if(health <= CONFIG_GET(number/health_threshold_dead) || (should_have_organ("brain") && !has_brain())) // CHOMPEdit
+		if(health <= CONFIG_GET(number/health_threshold_dead) || (should_have_organ("brain") && !has_brain()))
 			death()
 			blinded = 1
 			silent = 0
@@ -1652,7 +1655,7 @@
 			//clear_fullscreen("belly3") //Chomp disable, using our own implementation
 			//clear_fullscreen("belly4") //Chomp disable, using our own implementation
 
-		if(CONFIG_GET(flag/welder_vision)) // CHOMPEdit
+		if(CONFIG_GET(flag/welder_vision))
 			var/found_welder
 			if(species.short_sighted)
 				found_welder = 1
@@ -2093,7 +2096,7 @@
 		if(stat == DEAD)
 			holder.icon_state = "-100" 	// X_X
 		else
-			holder.icon_state = RoundHealth((health-CONFIG_GET(number/health_threshold_crit))/(getMaxHealth()-CONFIG_GET(number/health_threshold_crit))*100) // CHOMPEdit
+			holder.icon_state = RoundHealth((health-CONFIG_GET(number/health_threshold_crit))/(getMaxHealth()-CONFIG_GET(number/health_threshold_crit))*100)
 		if(block_hud)
 			holder.icon_state = "hudblank"
 		apply_hud(HEALTH_HUD, holder)
@@ -2112,8 +2115,8 @@
 
 	if (BITTEST(hud_updateflag, STATUS_HUD))
 		var/foundVirus = 0
-		for (var/ID in virus2)
-			if (ID in virusDB)
+		for (var/datum/disease/D in GetViruses())
+			if(D.discovered)
 				foundVirus = 1
 				break
 
@@ -2137,8 +2140,10 @@
 End Chomp edit */
 		else
 			holder.icon_state = "hudhealthy"
-			if(virus2.len)
-				holder2.icon_state = "hudill"
+			if(viruses.len)
+				for(var/datum/disease/D in GetViruses())
+					if(D.discovered)
+						holder2.icon_state = "hudill"
 			else
 				holder2.icon_state = "hudhealthy"
 		if(block_hud)

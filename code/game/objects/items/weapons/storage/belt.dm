@@ -250,7 +250,6 @@
 		/obj/item/cell/device,
 		/obj/item/extinguisher/mini,
 		/obj/item/ammo_casing/macrobattery, // CHOMPedit: Macrobatteries for the Curabitur can fit into medbelts.
-		/obj/item/antibody_scanner, // VOREstation edit start
 		/obj/item/sleevemate,
 		/obj/item/mass_spectrometer,
 		/obj/item/surgical,

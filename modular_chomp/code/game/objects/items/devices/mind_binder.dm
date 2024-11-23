@@ -76,16 +76,18 @@
 	if(self_bind)
 		var/choice = tgui_alert(usr,"This will bind YOUR mind to the target! You may not be able to go back without help. Continue?","Confirmation",list("Continue","Cancel"))
 		if(!choice || choice == "Cancel") return
-		choice = tgui_alert(usr,"No really. You cannot OOC Escape this. Are you sure?","Confirmation",list("Yes I'm sure","Cancel"))
-		if(choice == "Yes I'm sure" && usr.get_active_hand() == src && usr.Adjacent(target))
-			usr.visible_message(span_warning("[usr] presses [src] against [target]. The device beginning to let out a series of beeps!"),span_notice("You begin to bind yourself into [target]!"))
-			log_and_message_admins("attempted to bind themselves to \an [target] with a Mind Binder.")
-			if(do_after(usr,30 SECONDS,target))
-				if(!target.ckey)
-					usr.mind.transfer_to(target)
-				self_bind = !self_bind
-				update_icon()
-				to_chat(usr,span_notice("Your mind as been bound to [target]."))
+		usr.visible_message(span_warning("[usr] presses [src] against [target]. The device beginning to let out a series of beeps!"),span_notice("You begin to bind yourself into [target]!"))
+		log_and_message_admins("attempted to bind themselves to \an [target] with a Mind Binder.")
+		if(do_after(usr,30 SECONDS,target))
+			if(!target.ckey)
+				usr.mind.transfer_to(target)
+			if(!target.tf_mob_holder)
+				target.tf_mob_holder = usr
+			if(target.tf_mob_holder == target)
+				target.tf_mob_holder = null
+			self_bind = !self_bind
+			update_icon()
+			to_chat(usr,span_notice("Your mind as been bound to [target]."))
 		return
 
 	usr.visible_message(span_warning("[usr] presses [src] against [target]. The device beginning to let out a series of beeps!"),span_notice("You begin to bind someone's mind into [target]!"))
@@ -97,8 +99,12 @@
 		if(possessed_voice.len == 1 && !target.ckey)
 			var/mob/living/voice/V = possessed_voice[1]
 			V.mind.transfer_to(target)
-			V.Destroy()
-			possessed_voice = list()
+			if(!target.tf_mob_holder)
+				target.tf_mob_holder = V.tf_mob_holder
+			if(target.tf_mob_holder == target)
+				target.tf_mob_holder = null
+			possessed_voice -= V
+			qdel(V)
 			to_chat(usr,span_notice("Mind bound to [target]."))
 
 	update_icon()
@@ -120,15 +126,13 @@
 	if(self_bind)
 		var/choice = tgui_alert(usr,"This will bind YOUR mind to the target! You will not be able to go back without help. Continue?","Confirmation",list("Continue","Cancel"))
 		if(!choice || choice == "Cancel") return
-		choice = tgui_alert(usr,"No really. You cannot OOC Escape this. Are you sure?","Confirmation",list("Yes I'm sure","Cancel"))
-		if(choice == "Yes I'm sure" && usr.get_active_hand() == src && usr.Adjacent(item))
-			log_and_message_admins("attempted to bind themselves to \an [item] with a Mind Binder.")
-			usr.visible_message(span_warning("[usr] presses [src] against [item]. The device beginning to let out a series of beeps!"),span_notice("You begin to bind yourself into [item]!"))
-			if(do_after(usr,30 SECONDS,item))
-				item.inhabit_item(usr, null, null, TRUE)
-				self_bind = !self_bind
-				update_icon()
-				to_chat(usr,span_notice("Your mind as been bound to [item]."))
+		log_and_message_admins("attempted to bind themselves to \an [item] with a Mind Binder.")
+		usr.visible_message(span_warning("[usr] presses [src] against [item]. The device beginning to let out a series of beeps!"),span_notice("You begin to bind yourself into [item]!"))
+		if(do_after(usr,30 SECONDS,item))
+			item.inhabit_item(usr, null, usr, TRUE)
+			self_bind = !self_bind
+			update_icon()
+			to_chat(usr,span_notice("Your mind as been bound to [item]."))
 		return
 
 	log_and_message_admins("attempted to bind [key_name(src.possessed_voice[1])] to \an [item] with a Mind Binder.")
@@ -137,8 +141,8 @@
 		if(possessed_voice.len == 1)
 			var/mob/living/voice/V = possessed_voice[1]
 			item.inhabit_item(V, null, V.tf_mob_holder, TRUE)
-			V.Destroy()
-			possessed_voice = list()
+			possessed_voice -= V
+			qdel(V)
 			to_chat(usr,span_notice("Mind bound to [item]."))
 
 	update_icon()
@@ -162,7 +166,7 @@
 		usr.visible_message(span_warning("[usr] presses [src] against [target]'s head. The device beginning to let out a series of beeps!"),span_notice("You begin to download [target]'s mind!"))
 		if(do_after(usr,30 SECONDS,target))
 			if(possessed_voice.len == 0 && target.mind)
-				inhabit_item(target, target.real_name, null)
+				inhabit_item(target, target.real_name, target)
 				to_chat(usr,span_notice("Mind successfully stored!"))
 
 	update_icon()
@@ -183,8 +187,8 @@
 	if(do_after(usr,5 SECONDS,item))
 		if(possessed_voice.len == 0 && item.possessed_voice.Find(target))
 			inhabit_item(target, target.real_name, target.tf_mob_holder)
-			target.Destroy()
-			item.possessed_voice.Remove(target)
+			item.possessed_voice -= target
+			qdel(target)
 			to_chat(usr,span_notice("Mind successfully stored!"))
 
 	update_icon()

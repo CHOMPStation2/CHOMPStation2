@@ -248,7 +248,7 @@
 /mob/living/simple_mob/slime/promethean/proc/prommie_blobform()
 	set name = "Toggle Blobform"
 	set desc = "Switch between amorphous and humanoid forms."
-	set category = "Abilities.Promethean" //CHOMPEdit
+	set category = "Abilities.Promethean"
 	set hidden = FALSE
 
 	var/atom/movable/to_locate = src
@@ -266,7 +266,7 @@
 /mob/living/simple_mob/slime/promethean/proc/toggle_expand()
 	set name = "Toggle Width"
 	set desc = "Switch between smole and lorge."
-	set category = "Abilities.Promethean" //CHOMPEdit
+	set category = "Abilities.Promethean"
 	set hidden = FALSE
 
 	if(stat || world.time < last_special)
@@ -286,7 +286,7 @@
 /mob/living/simple_mob/slime/promethean/proc/toggle_shine()
 	set name = "Toggle Shine"
 	set desc = "Shine on you crazy diamond."
-	set category = "Abilities.Promethean" //CHOMPEdit
+	set category = "Abilities.Promethean"
 	set hidden = FALSE
 
 	if(stat || world.time < last_special)
@@ -306,7 +306,7 @@
 /mob/living/simple_mob/slime/promethean/proc/prommie_select_colour()
 
 	set name = "Select Body Colour"
-	set category = "Abilities.Promethean" //CHOMPEdit
+	set category = "Abilities.Promethean"
 
 	if(stat || world.time < last_special)
 		return
@@ -446,8 +446,7 @@
 		blob.mob_radio = R
 		R.forceMove(blob)
 	if(wear_id)
-		blob.myid = wear_id
-		wear_id.forceMove(blob)
+		blob.myid = wear_id.GetID()
 //ChompAdd End
 	//Mail them to nullspace
 	moveToNullspace()

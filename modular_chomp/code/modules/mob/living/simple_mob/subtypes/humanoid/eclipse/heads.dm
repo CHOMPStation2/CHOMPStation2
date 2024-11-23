@@ -373,7 +373,7 @@
 
 /mob/living/simple_mob/humanoid/eclipse/head/tyrlead
 	name = "Eclipse Precursor Overseer"
-	icon_state = "overseer"
+	icon_state = "overseer_shield"
 	health = 300
 	maxHealth = 300
 	grab_resist = 100
@@ -387,6 +387,7 @@
 			visible_message(span_boldwarning(span_orange("[P] is absorbed by the shield!.")))
 		else
 			visible_message(span_boldwarning(span_orange("[P] breaks the shield!!.")))
+			icon_state = "overseer"
 	else
 		..()
 		shieldrage--
@@ -394,6 +395,7 @@
 			shieldrage = 6
 			fullshield = 6
 			visible_message(span_boldwarning(span_orange("The shield reactivates!!.")))
+			icon_state = "overseer_shield"
 
 /mob/living/simple_mob/humanoid/eclipse/head/tyrlead/do_special_attack(atom/A)
 	if(vore_fullness > 2) //If they nompf someone already
@@ -427,8 +429,8 @@
 				if(I_GRAB) // Phase 2
 					phase_two(A)
 	else
-		var/obj/belly/belly_dest
-		L.forceMove(belly_dest)
+		visible_message(span_danger("The [src]'s gauntlet glows silver!"))
+		addtimer(CALLBACK(src, PROC_REF(gravity_pull), A), 1 SECOND, TIMER_DELETE_ME)
 
 /mob/living/simple_mob/humanoid/eclipse/head/tyrlead/proc/fullsummon(atom/target) //Summons a wall whilst the boss tries to enjoy their meal
 	visible_message(span_warning("\The [src] calls in drone support!"))

@@ -70,7 +70,7 @@
 				prob(2);/obj/item/gun/projectile/automatic/l6_saw,\
 				prob(2);/obj/item/gun/energy/gun/burst,\
 				prob(2);/obj/item/storage/box/frags,\
-				prob(2);/obj/item/twohanded/fireaxe,\
+				prob(2);/obj/item/material/twohanded/fireaxe,\
 				prob(2);/obj/item/gun/projectile/luger/brown,\
 				prob(2);/obj/item/gun/launcher/crossbow,\
 				prob(2);/obj/item/melee/shock_maul,\
@@ -156,7 +156,7 @@
 				prob(4);/obj/item/storage/pill_bottle/zoom,
 				prob(4);/obj/item/material/butterfly,
 				prob(2);/obj/item/material/butterfly/switchblade,
-				prob(2);/obj/item/clothing/gloves/knuckledusters,
+				prob(2);/obj/item/clothing/accessory/knuckledusters,
 				prob(2);/obj/item/reagent_containers/syringe/drugs,
 				prob(1);/obj/item/material/knife/tacknife,
 				prob(1);/obj/item/clothing/suit/storage/vest/heavy/merc,

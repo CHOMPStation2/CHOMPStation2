@@ -445,6 +445,45 @@
 	for(var/i = 1 to 4) // CHOMPedit
 		Insert("patch[i].png", 'icons/obj/chemical.dmi', "patch[i]") // CHOMPedit
 
+// Robot UI sprites
+/datum/asset/spritesheet/robot_icons
+	name = "robot_icons"
+
+/datum/asset/spritesheet/robot_icons/create_spritesheets()
+	for(var/datum/robot_sprite/S as anything in typesof(/datum/robot_sprite))
+		if(!S.name || !S.sprite_icon_state) // snowflake out those customs... they suck
+			continue
+		var/icon/I_N = icon(S.sprite_icon, S.sprite_icon_state, NORTH)
+		var/icon/I_S = icon(S.sprite_icon, S.sprite_icon_state, SOUTH)
+		var/icon/I_W = icon(S.sprite_icon, S.sprite_icon_state, WEST)
+		var/icon/I_E = icon(S.sprite_icon, S.sprite_icon_state, EAST)
+		if(S.has_eye_sprites)
+			var/icon/I_NE = icon(S.sprite_icon, "[S.sprite_icon_state]-eyes", NORTH)
+			if(I_NE)
+				I_N.Blend(I_NE, ICON_OVERLAY)
+		if(S.has_eye_sprites)
+			var/icon/I_SE = icon(S.sprite_icon, "[S.sprite_icon_state]-eyes", SOUTH)
+			if(I_SE)
+				I_S.Blend(I_SE, ICON_OVERLAY)
+		if(S.has_eye_sprites)
+			var/icon/I_WE = icon(S.sprite_icon, "[S.sprite_icon_state]-eyes", WEST)
+			if(I_WE)
+				I_W.Blend(I_WE, ICON_OVERLAY)
+		if(S.has_eye_sprites)
+			var/icon/I_EE = icon(S.sprite_icon, "[S.sprite_icon_state]-eyes", EAST)
+			if(I_EE)
+				I_E.Blend(I_EE, ICON_OVERLAY)
+		var/imgid = sanitize_css_class_name("[S.type]")
+		I_N.Scale(120, 120)
+		I_S.Scale(120, 120)
+		I_W.Scale(120, 120)
+		I_E.Scale(120, 120)
+		Insert(imgid + "N", I_N)
+		Insert(imgid + "S", I_S)
+		Insert(imgid + "W", I_W)
+		Insert(imgid + "E", I_E)
+
+
 //Cloning pod sprites for UIs
 /datum/asset/simple/cloning
 	assets = list(
@@ -482,7 +521,31 @@
 		"southern_cross_nanomap_z7.png"		= 'icons/_nanomaps/southern_cross_nanomap_z7.png',
 		"southern_cross_nanomap_z8.png"		= 'icons/_nanomaps/southern_cross_nanomap_z8.png',
 		"southern_cross_nanomap_z9.png"		= 'icons/_nanomaps/southern_cross_nanomap_z9.png',
-		"southern_cross_nanomap_z10.png"		= 'icons/_nanomaps/southern_cross_nanomap_z10.png',
-		"southern_cross_nanomap_z11.png"		= 'icons/_nanomaps/southern_cross_nanomap_z11.png',
+		"southern_cross_nanomap_z10.png"	= 'icons/_nanomaps/southern_cross_nanomap_z10.png',
+		"southern_cross_nanomap_z11.png"	= 'icons/_nanomaps/southern_cross_nanomap_z11.png',
+
+		"soluna_nexus_nanomap_z1.png"		= 'icons/_nanomaps/soluna_nexus_nanomap_z1.png',
+		"soluna_nexus_nanomap_z2.png"		= 'icons/_nanomaps/soluna_nexus_nanomap_z2.png',
+		"soluna_nexus_nanomap_z3.png"		= 'icons/_nanomaps/soluna_nexus_nanomap_z3.png',
+		"soluna_nexus_nanomap_z4.png"		= 'icons/_nanomaps/southern_cross_nanomap_z5.png',
+		"soluna_nexus_nanomap_z5.png"		= 'icons/_nanomaps/southern_cross_nanomap_z6.png',
+		"soluna_nexus_nanomap_z6.png"		= 'icons/_nanomaps/soluna_nexus_nanomap_z6.png',
+		"soluna_nexus_nanomap_z7.png"		= 'icons/_nanomaps/soluna_nexus_nanomap_z7.png',
+		"soluna_nexus_nanomap_z8.png"		= 'icons/_nanomaps/soluna_nexus_nanomap_z8.png',
+		"soluna_nexus_nanomap_z9.png"		= 'icons/_nanomaps/southern_cross_nanomap_z10.png',
+
+		"relicbase_nanomap_z1.png"			= 'icons/_nanomaps/relicbase_nanomap_z1.png',
+		"relicbase_nanomap_z2.png"			= 'icons/_nanomaps/relicbase_nanomap_z2.png',
+		"relicbase_nanomap_z3.png"			= 'icons/_nanomaps/relicbase_nanomap_z3.png',
+		"relicbase_nanomap_z4.png"			= 'icons/_nanomaps/relicbase_nanomap_z4.png',
+		"relicbase_nanomap_z5.png"			= 'icons/_nanomaps/relicbase_nanomap_z5.png',
+		"relicbase_nanomap_z6.png"			= 'icons/_nanomaps/relicbase_nanomap_z6.png',
+		"relicbase_nanomap_z7.png"			= 'icons/_nanomaps/relicbase_nanomap_z7.png',
+		"relicbase_nanomap_z8.png"			= 'icons/_nanomaps/relicbase_nanomap_z8.png',
+		"relicbase_nanomap_z9.png"			= 'icons/_nanomaps/relicbase_nanomap_z9.png',
+		"relicbase_nanomap_z10.png"		= 'icons/_nanomaps/relicbase_nanomap_z10.png',
+		"relicbase_nanomap_z11.png"		= 'icons/_nanomaps/relicbase_nanomap_z11.png',
+		"relicbase_nanomap_z12.png"		= 'icons/_nanomaps/relicbase_nanomap_z12.png',
+		"relicbase_nanomap_z13.png"		= 'icons/_nanomaps/relicbase_nanomap_z13.png',
 		// CHOMP Edit End
 	)

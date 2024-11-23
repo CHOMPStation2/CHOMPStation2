@@ -75,7 +75,7 @@
 	var/fake_oxy = max(rand(1,40), M.getOxyLoss(), (300 - (M.getToxLoss() + M.getFireLoss() + M.getBruteLoss())))
 	var/OX = M.getOxyLoss() > 50 	? 	span_bold("[M.getOxyLoss()]") 		: M.getOxyLoss()
 	var/TX = M.getToxLoss() > 50 	? 	span_bold("[M.getToxLoss()]")  		: M.getToxLoss()
-	var/BU = M.getFireLoss() > 50 	? 	span_bold("M.getFireLoss()]") 		: M.getFireLoss()
+	var/BU = M.getFireLoss() > 50 	? 	span_bold("[M.getFireLoss()]") 		: M.getFireLoss()
 	var/BR = M.getBruteLoss() > 50 	? 	span_bold("[M.getBruteLoss()]")  	: M.getBruteLoss()
 	var/analyzed_results = ""
 	if(M.status_flags & FAKEDEATH)
@@ -248,14 +248,14 @@
 				else
 					dat += span_warning("Unknown substance[(unknown > 1)?"s":""] found in subject's dermis.")
 					dat += "<br>"
-		if(C.virus2.len)
-			for (var/ID in C.virus2)
-				if (ID in virusDB)
-					var/datum/data/record/V = virusDB[ID]
-					dat += span_warning("Warning: Pathogen [V.fields["name"]] detected in subject's blood. Known antigen : [V.fields["antigen"]]")
+		if(LAZYLEN(C.resistances))
+			for (var/datum/disease/virus in C.GetViruses())
+				if(virus.visibility_flags & HIDDEN_SCANNER || virus.visibility_flags & HIDDEN_PANDEMIC)
+					continue
+				if(virus.discovered)
+					dat += span_warning("Warning: [virus.name] detected in subject's blood.")
 					dat += "<br>"
-				else
-					dat += span_warning("Warning: Unknown pathogen detected in subject's blood.")
+					dat += span_warning("Severity: [virus.severity]")
 					dat += "<br>"
 	if (M.getCloneLoss())
 		dat += span_warning("Subject appears to have been imperfectly cloned.")

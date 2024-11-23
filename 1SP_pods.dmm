@@ -8031,7 +8031,7 @@
 /area/template_noop)
 "fGT" = (
 /obj/item/reagent_containers/glass/rag,
-/obj/item/clothing/gloves/ring/engagement,
+/obj/item/clothing/accessory/ring/engagement,
 /obj/structure/table/wooden_reinforced,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/LoneHome)
@@ -25622,7 +25622,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/template_noop)
 "qFp" = (
-/obj/item/clothing/gloves/ring/material/gold,
+/obj/item/clothing/accessory/ring/material/gold,
 /obj/item/clothing/ears/earring/stud/gold,
 /obj/item/gun/projectile/deagle/gold{
 	pixel_x = -11;

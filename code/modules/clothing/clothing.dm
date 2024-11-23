@@ -326,6 +326,13 @@
 	drop_sound = 'sound/items/drop/gloves.ogg'
 	pickup_sound = 'sound/items/pickup/gloves.ogg'
 
+	valid_accessory_slots = (\
+		ACCESSORY_SLOT_RING\
+		|ACCESSORY_SLOT_WRIST)
+	restricted_accessory_slots = (\
+		ACCESSORY_SLOT_RING\
+		|ACCESSORY_SLOT_WRIST)
+
 /obj/item/clothing/proc/set_clothing_index()
 	return
 
@@ -422,8 +429,6 @@
 	if(special_attack_type && ispath(special_attack_type))
 		special_attack = new special_attack_type
 
-
-
 /////////////////////////////////////////////////////////////////////
 //Rings
 
@@ -485,7 +490,7 @@
 		update_light()
 
 	update_icon(user)
-	user.update_action_buttons()
+	user.update_mob_action_buttons()
 
 /obj/item/clothing/head/attack_ai(var/mob/user)
 	if(!mob_wear_hat(user))
@@ -630,7 +635,7 @@
 /obj/item/clothing/shoes/proc/draw_knife()
 	set name = "Draw Boot Knife"
 	set desc = "Pull out your boot knife."
-	set category = "IC.Game" //CHOMPEdit
+	set category = "IC.Game"
 	set src in usr
 
 	if(usr.stat || usr.restrained() || usr.incapacitated())

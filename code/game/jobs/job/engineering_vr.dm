@@ -30,7 +30,7 @@
 /datum/job/engineer
 	pto_type = PTO_ENGINEERING
 	alt_titles = list(JOB_ALT_MAINTENANCE_TECHNICIAN = /datum/alt_title/maint_tech, JOB_ALT_ENGINE_TECHNICIAN = /datum/alt_title/engine_tech,
-						JOB_ALT_ELECTRICIAN = /datum/alt_title/electrician, JOB_ALT_CONSTRUCTION_ENGINEER = /datum/alt_title/construction_engi, JOB_ALT_ENGINEERING_CONTRACTOR = /datum/alt_title/engineering_contractor)
+						JOB_ALT_ELECTRICIAN = /datum/alt_title/electrician, JOB_ALT_CONSTRUCTION_ENGINEER = /datum/alt_title/construction_engi, JOB_ALT_ENGINEERING_CONTRACTOR = /datum/alt_title/engineering_contractor,  JOB_ALT_COMPUTER_TECHNICIAN = /datum/alt_title/computer_tech)
 
 /datum/alt_title/construction_engi
 	title = JOB_ALT_CONSTRUCTION_ENGINEER
@@ -44,8 +44,13 @@
 /datum/job/engineer/get_request_reasons()
 	return list("Engine setup", "Construction project", "Repairs necessary", "Assembling expedition team")
 
+/datum/alt_title/computer_tech
+	title = JOB_ALT_COMPUTER_TECHNICIAN
+	title_blurb = "A " + JOB_ALT_COMPUTER_TECHNICIAN + " fulfills similar duties to other engineers, but specializes in working with software and computers. They also often deal with integrated circuits."
 
-
+/datum/alt_title/salvage_tech
+	title = JOB_ALT_SALVAGE_TECHNICIAN
+	title_blurb = "A " + JOB_ALT_SALVAGE_TECHNICIAN + " is responsible for breaking down debris and obsolete equipment to recover useful components and materials."
 
 /datum/job/atmos
 	spawn_positions = 3

@@ -17,7 +17,7 @@
 
 /client/proc/atmos_toggle_debug(var/obj/machinery/atmospherics/M in view())
 	set name = "Toggle Debug Messages"
-	set category = "Debug.Misc" //CHOMPEdit
+	set category = "Debug.Misc"
 	M.debug = !M.debug
 	to_chat(usr, "[M]: Debug messages toggled [M.debug? "on" : "off"].")
 

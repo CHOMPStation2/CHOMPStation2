@@ -72,7 +72,7 @@ SUBSYSTEM_DEF(planets)
 		if(MC_TICK_CHECK)
 			return
 
-	#if !(UNIT_TEST) // Don't be updating temperatures and such during unit tests // CHOMPedit: That's not how ifndef works!
+	#ifndef UNIT_TEST // Don't be updating temperatures and such during unit tests
 	var/list/needs_temp_update = src.needs_temp_update
 	while(needs_temp_update.len)
 		var/datum/planet/P = needs_temp_update[needs_temp_update.len]

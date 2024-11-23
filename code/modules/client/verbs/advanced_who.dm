@@ -2,13 +2,13 @@
 /* YW EDIT START
 /client/verb/who_advanced()
 	set name = "Advanced Who"
-	set category = "OOC.Resources" //CHOMPEdit
+	set category = "OOC.Resources"
 
 	var/msg = span_bold("Current Players:") + "\n"
 
 	var/list/Lines = list()
 
-	if(holder)
+	if(check_rights(R_ADMIN|R_SERVER|R_MOD,FALSE,src))
 		for(var/client/C in GLOB.clients)
 			var/entry = "<tr><td>[C.key]"
 			if(C.holder && C.holder.fakekey)

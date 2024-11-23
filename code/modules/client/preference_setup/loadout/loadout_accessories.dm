@@ -360,18 +360,18 @@
 
 /datum/gear/accessory/wristband_collection
 	display_name = "wristbands (selection)"
-	path = /obj/item/clothing/accessory/wristbandcollection
+	path = /obj/item/clothing/accessory/wristband/collection
 
 /datum/gear/accessory/wristband_collection/New()
 	..()
 	var/list/wristband_lists = list(
-	"Green, Blue and Yellow" = /obj/item/clothing/accessory/wristbandcollection,
-	"Pink, Black and Red" = /obj/item/clothing/accessory/wristbandcollection/pink,
-	"Red and Orange" = /obj/item/clothing/accessory/wristbandcollection/les,
-	"White, Pink and Blue" = /obj/item/clothing/accessory/wristbandcollection/trans,
-	"Blue, Purple and Pink" = /obj/item/clothing/accessory/wristbandcollection/bi,
-	"Black, White and Grey" = /obj/item/clothing/accessory/wristbandcollection/ace,
-	"Spiked" = /obj/item/clothing/accessory/wristband_spiked
+	"Green, Blue and Yellow" = /obj/item/clothing/accessory/wristband/collection,
+	"Pink, Black and Red" = /obj/item/clothing/accessory/wristband/collection/pink,
+	"Red and Orange" = /obj/item/clothing/accessory/wristband/collection/les,
+	"White, Pink and Blue" = /obj/item/clothing/accessory/wristband/collection/trans,
+	"Blue, Purple and Pink" = /obj/item/clothing/accessory/wristband/collection/bi,
+	"Black, White and Grey" = /obj/item/clothing/accessory/wristband/collection/ace,
+	"Spiked" = /obj/item/clothing/accessory/wristband/spiked
 	)
 	gear_tweaks += new/datum/gear_tweak/path(wristband_lists)
 
@@ -569,3 +569,12 @@ Talon pin
 	)
 	gear_tweaks += new/datum/gear_tweak/path(wristband_lists)
 	gear_tweaks += gear_tweak_free_color_choice
+
+/datum/gear/accessory/bunny_tail
+	display_name = "bunny tail, colorable"
+	path = /obj/item/clothing/accessory/bunny_tail
+
+/datum/gear/accessory/bunny_tail/New()
+	..()
+	gear_tweaks += gear_tweak_free_color_choice
+

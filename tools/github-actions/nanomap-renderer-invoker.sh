@@ -2,7 +2,9 @@
 BASEDIR=$PWD
 #Put directories to get maps from here. One per line.
 mapdirs=(
-    "maps/southern_cross"
+    "modular_chomp/maps/southern_cross"
+    "modular_chomp/maps/soluna_nexus"
+    "modular_chomp/maps/relic_base"
 )
 #DO NOT TOUCH THIS VARIABLE. It will automatically fill with any maps in mapdirs that are form MAPNAME-n.dmm where n is the z level.
 map_files=()

@@ -205,6 +205,12 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 				to_chat(M, span_notice("Your [name] goes out."))
 			M.remove_from_mob(src) //un-equip it so the overlays can update
 			M.update_inv_wear_mask(0)
+		//CHOMPAdd Start - Turn mind bound cigs into butts
+		if(src.possessed_voice && src.possessed_voice.len)
+			var/mob/living/voice/V = src.possessed_voice[1]
+			butt.inhabit_item(V, null, V.tf_mob_holder, TRUE)
+			qdel(V)
+		//CHOMPAdd End
 		qdel(src)
 	else
 		new /obj/effect/decal/cleanable/ash(T)

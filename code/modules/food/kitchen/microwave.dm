@@ -357,10 +357,10 @@
 		for (var/O in items_counts)
 			var/N = items_counts[O]
 			if (!(O in items_measures))
-				dat += {span_bold("[capitalize(O)]:") + " [N] [lowertext(O)]\s<BR>"}
+				dat += span_bold("[capitalize(O)]:") + " [N] [lowertext(O)]\s<BR>"
 			else
 				if (N==1)
-					dat +={span_bold("[capitalize(O)]:") + " [N] [items_measures[O]]<BR>"
+					dat += span_bold("[capitalize(O)]:") + " [N] [items_measures[O]]<BR>"
 				else
 					dat += span_bold("[capitalize(O)]:") + " [N] [items_measures_p[O]]<BR>"
 

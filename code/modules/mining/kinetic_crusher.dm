@@ -27,8 +27,7 @@
 	sharp = TRUE
 	edge = TRUE
 	// sharpness = SHARP_EDGED
-	action_button_name = "Toggle Light"
-	// actions_types = list(/datum/action/item_action/toggle_light)
+	actions_types = list(/datum/action/item_action/toggle_light)
 	// var/list/trophies = list()
 	var/charged = TRUE
 	var/charge_time = 15
@@ -350,7 +349,7 @@
 	var/obj/item/rig_module/gauntlets/storing_module
 
 /obj/item/kinetic_crusher/machete/gauntlets/rig/dropped(mob/user)
-	. = ..()
+	. = ..(user)
 	if(storing_module)
 		src.forceMove(storing_module)
 		storing_module.stored_gauntlets = src

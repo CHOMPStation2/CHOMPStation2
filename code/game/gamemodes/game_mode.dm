@@ -148,10 +148,10 @@ var/global/list/additional_antag_types = list()
 			playerC++
 
 	if(master_mode=="secret")
-		if(playerC < CONFIG_GET(keyed_list/player_requirements_secret)[config_tag]) // CHOMPEdit
+		if(playerC < CONFIG_GET(keyed_list/player_requirements_secret)[config_tag])
 			return 0
 	else
-		if(playerC < CONFIG_GET(keyed_list/player_requirements)[config_tag]) // CHOMPEdit
+		if(playerC < CONFIG_GET(keyed_list/player_requirements)[config_tag])
 			return 0
 
 	if(!(antag_templates && antag_templates.len))
@@ -273,7 +273,7 @@ var/global/list/additional_antag_types = list()
 		for(var/datum/antagonist/antag in antag_templates)
 			if(!antag.antags_are_dead())
 				return 0
-		if(CONFIG_GET(flag/continuous_rounds)) // CHOMPEdit
+		if(CONFIG_GET(flag/continuous_rounds))
 			emergency_shuttle.auto_recall = 0
 			return 0
 		return 1
@@ -473,7 +473,7 @@ var/global/list/additional_antag_types = list()
 
 /datum/game_mode/proc/create_antagonists()
 
-	if(!CONFIG_GET(flag/traitor_scaling)) // CHOMPEdit
+	if(!CONFIG_GET(flag/traitor_scaling))
 		antag_scaling_coeff = 0
 
 	if(antag_tags && antag_tags.len)
@@ -577,7 +577,7 @@ var/global/list/additional_antag_types = list()
 
 /mob/verb/check_round_info()
 	set name = "Check Round Info"
-	set category = "OOC.Game" //CHOMPEdit
+	set category = "OOC.Game"
 
 	if(!ticker || !ticker.mode)
 		to_chat(usr, span_warning("Something is terribly wrong; there is no gametype."))

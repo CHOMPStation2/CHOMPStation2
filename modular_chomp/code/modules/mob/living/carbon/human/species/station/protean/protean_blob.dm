@@ -487,6 +487,11 @@
 		//Put our owner in it (don't transfer var/mind)
 		blob.ckey = ckey
 		blob.ooc_notes = ooc_notes
+		blob.ooc_notes_likes = ooc_notes_likes
+		blob.ooc_notes_dislikes = ooc_notes_dislikes
+		blob.ooc_notes_favs = ooc_notes_favs
+		blob.ooc_notes_maybes = ooc_notes_maybes
+		blob.ooc_notes_style = ooc_notes_style
 		temporary_form = blob
 		var/obj/item/radio/R = null
 		if(isradio(l_ear))
@@ -497,8 +502,7 @@
 			blob.mob_radio = R
 			R.forceMove(blob)
 		if(wear_id)
-			blob.myid = wear_id
-			wear_id.forceMove(blob)
+			blob.myid = wear_id.GetID()
 
 		//Mail them to nullspace
 		moveToNullspace()
@@ -614,6 +618,11 @@
 		//Put our owner in it (don't transfer var/mind)
 		ckey = blob.ckey
 		ooc_notes = blob.ooc_notes // Lets give the protean any updated notes from blob form.
+		ooc_notes_likes = blob.ooc_notes_likes
+		ooc_notes_dislikes = blob.ooc_notes_dislikes
+		ooc_notes_favs = blob.ooc_notes_favs
+		ooc_notes_maybes = blob.ooc_notes_maybes
+		ooc_notes_style = blob.ooc_notes_style
 		temporary_form = null
 
 		//Transfer vore organs
