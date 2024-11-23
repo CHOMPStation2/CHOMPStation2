@@ -534,7 +534,7 @@
 		"soluna_nexus_nanomap_z8.png"		= 'icons/_nanomaps/soluna_nexus_nanomap_z8.png',
 		"soluna_nexus_nanomap_z9.png"		= 'icons/_nanomaps/southern_cross_nanomap_z10.png',
 
-		"relic_base_nanomap_z1.png"			= 'icons/_nanomaps/relicbase_nanomap_z1.png',
+		"relicbase_nanomap_z1.png"			= 'icons/_nanomaps/relicbase_nanomap_z1.png',
 		"relicbase_nanomap_z2.png"			= 'icons/_nanomaps/relicbase_nanomap_z2.png',
 		"relicbase_nanomap_z3.png"			= 'icons/_nanomaps/relicbase_nanomap_z3.png',
 		"relicbase_nanomap_z4.png"			= 'icons/_nanomaps/relicbase_nanomap_z4.png',
