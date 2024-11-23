@@ -1,4 +1,0 @@
-author: "Raeschen"
-delete-after: True
-changes:
-  - refactor: "min account age for head roles --> 31 days"

@@ -134,3 +134,6 @@
   - rscadd: VBO_maw26
   - bugfix: hippo_head-head
   - bugfix: trex_upperjaw-head
+2024-11-23:
+  Raeschen:
+  - refactor: min account age for head roles --> 31 days
