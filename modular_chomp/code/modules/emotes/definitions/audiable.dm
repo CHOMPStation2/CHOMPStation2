@@ -71,13 +71,9 @@
 	key = "caw"
 	emote_message_1p = "You caw!"
 	emote_message_3p = "caws!"
-	emote_sound = 'modular_chomp/sound/voice/caw.ogg'
-
-/decl/emote/audible/birdchirp
-	key = "bchirp" // Stands for Bird Chirp (because it's not a cricket chirp like *chirp, it's a bird chirp)
-	emote_message_1p = "You chirp."
-	emote_message_3p = "chirps."
-	emote_sound = 'modular_chomp/sound/voice/bchirp.ogg'
+	emote_message_1p_target = "You caw at TARGET."
+	emote_message_3p_target = "caws at TARGET."
+	emote_sound = 'modular_chomp/sound/voice/caw.ogg' // Copyright Sampling+ 1.0 Incarnidine (freesound.org) for the source audio.
 
 /decl/emote/audible/wawa
 	key = "wawa"
