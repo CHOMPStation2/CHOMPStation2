@@ -1,4 +1,0 @@
-author: "Birdiest-Bird"
-delete-after: True
-changes:
-  - bugfix: "VR avatars no longer get mail from cargo"

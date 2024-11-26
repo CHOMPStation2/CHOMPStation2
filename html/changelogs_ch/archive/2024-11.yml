@@ -137,3 +137,8 @@
 2024-11-23:
   Raeschen:
   - refactor: min account age for head roles --> 31 days
+2024-11-26:
+  Birdiest-Bird:
+  - bugfix: VR avatars no longer get mail from cargo
+  FluffMedic:
+  - bugfix: fixed a floating APC on spider chapel
