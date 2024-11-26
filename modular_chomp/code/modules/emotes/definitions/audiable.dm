@@ -73,7 +73,7 @@
 	emote_message_3p = "caws!"
 	emote_message_1p_target = "You caw at TARGET."
 	emote_message_3p_target = "caws at TARGET."
-	emote_sound = 'modular_chomp/sound/voice/caw.ogg' // Copyright Sampling+ 1.0 Incarnidine (freesound.org) for the source audio.
+	emote_sound = 'modular_chomp/sound/voice/emotes/caw.ogg' // Copyright Sampling+ 1.0 Vixxus (freesound.org) for the source audio.
 
 /decl/emote/audible/wawa
 	key = "wawa"

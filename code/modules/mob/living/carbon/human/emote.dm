@@ -187,8 +187,7 @@ var/list/_human_default_emotes = list(
 	/decl/emote/audible/malehumanscream,
 	/decl/emote/audible/scientist/scream,
 	/decl/emote/audible/scientist/pain,
-	/decl/emote/audible/caw,
-	/decl/emote/audible/birdchirp
+	/decl/emote/audible/caw
 	//CHOMP Add end
 )
 
@@ -338,8 +337,7 @@ var/list/_simple_mob_default_emotes = list(
 	/decl/emote/audible/xenogrowl,
 	/decl/emote/audible/xenohiss,
 	/decl/emote/audible/xenopurr,
-	/decl/emote/audible/caw,
-	/decl/emote/audible/birdchirp
+	/decl/emote/audible/caw
 	//CHOMP Add end
 	)
 	//VOREStation Add End
