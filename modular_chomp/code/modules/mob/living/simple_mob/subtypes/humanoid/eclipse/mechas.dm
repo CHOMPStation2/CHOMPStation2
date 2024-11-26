@@ -263,6 +263,7 @@
 //Each mecha has a strange defense mechanism.
 //High defense at the start that falters the more the battle goes on
 /mob/living/simple_mob/mechanical/mecha/eclipse/antipersonal_unit //Melts folks with lasers
+	name = "Eclipse Expirmental Anti-Infantary Unit"
 	specialattackprojectile = /obj/item/projectile/beam/midlaser
 	armor = list(melee = 90, bullet = 90, laser = 90, energy = 90, bomb = 90, bio = 100, rad = 100)
 	damage_threshold = 0 //So the wierd armor mechanic works
@@ -527,6 +528,7 @@
 
 //Nigh unbreakable defenses except during certian attack phases.
 /mob/living/simple_mob/mechanical/mecha/eclipse/mining_guard //Explosive death
+	name = "Eclipse Expirmental Mining Mecha"
 	specialattackprojectile = /obj/item/projectile/energy/excavate/weak
 	armor = list(melee = 90, bullet = 90, laser = 90, energy = 90, bomb = 90, bio = 100, rad = 100)
 	armor_soak = list(melee = 25, bullet = 25, laser = 25, energy = 25, bomb = 0, bio = 0, rad = 0)
@@ -771,6 +773,7 @@
 
 //High overall defense, swaps between Burn and brute defense based off what was just used.
 /mob/living/simple_mob/mechanical/mecha/eclipse/darkmatter_assualt //The final boss
+	name = "Eclipse Expirmental Janus"
 	armor = list(melee = 60, bullet = 60, laser = 60, energy = 60, bomb = 80, bio = 100, rad = 100)
 	specialattackprojectile = /obj/item/projectile/energy/darkspike
 	pilot_type = /mob/living/simple_mob/humanoid/merc/ranged

@@ -675,7 +675,7 @@
 		var/blocked = L.run_armor_check(target_zone, "laser")
 		var/soaked = L.get_armor_soak(target_zone, "laser")
 
-		if(!L.apply_damage(100, BURN, target_zone, blocked, soaked))
+		if(!L.apply_damage(70, BURN, target_zone, blocked, soaked))
 			break
 	playsound(src, 'sound/effects/clang2.ogg', 50, 1)
 	qdel(src)
