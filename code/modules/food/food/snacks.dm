@@ -85,9 +85,33 @@
 
 		usr.drop_from_inventory(src) // Drop food from inventory so it doesn't end up staying on the hud after qdel, and so inhands go away
 
+		//CHOMPAdd Start - Consume item TF mobs as raw nutrition if prefs align
+		if(possessed_voice && possessed_voice.len && M.can_be_drop_pred && M.food_vore && M.vore_selected)
+			var/obj/item/reagent_containers/food/rawnutrition/NR = new /obj/item/reagent_containers/food/rawnutrition(usr)
+			NR.name = "piece of food"
+			NR.stored_nutrition = 1
+			for(var/mob/living/voice/V in possessed_voice)
+				NR.inhabit_item(V, null, V.tf_mob_holder, TRUE)
+				possessed_voice -= V
+				qdel(V)
+			NR.forceMove(M.vore_selected)
+		//CHOMPAdd End
 		if(trash)
 			var/obj/item/TrashItem = new trash(usr)
 			usr.put_in_hands(TrashItem)
+			//CHOMPAdd Start - Transfer item TF mobs to the trash if able
+			if(possessed_voice && possessed_voice.len)
+				for(var/mob/living/voice/V in possessed_voice)
+					TrashItem.inhabit_item(V, null, V.tf_mob_holder, TRUE)
+					possessed_voice -= V
+					qdel(V)
+			//CHOMPAdd End
+		//CHOMPAdd Start - Clean up any remaining item TF mobs
+		if(possessed_voice && possessed_voice.len)
+			for(var/mob/living/voice/V in possessed_voice)
+				possessed_voice -= V
+				qdel(V)
+		//CHOMPAdd End
 		qdel(src)
 
 /obj/item/reagent_containers/food/snacks/attack_self(mob/user as mob)
