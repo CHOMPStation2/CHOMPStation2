@@ -19,7 +19,7 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	req_admin_notify = 1
 	access = list() 			//See get_access()
 	minimal_access = list() 	//See get_access()
-	minimal_player_age = 31
+	minimal_player_age = 31 //ChompEDIT
 	economic_modifier = 20
 
 	minimum_character_age = 25
@@ -69,7 +69,7 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	supervisors = "the " + JOB_SITE_MANAGER
 	selection_color = "#1D1D4F"
 	req_admin_notify = 1
-	minimal_player_age = 10
+	minimal_player_age = 31 //ChompEDIT
 	economic_modifier = 10
 
 	minimum_character_age = 25

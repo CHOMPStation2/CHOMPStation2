@@ -26,7 +26,7 @@
 	alt_titles = list("Research Supervisor")
 
 	minimum_character_age = 25
-	minimal_player_age = 14
+	minimal_player_age = 31 //ChompEDIT
 	min_age_by_species = list(SPECIES_UNATHI = 70, "mechanical" = 10, SPECIES_HUMAN_VATBORN = 14)
 	ideal_character_age = 50
 	ideal_age_by_species = list(SPECIES_UNATHI = 140, "mechanical" = 20, SPECIES_HUMAN_VATBORN = 20)

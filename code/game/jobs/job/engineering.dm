@@ -31,7 +31,7 @@
 			            access_teleporter, access_external_airlocks, access_atmospherics, access_emergency_storage, access_eva,
 			            access_heads, access_construction, access_sec_doors,
 			            access_ce, access_RC_announce, access_keycard_auth, access_tcomsat, access_ai_upload)
-	minimal_player_age = 7
+	minimal_player_age = 31 //ChompEDIT
 
 	outfit_type = /decl/hierarchy/outfit/job/engineering/chief_engineer
 	job_description = "The " + JOB_CHIEF_ENGINEER + " manages the Engineering Department, ensuring that the Engineers work on what needs to be done, handling distribution \
