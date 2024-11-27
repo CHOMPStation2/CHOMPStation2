@@ -574,9 +574,8 @@
 	armor = list(melee = 90, bullet = 90, laser = 90, energy = 90, bomb = 90, bio = 100, rad = 100)
 	armor_soak = list(melee = 25, bullet = 25, laser = 25, energy = 25, bomb = 0, bio = 0, rad = 0)
 	icon_state = "shielded_mining_mecha"
-	for(var/i = 1 to 6)
-		addtimer(CALLBACK(src, PROC_REF(summon_drones), target), 0.5 SECONDS, TIMER_DELETE_ME)
-	attackcycle = 2
+	addtimer(CALLBACK(src, PROC_REF(summon_drones), target, 3, 2, 0.5 SECONDS), 0.5 SECONDS, TIMER_DELETE_ME)
+	attackcycle = 0
 
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/mining_guard/proc/phaseone_cycletwo(atom/target) //four seconds
@@ -584,17 +583,17 @@
 	armor_soak = list(melee = 25, bullet = 25, laser = 25, energy = 25, bomb = 0, bio = 0, rad = 0)
 	icon_state = "shielded_mining_mecha"
 	addtimer(CALLBACK(src, PROC_REF(random_firing), target, 12, 3, 0.5 SECONDS), 0.5 SECONDS, TIMER_DELETE_ME)
-	attackcycle = 3
+	attackcycle = 0
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/mining_guard/proc/phaseone_cyclethree(atom/target) //eight seconds where it's vunerable
 	armor = list(melee = 50, bullet = 50, laser = 50, energy = 50, bomb = 50, bio = 100, rad = 100)
 	armor_soak = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 	icon_state = "mining_mecha"
 	addtimer(CALLBACK(src, PROC_REF(random_firing), target, 12, 1, 0.5 SECONDS), 0.5 SECONDS, TIMER_DELETE_ME)
-	attackcycle = 1
+	attackcycle = 0
 
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/summon_drones(atom/target)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/summon_drones(atom/target, var/amount, var/next_cycle, var/fire_delay)
 	var/deathdir = rand(1,3)
 	switch(deathdir)
 		if(1)
@@ -603,6 +602,11 @@
 			new /mob/living/simple_mob/mechanical/hivebot/swarm/eclipse (src.loc)
 		if(3)
 			new /mob/living/simple_mob/mechanical/combat_drone/artillery
+	amount--
+	if(amount > 0)
+		addtimer(CALLBACK(src, PROC_REF(summon_drones), target, amount, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
+	else
+		attackcycle = next_cycle
 
 //phase two now we begin the bullet hell
 /mob/living/simple_mob/mechanical/mecha/eclipse/mining_guard/proc/phasetwo_cycleone(atom/target) //Seven seconds
@@ -773,7 +777,7 @@
 	armor_soak = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 	icon_state = "mining_mecha"
 	addtimer(CALLBACK(src, PROC_REF(random_firing), target, 20, 1, 0.2 SECONDS), 0.5 SECONDS, TIMER_DELETE_ME)
-	attackcycle = 1
+	attackcycle = 0
 
 //High overall defense, swaps between Burn and brute defense based off what was just used.
 /mob/living/simple_mob/mechanical/mecha/eclipse/darkmatter_assualt //The final boss
@@ -867,7 +871,7 @@
 /mob/living/simple_mob/mechanical/mecha/eclipse/darkmatter_assualt/proc/phaseone_cyclethree(atom/target)
 	specialattackprojectile = /obj/item/projectile/energy/darkspike
 	addtimer(CALLBACK(src, PROC_REF(random_firing), target, 20, 1, 0.2 SECONDS), 0.5 SECONDS, TIMER_DELETE_ME)
-	attackcycle = 1
+	attackcycle = 0
 
 //Phase Two where we change things up a bit.
 /mob/living/simple_mob/mechanical/mecha/eclipse/darkmatter_assualt/proc/phasetwo_cycleone(atom/target) //shows a laser then fires a rockect
@@ -883,7 +887,7 @@
 /mob/living/simple_mob/mechanical/mecha/eclipse/darkmatter_assualt/proc/phasetwo_cyclethree(atom/target) //turns out the horde is meant to be a shield for the next attack.
 	specialattackprojectile = /obj/item/projectile/energy/infernosphere
 	addtimer(CALLBACK(src, PROC_REF(random_firing), target, 20, 1, 0.2 SECONDS), 0.5 SECONDS, TIMER_DELETE_ME)
-	attackcycle = 1
+	attackcycle = 0
 
 //Phase three 2 wierd patterns, and 1 strange attack.
 /mob/living/simple_mob/mechanical/mecha/eclipse/darkmatter_assualt/proc/phasethree_cycleone(atom/target)
@@ -899,4 +903,4 @@
 /mob/living/simple_mob/mechanical/mecha/eclipse/darkmatter_assualt/proc/phasethree_cyclethree(atom/target) //eight spinning death beams
 	specialattackprojectile = /obj/item/projectile/energy/darkspike
 	addtimer(CALLBACK(src, PROC_REF(random_firing), target, 20, 1, 0.2 SECONDS), 0.5 SECONDS, TIMER_DELETE_ME)
-	attackcycle = 1
+	attackcycle = 0

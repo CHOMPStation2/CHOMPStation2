@@ -481,10 +481,9 @@
 
 //special attack things
 /mob/living/simple_mob/humanoid/eclipse/head/scientist/do_special_attack(atom/A)
-	for(var/i = 1 to 3)
-		addtimer(CALLBACK(src, PROC_REF(summon_drones), A), 0.5 SECONDS, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(summon_drones), A, 3, 0.5 SECONDS), 0.5 SECONDS, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/humanoid/eclipse/proc/summon_drones(atom/target)
+/mob/living/simple_mob/humanoid/eclipse/proc/summon_drones(atom/target, var/amount, var/fire_delay)
 	var/deathdir = rand(1,3)
 	switch(deathdir)
 		if(1)
@@ -493,6 +492,10 @@
 			new /mob/living/simple_mob/mechanical/hivebot/swarm/eclipse (src.loc)
 		if(3)
 			new /mob/living/simple_mob/mechanical/combat_drone/artillery
+	amount--
+	if(amount > 0)
+		addtimer(CALLBACK(src, PROC_REF(summon_drones), target, amount, fire_delay), fire_delay, TIMER_DELETE_ME)
+
 
 /mob/living/simple_mob/humanoid/eclipse/head/medical/do_special_attack(atom/A)
 	if(!cloaked)
