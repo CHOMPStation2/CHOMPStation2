@@ -12,6 +12,7 @@
 #define ATMOS_PASS_DENSITY		3	// Blocks air and zones if density = TRUE, allows both if density = FALSE
 #define ATMOS_PASS_PROC			4	// Call CanZASPass() using c_airblock
 
+<<<<<<< HEAD
 // CHOMPAdd Start
 
 #define NORTHUP (NORTH|UP)
@@ -142,3 +143,6 @@ GLOBAL_LIST_INIT(gzn_check, list(
 #endif
 
 // CHOMPEdit End
+=======
+#define HAS_VALID_ZONE(T) (T.zone && !T.zone.invalid)
+>>>>>>> fa5a178010 (Merge pull request #16515 from ShadowLarkens/zas)
