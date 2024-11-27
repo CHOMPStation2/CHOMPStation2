@@ -363,6 +363,7 @@
 	special_attack_min_range = 1
 	special_attack_max_range = 8
 	projectiletype = /obj/item/projectile/bullet/eclipsejanus
+	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
 	var/fullshield = 4
 	var/shieldrage = 4
 
@@ -481,7 +482,7 @@
 //special attack things
 /mob/living/simple_mob/humanoid/eclipse/head/scientist/do_special_attack(atom/A)
 	for(var/i = 1 to 3)
-		addtimer(CALLBACK(src, PROC_REF(summon_drones), A), 0.5 SECOND, TIMER_DELETE_ME)
+		addtimer(CALLBACK(src, PROC_REF(summon_drones), A), 0.5 SECONDS, TIMER_DELETE_ME)
 
 /mob/living/simple_mob/humanoid/eclipse/proc/summon_drones(atom/target)
 	var/deathdir = rand(1,3)
