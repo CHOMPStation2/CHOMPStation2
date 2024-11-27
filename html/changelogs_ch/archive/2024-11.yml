@@ -142,3 +142,11 @@
   - bugfix: VR avatars no longer get mail from cargo
   FluffMedic:
   - bugfix: fixed a floating APC on spider chapel
+2024-11-27:
+  Fracshun:
+  - rscadd: Eating someone bound to a food item can spont pred them as nutrition with
+      food vore enabled
+  - rscadd: Eating someone bound to a food item will retain them as the trash item
+      if eaten with spont pred/food vore disabled
+  - bugfix: Eating someone bound to a food item no longer makes them astral project
+      as a ghost in the world
