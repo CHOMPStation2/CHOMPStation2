@@ -654,14 +654,12 @@
 	return INITIALIZE_HINT_LATELOAD
 
 /obj/effect/artillery_attack/LateInitialize()
-	addtimer(CALLBACK(src, PROC_REF(spawner), src), 0.5 SECONDS, TIMER_DELETE_ME)
+	var/delay = rand(25, 30)
+	addtimer(CALLBACK(src, PROC_REF(spawner), delay), delay SECONDS, TIMER_DELETE_ME)
 
 /obj/effect/artillery_attack/proc/spawner()
-	var/delay = rand(25, 30)
-	spawn(delay)
-		new /obj/effect/callstrike(src.loc)
-	spawn(delay+7)
-		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(qdel), src), delay, TIMER_DELETE_ME)
+	new /obj/effect/callstrike(src.loc)
+	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(qdel), src), 0.7 SECONDS, TIMER_DELETE_ME)
 
 /obj/effect/callstrike
 	anchored = TRUE
