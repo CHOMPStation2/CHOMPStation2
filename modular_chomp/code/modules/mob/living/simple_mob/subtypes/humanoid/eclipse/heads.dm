@@ -655,7 +655,7 @@
 
 /obj/effect/artillery_attack/LateInitialize()
 	var/delay = rand(25, 30)
-	addtimer(CALLBACK(src, PROC_REF(spawner), delay), delay SECONDS, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(spawner), delay), delay, TIMER_DELETE_ME)
 
 /obj/effect/artillery_attack/proc/spawner()
 	new /obj/effect/callstrike(src.loc)
