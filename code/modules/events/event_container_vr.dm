@@ -131,6 +131,7 @@
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Viral Infection",	/datum/event/viral_infection,	-50,	list(ASSIGNMENT_MEDICAL = 25), 	1, min_jobs = list(ASSIGNMENT_MEDICAL = 2)),
 	)
 	add_disabled_events(list(
+<<<<<<< HEAD
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Containment Breach",	/datum/event/prison_break/station,0,	list(ASSIGNMENT_ANY = 5),		0),
 		//Spiders moved into horde infestation
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Spider Infestation",		/datum/event/spider_infestation, 		-60,	list(ASSIGNMENT_SECURITY = 20, ASSIGNMENT_HOS = 10, ASSIGNMENT_WARDEN = 10, ASSIGNMENT_ANY = 3), 0),
@@ -140,6 +141,13 @@
 		//Needs Xenobio containment breach fixed
 		//new /datum/event_meta(EVENT_LEVEL_MAJOR, "Xenobiology Breach",	/datum/event/prison_break/xenobiology,	-10,	list(ASSIGNMENT_SCIENCE = 30, ASSIGNMENT_ENGINEER = 20), 1),
 		//new /datum/event_meta(EVENT_LEVEL_MAJOR, "Meteor Strike",	/datum/event/meteor_strike,		10,		list(ASSIGNMENT_ENGINEER = 15), 1),
+=======
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Meteor Strike",		/datum/event/meteor_strike,			10,		list(ASSIGNMENT_ENGINEER = 15), 1),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Blob",				/datum/event/blob, 					10,		list(ASSIGNMENT_ENGINEER = 60), 1),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Meteor Wave",			/datum/event/meteor_wave,			30,		list(ASSIGNMENT_ENGINEER = 15),	1),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Supply Demand",		/datum/event/supply_demand,			0,		list(ASSIGNMENT_ANY = 5, ASSIGNMENT_SCIENCE = 15, ASSIGNMENT_GARDENER = 10, ASSIGNMENT_ENGINEER = 10, ASSIGNMENT_MEDICAL = 15), 1),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Disease Outbreak",	/datum/event/disease_outbreak,		-30,	list(ASSIGNMENT_MEDICAL = 30, ASSIGNMENT_ANY = 1), 	1, min_jobs = list(ASSIGNMENT_MEDICAL = 2)),
+>>>>>>> 1f90da0eca (Merge pull request #16627 from TheCaramelion/viro-fix-4)
 	))
 
 #undef ASSIGNMENT_ANY
