@@ -13,6 +13,7 @@
 	grab_resist = 100
 	shock_resist = -0.2
 	var/specialattackprojectile = /obj/item/projectile/energy/phase/bolt
+	var/attackcycle = 1
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/do_special_attack(atom/A)
 	upfour_leftfour(A)
@@ -270,6 +271,7 @@
 	icon_state = "gygax_adv"
 	wreckage = /obj/structure/loot_pile/mecha/odd_gygax
 
+
 /mob/living/simple_mob/mechanical/mecha/eclipse/antipersonal_unit/updatehealth()
 	. = ..()
 
@@ -456,9 +458,9 @@
 
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/antipersonal_unit/proc/phase_three(atom/target) //The strangest pattern but a last stand at 0 defense.
-	addtimer(CALLBACK(src, PROC_REF(random_firing), target), 0.5 SECONDS, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(random_firing), target, 12, 3, 0.5 SECONDS), 0.5 SECONDS, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/random_firing(atom/target)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/random_firing(atom/target, var/amount, var/next_cycle, var/fire_delay)
 	var/deathdir = rand(1,32)
 	switch(deathdir)
 		if(1)
@@ -525,6 +527,11 @@
 			uptwo_leftfour(target)
 		if(32)
 			upthree_leftfour(target)
+	amount--
+	if(amount > 0)
+		addtimer(CALLBACK(src, PROC_REF(random_firing), target, amount, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
+	else
+		attackcycle = next_cycle
 
 //Nigh unbreakable defenses except during certian attack phases.
 /mob/living/simple_mob/mechanical/mecha/eclipse/mining_guard //Explosive death
@@ -535,7 +542,7 @@
 	icon_state = "shielded_mining_mecha"
 	shock_resist = 1
 	wreckage = /obj/structure/loot_pile/mecha/odd_ripley
-	var/attackcycle = 1
+	attackcycle = 1
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/mining_guard/do_special_attack(atom/A)
 	. = TRUE // So we don't fire a bolt as well.
@@ -576,16 +583,14 @@
 	armor = list(melee = 90, bullet = 90, laser = 90, energy = 90, bomb = 90, bio = 100, rad = 100)
 	armor_soak = list(melee = 25, bullet = 25, laser = 25, energy = 25, bomb = 0, bio = 0, rad = 0)
 	icon_state = "shielded_mining_mecha"
-	for(var/i = 1 to 6)
-		addtimer(CALLBACK(src, PROC_REF(random_firing), target), 0.5 SECONDS, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(random_firing), target, 12, 3, 0.5 SECONDS), 0.5 SECONDS, TIMER_DELETE_ME)
 	attackcycle = 3
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/mining_guard/proc/phaseone_cyclethree(atom/target) //eight seconds where it's vunerable
 	armor = list(melee = 50, bullet = 50, laser = 50, energy = 50, bomb = 50, bio = 100, rad = 100)
 	armor_soak = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 	icon_state = "mining_mecha"
-	for(var/i = 1 to 12)
-		addtimer(CALLBACK(src, PROC_REF(random_firing), target), 0.5 SECONDS, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(random_firing), target, 12, 1, 0.5 SECONDS), 0.5 SECONDS, TIMER_DELETE_ME)
 	attackcycle = 1
 
 
@@ -767,8 +772,7 @@
 	armor = list(melee = 50, bullet = 50, laser = 50, energy = 50, bomb = 50, bio = 100, rad = 100)
 	armor_soak = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 	icon_state = "mining_mecha"
-	for(var/i = 1 to 20)
-		addtimer(CALLBACK(src, PROC_REF(random_firing), target), 0.2 SECONDS, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(random_firing), target, 20, 1, 0.2 SECONDS), 0.5 SECONDS, TIMER_DELETE_ME)
 	attackcycle = 1
 
 //High overall defense, swaps between Burn and brute defense based off what was just used.
@@ -778,7 +782,7 @@
 	specialattackprojectile = /obj/item/projectile/energy/darkspike
 	pilot_type = /mob/living/simple_mob/humanoid/merc/ranged
 	icon_state = "eclipse_janus"
-	var/attackcycle = 1
+	attackcycle = 1
 
 /obj/item/projectile/energy/darkspike //This will end you
 	name = "gravity well"
@@ -862,8 +866,7 @@
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/darkmatter_assualt/proc/phaseone_cyclethree(atom/target)
 	specialattackprojectile = /obj/item/projectile/energy/darkspike
-	for(var/i = 1 to 20)
-		addtimer(CALLBACK(src, PROC_REF(random_firing), target), 0.2 SECONDS, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(random_firing), target, 20, 1, 0.2 SECONDS), 0.5 SECONDS, TIMER_DELETE_ME)
 	attackcycle = 1
 
 //Phase Two where we change things up a bit.
@@ -879,8 +882,7 @@
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/darkmatter_assualt/proc/phasetwo_cyclethree(atom/target) //turns out the horde is meant to be a shield for the next attack.
 	specialattackprojectile = /obj/item/projectile/energy/infernosphere
-	for(var/i = 1 to 20)
-		addtimer(CALLBACK(src, PROC_REF(random_firing), target), 0.2 SECONDS, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(random_firing), target, 20, 1, 0.2 SECONDS), 0.5 SECONDS, TIMER_DELETE_ME)
 	attackcycle = 1
 
 //Phase three 2 wierd patterns, and 1 strange attack.
@@ -896,6 +898,5 @@
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/darkmatter_assualt/proc/phasethree_cyclethree(atom/target) //eight spinning death beams
 	specialattackprojectile = /obj/item/projectile/energy/darkspike
-	for(var/i = 1 to 20)
-		addtimer(CALLBACK(src, PROC_REF(random_firing), target), 0.2 SECONDS, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(random_firing), target, 20, 1, 0.2 SECONDS), 0.5 SECONDS, TIMER_DELETE_ME)
 	attackcycle = 1
