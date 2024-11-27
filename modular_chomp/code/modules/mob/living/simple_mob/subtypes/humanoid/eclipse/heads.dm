@@ -654,11 +654,14 @@
 	return INITIALIZE_HINT_LATELOAD
 
 /obj/effect/artillery_attack/LateInitialize()
+	addtimer(CALLBACK(src, PROC_REF(spawner), src), 0.5 SECONDS, TIMER_DELETE_ME)
+
+/obj/effect/artillery_attack/proc/spawner()
 	var/delay = rand(25, 30)
-	spawn(delay-7)
-		new /obj/effect/callstrike(src.loc)
 	spawn(delay)
-		qdel(src)
+		new /obj/effect/callstrike(src.loc)
+	spawn(delay+7)
+		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(qdel), src), delay, TIMER_DELETE_ME)
 
 /obj/effect/callstrike
 	anchored = TRUE
@@ -679,4 +682,4 @@
 		if(!L.apply_damage(70, BURN, target_zone, blocked, soaked))
 			break
 	playsound(src, 'sound/effects/clang2.ogg', 50, 1)
-	qdel(src)
+	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(qdel), src), 0.25 SECONDS, TIMER_DELETE_ME)
