@@ -206,11 +206,7 @@
 			var/turf/simulated/sim = unsim
 			sim.open_directions |= GLOB.reverse_dir[d] // CHOMPEdit
 
-<<<<<<< HEAD
 			if(TURF_HAS_VALID_ZONE(sim)) // CHOMPEdit
-=======
-			if(HAS_VALID_ZONE(sim))
->>>>>>> fa5a178010 (Merge pull request #16515 from ShadowLarkens/zas)
 
 				//Might have assigned a zone, since this happens for each direction.
 				if(!zone)
@@ -243,11 +239,7 @@
 					if(verbose) to_world("Connecting to [sim.zone]")
 					#endif
 
-<<<<<<< HEAD
-					SSair.connect(src, sim) // CHOMPEdit
-=======
 					SSair.connect(src, sim)
->>>>>>> fa5a178010 (Merge pull request #16515 from ShadowLarkens/zas)
 
 
 			#ifdef ZASDBG
@@ -262,11 +254,7 @@
 			if(!postponed) postponed = list()
 			postponed.Add(unsim)
 
-<<<<<<< HEAD
 	if(!TURF_HAS_VALID_ZONE(src)) //Still no zone, make a new one. CHOMPEdit
-=======
-	if(!HAS_VALID_ZONE(src)) //Still no zone, make a new one.
->>>>>>> fa5a178010 (Merge pull request #16515 from ShadowLarkens/zas)
 		var/zone/newzone = new/zone()
 		newzone.add(src)
 
@@ -279,11 +267,7 @@
 	//At this point, a zone should have happened. If it hasn't, don't add more checks, fix the bug.
 
 	for(var/turf/T in postponed)
-<<<<<<< HEAD
-		SSair.connect(src, T) // CHOMPEdit
-=======
 		SSair.connect(src, T)
->>>>>>> fa5a178010 (Merge pull request #16515 from ShadowLarkens/zas)
 
 /turf/proc/post_update_air_properties()
 	if(connections) connections.update_all()

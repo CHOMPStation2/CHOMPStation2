@@ -96,12 +96,11 @@
 		if (istype(W,/turf/simulated/floor))
 			W.RemoveLattice()
 
-<<<<<<< HEAD
 		if(tell_universe)
 			universe.OnTurfChange(W)
 
-		if(air_master)
-			air_master.mark_for_update(src) //handle the addition of the new turf.
+		if(SSair)
+			SSair.mark_for_update(src) //handle the addition of the new turf.
 
 		for(var/turf/space/S in range(W,1))
 			S.update_starlight()
@@ -130,8 +129,8 @@
 		if(tell_universe)
 			universe.OnTurfChange(W)
 
-		if(air_master)
-			air_master.mark_for_update(src)
+		if(SSair)
+			SSair.mark_for_update(src)
 
 		for(var/turf/space/S in range(W,1))
 			S.update_starlight()
@@ -141,10 +140,6 @@
 		W.post_change()
 		new_turf = W //CHOMPEdit
 		. =  W
-=======
-	if(SSair)
-		SSair.mark_for_update(W)
->>>>>>> fa5a178010 (Merge pull request #16515 from ShadowLarkens/zas)
 
 
 	dangerous_objects = old_dangerous_objects
