@@ -753,6 +753,7 @@
 	if(prob(50))
 		addtimer(CALLBACK(src, PROC_REF(beglaser), target, next_cycle), 1 SECOND, TIMER_DELETE_ME)
 	else
+		attackcycle = next_cycle
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/mining_guard/proc/phasetwo_cyclethree(atom/target) //seven seconds
 	armor = list(melee = 50, bullet = 50, laser = 50, energy = 50, bomb = 50, bio = 100, rad = 100)
