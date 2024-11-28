@@ -18,6 +18,8 @@
 	// set category = "IC.Chat" //CHOMPEdit
 	set instant = TRUE // CHOMPEdit
 	set hidden = 1
+	set instant = TRUE
+
 	//VOREStation Addition Start
 	if(forced_psay)
 		psay(message)
@@ -25,12 +27,18 @@
 	//VOREStation Addition End
 
 	client?.stop_thinking()
+<<<<<<< HEAD
 	// CHOMPEdit Start
+=======
+>>>>>>> 10de4fc09f (Merge pull request #16511 from VOREStation/verb-subsystem)
 	//queue this message because verbs are scheduled to process after SendMaps in the tick and speech is pretty expensive when it happens.
 	//by queuing this for next tick the mc can compensate for its cost instead of having speech delay the start of the next tick
 	if(message)
 		QUEUE_OR_CALL_VERB_FOR(VERB_CALLBACK(src, TYPE_PROC_REF(/mob, say), message), SSspeech_controller)
+<<<<<<< HEAD
 	// CHOMPEdit End
+=======
+>>>>>>> 10de4fc09f (Merge pull request #16511 from VOREStation/verb-subsystem)
 
 /mob/verb/me_verb(message as message) //CHOMPEdit
 	set name = "Me"

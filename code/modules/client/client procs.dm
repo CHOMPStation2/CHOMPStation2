@@ -148,7 +148,10 @@
 		if("openLink")
 			src << link(href_list["link"])
 
+<<<<<<< HEAD
 	// CHOMPEdit Start
+=======
+>>>>>>> 10de4fc09f (Merge pull request #16511 from VOREStation/verb-subsystem)
 	if (hsrc)
 		var/datum/real_src = hsrc
 		if(QDELETED(real_src))
@@ -158,7 +161,16 @@
 	//overloaded
 	if(hsrc && hsrc != holder && DEFAULT_TRY_QUEUE_VERB(VERB_CALLBACK(src, PROC_REF(_Topic), hsrc, href, href_list)))
 		return
+<<<<<<< HEAD
 	..()	//redirect to hsrc.Topic()
+=======
+	..() //redirect to hsrc.Topic()
+
+///dumb workaround because byond doesnt seem to recognize the Topic() typepath for /datum/proc/Topic() from the client Topic,
+///so we cant queue it without this
+/client/proc/_Topic(datum/hsrc, href, list/href_list)
+	return hsrc.Topic(href, href_list)
+>>>>>>> 10de4fc09f (Merge pull request #16511 from VOREStation/verb-subsystem)
 
 ///dumb workaround because byond doesnt seem to recognize the Topic() typepath for /datum/proc/Topic() from the client Topic,
 ///so we cant queue it without this
