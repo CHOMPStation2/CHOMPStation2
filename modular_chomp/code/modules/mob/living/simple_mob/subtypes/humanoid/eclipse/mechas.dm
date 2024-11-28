@@ -270,6 +270,7 @@
 	damage_threshold = 0 //So the wierd armor mechanic works
 	icon_state = "gygax_adv"
 	wreckage = /obj/structure/loot_pile/mecha/odd_gygax
+	special_attack_cooldown = 30
 
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/antipersonal_unit/updatehealth()
@@ -335,126 +336,127 @@
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/antipersonal_unit/proc/phase_two(atom/target) //SPIIIIN TO WIN
 	visible_message(span_danger("The [src] is preparing a deadly attack!"))
-	addtimer(CALLBACK(src, PROC_REF(spin_to_win), target), 2 SECONDS, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(spin_to_win), target, 1), 2 SECONDS, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win(atom/target)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win(atom/target, var/next_cycle)
 	upfour_leftfour(target)
 	upfour_rightfour(target)
 	downfour_rightfour(target)
 	downfour_leftfour(target)
-	addtimer(CALLBACK(src, PROC_REF(spin_to_win_a), target), 0.5 SECONDS, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(spin_to_win_a), target, next_cycle), 0.5 SECONDS, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_a(atom/target)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_a(atom/target, var/next_cycle)
 	upfour_leftthree(target)
 	upthree_rightfour(target)
 	downfour_rightthree(target)
 	downthree_leftfour(target)
-	addtimer(CALLBACK(src, PROC_REF(spin_to_win_b), target), 0.5 SECONDS, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(spin_to_win_b), target, next_cycle), 0.5 SECONDS, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_b(atom/target)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_b(atom/target, var/next_cycle)
 	upfour_lefttwo(target)
 	uptwo_rightfour(target)
 	downfour_righttwo(target)
 	downtwo_leftfour(target)
-	addtimer(CALLBACK(src, PROC_REF(spin_to_win_c), target), 0.5 SECONDS, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(spin_to_win_c), target, next_cycle), 0.5 SECONDS, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_c(atom/target)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_c(atom/target, var/next_cycle)
 	upfour_leftone(target)
 	upone_rightfour(target)
 	downfour_rightone(target)
 	downone_leftfour(target)
-	addtimer(CALLBACK(src, PROC_REF(spin_to_win_d), target), 0.5 SECONDS, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(spin_to_win_d), target, next_cycle), 0.5 SECONDS, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_d(atom/target)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_d(atom/target, var/next_cycle)
 	upfour(target)
 	rightfour(target)
 	downfour(target)
 	leftfour(target)
-	addtimer(CALLBACK(src, PROC_REF(spin_to_win_e), target), 0.5 SECONDS, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(spin_to_win_e), target, next_cycle), 0.5 SECONDS, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_e(atom/target)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_e(atom/target, var/next_cycle)
 	upfour_rightone(target)
 	downone_rightfour(target)
 	downfour_leftone(target)
 	upone_leftfour(target)
-	addtimer(CALLBACK(src, PROC_REF(spin_to_win_f), target), 0.5 SECONDS, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(spin_to_win_f), target, next_cycle), 0.5 SECONDS, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_f(atom/target)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_f(atom/target, var/next_cycle)
 	upfour_righttwo(target)
 	downtwo_rightfour(target)
 	downfour_lefttwo(target)
 	uptwo_leftfour(target)
-	addtimer(CALLBACK(src, PROC_REF(spin_to_win_g), target), 0.5 SECONDS, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(spin_to_win_g), target, next_cycle), 0.5 SECONDS, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_g(atom/target)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_g(atom/target, var/next_cycle)
 	upfour_rightthree(target)
 	downthree_rightfour(target)
 	downfour_leftthree(target)
 	upthree_leftfour(target)
-	addtimer(CALLBACK(src, PROC_REF(spin_to_win_h), target), 0.5 SECONDS, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(spin_to_win_h), target, next_cycle), 0.5 SECONDS, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_h(atom/target)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_h(atom/target, var/next_cycle)
 	upfour_rightfour(target)
 	downfour_rightfour(target)
 	downfour_leftfour(target)
 	upfour_leftfour(target)
-	addtimer(CALLBACK(src, PROC_REF(spin_to_win_ra), target), 0.5 SECONDS, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(spin_to_win_ra), target, next_cycle), 0.5 SECONDS, TIMER_DELETE_ME)
 
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_ra(atom/target)//Now we reverse
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_ra(atom/target, var/next_cycle)//Now we reverse
 	upfour_rightthree(target)
 	downthree_rightfour(target)
 	downfour_leftthree(target)
 	upthree_leftfour(target)
-	addtimer(CALLBACK(src, PROC_REF(spin_to_win_rb), target), 0.5 SECONDS, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(spin_to_win_rb), target, next_cycle), 0.5 SECONDS, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_rb(atom/target)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_rb(atom/target, var/next_cycle)
 	upfour_righttwo(target)
 	downtwo_rightfour(target)
 	downfour_lefttwo(target)
 	uptwo_leftfour(target)
-	addtimer(CALLBACK(src, PROC_REF(spin_to_win_rc), target), 0.5 SECONDS, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(spin_to_win_rc), target, next_cycle), 0.5 SECONDS, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_rc(atom/target)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_rc(atom/target, var/next_cycle)
 	upfour_rightone(target)
 	downone_rightfour(target)
 	downfour_leftone(target)
 	upone_leftfour(target)
-	addtimer(CALLBACK(src, PROC_REF(spin_to_win_rd), target), 0.5 SECONDS, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(spin_to_win_rd), target, next_cycle), 0.5 SECONDS, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_rd(atom/target)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_rd(atom/target, var/next_cycle)
 	upfour(target)
 	rightfour(target)
 	downfour(target)
 	leftfour(target)
-	addtimer(CALLBACK(src, PROC_REF(spin_to_win_re), target), 0.5 SECONDS, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(spin_to_win_re), target, next_cycle), 0.5 SECONDS, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_re(atom/target)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_re(atom/target, var/next_cycle)
 	upfour_leftone(target)
 	upone_rightfour(target)
 	downfour_rightone(target)
 	downone_leftfour(target)
-	addtimer(CALLBACK(src, PROC_REF(spin_to_win_rf), target), 0.5 SECONDS, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(spin_to_win_rf), target, next_cycle), 0.5 SECONDS, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_rf(atom/target)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_rf(atom/target, var/next_cycle)
 	upfour_lefttwo(target)
 	uptwo_rightfour(target)
 	downfour_righttwo(target)
 	downtwo_leftfour(target)
-	addtimer(CALLBACK(src, PROC_REF(spin_to_win_rg), target), 0.5 SECONDS, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(spin_to_win_rg), target, next_cycle), 0.5 SECONDS, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_rg(atom/target)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_rg(atom/target, var/next_cycle)
 	upfour_leftthree(target)
 	upthree_rightfour(target)
 	downfour_rightthree(target)
 	downthree_leftfour(target)
-	addtimer(CALLBACK(src, PROC_REF(spin_to_win_rh), target), 0.5 SECONDS, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(spin_to_win_rh), target, next_cycle), 0.5 SECONDS, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_rh(atom/target)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_rh(atom/target, var/next_cycle)
 	upfour_leftfour(target)
 	upfour_rightfour(target)
 	downfour_rightfour(target)
 	downfour_leftfour(target)
+	attackcycle = next_cycle
 
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/antipersonal_unit/proc/phase_three(atom/target) //The strangest pattern but a last stand at 0 defense.
@@ -615,7 +617,7 @@
 	icon_state = "shielded_mining_mecha"
 	visible_message(span_danger("The [src] is preparing a deadly attack!"))
 	addtimer(CALLBACK(src, PROC_REF(thewall), target), 2.5 SECONDS, TIMER_DELETE_ME)
-	attackcycle = 2
+	attackcycle = 0
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/proc/thewall(atom/target)
 	upfour_rightfour(target)
@@ -657,120 +659,122 @@
 	downfour_righttwo(target)
 	downfour_rightthree(target)
 	downfour_rightfour(target)
+	attackcycle = 2
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/mining_guard/proc/phasetwo_cycletwo(atom/target) //Seven seconds
 	armor = list(melee = 90, bullet = 90, laser = 90, energy = 90, bomb = 90, bio = 100, rad = 100)
 	armor_soak = list(melee = 25, bullet = 25, laser = 25, energy = 25, bomb = 0, bio = 0, rad = 0)
 	icon_state = "shielded_mining_mecha"
-	addtimer(CALLBACK(src, PROC_REF(beglaser), target), 1 SECOND, TIMER_DELETE_ME)
-	attackcycle = 3
+	addtimer(CALLBACK(src, PROC_REF(beglaser), target, 3), 1 SECOND, TIMER_DELETE_ME)
+	attackcycle = 0
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/beglaser(atom/target)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/beglaser(atom/target, var/next_cycle)
 	upfour_leftone(target)
 	upfour(target)
 	upfour_rightone(target)
-	addtimer(CALLBACK(src, PROC_REF(beglaser_1), target), 1 SECOND, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(beglaser_1), target, next_cycle), 1 SECOND, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/beglaser_1(atom/target)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/beglaser_1(atom/target, var/next_cycle)
 	upfour_rightone(target)
 	upfour_righttwo(target)
 	upfour_rightthree(target)
-	addtimer(CALLBACK(src, PROC_REF(beglaser_2), target), 1 SECOND, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(beglaser_2), target, next_cycle), 1 SECOND, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/beglaser_2(atom/target)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/beglaser_2(atom/target, var/next_cycle)
 	upfour_rightfour(target)
 	upthree_rightfour(target)
 	uptwo_rightfour(target)
-	addtimer(CALLBACK(src, PROC_REF(beglaser_3), target), 1 SECOND, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(beglaser_3), target, next_cycle), 1 SECOND, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/beglaser_3(atom/target)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/beglaser_3(atom/target, var/next_cycle)
 	upone_rightfour(target)
 	rightfour(target)
 	downone_rightfour(target)
-	addtimer(CALLBACK(src, PROC_REF(beglaser_4), target), 1 SECOND, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(beglaser_4), target, next_cycle), 1 SECOND, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/beglaser_4(atom/target)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/beglaser_4(atom/target, var/next_cycle)
 	downone_rightfour(target)
 	downtwo_rightfour(target)
 	downthree_rightfour(target)
-	addtimer(CALLBACK(src, PROC_REF(beglaser_5), target), 1 SECOND, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(beglaser_5), target, next_cycle), 1 SECOND, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/beglaser_5(atom/target)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/beglaser_5(atom/target, var/next_cycle)
 	downthree_rightfour(target)
 	downfour_rightfour(target)
 	downfour_rightthree(target)
-	addtimer(CALLBACK(src, PROC_REF(beglaser_6), target), 1 SECOND, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(beglaser_6), target, next_cycle), 1 SECOND, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/beglaser_6(atom/target)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/beglaser_6(atom/target, var/next_cycle)
 	downfour_rightthree(target)
 	downfour_righttwo(target)
 	downfour_rightone(target)
-	addtimer(CALLBACK(src, PROC_REF(beglaser_7), target), 1 SECOND, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(beglaser_7), target, next_cycle), 1 SECOND, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/beglaser_7(atom/target)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/beglaser_7(atom/target, var/next_cycle)
 	downfour_rightone(target)
 	downfour(target)
 	downfour_leftone(target)
-	addtimer(CALLBACK(src, PROC_REF(beglaser_8), target), 1 SECOND, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(beglaser_8), target, next_cycle), 1 SECOND, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/beglaser_8(atom/target)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/beglaser_8(atom/target, var/next_cycle)
 	downfour_leftone(target)
 	downfour_lefttwo(target)
 	downfour_leftthree(target)
-	addtimer(CALLBACK(src, PROC_REF(beglaser_9), target), 1 SECOND, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(beglaser_9), target, next_cycle), 1 SECOND, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/beglaser_9(atom/target)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/beglaser_9(atom/target, var/next_cycle)
 	downfour_leftfour(target)
 	downthree_leftfour(target)
 	downtwo_leftfour(target)
-	addtimer(CALLBACK(src, PROC_REF(beglaser_10), target), 1 SECOND, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(beglaser_10), target, next_cycle), 1 SECOND, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/beglaser_10(atom/target)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/beglaser_10(atom/target, var/next_cycle)
 	downtwo_leftfour(target)
 	downone_leftfour(target)
 	leftfour(target)
-	addtimer(CALLBACK(src, PROC_REF(beglaser_11), target), 1 SECOND, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(beglaser_11), target, next_cycle), 1 SECOND, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/beglaser_11(atom/target)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/beglaser_11(atom/target, var/next_cycle)
 	leftfour(target)
 	upone_leftfour(target)
 	uptwo_leftfour(target)
-	addtimer(CALLBACK(src, PROC_REF(beglaser_12), target), 1 SECOND, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(beglaser_12), target, next_cycle), 1 SECOND, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/beglaser_12(atom/target)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/beglaser_12(atom/target, var/next_cycle)
 	uptwo_leftfour(target)
 	upthree_leftfour(target)
 	upfour_leftfour(target)
-	addtimer(CALLBACK(src, PROC_REF(beglaser_13), target), 1 SECOND, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(beglaser_13), target, next_cycle), 1 SECOND, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/beglaser_13(atom/target)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/beglaser_13(atom/target, var/next_cycle)
 	upfour_leftfour(target)
 	upfour_leftthree(target)
 	upfour_lefttwo(target)
 	if(prob(50))
-		addtimer(CALLBACK(src, PROC_REF(beglaser), target), 1 SECOND, TIMER_DELETE_ME)
+		addtimer(CALLBACK(src, PROC_REF(beglaser), target, next_cycle), 1 SECOND, TIMER_DELETE_ME)
+	else
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/mining_guard/proc/phasetwo_cyclethree(atom/target) //seven seconds
 	armor = list(melee = 50, bullet = 50, laser = 50, energy = 50, bomb = 50, bio = 100, rad = 100)
 	armor_soak = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 	icon_state = "mining_mecha"
-	addtimer(CALLBACK(src, PROC_REF(spin_to_win), target), 2 SECONDS, TIMER_DELETE_ME)
-	attackcycle = 1
+	addtimer(CALLBACK(src, PROC_REF(spin_to_win), target, 1), 2 SECONDS, TIMER_DELETE_ME)
+	attackcycle = 0
 
 //phase three
 /mob/living/simple_mob/mechanical/mecha/eclipse/mining_guard/proc/phasethree_cycleone(atom/target) //seven seconds
 	armor = list(melee = 90, bullet = 90, laser = 90, energy = 90, bomb = 90, bio = 100, rad = 100)
 	armor_soak = list(melee = 25, bullet = 25, laser = 25, energy = 25, bomb = 0, bio = 0, rad = 0)
 	icon_state = "shielded_mining_mecha"
-	addtimer(CALLBACK(src, PROC_REF(spin_to_win), target), 2 SECONDS, TIMER_DELETE_ME)
-	attackcycle = 2
+	addtimer(CALLBACK(src, PROC_REF(spin_to_win), target, 2), 2 SECONDS, TIMER_DELETE_ME)
+	attackcycle = 0
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/mining_guard/proc/phasethree_cycletwo(atom/target) //seven seconds
 	armor = list(melee = 90, bullet = 90, laser = 90, energy = 90, bomb = 90, bio = 100, rad = 100)
 	armor_soak = list(melee = 25, bullet = 25, laser = 25, energy = 25, bomb = 0, bio = 0, rad = 0)
 	icon_state = "shielded_mining_mecha"
-	addtimer(CALLBACK(src, PROC_REF(beglaser), target), 1 SECOND, TIMER_DELETE_ME)
-	attackcycle = 3
+	addtimer(CALLBACK(src, PROC_REF(beglaser), target, 3), 1 SECOND, TIMER_DELETE_ME)
+	attackcycle = 0
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/mining_guard/proc/phasethree_cyclethree(atom/target) //two seconds
 	armor = list(melee = 50, bullet = 50, laser = 50, energy = 50, bomb = 50, bio = 100, rad = 100)
@@ -860,13 +864,13 @@
 //Phase One. Appears random but isn't. Scales higher.
 /mob/living/simple_mob/mechanical/mecha/eclipse/darkmatter_assualt/proc/phaseone_cycleone(atom/target)
 	specialattackprojectile = /obj/item/projectile/energy/darkspike
-	addtimer(CALLBACK(src, PROC_REF(spin_to_win), target), 2 SECONDS, TIMER_DELETE_ME)
-	attackcycle = 2
+	addtimer(CALLBACK(src, PROC_REF(spin_to_win), target, 2), 2 SECONDS, TIMER_DELETE_ME)
+	attackcycle = 0
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/darkmatter_assualt/proc/phaseone_cycletwo(atom/target)
 	specialattackprojectile = /obj/item/projectile/energy/darkspike
-	addtimer(CALLBACK(src, PROC_REF(beglaser), target), 1 SECOND, TIMER_DELETE_ME)
-	attackcycle = 3
+	addtimer(CALLBACK(src, PROC_REF(beglaser), target, 3), 1 SECOND, TIMER_DELETE_ME)
+	attackcycle = 0
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/darkmatter_assualt/proc/phaseone_cyclethree(atom/target)
 	specialattackprojectile = /obj/item/projectile/energy/darkspike
@@ -876,13 +880,13 @@
 //Phase Two where we change things up a bit.
 /mob/living/simple_mob/mechanical/mecha/eclipse/darkmatter_assualt/proc/phasetwo_cycleone(atom/target) //shows a laser then fires a rockect
 	specialattackprojectile = /obj/item/projectile/energy/infernosphere
-	addtimer(CALLBACK(src, PROC_REF(spin_to_win), target), 2 SECONDS, TIMER_DELETE_ME)
-	attackcycle = 2
+	addtimer(CALLBACK(src, PROC_REF(spin_to_win), target, 2), 2 SECONDS, TIMER_DELETE_ME)
+	attackcycle = 0
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/darkmatter_assualt/proc/phasetwo_cycletwo(atom/target) //summon the most useless horde
 	specialattackprojectile = /obj/item/projectile/energy/infernosphere
-	addtimer(CALLBACK(src, PROC_REF(beglaser), target), 1 SECOND, TIMER_DELETE_ME)
-	attackcycle = 3
+	addtimer(CALLBACK(src, PROC_REF(beglaser), target, 3), 1 SECOND, TIMER_DELETE_ME)
+	attackcycle = 0
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/darkmatter_assualt/proc/phasetwo_cyclethree(atom/target) //turns out the horde is meant to be a shield for the next attack.
 	specialattackprojectile = /obj/item/projectile/energy/infernosphere
@@ -892,13 +896,13 @@
 //Phase three 2 wierd patterns, and 1 strange attack.
 /mob/living/simple_mob/mechanical/mecha/eclipse/darkmatter_assualt/proc/phasethree_cycleone(atom/target)
 	specialattackprojectile = /obj/item/projectile/energy/infernosphere
-	addtimer(CALLBACK(src, PROC_REF(spin_to_win), target), 2 SECONDS, TIMER_DELETE_ME)
-	attackcycle = 2
+	addtimer(CALLBACK(src, PROC_REF(spin_to_win), target, 2), 2 SECONDS, TIMER_DELETE_ME)
+	attackcycle = 0
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/darkmatter_assualt/proc/phasethree_cycletwo(atom/target)
 	specialattackprojectile = /obj/item/projectile/energy/homing_bolt
-	addtimer(CALLBACK(src, PROC_REF(beglaser), target), 1 SECOND, TIMER_DELETE_ME)
-	attackcycle = 3
+	addtimer(CALLBACK(src, PROC_REF(beglaser), target, 3), 1 SECOND, TIMER_DELETE_ME)
+	attackcycle = 0
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/darkmatter_assualt/proc/phasethree_cyclethree(atom/target) //eight spinning death beams
 	specialattackprojectile = /obj/item/projectile/energy/darkspike
