@@ -40,7 +40,11 @@
 			var/channel = href_list["change_volume"]
 			if(!(channel in pref.volume_channels))
 				pref.volume_channels["[channel]"] = 1
+<<<<<<< HEAD
 			var/value = tgui_input_number(user, "Choose your volume for [channel] (0-200%)", "[channel] volume", (pref.volume_channels[channel] * 100), 200, 0) //ChompEDIT - usr removal
+=======
+			var/value = tgui_input_number(user, "Choose your volume for [channel] (0-200%)", "[channel] volume", (pref.volume_channels[channel] * 100), 200, 0)
+>>>>>>> b33dd0fd67 (Merge pull request #16595 from Kashargul/usr-to-user-up-to-player_effects)
 			if(isnum(value))
 				value = CLAMP(value, 0, 200)
 				pref.volume_channels["[channel]"] = (value / 100)
@@ -79,14 +83,14 @@
 	data["volume_channels"] = user.client.prefs.volume_channels
 	return data
 
-/datum/volume_panel/tgui_act(action, params)
+/datum/volume_panel/tgui_act(action, params, datum/tgui/ui)
 	if(..())
 		return TRUE
 
-	if(!usr?.client?.prefs)
+	if(!ui.user?.client?.prefs)
 		return TRUE
 
-	var/datum/preferences/P = usr.client.prefs
+	var/datum/preferences/P = ui.user.client.prefs
 	switch(action)
 		if("adjust_volume")
 			var/channel = params["channel"]

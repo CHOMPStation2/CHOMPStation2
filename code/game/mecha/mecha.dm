@@ -1422,7 +1422,7 @@
 
 	if(istype(W, /obj/item/card/id)||istype(W, /obj/item/pda))
 		if(add_req_access || maint_access)
-			if(internals_access_allowed(usr))
+			if(internals_access_allowed(user))
 				var/obj/item/card/id/id_card
 				if(istype(W, /obj/item/card/id))
 					id_card = W

@@ -93,7 +93,7 @@
 	data["valve"] = valve_open
 	return data
 
-/obj/item/transfer_valve/tgui_act(action, params)
+/obj/item/transfer_valve/tgui_act(action, params, datum/tgui/ui)
 	if(..())
 		return
 	. = TRUE
@@ -106,7 +106,7 @@
 			toggle_valve()
 		if("device")
 			if(attached_device)
-				attached_device.attack_self(usr)
+				attached_device.attack_self(ui.user)
 		if("remove_device")
 			if(attached_device)
 				attached_device.forceMove(get_turf(src))
@@ -117,7 +117,7 @@
 			. = FALSE
 	if(.)
 		update_icon()
-		add_fingerprint(usr)
+		add_fingerprint(ui.user)
 
 /obj/item/transfer_valve/proc/process_activation(var/obj/item/D)
 	if(toggle)
