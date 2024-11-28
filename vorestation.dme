@@ -1072,7 +1072,11 @@
 #include "code\game\machinery\teleporter.dm"
 #include "code\game\machinery\transportpod.dm"
 #include "code\game\machinery\turret_control.dm"
+<<<<<<< HEAD
 #include "code\game\machinery\vending_yw.dm"
+=======
+#include "code\game\machinery\upgrade_machinery.dm"
+>>>>>>> 121532e26c (Merge pull request #16622 from Darlantanis/MapUpgrades)
 #include "code\game\machinery\vitals_monitor.dm"
 #include "code\game\machinery\wall_frames.dm"
 #include "code\game\machinery\washing_machine.dm"
