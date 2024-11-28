@@ -5790,8 +5790,12 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/lobby)
 "lC" = (
-/obj/item/bedsheet/bluedouble,
-/obj/structure/bed/double/padded,
+/obj/item/bedsheet/bluedouble{
+	dir = 1
+	},
+/obj/structure/bed/double/padded{
+	dir = 1
+	},
 /obj/structure/curtain/black,
 /turf/simulated/floor/carpet,
 /area/stellardelight/deck1/dorms/dorm8)
@@ -12869,8 +12873,12 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/assembly/robotics)
 "AP" = (
-/obj/item/bedsheet/bluedouble,
-/obj/structure/bed/double/padded,
+/obj/item/bedsheet/bluedouble{
+	dir = 1
+	},
+/obj/structure/bed/double/padded{
+	dir = 1
+	},
 /obj/structure/curtain/black,
 /turf/simulated/floor/carpet,
 /area/stellardelight/deck1/dorms/dorm5)
@@ -21279,8 +21287,12 @@
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck1/exploration)
 "Tc" = (
-/obj/item/bedsheet/orangedouble,
-/obj/structure/bed/double/padded,
+/obj/item/bedsheet/orangedouble{
+	dir = 1
+	},
+/obj/structure/bed/double/padded{
+	dir = 1
+	},
 /obj/structure/curtain/black,
 /turf/simulated/floor/carpet/purcarpet,
 /area/stellardelight/deck1/dorms/dorm7)
@@ -21607,8 +21619,12 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/armoury)
 "TN" = (
-/obj/item/bedsheet/orangedouble,
-/obj/structure/bed/double/padded,
+/obj/item/bedsheet/orangedouble{
+	dir = 1
+	},
+/obj/structure/bed/double/padded{
+	dir = 1
+	},
 /obj/structure/curtain/black,
 /turf/simulated/floor/carpet/purcarpet,
 /area/stellardelight/deck1/dorms/dorm6)
