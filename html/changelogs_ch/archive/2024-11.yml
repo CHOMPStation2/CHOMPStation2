@@ -150,3 +150,7 @@
       if eaten with spont pred/food vore disabled
   - bugfix: Eating someone bound to a food item no longer makes them astral project
       as a ghost in the world
+2024-11-28:
+  Birdiest-Bird:
+  - rscadd: '*caw'
+  - sound: sound/voice/caw.ogg

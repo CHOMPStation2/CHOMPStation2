@@ -1,5 +1,0 @@
-author: "Birdiest-Bird"
-delete-after: True
-changes:
-  - rscadd: "*caw"
-  - sound: "sound/voice/caw.ogg"
