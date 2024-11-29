@@ -304,7 +304,7 @@
 		else
 			var/datum/language/L = locate(href_list["default_lang"])
 			if(L && (L in languages))
-				apply_default_language(L) //CHOMPEdit
+				apply_default_language(L)
 		check_languages()
 		return 1
 	else if(href_list["set_lang_key"])
