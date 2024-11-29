@@ -181,13 +181,13 @@
 	if(newjob.camp_protection && round_duration_in_ds < CONFIG_GET(number/job_camp_time_limit))
 		if(SSjob.restricted_keys.len)
 			var/list/check = SSjob.restricted_keys[newjob.title]
-			if(usr.client.ckey in check)
-				to_chat(usr,span_danger("[newjob.title] is not presently selectable because you played as it last round. It will become available to you in [round((CONFIG_GET(number/job_camp_time_limit) - round_duration_in_ds) / 600)] minutes, if slots remain open."))
+			if(user.client.ckey in check)
+				to_chat(user,span_danger("[newjob.title] is not presently selectable because you played as it last round. It will become available to you in [round((CONFIG_GET(number/job_camp_time_limit) - round_duration_in_ds) / 600)] minutes, if slots remain open."))
 				return
 	//CHOMPadd END
 
 	if(newjob)
-		newjob.register_shift_key(usr.client.ckey)//CHOMPadd
+		newjob.register_shift_key(user.client.ckey)//CHOMPadd
 		card.access = newjob.get_access()
 		card.rank = newjob.title
 		card.assignment = newassignment
@@ -237,21 +237,13 @@
 		return FALSE
 	return TRUE
 
-<<<<<<< HEAD
-/obj/machinery/computer/timeclock/proc/checkFace()
-	var/turf/location = get_turf(src) // CHOMPedit: Needed for admin logs.
-=======
 /obj/machinery/computer/timeclock/proc/checkFace(var/mob/user)
->>>>>>> b33dd0fd67 (Merge pull request #16595 from Kashargul/usr-to-user-up-to-player_effects)
+	var/turf/location = get_turf(src) // CHOMPedit: Needed for admin logs.
 	if(!card)
 		to_chat(user, span_notice("No ID is inserted."))
 		return FALSE
-<<<<<<< HEAD
 /* CHOMPedit start. Allows anyone to change people's IDs.
-	var/mob/living/carbon/human/H = usr
-=======
 	var/mob/living/carbon/human/H = user
->>>>>>> b33dd0fd67 (Merge pull request #16595 from Kashargul/usr-to-user-up-to-player_effects)
 	if(!(istype(H)))
 		to_chat(user, span_warning("Invalid user detected. Access denied."))
 		return FALSE
@@ -263,8 +255,8 @@
 		return FALSE
 CHOMPedit end. */
 	else
-		message_admins("[key_name_admin(usr)] has modified '[card.registered_name]' 's ID with a timeclock terminal. [ADMIN_JMP(location)]") // CHOMPedit: Logging
-		log_game("[key_name_admin(usr)] has modified '[card.registered_name]' 's ID with a timeclock terminal.") // CHOMPedit: Logging
+		message_admins("[key_name_admin(user)] has modified '[card.registered_name]' 's ID with a timeclock terminal. [ADMIN_JMP(location)]") // CHOMPedit: Logging
+		log_game("[key_name_admin(user)] has modified '[card.registered_name]' 's ID with a timeclock terminal.") // CHOMPedit: Logging
 		return TRUE
 
 /obj/item/card/id

@@ -43,30 +43,19 @@
 			to_chat(user,span_warning("A warning pops up on the device, informing you that [M] is dead, and, as such, the mind transfer can not be done."))
 			return
 
-<<<<<<< HEAD
-		var/choice = tgui_alert(usr,"This will swap your mind with the target's mind. This will result in them controlling your body, and you controlling their body. Continue?","Confirmation",list("Continue","Cancel"))
-		if(choice == "Continue" && usr.get_active_hand() == src && usr.Adjacent(M))
+		var/choice = tgui_alert(user,"This will swap your mind with the target's mind. This will result in them controlling your body, and you controlling their body. Continue?","Confirmation",list("Continue","Cancel"))
+		if(choice == "Continue" && user.get_active_hand() == src && user.Adjacent(M))
 			//CHOMPAdd Start - Admin logging for Body Snatcher usage
 			if(M.ckey && !M.client)
 				log_and_message_admins("attempted to body swap with [key_name(M)] while they were SSD!")
 			else
 				log_and_message_admins("attempted to body swap with [key_name(M)].")
 			//CHOMPAdd End
-			usr.visible_message(span_warning("[usr] pushes the device up their forehead and [M]'s head, the device beginning to let out a series of light beeps!"),span_notice("You begin swap minds with [M]!"))
-			if(do_after(usr,35 SECONDS,M))
-				if(usr.mind && M.mind && M.stat != DEAD && usr.stat != DEAD)
-					log_and_message_admins("[usr.ckey] used a Bodysnatcher to swap bodies with [M.ckey]")
-					to_chat(usr,span_notice("Your minds have been swapped! Have a nice day."))
-=======
-		var/choice = tgui_alert(user,"This will swap your mind with the target's mind. This will result in them controlling your body, and you controlling their body. Continue?","Confirmation",list("Continue","Cancel"))
-		if(choice == "Continue" && user.get_active_hand() == src && user.Adjacent(M))
-
 			user.visible_message(span_warning("[user] pushes the device up their forehead and [M]'s head, the device beginning to let out a series of light beeps!"),span_notice("You begin swap minds with [M]!"))
 			if(do_after(user,35 SECONDS,M))
 				if(user.mind && M.mind && M.stat != DEAD && user.stat != DEAD)
 					log_and_message_admins("[user.ckey] used a Bodysnatcher to swap bodies with [M.ckey]")
 					to_chat(user,span_notice("Your minds have been swapped! Have a nice day."))
->>>>>>> b33dd0fd67 (Merge pull request #16595 from Kashargul/usr-to-user-up-to-player_effects)
 					var/datum/mind/user_mind = user.mind
 					var/datum/mind/prey_mind = M.mind
 					var/target_ooc_notes = M.ooc_notes

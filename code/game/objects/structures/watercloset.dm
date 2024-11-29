@@ -620,17 +620,13 @@
 	var/obj/item/I = O
 	if(!I || !istype(I,/obj/item)) return
 
-<<<<<<< HEAD
 	//CHOMPAdd Start
 	if(istype(I, /obj/item/robot_tongue) && isrobot(user))
 		var/obj/item/robot_tongue/J = I
 		if(J.water.energy < J.water.max_energy) return
 	//CHOMPAdd End
 
-	to_chat(usr, span_notice("You start washing \the [I]."))
-=======
 	to_chat(user, span_notice("You start washing \the [I]."))
->>>>>>> b33dd0fd67 (Merge pull request #16595 from Kashargul/usr-to-user-up-to-player_effects)
 
 	busy = 1
 	if(!do_after(user, 40, src))

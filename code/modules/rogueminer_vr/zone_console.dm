@@ -164,11 +164,8 @@
 	You can then travel to the new area to mine in that location.<br>
 	<br>
 	<font size=1>This technology produced under license from Thinktronic Systems, LTD.</font>"}
-<<<<<<< HEAD
 
 
 #undef OUTPOST_Z
 #undef TRANSIT_Z
 #undef BELT_Z
-=======
->>>>>>> b33dd0fd67 (Merge pull request #16595 from Kashargul/usr-to-user-up-to-player_effects)

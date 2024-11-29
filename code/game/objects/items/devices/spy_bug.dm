@@ -201,11 +201,7 @@
 
 	operating = 1
 	while(selected_camera && Adjacent(user))
-<<<<<<< HEAD
-		selected_camera = tgui_input_list(user, "Select camera to view.", "Camera Choice", cameras) //ChompEDIT usr --> src
-=======
 		selected_camera = tgui_input_list(user, "Select camera to view.", "Camera Choice", cameras)
->>>>>>> b33dd0fd67 (Merge pull request #16595 from Kashargul/usr-to-user-up-to-player_effects)
 	selected_camera = null
 	operating = 0
 

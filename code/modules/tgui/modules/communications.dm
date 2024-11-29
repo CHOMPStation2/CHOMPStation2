@@ -272,21 +272,14 @@
 			if(!is_authenticated(ui.user))
 				return
 
-<<<<<<< HEAD
 			//CHOMPEdit Start - Add confirmation message
-			var/response = tgui_alert(usr, "OOC: You are required to Ahelp first before calling the shuttle. Please obtain confirmation from staff before calling the shuttle. \n\n Are you sure you want to call the shuttle?", "Confirm", list("Yes", "No"))
+			var/response = tgui_alert(ui.user, "OOC: You are required to Ahelp first before calling the shuttle. Please obtain confirmation from staff before calling the shuttle. \n\n Are you sure you want to call the shuttle?", "Confirm", list("Yes", "No"))
 
 			if(response == "Yes") //CHOMPEdit End
-				call_shuttle_proc(usr)
+				call_shuttle_proc(ui.user)
 				if(emergency_shuttle.online())
-					post_status(src, "shuttle", user = usr)
-				setMenuState(usr, COMM_SCREEN_MAIN)
-=======
-			call_shuttle_proc(ui.user)
-			if(emergency_shuttle.online())
-				post_status(src, "shuttle", user = ui.user)
-			setMenuState(ui.user, COMM_SCREEN_MAIN)
->>>>>>> b33dd0fd67 (Merge pull request #16595 from Kashargul/usr-to-user-up-to-player_effects)
+					post_status(src, "shuttle", user = ui.user)
+				setMenuState(ui.user, COMM_SCREEN_MAIN)
 
 		if("cancelshuttle")
 			if(isAI(ui.user) || isrobot(ui.user))

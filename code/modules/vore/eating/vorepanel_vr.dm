@@ -697,15 +697,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				if(choice != "Yes, save.")
 					return TRUE
 			if(!host.save_vore_prefs())
-<<<<<<< HEAD
-				tgui_alert_async(usr, "ERROR: Chomp-specific preferences failed to save!","Error")
+				tgui_alert_async(ui.user, "ERROR: Chomp-specific preferences failed to save!","Error") // CHOMPEdit
 			else
-				to_chat(usr, span_notice("Chomp-specific preferences saved!"))
-=======
-				tgui_alert_async(ui.user, "ERROR: Virgo-specific preferences failed to save!","Error")
-			else
-				to_chat(ui.user, span_notice("Virgo-specific preferences saved!"))
->>>>>>> b33dd0fd67 (Merge pull request #16595 from Kashargul/usr-to-user-up-to-player_effects)
+				to_chat(ui.user, span_notice("Chomp-specific preferences saved!")) // CHOMPEdit
 				unsaved_changes = FALSE
 			return TRUE
 		if("reloadprefs")
@@ -713,15 +707,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			if(alert != "Reload")
 				return FALSE
 			if(!host.apply_vore_prefs())
-<<<<<<< HEAD
-				tgui_alert_async(usr, "ERROR: Chomp-specific preferences failed to apply!","Error")
+				tgui_alert_async(ui.user, "ERROR: Chomp-specific preferences failed to apply!","Error") // CHOMPEdit
 			else
-				to_chat(usr,span_notice("Chomp-specific preferences applied from active slot!"))
-=======
-				tgui_alert_async(ui.user, "ERROR: Virgo-specific preferences failed to apply!","Error")
-			else
-				to_chat(ui.user,span_notice("Virgo-specific preferences applied from active slot!"))
->>>>>>> b33dd0fd67 (Merge pull request #16595 from Kashargul/usr-to-user-up-to-player_effects)
+				to_chat(ui.user,span_notice("Chomp-specific preferences applied from active slot!")) // CHOMPEdit
 				unsaved_changes = FALSE
 			return TRUE
 		if("loadprefsfromslot")
@@ -729,15 +717,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			if(alert != "Load")
 				return FALSE
 			if(!host.load_vore_prefs_from_slot())
-<<<<<<< HEAD
-				tgui_alert_async(usr, "ERROR: Vore-specific preferences failed to apply!","Error") //CHOMPEdit
+				tgui_alert_async(ui.user, "ERROR: Vore-specific preferences failed to apply!","Error") //CHOMPEdit
 			else
-				to_chat(usr,span_notice("Vore-specific preferences applied from active slot!")) //CHOMPEdit
-=======
-				tgui_alert_async(ui.user, "ERROR: Virgo-specific preferences failed to apply!","Error")
-			else
-				to_chat(ui.user,span_notice("Virgo-specific preferences applied from active slot!"))
->>>>>>> b33dd0fd67 (Merge pull request #16595 from Kashargul/usr-to-user-up-to-player_effects)
+				to_chat(ui.user,span_notice("Vore-specific preferences applied from active slot!")) //CHOMPEdit
 				unsaved_changes = TRUE
 			return TRUE
 		//CHOMPEdit - "Belly HTML Export Earlyport"
@@ -921,9 +903,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			return TRUE
 		//CHOMPedit start: liquid belly code
 		if("liq_set_attribute")
-			return liq_set_attr(usr, params)
+			return liq_set_attr(ui.user, params)
 		if("liq_set_messages")
-			return liq_set_msg(usr, params)
+			return liq_set_msg(ui.user, params)
 		if("toggle_liq_rec")
 			host.receive_reagents = !host.receive_reagents
 			if(host.client.prefs_vr)
@@ -1024,22 +1006,12 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			return TRUE
 		//CHOMPEdit start - vore sprites color
 		if("set_vs_color")
-<<<<<<< HEAD
-			var/belly_choice = tgui_input_list(usr, "Which vore sprite are you going to edit the color of?", "Vore Sprite Color", host.vore_icon_bellies)
+			var/belly_choice = tgui_input_list(ui.user, "Which vore sprite are you going to edit the color of?", "Vore Sprite Color", host.vore_icon_bellies)
 			if(belly_choice)
-				var/newcolor = input(usr, "Choose a color.", "", host.vore_sprite_color[belly_choice]) as color|null
+				var/newcolor = input(ui.user, "Choose a color.", "", host.vore_sprite_color[belly_choice]) as color|null
 				if(newcolor)
 					host.vore_sprite_color[belly_choice] = newcolor
-					var/multiply = tgui_input_list(usr, "Set the color to be applied multiplicatively or additively? Currently in [host.vore_sprite_multiply[belly_choice] ? "Multiply" : "Add"]", "Vore Sprite Color", list("Multiply", "Add"))
-=======
-			if (istype(host, /mob/living/carbon/human))
-				var/mob/living/carbon/human/hhost = host
-				var/belly_choice = tgui_input_list(ui.user, "Which vore sprite are you going to edit the color of?", "Vore Sprite Color", hhost.vore_icon_bellies)
-				var/newcolor = input(ui.user, "Choose a color.", "", hhost.vore_sprite_color[belly_choice]) as color|null
-				if(newcolor)
-					hhost.vore_sprite_color[belly_choice] = newcolor
-					var/multiply = tgui_input_list(ui.user, "Set the color to be applied multiplicatively or additively? Currently in [hhost.vore_sprite_multiply[belly_choice] ? "Multiply" : "Add"]", "Vore Sprite Color", list("Multiply", "Add"))
->>>>>>> b33dd0fd67 (Merge pull request #16595 from Kashargul/usr-to-user-up-to-player_effects)
+					var/multiply = tgui_input_list(ui.user, "Set the color to be applied multiplicatively or additively? Currently in [host.vore_sprite_multiply[belly_choice] ? "Multiply" : "Add"]", "Vore Sprite Color", list("Multiply", "Add"))
 					if(multiply == "Multiply")
 						host.vore_sprite_multiply[belly_choice] = TRUE
 					else if(multiply == "Add")
@@ -1048,7 +1020,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 					unsaved_changes = TRUE
 			return TRUE
 		if("set_belly_rub")
-			host.belly_rub_target = tgui_input_list(usr, "Which belly would you prefer to be rubbed?","Select Target", host.vore_organs)
+			host.belly_rub_target = tgui_input_list(ui.user, "Which belly would you prefer to be rubbed?","Select Target", host.vore_organs)
 			if(!(host.belly_rub_target))
 				host.belly_rub_target = null
 			if(host.client.prefs_vr)
@@ -2573,7 +2545,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.vore_selected.autotransferlocation = choice.name
 			. = TRUE
 		if("b_autotransferextralocation")
-			var/obj/belly/choice = tgui_input_list(usr, "What extra places do you want your [lowertext(host.vore_selected.name)] auto-transfer to?","Select Belly", (host.vore_organs - host.vore_selected - host.vore_selected.autotransferlocation))
+			var/obj/belly/choice = tgui_input_list(user, "What extra places do you want your [lowertext(host.vore_selected.name)] auto-transfer to?","Select Belly", (host.vore_organs - host.vore_selected - host.vore_selected.autotransferlocation))
 			if(!choice) //They cancelled, no changes
 				return FALSE
 			else if(choice.name in host.vore_selected.autotransferextralocation)
@@ -2596,7 +2568,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.vore_selected.autotransferlocation_secondary = choice.name
 			. = TRUE
 		if("b_autotransferextralocation_secondary")
-			var/obj/belly/choice = tgui_input_list(usr, "What extra places do you want your [lowertext(host.vore_selected.name)] auto-transfer to?","Select Belly", (host.vore_organs - host.vore_selected - host.vore_selected.autotransferlocation_secondary))
+			var/obj/belly/choice = tgui_input_list(user, "What extra places do you want your [lowertext(host.vore_selected.name)] auto-transfer to?","Select Belly", (host.vore_organs - host.vore_selected - host.vore_selected.autotransferlocation_secondary))
 			if(!choice) //They cancelled, no changes
 				return FALSE
 			else if(choice.name in host.vore_selected.autotransferextralocation_secondary)

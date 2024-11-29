@@ -706,21 +706,13 @@
 	// Yes, this is kinda snowflaky; however, I would argue it would be far more snowflakey
 	// to include "custom hrefs" and all the other bullshit that nano states have just for the
 	// like, two UIs, that want remote access to other UIs.
-<<<<<<< HEAD
-	if((locked && !(siliconaccess(usr) || (isobserver(usr) && is_admin(usr))) && !istype(state, /datum/tgui_state/air_alarm_remote)) || (issilicon(usr) && aidisabled)) //CHOMPedit borg access
-=======
-	if((locked && !issilicon(ui.user) && !istype(state, /datum/tgui_state/air_alarm_remote)) || (issilicon(ui.user) && aidisabled))
->>>>>>> b33dd0fd67 (Merge pull request #16595 from Kashargul/usr-to-user-up-to-player_effects)
+	if((locked && !(siliconaccess(ui.user) || (isobserver(ui.user) && is_admin(ui.user))) && !istype(state, /datum/tgui_state/air_alarm_remote)) || (issilicon(ui.user) && aidisabled)) //CHOMPedit borg access
 		return
 
 	var/device_id = params["id_tag"]
 	switch(action)
 		if("lock")
-<<<<<<< HEAD
-			if((siliconaccess(usr) && !wires.is_cut(WIRE_IDSCAN)) || (isobserver(usr) && is_admin(usr))) //CHOMPEdit borg access + admin acces
-=======
-			if(issilicon(ui.user) && !wires.is_cut(WIRE_IDSCAN))
->>>>>>> b33dd0fd67 (Merge pull request #16595 from Kashargul/usr-to-user-up-to-player_effects)
+			if((siliconaccess(ui.user) && !wires.is_cut(WIRE_IDSCAN)) || (isobserver(ui.user) && is_admin(ui.user))) //CHOMPEdit borg access + admin acces
 				locked = !locked
 				. = TRUE
 		if( "power",

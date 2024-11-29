@@ -921,19 +921,12 @@ GLOBAL_LIST_EMPTY(apcs)
 	// If can_admin_interact() wasn't only defined on observers, this could just be part of a single-line
 	// conditional.
 	var/locked_exception = FALSE
-<<<<<<< HEAD
-	if(siliconaccess(usr) || action == "nightshift") //CHOMPEdit borg access
+	if(siliconaccess(ui.user) || action == "nightshift") //CHOMPEdit borg access
 		locked_exception = TRUE
 
 
-	if(isobserver(usr))
-		var/mob/observer/dead/D = usr
-=======
-	if(issilicon(ui.user) || action == "nightshift")
-		locked_exception = TRUE
 	if(isobserver(ui.user))
 		var/mob/observer/dead/D = ui.user
->>>>>>> b33dd0fd67 (Merge pull request #16595 from Kashargul/usr-to-user-up-to-player_effects)
 		if(D.can_admin_interact())
 			locked_exception = TRUE
 
