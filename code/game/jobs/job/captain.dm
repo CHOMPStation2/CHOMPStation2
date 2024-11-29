@@ -36,12 +36,8 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	job_description = "The " + JOB_SITE_MANAGER + " manages the other Command Staff, and through them the rest of the station. Though they have access to everything, \
 						they do not understand everything, and are expected to delegate tasks to the appropriate crew member. The " + JOB_SITE_MANAGER + " is expected to \
 						have an understanding of Standard Operating Procedure, and is subject to it, and legal action, in the same way as every other crew member."
-<<<<<<< HEAD
-	alt_titles = list(JOB_ALT_OVERSEER= /datum/alt_title/overseer,JOB_ALT_COLONY_DIRECTOR= /datum/alt_title/colonydirector) //CHOMPEdit
-=======
 	alt_titles = list(JOB_ALT_OVERSEER= /datum/alt_title/overseer, JOB_ALT_FACILITY_DIRECTOR = /datum/alt_title/facility_director, JOB_ALT_CHIEF_SUPERVISOR = /datum/alt_title/chief_supervisor,
-						JOB_ALT_CAPTAIN = /datum/alt_title/captain)
->>>>>>> 7f5fe8ab91 (Merge pull request #16642 from KillianKirilenko/kk-vrjobs)
+						JOB_ALT_CAPTAIN = /datum/alt_title/captain,JOB_ALT_COLONY_DIRECTOR= /datum/alt_title/colonydirector) //CHOMPEdit
 
 
 /*
@@ -61,10 +57,11 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 /datum/alt_title/overseer
 	title = JOB_ALT_OVERSEER
 
-<<<<<<< HEAD
-/datum/alt_title/colonydirector	//CHOMPEdit
-	title = JOB_ALT_COLONY_DIRECTOR	//CHOMPEdit
-=======
+// CHOMPAdd Start
+/datum/alt_title/colonydirector
+	title = JOB_ALT_COLONY_DIRECTOR
+// CHOMPAdd End
+
 /datum/alt_title/facility_director
 	title = JOB_ALT_FACILITY_DIRECTOR
 
@@ -73,7 +70,6 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 
 /datum/alt_title/captain
 	title = JOB_ALT_CAPTAIN
->>>>>>> 7f5fe8ab91 (Merge pull request #16642 from KillianKirilenko/kk-vrjobs)
 
 //////////////////////////////////
 //		Head of Personnel
@@ -109,18 +105,14 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	outfit_type = /decl/hierarchy/outfit/job/hop
 	job_description = "The " + JOB_HEAD_OF_PERSONNEL + " manages the Service department and most other civilians. They also \
 						manage the Supply department, through the " + JOB_QUARTERMASTER + ". In addition, the " + JOB_HEAD_OF_PERSONNEL + " oversees the personal accounts \
-<<<<<<< HEAD
 						of the crew, including their money and access. If necessary, the " + JOB_HEAD_OF_PERSONNEL + " is first in line to assume Acting Command." //YW EDIT
-	alt_titles = list(JOB_ALT_CREW_RESOURCE_OFFICER = /datum/alt_title/cro)
-=======
-						of the crew, including their money and access. If necessary, the " + JOB_HEAD_OF_PERSONNEL + " is first in line to assume Acting Command."
->>>>>>> 7f5fe8ab91 (Merge pull request #16642 from KillianKirilenko/kk-vrjobs)
+	alt_titles = list(JOB_ALT_CREW_RESOURCE_OFFICER = /datum/alt_title/cro, JOB_ALT_DEPUTY_MANAGER = /datum/alt_title/deputy_manager, JOB_ALT_STAFF_MANAGER = /datum/alt_title/staff_manager,
+						JOB_ALT_FACILITY_STEWARD = /datum/alt_title/facility_steward, JOB_ALT_FIRST_MATE = /datum/alt_title/first_mate //CHOMPEdit
+						, JOB_ALT_PERFORMANCE_MANAGEMENT_SUPERVISOR = /datum/alt_title/performance_management_supervisor) //CHOMPEdit
 
 	access = list(access_security, access_sec_doors, access_brig, access_forensics_lockers, access_medical, access_engine, access_change_ids, access_ai_upload, access_eva, access_heads, access_all_personal_lockers, access_maint_tunnels, access_bar, access_janitor, access_construction, access_morgue, access_crematorium, access_kitchen, access_cargo, access_cargo_bot, access_mailsorting, access_qm, access_hydroponics, access_lawyer, access_chapel_office, access_library, access_research, access_mining, access_heads_vault, access_mining_station, access_hop, access_RC_announce, access_clown, access_tomfoolery, access_mime, access_keycard_auth, access_gateway, access_entertainment)
 	minimal_access = list(access_security, access_sec_doors, access_brig, access_forensics_lockers,access_medical, access_engine, access_change_ids, access_ai_upload, access_eva, access_heads,access_all_personal_lockers, access_maint_tunnels, access_bar, access_janitor, access_construction, access_morgue, access_crematorium, access_kitchen, access_cargo, access_cargo_bot, access_mailsorting, access_qm, access_hydroponics, access_lawyer,access_chapel_office, access_library, access_research, access_mining, access_heads_vault, access_mining_station, access_hop, access_RC_announce, access_clown, access_tomfoolery, access_mime, access_keycard_auth, access_gateway, access_entertainment)
 
-	alt_titles = list(JOB_ALT_CREW_RESOURCE_OFFICER = /datum/alt_title/cro, JOB_ALT_DEPUTY_MANAGER = /datum/alt_title/deputy_manager, JOB_ALT_STAFF_MANAGER = /datum/alt_title/staff_manager,
-						JOB_ALT_FACILITY_STEWARD = /datum/alt_title/facility_steward, JOB_ALT_FIRST_MATE = /datum/alt_title/first_mate)
 
 /datum/job/hop/get_request_reasons()
 	return list("ID modification", "Training crew", "Assembling expedition team")
@@ -141,6 +133,11 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 /datum/alt_title/first_mate
 	title = JOB_ALT_FIRST_MATE
 
+//CHOMPEDIT START: More Alt titles
+/datum/alt_title/performance_management_supervisor
+	title = JOB_ALT_PERFORMANCE_MANAGEMENT_SUPERVISOR //This one can be somewhat seen as an analogue to the captains "Chief Supervisor" role
+//CHOMPEDIT END
+
 //////////////////////////////////
 //		Command Secretary
 //////////////////////////////////
@@ -158,19 +155,15 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	selection_color = "#1D1D4F"
 	minimal_player_age = 5
 	economic_modifier = 7
-
-<<<<<<< HEAD
-	access = list(access_heads, access_keycard_auth, access_RC_announce) //YAWN EDIT
-	minimal_access = list(access_heads, access_keycard_auth, access_RC_announce)//YAWN EDIT
-=======
 	disallow_jobhop = TRUE
 	pto_type = PTO_CIVILIAN
 	alt_titles = list(JOB_ALT_COMMAND_LIAISON = /datum/alt_title/command_liaison, JOB_ALT_COMMAND_ASSISTANT = /datum/alt_title/command_assistant, JOB_ALT_COMMAND_INTERN = /datum/alt_title/command_intern,
-						JOB_ALT_BRIDGE_SECRETARY = /datum/alt_title/bridge_secretary, JOB_ALT_BRIDGE_ASSISTANT = /datum/alt_title/bridge_assistant)
+						JOB_ALT_BRIDGE_SECRETARY = /datum/alt_title/bridge_secretary, JOB_ALT_BRIDGE_ASSISTANT = /datum/alt_title/bridge_assistant,
+						JOB_ALT_BRIDGE_OFFICER = /datum/alt_title/bridge_officer //ChompEDIT add bridge officer
+						)
 
-	access = list(access_heads, access_keycard_auth)
-	minimal_access = list(access_heads, access_keycard_auth)
->>>>>>> 7f5fe8ab91 (Merge pull request #16642 from KillianKirilenko/kk-vrjobs)
+	access = list(access_heads, access_keycard_auth, access_RC_announce) //YAWN EDIT
+	minimal_access = list(access_heads, access_keycard_auth, access_RC_announce)//YAWN EDIT
 
 	outfit_type = /decl/hierarchy/outfit/job/secretary
 	job_description = "A " + JOB_COMMAND_SECRETARY + " handles paperwork duty for the Heads of Staff, so they can better focus on managing their departments. \

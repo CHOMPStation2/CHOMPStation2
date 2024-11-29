@@ -16,21 +16,13 @@
 	req_admin_notify = 1
 	economic_modifier = 10
 	access = list(access_medical, access_medical_equip, access_morgue, access_genetics, access_heads,
-<<<<<<< HEAD
-			access_chemistry, access_virology, access_cmo, access_surgery, access_RC_announce, access_teleporter,
-			access_keycard_auth, access_sec_doors, access_psychiatrist, access_eva, access_external_airlocks, access_maint_tunnels)
-	minimal_access = list(access_medical, access_medical_equip, access_morgue, access_genetics, access_heads,
-			access_chemistry, access_virology, access_cmo, access_surgery, access_RC_announce, access_teleporter,
-			access_keycard_auth, access_sec_doors, access_psychiatrist, access_eva, access_external_airlocks, access_maint_tunnels)
-=======
-				access_chemistry, access_virology, access_cmo, access_surgery, access_RC_announce,
-				access_keycard_auth, access_psychiatrist, access_eva, access_external_airlocks, access_maint_tunnels, access_gateway)
+			access_chemistry, access_virology, access_cmo, access_surgery, access_RC_announce, access_teleporter, //CHOMPEdit
+			access_keycard_auth, access_psychiatrist, access_eva, access_external_airlocks, access_maint_tunnels, access_gateway)
 
 	minimal_access = list(access_medical, access_medical_equip, access_morgue, access_genetics, access_heads,
-				access_chemistry, access_virology, access_cmo, access_surgery, access_RC_announce,
-				access_keycard_auth, access_psychiatrist, access_eva, access_external_airlocks, access_maint_tunnels, access_gateway)
-	alt_titles = list(JOB_ALT_CHIEF_PHYSICIAN = /datum/alt_title/chief_physician, JOB_ALT_MEDICAL_DIRECTOR = /datum/alt_title/medical_director, JOB_ALT_HEALTHCARE_MANAGER = /datum/alt_title/healthcare_manager)
->>>>>>> 7f5fe8ab91 (Merge pull request #16642 from KillianKirilenko/kk-vrjobs)
+			access_chemistry, access_virology, access_cmo, access_surgery, access_RC_announce, access_teleporter,//CHOMPEdit
+			access_keycard_auth, access_psychiatrist, access_eva, access_external_airlocks, access_maint_tunnels, access_gateway)
+	alt_titles = list(JOB_ALT_CHIEF_PHYSICIAN = /datum/alt_title/chief_physician, JOB_ALT_MEDICAL_DIRECTOR = /datum/alt_title/medical_director, /*CHOMPEdit RemovalJOB_ALT_HEALTHCARE_MANAGER = /datum/alt_title/healthcare_manager*/)
 
 	minimum_character_age = 25
 	min_age_by_species = list(SPECIES_UNATHI = 70, "mechanical" = 10, SPECIES_HUMAN_VATBORN = 14)
@@ -164,14 +156,10 @@
 	title = JOB_ALT_PHARMACIST
 	title_blurb = "A " + JOB_ALT_PHARMACIST + " focuses on the chemical needs of the Medical Department, and often offers to fill crew prescriptions at their discretion."
 
-<<<<<<< HEAD
-=======
 /datum/alt_title/pharmacologist
 	title = JOB_ALT_PHARMACOLOGIST
 	title_blurb = "A " + JOB_ALT_PHARMACOLOGIST + " focuses on the chemical needs of the Medical Department, primarily specializing in producing more advanced forms of medicine."
 
-/* I'm commenting out Geneticist so you can't actually see it in the job menu, given that you can't play as one - Jon.
->>>>>>> 7f5fe8ab91 (Merge pull request #16642 from KillianKirilenko/kk-vrjobs)
 //////////////////////////////////
 //			Geneticist
 //////////////////////////////////
@@ -244,8 +232,8 @@
 	departments = list(DEPARTMENT_MEDICAL)
 	department_flag = MEDSCI
 	faction = FACTION_STATION
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 2 // CHOMPEdit
+	spawn_positions = 2 // CHOMPEdit
 	pto_type = PTO_MEDICAL
 	supervisors = "the " + JOB_CHIEF_MEDICAL_OFFICER
 	selection_color = "#013D3B"
@@ -255,7 +243,7 @@
 	outfit_type = /decl/hierarchy/outfit/job/medical/paramedic
 	job_description = "A " + JOB_PARAMEDIC + " is primarily concerned with the recovery of patients who are unable to make it to the Medical Department on their own. \
 						They may also be called upon to keep patients stable when Medical is busy or understaffed."
-	alt_titles = list(JOB_ALT_EMERGENCY_MEDICAL_TECHNICIAN = /datum/alt_title/emt, JOB_ALT_MEDICAL_RESPONDER = /datum/alt_title/medical_responder, JOB_ALT_SEARCH_AND_RESCUE = /datum/alt_title/sar)
+	alt_titles = list(JOB_ALT_EMERGENCY_MEDICAL_TECHNICIAN = /datum/alt_title/emt, JOB_ALT_MEDICAL_RESPONDER = /datum/alt_title/medical_responder) //CHOMPedit: Removed SAR because that's an actual job here
 	banned_job_species = list(SPECIES_DIONA)
 
 	min_age_by_species = list(SPECIES_PROMETHEAN = 2)
@@ -276,5 +264,7 @@
 					own. They are capable of keeping a patient stabilized until they reach the hands of someone with more training."
 	title_outfit = /decl/hierarchy/outfit/job/medical/paramedic/emt
 
+/* CHOMPRemove Start, this is an actual job for us
 /datum/alt_title/sar
 	title = JOB_ALT_SEARCH_AND_RESCUE
+*/// CHOMPRemove End

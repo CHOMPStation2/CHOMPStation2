@@ -245,15 +245,15 @@
 						assuming their paperwork is in order."
 	alt_titles = list(JOB_ALT_INTERNAL_AFFAIRS_LIAISON = /datum/alt_title/ia_liaison, JOB_ALT_INTERNAL_AFFAIRS_DELEGATE = /datum/alt_title/ia_delegate,
 						JOB_ALT_INTERNAL_AFFAIRS_INVESTIGATOR = /datum/alt_title/ia_investigator)
+	dept_time_required = 20 // CHOMPEdit
 
-<<<<<<< HEAD
 //YW UNCOMMENTINGSTART: REINSTATE LOYALTY IMPLANT
 /datum/job/lawyer/equip(var/mob/living/carbon/human/H)
 	. = ..()
 	if(.)
 		H.implant_loyalty(H)
 //YW UNCOMMENTING END
-=======
+
 /datum/alt_title/ia_liaison
 	title = JOB_ALT_INTERNAL_AFFAIRS_LIAISON
 
@@ -263,6 +263,7 @@
 /datum/alt_title/ia_investigator
 	title = JOB_ALT_INTERNAL_AFFAIRS_INVESTIGATOR
 
+/*CHOMP Remove Start: because we have our own in maps/southern_cross/southern_cross_jobs.dm
 //////////////////////////////////
 //		      	Pilot
 //////////////////////////////////
@@ -295,6 +296,7 @@
 
 /datum/alt_title/helmsman
 	title = JOB_ALT_HELMSMAN
+*/ //CHOMP Remove end
 
 /datum/job/pilot/get_request_reasons()
 	return list("Assembling expedition team")
@@ -322,7 +324,9 @@
 	alt_titles = list(JOB_ALT_PERFORMER = /datum/alt_title/performer, JOB_ALT_MUSICIAN = /datum/alt_title/musician, JOB_ALT_STAGEHAND = /datum/alt_title/stagehand,
 						JOB_ALT_ACTOR = /datum/alt_title/actor, JOB_ALT_DANCER = /datum/alt_title/dancer, JOB_ALT_SINGER = /datum/alt_title/singer,
 						JOB_ALT_MAGICIAN = /datum/alt_title/magician, JOB_ALT_COMEDIAN = /datum/alt_title/comedian, JOB_ALT_ARTIST = /datum/alt_title/tragedian,
-						JOB_ALT_ARTIST = /datum/alt_title/artist, JOB_ALT_GAME_MASTER = /datum/alt_title/game_master)
+						JOB_CLOWN = /datum/alt_title/clown, JOB_ALT_JESTER = /datum/alt_title/clown/jester,JOB_ALT_FOOL = /datum/alt_title/clown/fool,
+						JOB_MIME= /datum/alt_title/mime,JOB_ALT_PASEUR= /datum/alt_title/mime/poseur, //CHOMPEDIT: Adding clown + mime and their alts as alts of entertainer
+						JOB_ALT_ARTIST = /datum/alt_title/artist, JOB_ALT_FITNESS_INSTRUCTOR = /datum/alt_title/fitnessinstructor, JOB_ALT_GAME_MASTER = /datum/alt_title/game_master)
 
 // Entertainer Alt Titles
 /datum/alt_title/actor
@@ -358,8 +362,8 @@
 	title_blurb = "A " + JOB_ALT_COMEDIAN + " will focus on making people laugh with the power of wit! Telling jokes, stand-up comedy, you are here to make others smile!"
 
 /datum/alt_title/tragedian
-	title = JOB_ALT_ARTIST
-	title_blurb = "A " + JOB_ALT_ARTIST + " will focus on making people think about life and world around them! Life is a tragedy, and who's better to convey its emotions than you?"
+	title = JOB_ALT_TRAGEDIAN
+	title_blurb = "A " + JOB_ALT_TRAGEDIAN + " will focus on making people think about life and world around them! Life is a tragedy, and who's better to convey its emotions than you?"
 
 /datum/alt_title/artist
 	title = JOB_ALT_ARTIST
@@ -368,6 +372,12 @@
 /datum/alt_title/game_master
 	title = JOB_ALT_GAME_MASTER
 	title_blurb = "A " + JOB_ALT_GAME_MASTER + " provides recreation for the crew by hosting variety of games. From cards to roleplaying to something more personalized."
+
+// ChompADD
+/datum/alt_title/fitnessinstructor
+	title = JOB_ALT_FITNESS_INSTRUCTOR
+	title_blurb = "A " + JOB_ALT_FITNESS_INSTRUCTOR + " dedicates themselves to improving the health of the crew through physical activity, and boy, do they need the help."
+// ChompADD END
 
 //////////////////////////////////
 //			Entrepreneur
@@ -481,4 +491,3 @@
 	title = JOB_ALT_SPIRIT_HEALER
 	title_blurb = "A " + JOB_ALT_SPIRIT_HEALER + " offers alternative forms of medicine. Rituals, magic rocks, seances... It totally works. What's that about placebo?"
 	title_outfit = /decl/hierarchy/outfit/job/assistant/entrepreneur/spirit_healer
->>>>>>> 7f5fe8ab91 (Merge pull request #16642 from KillianKirilenko/kk-vrjobs)

@@ -16,13 +16,13 @@
 	req_admin_notify = 1
 	economic_modifier = 10
 	access = list(access_security, access_eva, access_sec_doors, access_brig, access_armory,
-							access_forensics_lockers, access_morgue, access_maint_tunnels, access_all_personal_lockers,
-							access_construction,
-							access_heads, access_hos, access_RC_announce, access_keycard_auth, access_gateway, access_external_airlocks)
+						access_forensics_lockers, access_morgue, access_maint_tunnels, access_all_personal_lockers,
+						access_research, access_engine, access_mining, access_medical, access_construction, access_mailsorting,
+			            access_heads, access_hos, access_RC_announce, access_keycard_auth, access_gateway, access_external_airlocks, access_teleporter) //CHOMP Edit: Restores what access is given in security.dm.
 	minimal_access = list(access_security, access_eva, access_sec_doors, access_brig, access_armory,
-							access_forensics_lockers, access_morgue, access_maint_tunnels, access_all_personal_lockers,
-							access_construction,
-						access_heads, access_hos, access_RC_announce, access_keycard_auth, access_gateway, access_external_airlocks)
+						access_forensics_lockers, access_morgue, access_maint_tunnels, access_all_personal_lockers,
+						access_research, access_engine, access_mining, access_medical, access_construction, access_mailsorting,
+			            access_heads, access_hos, access_RC_announce, access_keycard_auth, access_gateway, access_external_airlocks, access_teleporter) //CHOMP Edit: Restores what access is given in security.dm.
 	minimum_character_age = 25
 	min_age_by_species = list(SPECIES_HUMAN_VATBORN = 14)
 	minimal_player_age = 31 //ChompEDIT
@@ -49,7 +49,9 @@
 /datum/alt_title/sec_chief
 	title = JOB_ALT_CHIEF_OF_SECURITY
 
-<<<<<<< HEAD
+/datum/alt_title/security_manager
+	title = JOB_ALT_SECURITY_MANAGER
+
 //YW ADDITION START: LOYALTY IMPLANT FOR HOS
 /datum/job/hos/equip(var/mob/living/carbon/human/H)
 	. = ..()
@@ -57,14 +59,9 @@
 		H.implant_loyalty(src)
 //YW ADDITION END
 
-=======
-/datum/alt_title/security_manager
-	title = JOB_ALT_SECURITY_MANAGER
-
 //////////////////////////////////
 //			Warden
 //////////////////////////////////
->>>>>>> 7f5fe8ab91 (Merge pull request #16642 from KillianKirilenko/kk-vrjobs)
 /datum/job/warden
 	title = JOB_WARDEN
 	flag = WARDEN

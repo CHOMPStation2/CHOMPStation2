@@ -62,7 +62,7 @@
 						because Central Command gives a partial refund."
 
 	alt_titles = list(JOB_ALT_CARGO_LOADER = /datum/alt_title/cargo_loader, JOB_ALT_CARGO_HANDLER = /datum/alt_title/cargo_handler, JOB_ALT_SUPPLY_COURIER = /datum/alt_title/supply_courier,
-					JOB_ALT_DISPOSALS_SORTER = /datum/alt_title/disposal_sorter)
+					JOB_ALT_DISPOSALS_SORTER = /datum/alt_title/disposal_sorter, JOB_ALT_MAILMAN = /datum/alt_title/mailman) // CHOMPEdit: Adds Mailman title.
 
 /datum/alt_title/supply_courier
 	title = JOB_ALT_SUPPLY_COURIER
@@ -101,7 +101,7 @@
 
 	outfit_type = /decl/hierarchy/outfit/job/cargo/mining
 	job_description = "A " + JOB_SHAFT_MINER + " mines and processes minerals to be delivered to departments that need them."
-	alt_titles = list(JOB_ALT_DEEP_SPACE_MINER = /datum/alt_title/deep_space_miner, JOB_ALT_DRILL_TECHNICIAN = /datum/alt_title/drill_tech, JOB_ALT_PROSPECTOR = /datum/alt_title/prospector,
+	alt_titles = list(/*CHOMPEdit Removal JOB_ALT_DEEP_SPACE_MINER = /datum/alt_title/deep_space_miner*/, JOB_ALT_DRILL_TECHNICIAN = /datum/alt_title/drill_tech, JOB_ALT_PROSPECTOR = /datum/alt_title/prospector,
 						JOB_ALT_EXCAVATOR = /datum/alt_title/excavator)
 
 /datum/job/mining/get_request_reasons()

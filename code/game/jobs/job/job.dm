@@ -39,11 +39,10 @@
 	// Description of the job's role and minimum responsibilities.
 	var/job_description = "This Job doesn't have a description! Please report it!"
 
-<<<<<<< HEAD
 	var/camp_protection = FALSE				//CHOMPadd
 	var/list/restricted_keys = list()		//CHOMPadd
 	var/list/shift_keys = list()			//CHOMPadd
-=======
+
 	//Requires a ckey to be whitelisted in jobwhitelist.txt
 	var/whitelist_only = 0
 
@@ -66,7 +65,6 @@
 	var/playtime_only = FALSE
 
 	var/requestable = TRUE
->>>>>>> 7f5fe8ab91 (Merge pull request #16642 from KillianKirilenko/kk-vrjobs)
 
 /datum/job/New()
 	. = ..()
@@ -218,7 +216,6 @@
 		return TRUE
 	*/
 
-<<<<<<< HEAD
 //CHOMPadd start
 /datum/job/proc/register_shift_key(key)
 	if(key)
@@ -230,7 +227,6 @@
 /datum/job/proc/update_limit(var/comperator)
 	return
 //CHOMPAdd End
-=======
 
 // Check client-specific availability rules.
 /datum/job/proc/player_has_enough_pto(client/C)
@@ -274,4 +270,3 @@
 
 /datum/job/proc/get_request_reasons()
 	return list()
->>>>>>> 7f5fe8ab91 (Merge pull request #16642 from KillianKirilenko/kk-vrjobs)

@@ -78,9 +78,10 @@
 	outfit_type = /decl/hierarchy/outfit/job/assistant/intern
 	alt_titles = list(JOB_ALT_APPRENTICE_ENGINEER = /datum/alt_title/intern_eng,
 					  JOB_ALT_MEDICAL_INTERN = /datum/alt_title/intern_med,
-					  JOB_ALT_RESEARCH_INTERN = /datum/alt_title/intern_sci,
+					  JOB_ALT_LAB_ASSISTANT = /datum/alt_title/intern_sci, //CHOMPEdit
 					  JOB_ALT_SECURITY_CADET = /datum/alt_title/intern_sec,
 					  JOB_ALT_JR_CARGO_TECH = /datum/alt_title/intern_crg,
+					  JOB_ALT_JR_EXPLORER = /datum/alt_title/intern_exp, //CHOMP Explo keep
 					  JOB_ALT_SERVER = /datum/alt_title/server,
 					  JOB_ALT_ASSISTANT = /datum/alt_title/assistant)
 	job_description = "An " + JOB_INTERN + " does whatever is requested of them, often doing so in process of learning \
@@ -101,9 +102,9 @@
 	title_outfit = /decl/hierarchy/outfit/job/assistant/medic
 
 /datum/alt_title/intern_sci
-	title = JOB_ALT_RESEARCH_INTERN
-	title_blurb = "A " + JOB_ALT_RESEARCH_INTERN + " attempts to provide whatever the Research department needs. They are not proper " + JOB_SCIENTIST + "s, and are \
-					often in training to become a " + JOB_SCIENTIST + ". A " + JOB_ALT_RESEARCH_INTERN + " has no real authority."
+	title = JOB_ALT_LAB_ASSISTANT //CHOMPEdit
+	title_blurb = "A " + JOB_ALT_LAB_ASSISTANT + " attempts to provide whatever the Research department needs. They are not proper " + JOB_SCIENTIST + "s, and are \
+					often in training to become a " + JOB_SCIENTIST + ". A " + JOB_ALT_LAB_ASSISTANT + " has no real authority." //CHOMPEdit
 	title_outfit = /decl/hierarchy/outfit/job/assistant/scientist
 
 /datum/alt_title/intern_sec
@@ -117,13 +118,13 @@
 	title_blurb = "A " + JOB_ALT_JR_CARGO_TECH + " attempts to provide whatever the Cargo department needs. They are not proper Cargo Technicians, and are \
 					often in training to become a " + JOB_CARGO_TECHNICIAN + ". A " + JOB_ALT_JR_CARGO_TECH + " has no real authority."
 	title_outfit = /decl/hierarchy/outfit/job/assistant/cargo
-/*
+ //CHOMP explo keep removed a wide comment field here
 /datum/alt_title/intern_exp
 	title = "Jr. " + JOB_EXPLORER + ""
 	title_blurb = "A Jr. " + JOB_EXPLORER + " attempts to provide whatever the Exploration department needs. They are not proper " + JOB_EXPLORER + "s, and are \
 					often in training to become an " + JOB_EXPLORER + ". A Jr. " + JOB_EXPLORER + " has no real authority."
 	title_outfit = /decl/hierarchy/outfit/job/assistant/explorer
-*/
+ //CHOMP explo keep removed the end of the wide comment field here
 /datum/alt_title/server
 	title = JOB_ALT_SERVER
 	title_blurb = "A " + JOB_ALT_SERVER + " helps out kitchen and diner staff with various tasks, primarily food delivery. A " + JOB_ALT_SERVER + " has no real authority."

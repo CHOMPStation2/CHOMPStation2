@@ -16,22 +16,15 @@
 	req_admin_notify = 1
 	economic_modifier = 15
 	access = list(access_rd, access_heads, access_tox, access_genetics, access_morgue,
-			            access_tox_storage, access_teleporter,
-			            access_research, access_robotics, access_xenobiology, access_ai_upload, access_tech_storage,
-<<<<<<< HEAD
-			            access_RC_announce, access_keycard_auth, access_tcomsat, access_gateway, access_xenoarch, access_network, access_maint_tunnels) //Yawn added "access_maint_tunnels"
-=======
-			            access_RC_announce, access_keycard_auth, access_tcomsat, access_xenoarch, access_eva, access_network, access_xenobotany)
->>>>>>> 7f5fe8ab91 (Merge pull request #16642 from KillianKirilenko/kk-vrjobs)
+						access_tox_storage, access_teleporter,
+						access_research, access_robotics, access_xenobiology, access_ai_upload, access_tech_storage,
+						access_RC_announce, access_keycard_auth, access_tcomsat, access_gateway, access_xenoarch, access_eva, access_network,
+			            access_explorer, access_pathfinder, access_xenobotany) //YW Edit access_gateway, _explorer, _pathfinder, and _xenobotany
 	minimal_access = list(access_rd, access_heads, access_tox, access_genetics, access_morgue,
-			            access_tox_storage, access_teleporter,
-			            access_research, access_robotics, access_xenobiology, access_ai_upload, access_tech_storage,
-<<<<<<< HEAD
-			            access_RC_announce, access_keycard_auth, access_tcomsat, access_gateway, access_xenoarch, access_network, access_maint_tunnels)
-	alt_titles = list("Research Supervisor")
-=======
-			            access_RC_announce, access_keycard_auth, access_tcomsat, access_gateway, access_xenoarch, access_eva, access_network, access_xenobotany)
->>>>>>> 7f5fe8ab91 (Merge pull request #16642 from KillianKirilenko/kk-vrjobs)
+						access_tox_storage, access_teleporter,
+						access_research, access_robotics, access_xenobiology, access_ai_upload, access_tech_storage,
+						access_RC_announce, access_keycard_auth, access_tcomsat, access_gateway, access_xenoarch, access_eva, access_network,
+			            access_explorer, access_pathfinder, access_xenobotany) //YW Edit access_gateway, _explorer, _pathfinder, and _xenobotany
 
 	minimum_character_age = 25
 	minimal_player_age = 31 //ChompEDIT
@@ -252,7 +245,7 @@
 	supervisors = "the " + JOB_RESEARCH_DIRECTOR
 	selection_color = "#633D63"
 	economic_modifier = 7
-	access = list(access_robotics, access_tox, access_tox_storage, access_research, access_xenobotany, access_hydroponics)
+	access = list(access_robotics, access_tox, access_tox_storage, access_research, access_xenobotany, access_hydroponics, access_xenobiology) //CHOMPS KSC 9/2/2020 - Added "access_xenobiology" to their access so they can enter Xenobotany.
 	minimal_access = list(access_research, access_xenobotany, access_hydroponics, access_tox_storage)
 	pto_type = PTO_SCIENCE
 
