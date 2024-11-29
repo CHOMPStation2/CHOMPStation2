@@ -17,7 +17,7 @@
 	var/area/A = get_area(src)
 	if(!client?.holder && A.block_phase_shift)
 		to_chat(src, span_warning("You can't do that here!"))
-		return
+		return FALSE
 	//RS Port #658 End
 
 	if(ability_flags & AB_PHASE_SHIFTING)
