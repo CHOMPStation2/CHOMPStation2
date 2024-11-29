@@ -154,3 +154,13 @@
   Birdiest-Bird:
   - rscadd: '*caw'
   - sound: sound/voice/caw.ogg
+2024-11-29:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: added recolourable fingerless gloves without the cutout
+  - maptweak: added shutters to SD and Tether cargo bay desks
+  - maptweak: reorganized the SD cargo office a little bit, for more shelf space up
+      front
+  - maptweak: Leggy has been relocated to the relative safety of the mining equipment
+      room, to reduce incidents of unscheduled spacewalks and to stop supply shuttles
+      engaging in leggybraking
+  - rscdel: The skill system is OUTTA HERE

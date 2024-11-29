@@ -1,6 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - maptweak: "added shutters to SD and Tether cargo bay desks"
-  - maptweak: "reorganized the SD cargo office a little bit, for more shelf space up front"
-  - maptweak: "Leggy has been relocated to the relative safety of the mining equipment room, to reduce incidents of unscheduled spacewalks and to stop supply shuttles engaging in leggybraking"
