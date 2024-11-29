@@ -1,0 +1,4 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - qol: "cleaned up _vr files for jobs, moved cargo jobs into their own base dm."
