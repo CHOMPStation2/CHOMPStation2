@@ -5,17 +5,15 @@
 	plane = DIRTY_PLANE
 	layer = DIRTY_LAYER
 	anchored = TRUE
-// CHOMPEdit Start - Pretty much all of this file changed
 	var/art_type
 	var/art_color
 	var/art_shade
 
 /obj/effect/decal/cleanable/crayon/Initialize(var/ml, main = "#FFFFFF",shade = "#000000",var/type = "rune", new_age = 0)
-	. = ..(ml, new_age) // mapload, age
 	name = type
 	desc = "A [type] drawn in crayon."
 
-	// Persistence vars.
+	// Persistence vars. Unused here but used downstream. If someone updates the persistance code, it's here.
 	art_type = type
 	art_color = main
 	art_shade = shade
@@ -26,7 +24,7 @@
 		if("graffiti")
 			type = pick("amyjon","face","matt","revolution","engie","guy","end","dwarf","uboa")
 
-	update_icon()
+	. = ..(ml, new_age) // mapload, age
 
 /obj/effect/decal/cleanable/crayon/update_icon()
 	cut_overlays()
@@ -39,5 +37,7 @@
 
 		add_overlay(mainOverlay)
 		add_overlay(shadeOverlay)
+
+	add_janitor_hud_overlay()
 	return
 // CHOMPEdit End
