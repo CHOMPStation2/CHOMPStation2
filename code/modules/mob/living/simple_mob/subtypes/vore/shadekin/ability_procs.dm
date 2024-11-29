@@ -5,28 +5,16 @@
 	if(!T.CanPass(src,T) || loc != T)
 		to_chat(src,span_warning("You can't use that here!"))
 		return FALSE
-<<<<<<< HEAD
+	//CHOMPAdd Start
 	if((get_area(src).flags & PHASE_SHIELDED))
-		to_chat(src,"<span class='warning'>This area is preventing you from phasing!</span>")
+		to_chat(src,span_warning("This area is preventing you from phasing!"))
 		return FALSE
-
-	forceMove(T)
-	var/original_canmove = canmove
-	SetStunned(0)
-	SetWeakened(0)
-	if(buckled)
-		buckled.unbuckle_mob()
-	if(pulledby)
-		pulledby.stop_pulling()
-	stop_pulling()
-	canmove = FALSE
-=======
+	//CHOMPAdd End
 	//RS Port #658 Start
 	if(!client?.holder && A.block_phase_shift)
 		to_chat(src,span_warning("You can't use that here!"))
 		return FALSE
 	//RS Port #658 End
->>>>>>> f552b4bdde (Merge pull request #16624 from Kashargul/RS_Ports)
 
 	//Shifting in
 	if(ability_flags & AB_PHASE_SHIFTED)

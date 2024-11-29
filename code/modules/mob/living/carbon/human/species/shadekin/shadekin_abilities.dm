@@ -139,21 +139,7 @@
 		to_chat(src,span_warning("You can't use that here!"))
 		return FALSE
 
-<<<<<<< HEAD
-	forceMove(T)
-	var/original_canmove = canmove
-	SetStunned(0)
-	SetWeakened(0)
-	if(buckled)
-		buckled.unbuckle_mob()
-	if(pulledby)
-		pulledby.stop_pulling()
-	stop_pulling()
-	canmove = FALSE
-
 	SK.doing_phase = TRUE //CHOMPEdit - Prevent bugs when spamming phase button
-=======
->>>>>>> f552b4bdde (Merge pull request #16624 from Kashargul/RS_Ports)
 	//Shifting in
 	if(ability_flags & AB_PHASE_SHIFTED)
 		phase_in(T)
@@ -236,7 +222,6 @@
 			destroy_lights = 25
 		//CHOMPEdit end
 
-<<<<<<< HEAD
 		//CHOMPEdit start - Add gentle phasing
 		if(SK.phase_gentle) // gentle case: No light destruction. Flicker in 4 tile radius once.
 			for(var/obj/machinery/light/L in machines)
@@ -255,14 +240,6 @@
 						L.broken()
 				else
 					L.flicker(10)
-	//Shifting out
-	else
-=======
-			if(prob(destroy_lights))
-				spawn(rand(5,25))
-					L.broken()
-			else
-				L.flicker(10)
 
 /mob/living/carbon/human/proc/phase_out(var/turf/T)
 	if(!(ability_flags & AB_PHASE_SHIFTED))
@@ -279,7 +256,6 @@
 		canmove = FALSE
 
 		// change
->>>>>>> f552b4bdde (Merge pull request #16624 from Kashargul/RS_Ports)
 		ability_flags |= AB_PHASE_SHIFTED
 		ability_flags |= AB_PHASE_SHIFTING
 		mouse_opacity = 0

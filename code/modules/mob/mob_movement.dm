@@ -401,15 +401,10 @@
 			if(mob.check_holy(T))
 				to_chat(mob, span_warning("You cannot get past holy grounds while you are in this plane of existence!"))
 				return
-<<<<<<< HEAD
 			//CHOMPEdit start - add ability to block incorporeal movement for nonghosts
 			else if(!istype(mob, /mob/observer/dead) && T.blocks_nonghost_incorporeal)
 				return
 			//CHOMPEdit end
-			else
-				mob.forceMove(get_step(mob, direct))
-				mob.dir = direct
-=======
 			//RS Port #658 Start
 			if(!holder)
 				if(isliving(mob) && A.block_phase_shift)
@@ -425,7 +420,6 @@
 			mob.forceMove(get_step(mob, direct))
 			mob.dir = direct
 			//RS Port #658 End
->>>>>>> f552b4bdde (Merge pull request #16624 from Kashargul/RS_Ports)
 		if(2)
 			if(prob(50))
 				var/locx
