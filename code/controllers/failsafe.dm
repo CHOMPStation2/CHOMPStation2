@@ -4,12 +4,8 @@
  * Pretty much pokes the MC to make sure it's still alive.
  **/
 
-<<<<<<< HEAD
-GLOBAL_REAL(Failsafe, /datum/controller/failsafe) // CHOMPEdit - Managed Globals
-=======
 // See initialization order in /code/game/world.dm
 GLOBAL_REAL(Failsafe, /datum/controller/failsafe)
->>>>>>> 10de4fc09f (Merge pull request #16511 from VOREStation/verb-subsystem)
 
 /datum/controller/failsafe // This thing pretty much just keeps poking the master controller
 	name = "Failsafe"
