@@ -120,13 +120,3 @@ if(current_step == this_step || (initial_step && !resumed)) /* So we start at st
 	resumed = 0;\
 	current_step = next_step;\
 }
-
-// CHOMPEdit Start
-#define VERB_MANAGER_SUBSYSTEM_DEF(X) GLOBAL_REAL(SS##X, /datum/controller/subsystem/verb_manager/##X);\
-/datum/controller/subsystem/verb_manager/##X/New(){\
-	NEW_SS_GLOBAL(SS##X);\
-	PreInit();\
-}\
-/datum/controller/subsystem/verb_manager/##X/fire() {..() /*just so it shows up on the profiler*/} \
-/datum/controller/subsystem/verb_manager/##X
-// CHOMPEdit End
