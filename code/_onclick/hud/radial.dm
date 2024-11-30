@@ -324,16 +324,9 @@ GLOBAL_LIST_EMPTY(radial_menus)
 		return
 	current_user = M.client
 	//Blank
-<<<<<<< HEAD
-	menu_holder = image(icon='icons/effects/effects.dmi',loc=anchor,icon_state="nothing",layer = LAYER_HUD_ABOVE)
-	menu_holder.plane = PLANE_PLAYER_HUD_ABOVE //CHOMPEdit - fixed plane
-	menu_holder.appearance_flags |= RESET_TRANSFORM //CHOMPEdit - fix radial scaling improperly based on mob size
-	menu_holder.appearance_flags |= KEEP_APART
-=======
 	menu_holder = image(icon='icons/effects/effects.dmi',loc=anchor,icon_state="nothing", layer = RADIAL_BACKGROUND_LAYER, pixel_x = offset_x, pixel_y = offset_y)
 	menu_holder.plane = PLANE_PLAYER_HUD_ABOVE
 	menu_holder.appearance_flags |= KEEP_APART|RESET_ALPHA|RESET_COLOR|RESET_TRANSFORM
->>>>>>> 96cd99127a (Merge pull request #16618 from ShadowLarkens/ui)
 	menu_holder.vis_contents += elements + close_button
 	current_user.images += menu_holder
 
