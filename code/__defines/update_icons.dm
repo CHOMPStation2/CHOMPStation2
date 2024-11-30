@@ -1,3 +1,6 @@
+// These are used as the layers for the icons, as well as indexes in a list that holds onto them.
+// Technically the layers used are all -100+layer to make them FLOAT_LAYER overlays.
+//Human Overlays Indexes/////////
 //CHOMPEDIT edit the file human/update_icons.dm in the modular_chomp folder as well, if you update these (and clothing/clothing.dm line 789, the hardcoded layer there in /obj/item/clothing/suit/make_worn_icon)
 #define MUTATIONS_LAYER			1		//Mutations like fat, and lasereyes
 #define TAIL_LOWER_LAYER		2		//Tail as viewed from the south //CHOMPStation edit - underneath bodyparts
