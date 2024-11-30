@@ -29,12 +29,9 @@
 	var/d100 = rand(1,100)
 
 	if(inside_item_type)
-<<<<<<< HEAD
-		new /obj/item/archaeological_find(src, inside_item_type) // CHOMPEdit
-=======
 		switch(d100)
 			if(51 to 100) //standard spawn logic 50% of the time
-				new /obj/item/archaeological_find(src, new_item_type = inside_item_type)
+				new /obj/item/archaeological_find(src, inside_item_type) // CHOMPEdit
 			if(21 to 50) // 30% chance
 				new /obj/item/research_sample/common(src)
 			if(6 to 20) // 15% chance
@@ -42,7 +39,7 @@
 			if(1 to 5) // 5% chance
 				new /obj/item/research_sample/rare(src)
 			else	//if something went wrong, somehow, generate the usual find
-				new /obj/item/archaeological_find(src, new_item_type = inside_item_type)
+				new /obj/item/archaeological_find(src, inside_item_type) // CHOMPEdit
 	else	//if this strange rock isn't set to generate a find for whatever reason, create a sample 75% of the time (this shouldn't happen unless the rock is mapped in or adminspawned)
 		switch(d100)
 			if(76 to 100)
@@ -55,7 +52,6 @@
 				new /obj/item/research_sample/rare(src)
 			else	//if we somehow glitched
 				return	//do nothing
->>>>>>> 3237ba8169 (Merge pull request #16654 from KillianKirilenko/kk-rocks)
 
 /obj/item/strangerock/attackby(var/obj/item/I, var/mob/user)
 	if(istype(I, /obj/item/pickaxe/brush))
