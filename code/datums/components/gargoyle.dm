@@ -18,9 +18,9 @@
 	if (!ishuman(parent))
 		return COMPONENT_INCOMPATIBLE
 	gargoyle = parent
-	add_verb(gargoyle,/mob/living/carbon/human/proc/gargoyle_transformation) //CHOMPEdit TGPanel
-	add_verb(gargoyle,/mob/living/carbon/human/proc/gargoyle_pause) //CHOMPEdit TGPanel
-	add_verb(gargoyle,/mob/living/carbon/human/proc/gargoyle_checkenergy) //CHOMPEdit TGPanel
+	add_verb(gargoyle,/mob/living/carbon/human/proc/gargoyle_transformation)
+	add_verb(gargoyle,/mob/living/carbon/human/proc/gargoyle_pause)
+	add_verb(gargoyle,/mob/living/carbon/human/proc/gargoyle_checkenergy)
 
 	START_PROCESSING(SSprocessing, src)
 

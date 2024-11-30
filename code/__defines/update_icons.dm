@@ -1,8 +1,11 @@
-//CHOMPEDIT Start: edit the file human/update_icons.dm in the modular_chomp folder as well, if you update these (and clothing/clothing.dm line 789, the hardcoded layer there in /obj/item/clothing/suit/make_worn_icon)
+// These are used as the layers for the icons, as well as indexes in a list that holds onto them.
+// Technically the layers used are all -100+layer to make them FLOAT_LAYER overlays.
+//Human Overlays Indexes/////////
+//CHOMPEDIT edit the file human/update_icons.dm in the modular_chomp folder as well, if you update these (and clothing/clothing.dm line 789, the hardcoded layer there in /obj/item/clothing/suit/make_worn_icon)
 #define MUTATIONS_LAYER			1		//Mutations like fat, and lasereyes
 #define TAIL_LOWER_LAYER		2		//Tail as viewed from the south //CHOMPStation edit - underneath bodyparts
 #define WING_LOWER_LAYER		3		//Wings as viewed from the south //CHOMPStation edit - underneath bodyparts
-#define BODYPARTS_LAYER			4		//Bodyparts layer - CHOMPStation edit
+#define BODYPARTS_LAYER			4		//Bodyparts layer
 #define SKIN_LAYER				5		//Skin things added by a call on species
 #define BLOOD_LAYER				6		//Bloodied hands/feet/anything else
 #define MOB_DAM_LAYER			7		//Injury overlay sprites like open wounds
@@ -15,13 +18,13 @@
 #define GLOVES_LAYER			14		//Glove-slot item
 #define BELT_LAYER				15		//Belt-slot item
 #define SUIT_LAYER				16		//Suit-slot item
-#define TAIL_UPPER_LAYER		17	//Some species have tails to render (As viewed from the N, E, or W)
+#define TAIL_UPPER_LAYER		17		//Some species have tails to render (As viewed from the N, E, or W)
 #define GLASSES_LAYER			18		//Eye-slot item
 #define BELT_LAYER_ALT			19		//Belt-slot item (when set to be above suit via verb)
 #define SUIT_STORE_LAYER		20		//Suit storage-slot item
 #define BACK_LAYER				21		//Back-slot item
 #define HAIR_LAYER				22		//The human's hair
-#define HAIR_ACCESSORY_LAYER	23		//VOREStation edit. Simply move this up a number if things are added.
+#define HAIR_ACCESSORY_LAYER	23		//Simply move this up a number if things are added.
 #define EARS_LAYER				24		//Both ear-slot items (combined image)
 #define EYES_LAYER				25		//Mob's eyes (used for glowing eyes)
 #define FACEMASK_LAYER			26		//Mask-slot item
@@ -39,5 +42,8 @@
 #define FIRE_LAYER				38		//'Mob on fire' overlay layer
 #define MOB_WATER_LAYER			39		//'Mob submerged' overlay layer
 #define TARGETED_LAYER			40		//'Aimed at' overlay layer
-#define TOTAL_LAYERS			40		//CHOMPStation edit. <---- KEEP THIS UPDATED, should always equal the highest number here, used to initialize a list.
-//CHOMPEdit End
+#define TOTAL_LAYERS			40		// <---- KEEP THIS UPDATED, should always equal the highest number here, used to initialize a list.
+
+//These two are only used for gargoyles currently
+#define HUMAN_BODY_LAYERS list(MUTATIONS_LAYER, TAIL_LOWER_LAYER, WING_LOWER_LAYER, BODYPARTS_LAYER, SKIN_LAYER, BLOOD_LAYER, MOB_DAM_LAYER, TAIL_UPPER_LAYER, HAIR_LAYER, HAIR_ACCESSORY_LAYER, EYES_LAYER, WING_LAYER, VORE_BELLY_LAYER, VORE_TAIL_LAYER, TAIL_UPPER_LAYER_ALT)
+#define HUMAN_OTHER_LAYERS list(MODIFIER_EFFECTS_LAYER, FIRE_LAYER, MOB_WATER_LAYER, TARGETED_LAYER)
