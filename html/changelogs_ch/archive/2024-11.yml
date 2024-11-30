@@ -164,3 +164,8 @@
       room, to reduce incidents of unscheduled spacewalks and to stop supply shuttles
       engaging in leggybraking
   - rscdel: The skill system is OUTTA HERE
+2024-11-30:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: fixed talon headset options, and headset options for a bunch of event
+      outfits
+  - qol: cleaned up _vr files for jobs, moved cargo jobs into their own base dm.
