@@ -4,7 +4,10 @@
 
 /mob/verb/me_verb_subtle(message as message) //This would normally go in say.dm //CHOMPEdit
 	set name = "Subtle"
+<<<<<<< HEAD
 	// set category = "IC.Subtle" //CHOMPEdit
+=======
+>>>>>>> a15578d8fd (Merge pull request #16597 from Kashargul/miscGripper)
 	set desc = "Emote to nearby people (and your pred/prey)"
 	set hidden = 1
 
@@ -27,7 +30,10 @@
 
 /mob/verb/me_verb_subtle_custom(message as message) // Literally same as above but with mode_selection set to true //CHOMPEdit
 	set name = "Subtle (Custom)"
+<<<<<<< HEAD
 	// set category = "IC.Subtle" //CHOMPEdit
+=======
+>>>>>>> a15578d8fd (Merge pull request #16597 from Kashargul/miscGripper)
 	set desc = "Emote to nearby people, with ability to choose which specific portion of people you wish to target."
 
 	if(say_disabled)	//This is here to try to identify lag problems
@@ -204,7 +210,11 @@
 			if(src.client && M && !(get_z(src) == get_z(M)))
 				message = span_multizsay("[message]")
 			if(isobserver(M) && (!(M.client?.prefs?.read_preference(/datum/preference/toggle/ghost_see_whisubtle) || (isbelly(M.loc) && src == M.loc:owner)) || \
+<<<<<<< HEAD
 			!client?.prefs?.read_preference(/datum/preference/toggle/whisubtle_vis) && !M.client?.holder)) //CHOMPEdit - Added the belly check so that ghosts in bellies can still see their pred's messages.
+=======
+			!client?.prefs?.read_preference(/datum/preference/toggle/whisubtle_vis) && !M.client?.holder))
+>>>>>>> a15578d8fd (Merge pull request #16597 from Kashargul/miscGripper)
 				spawn(0)
 					M.show_message(undisplayed_message, 2)
 			else
@@ -260,8 +270,12 @@
 
 ///// PSAY /////
 
+<<<<<<< HEAD
 /mob/verb/psay(message as text) //CHOMPEdit
 	// set category = "IC.Subtle" //CHOMPEdit
+=======
+/mob/verb/psay(message as text)
+>>>>>>> a15578d8fd (Merge pull request #16597 from Kashargul/miscGripper)
 	set name = "Psay"
 	set desc = "Talk to people affected by complete absorbed or dominate predator/prey."
 
@@ -366,8 +380,12 @@
 
 ///// PME /////
 
+<<<<<<< HEAD
 /mob/verb/pme(message as message) //CHOMPEdit
 	// set category = "IC.Subtle" //CHOMPEdit
+=======
+/mob/verb/pme(message as message)
+>>>>>>> a15578d8fd (Merge pull request #16597 from Kashargul/miscGripper)
 	set name = "Pme"
 	set desc = "Emote to people affected by complete absorbed or dominate predator/prey."
 
@@ -470,8 +488,12 @@
 		M.forced_psay = FALSE
 		M.me_verb(message)
 
+<<<<<<< HEAD
 /mob/living/verb/player_narrate(message as message) //CHOMPEdit
 	// set category = "IC.Chat" //CHOMPEdit
+=======
+/mob/living/verb/player_narrate(message as message)
+>>>>>>> a15578d8fd (Merge pull request #16597 from Kashargul/miscGripper)
 	set name = "Narrate (Player)"
 	set desc = "Narrate an action or event! An alternative to emoting, for when your emote shouldn't start with your name!"
 

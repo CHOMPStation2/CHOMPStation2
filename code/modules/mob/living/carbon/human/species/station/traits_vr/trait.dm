@@ -76,11 +76,19 @@
 			return TRUE
 		if(TRAIT_PREF_TYPE_COLOR) //color
 			return "#ffffff"
+<<<<<<< HEAD
 		if(TRAIT_PREF_TYPE_STRING) //CHOMPEdit - string
 			return ""
 	return
 
 /datum/trait/proc/apply_sanitization_to_string(var/pref, var/input) //CHOMPEdit addition
+=======
+		if(TRAIT_PREF_TYPE_STRING) //string
+			return ""
+	return
+
+/datum/trait/proc/apply_sanitization_to_string(var/pref, var/input)
+>>>>>>> a15578d8fd (Merge pull request #16597 from Kashargul/miscGripper)
 	if (has_preferences[pref][1] != TRAIT_PREF_TYPE_STRING || length(input) <= 0)
 		return default_value_for_pref(pref)
 	input = sanitizeSafe(input, MAX_NAME_LEN)

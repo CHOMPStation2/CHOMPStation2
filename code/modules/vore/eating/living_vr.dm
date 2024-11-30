@@ -697,13 +697,17 @@
 		forceMove(get_turf(src))
 		log_and_message_admins("[key_name(src)] used the OOC escape button to get out of a microwave.")
 
+<<<<<<< HEAD
 	//CHOMPEdit - petrification (again not vore but hey- ooc escape)
+=======
+>>>>>>> a15578d8fd (Merge pull request #16597 from Kashargul/miscGripper)
 	else if(istype(loc, /obj/structure/gargoyle) && loc:was_rayed)
 		var/obj/structure/gargoyle/G = loc
 		G.can_revert = TRUE
 		qdel(G)
 		log_and_message_admins("[key_name(src)] used the OOC escape button to revert back from being petrified.")
 
+<<<<<<< HEAD
 	//CHOMPEdit - In-shoe OOC escape. Checking voices as precaution if something akin to obj TF or possession happens
 	else if(!istype(src, /mob/living/voice) && istype(src.loc, /obj/item/clothing/shoes))
 		var/obj/item/clothing/shoes/S = src.loc
@@ -714,6 +718,8 @@
 		forceMove(get_turf(src))
 		log_and_message_admins("[key_name(src)] used the OOC escape button to get out of a microwave.")
 
+=======
+>>>>>>> a15578d8fd (Merge pull request #16597 from Kashargul/miscGripper)
 	//You are in food and for some reason can't resist out
 	else if(istype(loc, /obj/item/reagent_containers/food))
 		var/obj/item/reagent_containers/food/F = src.loc

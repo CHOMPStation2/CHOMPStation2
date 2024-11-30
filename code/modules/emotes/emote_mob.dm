@@ -83,7 +83,11 @@
 
 	var/decl/emote/use_emote = get_emote_by_key(act)
 	if(!istype(use_emote))
+<<<<<<< HEAD
 		to_chat(src, span_warning("Unknown emote '[act]'. Type <b>say *help</b> for a list of usable emotes. ([act] [message])")) //CHOMPEdit - Add full message in the event you used * instead of ! or something like that
+=======
+		to_chat(src, span_warning("Unknown emote '[act]'. Type " + span_bold("say *help") + " for a list of usable emotes. ([act] [message])")) // Add full message in the event you used * instead of ! or something like that
+>>>>>>> a15578d8fd (Merge pull request #16597 from Kashargul/miscGripper)
 		return
 
 	if(!use_emote.mob_can_use(src))
@@ -212,6 +216,12 @@
 		var/turf/T = get_turf(src)
 
 		if(!T) return
+<<<<<<< HEAD
+=======
+
+		if(client)
+			playsound(T, pick(emote_sound), 25, TRUE, falloff = 1 , is_global = TRUE, frequency = ourfreq, ignore_walls = FALSE, preference = /datum/preference/toggle/emote_sounds)
+>>>>>>> a15578d8fd (Merge pull request #16597 from Kashargul/miscGripper)
 
 		if(client)
 			playsound(T, pick(voice_sounds_list), 75, TRUE, falloff = 1 , is_global = TRUE, frequency = voice_freq, ignore_walls = TRUE, preference = /datum/preference/toggle/emote_sounds) //CHOMPEdit - use say prefs instead //ChompEDIT - also ignore walls
@@ -226,12 +236,19 @@
 						message = span_emote(span_bold("[src]") + " ([ghost_follow_link(src, M)]) [input]")
 					if(usr && usr.client && M && !(get_z(usr) == get_z(M)))
 						message = span_multizsay("[message]")
+<<<<<<< HEAD
 					//CHOMPEdit Start - If you are in the same tile, right next to, or being held by a person doing an emote, you should be able to see it while blind
+=======
+					// If you are in the same tile, right next to, or being held by a person doing an emote, you should be able to see it while blind
+>>>>>>> a15578d8fd (Merge pull request #16597 from Kashargul/miscGripper)
 					if(m_type != AUDIBLE_MESSAGE && (src.Adjacent(M) || (istype(src.loc, /obj/item/holder) && src.loc.loc == M)))
 						M.show_message(message)
 					else
 						M.show_message(message, m_type)
+<<<<<<< HEAD
 					//CHOMPEdit End
+=======
+>>>>>>> a15578d8fd (Merge pull request #16597 from Kashargul/miscGripper)
 					M.create_chat_message(src, "[runemessage]", FALSE, list("emote"), (m_type == AUDIBLE_MESSAGE))
 
 		for(var/obj/O as anything in o_viewers)

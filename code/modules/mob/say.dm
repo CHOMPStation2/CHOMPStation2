@@ -3,7 +3,10 @@
 
 /mob/verb/whisper(message as text)  //CHOMPEdit
 	set name = "Whisper"
+<<<<<<< HEAD
 	// set category = "IC.Subtle" //CHOMPEdit
+=======
+>>>>>>> a15578d8fd (Merge pull request #16597 from Kashargul/miscGripper)
 	set hidden = 1
 	//VOREStation Addition Start
 	if(forced_psay)
@@ -15,8 +18,11 @@
 
 /mob/verb/say_verb(message as text) //CHOMPEdit
 	set name = "Say"
+<<<<<<< HEAD
 	// set category = "IC.Chat" //CHOMPEdit
 	set instant = TRUE // CHOMPEdit
+=======
+>>>>>>> a15578d8fd (Merge pull request #16597 from Kashargul/miscGripper)
 	set hidden = 1
 	set instant = TRUE
 
@@ -34,7 +40,10 @@
 
 /mob/verb/me_verb(message as message) //CHOMPEdit
 	set name = "Me"
+<<<<<<< HEAD
 	// set category = "IC.Chat" //CHOMPEdit
+=======
+>>>>>>> a15578d8fd (Merge pull request #16597 from Kashargul/miscGripper)
 	set desc = "Emote to nearby people (and your pred/prey)"
 	set hidden = 1
 
@@ -118,7 +127,23 @@
 	if(speaking.flags & NONVERBAL)
 		if(sdisabilities & BLIND || blinded)
 			return FALSE
+<<<<<<< HEAD
 		if(!other) //CHOMPEdit - Fixes seeing non-verbal languages while being held
+=======
+		if(!other)
+			return FALSE
+		// Fixes seeing non-verbal languages while being held
+		if(istype(other.loc, /obj/item/holder))
+			if(istype(src.loc, /obj/item/holder))
+				if(!(other.loc in view(src.loc.loc)))
+					return FALSE
+			else if(!(other.loc in view(src)))
+				return FALSE
+		else if(istype(src.loc, /obj/item/holder))
+			if((!other) in view(src.loc.loc))
+				return FALSE
+		else if((!other) in view(src))
+>>>>>>> a15578d8fd (Merge pull request #16597 from Kashargul/miscGripper)
 			return FALSE
 		//CHOMPEdit Start - Fixes seeing non-verbal languages while being held
 		if(istype(other.loc, /obj/item/holder))
