@@ -4973,7 +4973,6 @@
 #include "modular_chomp\code\modules\mob\living\silicon\robot\robot_movement.dm"
 #include "modular_chomp\code\modules\mob\living\silicon\robot\dogborg\dog_modules.dm"
 #include "modular_chomp\code\modules\mob\living\silicon\robot\dogborg\dog_sleeper.dm"
-#include "modular_chomp\code\modules\mob\living\silicon\robot\drone\drone_items.dm"
 #include "modular_chomp\code\modules\mob\living\silicon\robot\modules\exploration.dm"
 #include "modular_chomp\code\modules\mob\living\silicon\robot\sprites\_sprite_datum.dm"
 #include "modular_chomp\code\modules\mob\living\silicon\robot\sprites\civilian.dm"
