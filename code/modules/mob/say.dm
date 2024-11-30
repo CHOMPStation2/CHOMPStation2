@@ -127,6 +127,7 @@
 			if((!other) in view(src.loc.loc))
 				return FALSE
 		else if((!other) in view(src))
+			return FALSE
 
 	//Language check.
 	for(var/datum/language/L in languages)
