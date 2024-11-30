@@ -1,12 +1,8 @@
 /mob/proc/say(var/message, var/datum/language/speaking = null, var/whispering = 0)
 	return
 
-/mob/verb/whisper(message as text)  //CHOMPEdit
+/mob/verb/whisper(message as text)
 	set name = "Whisper"
-<<<<<<< HEAD
-	// set category = "IC.Subtle" //CHOMPEdit
-=======
->>>>>>> a15578d8fd (Merge pull request #16597 from Kashargul/miscGripper)
 	set hidden = 1
 	//VOREStation Addition Start
 	if(forced_psay)
@@ -16,13 +12,8 @@
 
 	usr.say(message,whispering=1)
 
-/mob/verb/say_verb(message as text) //CHOMPEdit
+/mob/verb/say_verb(message as text)
 	set name = "Say"
-<<<<<<< HEAD
-	// set category = "IC.Chat" //CHOMPEdit
-	set instant = TRUE // CHOMPEdit
-=======
->>>>>>> a15578d8fd (Merge pull request #16597 from Kashargul/miscGripper)
 	set hidden = 1
 	set instant = TRUE
 
@@ -38,12 +29,8 @@
 	if(message)
 		QUEUE_OR_CALL_VERB_FOR(VERB_CALLBACK(src, TYPE_PROC_REF(/mob, say), message), SSspeech_controller)
 
-/mob/verb/me_verb(message as message) //CHOMPEdit
+/mob/verb/me_verb(message as message)
 	set name = "Me"
-<<<<<<< HEAD
-	// set category = "IC.Chat" //CHOMPEdit
-=======
->>>>>>> a15578d8fd (Merge pull request #16597 from Kashargul/miscGripper)
 	set desc = "Emote to nearby people (and your pred/prey)"
 	set hidden = 1
 
@@ -127,9 +114,6 @@
 	if(speaking.flags & NONVERBAL)
 		if(sdisabilities & BLIND || blinded)
 			return FALSE
-<<<<<<< HEAD
-		if(!other) //CHOMPEdit - Fixes seeing non-verbal languages while being held
-=======
 		if(!other)
 			return FALSE
 		// Fixes seeing non-verbal languages while being held
@@ -143,21 +127,6 @@
 			if((!other) in view(src.loc.loc))
 				return FALSE
 		else if((!other) in view(src))
->>>>>>> a15578d8fd (Merge pull request #16597 from Kashargul/miscGripper)
-			return FALSE
-		//CHOMPEdit Start - Fixes seeing non-verbal languages while being held
-		if(istype(other.loc, /obj/item/holder))
-			if(istype(src.loc, /obj/item/holder))
-				if(!(other.loc in view(src.loc.loc)))
-					return FALSE
-			else if(!(other.loc in view(src)))
-				return FALSE
-		else if(istype(src.loc, /obj/item/holder))
-			if((!other) in view(src.loc.loc))
-				return FALSE
-		else if((!other) in view(src))
-			return FALSE
-		//CHOMPEdit End
 
 	//Language check.
 	for(var/datum/language/L in languages)

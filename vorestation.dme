@@ -491,11 +491,8 @@
 #include "code\datums\components\_component.dm"
 #include "code\datums\components\connect_containers_ch.dm"
 #include "code\datums\components\connect_mob_behalf.dm"
-<<<<<<< HEAD
 #include "code\datums\components\connect_range_ch.dm"
-=======
 #include "code\datums\components\gargoyle.dm"
->>>>>>> a15578d8fd (Merge pull request #16597 from Kashargul/miscGripper)
 #include "code\datums\components\material_container.dm"
 #include "code\datums\components\overlay_lighting.dm"
 #include "code\datums\components\recursive_move.dm"
@@ -3076,11 +3073,7 @@
 #include "code\modules\mob\mob_planes_vr.dm"
 #include "code\modules\mob\mob_transformation_simple.dm"
 #include "code\modules\mob\say.dm"
-<<<<<<< HEAD
-#include "code\modules\mob\say_ch.dm"
-=======
 #include "code\modules\mob\say_old.dm"
->>>>>>> a15578d8fd (Merge pull request #16597 from Kashargul/miscGripper)
 #include "code\modules\mob\say_vr.dm"
 #include "code\modules\mob\theme_lists.dm"
 #include "code\modules\mob\transform_procs.dm"
@@ -4763,7 +4756,6 @@
 #include "modular_chomp\code\datums\autolathe\general_ch.dm"
 #include "modular_chomp\code\datums\changelog\changelog.dm"
 #include "modular_chomp\code\datums\components\dry.dm"
-#include "modular_chomp\code\datums\components\gargoyle.dm"
 #include "modular_chomp\code\datums\components\hearer.dm"
 #include "modular_chomp\code\datums\components\orbiter.dm"
 #include "modular_chomp\code\datums\components\squeak.dm"
@@ -4803,7 +4795,6 @@
 #include "modular_chomp\code\game\machinery\food_replicator.dm"
 #include "modular_chomp\code\game\machinery\holosign.dm"
 #include "modular_chomp\code\game\machinery\paradox.dm"
-#include "modular_chomp\code\game\machinery\petrification.dm"
 #include "modular_chomp\code\game\machinery\portable_turret.dm"
 #include "modular_chomp\code\game\machinery\vending.dm"
 #include "modular_chomp\code\game\machinery\virtual_reality\vr_console.dm"
@@ -4816,7 +4807,6 @@
 #include "modular_chomp\code\game\objects\effects\step_triggers.dm"
 #include "modular_chomp\code\game\objects\items\contraband.dm"
 #include "modular_chomp\code\game\objects\items\holosign_creator.dm"
-#include "modular_chomp\code\game\objects\items\petrifier.dm"
 #include "modular_chomp\code\game\objects\items\target_toy.dm"
 #include "modular_chomp\code\game\objects\items\clockwork\ratvarian_spear.dm"
 #include "modular_chomp\code\game\objects\items\devices\flipper.dm"
@@ -4838,7 +4828,6 @@
 #include "modular_chomp\code\game\objects\random\misc.dm"
 #include "modular_chomp\code\game\objects\structures\desert_planet_structures.dm"
 #include "modular_chomp\code\game\objects\structures\flora.dm"
-#include "modular_chomp\code\game\objects\structures\gargoyle.dm"
 #include "modular_chomp\code\game\objects\structures\holosign.dm"
 #include "modular_chomp\code\game\objects\structures\loot_pile.dm"
 #include "modular_chomp\code\game\objects\structures\tyr_project_props.dm"
