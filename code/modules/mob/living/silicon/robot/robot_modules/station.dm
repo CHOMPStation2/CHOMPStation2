@@ -218,7 +218,6 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/boop_module(src)
 	src.modules += new /obj/item/flash/robot(src)
 	src.modules += new /obj/item/extinguisher(src)
-	src.modules += new /obj/item/gripper/scene(src) //CHOMPEdit - Give all borgs a scene gripper
 	src.modules += new /obj/item/tool/crowbar/cyborg(src)
 	src.modules += new /obj/item/gripper/scene(src)
 
