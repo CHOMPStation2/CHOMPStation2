@@ -7,9 +7,6 @@
 	set desc = "Emote to nearby people (and your pred/prey)"
 	set hidden = 1
 
-	if(say_disabled)	//This is here to try to identify lag problems
-		to_chat(usr, "Speech is currently admin-disabled.")
-		return
 	if(forced_psay)
 		pme(message)
 		return
@@ -28,9 +25,6 @@
 	set name = "Subtle (Custom)"
 	set desc = "Emote to nearby people, with ability to choose which specific portion of people you wish to target."
 
-	if(say_disabled)	//This is here to try to identify lag problems
-		to_chat(usr, "Speech is currently admin-disabled.")
-		return
 	if(forced_psay)
 		pme(message)
 		return

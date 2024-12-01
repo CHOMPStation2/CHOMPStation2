@@ -41,9 +41,8 @@
 		if(istype(unsim, /turf/simulated))
 
 			var/turf/simulated/sim = unsim
-			if(air_master.has_valid_zone(sim))
-
-				air_master.connect(sim, src)
+			if(HAS_VALID_ZONE(sim))
+				SSair.connect(sim, src)
 
 // CHOMPAdd
 #define GET_ZONE_NEIGHBOURS(T, ret) \
@@ -240,7 +239,7 @@
 					if(verbose) to_world("Connecting to [sim.zone]")
 					#endif
 
-					SSair.connect(src, sim) // CHOMPEdit
+					SSair.connect(src, sim)
 
 
 			#ifdef ZASDBG
@@ -268,7 +267,7 @@
 	//At this point, a zone should have happened. If it hasn't, don't add more checks, fix the bug.
 
 	for(var/turf/T in postponed)
-		SSair.connect(src, T) // CHOMPEdit
+		SSair.connect(src, T)
 
 /turf/proc/post_update_air_properties()
 	if(connections) connections.update_all()
@@ -324,7 +323,7 @@
 /turf/simulated/return_air()
 	if(zone)
 		if(!zone.invalid)
-			air_master.mark_zone_update(zone)
+			SSair.mark_zone_update(zone)
 			return zone.air
 		else
 			if(!air)
