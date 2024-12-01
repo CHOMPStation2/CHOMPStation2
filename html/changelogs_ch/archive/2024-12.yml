@@ -1,0 +1,14 @@
+2024-12-01:
+  CHOMPStation2StaffMirrorBot:
+  - qol: Strange Rocks can now generate Research Samples when broken apart.
+  - qol: Blender UI opens even when there's only one choice
+  - rscadd: Basic appliances (the mixer only I think?) now has a radial menu
+  - rscadd: Power/safety/change output buttons for cookers
+  - bugfix: Radial menus now layer properly
+  - refactor: Radial menus updated to /tg/ latest
+  - rscadd: Microwave UI now tells you what it's going to make... or at least try
+      to make
+  - rscadd: pAI cards put into a machine are allowed to attack_ai() their machine
+  - qol: capped the max hallucinations space ghosts can inflict with their attacks,
+      and reduced the amount applied
+  - qol: adjusted mining spawns on SD asteroids
