@@ -1,26 +1,44 @@
 // Phase shifting procs (and related procs)
 /mob/living/simple_mob/shadekin/proc/phase_shift()
 	var/turf/T = get_turf(src)
+	var/area/A = T.loc	//RS Port #658
 	if(!T.CanPass(src,T) || loc != T)
 		to_chat(src,span_warning("You can't use that here!"))
 		return FALSE
+	//CHOMPAdd Start
 	if((get_area(src).flags & PHASE_SHIELDED))
-		to_chat(src,"<span class='warning'>This area is preventing you from phasing!</span>")
+		to_chat(src,span_warning("This area is preventing you from phasing!"))
 		return FALSE
-
-	forceMove(T)
-	var/original_canmove = canmove
-	SetStunned(0)
-	SetWeakened(0)
-	if(buckled)
-		buckled.unbuckle_mob()
-	if(pulledby)
-		pulledby.stop_pulling()
-	stop_pulling()
-	canmove = FALSE
+	//CHOMPAdd End
+	//RS Port #658 Start
+	if(!client?.holder && A.block_phase_shift)
+		to_chat(src,span_warning("You can't use that here!"))
+		return FALSE
+	//RS Port #658 End
 
 	//Shifting in
 	if(ability_flags & AB_PHASE_SHIFTED)
+		phase_in(T)
+	//Shifting out
+	else
+		phase_out(T)
+
+/mob/living/simple_mob/shadekin/proc/phase_in(var/turf/T)
+	if(ability_flags & AB_PHASE_SHIFTED)
+
+		// pre-change
+		forceMove(T)
+		var/original_canmove = canmove
+		SetStunned(0)
+		SetWeakened(0)
+		if(buckled)
+			buckled.unbuckle_mob()
+		if(pulledby)
+			pulledby.stop_pulling()
+		stop_pulling()
+		canmove = FALSE
+
+		// change
 		ability_flags &= ~AB_PHASE_SHIFTED
 		mouse_opacity = 1
 		name = real_name
@@ -73,8 +91,22 @@
 		*/
 		handle_phasein_flicker() // CHOMPEdit, special handle for phase-in light flicker
 
-	//Shifting out
-	else
+/mob/living/simple_mob/shadekin/proc/phase_out(var/turf/T)
+	if(!(ability_flags & AB_PHASE_SHIFTED))
+
+		// pre-change
+		forceMove(T)
+		var/original_canmove = canmove
+		SetStunned(0)
+		SetWeakened(0)
+		if(buckled)
+			buckled.unbuckle_mob()
+		if(pulledby)
+			pulledby.stop_pulling()
+		stop_pulling()
+		canmove = FALSE
+
+		// change
 		ability_flags |= AB_PHASE_SHIFTED
 		mouse_opacity = 0
 		custom_emote(1,"phases out!")

@@ -189,6 +189,10 @@ What is the naming convention for planes or layers?
 #define PLANE_PLAYER_HUD_ABOVE	97 //Things above the player hud
 #define PLANE_PLAYER_SPLASH		98 //Splash screen //CHOMPEdit
 
+#define RADIAL_BACKGROUND_LAYER 0
+///1000 is an unimportant number, it's just to normalize copied layers
+#define RADIAL_CONTENT_LAYER 1000
+
 #define PLANE_ADMIN3			99 //Purely for shenanigans (above HUD)
 
 

@@ -1,15 +1,6 @@
-/atom/proc/get_ultimate_mob() //seems like the wrong place for it, but other stuff uses this
-	var/mob/ultimate_mob
-	var/atom/to_check = loc
-	var/n = 0
-	while (to_check && !isturf(to_check) && n++ < 16)
-		if (ismob(to_check))
-			ultimate_mob = to_check
-			to_check = to_check.loc
-	return ultimate_mob
-
-/mob/verb/say_verb_ch()
-	set name = "Say CH"
+// Allows the usage of old style chat inputs even with TG Say enabled
+/mob/verb/say_verb_old()
+	set name = "Say Old"
 	set category = "IC.Chat"
 
 	client?.start_thinking()
@@ -20,8 +11,8 @@
 	if(message)
 		say_verb(message)
 
-/mob/verb/me_verb_ch()
-	set name = "Me CH"
+/mob/verb/me_verb_old()
+	set name = "Me Old"
 	set category = "IC.Chat"
 	set desc = "Emote to nearby people (and your pred/prey)"
 
@@ -33,8 +24,8 @@
 	if(message)
 		me_verb(message)
 
-/mob/verb/whisper_ch()
-	set name = "Whisper CH"
+/mob/verb/whisper_old()
+	set name = "Whisper Old"
 	set category = "IC.Subtle"
 
 	var/message = tgui_input_text(usr, "Speak to nearby people.\nType your message:", "Whisper")
@@ -43,8 +34,8 @@
 		whisper(message)
 
 
-/mob/verb/me_verb_subtle_ch()
-	set name = "Subtle CH"
+/mob/verb/me_verb_subtle_old()
+	set name = "Subtle Old"
 	set category = "IC.Subtle"
 	set desc = "Emote to nearby people (and your pred/prey)"
 
@@ -53,8 +44,8 @@
 	if(message)
 		me_verb_subtle(message)
 
-/mob/verb/me_verb_subtle_custom_ch()
-	set name = "Subtle (Custom) CH"
+/mob/verb/me_verb_subtle_custom_old()
+	set name = "Subtle (Custom) Old"
 	set category = "IC.Subtle"
 	set desc = "Emote to nearby people, with ability to choose which specific portion of people you wish to target."
 
@@ -63,8 +54,8 @@
 	if(message)
 		me_verb_subtle_custom(message)
 
-/mob/verb/psay_ch()
-	set name = "Psay CH"
+/mob/verb/psay_old()
+	set name = "Psay Old"
 	set category = "IC.Subtle"
 
 	var/message = tgui_input_text(usr, "Talk to people affected by complete absorbed or dominate predator/prey.\nType your message:", "Psay")
@@ -72,8 +63,8 @@
 	if(message)
 		psay(message)
 
-/mob/verb/pme_ch()
-	set name = "Pme CH"
+/mob/verb/pme_old()
+	set name = "Pme Old"
 	set category = "IC.Subtle"
 
 	var/message = tgui_input_text(usr, "Emote to people affected by complete absorbed or dominate predator/prey.\nType your message:", "Pme")
@@ -82,7 +73,7 @@
 		pme(message)
 
 /mob/living/verb/player_narrate_ch()
-	set name = "Narrate (Player) CH"
+	set name = "Narrate (Player) Old"
 	set category = "IC.Chat"
 
 	var/message = tgui_input_text(usr, "Narrate an action or event! An alternative to emoting, for when your emote shouldn't start with your name!\nType your message:", "Narrate (Player)")

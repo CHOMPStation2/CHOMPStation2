@@ -153,7 +153,7 @@
 		unpetrify(deal_damage = FALSE, deleting = TRUE)
 
 /obj/structure/gargoyle/examine_icon()
-	var/icon/examine_icon = icon(icon=src.icon, icon_state=src.icon_state, dir=SOUTH, frame=1, moving=0) //CHOMPEdit might be needed
+	var/icon/examine_icon = icon(icon=src.icon, icon_state=src.icon_state, dir=SOUTH, frame=1, moving=0)
 	examine_icon.MapColors(rgb(77,77,77), rgb(150,150,150), rgb(28,28,28), rgb(0,0,0))
 	return examine_icon
 
@@ -180,7 +180,7 @@
 		comp.transformed = FALSE
 	else
 		if (was_rayed)
-			remove_verb(gargoyle,/mob/living/carbon/human/proc/gargoyle_transformation)  //CHOMPEdit
+			remove_verb(gargoyle,/mob/living/carbon/human/proc/gargoyle_transformation)
 	if (gargoyle.loc == src)
 		gargoyle.forceMove(loc)
 		gargoyle.transform = transform
