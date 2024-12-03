@@ -876,11 +876,10 @@
 	special_attack_max_range = 7
 
 /mob/living/simple_mob/humanoid/eclipse/solar/plant/do_special_attack(atom/A)
-	var/mob/living/L = A
 	visible_message(span_warning("\The [src]'s vines spread out!"))
 	Beam(A, icon_state = "vine", time = 3 SECONDS, maxdistance = INFINITY)
 	if(isliving(A))
-		if(iscarbon(L))
+		if(iscarbon(A))
 			addtimer(CALLBACK(src, PROC_REF(itemyoink), A), 3 SECOND, TIMER_DELETE_ME)
 
 
@@ -1003,14 +1002,13 @@
 	reload_time = 2 SECONDS
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/abyssdiver/do_special_attack(atom/A)
-	var/mob/living/L = A
 	visible_message(span_danger("\The [src] begins to mess with a wrist mounted device."))
 	sleep(30)
 	if(isliving(A))
-		if(iscarbon(L))
+		if(iscarbon(A))
 			return
-		else if(issilicon(L))
-			if(isrobot(L))
+		else if(issilicon(A))
+			if(isrobot(A))
 				L.Weaken(10)
 	else if(istype(A, /obj/mecha))
 		var/obj/mecha/M = A
