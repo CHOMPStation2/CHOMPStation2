@@ -661,8 +661,12 @@
 	addtimer(CALLBACK(src, PROC_REF(spawner)), delay, TIMER_DELETE_ME)
 
 /obj/effect/artillery_attack/proc/spawner()
-	new /obj/effect/callstrike(src.loc)
+	new /obj/effect/falling_effect/callstrike_bomb(src.loc)
 	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(qdel), src), 0.7 SECONDS, TIMER_DELETE_ME)
+
+/obj/effect/falling_effect/callstrike_bomb
+	falling_type = /obj/effect/callstrike
+	crushing = FALSE
 
 /obj/effect/callstrike
 	anchored = TRUE

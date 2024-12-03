@@ -270,7 +270,7 @@
 	damage_threshold = 0 //So the wierd armor mechanic works
 	icon_state = "gygax_adv"
 	wreckage = /obj/structure/loot_pile/mecha/odd_gygax
-	special_attack_cooldown = 30
+	special_attack_cooldown = 320
 
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/antipersonal_unit/updatehealth()
@@ -554,21 +554,21 @@
 				phasethree_cycleone(A)
 			else if(attackcycle == 2)
 				phasethree_cycletwo(A)
-			else
+			else if(attackcycle == 3)
 				phasethree_cyclethree(A)
 		if(I_HURT) // Phase 1
 			if(attackcycle == 1)
 				phaseone_cycleone(A)
 			else if(attackcycle == 2)
 				phaseone_cycletwo(A)
-			else
+			else if(attackcycle == 3)
 				phaseone_cyclethree(A)
 		if(I_GRAB) // Phase 2
 			if(attackcycle == 1)
 				phasetwo_cycleone(A)
 			else if(attackcycle == 2)
 				phasetwo_cycletwo(A)
-			else
+			else if(attackcycle == 3)
 				phasetwo_cyclethree(A)
 
 //phase one. We begin the long drawn out endurance boute
@@ -845,21 +845,21 @@
 				phasethree_cycleone(A)
 			else if(attackcycle == 2)
 				phasethree_cycletwo(A)
-			else
+			else if(attackcycle == 3)
 				phasethree_cyclethree(A)
 		if(I_HURT) // Phase 1
 			if(attackcycle == 1)
 				phaseone_cycleone(A)
 			else if(attackcycle == 2)
 				phaseone_cycletwo(A)
-			else
+			else if(attackcycle == 3)
 				phaseone_cyclethree(A)
 		if(I_GRAB) // Phase 2
 			if(attackcycle == 1)
 				phasetwo_cycleone(A)
 			else if(attackcycle == 2)
 				phasetwo_cycletwo(A)
-			else
+			else if(attackcycle == 3)
 				phasetwo_cyclethree(A)
 
 //Phase One. Appears random but isn't. Scales higher.
