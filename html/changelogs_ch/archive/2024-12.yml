@@ -12,3 +12,6 @@
   - qol: capped the max hallucinations space ghosts can inflict with their attacks,
       and reduced the amount applied
   - qol: adjusted mining spawns on SD asteroids
+2024-12-02:
+  CHOMPStation2StaffMirrorBot:
+  - qol: ZAS refactored a bit.

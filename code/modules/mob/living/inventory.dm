@@ -306,7 +306,7 @@
 
 	switch(action)
 		if("targetSlot")
-			H.handle_strip(params["slot"], usr)
+			H.handle_strip(params["slot"], ui.user)
 			return TRUE
 
 

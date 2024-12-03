@@ -613,7 +613,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 
 	return data
 
-/datum/vore_look/tgui_act(action, params)
+/datum/vore_look/tgui_act(action, params, datum/tgui/ui)
 	if(..())
 		return TRUE
 
@@ -622,7 +622,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			show_pictures = !show_pictures
 			return TRUE
 		if("int_help")
-			tgui_alert(usr, "These control how your belly responds to someone using 'resist' while inside you. The percent chance to trigger each is listed below, \
+			tgui_alert(ui.user, "These control how your belly responds to someone using 'resist' while inside you. The percent chance to trigger each is listed below, \
 					and you can change them to whatever you see fit. Setting them to 0% will disable the possibility of that interaction. \
 					These only function as long as interactions are turned on in general. Keep in mind, the 'belly mode' interactions (digest/absorb) \
 					will affect all prey in that belly, if one resists and triggers digestion/absorption. If multiple trigger at the same time, \
@@ -631,17 +631,17 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 
 		// Host is inside someone else, and is trying to interact with something else inside that person.
 		if("pick_from_inside")
-			return pick_from_inside(usr, params)
+			return pick_from_inside(ui.user, params)
 
 		// Host is trying to interact with something in host's belly.
 		if("pick_from_outside")
-			return pick_from_outside(usr, params)
+			return pick_from_outside(ui.user, params)
 
 		if("newbelly")
 			if(host.vore_organs.len >= BELLIES_MAX)
 				return FALSE
 
-			var/new_name = html_encode(tgui_input_text(usr,"New belly's name:","New Belly"))
+			var/new_name = html_encode(tgui_input_text(ui.user,"New belly's name:","New Belly"))
 
 			if(!new_name)
 				return FALSE
@@ -657,7 +657,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 						break
 
 			if(failure_msg) //Something went wrong.
-				tgui_alert_async(usr, failure_msg, "Error!")
+				tgui_alert_async(ui.user, failure_msg, "Error!")
 				return TRUE
 
 			var/obj/belly/NB = new(host)
@@ -674,7 +674,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		if("move_belly")
 			var/dir = text2num(params["dir"])
 			if(LAZYLEN(host.vore_organs) <= 1)
-				to_chat(usr, span_warning("You can't sort bellies with only one belly to sort..."))
+				to_chat(ui.user, span_warning("You can't sort bellies with only one belly to sort..."))
 				return TRUE
 
 			var/current_index = host.vore_organs.Find(host.vore_selected)
@@ -685,82 +685,80 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			return TRUE
 
 		if("set_attribute")
-			return set_attr(usr, params)
+			return set_attr(ui.user, params)
 
 		if("saveprefs")
 			if(isnewplayer(host))
-				var/choice = tgui_alert(usr, "Warning: Saving your vore panel while in the lobby will save it to the CURRENTLY LOADED character slot, and potentially overwrite it. Are you SURE you want to overwrite your current slot with these vore bellies?", "WARNING!", list("No, abort!", "Yes, save."))
+				var/choice = tgui_alert(ui.user, "Warning: Saving your vore panel while in the lobby will save it to the CURRENTLY LOADED character slot, and potentially overwrite it. Are you SURE you want to overwrite your current slot with these vore bellies?", "WARNING!", list("No, abort!", "Yes, save."))
 				if(choice != "Yes, save.")
 					return TRUE
 			else if(host.real_name != host.client.prefs.real_name || (!ishuman(host) && !issilicon(host)))
-				var/choice = tgui_alert(usr, "Warning: Saving your vore panel while playing what is very-likely not your normal character will overwrite whatever character you have loaded in character setup. Maybe this is your 'playing a simple mob' slot, though. Are you SURE you want to overwrite your current slot with these vore bellies?", "WARNING!", list("No, abort!", "Yes, save."))
+				var/choice = tgui_alert(ui.user, "Warning: Saving your vore panel while playing what is very-likely not your normal character will overwrite whatever character you have loaded in character setup. Maybe this is your 'playing a simple mob' slot, though. Are you SURE you want to overwrite your current slot with these vore bellies?", "WARNING!", list("No, abort!", "Yes, save."))
 				if(choice != "Yes, save.")
 					return TRUE
 			if(!host.save_vore_prefs())
-				tgui_alert_async(usr, "ERROR: Chomp-specific preferences failed to save!","Error")
+				tgui_alert_async(ui.user, "ERROR: Chomp-specific preferences failed to save!","Error") // CHOMPEdit
 			else
-				to_chat(usr, span_notice("Chomp-specific preferences saved!"))
+				to_chat(ui.user, span_notice("Chomp-specific preferences saved!")) // CHOMPEdit
 				unsaved_changes = FALSE
 			return TRUE
 		if("reloadprefs")
-			var/alert = tgui_alert(usr, "Are you sure you want to reload character slot preferences? This will remove your current vore organs and eject their contents.","Confirmation",list("Reload","Cancel"))
+			var/alert = tgui_alert(ui.user, "Are you sure you want to reload character slot preferences? This will remove your current vore organs and eject their contents.","Confirmation",list("Reload","Cancel"))
 			if(alert != "Reload")
 				return FALSE
 			if(!host.apply_vore_prefs())
-				tgui_alert_async(usr, "ERROR: Chomp-specific preferences failed to apply!","Error")
+				tgui_alert_async(ui.user, "ERROR: Chomp-specific preferences failed to apply!","Error") // CHOMPEdit
 			else
-				to_chat(usr,span_notice("Chomp-specific preferences applied from active slot!"))
+				to_chat(ui.user,span_notice("Chomp-specific preferences applied from active slot!")) // CHOMPEdit
 				unsaved_changes = FALSE
 			return TRUE
 		if("loadprefsfromslot")
-			var/alert = tgui_alert(usr, "Are you sure you want to load another character slot's preferences? This will remove your current vore organs and eject their contents. This will not be immediately saved to your character slot, and you will need to save manually to overwrite your current bellies and preferences.","Confirmation",list("Load","Cancel"))
+			var/alert = tgui_alert(ui.user, "Are you sure you want to load another character slot's preferences? This will remove your current vore organs and eject their contents. This will not be immediately saved to your character slot, and you will need to save manually to overwrite your current bellies and preferences.","Confirmation",list("Load","Cancel"))
 			if(alert != "Load")
 				return FALSE
 			if(!host.load_vore_prefs_from_slot())
-				tgui_alert_async(usr, "ERROR: Vore-specific preferences failed to apply!","Error") //CHOMPEdit
+				tgui_alert_async(ui.user, "ERROR: Vore-specific preferences failed to apply!","Error") //CHOMPEdit
 			else
-				to_chat(usr,span_notice("Vore-specific preferences applied from active slot!")) //CHOMPEdit
+				to_chat(ui.user,span_notice("Vore-specific preferences applied from active slot!")) //CHOMPEdit
 				unsaved_changes = TRUE
 			return TRUE
 		//CHOMPEdit - "Belly HTML Export Earlyport"
 		if("exportpanel")
-			var/mob/living/user = usr
-			if(!user)
-				to_chat(usr,span_notice("Mob undefined: [user]"))
+			if(!ui.user)
 				return FALSE
 
 			var/datum/vore_look/export_panel/exportPanel
 			if(!exportPanel)
-				exportPanel = new(usr)
+				exportPanel = new(ui.user)
 
 			if(!exportPanel)
-				to_chat(user,span_notice("Export panel undefined: [exportPanel]"))
+				to_chat(ui.user,span_notice("Export panel undefined: [exportPanel]"))
 				return FALSE
 
-			exportPanel.open_export_panel(user)
+			exportPanel.open_export_panel(ui.user)
 
 			return TRUE
 		//CHOMPEdit End
 		if("setflavor")
-			var/new_flavor = html_encode(tgui_input_text(usr,"What your character tastes like (400ch limit). This text will be printed to the pred after 'X tastes of...' so just put something like 'strawberries and cream':","Character Flavor",host.vore_taste))
+			var/new_flavor = html_encode(tgui_input_text(ui.user,"What your character tastes like (400ch limit). This text will be printed to the pred after 'X tastes of...' so just put something like 'strawberries and cream':","Character Flavor",host.vore_taste))
 			if(!new_flavor)
 				return FALSE
 
 			new_flavor = readd_quotes(new_flavor)
 			if(length(new_flavor) > FLAVOR_MAX)
-				tgui_alert_async(usr, "Entered flavor/taste text too long. [FLAVOR_MAX] character limit.","Error!")
+				tgui_alert_async(ui.user, "Entered flavor/taste text too long. [FLAVOR_MAX] character limit.","Error!")
 				return FALSE
 			host.vore_taste = new_flavor
 			unsaved_changes = TRUE
 			return TRUE
 		if("setsmell")
-			var/new_smell = html_encode(tgui_input_text(usr,"What your character smells like (400ch limit). This text will be printed to the pred after 'X smells of...' so just put something like 'strawberries and cream':","Character Smell",host.vore_smell))
+			var/new_smell = html_encode(tgui_input_text(ui.user,"What your character smells like (400ch limit). This text will be printed to the pred after 'X smells of...' so just put something like 'strawberries and cream':","Character Smell",host.vore_smell))
 			if(!new_smell)
 				return FALSE
 
 			new_smell = readd_quotes(new_smell)
 			if(length(new_smell) > FLAVOR_MAX)
-				tgui_alert_async(usr, "Entered perfume/smell text too long. [FLAVOR_MAX] character limit.","Error!")
+				tgui_alert_async(ui.user, "Entered perfume/smell text too long. [FLAVOR_MAX] character limit.","Error!")
 				return FALSE
 			host.vore_smell = new_smell
 			unsaved_changes = TRUE
@@ -905,9 +903,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			return TRUE
 		//CHOMPedit start: liquid belly code
 		if("liq_set_attribute")
-			return liq_set_attr(usr, params)
+			return liq_set_attr(ui.user, params)
 		if("liq_set_messages")
-			return liq_set_msg(usr, params)
+			return liq_set_msg(ui.user, params)
 		if("toggle_liq_rec")
 			host.receive_reagents = !host.receive_reagents
 			if(host.client.prefs_vr)
@@ -991,7 +989,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			unsaved_changes = TRUE
 			return TRUE
 		if("switch_selective_mode_pref")
-			host.selective_preference = tgui_input_list(usr, "What would you prefer happen to you with selective bellymode?","Selective Bellymode", list(DM_DEFAULT, DM_DIGEST, DM_ABSORB, DM_DRAIN))
+			host.selective_preference = tgui_input_list(ui.user, "What would you prefer happen to you with selective bellymode?","Selective Bellymode", list(DM_DEFAULT, DM_DIGEST, DM_ABSORB, DM_DRAIN))
 			if(!(host.selective_preference))
 				host.selective_preference = DM_DEFAULT
 			if(host.client.prefs_vr)
@@ -1008,12 +1006,12 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			return TRUE
 		//CHOMPEdit start - vore sprites color
 		if("set_vs_color")
-			var/belly_choice = tgui_input_list(usr, "Which vore sprite are you going to edit the color of?", "Vore Sprite Color", host.vore_icon_bellies)
+			var/belly_choice = tgui_input_list(ui.user, "Which vore sprite are you going to edit the color of?", "Vore Sprite Color", host.vore_icon_bellies)
 			if(belly_choice)
-				var/newcolor = input(usr, "Choose a color.", "", host.vore_sprite_color[belly_choice]) as color|null
+				var/newcolor = input(ui.user, "Choose a color.", "", host.vore_sprite_color[belly_choice]) as color|null
 				if(newcolor)
 					host.vore_sprite_color[belly_choice] = newcolor
-					var/multiply = tgui_input_list(usr, "Set the color to be applied multiplicatively or additively? Currently in [host.vore_sprite_multiply[belly_choice] ? "Multiply" : "Add"]", "Vore Sprite Color", list("Multiply", "Add"))
+					var/multiply = tgui_input_list(ui.user, "Set the color to be applied multiplicatively or additively? Currently in [host.vore_sprite_multiply[belly_choice] ? "Multiply" : "Add"]", "Vore Sprite Color", list("Multiply", "Add"))
 					if(multiply == "Multiply")
 						host.vore_sprite_multiply[belly_choice] = TRUE
 					else if(multiply == "Add")
@@ -1022,7 +1020,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 					unsaved_changes = TRUE
 			return TRUE
 		if("set_belly_rub")
-			host.belly_rub_target = tgui_input_list(usr, "Which belly would you prefer to be rubbed?","Select Target", host.vore_organs)
+			host.belly_rub_target = tgui_input_list(ui.user, "Which belly would you prefer to be rubbed?","Select Target", host.vore_organs)
 			if(!(host.belly_rub_target))
 				host.belly_rub_target = null
 			if(host.client.prefs_vr)
@@ -2547,7 +2545,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.vore_selected.autotransferlocation = choice.name
 			. = TRUE
 		if("b_autotransferextralocation")
-			var/obj/belly/choice = tgui_input_list(usr, "What extra places do you want your [lowertext(host.vore_selected.name)] auto-transfer to?","Select Belly", (host.vore_organs - host.vore_selected - host.vore_selected.autotransferlocation))
+			var/obj/belly/choice = tgui_input_list(user, "What extra places do you want your [lowertext(host.vore_selected.name)] auto-transfer to?","Select Belly", (host.vore_organs - host.vore_selected - host.vore_selected.autotransferlocation))
 			if(!choice) //They cancelled, no changes
 				return FALSE
 			else if(choice.name in host.vore_selected.autotransferextralocation)
@@ -2570,7 +2568,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.vore_selected.autotransferlocation_secondary = choice.name
 			. = TRUE
 		if("b_autotransferextralocation_secondary")
-			var/obj/belly/choice = tgui_input_list(usr, "What extra places do you want your [lowertext(host.vore_selected.name)] auto-transfer to?","Select Belly", (host.vore_organs - host.vore_selected - host.vore_selected.autotransferlocation_secondary))
+			var/obj/belly/choice = tgui_input_list(user, "What extra places do you want your [lowertext(host.vore_selected.name)] auto-transfer to?","Select Belly", (host.vore_organs - host.vore_selected - host.vore_selected.autotransferlocation_secondary))
 			if(!choice) //They cancelled, no changes
 				return FALSE
 			else if(choice.name in host.vore_selected.autotransferextralocation_secondary)

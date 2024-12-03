@@ -5311,7 +5311,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/midsternhallway)
 "etp" = (
-/obj/machinery/chem_master,
+/obj/machinery/computer/rdconsole/core,
 /obj/effect/floor_decal/milspec/color/purple,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/ursula)
@@ -31472,10 +31472,7 @@
 /turf/simulated/floor,
 /area/expoutpost/reactoraccess)
 "xZQ" = (
-/obj/machinery/chemical_dispenser/full{
-	pixel_y = 5
-	},
-/obj/structure/table/darkglass,
+/obj/machinery/r_n_d/destructive_analyzer,
 /obj/effect/floor_decal/milspec/color/purple,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/ursula)
