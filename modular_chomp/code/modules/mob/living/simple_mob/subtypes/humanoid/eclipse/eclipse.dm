@@ -876,6 +876,7 @@
 	special_attack_max_range = 7
 
 /mob/living/simple_mob/humanoid/eclipse/solar/plant/do_special_attack(atom/A)
+	var/mob/living/L = A
 	visible_message(span_warning("\The [src]'s vines spread out!"))
 	Beam(A, icon_state = "vine", time = 3 SECONDS, maxdistance = INFINITY)
 	if(isliving(A))
