@@ -1009,7 +1009,7 @@
 			return
 		else if(issilicon(A))
 			if(isrobot(A))
-				L.Weaken(10)
+				A.Weaken(10)
 	else if(istype(A, /obj/mecha))
 		var/obj/mecha/M = A
 		visible_message(span_critical("\The [M] is remotly hacked and ejects [M.occupant]!"))
