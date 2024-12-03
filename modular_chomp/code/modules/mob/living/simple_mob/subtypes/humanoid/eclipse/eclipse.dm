@@ -66,6 +66,7 @@
 	special_attack_min_range = 2
 	special_attack_max_range = 7
 	var/has_heal_droid = FALSE
+	var/specialattackprojectile = /obj/item/projectile/energy/phase/bolt
 
 //Want a self heal for a spefic dude, and to increase diffculty of some POIs
 /mob/living/simple_mob/humanoid/eclipse/handle_special()
@@ -850,13 +851,12 @@
 	special_attack_cooldown = 30 SECONDS
 	special_attack_min_range = 1
 	special_attack_max_range = 7
+	specialattackprojectile = /obj/item/projectile/beam/energy_net
 
 /mob/living/simple_mob/humanoid/eclipse/solar/disablernoodle/do_special_attack(atom/A) //I am bringing back the netgun attack. 4 seconds
 	visible_message(span_warning("\The [src] begins to create an energy net!"))
 	Beam(A, icon_state = "sat_beam", time = 3 SECONDS, maxdistance = INFINITY)
-	sleep(40)
-	var/obj/item/projectile/P = new /obj/item/projectile/beam/energy_net(get_turf(src))
-	P.launch_projectile(A, BP_TORSO, src)
+	addtimer(CALLBACK(src, PROC_REF(special_projectile), A), 3 SECOND, TIMER_DELETE_ME)
 
 
 /mob/living/simple_mob/humanoid/eclipse/solar/plant
@@ -956,6 +956,7 @@
 	special_attack_cooldown = 15 SECONDS
 	special_attack_min_range = 1
 	special_attack_max_range = 9
+	specialattackprojectile = /obj/item/projectile/arc/radioactive/weak
 
 
 /obj/item/projectile/arc/radioactive/weak
@@ -964,9 +965,8 @@
 /mob/living/simple_mob/humanoid/eclipse/solar/nuclear/do_special_attack(atom/A)
 	visible_message(span_warning("\The [src] begins to glow green!"))
 	Beam(A, icon_state = "sat_beam", time = 3 SECONDS, maxdistance = INFINITY)
-	sleep(30)
-	var/obj/item/projectile/P = new /obj/item/projectile/beam/energy_net(get_turf(src))
-	P.launch_projectile(A, BP_TORSO, src)
+	addtimer(CALLBACK(src, PROC_REF(special_projectile), A), 3 SECOND, TIMER_DELETE_ME)
+
 
 //Vistors of the other
 //One is a familiar shape from Sif, the other is new and anomalous based.
@@ -1002,16 +1002,21 @@
 	reload_time = 2 SECONDS
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/abyssdiver/do_special_attack(atom/A)
-	var/mob/living/L = A
 	visible_message(span_danger("\The [src] begins to mess with a wrist mounted device."))
-	sleep(30)
-	if(isliving(L))
-		if(iscarbon(L))
-			return
-		else if(issilicon(L))
-			if(isrobot(L))
-				L.Weaken(10)
+	if(isrobot(A))
+		addtimer(CALLBACK(src, PROC_REF(remote_shutdown), A), 3 SECOND, TIMER_DELETE_ME)
 	else if(istype(A, /obj/mecha))
-		var/obj/mecha/M = A
-		visible_message(span_critical("\The [M] is remotly hacked and ejects [M.occupant]!"))
-		M.go_out()
+		addtimer(CALLBACK(src, PROC_REF(remote_eject), A), 3 SECOND, TIMER_DELETE_ME)
+
+/mob/living/simple_mob/humanoid/eclipse/proc/remote_shutdown(var/mob/living/silicon/robot/L)
+	L.Weaken(10)
+
+
+/mob/living/simple_mob/humanoid/eclipse/proc/remote_eject(obj/mecha/M)
+	visible_message(span_critical("\The [M] is remotly hacked and ejects [M.occupant]!"))
+	M.go_out()
+
+
+/mob/living/simple_mob/humanoid/eclipse/proc/special_projectile(atom/A)
+	var/obj/item/projectile/P = new specialattackprojectile(get_turf(src))
+	P.launch_projectile(A, BP_TORSO, src)
