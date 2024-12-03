@@ -856,7 +856,7 @@
 /mob/living/simple_mob/humanoid/eclipse/solar/disablernoodle/do_special_attack(atom/A) //I am bringing back the netgun attack. 4 seconds
 	visible_message(span_warning("\The [src] begins to create an energy net!"))
 	Beam(A, icon_state = "sat_beam", time = 3 SECONDS, maxdistance = INFINITY)
-	addtimer(CALLBACK(src, PROC_REF(special_projectile), A), 3 SECOND, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(special_projectile), A), 3 SECONDS, TIMER_DELETE_ME)
 
 
 /mob/living/simple_mob/humanoid/eclipse/solar/plant
@@ -880,7 +880,7 @@
 	Beam(A, icon_state = "vine", time = 3 SECONDS, maxdistance = INFINITY)
 	if(isliving(A))
 		if(iscarbon(A))
-			addtimer(CALLBACK(src, PROC_REF(itemyoink), A), 3 SECOND, TIMER_DELETE_ME)
+			addtimer(CALLBACK(src, PROC_REF(itemyoink), A), 3 SECONDS, TIMER_DELETE_ME)
 
 
 /mob/living/simple_mob/humanoid/eclipse/proc/itemyoink(atom/A)
@@ -1004,9 +1004,9 @@
 /mob/living/simple_mob/humanoid/eclipse/lunar/abyssdiver/do_special_attack(atom/A)
 	visible_message(span_danger("\The [src] begins to mess with a wrist mounted device."))
 	if(isrobot(A))
-		addtimer(CALLBACK(src, PROC_REF(remote_shutdown), A), 3 SECOND, TIMER_DELETE_ME)
+		addtimer(CALLBACK(src, PROC_REF(remote_shutdown), A), 3 SECONDS, TIMER_DELETE_ME)
 	else if(istype(A, /obj/mecha))
-		addtimer(CALLBACK(src, PROC_REF(remote_eject), A), 3 SECOND, TIMER_DELETE_ME)
+		addtimer(CALLBACK(src, PROC_REF(remote_eject), A), 3 SECONDS, TIMER_DELETE_ME)
 
 /mob/living/simple_mob/humanoid/eclipse/proc/remote_shutdown(var/mob/living/silicon/robot/L)
 	L.Weaken(10)
