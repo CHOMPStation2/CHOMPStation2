@@ -1002,14 +1002,15 @@
 	reload_time = 2 SECONDS
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/abyssdiver/do_special_attack(atom/A)
+	var/mob/living/L = A
 	visible_message(span_danger("\The [src] begins to mess with a wrist mounted device."))
 	sleep(30)
-	if(isliving(A))
-		if(iscarbon(A))
+	if(isliving(L))
+		if(iscarbon(L))
 			return
-		else if(issilicon(A))
-			if(isrobot(A))
-				A.Weaken(10)
+		else if(issilicon(L))
+			if(isrobot(L))
+				L.Weaken(10)
 	else if(istype(A, /obj/mecha))
 		var/obj/mecha/M = A
 		visible_message(span_critical("\The [M] is remotly hacked and ejects [M.occupant]!"))
