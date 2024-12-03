@@ -1,0 +1,8 @@
+author: "Hunter-Dovetail"
+delete-after: True
+changes:
+  - rscadd: "dragon_upperjaw"
+  - rscadd: "dragon_lowerjaw"
+  - rscadd: "hippo_upperjaw"
+  - rscadd: "hippo_lowerjaw"
+  - bugfix: "VBO_maw26.dmi"
