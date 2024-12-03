@@ -806,35 +806,12 @@
 	special_attack_max_range = 7
 
 	projectiletype = /obj/item/projectile/energy/electrode
+	specialattackprojectile = /obj/item/projectile/energy/flash
 
 /mob/living/simple_mob/humanoid/eclipse/solar/disablernoodle/do_special_attack(atom/A)
-	visible_message(span_critical("\The [src] pulls out a flash!"))
-	if(isliving(A))
-		var/mob/living/L = A
-		if(iscarbon(L))
-			var/mob/living/carbon/C = L
-			if(C.stat != DEAD)
-				var/safety = C.eyecheck()
-				if(safety <= 0)
-					var/flash_strength = 8
-					if(ishuman(C))
-						var/mob/living/carbon/human/H = C
-						flash_strength *= H.species.flash_mod
-						if(flash_strength > 0)
-							to_chat(H, span_critical("You are disoriented by \the [src]!"))
-							H.eye_blurry = max(H.eye_blurry, flash_strength + 5)
-							H.flash_eyes()
-							H.apply_damage(flash_strength * H.species.flash_burn/5, BURN, BP_HEAD, 0, 0, "Photon burns")
-
-		else if(issilicon(L))
-			if(isrobot(L))
-				var/flashfail = FALSE
-				var/mob/living/silicon/robot/R = L
-				if(!flashfail)
-					to_chat(R, span_critical("Your optics are scrambled by \the [src]!"))
-					R.Confuse(10)
-					R.flash_eyes()
-
+	visible_message(span_warning("\The [src] begins to aim a flare gun!"))
+	Beam(A, icon_state = "sat_beam", time = 3 SECONDS, maxdistance = INFINITY)
+	addtimer(CALLBACK(src, PROC_REF(special_projectile), A), 3 SECONDS, TIMER_DELETE_ME)
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle //Bouncing bullet extreme
 	name = "Lunar Eclipse Silver Serpent"
@@ -853,7 +830,7 @@
 	special_attack_max_range = 7
 	specialattackprojectile = /obj/item/projectile/beam/energy_net
 
-/mob/living/simple_mob/humanoid/eclipse/solar/disablernoodle/do_special_attack(atom/A) //I am bringing back the netgun attack. 4 seconds
+/mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle/do_special_attack(atom/A) //I am bringing back the netgun attack. 4 seconds
 	visible_message(span_warning("\The [src] begins to create an energy net!"))
 	Beam(A, icon_state = "sat_beam", time = 3 SECONDS, maxdistance = INFINITY)
 	addtimer(CALLBACK(src, PROC_REF(special_projectile), A), 3 SECONDS, TIMER_DELETE_ME)
