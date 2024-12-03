@@ -876,6 +876,14 @@
 	special_attack_max_range = 7
 
 /mob/living/simple_mob/humanoid/eclipse/solar/plant/do_special_attack(atom/A)
+	visible_message(span_warning("\The [src]'s vines spread out!"))
+	Beam(A, icon_state = "vine", time = 3 SECONDS, maxdistance = INFINITY)
+	if(isliving(A))
+		if(iscarbon(L))
+			addtimer(CALLBACK(src, PROC_REF(itemyoink), A), 3 SECOND, TIMER_DELETE_ME)
+
+
+/mob/living/simple_mob/humanoid/eclipse/proc/itemyoink(atom/A)
 	var/mob/living/carbon/human/H = A
 	var/obj/item/I = H.get_active_hand()
 	H.drop_item()

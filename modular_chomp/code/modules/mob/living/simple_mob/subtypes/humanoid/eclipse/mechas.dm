@@ -812,7 +812,7 @@
 /obj/item/projectile/energy/infernosphere/Move()
 	. = ..()
 	var/turf/T = get_turf(src)
-	if(prob(25))
+	if(prob(10))
 		if(T)
 			new /obj/effect/decal/cleanable/liquid_fuel(T,0.2,1)
 			T.hotspot_expose(500, 50, 1)
