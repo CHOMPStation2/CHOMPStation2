@@ -39,7 +39,7 @@
 		if(LAZYLEN(R.restrict_modules_to) > 0)
 			modules.Add(R.restrict_modules_to)
 		else if(R.shell)
-			modules.Add(shell_module_types)
+			modules.Add(robot_module_types) // CHOMPEdit
 			// CHOMPAdd Start, shell blacklist and crisis mode for shells
 			modules.Remove(GLOB.shell_module_blacklist)
 			if(R.crisis || security_level == SEC_LEVEL_RED || R.crisis_override)
