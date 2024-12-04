@@ -942,7 +942,7 @@
 /mob/living/simple_mob/humanoid/eclipse/solar/nuclear/do_special_attack(atom/A)
 	visible_message(span_warning("\The [src] begins to glow green!"))
 	Beam(A, icon_state = "sat_beam", time = 3 SECONDS, maxdistance = INFINITY)
-	addtimer(CALLBACK(src, PROC_REF(special_projectile), A), 3 SECOND, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(special_projectile), A), 3 SECONDS, TIMER_DELETE_ME)
 
 
 //Vistors of the other
