@@ -1,0 +1,5 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - rscadd: "You can now de and reconstruct all parts of an airlock."
+  - rscadd: "Ability to set tags on different airlock parts (button, sensor, vent pumps) with a multitool."
