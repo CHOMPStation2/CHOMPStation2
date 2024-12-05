@@ -47,3 +47,6 @@
   - maptweak: Removed the chemistry lab in xenoarch - the lab already has a massive
       coolant supply. Added a sulphuric acid dispenser in its place
   - maptweak: Removes the crew monitor from xenoarch
+2024-12-05:
+  Kashargul:
+  - bugfix: ai robot module list
