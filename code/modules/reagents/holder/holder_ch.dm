@@ -10,6 +10,7 @@
 			var/datum/reagents/R = target_belly.reagents
 			if(!R)
 				R = new /datum/reagents(amount)
+				target_belly.reagents = R
 			return trans_to_holder(R, amount, multiplier, copy)
 		if(type == CHEM_INGEST)
 			var/datum/reagents/R = C.ingested
