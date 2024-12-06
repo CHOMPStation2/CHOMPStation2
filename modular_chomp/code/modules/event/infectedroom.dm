@@ -57,10 +57,8 @@
 	switch(severity)
 		if(EVENT_LEVEL_MODERATE)
 			infected_tiles = rand(5, 8)
-		else if(EVENT_LEVEL_MAJOR)
-			infected_tiles = rand(7, 10)
 		else
-			infected_tiles = rand(3, 6)
+			infected_tiles = rand(7, 10)
 
 	for(var/i in 1 to infected_tiles)
 		decal = rand(1, 5)
