@@ -50,3 +50,8 @@
 2024-12-05:
   Kashargul:
   - bugfix: ai robot module list
+2024-12-06:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: You can now de and reconstruct all parts of an airlock.
+  - rscadd: Ability to set tags on different airlock parts (button, sensor, vent pumps)
+      with a multitool.
