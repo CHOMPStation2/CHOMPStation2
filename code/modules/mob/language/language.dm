@@ -298,9 +298,15 @@
 	if(href_list["default_lang"])
 		if(href_list["default_lang"] == "reset")
 			if (species_language)
+<<<<<<< HEAD
 				apply_default_language(GLOB.all_languages[species_language]) //CHOMPEdit
 			else
 				apply_default_language(GLOB.all_languages[LANGUAGE_GIBBERISH]) //CHOMPEdit
+=======
+				apply_default_language(GLOB.all_languages[species_language])
+			else
+				apply_default_language(GLOB.all_languages[LANGUAGE_GIBBERISH])
+>>>>>>> 60fd487c76 (Merge pull request #16655 from Kashargul/jobtitle)
 		else
 			var/datum/language/L = locate(href_list["default_lang"])
 			if(L && (L in languages))
