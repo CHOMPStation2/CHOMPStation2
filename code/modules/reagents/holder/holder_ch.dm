@@ -8,6 +8,8 @@
 		var/mob/living/carbon/C = target
 		if(type == CHEM_VORE)
 			var/datum/reagents/R = target_belly.reagents
+			if(!R)
+				R = new /datum/reagents(amount)
 			return trans_to_holder(R, amount, multiplier, copy)
 		if(type == CHEM_INGEST)
 			var/datum/reagents/R = C.ingested
