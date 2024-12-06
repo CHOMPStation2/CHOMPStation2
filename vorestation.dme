@@ -151,6 +151,7 @@
 #include "code\__defines\statpanel.dm"
 #include "code\__defines\subsystems.dm"
 #include "code\__defines\supply.dm"
+#include "code\__defines\talksounds.dm"
 #include "code\__defines\targeting.dm"
 #include "code\__defines\text.dm"
 #include "code\__defines\tgs.config.dm"
@@ -2369,7 +2370,11 @@
 #include "code\modules\clothing\spacesuits\rig\rig_wiring.dm"
 #include "code\modules\clothing\spacesuits\rig\modules\combat_ch.dm"
 #include "code\modules\clothing\spacesuits\rig\modules\modules.dm"
+<<<<<<< HEAD
 #include "code\modules\clothing\spacesuits\rig\modules\utility_ch.dm"
+=======
+#include "code\modules\clothing\spacesuits\rig\modules\protean.dm"
+>>>>>>> 6253051c21 (Merge pull request #16598 from Kashargul/protRig)
 #include "code\modules\clothing\spacesuits\rig\modules\specific\ai_container.dm"
 #include "code\modules\clothing\spacesuits\rig\modules\specific\chem_dispenser.dm"
 #include "code\modules\clothing\spacesuits\rig\modules\specific\cleaner_launcher.dm"
@@ -3287,6 +3292,15 @@
 #include "code\modules\mob\living\carbon\human\species\station\teshari_vr.dm"
 #include "code\modules\mob\living\carbon\human\species\station\xenochimera_hud_vr.dm"
 #include "code\modules\mob\living\carbon\human\species\station\xenochimera_trait_vr.dm"
+<<<<<<< HEAD
+=======
+#include "code\modules\mob\living\carbon\human\species\station\protean_vr\_protean_defines.dm"
+#include "code\modules\mob\living\carbon\human\species\station\protean_vr\protean_blob.dm"
+#include "code\modules\mob\living\carbon\human\species\station\protean_vr\protean_powers.dm"
+#include "code\modules\mob\living\carbon\human\species\station\protean_vr\protean_rig.dm"
+#include "code\modules\mob\living\carbon\human\species\station\protean_vr\protean_rig_tgui.dm"
+#include "code\modules\mob\living\carbon\human\species\station\protean_vr\protean_species.dm"
+>>>>>>> 6253051c21 (Merge pull request #16598 from Kashargul/protRig)
 #include "code\modules\mob\living\carbon\human\species\station\traits_vr\_traits.dm"
 #include "code\modules\mob\living\carbon\human\species\station\traits_vr\negative.dm"
 #include "code\modules\mob\living\carbon\human\species\station\traits_vr\negative_ch.dm"

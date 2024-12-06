@@ -26,7 +26,10 @@
 				newitem.forceMove(S)
 			return S
 
+<<<<<<< HEAD
 	//CHOMPedit - protean rigsuit integrated backpack, behold, jank!
+=======
+>>>>>>> 6253051c21 (Merge pull request #16598 from Kashargul/protRig)
 	if(istype(src.back,/obj/item/rig))	//This would be much cooler if we had componentized storage datums
 		var/obj/item/rig/R = src.back
 		if(R.rig_storage)

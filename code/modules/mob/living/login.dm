@@ -42,6 +42,7 @@
 	if(!voice_sounds_list.len || !voice_sounds_list)
 		if(client.prefs.voice_sound)
 			var/prefsound = client.prefs.voice_sound
+<<<<<<< HEAD
 			voice_sounds_list = get_talk_sound(prefsound) //CHOMEPEDIT GLobal voice getter
 			/* CHOMPRemval, redundant voice selector
 			switch(prefsound)
@@ -74,6 +75,9 @@
 				if("goon speak skelly")
 					voice_sounds_list = goon_speak_skelly_sound
 		*/ //CHOMPRemval, redundant voice selector
+=======
+			voice_sounds_list = get_talk_sound(prefsound)
+>>>>>>> 6253051c21 (Merge pull request #16598 from Kashargul/protRig)
 		else
 			voice_sounds_list = talk_sound
 	//VOREStation Add End

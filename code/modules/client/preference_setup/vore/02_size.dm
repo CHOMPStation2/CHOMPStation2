@@ -86,6 +86,7 @@
 		character.voice_sounds_list = talk_sound
 	else
 		character.voice_sounds_list = get_talk_sound(pref.voice_sound)
+<<<<<<< HEAD
 	/*if(!pref.voice_sound)
 		character.voice_sounds_list = talk_sound
 	else
@@ -119,6 +120,8 @@
 			if("goon speak skelly")
 				character.voice_sounds_list = goon_speak_skelly_sound
 				*/ //CHOMPEDIT Global voice lookup
+=======
+>>>>>>> 6253051c21 (Merge pull request #16598 from Kashargul/protRig)
 	character.custom_speech_bubble = pref.custom_speech_bubble
 	character.custom_footstep = pref.custom_footstep
 

@@ -115,7 +115,11 @@
 #define FACTION_WOLFTAUR "wolftaur"
 #define FACTION_WORM "worm"
 #define FACTION_XENO "xeno"
+<<<<<<< HEAD
 #define FACTION_ZORGOIA "zorgoia" // CHOMPAdd
+=======
+#define FACTION_CORGI "corgi"
+>>>>>>> 6253051c21 (Merge pull request #16598 from Kashargul/protRig)
 
 #define FACTION_PLANTS "plants"
 

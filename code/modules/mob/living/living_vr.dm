@@ -186,6 +186,7 @@
 	set desc = "Sets your voice style!"
 	set category = "OOC.Game Settings"
 
+<<<<<<< HEAD
 	//CHOMPEDIT START, Global Talk Sounds
 	var/list/possible_voice_types = get_talk_sound()/*list(
 		"beep-boop",
@@ -239,3 +240,10 @@
 		if("xeno speak")
 			voice_sounds_list = xeno_speak_sound
 //CHOMPedit end.
+=======
+	var/list/possible_voice_types = get_talk_sound()
+	var/choice = tgui_input_list(usr, "Which set of sounds would you like to use for your character's speech sounds?", "Voice Sounds", possible_voice_types)
+	if(!choice)
+		voice_sounds_list = talk_sound
+	voice_sounds_list = get_talk_sound(choice)
+>>>>>>> 6253051c21 (Merge pull request #16598 from Kashargul/protRig)
