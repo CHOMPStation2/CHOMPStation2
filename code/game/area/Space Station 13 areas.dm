@@ -70,10 +70,9 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 
 /area/shuttle
 	requires_power = 0
-	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT
+	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS
 	sound_env = SMALL_ENCLOSED
 	base_turf = /turf/space
-	forbid_events = TRUE
 
 /area/shuttle/arrival
 	name = "\improper Arrival Shuttle"
@@ -784,7 +783,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	icon_state = "construction"
 
 /area/hallway/secondary/entry
-	forbid_events = TRUE
+	flags = AREA_FORBID_EVENTS
 
 /area/hallway/secondary/entry/fore
 	name = "\improper Shuttle Dock Hallway - Mid"
@@ -964,9 +963,11 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/crew_quarters
 	name = "\improper Dormitories"
 	icon_state = "Sleep"
+<<<<<<< HEAD
+=======
+	flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO
+>>>>>>> 5092af9321 (Merge pull request #16672 from Kashargul/areaStuff)
 	ambience = AMBIENCE_GENERIC
-	forbid_events = TRUE
-	forbid_singulo = TRUE
 
 /area/crew_quarters/toilet
 	name = "\improper Dormitory Toilets"
@@ -1282,8 +1283,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	icon_state = "Holodeck"
 	dynamic_lighting = 0
 	sound_env = LARGE_ENCLOSED
-	forbid_events = TRUE
-	flags = AREA_FLAG_IS_NOT_PERSISTENT
+	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS
 
 /area/holodeck/alphadeck
 	name = "\improper Holodeck Alpha"
@@ -1388,7 +1388,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper Engine Room"
 	icon_state = "engine"
 	sound_env = LARGE_ENCLOSED
-	forbid_events = TRUE
+	flags = AREA_FORBID_EVENTS
 
 /area/engineering/engine_airlock
 	name = "\improper Engine Room Airlock"
@@ -2612,6 +2612,7 @@ var/list/the_station_areas = list (
 	luminosity = 1
 	dynamic_lighting = 0
 	requires_power = 0
+<<<<<<< HEAD
 
 
 //CHOMPSTATION AREAS
@@ -2683,3 +2684,5 @@ var/list/the_station_areas = list (
 	name = "\improper Junker"
 	icon_state = "shuttlered"
 	requires_power = 1
+=======
+>>>>>>> 5092af9321 (Merge pull request #16672 from Kashargul/areaStuff)

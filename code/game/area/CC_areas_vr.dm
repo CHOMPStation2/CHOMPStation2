@@ -9,3 +9,30 @@
 	icon_state = "centcom_dock"
 	ambience = AMBIENCE_ARRIVALS
 	base_turf = /turf/simulated/floor/reinforced
+<<<<<<< HEAD
+=======
+
+//////// Abductor Areas ////////
+/area/unknown
+	requires_power = 0
+	flags = RAD_SHIELDED | AREA_ALLOW_LARGE_SIZE
+	icon_state = "red2"
+
+/area/unknown/dorm1
+	name = "Unknown Dorm 1"
+
+/area/unknown/dorm2
+	name = "Unknown Dorm 2"
+
+/area/unknown/dorm3
+	name = "Unknown Dorm 3"
+
+/area/unknown/dorm4
+	name = "Unknown Dorm 4"
+
+/area/unknown/dorm5
+	name = "Unknown Dorm 5"
+
+/area/unknown/dorm6
+	name = "Unknown Dorm 6"
+>>>>>>> 5092af9321 (Merge pull request #16672 from Kashargul/areaStuff)
