@@ -1,0 +1,5 @@
+author: "Kashargul"
+delete-after: True
+changes:
+  - bugfix: "liquid transfer not working when the partner's vorgan had no reagent datum before"
+  - bugfix: "limit check respecting the belly reagent limit, not the character limit\nfix reagent transfer between borgs and simple mobs"
