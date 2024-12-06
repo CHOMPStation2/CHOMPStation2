@@ -97,7 +97,6 @@
 #undef LOC_LIBRARY
 #undef LOC_HYDRO
 #undef LOC_TECH
-#undef LOC_HANGAR1
 #undef LOC_HANGAR2
 #undef LOC_HANGAR3
 
