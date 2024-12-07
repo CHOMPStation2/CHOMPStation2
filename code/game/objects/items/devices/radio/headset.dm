@@ -514,6 +514,7 @@
 	name = "emergency response team bowman headset"
 	desc = "The bowman headset of the boss's boss." // CHOMPAdd
 	icon_state = "com_headset_alt"
+	centComm = 1
 	ks2type = /obj/item/encryptionkey/ert
 
 /obj/item/radio/headset/ia
@@ -546,6 +547,8 @@
 	name = "centcom bowman headset"
 	desc = "The bowman headset of the boss's boss." // CHOMPAdd
 	icon_state = "com_headset_alt"
+	centComm = 1
+	ks2type = /obj/item/encryptionkey/ert
 
 /obj/item/radio/headset/nanotrasen
 	name = "\improper NT radio headset"
@@ -558,6 +561,8 @@
 	name = "\improper NT bowman headset"
 	desc = "The bowman headset of a Nanotrasen corporate employee." // CHOMPAdd
 	icon_state = "nt_headset_alt"
+	centComm = 1
+	ks2type = /obj/item/encryptionkey/ert
 
 /obj/item/radio/headset/pathfinder
 	name = "pathfinder's headset"
@@ -570,6 +575,8 @@
 	name = "pathfinder's bowman headset"
 	desc = "Bowman headset used by pathfinders for exploring. Access to the explorer and command channels." // CHOMPAdd
 	icon_state = "exp_headset_alt"
+	adhoc_fallback = TRUE
+	ks2type = /obj/item/encryptionkey/pathfinder
 
 /obj/item/radio/headset/pilot
 	name = "pilot's headset"
@@ -581,6 +588,7 @@
 	name = "pilot's bowman headset"
 	desc = "A bowman headset used by pilots." // CHOMPAdd
 	icon_state = "pilot_headset_alt"
+	adhoc_fallback = TRUE
 
 /obj/item/radio/headset/explorer
 	name = "away team member's headset"
@@ -593,6 +601,8 @@
 	name = "away team's bowman headset"
 	desc = "Bowman headset used by the away team for exploring. Access to the away team channel." // CHOMPAdd
 	icon_state = "exp_headset_alt"
+	adhoc_fallback = TRUE
+	ks2type = /obj/item/encryptionkey/explorer
 
 /obj/item/radio/headset/sar
 	name = "search and rescue headset"
