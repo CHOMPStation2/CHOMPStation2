@@ -6,11 +6,6 @@
 
 
 /datum/event/spider_infestation/setup()
-	if(prob(25)) //CHOMP Add 25% chance for the event to fail if chosen
-		log_debug("Spider infestation failed successfully.")
-		kill()
-		return
-
 	announceWhen = rand(announceWhen, announceWhen + 60)
 	spawncount = rand(4 * severity, 10 * severity)	//spiderlings only have a 50% chance to grow big and strong //CHOMP Edit: old: 2/4 new: 6/14 new: 4/10
 	sent_spiders_to_station = 0

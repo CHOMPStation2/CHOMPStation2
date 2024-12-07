@@ -12,6 +12,8 @@
 			if(T.z in Z_choices)
 				if(!T.block_tele)
 					pick_turfs += T
+				if(istype(T.loc, /area/crew_quarters)) // CHOMPEdit - No spawning in dorms
+					continue
 		// CHOMPAdd Start - Chance to end up in a belly. Fun (:
 		for(var/mob/living/mob in player_list)
 			if(mob.can_be_drop_pred && isfloor(mob.loc))
