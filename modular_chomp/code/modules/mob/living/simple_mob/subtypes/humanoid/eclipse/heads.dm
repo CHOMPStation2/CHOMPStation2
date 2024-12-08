@@ -172,10 +172,11 @@
 
 /mob/living/simple_mob/humanoid/eclipse/head/scientist/do_special_attack(atom/A)
 	if(vore_fullness == 1)
-
+	// FIX THAT
 	else if(vore_fullness > 1)
-
+	// FIX THAT
 	else
+	// FIX THAT
 
 
 /mob/living/simple_mob/mechanical/hivebot/swarm/eclipse
