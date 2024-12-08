@@ -291,14 +291,11 @@ var/list/admin_verbs_debug = list(
 	/client/proc/simple_DPS,
 	/datum/admins/proc/view_feedback,
 	/client/proc/stop_sounds,
-<<<<<<< HEAD
+	/client/proc/spawn_reagent,
 	/datum/admins/proc/quick_nif, //CHOMPStation Add,
 	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
 	/client/proc/reload_jobwhitelist, //ChompADD
 	/client/proc/reload_alienwhitelist //ChompADD
-=======
-	/client/proc/spawn_reagent
->>>>>>> 146c3f4140 (Merge pull request #16659 from TheCaramelion/Viro-Update-1)
 	)
 
 var/list/admin_verbs_paranoid_debug = list(
