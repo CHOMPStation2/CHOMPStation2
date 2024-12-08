@@ -432,7 +432,7 @@
 /area/crew_quarters/thirddeck/vrroom
 	name = "\improper Virtual Reality Room"
 	icon_state = "gaming"
-	flags = RAD_SHIELDED //Depending on the video game, you might still get figuative cancer
+	flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO //Depending on the video game, you might still get figuative cancer
 
 //CHOMPStation Edit End
 
@@ -448,7 +448,7 @@
 /area/crew_quarters/heads/sc/
 	name = "\improper Command - Head Office"
 	icon_state = "head_quarters"
-	flags = RAD_SHIELDED
+	flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO
 	sound_env = MEDIUM_SOFTFLOOR
 
 /area/crew_quarters/heads/sc/hop
