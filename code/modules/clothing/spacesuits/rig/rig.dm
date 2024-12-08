@@ -544,11 +544,7 @@
 			offline = 0
 			if(istype(wearer) && !wearer.wearing_rig)
 				wearer.wearing_rig = src
-<<<<<<< HEAD
-			if(!istype(src,/obj/item/rig/protean))	//CHOMPEdit - Stupid snowflake protean special check for rig assimilation code
-=======
 			if(!istype(src,/obj/item/rig/protean))	// Stupid snowflake protean special check for rig assimilation code
->>>>>>> 6253051c21 (Merge pull request #16598 from Kashargul/protRig)
 				slowdown = initial(slowdown)
 
 	if(offline)
@@ -931,27 +927,16 @@
 	if(world.time < wearer_move_delay)
 		return
 
-<<<<<<< HEAD
-	if(!wearer || !wearer.loc) //CHOMP Edit - Removed some stuff for protean living hardsuit
-		return
-
-//CHOMP Addition - Added this for protean living hardsuit
-=======
 	if(!wearer || !wearer.loc) // Removed some stuff for protean living hardsuit
 		return
 
 // Added this for protean living hardsuit
->>>>>>> 6253051c21 (Merge pull request #16598 from Kashargul/protRig)
 	wearer_move_delay = world.time + 2
 	if(ai_moving)
 		if(!ai_can_move_suit(user, check_user_module = 1))
 			return
 		// AIs are a bit slower than regular and ignore move intent.
-<<<<<<< HEAD
-		//CHOMPEdit - Moved this to where it's relevant
-=======
 		// Moved this to where it's relevant
->>>>>>> 6253051c21 (Merge pull request #16598 from Kashargul/protRig)
 		wearer_move_delay = world.time + ai_controlled_move_delay
 
 	//This is sota the goto stop mobs from moving var

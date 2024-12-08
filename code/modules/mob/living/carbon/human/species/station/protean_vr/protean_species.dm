@@ -40,6 +40,7 @@
 	max_age = 200
 	oxy_mod = 0
 	//radiation_mod = 0	//Can't be assed with fandangling rad protections while blob formed/suited
+	darksight = 10 // CHOMPAdd
 	siemens_coefficient = 2
 	brute_mod =        0.8
 	burn_mod =        1.5
@@ -60,9 +61,9 @@
 
 	rarity_value = 5
 
-	// species_sounds = "Robotic"
+	species_sounds = "Robotic" // CHOMPEnable
 
-	// crit_mod = 4	//Unable to go crit
+	crit_mod = 4	//Unable to go crit  // CHOMPEnable
 	var/obj/item/rig/protean/OurRig
 
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
@@ -259,6 +260,7 @@
 	if((H.getActualBruteLoss() + H.getActualFireLoss()) > H.maxHealth*0.5 && isturf(H.loc)) //So, only if we're not a blob (we're in nullspace) or in someone (or a locker, really, but whatever)
 		return ..() //Any instakill shot runtimes since there are no organs after this. No point to not skip these checks, going to nullspace anyway.
 
+/*CHOMP Station removal start
 	var/obj/item/organ/internal/nano/refactory/refactory = locate() in H.internal_organs
 	if(refactory && !(refactory.status & ORGAN_DEAD))
 
@@ -279,6 +281,7 @@
 			H.add_modifier(/datum/modifier/protean/silver, origin = refactory)
 
 	return ..()
+CHOMP Station removal end*/
 
 /datum/species/protean/get_additional_examine_text(var/mob/living/carbon/human/H)
 	return ..() //Hmm, what could be done here?
@@ -340,6 +343,7 @@
 	if(!refactory.use_stored_material(material_name,material_use))
 		expire()
 
+/*CHOMP Removal start
 /datum/modifier/protean/mhydrogen
 	name = "Protean Effect - M.Hydrogen"
 	desc = "You're affected by the presence of metallic hydrogen."
@@ -384,6 +388,7 @@
 
 	accuracy = 30
 	evasion = 30
+CHOMP Removal end*/
 
 /datum/modifier/protean/steel
 	name = "Protean Effect - Steel"
@@ -430,7 +435,7 @@
 	owner = 1
 	if(new_name)
 		name += " ([new_name])"
-		validstring += "[time2text(world.timeofday, "Month") +" "+ num2text(text2num(time2text(world.timeofday, "YYYY"))+300)]"
+		validstring += "[time2text(world.timeofday, "Month") +" "+ num2text(text2num(time2text(world.timeofday, "YYYY"))+544)]" // CHOMPEdit
 		registring += "[new_name]"
 
 /obj/item/clothing/accessory/permit/nanotech/examine(mob/user)

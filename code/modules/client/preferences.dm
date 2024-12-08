@@ -659,6 +659,13 @@ var/list/preferences_datums = list()
 		character.flavor_texts["feet"]		= flavor_texts["feet"]
 	if (copy_ooc_notes)
 		character.ooc_notes 				= metadata
+		character.ooc_notes_dislikes 		= metadata_dislikes
+		character.ooc_notes_likes 			= metadata_likes
+		// CHOMPAdd Start
+		character.ooc_notes_favs 			= metadata_favs
+		character.ooc_notes_maybes 			= metadata_maybes
+		character.ooc_notes_style 			= matadata_ooc_style
+		// CHOMPAdd End
 
 	character.weight			= weight_vr
 	character.weight_gain		= weight_gain

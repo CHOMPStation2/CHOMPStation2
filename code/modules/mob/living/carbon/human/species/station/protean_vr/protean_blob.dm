@@ -24,6 +24,7 @@
 	melee_damage_lower = 5
 	melee_damage_upper = 5
 	attacktext = list("slashed")
+	see_in_dark = 10 // CHOMPAdd
 
 	min_oxy = 0
 	max_oxy = 0
@@ -73,7 +74,7 @@
 		humanform = H
 		updatehealth()
 		refactory = locate() in humanform.internal_organs
-		add_verb(src,/mob/living/proc/ventcrawl)
+		// add_verb(src,/mob/living/proc/ventcrawl) // CHOMPRemove
 		add_verb(src,/mob/living/proc/usehardsuit)
 		add_verb(src,/mob/living/simple_mob/protean_blob/proc/nano_partswap)
 		add_verb(src,/mob/living/simple_mob/protean_blob/proc/nano_regenerate)
@@ -82,6 +83,7 @@
 		add_verb(src,/mob/living/simple_mob/protean_blob/proc/nano_rig_transform)
 		add_verb(src,/mob/living/simple_mob/protean_blob/proc/appearance_switch)
 		add_verb(src,/mob/living/simple_mob/protean_blob/proc/nano_latch)
+		remove_verb(src,/mob/living/simple_mob/proc/nutrition_heal) // CHOMPAdd
 	else
 		update_icon()
 	add_verb(src,/mob/living/simple_mob/proc/animal_mount)
@@ -455,6 +457,11 @@
 		blob.ooc_notes = ooc_notes
 		blob.ooc_notes_likes = ooc_notes_likes
 		blob.ooc_notes_dislikes = ooc_notes_dislikes
+		// CHOMPAdd Start
+		blob.ooc_notes_favs = ooc_notes_favs
+		blob.ooc_notes_maybes = ooc_notes_maybes
+		blob.ooc_notes_style = ooc_notes_style
+		// CHOMPAdd End
 		temporary_form = blob
 		var/obj/item/radio/R = null
 		if(isradio(l_ear))
@@ -477,19 +484,6 @@
 		sleep(13)
 		blob.update_icon() //Will remove the collapse anim
 
-<<<<<<< HEAD
-	//Put our owner in it (don't transfer var/mind)
-	blob.ckey = ckey
-	blob.ooc_notes = ooc_notes
-	blob.ooc_notes_likes = ooc_notes_likes
-	blob.ooc_notes_dislikes = ooc_notes_dislikes
-	//CHOMPEdit Start
-	blob.ooc_notes_favs = ooc_notes_favs
-	blob.ooc_notes_maybes = ooc_notes_maybes
-	blob.ooc_notes_style = ooc_notes_style
-	//CHOMPEdit End
-	temporary_form = blob
-=======
 		//Transfer vore organs
 		blob.vore_organs = vore_organs.Copy()
 		blob.vore_selected = vore_selected
@@ -497,7 +491,8 @@
 			B.forceMove(blob)
 			B.owner = blob
 		vore_organs.Cut()
->>>>>>> 6253051c21 (Merge pull request #16598 from Kashargul/protRig)
+
+		soulgem.owner = blob // CHOMPAdd
 
 		//We can still speak our languages!
 		blob.languages = languages.Copy()
@@ -510,28 +505,10 @@
 		//Flip them to the protean panel
 		addtimer(CALLBACK(src, PROC_REF(nano_set_panel), C), 4)
 
-<<<<<<< HEAD
-	//Transfer vore organs
-	blob.vore_organs = vore_organs
-	blob.vore_selected = vore_selected
-	for(var/obj/belly/B as anything in vore_organs)
-		B.forceMove(blob)
-		B.owner = blob
-
-	soulgem.owner = blob //CHOMPAdd
-
-	//We can still speak our languages!
-	blob.languages = languages.Copy()
-
-
-	//Return our blob in case someone wants it
-	return blob
-=======
 		//Return our blob in case someone wants it
 		return blob
 	else
 		to_chat(src, span_warning("You must remain still to blobform!"))
->>>>>>> 6253051c21 (Merge pull request #16598 from Kashargul/protRig)
 
 //For some reason, there's no way to force drop all the mobs grabbed. This ought to fix that. And be moved elsewhere. Call with caution, doesn't handle cycles.
 /proc/remove_micros(var/src, var/mob/root)
@@ -598,41 +575,25 @@
 		//Record where they should go
 		var/atom/reform_spot = blob.drop_location()
 
-<<<<<<< HEAD
-	//Put our owner in it (don't transfer var/mind)
-	ckey = blob.ckey
-	ooc_notes = blob.ooc_notes // Lets give the protean any updated notes from blob form.
-	ooc_notes_likes = blob.ooc_notes_likes
-	ooc_notes_dislikes = blob.ooc_notes_dislikes
-	//CHOMPEdit Start
-	ooc_notes_favs = blob.ooc_notes_favs
-	ooc_notes_maybes = blob.ooc_notes_maybes
-	ooc_notes_style = blob.ooc_notes_style
-	//CHOMPEdit End
-	temporary_form = null
-=======
 		//dir update
 		dir = blob.dir
->>>>>>> 6253051c21 (Merge pull request #16598 from Kashargul/protRig)
 
 		//Move them back where the blob was
 		forceMove(reform_spot)
 
-<<<<<<< HEAD
-	soulgem.owner = src //CHOMPAdd
-
-	if(blob.prev_left_hand) put_in_l_hand(blob.prev_left_hand) //The restore for when reforming.
-	if(blob.prev_right_hand) put_in_r_hand(blob.prev_right_hand)
-=======
 		if(blob.l_hand) blob.drop_l_hand()
 		if(blob.r_hand) blob.drop_r_hand()
->>>>>>> 6253051c21 (Merge pull request #16598 from Kashargul/protRig)
 
 		//Put our owner in it (don't transfer var/mind)
 		ckey = blob.ckey
 		ooc_notes = blob.ooc_notes // Lets give the protean any updated notes from blob form.
 		ooc_notes_likes = blob.ooc_notes_likes
 		ooc_notes_dislikes = blob.ooc_notes_dislikes
+		// CHOMPAdd Start
+		ooc_notes_favs = blob.ooc_notes_favs
+		ooc_notes_maybes = blob.ooc_notes_maybes
+		ooc_notes_style = blob.ooc_notes_style
+		// CHOMPAdd End
 		temporary_form = null
 
 		//Transfer vore organs
@@ -642,6 +603,8 @@
 			B.forceMove(src)
 			B.owner = src
 		languages = blob.languages.Copy()
+
+		soulgem.owner = src // CHOMPAdd
 
 		Life(1) //Fix my blindness right meow //Has to be moved up here, there exists a circumstance where blob could be deleted without vore organs moving right.
 
