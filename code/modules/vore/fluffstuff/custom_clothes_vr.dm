@@ -816,25 +816,6 @@
 		var/mob/living/carbon/human/H = user
 		if(H.head == src)
 			H.update_inv_head()
-/*
-/obj/item/rig/light/hacker/fluff/aronai
-	name = "KHI-99-AAR suit module"
-	suit_type = "nano"
-	desc = "A thin collapsable spacesuit for synths from Kitsuhana Heavy Industries."
-	airtight = 1 //Not because it should be airtight but because suit coolers don't work w/o it.
-	armor = list(melee = 25, bullet = 15, laser = 15, energy = 60, bomb = 30, bio = 70, rad = 100)
-	air_type = null //No O2 tank, why would it have one?
-
-	cell_type =  /obj/item/cell/hyper
-	req_access = list(access_medical)
-
-	initial_modules = list(
-		/obj/item/rig_module/maneuvering_jets,
-		/obj/item/rig_module/teleporter
-		)
-
-No. With a teleporter? Just *no*. - Hawk, YW
-*/
 //Viveret:Keturah
 /obj/item/clothing/under/dress/maid
 	name = "Maid Outfit"
@@ -916,7 +897,6 @@ No. With a teleporter? Just *no*. - Hawk, YW
 /obj/item/clothing/under/rank/khi
 	name = "Delete Me"
 	desc = "Why did you spawn this one? Dork."
-	//catalogue_data = list(/datum/category_item/catalogue/information/organization/khi)
 	sensor_mode = 3
 
 	icon = 'icons/inventory/uniform/item_vr.dmi'
