@@ -212,7 +212,7 @@
 /area/hallway/primary/firstdeck/auxdockaft
 	name = "\improper First Deck Aft Auxiliary Dock"
 	icon_state = "docking_hallway"
-	forbid_events = TRUE
+	flags = AREA_FORBID_EVENTS
 
 /area/hallway/primary/firstdeck/auxdockfore
 	name = "\improper First Deck Fore Auxiliary Dock"
@@ -1712,11 +1712,7 @@ End Chompstation Edit*/
 /area/maintenance/bar/dorms
 	name = "Maintenance Bar Dorms"
 	icon_state = "Sleep"
-	soundproofed = TRUE
-	limit_mob_size = FALSE
-	block_suit_sensors = TRUE
-	flags = RAD_SHIELDED
-	block_tracking = TRUE
+	flags = RAD_SHIELDED | AREA_SOUNDPROOF |AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING
 
 /area/maintenance/bar/dorms/dorm_1
 	name = "Maintenance Deck Bar Dorms 1"

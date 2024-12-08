@@ -109,6 +109,11 @@
 #define AREA_BLOCK_SUIT_SENSORS		0x800	// If suit sensors are blocked in the area.
 #define AREA_BLOCK_TRACKING			0x1000	// If camera tracking is blocked in the area.
 
+// CHOMPAdd Start/area
+#define PHASE_SHIELDED				0x200000 // A less rough way to prevent phase shifting without blocking access
+#define AREA_LIMIT_DARK_RESPITE		0x400000// Shadekin will die normally in those areas
+// CHOMPAdd End
+
 // OnTopic return values
 #define TOPIC_NOACTION 0
 #define TOPIC_HANDLED 1

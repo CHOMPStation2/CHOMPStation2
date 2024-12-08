@@ -273,11 +273,7 @@
 			S.set_up(5, 1, get_turf(telepad))
 			S.start()
 
-<<<<<<< HEAD
-			if(!A || (A.flags & BLUE_SHIELDED) || (target.block_tele)) //CHOMPedit, consistency smh
-=======
-			if(!A || (A.flag_check(BLUE_SHIELDED)))
->>>>>>> 5092af9321 (Merge pull request #16672 from Kashargul/areaStuff)
+			if(!A || (A.flag_check(BLUE_SHIELDED)) || (target.block_tele)) //CHOMPedit, consistency smh
 				telefail()
 				temp_msg = "ERROR! Target is shielded from bluespace intersection!"
 				return

@@ -8,86 +8,30 @@
 	outdoors = FALSE
 	flags = RAD_SHIELDED
 
+/area/casino/dorms
+	name = "\improper Casino dorm"
+	flags = RAD_SHIELDED | AREA_SOUNDPROOF | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING
+
 // Areas for the actual casino
-/area/casino/dorm1
-	name = "\improper Casino dorm"
-	flags = RAD_SHIELDED
-	soundproofed = TRUE
-	limit_mob_size = FALSE
-	block_suit_sensors = TRUE
-	block_tracking = TRUE
+/area/casino/dorms/dorm1
 
-/area/casino/dorm2
-	name = "\improper Casino dorm"
-	flags = RAD_SHIELDED
-	soundproofed = TRUE
-	limit_mob_size = FALSE
-	block_suit_sensors = TRUE
-	block_tracking = TRUE
+/area/casino/dorms/dorm2
 
-/area/casino/dorm3
-	name = "\improper Casino dorm"
-	flags = RAD_SHIELDED
-	soundproofed = TRUE
-	limit_mob_size = FALSE
-	block_suit_sensors = TRUE
-	block_tracking = TRUE
+/area/casino/dorms/dorm3
 
-/area/casino/dorm4
-	name = "\improper Casino dorm"
-	flags = RAD_SHIELDED
-	soundproofed = TRUE
-	limit_mob_size = FALSE
-	block_suit_sensors = TRUE
-	block_tracking = TRUE
+/area/casino/dorms/dorm4
 
-/area/casino/dorm5
-	name = "\improper Casino dorm"
-	flags = RAD_SHIELDED
-	soundproofed = TRUE
-	limit_mob_size = FALSE
-	block_suit_sensors = TRUE
-	block_tracking = TRUE
+/area/casino/dorms/dorm5
 
-/area/casino/dorm6
-	name = "\improper Casino dorm"
-	flags = RAD_SHIELDED
-	soundproofed = TRUE
-	limit_mob_size = FALSE
-	block_suit_sensors = TRUE
-	block_tracking = TRUE
+/area/casino/dorms/dorm6
 
-/area/casino/dorm7
-	name = "\improper Casino dorm"
-	flags = RAD_SHIELDED
-	soundproofed = TRUE
-	limit_mob_size = FALSE
-	block_suit_sensors = TRUE
-	block_tracking = TRUE
+/area/casino/dorms/dorm7
 
-/area/casino/dorm8
-	name = "\improper Casino dorm"
-	flags = RAD_SHIELDED
-	soundproofed = TRUE
-	limit_mob_size = FALSE
-	block_suit_sensors = TRUE
-	block_tracking = TRUE
+/area/casino/dorms/dorm8
 
-/area/casino/dorm9
-	name = "\improper Casino dorm"
-	flags = RAD_SHIELDED
-	soundproofed = TRUE
-	limit_mob_size = FALSE
-	block_suit_sensors = TRUE
-	block_tracking = TRUE
+/area/casino/dorms/dorm9
 
-/area/casino/dorm10
-	name = "\improper Casino dorm"
-	flags = RAD_SHIELDED
-	soundproofed = TRUE
-	limit_mob_size = FALSE
-	block_suit_sensors = TRUE
-	block_tracking = TRUE
+/area/casino/dorms/dorm10
 
 /area/casino/helm
 	name = "\improper Casino helm"

@@ -9,8 +9,6 @@
 	icon_state = "centcom_dock"
 	ambience = AMBIENCE_ARRIVALS
 	base_turf = /turf/simulated/floor/reinforced
-<<<<<<< HEAD
-=======
 
 //////// Abductor Areas ////////
 /area/unknown
@@ -35,4 +33,3 @@
 
 /area/unknown/dorm6
 	name = "Unknown Dorm 6"
->>>>>>> 5092af9321 (Merge pull request #16672 from Kashargul/areaStuff)
