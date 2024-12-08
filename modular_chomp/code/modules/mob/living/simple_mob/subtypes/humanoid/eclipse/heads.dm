@@ -170,7 +170,6 @@
 	size_x = 3
 	size_y = 3
 
-
 /mob/living/simple_mob/mechanical/hivebot/swarm/eclipse
 	faction = FACTION_ECLIPSE
 

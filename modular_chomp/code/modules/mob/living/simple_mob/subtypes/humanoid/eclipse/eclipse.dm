@@ -855,15 +855,13 @@
 /mob/living/simple_mob/humanoid/eclipse/solar/plant/do_special_attack(atom/A)
 	visible_message(span_warning("\The [src]'s vines spread out!"))
 	Beam(A, icon_state = "vine", time = 3 SECONDS, maxdistance = INFINITY)
-	if(isliving(A))
-		if(iscarbon(A))
-			addtimer(CALLBACK(src, PROC_REF(itemyoink), A), 3 SECONDS, TIMER_DELETE_ME)
+	if(ishuman(A))
+		addtimer(CALLBACK(src, PROC_REF(itemyoink), A), 3 SECONDS, TIMER_DELETE_ME)
 
 
-/mob/living/simple_mob/humanoid/eclipse/proc/itemyoink(atom/A)
-	if(!A)
+/mob/living/simple_mob/humanoid/eclipse/proc/itemyoink(mob/living/carbon/human/H)
+	if(!H)
 		return
-	var/mob/living/carbon/human/H = A
 	var/obj/item/I = H.get_active_hand()
 	H.drop_item()
 	if(I)
@@ -888,14 +886,13 @@
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/experimenter/do_special_attack(atom/A)
 	visible_message(span_danger("The [src]'s gauntlet glows silver!"))
-	addtimer(CALLBACK(src, PROC_REF(gravity_pull), A), 3 SECOND, TIMER_DELETE_ME)
+	if(isliving(A))
+		addtimer(CALLBACK(src, PROC_REF(gravity_pull), A), 3 SECOND, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/humanoid/eclipse/proc/gravity_pull(atom/A)
-	if(!A)
+/mob/living/simple_mob/humanoid/eclipse/proc/gravity_pull(mob/living/L)
+	if(!L)
 		return
-	var/D = src
-	var/mob/living/carbon/human/H = A
-	H.throw_at(D, 2, 4) // Just yoinked.
+	L.throw_at(src, 2, 4) // Just yoinked.
 
 //The Precursor intative big folks
 /mob/living/simple_mob/humanoid/eclipse/lunar/titanhunter //lunar melee unit
