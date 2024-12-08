@@ -582,13 +582,8 @@
 
 	var/ignores_lighting = 0 // Whether or not this hair accessory will ignore lighting and glow in the dark.
 	color_blend_mode = ICON_ADD // Only appliciable if do_coloration = 1
-<<<<<<< HEAD
-	var/desc = "You should not see this..."
-/* //Chomp REMOVE - No ckeys_allowed allowed
-=======
 	var/desc = DEVELOPER_WARNING_NAME
-
->>>>>>> a827a8b5b2 (Merge pull request #16667 from Kashargul/appearance)
+/* //Chomp REMOVE - No ckeys_allowed allowed
 /datum/sprite_accessory/hair_accessory/verie_hair_glow
 	name = "veries hair glow"
 	desc = ""

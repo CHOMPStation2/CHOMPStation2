@@ -684,12 +684,8 @@ GLOBAL_LIST_EMPTY(apcs)
 			to_chat(user, span_notice("The [name] looks too sturdy to bash open with \the [W.name]."))
 
 // attack with hand - remove cell (if cover open) or interact with the APC
-<<<<<<< HEAD
-/obj/machinery/power/apc/verb/togglelock(mob/user as mob)
-=======
 
 /obj/machinery/power/apc/proc/togglelock(mob/user)
->>>>>>> a827a8b5b2 (Merge pull request #16667 from Kashargul/appearance)
 	if(emagged)
 		to_chat(user, "The panel is unresponsive.")
 	else if(opened)
