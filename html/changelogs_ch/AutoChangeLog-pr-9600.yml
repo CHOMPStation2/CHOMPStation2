@@ -1,0 +1,7 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - qol: "adjusted a slew of traffic events and added an assload of new generic ship names, with most corps now using the generic names on top of their standard lists"
+  - rscdel: "removed the ue-katish and vox marauders from events"
+  - qol: "removed widespread references to KHI, adjusting them to various appropriate companies"
+  - rscdel: "purged the old busyspace module and replaced its contents entirely"
