@@ -26,7 +26,6 @@
 				newitem.forceMove(S)
 			return S
 
-	//CHOMPedit - protean rigsuit integrated backpack, behold, jank!
 	if(istype(src.back,/obj/item/rig))	//This would be much cooler if we had componentized storage datums
 		var/obj/item/rig/R = src.back
 		if(R.rig_storage)
