@@ -1,8 +1,13 @@
 /obj/item/paicard/sleevecard
 	name = "sleevecard"
+<<<<<<< HEAD
 	desc = "This Vey-Med-upgraded pAI module has enough capacity to run a whole mind of human-level intelligence."
 	catalogue_data = list(/datum/category_item/catalogue/information/organization/vey_med,
 						/datum/category_item/catalogue/technology/resleeving)
+=======
+	desc = "This upgraded pAI module has enough capacity to run a whole mind of human-level intelligence."
+	catalogue_data = list(/datum/category_item/catalogue/technology/resleeving)
+>>>>>>> d0ae4a58a0 (Merge pull request #16670 from KillianKirilenko/kk-spacetraffic)
 	origin_tech = list(TECH_DATA = 2)
 	show_messages = 0
 	var/emagged = FALSE

@@ -816,6 +816,7 @@
 		var/mob/living/carbon/human/H = user
 		if(H.head == src)
 			H.update_inv_head()
+<<<<<<< HEAD
 /*
 /obj/item/rig/light/hacker/fluff/aronai
 	name = "KHI-99-AAR suit module"
@@ -835,6 +836,9 @@
 
 No. With a teleporter? Just *no*. - Hawk, YW
 */
+=======
+
+>>>>>>> d0ae4a58a0 (Merge pull request #16670 from KillianKirilenko/kk-spacetraffic)
 //Viveret:Keturah
 /obj/item/clothing/under/dress/maid
 	name = "Maid Outfit"
@@ -916,7 +920,10 @@ No. With a teleporter? Just *no*. - Hawk, YW
 /obj/item/clothing/under/rank/khi
 	name = "Delete Me"
 	desc = "Why did you spawn this one? Dork."
+<<<<<<< HEAD
 	//catalogue_data = list(/datum/category_item/catalogue/information/organization/khi)
+=======
+>>>>>>> d0ae4a58a0 (Merge pull request #16670 from KillianKirilenko/kk-spacetraffic)
 	sensor_mode = 3
 
 	icon = 'icons/inventory/uniform/item_vr.dmi'
@@ -924,44 +931,79 @@ No. With a teleporter? Just *no*. - Hawk, YW
 	icon_state = "khi_uniform"
 
 /obj/item/clothing/under/rank/khi/cmd //Command version
+<<<<<<< HEAD
 	name = "GE command suit" //CHOMPedit: Change to GE
 	desc = "Gilthari Exports uniform. An extra-comfortable command one, at that." //CHOMPedit
+=======
+	name = "sleek command suit"
+	desc = "A sleek, neocorporate style uniform. An extra-comfortable command one, at that."
+>>>>>>> d0ae4a58a0 (Merge pull request #16670 from KillianKirilenko/kk-spacetraffic)
 	icon_state = "khi_uniform_cmd"
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 
 /obj/item/clothing/under/rank/khi/sec //Security version
+<<<<<<< HEAD
 	name = "GE security suit" //CHOMPedit: Change to GE
 	desc = "Gilthari Exports uniform. This one has angry red security stripes. Keepin' the peace in style." //CHOMPedit
+=======
+	name = "sleek security suit"
+	desc = "A sleek, neocorporate style uniform. This one has angry red security stripes. Keepin' the peace in style."
+>>>>>>> d0ae4a58a0 (Merge pull request #16670 from KillianKirilenko/kk-spacetraffic)
 	icon_state = "khi_uniform_sec"
 	armor = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 
 /obj/item/clothing/under/rank/khi/med //Medical version
+<<<<<<< HEAD
 	name = "GE medical suit" //CHOMPedit: Change to GE
 	desc = "Gilthari Exports uniform. The medical version. Why not just get a new body, anyway?"//CHOMPedit
+=======
+	name = "sleek medical suit"
+	desc = "A sleek, neocorporate style uniform. The medical version. Why not just get a new body, anyway?"
+>>>>>>> d0ae4a58a0 (Merge pull request #16670 from KillianKirilenko/kk-spacetraffic)
 	icon_state = "khi_uniform_med"
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0)
 
 /obj/item/clothing/under/rank/khi/eng //Engineering version
+<<<<<<< HEAD
 	name = "GE engineering suit" //CHOMPedit: Change to GE
 	desc = "Gilthari Exports uniform. One fit for an engineer, by the looks of it. Building the future, one disaster at a time." //CHOMPedit
+=======
+	name = "sleek engineering suit"
+	desc = "A sleek, neocorporate style uniform. One fit for an engineer, by the looks of it."
+>>>>>>> d0ae4a58a0 (Merge pull request #16670 from KillianKirilenko/kk-spacetraffic)
 	icon_state = "khi_uniform_eng"
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 10)
 
 /obj/item/clothing/under/rank/khi/sci //Science version
+<<<<<<< HEAD
 	name = "GE science suit" //CHOMPedit: Change to GE
 	desc = "Gilthari Exports uniform. For performing science in, based on the color! Only SCIENCE can save us now." //CHOMPedit
+=======
+	name = "sleek science suit"
+	desc = "A sleek, neocorporate style uniform. For performing science in, based on the color!"
+>>>>>>> d0ae4a58a0 (Merge pull request #16670 from KillianKirilenko/kk-spacetraffic)
 	icon_state = "khi_uniform_sci"
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0)
 
 /obj/item/clothing/under/rank/khi/crg //Cargo version
+<<<<<<< HEAD
 	name = "GE cargo suit" //CHOMPedit: Change to GE
 	desc = "A sleek cargo uniform from Gilthari Exports." //CHOMPedit
+=======
+	name = "sleek cargo suit"
+	desc = "A sleek, neocorporate style uniform. Looks like it's in supply and cargo division colors. Heavy industry means heavy lifting, after all."
+>>>>>>> d0ae4a58a0 (Merge pull request #16670 from KillianKirilenko/kk-spacetraffic)
 	icon_state = "khi_uniform_crg"
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 
 /obj/item/clothing/under/rank/khi/civ //Science version
+<<<<<<< HEAD
 	name = "GE civilian suit" //CHOMPedit: Change to GE
 	desc = "A sleek civilian uniform from Gilthari Exports." //CHOMPedit
+=======
+	name = "sleek civilian suit"
+	desc = "A sleek, neocorporate style uniform. Snazzy silver trim marks this is as the general civilian branch. Smells like paperwork and bureaucracy."
+>>>>>>> d0ae4a58a0 (Merge pull request #16670 from KillianKirilenko/kk-spacetraffic)
 	icon_state = "khi_uniform_civ"
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 
