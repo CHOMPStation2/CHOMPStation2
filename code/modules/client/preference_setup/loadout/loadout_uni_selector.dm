@@ -33,11 +33,7 @@
 	..()
 	var/list/selector_uniforms = list(
 		"uniform w/ dress"=/obj/item/clothing/under/dress/dress_cap,
-<<<<<<< HEAD
 		"GE uniform"=/obj/item/clothing/under/rank/khi/cmd, //CHOMPEdit, KHI becomes GE
-=======
-		"neocorporate uniform"=/obj/item/clothing/under/rank/khi/cmd,
->>>>>>> d0ae4a58a0 (Merge pull request #16670 from KillianKirilenko/kk-spacetraffic)
 		"ST: Original Series Command"=/obj/item/clothing/under/rank/trek/command,
 		"ST: Next Generation Command"=/obj/item/clothing/under/rank/trek/command/next,
 		"ST: Voyager Command"=/obj/item/clothing/under/rank/trek/command/voy,
@@ -68,11 +64,7 @@
 	var/list/selector_uniforms = list(
 		"uniform w/ dress"=/obj/item/clothing/under/dress/dress_hop,
 		"HR director"=/obj/item/clothing/under/dress/dress_hr,
-<<<<<<< HEAD
 		"GE uniform"=/obj/item/clothing/under/rank/khi/cmd, //CHOMPEdit, KHI becomes GE
-=======
-		"neocorporate uniform"=/obj/item/clothing/under/rank/khi/cmd,
->>>>>>> d0ae4a58a0 (Merge pull request #16670 from KillianKirilenko/kk-spacetraffic)
 		"ST: Original Series Command"=/obj/item/clothing/under/rank/trek/command,
 		"ST: Next Generation Command"=/obj/item/clothing/under/rank/trek/command/next,
 		"ST: Voyager Command"=/obj/item/clothing/under/rank/trek/command/voy,
@@ -138,11 +130,7 @@
 /datum/gear/uniform/civvie_uniform_selector/New()
 	..()
 	var/list/selector_uniforms = list(
-<<<<<<< HEAD
 		"GE uniform"=/obj/item/clothing/under/rank/khi/civ, //CHOMPEdit, KHI becomes GE
-=======
-		"neocorporate uniform"=/obj/item/clothing/under/rank/khi/civ,
->>>>>>> d0ae4a58a0 (Merge pull request #16670 from KillianKirilenko/kk-spacetraffic)
 		"TG&C plain turtleneck"=/obj/item/clothing/under/rank/neo_suspect_turtleneck,
 		"TG&C plain turtleneck w/ skirt"=/obj/item/clothing/under/rank/neo_suspect_turtleskirt,
 		"TG&C blue turtleneck"=/obj/item/clothing/under/rank/neo_suspect_turtleneck_blue,
@@ -212,11 +200,7 @@
 	..()
 	var/list/selector_uniforms = list(
 		"undersuit, modernized"=/obj/item/clothing/under/rank/security/modern,
-<<<<<<< HEAD
 		"GE uniform"=/obj/item/clothing/under/rank/khi/sec, //CHOMPEdit, KHI becomes GE
-=======
-		"neocorporate uniform"=/obj/item/clothing/under/rank/khi/sec,
->>>>>>> d0ae4a58a0 (Merge pull request #16670 from KillianKirilenko/kk-spacetraffic)
 		"voidsuit underlayer"=/obj/item/clothing/under/undersuit/sec,
 		"skirt"=/obj/item/clothing/under/rank/security/skirt,
 		"turtleneck"=/obj/item/clothing/under/rank/security/turtleneck,
@@ -316,11 +300,7 @@
 		"TG&C blue turtleneck & skirt"=/obj/item/clothing/under/rank/neo_hos_blackblue_skirt,
 		"TG&C blue parade uniform"=/obj/item/clothing/under/rank/neo_hos_parade_blue,
 		"TG&C blue parade uniform, feminine"=/obj/item/clothing/under/rank/neo_hos_parade_blue_fem,
-<<<<<<< HEAD
 		"GE uniform, command"=/obj/item/clothing/under/rank/khi/cmd, //CHOMPEdit, KHI becomes GE
-=======
-		"neocorporate uniform, command"=/obj/item/clothing/under/rank/khi/cmd,
->>>>>>> d0ae4a58a0 (Merge pull request #16670 from KillianKirilenko/kk-spacetraffic)
 		"ST: Original Series Command"=/obj/item/clothing/under/rank/trek/command,
 		"ST: Next Generation Command"=/obj/item/clothing/under/rank/trek/command/next,
 		"ST: Voyager Command"=/obj/item/clothing/under/rank/trek/command/voy,
@@ -347,11 +327,7 @@
 		"skirt"=/obj/item/clothing/under/rank/cargo/skirt,
 		"jeans"=/obj/item/clothing/under/rank/cargo/jeans,
 		"jeans, feminine cut"=/obj/item/clothing/under/rank/cargo/jeans/female,
-<<<<<<< HEAD
 		"GE uniform, command"=/obj/item/clothing/under/rank/khi/cmd, //CHOMPEdit, KHI becomes GE
-=======
-		"neocorporate uniform, command"=/obj/item/clothing/under/rank/khi/cmd,
->>>>>>> d0ae4a58a0 (Merge pull request #16670 from KillianKirilenko/kk-spacetraffic)
 		"TG&C jumpsuit"=/obj/item/clothing/under/rank/neo_qm,
 		"TG&C jumpskirt"=/obj/item/clothing/under/rank/neo_qm_skirt,
 		"TG&C casualwear"=/obj/item/clothing/under/rank/neo_qm_jacket,
@@ -383,11 +359,7 @@
 		"skirt"=/obj/item/clothing/under/rank/cargotech/skirt,
 		"jeans"=/obj/item/clothing/under/rank/cargotech/jeans,
 		"jeans, feminine cut"=/obj/item/clothing/under/rank/cargotech/jeans/female,
-<<<<<<< HEAD
 		"GE uniform"=/obj/item/clothing/under/rank/khi/crg, //CHOMPEdit, KHI becomes GE
-=======
-		"neocorporate uniform"=/obj/item/clothing/under/rank/khi/crg,
->>>>>>> d0ae4a58a0 (Merge pull request #16670 from KillianKirilenko/kk-spacetraffic)
 		"TG&C shorts"=/obj/item/clothing/under/rank/neo_cargo_shorts,
 		"TG&C skirt"=/obj/item/clothing/under/rank/neo_cargo_skirt,
 		"TG&C jumpsuit"=/obj/item/clothing/under/rank/neo_cargo,
@@ -433,11 +405,7 @@
 	..()
 	var/list/selector_uniforms = list(
 		"skirt"=/obj/item/clothing/under/rank/chief_engineer/skirt,
-<<<<<<< HEAD
 		"GE uniform, command"=/obj/item/clothing/under/rank/khi/cmd, //CHOMPEdit, KHI becomes GE
-=======
-		"neocorporate uniform, command"=/obj/item/clothing/under/rank/khi/cmd,
->>>>>>> d0ae4a58a0 (Merge pull request #16670 from KillianKirilenko/kk-spacetraffic)
 		"ST: Original Series Command"=/obj/item/clothing/under/rank/trek/command,
 		"ST: Next Generation Command"=/obj/item/clothing/under/rank/trek/command/next,
 		"ST: Voyager Command"=/obj/item/clothing/under/rank/trek/command/voy,
@@ -463,21 +431,12 @@
 	var/list/selector_uniforms = list(
 		"skirt"=/obj/item/clothing/under/rank/engineer/skirt,
 		"turtleneck"=/obj/item/clothing/under/rank/engineer/turtleneck,
-<<<<<<< HEAD
 		"GE uniform"=/obj/item/clothing/under/rank/khi/eng, //CHOMPEdit, KHI becomes GE
 		"ST: Original Series Ops"=/obj/item/clothing/under/rank/trek/eng, //CHOMPedit start: we split trek engsec into eng and sec
 		"ST: Next Generation Ops"=/obj/item/clothing/under/rank/trek/eng/next,
 		"ST: Voyager Ops"=/obj/item/clothing/under/rank/trek/eng/voy,
 		"ST: DS9 Ops"=/obj/item/clothing/under/rank/trek/eng/ds9,
 		"ST: Enterprise Ops"=/obj/item/clothing/under/rank/trek/eng/ent, //CHOMPedit end
-=======
-		"neocorporate uniform"=/obj/item/clothing/under/rank/khi/eng,
-		"ST: Original Series Ops"=/obj/item/clothing/under/rank/trek/engsec,
-		"ST: Next Generation Ops"=/obj/item/clothing/under/rank/trek/engsec/next,
-		"ST: Voyager Ops"=/obj/item/clothing/under/rank/trek/engsec/voy,
-		"ST: DS9 Ops"=/obj/item/clothing/under/rank/trek/engsec/ds9,
-		"ST: Enterprise Ops"=/obj/item/clothing/under/rank/trek/engsec/ent,
->>>>>>> d0ae4a58a0 (Merge pull request #16670 from KillianKirilenko/kk-spacetraffic)
 		"voidsuit underlayer"=/obj/item/clothing/under/undersuit/hazard,
 		"TG&C jumpsuit"=/obj/item/clothing/under/rank/neo_engi,
 		"TG&C jumpskirt"=/obj/item/clothing/under/rank/neo_engi_skirt,
@@ -522,11 +481,7 @@
 		"virologist skirt"=/obj/item/clothing/under/rank/virologist/skirt,
 		"turtleneck"=/obj/item/clothing/under/rank/medical/turtleneck,
 		"vey-medical jumpsuit"=/obj/item/clothing/under/corp/veymed,
-<<<<<<< HEAD
 		"GE uniform"=/obj/item/clothing/under/rank/khi/med, //CHOMPEdit, KHI becomes GE
-=======
-		"neocorporate uniform"=/obj/item/clothing/under/rank/khi/med,
->>>>>>> d0ae4a58a0 (Merge pull request #16670 from KillianKirilenko/kk-spacetraffic)
 		"ST: Original Series Med-Sci"=/obj/item/clothing/under/rank/trek/medsci,
 		"ST: Next Generation Med-Sci"=/obj/item/clothing/under/rank/trek/medsci/next,
 		"ST: Voyager Med-Sci"=/obj/item/clothing/under/rank/trek/medsci/voy,
@@ -599,11 +554,7 @@
 	..()
 	var/list/selector_uniforms = list(
 		"skirt"=/obj/item/clothing/under/rank/chief_medical_officer/skirt,
-<<<<<<< HEAD
 		"GE uniform, command"=/obj/item/clothing/under/rank/khi/cmd, //CHOMPEdit, KHI becomes GE
-=======
-		"neocorporate uniform, command"=/obj/item/clothing/under/rank/khi/cmd,
->>>>>>> d0ae4a58a0 (Merge pull request #16670 from KillianKirilenko/kk-spacetraffic)
 		"ST: Original Series Command"=/obj/item/clothing/under/rank/trek/command,
 		"ST: Next Generation Command"=/obj/item/clothing/under/rank/trek/command/next,
 		"ST: Voyager Command"=/obj/item/clothing/under/rank/trek/command/voy,
@@ -631,11 +582,7 @@
 /datum/gear/uniform/research_director_selector/New()
 	..()
 	var/list/selector_uniforms = list(
-<<<<<<< HEAD
 		"GE uniform, command"=/obj/item/clothing/under/rank/khi/cmd, //CHOMPEdit, KHI becomes GE
-=======
-		"neocorporate uniform, command"=/obj/item/clothing/under/rank/khi/cmd,
->>>>>>> d0ae4a58a0 (Merge pull request #16670 from KillianKirilenko/kk-spacetraffic)
 		"ST: Original Series Command"=/obj/item/clothing/under/rank/trek/command,
 		"ST: Next Generation Command"=/obj/item/clothing/under/rank/trek/command/next,
 		"ST: Voyager Command"=/obj/item/clothing/under/rank/trek/command/voy,
@@ -664,11 +611,7 @@
 		"TG&C jumpsuit"=/obj/item/clothing/under/rank/neo_science,
 		"TG&C jumpskirt"=/obj/item/clothing/under/rank/neo_science_skirt,
 		"TG&C utility"=/obj/item/clothing/under/rank/neo_util_sci,
-<<<<<<< HEAD
 		"GE uniform"=/obj/item/clothing/under/rank/khi/sci, //CHOMPEdit, KHI becomes GE
-=======
-		"neocorporate uniform"=/obj/item/clothing/under/rank/khi/sci,
->>>>>>> d0ae4a58a0 (Merge pull request #16670 from KillianKirilenko/kk-spacetraffic)
 		"ST: Original Series Med-Sci"=/obj/item/clothing/under/rank/trek/medsci,
 		"ST: Next Generation Med-Sci"=/obj/item/clothing/under/rank/trek/medsci/next,
 		"ST: Voyager Med-Sci"=/obj/item/clothing/under/rank/trek/medsci/voy,

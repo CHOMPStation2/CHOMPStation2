@@ -63,17 +63,11 @@ var/datum/lore/atc_controller/atc = new/datum/lore/atc_controller
 		squelched = 0
 
 /datum/lore/atc_controller/proc/shift_ending(var/evac = 0)
-<<<<<<< HEAD
 	//CHOMPStation Edit Start TFF 28/12/19 - Shuttle transfer, not Tram.
 	msg("Automated Shuttle departing [using_map.station_name] for [using_map.dock_name] on routine transfer route.","NT Automated Shuttle")
 	sleep(5 SECONDS)
 	msg("Automated Shuttle, cleared to complete routine transfer from [using_map.station_name] to [using_map.dock_name].")
 	//CHOMPStation Edit End
-=======
-	msg("[using_map.shuttle_name], this is [using_map.dock_name] Control, you are cleared to complete routine transfer from [using_map.station_name] to [using_map.dock_name].")
-	sleep(rand(MIN_MSG_DELAY,MAX_MSG_DELAY) SECONDS)
-	msg("[using_map.shuttle_name] departing [using_map.dock_name] for [using_map.station_name] on routine transfer route. Estimated time to arrival: ten minutes.","[using_map.shuttle_name]")
->>>>>>> d0ae4a58a0 (Merge pull request #16670 from KillianKirilenko/kk-spacetraffic)
 
 /datum/lore/atc_controller/proc/random_convo(var/force_chatter_type)
 	var/one = pick(loremaster.organizations) //These will pick an index, not an instance
@@ -473,14 +467,9 @@ var/datum/lore/atc_controller/atc = new/datum/lore/atc_controller
 	msg(full_response)
 	sleep(rand(MIN_MSG_DELAY,MAX_MSG_DELAY) SECONDS)
 	//Ship sends response to ATC
-<<<<<<< HEAD
-	msg(full_closure,"[prefix] [shipname]")
-	return
-=======
 	msg(full_closure,"[comm_first_name]")
 	return
 */
 
 #undef MIN_MSG_DELAY
 #undef MAX_MSG_DELAY
->>>>>>> d0ae4a58a0 (Merge pull request #16670 from KillianKirilenko/kk-spacetraffic)

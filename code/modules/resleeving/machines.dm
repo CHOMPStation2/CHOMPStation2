@@ -6,12 +6,7 @@
 /////// Grower Pod ///////
 /obj/machinery/clonepod/transhuman
 	name = "grower pod"
-<<<<<<< HEAD
-	catalogue_data = list(/datum/category_item/catalogue/information/organization/vey_med,
-						/datum/category_item/catalogue/technology/resleeving)
-=======
 	catalogue_data = list(/datum/category_item/catalogue/technology/resleeving)
->>>>>>> d0ae4a58a0 (Merge pull request #16670 from KillianKirilenko/kk-spacetraffic)
 	circuit = /obj/item/circuitboard/transhuman_clonepod
 
 //A full version of the pod
@@ -222,12 +217,7 @@
 /obj/machinery/transhuman/synthprinter
 	name = "SynthFab 3000"
 	desc = "A rapid fabricator for synthetic bodies."
-<<<<<<< HEAD
-	catalogue_data = list(/datum/category_item/catalogue/information/organization/vey_med,
-						/datum/category_item/catalogue/technology/resleeving)
-=======
 	catalogue_data = list(/datum/category_item/catalogue/technology/resleeving)
->>>>>>> d0ae4a58a0 (Merge pull request #16670 from KillianKirilenko/kk-spacetraffic)
 	icon = 'icons/obj/machines/synthpod.dmi'
 	icon_state = "pod_0"
 	circuit = /obj/item/circuitboard/transhuman_synthprinter
@@ -467,12 +457,7 @@
 /obj/machinery/transhuman/resleever
 	name = "resleeving pod"
 	desc = "Used to combine mind and body into one unit."
-<<<<<<< HEAD
-	catalogue_data = list(/datum/category_item/catalogue/information/organization/vey_med,
-						/datum/category_item/catalogue/technology/resleeving)
-=======
 	catalogue_data = list(/datum/category_item/catalogue/technology/resleeving)
->>>>>>> d0ae4a58a0 (Merge pull request #16670 from KillianKirilenko/kk-spacetraffic)
 	icon = 'icons/obj/machines/implantchair.dmi'
 	icon_state = "implantchair"
 	circuit = /obj/item/circuitboard/transhuman_resleever

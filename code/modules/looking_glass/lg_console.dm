@@ -1,10 +1,6 @@
 /obj/machinery/computer/looking_glass
 	name = "looking glass control"
-<<<<<<< HEAD
-	desc = "Controls the looking glass displays in this room."
-=======
 	desc = "Controls the looking glass displays in this room. Provided courtesy of NT's Advanced Spatial Imaging Division."
->>>>>>> d0ae4a58a0 (Merge pull request #16670 from KillianKirilenko/kk-spacetraffic)
 
 	icon_keyboard = "tech_key"
 	icon_screen = "holocontrol"

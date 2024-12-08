@@ -9,12 +9,7 @@
 
 /obj/machinery/computer/transhuman/designer
 	name = "body design console"
-<<<<<<< HEAD
-	catalogue_data = list(/datum/category_item/catalogue/information/organization/vey_med,
-						/datum/category_item/catalogue/technology/resleeving)
-=======
 	catalogue_data = list(/datum/category_item/catalogue/technology/resleeving)
->>>>>>> d0ae4a58a0 (Merge pull request #16670 from KillianKirilenko/kk-spacetraffic)
 	icon = 'icons/obj/computer.dmi'
 	icon_keyboard = "med_key"
 	icon_screen = "explosive"
