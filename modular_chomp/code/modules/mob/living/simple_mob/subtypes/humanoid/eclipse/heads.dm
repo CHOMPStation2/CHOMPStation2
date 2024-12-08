@@ -362,7 +362,7 @@
 	special_attack_cooldown = 4 SECONDS
 	special_attack_min_range = 1
 	special_attack_max_range = 8
-	projectiletype = /obj/item/projectile/bullet/eclipsejanus
+	projectiletype = /obj/item/projectile/energy/homing_bolt
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
 	var/fullshield = 4
 	var/shieldrage = 4
@@ -484,6 +484,8 @@
 	addtimer(CALLBACK(src, PROC_REF(summon_drones), A, 3, 0.5 SECONDS), 0.5 SECONDS, TIMER_DELETE_ME)
 
 /mob/living/simple_mob/humanoid/eclipse/proc/summon_drones(atom/target, var/amount, var/fire_delay)
+	if(!target)
+		return
 	var/deathdir = rand(1,3)
 	switch(deathdir)
 		if(1)
@@ -549,6 +551,8 @@
 
 
 /mob/living/simple_mob/humanoid/eclipse/proc/bomb_lines(atom/A)
+	if(!A)
+		return
 	var/list/potential_targets = ai_holder.list_targets()
 	for(var/atom/entry in potential_targets)
 		if(istype(entry, /mob/living/simple_mob/humanoid/eclipse))
@@ -593,6 +597,8 @@
 
 
 /mob/living/simple_mob/humanoid/eclipse/proc/bomb_chaos(atom/A)
+	if(!A)
+		return
 	var/list/potential_targets = ai_holder.list_targets()
 	for(var/atom/entry in potential_targets)
 		if(istype(entry, /mob/living/simple_mob/humanoid/eclipse))

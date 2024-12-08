@@ -861,6 +861,8 @@
 
 
 /mob/living/simple_mob/humanoid/eclipse/proc/itemyoink(atom/A)
+	if(!A)
+		return
 	var/mob/living/carbon/human/H = A
 	var/obj/item/I = H.get_active_hand()
 	H.drop_item()
@@ -882,13 +884,15 @@
 	special_attack_min_range = 1
 	special_attack_max_range = 7
 
-	projectiletype = /obj/item/projectile/energy/spikeenergy_ball //using the weapon found upon tyr
+	projectiletype = /obj/item/projectile/energy/wp_shotgun //using the weapon found upon tyr
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/experimenter/do_special_attack(atom/A)
 	visible_message(span_danger("The [src]'s gauntlet glows silver!"))
-	addtimer(CALLBACK(src, PROC_REF(gravity_pull), A), 1 SECOND, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(gravity_pull), A), 3 SECOND, TIMER_DELETE_ME)
 
 /mob/living/simple_mob/humanoid/eclipse/proc/gravity_pull(atom/A)
+	if(!A)
+		return
 	var/D = src
 	var/mob/living/carbon/human/H = A
 	H.throw_at(D, 2, 4) // Just yoinked.
@@ -986,14 +990,20 @@
 		addtimer(CALLBACK(src, PROC_REF(remote_eject), A), 3 SECONDS, TIMER_DELETE_ME)
 
 /mob/living/simple_mob/humanoid/eclipse/proc/remote_shutdown(var/mob/living/silicon/robot/L)
+	if(!L)
+		return
 	L.Weaken(10)
 
 
 /mob/living/simple_mob/humanoid/eclipse/proc/remote_eject(obj/mecha/M)
+	if(!M)
+		return
 	visible_message(span_critical("\The [M] is remotly hacked and ejects [M.occupant]!"))
 	M.go_out()
 
 
 /mob/living/simple_mob/humanoid/eclipse/proc/special_projectile(atom/A)
+	if(!A)
+		return
 	var/obj/item/projectile/P = new specialattackprojectile(get_turf(src))
 	P.launch_projectile(A, BP_TORSO, src)

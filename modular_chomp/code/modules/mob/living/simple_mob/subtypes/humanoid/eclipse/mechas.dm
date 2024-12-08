@@ -297,6 +297,8 @@
 	addtimer(CALLBACK(src, PROC_REF(atkonea), target), 1.5 SECONDS, TIMER_DELETE_ME)
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/antipersonal_unit/proc/atkonea(atom/target)
+	if(!target)
+		return
 	upfour_leftfour(target)
 	upfour_rightfour(target)
 	downfour_rightfour(target)
@@ -304,6 +306,8 @@
 	addtimer(CALLBACK(src, PROC_REF(atkoneb), target), 1.5 SECONDS, TIMER_DELETE_ME)
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/antipersonal_unit/proc/atkoneb(atom/target)
+	if(!target)
+		return
 	upfour(target)
 	downfour(target)
 	rightfour(target)
@@ -311,6 +315,8 @@
 	addtimer(CALLBACK(src, PROC_REF(atkonec), target), 1.5 SECONDS, TIMER_DELETE_ME)
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/antipersonal_unit/proc/atkonec(atom/target)
+	if(!target)
+		return
 	upfour_leftfour(target)
 	upfour_rightfour(target)
 	downfour_rightfour(target)
@@ -318,6 +324,8 @@
 	addtimer(CALLBACK(src, PROC_REF(atkoned), target), 1.5 SECONDS, TIMER_DELETE_ME)
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/antipersonal_unit/proc/atkoned(atom/target)
+	if(!target)
+		return
 	upfour(target)
 	downfour(target)
 	rightfour(target)
@@ -325,6 +333,8 @@
 	addtimer(CALLBACK(src, PROC_REF(atkonee), target), 1.5 SECONDS, TIMER_DELETE_ME)
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/antipersonal_unit/proc/atkonee(atom/target)
+	if(!target)
+		return
 	upfour_leftfour(target)
 	upfour_rightfour(target)
 	downfour_rightfour(target)
@@ -339,6 +349,8 @@
 	addtimer(CALLBACK(src, PROC_REF(spin_to_win), target, 1), 2 SECONDS, TIMER_DELETE_ME)
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win(atom/target, var/next_cycle)
+	if(!target)
+		return
 	upfour_leftfour(target)
 	upfour_rightfour(target)
 	downfour_rightfour(target)
@@ -346,6 +358,8 @@
 	addtimer(CALLBACK(src, PROC_REF(spin_to_win_a), target, next_cycle), 0.5 SECONDS, TIMER_DELETE_ME)
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_a(atom/target, var/next_cycle)
+	if(!target)
+		return
 	upfour_leftthree(target)
 	upthree_rightfour(target)
 	downfour_rightthree(target)
@@ -353,6 +367,8 @@
 	addtimer(CALLBACK(src, PROC_REF(spin_to_win_b), target, next_cycle), 0.5 SECONDS, TIMER_DELETE_ME)
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_b(atom/target, var/next_cycle)
+	if(!target)
+		return
 	upfour_lefttwo(target)
 	uptwo_rightfour(target)
 	downfour_righttwo(target)
@@ -360,6 +376,8 @@
 	addtimer(CALLBACK(src, PROC_REF(spin_to_win_c), target, next_cycle), 0.5 SECONDS, TIMER_DELETE_ME)
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_c(atom/target, var/next_cycle)
+	if(!target)
+		return
 	upfour_leftone(target)
 	upone_rightfour(target)
 	downfour_rightone(target)
@@ -367,6 +385,8 @@
 	addtimer(CALLBACK(src, PROC_REF(spin_to_win_d), target, next_cycle), 0.5 SECONDS, TIMER_DELETE_ME)
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_d(atom/target, var/next_cycle)
+	if(!target)
+		return
 	upfour(target)
 	rightfour(target)
 	downfour(target)
@@ -374,6 +394,8 @@
 	addtimer(CALLBACK(src, PROC_REF(spin_to_win_e), target, next_cycle), 0.5 SECONDS, TIMER_DELETE_ME)
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_e(atom/target, var/next_cycle)
+	if(!target)
+		return
 	upfour_rightone(target)
 	downone_rightfour(target)
 	downfour_leftone(target)
@@ -381,6 +403,8 @@
 	addtimer(CALLBACK(src, PROC_REF(spin_to_win_f), target, next_cycle), 0.5 SECONDS, TIMER_DELETE_ME)
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_f(atom/target, var/next_cycle)
+	if(!target)
+		return
 	upfour_righttwo(target)
 	downtwo_rightfour(target)
 	downfour_lefttwo(target)
@@ -388,6 +412,8 @@
 	addtimer(CALLBACK(src, PROC_REF(spin_to_win_g), target, next_cycle), 0.5 SECONDS, TIMER_DELETE_ME)
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_g(atom/target, var/next_cycle)
+	if(!target)
+		return
 	upfour_rightthree(target)
 	downthree_rightfour(target)
 	downfour_leftthree(target)
@@ -395,6 +421,8 @@
 	addtimer(CALLBACK(src, PROC_REF(spin_to_win_h), target, next_cycle), 0.5 SECONDS, TIMER_DELETE_ME)
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_h(atom/target, var/next_cycle)
+	if(!target)
+		return
 	upfour_rightfour(target)
 	downfour_rightfour(target)
 	downfour_leftfour(target)
@@ -403,6 +431,8 @@
 
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_ra(atom/target, var/next_cycle)//Now we reverse
+	if(!target)
+		return
 	upfour_rightthree(target)
 	downthree_rightfour(target)
 	downfour_leftthree(target)
@@ -410,6 +440,8 @@
 	addtimer(CALLBACK(src, PROC_REF(spin_to_win_rb), target, next_cycle), 0.5 SECONDS, TIMER_DELETE_ME)
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_rb(atom/target, var/next_cycle)
+	if(!target)
+		return
 	upfour_righttwo(target)
 	downtwo_rightfour(target)
 	downfour_lefttwo(target)
@@ -417,6 +449,8 @@
 	addtimer(CALLBACK(src, PROC_REF(spin_to_win_rc), target, next_cycle), 0.5 SECONDS, TIMER_DELETE_ME)
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_rc(atom/target, var/next_cycle)
+	if(!target)
+		return
 	upfour_rightone(target)
 	downone_rightfour(target)
 	downfour_leftone(target)
@@ -424,6 +458,8 @@
 	addtimer(CALLBACK(src, PROC_REF(spin_to_win_rd), target, next_cycle), 0.5 SECONDS, TIMER_DELETE_ME)
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_rd(atom/target, var/next_cycle)
+	if(!target)
+		return
 	upfour(target)
 	rightfour(target)
 	downfour(target)
@@ -431,6 +467,8 @@
 	addtimer(CALLBACK(src, PROC_REF(spin_to_win_re), target, next_cycle), 0.5 SECONDS, TIMER_DELETE_ME)
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_re(atom/target, var/next_cycle)
+	if(!target)
+		return
 	upfour_leftone(target)
 	upone_rightfour(target)
 	downfour_rightone(target)
@@ -438,6 +476,8 @@
 	addtimer(CALLBACK(src, PROC_REF(spin_to_win_rf), target, next_cycle), 0.5 SECONDS, TIMER_DELETE_ME)
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_rf(atom/target, var/next_cycle)
+	if(!target)
+		return
 	upfour_lefttwo(target)
 	uptwo_rightfour(target)
 	downfour_righttwo(target)
@@ -445,6 +485,8 @@
 	addtimer(CALLBACK(src, PROC_REF(spin_to_win_rg), target, next_cycle), 0.5 SECONDS, TIMER_DELETE_ME)
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_rg(atom/target, var/next_cycle)
+	if(!target)
+		return
 	upfour_leftthree(target)
 	upthree_rightfour(target)
 	downfour_rightthree(target)
@@ -452,6 +494,8 @@
 	addtimer(CALLBACK(src, PROC_REF(spin_to_win_rh), target, next_cycle), 0.5 SECONDS, TIMER_DELETE_ME)
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/proc/spin_to_win_rh(atom/target, var/next_cycle)
+	if(!target)
+		return
 	upfour_leftfour(target)
 	upfour_rightfour(target)
 	downfour_rightfour(target)
@@ -464,6 +508,8 @@
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/proc/random_firing(atom/target, var/amount, var/next_cycle, var/fire_delay)
 	var/deathdir = rand(1,32)
+	if(!target)
+		return
 	switch(deathdir)
 		if(1)
 			upfour_leftfour(target)
@@ -620,6 +666,8 @@
 	attackcycle = 0
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/proc/thewall(atom/target)
+	if(!target)
+		return
 	upfour_rightfour(target)
 	upthree_rightfour(target)
 	uptwo_rightfour(target)
@@ -641,6 +689,8 @@
 	addtimer(CALLBACK(src, PROC_REF(thehall), target), 2.5 SECONDS, TIMER_DELETE_ME)
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/proc/thehall(atom/target)
+	if(!target)
+		return
 	upfour_leftfour(target)
 	upfour_leftthree(target)
 	upfour_lefttwo(target)
