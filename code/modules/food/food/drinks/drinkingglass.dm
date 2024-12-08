@@ -184,14 +184,16 @@
 	icon_state = "tall_cup_empty"
 	amount_per_transfer_from_this = 5
 	volume = 40
-	center_of_mass = list("x"=16, "y"=16)
+	center_of_mass_x = 16 // CHOMPEdit
+	center_of_mass_y =  16 // CHOMPEdit
 
 /obj/item/reagent_containers/food/drinks/tall/on_reagent_change()
 	if (!length(reagents?.reagent_list))
 		icon_state = "tall_cup_empty"
 		name = "tall cup"
 		desc = "A larger coffee cup."
-		center_of_mass = list("x"=16, "y"=16)
+		center_of_mass_x = 16 // CHOMPEdit
+		center_of_mass_y =  16 // CHOMPEdit
 		return
 	var/datum/reagent/R = reagents.get_master_reagent()
 
@@ -218,7 +220,8 @@
 	if(R.cup_center_of_mass)
 		center_of_mass = R.cup_center_of_mass
 	else
-		center_of_mass = list("x"=16, "y"=16)
+		center_of_mass_x = 16 // CHOMPEdit
+		center_of_mass_y =  16 // CHOMPEdit
 
 	if(R.price_tag)
 		price_tag = R.price_tag
@@ -231,14 +234,16 @@
 	icon_state = "grande_cup_empty"
 	amount_per_transfer_from_this = 5
 	volume = 50
-	center_of_mass = list("x"=16, "y"=16)
+	center_of_mass_x = 16 // CHOMPEdit
+	center_of_mass_y =  16 // CHOMPEdit
 
 /obj/item/reagent_containers/food/drinks/grande/on_reagent_change()
 	if (!length(reagents?.reagent_list))
 		icon_state = "grande_cup_empty"
 		name = "grande cup"
 		desc = "A much taller coffee cup for people who really need their coffee."
-		center_of_mass = list("x"=16, "y"=16)
+		center_of_mass_x = 16 // CHOMPEdit
+		center_of_mass_y =  16 // CHOMPEdit
 		return
 	var/datum/reagent/R = reagents.get_master_reagent()
 
@@ -265,7 +270,8 @@
 	if(R.cup_center_of_mass)
 		center_of_mass = R.cup_center_of_mass
 	else
-		center_of_mass = list("x"=16, "y"=16)
+		center_of_mass_x = 16 // CHOMPEdit
+		center_of_mass_y =  16 // CHOMPEdit
 
 	if(R.price_tag)
 		price_tag = R.price_tag
@@ -278,14 +284,16 @@
 	icon_state = "venti_cup_empty"
 	amount_per_transfer_from_this = 5
 	volume = 60
-	center_of_mass = list("x"=16, "y"=16)
+	center_of_mass_x = 16 // CHOMPEdit
+	center_of_mass_y =  16 // CHOMPEdit
 
 /obj/item/reagent_containers/food/drinks/venti/on_reagent_change()
 	if (!length(reagents?.reagent_list))
 		icon_state = "venti_cup_empty"
 		name = "venti cup"
 		desc = "A huge coffee cup for people who literally cannot function without it."
-		center_of_mass = list("x"=16, "y"=16)
+		center_of_mass_x = 16 // CHOMPEdit
+		center_of_mass_y =  16 // CHOMPEdit
 		return
 	var/datum/reagent/R = reagents.get_master_reagent()
 
@@ -312,7 +320,8 @@
 	if(R.cup_center_of_mass)
 		center_of_mass = R.cup_center_of_mass
 	else
-		center_of_mass = list("x"=16, "y"=16)
+		center_of_mass_x = 16 // CHOMPEdit
+		center_of_mass_y =  16 // CHOMPEdit
 
 	if(R.price_tag)
 		price_tag = R.price_tag
