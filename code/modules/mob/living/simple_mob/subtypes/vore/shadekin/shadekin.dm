@@ -258,7 +258,7 @@
 
 	//CHOMPEdit Begin - Actually phase to the dark on death
 	var/area/current_area = get_area(src)
-	if((ability_flags & AB_DARK_RESPITE) || current_area.limit_dark_respite)
+	if((ability_flags & AB_DARK_RESPITE) || current_area.flag_check(AREA_LIMIT_DARK_RESPITE))
 		icon_state = ""
 		spawn(1 SECOND)
 			qdel(src) //Back from whence you came!
