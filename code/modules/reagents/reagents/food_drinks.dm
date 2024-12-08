@@ -1703,13 +1703,8 @@
 	adj_temp = 25
 
 	cup_icon_state = "cup_coffee"
-<<<<<<< HEAD
-	cup_name = "cup of decaf"
+	cup_name = "cup of decaf" // CHOMPEdit
 	cup_desc = "Just as bitter as regular coffee, but it won't keep you up at night!" // CHOMPEdit - In defense of decaf coffee
-=======
-	cup_name = "decaf"
-	cup_desc = "Basically just brown, bitter water."
->>>>>>> fd4f187ea1 (Merge pull request #16669 from SatinIsle/coffeeeeeee)
 
 	glass_name = "decaf coffee"
 	glass_desc = "Just as bitter as regular coffee, but it won't keep you up at night!" // CHOMPEdit - In defense of decaf coffee

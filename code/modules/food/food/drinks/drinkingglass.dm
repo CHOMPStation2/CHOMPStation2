@@ -174,8 +174,6 @@
 	reagents.add_reagent("iron", 10)
 	reagents.add_reagent("protein", 15)
 	reagents.add_reagent("water", 45)
-<<<<<<< HEAD
-=======
 
 
 ////////////////Fancy coffee cups
@@ -320,4 +318,3 @@
 		price_tag = R.price_tag
 	else
 		price_tag = null
->>>>>>> fd4f187ea1 (Merge pull request #16669 from SatinIsle/coffeeeeeee)
