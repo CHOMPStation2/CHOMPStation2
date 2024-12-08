@@ -161,8 +161,8 @@
 /area/template_noop)
 "B" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/gun/magnetic/railgun/flechette/pistol/khi,
-/obj/item/magnetic_ammo/pistol/khi,
+/obj/item/gun/magnetic/railgun/flechette/pistol,
+/obj/item/magnetic_ammo/pistol,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/asteroid2)
 "C" = (
