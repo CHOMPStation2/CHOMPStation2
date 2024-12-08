@@ -866,7 +866,7 @@
 	H.drop_item()
 	if(I)
 		I.throw_at(src, 2, 4) // Just yoinked.
-		src.visible_message(span_danger("The [name] heaves, pulling \the [A]'s weapon from their hands!"))
+		src.visible_message(span_danger("The [name] heaves, pulling \the [H]'s weapon from their hands!"))
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/experimenter
 	name = "Lunar Eclipse Experimenter"
