@@ -89,37 +89,6 @@
 /area/casino/wizard_home
 	name = "\improper That's pretty wizard"
 
-// Old casino areas. Apparently we don't want these.
-/*
-/area/casino/casino_ship
-	name = "\improper Casino Ship"
-	icon_state = "yellow"
-	requires_power = 0
-	dynamic_lighting = 1
-
-/area/casino/casino_ship/wing_left
-	name = "\improper Casino Ship left wing"
-	icon_state = "yellow"
-
-/area/casino/casino_ship/wing_right
-	name = "\improper Casino Ship right wing"
-	icon_state = "yellow"
-
-/area/casino/casino_ship/dorms
-	name = "\improper Casino Ship dorms"
-	icon_state = "yellow"
-	soundproofed = TRUE
-
-/area/casino/casino_ship/cockpit
-	name = "\improper Casino Ship left wing"
-	icon_state = "yellow"
-
-/area/shuttle/casino/
-	name = "\improper Casino Shuttle"
-	dynamic_lighting = 0
-	icon_state = "shuttlegrn"
-*/
-
 // Gear dispenser datums. Organized alphabetically by typepath for your viewing pleasure.
 /datum/gear_disp/casino_buried_reward
 	name = "Buried treasure"

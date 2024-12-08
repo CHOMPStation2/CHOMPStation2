@@ -1085,12 +1085,7 @@
 
 /area/bridge/sleep
     icon_state = "bridge"
-    flags = RAD_SHIELDED
-    limit_mob_size = FALSE
-    block_suit_sensors = TRUE
-    block_tracking = TRUE
-    soundproofed = TRUE
-    forbid_events = TRUE
+    flags = RAD_SHIELDED | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING | AREA_SOUNDPROOF | AREA_FORBID_EVENTS
 
 /area/bridge/sleep/HoP_Quarters
     name = "\improper HoP Quarters"
@@ -1961,13 +1956,8 @@
     icon_state = "gaming"
 
 /area/crew_quarters/sleep
-    flags = RAD_SHIELDED
+    flags = RAD_SHIELDED | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING | AREA_SOUNDPROOF | AREA_FORBID_EVENTS
     lightswitch = 0
-    limit_mob_size = FALSE
-    block_suit_sensors = TRUE
-    block_tracking = TRUE
-    soundproofed = TRUE
-    forbid_events = TRUE
     icon_state = "gaming"
 
 /area/crew_quarters/sleep/Dormitory_01
