@@ -29,7 +29,7 @@
 		if(!temp_vent.welded && temp_vent.network && (temp_vent.loc.z in using_map.station_levels))
 			if(temp_vent.network.normal_members.len > 10) //CHOMP Edit: Most our networks are 40. SM is 4 and toxins is 2. This needed to change to 10 from 50 in order for spawns to work.
 				var/area/A = get_area(temp_vent)
-				if(!(A.forbid_events))
+				if(!(A.flag_check(AREA_FORBID_EVENTS)))
 					vents += temp_vent
 
 	while((spawncount >= 1) && vents.len)
