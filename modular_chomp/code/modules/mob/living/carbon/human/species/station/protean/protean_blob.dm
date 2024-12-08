@@ -3,7 +3,7 @@
 	name = "protean blob"
 	desc = "Some sort of big viscous pool of jelly."
 	tt_desc = "Animated nanogoop"
-	icon = 'modular_chomp/icons/mob/species/protean/protean.dmi'
+	icon = 'icons/mob/species/protean/protean.dmi'
 	icon_state = "to_puddle"
 	icon_living = "puddle0-eyes"	//Null icon, since we're made of overlays now.
 	icon_rest = "puddle0-eyes"
@@ -345,14 +345,14 @@
 
 	if(!hiding)
 		cut_overlays()
-		icon = 'modular_chomp/icons/mob/species/protean/protean.dmi'
+		icon = 'icons/mob/species/protean/protean.dmi'
 		icon_state = "hide"
 		sleep(7)
 		mouse_opacity = 0
 		plane = ABOVE_OBJ_PLANE
 		hiding = 1
 	else
-		icon = 'modular_chomp/icons/mob/species/protean/protean.dmi'
+		icon = 'icons/mob/species/protean/protean.dmi'
 		mouse_opacity = 1
 		icon_state = "wake"
 		plane = initial(plane)
@@ -707,7 +707,7 @@
 		"robodrgn"
 		)
 		var/datum/species/protean/S = humanform.species
-		icon = 'modular_chomp/icons/mob/species/protean/protean.dmi'
+		icon = 'icons/mob/species/protean/protean.dmi'
 		default_pixel_x = 0
 		pixel_x = 0
 		vore_capacity = 1
@@ -774,7 +774,7 @@
 			pixel_x = -16
 			vis_height = 64
 		if(S.blob_appearance in big_icons)
-			icon = 'modular_chomp/icons/mob/species/protean/protean128x64.dmi'
+			icon = 'icons/mob/species/protean/protean128x64.dmi'
 			default_pixel_x = -48
 			pixel_x = -48
 			vis_height = 64

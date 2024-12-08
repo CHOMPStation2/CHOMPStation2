@@ -15,8 +15,8 @@
 	item_icons = list(
 		slot_l_hand_str = 'modular_chomp/icons/mob/lefthand_holder.dmi',
 		slot_r_hand_str = 'modular_chomp/icons/mob/righthand_holder.dmi',
-		slot_head_str = 'modular_chomp/icons/mob/head_ch.dmi',
-		slot_w_uniform_str = 'modular_chomp/icons/mob/uniform_ch.dmi',
+		slot_head_str = 'icons/mob/head.dmi',
+		slot_w_uniform_str = 'icons/mob/uniform.dmi',
 		slot_wear_suit_str = 'modular_chomp/icons/mob/suit_ch.dmi',
 		slot_r_ear_str = 'modular_chomp/icons/mob/ears.dmi',
 		slot_l_ear_str = 'modular_chomp/icons/mob/ears.dmi')
