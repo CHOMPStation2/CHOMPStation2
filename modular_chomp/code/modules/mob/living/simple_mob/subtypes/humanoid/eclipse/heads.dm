@@ -170,15 +170,6 @@
 	size_x = 3
 	size_y = 3
 
-/mob/living/simple_mob/humanoid/eclipse/head/scientist/do_special_attack(atom/A)
-	if(vore_fullness == 1)
-	// FIX THAT
-	else if(vore_fullness > 1)
-	// FIX THAT
-	else
-	// FIX THAT
-
-
 /mob/living/simple_mob/mechanical/hivebot/swarm/eclipse
 	faction = FACTION_ECLIPSE
 
