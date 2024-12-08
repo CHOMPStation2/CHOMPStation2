@@ -218,7 +218,8 @@
 		desc = "You can't really tell what this is."
 
 	if(R.cup_center_of_mass)
-		center_of_mass = R.cup_center_of_mass
+		center_of_mass_x = R.cup_center_of_mass["x"] //CHOMPEdit
+		center_of_mass_y = R.cup_center_of_mass["y"] //CHOMPEdit
 	else
 		center_of_mass_x = 16 // CHOMPEdit
 		center_of_mass_y =  16 // CHOMPEdit
@@ -268,7 +269,8 @@
 		desc = "You can't really tell what this is."
 
 	if(R.cup_center_of_mass)
-		center_of_mass = R.cup_center_of_mass
+		center_of_mass_x = R.cup_center_of_mass["x"] //CHOMPEdit
+		center_of_mass_y = R.cup_center_of_mass["y"] //CHOMPEdit
 	else
 		center_of_mass_x = 16 // CHOMPEdit
 		center_of_mass_y =  16 // CHOMPEdit
@@ -318,7 +320,8 @@
 		desc = "You can't really tell what this is."
 
 	if(R.cup_center_of_mass)
-		center_of_mass = R.cup_center_of_mass
+		center_of_mass_x = R.cup_center_of_mass["x"] //CHOMPEdit
+		center_of_mass_y = R.cup_center_of_mass["y"] //CHOMPEdit
 	else
 		center_of_mass_x = 16 // CHOMPEdit
 		center_of_mass_y =  16 // CHOMPEdit
