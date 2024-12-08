@@ -20,6 +20,11 @@
 	/*YW EDIT we want to be on the hub
 	name = "VOREStation" //VOREStation Edit
 	visibility = 0 //VOREStation Edit
+<<<<<<< HEAD
 	*/
 	cache_lifespan = 7
 	fps = 40 // If this isnt hard-defined, anything relying on this variable before world load will cry a lot
+=======
+	cache_lifespan = 0
+	fps = 20 // If this isnt hard-defined, anything relying on this variable before world load will cry a lot
+>>>>>>> ada9db131a (Merge pull request #16679 from ShadowLarkens/516more)
