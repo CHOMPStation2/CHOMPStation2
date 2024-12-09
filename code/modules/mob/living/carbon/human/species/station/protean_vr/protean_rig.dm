@@ -28,7 +28,7 @@
 	//ai_interface_path = "RIGSuit_protean"
 	var/sealed = 0
 	var/assimilated_rig
-	var/can_assimilate_rig = FALSE
+	var/can_assimilate_rig = TRUE // CHOMPEdit
 
 /obj/item/rig/protean/relaymove(mob/user, var/direction)
 	if(user.stat || user.stunned)
