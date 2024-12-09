@@ -114,7 +114,7 @@ var/global/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawstamp*
 			death_star()
 
 /mob/living/simple_mob/vore/solargrub/proc/death_star()
-	visible_message("<span class='warning'>\The [src]'s shell rips open and evolves!</span>")
+	visible_message(span_warning("\The [src]'s shell rips open and evolves!"))
 
 /*
 //Commenting this bit out. It's unncecessary, especially since we only use one form.

@@ -51,22 +51,22 @@
 	var/opts = clickprops["shift"]
 
 	if(opts)
-		to_chat(my_kin,"<span class='notice'><b>[name]</b> (Cost: [cost]%) - [desc]</span>")
+		to_chat(my_kin,span_notice("<b>[name]</b> (Cost: [cost]%) - [desc]"))
 	else
 		do_ability(my_kin)
 
 /obj/effect/rakshasa_ability/proc/do_ability()
 	if(my_kin.stat)
-		to_chat(my_kin,"<span class='warning'>Can't use that ability in your state!</span>")
+		to_chat(my_kin,span_warning("Can't use that ability in your state!"))
 		return FALSE
 	if(shift_mode == NOT_WHILE_SHIFTED && (my_kin.ability_flags & AB_PHASE_SHIFTED))
-		to_chat(my_kin,"<span class='warning'>Can't use that ability while phase shifted!</span>")
+		to_chat(my_kin,span_warning("Can't use that ability while phase shifted!"))
 		return FALSE
 	else if(shift_mode == ONLY_WHILE_SHIFTED && !(my_kin.ability_flags & AB_PHASE_SHIFTED))
-		to_chat(my_kin,"<span class='warning'>Can only use that ability while phase shifted!</span>")
+		to_chat(my_kin,span_warning("Can only use that ability while phase shifted!"))
 		return FALSE
 	else if(my_kin.energy < cost)
-		to_chat(my_kin,"<span class='warning'>Not enough energy for that ability!</span>")
+		to_chat(my_kin,span_warning("Not enough energy for that ability!"))
 		return FALSE
 
 	my_kin.energy -= cost
@@ -290,7 +290,7 @@
 /mob/living/simple_mob/shadekin/proc/rakshasa_shift()
 	var/turf/T = get_turf(src)
 	if(!T.CanPass(src,T) || loc != T)
-		to_chat(src,"<span class='warning'>You can't use that here!</span>")
+		to_chat(src,span_warning("You can't use that here!"))
 		return FALSE
 
 	forceMove(T)
@@ -332,11 +332,11 @@
 				var/mob/living/target = pick(potentials)
 				if(istype(target) && target.devourable && target.can_be_drop_prey && vore_selected)
 					target.forceMove(vore_selected)
-					to_chat(target,"<span class='warning'>\The [src] phases in around you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!</span>")
+					to_chat(target,span_warning("\The [src] phases in around you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!"))
 
 		// Do this after the potential vore, so we get the belly
 		update_icon()
-	
+
 		//Affect nearby lights
 		for(var/obj/machinery/light/L in machines)
 			if(L.z != z || get_dist(src,L) > 10)
@@ -365,13 +365,13 @@
 		incorporeal_move = TRUE
 		density = FALSE
 		force_max_speed = TRUE
-		
-		
+
+
 ////////////////////////////////////////////////////////////////
 /mob/living/simple_mob/shadekin/proc/stealth_shift()
 	var/turf/T = get_turf(src)
 	if(!T.CanPass(src,T) || loc != T)
-		to_chat(src,"<span class='warning'>You can't use that here!</span>")
+		to_chat(src,span_warning("You can't use that here!"))
 		return FALSE
 
 	forceMove(T)
@@ -413,7 +413,7 @@
 				var/mob/living/target = pick(potentials)
 				if(istype(target) && target.devourable && target.can_be_drop_prey && vore_selected)
 					target.forceMove(vore_selected)
-					to_chat(target,"<span class='warning'>\The [src] phases in around you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!</span>")
+					to_chat(target,span_warning("\The [src] phases in around you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!"))
 
 		// Do this after the potential vore, so we get the belly
 		update_icon()

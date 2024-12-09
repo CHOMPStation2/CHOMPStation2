@@ -259,10 +259,10 @@
 	return num_val MINUTES
 
 /datum/config_entry/string/respawn_message
-	default = "<span class='notice'><B>Make sure to play a different character, and please roleplay correctly!</B></span>"
+	default = span_notice(span_bold("Make sure to play a different character, and please roleplay correctly!"))
 
 /datum/config_entry/string/respawn_message/ValidateAndSet(str_val)
-	return "<span class='notice'><B>[str_val]</B></span>"
+	return span_notice("<B>[str_val]</B>")
 
 /datum/config_entry/flag/guest_jobban
 	default = TRUE

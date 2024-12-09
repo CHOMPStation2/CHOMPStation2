@@ -127,7 +127,7 @@
 	set desc = "Slowly regenerate health using nutrition."
 
 	if(nutrition < 10)
-		to_chat(src, "<span class='warning'>You are too hungry to regenerate health.</span>")
+		to_chat(src, span_warning("You are too hungry to regenerate health."))
 		return
 	var/heal_amount = input(src, "Input the amount of health to regenerate at the rate of 10 nutrition per second per hitpoint. Current health: [health] / [maxHealth]", "Regenerate health.") as num|null
 	if(!heal_amount)

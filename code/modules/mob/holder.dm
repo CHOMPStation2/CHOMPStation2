@@ -337,8 +337,8 @@ var/list/holder_mob_icon_cache = list()
 		for(var/mob/living/M in src.contents)
 			if(user.size_multiplier > M.size_multiplier)
 				var/dam = (user.size_multiplier - M.size_multiplier)*(rand(2,5))
-				to_chat(user, "<span class='danger'>You roughly squeeze [M]!</span>")
-				to_chat(M, "<span class='danger'>You are roughly squeezed by [user]!</span>")
+				to_chat(user, span_danger("You roughly squeeze [M]!"))
+				to_chat(M, span_danger("You are roughly squeezed by [user]!"))
 				log_and_message_admins("[key_name(M)] has been harmsqueezed by [key_name(user)]")
 				M.apply_damage(dam)
 	//CHOMPADDITION: MicroHandCrush END
@@ -370,9 +370,9 @@ var/list/holder_mob_icon_cache = list()
 	var/sizediff = grabber.size_multiplier - size_multiplier
 	if(sizediff < -0.5)
 		if(self_grab)
-			to_chat(src, "<span class='warning'>You are too big to fit in \the [grabber]\'s hands!</span>")
+			to_chat(src, span_warning("You are too big to fit in \the [grabber]\'s hands!"))
 		else
-			to_chat(grabber, "<span class='warning'>\The [src] is too big to fit in your hands!</span>")
+			to_chat(grabber, span_warning("\The [src] is too big to fit in your hands!"))
 		return
 	//end YW edit
 

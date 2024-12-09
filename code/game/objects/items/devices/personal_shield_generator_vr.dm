@@ -182,7 +182,7 @@
 	else if(W.has_tool_quality(TOOL_SCREWDRIVER))
 		if(bcell)
 			if(istype(bcell, /obj/item/cell/device/shield_generator/parry)) //CHOMPedit: Cannot remove the cell from Parry shields.
-				to_chat(user,"<span class='notice'>You cannot remove the cell from this device.</span>") //CHOMPedit: No cell removal.
+				to_chat(user,span_notice("You cannot remove the cell from this device.")) //CHOMPedit: No cell removal.
 				return //CHOMPedit: No cell removal.
 			if(istype(bcell, /obj/item/cell/device/shield_generator)) //No stealing self charging batteries!
 				var/choice = tgui_alert(user, "A popup appears on the device 'REMOVING THE INTERNAL CELL WILL DESTROY THE BATTERY. DO YOU WISH TO CONTINUE?'...Well, do you?", "Selection List", list("Cancel", "Remove"))

@@ -117,7 +117,7 @@
 
 /obj/effect/step_trigger/lost_in_space/Trigger(var/atom/movable/A) //replacement for shuttle dump zones because there's no empty space levels to dump to
 	if(ismob(A))
-		to_chat(A, "<span class='danger'>[deathmessage]</span>")
+		to_chat(A, span_danger("[deathmessage]"))
 	qdel(A)
 
 /obj/effect/step_trigger/lost_in_space/bluespace
@@ -214,7 +214,7 @@
 		attached = above
 		item_records = attached.item_records
 	else
-		to_chat(world,"<span class='danger'>[src] at [x],[y],[z] cannot find the unit above it!</span>")
+		to_chat(world,span_danger("[src] at [x],[y],[z] cannot find the unit above it!"))
 
 // Tram departure cryo doors that turn into ordinary airlock doors at round end
 /obj/machinery/cryopod/robot/door/tram
