@@ -305,7 +305,7 @@
 					var/amount_per_pill = CLAMP(reagents.total_volume / count, 0, MAX_UNITS_PER_PILL)
 					while(count--)
 						if(reagents.total_volume <= 0)
-							to_chat(usr, span_notice("Not enough reagents to create these pills!"))
+							to_chat(ui.user, span_notice("Not enough reagents to create these pills!"))
 							return
 
 						var/obj/item/reagent_containers/pill/P = new(loc)
@@ -341,7 +341,7 @@
 					// var/is_medical_patch = chemical_safety_check(reagents)
 					while(count--)
 						if(reagents.total_volume <= 0)
-							to_chat(usr, span_notice("Not enough reagents to create these patches!"))
+							to_chat(ui.user, span_notice("Not enough reagents to create these patches!"))
 							return
 
 						var/obj/item/reagent_containers/pill/patch/P = new(loc)
@@ -368,7 +368,7 @@
 					var/amount_per_bottle = CLAMP(reagents.total_volume / count, 0, MAX_UNITS_PER_BOTTLE)
 					while(count--)
 						if(reagents.total_volume <= 0)
-							to_chat(usr, span_notice("Not enough reagents to create these bottles!"))
+							to_chat(ui.user, span_notice("Not enough reagents to create these bottles!"))
 							return
 						var/obj/item/reagent_containers/glass/bottle/P = new(loc)
 						P.name = "[answer] bottle"
@@ -398,8 +398,8 @@
 	if(tgui_act_modal(action, params, ui, state))
 		return TRUE
 
-	add_fingerprint(usr)
-	usr.set_machine(src)
+	add_fingerprint(ui.user)
+	ui.user.set_machine(src)
 
 	. = TRUE
 	switch(action)
@@ -408,8 +408,8 @@
 		if("ejectp")
 			if(loaded_pill_bottle)
 				loaded_pill_bottle.forceMove(get_turf(src))
-				if(Adjacent(usr) && !issilicon(usr))
-					usr.put_in_hands(loaded_pill_bottle)
+				if(Adjacent(ui.user) && !issilicon(ui.user))
+					ui.user.put_in_hands(loaded_pill_bottle)
 				loaded_pill_bottle = null
 		if("print")
 			if(printing || condi)
@@ -468,8 +468,8 @@
 			if(!beaker)
 				return
 			beaker.forceMove(get_turf(src))
-			if(Adjacent(usr) && !issilicon(usr))
-				usr.put_in_hands(beaker)
+			if(Adjacent(ui.user) && !issilicon(ui.user))
+				ui.user.put_in_hands(beaker)
 			beaker = null
 			reagents.clear_reagents()
 			update_icon()

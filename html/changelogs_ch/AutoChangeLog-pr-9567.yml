@@ -1,8 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - qol: "Blender UI opens even when there's only one choice"
-  - rscadd: "Basic appliances (the mixer only I think?) now has a radial menu"
-  - rscadd: "Power/safety/change output buttons for cookers"
-  - bugfix: "Radial menus now layer properly"
-  - refactor: "Radial menus updated to /tg/ latest"

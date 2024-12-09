@@ -4,8 +4,7 @@
 	name = "VR world"
 	icon_state = "green"
 	base_turf = /turf/simulated/floor/outdoors/dirt
-	limit_mob_size = FALSE
-	limit_dark_respite = TRUE
+	flags = AREA_ALLOW_LARGE_SIZE | AREA_LIMIT_DARK_RESPITE
 
 /area/vr/space
 	name = "VR Space" //copypasta time
@@ -20,7 +19,7 @@
 	ambience = list('sound/ambience/ambispace.ogg','sound/music/title2.ogg','sound/music/space.ogg','sound/music/main.ogg','sound/music/traitor.ogg','sound/ambience/space/space_serithi.ogg','sound/music/freefallin.mid')
 	base_turf = /turf/space
 	ambience = AMBIENCE_SPACE
-	flags = AREA_FLAG_IS_NOT_PERSISTENT
+	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_ALLOW_LARGE_SIZE | AREA_LIMIT_DARK_RESPITE
 
 /area/space/atmosalert()
 	return
@@ -163,11 +162,7 @@
 /area/vr/powered/mall/dorms
 	name = "VR Mall Dorms"
 	icon_state = "Sleep"
-	soundproofed = TRUE
-	limit_mob_size = FALSE
-	block_suit_sensors = TRUE
-	flags = RAD_SHIELDED
-	block_tracking = TRUE
+	flags = RAD_SHIELDED | AREA_SOUNDPROOF | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING | AREA_LIMIT_DARK_RESPITE
 
 /area/vr/powered/mall/dorms/dorms1
 

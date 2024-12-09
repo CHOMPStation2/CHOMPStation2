@@ -214,9 +214,27 @@
 	name = "Reptile Breasts"
 	icon_state = "breasts_reptile"
 
-/datum/sprite_accessory/marking/ch/hippo_head
-	name = "Hippo Snout"
-	icon_state = "hippo_head"
+/datum/sprite_accessory/marking/ch/dragon_upperjaw
+	name = "Dragon Upper Jaw"
+	icon_state = "dragon_upperjaw"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/marking/ch/dragon_lowerjaw
+	name = "Dragon Lower Jaw"
+	icon_state = "dragon_lowerjaw"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/marking/ch/hippo_upperjaw
+	name = "Hippo Upper Jaw"
+	icon_state = "hippo_upperjaw"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/marking/ch/hippo_lowerjaw
+	name = "Hippo Lower Jaw"
+	icon_state = "hippo_lowerjaw"
 	body_parts = list(BP_HEAD)
 	color_blend_mode = ICON_MULTIPLY
 

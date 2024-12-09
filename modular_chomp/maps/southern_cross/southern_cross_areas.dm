@@ -212,7 +212,7 @@
 /area/hallway/primary/firstdeck/auxdockaft
 	name = "\improper First Deck Aft Auxiliary Dock"
 	icon_state = "docking_hallway"
-	forbid_events = TRUE
+	flags = AREA_FORBID_EVENTS
 
 /area/hallway/primary/firstdeck/auxdockfore
 	name = "\improper First Deck Fore Auxiliary Dock"
@@ -432,7 +432,7 @@
 /area/crew_quarters/thirddeck/vrroom
 	name = "\improper Virtual Reality Room"
 	icon_state = "gaming"
-	flags = RAD_SHIELDED //Depending on the video game, you might still get figuative cancer
+	flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO //Depending on the video game, you might still get figuative cancer
 
 //CHOMPStation Edit End
 
@@ -448,7 +448,7 @@
 /area/crew_quarters/heads/sc/
 	name = "\improper Command - Head Office"
 	icon_state = "head_quarters"
-	flags = RAD_SHIELDED
+	flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO
 	sound_env = MEDIUM_SOFTFLOOR
 
 /area/crew_quarters/heads/sc/hop
@@ -1712,11 +1712,7 @@ End Chompstation Edit*/
 /area/maintenance/bar/dorms
 	name = "Maintenance Bar Dorms"
 	icon_state = "Sleep"
-	soundproofed = TRUE
-	limit_mob_size = FALSE
-	block_suit_sensors = TRUE
-	flags = RAD_SHIELDED
-	block_tracking = TRUE
+	flags = RAD_SHIELDED | AREA_SOUNDPROOF |AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING
 
 /area/maintenance/bar/dorms/dorm_1
 	name = "Maintenance Deck Bar Dorms 1"

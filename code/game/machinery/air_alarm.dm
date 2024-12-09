@@ -694,10 +694,10 @@
 		var/list/selected = TLV["temperature"]
 		var/max_temperature = min(selected[3] - T0C, MAX_TEMPERATURE)
 		var/min_temperature = max(selected[2] - T0C, MIN_TEMPERATURE)
-		var/input_temperature = tgui_input_number(usr, "What temperature would you like the system to mantain? (Capped between [min_temperature] and [max_temperature]C)", "Thermostat Controls", target_temperature - T0C, max_temperature, min_temperature, round_value = FALSE)
+		var/input_temperature = tgui_input_number(ui.user, "What temperature would you like the system to mantain? (Capped between [min_temperature] and [max_temperature]C)", "Thermostat Controls", target_temperature - T0C, max_temperature, min_temperature, round_value = FALSE)
 		if(isnum(input_temperature))
 			if(input_temperature > max_temperature || input_temperature < min_temperature)
-				to_chat(usr, "Temperature must be between [min_temperature]C and [max_temperature]C")
+				to_chat(ui.user, "Temperature must be between [min_temperature]C and [max_temperature]C")
 			else
 				target_temperature = input_temperature + T0C
 		return TRUE
@@ -706,13 +706,13 @@
 	// Yes, this is kinda snowflaky; however, I would argue it would be far more snowflakey
 	// to include "custom hrefs" and all the other bullshit that nano states have just for the
 	// like, two UIs, that want remote access to other UIs.
-	if((locked && !(siliconaccess(usr) || (isobserver(usr) && is_admin(usr))) && !istype(state, /datum/tgui_state/air_alarm_remote)) || (issilicon(usr) && aidisabled)) //CHOMPedit borg access
+	if((locked && !(siliconaccess(ui.user) || (isobserver(ui.user) && is_admin(ui.user))) && !istype(state, /datum/tgui_state/air_alarm_remote)) || (issilicon(ui.user) && aidisabled)) //CHOMPedit borg access
 		return
 
 	var/device_id = params["id_tag"]
 	switch(action)
 		if("lock")
-			if((siliconaccess(usr) && !wires.is_cut(WIRE_IDSCAN)) || (isobserver(usr) && is_admin(usr))) //CHOMPEdit borg access + admin acces
+			if((siliconaccess(ui.user) && !wires.is_cut(WIRE_IDSCAN)) || (isobserver(ui.user) && is_admin(ui.user))) //CHOMPEdit borg access + admin acces
 				locked = !locked
 				. = TRUE
 		if( "power",
@@ -725,42 +725,42 @@
 			"panic_siphon",
 			"scrubbing",
 			"direction")
-			send_signal(device_id, list("[action]" = text2num(params["val"])), usr)
+			send_signal(device_id, list("[action]" = text2num(params["val"])), ui.user)
 			. = TRUE
 		if("excheck")
-			send_signal(device_id, list("checks" = text2num(params["val"])^1), usr)
+			send_signal(device_id, list("checks" = text2num(params["val"])^1), ui.user)
 			. = TRUE
 		if("incheck")
-			send_signal(device_id, list("checks" = text2num(params["val"])^2), usr)
+			send_signal(device_id, list("checks" = text2num(params["val"])^2), ui.user)
 			. = TRUE
 		if("set_external_pressure", "set_internal_pressure")
 			var/target = params["value"]
 			if(!isnull(target))
-				send_signal(device_id, list("[action]" = target), usr)
+				send_signal(device_id, list("[action]" = target), ui.user)
 				. = TRUE
 		if("reset_external_pressure")
-			send_signal(device_id, list("reset_external_pressure"), usr)
+			send_signal(device_id, list("reset_external_pressure"), ui.user)
 			. = TRUE
 		if("reset_internal_pressure")
-			send_signal(device_id, list("reset_internal_pressure"), usr)
+			send_signal(device_id, list("reset_internal_pressure"), ui.user)
 			. = TRUE
 		if("threshold")
 			var/env = params["env"]
 
 			var/name = params["var"]
-			var/value = tgui_input_number(usr, "New [name] for [env]:", name, TLV[env][name], min_value=-1, round_value = FALSE)
+			var/value = tgui_input_number(ui.user, "New [name] for [env]:", name, TLV[env][name], min_value=-1, round_value = FALSE)
 			if(!isnull(value) && !..())
 				if(value < 0)
 					TLV[env][name] = -1
 				else
 					TLV[env][name] = round(value, 0.01)
 				clamp_tlv_values(env, name)
-				// investigate_log(" treshold value for [env]:[name] was set to [value] by [key_name(usr)]",INVESTIGATE_ATMOS)
+				// investigate_log(" treshold value for [env]:[name] was set to [value] by [key_name(ui.user)]",INVESTIGATE_ATMOS)
 				. = TRUE
 		if("mode")
 			mode = text2num(params["mode"])
-			// investigate_log("was turned to [get_mode_name(mode)] mode by [key_name(usr)]",INVESTIGATE_ATMOS)
-			apply_mode(usr)
+			// investigate_log("was turned to [get_mode_name(mode)] mode by [key_name(ui.user)]",INVESTIGATE_ATMOS)
+			apply_mode(ui.user)
 			. = TRUE
 		if("alarm")
 			if(alarm_area.atmosalert(2, src))
@@ -813,7 +813,7 @@
 		apply_danger_level(0)
 	update_icon()
 
-/obj/machinery/alarm/attackby(obj/item/W as obj, mob/user as mob)
+/obj/machinery/alarm/attackby(obj/item/W as obj, mob/user)
 	add_fingerprint(user)
 	if(alarm_deconstruction_screwdriver(user, W))
 		return
@@ -821,24 +821,24 @@
 		return
 
 	if(istype(W, /obj/item/card/id) || istype(W, /obj/item/pda))// trying to unlock the interface with an ID card
-		togglelock()
+		togglelock(user)
 	return ..()
 
-/obj/machinery/alarm/verb/togglelock(mob/user as mob)
+/obj/machinery/alarm/proc/togglelock(mob/user)
 	if(stat & (NOPOWER|BROKEN))
 		to_chat(user, "It does nothing.")
 		return
 	else
-		if(allowed(usr) && !wires.is_cut(WIRE_IDSCAN))
+		if(allowed(user) && !wires.is_cut(WIRE_IDSCAN))
 			locked = !locked
 			to_chat(user, span_notice("You [locked ? "lock" : "unlock"] the Air Alarm interface."))
 		else
 			to_chat(user, span_warning("Access denied."))
 		return
 
-/obj/machinery/alarm/AltClick()
+/obj/machinery/alarm/AltClick(mob/user)
 	..()
-	togglelock()
+	togglelock(user)
 
 /obj/machinery/alarm/power_change()
 	..()

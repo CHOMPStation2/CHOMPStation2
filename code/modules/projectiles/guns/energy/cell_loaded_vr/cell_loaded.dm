@@ -210,7 +210,6 @@
 /obj/item/ammo_casing/microbattery
 	name = "\'NSCW\' microbattery - UNKNOWN"
 	desc = "A miniature battery for an energy weapon."
-	catalogue_data = list(/datum/category_item/catalogue/information/organization/hephaestus)
 	icon = 'icons/obj/ammo_vr.dmi'
 	icon_state = "nsfw_batt"
 	slot_flags = SLOT_BELT | SLOT_EARS

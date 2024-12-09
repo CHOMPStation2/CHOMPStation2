@@ -145,7 +145,7 @@
 		if(in_use)
 			return
 		var/area/A = get_area(usr)
-		if(A.flags & BLUE_SHIELDED)
+		if(A.flag_check(BLUE_SHIELDED))
 			to_chat(usr, span_warning("You cannot edit restricted areas."))
 			return
 		in_use = TRUE
@@ -156,7 +156,7 @@
 			return
 		in_use = TRUE
 		var/area/A = create_area_whole(usr, src)
-		if(A && (A.flags & BLUE_SHIELDED))
+		if(A?.flag_check(BLUE_SHIELDED))
 			to_chat(usr, span_warning("You cannot edit restricted areas."))
 			in_use = FALSE
 			return
@@ -485,7 +485,7 @@
 		var/area/place = get_area(turfs[i])
 		if(blacklisted_areas[place.type])
 			continue
-		if(!place.requires_power || (place.flags & BLUE_SHIELDED))
+		if(!place.requires_power || (place.flag_check(BLUE_SHIELDED)))
 			continue // No expanding powerless rooms etc
 		areas[place.name] = place
 
@@ -587,7 +587,7 @@
 				continue
 		if(!BUILDABLE_AREA_TYPES[place.type]) //TODOTODOTODO
 			can_make_new_area = 0
-		if(!place.requires_power || (place.flags & BLUE_SHIELDED))
+		if(!place.requires_power || (place.flag_check(BLUE_SHIELDED)))
 			continue // No expanding powerless rooms etc
 		areas[place.name] = place
 
@@ -678,9 +678,9 @@
 			if(!visual && forbiddenAreas[NT.loc.type])
 				return ROOM_ERR_FORBIDDEN
 			// We ask ZAS to determine if its airtight.  Thats what matters anyway right?
-			if(air_master.air_blocked(T, NT))
+			if(SSair.air_blocked(T, NT))
 				// Okay thats the edge of the room
-				if(get_area_type(NT.loc) == AREA_SPACE && air_master.air_blocked(NT, NT))
+				if(get_area_type(NT.loc) == AREA_SPACE && SSair.air_blocked(NT, NT))
 					found += NT // So we include walls/doors not already in any area
 				continue
 			if (istype(NT, /turf/space))
@@ -835,9 +835,9 @@
 				if(!get_new_area_type(NT.loc) == 1) //The contains somewhere that is NOT a buildable area.
 					return 3 //NOT A BUILDABLE AREA
 
-				if(air_master.air_blocked(T, NT)) //Is the room airtight?
+				if(SSair.air_blocked(T, NT)) //Is the room airtight?
 					// Okay thats the edge of the room
-					if(get_new_area_type(NT.loc) == 1 && air_master.air_blocked(NT, NT))
+					if(get_new_area_type(NT.loc) == 1 && SSair.air_blocked(NT, NT))
 						found += NT // So we include walls/doors not already in any area
 					continue
 				if (istype(NT, /turf/space))

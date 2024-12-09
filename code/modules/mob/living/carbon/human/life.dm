@@ -1702,7 +1702,7 @@
 
 		// Do this early so certain stuff gets turned off before vision is assigned.
 		var/area/A = get_area(src)
-		if(A?.no_spoilers)
+		if(A?.flag_check(AREA_NO_SPOILERS))
 			disable_spoiler_vision()
 
 		if(XRAY in mutations)
@@ -1853,7 +1853,7 @@
 					stomach_contents.Remove(M)
 					qdel(M)
 					continue
-				if(air_master.current_cycle%3==1)
+				if(SSair.current_cycle%3==1)
 					if(!(M.status_flags & GODMODE))
 						M.adjustBruteLoss(5)
 					adjust_nutrition(10)

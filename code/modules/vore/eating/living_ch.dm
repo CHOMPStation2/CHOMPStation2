@@ -163,7 +163,7 @@
 					return FALSE
 				if(!Adjacent(TR) || !Adjacent(TG))
 					return //No long distance transfer
-				if(!TR.reagents.get_free_space())
+				if(!TB.reagents?.get_free_space())
 					to_chat(user, span_vnotice("[TB] is full!"))
 					return FALSE
 
@@ -186,7 +186,7 @@
 					return FALSE
 				if(!Adjacent(TR) || !Adjacent(TG))
 					return //No long distance transfer
-				if(!TR.reagents.get_free_space())
+				if(!TB.reagents?.get_free_space())
 					to_chat(user, span_vnotice("[TR]'s [lowertext(TB.name)] is full!"))
 					return FALSE
 

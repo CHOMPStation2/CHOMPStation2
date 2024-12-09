@@ -84,11 +84,7 @@
 /area/surface/thor/dorms
 	name = "Jungle Outpost Generic Dorms"
 	icon_state = "Sleep"
-	soundproofed = TRUE
-	limit_mob_size = FALSE
-	block_suit_sensors = TRUE
-	flags = RAD_SHIELDED
-	block_tracking = TRUE
+	flags = RAD_SHIELDED | AREA_SOUNDPROOF | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING
 
 /area/surface/thor/dorms/pool1
 	name = "Jungle Outpost Pool Shack 1"
