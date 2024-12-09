@@ -21,7 +21,7 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 	//VOREStation Add
 	"lost drone" = 1,									// 16
 	"maint pred" = 1,									// 17
-	"maint lurker" = 1,									// 18
+	"stowaway" = 1,										// 18 // CHOMPEdit
 	"morph" = 1,										// 19
 	"corgi" = 1,										// 20
 	"cursed sword" = 1,									// 21

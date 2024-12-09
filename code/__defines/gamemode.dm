@@ -68,7 +68,7 @@ var/list/be_special_flags = list(
 	//VOREStation Add
 	"Lost Drone"       = BE_LOSTDRONE,
 	"Maint Pred"       = BE_MAINTPRED,
-	"Maint Lurker"     = BE_MAINTLURKER,
+	"Stowaway"         = BE_MAINTLURKER, // CHOMPEdit
 	"Morph"            = BE_MORPH,
 	"Corgi"            = BE_CORGI,
 	"Cursed Sword"     = BE_CURSEDSWORD,

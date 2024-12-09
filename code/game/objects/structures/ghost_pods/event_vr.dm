@@ -220,7 +220,7 @@
 		//to_chat(user, span_warning("You must have proper out-of-character notes and flavor text configured for your current character slot to use this spawnpoint."))
 		return
 
-	var/choice = tgui_alert(user, "Using this spawner will spawn you as your currently loaded character slot in a special role. It should not be used with characters you regularly play on station. Are you absolutely sure you wish to continue?", "Maint Lurker Spawner", list("Yes", "No"))
+	var/choice = tgui_alert(user, "Using this spawner will spawn you as your currently loaded character slot in a special role. It should not be used with characters you regularly play on station. Are you absolutely sure you wish to continue?", "Stowaway Spawner", list("Yes", "No")) // CHOMPEdit
 
 	if(!choice || choice == "No")
 		return
