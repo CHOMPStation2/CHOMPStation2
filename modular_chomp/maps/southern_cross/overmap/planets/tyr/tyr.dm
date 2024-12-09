@@ -59,7 +59,7 @@
 /area/surface/tyr/town
 	name = "Lost Town"
 	icon_state = "green"
-	outdoors = OUTDOORS_NO
+	outdoors = OUTDOORS_YES
 
 /area/surface/tyr/medical_center
 	name = "Lost Toww Medical Center"
@@ -84,10 +84,13 @@
 /area/surface/tyr/northern_wilderness
 	name = "Tyr Wilderness"
 	icon_state = "green"
+	outdoors = OUTDOORS_YES
+
 
 /area/surface/tyr/southern_wilderness
 	name = "Tyr Wilderness"
 	icon_state = "green"
+	outdoors = OUTDOORS_YES
 
 /area/surface/tyr/tar_lake
 	name = "Tar Lake"

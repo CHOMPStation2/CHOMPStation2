@@ -146,11 +146,11 @@
 /area/survivalpod/superpose/XenoBotanySetup
 
 /area/survivalpod/superpose/secondlifebar
-	limit_mob_size = FALSE //Second life bars dont have ceilings
+	flags = AREA_ALLOW_LARGE_SIZE
 
 /area/survivalpod/superpose/secondlifebar/dorms
 	icon_state = "toilet"
-	soundproofed = TRUE
+	flags = AREA_ALLOW_LARGE_SIZE | AREA_SOUNDPROOF
 
 /obj/item/survivalcapsule/superpose
 	name = "superposed surfluid shelter capsule"

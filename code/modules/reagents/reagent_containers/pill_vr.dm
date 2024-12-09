@@ -139,8 +139,8 @@
 
 /*CHOMPStation removal begin
 /obj/item/reagent_containers/pill/sleevingcure
-	name = "Vey-Med Resleeving Booster pill" //YW Edit
-	desc = "A rare medication provided by Vey-Med that helps counteract negative side effects of using resleeving machinery. Numb tongue before swallowing." //YW Edit
+	name = "Resleeving Sickness Cure (1u)"
+	desc = "A rare cure provided by Vey-Med that helps counteract negative side effects of using imperfect resleeving machinery."
 	icon_state = "pill3"
 
 /obj/item/reagent_containers/pill/sleevingcure/Initialize()

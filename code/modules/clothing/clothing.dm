@@ -645,7 +645,7 @@
 	if(istype(usr, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = usr
 		if(H.ability_flags & 0x1)
-			to_chat(usr, "<span class='warning'>You cannot do that while phase shifted.</span>")
+			to_chat(usr, span_warning("You cannot do that while phase shifted."))
 			return
 	//CHOMPEdit end
 

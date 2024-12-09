@@ -86,39 +86,6 @@
 		character.voice_sounds_list = talk_sound
 	else
 		character.voice_sounds_list = get_talk_sound(pref.voice_sound)
-	/*if(!pref.voice_sound)
-		character.voice_sounds_list = talk_sound
-	else
-		switch(pref.voice_sound)
-			if("beep-boop")
-				character.voice_sounds_list = talk_sound
-			if("goon speak 1")
-				character.voice_sounds_list = goon_speak_one_sound
-			if("goon speak 2")
-				character.voice_sounds_list = goon_speak_two_sound
-			if("goon speak 3")
-				character.voice_sounds_list = goon_speak_three_sound
-			if("goon speak 4")
-				character.voice_sounds_list = goon_speak_four_sound
-			if("goon speak blub")
-				character.voice_sounds_list = goon_speak_blub_sound
-			if("goon speak bottalk")
-				character.voice_sounds_list = goon_speak_bottalk_sound
-			if("goon speak buwoo")
-				character.voice_sounds_list = goon_speak_buwoo_sound
-			if("goon speak cow")
-				character.voice_sounds_list = goon_speak_cow_sound
-			if("goon speak lizard")
-				character.voice_sounds_list = goon_speak_lizard_sound
-			if("goon speak pug")
-				character.voice_sounds_list = goon_speak_pug_sound
-			if("goon speak pugg")
-				character.voice_sounds_list = goon_speak_pugg_sound
-			if("goon speak roach")
-				character.voice_sounds_list = goon_speak_roach_sound
-			if("goon speak skelly")
-				character.voice_sounds_list = goon_speak_skelly_sound
-				*/ //CHOMPEDIT Global voice lookup
 	character.custom_speech_bubble = pref.custom_speech_bubble
 	character.custom_footstep = pref.custom_footstep
 
@@ -322,7 +289,7 @@
 			oursound = get_species_sound(select_default_species_sound(pref))["cough"]
 			S = sound(pick(oursound))
 		if(pref.species_sound == "None" || oursound == null)
-			to_chat(user, "<span class='warning'>This set does not have cough sounds!</span>")
+			to_chat(user, span_warning("This set does not have cough sounds!"))
 			return TOPIC_REFRESH
 		S.frequency = pick(pref.voice_freq)
 		S.volume = 20
@@ -337,7 +304,7 @@
 			oursound = get_species_sound(select_default_species_sound(pref))["sneeze"]
 			S = sound(pick(oursound))
 		if(pref.species_sound == "None" || oursound == null)
-			to_chat(user, "<span class='warning'>This set does not have sneeze sounds!</span>")
+			to_chat(user, span_warning("This set does not have sneeze sounds!"))
 			return TOPIC_REFRESH
 		S.frequency = pick(pref.voice_freq)
 		S.volume = 20
@@ -352,7 +319,7 @@
 			oursound = get_species_sound(select_default_species_sound(pref))["scream"]
 			S = sound(pick(oursound))
 		if(pref.species_sound == "None" || oursound == null)
-			to_chat(user, "<span class='warning'>This set does not have scream sounds!</span>")
+			to_chat(user, span_warning("This set does not have scream sounds!"))
 			return TOPIC_REFRESH
 		S.frequency = pick(pref.voice_freq)
 		S.volume = 20
@@ -367,7 +334,7 @@
 			oursound = get_species_sound(select_default_species_sound(pref))["pain"]
 			S = sound(pick(oursound))
 		if(pref.species_sound == "None" || oursound == null)
-			to_chat(user, "<span class='warning'>This set does not have pain sounds!</span>")
+			to_chat(user, span_warning("This set does not have pain sounds!"))
 			return TOPIC_REFRESH
 		S.frequency = pick(pref.voice_freq)
 		S.volume = 20
@@ -382,7 +349,7 @@
 			oursound = get_species_sound(select_default_species_sound(pref))["gasp"]
 			S = sound(pick(oursound))
 		if(pref.species_sound == "None" || oursound == null)
-			to_chat(user, "<span class='warning'>This set does not have gasp sounds!</span>")
+			to_chat(user, span_warning("This set does not have gasp sounds!"))
 			return TOPIC_REFRESH
 		S.frequency = pick(pref.voice_freq)
 		S.volume = 20
@@ -397,7 +364,7 @@
 			oursound = get_species_sound(select_default_species_sound(pref))["death"]
 			S = sound(pick(oursound))
 		if(pref.species_sound == "None" || oursound == null)
-			to_chat(user, "<span class='warning'>This set does not have death sounds!</span>")
+			to_chat(user, span_warning("This set does not have death sounds!"))
 			return TOPIC_REFRESH
 		S.frequency = pick(pref.voice_freq)
 		S.volume = 20

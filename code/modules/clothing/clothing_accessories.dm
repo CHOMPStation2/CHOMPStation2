@@ -130,12 +130,12 @@
 	if(iscarbon(usr))
 		var/mob/living/carbon/C = usr
 		if(C.handcuffed)
-			to_chat(C, "<span class='warning'>You cannot remove accessories while handcuffed!</span>")
+			to_chat(C, span_warning("You cannot remove accessories while handcuffed!"))
 			return
 		else if(istype(C, /mob/living/carbon/human))
 			var/mob/living/carbon/human/H = C
 			if(H.ability_flags & 0x1)
-				to_chat(H, "<span class='warning'>You cannot remove accessories while phase shifted!</span>")
+				to_chat(H, span_warning("You cannot remove accessories while phase shifted!"))
 				return
 	//CHOMPEdit end
 

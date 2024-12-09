@@ -236,8 +236,8 @@
 
 /*CHOMPStation removal begin
 /obj/item/storage/pill_bottle/sleevingcure
-	name = "pill bottle (Vey-Med Resleeving Booster)"
-	desc = "A rare medication sold by Vey-Med that helps counteract negative side effects of using resleeving machinery." //Bye, KHI! Get lost.
+	name = "pill bottle (resleeving sickness cure)"
+	desc = "A rare cure provided by Vey-Medical that helps counteract negative side effects of using imperfect resleeving machinery."
 	starts_with = list(/obj/item/reagent_containers/pill/sleevingcure = 7)
 
 /obj/item/storage/pill_bottle/sleevingcure/full
@@ -253,7 +253,7 @@
 
 /*CHOMPStation removal begin
 /obj/item/storage/mrebag/pill/sleevingcure
-	name = "vacuum-sealed pill (Vey-Med Resleeving Booster)"
+	name = "vacuum-sealed pill (resleeving sickness cure)"
 	desc = "A small vacuum-sealed package containing a singular pill. For emergencies only."
 	starts_with = list(/obj/item/reagent_containers/pill/sleevingcure)
 */ //CHOMPStation removal end

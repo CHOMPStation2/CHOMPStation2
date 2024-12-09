@@ -1,49 +1,24 @@
 /area/surface/outpost/main/dorms
 	name = "\improper Main Outpost Dorms"
-	soundproofed = TRUE
-	forbid_events = TRUE
+	flags = RAD_SHIELDED | AREA_SOUNDPROOF | AREA_FORBID_EVENTS | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING
 
 /area/surface/outpost/main/dorms/dorm_1
 	name = "\improper Main Outpost Dorm One"
-	flags = RAD_SHIELDED
-	limit_mob_size = FALSE
-	block_suit_sensors = TRUE
-	block_tracking = TRUE
 
 /area/surface/outpost/main/dorms/dorm_2
 	name = "\improper Main Outpost Dorm Two"
-	flags = RAD_SHIELDED
-	limit_mob_size = FALSE
-	block_suit_sensors = TRUE
-	block_tracking = TRUE
 
 /area/surface/outpost/main/dorms/dorm_3
 	name = "\improper Main Outpost Dorm Three"
-	flags = RAD_SHIELDED
-	limit_mob_size = FALSE
-	block_suit_sensors = TRUE
-	block_tracking = TRUE
 
 /area/surface/outpost/main/dorms/dorm_4
 	name = "\improper Main Outpost Dorm Four"
-	flags = RAD_SHIELDED
-	limit_mob_size = FALSE
-	block_suit_sensors = TRUE
-	block_tracking = TRUE
 
 /area/surface/outpost/main/dorms/dorm_5
 	name = "\improper Main Outpost Dorm Five"
-	flags = RAD_SHIELDED
-	limit_mob_size = FALSE
-	block_suit_sensors = TRUE
-	block_tracking = TRUE
 
 /area/surface/outpost/main/dorms/dorm_6
 	name = "\improper Main Outpost Dorm Six"
-	flags = RAD_SHIELDED
-	limit_mob_size = FALSE
-	block_suit_sensors = TRUE
-	block_tracking = TRUE
 
 /area/crew_quarters/cafeteria
 	flags = RAD_SHIELDED
@@ -61,84 +36,35 @@
 	flags = RAD_SHIELDED
 
 /area/crew_quarters/sleep
-	soundproofed = TRUE
-	forbid_events = TRUE
+	flags = RAD_SHIELDED | AREA_SOUNDPROOF | AREA_FORBID_EVENTS | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING
 
 /area/crew_quarters/sleep/vistor_room_1
-	flags = RAD_SHIELDED
-	limit_mob_size = FALSE
-	block_suit_sensors = TRUE
-	block_tracking = TRUE
 
 /area/crew_quarters/sleep/vistor_room_2
-	flags = RAD_SHIELDED
-	limit_mob_size = FALSE
-	block_suit_sensors = TRUE
-	block_tracking = TRUE
 
 /area/crew_quarters/sleep/vistor_room_3
-	flags = RAD_SHIELDED
-	limit_mob_size = FALSE
-	block_suit_sensors = TRUE
-	block_tracking = TRUE
 
 /area/crew_quarters/sleep/vistor_room_4
-	flags = RAD_SHIELDED
-	limit_mob_size = FALSE
-	block_suit_sensors = TRUE
-	block_tracking = TRUE
 
 /area/crew_quarters/sleep/vistor_room_5
-	flags = RAD_SHIELDED
-	limit_mob_size = FALSE
-	block_suit_sensors = TRUE
-	block_tracking = TRUE
 
 /area/crew_quarters/sleep/vistor_room_6
-	flags = RAD_SHIELDED
-	limit_mob_size = FALSE
-	block_suit_sensors = TRUE
-	block_tracking = TRUE
 
 /area/crew_quarters/sleep/vistor_room_7
-	flags = RAD_SHIELDED
-	limit_mob_size = FALSE
-	block_suit_sensors = TRUE
-	block_tracking = TRUE
 
 /area/crew_quarters/sleep/vistor_room_8
-	flags = RAD_SHIELDED
-	limit_mob_size = FALSE
-	block_suit_sensors = TRUE
-	block_tracking = TRUE
 
 /area/crew_quarters/sleep/vistor_room_9
-	flags = RAD_SHIELDED
-	limit_mob_size = FALSE
-	block_suit_sensors = TRUE
-	block_tracking = TRUE
 
 /area/crew_quarters/sleep/vistor_room_10
-	flags = RAD_SHIELDED
-	limit_mob_size = FALSE
-	block_suit_sensors = TRUE
-	block_tracking = TRUE
 
 /area/crew_quarters/sleep/vistor_room_11
-	flags = RAD_SHIELDED
-	limit_mob_size = FALSE
-	block_suit_sensors = TRUE
-	block_tracking = TRUE
 
 /area/crew_quarters/sleep/vistor_room_12
-	flags = RAD_SHIELDED
-	limit_mob_size = FALSE
-	block_suit_sensors = TRUE
-	block_tracking = TRUE
 
 /area/medical/cryo/autoresleeve
 	name = "\improper Medical Autoresleeving"
-	forbid_events = TRUE
+	flags = AREA_FORBID_EVENTS
 
 /area/rnd/research/particleaccelerator
 	name = "\improper Particle Accelerator Lab"
@@ -148,10 +74,8 @@
 	name = "\improper Shadekin Retreat"
 	icon_state = "blue"
 	requires_power = 0
-	limit_dark_respite = TRUE
-	limit_mob_size = FALSE
 	ambience = AMBIENCE_OTHERWORLDLY
-	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | BLUE_SHIELDED
+	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | BLUE_SHIELDED | AREA_ALLOW_LARGE_SIZE | AREA_LIMIT_DARK_RESPITE
 
 /area/security/nuke_storage
 	flags = PHASE_SHIELDED

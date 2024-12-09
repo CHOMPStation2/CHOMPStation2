@@ -1085,12 +1085,7 @@
 
 /area/bridge/sleep
     icon_state = "bridge"
-    flags = RAD_SHIELDED
-    limit_mob_size = FALSE
-    block_suit_sensors = TRUE
-    block_tracking = TRUE
-    soundproofed = TRUE
-    forbid_events = TRUE
+    flags = RAD_SHIELDED | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING | AREA_SOUNDPROOF | AREA_FORBID_EVENTS
 
 /area/bridge/sleep/HoP_Quarters
     name = "\improper HoP Quarters"
@@ -1817,12 +1812,12 @@
 /area/crew_quarters/Midnight_Bar
     name = "\improper Midnight Bar"
     icon_state = "gaming"
-    flags = RAD_SHIELDED
+    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO
 
 /area/crew_quarters/Midnight_Kitchen
     name = "\improper Midnight Kitchen"
     icon_state = "gaming"
-    flags = RAD_SHIELDED
+    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO
 
 /area/crew_quarters/Gallery
     name = "\improper Gallery"
@@ -1858,31 +1853,31 @@
 /area/crew_quarters/Central_Restroom
     name = "\improper Central Restroom"
     icon_state = "gaming"
-    flags = RAD_SHIELDED
+    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO
     lightswitch = 1
 
 /area/crew_quarters/For_Restroom
     name = "\improper For Restroom"
     icon_state = "gaming"
-    flags = RAD_SHIELDED
+    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO
     lightswitch = 1
 
 /area/crew_quarters/Star_Restroom
     name = "\improper Star Restroom"
     icon_state = "gaming"
-    flags = RAD_SHIELDED
+    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO
     lightswitch = 1
 
 /area/crew_quarters/Aft_Restroom
     name = "\improper Aft Restroom"
     icon_state = "gaming"
-    flags = RAD_SHIELDED
+    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO
     lightswitch = 1
 
 /area/crew_quarters/Port_Restroom
     name = "\improper Port Restroom"
     icon_state = "gaming"
-    flags = RAD_SHIELDED
+    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO
     lightswitch = 1
 
 /area/crew_quarters/Library
@@ -1911,34 +1906,34 @@
 /area/crew_quarters/Chomp_Hydroponics
     name = "\improper Chomp Hydroponics"
     icon_state = "gaming"
-    flags = RAD_SHIELDED
+    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO
 
 /area/crew_quarters/Chomp_Stage
     name = "\improper Chomp Convention Stage"
     icon_state = "gaming"
-    flags = RAD_SHIELDED
+    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO
 
 /area/crew_quarters/Chomp_Kitchen
     name = "\improper Chomp Kitchen"
     icon_state = "gaming"
-    flags = RAD_SHIELDED
+    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO
 
 /area/crew_quarters/Chomp_Dinner_1
     name = "\improper Chomp Dinner 1"
     icon_state = "gaming"
-    flags = RAD_SHIELDED
+    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO
     lightswitch = 1
 
 /area/crew_quarters/Chomp_Dinner_2
     name = "\improper Chomp Dinner 2"
     icon_state = "gaming"
-    flags = RAD_SHIELDED
+    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO
     lightswitch = 1
 
 /area/crew_quarters/Chomp_Lounge
     name = "\improper Chomp Lounge"
     icon_state = "gaming"
-    flags = RAD_SHIELDED
+    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO
 
 /area/crew_quarters/Public_Hydroponics
     name = "\improper Public Hydroponics"
@@ -1961,13 +1956,8 @@
     icon_state = "gaming"
 
 /area/crew_quarters/sleep
-    flags = RAD_SHIELDED
+    flags = RAD_SHIELDED | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING | AREA_SOUNDPROOF | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO
     lightswitch = 0
-    limit_mob_size = FALSE
-    block_suit_sensors = TRUE
-    block_tracking = TRUE
-    soundproofed = TRUE
-    forbid_events = TRUE
     icon_state = "gaming"
 
 /area/crew_quarters/sleep/Dormitory_01
