@@ -44,7 +44,7 @@
 		resistance += 10
 
 	if(GLOB.all_species.len)
-		affected_species = get_infectable_species()
+		affected_species = get_all_infectable_species() // CHOMPEdit
 
 /proc/get_infectable_species()
 	var/list/meat = list()

@@ -29,6 +29,7 @@
 			all_underwear[WRC.name] = WRI.name
 
 
+	headset = rand(1,3)
 	backbag = rand(1,6)
 	pdachoice = rand(1,7)
 	age = rand(current_species.min_age, current_species.max_age)
@@ -204,7 +205,7 @@
 	var/datum/job/previewJob
 	// Determine what job is marked as 'High' priority, and dress them up as such.
 	if(job_civilian_low & ASSISTANT)
-		previewJob = job_master.GetJob(USELESS_JOB)
+		previewJob = job_master.GetJob(JOB_ALT_VISITOR)
 	else if(ispAI(client.mob))	//VOREStation Edit! - pAIs shouldn't wear job gear~!
 		//Don't do anything!
 	else
@@ -261,16 +262,14 @@
 	mannequin.update_transform() //VOREStation Edit to update size/shape stuff.
 	mannequin.toggle_tail(setting = animations_toggle)
 	mannequin.toggle_wing(setting = animations_toggle)
-	//mannequin.update_tail_showing() //CHOMPEdit. Moved to preferences_ch.dm
-	//mannequin.ImmediateOverlayUpdate() //CHOMPEdit
 
-	update_character_previews(mannequin) //CHOMPEdit
+	update_character_previews(mannequin)
 
 /datum/preferences/proc/get_highest_job()
 	var/datum/job/highJob
 	// Determine what job is marked as 'High' priority, and dress them up as such.
 	if(job_civilian_low & ASSISTANT)
-		highJob = job_master.GetJob("Assistant")
+		highJob = job_master.GetJob(JOB_ALT_ASSISTANT)
 	else
 		for(var/datum/job/job in job_master.occupations)
 			var/job_flag

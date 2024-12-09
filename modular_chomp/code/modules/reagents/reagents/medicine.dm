@@ -50,8 +50,8 @@
 		//set not to bug them because the chem is activating
 		M.gender_change_cooldown = 1
 		M.visible_message(
-			"<span class='notice'>[M] suddenly twitches as some of their features seem to contort and reshape.</span>",
-			"<span class='notice'>You lose focus as warmth spreads throughout your chest and abdomen.</span>"
+			span_notice("[M] suddenly twitches as some of their features seem to contort and reshape."),
+			span_notice("You lose focus as warmth spreads throughout your chest and abdomen.")
 		)
 		//wait 30 seconds, growth takes time yo
 		spawn(300)
@@ -61,7 +61,7 @@
 			if (alert(M,"This chemical will change your gender, proceed?", "Warning", "Yes", "No") == "Yes")
 				M.change_gender_identity(gender_change)
 				M.change_gender(gender_change)
-				M << "<span class='warning'>You feel like a new person.</span>" //success
+				M << span_warning("You feel like a new person.") //success
 
 //Chemist expansion
 //deathblood
@@ -345,8 +345,8 @@
 	name = "liquidhealer"
 	desc = "You are filled with an overwhelming healing."
 
-	on_created_text = "<span class='critical'>You feel your body's natural healing quick into overdrive!</span>"
-	on_expired_text = "<span class='notice'>Your body returns to normal.</span>"
+	on_created_text = span_critical("You feel your body's natural healing quick into overdrive!")
+	on_expired_text = span_notice("Your body returns to normal.")
 
 	incoming_healing_percent = 1.2
 

@@ -78,7 +78,7 @@
 	name_language = LANGUAGE_UNATHI
 	species_language = LANGUAGE_UNATHI
 	health_hud_intensity = 2.5
-	chem_strength_alcohol = 0.75
+	chem_strength_alcohol = 1.25
 	throwforce_absorb_threshold = 10
 	digi_allowed = TRUE
 
@@ -90,6 +90,7 @@
 	// CHOMPEdit: Reverted these back to Polaris, but commented them out. We're using species-specific sounds instead.
 	// male_scream_sound = list ('sound/effects/mob_effects/una_scream1.ogg','sound/effects/mob_effects/una_scream2.ogg')
 	// female_scream_sound = list ('sound/effects/mob_effects/una_scream1.ogg','sound/effects/mob_effects/una_scream2.ogg')
+	footstep = FOOTSTEP_MOB_CLAW // CHOMPEdit
 	species_sounds = "Lizard" // Species sounds
 
 	pain_verb_1p = list("hiss", "growl") // CHOMPEdit: Unathi pain emotes
@@ -213,7 +214,7 @@
 	name_language = LANGUAGE_SIIK
 	species_language = LANGUAGE_SIIK
 	health_hud_intensity = 2.5
-	chem_strength_alcohol = 1.25
+	chem_strength_alcohol = 0.75
 	digi_allowed = TRUE
 
 	min_age = 18
@@ -265,6 +266,8 @@
 
 	reagent_tag = IS_TAJARA
 	allergens = ALLERGEN_STIMULANT
+
+	climb_mult = 0.75
 
 	move_trail = /obj/effect/decal/cleanable/blood/tracks/paw
 
@@ -327,7 +330,7 @@
 	species_language = LANGUAGE_SKRELLIAN
 	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX, LANGUAGE_PROMETHEAN)
 	health_hud_intensity = 2
-	chem_strength_alcohol = 5
+	chem_strength_alcohol = 0.2
 
 	water_movement = -3
 
@@ -553,7 +556,7 @@
 	show_ssd = "completely quiescent"
 	health_hud_intensity = 2.5
 	item_slowdown_mod = 0.1
-	chem_strength_alcohol = 0
+	chem_strength_alcohol = 10000	//a little hacky, maybe? but whatever. nobody plays diona anyway.
 	throwforce_absorb_threshold = 5
 
 	num_alternate_languages = 3
@@ -644,9 +647,9 @@
 
 /datum/species/diona/equip_survival_gear(var/mob/living/carbon/human/H)
 	if(H.backbag == 1)
-		H.equip_to_slot_or_del(new /obj/item/device/flashlight/flare(H), slot_r_hand)
+		H.equip_to_slot_or_del(new /obj/item/flashlight/flare(H), slot_r_hand)
 	else
-		H.equip_to_slot_or_del(new /obj/item/device/flashlight/flare(H.back), slot_in_backpack)
+		H.equip_to_slot_or_del(new /obj/item/flashlight/flare(H.back), slot_in_backpack)
 
 /datum/species/diona/handle_post_spawn(var/mob/living/carbon/human/H)
 	H.gender = NEUTER
@@ -660,7 +663,7 @@
 		H.mind.transfer_to(S)
 
 	if(H.isSynthetic())
-		H.visible_message("<span class='danger'>\The [H] collapses into parts, revealing a solitary diona nymph at the core.</span>")
+		H.visible_message(span_danger("\The [H] collapses into parts, revealing a solitary diona nymph at the core."))
 
 		H.species = GLOB.all_species[SPECIES_HUMAN] // This is hard-set to default the body to a normal FBP, without changing anything.
 
@@ -668,8 +671,8 @@
 			qdel(Org)
 
 		// Purge the diona verbs.
-		H.verbs -= /mob/living/carbon/human/proc/diona_split_nymph
-		H.verbs -= /mob/living/carbon/human/proc/regenerate
+		remove_verb(H, /mob/living/carbon/human/proc/diona_split_nymph)
+		remove_verb(H, /mob/living/carbon/human/proc/regenerate)
 
 		return
 
@@ -679,7 +682,7 @@
 		else
 			qdel(D)
 
-	H.visible_message("<span class='danger'>\The [H] splits apart with a wet slithering noise!</span>")
+	H.visible_message(span_danger("\The [H] splits apart with a wet slithering noise!"))
 
 /datum/species/diona/handle_environment_special(var/mob/living/carbon/human/H)
 	if(H.inStasisNow())

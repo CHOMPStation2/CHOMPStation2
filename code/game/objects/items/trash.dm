@@ -17,7 +17,7 @@
 		age = _age
 
 /obj/item/trash/Initialize(mapload)
-	if(!mapload || !config.persistence_ignore_mapload)
+	if(!mapload || !CONFIG_GET(flag/persistence_ignore_mapload))
 		SSpersistence.track_value(src, /datum/persistent/filth/trash)
 	. = ..()
 
@@ -112,6 +112,12 @@
 /obj/item/trash/small_bowl
 	name = "small bowl"
 	icon_state	= "small_bowl"
+	drop_sound = 'sound/items/drop/food.ogg'
+	pickup_sound = 'sound/items/pickup/food.ogg'
+
+/obj/item/trash/turkeybones
+	name = "turkey bones"
+	icon_state	= "turkeybones"
 	drop_sound = 'sound/items/drop/food.ogg'
 	pickup_sound = 'sound/items/pickup/food.ogg'
 

@@ -14,10 +14,11 @@
 	var/sound/S = sound(get_sfx(soundin))
 	var/maxdistance = (world.view + extrarange) * 2  //VOREStation Edit - 3 to 2
 	var/list/listeners = player_list.Copy()
-	if(!ignore_walls) //these sounds don't carry through walls
-		for(var/mob/listen in listeners)
+	/*if(!ignore_walls) //these sounds don't carry through walls CHOMP Removal, ripping this logic up because it's unreliable and unnecessary.
+		/*for(var/mob/listen in listeners) //This is beyond fucking horrible. Please do not repeatedly call hear.
 			if(!(get_turf(listen) in hear(maxdistance,source)))
-				listeners -= listen
+				listeners -= listen*/
+		listeners = listeners & hearers(maxdistance,turf_source)*/
 	for(var/mob/M as anything in listeners)
 		if(!M || !M.client)
 			continue
@@ -25,18 +26,38 @@
 		if(!T)
 			continue
 		var/area/A = T.loc
-		if((A.soundproofed || area_source.soundproofed) && (A != area_source))
+		if((A.flag_check(AREA_SOUNDPROOF) || area_source.flag_check(AREA_SOUNDPROOF)) && (A != area_source))
 			continue
-		var/distance = get_dist(T, turf_source)
+		//var/distance = get_dist(T, turf_source) Save get_dist for later because it's more expensive
 
-		if(distance <= maxdistance)
-			if(T && T.z == turf_source.z)
-				M.playsound_local(turf_source, soundin, vol, vary, frequency, falloff, is_global, channel, pressure_affected, S, preference, volume_channel)
+		//CHOMPEdit Begin
+
+		if(!T || T.z != turf_source.z) //^ +1
+			continue
+		if(get_dist(T, turf_source) > maxdistance)
+			continue
+		if(!ignore_walls && !can_see(turf_source, T, length = maxdistance * 2))
+			continue
+
+		M.playsound_local(turf_source, soundin, vol, vary, frequency, falloff, is_global, channel, pressure_affected, S, preference, volume_channel)
+
+/mob/proc/check_sound_preference(list/preference)
+	if(!islist(preference))
+		preference = list(preference)
+
+	for(var/p in preference)
+		// Ignore nulls
+		if(p)
+			if(!read_preference(p))
+				return FALSE
+
+	return TRUE
 
 /mob/proc/playsound_local(turf/turf_source, soundin, vol as num, vary, frequency, falloff, is_global, channel = 0, pressure_affected = TRUE, sound/S, preference, volume_channel = null)
 	if(!client || ear_deaf > 0)
 		return
-	if(preference && !client.is_preference_enabled(preference))
+
+	if(!check_sound_preference(preference))
 		return
 
 	if(!S)
@@ -122,10 +143,10 @@
 
 /client/proc/playtitlemusic()
 	if(!ticker || !SSmedia_tracks.lobby_tracks.len || !media)	return
-	if(is_preference_enabled(/datum/client_preference/play_lobby_music))
+	if(prefs?.read_preference(/datum/preference/toggle/play_lobby_music))
 		var/datum/track/T = pick(SSmedia_tracks.lobby_tracks)
 		media.push_music(T.url, world.time, 0.85)
-		to_chat(src,"<span class='notice'>Lobby music: <b>[T.title]</b> by <b>[T.artist]</b>.</span>")
+		to_chat(src,span_notice("Lobby music: <b>[T.title]</b> by <b>[T.artist]</b>."))
 
 /proc/get_sfx(soundin)
 	if(istext(soundin))

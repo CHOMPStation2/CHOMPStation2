@@ -10,7 +10,7 @@
 
 	// This is so shoes don't squeak every step
 	var/steps = 0
-	var/step_delay = 1
+	var/step_delay = 0	// Changed from 0 to 1 to make the sounds more consistent with movespeed.
 
 	// This is to stop squeak spam from inhand usage
 	var/last_use = 0
@@ -120,9 +120,9 @@
 		if(I.item_flags & ABSTRACT)
 			return
 	//Annoyingly, our flight code doesn't set the movement_type, nor do we have a define for it. So I'm not adding it yet.
-	//if(arrived.movement_type & (FLYING|FLOATING) || !arrived.has_gravity())
+	//if(arrived.movement_type & (FLYING|FLOATING) || !arrived.get_gravity())
 	*/
-	if(!arrived.has_gravity())
+	if(!arrived.get_gravity())
 		return
 	if(ismob(arrived) && !arrived.density) // Prevents 10 overlapping mice from making an unholy sound while moving
 		return

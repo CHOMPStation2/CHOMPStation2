@@ -20,8 +20,8 @@ type Data = {
 export const TguiFeedback = (props) => {
   const { act, data } = useBackend<Data>();
   const { open_windows, selected_window } = data;
-  const [rating, setRating] = useState('');
-  const [comment, setComment] = useState('');
+  const [rating, setRating] = useState<string>('');
+  const [comment, setComment] = useState<string>('');
   return (
     <Window width={550} height={460}>
       <Flex>
@@ -58,13 +58,14 @@ export const TguiFeedback = (props) => {
                 />
               </Section>
               <Button
-                content="Submit"
                 onClick={() =>
                   act('submit', { rating: rating, comment: comment })
                 }
-              />
+              >
+                Submit
+              </Button>
             </>
-          )}{' '}
+          )}
           : {<>Please select an open window on the left!</>}
         </Flex.Item>
       </Flex>

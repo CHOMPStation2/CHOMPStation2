@@ -36,10 +36,10 @@
 /obj/item/resonator/attack_self(mob/user)
 	if(burst_time == 50)
 		burst_time = 30
-		to_chat(user, "<span class='info'>You set the resonator's fields to detonate after 3 seconds.</span>")
+		to_chat(user, span_info("You set the resonator's fields to detonate after 3 seconds."))
 	else
 		burst_time = 50
-		to_chat(user, "<span class='info'>You set the resonator's fields to detonate after 5 seconds.</span>")
+		to_chat(user, span_info("You set the resonator's fields to detonate after 5 seconds."))
 
 /obj/item/resonator/afterattack(atom/target, mob/user, proximity_flag)
 	if(proximity_flag)
@@ -63,7 +63,7 @@
 	transform = matrix()*0.75
 	animate(src, transform = matrix()*1.5, time = timetoburst)
 	// Queue the actual bursting
-	addtimer(CALLBACK(src, ./proc/burst, creator), timetoburst)
+	addtimer(CALLBACK(src, PROC_REF(burst), creator), timetoburst)
 
 /obj/effect/resonance/proc/burst(var/creator = null)
 	var/turf/T = get_turf(src)
@@ -88,7 +88,7 @@
 	for(var/mob/living/L in src.loc)
 		if(creator)
 			add_attack_logs(creator, L, "used a resonator field on")
-		to_chat(L, "<span class='danger'>\The [src] ruptured with you in it!</span>")
+		to_chat(L, span_danger("\The [src] ruptured with you in it!"))
 		L.apply_damage(resonance_damage, BRUTE)
 	qdel(src)
 

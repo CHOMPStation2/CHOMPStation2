@@ -11,20 +11,21 @@
 
 /decl/emote/audible/gasp/get_emote_sound(var/atom/user)
 	..()
-	var/mob/living/carbon/human/H = user
-	// CHOMPEdit: Standardize Species Sounds Getters
-	var/vol = H.species.gasp_volume
-	var/s = get_species_sound(get_gendered_sound(H))["gasp"]
-	if(!s && !(get_species_sound(H.species.species_sounds) == "None")) // Failsafe, so we always use the default gasp/etc sounds. None will cancel out anyways.
-		if(H.identifying_gender == FEMALE)
-			s = get_species_sound("Human Female")["gasp"]
-		else // Update this if we ever get herm/etc sounds.
-			s = get_species_sound("Human Male")["gasp"]
-	return list(
-			"sound" = s,
-			"vol" = vol,
-			"volchannel" = VOLUME_CHANNEL_SPECIES_SOUNDS
-		)
+	if(ishuman(user))
+		var/mob/living/carbon/human/H = user
+		// CHOMPEdit: Standardize Species Sounds Getters
+		var/vol = H.species.gasp_volume
+		var/s = get_species_sound(get_gendered_sound(H))["gasp"]
+		if(!s && !(get_species_sound(H.species.species_sounds) == "None")) // Failsafe, so we always use the default gasp/etc sounds. None will cancel out anyways.
+			if(H.identifying_gender == FEMALE)
+				s = get_species_sound("Human Female")["gasp"]
+			else // Update this if we ever get herm/etc sounds.
+				s = get_species_sound("Human Male")["gasp"]
+		return list(
+				"sound" = s,
+				"vol" = vol,
+				"volchannel" = VOLUME_CHANNEL_SPECIES_SOUNDS
+			)
 
 /decl/emote/audible/mgeow
 	key = "mgeow"
@@ -66,6 +67,14 @@
 	emote_message_3p_target = "gwahs at TARGET."
 	emote_sound = 'modular_chomp/sound/voice/emotes/gwah.ogg'
 
+/decl/emote/audible/caw
+	key = "caw"
+	emote_message_1p = "You caw!"
+	emote_message_3p = "caws!"
+	emote_message_1p_target = "You caw at TARGET."
+	emote_message_3p_target = "caws at TARGET."
+	emote_sound = 'modular_chomp/sound/voice/emotes/caw.ogg' // Copyright Sampling+ 1.0 Vixuxx (freesound.org) for the source audio.
+
 /decl/emote/audible/wawa
 	key = "wawa"
 	emote_message_1p = "You wawa."
@@ -73,3 +82,37 @@
 	emote_message_1p_target = "You wawa at TARGET."
 	emote_message_3p_target = "wawas at TARGET."
 	emote_sound = 'modular_chomp/sound/voice/emotes/wawa.ogg'
+
+/decl/emote/audible/scientist //placeholder, do not use in anything
+	key = "hlscientist"
+	emote_message_3p = "does science."
+
+/decl/emote/audible/scientist/scream
+	key = "hlscream"
+	emote_message_1p = "You scream."
+	emote_message_3p = "screams."
+	emote_message_1p_target = "You scream at TARGET."
+	emote_message_3p_target = "screams at TARGET."
+	emote_sound = list (
+		'modular_chomp/sound/voice/scream/scientist/scream01.ogg',
+		'modular_chomp/sound/voice/scream/scientist/scream02.ogg',
+		'modular_chomp/sound/voice/scream/scientist/scream06.ogg',
+		'modular_chomp/sound/voice/scream/scientist/scream08.ogg',
+		'modular_chomp/sound/voice/scream/scientist/scream25.ogg',
+	)
+
+/decl/emote/audible/scientist/pain
+	key = "hlpain"
+	emote_message_1p = "You shout in pain."
+	emote_message_3p = "shouts in pain."
+	emote_message_1p_target = "You shout in pain at TARGET."
+	emote_message_3p_target = "shouts in pain at TARGET."
+	emote_sound = list (
+		'modular_chomp/sound/voice/pain/scientist/sci_pain1.ogg',
+		'modular_chomp/sound/voice/pain/scientist/sci_pain4.ogg',
+		'modular_chomp/sound/voice/pain/scientist/sci_pain5.ogg',
+	)
+
+/decl/emote/audible/scientist/get_emote_sound(var/atom/user)
+	. = ..()
+	.["vol"] *= 0.4 //these boys are pretty loud on their own lol

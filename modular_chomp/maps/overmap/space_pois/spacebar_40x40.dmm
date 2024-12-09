@@ -62,12 +62,16 @@
 "at" = (
 /obj/structure/table/standard,
 /obj/item/toy/figure/bartender,
+/obj/item/ammo_magazine/ammo_box/b12g/pellet{
+	pixel_y = -2;
+	pixel_x = 8
+	},
 /turf/simulated/floor/wood,
 /area/submap/spacebar)
 "au" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/food/drinks/shaker,
-/obj/item/weapon/gun/projectile/shotgun/doublebarrel,
+/obj/item/reagent_containers/food/drinks/shaker,
+/obj/item/gun/projectile/shotgun/doublebarrel,
 /turf/simulated/floor/wood,
 /area/submap/spacebar)
 "av" = (
@@ -140,7 +144,7 @@
 /turf/simulated/floor/wood,
 /area/submap/spacebar)
 "aL" = (
-/obj/item/weapon/reagent_containers/glass/rag,
+/obj/item/reagent_containers/glass/rag,
 /obj/structure/table/marble,
 /turf/simulated/floor/wood,
 /area/submap/spacebar)
@@ -354,7 +358,7 @@
 /area/submap/spacebar)
 "bw" = (
 /obj/effect/floor_decal/rust,
-/obj/item/weapon/stool/padded{
+/obj/item/stool/padded{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -397,6 +401,7 @@
 	name = "External Airlock Access";
 	req_access = null
 	},
+/obj/structure/fans/tiny,
 /turf/simulated/floor/plating,
 /area/submap/spacebar)
 "hV" = (
@@ -490,7 +495,7 @@
 /area/submap/spacebar)
 "nU" = (
 /obj/structure/closet/crate,
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/supremoburrito,
+/obj/item/reagent_containers/food/snacks/sliceable/supremoburrito,
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/submap/spacebar)
 "pa" = (
@@ -499,23 +504,24 @@
 /area/submap/spacebar)
 "pb" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/weapon/reagent_containers/food/drinks/cans/beercan{
+/obj/item/reagent_containers/food/drinks/cans/beercan{
 	pixel_x = 10;
 	pixel_y = 11
 	},
-/obj/item/weapon/handcuffs{
+/obj/item/handcuffs{
 	pixel_y = 6;
 	pixel_x = -8
 	},
-/obj/item/weapon/gun/projectile/shotgun/pump{
+/obj/item/gun/projectile/shotgun/pump{
 	pixel_y = -17;
-	pixel_x = -17
+	pixel_x = -17;
+	hud_enabled = 0
 	},
-/obj/item/weapon/material/butterfly/switchblade{
+/obj/item/material/butterfly/switchblade{
 	pixel_y = 3;
 	pixel_x = 5
 	},
-/obj/item/weapon/storage/fancy/cigarettes/killthroat{
+/obj/item/storage/fancy/cigarettes/killthroat{
 	pixel_y = 0;
 	pixel_x = -6
 	},
@@ -575,17 +581,17 @@
 	},
 /area/submap/spacebar)
 "uK" = (
-/obj/item/device/defib_kit/loaded{
-	pixel_y = -6
-	},
+/obj/item/defib_kit/compact/loaded,
 /obj/item/stack/medical/advanced/bruise_pack{
 	amount = 2;
 	max_amount = 2;
-	heal_brute = 50;
+	heal_brute = 150;
 	toolspeed = 0.1;
 	name = "SUPER trauma kit";
 	desc = "An highly advanced trauma kit for severe injuries such as blowing your own head off. These are really heavy";
-	slowdown = 3
+	slowdown = 3;
+	color = "purple";
+	w_class = 5
 	},
 /turf/simulated/floor/wood,
 /area/submap/spacebar)
@@ -612,7 +618,7 @@
 	},
 /area/submap/spacebar)
 "xN" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 295.15
 	},
@@ -651,7 +657,7 @@
 /turf/simulated/floor/plating,
 /area/submap/spacebar)
 "AD" = (
-/obj/item/device/gps/internal/poi{
+/obj/item/gps/internal/poi{
 	gps_tag = "RockingCore Bar"
 	},
 /turf/simulated/wall,
@@ -682,7 +688,7 @@
 /area/submap/spacebar)
 "Ha" = (
 /obj/effect/floor_decal/rust,
-/obj/item/weapon/stool/padded{
+/obj/item/stool/padded{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -702,7 +708,7 @@
 /obj/machinery/light/spot{
 	dir = 1
 	},
-/obj/item/weapon/storage/secure/briefcase/money,
+/obj/item/storage/secure/briefcase/money,
 /turf/simulated/floor/wood,
 /area/submap/spacebar)
 "LH" = (
@@ -712,9 +718,7 @@
 /turf/simulated/floor/plating,
 /area/submap/spacebar)
 "LR" = (
-/obj/item/device/defib_kit/loaded{
-	pixel_y = 9
-	},
+/obj/item/defib_kit/compact/loaded,
 /obj/machinery/light/spot{
 	dir = 1
 	},
@@ -738,11 +742,13 @@
 /obj/item/stack/medical/advanced/bruise_pack{
 	amount = 2;
 	max_amount = 2;
-	heal_brute = 50;
+	heal_brute = 150;
 	toolspeed = 0.1;
 	name = "SUPER trauma kit";
 	desc = "An highly advanced trauma kit for severe injuries such as blowing your own head off. These are really heavy";
-	slowdown = 3
+	slowdown = 3;
+	color = "purple";
+	w_class = 5
 	},
 /turf/simulated/floor/wood,
 /area/submap/spacebar)
@@ -761,13 +767,12 @@
 	frequency = 1380;
 	id_tag = "spacebar_pump"
 	},
-/obj/machinery/embedded_controller/radio/airlock/airlock_controller{
+/obj/machinery/embedded_controller/radio/airlock/access_controller{
+	pixel_y = 23;
+	dir = 2;
 	id_tag = "spacebar_airlock";
-	pixel_y = 25;
-	tag_airpump = "spacebar_pump";
-	tag_chamber_sensor = "spacebar_sensor";
-	tag_exterior_door = "spacebar_outer";
-	tag_interior_door = "spacebar_inner"
+	tag_interior_door = "spacebar_inner";
+	tag_exterior_door = "spacebar_outer"
 	},
 /turf/simulated/floor/plating,
 /area/submap/spacebar)
@@ -779,7 +784,7 @@
 /area/submap/spacebar)
 "Py" = (
 /obj/structure/table/rack/shelf/wood,
-/obj/item/device/radio/subspace,
+/obj/item/radio/subspace,
 /turf/simulated/floor/wood,
 /area/submap/spacebar)
 "PC" = (
@@ -840,17 +845,17 @@
 /area/submap/spacebar)
 "SR" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/weapon/reagent_containers/food/drinks/cans/beercan{
+/obj/item/reagent_containers/food/drinks/cans/beercan{
 	pixel_x = -8
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/beercan{
+/obj/item/reagent_containers/food/drinks/cans/beercan{
 	pixel_x = -8
 	},
-/obj/item/weapon/storage/fancy/cigarettes/killthroat{
+/obj/item/storage/fancy/cigarettes/killthroat{
 	pixel_y = 0;
 	pixel_x = 8
 	},
-/obj/item/weapon/flame/lighter{
+/obj/item/flame/lighter{
 	pixel_x = 11;
 	pixel_y = -8
 	},
@@ -912,10 +917,6 @@
 	dir = 1;
 	frequency = 1380;
 	id_tag = "spacebar_pump"
-	},
-/obj/machinery/airlock_sensor{
-	id_tag = "spacebar_sensor";
-	pixel_y = 25
 	},
 /turf/simulated/floor/plating,
 /area/submap/spacebar)

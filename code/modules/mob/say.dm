@@ -3,7 +3,7 @@
 
 /mob/verb/whisper(message as text)
 	set name = "Whisper"
-	set category = "IC"
+	set hidden = 1
 	//VOREStation Addition Start
 	if(forced_psay)
 		psay(message)
@@ -14,23 +14,26 @@
 
 /mob/verb/say_verb(message as text)
 	set name = "Say"
-	set category = "IC"
+	set hidden = 1
+	set instant = TRUE
+
 	//VOREStation Addition Start
 	if(forced_psay)
 		psay(message)
 		return
 	//VOREStation Addition End
 
-	set_typing_indicator(FALSE)
-	usr.say(message)
+	client?.stop_thinking()
+	//queue this message because verbs are scheduled to process after SendMaps in the tick and speech is pretty expensive when it happens.
+	//by queuing this for next tick the mc can compensate for its cost instead of having speech delay the start of the next tick
+	if(message)
+		QUEUE_OR_CALL_VERB_FOR(VERB_CALLBACK(src, TYPE_PROC_REF(/mob, say), message), SSspeech_controller)
 
 /mob/verb/me_verb(message as message)
 	set name = "Me"
-	set category = "IC"
+	set desc = "Emote to nearby people (and your pred/prey)"
+	set hidden = 1
 
-	if(say_disabled)	//This is here to try to identify lag problems
-		to_chat(usr, span_red("Speech is currently admin-disabled."))
-		return
 	//VOREStation Addition Start
 	if(forced_psay)
 		pme(message)
@@ -45,32 +48,28 @@
 	message = sanitize_or_reflect(message,src) //VOREStation Edit - Reflect too-long messages (within reason)
 	//VOREStation Edit End
 
-	set_typing_indicator(FALSE)
+	client?.stop_thinking()
 	if(use_me)
 		custom_emote(usr.emote_type, message)
 	else
 		usr.emote(message)
 
 /mob/proc/say_dead(var/message)
-	if(say_disabled)	//This is here to try to identify lag problems
-		to_chat(usr, "<span class='danger'>Speech is currently admin-disabled.</span>")
-		return
-
 	if(!client)
 		return // Clientless mobs shouldn't be trying to talk in deadchat.
 
 	if(!client.holder)
-		if(!config.dsay_allowed)
-			to_chat(src, "<span class='danger'>Deadchat is globally muted.</span>")
+		if(!CONFIG_GET(flag/dsay_allowed))
+			to_chat(src, span_danger("Deadchat is globally muted."))
 			return
 
-	if(!is_preference_enabled(/datum/client_preference/show_dsay))
-		to_chat(usr, "<span class='danger'>You have deadchat muted.</span>")
+	if(!client?.prefs?.read_preference(/datum/preference/toggle/show_dsay))
+		to_chat(usr, span_danger("You have deadchat muted."))
 		return
 
 	message = encode_html_emphasis(message)
 
-	say_dead_direct("[pick("complains","moans","whines","laments","blubbers")], <span class='message'>\"[message]\"</span>", src)
+	say_dead_direct("[pick("complains","moans","whines","laments","blubbers")], " + span_message("\"[message]\""), src)
 
 /mob/proc/say_understands(var/mob/other, var/datum/language/speaking = null)
 	if(stat == DEAD)
@@ -108,21 +107,20 @@
 	if(speaking.flags & NONVERBAL)
 		if(sdisabilities & BLIND || blinded)
 			return FALSE
-		if(!other) //CHOMPEdit - Fixes seeing non-verbal languages while being held
+		if(!other)
 			return FALSE
-		//CHOMPEdit Start - Fixes seeing non-verbal languages while being held
-		if(istype(other.loc, /obj/item/weapon/holder))
-			if(istype(src.loc, /obj/item/weapon/holder))
+		// Fixes seeing non-verbal languages while being held
+		if(istype(other.loc, /obj/item/holder))
+			if(istype(src.loc, /obj/item/holder))
 				if(!(other.loc in view(src.loc.loc)))
 					return FALSE
 			else if(!(other.loc in view(src)))
 				return FALSE
-		else if(istype(src.loc, /obj/item/weapon/holder))
+		else if(istype(src.loc, /obj/item/holder))
 			if((!other) in view(src.loc.loc))
 				return FALSE
 		else if((!other) in view(src))
 			return FALSE
-		//CHOMPEdit End
 
 	//Language check.
 	for(var/datum/language/L in languages)

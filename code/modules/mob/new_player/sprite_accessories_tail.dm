@@ -6,7 +6,7 @@
 ////////////////////////////
 */
 /datum/sprite_accessory/tail
-	name = "You should not see this..."
+	name = DEVELOPER_WARNING_NAME
 	icon = 'icons/mob/human_races/sprite_accessories/tails.dmi'
 	do_colouration = 0 //Set to 1 to enable coloration using the tail color.
 
@@ -16,7 +16,7 @@
 	var/extra_overlay2 //Tertiary.
 	var/show_species_tail = 0 // If false, do not render species' tail.
 	var/clothing_can_hide = 1 // If true, clothing with HIDETAIL hides it
-	var/desc = "You should not see this..."
+	var/desc = DEVELOPER_WARNING_NAME
 	var/ani_state // State when wagging/animated
 	var/extra_overlay_w // Wagging state for extra overlay
 	var/extra_overlay2_w // Tertiary wagging.
@@ -1048,3 +1048,22 @@
 	extra_overlay2 = "zorgoia_fluff_top"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/lleill
+	name = "Lleill tail"
+	desc = ""
+	icon = 'icons/mob/species/lleill/tail.dmi'
+	icon_state = "tail"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "tail_marking"
+
+/datum/sprite_accessory/tail/lleill/large
+	name = "Lleill tail, Large"
+	icon_state = "tail2"
+	extra_overlay = "tail2_marking"
+
+/datum/sprite_accessory/tail/lleill/small
+	name = "Lleill tail, Small"
+	icon_state = "tail3"
+	extra_overlay = "tail3_marking"

@@ -10,28 +10,33 @@
 
 	if(ai_holder && !ai_holder.autopilot)
 		ai_holder.go_sleep()
-		to_chat(src,"<span class='notice'>Mob AI disabled while you are controlling the mob.</span>")
+		to_chat(src,span_notice("Mob AI disabled while you are controlling the mob."))
 
 	AddComponent(/datum/component/character_setup)
 
 	// Vore stuff
-	verbs |= /mob/living/proc/escapeOOC
-	verbs |= /mob/living/proc/lick
-	verbs |= /mob/living/proc/smell
-	verbs |= /mob/living/proc/switch_scaling
-	verbs |= /mob/living/proc/center_offset
-	verbs |= /mob/living/proc/mute_entry //CHOMPEdit
-	verbs |= /mob/living/proc/liquidbelly_visuals //CHOMPEdit
-	verbs |= /mob/living/proc/fix_vore_effects //CHOMPedit
+	add_verb(src, /mob/living/proc/escapeOOC)
+	add_verb(src, /mob/living/proc/lick)
+	add_verb(src, /mob/living/proc/smell)
+	add_verb(src, /mob/living/proc/switch_scaling)
+	add_verb(src, /mob/living/proc/center_offset)
+	add_verb(src, /mob/living/proc/mute_entry) //CHOMPEdit
+	add_verb(src, /mob/living/proc/liquidbelly_visuals) //CHOMPEdit
+	add_verb(src, /mob/living/proc/fix_vore_effects) //CHOMPedit
 
 	if(!no_vore)
-		verbs |= /mob/living/proc/vorebelly_printout
+		add_verb(src, /mob/living/proc/vorebelly_printout)
 		if(!vorePanel)
 			AddComponent(/datum/component/vore_panel)
 
-	verbs += /mob/living/proc/vore_transfer_reagents //CHOMP If mob doesnt have bellies it cant use this verb for anything
-	verbs += /mob/living/proc/vore_check_reagents //CHOMP If mob doesnt have bellies it cant use this verb for anything
-	verbs += /mob/living/proc/vore_bellyrub //CHOMP If mob doesnt have bellies it probably won't be needing this anyway
+	add_verb(src,/mob/living/proc/vore_transfer_reagents) //CHOMPEdit TGPanel //CHOMP If mob doesnt have bellies it cant use this verb for anything
+	add_verb(src,/mob/living/proc/vore_check_reagents) //CHOMPEdit TGPanel //CHOMP If mob doesnt have bellies it cant use this verb for anything
+	add_verb(src,/mob/living/proc/vore_bellyrub) //CHOMPEdit TGPanel //CHOMP If mob doesnt have bellies it probably won't be needing this anyway
+	add_verb(src,/mob/proc/nsay_vore) //CHOMPAdd
+	add_verb(src,/mob/proc/nme_vore) //CHOMPAdd
+	add_verb(src,/mob/proc/nsay_vore_ch) //CHOMPAdd
+	add_verb(src,/mob/proc/nme_vore_ch) //CHOMPAdd
+	add_verb(src,/mob/proc/enter_soulcatcher) //CHOMPAdd
 
 	//VOREStation Add Start
 	if(!voice_sounds_list.len || !voice_sounds_list)

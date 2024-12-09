@@ -6,7 +6,7 @@
 /turf/template_noop,
 /area/submap/DecoupledEngine)
 "ac" = (
-/obj/item/weapon/fuel_assembly/deuterium,
+/obj/item/fuel_assembly/deuterium,
 /turf/template_noop,
 /area/submap/DecoupledEngine)
 "ad" = (
@@ -14,11 +14,11 @@
 /turf/template_noop,
 /area/submap/DecoupledEngine)
 "ae" = (
-/obj/item/weapon/extinguisher,
+/obj/item/extinguisher,
 /turf/template_noop,
 /area/submap/DecoupledEngine)
 "af" = (
-/obj/item/weapon/material/shard/phoron,
+/obj/item/material/shard/phoron,
 /turf/template_noop,
 /area/submap/DecoupledEngine)
 "ag" = (
@@ -26,7 +26,7 @@
 /turf/template_noop,
 /area/submap/DecoupledEngine)
 "ah" = (
-/obj/item/weapon/arrow/rod,
+/obj/item/arrow/rod,
 /obj/item/stack/material/steel,
 /turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/submap/DecoupledEngine)
@@ -43,7 +43,7 @@
 /turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/submap/DecoupledEngine)
 "am" = (
-/obj/item/weapon/arrow/rod,
+/obj/item/arrow/rod,
 /turf/template_noop,
 /area/submap/DecoupledEngine)
 "an" = (
@@ -187,7 +187,7 @@
 	dir = 4;
 	icon_state = "phoronrwindow"
 	},
-/obj/item/weapon/material/shard/phoron,
+/obj/item/material/shard/phoron,
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/sif/planetuse,
 /area/submap/DecoupledEngine)
@@ -423,7 +423,7 @@
 "bp" = (
 /obj/effect/floor_decal/rust,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/rcd,
+/obj/item/rcd,
 /turf/simulated/floor/plating/sif/planetuse,
 /area/submap/DecoupledEngine)
 "bq" = (

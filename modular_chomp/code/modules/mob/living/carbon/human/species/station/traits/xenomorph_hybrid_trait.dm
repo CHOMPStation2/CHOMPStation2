@@ -47,7 +47,7 @@
 	..()
 	if (trait_prefs?["pass_table"] || !trait_prefs)
 		H.pass_flags |= PASSTABLE
-	H.verbs |= /mob/living/proc/toggle_pass_table
+	add_verb(H,/mob/living/proc/toggle_pass_table) //CHOMPEdit TGPanel
 
 /datum/trait/negative/lonely/xenomorph_queen
 	sort = TRAIT_SORT_SPECIES

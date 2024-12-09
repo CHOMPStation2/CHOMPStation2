@@ -1,7 +1,7 @@
 /mob/living/carbon/human/proc/telepathy(mob/M as mob in oview())
 	set name = "Project mind"
 	set desc = "Talk telepathically to someone over a distance."
-	set category = "Abilities"
+	set category = "Abilities.General" //CHOMPEdit
 
 	var/msg = sanitize(input("Message:", "Project mind") as text|null)
 	if(msg)

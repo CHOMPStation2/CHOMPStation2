@@ -18,24 +18,24 @@
 
 	faction = "vr"
 
-	maxHealth = 40
-	health = 40
+	maxHealth = 100 //Old 50
+	health = 100
 	movement_cooldown = 1
 	unsuitable_atoms_damage = 0
 	projectiletype = /obj/item/projectile/energy/homing_bolt/wizard
 	melee_attack_delay = 4 SECOND
 	ai_holder_type = /datum/ai_holder/simple_mob/ranged/kiting
 
-	melee_damage_lower = 8
-	melee_damage_upper = 15
+	melee_damage_lower = 15
+	melee_damage_upper = 25
 	size_multiplier = 1.50
 
 	loot_list = list(/obj/item/clothing/head/vrwizard = 10,
 			/obj/item/clothing/suit/vrwizard = 10,
-			/obj/item/weapon/gun/magic/firestaff/vrwizard/fire = 10,
-			/obj/item/weapon/gun/magic/firestaff/vrwizard/frost = 10,
-			/obj/item/weapon/gun/magic/firestaff/vrwizard/poison = 10,
-			/obj/item/weapon/gun/magic/firestaff/vrwizard/lighting = 10
+			/obj/item/gun/magic/firestaff/vrwizard/fire = 10,
+			/obj/item/gun/magic/firestaff/vrwizard/frost = 10,
+			/obj/item/gun/magic/firestaff/vrwizard/poison = 10,
+			/obj/item/gun/magic/firestaff/vrwizard/lighting = 10
 			)
 
 /mob/living/simple_mob/vr/firewiz
@@ -139,8 +139,8 @@
 	desc = "Can you even see this in game?"
 	mob_overlay_state = "on_fire"
 
-	on_created_text = "<span class='warning'>You are on digital fire.</span>"
-	on_expired_text = "<span class='notice'>You feel better.</span>"
+	on_created_text = span_warning("You are on digital fire.")
+	on_expired_text = span_notice("You feel better.")
 	stacks = MODIFIER_STACK_ALLOWED // Multiple instances will hurt a lot.
 	var/damage_per_tick = 1.5
 	bleeding_rate_percent = 0.7
@@ -153,8 +153,8 @@
 	desc = "Can you even see this in game?."
 	mob_overlay_state = "blue_electricity_constant"
 
-	on_created_text = "<span class='warning'>You are filled with digital lighting.</span>"
-	on_expired_text = "<span class='notice'>You feel better.</span>"
+	on_created_text = span_warning("You are filled with digital lighting.")
+	on_expired_text = span_notice("You feel better.")
 	stacks = MODIFIER_STACK_ALLOWED // Multiple instances will hurt a lot.
 	damage_per_tick = 1.0
 	incoming_fire_damage_percent = 1.1
@@ -164,8 +164,8 @@
 	desc = "Can you even see this in game?."
 	mob_overlay_state = "poisoned"
 
-	on_created_text = "<span class='warning'>You are on digital poisoned.</span>"
-	on_expired_text = "<span class='notice'>You feel better.</span>"
+	on_created_text = span_warning("You are on digital poisoned.")
+	on_expired_text = span_notice("You feel better.")
 	stacks = MODIFIER_STACK_ALLOWED // Multiple instances will hurt a lot.
 	var/damage_per_tick = 3
 
@@ -179,8 +179,8 @@
 	desc = "Can you even see this in game?."
 	mob_overlay_state = "chilled"
 
-	on_created_text = "<span class='warning'>You are on freezing, digitally.</span>"
-	on_expired_text = "<span class='notice'>You feel better.</span>"
+	on_created_text = span_warning("You are on freezing, digitally.")
+	on_expired_text = span_notice("You feel better.")
 	stacks = MODIFIER_STACK_ALLOWED // Multiple instances will hurt a lot.
 	damage_per_tick = 1
 	slowdown = 0.5
@@ -190,8 +190,8 @@
 	desc = "Can you even see this in game?."
 	mob_overlay_state = "corana"
 
-	on_created_text = "<span class='warning'>You feel less real.</span>"
-	on_expired_text = "<span class='notice'>You feel real again.</span>"
+	on_created_text = span_warning("You feel less real.")
+	on_expired_text = span_notice("You feel real again.")
 	stacks = MODIFIER_STACK_ALLOWED //How does this stack?
 	max_health_percent = 0.7
 
@@ -200,8 +200,8 @@
 	desc = "Can you even see this in game?."
 	mob_overlay_state = "cult_aura"
 
-	on_created_text = "<span class='warning'>You feel like the end is nigh.</span>"
-	on_expired_text = "<span class='notice'>You feel safe for now.</span>"
+	on_created_text = span_warning("You feel like the end is nigh.")
+	on_expired_text = span_notice("You feel safe for now.")
 	aura_max_distance = 4
 	max_health_percent = 0.9
 	disable_duration_percent = 1.2

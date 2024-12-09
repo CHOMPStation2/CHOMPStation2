@@ -18,7 +18,7 @@
 /turf/simulated/mineral/floor/vacuum,
 /area/submap/asteroid1)
 "m" = (
-/obj/item/device/flashlight/flare,
+/obj/item/flashlight/flare,
 /turf/simulated/mineral/floor/vacuum,
 /area/submap/asteroid1)
 "o" = (
@@ -26,7 +26,7 @@
 /turf/simulated/mineral/floor/vacuum,
 /area/submap/asteroid1)
 "r" = (
-/obj/item/weapon/gun/projectile/shotgun/doublebarrel/flare,
+/obj/item/gun/projectile/shotgun/doublebarrel/flare,
 /turf/simulated/mineral/floor/vacuum,
 /area/submap/asteroid1)
 "t" = (
@@ -34,28 +34,28 @@
 /turf/simulated/mineral/floor/vacuum,
 /area/submap/asteroid1)
 "u" = (
-/obj/item/weapon/pickaxe,
+/obj/item/pickaxe,
 /turf/simulated/mineral/floor/vacuum,
 /area/submap/asteroid1)
 "w" = (
-/obj/item/weapon/ore/hydrogen,
+/obj/item/ore/hydrogen,
 /turf/simulated/mineral/floor/vacuum,
 /area/submap/asteroid1)
 "x" = (
-/obj/item/weapon/ore/diamond,
+/obj/item/ore/diamond,
 /turf/simulated/mineral/floor/vacuum,
 /area/submap/asteroid1)
 "A" = (
-/obj/item/weapon/ore/hydrogen,
-/obj/item/weapon/ore/hydrogen,
+/obj/item/ore/hydrogen,
+/obj/item/ore/hydrogen,
 /turf/simulated/mineral/floor/vacuum,
 /area/submap/asteroid1)
 "C" = (
-/obj/item/device/gps/mining/on,
+/obj/item/gps/mining/on,
 /turf/simulated/mineral/floor/vacuum,
 /area/submap/asteroid1)
 "I" = (
-/obj/item/weapon/ore/verdantium,
+/obj/item/ore/verdantium,
 /turf/simulated/mineral/floor/vacuum,
 /area/submap/asteroid1)
 "J" = (
@@ -74,7 +74,7 @@
 /turf/simulated/mineral/floor/vacuum,
 /area/submap/asteroid1)
 "S" = (
-/obj/item/weapon/pickaxe/diamonddrill,
+/obj/item/pickaxe/diamonddrill,
 /turf/simulated/mineral/floor/vacuum,
 /area/submap/asteroid1)
 "V" = (

@@ -1,7 +1,7 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aq" = (
 /obj/structure/table/sifwoodentable,
-/obj/item/weapon/flame/candle/candelabra/everburn,
+/obj/item/flame/candle/candelabra/everburn,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "ce" = (
@@ -11,14 +11,14 @@
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "cq" = (
-/mob/living/simple_mob/construct/shade,
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/construct/shade{
+	loot_list = list(/obj/item/ectoplasm = 100, /obj/item/storage/backpack/holding/duffle = 5)
+	},
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "cH" = (
 /obj/structure/closet,
-/obj/random/energy/highend,
-/obj/item/clothing/gloves/regen,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
@@ -69,14 +69,7 @@
 "hQ" = (
 /obj/structure/bed/double/padded,
 /mob/living/simple_mob/humanoid/cultist/castertesh,
-/obj/item/weapon/bedsheet/hosdouble,
-/turf/simulated/floor/wood/sif,
-/area/submap/bloodchurch)
-"il" = (
-/obj/structure/closet,
-/obj/random/energy/highend,
-/obj/item/weapon/storage/belt/holding,
-/obj/effect/decal/cleanable/dirt,
+/obj/item/bedsheet/hosdouble,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "iT" = (
@@ -88,7 +81,7 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/bloodchurch)
 "ke" = (
-/obj/item/weapon/flame/candle/candelabra/everburn,
+/obj/item/flame/candle/candelabra/everburn,
 /obj/structure/table/sifwoodentable,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
@@ -104,7 +97,6 @@
 "mn" = (
 /obj/item/clothing/suit/wizrobe/psypurple,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/spellbook/oneuse/forcewall,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "mG" = (
@@ -137,8 +129,10 @@
 /area/submap/bloodchurch)
 "qb" = (
 /obj/structure/bed/double/padded,
-/mob/living/simple_mob/humanoid/cultist/human/bloodjaunt,
-/obj/item/weapon/bedsheet/hosdouble,
+/mob/living/simple_mob/humanoid/cultist/human/bloodjaunt{
+	health = 200
+	},
+/obj/item/bedsheet/hosdouble,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
@@ -167,26 +161,20 @@
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "wh" = (
-/mob/living/simple_mob/humanoid/cultist/elite,
+/mob/living/simple_mob/humanoid/cultist/elite{
+	loot_list = list(/obj/item/clothing/head/psy_crown/wrath = 25, /obj/item/clothing/gloves/regen = 10, /obj/item/storage/belt/utility/holding = 10)
+	},
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/sif,
-/area/submap/bloodchurch)
-"wA" = (
-/obj/item/clothing/head/wizard/amp,
-/mob/living/simple_mob/construct/shade,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "xJ" = (
 /obj/structure/closet/crate,
-/obj/item/stolenpackage,
-/obj/item/stolenpackage,
 /obj/item/stolenpackage,
 /obj/item/rig_module/vision/thermal,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "xN" = (
 /obj/structure/table/sifwoodentable,
-/obj/random/mouseray,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "yn" = (
@@ -205,12 +193,6 @@
 "yC" = (
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/bloodchurch)
-"yD" = (
-/obj/structure/table/sifwoodentable,
-/obj/item/weapon/spellbook/oneuse/forcewall,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/sif,
-/area/submap/bloodchurch)
 "zB" = (
 /obj/structure/cliff/automatic/corner{
 	dir = 9
@@ -219,13 +201,15 @@
 /area/submap/bloodchurch)
 "zO" = (
 /obj/item/clothing/suit/wizrobe,
-/mob/living/simple_mob/construct/shade,
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/construct/shade{
+	loot_list = list(/obj/item/ectoplasm = 100, /obj/item/storage/backpack/holding/duffle = 5)
+	},
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "Ac" = (
 /obj/structure/table/sifwoodentable,
-/obj/item/weapon/flame/candle/everburn,
+/obj/item/flame/candle/everburn,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
@@ -244,26 +228,25 @@
 /area/submap/bloodchurch)
 "Cf" = (
 /obj/structure/table/sifwoodentable,
-/obj/item/weapon/flame/candle/candelabra/everburn,
+/obj/item/flame/candle/candelabra/everburn,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "Ch" = (
 /obj/structure/table/sifwoodentable,
-/obj/item/weapon/flame/candle/everburn,
+/obj/item/flame/candle/everburn,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "DJ" = (
 /obj/structure/table/sifwoodentable,
-/obj/item/clothing/head/psy_crown/wrath,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "EZ" = (
 /obj/structure/loot_pile/surface/bones,
-/obj/item/weapon/storage/backpack/dufflebag/syndie,
+/obj/item/storage/backpack/dufflebag/syndie,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "FG" = (
@@ -289,7 +272,6 @@
 "Hn" = (
 /obj/random/explorer_shield,
 /obj/random/contraband/nofail,
-/obj/random/contraband/nofail,
 /obj/structure/closet/crate/secure/loot,
 /obj/item/rig_module/mounted/energy_blade,
 /obj/item/rig_module/sprinter,
@@ -305,7 +287,7 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/bloodchurch)
 "MC" = (
-/obj/item/weapon/flame/candle/candelabra/everburn,
+/obj/item/flame/candle/candelabra/everburn,
 /obj/structure/table/sifwoodentable,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
@@ -317,7 +299,7 @@
 /area/submap/bloodchurch)
 "MK" = (
 /obj/structure/loot_pile/surface/bones,
-/obj/item/weapon/storage/backpack/holding/duffle,
+/obj/item/storage/backpack/holding/duffle,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "MQ" = (
@@ -359,9 +341,8 @@
 /area/submap/bloodchurch)
 "RN" = (
 /obj/structure/table/sifwoodentable,
-/obj/random/contraband/nofail,
-/obj/random/contraband/nofail,
 /obj/random/gun/random,
+/obj/random/contraband,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "Uz" = (
@@ -382,7 +363,9 @@
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "Yz" = (
-/mob/living/simple_mob/construct/shade,
+/mob/living/simple_mob/construct/shade{
+	loot_list = list(/obj/item/ectoplasm = 100, /obj/item/storage/backpack/holding/duffle = 5)
+	},
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "YL" = (
@@ -782,7 +765,7 @@ or
 cq
 Gk
 AZ
-Pn
+rQ
 gy
 ev
 Nn
@@ -817,11 +800,11 @@ Nn
 cq
 mn
 MK
-wA
+Yz
 kn
 fn
 gy
-il
+cH
 Nn
 Nn
 gy
@@ -1071,7 +1054,7 @@ yC
 eT
 MQ
 rQ
-yD
+DJ
 Nn
 MH
 GX

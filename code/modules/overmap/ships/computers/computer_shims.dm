@@ -37,19 +37,18 @@
 	. = 0
 	for(var/thing in component_parts)
 		if(istype(thing, part_type))
-			var/obj/item/weapon/stock_parts/part = thing
+			var/obj/item/stock_parts/part = thing
 			. += part.rating
 	// Now isn't THIS a cool idea?
 	// for(var/path in uncreated_component_parts)
 	// 	if(ispath(path, part_type))
-	// 		var/obj/item/weapon/stock_parts/comp = path
+	// 		var/obj/item/stock_parts/comp = path
 	// 		. += initial(comp.rating) * uncreated_component_parts[path]
 
 //
 // Skills
 //
 /obj/machinery/computer/ship
-	var/core_skill = /datum/skill/devices //The skill used for skill checks for this machine (mostly so subtypes can use different skills).
 	var/ai_control = TRUE	//VOREStation Edit
 
 //
@@ -73,7 +72,7 @@
 /obj/machinery/computer/ship/attack_ai(mob/user)
 	//VOREStation Addition Start
 	if(!ai_control && issilicon(user))
-		to_chat(user, "<span class='warning'>Access Denied.</span>")
+		to_chat(user, span_warning("Access Denied."))
 		return
 	//VOREStation Addition End
 	if(tgui_status(user, tgui_state()) > STATUS_CLOSE)
@@ -90,11 +89,11 @@
 		return
 	//VOREStation Addition Start
 	if(!ai_control && issilicon(user))
-		to_chat(user, "<span class='warning'>Access Denied.</span>")
+		to_chat(user, span_warning("Access Denied."))
 		return TRUE
 	//VOREStation Addition End
 	if(!allowed(user))
-		to_chat(user, "<span class='warning'>Access Denied.</span>")
+		to_chat(user, span_warning("Access Denied."))
 		return TRUE
 	if(tgui_status(user, tgui_state()) > STATUS_CLOSE)
 		return interface_interact(user)

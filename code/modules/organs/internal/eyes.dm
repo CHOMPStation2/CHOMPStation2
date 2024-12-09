@@ -12,6 +12,8 @@
 	name = "optical sensor"
 	innate_flash_protection = FLASH_PROTECTION_MAJOR // CHOMPedit: So synths can repair brute damage on themselves without needing eye protection, like many other servers. QOL.
 	verbs |= /obj/item/organ/internal/eyes/proc/change_eye_color
+	organ_verbs = list(/obj/item/organ/internal/eyes/proc/change_eye_color) //CHOMPAdd
+	handle_organ_mod_special() //CHOMPAdd
 
 /obj/item/organ/internal/eyes/robot
 	name = "optical sensor"
@@ -34,7 +36,7 @@
 /obj/item/organ/internal/eyes/proc/change_eye_color()
 	set name = "Change Eye Color"
 	set desc = "Changes your robotic eye color instantly."
-	set category = "IC"
+	set category = "IC.Settings"
 	set src in usr
 
 	var/current_color = rgb(eye_colour[1],eye_colour[2],eye_colour[3])
@@ -74,7 +76,7 @@
 	var/oldbroken = is_broken()
 	..()
 	if(is_broken() && !oldbroken && owner && !owner.stat)
-		to_chat(owner, "<span class='danger'>You go blind!</span>")
+		to_chat(owner, span_danger("You go blind!"))
 
 /obj/item/organ/internal/eyes/process() //Eye damage replaces the old eye_stat var.
 	..()

@@ -8,6 +8,14 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/MechStorageFab)
+"aq" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MechStorageFab)
 "av" = (
 /obj/structure/salvageable/computer,
 /turf/simulated/floor/tiled/asteroid_steel,
@@ -23,9 +31,29 @@
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/plating/external,
 /area/survivalpod/superpose/MechStorageFab)
+"aV" = (
+/obj/structure/closet/crate/solar,
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
 "ba" = (
 /obj/machinery/power/port_gen/pacman,
 /obj/structure/cable,
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"bh" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"bu" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
 /turf/simulated/floor/plating/external,
 /area/survivalpod/superpose/MechStorageFab)
 "bE" = (
@@ -92,6 +120,14 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/MechStorageFab)
+"gz" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
 /area/survivalpod/superpose/MechStorageFab)
 "gG" = (
 /obj/machinery/fusion_fuel_compressor,
@@ -174,6 +210,11 @@
 /area/survivalpod/superpose/MechStorageFab)
 "ly" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/MechStorageFab)
 "lA" = (
@@ -190,15 +231,15 @@
 /area/survivalpod/superpose/MechStorageFab)
 "mB" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/storage/briefcase/inflatable{
+/obj/item/storage/briefcase/inflatable{
 	pixel_y = 3
 	},
-/obj/item/weapon/storage/toolbox/syndicate/powertools,
+/obj/item/storage/toolbox/syndicate/powertools,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/survivalpod/superpose/MechStorageFab)
 "nc" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/rainbowdouble,
+/obj/item/bedsheet/rainbowdouble,
 /obj/machinery/partyalarm{
 	pixel_y = -18
 	},
@@ -239,6 +280,16 @@
 /area/survivalpod/superpose/MechStorageFab)
 "nZ" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden,
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/survivalpod/superpose/MechStorageFab)
 "oh" = (
@@ -335,6 +386,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 9
 	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/survivalpod/superpose/MechStorageFab)
 "sk" = (
@@ -366,6 +422,16 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 8
 	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/MechStorageFab)
 "tK" = (
@@ -385,7 +451,7 @@
 /obj/item/mecha_parts/component/gas/reinforced,
 /obj/item/mecha_parts/mecha_equipment/hardpoint_actuator,
 /obj/item/mecha_parts/mecha_equipment/tesla_energy_relay,
-/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/cannon,
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/lmg,
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack/grenade/rigged,
 /obj/item/mecha_parts/mecha_equipment/wormhole_generator,
 /turf/simulated/floor/plating/external,
@@ -397,35 +463,38 @@
 	pixel_x = -32;
 	pixel_y = 0
 	},
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/device/radio{
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/radio{
 	pixel_x = -5;
 	pixel_y = 5
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = 5;
 	pixel_y = 5
 	},
 /turf/simulated/floor/plating/external,
 /area/survivalpod/superpose/MechStorageFab)
 "us" = (
-/obj/machinery/artifact_scanpad,
-/obj/effect/simple_portal/linked,
 /obj/effect/map_effect/interval/effect_emitter/sparks,
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/machinery/power/rtg/advanced,
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/MechStorageFab)
 "uJ" = (
 /obj/effect/floor_decal/industrial/outline/blue,
 /obj/structure/closet/jcloset,
-/obj/item/weapon/mop,
+/obj/item/mop,
 /obj/structure/mopbucket,
-/obj/item/weapon/reagent_containers/glass/bucket,
-/obj/item/weapon/reagent_containers/spray/cleaner,
-/obj/item/weapon/reagent_containers/spray/cleaner,
+/obj/item/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/spray/cleaner,
+/obj/item/reagent_containers/spray/cleaner,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/MechStorageFab)
 "vG" = (
@@ -437,6 +506,11 @@
 "wg" = (
 /obj/random/junk,
 /obj/random/maintenance,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/survivalpod/superpose/MechStorageFab)
 "wU" = (
@@ -454,6 +528,11 @@
 "yH" = (
 /obj/machinery/door/airlock/maintenance/engi{
 	req_one_access = null
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating/external,
 /area/survivalpod/superpose/MechStorageFab)
@@ -482,6 +561,11 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/plating/external,
 /area/survivalpod/superpose/MechStorageFab)
 "Au" = (
@@ -493,6 +577,15 @@
 "AD" = (
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
+"Bu" = (
+/obj/random/junk,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
 /area/survivalpod/superpose/MechStorageFab)
 "BC" = (
 /obj/machinery/portable_atmospherics/canister/air,
@@ -529,6 +622,14 @@
 /obj/random/maintenance,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/survivalpod/superpose/MechStorageFab)
+"DQ" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/MechStorageFab)
 "DV" = (
 /turf/simulated/floor/plating/external,
 /area/survivalpod/superpose/MechStorageFab)
@@ -552,7 +653,7 @@
 /turf/simulated/floor/plating/external,
 /area/survivalpod/superpose/MechStorageFab)
 "Go" = (
-/obj/machinery/power/smes/buildable/hybrid,
+/obj/machinery/power/smes/buildable/point_of_interest,
 /obj/structure/cable/green{
 	d2 = 8;
 	icon_state = "0-8"
@@ -588,7 +689,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MechStorageFab)
 "IN" = (
-/obj/item/weapon/bedsheet/piratedouble,
+/obj/item/bedsheet/piratedouble,
 /obj/structure/curtain/black{
 	icon_state = "open";
 	layer = 2;
@@ -599,6 +700,11 @@
 /area/survivalpod/superpose/MechStorageFab)
 "IS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/plating/external,
 /area/survivalpod/superpose/MechStorageFab)
 "IX" = (
@@ -642,51 +748,51 @@
 /area/survivalpod/superpose/MechStorageFab)
 "JV" = (
 /obj/structure/closet/walllocker_double/north,
-/obj/item/device/gps,
+/obj/item/gps,
 /obj/item/sticky_pad/random,
-/obj/item/device/starcaster_news,
-/obj/item/weapon/pen/blue,
-/obj/item/device/pda,
-/obj/item/weapon/card/id/external,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-/obj/item/weapon/gun/energy/locked/phasegun/pistol,
-/obj/item/weapon/material/knife/tacknife/survival,
+/obj/item/starcaster_news,
+/obj/item/pen/blue,
+/obj/item/pda,
+/obj/item/card/id/external,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/gun/energy/locked/phasegun/pistol,
+/obj/item/material/knife/tacknife/survival,
 /obj/item/clothing/accessory/permit/gun,
-/obj/item/device/camera,
-/obj/item/device/binoculars,
-/obj/item/device/threadneedle,
+/obj/item/camera,
+/obj/item/binoculars,
+/obj/item/threadneedle,
 /obj/random/soap,
-/obj/item/weapon/towel/random,
+/obj/item/towel/random,
 /obj/item/bodybag/cryobag,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/color/yellow,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/weapon/flame/lighter/random,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
-/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
-/obj/item/weapon/reagent_containers/pill/spaceacillin,
-/obj/item/weapon/reagent_containers/pill/spaceacillin,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/suit_cooling_unit/emergency,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/color/yellow,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/flame/lighter/random,
+/obj/item/cell/device/hyper,
+/obj/item/cell/device/hyper,
+/obj/item/extinguisher/mini,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/reagent_containers/pill/spaceacillin,
+/obj/item/reagent_containers/pill/spaceacillin,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/suit_cooling_unit/emergency,
 /obj/item/stack/nanopaste,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,
-/obj/item/weapon/storage/backpack/messenger,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/storage/backpack/messenger,
 /obj/item/clothing/accessory/storage/black_drop_pouches,
 /obj/item/clothing/accessory/poncho/thermal,
-/obj/item/weapon/storage/box/survival/comp,
-/obj/item/weapon/storage/toolbox/brass,
-/obj/item/weapon/storage/box/khcrystal,
+/obj/item/storage/box/survival/comp,
+/obj/item/storage/toolbox/brass,
+/obj/item/storage/box/khcrystal,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/survivalpod/superpose/MechStorageFab)
 "Ke" = (
@@ -706,6 +812,11 @@
 	dir = 9
 	},
 /obj/random/maintenance,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/survivalpod/superpose/MechStorageFab)
 "KN" = (
@@ -774,10 +885,10 @@
 	},
 /obj/item/stack/cable_coil/green,
 /obj/item/stack/cable_coil/blue,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechStorageFab)
 "Lp" = (
@@ -796,16 +907,16 @@
 	pixel_x = -32;
 	pixel_y = 0
 	},
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/device/radio{
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/radio{
 	pixel_x = -5;
 	pixel_y = 5
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = 5;
 	pixel_y = 5
 	},
@@ -819,7 +930,7 @@
 /obj/item/mecha_parts/mecha_equipment/omni_shield,
 /obj/item/mecha_parts/mecha_equipment/tool/jetpack,
 /obj/item/mecha_parts/mecha_equipment/tool/passenger,
-/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/cannon,
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/lmg,
 /turf/simulated/floor/plating/external,
 /area/survivalpod/superpose/MechStorageFab)
 "Mx" = (
@@ -829,16 +940,16 @@
 	pixel_x = -32;
 	pixel_y = 0
 	},
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/device/radio{
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/radio{
 	pixel_x = -5;
 	pixel_y = 5
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = 5;
 	pixel_y = 5
 	},
@@ -849,6 +960,11 @@
 	dir = 1
 	},
 /obj/random/junk,
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/MechStorageFab)
 "MB" = (
@@ -967,7 +1083,20 @@
 /area/template_noop)
 "Pt" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/MechStorageFab)
+"Qd" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating/external,
 /area/survivalpod/superpose/MechStorageFab)
 "Qo" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -979,23 +1108,23 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 6
 	},
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/tank/emergency/oxygen/double{
+/obj/item/tank/emergency/oxygen/double,
+/obj/item/tank/emergency/oxygen/double,
+/obj/item/tank/emergency/oxygen/double,
+/obj/item/tank/emergency/oxygen/double,
+/obj/item/tank/emergency/oxygen/double{
 	pixel_y = 6
 	},
-/obj/item/weapon/tank/emergency/oxygen/double{
+/obj/item/tank/emergency/oxygen/double{
 	pixel_y = 6
 	},
-/obj/item/weapon/tank/emergency/oxygen/double{
+/obj/item/tank/emergency/oxygen/double{
 	pixel_y = 6
 	},
-/obj/item/weapon/tank/emergency/oxygen/double{
+/obj/item/tank/emergency/oxygen/double{
 	pixel_y = 6
 	},
-/obj/item/weapon/tank/emergency/oxygen/double{
+/obj/item/tank/emergency/oxygen/double{
 	pixel_y = 6
 	},
 /obj/structure/table/rack/shelf/steel,
@@ -1004,6 +1133,11 @@
 "Sw" = (
 /obj/machinery/door/window/survival_pod{
 	dir = 8
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/MechStorageFab)
@@ -1025,6 +1159,15 @@
 "TK" = (
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/MechStorageFab)
+"Uq" = (
+/obj/random/junk,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating/external,
+/area/survivalpod/superpose/MechStorageFab)
 "Ut" = (
 /obj/structure/closet/secure_closet/engineering_welding{
 	req_access = null
@@ -1042,10 +1185,10 @@
 /area/survivalpod/superpose/MechStorageFab)
 "Vx" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/storage/briefcase/inflatable{
+/obj/item/storage/briefcase/inflatable{
 	pixel_y = 3
 	},
-/obj/item/weapon/storage/toolbox/electrical,
+/obj/item/storage/toolbox/electrical,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/survivalpod/superpose/MechStorageFab)
 "VT" = (
@@ -1062,7 +1205,23 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 10
 	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/MechStorageFab)
+"Wv" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating/external,
 /area/survivalpod/superpose/MechStorageFab)
 "XH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -1070,6 +1229,11 @@
 	},
 /obj/machinery/door/airlock/maintenance/rnd{
 	req_one_access = null
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating/external,
 /area/survivalpod/superpose/MechStorageFab)
@@ -1095,10 +1259,10 @@
 	dir = 5
 	},
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/storage/briefcase/inflatable{
+/obj/item/storage/briefcase/inflatable{
 	pixel_y = 3
 	},
-/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/mechanical,
 /obj/item/pizzavoucher,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/MechStorageFab)
@@ -1107,6 +1271,14 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/MechStorageFab)
+"Zf" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
 /area/survivalpod/superpose/MechStorageFab)
 "Zj" = (
 /obj/structure/window/reinforced/survival_pod{
@@ -1591,7 +1763,7 @@ qY
 pA
 DV
 DV
-DV
+aV
 Ao
 tw
 tw
@@ -1712,14 +1884,14 @@ AD
 MA
 Pt
 IS
-Ib
+Wv
 Pt
 tH
 Pt
 ly
 nZ
 yH
-DV
+Qd
 Ar
 ba
 Ao
@@ -1784,21 +1956,21 @@ tw
 tw
 Ao
 pA
-pA
-pA
-sk
-TK
+DQ
+gz
+Uq
+aq
 AD
 pA
 TK
-DV
-pw
+bu
+Bu
 pA
 AD
-pA
+Zf
 wg
-pA
-DV
+gz
+bh
 TK
 Ao
 tw

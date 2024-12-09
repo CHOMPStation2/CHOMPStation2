@@ -1,7 +1,8 @@
 /* eslint react/no-danger: "off" */
+import { KEY } from 'common/keys';
+import { round, toFixed } from 'common/math';
 import { useState } from 'react';
 
-import { KEY_ENTER } from '../../../common/keycodes';
 import { BooleanLike } from '../../../common/react';
 import { useBackend } from '../../backend';
 import {
@@ -103,7 +104,7 @@ export const TicketsPanel = (props) => {
 
   let filtered_tickets = getFilteredTickets(tickets, stateFilter, levelFilter);
   return (
-    <Window width={900} height={600}>
+    <Window width={1000} height={600}>
       <Window.Content>
         <Flex>
           <Flex.Item shrink>
@@ -130,7 +131,13 @@ export const TicketsPanel = (props) => {
                 }
               />
             </Section>
-            <Section title="Tickets" scrollable>
+            <Section
+              title="Tickets"
+              scrollable
+              fill
+              height="450px"
+              width="300px"
+            >
               <Tabs vertical>
                 <Tabs.Tab onClick={() => act('new_ticket')}>
                   New Ticket
@@ -145,14 +152,13 @@ export const TicketsPanel = (props) => {
                   >
                     <Box inline>
                       <Box>
-                        <Button
-                          content={Level[ticket.level]}
-                          color={LevelColor[ticket.level]}
-                        />{' '}
+                        <Button color={LevelColor[ticket.level]}>
+                          {Level[ticket.level]}
+                        </Button>
                         {ticket.name}
                       </Box>
                       <Box fontSize={0.9} textColor={StateColor[ticket.state]}>
-                        State: {State[ticket.state]} | Assignee:{' '}
+                        State: {State[ticket.state]} | Assignee:
                         {ticket.handler}
                       </Box>
                     </Box>
@@ -169,25 +175,23 @@ export const TicketsPanel = (props) => {
                   <Box nowrap>
                     <Button
                       icon="arrow-up"
-                      content="Undock"
                       onClick={() => act('undock_ticket')}
-                    />{' '}
-                    <Button
-                      icon="pen"
-                      content="Rename Ticket"
-                      onClick={() => act('retitle_ticket')}
-                    />{' '}
-                    <Button content="Legacy UI" onClick={() => act('legacy')} />{' '}
-                    <Button
-                      content={Level[selected_ticket.level]}
-                      color={LevelColor[selected_ticket.level]}
-                    />
+                    >
+                      Undock
+                    </Button>
+                    <Button icon="pen" onClick={() => act('retitle_ticket')}>
+                      Rename Ticket
+                    </Button>
+                    <Button onClick={() => act('legacy')}>Legacy UI</Button>
+                    <Button color={LevelColor[selected_ticket.level]}>
+                      {Level[selected_ticket.level]}
+                    </Button>
                   </Box>
                 }
               >
                 <LabeledList>
                   <LabeledList.Item label="Ticket ID">
-                    #{selected_ticket.id}:{' '}
+                    #{selected_ticket.id}:
                     <div
                       dangerouslySetInnerHTML={{ __html: selected_ticket.name }}
                     />
@@ -203,19 +207,26 @@ export const TicketsPanel = (props) => {
                   </LabeledList.Item>
                   {State[selected_ticket.state] === State.open ? (
                     <LabeledList.Item label="Opened At">
-                      {selected_ticket.opened_at_date} (
-                      {Math.round((selected_ticket.opened_at / 600) * 10) / 10}{' '}
-                      minutes ago.)
+                      {selected_ticket.opened_at_date +
+                        ' (' +
+                        toFixed(
+                          round((selected_ticket.opened_at / 600) * 10, 0) / 10,
+                          1,
+                        ) +
+                        ' minutes ago.)'}
                     </LabeledList.Item>
                   ) : (
                     <LabeledList.Item label="Closed At">
-                      {selected_ticket.closed_at_date} (
-                      {Math.round((selected_ticket.closed_at / 600) * 10) / 10}{' '}
-                      minutes ago.){' '}
-                      <Button
-                        content="Reopen"
-                        onClick={() => act('reopen_ticket')}
-                      />
+                      {selected_ticket.closed_at_date +
+                        ' (' +
+                        toFixed(
+                          round((selected_ticket.closed_at / 600) * 10, 0) / 10,
+                          1,
+                        ) +
+                        ' minutes ago.)'}
+                      <Button onClick={() => act('reopen_ticket')}>
+                        Reopen
+                      </Button>
                     </LabeledList.Item>
                   )}
                   <LabeledList.Item label="Actions">
@@ -251,12 +262,9 @@ export const TicketsPanel = (props) => {
                           fluid
                           placeholder="Enter a message..."
                           value={ticketChat}
-                          onInput={(e, value) => setTicketChat(value)}
-                          onKeyDown={(event) => {
-                            const keyCode = window.event
-                              ? event.which
-                              : event.keyCode;
-                            if (keyCode === KEY_ENTER) {
+                          onInput={(e, value: string) => setTicketChat(value)}
+                          onKeyDown={(e) => {
+                            if (KEY.Enter === e.key) {
                               act('send_msg', { msg: ticketChat });
                               setTicketChat('');
                             }
@@ -265,12 +273,13 @@ export const TicketsPanel = (props) => {
                       </Flex.Item>
                       <Flex.Item>
                         <Button
-                          content="Send"
                           onClick={() => {
                             act('send_msg', { msg: ticketChat });
                             setTicketChat('');
                           }}
-                        />
+                        >
+                          Send
+                        </Button>
                       </Flex.Item>
                     </Flex>
                   </Flex.Item>
@@ -284,16 +293,18 @@ export const TicketsPanel = (props) => {
                     <Button
                       disabled
                       icon="arrow-up"
-                      content="Undock"
                       onClick={() => act('undock_ticket')}
-                    />{' '}
+                    >
+                      Undock
+                    </Button>
                     <Button
                       disabled
                       icon="pen"
-                      content="Rename Ticket"
                       onClick={() => act('retitle_ticket')}
-                    />{' '}
-                    <Button content="Legacy UI" onClick={() => act('legacy')} />
+                    >
+                      Rename Ticket
+                    </Button>
+                    <Button onClick={() => act('legacy')}>Legacy UI</Button>
                   </Box>
                 }
               >

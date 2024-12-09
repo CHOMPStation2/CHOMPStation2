@@ -3,7 +3,7 @@
 	var/list/warned_of_possession //Checks to see who has been informed this item is possessed.
 
 
-/obj/item/proc/inhabit_item(var/mob/candidate, var/candidate_name, var/mob/living/candidate_original_form)
+/obj/item/proc/inhabit_item(var/mob/candidate, var/candidate_name, var/mob/living/candidate_original_form, var/is_item_tf = FALSE) //CHOMPEdit
 	//This makes it so that any object in the game can have something put in it like the cursed sword!
 	//This means the proc can also be manually called by admin commands.
 	//Handle moving the person into the object.
@@ -15,6 +15,7 @@
 	new_voice.transfer_identity(candidate) 			//Now make the voice mob load from the ghost's active character in preferences.
 	new_voice.mind = candidate.mind					//Transfer the mind, if any.
 	new_voice.ckey = candidate.ckey					//Finally, bring the client over.
+	candidate.mind = null							//CHOMPAdd - Remove the mind from the mob to avoid issues with multi TF interactions
 	new_voice.tf_mob_holder = candidate_original_form //Save what mob they are! We'll need this for OOC escape and transformation back to their normal form.
 	if(candidate_name) 								//Were we given a candidate_name? Great! Name them that.
 		new_voice.name = "[candidate_name]"
@@ -23,11 +24,14 @@
 	new_voice.real_name = "[new_voice.real_name]" 	//We still know their real name though!
 	possessed_voice.Add(new_voice)
 	listening_objects |= src
-	new_voice.verbs -= /mob/living/voice/verb/change_name //No changing your name! Bad!
-	new_voice.verbs -= /mob/living/voice/verb/hang_up //Also you can't hang up. You are the item!
+	remove_verb(new_voice, /mob/living/voice/verb/change_name) //No changing your name! Bad!
+	remove_verb(new_voice, /mob/living/voice/verb/hang_up) //Also you can't hang up. You are the item!
 	src.item_tf_spawnpoint_used() //CHOMPEdit - Item TF spawnpoints
 	//CHOMPEdit Start - Let the inhabitor know what happened to them
-	if(istype(src, /obj/item/device/mindbinder))
+	if(!istype(src, /obj/item/communicator) && is_item_tf)
+		new_voice.item_tf = is_item_tf 					// allows items to use /me
+		new_voice.emote_type = 1
+	if(istype(src, /obj/item/mindbinder))
 		to_chat(new_voice,"<span class='notice'>Your mind has been stored in [src]!</span>")
 	else
 		to_chat(new_voice,"<span class='notice'>You have become [src]!</span>")

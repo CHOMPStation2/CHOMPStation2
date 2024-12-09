@@ -59,8 +59,9 @@
 		input = copytext(input,1,max_length)
 
 	if(extra)
+		input = replacetext(input, new/regex("^\[\\n\]+|\[\\n\]+$", "g"), "")// strip leading and trailing new lines
 		var/temp_input = replace_characters(input, list("\n"="  ","\t"=" "))//one character is replaced by two
-		if(length(input) < (length(temp_input) - 6))//6 is the number of linebreaks allowed per message
+		if(length(input) < (length(temp_input) - 18))//18 is the number of linebreaks allowed per message
 			input = replace_characters(temp_input,list("  "=" "))//replace again, this time the double spaces with single ones
 
 	if(encode)
@@ -352,17 +353,17 @@
 GLOBAL_LIST_EMPTY(text_tag_cache)
 
 /proc/create_text_tag(var/tagname, var/tagdesc = tagname, var/client/C = null)
-	if(!(C && C.is_preference_enabled(/datum/client_preference/chat_tags)))
+	if(!(C && C.prefs?.read_preference(/datum/preference/toggle/chat_tags)))
 		return tagdesc
 	if(!GLOB.text_tag_cache[tagname])
 		var/datum/asset/spritesheet/chatassets = get_asset_datum(/datum/asset/spritesheet/chat)
-		GLOB.text_tag_cache[tagname] = {"<span class='[chatassets.icon_class_name(tagname)] text_tag'></span>"}
+		GLOB.text_tag_cache[tagname] = chatassets.icon_tag(tagname)
 	if(!C.tgui_panel.is_ready() || C.tgui_panel.oldchat)
 		return "<IMG src='\ref[text_tag_icons]' class='text_tag' iconstate='[tagname]'" + (tagdesc ? " alt='[tagdesc]'" : "") + ">"
 	return GLOB.text_tag_cache[tagname]
 
 /proc/create_text_tag_old(var/tagname, var/tagdesc = tagname, var/client/C = null)
-	if(!(C && C.is_preference_enabled(/datum/client_preference/chat_tags)))
+	if(!(C && C.prefs?.read_preference(/datum/preference/toggle/chat_tags)))
 		return tagdesc
 	return "<IMG src='\ref[text_tag_icons]' class='text_tag' iconstate='[tagname]'" + (tagdesc ? " alt='[tagdesc]'" : "") + ">"
 
@@ -620,3 +621,15 @@ GLOBAL_LIST_EMPTY(text_tag_cache)
 	paper_text = replacetext(paper_text, "<br>", "\n")
 	paper_text = strip_html_properly(paper_text) // Get rid of everything else entirely.
 	return paper_text
+
+//json decode that will return null on parse error instead of runtiming.
+/proc/safe_json_decode(data)
+	try
+		return json_decode(data)
+	catch
+		return null
+
+/// Removes all non-alphanumerics from the text, keep in mind this can lead to id conflicts
+/proc/sanitize_css_class_name(name)
+    var/static/regex/regex = new(@"[^a-zA-Z0-9]","g")
+    return replacetext(name, regex, "")

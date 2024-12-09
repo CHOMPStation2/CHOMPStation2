@@ -1,5 +1,5 @@
 /*
-var/list/dreams = list(
+	dreams = list(
 	"an ID card","a bottle","a familiar face","a crewmember","a toolbox","a Security Officer","the Site Manager",
 	"voices from all around","deep space","a doctor","the engine","a traitor","an ally","darkness",
 	"light","a scientist","a monkey","a catastrophe","a loved one","a gun","warmth","freezing","the sun",
@@ -76,7 +76,7 @@ var/list/dreams = list(
 		var/datum/callback/something_happens = next_message
 		next_message = something_happens.InvokeAsync(src)
 
-	to_chat(src, span_notice("<i>... [next_message] ...</i>"))
+	to_chat(src, span_notice(span_italics("... [next_message] ...")))
 
 	if(LAZYLEN(dream_fragments))
 		var/next_wait = rand(10, 30)
@@ -130,7 +130,7 @@ GLOBAL_LIST_INIT(dreams, populate_dream_list())
 	var/list/custom_dream_nouns = list()
 	var/fragment = ""
 
-	for(var/obj/item/weapon/bedsheet/sheet in dreamer.loc)
+	for(var/obj/item/bedsheet/sheet in dreamer.loc)
 		custom_dream_nouns += sheet.dream_messages
 
 	. = list()

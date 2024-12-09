@@ -17,6 +17,11 @@
 		qdel(program) // the program will clear the ref in its Destroy
 	return ..()
 
+/obj/machinery/embedded_controller/examine(mob/user, infix, suffix)
+	. = ..()
+	if(in_range(src, user))
+		. += "It has an ID tag of \"[program?.id_tag]\""
+
 /obj/machinery/embedded_controller/proc/post_signal(datum/signal/signal, comm_line)
 	return 0
 
@@ -28,16 +33,17 @@
 
 /obj/machinery/embedded_controller/Topic()
 	. = ..()
-	stack_trace("WARNING: Embedded controller [src] ([type]) had Topic() called unexpectedly. Please report this.")
+	// stack_trace("WARNING: Embedded controller [src] ([type]) had Topic() called unexpectedly. Please report this.") // statpanel means that topic can always be called for clicking
 
-/obj/machinery/embedded_controller/tgui_act(action, params)
+/obj/machinery/embedded_controller/tgui_act(action, params, datum/tgui/ui)
 	if(..())
 		return TRUE
 	if(LAZYLEN(valid_actions))
 		if(action in valid_actions)
 			program.receive_user_command(action)
-	if(usr)
-		add_fingerprint(usr)
+			return TRUE
+	if(ui.user)
+		add_fingerprint(ui.user)
 
 /obj/machinery/embedded_controller/process()
 	if(program)

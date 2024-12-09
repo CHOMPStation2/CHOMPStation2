@@ -32,9 +32,9 @@
 	if(!user.client.prefs.tgui_input_mode)
 		if(encode)
 			if(multiline)
-				return stripped_multiline_input(user, message, title, default, max_length)
+				return stripped_multiline_input(user, message, title, default, PREVENT_CHARACTER_TRIM_LOSS(max_length))
 			else
-				return stripped_input(user, message, title, default, max_length)
+				return stripped_input(user, message, title, default, PREVENT_CHARACTER_TRIM_LOSS(max_length))
 		else
 			if(multiline)
 				return input(user, message, title, default) as message|null
@@ -130,7 +130,7 @@
 		data["timeout"] = clamp((timeout - (world.time - start_time) - 1 SECONDS) / (timeout - 1 SECONDS), 0, 1)
 	return data
 
-/datum/tgui_input_text/tgui_act(action, list/params)
+/datum/tgui_input_text/tgui_act(action, list/params, datum/tgui/ui)
 	. = ..()
 	if (.)
 		return
@@ -138,9 +138,9 @@
 		if("submit")
 			if(max_length)
 				if(length(params["entry"]) > max_length)
-					CRASH("[usr] typed a text string longer than the max length")
+					CRASH("[ui.user] typed a text string longer than the max length")
 				if(encode && (length(html_encode(params["entry"])) > max_length))
-					to_chat(usr, span_notice("Your message was clipped due to special character usage."))
+					to_chat(ui.user, span_notice("Your message was clipped due to special character usage."))
 			set_entry(params["entry"])
 			closed = TRUE
 			SStgui.close_uis(src)
@@ -159,4 +159,4 @@
 /datum/tgui_input_text/proc/set_entry(entry)
 	if(!isnull(entry))
 		var/converted_entry = encode ? html_encode(entry) : entry
-		src.entry = trim(converted_entry, max_length)
+		src.entry = trim(converted_entry, PREVENT_CHARACTER_TRIM_LOSS(max_length))

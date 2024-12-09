@@ -13,7 +13,7 @@
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/deadspy)
 "d" = (
-/obj/item/weapon/flamethrower,
+/obj/item/flamethrower,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/deadspy)
 "e" = (
@@ -40,18 +40,18 @@
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/deadspy)
 "j" = (
-/obj/item/weapon/material/butterfly,
+/obj/item/material/butterfly,
 /obj/effect/decal/cleanable/liquid_fuel,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/deadspy)
 "k" = (
 /obj/effect/decal/remains/human,
-/obj/item/weapon/tool/wrench,
+/obj/item/tool/wrench,
 /obj/item/clothing/head/hardhat,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/deadspy)
 "l" = (
-/obj/item/weapon/flame/lighter/zippo,
+/obj/item/flame/lighter/zippo,
 /obj/effect/decal/cleanable/liquid_fuel,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/deadspy)
@@ -79,7 +79,7 @@
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/deadspy)
 "p" = (
-/obj/item/weapon/deadringer,
+/obj/item/deadringer,
 /obj/effect/decal/cleanable/liquid_fuel,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/deadspy)
@@ -91,11 +91,11 @@
 /area/submap/cave/deadspy)
 "r" = (
 /obj/effect/decal/cleanable/liquid_fuel,
-/obj/item/weapon/storage/fancy/cigarettes/professionals,
+/obj/item/storage/fancy/cigarettes/professionals,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/deadspy)
 "s" = (
-/obj/item/weapon/card/emag_broken,
+/obj/item/card/emag_broken,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/deadspy)
 "t" = (

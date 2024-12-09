@@ -31,8 +31,11 @@
 	var/list/targets = list()			//list of primary targets
 	var/list/secondarytargets = list()	//targets that are least important
 
-	for(var/mob/M in oview(world.view, src))
+	//CHOMPEdit Begin
+
+	for(var/mob/M in mobs_in_xray_view(world.view, src))
 		assess_and_assign(M, targets, secondarytargets)
+	//CHOMPEdit End
 
 	if(!tryToShootAt(targets))
 		if(!tryToShootAt(secondarytargets)) // if no valid targets, go for secondary targets

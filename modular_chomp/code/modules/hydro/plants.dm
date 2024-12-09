@@ -29,7 +29,7 @@
 	seed_name = "cherrybomb"
 	seed_noun = "pits"
 	display_name = "cherry bomb tree"
-	chems = list("nutriment" = list(1,15), "neoliquidfire" = list(1,15), "cherryjelly" = list(10,15))
+	chems = list("nutriment" = list(1,15), "liquidfire" = list(1,15), "cherryjelly" = list(10,15))
 
 /datum/seed/cherries/cherrybomb/New()
 	..()

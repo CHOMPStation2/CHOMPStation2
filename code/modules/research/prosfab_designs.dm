@@ -83,6 +83,7 @@
 		H.b_skin = 255 // CHOMP Edit
 		H.dna.ResetUIFrom(H)
 
+		H.allow_spontaneous_tf = TRUE // Allows vore customization of synthmorphs
 		H.real_name = "Synthmorph #[rand(100,999)]"
 		H.name = H.real_name
 		H.dir = 2
@@ -376,7 +377,51 @@
 /datum/design/item/prosfab/cyborg/component/ai_shell
 	name = "AI Remote Interface"
 	id = "mmi_ai_shell"
-	build_path = /obj/item/device/mmi/inert/ai_remote
+	build_path = /obj/item/mmi/inert/ai_remote
+
+//////////////////// Advanced Components ////////////////////
+/datum/design/item/prosfab/cyborg/component/radio_upgraded
+	name = "Improved Radio"
+	id = "improved_radio"
+	build_path = /obj/item/robot_parts/robot_component/radio/upgraded
+	req_tech = list(TECH_MAGNET = 7, TECH_MATERIAL = 5, TECH_PRECURSOR = 1)
+	materials = list(MAT_STEEL = 10000, MAT_DIAMOND = 2000, MAT_PLASTEEL = 3000, MAT_GLASS = 6500, MAT_SILVER = 3000, MAT_MORPHIUM = 560, MAT_DURASTEEL = 800)
+
+/datum/design/item/prosfab/cyborg/component/actuator_upgraded
+	name = "Improved Actuator"
+	id = "improved_actuator"
+	build_path = /obj/item/robot_parts/robot_component/actuator/upgraded
+	req_tech = list(TECH_MAGNET = 7, TECH_MATERIAL = 5, TECH_PRECURSOR = 1)
+	materials = list(MAT_STEEL = 10000, MAT_PLASTEEL = 2500, MAT_MORPHIUM = 500, MAT_DURASTEEL = 500)
+
+/datum/design/item/prosfab/cyborg/component/diagnosis_unit_upgraded
+	name = "Improved Diagnosis Unit"
+	id = "improved_diagnosis_unit"
+	build_path = /obj/item/robot_parts/robot_component/diagnosis_unit/upgraded
+	req_tech = list(TECH_MAGNET = 7, TECH_MATERIAL = 5, TECH_PRECURSOR = 1)
+	materials = list(MAT_STEEL = 10000, MAT_DIAMOND = 2000, MAT_URANIUM = 4000, MAT_PLASTEEL = 1000, MAT_GLASS = 400, MAT_SILVER = 1000, MAT_MORPHIUM = 420, MAT_DURASTEEL = 600)
+
+/datum/design/item/prosfab/cyborg/component/camera_upgraded
+	name = "Improved Camera"
+	id = "improved_camera"
+	build_path = /obj/item/robot_parts/robot_component/camera/upgraded
+	req_tech = list(TECH_MAGNET = 7, TECH_MATERIAL = 5, TECH_PRECURSOR = 1)
+	materials = list(MAT_STEEL = 10000, MAT_DIAMOND = 2000, MAT_PLASTEEL = 3000, MAT_GLASS = 6500, MAT_SILVER = 3000, MAT_MORPHIUM = 560, MAT_DURASTEEL = 800)
+
+/datum/design/item/prosfab/cyborg/component/binary_communication_device/upgraded
+	name = "Improved Binary Communication Device"
+	id = "improved_binary_communication_device"
+	build_path = /obj/item/robot_parts/robot_component/binary_communication_device/upgraded
+	req_tech = list(TECH_MAGNET = 7, TECH_MATERIAL = 5, TECH_PRECURSOR = 1)
+	materials = list(MAT_STEEL = 10000, MAT_DIAMOND = 2000, MAT_PLASTEEL = 3000, MAT_GLASS = 6500, MAT_GOLD = 3000, MAT_DURASTEEL = 800)
+
+/datum/design/item/prosfab/cyborg/component/armour_very_heavy
+	name = "Armour Plating (Prototype)"
+	id = "titan_armour"
+	build_path = /obj/item/robot_parts/robot_component/armour/armour_titan
+	req_tech = list(TECH_MATERIAL = 9, TECH_PRECURSOR = 3)
+	materials = list(MAT_STEEL = 12000, MAT_MORPHIUM = 3000, MAT_DURASTEEL = 5000)
+
 
 //////////////////// Cyborg Modules ////////////////////
 /datum/design/item/prosfab/robot_upgrade
@@ -512,13 +557,40 @@
 
 // Section for quick access for admins, events and such, but can't be produced.
 
-/datum/design/item/prosfab/robot_upgrade/no_prod/cyborgtoy
+/datum/design/item/prosfab/robot_upgrade/no_prod
 	category = list()		// We simply do not sort them in
 
 /datum/design/item/prosfab/robot_upgrade/no_prod/cyborgtoy
 	name = "Donk-Soft Cyborg Blaster"
 	id = "borg_hound_cyborg_blaster"
 	build_path = /obj/item/borg/upgrade/no_prod/toygun
+
+/datum/design/item/prosfab/robot_upgrade/no_prod/vision_xray
+	name = "X-ray vision"
+	id = "borg_hound_vision_xray"
+	build_path = /obj/item/borg/upgrade/no_prod/vision_xray
+
+/datum/design/item/prosfab/robot_upgrade/no_prod/vision_thermal
+	name = "Thermal vision"
+	id = "borg_hound_vision_thermal"
+	build_path = /obj/item/borg/upgrade/no_prod/vision_thermal
+
+/datum/design/item/prosfab/robot_upgrade/no_prod/vision_meson
+	name = "Meson vision"
+	id = "borg_hound_vision_meson"
+	build_path = /obj/item/borg/upgrade/no_prod/vision_meson
+
+/datum/design/item/prosfab/robot_upgrade/no_prod/vision_material
+	name = "Material vision"
+	id = "borg_hound_vision_material"
+	build_path = /obj/item/borg/upgrade/no_prod/vision_material
+
+/* //ChompEDIT START - disable for now
+/datum/design/item/prosfab/robot_upgrade/no_prod/vision_anomalous
+	name = "Anomalous vision"
+	id = "borg_hound_vision_anomalous"
+	build_path = /obj/item/borg/upgrade/no_prod/vision_anomalous
+*/ //ChompEDIT END
 
 // Synthmorph Bags.
 

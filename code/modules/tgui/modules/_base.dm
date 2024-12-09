@@ -22,6 +22,13 @@ Code is pretty much ripped verbatim from nano modules, but with un-needed stuff 
 /datum/tgui_module/tgui_host()
 	return host ? host.tgui_host() : src
 
+/datum/tgui_module/ui_assets(mob/user)
+	var/list/data = list()
+	var/obj/item/modular_computer/host = tgui_host()
+	if(istype(host))
+		data += get_asset_datum(/datum/asset/simple/headers)
+	return data
+
 /datum/tgui_module/tgui_close(mob/user)
 	if(host)
 		host.tgui_close(user)
@@ -45,23 +52,23 @@ Code is pretty much ripped verbatim from nano modules, but with un-needed stuff 
 	if(!istype(user))
 		return 0
 
-	var/obj/item/weapon/card/id/I = user.GetIdCard()
+	var/obj/item/card/id/I = user.GetIdCard()
 	if(!I)
 		return 0
 
-	if(access in I.access)
+	if(access in I.GetAccess())
 		return 1
 
 	return 0
 
 /datum/tgui_module/tgui_static_data()
 	. = ..()
-	
+
 	var/obj/item/modular_computer/host = tgui_host()
 	if(istype(host))
 		. += host.get_header_data()
 
-/datum/tgui_module/tgui_act(action, params)
+/datum/tgui_module/tgui_act(action, params, datum/tgui/ui)
 	if(..())
 		return TRUE
 
@@ -74,7 +81,7 @@ Code is pretty much ripped verbatim from nano modules, but with un-needed stuff 
 			host.shutdown_computer()
 			return TRUE
 		if(action == "PC_minimize")
-			host.minimize_program(usr)
+			host.minimize_program(ui.user)
 			return TRUE
 
 // Just a nice little default interact in case the subtypes don't need any special behavior here
@@ -86,3 +93,6 @@ Code is pretty much ripped verbatim from nano modules, but with un-needed stuff 
 
 /datum/tgui_module/proc/relaymove(mob/user, direction)
 	return FALSE
+
+/datum/tgui_module/proc/close_ui()
+	SStgui.close_uis(src)

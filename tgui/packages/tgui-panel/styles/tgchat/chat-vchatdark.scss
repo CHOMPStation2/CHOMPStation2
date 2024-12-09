@@ -15,7 +15,7 @@ img {
   margin: 0;
   padding: 0;
   line-height: 1;
-  -ms-interpolation-mode: nearest-neighbor;
+  -ms-interpolation-mode: nearest-neighbor; // TODO: Remove with 516
   image-rendering: pixelated;
 }
 
@@ -176,12 +176,6 @@ a.popt {
   padding: 2px 0;
 }
 
-.filterMessages input {
-}
-
-.filterMessages label {
-}
-
 .icon-stack {
   height: 1em;
   line-height: 1em;
@@ -220,6 +214,10 @@ a.popt {
 .motd a:active,
 .motd a:hover {
   color: #638500;
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 /* ADD HERE FOR BOLD */
@@ -367,24 +365,17 @@ img.icon.bigicon {
   font-weight: bold;
 }
 
-.say,
-.emote,
-.emotesubtle,
-.npcemote,
-.npcsay,
-.infoplain,
-.oocplain,
-.warningplain,
-.chatexport,
-.body {
+.world {
+  font-weight: bold;
+}
+
+.warningplain {
+  font-style: italic;
 }
 
 .hivemind {
   font-style: italic;
   color: #ffffff;
-}
-
-.nif {
 }
 
 .psay {
@@ -660,6 +651,10 @@ img.icon.bigicon {
 
 .green {
   color: #44ff44;
+}
+
+.darkgreen {
+  color: #008000;
 }
 
 .grey {
@@ -1235,6 +1230,24 @@ $border-width-px: $border-width * 1px;
   flex-direction: column;
 }
 
+.ooc_alert {
+  background: #4d4100;
+  border: 1px solid #cca300;
+  margin: 0.5em;
+  padding: 0.5em 0.5em 0.5em 0.2em;
+  color: #ffffff;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+}
+
+.ooc_announcement_text {
+  color: #cca300;
+  padding: 0.5em 0 0 0.35em;
+  display: flex;
+  flex-direction: column;
+}
+
 @each $color-name, $color-value in $alert-stripe-colors {
   .chat_alert_#{$color-name} {
     color: #ffffff;
@@ -1395,9 +1408,18 @@ $border-width-px: $border-width * 1px;
   font-family: 'Segoe Script Bold', 'Segoe Script', sans-serif, Verdana;
 }
 
+.marish {
+  color: #9e31a4;
+}
+
 .shadekin {
   color: #be3cc5;
   font-size: 150%;
   font-weight: bold;
   font-family: 'Gabriola', cursive, sans-serif;
+  line-height: 0.3;
+}
+
+.wingdings {
+  font-family: Wingdings, Webdings;
 }

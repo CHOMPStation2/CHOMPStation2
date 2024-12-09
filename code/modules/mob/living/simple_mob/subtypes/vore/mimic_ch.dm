@@ -18,7 +18,7 @@
 		mimic_active = FALSE
 		if(prob(mimic_chance))
 			var/mob/living/simple_mob/vore/aggressive/mimic/airlock/new_mimic = new(loc, src)
-			visible_message(span_red("<b>The [new_mimic] suddenly growls as it turns out to be a mimic!</b>")) //Controls the vars of the mimic that spawns
+			visible_message(span_bolddanger("The [new_mimic] suddenly growls as it turns out to be a mimic!")) //Controls the vars of the mimic that spawns
 			forceMove(new_mimic)
 			new_mimic.real_crate = src
 			new_mimic.name = name
@@ -41,7 +41,7 @@
 
 /obj/structure/closet/crate/mimic/airlock/damage(var/damage)
 	if(contents.len)
-		visible_message(span_red("<b>The [src] let's out an enraged screach!</b>"))
+		visible_message(span_bolddanger("The [src] let's out an enraged screach!"))
 		for(var/obj/O in src.contents)
 			qdel(O)
 	..()
@@ -64,19 +64,19 @@
 	icon_state = "amimicopen"
 	icon_living = "amimicopen"
 
-	maxHealth = 250
-	health = 250
+	maxHealth = 50
+	health = 50
 	movement_cooldown = 10
 
-	melee_damage_lower = 15
-	melee_damage_upper = 30
-	attack_armor_pen = 50 //Its jaw is an airlock. Its got enough bite strength.
+	melee_damage_lower = 8
+	melee_damage_upper = 8
+	attack_armor_pen = 0 
 
 	armor = list(
-				"melee" = 70,
-				"bullet" = 30,
-				"laser" = 30,
-				"energy" = 30,
+				"melee" = 10,
+				"bullet" = 10,
+				"laser" = 10,
+				"energy" = 10,
 				"bomb" = 10,
 				"bio" = 100,
 				"rad" = 100) //Its an airlock.
@@ -115,7 +115,7 @@
 		mimic_active = FALSE
 		if(prob(mimic_chance))
 			var/mob/living/simple_mob/vore/aggressive/mimic/closet/new_mimic = new(loc, src)
-			visible_message(span_red("<b>The [new_mimic] suddenly growls as it turns out to be a mimic!</b>")) //Controls the mimic that spawns
+			visible_message(span_bolddanger("The [new_mimic] suddenly growls as it turns out to be a mimic!")) //Controls the mimic that spawns
 			forceMove(new_mimic)
 			new_mimic.real_crate = src
 			new_mimic.name = name
@@ -135,7 +135,7 @@
 
 /obj/structure/closet/crate/mimic/closet/damage(var/damage)
 	if(contents.len)
-		visible_message(span_red("<b>The [src] makes out a crunchy noise as its contents are destroyed!</b>"))
+		visible_message(span_bolddanger("The [src] makes out a crunchy noise as its contents are destroyed!"))
 		for(var/obj/O in src.contents)
 			qdel(O)
 	..()
@@ -159,12 +159,12 @@
 	icon_state = "cmimicopen"
 	icon_living = "cmimicopen"
 
-	maxHealth = 150
-	health = 150
+	maxHealth = 50
+	health = 50
 	movement_cooldown = 7
 
-	melee_damage_lower = 10
-	melee_damage_upper = 20
+	melee_damage_lower = 8
+	melee_damage_upper = 8
 	attack_armor_pen =  25 // NOM NOM
 
 	armor = list(
@@ -224,7 +224,7 @@
 		qdel(src)
 		return
 	var/mob/living/simple_mob/vore/aggressive/mimic/floor/new_mimic = new mimic_type(drop_location())
-	visible_message("<span class='boldwarning'>The [new_mimic] suddenly growls beneath you as it turns out to be a mimic!</span>")
+	visible_message(span_boldwarning("The [new_mimic] suddenly growls beneath you as it turns out to be a mimic!"))
 	qdel(src)
 
 /obj/effect/floormimic/attackby(obj/item/I, mob/living/L)

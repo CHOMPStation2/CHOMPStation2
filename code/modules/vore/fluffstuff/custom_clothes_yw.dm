@@ -349,7 +349,7 @@
 	icon_badge = "mercvest_badge"
 	icon_nobadge = "mercvest_nobadge"
 
-/obj/item/weapon/storage/belt/security/tactical/amara_belt
+/obj/item/storage/belt/security/tactical/amara_belt
 	name = "Mercenary belt"
 	desc = "A sturdy military belt with a shiny buckle and a bunch of pouches."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
@@ -452,7 +452,7 @@
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	item_state = "pilotboots_mob"
 
-/obj/item/weapon/storage/belt/utility/fluff/sam_belt
+/obj/item/storage/belt/utility/fluff/sam_belt
 	name = "Mech Pilot Belt"
 	desc = "A white-blue toolbelt with many slots to hold tools in, seems to be made to literally be attached onto a suit."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
@@ -515,7 +515,7 @@
 
 //Raja Bastet
 
-/obj/item/weapon/storage/belt/utility/fluff/raja_belt
+/obj/item/storage/belt/utility/fluff/raja_belt
 	name = "Mech Engineer Belt"
 	desc = "A black-golden toolbelt with many slots to hold tools in. Also comes with a blue buckle."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
@@ -714,15 +714,15 @@
  //Strix Hades
 
 /obj/item/clothing/suit/storage/teshari/cloak/fluff/strix
- 	name = "Colony Director Coat"
- 	desc = "It drapes over a Avali's shoulders and closes at the neck with pockets convienently placed inside. It bears the Colony Director's colors. The name 'Strix Hades' is embroilled in gold lettering around a golden embroilled outline on the neck collar."
+ 	name = JOB_ALT_COLONY_DIRECTOR + " Coat"
+ 	desc = "It drapes over a Avali's shoulders and closes at the neck with pockets convienently placed inside. It bears the " + JOB_ALT_COLONY_DIRECTOR + "'s colors. The name 'Strix Hades' is embroilled in gold lettering around a golden embroilled outline on the neck collar."
  	icon = 'icons/vore/custom_clothes_yw.dmi'
  	icon_state = "tesh_cloak_cd"
  	icon_override = 'icons/vore/custom_clothes_yw.dmi'
  	item_state = "tesh_cloak_cd"
 
 /obj/item/clothing/under/teshari/undercoat/fluff/strix
-	name = "Colony Director Undercoat"
+	name = JOB_ALT_COLONY_DIRECTOR + " Undercoat"
 	desc = "Made of carbon nanofiber, it is light and billowy, perfect for going fast and stylishly!"
 	icon = 'icons/vore/custom_clothes_yw.dmi'
 	icon_override = 'icons/vore/custom_onmob_yw.dmi'
@@ -898,7 +898,7 @@
 	blood_overlay_type = "coat"
 	body_parts_covered = UPPER_TORSO|ARMS
 	flags_inv = HIDEHOLSTER
-	allowed = list(/obj/item/device/analyzer,/obj/item/stack/medical,/obj/item/weapon/dnainjector,/obj/item/weapon/reagent_containers/dropper,/obj/item/weapon/reagent_containers/syringe,/obj/item/weapon/reagent_containers/hypospray,/obj/item/device/healthanalyzer,/obj/item/device/flashlight/pen,/obj/item/weapon/reagent_containers/glass/bottle,/obj/item/weapon/reagent_containers/glass/beaker,/obj/item/weapon/reagent_containers/pill,/obj/item/weapon/storage/pill_bottle,/obj/item/weapon/paper)
+	allowed = list(/obj/item/analyzer,/obj/item/stack/medical,/obj/item/dnainjector,/obj/item/reagent_containers/dropper,/obj/item/reagent_containers/syringe,/obj/item/reagent_containers/hypospray,/obj/item/healthanalyzer,/obj/item/flashlight/pen,/obj/item/reagent_containers/glass/bottle,/obj/item/reagent_containers/glass/beaker,/obj/item/reagent_containers/pill,/obj/item/storage/pill_bottle,/obj/item/paper)
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 50, rad = 0)
 	icon = 'icons/vore/custom_clothes_yw.dmi'
 	icon_override = 'icons/vore/custom_onmob_yw.dmi'
@@ -907,7 +907,7 @@
 	var/hoodtype = null //so the chaplain hoodie or other hoodies can override this
 	var/suittoggled = 0
 	var/hooded = 0
-	action_button_name = "Toggle Hood"
+	actions_types = list(/datum/action/item_action/toggle_hood)
 	icon = 'icons/vore/custom_clothes_yw.dmi'
 	icon_override = 'icons/vore/custom_onmob_yw.dmi'
 
@@ -1045,7 +1045,7 @@
 	icon_state = "jiao_boots"
 	icon_override = 'icons/vore/custom_onmob_yw.dmi'
 
-/obj/item/weapon/storage/belt/medical/fluff/jiao_belt
+/obj/item/storage/belt/medical/fluff/jiao_belt
 	name = "Navy medical belt"
 	desc = "A customized medical belt to sport the navy colors of the Kanghu force."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
@@ -1104,7 +1104,7 @@
 
 //Saur Darastrix
 
-/obj/item/weapon/storage/backpack/dufflebag/fluff/saur_dufflebag
+/obj/item/storage/backpack/dufflebag/fluff/saur_dufflebag
 	name = "Saur's Dufflebag"
 	desc = "A large custom made dufflebag to fit snug between a pair of wings, fitted with custom purple straps and golden medical cross, with the name 'Saur Darastrix' written under it."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
@@ -1289,7 +1289,7 @@
 
 //Basir Fahim
 
-/obj/item/clothing/gloves/ring/fluff/basir
+/obj/item/clothing/accessory/ring/fluff/basir
 	name = "Sundancer Engagement Ring"
 	desc = "This ring is stylized to have an ornate sun, with a sample of phoron swirling around inside. Keep away from Fire! Inscribed along the band is a sentence in Siik; \"Always yours, my little frost-fire. With love. -Sheri\""
 	icon = 'icons/vore/custom_clothes_yw.dmi'
@@ -1380,7 +1380,7 @@
 /obj/item/accessory/fluff/kettek_collar/New()
 	..()
 	verbs |= /obj/item/accessory/fluff/kettek_collar/proc/change_color
-	color = "#"+get_random_colour()
+	color = get_random_colour()
 	update_icon()
 
 /obj/item/accessory/fluff/kettek_collar/proc/change_color()
@@ -1543,14 +1543,14 @@
 	siemens_coefficient = 0.9
 	armor = list(melee = 30, bullet = 20, laser = 20, energy = 20, bomb = 35, bio = 75, rad = 35) // Inferior to sec vests in bullet/laser but better for environmental protection.
 	allowed = list(
-		/obj/item/device/flashlight,
-		/obj/item/weapon/gun,
+		/obj/item/flashlight,
+		/obj/item/gun,
 		/obj/item/ammo_magazine,
-		/obj/item/weapon/melee,
-		/obj/item/weapon/material/knife,
-		/obj/item/weapon/tank,
-		/obj/item/device/radio,
-		/obj/item/weapon/pickaxe
+		/obj/item/melee,
+		/obj/item/material/knife,
+		/obj/item/tank,
+		/obj/item/radio,
+		/obj/item/pickaxe
 		)
 
 /obj/item/clothing/head/hood/mocha_hood
@@ -1591,7 +1591,7 @@
 // ******
 // Foxicide
 // ******
-/obj/item/weapon/storage/backpack/fluff/kaith
+/obj/item/storage/backpack/fluff/kaith
 	name = "Light duffle bag"
 	desc = "A compact duffle bag, meant for long hikes."
 	icon = 'icons/inventory/back/item.dmi'
@@ -1659,7 +1659,7 @@
 	icon_state = "avigoggles_i"
 	item_state = "avigoggles"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
-	action_button_name = "Flip Aviation Goggles"
+	actions_types = list(/datum/action/item_action/toggle_goggles)
 	item_flags = AIRTIGHT
 	var/up = 0
 
@@ -1703,7 +1703,7 @@
 	item_state = "kbraid_outfit_s"
 	body_parts_covered = UPPER_TORSO|ARMS|FEET
 	hoodtype = /obj/item/clothing/head/hood/kbraid_hood
-	action_button_name = "Toggle Headphones"
+	actions_types = list(/datum/action/item_action/toggle_hood)
 
 /obj/item/clothing/head/hood/kbraid_hood
 	name = "Earphones"

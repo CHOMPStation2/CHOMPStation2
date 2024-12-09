@@ -1,5 +1,5 @@
-var/static/list/mapped_autostrips = list()
-var/static/list/mapped_autostrips_mob = list()
+GLOBAL_LIST_EMPTY(mapped_autostrips)
+GLOBAL_LIST_EMPTY(mapped_autostrips_mob)
 
 /*
 This should actually be refactored if it ever needs to be used again into just being
@@ -35,7 +35,7 @@ But for now, for what it's been used for, it works.
 		H.forceMove(Mtarget.loc)
 	var/obj/locker = new /obj/structure/closet/secure_closet/mind(target.loc, mind_target = H.mind)
 	for(var/obj/item/W in H)
-		if(istype(W, /obj/item/weapon/implant/backup) || istype(W, /obj/item/device/nif))
+		if(istype(W, /obj/item/implant/backup) || istype(W, /obj/item/nif))
 			continue	//VOREStation Edit
 		if(H.drop_from_inventory(W))
 			W.forceMove(locker)
@@ -56,7 +56,7 @@ But for now, for what it's been used for, it works.
 				if(COLD_RESISTANCE)
 					mut = FIREBLOCK
 			if(mut)
-				new /obj/item/weapon/dnainjector/safe(locker, block_type = mut)
+				new /obj/item/dnainjector/safe(locker, block_type = mut)
 				H.dna.SetSEState(mut,0)
 		H.mutations = list()
 		H.disabilities = 0
@@ -68,14 +68,14 @@ But for now, for what it's been used for, it works.
 		H.species.equip_survival_gear(H)
 	H.equip_to_slot_or_del(new /obj/item/clothing/under/chameleon(H), slot_w_uniform)
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes)
-	H.equip_to_slot_or_del(new /obj/item/device/radio/headset(H),slot_l_ear)
+	H.equip_to_slot_or_del(new /obj/item/radio/headset(H),slot_l_ear)
 	H.equip_to_slot_or_del(new /obj/item/clothing/under/permit(H), slot_l_hand)
 
 
 /obj/effect/step_trigger/autostrip/proc/initMappedLink()
 	. = FALSE
-	target = mapped_autostrips[targetid]
-	Mtarget = mapped_autostrips_mob[targetid]
+	target = GLOB.mapped_autostrips[targetid]
+	Mtarget = GLOB.mapped_autostrips_mob[targetid]
 	if(target)
 		. = TRUE
 
@@ -93,11 +93,11 @@ But for now, for what it's been used for, it works.
 /obj/effect/autostriptarget/Initialize(mapload)
 	. = ..()
 	if(targetid)
-		mapped_autostrips[targetid] = src
+		GLOB.mapped_autostrips[targetid] = src
 
 /obj/effect/autostriptarget/mob
 	name = "Autostrip target to send mobs to."
 
 /obj/effect/autostriptarget/mob/Initialize(mapload)
 	if(targetid)
-		mapped_autostrips_mob[targetid] = src
+		GLOB.mapped_autostrips_mob[targetid] = src

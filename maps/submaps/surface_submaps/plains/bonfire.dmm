@@ -7,35 +7,35 @@
 /turf/template_noop,
 /area/submap/bonfire)
 "c" = (
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/virgo3b,
 /area/submap/bonfire)
 "d" = (
-/obj/item/weapon/flame/lighter/random,
+/obj/item/flame/lighter/random,
 /turf/template_noop,
 /area/submap/bonfire)
 "e" = (
-/obj/item/weapon/reagent_containers/food/drinks/bottle/orangejuice,
-/turf/simulated/floor/outdoors/dirt,
+/obj/item/reagent_containers/food/drinks/bottle/orangejuice,
+/turf/simulated/floor/outdoors/dirt/virgo3b,
 /area/submap/bonfire)
 "f" = (
-/obj/item/weapon/stool/padded,
-/turf/simulated/floor/outdoors/dirt,
+/obj/item/stool/padded,
+/turf/simulated/floor/outdoors/dirt/virgo3b,
 /area/submap/bonfire)
 "g" = (
 /obj/structure/bonfire/sifwood,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/virgo3b,
 /area/submap/bonfire)
 "h" = (
-/obj/item/weapon/material/knife/machete,
-/turf/simulated/floor/outdoors/dirt,
+/obj/item/material/knife/machete,
+/turf/simulated/floor/outdoors/dirt/virgo3b,
 /area/submap/bonfire)
 "i" = (
 /obj/item/clothing/head/helmet/material/makeshift,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/virgo3b,
 /area/submap/bonfire)
 "j" = (
 /obj/item/stack/material/log/sif,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/virgo3b,
 /area/submap/bonfire)
 
 (1,1,1) = {"

@@ -191,7 +191,7 @@ var/list/all_maps = list()
 
 // Boolean for if we should use SSnightshift night hours
 /datum/map/proc/get_nightshift()
-	return get_night(1) //Defaults to z1, customize however you want on your own maps
+	return get_night(5) //Defaults to z1, customize however you want on your own maps - CHOMPEdit - Sif is 5
 
 /datum/map/proc/setup_map()
 	return
@@ -227,6 +227,18 @@ var/list/all_maps = list()
 /datum/map/proc/cache_empty_zlevel(var/z)
 	if(z) // Else, it's not a valid z and we want to expunge it
 		empty_levels |= z
+
+//CHOMPAdd Start restricted map view
+/datum/map/proc/get_visible_map_levels(var/srcz, var/long_range = FALSE)
+	if (long_range && (srcz in contact_levels))
+		return contact_levels.Copy() - admin_levels
+	//If in station levels, return station levels
+	else if (srcz in station_levels)
+		return station_levels.Copy()
+	//Just give them back their zlevel
+	else
+		return list(srcz)
+//CHOMPAdd End
 
 // Get a list of 'nearby' or 'connected' zlevels.
 // You should at least return a list with the given z if nothing else.

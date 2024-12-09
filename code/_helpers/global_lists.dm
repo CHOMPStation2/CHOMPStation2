@@ -52,8 +52,9 @@ GLOBAL_LIST_INIT(custom_species_bases, new) // Species that can be used for a Cu
 	//Underwear
 var/datum/category_collection/underwear/global_underwear = new()
 
-	//Backpacks
-var/global/list/backbaglist = list("Nothing", "Backpack", "Satchel", "Satchel Alt", "Messenger Bag", "Sports Bag", "Strapless Satchel") //VOREStation edit
+	//Customizables
+GLOBAL_LIST_INIT(headsetlist, list("Standard","Bowman","Earbud"))
+var/global/list/backbaglist = list("Nothing", "Backpack", "Satchel", "Satchel Alt", "Messenger Bag", "Sports Bag", "Strapless Satchel")
 var/global/list/pdachoicelist = list("Default", "Slim", "Old", "Rugged", "Holographic", "Wrist-Bound","Slider", "Vintage")
 var/global/list/exclude_jobs = list(/datum/job/ai,/datum/job/cyborg)
 
@@ -293,7 +294,7 @@ GLOBAL_LIST_EMPTY(mannequins)
 
 	// Custom species icon bases
 	var/list/blacklisted_icons = list(SPECIES_CUSTOM,SPECIES_PROMETHEAN) //VOREStation Edit
-	var/list/whitelisted_icons = list(SPECIES_FENNEC,SPECIES_XENOHYBRID, SPECIES_SHADEKIN) //CHOMPedit
+	var/list/whitelisted_icons = list(SPECIES_FENNEC,SPECIES_XENOHYBRID,SPECIES_VOX,SPECIES_SHADEKIN) //CHOMPedit
 	for(var/species_name in GLOB.playable_species)
 		if(species_name in blacklisted_icons)
 			continue

@@ -37,9 +37,9 @@ Juke.setup({ file: import.meta.url }).then((code) => {
 const DME_NAME = 'vorestation';
 const CUTTER_SUFFIX = '.png.toml'
 
-// Stores the contents of _build_dependencies.sh as a key value pair
+// Stores the contents of dependencies.sh as a key value pair
 // Best way I could figure to get ahold of this stuff
-const dependencies = fs.readFileSync('_build_dependencies.sh', 'utf8')
+const dependencies = fs.readFileSync('dependencies.sh', 'utf8')
   .split("\n")
   .map((statement) => statement.replace("export", "").trim())
   .filter((value) => !(value == "" || value.startsWith("#")))
@@ -77,7 +77,7 @@ export const CiParameter = new Juke.Parameter({ type: 'boolean' });
 
 export const ForceRecutParameter = new Juke.Parameter({
   type: 'boolean',
-  name: "force_recut",
+  name: "force-recut",
 });
 
 export const WarningParameter = new Juke.Parameter({
@@ -158,7 +158,7 @@ export const IconCutterTarget = new Juke.Target({
     if(get(ForceRecutParameter))
       return [];
     const folders = [
-      ...Juke.glob(`icons/**/*${CUTTER_SUFFIX}`),
+      ...Juke.glob(`icons/**/*${CUTTER_SUFFIX}`, `modular_chomp/icons/**/*${CUTTER_SUFFIX}`),
     ];
     return folders
       .map((file) => file.replace(`${CUTTER_SUFFIX}`, '.dmi'));
@@ -181,9 +181,10 @@ export const DmMapsIncludeTarget = new Juke.Target({
       //...Juke.glob('_maps/RandomZLevels/**/*.dmm'),
       //...Juke.glob('_maps/shuttles/**/*.dmm'),
       //...Juke.glob('_maps/templates/**/*.dmm'),
-      ...Juke.glob('maps/southern_cross/**/*.dmm'),
-      ...Juke.glob('maps/submap/**/*.dmm'),
-
+      ...Juke.glob('modular_chomp/maps/soluna_nexus/**/*.dmm'),
+      ...Juke.glob('modular_chomp/maps/southern_cross/**/*.dmm'),
+      ...Juke.glob('modular_chomp/maps/relic_base/**/*.dmm'),
+      ...Juke.glob('modular_chomp/maps/submap/**/*.dmm'),
     ];
     const content = folders
       .map((file) => file.replace('_maps/', ''))
@@ -202,14 +203,19 @@ export const DmTarget = new Juke.Target({
   inputs: [
     '_maps/map_files/generic/**',
     'maps/**/*.dm',
-    'maps/southern_cross/**/*.dmm', // Placed here so it recompiles on map changes
-    'maps/submap/**/*.dmm', // Placed here so it recompiles on map changes
     'code/**',
     'html/**',
     'icons/**',
     'interface/**',
+    'sound/**',
     'modular_chomp/code/**',
     'modular_chomp/icons/**',
+    'modular_chomp/sound/**',
+    'modular_chomp/maps/**/*.dm',
+    'modular_chomp/maps/soluna_nexus/**/*.dmm', // Placed here so it recompiles on map changes
+    'modular_chomp/maps/southern_cross/**/*.dmm', // Placed here so it recompiles on map changes
+    'modular_chomp/maps/relic_base/**/*.dmm', // Placed here so it recompiles on map changes
+    'modular_chomp/maps/submap/**/*.dmm', // Placed here so it recompiles on map changes
     `${DME_NAME}.dme`,
     NamedVersionFile,
   ],
@@ -354,8 +360,8 @@ export const TguiTarget = new Juke.Target({
     'tgui/public/tgui.bundle.js',
     'tgui/public/tgui-panel.bundle.css',
     'tgui/public/tgui-panel.bundle.js',
-    //'tgui/public/tgui-say.bundle.css',
-    //'tgui/public/tgui-say.bundle.js',
+    'tgui/public/tgui-say.bundle.css',
+    'tgui/public/tgui-say.bundle.js',
   ],
   executes: () => yarn('tgui:build'),
 });
@@ -404,6 +410,20 @@ export const TguiAnalyzeTarget = new Juke.Target({
 export const TguiBenchTarget = new Juke.Target({
   dependsOn: [YarnTarget],
   executes: () => yarn('tgui:bench'),
+});
+
+export const TguiPrettierFix = new Juke.Target({
+  dependsOn: [YarnTarget],
+  executes: () => yarn('tgui:prettier-fix'),
+});
+
+export const TguiEslintFix = new Juke.Target({
+  dependsOn: [YarnTarget],
+  executes: () => yarn('tgui:eslint-fix'),
+});
+
+export const TguiFix = new Juke.Target({
+  dependsOn: [TguiPrettierFix, TguiEslintFix],
 });
 
 export const TestTarget = new Juke.Target({

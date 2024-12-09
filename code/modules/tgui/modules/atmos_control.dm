@@ -28,16 +28,15 @@
 				var/obj/machinery/alarm/alarm = locate(params["alarm"]) in (monitored_alarms.len ? monitored_alarms : machines)
 				if(alarm)
 					var/datum/tgui_state/TS = generate_state(alarm)
-					alarm.tgui_interact(usr, parent_ui = ui_ref, state = TS)
+					alarm.tgui_interact(ui.user, parent_ui = ui_ref, state = TS)
 			return 1
 		if("setZLevel")
 			ui.set_map_z_level(params["mapZLevel"])
 			return TRUE
 
 /datum/tgui_module/atmos_control/ui_assets(mob/user)
-	return list(
-		get_asset_datum(/datum/asset/simple/nanomaps),
-	)
+	. = ..()
+	. += get_asset_datum(/datum/asset/simple/nanomaps)
 
 /datum/tgui_module/atmos_control/tgui_interact(mob/user, datum/tgui/ui = null)
 	ui = SStgui.try_update_ui(user, src, ui)
@@ -51,7 +50,7 @@
 	. = ..()
 
 	var/z = get_z(user)
-	var/list/map_levels = using_map.get_map_levels(z)
+	var/list/map_levels = using_map.get_visible_map_levels(z) //CHOMPEdit
 
 	// TODO: Move these to a cache, similar to cameras
 	var/alarms[0]
@@ -68,12 +67,13 @@
 			"y" = alarm.y,
 			"z" = alarm.z)
 	.["alarms"] = alarms
+	.["zoomScale"] = world.maxx + world.maxy
 
 /datum/tgui_module/atmos_control/tgui_data(mob/user)
 	var/list/data = list()
 
 	var/z = get_z(user)
-	var/list/map_levels = using_map.get_map_levels(z)
+	var/list/map_levels = using_map.get_visible_map_levels(z) //CHOMPEdit
 	data["map_levels"] = map_levels
 
 	return data

@@ -14,6 +14,11 @@
 #define VANTAG_KIDNAP  "vantag_kidnap"
 #define VANTAG_KILL    "vantag_kill"
 
+// ColorMate states
+#define COLORMATE_TINT 1
+#define COLORMATE_HSV 2
+#define COLORMATE_MATRIX 3
+
 #define DEPARTMENT_OFFDUTY			"Off-Duty"
 
 #define ANNOUNCER_NAME "Facility PA"
@@ -34,11 +39,6 @@
 
 //Shuttle madness!
 #define SHUTTLE_CRASHED 3 // Yup that can happen now
-
-#define BLUE_SHIELDED 2 // Shield from bluespace teleportation (telescience)
-
-//Assistant/Visitor/Whatever
-#define USELESS_JOB "Visitor"
 
 //Herm Gender
 #define HERM "herm"

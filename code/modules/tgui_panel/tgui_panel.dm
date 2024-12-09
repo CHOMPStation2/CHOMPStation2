@@ -54,6 +54,7 @@
 	// Other setup
 	request_telemetry()
 	addtimer(CALLBACK(src, PROC_REF(on_initialize_timed_out)), 5 SECONDS)
+	window.send_message("testTelemetryCommand")
 
 /**
  * private
@@ -62,7 +63,7 @@
  */
 /datum/tgui_panel/proc/on_initialize_timed_out()
 	// Currently does nothing but sending a message to old chat.
-	// SEND_TEXT(client, "<span class=\"userdanger\">Failed to load fancy chat, click <a href='?src=[REF(src)];reload_tguipanel=1'>HERE</a> to attempt to reload it.</span>")
+	// SEND_TEXT(client, span_userdanger("Failed to load fancy chat, click <a href='?src=[REF(src)];reload_tguipanel=1'>HERE</a> to attempt to reload it."))
 
 /**
  * private
@@ -72,6 +73,7 @@
 /datum/tgui_panel/proc/on_message(type, payload)
 	if(type == "ready")
 		broken = FALSE
+		window.send_message("connected", list("round_id" = GLOB.round_id)) // Sends the round ID to the chat, requires round IDs
 		window.send_message("update", list(
 			"config" = list(
 				"client" = list(

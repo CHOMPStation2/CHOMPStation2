@@ -25,9 +25,9 @@
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
 	flags_inv = HIDEHOLSTER|HIDETIE
 	//hooded = 1 Variable no longer exists, hood is now handled by code/modules/clothing/suit/storage/hooded.dm
-	action_button_name = "Toggle Cloak Hood"
+	actions_types = list(/datum/action/item_action/toggle_hood)
 	hoodtype = /obj/item/clothing/head/tesh_hood
-	allowed = list (/obj/item/weapon/pen, /obj/item/weapon/paper, /obj/item/device/flashlight,/obj/item/weapon/tank/emergency/oxygen, /obj/item/weapon/storage/fancy/cigarettes, /obj/item/weapon/storage/box/matches, /obj/item/weapon/reagent_containers/food/drinks/flask)
+	allowed = list (/obj/item/pen, /obj/item/paper, /obj/item/flashlight,/obj/item/tank/emergency/oxygen, /obj/item/storage/fancy/cigarettes, /obj/item/storage/box/matches, /obj/item/reagent_containers/food/drinks/flask)
 
 /obj/item/clothing/head/tesh_hood
 	name = "Cloak Hood"

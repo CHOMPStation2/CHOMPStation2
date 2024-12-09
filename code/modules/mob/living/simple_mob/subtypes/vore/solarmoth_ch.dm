@@ -33,7 +33,7 @@
 
 	movement_cooldown = 5
 
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat/grubmeat
+	meat_type = /obj/item/reagent_containers/food/snacks/meat/grubmeat
 
 	response_help = "pokes"
 	response_disarm = "pushes"
@@ -68,7 +68,9 @@
 				"bio" = 100,
 				"rad" = 100)
 
-	can_be_drop_prey = FALSE //CHOMP Add
+	can_be_drop_prey = FALSE
+
+	glow_override = TRUE
 
 /datum/say_list/solarmoth
 	emote_see = list("flutters")
@@ -85,7 +87,7 @@
 			var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
 			s.set_up(5, 1, L)
 			s.start()
-			visible_message("<span class='danger'>The moth releases a powerful shock!</span>")
+			visible_message(span_danger("The moth releases a powerful shock!"))
 		else
 			if(L.reagents)
 				var/target_zone = pick(BP_TORSO,BP_TORSO,BP_TORSO,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_HEAD)
@@ -95,7 +97,7 @@
 // Does actual poison injection, after all checks passed.
 /mob/living/simple_mob/vore/solarmoth/proc/inject_poison(mob/living/L, target_zone)
 	if(prob(poison_chance))
-		to_chat(L, "<span class='warning'>You feel a small shock rushing through your veins.</span>")
+		to_chat(L, span_warning("You feel a small shock rushing through your veins."))
 		L.reagents.add_reagent(poison_type, poison_per_bite)
 
 /mob/living/simple_mob/vore/solarmoth/Life()
@@ -149,6 +151,8 @@
 	if(. == 0 && !is_dead())
 		set_light(9.5, 1, mycolour) //9.5 makes the brightness range super huge.
 		return 1
+	else if(is_dead())
+		glow_override = FALSE
 
 
 /mob/living/simple_mob/vore/solarmoth //active noms
@@ -185,7 +189,7 @@
 	if(prob(20))
 		for(var/obj/machinery/door/firedoor/door in range(14, src)) //double viewrange
 			if(prob(5))
-				visible_message("<span class='danger'>Emergency Shutter malfunction!</span>")
+				visible_message(span_danger("Emergency Shutter malfunction!"))
 				door.blocked = 0
 				door.open(1)
 

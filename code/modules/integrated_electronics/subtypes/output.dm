@@ -43,7 +43,7 @@
 	var/list/nearby_things = range(0, get_turf(src))
 	for(var/mob/M in nearby_things)
 		var/obj/O = assembly ? assembly : src
-		to_chat(M, "<span class='notice'>[icon2html(O,M.client)] [stuff_to_display]</span>")
+		to_chat(M, span_notice("[icon2html(O,M.client)] [stuff_to_display]"))
 
 /obj/item/integrated_circuit/output/screen/large
 	name = "large screen"
@@ -56,7 +56,7 @@
 /obj/item/integrated_circuit/output/screen/large/do_work()
 	..()
 	var/obj/O = assembly ? loc : assembly
-	O.visible_message("<span class='notice'>[icon2html(O,viewers(O))] [stuff_to_display]</span>")
+	O.visible_message(span_notice("[icon2html(O,viewers(O))] [stuff_to_display]"))
 
 /obj/item/integrated_circuit/output/light
 	name = "light"
@@ -80,7 +80,7 @@
 	//CHOMPEdit Begin
 	if(assembly)
 		var/atom/light_source = assembly
-		if(istype(assembly,/obj/item/device/electronic_assembly/clothing))
+		if(istype(assembly,/obj/item/electronic_assembly/clothing))
 			light_source = assembly.loc
 		if(light_toggled)
 			light_source.set_light(l_range = light_brightness, l_power = light_brightness, l_color = light_rgb)

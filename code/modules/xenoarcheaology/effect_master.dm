@@ -11,11 +11,15 @@
 		AddComponent(/datum/component/artifact_master)
 		if(istype(src, /obj/item))
 			var/obj/item/I = src
-			LAZYINITLIST(I.origin_tech)
-			if(prob(50))
-				I.origin_tech[TECH_PRECURSOR] += 1
+			var/list/new_tech
+			if(I.origin_tech)
+				new_tech = I.origin_tech.Copy()
 			else
-				I.origin_tech[TECH_ARCANE] += 1
+				new_tech = list()
+			if(prob(50))
+				new_tech[TECH_PRECURSOR] += 1
+			else
+				new_tech[TECH_ARCANE] += 1
 			var/rand_tech = pick(\
 				TECH_MATERIAL,\
 				TECH_ENGINEERING,\
@@ -28,7 +32,8 @@
 				TECH_DATA,\
 				TECH_ILLEGAL\
 				)
-			LAZYSET(I.origin_tech, rand_tech, rand(4,7))
+			LAZYSET(new_tech, rand_tech, rand(4,7))
+			I.origin_tech = new_tech
 
 /datum/component/artifact_master
 	var/atom/holder
@@ -103,7 +108,7 @@
 			my_effects += my_effect
 
 		else
-			to_chat(usr, "<span class='filter_notice'>This effect can not be applied to this atom type.</span>")
+			to_chat(usr, span_filter_notice("This effect can not be applied to this atom type."))
 			qdel(my_effect)
 
 /datum/component/artifact_master/proc/remove_effect()
@@ -232,7 +237,7 @@
 				warn = 1
 
 	if(warn && isliving(bumped))
-		to_chat(bumped, "<span class='filter_notice'><b>You accidentally touch \the [holder] as it hits you.</b></span>")
+		to_chat(bumped, span_filter_notice(span_bold("You accidentally touch \the [holder] as it hits you.")))
 
 /datum/component/artifact_master/proc/on_bumped()
 	var/atom/movable/M = args[2]
@@ -253,7 +258,7 @@
 				warn = 1
 
 	if(warn && isliving(M))
-		to_chat(M, "<span class='filter_notice'><b>You accidentally touch \the [holder].</b></span>")
+		to_chat(M, span_filter_notice(span_bold("You accidentally touch \the [holder].")))
 
 /datum/component/artifact_master/proc/on_attack_hand()
 	var/mob/living/user = args[2]
@@ -261,10 +266,10 @@
 		return
 
 	if (get_dist(user, holder) > 1)
-		to_chat(user, "<span class='filter_notice'>[span_red("You can't reach [holder] from here.")]</span>")
+		to_chat(user, span_filter_notice("[span_red("You can't reach [holder] from here.")]"))
 		return
 	if(ishuman(user) && user:gloves)
-		to_chat(user, "<span class='filter_notice'><b>You touch [holder]</b> with your gloved hands, [pick("but nothing of note happens","but nothing happens","but nothing interesting happens","but you notice nothing different","but nothing seems to have happened")].</span>")
+		to_chat(user, span_filter_notice(span_bold("You touch [holder]") + " with your gloved hands, [pick("but nothing of note happens","but nothing happens","but nothing interesting happens","but you notice nothing different","but nothing seems to have happened")]."))
 		return
 
 	var/triggered = FALSE
@@ -280,17 +285,17 @@
 			my_effect.DoEffectTouch(user)
 
 	if(triggered)
-		to_chat(user, "<span class='filter_notice'><b>You touch [holder].</b></span>")
+		to_chat(user, span_filter_notice(span_bold("You touch [holder].")))
 
 	else
-		to_chat(user, "<span class='filter_notice'><b>You touch [holder],</b> [pick("but nothing of note happens","but nothing happens","but nothing interesting happens","but you notice nothing different","but nothing seems to have happened")].</span>")
+		to_chat(user, span_filter_notice(span_bold("You touch [holder],") + " [pick("but nothing of note happens","but nothing happens","but nothing interesting happens","but you notice nothing different","but nothing seems to have happened")]."))
 
 
 /datum/component/artifact_master/proc/on_attackby()
-	var/obj/item/weapon/W = args[2]
+	var/obj/item/W = args[2]
 	for(var/datum/artifact_effect/my_effect in my_effects)
 
-		if (istype(W, /obj/item/weapon/reagent_containers))
+		if (istype(W, /obj/item/reagent_containers))
 			if(W.reagents.has_reagent("hydrogen", 1) || W.reagents.has_reagent("water", 1))
 				if(my_effect.trigger == TRIGGER_WATER)
 					my_effect.ToggleActivate()
@@ -303,16 +308,16 @@
 			else if(W.reagents.has_reagent("toxin", 1) || W.reagents.has_reagent("cyanide", 1) || W.reagents.has_reagent("amatoxin", 1) || W.reagents.has_reagent("neurotoxin", 1))
 				if(my_effect.trigger == TRIGGER_TOXIN)
 					my_effect.ToggleActivate()
-		else if(istype(W,/obj/item/weapon/melee/baton) && W:status ||\
-				istype(W,/obj/item/weapon/melee/energy) ||\
-				istype(W,/obj/item/weapon/melee/cultblade) ||\
-				istype(W,/obj/item/weapon/card/emag) ||\
-				istype(W,/obj/item/device/multitool))
+		else if(istype(W,/obj/item/melee/baton) && W:status ||\
+				istype(W,/obj/item/melee/energy) ||\
+				istype(W,/obj/item/melee/cultblade) ||\
+				istype(W,/obj/item/card/emag) ||\
+				istype(W,/obj/item/multitool))
 			if (my_effect.trigger == TRIGGER_ENERGY)
 				my_effect.ToggleActivate()
 
-		else if (istype(W,/obj/item/weapon/flame) && W:lit ||\
-				istype(W,/obj/item/weapon/weldingtool) && W:welding)
+		else if (istype(W,/obj/item/flame) && W:lit ||\
+				istype(W,/obj/item/weldingtool) && W:welding)
 			if(my_effect.trigger == TRIGGER_HEAT)
 				my_effect.ToggleActivate()
 		else

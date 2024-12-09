@@ -88,8 +88,6 @@ var/list/reverse_dir = list( // reverse_dir[dir] = reverse of dir
 )
 var/global/const/SQRT_TWO = 1.41421356237
 
-var/datum/configuration/config      = null
-
 var/list/combatlog = list()
 var/list/IClog     = list()
 var/list/OOClog    = list()
@@ -145,7 +143,8 @@ var/list/emergency_module_types = list(
 )
 // List of modules available to AI shells
 var/list/shell_module_types = list(
-	"Standard", "Service", "Clerical"
+	"Standard", "Engineering", "Surgeon", "Crisis",
+	"Miner", "Janitor", "Service", "Clerical", "Security", "Research"
 )
 // List of whitelisted modules
 var/list/whitelisted_module_types = list(
@@ -181,9 +180,9 @@ var/static/list/scarySounds = list(
 var/max_explosion_range = 14
 
 // Announcer intercom, because too much stuff creates an intercom for one message then hard del()s it.
-var/global/obj/item/device/radio/intercom/omni/global_announcer = new /obj/item/device/radio/intercom/omni(null)
+var/global/obj/item/radio/intercom/omni/global_announcer = new /obj/item/radio/intercom/omni(null)
 
-var/list/station_departments = list("Command", "Medical", "Engineering", "Science", "Security", "Cargo", "Exploration", "Civilian") //VOREStation Edit
+var/list/station_departments = list("Command", "Medical", "Engineering", "Research", "Security", "Cargo", "Exploration", "Civilian") //VOREStation Edit
 
 //Icons for in-game HUD glasses. Why don't we just share these a little bit?
 var/static/icon/ingame_hud = icon('icons/mob/hud.dmi')

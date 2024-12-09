@@ -40,7 +40,7 @@ function parseChangelogBody(lines, openTag) {
 		if (match) {
 			const [_, type, description] = match;
 
-			const entry = CHANGELOG_KEYS_TO_ENTRY[type];
+			const entry = CHANGELOG_KEYS_TO_ENTRY[type] || CHANGELOG_KEYS_TO_ENTRY["rscadd"];
 
 			if (entry.placeholders.includes(description)) {
 				continue;

@@ -16,35 +16,35 @@
 	has_laser_sprite = FALSE //Missing from the dmi
 	has_taser_sprite = FALSE //ditto
 
-// Tall sprites
-/*Upstream implemented
-/datum/robot_sprite/dogborg/tall/security
-	module_type = "Security"
-	sprite_icon = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi'
 
-/datum/robot_sprite/dogborg/raptor/security
-	module_type = "Security"
-	sprite_icon = 'modular_chomp/icons/mob/raptorborg/raptor.dmi'
+/datum/robot_sprite/dogborg/tall/security/dullahan
+	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_sec.dmi'
+	pixel_x = 0
 
-/datum/robot_sprite/dogborg/raptor/security/raptor
-	sprite_icon_state = "secraptor"
-
-/datum/robot_sprite/dogborg/tall/security/meka
-	sprite_icon_state = "mekasec"
+/datum/robot_sprite/dogborg/tall/security/dullahan/sec
+	name = "Dullahan"
+	sprite_icon_state = "dullahansec"
+	sprite_hud_icon_state = "k9"
+	has_laser_sprite = FALSE //Missing from the dmi
+	has_taser_sprite = FALSE //ditto
+	has_eye_light_sprites = TRUE
 	has_vore_belly_sprites = TRUE
-	has_sleeper_light_indicator = TRUE
 
-/datum/robot_sprite/dogborg/tall/security/mmeka
-	sprite_icon_state = "mmekasec"
+/datum/robot_sprite/dogborg/tall/security/dullahan/secalt
+	name = "Dullahan v2"
+	sprite_icon_state = "dullahansec_alt"
+	sprite_hud_icon_state = "k9"
+	has_laser_sprite = FALSE //Missing from the dmi
+	has_taser_sprite = FALSE //ditto
+	has_eye_light_sprites = TRUE
 	has_vore_belly_sprites = TRUE
-	has_sleeper_light_indicator = TRUE
 
-/datum/robot_sprite/dogborg/tall/security/fmeka
-	sprite_icon_state = "fmekasec"
+/datum/robot_sprite/dogborg/security/smolraptor
+	sprite_icon = 'modular_chomp/icons/mob/smallraptors/smolraptor_pk.dmi'
+
+/datum/robot_sprite/dogborg/security/smolraptor/sec
+	name = "Small Raptor"
+	sprite_icon_state = "smolraptor"
+	has_eye_light_sprites = TRUE
 	has_vore_belly_sprites = TRUE
-	has_sleeper_light_indicator = TRUE
-
-/datum/robot_sprite/dogborg/tall/security/k4t
-	sprite_icon_state = "k4tsec"
-	has_vore_belly_sprites = FALSE
-*/
+	rest_sprite_options = list("Default", "Sit")

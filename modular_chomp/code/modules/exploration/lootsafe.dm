@@ -12,16 +12,16 @@
 /obj/structure/closet/crate/secure/lootsafe/emag_act(var/remaining_charges, var/mob/user)
 	if (locked)
 		if(prob(60 - hackguard))
-			to_chat(user, "<span class='notice'>The safe unlocks!</span>")
+			to_chat(user, span_notice("The safe unlocks!"))
 			locked = 0
 			return 1
 		if(prob(15 + hackguard))
-			to_chat(user, "<span class='notice'>The safe buzzes as a security drone is teleported in!</span>")
+			to_chat(user, span_notice("The safe buzzes as a security drone is teleported in!"))
 			new /mob/living/simple_mob/mechanical/combat_drone (src.loc) //if I ever make security stun drones remind me to replace this with those
 			//new /effect/system/spark_spread (src.loc) I am to tired to make this work right now
 			return 1
 		else
-			to_chat(user, "<span class='notice'>The safe buzzes but the security systems don't trigger.</span>")
+			to_chat(user, span_notice("The safe buzzes but the security systems don't trigger."))
 			return 1
 
 //Loot for lootsafes
@@ -31,35 +31,35 @@
 		//pick a thing to add to the crate - the format is "list(filepath, value) = weight,"
 		var/choice = list()
 		choice = pickweight(list(
-			list(/obj/item/weapon/spacecash/c500, 3) = 5,
-			list(/obj/item/weapon/spacecash/c200, 3) = 5,
-			list(/obj/item/weapon/spacecash/c100, 3) = 5,
-			list(/obj/item/weapon/spacecash/c50, 3) = 5,
-			list(/obj/item/weapon/spacecash/c20, 3) = 5,
-			list(pick(/obj/item/device/multitool/alien,
+			list(/obj/item/spacecash/c500, 3) = 5,
+			list(/obj/item/spacecash/c200, 3) = 5,
+			list(/obj/item/spacecash/c100, 3) = 5,
+			list(/obj/item/spacecash/c50, 3) = 5,
+			list(/obj/item/spacecash/c20, 3) = 5,
+			list(pick(/obj/item/multitool/alien,
 				/obj/item/stack/cable_coil/alien,
-				/obj/item/weapon/tool/crowbar/alien,
-				/obj/item/weapon/tool/screwdriver/alien,
-				/obj/item/weapon/weldingtool/alien,
-				/obj/item/weapon/tool/wirecutters/alien,
-				/obj/item/weapon/tool/wrench/alien), 3) = 10,
+				/obj/item/tool/crowbar/alien,
+				/obj/item/tool/screwdriver/alien,
+				/obj/item/weldingtool/alien,
+				/obj/item/tool/wirecutters/alien,
+				/obj/item/tool/wrench/alien), 3) = 10,
 			list(/obj/item/seeds/random, 3) = 10,
-			list(pick(subtypesof(/obj/item/weapon/storage/firstaid)), 3) = 15,
-			list(/obj/item/weapon/grenade/flashbang/clusterbang, 3) = 10,
-			list(pick(subtypesof(/obj/item/weapon/stock_parts) - /obj/item/weapon/stock_parts/subspace), 3) = 5,
-			list(/obj/item/weapon/rig/ch/precursor, 3) = 5,
-			list(/obj/item/weapon/rig/combat, 3) = 15,
-			list(/obj/item/weapon/rig/merc, 3) = 10,
-			list(/obj/item/weapon/rig/internalaffairs, 3) = 10,
-			list(/obj/item/weapon/rig/baymed, 3) = 10,
-			list(/obj/item/weapon/gun/energy/vepr/plasma, 3) = 5,
-			list(/obj/item/weapon/gun/energy/laser/vepr, 3) = 5,
-			list(/obj/item/weapon/gun/projectile/automatic/l6_saw, 3) = 10,
-			list(/obj/item/weapon/gun/projectile/automatic/tommygun, 3) = 10,
-			list(/obj/item/weapon/holosign_creator/combifan, 3) = 15,
-			list(/obj/item/weapon/rcd, 3) = 15,
-			list(/obj/item/weapon/gun/energy/medigun, 3) = 10,
-			list(/obj/item/weapon/gun/energy/sickshot, 3) = 5,
+			list(pick(subtypesof(/obj/item/storage/firstaid)), 3) = 15,
+			list(/obj/item/grenade/flashbang/clusterbang, 3) = 10,
+			list(pick(subtypesof(/obj/item/stock_parts) - /obj/item/stock_parts/subspace), 3) = 5,
+			list(/obj/item/rig/ch/precursor, 3) = 5,
+			list(/obj/item/rig/combat, 3) = 15,
+			list(/obj/item/rig/merc, 3) = 10,
+			list(/obj/item/rig/internalaffairs, 3) = 10,
+			list(/obj/item/rig/baymed, 3) = 10,
+			list(/obj/item/gun/energy/vepr/plasma, 3) = 5,
+			list(/obj/item/gun/energy/laser/vepr, 3) = 5,
+			list(/obj/item/gun/projectile/automatic/l6_saw, 3) = 10,
+			list(/obj/item/gun/projectile/automatic/tommygun, 3) = 10,
+			list(/obj/item/holosign_creator/combifan, 3) = 15,
+			list(/obj/item/rcd, 3) = 15,
+			list(/obj/item/gun/energy/medigun, 3) = 10,
+			list(/obj/item/gun/energy/sickshot, 3) = 5,
 			list(/obj/item/slime_extract/purple, 3) = 10,
 			list(/obj/item/slime_extract/bluespace, 3) = 10,
 			list(/obj/item/slime_extract/blue, 3) = 10,
@@ -76,12 +76,12 @@
 			list(/obj/item/clothing/glasses/thermal, 3) = 10,
 			list(/obj/item/clothing/glasses/night, 3) = 15,
 			list(/obj/item/stack/material/void_opal, 3) = 5,
-			list(/obj/item/weapon/inducer/syndicate, 3) = 10,
-			list(/obj/item/weapon/melee/energy/axe, 3) = 10,
+			list(/obj/item/inducer/syndicate, 3) = 10,
+			list(/obj/item/melee/energy/axe, 3) = 10,
 			list(/obj/item/rig_module/chem_dispenser/ninja, 3) = 10,
 			list(/obj/item/rig_module/vision/multi, 3) = 5,
 			list(/obj/item/rig_module/mounted/energy_blade, 3) = 5,
-			list(/obj/item/device/perfect_tele, 3) = 15
+			list(/obj/item/perfect_tele, 3) = 15
 			))
 		var/path = choice[1]
 		var/value = choice[2]
@@ -117,7 +117,7 @@
 	if(!locked)
 		return
 
-	to_chat(user, "<span class='notice'>The crate is locked with a Deca-code lock.</span>")
+	to_chat(user, span_notice("The crate is locked with a Deca-code lock."))
 	var/input = tgui_input_text(usr, "Enter [codelen] digits. All digits must be unique.", "Deca-Code Lock", "")
 	if(!Adjacent(user))
 		return
@@ -131,16 +131,16 @@
 				sanitycheck = null //if a digit is repeated, reject the input
 
 	if(input == null || sanitycheck == null || length(input) != codelen)
-		to_chat(user, "<span class='notice'>You leave the crate alone.</span>")
+		to_chat(user, span_notice("You leave the crate alone."))
 	else if(check_input(input))
-		to_chat(user, "<span class='notice'>The crate unlocks!</span>")
+		to_chat(user, span_notice("The crate unlocks!"))
 		playsound(src, 'sound/machines/lockreset.ogg', 50, 1)
 		set_locked(0)
 	else
-		visible_message("<span class='warning'>A red light on \the [src]'s control panel flashes briefly.</span>")
+		visible_message(span_warning("A red light on \the [src]'s control panel flashes briefly."))
 		attempts--
 		if (attempts == 0)
-			to_chat(user, "<span class='danger'>The crate's anti-tamper system activates!</span>")
+			to_chat(user, span_danger("The crate's anti-tamper system activates!"))
 			var/turf/T = get_turf(src.loc)
 			explosion(T, 0, 0, 1, 2)
 			qdel(src)
@@ -157,14 +157,14 @@
 		if(guesschar != code[i])
 			. = 0
 
-/obj/structure/closet/crate/secure/lootsafe/numberlock/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/structure/closet/crate/secure/lootsafe/numberlock/attackby(obj/item/W as obj, mob/user as mob)
 	if(locked)
-		if (istype(W, /obj/item/device/multitool)) // Greetings Urist McProfessor, how about a nice game of cows and bulls?
-			to_chat(user, "<span class='notice'>DECA-CODE LOCK ANALYSIS:</span>")
+		if (istype(W, /obj/item/multitool)) // Greetings Urist McProfessor, how about a nice game of cows and bulls?
+			to_chat(user, span_notice("DECA-CODE LOCK ANALYSIS:"))
 			if (attempts == 1)
-				to_chat(user, "<span class='warning'>* Anti-Tamper system will activate on the next failed access attempt.</span>")
+				to_chat(user, span_warning("* Anti-Tamper system will activate on the next failed access attempt."))
 			else
-				to_chat(user, "<span class='notice'>* Anti-Tamper system will activate after [src.attempts] failed access attempts.</span>")
+				to_chat(user, span_notice("* Anti-Tamper system will activate after [src.attempts] failed access attempts."))
 			if(lastattempt.len)
 				var/bulls = 0
 				var/cows = 0
@@ -179,7 +179,7 @@
 				var/previousattempt = null //convert back to string for readback
 				for(var/i in 1 to codelen)
 					previousattempt = addtext(previousattempt, lastattempt[i])
-				to_chat(user, "<span class='notice'>Last code attempt, [previousattempt], had [bulls] correct digits at correct positions and [cows] correct digits at incorrect positions.</span>")
+				to_chat(user, span_notice("Last code attempt, [previousattempt], had [bulls] correct digits at correct positions and [cows] correct digits at incorrect positions."))
 			return
 	..()
 
@@ -195,7 +195,7 @@
 	var/attempts = 100
 	var/codelen = 10
 
-/obj/item/weapon/card/id/bosskey
+/obj/item/card/id/bosskey
 	name = "Strange ID"
 	desc = "A golden card which seems unnatural in nature."
 	icon_state = "gold-id"
@@ -219,7 +219,7 @@
 	if(!locked)
 		return
 
-	to_chat(user, "<span class='notice'>The crate is locked with a Deca-code lock.</span>")
+	to_chat(user, span_notice("The crate is locked with a Deca-code lock."))
 	var/input = tgui_input_text(usr, "Enter [codelen] digits. All digits must be unique.", "Deca-Code Lock", "")
 	if(!Adjacent(user))
 		return
@@ -233,16 +233,16 @@
 				sanitycheck = null //if a digit is repeated, reject the input
 
 	if(input == null || sanitycheck == null || length(input) != codelen)
-		to_chat(user, "<span class='notice'>You leave the crate alone.</span>")
+		to_chat(user, span_notice("You leave the crate alone."))
 	else if(check_input(input))
-		to_chat(user, "<span class='notice'>The crate unlocks!</span>")
+		to_chat(user, span_notice("The crate unlocks!"))
 		playsound(src, 'sound/machines/lockreset.ogg', 50, 1)
 		set_locked(0)
 	else
-		visible_message("<span class='warning'>A red light on \the [src]'s control panel flashes briefly.</span>")
+		visible_message(span_warning("A red light on \the [src]'s control panel flashes briefly."))
 		attempts--
 		if (attempts == 0)
-			to_chat(user, "<span class='danger'>The crate's anti-tamper system activates!</span>")
+			to_chat(user, span_danger("The crate's anti-tamper system activates!"))
 			var/turf/T = get_turf(src.loc)
 			explosion(T, 0, 0, 1, 2)
 			qdel(src)
@@ -259,14 +259,14 @@
 		if(guesschar != code[i])
 			. = 0
 
-/obj/structure/closet/crate/secure/lootsafe/devillock/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/structure/closet/crate/secure/lootsafe/devillock/attackby(obj/item/W as obj, mob/user as mob)
 	if(locked)
-		if (istype(W, /obj/item/device/multitool)) // Greetings Urist McProfessor, how about a nice game of cows and bulls?
-			to_chat(user, "<span class='notice'>DECA-CODE LOCK ANALYSIS:</span>")
+		if (istype(W, /obj/item/multitool)) // Greetings Urist McProfessor, how about a nice game of cows and bulls?
+			to_chat(user, span_notice("DECA-CODE LOCK ANALYSIS:"))
 			if (attempts == 1)
-				to_chat(user, "<span class='warning'>* Anti-Tamper system will activate on the next failed access attempt.</span>")
+				to_chat(user, span_warning("* Anti-Tamper system will activate on the next failed access attempt."))
 			else
-				to_chat(user, "<span class='notice'>* Anti-Tamper system will activate after [src.attempts] failed access attempts.</span>")
+				to_chat(user, span_notice("* Anti-Tamper system will activate after [src.attempts] failed access attempts."))
 			if(lastattempt.len)
 				var/bulls = 0
 				var/cows = 0
@@ -281,6 +281,6 @@
 				var/previousattempt = null //convert back to string for readback
 				for(var/i in 1 to codelen)
 					previousattempt = addtext(previousattempt, lastattempt[i])
-				to_chat(user, "<span class='notice'>Last code attempt, [previousattempt], had [bulls] correct digits at correct positions and [cows] correct digits at incorrect positions.</span>")
+				to_chat(user, span_notice("Last code attempt, [previousattempt], had [bulls] correct digits at correct positions and [cows] correct digits at incorrect positions."))
 			return
 	..()

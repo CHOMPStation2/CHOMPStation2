@@ -60,7 +60,7 @@
 	var/list/friends = list()		// Mobs on this list wont get attacked regardless of faction status.
 	var/harm_intent_damage = 3		// How much an unarmed harm click does to this mob.
 	var/list/loot_list = list()		// The list of lootable objects to drop, with "/path = prob%" structure
-	var/obj/item/weapon/card/id/myid// An ID card if they have one to give them access to stuff.
+	var/obj/item/card/id/myid// An ID card if they have one to give them access to stuff.
 	var/organ_names = /decl/mob_organ_names //'False' bodyparts that can be shown as hit by projectiles in place of the default humanoid bodyplan.
 
 	//Mob environment settings
@@ -176,12 +176,17 @@
 	var/injury_enrages = FALSE			// Do injuries enrage (aka strengthen) our mob? If yes, we'll interpret how hurt we are differently.
 	// VOREStation Add End
 
+	var/has_recoloured = FALSE
+	var/hunting_cooldown = 0
+	var/hasthermals = TRUE
+	var/isthermal = 0
+
 /mob/living/simple_mob/Initialize()
-	verbs -= /mob/verb/observe
+	remove_verb(src, /mob/verb/observe)
 	health = maxHealth
 
 	if(ID_provided) //VOREStation Edit
-		myid = new /obj/item/weapon/card/id(src)
+		myid = new /obj/item/card/id(src)
 		myid.access = myid_access.Copy()
 
 	for(var/L in has_langs)
@@ -193,12 +198,17 @@
 		add_eyes()
 
 	if(vore_active)	//CHOMPSTATION edit: Moved here so the verb is useable before initialising vorgans.
-		verbs |= /mob/living/simple_mob/proc/animal_nom
-		verbs |= /mob/living/proc/shred_limb
-	verbs |= /mob/living/simple_mob/proc/nutrition_heal //CHOMPSTATION edit
+		add_verb(src,/mob/living/simple_mob/proc/animal_nom) //CHOMPEdit TGPanel
+		add_verb(src,/mob/living/proc/shred_limb) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/proc/nutrition_heal) //CHOMPEdit TGPanel //CHOMPSTATION edit
 
 	if(organ_names)
 		organ_names = GET_DECL(organ_names)
+
+	if(CONFIG_GET(flag/allow_simple_mob_recolor))
+		add_verb(src, /mob/living/simple_mob/proc/ColorMate)
+
+	AddElement(/datum/element/footstep, FOOTSTEP_MOB_SHOE, 1, -6) // CHOMPEdit - Giving them all shoe footsteps FOR NOW until I go through all of them and give appropiate ones
 
 	return ..()
 
@@ -222,10 +232,12 @@
 //Client attached
 /mob/living/simple_mob/Login()
 	. = ..()
-	to_chat(src,"<b>You are \the [src].</b> [player_msg]")
+	to_chat(src,span_boldnotice("You are \the [src].") + " [player_msg]")
 	if(vore_active && !voremob_loaded) //CHOMPedit: On-demand belly loading.
 		voremob_loaded = TRUE
 		init_vore()
+	if(hasthermals)
+		add_verb(src, /mob/living/simple_mob/proc/hunting_vision) //So that maint preds can see prey through walls, to make it easier to find them.
 
 /mob/living/simple_mob/SelfMove(turf/n, direct, movetime)
 	var/turf/old_turf = get_turf(src)
@@ -281,15 +293,14 @@
 		. += injury_level
 	// VOREStation Edit Stop
 
-	. += config.animal_delay
+	. += CONFIG_GET(number/animal_delay)
 
 	. += ..()
 
-
-/mob/living/simple_mob/Stat()
-	..()
-	if(statpanel("Status") && show_stat_health)
-		stat(null, "Health: [round((health / getMaxHealth()) * 100)]%")
+/mob/living/simple_mob/get_status_tab_items()
+	. = ..()
+	. += ""
+	. += "Health: [round((health / getMaxHealth()) * 100)]%"
 
 /mob/living/simple_mob/lay_down()
 	..()
@@ -313,7 +324,7 @@
 	return mob_class & MOB_CLASS_HUMANOID|MOB_CLASS_ANIMAL|MOB_CLASS_SLIME // Update this if needed.
 
 /mob/living/simple_mob/get_nametag_desc(mob/user)
-	return "<i>[tt_desc]</i>"
+	return span_italics("[tt_desc]")
 
 /mob/living/simple_mob/make_hud_overlays()
 	hud_list[STATUS_HUD]  = gen_hud_image(buildmode_hud, src, "ai_0", plane = PLANE_BUILDMODE)
@@ -349,3 +360,43 @@
 	. = ..() 							// Calling parent here, actually updating our mob on how hurt we are.
 
 // VOREStation Add End
+
+/mob/living/simple_mob/proc/ColorMate()
+	set name = "Recolour"
+	set category = "Abilities.Settings"
+	set desc = "Allows to recolour once."
+
+	if(!has_recoloured)
+		var/datum/ColorMate/recolour = new /datum/ColorMate(usr)
+		recolour.tgui_interact(usr)
+		return
+	to_chat(usr, "You've already recoloured yourself once. You are only allowed to recolour yourself once during a around.")
+
+//Thermal vision adding
+
+/mob/living/simple_mob/proc/hunting_vision()
+	set name = "Track Prey Through Walls"
+	set category = "Abilities.Mob"
+	set desc = "Uses you natural predatory instincts to seek out prey even through walls, or your natural survival instincts to spot predators from a distance."
+
+	if(hunting_cooldown + 5 MINUTES < world.time)
+		to_chat(usr, "You can sense other creatures by focusing carefully on your surroundings.")
+		sight |= SEE_MOBS
+		hunting_cooldown = world.time
+		spawn(600)
+			to_chat(usr, "Your concentration wears off.")
+			sight -= SEE_MOBS
+	else if(hunting_cooldown + 5 MINUTES > world.time)
+		to_chat(usr, "You must wait for a while before using this again.")
+
+/mob/living/simple_mob/proc/hunting_vision_plus()
+	set name = "Thermal vision toggle"
+	set category = "Abilities.Mob"
+	set desc = "Uses you natural predatory instincts to seek out prey even through walls, or your natural survival instincts to spot predators from a distance."
+
+	if(!isthermal)
+		to_chat(usr, "You can sense other creatures by focusing carefully on your surroundings.")
+		sight |= SEE_MOBS
+	else
+		to_chat(usr, "You stop sensing creatures beyond the walls.")
+		sight -= SEE_MOBS

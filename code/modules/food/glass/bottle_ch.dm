@@ -1,4 +1,4 @@
-/obj/item/weapon/reagent_containers/glass/bottle/sorbitol
+/obj/item/reagent_containers/glass/bottle/sorbitol
 	name = "sorbitol bottle"
 	desc = "A small bottle of sorbitol. Sickeningly sweet."
 	icon = 'icons/obj/chemical.dmi'

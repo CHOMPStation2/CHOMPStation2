@@ -1,4 +1,4 @@
-/obj/item/weapon/rig/ch/crystal
+/obj/item/rig/ch/crystal
 	name = "crystal control module"
 	desc = "An oddly lightweight rigsuit from a strange crystaline creature."
 	suit_type = "crystal hardsuit"

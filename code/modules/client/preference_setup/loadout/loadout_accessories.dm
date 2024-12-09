@@ -27,17 +27,16 @@
 
 /datum/gear/accessory/wallet
 	display_name = "wallet, orange"
-	path = /obj/item/weapon/storage/wallet/random
+	path = /obj/item/storage/wallet/random
 
 /datum/gear/accessory/wallet_poly
 	display_name = "wallet, polychromic"
-	path = /obj/item/weapon/storage/wallet/poly
+	path = /obj/item/storage/wallet/poly
 	cost = 0 //VOREStation Edit
-
 
 /datum/gear/accessory/wallet/womens
 	display_name = "wallet, womens"
-	path = /obj/item/weapon/storage/wallet/womens
+	path = /obj/item/storage/wallet/womens
 	cost = 0 //VOREStation Edit
 
 /datum/gear/accessory/wallet/womens/New()
@@ -46,7 +45,7 @@
 
 /datum/gear/accessory/clutch
 	display_name = "clutch bag"
-	path = /obj/item/weapon/storage/briefcase/clutch
+	path = /obj/item/storage/briefcase/clutch
 	cost = 2
 
 /datum/gear/accessory/clutch/New()
@@ -55,7 +54,7 @@
 
 /datum/gear/accessory/purse
 	display_name = "purse"
-	path = /obj/item/weapon/storage/backpack/purse
+	path = /obj/item/storage/backpack/purse
 	cost = 3
 
 /datum/gear/accessory/purse/New()
@@ -75,16 +74,26 @@
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(wcoats))
 
 /datum/gear/accessory/holster
-	display_name = "holster selection (Security, CD, HoP)"
+	display_name = "holster selection"
+	description = "Select from a number of general-purpose handgun holsters, or a baton lanyard."
 	path = /obj/item/clothing/accessory/holster
-	allowed_roles = list("Site Manager", "Head of Personnel", "Security Officer", "Warden", "Head of Security","Detective", "Blueshield Guard","Security Pilot") //YW ADDITIONS
+	allowed_roles = list(JOB_SITE_MANAGER, JOB_HEAD_OF_PERSONNEL, JOB_SECURITY_OFFICER, JOB_WARDEN, JOB_HEAD_OF_SECURITY,JOB_DETECTIVE,JOB_TALON_CAPTAIN,JOB_TALON_GUARD,JOB_BLUESHIELD_GUARD,JOB_SECURITY_PILOT) //YW ADDITIONS
 
 /datum/gear/accessory/holster/New()
 	..()
-	var/list/holsters = list()
-	for(var/obj/item/clothing/accessory/holster_type as anything in typesof(/obj/item/clothing/accessory/holster))
-		holsters[initial(holster_type.name)] = holster_type
-	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(holsters))
+	var/list/selector_holsters = list(
+		"holster"=/obj/item/clothing/accessory/holster,
+		"armpit holster, brown"=/obj/item/clothing/accessory/holster/armpit,
+		"armpit holster, black"=/obj/item/clothing/accessory/holster/armpit/black,
+		"waist holster, brown"=/obj/item/clothing/accessory/holster/waist,
+		"waist holster, black"=/obj/item/clothing/accessory/holster/waist/black,
+		"hip holster, brown"=/obj/item/clothing/accessory/holster/hip,
+		"hip holster, black"=/obj/item/clothing/accessory/holster/hip/black,
+		"leg holster, brown"=/obj/item/clothing/accessory/holster/leg,
+		"leg holster, black"=/obj/item/clothing/accessory/holster/leg/black,
+		"baton lanyard"=/obj/item/clothing/accessory/holster/waist/lanyard
+	)
+	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(selector_holsters))
 
 /datum/gear/accessory/tie
 	display_name = "tie selection"
@@ -147,52 +156,43 @@
 	display_name = "suit vest"
 	path = /obj/item/clothing/accessory/vest
 
-/datum/gear/accessory/brown_vest
-	display_name = "webbing, brown"
-	path = /obj/item/clothing/accessory/storage/brown_vest
-//	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor", "Search and Rescue","Blueshield Guard","Security Pilot") // CHOMPedit: Anyone can use.
+/datum/gear/accessory/webbing
+	display_name = "webbing, simple"
+	path = /obj/item/clothing/accessory/storage/webbing
+	cost = 1
 
-/datum/gear/accessory/black_vest
-	display_name = "webbing, black"
-	path = /obj/item/clothing/accessory/storage/black_vest
-//	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor", "Search and Rescue","Blueshield Guard","Security Pilot") // CHOMPedit: Anyone can use.
+/datum/gear/accessory/webbing_selector
+	display_name = "webbing selector"
+	description = "Select from a number of load-bearing webbings and vests. Includes the bluespace badge."
+	path = /obj/item/clothing/accessory/storage/bluespace
+	cost = 2
 
-/datum/gear/accessory/white_vest
-	display_name = "webbing, white"
-	path = /obj/item/clothing/accessory/storage/white_vest
-//	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor", "Search and Rescue","Blueshield Guard","Security Pilot") // CHOMPedit: Anyone can use.
-
-/datum/gear/accessory/brown_drop_pouches
-	display_name = "drop pouches, brown"
-	path = /obj/item/clothing/accessory/storage/brown_drop_pouches
-//	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor", "Search and Rescue","Blueshield Guard","Security Pilot") // CHOMPedit: Anyone can use.
-
-/datum/gear/accessory/black_drop_pouches
-	display_name = "drop pouches, black"
-	path = /obj/item/clothing/accessory/storage/black_drop_pouches
-//	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor", "Search and Rescue","Blueshield Guard","Security Pilot") // CHOMPedit: Anyone can use.
-
-/datum/gear/accessory/white_drop_pouches
-	display_name = "drop pouches, white"
-	path = /obj/item/clothing/accessory/storage/white_drop_pouches
-//	allowed_roles = list("Engineer","Atmospheric Technician","Chief Engineer","Security Officer","Detective","Head of Security","Warden","Paramedic","Chief Medical Officer","Medical Doctor", "Search and Rescue","Blueshield Guard","Security Pilot") // CHOMPedit: Anyone can use.
+/datum/gear/accessory/webbing_selector/New()
+	..()
+	var/list/selector_loadbearinggear = list(
+		"webbing vest, brown"=/obj/item/clothing/accessory/storage/brown_vest,
+		"webbing vest, black"=/obj/item/clothing/accessory/storage/black_vest,
+		"webbing vest, white"=/obj/item/clothing/accessory/storage/white_vest,
+		"drop pouches, brown"=/obj/item/clothing/accessory/storage/brown_drop_pouches,
+		"drop pouches, black"=/obj/item/clothing/accessory/storage/black_drop_pouches,
+		"drop pouches, white"=/obj/item/clothing/accessory/storage/white_drop_pouches,
+		"bluespace badge"=/obj/item/clothing/accessory/storage/bluespace,
+		"pilot's harness"=/obj/item/clothing/accessory/storage/webbing/pilot1,
+		"pilot's harness, alt"=/obj/item/clothing/accessory/storage/webbing/pilot2
+	)
+	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(selector_loadbearinggear))
 
 /datum/gear/accessory/fannypack
 	display_name = "fannypack selection"
 	cost = 2
-	path = /obj/item/weapon/storage/belt/fannypack
+	path = /obj/item/storage/belt/fannypack
 
 /datum/gear/accessory/fannypack/New()
 	..()
 	var/list/fannys = list()
-	for(var/obj/item/weapon/storage/belt/fannypack/fanny_type as anything in typesof(/obj/item/weapon/storage/belt/fannypack))
+	for(var/obj/item/storage/belt/fannypack/fanny_type as anything in typesof(/obj/item/storage/belt/fannypack))
 		fannys[initial(fanny_type.name)] = fanny_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(fannys))
-
-/datum/gear/accessory/webbing
-	display_name = "webbing, simple"
-	path = /obj/item/clothing/accessory/storage/webbing
-	cost = 2
 
 /datum/gear/accessory/chaps
 	display_name = "chaps, brown"
@@ -250,7 +250,7 @@
 /datum/gear/accessory/stethoscope
 	display_name = "stethoscope"
 	path = /obj/item/clothing/accessory/stethoscope
-	allowed_roles = list("Chief Medical Officer","Medical Doctor","Chemist","Psychiatrist","Paramedic", "Search and Rescue")
+	allowed_roles = list(JOB_CHIEF_MEDICAL_OFFICER,JOB_MEDICAL_DOCTOR,JOB_CHEMIST,JOB_PSYCHIATRIST,JOB_PARAMEDIC,JOB_TALON_DOCTOR)
 
 /datum/gear/accessory/locket
 	display_name = "locket"
@@ -308,7 +308,7 @@
 	gear_tweaks += new/datum/gear_tweak/path(hawaiian_shirts)
 
 /datum/gear/accessory/cowboy_vest
-	display_name = "cowboy selection"
+	display_name = "cowboy vest selection"
 	path = /obj/item/clothing/accessory/cowboy_vest
 
 /datum/gear/accessory/cowboy_vest/New()
@@ -335,18 +335,18 @@
 /datum/gear/accessory/badge
 	display_name = "sheriff badge (Security)"
 	path = /obj/item/clothing/accessory/badge/holo/sheriff
-	allowed_roles = list("Security Officer","Detective","Head of Security","Warden")
+	allowed_roles = list(JOB_SECURITY_OFFICER,JOB_DETECTIVE,JOB_HEAD_OF_SECURITY,JOB_WARDEN)
 
 /datum/gear/accessory/corpbadge
 	display_name = "investigator holobadge (IAA)"
 	path = /obj/item/clothing/accessory/badge/holo/investigator
-	allowed_roles = list("Internal Affairs Agent")
+	allowed_roles = list(JOB_INTERNAL_AFFAIRS_AGENT)
 
 /datum/gear/accessory/pressbadge
 	display_name = "corporate press pass"
 	path = /obj/item/clothing/accessory/badge/press
 
-/datum/gear/accessory/pressbadge
+/datum/gear/accessory/pressbadge_freelance
 	display_name = "freelance press pass"
 	path = /obj/item/clothing/accessory/badge/press/independent
 
@@ -360,16 +360,221 @@
 
 /datum/gear/accessory/wristband_collection
 	display_name = "wristbands (selection)"
-	path = /obj/item/clothing/accessory/wristbandcollection
+	path = /obj/item/clothing/accessory/wristband/collection
 
 /datum/gear/accessory/wristband_collection/New()
 	..()
 	var/list/wristband_lists = list(
-	"Green, Blue and Yellow" = /obj/item/clothing/accessory/wristbandcollection,
-	"Pink, Black and Red" = /obj/item/clothing/accessory/wristbandcollection/pink,
-	"Red and Orange" = /obj/item/clothing/accessory/wristbandcollection/les,
-	"White, Pink and Blue" = /obj/item/clothing/accessory/wristbandcollection/trans,
-	"Blue, Purple and Pink" = /obj/item/clothing/accessory/wristbandcollection/bi,
-	"Black, White and Grey" = /obj/item/clothing/accessory/wristbandcollection/ace
+	"Green, Blue and Yellow" = /obj/item/clothing/accessory/wristband/collection,
+	"Pink, Black and Red" = /obj/item/clothing/accessory/wristband/collection/pink,
+	"Red and Orange" = /obj/item/clothing/accessory/wristband/collection/les,
+	"White, Pink and Blue" = /obj/item/clothing/accessory/wristband/collection/trans,
+	"Blue, Purple and Pink" = /obj/item/clothing/accessory/wristband/collection/bi,
+	"Black, White and Grey" = /obj/item/clothing/accessory/wristband/collection/ace,
+	"Spiked" = /obj/item/clothing/accessory/wristband/spiked
 	)
 	gear_tweaks += new/datum/gear_tweak/path(wristband_lists)
+
+// Collars
+
+/datum/gear/choker //A colorable choker
+	display_name = "choker (colorable, tagless)"
+	path = /obj/item/clothing/accessory/choker
+	slot = slot_tie
+	sort_category = "Accessories"
+
+/datum/gear/choker/New()
+	..()
+	gear_tweaks += gear_tweak_free_color_choice
+
+/datum/gear/collar
+	display_name = "collar, silver"
+	path = /obj/item/clothing/accessory/collar/silver
+	slot = slot_tie
+	sort_category = "Accessories"
+
+/datum/gear/collar/New()
+	..()
+	gear_tweaks += gear_tweak_collar_tag
+
+/datum/gear/collar/golden
+	display_name = "collar, golden"
+	path = /obj/item/clothing/accessory/collar/gold
+
+/datum/gear/collar/bell
+	display_name = "collar, bell"
+	path = /obj/item/clothing/accessory/collar/bell
+
+/datum/gear/collar/shock
+	display_name = "collar, shock"
+	path = /obj/item/clothing/accessory/collar/shock
+
+/datum/gear/collar/spike
+	display_name = "collar, spike"
+	path = /obj/item/clothing/accessory/collar/spike
+
+/datum/gear/collar/pink
+	display_name = "collar, pink"
+	path = /obj/item/clothing/accessory/collar/pink
+
+/datum/gear/collar/cowbell
+	display_name = "collar, cowbell"
+	path = /obj/item/clothing/accessory/collar/cowbell
+
+/datum/gear/collar/planet_earth
+	display_name = "collar, planet"
+	path = /obj/item/clothing/accessory/collar/collarplanet_earth
+
+/datum/gear/collar/holo
+	display_name = "collar, holo"
+	path = /obj/item/clothing/accessory/collar/holo
+
+/datum/gear/collar/holo/indigestible
+	display_name = "collar, holo (indigestible)"
+	path = /obj/item/clothing/accessory/collar/holo/indigestible
+
+/datum/gear/accessory/khcrystal
+	display_name = "KH Life Crystal"
+	path = /obj/item/storage/box/khcrystal
+	description = "A small necklace device that will notify an offsite cloning facility should you expire after activating it."
+
+/datum/gear/accessory/tronket
+	display_name = "metal necklace"
+	description = "A shiny steel chain with a vague metallic object dangling off it."
+	path = /obj/item/clothing/accessory/tronket
+
+/datum/gear/accessory/pilotpin
+	display_name = "pilot qualification pin"
+	description = "An iron pin denoting the qualification to fly spacecraft in most areas of civilized space."
+	path = /obj/item/clothing/accessory/solgov/specialty/pilot
+
+/datum/gear/accessory/flops
+	display_name = "drop straps"
+	description = "Wearing suspenders over shoulders? That's been so out for centuries and you know better."
+	path = /obj/item/clothing/accessory/flops
+
+/datum/gear/accessory/flops/New()
+	..()
+	gear_tweaks += gear_tweak_free_color_choice
+
+/datum/gear/accessory/dosimeter
+	display_name = "Dosimeter"
+	path = /obj/item/storage/box/dosimeter
+	description = "A small device that will warn the bearer when they are exposed to dangerous levels of radiation."
+
+/*
+Talon pin
+*/
+/datum/gear/accessory/talonpin
+	display_name = "Talon pin"
+	description = "A small enamel pin of the Talon logo."
+	path = /obj/item/clothing/accessory/talon
+
+//Rat badge
+
+/datum/gear/accessory/altevian_badge
+	display_name = "altevian badge"
+	path = /obj/item/clothing/accessory/altevian_badge
+
+/datum/gear/accessory/maid_neck
+	display_name = "maid neck cover"
+	path = /obj/item/clothing/accessory/maid_neck
+
+/datum/gear/accessory/maid_corset
+	display_name = "maid corset"
+	path = /obj/item/clothing/accessory/maidcorset
+
+//Antediluvian accessories
+/datum/gear/accessory/antediluvian
+	display_name = "antediluvian bracers"
+	path = /obj/item/clothing/accessory/antediluvian
+
+/datum/gear/accessory/antediluvian/loin
+	display_name = "antediluvian loincloth"
+	path = /obj/item/clothing/accessory/antediluvian/loincloth
+
+//Replikant accessories
+
+/datum/gear/accessory/sleekpatch
+	display_name = "sleek uniform patch"
+	path = /obj/item/clothing/accessory/sleekpatch
+
+/datum/gear/accessory/poncho/roles/cloak/custom/gestaltjacket
+	display_name = "sleek uniform jacket"
+	path = /obj/item/clothing/accessory/poncho/roles/cloak/custom/gestaltjacket
+
+/datum/gear/accessory/replika
+	display_name = "replikant vest selection"
+	path = /obj/item/clothing/accessory/replika
+
+/datum/gear/accessory/replika/New()
+	..()
+	var/list/replika_vests = list(
+	"controller replikant chestplate" = /obj/item/clothing/accessory/replika/klbr,
+	"combat-engineer replikant chestplate" = /obj/item/clothing/accessory/replika/lstr,
+	"security-controller replikant chestplate" = /obj/item/clothing/accessory/replika/stcr,
+	"security-technician replikant chestplate" = /obj/item/clothing/accessory/replika/star
+	)
+	gear_tweaks += new/datum/gear_tweak/path(replika_vests)
+
+/datum/gear/accessory/insignia
+	display_name = "Insignia Selection"
+	path = /obj/item/clothing/accessory/solgov/department
+
+/datum/gear/accessory/insignia/New()
+	..()
+	var/insignia = list(
+	"Command - Crew" = /obj/item/clothing/accessory/solgov/department/command,
+	"Command - Crew Short" = /obj/item/clothing/accessory/solgov/department/command/service,
+	"Command - Bands" = /obj/item/clothing/accessory/solgov/department/command/fleet,
+	"Command - Echelons" = /obj/item/clothing/accessory/solgov/department/command/army,
+	"Security - Crew" = /obj/item/clothing/accessory/solgov/department/security,
+	"Security - Crew Short" = /obj/item/clothing/accessory/solgov/department/security/service,
+	"Security - Bands" = /obj/item/clothing/accessory/solgov/department/security/fleet,
+	"Security - Echelons" = /obj/item/clothing/accessory/solgov/department/security/army,
+	"Medical - Crew" = /obj/item/clothing/accessory/solgov/department/medical,
+	"Medical - Crew Short" = /obj/item/clothing/accessory/solgov/department/medical/service,
+	"Medical - Bands" = /obj/item/clothing/accessory/solgov/department/medical/fleet,
+	"Medical - Echelons" = /obj/item/clothing/accessory/solgov/department/medical/army,
+	"Science - Crew" = /obj/item/clothing/accessory/solgov/department/research,
+	"Science - Crew Short" = /obj/item/clothing/accessory/solgov/department/research/service,
+	"Science - Bands" = /obj/item/clothing/accessory/solgov/department/research/fleet,
+	"Science - Echelons" = /obj/item/clothing/accessory/solgov/department/research/army,
+	"Engineering - Crew" = /obj/item/clothing/accessory/solgov/department/engineering,
+	"Engineering - Crew Short" = /obj/item/clothing/accessory/solgov/department/engineering/service,
+	"Engineering - Bands" = /obj/item/clothing/accessory/solgov/department/engineering/fleet,
+	"Engineering - Echelons" = /obj/item/clothing/accessory/solgov/department/engineering/army,
+	"Supply - Crew" = /obj/item/clothing/accessory/solgov/department/supply,
+	"Supply - Crew Short" = /obj/item/clothing/accessory/solgov/department/supply/service,
+	"Supply - Bands" = /obj/item/clothing/accessory/solgov/department/supply/fleet,
+	"Supply - Echelons" = /obj/item/clothing/accessory/solgov/department/supply/army,
+	"Service - Crew" = /obj/item/clothing/accessory/solgov/department/service,
+	"Service - Crew Short" = /obj/item/clothing/accessory/solgov/department/service/service,
+	"Service - Bands" = /obj/item/clothing/accessory/solgov/department/service/fleet,
+	"Service - Echelons" = /obj/item/clothing/accessory/solgov/department/service/army
+	)
+	gear_tweaks += new/datum/gear_tweak/path(insignia)
+
+/datum/gear/accessory/belt_selection
+	display_name = "belts (selection, colorable)"
+	path = /obj/item/clothing/accessory/belt
+
+/datum/gear/accessory/belt_selection/New()
+	..()
+	var/list/wristband_lists = list(
+	"Thin Belt" = /obj/item/clothing/accessory/belt,
+	"Thick Belt" = /obj/item/clothing/accessory/belt/thick,
+	"Strap Belt" = /obj/item/clothing/accessory/belt/strap,
+	"Studded Belt" = /obj/item/clothing/accessory/belt/studded
+	)
+	gear_tweaks += new/datum/gear_tweak/path(wristband_lists)
+	gear_tweaks += gear_tweak_free_color_choice
+
+/datum/gear/accessory/bunny_tail
+	display_name = "bunny tail, colorable"
+	path = /obj/item/clothing/accessory/bunny_tail
+
+/datum/gear/accessory/bunny_tail/New()
+	..()
+	gear_tweaks += gear_tweak_free_color_choice
+

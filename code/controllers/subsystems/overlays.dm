@@ -1,3 +1,5 @@
+//CHOMPEDIT -- this file is no longer ticked. See overlays_ch.dm for the new overlays subsystem.
+
 SUBSYSTEM_DEF(overlays)
 	name = "Overlay"
 	flags = SS_TICKER
@@ -27,14 +29,14 @@ SUBSYSTEM_DEF(overlays)
 		atom.flags &= ~OVERLAY_QUEUED
 		CHECK_TICK
 
-
-/datum/controller/subsystem/overlays/Initialize(timeofday)
+//CHOMPEdit Begin
+/datum/controller/subsystem/overlays/Initialize()
 	fire(FALSE, TRUE)
-	..()
+	return SS_INIT_SUCCESS
 
-/datum/controller/subsystem/overlays/stat_entry()
-	..("Queued Atoms: [queue.len], Cache Size: [cache_size]")
-
+/datum/controller/subsystem/overlays/stat_entry(msg)
+	msg = "Queued Atoms: [queue.len], Cache Size: [cache_size]"
+	return ..()
 
 /datum/controller/subsystem/overlays/fire(resumed, no_mc_tick)
 	var/count = 1

@@ -94,7 +94,7 @@
 		silent = 0
 		deaf_loop.stop() // CHOMPStation Add: Ear Ringing/Deafness - Not sure if we need this, but, safety.
 	else				//ALIVE. LIGHTS ARE ON
-		if( !container && (health < config.health_threshold_dead || ((world.time - timeofhostdeath) > config.revival_brain_life)) )
+		if( !container && (health < CONFIG_GET(number/health_threshold_dead) || ((world.time - timeofhostdeath) > CONFIG_GET(number/revival_brain_life))) )
 			death()
 			blinded = 1
 			silent = 0
@@ -102,7 +102,7 @@
 
 		//Handling EMP effect in the Life(), it's made VERY simply, and has some additional effects handled elsewhere
 		if(emp_damage)			//This is pretty much a damage type only used by MMIs, dished out by the emp_act
-			if(!(container && istype(container, /obj/item/device/mmi)))
+			if(!(container && istype(container, /obj/item/mmi)))
 				emp_damage = 0
 			else
 				emp_damage = round(emp_damage,1)//Let's have some nice numbers to work with

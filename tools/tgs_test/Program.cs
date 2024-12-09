@@ -89,8 +89,8 @@ try
 
 	Console.WriteLine($".tgs.yml Security level: {tgsYml.Security}");
 
-	Console.WriteLine("Downloading and checking BYOND version in _build_dependencies.sh...");
-	var dependenciesShContent = await gitHubClient.Repository.Content.GetRawContentByRef(repoOwner, repoName, "_build_dependencies.sh", pushedCommitHash);
+	Console.WriteLine("Downloading and checking BYOND version in dependencies.sh...");
+	var dependenciesShContent = await gitHubClient.Repository.Content.GetRawContentByRef(repoOwner, repoName, "dependencies.sh", pushedCommitHash);
 	var dependenciesSh = Encoding.UTF8.GetString(dependenciesShContent);
 	var dependenciesShLines = dependenciesSh.Split(new char[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
 
@@ -112,7 +112,7 @@ try
 	var dependenciesByondVersion = new Version(dependenciesShByondMajor, dependenciesShByondMinor);
 	if(dependenciesByondVersion != targetByondVersion)
 	{
-		Console.WriteLine($".tgs.yml BYOND version does not match _build_dependencies.sh! Expected {dependenciesByondVersion} got {targetByondVersion}!");
+		Console.WriteLine($".tgs.yml BYOND version does not match dependencies.sh! Expected {dependenciesByondVersion} got {targetByondVersion}!");
 		return 5;
 	}
 
@@ -197,8 +197,6 @@ try
 		{
 			Origin = new Uri($"http://github.com/{repoSlug}"),
 			UpdateSubmodules = true,
-			AccessUser = "Testing",
-			AccessToken = gitHubToken
 		},
 		default);
 

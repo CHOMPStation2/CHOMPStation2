@@ -8,9 +8,9 @@
 	desc = "Fire a crippling beam to hold down your enemies or prey."
 
 	hud_state = "const_beam"
-	spell_obj = /obj/item/weapon/spell/construct/projectile/crippling_beam
+	spell_obj = /obj/item/spell/construct/projectile/crippling_beam
 
-/obj/item/weapon/spell/construct/projectile/crippling_beam
+/obj/item/spell/construct/projectile/crippling_beam
 	name = "Crippling Beam"
 	icon_state = "generic"
 	desc = "Your manipulators fire crippling beam of dense light."
@@ -37,7 +37,7 @@
 	impact_type = /obj/effect/projectile/impact/laser_omni
 
 /obj/item/projectile/beam/crippling_beam/proc/bang(var/mob/living/carbon/M)
-	to_chat(M, "<span class='danger'>You hear a loud roar.</span>")
+	to_chat(M, span_danger("You hear a loud roar."))
 	playsound(src, 'sound/effects/bang.ogg', 50, 1)
 	var/ear_safety = 0
 	ear_safety = M.get_ear_protection()
@@ -52,14 +52,14 @@
 		M.ear_deaf = max(M.ear_deaf,15)
 		M.deaf_loop.start()
 	if (M.ear_damage >= 15)
-		to_chat(M, "<span class='danger'>Your ears start to ring badly!</span>")
+		to_chat(M, span_danger("Your ears start to ring badly!"))
 		if (prob(M.ear_damage - 5))
-			to_chat(M, "<span class='danger'>You can't hear anything!</span>")
+			to_chat(M, span_danger("You can't hear anything!"))
 			M.sdisabilities |= DEAF
 			M.deaf_loop.start()
 	else
 		if (M.ear_damage >= 5)
-			to_chat(M, "<span class='danger'>Your ears start to ring!</span>")
+			to_chat(M, span_danger("Your ears start to ring!"))
 	M.update_icons()
 
 /obj/item/projectile/beam/crippling_beam/on_hit(var/atom/target)
@@ -71,9 +71,9 @@
 	desc = "Fire a searing beam of light, banishing unholy foes."
 
 	hud_state = "const_beam"
-	spell_obj = /obj/item/weapon/spell/construct/projectile/banishment
+	spell_obj = /obj/item/spell/construct/projectile/banishment
 
-/obj/item/weapon/spell/construct/projectile/banishment
+/obj/item/spell/construct/projectile/banishment
 	name = "banishment"
 	icon_state = "generic"
 	desc = "Your manipulators fire searing beams of light."
@@ -122,9 +122,9 @@
 	desc = "Fire a beam of kinetic energy to force back troublemakers."
 
 	hud_state = "const_beam"
-	spell_obj = /obj/item/weapon/spell/construct/projectile/force_beam
+	spell_obj = /obj/item/spell/construct/projectile/force_beam
 
-/obj/item/weapon/spell/construct/projectile/force_beam
+/obj/item/spell/construct/projectile/force_beam
 	name = "force_beam"
 	icon_state = "generic"
 	desc = "Your manipulators fire a condensed beam of kinetic energy."
@@ -166,19 +166,19 @@
 	charge_max = 100
 
 	hud_state = "const_harvest"
-	spell_obj = /obj/item/weapon/spell/construct/spawner/soothing_sphere
+	spell_obj = /obj/item/spell/construct/spawner/soothing_sphere
 
-/obj/item/weapon/spell/construct/spawner/soothing_sphere
+/obj/item/spell/construct/spawner/soothing_sphere
 	name = "sphere of soothing"
 	desc = "Call forth a portal to a dimension of soothing energies at your target."
 
 	spawner_type = /obj/effect/temporary_effect/pulse/soothing_sphere
 
-/obj/item/weapon/spell/construct/spawner/soothing_sphere/on_ranged_cast(atom/hit_atom, mob/user)
+/obj/item/spell/construct/spawner/soothing_sphere/on_ranged_cast(atom/hit_atom, mob/user)
 	if(within_range(hit_atom) && pay_energy(10))
 		..()
 
-/obj/item/weapon/spell/construct/spawner/soothing_sphere/on_throw_cast(atom/hit_atom, mob/user)
+/obj/item/spell/construct/spawner/soothing_sphere/on_throw_cast(atom/hit_atom, mob/user)
 	pay_energy(5)
 	if(isliving(hit_atom))
 		var/mob/living/L = hit_atom
@@ -208,8 +208,8 @@
 	name = "soothe"
 	desc = "Your body is soothed of pain."
 
-	on_created_text = "<span class='notice'>A blue lightning quickly covers your body. Pain quickly fading.</span>"
-	on_expired_text = "<span class='notice'>The lightning fades, and so too does the ongoing soothing of pain.</span>"
+	on_created_text = span_notice("A blue lightning quickly covers your body. Pain quickly fading.")
+	on_expired_text = span_notice("The lightning fades, and so too does the ongoing soothing of pain.")
 
 	stacks = MODIFIER_STACK_EXTEND
 
@@ -221,7 +221,7 @@
 			var/mob/living/carbon/human/H = holder
 			H.apply_effect(-20, AGONY)
 			if(prob(10))
-				to_chat(H, "<span class='warning'>It feels so comforting!</span>")
+				to_chat(H, span_warning("It feels so comforting!"))
 
 ////////////////////////////
 //	Purity Construct - Priest - Spells
@@ -234,9 +234,9 @@
 	charge_max = 100
 
 	hud_state = "const_mend"
-	spell_obj = /obj/item/weapon/spell/construct/mend_purity
+	spell_obj = /obj/item/spell/construct/mend_purity
 
-/obj/item/weapon/spell/construct/mend_purity
+/obj/item/spell/construct/mend_purity
 	name = "Mend Purity"
 	desc = "Mend the wounds of constructs or living beings overtime."
 	icon_state = "mend_wounds"
@@ -246,7 +246,7 @@
 	light_power = -2
 	light_on = TRUE
 
-/obj/item/weapon/spell/construct/mend_purity/on_melee_cast(atom/hit_atom, mob/living/user, def_zone)
+/obj/item/spell/construct/mend_purity/on_melee_cast(atom/hit_atom, mob/living/user, def_zone)
 	if(isliving(hit_atom))
 		var/mob/living/L = hit_atom
 		L.add_modifier(/datum/modifier/mend_purity, 150)
@@ -256,8 +256,8 @@
 	name = "holy mending"
 	desc = "Your body is mending, rejoice!"
 
-	on_created_text = "<span class='notice'>A holy light envelops your body as it begins to mend.</span>"
-	on_expired_text = "<span class='notice'>The cloak of unease dissipates.</span>"
+	on_created_text = span_notice("A holy light envelops your body as it begins to mend.")
+	on_expired_text = span_notice("The cloak of unease dissipates.")
 
 	stacks = MODIFIER_STACK_EXTEND
 
@@ -288,7 +288,7 @@
 
 				for(var/obj/item/organ/E in H.bad_external_organs)
 					var/obj/item/organ/external/affected = E
-					if((affected.damage < affected.min_broken_damage * config.organ_health_multiplier) && (affected.status & ORGAN_BROKEN))
+					if((affected.damage < affected.min_broken_damage * CONFIG_GET(number/organ_health_multiplier)) && (affected.status & ORGAN_BROKEN)) // CHOMPEdit
 						affected.status &= ~ORGAN_BROKEN
 
 					for(var/datum/wound/W in affected.wounds)
@@ -300,7 +300,7 @@
 				if(iscultist(H))
 					H.apply_effect(100, AGONY)//it will heal cultists but purity really doesn't like them so causes much pain
 				if(prob(10))
-					to_chat(H, "<span class='danger'>It feels as though your body is being torn apart!</span>")
+					to_chat(H, span_danger("It feels as though your body is being torn apart!"))
 			L.updatehealth()
 
 /spell/targeted/purity_repair_aura
@@ -329,8 +329,8 @@
 	name = "aura of repair (purity)"
 	desc = "You are emitting a field of strange energy, capable of repairing constructs."
 
-	on_created_text = "<span class='notice'>You begin emitting an purity repair aura.</span>"
-	on_expired_text = "<span class='notice'>The purity repair aura fades.</span>"
+	on_created_text = span_notice("You begin emitting an purity repair aura.")
+	on_expired_text = span_notice("The purity repair aura fades.")
 	stacks = MODIFIER_STACK_EXTEND
 
 /datum/modifier/repair_aura_purity/tick()

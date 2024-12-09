@@ -400,8 +400,8 @@
 	icon = 'icons/turf/wall_masks_eris.dmi'
 	icon_state = "generic"
 	wall_masks = 'icons/turf/wall_masks_eris.dmi'
-	var/list/blend_objects = list(/obj/machinery/door)
-	var/list/noblend_objects = list(/obj/machinery/door/window, /obj/machinery/door/firedoor)
+	var/static/list/blend_objects = list(/obj/machinery/door) //CHOMPEdit convert to static list
+	var/static/list/noblend_objects = list(/obj/machinery/door/window, /obj/machinery/door/firedoor) //CHOMPEdit convert to static list
 
 /turf/simulated/wall/eris/can_join_with_low_wall(var/obj/structure/low_wall/WF)
 	return istype(WF, /obj/structure/low_wall/eris)
@@ -437,8 +437,8 @@
 	icon = 'icons/turf/wall_masks_bay.dmi'
 	icon_state = "generic"
 	wall_masks = 'icons/turf/wall_masks_bay.dmi'
-	var/list/blend_objects = list(/obj/machinery/door)
-	var/list/noblend_objects = list(/obj/machinery/door/window, /obj/machinery/door/firedoor)
+	var/static/list/blend_objects = list(/obj/machinery/door) //CHOMPEdit convert to static list
+	var/static/list/noblend_objects = list(/obj/machinery/door/window, /obj/machinery/door/firedoor) //CHOMPEdit convert to static list
 
 	var/stripe_color // Adds a colored stripe to the walls
 
@@ -485,8 +485,8 @@
 	wall_masks = 'icons/turf/wall_masks_tgmc.dmi' // not really a MASK per-se, I guess
 	icon_state = "metal0"
 
-	var/list/blend_objects = list(/obj/machinery/door)
-	var/list/noblend_objects = list(/obj/machinery/door/window, /obj/machinery/door/firedoor)
+	var/static/list/blend_objects = list(/obj/machinery/door) //CHOMPEdit convert to static list
+	var/static/list/noblend_objects = list(/obj/machinery/door/window, /obj/machinery/door/firedoor) //CHOMPEdit convert to static list
 
 	var/wall_base_state = "metal"
 	var/wall_blend_category = "metal"

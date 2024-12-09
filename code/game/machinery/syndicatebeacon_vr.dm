@@ -1,7 +1,7 @@
 //  Virgo modified syndie beacon, does not give objectives
 
 /obj/machinery/syndicate_beacon/virgo/attack_hand(var/mob/user as mob)
-	usr.set_machine(src)
+	user.set_machine(src)
 	var/dat = "<font color=#005500><i>Scanning [pick("retina pattern", "voice print", "fingerprints", "dna sequence")]...<br>Identity confirmed,<br></i></font>"
 	if(istype(user, /mob/living/carbon/human) || istype(user, /mob/living/silicon/ai))
 		if(is_special_character(user))
@@ -25,14 +25,14 @@
 			updateUsrDialog()
 			return
 		var/mob/M = locate(href_list["traitormob"])
-		if(M.mind.tcrystals > 0 || jobban_isbanned(M, "Syndicate"))
+		if(M.mind.tcrystals > 0 || jobban_isbanned(M, JOB_SYNDICATE))
 			temptext = "<i>We have no need for you at this time. Have a pleasant day.</i><br>"
 			updateUsrDialog()
 			return
 		charges -= 1
 		if(istype(M, /mob/living/carbon/human))
 			var/mob/living/carbon/human/N = M
-			to_chat(N, "<B>Access granted, here are the supplies!</B>")
+			to_chat(N, span_infoplain(span_bold("Access granted, here are the supplies!")))
 			traitors.spawn_uplink(N)
 			N.mind.tcrystals = DEFAULT_TELECRYSTAL_AMOUNT
 			N.mind.accept_tcrystals = 1

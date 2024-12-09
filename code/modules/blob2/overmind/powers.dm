@@ -1,6 +1,6 @@
 /mob/observer/blob/proc/can_buy(cost = 15)
 	if(blob_points < cost)
-		to_chat(src, "<span class='warning'>You cannot afford this, you need at least [cost] resources!</span>")
+		to_chat(src, span_warning("You cannot afford this, you need at least [cost] resources!"))
 		return FALSE
 	add_points(-cost)
 	return TRUE
@@ -19,20 +19,20 @@
 	var/obj/structure/blob/B = (locate(/obj/structure/blob) in T)
 
 	if(!B)
-		to_chat(src, "<span class='warning'>There is no blob here!</span>")
+		to_chat(src, span_warning("There is no blob here!"))
 		return
 
 	if(B.overmind != src)
-		to_chat(src, span("warning", "This blob isn't controlled by you."))
+		to_chat(src, span_warning("This blob isn't controlled by you."))
 
 	if(!istype(B, /obj/structure/blob/normal))
-		to_chat(src, "<span class='warning'>Unable to use this blob, find a normal one.</span>")
+		to_chat(src, span_warning("Unable to use this blob, find a normal one."))
 		return
 
 	if(nearEquals)
 		for(var/obj/structure/blob/L in orange(nearEquals, T))
 			if(L.type == blobType)
-				to_chat(src, "<span class='warning'>There is a similar blob nearby, move more than [nearEquals] tiles away from it!</span>")
+				to_chat(src, span_warning("There is a similar blob nearby, move more than [nearEquals] tiles away from it!"))
 				return
 
 	if(!can_buy(price))
@@ -56,7 +56,7 @@
 	set desc = "Create a resource tower which will generate resources for you."
 
 	if(!blob_type.can_build_resources)
-		return TRUE
+		return FALSE
 
 	createSpecial(40, blob_type.resource_type, 4, 1)
 
@@ -66,7 +66,7 @@
 	set desc = "Automatically places a resource tower near a node or your core, at a sufficent distance."
 
 	if(!blob_type.can_build_resources)
-		return TRUE
+		return FALSE
 
 	var/obj/structure/blob/B = null
 	var/list/potential_blobs = GLOB.all_blobs.Copy()
@@ -99,7 +99,7 @@
 	set desc = "Create a spore tower that will spawn spores to harass your enemies."
 
 	if(!blob_type.can_build_factories)
-		return TRUE
+		return FALSE
 
 	createSpecial(60, blob_type.factory_type, 7, 1)
 
@@ -109,7 +109,7 @@
 	set desc = "Automatically places a resource tower near a node or your core, at a sufficent distance."
 
 	if(!blob_type.can_build_factories)
-		return TRUE
+		return FALSE
 
 	var/obj/structure/blob/B = null
 	var/list/potential_blobs = GLOB.all_blobs.Copy()
@@ -143,7 +143,7 @@
 	set desc = "Create a node, which will expand blobs around it, and power nearby factory and resource blobs."
 
 	if(!blob_type.can_build_nodes)
-		return TRUE
+		return FALSE
 
 	createSpecial(100, blob_type.node_type, 5, 0)
 
@@ -153,7 +153,7 @@
 	set desc = "Automatically places a node blob at a sufficent distance."
 
 	if(!blob_type.can_build_nodes)
-		return TRUE
+		return FALSE
 
 	var/obj/structure/blob/B = null
 	var/list/potential_blobs = GLOB.all_blobs.Copy()
@@ -197,7 +197,7 @@
 				break
 
 	if(!B)
-		to_chat(src, "<span class='warning'>There is no blob cardinally adjacent to the target tile!</span>")
+		to_chat(src, span_warning("There is no blob cardinally adjacent to the target tile!"))
 		return
 
 	if(!can_buy(4))
@@ -216,23 +216,31 @@
 	for(var/mob/living/L in view(src))
 		if(L.stat == DEAD)
 			continue // Already dying or dead.
-		if(L.faction == blob_type.faction)
-			continue // No friendly fire.
-		if(locate(/obj/structure/blob) in L.loc)
-			continue // Already has a blob over them.
+		if(can_attack(L))
+			potential_targets += L
 
-		var/obj/structure/blob/B = null
-		for(var/direction in cardinal)
-			var/turf/T = get_step(L, direction)
-			B = locate(/obj/structure/blob) in T
-			if(B && B.overmind == src)
-				break
-		if(!B)
-			continue
-
-		potential_targets += L
+	for(var/obj/mecha/M in view(src))
+		if(!M.occupant)
+			continue // Just a hunk of metal
+		if(can_attack(M.occupant))
+			potential_targets += M
 
 	if(potential_targets.len)
 		var/mob/living/victim = pick(potential_targets)
 		var/turf/T = get_turf(victim)
 		expand_blob(T)
+
+/mob/observer/blob/proc/can_attack(var/mob/living/L)
+	if(!istype(L))
+		return FALSE
+	if(L.faction == blob_type.faction)
+		return FALSE // No friendly fire.
+	if(locate(/obj/structure/blob) in get_turf(L))
+		return FALSE // Already has a blob over them.
+
+	for(var/direction in cardinal)
+		var/turf/T = get_step(L, direction)
+		var/obj/structure/blob/B = locate(/obj/structure/blob) in T
+		if(B && B.overmind == src)
+			return TRUE
+	return FALSE

@@ -1,63 +1,830 @@
-"a" = (/turf/template_noop,/area/template_noop)
-"b" = (/obj/item/stack/rods,/turf/simulated/floor/airless,/area/submap/debris3)
-"c" = (/obj/item/trash/popcorn,/turf/template_noop,/area/submap/debris3)
-"d" = (/obj/item/device/nif/bad,/turf/simulated/floor/airless,/area/submap/debris3)
-"e" = (/obj/item/stack/arcadeticket/thirty,/turf/template_noop,/area/submap/debris3)
-"f" = (/obj/structure/lattice,/obj/item/stack/material/steel,/turf/template_noop,/area/submap/debris3)
-"g" = (/obj/item/weapon/paperplane,/turf/template_noop,/area/submap/debris3)
-"h" = (/obj/item/device/nif/bad,/turf/template_noop,/area/submap/debris3)
-"i" = (/obj/item/stack/rods,/turf/template_noop,/area/submap/debris3)
-"k" = (/obj/item/weapon/material/shard,/turf/template_noop,/area/submap/debris3)
-"l" = (/obj/item/stack/cable_coil{amount = 10},/turf/simulated/floor/airless,/area/submap/debris3)
-"m" = (/turf/simulated/wall,/area/submap/debris3)
-"n" = (/obj/item/stack/material/glass,/turf/template_noop,/area/submap/debris3)
-"o" = (/obj/item/stack/material/wood,/turf/simulated/floor/airless,/area/submap/debris3)
-"p" = (/obj/random/plushie,/turf/template_noop,/area/submap/debris3)
-"q" = (/obj/item/stack/rods,/obj/item/stack/material/steel,/turf/template_noop,/area/submap/debris3)
-"t" = (/obj/machinery/computer/arcade/battle,/turf/simulated/floor/tiled/asteroid_steel/airless,/area/submap/debris3)
-"u" = (/obj/random/tool,/turf/template_noop,/area/submap/debris3)
-"v" = (/obj/item/trash/syndi_cakes,/turf/template_noop,/area/submap/debris3)
-"w" = (/obj/item/stack/arcadeticket,/turf/template_noop,/area/submap/debris3)
-"x" = (/obj/structure/bookcase{name = "bookcase (Adult)"},/turf/simulated/floor/airless,/area/submap/debris3)
-"y" = (/obj/item/stack/material/steel,/turf/simulated/floor/airless,/area/submap/debris3)
-"z" = (/turf/simulated/floor/airless,/area/submap/debris3)
-"A" = (/obj/structure/sign/poster/nanotrasen{dir = 1},/turf/simulated/wall,/area/submap/debris3)
-"B" = (/obj/item/weapon/paper,/turf/template_noop,/area/submap/debris3)
-"D" = (/obj/item/weapon/paper,/obj/item/weapon/paper,/turf/template_noop,/area/submap/debris3)
-"F" = (/obj/random/tool,/turf/simulated/floor/airless,/area/submap/debris3)
-"G" = (/turf/template_noop,/area/submap/debris3)
-"H" = (/obj/item/stack/material/wood,/turf/template_noop,/area/submap/debris3)
-"I" = (/obj/item/stack/rods,/obj/item/stack/rods,/turf/template_noop,/area/submap/debris3)
-"J" = (/obj/item/trash/pistachios,/turf/template_noop,/area/submap/debris3)
-"K" = (/obj/structure/lattice,/obj/structure/girder,/turf/template_noop,/area/submap/debris3)
-"L" = (/obj/structure/girder,/turf/template_noop,/area/submap/debris3)
-"M" = (/obj/item/stack/material/steel,/turf/template_noop,/area/submap/debris3)
-"N" = (/obj/structure/lattice,/turf/simulated/floor/airless,/area/submap/debris3)
-"O" = (/obj/structure/girder/displaced,/turf/template_noop,/area/submap/debris3)
-"S" = (/obj/structure/lattice,/turf/template_noop,/area/submap/debris3)
-"U" = (/obj/item/stack/material/wood,/obj/item/stack/material/wood,/turf/simulated/floor/airless,/area/submap/debris3)
-"V" = (/obj/item/weapon/circuitboard/arcade,/turf/template_noop,/area/submap/debris3)
-"Z" = (/obj/item/weapon/paper,/turf/simulated/floor/airless,/area/submap/debris3)
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/template_noop,
+/area/template_noop)
+"b" = (
+/obj/item/stack/rods,
+/turf/simulated/floor/airless,
+/area/submap/debris3)
+"c" = (
+/obj/item/trash/popcorn,
+/turf/template_noop,
+/area/submap/debris3)
+"d" = (
+/obj/item/nif/bad,
+/turf/simulated/floor/airless,
+/area/submap/debris3)
+"e" = (
+/obj/item/stack/arcadeticket/thirty,
+/turf/template_noop,
+/area/submap/debris3)
+"f" = (
+/obj/structure/lattice,
+/obj/item/stack/material/steel,
+/turf/template_noop,
+/area/submap/debris3)
+"g" = (
+/obj/item/paperplane,
+/turf/template_noop,
+/area/submap/debris3)
+"h" = (
+/obj/item/nif/bad,
+/turf/template_noop,
+/area/submap/debris3)
+"i" = (
+/obj/item/stack/rods,
+/turf/template_noop,
+/area/submap/debris3)
+"k" = (
+/obj/item/material/shard,
+/turf/template_noop,
+/area/submap/debris3)
+"l" = (
+/obj/item/stack/cable_coil{
+	amount = 10
+	},
+/turf/simulated/floor/airless,
+/area/submap/debris3)
+"m" = (
+/turf/simulated/wall,
+/area/submap/debris3)
+"n" = (
+/obj/item/stack/material/glass,
+/turf/template_noop,
+/area/submap/debris3)
+"o" = (
+/obj/item/stack/material/wood,
+/turf/simulated/floor/airless,
+/area/submap/debris3)
+"p" = (
+/obj/random/plushie,
+/turf/template_noop,
+/area/submap/debris3)
+"q" = (
+/obj/item/stack/rods,
+/obj/item/stack/material/steel,
+/turf/template_noop,
+/area/submap/debris3)
+"t" = (
+/obj/machinery/computer/arcade/battle,
+/turf/simulated/floor/tiled/asteroid_steel/airless,
+/area/submap/debris3)
+"u" = (
+/obj/random/tool,
+/turf/template_noop,
+/area/submap/debris3)
+"v" = (
+/obj/item/trash/syndi_cakes,
+/turf/template_noop,
+/area/submap/debris3)
+"w" = (
+/obj/item/stack/arcadeticket,
+/turf/template_noop,
+/area/submap/debris3)
+"x" = (
+/obj/structure/bookcase{
+	name = "bookcase (Adult)"
+	},
+/turf/simulated/floor/airless,
+/area/submap/debris3)
+"y" = (
+/obj/item/stack/material/steel,
+/turf/simulated/floor/airless,
+/area/submap/debris3)
+"z" = (
+/turf/simulated/floor/airless,
+/area/submap/debris3)
+"A" = (
+/obj/structure/sign/poster/nanotrasen{
+	dir = 1
+	},
+/turf/simulated/wall,
+/area/submap/debris3)
+"B" = (
+/obj/item/paper,
+/turf/template_noop,
+/area/submap/debris3)
+"D" = (
+/obj/item/paper,
+/obj/item/paper,
+/turf/template_noop,
+/area/submap/debris3)
+"F" = (
+/obj/random/tool,
+/turf/simulated/floor/airless,
+/area/submap/debris3)
+"G" = (
+/turf/template_noop,
+/area/submap/debris3)
+"H" = (
+/obj/item/stack/material/wood,
+/turf/template_noop,
+/area/submap/debris3)
+"I" = (
+/obj/item/stack/rods,
+/obj/item/stack/rods,
+/turf/template_noop,
+/area/submap/debris3)
+"J" = (
+/obj/item/trash/pistachios,
+/turf/template_noop,
+/area/submap/debris3)
+"K" = (
+/obj/structure/lattice,
+/obj/structure/girder,
+/turf/template_noop,
+/area/submap/debris3)
+"L" = (
+/obj/structure/girder,
+/turf/template_noop,
+/area/submap/debris3)
+"M" = (
+/obj/item/stack/material/steel,
+/turf/template_noop,
+/area/submap/debris3)
+"N" = (
+/obj/structure/lattice,
+/turf/simulated/floor/airless,
+/area/submap/debris3)
+"O" = (
+/obj/structure/girder/displaced,
+/turf/template_noop,
+/area/submap/debris3)
+"S" = (
+/obj/structure/lattice,
+/turf/template_noop,
+/area/submap/debris3)
+"U" = (
+/obj/item/stack/material/wood,
+/obj/item/stack/material/wood,
+/turf/simulated/floor/airless,
+/area/submap/debris3)
+"V" = (
+/obj/item/circuitboard/arcade,
+/turf/template_noop,
+/area/submap/debris3)
+"Z" = (
+/obj/item/paper,
+/turf/simulated/floor/airless,
+/area/submap/debris3)
 
 (1,1,1) = {"
-aaaaiaaaaaaaaaaaaaiaaaaaaaaaia
-aaaaaaaaaaiaaaaaaaaaaaaaaaaaaa
-aaGGGGGGGGiGGGGGGiGGGGGGGGiGaa
-iaGiGGGiwGGGGnGGMGGiGGiGGGGGaa
-aaGGGIkGmGGGiGzSHGMGwMkGiGGGaa
-aaGiGGGMGGSGOGHGGGdOGOzGGGGGaa
-aaGGGiGGGBGHefGSBGSHGmbGGGiGaa
-aaGGGGOwGGFLibzUbGGvMAzMGGGGia
-aaGGGGGoyzzShGGixzSGGLbzGiGGaa
-aaGGMiGGSiGmMzSiSzMVwGgzGGGGaa
-aiGGGiwGGSSAGiGGiiGHBinlGiiGaa
-aaGGGMGnGGGbDGqGSdmGGGGGiGGGaa
-aaGGGGmmGMBGKmzSGGpiiGOGGGGGaa
-aaGGGGGGiLGGztzGkOGLGqGGGiGGaa
-aaGiGMGGMzzZNGGMJwGGGGGGGGGGaa
-aaGiGGGiGcGGHGGiGMiMGGiGGiGGaa
-aiGGGGMGOGMiiGOuGGGGGGiGGGGGaa
-aaGGGGGGGGGGGGGGGGGGGGGGGGGGai
-aaaaaaaaaaaiaaaaaaaaaaaaaaaaaa
-aaaaiaaaaaaaaaaiaaaaaaaaaaaiaa
+a
+a
+a
+i
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+i
+a
+a
+a
+a
+a
+i
+a
+a
+a
+"}
+(3,1,1) = {"
+a
+a
+G
+G
+G
+G
+G
+G
+G
+G
+G
+G
+G
+G
+G
+G
+G
+G
+a
+a
+"}
+(4,1,1) = {"
+a
+a
+G
+i
+G
+i
+G
+G
+G
+G
+G
+G
+G
+G
+i
+i
+G
+G
+a
+a
+"}
+(5,1,1) = {"
+i
+a
+G
+G
+G
+G
+G
+G
+G
+M
+G
+G
+G
+G
+G
+G
+G
+G
+a
+i
+"}
+(6,1,1) = {"
+a
+a
+G
+G
+I
+G
+i
+G
+G
+i
+i
+M
+G
+G
+M
+G
+G
+G
+a
+a
+"}
+(7,1,1) = {"
+a
+a
+G
+G
+k
+G
+G
+O
+G
+G
+w
+G
+m
+G
+G
+G
+M
+G
+a
+a
+"}
+(8,1,1) = {"
+a
+a
+G
+i
+G
+M
+G
+w
+o
+G
+G
+n
+m
+G
+G
+i
+G
+G
+a
+a
+"}
+(9,1,1) = {"
+a
+a
+G
+w
+m
+G
+G
+G
+y
+S
+G
+G
+G
+i
+M
+G
+O
+G
+a
+a
+"}
+(10,1,1) = {"
+a
+a
+G
+G
+G
+G
+B
+G
+z
+i
+S
+G
+M
+L
+z
+c
+G
+G
+a
+a
+"}
+(11,1,1) = {"
+a
+i
+i
+G
+G
+S
+G
+F
+z
+G
+S
+G
+B
+G
+z
+G
+M
+G
+a
+a
+"}
+(12,1,1) = {"
+a
+a
+G
+G
+G
+G
+H
+L
+S
+m
+A
+b
+G
+G
+Z
+G
+i
+G
+i
+a
+"}
+(13,1,1) = {"
+a
+a
+G
+G
+i
+O
+e
+i
+h
+M
+G
+D
+K
+z
+N
+H
+i
+G
+a
+a
+"}
+(14,1,1) = {"
+a
+a
+G
+n
+G
+G
+f
+b
+G
+z
+i
+G
+m
+t
+G
+G
+G
+G
+a
+a
+"}
+(15,1,1) = {"
+a
+a
+G
+G
+z
+H
+G
+z
+G
+S
+G
+q
+z
+z
+G
+G
+O
+G
+a
+a
+"}
+(16,1,1) = {"
+a
+a
+G
+G
+S
+G
+S
+U
+i
+i
+G
+G
+S
+G
+M
+i
+u
+G
+a
+i
+"}
+(17,1,1) = {"
+a
+a
+G
+M
+H
+G
+B
+b
+x
+S
+i
+S
+G
+k
+J
+G
+G
+G
+a
+a
+"}
+(18,1,1) = {"
+a
+a
+i
+G
+G
+G
+G
+G
+z
+z
+i
+d
+G
+O
+w
+M
+G
+G
+a
+a
+"}
+(19,1,1) = {"
+i
+a
+G
+G
+M
+d
+S
+G
+S
+M
+G
+m
+p
+G
+G
+i
+G
+G
+a
+a
+"}
+(20,1,1) = {"
+a
+a
+G
+i
+G
+O
+H
+v
+G
+V
+H
+G
+i
+L
+G
+M
+G
+G
+a
+a
+"}
+(21,1,1) = {"
+a
+a
+G
+G
+w
+G
+G
+M
+G
+w
+B
+G
+i
+G
+G
+G
+G
+G
+a
+a
+"}
+(22,1,1) = {"
+a
+a
+G
+G
+M
+O
+m
+A
+L
+G
+i
+G
+G
+q
+G
+G
+G
+G
+a
+a
+"}
+(23,1,1) = {"
+a
+a
+G
+i
+k
+z
+b
+z
+b
+g
+n
+G
+O
+G
+G
+i
+i
+G
+a
+a
+"}
+(24,1,1) = {"
+a
+a
+G
+G
+G
+G
+G
+M
+z
+z
+l
+G
+G
+G
+G
+G
+G
+G
+a
+a
+"}
+(25,1,1) = {"
+a
+a
+G
+G
+i
+G
+G
+G
+G
+G
+G
+i
+G
+G
+G
+G
+G
+G
+a
+a
+"}
+(26,1,1) = {"
+a
+a
+G
+G
+G
+G
+G
+G
+i
+G
+i
+G
+G
+i
+G
+i
+G
+G
+a
+a
+"}
+(27,1,1) = {"
+a
+a
+i
+G
+G
+G
+i
+G
+G
+G
+i
+G
+G
+G
+G
+G
+G
+G
+a
+a
+"}
+(28,1,1) = {"
+a
+a
+G
+G
+G
+G
+G
+G
+G
+G
+G
+G
+G
+G
+G
+G
+G
+G
+a
+i
+"}
+(29,1,1) = {"
+i
+a
+a
+a
+a
+a
+a
+i
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(30,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+i
+a
+a
 "}

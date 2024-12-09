@@ -10,26 +10,38 @@
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "ad" = (
-/turf/simulated/shuttle/wall,
+/obj/structure/grille,
+/obj/structure/shuttle/window,
+/obj/machinery/door/blast/regular{
+	dir = 8;
+	id = "QShuttlePoIDoors";
+	layer = 3.3;
+	name = "Emergency Lockdown Shutters"
+	},
+/obj/item/tape/medical{
+	dir = 4;
+	icon_state = "tape_door_0";
+	layer = 3.4
+	},
+/turf/simulated/floor/plating,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "ae" = (
-/obj/item/weapon/tool/crowbar/red,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_white"
+/obj/item/tool/crowbar/red,
+/obj/machinery/power/apc/hyper{
+	dir = 8;
+	pixel_y = 0;
+	pixel_x = -26
 	},
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "af" = (
 /obj/item/trash/chips,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_yellow"
-	},
+/turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "ag" = (
 /obj/random/maintenance,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_yellow"
-	},
+/turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "ah" = (
 /obj/machinery/door/blast/regular{
@@ -46,31 +58,25 @@
 /area/survivalpod/superpose/CrashedQurantineShip)
 "ai" = (
 /obj/item/trash/cigbutt,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_white"
-	},
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "aj" = (
 /obj/machinery/door/airlock/command{
 	icon_state = "door_locked";
 	locked = 1
 	},
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_white"
-	},
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "ak" = (
-/obj/item/weapon/tank/emergency/oxygen/engi,
+/obj/item/tank/emergency/oxygen/engi,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_white"
-	},
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "al" = (
 /obj/structure/sign/biohazard{
 	dir = 1
 	},
-/turf/simulated/shuttle/wall/hard_corner,
+/turf/simulated/wall/thull,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "am" = (
 /obj/machinery/door/airlock{
@@ -83,61 +89,49 @@
 "an" = (
 /obj/machinery/vending/snack{
 	contraband = null;
-	products = list(/obj/item/weapon/reagent_containers/food/snacks/candy=0,/obj/item/weapon/reagent_containers/food/drinks/dry_ramen=0,/obj/item/weapon/reagent_containers/food/snacks/chips=0,/obj/item/weapon/reagent_containers/food/snacks/sosjerky=0,/obj/item/weapon/reagent_containers/food/snacks/no_raisin=0,/obj/item/weapon/reagent_containers/food/snacks/packaged/spacetwinkie=0,/obj/item/weapon/reagent_containers/food/snacks/cheesiehonkers=0,/obj/item/weapon/reagent_containers/food/snacks/tastybread=0,/obj/item/weapon/reagent_containers/food/snacks/skrellsnacks=0)
+	products = list(/obj/item/reagent_containers/food/snacks/candy=0,/obj/item/reagent_containers/food/drinks/dry_ramen=0,/obj/item/reagent_containers/food/snacks/chips=0,/obj/item/reagent_containers/food/snacks/sosjerky=0,/obj/item/reagent_containers/food/snacks/no_raisin=0,/obj/item/reagent_containers/food/snacks/packaged/spacetwinkie=0,/obj/item/reagent_containers/food/snacks/cheesiehonkers=0,/obj/item/reagent_containers/food/snacks/tastybread=0,/obj/item/reagent_containers/food/snacks/skrellsnacks=0)
 	},
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_white"
-	},
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "ao" = (
-/obj/item/weapon/pickaxe/drill,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_yellow"
-	},
+/obj/item/pickaxe/drill,
+/turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "ap" = (
 /obj/effect/decal/remains/xeno,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_yellow"
-	},
+/turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "aq" = (
 /obj/machinery/button{
 	name = "Cargo Hatch"
 	},
-/turf/simulated/shuttle/wall,
+/turf/simulated/wall/thull,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "ar" = (
 /obj/machinery/computer{
 	dir = 4
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/tiled/milspec/raised,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "as" = (
 /obj/structure/bed/chair/comfy/brown{
 	dir = 8
 	},
 /obj/effect/decal/cleanable/vomit,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_white"
-	},
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "at" = (
 /obj/structure/bed/chair{
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_yellow"
-	},
+/turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "au" = (
 /obj/structure/bed/chair{
 	dir = 1
 	},
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_yellow"
-	},
+/turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "av" = (
 /obj/machinery/door/airlock/engineering{
@@ -145,21 +139,16 @@
 	locked = 1;
 	name = "Cargo Bay"
 	},
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_yellow"
-	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "aw" = (
-/obj/item/weapon/material/shard,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_yellow"
-	},
+/obj/item/material/shard,
+/turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "ax" = (
 /obj/random/paicard,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_yellow"
-	},
+/turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "ay" = (
 /obj/effect/decal/remains/human,
@@ -171,21 +160,17 @@
 	desc = "It's a ballcap bearing the colors of Major Bill's Shipping. This one looks at least a few decades out of date.";
 	name = "old shipping cap"
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/tiled/milspec/raised,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "az" = (
 /obj/effect/decal/remains/human,
 /obj/item/clothing/suit/space/emergency,
 /obj/item/clothing/head/helmet/space/emergency,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_yellow"
-	},
+/turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "aA" = (
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_yellow"
-	},
+/turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "aB" = (
 /obj/structure/grille,
@@ -197,7 +182,7 @@
 	dir = 1;
 	health = 1e+006
 	},
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/plating,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "aC" = (
 /obj/structure/grille,
@@ -206,14 +191,12 @@
 	dir = 1;
 	health = 1e+006
 	},
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/plating,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "aD" = (
 /obj/item/clothing/mask/breath,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_white"
-	},
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "aE" = (
 /obj/structure/grille,
@@ -225,40 +208,31 @@
 	dir = 1;
 	health = 1e+006
 	},
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/plating,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "aF" = (
 /obj/item/clothing/suit/space/emergency,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_yellow"
-	},
+/turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "aG" = (
 /obj/machinery/door/airlock/glass,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_yellow"
-	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "aH" = (
 /obj/item/trash/candy,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_white"
-	},
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "aI" = (
 /obj/structure/table/rack,
 /obj/structure/loot_pile/maint/boxfort,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_yellow"
-	},
+/turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "aJ" = (
 /obj/structure/table/rack,
-/obj/item/weapon/shovel,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_yellow"
-	},
+/obj/item/shovel,
+/turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "aK" = (
 /obj/structure/closet/crate/secure/science{
@@ -267,17 +241,15 @@
 	name = "Virus Samples - FRAGILE";
 	opened = 1
 	},
-/obj/item/weapon/virusdish/random,
-/obj/item/weapon/virusdish/random,
-/obj/item/weapon/virusdish/random,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_yellow"
-	},
+/obj/item/reagent_containers/glass/bottle/culture/cold,
+/obj/item/reagent_containers/glass/bottle/culture/cold,
+/obj/item/reagent_containers/glass/bottle/culture/cold,
+/turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "aL" = (
 /obj/structure/table/standard,
-/obj/item/device/taperecorder,
-/turf/simulated/shuttle/floor,
+/obj/item/taperecorder,
+/turf/simulated/floor/tiled/milspec/raised,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "aM" = (
 /obj/structure/inflatable/door,
@@ -289,24 +261,18 @@
 /area/survivalpod/superpose/CrashedQurantineShip)
 "aP" = (
 /obj/structure/bed/chair,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_yellow"
-	},
+/turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "aQ" = (
 /obj/structure/bed/chair{
 	dir = 1
 	},
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_white"
-	},
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "aR" = (
 /obj/structure/bed/chair,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_white"
-	},
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "aS" = (
 /obj/structure/bed/chair,
@@ -316,71 +282,51 @@
 	desc = "It's a ballcap bearing the colors of Major Bill's Shipping. This one looks at least a few decades out of date.";
 	name = "old shipping cap"
 	},
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_white"
-	},
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "aT" = (
 /obj/structure/bed/chair,
 /obj/effect/decal/remains/human,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_white"
-	},
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "aU" = (
 /obj/effect/decal/remains/xeno,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_white"
-	},
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "aV" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_yellow"
-	},
+/turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "aW" = (
-/obj/item/weapon/coin/silver,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_white"
-	},
+/obj/item/coin/silver,
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "aX" = (
 /obj/effect/decal/remains/human,
 /obj/item/clothing/suit/space/emergency,
 /obj/item/clothing/head/helmet/space/emergency,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_yellow"
-	},
+/turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "aZ" = (
 /obj/effect/decal/cleanable/generic,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_yellow"
-	},
+/turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bf" = (
-/obj/item/weapon/tank/emergency/oxygen/engi,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_yellow"
-	},
+/obj/item/tank/emergency/oxygen/engi,
+/turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bh" = (
 /obj/item/trash/sosjerky,
 /obj/effect/decal/remains/human,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_white"
-	},
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bi" = (
 /obj/effect/decal/remains/human,
 /obj/item/clothing/mask/breath,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_white"
-	},
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bj" = (
 /obj/structure/grille,
@@ -391,7 +337,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/plating,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bk" = (
 /obj/structure/grille,
@@ -402,18 +348,18 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/plating,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bl" = (
 /obj/machinery/button{
 	dir = 4;
 	name = "Cargo Access"
 	},
-/turf/simulated/shuttle/wall,
+/turf/simulated/wall/thull,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bm" = (
 /obj/machinery/recharge_station,
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/tiled/milspec/raised,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bn" = (
 /obj/structure/toilet{
@@ -421,21 +367,17 @@
 	},
 /obj/effect/decal/cleanable/vomit,
 /obj/effect/decal/remains/human,
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/tiled/milspec/raised,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bo" = (
 /obj/effect/decal/cleanable/vomit,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_white"
-	},
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bp" = (
 /obj/effect/decal/remains/human,
 /obj/item/clothing/suit/space/emergency,
 /obj/item/clothing/head/helmet/space/emergency,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_white"
-	},
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bq" = (
 /obj/machinery/door/airlock{
@@ -447,26 +389,20 @@
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bs" = (
 /obj/structure/bed/chair,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_white"
-	},
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bt" = (
 /obj/structure/bed/chair,
 /obj/effect/decal/remains/human,
 /obj/item/clothing/suit/space/emergency,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_white"
-	},
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bu" = (
 /obj/machinery/vending/cola{
 	contraband = null;
-	products = list(/obj/item/weapon/reagent_containers/food/drinks/cans/cola=0,/obj/item/weapon/reagent_containers/food/drinks/cans/space_mountain_wind=0,/obj/item/weapon/reagent_containers/food/drinks/cans/dr_gibb=0,/obj/item/weapon/reagent_containers/food/drinks/cans/starkist=0,/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle=0,/obj/item/weapon/reagent_containers/food/drinks/cans/space_up=0,/obj/item/weapon/reagent_containers/food/drinks/cans/iced_tea=0,/obj/item/weapon/reagent_containers/food/drinks/cans/grape_juice=0,/obj/item/weapon/reagent_containers/food/drinks/cans/gingerale=0)
+	products = list(/obj/item/reagent_containers/food/drinks/cans/cola=0,/obj/item/reagent_containers/food/drinks/cans/space_mountain_wind=0,/obj/item/reagent_containers/food/drinks/cans/dr_gibb=0,/obj/item/reagent_containers/food/drinks/cans/starkist=0,/obj/item/reagent_containers/food/drinks/cans/waterbottle=0,/obj/item/reagent_containers/food/drinks/cans/space_up=0,/obj/item/reagent_containers/food/drinks/cans/iced_tea=0,/obj/item/reagent_containers/food/drinks/cans/grape_juice=0,/obj/item/reagent_containers/food/drinks/cans/gingerale=0)
 	},
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_white"
-	},
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bv" = (
 /obj/structure/closet/crate,
@@ -545,60 +481,56 @@
 /obj/item/stack/material/smolebricks{
 	amount = 50
 	},
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_yellow"
-	},
+/turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bw" = (
 /obj/structure/closet/walllocker_double/north,
-/obj/item/device/gps,
+/obj/item/gps,
 /obj/item/sticky_pad/random,
-/obj/item/device/starcaster_news,
-/obj/item/weapon/pen/blue,
-/obj/item/device/pda,
-/obj/item/weapon/card/id/external,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-/obj/item/weapon/gun/energy/locked/phasegun/pistol,
-/obj/item/weapon/material/knife/tacknife/survival,
+/obj/item/starcaster_news,
+/obj/item/pen/blue,
+/obj/item/pda,
+/obj/item/card/id/external,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/gun/energy/locked/phasegun/pistol,
+/obj/item/material/knife/tacknife/survival,
 /obj/item/clothing/accessory/permit/gun,
-/obj/item/device/camera,
-/obj/item/device/binoculars,
-/obj/item/device/threadneedle,
+/obj/item/camera,
+/obj/item/binoculars,
+/obj/item/threadneedle,
 /obj/random/soap,
-/obj/item/weapon/towel/random,
+/obj/item/towel/random,
 /obj/item/bodybag/cryobag,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/color/yellow,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/weapon/flame/lighter/random,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
-/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
-/obj/item/weapon/reagent_containers/pill/spaceacillin,
-/obj/item/weapon/reagent_containers/pill/spaceacillin,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/suit_cooling_unit/emergency,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/color/yellow,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/flame/lighter/random,
+/obj/item/cell/device/hyper,
+/obj/item/cell/device/hyper,
+/obj/item/extinguisher/mini,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/reagent_containers/pill/spaceacillin,
+/obj/item/reagent_containers/pill/spaceacillin,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/suit_cooling_unit/emergency,
 /obj/item/stack/nanopaste,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,
-/obj/item/weapon/storage/backpack/messenger,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/storage/backpack/messenger,
 /obj/item/clothing/accessory/storage/black_drop_pouches,
 /obj/item/clothing/accessory/poncho/thermal,
-/obj/item/weapon/storage/box/survival/comp,
-/obj/item/weapon/storage/toolbox/brass,
-/obj/item/weapon/storage/box/khcrystal,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_yellow"
-	},
+/obj/item/storage/box/survival/comp,
+/obj/item/storage/toolbox/brass,
+/obj/item/storage/box/khcrystal,
+/turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bx" = (
 /obj/structure/shuttle/engine/heater{
@@ -608,37 +540,27 @@
 /area/survivalpod/superpose/CrashedQurantineShip)
 "by" = (
 /obj/effect/decal/cleanable/generic,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_white"
-	},
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bz" = (
 /obj/item/trash/syndi_cakes,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_yellow"
-	},
+/turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bA" = (
 /obj/item/trash/cigbutt,
-/obj/item/weapon/tank/emergency/oxygen,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_yellow"
-	},
+/obj/item/tank/emergency/oxygen,
+/turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bB" = (
-/obj/item/weapon/material/knife/tacknife/boot,
+/obj/item/material/knife/tacknife/boot,
 /obj/item/clothing/mask/breath,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_yellow"
-	},
+/turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bD" = (
 /obj/item/trash/sosjerky,
-/obj/item/weapon/storage/box/donut/empty,
-/obj/item/weapon/reagent_containers/food/drinks/sillycup,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_white"
-	},
+/obj/item/storage/box/donut/empty,
+/obj/item/reagent_containers/food/drinks/sillycup,
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bE" = (
 /obj/structure/grille,
@@ -650,7 +572,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/plating,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bF" = (
 /obj/structure/grille,
@@ -661,33 +583,27 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/plating,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bG" = (
 /obj/item/trash/tastybread,
-/obj/item/weapon/material/butterfly/boxcutter,
+/obj/item/material/butterfly/boxcutter,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_white"
-	},
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bH" = (
 /obj/structure/salvageable/data_os,
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/tiled/milspec/raised,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bI" = (
 /obj/effect/decal/cleanable/vomit,
 /obj/effect/decal/cleanable/mucus/mapped,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_white"
-	},
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bJ" = (
 /obj/item/trash/cheesie,
 /obj/effect/decal/remains/human,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_white"
-	},
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bL" = (
 /obj/structure/bed/chair{
@@ -695,9 +611,7 @@
 	},
 /obj/effect/decal/remains/human,
 /obj/item/clothing/mask/breath,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_white"
-	},
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bM" = (
 /obj/structure/table/rack,
@@ -705,39 +619,27 @@
 	desc = "It's a ballcap bearing the colors of Major Bill's Shipping. This one looks at least a few decades out of date.";
 	name = "old shipping cap"
 	},
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_white"
-	},
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bN" = (
 /obj/effect/decal/cleanable/vomit,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_yellow"
-	},
+/turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bO" = (
 /obj/item/clothing/head/helmet/space/emergency,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_white"
-	},
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bP" = (
-/obj/item/weapon/virusdish/random,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_yellow"
-	},
+/obj/item/reagent_containers/glass/bottle/culture/cold,
+/turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bQ" = (
 /obj/structure/ore_box,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_yellow"
-	},
+/turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bR" = (
 /obj/effect/decal/remains/mouse,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_yellow"
-	},
+/turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bS" = (
 /obj/item/tape/medical{
@@ -758,15 +660,11 @@
 	desc = "It's a ballcap bearing the colors of Major Bill's Shipping. This one looks at least a few decades out of date.";
 	name = "old shipping cap"
 	},
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_white"
-	},
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bU" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_yellow"
-	},
+/turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bV" = (
 /obj/item/taperoll/medical,
@@ -774,18 +672,14 @@
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bW" = (
 /obj/effect/decal/remains/human,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_white"
-	},
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bX" = (
 /obj/structure/bed/chair{
 	dir = 1
 	},
 /obj/effect/decal/remains/xeno,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_white"
-	},
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bY" = (
 /obj/structure/closet/crate,
@@ -847,25 +741,23 @@
 	},
 /obj/item/stack/cable_coil/green,
 /obj/item/stack/cable_coil/blue,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bZ" = (
 /obj/structure/bed/chair{
 	dir = 1
 	},
-/obj/item/weapon/card/id/external{
+/obj/item/card/id/external{
 	desc = "An identification card of some sort. Looks like this one was issued by the Vir Independent Mining Corp.";
 	name = "VIMC identification card";
 	rank = "Miner";
 	registered_name = "Nadia Chu"
 	},
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_white"
-	},
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "ca" = (
 /obj/item/tape/medical{
@@ -880,16 +772,12 @@
 /area/survivalpod/superpose/CrashedQurantineShip)
 "cb" = (
 /obj/structure/table/rack,
-/obj/item/weapon/storage/toolbox/emergency,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_white"
-	},
+/obj/item/storage/toolbox/emergency,
+/turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "cc" = (
 /obj/item/poster,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_yellow"
-	},
+/turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "cd" = (
 /obj/item/tape/medical{
@@ -909,7 +797,7 @@
 /turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "ch" = (
-/turf/simulated/shuttle/wall/hard_corner,
+/turf/simulated/wall/thull,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "cj" = (
 /obj/machinery/door/airlock/external{
@@ -931,7 +819,7 @@
 /area/survivalpod/superpose/CrashedQurantineShip)
 "ck" = (
 /obj/structure/sign/biohazard,
-/turf/simulated/shuttle/wall/hard_corner,
+/turf/simulated/wall/thull,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "cl" = (
 /obj/structure/grille,
@@ -966,17 +854,33 @@
 /area/survivalpod/superpose/CrashedQurantineShip)
 "hJ" = (
 /obj/structure/table/steel,
-/obj/item/weapon/storage/box/bodybags,
+/obj/item/storage/box/bodybags,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "jX" = (
 /obj/structure/table/steel,
-/obj/item/weapon/tool/crowbar/power,
+/obj/item/tool/crowbar/power,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "ky" = (
 /obj/structure/closet/crate/medical,
 /turf/simulated/mineral/floor/ignore_mapgen,
+/area/survivalpod/superpose/CrashedQurantineShip)
+"su" = (
+/obj/machinery/door/airlock/external{
+	desc = "It opens and closes. It is stamped with the logo of Major Bill's Transportation";
+	frequency = 1380;
+	icon_state = "door_locked";
+	id_tag = null;
+	locked = 1;
+	name = "MBT-540"
+	},
+/obj/item/tape/medical{
+	dir = 4;
+	icon_state = "tape_door_0";
+	layer = 3.4
+	},
+/turf/simulated/floor/plating,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "vi" = (
 /obj/structure/table/steel,
@@ -988,7 +892,7 @@
 /area/survivalpod/superpose/CrashedQurantineShip)
 "Lm" = (
 /obj/structure/table/steel,
-/obj/item/weapon/reagent_containers/spray/cleaner{
+/obj/item/reagent_containers/spray/cleaner{
 	desc = "Someone has crossed out the 'Space' from Space Cleaner and written in Chemistry. Scrawled on the back is, 'Okay, whoever filled this with polytrinic acid, it was only funny the first time. It was hard enough replacing the CMO's first cat!'";
 	name = "Chemistry Cleaner"
 	},
@@ -996,7 +900,7 @@
 /area/survivalpod/superpose/CrashedQurantineShip)
 "MX" = (
 /obj/structure/table/steel,
-/obj/item/weapon/reagent_containers/syringe/antiviral,
+/obj/item/reagent_containers/syringe/antiviral,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "Pl" = (
@@ -1010,11 +914,11 @@
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "UU" = (
-/obj/item/weapon/reagent_containers/syringe/antiviral,
+/obj/item/reagent_containers/syringe/antiviral,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "WS" = (
-/obj/item/weapon/weldingtool/largetank,
+/obj/item/weldingtool/largetank,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "Xh" = (
@@ -1072,11 +976,11 @@ aa
 ab
 ab
 ab
-ad
+ch
 cl
 cl
 cl
-ad
+ch
 ab
 ac
 ab
@@ -1090,13 +994,13 @@ aa
 aa
 ab
 ab
-ad
-ad
+ch
+ch
 ar
 ay
 ar
-ad
-ad
+ch
+ch
 ab
 ab
 ab
@@ -1108,15 +1012,15 @@ ab
 aa
 aa
 ab
-ad
-ad
-ad
+ch
+ch
+ch
 as
 ai
 bT
-ad
-ad
-ad
+ch
+ch
+ch
 bS
 ca
 ab
@@ -1129,13 +1033,13 @@ aa
 ab
 cl
 bn
-ad
+ch
 bH
 ai
 aL
-ad
+ch
 bm
-cl
+ad
 ab
 cd
 ab
@@ -1148,11 +1052,11 @@ aa
 aO
 ch
 am
-ad
-ad
+ch
+ch
 aj
-ad
-ad
+ch
+ch
 bq
 ch
 aO
@@ -1173,7 +1077,7 @@ ak
 ae
 bW
 bG
-cj
+su
 aO
 cd
 ab
@@ -1192,7 +1096,7 @@ az
 af
 aW
 bI
-cj
+su
 aM
 cd
 ab
@@ -1204,13 +1108,13 @@ aa
 aa
 aO
 al
-ad
+ch
 ap
 at
-ad
+ch
 aP
 aA
-ad
+ch
 ck
 aO
 cd
@@ -1222,7 +1126,7 @@ ab
 aa
 aa
 ab
-cl
+ad
 bs
 bz
 bL
@@ -1230,7 +1134,7 @@ aB
 aR
 aX
 bX
-cl
+ad
 ab
 cd
 ce
@@ -1241,7 +1145,7 @@ ab
 aa
 aa
 aa
-ad
+ch
 bs
 aA
 aQ
@@ -1249,7 +1153,7 @@ aC
 aS
 aA
 aQ
-ad
+ch
 ab
 cd
 cm
@@ -1260,7 +1164,7 @@ ab
 aa
 aa
 aa
-cl
+ad
 bt
 bA
 aQ
@@ -1268,7 +1172,7 @@ aE
 aT
 aZ
 bZ
-cl
+ad
 ab
 cd
 cn
@@ -1279,15 +1183,15 @@ ab
 aa
 aa
 ab
-ad
-ad
+ch
+ch
 bB
 au
-ad
+ch
 aP
 bf
-ad
-ad
+ch
+ch
 ab
 cd
 Ll
@@ -1298,7 +1202,7 @@ ab
 aa
 ab
 ab
-ad
+ch
 an
 bW
 bN
@@ -1306,7 +1210,7 @@ aF
 bU
 bh
 cb
-ad
+ch
 bV
 cd
 hs
@@ -1317,7 +1221,7 @@ ab
 aa
 ac
 ab
-ad
+ch
 bu
 bD
 bO
@@ -1325,7 +1229,7 @@ aH
 aU
 bi
 bM
-ad
+ch
 ab
 cd
 hs
@@ -1336,15 +1240,15 @@ aa
 aa
 ab
 ab
-ad
-ad
-ad
+ch
+ch
+ch
 av
-ad
+ch
 av
-ad
-ad
-ad
+ch
+ch
+ch
 ab
 cd
 hs
@@ -1355,7 +1259,7 @@ aa
 aa
 ab
 ab
-ad
+ch
 bv
 bE
 bP
@@ -1363,7 +1267,7 @@ aI
 aV
 bj
 bQ
-ad
+ch
 ab
 cd
 ab
@@ -1374,7 +1278,7 @@ aa
 aa
 aa
 ab
-ad
+ch
 ao
 aG
 aA
@@ -1382,7 +1286,7 @@ aA
 aA
 aG
 cc
-ad
+ch
 ab
 cd
 hJ
@@ -1393,7 +1297,7 @@ aa
 aa
 aa
 ab
-ad
+ch
 bw
 bF
 aw
@@ -1401,7 +1305,7 @@ aJ
 bR
 bk
 aA
-ad
+ch
 bY
 cd
 Xh
@@ -1410,57 +1314,57 @@ aa
 "}
 (21,1,1) = {"
 aa
-ad
-ad
-ad
-ad
-ad
+ch
+ch
+ch
+ch
+ch
 ax
 aA
 bP
-ad
-ad
-ad
-ad
-ad
+ch
+ch
+ch
+ch
+ch
 Yj
 ab
 ab
 "}
 (22,1,1) = {"
 aa
-ad
+ch
 bx
-ad
+ch
 bx
 aq
 aA
 aK
 ag
-ad
+ch
 bx
-ad
+ch
 bx
-ad
+ch
 ab
 ab
 ab
 "}
 (23,1,1) = {"
 ab
-ad
+ch
 cf
-ad
+ch
 cf
-ad
+ch
 ah
 ah
 ah
 bl
 cf
-ad
+ch
 cf
-ad
+ch
 UU
 ab
 ac

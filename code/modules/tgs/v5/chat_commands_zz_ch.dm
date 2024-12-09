@@ -33,11 +33,11 @@
 	if(data_core)
 		html = data_core.get_manifest(FALSE,TRUE,snowflake = TRUE)
 	else
-		html = "<b>ERROR: NO DATACORE</b>" //Could make the error more fancy later
-	rustg_file_write(html,"[config.nodebot_location]\\html.html")
+		html = span_bold("ERROR: NO DATACORE") //Could make the error more fancy later
+	rustg_file_write(html,"[CONFIG_GET(string/nodebot_location)]\\html.html")
 
 /datum/tgs_chat_command/manifest/Run(datum/tgs_chat_user/sender, params)
-	if(config.nodebot_enabled)
+	if(CONFIG_GET(flag/nodebot_enabled))
 		ManifestToHtml()
 		return "http://manifest.chompstation13.net/"
 	else
@@ -104,9 +104,9 @@
 /datum/tgs_chat_command/readfax/Run(sender, params)
 	var/list/all_params = splittext(params, " ")
 	var/faxid = all_params[1]
-	if(!all_params[1] || !fexists("[config.fax_export_dir]/fax_[faxid].html"))
+	if(!all_params[1] || !fexists("[CONFIG_GET(string/fax_export_dir)]/fax_[faxid].html"))
 		return "I’m sorry Dave, I’m afraid I can’t do that"
-	var/faxmsg = return_file_text("[config.fax_export_dir]/fax_[faxid].html")
+	var/faxmsg = return_file_text("[CONFIG_GET(string/fax_export_dir)]/fax_[faxid].html")
 	return "FAX: ```[strip_html_properly(faxmsg)]```"
 
 /datum/tgs_chat_command/vore

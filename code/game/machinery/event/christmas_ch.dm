@@ -38,18 +38,18 @@
 	if(usr.ckey == santa_ckey)
 		if(anchored == 0)
 			anchored = 1
-			to_chat(usr,"<span class='notice'>You bind the sack, none can make off with it now!</span> ")
+			to_chat(usr,span_notice("You bind the sack, none can make off with it now!"))
 		else
 			anchored = 0
-			to_chat(usr,"<span class='You unbind the sack, you can now drag it off. But so can anyone else!</span> ")
+			to_chat(usr,span_notice("You unbind the sack, you can now drag it off. But so can anyone else!"))
 	else
-		to_chat(usr, span("warning", "Only Santa can bind and unbind his sack!"))
+		to_chat(usr, span_warning("Only Santa can bind and unbind his sack!"))
 	return
 
 /obj/structure/event/santa_sack/attack_hand(mob/user as mob)
 	. = ..()
 	if(usr.ckey != santa_ckey)
-		to_chat(usr, span("warning", "Only Santa can give presents! (Be nice or you might end up in Santa's sack!)"))
+		to_chat(usr, span_warning("Only Santa can give presents! (Be nice or you might end up in Santa's sack!)"))
 		return
 
 	var/list/receivers = list()
@@ -61,12 +61,12 @@
 		return
 
 	if(ckey_log[T.ckey])
-		to_chat(usr, span("warning", "This one already got a present!"))
+		to_chat(usr, span_warning("This one already got a present!"))
 		return
 
-	new /obj/item/weapon/a_gift/advanced(src.loc)
+	new /obj/item/a_gift/advanced(src.loc)
 	for(var/mob/O in view(src, null))
-		O.show_message("<span class='warning'>Santa pulls out a present for [T.name]! \"Merry Christmas!</span>",1)
+		O.show_message(span_warning("Santa pulls out a present for [T.name]! \"Merry Christmas!"),1)
 
 	var/santa_log = "[T.ckey] playing as [T.name] got a present!"
 	nice_list_log[++nice_list_log.len] = santa_log

@@ -26,9 +26,9 @@
 /datum/surgery_step/generic/cut_face
 	surgery_name = "Cut Face"
 	allowed_tools = list(
-	/obj/item/weapon/surgical/scalpel = 100,		\
-	/obj/item/weapon/material/knife = 75,	\
-	/obj/item/weapon/material/shard = 50, 		\
+	/obj/item/surgical/scalpel = 100,		\
+	/obj/item/material/knife = 75,	\
+	/obj/item/material/shard = 50, 		\
 	)
 
 	min_duration = 50 //CHOMPedit
@@ -38,19 +38,22 @@
 	return ..() && target_zone == O_MOUTH && target.op_stage.face == 0
 
 /datum/surgery_step/generic/cut_face/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	user.visible_message("<span class='filter_notice'>[user] starts to cut open [target]'s face and neck with \the [tool].</span>", \
-	"<span class='filter_notice'>You start to cut open [target]'s face and neck with \the [tool].</span>")
+	user.visible_message(span_filter_notice("[user] starts to cut open [target]'s face and neck with \the [tool]."), \
+	span_filter_notice("You start to cut open [target]'s face and neck with \the [tool]."))
+	user.balloon_alert_visible("Begins to cut open [target]'s face and neck.", "Cutting open face and neck.") // CHOMPEdit
 	..()
 
 /datum/surgery_step/generic/cut_face/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	user.visible_message("<span class='notice'>[user] has cut open [target]'s face and neck with \the [tool].</span>" , \
-	"<span class='notice'> You have cut open[target]'s face and neck with \the [tool].</span>",)
+	user.visible_message(span_notice("[user] has cut open [target]'s face and neck with \the [tool].") , \
+	span_notice(" You have cut open[target]'s face and neck with \the [tool]."),)
+	user.balloon_alert_visible("Cuts up [target]'s face and neck.", "Face and neck cut open.") // CHOMPEdit
 	target.op_stage.face = 1
 
 /datum/surgery_step/generic/cut_face/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.visible_message("<span class='danger'>[user]'s hand slips, slicing [target]'s throat wth \the [tool]!</span>" , \
-	"<span class='danger'>Your hand slips, slicing [target]'s throat wth \the [tool]!</span>" )
+	user.visible_message(span_danger("[user]'s hand slips, slicing [target]'s throat with \the [tool]!") , \
+	span_danger("Your hand slips, slicing [target]'s throat wth \the [tool]!") )
+	user.balloon_alert_visible("Slips, slicing [target]'s throat.", "Your hand slips, slicing [target]'s throat.") // CHOMPEdit
 	affected.createwound(CUT, 60)
 	target.AdjustLosebreath(10)
 
@@ -61,9 +64,9 @@
 /datum/surgery_step/face/mend_vocal
 	surgery_name = "Mend Vocal Cords"
 	allowed_tools = list(
-	/obj/item/weapon/surgical/hemostat = 100, 	\
+	/obj/item/surgical/hemostat = 100, 	\
 	/obj/item/stack/cable_coil = 75, 	\
-	/obj/item/device/assembly/mousetrap = 10	//I don't know. Don't ask me. But I'm leaving it because hilarity.
+	/obj/item/assembly/mousetrap = 10	//I don't know. Don't ask me. But I'm leaving it because hilarity.
 	)
 
 	min_duration = 50 //CHOMPedit
@@ -73,18 +76,21 @@
 	return ..() && target.op_stage.face == 1
 
 /datum/surgery_step/face/mend_vocal/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	user.visible_message("<span class='filter_notice'>[user] starts mending [target]'s vocal cords with \the [tool].</span>", \
-	"<span class='filter_notice'>You start mending [target]'s vocal cords with \the [tool].</span>")
+	user.visible_message(span_filter_notice("[user] starts mending [target]'s vocal cords with \the [tool]."), \
+	span_filter_notice("You start mending [target]'s vocal cords with \the [tool]."))
+	user.balloon_alert_visible("Starts mending [target]'s vocal cords.", "Mending vocal cords.") // CHOMPEdit
 	..()
 
 /datum/surgery_step/face/mend_vocal/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	user.visible_message("<span class='notice'>[user] mends [target]'s vocal cords with \the [tool].</span>", \
-	"<span class='notice'>You mend [target]'s vocal cords with \the [tool].</span>")
+	user.visible_message(span_notice("[user] mends [target]'s vocal cords with \the [tool]."), \
+	span_notice("You mend [target]'s vocal cords with \the [tool]."))
+	user.balloon_alert_visible("[target]'s vocal cords mended", "Vocal cords mended") // CHOMPEdit
 	target.op_stage.face = 2
 
 /datum/surgery_step/face/mend_vocal/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	user.visible_message("<span class='danger'>[user]'s hand slips, clamping [target]'s trachea shut for a moment with \the [tool]!</span>", \
-	"<span class='danger'>Your hand slips, clamping [user]'s trachea shut for a moment with \the [tool]!</span>")
+	user.visible_message(span_danger("[user]'s hand slips, clamping [target]'s trachea shut for a moment with \the [tool]!"), \
+	span_danger("Your hand slips, clamping [target]'s trachea shut for a moment with \the [tool]!"))
+	user.balloon_alert_visible("Slips, clamping [target]'s trachea", "Your hand slips, clamping [target]'s trachea.") // CHOMPEdit
 	target.AdjustLosebreath(10)
 
 ///////////////////////////////////////////////////////////////
@@ -94,8 +100,8 @@
 /datum/surgery_step/face/fix_face
 	surgery_name = "Fix Face"
 	allowed_tools = list(
-		/obj/item/weapon/surgical/retractor = 100, 	\
-		/obj/item/weapon/material/kitchen/utensil/fork = 75
+		/obj/item/surgical/retractor = 100, 	\
+		/obj/item/material/kitchen/utensil/fork = 75
 	)
 
 	allowed_procs = list(IS_CROWBAR = 55)
@@ -107,19 +113,22 @@
 	return ..() && target.op_stage.face == 2
 
 /datum/surgery_step/face/fix_face/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	user.visible_message("<span class='filter_notice'>[user] starts pulling the skin on [target]'s face back in place with \the [tool].</span>", \
-	"<span class='filter_notice'>You start pulling the skin on [target]'s face back in place with \the [tool].</span>")
+	user.visible_message(span_filter_notice("[user] starts pulling the skin on [target]'s face back in place with \the [tool]."), \
+	span_filter_notice("You start pulling the skin on [target]'s face back in place with \the [tool]."))
+	user.balloon_alert_visible("Starts pulling the skin on [target]'s face back in place.", "Pulling the skin back in place.") // CHOMPEdit
 	..()
 
 /datum/surgery_step/face/fix_face/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	user.visible_message("<span class='notice'>[user] pulls the skin on [target]'s face back in place with \the [tool].</span>",	\
-	"<span class='notice'>You pull the skin on [target]'s face back in place with \the [tool].</span>")
+	user.visible_message(span_notice("[user] pulls the skin on [target]'s face back in place with \the [tool]."),	\
+	span_notice("You pull the skin on [target]'s face back in place with \the [tool]."))
+	user.balloon_alert_visible("Pulls the skin on [target]'s face back in place", "Skin pulled back in place.") // CHOMPEdit
 	target.op_stage.face = 3
 
 /datum/surgery_step/face/fix_face/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.visible_message("<span class='danger'>[user]'s hand slips, tearing skin on [target]'s face with \the [tool]!</span>", \
-	"<span class='danger'>Your hand slips, tearing skin on [target]'s face with \the [tool]!</span>")
+	user.visible_message(span_danger("[user]'s hand slips, tearing skin on [target]'s face with \the [tool]!"), \
+	span_danger("Your hand slips, tearing skin on [target]'s face with \the [tool]!"))
+	user.balloon_alert_visible("Slips, tearing skin on [target]'s face.", "Your hand slips, tearing skin on the face.") // CHOMPEdit
 	target.apply_damage(10, BRUTE, affected, sharp = TRUE, sharp = TRUE)
 
 ///////////////////////////////////////////////////////////////
@@ -129,10 +138,10 @@
 /datum/surgery_step/face/cauterize
 	surgery_name = "Cauterize Face"
 	allowed_tools = list(
-	/obj/item/weapon/surgical/cautery = 100,			\
+	/obj/item/surgical/cautery = 100,			\
 	/obj/item/clothing/mask/smokable/cigarette = 75,	\
-	/obj/item/weapon/flame/lighter = 50,			\
-	/obj/item/weapon/weldingtool = 25
+	/obj/item/flame/lighter = 50,			\
+	/obj/item/weldingtool = 25
 	)
 
 	min_duration = 50 //CHOMPedit
@@ -142,14 +151,16 @@
 	return ..() && target.op_stage.face > 0
 
 /datum/surgery_step/face/cauterize/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	user.visible_message("<span class='notice'>[user] is beginning to cauterize the incision on [target]'s face and neck with \the [tool].</span>" , \
-	"<span class='notice'>You are beginning to cauterize the incision on [target]'s face and neck with \the [tool].</span>")
+	user.visible_message(span_notice("[user] is beginning to cauterize the incision on [target]'s face and neck with \the [tool].") , \
+	span_notice("You are beginning to cauterize the incision on [target]'s face and neck with \the [tool]."))
+	user.balloon_alert_visible("Begins to cauterize the incision on [target]'s face and neck", "Cauterizing the incision on face and neck.") // CHOMPEdit
 	..()
 
 /datum/surgery_step/face/cauterize/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.visible_message("<span class='notice'>[user] cauterizes the incision on [target]'s face and neck with \the [tool].</span>", \
-	"<span class='notice'>You cauterize the incision on [target]'s face and neck with \the [tool].</span>")
+	user.visible_message(span_notice("[user] cauterizes the incision on [target]'s face and neck with \the [tool]."), \
+	span_notice("You cauterize the incision on [target]'s face and neck with \the [tool]."))
+	user.balloon_alert_visible("Cauterizes the incision on [target]'s face and neck", "Cauterized the incision on the face and neck.") // CHOMPEdit
 	affected.open = 0
 	affected.status &= ~ORGAN_BLEEDING
 	if (target.op_stage.face == 3)
@@ -159,6 +170,7 @@
 
 /datum/surgery_step/face/cauterize/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.visible_message("<span class='danger'>[user]'s hand slips, leaving a small burn on [target]'s face with \the [tool]!</span>", \
-	"<span class='danger'>Your hand slips, leaving a small burn on [target]'s face with \the [tool]!</span>")
+	user.visible_message(span_danger("[user]'s hand slips, leaving a small burn on [target]'s face with \the [tool]!"), \
+	span_danger("Your hand slips, leaving a small burn on [target]'s face with \the [tool]!"))
+	user.balloon_alert_visible("Slips, leaving a small burn on the face.", "Your hand slips, leaving a small burn on the face.") // CHOMPEdit
 	target.apply_damage(4, BURN, affected)

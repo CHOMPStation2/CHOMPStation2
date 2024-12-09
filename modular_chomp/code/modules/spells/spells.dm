@@ -16,12 +16,12 @@
 
 	charge_max = 10
 
-	var/obj/item/weapon/spell/unrestricted/spell_obj = null //This is the var that determines what Technomancer-style spell is put into their hands.
+	var/obj/item/spell/unrestricted/spell_obj = null //This is the var that determines what Technomancer-style spell is put into their hands.
 
 /spell/targeted/unrestricted/cast(list/targets, mob/living/user)
 	user.place_spell_in_hand(spell_obj)
 
-/obj/item/weapon/spell/unrestricted
+/obj/item/spell/unrestricted
 	name = "a spell"
 	desc = "Remind the devs to refactor spell code."
 	icon = 'icons/obj/spells.dmi'
@@ -42,33 +42,33 @@
 	cast_sound = null			// Sound file played when this is used.
 	var/last_castcheck = null	// The last time this spell was cast.
 
-/obj/item/weapon/spell/unrestricted/New()
+/obj/item/spell/unrestricted/New()
 	if(isliving(loc))
 		owner = loc
 	if(!owner)
 		qdel(src)
 	update_icon()
 
-/obj/item/weapon/spell/unrestricted/run_checks()
+/obj/item/spell/unrestricted/run_checks()
 	if(owner)
 		if(world.time >= (last_castcheck + cooldown)) //Are they a cultist or a construct, and has the cooldown time passed?
 			last_castcheck = world.time
 			return 1
 	return 0
 
-/obj/item/weapon/spell/unrestricted/pay_energy(var/amount)
+/obj/item/spell/unrestricted/pay_energy(var/amount)
 	if(owner)
 		return 1
 
-/obj/item/weapon/spell/unrestricted/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
+/obj/item/spell/unrestricted/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
 	if(!run_checks())
 		return
 	if(!proximity_flag)
 		if(cast_methods & CAST_RANGED)
 			on_ranged_cast(target, user)
 	else
-		if(istype(target, /obj/item/weapon/spell))
-			var/obj/item/weapon/spell/spell = target
+		if(istype(target, /obj/item/spell))
+			var/obj/item/spell/spell = target
 			if(spell.cast_methods & CAST_COMBINE)
 				spell.on_combine_cast(src, user)
 				return
@@ -81,7 +81,7 @@
 		user.setClickCooldown(effective_cooldown)
 		flick("cooldown_[effective_cooldown]",src)
 
-/obj/item/weapon/spell/unrestricted/projectile //This makes me angry, but we need the template, and we can't use it because special check overrides on the base.
+/obj/item/spell/unrestricted/projectile //This makes me angry, but we need the template, and we can't use it because special check overrides on the base.
 	name = "construct projectile template"
 	icon_state = "generic"
 	desc = "This is a generic template that shoots projectiles.  If you can read this, the game broke!"
@@ -91,7 +91,7 @@
 	var/fire_sound = null
 	var/energy_cost_per_shot = 5
 
-/obj/item/weapon/spell/unrestricted/projectile/on_ranged_cast(atom/hit_atom, mob/living/user)
+/obj/item/spell/unrestricted/projectile/on_ranged_cast(atom/hit_atom, mob/living/user)
 	if(set_up(hit_atom, user))
 		var/obj/item/projectile/new_projectile = make_projectile(spell_projectile, user)
 		new_projectile.old_style_target(hit_atom)
@@ -103,11 +103,11 @@
 		return 1
 	return 0
 
-/obj/item/weapon/spell/unrestricted/projectile/proc/make_projectile(obj/item/projectile/projectile_type, mob/living/user)
+/obj/item/spell/unrestricted/projectile/proc/make_projectile(obj/item/projectile/projectile_type, mob/living/user)
 	var/obj/item/projectile/P = new projectile_type(get_turf(user))
 	return P
 
-/obj/item/weapon/spell/unrestricted/projectile/proc/set_up(atom/hit_atom, mob/living/user)
+/obj/item/spell/unrestricted/projectile/proc/set_up(atom/hit_atom, mob/living/user)
 	if(spell_projectile)
 		if(pay_energy(energy_cost_per_shot))
 			if(pre_shot_delay)
@@ -131,9 +131,9 @@
 	desc = "Fire a debillitating slowing projectile."
 
 	hud_state = "const_beam"
-	spell_obj = /obj/item/weapon/spell/unrestricted/projectile/plasmastun
+	spell_obj = /obj/item/spell/unrestricted/projectile/plasmastun
 
-/obj/item/weapon/spell/unrestricted/projectile/plasmastun
+/obj/item/spell/unrestricted/projectile/plasmastun
 	name = "plasma snare"
 	icon_state = "generic"
 	desc = "Your hands fire a debillitating slowing projectile."
@@ -150,9 +150,9 @@
 	charge_max = 100
 
 	hud_state = "const_mend"
-	spell_obj = /obj/item/weapon/spell/unrestricted/mend
+	spell_obj = /obj/item/spell/unrestricted/mend
 
-/obj/item/weapon/spell/unrestricted/mend
+/obj/item/spell/unrestricted/mend
 	name = "mend target"
 	desc = "Mend the wounds of a target over time"
 	icon_state = "mend_wounds"
@@ -162,7 +162,7 @@
 	light_power = -2
 	light_on = TRUE
 
-/obj/item/weapon/spell/unrestricted/mend/on_melee_cast(atom/hit_atom, mob/living/user, def_zone)
+/obj/item/spell/unrestricted/mend/on_melee_cast(atom/hit_atom, mob/living/user, def_zone)
 	if(isliving(hit_atom))
 		var/mob/living/L = hit_atom
 		L.add_modifier(/datum/modifier/mend_occult, 150)	//No need to change this, it does the job

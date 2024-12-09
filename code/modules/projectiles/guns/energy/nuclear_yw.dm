@@ -1,4 +1,4 @@
-/obj/item/weapon/gun/energy/sf2000
+/obj/item/gun/energy/sf2000
 	name = "SF 2000"
 	desc = "A oddly shaped red colored energy gun, can fire both stun and lethal lasers"
 	icon_state = "lasgunstun"
@@ -17,7 +17,7 @@
 		)
 
 
-/obj/item/weapon/gun/energy/gun/burst/mg42
+/obj/item/gun/energy/gun/burst/mg42
 	name = "MG42-E"
 	desc = "Space Blitzkrieg."
 	icon = 'icons/obj/gun_yw.dmi'
@@ -44,7 +44,7 @@
 		list(mode_name="15 laser burst, ye boi.", burst=15, fire_delay=null, move_delay=4, burst_accuracy=list(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0), dispersion=list(0.0, 0.2, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), projectile_type=/obj/item/projectile/beam/burstlaser, modifystate="mg42-e", fire_sound='sound/weapons/Laser.ogg'),
 		)
 
-/obj/item/weapon/gun/energy/x01
+/obj/item/gun/energy/x01
 	name = "X01 energy gun"
 	desc = "A rare weapon, handcrafted by a ArcLight manufactury on Luna. This one appears customized with older technology for the price a small fortune."
 	icon_state = "x01stun"

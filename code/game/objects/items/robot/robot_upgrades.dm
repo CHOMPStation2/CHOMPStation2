@@ -14,9 +14,19 @@
 
 /obj/item/borg/upgrade/proc/action(var/mob/living/silicon/robot/R)
 	if(R.stat == DEAD)
-		to_chat(usr, "<span class='warning'>The [src] will not function on a deceased robot.</span>")
+		to_chat(usr, span_warning("The [src] will not function on a deceased robot."))
 		return 1
 	return 0
+
+/obj/item/borg/upgrade/proc/generic_error(var/mob/living/silicon/robot/R, var/obj/item/borg/type)
+	type = lowertext(initial(type.name))
+	to_chat(R, "Upgrade mounting error! No suitable hardpoint for \the \"[type]\" detected!")
+	to_chat(usr, "There's no mounting point for \the \"[type]\" module!")
+
+/obj/item/borg/upgrade/proc/software_error(var/mob/living/silicon/robot/R, var/obj/item/borg/type)
+	type = lowertext(initial(type.name))
+	to_chat(R, "Upgrade installation error! Incompatibility with \the \"[type]\" detected!")
+	to_chat(usr, "\The \"[type]\" upgrade is not compatibile!")
 
 /*	######################################################################################################
 	# Utility section. All reusable upgrades without lasting effects, like renaming, reset, etc. go here.#
@@ -52,6 +62,7 @@
 
 /obj/item/borg/upgrade/utility/rename/action(var/mob/living/silicon/robot/R)
 	if(..()) return 0
+	if(isshell(R)) return 0
 	R.notify_ai(ROBOT_NOTIFICATION_NEW_NAME, R.name, heldname)
 	R.name = heldname
 	R.custom_name = heldname
@@ -108,8 +119,9 @@
 		to_chat(usr, "It'd be unwise to plug another vtec module in!")
 		return 0
 
-	R.verbs += /mob/living/silicon/robot/proc/toggle_vtec
-	R.speed = -1
+	add_verb(R, /mob/living/silicon/robot/proc/toggle_vtec)
+	R.vtec_active = TRUE
+	R.hud_used.toggle_vtec_control()
 	return 1
 
 /obj/item/borg/upgrade/basic/sizeshift
@@ -127,7 +139,7 @@
 		to_chat(usr, "There's no space for another size alteration module!")
 		return 0
 
-	R.verbs += /mob/living/proc/set_size
+	add_verb(R, /mob/living/proc/set_size)
 	return 1
 
 /obj/item/borg/upgrade/basic/syndicate
@@ -146,6 +158,7 @@
 		return 0
 
 	R.emag_items = 1
+	R.robotact.update_static_data_for_all_viewers()
 	return 1
 
 /obj/item/borg/upgrade/basic/language
@@ -226,9 +239,9 @@
 /obj/item/borg/upgrade/advanced/bellysizeupgrade/action(var/mob/living/silicon/robot/R)
 	if(..()) return 0
 
-	var/obj/T = R.has_upgrade_module(/obj/item/device/dogborg/sleeper)
+	var/obj/T = R.has_upgrade_module(/obj/item/dogborg/sleeper)
 	if(!T)
-		to_chat(usr, "<span class='warning'>This robot has had its processor removed!</span>")
+		to_chat(usr, span_warning("This robot has had its processor removed!"))
 		return 0
 
 	if(R.has_advanced_upgrade(type))
@@ -236,7 +249,7 @@
 		to_chat(usr, "There's no room for another capacity upgrade!")
 		return 0
 
-	var/obj/item/device/dogborg/sleeper/B = T
+	var/obj/item/dogborg/sleeper/B = T
 	var/X = B.max_item_count*2
 	B.max_item_count = X	//I couldn't do T = maxitem*2 for some reason.
 	to_chat(R, "Internal capacity doubled.")
@@ -255,12 +268,11 @@
 	if(..()) return 0
 
 	if(R.has_advanced_upgrade(type))
-		to_chat(R, "Upgrade mounting error!  No suitable hardpoint detected!")
-		to_chat(usr, "There's no mounting point for the module!")
+		generic_error(R, type)
 		return 0
 
-	R.module.modules += new/obj/item/weapon/tank/jetpack/carbondioxide(R.module)
-	for(var/obj/item/weapon/tank/jetpack/carbondioxide in R.module.modules)
+	R.module.modules += new/obj/item/tank/jetpack/carbondioxide(R.module)
+	for(var/obj/item/tank/jetpack/carbondioxide in R.module.modules)
 		R.internals = src
 	return 1
 
@@ -275,11 +287,10 @@
 	if(..()) return 0
 
 	if(R.has_advanced_upgrade(type))
-		to_chat(R, "Upgrade mounting error!  No suitable hardpoint detected!")
-		to_chat(usr, "There's no mounting point for the module!")
+		generic_error(R, type)
 		return 0
 
-	R.module.modules += new/obj/item/device/healthanalyzer/advanced(R.module)
+	R.module.modules += new/obj/item/healthanalyzer/advanced(R.module)
 	return 1
 
 //Robot size gun
@@ -294,11 +305,10 @@
 	if(..()) return 0
 
 	if(R.has_advanced_upgrade(type))
-		to_chat(R, "Upgrade mounting error!  No suitable hardpoint detected!")
-		to_chat(usr, "There's no mounting point for the module!")
+		generic_error(R, type)
 		return 0
 
-	R.module.modules += new/obj/item/weapon/gun/energy/sizegun/mounted(R.module)
+	R.module.modules += new/obj/item/gun/energy/sizegun/mounted(R.module)
 	return 1
 
 /*	##############################################################################
@@ -318,13 +328,12 @@
 	if(..()) return 0
 
 	if(!R.supports_upgrade(type))
-		to_chat(R, "Upgrade mounting error!  No suitable hardpoint detected!")
-		to_chat(usr, "There's no mounting point for the module!")
+		generic_error(R, type)
 		return 0
 
-	var/obj/T = R.has_upgrade_module(/obj/item/device/dogborg/sleeper)
+	var/obj/T = R.has_upgrade_module(/obj/item/dogborg/sleeper)
 	if(!T)
-		to_chat(usr, "<span class='warning'>This robot has had its processor removed!</span>")
+		to_chat(usr, span_warning("This robot has had its processor removed!"))
 		return 0
 
 	if(R.has_restricted_upgrade(type))
@@ -332,7 +341,7 @@
 		to_chat(usr, "There's no room for another capability upgrade!")
 		return 0
 
-	var/obj/item/device/dogborg/sleeper/B = T
+	var/obj/item/dogborg/sleeper/B = T
 	var/X = B.max_item_count*2 //double the capacity from 1 to 2 to allow sleepers to store some items, at most 4 with both upgrades
 	B.max_item_count = X	//I couldn't do T = maxitem*2 for some reason.
 	to_chat(R, "Internal capability upgraded.")
@@ -353,13 +362,12 @@
 	if(..()) return 0
 
 	if(!R.supports_upgrade(type))
-		to_chat(R, "Upgrade mounting error!  No suitable hardpoint detected!")
-		to_chat(usr, "There's no mounting point for the module!")
+		generic_error(R, type)
 		return 0
 
-	var/obj/T = R.has_upgrade_module(/obj/item/weapon/gun/energy/taser/mounted/cyborg)
+	var/obj/T = R.has_upgrade_module(/obj/item/gun/energy/taser/mounted/cyborg)
 	if(!T)
-		to_chat(usr, "<span class='warning'>This robot has had its taser removed!</span>")
+		to_chat(usr, span_warning("This robot has had its taser removed!"))
 		return 0
 
 	if(R.has_restricted_upgrade(type))
@@ -367,7 +375,7 @@
 		to_chat(usr, "There's no room for another cooling unit!")
 		return 0
 
-	var/obj/item/weapon/gun/energy/taser/mounted/cyborg/B = T
+	var/obj/item/gun/energy/taser/mounted/cyborg/B = T
 	B.recharge_time = max(2 , B.recharge_time - 4)
 	return 1
 
@@ -384,16 +392,14 @@
 	if(..()) return 0
 
 	if(!R.supports_upgrade(type))
-		to_chat(R, "Upgrade mounting error!  No suitable hardpoint detected!")
-		to_chat(usr, "There's no mounting point for the module!")
+		generic_error(R, type)
 		return 0
 
 	if(R.has_restricted_upgrade(type))
-		to_chat(R, "Upgrade mounting error!  No suitable hardpoint detected!")
-		to_chat(usr, "There's no mounting point for the module!")
+		generic_error(R, type)
 		return 0
 
-	R.module.modules += new/obj/item/weapon/storage/part_replacer/adv(R.module)
+	R.module.modules += new/obj/item/storage/part_replacer/adv(R.module)
 	return 1
 
 //Diamond Drill
@@ -409,16 +415,14 @@
 	if(..()) return 0
 
 	if(!R.supports_upgrade(type))
-		to_chat(R, "Upgrade mounting error!  No suitable hardpoint detected!")
-		to_chat(usr, "There's no mounting point for the module!")
+		generic_error(R, type)
 		return 0
 
 	if(R.has_restricted_upgrade(type))
-		to_chat(R, "Upgrade mounting error!  No suitable hardpoint detected!")
-		to_chat(usr, "There's no mounting point for the module!")
+		generic_error(R, type)
 		return 0
 
-	R.module.modules += new/obj/item/weapon/pickaxe/diamonddrill(R.module)
+	R.module.modules += new/obj/item/pickaxe/diamonddrill(R.module)
 	return 1
 
 //PKA
@@ -434,16 +438,14 @@
 	if(..()) return 0
 
 	if(!R.supports_upgrade(type))
-		to_chat(R, "Upgrade mounting error!  No suitable hardpoint detected!")
-		to_chat(usr, "There's no mounting point for the module!")
+		generic_error(R, type)
 		return 0
 
 	if(R.has_restricted_upgrade(type))
-		to_chat(R, "Upgrade mounting error!  No suitable hardpoint detected!")
-		to_chat(usr, "There's no mounting point for the module!")
+		generic_error(R, type)
 		return 0
 
-	R.module.modules += new/obj/item/weapon/gun/energy/kinetic_accelerator/cyborg(R.module)
+	R.module.modules += new/obj/item/gun/energy/kinetic_accelerator/cyborg(R.module)
 	return 1
 
 /*	###############################################
@@ -455,7 +457,7 @@
 
 //cyborg foam dart gun
 /obj/item/borg/upgrade/no_prod/toygun
-	name = "Donk-Soft Cyborg Blaster module" //Cyborg Blaster is capitalized because it's the brand name
+	name = "Donk-Soft " + JOB_CYBORG + " Blaster module" //Cyborg Blaster is capitalized because it's the brand name
 	desc = "A foam dart gun designed for mounting into cyborgs. It's Donk or Don't! DISCLAIMER: Donk-Soft bears no responsibility for incidents relating to cyborgs becoming too accustomed to shooting at crew. Installation of the Donk-Soft Cyborg Blaster must be performed only by a licensed roboticist."
 	icon_state = "cyborg_upgrade5"
 	item_state = "cyborg_upgrade"
@@ -465,9 +467,100 @@
 	if(..()) return 0
 
 	if(R.has_no_prod_upgrade(type))
-		to_chat(R, "Upgrade mounting error!  No suitable hardpoint detected!")
-		to_chat(usr, "There's no mounting point for the module!")
+		generic_error(R, type)
 		return 0
 
-	R.module.modules += new/obj/item/weapon/gun/projectile/cyborgtoy(R.module)
+	R.module.modules += new/obj/item/gun/projectile/cyborgtoy(R.module)
 	return 1
+
+/obj/item/borg/upgrade/no_prod/vision_xray
+	name = "Robot x-ray vision module"
+	desc = "Vision alterantion software to add x-ray sight capabilities."
+	icon_state = "cyborg_upgrade5"
+	item_state = "cyborg_upgrade"
+	require_module = 1
+	hidden_from_scan = 1
+
+/obj/item/borg/upgrade/no_prod/vision_xray/action(var/mob/living/silicon/robot/R)
+	if(..()) return 0
+
+	if(R.has_no_prod_upgrade(type))
+		software_error(R, type)
+		return 0
+
+	R.module.modules += new/obj/item/borg/sight/xray(R.module)
+	return 1
+
+/obj/item/borg/upgrade/no_prod/vision_thermal
+	name = "Robot thermal vision module"
+	desc = "Vision alterantion software to add thermal sight capabilities."
+	icon_state = "cyborg_upgrade5"
+	item_state = "cyborg_upgrade"
+	require_module = 1
+	hidden_from_scan = 1
+
+/obj/item/borg/upgrade/no_prod/vision_thermal/action(var/mob/living/silicon/robot/R)
+	if(..()) return 0
+
+	if(R.has_no_prod_upgrade(type))
+		software_error(R, type)
+		return 0
+
+	R.module.modules += new/obj/item/borg/sight/thermal(R.module)
+	return 1
+
+/obj/item/borg/upgrade/no_prod/vision_meson
+	name = "Robot meson vision module"
+	desc = "Vision alterantion software to add meson sight capabilities."
+	icon_state = "cyborg_upgrade5"
+	item_state = "cyborg_upgrade"
+	require_module = 1
+	hidden_from_scan = 1
+
+/obj/item/borg/upgrade/no_prod/vision_meson/action(var/mob/living/silicon/robot/R)
+	if(..()) return 0
+
+	if(R.has_no_prod_upgrade(type))
+		software_error(R, type)
+		return 0
+
+	R.module.modules += new/obj/item/borg/sight/meson(R.module)
+	return 1
+
+/obj/item/borg/upgrade/no_prod/vision_material
+	name = "Robot material vision module"
+	desc = "Vision alterantion software to add material sight capabilities."
+	icon_state = "cyborg_upgrade5"
+	item_state = "cyborg_upgrade"
+	require_module = 1
+	hidden_from_scan = 1
+
+/obj/item/borg/upgrade/no_prod/vision_material/action(var/mob/living/silicon/robot/R)
+	if(..()) return 0
+
+	if(R.has_no_prod_upgrade(type))
+		software_error(R, type)
+		return 0
+
+	R.module.modules += new/obj/item/borg/sight/material(R.module)
+	return 1
+
+/* //ChompEDIT START - disabling for now
+/obj/item/borg/upgrade/no_prod/vision_anomalous
+	name = "Robot anomalous vision module"
+	desc = "Vision alterantion software to add anomalous sight capabilities."
+	icon_state = "cyborg_upgrade5"
+	item_state = "cyborg_upgrade"
+	require_module = 1
+	hidden_from_scan = 1
+
+/obj/item/borg/upgrade/no_prod/vision_anomalous/action(var/mob/living/silicon/robot/R)
+	if(..()) return 0
+
+	if(R.has_no_prod_upgrade(type))
+		software_error(R, type)
+		return 0
+
+	R.module.modules += new/obj/item/borg/sight/anomalous(R.module)
+	return 1
+*/ //ChompEDIT END

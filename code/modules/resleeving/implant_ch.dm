@@ -19,49 +19,49 @@
         return
 
     if(user)
-        user.visible_message("<span class='notice'>[user] is injecting a backup implant into [user].</span>")
+        user.visible_message(span_notice("[user] is injecting a backup implant into [user]."))
 
         user.setClickCooldown(DEFAULT_QUICK_COOLDOWN)
 
         if(do_after(user, 2.5 SECONDS))
 
-            if(user && src)                
+            if(user && src)
 
                 //Create the actual implant.
-                var/obj/item/weapon/implant/backup/imp = new(src.contents)
+                var/obj/item/implant/backup/imp = new(src.contents)
                 imp.germ_level = 0
 
                 //Implant the implant.
                 if(imp.handle_implant(user, user.zone_sel.selecting))
                     imp.post_implant(user)
                     add_attack_logs(user, user, "Implanted backup implant")
-                    user.visible_message("<span class='notice'>[user] has been backup implanted by [user].</span>")
-                
+                    user.visible_message(span_notice("[user] has been backup implanted by [user]."))
+
                 //If implanting somehow fails, delete the implant.
                 else
                     qdel(imp)
-    
+
 /obj/structure/backup_implanter_ch/attackby(obj/item/O, mob/user)
     if(O.is_wrench())
 
         if(anchored)
-            to_chat(user, "<span class='notice'>You start to unwrench the implanter.</span>")
+            to_chat(user, span_notice("You start to unwrench the implanter."))
             playsound(src, O.usesound, 50, 1)
 
             if(do_after(user, 15 * O.toolspeed))
-                to_chat(user, "<span class='notice'>You unwrench the implanter.</span>")
+                to_chat(user, span_notice("You unwrench the implanter."))
                 anchored = FALSE
                 return
             else
                 return
 
         else
-            to_chat(user, "<span class='notice'>You start to wrench the implanter into place.</span>")
+            to_chat(user, span_notice("You start to wrench the implanter into place."))
             playsound(src, O.usesound, 50, 1)
 
             if(do_after(user, 15 * O.toolspeed))
 
-                to_chat(user, "<span class='notice'>You wrench the implanter into place.</span>")
+                to_chat(user, span_notice("You wrench the implanter into place."))
                 anchored = TRUE
                 return
             else

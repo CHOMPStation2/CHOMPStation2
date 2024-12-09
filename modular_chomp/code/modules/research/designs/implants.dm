@@ -10,6 +10,7 @@
 	materials = list(MAT_STEEL = 3000, MAT_GLASS = 3000)
 	build_path = /obj/item/organ/internal/augment/armmounted/hand
 	sort_string = "JVACE"
+	department = LATHE_ALL | LATHE_SCIENCE
 
 
 /datum/design/item/organ/internal/augment/armmounted/shoulder/multiple
@@ -19,6 +20,7 @@
 	materials = list(MAT_STEEL = 6000, MAT_GLASS = 6000)
 	build_path = /obj/item/organ/internal/augment/armmounted/shoulder/multiple
 	sort_string = "JVACI"
+	department = LATHE_ALL | LATHE_SCIENCE
 
 /datum/design/item/organ/internal/augment/armmounted/shoulder/multiple/medical
 	desc = "A large implant that fits into a subject's arm. It deploys an array of tools by some painful means."
@@ -27,3 +29,4 @@
 	materials = list(MAT_STEEL = 6000, MAT_GLASS = 6000, MAT_SILVER = 1000)
 	build_path = /obj/item/organ/internal/augment/armmounted/shoulder/multiple/medical
 	sort_string = "JVACJ"
+	department = LATHE_ALL | LATHE_MEDICAL

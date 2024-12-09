@@ -181,10 +181,18 @@
 
 	movement_cooldown = 3
 
+	var/deathtimer
+
 /mob/living/simple_mob/animal/giant_spider/broodling/Initialize()
 	. = ..()
 	adjust_scale(0.75)
-	addtimer(CALLBACK(src, PROC_REF(death)), 2 MINUTES)
+	deathtimer = addtimer(CALLBACK(src, PROC_REF(death)), 2 MINUTES, TIMER_STOPPABLE)
+
+/mob/living/simple_mob/animal/giant_spider/broodling/Destroy()
+	if(deathtimer)
+		deltimer(deathtimer)
+		deathtimer = null
+	. = ..()
 
 /mob/living/simple_mob/animal/giant_spider/broodling/death()
 	new /obj/effect/decal/cleanable/spiderling_remains(src.loc)

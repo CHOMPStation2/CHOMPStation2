@@ -41,7 +41,7 @@
 	data["target_owner"] = null
 	data["target_name"] = null
 	if(program && program.computer && program.computer.card_slot)
-		var/obj/item/weapon/card/id/id_card = program.computer.card_slot.stored_card
+		var/obj/item/card/id/id_card = program.computer.card_slot.stored_card
 		data["has_modify"] = !!id_card
 		data["account_number"] = id_card ? id_card.associated_account_number : null
 		data["id_rank"] = id_card && id_card.assignment ? id_card.assignment : "Unassigned"
@@ -64,13 +64,13 @@
 	var/list/all_centcom_access = list()
 	var/list/regions = list()
 	if(program.computer.card_slot && program.computer.card_slot.stored_card)
-		var/obj/item/weapon/card/id/id_card = program.computer.card_slot.stored_card
+		var/obj/item/card/id/id_card = program.computer.card_slot.stored_card
 		if(is_centcom)
 			for(var/access in get_all_centcom_access())
 				all_centcom_access.Add(list(list(
 					"desc" = replacetext(get_centcom_access_desc(access), " ", "&nbsp;"),
 					"ref" = access,
-					"allowed" = (access in id_card.access) ? 1 : 0)))
+					"allowed" = (access in id_card.GetAccess()) ? 1 : 0)))
 			data["all_centcom_access"] = all_centcom_access
 		else
 			for(var/i in ACCESS_REGION_SECURITY to ACCESS_REGION_SUPPLY)
@@ -80,7 +80,7 @@
 						accesses.Add(list(list(
 							"desc" = replacetext(get_access_desc(access), " ", "&nbsp;"),
 							"ref" = access,
-							"allowed" = (access in id_card.access) ? 1 : 0)))
+							"allowed" = (access in id_card.GetAccess()) ? 1 : 0)))
 
 				regions.Add(list(list(
 					"name" = get_region_accesses_name(i),
@@ -97,7 +97,7 @@
 	if(!istype(program))
 		return null
 
-	var/obj/item/weapon/card/id/id_card = program.computer.card_slot ? program.computer.card_slot.stored_card : null
+	var/obj/item/card/id/id_card = program.computer.card_slot ? program.computer.card_slot.stored_card : null
 	var/list/formatted = list()
 	for(var/job in jobs)
 		formatted.Add(list(list(
@@ -119,8 +119,8 @@
 	if(!istype(computer))
 		return TRUE
 
-	var/obj/item/weapon/card/id/user_id_card = usr.GetIdCard()
-	var/obj/item/weapon/card/id/id_card
+	var/obj/item/card/id/user_id_card = ui.user.GetIdCard()
+	var/obj/item/card/id/id_card
 	if(computer.card_slot)
 		id_card = computer.card_slot.stored_card
 
@@ -131,7 +131,7 @@
 		if("print")
 			if(computer && computer.nano_printer) //This option should never be called if there is no printer
 				if(!mod_mode)
-					if(program.can_run(usr, 1))
+					if(program.can_run(ui.user, 1))
 						var/contents = {"<h4>Access Report</h4>
 									<u>Prepared By:</u> [user_id_card.registered_name ? user_id_card.registered_name : "Unknown"]<br>
 									<u>For:</u> [id_card.registered_name ? id_card.registered_name : "Unregistered"]<br>
@@ -143,56 +143,56 @@
 								"}
 
 						var/known_access_rights = get_access_ids(ACCESS_TYPE_STATION|ACCESS_TYPE_CENTCOM)
-						for(var/A in id_card.access)
+						for(var/A in id_card.GetAccess())
 							if(A in known_access_rights)
 								contents += "  [get_access_desc(A)]"
 
 						if(!computer.nano_printer.print_text(contents,"access report"))
-							to_chat(usr, "<span class='notice'>Hardware error: Printer was unable to print the file. It may be out of paper.</span>")
+							to_chat(ui.user, span_notice("Hardware error: Printer was unable to print the file. It may be out of paper."))
 							return
 						else
-							computer.visible_message("<b>\The [computer]</b> prints out paper.")
+							computer.visible_message(span_bold("\The [computer]") + " prints out paper.")
 				else
 					var/contents = {"<h4>Crew Manifest</h4>
 									<br>
 									[data_core ? data_core.get_manifest(0) : ""]
 									"}
 					if(!computer.nano_printer.print_text(contents,text("crew manifest ([])", stationtime2text())))
-						to_chat(usr, "<span class='notice'>Hardware error: Printer was unable to print the file. It may be out of paper.</span>")
+						to_chat(ui.user, span_notice("Hardware error: Printer was unable to print the file. It may be out of paper."))
 						return
 					else
-						computer.visible_message("<b>\The [computer]</b> prints out paper.")
+						computer.visible_message(span_bold("\The [computer]") + " prints out paper.")
 			. = TRUE
 		if("modify")
 			if(computer && computer.card_slot)
 				if(id_card)
 					data_core.manifest_modify(id_card.registered_name, id_card.assignment, id_card.rank)
-				computer.proc_eject_id(usr)
+				computer.proc_eject_id(ui.user)
 			. = TRUE
 		if("terminate")
-			if(computer && program.can_run(usr, 1))
+			if(computer && program.can_run(ui.user, 1))
 				id_card.assignment = "Dismissed"	//VOREStation Edit: setting adjustment
 				id_card.access = list()
 				callHook("terminate_employee", list(id_card))
 			. = TRUE
 		if("reg")
-			if(computer && program.can_run(usr, 1))
+			if(computer && program.can_run(ui.user, 1))
 				var/temp_name = sanitizeName(params["reg"], allow_numbers = TRUE)
 				if(temp_name)
 					id_card.registered_name = temp_name
 				else
-					computer.visible_message("<span class='notice'>[computer] buzzes rudely.</span>")
+					computer.visible_message(span_notice("[computer] buzzes rudely."))
 			. = TRUE
 		if("account")
-			if(computer && program.can_run(usr, 1))
+			if(computer && program.can_run(ui.user, 1))
 				var/account_num = text2num(params["account"])
 				id_card.associated_account_number = account_num
 			. = TRUE
 		if("assign")
-			if(computer && program.can_run(usr, 1) && id_card)
+			if(computer && program.can_run(ui.user, 1) && id_card)
 				var/t1 = params["assign_target"]
 				if(t1 == "Custom")
-					var/temp_t = sanitize(tgui_input_text(usr, "Enter a custom job assignment.","Assignment", id_card.assignment, 45), 45)
+					var/temp_t = sanitize(tgui_input_text(ui.user, "Enter a custom job assignment.","Assignment", id_card.assignment, 45), 45)
 					//let custom jobs function as an impromptu alt title, mainly for sechuds
 					if(temp_t)
 						id_card.assignment = temp_t
@@ -208,7 +208,7 @@
 								jobdatum = J
 								break
 						if(!jobdatum)
-							to_chat(usr, "<span class='warning'>No log exists for this job: [t1]</span>")
+							to_chat(ui.user, span_warning("No log exists for this job: [t1]"))
 							return
 
 						access = jobdatum.get_access()
@@ -220,7 +220,7 @@
 				callHook("reassign_employee", list(id_card))
 			. = TRUE
 		if("access")
-			if(computer && program.can_run(usr, 1))
+			if(computer && program.can_run(ui.user, 1))
 				var/access_type = text2num(params["access_target"])
 				var/access_allowed = text2num(params["allowed"])
 				if(access_type in get_access_ids(ACCESS_TYPE_STATION|ACCESS_TYPE_CENTCOM))
@@ -231,4 +231,3 @@
 
 	if(id_card)
 		id_card.name = text("[id_card.registered_name]'s ID Card ([id_card.assignment])")
-

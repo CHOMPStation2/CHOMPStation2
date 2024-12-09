@@ -18,7 +18,7 @@
 				stack_trace("[src] at [x],[y],[z] failed to find reagent '[id]'!")
 				dispense_reagents -= id
 				continue
-			var/obj/item/weapon/reagent_containers/chem_disp_cartridge/C = cartridges[R.name]
+			var/obj/item/reagent_containers/chem_disp_cartridge/C = cartridges[R.name]
 			if(C && C.reagents.total_volume < C.reagents.maximum_volume)
 				var/to_restore = min(C.reagents.maximum_volume - C.reagents.total_volume, 5)
 				use_power(to_restore * 500)
@@ -47,7 +47,7 @@
 /obj/machinery/chemical_dispenser/bar_soft
 	dispense_reagents = list(
 		"water", "ice", "coffee", "cream", "tea", "icetea", "cola", "spacemountainwind", "dr_gibb", "space_up", "tonic",
-		"sodawater", "lemonjuice", "lemon_lime", "sugar", "orangejuice", "limejuice", "watermelonjuice", "thirteenloko", "grapesoda"
+		"sodawater", "lemonjuice", "lemon_lime", "sugar", "orangejuice", "limejuice", "watermelonjuice", "thirteenloko", "grapesoda", "pineapplejuice"
 		)
 
 /obj/machinery/chemical_dispenser/bar_alc
@@ -58,6 +58,13 @@
 
 /obj/machinery/chemical_dispenser/bar_coffee
 	dispense_reagents = list(
-		"coffee", "cafe_latte", "soy_latte", "hot_coco", "milk", "cream", "tea", "ice",
-		"orangejuice", "lemonjuice", "limejuice", "berryjuice", "mint", "decaf", "greentea"
+		"coffee", "cafe_latte", "soy_latte", "hot_coco", "milk", "cream", "tea", "ice", "water",
+		"orangejuice", "lemonjuice", "limejuice", "berryjuice", "mint", "decaf", "greentea", "milk_foam", "drip_coffee"
+		)
+
+/obj/machinery/chemical_dispenser/bar_syrup
+	dispense_reagents = list(
+		"syrup_pumpkin", "syrup_caramel", "syrup_salted_caramel", "syrup_irish", "syrup_almond", "syrup_cinnamon", "syrup_pistachio",
+		"syrup_vanilla", "syrup_toffee", "grenadine", "syrup_cherry", "syrup_butterscotch", "syrup_chocolate", "syrup_white_chocolate", "syrup_strawberry",
+		"syrup_coconut", "syrup_ginger", "syrup_gingerbread", "syrup_peppermint", "syrup_birthday"
 		)

@@ -30,12 +30,12 @@
 				CALLBACK(src, .some_proc_here)
 
 		when the above doesn't apply:
-			.proc/procname
+			PROC_REF(procname)
 			Example:
-				CALLBACK(src, .proc/some_proc_here)
+				CALLBACK(src, PROC_REF(some_proc_here))
 
 		proc defined on a parent of a some type:
-			Example: /some/type/.proc/some_proc_here
+			Example: /some/type/PROC_REF(some_proc_here)
 
 		Other wise you will have to do the full typepath of the proc (/type/of/thing/proc/procname)
 */

@@ -60,7 +60,7 @@
 							"backkey"=IS_CROWBAR,
 							"desc"="Translocator is installed"),  //Chompedit, change hand tele to translocator
 					//8
-					list("key"=/obj/item/device/perfect_tele,  //Chompedit, change hand tele to translocator
+					list("key"=/obj/item/perfect_tele,  //Chompedit, change hand tele to translocator
 							"backkey"=IS_SCREWDRIVER,
 							"desc"="SMES coil is secured"),
 					//9
@@ -76,7 +76,7 @@
 							"backkey"=IS_CROWBAR,
 							"desc"="Targeting module is installed"),
 					//12
-					list("key"=/obj/item/weapon/circuitboard/mecha/hades/targeting,
+					list("key"=/obj/item/circuitboard/mecha/hades/targeting,
 							"backkey"=IS_SCREWDRIVER,
 							"desc"="Peripherals control module is secured"),
 					//13
@@ -84,7 +84,7 @@
 							"backkey"=IS_CROWBAR,
 							"desc"="Peripherals control module is installed"),
 					//14
-					list("key"=/obj/item/weapon/circuitboard/mecha/hades/peripherals,
+					list("key"=/obj/item/circuitboard/mecha/hades/peripherals,
 							"backkey"=IS_SCREWDRIVER,
 							"desc"="Central control module is secured"),
 					//15
@@ -92,7 +92,7 @@
 							"backkey"=IS_CROWBAR,
 							"desc"="Central control module is installed"),
 					//16
-					list("key"=/obj/item/weapon/circuitboard/mecha/hades/main,
+					list("key"=/obj/item/circuitboard/mecha/hades/main,
 							"backkey"=IS_SCREWDRIVER,
 							"desc"="The wiring is adjusted"),
 					//17
@@ -159,7 +159,7 @@
 				holder.icon_state = "phazon6"
 			else
 				user.visible_message("[user] removes the central control module from [holder].", "You remove the central computer mainboard from [holder].")
-				new /obj/item/weapon/circuitboard/mecha/hades/main(get_turf(holder))
+				new /obj/item/circuitboard/mecha/hades/main(get_turf(holder))
 				holder.icon_state = "phazon4"
 		if(14)
 			if(diff==FORWARD)
@@ -175,7 +175,7 @@
 				holder.icon_state = "phazon8"
 			else
 				user.visible_message("[user] removes the peripherals control module from [holder].", "You remove the peripherals control module from [holder].")
-				new /obj/item/weapon/circuitboard/mecha/hades/peripherals(get_turf(holder))
+				new /obj/item/circuitboard/mecha/hades/peripherals(get_turf(holder))
 				holder.icon_state = "phazon6"
 		if(12)
 			if(diff==FORWARD)
@@ -191,7 +191,7 @@
 				holder.icon_state = "phazon10"
 			else
 				user.visible_message("[user] removes the weapon control module from [holder].", "You remove the weapon control module from [holder].")
-				new /obj/item/weapon/circuitboard/mecha/hades/targeting(get_turf(holder))
+				new /obj/item/circuitboard/mecha/hades/targeting(get_turf(holder))
 				holder.icon_state = "phazon8"
 		if(10)
 			if(diff==FORWARD)
@@ -223,7 +223,7 @@
 				holder.icon_state = "phazon14"
 			else
 				user.visible_message("[user] removes the hand teleporter from [holder].", "You remove the hand teleporter from [holder].")
-				new /obj/item/weapon/hand_tele(get_turf(holder))
+				new /obj/item/hand_tele(get_turf(holder))
 				holder.icon_state = "phazon12"
 		if(6)
 			if(diff==FORWARD)

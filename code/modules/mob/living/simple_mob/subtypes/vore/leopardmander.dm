@@ -7,9 +7,10 @@
 	icon_dead = "leopardmander-dead"
 	icon_living = "leopardmander"
 	icon_state = "leopardmander"
-	faction = "neutral"
+	icon_rest = "leopardmander-rest"
+	faction = FACTION_NEUTRAL
 	meat_amount = 40 //I mean...
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
+	meat_type = /obj/item/reagent_containers/food/snacks/meat
 	old_x = -48
 	old_y = 0
 	melee_damage_lower = 10
@@ -72,8 +73,8 @@
 	. = ..()
 	if(!riding_datum)
 		riding_datum = new /datum/riding/simple_mob(src)
-	verbs |= /mob/living/simple_mob/proc/animal_mount
-	verbs |= /mob/living/proc/toggle_rider_reins
+	add_verb(src, /mob/living/simple_mob/proc/animal_mount)
+	add_verb(src, /mob/living/proc/toggle_rider_reins)
 	movement_cooldown = -1
 
 /mob/living/simple_mob/vore/leopardmander/Initialize()
@@ -141,13 +142,13 @@
 /mob/living/simple_mob/vore/leopardmander/exotic/proc/toggle_glow()
 	set name = "Toggle Glow"
 	set desc = "Switch between glowing and not glowing."
-	set category = "Abilities"
+	set category = "Abilities.Leopardmander"
 
 	glow_toggle = !glow_toggle
 
 /mob/living/simple_mob/vore/leopardmander/exotic/New()
 	..()
-	verbs |= /mob/living/simple_mob/vore/leopardmander/exotic/proc/toggle_glow
+	add_verb(src, /mob/living/simple_mob/vore/leopardmander/exotic/proc/toggle_glow)
 
 /mob/living/simple_mob/vore/leopardmander/exotic/init_vore()
 	if(!voremob_loaded) //CHOMP add to fix runtime

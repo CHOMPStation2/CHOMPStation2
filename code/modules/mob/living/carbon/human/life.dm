@@ -12,31 +12,13 @@
 #define COLD_DAMAGE_LEVEL_2 1.5 //Amount of damage applied when your body temperature passes the 200K point
 #define COLD_DAMAGE_LEVEL_3 3 //Amount of damage applied when your body temperature passes the 120K point
 
-//Note that gas heat damage is only applied once every FOUR ticks.
-#define HEAT_GAS_DAMAGE_LEVEL_1 2 //Amount of damage applied when the current breath's temperature just passes the 360.15k safety point
-#define HEAT_GAS_DAMAGE_LEVEL_2 4 //Amount of damage applied when the current breath's temperature passes the 400K point
-#define HEAT_GAS_DAMAGE_LEVEL_3 8 //Amount of damage applied when the current breath's temperature passes the 1000K point
-
-#define COLD_GAS_DAMAGE_LEVEL_1 0.5 //Amount of damage applied when the current breath's temperature just passes the 260.15k safety point
-#define COLD_GAS_DAMAGE_LEVEL_2 1.5 //Amount of damage applied when the current breath's temperature passes the 200K point
-#define COLD_GAS_DAMAGE_LEVEL_3 3 //Amount of damage applied when the current breath's temperature passes the 120K point
-
-#define COLD_ALERT_SEVERITY_LOW         1 // Constants passed to the cold and heat alerts.
-#define COLD_ALERT_SEVERITY_MODERATE    2
-#define COLD_ALERT_SEVERITY_MAX         3
-#define ENVIRONMENT_COMFORT_MARKER_COLD 1
-
-#define HOT_ALERT_SEVERITY_LOW          1
-#define HOT_ALERT_SEVERITY_MODERATE     2
-#define HOT_ALERT_SEVERITY_MAX          3
-#define ENVIRONMENT_COMFORT_MARKER_HOT  2
-
-#define RADIATION_SPEED_COEFFICIENT 0.1
+//# define RADIATION_SPEED_COEFFICIENT 0.1 //CHOMPRemove
 #define HUMAN_COMBUSTION_TEMP 524 //524k is the sustained combustion temperature of human fat
 
 /mob/living/carbon/human
 	var/in_stasis = 0
 	var/heartbeat = 0
+	var/chemical_darksight = 0
 
 /mob/living/carbon/human/Life()
 	set invisibility = 0
@@ -91,6 +73,8 @@
 
 		handle_heartbeat()
 		handle_nif() 			//VOREStation Addition
+		if(phobias)
+			handle_phobias()
 		if(!client)
 			species.handle_npc(src)
 
@@ -203,19 +187,19 @@
 			for(var/mob/O in viewers(src, null))
 				if(O == src)
 					continue
-				O.show_message(text("<span class='danger'>[src] starts having a seizure!</span>"), 1)
+				O.show_message(span_danger("[src] starts having a seizure!"), 1)
 			Paralyse(10)
 			make_jittery(1000)
 	if (disabilities & COUGHING)
 		if ((prob(5) && paralysis <= 1))
 			drop_item()
-			spawn( 0 )
+			spawn(0)
 				emote("cough")
 				return
 	if (disabilities & TOURETTES)
 		if ((prob(10) && paralysis <= 1))
 			Stun(10)
-			spawn( 0 )
+			spawn(0)
 				switch(rand(1, 3))
 					if(1)
 						emote("twitch")
@@ -233,19 +217,19 @@
 			custom_pain("Your head feels numb and painful.", 10)
 	if(getBrainLoss() >= 15)
 		if(4 <= rn && rn <= 6) if(eye_blurry <= 0)
-			to_chat(src, "<span class='warning'>It becomes hard to see for some reason.</span>")
+			to_chat(src, span_warning("It becomes hard to see for some reason."))
 			eye_blurry = 10
 	if(getBrainLoss() >= 35)
 		if(7 <= rn && rn <= 9) if(get_active_hand())
-			to_chat(src, "<span class='danger'>Your hand won't respond properly, you drop what you're holding!</span>")
+			to_chat(src, span_danger("Your hand won't respond properly, you drop what you're holding!"))
 			drop_item()
 	if(getBrainLoss() >= 45)
 		if(10 <= rn && rn <= 12)
 			if(prob(50))
-				to_chat(src, "<span class='danger'>You suddenly black out!</span>")
+				to_chat(src, span_danger("You suddenly black out!"))
 				Paralyse(10)
 			else if(!lying)
-				to_chat(src, "<span class='danger'>Your legs won't respond properly, you fall down!</span>")
+				to_chat(src, span_danger("Your legs won't respond properly, you fall down!"))
 				Weaken(10)
 
 // RADIATION! Everyone's favorite thing in the world! So let's get some numbers down off the bat.
@@ -343,11 +327,11 @@
 			accumulated_rads += 10 * RADIATION_SPEED_COEFFICIENT
 			if(!isSynthetic())
 				if(prob(5) && prob(100 * RADIATION_SPEED_COEFFICIENT) && !weakened)
-					to_chat(src, "<span class='warning'>You feel exhausted.</span>")
+					to_chat(src, span_warning("You feel exhausted."))
 					AdjustWeakened(3)
 				if(prob(5) && prob(100 * RADIATION_SPEED_COEFFICIENT) && species.get_bodytype() == SPECIES_HUMAN) //apes go bald
 					if((h_style != "Bald" || f_style != "Shaved" ))
-						to_chat(src, "<span class='warning'>Your hair falls out.</span>")
+						to_chat(src, span_warning("Your hair falls out."))
 						h_style = "Bald"
 						f_style = "Shaved"
 						update_hair()
@@ -367,7 +351,7 @@
 				if(prob(5) && prob(100 * RADIATION_SPEED_COEFFICIENT))
 					spawn vomit()
 				if(prob(10) && !weakened)
-					to_chat(src, "<span class='warning'>You feel sick.</span>")
+					to_chat(src, span_warning("You feel sick."))
 					AdjustWeakened(3)
 
 		else if (radiation >= 300 && radiation < 400) //Equivalent of 6.0 to 8.0 Gy.
@@ -383,7 +367,7 @@
 				if(prob(10) && prob(100 * RADIATION_SPEED_COEFFICIENT))
 					spawn vomit()
 				if(prob(15) && !weakened)
-					to_chat(src, "<span class='warning'>You feel horribly ill.</span>")
+					to_chat(src, span_warning("You feel horribly ill."))
 					AdjustWeakened(3)
 				if(prob(5) && internal_organs.len)
 					I = pick(internal_organs) //Internal organ damage...Not good. Not good at all.
@@ -403,7 +387,7 @@
 						if(I)
 							if(istype(I)) I.add_autopsy_data("Radiation Burns", damage)
 							I.take_damage(damage * species.radiation_mod * RADIATION_SPEED_COEFFICIENT)
-							to_chat(src, "<span class='warning'>Your eyes burn!</span>")
+							to_chat(src, span_warning("Your eyes burn!"))
 							eye_blurry += 10
 				if(prob(4))
 					adjustCloneLoss(5 * RADIATION_SPEED_COEFFICIENT)
@@ -411,10 +395,10 @@
 				if(prob(25) && prob(100 * RADIATION_SPEED_COEFFICIENT))
 					spawn vomit()
 				if(prob(20) && !weakened)
-					to_chat(src, "<span class='critical'>You feel like your insides are burning!</span>")
+					to_chat(src, span_critical("You feel like your insides are burning!"))
 					AdjustWeakened(5)
 				if(prob(5))
-					to_chat(src, "<span class='critical'>Your entire body feels like it's on fire!</span>")
+					to_chat(src, span_critical("Your entire body feels like it's on fire!"))
 					adjustHalLoss(5)
 				if(prob(10) && internal_organs.len)
 					I = pick(internal_organs) //Internal organ damage...Not good. Not good at all.
@@ -439,13 +423,13 @@
 				if(prob(50) && prob(100 * RADIATION_SPEED_COEFFICIENT))
 					spawn vomit()
 				if(!paralysis && prob(30) && prob(100 * RADIATION_SPEED_COEFFICIENT)) //CNS is shutting down.
-					to_chat(src, "<span class='critical'>You have a seizure!</span>")
+					to_chat(src, span_critical("You have a seizure!"))
 					Paralyse(10)
 					make_jittery(1000)
 					if(!lying)
 						emote("collapse")
 				if(get_active_hand() && prob(15)) //CNS is shutting down.
-					to_chat(src, "<span class='danger'>Your hand won't respond properly, you drop what you're holding!</span>")
+					to_chat(src, span_danger("Your hand won't respond properly, you drop what you're holding!"))
 					drop_item()
 				if(internal_organs.len)
 					I = pick(internal_organs) //Internal organ damage...Not good. Not good at all.
@@ -477,29 +461,29 @@
 			I = internal_organs_by_name[O_EYES]
 			if(I) //Eye stuff
 				if(prob(5) && prob(accumulated_rads * RADIATION_SPEED_COEFFICIENT))
-					to_chat(src, "<span class='warning'>Your eyes water.</span>")
+					to_chat(src, span_warning("Your eyes water."))
 					eye_blurry += 5
 				if(accumulated_rads > 300) // (6Gy)
 					if(prob(2) && prob(accumulated_rads * RADIATION_SPEED_COEFFICIENT))
-						to_chat(src, "<span class='warning'>Your eyes burn.</span>")
+						to_chat(src, span_warning("Your eyes burn."))
 						I.add_autopsy_data("Radiation Burns", 1 * species.radiation_mod * RADIATION_SPEED_COEFFICIENT)
 						I.take_damage(1 * species.radiation_mod * RADIATION_SPEED_COEFFICIENT) //0.1 damage. Not a lot, but enough to tell you to get to medical.
 						eye_blurry += 10
 
 			if(accumulated_rads > 200) // (4Gy)
 				if(prob(5) && prob(accumulated_rads * RADIATION_SPEED_COEFFICIENT))
-					to_chat(src, "<span class='warning'>Your feel nauseated.</span>")
+					to_chat(src, span_warning("Your feel nauseated."))
 					spawn vomit()
 				if(!weakened && prob(2) && prob(accumulated_rads * RADIATION_SPEED_COEFFICIENT))
-					to_chat(src, "<span class='warning'>Your feel exhausted.</span>")
+					to_chat(src, span_warning("Your feel exhausted."))
 					AdjustWeakened(3)
 			if(accumulated_rads > 300) // (6Gy)
 				if(get_active_hand() && prob(15) && prob(100 * RADIATION_SPEED_COEFFICIENT)) //CNS is shutting down.
-					to_chat(src, "<span class='danger'>Your hand won't respond properly, you drop what you're holding!</span>")
+					to_chat(src, span_danger("Your hand won't respond properly, you drop what you're holding!"))
 					drop_item()
 			if(accumulated_rads > 700) // (12Gy)
 				if(!paralysis && prob(1) && prob(100 * RADIATION_SPEED_COEFFICIENT)) //1 in 1000 chance per tick.
-					to_chat(src, "<span class='critical'>You have a seizure!</span>")
+					to_chat(src, span_critical("You have a seizure!"))
 					Paralyse(10)
 					make_jittery(1000)
 					if(!lying)
@@ -524,17 +508,20 @@
 /mob/living/carbon/human/handle_post_breath(datum/gas_mixture/breath)
 	..()
 	//spread some viruses while we are at it
-	if(breath && virus2.len > 0 && prob(10))
-		for(var/mob/living/carbon/M in view(1,src))
-			src.spread_disease_to(M)
+	if(breath && !isnull(viruses) && prob(10))
+		for(var/datum/disease/D in GetViruses())
+			if((D.spread_flags & SPECIAL) || (D.spread_flags & NON_CONTAGIOUS))
+				continue
+			for(var/mob/living/carbon/M in view(1,src))
+				ContractDisease(D)
 
 
 /mob/living/carbon/human/get_breath_from_internal(volume_needed=BREATH_VOLUME)
 	if(internal)
 		//Because rigs store their tanks out of reach of contents.Find(), a check has to be made to make
 		//sure the rig is still worn, still online, and that its air supply still exists.
-		var/obj/item/weapon/tank/rig_supply
-		var/obj/item/weapon/rig/Rig = get_rig()
+		var/obj/item/tank/rig_supply
+		var/obj/item/rig/Rig = get_rig()
 
 		if(Rig)
 			rig_supply = Rig.air_supply
@@ -562,6 +549,11 @@
 		suiciding--
 		return 0
 
+	if(wear_mask && (wear_mask.item_flags & INFINITE_AIR))
+		failed_last_breath = 0
+		adjustOxyLoss(-5)
+		return
+
 	if(does_not_breathe)
 		failed_last_breath = 0
 		adjustOxyLoss(-5)
@@ -569,7 +561,7 @@
 
 	if(!breath || (breath.total_moles == 0))
 		failed_last_breath = 1
-		if(health > config.health_threshold_crit)
+		if(health > CONFIG_GET(number/health_threshold_crit))
 			adjustOxyLoss(HUMAN_MAX_OXYLOSS)
 		else
 			adjustOxyLoss(HUMAN_CRIT_MAX_OXYLOSS)
@@ -683,7 +675,7 @@
 		if(exhaled_pp > safe_exhaled_max)
 			if (prob(15))
 				var/word = pick("extremely dizzy","short of breath","faint","confused")
-				to_chat(src, "<span class='danger'>You feel [word].</span>")
+				to_chat(src, span_danger("You feel [word]."))
 
 			adjustOxyLoss(HUMAN_MAX_OXYLOSS)
 			failed_exhale = 1
@@ -691,7 +683,7 @@
 		else if(exhaled_pp > safe_exhaled_max * 0.7)
 			if (!prob(1))
 				var/word = pick("dizzy","short of breath","faint","momentarily confused")
-				to_chat(src, "<span class='warning'>You feel [word].</span>")
+				to_chat(src, span_warning("You feel [word]."))
 
 			//scale linearly from 0 to 1 between safe_exhaled_max and safe_exhaled_max*0.7
 			var/ratio = 1.0 - (safe_exhaled_max - exhaled_pp)/(safe_exhaled_max*0.3)
@@ -704,7 +696,7 @@
 		else if(exhaled_pp > safe_exhaled_max * 0.6)
 			if(prob(0.3))
 				var/word = pick("a little dizzy","short of breath")
-				to_chat(src, "<span class='warning'>You feel [word].</span>")
+				to_chat(src, span_warning("You feel [word]."))
 
 	// Too much poison in the air.
 	if(toxins_pp > safe_toxins_max)
@@ -759,10 +751,10 @@
 
 		if(breath.temperature <= species.breath_cold_level_1)
 			if(prob(20))
-				to_chat(src, "<span class='danger'>You feel your face freezing and icicles forming in your lungs!</span>")
+				to_chat(src, span_danger("You feel your face freezing and icicles forming in your lungs!"))
 		else if(breath.temperature >= species.breath_heat_level_1)
 			if(prob(20))
-				to_chat(src, "<span class='danger'>You feel your face burning and a searing heat in your lungs!</span>")
+				to_chat(src, span_danger("You feel your face burning and a searing heat in your lungs!"))
 
 		if(breath.temperature >= species.heat_discomfort_level)
 
@@ -828,7 +820,7 @@
 
 	playsound_local(get_turf(src), suit_inhale_sound, 100, pressure_affected = FALSE, volume_channel = VOLUME_CHANNEL_AMBIENCE)
 	if(!exhale) // Did we fail exhale? If no, play it after inhale finishes.
-		addtimer(CALLBACK(src, .proc/play_exhale, M), 5 SECONDS)
+		addtimer(CALLBACK(src, PROC_REF(play_exhale), M), 5 SECONDS)
 
 /mob/living/carbon/human/proc/play_exhale(var/mob/living/M)
 	var/suit_exhale_sound
@@ -1220,19 +1212,19 @@
 			if(!isnull(mod.metabolism_percent))
 				nutrition_reduction *= mod.metabolism_percent
 		//CHOMPEdit Begin
-		if(nutrition > 1000 && species.grows && size_multiplier < RESIZE_HUGE)
+		if(nutrition > 1000 && species.grows) //Removing the strict check against normal max/min size to support dorms/VR oversizing
 			nutrition_reduction *= 5
-			resize(min(size_multiplier+0.004,RESIZE_HUGE), animate = FALSE)
-		if(nutrition < 50 && species.shrinks && size_multiplier > RESIZE_TINY)
+			resize(size_multiplier+0.01, animate = FALSE, uncapped = has_large_resize_bounds()) //Bringing this code in line with micro and macro shrooms
+		if(nutrition < 50 && species.shrinks)
 			nutrition_reduction *= 0.3
-			resize(max(size_multiplier-0.004,RESIZE_TINY), animate = FALSE)
+			resize(size_multiplier-0.01, animate = FALSE, uncapped = has_large_resize_bounds()) //Bringing this code in line with micro and macro shrooms
 		//CHOMPEdit End
 		adjust_nutrition(-nutrition_reduction)
 
 	if(noisy == TRUE && nutrition < 250 && prob(10)) //VOREStation edit for hunger noises.
 		var/sound/growlsound = sound(get_sfx("hunger_sounds"))
 		var/growlmultiplier = 100 - (nutrition / 250 * 100)
-		playsound(src, growlsound, vol = growlmultiplier, vary = 1, falloff = 0.1, ignore_walls = TRUE, preference = /datum/client_preference/digestion_noises)
+		playsound(src, growlsound, vol = growlmultiplier, vary = 1, falloff = 0.1, ignore_walls = TRUE, preference = /datum/preference/toggle/digestion_noises)
 	// VOREStation Edit End
 	//CHOMPEdit Begin
 	if(nutrition > 500 && noisy_full == TRUE)
@@ -1242,6 +1234,13 @@
 		if(prob(belch_prob))
 			src.emote("belch")
 	//CHOMPEdit End
+
+	if((CE_DARKSIGHT in chem_effects) && chemical_darksight == 0)
+		recalculate_vis()
+		chemical_darksight = 1
+	if(!(CE_DARKSIGHT in chem_effects) && chemical_darksight == 1)
+		recalculate_vis()
+		chemical_darksight = 0
 
 	// TODO: stomach and bloodstream organ.
 	if(!isSynthetic())
@@ -1268,7 +1267,7 @@
 	else				//ALIVE. LIGHTS ARE ON
 		updatehealth()	//TODO
 
-		if(health <= config.health_threshold_dead || (should_have_organ("brain") && !has_brain()))
+		if(health <= CONFIG_GET(number/health_threshold_dead) || (should_have_organ("brain") && !has_brain()))
 			death()
 			blinded = 1
 			silent = 0
@@ -1276,7 +1275,7 @@
 			return 1
 
 		//UNCONSCIOUS. NO-ONE IS HOME
-		if((getOxyLoss() > (species.total_health/2)) || (health <= (config.health_threshold_crit * species.crit_mod)))
+		if((getOxyLoss() > (species.total_health/2)) || (health <= (CONFIG_GET(number/health_threshold_crit) * species.crit_mod))) // CHOMPEdit
 			Paralyse(3)
 
 		if(hallucination)
@@ -1304,10 +1303,36 @@
 				adjustBrainLoss(brainOxPercent * oxyloss)
 
 		if(halloss >= species.total_health)
-			to_chat(src, "<span class='notice'>You're in too much pain to keep going...</span>")
-			src.visible_message("<B>[src]</B> slumps to the ground, too weak to continue fighting.")
+			to_chat(src, span_notice("You're in too much pain to keep going..."))
+			src.visible_message(span_infoplain(span_bold("[src]") + " slumps to the ground, too weak to continue fighting."))
 			Paralyse(10)
 			setHalLoss(species.total_health - 1)
+
+		if(tiredness) //tiredness for vore drain
+			tiredness = (tiredness - 1)
+			if(tiredness >= 100)
+				Sleeping(5)
+
+		if(fear)
+			fear = (fear - 1)
+			if(fear >= 80 && client?.prefs?.read_preference(/datum/preference/toggle/play_ambience))
+				if(last_fear_sound + 51 SECONDS <= world.time)
+					src << sound('sound/effects/Heart Beat.ogg',0,0,0,25)
+					last_fear_sound = world.time
+			if(fear >= 80 && !isSynthetic())
+				if(prob(1) && get_active_hand())
+					var/stuff_to_drop = get_active_hand()
+					drop_item()
+					visible_message(span_notice("\The [src] suddenly drops their [stuff_to_drop]."),span_warning("You drop your [stuff_to_drop]!"))
+				if(prob(5))
+					var/fear_self = pick(fear_message_self)
+					var/fear_other = pick(fear_message_other)
+					visible_message(span_notice("\The [src][fear_other]"),span_warning("[fear_self]"))
+			else if(fear >= 30 && !isSynthetic())
+				if(prob(2))
+					var/fear_self = pick(fear_message_self)
+					var/fear_other = pick(fear_message_other)
+					visible_message(span_notice("\The [src][fear_other]"),span_warning("[fear_self]"))
 
 		if(paralysis || sleeping)
 			blinded = 1
@@ -1320,8 +1345,7 @@
 				if (mind)
 					//Are they SSD? If so we'll keep them asleep but work off some of that sleep var in case of stoxin or similar.
 					if(client || sleeping > 3)
-						AdjustSleeping(-1 * species.waking_speed)	//CHOMPEdit
-						throw_alert("asleep", /obj/screen/alert/asleep)
+						handle_sleeping()
 				if( prob(2) && health && !hal_crit && client )
 					spawn(0)
 						emote("snore")
@@ -1339,8 +1363,8 @@
 
 		//Eyes
 		//Check rig first because it's two-check and other checks will override it.
-		if(istype(back,/obj/item/weapon/rig))
-			var/obj/item/weapon/rig/O = back
+		if(istype(back,/obj/item/rig))
+			var/obj/item/rig/O = back
 			if(O.helmet && O.helmet == head && (O.helmet.body_parts_covered & EYES))
 				if((O.offline && O.offline_vision_restriction == 2) || (!O.offline && O.vision_restriction == 2))
 					blinded = 1
@@ -1499,6 +1523,34 @@
 		else
 			clear_fullscreen("brute")
 
+		//tiredness for drain vore
+		if(tiredness)
+			var/severity = 0
+			switch(tiredness)
+				if(10 to 20)		severity = 1
+				if(20 to 30)		severity = 2
+				if(30 to 45)		severity = 3
+				if(45 to 60)		severity = 4
+				if(60 to 75)		severity = 5
+				if(75 to 90)		severity = 6
+				if(90 to INFINITY)	severity = 7
+			overlay_fullscreen("tired", /obj/screen/fullscreen/oxy, severity)
+		else
+			clear_fullscreen("tired")
+
+		if(fear)
+			var/severity = 0
+			switch(fear)
+				if(10 to 20)		severity = 1
+				if(20 to 30)		severity = 2
+				if(30 to 50)		severity = 3
+				if(50 to 70)		severity = 4
+				if(70 to 90)		severity = 5
+				if(90 to INFINITY)	severity = 6
+			overlay_fullscreen("fear", /obj/screen/fullscreen/fear, severity)
+		else
+			clear_fullscreen("fear")
+
 		if(healths)
 			if (chem_effects[CE_PAINKILLER] > 100)
 				healths.icon_state = "health_numb"
@@ -1603,7 +1655,7 @@
 			//clear_fullscreen("belly3") //Chomp disable, using our own implementation
 			//clear_fullscreen("belly4") //Chomp disable, using our own implementation
 
-		if(config.welder_vision)
+		if(CONFIG_GET(flag/welder_vision))
 			var/found_welder
 			if(species.short_sighted)
 				found_welder = 1
@@ -1619,8 +1671,8 @@
 					var/obj/item/clothing/head/welding/O = head
 					if(!O.up)
 						found_welder = 1
-				if(!found_welder && istype(back, /obj/item/weapon/rig))
-					var/obj/item/weapon/rig/O = back
+				if(!found_welder && istype(back, /obj/item/rig))
+					var/obj/item/rig/O = back
 					if(O.helmet && O.helmet == head && (O.helmet.body_parts_covered & EYES))
 						if((O.offline && O.offline_vision_restriction == 1) || (!O.offline && O.vision_restriction == 1))
 							found_welder = 1
@@ -1650,7 +1702,7 @@
 
 		// Do this early so certain stuff gets turned off before vision is assigned.
 		var/area/A = get_area(src)
-		if(A?.no_spoilers)
+		if(A?.flag_check(AREA_NO_SPOILERS))
 			disable_spoiler_vision()
 
 		if(XRAY in mutations)
@@ -1677,7 +1729,7 @@
 			see_invisible = see_in_dark>2 ? SEE_INVISIBLE_LEVEL_ONE : see_invisible_default
 
 		var/glasses_processed = 0
-		var/obj/item/weapon/rig/rig = get_rig()
+		var/obj/item/rig/rig = get_rig()
 		if(istype(rig) && rig.visor && !looking_elsewhere)
 			if(!rig.helmet || (head && rig.helmet == head))
 				if(rig.visor && rig.visor.vision && rig.visor.active && rig.visor.vision.glasses)
@@ -1769,7 +1821,7 @@
 		if (getToxLoss() >= 30 && isSynthetic())
 			if(!confused)
 				if(prob(5))
-					to_chat(src, "<span class='danger'>You lose directional control!</span>")
+					to_chat(src, span_danger("You lose directional control!"))
 					Confuse(10)
 		if (getToxLoss() >= 45 && !isSynthetic())
 			spawn vomit()
@@ -1801,7 +1853,7 @@
 					stomach_contents.Remove(M)
 					qdel(M)
 					continue
-				if(air_master.current_cycle%3==1)
+				if(SSair.current_cycle%3==1)
 					if(!(M.status_flags & GODMODE))
 						M.adjustBruteLoss(5)
 					adjust_nutrition(10)
@@ -1862,7 +1914,7 @@
 		shock_stage = max(shock_stage-1, 0)
 	if(!can_feel_pain()) return
 
-	if(health < (config.health_threshold_softcrit * species.crit_mod)) //CHOMPEdit - fixes
+	if(health < (CONFIG_GET(number/health_threshold_softcrit) * species.crit_mod)) //CHOMPEdit - fixes
 		shock_stage = max(shock_stage, 61)
 	//CHOMPEdit end
 	if(stat)
@@ -1882,20 +1934,20 @@
 
 	if(shock_stage == 40)
 		if(traumatic_shock >= 80)
-			to_chat(src, "<span class='danger'>[pick("The pain is excruciating", "Please&#44; just end the pain", "Your whole body is going numb")]!</span>")
+			to_chat(src, span_danger("[pick("The pain is excruciating", "Please&#44; just end the pain", "Your whole body is going numb")]!"))
 
 	if (shock_stage >= 60)
 		if(shock_stage == 60 && !isbelly(loc)) //VOREStation Edit
 			custom_emote(VISIBLE_MESSAGE, "'s body becomes limp.")
 		if (prob(2))
 			if(traumatic_shock >= 80)
-				to_chat(src, "<span class='danger'>[pick("The pain is excruciating", "Please&#44; just end the pain", "Your whole body is going numb")]!</span>")
+				to_chat(src, span_danger("[pick("The pain is excruciating", "Please&#44; just end the pain", "Your whole body is going numb")]!"))
 			Weaken(20)
 
 	if(shock_stage >= 80)
 		if (prob(5))
 			if(traumatic_shock >= 80)
-				to_chat(src, "<span class='danger'>[pick("The pain is excruciating", "Please&#44; just end the pain", "Your whole body is going numb")]!</span>")
+				to_chat(src, span_danger("[pick("The pain is excruciating", "Please&#44; just end the pain", "Your whole body is going numb")]!"))
 				// CHOMPEdit: Pain
 				if(prob(20) && !isbelly(loc)) // Hopefully not spammy, only 20% of the time will we groan in pain + sanity for in-belly
 					emote("pain")
@@ -1905,7 +1957,7 @@
 	if(shock_stage >= 120)
 		if (prob(2))
 			if(traumatic_shock >= 80)
-				to_chat(src, "<span class='danger'>[pick("You black out", "You feel like you could die any moment now", "You are about to lose consciousness")]!</span>")
+				to_chat(src, span_danger("[pick("You black out", "You feel like you could die any moment now", "You are about to lose consciousness")]!"))
 				// CHOMPEdit: Pain
 				if(prob(40) && !isbelly(loc)) // Hopefully not spammy, only 40% of the time will we groan in pain + sanity for in-belly
 					emote("pain")
@@ -2021,7 +2073,7 @@
 	if(!H || (H.robotic >= ORGAN_ROBOT))
 		return
 
-	if(pulse >= PULSE_2FAST || shock_stage >= 10 || (istype(get_turf(src), /turf/space) && is_preference_enabled(/datum/client_preference/play_ambiance)))
+	if(pulse >= PULSE_2FAST || shock_stage >= 10 || (istype(get_turf(src), /turf/space) && read_preference(/datum/preference/toggle/play_ambience)))
 		//PULSE_THREADY - maximum value for pulse, currently it 5.
 		//High pulse value corresponds to a fast rate of heartbeat.
 		//Divided by 2, otherwise it is too slow.
@@ -2044,7 +2096,9 @@
 		if(stat == DEAD)
 			holder.icon_state = "-100" 	// X_X
 		else
-			holder.icon_state = RoundHealth((health-config.health_threshold_crit)/(getMaxHealth()-config.health_threshold_crit)*100)
+			holder.icon_state = RoundHealth((health-CONFIG_GET(number/health_threshold_crit))/(getMaxHealth()-CONFIG_GET(number/health_threshold_crit))*100)
+		if(block_hud)
+			holder.icon_state = "hudblank"
 		apply_hud(HEALTH_HUD, holder)
 
 	if (BITTEST(hud_updateflag, LIFE_HUD))
@@ -2055,12 +2109,14 @@
 			holder.icon_state = "huddead"
 		else
 			holder.icon_state = "hudhealthy"
+		if(block_hud)
+			holder.icon_state = "hudblank"
 		apply_hud(LIFE_HUD, holder)
 
 	if (BITTEST(hud_updateflag, STATUS_HUD))
 		var/foundVirus = 0
-		for (var/ID in virus2)
-			if (ID in virusDB)
+		for (var/datum/disease/D in GetViruses())
+			if(D.discovered)
 				foundVirus = 1
 				break
 
@@ -2084,17 +2140,23 @@
 End Chomp edit */
 		else
 			holder.icon_state = "hudhealthy"
-			if(virus2.len)
-				holder2.icon_state = "hudill"
+			if(viruses.len)
+				for(var/datum/disease/D in GetViruses())
+					if(D.discovered)
+						holder2.icon_state = "hudill"
 			else
 				holder2.icon_state = "hudhealthy"
+		if(block_hud)
+			holder.icon_state = "hudblank"
+			holder2.icon_state = "hudblank"
+
 		apply_hud(STATUS_HUD, holder)
 		apply_hud(STATUS_HUD_OOC, holder2)
 
 	if (BITTEST(hud_updateflag, ID_HUD))
 		var/image/holder = grab_hud(ID_HUD)
 		if(wear_id)
-			var/obj/item/weapon/card/id/I = wear_id.GetID()
+			var/obj/item/card/id/I = wear_id.GetID()
 			if(I)
 				holder.icon_state = "hud[ckey(I.GetJobName())]"
 			else
@@ -2102,6 +2164,8 @@ End Chomp edit */
 		else
 			holder.icon_state = "hudunknown"
 
+		if(block_hud)
+			holder.icon_state = "hudblank"
 		apply_hud(ID_HUD, holder)
 
 	if (BITTEST(hud_updateflag, WANTED_HUD))
@@ -2109,7 +2173,7 @@ End Chomp edit */
 		holder.icon_state = "hudblank"
 		var/perpname = name
 		if(wear_id)
-			var/obj/item/weapon/card/id/I = wear_id.GetID()
+			var/obj/item/card/id/I = wear_id.GetID()
 			if(I)
 				perpname = I.registered_name
 
@@ -2128,7 +2192,8 @@ End Chomp edit */
 					else if((R.fields["id"] == E.fields["id"]) && (R.fields["criminal"] == "Released"))
 						holder.icon_state = "hudreleased"
 						break
-
+		if(block_hud)
+			holder.icon_state = "hudblank"
 		apply_hud(WANTED_HUD, holder)
 
 	if (  BITTEST(hud_updateflag, IMPLOYAL_HUD) \
@@ -2143,14 +2208,14 @@ End Chomp edit */
 		holder2.icon_state = "hudblank"
 		holder3.icon_state = "hudblank"
 
-		for(var/obj/item/weapon/implant/I in src)
+		for(var/obj/item/implant/I in src)
 			if(I.implanted)
 				if(!I.malfunction)
-					if(istype(I,/obj/item/weapon/implant/tracking))
+					if(istype(I,/obj/item/implant/tracking))
 						holder1.icon_state = "hud_imp_tracking"
-					if(istype(I,/obj/item/weapon/implant/loyalty))
+					if(istype(I,/obj/item/implant/loyalty))
 						holder2.icon_state = "hud_imp_loyal"
-					if(istype(I,/obj/item/weapon/implant/chem))
+					if(istype(I,/obj/item/implant/chem))
 						holder3.icon_state = "hud_imp_chem"
 
 		apply_hud(IMPTRACK_HUD, holder1)
@@ -2210,3 +2275,14 @@ End Chomp edit */
 
 #undef HUMAN_MAX_OXYLOSS
 #undef HUMAN_CRIT_MAX_OXYLOSS
+
+#undef HEAT_DAMAGE_LEVEL_1
+#undef HEAT_DAMAGE_LEVEL_2
+#undef HEAT_DAMAGE_LEVEL_3
+
+#undef COLD_DAMAGE_LEVEL_1
+#undef COLD_DAMAGE_LEVEL_2
+#undef COLD_DAMAGE_LEVEL_3
+
+//# undef RADIATION_SPEED_COEFFICIENT //CHOMPRemove
+#undef HUMAN_COMBUSTION_TEMP

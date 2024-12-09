@@ -11,19 +11,20 @@
 		/obj/item/clothing/suit/storage/hooded/wintercoat/cargo,
 		/obj/item/clothing/shoes/boots/winter/supply,
 		/obj/item/clothing/shoes/black,
-		/obj/item/device/radio/headset/headset_cargo,
-		/obj/item/device/radio/headset/headset_cargo/alt,
+		/obj/item/radio/headset/cargo,
+		/obj/item/radio/headset/alt/cargo,
+		/obj/item/radio/headset/earbud/cargo,
 		/obj/item/clothing/gloves/black,
 		/obj/item/clothing/gloves/fingerless,
 		/obj/item/clothing/head/soft)
 
 /obj/structure/closet/secure_closet/cargotech/Initialize()
 	if(prob(75))
-		starts_with += /obj/item/weapon/storage/backpack
+		starts_with += /obj/item/storage/backpack
 	else
-		starts_with += /obj/item/weapon/storage/backpack/satchel/norm
+		starts_with += /obj/item/storage/backpack/satchel/norm
 	if(prob(25))
-		starts_with += /obj/item/weapon/storage/backpack/dufflebag
+		starts_with += /obj/item/storage/backpack/dufflebag
 	return ..()
 
 /obj/structure/closet/secure_closet/quartermaster
@@ -37,8 +38,9 @@
 		/obj/item/clothing/under/rank/cargo/jeans,
 		/obj/item/clothing/under/rank/cargo/jeans/female,
 		/obj/item/clothing/shoes/brown,
-		/obj/item/device/radio/headset/headset_qm, //VOREStation Edit,
-		/obj/item/device/radio/headset/headset_qm/alt, //VOREStation Edit,
+		/obj/item/radio/headset/qm,
+		/obj/item/radio/headset/alt/qm,
+		/obj/item/radio/headset/earbud/qm,
 		/obj/item/clothing/under/rank/neo_qm,
 		/obj/item/clothing/under/rank/neo_qm_skirt,
 		/obj/item/clothing/under/rank/neo_qm_jacket,
@@ -49,7 +51,7 @@
 		/obj/item/clothing/under/rank/neo_qm_gorka,
 		/obj/item/clothing/gloves/black,
 		/obj/item/clothing/gloves/fingerless,
-		/obj/item/weapon/tank/emergency/oxygen,
+		/obj/item/tank/emergency/oxygen,
 		/obj/item/clothing/mask/gas,
 		/obj/item/clothing/glasses/meson,
 		/obj/item/clothing/head/soft,
@@ -60,11 +62,11 @@
 
 /obj/structure/closet/secure_closet/quartermaster/Initialize()
 	if(prob(75))
-		starts_with += /obj/item/weapon/storage/backpack
+		starts_with += /obj/item/storage/backpack
 	else
-		starts_with += /obj/item/weapon/storage/backpack/satchel/norm
+		starts_with += /obj/item/storage/backpack/satchel/norm
 	if(prob(25))
-		starts_with += /obj/item/weapon/storage/backpack/dufflebag
+		starts_with += /obj/item/storage/backpack/dufflebag
 	return ..()
 
 /obj/structure/closet/secure_closet/miner
@@ -73,27 +75,27 @@
 	closet_appearance = /decl/closet_appearance/secure_closet/mining
 
 	starts_with = list(
-		/obj/item/device/radio/headset/headset_mine,
+		/obj/item/radio/headset/miner,
 		/obj/item/clothing/under/rank/miner,
 		/obj/item/clothing/gloves/black,
 		/obj/item/clothing/shoes/black,
-		/obj/item/device/analyzer,
-		/obj/item/weapon/storage/bag/ore,
-		/obj/item/weapon/storage/belt/miner,
-		/obj/item/device/flashlight/lantern,
-		/obj/item/weapon/shovel,
-		/obj/item/weapon/pickaxe/drill,
+		/obj/item/analyzer,
+		/obj/item/storage/bag/ore,
+		/obj/item/storage/belt/miner,
+		/obj/item/flashlight/lantern,
+		/obj/item/shovel,
+		/obj/item/pickaxe/drill,
 		/obj/item/clothing/glasses/material,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/miner,
 		/obj/item/clothing/shoes/boots/winter/mining,
-		/obj/item/device/emergency_beacon,
+		/obj/item/emergency_beacon,
 		/obj/item/stack/marker_beacon/thirty)
 
 /obj/structure/closet/secure_closet/miner/Initialize()
 	if(prob(50))
-		starts_with += /obj/item/weapon/storage/backpack/industrial
+		starts_with += /obj/item/storage/backpack/industrial
 	else
-		starts_with += /obj/item/weapon/storage/backpack/satchel/eng
+		starts_with += /obj/item/storage/backpack/satchel/eng
 	return ..()
 
 
@@ -104,15 +106,15 @@
 	closet_appearance = /decl/closet_appearance/secure_closet/lumber
 
 	starts_with = list(
-		/obj/item/device/radio/headset/headset_mine,
+		/obj/item/radio/headset/miner,
 		/obj/item/clothing/under/overalls,
 		/obj/item/clothing/gloves/light_brown,
 		/obj/item/clothing/gloves/black,
 		/obj/item/clothing/shoes/black,
-		/obj/item/weapon/material/knife/machete/hatchet,
-		/obj/item/weapon/gun/energy/kinetic_accelerator,
-		/obj/item/device/flashlight/lantern,
-		/obj/item/weapon/shovel,
+		/obj/item/material/knife/machete/hatchet,
+		/obj/item/gun/energy/kinetic_accelerator,
+		/obj/item/flashlight/lantern,
+		/obj/item/shovel,
 		/obj/item/clothing/glasses/material,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/miner,
 		/obj/item/clothing/shoes/boots/winter/mining,
@@ -120,7 +122,7 @@
 
 /obj/structure/closet/lumber/Initialize()
 	if(prob(50))
-		starts_with += /obj/item/weapon/storage/backpack/industrial
+		starts_with += /obj/item/storage/backpack/industrial
 	else
-		starts_with += /obj/item/weapon/storage/backpack/satchel/eng
+		starts_with += /obj/item/storage/backpack/satchel/eng
 	return ..()

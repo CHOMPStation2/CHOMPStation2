@@ -26,9 +26,9 @@
 /turf/template_noop,
 /area/submap/wreckedshelter)
 "g" = (
-/obj/item/weapon/storage/firstaid,
+/obj/item/storage/firstaid,
 /obj/item/stack/medical/splint,
-/obj/item/weapon/reagent_containers/pill/tramadol,
+/obj/item/reagent_containers/pill/tramadol,
 /turf/template_noop,
 /area/submap/wreckedshelter)
 "h" = (

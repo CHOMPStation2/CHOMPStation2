@@ -10,6 +10,7 @@
 	var/micro_hunt = FALSE					// Will target mobs at or under the micro_hunt_size size, requires vore_hostile to be true
 	var/micro_hunt_size = 0.25
 	var/belly_attack = TRUE					//Mobs attack if they are in a belly!
+	var/guard_limit = FALSE					//Mobs will not acquire targets unless they are in front of them.
 
 	var/atom/movable/target = null			// The thing (mob or object) we're trying to kill.
 	var/atom/movable/preferred_target = null// If set, and if given the chance, we will always prefer to target this over other options.
@@ -30,16 +31,19 @@
 
 // A lot of this is based off of /TG/'s AI code.
 
+//CHOMPEdit Begin
 // Step 1, find out what we can see.
 /datum/ai_holder/proc/list_targets()
-	. = ohearers(vision_range, holder)
-	. -= dview_mob // Not the dview mob!
+	. = hearers(vision_range, holder) - holder // Remove ourselves to prevent suicidal decisions. ~ SRC is the ai_holder.
 
-	var/static/hostile_machines = typecacheof(list(/obj/machinery/porta_turret, /obj/mecha, /obj/structure/blob))
+	var/static/list/hostile_machines = typecacheof(list(/obj/machinery/porta_turret, /obj/mecha))
+	var/static/list/ignore = typecacheof(list(/mob/observer))
 
 	for(var/HM in typecache_filter_list(range(vision_range, holder), hostile_machines))
 		if(can_see(holder, HM, vision_range))
 			. += HM
+	. = typecache_filter_list_reverse(., ignore)
+//CHOMPEdit End
 
 // Step 2, filter down possible targets to things we actually care about.
 /datum/ai_holder/proc/find_target(var/list/possible_targets, var/has_targets_list = FALSE)
@@ -49,7 +53,10 @@
 	. = list()
 	if(!has_targets_list)
 		possible_targets = list_targets()
-	for(var/possible_target in possible_targets)
+	for(var/atom/possible_target as anything in possible_targets)
+		if(guard_limit)
+			if((holder.dir == 1 && holder.y >= possible_target.y) || (holder.dir == 2 && holder.y <= possible_target.y) || (holder.dir == 4 && holder.x >= possible_target.x) || (holder.dir == 8 && holder.x <= possible_target.x)) //Ignore targets that are behind you
+				continue
 		if(can_attack(possible_target)) // Can we attack it?
 			. += possible_target
 
@@ -123,8 +130,7 @@
 	return closest_targets
 
 /datum/ai_holder/proc/can_attack(atom/movable/the_target, var/vision_required = TRUE)
-	if(!can_see_target(the_target) && vision_required)
-		return FALSE
+	//CHOMP Removal (optimizing by making most intense check last)
 	if(!belly_attack)
 		if(isbelly(holder.loc))
 			return FALSE
@@ -184,6 +190,17 @@
 
 	return TRUE
 //	return FALSE
+
+//CHOMPEdit Begin
+//It may seem a bit funny to define a proc above and then immediately override it in the same file
+//But this is basically layering the checks so that the vision check will always come last
+/datum/ai_holder/can_attack(atom/movable/the_target, var/vision_required = TRUE)
+	if(!..())
+		return FALSE
+	if(vision_required && !can_see_target(the_target))
+		return FALSE
+	return TRUE
+//CHOMPEdit End
 
 // 'Soft' loss of target. They may still exist, we still have some info about them maybe.
 /datum/ai_holder/proc/lose_target()
@@ -329,8 +346,14 @@
 	preferred_target = null
 
 /datum/ai_holder/proc/vore_check(mob/living/L)
-	if(!holder.vore_selected)	//We probably don't have a belly so don't even try
+	//CHOMPEdit Start
+	var/mob/living/simple_mob/simple = holder
+	if(istype(simple))	//We probably don't have a belly so don't even try
+		if (!simple.vore_active)
+			return FALSE
+	else if (holder.vore_selected == null)
 		return FALSE
+	// CHOMPEdit End
 	if(!isliving(L))	//We only want mob/living
 		return FALSE
 	if(!L.devourable || !L.allowmobvore)	//Check their prefs

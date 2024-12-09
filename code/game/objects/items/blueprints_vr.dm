@@ -55,14 +55,6 @@
 /area/submap/casino_event
 	name = "\improper Space Casino"
 
-
-
-//TG blueprints.
-#define AREA_ERRNONE 0
-#define AREA_STATION 1
-#define AREA_SPACE 2
-#define AREA_SPECIAL 3
-
 /obj/item/areaeditor
 	name = "area modification item"
 	icon = 'icons/obj/items.dmi'
@@ -71,8 +63,8 @@
 	in_use = FALSE
 	preserve_item = 1
 	var/uses_charges = 0 					// If the area editor has limited uses.
-	var/initial_charges = 10
-	var/charges = 10						// The amount of uses the area editor has.
+	var/initial_charges = 25 //CHOMPedit
+	var/charges = 25						// The amount of uses the area editor has. //CHOMPedit
 	var/station_master = 1					// If the areaeditor can add charges to others.
 	var/wire_schematics = 0					// If the areaeditor can see wires.
 	var/can_override = 0						// If you want the areaeditor to override the 'Don't make a new area where one already exists' logic. Only given to CE blueprints.
@@ -153,7 +145,7 @@
 		if(in_use)
 			return
 		var/area/A = get_area(usr)
-		if(A.flags & BLUE_SHIELDED)
+		if(A.flag_check(BLUE_SHIELDED))
 			to_chat(usr, span_warning("You cannot edit restricted areas."))
 			return
 		in_use = TRUE
@@ -164,7 +156,7 @@
 			return
 		in_use = TRUE
 		var/area/A = create_area_whole(usr, src)
-		if(A && (A.flags & BLUE_SHIELDED))
+		if(A?.flag_check(BLUE_SHIELDED))
 			to_chat(usr, span_warning("You cannot edit restricted areas."))
 			in_use = FALSE
 			return
@@ -244,7 +236,7 @@
 	desc = "A piece of paper that allows for expansion of the station and creation of new areas. There is a \"For Official Use Only\" stamp on it. NOT to be mistaken with the station blueprints."		// CHOMPEDIT : purdev (some spelling fixes)
 	station_master = 0
 	uses_charges = 1
-	can_override = 0
+	can_override = 1 //CHOMPedit, This will allow easier building on the planets, dont think blueprint grief is too big of a problem. -Lotion
 
 
 
@@ -493,7 +485,7 @@
 		var/area/place = get_area(turfs[i])
 		if(blacklisted_areas[place.type])
 			continue
-		if(!place.requires_power || (place.flags & BLUE_SHIELDED))
+		if(!place.requires_power || (place.flag_check(BLUE_SHIELDED)))
 			continue // No expanding powerless rooms etc
 		areas[place.name] = place
 
@@ -511,11 +503,11 @@
 		if(!str || !length(str)) //cancel
 			return
 		if(length(str) > 50)
-			to_chat(creator, "<span class='warning'>Name too long.</span>")
+			to_chat(creator, span_warning("Name too long."))
 			return
 		for(var/area/A in world) //Check to make sure we're not making a duplicate name. Sanity.
 			if(A.name == str)
-				to_chat(creator, "<span class='warning'>An area in the world alreay has this name.</span>")
+				to_chat(creator, span_warning("An area in the world alreay has this name."))
 				return
 		annoy_admins = 1 //They just made a new area entirely.
 		newA = new area_choice
@@ -560,16 +552,16 @@
 	if(!istype(res,/list))
 		switch(res)
 			if(ROOM_ERR_SPACE)
-				to_chat(creator, "<span class='warning'>The new area must be completely airtight!</span>")
+				to_chat(creator, span_warning("The new area must be completely airtight!"))
 				return
 			if(ROOM_ERR_TOOLARGE)
-				to_chat(creator, "<span class='warning'>The new area too large!</span>")
+				to_chat(creator, span_warning("The new area too large!"))
 				return
 			if(ROOM_ERR_FORBIDDEN)
-				to_chat(creator, "<span class='warning'>There is an area forbidden from being edited here!</span>")
+				to_chat(creator, span_warning("There is an area forbidden from being edited here!"))
 				return
 			else
-				to_chat(creator, "<span class='warning'>Error! Please notify administration!</span>")
+				to_chat(creator, span_warning("Error! Please notify administration!"))
 				return
 	var/list/turf/turfs = res
 
@@ -595,14 +587,14 @@
 				continue
 		if(!BUILDABLE_AREA_TYPES[place.type]) //TODOTODOTODO
 			can_make_new_area = 0
-		if(!place.requires_power || (place.flags & BLUE_SHIELDED))
+		if(!place.requires_power || (place.flag_check(BLUE_SHIELDED)))
 			continue // No expanding powerless rooms etc
 		areas[place.name] = place
 
 	//They can select an area they want to turn their current area into.
 	var/area_choice = tgui_input_list(creator, "What area do you want to turn the area YOU ARE CURRENTLY STANDING IN to? Or do you want to make a new area?", "Area Expansion", areas)
 	if(isnull(area_choice)) //They pressed cancel.
-		to_chat(creator, "<span class='warning'>No changes made.</span>")
+		to_chat(creator, span_warning("No changes made."))
 		return
 
 	area_choice = areas[area_choice]
@@ -610,23 +602,23 @@
 
 	if(!isarea(area_choice)) //They chose "New Area"
 		if(!can_make_new_area && !can_override)
-			to_chat(creator, "<span class='warning'>Making a new area here would be meaningless. Renaming it would be a better option.</span>")
+			to_chat(creator, span_warning("Making a new area here would be meaningless. Renaming it would be a better option."))
 			return
 		str = tgui_input_text(creator, "New area name", "Blueprint Editing", max_length = MAX_NAME_LEN)
 		str = sanitize(str,MAX_NAME_LEN)
 		if(!str || !length(str)) //cancel
 			return
 		if(length(str) > 50)
-			to_chat(creator, "<span class='warning'>Name too long.</span>")
+			to_chat(creator, span_warning("Name too long."))
 			return
 		for(var/area/A in world) //Check to make sure we're not making a duplicate name. Sanity.
 			if(A.name == str)
-				to_chat(creator, "<span class='warning'>An area in the world alreay has this name.</span>")
+				to_chat(creator, span_warning("An area in the world alreay has this name."))
 				return
 
 		var/confirm = tgui_alert(creator, "Are you sure you want to change [oldA.name] into a new area named [str]?", "READ CAREFULLY", list("No", "Yes"))
-		if(confirm == "No")
-			to_chat(creator, "<span class='warning'>No changes made.</span>")
+		if(confirm != "Yes")
+			to_chat(creator, span_warning("No changes made."))
 			return
 
 		newA = new area_choice
@@ -634,8 +626,8 @@
 		newA.has_gravity = oldA.has_gravity
 	else
 		var/confirm = tgui_alert(creator, "Are you sure you want to change [oldA.name] into [area_choice]?", "READ CAREFULLY", list("No", "Yes"))
-		if(confirm == "No")
-			to_chat(creator, "<span class='warning'>No changes made.</span>")
+		if(confirm != "Yes")
+			to_chat(creator, span_warning("No changes made."))
 			return
 		newA = area_choice //They selected to turn the area they're standing on into the selected area.
 
@@ -686,9 +678,9 @@
 			if(!visual && forbiddenAreas[NT.loc.type])
 				return ROOM_ERR_FORBIDDEN
 			// We ask ZAS to determine if its airtight.  Thats what matters anyway right?
-			if(air_master.air_blocked(T, NT))
+			if(SSair.air_blocked(T, NT))
 				// Okay thats the edge of the room
-				if(get_area_type(NT.loc) == AREA_SPACE && air_master.air_blocked(NT, NT))
+				if(get_area_type(NT.loc) == AREA_SPACE && SSair.air_blocked(NT, NT))
 					found += NT // So we include walls/doors not already in any area
 				continue
 			if (istype(NT, /turf/space))
@@ -726,13 +718,13 @@
 	if(!istype(res, /list))
 		switch(res)
 			if(ROOM_ERR_SPACE)
-				to_chat(usr, "<span class='warning'>The new area must be completely airtight!</span>")
+				to_chat(usr, span_warning("The new area must be completely airtight!"))
 				return
 			if(ROOM_ERR_TOOLARGE)
-				to_chat(usr, "<span class='warning'>The new area too large!</span>")
+				to_chat(usr, span_warning("The new area too large!"))
 				return
 			else
-				to_chat(usr, "<span class='danger'>Error! Please notify administration!</span>")
+				to_chat(usr, span_danger("Error! Please notify administration!"))
 				return
 	// Okay we got a room, lets color it
 	seeAreaColors_remove()
@@ -740,7 +732,7 @@
 	for(var/turf/T in res)
 		usr << image(green, T, "blueprints", TURF_LAYER)
 		areaColor_turfs += T
-	to_chat(usr, "<span class='notice'>The space covered by the new area is highlighted in green.</span>")
+	to_chat(usr, span_notice("The space covered by the new area is highlighted in green."))
 
 /obj/item/areaeditor/verb/seeAreaColors()
 	set src in usr
@@ -750,7 +742,7 @@
 	// Remove any existing
 	seeAreaColors_remove()
 
-	to_chat(usr, "<span class='notice'>\The [src] shows nearby areas in different colors.</span>")
+	to_chat(usr, span_notice("\The [src] shows nearby areas in different colors."))
 	var/i = 0
 	for(var/area/A in range(usr))
 		if(get_area_type(A) == AREA_SPACE)
@@ -785,21 +777,21 @@
 //GLOBAL VERB FOR PAPER TO ENABLE ANYONE TO MAKE AN AREA IN BUILDABLE AREAS.
 //THIS IS 70 TILES. ANYTHING LARGER SHOULD USE ACTUAL BLUEPRINTS.
 
-/obj/item/weapon/paper
+/obj/item/paper
 	var/created_area = 0
 	var/area_cooldown = 0
 
-/obj/item/weapon/paper/verb/create_area()
+/obj/item/paper/verb/create_area()
 	set name = "Create Area"
 	set category = "Object"
 	set src in usr
 
 	if(created_area)
-		to_chat(usr, "<span class='warning'>This paper has already been used to create an area.</span>")
+		to_chat(usr, span_warning("This paper has already been used to create an area."))
 		return
 
 	if(usr.stat || world.time < area_cooldown)
-		to_chat(usr, "<span class='warning'>You recently used this paper to try to create an area. Wait one minute before using it again.</span>")
+		to_chat(usr, span_warning("You recently used this paper to try to create an area. Wait one minute before using it again."))
 		return
 
 	area_cooldown = world.time + 600 //Anti spam.
@@ -826,7 +818,7 @@
 
 /proc/detect_new_area(var/turf/first, var/user) //Heavily simplified version for creating an area yourself.
 	if(!istype(first)) //Not on a turf.
-		to_chat(usr, "<span class='warning'You can not create a room here.</span>")
+		to_chat(usr, span_warning("You can not create a room here."))
 		return
 	if(get_new_area_type(first.loc) == 1) //Are they in an area they can build? I tried to do this BUILDABLE_AREA_TYPES[first.loc.type] but it refused.
 		var/list/turf/found = new
@@ -843,9 +835,9 @@
 				if(!get_new_area_type(NT.loc) == 1) //The contains somewhere that is NOT a buildable area.
 					return 3 //NOT A BUILDABLE AREA
 
-				if(air_master.air_blocked(T, NT)) //Is the room airtight?
+				if(SSair.air_blocked(T, NT)) //Is the room airtight?
 					// Okay thats the edge of the room
-					if(get_new_area_type(NT.loc) == 1 && air_master.air_blocked(NT, NT))
+					if(get_new_area_type(NT.loc) == 1 && SSair.air_blocked(NT, NT))
 						found += NT // So we include walls/doors not already in any area
 					continue
 				if (istype(NT, /turf/space))
@@ -875,16 +867,16 @@
 	if(!istype(res,/list))
 		switch(res)
 			if(1)
-				to_chat(creator, "<span class='warning'>The new area too large! You can only have an area that is up to 70 tiles.</span>")
+				to_chat(creator, span_warning("The new area too large! You can only have an area that is up to 70 tiles."))
 				return
 			if(2)
-				to_chat(creator, "<span class='warning'>The new area must be completely airtight and not be part of a shuttle!</span>")
+				to_chat(creator, span_warning("The new area must be completely airtight and not be part of a shuttle!"))
 				return
 			if(3)
-				to_chat(creator, "<span class='warning'>There is an area not permitted to be built in somewhere in the room!</span>")
+				to_chat(creator, span_warning("There is an area not permitted to be built in somewhere in the room!"))
 				return
 			else
-				to_chat(creator, "<span class='warning'>Error! Please notify administration!</span>")
+				to_chat(creator, span_warning("Error! Please notify administration!"))
 				return
 	var/list/turf/turfs = res
 
@@ -904,17 +896,17 @@
 	//They can select an area they want to turn their current area into.
 	str = sanitizeSafe(tgui_input_text(usr, "What would you like to name the area?", "Area Name", null, MAX_NAME_LEN), MAX_NAME_LEN)
 	if(isnull(str)) //They pressed cancel.
-		to_chat(creator, "<span class='warning'>No new area made. Cancelling.</span>")
+		to_chat(creator, span_warning("No new area made. Cancelling."))
 		return
 	if(!str || !length(str)) //sanity
-		to_chat(creator, "<span class='warning'>No new area made. Cancelling.</span>")
+		to_chat(creator, span_warning("No new area made. Cancelling."))
 		return
 	if(length(str) > MAX_NAME_LEN)
-		to_chat(creator, "<span class='warning'>Name too long.</span>")
+		to_chat(creator, span_warning("Name too long."))
 		return
 	for(var/area/A in world) //Check to make sure we're not making a duplicate name. Sanity.
 		if(A.name == str)
-			to_chat(creator, "<span class='warning'>An area in the world alreay has this name.</span>")
+			to_chat(creator, span_warning("An area in the world alreay has this name."))
 			return
 	newA = new /area
 	newA.setup(str)

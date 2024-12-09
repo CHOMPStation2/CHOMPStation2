@@ -84,7 +84,7 @@
 /area/submap/derelict2)
 "m" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/fancy/heartbox,
+/obj/item/storage/fancy/heartbox,
 /obj/item/toy/bosunwhistle/fluff/strix,
 /turf/simulated/floor/tiled/asteroid_steel/airless{
 	temperature = 293.15
@@ -98,14 +98,14 @@
 	pixel_x = -10
 	},
 /obj/structure/table/glass,
-/obj/item/weapon/flame/candle/everburn,
+/obj/item/flame/candle/everburn,
 /turf/simulated/floor/tiled/asteroid_steel/airless{
 	temperature = 293.15
 	},
 /area/submap/derelict2)
 "o" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/fancy/cigar/cohiba,
+/obj/item/storage/fancy/cigar/cohiba,
 /turf/simulated/floor/tiled/asteroid_steel/airless{
 	temperature = 293.15
 	},
@@ -147,7 +147,7 @@
 	},
 /area/submap/derelict2)
 "z" = (
-/obj/item/weapon/storage/fancy/blackcandle_box,
+/obj/item/storage/fancy/blackcandle_box,
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/asteroid_steel/airless{
 	temperature = 293.15
@@ -162,7 +162,7 @@
 	},
 /area/submap/derelict2)
 "D" = (
-/obj/item/weapon/storage/backpack/fancy,
+/obj/item/storage/backpack/fancy,
 /turf/simulated/floor/tiled/asteroid_steel/airless{
 	temperature = 293.15
 	},
@@ -174,7 +174,7 @@
 	},
 /area/submap/derelict2)
 "I" = (
-/obj/item/weapon/coin/gold,
+/obj/item/coin/gold,
 /turf/simulated/floor/tiled/asteroid_steel/airless{
 	temperature = 293.15
 	},
@@ -205,7 +205,7 @@
 	},
 /area/submap/derelict2)
 "Q" = (
-/obj/item/weapon/storage/backpack/satchel/fancy,
+/obj/item/storage/backpack/satchel/fancy,
 /turf/simulated/floor/tiled/asteroid_steel/airless{
 	temperature = 293.15
 	},

@@ -115,6 +115,10 @@
 	temperature = 258.15
 	},
 /area/redgate/eggnogtown/vibeout)
+"aH" = (
+/obj/machinery/telecomms/relay/preset/station,
+/turf/simulated/floor/reinforced,
+/area/redgate/eggnogtown/telecomms)
 "ba" = (
 /obj/structure/table/wooden_reinforced,
 /obj/machinery/chemical_dispenser/bar_alc/full,
@@ -163,8 +167,8 @@
 	pixel_y = -26
 	},
 /obj/random/awayloot,
-/obj/item/weapon/towel/random,
-/obj/item/weapon/towel/random,
+/obj/item/towel/random,
+/obj/item/towel/random,
 /obj/item/clothing/under/swimsuit/fluff/science,
 /turf/simulated/floor/bmarble{
 	temperature = 303.15
@@ -224,13 +228,22 @@
 	temperature = 303.15
 	},
 /area/redgate/eggnogtown/hotsprings)
+"fN" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/reinforced,
+/area/redgate/eggnogtown/telecomms)
 "fV" = (
 /obj/structure/closet/walllocker{
 	dir = 1;
 	pixel_y = -26
 	},
-/obj/item/weapon/towel/random,
-/obj/item/weapon/towel/random,
+/obj/item/towel/random,
+/obj/item/towel/random,
 /obj/item/clothing/under/swimsuit/fluff/engineering,
 /turf/simulated/floor/bmarble{
 	temperature = 303.15
@@ -312,8 +325,8 @@
 /obj/structure/closet/walllocker{
 	pixel_y = 26
 	},
-/obj/item/weapon/towel/random,
-/obj/item/weapon/towel/random,
+/obj/item/towel/random,
+/obj/item/towel/random,
 /obj/item/clothing/under/swimsuit/earth,
 /turf/simulated/floor/bmarble{
 	temperature = 303.15
@@ -328,6 +341,9 @@
 	temperature = 303.15
 	},
 /area/redgate/eggnogtown/hotsprings)
+"kc" = (
+/turf/simulated/wall/shull,
+/area/redgate/eggnogtown/telecomms)
 "kA" = (
 /turf/simulated/wall/iron,
 /area/redgate/eggnogtown/underground)
@@ -336,8 +352,8 @@
 	dir = 1;
 	pixel_y = -26
 	},
-/obj/item/weapon/towel/random,
-/obj/item/weapon/towel/random,
+/obj/item/towel/random,
+/obj/item/towel/random,
 /obj/item/clothing/under/swimsuit/fluff/medical,
 /turf/simulated/floor/bmarble{
 	temperature = 303.15
@@ -376,7 +392,7 @@
 /area/redgate/eggnogtown/underground)
 "lX" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp,
+/obj/item/flashlight/lamp,
 /obj/item/toy/mecha/honk,
 /turf/simulated/floor/wood{
 	temperature = 258.15
@@ -419,6 +435,12 @@
 	temperature = 258.15
 	},
 /area/redgate/eggnogtown/hotspring)
+"oz" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 10
+	},
+/turf/simulated/floor/reinforced,
+/area/redgate/eggnogtown/telecomms)
 "pn" = (
 /obj/structure/bed/chair/bay/comfy/red{
 	dir = 1
@@ -435,8 +457,14 @@
 	temperature = 303.15
 	},
 /area/redgate/eggnogtown/hotsprings)
+"qe" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/simulated/floor/reinforced,
+/area/redgate/eggnogtown/telecomms)
 "qr" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /turf/simulated/floor/tiled/dark{
 	temperature = 258.15
 	},
@@ -513,6 +541,12 @@
 	temperature = 258.15
 	},
 /area/redgate/eggnogtown/vibeout)
+"tm" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 5
+	},
+/turf/simulated/floor/reinforced,
+/area/redgate/eggnogtown/telecomms)
 "tI" = (
 /turf/simulated/floor/tiled/dark{
 	temperature = 258.15
@@ -579,7 +613,7 @@
 /area/redgate/eggnogtown/houserhomestead/basement)
 "vW" = (
 /obj/structure/table/borosilicate,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /turf/simulated/floor/wood{
 	temperature = 258.15
 	},
@@ -667,8 +701,8 @@
 /obj/structure/closet/walllocker{
 	pixel_y = 26
 	},
-/obj/item/weapon/towel/random,
-/obj/item/weapon/towel/random,
+/obj/item/towel/random,
+/obj/item/towel/random,
 /obj/item/clothing/under/swimsuit/blue,
 /turf/simulated/floor/bmarble{
 	temperature = 303.15
@@ -693,8 +727,8 @@
 "DZ" = (
 /obj/structure/railing,
 /obj/structure/table/wooden_reinforced,
-/obj/item/weapon/material/ashtray,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/material/ashtray,
+/obj/item/flashlight/lamp/green,
 /turf/simulated/floor/tiled/dark{
 	temperature = 258.15
 	},
@@ -714,6 +748,14 @@
 	temperature = 303.15
 	},
 /area/redgate/eggnogtown/hotsprings)
+"Gn" = (
+/obj/structure/fans/tiny,
+/obj/machinery/door/airlock/hatch{
+	name = "Telecomms Access";
+	req_one_access = list()
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/redgate/eggnogtown/telecomms)
 "Gq" = (
 /obj/structure/bed/chair/bay/comfy/red,
 /turf/simulated/floor/plating/eris/under{
@@ -735,7 +777,7 @@
 /turf/simulated/wall/iron,
 /area/redgate/eggnogtown/houserhomestead/basement)
 "Hk" = (
-/obj/item/weapon/bedsheet/mimedouble,
+/obj/item/bedsheet/mimedouble,
 /obj/structure/bed/double/padded,
 /turf/simulated/floor/wood{
 	temperature = 258.15
@@ -773,8 +815,8 @@
 /area/redgate/eggnogtown/hotsprings)
 "Jv" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/weapon/material/ashtray,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/material/ashtray,
+/obj/item/flashlight/lamp/green,
 /obj/item/toy/plushie/orange_fox,
 /turf/simulated/floor/wood{
 	temperature = 258.15
@@ -807,6 +849,12 @@
 	temperature = 258.15
 	},
 /area/redgate/eggnogtown/vibeout)
+"LP" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 9
+	},
+/turf/simulated/floor/reinforced,
+/area/redgate/eggnogtown/telecomms)
 "Mb" = (
 /obj/structure/table/steel,
 /turf/simulated/floor/tiled{
@@ -851,6 +899,11 @@
 	temperature = 303.15
 	},
 /area/redgate/eggnogtown/hotsprings)
+"MW" = (
+/turf/simulated/mineral/floor/ignore_cavegen/cave{
+	temperature = 258.15
+	},
+/area/redgate/eggnogtown/telecomms)
 "Oa" = (
 /obj/structure/bed/chair/bay/comfy/black{
 	dir = 4
@@ -895,7 +948,7 @@
 	},
 /area/redgate/eggnogtown/hotspring)
 "Pb" = (
-/obj/item/weapon/bedsheet/piratedouble,
+/obj/item/bedsheet/piratedouble,
 /obj/structure/bed/double/padded,
 /turf/simulated/floor/wood{
 	temperature = 258.15
@@ -930,9 +983,15 @@
 	temperature = 258.15
 	},
 /area/redgate/eggnogtown/vibeout)
+"Sz" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 6
+	},
+/turf/simulated/floor/reinforced,
+/area/redgate/eggnogtown/telecomms)
 "Tx" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /turf/simulated/floor/wood{
 	temperature = 258.15
 	},
@@ -1001,7 +1060,7 @@
 /area/redgate/eggnogtown/hotspring)
 "Wr" = (
 /obj/structure/table/borosilicate,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /turf/simulated/floor/plating/eris/under{
 	temperature = 258.15
 	},
@@ -1039,6 +1098,10 @@
 	temperature = 258.15
 	},
 /area/redgate/eggnogtown/houserhomestead/basement)
+"XU" = (
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/reinforced,
+/area/redgate/eggnogtown/telecomms)
 "XV" = (
 /obj/structure/table/steel,
 /obj/machinery/chemical_dispenser/bar_alc/full{
@@ -1048,8 +1111,17 @@
 	temperature = 258.15
 	},
 /area/redgate/eggnogtown/houserhomestead/basement)
+"Yt" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/reinforced,
+/area/redgate/eggnogtown/telecomms)
 "YF" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /turf/simulated/floor/tiled{
 	temperature = 258.15
 	},
@@ -1068,12 +1140,12 @@
 /area/redgate/eggnogtown/houserhomestead/basement)
 "YK" = (
 /obj/structure/table/steel,
-/obj/item/weapon/storage/box/glasses/mug,
+/obj/item/storage/box/glasses/mug,
 /obj/random/drinkbottle,
 /obj/random/drinkbottle,
 /obj/random/drinkbottle,
 /obj/random/cigarettes,
-/obj/item/weapon/book/manual/barman_recipes,
+/obj/item/book/manual/barman_recipes,
 /turf/simulated/floor/tiled{
 	temperature = 258.15
 	},
@@ -1089,8 +1161,8 @@
 	pixel_y = 26
 	},
 /obj/random/awayloot,
-/obj/item/weapon/towel/random,
-/obj/item/weapon/towel/random,
+/obj/item/towel/random,
+/obj/item/towel/random,
 /obj/item/clothing/under/swimsuit/black,
 /turf/simulated/floor/bmarble{
 	temperature = 303.15
@@ -7536,11 +7608,11 @@ ab
 ab
 ab
 ab
-ab
-ab
-ab
-ab
-ab
+kc
+kc
+kc
+kc
+kc
 aa
 ab
 ab
@@ -7678,12 +7750,12 @@ ab
 ab
 ab
 ab
-ab
-ab
-ab
-ab
-ab
-aa
+kc
+LP
+fN
+oz
+kc
+MW
 ab
 ab
 ab
@@ -7820,12 +7892,12 @@ ab
 ab
 ab
 ab
-ab
-ab
-ab
-ab
-ab
-aa
+kc
+qe
+aH
+XU
+Gn
+MW
 aa
 ab
 ab
@@ -7962,12 +8034,12 @@ ab
 ab
 ab
 ab
-ab
-ab
-ab
-ab
-ab
-aa
+kc
+tm
+Yt
+Sz
+kc
+MW
 aa
 ab
 ab
@@ -8104,11 +8176,11 @@ ab
 ab
 ab
 ab
-ab
-ab
-ab
-ab
-ab
+kc
+kc
+kc
+kc
+kc
 aa
 aa
 ab

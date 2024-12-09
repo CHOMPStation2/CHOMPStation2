@@ -4,6 +4,7 @@
 //Job defines
 #define JOB_OUTSIDER            "Outsider"
 #define JOB_ANOMALY			"Anomaly"
+#define JOB_VR	"VR Avatar"
 
 //Material defines
 #define MAT_CARPET				"red carpet"
@@ -15,8 +16,6 @@
 #define MAT_CARPET_PINK			"pink carpet"
 #define MAT_CARPET_PURPLE		"purple carpet"
 #define MAT_CARPET_ORANGE		"orange carpet"
-
-#define PHASE_SHIELDED 16 // Prevents shadekin phasing in/out in this area
 
 #define RCD_FIRELOCK		"Firelock"			// Builds an emergency glass shutter
 #define RCD_WINDOOR			"Windoor"			// Build a window door
@@ -33,8 +32,3 @@
 #define VANTAG_VORE_DE	"vantag_vore_de"
 #define VANTAG_VORE_DD	"vantag_vore_dd"
 #define VANTAG_VORE_DA	"vantag_vore_da"
-
-// ColorMate states
-#define COLORMATE_TINT 1
-#define COLORMATE_HSV 2
-#define COLORMATE_MATRIX 3

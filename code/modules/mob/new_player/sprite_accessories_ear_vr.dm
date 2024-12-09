@@ -6,10 +6,10 @@
 ////////////////////////////
 */
 /datum/sprite_accessory/ears
-	name = "You should not see this..."
+	name = DEVELOPER_WARNING_NAME
 	icon = 'icons/mob/vore/ears_vr.dmi'
 	do_colouration = 0 // Set to 1 to blend (ICON_ADD) hair color
-	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_ALTEVIAN) //This lets all races use
+	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_ALTEVIAN, SPECIES_LLEILL, SPECIES_HANNER) //This lets all races use
 	color_blend_mode = ICON_ADD // Only appliciable if do_coloration = 1
 
 // Species-unique ears
@@ -29,6 +29,26 @@
 	icon_state = "shadekin-round"
 	do_colouration = 1
 	extra_overlay = "shadekin-round-inner"
+
+/datum/sprite_accessory/ears/lleill
+	name = "Lleill Ears, colorable"
+	desc = ""
+	icon = 'icons/mob/vore/ears_32x64.dmi'
+	icon_state = "lleill"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "lleill-antlers"
+	species_allowed = list(SPECIES_LLEILL, SPECIES_HANNER)
+
+/datum/sprite_accessory/ears/lleill/curled
+	name = "Lleill Ears Curled, colorable"
+	icon_state = "lleill2"
+	extra_overlay = "lleill2-antlers"
+
+/datum/sprite_accessory/ears/lleill/tall
+	name = "Lleill Ears Tall, colorable"
+	icon_state = "lleill3"
+	extra_overlay = "lleill3-antlers"
 
 // Ears avaliable to anyone
 
@@ -303,10 +323,28 @@
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "kittyinner"
 
+/datum/sprite_accessory/ears/catbig
+	name = "cat, big, colorable"
+	desc = ""
+	icon_state = "catbig"
+	extra_overlay = "catbig-inner"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+
 /datum/sprite_accessory/ears/bunnyhc
 	name = "bunny, colorable"
 	desc = ""
 	icon_state = "bunny"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/ears/hare
+	name = "hare, colorable"
+	desc = ""
+	icon_state = "hare"
+	extra_overlay = "hare-inner"
+	extra_overlay2 = "hare-tips"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
@@ -344,6 +382,14 @@
 	name = "deer ears"
 	desc = ""
 	icon_state = "deer"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/ears/deeralt
+	name = "deer ears, alt"
+	desc = ""
+	icon_state = "deer_alt"
+	extra_overlay = "deer_alt-inner"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
@@ -476,6 +522,13 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "fox-inner"
+
+/datum/sprite_accessory/ears/dog_floppy
+	name = "floppy dog ears, colorable"
+	desc = ""
+	icon_state = "dog_flop"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/ears/bunny_floppy
 	name = "floopy bunny ears (colorable)"

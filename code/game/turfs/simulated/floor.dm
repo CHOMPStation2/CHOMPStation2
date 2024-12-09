@@ -13,7 +13,7 @@
 	var/base_desc = "The naked hull."
 	var/base_icon = 'icons/turf/flooring/plating_vr.dmi'
 	var/base_icon_state = "plating"
-	var/static/list/base_footstep_sounds = list("human" = list(
+	/* var/static/list/base_footstep_sounds = list("human" = list(
 		'sound/effects/footstep/plating1.ogg',
 		'sound/effects/footstep/plating2.ogg',
 		'sound/effects/footstep/plating3.ogg',
@@ -26,7 +26,7 @@
 		'sound/effects/footstep/BudgieStep4.ogg',
 		'sound/effects/footstep/BudgieStep5.ogg',
 		'sound/effects/footstep/BudgieStep6.ogg',
-		)) // CHOMPedit: tesh steps
+		))*/ // CHOMPedit: tesh steps CHOMPEdit - Better footsteps
 
 	var/list/old_decals = null
 
@@ -50,9 +50,9 @@
 	if(floortype)
 		set_flooring(get_flooring_data(floortype), TRUE)
 		. = INITIALIZE_HINT_LATELOAD // We'll update our icons after everyone is ready
-	else
-		vorefootstep_sounds = base_vorefootstep_sounds //CHOMPstation edit
-		footstep_sounds = base_footstep_sounds
+	// else
+		// vorefootstep_sounds = base_vorefootstep_sounds //CHOMPstation edit
+		// footstep_sounds = base_footstep_sounds CHOMPEdit - Better footsteps
 	if(can_dirty && can_start_dirty)
 		if(prob(dirty_prob))
 			dirt += rand(50,100)
@@ -72,8 +72,8 @@
 	if(is_plating() && !initializing) // Plating -> Flooring
 		swap_decals()
 	flooring = newflooring
-	vorefootstep_sounds = newflooring.vorefootstep_sounds //CHOMPstation edit
-	footstep_sounds = newflooring.footstep_sounds
+	// vorefootstep_sounds = newflooring.vorefootstep_sounds //CHOMPstation edit
+	// footstep_sounds = newflooring.footstep_sounds CHOMPEdit - Better footsteps
 	if(!initializing)
 		update_icon(1)
 	levelupdate()
@@ -90,13 +90,13 @@
 	desc = base_desc
 	icon = base_icon
 	icon_state = base_icon_state
-	vorefootstep_sounds = base_vorefootstep_sounds	 //CHOMPstation edit
-	footstep_sounds = base_footstep_sounds
+	// vorefootstep_sounds = base_vorefootstep_sounds	 //CHOMPstation edit
+	// footstep_sounds = base_footstep_sounds CHOMPEdit - Better footsteps
 
 	if(!is_plating()) // Flooring -> Plating
 		swap_decals()
 		if(flooring.build_type && place_product)
-			new flooring.build_type(src)
+			new flooring.build_type(src, flooring.build_cost) //VOREstation Edit: conservation of mass
 		var/newtype = flooring.get_plating_type()
 		if(newtype) // Has a custom plating type to become
 			set_flooring(get_flooring_data(newtype))
@@ -121,7 +121,7 @@
 	return (!flooring || flooring.can_engrave)
 
 /* CHOMPEdit - moved this block to modular_chomp\code\game\objects\items\weapons\rcd.dm
-/turf/simulated/floor/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/turf/simulated/floor/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	switch(passed_mode)
 		if(RCD_FLOORWALL)
 			// A wall costs four sheets to build (two for the grider and two for finishing it).
@@ -159,10 +159,10 @@
 	return FALSE
 
 
-/turf/simulated/floor/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/turf/simulated/floor/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	switch(passed_mode)
 		if(RCD_FLOORWALL)
-			to_chat(user, span("notice", "You build a wall."))
+			to_chat(user, span_notice("You build a wall."))
 			ChangeTurf(/turf/simulated/wall)
 			var/turf/simulated/wall/T = get_turf(src) // Ref to the wall we just built.
 			// Apparently set_material(...) for walls requires refs to the material singletons and not strings.
@@ -174,18 +174,18 @@
 		if(RCD_AIRLOCK)
 			if(locate(/obj/machinery/door/airlock) in src)
 				return FALSE // No more airlock stacking.
-			to_chat(user, span("notice", "You build an airlock."))
+			to_chat(user, span_notice("You build an airlock."))
 			new the_rcd.airlock_type(src)
 			return TRUE
 		if(RCD_WINDOWGRILLE)
 			if(locate(/obj/structure/grille) in src)
 				return FALSE
-			to_chat(user, span("notice", "You construct the grille."))
+			to_chat(user, span_notice("You construct the grille."))
 			var/obj/structure/grille/G = new(src)
 			G.anchored = TRUE
 			return TRUE
 		if(RCD_DECONSTRUCT)
-			to_chat(user, span("notice", "You deconstruct \the [src]."))
+			to_chat(user, span_notice("You deconstruct \the [src]."))
 			ChangeTurf(get_base_turf_by_area(src), preserve_outdoors = TRUE)
 			return TRUE
 */

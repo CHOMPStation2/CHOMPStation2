@@ -14,9 +14,9 @@
 	icon_keyboard = "pcu_key"
 	light_color = "#5284e7"
 	req_one_access = list(access_heads)
-	circuit = /obj/item/weapon/circuitboard/skills/pcu
+	circuit = /obj/item/circuitboard/skills/pcu
 	density = FALSE
-	var/obj/item/weapon/card/id/scan = null
+	var/obj/item/card/id/scan = null
 	var/authenticated = null
 	var/rank = null
 	var/screen = null
@@ -58,7 +58,7 @@
 	return ..()
 
 /obj/machinery/computer/skills/attackby(obj/item/O as obj, var/mob/user)
-	if(istype(O, /obj/item/weapon/card/id) && !scan && user.unEquip(O))
+	if(istype(O, /obj/item/card/id) && !scan && user.unEquip(O))
 		O.loc = src
 		scan = O
 		to_chat(user, "You insert [O].")
@@ -74,7 +74,7 @@
 	if(..())
 		return
 	if (using_map && !(src.z in using_map.contact_levels))
-		to_chat(user, "<span class='danger'>Unable to establish a connection:</span> You're too far away from the station!")
+		to_chat(user, span_danger("Unable to establish a connection:") + " You're too far away from the station!")
 		return
 	tgui_interact(user)
 
@@ -143,11 +143,11 @@
 	data["modal"] = tgui_modal_data(src)
 	return data
 
-/obj/machinery/computer/skills/tgui_act(action, params)
+/obj/machinery/computer/skills/tgui_act(action, params, datum/tgui/ui)
 	if(..())
 		return TRUE
 
-	add_fingerprint(usr)
+	add_fingerprint(ui.user)
 
 	if(!data_core.general.Find(active1))
 		active1 = null
@@ -160,13 +160,13 @@
 		if("scan")
 			if(scan)
 				scan.forceMove(loc)
-				if(ishuman(usr) && !usr.get_active_hand())
-					usr.put_in_hands(scan)
+				if(ishuman(ui.user) && !ui.user.get_active_hand())
+					ui.user.put_in_hands(scan)
 				scan = null
 			else
-				var/obj/item/I = usr.get_active_hand()
-				if(istype(I, /obj/item/weapon/card/id))
-					usr.drop_item()
+				var/obj/item/I = ui.user.get_active_hand()
+				if(istype(I, /obj/item/card/id))
+					ui.user.drop_item()
 					I.forceMove(src)
 					scan = I
 		if("cleartemp")
@@ -177,12 +177,12 @@
 				if(check_access(scan))
 					authenticated = scan.registered_name
 					rank = scan.assignment
-			else if(login_type == LOGIN_TYPE_AI && isAI(usr))
-				authenticated = usr.name
-				rank = "AI"
-			else if(login_type == LOGIN_TYPE_ROBOT && isrobot(usr))
-				authenticated = usr.name
-				var/mob/living/silicon/robot/R = usr
+			else if(login_type == LOGIN_TYPE_AI && isAI(ui.user))
+				authenticated = ui.user.name
+				rank = JOB_AI
+			else if(login_type == LOGIN_TYPE_ROBOT && isrobot(ui.user))
+				authenticated = ui.user.name
+				var/mob/living/silicon/robot/R = ui.user
 				rank = "[R.modtype] [R.braintype]"
 			if(authenticated)
 				active1 = null
@@ -199,8 +199,8 @@
 			if("logout")
 				if(scan)
 					scan.forceMove(loc)
-					if(ishuman(usr) && !usr.get_active_hand())
-						usr.put_in_hands(scan)
+					if(ishuman(ui.user) && !ui.user.get_active_hand())
+						ui.user.put_in_hands(scan)
 					scan = null
 				authenticated = null
 				screen = null
@@ -214,6 +214,16 @@
 				for(var/datum/data/record/R in data_core.general)
 					qdel(R)
 				set_temp("All employment records deleted.")
+			if("sync_r")
+				if(active1)
+					set_temp(client_update_record(src,active1,usr))
+			if("edit_notes")
+				// The modal input in tgui is busted for this sadly...
+				var/new_notes = strip_html_simple(tgui_input_text(usr,"Enter new information here.","Character Preference", html_decode(active1.fields["notes"]), MAX_RECORD_LENGTH, TRUE, prevent_enter = TRUE), MAX_RECORD_LENGTH)
+				if(usr.Adjacent(src))
+					if(new_notes != "" || tgui_alert(usr, "Are you sure you want to delete the current record's notes?", "Confirm Delete", list("Delete", "No")) == "Delete")
+						if(usr.Adjacent(src))
+							active1.fields["notes"] = new_notes
 			if("del_r")
 				if(PDA_Manifest)
 					PDA_Manifest.Cut()
@@ -316,8 +326,8 @@
   * Called when the print timer finishes
   */
 /obj/machinery/computer/skills/proc/print_finish()
-	var/obj/item/weapon/paper/P = new(loc)
-	P.info = "<center><b>Medical Record</b></center><br>"
+	var/obj/item/paper/P = new(loc)
+	P.info = "<center>" + span_bold("Medical Record") + "</center><br>"
 	if(istype(active1, /datum/data/record) && data_core.general.Find(active1))
 		P.info += {"Name: [active1.fields["name"]] ID: [active1.fields["id"]]
 		<br>\nSex: [active1.fields["sex"]]
@@ -338,7 +348,7 @@
 		for(var/c in active1.fields["comments"])
 			P.info += "[c["header"]]<br>[c["text"]]<br>"
 	else
-		P.info += "<b>General Record Lost!</b><br>"
+		P.info += span_bold("General Record Lost!") + "<br>"
 	P.info += "</tt>"
 	P.name = "paper - 'Employment Record: [active1.fields["name"]]'"
 	printing = FALSE
@@ -385,3 +395,9 @@
 			continue
 
 	..(severity)
+
+#undef GENERAL_RECORD_LIST
+#undef GENERAL_RECORD_MAINT
+#undef GENERAL_RECORD_DATA
+
+#undef FIELD

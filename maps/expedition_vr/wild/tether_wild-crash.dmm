@@ -79,7 +79,7 @@
 	},
 /area/tether/surfacebase/outside/wilderness)
 "ak" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/simulated/floor/outdoors/grass/sif/virgo3b{
 	icon_state = "grass_sif_dark";
 	name = "dense growth";
@@ -185,11 +185,11 @@
 	},
 /area/tether/surfacebase/outside/wilderness)
 "aC" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/simulated/shuttle/floor/black/virgo3b,
 /area/tether/surfacebase/outside/wilderness)
 "aD" = (
-/obj/item/weapon/pen{
+/obj/item/pen{
 	pixel_y = 4
 	},
 /turf/simulated/shuttle/floor/black/virgo3b,
@@ -263,11 +263,11 @@
 /turf/simulated/shuttle/floor/black/virgo3b,
 /area/tether/surfacebase/crash)
 "aN" = (
-/obj/item/weapon/storage/firstaid/regular{
+/obj/item/storage/firstaid/regular{
 	pixel_x = -2;
 	pixel_y = 4
 	},
-/obj/item/weapon/storage/firstaid/regular{
+/obj/item/storage/firstaid/regular{
 	pixel_x = -2;
 	pixel_y = 4
 	},
@@ -277,33 +277,33 @@
 /obj/item/bodybag/cryobag{
 	pixel_x = 5
 	},
-/obj/item/weapon/storage/firstaid/o2{
+/obj/item/storage/firstaid/o2{
 	layer = 2.8;
 	pixel_x = 4;
 	pixel_y = 6
 	},
-/obj/item/weapon/storage/box/masks{
+/obj/item/storage/box/masks{
 	pixel_x = 0;
 	pixel_y = 0
 	},
-/obj/item/weapon/storage/box/gloves{
+/obj/item/storage/box/gloves{
 	pixel_x = 3;
 	pixel_y = 4
 	},
-/obj/item/weapon/storage/firstaid/toxin,
-/obj/item/weapon/storage/firstaid/fire{
+/obj/item/storage/firstaid/toxin,
+/obj/item/storage/firstaid/fire{
 	layer = 2.9;
 	pixel_x = 2;
 	pixel_y = 3
 	},
-/obj/item/weapon/storage/firstaid/adv{
+/obj/item/storage/firstaid/adv{
 	pixel_x = -2
 	},
-/obj/item/weapon/reagent_containers/blood/empty,
-/obj/item/weapon/reagent_containers/blood/OMinus,
-/obj/item/weapon/reagent_containers/blood/OMinus,
-/obj/item/weapon/reagent_containers/blood/OMinus,
-/obj/item/weapon/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/empty,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
 /obj/structure/closet/medical_wall{
 	pixel_y = 32
 	},
@@ -314,7 +314,7 @@
 	dir = 4;
 	icon_state = "tube1"
 	},
-/obj/item/weapon/surgical/scalpel,
+/obj/item/surgical/scalpel,
 /turf/simulated/shuttle/floor/black/virgo3b,
 /area/tether/surfacebase/crash)
 "aP" = (
@@ -355,11 +355,11 @@
 /area/tether/surfacebase/crash)
 "aU" = (
 /obj/item/clothing/mask/surgical,
-/obj/item/weapon/surgical/bonesetter,
+/obj/item/surgical/bonesetter,
 /turf/simulated/shuttle/floor/black/virgo3b,
 /area/tether/surfacebase/crash)
 "aV" = (
-/obj/item/weapon/surgical/surgicaldrill,
+/obj/item/surgical/surgicaldrill,
 /turf/simulated/shuttle/floor/black/virgo3b,
 /area/tether/surfacebase/crash)
 "aW" = (
@@ -414,8 +414,8 @@
 /turf/simulated/shuttle/floor/black/virgo3b,
 /area/tether/surfacebase/crash)
 "bd" = (
-/obj/item/weapon/surgical/circular_saw,
-/obj/item/weapon/surgical/FixOVein{
+/obj/item/surgical/circular_saw,
+/obj/item/surgical/FixOVein{
 	pixel_x = -6;
 	pixel_y = 1
 	},
@@ -434,7 +434,7 @@
 /turf/simulated/shuttle/floor/black/virgo3b,
 /area/tether/surfacebase/crash)
 "bg" = (
-/obj/item/weapon/surgical/hemostat{
+/obj/item/surgical/hemostat{
 	pixel_y = 4
 	},
 /turf/simulated/shuttle/floor/black/virgo3b,
@@ -475,18 +475,18 @@
 /area/tether/surfacebase/crash)
 "bn" = (
 /obj/structure/table/standard,
-/obj/item/weapon/surgical/cautery{
+/obj/item/surgical/cautery{
 	pixel_y = 4
 	},
 /obj/item/stack/medical/advanced/bruise_pack,
-/obj/item/weapon/surgical/bonegel{
+/obj/item/surgical/bonegel{
 	pixel_x = 4;
 	pixel_y = 3
 	},
 /turf/simulated/shuttle/floor/black/virgo3b,
 /area/tether/surfacebase/crash)
 "bo" = (
-/obj/item/weapon/surgical/retractor{
+/obj/item/surgical/retractor{
 	pixel_x = 0;
 	pixel_y = 6
 	},
@@ -500,7 +500,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/simulated/shuttle/floor/black/virgo3b,
 /area/tether/surfacebase/outside/wilderness)
 "bq" = (
@@ -553,11 +553,11 @@
 /area/tether/surfacebase/crash)
 "bw" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/paper_bin{
+/obj/item/paper_bin{
 	pixel_x = -3;
 	pixel_y = 8
 	},
-/obj/item/weapon/pen{
+/obj/item/pen{
 	pixel_y = 4
 	},
 /turf/simulated/shuttle/floor/black/virgo3b,
@@ -660,7 +660,7 @@
 /obj/machinery/vending/cigarette{
 	name = "hacked cigarette machine";
 	prices = list();
-	products = list(/obj/item/weapon/storage/fancy/cigarettes = 10, /obj/item/weapon/storage/box/matches = 10, /obj/item/weapon/flame/lighter/zippo = 4, /obj/item/clothing/mask/smokable/cigarette/cigar/havana = 2)
+	products = list(/obj/item/storage/fancy/cigarettes = 10, /obj/item/storage/box/matches = 10, /obj/item/flame/lighter/zippo = 4, /obj/item/clothing/mask/smokable/cigarette/cigar/havana = 2)
 	},
 /turf/simulated/shuttle/floor/black/virgo3b,
 /area/tether/surfacebase/crash)
@@ -765,7 +765,7 @@
 	icon_state = "plant-09";
 	name = "Esteban";
 	pixel_y = 8;
-	
+
 	},
 /turf/simulated/shuttle/floor/black/virgo3b,
 /area/tether/surfacebase/outside/wilderness)
@@ -806,7 +806,7 @@
 /turf/simulated/shuttle/floor/black/virgo3b,
 /area/tether/surfacebase/outside/wilderness)
 "cg" = (
-/obj/item/weapon/reagent_containers/spray/cleaner,
+/obj/item/reagent_containers/spray/cleaner,
 /turf/simulated/shuttle/floor/black/virgo3b,
 /area/tether/surfacebase/outside/wilderness)
 "ch" = (
@@ -834,7 +834,7 @@
 /area/tether/surfacebase/crash)
 "cl" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/mechanical,
 /turf/simulated/shuttle/floor/black{
 	carbon_dioxide = 12.7125;
 	nitrogen = 16.95;
@@ -989,7 +989,7 @@
 /area/tether/surfacebase/crash)
 "cI" = (
 /obj/structure/bed/padded,
-/obj/item/weapon/bedsheet/captain,
+/obj/item/bedsheet/captain,
 /turf/simulated/shuttle/floor/black/virgo3b,
 /area/tether/surfacebase/crash)
 "cJ" = (

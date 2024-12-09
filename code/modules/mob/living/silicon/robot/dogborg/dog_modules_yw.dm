@@ -1,7 +1,7 @@
 /*TEST*/
 /******/
 
-/obj/item/device/dogborg/pounce_module
+/obj/item/dogborg/pounce_module
 	name = "pounce module"
 	icon = 'icons/mob/dogborg_vr.dmi'
 	icon_state = "pounce"
@@ -9,14 +9,14 @@
 	throwforce = 0 //This shouldn't be thrown in the first place.
 	w_class = ITEMSIZE_NORMAL
 
-/obj/item/device/dogborg/pounce_module/New()
+/obj/item/dogborg/pounce_module/New()
 	..()
 	flags |= NOBLUDGEON //No more attack messages
 
-/obj/item/device/dogborg/pounce_module/attack_self(mob/user)
+/obj/item/dogborg/pounce_module/attack_self(mob/user)
 	return
 
-/obj/item/device/dogborg/pounce_module/afterattack(atom/target, mob/user as mob, proximity)
+/obj/item/dogborg/pounce_module/afterattack(atom/target, mob/user as mob, proximity)
 	if(proximity && ishuman(target))
 		user.visible_message("<span class='notice'>\the [user] pounces at \the [target]'s face!</span>", "<span class='notice'>You pounce at \the [target]!</span>")
 		var/mob/living/L = target
@@ -28,7 +28,7 @@
 /* Not needed anymore because we have removed boozeborg from the _vr file that Yawn wanted to put it in and restored the _ch file we had for this found in /code/modules/mob/living/silicon/robot/subtypes/boozeborg_ch.dm.
 /mob/living/silicon/robot/proc/reskin_booze()
 	set name = "Change Drink Color"
-	set category = "Robot Commands"
+	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
 	set desc = "Choose the color of drink displayed inside you."
 
 	var/mob/M = usr

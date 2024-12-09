@@ -13,7 +13,7 @@
 	idle_power_usage = 800
 	var/delay = 10
 	req_access = list(access_rd) //Only the R&D can change server settings.
-	circuit = /obj/item/weapon/circuitboard/rdserver
+	circuit = /obj/item/circuitboard/rdserver
 
 /obj/machinery/r_n_d/server/Initialize()
 	. = ..()
@@ -25,7 +25,7 @@
 
 /obj/machinery/r_n_d/server/RefreshParts()
 	var/tot_rating = 0
-	for(var/obj/item/weapon/stock_parts/SP in src)
+	for(var/obj/item/stock_parts/SP in src)
 		tot_rating += SP.rating
 	update_idle_power_usage(initial(idle_power_usage) / max(1, tot_rating))
 
@@ -150,7 +150,7 @@
 	icon_keyboard = "rd_key"
 	icon_screen = "rdcomp"
 	light_color = "#a97faa"
-	circuit = /obj/item/weapon/circuitboard/rdservercontrol
+	circuit = /obj/item/circuitboard/rdservercontrol
 	var/screen = 0
 	var/obj/machinery/r_n_d/server/temp_server
 	var/list/servers = list()
@@ -219,7 +219,7 @@
 	if(..())
 		return TRUE
 
-	add_fingerprint(usr)
+	add_fingerprint(ui.user)
 	switch(action)
 		if("toggle_upload", "toggle_download")
 			var/obj/machinery/r_n_d/server/S = locate(params["server"])
@@ -248,7 +248,7 @@
 			var/obj/machinery/r_n_d/server/target = locate(params["server"])
 			if(!istype(target))
 				return FALSE
-			var/choice = tgui_alert(usr, "Technology Data Rest", "Are you sure you want to reset this technology to its default data? Data lost cannot be recovered.", list("Continue", "Cancel"))
+			var/choice = tgui_alert(ui.user, "Technology Data Rest", "Are you sure you want to reset this technology to its default data? Data lost cannot be recovered.", list("Continue", "Cancel"))
 			if(choice == "Continue")
 				for(var/datum/tech/T in target.files.known_tech)
 					if(T.id == params["tech"])
@@ -261,7 +261,7 @@
 			var/obj/machinery/r_n_d/server/target = locate(params["server"])
 			if(!istype(target))
 				return FALSE
-			var/choice = tgui_alert(usr, "Design Data Deletion", "Are you sure you want to delete this design? If you still have the prerequisites for the design, it'll reset to its base reliability. Data lost cannot be recovered.", list("Continue", "Cancel"))
+			var/choice = tgui_alert(ui.user, "Design Data Deletion", "Are you sure you want to delete this design? If you still have the prerequisites for the design, it'll reset to its base reliability. Data lost cannot be recovered.", list("Continue", "Cancel"))
 			if(choice == "Continue")
 				for(var/datum/design/D in target.files.known_designs)
 					if(D.id == params["design"])
@@ -273,8 +273,8 @@
 		if("transfer_data")
 			if(!badmin)
 				// no href exploits, you've been r e p o r t e d
-				log_admin("Warning: [key_name(usr)] attempted to transfer R&D data from [params["server"]] to [params["target"]] via href exploit with [src] [COORD(src)]")
-				message_admins("Warning: [ADMIN_FULLMONTY(usr)] attempted to transfer R&D data from [params["server"]] to [params["target"]] via href exploit with [src] [ADMIN_COORDJMP(src)]")
+				log_admin("Warning: [key_name(ui.user)] attempted to transfer R&D data from [params["server"]] to [params["target"]] via href exploit with [src] [COORD(src)]")
+				message_admins("Warning: [ADMIN_FULLMONTY(ui.user)] attempted to transfer R&D data from [params["server"]] to [params["target"]] via href exploit with [src] [ADMIN_COORDJMP(src)]")
 				return FALSE
 			var/obj/machinery/r_n_d/server/from = locate(params["server"])
 			if(!istype(from))
@@ -295,7 +295,7 @@
 	if(!emagged)
 		playsound(src, 'sound/effects/sparks4.ogg', 75, 1)
 		emagged = 1
-		to_chat(user, "<span class='notice'>You you disable the security protocols.</span>")
+		to_chat(user, span_notice("You you disable the security protocols."))
 		SStgui.update_uis(src)
 		return 1
 
@@ -308,5 +308,5 @@
 /obj/machinery/r_n_d/server/core
 	name = "Core R&D Server"
 	id_with_upload_string = "1"
-	id_with_download_string = "1"
+	id_with_download_string = "1;3;4;5;6;7" // CHOMPEdit - Departmental lathes
 	server_id = 1

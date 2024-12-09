@@ -19,6 +19,7 @@
 	var/drop_vore = TRUE				//Enabled by default since you have to enable drop pred/prey to do this anyway
 	var/throw_vore = TRUE				//Enabled by default since you have to enable drop pred/prey to do this anyway
 	var/food_vore = TRUE				//Enabled by default since you have to enable drop pred/prey to do this anyway
+	var/digest_pain = TRUE
 	var/can_be_drop_prey = FALSE
 	var/can_be_drop_pred = FALSE
 	var/allow_spontaneous_tf = FALSE	// Obviously.
@@ -26,6 +27,8 @@
 	var/selective_preference = DM_DEFAULT	// Preference for selective bellymode
 	var/text_warnings = TRUE 			// Allows us to dismiss the text limit warning messages after viewing it once per round
 	var/eating_privacy_global = FALSE 	// Makes eating attempt/success messages only reach for subtle range if true, overwritten by belly-specific var
+	var/allow_mimicry = TRUE 	// Allows mimicking their character
+	var/allow_mind_transfer = FALSE			//Allows ones mind to be taken over or swapped
 	var/nutrition_message_visible = TRUE
 	var/list/nutrition_messages = list(
 							"They are starving! You can hear their stomach snarling from across the room!",

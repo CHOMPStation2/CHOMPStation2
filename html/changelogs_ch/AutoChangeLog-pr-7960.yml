@@ -1,5 +1,0 @@
-author: "Raeschen"
-delete-after: True
-changes:
-  - bugfix: "Job restriction bypass at roundstart"
-  - bugfix: "fix a cabling mistake in hangar 2"

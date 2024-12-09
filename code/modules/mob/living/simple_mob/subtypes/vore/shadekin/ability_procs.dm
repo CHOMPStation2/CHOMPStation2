@@ -1,26 +1,44 @@
 // Phase shifting procs (and related procs)
 /mob/living/simple_mob/shadekin/proc/phase_shift()
 	var/turf/T = get_turf(src)
+	var/area/A = T.loc	//RS Port #658
 	if(!T.CanPass(src,T) || loc != T)
-		to_chat(src,"<span class='warning'>You can't use that here!</span>")
+		to_chat(src,span_warning("You can't use that here!"))
 		return FALSE
+	//CHOMPAdd Start
 	if((get_area(src).flags & PHASE_SHIELDED))
-		to_chat(src,"<span class='warning'>This area is preventing you from phasing!</span>")
+		to_chat(src,span_warning("This area is preventing you from phasing!"))
 		return FALSE
-
-	forceMove(T)
-	var/original_canmove = canmove
-	SetStunned(0)
-	SetWeakened(0)
-	if(buckled)
-		buckled.unbuckle_mob()
-	if(pulledby)
-		pulledby.stop_pulling()
-	stop_pulling()
-	canmove = FALSE
+	//CHOMPAdd End
+	//RS Port #658 Start
+	if(!client?.holder && A.flag_check(AREA_BLOCK_PHASE_SHIFT))
+		to_chat(src,span_warning("You can't use that here!"))
+		return FALSE
+	//RS Port #658 End
 
 	//Shifting in
 	if(ability_flags & AB_PHASE_SHIFTED)
+		phase_in(T)
+	//Shifting out
+	else
+		phase_out(T)
+
+/mob/living/simple_mob/shadekin/proc/phase_in(var/turf/T)
+	if(ability_flags & AB_PHASE_SHIFTED)
+
+		// pre-change
+		forceMove(T)
+		var/original_canmove = canmove
+		SetStunned(0)
+		SetWeakened(0)
+		if(buckled)
+			buckled.unbuckle_mob()
+		if(pulledby)
+			pulledby.stop_pulling()
+		stop_pulling()
+		canmove = FALSE
+
+		// change
 		ability_flags &= ~AB_PHASE_SHIFTED
 		mouse_opacity = 1
 		name = real_name
@@ -48,7 +66,7 @@
 				var/mob/living/target = pick(potentials)
 				if(istype(target) && target.devourable && target.can_be_drop_prey && vore_selected)
 					target.forceMove(vore_selected)
-					to_chat(target,"<span class='vwarning'>\The [src] phases in around you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!</span>")
+					to_chat(target,span_vwarning("\The [src] phases in around you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!"))
 
 		// Do this after the potential vore, so we get the belly
 		update_icon()
@@ -73,8 +91,22 @@
 		*/
 		handle_phasein_flicker() // CHOMPEdit, special handle for phase-in light flicker
 
-	//Shifting out
-	else
+/mob/living/simple_mob/shadekin/proc/phase_out(var/turf/T)
+	if(!(ability_flags & AB_PHASE_SHIFTED))
+
+		// pre-change
+		forceMove(T)
+		var/original_canmove = canmove
+		SetStunned(0)
+		SetWeakened(0)
+		if(buckled)
+			buckled.unbuckle_mob()
+		if(pulledby)
+			pulledby.stop_pulling()
+		stop_pulling()
+		canmove = FALSE
+
+		// change
 		ability_flags |= AB_PHASE_SHIFTED
 		mouse_opacity = 0
 		custom_emote(1,"phases out!")
@@ -126,7 +158,7 @@
 	for(var/mob/living/L in viewed)
 		targets += L
 	if(!targets.len)
-		to_chat(src,"<span class='warning'>Nobody nearby to mend!</span>")
+		to_chat(src,span_warning("Nobody nearby to mend!"))
 		return FALSE
 
 	var/mob/living/target = tgui_input_list(src,"Pick someone to mend:","Mend Other", targets)
@@ -134,7 +166,7 @@
 		return FALSE
 
 	target.add_modifier(/datum/modifier/shadekin/heal_boop,1 MINUTE)
-	visible_message("<span class='notice'>\The [src] gently places a hand on \the [target]...</span>")
+	visible_message(span_notice("\The [src] gently places a hand on \the [target]..."))
 	face_atom(target)
 	return TRUE
 

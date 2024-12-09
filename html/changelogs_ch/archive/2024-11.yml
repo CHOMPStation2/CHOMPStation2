@@ -1,0 +1,171 @@
+2024-11-01:
+  Hunter-Dovetail:
+  - bugfix: trex_upper/lowerjaw
+  Kashargul:
+  - bugfix: baby teppies can no longer be taken over, due to how growing self deletes
+      them
+  - bugfix: several MC crashes
+  - bugfix: runtimes in blob ids
+2024-11-02:
+  Kashargul:
+  - bugfix: command nika will no longer be invisible
+  Raeschen:
+  - bugfix: Unathi min age increased to 40 for lore reasons
+2024-11-03:
+  CHOMPStation2StaffMirrorBot:
+  - qol: fixed water cooler bottles being terrible and bad (they're now made out of
+      plastic and hold a lot more water)
+  - code_imp: Codebase is now capable of running under 516.
+  - qol: Atmospherics now uses /Initialize instead of /New.
+  - rscadd: 'Roboticist has a new alt title: Software Engineer - "A Software Engineer
+      specializes in working with software and firmware. They also often deal with
+      integrated circuits."'
+  - rscadd: 'Engineer has a new alt title: Computer Technician - "A Computer Technician
+      fulfills similar duties to other engineers, but specializes in working with
+      software and computers. They also often deal with integrated circuits."'
+  - bugfix: In-repo StrongDMM updated
+  Kashargul:
+  - bugfix: blob / protean ooc notes not properly transferring
+  Raeschen:
+  - bugfix: Increase Skrell min age to 19
+2024-11-04:
+  Kashargul:
+  - admin: fix shadekin vore smite
+2024-11-05:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Vore panel no longer overflows when inside panel description is really
+      long.
+  - bugfix: Smartfridge overflowing it's table with long names
+  Darlantanis:
+  - bugfix: rotten egg init no longer applies to unrotten eggs
+  Kashargul:
+  - bugfix: playtime db writes
+  tesseracting:
+  - rscadd: Added two neutral traits for slower eating, standard and lesser.
+2024-11-07:
+  CHOMPStation2StaffMirrorBot:
+  - qol: makes ashtrays visible in map editors
+  - rscadd: added "modified" and "non-standard" variants of the hacktool, which have
+      different sprites to make them more obvious. the non-standard also starts in
+      hackmode
+  - qol: the hacker contraband set comes with the modified multitool
+  - qol: the modified multitool variant can spawn in abandoned crates slightly more
+      often at a slightly lower cost, as it's more obvious as contraband
+  Darlantanis:
+  - qol: bliss no longer forces crawling
+  FluffMedic:
+  - balance: nerfs airlock and closest mimics
+  Kashargul:
+  - bugfix: fixes 2 missing vbo asset datums
+  - bugfix: blobs deleting their IDs
+  tacoguy7765093:
+  - maptweak: Door bolts should bolt instead of open doors now.
+  - maptweak: Fuel Depot is a valid spawn again
+  - maptweak: Overmap ships can dock on the station again
+  - maptweak: Replaced ERT level hardsuits in armory with security voidsuits, armory
+      rebalance coming soon.
+  - maptweak: Robotics can access tech storage again
+  - maptweak: Doubled the amount of vents at the large airlocks
+  - balance: 'red crowbar: 6 -> 10 damage'
+2024-11-08:
+  CHOMPStation2StaffMirrorBot:
+  - qol: refactored headset IDs and misc. details, shouldn't be player-visible
+  - rscadd: added "earbud" headsets, which are the same as normal ones but invisible
+      on-mob
+2024-11-09:
+  Kashargul:
+  - code_imp: finishes up the cell cleanup
+  - rscadd: fixed a wrong sprite state in the cjhound fullness 1 icon
+  TheGreatKitsune:
+  - bugfix: Fixes a typo in text people will probably never see
+2024-11-10:
+  CHOMPStation2StaffMirrorBot:
+  - qol: restored syndie headset sprites
+2024-11-11:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: added lockpicks, for opening simple_doors
+  - rscadd: added contraband scanner machine, which can sound an alarm if you walk
+      over it whilst carrying an illegal item
+  - qol: removed the redundant name/desc customize proc from the plain choker (just
+      use name/desc gear tweaks instead)
+2024-11-12:
+  Kashargul:
+  - maptweak: fixes the sleep areas on SN to use the global defines
+  TomTyph:
+  - rscadd: Angel Halo hat in headgear loadout
+2024-11-15:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: adds missing arguments to recursive_content_check()
+2024-11-16:
+  FluffMedic:
+  - rscadd: Added and altered some things on Tyr
+  tacoguy7765093:
+  - maptweak: Switched maps from Soluna Nexus to Southern Cross
+2024-11-18:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: added "salvage technician" alt title for engineer
+2024-11-20:
+  CHOMPStation2StaffMirrorBot:
+  - qol: climbing and swimming traits can now modify your speed of climbing and swimming
+      between z-levels, in addition to their standard functions
+  - rscadd: added "pro swimmer" trait, which increases your movespeed in water and
+      reduces time to traverse between water z-levels when swimming
+  - qol: akula now have 50% reduced z-swim time, as if they had the pro-swimmer trait
+  - qol: tajara and vasilissans now have 25% reduced ladder/climbing time, as if they
+      had the amateur climber trait
+  - qol: refactored rings, knuckledusters, bracelets, and watches into glove-attached
+      accessories (they can still be worn by themselves!)
+  - qol: bracelets are now worn on your hands/wrists rather than being in the neck
+      slot
+  Fracshun:
+  - qol: OOC Escape now works for most Mind Binder and Body Snatcher interactions
+2024-11-21:
+  Fracshun:
+  - rscadd: Mind binded monkey/mob cubes gain control of the rehydrated mob
+  - rscadd: Monkey/mob cubes when eaten can vore the rehydrated mob if spont pred
+      and food vore are enabled
+  - rscadd: Mind binded cigs/cigars correctly turn into cig butts when burnt out or
+      used in an ashtray
+2024-11-22:
+  CHOMPStation2:
+  - bugfix: Lighting is slightly faster to calculate
+  Hunter-Dovetail:
+  - rscadd: crocodile_upperjaw-head
+  - rscadd: VBO_maw26
+  - bugfix: hippo_head-head
+  - bugfix: trex_upperjaw-head
+2024-11-23:
+  Raeschen:
+  - refactor: min account age for head roles --> 31 days
+2024-11-26:
+  Birdiest-Bird:
+  - bugfix: VR avatars no longer get mail from cargo
+  FluffMedic:
+  - bugfix: fixed a floating APC on spider chapel
+2024-11-27:
+  Fracshun:
+  - rscadd: Eating someone bound to a food item can spont pred them as nutrition with
+      food vore enabled
+  - rscadd: Eating someone bound to a food item will retain them as the trash item
+      if eaten with spont pred/food vore disabled
+  - bugfix: Eating someone bound to a food item no longer makes them astral project
+      as a ghost in the world
+2024-11-28:
+  Birdiest-Bird:
+  - rscadd: '*caw'
+  - sound: sound/voice/caw.ogg
+2024-11-29:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: added recolourable fingerless gloves without the cutout
+  - maptweak: added shutters to SD and Tether cargo bay desks
+  - maptweak: reorganized the SD cargo office a little bit, for more shelf space up
+      front
+  - maptweak: Leggy has been relocated to the relative safety of the mining equipment
+      room, to reduce incidents of unscheduled spacewalks and to stop supply shuttles
+      engaging in leggybraking
+  - rscdel: The skill system is OUTTA HERE
+2024-11-30:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: fixed talon headset options, and headset options for a bunch of event
+      outfits
+  - qol: cleaned up _vr files for jobs, moved cargo jobs into their own base dm.

@@ -1,3 +1,55 @@
+// Don't need a new list for every grinder in the game
+var/global/list/sheet_reagents = list( //have a number of reagents divisible by REAGENTS_PER_SHEET (default 20) unless you like decimals.
+	/obj/item/stack/material/plastic = list("carbon","carbon","oxygen","chlorine","sulfur"),
+	/obj/item/stack/material/copper = list("copper"),
+	/obj/item/stack/material/wood = list("carbon","woodpulp","nitrogen","potassium","sodium"),
+	/obj/item/stack/material/stick = list("carbon","woodpulp","nitrogen","potassium","sodium"),
+	/obj/item/stack/material/log = list("carbon","woodpulp","nitrogen","potassium","sodium"),
+	/obj/item/stack/material/algae = list("carbon","nitrogen","nitrogen","phosphorus","phosphorus"),
+	/obj/item/stack/material/graphite = list("carbon"),
+	/obj/item/stack/material/aluminium = list("aluminum"), // The material is aluminium, but the reagent is aluminum...
+	/obj/item/stack/material/glass/reinforced = list("silicon","silicon","silicon","iron","carbon"),
+	/obj/item/stack/material/leather = list("carbon","carbon","protein","protein","triglyceride"),
+	/obj/item/stack/material/cloth = list("carbon","carbon","carbon","protein","sodium"),
+	/obj/item/stack/material/fiber = list("carbon","carbon","carbon","protein","sodium"),
+	/obj/item/stack/material/fur = list("carbon","carbon","carbon","sulfur","sodium"),
+	/obj/item/stack/material/deuterium = list("hydrogen"),
+	/obj/item/stack/material/glass/phoronrglass = list("silicon","silicon","silicon","phoron","phoron"),
+	/obj/item/stack/material/diamond = list("carbon"),
+	/obj/item/stack/material/durasteel = list("iron","iron","carbon","carbon","platinum"),
+	/obj/item/stack/material/wax = list("ethanol","triglyceride"),
+	/obj/item/stack/material/iron = list("iron"),
+	/obj/item/stack/material/uranium = list("uranium"),
+	/obj/item/stack/material/phoron = list("phoron"),
+	/obj/item/stack/material/gold = list("gold"),
+	/obj/item/stack/material/silver = list("silver"),
+	/obj/item/stack/material/platinum = list("platinum"),
+	/obj/item/stack/material/mhydrogen = list("hydrogen"),
+	/obj/item/stack/material/steel = list("iron", "carbon"),
+	/obj/item/stack/material/plasteel = list("iron", "iron", "carbon", "carbon", "platinum"), //8 iron, 8 carbon, 4 platinum,
+	/obj/item/stack/material/snow = list("water"),
+	/obj/item/stack/material/sandstone = list("silicon", "oxygen"),
+	/obj/item/stack/material/glass = list("silicon"),
+	/obj/item/stack/material/glass/phoronglass = list("platinum", "silicon", "silicon", "silicon"), //5 platinum, 15 silicon,
+	/obj/item/stack/material/supermatter = list("supermatter")
+	)
+var/global/list/ore_reagents = list( //have a number of reageents divisible by REAGENTS_PER_ORE (default 20) unless you like decimals.
+	/obj/item/ore/glass = list("silicon"),
+	/obj/item/ore/iron = list("iron"),
+	/obj/item/ore/coal = list("carbon"),
+	/obj/item/ore/phoron = list("phoron"),
+	/obj/item/ore/silver = list("silver"),
+	/obj/item/ore/gold = list("gold"),
+	/obj/item/ore/marble = list("silicon","aluminum","aluminum","sodium","calcium"), // Some nice variety here
+	/obj/item/ore/uranium = list("uranium"),
+	/obj/item/ore/diamond = list("carbon"),
+	/obj/item/ore/osmium = list("platinum"), // should contain osmium
+	/obj/item/ore/lead = list("lead"),
+	/obj/item/ore/hydrogen = list("hydrogen"),
+	/obj/item/ore/verdantium = list("radium","phoron","nitrogen","phosphorus","sodium"), // Some fun stuff to be useful with
+	/obj/item/ore/rutile = list("tungsten","oxygen") // Should be titanium
+)
+
 /obj/machinery/reagentgrinder
 
 	name = "All-In-One Grinder"
@@ -9,27 +61,11 @@
 	use_power = USE_POWER_IDLE
 	idle_power_usage = 5
 	active_power_usage = 100
-	circuit = /obj/item/weapon/circuitboard/grinder
+	circuit = /obj/item/circuitboard/grinder
 	var/inuse = 0
-	var/obj/item/weapon/reagent_containers/beaker = null
+	var/obj/item/reagent_containers/beaker = null
 	var/limit = 10
 	var/list/holdingitems = list()
-	var/list/sheet_reagents = list( //have a number of reageents divisible by REAGENTS_PER_SHEET (default 20) unless you like decimals,
-		/obj/item/stack/material/iron = list("iron"),
-		/obj/item/stack/material/uranium = list("uranium"),
-		/obj/item/stack/material/phoron = list("phoron"),
-		/obj/item/stack/material/gold = list("gold"),
-		/obj/item/stack/material/silver = list("silver"),
-		/obj/item/stack/material/platinum = list("platinum"),
-		/obj/item/stack/material/mhydrogen = list("hydrogen"),
-		/obj/item/stack/material/steel = list("iron", "carbon"),
-		/obj/item/stack/material/plasteel = list("iron", "iron", "carbon", "carbon", "platinum"), //8 iron, 8 carbon, 4 platinum,
-		/obj/item/stack/material/snow = list("water"),
-		/obj/item/stack/material/sandstone = list("silicon", "oxygen"),
-		/obj/item/stack/material/glass = list("silicon"),
-		/obj/item/stack/material/glass/phoronglass = list("platinum", "silicon", "silicon", "silicon"), //5 platinum, 15 silicon,
-		/obj/item/stack/material/supermatter = list("supermatter")
-		)
 
 	var/static/radial_examine = image(icon = 'icons/mob/radial.dmi', icon_state = "radial_examine")
 	var/static/radial_eject = image(icon = 'icons/mob/radial.dmi', icon_state = "radial_eject")
@@ -39,31 +75,31 @@
 
 /obj/machinery/reagentgrinder/Initialize()
 	. = ..()
-	beaker = new /obj/item/weapon/reagent_containers/glass/beaker/large(src)
+	beaker = new /obj/item/reagent_containers/glass/beaker/large(src)
 	default_apply_parts()
 
 /obj/machinery/reagentgrinder/examine(mob/user)
 	. = ..()
 	if(!in_range(user, src) && !issilicon(user) && !isobserver(user))
-		. += "<span class='warning'>You're too far away to examine [src]'s contents and display!</span>"
+		. += span_warning("You're too far away to examine [src]'s contents and display!")
 		return
 
 	if(inuse)
-		. += "<span class='warning'>\The [src] is operating.</span>"
+		. += span_warning("\The [src] is operating.")
 		return
 
 	if(beaker || length(holdingitems))
-		. += "<span class='notice'>\The [src] contains:</span>"
+		. += span_notice("\The [src] contains:")
 		if(beaker)
-			. += "<span class='notice'>- \A [beaker].</span>"
+			. += span_notice("- \A [beaker].")
 		for(var/obj/item/O as anything in holdingitems)
-			. += "<span class='notice'>- \A [O.name].</span>"
+			. += span_notice("- \A [O.name].")
 
 	if(!(stat & (NOPOWER|BROKEN)))
-		. += "<span class='notice'>The status display reads:</span>\n"
+		. += span_notice("The status display reads:") + "\n"
 		if(beaker)
 			for(var/datum/reagent/R in beaker.reagents.reagent_list)
-				. += "<span class='notice'>- [R.volume] units of [R.name].</span>"
+				. += span_notice("- [R.volume] units of [R.name].")
 
 /obj/machinery/reagentgrinder/update_icon()
 	icon_state = "juicer"+num2text(!isnull(beaker))
@@ -77,13 +113,13 @@
 			return
 
 	//VOREStation edit start - for solargrubs
-	if (istype(O, /obj/item/device/multitool))
+	if (istype(O, /obj/item/multitool))
 		return ..()
 	//VOREStation edit end
 
-	if (istype(O,/obj/item/weapon/reagent_containers/glass) || \
-		istype(O,/obj/item/weapon/reagent_containers/food/drinks/glass2) || \
-		istype(O,/obj/item/weapon/reagent_containers/food/drinks/shaker))
+	if (istype(O,/obj/item/reagent_containers/glass) || \
+		istype(O,/obj/item/reagent_containers/food/drinks/glass2) || \
+		istype(O,/obj/item/reagent_containers/food/drinks/shaker))
 
 		if (beaker)
 			return 1
@@ -102,8 +138,8 @@
 	if(!istype(O))
 		return
 
-	if(istype(O,/obj/item/weapon/storage/bag/plants))
-		var/obj/item/weapon/storage/bag/plants/bag = O
+	if(istype(O,/obj/item/storage/bag/plants))
+		var/obj/item/storage/bag/plants/bag = O
 		var/failed = 1
 		for(var/obj/item/G in O.contents)
 			if(!G.reagents || !G.reagents.total_volume)
@@ -126,8 +162,8 @@
 		src.updateUsrDialog()
 		return 0
 
-	if(istype(O,/obj/item/weapon/gripper))
-		var/obj/item/weapon/gripper/B = O	//B, for Borg.
+	if(istype(O,/obj/item/gripper))
+		var/obj/item/gripper/B = O	//B, for Borg.
 		if(!B.wrapped)
 			to_chat(user, "\The [B] is not holding anything.")
 			return 0
@@ -137,7 +173,7 @@
 
 		return 0
 
-	if(!sheet_reagents[O.type] && (!O.reagents || !O.reagents.total_volume))
+	if(!global.sheet_reagents[O.type] && !global.ore_reagents[O.type] && (!O.reagents || !O.reagents.total_volume))
 		to_chat(user, "\The [O] is not suitable for blending.")
 		return 1
 
@@ -148,7 +184,7 @@
 	if(istype(O,/obj/item/stack/material/supermatter))
 		var/obj/item/stack/material/supermatter/S = O
 		set_light(l_range = max(1, S.get_amount()/10), l_power = max(1, S.get_amount()/10), l_color = "#8A8A00")
-		addtimer(CALLBACK(src, .proc/puny_protons), 30 SECONDS)
+		addtimer(CALLBACK(src, PROC_REF(puny_protons)), 30 SECONDS)
 	//CHOMPedit end
 	return 0
 
@@ -179,14 +215,7 @@
 	if(length(holdingitems))
 		options["grind"] = radial_grind
 
-	var/choice
-	if(length(options) < 1)
-		return
-	if(length(options) == 1)
-		for(var/key in options)
-			choice = key
-	else
-		choice = show_radial_menu(user, src, options, require_near = !issilicon(user))
+	var/choice = show_radial_menu(user, src, options, require_near = !issilicon(user), autopick_single_option = FALSE)
 
 	// post choice verification
 	if(inuse || (isAI(user) && stat & NOPOWER) || user.incapacitated())
@@ -242,10 +271,10 @@
 		if(remaining_volume <= 0)
 			break
 
-		if(sheet_reagents[O.type])
+		if(global.sheet_reagents[O.type])
 			var/obj/item/stack/stack = O
 			if(istype(stack))
-				var/list/sheet_components = sheet_reagents[stack.type]
+				var/list/sheet_components = global.sheet_reagents[stack.type]
 				var/amount_to_take = max(0,min(stack.get_amount(),round(remaining_volume/REAGENTS_PER_SHEET)))
 				if(amount_to_take)
 					stack.use(amount_to_take)
@@ -259,6 +288,21 @@
 						beaker.reagents.add_reagent(sheet_components, (amount_to_take*REAGENTS_PER_SHEET))
 					continue
 
+		if(global.ore_reagents[O.type])
+			var/obj/item/ore/R = O
+			if(istype(R))
+				var/list/ore_components = global.ore_reagents[R.type]
+				if(remaining_volume >= REAGENTS_PER_ORE)
+					holdingitems -= R
+					qdel(R)
+					if(islist(ore_components))
+						var/amount_to_take = (REAGENTS_PER_ORE/(ore_components.len))
+						for(var/i in ore_components)
+							beaker.reagents.add_reagent(i, amount_to_take)
+					else
+						beaker.reagents.add_reagent(ore_components, REAGENTS_PER_ORE)
+					continue
+
 		if(O.reagents)
 			O.reagents.trans_to_obj(beaker, min(O.reagents.total_volume, remaining_volume))
 			if(O.reagents.total_volume == 0)
@@ -267,7 +311,7 @@
 			if (beaker.reagents.total_volume >= beaker.reagents.maximum_volume)
 				break
 
-/obj/machinery/reagentgrinder/proc/replace_beaker(mob/living/user, obj/item/weapon/reagent_containers/new_beaker)
+/obj/machinery/reagentgrinder/proc/replace_beaker(mob/living/user, obj/item/reagent_containers/new_beaker)
 	if(!user)
 		return FALSE
 	if(beaker)
@@ -296,8 +340,8 @@
 			holdingitems -= S
 			regrets += S.get_amount()
 		SSradiation.radiate(get_turf(src), 15 + regrets)
-		visible_message("<span class=\"warning\">\The [src] glows brightly, bursting into flames and flashing into ash.</span>",\
-		"<span class=\"warning\">You hear an unearthly shriek, burning heat washing over you.</span>")
+		visible_message(span_warning("\The [src] glows brightly, bursting into flames and flashing into ash."),\
+		span_warning("You hear an unearthly shriek, burning heat washing over you."))
 		new /obj/effect/decal/cleanable/ash(src.loc)
 		qdel(src)
 // CHOMPedit end

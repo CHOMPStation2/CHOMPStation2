@@ -12,7 +12,7 @@
 	max_duration = 40 //CHOMPedit
 	excludes_steps = list(/datum/surgery_step/generic/cut_open) //These things can already do the first step!
 
-/datum/surgery_step/generic/ripper/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/weapon/surgical/scalpel/ripper/tool)
+/datum/surgery_step/generic/ripper/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/surgical/scalpel/ripper/tool)
 
 	if (!..())
 		return 0
@@ -30,19 +30,21 @@
 /datum/surgery_step/generic/ripper/tear_vessel
 	surgery_name = "Tear Blood Vessel"
 	allowed_tools = list(
-	/obj/item/weapon/surgical/scalpel/ripper = 100
+	/obj/item/surgical/scalpel/ripper = 100
 	)
 
 /datum/surgery_step/generic/ripper/tear_vessel/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.visible_message("[user] starts ripping into [target] with \the [tool].", \
 	"You start ripping into [target] with \the [tool].")
+	user.balloon_alert_visible("Starts ripping into [target]", "Ripping into [target]") // CHOMPEdit
 	target.custom_pain("[user] is  ripping into your [target.op_stage.current_organ]!", 100)
 	..()
 
 /datum/surgery_step/generic/ripper/tear_vessel/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.visible_message("<span class='notice'>[user] has ripped [target]'s [affected] \the [tool], blood and viscera spraying everywhere!</span>", \
-	"<span class='notice'>You have ripped [target]'s [target.op_stage.current_organ] out with \the [tool], spraying blood all through the room!</span>")
+	user.visible_message(span_notice("[user] has ripped [target]'s [affected] \the [tool], blood and viscera spraying everywhere!"), \
+	span_notice("You have ripped [target]'s [target.op_stage.current_organ] out with \the [tool], spraying blood all through the room!"))
+	user.balloon_alert_visible("Rips into [target]'s [affected], blood and viscera everywhere!", "Ripped into [target]'s [affected], blood and viscera everywhere!") // CHOMPEdit
 	var/datum/wound/internal_bleeding/I = new (30) //splurt. New severed artery.
 	affected.wounds += I
 	affected.owner.custom_pain("You feel something rip in your [affected.name]!", 1)
@@ -52,8 +54,9 @@
 
 /datum/surgery_step/generic/ripper/tear_vessel/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.visible_message("<span class='warning'>[user]'s hand slips, damaging [target]'s [affected.name] with \the [tool]!</span>", \
-	"<span class='warning'>Your hand slips, damaging [target]'s [affected.name] with \the [tool]!</span>")
+	user.visible_message(span_warning("[user]'s hand slips, damaging [target]'s [affected.name] with \the [tool]!"), \
+	span_warning("Your hand slips, damaging [target]'s [affected.name] with \the [tool]!"))
+	user.balloon_alert_visible("Slips, damaging [target]'s [affected.name]", "Your hand slips, damaging \the [affected.name]") // CHOMPEdit
 	affected.createwound(BRUISE, 20) //Only bruised...Sad.
 
 
@@ -61,28 +64,29 @@
 /datum/surgery_step/generic/ripper/break_bone
 	surgery_name = "Break Skeletal Structure"
 	allowed_tools = list(
-	/obj/item/weapon/surgical/scalpel/ripper = 100
+	/obj/item/surgical/scalpel/ripper = 100
 	)
 
 /datum/surgery_step/generic/ripper/break_bone/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	user.visible_message("[user] starts violently shifting \the [tool] in [target]'s [affected.name]!", \
 	"You start violently moving the [tool] in [target]'s [affected.name]!")
+	user.balloon_alert_visible("Starts violently shifting \the [tool] in [target]'s [affected.name]!", "Violently moving \the [tool] in \the [affected.name]") // CHOMPEdit
 	target.custom_pain("[user] is ripping into your [target.op_stage.current_organ]!", 100)
 	..()
 
 /datum/surgery_step/generic/ripper/break_bone/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.visible_message("<span class='notice'>[user] has destroyed the bones within [target]'s [affected] with \the [tool]</span>", \
-	"<span class='notice'>You have destroyed the bones in [target]'s [affected] with \the [tool]!</span>")
+	user.visible_message(span_notice("[user] has destroyed the bones within [target]'s [affected] with \the [tool]"), \
+	span_notice("You have destroyed the bones in [target]'s [affected] with \the [tool]!"))
 	affected.fracture()
 	affected.createwound(BRUISE, 20)
 	target.emote("scream") //Hope you put them under...
 
 /datum/surgery_step/generic/ripper/tear_vessel/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.visible_message("<span class='warning'>[user]'s hand slips, damaging [target]'s [affected.name] with \the [tool]!</span>", \
-	"<span class='warning'>Your hand slips, damaging [target]'s [affected.name] with \the [tool]!</span>")
+	user.visible_message(span_warning("[user]'s hand slips, damaging [target]'s [affected.name] with \the [tool]!"), \
+	span_warning("Your hand slips, damaging [target]'s [affected.name] with \the [tool]!"))
 	affected.createwound(BRUISE, 20)
 
 //Mutilate Organ
@@ -90,7 +94,7 @@
 /datum/surgery_step/generic/ripper/destroy_organ
 	surgery_name = "Mutilate Organ"
 	allowed_tools = list(
-	/obj/item/weapon/surgical/scalpel/ripper = 100
+	/obj/item/surgical/scalpel/ripper = 100
 	)
 
 /datum/surgery_step/generic/ripper/destroy_organ/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
@@ -119,7 +123,7 @@
 	var/organ_to_destroy = tgui_input_list(user, "Which organ do you want to mutilate?", "Organ Choice", removable_organs)
 
 	if(!organ_to_destroy) //They decided to cancel. Let's slowly pull the tool back...
-		to_chat(user, "<span class='warning'>You decide against mutilating any organs.</span>")
+		to_chat(user, span_warning("You decide against mutilating any organs."))
 		user.visible_message("[user] starts pulling their [tool] out from [target]'s [affected.name] with \the [tool].", \
 		"You start pulling your \the [tool] out of [target]'s [affected.name].")
 		target.custom_pain("Someone's moving something around in your [affected.name]!", 100)
@@ -134,13 +138,13 @@
 /datum/surgery_step/generic/ripper/destroy_organ/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	if(!target.op_stage.current_organ)
-		user.visible_message("<span class='notice'>[user] has pulled their \the [tool] from [target]'s [affected.name].</span>", \
-		"<span class='notice'>You have pulled your [tool] out from [target]'s [affected].</span>")
+		user.visible_message(span_notice("[user] has pulled their \the [tool] from [target]'s [affected.name]."), \
+		span_notice("You have pulled your [tool] out from [target]'s [affected]."))
 
 	// Damage the organ!
 	if(target.op_stage.current_organ)
-		user.visible_message("<span class='notice'>[user] has ripped [target]'s [target.op_stage.current_organ] out with \the [tool].</span>", \
-		"<span class='notice'>You have ripped [target]'s [target.op_stage.current_organ] out with \the [tool].</span>")
+		user.visible_message(span_notice("[user] has ripped [target]'s [target.op_stage.current_organ] out with \the [tool]."), \
+		span_notice("You have ripped [target]'s [target.op_stage.current_organ] out with \the [tool]."))
 		var/obj/item/organ/O = target.internal_organs_by_name[target.op_stage.current_organ]
 		if(O && istype(O))
 			O.take_damage(10)
@@ -150,8 +154,8 @@
 
 /datum/surgery_step/generic/ripper/destroy_organ/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.visible_message("<span class='warning'>[user]'s hand slips, damaging [target]'s [affected.name] with \the [tool]!</span>", \
-	"<span class='warning'>Your hand slips, damaging [target]'s [affected.name] with \the [tool]!</span>")
+	user.visible_message(span_warning("[user]'s hand slips, damaging [target]'s [affected.name] with \the [tool]!"), \
+	span_warning("Your hand slips, damaging [target]'s [affected.name] with \the [tool]!"))
 	affected.createwound(BRUISE, 20)
 
 ///////////////////////////////////////////////////////////////
@@ -162,7 +166,7 @@
 	surgery_name = "Rip Out Organ"
 
 	allowed_tools = list(
-	/obj/item/weapon/surgical/scalpel/ripper = 100
+	/obj/item/surgical/scalpel/ripper = 100
 	)
 
 	priority = 3
@@ -198,7 +202,7 @@
 
 	var/organ_to_remove = tgui_input_list(user, "Which organ do you want to tear out?", "Organ Choice", removable_organs)
 	if(!organ_to_remove) //They decided to cancel. Let's slowly pull the tool back...
-		to_chat(user, "<span class='warning'>You decide against ripping out any organs.</span>")
+		to_chat(user, span_warning("You decide against ripping out any organs."))
 		user.visible_message("[user] starts pulling their [tool] out from [target]'s [affected.name] with \the [tool].", \
 		"You start pulling your \the [tool] out of [target]'s [affected.name].")
 		target.custom_pain("Someone's moving something around in your [affected.name]!", 100)
@@ -212,12 +216,12 @@
 /datum/surgery_step/generic/ripper/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	if(!target.op_stage.current_organ)
-		user.visible_message("<span class='notice'>[user] has pulled their \the [tool] from [target]'s [affected.name].</span>", \
-		"<span class='notice'>You have pulled your [tool] out from [target]'s [affected].</span>")
+		user.visible_message(span_notice("[user] has pulled their \the [tool] from [target]'s [affected.name]."), \
+		span_notice("You have pulled your [tool] out from [target]'s [affected]."))
 
 	if(target.op_stage.current_organ)
-		user.visible_message("<span class='notice'>[user] has ripped [target]'s [target.op_stage.current_organ] out with \the [tool].</span>", \
-		"<span class='notice'>You have ripped [target]'s [target.op_stage.current_organ] out with \the [tool].</span>")
+		user.visible_message(span_notice("[user] has ripped [target]'s [target.op_stage.current_organ] out with \the [tool]."), \
+		span_notice("You have ripped [target]'s [target.op_stage.current_organ] out with \the [tool]."))
 		var/obj/item/organ/O = target.internal_organs_by_name[target.op_stage.current_organ]
 		if(O && istype(O))
 			O.removed(user)
@@ -227,6 +231,6 @@
 
 /datum/surgery_step/internal/rip_organ/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	user.visible_message("<span class='warning'>[user]'s hand slips, damaging [target]'s [affected.name] with \the [tool]!</span>", \
-	"<span class='warning'>Your hand slips, damaging [target]'s [affected.name] with \the [tool]!</span>")
+	user.visible_message(span_warning("[user]'s hand slips, damaging [target]'s [affected.name] with \the [tool]!"), \
+	span_warning("Your hand slips, damaging [target]'s [affected.name] with \the [tool]!"))
 	affected.createwound(BRUISE, 20)

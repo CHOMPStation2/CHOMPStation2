@@ -17,16 +17,16 @@
 
 /obj/item/stack/medical/attack(mob/living/carbon/M as mob, mob/user as mob)
 	if (!istype(M))
-		to_chat(user, "<span class='warning'>\The [src] cannot be applied to [M]!</span>")
+		balloon_alert(user, "\The [src] cannot be applied to [M]!") // CHOMPEdit - Balloon Alerts
 		return 1
 
 	if (!user.IsAdvancedToolUser())
-		to_chat(user, "<span class='warning'>You don't have the dexterity to do this!</span>")
+		balloon_alert(user, "You don't have the dexterity to do this!") // CHOMPEdit - Balloon Alerts
 		return 1
 
 	var/available = get_amount()
 	if(!available)
-		to_chat(user, "<span class='warning'>There's not enough [uses_charge ? "charge" : "items"] left to use that!</span>")
+		balloon_alert(user, "Not enough [uses_charge ? "charge" : "items"] left to use that!") // CHOMPEdit - Balloon Alerts
 		return 1
 
 	if (istype(M, /mob/living/carbon/human))
@@ -34,24 +34,24 @@
 		var/obj/item/organ/external/affecting = H.get_organ(user.zone_sel.selecting)
 
 		if(!affecting)
-			to_chat(user, "<span class='warning'>No body part there to work on!</span>")
+			balloon_alert(user, "No body part there to work on!") // CHOMPEdit - Balloon Alerts
 			return 1
 
 		if(affecting.organ_tag == BP_HEAD)
 			if(H.head && istype(H.head,/obj/item/clothing/head/helmet/space))
-				to_chat(user, "<span class='warning'>You can't apply [src] through [H.head]!</span>")
+				balloon_alert(user, "You can't apply [src] through [H.head]!") // CHOMPEdit - Balloon Alerts
 				return 1
 		else
 			if(H.wear_suit && istype(H.wear_suit,/obj/item/clothing/suit/space))
-				to_chat(user, "<span class='warning'>You can't apply [src] through [H.wear_suit]!</span>")
+				balloon_alert(user, "You can't apply [src] through [H.wear_suit]!") // CHOMPEdit - Balloon Alerts
 				return 1
 
 		if(affecting.robotic == ORGAN_ROBOT)
-			to_chat(user, "<span class='warning'>This isn't useful at all on a robotic limb.</span>")
+			balloon_alert(user, "This isn't useful at all on a robotic limb.") // CHOMPEdit - Balloon Alerts
 			return 1
 
 		if(affecting.robotic >= ORGAN_LIFELIKE)
-			to_chat(user, "<span class='warning'>You apply the [src], but it seems to have no effect...</span>")
+			balloon_alert(user, "You apply the [src], but it seems to have no effect...") // CHOMPEdit - Balloon Alerts
 			use(1)
 			return 1
 
@@ -60,9 +60,9 @@
 	else
 
 		M.heal_organ_damage((src.heal_brute/2), (src.heal_burn/2))
-		user.visible_message( \
-			"<span class='notice'>[M] has been applied with [src] by [user].</span>", \
-			"<span class='notice'>You apply \the [src] to [M].</span>" \
+		user.balloon_alert_visible( \
+			"[M] has been applied with [src] by [user].", \
+			"You apply \the [src] to [M]." \
 		)
 		use(1)
 
@@ -99,16 +99,16 @@
 		var/obj/item/organ/external/affecting = H.get_organ(user.zone_sel.selecting)
 
 		if(affecting.open)
-			to_chat(user, "<span class='notice'>The [affecting.name] is cut open, you'll need more than a bandage!</span>")
+			balloon_alert(user, "The [affecting.name] is cut open!") // CHOMPEdit - Balloon Alerts
 			return
 
 		if(affecting.is_bandaged())
-			to_chat(user, "<span class='warning'>The wounds on [M]'s [affecting.name] have already been bandaged.</span>")
+			balloon_alert(user, "[M]'s [affecting.name] is already bandaged.") // CHOMPEdit - Balloon Alerts
 			return 1
 		else
 			var/available = get_amount()
-			user.visible_message("<b>\The [user]</b> starts bandaging [M]'s [affecting.name].", \
-					             "<span class='notice'>You start bandaging [M]'s [affecting.name].</span>" )
+			user.balloon_alert_visible("\The [user] starts bandaging [M]'s [affecting.name].", \
+					             "Bandaging [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
 			var/used = 0
 			for (var/datum/wound/W in affecting.wounds)
 				if(W.internal)
@@ -118,32 +118,32 @@
 				if(used == amount)
 					break
 				if(!do_mob(user, M, W.damage/3, exclusive = TRUE))
-					to_chat(user, "<span class='notice'>You must stand still to bandage wounds.</span>")
+					balloon_alert(user, "Stand still to bandage wounds.") // CHOMPEdit - Balloon Alerts
 					break
 
 				if(affecting.is_bandaged()) // We do a second check after the delay, in case it was bandaged after the first check.
-					to_chat(user, "<span class='warning'>The wounds on [M]'s [affecting.name] have already been bandaged.</span>")
+					balloon_alert(user, "[M]'s [affecting.name] is already bandaged.") // CHOMPEdit - Balloon Alerts
 					return 1
 
 				if(used >= available)
-					to_chat(user, "<span class='warning'>You run out of [src]!</span>")
+					balloon_alert(user, "You run out of [src]!") // CHOMPEdit - Balloon Alerts
 					break
 
 				if (W.current_stage <= W.max_bleeding_stage)
-					user.visible_message("<b>\The [user]</b> bandages \a [W.desc] on [M]'s [affecting.name].", \
-					                              "<span class='notice'>You bandage \a [W.desc] on [M]'s [affecting.name].</span>" )
+					user.balloon_alert_visible("\The [user] bandages \a [W.desc] on [M]'s [affecting.name].", \
+					                              "You bandage \a [W.desc] on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
 				else
-					user.visible_message("<b>\The [user]</b> places a bandage over \a [W.desc] on [M]'s [affecting.name].", \
-					                              "<span class='notice'>You place a bandage over \a [W.desc] on [M]'s [affecting.name].</span>" )
+					user.balloon_alert_visible("\The [user] places a bandage over \a [W.desc] on [M]'s [affecting.name].", \
+					                              "You place a bandage over \a [W.desc] on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
 				W.bandage()
 				playsound(src, pick(apply_sounds), 25)
 				used++
 			affecting.update_damages()
 			if(used == amount)
 				if(affecting.is_bandaged())
-					to_chat(user, "<span class='warning'>\The [src] is used up.</span>")
+					balloon_alert(user, "\The [src] is used up.") // CHOMPEdit - Balloon Alerts
 				else
-					to_chat(user, "<span class='warning'>\The [src] is used up, but there are more wounds to treat on \the [affecting.name].</span>")
+					balloon_alert(user, "\The [src] is used up, but there are more wounds to treat on \the [affecting.name].") // CHOMPEdit - Balloon Alerts
 			use(used)
 
 /obj/item/stack/medical/bruise_pack
@@ -168,16 +168,16 @@
 		var/obj/item/organ/external/affecting = H.get_organ(user.zone_sel.selecting)
 
 		if(affecting.open)
-			to_chat(user, "<span class='notice'>The [affecting.name] is cut open, you'll need more than a bandage!</span>")
+			balloon_alert(user, "The [affecting.name] is cut open!") // CHOMPEdit - Balloon Alerts
 			return
 
 		if(affecting.is_bandaged())
-			to_chat(user, "<span class='warning'>The wounds on [M]'s [affecting.name] have already been bandaged.</span>")
+			balloon_alert(user, "[M]'s [affecting.name] is already bandaged.") // CHOMPEdit - Balloon Alerts
 			return 1
 		else
 			var/available = get_amount()
-			user.visible_message("<b>\The [user]</b> starts treating [M]'s [affecting.name].", \
-					             "<span class='notice'>You start treating [M]'s [affecting.name].</span>" )
+			user.balloon_alert_visible("\The [user] starts treating [M]'s [affecting.name].", \
+					             "Treating [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
 			var/used = 0
 			for (var/datum/wound/W in affecting.wounds)
 				if (W.internal)
@@ -187,27 +187,27 @@
 				if(used == amount)
 					break
 				if(!do_mob(user, M, W.damage/5, exclusive = TRUE))
-					to_chat(user, "<span class='notice'>You must stand still to bandage wounds.</span>")
+					balloon_alert(user, "Stand still to bandage wounds.") // CHOMPEdit - Balloon Alerts
 					break
 
 				if(affecting.is_bandaged()) // We do a second check after the delay, in case it was bandaged after the first check.
-					to_chat(user, "<span class='warning'>The wounds on [M]'s [affecting.name] have already been bandaged.</span>")
+					balloon_alert(user, "[M]'s [affecting.name] is already bandaged.") // CHOMPEdit - Balloon Alerts
 					return 1
 
 				if(used >= available)
-					to_chat(user, "<span class='warning'>You run out of [src]!</span>")
+					balloon_alert(user, "You run out of [src]!") // CHOMPEdit - Balloon Alerts
 					break
 
 				if (W.current_stage <= W.max_bleeding_stage)
-					user.visible_message("<b>\The [user]</b> bandages \a [W.desc] on [M]'s [affecting.name].", \
-					                              "<span class='notice'>You bandage \a [W.desc] on [M]'s [affecting.name].</span>" )
+					user.balloon_alert_visible("\The [user] bandages \a [W.desc] on [M]'s [affecting.name].", \
+					                              "Bandaged \a [W.desc] on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
 					//H.add_side_effect("Itch")
 				else if (W.damage_type == BRUISE)
-					user.visible_message("<b>\The [user]</b> places a bruise patch over \a [W.desc] on [M]'s [affecting.name].", \
-					                              "<span class='notice'>You place a bruise patch over \a [W.desc] on [M]'s [affecting.name].</span>" )
+					user.balloon_alert_visible("\The [user] places a bruise patch over \a [W.desc] on [M]'s [affecting.name].", \
+					                              "Placed bruise patch over \a [W.desc] on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
 				else
-					user.visible_message("<b>\The [user]</b> places a bandaid over \a [W.desc] on [M]'s [affecting.name].", \
-					                              "<span class='notice'>You place a bandaid over \a [W.desc] on [M]'s [affecting.name].</span>" )
+					user.balloon_alert_visible("\The [user] places a bandaid over \a [W.desc] on [M]'s [affecting.name].", \
+					                              "Placed bandaid over \a [W.desc] on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
 				W.bandage()
 				// W.disinfect() // VOREStation - Tech1 should not disinfect
 				playsound(src, pick(apply_sounds), 25)
@@ -215,9 +215,9 @@
 			affecting.update_damages()
 			if(used == amount)
 				if(affecting.is_bandaged())
-					to_chat(user, "<span class='warning'>\The [src] is used up.</span>")
+					balloon_alert(user, "\The [src] is used up.") // CHOMPEdit - Balloon Alerts
 				else
-					to_chat(user, "<span class='warning'>\The [src] is used up, but there are more wounds to treat on \the [affecting.name].</span>")
+					balloon_alert(user, "\The [src] is used up, but there are more wounds to treat on \the [affecting.name].") // CHOMPEdit - Balloon Alerts
 			use(used)
 
 /obj/item/stack/medical/ointment
@@ -242,23 +242,23 @@
 		var/obj/item/organ/external/affecting = H.get_organ(user.zone_sel.selecting)
 
 		if(affecting.open)
-			to_chat(user, "<span class='notice'>The [affecting.name] is cut open, you'll need more than a bandage!</span>")
+			balloon_alert(user, "The [affecting.name] is cut open!") // CHOMPEdit - Balloon Alerts // CHOMPEdit - Balloon Alerts
 			return
 
 		if(affecting.is_salved())
-			to_chat(user, "<span class='warning'>The wounds on [M]'s [affecting.name] have already been salved.</span>")
+			balloon_alert(user, "The wounds on [M]'s [affecting.name] have already been salved.") // CHOMPEdit - Balloon Alerts // CHOMPEdit - Balloon Alerts
 			return 1
 		else
-			user.visible_message("<b>\The [user]</b> starts salving wounds on [M]'s [affecting.name].", \
-					             "<span class='notice'>You start salving the wounds on [M]'s [affecting.name].</span>" )
+			user.balloon_alert_visible("\The [user] starts salving wounds on [M]'s [affecting.name].", \
+					             "Salving the wounds on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts // CHOMPEdit - Balloon Alerts
 			if(!do_mob(user, M, 10, exclusive = TRUE))
-				to_chat(user, "<span class='notice'>You must stand still to salve wounds.</span>")
+				balloon_alert(user, "Stand still to salve wounds.") // CHOMPEdit - Balloon Alerts // CHOMPEdit - Balloon Alerts
 				return 1
 			if(affecting.is_salved()) // We do a second check after the delay, in case it was bandaged after the first check.
-				to_chat(user, "<span class='warning'>The wounds on [M]'s [affecting.name] have already been salved.</span>")
+				balloon_alert(user, "[M]'s [affecting.name] have already been salved.") // CHOMPEdit - Balloon Alerts // CHOMPEdit - Balloon Alerts
 				return 1
-			user.visible_message("<span class='notice'>[user] salved wounds on [M]'s [affecting.name].</span>", \
-			                         "<span class='notice'>You salved wounds on [M]'s [affecting.name].</span>" )
+			user.balloon_alert_visible("[user] salved wounds on [M]'s [affecting.name].", \
+			                         "Salved wounds on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts // CHOMPEdit - Balloon Alerts
 			use(1)
 			affecting.salve()
 			playsound(src, pick(apply_sounds), 25)
@@ -287,16 +287,16 @@
 		var/obj/item/organ/external/affecting = H.get_organ(user.zone_sel.selecting)
 
 		if(affecting.open)
-			to_chat(user, "<span class='notice'>The [affecting.name] is cut open, you'll need more than a bandage!</span>")
+			balloon_alert(user, "The [affecting.name] is cut open!") // CHOMPEdit - Balloon Alerts // CHOMPEdit - Balloon Alerts
 			return
 
 		if(affecting.is_bandaged() && affecting.is_disinfected())
-			to_chat(user, "<span class='warning'>The wounds on [M]'s [affecting.name] have already been treated.</span>")
+			balloon_alert(user, "[M]'s [affecting.name] have already been treated.") // CHOMPEdit - Balloon Alerts // CHOMPEdit - Balloon Alerts
 			return 1
 		else
 			var/available = get_amount()
-			user.visible_message("<b>\The [user]</b> starts treating [M]'s [affecting.name].", \
-					             "<span class='notice'>You start treating [M]'s [affecting.name].</span>" )
+			user.balloon_alert_visible("\The [user] starts treating [M]'s [affecting.name].", \
+					             "Treating [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts // CHOMPEdit - Balloon Alerts
 			var/used = 0
 			for (var/datum/wound/W in affecting.wounds)
 				if (W.internal)
@@ -306,25 +306,25 @@
 				//if(used == amount) //VOREStation Edit
 				//	break //VOREStation Edit
 				if(!do_mob(user, M, W.damage/5, exclusive = TRUE))
-					to_chat(user, "<span class='notice'>You must stand still to bandage wounds.</span>")
+					balloon_alert(user, "Stand still to bandage wounds.") // CHOMPEdit - Balloon Alerts // CHOMPEdit - Balloon Alerts
 					break
 				if(affecting.is_bandaged() && affecting.is_disinfected()) // We do a second check after the delay, in case it was bandaged after the first check.
-					to_chat(user, "<span class='warning'>The wounds on [M]'s [affecting.name] have already been bandaged.</span>")
+					balloon_alert(user, "[M]'s [affecting.name] is already bandaged.") // CHOMPEdit - Balloon Alerts // CHOMPEdit - Balloon Alerts
 					return 1
 
 				if(used >= available)
-					to_chat(user, "<span class='warning'>You run out of [src]!</span>")
+					balloon_alert(user, "You run out of [src]!") // CHOMPEdit - Balloon Alerts
 					break
 
 				if (W.current_stage <= W.max_bleeding_stage)
-					user.visible_message("<b>\The [user]</b> cleans \a [W.desc] on [M]'s [affecting.name] and seals the edges with bioglue.", \
-					                     "<span class='notice'>You clean and seal \a [W.desc] on [M]'s [affecting.name].</span>" )
+					user.balloon_alert_visible("\The [user] cleans \a [W.desc] on [M]'s [affecting.name] and seals the edges with bioglue.", \
+					                     "Cleaning and sealing \a [W.desc] on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
 				else if (W.damage_type == BRUISE)
-					user.visible_message("<b>\The [user]</b> places a medical patch over \a [W.desc] on [M]'s [affecting.name].", \
-					                              "<span class='notice'>You place a medical patch over \a [W.desc] on [M]'s [affecting.name].</span>" )
+					user.balloon_alert_visible("\The [user] places a medical patch over \a [W.desc] on [M]'s [affecting.name].", \
+					                              "Placed medical patch over \a [W.desc] on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
 				else
-					user.visible_message("<b>\The [user]</b> smears some bioglue over \a [W.desc] on [M]'s [affecting.name].", \
-					                              "<span class='notice'>You smear some bioglue over \a [W.desc] on [M]'s [affecting.name].</span>" )
+					user.balloon_alert_visible("\The [user] smears some bioglue over \a [W.desc] on [M]'s [affecting.name].", \
+					                              "Smeared bioglue over \a [W.desc] on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
 				W.bandage()
 				W.disinfect()
 				W.heal_damage(heal_brute)
@@ -334,9 +334,9 @@
 			affecting.update_damages()
 			if(used == amount)
 				if(affecting.is_bandaged())
-					to_chat(user, "<span class='warning'>\The [src] is used up.</span>")
+					balloon_alert(user, "\The [src] is used up.") // CHOMPEdit - Balloon Alerts
 				else
-					to_chat(user, "<span class='warning'>\The [src] is used up, but there are more wounds to treat on \the [affecting.name].</span>")
+					balloon_alert(user, "\The [src] is used up, but there are more wounds to treat on \the [affecting.name].") // CHOMPEdit - Balloon Alerts
 			use(used)
 
 /obj/item/stack/medical/advanced/ointment
@@ -357,22 +357,22 @@
 		var/obj/item/organ/external/affecting = H.get_organ(user.zone_sel.selecting)
 
 		if(affecting.open)
-			to_chat(user, "<span class='notice'>The [affecting.name] is cut open, you'll need more than a bandage!</span>")
+			balloon_alert(user, "The [affecting.name] is cut open!") // CHOMPEdit - Balloon Alerts
 
 		if(affecting.is_salved())
-			to_chat(user, "<span class='warning'>The wounds on [M]'s [affecting.name] have already been salved.</span>")
+			balloon_alert(user, "[M]'s [affecting.name] has already been salved.") // CHOMPEdit - Balloon Alerts
 			return 1
 		else
-			user.visible_message("<b>\The [user]</b> starts salving wounds on [M]'s [affecting.name].", \
-					             "<span class='notice'>You start salving the wounds on [M]'s [affecting.name].</span>" )
+			user.balloon_alert_visible("\The [user] starts salving wounds on [M]'s [affecting.name].", \
+					             "Salving the wounds on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
 			if(!do_mob(user, M, 10, exclusive = TRUE))
-				to_chat(user, "<span class='notice'>You must stand still to salve wounds.</span>")
+				balloon_alert(user, "Stand still to salve wounds.") // CHOMPEdit - Balloon Alerts
 				return 1
 			if(affecting.is_salved()) // We do a second check after the delay, in case it was bandaged after the first check.
-				to_chat(user, "<span class='warning'>The wounds on [M]'s [affecting.name] have already been salved.</span>")
+				balloon_alert(user, "[M]'s [affecting.name] have already been salved.") // CHOMPEdit - Balloon Alerts
 				return 1
-			user.visible_message( 	"<span class='notice'>[user] covers wounds on [M]'s [affecting.name] with regenerative membrane.</span>", \
-									"<span class='notice'>You cover wounds on [M]'s [affecting.name] with regenerative membrane.</span>" )
+			user.balloon_alert_visible("[user] covers wounds on [M]'s [affecting.name] with regenerative membrane.", \
+									"Covered wounds on [M]'s [affecting.name] with regenerative membrane." ) // CHOMPEdit - Balloon Alerts
 			affecting.heal_damage(0,heal_burn)
 			use(1)
 			affecting.salve()
@@ -400,25 +400,25 @@
 		var/obj/item/organ/external/affecting = H.get_organ(user.zone_sel.selecting)
 		var/limb = affecting.name
 		if(!(affecting.organ_tag in splintable_organs))
-			to_chat(user, "<span class='danger'>You can't use \the [src] to apply a splint there!</span>")
+			balloon_alert(user, "You can't use \the [src] to apply a splint there!") // CHOMPEdit - Balloon Alerts
 			return
 		if(affecting.splinted)
-			to_chat(user, "<span class='danger'>[M]'s [limb] is already splinted!</span>")
+			balloon_alert(user, "[M]'s [limb] is already splinted!") // CHOMPEdit - Balloon Alerts
 			return
 		if (M != user)
-			user.visible_message("<span class='danger'>[user] starts to apply \the [src] to [M]'s [limb].</span>", "<span class='danger'>You start to apply \the [src] to [M]'s [limb].</span>", "<span class='danger'>You hear something being wrapped.</span>")
+			user.balloon_alert_visible("[user] starts to apply \the [src] to [M]'s [limb].", "Applying \the [src] to [M]'s [limb].", "You hear something being wrapped.") // CHOMPEdit - Balloon Alerts
 		else
 			if(( !user.hand && (affecting.organ_tag in list(BP_R_ARM, BP_R_HAND)) || \
 				user.hand && (affecting.organ_tag in list(BP_L_ARM, BP_L_HAND)) ))
-				to_chat(user, "<span class='danger'>You can't apply a splint to the arm you're using!</span>")
+				balloon_alert(user, "You can't apply a splint to the arm you're using!") // CHOMPEdit - Balloon Alerts
 				return
-			user.visible_message("<span class='danger'>[user] starts to apply \the [src] to their [limb].</span>", "<span class='danger'>You start to apply \the [src] to your [limb].</span>", "<span class='danger'>You hear something being wrapped.</span>")
+			user.balloon_alert_visible("[user] starts to apply \the [src] to their [limb].", "Applying \the [src] to your [limb].", "You hear something being wrapped.") // CHOMPEdit - Balloon Alerts
 		if(do_after(user, 50, M, exclusive = TASK_USER_EXCLUSIVE))
 			if(affecting.splinted)
-				to_chat(user, "<span class='danger'>[M]'s [limb] is already splinted!</span>")
+				balloon_alert(user, "[M]'s [limb] is already splinted!") // CHOMPEdit - Balloon Alerts
 				return
 			if(M == user && prob(75))
-				user.visible_message("<span class='danger'>\The [user] fumbles [src].</span>", "<span class='danger'>You fumble [src].</span>", "<span class='danger'>You hear something being wrapped.</span>")
+				user.balloon_alert_visible("\The [user] fumbles [src].", "Fumbling [src].", "You hear something being wrapped.") // CHOMPEdit - Balloon Alerts
 				return
 			if(ishuman(user))
 				var/obj/item/stack/medical/splint/S = split(1)
@@ -426,9 +426,9 @@
 					if(affecting.apply_splint(S))
 						S.forceMove(affecting)
 						if (M != user)
-							user.visible_message("<span class='danger'>\The [user] finishes applying [src] to [M]'s [limb].</span>", "<span class='danger'>You finish applying \the [src] to [M]'s [limb].</span>", "<span class='danger'>You hear something being wrapped.</span>")
+							user.balloon_alert_visible("\The [user] finishes applying [src] to [M]'s [limb].", "Finished applying \the [src] to [M]'s [limb].", "You hear something being wrapped.") // CHOMPEdit - Balloon Alerts
 						else
-							user.visible_message("<span class='danger'>\The [user] successfully applies [src] to their [limb].</span>", "<span class='danger'>You successfully apply \the [src] to your [limb].</span>", "<span class='danger'>You hear something being wrapped.</span>")
+							user.balloon_alert_visible("\The [user] successfully applies [src] to their [limb].", "Successfully applied \the [src] to your [limb].", "You hear something being wrapped.") // CHOMPEdit - Balloon Alerts
 						return
 					S.dropInto(src.loc) //didn't get applied, so just drop it
 			if(isrobot(user))
@@ -436,10 +436,10 @@
 				if(B)
 					if(affecting.apply_splint(B))
 						B.forceMove(affecting)
-						user.visible_message("<span class='danger'>\The [user] finishes applying [src] to [M]'s [limb].</span>", "<span class='danger'>You finish applying \the [src] to [M]'s [limb].</span>", "<span class='danger'>You hear something being wrapped.</span>")
+						user.balloon_alert_visible("\The [user] finishes applying [src] to [M]'s [limb].", "Finish applying \the [src] to [M]'s [limb].", "You hear something being wrapped.") // CHOMPEdit - Balloon Alerts
 						B.use(1)
 						return
-			user.visible_message("<span class='danger'>\The [user] fails to apply [src].</span>", "<span class='danger'>You fail to apply [src].</span>", "<span class='danger'>You hear something being wrapped.</span>")
+			user.balloon_alert_visible("\The [user] fails to apply [src].", "Failed to apply [src].", "You hear something being wrapped.") // CHOMPEdit - Balloon Alerts
 		return
 
 

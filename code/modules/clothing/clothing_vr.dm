@@ -32,22 +32,22 @@
 
 //This is a crazy 'sideways' override.
 /obj/item/clothing/shoes/attackby(var/obj/item/I, var/mob/user)
-	if(istype(I,/obj/item/weapon/holder/micro))
+	if(istype(I,/obj/item/holder/micro))
 		var/full = 0
 		for(var/mob/M in src)
 			if(istype(M,/mob/living/voice)) //Don't count voices as people!
 				continue
 			full++
 		if(full >= 2)
-			to_chat(user, "<span class='warning'>You can't fit anyone else into \the [src]!</span>")
+			to_chat(user, span_warning("You can't fit anyone else into \the [src]!"))
 		else
-			var/obj/item/weapon/holder/micro/holder = I
+			var/obj/item/holder/micro/holder = I
 			if(holder.held_mob && (holder.held_mob in holder))
 				var/mob/living/M = holder.held_mob
 				holder.dump_mob()
-				to_chat(M, "<span class='warning'>[user] stuffs you into \the [src]!</span>")
+				to_chat(M, span_warning("[user] stuffs you into \the [src]!"))
 				M.forceMove(src)
-				to_chat(user, "<span class='notice'>You stuff \the [M] into \the [src]!</span>")
+				to_chat(user, span_notice("You stuff \the [M] into \the [src]!"))
 	else
 		..()
 
@@ -56,8 +56,8 @@
 		if(istype(M,/mob/living/voice)) //Don't knock voices out!
 			continue
 		M.forceMove(get_turf(user))
-		to_chat(M, "<span class='warning'>[user] shakes you out of \the [src]!</span>")
-		to_chat(user, "<span class='notice'>You shake [M] out of \the [src]!</span>")
+		to_chat(M, span_warning("[user] shakes you out of \the [src]!"))
+		to_chat(user, span_notice("You shake [M] out of \the [src]!"))
 
 	..()
 
@@ -66,9 +66,9 @@
 	if(istype(micro,/mob/living/voice)) //Voices shouldn't be able to resist but we have this here just in case.
 		return
 	if(!istype(macro))
-		to_chat(micro, "<span class='notice'>You start to climb out of [src]!</span>")
+		to_chat(micro, span_notice("You start to climb out of [src]!"))
 		if(do_after(micro, 50, src))
-			to_chat(micro, "<span class='notice'>You climb out of [src]!</span>")
+			to_chat(micro, span_notice("You climb out of [src]!"))
 			micro.forceMove(loc)
 		return
 
@@ -80,15 +80,15 @@
 		escape_message_micro = "You start to climb around the larger creature's feet and ankles!"
 		escape_time = 100
 
-	to_chat(micro, "<span class='notice'>[escape_message_micro]</span>")
-	to_chat(macro, "<span class='danger'>[escape_message_macro]</span>")
+	to_chat(micro, span_notice("[escape_message_micro]"))
+	to_chat(macro, span_danger("[escape_message_macro]"))
 	if(!do_after(micro, escape_time, macro))
-		to_chat(micro, "<span class='danger'>You're pinned underfoot!</span>")
-		to_chat(macro, "<span class='danger'>You pin the escapee underfoot!</span>")
+		to_chat(micro, span_danger("You're pinned underfoot!"))
+		to_chat(macro, span_danger("You pin the escapee underfoot!"))
 		return
 
-	to_chat(micro, "<span class='notice'>You manage to escape [src]!</span>")
-	to_chat(macro, "<span class='danger'>Someone has climbed out of your [src]!</span>")
+	to_chat(micro, span_notice("You manage to escape [src]!"))
+	to_chat(macro, span_danger("Someone has climbed out of your [src]!"))
 	micro.forceMove(macro.loc)
 
 /obj/item/clothing/gloves
@@ -134,7 +134,7 @@
 //Mask
 /obj/item/clothing/mask
 	name = "mask"
-	icon = 'icons/inventory/face/item_vr.dmi' // This is intentional because of our custom species.
+	icon = 'modular_chomp/icons/inventory/face/item.dmi' // This is intentional because of our custom species. //Chompedit: this file also goes to modular_chomp
 	item_icons = list(
 		slot_l_hand_str = 'icons/mob/items/lefthand_masks.dmi',
 		slot_r_hand_str = 'icons/mob/items/righthand_masks.dmi',
@@ -142,23 +142,26 @@
 	body_parts_covered = HEAD
 	slot_flags = SLOT_MASK
 	body_parts_covered = FACE|EYES
+	//Chompedit Start: Moving over to the modularity folder because virgo changed the name of upstream icons in their modular files. Epic.
 	item_icons = list(
-		slot_wear_mask_str = 'icons/inventory/face/mob_vr.dmi'
+		slot_wear_mask_str = 'modular_chomp/icons/inventory/face/mob.dmi'
 		)
 	sprite_sheets = list(
-		SPECIES_TESHARI		= 'icons/inventory/face/mob_teshari.dmi',
-		SPECIES_VOX 		= 'icons/inventory/face/mob_vox.dmi',
-		SPECIES_TAJ 		= 'icons/inventory/face/mob_tajaran.dmi',
-		SPECIES_UNATHI 		= 'icons/inventory/face/mob_unathi.dmi',
-		SPECIES_SERGAL 		= 'icons/inventory/face/mob_vr_sergal.dmi',
-		SPECIES_NEVREAN 	= 'icons/inventory/face/mob_vr_nevrean.dmi',
-		SPECIES_ZORREN_HIGH	= 'icons/inventory/face/mob_vr_fox.dmi',
-		SPECIES_ZORREN_FLAT = 'icons/inventory/face/mob_vr_fennec.dmi',
-		SPECIES_AKULA 		= 'icons/inventory/face/mob_vr_akula.dmi',
-		SPECIES_VULPKANIN 	= 'icons/inventory/face/mob_vr_vulpkanin.dmi',
-		SPECIES_XENOCHIMERA	= 'icons/inventory/face/mob_vr_tajaran.dmi',
-		SPECIES_WEREBEAST	= 'icons/inventory/face/mob_vr_werebeast.dmi'
+		SPECIES_TESHARI		= 'modular_chomp/icons/inventory/face/mob_teshari.dmi',
+		SPECIES_VOX 		= 'modular_chomp/icons/inventory/face/mob_vox.dmi',
+		SPECIES_TAJ 		= 'modular_chomp/icons/inventory/face/mob_tajaran.dmi',
+		SPECIES_UNATHI 		= 'modular_chomp/icons/inventory/face/mob_unathi.dmi',
+		SPECIES_SERGAL 		= 'modular_chomp/icons/inventory/face/mob_sergal.dmi',
+		SPECIES_NEVREAN 	= 'modular_chomp/icons/inventory/face/mob_nevrean.dmi',
+		SPECIES_ZORREN_HIGH	= 'modular_chomp/icons/inventory/face/mob_fox.dmi',
+		SPECIES_ZORREN_FLAT = 'modular_chomp/icons/inventory/face/mob_fennec.dmi',
+		SPECIES_AKULA 		= 'modular_chomp/icons/inventory/face/mob_akula.dmi',
+		SPECIES_VULPKANIN 	= 'modular_chomp/icons/inventory/face/mob_vulpkanin.dmi',
+		SPECIES_XENOCHIMERA	= 'modular_chomp/icons/inventory/face/mob_tajaran.dmi',
+		SPECIES_WEREBEAST	= 'modular_chomp/icons/inventory/face/mob_werebeast.dmi'
 		)
+	//Chompedit End.
+
 //"Spider" 		= 'icons/inventory/mask/mob_spider.dmi' Add this later when they have custom mask sprites and everything.
 
 //Switch to taur sprites if a taur equips

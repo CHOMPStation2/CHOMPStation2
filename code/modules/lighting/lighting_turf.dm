@@ -96,9 +96,13 @@
 
 ///Setter for the byond luminosity var
 /turf/proc/set_luminosity(new_luminosity, force)
+	/*CHOMP Removal Begin
 	if((is_outdoors() && !force) || outdoors_adjacent)
 		if(check_for_sun()) //If another system handles our lighting, don't interfere
 			return
+	*/ //CHOMP Removal End
+	if(((is_outdoors() && !force) || outdoors_adjacent) && (z in fake_sunlight_zs)) //Special exception for fakesun lit tiles
+		return
 
 	luminosity = new_luminosity
 
@@ -138,19 +142,3 @@
 /turf/proc/has_dynamic_lighting()
 	var/area/A = loc
 	return (IS_DYNAMIC_LIGHTING(src) && IS_DYNAMIC_LIGHTING(A))
-
-/turf/proc/generate_missing_corners()
-
-	if (!lighting_corner_NE)
-		lighting_corner_NE = new/datum/lighting_corner(src, NORTH|EAST)
-
-	if (!lighting_corner_SE)
-		lighting_corner_SE = new/datum/lighting_corner(src, SOUTH|EAST)
-
-	if (!lighting_corner_SW)
-		lighting_corner_SW = new/datum/lighting_corner(src, SOUTH|WEST)
-
-	if (!lighting_corner_NW)
-		lighting_corner_NW = new/datum/lighting_corner(src, NORTH|WEST)
-
-	lighting_corners_initialised = TRUE

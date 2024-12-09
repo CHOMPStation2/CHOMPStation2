@@ -1,5 +1,5 @@
 /datum/looping_sound/weather
-	pref_check = /datum/client_preference/weather_sounds
+	pref_check = /datum/preference/toggle/weather_sounds
 	volume_chan = VOLUME_CHANNEL_WEATHER // CHOMPEdit - Weather Volume Channel
 
 // CHOMPEdit: Blanket replace all wind with this, for now, in lieue of a snowstorm-specific wind
@@ -77,7 +77,7 @@
 // CHOMPEdit End: Replace Rain sounds with something not-garbage.
 /datum/looping_sound/weather/rain/indoors
 	volume = 20
-	
+
 // CHOMPEdit Start: Proper storm sounds!
 /datum/looping_sound/weather/storm
 	mid_sounds = list(
@@ -100,3 +100,30 @@
 
 /datum/looping_sound/weather/storm/indoors
 	volume = 20
+//CHOMPEDIT start
+/datum/looping_sound/weather/rainrumble
+	mid_sounds = 'sound/effects/weather/downpour/rainrumble.ogg'
+	mid_length = 35 SECONDS
+
+/datum/looping_sound/weather/rainrumble/indoors
+	volume = 30
+
+/datum/looping_sound/weather/rainheavy
+	mid_sounds = list(
+		'sound/effects/weather/downpour/rainheavy.ogg' = 1,
+		'sound/effects/weather/downpour/rainheavy2.ogg' = 1
+		)
+	mid_length = 35 SECONDS
+
+/datum/looping_sound/weather/rainextreme
+	mid_sounds = 'sound/effects/weather/downpour/rainextreme.ogg'
+	mid_length = 37 SECONDS
+	volume = 80
+
+/datum/looping_sound/weather/rainindoors
+	mid_sounds = 'sound/effects/weather/downpour/rainindoors.ogg'
+	mid_length = 24 SECONDS
+//CHOMPEDIT end
+
+/datum/looping_sound/weather/rain/indoors/heavy
+	volume = 40

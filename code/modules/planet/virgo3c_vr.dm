@@ -258,7 +258,7 @@ var/datum/planet/virgo3c/planet_virgo3c = null
 	wind_high = 2
 	wind_low = 1
 	light_modifier = 0.5
-	effect_message = "<span class='warning'>Rain falls on you.</span>"
+	effect_message = span_warning("Rain falls on you.")
 	outdoor_sounds_type = /datum/looping_sound/weather/rain
 	indoor_sounds_type = /datum/looping_sound/weather/rain/indoors
 
@@ -284,13 +284,13 @@ var/datum/planet/virgo3c/planet_virgo3c = null
 				continue // They're indoors, so no need to rain on them.
 
 			// If they have an open umbrella, it'll guard from rain
-			var/obj/item/weapon/melee/umbrella/U = L.get_active_hand()
+			var/obj/item/melee/umbrella/U = L.get_active_hand()
 			if(!istype(U) || !U.open)
 				U = L.get_inactive_hand()
 
 			if(istype(U) && U.open)
 				if(show_message)
-					to_chat(L, "<span class='notice'>Rain patters softly onto your umbrella.</span>")
+					to_chat(L, span_notice("Rain patters softly onto your umbrella."))
 				continue
 
 			L.water_act(1)
@@ -306,7 +306,7 @@ var/datum/planet/virgo3c/planet_virgo3c = null
 	wind_low = 2
 	light_modifier = 0.3
 	flight_failure_modifier = 10
-	effect_message = "<span class='warning'>Rain falls on you, drenching you in water.</span>"
+	effect_message = span_warning("Rain falls on you, drenching you in water.")
 
 	var/next_lightning_strike = 0 // world.time when lightning will strike.
 	var/min_lightning_cooldown = 1 MINUTE
@@ -338,13 +338,13 @@ var/datum/planet/virgo3c/planet_virgo3c = null
 				continue // They're indoors, so no need to rain on them.
 
 			// If they have an open umbrella, it'll guard from rain
-			var/obj/item/weapon/melee/umbrella/U = L.get_active_hand()
+			var/obj/item/melee/umbrella/U = L.get_active_hand()
 			if(!istype(U) || !U.open)
 				U = L.get_inactive_hand()
 
 			if(istype(U) && U.open)
 				if(show_message)
-					to_chat(L, "<span class='notice'>Rain showers loudly onto your umbrella!</span>")
+					to_chat(L, span_notice("Rain showers loudly onto your umbrella!"))
 				continue
 
 
@@ -372,7 +372,7 @@ var/datum/planet/virgo3c/planet_virgo3c = null
 	flight_failure_modifier = 15
 	timer_low_bound = 2
 	timer_high_bound = 5
-	effect_message = "<span class='warning'>The hail smacks into you!</span>"
+	effect_message = span_warning("The hail smacks into you!")
 
 	transition_chances = list(
 		WEATHER_FOG = 5,
@@ -396,13 +396,13 @@ var/datum/planet/virgo3c/planet_virgo3c = null
 				continue // They're indoors, so no need to pelt them with ice.
 
 			// If they have an open umbrella, it'll guard from hail
-			var/obj/item/weapon/melee/umbrella/U = H.get_active_hand()
+			var/obj/item/melee/umbrella/U = H.get_active_hand()
 			if(!istype(U) || !U.open)
 				U = H.get_inactive_hand()
 
 			if(istype(U) && U.open)
 				if(show_message)
-					to_chat(H, "<span class='notice'>Hail patters onto your umbrella.</span>")
+					to_chat(H, span_notice("Hail patters onto your umbrella."))
 				continue
 
 			var/target_zone = pick(BP_ALL)
@@ -527,7 +527,7 @@ var/datum/planet/virgo3c/planet_virgo3c = null
 				continue    //Don't murder the wildlife, they live here it's fine
 
 			L.inflict_heat_damage(1)
-			to_chat(L, "<span class='warning'>Smoldering ash singes you!</span>")
+			to_chat(L, span_warning("Smoldering ash singes you!"))
 
 
 
@@ -661,8 +661,6 @@ VIRGO3C_TURF_CREATE(/turf/simulated/floor/tiled/asteroid_steel/outdoors)
 
 
 
-<<<<<<< HEAD
-=======
 /turf/simulated/open/virgo3c
 	VIRGO3C_SET_ATMOS
 
@@ -685,7 +683,6 @@ VIRGO3C_TURF_CREATE(/turf/simulated/floor/tiled/asteroid_steel/outdoors)
 	VIRGO3C_SET_ATMOS
 	outdoors = 0
 
->>>>>>> 723789a563... Small fix for planetary lighting (#15783)
 /turf/simulated/floor/outdoors/grass/virgo3c
 	VIRGO3C_SET_ATMOS
 
@@ -729,3 +726,23 @@ VIRGO3C_TURF_CREATE(/turf/simulated/floor/tiled/asteroid_steel/outdoors)
 
 /turf/simulated/floor/outdoors/grass/forest/virgo3c/notrees
 	tree_chance = 0
+
+#undef VIRGO3C_ONE_ATMOSPHERE
+#undef VIRGO3C_AVG_TEMP
+
+#undef VIRGO3C_PER_N2
+#undef VIRGO3C_PER_O2
+#undef VIRGO3C_PER_N2O
+#undef VIRGO3C_PER_CO2
+#undef VIRGO3C_PER_PHORON
+
+#undef VIRGO3C_MOL_PER_TURF
+#undef VIRGO3C_MOL_N2
+#undef VIRGO3C_MOL_O2
+#undef VIRGO3C_MOL_N2O
+#undef VIRGO3C_MOL_CO2
+#undef VIRGO3C_MOL_PHORON
+
+#undef VIRGO3C_SET_ATMOS
+#undef VIRGO3C_TURF_CREATE
+#undef VIRGO3C_TURF_CREATE_UN

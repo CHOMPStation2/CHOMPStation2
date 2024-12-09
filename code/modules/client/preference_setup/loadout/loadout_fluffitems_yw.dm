@@ -1,10 +1,10 @@
 /*
 /datum/gear/fluff/testhorn
-	path = /obj/item/weapon/bikehorn
+	path = /obj/item/bikehorn
 	display_name = "Airhorn - Example Item" //Don't use the same as another item
 	description = "An example item that you probably shouldn't see!"
 	ckeywhitelist = list("broman2000")
-	allowed_roles = list("Station Engineer")	//Don't include this if the item is not role restricted
+	allowed_roles = list(JOB_ENGINEER)	//Don't include this if the item is not role restricted
 	character_name = list("shitfacemcgee")	//Character name. this variable is required, or the item doesn't show in loadout. Change to "character_name = null" if not character restricted.
 */
 
@@ -45,7 +45,7 @@
 	character_name = list("Madoka Koto")
 
 /datum/gear/fluff/madoka_koto_1
-	path = /obj/item/weapon/oldtwohanded/spear/fluff/madoka_koto_1
+	path = /obj/item/oldtwohanded/spear/fluff/madoka_koto_1
 	display_name = "Madoka's spear"
 	description = "A 10 foot long spear, with a sturdy wooden shaft to which is attached a strange, double spiked steel blade. One is slightly larger than the other."
 	ckeywhitelist = list("blackangelsace")
@@ -84,14 +84,14 @@
 //Strix Hades
 /datum/gear/fluff/strix_coat
 	path = /obj/item/clothing/suit/storage/teshari/cloak/fluff/strix
-	display_name = "Colony Director Coat"
-	description = "It drapes over a Avali's shoulders and closes at the neck with pockets convienently placed inside. It bears the Colony Director's colors. The name 'Strix Hades' is embroilled in gold lettering around a golden embroilled outline on the neck collar."
+	display_name = JOB_ALT_COLONY_DIRECTOR + " Coat"
+	description = "It drapes over a Avali's shoulders and closes at the neck with pockets convienently placed inside. It bears the " + JOB_ALT_COLONY_DIRECTOR + "'s colors. The name 'Strix Hades' is embroilled in gold lettering around a golden embroilled outline on the neck collar."
 	ckeywhitelist = list("blackangelsace")
 	character_name = list("Strix Hades")
 
 /datum/gear/fluff/strix_under
 	path = /obj/item/clothing/under/teshari/undercoat/fluff/strix
-	display_name = "Colony Director Undercoat"
+	display_name = JOB_ALT_COLONY_DIRECTOR + " Undercoat"
 	description = "Made of carbon nanofiber, it is light and billowy, perfect for going fast and stylishly!"
 	ckeywhitelist = list("blackangelsace")
 	character_name = list("Strix Hades")
@@ -104,7 +104,7 @@
 	character_name = list("Strix Hades")
 
 /datum/gear/fluff/strix_headset
-	path = /obj/item/device/radio/headset/fluff/strix
+	path = /obj/item/radio/headset/fluff/strix
 	display_name = "Strix\'s headset"
 	description = "A headset that seems custom made for a avali skull shape, the sounds coming from it are very quiet."
 	ckeywhitelist = list("blackangelsace")
@@ -126,7 +126,7 @@
 
 //Plague Doctor Boye
 /datum/gear/fluff/kel_plague_box
-	path = /obj/item/weapon/storage/box/fluff/kelplague
+	path = /obj/item/storage/box/fluff/kelplague
 	display_name = "Plague Outfit Box"
 	description = "Yes"
 	ckeywhitelist = list("blackangelsace")
@@ -179,7 +179,7 @@
 //captmatt4
 //Payton Joghs
 /datum/gear/fluff/payton_joghs_1
-	path = /obj/item/weapon/material/hatchet/unathiknife/fluff/payton_joghs_1
+	path = /obj/item/material/hatchet/unathiknife/fluff/payton_joghs_1
 	display_name = "Payton's Knife"
 	description = "It appears to be a traditional unathi knife, though with 'Payton' written on the side and appearing to be made of steel."
 	ckeywhitelist = list("captmatt4")
@@ -212,7 +212,7 @@
 //championfire
 //Yuki Windroar
 /datum/gear/fluff/anoki_implant
-	path = /obj/item/weapon/implanter/reagent_generator/roiz/yuki
+	path = /obj/item/implanter/reagent_generator/roiz/yuki
 	display_name = "Egg laying implanter"
 	description = "This is an implant that allows the user to lay eggs."
 	ckeywhitelist = list("championfire")
@@ -244,7 +244,7 @@
 //codavanistok
 //Coda Vanistok // (Yes, I'm aware they're the same. Yes, this is correct.)
 /datum/gear/fluff/coda_implant
-	path = /obj/item/weapon/implanter/fluff/coda
+	path = /obj/item/implanter/fluff/coda
 	display_name = "Locked size implant"
 	description = "It seems to be locked to two settings."
 	ckeywhitelist = list("codavanistok")
@@ -255,13 +255,13 @@
 //dameonowen
 //Dameon Owen
 /datum/gear/fluff/dameon_1
-	path = /obj/item/weapon/reagent_containers/food/snacks/cookie/mysterious
+	path = /obj/item/reagent_containers/food/snacks/cookie/mysterious
 	display_name = "A mysterious cookie"
 	description = "DAS A BIG COOKIE!!!"
 	ckeywhitelist = list("dameonowen")
 	character_name = list("Dameon Owen", "Amber Owen")
 */
-//CHOMP Remove end 
+//CHOMP Remove end
 
 //dawidoe
 //Melissa Krutz
@@ -273,23 +273,23 @@
 	character_name = list("Melissa Krutz")
 
 /datum/gear/fluff/melissa_1
-	path = /obj/item/weapon/flame/lighter/zippo/fluff/melissa
+	path = /obj/item/flame/lighter/zippo/fluff/melissa
 	display_name = "Zippo"
 	description = "A custom made zippo lighter with word 'Mel' engraved in white font on the bottom right corner. It's black, with red lines around the edges."
 	ckeywhitelist = list("dawidoe")
 	character_name = list("Melissa Krutz")
 
 /datum/gear/fluff/melissa_gun_kit
-	path = /obj/item/device/modkit_conversion/fluff/melissa_gun_kit
+	path = /obj/item/modkit_conversion/fluff/melissa_gun_kit
 	display_name = "Melissa's modkit"
 	description = "A kit containing all the needed tools and parts to modify a 45 Pistol."
 	ckeywhitelist = list("dawidoe")
 	character_name = list("Melissa Krutz")
-	allowed_roles = list("Security Officer")
+	allowed_roles = list(JOB_SECURITY_OFFICER)
 //Dopiotl
 //Jeanne Petite
 /datum/gear/fluff/jeans_chocolates
-	path = /obj/item/weapon/storage/secure/briefcase/fluff/jeans
+	path = /obj/item/storage/secure/briefcase/fluff/jeans
 	display_name = "ChocoBox"
 	description = "M-M-M-M-MONEY SHOT"
 	ckeywhitelist = list("dopiotl")
@@ -303,12 +303,12 @@
 //dwaggy90
 //Saur Darastrix
 /datum/gear/fluff/saur_rig
-	path = /obj/item/weapon/rig/medical/equipped/fluff/saur
+	path = /obj/item/rig/medical/equipped/fluff/saur
 	display_name = "AMR-DRGN"
 	description = "This seems to be a highly customized Medical RIG suit, coloured black and purple, and with an added extendable plating to include a pair of wings and a tail comfortably within the suits protection. There's a nametag on the chest piece, and on the control module itself, with the name 'Saur Darastrix' on it."
 	ckeywhitelist = list("dwaggy90")
 	character_name = list("Saur Darastrix")
-	allowed_roles = list("Chief Medical Officer", "Paramedic")
+	allowed_roles = list(JOB_CHIEF_MEDICAL_OFFICER, JOB_PARAMEDIC)
 
 /datum/gear/fluff/saur_pccarrier
 	path = /obj/item/clothing/suit/armor/pcarrier/navy/fluff/saur_pccarrier
@@ -316,10 +316,10 @@
 	description = "A mostly black and purple striped armour carrier, geared up and ready to go. It looks well maintained, either its not seen much action yet, or any damage done is meticulously repaired, Several small blood splatters that have dried on the inside of it seem to suggest the latter. this carrier has been modified to have holes in the back for wings to slot through."
 	ckeywhitelist = list("dwaggy90")
 	character_name = list("Saur Darastrix")
-	allowed_roles = list("Blueshield Guard")
+	allowed_roles = list(JOB_BLUESHIELD_GUARD)
 
 /datum/gear/fluff/saur_dufflebag
-	path = /obj/item/weapon/storage/backpack/dufflebag/fluff/saur_dufflebag
+	path = /obj/item/storage/backpack/dufflebag/fluff/saur_dufflebag
 	display_name = "Saur's Dufflebag"
 	description = "A large custom made dufflebag to fit snug between a pair of wings, fitted with custom purple straps and golden medical cross, with the name 'Saur Darastrix' written under it."
 	ckeywhitelist = list("dwaggy90")
@@ -350,7 +350,7 @@
 //deepindigo
 //Amina Dae-Kouri
 /datum/gear/fluff/amina_1
-	path = /obj/item/weapon/storage/bible/fluff/amina
+	path = /obj/item/storage/bible/fluff/amina
 	display_name = "New Space Pioneer's Bible"
 	description = "This one says it was printed in 2492. The name \"Eric Hayvers\" is written on the inside of the cover, crossed out. Under it is written \"Kouri, Amina, Marine Unit 14, Fifth Echelon. Service number NTN-5528928522372\""
 	ckeywhitelist = list("deepindigo")
@@ -361,26 +361,26 @@
 //esperkin
 //Sheri Calen
 /datum/gear/fluff/sheri_rig_kit
-	path = /obj/item/device/modkit_conversion/fluff/sheri_rig_kit
+	path = /obj/item/modkit_conversion/fluff/sheri_rig_kit
 	display_name = "Sheri's modkit"
-	description = "A kit containing all the needed tools and parts to modify a Research Director rig suit. It has a snake painted on it."
+	description = "A kit containing all the needed tools and parts to modify a " + JOB_RESEARCH_DIRECTOR + " rig suit. It has a snake painted on it."
 	ckeywhitelist = list("esperkin")
 	character_name = list("Sheri Calen")
-	allowed_roles = list("Research Director")
+	allowed_roles = list(JOB_RESEARCH_DIRECTOR)
 
 //  F CKEYS
 
 //Foxicide
 //Kaith
 /datum/gear/fluff/kaith_modkit
-	path = /obj/item/device/modkit_conversion/fluff/kaith_knife_kit
+	path = /obj/item/modkit_conversion/fluff/kaith_knife_kit
 	display_name = "Kaith's modkit"
 	description = "A kit containing all the needed tools and parts to modify a survival knife"
 	ckeywhitelist = list("foxicide")
 	character_name = list("Kaith")
 
 /datum/gear/fluff/kaith_bag
-	path = /obj/item/weapon/storage/backpack/fluff/kaith
+	path = /obj/item/storage/backpack/fluff/kaith
 	display_name = "Light duffle bag"
 	description = "A compact duffle bag, meant for long hikes."
 	ckeywhitelist = list("foxicide")
@@ -434,27 +434,27 @@
 	character_name = list("Amara Faell")
 
 /datum/gear/fluff/amara_zippo
-	path = /obj/item/weapon/flame/lighter/zippo/fluff/amara
+	path = /obj/item/flame/lighter/zippo/fluff/amara
 	display_name = "Amara's Zippo"
 	description = "A zippo that comes in a metallic blood red case. How the flame can be lime green is an enigma in itself."
 	ckeywhitelist = list("generalpantsu")
 	character_name = list("Amara Faell")
 
 /datum/gear/fluff/amara_hos_kit
-	path = /obj/item/device/modkit_conversion/fluff/amara_hos_kit
+	path = /obj/item/modkit_conversion/fluff/amara_hos_kit
 	display_name = "Amara's modkit"
 	description = "A kit containing all the needed tools and parts to modify a Head of security armored coat. It has a red wolf painted on it."
 	ckeywhitelist = list("generalpantsu")
 	character_name = list("Amara Faell")
-	allowed_roles = list("Head of Security")
+	allowed_roles = list(JOB_HEAD_OF_SECURITY)
 
 /datum/gear/fluff/amara_belt
-	path = /obj/item/weapon/storage/belt/security/tactical/amara_belt
+	path = /obj/item/storage/belt/security/tactical/amara_belt
 	display_name = "Mercenary belt"
 	description = "A sturdy military belt with a shiny buckle and a bunch of pouches."
 	ckeywhitelist = list("generalpantsu")
 	character_name = list("Amara Faell")
-	allowed_roles = list("Security Officer", "Head of Security", "Blueshield Guard")
+	allowed_roles = list(JOB_SECURITY_OFFICER, JOB_HEAD_OF_SECURITY, JOB_BLUESHIELD_GUARD)
 
 //Zara Venlee
 /datum/gear/fluff/zara_leg_enhancer
@@ -515,7 +515,7 @@
 	character_name = list("Samantha Quzix")
 
 /datum/gear/fluff/sam_belt
-	path = /obj/item/weapon/storage/belt/utility/fluff/sam_belt
+	path = /obj/item/storage/belt/utility/fluff/sam_belt
 	display_name = "Mech Pilot Belt"
 	description = "A white-blue toolbelt with many slots to hold tools in, seems to be made to literally be attached onto a suit."
 	ckeywhitelist = list("generalpantsu")
@@ -532,7 +532,7 @@
 //Glitterpaws
 
 /datum/gear/fluff/goz_whitecane
-	path = /obj/item/weapon/melee/goz_whitecane
+	path = /obj/item/melee/goz_whitecane
 	display_name = "Telescopic White Cane."
 	description = "A telescoping white cane. They are commonly used by the blind or visually impaired as a mobility tool or as a courtesy to others."
 	ckeywhitelist = list("gozulio")
@@ -557,7 +557,7 @@
 	description = "A typical Kentauri uniform worn by those in Command, Tactical and Security disciplines. It is crafted specifically to fit the typically overweight body of the average Kentauri, and its colours match up with those of station security."
 	ckeywhitelist = list("harpsong")
 	character_name = list("Harpsong")
-	allowed_roles = list("Security Officer")
+	allowed_roles = list(JOB_SECURITY_OFFICER)
 
 //  I CKEYS
 
@@ -576,16 +576,16 @@
 	description = "A black Dark red security uniform with a tag on it that says Ally_F"
 	ckeywhitelist = list("izac112")
 	character_name = list("Ally Faell")
-	allowed_roles = list("Security Officer", "Warden")
+	allowed_roles = list(JOB_SECURITY_OFFICER, JOB_WARDEN)
 
 //Raja Bastet
 /datum/gear/fluff/raja_belt
-	path = /obj/item/weapon/storage/belt/utility/fluff/raja_belt
+	path = /obj/item/storage/belt/utility/fluff/raja_belt
 	display_name = "Mech Engineer Belt"
 	description = "A black-golden toolbelt with many slots to hold tools in. Also comes with a blue buckle."
 	ckeywhitelist = list("izac112")
 	character_name = list("Raja Bastet")
-	allowed_roles = list("Station Engineer", "Chief Engineer")
+	allowed_roles = list(JOB_ENGINEER, JOB_CHIEF_ENGINEER)
 
 /datum/gear/fluff/raja_coat
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/fluff/raja_coat
@@ -664,7 +664,7 @@
 //lukevale
 //Mira Rezus
 /datum/gear/fluff/mira_1
-	path = /obj/item/weapon/implanter/reagent_generator/mira
+	path = /obj/item/implanter/reagent_generator/mira
 	display_name = "Mira's implanter"
 	description = ""
 	ckeywhitelist = list("lukevale")
@@ -692,7 +692,7 @@
 	description = "A set of metal frame glasses that seem to be modified to fit easier on a elongated snout. On the glasses is a set of low perspiration lenses with a thin overlay for medical hub to be turned on."
 	ckeywhitelist = list("lukevale")
 	character_name = list("Mitsuko Jiao")
-	allowed_roles = list("Medical Doctor", "Chief Medical Officer")
+	allowed_roles = list(JOB_MEDICAL_DOCTOR, JOB_CHIEF_MEDICAL_OFFICER)
 
 /datum/gear/fluff/jiao_uniform
 	path = /obj/item/clothing/under/rank/medical/fluff/jiao_uniform
@@ -716,7 +716,7 @@
 	character_name = list("Mitsuko Jiao")
 
 /datum/gear/fluff/jiao_belt
-	path = /obj/item/weapon/storage/belt/medical/fluff/jiao_belt
+	path = /obj/item/storage/belt/medical/fluff/jiao_belt
 	display_name = "Navy medical belt"
 	description = "A customized medical belt to sport the navy colors of the Kanghu force."
 	ckeywhitelist = list("lukevale")
@@ -730,21 +730,21 @@
 	character_name = list("Mitsuko Jiao")
 
 /datum/gear/fluff/jiao_anynlizer_kit_a
-	path = /obj/item/device/modkit_conversion/fluff/jiao_anynlizer_kit/a
+	path = /obj/item/modkit_conversion/fluff/jiao_anynlizer_kit/a
 	display_name = "Mitsuko's modkit Mk1"
 	description = "A kit containing all the needed tools and parts to modify a heath analyzer. It has a Emblem painted on it."
 	ckeywhitelist = list("lukevale")
 	character_name = list("Mitsuko Jiao")
 
 /datum/gear/fluff/jiao_anynlizer_kit_b
-	path = /obj/item/device/modkit_conversion/fluff/jiao_anynlizer_kit/b
+	path = /obj/item/modkit_conversion/fluff/jiao_anynlizer_kit/b
 	display_name = "Mitsuko's modkit Mk2"
 	description = "A kit containing all the needed tools and parts to modify a heath analyzer. It has a Emblem painted on it."
 	ckeywhitelist = list("lukevale")
 	character_name = list("Mitsuko Jiao")
 
 /datum/gear/fluff/jiao_anynlizer_kit_c
-	path = /obj/item/device/modkit_conversion/fluff/jiao_anynlizer_kit/c
+	path = /obj/item/modkit_conversion/fluff/jiao_anynlizer_kit/c
 	display_name = "Mitsuko's modkit Mk3"
 	description = "A kit containing all the needed tools and parts to modify a heath analyzer. It has a Emblem painted on it."
 	ckeywhitelist = list("lukevale")
@@ -769,15 +769,15 @@
 	description = "A Greenish-white uniform for operating in hazardous environments. This one is suited for colder environments."
 	ckeywhitelist = list("mocatheporg1")
 	character_name = list("Mocha")
-	allowed_roles = list("Explorer", "Pathfinder")
+	allowed_roles = list(JOB_EXPLORER, JOB_PATHFINDER)
 
 /datum/gear/fluff/mocha_suit_kit
-	path = /obj/item/device/modkit_conversion/fluff/mocha_suit_kit
+	path = /obj/item/modkit_conversion/fluff/mocha_suit_kit
 	display_name = "Mocha's modkit"
 	description = "A kit containing all the needed tools and parts to modify a Explorer Suit"
 	ckeywhitelist = list("mocatheporg1")
 	character_name = list("Mocha")
-	allowed_roles = list("Explorer", "Pathfinder")
+	allowed_roles = list(JOB_EXPLORER, JOB_PATHFINDER)
 
 /datum/gear/fluff/mocha_cloak
     path = /obj/item/clothing/accessory/poncho/cloak/fluff/mocha
@@ -789,7 +789,7 @@
 //  N CKEYS
 //NESgamer190
 /datum/gear/fluff/lucy_flask
-	path = /obj/item/weapon/reagent_containers/food/drinks/flask/vacuumflask/fluff/lucyprice
+	path = /obj/item/reagent_containers/food/drinks/flask/vacuumflask/fluff/lucyprice
 	display_name = "Cryostasis Thermos"
 	description = "A thermos that has been designed to look something akin to a mix between a cryostasis beaker and a thermos.  Does NOT keep the drinks cold, surprisingly enough.."
 	ckeywhitelist = list("nesgamer190")
@@ -857,7 +857,7 @@
 	ckeywhitelist = list("radiantflash")
 	character_name = list("Vasharr Zahirn")
 /datum/gear/fluff/vasharr_coffee
-	path = /obj/item/weapon/reagent_containers/food/drinks/bluespace_coffee
+	path = /obj/item/reagent_containers/food/drinks/bluespace_coffee
 	display_name = "Bluespace Coffee"
 	description = "Dreamt up in a strange feverish dream, this coffee cup seems to have been heavily modified with a variety of unlikely parts and wires, and never seems to run out of coffee. Truly the differance between madmen and genius is success."
 	ckeywhitelist = list("radiantflash")
@@ -880,7 +880,7 @@
 //roguenoob
 //Basir Fahim
 /datum/gear/fluff/basir_1
-	path = /obj/item/clothing/gloves/ring/fluff/basir
+	path = /obj/item/clothing/accessory/ring/fluff/basir
 	display_name = "Sundancer Engagement Ring"
 	description = "This ring is stylized to have an ornate sun, with a sample of phoron swirling around inside. Keep away from Fire! Inscribed along the band is a sentence in Siik; \"Always yours, my little frost-fire. With love. -Sheri\""
 	ckeywhitelist = list("roguenoob")
@@ -920,7 +920,7 @@
 	description = "A cloak denoting the rank of head of security, it's made especially for a vasilissan and smells of perfume."
 	ckeywhitelist = list("splintergp")
 	character_name = list("Aroozee Daarvoleast-Clark")
-	allowed_roles = list("Head of Security")
+	allowed_roles = list(JOB_HEAD_OF_SECURITY)
 
 /datum/gear/fluff/aroozee_valhollide_ring
 	path = /obj/item/clothing/accessory/collar/fluff/aroozee_valhollide_ring
@@ -991,7 +991,7 @@
 	description = "A somewhat outdated, lightweight security vest with inbuilt pouches to carry security equipment. It is rather bulky, but nontheless still flexible."
 	ckeywhitelist = list("vitorhks")
 	character_name = list("Jessica Mayer")
-	allowed_roles = list("Security Officer", "Warden")
+	allowed_roles = list(JOB_SECURITY_OFFICER, JOB_WARDEN)
 
 //  W CKEYS
 

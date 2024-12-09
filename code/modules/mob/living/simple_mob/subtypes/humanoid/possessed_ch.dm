@@ -53,16 +53,16 @@
 // Will eventually leave a full corpse with an activated RIG on it. But not yet.
 
 //Miasma Cloud "Item"
-/obj/item/weapon/grenade/chem_grenade/miasma
+/obj/item/grenade/chem_grenade/miasma
 	name = "Miasma Bomb"
 	desc = "You probably shouldn't be able to see this."
 	stage = 2
 	path = 1
 
-/obj/item/weapon/grenade/chem_grenade/miasma/Initialize(mapload)
+/obj/item/grenade/chem_grenade/miasma/Initialize(mapload)
 	. = ..()
-	var/obj/item/weapon/reagent_containers/glass/beaker/B1 = new(src)
-	var/obj/item/weapon/reagent_containers/glass/beaker/B2 = new(src)
+	var/obj/item/reagent_containers/glass/beaker/B1 = new(src)
+	var/obj/item/reagent_containers/glass/beaker/B2 = new(src)
 
 	B1.reagents.add_reagent("miasma", 30)
 	B1.reagents.add_reagent("potassium", 5)
@@ -93,7 +93,7 @@
 /mob/living/simple_mob/humanoid/possessed/Destroy()
 	var/droploc = get_turf(src)
 	playsound(src, 'sound/effects/blobattack.ogg', 40, 1)
-	visible_message(span("critical", pick("\The The horrid screech of metal grating metal cuts through the air as the suit's interlocking joints grind and fold inwards upon itself. A putrid wash of decayed flesh spills forwards, staining the ground dark with the contents of the collapsing RIG's long expired pilot.",
+	visible_message(span_critical(pick("\The The horrid screech of metal grating metal cuts through the air as the suit's interlocking joints grind and fold inwards upon itself. A putrid wash of decayed flesh spills forwards, staining the ground dark with the contents of the collapsing RIG's long expired pilot.",
 	"\The The [src] shudders as some hurt living thing, reeling as screaming servos overcompensate beneath the weight of that debilitating strike - the horrid sounds of shattered metal resonate as the RIG rips itself apart. Limbs flung about in distinctly inhuman motions in a final failed effort at balance before buckling inwards at the joints, hydraulic fluid jettisoned as blood from a severed artery as the long liquidized contents of the suit's ex-pilot spill from its chassis in a thick slurry.",
 	"\The Hissing atmosphereic valves pop and snap, breaking the ageless seal as the putrid stench of rot and carrion assaults the senses in debilitating waves. The damaged RIG's visor alight with warnings of hazardous atmospheric conditions as a final distorted scream echos from within the damaged chassis. The fetid miasma that breeches through those wheezing seals overtaken by a wet burble and plop as the suit is bathed in the liquid contents of its passenger, blackened flesh fed through those narrow seals as rotten grounds.",
 	"\The The timeworn suit's seals finally crack open with a hiss - spilling forth a thick fungal mist. The control module ejects from the rig as it loses all control impulses - leaving behind but a pile of bones and the rotten sludge it had been swimming in for heaven knows how long.",
@@ -110,7 +110,7 @@
 		new rig2(droploc)
 	*/
 	new /obj/effect/decal/remains/human(droploc)
-	new /obj/item/weapon/grenade/chem_grenade/miasma(droploc)
+	new /obj/item/grenade/chem_grenade/miasma(droploc)
 	/*Broken smoke spawn code. Above line is a bandaid.
 	var/datum/reagents/R = new/datum/reagents(30)
 	reagents.add_reagent("miasma", 30)
@@ -123,9 +123,9 @@
 
 //What about if someone's in it? Well here you go.
 /mob/living/simple_mob/humanoid/possessed/Login()
-	to_chat(src,"<b>Why are you in this [src]? Why can't you say more than a few phrases? Why. What. Kill. Kill. Kill. Kill. KILL! KILL! KILL!</b> [player_msg]")
+	to_chat(src,span_infoplain(span_bold("Why are you in this [src]? Why can't you say more than a few phrases? Why. What. Kill. Kill. Kill. Kill. KILL! KILL! KILL!") + " [player_msg]"))
 
-/obj/item/weapon/rig/eva/old
+/obj/item/rig/eva/old
 	name = "old EVA suit control module"
 	desc = "A light hardsuit for repairs and maintenance to the outside of habitats and vessels. It appears to be pretty old and worn down."
 
@@ -134,10 +134,10 @@
 	name = "old industrial RIG suit"
 	desc = "A heavy, powerful hardsuit used by construction crews and mining corporations. Seems to be worn down and damaged. But it seems to still be moving. Is someone in it?"
 	icon_state = "industrial-rig"
-	loot_list = list(/obj/item/weapon/rig/industrial/old = 100)
+	loot_list = list(/obj/item/rig/industrial/old = 100)
 	armor = list(melee = 60, bullet = 50, laser = 30,energy = 15, bomb = 30, bio = 100, rad = 100)
 
-/obj/item/weapon/rig/industrial/old
+/obj/item/rig/industrial/old
 	name = "old Industrial hardsuit"
 	desc = "A heavy, powerful hardsuit used by construction crews and mining corporations. It appears to be pretty old and worn down."
 
@@ -145,10 +145,10 @@
 	name = "old crimson hardsuit"
 	desc = "A blood-red hardsuit featuring some fairly illegal technology. Seems to be worn down and damaged. But it seems to still be moving. Is someone in it?"
 	icon_state = "merc-rig"
-	loot_list = list(/obj/item/weapon/rig/merc/old = 100)
+	loot_list = list(/obj/item/rig/merc/old = 100)
 	armor = list(melee = 80, bullet = 65, laser = 50, energy = 15, bomb = 80, bio = 100, rad = 60)
 
-/obj/item/weapon/rig/merc/old
+/obj/item/rig/merc/old
 	name = "old crimson hardsuit control module"
 	desc = "A blood-red hardsuit featuring some fairly illegal technology. It appears to be pretty old and worn down."
 

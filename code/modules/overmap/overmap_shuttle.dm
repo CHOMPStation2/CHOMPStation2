@@ -9,8 +9,6 @@
 	var/obj/effect/overmap/visitable/ship/landable/myship //my overmap ship object
 
 	category = /datum/shuttle/autodock/overmap
-	var/skill_needed = SKILL_BASIC
-	var/operator_skill = SKILL_BASIC
 
 /datum/shuttle/autodock/overmap/New(var/_name, var/obj/effect/shuttle_landmark/start_waypoint)
 	..(_name, start_waypoint)
@@ -54,15 +52,7 @@
 
 /datum/shuttle/autodock/overmap/get_travel_time()
 	var/distance_mod = get_dist(waypoint_sector(current_location),waypoint_sector(next_location))
-	var/skill_mod = 0.2*(skill_needed - operator_skill)
-	return move_time * (1 + distance_mod + skill_mod)
-
-/datum/shuttle/autodock/overmap/process_launch()
-	if(prob(10*max(0, skill_needed - operator_skill)))
-		var/places = get_possible_destinations()
-		var/place = pick(places)
-		set_destination(places[place])
-	..()
+	return move_time * (1 + distance_mod)
 
 /datum/shuttle/autodock/overmap/proc/set_destination(var/obj/effect/shuttle_landmark/A)
 	if(A != current_location)
@@ -96,21 +86,21 @@
 		return 1 //shuttles with zero fuel consumption are magic and can always launch
 	if(!fuel_ports.len)
 		return 0 //Nowhere to get fuel from
-	var/list/obj/item/weapon/tank/fuel_tanks = list()
+	var/list/obj/item/tank/fuel_tanks = list()
 	for(var/obj/structure/FP in fuel_ports) //loop through fuel ports and assemble list of all fuel tanks
-		var/obj/item/weapon/tank/FT = locate() in FP
+		var/obj/item/tank/FT = locate() in FP
 		if(FT)
 			fuel_tanks += FT
 	if(!fuel_tanks.len)
 		return 0 //can't launch if you have no fuel TANKS in the ports
 	var/total_flammable_gas_moles = 0
-	for(var/obj/item/weapon/tank/FT in fuel_tanks)
+	for(var/obj/item/tank/FT in fuel_tanks)
 		total_flammable_gas_moles += FT.air_contents.get_by_flag(XGM_GAS_FUEL)
 	if(total_flammable_gas_moles < fuel_consumption) //not enough fuel
 		return 0
 	// We are going to succeed if we got to here, so start consuming that fuel
 	var/fuel_to_consume = fuel_consumption
-	for(var/obj/item/weapon/tank/FT in fuel_tanks) //loop through tanks, consume their fuel one by one
+	for(var/obj/item/tank/FT in fuel_tanks) //loop through tanks, consume their fuel one by one
 		var/fuel_available = FT.air_contents.get_by_flag(XGM_GAS_FUEL)
 		if(!fuel_available) // Didn't even have fuel.
 			continue
@@ -133,7 +123,7 @@
 	var/icon_full = "fuel_port_full"
 	var/opened = 0
 	var/parent_shuttle
-	var/base_tank = /obj/item/weapon/tank/phoron
+	var/base_tank = /obj/item/tank/phoron
 
 /obj/structure/fuel_port/Initialize()
 	. = ..()
@@ -141,7 +131,7 @@
 		new base_tank(src)
 
 /obj/structure/fuel_port/heavy
-	base_tank = /obj/item/weapon/tank/phoron/pressurized
+	base_tank = /obj/item/tank/phoron/pressurized
 
 /obj/structure/fuel_port/empty
 	base_tank = null	//oops, no gas!
@@ -166,7 +156,7 @@
 		icon_state = icon_closed
 	..()
 
-/obj/structure/fuel_port/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/structure/fuel_port/attackby(obj/item/W as obj, mob/user as mob)
 	if(W.has_tool_quality(TOOL_CROWBAR))
 		if(opened)
 			to_chat(user, "<spawn class='notice'>You tightly shut \the [src] door.")
@@ -176,7 +166,7 @@
 			to_chat(user, "<spawn class='notice'>You open up \the [src] door.")
 			playsound(src, 'sound/effects/locker_open.ogg', 15, 1, -3)
 			opened = 1
-	else if(istype(W,/obj/item/weapon/tank))
+	else if(istype(W,/obj/item/tank))
 		if(!opened)
 			to_chat(user, "<spawn class='warning'>\The [src] door is still closed!")
 			return
