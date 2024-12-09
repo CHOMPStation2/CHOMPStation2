@@ -994,7 +994,7 @@ var/induromol_code = rand(1, 50)
 	if(istype(M, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = M
 		if(!gaseous_reagent_check(H) && H.stat != 2) //protective clothing and living check
-			H << span_boldwarning("<b>You realize you probably should have worn some safety equipment around dangerous chemicals.")
+			H << span_boldwarning("You realize you probably should have worn some safety equipment around dangerous chemicals.")
 			H.death(0)
 	else if(!istype(M, /mob/living/silicon))
 		M.death(0)
@@ -1032,7 +1032,7 @@ var/induromol_code = rand(1, 50)
 			var/obj/item/organ/eyes = H.internal_organs_by_name["eyes"]
 			if(!(eyes.status & ORGAN_ROBOT))
 				eyes.take_damage(50)
-				H << span_warning("<b>The gas stings your eyes like you have never felt before!</b>")
+				H << span_boldwarning("The gas stings your eyes like you have never felt before!")
 	else if(!istype(M, /mob/living/silicon))
 		M.eye_blind = 500
 	src = null*/
