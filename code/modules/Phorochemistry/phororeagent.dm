@@ -982,7 +982,7 @@ var/induromol_code = rand(1, 50)
 		if(istype(L, /mob/living/carbon/human))
 			var/mob/living/carbon/human/H = L
 			if(!gaseous_reagent_check(H) && H.stat != 2) //protective clothing and living check
-				H <<span_warning("<b>You realize you probably should have worn some safety equipment around dangerous chemicals.</b>")
+				H << span_boldwarning("You realize you probably should have worn some safety equipment around dangerous chemicals.")
 				H.death(0)
 		else if(!istype(L, /mob/living/silicon))
 			L.death(0)
@@ -994,7 +994,7 @@ var/induromol_code = rand(1, 50)
 	if(istype(M, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = M
 		if(!gaseous_reagent_check(H) && H.stat != 2) //protective clothing and living check
-			H <<span_warning("<b>You realize you probably should have worn some safety equipment around dangerous chemicals.</b>")
+			H << span_boldwarning("<b>You realize you probably should have worn some safety equipment around dangerous chemicals.")
 			H.death(0)
 	else if(!istype(M, /mob/living/silicon))
 		M.death(0)
