@@ -134,7 +134,7 @@ var/global/last_fax_role_request
 	if(L.stat || L.restrained())
 		return
 	if(last_fax_role_request && (world.time - last_fax_role_request < 5 MINUTES))
-		to_chat(L, "<span class='warning'>The global automated relays are still recalibrating. Try again later or relay your request in written form for processing.</span>")
+		to_chat(L, span_warning("The global automated relays are still recalibrating. Try again later or relay your request in written form for processing."))
 		return
 
 	var/confirmation = tgui_alert(L, "Are you sure you want to send automated crew request?", "Confirmation", list("Yes", "No", "Cancel"))
@@ -166,7 +166,7 @@ var/global/last_fax_role_request
 
 	var/datum/department/ping_dept = SSjob.get_ping_role(role)
 	if(!ping_dept)
-		to_chat(L, "<span class='warning'>Selected job cannot be requested for \[ERRORDEPTNOTFOUND] reason. Please report this to system administrator.</span>")
+		to_chat(L, span_warning("Selected job cannot be requested for \[ERRORDEPTNOTFOUND] reason. Please report this to system administrator."))
 		return
 	var/message_color = "#FFFFFF"
 	var/ping_name = null
@@ -192,10 +192,10 @@ var/global/last_fax_role_request
 		//if(DEPARTMENT_TALON)
 		//	ping_name = "Offmap"
 	if(!ping_name)
-		to_chat(L, "<span class='warning'>Selected job cannot be requested for \[ERRORUNKNOWNDEPT] reason. Please report this to system administrator.</span>")
+		to_chat(L, span_warning("Selected job cannot be requested for \[ERRORUNKNOWNDEPT] reason. Please report this to system administrator."))
 		return
 	message_color = ping_dept.color
 
 	message_chat_rolerequest(message_color, ping_name, reason, role)
 	last_fax_role_request = world.time
-	to_chat(L, "<span class='notice'>Your request was transmitted.</span>")
+	to_chat(L, span_notice("Your request was transmitted."))

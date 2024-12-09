@@ -77,7 +77,7 @@
 				if(R.shell && !R.emagged) // unless emagged shell
 					continue
 			var/law = target.generate_ion_law()
-			to_chat(target, "<span class='danger'>You have detected a change in your laws information:</span>")
+			to_chat(target, span_danger("You have detected a change in your laws information:"))
 			to_chat(target, law)
 			target.add_ion_law(law)
 			target.show_laws()

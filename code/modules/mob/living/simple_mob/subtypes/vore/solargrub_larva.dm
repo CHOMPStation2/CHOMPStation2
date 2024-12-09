@@ -307,6 +307,6 @@ var/global/list/grub_machine_overlays = list()
 			var/mob/living/simple_mob/animal/solargrub_larva/grub = locate() in O
 			if(grub)
 				grub.eject_from_machine(O)
-				to_chat(user, "<span class='warning'>You disturb a grub nesting in \the [O]!</span>")
+				to_chat(user, span_warning("You disturb a grub nesting in \the [O]!"))
 				return
 	return ..()

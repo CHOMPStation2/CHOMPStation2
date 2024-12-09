@@ -179,7 +179,7 @@
 		//Yay digestion... presumably...
 		var/obj/belly/belly = H.loc
 		add_attack_logs(belly.owner, H, "Digested in [lowertext(belly.name)]")
-		to_chat(belly.owner, "<span class='notice'>\The [H.name] suddenly vanishes within your [belly.name]</span>")
+		to_chat(belly.owner, span_notice("\The [H.name] suddenly vanishes within your [belly.name]"))
 		H.forceMove(pick(floors))
 		if(H.ability_flags & AB_PHASE_SHIFTED)
 			H.phase_shift()
@@ -201,7 +201,7 @@
 
 		spawn(5 MINUTES)
 			H.ability_flags &= ~AB_DARK_RESPITE
-			to_chat(H, "<span class='notice'>You feel like you can leave the Dark again</span>")
+			to_chat(H, span_notice("You feel like you can leave the Dark again"))
 	else
 		H.add_modifier(/datum/modifier/dark_respite, 25 MINUTES)
 
@@ -217,7 +217,7 @@
 
 		spawn(15 MINUTES)
 			H.ability_flags &= ~AB_DARK_RESPITE
-			to_chat(H, "<span class='notice'>You feel like you can leave the Dark again</span>")
+			to_chat(H, span_notice("You feel like you can leave the Dark again"))
 
 	return TRUE
 
@@ -263,7 +263,7 @@
 		else
 			var/datum/species/shadekin/SK = H.species
 			if(SK.manual_respite)
-				to_chat(H, "<span class='notice'>As you leave the Dark, you stop focusing the Dark on healing yourself.</span>")
+				to_chat(H, span_notice("As you leave the Dark, you stop focusing the Dark on healing yourself."))
 				SK.manual_respite = FALSE
 				src.expire()
 			if(src.pain_immunity)

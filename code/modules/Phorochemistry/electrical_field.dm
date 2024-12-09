@@ -19,7 +19,7 @@
 	for(var/datum/reagent/phororeagent/R in L.reagents.reagent_list)
 		if(R.id == "fulguracin")
 			if(prob(20))
-				L << "<span class='notice'>Your hairs stand up, but you resist the shock for the most part.</span>"
+				L << span_notice("Your hairs stand up, but you resist the shock for the most part.")
 			return //no shock for you
 
 	if(L.stat != DEAD)

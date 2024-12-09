@@ -140,9 +140,9 @@ var/induromol_code = rand(1, 50)
 							protection.explanation_text = span_darkpink("Protect [love_name] at all costs")
 							M.mind.objectives.Add(protection)
 							var/obj_count = 1
-							to_chat(M, "<span class='notice'>Your current objectives:</span>")
+							to_chat(M, span_notice("Your current objectives:"))
 							for(var/datum/objective/objective in M.mind.objectives)
-								to_chat(M, "<B>Objective #[obj_count]</B>: [objective.explanation_text]")
+								to_chat(M, span_bold("Objective #[obj_count]") + ": [objective.explanation_text]")
 								obj_count++
 
 							to_chat(M, "<BR>)")
@@ -192,9 +192,9 @@ var/induromol_code = rand(1, 50)
 					if(findtext(O.explanation_text, "Protect [love_name] at all costs"))
 						M.mind.objectives.Remove(O)
 						var/obj_count = 1
-						to_chat(M, "<span class='notice'>Your current objectives:</span>")
+						to_chat(M, span_notice("Your current objectives:"))
 						for(var/datum/objective/objective in M.mind.objectives)
-							to_chat(M, "<B>Objective #[obj_count]</B>: [objective.explanation_text]")
+							to_chat(M, span_bold("Objective #[obj_count]") + ": [objective.explanation_text]")
 							obj_count++
 
 						to_chat(M, "<BR>")
@@ -206,9 +206,9 @@ var/induromol_code = rand(1, 50)
 			if(findtext(O.explanation_text, "Protect [love_name] at all costs"))
 				M.mind.objectives.Remove(O)
 				var/obj_count = 1
-				to_chat(M, "<span class='notice'>Your current objectives:</span>")
+				to_chat(M, span_notice("Your current objectives:"))
 				for(var/datum/objective/objective in M.mind.objectives)
-					to_chat(M, "<B>Objective #[obj_count]</B>: [objective.explanation_text]")
+					to_chat(M, span_bold("Objective #[obj_count]") + ": [objective.explanation_text]")
 					obj_count++
 
 				to_chat(M, "<BR>")
@@ -227,19 +227,19 @@ var/induromol_code = rand(1, 50)
 /datum/reagent/phororeagent/nasty/touch_mob(var/mob/M, var/volume)
 	if(istype(M, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = M
-		H << "<span class='warning'>You are so repulsed by the liquid splashed on you that you feel like puking</span>"
+		H << span_warning("You are so repulsed by the liquid splashed on you that you feel like puking")
 	//	H.vomit() not fast enough
 		src = null
 		spawn(0)
 			if(!H.lastpuke)
 				H.lastpuke = 1
-				H << "<span class='warning'>You feel nauseous...</span>"
+				H << span_warning("You feel nauseous...")
 				spawn(10)	//1 second until second warning
-					H << "<span class='warning'>You feel like you are about to throw up!</span>"
+					H << span_warning("You feel like you are about to throw up!")
 					spawn(20)	//and you have 2 more to escape
 						H.Stun(8)
 
-						H.visible_message("<span class='warning'>[H] throws up!</span>","<span class='warning'>You throw up!</span>")
+						H.visible_message(span_warning("[H] throws up!"),span_warning("You throw up!"))
 						playsound(H.loc, 'sound/effects/splat.ogg', 50, 1)
 
 						var/turf/location = H.loc
@@ -270,20 +270,20 @@ var/induromol_code = rand(1, 50)
 	src = null
 	for(var/mob/living/carbon/human/H in viewers(T, 7))
 		if(H == immune)
-			H << "<span class='notice'>You are absolutely disgusted, but you hold your stomach contents in.</span>"
+			H << span_notice("You are absolutely disgusted, but you hold your stomach contents in.")
 			continue
-		H << "<span class='warning'>You are so disgusted by what looks like spilled vomit you might throw up!</span>"
+		H << span_warning("You are so disgusted by what looks like spilled vomit you might throw up!")
 	//	H.vomit() not fast enough
 		spawn(0)
 			if(!H.lastpuke)
 				H.lastpuke = 1
-				H << "<span class='warning'>You feel nauseous...</span>"
+				H << span_warning("You feel nauseous...")
 				spawn(50)	//5 seconds until second warning
-					H << "<span class='warning'>You feel like you are about to throw up!</span>"
+					H << span_warning("You feel like you are about to throw up!")
 					spawn(50)	//and you have 5 more for mad dash to the bucket
 						H.Stun(5)
 
-						H.visible_message("<span class='warning'>[H] throws up!</span>","<span class='warning'>You throw up!</span>")
+						H.visible_message(span_warning("[H] throws up!"),span_warning("You throw up!"))
 						playsound(H.loc, 'sound/effects/splat.ogg', 50, 1)
 
 						var/turf/location = H.loc
@@ -298,7 +298,7 @@ var/induromol_code = rand(1, 50)
 
 /datum/reagent/phororeagent/nasty/initial_reaction(var/obj/item/reagent_containers/container, var/turf/T, var/volume, var/message)
 	for(var/mob/living/carbon/human/H in viewers(T, 7))
-		H << "<span class='warning'>There is something about the reagent from the telepad you find absolutely repulsive.</span>"
+		H << span_warning("There is something about the reagent from the telepad you find absolutely repulsive.")
 		H.vomit()
 	return ..()
 
@@ -317,7 +317,7 @@ var/induromol_code = rand(1, 50)
 	if(istype(A, /mob/living))
 		var/mob/living/M = A
 		M.universal_understand = 0
-		to_chat(M, "<span class='warning'>You no longer feel attuned to the spoken word.</span>")
+		to_chat(M, span_warning("You no longer feel attuned to the spoken word."))
 
 /datum/reagent/phororeagent/babelizine/on_mob_death(var/mob/M)
 	holder.remove_reagent(src.id, src.volume)
@@ -342,7 +342,7 @@ var/induromol_code = rand(1, 50)
 			bone.status &= ~ORGAN_BROKEN
 		//	bone.perma_injury = 0 Not sure what Polaris equivalent is or why this was necessary
 			H.visible_message(
-			"<span class='notice'>You hear a loud crack as [H.name]'s [bone.name] appears to heal miraculously.</span>")
+			span_notice("You hear a loud crack as [H.name]'s [bone.name] appears to heal miraculously."))
 			holder.remove_reagent(src.id, 12)
 	..()
 
@@ -410,13 +410,13 @@ var/induromol_code = rand(1, 50)
 	if(istype(M, /mob/living/silicon))
 		var/mob/living/silicon/S = M
 		S.take_organ_damage(0, volume/2, emp = 1)
-		S << "<span class='notice'>Some of your systems report damage as a result of the liquid.</span>"
+		S << span_notice("Some of your systems report damage as a result of the liquid.")
 	else
 		if(istype(M, /mob/living/carbon/human))
 			var/mob/living/carbon/human/H = M
 			if(H.isSynthetic())
 				H.take_overall_damage(0, volume/2)
-				H << "<span class='notice'>Some of your systems report damage as a result of the liquid.</span>"
+				H << span_notice("Some of your systems report damage as a result of the liquid.")
 //implementation also in power.dm and electrical_field.dm
 
 /datum/reagent/phororeagent/mortemol
@@ -440,7 +440,7 @@ var/induromol_code = rand(1, 50)
 					C.reagents.add_reagent(id, volume, data)
 					C.rejuvenate()
 					C.rejuvenate() //I like C.rejuvenate()
-					C.visible_message("<span class='notice'>[C] seems to wake from the dead!</span>")
+					C.visible_message(span_notice("[C] seems to wake from the dead!"))
 				else
 					C.reagents.add_reagent(id, volume)
 
@@ -455,7 +455,7 @@ var/induromol_code = rand(1, 50)
 	if(data[1])
 		if(istype(A, /mob))
 			var/mob/M = A
-			to_chat(M, "<span class='notice'>You feel the last traces of chemicals leave your body as you return to death once more...</span>")
+			to_chat(M, span_notice("You feel the last traces of chemicals leave your body as you return to death once more..."))
 			M.death(0)
 		//Reagent giveth, and reagent taketh away
 
@@ -468,7 +468,7 @@ var/induromol_code = rand(1, 50)
 			data[1] = 1
 			C.rejuvenate()
 			C.rejuvenate() //Necessary to call twice in testing
-			C.visible_message("<span class='notice'>[C] seems to wake from the dead!</span>")
+			C.visible_message(span_notice("[C] seems to wake from the dead!"))
 
 /datum/reagent/phororeagent/tegoxane
 	id = "tegoxane"
@@ -500,14 +500,14 @@ var/induromol_code = rand(1, 50)
 		H.f_style = "Shaved"
 
 	if(!M.digitalcamo)
-		to_chat(M, "<span class='notice'>Your skin starts to feel strange</span>")
+		to_chat(M, span_notice("Your skin starts to feel strange"))
 	M.digitalcamo = 1
 	return ..()
 
 /datum/reagent/phororeagent/tegoxane/on_remove(var/atom/A)
 	if(istype(A, /mob))
 		var/mob/M = A
-		to_chat(M, "<span class='notice'>Your skin feels normal again</span>")
+		to_chat(M, span_notice("Your skin feels normal again"))
 		M.digitalcamo = 0
 		M.icon = saved_icon
 		if(istype(M, /mob/living/carbon/human))
@@ -546,7 +546,7 @@ var/induromol_code = rand(1, 50)
 			if(ishuman(M))
 				var/mob/living/carbon/human/H = M
 
-				H.visible_message("<span class='warning'>[H] throws up!</span>","<span class='warning'>You throw up!</span>")
+				H.visible_message(span_warning("[H] throws up!"),span_warning("You throw up!"))
 				playsound(H.loc, 'sound/effects/splat.ogg', 50, 1)
 
 				var/turf/location = H.loc
@@ -580,7 +580,7 @@ var/induromol_code = rand(1, 50)
 				if(eyes.status & ORGAN_ROBOT)
 					return ..()
 
-			to_chat(M, "<span class='notice'>You blink and your eyes quickly adapt to enhanced function.</span>")
+			to_chat(M, span_notice("You blink and your eyes quickly adapt to enhanced function."))
 			M.client.view = 10
 	return ..()
 
@@ -593,7 +593,7 @@ var/induromol_code = rand(1, 50)
 			if(H.get_species() == SPECIES_PROMETHEAN)
 				if(M.client)
 					M.client.view = 7
-					to_chat(M, "<span class='notice'>After a few blinks, you realize the Oculusosone has worn off.</span>")
+					to_chat(M, span_notice("After a few blinks, you realize the Oculusosone has worn off."))
 				return ..()
 			var/obj/item/organ/eyes = H.internal_organs_by_name["eyes"]
 			if(eyes.status & ORGAN_ROBOT)
@@ -601,7 +601,7 @@ var/induromol_code = rand(1, 50)
 
 		if(M.client)
 			M.client.view = 7
-			to_chat(M, "<span class='notice'>After a few blinks, you realize the Oculusosone has worn off.</span>")
+			to_chat(M, span_notice("After a few blinks, you realize the Oculusosone has worn off."))
 	return ..()
 //////////////////////////////////////////////////////////////////////////////////
 
@@ -614,7 +614,7 @@ var/induromol_code = rand(1, 50)
 //doesn't do anything, I just like people trying to procure a corpse to test it -DrBrock
 /datum/reagent/phororeagent/destitutionecam/touch_mob(var/mob/M, var/volume)
 	if(M.stat == 2)
-		usr << "<span class='notice'>Absolutely nothing happens. You feel disappointed.</span>"
+		usr << span_notice("Absolutely nothing happens. You feel disappointed.")
 	return ..()
 
 /datum/reagent/phororeagent/sapoformator
@@ -643,7 +643,7 @@ var/induromol_code = rand(1, 50)
 
 	src = null
 	if(volume >= 25)
-		usr << "<span class='notice'>The solution begins to fizzle.</span>"
+		usr << span_notice("The solution begins to fizzle.")
 		playsound(T, 'sound/effects/bamf.ogg', 50, 1)
 		var/datum/reagents/cleaner = new()
 		cleaner.my_atom = T
@@ -677,7 +677,7 @@ var/induromol_code = rand(1, 50)
 				volume -= 20
 
 	else
-		usr << "<span class='notice'>The solution does not appear to have enough mass to react.</span>"
+		usr << span_notice("The solution does not appear to have enough mass to react.")
 
 /datum/reagent/phororeagent/rad_x
 	id = "rad_x"
@@ -704,7 +704,7 @@ var/induromol_code = rand(1, 50)
 /datum/reagent/phororeagent/caloran/on_mob_life(var/mob/living/M as mob, var/alien)
 	if(volume >= 2)
 		if(burn == -1)
-			to_chat(M, "<span class='notice'>You feel your skin painfully harden.</span>")
+			to_chat(M, span_notice("You feel your skin painfully harden."))
 			M.take_overall_damage(20, 0)
 			burn = M.getFireLoss()
 		else
@@ -717,7 +717,7 @@ var/induromol_code = rand(1, 50)
 /datum/reagent/phororeagent/caloran/on_remove(var/atom/A)
 	if(istype(A, /mob))
 		var/mob/M = A
-		to_chat(M, "<span class='notice'>Your skin returns to normal, no longer desensitized to extreme heat.</span>")
+		to_chat(M, span_notice("Your skin returns to normal, no longer desensitized to extreme heat."))
 	return ..()
 
 /datum/reagent/phororeagent/the_stuff
@@ -730,7 +730,7 @@ var/induromol_code = rand(1, 50)
 
 /datum/reagent/phororeagent/the_stuff/on_mob_life(var/mob/living/M as mob, var/alien)
 	if(!init)
-		to_chat(M, "<span class='warning'>You start tripping balls.</span>")
+		to_chat(M, span_warning("You start tripping balls."))
 		init = 1
 	var/drugs = list("space_drugs", "serotrotium", "psilocybin", "nuka_cola", "atomicbomb", "hippiesdelight")
 	for(var/drug in drugs)
@@ -746,7 +746,7 @@ var/induromol_code = rand(1, 50)
 
 /datum/reagent/phororeagent/frioline/on_mob_life(var/mob/living/M as mob, var/alien)
 	if(M.bodytemperature > 310)
-		to_chat(M, "<span class='notice'>You suddenly feel very cold.</span>")
+		to_chat(M, span_notice("You suddenly feel very cold."))
 	M.bodytemperature = max(165, M.bodytemperature - 30)
 	return ..()
 
@@ -778,15 +778,15 @@ var/induromol_code = rand(1, 50)
 		var/mob/living/L = M
 		var/burned = L.getFireLoss() > 0
 		if(burned)
-			L << "<span class='notice'>In a strange sensation, you feel some burns stop hurting.</span>"
+			L << span_notice("In a strange sensation, you feel some burns stop hurting.")
 			L.heal_organ_damage(0, min(15, volume / 4))
 
 		if (mFingerprints in L.mutations)
 			if(!burned)
-				L << "<span class='warning'>Another application of the substance does nothing weird to your hands.</span>"
+				L << span_warning("Another application of the substance does nothing weird to your hands.")
 		else
 			L.mutations.Add(mFingerprints)
-			L << "<span class='notice'>Your fingers feel strange after the substance splashes on your hands.</span>"
+			L << span_notice("Your fingers feel strange after the substance splashes on your hands.")
 	return ..()
 
 /datum/reagent/phororeagent/energized_phoron
@@ -900,10 +900,10 @@ var/induromol_code = rand(1, 50)
 	if(world.time - initial_time >= 30) //three second startup lag
 		if(!metabolism)
 			metabolism = 1
-			to_chat(M, "<span class='notice'>You begin to feel transcendental.</span>")
+			to_chat(M, span_notice("You begin to feel transcendental."))
 
 		if(M.z > 5 || M.z == 2 || M.z < 1) //no centcomm teleport, also not dealing with other unknown sectors
-			to_chat(M, "<span class='warning'>You feel the bluespace leave your body on this sector, nothing happens.</span>")
+			to_chat(M, span_warning("You feel the bluespace leave your body on this sector, nothing happens."))
 			src = null
 			return
 
@@ -982,7 +982,7 @@ var/induromol_code = rand(1, 50)
 		if(istype(L, /mob/living/carbon/human))
 			var/mob/living/carbon/human/H = L
 			if(!gaseous_reagent_check(H) && H.stat != 2) //protective clothing and living check
-				H <<"<span class='warning'><b>You realize you probably should have worn some safety equipment around dangerous chemicals.</b></span>"
+				H << span_boldwarning("You realize you probably should have worn some safety equipment around dangerous chemicals.")
 				H.death(0)
 		else if(!istype(L, /mob/living/silicon))
 			L.death(0)
@@ -994,7 +994,7 @@ var/induromol_code = rand(1, 50)
 	if(istype(M, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = M
 		if(!gaseous_reagent_check(H) && H.stat != 2) //protective clothing and living check
-			H <<"<span class='warning'><b>You realize you probably should have worn some safety equipment around dangerous chemicals.</b></span>"
+			H << span_boldwarning("You realize you probably should have worn some safety equipment around dangerous chemicals.")
 			H.death(0)
 	else if(!istype(M, /mob/living/silicon))
 		M.death(0)
@@ -1017,7 +1017,7 @@ var/induromol_code = rand(1, 50)
 				var/obj/item/organ/eyes = H.internal_organs_by_name["eyes"]
 				if(!(eyes.status & ORGAN_ROBOT))
 					eyes.take_damage(50)
-					H << "<span class='warning'><b>The gas stings your eyes like you have never felt before!</b></span>"
+					H << span_boldwarning("The gas stings your eyes like you have never felt before!")
 		else if(!istype(L, /mob/living/silicon))
 			L.eye_blind = 500
 
@@ -1032,7 +1032,7 @@ var/induromol_code = rand(1, 50)
 			var/obj/item/organ/eyes = H.internal_organs_by_name["eyes"]
 			if(!(eyes.status & ORGAN_ROBOT))
 				eyes.take_damage(50)
-				H << "<span class='warning'><b>The gas stings your eyes like you have never felt before!</b></span>"
+				H << span_boldwarning("The gas stings your eyes like you have never felt before!")
 	else if(!istype(M, /mob/living/silicon))
 		M.eye_blind = 500
 	src = null*/
