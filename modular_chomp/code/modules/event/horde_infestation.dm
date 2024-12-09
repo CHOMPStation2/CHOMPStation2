@@ -5,19 +5,15 @@
 	var/list/vents = list()
 	var/spiders = FALSE
 	var/metroids = FALSE
+	var/list/alive_metroids = list()
 
 /datum/event/horde_infestation/setup()
-	if(prob(25)) //CHOMP Add 25% chance for the event to fail if chosen
-		log_debug("Horde infestation failed successfully.")
-		kill()
-		return //The event dies here.
-
 	announceWhen = rand(announceWhen, announceWhen + 60)
 
 	for(var/obj/machinery/atmospherics/unary/vent_pump/temp_vent in machines) //Gathering together all possible areas to spawn mobs.
 		//CHOMPEdit: Added a couple areas to the exclusion.
-		var/in_area = get_area(temp_vent)
-		if(istype(in_area, /area/crew_quarters/sleep) || istype(in_area, /area/hallway/secondary/entry))
+		var/area/in_area = get_area(temp_vent)
+		if(in_area.flag_check(AREA_FORBID_EVENTS))
 			continue
 		if(!temp_vent.welded && temp_vent.network && (temp_vent.loc.z in using_map.station_levels)) //No spawns on welded vents
 			if(temp_vent.network.normal_members.len > 10) //CHOMP Edit: Most our networks are 40. SM is 4 and toxins is 2. This needed to change in order to spawn.
@@ -45,8 +41,8 @@
 	if(spiders)
 		for(var/obj/machinery/atmospherics/unary/vent_pump/temp_vent in machines)
 			//CHOMPEdit: Added a couple areas to the exclusion. Also made this actually work.
-			var/in_area = get_area(temp_vent)
-			if(istype(in_area, /area/crew_quarters/sleep) || istype(in_area, /area/hallway/secondary/entry))
+			var/area/in_area = get_area(temp_vent)
+			if(in_area.flag_check(AREA_FORBID_EVENTS))
 				continue
 			if(!temp_vent.welded && temp_vent.network && (temp_vent.loc.z in using_map.station_levels))
 				if(temp_vent.network.normal_members.len > 10) //CHOMP Edit: Most our networks are 40. SM is 4 and toxins is 2. This needed to change to 10 from 50 in order for spawns to work.
@@ -77,7 +73,7 @@
 				/mob/living/simple_mob/metroid/juvenile/zeta = 2,
 				/mob/living/simple_mob/metroid/juvenile/omega = 1,
 				))
-			new spawn_metroids(get_turf(vent))
+			alive_metroids.Add(new spawn_metroids(get_turf(vent)))
 			vents -= vent
 			spawncount--
 		vents.Cut()
@@ -87,7 +83,7 @@
 		return
 	if(metroids)
 		var/list/area_names = list()
-		for(var/metroids in existing_metroids)
+		for(var/metroids in alive_metroids)
 			var/mob/living/M = metroids
 			if(!M || M.stat == DEAD)
 				continue
@@ -99,4 +95,4 @@
 			area_names |= metroid_area.name
 		if(area_names.len)
 			var/english_list = english_list(area_names)
-			command_announcement.Announce("Sensors have narrowed down remaining lifeforms to the followng areas: [english_list]", "Lifesign Alert")
+			command_announcement.Announce("Sensors have narrowed down remaining lifeforms to the following areas: [english_list]", "Lifesign Alert")
