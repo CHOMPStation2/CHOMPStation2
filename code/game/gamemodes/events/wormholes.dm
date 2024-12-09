@@ -9,10 +9,11 @@
 		Z_choices -= global.using_map.sealed_levels
 	// CHOMPEdit End
 		for(var/turf/simulated/floor/T in world)
+			var/area/A = T.loc
 			if(T.z in Z_choices)
 				if(!T.block_tele)
 					pick_turfs += T
-				if(istype(T.loc, /area/crew_quarters)) // CHOMPEdit - No spawning in dorms
+				if(A.flag_check(AREA_FORBID_EVENTS)) // CHOMPEdit - No spawning in dorms
 					continue
 		// CHOMPAdd Start - Chance to end up in a belly. Fun (:
 		for(var/mob/living/mob in player_list)
