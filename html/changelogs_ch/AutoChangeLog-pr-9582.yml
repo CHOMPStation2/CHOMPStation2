@@ -1,0 +1,7 @@
+author: "TheCaramelion"
+delete-after: True
+changes:
+  - bugfix: "Fixed wormholes spawning in dorms"
+  - bugfix: "Fixed Infected Room event not happening"
+  - code_imp: "Moved hoarde events into the modular folder"
+  - balance: "Removed 25% chance of hoarde event failing"
