@@ -50,7 +50,7 @@
 /obj/item/storage/fancy/egg_box
 	icon = 'icons/obj/food.dmi'
 	icon_state = "eggbox"
-	icon_type = "egg"
+	icon_type = REAGENT_ID_EGG
 	name = "egg box"
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 7 //CHOMPEdit

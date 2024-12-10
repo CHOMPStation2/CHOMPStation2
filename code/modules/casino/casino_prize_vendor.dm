@@ -150,6 +150,7 @@
 		CASINO_PRIZE("Instrument: Musical Moth (you monster)", /obj/item/instrument/musicalmoth, 1, 100, "misc"),
 	)
 	item_list["Drinks"] = list(
+<<<<<<< HEAD
 		CASINO_PRIZE("Redeemer's brew", /obj/item/reagent_containers/food/drinks/bottle/redeemersbrew, 1, 50, "drinks"),
 		CASINO_PRIZE("Poison wine", /obj/item/reagent_containers/food/drinks/bottle/pwine, 1, 50, "drinks"),
 		CASINO_PRIZE("Patron", /obj/item/reagent_containers/food/drinks/bottle/patron, 1, 50, "drinks"),
@@ -159,6 +160,16 @@
 		CASINO_PRIZE("Bottle of Nothing", /obj/item/reagent_containers/food/drinks/bottle/bottleofnothing, 1, 50, "drinks"),
 		CASINO_PRIZE("Whiskey bliss", /obj/item/reagent_containers/food/drinks/bottle/specialwhiskey, 1, 50, "drinks"),
 		CASINO_PRIZE("Snaps", /obj/item/reagent_containers/food/drinks/bottle/snaps, 1, 50, "drinks"),
+=======
+		CASINO_PRIZE("Redeemer's brew", /obj/item/reagent_containers/food/drinks/bottle/redeemersbrew, 1, 150, "drinks"),
+		CASINO_PRIZE("Poison wine", /obj/item/reagent_containers/food/drinks/bottle/pwine, 1, 150, "drinks"),
+		CASINO_PRIZE(REAGENT_PATRON, /obj/item/reagent_containers/food/drinks/bottle/patron, 1, 150, "drinks"),
+		CASINO_PRIZE("Holy water", /obj/item/reagent_containers/food/drinks/bottle/holywater, 1, 150, "drinks"),
+		CASINO_PRIZE(REAGENT_GOLDSCHLAGER, /obj/item/reagent_containers/food/drinks/bottle/goldschlager, 1, 150, "drinks"),
+		CASINO_PRIZE(REAGENT_CHAMPAGNE, /obj/item/reagent_containers/food/drinks/bottle/champagne, 1, 150, "drinks"),
+		CASINO_PRIZE("Bottle of Nothing", /obj/item/reagent_containers/food/drinks/bottle/bottleofnothing, 1, 150, "drinks"),
+		CASINO_PRIZE("Whiskey bliss", /obj/item/reagent_containers/food/drinks/bottle/specialwhiskey, 1, 150, "drinks"),
+>>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 	)
 	item_list["Pets"] = list(
 		CASINO_PRIZE("Casino Geese", /obj/item/grenade/spawnergrenade/casino, 1, 200, "pets"),

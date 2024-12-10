@@ -1146,6 +1146,7 @@
 		var/mob/living/carbon/human/Pred = owner
 		if(ishuman(M))
 			var/mob/living/carbon/human/Prey = M
+<<<<<<< HEAD
 			Prey.bloodstr.del_reagent("numbenzyme")
 			Prey.bloodstr.trans_to_holder(Pred.ingested, Prey.bloodstr.total_volume, 0.5, TRUE) // Copy=TRUE because we're deleted anyway //CHOMPEdit Start
 			Prey.ingested.trans_to_holder(Pred.ingested, Prey.ingested.total_volume, 0.5, TRUE) // Therefore don't bother spending cpu
@@ -1155,6 +1156,12 @@
 			Prey.touching.del_reagent("sacid") //Don't need this stuff in our bloodstream.
 			Prey.touching.del_reagent("cleaner") //Don't need this stuff in our bloodstream.
 			Prey.touching.trans_to_holder(Pred.ingested, Prey.touching.total_volume, 0.5, TRUE) // On updating the prey's reagents
+=======
+			Prey.bloodstr.del_reagent(REAGENT_ID_NUMBENZYME)
+			Prey.bloodstr.trans_to_holder(Pred.bloodstr, Prey.bloodstr.total_volume, 0.5, TRUE) // Copy=TRUE because we're deleted anyway
+			Prey.ingested.trans_to_holder(Pred.bloodstr, Prey.ingested.total_volume, 0.5, TRUE) // Therefore don't bother spending cpu
+			Prey.touching.trans_to_holder(Pred.bloodstr, Prey.touching.total_volume, 0.5, TRUE) // On updating the prey's reagents
+>>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 		else if(M.reagents)
 			M.reagents.del_reagent("stomacid") //Don't need this stuff in our bloodstream.
 			M.reagents.del_reagent("diet_stomacid") //Don't need this stuff in our bloodstream.
