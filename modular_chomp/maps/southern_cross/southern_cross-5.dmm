@@ -2884,6 +2884,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_2)
+"fC" = (
+/obj/structure/flora/grass/both,
+/turf/simulated/floor/outdoors/snow/sif/planetuse{
+	temperature = 293.15
+	},
+/area/surface/outside/plains/outpost)
 "fD" = (
 /obj/machinery/mineral/input,
 /obj/structure/plasticflaps/mining,
@@ -3294,6 +3300,10 @@
 /obj/effect/floor_decal/corner/white/border,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
+"gA" = (
+/obj/structure/flora/ausbushes/ppflowers,
+/turf/simulated/floor/outdoors/grass/sif,
+/area/surface/outside/plains/outpost)
 "gB" = (
 /obj/machinery/button/windowtint{
 	id = "sauna_tint1";
@@ -6207,6 +6217,9 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/civilian/smes)
+"lH" = (
+/turf/simulated/floor/outdoors/grass/sif,
+/area/surface/outside/plains/outpost)
 "lI" = (
 /obj/machinery/door/airlock/glass,
 /obj/machinery/door/firedoor/border_only,
@@ -11709,6 +11722,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/reactor_smes)
+"vu" = (
+/obj/structure/flora/mushroom,
+/turf/simulated/floor/outdoors/grass/sif,
+/area/surface/outside/plains/outpost)
 "vv" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock{
@@ -15646,6 +15663,9 @@
 	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_6)
+"CJ" = (
+/turf/simulated/floor/outdoors/dirt,
+/area/surface/outside/plains/outpost)
 "CM" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -16000,6 +16020,10 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/surface/outpost/main/gen_room/smes_left)
+"Dy" = (
+/obj/structure/flora/ausbushes/palebush,
+/turf/simulated/floor/outdoors/grass/sif,
+/area/surface/outside/plains/outpost)
 "Dz" = (
 /obj/structure/closet/jcloset,
 /obj/item/soap/nanotrasen,
@@ -18220,6 +18244,10 @@
 	},
 /turf/simulated/floor/tiled/steel/sif/planetuse,
 /area/surface/outside/plains/outpost)
+"HT" = (
+/obj/structure/flora/ausbushes/ywflowers,
+/turf/simulated/floor/outdoors/grass/sif,
+/area/surface/outside/plains/outpost)
 "HU" = (
 /turf/simulated/floor/tiled,
 /area/surface/outpost/security/maa)
@@ -18294,6 +18322,10 @@
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/steel/sif/planetuse,
+/area/surface/outside/plains/outpost)
+"Ia" = (
+/obj/structure/table/bench/wooden,
+/turf/simulated/floor/outdoors/dirt,
 /area/surface/outside/plains/outpost)
 "Ib" = (
 /turf/simulated/wall/r_wall{
@@ -20733,6 +20765,11 @@
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/mining_main)
+"Mw" = (
+/obj/structure/grille/rustic,
+/obj/structure/bonfire/permanent/sifwood,
+/turf/simulated/floor/outdoors/dirt,
+/area/surface/outside/plains/outpost)
 "Mx" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/blue{
@@ -21182,6 +21219,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
+"Nl" = (
+/obj/structure/flora/ausbushes/brflowers,
+/turf/simulated/floor/outdoors/grass/sif,
+/area/surface/outside/plains/outpost)
 "Nm" = (
 /obj/effect/floor_decal/steeldecal/steel_decals5{
 	dir = 4
@@ -22456,6 +22497,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
+"PI" = (
+/obj/structure/flora/grass/green,
+/turf/simulated/floor/outdoors/grass/sif,
+/area/surface/outside/plains/outpost)
 "PJ" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 4
@@ -22975,6 +23020,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/left_three)
+"QF" = (
+/obj/structure/loot_pile/christmas_tree,
+/turf/simulated/floor/outdoors/grass/sif,
+/area/surface/outside/plains/outpost)
 "QG" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -24335,6 +24384,11 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating/sif/planetuse,
+/area/surface/outside/plains/outpost)
+"Tp" = (
+/turf/simulated/floor/outdoors/snow/sif/planetuse{
+	temperature = 293.15
+	},
 /area/surface/outside/plains/outpost)
 "Tq" = (
 /obj/effect/floor_decal/borderfloor/corner,
@@ -62284,12 +62338,12 @@ ha
 ha
 ha
 ha
+CJ
+ha
+CJ
 ha
 ha
-ha
-ha
-ha
-ha
+CJ
 ha
 ha
 dP
@@ -62541,14 +62595,14 @@ ha
 ha
 ha
 ha
-ha
-ha
-ha
-ha
-ha
-ha
-ha
-ha
+Ia
+CJ
+Ia
+CJ
+CJ
+Tp
+CJ
+CJ
 ha
 dP
 Ny
@@ -62798,15 +62852,15 @@ NO
 ha
 ha
 ha
-ha
-ha
-ha
-ha
-ha
-ha
-ha
-ha
-ha
+CJ
+Ia
+Mw
+Ia
+CJ
+fC
+CJ
+CJ
+fC
 ha
 dP
 lZ
@@ -63057,14 +63111,14 @@ ha
 ha
 ha
 ha
-ha
-ha
-ha
-ha
-ha
-ha
-ha
-ha
+Ia
+CJ
+Ia
+CJ
+Tp
+fC
+CJ
+CJ
 ha
 dP
 dI
@@ -63315,15 +63369,15 @@ ha
 ha
 ha
 ha
-ha
-ha
-ha
-ha
-ha
-ha
-ha
-ha
-ha
+CJ
+CJ
+Tp
+lH
+Tp
+Dy
+Tp
+CJ
+CJ
 dP
 Bk
 gx
@@ -63573,14 +63627,14 @@ ha
 ha
 ha
 ha
-ha
-ha
-ha
-ha
-ha
-ha
-ha
-ha
+CJ
+Tp
+CJ
+fC
+HT
+gA
+vu
+HT
 ha
 ha
 ha
@@ -63831,17 +63885,17 @@ ha
 ha
 ha
 ha
+Ia
+CJ
+Ia
+lH
+lH
+lH
+lH
+HT
+CJ
 ha
-ha
-ha
-ha
-ha
-ha
-ha
-ha
-ha
-ha
-ha
+CJ
 gx
 gx
 gx
@@ -64088,17 +64142,17 @@ ha
 ha
 ha
 ha
-ha
-ha
-ha
-ha
-ha
-ha
-ha
-ha
-gu
-ha
-ha
+CJ
+Ia
+Mw
+Ia
+lH
+lH
+lH
+QF
+gA
+CJ
+CJ
 ha
 gx
 gx
@@ -64346,19 +64400,19 @@ ha
 ha
 ha
 ha
-ha
-ha
-ha
-ha
-ha
-ha
-ha
-ha
-gu
-ha
-ha
-ha
-ha
+CJ
+Ia
+CJ
+Ia
+Tp
+HT
+lH
+lH
+lH
+CJ
+CJ
+CJ
+CJ
 gx
 gx
 gx
@@ -64604,15 +64658,15 @@ ha
 ha
 ha
 ha
-ha
-ha
-ha
-ha
-ha
-ha
-ha
-ha
-gu
+CJ
+CJ
+CJ
+CJ
+Tp
+PI
+HT
+Nl
+Nl
 ha
 ha
 ha
@@ -64862,15 +64916,15 @@ ha
 ha
 ha
 ha
-ha
-ha
-ha
-ha
-ha
-ha
-ha
-gu
-ha
+CJ
+CJ
+CJ
+Tp
+fC
+Tp
+lH
+Tp
+fC
 ha
 ha
 ha
@@ -65121,14 +65175,14 @@ ha
 ha
 ha
 ha
-ha
-ha
-ha
-ha
-ha
-ha
-ha
-ha
+Ia
+CJ
+Ia
+Tp
+Tp
+CJ
+CJ
+Tp
 ha
 ha
 ha
@@ -65379,15 +65433,15 @@ ha
 ha
 ha
 ha
-ha
-ha
-ha
-ha
-ha
-ha
-ha
-ha
-ha
+Ia
+Mw
+Ia
+CJ
+Tp
+CJ
+Tp
+CJ
+CJ
 ha
 gx
 gx
@@ -65637,14 +65691,14 @@ ha
 ha
 ha
 ha
-ha
-ha
-ha
-ha
-ha
-ha
-ha
-ha
+Ia
+CJ
+Ia
+fC
+CJ
+CJ
+CJ
+CJ
 ha
 ha
 gx
@@ -65896,12 +65950,12 @@ ha
 ha
 ha
 ha
+CJ
 ha
 ha
 ha
 ha
-ha
-ha
+CJ
 ha
 ha
 gx
