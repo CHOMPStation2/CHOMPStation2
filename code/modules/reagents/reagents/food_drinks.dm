@@ -1694,29 +1694,17 @@
 	M.heal_organ_damage(0.5 * removed, 0)
 
 /datum/reagent/drink/decaf
-<<<<<<< HEAD
-	name = "Decaf Coffee"
-	id = "decaf"
-	description = "Coffee with at least 97% of its caffeine content removed. All of the flavor, none of the kick!" // CHOMPEdit - In defense of decaf coffee
-	taste_description = "coffee" // CHOMPEdit - In defense of decaf coffee
-=======
 	name = REAGENT_DECAF
 	id = REAGENT_ID_DECAF
-	description = "Coffee with all the wake-up sucked out."
-	taste_description = "bad coffee"
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
+	description = "Coffee with at least 97% of its caffeine content removed. All of the flavor, none of the kick!" // CHOMPEdit - In defense of decaf coffee
+	taste_description = "coffee" // CHOMPEdit - In defense of decaf coffee
 	taste_mult = 1.3
 	color = "#482000"
 	adj_temp = 25
 
 	cup_icon_state = "cup_coffee"
-<<<<<<< HEAD
-	cup_name = "cup of decaf" // CHOMPEdit
-	cup_desc = "Just as bitter as regular coffee, but it won't keep you up at night!" // CHOMPEdit - In defense of decaf coffee
-=======
 	cup_name = REAGENT_ID_DECAF
-	cup_desc = "Basically just brown, bitter water."
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
+	cup_desc = "Just as bitter as regular coffee, but it won't keep you up at night!" // CHOMPEdit - In defense of decaf coffee
 
 	glass_name = "decaf coffee"
 	glass_desc = "Just as bitter as regular coffee, but it won't keep you up at night!" // CHOMPEdit - In defense of decaf coffee
@@ -1966,12 +1954,8 @@
 	name = REAGENT_LEMONADE
 	id = REAGENT_ID_LEMONADE
 	description = "Oh the nostalgia..."
-<<<<<<< HEAD
-	taste_description = "lemonade"
-	nutriment_factor = 1.5 //CHOMPStation addition
-=======
 	taste_description = REAGENT_ID_LEMONADE
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
+	nutriment_factor = 1.5 //CHOMPStation addition
 	color = "#FFFF00"
 	adj_temp = -5
 	cup_prefix = REAGENT_ID_LEMONADE
@@ -3700,18 +3684,7 @@
 	id = REAGENT_ID_CUBALIBRE
 	description = "Rum, mixed with cola and a splash of lime. Viva la revolucion."
 	taste_description = "cola with lime"
-<<<<<<< HEAD
 	nutriment_factor = 1.5 //CHOMPStation addition
-	color = "#3E1B00"
-	strength = 30
-
-	glass_name = "Cuba Libre"
-	glass_desc = "A classic mix of rum, cola, and lime."
-
-/datum/reagent/ethanol/rum_and_cola
-	name = "Rum and Cola"
-	id = "rumandcola"
-=======
 	color = "#3E1B00"
 	strength = 30
 
@@ -3722,7 +3695,6 @@
 /datum/reagent/ethanol/rum_and_cola
 	name = REAGENT_RUMANDCOLA
 	id = REAGENT_ID_RUMANDCOLA
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 	description = "A classic mix of sugar with more sugar."
 	taste_description = "cola"
 	color = "#3E1B00"

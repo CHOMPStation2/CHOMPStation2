@@ -93,6 +93,10 @@
 #define PLANT_MICROM "microm"
 #define PLANT_MEGAM "megam"
 
+// CHompAdd Start
+#define PLANT_VOLTATO "voltato"
+// CHOMPAdd End
+
 GLOBAL_LIST_INIT(acceptable_fruit_types, list(
 											PLANT_AMBROSIA,
 											PLANT_APPLE,
@@ -108,6 +112,7 @@ GLOBAL_LIST_INIT(acceptable_fruit_types, list(
 											PLANT_DURIAN,
 											PLANT_EGGPLANT,
 											PLANT_GRAPES,
+											PLANT_GRASS, // CHOMPAdd
 											PLANT_GREENGRAPES,
 											PLANT_HAREBELLS,
 											PLANT_LAVENDER,
@@ -120,15 +125,75 @@ GLOBAL_LIST_INIT(acceptable_fruit_types, list(
 											PLANT_POPPIES,
 											PLANT_POTATO,
 											PLANT_PUMPKIN,
+											PLANT_REISHI, // CHOMPAdd
 											PLANT_RICE,
 											PLANT_ROSE,
-											PLANT_ROSE,
+											PLANT_RHUBARB,
+											PLAND_SHAND, // CHOMPAdd
 											PLANT_SOYBEAN,
 											PLANT_SPINEAPPLE,
 											PLANT_SUGARCANE,
 											PLANT_SUNFLOWERS,
 											PLANT_TOMATO,
+											PLANT_TOWERCAP, // CHOMPAdd
 											PLANT_VANILLA,
 											PLANT_WATERMELON,
 											PLANT_WHEAT,
 											PLANT_WHITEBEET))
+
+
+
+
+
+
+("orangesapbean","bluesapbean","purplesapbean")
+	mutants = list("meatwheat") //CHOMPEdit - Adding mutation strain for meatwheat.
+	mutants = list("solarflower") //CHOMPEdit - Adding mutation strain for solarflowers.
+	mutants = list("milkdew") //CHOMPEdit - Adding mutation strain for milkdew
+	mutants = list("siflettuce") // ChompEDIT - Makes the glacial lettuce obtainable
+get_reagent_amount("
+
+	src.trait_injection_reagents += "microcillin"			// get small
+	src.trait_injection_reagents += "macrocillin"			// get BIG
+	src.trait_injection_reagents += "normalcillin"			// normal
+	src.trait_injection_reagents += "numbenzyme"			// no feelings
+	src.trait_injection_reagents += "change_drug_male"		// -> MALE
+	src.trait_injection_reagents += "change_drug_female"	// -> FEMALE
+	src.trait_injection_reagents += "change_drug_intersex"	// -> PLURAL
+	src.trait_injection_reagents += "stoxin"				// night night chem
+	src.trait_injection_reagents += "rainbowtoxin" 			// Funny flashing lights.
+	src.trait_injection_reagents += "paralysistoxin" 		// Paralysis!
+	src.trait_injection_reagents += "painenzyme"			// Pain INCREASER
+		ORE_SAND = 0,
+		"hematite" = 0,
+		"carbon" = 0,
+		"raw copper" = 0,
+		"raw tin" = 0,
+		"void opal" = 0,
+		"painite" = 0,
+		"quartz" = 0,
+		"raw bauxite" = 0,
+		"phoron" = 0,
+		"silver" = 0,
+		"gold" = 0,
+		"marble" = 0,
+		"uranium" = 0,
+		"diamond" = 0,
+		"platinum" = 0,
+		"lead" = 0,
+		"mhydrogen" = 0,
+		"verdantium" = 0,
+		"rutile" = 0)
+
+			Prey.touching.del_reagent("stomacid") //Don't need this stuff in our bloodstream.
+			Prey.touching.del_reagent("diet_stomacid") //Don't need this stuff in our bloodstream.
+			Prey.touching.del_reagent("pacid") //Don't need this stuff in our bloodstream.
+			Prey.touching.del_reagent("sacid") //Don't need this stuff in our bloodstream.
+			Prey.touching.del_reagent("cleaner") //Don't need this stuff in our bloodstream.
+			Prey.touching.trans_to_holder(Pred.ingested, Prey.touching.total_volume, 0.5, TRUE) // On updating the prey's reagents
+		else if(M.reagents)
+			M.reagents.del_reagent("stomacid") //Don't need this stuff in our bloodstream.
+			M.reagents.del_reagent("diet_stomacid") //Don't need this stuff in our bloodstream.
+			M.reagents.del_reagent("cleaner") //Don't need this stuff in our bloodstream.
+
+	prefill = list("change_drug_male" = 1) // CHOMPEdit

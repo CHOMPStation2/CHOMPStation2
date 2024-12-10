@@ -2,14 +2,9 @@
 	name = PLANT_WHEAT
 	seed_name = PLANT_WHEAT
 	display_name = "wheat stalks"
-<<<<<<< HEAD
-	kitchen_tag = "wheat"
-	mutants = list("meatwheat") //CHOMPEdit - Adding mutation strain for meatwheat.
-	chems = list("nutriment" = list(1,25), "flour" = list(10,30))
-=======
 	kitchen_tag = PLANT_WHEAT
+	mutants = list("meatwheat") //CHOMPEdit - Adding mutation strain for meatwheat.
 	chems = list(REAGENT_ID_NUTRIMENT = list(1,25), REAGENT_ID_FLOUR = list(10,30))
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 
 /datum/seed/wheat/New()
 	..()

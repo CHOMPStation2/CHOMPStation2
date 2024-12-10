@@ -271,44 +271,22 @@
 	if(loaded) //Safety.
 		if(istype(loaded, /obj/item/fuel_assembly))
 			var/obj/item/fuel_assembly/rod = loaded
-<<<<<<< HEAD
 			//CHOMPEdit Begin
 			switch(rod.fuel_type)
-				if("composite") //Safety check for rods spawned in without a fueltype.
+				if(MAT_COMPOSITE) //Safety check for rods spawned in without a fueltype.
 					projectile_type = /obj/item/projectile/bullet/magnetic/fuelrod
-				if("deuterium")
+				if(MAT_DEUTERIUM)
 					projectile_type = /obj/item/projectile/bullet/magnetic/fuelrod
-				if("tritium")
+				if(MAT_TRITIUM)
 					projectile_type = /obj/item/projectile/bullet/magnetic/fuelrod/tritium
-				if("phoron")
+				if(MAT_PHORON)
 					projectile_type = /obj/item/projectile/bullet/magnetic/fuelrod/phoron
-				if("supermatter")
+				if(MAT_SUPERMATTER)
 					projectile_type = /obj/item/projectile/bullet/magnetic/fuelrod/supermatter
 					visible_message(span_danger("The barrel of \the [src] glows a blinding white!"))
 					spawn(5)
 						visible_message(span_danger("\The [src] begins to rattle, its acceleration chamber collapsing in on itself!"))
 						removable_components = FALSE
-=======
-			if(rod.fuel_type == MAT_COMPOSITE || rod.fuel_type == MAT_DEUTERIUM) //Safety check for rods spawned in without a fueltype.
-				projectile_type = /obj/item/projectile/bullet/magnetic/fuelrod
-			else if(rod.fuel_type == MAT_TRITIUM)
-				projectile_type = /obj/item/projectile/bullet/magnetic/fuelrod/tritium
-			else if(rod.fuel_type == MAT_PHORON)
-				projectile_type = /obj/item/projectile/bullet/magnetic/fuelrod/phoron
-			else if(rod.fuel_type == MAT_SUPERMATTER)
-				projectile_type = /obj/item/projectile/bullet/magnetic/fuelrod/supermatter
-				visible_message(span_danger("The barrel of \the [src] glows a blinding white!"))
-				spawn(5)
-					visible_message(span_danger("\The [src] begins to rattle, its acceleration chamber collapsing in on itself!"))
-					removable_components = FALSE
-					spawn(15)
-						audible_message(span_critical("\The [src]'s power supply begins to overload as the device crumples!"), runemessage = "VWRRRRRRRR") //Why are you still holding this?
-						playsound(src, 'sound/effects/grillehit.ogg', 10, 1)
-						var/datum/effect/effect/system/spark_spread/sparks = new /datum/effect/effect/system/spark_spread()
-						var/turf/T = get_turf(src)
-						sparks.set_up(2, 1, T)
-						sparks.start()
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 						spawn(15)
 							audible_message(span_critical("\The [src]'s power supply begins to overload as the device crumples!"), runemessage = "VWRRRRRRRR") //Why are you still holding this?
 							playsound(src, 'sound/effects/grillehit.ogg', 10, 1)

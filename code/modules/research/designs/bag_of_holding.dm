@@ -70,7 +70,4 @@
 	materials = list(MAT_GOLD = 3000, MAT_DIAMOND = 2000, MAT_TITANIUM = 500)
 	build_path = /obj/item/storage/belt/utility/holding
 	sort_string = "QAAAF"
-<<<<<<< HEAD
 	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
-=======
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)

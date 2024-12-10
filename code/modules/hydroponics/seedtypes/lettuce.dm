@@ -1,19 +1,11 @@
 // Lettuce/varieties.
 /datum/seed/lettuce
-<<<<<<< HEAD
-	name = "lettuce"
-	seed_name = "lettuce"
-	display_name = "lettuce"
-	kitchen_tag = "lettuce"
-	mutants = list("siflettuce") // ChompEDIT - Makes the glacial lettuce obtainable
-	chems = list("nutriment" = list(1,15))
-=======
 	name = PLANT_LETTUCE
 	seed_name = PLANT_LETTUCE
 	display_name = PLANT_LETTUCE
 	kitchen_tag = PLANT_LETTUCE
+	mutants = list(PLANT_SIFLETTUCE) // ChompEDIT - Makes the glacial lettuce obtainable
 	chems = list(REAGENT_ID_NUTRIMENT = list(1,15))
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 
 /datum/seed/lettuce/New()
 	..()

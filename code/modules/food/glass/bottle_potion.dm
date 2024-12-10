@@ -90,20 +90,12 @@
 /obj/item/reagent_containers/glass/bottle/potion/girljuice
 	name = "girl transformation potion"
 	desc = "A small green bottle containing some pretty pink liquid that claims to turn the drinker into a woman."
-<<<<<<< HEAD
-	prefill = list("change_drug_female" = 1) // CHOMPEdit
-=======
 	prefill = list(REAGENT_ID_GYNOROVIR = 1)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 
 /obj/item/reagent_containers/glass/bottle/potion/boyjuice
 	name = "boy transformation potion"
 	desc = "A small green bottle containing some strong blue liquid that claims to turn the drinker into a man."
-<<<<<<< HEAD
-	prefill = list("change_drug_male" = 1) // CHOMPEdit
-=======
 	prefill = list(REAGENT_ID_ANDROROVIR = 1)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 
 /obj/item/reagent_containers/glass/bottle/potion/badpolymorph
 	name = "unstable polymorph potion"
@@ -160,8 +152,4 @@
 /obj/item/reagent_containers/glass/bottle/potion/phoron
 	name = "volatile potion"
 	desc = "A small green bottle containing some volatile purple liquid."
-<<<<<<< HEAD
-	prefill = list("phoron" = 10)
-=======
 	prefill = list(REAGENT_ID_PHORON = 10)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)

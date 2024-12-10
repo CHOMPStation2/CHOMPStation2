@@ -9,12 +9,8 @@
 /obj/item/stack/material/diamond
 	name = MAT_DIAMOND
 	icon_state = "sheet-diamond"
-<<<<<<< HEAD
-	default_type = "diamond"
-	no_variants = FALSE //CHOMPedit - Variants added
-=======
 	default_type = MAT_DIAMOND
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
+	no_variants = FALSE //CHOMPedit - Variants added
 	drop_sound = 'sound/items/drop/glass.ogg'
 	pickup_sound = 'sound/items/pickup/glass.ogg'
 

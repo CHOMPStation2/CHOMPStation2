@@ -61,179 +61,99 @@
 				name = REAGENT_KETCHUP
 				desc = "You feel more American already."
 				icon_state = "ketchup"
-<<<<<<< HEAD
 				center_of_mass_x = 16 //CHOMPEdit
 				center_of_mass_y= 6 //CHOMPEdit
-			if("mustard")
-				name = "Mustard"
-				desc = "A somewhat bitter topping."
-				icon_state = "mustard"
-				center_of_mass_x = 16 //CHOMPEdit
-				center_of_mass_y= 6 //CHOMPEdit
-			if("capsaicin")
-				name = "Hotsauce"
-				desc = "You can almost TASTE the stomach ulcers now!"
-				icon_state = "hotsauce"
-				center_of_mass_x = 16 //CHOMPEdit
-				center_of_mass_y= 6 //CHOMPEdit
-			if("enzyme")
-				name = "Universal Enzyme"
-				desc = "Used in cooking various dishes."
-				icon_state = "enzyme"
-				center_of_mass_x = 16 //CHOMPEdit
-				center_of_mass_y= 6 //CHOMPEdit
-			if("soysauce")
-				name = "Soy Sauce"
-				desc = "A salty soy-based flavoring."
-				icon_state = "soysauce"
-				center_of_mass_x = 16 //CHOMPEdit
-				center_of_mass_y= 6 //CHOMPEdit
-			if("vinegar")
-				name = "Vinegar"
-				desc = "An acetic acid used in various dishes."
-				icon_state = "vinegar"
-				center_of_mass_x = 16 //CHOMPEdit
-				center_of_mass_y= 6 //CHOMPEdit
-			if("frostoil")
-				name = "Coldsauce"
-				desc = "Leaves the tongue numb in its passage."
-				icon_state = "coldsauce"
-				center_of_mass_x = 16 //CHOMPEdit
-				center_of_mass_y= 6 //CHOMPEdit
-			if("sodiumchloride")
-				name = "Salt Shaker"
-				desc = "Salt. From space oceans, presumably."
-				icon_state = "saltshaker"
-				center_of_mass_x = 17 //CHOMPEdit
-				center_of_mass_y= 11 //CHOMPEdit
-			if("blackpepper")
-				name = "Pepper Mill"
-				desc = "Often used to flavor food or make people sneeze."
-				icon_state = "peppermillsmall"
-				center_of_mass_x = 17 //CHOMPEdit
-				center_of_mass_y= 11 //CHOMPEdit
-			if("cookingoil")
-				name = "Cooking Oil"
-				desc = "A delicious oil used in cooking. General purpose."
-				icon_state = "oliveoil"
-				center_of_mass_x = 16 //CHOMPEdit
-				center_of_mass_y= 6 //CHOMPEdit
-			if("sugar")
-				name = "Sugar"
-				desc = "Tastey space sugar!"
-				center_of_mass_x = 16 //CHOMPEdit
-				center_of_mass_y= 6 //CHOMPEdit
-			if("peanutbutter")
-				name = "Peanut Butter"
-				desc = "A jar of smooth peanut butter."
-				icon_state = "peanutbutter"
-				center_of_mass_x = 16 //CHOMPEdit
-				center_of_mass_y= 6 //CHOMPEdit
-			if("mayo")
-				name = "Mayonnaise"
-				desc = "A jar of mayonnaise!"
-				icon_state = "mayo"
-				center_of_mass_x = 16 //CHOMPEdit
-				center_of_mass_y= 6 //CHOMPEdit
-			if("yeast")
-				name = "Yeast"
-				desc = "This is what you use to make bread fluffy."
-				icon_state = "yeast"
-				center_of_mass_x = 16 //CHOMPEdit
-				center_of_mass_y= 6 //CHOMPEdit
-			if("spacespice")
-				name = "bottle of space spice"
-				desc = "An exotic blend of spices for cooking. Definitely not worms."
-				icon_state = "spacespicebottle"
-				center_of_mass_x = 16 //CHOMPEdit
-				center_of_mass_y= 6 //CHOMPEdit
-			if("barbecue")
-				name = "barbecue sauce"
-				desc = "Barbecue sauce, it's labeled 'sweet and spicy'."
-				icon_state = "barbecue"
-				center_of_mass_x = 16 //CHOMPEdit
-				center_of_mass_y= 6 //CHOMPEdit
-			if("sprinkles")
-				name = "sprinkles"
-=======
-				center_of_mass = list("x"=16, "y"=6)
 			if(REAGENT_ID_MUSTARD)
 				name = REAGENT_MUSTARD
 				desc = "A somewhat bitter topping."
 				icon_state = "mustard"
-				center_of_mass = list("x"=16, "y"=6)
+				center_of_mass_x = 16 //CHOMPEdit
+				center_of_mass_y= 6 //CHOMPEdit
 			if(REAGENT_ID_CAPSAICIN)
 				name = "Hotsauce"
 				desc = "You can almost TASTE the stomach ulcers now!"
 				icon_state = "hotsauce"
-				center_of_mass = list("x"=16, "y"=6)
+				center_of_mass_x = 16 //CHOMPEdit
+				center_of_mass_y= 6 //CHOMPEdit
 			if(REAGENT_ID_ENZYME)
 				name = REAGENT_ENZYME
 				desc = "Used in cooking various dishes."
 				icon_state = "enzyme"
-				center_of_mass = list("x"=16, "y"=6)
+				center_of_mass_x = 16 //CHOMPEdit
+				center_of_mass_y= 6 //CHOMPEdit
 			if(REAGENT_ID_SOYSAUCE)
 				name = REAGENT_SOYSAUCE
 				desc = "A salty soy-based flavoring."
 				icon_state = "soysauce"
-				center_of_mass = list("x"=16, "y"=6)
+				center_of_mass_x = 16 //CHOMPEdit
+				center_of_mass_y= 6 //CHOMPEdit
 			if(REAGENT_ID_VINEGAR)
 				name = REAGENT_VINEGAR
 				desc = "An acetic acid used in various dishes."
 				icon_state = "vinegar"
-				center_of_mass = list("x"=16, "y"=6)
+				center_of_mass_x = 16 //CHOMPEdit
+				center_of_mass_y= 6 //CHOMPEdit
 			if(REAGENT_ID_FROSTOIL)
 				name = "Coldsauce"
 				desc = "Leaves the tongue numb in its passage."
 				icon_state = "coldsauce"
-				center_of_mass = list("x"=16, "y"=6)
+				center_of_mass_x = 16 //CHOMPEdit
+				center_of_mass_y= 6 //CHOMPEdit
 			if(REAGENT_ID_SODIUMCHLORIDE)
 				name = "Salt Shaker"
 				desc = "Salt. From space oceans, presumably."
 				icon_state = "saltshaker"
-				center_of_mass = list("x"=17, "y"=11)
+				center_of_mass_x = 17 //CHOMPEdit
+				center_of_mass_y= 11 //CHOMPEdit
 			if(REAGENT_ID_BLACKPEPPER)
 				name = "Pepper Mill"
 				desc = "Often used to flavor food or make people sneeze."
 				icon_state = "peppermillsmall"
-				center_of_mass = list("x"=17, "y"=11)
+				center_of_mass_x = 17 //CHOMPEdit
+				center_of_mass_y= 11 //CHOMPEdit
 			if(REAGENT_ID_COOKINGOIL)
 				name = REAGENT_COOKINGOIL
 				desc = "A delicious oil used in cooking. General purpose."
 				icon_state = "oliveoil"
-				center_of_mass = list("x"=16, "y"=6)
+				center_of_mass_x = 16 //CHOMPEdit
+				center_of_mass_y= 6 //CHOMPEdit
 			if(REAGENT_ID_SUGAR)
-				name = "Sugar"
+				name = REAGENT_SUGAR
 				desc = "Tastey space sugar!"
-				center_of_mass = list("x"=16, "y"=6)
+				center_of_mass_x = 16 //CHOMPEdit
+				center_of_mass_y= 6 //CHOMPEdit
 			if(REAGENT_ID_PEANUTBUTTER)
 				name = REAGENT_PEANUTBUTTER
 				desc = "A jar of smooth peanut butter."
 				icon_state = "peanutbutter"
-				center_of_mass = list("x"=16, "y"=6)
+				center_of_mass_x = 16 //CHOMPEdit
+				center_of_mass_y= 6 //CHOMPEdit
 			if(REAGENT_ID_MAYO)
 				name = REAGENT_MAYO
 				desc = "A jar of mayonnaise!"
 				icon_state = "mayo"
-				center_of_mass = list("x"=16, "y"=6)
+				center_of_mass_x = 16 //CHOMPEdit
+				center_of_mass_y= 6 //CHOMPEdit
 			if(REAGENT_ID_YEAST)
 				name = REAGENT_YEAST
 				desc = "This is what you use to make bread fluffy."
 				icon_state = "yeast"
-				center_of_mass = list("x"=16, "y"=6)
+				center_of_mass_x = 16 //CHOMPEdit
+				center_of_mass_y= 6 //CHOMPEdit
 			if(REAGENT_ID_SPACESPICE)
 				name = "bottle of space spice"
 				desc = "An exotic blend of spices for cooking. Definitely not worms."
 				icon_state = "spacespicebottle"
-				center_of_mass = list("x"=16, "y"=6)
+				center_of_mass_x = 16 //CHOMPEdit
+				center_of_mass_y= 6 //CHOMPEdit
 			if(REAGENT_ID_BARBECUE)
 				name = "barbecue sauce"
 				desc = "Barbecue sauce, it's labeled 'sweet and spicy'."
 				icon_state = "barbecue"
-				center_of_mass = list("x"=16, "y"=6)
+				center_of_mass_x = 16 //CHOMPEdit
+				center_of_mass_y= 6 //CHOMPEdit
 			if(REAGENT_ID_SPRINKLES)
 				name = REAGENT_ID_SPRINKLES
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 				desc = "Bottle of sprinkles, colourful!"
 				icon_state= "sprinkles"
 				center_of_mass_x = 16 //CHOMPEdit

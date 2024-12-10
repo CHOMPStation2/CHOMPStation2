@@ -129,7 +129,6 @@
 				else if(mode == 1)
 					mode = 2
 					nif.notify("Medichines unable to repair all damage. Perform manual repairs.",TRUE)
-<<<<<<< HEAD
 				// Chomp Edit Start //
 				else if(mode == 2 && HP_percent < -0.4)
 					nif.notify("User Status: CRITICAL. Notifying medical!",TRUE)
@@ -143,9 +142,6 @@
 				// Chomp Edit End //
 
 		/* //Chomp Comment out, using our solution instead of their backport and edit of our solution.
-=======
-
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 		if(mode == 2 && HP_percent < -0.4) //lets inform someone who might be able to help us that we got toasted and roasted
 			nif.notify("User Status: CRITICAL. Notifying medical!",TRUE)
 			mode = 3 //this does nothing except stop it from repeating over and over and over and over and over and over and over
@@ -155,7 +151,7 @@
 				a.autosay("[S.real_name] is in a critical condition, located at ([T.x],[T.y],[T.z])!", "[S.real_name]'s NIF", "Medical")
 				qdel(a)
 		*/ //Chomp comment out END
-		
+
 		return TRUE
 
 /datum/nifsoft/spare_breath

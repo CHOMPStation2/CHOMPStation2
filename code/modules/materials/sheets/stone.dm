@@ -1,6 +1,6 @@
 /obj/item/stack/material/sandstone
 	name = MAT_SANDSTONE + " brick"
-	icon_state = "sheet-sandstone"
+	icon_state = "sheet-sandstone" // CHOMPEdit
 	default_type = MAT_SANDSTONE
 	no_variants = FALSE
 	drop_sound = 'sound/items/drop/boots.ogg'
@@ -8,7 +8,7 @@
 
 /obj/item/stack/material/marble
 	name = MAT_MARBLE + " brick"
-	icon_state = "sheet-marble"
+	icon_state = "sheet-marble" // CHOMPEdit
 	default_type = MAT_MARBLE
 	no_variants = FALSE
 	drop_sound = 'sound/items/drop/boots.ogg'
@@ -16,7 +16,7 @@
 
 /obj/item/stack/material/flint
 	name = MAT_FLINT + " piece"
-	icon_state = "sheet-rock"
+	icon_state = "sheet-rock" // CHOMPEdit
 	default_type = MAT_FLINT
 	no_variants = FALSE
 	drop_sound = 'sound/items/drop/boots.ogg'
@@ -25,14 +25,8 @@
 	apply_colour = TRUE
 
 /obj/item/stack/material/concrete
-<<<<<<< HEAD
-	name = "concrete brick"
-	icon_state = "sheet-brick"
-	default_type = "concrete"
-=======
 	name = MAT_CONCRETE + " brick"
-	icon_state = "brick"
+	icon_state = "sheet-brick" // CHOMPEdit
 	default_type = MAT_CONCRETE
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 	no_variants = FALSE
 	apply_colour = 1

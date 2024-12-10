@@ -1,7 +1,7 @@
 /decl/chemical_reaction/instant/aphrodisiac
-	name = "Aphrodisiac"
-	id = "aphrodisiac"
-	result = "aphrodisiac"
+	name = REAGENT_APHRODISIAC
+	id = REAGENT_ID_APHRODISIAC
+	result = REAGENT_ID_APHRODISIAC
 	required_reagents = list("carbon" = 2, "hydrogen" = 2, "oxygen" = 2, "water" = 1)
 	result_amount = 6
 
@@ -52,9 +52,9 @@
 	result_amount = 12 //More phoron-efficient alternative recipe.
 
 /decl/chemical_reaction/instant/sorbitol
-	name = "Sorbitol"
-	id = "sorbitol"
-	result = "sorbitol"
+	name = REAGENT_SORBITOL
+	id = REAGENT_ID_SORBITOL
+	result = REAGENT_ID_SORBITOL
 	required_reagents = list("unsorbitol" = 1, "phoron" = 1)
 	result_amount = 2
 

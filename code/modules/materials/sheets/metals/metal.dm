@@ -6,15 +6,9 @@
 	apply_colour = TRUE
 
 /obj/item/stack/material/plasteel
-<<<<<<< HEAD
-	name = "plasteel"
-	icon_state = "sheet-plasteel" //CHOMPedit - replace materials update
-	default_type = "plasteel"
-=======
 	name = MAT_PLASTEEL
-	icon_state = "sheet-reinforced"
+	icon_state = "sheet-plasteel" //CHOMPedit - replace materials update
 	default_type = MAT_PLASTEEL
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 	no_variants = FALSE
 	apply_colour = TRUE
 
@@ -32,13 +26,8 @@
 		icon_state = "rods"
 
 /obj/item/stack/material/durasteel
-<<<<<<< HEAD
-	name = "durasteel"
-	icon_state = "sheet-durasteel" //CHOMPedit - replace materials update
-=======
 	name = MAT_DURASTEEL
-	icon_state = "sheet-reinforced"
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
+	icon_state = "sheet-durasteel" //CHOMPedit - replace materials update
 	item_state = "sheet-metal"
 	default_type = MAT_DURASTEEL
 	no_variants = FALSE

@@ -3,15 +3,9 @@
 	name = PLANT_APPLE
 	seed_name = PLANT_APPLE
 	display_name = "apple tree"
-<<<<<<< HEAD
-	kitchen_tag = "apple"
-	mutants = list("poisonapple", "goldapple")
-	chems = list("nutriment" = list(1,10),"applejuice" = list(10,20))
-=======
 	kitchen_tag = PLANT_APPLE
 	mutants = list(PLANT_POISONAPPLE,PLANT_GOLDAPPLE)
 	chems = list(REAGENT_ID_NUTRIMENT = list(1,10),REAGENT_ID_APPLEJUICE = list(10,20))
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 
 /datum/seed/apple/New()
 	..()

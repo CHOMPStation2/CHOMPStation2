@@ -54,18 +54,6 @@
 	prefill = list(REAGENT_ID_AMORPHOROVIR = 1)
 
 /obj/item/reagent_containers/glass/beaker/vial/androrovir
-<<<<<<< HEAD
-	name = "vial (androrovir)"
-	prefill = list("change_drug_male" = 1) //CHOMPEdit
-
-/obj/item/reagent_containers/glass/beaker/vial/gynorovir
-	name = "vial (gynorovir)"
-	prefill = list("change_drug_female" = 1) //CHOMPEdit
-
-/obj/item/reagent_containers/glass/beaker/vial/androgynorovir
-	name = "vial (androgynorovir)"
-	prefill = list("change_drug_intersex" = 1) //CHOMPEdit
-=======
 	name = "vial (" + REAGENT_ID_ANDROROVIR + ")"
 	prefill = list(REAGENT_ID_ANDROROVIR = 1)
 
@@ -76,7 +64,6 @@
 /obj/item/reagent_containers/glass/beaker/vial/androgynorovir
 	name = "vial (" + REAGENT_ID_ANDROGYNOROVIR + ")"
 	prefill = list(REAGENT_ID_ANDROGYNOROVIR = 1)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 
 /obj/item/reagent_containers/glass/beaker/vial/macrocillin
 	name = "vial (" + REAGENT_ID_MACROCILLIN + ")"

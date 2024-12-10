@@ -30,6 +30,7 @@
 #include "code\__defines\_planes+layers_vr.dm"
 #include "code\__defines\_protect.dm"
 #include "code\__defines\_reagents.dm"
+#include "code\__defines\_reagents_ch.dm"
 #include "code\__defines\_tick.dm"
 #include "code\__defines\action.dm"
 #include "code\__defines\admin.dm"
@@ -2795,12 +2796,8 @@
 #include "code\modules\hydroponics\seed_machines.dm"
 #include "code\modules\hydroponics\seed_mobs.dm"
 #include "code\modules\hydroponics\seed_packets.dm"
-<<<<<<< HEAD
 #include "code\modules\hydroponics\seed_packets_ch.dm"
-#include "code\modules\hydroponics\seed_packets_vr.dm"
 #include "code\modules\hydroponics\seed_packets_yw.dm"
-=======
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 #include "code\modules\hydroponics\seed_storage.dm"
 #include "code\modules\hydroponics\seed_storage_vr.dm"
 #include "code\modules\hydroponics\beekeeping\beehive.dm"

@@ -175,20 +175,6 @@
 /datum/trait/neutral/venom_bite/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
 	add_verb(H, /mob/living/proc/injection)
-<<<<<<< HEAD
-	H.trait_injection_reagents += "microcillin"		// get small
-	H.trait_injection_reagents += "macrocillin"		// get BIG
-	H.trait_injection_reagents += "normalcillin"	// normal
-	H.trait_injection_reagents += "numbenzyme"		// no feelings
-	H.trait_injection_reagents += "change_drug_male"		// -> MALE // CHOMPEdit
-	H.trait_injection_reagents += "change_drug_female"		// -> FEMALE // CHOMPEdit
-	H.trait_injection_reagents += "change_drug_intersex"	// -> PLURAL // CHOMPEdit
-	H.trait_injection_reagents += "stoxin"			// night night chem
-	H.trait_injection_reagents += "rainbowtoxin" 	// Funny flashing lights.
-	H.trait_injection_reagents += "paralysistoxin" 	// Paralysis!
-	H.trait_injection_reagents += "painenzyme"		// Pain INCREASER
-	H.trait_injection_reagents += "aphrodisiac"		// Horni //CHOMPedit
-=======
 	H.trait_injection_reagents += REAGENT_ID_MICROCILLIN		// get small
 	H.trait_injection_reagents += REAGENT_ID_MACROCILLIN		// get BIG
 	H.trait_injection_reagents += REAGENT_ID_NORMALCILLIN	// normal
@@ -200,7 +186,7 @@
 	H.trait_injection_reagents += REAGENT_ID_RAINBOWTOXIN 	// Funny flashing lights.
 	H.trait_injection_reagents += REAGENT_ID_PARALYSISTOXIN 	// Paralysis!
 	H.trait_injection_reagents += REAGENT_ID_PAINENZYME		// Pain INCREASER
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
+	H.trait_injection_reagents += REAGENT_ID_APHRODISIAC		// Horni //CHOMPedit
 
 /datum/trait/neutral/long_vore
 	name = "Long Predatorial Reach"

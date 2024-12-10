@@ -288,7 +288,7 @@
 	src.trait_injection_reagents += "rainbowtoxin" 			// Funny flashing lights.
 	src.trait_injection_reagents += "paralysistoxin" 		// Paralysis!
 	src.trait_injection_reagents += "painenzyme"			// Pain INCREASER
-	src.trait_injection_reagents += "aphrodisiac"			// Horni
+	src.trait_injection_reagents += REAGENT_ID_APHRODISIAC			// Horni
 
 	var/list/goia_colors = list("#1a00ff", "#6c5bff", "#ff00fe", "#ff0000", "#00d3ff", "#00ff7c", "#00ff35", "#e1ff00", "#ff9f00", "#393939")
 	var/bodycolor = pick(goia_colors)

@@ -38,18 +38,11 @@
 	set_trait(TRAIT_NUTRIENT_CONSUMPTION, 0.15)
 
 /datum/seed/flower/sunflower
-<<<<<<< HEAD
-	name = "sunflowers"
-	seed_name = "sunflower"
-	display_name = "sunflowers"
-	mutants = list("solarflower") //CHOMPEdit - Adding mutation strain for solarflowers.
-	kitchen_tag = "sunflower"
-=======
 	name = PLANT_SUNFLOWERS
 	seed_name = PLANT_SUNFLOWERS
 	display_name = PLANT_SUNFLOWERS
+	mutants = list("solarflower") //CHOMPEdit - Adding mutation strain for solarflowers.
 	kitchen_tag = PLANT_SUNFLOWERS
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 
 /datum/seed/flower/sunflower/New()
 	..()
@@ -62,20 +55,12 @@
 	set_trait(TRAIT_NUTRIENT_CONSUMPTION, 0.15)
 
 /datum/seed/flower/lavender
-<<<<<<< HEAD
-	name = "lavender"
-	seed_name = "lavender"
-	display_name = "lavender"
-	kitchen_tag = "lavender"
-	mutants = list("milkdew") //CHOMPEdit - Adding mutation strain for milkdew.
-	chems = list("nutriment" = list(1,20), "bicaridine" = list(1,10))
-=======
 	name = PLANT_LAVENDER
 	seed_name = PLANT_LAVENDER
 	display_name = PLANT_LAVENDER
 	kitchen_tag = PLANT_LAVENDER
+	mutants = list("milkdew") //CHOMPEdit - Adding mutation strain for milkdew.
 	chems = list(REAGENT_ID_NUTRIMENT = list(1,20), REAGENT_ID_BICARIDINE = list(1,10))
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 
 /datum/seed/flower/lavender/New()
 	..()

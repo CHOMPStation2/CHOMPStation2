@@ -358,15 +358,9 @@
 
 /obj/item/reagent_containers/food/snacks/egg/slime/Initialize()
 	. = ..()
-<<<<<<< HEAD
-	reagents.add_reagent("nutriment", 4)
-	reagents.add_reagent("slimejelly", 1)
-	addtimer(CALLBACK(src, PROC_REF(Grow)), rand(120 SECONDS, 150 SECONDS))
-=======
 	reagents.add_reagent(REAGENT_ID_NUTRIMENT, 4)
 	reagents.add_reagent(REAGENT_ID_SLIMEJELLY, 1)
-	addtimer(CALLBACK(src, ./proc/Grow), rand(120 SECONDS, 150 SECONDS))
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
+	addtimer(CALLBACK(src, PROC_REF(Grow)), rand(120 SECONDS, 150 SECONDS))
 
 /obj/item/reagent_containers/food/snacks/egg/slime/proc/Grow()
 	grown = 1

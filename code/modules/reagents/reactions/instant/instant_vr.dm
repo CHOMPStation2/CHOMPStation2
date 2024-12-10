@@ -2,19 +2,11 @@
 /// Micro/Macro chemicals
 
 /decl/chemical_reaction/instant/sizeoxadone
-<<<<<<< HEAD
-	name = "sizeoxadone"
-	id = "sizeoxadone"
-	result = "sizeoxadone"
-	required_reagents = list("cryptobiolin" = 1, "tramadol" = 3) //CHOMPEdit: Replaced cloneadex with cryptobiolin, removed phoron
-	//catalysts = list("phoron" = 5) CHOMPedit: Please no locking my scene tool behind phoron, please and thank you.
-=======
 	name = REAGENT_SIZEOXADONE
 	id = REAGENT_ID_SIZEOXADONE
 	result = REAGENT_ID_SIZEOXADONE
-	required_reagents = list(REAGENT_ID_CLONEXADONE = 1, REAGENT_ID_TRAMADOL = 3, REAGENT_ID_PHORON = 1)
-	catalysts = list(REAGENT_ID_PHORON = 5)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
+	required_reagents = list(REAGENT_ID_CRYPTOBIOLIN = 1, REAGENT_ID_TRAMADOL = 3) //CHOMPEdit: Replaced cloneadex with cryptobiolin, removed phoron
+	//catalysts = list("phoron" = 5) CHOMPedit: Please no locking my scene tool behind phoron, please and thank you.
 	result_amount = 5
 
 /decl/chemical_reaction/instant/macrocillin
@@ -66,26 +58,6 @@
 	result_amount = 1
 
 /decl/chemical_reaction/instant/androrovir
-<<<<<<< HEAD
-	name = "Androrovir"
-	id = "androrovir"
-	result = "change_drug_male" // CHOMPEdit: using chomp reagents for outputs.
-	required_reagents = list("amorphorovir" = 1, "bicaridine" = 20, "iron" = 20, "ethanol" = 20)
-	result_amount = 1
-
-/decl/chemical_reaction/instant/gynorovir
-	name = "Gynorovir"
-	id = "gynorovir"
-	result = "change_drug_female" // CHOMPEdit: using chomp reagents for outputs.
-	required_reagents = list("amorphorovir" = 1, "inaprovaline" = 20, "silicon" = 20, "sugar" = 20)
-	result_amount = 1
-
-/decl/chemical_reaction/instant/androgynorovir
-	name = "Androgynorovir"
-	id = "androgynorovir"
-	result = "change_drug_intersex" // CHOMPEdit: using chomp reagents for outputs.
-	required_reagents = list("amorphorovir" = 1, "anti_toxin" = 20, "fluorine" = 20, "tungsten" = 20)
-=======
 	name = REAGENT_ANDROROVIR
 	id = REAGENT_ID_ANDROROVIR
 	result = REAGENT_ID_ANDROROVIR
@@ -104,43 +76,27 @@
 	id = REAGENT_ID_ANDROGYNOROVIR
 	result = REAGENT_ID_ANDROGYNOROVIR
 	required_reagents = list(REAGENT_ID_AMORPHOROVIR = 1, REAGENT_ID_ANTITOXIN = 20, REAGENT_ID_FLUORINE = 20, REAGENT_ID_TUNGSTEN = 20)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 	result_amount = 1
 
 /decl/chemical_reaction/instant/androrovir_bootleg
 	name = "Bootleg Androrovir"
 	id = "androrovir_bootleg"
-<<<<<<< HEAD
-	result = "change_drug_male" // CHOMPEdit: using chomp reagents for outputs.
-	required_reagents = list("amorphorovir" = 1, "protein" = 10, "capsaicin" = 10)
-=======
 	result = REAGENT_ID_ANDROROVIR
 	required_reagents = list(REAGENT_ID_AMORPHOROVIR = 1, REAGENT_ID_PROTEIN = 10, REAGENT_ID_CAPSAICIN = 10)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 	result_amount = 1
 
 /decl/chemical_reaction/instant/gynorovir_bootleg
 	name = "Bootleg Gynorovir"
 	id = "gynorovir_bootleg"
-<<<<<<< HEAD
-	result = "change_drug_female" // CHOMPEdit: using chomp reagents for outputs.
-	required_reagents = list("amorphorovir" = 1, "soymilk" = 10, "sugar" = 10)
-=======
 	result = REAGENT_ID_GYNOROVIR
 	required_reagents = list(REAGENT_ID_AMORPHOROVIR = 1, REAGENT_ID_SOYMILK = 10, REAGENT_ID_SUGAR = 10)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 	result_amount = 1
 
 /decl/chemical_reaction/instant/androgynorovir_bootleg
 	name = "Bootleg Androgynorovir"
 	id = "androgynorovir_bootleg"
-<<<<<<< HEAD
-	result = "change_drug_intersex" // CHOMPEdit: using chomp reagents for outputs.
-	required_reagents = list("amorphorovir" = 1, "cola" = 10, "berryjuice" = 10)
-=======
 	result = REAGENT_ID_ANDROGYNOROVIR
 	required_reagents = list(REAGENT_ID_AMORPHOROVIR = 1, REAGENT_ID_COLA = 10, REAGENT_ID_BERRYJUICE = 10)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 	result_amount = 1
 
 ///////////////////////////////////////////////////////////////////////////////////
@@ -193,19 +149,11 @@
 	result_amount = 3
 
 /decl/chemical_reaction/instant/vermicetol
-<<<<<<< HEAD
-	name = "Vermicetol"
-	id = "vermicetol"
-	result = "vermicetol"
-	required_reagents = list("kelotane" = 1, "dermaline" = 1, "shockchem" = 1, "phoron" = 0.1)
-	catalysts = list("phoron" = 5)
-=======
 	name = REAGENT_VERMICETOL
 	id = REAGENT_ID_VERMICETOL
 	result = REAGENT_ID_VERMICETOL
-	required_reagents = list(REAGENT_ID_BICARIDINE = 2, REAGENT_ID_SHOCKCHEM = 1, REAGENT_ID_PHORON = 0.1)
+	required_reagents = list(REAGENT_ID_KELOTANE = 1, REAGENT_ID_DERMALINE = 1, REAGENT_ID_SHOCKCHEM = 1, REAGENT_ID_PHORON = 0.1) // CHOMPEdit
 	catalysts = list(REAGENT_ID_PHORON = 5)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 	result_amount = 3
 
 /decl/chemical_reaction/instant/prussian_blue
@@ -256,11 +204,6 @@
 /decl/chemical_reaction/instant/slimeify
 	name = REAGENT_ADVMUTATIONTOXIN
 	id = "advmutationtoxin2"
-<<<<<<< HEAD
-	result = "advmutationtoxin"
-	required_reagents = list("phoron" = 15, "slimejelly" = 15, "mutationtoxin" = 15) //In case a xenobiologist wants to become a fully fledged slime person.
-=======
 	result = REAGENT_ID_ADVMUTATIONTOXIN
 	required_reagents = list(REAGENT_ID_PHORON = 15, REAGENT_ID_SLIMEJELLY = 15, REAGENT_ID_MUTATIONTOXIN = 15) //In case a xenobiologist wants to become a fully fledged slime person.
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 	result_amount = 1

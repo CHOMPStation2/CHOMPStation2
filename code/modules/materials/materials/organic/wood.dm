@@ -135,8 +135,4 @@
 
 /datum/material/wood/stick/generate_recipes()
 	return
-<<<<<<< HEAD
-//VOREStation Addition End 
-=======
 //VOREStation Addition End
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)

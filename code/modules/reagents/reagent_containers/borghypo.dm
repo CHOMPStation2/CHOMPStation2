@@ -14,11 +14,7 @@
 	var/recharge_time = 5 //Time it takes for shots to recharge (in seconds)
 	var/bypass_protection = FALSE // If true, can inject through things like spacesuits and armor.
 
-<<<<<<< HEAD
-	var/list/reagent_ids = list("tricordrazine", "inaprovaline", "bicaridine", "anti_toxin", "kelotane", "tramadol", "dexalin" ,"spaceacillin")
-=======
-	var/list/reagent_ids = list(REAGENT_ID_TRICORDRAZINE, REAGENT_ID_INAPROVALINE, REAGENT_ID_ANTITOXIN, REAGENT_ID_TRAMADOL, REAGENT_ID_DEXALIN ,REAGENT_ID_SPACEACILLIN)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
+	var/list/reagent_ids = list(REAGENT_ID_TRICORDRAZINE, REAGENT_ID_INAPROVALINE, REAGENT_ID_BICARIDINE, REAGENT_ID_ANTITOXIN, REAGENT_ID_KELOTANE, REAGENT_ID_TRAMADOL, REAGENT_ID_DEXALIN, REAGENT_ID_SPACEACILLIN) // CHOMPEdit
 	var/list/reagent_volumes = list()
 	var/list/reagent_names = list()
 
@@ -26,11 +22,7 @@
 	reagent_ids = list(REAGENT_ID_INAPROVALINE, REAGENT_ID_DEXALIN, REAGENT_ID_TRICORDRAZINE, REAGENT_ID_SPACEACILLIN, REAGENT_ID_OXYCODONE)
 
 /obj/item/reagent_containers/borghypo/crisis
-<<<<<<< HEAD
-	reagent_ids = list("inaprovaline", "tricordrazine", "dexalin", "bicaridine", "kelotane", "anti_toxin", "spaceacillin", "tramadol", "adranol") // CHOMPedit: Unifying chems with dogborg equivalent.
-=======
-	reagent_ids = list(REAGENT_ID_INAPROVALINE, REAGENT_ID_BICARIDINE, REAGENT_ID_KELOTANE, REAGENT_ID_ANTITOXIN, REAGENT_ID_DEXALIN, REAGENT_ID_TRICORDRAZINE, REAGENT_ID_SPACEACILLIN, REAGENT_ID_TRAMADOL)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
+	reagent_ids = list(REAGENT_ID_INAPROVALINE, REAGENT_ID_TRICORDRAZINE, REAGENT_ID_DEXALIN, REAGENT_ID_BICARIDINE, REAGENT_ID_KELOTANE, REAGENT_ID_ANTITOXIN, REAGENT_ID_SPACEACILLIN, REAGENT_ID_TRAMADOL, REAGENT_ID_ADRANOL) // CHOMPedit: Unifying chems with dogborg equivalent.
 
 /obj/item/reagent_containers/borghypo/lost
 	reagent_ids = list(REAGENT_ID_TRICORDRAZINE, REAGENT_ID_BICARIDINE, REAGENT_ID_DEXALIN, REAGENT_ID_ANTITOXIN, REAGENT_ID_TRAMADOL, REAGENT_ID_SPACEACILLIN)
@@ -149,53 +141,8 @@
 	recharge_time = 3
 	volume = 60
 	possible_transfer_amounts = list(5, 10, 20, 30)
-<<<<<<< HEAD
-	reagent_ids = list("ale",
-		"applejuice", //CHOMPADD it has literally every other type of juice..
-		"beer",
-		"berryjuice",
-		"bitters",
-		"cider",
-		"coffee",
-		"cognac",
-		"cola",
-		"cream",
-		"dr_gibb",
-		"egg",
-		"gin",
-		"gingerale",
-		"hot_coco",
-		"ice",
-		"icetea",
-		"kahlua",
-		"lemonjuice",
-		"lemon_lime",
-		"limejuice",
-		"mead",
-		"milk",
-		"mint",
-		"orangejuice",
-		"redwine",
-		"rum",
-		"sake",
-		"sodawater",
-		"soymilk",
-		"space_up",
-		"spacemountainwind",
-		"spacespice",
-		"specialwhiskey",
-		"sugar",
-		"tea",
-		"tequilla",
-		"tomatojuice",
-		"tonic",
-		"vermouth",
-		"vodka",
-		"water",
-		"watermelonjuice",
-		"whiskey")
-=======
 	reagent_ids = list(REAGENT_ID_ALE,
+		REAGENT_ID_APPLEJUICE, //CHOMPADD it has literally every other type of juice..
 		REAGENT_ID_BEER,
 		REAGENT_ID_BERRYJUICE,
 		REAGENT_ID_BITTERS,
@@ -238,7 +185,6 @@
 		REAGENT_ID_WATER,
 		REAGENT_ID_WATERMELONJUICE,
 		REAGENT_ID_WHISKEY)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 
 /obj/item/reagent_containers/borghypo/service/attack(var/mob/M, var/mob/user)
 	return

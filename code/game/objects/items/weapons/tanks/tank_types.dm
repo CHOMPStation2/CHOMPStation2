@@ -53,7 +53,7 @@
  */
 /obj/item/tank/air
 	name = "air tank"
-	desc = "Mixed. Shaken, not stirred."		// CHOMP EDIT Haha funny? idk I like this description. 
+	desc = "Mixed. Shaken, not stirred."		// CHOMP EDIT Haha funny? idk I like this description.
 	icon_state = "oxygen"
 
 /obj/item/tank/air/examine(mob/user)
@@ -96,7 +96,7 @@
 	name = "phoron tank"
 	desc = "Contains dangerous phoron. Do not inhale. Warning: extremely flammable."
 	icon_state = "phoron_vox"
-	gauge_icon = "indicator_bigtank"		// CHOMP EDIT fixes indicator to ensure there's never a buggy outcome 
+	gauge_icon = "indicator_bigtank"		// CHOMP EDIT fixes indicator to ensure there's never a buggy outcome
 	distribute_pressure = ONE_ATMOSPHERE*O2STANDARD
 	slot_flags = SLOT_BACK	//these ones have straps!
 
@@ -211,11 +211,7 @@
 
 /obj/item/tank/nitrogen/Initialize()
 	. = ..()
-<<<<<<< HEAD
-	src.air_contents.adjust_gas("nitrogen", (10*ONE_ATMOSPHERE)*volume/(R_IDEAL_GAS_EQUATION*T20C)) //CHOMPedit
-=======
-	src.air_contents.adjust_gas(GAS_N2, (3*ONE_ATMOSPHERE)*70/(R_IDEAL_GAS_EQUATION*T20C))
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
+	src.air_contents.adjust_gas(GAS_N2, (10*ONE_ATMOSPHERE)*volume/(R_IDEAL_GAS_EQUATION*T20C)) //CHOMPedit
 
 /obj/item/tank/nitrogen/examine(mob/user)
 	. = ..()

@@ -785,12 +785,11 @@
 	name = "Supply Storage"
 	desc = "A mounted survival unit with fuel processor, helpful with both deliveries and assisting injured miners."
 	icon_state = "sleeperc"
-<<<<<<< HEAD
-	injection_chems = list("glucose","inaprovaline","tricordrazine")
+	injection_chems = list(REAGENT_ID_GLUCOSE,REAGENT_ID_INAPROVALINE,REAGENT_ID_TRICORDRAZINE)
 	max_item_count = 20
 	ore_storage = TRUE
 	var/list/stored_ore = list(
-		"sand" = 0,
+		ORE_SAND = 0,
 		"hematite" = 0,
 		"carbon" = 0,
 		"raw copper" = 0,
@@ -810,12 +809,6 @@
 		"mhydrogen" = 0,
 		"verdantium" = 0,
 		"rutile" = 0)
-=======
-	injection_chems = list(REAGENT_ID_GLUCOSE,REAGENT_ID_INAPROVALINE,REAGENT_ID_TRICORDRAZINE)
-	max_item_count = 10
-	recycles = FALSE
-	stabilizer = TRUE
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 	medsensor = FALSE
 
 /obj/item/dogborg/sleeper/compactor/supply/Entered(atom/movable/thing, atom/OldLoc)

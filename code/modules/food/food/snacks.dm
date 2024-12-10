@@ -2682,14 +2682,9 @@
 	icon_state = "vegetablesoup"
 	trash = /obj/item/trash/snack_bowl
 	filling_color = "#AFC4B5"
-<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 8 //CHOMPEdit
-	nutriment_desc = list("carrot" = 2, "corn" = 2, "eggplant" = 2, "potato" = 2)
-=======
-	center_of_mass = list("x"=16, "y"=8)
 	nutriment_desc = list(PLANT_CARROT = 2, PLANT_CORN = 2, PLANT_EGGPLANT = 2, PLANT_POTATO = 2)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 	bitesize = 5
 	eating_sound = 'sound/items/drink.ogg'
 
@@ -3100,14 +3095,9 @@
 	slice_path = /obj/item/reagent_containers/food/snacks/slice/tofubread
 	slices_num = 5
 	filling_color = "#F7FFE0"
-<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 9 //CHOMPEdit
-	nutriment_desc = list("tofu" = 10)
-=======
-	center_of_mass = list("x"=16, "y"=9)
 	nutriment_desc = list(REAGENT_ID_TOFU = 10)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 	nutriment_amt = 10
 	bitesize = 2
 
@@ -3146,14 +3136,9 @@
 	slice_path = /obj/item/reagent_containers/food/snacks/slice/creamcheesebread
 	slices_num = 5
 	filling_color = "#FFF896"
-<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 9 //CHOMPEdit
-	nutriment_desc = list("bread" = 6, "cream" = 3, "cheese" = 3)
-=======
-	center_of_mass = list("x"=16, "y"=9)
 	nutriment_desc = list("bread" = 6, REAGENT_ID_CREAM = 3, REAGENT_ID_CHEESE = 3)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 	nutriment_amt = 5
 	bitesize = 2
 
@@ -3181,14 +3166,9 @@
 	slice_path = /obj/item/reagent_containers/food/snacks/slice/carrotcake
 	slices_num = 5
 	filling_color = "#FFD675"
-<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 10 //CHOMPEdit
-	nutriment_desc = list("cake" = 10, "sweetness" = 10, "carrot" = 15)
-=======
-	center_of_mass = list("x"=16, "y"=10)
 	nutriment_desc = list("cake" = 10, "sweetness" = 10, PLANT_CARROT = 15)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 	nutriment_amt = 25
 	bitesize = 2
 
@@ -3249,14 +3229,9 @@
 	slice_path = /obj/item/reagent_containers/food/snacks/slice/cheesecake
 	slices_num = 5
 	filling_color = "#FAF7AF"
-<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 10 //CHOMPEdit
-	nutriment_desc = list("cake" = 10, "cream" = 10, "cheese" = 15)
-=======
-	center_of_mass = list("x"=16, "y"=10)
 	nutriment_desc = list("cake" = 10, REAGENT_ID_CREAM = 10, REAGENT_ID_CHEESE = 15)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 	nutriment_amt = 10
 	bitesize = 2
 
@@ -3316,14 +3291,9 @@
 	slice_path = /obj/item/reagent_containers/food/snacks/slice/plaincake
 	slices_num = 5
 	filling_color = "#F7EDD5"
-<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 10 //CHOMPEdit
-	nutriment_desc = list("cake" = 10, "sweetness" = 10, "vanilla" = 15)
-=======
-	center_of_mass = list("x"=16, "y"=10)
 	nutriment_desc = list("cake" = 10, "sweetness" = 10, REAGENT_ID_VANILLA = 15)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 	nutriment_amt = 20
 
 /obj/item/reagent_containers/food/snacks/slice/plaincake
@@ -3347,14 +3317,9 @@
 	slice_path = /obj/item/reagent_containers/food/snacks/slice/orangecake
 	slices_num = 5
 	filling_color = "#FADA8E"
-<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 10 //CHOMPEdit
-	nutriment_desc = list("cake" = 10, "sweetness" = 10, "orange" = 15)
-=======
-	center_of_mass = list("x"=16, "y"=10)
 	nutriment_desc = list("cake" = 10, "sweetness" = 10, PLANT_ORANGE = 15)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 	nutriment_amt = 20
 
 /obj/item/reagent_containers/food/snacks/slice/orangecake
@@ -3378,14 +3343,9 @@
 	slice_path = /obj/item/reagent_containers/food/snacks/slice/limecake
 	slices_num = 5
 	filling_color = "#CBFA8E"
-<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 10 //CHOMPEdit
-	nutriment_desc = list("cake" = 10, "sweetness" = 10, "lime" = 15)
-=======
-	center_of_mass = list("x"=16, "y"=10)
 	nutriment_desc = list("cake" = 10, "sweetness" = 10, PLANT_LIME = 15)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 	nutriment_amt = 20
 
 /obj/item/reagent_containers/food/snacks/slice/limecake
@@ -3409,14 +3369,9 @@
 	slice_path = /obj/item/reagent_containers/food/snacks/slice/lemoncake
 	slices_num = 5
 	filling_color = "#FAFA8E"
-<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 10 //CHOMPEdit
-	nutriment_desc = list("cake" = 10, "sweetness" = 10, "lemon" = 15)
-=======
-	center_of_mass = list("x"=16, "y"=10)
 	nutriment_desc = list("cake" = 10, "sweetness" = 10, PLANT_LEMON = 15)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 	nutriment_amt = 20
 
 
@@ -3441,14 +3396,9 @@
 	slice_path = /obj/item/reagent_containers/food/snacks/slice/chocolatecake
 	slices_num = 5
 	filling_color = "#805930"
-<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 10 //CHOMPEdit
-	nutriment_desc = list("cake" = 10, "sweetness" = 10, "chocolate" = 15)
-=======
-	center_of_mass = list("x"=16, "y"=10)
 	nutriment_desc = list("cake" = 10, "sweetness" = 10, REAGENT_ID_CHOCOLATE = 15)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 	nutriment_amt = 20
 
 /obj/item/reagent_containers/food/snacks/slice/chocolatecake
@@ -3472,14 +3422,9 @@
 	slice_path = /obj/item/reagent_containers/food/snacks/cheesewedge
 	slices_num = 5
 	filling_color = "#FFF700"
-<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 10 //CHOMPEdit
-	nutriment_desc = list("cheese" = 10)
-=======
-	center_of_mass = list("x"=16, "y"=10)
 	nutriment_desc = list(REAGENT_ID_CHEESE = 10)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 	nutriment_amt = 10
 	bitesize = 2
 
@@ -3556,14 +3501,9 @@
 	slice_path = /obj/item/reagent_containers/food/snacks/slice/applecake
 	slices_num = 5
 	filling_color = "#EBF5B8"
-<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 10 //CHOMPEdit
-	nutriment_desc = list("cake" = 10, "sweetness" = 10, "apple" = 15)
-=======
-	center_of_mass = list("x"=16, "y"=10)
 	nutriment_desc = list("cake" = 10, "sweetness" = 10, PLANT_APPLE = 15)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 	nutriment_amt = 15
 
 /obj/item/reagent_containers/food/snacks/slice/applecake
@@ -3587,14 +3527,9 @@
 	slice_path = /obj/item/reagent_containers/food/snacks/slice/pumpkinpie
 	slices_num = 5
 	filling_color = "#F5B951"
-<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 10 //CHOMPEdit
-	nutriment_desc = list("pie" = 5, "cream" = 5, "pumpkin" = 5)
-=======
-	center_of_mass = list("x"=16, "y"=10)
 	nutriment_desc = list("pie" = 5, REAGENT_ID_CREAM = 5, PLANT_PUMPKIN = 5)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 	nutriment_amt = 15
 
 /obj/item/reagent_containers/food/snacks/slice/pumpkinpie
@@ -3648,14 +3583,9 @@
 	slices_num = 5
 	filling_color = "#F5B951"
 	nutriment_amt = 16
-<<<<<<< HEAD
-	nutriment_desc = list("lime" = 12, "graham crackers" = 4)
+	nutriment_desc = list(PLANT_LIME = 12, "graham crackers" = 4)
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 10 //CHOMPEdit
-=======
-	nutriment_desc = list(PLANT_LIME = 12, "graham crackers" = 4)
-	center_of_mass = list("x"=16, "y"=10)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 
 /obj/item/reagent_containers/food/snacks/sliceable/keylimepie/Initialize()
 	. = ..()
@@ -3668,14 +3598,9 @@
 	trash = /obj/item/trash/plate
 	filling_color = "#F5B951"
 	bitesize = 3
-<<<<<<< HEAD
-	nutriment_desc = list("lime" = 1)
+	nutriment_desc = list(PLANT_LIME = 1)
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 12 //CHOMPEdit
-=======
-	nutriment_desc = list(PLANT_LIME = 1)
-	center_of_mass = list("x"=16, "y"=12)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 
 /obj/item/reagent_containers/food/snacks/keylimepieslice/filled
 	nutriment_amt = 1
@@ -3688,14 +3613,9 @@
 	slices_num = 5
 	filling_color = "#F5B951"
 	nutriment_amt = 10
-<<<<<<< HEAD
-	nutriment_desc = list("cheese" = 5, "egg" = 5)
+	nutriment_desc = list(REAGENT_ID_CHEESE = 5, REAGENT_ID_EGG = 5)
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 10 //CHOMPEdit
-=======
-	nutriment_desc = list(REAGENT_ID_CHEESE = 5, REAGENT_ID_EGG = 5)
-	center_of_mass = list("x"=16, "y"=10)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 
 /obj/item/reagent_containers/food/snacks/sliceable/quiche/Initialize()
 	. = ..()
@@ -3995,14 +3915,9 @@
 	icon_state = "pizzamargherita"
 	slice_path = /obj/item/reagent_containers/food/snacks/slice/margherita
 	slices_num = 6
-<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 11 //CHOMPEdit
-	nutriment_desc = list("pizza crust" = 10, "tomato" = 10, "cheese" = 15)
-=======
-	center_of_mass = list("x"=16, "y"=11)
 	nutriment_desc = list("pizza crust" = 10, PLANT_TOMATO = 10, REAGENT_ID_CHEESE = 15)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 	nutriment_amt = 35
 	bitesize = 2
 
@@ -4030,14 +3945,9 @@
 	icon_state = "pineapple_pizza"
 	slice_path = /obj/item/reagent_containers/food/snacks/pineappleslice
 	slices_num = 6
-<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 11 //CHOMPEdit
-	nutriment_desc = list("pizza crust" = 10, "tomato" = 10, "ham" = 10)
-=======
-	center_of_mass = list("x"=16, "y"=11)
 	nutriment_desc = list("pizza crust" = 10, PLANT_TOMATO = 10, "ham" = 10)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 	nutriment_amt = 30
 	bitesize = 2
 
@@ -4066,14 +3976,9 @@
 	icon_state = "meatpizza"
 	slice_path = /obj/item/reagent_containers/food/snacks/slice/meatpizza
 	slices_num = 6
-<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 11 //CHOMPEdit
-	nutriment_desc = list("pizza crust" = 10, "tomato" = 10, "cheese" = 15, "meat" = 10)
-=======
-	center_of_mass = list("x"=16, "y"=11)
 	nutriment_desc = list("pizza crust" = 10, PLANT_TOMATO = 10, REAGENT_ID_CHEESE = 15, "meat" = 10)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 	nutriment_amt = 10
 	bitesize = 2
 
@@ -4101,14 +4006,9 @@
 	icon_state = "mushroompizza"
 	slice_path = /obj/item/reagent_containers/food/snacks/slice/mushroompizza
 	slices_num = 6
-<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 11 //CHOMPEdit
-	nutriment_desc = list("pizza crust" = 10, "tomato" = 10, "cheese" = 5, "mushroom" = 10)
-=======
-	center_of_mass = list("x"=16, "y"=11)
 	nutriment_desc = list("pizza crust" = 10, PLANT_TOMATO = 10, REAGENT_ID_CHEESE = 5, PLANT_MUSHROOMS = 10)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 	nutriment_amt = 35
 	bitesize = 2
 
@@ -4135,14 +4035,9 @@
 	icon_state = "vegetablepizza"
 	slice_path = /obj/item/reagent_containers/food/snacks/slice/vegetablepizza
 	slices_num = 6
-<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 11 //CHOMPEdit
-	nutriment_desc = list("pizza crust" = 10, "tomato" = 10, "cheese" = 5, "eggplant" = 5, "carrot" = 5, "corn" = 5)
-=======
-	center_of_mass = list("x"=16, "y"=11)
 	nutriment_desc = list("pizza crust" = 10, PLANT_TOMATO = 10, REAGENT_ID_CHEESE = 5, PLANT_EGGPLANT = 5, PLANT_CARROT = 5, PLANT_CORN = 5)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 	nutriment_amt = 25
 	bitesize = 2
 
@@ -6344,14 +6239,9 @@
 	trash = /obj/item/trash/snack_bowl
 	filling_color = "#4f2100"
 	nutriment_amt = 10
-<<<<<<< HEAD
-	nutriment_desc = list("egg" = 5, "vegetables" = 5)
+	nutriment_desc = list(REAGENT_ID_EGG = 5, "vegetables" = 5)
 	center_of_mass_x = 15 //CHOMPEdit
 	center_of_mass_y= 9 //CHOMPEdit
-=======
-	nutriment_desc = list(REAGENT_ID_EGG = 5, "vegetables" = 5)
-	center_of_mass = list("x"=15, "y"=9)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 	bitesize = 4
 
 /obj/item/reagent_containers/food/snacks/bibimbap/Initialize()
@@ -6383,14 +6273,9 @@
 	trash = /obj/item/trash/snack_bowl
 	filling_color = "#FFFBDB"
 	nutriment_amt = 7
-<<<<<<< HEAD
-	nutriment_desc = list("rice" = 7)
+	nutriment_desc = list(REAGENT_ID_RICE = 7)
 	center_of_mass_x = 17 //CHOMPEdit
 	center_of_mass_y= 11 //CHOMPEdit
-=======
-	nutriment_desc = list(REAGENT_ID_RICE = 7)
-	center_of_mass = list("x"=17, "y"=11)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 	bitesize = 2
 
 /obj/item/reagent_containers/food/snacks/chickenfillet
@@ -6523,14 +6408,9 @@
 	trash = /obj/item/trash/snack_bowl
 	filling_color = "#edd7d7"
 	nutriment_amt = 9
-<<<<<<< HEAD
-	nutriment_desc = list("savory rice" = 6, "cream" = 3)
+	nutriment_desc = list("savory rice" = 6, REAGENT_ID_CREAM = 3)
 	center_of_mass_x = 15 //CHOMPEdit
 	center_of_mass_y= 9 //CHOMPEdit
-=======
-	nutriment_desc = list("savory rice" = 6, REAGENT_ID_CREAM = 3)
-	center_of_mass = list("x"=15, "y"=9)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 	bitesize = 2
 
 /obj/item/reagent_containers/food/snacks/risotto/Initialize()
@@ -6545,14 +6425,9 @@
 	trash = /obj/item/trash/snack_bowl
 	filling_color = "#edd7d7"
 	nutriment_amt = 1
-<<<<<<< HEAD
-	nutriment_desc = list("batter" = 1)
+	nutriment_desc = list(REAGENT_ID_BATTER = 1)
 	center_of_mass_x = 15 //CHOMPEdit
 	center_of_mass_y= 9 //CHOMPEdit
-=======
-	nutriment_desc = list(REAGENT_ID_BATTER = 1)
-	center_of_mass = list("x"=15, "y"=9)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 	bitesize = 3
 
 /obj/item/reagent_containers/food/snacks/poachedegg
@@ -6562,14 +6437,9 @@
 	trash = /obj/item/trash/plate
 	filling_color = "#FFDF78"
 	nutriment_amt = 1
-<<<<<<< HEAD
-	nutriment_desc = list("egg" = 1)
+	nutriment_desc = list(REAGENT_ID_EGG = 1)
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 14 //CHOMPEdit
-=======
-	nutriment_desc = list(REAGENT_ID_EGG = 1)
-	center_of_mass = list("x"=16, "y"=14)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 	bitesize = 2
 
 /obj/item/reagent_containers/food/snacks/poachedegg/Initialize()
@@ -6584,14 +6454,9 @@
 	trash = /obj/item/trash/plate
 	filling_color = "#7A3D11"
 	nutriment_amt = 6
-<<<<<<< HEAD
-	nutriment_desc = list("barbecue" = 6)
+	nutriment_desc = list(REAGENT_ID_BARBECUE = 6)
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 13 //CHOMPEdit
-=======
-	nutriment_desc = list(REAGENT_ID_BARBECUE = 6)
-	center_of_mass = list("x"=16, "y"=13)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 	bitesize = 4
 
 /obj/item/reagent_containers/food/snacks/ribplate/Initialize()
@@ -7229,14 +7094,9 @@
 	desc = "A peanut flavored snack that looks like the rings of Saturn!"
 	trash = /obj/item/trash/saturno
 	filling_color = "#dca319"
-<<<<<<< HEAD
 	center_of_mass_x = 15 //CHOMPEdit
 	center_of_mass_y= 9 //CHOMPEdit
-	nutriment_desc = list("salt" = 4, "peanut" = 2,  "wood?" = 1)
-=======
-	center_of_mass = list("x"=15, "y"=9)
 	nutriment_desc = list("salt" = 4, PLANT_PEANUT = 2,  "wood?" = 1)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 	nutriment_amt = 5
 	bitesize = 2
 
@@ -7247,14 +7107,9 @@
 	desc = "By Joove! It's some kind of gel."
 	trash = /obj/item/trash/jupiter
 	filling_color = "#dc1919"
-<<<<<<< HEAD
 	center_of_mass_x = 15 //CHOMPEdit
 	center_of_mass_y= 9 //CHOMPEdit
-	nutriment_desc = list("sweetness" = 4, "vanilla" = 1)
-=======
-	center_of_mass = list("x"=15, "y"=9)
 	nutriment_desc = list("sweetness" = 4, REAGENT_ID_VANILLA = 1)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 	nutriment_amt = 5
 	bitesize = 2
 
@@ -7278,14 +7133,9 @@
 	desc = "A steaming self-heated bowl of sweet eggs and taters!"
 	trash = /obj/item/trash/mars
 	filling_color = "#d2c63f"
-<<<<<<< HEAD
 	center_of_mass_x = 15 //CHOMPEdit
 	center_of_mass_y= 9 //CHOMPEdit
-	nutriment_desc = list("eggs" = 4, "potato" = 4, "mustard" = 2)
-=======
-	center_of_mass = list("x"=15, "y"=9)
 	nutriment_desc = list("eggs" = 4, PLANT_POTATO = 4, REAGENT_ID_MUSTARD = 2)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 	nutriment_amt = 8
 	bitesize = 2
 
@@ -7361,14 +7211,9 @@
 	desc = "Fermented space shark, like chewing a urine soaked mattress."
 	description_fluff = "A form of fermented shark that originated on Earth as far back as the 17th century. Modern Hakarl is made from vat-made fermented shark and is distributed across the galaxy as a delicacy. However, few are able to stand the smell or taste of the meat."
 	filling_color = "#916E36"
-<<<<<<< HEAD
 	center_of_mass_x = 15 //CHOMPEdit
 	center_of_mass_y= 9 //CHOMPEdit
-	nutriment_desc = list("fish" = 2, "salt" = 2, "ammonia" = 1)
-=======
-	center_of_mass = list("x"=15, "y"=9)
 	nutriment_desc = list("fish" = 2, "salt" = 2, REAGENT_ID_AMMONIA = 1)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 	nutriment_amt = 4
 	bitesize = 1
 
@@ -7469,14 +7314,9 @@
 /obj/item/reagent_containers/food/snacks/old
 	name = "master old-food"
 	desc = "they're all inedible and potentially dangerous items"
-<<<<<<< HEAD
 	center_of_mass_x = 15 //CHOMPEdit
 	center_of_mass_y = 9 //CHOMPEdit
-	nutriment_desc = list("rot" = 5, "mold" = 5)
-=======
-	center_of_mass = list ("x"=15, "y"=9)
 	nutriment_desc = list("rot" = 5, REAGENT_ID_MOLD = 5)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 	nutriment_amt = 10
 	bitesize = 3
 	filling_color = "#336b42"
@@ -7554,14 +7394,9 @@
 	trash = /obj/item/trash/beans
 	canned_open_state = "beans-open"
 	filling_color = "#ff6633"
-<<<<<<< HEAD
 	center_of_mass_x = 15 //CHOMPEdit
 	center_of_mass_y= 9 //CHOMPEdit
-	nutriment_desc = list("beans" = 1, "tomato sauce" = 1)
-=======
-	center_of_mass = list("x"=15, "y"=9)
 	nutriment_desc = list(REAGENT_BEANPROTEIN = 1, "tomato sauce" = 1)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 	bitesize = 2
 
 /obj/item/reagent_containers/food/snacks/canned/beans/Initialize()
@@ -7660,14 +7495,9 @@
 	trash = /obj/item/trash/appleberry
 	canned_open_state = "appleberry-open"
 	filling_color = "#FFFFFF"
-<<<<<<< HEAD
 	center_of_mass_x = 15 //CHOMPEdit
 	center_of_mass_y= 9 //CHOMPEdit
-	nutriment_desc = list("apple" = 1, "sweetness" = 1)
-=======
-	center_of_mass = list("x"=15, "y"=9)
 	nutriment_desc = list(PLANT_APPLE = 1, "sweetness" = 1)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 	bitesize = 2
 
 /obj/item/reagent_containers/food/snacks/canned/appleberry/Initialize()

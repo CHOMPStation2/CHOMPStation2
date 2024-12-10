@@ -8,15 +8,9 @@
 	gauge_cap = 3
 	volume = 12		// CHOMP EDIT double extended
 
-<<<<<<< HEAD
 /obj/item/tank/emergency/phoron/double/Initialize() //ChompEDIT New() -> Initialize()
 	. = ..()
-	air_contents.adjust_gas("phoron", (10*ONE_ATMOSPHERE)*volume/(R_IDEAL_GAS_EQUATION*T20C))
-=======
-/obj/item/tank/emergency/phoron/double/New()
-	..()
 	air_contents.adjust_gas(GAS_PHORON, (10*ONE_ATMOSPHERE)*volume/(R_IDEAL_GAS_EQUATION*T20C))
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 
 //New icons
 /obj/item/tank/oxygen

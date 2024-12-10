@@ -19,12 +19,8 @@
 
 	var/depth = 1 // Higher numbers indicates deeper water.
 
-<<<<<<< HEAD
-	var/reagent_type = "water"
-	// var/datum/looping_sound/water/soundloop CHOMPEdit: Removing soundloop for now.
-=======
 	var/reagent_type = REAGENT_ID_WATER
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
+	// var/datum/looping_sound/water/soundloop CHOMPEdit: Removing soundloop for now.
 
 /turf/simulated/floor/water/Initialize()
 	. = ..()

@@ -907,11 +907,7 @@
 /datum/gas_mixture/belly_air/vox/New()
     . = ..()
     gas = list(
-<<<<<<< HEAD
-        "nitrogen" = 100) // Chomp edit
-=======
-        GAS_PHORON = 100)
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
+        GAS_N2 = 100) // Chomp edit
 
 /datum/gas_mixture/belly_air/zaddat
     volume = 2500

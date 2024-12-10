@@ -117,13 +117,13 @@
 
 ////////////////////////// TF Drugs //////////////////////////
 
+/* CHOMPStation Removal for using Chompstation reagents over upstreams'
 /datum/reagent/amorphorovir
 	name = REAGENT_AMORPHOROVIR
 	id = REAGENT_ID_AMORPHOROVIR
 	description = "A base medical concoction, capable of rapidly altering genetic and physical structure of the body. Requires extra processing to allow for a targeted transformation."
 	reagent_state = LIQUID
 	color = "#AAAAAA"
-/* CHOMPStation Removal for using Chompstation reagents over upstreams'
 /datum/reagent/androrovir
 	name = REAGENT_ANDROROVIR
 	id = REAGENT_ID_ANDROROVIR

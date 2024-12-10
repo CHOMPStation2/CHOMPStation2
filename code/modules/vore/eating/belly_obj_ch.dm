@@ -95,7 +95,7 @@
 	"Space cleaner",
 	"Lube",
 	"Biomass",
-	"Concentrated Radium",
+	REAGENT_CONCENTRATEDRADIUM,
 	"Tricordrazine"
 	)
 
@@ -310,13 +310,13 @@
 			gen_cost = 10
 			reagentid = "biomass"
 			reagentcolor = "#DF9FBF"
-		if("Concentrated Radium")
-			generated_reagents = list("concentrated_radium" = 1)
+		if(REAGENT_CONCENTRATEDRADIUM)
+			generated_reagents = list(REAGENT_ID_CONCENTRATEDRADIUM = 1)
 			if(capitalize(reagent_name) in reagent_choices)
 				reagent_name = "concentrated radium"
 			gen_amount = 1
 			gen_cost = 1
-			reagentid = "concentrated_radium"
+			reagentid = REAGENT_ID_CONCENTRATEDRADIUM
 			reagentcolor = "#C7C7C7"
 		if("Tricordrazine")
 			generated_reagents = list("tricordrazine" = 1)

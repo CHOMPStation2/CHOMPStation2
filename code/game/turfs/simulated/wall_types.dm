@@ -99,16 +99,11 @@
 	. = ..(mapload, MAT_TITANIUM)
 
 /turf/simulated/wall/durasteel/Initialize(mapload)
-<<<<<<< HEAD
-	. = ..(mapload, "durasteel", "durasteel")
+	. = ..(mapload, MAT_DURASTEEL, MAT_DURASTEEL)
 /turf/simulated/wall/durasteel/blueserg/New(var/newloc)
-	..(newloc,"durasteel", "durasteel")
+	..(newloc,MAT_DURASTEEL, MAT_DURASTEEL)
 /turf/simulated/wall/durasteel/blueserg/attackby(obj/item/I, mob/user)
 	return
-=======
-	. = ..(mapload, MAT_DURASTEEL, MAT_DURASTEEL)
-
->>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 /turf/simulated/wall/wood/Initialize(mapload)
 	. = ..(mapload,  MAT_WOOD)
 
