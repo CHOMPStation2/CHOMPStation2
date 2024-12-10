@@ -84,3 +84,14 @@
   - rscdel: purged the old busyspace module and replaced its contents entirely
   FluffMedic:
   - rscadd: More things to Tyr
+2024-12-10:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: adds "Stowaway" hole, a spin on the classic maint pred that lets you spawn
+      as your current character slot
+  Kashargul:
+  - code_imp: converts the remaining old spans to defines
+  TheCaramelion:
+  - bugfix: Fixed wormholes spawning in dorms
+  - bugfix: Fixed Infected Room event not happening
+  - code_imp: Moved hoarde events into the modular folder
+  - balance: Removed 25% chance of hoarde event failing

@@ -1,4 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - rscadd: "adds \"Stowaway\" hole, a spin on the classic maint pred that lets you spawn as your current character slot"
