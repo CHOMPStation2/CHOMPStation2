@@ -49,8 +49,13 @@
 
 	gluttonous = 1
 
+<<<<<<< HEAD
 	breath_type = "nitrogen" //CHOMPedit
 	poison_type = "oxygen"
+=======
+	breath_type = GAS_PHORON
+	poison_type = GAS_O2
+>>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 	ideal_air_type = /datum/gas_mixture/belly_air/vox
 	siemens_coefficient = 0.2
 

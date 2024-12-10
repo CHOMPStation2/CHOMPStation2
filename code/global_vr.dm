@@ -5,6 +5,7 @@ var/list/awayabductors = list() // List of scatter landmarks for Abductors in Ga
 var/list/eventdestinations = list() // List of scatter landmarks for VOREStation event portals
 var/list/eventabductors = list() // List of scatter landmarks for VOREStation abductor portals
 
+<<<<<<< HEAD
 var/global/list/acceptable_fruit_types= list(
 											"ambrosia",
 											"apple",
@@ -49,6 +50,8 @@ var/global/list/acceptable_fruit_types= list(
 											"wheat",
 											"whitebeet")
 
+=======
+>>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 // Some "scary" sounds.
 /* CHOMPEdit Start
 var/static/list/scawwySownds = list(

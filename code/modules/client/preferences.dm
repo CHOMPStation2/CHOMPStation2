@@ -661,11 +661,14 @@ var/list/preferences_datums = list()
 		character.ooc_notes 				= metadata
 		character.ooc_notes_dislikes 		= metadata_dislikes
 		character.ooc_notes_likes 			= metadata_likes
+<<<<<<< HEAD
 		// CHOMPAdd Start
 		character.ooc_notes_favs 			= metadata_favs
 		character.ooc_notes_maybes 			= metadata_maybes
 		character.ooc_notes_style 			= matadata_ooc_style
 		// CHOMPAdd End
+=======
+>>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 
 	character.weight			= weight_vr
 	character.weight_gain		= weight_gain

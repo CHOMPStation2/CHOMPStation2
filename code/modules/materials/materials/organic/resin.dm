@@ -1,6 +1,11 @@
 /datum/material/resin
+<<<<<<< HEAD
 	name = "resin"
 //	icon_colour = "#353C40" // CHOMPedit: No longer needed
+=======
+	name = MAT_RESIN
+	icon_colour = "#35343a"
+>>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 	icon_base = "resin"
 	integrity = 50 // CHOMPedit: Same as wood.
 	hardness = 15 // CHOMPedit: Same as wood.
@@ -54,5 +59,9 @@
 		new /datum/stack_recipe("crude [display_name] bandage", /obj/item/stack/medical/crude_pack, 2, time = 2 SECONDS, pass_stack_color = TRUE, recycle_material = "[name]"), // CHOMPedit: Increased material cost.
 		new /datum/stack_recipe("[display_name] net", /obj/item/material/fishing_net, 2, time = 5 SECONDS, supplied_material = "[name]", pass_stack_color = TRUE), // CHOMPedit: Reduced material cost.
 		new /datum/stack_recipe("[display_name] membrane", /obj/structure/alien/membrane, 1, time = 2 SECONDS, pass_stack_color = TRUE, recycle_material = "[name]"),
+<<<<<<< HEAD
 //		new /datum/stack_recipe("[display_name] node", /obj/effect/alien/weeds/node, 1, time = 4 SECONDS, recycle_material = "[name]") // CHOMPedit: No nodes.
+=======
+		new /datum/stack_recipe("[display_name] node", /obj/effect/alien/weeds/node, 1, time = 4 SECONDS, recycle_material = "[name]")
+>>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 	)

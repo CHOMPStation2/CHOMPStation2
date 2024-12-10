@@ -1,10 +1,15 @@
 /datum/seed/potato
-	name = "potato"
-	seed_name = "potato"
+	name = PLANT_POTATO
+	seed_name = PLANT_POTATO
 	display_name = "potatoes"
+<<<<<<< HEAD
 	kitchen_tag = "potato"
 	mutants = list("voltato") //CHOMPEdit - Adding mutation strain for voltatoes.
 	chems = list("nutriment" = list(1,10), "potatojuice" = list(10,10))
+=======
+	kitchen_tag = PLANT_POTATO
+	chems = list(REAGENT_ID_NUTRIMENT = list(1,10), REAGENT_ID_POTATOJUICE = list(10,10))
+>>>>>>> af544e406f (Merge pull request #16674 from Kashargul/reagentToDefines)
 
 /datum/seed/potato/New()
 	..()
