@@ -96,12 +96,20 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 
 		if(ishuman(C.mob))
 			var/mob/living/carbon/human/H = C.mob
+<<<<<<< HEAD
 			var/strangername = H.real_name //CHOMPEdit
 			if(data_core && data_core.general)
 				if(!find_general_record("name", H.real_name))
 					if(!find_record("name", H.real_name, data_core.hidden_general)) //CHOMPEdit
 						strangername = "unknown" //CHOMPEdit
 			name = strangername
+=======
+			//if(data_core && data_core.general)
+			//	if(!find_general_record("name", H.real_name))
+			//		if(!find_record("name", H.real_name, data_core.hidden_general))
+			//			continue
+			name = H.real_name
+>>>>>>> 2880806dd0 (Merge pull request #16690 from KillianKirilenko/kk-charpod)
 			species = "[H.custom_species ? H.custom_species : H.species.name]"
 			ooc_notes = H.ooc_notes
 			//CHOMPEdit Start
@@ -179,12 +187,16 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 
 			flavor_text = R.flavor_text
 
+<<<<<<< HEAD
 		//CHOMPEdit Start
+=======
+>>>>>>> 2880806dd0 (Merge pull request #16690 from KillianKirilenko/kk-charpod)
 		if(istype(C.mob, /mob/living/silicon/pai))
 			var/mob/living/silicon/pai/P = C.mob
 			name = P.name
 			species = "pAI"
 			ooc_notes = P.ooc_notes
+<<<<<<< HEAD
 			if(P.ooc_notes_style && (P.ooc_notes_favs || P.ooc_notes_likes || P.ooc_notes_maybes || P.ooc_notes_dislikes))
 				ooc_notes = P.ooc_notes + "\n\n"
 				ooc_notes_favs = P.ooc_notes_favs
@@ -201,11 +213,19 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 					ooc_notes += "\n\nMAYBES\n\n[P.ooc_notes_maybes]"
 				if(P.ooc_notes_dislikes)
 					ooc_notes += "\n\nDISLIKES\n\n[P.ooc_notes_dislikes]"
+=======
+			if(P.ooc_notes_likes)
+				ooc_notes += "\n\nLIKES\n\n[P.ooc_notes_likes]"
+			if(P.ooc_notes_dislikes)
+				ooc_notes += "\n\nDISLIKES\n\n[P.ooc_notes_dislikes]"
+
+>>>>>>> 2880806dd0 (Merge pull request #16690 from KillianKirilenko/kk-charpod)
 			flavor_text = P.flavor_text
 
 		if(istype(C.mob, /mob/living/simple_mob))
 			var/mob/living/simple_mob/S = C.mob
 			name = S.name
+<<<<<<< HEAD
 			species = S.character_directory_species()
 			ooc_notes = S.ooc_notes
 			if(S.ooc_notes_style && (S.ooc_notes_favs || S.ooc_notes_likes || S.ooc_notes_maybes || S.ooc_notes_dislikes))
@@ -226,6 +246,16 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 					ooc_notes += "\n\nDISLIKES\n\n[S.ooc_notes_dislikes]"
 			flavor_text = S.desc
 		//CHOMPEdit End
+=======
+			species = initial(S.name)
+			ooc_notes = S.ooc_notes
+			if(S.ooc_notes_likes)
+				ooc_notes += "\n\nLIKES\n\n[S.ooc_notes_likes]"
+			if(S.ooc_notes_dislikes)
+				ooc_notes += "\n\nDISLIKES\n\n[S.ooc_notes_dislikes]"
+
+			flavor_text = S.desc
+>>>>>>> 2880806dd0 (Merge pull request #16690 from KillianKirilenko/kk-charpod)
 
 		// It's okay if we fail to find OOC notes and flavor text
 		// But if we can't find the name, they must be using a non-compatible mob type currently.
