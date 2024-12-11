@@ -384,7 +384,7 @@
 
 	var/poison_chance = 50
 	var/poison_per_bite = 20
-	var/poison_type = "hyperzine"
+	var/poison_type = REAGENT_ID_HYPERZINE
 
 
 //////////////////////////////////////////////

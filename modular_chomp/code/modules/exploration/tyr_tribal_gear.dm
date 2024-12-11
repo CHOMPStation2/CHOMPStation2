@@ -59,7 +59,7 @@
 
 /obj/item/reagent_containers/food/snacks/weatherlily/Initialize()
 	. = ..()
-	//reagents.add_reagent("amatoxin", 1) I want this for lore of this being a strange bioenginered thing to mess with organic things buuuut it's one of two food sources
+	//reagents.add_reagent(REAGENT_ID_AMATOXIN, 1) I want this for lore of this being a strange bioenginered thing to mess with organic things buuuut it's one of two food sources
 	reagents.add_reagent(REAGENT_ID_LUMINOL,1)
 	reagents.add_reagent(REAGENT_ID_PROTEIN,1)
 
