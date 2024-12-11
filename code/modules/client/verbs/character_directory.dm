@@ -229,7 +229,6 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 					ooc_notes += "\n\nDISLIKES\n\n[S.ooc_notes_dislikes]"
 			// CHOMPEdit End
 			flavor_text = S.desc
-		//CHOMPEdit End
 
 		// It's okay if we fail to find OOC notes and flavor text
 		// But if we can't find the name, they must be using a non-compatible mob type currently.
