@@ -9,7 +9,7 @@
 	var/obj/item/complete
 	if(istype(W, /obj/item/reagent_containers/food/snacks/grown))
 		var/obj/item/reagent_containers/food/snacks/grown/G = W
-		if(G.seed.kitchen_tag == "poppy")
+		if(G.seed.kitchen_tag == PLANT_POPPIES)
 			to_chat(user, "You attach the poppy to the circlet and create a beautiful flower crown.")
 			complete = new /obj/item/clothing/head/poppy_crown(get_turf(user))
 		else if(G.seed.kitchen_tag == PLANT_SUNFLOWERS)

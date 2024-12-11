@@ -1066,8 +1066,8 @@
 		H.update_mutations()
 
 /*/datum/reagent/hyperzine
-	name = "Hyperzine"
-	id = "hyperzine"
+	name = REAGENT_HYPERZINE
+	id = REAGENT_ID_HYPERZINE
 	description = "Hyperzine is a highly effective, long lasting, muscle stimulant."
 	reagent_state = LIQUID
 	color = "#FF3300"

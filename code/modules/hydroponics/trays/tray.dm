@@ -138,7 +138,7 @@
 
 	//CHOMPedit: Reagents which double plant growth speed.
 	var/static/list/age_reagents = list(
-	"pitcher_nectar" =  1
+	REAGENT_ID_PITCHERNECTAR =  1
 	)
 	//CHOMPedit end
 

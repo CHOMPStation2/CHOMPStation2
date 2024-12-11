@@ -26,7 +26,7 @@
 	name = PLANT_SIFLETTUCE
 	seed_name = "glacial lettuce"
 	display_name = "glacial lettuce"
-	kitchen_tag = "icelettuce"
+	kitchen_tag = PLANT_SIFLETTUCE
 	chems = list(REAGENT_ID_NUTRIMENT = list(1,5), REAGENT_ID_PARACETAMOL = list(0,2))
 
 /datum/seed/lettuce/ice/New()

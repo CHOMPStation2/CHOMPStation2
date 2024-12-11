@@ -296,7 +296,7 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 
 /obj/item/reagent_containers/food/snacks/pitcher_fruit/Initialize()
 	. = ..()
-	reagents.add_reagent("pitcher_nectar", 5)
+	reagents.add_reagent(REAGENT_ID_PITCHERNECTAR, 5)
 	bitesize = 4
 	pit = new /obj/item/seeds/pitcherseed(src.contents)
 	seed = pit.seed

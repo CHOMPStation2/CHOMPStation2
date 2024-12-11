@@ -32,7 +32,7 @@ var/global/list/discovered_phororeagents //list of all phororeagents discovered 
 		phororeactions.set_up_reactions()
 
 	if(!discovered_phororeagents)
-		discovered_phororeagents = list("bicordrazine")
+		discovered_phororeagents = list(REAGENT_ID_BICORDRAZINE)
 
 /obj/machinery/computer/phoronics/attack_hand(var/mob/user as mob)
 	return src.ui_interact(user)

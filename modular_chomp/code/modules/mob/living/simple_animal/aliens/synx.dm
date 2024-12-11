@@ -235,7 +235,7 @@
 ////////////////////////////////////////////////////////////////////////////////////// //keeping most of these the same except the stuff that apply to the standard synx. -lo
 /*
 /datum/seed/hardlightseed/
-	name = "Type NULL Hardlight Generator"
+	name = PLANT_NULLHARDLIGHT
 	seed_name = "Biomechanical Hardlight generator seed"
 	display_name = "Biomechanical Hardlight stem"
 	mutants = null
@@ -885,7 +885,7 @@
 			"bio" = 100,
 			"rad" = 100)
 	////////////////////////////MED INJECTOR
-	poison_type = "oxycodone" //OD effects, eye_blurry | Confuse + for slimes | stuttering
+	poison_type = REAGENT_ID_OXYCODONE //OD effects, eye_blurry | Confuse + for slimes | stuttering
 	poison_chance = 77 //high but not guranteed.
 	poison_per_bite = 9 //OD for oxyc is 20
 	//////////////////////////////////////////////FACTION

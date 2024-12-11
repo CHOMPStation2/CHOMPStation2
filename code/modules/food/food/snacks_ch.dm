@@ -113,7 +113,7 @@
 	icon = 'icons/obj/food_ch.dmi'
 	icon_state = "bigbeanburrito"
 	nutriment_amt = 15
-	nutriment_desc = list("tortilla" = 2, "meat" = 3, "bean" = 5, "cheese" = 3, "Mexico" = 7)
+	nutriment_desc = list("tortilla" = 2, "meat" = 3, "bean" = 5, REAGENT_ID_CHEESE = 3, "Mexico" = 7)
 
 /obj/item/reagent_containers/food/snacks/slice/bigbeanburrito/Initialize()
 	. = ..()
@@ -128,7 +128,7 @@
 	icon_state = "supremoburrito"
 	slice_path = /obj/item/reagent_containers/food/snacks/slice/bigbeanburrito/filled
 	slices_num = 5
-	nutriment_desc = list("tortilla" = 2, "meat" = 4, "bean" = 7, "cheese" = 4, "chili" = 1, "Mexico" = 7)
+	nutriment_desc = list("tortilla" = 2, "meat" = 4, "bean" = 7, REAGENT_ID_CHEESE = 4, PLANT_CHILI = 1, "Mexico" = 7)
 	nutriment_amt = 50
 
 
@@ -297,7 +297,7 @@
 	trash = /obj/item/trash/brownies
 	filling_color = "#E39C29"
 	nutriment_amt = 8
-	nutriment_desc = list("vanilla" = 8)
+	nutriment_desc = list(REAGENT_ID_VANILLA = 8)
 	center_of_mass_x = 15 //CHOMPEdit
 	center_of_mass_y= 9 //CHOMPEdit
 	bitesize = 2
@@ -314,7 +314,7 @@
 	trash = /obj/item/trash/plate
 	filling_color = "#F5B951"
 	bitesize = 2
-	nutriment_desc = list("vanilla" = 1)
+	nutriment_desc = list(REAGENT_ID_VANILLA = 1)
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 12 //CHOMPEdit
 

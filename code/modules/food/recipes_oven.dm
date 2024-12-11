@@ -192,7 +192,7 @@
 
 /datum/recipe/bun
 	appliance = OVEN
-	reagents = list("sodiumchloride" = 1)
+	reagents = list(REAGENT_ID_SODIUMCHLORIDE = 1)
 	items = list(
 		/obj/item/reagent_containers/food/snacks/dough
 	)
@@ -235,7 +235,7 @@
 
 /datum/recipe/cherrypie
 	appliance = OVEN
-	fruit = list("cherries" = 1)
+	fruit = list(PLANT_CHERRY = 1)
 	reagents = list(REAGENT_ID_SUGAR = 10)
 	items = list(
 		/obj/item/reagent_containers/food/snacks/sliceable/flatdough
@@ -315,7 +315,7 @@
 
 /datum/recipe/poppypretzel
 	appliance = OVEN
-	fruit = list("poppy" = 1)
+	fruit = list(PLANT_POPPIES = 1)
 	items = list(/obj/item/reagent_containers/food/snacks/dough)
 	result = /obj/item/reagent_containers/food/snacks/poppypretzel
 	result_quantity = 2
