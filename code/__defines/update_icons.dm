@@ -3,13 +3,8 @@
 //Human Overlays Indexes/////////
 //CHOMPEDIT edit the file human/update_icons.dm in the modular_chomp folder as well, if you update these (and clothing/clothing.dm line 789, the hardcoded layer there in /obj/item/clothing/suit/make_worn_icon)
 #define MUTATIONS_LAYER			1		//Mutations like fat, and lasereyes
-<<<<<<< HEAD
-#define TAIL_LOWER_LAYER		2		//Tail as viewed from the south //CHOMPStation edit - underneath bodyparts
-#define WING_LOWER_LAYER		3		//Wings as viewed from the south //CHOMPStation edit - underneath bodyparts
-=======
 #define TAIL_LOWER_LAYER		2		//Tail as viewed from the south
 #define WING_LOWER_LAYER		3		//Wings as viewed from the south
->>>>>>> 2f8eb86ea7 (Merge pull request #16689 from Kashargul/layers)
 #define BODYPARTS_LAYER			4		//Bodyparts layer
 #define SKIN_LAYER				5		//Skin things added by a call on species
 #define BLOOD_LAYER				6		//Bloodied hands/feet/anything else
@@ -40,13 +35,8 @@
 #define L_HAND_LAYER			31		//Left-hand item
 #define R_HAND_LAYER			32		//Right-hand item
 #define WING_LAYER				33		//Wings or protrusions over the suit.
-<<<<<<< HEAD
-#define VORE_BELLY_LAYER		34		//CHOMPStation edit - Move this and everything after up if things are added.
-#define VORE_TAIL_LAYER			35		//CHOMPStation edit - Move this and everything after up if things are added.
-=======
 #define VORE_BELLY_LAYER		34		//Move this and everything after up if things are added.
 #define VORE_TAIL_LAYER			35		//Move this and everything after up if things are added.
->>>>>>> 2f8eb86ea7 (Merge pull request #16689 from Kashargul/layers)
 #define TAIL_UPPER_LAYER_ALT	36		//Modified tail-sprite layer. Tend to be larger.
 #define MODIFIER_EFFECTS_LAYER	37		//Effects drawn by modifiers
 #define FIRE_LAYER				38		//'Mob on fire' overlay layer
