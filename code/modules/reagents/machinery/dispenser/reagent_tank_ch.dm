@@ -8,4 +8,4 @@
 
 /obj/structure/reagent_dispensers/space_cleaner/Initialize()
 	. = ..()
-	reagents.add_reagent("cleaner", 1000)
+	reagents.add_reagent(REAGENT_ID_CLEANER, 1000)

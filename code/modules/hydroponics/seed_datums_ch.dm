@@ -79,8 +79,8 @@
 	set_trait(TRAIT_PRODUCT_COLOUR,"#440000")
 
 /datum/seed/potato/voltato
-	name = "voltato"
-	seed_name = "voltato"
+	name = PLANT_VOLTATO
+	seed_name = PLANT_VOLTATO
 	display_name = "voltatos"
 	chems = list("nutriment" = list(1,10), "shockchem" = list(0,10))
 	mutants = null

@@ -162,7 +162,7 @@ What Borgs are available is sadly handled in the above file in the proc
 	name = "Brew Belly"
 	desc = "A mounted drunk tank unit with fuel processor."
 	icon_state = "brewer"
-	injection_chems = list("vodka","beer","gin") //Injected alcohol is 3 times as strong
+	injection_chems = list(REAGENT_ID_VODKA,REAGENT_ID_BEER,REAGENT_ID_GIN) //Injected alcohol is 3 times as strong
 	max_item_count = 1
 
 /obj/item/dogborg/sleeper/compactor/brewer/inject_chem(mob/user, chem)

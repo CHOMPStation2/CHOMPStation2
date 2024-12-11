@@ -236,7 +236,7 @@
 	icon_state = "blue_vial"
 	var/splatter = FALSE			// Will this make a cloud of reagents?
 	var/splatter_volume = 5			// The volume of its chemical container, for said cloud of reagents.
-	var/list/my_chems = list("mold")
+	var/list/my_chems = list(REAGENT_ID_MOLD)
 
 /obj/item/projectile/arc/vial/on_impact(var/atom/A)
 	if(splatter)
@@ -261,7 +261,7 @@
 	armor_penetration = 0
 	damage_type = BRUTE
 	splatter_volume = 60
-	my_chems = list("frostoil")
+	my_chems = list(REAGENT_ID_FROSTOIL)
 	modifier_type_to_apply = /datum/modifier/wizpoison/frost
 	modifier_duration = 15 SECONDS
 	splatter = TRUE
@@ -272,7 +272,7 @@
 	armor_penetration = 0
 	damage_type = BRUTE
 	splatter_volume = 60
-	my_chems = list("toxin")
+	my_chems = list(REAGENT_ID_TOXIN)
 	modifier_type_to_apply = /datum/modifier/wizpoison
 	modifier_duration = 15 SECONDS
 	splatter = TRUE
@@ -283,7 +283,7 @@
 	armor_penetration = 0
 	damage_type = BRUTE
 	splatter_volume = 60
-	my_chems = list("sacid")
+	my_chems = list(REAGENT_ID_SACID)
 	modifier_type_to_apply = /datum/modifier/wizfire
 	modifier_duration = 15 SECONDS
 	splatter = TRUE
@@ -294,7 +294,7 @@
 	armor_penetration = 0
 	damage_type = BRUTE
 	splatter_volume = 60
-	my_chems = list("shredding_nanites")
+	my_chems = list(REAGENT_ID_SHREDDINGNANITES)
 	modifier_type_to_apply = /datum/modifier/wizfire/lighting
 	modifier_duration = 15 SECONDS
 	splatter = TRUE

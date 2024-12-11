@@ -11,7 +11,7 @@
 	name = "soulflower"
 	seed_name = "soulflower"
 	display_name = "soulflowers"
-	chems = list("nutriment" = list(1,10), "souldew" = list(1,13))
+	chems = list("nutriment" = list(1,10), REAGENT_ID_SOULDEW = list(1,13))
 	mutants = null
 
 /datum/seed/flower/sunflower/soulflower/New()

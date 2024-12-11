@@ -204,10 +204,10 @@
 	base_icon = "psychbed"
 
 /obj/structure/bed/psych/New(var/newloc)
-	..(newloc,"wood","leather")
+	..(newloc,MAT_WOOD,MAT_LEATHER)
 
 /obj/structure/bed/padded/New(var/newloc)
-	..(newloc,"plastic","cotton")
+	..(newloc,MAT_PLASTIC,MAT_COTTON)
 
 /obj/structure/bed/double
 	name = "double bed"
@@ -215,7 +215,7 @@
 	base_icon = "doublebed"
 
 /obj/structure/bed/double/padded/New(var/newloc)
-	..(newloc,"wood","cotton")
+	..(newloc,MAT_WOOD,MAT_COTTON)
 
 /obj/structure/bed/double/post_buckle_mob(mob/living/M as mob)
 	if(M.buckled == src)

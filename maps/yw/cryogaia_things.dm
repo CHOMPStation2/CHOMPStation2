@@ -323,8 +323,8 @@ var/global/list/latejoin_tram   = list()
 
 /obj/item/reagent_containers/pill/airlock/New()
 	..()
-	reagents.add_reagent("anti_toxin", 15)
-	reagents.add_reagent("paracetamol", 5)
+	reagents.add_reagent(REAGENT_ID_ANTITOXIN, 15)
+	reagents.add_reagent(REAGENT_ID_PARACETAMOL, 5)
 
 //"Red" Armory Door
 /obj/machinery/door/airlock/multi_tile/metal/red

@@ -416,7 +416,7 @@
 	var/cloaked_alpha = 45			// Lower = Harder to see.
 	var/cloak_cooldown = 5 SECONDS	// Amount of time needed to re-cloak after losing it.
 	var/last_uncloak = 0			// world.time
-	var/poison_type = "stoxin"
+	var/poison_type = REAGENT_ID_STOXIN
 	var/poison_per_bite = 8
 	var/poison_chance = 80
 

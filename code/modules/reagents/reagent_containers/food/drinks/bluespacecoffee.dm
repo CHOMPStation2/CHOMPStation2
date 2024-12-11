@@ -9,9 +9,9 @@
 
 /obj/item/reagent_containers/food/drinks/bluespace_coffee/Initialize()
 	..()
-	reagents.add_reagent("coffee", 50)
+	reagents.add_reagent(REAGENT_ID_COFFEE, 50)
 
 	//Infinite Coffee
 /obj/item/reagent_containers/food/drinks/bluespace_coffee/attack(mob/M as mob, mob/user as mob, def_zone)
 	..()
-	src.reagents.add_reagent("coffee", 50)
+	src.reagents.add_reagent(REAGENT_ID_COFFEE, 50)

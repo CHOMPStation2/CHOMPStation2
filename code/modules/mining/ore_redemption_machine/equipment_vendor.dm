@@ -108,7 +108,7 @@
 		EQUIPMENT("Hardsuit - Proto-Kinetic Gauntlets",		/obj/item/rig_module/gauntlets,					2000),
 	)
 	prize_list["Miscellaneous"] = list(
-		EQUIPMENT("Absinthe",					/obj/item/reagent_containers/food/drinks/bottle/absinthe,	125),
+		EQUIPMENT(REAGENT_ABSINTHE,					/obj/item/reagent_containers/food/drinks/bottle/absinthe,	125),
 		EQUIPMENT("Cigar",						/obj/item/clothing/mask/smokable/cigarette/cigar/havana,			150),
 		EQUIPMENT("Digital Tablet - Standard",	/obj/item/modular_computer/tablet/preset/custom_loadout/standard,	500),
 		EQUIPMENT("Digital Tablet - Advanced",	/obj/item/modular_computer/tablet/preset/custom_loadout/advanced,	1000),
@@ -120,7 +120,7 @@
 		EQUIPMENT("Thalers - 100",				/obj/item/spacecash/c100,									1000),
 		EQUIPMENT("Thalers - 1000",				/obj/item/spacecash/c1000,									10000),
 		EQUIPMENT("Umbrella",					/obj/item/melee/umbrella/random,								200),
-		EQUIPMENT("Whiskey",					/obj/item/reagent_containers/food/drinks/bottle/whiskey,		125),
+		EQUIPMENT(REAGENT_WHISKEY,					/obj/item/reagent_containers/food/drinks/bottle/whiskey,		125),
 		EQUIPMENT("Mining PSG Upgrade Disk",	/obj/item/borg/upgrade/shield_upgrade,								2500),
 	//CHOMPedit Start
 		EQUIPMENT("Mining PSG", 				/obj/item/personal_shield_generator/belt/mining/loaded,      2000),

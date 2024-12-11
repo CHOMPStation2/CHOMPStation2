@@ -34,7 +34,7 @@
 		user.put_in_hands(F)
 
 	else if(istype(thing, /obj/machinery/power/supermatter))
-		var/obj/item/fuel_assembly/F = new(get_turf(src), "supermatter")
+		var/obj/item/fuel_assembly/F = new(get_turf(src), MAT_SUPERMATTER)
 		visible_message(span_infoplain(span_bold("\The [src]") + " compresses \the [thing] into a new fuel assembly."))
 		qdel(thing)
 		user.put_in_hands(F)
@@ -58,7 +58,7 @@
 				to_chat(user, span_warning("It would be pointless to make a fuel rod out of [mat.use_name]."))
 				return
 			if(M.get_amount() < FUSION_ROD_SHEET_AMT)
-				if(mat.name=="supermatter")
+				if(mat.name==MAT_SUPERMATTER)
 					visible_message(span_notice("\The [user] places the [mat.use_name] into the compressor."))
 					M.use(1)
 					blitzprogress = 1
@@ -71,7 +71,7 @@
 			M.use(FUSION_ROD_SHEET_AMT)
 			user.put_in_hands(F)
 		else
-			if(mat.name=="phoron")
+			if(mat.name==MAT_PHORON)
 				if(M.get_amount() < 25)
 					to_chat(user, span_warning("You need at least 25 phoron sheets to make a blitz rod!"))
 					return

@@ -19,7 +19,7 @@
 	name = "Distilling Oceanic Cure"
 	id = "distill_oceaniccure"
 	result = "oceaniccure"
-	required_reagents = list("curea" = 1, "souldew" = 1, "carpotoxin" = 1)
+	required_reagents = list(REAGENT_ID_CUREA = 1, REAGENT_ID_SOULDEW = 1, "carpotoxin" = 1)
 	result_amount = 2
 
 	reaction_rate = HALF_LIFE(10)
@@ -41,7 +41,7 @@
 	name = "Distilling Sense Enhancer"
 	id = "distill_senseenhancer"
 	result = "senseenhancer"
-	required_reagents = list("quadcord" = 1, "mindbreaker" = 1, "liquidlife" = 1)
+	required_reagents = list(REAGENT_ID_QUADCORD = 1, "mindbreaker" = 1, "liquidlife" = 1)
 	result_amount = 2
 
 	reaction_rate = HALF_LIFE(10)

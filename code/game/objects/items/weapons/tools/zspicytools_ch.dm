@@ -25,7 +25,7 @@
 
 /obj/item/weldingtool/lasercannon/process()
 	if(get_fuel() <= get_max_fuel())
-		reagents.add_reagent("fuel", 1)
+		reagents.add_reagent(REAGENT_ID_FUEL, 1)
 	..()
 
 /obj/item/weldingtool/lasercannon/update_icon()

@@ -235,7 +235,7 @@
 					update_fullness()
 
 		if("Container")
-			if(RTB.reagentid == "stomacid")
+			if(RTB.reagentid == REAGENT_ID_STOMACID)
 				return
 			var/list/choices = list()
 			for(var/obj/item/reagent_containers/rc in view(1,user.loc))
@@ -256,7 +256,7 @@
 			if(RTB.count_liquid_for_sprite)
 				update_fullness()
 		if("Floor")
-			if(RTB.reagentid == "water")
+			if(RTB.reagentid == REAGENT_ID_WATER)
 				return
 			var/amount_removed = RTB.reagents.remove_any(transfer_amount)
 			if(RTB.count_liquid_for_sprite)

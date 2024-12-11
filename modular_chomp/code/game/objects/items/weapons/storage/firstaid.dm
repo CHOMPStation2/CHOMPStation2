@@ -87,7 +87,7 @@
 
 /obj/item/reagent_containers/pill/neotane/Initialize()
 	. = ..()
-	reagents.add_reagent("neotane", 10)
+	reagents.add_reagent(REAGENT_ID_NEOTANE, 10)
 	color = reagents.get_color()
 
 /obj/item/reagent_containers/pill/burncard
@@ -97,7 +97,7 @@
 
 /obj/item/reagent_containers/pill/burncard/Initialize()
 	. = ..()
-	reagents.add_reagent("burncard", 10)
+	reagents.add_reagent(REAGENT_ID_BURNCARD, 10)
 	color = reagents.get_color()
 
 /obj/item/reagent_containers/pill/flamecure
@@ -117,7 +117,7 @@
 
 /obj/item/reagent_containers/pill/juggernog/Initialize()
 	. = ..()
-	reagents.add_reagent("juggernog", 5)
+	reagents.add_reagent(REAGENT_ID_JUGGERNOG, 5)
 	color = reagents.get_color()
 
 /obj/item/reagent_containers/pill/curea
@@ -127,7 +127,7 @@
 
 /obj/item/reagent_containers/pill/curea/Initialize()
 	. = ..()
-	reagents.add_reagent("curea", 10)
+	reagents.add_reagent(REAGENT_ID_CUREA, 10)
 	color = reagents.get_color()
 
 /obj/item/reagent_containers/pill/souldew
@@ -137,7 +137,7 @@
 
 /obj/item/reagent_containers/pill/souldew/Initialize()
 	. = ..()
-	reagents.add_reagent("souldew", 10)
+	reagents.add_reagent(REAGENT_ID_SOULDEW, 10)
 	color = reagents.get_color()
 
 /obj/item/reagent_containers/pill/purifyingagent
@@ -190,5 +190,5 @@
 
 /obj/item/reagent_containers/pill/aphrodisiac/Initialize()
 	. = ..()
-	reagents.add_reagent("aphrodisiac", 20)
+	reagents.add_reagent(REAGENT_ID_APHRODISIAC, 20)
 	color = reagents.get_color()

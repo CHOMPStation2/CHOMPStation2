@@ -30,7 +30,7 @@ export const reagentToColor = {
   'Digestive acid': 'red',
   'Diluted digestive acid': 'red',
   'Space cleaner': undefined,
-  Lube: undefined,
+  'Space Lube': undefined,
   Biomass: 'teal',
   'Concentrated Radium': 'orange',
   Tricordrazine: 'green',

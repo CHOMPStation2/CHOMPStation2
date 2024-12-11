@@ -1,17 +1,17 @@
 /turf/simulated/shuttlewalls/white
-	icon_state = "quartz"
+	icon_state = ORE_QUARTZ
 
 /turf/simulated/shuttlewalls/white/Initialize(mapload)
-	. = ..(mapload, "quartz","quartz")
+	. = ..(mapload, ORE_QUARTZ,ORE_QUARTZ)
 
 /turf/simulated/shuttlewalls/void
 	icon_state = "void"
 
 /turf/simulated/shuttlewalls/void/Initialize(mapload)
-	. = ..(mapload, "void opal","void opal")
+	. = ..(mapload, MAT_VOPAL,MAT_VOPAL)
 
 /turf/simulated/shuttlewalls/dark
 	icon_state = "dark"
 
 /turf/simulated/shuttlewalls/dark/Initialize(mapload)
-	. = ..(mapload, "painite","painite")
+	. = ..(mapload, MAT_PAINITE,MAT_PAINITE)

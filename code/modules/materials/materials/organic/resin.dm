@@ -1,5 +1,5 @@
 /datum/material/resin
-	name = "resin"
+	name = MAT_RESIN
 //	icon_colour = "#353C40" // CHOMPedit: No longer needed
 	icon_base = "resin"
 	integrity = 50 // CHOMPedit: Same as wood.
