@@ -1927,8 +1927,13 @@
 
 /obj/item/reagent_containers/food/snacks/badrecipe/Initialize()
 	. = ..()
+<<<<<<< HEAD
 	reagents.add_reagent("toxin", 1)
 	reagents.add_reagent("carbon", 3)
+=======
+	reagents.add_reagent(REAGENT_ID_SALMONELLA, 1)
+	reagents.add_reagent(REAGENT_ID_CARBON, 3)
+>>>>>>> 9fb9a999d2 (Merge pull request #16694 from TheCaramelion/viro-fix-5)
 
 /obj/item/reagent_containers/food/snacks/meatsteak
 	name = "Meat steak"
