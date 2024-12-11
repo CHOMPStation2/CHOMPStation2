@@ -1,5 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - bugfix: "lurkers can now spawn with a backpack (inc. their rig module, for protean lurkers)"
-  - qol: "lurkers now spawn with 200 thalers"
