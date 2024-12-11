@@ -193,5 +193,5 @@ var/eggs = 0
 	to_chat(src, span_notice("You jab your stinger into [T]."))
 	to_chat(T, span_danger("You feel a stabbing pain as you are stung!"))
 	src.visible_message(span_infoplain(span_red("[src] sinks their stinger into [T]!")))
-	T.bloodstr.add_reagent("condensedcapsaicin_v",3)
+	T.bloodstr.add_reagent(REAGENT_ID_CONDENSEDCAPSAICINV,3)
 	last_special = world.time + 50 // Many little jabs instead of one big one

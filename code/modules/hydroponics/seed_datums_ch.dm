@@ -142,7 +142,7 @@
 	name = PLANT_TEA
 	seed_name = PLANT_TEA
 	display_name = "tea plant"
-	chems = list("teamush" = list(3,10))
+	chems = list(REAGENT_ID_TEAMUSH = list(3,10))
 	mutants = null
 	kitchen_tag = PLANT_TEA
 

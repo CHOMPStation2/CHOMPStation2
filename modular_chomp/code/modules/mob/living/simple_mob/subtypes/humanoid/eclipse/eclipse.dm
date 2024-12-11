@@ -751,7 +751,7 @@
 	B1.reagents.add_reagent(REAGENT_ID_CRYOSLURRY, 150)
 	B1.reagents.add_reagent(REAGENT_ID_POTASSIUM, 150)
 	B2.reagents.add_reagent(REAGENT_ID_PHOSPHORUS, 150)
-	B2.reagents.add_reagent(REAGENT_ID_SUGAR150)
+	B2.reagents.add_reagent(REAGENT_ID_SUGAR, 150)
 
 	detonator = new/obj/item/assembly_holder/timer_igniter(src)
 
