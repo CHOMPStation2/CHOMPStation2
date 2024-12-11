@@ -338,7 +338,7 @@
 
 	if(key)
 		if(include_link && C)
-			. += "<a href='?priv_msg=\ref[C]'>"
+			. += "<a href='byond://?priv_msg=\ref[C]'>"
 
 		if(C && C.holder && C.holder.fakekey)
 			. += C.holder.rank // CHOMPEdit: Stealth mode displays staff rank in PM Messages
