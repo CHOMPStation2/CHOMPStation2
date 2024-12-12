@@ -2618,7 +2618,6 @@
 #include "code\modules\events\spider_infestation.dm"
 #include "code\modules\events\spider_migration_yw.dm"
 #include "code\modules\events\spontaneous_appendicitis.dm"
-#include "code\modules\events\spontaneous_appendicitis_vr.dm"
 #include "code\modules\events\supply_demand_vr.dm"
 #include "code\modules\events\wallrot.dm"
 #include "code\modules\events\wormholes.dm"
