@@ -266,11 +266,7 @@ SUBSYSTEM_DEF(vote)
 
 		log_vote(text)
 
-<<<<<<< HEAD
-		to_world(span_filter_system(span_purple(span_bold("[text]") + "\nType " + span_bold("vote") + " or click <a href='?src=\ref[src]'>here</a> to place your votes.\nYou have [CONFIG_GET(number/vote_period) / 10] seconds to vote."))) // CHOMPEdit
-=======
-		to_world(span_filter_system(span_purple(span_bold("[text]") + "\nType " + span_bold("vote") + " or click <a href='byond://?src=\ref[src]'>here</a> to place your votes.\nYou have [config.vote_period / 10] seconds to vote.")))
->>>>>>> 5a47c9b8a1 (Check for 516 byond:// hrefs (#16359))
+		to_world(span_filter_system(span_purple(span_bold("[text]") + "\nType " + span_bold("vote") + " or click <a href='byond://?src=\ref[src]'>here</a> to place your votes.\nYou have [CONFIG_GET(number/vote_period) / 10] seconds to vote."))) // CHOMPEdit
 		if(vote_type == VOTE_CREW_TRANSFER || vote_type == VOTE_GAMEMODE || vote_type == VOTE_CUSTOM)
 			world << sound('sound/ambience/alarm4.ogg', repeat = 0, wait = 0, volume = 50, channel = 3) //CHOMPStation Edit TFF 10/5/20 - revert to old soundtrack contrary to YW
 
@@ -323,58 +319,32 @@ SUBSYSTEM_DEF(vote)
 			. += "(<a href='byond://?src=\ref[src];[HrefToken()];vote=cancel'>Cancel Vote</a>) "
 	else
 		. += "<h2>Start a vote:</h2><hr><ul><li>"
-<<<<<<< HEAD
 		if(admin || CONFIG_GET(flag/allow_vote_restart)) // CHOMPEdit
-			. += "<a href='?src=\ref[src];vote=restart'>Restart</a>"
-=======
-		if(admin || config.allow_vote_restart)
 			. += "<a href='byond://?src=\ref[src];vote=restart'>Restart</a>"
->>>>>>> 5a47c9b8a1 (Check for 516 byond:// hrefs (#16359))
 		else
 			. += span_gray("Restart (Disallowed)")
 		. += "</li><li>"
 
-<<<<<<< HEAD
 		if(admin || CONFIG_GET(flag/allow_vote_restart)) // CHOMPEdit
-			. += "<a href='?src=\ref[src];vote=crew_transfer'>Crew Transfer</a>"
-=======
-		if(admin || config.allow_vote_restart)
 			. += "<a href='byond://?src=\ref[src];vote=crew_transfer'>Crew Transfer</a>"
->>>>>>> 5a47c9b8a1 (Check for 516 byond:// hrefs (#16359))
 		else
 			. += span_gray("Crew Transfer (Disallowed)")
 
 		if(admin)
-<<<<<<< HEAD
-			. += "\t(<a href='?src=\ref[src];[HrefToken()];vote=toggle_restart'>[CONFIG_GET(flag/allow_vote_restart) ? "Allowed" : "Disallowed"]</a>)" // CHOMPEdit
+			. += "\t(<a href='byond://?src=\ref[src];[HrefToken()];vote=toggle_restart'>[CONFIG_GET(flag/allow_vote_restart) ? "Allowed" : "Disallowed"]</a>)" // CHOMPEdit
 		. += "</li><li>"
 
 		if(admin || CONFIG_GET(flag/allow_vote_mode)) // CHOMPEdit
-			. += "<a href='?src=\ref[src];vote=gamemode'>GameMode</a>"
-=======
-			. += "\t(<a href='byond://?src=\ref[src];[HrefToken()];vote=toggle_restart'>[config.allow_vote_restart ? "Allowed" : "Disallowed"]</a>)"
-		. += "</li><li>"
-
-		if(admin || config.allow_vote_mode)
 			. += "<a href='byond://?src=\ref[src];vote=gamemode'>GameMode</a>"
->>>>>>> 5a47c9b8a1 (Check for 516 byond:// hrefs (#16359))
 		else
 			. += span_gray("GameMode (Disallowed)")
 
 		if(admin)
-<<<<<<< HEAD
-			. += "\t(<a href='?src=\ref[src];[HrefToken()];vote=toggle_gamemode'>[CONFIG_GET(flag/allow_vote_mode) ? "Allowed" : "Disallowed"]</a>)" // CHOMPEdit
+			. += "\t(<a href='byond://?src=\ref[src];[HrefToken()];vote=toggle_gamemode'>[CONFIG_GET(flag/allow_vote_mode) ? "Allowed" : "Disallowed"]</a>)" // CHOMPEdit
 		. += "</li><li>"
 
 		if(!antag_add_failed && CONFIG_GET(flag/allow_extra_antags)) // CHOMPEdit
-			. += "<a href='?src=\ref[src];vote=add_antagonist'>Add Antagonist Type</a>"
-=======
-			. += "\t(<a href='byond://?src=\ref[src];[HrefToken()];vote=toggle_gamemode'>[config.allow_vote_mode ? "Allowed" : "Disallowed"]</a>)"
-		. += "</li><li>"
-
-		if(!antag_add_failed && config.allow_extra_antags)
 			. += "<a href='byond://?src=\ref[src];vote=add_antagonist'>Add Antagonist Type</a>"
->>>>>>> 5a47c9b8a1 (Check for 516 byond:// hrefs (#16359))
 		else
 			. += span_gray("Add Antagonist (Disallowed)")
 		. += "</li>"

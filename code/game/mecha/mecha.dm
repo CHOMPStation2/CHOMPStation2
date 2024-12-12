@@ -2325,15 +2325,9 @@
 		for(var/obj/item/mecha_parts/mecha_equipment/W in universal_equipment)
 			output += "Universal Module: [W.name] <a href='byond://?src=\ref[W];detach=1'>Detach</a><br>"
 		for(var/obj/item/mecha_parts/mecha_equipment/W in special_equipment)
-<<<<<<< HEAD
-			output += "Special Module: [W.name] <a href='?src=\ref[W];detach=1'>Detach</a><br>"
-		/*for(var/obj/item/mecha_parts/mecha_equipment/W in micro_utility_equipment)//CHOMPstation Edit -  Adds micro equipent to the menu
-			output += "Micro Utility Module: [W.name] <a href='?src=\ref[W];detach=1'>Detach</a><br>"
-=======
 			output += "Special Module: [W.name] <a href='byond://?src=\ref[W];detach=1'>Detach</a><br>"
-		for(var/obj/item/mecha_parts/mecha_equipment/W in micro_utility_equipment) // VOREstation Edit -  Adds micro equipent to the menu
+		/*for(var/obj/item/mecha_parts/mecha_equipment/W in micro_utility_equipment)//CHOMPstation Edit -  Adds micro equipent to the menu
 			output += "Micro Utility Module: [W.name] <a href='byond://?src=\ref[W];detach=1'>Detach</a><br>"
->>>>>>> 5a47c9b8a1 (Check for 516 byond:// hrefs (#16359))
 		for(var/obj/item/mecha_parts/mecha_equipment/W in micro_weapon_equipment)
 			output += "Micro Weapon Module: [W.name] <a href='byond://?src=\ref[W];detach=1'>Detach</a><br>"
 	output += {"<b>Available hull slots:</b> [max_hull_equip-hull_equipment.len]<br>

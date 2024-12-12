@@ -56,7 +56,6 @@ var/global/datum/book_manager/book_mgr = new()
 		if(!SSdbcore.IsConnected()) //CHOMP Edit
 			dat += "<font color=red><b>ERROR</b>: Unable to contact External Archive. Please contact your system administrator for assistance.</font>"
 		else
-<<<<<<< HEAD
 			var/datum/db_query/query = dbcon.NewQuery("DELETE FROM library WHERE id=[isbn]")
 			if(!query.Execute())
 				to_chat(usr,query.ErrorMsg())
@@ -64,12 +63,6 @@ var/global/datum/book_manager/book_mgr = new()
 	else
 		book_mgr.remove(isbn)
 	log_admin("[usr.key] has deleted the book [isbn]")
-=======
-			dat += {"<A href='byond://?our_comp=\ref[our_comp];[HrefToken()];orderbyid=1'>(Order book by SS<sup>13</sup>BN)</A><BR><BR>
-			<table>
-			<tr><td><A href='byond://?our_comp=\ref[our_comp];[HrefToken()];sort=author>AUTHOR</A></td><td><A href='byond://?our_comp=\ref[our_comp];[HrefToken()];sort=title>TITLE</A></td><td><A href='byond://?our_comp=\ref[our_comp];[HrefToken()];sort=category>CATEGORY</A></td><td></td></tr>"}
-			var/DBQuery/query = dbcon_old.NewQuery("SELECT id, author, title, category FROM library ORDER BY [sortby]")
->>>>>>> 5a47c9b8a1 (Check for 516 byond:// hrefs (#16359))
 			query.Execute()
 
 			var/show_admin_options = check_rights(R_ADMIN, show_msg = FALSE)
