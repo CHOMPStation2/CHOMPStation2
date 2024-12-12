@@ -312,7 +312,7 @@
 /*CHOMP Edit: Phorochem removed.
 //Phorochemistry DM: Allows chemicalresistant shocking -Radiantflash
 		for(var/datum/reagent/phororeagent/R in M.reagents.reagent_list)
-			if(R.id == "fulguracin")
+			if(R.id == REAGENT_ID_FULGURACIN)
 				to_chat(M, span_notice("Your hairs stand up, but you resist the shock for the most part"))
 				return 0 //no shock for you
 */

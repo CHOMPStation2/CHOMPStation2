@@ -95,3 +95,8 @@
   - bugfix: Fixed Infected Room event not happening
   - code_imp: Moved hoarde events into the modular folder
   - balance: Removed 25% chance of hoarde event failing
+2024-12-11:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: lurkers can now spawn with a backpack (inc. their rig module, for protean
+      lurkers)
+  - qol: lurkers now spawn with 200 thalers

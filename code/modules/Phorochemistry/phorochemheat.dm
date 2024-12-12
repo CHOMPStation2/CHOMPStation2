@@ -5,7 +5,7 @@
 	desc = "A small, open-topped glass container for delicate research samples. It sports a re-useable strip for labelling with a pen."
 	icon = 'icons/obj/device.dmi'
 	icon_state = "solution_tray"
-	matter = list("glass" = 5)
+	matter = list(MAT_GLASS = 5)
 	w_class = 2.0
 	amount_per_transfer_from_this = 1
 	possible_transfer_amounts = list(1, 2)
@@ -28,56 +28,48 @@
 		new /obj/item/reagent_containers/glass/solution_tray( src )
 
 /obj/item/reagent_containers/glass/beaker/tungsten
-	name = "beaker 'tungsten'"
+	name = "beaker '" + REAGENT_ID_TUNGSTEN + "'"
 	New()
 		..()
-		reagents.add_reagent("tungsten",50)
+		reagents.add_reagent(REAGENT_ID_TUNGSTEN,50)
 		update_icon()
 
 /obj/item/reagent_containers/glass/beaker/oxygen
-	name = "beaker 'oxygen'"
+	name = "beaker '" + REAGENT_ID_OXYGEN + "'"
 	New()
 		..()
-		reagents.add_reagent("oxygen",50)
+		reagents.add_reagent(REAGENT_ID_OXYGEN,50)
 		update_icon()
 
 /obj/item/reagent_containers/glass/beaker/sodium
-	name = "beaker 'sodium'"
+	name = "beaker '" + REAGENT_ID_SODIUM + "'"
 	New()
 		..()
-		reagents.add_reagent("sodium",50)
+		reagents.add_reagent(REAGENT_ID_SODIUM,50)
 		update_icon()
 
 /obj/item/reagent_containers/glass/beaker/lithium
-	name = "beaker 'lithium'"
+	name = "beaker '" + REAGENT_ID_LITHIUM + "'"
 
 	New()
 		..()
-		reagents.add_reagent("lithium",50)
+		reagents.add_reagent(REAGENT_ID_LITHIUM,50)
 		update_icon()
 
 /obj/item/reagent_containers/glass/beaker/water
-	name = "beaker 'water'"
+	name = "beaker '" + REAGENT_ID_WATER + "'"
 
 	New()
 		..()
-		reagents.add_reagent("water",50)
-		update_icon()
-
-/obj/item/reagent_containers/glass/beaker/water
-	name = "beaker 'water'"
-
-	New()
-		..()
-		reagents.add_reagent("water",50)
+		reagents.add_reagent(REAGENT_ID_WATER,50)
 		update_icon()
 
 /obj/item/reagent_containers/glass/beaker/fuel
-	name = "beaker 'fuel'"
+	name = "beaker '" + REAGENT_ID_FUEL + "'"
 
 	New()
 		..()
-		reagents.add_reagent("fuel",50)
+		reagents.add_reagent(REAGENT_ID_FUEL,50)
 		update_icon()
 
 

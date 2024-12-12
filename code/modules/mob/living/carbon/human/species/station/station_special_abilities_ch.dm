@@ -28,7 +28,7 @@
 		to_chat(C, span_warning("You must have a tighter grip to bite this creature."))
 		return
 
-	var/choice = input(src, "What do you wish to inject?") as null|anything in list("Aphrodisiac", "Numbing", "Paralyzing")
+	var/choice = input(src, "What do you wish to inject?") as null|anything in list(REAGENT_APHRODISIAC, "Numbing", "Paralyzing")
 
 	last_special = world.time + 600
 
@@ -38,7 +38,7 @@
 	src.visible_message(span_bolddanger("[src] moves their head next to [T]'s neck, seemingly looking for something!"))
 
 	if(do_after(src, 300, T)) //Thrirty seconds.
-		if(choice == "Aphrodisiac")
+		if(choice == REAGENT_APHRODISIAC)
 			src.show_message(span_warning("You sink your fangs into [T] and inject your aphrodisiac!"))
 			src.visible_message(span_red("[src] sinks their fangs into [T]!"))
 			T.bloodstr.add_reagent("succubi_aphrodisiac",100)
@@ -64,7 +64,7 @@ mob/living/carbon/proc/charmed() //TODO
 */
 
 /datum/reagent/succubi_aphrodisiac
-	name = "Aphrodisiac"
+	name = REAGENT_APHRODISIAC
 	id = "succubi_aphrodisiac"
 	description = "A unknown liquid, it smells sweet"
 	metabolism = REM * 0.8
@@ -193,5 +193,5 @@ var/eggs = 0
 	to_chat(src, span_notice("You jab your stinger into [T]."))
 	to_chat(T, span_danger("You feel a stabbing pain as you are stung!"))
 	src.visible_message(span_infoplain(span_red("[src] sinks their stinger into [T]!")))
-	T.bloodstr.add_reagent("condensedcapsaicin_v",3)
+	T.bloodstr.add_reagent(REAGENT_ID_CONDENSEDCAPSAICINV,3)
 	last_special = world.time + 50 // Many little jabs instead of one big one
