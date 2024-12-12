@@ -91,33 +91,33 @@
 
 /datum/category_item/player_setup_item/vore/size/content(var/mob/user)
 	. += "<br>"
-	. += span_bold("Scale:") + " <a href='?src=\ref[src];size_multiplier=1'>[round(pref.size_multiplier*100)]%</a><br>"
-	. += span_bold("Scaled Appearance:") + " <a [pref.fuzzy ? "" : ""] href='?src=\ref[src];toggle_fuzzy=1'><b>[pref.fuzzy ? "Fuzzy" : "Sharp"]</b></a><br>"
-	. += span_bold("Scaling Center:") + " <a [pref.offset_override ? "" : ""] href='?src=\ref[src];toggle_offset_override=1'><b>[pref.offset_override ? "Odd" : "Even"]</b></a><br>"
+	. += span_bold("Scale:") + " <a href='byond://?src=\ref[src];size_multiplier=1'>[round(pref.size_multiplier*100)]%</a><br>"
+	. += span_bold("Scaled Appearance:") + " <a [pref.fuzzy ? "" : ""] href='byond://?src=\ref[src];toggle_fuzzy=1'><b>[pref.fuzzy ? "Fuzzy" : "Sharp"]</b></a><br>"
+	. += span_bold("Scaling Center:") + " <a [pref.offset_override ? "" : ""] href='byond://?src=\ref[src];toggle_offset_override=1'><b>[pref.offset_override ? "Odd" : "Even"]</b></a><br>"
 	. += "<br>" // CHOMPEdit: Fancy:tm:
 	. += span_bold("Mob Speech/Noise Customization") + "" // CHOMPEdit: Fancy:tm:
 	. += "<br>"  // CHOMPEdit
-	. += span_bold("Voice Frequency:") + " <a href='?src=\ref[src];voice_freq=1'>[pref.voice_freq]</a><br>"
-	. += span_bold("Voice Sounds:") + " <a href='?src=\ref[src];voice_sounds_list=1'>[pref.voice_sound]</a><br>"
-	. += "<a href='?src=\ref[src];voice_test=1'><b>Test Selected Voice</b></a><br>"
-	. += span_bold("Custom Speech Bubble:") + " <a href='?src=\ref[src];customize_speech_bubble=1'>[pref.custom_speech_bubble]</a><br>"
-	. += span_bold("Custom Footstep Sounds:") + "<a href='?src=\ref[src];customize_footsteps=1'>[pref.custom_footstep]</a><br>"
+	. += span_bold("Voice Frequency:") + " <a href='byond://?src=\ref[src];voice_freq=1'>[pref.voice_freq]</a><br>"
+	. += span_bold("Voice Sounds:") + " <a href='byond://?src=\ref[src];voice_sounds_list=1'>[pref.voice_sound]</a><br>"
+	. += "<a href='byond://?src=\ref[src];voice_test=1'><b>Test Selected Voice</b></a><br>"
+	. += span_bold("Custom Speech Bubble:") + " <a href='byond://?src=\ref[src];customize_speech_bubble=1'>[pref.custom_speech_bubble]</a><br>"
+	. += span_bold("Custom Footstep Sounds:") + "<a href='byond://?src=\ref[src];customize_footsteps=1'>[pref.custom_footstep]</a><br>"
 	// CHOMPEdit Start: Pain/Scream/Death Custom Sounds
 	// var/datum/species/selected_species = GLOB.all_species[pref.species]
 	// if(selected_species.selects_bodytype)
 	. += "<br>"
-	. += span_bold("Species Sounds:") + " <a href='?src=\ref[src];species_sound_options=1'>[pref.species_sound]</a><br>"
-	. += "<a href='?src=\ref[src];cough_test=1'><b>Test Cough Sounds</b></a><br>"
-	. += "<a href='?src=\ref[src];sneeze_test=1'><b>Test Sneeze Sounds</b></a><br>"
-	. += "<a href='?src=\ref[src];scream_test=1'><b>Test Scream Sounds</b></a><br>"
-	. += "<a href='?src=\ref[src];pain_test=1'><b>Test Pain Sounds</b></a><br>"
-	. += "<a href='?src=\ref[src];gasp_test=1'><b>Test Gasp Sounds</b></a><br>"
-	. += "<a href='?src=\ref[src];death_test=1'><b>Test Death Sounds</b></a><br>"
+	. += span_bold("Species Sounds:") + " <a href='byond://?src=\ref[src];species_sound_options=1'>[pref.species_sound]</a><br>"
+	. += "<a href='byond://?src=\ref[src];cough_test=1'><b>Test Cough Sounds</b></a><br>"
+	. += "<a href='byond://?src=\ref[src];sneeze_test=1'><b>Test Sneeze Sounds</b></a><br>"
+	. += "<a href='byond://?src=\ref[src];scream_test=1'><b>Test Scream Sounds</b></a><br>"
+	. += "<a href='byond://?src=\ref[src];pain_test=1'><b>Test Pain Sounds</b></a><br>"
+	. += "<a href='byond://?src=\ref[src];gasp_test=1'><b>Test Gasp Sounds</b></a><br>"
+	. += "<a href='byond://?src=\ref[src];death_test=1'><b>Test Death Sounds</b></a><br>"
 	// CHOMPEdit End: Pain/Scream/Death Custom Sounds
 	. += "<br>"
-	. += span_bold("Relative Weight:") + " <a href='?src=\ref[src];weight=1'>[pref.weight_vr]</a><br>"
-	. += span_bold("Weight Gain Rate:") + " <a href='?src=\ref[src];weight_gain=1'>[pref.weight_gain]</a><br>"
-	. += span_bold("Weight Loss Rate:") + " <a href='?src=\ref[src];weight_loss=1'>[pref.weight_loss]</a><br>"
+	. += span_bold("Relative Weight:") + " <a href='byond://?src=\ref[src];weight=1'>[pref.weight_vr]</a><br>"
+	. += span_bold("Weight Gain Rate:") + " <a href='byond://?src=\ref[src];weight_gain=1'>[pref.weight_gain]</a><br>"
+	. += span_bold("Weight Loss Rate:") + " <a href='byond://?src=\ref[src];weight_loss=1'>[pref.weight_loss]</a><br>"
 
 /datum/category_item/player_setup_item/vore/size/OnTopic(var/href, var/list/href_list, var/mob/user)
 	if(href_list["size_multiplier"])

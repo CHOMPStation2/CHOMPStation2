@@ -74,7 +74,7 @@ var/global/datum/book_manager/book_mgr = new()
 				var/category = query.item[4]
 				dat += "<tr><td>[author]</td><td>[title]</td><td>[category]</td><td>"
 				if(show_admin_options) // This isn't the only check, since you can just href-spoof press this button. Just to tidy things up.
-					dat += "<A href='?our_comp=\ref[our_comp];[HrefToken()];delid=[id]'>\[Del\]</A>"
+					dat += "<A href='byond://?our_comp=\ref[our_comp];[HrefToken()];delid=[id]'>\[Del\]</A>"
 				dat += "</td></tr>"
 			dat += "</table>"
 
