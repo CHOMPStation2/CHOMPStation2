@@ -23,7 +23,7 @@
 	melee_damage_lower = 20
 	melee_damage_upper = 15
 	var/poison_chance = 50
-	var/poison_type = "mindbreaker"
+	var/poison_type = REAGENT_ID_MINDBREAKER
 	var/poison_per_bite = 3
 
 	min_oxy = 0

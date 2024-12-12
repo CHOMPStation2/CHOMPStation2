@@ -78,12 +78,12 @@
 			return
 
 		if(container && container.reagents)
-			if(!container.reagents.has_reagent("nutriment", (total*efficiency)))
+			if(!container.reagents.has_reagent(REAGENT_ID_NUTRIMENT, (total*efficiency)))
 				playsound(src, "sound/machines/buzz-sigh.ogg", 25, 0)
 				to_chat(user, span_warning("Not enough nutriment available!"))
 				return
 
-			container.reagents.remove_reagent("nutriment", (total*efficiency))
+			container.reagents.remove_reagent(REAGENT_ID_NUTRIMENT, (total*efficiency))
 
 			update_use_power(USE_POWER_ACTIVE)
 			printing = TRUE

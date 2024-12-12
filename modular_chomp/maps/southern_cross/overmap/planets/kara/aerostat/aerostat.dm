@@ -125,7 +125,7 @@ KARA_TURF_CREATE(/turf/simulated/mineral)
 	if(mineral)
 		return
 
-	var/mineral_name = pickweight(list("marble" = 5, "uranium" = 5, "platinum" = 5, "hematite" = 5, "carbon" = 5, "diamond" = 5, "gold" = 5, "silver" = 5, "lead" = 5, "verdantium" = 5, "rutile" = 20))
+	var/mineral_name = pickweight(list(ORE_MARBLE = 5, ORE_URANIUM = 5, ORE_PLATINUM = 5, ORE_HEMATITE = 5, ORE_CARBON = 5, ORE_DIAMOND = 5, ORE_GOLD = 5, ORE_SILVER = 5, ORE_LEAD = 5, ORE_VERDANTIUM = 5, ORE_RUTILE = 20))
 
 	if(mineral_name && (mineral_name in GLOB.ore_data))
 		mineral = GLOB.ore_data[mineral_name]

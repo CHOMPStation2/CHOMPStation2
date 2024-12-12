@@ -165,7 +165,7 @@
 	H.adjustToxLoss(-(H.getToxLoss() * 0.75))
 	H.adjustCloneLoss(-(H.getCloneLoss() * 0.75))
 	H.germ_level = 0 // CHOMPAdd - Take away the germs, or we'll die AGAIN
-	H.vessel.add_reagent("blood",blood_volume-H.vessel.total_volume)
+	H.vessel.add_reagent(REAGENT_ID_BLOOD,blood_volume-H.vessel.total_volume)
 	for(var/obj/item/organ/external/bp in H.organs)
 		bp.bandage()
 		bp.disinfect()

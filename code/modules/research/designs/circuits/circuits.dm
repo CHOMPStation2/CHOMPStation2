@@ -6,7 +6,7 @@ CIRCUITS BELOW
 	build_type = IMPRINTER
 	req_tech = list(TECH_DATA = 2)
 	materials = list(MAT_GLASS = 2000)
-	chemicals = list("sacid" = 20)
+	chemicals = list(REAGENT_ID_SACID = 20)
 	time = 5
 
 /datum/design/circuit/AssembleDesignName()
@@ -615,7 +615,7 @@ CIRCUITS BELOW
 	id = "durand_main"
 	req_tech = list(TECH_DATA = 4)
 	materials = list(MAT_GLASS = 2000, MAT_GRAPHITE = 1250)
-	chemicals = list("sacid" = 20)
+	chemicals = list(REAGENT_ID_SACID = 20)
 	build_path = /obj/item/circuitboard/mecha/durand/main
 	sort_string = "NAADA"
 
@@ -624,7 +624,7 @@ CIRCUITS BELOW
 	id = "durand_peri"
 	req_tech = list(TECH_DATA = 4)
 	materials = list(MAT_GLASS = 2000, MAT_GRAPHITE = 1250)
-	chemicals = list("sacid" = 20)
+	chemicals = list(REAGENT_ID_SACID = 20)
 	build_path = /obj/item/circuitboard/mecha/durand/peripherals
 	sort_string = "NAADB"
 
@@ -633,7 +633,7 @@ CIRCUITS BELOW
 	id = "durand_targ"
 	req_tech = list(TECH_DATA = 4, TECH_COMBAT = 2)
 	materials = list(MAT_GLASS = 2000, MAT_GRAPHITE = 1250)
-	chemicals = list("sacid" = 20)
+	chemicals = list(REAGENT_ID_SACID = 20)
 	build_path = /obj/item/circuitboard/mecha/durand/targeting
 	sort_string = "NAADC"
 

@@ -5,8 +5,8 @@ var/induromol_frequency = rand(700, 750) * 2 + 1 //signallers only increase by .
 var/induromol_code = rand(1, 50)
 
 /datum/reagent/phororeagent
-	name = "Unanalyzed Reagent"
-	id = "unknown"
+	name = REAGENT_UNKNOWN
+	id = REAGENT_ID_UNKNOWN
 	description = "Currently unknown"
 	reagent_state = LIQUID
 
@@ -19,8 +19,8 @@ var/induromol_code = rand(1, 50)
 
 /*		Genetics is removed now.
 /datum/reagent/phororeagent/extreme_mutagen //this one should work fine, but genetics may still be a little messed up
-	id = "mutagen_x"
-	name = "Extreme Mutagen"
+	id = REAGENT_ID_MUTAGENX
+	name = REAGENT_MUTAGENX
 	description = "Seems as if it would induce instant, random mutations in a living humanoid"
 	color = "#20E7F5"
 
@@ -49,12 +49,12 @@ var/induromol_code = rand(1, 50)
 			M.update_mutations()
 
 		M.adjustToxLoss(damage)
-		M.reagents.add_reagent("toxin", src.volume / 4) //add toxin damage over time
+		M.reagents.add_reagent(REAGENT_ID_TOXIN, src.volume / 4) //add toxin damage over time
 		holder.remove_reagent(src.id, src.volume) //instant use
 */
 /datum/reagent/phororeagent/bicordrazine
-	id = "bicordrazine"
-	name = "Bicordrazine"
+	id = REAGENT_ID_BICORDRAZINE
+	name = REAGENT_BICORDRAZINE
 	description = "Testing indicates potentially a more efficient form of Tricordrazine"
 	color = "#C8A5DC"
 	metabolism = 2.5 * REM
@@ -76,8 +76,8 @@ var/induromol_code = rand(1, 50)
 	..()
 
 /datum/reagent/phororeagent/genedrazine
-	id = "genedrazine"
-	name = "Genedrazine"
+	id = REAGENT_ID_GENEDRAZINE
+	name = REAGENT_GENEDRAZINE
 	description = "Seems as if it would heal very quickly, but at the cost of genetic damage"
 
 /datum/reagent/phororeagent/genedrazine/on_mob_life(var/mob/living/M as mob, var/alien)
@@ -102,15 +102,15 @@ var/induromol_code = rand(1, 50)
 	return ..()
 
 /datum/reagent/phororeagent/lacertusol
-	id = "lacertusol"
-	name = "Lacertusol"
+	id = REAGENT_ID_LACERTUSOL
+	name = REAGENT_ID_LACERTUSOL
 	description = "Looks as if it turns off certain muscle inhibitors, increasing unarmed strength dramatically"
 	color = "#FFFA73"
 	//implementation in human_attackhand.dm
 
 /datum/reagent/phororeagent/love_potion
-	id = "amorapotio"
-	name = "Amorapotio"
+	id = REAGENT_ID_AMORAPOTIO
+	name = REAGENT_AMORAPOTIO
 	description = "Seems as if it would induce incredibly strong feelings of affection"
 	color = "#E3209B"
 	metabolism = 0.5 * REM
@@ -216,11 +216,11 @@ var/induromol_code = rand(1, 50)
 
 /obj/item/reagent_containers/glass/beaker/lovepotion
 	name = "beaker (amorapotio)"
-	prefill = list("amorapotio" = 60)
+	prefill = list(REAGENT_ID_AMORAPOTIO = 60)
 
 /datum/reagent/phororeagent/nasty
-	id = "nasty"
-	name = "Nasty"
+	id = REAGENT_ID_NASTY
+	name = REAGENT_NASTY
 	description = "Ewwwwwwwwwwwwwww"
 	color = "#F5F2F7"
 
@@ -303,8 +303,8 @@ var/induromol_code = rand(1, 50)
 	return ..()
 
 /datum/reagent/phororeagent/babelizine
-	id = "babelizine"
-	name = "Babelizine"
+	id = REAGENT_ID_BABELIZINE
+	name = REAGENT_BABELIZINE
 	description = "Similar to an enzyme produced by the incredibly rare Babel Fish, might have great linguistic applications"
 	color = "#E5F58E"
 	metabolism = 0.2 * REM
@@ -323,8 +323,8 @@ var/induromol_code = rand(1, 50)
 	holder.remove_reagent(src.id, src.volume)
 
 /datum/reagent/phororeagent/calcisol
-	id = "calcisol"
-	name = "Calcisol"
+	id = REAGENT_ID_CALCISOL
+	name = REAGENT_CALCISOL
 	description = "Looks as though it could have profound effects upon broken limbs"
 	color = "#EDE6E1"
 
@@ -348,8 +348,8 @@ var/induromol_code = rand(1, 50)
 
 
 /datum/reagent/phororeagent/malaxitol
-	id = "malaxitol"
-	name = "Malaxitol"
+	id = REAGENT_ID_MALAXITOL
+	name = REAGENT_MALAXITOL
 	description = "Analysis indicates it could greatly speed up the rate at which other reagents are metabolized"
 	color = "#A155ED"
 	metabolism = 2 * REM
@@ -363,8 +363,8 @@ var/induromol_code = rand(1, 50)
 	..()
 
 /datum/reagent/phororeagent/paralitol
-	id = "paralitol"
-	name = "Paralitol"
+	id = REAGENT_ID_PARALITOL
+	name = REAGENT_PARALITOL
 	description = "Seems as if it could work as an extreme muscle inhibitor"
 	color = "#2F85CC"
 	metabolism = 3 * REM
@@ -375,8 +375,8 @@ var/induromol_code = rand(1, 50)
 	return ..()
 
 /datum/reagent/phororeagent/doloran //I don't like this one, could really use different mechanics, kind of just paralitol with pain -DrBrock
-	id = "doloran"
-	name = "Doloran"
+	id = REAGENT_ID_DOLORAN
+	name = REAGENT_DOLORAN
 	description = "Looks as if it could cause horrifically intense pain"
 	color = "#F20A0E"
 	metabolism = 2 * REM
@@ -401,8 +401,8 @@ var/induromol_code = rand(1, 50)
 	..()
 
 /datum/reagent/phororeagent/fulguracin
-	id = "fulguracin"
-	name = "Fulguracin"
+	id = REAGENT_ID_FULGURACIN
+	name = REAGENT_FULGURACIN
 	description = "Looks as though it could work as an extreme electrical inhibitor"
 	color = "#362F31"
 
@@ -420,8 +420,8 @@ var/induromol_code = rand(1, 50)
 //implementation also in power.dm and electrical_field.dm
 
 /datum/reagent/phororeagent/mortemol
-	id = "mortemol"
-	name = "Mortemol"
+	id = REAGENT_ID_MORTEMOL
+	name = REAGENT_MORTEMOL
 	description = "Further testing required, could potentially reanimate dead cells if delivered with enough force"
 	color = "#000000"
 	metabolism = 5 * REM //gotta balance it somehow
@@ -471,8 +471,8 @@ var/induromol_code = rand(1, 50)
 			C.visible_message(span_notice("[C] seems to wake from the dead!"))
 
 /datum/reagent/phororeagent/tegoxane
-	id = "tegoxane"
-	name = "Tegoxane"
+	id = REAGENT_ID_TEGOXANE
+	name = REAGENT_TEGOXANE
 	description = "Seems like it could render biotic matter incapable of being seen, so long as no large movements are made"
 	color = "#7C7D7A"
 	var/saved_icon
@@ -531,8 +531,8 @@ var/induromol_code = rand(1, 50)
 
 
 /datum/reagent/phororeagent/expulsicol
-	id = "expulsicol"
-	name = "Expulsicol"
+	id = REAGENT_ID_EXPULSICOL
+	name = REAGENT_EXPULSICOL
 	description = "Structure indicates it could purge living cells of non-essential reagents"
 	color = "#8C4C3E"
 	var/message_given = 0
@@ -564,8 +564,8 @@ var/induromol_code = rand(1, 50)
 /////////////////////////////////////////////////////////////////////
 
 /datum/reagent/phororeagent/oculusosone
-	id = "oculusosone"
-	name = "Oculusosone"
+	id = REAGENT_ID_OCULUSOSONE
+	name = REAGENT_OCULUSOSONE
 	description = "Might greatly enhance humanoid eye function"
 	color = "#FE9144"
 	metabolism = 0.5 * REM
@@ -606,8 +606,8 @@ var/induromol_code = rand(1, 50)
 //////////////////////////////////////////////////////////////////////////////////
 
 /datum/reagent/phororeagent/destitutionecam
-	id = "destitutionecam"
-	name = "Destitutionecam"
+	id = REAGENT_ID_DESTITUTIONECAM
+	name = REAGENT_ID_DESTITUTIONECAM
 	description = "Under no circumstances should this substance come into contact with dead bodies"
 	color = "#5AD92B"
 
@@ -618,8 +618,8 @@ var/induromol_code = rand(1, 50)
 	return ..()
 
 /datum/reagent/phororeagent/sapoformator
-	id = "sapoformator"
-	name = "Sapoformator"
+	id = REAGENT_ID_SAPOFORMATOR
+	name = REAGENT_SAPOFORMATOR
 	description = "Enough units splashed on the ground would appear to have great cleaning effects"
 	color = "#EEE139"
 
@@ -647,7 +647,7 @@ var/induromol_code = rand(1, 50)
 		playsound(T, 'sound/effects/bamf.ogg', 50, 1)
 		var/datum/reagents/cleaner = new()
 		cleaner.my_atom = T
-		cleaner.add_reagent("cleaner", 10)
+		cleaner.add_reagent(REAGENT_ID_CLEANER, 10)
 		var/datum/effect/effect/system/foam_spread/soapfoam = new()
 		soapfoam.set_up(12, T, cleaner, 0)
 		soapfoam.start()
@@ -680,8 +680,8 @@ var/induromol_code = rand(1, 50)
 		usr << span_notice("The solution does not appear to have enough mass to react.")
 
 /datum/reagent/phororeagent/rad_x
-	id = "rad_x"
-	name = "Rad-X"
+	id = REAGENT_ID_RADX
+	name = REAGENT_RADX
 	description = "Metabolizes slowly until absorbing radiation damage"
 	color = "#64110B"
 	metabolism = 0.15
@@ -693,8 +693,8 @@ var/induromol_code = rand(1, 50)
 	return ..()
 
 /datum/reagent/phororeagent/caloran
-	id = "caloran"
-	name = "Caloran"
+	id = REAGENT_ID_CALORAN
+	name = REAGENT_CALORAN
 	description = "Would grant incredible heat resistance to living organisms with some side effects"
 	color = "#C64714"
 	metabolism = 5 * REM
@@ -721,8 +721,8 @@ var/induromol_code = rand(1, 50)
 	return ..()
 
 /datum/reagent/phororeagent/the_stuff
-	id = "the_stuff"
-	name = "The Stuff"
+	id = REAGENT_ID_THESTUFF
+	name = REAGENT_THESTUFF
 	description = "Looks as though it would metabolize into the ultimate hallucinogenic cocktail"
 	color = "#1A979D"
 	metabolism = 10 * REM
@@ -732,15 +732,15 @@ var/induromol_code = rand(1, 50)
 	if(!init)
 		to_chat(M, span_warning("You start tripping balls."))
 		init = 1
-	var/drugs = list("space_drugs", "serotrotium", "psilocybin", "nuka_cola", "atomicbomb", "hippiesdelight")
+	var/drugs = list(REAGENT_ID_SPACEDRUGS, REAGENT_ID_SEROTROTIUM, REAGENT_ID_PSILOCYBIN, REAGENT_ID_NUKACOLA, REAGENT_ID_ATOMICBOMB, REAGENT_ID_HIPPIESDELIGHT)
 	for(var/drug in drugs)
 		M.reagents.add_reagent(drug, 1)
-	M.reagents.add_reagent("mindbreaker", 0.2)
+	M.reagents.add_reagent(REAGENT_ID_MINDBREAKER, 0.2)
 	return ..()
 
 /datum/reagent/phororeagent/frioline
-	id = "frioline"
-	name = "Frioline"
+	id = REAGENT_ID_FRIOLINE
+	name = REAGENT_FRIOLINE
 	description = "Could cause rapid and sustained decrease in body temperature"
 	color = "#A0E1F7"
 
@@ -751,8 +751,8 @@ var/induromol_code = rand(1, 50)
 	return ..()
 
 /datum/reagent/phororeagent/luxitol
-	id = "luxitol"
-	name = "Luxitol"
+	id = REAGENT_ID_LUXITOL
+	name = REAGENT_LUXITOL
 	description = "Mimics compounds in known connection with bioluminescence"
 	color = "#61E34F"
 	metabolism = 0.2 * REM
@@ -768,8 +768,8 @@ var/induromol_code = rand(1, 50)
 	return ..()
 
 /datum/reagent/phororeagent/liquid_skin
-	id = "liquid_skin"
-	name = "Liquid Skin"
+	id = REAGENT_ID_LIQUIDSKIN
+	name = REAGENT_LIQUIDSKIN
 	description = "Fills in microscopic ridges on biotic surfaces and hardens"
 	color = "#F7E9BE"
 
@@ -790,8 +790,8 @@ var/induromol_code = rand(1, 50)
 	return ..()
 
 /datum/reagent/phororeagent/energized_phoron
-	id = "energized_phoron"
-	name = "Energized Phoron"
+	id = REAGENT_ID_ENERGIZEDPHORON
+	name = REAGENT_ENERGIZEDPHORON
 	description = "Creates an unstable electrical field between molecules"
 	color = "#F5EF38"
 
@@ -807,8 +807,8 @@ var/induromol_code = rand(1, 50)
 	return 0
 
 /datum/reagent/phororeagent/induromol
-	id = "induromol"
-	name = "Induromol"
+	id = REAGENT_ID_INDUROMOL
+	name = REAGENT_INDUROMOL
 	description = "Please inform DrBrock of this description being viewed"
 	color = "#C6C6C6"
 	reagent_state = LIQUID
@@ -832,8 +832,8 @@ var/induromol_code = rand(1, 50)
 //implementation also in communcations.dm
 
 /datum/reagent/phororeagent/obscuritol
-	id = "obscuritol"
-	name = "Obscuritol"
+	id = REAGENT_ID_OBSCURITOL
+	name = REAGENT_OBSCURITOL
 	description = "Exhibits strange electromagnetic properties"
 	color = "#5D505E"
 
@@ -859,15 +859,15 @@ var/induromol_code = rand(1, 50)
 		light.flicker()
 
 /datum/reagent/phororeagent/tartrate
-	id = "tartrate"
-	name = "Chlorified Tartrate"
+	id = REAGENT_ID_TARTRATE
+	name = REAGENT_TARTRATE
 	description = "Mix with enough Aluminum Nitrate for tasty results!"
 	color = "#EA67B1"
 	//OVENLESS BROWNIES! Shameless Rick and Morty references!
 
 /datum/reagent/phororeagent/oxyphoromin
-	id = "oxyphoromin"
-	name = "Oxyphoromin"
+	id = REAGENT_ID_OXYPHOROMIN
+	name = REAGENT_OXYPHOROMIN
 	description = "Extreme painkiller derived of Oxycodone, dangerous in high doses"
 	color = "#540E5C"
 	metabolism = 5 * REM
@@ -886,8 +886,8 @@ var/induromol_code = rand(1, 50)
 /*
 //Temporarily disabled till map is complete. Need to adjust coordinates to reflect safe and unsafe XYZ.
 /datum/reagent/phororeagent/liquid_bluespace
-	id = "liquid_bluespace"
-	name = "Liquid Bluespace"
+	id = REAGENT_ID_LIQUIDBLUESPACE
+	name = REAGENT_LIQUIDBLUESPACE
 	description = "Appears to bend local spacetime around the container"
 	color = "#4ECBF5"
 	metabolism = 0
@@ -970,8 +970,8 @@ var/induromol_code = rand(1, 50)
 	return 0
 
 /datum/reagent/phororeagent/gaseous/gaseous_death
-	id = "gaseous_death"
-	name = "Gaseous Death"
+	id = REAGENT_ID_GASEOUSDEATH
+	name = REAGENT_GASEOUSDEATH
 	description = "Full eradication of living matter, lethally toxic!"
 	color = "#000000"
 
@@ -1001,8 +1001,8 @@ var/induromol_code = rand(1, 50)
 	src = null*/
 
 /datum/reagent/phororeagent/gaseous/occaecosone
-	id = "occaecosone"
-	name = "Occaecosone"
+	id = REAGENT_ID_OCCAECOSONE
+	name = REAGENT_OCCAECOSONE
 	description = "Would react very negatively with proteins in biotic eyes"
 	color = "#213E73"
 
@@ -1041,8 +1041,8 @@ var/induromol_code = rand(1, 50)
 //It is POSSIBLE but very hard to "stop, drop, and roll" out the fire from an unprotected ignisol encounter before going into crit
 //I really just like the idea of scientists running out of a lab on fire to the science shower - DrBrock
 /datum/reagent/phororeagent/gaseous/ignisol
-	id = "ignisol"
-	name = "Ignisol"
+	id = REAGENT_ID_IGNISOL
+	name = REAGENT_IGNISOL
 	description = "Creates highly flammable reaction with biotic substances"
 	color = "#F78431"
 
@@ -1084,8 +1084,8 @@ Everything put here is either broken, potentially impossible to implement withou
 not yet finished to a satisfactory degree, or I just don't like it enough to keep it in
 
 /datum/reagent/acid/phoronic_acid //I don't like this one, far too powerful in a smoke grenade
-	name = "Phoronic acid"
-	id = "phoronic_acid"
+	name = REAGENT_PHORONICACID
+	id = REAGENT_ID_PHORONICACID
 	description = "Violently corrosive substance, large volumes could potentially breach hull"
 	color = "#CDEB0C"
 	power = 12
@@ -1140,8 +1140,8 @@ not yet finished to a satisfactory degree, or I just don't like it enough to kee
 			return ..()
 
 nocturnol //Should give night vision, does not seem to work using this method of implementation
-	id = "nocturnol"
-	name = "Nocturnal"
+	id = REAGENT_ID_NOCTURNOL
+	name = REAGENT_NOCTURNOL
 	description = "Reagent bears strong resemblance to enzymes found in feline eyes"
 	color = "#61E34F"
 

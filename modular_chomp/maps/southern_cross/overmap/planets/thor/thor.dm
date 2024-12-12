@@ -52,9 +52,9 @@
 
 /obj/effect/overmap/visitable/planet/thor/Initialize()
 	atmosphere = new(CELL_VOLUME) // Necessary for the planet overmap icon to generate properly, but gas type does not seem to matter.
-	atmosphere.adjust_gas_temp("carbon_dioxide", THOR_MOL_CO2, THOR_AVG_TEMP)
-	atmosphere.adjust_gas_temp("nitrogen", THOR_MOL_N2, THOR_AVG_TEMP)
-	atmosphere.adjust_gas_temp("oxygen", THOR_MOL_O2, THOR_AVG_TEMP)
+	atmosphere.adjust_gas_temp(GAS_CO2, THOR_MOL_CO2, THOR_AVG_TEMP)
+	atmosphere.adjust_gas_temp(GAS_N2, THOR_MOL_N2, THOR_AVG_TEMP)
+	atmosphere.adjust_gas_temp(GAS_O2, THOR_MOL_O2, THOR_AVG_TEMP)
 
 	. = ..()
 

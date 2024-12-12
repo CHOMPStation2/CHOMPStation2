@@ -5,7 +5,7 @@
 	name = "Saguwu"
 	id = "cubedsagaru"
 	result = null
-	required_reagents = list("cheese" = 1, "blood" = 1, "clonexadone" = 10,)
+	required_reagents = list(REAGENT_ID_CHEESE = 1, REAGENT_ID_BLOOD = 1, REAGENT_ID_CLONEXADONE = 10,)
 	result_amount = 1
 
 /decl/chemical_reaction/instant/cube/sagaru/on_reaction(var/datum/reagents/holder, var/created_volume)
@@ -15,8 +15,8 @@
 	return
 
 /decl/chemical_reaction/instant/food/blondiemix
-	name = "Blondie Mix"
-	id = "blondiemix"
-	result = "blondiemix"
-	required_reagents = list("flour" = 5, "vanilla" = 5, "sugar" = 5)
+	name = REAGENT_BLONDIEMIX
+	id = REAGENT_ID_BLONDIEMIX
+	result = REAGENT_ID_BLONDIEMIX
+	required_reagents = list(REAGENT_ID_FLOUR = 5, REAGENT_ID_VANILLA = 5, REAGENT_ID_SUGAR = 5)
 	result_amount = 15

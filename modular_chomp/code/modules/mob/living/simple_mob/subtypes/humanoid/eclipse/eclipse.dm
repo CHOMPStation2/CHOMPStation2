@@ -384,7 +384,7 @@
 
 	var/poison_chance = 50
 	var/poison_per_bite = 20
-	var/poison_type = "hyperzine"
+	var/poison_type = REAGENT_ID_HYPERZINE
 
 
 //////////////////////////////////////////////
@@ -406,7 +406,7 @@
 	size_multiplier = 1.25
 	var/poison_chance = 100
 	var/poison_per_bite = 4
-	var/poison_type = "stoxin"
+	var/poison_type = REAGENT_ID_STOXIN
 
 	melee_attack_delay = 3
 
@@ -748,10 +748,10 @@
 	var/obj/item/reagent_containers/glass/beaker/bluespace/B1 = new(src)
 	var/obj/item/reagent_containers/glass/beaker/bluespace/B2 = new(src)
 
-	B1.reagents.add_reagent("cryoslurry", 150)
-	B1.reagents.add_reagent("potassium", 150)
-	B2.reagents.add_reagent("phosphorous", 150)
-	B2.reagents.add_reagent("sugar", 150)
+	B1.reagents.add_reagent(REAGENT_ID_CRYOSLURRY, 150)
+	B1.reagents.add_reagent(REAGENT_ID_POTASSIUM, 150)
+	B2.reagents.add_reagent(REAGENT_ID_PHOSPHORUS, 150)
+	B2.reagents.add_reagent(REAGENT_ID_SUGAR, 150)
 
 	detonator = new/obj/item/assembly_holder/timer_igniter(src)
 
