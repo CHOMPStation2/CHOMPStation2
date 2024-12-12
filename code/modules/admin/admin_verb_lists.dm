@@ -374,6 +374,7 @@ var/list/admin_verbs_mod = list(
 	/client/proc/getserverlog,			//allows us to fetch server logs (diary) for other days,
 	/datum/admins/proc/view_persistent_data,
 	/datum/admins/proc/view_txt_log,	//shows the server log (diary) for today,
+	/datum/admins/proc/spawn_maintpred, //CHOMPEdit
 	/datum/admins/proc/quick_nif, //CHOMPEdit
 	/datum/admins/proc/quick_authentic_nif, //CHOMPEdit
 	/client/proc/admin_teleport,		//CHOMPEdit
