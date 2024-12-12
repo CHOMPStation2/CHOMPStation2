@@ -100,3 +100,9 @@
   - bugfix: lurkers can now spawn with a backpack (inc. their rig module, for protean
       lurkers)
   - qol: lurkers now spawn with 200 thalers
+2024-12-12:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: rig host assimilation
+  - rscadd: maint lurkers, pAIs, and simplemobs now show in the chardir
+  - bugfix: Alt click menu now works under 516
+  - bugfix: Statbrowser scrollbar is colored correctly under 516
