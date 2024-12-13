@@ -280,10 +280,12 @@
 	board_type = new /datum/frame/frame_types/arfgs
 	origin_tech = list(TECH_MAGNET = 4, TECH_POWER = 4, TECH_BIO = 3)
 	req_components = list(
-							/obj/item/stock_parts/micro_laser/high = 2,	//field emitters
+							//ChompEDIT START- We don't share much of the benefit of these from gamer servers, so a small buff to make them viable.
+							/obj/item/stock_parts/micro_laser/high = 1,	//field emitters
 							/obj/item/stock_parts/scanning_module = 1,	//atmosphere sensor
-							/obj/item/stock_parts/capacitor/adv = 1,		//for the JUICE
-							/obj/item/stack/cable_coil = 10)
+							// /obj/item/stock_parts/capacitor/adv = 1,		//for the JUICE
+							/obj/item/stack/cable_coil = 5)
+							//ChompEDIT END
 
 
 /obj/item/circuitboard/injector_maker
