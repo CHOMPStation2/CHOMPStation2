@@ -267,7 +267,7 @@ var/datum/planet/borealis2/planet_borealis2 = null
 	wind_high = 2
 	wind_low = 1
 	light_modifier = 0.5
-	effect_message = "<span class='warning'>Rain falls on you.</span>"
+	effect_message = span_warning("Rain falls on you.")
 
 	transition_chances = list(
 		WEATHER_OVERCAST = 25,
@@ -290,17 +290,17 @@ var/datum/planet/borealis2/planet_borealis2 = null
 				continue // They're indoors, so no need to rain on them.
 
 			// If they have an open umbrella, it'll guard from rain
-			if(istype(L.get_active_hand(), /obj/item/weapon/melee/umbrella))
-				var/obj/item/weapon/melee/umbrella/U = L.get_active_hand()
+			if(istype(L.get_active_hand(), /obj/item/melee/umbrella))
+				var/obj/item/melee/umbrella/U = L.get_active_hand()
 				if(U.open)
 					if(show_message)
-						to_chat(L, "<span class='notice'>Rain patters softly onto your umbrella</span>")
+						to_chat(L, span_notice("Rain patters softly onto your umbrella"))
 					continue
-			else if(istype(L.get_inactive_hand(), /obj/item/weapon/melee/umbrella))
-				var/obj/item/weapon/melee/umbrella/U = L.get_inactive_hand()
+			else if(istype(L.get_inactive_hand(), /obj/item/melee/umbrella))
+				var/obj/item/melee/umbrella/U = L.get_inactive_hand()
 				if(U.open)
 					if(show_message)
-						to_chat(L, "<span class='notice'>Rain patters softly onto your umbrella</span>")
+						to_chat(L, span_notice("Rain patters softly onto your umbrella"))
 					continue
 
 			L.water_act(1)
@@ -314,7 +314,7 @@ var/datum/planet/borealis2/planet_borealis2 = null
 	wind_low = 2
 	light_modifier = 0.3
 	flight_failure_modifier = 10
-	effect_message = "<span class='warning'>Rain falls on you, drenching you in water.</span>"
+	effect_message = span_warning("Rain falls on you, drenching you in water.")
 
 	var/next_lightning_strike = 0 // world.time when lightning will strike.
 	var/min_lightning_cooldown = 5 SECONDS
@@ -345,33 +345,33 @@ var/datum/planet/borealis2/planet_borealis2 = null
 
 			// Lazy wind code
 			if(prob(10))
-				if(istype(L.get_active_hand(), /obj/item/weapon/melee/umbrella))
-					var/obj/item/weapon/melee/umbrella/U = L.get_active_hand()
+				if(istype(L.get_active_hand(), /obj/item/melee/umbrella))
+					var/obj/item/melee/umbrella/U = L.get_active_hand()
 					if(U.open)
-						to_chat(L, "<span class='danger'>You struggle to keep hold of your umbrella!</span>")
+						to_chat(L, span_danger("You struggle to keep hold of your umbrella!"))
 						L.Stun(20)	// This is not nearly as long as it seems
 						playsound(L, 'sound/effects/rustle1.ogg', 100, 1)	// Closest sound I've got to "Umbrella in the wind"
-				else if(istype(L.get_inactive_hand(), /obj/item/weapon/melee/umbrella))
-					var/obj/item/weapon/melee/umbrella/U = L.get_inactive_hand()
+				else if(istype(L.get_inactive_hand(), /obj/item/melee/umbrella))
+					var/obj/item/melee/umbrella/U = L.get_inactive_hand()
 					if(U.open)
-						to_chat(L, "<span class='danger'>A gust of wind yanks the umbrella from your hand!</span>")
+						to_chat(L, span_danger("A gust of wind yanks the umbrella from your hand!"))
 						playsound(L, 'sound/effects/rustle1.ogg', 100, 1)
 						L.drop_from_inventory(U)
 						U.toggle_umbrella()
 						U.throw_at(get_edge_target_turf(U, pick(alldirs)), 8, 1, L)
 
 			// If they have an open umbrella, it'll guard from rain
-			if(istype(L.get_active_hand(), /obj/item/weapon/melee/umbrella))
-				var/obj/item/weapon/melee/umbrella/U = L.get_active_hand()
+			if(istype(L.get_active_hand(), /obj/item/melee/umbrella))
+				var/obj/item/melee/umbrella/U = L.get_active_hand()
 				if(U.open)
 					if(show_message)
-						to_chat(L, "<span class='notice'>Rain showers loudly onto your umbrella!</span>")
+						to_chat(L, span_notice("Rain showers loudly onto your umbrella!"))
 					continue
-			else if(istype(L.get_inactive_hand(), /obj/item/weapon/melee/umbrella))
-				var/obj/item/weapon/melee/umbrella/U = L.get_inactive_hand()
+			else if(istype(L.get_inactive_hand(), /obj/item/melee/umbrella))
+				var/obj/item/melee/umbrella/U = L.get_inactive_hand()
 				if(U.open)
 					if(show_message)
-						to_chat(L, "<span class='notice'>Rain showers loudly onto your umbrella!</span>")
+						to_chat(L, span_notice("Rain showers loudly onto your umbrella!"))
 					continue
 
 
@@ -398,7 +398,7 @@ var/datum/planet/borealis2/planet_borealis2 = null
 	flight_failure_modifier = 15
 	timer_low_bound = 2
 	timer_high_bound = 5
-	effect_message = "<span class='warning'>The hail smacks into you!</span>"
+	effect_message = span_warning("The hail smacks into you!")
 
 	transition_chances = list(
 		WEATHER_RAIN = 45,
@@ -423,17 +423,17 @@ var/datum/planet/borealis2/planet_borealis2 = null
 
 			// If they have an open umbrella, it'll guard from rain
 			// Message plays every time the umbrella gets stolen, just so they're especially aware of what's happening
-			if(istype(H.get_active_hand(), /obj/item/weapon/melee/umbrella))
-				var/obj/item/weapon/melee/umbrella/U = H.get_active_hand()
+			if(istype(H.get_active_hand(), /obj/item/melee/umbrella))
+				var/obj/item/melee/umbrella/U = H.get_active_hand()
 				if(U.open)
 					if(show_message)
-						to_chat(H, "<span class='notice'>Hail patters gently onto your umbrella.</span>")
+						to_chat(H, span_notice("Hail patters gently onto your umbrella."))
 					continue
-			else if(istype(H.get_inactive_hand(), /obj/item/weapon/melee/umbrella))
-				var/obj/item/weapon/melee/umbrella/U = H.get_inactive_hand()
+			else if(istype(H.get_inactive_hand(), /obj/item/melee/umbrella))
+				var/obj/item/melee/umbrella/U = H.get_inactive_hand()
 				if(U.open)
 					if(show_message)
-						to_chat(H, "<span class='notice'>Hail patters gently onto your umbrella.</span>")
+						to_chat(H, span_notice("Hail patters gently onto your umbrella."))
 					continue
 
 			var/target_zone = pick(BP_ALL)

@@ -33,7 +33,7 @@
 
 
 /datum/admins/proc/call_supply_drop()
-	set category = "Fun.Drop Pod" //CHOMPEdit
+	set category = "Fun.Drop Pod"
 	set desc = "Call an immediate supply drop on your location."
 	set name = "Call Supply Drop"
 
@@ -72,7 +72,7 @@
 		choice = tgui_alert(usr, "Do you wish to add weapons?","Supply Drop",list("No","Yes"))
 		if(choice == "Yes")
 			while(1)
-				var/adding_loot_type = tgui_input_list(usr, "Select a new loot path. Cancel to finish.", "Loot Selection", typesof(/obj/item/weapon))
+				var/adding_loot_type = tgui_input_list(usr, "Select a new loot path. Cancel to finish.", "Loot Selection", typesof(/obj/item))
 				if(!adding_loot_type)
 					break
 				chosen_loot_types |= adding_loot_type

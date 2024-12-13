@@ -33,7 +33,7 @@
 	if(data_core)
 		html = data_core.get_manifest(FALSE,TRUE,snowflake = TRUE)
 	else
-		html = "<b>ERROR: NO DATACORE</b>" //Could make the error more fancy later
+		html = span_bold("ERROR: NO DATACORE") //Could make the error more fancy later
 	rustg_file_write(html,"[CONFIG_GET(string/nodebot_location)]\\html.html")
 
 /datum/tgs_chat_command/manifest/Run(datum/tgs_chat_user/sender, params)

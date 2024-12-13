@@ -101,10 +101,6 @@
 			dirtoverlay.alpha = min((dirt - 50) * 5, 255)
 
 /turf/simulated/Entered(atom/A, atom/OL)
-	if(movement_disabled && usr.ckey != movement_disabled_exception)
-		to_chat(usr, "<span class='danger'>Movement is admin-disabled.</span>") //This is to identify lag problems
-		return
-
 	if (istype(A,/mob/living))
 		var/dirtslip = FALSE	//CHOMPEdit
 		var/mob/living/M = A
@@ -200,7 +196,7 @@
 				B.blood_DNA = list()
 			if(!B.blood_DNA[M.dna.unique_enzymes])
 				B.blood_DNA[M.dna.unique_enzymes] = M.dna.b_type
-				B.virus2 = virus_copylist(M.virus2)
+				B.viruses = M.viruses.Copy()
 			return 1 //we bloodied the floor
 		blood_splatter(src,M.get_blood(M.vessel),1)
 		return 1 //we bloodied the floor

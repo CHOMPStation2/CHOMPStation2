@@ -17,6 +17,15 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	var/r_ears3 = 30	// Ear tertiary color.
 	var/g_ears3 = 30	// Ear tertiary color
 	var/b_ears3 = 30	// Ear tertiary color
+
+	/// The typepath of the character's selected secondary ears.
+	var/ear_secondary_style
+	/// The color channels for the character's selected secondary ears
+	///
+	/// * This is a lazy list. Its length, when populated, should but cannot be assumed
+	///   to be the number of color channels supported by the secondary ear style.
+	var/list/ear_secondary_colors = list()
+
 	var/tail_style		// Type of selected tail style
 	var/r_tail = 30		// Tail/Taur color
 	var/g_tail = 30		// Tail/Taur color
@@ -27,6 +36,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	var/r_tail3 = 30 	// For tertiary overlay.
 	var/g_tail3 = 30	// For tertiary overlay.
 	var/b_tail3 = 30	// For tertiary overlay.
+
 	var/wing_style		// Type of selected wing style
 	var/r_wing = 30		// Wing color
 	var/g_wing = 30		// Wing color
@@ -37,6 +47,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	var/r_wing3 = 30	// Wing tertiary color
 	var/g_wing3 = 30	// Wing tertiary color
 	var/b_wing3 = 30	// Wing tertiary color
+
 	var/datum/browser/markings_subwindow = null
 
 // Sanitize ear/wing/tail styles
@@ -59,6 +70,8 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	// Sanitize for non-existent keys.
 	if(ear_style && !(ear_style in get_available_styles(global.ear_styles_list)))
 		ear_style = null
+	if(ear_secondary_style && !(ear_secondary_style in get_available_styles(global.ear_styles_list)))
+		ear_secondary_style = null
 	if(wing_style && !(wing_style in get_available_styles(global.wing_styles_list)))
 		wing_style = null
 	if(tail_style && !(tail_style in get_available_styles(global.tail_styles_list)))
@@ -113,16 +126,20 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	pref.b_eyes				= save_data["eyes_blue"]
 	pref.b_type				= save_data["b_type"]
 	pref.disabilities		= save_data["disabilities"]
-	pref.organ_data			= save_data["organ_data"]
-	pref.rlimb_data			= save_data["rlimb_data"]
-	pref.body_markings		= save_data["body_markings"]
+	pref.organ_data			= check_list_copy(save_data["organ_data"])
+	pref.rlimb_data			= check_list_copy(save_data["rlimb_data"])
+	pref.body_markings		= check_list_copy(save_data["body_markings"])
+	for(var/i in pref.body_markings)
+		pref.body_markings[i] = check_list_copy(pref.body_markings[i])
+		for(var/j in pref.body_markings[i])
+			pref.body_markings[i][j] = check_list_copy(pref.body_markings[i][j])
 	pref.synth_color		= save_data["synth_color"]
 	pref.r_synth			= save_data["synth_red"]
 	pref.g_synth			= save_data["synth_green"]
 	pref.b_synth			= save_data["synth_blue"]
 	pref.synth_markings		= save_data["synth_markings"]
 	pref.bgstate			= save_data["bgstate"]
-	pref.body_descriptors	= save_data["body_descriptors"]
+	pref.body_descriptors	= check_list_copy(save_data["body_descriptors"])
 	//YWadd start
 	pref.wingdings			= save_data["Wingdings"]
 	pref.colorblind_mono	= save_data["colorblind_mono"]
@@ -140,6 +157,8 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	pref.r_ears3			= save_data["r_ears3"]
 	pref.g_ears3			= save_data["g_ears3"]
 	pref.b_ears3			= save_data["b_ears3"]
+	pref.ear_secondary_style = save_data["ear_secondary_style"]
+	pref.ear_secondary_colors = save_data["ear_secondary_colors"]
 	pref.tail_style			= save_data["tail_style"]
 	pref.r_tail				= save_data["r_tail"]
 	pref.g_tail				= save_data["g_tail"]
@@ -185,16 +204,21 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	save_data["eyes_blue"]			= pref.b_eyes
 	save_data["b_type"]				= pref.b_type
 	save_data["disabilities"]		= pref.disabilities
-	save_data["organ_data"]			= pref.organ_data
-	save_data["rlimb_data"]			= pref.rlimb_data
-	save_data["body_markings"]		= pref.body_markings
+	save_data["organ_data"]			= check_list_copy(pref.organ_data)
+	save_data["rlimb_data"]			= check_list_copy(pref.rlimb_data)
+	var/list/body_markings 			= check_list_copy(pref.body_markings)
+	for(var/i in pref.body_markings)
+		body_markings[i] = check_list_copy(body_markings[i])
+		for(var/j in body_markings[i])
+			body_markings[i][j] = check_list_copy(body_markings[i][j])
+	save_data["body_markings"]		= body_markings
 	save_data["synth_color"]		= pref.synth_color
 	save_data["synth_red"]			= pref.r_synth
 	save_data["synth_green"]		= pref.g_synth
 	save_data["synth_blue"]			= pref.b_synth
 	save_data["synth_markings"]		= pref.synth_markings
 	save_data["bgstate"]			= pref.bgstate
-	save_data["body_descriptors"]	= pref.body_descriptors
+	save_data["body_descriptors"]	= check_list_copy(pref.body_descriptors)
 	//YWadd start
 	save_data["Wingdings"]			= pref.wingdings
 	save_data["colorblind_mono"]	= pref.colorblind_mono
@@ -212,6 +236,8 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	save_data["r_ears3"]			= pref.r_ears3
 	save_data["g_ears3"]			= pref.g_ears3
 	save_data["b_ears3"]			= pref.b_ears3
+	save_data["ear_secondary_style"] = pref.ear_secondary_style
+	save_data["ear_secondary_colors"] = pref.ear_secondary_colors
 	save_data["tail_style"]			= pref.tail_style
 	save_data["r_tail"]				= pref.r_tail
 	save_data["g_tail"]				= pref.g_tail
@@ -280,6 +306,14 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	pref.r_ears3	= sanitize_integer(pref.r_ears3, 0, 255, initial(pref.r_ears3))
 	pref.g_ears3	= sanitize_integer(pref.g_ears3, 0, 255, initial(pref.g_ears3))
 	pref.b_ears3	= sanitize_integer(pref.b_ears3, 0, 255, initial(pref.b_ears3))
+
+	// sanitize secondary ears
+	pref.ear_secondary_colors = SANITIZE_LIST(pref.ear_secondary_colors)
+	if(length(pref.ear_secondary_colors) > length(GLOB.fancy_sprite_accessory_color_channel_names))
+		pref.ear_secondary_colors.len = length(GLOB.fancy_sprite_accessory_color_channel_names)
+	for(var/i in 1 to length(pref.ear_secondary_colors))
+		pref.ear_secondary_colors[i] = sanitize_hexcolor(pref.ear_secondary_colors[i], "#ffffff")
+
 	pref.r_tail		= sanitize_integer(pref.r_tail, 0, 255, initial(pref.r_tail))
 	pref.g_tail		= sanitize_integer(pref.g_tail, 0, 255, initial(pref.g_tail))
 	pref.b_tail		= sanitize_integer(pref.b_tail, 0, 255, initial(pref.b_tail))
@@ -354,6 +388,10 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	character.r_ears3 =    pref.r_ears3
 	character.b_ears3 =    pref.b_ears3
 	character.g_ears3 =    pref.g_ears3
+
+	// apply secondary ears; sanitize again to prevent runtimes in rendering
+	character.ear_secondary_style = ear_styles[pref.ear_secondary_style]
+	character.ear_secondary_colors = SANITIZE_LIST(pref.ear_secondary_colors)
 
 	var/list/tail_styles = pref.get_available_styles(global.tail_styles_list)
 	character.tail_style = tail_styles[pref.tail_style]
@@ -474,16 +512,16 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 
 	var/datum/species/mob_species = GLOB.all_species[pref.species]
 	. += "<table><tr style='vertical-align:top'><td><b>Body</b> "
-	. += "(<a href='?src=\ref[src];random=1'>&reg;</A>)"
+	. += "(<a href='byond://?src=\ref[src];random=1'>&reg;</A>)"
 	. += "<br>"
-	. += "Species: <a href='?src=\ref[src];show_species=1'>[pref.species]</a><br>"
-	. += "Blood Type: <a href='?src=\ref[src];blood_type=1'>[pref.b_type]</a><br>"
+	. += "Species: <a href='byond://?src=\ref[src];show_species=1'>[pref.species]</a><br>"
+	. += "Blood Type: <a href='byond://?src=\ref[src];blood_type=1'>[pref.b_type]</a><br>"
 	if(has_flag(mob_species, HAS_SKIN_TONE))
-		. += "Skin Tone: <a href='?src=\ref[src];skin_tone=1'>[-pref.s_tone + 35]/220</a><br>"
-	. += "<b>Disabilities</b><br> <a href='?src=\ref[src];disabilities_yw=1'>Adjust</a><br>" // YWadd
-	//YWcommented moved onto disabilities. += "Needs Glasses: <a href='?src=\ref[src];disabilities=[NEARSIGHTED]'><b>[pref.disabilities & NEARSIGHTED ? "Yes" : "No"]</b></a><br>"
-	. += "Limbs: <a href='?src=\ref[src];limbs=1'>Adjust</a> <a href='?src=\ref[src];reset_limbs=1'>Reset</a><br>"
-	. += "Internal Organs: <a href='?src=\ref[src];organs=1'>Adjust</a><br>"
+		. += "Skin Tone: <a href='byond://?src=\ref[src];skin_tone=1'>[-pref.s_tone + 35]/220</a><br>"
+	. += "<b>Disabilities</b><br> <a href='byond://?src=\ref[src];disabilities_yw=1'>Adjust</a><br>" // YWadd
+	//YWcommented moved onto disabilities. += "Needs Glasses: <a href='byond://?src=\ref[src];disabilities=[NEARSIGHTED]'><b>[pref.disabilities & NEARSIGHTED ? "Yes" : "No"]</b></a><br>"
+	. += "Limbs: <a href='byond://?src=\ref[src];limbs=1'>Adjust</a> <a href='byond://?src=\ref[src];reset_limbs=1'>Reset</a><br>"
+	. += "Internal Organs: <a href='byond://?src=\ref[src];organs=1'>Adjust</a><br>"
 	//display limbs below
 	var/ind = 0
 	for(var/name in pref.organ_data)
@@ -595,96 +633,105 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 		. += "<table>"
 		for(var/entry in pref.body_descriptors)
 			var/datum/mob_descriptor/descriptor = mob_species.descriptors[entry]
-			. += "<tr><td><b>[capitalize(descriptor.chargen_label)]:</b></td><td>[descriptor.get_standalone_value_descriptor(pref.body_descriptors[entry])]</td><td><a href='?src=\ref[src];change_descriptor=[entry]'>Change</a><br/></td></tr>"
+			. += "<tr><td><b>[capitalize(descriptor.chargen_label)]:</b></td><td>[descriptor.get_standalone_value_descriptor(pref.body_descriptors[entry])]</td><td><a href='byond://?src=\ref[src];change_descriptor=[entry]'>Change</a><br/></td></tr>"
 		. += "</table><br>"
 
 	. += "</td><td><b>Preview</b><br>"
-	. += "<br><a href='?src=\ref[src];cycle_bg=1'>Cycle background</a>"
-	. += "<br><a href='?src=\ref[src];toggle_preview_value=[EQUIP_PREVIEW_LOADOUT]'>[pref.equip_preview_mob & EQUIP_PREVIEW_LOADOUT ? "Hide loadout" : "Show loadout"]</a>"
-	. += "<br><a href='?src=\ref[src];toggle_preview_value=[EQUIP_PREVIEW_JOB]'>[pref.equip_preview_mob & EQUIP_PREVIEW_JOB ? "Hide job gear" : "Show job gear"]</a>"
-	. += "<br><a href='?src=\ref[src];toggle_animations=1'>[pref.animations_toggle ? "Stop animations" : "Show animations"]</a>"
+	. += "<br><a href='byond://?src=\ref[src];cycle_bg=1'>Cycle background</a>"
+	. += "<br><a href='byond://?src=\ref[src];toggle_preview_value=[EQUIP_PREVIEW_LOADOUT]'>[pref.equip_preview_mob & EQUIP_PREVIEW_LOADOUT ? "Hide loadout" : "Show loadout"]</a>"
+	. += "<br><a href='byond://?src=\ref[src];toggle_preview_value=[EQUIP_PREVIEW_JOB]'>[pref.equip_preview_mob & EQUIP_PREVIEW_JOB ? "Hide job gear" : "Show job gear"]</a>"
+	. += "<br><a href='byond://?src=\ref[src];toggle_animations=1'>[pref.animations_toggle ? "Stop animations" : "Show animations"]</a>"
 	. += "</td></tr></table>"
 
-	. += "<b>Hair</b><br>"
+	. += span_bold("Hair") + "<br>"
 	if(has_flag(mob_species, HAS_HAIR_COLOR))
-		. += "<a href='?src=\ref[src];hair_color=1'>Change Color</a> [color_square(pref.r_hair, pref.g_hair, pref.b_hair)] "
-	. += " Style: <a href='?src=\ref[src];hair_style_left=[pref.h_style]'><</a> <a href='?src=\ref[src];hair_style_right=[pref.h_style]''>></a> <a href='?src=\ref[src];hair_style=1'>[pref.h_style]</a><br>" //The <</a> & ></a> in this line is correct-- those extra characters are the arrows you click to switch between styles.
+		. += "<a href='byond://?src=\ref[src];hair_color=1'>Change Color</a> [color_square(pref.r_hair, pref.g_hair, pref.b_hair)] "
+	. += " Style: <a href='byond://?src=\ref[src];hair_style_left=[pref.h_style]'><</a> <a href='byond://?src=\ref[src];hair_style_right=[pref.h_style]''>></a> <a href='byond://?src=\ref[src];hair_style=1'>[pref.h_style]</a><br>" //The <</a> & ></a> in this line is correct-- those extra characters are the arrows you click to switch between styles.
 
-	. += "<b>Gradient</b><br>"
-	. += "<a href='?src=\ref[src];grad_color=1'>Change Color</a> [color_square(pref.r_grad, pref.g_grad, pref.b_grad)] "
-	. += " Style: <a href='?src=\ref[src];grad_style_left=[pref.grad_style]'><</a> <a href='?src=\ref[src];grad_style_right=[pref.grad_style]''>></a> <a href='?src=\ref[src];grad_style=1'>[pref.grad_style]</a><br>"
+	. += span_bold("Gradient") + "<br>"
+	. += "<a href='byond://?src=\ref[src];grad_color=1'>Change Color</a> [color_square(pref.r_grad, pref.g_grad, pref.b_grad)] "
+	. += " Style: <a href='byond://?src=\ref[src];grad_style_left=[pref.grad_style]'><</a> <a href='byond://?src=\ref[src];grad_style_right=[pref.grad_style]''>></a> <a href='byond://?src=\ref[src];grad_style=1'>[pref.grad_style]</a><br>"
 
 	. += "<br><b>Facial</b><br>"
 	if(has_flag(mob_species, HAS_HAIR_COLOR))
-		. += "<a href='?src=\ref[src];facial_color=1'>Change Color</a> [color_square(pref.r_facial, pref.g_facial, pref.b_facial)] "
-	. += " Style: <a href='?src=\ref[src];facial_style_left=[pref.f_style]'><</a> <a href='?src=\ref[src];facial_style_right=[pref.f_style]''>></a> <a href='?src=\ref[src];facial_style=1'>[pref.f_style]</a><br>" //Same as above with the extra > & < characters
+		. += "<a href='byond://?src=\ref[src];facial_color=1'>Change Color</a> [color_square(pref.r_facial, pref.g_facial, pref.b_facial)] "
+	. += " Style: <a href='byond://?src=\ref[src];facial_style_left=[pref.f_style]'><</a> <a href='byond://?src=\ref[src];facial_style_right=[pref.f_style]''>></a> <a href='byond://?src=\ref[src];facial_style=1'>[pref.f_style]</a><br>" //Same as above with the extra > & < characters
 
 	if(has_flag(mob_species, HAS_EYE_COLOR))
 		. += "<br><b>Eyes</b><br>"
-		. += "<a href='?src=\ref[src];eye_color=1'>Change Color</a> [color_square(pref.r_eyes, pref.g_eyes, pref.b_eyes)]<br>"
+		. += "<a href='byond://?src=\ref[src];eye_color=1'>Change Color</a> [color_square(pref.r_eyes, pref.g_eyes, pref.b_eyes)]<br>"
 
 	if(has_flag(mob_species, HAS_SKIN_COLOR))
 		. += "<br><b>Body Color</b><br>"
-		. += "<a href='?src=\ref[src];skin_color=1'>Change Color</a> [color_square(pref.r_skin, pref.g_skin, pref.b_skin)]<br>"
+		. += "<a href='byond://?src=\ref[src];skin_color=1'>Change Color</a> [color_square(pref.r_skin, pref.g_skin, pref.b_skin)]<br>"
 
 	if(mob_species.digi_allowed)
-		. += "<br><b>Digitigrade?:</b> <a href='?src=\ref[src];digitigrade=1'><b>[pref.digitigrade ? "Yes" : "No"]</b></a><br>"
+		. += "<br><b>Digitigrade?:</b> <a href='byond://?src=\ref[src];digitigrade=1'><b>[pref.digitigrade ? "Yes" : "No"]</b></a><br>"
 
 	. += "<h2>Genetics Settings</h2>"
 
 	var/list/ear_styles = pref.get_available_styles(global.ear_styles_list)
 	var/datum/sprite_accessory/ears/ear = ear_styles[pref.ear_style]
-	. += "<b>Ears</b><br>"
+	. += span_bold("Ears") + "<br>"
 	if(istype(ear))
-		. += " Style: <a href='?src=\ref[src];ear_style=1'>[ear.name]</a><br>"
+		. += " Style: <a href='byond://?src=\ref[src];ear_style=1'>[ear.name]</a><br>"
 		if(ear.do_colouration)
-			. += "<a href='?src=\ref[src];ear_color=1'>Change Color</a> [color_square(pref.r_ears, pref.g_ears, pref.b_ears)]<br>"
+			. += "<a href='byond://?src=\ref[src];ear_color=1'>Change Color</a> [color_square(pref.r_ears, pref.g_ears, pref.b_ears)]<br>"
 		if(ear.extra_overlay)
-			. += "<a href='?src=\ref[src];ear_color2=1'>Change Secondary Color</a> [color_square(pref.r_ears2, pref.g_ears2, pref.b_ears2)]<br>"
+			. += "<a href='byond://?src=\ref[src];ear_color2=1'>Change Secondary Color</a> [color_square(pref.r_ears2, pref.g_ears2, pref.b_ears2)]<br>"
 		if(ear.extra_overlay2)
-			. += "<a href='?src=\ref[src];ear_color3=1'>Change Tertiary Color</a> [color_square(pref.r_ears3, pref.g_ears3, pref.b_ears3)]<br>"
+			. += "<a href='byond://?src=\ref[src];ear_color3=1'>Change Tertiary Color</a> [color_square(pref.r_ears3, pref.g_ears3, pref.b_ears3)]<br>"
 	else
-		. += " Style: <a href='?src=\ref[src];ear_style=1'>Select</a><br>"
+		. += " Style: <a href='byond://?src=\ref[src];ear_style=1'>Select</a><br>"
+
+	var/datum/sprite_accessory/ears/ears_secondary = ear_styles[pref.ear_secondary_style]
+	. += span_bold("Horns") + "<br>"
+	if(istype(ears_secondary))
+		. += " Style: <a href='byond://?src=\ref[src];ear_secondary_style=1'>[ears_secondary.name]</a><br>"
+		for(var/channel in 1 to min(ears_secondary.get_color_channel_count(), length(GLOB.fancy_sprite_accessory_color_channel_names)))
+			. += "<a href='byond://?src=\ref[src];ear_secondary_color=[channel]'>Change [GLOB.fancy_sprite_accessory_color_channel_names[channel]] Color</a> [color_square(hex = LAZYACCESS(pref.ear_secondary_colors, channel) || "#ffffff")]<br>"
+	else
+		. += " Style: <a href='byond://?src=\ref[src];ear_secondary_style=1'>Select</a><br>"
 
 	var/list/tail_styles = pref.get_available_styles(global.tail_styles_list)
 	var/datum/sprite_accessory/tail/tail = tail_styles[pref.tail_style]
-	. += "<b>Tail</b><br>"
+	. += span_bold("Tail") + "<br>"
 	if(istype(tail))
-		. += " Style: <a href='?src=\ref[src];tail_style=1'>[tail.name]</a><br>"
+		. += " Style: <a href='byond://?src=\ref[src];tail_style=1'>[tail.name]</a><br>"
 		if(tail.do_colouration)
-			. += "<a href='?src=\ref[src];tail_color=1'>Change Color</a> [color_square(pref.r_tail, pref.g_tail, pref.b_tail)]<br>"
+			. += "<a href='byond://?src=\ref[src];tail_color=1'>Change Color</a> [color_square(pref.r_tail, pref.g_tail, pref.b_tail)]<br>"
 		if(tail.extra_overlay)
-			. += "<a href='?src=\ref[src];tail_color2=1'>Change Secondary Color</a> [color_square(pref.r_tail2, pref.g_tail2, pref.b_tail2)]<br>"
+			. += "<a href='byond://?src=\ref[src];tail_color2=1'>Change Secondary Color</a> [color_square(pref.r_tail2, pref.g_tail2, pref.b_tail2)]<br>"
 		if(tail.extra_overlay2)
-			. += "<a href='?src=\ref[src];tail_color3=1'>Change Tertiary Color</a> [color_square(pref.r_tail3, pref.g_tail3, pref.b_tail3)]<br>"
+			. += "<a href='byond://?src=\ref[src];tail_color3=1'>Change Tertiary Color</a> [color_square(pref.r_tail3, pref.g_tail3, pref.b_tail3)]<br>"
 	else
-		. += " Style: <a href='?src=\ref[src];tail_style=1'>Select</a><br>"
+		. += " Style: <a href='byond://?src=\ref[src];tail_style=1'>Select</a><br>"
 
 	var/list/wing_styles = pref.get_available_styles(global.wing_styles_list)
 	var/datum/sprite_accessory/wing/wings = wing_styles[pref.wing_style]
-	. += "<b>Wing</b><br>"
+	. += span_bold("Wing") + "<br>"
 	if(istype(wings))
-		. += " Style: <a href='?src=\ref[src];wing_style=1'>[wings.name]</a><br>"
+		. += " Style: <a href='byond://?src=\ref[src];wing_style=1'>[wings.name]</a><br>"
 		if(wings.do_colouration)
-			. += "<a href='?src=\ref[src];wing_color=1'>Change Color</a> [color_square(pref.r_wing, pref.g_wing, pref.b_wing)]<br>"
+			. += "<a href='byond://?src=\ref[src];wing_color=1'>Change Color</a> [color_square(pref.r_wing, pref.g_wing, pref.b_wing)]<br>"
 		if(wings.extra_overlay)
-			. += "<a href='?src=\ref[src];wing_color2=1'>Change Secondary Color</a> [color_square(pref.r_wing2, pref.g_wing2, pref.b_wing2)]<br>"
+			. += "<a href='byond://?src=\ref[src];wing_color2=1'>Change Secondary Color</a> [color_square(pref.r_wing2, pref.g_wing2, pref.b_wing2)]<br>"
 		if(wings.extra_overlay2)
-			. += "<a href='?src=\ref[src];wing_color3=1'>Change Secondary Color</a> [color_square(pref.r_wing3, pref.g_wing3, pref.b_wing3)]<br>"
+			. += "<a href='byond://?src=\ref[src];wing_color3=1'>Change Secondary Color</a> [color_square(pref.r_wing3, pref.g_wing3, pref.b_wing3)]<br>"
 	else
-		. += " Style: <a href='?src=\ref[src];wing_style=1'>Select</a><br>"
+		. += " Style: <a href='byond://?src=\ref[src];wing_style=1'>Select</a><br>"
 
-	. += "<br><a href='?src=\ref[src];marking_style=1'>Body Markings +</a><br>"
+	. += "<br><a href='byond://?src=\ref[src];marking_style=1'>Body Markings +</a><br>"
 	. += "<table>"
 	for(var/M in pref.body_markings)
-		. += "<tr><td>[M]</td><td>[pref.body_markings.len > 1 ? "<a href='?src=\ref[src];marking_up=[M]'>&#708;</a> <a href='?src=\ref[src];marking_down=[M]'>&#709;</a> <a href='?src=\ref[src];marking_move=[M]'>mv</a> " : ""]<a href='?src=\ref[src];marking_remove=[M]'>-</a> <a href='?src=\ref[src];marking_color=[M]'>Color</a>[color_square(hex = pref.body_markings[M]["color"] ? pref.body_markings[M]["color"] : "#000000")] - <a href='?src=\ref[src];marking_submenu=[M]'>Customize</a></td></tr>"
+		. += "<tr><td>[M]</td><td>[pref.body_markings.len > 1 ? "<a href='byond://?src=\ref[src];marking_up=[M]'>&#708;</a> <a href='byond://?src=\ref[src];marking_down=[M]'>&#709;</a> <a href='byond://?src=\ref[src];marking_move=[M]'>mv</a> " : ""]<a href='byond://?src=\ref[src];marking_remove=[M]'>-</a> <a href='byond://?src=\ref[src];marking_color=[M]'>Color</a>[color_square(hex = pref.body_markings[M]["color"] ? pref.body_markings[M]["color"] : "#000000")] - <a href='byond://?src=\ref[src];marking_submenu=[M]'>Customize</a></td></tr>"
 
 	. += "</table>"
 	. += "<br>"
-	. += "<b>Allow Synth markings:</b> <a href='?src=\ref[src];synth_markings=1'><b>[pref.synth_markings ? "Yes" : "No"]</b></a><br>"
-	. += "<b>Allow Synth color:</b> <a href='?src=\ref[src];synth_color=1'><b>[pref.synth_color ? "Yes" : "No"]</b></a><br>"
+	. += span_bold("Allow Synth markings:") + " <a href='byond://?src=\ref[src];synth_markings=1'><b>[pref.synth_markings ? "Yes" : "No"]</b></a><br>"
+	. += span_bold("Allow Synth color:") + " <a href='byond://?src=\ref[src];synth_color=1'><b>[pref.synth_color ? "Yes" : "No"]</b></a><br>"
 	if(pref.synth_color)
-		. += "<a href='?src=\ref[src];synth2_color=1'>Change Color</a> [color_square(pref.r_synth, pref.g_synth, pref.b_synth)]"
+		. += "<a href='byond://?src=\ref[src];synth2_color=1'>Change Color</a> [color_square(pref.r_synth, pref.g_synth, pref.b_synth)]"
 
 	. = jointext(.,null)
 
@@ -751,7 +798,8 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 			var/list/valid_hairstyles = pref.get_valid_hairstyles()
 
 			if(valid_hairstyles.len)
-				pref.h_style = pick(valid_hairstyles)
+				if(!(pref.h_style in valid_hairstyles))
+					pref.h_style = pick(valid_hairstyles)
 			else
 				//this shouldn't happen
 				pref.h_style = hair_styles_list["Bald"]
@@ -760,7 +808,8 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 			var/list/valid_facialhairstyles = pref.get_valid_facialhairstyles()
 
 			if(valid_facialhairstyles.len)
-				pref.f_style = pick(valid_facialhairstyles)
+				if(!(pref.f_style in valid_facialhairstyles))
+					pref.f_style = pick(valid_facialhairstyles)
 			else
 				//this shouldn't happen
 				pref.f_style = facial_hair_styles_list["Shaved"]
@@ -1199,7 +1248,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 				organ = O_STOMACH
 			if("Brain")
 				if(pref.organ_data[BP_HEAD] != "cyborg")
-					to_chat(user, "<span class='warning'>You may only select a cybernetic or synthetic brain if you have a full prosthetic body.</span>")
+					to_chat(user, span_warning("You may only select a cybernetic or synthetic brain if you have a full prosthetic body."))
 					return
 				organ = "brain"
 
@@ -1338,6 +1387,32 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 			pref.b_ears3 = hex2num(copytext(new_earc3, 6, 8))
 			return TOPIC_REFRESH_UPDATE_PREVIEW
 
+	else if(href_list["ear_secondary_style"])
+		var/new_style = tgui_input_list(user, "Select an ear style for this character:", "Character Preference", pref.get_available_styles(global.ear_styles_list), pref.ear_secondary_style)
+		if(!new_style)
+			return TOPIC_NOACTION
+		pref.ear_secondary_style = new_style
+		return TOPIC_REFRESH_UPDATE_PREVIEW
+	else if(href_list["ear_secondary_color"])
+		var/channel = text2num(href_list["ear_secondary_color"])
+		// very important sanity check; this makes sure someone can't crash the server by setting channel to some insanely high value
+		if(channel > GLOB.fancy_sprite_accessory_color_channel_names.len)
+			return TOPIC_NOACTION
+		// this would say 'secondary ears' but you'd get 'choose your character's primary secondary ear colour' which sounds silly
+		var/new_color = input(
+			user,
+			"Choose your character's [lowertext(GLOB.fancy_sprite_accessory_color_channel_names[channel])] ear colour:",
+			"Secondary Ear Coloration",
+			LAZYACCESS(pref.ear_secondary_colors, channel) || "#ffffff",
+		) as color | null
+		if(!new_color)
+			return TOPIC_NOACTION
+		// ensures color channel list is at least that long
+		// the upper bound is to have a secondary safety check because list index set is a dangerous call
+		pref.ear_secondary_colors.len = clamp(length(pref.ear_secondary_colors), channel, length(GLOB.fancy_sprite_accessory_color_channel_names))
+		pref.ear_secondary_colors[channel] = new_color
+		return TOPIC_REFRESH_UPDATE_PREVIEW
+
 	else if(href_list["tail_style"])
 		var/new_tail_style = tgui_input_list(user, "Select a tail style for this character:", "Character Preference", pref.get_available_styles(global.tail_styles_list), pref.tail_style)
 		if(new_tail_style)
@@ -1428,7 +1503,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 		pref.species_preview = SPECIES_HUMAN
 	var/datum/species/current_species = GLOB.all_species[pref.species_preview]
 	var/dat = "<body>"
-	dat += "<center><h2>[current_species.name] \[<a href='?src=\ref[src];show_species=1'>change</a>\]</h2></center><hr/>"
+	dat += "<center><h2>[current_species.name] \[<a href='byond://?src=\ref[src];show_species=1'>change</a>\]</h2></center><hr/>"
 	dat += "<table padding='8px'>"
 	dat += "<tr>"
 	//vorestation edit begin
@@ -1441,7 +1516,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	if("preview" in cached_icon_states(current_species.icobase))
 		user << browse_rsc(icon(current_species.icobase,"preview"), "species_preview_[current_species.name].png") //ChompEDIT usr -> user
 		dat += "<img src='species_preview_[current_species.name].png' width='64px' height='64px'><br/><br/>"
-	dat += "<b>Language:</b> [current_species.species_language]<br/>"
+	dat += span_bold("Language:") + " [current_species.species_language]<br/>"
 	dat += "<small>"
 	if(current_species.spawn_flags & SPECIES_CAN_JOIN)
 		switch(current_species.rarity_value)
@@ -1490,11 +1565,11 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 
 	if(restricted)
 		if(restricted == 1)
-			dat += "<font color='red'><b>You cannot play as this species.</br><small>If you wish to be whitelisted, you can make an application post on <a href='?src=\ref[user];preference=open_whitelist_forum'>the forums</a>.</small></b></font></br>"
+			dat += "<font color='red'><b>You cannot play as this species.</br><small>If you wish to be whitelisted, you can make an application post on <a href='byond://?src=\ref[user];preference=open_whitelist_forum'>the forums</a>.</small></b></font></br>"
 		else if(restricted == 2)
 			dat += "<font color='red'><b>You cannot play as this species.</br><small>This species is not available for play as a station race..</small></b></font></br>"
 	if(!restricted || check_rights(R_ADMIN|R_EVENT, 0) || current_species.spawn_flags & SPECIES_WHITELIST_SELECTABLE)	//VOREStation Edit: selectability
-		dat += "\[<a href='?src=\ref[src];set_species=[pref.species_preview]'>select</a>\]"
+		dat += "\[<a href='byond://?src=\ref[src];set_species=[pref.species_preview]'>select</a>\]"
 	dat += "</center></body>"
 
 	user << browse(dat, "window=species;size=700x400")
@@ -1502,15 +1577,15 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 /datum/category_item/player_setup_item/general/body/proc/markings_subwindow(mob/user, marking)
 	var/static/list/part_to_string = list(BP_HEAD = "Head", BP_TORSO = "Upper Body", BP_GROIN = "Lower Body", BP_R_ARM = "Right Arm", BP_L_ARM = "Left Arm", BP_R_HAND = "Right Hand", BP_L_HAND = "Left Hand", BP_R_LEG = "Right Leg", BP_L_LEG = "Left Leg", BP_R_FOOT = "Right Foot", BP_L_FOOT = "Left Foot")
 	var/dat = "<html><body><center><h2>Editing '[marking]'</h2><br>"
-	dat += "<a href='?src=\ref[src];toggle_all_marking_selection=[marking];toggle=1'>Enable All</a> "
-	dat += "<a href='?src=\ref[src];toggle_all_marking_selection=[marking];toggle=0'>Disable All</a> "
-	dat += "<a href='?src=\ref[src];color_all_marking_selection=[marking]'>Change Color of All</a><br></center>"
+	dat += "<a href='byond://?src=\ref[src];toggle_all_marking_selection=[marking];toggle=1'>Enable All</a> "
+	dat += "<a href='byond://?src=\ref[src];toggle_all_marking_selection=[marking];toggle=0'>Disable All</a> "
+	dat += "<a href='byond://?src=\ref[src];color_all_marking_selection=[marking]'>Change Color of All</a><br></center>"
 	dat += "<br>"
 	for (var/bodypart in pref.body_markings[marking])
 		if (!islist(pref.body_markings[marking][bodypart])) continue
 		dat += "[part_to_string[bodypart]]: [color_square(hex = pref.body_markings[marking][bodypart]["color"])] "
-		dat += "<a href='?src=\ref[src];zone_marking_color=[marking];zone=[bodypart]'>Change</a> "
-		dat += "<a href='?src=\ref[src];zone_marking_toggle=[marking];zone=[bodypart];toggle=[!pref.body_markings[marking][bodypart]["on"]]'>[pref.body_markings[marking][bodypart]["on"] ? "Toggle Off" : "Toggle On"]</a><br>"
+		dat += "<a href='byond://?src=\ref[src];zone_marking_color=[marking];zone=[bodypart]'>Change</a> "
+		dat += "<a href='byond://?src=\ref[src];zone_marking_toggle=[marking];zone=[bodypart];toggle=[!pref.body_markings[marking][bodypart]["on"]]'>[pref.body_markings[marking][bodypart]["on"] ? "Toggle Off" : "Toggle On"]</a><br>"
 
 	dat += "</body></html>"
 	winshow(user, "prefs_markings_subwindow", TRUE)

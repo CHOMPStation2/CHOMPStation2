@@ -40,7 +40,7 @@
 	icon_state = "kitten"
 	item_state = "kitten"
 	gender = MALE
-	holder_type = /obj/item/weapon/holder/cat/fluff/tabiranth
+	holder_type = /obj/item/holder/cat/fluff/tabiranth
 	friend_name = "Ascian"
 	digestable = 0
 	meat_amount = 0
@@ -52,7 +52,7 @@
 	if (has_AI() && friend)
 		var/friend_dist = get_dist(src,friend)
 		if (friend_dist <= 1)
-			if (friend.stat >= DEAD || friend.health <= CONFIG_GET(number/health_threshold_softcrit)) // CHOMPEdit
+			if (friend.stat >= DEAD || friend.health <= CONFIG_GET(number/health_threshold_softcrit))
 				if (prob((friend.stat < DEAD)? 50 : 15))
 					var/verb = pick("meows", "mews", "mrowls")
 					audible_emote(pick("[verb] in distress.", "[verb] anxiously."))

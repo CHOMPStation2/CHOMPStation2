@@ -80,3 +80,19 @@ export const MessengerEmbeds: FeatureToggle = {
     'When enabled, PDAs and Communicators will attempt to embed links from discord & imgur.',
   component: CheckboxInput,
 };
+
+export const AutoPunctuation: FeatureToggle = {
+  name: 'Automatic Punctuation',
+  category: 'GAMEPLAY',
+  description:
+    'When enabled, if your message ends in a letter with no punctuation, a period will be added.',
+  component: CheckboxInput,
+};
+
+export const BrowserDevTools: FeatureToggle = {
+  name: 'Browser Dev Tools',
+  category: 'UI',
+  description:
+    'When enabled, you can right click -> inspect to open Microsoft Edge dev tools. BYOND 516+ Only.',
+  component: CheckboxInput,
+};

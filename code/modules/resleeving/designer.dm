@@ -9,13 +9,12 @@
 
 /obj/machinery/computer/transhuman/designer
 	name = "body design console"
-	catalogue_data = list(/datum/category_item/catalogue/information/organization/vey_med,
-						/datum/category_item/catalogue/technology/resleeving)
+	catalogue_data = list(/datum/category_item/catalogue/technology/resleeving)
 	icon = 'icons/obj/computer.dmi'
 	icon_keyboard = "med_key"
 	icon_screen = "explosive"
 	light_color = "#315ab4"
-	circuit = /obj/item/weapon/circuitboard/body_designer
+	circuit = /obj/item/circuitboard/body_designer
 	req_access = list(access_medical) // Used for loading people's designs
 	var/temp = ""
 	var/menu = MENU_MAIN //Which menu screen to display
@@ -27,7 +26,7 @@
 	var/obj/screen/west_preview = null
 	// Mannequins are somewhat expensive to create, so cache it
 	var/mob/living/carbon/human/dummy/mannequin/mannequin = null
-	var/obj/item/weapon/disk/body_record/disk = null
+	var/obj/item/disk/body_record/disk = null
 
 	// Resleeving database this machine interacts with. Blank for default database
 	// Needs a matching /datum/transcore_db with key defined in code
@@ -71,11 +70,11 @@
 	..()
 
 /obj/machinery/computer/transhuman/designer/attackby(obj/item/W as obj, mob/user as mob)
-	if(istype(W, /obj/item/weapon/disk/body_record))
+	if(istype(W, /obj/item/disk/body_record))
 		user.unEquip(W)
 		disk = W
 		disk.forceMove(src)
-		to_chat(user, "<span class='notice'>You insert \the [W] into \the [src].</span>")
+		to_chat(user, span_notice("You insert \the [W] into \the [src]."))
 		updateUsrDialog()
 	else
 		..()
@@ -148,6 +147,17 @@
 				temp["colorHref2"] = "ear_color2"
 		styles["Ears"] = temp
 
+		temp = list("styleHref" = "ear_style", "style" = "Normal")
+		if(mannequin.ear_secondary_style)
+			temp["style"] = mannequin.ear_secondary_style.name
+			if(length(mannequin.ear_secondary_colors) >= 1)
+				temp["color"] = mannequin.ear_secondary_colors[1]
+				temp["colorHref"] = list("act" = "ear_secondary_color", "channel" = 1)
+			if(length(mannequin.ear_secondary_colors) >= 2)
+				temp["color"] = mannequin.ear_secondary_colors[2]
+				temp["colorHref"] = list("act" = "ear_secondary_color", "channel" = 2)
+		styles["Horns"] = temp
+
 		temp = list("styleHref" = "tail_style", "style" = "Normal")
 		if(mannequin.tail_style)
 			temp["style"] = mannequin.tail_style.name
@@ -205,20 +215,20 @@
 
 	return data
 
-/obj/machinery/computer/transhuman/designer/tgui_act(action, params)
+/obj/machinery/computer/transhuman/designer/tgui_act(action, params, datum/tgui/ui)
 	if(..())
 		return TRUE
 
 	switch(action)
 		if("debug_load_my_body")
-			active_br = new /datum/transhuman/body_record(usr, FALSE, FALSE)
+			active_br = new /datum/transhuman/body_record(ui.user, FALSE, FALSE)
 			update_preview_icon()
 			menu = MENU_SPECIFICRECORD
 
 		if("view_brec")
 			var/datum/transhuman/body_record/BR = locate(params["view_brec"])
 			if(BR && istype(BR.mydna))
-				if(allowed(usr) || BR.ckey == usr.ckey)
+				if(allowed(ui.user) || BR.ckey == ui.user.ckey)
 					active_br = new /datum/transhuman/body_record(BR) // Load a COPY!
 					update_preview_icon()
 					menu = MENU_SPECIFICRECORD
@@ -271,9 +281,9 @@
 			temp = ""
 
 		if("href_conversion")
-			PrefHrefMiddleware(params, usr)
+			PrefHrefMiddleware(params, ui.user)
 
-	add_fingerprint(usr)
+	add_fingerprint(ui.user)
 	return 1 // Return 1 to refresh UI
 
 //
@@ -419,7 +429,15 @@
 
 	var/href_list = list()
 	href_list["src"] = "\ref[src]"
-	href_list["[params["target_href"]]"] = params["target_value"]
+	var/list/target_href_maybe = params["target_href"]
+	// convert list-form inputs as needed
+	if(islist(target_href_maybe))
+		href_list[target_href_maybe["act"]] = TRUE
+		for(var/key in target_href_maybe["params"])
+			var/val = target_href_maybe["params"][key]
+			href_list[key] = "[val]"
+	else
+		href_list[target_href_maybe] = params["target_value"]
 	var/datum/category_item/player_setup_item/to_use = (params["target_href"] in use_different_category) ? use_different_category[params["target_href"]] : B
 
 	var/action = 0
@@ -436,7 +454,7 @@
 	// Do NOT call ..(), it expects real stuff
 
 // Disk for manually moving body records between the designer and sleever console etc.
-/obj/item/weapon/disk/body_record
+/obj/item/disk/body_record
 	name = "Body Design Disk"
 	desc = "It has a small label: \n\
 	\"Portable Body Record Storage Disk. \n\
@@ -451,15 +469,15 @@
  *	Diskette Box
  */
 
-/obj/item/weapon/storage/box/body_record_disk
+/obj/item/storage/box/body_record_disk
 	name = "body record disk box"
 	desc = "A box of body record disks, apparently."
 	icon_state = "disk_kit"
 
-/obj/item/weapon/storage/box/body_record_disk/New()
+/obj/item/storage/box/body_record_disk/New()
 	..()
 	for(var/i = 0 to 7)
-		new /obj/item/weapon/disk/body_record(src)
+		new /obj/item/disk/body_record(src)
 
 #undef MOB_HEX_COLOR
 

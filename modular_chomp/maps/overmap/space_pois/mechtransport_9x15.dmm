@@ -19,21 +19,21 @@
 /area/submap/mechtransportation)
 "f" = (
 /obj/structure/closet/crate,
-/obj/item/weapon/circuitboard/mecha/phazon/main,
-/obj/item/weapon/circuitboard/mecha/phazon/peripherals,
-/obj/item/weapon/circuitboard/mecha/phazon/targeting,
+/obj/item/circuitboard/mecha/phazon/main,
+/obj/item/circuitboard/mecha/phazon/peripherals,
+/obj/item/circuitboard/mecha/phazon/targeting,
 /turf/simulated/shuttle/floor,
 /area/submap/mechtransportation)
 "g" = (
 /obj/structure/closet/crate,
-/obj/item/weapon/gun/energy/ionrifle,
+/obj/item/gun/energy/ionrifle,
 /turf/simulated/shuttle/floor,
 /area/submap/mechtransportation)
 "h" = (
 /obj/structure/table/standard,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
+/obj/item/cell/device/weapon,
+/obj/item/cell/device/weapon,
+/obj/item/cell/device/weapon,
 /turf/simulated/shuttle/floor,
 /area/submap/mechtransportation)
 "i" = (
@@ -75,7 +75,7 @@
 /turf/simulated/shuttle/floor,
 /area/submap/mechtransportation)
 "q" = (
-/obj/item/device/gps/internal/poi{
+/obj/item/gps/internal/poi{
 	gps_tag = "Mech-Transport EJN-2955"
 	},
 /turf/simulated/shuttle/wall/hard_corner,
@@ -96,7 +96,7 @@
 /area/submap/mechtransportation)
 "u" = (
 /obj/structure/table/standard,
-/obj/item/weapon/cell/device/weapon/empproof,
+/obj/item/cell/device/weapon/empproof,
 /turf/simulated/shuttle/floor,
 /area/submap/mechtransportation)
 "v" = (

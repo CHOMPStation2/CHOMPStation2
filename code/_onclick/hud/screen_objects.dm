@@ -69,8 +69,8 @@
 
 /obj/screen/close/Click()
 	if(master)
-		if(istype(master, /obj/item/weapon/storage))
-			var/obj/item/weapon/storage/S = master
+		if(istype(master, /obj/item/storage))
+			var/obj/item/storage/S = master
 			S.close(usr)
 	return 1
 
@@ -101,7 +101,7 @@
 	name = "grab"
 
 /obj/screen/grab/Click()
-	var/obj/item/weapon/grab/G = master
+	var/obj/item/grab/G = master
 	G.s_click(src)
 	return 1
 
@@ -290,7 +290,7 @@
 				if(iscarbon(usr))
 					var/mob/living/carbon/C = usr
 					if(C.legcuffed)
-						to_chat(C, "<span class='notice'>You are legcuffed! You cannot run until you get [C.legcuffed] removed!</span>")
+						to_chat(C, span_notice("You are legcuffed! You cannot run until you get [C.legcuffed] removed!"))
 						C.m_intent = "walk"	//Just incase
 						C.hud_used.move_intent.icon_state = "walking"
 						return 1
@@ -330,7 +330,7 @@
 				if(!C.stat && !C.stunned && !C.paralysis && !C.restrained())
 					if(C.internal)
 						C.internal = null
-						to_chat(C, "<span class='notice'>No longer running on internals.</span>")
+						to_chat(C, span_notice("No longer running on internals."))
 						if(C.internals)
 							C.internals.icon_state = "internal0"
 					else
@@ -342,12 +342,12 @@
 								no_mask = 1
 
 						if(no_mask)
-							to_chat(C, "<span class='notice'>You are not wearing a suitable mask or helmet.</span>")
+							to_chat(C, span_notice("You are not wearing a suitable mask or helmet."))
 							return 1
 						else
 							var/list/nicename = null
 							var/list/tankcheck = null
-							var/breathes = "oxygen"    //default, we'll check later
+							var/breathes = GAS_O2    //default, we'll check later
 							var/list/contents = list()
 							var/from = "on"
 
@@ -361,7 +361,7 @@
 								tankcheck = list(C.r_hand, C.l_hand, C.back)
 
 							// Rigs are a fucking pain since they keep an air tank in nullspace.
-							var/obj/item/weapon/rig/Rig = C.get_rig()
+							var/obj/item/rig/Rig = C.get_rig()
 							if(Rig)
 								if(Rig.air_supply && !Rig.offline)
 									from = "in"
@@ -369,37 +369,37 @@
 									tankcheck |= Rig.air_supply
 
 							for(var/i=1, i<tankcheck.len+1, ++i)
-								if(istype(tankcheck[i], /obj/item/weapon/tank))
-									var/obj/item/weapon/tank/t = tankcheck[i]
+								if(istype(tankcheck[i], /obj/item/tank))
+									var/obj/item/tank/t = tankcheck[i]
 									if (!isnull(t.manipulated_by) && t.manipulated_by != C.real_name && findtext(t.desc,breathes))
 										contents.Add(t.air_contents.total_moles)	//Someone messed with the tank and put unknown gasses
 										continue					//in it, so we're going to believe the tank is what it says it is
 									switch(breathes)
 																		//These tanks we're sure of their contents
-										if("nitrogen") 							//So we're a bit more picky about them.
+										if(GAS_N2) 							//So we're a bit more picky about them.
 
-											if(t.air_contents.gas["nitrogen"] && !t.air_contents.gas["oxygen"])
-												contents.Add(t.air_contents.gas["nitrogen"])
+											if(t.air_contents.gas[GAS_N2] && !t.air_contents.gas[GAS_O2])
+												contents.Add(t.air_contents.gas[GAS_N2])
 											else
 												contents.Add(0)
 
-										if ("oxygen")
-											if(t.air_contents.gas["oxygen"] && !t.air_contents.gas["phoron"])
-												contents.Add(t.air_contents.gas["oxygen"])
+										if (GAS_O2)
+											if(t.air_contents.gas[GAS_O2] && !t.air_contents.gas[GAS_PHORON])
+												contents.Add(t.air_contents.gas[GAS_O2])
 											else
 												contents.Add(0)
 
 										// No races breath this, but never know about downstream servers.
 										if ("carbon dioxide")
-											if(t.air_contents.gas["carbon_dioxide"] && !t.air_contents.gas["phoron"])
-												contents.Add(t.air_contents.gas["carbon_dioxide"])
+											if(t.air_contents.gas[GAS_CO2] && !t.air_contents.gas[GAS_PHORON])
+												contents.Add(t.air_contents.gas[GAS_CO2])
 											else
 												contents.Add(0)
 
 										// And here's for the Vox
-										if ("phoron")
-											if(t.air_contents.gas["phoron"] && !t.air_contents.gas["oxygen"])
-												contents.Add(t.air_contents.gas["phoron"])
+										if (GAS_PHORON)
+											if(t.air_contents.gas[GAS_PHORON] && !t.air_contents.gas[GAS_O2])
+												contents.Add(t.air_contents.gas[GAS_PHORON])
 											else
 												contents.Add(0)
 
@@ -423,7 +423,7 @@
 							//We've determined the best container now we set it as our internals
 
 							if(best)
-								to_chat(C, "<span class='notice'>You are now running on internals from [tankcheck[best]] [from] your [nicename[best]].</span>")
+								to_chat(C, span_notice("You are now running on internals from [tankcheck[best]] [from] your [nicename[best]]."))
 								C.internal = tankcheck[best]
 
 
@@ -431,7 +431,7 @@
 								if(C.internals)
 									C.internals.icon_state = "internal1"
 							else
-								to_chat(C, "<span class='notice'>You don't have a[breathes=="oxygen" ? "n oxygen" : addtext(" ",breathes)] tank.</span>")
+								to_chat(C, span_notice("You don't have a[breathes==GAS_O2 ? "n " + GAS_O2 : addtext(" ",breathes)] tank."))
 		if("act_intent")
 			usr.a_intent_change("right")
 		if(I_HELP)
@@ -497,7 +497,7 @@
 				if(i)
 					s.can_use(u,i)
 				else
-					to_chat(usr, "<span class='notice'>You're not holding anything to use. You need to have something in your active hand to use it.</span>")
+					to_chat(usr, span_notice("You're not holding anything to use. You need to have something in your active hand to use it."))
 
 		if("module")
 			if(isrobot(usr))
@@ -772,7 +772,7 @@
 	var/obj/screen/mapper/powbutton/powbutton
 	var/obj/screen/mapper/mapbutton/mapbutton
 
-	var/obj/item/device/mapping_unit/owner
+	var/obj/item/mapping_unit/owner
 	var/obj/screen/mapper/extras_holder/extras_holder
 
 /obj/screen/movable/mapper_holder/Initialize(mapload, newowner)
@@ -965,7 +965,7 @@
 	var/warned = FALSE
 	var/static/list/ammo_screen_loc_list = list(ui_ammo_hud1, ui_ammo_hud2, ui_ammo_hud3 ,ui_ammo_hud4)
 
-/obj/screen/ammo/proc/add_hud(var/mob/living/user, var/obj/item/weapon/gun/G)
+/obj/screen/ammo/proc/add_hud(var/mob/living/user, var/obj/item/gun/G)
 
 	if(!user?.client)
 		return
@@ -986,7 +986,7 @@
 /obj/screen/ammo/proc/remove_hud(var/mob/living/user)
 	user?.client?.screen -= src
 
-/obj/screen/ammo/proc/update_hud(var/mob/living/user, var/obj/item/weapon/gun/G)
+/obj/screen/ammo/proc/update_hud(var/mob/living/user, var/obj/item/gun/G)
 	if(!user?.client?.screen.Find(src))
 		return
 

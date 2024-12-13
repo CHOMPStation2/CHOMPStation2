@@ -35,6 +35,7 @@
 	. = ..()
 	if(ismob(loc))
 		owner = loc
+		owner.recalculate_vis()
 
 // Store the vars_to_save into the save file
 /obj/soulgem/deserialize(list/data)
@@ -62,14 +63,14 @@
 	if(istype(linked_belly))
 		UnregisterSignal(linked_belly, COMSIG_BELLY_UPDATE_VORE_FX)
 		linked_belly = null
-	..()
+	. = ..()
 
 // Sends messages to the owner of the soulcatcher
 /obj/soulgem/proc/notify_holder(var/message)
-	to_chat(owner, span_nif("<b>[name]</b> displays, \"<span class='notice nif'>[message]</span>\""))
+	to_chat(owner, span_nif(span_bold("[name]") + " displays, \"" + span_notice("[message]") + "\""))
 
 	for(var/mob/living/carbon/brain/caught_soul/CS as anything in brainmobs)
-		to_chat(CS, span_nif("<b>[name]</b> displays, \"<span class='notice nif'>[message]</span>\""))
+		to_chat(CS, span_nif(span_bold("[name]") + " displays, \"" + span_notice("[message]") + "\""))
 
 // Forwards the speech of captured souls
 /obj/soulgem/proc/use_speech(var/message, var/mob/living/sender, var/mob/eyeobj)
@@ -77,13 +78,13 @@
 
 	//AR Projecting
 	if(eyeobj)
-		sender.eyeobj.visible_message("<span class='game say'><b>[sender_name]</b> says, \"[message]\"</span>")
+		sender.eyeobj.visible_message(span_game(span_say(span_bold("[sender_name]") + " says, \"[message]\"")))
 
 	//Not AR Projecting
 	else
-		to_chat(owner, span_nif("<b>\[SC\] [sender_name]</b> speaks, \"[message]\""))
+		to_chat(owner, span_nif(span_bold("\[SC\] [sender_name]") + " speaks, \"[message]\""))
 		for(var/mob/living/carbon/brain/caught_soul/CS as anything in brainmobs)
-			to_chat(CS, span_nif("<b>\[SC\] [sender_name]</b> speaks, \"[message]\""))
+			to_chat(CS, span_nif(span_bold("\[SC\] [sender_name]") + " speaks, \"[message]\""))
 
 	log_nsay(message, owner.real_name, sender)
 
@@ -93,13 +94,13 @@
 
 	//AR Projecting
 	if(eyeobj)
-		sender.eyeobj.visible_message("<span class='emote'>[sender_name] [message]</span>")
+		sender.eyeobj.visible_message(span_emote("[sender_name] [message]"))
 
 	//Not AR Projecting
 	else
-		to_chat(owner, span_nif("<b>[sender_name]</b> [message]"))
+		to_chat(owner, span_nif(span_bold("[sender_name]") + " [message]"))
 		for(var/mob/living/carbon/brain/caught_soul/CS as anything in brainmobs)
-			to_chat(CS, span_nif("<b>[sender_name]</b> [message]"))
+			to_chat(CS, span_nif(span_bold("[sender_name]") + " [message]"))
 
 	log_nme(message, owner.real_name,sender)
 
@@ -236,6 +237,8 @@
 		soulgem_sight()
 	if(flag & NIF_SC_PROJECTING)
 		soulgem_projecting()
+	if(flag & SOULGEM_SEE_SR_SOULS)
+		owner.recalculate_vis()
 
 // Checks a single flag, or if all combined flags are true
 /obj/soulgem/proc/flag_check(var/flag, var/match_all = FALSE)
@@ -378,13 +381,13 @@
 // Returns nearby,valid transfer locations as a list
 /obj/soulgem/proc/find_transfer_objects()
 	var/list/valid_trasfer_objects = list(
-		/obj/item/device/sleevemate,
-		/obj/item/device/mmi
+		/obj/item/sleevemate,
+		/obj/item/mmi
 	)
 	var/list/valid_objects = list()
 	if(isrobot(owner))
 		var/mob/living/silicon/robot/R = owner
-		if(istype(R.module_active, /obj/item/device/sleevemate))
+		if(istype(R.module_active, /obj/item/sleevemate))
 			valid_objects += R.module_active
 	if(ishuman(owner))
 		var/mob/living/carbon/human/H = owner
@@ -429,16 +432,16 @@
 /obj/soulgem/proc/transfer_mob(var/mob/M, var/obj/target)
 	if(is_taken_over()) return
 	if(!M || !target) return
-	if(istype(target, /obj/item/device/sleevemate))
-		var/obj/item/device/sleevemate/mate = target
+	if(istype(target, /obj/item/sleevemate))
+		var/obj/item/sleevemate/mate = target
 		if(!mate.stored_mind)
 			to_chat(owner, span_notice("You scan yourself to transfer the soul into the [target]!"))
 			to_chat(M, span_notice("[transfer_message]"))
 			if(M.mind == own_mind)
 				own_mind = null
 			mate.get_mind(M)
-	else if(istype(target, /obj/item/device/mmi))
-		var/obj/item/device/mmi/mm = target
+	else if(istype(target, /obj/item/mmi))
+		var/obj/item/mmi/mm = target
 		if(!mm.brainmob || !mm.brainmob.mind)
 			if(M.mind == own_mind)
 				own_mind = null

@@ -14,10 +14,10 @@
 	if(!T)
 		return 0
 	add_attack_logs(src,T,"Death sting (changeling)")
-	to_chat(T, "<span class='danger'>You feel a small prick and your chest becomes tight.</span>")
+	to_chat(T, span_danger("You feel a small prick and your chest becomes tight."))
 	T.silent = 10
 	T.Paralyse(10)
 	T.make_jittery(100)
-	if(T.reagents)	T.reagents.add_reagent("lexorin", 40)
+	if(T.reagents)	T.reagents.add_reagent(REAGENT_ID_LEXORIN, 40)
 	feedback_add_details("changeling_powers","DTHS")
 	return 1

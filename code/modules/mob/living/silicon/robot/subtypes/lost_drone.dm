@@ -5,23 +5,24 @@
 	modtype = "Lost"
 	lawchannel = "State"
 	braintype = "Drone"
-	idcard_type = /obj/item/weapon/card/id/lost
+	idcard_type = /obj/item/card/id/lost
 	icon_selected = FALSE
 	restrict_modules_to = list("Lost")
 	var/law_retries = 5
+	ui_theme = "malfunction"
 
 /mob/living/silicon/robot/lost/init()
-	aiCamera = new/obj/item/device/camera/siliconcam/robot_camera(src)
+	aiCamera = new/obj/item/camera/siliconcam/robot_camera(src)
 
-	mmi = new /obj/item/device/mmi/digital/robot(src) // Explicitly a drone.
-	module = new /obj/item/weapon/robot_module/robot/lost(src)
+	mmi = new /obj/item/mmi/digital/robot(src) // Explicitly a drone.
+	module = new /obj/item/robot_module/robot/lost(src)
 	cut_overlays()
 	init_id()
 
 	updatename("Lost")
 
 	if(!cell)
-		cell = new /obj/item/weapon/cell/high(src) // 15k cell, as recharging stations are a lot more rare on the Surface.
+		cell = new /obj/item/cell/high(src) // 15k cell, as recharging stations are a lot more rare on the Surface.
 
 	scramble_hardware(20)
 
@@ -70,7 +71,7 @@
 		var/confirm = tgui_alert(src, "Do you want to keep your laws or reroll? (For specific laws, feel free to ahelp and we'll see what we can do)", "Confirm laws", list("Keep", "Reroll ([law_retries])"))
 		if(findtext(confirm, regex("Reroll \\(\[0-9\]*\\)", "")))
 			apply_new_laws()
-			to_chat(src, "<b>Obey these laws:</b>")
+			to_chat(src, span_infoplain(span_bold("Obey these laws:")))
 			laws.show_laws(src)
 			law_retries --
 		else
@@ -339,6 +340,6 @@
 	if(!emag_items)
 		scramble_hardware(20)
 	if (churn_count == 5)
-		module.emag += new /obj/item/device/self_repair_system/advanced(module)
+		module.emag += new /obj/item/self_repair_system/advanced(module)
 		hud_used.update_robot_modules_display()
 //CHOMPAdd End

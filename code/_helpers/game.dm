@@ -173,7 +173,7 @@
 
 		if(ismob(I))
 			if(!sight_check || isInSight(I, O))
-				L |= recursive_content_check(I, L, recursion_limit - 1, client_check, sight_check, include_mobs, include_objects)
+				L |= recursive_content_check(I, L, recursion_limit - 1, client_check, sight_check, include_mobs, include_objects, ignore_show_messages)
 				if(include_mobs)
 					if(client_check)
 						var/mob/M = I
@@ -186,7 +186,7 @@
 			var/obj/check_obj = I
 			if(ignore_show_messages || check_obj.show_messages)
 				if(!sight_check || isInSight(I, O))
-					L |= recursive_content_check(I, L, recursion_limit - 1, client_check, sight_check, include_mobs, include_objects)
+					L |= recursive_content_check(I, L, recursion_limit - 1, client_check, sight_check, include_mobs, include_objects, ignore_show_messages)
 					if(include_objects)
 						L |= I
 
@@ -220,12 +220,12 @@
 	return hear
 
 //CHOMPEdit - entire proc changed basically to use recursive listening
-/proc/get_mobs_in_radio_ranges(var/list/obj/item/device/radio/radios)
+/proc/get_mobs_in_radio_ranges(var/list/obj/item/radio/radios)
 
 	//set background = 1 //CHOMPEdit
 	. = list()
 	// Returns a list of mobs who can hear any of the radios given in @radios
-	for(var/obj/item/device/radio/R as anything in radios)
+	for(var/obj/item/radio/R as anything in radios)
 		if(get_turf(R))
 			for(var/turf/T in R.can_broadcast_to())	//CHOMPEdit
 				for (var/atom/movable/hearing in T)
@@ -246,7 +246,7 @@
 
 /mob/living/silicon/robot/can_hear_radio(var/list/hearturfs)
 	var/turf/T = get_turf(src)
-	var/obj/item/device/radio/borg/R = hearturfs[T] // this should be an assoc list of turf-to-radio
+	var/obj/item/radio/borg/R = hearturfs[T] // this should be an assoc list of turf-to-radio
 
 	// We heard it on our own radio? We use power for that.
 	if(istype(R) && R.myborg == src)

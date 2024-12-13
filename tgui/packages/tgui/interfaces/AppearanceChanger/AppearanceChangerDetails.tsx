@@ -1,6 +1,6 @@
 import { useBackend } from '../../backend';
 import { Box, Button, ColorBox, LabeledList, Section } from '../../components';
-import { Data } from './types';
+import { Data, SPRITE_ACCESSORY_COLOR_CHANNEL_NAMES } from './types';
 
 export const AppearanceChangerColors = (props) => {
   const { act, data } = useBackend<Data>();
@@ -19,8 +19,11 @@ export const AppearanceChangerColors = (props) => {
     ears2_color,
     tail_color,
     tail2_color,
+    tail3_color,
     wing_color,
     wing2_color,
+    wing3_color,
+    ear_secondary_colors,
   } = data;
 
   return (
@@ -56,14 +59,29 @@ export const AppearanceChangerColors = (props) => {
           </Box>
           <Box>
             <ColorBox color={ears_color} mr={1} />
-            <Button onClick={() => act('ears_color')}>Change Ears Color</Button>
+            <Button onClick={() => act('ears_color')}>
+              Change Ears Color (Primary)
+            </Button>
           </Box>
           <Box>
             <ColorBox color={ears2_color} mr={1} />
             <Button onClick={() => act('ears2_color')}>
-              Change Secondary Ears Color
+              Change Ears Color (Secondary)
             </Button>
           </Box>
+          {data.ear_secondary_colors.map((color, index) => (
+            <Box key={index}>
+              <ColorBox color={color} mr={1} />
+              <Button
+                onClick={() =>
+                  act('ears_secondary_color', { channel: index + 1 })
+                }
+              >
+                Change Secondary Ears Color (
+                {SPRITE_ACCESSORY_COLOR_CHANNEL_NAMES[index]})
+              </Button>
+            </Box>
+          ))}
           <Box>
             <ColorBox color={tail_color} mr={1} />
             <Button onClick={() => act('tail_color')}>Change Tail Color</Button>
@@ -75,6 +93,12 @@ export const AppearanceChangerColors = (props) => {
             </Button>
           </Box>
           <Box>
+            <ColorBox color={tail3_color} mr={1} />
+            <Button onClick={() => act('tail3_color')}>
+              Change Tertiary Tail Color
+            </Button>
+          </Box>
+          <Box>
             <ColorBox color={wing_color} mr={1} />
             <Button onClick={() => act('wing_color')}>Change Wing Color</Button>
           </Box>
@@ -82,6 +106,12 @@ export const AppearanceChangerColors = (props) => {
             <ColorBox color={wing2_color} mr={1} />
             <Button onClick={() => act('wing2_color')}>
               Change Secondary Wing Color
+            </Button>
+          </Box>
+          <Box>
+            <ColorBox color={wing3_color} mr={1} />
+            <Button onClick={() => act('wing3_color')}>
+              Change Tertiary Wing Color
             </Button>
           </Box>
         </>

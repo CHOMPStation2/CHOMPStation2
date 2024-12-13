@@ -25,12 +25,12 @@
 		return 0
 
 	if(!user.IsAdvancedToolUser())
-		to_chat(user, "<span class='warning'>This task is too complex for your clumsy hands.</span>")
+		to_chat(user, span_warning("This task is too complex for your clumsy hands."))
 		return 1
 
 	var/turf/T = user.loc
 	if(!istype(T))
-		to_chat(user, "<span class='warning'>You must be standing on open flooring to build a window.</span>")
+		to_chat(user, span_warning("You must be standing on open flooring to build a window."))
 		return 1
 
 	var/message = "Sheet-[used_stack.name] ([used_stack.get_amount()] sheet\s left)"
@@ -68,7 +68,7 @@
 			else
 				failed_to_build = 1
 	if(failed_to_build)
-		to_chat(user, "<span class='warning'>There is no room in this location.</span>")
+		to_chat(user, span_warning("There is no room in this location."))
 		return 1
 
 	var/build_path = /obj/structure/windoor_assembly
@@ -82,7 +82,7 @@
 		build_path = created_window
 
 	if(used_stack.get_amount() < sheets_needed)
-		to_chat(user, "<span class='warning'>You need at least [sheets_needed] sheets to build this.</span>")
+		to_chat(user, span_warning("You need at least [sheets_needed] sheets to build this."))
 		return 1
 
 	// Build the structure and update sheet count etc.
@@ -115,7 +115,7 @@
 
 /datum/material/glass/phoron
 	name = MAT_PGLASS
-	display_name = "borosilicate glass"
+	display_name = MAT_PGLASS
 	stack_type = /obj/item/stack/material/glass/phoronglass
 	flags = MATERIAL_BRITTLE
 	integrity = 100
@@ -129,7 +129,7 @@
 
 /datum/material/glass/phoron/reinforced
 	name = MAT_RPGLASS
-	display_name = "reinforced borosilicate glass"
+	display_name = MAT_RPGLASS
 	stack_type = /obj/item/stack/material/glass/phoronrglass
 	stack_origin_tech = list(TECH_MATERIAL = 5)
 	window_options = list("One Direction" = 1, "Full Window" = 4)

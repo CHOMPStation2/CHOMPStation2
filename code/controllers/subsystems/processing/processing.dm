@@ -23,11 +23,11 @@ SUBSYSTEM_DEF(processing)
 	for(var/datum/D in old_processing)
 		if(CHECK_BITFIELD(D.datum_flags, DF_ISPROCESSING))
 			processing |= D
-//CHOMPEdit Begin
+
 /datum/controller/subsystem/processing/stat_entry(msg)
 	msg = "[stat_tag]:[processing.len]"
 	return ..()
-//CHOMPEdit End
+
 /datum/controller/subsystem/processing/fire(resumed = 0)
 	if (!resumed)
 		currentrun = processing.Copy()

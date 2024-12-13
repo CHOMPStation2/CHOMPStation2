@@ -2,7 +2,7 @@
 	name = "holo sign"
 	icon = 'icons/effects/effects_ch.dmi'
 	anchored = TRUE
-	var/obj/item/weapon/holosign_creator/projector
+	var/obj/item/holosign_creator/projector
 	var/health = 10
 	explosion_resistance = 1
 
@@ -99,6 +99,6 @@
 		icon_state = "holo_medical"
 
 /obj/structure/holosign/barrier/medical/proc/CheckHuman(mob/living/carbon/human/H)
-	if(isemptylist(H.virus2) && !istype(H.species, /datum/species/xenochimera))
+	if(isemptylist(H.viruses) && !istype(H.species, /datum/species/xenochimera))
 		return TRUE
 	return FALSE

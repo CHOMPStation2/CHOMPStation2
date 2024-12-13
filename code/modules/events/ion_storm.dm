@@ -38,9 +38,9 @@
 		if(!(S.z in affecting_z))
 			continue
 		var/area/A = get_area(S)
-		if(!A || A.flags & RAD_SHIELDED) // Rad shielding will protect from ions too
+		if(!A || A.flag_check(RAD_SHIELDED)) // Rad shielding will protect from ions too
 			continue
-		to_chat(S, "<span class='warning'>Your integrated sensors detect an ionospheric anomaly. Your systems will be impacted as you begin a partial restart.</span>")
+		to_chat(S, span_warning("Your integrated sensors detect an ionospheric anomaly. Your systems will be impacted as you begin a partial restart."))
 		var/ionbug = rand(3, 9)
 		S.confused += ionbug
 		S.eye_blurry += (ionbug - 1)
@@ -50,19 +50,34 @@
 		if(!(target.z in affecting_z))
 			continue
 		var/law = target.generate_ion_law()
-		to_chat(target, "<span class='danger'>You have detected a change in your laws information:</span>")
-		to_chat(target, law)
 		target.add_ion_law(law)
-		target.show_laws()
-		ionBorgs = FALSE // CHOMPEdit
+		//CHOMPEdit Start - Outpost 21 upport: shells don't get ion laws, and sync to AI instead
+		if(target.deployed_shell)
+			var/mob/living/silicon/robot/shell = target.deployed_shell
+			if(!shell.emagged) // emagged ignores law updates
+				to_chat(shell, span_danger("You have detected a change in your laws information:"))
+				to_chat(shell, law)
+				var/org_lu = shell.lawupdate // force a law update due to controlling AI being changed
+				shell.lawupdate = TRUE
+				shell.lawsync()
+				shell.lawupdate = org_lu
+				shell.show_laws()
+		else
+			to_chat(target, span_danger("You have detected a change in your laws information:"))
+			to_chat(target, law)
+			target.show_laws()
+		ionBorgs = FALSE
 
-	// CHOMPEdit Start
 	if(ionBorgs)	// Making sure an AI hasn't been given an Ion law...
 		for (var/mob/living/silicon/target in silicon_mob_list)
 			if(!(target.z in affecting_z) || prob(33))
 				continue
+			if(istype(target,/mob/living/silicon/robot))
+				var/mob/living/silicon/robot/R = target
+				if(R.shell && !R.emagged) // unless emagged shell
+					continue
 			var/law = target.generate_ion_law()
-			to_chat(target, "<span class='danger'>You have detected a change in your laws information:</span>")
+			to_chat(target, span_danger("You have detected a change in your laws information:"))
 			to_chat(target, law)
 			target.add_ion_law(law)
 			target.show_laws()

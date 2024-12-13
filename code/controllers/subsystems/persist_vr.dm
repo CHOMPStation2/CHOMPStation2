@@ -10,13 +10,14 @@ SUBSYSTEM_DEF(persist)
 	flags = SS_BACKGROUND|SS_NO_INIT|SS_KEEP_TIMING
 	runlevels = RUNLEVEL_GAME|RUNLEVEL_POSTGAME
 	var/list/currentrun = list()
+	var/list/query_stack = list() //CHOMPAdd TGSQL
 
 /datum/controller/subsystem/persist/fire(var/resumed = FALSE)
 	update_department_hours(resumed)
 
 // Do PTO Accruals
 /datum/controller/subsystem/persist/proc/update_department_hours(var/resumed = FALSE)
-	if(!CONFIG_GET(flag/time_off)) // CHOMPEdit
+	if(!CONFIG_GET(flag/time_off))
 		return
 
 	establish_db_connection()
@@ -29,6 +30,7 @@ SUBSYSTEM_DEF(persist)
 
 	//cache for sanic speed (lists are references anyways)
 	var/list/currentrun = src.currentrun
+	var/list/query_stack = src.query_stack //CHOMPAdd TGSQL
 	while (currentrun.len)
 		var/mob/M = currentrun[currentrun.len]
 		currentrun.len--
@@ -78,20 +80,27 @@ SUBSYSTEM_DEF(persist)
 				play_hours[department_earning] = wait_in_hours
 
 		// Cap it
-		dept_hours[department_earning] = min(CONFIG_GET(number/pto_cap), dept_hours[department_earning]) // CHOMPEdit
+		dept_hours[department_earning] = min(CONFIG_GET(number/pto_cap), dept_hours[department_earning])
 
 		// Okay we figured it out, lets update database!
 		var/sql_ckey = sql_sanitize_text(C.ckey)
 		var/sql_dpt = sql_sanitize_text(department_earning)
 		var/sql_bal = text2num("[C.department_hours[department_earning]]")
 		var/sql_total = text2num("[C.play_hours[department_earning]]")
-		var/list/sqlargs = list("t_ckey" = sql_ckey, "t_department" = sql_dpt) //CHOMPEdit TGSQL
-		var/datum/db_query/query = SSdbcore.NewQuery("INSERT INTO vr_player_hours (ckey, department, hours, total_hours) VALUES (:t_ckey, :t_department, [sql_bal], [sql_total]) ON DUPLICATE KEY UPDATE hours = VALUES(hours), total_hours = VALUES(total_hours)", sqlargs) //CHOMPEdit TGSQL
-		if(!query.Execute())	//CHOMPEdit
-			log_admin(query.ErrorMsg())	//CHOMPEdit
-		qdel(query) //CHOMPEdit TGSQL
+		var/list/entry = list(
+			"ckey" = sql_ckey,
+			"department" = sql_dpt,
+			"hours" = sql_bal,
+			"total_hours" = sql_total
+			)
+		query_stack += list(entry) //CHOMPEdit TGSQL
 		if (MC_TICK_CHECK)
 			return
+	 //CHOMPAdd Start TGSQL
+	if(query_stack.len)
+		SSdbcore.MassInsert(format_table_name("vr_player_hours"), query_stack, duplicate_key = "ON DUPLICATE KEY UPDATE hours = VALUES(hours), total_hours = VALUES(total_hours)")
+		query_stack.Cut()
+	 //CHOMPAdd End TGSQL
 
 // This proc tries to find the job datum of an arbitrary mob.
 /datum/controller/subsystem/persist/proc/detect_job(var/mob/M)

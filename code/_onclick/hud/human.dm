@@ -250,7 +250,7 @@
 		internals = new /obj/screen()
 		internals.icon = HUD.ui_style
 		internals.icon_state = "internal0"
-		if(istype(internal, /obj/item/weapon/tank)) //Internals on already? Iight, prove it
+		if(istype(internal, /obj/item/tank)) //Internals on already? Iight, prove it
 			internals.icon_state = "internal1"
 		internals.name = "internal"
 		internals.screen_loc = ui_internal
@@ -396,7 +396,7 @@
 	HUD.inventory_shown = 0
 
 /mob/living/carbon/human/verb/toggle_hotkey_verbs()
-	set category = "OOC.Client Settings" //CHOMPEdit
+	set category = "OOC.Client Settings"
 	set name = "Toggle hotkey buttons"
 	set desc = "This disables or enables the user interface buttons which can be used with hotkeys."
 

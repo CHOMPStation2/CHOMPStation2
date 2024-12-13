@@ -7,11 +7,10 @@ SUBSYSTEM_DEF(orbit)
 	var/list/currentrun = list()
 	var/list/processing = list()
 
-//CHOMPEdit Begin
 /datum/controller/subsystem/orbit/stat_entry(msg)
 	msg = "P:[processing.len]"
 	return ..()
-//CHOMPEdit End
+
 
 /datum/controller/subsystem/orbit/fire(resumed = 0)
 	if (!resumed)

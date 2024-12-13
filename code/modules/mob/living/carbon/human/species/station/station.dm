@@ -267,6 +267,8 @@
 	reagent_tag = IS_TAJARA
 	allergens = ALLERGEN_STIMULANT
 
+	climb_mult = 0.75
+
 	move_trail = /obj/effect/decal/cleanable/blood/tracks/paw
 
 	heat_discomfort_level = 292
@@ -344,7 +346,7 @@
 	flash_mod = 1.2
 	chemOD_mod = 0.9
 
-	blood_reagents = "copper"
+	blood_reagents = REAGENT_ID_COPPER
 	bloodloss_rate = 1.5
 
 	ambiguous_genders = TRUE
@@ -460,7 +462,7 @@
 	warning_low_pressure = 300   // Low pressure warning.
 	hazard_low_pressure = 220     // Dangerously low pressure.
 	safe_pressure = 400
-	poison_type = "nitrogen"      // technically it's a partial pressure thing but IDK if we can emulate that
+	poison_type = GAS_N2      // technically it's a partial pressure thing but IDK if we can emulate that
 	ideal_air_type = /datum/gas_mixture/belly_air/zaddat
 
 	genders = list(FEMALE, PLURAL) //females are polyp-producing, infertile females and males are nigh-identical
@@ -645,9 +647,9 @@
 
 /datum/species/diona/equip_survival_gear(var/mob/living/carbon/human/H)
 	if(H.backbag == 1)
-		H.equip_to_slot_or_del(new /obj/item/device/flashlight/flare(H), slot_r_hand)
+		H.equip_to_slot_or_del(new /obj/item/flashlight/flare(H), slot_r_hand)
 	else
-		H.equip_to_slot_or_del(new /obj/item/device/flashlight/flare(H.back), slot_in_backpack)
+		H.equip_to_slot_or_del(new /obj/item/flashlight/flare(H.back), slot_in_backpack)
 
 /datum/species/diona/handle_post_spawn(var/mob/living/carbon/human/H)
 	H.gender = NEUTER
@@ -661,7 +663,7 @@
 		H.mind.transfer_to(S)
 
 	if(H.isSynthetic())
-		H.visible_message("<span class='danger'>\The [H] collapses into parts, revealing a solitary diona nymph at the core.</span>")
+		H.visible_message(span_danger("\The [H] collapses into parts, revealing a solitary diona nymph at the core."))
 
 		H.species = GLOB.all_species[SPECIES_HUMAN] // This is hard-set to default the body to a normal FBP, without changing anything.
 
@@ -669,8 +671,8 @@
 			qdel(Org)
 
 		// Purge the diona verbs.
-		remove_verb(H,/mob/living/carbon/human/proc/diona_split_nymph)  //CHOMPEdit
-		remove_verb(H,/mob/living/carbon/human/proc/regenerate)  //CHOMPEdit
+		remove_verb(H, /mob/living/carbon/human/proc/diona_split_nymph)
+		remove_verb(H, /mob/living/carbon/human/proc/regenerate)
 
 		return
 
@@ -680,7 +682,7 @@
 		else
 			qdel(D)
 
-	H.visible_message("<span class='danger'>\The [H] splits apart with a wet slithering noise!</span>")
+	H.visible_message(span_danger("\The [H] splits apart with a wet slithering noise!"))
 
 /datum/species/diona/handle_environment_special(var/mob/living/carbon/human/H)
 	if(H.inStasisNow())

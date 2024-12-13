@@ -3,7 +3,7 @@ var/list/dreams = list(
 	"an ID card","a bottle","a familiar face","a crewmember","a toolbox","a " + JOB_SECURITY_OFFICER,"the " + JOB_SITE_MANAGER,
 	"voices from all around","deep space","a doctor","the engine","a traitor","an ally","darkness",
 	"light","a scientist","a monkey","a catastrophe","a loved one","a gun","warmth","freezing","the sun",
-	"a hat","the Luna","a ruined station","a planet","phoron","air","the medical bay","the bridge","blinking lights",
+	"a hat","the Luna","a ruined station","a planet",GAS_PHORON,"air","the medical bay","the bridge","blinking lights",
 	"a blue light","an abandoned laboratory","NanoTrasen","mercenaries","blood","healing","power","respect",
 	"riches","space","a crash","happiness","pride","a fall","water","flames","ice","melons","flying","the eggs","money",
 	"the " + JOB_HEAD_OF_PERSONNEL,"the " + JOB_HEAD_OF_SECURITY,"the " + JOB_CHIEF_ENGINEER,"the " + JOB_RESEARCH_DIRECTOR,"the " + JOB_CHIEF_MEDICAL_OFFICER,
@@ -27,7 +27,7 @@ var/list/dreams = list(
 
 	spawn(0)
 		for(var/i = rand(1,4),i > 0, i--)
-			to_chat(src, span_blue("<i>... [pick(dreams)] ...</i>"))
+			to_chat(src, span_infoplain(span_blue(span_italics("... [pick(dreams)] ..."))))
 			sleep(rand(40,70))
 			if(paralysis <= 0)
 				dreaming = 0

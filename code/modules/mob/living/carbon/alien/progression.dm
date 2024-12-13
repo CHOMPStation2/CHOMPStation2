@@ -2,13 +2,13 @@
 
 	set name = "Evolve"
 	set desc = "Evolve into your adult form."
-	set category = "Abilities.General" //CHOMPEdit
+	set category = "Abilities.General"
 
 	if(stat != CONSCIOUS)
 		return
 
 	if(!adult_form)
-		remove_verb(src,/mob/living/carbon/alien/verb/evolve) //CHOMPEdit TGPanel
+		remove_verb(src, /mob/living/carbon/alien/verb/evolve)
 		return
 
 	if(handcuffed || legcuffed)

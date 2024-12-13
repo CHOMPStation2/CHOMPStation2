@@ -5,7 +5,7 @@
 
 
 /client/proc/fake_pdaconvos()
-	set category = "Fun.Event Kit" //ChompEDIT
+	set category = "Fun.Event Kit"
 	set name = "Manage PDA identities"
 	set desc = "Creates fake identities for use in setting up PDA props"
 
@@ -62,7 +62,7 @@
 /*
 Invoked by vv topic "fakepdapropconvo" in code\modules\admin\view_variables\topic.dm found in PDA vv dropdown.
 */
-/obj/item/device/pda/proc/createPropFakeConversation_admin(mob/M)
+/obj/item/pda/proc/createPropFakeConversation_admin(mob/M)
 	if(!M.client || !check_rights_for(M.client,R_FUN))
 		return
 

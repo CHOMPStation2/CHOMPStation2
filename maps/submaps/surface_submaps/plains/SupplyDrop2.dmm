@@ -5,9 +5,6 @@
 "b" = (
 /turf/template_noop,
 /area/submap/SupplyDrop2)
-"c" = (
-/turf/simulated/floor/plating,
-/area/submap/SupplyDrop2)
 "d" = (
 /obj/structure/girder/displaced,
 /turf/template_noop,
@@ -16,38 +13,34 @@
 /turf/simulated/wall/titanium,
 /area/submap/SupplyDrop2)
 "f" = (
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced/virgo3b,
 /area/submap/SupplyDrop2)
 "g" = (
 /obj/structure/loot_pile/maint/junk,
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced/virgo3b,
 /area/submap/SupplyDrop2)
 "h" = (
-/obj/item/device/flashlight,
-/turf/simulated/floor/reinforced,
+/obj/item/flashlight,
+/turf/simulated/floor/reinforced/virgo3b,
 /area/submap/SupplyDrop2)
 "i" = (
 /obj/structure/loot_pile/maint/technical,
-/obj/item/device/gps/internal/poi,
-/obj/item/weapon/cell/device/weapon/empty,
-/obj/item/weapon/cell/device/weapon/empty,
-/turf/simulated/floor/plating,
+/obj/item/gps/internal/poi,
+/obj/item/cell/device/weapon/empty,
+/obj/item/cell/device/weapon/empty,
+/turf/simulated/floor/reinforced/virgo3b,
 /area/submap/SupplyDrop2)
 "j" = (
 /obj/structure/loot_pile/maint/technical,
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced/virgo3b,
 /area/submap/SupplyDrop2)
 "k" = (
 /obj/structure/girder,
 /turf/template_noop,
 /area/submap/SupplyDrop2)
-"l" = (
-/obj/structure/loot_pile/maint/trash,
-/turf/simulated/floor/reinforced,
-/area/submap/SupplyDrop2)
 "m" = (
 /obj/structure/loot_pile/maint/trash,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/reinforced/virgo3b,
 /area/submap/SupplyDrop2)
 
 (1,1,1) = {"
@@ -87,12 +80,12 @@ k
 b
 "}
 (5,1,1) = {"
-c
+f
 f
 g
 i
-c
-l
+f
+m
 m
 "}
 (6,1,1) = {"

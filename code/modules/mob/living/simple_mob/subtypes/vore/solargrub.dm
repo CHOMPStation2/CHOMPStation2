@@ -41,7 +41,7 @@ var/global/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawstamp*
 
 	movement_cooldown = 3
 
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat/grubmeat
+	meat_type = /obj/item/reagent_containers/food/snacks/meat/grubmeat
 	meat_amount = 6
 
 	response_help = "pokes"
@@ -52,7 +52,7 @@ var/global/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawstamp*
 	say_list_type = /datum/say_list/solargrub
 
 	var/poison_per_bite = 5 //grubs cause a shock when they bite someone
-	var/poison_type = "shockchem"
+	var/poison_type = REAGENT_ID_SHOCKCHEM
 	var/poison_chance = 50
 	var/datum/powernet/PN            // Our powernet
 	var/obj/structure/cable/attached        // the attached cable
@@ -82,7 +82,7 @@ var/global/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawstamp*
 		if(attached)
 			set_AI_busy(TRUE)
 			if(prob(2))
-				src.visible_message("<b>\The [src]</b> begins to sink power from the net.")
+				src.visible_message(span_infoplain(span_bold("\The [src]") + " begins to sink power from the net."))
 			if(prob(5))
 				var/datum/effect/effect/system/spark_spread/sparks = new /datum/effect/effect/system/spark_spread()
 				sparks.set_up(5, 0, get_turf(src))
@@ -114,7 +114,7 @@ var/global/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawstamp*
 			death_star()
 
 /mob/living/simple_mob/vore/solargrub/proc/death_star()
-	visible_message("<span class='warning'>\The [src]'s shell rips open and evolves!</span>")
+	visible_message(span_warning("\The [src]'s shell rips open and evolves!"))
 
 /*
 //Commenting this bit out. It's unncecessary, especially since we only use one form.
@@ -145,7 +145,7 @@ var/global/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawstamp*
 			var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
 			s.set_up(5, 1, L)
 			s.start()
-			visible_message("<span class='danger'>The grub releases a powerful shock!</span>")
+			visible_message(span_danger("The grub releases a powerful shock!"))
 		else
 			if(L.reagents)
 				var/target_zone = pick(BP_TORSO,BP_TORSO,BP_TORSO,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_HEAD)
@@ -155,7 +155,7 @@ var/global/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawstamp*
 // Does actual poison injection, after all checks passed.
 /mob/living/simple_mob/vore/solargrub/proc/inject_poison(mob/living/L, target_zone)
 	if(prob(poison_chance))
-		to_chat(L, "<span class='warning'>You feel a small shock rushing through your veins.</span>")
+		to_chat(L, span_warning("You feel a small shock rushing through your veins."))
 		L.reagents.add_reagent(poison_type, poison_per_bite)
 
 /mob/living/simple_mob/vore/solargrub/death()

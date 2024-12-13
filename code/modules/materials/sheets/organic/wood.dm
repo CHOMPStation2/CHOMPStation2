@@ -20,7 +20,7 @@
 	description_info = "Rich, lustrous hardwood, imported from offworld at moderate expense. Mostly used for luxurious furniture, and not very good for weapons or other structures."
 
 /obj/item/stack/material/log
-	name = "log"
+	name = MAT_LOG
 	icon_state = "sheet-log"
 	default_type = MAT_LOG
 	no_variants = FALSE
@@ -33,13 +33,13 @@
 	pickup_sound = 'sound/items/pickup/wooden.ogg'
 
 /obj/item/stack/material/log/sif
-	name = "alien log"
+	name = MAT_SIFLOG
 	default_type = MAT_SIFLOG
 	color = "#0099cc"
 	plank_type = /obj/item/stack/material/wood/sif
 
 /obj/item/stack/material/log/hard
-	name = "hardwood log"
+	name = MAT_HARDLOG
 	default_type = MAT_HARDLOG
 	color = "#6f432a"
 	plank_type = /obj/item/stack/material/wood/hard
@@ -51,7 +51,7 @@
 		var/time = (3 SECONDS / max(W.force / 10, 1)) * W.toolspeed
 		user.setClickCooldown(time)
 		if(do_after(user, time, src) && use(1))
-			to_chat(user, "<span class='notice'>You cut up a log into planks.</span>")
+			to_chat(user, span_notice("You cut up a log into planks."))
 			playsound(src, 'sound/effects/woodcutting.ogg', 50, 1)
 			var/obj/item/stack/material/wood/existing_wood = null
 			for(var/obj/item/stack/material/wood/M in user.loc)
@@ -61,7 +61,7 @@
 
 			var/obj/item/stack/material/wood/new_wood = new plank_type(user.loc, 2)
 			if(existing_wood && new_wood.transfer_to(existing_wood))
-				to_chat(user, "<span class='notice'>You add the newly-formed wood to the stack. It now contains [existing_wood.get_amount()] planks.</span>")
+				to_chat(user, span_notice("You add the newly-formed wood to the stack. It now contains [existing_wood.get_amount()] planks."))
 	else
 		return ..()
 
@@ -80,4 +80,4 @@
 
 /obj/item/stack/material/stick/fivestack
 	amount = 5
-	color = "#824B28" 
+	color = "#824B28"

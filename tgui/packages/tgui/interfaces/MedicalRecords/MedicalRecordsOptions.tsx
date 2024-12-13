@@ -1,5 +1,6 @@
-import { useBackend } from '../../backend';
-import { Button, Icon, Section, Tabs } from '../../components';
+import { useBackend } from 'tgui/backend';
+import { Button, Section, Tabs } from 'tgui-core/components';
+
 import { MedicalRecordsViewGeneral } from './MedicalRecordsViewGeneral';
 import { MedicalRecordsViewMedical } from './MedicalRecordsViewMedical';
 import { Data } from './types';
@@ -35,6 +36,14 @@ export const MedicalRecordsView = (props) => {
         <MedicalRecordsViewMedical />
       </Section>
       <Section title="Actions">
+        <Button
+          icon="upload"
+          disabled={!!medical!.empty}
+          color="good"
+          onClick={() => act('sync_r')}
+        >
+          Sync Medical Record
+        </Button>
         <Button.Confirm
           icon="trash"
           disabled={!!medical!.empty}
@@ -73,29 +82,29 @@ export const MedicalRecordsNavigation = (props) => {
       <Tabs.Tab
         selected={screen === 2}
         onClick={() => act('screen', { screen: 2 })}
+        icon="list"
       >
-        <Icon name="list" />
         List Records
       </Tabs.Tab>
       <Tabs.Tab
         selected={screen === 5}
         onClick={() => act('screen', { screen: 5 })}
+        icon="database"
       >
-        <Icon name="database" />
         Virus Database
       </Tabs.Tab>
       <Tabs.Tab
         selected={screen === 6}
         onClick={() => act('screen', { screen: 6 })}
+        icon="plus-square"
       >
-        <Icon name="plus-square" />
         Medbot Tracking
       </Tabs.Tab>
       <Tabs.Tab
         selected={screen === 3}
         onClick={() => act('screen', { screen: 3 })}
+        icon="wrench"
       >
-        <Icon name="wrench" />
         Record Maintenance
       </Tabs.Tab>
     </Tabs>

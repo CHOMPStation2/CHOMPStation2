@@ -27,17 +27,17 @@
 	pixel_x = 5;
 	pixel_y = -2
 	},
-/obj/item/weapon/paper_bin{
+/obj/item/paper_bin{
 	pixel_x = 9
 	},
 /obj/machinery/vending/loadout/uniform{
 	pixel_x = -5
 	},
-/obj/item/weapon/pen{
+/obj/item/pen{
 	pixel_x = 11;
 	pixel_y = -3
 	},
-/obj/item/weapon/pen{
+/obj/item/pen{
 	pixel_x = 10;
 	pixel_y = 5
 	},
@@ -65,44 +65,44 @@
 	pixel_x = -3;
 	pixel_y = -1
 	},
-/obj/item/weapon/towel{
+/obj/item/towel{
 	color = "#ff0000";
 	name = "red towel"
 	},
-/obj/item/weapon/towel{
+/obj/item/towel{
 	color = "#ff0000";
 	name = "red towel"
 	},
-/obj/item/weapon/towel{
+/obj/item/towel{
 	color = "#FF8C00";
 	name = "orange towel";
 	pixel_x = -2;
 	pixel_y = -4
 	},
-/obj/item/weapon/towel{
+/obj/item/towel{
 	color = "#FF8C00";
 	name = "orange towel";
 	pixel_x = -2;
 	pixel_y = -4
 	},
-/obj/item/weapon/towel{
+/obj/item/towel{
 	color = "#90ee90";
 	name = "green towel"
 	},
-/obj/item/weapon/towel{
+/obj/item/towel{
 	color = "#90ee90";
 	name = "green towel"
 	},
-/obj/item/weapon/towel{
+/obj/item/towel{
 	color = "#b5651d";
 	name = "brown towel"
 	},
-/obj/item/weapon/towel{
+/obj/item/towel{
 	color = "#b5651d";
 	name = "brown towel"
 	},
-/obj/item/weapon/towel,
-/obj/item/weapon/towel,
+/obj/item/towel,
+/obj/item/towel,
 /obj/random/soap,
 /obj/random/soap,
 /obj/random/soap,
@@ -112,27 +112,27 @@
 /obj/structure/window/reinforced/survival_pod{
 	dir = 4
 	},
-/obj/item/weapon/tape_roll{
+/obj/item/tape_roll{
 	pixel_x = 4;
 	pixel_y = 4
 	},
-/obj/item/weapon/tape_roll{
+/obj/item/tape_roll{
 	pixel_x = 4;
 	pixel_y = 4
 	},
-/obj/item/device/taperecorder,
-/obj/item/device/tape/random,
-/obj/item/device/tape/random,
-/obj/item/weapon/packageWrap,
-/obj/item/weapon/packageWrap,
-/obj/item/weapon/folder/yellow,
-/obj/item/weapon/folder/yellow,
-/obj/item/weapon/folder/yellow,
+/obj/item/taperecorder,
+/obj/item/tape/random,
+/obj/item/tape/random,
+/obj/item/packageWrap,
+/obj/item/packageWrap,
+/obj/item/folder/yellow,
+/obj/item/folder/yellow,
+/obj/item/folder/yellow,
 /turf/simulated/floor/tiled/freezer,
 /area/survivalpod/superpose/SurvivalQuarters)
 "i" = (
 /obj/structure/bed/double,
-/obj/item/weapon/bedsheet/browndouble,
+/obj/item/bedsheet/browndouble,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/SurvivalQuarters)
 "j" = (
@@ -148,7 +148,7 @@
 /area/survivalpod/superpose/SurvivalQuarters)
 "l" = (
 /obj/structure/bed/pod,
-/obj/item/weapon/bedsheet/red,
+/obj/item/bedsheet/red,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/SurvivalQuarters)
 "m" = (
@@ -181,32 +181,32 @@
 /obj/structure/closet/walllocker_double/south{
 	name = "Survival Cabinet"
 	},
-/obj/item/weapon/storage/backpack/messenger,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/material/knife/tacknife/survival,
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/trauma,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/oxy,
-/obj/item/weapon/flame/lighter/random,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/device/radio,
+/obj/item/storage/backpack/messenger,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/material/knife/tacknife/survival,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/cell/device/hyper,
+/obj/item/reagent_containers/hypospray/autoinjector/trauma,
+/obj/item/reagent_containers/hypospray/autoinjector/oxy,
+/obj/item/flame/lighter/random,
+/obj/item/storage/box/survival/space,
+/obj/item/radio,
 /obj/item/clothing/accessory/storage/black_drop_pouches,
-/obj/item/weapon/reagent_containers/pill/dylovene,
-/obj/item/weapon/reagent_containers/pill/dylovene,
-/obj/item/device/flashlight/maglight,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/flare,
+/obj/item/reagent_containers/pill/dylovene,
+/obj/item/reagent_containers/pill/dylovene,
+/obj/item/flashlight/maglight,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/flare,
 /obj/random/soap,
-/obj/item/weapon/gun/energy/locked/phasegun/pistol,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/pda,
-/obj/item/weapon/storage/mre/menu11,
-/obj/item/weapon/storage/mre/menu11,
-/obj/item/device/starcaster_news,
-/obj/item/device/suit_cooling_unit/emergency,
-/obj/item/device/gps,
+/obj/item/gun/energy/locked/phasegun/pistol,
+/obj/item/fbp_backup_cell,
+/obj/item/pda,
+/obj/item/storage/mre/menu11,
+/obj/item/storage/mre/menu11,
+/obj/item/starcaster_news,
+/obj/item/suit_cooling_unit/emergency,
+/obj/item/gps,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/SurvivalQuarters)
 "r" = (
@@ -221,7 +221,7 @@
 /area/survivalpod/superpose/SurvivalQuarters)
 "t" = (
 /obj/structure/bed/double,
-/obj/item/weapon/bedsheet/iandouble,
+/obj/item/bedsheet/iandouble,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/SurvivalQuarters)
 "u" = (
@@ -237,32 +237,32 @@
 /obj/structure/closet/walllocker_double/north{
 	name = "Survival Cabinet"
 	},
-/obj/item/weapon/storage/backpack/messenger,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/material/knife/tacknife/survival,
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/trauma,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/oxy,
-/obj/item/weapon/flame/lighter/random,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/device/radio,
+/obj/item/storage/backpack/messenger,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/material/knife/tacknife/survival,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/cell/device/hyper,
+/obj/item/reagent_containers/hypospray/autoinjector/trauma,
+/obj/item/reagent_containers/hypospray/autoinjector/oxy,
+/obj/item/flame/lighter/random,
+/obj/item/storage/box/survival/space,
+/obj/item/radio,
 /obj/item/clothing/accessory/storage/black_drop_pouches,
-/obj/item/weapon/reagent_containers/pill/dylovene,
-/obj/item/weapon/reagent_containers/pill/dylovene,
-/obj/item/device/flashlight/maglight,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/flare,
+/obj/item/reagent_containers/pill/dylovene,
+/obj/item/reagent_containers/pill/dylovene,
+/obj/item/flashlight/maglight,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/flare,
 /obj/random/soap,
-/obj/item/weapon/gun/energy/locked/phasegun/pistol,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/pda,
-/obj/item/weapon/storage/mre/menu11,
-/obj/item/weapon/storage/mre/menu11,
-/obj/item/device/starcaster_news,
-/obj/item/device/suit_cooling_unit/emergency,
-/obj/item/device/gps,
+/obj/item/gun/energy/locked/phasegun/pistol,
+/obj/item/fbp_backup_cell,
+/obj/item/pda,
+/obj/item/storage/mre/menu11,
+/obj/item/storage/mre/menu11,
+/obj/item/starcaster_news,
+/obj/item/suit_cooling_unit/emergency,
+/obj/item/gps,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/SurvivalQuarters)
 "x" = (
@@ -273,7 +273,7 @@
 /area/survivalpod/superpose/SurvivalQuarters)
 "y" = (
 /obj/structure/bed/pod,
-/obj/item/weapon/bedsheet/yellow,
+/obj/item/bedsheet/yellow,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/SurvivalQuarters)
 "z" = (
@@ -285,48 +285,48 @@
 /area/survivalpod/superpose/SurvivalQuarters)
 "A" = (
 /obj/machinery/smartfridge/survival_pod,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/menu9,
-/obj/item/weapon/storage/mre/menu9,
-/obj/item/weapon/storage/mre/menu10,
-/obj/item/weapon/storage/mre/menu10,
-/obj/item/weapon/storage/mre/menu11,
-/obj/item/weapon/storage/mre/menu11,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/weapon/storage/pill_bottle/antitox,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/device/healthanalyzer,
-/obj/item/weapon/storage/pill_bottle/dice_nerd,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/menu9,
+/obj/item/storage/mre/menu9,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu11,
+/obj/item/storage/mre/menu11,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/storage/pill_bottle/antitox,
+/obj/item/storage/box/survival/space,
+/obj/item/healthanalyzer,
+/obj/item/storage/pill_bottle/dice_nerd,
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/item/weapon/storage/firstaid/regular,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/device/starcaster_news,
-/obj/item/device/starcaster_news,
-/obj/item/device/threadneedle,
-/obj/item/device/flashlight,
-/obj/item/device/flashlight,
-/obj/item/weapon/storage/toolbox/emergency,
-/obj/item/weapon/storage/pill_bottle/spaceacillin,
+/obj/item/storage/firstaid/regular,
+/obj/item/extinguisher/mini,
+/obj/item/extinguisher/mini,
+/obj/item/storage/box/survival/space,
+/obj/item/storage/box/survival/space,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/starcaster_news,
+/obj/item/starcaster_news,
+/obj/item/threadneedle,
+/obj/item/flashlight,
+/obj/item/flashlight,
+/obj/item/storage/toolbox/emergency,
+/obj/item/storage/pill_bottle/spaceacillin,
 /obj/random/soap,
-/obj/item/weapon/material/knife/machete/hatchet,
-/obj/item/weapon/storage/box/flare,
+/obj/item/material/knife/machete/hatchet,
+/obj/item/storage/box/flare,
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/SurvivalQuarters)
 "B" = (
@@ -384,7 +384,7 @@
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/SurvivalQuarters)
 "F" = (
-/obj/item/device/gps/computer,
+/obj/item/gps/computer,
 /obj/structure/window/reinforced/survival_pod{
 	dir = 4
 	},
@@ -409,7 +409,7 @@
 /area/survivalpod/superpose/SurvivalQuarters)
 "K" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/SurvivalQuarters)
 "L" = (
@@ -481,33 +481,33 @@
 /obj/structure/closet/walllocker_double/north{
 	name = "Survival Cabinet"
 	},
-/obj/item/weapon/storage/backpack/messenger,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/device/starcaster_news,
-/obj/item/weapon/material/knife/tacknife/survival,
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/trauma,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/oxy,
-/obj/item/weapon/flame/lighter/random,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/device/radio,
+/obj/item/storage/backpack/messenger,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/starcaster_news,
+/obj/item/material/knife/tacknife/survival,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/cell/device/hyper,
+/obj/item/reagent_containers/hypospray/autoinjector/trauma,
+/obj/item/reagent_containers/hypospray/autoinjector/oxy,
+/obj/item/flame/lighter/random,
+/obj/item/storage/box/survival/space,
+/obj/item/radio,
 /obj/item/clothing/accessory/storage/black_drop_pouches,
-/obj/item/weapon/reagent_containers/pill/dylovene,
-/obj/item/weapon/reagent_containers/pill/dylovene,
-/obj/item/device/flashlight/maglight,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/flare,
+/obj/item/reagent_containers/pill/dylovene,
+/obj/item/reagent_containers/pill/dylovene,
+/obj/item/flashlight/maglight,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/flare,
 /obj/random/soap,
-/obj/item/weapon/gun/energy/locked/phasegun/pistol,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/pda,
-/obj/item/weapon/storage/mre/menu11,
-/obj/item/weapon/storage/mre/menu11,
-/obj/item/device/starcaster_news,
-/obj/item/device/suit_cooling_unit/emergency,
-/obj/item/device/gps,
+/obj/item/gun/energy/locked/phasegun/pistol,
+/obj/item/fbp_backup_cell,
+/obj/item/pda,
+/obj/item/storage/mre/menu11,
+/obj/item/storage/mre/menu11,
+/obj/item/starcaster_news,
+/obj/item/suit_cooling_unit/emergency,
+/obj/item/gps,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/SurvivalQuarters)
 "U" = (

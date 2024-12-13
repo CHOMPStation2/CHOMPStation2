@@ -60,7 +60,7 @@
 	var/list/friends = list()		// Mobs on this list wont get attacked regardless of faction status.
 	var/harm_intent_damage = 3		// How much an unarmed harm click does to this mob.
 	var/list/loot_list = list()		// The list of lootable objects to drop, with "/path = prob%" structure
-	var/obj/item/weapon/card/id/myid// An ID card if they have one to give them access to stuff.
+	var/obj/item/card/id/myid// An ID card if they have one to give them access to stuff.
 	var/organ_names = /decl/mob_organ_names //'False' bodyparts that can be shown as hit by projectiles in place of the default humanoid bodyplan.
 
 	//Mob environment settings
@@ -182,11 +182,11 @@
 	var/isthermal = 0
 
 /mob/living/simple_mob/Initialize()
-	remove_verb(src,/mob/verb/observe) //CHOMPEdit TGPanel
+	remove_verb(src, /mob/verb/observe)
 	health = maxHealth
 
 	if(ID_provided) //VOREStation Edit
-		myid = new /obj/item/weapon/card/id(src)
+		myid = new /obj/item/card/id(src)
 		myid.access = myid_access.Copy()
 
 	for(var/L in has_langs)
@@ -205,8 +205,8 @@
 	if(organ_names)
 		organ_names = GET_DECL(organ_names)
 
-	if(CONFIG_GET(flag/allow_simple_mob_recolor)) //CHOMPEdit
-		add_verb(src,/mob/living/simple_mob/proc/ColorMate) //CHOMPEdit TGPanel
+	if(CONFIG_GET(flag/allow_simple_mob_recolor))
+		add_verb(src, /mob/living/simple_mob/proc/ColorMate)
 
 	AddElement(/datum/element/footstep, FOOTSTEP_MOB_SHOE, 1, -6) // CHOMPEdit - Giving them all shoe footsteps FOR NOW until I go through all of them and give appropiate ones
 
@@ -232,12 +232,12 @@
 //Client attached
 /mob/living/simple_mob/Login()
 	. = ..()
-	to_chat(src,"<b>You are \the [src].</b> [player_msg]")
+	to_chat(src,span_boldnotice("You are \the [src].") + " [player_msg]")
 	if(vore_active && !voremob_loaded) //CHOMPedit: On-demand belly loading.
 		voremob_loaded = TRUE
 		init_vore()
 	if(hasthermals)
-		add_verb(src, /mob/living/simple_mob/proc/hunting_vision) //So that maint preds can see prey through walls, to make it easier to find them. //ChompEDIT
+		add_verb(src, /mob/living/simple_mob/proc/hunting_vision) //So that maint preds can see prey through walls, to make it easier to find them.
 
 /mob/living/simple_mob/SelfMove(turf/n, direct, movetime)
 	var/turf/old_turf = get_turf(src)
@@ -293,16 +293,14 @@
 		. += injury_level
 	// VOREStation Edit Stop
 
-	. += CONFIG_GET(number/animal_delay) // CHOMPEdit
+	. += CONFIG_GET(number/animal_delay)
 
 	. += ..()
 
-//CHOMPEdit Begin
 /mob/living/simple_mob/get_status_tab_items()
 	. = ..()
 	. += ""
 	. += "Health: [round((health / getMaxHealth()) * 100)]%"
-//CHOMPEdit End
 
 /mob/living/simple_mob/lay_down()
 	..()
@@ -326,7 +324,7 @@
 	return mob_class & MOB_CLASS_HUMANOID|MOB_CLASS_ANIMAL|MOB_CLASS_SLIME // Update this if needed.
 
 /mob/living/simple_mob/get_nametag_desc(mob/user)
-	return "<i>[tt_desc]</i>"
+	return span_italics("[tt_desc]")
 
 /mob/living/simple_mob/make_hud_overlays()
 	hud_list[STATUS_HUD]  = gen_hud_image(buildmode_hud, src, "ai_0", plane = PLANE_BUILDMODE)
@@ -365,7 +363,7 @@
 
 /mob/living/simple_mob/proc/ColorMate()
 	set name = "Recolour"
-	set category = "Abilities.Settings" //CHOMPEdit
+	set category = "Abilities.Settings"
 	set desc = "Allows to recolour once."
 
 	if(!has_recoloured)
@@ -378,7 +376,7 @@
 
 /mob/living/simple_mob/proc/hunting_vision()
 	set name = "Track Prey Through Walls"
-	set category = "Abilities.Mob" //ChompEDIT
+	set category = "Abilities.Mob"
 	set desc = "Uses you natural predatory instincts to seek out prey even through walls, or your natural survival instincts to spot predators from a distance."
 
 	if(hunting_cooldown + 5 MINUTES < world.time)
@@ -393,7 +391,7 @@
 
 /mob/living/simple_mob/proc/hunting_vision_plus()
 	set name = "Thermal vision toggle"
-	set category = "Abilities.Mob" //ChompEDIT
+	set category = "Abilities.Mob"
 	set desc = "Uses you natural predatory instincts to seek out prey even through walls, or your natural survival instincts to spot predators from a distance."
 
 	if(!isthermal)
@@ -402,3 +400,6 @@
 	else
 		to_chat(usr, "You stop sensing creatures beyond the walls.")
 		sight -= SEE_MOBS
+
+/mob/living/simple_mob/proc/character_directory_species()
+	return "simplemob"

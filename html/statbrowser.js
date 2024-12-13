@@ -33,7 +33,6 @@ var turfname = "";
 var imageRetryDelay = 500;
 var imageRetryLimit = 50;
 var menu = document.getElementById('menu');
-var under_menu = document.getElementById('under_menu');
 var statcontentdiv = document.getElementById('statcontent');
 var storedimages = [];
 var split_admin_tabs = false;
@@ -59,26 +58,26 @@ function createStatusTab(name) {
 	if (!verb_tabs.includes(name) && !permanent_tabs.includes(name)) {
 		return;
 	}
-	var B = document.createElement("BUTTON");
-	B.onclick = function () {
+	var button = document.createElement("DIV");
+	button.onclick = function () {
 		tab_change(name);
 		this.blur();
+		statcontentdiv.focus();
 	};
-	B.id = name;
-	B.textContent = name;
-	B.className = "button";
+	button.id = name;
+	button.textContent = name;
+	button.className = "button";
 	//ORDERING ALPHABETICALLY
-	B.style.order = name.charCodeAt(0);
+	button.style.order = name.charCodeAt(0);
 	if (name == "Status" || name == "MC") {
-		B.style.order = name == "Status" ? 1 : 2;
+		button.style.order = name == "Status" ? 1 : 2;
 	}
 	if (name == "Tickets") {
-		B.style.order = 3;
+		button.style.order = 3;
 	}
 	//END ORDERING
-	menu.appendChild(B);
+	menu.appendChild(button);
 	SendTabToByond(name);
-	under_menu.style.height = menu.clientHeight + 'px';
 }
 
 function removeStatusTab(name) {
@@ -92,7 +91,6 @@ function removeStatusTab(name) {
 	}
 	menu.removeChild(document.getElementById(name));
 	TakeTabFromByond(name);
-	under_menu.style.height = menu.clientHeight + 'px';
 }
 
 function sortVerbs() {
@@ -106,10 +104,6 @@ function sortVerbs() {
 		}
 		return 0;
 	})
-}
-
-window.onresize = function () {
-	under_menu.style.height = menu.clientHeight + 'px';
 }
 
 function addPermanentTab(name) {
@@ -383,6 +377,7 @@ function draw_status() {
 		} else {
 			var div = document.createElement("div");
 			div.textContent = status_tab_parts[i];
+			div.className = "status-info";
 			document.getElementById("statcontent").appendChild(div);
 		}
 	}
@@ -402,7 +397,7 @@ function draw_mc() {
 		var td2 = document.createElement("td");
 		if (part[2]) {
 			var a = document.createElement("a");
-			a.href = "?_src_=vars;admin_token=" + href_token + ";Vars=" + part[2];
+			a.href = "byond://?_src_=vars;admin_token=" + href_token + ";Vars=" + part[2];
 			a.textContent = part[1];
 			td2.appendChild(a);
 		} else {
@@ -472,41 +467,40 @@ function draw_listedturf() {
 			table.appendChild(img);
 		}
 		var b = document.createElement("div");
-		var clickcatcher = "";
 		b.className = "link";
 		b.onmousedown = function (part) {
 			// The outer function is used to close over a fresh "part" variable,
 			// rather than every onmousedown getting the "part" of the last entry.
 			return function (e) {
 				e.preventDefault();
-				clickcatcher = "?src=" + part[1];
+				var params = {"src": part[1]};
 				switch (e.button) {
 					case 1:
-						clickcatcher += ";statpanel_item_click=middle";
+						params["statpanel_item_click"] = "middle";
 						break;
 					case 2:
-						clickcatcher += ";statpanel_item_click=right";
+						params["statpanel_item_click"] = "right";
 						break;
 					default:
-						clickcatcher += ";statpanel_item_click=left";
+						params["statpanel_item_click"] = "left";
 				}
 				if (e.shiftKey) {
-					clickcatcher += ";statpanel_item_shiftclick=1";
+					params["statpanel_item_shiftclick"] = 1;
 				}
 				if (e.ctrlKey) {
-					clickcatcher += ";statpanel_item_ctrlclick=1";
+					params["statpanel_item_ctrlclick"] = 1;
 				}
 				if (e.altKey) {
-					clickcatcher += ";statpanel_item_altclick=1";
+					params["statpanel_item_altclick"] = 1;
 				}
-				window.location.href = clickcatcher;
+				Byond.topic(params)
 			}
 		}(part);
 		b.textContent = part[0];
 		table.appendChild(b);
 		table.appendChild(document.createElement("br"));
 	}
-	document.getElementById("statcontent").appendChild(table);
+	statcontentdiv.appendChild(table);
 }
 
 function remove_listedturf() {
@@ -535,7 +529,7 @@ function draw_sdql2() {
 		var td2 = document.createElement("td");
 		if (part[2]) {
 			var a = document.createElement("a");
-			a.href = "?src=" + part[2] + ";statpanel_item_click=left";
+			a.href = "byond://?src=" + part[2] + ";statpanel_item_click=left";
 			a.textContent = part[1];
 			td2.appendChild(a);
 		} else {
@@ -562,12 +556,12 @@ function draw_tickets() {
 		var td2 = document.createElement("td");
 		if (part[2]) {
 			var a = document.createElement("a");
-			a.href = "?_src_=holder;admin_token=" + href_token + ";ahelp=" + part[2] + ";ahelp_action=ticket;statpanel_item_click=left;action=ticket";
+			a.href = "byond://?_src_=holder;admin_token=" + href_token + ";ahelp=" + part[2] + ";ahelp_action=ticket;statpanel_item_click=left;action=ticket";
 			a.textContent = part[1];
 			td2.appendChild(a);
 		} else if (part[3]) {
 			var a = document.createElement("a");
-			a.href = "?src=" + part[3] + ";statpanel_item_click=left";
+			a.href = "byond://?src=" + part[3] + ";statpanel_item_click=left";
 			a.textContent = part[1];
 			td2.appendChild(a);
 		} else {
@@ -615,7 +609,6 @@ function draw_misc(tab) {
 		}
 		var td3 = null;
 		var b = document.createElement("div");
-		var clickcatcher = "";
 		if (part[4]) {
 			b.className = "linkelem";
 			b.onmousedown = function (part) {
@@ -623,27 +616,27 @@ function draw_misc(tab) {
 				// rather than every onmousedown getting the "part" of the last entry.
 				return function (e) {
 					e.preventDefault();
-					clickcatcher = "?src=" + part[4];
+					var params = { "src": part[4] };
 					switch (e.button) {
 						case 1:
-							clickcatcher += ";statpanel_item_click=middle";
+							params["statpanel_item_click"] = "middle";
 							break;
 						case 2:
-							clickcatcher += ";statpanel_item_click=right";
+							params["statpanel_item_click"] = "right";
 							break;
 						default:
-							clickcatcher += ";statpanel_item_click=left";
+							params["statpanel_item_click"] = "left";
 					}
 					if (e.shiftKey) {
-						clickcatcher += ";statpanel_item_shiftclick=1";
+						params["statpanel_item_shiftclick"] = 1;
 					}
 					if (e.ctrlKey) {
-						clickcatcher += ";statpanel_item_ctrlclick=1";
+						params["statpanel_item_ctrlclick"] = 1;
 					}
 					if (e.altKey) {
-						clickcatcher += ";statpanel_item_altclick=1";
+						params["statpanel_item_altclick"] = 1;
 					}
-					window.location.href = clickcatcher;
+					Byond.topic(params);
 				}
 			}(part);
 		}
@@ -686,7 +679,7 @@ function draw_spells(cat) {
 		var td2 = document.createElement("td");
 		if (part[3]) {
 			var a = document.createElement("a");
-			a.href = "?src=" + part[3] + ";statpanel_item_click=left";
+			a.href = "byond://?src=" + part[3] + ";statpanel_item_click=left";
 			a.textContent = part[2];
 			td2.appendChild(a);
 		} else {
@@ -728,6 +721,7 @@ function draw_verbs(cat) {
 				name = splitName[1];
 		}
 		var command = part[1];
+		var desc = part[2];
 
 		if (command && name.lastIndexOf(cat, 0) != -1 && (name.length == cat.length || name.charAt(cat.length) == ".")) {
 			var subCat = name.lastIndexOf(".") != -1 ? name.split(".")[1] : null;
@@ -741,6 +735,7 @@ function draw_verbs(cat) {
 			a.href = "#";
 			a.onclick = make_verb_onclick(command.replace(/\s/g, "-"));
 			a.className = "grid-item";
+			a.title = desc || "No description";
 			var t = document.createElement("span");
 			t.textContent = command;
 			t.className = "grid-item-text";
@@ -772,6 +767,23 @@ function set_theme(which) {
 	} else if (which == "dark" || which == "vchatdark") {
 		document.body.className = "dark";
 		set_style_sheet("browserOutput");
+	}
+}
+
+function set_font_size(size) {
+	document.body.style.setProperty('font-size', size);
+}
+
+function set_tabs_style(style) {
+	if (style == "default") {
+		menu.classList.add('menu-wrap');
+		menu.classList.remove('tabs-classic');
+	} else if (style == "classic") {
+		menu.classList.add('menu-wrap');
+		menu.classList.add('tabs-classic');
+	} else if (style == "scrollable") {
+		menu.classList.remove('menu-wrap');
+		menu.classList.remove('tabs-classic');
 	}
 }
 

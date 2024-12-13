@@ -44,18 +44,18 @@
 			var/total_moles = air_sample.total_moles
 			if(total_moles > 0)
 				if(output&4)
-					signal.data["oxygen"] = round(100*air_sample.gas["oxygen"]/total_moles,0.1)
+					signal.data[GAS_O2] = round(100*air_sample.gas[GAS_O2]/total_moles,0.1)
 				if(output&8)
-					signal.data["phoron"] = round(100*air_sample.gas["phoron"]/total_moles,0.1)
+					signal.data[GAS_PHORON] = round(100*air_sample.gas[GAS_PHORON]/total_moles,0.1)
 				if(output&16)
-					signal.data["nitrogen"] = round(100*air_sample.gas["nitrogen"]/total_moles,0.1)
+					signal.data[GAS_N2] = round(100*air_sample.gas[GAS_N2]/total_moles,0.1)
 				if(output&32)
-					signal.data["carbon_dioxide"] = round(100*air_sample.gas["carbon_dioxide"]/total_moles,0.1)
+					signal.data[GAS_CO2] = round(100*air_sample.gas[GAS_CO2]/total_moles,0.1)
 			else
-				signal.data["oxygen"] = 0
-				signal.data["phoron"] = 0
-				signal.data["nitrogen"] = 0
-				signal.data["carbon_dioxide"] = 0
+				signal.data[GAS_O2] = 0
+				signal.data[GAS_PHORON] = 0
+				signal.data[GAS_N2] = 0
+				signal.data[GAS_CO2] = 0
 		signal.data["sigtype"]="status"
 		radio_connection.post_signal(src, signal, radio_filter = RADIO_ATMOSIA)
 
@@ -83,7 +83,7 @@
 	var/list/sensors = list()
 	var/list/sensor_information = list()
 	var/datum/radio_frequency/radio_connection
-	circuit = /obj/item/weapon/circuitboard/air_management
+	circuit = /obj/item/circuitboard/air_management
 
 /obj/machinery/computer/general_air_control/Destroy()
 	if(radio_controller)
@@ -144,7 +144,7 @@
 	var/list/output_info
 	var/input_flow_setting = 200
 	var/pressure_setting = ONE_ATMOSPHERE * 45
-	circuit = /obj/item/weapon/circuitboard/air_management/tank_control
+	circuit = /obj/item/circuitboard/air_management/tank_control
 
 /obj/machinery/computer/general_air_control/large_tank_control/tgui_data(mob/user)
 	var/list/data = ..()
@@ -243,7 +243,7 @@
 	var/list/output_info
 	var/input_flow_setting = 700
 	var/pressure_setting = 100
-	circuit = /obj/item/weapon/circuitboard/air_management/supermatter_core
+	circuit = /obj/item/circuitboard/air_management/supermatter_core
 
 /obj/machinery/computer/general_air_control/supermatter_core/tgui_data(mob/user)
 	var/list/data = ..()
@@ -343,7 +343,7 @@
 	var/automation = 0
 	var/cutoff_temperature = 2000
 	var/on_temperature = 1200
-	circuit = /obj/item/weapon/circuitboard/air_management/injector_control
+	circuit = /obj/item/circuitboard/air_management/injector_control
 
 /obj/machinery/computer/general_air_control/fuel_injection/process()
 	if(automation)
@@ -399,7 +399,7 @@
 /obj/machinery/computer/general_air_control/fuel_injection/tgui_act(action, params)
 	if(..())
 		return TRUE
-	
+
 	switch(action)
 		if("refresh_status")
 			device_info = null

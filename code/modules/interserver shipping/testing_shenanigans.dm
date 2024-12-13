@@ -96,7 +96,7 @@
 
 	var/list/shit_to_send = list()
 	for (var/i = 0; i < count; i++)
-		var/obj/item/weapon/beach_ball/A = new(usr.loc)
+		var/obj/item/beach_ball/A = new(usr.loc)
 		shit_to_send += A
 
 	var/datum/shipping_request/ship

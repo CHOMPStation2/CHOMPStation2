@@ -80,7 +80,7 @@ GLOBAL_LIST_BOILERPLATE(all_brain_organs, /obj/item/organ/internal/brain)
 
 /obj/item/organ/internal/brain/Initialize() // CHOMPEdit
 	. = ..() // CHOMPEdit
-	health = CONFIG_GET(number/default_brain_health) // CHOMPEdit
+	health = CONFIG_GET(number/default_brain_health)
 	defib_timer = (CONFIG_GET(number/defib_timer) MINUTES) / 2 // CHOMPEdit
 	spawn(5)
 		if(brainmob)
@@ -122,7 +122,7 @@ GLOBAL_LIST_BOILERPLATE(all_brain_organs, /obj/item/organ/internal/brain)
 
 	brainmob.languages = H.languages
 
-	to_chat(brainmob, "<span class='notice'>You feel slightly disoriented. That's normal when you're just \a [initial(src.name)].</span>")
+	to_chat(brainmob, span_notice("You feel slightly disoriented. That's normal when you're just \a [initial(src.name)]."))
 	callHook("debrain", list(brainmob))
 
 /obj/item/organ/internal/brain/examine(mob/user) // -- TLE
@@ -294,7 +294,7 @@ GLOBAL_LIST_BOILERPLATE(all_brain_organs, /obj/item/organ/internal/brain)
 	name = "Promethean Revival"
 	id = "prom_revival"
 	result = null
-	required_reagents = list("phoron" = 40)
+	required_reagents = list(REAGENT_ID_PHORON = 40)
 	result_amount = 1
 
 /decl/chemical_reaction/instant/promethean_brain_revival/can_happen(var/datum/reagents/holder)
@@ -305,9 +305,9 @@ GLOBAL_LIST_BOILERPLATE(all_brain_organs, /obj/item/organ/internal/brain)
 /decl/chemical_reaction/instant/promethean_brain_revival/on_reaction(var/datum/reagents/holder)
 	var/obj/item/organ/internal/brain/slime/brain = holder.my_atom
 	if(brain.reviveBody())
-		brain.visible_message("<span class='notice'>[brain] bubbles, surrounding itself with a rapidly expanding mass of slime!</span>")
+		brain.visible_message(span_notice("[brain] bubbles, surrounding itself with a rapidly expanding mass of slime!"))
 	else
-		brain.visible_message("<span class='warning'>[brain] shifts strangely, but falls still.</span>")
+		brain.visible_message(span_warning("[brain] shifts strangely, but falls still."))
 
 /obj/item/organ/internal/brain/golem
 	name = "chem"

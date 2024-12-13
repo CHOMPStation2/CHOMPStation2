@@ -1,7 +1,7 @@
 import { BooleanLike } from 'common/react';
 
 import { useBackend } from '../../backend';
-import { Box, Button, Divider, Flex, Section } from '../../components';
+import { Button, Divider, Flex, Section } from '../../components';
 import { prefData } from './types';
 import { VoreUserPreferencesAesthetic } from './VoreUserPreferencesTabs/VoreUserPreferencesAesthetic ';
 import { VoreUserPreferencesMechanical } from './VoreUserPreferencesTabs/VoreUserPreferencesMechanical ';
@@ -41,6 +41,7 @@ export const VoreUserPreferences = (props: {
     nutrition_message_visible,
     weight_message_visible,
     eating_privacy_global,
+    allow_mimicry,
   } = prefs;
 
   const preferences = {
@@ -425,10 +426,23 @@ export const VoreUserPreferences = (props: {
         disabled: 'Global Vore Privacy: Loud',
       },
     },
+    allow_mimicry: {
+      action: 'toggle_mimicry',
+      test: allow_mimicry,
+      tooltip: {
+        main: 'Allows some creatures to mimick your apperance.',
+        enable: ' Click here to allow mimicry.',
+        disable: ' Click here to forbid mimicry.',
+      },
+      content: {
+        enabled: 'Allow Mimicry: Yes',
+        disabled: 'Allow Mimicry: No',
+      },
+    },
   };
 
   return (
-    <Box nowrap>
+    <Section fill scrollable>
       <VoreUserPreferencesMechanical
         show_pictures={show_pictures}
         preferences={preferences}
@@ -458,6 +472,6 @@ export const VoreUserPreferences = (props: {
           </Flex.Item>
         </Flex>
       </Section>
-    </Box>
+    </Section>
   );
 };

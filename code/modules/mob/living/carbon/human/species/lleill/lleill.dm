@@ -82,7 +82,10 @@
 		/mob/living/carbon/human/proc/shapeshifter_select_wings,
 		/mob/living/carbon/human/proc/shapeshifter_select_tail,
 		/mob/living/carbon/human/proc/shapeshifter_select_ears,
+		/mob/living/carbon/human/proc/shapeshifter_select_secondary_ears,
 		/mob/living/proc/set_size,
+		/mob/living/carbon/human/proc/shapeshifter_copy_body,
+		/mob/living/carbon/human/proc/shapeshifter_regenerate,
 //		/mob/living/carbon/human/proc/lleill_invisibility,
 //		/mob/living/carbon/human/proc/lleill_transmute,
 //		/mob/living/carbon/human/proc/lleill_rings,
@@ -206,7 +209,7 @@
 		H.ability_master = new /obj/screen/movable/ability_master/lleill(H)
 	for(var/datum/power/lleill/P in lleill_ability_datums)
 		if(!(P.verbpath in H.verbs))
-			H.verbs += P.verbpath
+			add_verb(H, P.verbpath)
 			H.ability_master.add_lleill_ability(
 					object_given = H,
 					verb_given = P.verbpath,
@@ -239,4 +242,3 @@
 /datum/species/lleill/add_inherent_verbs(var/mob/living/carbon/human/H)
 	..()
 	add_lleill_abilities(H)
-

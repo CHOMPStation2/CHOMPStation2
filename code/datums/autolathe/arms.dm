@@ -2,7 +2,7 @@
 
 /datum/category_item/autolathe/arms/syringegun_ammo
 	name = "syringe gun cartridge"
-	path =/obj/item/weapon/syringe_cartridge
+	path =/obj/item/syringe_cartridge
 
 ////////////////
 /*Ammo casings*/
@@ -445,15 +445,15 @@
 
 /datum/category_item/autolathe/arms/knuckledusters
 	name = "knuckle dusters"
-	path =/obj/item/clothing/gloves/knuckledusters
+	path =/obj/item/clothing/accessory/knuckledusters
 	hidden = 1
 
 /datum/category_item/autolathe/arms/tacknife
 	name = "tactical knife"
-	path =/obj/item/weapon/material/knife/tacknife
+	path =/obj/item/material/knife/tacknife
 	hidden = 1
 
 /datum/category_item/autolathe/arms/flamethrower
 	name = "flamethrower"
-	path =/obj/item/weapon/flamethrower/full
+	path =/obj/item/flamethrower/full
 	hidden = 1

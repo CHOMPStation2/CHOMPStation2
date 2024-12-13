@@ -200,7 +200,7 @@
 /datum/supply_demand_order/reagent/match_item(var/atom/I)
 	if(!I.reagents)
 		return
-	if(!istype(I, /obj/item/weapon/reagent_containers))
+	if(!istype(I, /obj/item/reagent_containers))
 		return
 	var/amount_to_take = min(I.reagents.get_reagent_amount(reagent_id), qty_need)
 	if(amount_to_take >= 1)
@@ -315,7 +315,7 @@
 	var/datum/gas_mixture/mixture = new
 	mixture.temperature = T20C
 	var/unpickedTypes = gas_data.gases.Copy()
-	unpickedTypes -= "volatile_fuel" // Don't do that one
+	unpickedTypes -= GAS_VOLATILE_FUEL // Don't do that one
 	for(var/i in 1 to differentTypes)
 		var/gasId = pick(unpickedTypes)
 		unpickedTypes -= gasId

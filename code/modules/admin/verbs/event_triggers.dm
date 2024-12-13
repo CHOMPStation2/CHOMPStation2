@@ -4,7 +4,7 @@ Eventkit verb to be used to spawn the obj/effect/landmarks defined under code\ga
 /client/proc/manage_event_triggers()
 	set name = "Manage Event Triggers"
 	set desc = "Open dialogue to create or delete narration/notification triggers"
-	set category = "Fun.Event Kit" //CHOMPEdit
+	set category = "Fun.Event Kit"
 
 	if(!check_rights(R_FUN)) return
 
@@ -35,7 +35,7 @@ Eventkit verb to be used to spawn the obj/effect/landmarks defined under code\ga
 		if("Manage Personal Triggers")
 			var/personal_list = event_triggers[src.ckey]
 			if(!LAZYLEN(personal_list))
-				to_chat(src, SPAN_NOTICE("You don't have any landmarks to manage!"))
+				to_chat(src, span_notice("You don't have any landmarks to manage!"))
 				return
 			personal_list |= list("Cancel", "Delete All")
 			var/choice = tgui_input_list(src, "Select a landmark to choose between teleporting to it or deleting it, select delete all to clear them.", \
@@ -70,7 +70,7 @@ Eventkit verb to be used to spawn the obj/effect/landmarks defined under code\ga
 			var/other_ckey = sanitize(tgui_input_text(src, "input trigger owner's ckey", "CKEY", ""))
 			var/others_list = event_triggers[other_ckey]
 			if(!LAZYLEN(others_list))
-				to_chat(src, SPAN_NOTICE("[other_ckey] doesn't have any landmarks to manage!"))
+				to_chat(src, span_notice("[other_ckey] doesn't have any landmarks to manage!"))
 				return
 			others_list |= list("Cancel", "Delete All")
 			var/choice = tgui_input_list(src, "Select a landmark to choose between teleporting to it or deleting it, select delete all to clear them.", \

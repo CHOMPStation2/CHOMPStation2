@@ -11,20 +11,21 @@
 
 /decl/emote/audible/gasp/get_emote_sound(var/atom/user)
 	..()
-	var/mob/living/carbon/human/H = user
-	// CHOMPEdit: Standardize Species Sounds Getters
-	var/vol = H.species.gasp_volume
-	var/s = get_species_sound(get_gendered_sound(H))["gasp"]
-	if(!s && !(get_species_sound(H.species.species_sounds) == "None")) // Failsafe, so we always use the default gasp/etc sounds. None will cancel out anyways.
-		if(H.identifying_gender == FEMALE)
-			s = get_species_sound("Human Female")["gasp"]
-		else // Update this if we ever get herm/etc sounds.
-			s = get_species_sound("Human Male")["gasp"]
-	return list(
-			"sound" = s,
-			"vol" = vol,
-			"volchannel" = VOLUME_CHANNEL_SPECIES_SOUNDS
-		)
+	if(ishuman(user))
+		var/mob/living/carbon/human/H = user
+		// CHOMPEdit: Standardize Species Sounds Getters
+		var/vol = H.species.gasp_volume
+		var/s = get_species_sound(get_gendered_sound(H))["gasp"]
+		if(!s && !(get_species_sound(H.species.species_sounds) == "None")) // Failsafe, so we always use the default gasp/etc sounds. None will cancel out anyways.
+			if(H.identifying_gender == FEMALE)
+				s = get_species_sound("Human Female")["gasp"]
+			else // Update this if we ever get herm/etc sounds.
+				s = get_species_sound("Human Male")["gasp"]
+		return list(
+				"sound" = s,
+				"vol" = vol,
+				"volchannel" = VOLUME_CHANNEL_SPECIES_SOUNDS
+			)
 
 /decl/emote/audible/mgeow
 	key = "mgeow"
@@ -65,6 +66,14 @@
 	emote_message_1p_target = "You gwah at TARGET."
 	emote_message_3p_target = "gwahs at TARGET."
 	emote_sound = 'modular_chomp/sound/voice/emotes/gwah.ogg'
+
+/decl/emote/audible/caw
+	key = "caw"
+	emote_message_1p = "You caw!"
+	emote_message_3p = "caws!"
+	emote_message_1p_target = "You caw at TARGET."
+	emote_message_3p_target = "caws at TARGET."
+	emote_sound = 'modular_chomp/sound/voice/emotes/caw.ogg' // Copyright Sampling+ 1.0 Vixuxx (freesound.org) for the source audio.
 
 /decl/emote/audible/wawa
 	key = "wawa"

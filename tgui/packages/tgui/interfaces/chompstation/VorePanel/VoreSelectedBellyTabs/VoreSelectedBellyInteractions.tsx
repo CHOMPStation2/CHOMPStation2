@@ -1,5 +1,6 @@
-import { useBackend } from '../../../../backend';
-import { Button, LabeledList, Section } from '../../../../components';
+import { useBackend } from 'tgui/backend';
+import { Button, LabeledList, Section } from 'tgui/components';
+
 import { selectedData } from '../types';
 
 export const VoreSelectedBellyInteractions = (props: {
@@ -115,6 +116,15 @@ export const VoreSelectedBellyInteractions = (props: {
               }
             >
               {interacts.digestchance + '%'}
+            </Button>
+          </LabeledList.Item>
+          <LabeledList.Item label="Belch Chance">
+            <Button
+              onClick={() =>
+                act('set_attribute', { attribute: 'b_belchchance' })
+              }
+            >
+              {interacts.belchchance + '%'}
             </Button>
           </LabeledList.Item>
           <LabeledList.Divider />

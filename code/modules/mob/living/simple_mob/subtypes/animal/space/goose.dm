@@ -25,7 +25,7 @@
 
 	has_langs = list(LANGUAGE_ANIMAL)
 
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat/chicken
+	meat_type = /obj/item/reagent_containers/food/snacks/meat/chicken
 	meat_amount = 3
 
 	can_be_drop_prey = FALSE //CHOMP Add
@@ -44,7 +44,7 @@
 /mob/living/simple_mob/animal/space/goose/verb/berserk()
 	set name = "Berserk"
 	set desc = "Enrage and become vastly stronger for a period of time, however you will be weaker afterwards."
-	set category = "Abilities.Goose" //CHOMPEdit
+	set category = "Abilities.Goose"
 
 	add_modifier(/datum/modifier/berserk, 30 SECONDS)
 

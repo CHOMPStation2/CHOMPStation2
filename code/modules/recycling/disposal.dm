@@ -74,7 +74,7 @@
 			if(contents.len > 0)
 				to_chat(user, "Eject the items first!")
 				return
-			var/obj/item/weapon/weldingtool/W = I.get_welder()
+			var/obj/item/weldingtool/W = I.get_welder()
 			if(W.remove_fuel(0,user))
 				playsound(src, W.usesound, 100, 1)
 				to_chat(user, "You start slicing the floorweld off the disposal unit.")
@@ -94,12 +94,12 @@
 				to_chat(user, "You need more welding fuel to complete this task.")
 				return
 
-	if(istype(I, /obj/item/weapon/melee/energy/blade))
+	if(istype(I, /obj/item/melee/energy/blade))
 		to_chat(user, "You can't place that item inside the disposal unit.")
 		return
 
-	if(istype(I, /obj/item/weapon/storage/bag/trash))
-		var/obj/item/weapon/storage/bag/trash/T = I
+	if(istype(I, /obj/item/storage/bag/trash))
+		var/obj/item/storage/bag/trash/T = I
 		to_chat(user, span_blue("You empty the bag."))
 		for(var/obj/item/O in T.contents)
 			T.remove_from_storage(O,src)
@@ -107,23 +107,23 @@
 		update()
 		return
 
-	if(istype(I, /obj/item/weapon/material/ashtray))
-		var/obj/item/weapon/material/ashtray/A = I
+	if(istype(I, /obj/item/material/ashtray))
+		var/obj/item/material/ashtray/A = I
 		if(A.contents.len > 0)
-			user.visible_message("<b>\The [user]</b> empties \the [A] into [src].")
+			user.visible_message(span_infoplain(span_bold("\The [user]") + " empties \the [A] into [src]."))
 			for(var/obj/item/O in A.contents)
 				O.forceMove(src)
 			A.update_icon()
 			update()
 			return
 
-	var/obj/item/weapon/grab/G = I
+	var/obj/item/grab/G = I
 	if(istype(G))	// handle grabbed mob
 		if(ismob(G.affecting))
 			var/mob/GM = G.affecting
-			for (var/mob/V in viewers(usr))
-				V.show_message("[usr] starts putting [GM.name] into the disposal.", 3)
-			if(do_after(usr, 20))
+			for (var/mob/V in viewers(user))
+				V.show_message("[user] starts putting [GM.name] into the disposal.", 3)
+			if(do_after(user, 20))
 				if (GM.client)
 					GM.client.perspective = EYE_PERSPECTIVE
 					GM.client.eye = src
@@ -142,9 +142,9 @@
 
 	user.drop_item()
 	if(I)
-		if(istype(I, /obj/item/weapon/holder/micro))
+		if(istype(I, /obj/item/holder/micro))
 			log_and_message_admins("placed [I.name] inside \the [src]", user)
-			var/obj/item/weapon/holder/H = I
+			var/obj/item/holder/H = I
 			H.held_mob.forceMove(src)
 			qdel(I)
 		else
@@ -173,13 +173,13 @@
 	src.add_fingerprint(user)
 	var/target_loc = target.loc
 	var/msg
-	for (var/mob/V in viewers(usr))
+	for (var/mob/V in viewers(user))
 		if(target == user && !user.stat && !user.weakened && !user.stunned && !user.paralysis)
-			V.show_message("[usr] starts climbing into the disposal.", 3)
+			V.show_message("[user] starts climbing into the disposal.", 3)
 		if(target != user && !user.restrained() && !user.stat && !user.weakened && !user.stunned && !user.paralysis)
 			if(target.anchored) return
-			V.show_message("[usr] starts stuffing [target.name] into the disposal.", 3)
-	if(!do_after(usr, 20))
+			V.show_message("[user] starts stuffing [target.name] into the disposal.", 3)
+	if(!do_after(user, 20))
 		return
 	if(target_loc != target.loc)
 		return
@@ -269,18 +269,18 @@
 	if(..())
 		return
 
-	if(usr.loc == src)
-		to_chat(usr, "<span class='warning'>You cannot reach the controls from inside.</span>")
+	if(ui.user.loc == src)
+		to_chat(ui.user, span_warning("You cannot reach the controls from inside."))
 		return TRUE
 
 	if(mode==-1 && action != "eject") // If the mode is -1, only allow ejection
-		to_chat(usr, "<span class='warning'>The disposal units power is disabled.</span>")
+		to_chat(ui.user, span_warning("The disposal units power is disabled."))
 		return
 
 	if(stat & BROKEN)
 		return
 
-	add_fingerprint(usr)
+	add_fingerprint(ui.user)
 
 	if(flushing)
 		return
@@ -315,18 +315,18 @@
 
 	// if(!ai)  // AI can't pull flush handle
 	// 	if(flush)
-	// 		dat += "Disposal handle: <A href='?src=\ref[src];handle=0'>Disengage</A> <B>Engaged</B>"
+	// 		dat += "Disposal handle: <A href='byond://?src=\ref[src];handle=0'>Disengage</A> <B>Engaged</B>"
 	// 	else
-	// 		dat += "Disposal handle: <B>Disengaged</B> <A href='?src=\ref[src];handle=1'>Engage</A>"
+	// 		dat += "Disposal handle: <B>Disengaged</B> <A href='byond://?src=\ref[src];handle=1'>Engage</A>"
 
-	// 	dat += "<BR><HR><A href='?src=\ref[src];eject=1'>Eject contents</A><HR>"
+	// 	dat += "<BR><HR><A href='byond://?src=\ref[src];eject=1'>Eject contents</A><HR>"
 
 	// if(mode <= 0)
-	// 	dat += "Pump: <B>Off</B> <A href='?src=\ref[src];pump=1'>On</A><BR>"
+	// 	dat += "Pump: <B>Off</B> <A href='byond://?src=\ref[src];pump=1'>On</A><BR>"
 	// else if(mode == 1)
-	// 	dat += "Pump: <A href='?src=\ref[src];pump=0'>Off</A> <B>On</B> (pressurizing)<BR>"
+	// 	dat += "Pump: <A href='byond://?src=\ref[src];pump=0'>Off</A> <B>On</B> (pressurizing)<BR>"
 	// else
-	// 	dat += "Pump: <A href='?src=\ref[src];pump=0'>Off</A> <B>On</B> (idle)<BR>"
+	// 	dat += "Pump: <A href='byond://?src=\ref[src];pump=0'>Off</A> <B>On</B> (idle)<BR>"
 
 	// var/per = 100* air_contents.return_pressure() / (SEND_PRESSURE)
 
@@ -384,6 +384,15 @@
 // 	return
 
 // eject the contents of the disposal unit
+
+/obj/machinery/disposal/verb/force_eject()
+	set src in oview(1)
+	set category = "Object"
+	set name = "Force Eject"
+	if(flushing)
+		return
+	eject()
+
 /obj/machinery/disposal/proc/eject()
 	for(var/atom/movable/AM in src)
 		AM.forceMove(src.loc)
@@ -536,7 +545,7 @@
 	if((istype(AM, /obj/item) || istype(AM, /mob/living)) && !istype(AM, /obj/item/projectile))
 		if(prob(75))
 			AM.forceMove(src)
-			if(istype(AM, /obj/item/weapon/holder/micro) || istype(AM, /mob/living))
+			if(istype(AM, /obj/item/holder/micro) || istype(AM, /mob/living))
 				log_and_message_admins("[AM] was thrown into \the [src]")
 				visible_message("\The [AM] lands in \the [src]!")
 				//flush() //Away they go! //Uncomment this for proper autoflush. Compromising with autopull to avoid possible disposal dunking abuse
@@ -559,7 +568,7 @@
 			return
 		if(prob(75))
 			I.forceMove(src)
-			if(istype(I, /obj/item/weapon/holder/micro))
+			if(istype(I, /obj/item/holder/micro))
 				log_and_message_admins("[I.name] was thrown into \the [src]")
 			for(var/mob/M in viewers(src))
 				M.show_message("\The [I] lands in \the [src].", 3)
@@ -1013,7 +1022,7 @@
 		return		// prevent interaction with T-scanner revealed pipes
 	src.add_fingerprint(user)
 	if(I.has_tool_quality(TOOL_WELDER))
-		var/obj/item/weapon/weldingtool/W = I.get_welder()
+		var/obj/item/weldingtool/W = I.get_welder()
 
 		if(W.remove_fuel(0,user))
 			playsound(src, W.usesound, 50, 1)
@@ -1298,8 +1307,8 @@
 	if(..())
 		return
 
-	if(istype(I, /obj/item/device/destTagger))
-		var/obj/item/device/destTagger/O = I
+	if(istype(I, /obj/item/destTagger))
+		var/obj/item/destTagger/O = I
 
 		if(O.currTag)// Tag set
 			sort_tag = O.currTag
@@ -1366,8 +1375,8 @@
 	if(..())
 		return
 
-	if(istype(I, /obj/item/device/destTagger))
-		var/obj/item/device/destTagger/O = I
+	if(istype(I, /obj/item/destTagger))
+		var/obj/item/destTagger/O = I
 
 		if(O.currTag)// Tag set
 			sortType = O.currTag
@@ -1488,7 +1497,7 @@
 		return		// prevent interaction with T-scanner revealed pipes
 	src.add_fingerprint(user)
 	if(I.has_tool_quality(TOOL_WELDER))
-		var/obj/item/weapon/weldingtool/W = I.get_welder()
+		var/obj/item/weldingtool/W = I.get_welder()
 
 		if(W.remove_fuel(0,user))
 			playsound(src, W.usesound, 100, 1)
@@ -1621,7 +1630,7 @@
 			playsound(src, I.usesound, 50, 1)
 			return
 	else if(I.has_tool_quality(TOOL_WELDER) && mode==1)
-		var/obj/item/weapon/weldingtool/W = I.get_welder()
+		var/obj/item/weldingtool/W = I.get_welder()
 		if(W.remove_fuel(0,user))
 			playsound(src, W.usesound, 100, 1)
 			to_chat(user, "You start slicing the floorweld off the disposal outlet.")

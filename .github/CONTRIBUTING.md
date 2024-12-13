@@ -12,6 +12,7 @@ These are just guidelines, not rules, use your best judgment and feel free to pr
 
 [How Can I Contribute?](#how-can-i-contribute)
   * [Your First Code Contribution](#your-first-code-contribution)
+  * [Chomp Station Map Edits](#chomp-station-map-edits)
   * [Chomp Station Coding Standards](#chomp-station-coding-standards)
   * [Pull Requests](#pull-requests)
   * [Git Commit Messages](#git-commit-messages)
@@ -34,54 +35,56 @@ Unsure where to begin contributing to Chomp Station? You can start by looking th
 
 ### Chomp Station Map Edits
 
-* Our base map files are in [map/southern_cross/].
-* Our stationary overmap location files are in [maps/southern_cross/overmap/].
-* Our random overmap POI files are in [modular_chomp/code/modules/overmap/].
+* Our base map files are in [modular_chomp/maps/].
+* Our stationary overmap location files are in [modular_chomp/maps/southern_cross/overmap/].
+* Our random overmap POI files are in [modular_chomp/maps/overmap/].
 * Our surface POI map files (Wilderness, plains, ...) are in [modular_chomp/maps/submaps/surface_submaps/].
-* Map changes must be in tgm format. See the [Mapmerge2 Readme] for details, or use [StrongDMM] which can automatically save maps as tgm.
+* Map changes must be in tgm format. See the [Mapmerge2 Readme](../tools/mapmerge2/readme.md) for details, or use [StrongDMM](../tools/StrongDMM/README.md) which can automatically save maps as tgm.
+* PoIs or map templates placed during generation (Mining, plains, wilderness, space...) are generally fair game for editing or creating anew.
+* Maps that are placed permanently (Station, planetary locations) must be subject to discussion. To prevent wasted time, discuss these with the community and staff
+    * There is a limited budget of RAM available for permanent maps. This must be carefully rationed. 
+* Entire new station designs MUST be discussed with the community and the staff. Post a floor plan or basic design before committing effort in discord to prevent wasted time. 
+* For new atmospherics settings, subtypes of turfs for all turfs can be created with the [turfpacks](../modular_chomp/maps/~turfpacks/turfpacks.dm) system quickly and easily.
 
-### Chomp Station Coding Standards
+## Chomp Station Coding Standards
 
-Any code submissions that do not meet our coding standards are likely to be rejected, or at the very least, have a maintainer request changes on your PR. Save time and follow these standards from the start:
+### General
+* **DO NOT** create joke or meme PRs. The Github is intended to be a sterile location for reviewing technical content.
+* We **DO NOT** allow any kind of CKEY/personally locked content on this codebase. Anything created must be available to all or none.
+    * Our upstream does allow this, and ckey-locked content from them does exist in our code. We try to comment it out where possible. Please report anything missing.
+    * If you have ckey locked content from our upstream and would like to make it available to all here, please contact us.
+* we **DO NOT** allow any 'naming' in our coded content. this includes shoutouts, naming a player as an owner or otherwise. All descriptions, names, lore-texts must be free of an individual's name. NPC naming is permitted.
 
-In an effort to make contributing easier to do, Black Major has started a modularity folder, https://github.com/CHOMPStation2/CHOMPStation2/tree/master/modular_chomp.
-Ideally, any content that can be written that is wholelly independant of vorestation's content, should be
-included in this modularity folder, and put into the associated folder that it would have appeared in among the standard files.
+### Codewriting
+* Where possible, add changes to the modular_chomp/ subdirectory.
+* For edits to upstream code (Code not inside /modular_chomp)
+    * For single line edits, add "//ChompEDIT - description" at the end of the line.
+    * For block edits, encapsulate your edit with "//ChompEDIT START - explanation" and "//ChompEDIT END".
+    * For removals, comment out the upstream code and append "//ChompEDIT REMOVE - explanation"
+    * For block removals, use "/\*" and "\*/" with "//ChompEDIT REMOVE - explanations"
+* **DO NOT** edit upstream .dmi (icon) files. Add icon changes in a new file in the /modular_chomp folder and override the object's "icon" and "icon_state" variables. 
+* **DO NOT** edit anything in the upstream /maps folder 
+* Avoid the use of the 'usr' variable where possible. Use src or have the proc chain give the user's reference.
+* Use defines where they exist, e.g. string names of jobs, factions, ect. 
+* Where possible and applicable, send bugfixes to Virgo (Our upstream) to fix at the source. this is not enforced, however.
 
-Ideally, the point of this is to make it slightly easier to differentiate chomp specific content from virgo content.
+### Scene devices
+* A scene device or tool is considered any object or coded mechanic designed primarily to service roleplay scenes in-game. Usually, but not limited to roleplay of a private nature.
+* Scene devices **MUST** avoid giving a purely mechanical/gameplay advantage of any kind 
+* Scene devices **MUST** respect OOC consent where applicable.
+* Scene devices **MUST** react to the 'OOC Escape' command where possible. 
 
-When should you use this?
-Mostly for chomp exclusive stuff, otherwise if you need to modify a base file for any reason or if it is expected to be a part of upstream as well, write it in the base files with the following standards/policies/guidelines in the meantime:
+### TGUI
+* **DO NOT** edit upstream TGUI files. Small changes should be passed to upstream. Large edits require the file to be copied/rewritten in the chompstation subdirectory.
+* **ALL** TGUI files require typescript with properly defined types.
 
-* If it is something like a bugfix that VoreStation or Polaris would want (the codebases we use), code it in their code and make the PR to them. We regularly update from them. They would want any general gameplay bugfixes, and things that are obviously intended to work one way, but do not. They do not have any of our fluff species (vulp, akula, fenn, etc) so do not make PRs related to that, or any vore content to them.
-* Never edit stock Polaris or Vore .DMI files. If you are confused about which .DMI files we have added and which were there originally, refer to their repository and and see if they exist (https://github.com/PolarisSS13/Polaris) (https://github.com/VOREStation/VOREStation). All PRs with edits to stock .DMI files might be rejected.
-* When changing any code in any stock Polaris .DM file, you must mark your changes:
-    * For single-line changes: //CHOMPEdit - "Explanation" (Edit can also be Add for new lines or Removal if you are commenting the line out)
-    * For multi-line additions: //CHOMPEdit - "Explanation" and then at the bottom of your changes, //CHOMPEdit End
-    * For multi-line removals: Use a block comment (/\* xxx \*/) to comment out the existing code block (do not modify whitespace more than necessary) and at the start, it should contain /\* CHOMP Removal - "Reason"
-* If it is something like a bugfix that Polaris or Vorestation would want (the codebase we use), you may want to consider coding it there as well. They may want any general gameplay bugfixes, and things that are obviously intended to work one way, but do not. They do not have any of our fluff species (vulp, akula, fenn, etc) so do not make PRs related to that, or any vore content to them.
-* Change whitespace as little as possible. Do not randomly add/remove whitespace.
-* Any new files should preferrably go into the modular_chomp folder following the file structure of where it would be placed normally. The old method was to have "_ch" at the end. For example, "life_ch.dm".
-* Do not make changes to base icon files. New icon files should go into modular_chomp and code should be changed to point to the new file.
-
-The `attempt_ch()` proc has been added for your convienence. It allows a many-line change to become a single-line change in the existing Polaris files, preserving mergeability and allowing better code separation while preventing your new code from causing runtimes that stop the original code from running. If you are wanting to inject new procedures into an existing proc, called `update_atoms()` for example, you would create `update_atoms_ch()` in a nearby `_ch.dm` file, and then call to it from a single line in the original `update_atoms()` with `attempt_ch()`.
-
-The syntax for `attempt_ch()` is: `attempt_ch(atom,"proc_name",list(arg1,arg2))`, where:
-* `atom` should be replaced with what your extended proc is defined on (if you are in something like /obj/machine/scanner/proc/update_things() and you are calling your newly defined /obj/machine/scanner/proc/update_things_ch() you can just put `src` here)
-* `proc_name` is a STRING that should be the name of your proc, such as "update_atoms_ch"
-* `list(arg1,arg2)` should contain any args you wish to pass to the proc
-
-As an example of something you can do with `attempt_ch()` in a single line, the grab and vore code is done with this in a single line. When a grab is clicked on someone, there is a line similar to:
-`if(attempt_ch(src,"handle_grabs_ch",list(src,attacker))) return`
-
-Then in our `handle_grabs_ch()` proc, if we want to avoid performing the stock game actions and have handled the vore stuff ourselves, we return true, and the original proc returns since attempt_ch returns true.
 
 ### Pull Requests
 
 * Your submission must pass CI checking. The checks are important, prevent many common mistakes, and even experienced coders get caught by it sometimes. If you think there is a bug in CI, open an issue. (One known CI issue is comments in the middle of multi-line lists, just don't do it)
-* Your PR should not have an excessive number of commits unless it is a large project or includes many separate remote commits (such as a pull from Polaris). If you need to keep tweaking your PR to pass CI or to satisfy a maintainer's requests and are making many commits, you should squash them in the end and update your PR accordingly so these commits don't clog up the history.
 * You can create a WIP PR, and if so, please mark it with [WIP] in the title **and make it a draft pr** so it can be labeled appropriately. These can't sit forever, though.
 * If your pull request has many no-conflict merge commits ('merge from master' into your PR branch), it cannot be merged. Squash and make a new PR/forcepush to your PR branch.
+* PRs here are squash-merged into a single commit onto Master
 
 ### Git Commit Messages
 
@@ -101,6 +104,3 @@ CHOMPStation is licensed under the GNU Affero General Public License version 3, 
 Commits with a git authorship date prior to `1420675200 +0000` (2015/01/08 00:00) are licensed under the GNU General Public License version 3, which can be found in full in LICENSE-GPL3.txt.
 
 All commits whose authorship dates are not prior to `1420675200 +0000` are assumed to be licensed under AGPL v3, if you wish to license under GPL v3 please make this clear in the commit message and any added files.
-
-[Mapmerge2 Readme]: ../tools/mapmerge2/mapmerge tool readme.md
-[StrongDMM]: ../tools/StrongDMM/README.md

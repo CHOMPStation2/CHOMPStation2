@@ -8,7 +8,7 @@
 
 /mob/proc/movement_delay(oldloc, direct)
 	. = 0
-	if(locate(/obj/item/weapon/grab) in src)
+	if(locate(/obj/item/grab) in src)
 		. += 5
 
 	// CHOMPAdd Start - When crawling, move slow.
@@ -24,9 +24,9 @@
 		if("run")
 			if(drowsyness > 0)
 				. += 6
-			. += CONFIG_GET(number/run_speed) // CHOMPEdit
+			. += CONFIG_GET(number/run_speed)
 		if("walk")
-			. += CONFIG_GET(number/walk_speed) // CHOMPEdit
+			. += CONFIG_GET(number/walk_speed)
 
 /client/proc/client_dir(input, direction=-1)
 	return turn(input, direction*dir2angle(dir))
@@ -216,7 +216,7 @@
 			return result
 
 	// Can't control ourselves when drifting
-	if((isspace(loc) || my_mob.lastarea?.has_gravity == 0) && isturf(loc))
+	if((isspace(loc) || my_mob.lastarea?.get_gravity() == 0) && isturf(loc))
 		if(!my_mob.Process_Spacemove(0))
 			return 0
 
@@ -349,11 +349,11 @@
 					my_mob.other_mobs = null
 
 	// Update all the grabs!
-	for (var/obj/item/weapon/grab/G in my_mob)
+	for (var/obj/item/grab/G in my_mob)
 		if (G.state == GRAB_NECK)
 			mob.set_dir(reverse_dir[direct])
 		G.adjust_position()
-	for (var/obj/item/weapon/grab/G in my_mob.grabbed_by)
+	for (var/obj/item/grab/G in my_mob.grabbed_by)
 		G.adjust_position()
 
 	// We're not in the middle of a move anymore
@@ -395,18 +395,31 @@
 	switch(mob.incorporeal_move)
 		if(1)
 			var/turf/T = get_step(mob, direct)
+			var/area/A = T.loc	//RS Port #658
 			if(!T)
 				return
 			if(mob.check_holy(T))
-				to_chat(mob, "<span class='warning'>You cannot get past holy grounds while you are in this plane of existence!</span>")
+				to_chat(mob, span_warning("You cannot get past holy grounds while you are in this plane of existence!"))
 				return
 			//CHOMPEdit start - add ability to block incorporeal movement for nonghosts
 			else if(!istype(mob, /mob/observer/dead) && T.blocks_nonghost_incorporeal)
 				return
 			//CHOMPEdit end
-			else
-				mob.forceMove(get_step(mob, direct))
-				mob.dir = direct
+			//RS Port #658 Start
+			if(!holder)
+				if(isliving(mob) && A.flag_check(AREA_BLOCK_PHASE_SHIFT))
+					to_chat(mob, span_warning("Something blocks you from entering this location while phased out."))
+					return
+				if(isobserver(mob) && A.flag_check(AREA_BLOCK_GHOSTS))
+					to_chat(mob, span_warning("Ghosts can't enter this location."))
+					var/area/our_area = mobloc.loc
+					if(our_area.flag_check(AREA_BLOCK_GHOSTS))
+						var/mob/observer/dead/D = mob
+						D.return_to_spawn()
+					return
+			mob.forceMove(get_step(mob, direct))
+			mob.dir = direct
+			//RS Port #658 End
 		if(2)
 			if(prob(50))
 				var/locx
@@ -480,7 +493,7 @@
 /* CHOMPedit: Nuking slipping.
 	//Check to see if we slipped
 	if(prob(Process_Spaceslipping(5)) && !buckled)
-		to_chat(src, "<span class='notice'><B>You slipped!</B></span>")
+		to_chat(src, span_boldnotice("You slipped!"))
 		inertia_dir = last_move
 		step(src, src.inertia_dir) // Not using Move for smooth glide here because this is a 'slip' so should be sudden.
 		return 0
@@ -498,7 +511,7 @@
 
 		if(istype(turf,/turf/simulated/floor)) // Floors don't count if they don't have gravity
 			var/area/A = turf.loc
-			if(istype(A) && A.has_gravity == 0)
+			if(istype(A) && A.get_gravity() == 0)
 				if(shoegrip == null)
 					shoegrip = Check_Shoegrip() //Shoegrip is only ever checked when a zero-gravity floor is encountered to reduce load
 				if(!shoegrip)
@@ -539,8 +552,8 @@
 	return(prob_slip)
 */// CHOMPedit end.
 
-/mob/proc/mob_has_gravity(turf/T)
-	return has_gravity(src, T)
+/mob/proc/mob_get_gravity(turf/T)
+	return get_gravity(src, T)
 
 /mob/proc/update_gravity()
 	return

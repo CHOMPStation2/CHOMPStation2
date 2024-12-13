@@ -2,10 +2,10 @@ var/checked_for_inactives = 0
 var/inactive_keys = "None<br>"
 
 /client/proc/check_customitem_activity()
-	set category = "Admin.Investigate" //CHOMPEdit
+	set category = "Admin.Investigate"
 	set name = "Check activity of players with custom items"
 
-	var/dat = "<b>Inactive players with custom items</b><br>"
+	var/dat = span_bold("Inactive players with custom items") + "<br>"
 	dat += "<br>"
 	dat += "The list below contains players with custom items that have not logged\
 	 in for the past two months, or have not logged in since this system was implemented.\
@@ -19,7 +19,7 @@ var/inactive_keys = "None<br>"
 		dat += "<hr>"
 		dat += "This system was implemented on March 1 2013, and the database a few days before that. Root server access is required to add or disable access to specific custom items.<br>"
 	else
-		dat += "<a href='?src=\ref[src];_src_=holder;[HrefToken()];populate_inactive_customitems=1'>Populate list (requires an active database connection)</a><br>"
+		dat += "<a href='byond://?src=\ref[src];_src_=holder;[HrefToken()];populate_inactive_customitems=1'>Populate list (requires an active database connection)</a><br>"
 
 	usr << browse(dat, "window=inactive_customitems;size=600x480")
 
@@ -77,7 +77,7 @@ var/inactive_keys = "None<br>"
 		inactive_keys = ""
 		for(var/cur_key in inactive_ckeys)
 			if(inactive_ckeys[cur_key])
-				inactive_keys += "<b>[cur_key]</b> - [inactive_ckeys[cur_key]]<br>"
+				inactive_keys += span_bold("[cur_key]") + " - [inactive_ckeys[cur_key]]<br>"
 			else
 				inactive_keys += "[cur_key] - no database entry<br>"
 

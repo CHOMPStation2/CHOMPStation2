@@ -8,7 +8,6 @@
 	transmutation and energy sharing abilities not unlike they lleill, but considerably more limited. Unlike \
 	other shapeshifter species, such as proteans or prometheans, Hanner have a typical humanoid set of organs and can not regenerate."
 
-	flags =  NO_SCAN
 	color_mult = 1
 	appearance_flags = HAS_SKIN_COLOR | HAS_EYE_COLOR | HAS_HAIR_COLOR | HAS_UNDERWEAR | HAS_LIPS
 	spawn_flags		 = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE
@@ -88,8 +87,11 @@
 		/mob/living/carbon/human/proc/shapeshifter_select_wings,
 		/mob/living/carbon/human/proc/shapeshifter_select_tail,
 		/mob/living/carbon/human/proc/shapeshifter_select_ears,
+		/mob/living/carbon/human/proc/shapeshifter_select_secondary_ears,
 		/mob/living/carbon/human/proc/shapeshifter_select_eye_colour,
 		/mob/living/proc/set_size,
+		/mob/living/carbon/human/proc/shapeshifter_copy_body,
+		/mob/living/carbon/human/proc/shapeshifter_regenerate,
 //		/mob/living/carbon/human/proc/lleill_contact,
 //		/mob/living/carbon/human/proc/lleill_alchemy,
 //		/mob/living/carbon/human/proc/hanner_beast_form
@@ -115,7 +117,7 @@
 		H.ability_master = new /obj/screen/movable/ability_master/lleill(H)
 	for(var/datum/power/lleill/P in lleill_ability_datums)
 		if(!(P.verbpath in H.verbs))
-			H.verbs += P.verbpath
+			add_verb(H, P.verbpath)
 			H.ability_master.add_lleill_ability(
 					object_given = H,
 					verb_given = P.verbpath,

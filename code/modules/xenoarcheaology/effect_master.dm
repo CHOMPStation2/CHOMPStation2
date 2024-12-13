@@ -108,7 +108,7 @@
 			my_effects += my_effect
 
 		else
-			to_chat(usr, "<span class='filter_notice'>This effect can not be applied to this atom type.</span>")
+			to_chat(usr, span_filter_notice("This effect can not be applied to this atom type."))
 			qdel(my_effect)
 
 /datum/component/artifact_master/proc/remove_effect()
@@ -237,7 +237,7 @@
 				warn = 1
 
 	if(warn && isliving(bumped))
-		to_chat(bumped, "<span class='filter_notice'><b>You accidentally touch \the [holder] as it hits you.</b></span>")
+		to_chat(bumped, span_filter_notice(span_bold("You accidentally touch \the [holder] as it hits you.")))
 
 /datum/component/artifact_master/proc/on_bumped()
 	var/atom/movable/M = args[2]
@@ -258,7 +258,7 @@
 				warn = 1
 
 	if(warn && isliving(M))
-		to_chat(M, "<span class='filter_notice'><b>You accidentally touch \the [holder].</b></span>")
+		to_chat(M, span_filter_notice(span_bold("You accidentally touch \the [holder].")))
 
 /datum/component/artifact_master/proc/on_attack_hand()
 	var/mob/living/user = args[2]
@@ -266,10 +266,10 @@
 		return
 
 	if (get_dist(user, holder) > 1)
-		to_chat(user, "<span class='filter_notice'>[span_red("You can't reach [holder] from here.")]</span>")
+		to_chat(user, span_filter_notice("[span_red("You can't reach [holder] from here.")]"))
 		return
 	if(ishuman(user) && user:gloves)
-		to_chat(user, "<span class='filter_notice'><b>You touch [holder]</b> with your gloved hands, [pick("but nothing of note happens","but nothing happens","but nothing interesting happens","but you notice nothing different","but nothing seems to have happened")].</span>")
+		to_chat(user, span_filter_notice(span_bold("You touch [holder]") + " with your gloved hands, [pick("but nothing of note happens","but nothing happens","but nothing interesting happens","but you notice nothing different","but nothing seems to have happened")]."))
 		return
 
 	var/triggered = FALSE
@@ -285,39 +285,39 @@
 			my_effect.DoEffectTouch(user)
 
 	if(triggered)
-		to_chat(user, "<span class='filter_notice'><b>You touch [holder].</b></span>")
+		to_chat(user, span_filter_notice(span_bold("You touch [holder].")))
 
 	else
-		to_chat(user, "<span class='filter_notice'><b>You touch [holder],</b> [pick("but nothing of note happens","but nothing happens","but nothing interesting happens","but you notice nothing different","but nothing seems to have happened")].</span>")
+		to_chat(user, span_filter_notice(span_bold("You touch [holder],") + " [pick("but nothing of note happens","but nothing happens","but nothing interesting happens","but you notice nothing different","but nothing seems to have happened")]."))
 
 
 /datum/component/artifact_master/proc/on_attackby()
-	var/obj/item/weapon/W = args[2]
+	var/obj/item/W = args[2]
 	for(var/datum/artifact_effect/my_effect in my_effects)
 
-		if (istype(W, /obj/item/weapon/reagent_containers))
-			if(W.reagents.has_reagent("hydrogen", 1) || W.reagents.has_reagent("water", 1))
+		if (istype(W, /obj/item/reagent_containers))
+			if(W.reagents.has_reagent(REAGENT_ID_HYDROGEN, 1) || W.reagents.has_reagent(REAGENT_ID_WATER, 1))
 				if(my_effect.trigger == TRIGGER_WATER)
 					my_effect.ToggleActivate()
-			else if(W.reagents.has_reagent("sacid", 1) || W.reagents.has_reagent("pacid", 1) || W.reagents.has_reagent("diethylamine", 1))
+			else if(W.reagents.has_reagent(REAGENT_ID_SACID, 1) || W.reagents.has_reagent(REAGENT_ID_PACID, 1) || W.reagents.has_reagent(REAGENT_ID_DIETHYLAMINE, 1))
 				if(my_effect.trigger == TRIGGER_ACID)
 					my_effect.ToggleActivate()
-			else if(W.reagents.has_reagent("phoron", 1) || W.reagents.has_reagent("thermite", 1))
+			else if(W.reagents.has_reagent(REAGENT_ID_PHORON, 1) || W.reagents.has_reagent(REAGENT_ID_THERMITE, 1))
 				if(my_effect.trigger == TRIGGER_VOLATILE)
 					my_effect.ToggleActivate()
-			else if(W.reagents.has_reagent("toxin", 1) || W.reagents.has_reagent("cyanide", 1) || W.reagents.has_reagent("amatoxin", 1) || W.reagents.has_reagent("neurotoxin", 1))
+			else if(W.reagents.has_reagent(REAGENT_ID_TOXIN, 1) || W.reagents.has_reagent(REAGENT_ID_CYANIDE, 1) || W.reagents.has_reagent(REAGENT_ID_AMATOXIN, 1) || W.reagents.has_reagent(REAGENT_ID_NEUROTOXIN, 1))
 				if(my_effect.trigger == TRIGGER_TOXIN)
 					my_effect.ToggleActivate()
-		else if(istype(W,/obj/item/weapon/melee/baton) && W:status ||\
-				istype(W,/obj/item/weapon/melee/energy) ||\
-				istype(W,/obj/item/weapon/melee/cultblade) ||\
-				istype(W,/obj/item/weapon/card/emag) ||\
-				istype(W,/obj/item/device/multitool))
+		else if(istype(W,/obj/item/melee/baton) && W:status ||\
+				istype(W,/obj/item/melee/energy) ||\
+				istype(W,/obj/item/melee/cultblade) ||\
+				istype(W,/obj/item/card/emag) ||\
+				istype(W,/obj/item/multitool))
 			if (my_effect.trigger == TRIGGER_ENERGY)
 				my_effect.ToggleActivate()
 
-		else if (istype(W,/obj/item/weapon/flame) && W:lit ||\
-				istype(W,/obj/item/weapon/weldingtool) && W:welding)
+		else if (istype(W,/obj/item/flame) && W:lit ||\
+				istype(W,/obj/item/weldingtool) && W:welding)
 			if(my_effect.trigger == TRIGGER_HEAT)
 				my_effect.ToggleActivate()
 		else
@@ -327,10 +327,10 @@
 /datum/component/artifact_master/proc/on_reagent()
 	var/datum/reagent/Touching = args[2]
 
-	var/list/water = list("hydrogen", "water")
-	var/list/acid = list("sacid", "pacid", "diethylamine")
-	var/list/volatile = list("phoron","thermite")
-	var/list/toxic = list("toxin","cyanide","amatoxin","neurotoxin")
+	var/list/water = list(REAGENT_ID_HYDROGEN, REAGENT_ID_WATER)
+	var/list/acid = list(REAGENT_ID_SACID, REAGENT_ID_PACID, REAGENT_ID_DIETHYLAMINE)
+	var/list/volatile = list(REAGENT_ID_PHORON,REAGENT_ID_THERMITE)
+	var/list/toxic = list(REAGENT_ID_TOXIN,REAGENT_ID_CYANIDE,REAGENT_ID_AMATOXIN,REAGENT_ID_NEUROTOXIN)
 
 	for(var/datum/artifact_effect/my_effect in my_effects)
 		if(Touching.id in water)
@@ -387,13 +387,13 @@
 		else if(env.temperature > 375)
 			trigger_hot = 1
 
-		if(env.gas["phoron"] >= 10)
+		if(env.gas[GAS_PHORON] >= 10)
 			trigger_phoron = 1
-		if(env.gas["oxygen"] >= 10)
+		if(env.gas[GAS_O2] >= 10)
 			trigger_oxy = 1
-		if(env.gas["carbon_dioxide"] >= 10)
+		if(env.gas[GAS_CO2] >= 10)
 			trigger_co2 = 1
-		if(env.gas["nitrogen"] >= 10)
+		if(env.gas[GAS_N2] >= 10)
 			trigger_nitro = 1
 
 	for(var/datum/artifact_effect/my_effect in my_effects)

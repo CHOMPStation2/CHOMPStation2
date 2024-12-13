@@ -29,7 +29,7 @@
 	melee_damage_lower = 10
 	melee_damage_upper = 5
 	var/poison_chance = 50
-	var/poison_type = "mindbreaker"
+	var/poison_type = REAGENT_ID_MINDBREAKER
 	var/poison_per_bite = 3
 
 	min_oxy = 0
@@ -174,7 +174,7 @@
 
 /mob/living/simple_mob/vore/demonAI/proc/inject_poison(mob/living/L, target_zone)
 	if(prob(poison_chance))
-		to_chat(L, "<span class='warning'>You feel a tiny prick.</span>")
+		to_chat(L, span_warning("You feel a tiny prick."))
 		L.reagents.add_reagent(poison_type, poison_per_bite)
 
 

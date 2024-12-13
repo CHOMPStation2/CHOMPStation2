@@ -83,6 +83,7 @@
 	icon_sprite_tag = "wolf"
 	vore_tail_sprite_variant = "N"
 	fullness_icons = 3
+	struggle_anim = TRUE
 
 /datum/sprite_accessory/tail/taur/ch/sergal/fatwheaties
 	name = "Fat Sergal (Taur)"
@@ -90,6 +91,7 @@
 	icon_sprite_tag = "wolf"
 	vore_tail_sprite_variant = "N"
 	fullness_icons = 3
+	struggle_anim = TRUE
 
 /datum/sprite_accessory/tail/taur/ch/sergal/wheaties_2c
 	name = "Sergal (Taur, dual-color)"
@@ -98,6 +100,7 @@
 	icon_sprite_tag = "wolf"
 	vore_tail_sprite_variant = "N"
 	fullness_icons = 3
+	struggle_anim = TRUE
 
 /datum/sprite_accessory/tail/taur/ch/sergal/fatwheaties_2c
 	name = "Fat Sergal (Taur, dual-color)"
@@ -106,6 +109,7 @@
 	icon_sprite_tag = "wolf"
 	vore_tail_sprite_variant = "N"
 	fullness_icons = 3
+	struggle_anim = TRUE
 
 /datum/sprite_accessory/tail/taur/ch/longvirus
 	name = "Long Virus (Taur)"
@@ -131,6 +135,7 @@
 	icon_loaf = 'icons/mob/vore/taurs_ch_loaf.dmi'
 	vore_tail_sprite_variant = "SectDrone"
 	belly_variant_when_loaf = TRUE
+	struggle_anim = TRUE
 	loaf_offset = 3
 	fullness_icons = 3
 
@@ -329,3 +334,18 @@
 	can_loaf = TRUE
 	icon_loaf = 'icons/mob/vore/taurs_ch_loaf.dmi'
 	loaf_offset = 5
+
+/datum/sprite_accessory/tail/taur/longtail
+	//hide body parts list() makes it so no limbs are hidden
+	//made its own child so we can reuse this
+	offset_x = -16
+	hide_body_parts = list()
+
+
+/datum/sprite_accessory/tail/taur/longtail/dragonmaidtail_ch
+	name = "Dragon maid Tail"
+	icon = 'modular_chomp/icons/mob/vore/Tails64x32.dmi'
+	icon_state = "Dragon_maid_tail"
+	fullness_icons = 3
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY

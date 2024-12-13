@@ -2,7 +2,7 @@
 #define NEUTRAL_MODE 2
 #define NEGATIVE_MODE 3
 
-var/global/list/valid_bloodreagents = list("default","iron","copper","phoron","silver","gold","slimejelly")	//allowlist-based so people don't make their blood restored by alcohol or something really silly. use reagent IDs!
+var/global/list/valid_bloodreagents = list("default",REAGENT_ID_IRON,REAGENT_ID_COPPER,REAGENT_ID_PHORON,REAGENT_ID_SILVER,REAGENT_ID_GOLD,REAGENT_ID_SLIMEJELLY)	//allowlist-based so people don't make their blood restored by alcohol or something really silly. use reagent IDs!
 
 /datum/preferences
 	var/custom_species	// Custom species name, can't be changed due to it having been used in savefiles already.
@@ -57,13 +57,13 @@ var/global/list/valid_bloodreagents = list("default","iron","copper","phoron","s
 				trait_prefs[identifier] = trait.default_value_for_pref(identifier) //won't be called at all often
 				altered = TRUE
 			. += "<li>- [pref_list[2]]:"
-			var/link = " <a href='?src=\ref[src];clicked_trait_pref=[trait.type];pref=[identifier]'>"
+			var/link = " <a href='byond://?src=\ref[src];clicked_trait_pref=[trait.type];pref=[identifier]'>"
 			switch (pref_list[1])
 				if (1) //TRAIT_PREF_TYPE_BOOLEAN
 					. += link + (trait_prefs[identifier] ? "Enabled" : "Disabled")
 				if (2) //TRAIT_PREF_TYPE_COLOR
 					. += " " + color_square(hex = trait_prefs[identifier]) + link + "Change"
-				if (3) //TRAIT_PREF_TYPE_STRING - CHOMPEdit
+				if (3) //TRAIT_PREF_TYPE_STRING
 					var/string = trait_prefs[identifier]
 					. += link + (length(string) > 0 ? string : "\[Empty\]")
 			. += "</a></li>"
@@ -104,7 +104,7 @@ var/global/list/valid_bloodreagents = list("default","iron","copper","phoron","s
 			var/new_color = input(user, "Choose the color for this trait preference:", "Trait Preference", trait_prefs[preference]) as color|null
 			if (new_color)
 				trait_prefs[preference] = new_color
-		if (3) //TRAIT_PREF_TYPE_STRING - CHOMPEdit
+		if (3) //TRAIT_PREF_TYPE_STRING
 			var/new_string = instance.apply_sanitization_to_string(preference, tgui_input_text(user, "What should the new value be?", instance.has_preferences[preference][2], trait_prefs[preference], MAX_NAME_LEN))
 			trait_prefs[preference] = new_string
 
@@ -131,15 +131,15 @@ var/global/list/valid_bloodreagents = list("default","iron","copper","phoron","s
 	pref.custom_ask				= save_data["custom_ask"]
 	pref.custom_exclaim			= save_data["custom_exclaim"]
 
-	pref.custom_heat			= save_data["custom_heat"]
-	pref.custom_cold			= save_data["custom_cold"]
+	pref.custom_heat			= check_list_copy(save_data["custom_heat"])
+	pref.custom_cold			= check_list_copy(save_data["custom_cold"])
 
 /datum/category_item/player_setup_item/vore/traits/save_character(list/save_data)
 	save_data["custom_species"]		= pref.custom_species
 	save_data["custom_base"]		= pref.custom_base
-	save_data["pos_traits"]			= pref.pos_traits
-	save_data["neu_traits"]			= pref.neu_traits
-	save_data["neg_traits"]			= pref.neg_traits
+	save_data["pos_traits"]			= check_list_copy(pref.pos_traits)
+	save_data["neu_traits"]			= check_list_copy(pref.neu_traits)
+	save_data["neg_traits"]			= check_list_copy(pref.neg_traits)
 	save_data["blood_color"]		= pref.blood_color
 	save_data["blood_reagents"]		= pref.blood_reagents
 
@@ -152,8 +152,8 @@ var/global/list/valid_bloodreagents = list("default","iron","copper","phoron","s
 	save_data["custom_ask"]			= pref.custom_ask
 	save_data["custom_exclaim"]		= pref.custom_exclaim
 
-	save_data["custom_heat"]		= pref.custom_heat
-	save_data["custom_cold"]		= pref.custom_cold
+	save_data["custom_heat"]		= check_list_copy(pref.custom_heat)
+	save_data["custom_cold"]		= check_list_copy(pref.custom_cold)
 
 /datum/category_item/player_setup_item/vore/traits/sanitize_character()
 	if(!pref.pos_traits) pref.pos_traits = list()
@@ -287,13 +287,13 @@ var/global/list/valid_bloodreagents = list("default","iron","copper","phoron","s
 		log_game("TRAITS [pref.client_ckey]/([character]) with: [english_traits]") //Terrible 'fake' key_name()... but they aren't in the same entity yet
 
 /datum/category_item/player_setup_item/vore/traits/content(var/mob/user)
-	. += "<b>Custom Species Name:</b> "
-	. += "<a href='?src=\ref[src];custom_species=1'>[pref.custom_species ? pref.custom_species : "-Input Name-"]</a><br>"
+	. += span_bold("Custom Species Name:") + " "
+	. += "<a href='byond://?src=\ref[src];custom_species=1'>[pref.custom_species ? pref.custom_species : "-Input Name-"]</a><br>"
 
 	var/datum/species/selected_species = GLOB.all_species[pref.species]
 	if(selected_species.selects_bodytype)
-		. += "<b>Icon Base: </b> "
-		. += "<a href='?src=\ref[src];custom_base=1'>[pref.custom_base ? pref.custom_base : "Human"]</a><br>"
+		. += span_bold("Icon Base:") + " "
+		. += "<a href='byond://?src=\ref[src];custom_base=1'>[pref.custom_base ? pref.custom_base : "Human"]</a><br>"
 
 	var/traits_left = pref.max_traits
 
@@ -305,62 +305,62 @@ var/global/list/valid_bloodreagents = list("default","iron","copper","phoron","s
 		points_left -= traits_costs[T]
 		if(T in pref.pos_traits)
 			traits_left--
-	. += "<b>Traits Left:</b> [traits_left]<br>"
-	. += "<b>Points Left:</b> [points_left]<br>"
+	. += span_bold("Traits Left:") + " [traits_left]<br>"
+	. += span_bold("Points Left:") + " [points_left]<br>"
 	if(points_left < 0 || traits_left < 0 || (!pref.custom_species && pref.species == SPECIES_CUSTOM))
-		. += "<span style='color:red;'><b>^ Fix things! ^</b></span><br>"
+		. += span_red(span_bold("^ Fix things! ^")) + "<br>"
 
-	. += "<a href='?src=\ref[src];add_trait=[POSITIVE_MODE]'>Positive Trait(s) (Limited) +</a><br>" // CHOMPEdit: More obvious/clear to players.
+	. += "<a href='byond://?src=\ref[src];add_trait=[POSITIVE_MODE]'>Positive Trait(s) (Limited) +</a><br>" // CHOMPEdit: More obvious/clear to players.
 	. += "<ul>"
 	for(var/T in pref.pos_traits)
 		var/datum/trait/trait = positive_traits[T]
-		. += "<li>- <a href='?src=\ref[src];clicked_pos_trait=[T]'>[trait.name] ([trait.cost])</a> [get_html_for_trait(trait, pref.pos_traits[T])]</li>"
+		. += "<li>- <a href='byond://?src=\ref[src];clicked_pos_trait=[T]'>[trait.name] ([trait.cost])</a> [get_html_for_trait(trait, pref.pos_traits[T])]</li>"
 	. += "</ul>"
 
-	. += "<a href='?src=\ref[src];add_trait=[NEUTRAL_MODE]'>Neutral Trait(s) (No Limit) +</a><br>" // CHOMPEdit: More obvious/clear to players.
+	. += "<a href='byond://?src=\ref[src];add_trait=[NEUTRAL_MODE]'>Neutral Trait(s) (No Limit) +</a><br>" // CHOMPEdit: More obvious/clear to players.
 	. += "<ul>"
 	for(var/T in pref.neu_traits)
 		var/datum/trait/trait = neutral_traits[T]
-		. += "<li>- <a href='?src=\ref[src];clicked_neu_trait=[T]'>[trait.name] ([trait.cost])</a> [get_html_for_trait(trait, pref.neu_traits[T])]</li>"
+		. += "<li>- <a href='byond://?src=\ref[src];clicked_neu_trait=[T]'>[trait.name] ([trait.cost])</a> [get_html_for_trait(trait, pref.neu_traits[T])]</li>"
 	. += "</ul>"
 
-	. += "<a href='?src=\ref[src];add_trait=[NEGATIVE_MODE]'>Negative Trait(s) (No Limit) +</a><br>" // CHOMPEdit: More obvious/clear to players.
+	. += "<a href='byond://?src=\ref[src];add_trait=[NEGATIVE_MODE]'>Negative Trait(s) (No Limit) +</a><br>" // CHOMPEdit: More obvious/clear to players.
 	. += "<ul>"
 	for(var/T in pref.neg_traits)
 		var/datum/trait/trait = negative_traits[T]
-		. += "<li>- <a href='?src=\ref[src];clicked_neg_trait=[T]'>[trait.name] ([trait.cost])</a> [get_html_for_trait(trait, pref.neg_traits[T])]</li>"
+		. += "<li>- <a href='byond://?src=\ref[src];clicked_neg_trait=[T]'>[trait.name] ([trait.cost])</a> [get_html_for_trait(trait, pref.neg_traits[T])]</li>"
 	. += "</ul>"
 
-	. += "<b>Blood Color: </b>" //People that want to use a certain species to have that species traits (xenochimera/promethean/spider) should be able to set their own blood color.
-	. += "<a href='?src=\ref[src];blood_color=1'>Set Color <font color='[pref.blood_color]'>&#9899;</font></a>"
-	. += "<a href='?src=\ref[src];blood_reset=1'>R</a><br>"
-	. += "<b>Blood Reagent: </b>"	//Wanna be copper-based? Go ahead.
-	. += "<a href='?src=\ref[src];blood_reagents=1'>[pref.blood_reagents]</a><br>"
+	. += span_bold("Blood Color: ") //People that want to use a certain species to have that species traits (xenochimera/promethean/spider) should be able to set their own blood color.
+	. += "<a href='byond://?src=\ref[src];blood_color=1'>Set Color <font color='[pref.blood_color]'>&#9899;</font></a>"
+	. += "<a href='byond://?src=\ref[src];blood_reset=1'>R</a><br>"
+	. += span_bold("Blood Reagent: ")	//Wanna be copper-based? Go ahead.
+	. += "<a href='byond://?src=\ref[src];blood_reagents=1'>[pref.blood_reagents]</a><br>"
 	. += "<br>"
 
-	. += "<b>Custom Say: </b>"
-	. += "<a href='?src=\ref[src];custom_say=1'>Set Say Verb</a>"
-	. += "(<a href='?src=\ref[src];reset_say=1'>Reset</A>)"
+	. += span_bold("Custom Say: ")
+	. += "<a href='byond://?src=\ref[src];custom_say=1'>Set Say Verb</a>"
+	. += "(<a href='byond://?src=\ref[src];reset_say=1'>Reset</A>)"
 	. += "<br>"
-	. += "<b>Custom Whisper: </b>"
-	. += "<a href='?src=\ref[src];custom_whisper=1'>Set Whisper Verb</a>"
-	. += "(<a href='?src=\ref[src];reset_whisper=1'>Reset</A>)"
+	. += span_bold("Custom Whisper: ")
+	. += "<a href='byond://?src=\ref[src];custom_whisper=1'>Set Whisper Verb</a>"
+	. += "(<a href='byond://?src=\ref[src];reset_whisper=1'>Reset</A>)"
 	. += "<br>"
-	. += "<b>Custom Ask: </b>"
-	. += "<a href='?src=\ref[src];custom_ask=1'>Set Ask Verb</a>"
-	. += "(<a href='?src=\ref[src];reset_ask=1'>Reset</A>)"
+	. += span_bold("Custom Ask: ")
+	. += "<a href='byond://?src=\ref[src];custom_ask=1'>Set Ask Verb</a>"
+	. += "(<a href='byond://?src=\ref[src];reset_ask=1'>Reset</A>)"
 	. += "<br>"
-	. += "<b>Custom Exclaim: </b>"
-	. += "<a href='?src=\ref[src];custom_exclaim=1'>Set Exclaim Verb</a>"
-	. += "(<a href='?src=\ref[src];reset_exclaim=1'>Reset</A>)"
+	. += span_bold("Custom Exclaim: ")
+	. += "<a href='byond://?src=\ref[src];custom_exclaim=1'>Set Exclaim Verb</a>"
+	. += "(<a href='byond://?src=\ref[src];reset_exclaim=1'>Reset</A>)"
 	. += "<br>"
-	. += "<b>Custom Heat Discomfort: </b>"
-	. += "<a href='?src=\ref[src];custom_heat=1'>Set Heat Messages</a>"
-	. += "(<a href='?src=\ref[src];reset_heat=1'>Reset</A>)"
+	. += span_bold("Custom Heat Discomfort: ")
+	. += "<a href='byond://?src=\ref[src];custom_heat=1'>Set Heat Messages</a>"
+	. += "(<a href='byond://?src=\ref[src];reset_heat=1'>Reset</A>)"
 	. += "<br>"
-	. += "<b>Custom Cold Discomfort: </b>"
-	. += "<a href='?src=\ref[src];custom_cold=1'>Set Cold Messages</a>"
-	. += "(<a href='?src=\ref[src];reset_cold=1'>Reset</A>)"
+	. += span_bold("Custom Cold Discomfort: ")
+	. += "<a href='byond://?src=\ref[src];custom_cold=1'>Set Cold Messages</a>"
+	. += "(<a href='byond://?src=\ref[src];reset_cold=1'>Reset</A>)"
 	. += "<br>"
 
 /datum/category_item/player_setup_item/vore/traits/OnTopic(var/href,var/list/href_list, var/mob/user)

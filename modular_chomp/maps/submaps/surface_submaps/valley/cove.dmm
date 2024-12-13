@@ -48,9 +48,8 @@
 /area/submap/cove)
 "eO" = (
 /obj/structure/table/rack,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/corophizine,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/moonshine,
-/obj/random/gun/random,
+/obj/item/reagent_containers/chem_disp_cartridge/corophizine,
+/obj/item/reagent_containers/chem_disp_cartridge/moonshine,
 /obj/random/energy/highend,
 /obj/random/maintenance/morestuff,
 /obj/random/maintenance/morestuff,
@@ -67,10 +66,14 @@
 /obj/machinery/appliance/cooker/grill,
 /turf/simulated/floor/wood,
 /area/submap/cove)
+"iO" = (
+/obj/structure/table/marble,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/turf/simulated/floor/wood,
+/area/submap/cove)
 "iU" = (
 /obj/structure/table/sifwooden_reinforced,
-/obj/random/maintenance/foodstuff,
-/obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
 /turf/simulated/floor/wood,
 /area/submap/cove)
@@ -142,9 +145,6 @@
 "ov" = (
 /obj/structure/table/marble,
 /obj/random/maintenance/foodstuff,
-/obj/random/maintenance/foodstuff,
-/obj/random/maintenance/foodstuff,
-/obj/random/maintenance/foodstuff,
 /turf/simulated/floor/wood,
 /area/submap/cove)
 "oM" = (
@@ -201,8 +201,7 @@
 /area/submap/cove)
 "vN" = (
 /obj/structure/table/standard,
-/obj/item/weapon/gun/projectile/revolvershotgun,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	info = "The Eclipse bastards are really getting in the way of business. Every raid is becoming a battle on two fronts, and they just keep coming. Fortantly I have rainy day money, and got some of my bois backing me up. Narsch is the least offensive, so dead or alive for 100 thosuand thalers. I want to do the deed myself on Virrzzur, so alive for 150 thousand. Not sure what to do about the head admiral dude, since we have no name or face. I think they're made up.";
 	name = "Work in progress bounty"
 	},
@@ -229,14 +228,9 @@
 /area/submap/cove)
 "xN" = (
 /obj/structure/table/rack,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/dexalin,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/nuka_cola,
-/obj/random/gun/random,
-/obj/random/energy/highend,
+/obj/item/reagent_containers/chem_disp_cartridge/dexalin,
+/obj/item/reagent_containers/chem_disp_cartridge/nuka_cola,
 /obj/random/maintenance/morestuff,
-/obj/random/maintenance/morestuff,
-/obj/random/maintenance/morestuff,
-/obj/random/contraband,
 /turf/simulated/floor/wood,
 /area/submap/cove)
 "Ac" = (
@@ -285,13 +279,8 @@
 /area/submap/cove)
 "Hu" = (
 /obj/structure/table/rack,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/sleeptox,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/oxycodone,
-/obj/random/gun/random,
-/obj/random/energy/highend,
-/obj/random/maintenance/morestuff,
-/obj/random/maintenance/morestuff,
-/obj/random/maintenance/morestuff,
+/obj/item/reagent_containers/chem_disp_cartridge/sleeptox,
+/obj/item/reagent_containers/chem_disp_cartridge/oxycodone,
 /obj/random/contraband,
 /turf/simulated/floor/wood,
 /area/submap/cove)
@@ -364,7 +353,6 @@
 /area/submap/cove)
 "RE" = (
 /obj/structure/table/sifwooden_reinforced,
-/obj/random/gun/random,
 /turf/simulated/floor/wood,
 /area/submap/cove)
 "RT" = (
@@ -393,7 +381,9 @@
 /area/submap/cove)
 "US" = (
 /mob/living/simple_mob/mechanical/mecha/combat/gygax/dark/advanced{
-	faction = "pirate"
+	faction = "pirate";
+	loot_list = list(/obj/item/gun/projectile/revolvershotgun = 50);
+	health = 150
 	},
 /turf/simulated/floor/wood,
 /area/submap/cove)
@@ -434,7 +424,7 @@
 /area/submap/cove)
 "XJ" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/piratedouble,
+/obj/item/bedsheet/piratedouble,
 /obj/machinery/light/poi{
 	dir = 1
 	},
@@ -613,7 +603,7 @@ lk
 Gb
 aP
 Ox
-Ox
+Gb
 TN
 Gb
 lk
@@ -646,7 +636,7 @@ Gb
 LQ
 ht
 qW
-LQ
+iO
 Gb
 lk
 rj
@@ -674,8 +664,8 @@ qI
 qI
 Tm
 lk
-Ox
-TN
+Gb
+Gb
 Gb
 Gb
 Ox
@@ -707,7 +697,7 @@ Tm
 Tm
 lk
 Gb
-LQ
+ov
 Ky
 Ky
 ov
@@ -739,11 +729,11 @@ Tm
 Tm
 lk
 Gb
-Ox
-TN
+Gb
+Gb
 NQ
 Gb
-Ox
+Gb
 lk
 rj
 RT
@@ -866,10 +856,10 @@ IP
 sl
 Gb
 MQ
-ld
-MQ
 RE
 MQ
+RE
+RE
 Gb
 RV
 lk
@@ -964,7 +954,7 @@ Gb
 Gb
 MQ
 RE
-MQ
+RE
 ld
 MQ
 RV
@@ -1089,12 +1079,12 @@ qI
 qI
 lk
 Gb
-ld
-MQ
+RE
+RE
 RE
 MQ
-ld
-MQ
+RE
+iU
 RE
 lk
 rj
@@ -1155,7 +1145,7 @@ lk
 HQ
 iU
 kD
-iU
+MQ
 wD
 EC
 Gb

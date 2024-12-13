@@ -86,16 +86,20 @@
 	. = ..()
 	if(!riding_datum)
 		riding_datum = new /datum/riding/simple_mob(src)
-	add_verb(src,/mob/living/simple_mob/proc/animal_mount) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/proc/toggle_rider_reins) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/proc/glow_toggle) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/proc/glow_color) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/proc/long_vore) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/proc/target_lunge) //CHOMPEdit TGPanel
+	add_verb(src, /mob/living/simple_mob/proc/animal_mount)
+	add_verb(src, /mob/living/proc/toggle_rider_reins)
+	add_verb(src, /mob/living/proc/glow_toggle)
+	add_verb(src, /mob/living/proc/glow_color)
+	add_verb(src, /mob/living/proc/long_vore)
+	add_verb(src, /mob/living/proc/target_lunge)
 	movement_cooldown = -1
 
 /mob/living/simple_mob/vore/scel/init_vore()
-	. = ..()
+ 	//CHOMPEdit Start
+	if(!voremob_loaded)
+		return
+	.=..()
+	//CHOMPEdit End
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "The strange beast pounces atop of you, pinning you with it's hefty weight, the greedy stomach sloshing atop you before it looms closer, with that maw stretching almost impossibly wide and easily enveloping your body. The jaws of the scel are solid and fleshy, preventing any movement. Immediately you are embraced into the tight pull of oily black flesh, and you are rapidly dragged down into the humid, more malleable depths of the creature! Splashing down into a thick, ominously bubbling sludge, you fall into place as food among the remnants of previous meals. As you settle, you are completely hidden away inside of it's serpentine body, left to complete darkness and the sounds of squelching bodily functions. Movement is not difficult as the flesh around you is easily pushed back, but it quickly snaps back into place to keep you constrained. Slowly, the neon liquid that you could see from the outside of the creature begins to seep into the chamber. With that hefty stomach bloated with yet another meal, a lazy burp signals its meal complete. Leaving you to simmer in its depths as it continues its prowling..."
@@ -162,8 +166,8 @@
 		return FALSE
 
 	set_AI_busy(TRUE)
-	visible_message(span("warning","\The [src] rears back, ready to lunge!"))
-	to_chat(L, span("danger","\The [src] focuses on you!"))
+	visible_message(span_warning("\The [src] rears back, ready to lunge!"))
+	to_chat(L, span_danger("\The [src] focuses on you!"))
 	// Telegraph, since getting stunned suddenly feels bad.
 	do_windup_animation(A, leap_warmup)
 	sleep(leap_warmup) // For the telegraphing.
@@ -174,7 +178,7 @@
 
 	// Do the actual leap.
 	status_flags |= LEAPING // Lets us pass over everything.
-	visible_message(span("critical","\The [src] leaps at \the [L]!"))
+	visible_message(span_critical("\The [src] leaps at \the [L]!"))
 	throw_at(get_step(L, get_turf(src)), special_attack_max_range+1, 1, src)
 	playsound(src, leap_sound, 75, 1)
 
@@ -189,7 +193,7 @@
 
 /mob/living/simple_mob/vore/scel/proc/tongue(atom/A)
 	var/obj/item/projectile/P = new /obj/item/projectile/beam/appendage(get_turf(src))
-	src.visible_message("<span class='danger'>\The [src] launches a black appendage at \the [A]!</span>")
+	src.visible_message(span_danger("\The [src] launches a black appendage at \the [A]!"))
 	playsound(src, "sound/effects/slime_squish.ogg", 50, 1)
 	P.launch_projectile(A, BP_TORSO, src)
 

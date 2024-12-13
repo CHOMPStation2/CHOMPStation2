@@ -2,15 +2,16 @@ import { capitalize } from 'common/string';
 import { useState } from 'react';
 import { useBackend } from 'tgui/backend';
 import {
+  Box,
   Button,
   Divider,
   Flex,
   Icon,
-  Image,
   Input,
   Section,
   Stack,
 } from 'tgui/components';
+import { classes } from 'tgui-core/react';
 
 import { NoSpriteWarning } from '../components';
 import { prepareSearch } from '../functions';
@@ -25,7 +26,7 @@ export const ModifyRobotRadio = (props: { target: Target }) => {
   return (
     <>
       {!target.active && <NoSpriteWarning name={target.name} />}
-      <Flex height={!target.active ? '80%' : '85%'}>
+      <Flex height={!target.active ? '75%' : '80%'}>
         <Flex.Item width="30%" fill>
           <RadioSection
             title="Add Radio Channel"
@@ -38,15 +39,15 @@ export const ModifyRobotRadio = (props: { target: Target }) => {
           />
         </Flex.Item>
         <Flex.Item width="40%">
-          <Image
-            src={'data:image/jpeg;base64, ' + target.back}
-            style={{
-              display: 'block',
-              marginLeft: 'auto',
-              marginRight: 'auto',
-              width: '200px',
-            }}
-          />
+          <Flex>
+            <Flex.Item grow />
+            <Flex.Item>
+              <Box
+                className={classes([target.sprite_size, target.sprite + 'N'])}
+              />
+            </Flex.Item>
+            <Flex.Item grow />
+          </Flex>
         </Flex.Item>
         <Flex.Item width="30%" fill>
           <RadioSection

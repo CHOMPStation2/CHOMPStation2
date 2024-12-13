@@ -3,8 +3,10 @@
 /turf/simulated/shuttle/floor/alienplating/blue,
 /area/submap/vault)
 "b" = (
-/mob/living/simple_mob/mechanical/hivebot/precusor/machinegun,
-/turf/simulated/shuttle/floor/alien,
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/siege/emp{
+	loot_list = list(/obj/item/prop/alien/junk = 20, /obj/item/prop/alien/junk = 20)
+	},
+/turf/simulated/shuttle/floor/alienplating/blue,
 /area/submap/vault)
 "c" = (
 /turf/simulated/shuttle/wall/alien,
@@ -14,13 +16,7 @@
 /area/template_noop)
 "e" = (
 /obj/structure/table/alien/blue,
-/obj/item/prop/alien/junk,
-/obj/item/prop/alien/junk,
-/obj/item/weapon/implantcase/chem,
-/turf/simulated/shuttle/floor/alienplating/blue,
-/area/submap/vault)
-"i" = (
-/obj/structure/loot_pile/surface/alien/security,
+/obj/item/implantcase/chem,
 /turf/simulated/shuttle/floor/alienplating/blue,
 /area/submap/vault)
 "j" = (
@@ -59,18 +55,14 @@
 /area/submap/vault)
 "y" = (
 /obj/item/clothing/suit/armor/shield,
-/obj/item/weapon/implantcase/handblade,
-/obj/item/weapon/implantcase/dart,
+/obj/item/implantcase/handblade,
+/obj/item/implantcase/dart,
 /obj/item/clothing/head/technomancer/master,
 /obj/item/clothing/suit/armor/alien/tank,
 /turf/space,
 /area/submap/vault)
 "z" = (
 /turf/simulated/shuttle/floor/alien,
-/area/submap/vault)
-"B" = (
-/mob/living/simple_mob/mechanical/hivebot/ranged_damage/siege/radiation,
-/turf/simulated/shuttle/floor/alienplating/blue,
 /area/submap/vault)
 "C" = (
 /mob/living/simple_mob/mechanical/hivebot/ranged_damage/siege/emp,
@@ -95,14 +87,13 @@
 /turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/vault)
 "G" = (
-/mob/living/simple_mob/mechanical/hivebot/precusor/laser,
+/mob/living/simple_mob/mechanical/hivebot/precusor/machinegun{
+	loot_list = list(/obj/item/prop/alien/junk = 20, /obj/item/prop/alien/junk = 20, /obj/item/cell/device/weapon/recharge/alien/omni = 5)
+	},
 /turf/simulated/shuttle/floor/alien,
 /area/submap/vault)
 "H" = (
 /obj/structure/table/alien/blue,
-/obj/item/prop/alien/junk,
-/obj/item/prop/alien/junk,
-/obj/item/weapon/cell/device/weapon/recharge/alien/omni/empty,
 /turf/simulated/shuttle/floor/alienplating/blue,
 /area/submap/vault)
 "I" = (
@@ -110,18 +101,18 @@
 /turf/simulated/shuttle/floor/alienplating/blue,
 /area/submap/vault)
 "J" = (
-/mob/living/simple_mob/mechanical/hivebot/ranged_damage/siege/radiation,
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/siege/emp,
 /turf/simulated/shuttle/floor/alien,
 /area/submap/vault)
 "L" = (
-/mob/living/simple_mob/mechanical/hivebot/support/logistics,
+/mob/living/simple_mob/mechanical/hivebot/support/logistics{
+	loot_list = list(/obj/item/prop/alien/junk = 20, /obj/item/prop/alien/junk = 20, /obj/item/cell/device/weapon/recharge/alien/omni = 5)
+	},
 /turf/simulated/shuttle/floor/alienplating/blue,
 /area/submap/vault)
 "M" = (
 /obj/structure/table/alien/blue,
-/obj/item/prop/alien/junk,
-/obj/item/prop/alien/junk,
-/obj/item/weapon/implantcase/medkit,
+/obj/item/implantcase/medkit,
 /turf/simulated/shuttle/floor/alienplating/blue,
 /area/submap/vault)
 "N" = (
@@ -142,9 +133,7 @@
 /area/submap/vault)
 "R" = (
 /obj/structure/table/alien/blue,
-/obj/item/weapon/gun/energy/alien,
-/obj/item/prop/alien/junk,
-/obj/item/prop/alien/junk,
+/obj/item/gun/energy/alien,
 /turf/simulated/shuttle/floor/alienplating/blue,
 /area/submap/vault)
 "V" = (
@@ -166,9 +155,6 @@
 /area/submap/vault)
 "Z" = (
 /obj/structure/table/alien/blue,
-/obj/item/weapon/gun/energy/alien,
-/obj/item/prop/alien/junk,
-/obj/item/prop/alien/junk,
 /obj/item/clothing/head/technomancer/apprentice,
 /turf/simulated/shuttle/floor/alienplating/blue,
 /area/submap/vault)
@@ -513,7 +499,7 @@ c
 r
 a
 a
-i
+a
 c
 c
 a
@@ -633,7 +619,7 @@ a
 a
 a
 c
-i
+a
 j
 c
 c
@@ -856,7 +842,7 @@ V
 c
 c
 a
-B
+C
 a
 z
 a
@@ -1060,7 +1046,7 @@ p
 p
 D
 D
-C
+b
 z
 a
 J
@@ -1102,7 +1088,7 @@ V
 c
 c
 a
-B
+C
 a
 z
 a
@@ -1257,11 +1243,11 @@ c
 a
 a
 a
-b
+G
 z
 G
 z
-b
+G
 a
 a
 a
@@ -1311,7 +1297,7 @@ c
 c
 c
 j
-i
+a
 c
 a
 a
@@ -1431,7 +1417,7 @@ a
 a
 c
 c
-i
+a
 a
 a
 c

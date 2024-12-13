@@ -1,8 +1,9 @@
 import { useState } from 'react';
+import { useBackend } from 'tgui/backend';
+import { Button, Flex, Icon, NoticeBox, Tabs } from 'tgui/components';
+import { Window } from 'tgui/layouts';
+import { Stack } from 'tgui-core/components';
 
-import { useBackend } from '../../../backend';
-import { Button, Flex, Icon, NoticeBox, Tabs } from '../../../components';
-import { Window } from '../../../layouts';
 import { Data } from './types';
 import { VoreBellySelectionAndCustomization } from './VoreBellySelectionAndCustomization';
 import { VoreInsidePanel } from './VoreInsidePanel';
@@ -162,6 +163,8 @@ export const VorePanel = () => {
     show_pictures,
     icon_overflow,
     host_mobtype,
+    unsaved_changes,
+    vore_words,
   } = data;
 
   const [tabIndex, setTabIndex] = useState(0);
@@ -175,6 +178,7 @@ export const VorePanel = () => {
       show_pictures={show_pictures}
       host_mobtype={host_mobtype}
       icon_overflow={icon_overflow}
+      vore_words={vore_words}
     />
   );
   tabs[1] = (
@@ -194,52 +198,69 @@ export const VorePanel = () => {
   );
 
   return (
-    <Window width={990} height={660} theme="abstract">
-      <Window.Content scrollable>
-        {(data.unsaved_changes && (
-          <NoticeBox danger>
-            <Flex>
-              <Flex.Item basis="90%">Warning: Unsaved Changes!</Flex.Item>
-              <Flex.Item>
-                <Button icon="save" onClick={() => act('saveprefs')}>
-                  Save Prefs
-                </Button>
-              </Flex.Item>
-              <Flex.Item>
-                <Button
-                  icon="download"
-                  onClick={() => {
-                    act('saveprefs');
-                    act('exportpanel');
-                  }}
-                >
-                  Save Prefs & Export Selected Belly
-                </Button>
-              </Flex.Item>
-            </Flex>
-          </NoticeBox>
-        )) ||
-          null}
-        <VoreInsidePanel
-          inside={inside}
-          show_pictures={show_pictures}
-          icon_overflow={icon_overflow}
-        />
-        <Tabs>
-          <Tabs.Tab selected={tabIndex === 0} onClick={() => setTabIndex(0)}>
-            Bellies
-            <Icon name="list" ml={0.5} />
-          </Tabs.Tab>
-          <Tabs.Tab selected={tabIndex === 1} onClick={() => setTabIndex(1)}>
-            Soulcatcher
-            <Icon name="ghost" ml={0.5} />
-          </Tabs.Tab>
-          <Tabs.Tab selected={tabIndex === 2} onClick={() => setTabIndex(2)}>
-            Preferences
-            <Icon name="user-cog" ml={0.5} />
-          </Tabs.Tab>
-        </Tabs>
-        {tabs[tabIndex] || 'Error'}
+    <Window width={1000} height={660} theme="abstract">
+      <Window.Content>
+        <Stack fill vertical>
+          <Stack.Item>
+            {(unsaved_changes && (
+              <NoticeBox danger>
+                <Flex>
+                  <Flex.Item basis="90%">Warning: Unsaved Changes!</Flex.Item>
+                  <Flex.Item>
+                    <Button icon="save" onClick={() => act('saveprefs')}>
+                      Save Prefs
+                    </Button>
+                  </Flex.Item>
+                  <Flex.Item>
+                    <Button
+                      icon="download"
+                      onClick={() => {
+                        act('saveprefs');
+                        act('exportpanel');
+                      }}
+                    >
+                      Save Prefs & Export Selected Belly
+                    </Button>
+                  </Flex.Item>
+                </Flex>
+              </NoticeBox>
+            )) ||
+              ''}
+          </Stack.Item>
+          <Stack.Item basis={inside?.desc?.length || 0 > 500 ? '30%' : '20%'}>
+            <VoreInsidePanel
+              inside={inside}
+              show_pictures={show_pictures}
+              icon_overflow={icon_overflow}
+            />
+          </Stack.Item>
+          <Stack.Item>
+            <Tabs>
+              <Tabs.Tab
+                selected={tabIndex === 0}
+                onClick={() => setTabIndex(0)}
+              >
+                Bellies
+                <Icon name="list" ml={0.5} />
+              </Tabs.Tab>
+              <Tabs.Tab
+                selected={tabIndex === 1}
+                onClick={() => setTabIndex(1)}
+              >
+                Soulcatcher
+                <Icon name="ghost" ml={0.5} />
+              </Tabs.Tab>
+              <Tabs.Tab
+                selected={tabIndex === 2}
+                onClick={() => setTabIndex(2)}
+              >
+                Preferences
+                <Icon name="user-cog" ml={0.5} />
+              </Tabs.Tab>
+            </Tabs>
+          </Stack.Item>
+          <Stack.Item grow>{tabs[tabIndex] || 'Error'}</Stack.Item>
+        </Stack>
       </Window.Content>
     </Window>
   );

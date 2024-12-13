@@ -15,20 +15,20 @@
 	var/efficiency = 1.35
 	var/speed = 1
 
-	var/obj/item/weapon/reagent_containers/container = null
+	var/obj/item/reagent_containers/container = null
 	var/printing = FALSE
 	var/list/products = list()
 
-/obj/item/weapon/circuitboard/food_replicator
+/obj/item/circuitboard/food_replicator
 	name = T_BOARD("food replicator")
 	build_path = /obj/machinery/food_replicator
 	board_type = new /datum/frame/frame_types/machine
 	origin_tech = list(TECH_ENGINEERING = 2, TECH_BIO = 2)
 	req_components = list(
-		/obj/item/weapon/stock_parts/capacitor = 3,
-		/obj/item/weapon/stock_parts/matter_bin = 2,
-		/obj/item/weapon/stock_parts/manipulator = 1,
-		/obj/item/weapon/stock_parts/motor = 1,
+		/obj/item/stock_parts/capacitor = 3,
+		/obj/item/stock_parts/matter_bin = 2,
+		/obj/item/stock_parts/manipulator = 1,
+		/obj/item/stock_parts/motor = 1,
 		/obj/item/stack/cable_coil = 5,
 	)
 
@@ -36,7 +36,6 @@
 	. = ..()
 
 	default_apply_parts()
-	RefreshParts()
 
 /obj/machinery/food_replicator/dismantle()
 	var/turf/T = get_turf(src)
@@ -53,11 +52,11 @@
 		return
 
 	if(panel_open)
-		to_chat(user, SPAN_WARNING("Close the panel first!"))
+		to_chat(user, span_warning("Close the panel first!"))
 		return
 
 	if(printing)
-		to_chat(user, SPAN_WARNING("\The [src] is busy!"))
+		to_chat(user, span_warning("\The [src] is busy!"))
 		return
 
 	interact(user)
@@ -70,21 +69,21 @@
 			return
 
 		var/product_path = products[choice]
-		var/obj/item/weapon/reagent_containers/foodItem = new product_path
+		var/obj/item/reagent_containers/foodItem = new product_path
 
-		var/total = clamp(foodItem.reagents.get_free_space()-foodItem.reagents.total_volume, 1, 300)
+		var/total = abs(foodItem.reagents.total_volume-foodItem.reagents.get_free_space())
 
 		if(!container)
-			to_chat(user, SPAN_WARNING("There is no container!"))
+			to_chat(user, span_warning("There is no container!"))
 			return
 
 		if(container && container.reagents)
-			if(!container.reagents.has_reagent("nutriment", (total*efficiency)))
+			if(!container.reagents.has_reagent(REAGENT_ID_NUTRIMENT, (total*efficiency)))
 				playsound(src, "sound/machines/buzz-sigh.ogg", 25, 0)
-				to_chat(user, SPAN_WARNING("Not enough nutriment available!"))
+				to_chat(user, span_warning("Not enough nutriment available!"))
 				return
 
-			container.reagents.remove_reagent("nutriment", (total*efficiency))
+			container.reagents.remove_reagent(REAGENT_ID_NUTRIMENT, (total*efficiency))
 
 			update_use_power(USE_POWER_ACTIVE)
 			printing = TRUE
@@ -93,14 +92,14 @@
 			if(product_path)
 				foodItem = new product_path(src)
 
-				if(istype(foodItem, /obj/item/weapon/reagent_containers/food/snacks/donkpocket))
-					var/obj/item/weapon/reagent_containers/food/snacks/donkpocket/donkp = foodItem
+				if(istype(foodItem, /obj/item/reagent_containers/food/snacks/donkpocket))
+					var/obj/item/reagent_containers/food/snacks/donkpocket/donkp = foodItem
 					donkp.heat()
 
 				if(foodItem.reagents.has_reagent("supermatter"))
 					self_destruct()
 
-			visible_message(SPAN_NOTICE("\The [src] begins to shape a nutriment slurry."))
+			visible_message(span_notice("\The [src] begins to shape a nutriment slurry."))
 
 			sleep(print_delay/speed)
 
@@ -116,7 +115,7 @@
 				foodItem.forceMove(get_turf(src))
 
 	else
-		to_chat(user, SPAN_WARNING("There is no food to replicate!"))
+		to_chat(user, span_warning("There is no food to replicate!"))
 
 
 /obj/machinery/food_replicator/attackby(obj/item/O, mob/user)
@@ -128,15 +127,15 @@
 		return
 	if(default_part_replacement(user, O))
 		return
-	if(istype(O, /obj/item/weapon/reagent_containers/food))
+	if(istype(O, /obj/item/reagent_containers/food))
 		balloon_alert(user, "Scanning...")
 		if(!do_after(user, 10))
 			return
 		foodcheck(O)
 		return
-	if(istype(O, /obj/item/weapon/reagent_containers/glass))
+	if(istype(O, /obj/item/reagent_containers/glass))
 		if(!isnull(container))
-			to_chat(user, SPAN_WARNING("There is already a reagent container inserted!"))
+			to_chat(user, span_warning("There is already a reagent container inserted!"))
 			return
 
 		user.drop_item()
@@ -147,7 +146,7 @@
 
 	return ..()
 
-/obj/machinery/food_replicator/proc/foodcheck(var/obj/item/weapon/reagent_containers/food)
+/obj/machinery/food_replicator/proc/foodcheck(var/obj/item/reagent_containers/food)
 	var/mob/living/mob = locate(/mob/living) in food
 	if(mob)
 		playsound(src, "sound/machines/buzz-two.ogg", 25, 0)
@@ -192,9 +191,9 @@
     var/cap_rating = 0
     var/man_rating = 0
 
-    for(var/obj/item/weapon/stock_parts/capacitor/C in component_parts)
+    for(var/obj/item/stock_parts/capacitor/C in component_parts)
         cap_rating += C.rating
-    for(var/obj/item/weapon/stock_parts/manipulator/M in component_parts)
+    for(var/obj/item/stock_parts/manipulator/M in component_parts)
         man_rating += M.rating
 
     efficiency = (man_rating > 0) ? 6 / man_rating : 3
@@ -221,11 +220,11 @@
 	return FALSE
 
 /obj/machinery/food_replicator/proc/self_destruct()
-	visible_message(SPAN_WARNING("Whirrs and spouts, starting to heat up!"))
+	visible_message(span_warning("Whirrs and spouts, starting to heat up!"))
 	playsound(src, pick('sound/effects/Glassbr1.ogg', 'sound/effects/Glassbr2.ogg', 'sound/effects/Glassbr3.ogg'), 50, 1)
 
 	message_admins("[src] attempted to create an EX donk pocket at [x], [y], [z], last touched by [fingerprintslast]")
-	log_game("[src] attempted to create an EX donk pocket at [x], [y], [z], last touched by [fingerprintslast]. (<A HREF='?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[x];Y=[y];Z=[z]'>JMP</a>)", 1)
+	log_game("[src] attempted to create an EX donk pocket at [x], [y], [z], last touched by [fingerprintslast]. (<A href='byond://?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[x];Y=[y];Z=[z]'>JMP</a>)", 1)
 
 	sleep(6 SECONDS) // GET OUT, GET OUT
 	stat = BROKEN

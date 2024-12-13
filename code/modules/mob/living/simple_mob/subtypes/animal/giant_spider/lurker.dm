@@ -38,7 +38,7 @@
 	melee_damage_lower = 10
 	melee_damage_upper = 10
 	poison_chance = 30
-	poison_type = "cryptobiolin"
+	poison_type = REAGENT_ID_CRYPTOBIOLIN
 	poison_per_bite = 1
 
 	player_msg = "You have an imperfect, but automatic stealth. If you attack something while 'hidden', then \
@@ -103,7 +103,7 @@
 		if(isliving(A))
 			var/mob/living/L = A
 			L.add_modifier(/datum/modifier/entangled, 2 SECONDS) //L.Weaken(cloaked_weaken_amount) CHOMPEdit: Trying to remove hardstuns
-			to_chat(L, span("danger", "\The [src] ambushes you!"))
+			to_chat(L, span_danger("\The [src] ambushes you!"))
 			playsound(src, 'sound/weapons/spiderlunge.ogg', 75, 1)
 	uncloak()
 	..() // For the poison.

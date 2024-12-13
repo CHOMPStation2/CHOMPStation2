@@ -43,7 +43,7 @@
 /datum/ColorMate/tgui_state(mob/user)
 	return GLOB.tgui_conscious_state
 
-/datum/ColorMate/tgui_data()
+/datum/ColorMate/tgui_data(mob/user)
 	. = list()
 	.["activemode"] = active_mode
 	.["matrixcolors"] = list(
@@ -69,7 +69,7 @@
 		.["item"] = list()
 		.["item"]["name"] = inserted.name
 		.["item"]["sprite"] = icon2base64(get_flat_icon(inserted,dir=SOUTH,no_anim=TRUE))
-		.["item"]["preview"] = icon2base64(build_preview())
+		.["item"]["preview"] = icon2base64(build_preview(user))
 	else
 		.["item"] = null
 
@@ -152,14 +152,14 @@
 			color_to_use = color_matrix_hsv(build_hue, build_sat, build_val)
 			color_matrix_last = color_to_use
 	if(!color_to_use || !check_valid_color(color_to_use, user))
-		to_chat(user, SPAN_NOTICE("Invalid color."))
+		to_chat(user, span_notice("Invalid color."))
 		return FALSE
 	inserted.add_atom_colour(color_to_use, FIXED_COLOUR_PRIORITY)
 	playsound(src, 'sound/effects/spray3.ogg', 50, 1)
 	return TRUE
 
 /// Produces the preview image of the item, used in the UI, the way the color is not stacking is a sin.
-/datum/ColorMate/proc/build_preview()
+/datum/ColorMate/proc/build_preview(mob/user)
 	if(inserted) //sanity
 		var/list/cm
 		switch(active_mode)
@@ -178,17 +178,17 @@
 					text2num(color_matrix_last[11]),
 					text2num(color_matrix_last[12]),
 				)
-				if(!check_valid_color(cm, usr))
+				if(!check_valid_color(cm, user))
 					return get_flat_icon(inserted, dir=SOUTH, no_anim=TRUE)
 
 			if(COLORMATE_TINT)
-				if(!check_valid_color(activecolor, usr))
+				if(!check_valid_color(activecolor, user))
 					return get_flat_icon(inserted, dir=SOUTH, no_anim=TRUE)
 
 			if(COLORMATE_HSV)
 				cm = color_matrix_hsv(build_hue, build_sat, build_val)
 				color_matrix_last = cm
-				if(!check_valid_color(cm, usr))
+				if(!check_valid_color(cm, user))
 					return get_flat_icon(inserted, dir=SOUTH, no_anim=TRUE)
 
 		var/cur_color = inserted.color

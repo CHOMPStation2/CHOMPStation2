@@ -1,7 +1,7 @@
 //Chemist expansion
 /datum/reagent/toxin/deathblood
-	name = "Irradiating Blood"
-	id = "deathblood"
+	name = REAGENT_DEATHBLOOD
+	id = REAGENT_ID_DEATHBLOOD
 	description = "Blood of deathclaw."
 	taste_description = "plastic"
 	reagent_state = LIQUID
@@ -9,8 +9,8 @@
 	strength = 8
 
 /datum/reagent/toxin/liquidfire
-	name = "Liquid Fire"
-	id = "liquidfire"
+	name = REAGENT_LIQUIDFIRE
+	id = REAGENT_ID_LIQUIDFIRE
 	description = "Blood of dragon."
 	taste_description = "plastic"
 	reagent_state = LIQUID
@@ -18,8 +18,8 @@
 	strength = 8
 
 /datum/reagent/toxin/neonliquidfire
-	name = "Neon Liquid Fire"
-	id = "neoliquidfire"
+	name = REAGENT_NEOLIQUIDFIRE
+	id = REAGENT_ID_NEOLIQUIDFIRE
 	description = "Blood of dragon."
 	taste_description = "plastic"
 	reagent_state = LIQUID
@@ -27,8 +27,8 @@
 	strength = 8
 
 /datum/reagent/toxin/liquidlife
-	name = "Liquid Life"
-	id = "liquidlife"
+	name = REAGENT_LIQUIDLIFE
+	id = REAGENT_ID_LIQUIDLIFE
 	description = "Life Drained from a victim, and processed into a liquid form. ."
 	taste_description = "plastic"
 	reagent_state = LIQUID

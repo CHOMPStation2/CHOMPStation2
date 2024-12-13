@@ -209,13 +209,13 @@
 	rest_sprite_options = list("Default")
 	has_extra_customization = TRUE
 
-	var/list/booze_options = list("Beer" = "booze",
+	var/list/booze_options = list(REAGENT_BEER = "booze",
 								  "Space Mountain Wind" = "boozegreen",
 								  "Curacao" = "boozeblue",
-								  "Grape Soda" = "boozepurple",
+								  REAGENT_GRAPESODA = "boozepurple",
 								  "Demon's Blood" = "boozered",
-								  "Whiskey Soda" = "boozeorange",
-								  "Coffee" = "boozebrown")
+								  REAGENT_WHISKEYSODA = "boozeorange",
+								  REAGENT_COFFEE = "boozebrown")
 
 /datum/robot_sprite/dogborg/service/booze/handle_extra_icon_updates(var/mob/living/silicon/robot/ourborg)
 	if(!("boozehound" in ourborg.sprite_extra_customization) || !ourborg.sprite_extra_customization["boozehound"])
@@ -244,7 +244,7 @@
 			ourborg.sprite_extra_customization += "boozehound"
 		ourborg.sprite_extra_customization["boozehound"] = choice
 		playsound(ourborg.loc, 'sound/effects/bubbles.ogg', 100, 0, 4)
-		to_chat(ourborg, "<span class='filter_notice'>Your tank now displays [choice]. Drink up and enjoy!</span>")
+		to_chat(ourborg, span_filter_notice("Your tank now displays [choice]. Drink up and enjoy!"))
 		ourborg.update_icon()
 		return 1
 

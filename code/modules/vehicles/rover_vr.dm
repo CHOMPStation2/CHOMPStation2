@@ -28,7 +28,7 @@
 	var/car_limit = 1	//how many cars an engine can pull before performance degrades. This should be 0 to prevent trailers from unhitching.
 						//CHOMPedit: Set to 1 because the thing slows down to a crawl with even one trailer. Unhitching doesn't occur at regular movement speeds, or even at faster speeds than base.
 	active_engines = 1
-	var/obj/item/weapon/key/rover/key
+	var/obj/item/key/rover/key
 	var/siren = 0 //This is for eventually getting the siren sprite to work.
 
 /obj/vehicle/train/rover/engine/dunebuggy
@@ -37,7 +37,7 @@
 	icon = 'icons/vore/rover_vr.dmi'
 	icon_state = "dunebug"
 
-/obj/item/weapon/key/rover
+/obj/item/key/rover
 	name = "\improper ignition key" //CHOMPedit: Name update
 	desc = "A universal electronic tri-key for starting most Nanotrasen vehicles." //CHOMPedit: Desc update
 	icon = 'icons/obj/vehicles_vr.dmi'
@@ -63,7 +63,7 @@
 //-------------------------------------------
 /obj/vehicle/train/rover/engine/New()
 	..()
-	cell = new /obj/item/weapon/cell/high(src)
+	cell = new /obj/item/cell/high(src)
 	key = new(src)
 	turn_off()	//so engine verbs are correctly set
 
@@ -83,15 +83,15 @@
 
 	return ..()
 
-/obj/vehicle/train/rover/trolley/attackby(obj/item/weapon/W as obj, mob/user as mob)
-	if(open && istype(W, /obj/item/weapon/tool/wirecutters))
+/obj/vehicle/train/rover/trolley/attackby(obj/item/W as obj, mob/user as mob)
+	if(open && istype(W, /obj/item/tool/wirecutters))
 		passenger_allowed = !passenger_allowed
-		user.visible_message("<span class='notice'>[user] [passenger_allowed ? "cuts" : "mends"] a cable in [src].</span>","<span class='notice'>You [passenger_allowed ? "cut" : "mend"] the load limiter cable.</span>")
+		user.visible_message(span_notice("[user] [passenger_allowed ? "cuts" : "mends"] a cable in [src]."),span_notice("You [passenger_allowed ? "cut" : "mend"] the load limiter cable."))
 	else
 		..()
 
-/obj/vehicle/train/rover/engine/attackby(obj/item/weapon/W as obj, mob/user as mob)
-	if(istype(W, /obj/item/weapon/key/rover))
+/obj/vehicle/train/rover/engine/attackby(obj/item/W as obj, mob/user as mob)
+	if(istype(W, /obj/item/key/rover))
 		if(!key)
 			user.drop_item()
 			W.forceMove(src)
@@ -114,10 +114,10 @@
 	else
 		icon_state = initial(icon_state)
 
-/obj/vehicle/train/rover/trolley/insert_cell(var/obj/item/weapon/cell/C, var/mob/living/carbon/human/H)
+/obj/vehicle/train/rover/trolley/insert_cell(var/obj/item/cell/C, var/mob/living/carbon/human/H)
 	return
 
-/obj/vehicle/train/rover/engine/insert_cell(var/obj/item/weapon/cell/C, var/mob/living/carbon/human/H)
+/obj/vehicle/train/rover/engine/insert_cell(var/obj/item/cell/C, var/mob/living/carbon/human/H)
 	..()
 	update_stats()
 
@@ -183,8 +183,8 @@
 
 	if(is_train_head() && istype(load, /mob/living/carbon/human))
 		var/mob/living/carbon/human/D = load
-		to_chat(D, "<span class='danger'>You ran over \the [M]!</span>")
-		visible_message("<span class='danger'>\The [src] ran over \the [M]!</span>")
+		to_chat(D, span_danger("You ran over \the [M]!"))
+		visible_message(span_danger("\The [src] ran over \the [M]!"))
 		add_attack_logs(D,M,"Ran over with [src.name]")
 		attack_log += text("\[[time_stamp()]\] [span_red("ran over [M.name] ([M.ckey]), driven by [D.name] ([D.ckey])")]")
 	else
@@ -295,11 +295,14 @@
 	if(!istype(C, /mob/living/carbon/human))
 		return 0
 
+	. = ..(C)
+
+	if(!.)
+		return
+
 	if(ismob(C))
 		buckle_mob(C)
 		C.alpha = 0
-
-	return ..()
 
 /obj/vehicle/train/rover/engine/unload(var/mob/user, var/direction)
 	var/mob/living/carbon/human/C = load

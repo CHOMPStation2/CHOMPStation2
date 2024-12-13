@@ -2,30 +2,30 @@
 // Keep these two together, they *must* be defined on both
 // If /client ever becomes /datum/client or similar, they can be merged
 /datum/proc/get_view_variables_header()
-	return "<b>[src]</b>"
+	return span_bold("[src]")
 
 /atom/get_view_variables_header()
 	return {"
-		<a href='?_src_=vars;[HrefToken()];datumedit=\ref[src];varnameedit=name'><b>[src]</b></a>
+		<a href='byond://?_src_=vars;[HrefToken()];datumedit=\ref[src];varnameedit=name'><b>[src]</b></a>
 		<br><font size='1'>
-		<a href='?_src_=vars;[HrefToken()];rotatedatum=\ref[src];rotatedir=left'><<</a>
-		<a href='?_src_=vars;[HrefToken()];datumedit=\ref[src];varnameedit=dir'>[dir2text(dir)]</a>
-		<a href='?_src_=vars;[HrefToken()];rotatedatum=\ref[src];rotatedir=right'>>></a>
+		<a href='byond://?_src_=vars;[HrefToken()];rotatedatum=\ref[src];rotatedir=left'><<</a>
+		<a href='byond://?_src_=vars;[HrefToken()];datumedit=\ref[src];varnameedit=dir'>[dir2text(dir)]</a>
+		<a href='byond://?_src_=vars;[HrefToken()];rotatedatum=\ref[src];rotatedir=right'>>></a>
 		</font>
 		"}
 
 /mob/living/get_view_variables_header()
 	return {"
-		<a href='?_src_=vars;[HrefToken()];rename=\ref[src]'><b>[src]</b></a><font size='1'>
-		<br><a href='?_src_=vars;[HrefToken()];rotatedatum=\ref[src];rotatedir=left'><<</a> <a href='?_src_=vars;[HrefToken()];datumedit=\ref[src];varnameedit=dir'>[dir2text(dir)]</a> <a href='?_src_=vars;[HrefToken()];rotatedatum=\ref[src];rotatedir=right'>>></a>
-		<br><a href='?_src_=vars;[HrefToken()];datumedit=\ref[src];varnameedit=ckey'>[ckey ? ckey : "No ckey"]</a> / <a href='?_src_=vars;[HrefToken()];datumedit=\ref[src];varnameedit=real_name'>[real_name ? real_name : "No real name"]</a>
+		<a href='byond://?_src_=vars;[HrefToken()];rename=\ref[src]'><b>[src]</b></a><font size='1'>
+		<br><a href='byond://?_src_=vars;[HrefToken()];rotatedatum=\ref[src];rotatedir=left'><<</a> <a href='byond://?_src_=vars;[HrefToken()];datumedit=\ref[src];varnameedit=dir'>[dir2text(dir)]</a> <a href='byond://?_src_=vars;[HrefToken()];rotatedatum=\ref[src];rotatedir=right'>>></a>
+		<br><a href='byond://?_src_=vars;[HrefToken()];datumedit=\ref[src];varnameedit=ckey'>[ckey ? ckey : "No ckey"]</a> / <a href='byond://?_src_=vars;[HrefToken()];datumedit=\ref[src];varnameedit=real_name'>[real_name ? real_name : "No real name"]</a>
 		<br>
-		BRUTE:<a href='?_src_=vars;[HrefToken()];mobToDamage=\ref[src];adjustDamage=brute'>[getBruteLoss()]</a>
-		FIRE:<a href='?_src_=vars;[HrefToken()];mobToDamage=\ref[src];adjustDamage=fire'>[getFireLoss()]</a>
-		TOXIN:<a href='?_src_=vars;[HrefToken()];mobToDamage=\ref[src];adjustDamage=toxin'>[getToxLoss()]</a>
-		OXY:<a href='?_src_=vars;[HrefToken()];mobToDamage=\ref[src];adjustDamage=oxygen'>[getOxyLoss()]</a>
-		CLONE:<a href='?_src_=vars;[HrefToken()];mobToDamage=\ref[src];adjustDamage=clone'>[getCloneLoss()]</a>
-		BRAIN:<a href='?_src_=vars;[HrefToken()];mobToDamage=\ref[src];adjustDamage=brain'>[getBrainLoss()]</a>
+		BRUTE:<a href='byond://?_src_=vars;[HrefToken()];mobToDamage=\ref[src];adjustDamage=brute'>[getBruteLoss()]</a>
+		FIRE:<a href='byond://?_src_=vars;[HrefToken()];mobToDamage=\ref[src];adjustDamage=fire'>[getFireLoss()]</a>
+		TOXIN:<a href='byond://?_src_=vars;[HrefToken()];mobToDamage=\ref[src];adjustDamage=toxin'>[getToxLoss()]</a>
+		OXY:<a href='byond://?_src_=vars;[HrefToken()];mobToDamage=\ref[src];adjustDamage=oxygen'>[getOxyLoss()]</a>
+		CLONE:<a href='byond://?_src_=vars;[HrefToken()];mobToDamage=\ref[src];adjustDamage=clone'>[getCloneLoss()]</a>
+		BRAIN:<a href='byond://?_src_=vars;[HrefToken()];mobToDamage=\ref[src];adjustDamage=brain'>[getBrainLoss()]</a>
 		</font>
 		"}
 
@@ -86,7 +86,7 @@
 		<option value='?_src_=vars;[HrefToken()];emp=\ref[src]'>Trigger EM pulse</option>
 		"}
 
-/obj/item/device/pda/get_view_variables_options()
+/obj/item/pda/get_view_variables_options()
 	return ..() + {"
 		<option value='?_src_=vars;[HrefToken()];fakepdapropconvo=\ref[src]'>Add Fake Prop Conversation</option>
 		"}
@@ -107,18 +107,18 @@
 
 /datum/proc/make_view_variables_variable_entry(var/varname, var/value, var/hide_watch = 0)
 	return {"
-			(<a href='?_src_=vars;[HrefToken()];datumedit=\ref[src];varnameedit=[varname]'>E</a>)
-			(<a href='?_src_=vars;[HrefToken()];datumchange=\ref[src];varnamechange=[varname]'>C</a>)
-			(<a href='?_src_=vars;[HrefToken()];datummass=\ref[src];varnamemass=[varname]'>M</a>)
-			[hide_watch ? "" : "(<a href='?_src_=vars;[HrefToken()];datumwatch=\ref[src];varnamewatch=[varname]'>W</a>)"]
+			(<a href='byond://?_src_=vars;[HrefToken()];datumedit=\ref[src];varnameedit=[varname]'>E</a>)
+			(<a href='byond://?_src_=vars;[HrefToken()];datumchange=\ref[src];varnamechange=[varname]'>C</a>)
+			(<a href='byond://?_src_=vars;[HrefToken()];datummass=\ref[src];varnamemass=[varname]'>M</a>)
+			[hide_watch ? "" : "(<a href='byond://?_src_=vars;[HrefToken()];datumwatch=\ref[src];varnamewatch=[varname]'>W</a>)"]
 			"}
 
 // No mass editing of clients
 /client/make_view_variables_variable_entry(var/varname, var/value, var/hide_watch = 0)
 	return {"
-			(<a href='?_src_=vars;[HrefToken()];datumedit=\ref[src];varnameedit=[varname]'>E</a>)
-			(<a href='?_src_=vars;[HrefToken()];datumchange=\ref[src];varnamechange=[varname]'>C</a>)
-			[hide_watch ? "" : "(<a href='?_src_=vars;[HrefToken()];datumwatch=\ref[src];varnamewatch=[varname]'>W</a>)"]
+			(<a href='byond://?_src_=vars;[HrefToken()];datumedit=\ref[src];varnameedit=[varname]'>E</a>)
+			(<a href='byond://?_src_=vars;[HrefToken()];datumchange=\ref[src];varnamechange=[varname]'>C</a>)
+			[hide_watch ? "" : "(<a href='byond://?_src_=vars;[HrefToken()];datumwatch=\ref[src];varnamewatch=[varname]'>W</a>)"]
 			"}
 
 // These methods are all procs and don't use stored lists to avoid VV exploits
@@ -178,7 +178,7 @@
 	if(!user)
 		return FALSE
 	if(!(var_to_edit in vars))
-		to_chat(user, "<span class='warning'>\The [src] does not have a var '[var_to_edit]'</span>")
+		to_chat(user, span_warning("\The [src] does not have a var '[var_to_edit]'"))
 		return FALSE
 	if(var_to_edit in VV_static())
 		return FALSE

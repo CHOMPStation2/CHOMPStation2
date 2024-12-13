@@ -49,8 +49,8 @@
 
 	tame_items = list(
 	/obj/item/organ = 70,
-	/obj/item/weapon/reagent_containers/food/snacks/crabmeat = 30,
-	/obj/item/weapon/reagent_containers/food/snacks/meat = 20
+	/obj/item/reagent_containers/food/snacks/crabmeat = 30,
+	/obj/item/reagent_containers/food/snacks/meat = 20
 	)
 
 	say_list_type = /datum/say_list/savik
@@ -80,7 +80,7 @@
 /mob/living/simple_mob/animal/sif/savik/verb/berserk()
 	set name = "Berserk"
 	set desc = "Enrage and become vastly stronger for a period of time, however you will be weaker afterwards."
-	set category = "Abilities.Savik" //CHOMPEdit
+	set category = "Abilities.Savik"
 
 	add_modifier(/datum/modifier/berserk, 30 SECONDS)
 

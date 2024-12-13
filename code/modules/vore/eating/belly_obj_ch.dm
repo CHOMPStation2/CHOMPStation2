@@ -32,9 +32,9 @@
 
 	var/nutri_reagent_gen = FALSE					//if belly produces reagent over time using nutrition, needs to be optimized to use subsystem - Jack
 	var/is_beneficial = FALSE							//Sets a reagent as a beneficial one / healing reagents
-	var/list/generated_reagents = list("water" = 1) //Any number of reagents, the associated value is how many units are generated per process()
-	var/reagent_name = "water" 						//What is shown when reagents are removed, doesn't need to be an actual reagent
-	var/reagentid = "water"							//Selected reagent's id, for use in puddle system currently
+	var/list/generated_reagents = list(REAGENT_ID_WATER = 1) //Any number of reagents, the associated value is how many units are generated per process()
+	var/reagent_name = REAGENT_ID_WATER 						//What is shown when reagents are removed, doesn't need to be an actual reagent
+	var/reagentid = REAGENT_ID_WATER							//Selected reagent's id, for use in puddle system currently
 	var/reagentcolor = "#0064C877"					//Selected reagent's color, for use in puddle system currently
 	var/custom_reagentcolor							//Custom reagent color. Blank for normal reagent color
 	var/custom_reagentalpha							//Custom reagent alpha. Blank for capacity based alpha
@@ -83,20 +83,20 @@
 	var/list/self_emote_descriptor = list("transfer") //In format of You [self_emote_descriptor] some [generated_reagent] into [container]
 	*/
 
-	var/tmp/reagent_chosen = "Water"				// variable for switch to figure out what to set variables when a certain reagent is selected
+	var/tmp/reagent_chosen = REAGENT_WATER				// variable for switch to figure out what to set variables when a certain reagent is selected
 	var/tmp/static/list/reagent_choices = list(		// List of reagents people can chose, maybe one day expand so it covers criterias like dogborgs who can make meds, booze, etc - Jack
-	"Water",
-	"Milk",
-	"Cream",
-	"Honey",
-	"Cherry Jelly",
-	"Digestive acid",
-	"Diluted digestive acid",
-	"Space cleaner",
-	"Lube",
-	"Biomass",
-	"Concentrated Radium",
-	"Tricordrazine"
+	REAGENT_WATER,
+	REAGENT_MILK,
+	REAGENT_CREAM,
+	REAGENT_HONEY,
+	REAGENT_CHERRYJELLY,
+	REAGENT_STOMACID,
+	REAGENT_DIETSTOMACID,
+	REAGENT_CLEANER,
+	REAGENT_LUBE,
+	REAGENT_BIOMASS,
+	REAGENT_CONCENTRATEDRADIUM,
+	REAGENT_TRICORDRAZINE
 	)
 
 	var/undergarment_if_none
@@ -116,6 +116,7 @@
 	var/noise_freq = 42500					// Tasty sound prefs.
 	var/item_digest_logs = FALSE			// Chat messages for digested items.
 	var/storing_nutrition = FALSE			// Storing gained nutrition as paste instead of absorbing it.
+	var/belchchance = 0						// % Chance of pred belching on prey struggle
 
 	var/list/belly_surrounding = list()		// A list of living mobs surrounded by this belly, including inside containers, food, on mobs, etc. Exclusing inside other bellies.
 
@@ -229,101 +230,101 @@
 
 /obj/belly/proc/ReagentSwitch()
 	switch(reagent_chosen)
-		if("Water")
-			generated_reagents = list("water" = 1)
+		if(REAGENT_WATER)
+			generated_reagents = list(REAGENT_ID_WATER = 1)
 			if(capitalize(reagent_name) in reagent_choices)
-				reagent_name = "water"
+				reagent_name = REAGENT_ID_WATER
 			gen_amount = 1
 			gen_cost = 1
-			reagentid = "water"
+			reagentid = REAGENT_ID_WATER
 			reagentcolor = "#0064C877"
-		if("Milk")
-			generated_reagents = list("milk" = 1)
+		if(REAGENT_MILK)
+			generated_reagents = list(REAGENT_ID_MILK = 1)
 			if(capitalize(reagent_name) in reagent_choices)
-				reagent_name = "milk"
+				reagent_name = REAGENT_ID_MILK
 			gen_amount = 1
 			gen_cost = 5
-			reagentid = "milk"
+			reagentid = REAGENT_ID_MILK
 			reagentcolor = "#DFDFDF"
-		if("Cream")
-			generated_reagents = list("cream" = 1)
+		if(REAGENT_CREAM)
+			generated_reagents = list(REAGENT_ID_CREAM = 1)
 			if(capitalize(reagent_name) in reagent_choices)
-				reagent_name = "cream"
+				reagent_name = REAGENT_ID_CREAM
 			gen_amount = 1
 			gen_cost = 5
-			reagentid = "cream"
+			reagentid = REAGENT_ID_CREAM
 			reagentcolor = "#DFD7AF"
-		if("Honey")
-			generated_reagents = list("honey" = 1)
+		if(REAGENT_HONEY)
+			generated_reagents = list(REAGENT_ID_HONEY = 1)
 			if(capitalize(reagent_name) in reagent_choices)
-				reagent_name = "honey"
+				reagent_name = REAGENT_ID_HONEY
 			gen_amount = 1
 			gen_cost = 10
-			reagentid = "honey"
+			reagentid = REAGENT_ID_HONEY
 			reagentcolor = "#FFFF00"
-		if("Cherry Jelly")	//Kinda WIP, allows slime like folks something to stuff others with, should make a generic jelly in future
-			generated_reagents = list("cherryjelly" = 1)
+		if(REAGENT_CHERRYJELLY)	//Kinda WIP, allows slime like folks something to stuff others with, should make a generic jelly in future
+			generated_reagents = list(REAGENT_ID_CHERRYJELLY = 1)
 			if(capitalize(reagent_name) in reagent_choices)
 				reagent_name = "cherry jelly"
 			gen_amount = 1
 			gen_cost = 10
-			reagentid = "cherryjelly"
+			reagentid = REAGENT_ID_CHERRYJELLY
 			reagentcolor = "#801E28"
-		if("Digestive acid")
-			generated_reagents = list("stomacid" = 1)
+		if(REAGENT_STOMACID)
+			generated_reagents = list(REAGENT_ID_STOMACID = 1)
 			if(capitalize(reagent_name) in reagent_choices)
 				reagent_name = "digestive acid"
 			gen_amount = 1
 			gen_cost = 1
-			reagentid = "stomacid"
+			reagentid = REAGENT_ID_STOMACID
 			reagentcolor = "#664330"
-		if("Diluted digestive acid")
-			generated_reagents = list("diet_stomacid" = 1)
+		if(REAGENT_DIETSTOMACID)
+			generated_reagents = list(REAGENT_ID_DIETSTOMACID = 1)
 			if(capitalize(reagent_name) in reagent_choices)
 				reagent_name = "diluted digestive acid"
 			gen_amount = 1
 			gen_cost = 1
-			reagentid = "diet_stomacid"
+			reagentid = REAGENT_ID_DIETSTOMACID
 			reagentcolor = "#664330"
-		if("Space cleaner")
-			generated_reagents = list("cleaner" = 1)
+		if(REAGENT_CLEANER)
+			generated_reagents = list(REAGENT_ID_CLEANER = 1)
 			if(capitalize(reagent_name) in reagent_choices)
-				reagent_name = "space cleaner"
+				reagent_name = REAGENT_CLEANER
 			gen_amount = 1
 			gen_cost = 10
-			reagentid = "cleaner"
+			reagentid = REAGENT_ID_CLEANER
 			reagentcolor = "#A5F0EE"
-		if("Lube")
-			generated_reagents = list("lube" = 1)
+		if(REAGENT_LUBE)
+			generated_reagents = list(REAGENT_ID_LUBE = 1)
 			if(capitalize(reagent_name) in reagent_choices)
-				reagent_name = "lube"
+				reagent_name = REAGENT_ID_LUBE
 			gen_amount = 1
 			gen_cost = 10
-			reagentid = "lube"
+			reagentid = REAGENT_ID_LUBE
 			reagentcolor = "#009CA8"
-		if("Biomass")
-			generated_reagents = list("biomass" = 1)
+		if(REAGENT_BIOMASS)
+			generated_reagents = list(REAGENT_ID_BIOMASS = 1)
 			if(capitalize(reagent_name) in reagent_choices)
-				reagent_name = "biomass"
+				reagent_name = REAGENT_ID_BIOMASS
 			gen_amount = 1
 			gen_cost = 10
-			reagentid = "biomass"
+			reagentid = REAGENT_ID_BIOMASS
 			reagentcolor = "#DF9FBF"
-		if("Concentrated Radium")
-			generated_reagents = list("concentrated_radium" = 1)
+		if(REAGENT_CONCENTRATEDRADIUM)
+			generated_reagents = list(REAGENT_ID_CONCENTRATEDRADIUM = 1)
 			if(capitalize(reagent_name) in reagent_choices)
 				reagent_name = "concentrated radium"
 			gen_amount = 1
 			gen_cost = 1
-			reagentid = "concentrated_radium"
+			reagentid = REAGENT_ID_CONCENTRATEDRADIUM
 			reagentcolor = "#C7C7C7"
-		if("Tricordrazine")
-			generated_reagents = list("tricordrazine" = 1)
+		if(REAGENT_TRICORDRAZINE)
+			generated_reagents = list(REAGENT_ID_TRICORDRAZINE = 1)
 			if(capitalize(reagent_name) in reagent_choices)
-				reagent_name = "tricordrazine"
+				reagent_name = REAGENT_ID_TRICORDRAZINE
 			gen_amount = 1
 			gen_cost = 10
-			reagentid = "tricordrazine"
+			reagentid = REAGENT_ID_TRICORDRAZINE
 			reagentcolor = "#8040FF"
 			is_beneficial = TRUE
 
@@ -519,10 +520,10 @@
 	w_class = ITEMSIZE_SMALL
 
 /obj/belly/proc/recycle(var/obj/item/O)
-	if(!recycling || (!LAZYLEN(O.matter) && !istype(O, /obj/item/weapon/ore)))
+	if(!recycling || (!LAZYLEN(O.matter) && !istype(O, /obj/item/ore)))
 		return FALSE
-	if(istype(O, /obj/item/weapon/ore))
-		var/obj/item/weapon/ore/ore = O
+	if(istype(O, /obj/item/ore))
+		var/obj/item/ore/ore = O
 		for(var/obj/item/ore_chunk/C in contents)
 			if(istype(C))
 				C.stored_ore[ore.material]++
@@ -566,17 +567,17 @@
 
 /obj/belly/proc/owner_adjust_nutrition(var/amount = 0)
 	if(storing_nutrition && amount > 0)
-		for(var/obj/item/weapon/reagent_containers/food/rawnutrition/R in contents)
+		for(var/obj/item/reagent_containers/food/rawnutrition/R in contents)
 			if(istype(R))
 				R.stored_nutrition += amount
 				return
-		var/obj/item/weapon/reagent_containers/food/rawnutrition/NR = new /obj/item/weapon/reagent_containers/food/rawnutrition(src)
+		var/obj/item/reagent_containers/food/rawnutrition/NR = new /obj/item/reagent_containers/food/rawnutrition(src)
 		NR.stored_nutrition += amount
 		return
 	else
 		owner.adjust_nutrition(amount)
 
-/obj/item/weapon/reagent_containers/food/rawnutrition
+/obj/item/reagent_containers/food/rawnutrition
 	name = "raw nutrition"
 	desc = "A nutritious pile of converted mass ready for consumption."
 	icon = 'icons/obj/recycling.dmi'
@@ -585,7 +586,7 @@
 	w_class = ITEMSIZE_SMALL
 	var/stored_nutrition = 0
 
-/obj/item/weapon/reagent_containers/food/rawnutrition/standard_feed_mob(var/mob/user, var/mob/target)
+/obj/item/reagent_containers/food/rawnutrition/standard_feed_mob(var/mob/user, var/mob/target)
 	if(isliving(target))
 		var/mob/living/L = target
 		L.nutrition += stored_nutrition

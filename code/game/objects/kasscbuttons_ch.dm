@@ -19,7 +19,7 @@
 	var/list/trig_targets = list()
 	var/trig_target_is_trigerrer = FALSE				//Should we use the button presser as the target?
 
-/obj/kbutton/attackby(obj/item/weapon/W, mob/user as mob)
+/obj/kbutton/attackby(obj/item/W, mob/user as mob)
 	return attack_hand(user)
 
 /obj/kbutton/attack_hand(mob/user as mob)

@@ -16,8 +16,8 @@
 	image			= 'icons/ntos/cardcomp.png'
 	active_state	= "id"
 
-	var/obj/item/weapon/card/id/reader = null
-	var/obj/item/weapon/card/id/writer = null
+	var/obj/item/card/id/reader = null
+	var/obj/item/card/id/writer = null
 
 	var/mode = 0
 	var/auth = 0
@@ -36,8 +36,8 @@
 	jobs_all += "<table><tr><td></td><td><b>Command</b></td>"
 
 	jobs_all += "</tr><tr height='20'><td><b>Special</b></td>"//Site Manager in special because he is head of heads ~Intercross21
-	jobs_all += "<td weight='100'><a href='?src=\ref[src];;assign="+JOB_SITE_MANAGER+"'>"+JOB_SITE_MANAGER+"</a></td>"
-	jobs_all += "<td weight='100'><a href='?src=\ref[src];;assign=Custom'>Custom</a></td>"
+	jobs_all += "<td weight='100'><a href='byond://?src=\ref[src];;assign="+JOB_SITE_MANAGER+"'>"+JOB_SITE_MANAGER+"</a></td>"
+	jobs_all += "<td weight='100'><a href='byond://?src=\ref[src];;assign=Custom'>Custom</a></td>"
 
 	counter = 0
 	jobs_all += "</tr><tr><td><font color='#A50000'><b>Security</b></font></td>"//Red
@@ -46,7 +46,7 @@
 		if(counter >= 6)
 			jobs_all += "</tr><tr height='20'><td></td><td></td>"
 			counter = 0
-		jobs_all += "<td height='20' weight='100'><a href='?src=\ref[src];assign=[job]'>[replacetext(job, " ", "&nbsp")]</a></td>"
+		jobs_all += "<td height='20' weight='100'><a href='byond://?src=\ref[src];assign=[job]'>[replacetext(job, " ", "&nbsp")]</a></td>"
 
 	counter = 0
 	jobs_all += "</tr><tr><td><font color='#FFA500'><b>Engineering</b></font></td>"//Orange
@@ -55,7 +55,7 @@
 		if(counter >= 6)
 			jobs_all += "</tr><tr height='20'><td></td><td></td>"
 			counter = 0
-		jobs_all += "<td height='20' weight='100'><a href='?src=\ref[src];assign=[job]'>[replacetext(job, " ", "&nbsp")]</a></td>"
+		jobs_all += "<td height='20' weight='100'><a href='byond://?src=\ref[src];assign=[job]'>[replacetext(job, " ", "&nbsp")]</a></td>"
 
 	counter = 0
 	jobs_all += "</tr><tr height='20'><td><font color='#008000'><b>Medical</b></font></td>"//Green
@@ -64,7 +64,7 @@
 		if(counter >= 6)
 			jobs_all += "</tr><tr height='20'><td></td><td></td>"
 			counter = 0
-		jobs_all += "<td weight='100'><a href='?src=\ref[src];assign=[job]'>[replacetext(job, " ", "&nbsp")]</a></td>"
+		jobs_all += "<td weight='100'><a href='byond://?src=\ref[src];assign=[job]'>[replacetext(job, " ", "&nbsp")]</a></td>"
 
 	counter = 0
 	jobs_all += "</tr><tr height='20'><td><font color='#800080'><b>Science</b></font></td>"//Purple
@@ -73,7 +73,7 @@
 		if(counter >= 6)
 			jobs_all += "</tr><tr height='20'><td></td><td></td>"
 			counter = 0
-		jobs_all += "<td weight='100'><a href='?src=\ref[src];assign=[job]'>[replacetext(job, " ", "&nbsp")]</a></td>"
+		jobs_all += "<td weight='100'><a href='byond://?src=\ref[src];assign=[job]'>[replacetext(job, " ", "&nbsp")]</a></td>"
 
 	counter = 0
 	jobs_all += "</tr><tr height='20'><td><font color='#808080'><b>Civilian</b></font></td>"//Grey
@@ -82,7 +82,7 @@
 		if(counter >= 6)
 			jobs_all += "</tr><tr height='20'><td></td><td></td>"
 			counter = 0
-		jobs_all += "<td weight='100'><a href='?src=\ref[src];assign=[job]'>[replacetext(job, " ", "&nbsp")]</a></td>"
+		jobs_all += "<td weight='100'><a href='byond://?src=\ref[src];assign=[job]'>[replacetext(job, " ", "&nbsp")]</a></td>"
 
 		dat = {"<script type="text/javascript">
 							function markRed(){
@@ -146,14 +146,14 @@
 	// form for renaming the ID
 	dat += "<form name='cardcomp' action='byond://' method='get'>"
 	dat += "<input type='hidden' name='src' value='\ref[src]'>"
-	dat += "<b>registered_name:</b> <input type='text' id='namefield' name='reg' value='[writer.registered_name]' style='width:250px; background-color:white;' onchange='markRed()'>"
+	dat += span_bold("registered_name:") + " <input type='text' id='namefield' name='reg' value='[writer.registered_name]' style='width:250px; background-color:white;' onchange='markRed()'>"
 	dat += "<input type='submit' value='Rename' onclick='markGreen()'>"
 	dat += "</form>"
 
 	// form for changing assignment, taken care of by scriptblock() mostly
 	var/assign_temp = writer.assignment
 	if(!assign_temp || assign_temp == "") assign_temp = "Unassigned"
-	dat += "<b>Assignment:</b> [assign_temp] <span id='alljobsslot'><a href='#' onclick='showAll()'>change</a></span>"
+	dat += span_bold("Assignment:") + " [assign_temp] <span id='alljobsslot'><a href='#' onclick='showAll()'>change</a></span>"
 
 	// list of access rights
 	dat += accessblock()
@@ -260,7 +260,7 @@
 		auth = 0
 
 	if("insert" in href_list)
-		var/obj/item/weapon/card/card = usr.get_active_hand()
+		var/obj/item/card/card = usr.get_active_hand()
 		if(!istype(card)) return
 
 		var/which = href_list["insert"]
@@ -275,8 +275,8 @@
 
 		printing = 1
 		sleep(50)
-		var/obj/item/weapon/paper/P = new /obj/item/weapon/paper( computer.loc )
-		P.info = "<B>Crew Manifest:</B><BR>"
+		var/obj/item/paper/P = new /obj/item/paper( computer.loc )
+		P.info = span_bold("Crew Manifest:") + "<BR>"
 		var/list/L = list()
 		for (var/datum/data/record/t in data_core.general)
 			var/R = t.fields["name"] + " - " + t.fields["rank"]

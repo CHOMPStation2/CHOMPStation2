@@ -158,7 +158,7 @@
 	next_click = max(world.time + timeout, next_click)
 
 /mob/proc/checkClickCooldown()
-	if(next_click > world.time && !CONFIG_GET(flag/no_click_cooldown)) // CHOMPEdit
+	if(next_click > world.time && !CONFIG_GET(flag/no_click_cooldown))
 		return FALSE
 	return TRUE
 
@@ -286,10 +286,8 @@
 /atom/proc/AltClick(var/mob/user)
 	var/turf/T = get_turf(src)
 	if(T && user.TurfAdjacent(T))
-		user.set_listed_turf(T) //CHOMPEdit
+		user.set_listed_turf(T)
 	return 1
-
-//CHOMP Removal
 
 /mob/proc/TurfAdjacent(var/turf/T)
 	return T.AdjacentQuick(src)
@@ -332,7 +330,7 @@
 		nutrition = max(nutrition - rand(1,5),0)
 		handle_regular_hud_updates()
 	else
-		to_chat(src, "<span class='warning'>You're out of energy!  You need food!</span>")
+		to_chat(src, span_warning("You're out of energy!  You need food!"))
 
 // Simple helper to face what you clicked on, in case it should be needed in more than one place
 /mob/proc/face_atom(var/atom/A)

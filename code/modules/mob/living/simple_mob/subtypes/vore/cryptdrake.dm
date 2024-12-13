@@ -64,12 +64,16 @@
 	. = ..()
 	if(!riding_datum)
 		riding_datum = new /datum/riding/simple_mob(src)
-	add_verb(src,/mob/living/simple_mob/proc/animal_mount) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/proc/toggle_rider_reins) //CHOMPEdit TGPanel
+	add_verb(src, /mob/living/simple_mob/proc/animal_mount)
+	add_verb(src, /mob/living/proc/toggle_rider_reins)
 	movement_cooldown = -1
 
 /mob/living/simple_mob/vore/cryptdrake/init_vore()
-	. = ..()
+ 	//CHOMPEdit Start
+	if(!voremob_loaded)
+		return
+	.=..()
+	//CHOMPEdit End
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "The enormous beast snaps it's boney jaws around your form, effortlessly lifting you from the ground. Throwing it's head backwards, your body is tossed up momentarily as the maw parts wider, only for you to descend rapidly moments later. You're caught in the creature's throat for a moment, contracting dark purple flesh holding tightly onto you, there's no going back at this point. The peristaltic motions squeeze you down this tunnel towards your final destination, where you're soon relieved of the intense squelching to be pushed into a move flexible, stretching chamber. Immediately coated in caustic oozes, the world around you seems more than eager to ensure that you're soaked over every inch, wrinkled walls twisting and grinding around your body. The drake's stomach clenches and compresses over you rhythmically, attempting to eagerly add you to the soup of fluids that fill this sloshing gut. Omnipresent sounds of groaning, gurgling and burbling bodily functions signify just how active this process already is."
@@ -105,8 +109,8 @@
 		return FALSE
 
 	set_AI_busy(TRUE)
-	visible_message(span("warning","\The [src]'s eyes flash ominously!"))
-	to_chat(L, span("danger","\The [src] focuses on you!"))
+	visible_message(span_warning("\The [src]'s eyes flash ominously!"))
+	to_chat(L, span_danger("\The [src] focuses on you!"))
 	// Telegraph, since getting stunned suddenly feels bad.
 	do_windup_animation(A, leap_warmup)
 	sleep(leap_warmup) // For the telegraphing.
@@ -117,7 +121,7 @@
 
 	// Do the actual leap.
 	status_flags |= LEAPING // Lets us pass over everything.
-	visible_message(span("critical","\The [src] leaps at \the [L]!"))
+	visible_message(span_critical("\The [src] leaps at \the [L]!"))
 	throw_at(get_step(L, get_turf(src)), special_attack_max_range+1, 1, src)
 	playsound(src, leap_sound, 75, 1)
 

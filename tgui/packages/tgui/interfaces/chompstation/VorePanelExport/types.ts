@@ -4,7 +4,7 @@ export type Data = {
   db_version: string;
   db_repo: string;
   mob_name: string;
-  bellies: Belly[];
+  bellies?: Belly[];
 };
 
 export type Belly = {
@@ -154,6 +154,7 @@ export type Belly = {
 
   absorbchance: number;
   digestchance: number;
+  belchchance: number;
 
   // Interactions (Auto-Transfer)
   autotransferwait: number;

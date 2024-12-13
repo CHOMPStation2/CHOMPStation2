@@ -1,7 +1,7 @@
 /client/proc/smite(var/mob/living/carbon/human/target in player_list)
 	set name = "Smite"
 	set desc = "Abuse a player with various 'special treatments' from a list."
-	set category = "Fun.Do Not" //CHOMPEdit
+	set category = "Fun.Do Not"
 	if(!check_rights(R_FUN))
 		return
 
@@ -37,13 +37,13 @@
 		if(SMITE_SPONTANEOUSCOMBUSTION)
 			target.adjust_fire_stacks(10)
 			target.IgniteMob()
-			target.visible_message("<span class='danger'>[target] bursts into flames!</span>")
+			target.visible_message(span_danger("[target] bursts into flames!"))
 
 		if(SMITE_LIGHTNINGBOLT)
 			var/turf/T = get_step(get_step(target, NORTH), NORTH)
 			T.Beam(target, icon_state="lightning[rand(1,12)]", time = 5)
 			target.electrocute_act(75,def_zone = BP_HEAD)
-			target.visible_message("<span class='danger'>[target] is struck by lightning!</span>")
+			target.visible_message(span_danger("[target] is struck by lightning!"))
 
 		if(SMITE_SHADEKIN_ATTACK)
 			var/turf/Tt = get_turf(target) //Turf for target
@@ -64,6 +64,7 @@
 			var/mob/living/simple_mob/shadekin/red/shadekin = new(Ts)
 			//Abuse of shadekin
 			shadekin.real_name = shadekin.name
+			shadekin.voremob_loaded = TRUE // CHOMPAdd
 			shadekin.init_vore()
 			shadekin.ability_flags |= 0x1
 			shadekin.phase_shift()
@@ -117,6 +118,7 @@
 			target.transforming = TRUE //Cheap hack to stop them from moving
 			var/mob/living/simple_mob/shadekin/shadekin = new kin_type(Tt)
 			shadekin.real_name = shadekin.name
+			shadekin.voremob_loaded = TRUE // CHOMPAdd
 			shadekin.init_vore()
 			shadekin.can_be_drop_pred = TRUE
 			shadekin.dir = SOUTH
@@ -131,7 +133,7 @@
 			sleep(1 SECOND)
 			shadekin.dir = SOUTH
 			sleep(1 SECOND)
-			shadekin.audible_message("<b>[shadekin]</b> belches loudly!", runemessage = "URRRRRP")
+			shadekin.audible_message(span_vwarning(span_bold("[shadekin]") + " belches loudly!"), runemessage = "URRRRRP")
 			sleep(2 SECONDS)
 			shadekin.phase_shift()
 			target.transforming = FALSE //Undo cheap hack
@@ -140,7 +142,7 @@
 				shadekin.ckey = ckey
 
 			else //Permakin'd
-				to_chat(target,"<span class='danger'>You're carried off into The Dark by the [shadekin]. Who knows if you'll find your way back?</span>")
+				to_chat(target,span_danger("You're carried off into The Dark by the [shadekin]. Who knows if you'll find your way back?"))
 				target.ghostize()
 				qdel(target)
 				qdel(shadekin)
@@ -164,13 +166,13 @@
 				target.fear = 200
 
 		if(SMITE_PEPPERNADE)
-			var/obj/item/weapon/grenade/chem_grenade/teargas/grenade = new /obj/item/weapon/grenade/chem_grenade/teargas
+			var/obj/item/grenade/chem_grenade/teargas/grenade = new /obj/item/grenade/chem_grenade/teargas
 			grenade.loc = target.loc
-			to_chat(target,"<span class='warning'>GRENADE?!</span>")
+			to_chat(target,span_warning("GRENADE?!"))
 			grenade.detonate()
 
 		if(SMITE_SPICEREQUEST)
-			var/obj/item/weapon/reagent_containers/food/condiment/spacespice/spice = new /obj/item/weapon/reagent_containers/food/condiment/spacespice
+			var/obj/item/reagent_containers/food/condiment/spacespice/spice = new /obj/item/reagent_containers/food/condiment/spacespice
 			spice.loc = target.loc
 			to_chat(target,"A bottle of spices appears at your feet... be careful what you wish for!")
 
@@ -178,10 +180,10 @@
 			new/obj/effect/decal/cleanable/pie_smudge(get_turf(target))
 			playsound(target, 'sound/effects/slime_squish.ogg', 100, 1, get_rand_frequency(), falloff = 5)
 			target.Weaken(1)
-			target.visible_message("<span class='danger'>[target] is struck by pie!</span>")
+			target.visible_message(span_danger("[target] is struck by pie!"))
 
 		if(SMITE_SPICE) //CHOMP Add
-			to_chat(target, "<span class='warning'>Spice spice baby!</span>")
+			to_chat(target, span_warning("Spice spice baby!"))
 			target.eye_blurry = max(target.eye_blurry, 25)
 			target.Blind(10)
 			target.Stun(5)
@@ -240,11 +242,11 @@ var/redspace_abduction_z
 
 /proc/redspace_abduction(mob/living/target, user)
 	if(redspace_abduction_z < 0)
-		to_chat(user,"<span class='warning'>The abduction z-level is already being created. Please wait.</span>")
+		to_chat(user,span_warning("The abduction z-level is already being created. Please wait."))
 		return
 	if(!redspace_abduction_z)
 		redspace_abduction_z = -1
-		to_chat(user,"<span class='warning'>This is the first use of the verb this shift, it will take a minute to configure the abduction z-level. It will be z[world.maxz+1].</span>")
+		to_chat(user,span_warning("This is the first use of the verb this shift, it will take a minute to configure the abduction z-level. It will be z[world.maxz+1]."))
 		var/z = ++world.maxz
 		world.max_z_changed()
 		for(var/x = 1 to world.maxx)
@@ -262,8 +264,8 @@ var/redspace_abduction_z
 	var/size_of_square = 26
 	var/halfbox = round(size_of_square*0.5)
 	target.transforming = TRUE
-	to_chat(target,"<span class='danger'>You feel a strange tug, deep inside. You're frozen in momentarily...</span>")
-	to_chat(user,"<span class='notice'>Beginning vis_contents copy to abduction site, player mob is frozen.</span>")
+	to_chat(target,span_danger("You feel a strange tug, deep inside. You're frozen in momentarily..."))
+	to_chat(user,span_notice("Beginning vis_contents copy to abduction site, player mob is frozen."))
 	sleep(1 SECOND)
 	//Lower left corner of a working box
 	var/llc_x = max(0,halfbox-target.x) + min(target.x+halfbox, world.maxx) - size_of_square
@@ -314,14 +316,14 @@ var/redspace_abduction_z
 				T.vis_contents.Cut()
 
 	target.forceMove(locate(target.x,target.y,redspace_abduction_z))
-	to_chat(target,"<span class='danger'>The tug relaxes, but everything around you looks... slightly off.</span>")
-	to_chat(user,"<span class='notice'>The mob has been moved. ([admin_jump_link(target,usr.client.holder)])</span>")
+	to_chat(target,span_danger("The tug relaxes, but everything around you looks... slightly off."))
+	to_chat(user,span_notice("The mob has been moved. ([admin_jump_link(target,usr.client.holder)])"))
 
 	target.transforming = FALSE
 
 /proc/fake_autosave(var/mob/living/target, var/client/user, var/wide)
 	if(!istype(target) || !target.client)
-		to_chat(user, "<span class='warning'>Skipping [target] because they are not a /mob/living or have no client.</span>")
+		to_chat(user, span_warning("Skipping [target] because they are not a /mob/living or have no client."))
 		return
 
 	if(wide)

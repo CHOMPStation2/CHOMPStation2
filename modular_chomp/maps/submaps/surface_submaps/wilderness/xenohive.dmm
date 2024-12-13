@@ -14,11 +14,7 @@
 "bq" = (
 /obj/structure/closet/secure_closet/egg/xenomorph,
 /obj/effect/alien/weeds,
-/obj/random/maintenance/medical,
-/obj/random/maintenance/medical,
-/obj/random/maintenance/engineering,
 /obj/random/plushie,
-/obj/item/organ/internal/augment/armmounted,
 /obj/item/organ/internal/intestine,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
@@ -128,8 +124,10 @@
 /turf/simulated/floor/tiled/steel_dirty,
 /area/submap/XenoHive)
 "jY" = (
-/mob/living/simple_mob/animal/space/alien/queen/empress,
 /obj/effect/alien/weeds,
+/mob/living/simple_mob/animal/space/alien/queen/empress{
+	loot_list = list(/obj/item/storage/backpack/holding = 20)
+	},
 /turf/simulated/floor,
 /area/submap/XenoHive)
 "kl" = (
@@ -309,7 +307,7 @@
 /obj/random/maintenance/security,
 /obj/item/organ/internal/brain/alraune,
 /obj/item/organ/internal/eyes/replicant,
-/obj/item/weapon/gun/energy/gun/fluff/dominator,
+/obj/item/gun/energy/gun/fluff/dominator,
 /turf/simulated/floor,
 /area/submap/XenoHive)
 "CR" = (
@@ -372,7 +370,7 @@
 /turf/simulated/floor,
 /area/submap/XenoHive)
 "Hx" = (
-/obj/item/weapon/portable_destructive_analyzer,
+/obj/item/portable_destructive_analyzer,
 /obj/effect/alien/weeds,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
@@ -401,7 +399,6 @@
 /obj/structure/table,
 /obj/effect/alien/weeds,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/storage/backpack/holding,
 /turf/simulated/floor,
 /area/submap/XenoHive)
 "Ir" = (
@@ -495,7 +492,6 @@
 "QC" = (
 /obj/structure/closet/secure_closet/egg/xenomorph,
 /obj/effect/alien/weeds,
-/obj/item/stolenpackage,
 /obj/item/organ/internal/fruitgland,
 /obj/item/organ/internal/intestine/xeno,
 /turf/simulated/floor/outdoors/rocks{
@@ -540,7 +536,7 @@
 /obj/effect/alien/weeds,
 /obj/structure/prop/transmitter,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/device/gps/internal/poi,
+/obj/item/gps/internal/poi,
 /turf/simulated/floor,
 /area/submap/XenoHive)
 "Vj" = (

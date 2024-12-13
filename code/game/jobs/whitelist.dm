@@ -3,7 +3,7 @@
 GLOBAL_LIST_EMPTY(whitelist) // CHOMPEdit - Managed Globals
 
 /hook/startup/proc/loadWhitelist()
-	if(CONFIG_GET(flag/usewhitelist)) // CHOMPEdit
+	if(CONFIG_GET(flag/usewhitelist))
 		load_whitelist()
 	return 1
 
@@ -21,7 +21,7 @@ GLOBAL_LIST_EMPTY(whitelist) // CHOMPEdit - Managed Globals
 GLOBAL_LIST_EMPTY(alien_whitelist) // CHOMPEdit - Managed Globals
 
 /hook/startup/proc/loadAlienWhitelist()
-	if(CONFIG_GET(flag/usealienwhitelist)) // CHOMPEdit
+	if(CONFIG_GET(flag/usealienwhitelist))
 		load_alienwhitelist()
 	return 1
 
@@ -113,7 +113,7 @@ GLOBAL_LIST_EMPTY(alien_whitelist) // CHOMPEdit - Managed Globals
 				return 1
 
 /proc/whitelist_overrides(mob/M)
-	if(!CONFIG_GET(flag/usealienwhitelist)) // CHOMPEdit
+	if(!CONFIG_GET(flag/usealienwhitelist))
 		return TRUE
 	if(check_rights(R_ADMIN|R_EVENT, 0, M))
 		return TRUE

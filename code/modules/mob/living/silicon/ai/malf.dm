@@ -10,9 +10,9 @@
 	hacked_apcs = list()
 	recalc_cpu()
 
-	add_verb(src, new/datum/game_mode/malfunction/verb/ai_select_hardware()) //CHOMPEdit
-	add_verb(src, new/datum/game_mode/malfunction/verb/ai_select_research()) //CHOMPEdit
-	add_verb(src, new/datum/game_mode/malfunction/verb/ai_help()) //CHOMPEdit
+	add_verb(src, new/datum/game_mode/malfunction/verb/ai_select_hardware())
+	add_verb(src, new/datum/game_mode/malfunction/verb/ai_select_research())
+	add_verb(src, new/datum/game_mode/malfunction/verb/ai_help())
 
 	// And greet user with some OOC info.
 	to_chat(user, "You are malfunctioning, you do not have to follow any laws.")
@@ -83,7 +83,7 @@
 		return
 	if(hardware_integrity() < 50)
 		if(!shutup)
-			to_chat(src, "<span class='notice'>Starting APU... <b>FAULT</b>(System Damaged)</span>")
+			to_chat(src, span_notice("Starting APU... <b>FAULT</b>(System Damaged)"))
 		return
 	if(!shutup)
 		to_chat(src, "Starting APU... ONLINE")
@@ -105,11 +105,11 @@
 
 // Returns percentage of AI's remaining hardware integrity (maxhealth - (bruteloss + fireloss))
 /mob/living/silicon/ai/proc/hardware_integrity()
-	return (health-CONFIG_GET(number/health_threshold_dead))/2 // CHOMPEdit
+	return (health - CONFIG_GET(number/health_threshold_dead)) / 2
 
 // Shows capacitor charge and hardware integrity information to the AI in Status tab.
-//ChompEDIT START - TGPanel
 /mob/living/silicon/ai/show_system_integrity()
+	. = ""
 	if(!src.stat)
 		. += "Hardware integrity: [hardware_integrity()]%"
 		. += "Internal capacitor: [backup_capacitor()]%"
@@ -118,6 +118,7 @@
 
 // Shows AI Malfunction related information to the AI.
 /mob/living/silicon/ai/show_malf_ai()
+	. = ""
 	if(src.is_malf())
 		if(src.hacked_apcs)
 			. += "Hacked APCs: [src.hacked_apcs.len]"
@@ -133,7 +134,6 @@
 				. += "SYSTEM OVERRIDE INITIATED"
 			else if(system_override == 2)
 				. += "SYSTEM OVERRIDE COMPLETED"
-//ChompEDIT END
 
 // Cleaner proc for creating powersupply for an AI.
 /mob/living/silicon/ai/proc/create_powersupply()

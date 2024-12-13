@@ -25,7 +25,7 @@
 			return
 	if(I.is_wrench())
 		anchored = !anchored
-		visible_message("<span class='notice'>\The [src] has been [anchored ? "bolted to the floor" : "unbolted from the floor"] by [user].</span>") //Does this not need to be disabled?
+		visible_message(span_notice("\The [src] has been [anchored ? "bolted to the floor" : "unbolted from the floor"] by [user].")) //Does this not need to be disabled?
 		playsound(src, I.usesound, 75, 1)
 		if(anchored)
 			connect_to_network()
@@ -33,6 +33,6 @@
 			disconnect_from_network()
 			turn_off()
 		return
-	if(istype(I, /obj/item/device/multitool))
+	if(istype(I, /obj/item/multitool))
 		return
 	..()

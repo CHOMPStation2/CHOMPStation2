@@ -11,14 +11,14 @@
 "d" = (
 /obj/structure/table/survival_pod,
 /obj/fruitspawner/watermelon,
-/obj/item/device/gps/explorer,
-/obj/item/device/gps/explorer,
+/obj/item/gps/explorer,
+/obj/item/gps/explorer,
 /obj/structure/closet/walllocker_double/east,
-/obj/item/weapon/gun/projectile/garand,
+/obj/item/gun/projectile/garand,
 /obj/item/ammo_magazine/clip/medium,
 /obj/item/ammo_magazine/clip/medium,
 /obj/item/ammo_magazine/clip/medium,
-/obj/item/weapon/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/cybershuttle)
 "e" = (
@@ -165,9 +165,9 @@
 	pixel_y = -4;
 	pixel_x = -9
 	},
-/obj/item/weapon/dice/d20,
-/obj/item/weapon/deck/tarot,
-/obj/item/weapon/material/sword/katana{
+/obj/item/dice/d20,
+/obj/item/deck/tarot,
+/obj/item/material/sword/katana{
 	pixel_y = -4;
 	pixel_x = 5
 	},

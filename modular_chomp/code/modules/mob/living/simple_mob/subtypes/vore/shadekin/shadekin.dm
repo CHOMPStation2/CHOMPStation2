@@ -42,8 +42,8 @@
 	set category = "Abilities.Shadekin"
 
 	if(phase_gentle)
-		to_chat(src, "<span class='notice'>Phasing toggled to Normal. You may damage lights.</span>")
+		to_chat(src, span_notice("Phasing toggled to Normal. You may damage lights."))
 		phase_gentle = 0
 	else
-		to_chat(src, "<span class='notice'>Phasing toggled to Gentle. You won't damage lights, but concentrating on that incurs a short stun.</span>")
+		to_chat(src, span_notice("Phasing toggled to Gentle. You won't damage lights, but concentrating on that incurs a short stun."))
 		phase_gentle = 1

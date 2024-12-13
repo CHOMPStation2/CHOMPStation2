@@ -6,7 +6,7 @@
 ////////////////////////////
 */
 /datum/sprite_accessory/tail
-	name = "You should not see this..."
+	name = DEVELOPER_WARNING_NAME
 	icon = 'icons/mob/vore/tails_vr.dmi'
 	var/offset_x = 0
 	var/offset_y = 0
@@ -461,6 +461,34 @@
 	ani_state = "tigeralt_w"
 	extra_overlay_w = "tigeralt-tips_w"
 	extra_overlay2_w = "tigeralt-tips2_w"
+
+/datum/sprite_accessory/tail/twotiger
+	name = "tiger tail, double (vwag)"
+	desc = ""
+	icon_state = "twotiger"
+	extra_overlay = "twotiger-tips"
+	extra_overlay2 = "twotiger-tips2"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	ani_state = "twotiger_w"
+	extra_overlay_w = "twotiger-tips_w"
+	extra_overlay2_w = "twotiger-tips2_w"
+
+/datum/sprite_accessory/tail/twocat
+	name = "cat tail, double (vwag)"
+	desc = ""
+	icon_state = "twocat"
+	ani_state = "twocat_w"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/threecat
+	name = "cat tail, triple (vwag)"
+	desc = ""
+	icon_state = "threecat"
+	ani_state = "threecat_w"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
 
 
 /datum/sprite_accessory/tail/vulp_new
@@ -1421,7 +1449,7 @@
 
 //LONG TAILS ARE NOT TAUR BUTTS >:O
 /datum/sprite_accessory/tail/longtail
-	name = "You should not see this..."
+	name = DEVELOPER_WARNING_NAME
 	icon = 'icons/mob/vore/taurs_vr.dmi'
 	offset_x = -16
 	do_colouration = 1 // Yes color, using tail color
@@ -1560,3 +1588,8 @@
 	extra_overlay2 = "chonksqrl-m2"
 
 //RS ADD END
+
+/datum/sprite_accessory/tail/kururak
+	name = "kururak tail"
+	desc = ""
+	icon_state = "kururak"

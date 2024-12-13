@@ -13,7 +13,7 @@
 /obj/structure/barricade/New(var/newloc, var/material_name)
 	..(newloc)
 	if(!material_name)
-		material_name = "wood"
+		material_name = MAT_WOOD
 	material = get_material_by_name("[material_name]")
 	if(!material)
 		qdel(src)
@@ -35,13 +35,13 @@
 			return //hitting things with the wrong type of stack usually doesn't produce messages, and probably doesn't need to.
 		if(health < maxhealth)
 			if(D.get_amount() < 1)
-				to_chat(user, "<span class='warning'>You need one sheet of [material.display_name] to repair \the [src].</span>")
+				to_chat(user, span_warning("You need one sheet of [material.display_name] to repair \the [src]."))
 				return
-			visible_message("<span class='notice'>[user] begins to repair \the [src].</span>")
+			visible_message(span_notice("[user] begins to repair \the [src]."))
 			if(do_after(user,20) && health < maxhealth)
 				if(D.use(1))
 					health = maxhealth
-					visible_message("<span class='notice'>[user] repairs \the [src].</span>")
+					visible_message(span_notice("[user] repairs \the [src]."))
 				return
 		return
 	else
@@ -71,8 +71,8 @@
 	return
 
 /obj/structure/barricade/attack_generic(var/mob/user, var/damage, var/attack_verb)
-	visible_message("<span class='danger'>[user] [attack_verb] the [src]!</span>")
-	if(material == get_material_by_name("resin"))
+	visible_message(span_danger("[user] [attack_verb] the [src]!"))
+	if(material == get_material_by_name(MAT_RESIN))
 		playsound(src, 'sound/effects/attackblob.ogg', 100, 1)
 	else if(material == (get_material_by_name(MAT_CLOTH) || get_material_by_name(MAT_SYNCLOTH)))
 		playsound(src, 'sound/items/drop/clothing.ogg', 100, 1)
@@ -87,7 +87,7 @@
 
 /obj/structure/barricade/proc/dismantle()
 	material.place_dismantled_product(get_turf(src))
-	visible_message("<span class='danger'>\The [src] falls apart!</span>")
+	visible_message(span_danger("\The [src] falls apart!"))
 	qdel(src)
 	return
 
@@ -118,7 +118,7 @@
 
 /obj/structure/barricade/sandbag/New(var/newloc, var/material_name)
 	if(!material_name)
-		material_name = "cloth"
+		material_name = MAT_CLOTH
 	..(newloc, material_name)
 	material = get_material_by_name("[material_name]")
 	if(!material)
@@ -138,7 +138,7 @@
 /obj/structure/barricade/sandbag/dismantle()
 	update_connections(1, src)
 	material.place_dismantled_product(get_turf(src))
-	visible_message("<span class='danger'>\The [src] falls apart!</span>")
+	visible_message(span_danger("\The [src] falls apart!"))
 	qdel(src)
 	return
 

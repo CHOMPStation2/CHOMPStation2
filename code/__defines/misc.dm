@@ -31,7 +31,6 @@
 #define MAX_CLIENT_FPS	200
 
 // Some arbitrary defines to be used by self-pruning global lists. (see master_controller)
-#define PROCESS_KILL 26 // Used to trigger removal from a processing list.
 #define MAX_GEAR_COST 15 // Used in chargen for accessory loadout limit.
 
 // For secHUDs and medHUDs and variants. The number is the location of the image on the list hud_list of humans.
@@ -48,10 +47,6 @@
 #define     TOTAL_HUDS 10 // Total number of HUDs. Like body layers, and other things, it comes up sometimes.
 
 #define CLIENT_FROM_VAR(I) (ismob(I) ? I:client : (isclient(I) ? I : null))
-
-
-//Persistence
-#define AREA_FLAG_IS_NOT_PERSISTENT 8 // SSpersistence will not track values from this area.
 
 //	Shuttles.
 
@@ -100,7 +95,24 @@
 #define DEFAULT_JOB_TYPE /datum/job/assistant
 
 //Area flags, possibly more to come
-#define RAD_SHIELDED 1 //shielded from radiation, clearly
+#define RAD_SHIELDED 				0x1		//shielded from radiation, clearly
+#define BLUE_SHIELDED				0x2		// Shield from bluespace teleportation (telescience)
+#define AREA_SECRET_NAME			0x4		// This tells certain things that display areas' names that they shouldn't display this area's name.
+#define AREA_FLAG_IS_NOT_PERSISTENT 0x8		// SSpersistence will not track values from this area.
+#define AREA_FORBID_EVENTS			0x10	// random events will not start inside this area.
+#define AREA_FORBID_SINGULO			0x20	// singulo will not move in.
+#define AREA_NO_SPOILERS			0x40	// makes it much more difficult to see what is inside an area with things like mesons.
+#define AREA_SOUNDPROOF				0x80	// blocks sounds from other areas and prevents hearers on other areas from hearing the sounds within.
+#define AREA_BLOCK_PHASE_SHIFT		0x100	// Stops phase shifted mobs from entering
+#define AREA_BLOCK_GHOSTS			0x200	// Stops ghosts from entering
+#define AREA_ALLOW_LARGE_SIZE		0x400	// If mob size is limited in the area.
+#define AREA_BLOCK_SUIT_SENSORS		0x800	// If suit sensors are blocked in the area.
+#define AREA_BLOCK_TRACKING			0x1000	// If camera tracking is blocked in the area.
+
+// CHOMPAdd Start/area
+#define PHASE_SHIELDED				0x200000 // A less rough way to prevent phase shifting without blocking access
+#define AREA_LIMIT_DARK_RESPITE		0x400000// Shadekin will die normally in those areas
+// CHOMPAdd End
 
 // OnTopic return values
 #define TOPIC_NOACTION 0
@@ -310,11 +322,6 @@ GLOBAL_LIST_EMPTY(##LIST_NAME);\
 #define RAD_RESIST_CALC_DIV 0 // Each turf absorbs some fraction of the working radiation level
 #define RAD_RESIST_CALC_SUB 1 // Each turf absorbs a fixed amount of radiation
 
-//https://secure.byond.com/docs/ref/info.html#/atom/var/mouse_opacity
-#define MOUSE_OPACITY_TRANSPARENT 0
-#define MOUSE_OPACITY_ICON 1
-#define MOUSE_OPACITY_OPAQUE 2
-
 // Used by radios to indicate that they have sent a message via something other than subspace
 #define RADIO_CONNECTION_FAIL 0
 #define RADIO_CONNECTION_NON_SUBSPACE 1
@@ -415,24 +422,6 @@ GLOBAL_LIST_EMPTY(##LIST_NAME);\
 
 #define send_link(target, url) target << link(url)
 
-#define SPAN_NOTICE(X) "<span class='notice'>[X]</span>"
-
-#define SPAN_WARNING(X) "<span class='warning'>[X]</span>"
-
-#define SPAN_DANGER(X) "<span class='danger'>[X]</span>"
-
-#define SPAN_OCCULT(X) "<span class='cult'>[X]</span>"
-
-#define FONT_SMALL(X) "<font size='1'>[X]</font>"
-
-#define FONT_NORMAL(X) "<font size='2'>[X]</font>"
-
-#define FONT_LARGE(X) "<font size='3'>[X]</font>"
-
-#define FONT_HUGE(X) "<font size='4'>[X]</font>"
-
-#define FONT_GIANT(X) "<font size='5'>[X]</font>"
-
 // Volume Channel Defines
 
 #define VOLUME_CHANNEL_MASTER "Master"
@@ -509,3 +498,7 @@ GLOBAL_LIST_INIT(all_volume_channels, list(
 #define SPECIES_SORT_WHITELISTED 2
 #define SPECIES_SORT_RESTRICTED 3
 #define SPECIES_SORT_CUSTOM 4
+
+// Vote Types
+#define VOTE_RESULT_TYPE_MAJORITY	"Majority"
+#define VOTE_RESULT_TYPE_SKEWED		"Seventy"

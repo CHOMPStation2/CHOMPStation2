@@ -71,7 +71,7 @@
 		"rad" = 100
 		)
 
-	loot_list = list(/obj/item/weapon/ore/diamond = 100, /obj/item/weapon/ectoplasm = 3)
+	loot_list = list(/obj/item/ore/diamond = 100, /obj/item/ectoplasm = 3)
 
 	speak_emote = list("rumbles")
 
@@ -99,7 +99,8 @@
 
 /mob/living/simple_mob/vore/alienanimals/space_ghost/apply_melee_effects(var/atom/A)
 	var/mob/living/L = A
-	L.hallucination += 50
+	if(L.hallucination <= 100)
+		L.hallucination += rand(1,10)
 
 /mob/living/simple_mob/vore/alienanimals/space_ghost/shoot(atom/A) //We're shooting ghosts at people and need them to have the same faction as their parent, okay?
 	if(!projectiletype)
@@ -211,7 +212,8 @@
 /mob/living/simple_mob/vore/alienanimals/spooky_ghost/apply_melee_effects(var/atom/A)
 	var/mob/living/L = A
 	if(L && istype(L))
-		L.hallucination += rand(1,50)
+		if(L.hallucination <= 100)
+			L.hallucination += rand(1,10)
 
 /mob/living/simple_mob/vore/alienanimals/spooky_ghost/Life()
 	. = ..()

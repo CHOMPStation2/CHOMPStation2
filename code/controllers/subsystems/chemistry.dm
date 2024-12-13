@@ -20,16 +20,14 @@ SUBSYSTEM_DEF(chemistry)
 	initialize_chemical_reactions()
 	return SS_INIT_SUCCESS // CHOMPEdit
 
-//CHOMPEdit Begin
 /datum/controller/subsystem/chemistry/stat_entry(msg)
 	msg = "C: [chemical_reagents.len] | R: [chemical_reactions.len]"
 	return ..()
-//CHOMPEdit End
 
 //Chemical Reactions - Initialises all /decl/chemical_reaction into a list
 // It is filtered into multiple lists within a list.
 // For example:
-// chemical_reactions_by_reagent["phoron"] is a list of all reactions relating to phoron
+// chemical_reactions_by_reagent[REAGENT_ID_PHORON] is a list of all reactions relating to phoron
 // Note that entries in the list are NOT duplicated. So if a reaction pertains to
 // more than one chemical it will still only appear in only one of the sublists.
 /datum/controller/subsystem/chemistry/proc/initialize_chemical_reactions()

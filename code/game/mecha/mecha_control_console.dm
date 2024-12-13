@@ -5,7 +5,7 @@
 	icon_screen = "mecha"
 	light_color = "#a97faa"
 	req_access = list(access_robotics)
-	circuit = /obj/item/weapon/circuitboard/mecha_control
+	circuit = /obj/item/circuitboard/mecha_control
 	var/list/located = list()
 	var/screen = 0
 	var/list/stored_data
@@ -26,15 +26,15 @@
 
 /obj/machinery/computer/mecha/tgui_data(mob/user, datum/tgui/ui, datum/tgui_state/state)
 	var/list/data = ..()
-	
-	
+
+
 	var/list/beacons = list()
 	for(var/obj/item/mecha_parts/mecha_tracking/TR in world)
 		var/list/tr_data = TR.tgui_data(user)
 		if(tr_data)
 			beacons.Add(list(tr_data))
 	data["beacons"] = beacons
-	
+
 	LAZYINITLIST(stored_data)
 	data["stored_data"] = stored_data
 
@@ -43,12 +43,12 @@
 /obj/machinery/computer/mecha/tgui_act(action, list/params, datum/tgui/ui, datum/tgui_state/state)
 	if(..())
 		return TRUE
-	
+
 	switch(action)
 		if("send_message")
 			var/obj/item/mecha_parts/mecha_tracking/MT = locate(params["mt"])
 			if(istype(MT))
-				var/message = sanitize(tgui_input_text(usr, "Input message", "Transmit message"))
+				var/message = sanitize(tgui_input_text(ui.user, "Input message", "Transmit message"))
 				var/obj/mecha/M = MT.in_mecha()
 				if(message && M)
 					M.occupant_message(message)
@@ -65,7 +65,7 @@
 			if(istype(MT))
 				stored_data = MT.get_mecha_log()
 			return TRUE
-		
+
 		if("clear_log")
 			stored_data = null
 			return TRUE
@@ -129,6 +129,6 @@
 	return M.get_log_tgui()
 
 
-/obj/item/weapon/storage/box/mechabeacons
+/obj/item/storage/box/mechabeacons
 	name = "Exosuit Tracking Beacons"
 	starts_with = list(/obj/item/mecha_parts/mecha_tracking = 7)

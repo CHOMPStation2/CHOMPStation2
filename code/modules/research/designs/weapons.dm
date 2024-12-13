@@ -23,7 +23,7 @@
 	id = "stunrevolver"
 	req_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 3, TECH_POWER = 2)
 	materials = list(MAT_STEEL = 4000)
-	build_path = /obj/item/weapon/gun/energy/stunrevolver
+	build_path = /obj/item/gun/energy/stunrevolver
 	sort_string = "MAAAA"
 	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd
 
@@ -31,7 +31,7 @@
 	id = "nuclear_gun"
 	req_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 5, TECH_POWER = 3)
 	materials = list(MAT_STEEL = 5000, MAT_GLASS = 1000, MAT_URANIUM = 500)
-	build_path = /obj/item/weapon/gun/energy/gun/nuclear
+	build_path = /obj/item/gun/energy/gun/nuclear
 	sort_string = "MAAAB"
 	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd
 
@@ -39,7 +39,7 @@
 	id = "ppistol"
 	req_tech = list(TECH_COMBAT = 5, TECH_PHORON = 4)
 	materials = list(MAT_STEEL = 5000, MAT_GLASS = 1000, MAT_PHORON = 3000)
-	build_path = /obj/item/weapon/gun/energy/toxgun
+	build_path = /obj/item/gun/energy/toxgun
 	sort_string = "MAAAC"
 	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd
 
@@ -48,7 +48,7 @@
 	id = "lasercannon"
 	req_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 3, TECH_POWER = 3)
 	materials = list(MAT_STEEL = 10000, MAT_GLASS = 1000, MAT_DIAMOND = 2000)
-	build_path = /obj/item/weapon/gun/energy/lasercannon
+	build_path = /obj/item/gun/energy/lasercannon
 	sort_string = "MAAAD"
 	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd
 
@@ -56,7 +56,7 @@
 	id = "decloner"
 	req_tech = list(TECH_COMBAT = 8, TECH_MATERIAL = 7, TECH_BIO = 5, TECH_POWER = 6)
 	materials = list(MAT_GOLD = 5000,MAT_URANIUM = 10000)
-	build_path = /obj/item/weapon/gun/energy/decloner
+	build_path = /obj/item/gun/energy/decloner
 	sort_string = "MAAAE"
 	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd
 
@@ -65,7 +65,7 @@
 	id = "temp_gun"
 	req_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 4, TECH_POWER = 3, TECH_MAGNET = 2)
 	materials = list(MAT_STEEL = 5000, MAT_GLASS = 500, MAT_SILVER = 3000)
-	build_path = /obj/item/weapon/gun/energy/temperature
+	build_path = /obj/item/gun/energy/temperature
 	sort_string = "MAAAF"
 	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd
 
@@ -73,7 +73,7 @@
 	id = "flora_gun"
 	req_tech = list(TECH_MATERIAL = 2, TECH_BIO = 3, TECH_POWER = 3)
 	materials = list(MAT_STEEL = 2000, MAT_GLASS = 500, MAT_URANIUM = 500)
-	build_path = /obj/item/weapon/gun/energy/floragun
+	build_path = /obj/item/gun/energy/floragun
 	sort_string = "MAAAG"
 	department = LATHE_ALL | LATHE_SCIENCE // CHOMPAdd
 
@@ -81,7 +81,7 @@
 	id = "vinstunrevolver"
 	req_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 3, TECH_POWER = 2)
 	materials = list(MAT_STEEL = 4000)
-	build_path = /obj/item/weapon/gun/energy/stunrevolver/vintage
+	build_path = /obj/item/gun/energy/stunrevolver/vintage
 	sort_string = "MAAAH"
 	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd
 
@@ -96,7 +96,7 @@
 	desc = "An advanced 9mm SMG with a reflective laser optic."
 	req_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 3)
 	materials = list(MAT_STEEL = 8000, MAT_SILVER = 2000, MAT_DIAMOND = 1000)
-	build_path = /obj/item/weapon/gun/projectile/automatic/advanced_smg
+	build_path = /obj/item/gun/projectile/automatic/advanced_smg
 	sort_string = "MABAA"
 	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd
 
@@ -147,28 +147,28 @@
 	id = "phasepistol"
 	req_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 2, TECH_POWER = 2)
 	materials = list(MAT_STEEL = 4000)
-	build_path = /obj/item/weapon/gun/energy/phasegun/pistol
+	build_path = /obj/item/gun/energy/phasegun/pistol
 	sort_string = "MACAA"
 
 /datum/design/item/weapon/phase/phase_carbine
 	id = "phasecarbine"
 	req_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 2, TECH_POWER = 2)
 	materials = list(MAT_STEEL = 6000, MAT_GLASS = 1500)
-	build_path = /obj/item/weapon/gun/energy/phasegun
+	build_path = /obj/item/gun/energy/phasegun
 	sort_string = "MACAB"
 
 /datum/design/item/weapon/phase/phase_rifle
 	id = "phaserifle"
 	req_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 3, TECH_POWER = 3)
 	materials = list(MAT_STEEL = 7000, MAT_GLASS = 2000, MAT_SILVER = 500)
-	build_path = /obj/item/weapon/gun/energy/phasegun/rifle
+	build_path = /obj/item/gun/energy/phasegun/rifle
 	sort_string = "MACAC"
 
 /datum/design/item/weapon/phase/phase_cannon
 	id = "phasecannon"
 	req_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 4, TECH_POWER = 4)
 	materials = list(MAT_STEEL = 10000, MAT_GLASS = 2000, MAT_SILVER = 1000, MAT_DIAMOND = 750)
-	build_path = /obj/item/weapon/gun/energy/phasegun/cannon
+	build_path = /obj/item/gun/energy/phasegun/cannon
 	sort_string = "MACAD"
 */ //VOREStation Removal End
 
@@ -178,7 +178,7 @@
 	id = "rapidsyringe"
 	req_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 3, TECH_ENGINEERING = 3, TECH_BIO = 2)
 	materials = list(MAT_STEEL = 5000, MAT_GLASS = 1000)
-	build_path = /obj/item/weapon/gun/launcher/syringe/rapid
+	build_path = /obj/item/gun/launcher/syringe/rapid
 	sort_string = "MADAA"
 	department = LATHE_ALL | LATHE_MEDICAL // CHOMPAdd
 
@@ -187,7 +187,7 @@
 	id = "dartgun_r"
 	req_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 4, TECH_BIO = 4, TECH_MAGNET = 3, TECH_ILLEGAL = 1)
 	materials = list(MAT_STEEL = 5000, MAT_GOLD = 5000, MAT_SILVER = 2500, MAT_GLASS = 750)
-	build_path = /obj/item/weapon/gun/projectile/dartgun/research
+	build_path = /obj/item/gun/projectile/dartgun/research
 	sort_string = "MADAB"
 	department = LATHE_ALL | LATHE_MEDICAL // CHOMPAdd
 
@@ -196,7 +196,7 @@
 	id = "chemsprayer"
 	req_tech = list(TECH_MATERIAL = 3, TECH_ENGINEERING = 3, TECH_BIO = 2)
 	materials = list(MAT_STEEL = 5000, MAT_GLASS = 1000)
-	build_path = /obj/item/weapon/reagent_containers/spray/chemsprayer
+	build_path = /obj/item/reagent_containers/spray/chemsprayer
 	sort_string = "MADAC"
 	department = LATHE_ALL | LATHE_MEDICAL // CHOMPAdd
 
@@ -204,7 +204,7 @@
 	id = "fuelrod_gun"
 	req_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 4, TECH_PHORON = 4, TECH_ILLEGAL = 5, TECH_MAGNET = 5)
 	materials = list(MAT_STEEL = 10000, MAT_GLASS = 2000, MAT_GOLD = 500, MAT_SILVER = 500, MAT_URANIUM = 1000, MAT_PHORON = 3000, MAT_DIAMOND = 1000)
-	build_path = /obj/item/weapon/gun/magnetic/fuelrod
+	build_path = /obj/item/gun/magnetic/fuelrod
 	sort_string = "MADAD"
 	department = LATHE_ALL | LATHE_SCIENCE // CHOMPAdd
 
@@ -246,7 +246,7 @@
 	id = "magnetic_ammo"
 	req_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 4, TECH_MAGNET = 4)
 	materials = list(MAT_STEEL = 500, MAT_GOLD = 300, MAT_GLASS = 150, MAT_PHORON = 100)
-	build_path = /obj/item/weapon/magnetic_ammo
+	build_path = /obj/item/magnetic_ammo
 	sort_string = "MADBE"
 	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd
 
@@ -261,7 +261,7 @@
 	id = "chargesword"
 	req_tech = list(TECH_COMBAT = 6, TECH_MAGNET = 4, TECH_ENGINEERING = 5, TECH_ILLEGAL = 4, TECH_ARCANE = 1)
 	materials = list(MAT_PLASTEEL = 3500, MAT_GLASS = 1000, MAT_LEAD = 2250, MAT_METALHYDROGEN = 500)
-	build_path = /obj/item/weapon/melee/energy/sword/charge
+	build_path = /obj/item/melee/energy/sword/charge
 	sort_string = "MBAAA"
 	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd
 
@@ -270,7 +270,7 @@
 	id = "chargeaxe"
 	req_tech = list(TECH_COMBAT = 6, TECH_MAGNET = 5, TECH_ENGINEERING = 4, TECH_ILLEGAL = 4)
 	materials = list(MAT_PLASTEEL = 3500, MAT_OSMIUM = 2000, MAT_LEAD = 2000, MAT_METALHYDROGEN = 500)
-	build_path = /obj/item/weapon/melee/energy/axe/charge
+	build_path = /obj/item/melee/energy/axe/charge
 	sort_string = "MBAAB"
 	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd
 
@@ -283,6 +283,6 @@
 	id = "large_Grenade"
 	req_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 2)
 	materials = list(MAT_STEEL = 3000)
-	build_path = /obj/item/weapon/grenade/chem_grenade/large
+	build_path = /obj/item/grenade/chem_grenade/large
 	sort_string = "MCAAA"
 	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd

@@ -1,6 +1,6 @@
 /client/proc/recipe_dump()
 	set name = "Generate Recipe Dump"
-	set category = "Server.Admin" //CHOMPEdit
+	set category = "Server.Admin"
 	set desc = "Dumps food and drink recipe info and images for wiki or other use."
 
 	if(!holder)
@@ -57,7 +57,7 @@
 		food_recipes[Rp]["has_coatable_items"] = FALSE
 		for(var/I in food_recipes[Rp]["Ingredients"])
 			var/atom/ing = new I()
-			if(istype(ing, /obj/item/weapon/reagent_containers/food/snacks)) // only subtypes of this have a coating variable and are checked for it (fruit are a subtype of this, so there's a check for them too later)
+			if(istype(ing, /obj/item/reagent_containers/food/snacks)) // only subtypes of this have a coating variable and are checked for it (fruit are a subtype of this, so there's a check for them too later)
 				food_recipes[Rp]["has_coatable_items"] = TRUE
 
 			//So now we add something like "Bread" = 3
@@ -295,4 +295,4 @@
 	html += "</table></body></html>"
 	src << browse(html, "window=recipes;file=recipes_drinks.html;display=0")
 
-	to_chat(src, "<span class='notice'>In your byond cache, recipe-xxx.png files and recipes_drinks.html and recipes_food.html now exist. Place recipe-xxx.png files in a subfolder named 'imgrecipes' wherever you put them. The file will take a food.css or drinks.css file if in the same path.</span>")
+	to_chat(src, span_notice("In your byond cache, recipe-xxx.png files and recipes_drinks.html and recipes_food.html now exist. Place recipe-xxx.png files in a subfolder named 'imgrecipes' wherever you put them. The file will take a food.css or drinks.css file if in the same path."))

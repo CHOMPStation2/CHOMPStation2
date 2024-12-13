@@ -33,7 +33,7 @@
 
 /obj/structure/alien/hitby(AM as mob|obj)
 	..()
-	visible_message("<span class='danger'>\The [src] was hit by \the [AM].</span>")
+	visible_message(span_danger("\The [src] was hit by \the [AM]."))
 	var/tforce = 0
 	if(ismob(AM))
 		tforce = 10
@@ -48,7 +48,7 @@
 /obj/structure/alien/attack_generic()
 	attack_hand(usr)
 
-/obj/structure/alien/attackby(var/obj/item/weapon/W, var/mob/user)
+/obj/structure/alien/attackby(var/obj/item/W, var/mob/user)
 	health = max(0, health - W.force)
 	playsound(loc, 'sound/effects/attackblob.ogg', 100, 1)
 	healthcheck()

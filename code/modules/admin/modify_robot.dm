@@ -6,12 +6,14 @@
 		return
 
 	var/datum/eventkit/modify_robot/modify_robot = new()
-	modify_robot.target = target
+	modify_robot.target = isrobot(target) ? target : null
+	modify_robot.selected_ai = target.is_slaved()
 	modify_robot.tgui_interact(src.mob)
 
 /datum/eventkit/modify_robot
 	var/mob/living/silicon/robot/target
 	var/mob/living/silicon/robot/source
+	var/mob/living/silicon/ai/selected_ai
 	var/ion_law	= "IonLaw"
 	var/zeroth_law = "ZerothLaw"
 	var/inherent_law = "InherentLaw"
@@ -41,14 +43,22 @@
 		qdel(source)
 	. = ..()
 
+/datum/eventkit/modify_robot/ui_assets(mob/user)
+	return list(
+		get_asset_datum(/datum/asset/spritesheet/robot_icons)
+	)
+
 /datum/eventkit/modify_robot/tgui_data(mob/user)
 	. = list()
 	// Target section for general data
+	var/datum/asset/spritesheet/robot_icons/spritesheet = get_asset_datum(/datum/asset/spritesheet/robot_icons)
+
 	if(target)
 		.["target"] = list()
 		.["target"]["name"] = target.name
 		.["target"]["ckey"] = target.ckey
 		.["target"]["module"] = target.module
+		.["target"]["emagged"] = target.emagged
 		.["target"]["crisis_override"] = target.crisis_override
 		.["target"]["active_restrictions"] = target.restrict_modules_to
 		var/list/possible_restrictions = list()
@@ -59,10 +69,8 @@
 		// Target section for options once a module has been selected
 		if(target.module)
 			.["target"]["active"] = target.icon_selected
-			.["target"]["front"] = icon2base64(get_flat_icon(target,dir=SOUTH,no_anim=TRUE))
-			.["target"]["side"] = icon2base64(get_flat_icon(target,dir=WEST,no_anim=TRUE))
-			.["target"]["side_alt"] = icon2base64(get_flat_icon(target,dir=EAST,no_anim=TRUE))
-			.["target"]["back"] = icon2base64(get_flat_icon(target,dir=NORTH,no_anim=TRUE))
+			.["target"]["sprite"] = sanitize_css_class_name("[target.sprite_datum.type]")
+			.["target"]["sprite_size"] = spritesheet.icon_size_id(.["target"]["sprite"] + "S")
 			.["target"]["modules"] = get_target_items(user)
 			var/list/module_options = list()
 			for(var/module in robot_modules)
@@ -70,7 +78,7 @@
 			.["model_options"] = module_options
 			// Data for the upgrade options
 			.["target"] += get_upgrades()
-			var/obj/item/weapon/gun/energy/kinetic_accelerator/kin = locate() in target.module.modules
+			var/obj/item/gun/energy/kinetic_accelerator/kin = locate() in target.module.modules
 			if(kin)
 				.["target"]["pka"] += get_pka(kin)
 			// Radio section
@@ -86,6 +94,13 @@
 			.["target"]["components"] = get_components()
 			.["cell"] = list("name" = target.cell?.name, "charge" = target.cell?.charge, "maxcharge" = target.cell?.maxcharge)
 			.["cell_options"] = get_cells()
+			.["camera_options"] = get_component("camera")
+			.["radio_options"] = get_component("radio")
+			.["actuator_options"] = get_component("actuator")
+			.["diagnosis_options"] = get_component("diagnosis")
+			.["comms_options"] = get_component("comms")
+			.["armour_options"] = get_component("armour")
+			.["current_gear"] = get_gear()
 			// Access
 			.["id_icon"] = icon2html(target.idcard, user, sourceonly=TRUE)
 			var/list/active_access = list()
@@ -100,7 +115,7 @@
 			.["access_options"] = access_options
 			// Section for source data for the module we might want to salvage
 			if(source)
-				.["source"] += get_module_source(user)
+				.["source"] += get_module_source(user, spritesheet)
 	var/list/all_robots = list()
 	for(var/mob/living/silicon/robot/R in silicon_mob_list)
 		if(!R.loc)
@@ -121,6 +136,15 @@
 	package_laws(., "supplied_laws", target.laws.supplied_laws)
 
 	.["isAI"] = isAI(target)
+	.["isMalf"] = is_malf(user)
+	.["isSlaved"] = target.is_slaved()
+	var/list/active_ais = list()
+	for(var/mob/living/silicon/ai/ai in active_ais())
+		if(!ai.loc)
+			continue
+		active_ais += list(list("displayText" = "[ai]", "value" = "\ref[ai]"))
+	.["active_ais"] = active_ais
+	.["selected_ai"] = selected_ai ? selected_ai.name : null
 
 	var/list/channels = list()
 	for(var/ch_name in target.law_channels())
@@ -133,7 +157,7 @@
 /datum/eventkit/modify_robot/tgui_state(mob/user)
 	return GLOB.tgui_admin_state
 
-/datum/eventkit/modify_robot/tgui_act(action, params)
+/datum/eventkit/modify_robot/tgui_act(action, params, datum/tgui/ui)
 	. = ..()
 	if(.)
 		return
@@ -144,14 +168,16 @@
 			target.real_name = params["new_name"]
 			return TRUE
 		if("select_target")
-			target = locate(params["new_target"])
-			log_and_message_admins("changed robot modifictation target to [target]")
+			var/new_target = locate(params["new_target"])
+			if(new_target != target)
+				target = locate(params["new_target"])
+				log_and_message_admins("changed robot modifictation target to [target]")
 			return TRUE
 		if("toggle_crisis")
 			target.crisis_override = !target.crisis_override
 			return TRUE
 		if("add_restriction")
-			target.restrict_modules_to += params["new_restriction"]
+			target.restrict_modules_to |= params["new_restriction"]
 			return TRUE
 		if("remove_restriction")
 			target.restrict_modules_to -= params["rem_restriction"]
@@ -159,14 +185,17 @@
 		if("select_source")
 			if(source)
 				qdel(source)
-			source = new /mob/living/silicon/robot(null)
 			var/module_type = robot_modules[params["new_source"]]
+			if(ispath(module_type, /obj/item/robot_module/robot/syndicate))
+				source = new /mob/living/silicon/robot/syndicate(null)
+			else
+				source = new /mob/living/silicon/robot(null)
 			source.modtype = params["new_source"]
-			var/obj/item/weapon/robot_module/robot/robot_type = new module_type(source)
+			var/obj/item/robot_module/robot/robot_type = new module_type(source)
 			source.sprite_datum = pick(SSrobot_sprites.get_module_sprites(source.modtype, source))
 			source.update_icon()
 			source.emag_items = 1
-			if(!istype(robot_type, /obj/item/weapon/robot_module/robot))
+			if(!istype(robot_type, /obj/item/robot_module/robot))
 				QDEL_NULL(source)
 				return TRUE
 			return TRUE
@@ -177,14 +206,20 @@
 			var/obj/item/add_item = locate(params["module"])
 			if(!add_item)
 				return TRUE
+			if(istype(add_item, /obj/item/card/id))
+				source.idcard = null
 			source.module.emag.Remove(add_item)
 			source.module.modules.Remove(add_item)
 			source.module.contents.Remove(add_item)
+			if(istype(add_item, /obj/item/card/id))
+				if(target.idcard)
+					qdel(target.idcard)
+				target.idcard = add_item
 			target.module.modules.Add(add_item)
 			target.module.contents.Add(add_item)
 			spawn(0)
 				SEND_SIGNAL(add_item, COMSIG_OBSERVER_MOVED)
-			target.hud_used.update_robot_modules_display()
+			target.hud_used?.update_robot_modules_display()
 			if(istype(add_item, /obj/item/stack/))
 				var/obj/item/stack/item_with_synth = add_item
 				for(var/synth in item_with_synth.synths)
@@ -195,8 +230,8 @@
 					else
 						item_with_synth.synths = list(target.module.synths[found])
 				return TRUE
-			if(istype(add_item, /obj/item/weapon/matter_decompiler/) || istype(add_item, /obj/item/device/dogborg/sleeper/compactor/decompiler/))
-				var/obj/item/weapon/matter_decompiler/item_with_matter = add_item
+			if(istype(add_item, /obj/item/matter_decompiler/) || istype(add_item, /obj/item/dogborg/sleeper/compactor/decompiler/))
+				var/obj/item/matter_decompiler/item_with_matter = add_item
 				if(item_with_matter.metal)
 					var/found = target.module.synths.Find(item_with_matter.metal)
 					if(!found)
@@ -228,8 +263,10 @@
 			return TRUE
 		if("rem_module")
 			var/obj/item/rem_item = locate(params["module"])
+			if(target.idcard == rem_item)
+				target.idcard = new /obj/item/card/id/synthetic(target)
 			target.uneq_all()
-			target.hud_used.update_robot_modules_display(TRUE)
+			target.hud_used?.update_robot_modules_display(TRUE)
 			target.module.emag.Remove(rem_item)
 			target.module.modules.Remove(rem_item)
 			target.module.contents.Remove(rem_item)
@@ -248,14 +285,14 @@
 			source.emag_items = 1
 			// Target
 			target.uneq_all()
-			target.hud_used.update_robot_modules_display(TRUE)
+			target.hud_used?.update_robot_modules_display(TRUE)
 			qdel(target.module)
 			target.modtype = mod_type
 			module_type = robot_modules[mod_type]
 			target.transform_with_anim()
 			new module_type(target)
 			target.hands.icon_state = target.get_hud_module_icon()
-			target.hud_used.update_robot_modules_display()
+			target.hud_used?.update_robot_modules_display()
 			return TRUE
 		if("ert_toggle")
 			target.crisis_override = !target.crisis_override
@@ -271,12 +308,12 @@
 			var/new_upgrade = text2path(params["upgrade"])
 			if(new_upgrade == /obj/item/borg/upgrade/utility/reset)
 				var/obj/item/borg/upgrade/utility/reset/rmodul = new_upgrade
-				if(tgui_alert(usr, "Are you sure that you want to install [initial(rmodul.name)] and reset the robot's module?","Confirm",list("Yes","No"))!="Yes")
+				if(tgui_alert(ui.user, "Are you sure that you want to install [initial(rmodul.name)] and reset the robot's module?","Confirm",list("Yes","No"))!="Yes")
 					return FALSE
 			var/obj/item/borg/upgrade/U = new new_upgrade(null)
 			if(new_upgrade == /obj/item/borg/upgrade/utility/rename)
 				var/obj/item/borg/upgrade/utility/rename/UN = U
-				var/new_name = sanitizeSafe(tgui_input_text(usr, "Enter new robot name", "Robot Reclassification", UN.heldname, MAX_NAME_LEN), MAX_NAME_LEN)
+				var/new_name = sanitizeSafe(tgui_input_text(ui.user, "Enter new robot name", "Robot Reclassification", UN.heldname, MAX_NAME_LEN), MAX_NAME_LEN)
 				if(new_name)
 					UN.heldname = new_name
 				U = UN
@@ -285,16 +322,16 @@
 			if(!U.action(target))
 				return FALSE
 			U.loc = target
-			target.hud_used.update_robot_modules_display()
+			target.hud_used?.update_robot_modules_display()
 			return TRUE
 		if("install_modkit")
 			var/new_modkit = text2path(params["modkit"])
-			var/obj/item/weapon/gun/energy/kinetic_accelerator/kin = locate() in target.module.modules
+			var/obj/item/gun/energy/kinetic_accelerator/kin = locate() in target.module.modules
 			var/obj/item/borg/upgrade/modkit/M = new new_modkit(null)
 			M.install(kin, target)
 			return TRUE
 		if("remove_modkit")
-			var/obj/item/weapon/gun/energy/kinetic_accelerator/kin = locate() in target.module.modules
+			var/obj/item/gun/energy/kinetic_accelerator/kin = locate() in target.module.modules
 			var/obj/item/rem_kit = locate(params["modkit"])
 			kin.modkits.Remove(rem_kit)
 			qdel(rem_kit)
@@ -305,11 +342,11 @@
 				target.radio.centComm = 1
 			if(selected_radio_channel == CHANNEL_RAIDER)
 				qdel(target.radio.keyslot)
-				target.radio.keyslot = new /obj/item/device/encryptionkey/raider(target)
+				target.radio.keyslot = new /obj/item/encryptionkey/raider(target)
 				target.radio.syndie = 1
 			if(selected_radio_channel == CHANNEL_MERCENARY)
 				qdel(target.radio.keyslot)
-				target.radio.keyslot = new /obj/item/device/encryptionkey/syndicate(target)
+				target.radio.keyslot = new /obj/item/encryptionkey/syndicate(target)
 				target.radio.syndie = 1
 			target.module.channels += list("[selected_radio_channel]" = 1)
 			target.radio.channels[selected_radio_channel] += target.module.channels[selected_radio_channel]
@@ -334,22 +371,34 @@
 			var/datum/robot_component/C = locate(params["component"])
 			if(C.wrapped)
 				qdel(C.wrapped)
+			var/new_component = text2path(params["new_part"])
 			if(istype(C, /datum/robot_component/actuator))
-				C.wrapped = new /obj/item/robot_parts/robot_component/actuator(target)
+				if(!new_component)
+					new_component = /obj/item/robot_parts/robot_component/actuator
+				C.wrapped = new new_component(target)
 			else if(istype(C, /datum/robot_component/radio))
-				C.wrapped = new /obj/item/robot_parts/robot_component/radio(target)
+				if(!new_component)
+					new_component = /obj/item/robot_parts/robot_component/radio
+				C.wrapped = new new_component(target)
 			else if(istype(C, /datum/robot_component/cell))
-				var/new_cell = text2path(params["cell"])
-				target.cell = new new_cell(target)
+				target.cell = new new_component(target)
 				C.wrapped = target.cell
 			else if(istype(C, /datum/robot_component/diagnosis_unit))
-				C.wrapped = new /obj/item/robot_parts/robot_component/diagnosis_unit(target)
+				if(!new_component)
+					new_component = /obj/item/robot_parts/robot_component/diagnosis_unit
+				C.wrapped = new new_component(target)
 			else if(istype(C, /datum/robot_component/camera))
-				C.wrapped = new /obj/item/robot_parts/robot_component/camera(target)
+				if(!new_component)
+					new_component = /obj/item/robot_parts/robot_component/camera
+				C.wrapped = new new_component(target)
 			else if(istype(C, /datum/robot_component/binary_communication))
-				C.wrapped = new /obj/item/robot_parts/robot_component/binary_communication_device(target)
+				if(!new_component)
+					new_component = /obj/item/robot_parts/robot_component/binary_communication_device
+				C.wrapped = new new_component(target)
 			else if(istype(C, /datum/robot_component/armour))
-				C.wrapped = new /obj/item/robot_parts/robot_component/armour(target)
+				if(!new_component)
+					new_component = /obj/item/robot_parts/robot_component/armour
+				C.wrapped = new new_component(target)
 			C.brute_damage = 0
 			C.electronics_damage = 0
 			C.install()
@@ -454,7 +503,7 @@
 				target.lawsync()
 			return TRUE
 		if("change_supplied_law_position")
-			var/new_position = tgui_input_number(usr, "Enter new supplied law position between 1 and [MAX_SUPPLIED_LAW_NUMBER], inclusive. Inherent laws at the same index as a supplied law will not be stated.", "Law Position", supplied_law_position, MAX_SUPPLIED_LAW_NUMBER, 1)
+			var/new_position = tgui_input_number(ui.user, "Enter new supplied law position between 1 and [MAX_SUPPLIED_LAW_NUMBER], inclusive. Inherent laws at the same index as a supplied law will not be stated.", "Law Position", supplied_law_position, MAX_SUPPLIED_LAW_NUMBER, 1)
 			if(isnum(new_position))
 				supplied_law_position = CLAMP(new_position, 1, MAX_SUPPLIED_LAW_NUMBER)
 				target.lawsync()
@@ -462,7 +511,7 @@
 		if("edit_law")
 			var/datum/ai_law/AL = locate(params["edit_law"]) in target.laws.all_laws()
 			if(AL)
-				var/new_law = sanitize(tgui_input_text(usr, "Enter new law. Leaving the field blank will cancel the edit.", "Edit Law", AL.law))
+				var/new_law = sanitize(tgui_input_text(ui.user, "Enter new law. Leaving the field blank will cancel the edit.", "Edit Law", AL.law))
 				if(new_law && new_law != AL.law)
 					AL.law = new_law
 					target.lawsync()
@@ -488,15 +537,50 @@
 				target.lawsync()
 			return TRUE
 		if("notify_laws")
-			to_chat(target, "<span class='danger'>Law Notice</span>")
+			to_chat(target, span_danger("Law Notice"))
 			target.laws.show_laws(target)
 			if(isAI(target))
 				var/mob/living/silicon/ai/AI = target
 				for(var/mob/living/silicon/robot/R in AI.connected_robots)
-					to_chat(R, "<span class='danger'>Law Notice</span>")
+					to_chat(R, span_danger("Law Notice"))
 					R.laws.show_laws(R)
-			if(usr != target)
-				to_chat(usr, "<span class='notice'>Laws displayed.</span>")
+			if(ui.user != target)
+				to_chat(ui.user, span_notice("Laws displayed."))
+			return TRUE
+		if("select_ai")
+			selected_ai = locate(params["new_ai"])
+			return TRUE
+		if("swap_sync")
+			var/new_ai = selected_ai ? selected_ai : select_active_ai_with_fewest_borgs()
+			if(new_ai)
+				target.lawupdate = 1
+				target.connect_to_ai(new_ai)
+			return TRUE
+		if("disconnect_ai")
+			if(target.is_slaved())
+				target.disconnect_from_ai()
+				target.lawupdate = 0
+			return TRUE
+		if("toggle_emag")
+			if(target.emagged)
+				target.emagged = 0
+				target.clear_supplied_laws()
+				target.clear_inherent_laws()
+				target.laws = new global.using_map.default_law_type
+				target.laws.show_laws(target)
+				target.hud_used?.update_robot_modules_display()
+			else
+				target.emagged = 1
+				target.lawupdate = 0
+				target.disconnect_from_ai()
+				target.clear_supplied_laws()
+				target.clear_inherent_laws()
+				target.laws = new /datum/ai_laws/syndicate_override
+				if(target.bolt)
+					if(!target.bolt.malfunction)
+						target.bolt.malfunction = MALFUNCTION_PERMANENT
+				target.laws.show_laws(target)
+				target.hud_used?.update_robot_modules_display()
 			return TRUE
 
 /datum/eventkit/modify_robot/proc/get_target_items(var/mob/user)
@@ -505,10 +589,11 @@
 		target_items += list(list("name" = item.name, "ref" = "\ref[item]", "icon" = icon2html(item, user, sourceonly=TRUE), "desc" = item.desc))
 	return target_items
 
-/datum/eventkit/modify_robot/proc/get_module_source(var/mob/user)
+/datum/eventkit/modify_robot/proc/get_module_source(var/mob/user, var/datum/asset/spritesheet/robot_icons/spritesheet)
 	var/list/source_list = list()
 	source_list["model"] = source.module
-	source_list["front"] = icon2base64(get_flat_icon(source,dir=SOUTH,no_anim=TRUE))
+	source_list["sprite"] = sanitize_css_class_name("[source.sprite_datum.type]")
+	source_list["sprite_size"] = spritesheet.icon_size_id(source_list["sprite"] + "S")
 	var/list/source_items = list()
 	for(var/obj/item in (source.module.modules | source.module.emag))
 		var/exists
@@ -574,7 +659,7 @@
 	all_upgrades["restricted_upgrades"] = restricted_upgrades
 	return all_upgrades
 
-/datum/eventkit/modify_robot/proc/get_pka(var/obj/item/weapon/gun/energy/kinetic_accelerator/kin)
+/datum/eventkit/modify_robot/proc/get_pka(var/obj/item/gun/energy/kinetic_accelerator/kin)
 	var/list/pka = list()
 	pka["name"] = kin.name
 	var/list/installed_modkits = list()
@@ -611,26 +696,71 @@
 
 /datum/eventkit/modify_robot/proc/get_cells()
 	var/list/cell_options = list()
-	for(var/cell in typesof(/obj/item/weapon/cell))
-		var/obj/item/weapon/cell/C = cell
+	for(var/cell in typesof(/obj/item/cell))
+		var/obj/item/cell/C = cell
 		if(initial(C.name) == "power cell")
 			continue
-		if(ispath(C, /obj/item/weapon/cell/standin))
+		if(ispath(C, /obj/item/cell/standin))
 			continue
-		if(ispath(C, /obj/item/weapon/cell/device))
+		if(ispath(C, /obj/item/cell/device))
 			continue
-		if(ispath(C, /obj/item/weapon/cell/mech))
+		if(ispath(C, /obj/item/cell/mech))
 			continue
 		if(cell_options[initial(C.name)]) // empty cells are defined after normal cells!
 			continue
-		cell_options += list(initial(C.name) = list("path" = "[C]", "charge" = initial(C.maxcharge), "max_charge" = initial(C.maxcharge), "charge_amount" = initial(C.charge_amount) , "self_charge" = initial(C.self_recharge))) // our cells do not have their charge predefined, they do it on init, so both maaxcharge for now
+		cell_options += list(initial(C.name) = list("path" = "[C]", "charge" = initial(C.maxcharge), "max_charge" = initial(C.maxcharge), "charge_amount" = initial(C.charge_amount) , "self_charge" = initial(C.self_recharge), "max_damage" = initial(C.robot_durability))) // our cells do not have their charge predefined, they do it on init, so both maaxcharge for now
 	return cell_options
+
+/datum/eventkit/modify_robot/proc/get_component(var/type)
+	var/path
+	switch(type)
+		if("camera")
+			path = /obj/item/robot_parts/robot_component/camera
+		if("radio")
+			path = /obj/item/robot_parts/robot_component/radio
+		if("actuator")
+			path = /obj/item/robot_parts/robot_component/actuator
+		if("diagnosis")
+			path = /obj/item/robot_parts/robot_component/diagnosis_unit
+		if("comms")
+			path = /obj/item/robot_parts/robot_component/binary_communication_device
+		if("armour")
+			path = /obj/item/robot_parts/robot_component/armour
+	if(!path)
+		return
+	var/list/components = list()
+	for(var/component in typesof(path))
+		var/obj/item/robot_parts/robot_component/C = component
+		components += list("[initial(C.name)]" = list("path" = "[component]", "idle_usage" = "[C.idle_usage]", "active_usage" = "[C.active_usage]", "max_damage" = "[C.max_damage]"))
+	return components
+
+/datum/eventkit/modify_robot/proc/get_gear()
+	var/list/equip = list()
+	for (var/V in target.components)
+		var/datum/robot_component/C = target.components[V]
+		var/component_name
+		if(istype(C.wrapped, /obj/item/robot_parts/robot_component))
+			component_name = C.wrapped?.name
+		switch(V)
+			if("actuator")
+				equip += list("[lowertext(C.name)]" = "[component_name]")
+			if("radio")
+				equip += list("[lowertext(C.name)]" = "[component_name]")
+			if("diagnosis unit")
+				equip += list("[lowertext(C.name)]" = "[component_name]")
+			if("camera")
+				equip += list("[lowertext(C.name)]" = "[component_name]")
+			if("comms")
+				equip += list("[lowertext(C.name)]" = "[component_name]")
+			if("armour")
+				equip += list("[lowertext(C.name)]" = "[component_name]")
+	return equip
 
 /datum/eventkit/modify_robot/proc/get_components()
 	var/list/components = list()
 	for(var/entry in target.components)
 		var/datum/robot_component/C = target.components[entry]
-		components += list(list("name" = C.name, "ref" = "\ref[C]", "brute_damage" = C.brute_damage, "electronics_damage" = C.electronics_damage, "max_damage" = C.max_damage, "installed" = C.installed, "exists" = (C.wrapped ? TRUE : FALSE)))
+		components += list(list("name" = C.name, "ref" = "\ref[C]", "brute_damage" = C.brute_damage, "electronics_damage" = C.electronics_damage, "max_damage" = C.max_damage, "idle_usage" = C.idle_usage, "active_usage" = C.active_usage, "installed" = C.installed, "exists" = (C.wrapped ? TRUE : FALSE)))
 	return components
 
 /datum/eventkit/modify_robot/proc/package_laws(var/list/data, var/field, var/list/datum/ai_law/laws)
@@ -650,3 +780,9 @@
 		package_laws(packaged_laws, "supplied_laws", ALs.supplied_laws)
 		law_sets[++law_sets.len] = list("name" = ALs.name, "header" = ALs.law_header, "ref" = "\ref[ALs]","laws" = packaged_laws)
 	return law_sets
+
+/datum/eventkit/modify_robot/proc/is_malf(var/mob/user)
+	return (is_admin(user) && !target.is_slaved()) || is_special_role(user)
+
+/datum/eventkit/modify_robot/proc/is_special_role(var/mob/user)
+	return user.mind.special_role ? TRUE : FALSE

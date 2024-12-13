@@ -155,12 +155,12 @@
 /datum/trait/negative/breathes/phoron
 	name = "Phoron Breather"
 	desc = "You breathe phoron instead of oxygen (which is poisonous to you), much like a Vox."
-	var_changes = list("breath_type" = "phoron", "poison_type" = "oxygen", "ideal_air_type" = /datum/gas_mixture/belly_air/vox)
+	var_changes = list("breath_type" = GAS_PHORON, "poison_type" = GAS_O2, "ideal_air_type" = /datum/gas_mixture/belly_air/vox)
 
 /datum/trait/negative/breathes/nitrogen
 	name = "Nitrogen Breather"
 	desc = "You breathe nitrogen instead of oxygen (which is poisonous to you). Incidentally, phoron isn't poisonous to breathe to you."
-	var_changes = list("breath_type" = "nitrogen", "poison_type" = "oxygen", "ideal_air_type" = /datum/gas_mixture/belly_air/nitrogen_breather)
+	var_changes = list("breath_type" = GAS_N2, "poison_type" = GAS_O2, "ideal_air_type" = /datum/gas_mixture/belly_air/nitrogen_breather)
 
 /datum/trait/negative/monolingual
 	name = "Monolingual"
@@ -191,7 +191,9 @@
 
 /datum/trait/negative/bad_swimmer
 	name = "Bad Swimmer"
-	desc = "You can't swim very well, all water slows you down a lot and you drown in deep water."
+	desc = "You can't swim very well, all water slows you down a lot and you drown in deep water. You also swim up and down 25% slower."
 	cost = -1
 	custom_only = FALSE
-	var_changes = list("bad_swimmer" = 1, "water_movement" = 4)
+	var_changes = list("bad_swimmer" = 1, "water_movement" = 4, "swim_mult" = 1.25)
+	varchange_type = TRAIT_VARCHANGE_LESS_BETTER
+	excludes = list(/datum/trait/positive/good_swimmer)

@@ -1,7 +1,6 @@
 import { BooleanLike } from 'common/react';
-
-import { useBackend } from '../../../backend';
-import { Box, Button, Stack } from '../../../components';
+import { useBackend } from 'tgui/backend';
+import { Box, Button, Stack } from 'tgui/components';
 
 export const FeatureColorInput = (props: {
   action_name: string;

@@ -34,7 +34,7 @@
 					S.vars[trait] = trait_prefs[trait]
 				if(TRAIT_VAREDIT_TARGET_MOB)
 					H.vars[trait] = trait_prefs[trait]
-	add_verb(H,/mob/living/carbon/human/proc/trait_tutorial) //CHOMPEdit TGPanel
+	add_verb(H, /mob/living/carbon/human/proc/trait_tutorial)
 	return
 
 //Applying trait to preferences rather than just us.
@@ -76,11 +76,11 @@
 			return TRUE
 		if(TRAIT_PREF_TYPE_COLOR) //color
 			return "#ffffff"
-		if(TRAIT_PREF_TYPE_STRING) //CHOMPEdit - string
+		if(TRAIT_PREF_TYPE_STRING) //string
 			return ""
 	return
 
-/datum/trait/proc/apply_sanitization_to_string(var/pref, var/input) //CHOMPEdit addition
+/datum/trait/proc/apply_sanitization_to_string(var/pref, var/input)
 	if (has_preferences[pref][1] != TRAIT_PREF_TYPE_STRING || length(input) <= 0)
 		return default_value_for_pref(pref)
 	input = sanitizeSafe(input, MAX_NAME_LEN)

@@ -45,7 +45,7 @@
 		var/prompt = tgui_alert(usr, "Do you want to grant [C] access to view this VV window? (they will not be able to edit or change anysrc nor open nested vv windows unless they themselves are an admin)", "Confirm", list("Yes", "No"))
 		if (prompt != "Yes" || !usr.client)
 			return
-		message_admins("[key_name_admin(usr)] Showed [key_name_admin(C)] a <a href='?_src_=vars;[HrefToken()];datumrefresh=\ref[src]'>VV window</a>")
+		message_admins("[key_name_admin(usr)] Showed [key_name_admin(C)] a <a href='byond://?_src_=vars;[HrefToken()];datumrefresh=\ref[src]'>VV window</a>")
 		log_admin("Admin [key_name(usr)] Showed [key_name(C)] a VV window of a [src]")
 		to_chat(C, "[usr.client.holder.fakekey ? "an Administrator" : "[usr.client.key]"] has granted you access to view a View Variables window")
 		C.debug_variables(src)
@@ -86,12 +86,12 @@
 			datumname = "element"
 			_AddElement(lst)
 		log_admin("[key_name(usr)] has added [result] [datumname] to [key_name(src)].")
-		message_admins("<span class='notice'>[key_name_admin(usr)] has added [result] [datumname] to [key_name_admin(src)].</span>")
+		message_admins(span_notice("[key_name_admin(usr)] has added [result] [datumname] to [key_name_admin(src)]."))
 
 /datum/proc/vv_get_header()
 	. = list()
 	if(("name" in vars) && !isatom(src))
-		. += "<b>[vars["name"]]</b><br>"
+		. += span_bold("[vars["name"]]") + "<br>"
 
 /datum/proc/on_reagent_change(changetype)
 	return

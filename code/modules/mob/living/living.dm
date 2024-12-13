@@ -97,7 +97,7 @@
 	if(!..())
 		return 0
 
-	usr.visible_message("<span class='filter_notice'><b>[src]</b> points to [A].</span>")
+	usr.visible_message(span_filter_notice(span_bold("[src]") + " points to [A]."))
 */
 	return ..()
 
@@ -105,12 +105,12 @@
 	if(!..())
 		return FALSE
 
-	visible_message(span_info("<b>[src]</b> points at [pointing_at]."), span_info("You point at [pointing_at]."))
+	visible_message(span_info(span_bold("[src]") + " points at [pointing_at]."), span_info("You point at [pointing_at]."))
 // CHOMPEdit End
 
 /mob/living/verb/succumb()
 	set name = "Succumb to death"
-	set category = "IC.Game" //CHOMPEdit
+	set category = "IC.Game"
 	set desc = "Press this button if you are in crit and wish to die. Use this sparingly (ending a scene, no medical, etc.)"
 	var/confirm1 = tgui_alert(usr, "Pressing this button will kill you instantenously! Are you sure you wish to proceed?", "Confirm wish to succumb", list("No","Yes"))
 	var/confirm2 = "No"
@@ -129,16 +129,16 @@
 
 /mob/living/verb/toggle_afk()
 	set name = "Toggle AFK"
-	set category = "IC.Game" //CHOMPEdit
+	set category = "IC.Game"
 	set desc = "Mark yourself as Away From Keyboard, or clear that status!"
 	if(away_from_keyboard)
 		remove_status_indicator("afk")
-		to_chat(src, "<span class='notice'>You are no longer marked as AFK.</span>")
+		to_chat(src, span_notice("You are no longer marked as AFK."))
 		away_from_keyboard = FALSE
 		manual_afk = FALSE
 	else
 		add_status_indicator("afk")
-		to_chat(src, "<span class='notice'>You are now marked as AFK.</span>")
+		to_chat(src, span_notice("You are now marked as AFK."))
 		away_from_keyboard = TRUE
 		manual_afk = TRUE
 
@@ -605,42 +605,47 @@
 
 
 //Recursive function to find everything a mob is holding.
-/mob/living/get_contents(var/obj/item/weapon/storage/Storage = null)
+/mob/living/get_contents(var/obj/item/storage/Storage = null)
 	var/list/L = list()
 
 	if(Storage) //If it called itself
 		L += Storage.return_inv()
 
 		//Leave this commented out, it will cause storage items to exponentially add duplicate to the list
-		//for(var/obj/item/weapon/storage/S in Storage.return_inv()) //Check for storage items
+		//for(var/obj/item/storage/S in Storage.return_inv()) //Check for storage items
 		//	L += get_contents(S)
 
-		for(var/obj/item/weapon/gift/G in Storage.return_inv()) //Check for gift-wrapped items
+		for(var/obj/item/gift/G in Storage.return_inv()) //Check for gift-wrapped items
 			L += G.gift
-			if(istype(G.gift, /obj/item/weapon/storage))
+			if(istype(G.gift, /obj/item/storage))
 				L += get_contents(G.gift)
 
 		for(var/obj/item/smallDelivery/D in Storage.return_inv()) //Check for package wrapped items
 			L += D.wrapped
-			if(istype(D.wrapped, /obj/item/weapon/storage)) //this should never happen
+			if(istype(D.wrapped, /obj/item/storage)) //this should never happen
 				L += get_contents(D.wrapped)
 		return L
 
 	else
 
 		L += src.contents
-		for(var/obj/item/weapon/storage/S in src.contents)	//Check for storage items
+		for(var/obj/item/storage/S in src.contents)	//Check for storage items
 			L += get_contents(S)
 
-		for(var/obj/item/weapon/gift/G in src.contents) //Check for gift-wrapped items
+		for(var/obj/item/gift/G in src.contents) //Check for gift-wrapped items
 			L += G.gift
-			if(istype(G.gift, /obj/item/weapon/storage))
+			if(istype(G.gift, /obj/item/storage))
 				L += get_contents(G.gift)
 
 		for(var/obj/item/smallDelivery/D in src.contents) //Check for package wrapped items
 			L += D.wrapped
-			if(istype(D.wrapped, /obj/item/weapon/storage)) //this should never happen
+			if(istype(D.wrapped, /obj/item/storage)) //this should never happen
 				L += get_contents(D.wrapped)
+
+		for(var/obj/item/rig/R in src.contents)	//Check rigsuit storage for items
+			if(R.rig_storage)
+				L += get_contents(R.rig_storage)
+
 		return L
 
 /mob/living/proc/check_contents_for(A)
@@ -738,26 +743,26 @@
 
 /mob/living/verb/Examine_OOC() //ChompEDIT - proc --> verb
 	set name = "Examine Meta-Info (OOC)"
-	set category = "OOC.Game" //CHOMPEdit
+	set category = "OOC.Game"
 	set src in view()
 	//VOREStation Edit Start - Making it so SSD people have prefs with fallback to original style.
-	if(CONFIG_GET(flag/allow_metadata)) // CHOMPEdit
+	if(CONFIG_GET(flag/allow_metadata))
 		if(ooc_notes)
 			ooc_notes_window(usr)
-//			to_chat(usr, "<span class='filter_notice'>[src]'s Metainfo:<br>[ooc_notes]</span>")
+//			to_chat(usr, span_filter_notice("[src]'s Metainfo:<br>[ooc_notes]"))
 		else if(client)
-			to_chat(usr, "<span class='filter_notice'>[src]'s Metainfo:<br>[client.prefs.metadata]</span>")
+			to_chat(usr, span_filter_notice("[src]'s Metainfo:<br>[client.prefs.metadata]"))
 		else
-			to_chat(usr, "<span class='filter_notice'>[src] does not have any stored infomation!</span>")
+			to_chat(usr, span_filter_notice("[src] does not have any stored infomation!"))
 	else
-		to_chat(usr, "<span class='filter_notice'>OOC Metadata is not supported by this server!</span>")
+		to_chat(usr, span_filter_notice("OOC Metadata is not supported by this server!"))
 	//VOREStation Edit End - Making it so SSD people have prefs with fallback to original style.
 
 	return
 
 /mob/living/verb/resist()
 	set name = "Resist"
-	set category = "IC.Game" //CHOMPEdit
+	set category = "IC.Game"
 
 	if(!incapacitated(INCAPACITATION_KNOCKOUT) && (last_resist_time + RESIST_COOLDOWN < world.time))
 		last_resist_time = world.time
@@ -803,11 +808,11 @@
 
 /mob/living/proc/resist_grab()
 	var/resisting = 0
-	for(var/obj/item/weapon/grab/G in grabbed_by)
+	for(var/obj/item/grab/G in grabbed_by)
 		resisting++
 		G.handle_resist()
 	if(resisting)
-		visible_message("<span class='danger'>[src] resists!</span>")
+		visible_message(span_danger("[src] resists!"))
 
 /mob/living/proc/resist_fire()
 	return
@@ -817,10 +822,10 @@
 
 /mob/living/verb/lay_down()
 	set name = "Rest"
-	set category = "IC.Game" //CHOMPEdit
+	set category = "IC.Game"
 
 	resting = !resting
-	to_chat(src, "<span class='notice'>You are now [resting ? "resting" : "getting up"].</span>")
+	to_chat(src, span_notice("You are now [resting ? "resting" : "getting up"]."))
 	update_canmove()
 
 //called when the mob receives a bright flash
@@ -844,7 +849,7 @@
 	return 1
 
 /mob/living/proc/get_restraining_bolt()
-	var/obj/item/weapon/implant/restrainingbolt/RB = locate() in src
+	var/obj/item/implant/restrainingbolt/RB = locate() in src
 	if(RB)
 		if(!RB.malfunction)
 			return TRUE
@@ -881,7 +886,7 @@
 					inertia_dir = 1
 				else if(y >= world.maxy -TRANSITIONEDGE)
 					inertia_dir = 2
-				to_chat(src, "<span class='warning'>Something you are carrying is preventing you from leaving.</span>")
+				to_chat(src, span_warning("Something you are carrying is preventing you from leaving."))
 				return
 
 	..()
@@ -910,14 +915,14 @@
 	if(!lastpuke)
 		lastpuke = 1
 		if(isSynthetic())
-			to_chat(src, "<span class='danger'>A sudden, dizzying wave of internal feedback rushes over you!</span>")
+			to_chat(src, span_danger("A sudden, dizzying wave of internal feedback rushes over you!"))
 			src.Weaken(5)
 		else
 			if (nutrition <= 100)
-				to_chat(src, "<span class='danger'>You gag as you want to throw up, but there's nothing in your stomach!</span>")
+				to_chat(src, span_danger("You gag as you want to throw up, but there's nothing in your stomach!"))
 				src.Weaken(10)
 			else
-				to_chat(src, "<span class='warning'>You feel nauseous...</span>")
+				to_chat(src, span_warning("You feel nauseous..."))
 
 				if(ishuman(src))
 					var/mob/living/carbon/human/Hu = src
@@ -930,7 +935,7 @@
 				spawn()
 					if(!skip_wait)
 						sleep(150)	//15 seconds until second warning
-						to_chat(src, "<span class='warning'>You feel like you are about to throw up!</span>")
+						to_chat(src, span_warning("You feel like you are about to throw up!"))
 						sleep(100)	//and you have 10 more for mad dash to the bucket
 
 					//Damaged livers cause you to vomit blood.
@@ -943,7 +948,7 @@
 									blood_vomit = 1
 
 					Stun(5)
-					src.visible_message("<span class='warning'>[src] throws up!</span>","<span class='warning'>You throw up!</span>")
+					src.visible_message(span_warning("[src] throws up!"),span_warning("You throw up!"))
 					playsound(src, 'sound/effects/splat.ogg', 50, 1)
 
 					var/turf/simulated/T = get_turf(src)	//TODO: Make add_blood_floor remove blood from human mobs
@@ -1008,7 +1013,7 @@
 			unEquip(l_hand)
 		if(r_hand)
 			unEquip(r_hand)
-		for(var/obj/item/weapon/holder/holder in get_mob_riding_slots())
+		for(var/obj/item/holder/holder in get_mob_riding_slots())
 			unEquip(holder)
 	*/
 		update_water() // Submerges the mob.
@@ -1033,7 +1038,7 @@
 		passtable_crawl_checked = FALSE
 	// CHOMPEdit End
 
-	for(var/obj/item/weapon/grab/G in grabbed_by)
+	for(var/obj/item/grab/G in grabbed_by)
 		if(G.state >= GRAB_AGGRESSIVE)
 			canmove = 0
 			break
@@ -1041,6 +1046,7 @@
 	if(lying != lying_prev)
 		lying_prev = lying
 		update_transform()
+		update_mob_action_buttons()
 		//VOREStation Add
 		if(lying && LAZYLEN(buckled_mobs))
 			for(var/mob/living/L as anything in buckled_mobs)
@@ -1187,12 +1193,12 @@
 
 	var/atom/movable/item = src.get_active_hand()
 
-	if(!item)
+	if(!item || istype(item, /obj/item/tk_grab))
 		return FALSE
 
 	var/throw_range = item.throw_range
-	if (istype(item, /obj/item/weapon/grab))
-		var/obj/item/weapon/grab/G = item
+	if (istype(item, /obj/item/grab))
+		var/obj/item/grab/G = item
 		item = G.throw_held() //throw the person instead of the grab
 		if(ismob(item))
 			var/mob/M = item
@@ -1205,13 +1211,13 @@
 				add_attack_logs(src,M,"Thrown via grab to [end_T.x],[end_T.y],[end_T.z]")
 			if(ishuman(M))
 				var/mob/living/carbon/human/N = M
-				if((N.health + N.halloss) < CONFIG_GET(number/health_threshold_crit) || N.stat == DEAD) // CHOMPEdit
+				if((N.health + N.halloss) < CONFIG_GET(number/health_threshold_crit) || N.stat == DEAD)
 					N.adjustBruteLoss(rand(10,30))
 			src.drop_from_inventory(G)
 
-			src.visible_message("<span class='warning'>[src] has thrown [item].</span>")
+			src.visible_message(span_warning("[src] has thrown [item]."))
 
-			if((isspace(src.loc)) || (src.lastarea?.has_gravity == 0))
+			if((isspace(src.loc)) || (src.lastarea?.get_gravity() == 0))
 				src.inertia_dir = get_dir(target, src)
 				step(src, inertia_dir)
 			item.throw_at(target, throw_range, item.throw_speed, src)
@@ -1229,9 +1235,9 @@
 		var/mob/living/carbon/human/H = target
 		if(H.in_throw_mode && H.a_intent == I_HELP && unEquip(I))
 			H.put_in_hands(I) // If this fails it will just end up on the floor, but that's fitting for things like dionaea.
-			visible_message("<span class='filter_notice'><b>[src]</b> hands \the [H] \a [I].</span>", SPAN_NOTICE("You give \the [target] \a [I]."))
+			visible_message(span_filter_notice(span_bold("[src]") + " hands \the [H] \a [I]."), span_notice("You give \the [target] \a [I]."))
 		else
-			to_chat(src, SPAN_NOTICE("You offer \the [I] to \the [target]."))
+			to_chat(src, span_notice("You offer \the [I] to \the [target]."))
 			do_give(H)
 		return TRUE
 */
@@ -1242,9 +1248,9 @@
 		return TRUE //It may not have thrown, but it sure as hell left your hand successfully.
 
 	//actually throw it!
-	src.visible_message("<span class='warning'>[src] has thrown [item].</span>")
+	src.visible_message(span_warning("[src] has thrown [item]."))
 
-	if((isspace(src.loc)) || (src.lastarea?.has_gravity == 0))
+	if((isspace(src.loc)) || (src.lastarea?.get_gravity() == 0))
 		src.inertia_dir = get_dir(target, src)
 		step(src, inertia_dir)
 
@@ -1312,15 +1318,15 @@
 /mob/living/vv_get_header()
 	. = ..()
 	. += {"
-		<a href='?_src_=vars;[HrefToken()];rename=\ref[src]'><b>[src]</b></a><font size='1'>
-		<br><a href='?_src_=vars;[HrefToken()];datumedit=\ref[src];varnameedit=ckey'>[ckey ? ckey : "No ckey"]</a> / <a href='?_src_=vars;[HrefToken()];datumedit=\ref[src];varnameedit=real_name'>[real_name ? real_name : "No real name"]</a>
+		<a href='byond://?_src_=vars;[HrefToken()];rename=\ref[src]'><b>[src]</b></a><font size='1'>
+		<br><a href='byond://?_src_=vars;[HrefToken()];datumedit=\ref[src];varnameedit=ckey'>[ckey ? ckey : "No ckey"]</a> / <a href='byond://?_src_=vars;[HrefToken()];datumedit=\ref[src];varnameedit=real_name'>[real_name ? real_name : "No real name"]</a>
 		<br>
-		BRUTE:<a href='?_src_=vars;[HrefToken()];mobToDamage=\ref[src];adjustDamage=brute'>[getBruteLoss()]</a>
-		FIRE:<a href='?_src_=vars;[HrefToken()];mobToDamage=\ref[src];adjustDamage=fire'>[getFireLoss()]</a>
-		TOXIN:<a href='?_src_=vars;[HrefToken()];mobToDamage=\ref[src];adjustDamage=toxin'>[getToxLoss()]</a>
-		OXY:<a href='?_src_=vars;[HrefToken()];mobToDamage=\ref[src];adjustDamage=oxygen'>[getOxyLoss()]</a>
-		CLONE:<a href='?_src_=vars;[HrefToken()];mobToDamage=\ref[src];adjustDamage=clone'>[getCloneLoss()]</a>
-		BRAIN:<a href='?_src_=vars;[HrefToken()];mobToDamage=\ref[src];adjustDamage=brain'>[getBrainLoss()]</a>
+		BRUTE:<a href='byond://?_src_=vars;[HrefToken()];mobToDamage=\ref[src];adjustDamage=brute'>[getBruteLoss()]</a>
+		FIRE:<a href='byond://?_src_=vars;[HrefToken()];mobToDamage=\ref[src];adjustDamage=fire'>[getFireLoss()]</a>
+		TOXIN:<a href='byond://?_src_=vars;[HrefToken()];mobToDamage=\ref[src];adjustDamage=toxin'>[getToxLoss()]</a>
+		OXY:<a href='byond://?_src_=vars;[HrefToken()];mobToDamage=\ref[src];adjustDamage=oxygen'>[getOxyLoss()]</a>
+		CLONE:<a href='byond://?_src_=vars;[HrefToken()];mobToDamage=\ref[src];adjustDamage=clone'>[getCloneLoss()]</a>
+		BRAIN:<a href='byond://?_src_=vars;[HrefToken()];mobToDamage=\ref[src];adjustDamage=brain'>[getBrainLoss()]</a>
 		</font>
 		"}
 
@@ -1403,10 +1409,10 @@
 
 /mob/living/verb/mob_sleep()
 	set name = "Sleep"
-	set category = "IC.Game" //CHOMPEdit
+	set category = "IC.Game"
 	if(!toggled_sleeping && alert(src, "Are you sure you wish to go to sleep? You will snooze until you use the Sleep verb again.", "Sleepy Time", "No", "Yes") == "No")
 		return
 	toggled_sleeping = !toggled_sleeping
-	to_chat(src, SPAN_NOTICE("You are [toggled_sleeping ? "now sleeping. Use the Sleep verb again to wake up" : "no longer sleeping"]."))
+	to_chat(src, span_notice("You are [toggled_sleeping ? "now sleeping. Use the Sleep verb again to wake up" : "no longer sleeping"]."))
 	if(toggled_sleeping)
 		Sleeping(1)

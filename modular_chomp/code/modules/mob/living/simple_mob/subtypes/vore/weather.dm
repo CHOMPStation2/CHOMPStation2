@@ -167,7 +167,7 @@
 
 /mob/living/simple_mob/vore/weatherbeast/sandstorm/do_special_attack(atom/A)
 	if(health < maxHealth*0.25)
-		visible_message(span_orange("<B>The fossil tank begins self repairs!.</B>"))
+		visible_message(span_bolddanger(span_orange("The fossil tank begins self repairs!.")))
 		sleep(30)
 		for(var/i =1 to 10)
 			adjustBruteLoss(-100)
@@ -215,7 +215,7 @@
 
 /mob/living/simple_mob/vore/weatherbeast/acidrain/do_special_attack(atom/A)
 	if(nutrition > 1100)
-		visible_message(span_orange("<B>The giant jellyfish begins to regenerate!.</B>"))
+		visible_message(span_bolddanger(span_orange("The giant jellyfish begins to regenerate!.")))
 		adjustBruteLoss(-300)
 		adjustFireLoss(-300)
 		adjust_nutrition(-500)
@@ -289,7 +289,7 @@
 	movement_cooldown = -1
 	special_attack_min_range = 1
 	special_attack_max_range = 7
-	special_attack_cooldown = 0.5 SECONDS
+	special_attack_cooldown = 3.5 SECONDS
 	projectiletype = /obj/item/projectile/energy/mob/precursor
 	weatherprojectile = /obj/item/projectile/energy/mob/precursor
 	var/attack_cycle = 1
