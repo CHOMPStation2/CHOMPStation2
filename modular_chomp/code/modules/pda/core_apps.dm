@@ -1,6 +1,6 @@
 /datum/data/pda/app/timeclock
 	name = "Timeclock"
-	icon = "list-alt"
+	icon = "clock"
 	template = "pda_timeclock"
 
 	var/channel = "Common"
@@ -11,6 +11,9 @@
 	//Initialize an intercom to announce going on/off duty
 	if(!announce)
 		announce = new /obj/item/radio/intercom(src)
+/datum/data/pda/app/timeclock/stop()
+	del(pdaUser)
+
 /datum/data/pda/app/timeclock/update_ui(mob/user as mob, list/data)
 	//Because tgui_data seems a bit weird with pda apps
 	// Okay, data for showing the user's OWN PTO stuff
@@ -38,7 +41,7 @@
 				"timeoff_factor" = job.timeoff_factor,
 				"pto_department" = job.pto_type
 			)
-		if(CONFIG_GET(flag/time_off) && CONFIG_GET(flag/pto_job_change)) // CHOMPEdit
+		if(CONFIG_GET(flag/time_off) && CONFIG_GET(flag/pto_job_change))
 			data["allow_change_job"] = TRUE
 			if(job && job.timeoff_factor < 0) // Currently are Off Duty, so gotta lookup what on-duty jobs are open
 				data["job_choices"] = getOpenOnDutyJobs(user, job.pto_type)
@@ -80,42 +83,23 @@
 		   && job.pto_type == department \
 		   && !job.disallow_jobhop \
 		   && job.timeoff_factor > 0
-/datum/data/pda/app/timeclock/proc/isNotAccessible()
-	var/area/A = get_area(pdaUser)
-	//This should hit most of the major areas, bar and kitchen are acceptable because of having tables/shutters
-	return istype(A, /area/rnd) \
-		|| istype(A, /area/bridge) \
-		|| istype(A, /area/ai) \
-		|| istype(A, /area/security) \
-		|| istype(A, /area/assembly) \
-		|| istype(A, /area/quartermaster) \
-		|| istype(A, /area/engineering) \
-		|| istype(A, /area/hydroponics) \
-		|| istype(A, /area/crew_quarters/heads) \
-		|| istype(A, /area/teleporter) \
-		|| istype(A, /area/server) \
-		|| istype(A, /area/maintenance/substation) \
-		|| istype(A, /area/janitor) \
-		|| istype(A, /area/chapel/office)
 
 /datum/data/pda/app/timeclock/proc/makeOnDuty(var/newrank, var/newassignment)
 	var/datum/job/oldjob = job_master.GetJob(pda.id.rank)
 	var/datum/job/newjob = job_master.GetJob(newrank)
-	if(!oldjob || !isOpenOnDutyJob(usr, oldjob.pto_type, newjob))
+	if(!oldjob || !isOpenOnDutyJob(pdaUser, oldjob.pto_type, newjob))
 		return
 	if(newassignment != newjob.title && !(newassignment in newjob.alt_titles))
 		return
-	//CHOMPadd START
 	if(newjob.camp_protection && round_duration_in_ds < CONFIG_GET(number/job_camp_time_limit))
 		if(SSjob.restricted_keys.len)
 			var/list/check = SSjob.restricted_keys[newjob.title]
-			if(usr.client.ckey in check)
-				to_chat(usr,span_danger("[newjob.title] is not presently selectable because you played as it last round. It will become available to you in [round((CONFIG_GET(number/job_camp_time_limit) - round_duration_in_ds) / 600)] minutes, if slots remain open."))
+			if(pdaUser.client.ckey in check)
+				to_chat(pdaUser,span_danger("[newjob.title] is not presently selectable because you played as it last round. It will become available to you in [round((CONFIG_GET(number/job_camp_time_limit) - round_duration_in_ds) / 600)] minutes, if slots remain open."))
 				return
-	//CHOMPadd END
 
 	if(newjob)
-		newjob.register_shift_key(usr.client.ckey)//CHOMPadd
+		newjob.register_shift_key(pdaUser.client.ckey)
 		pda.id.access = newjob.get_access()
 		pda.id.rank = newjob.title
 		pda.id.assignment = newassignment
@@ -124,7 +108,7 @@
 		pda.id.last_job_switch = world.time
 		callHook("reassign_employee", list(pda.id))
 		newjob.current_positions++
-		var/mob/living/carbon/human/H = usr
+		var/mob/living/carbon/human/H = pdaUser
 		H.mind.assigned_role = pda.id.rank
 		H.mind.role_alt_title = pda.id.assignment
 		announce.autosay("[pda.id.registered_name] has moved On-Duty as [pda.id.assignment].", "Employee Oversight", channel, zlevels = using_map.get_map_levels(get_z(src)))
@@ -133,10 +117,6 @@
 /datum/data/pda/app/timeclock/proc/makeOffDuty()
 	var/datum/job/foundjob = job_master.GetJob(pda.id.rank)
 	if(!foundjob)
-		return
-	//Make sure people don't clock out inside a department, this may only work on the southern cross, depending on mapping practices
-	if(isNotAccessible())
-		to_chat(usr, "This area is not public. To prevent individuals getting stuck, you cannot clock out inside departments")
 		return
 	var/new_dept = foundjob.pto_type || PTO_CIVILIAN
 	var/datum/job/ptojob = null
@@ -153,7 +133,7 @@
 		data_core.manifest_modify(pda.id.registered_name, pda.id.assignment, pda.id.rank)
 		pda.id.last_job_switch = world.time
 		callHook("reassign_employee", list(pda.id))
-		var/mob/living/carbon/human/H = usr
+		var/mob/living/carbon/human/H = pdaUser
 		H.mind.assigned_role = ptojob.title
 		H.mind.role_alt_title = ptojob.title
 		foundjob.current_positions--
@@ -163,18 +143,18 @@
 /datum/data/pda/app/timeclock/proc/checkCardCooldown()
 	if(!pda.id)
 		return FALSE
-	var/time_left = 1 MINUTE - (world.time - pda.id.last_job_switch) // CHOMPedit: 10 minute wait down to 1 minute.
+	var/time_left = 1 MINUTE - (world.time - pda.id.last_job_switch)
 	if(time_left > 0)
-		to_chat(usr, "You need to wait another [round((time_left/10)/60, 1)] minute\s before you can switch.")
+		to_chat(pdaUser, span_notice("You need to wait another [round((time_left/10)/60, 1)] minute\s before you can switch."))
 		return FALSE
 	return TRUE
 
 /datum/data/pda/app/timeclock/proc/checkFace()
-	var/turf/location = get_turf(pdaUser) // CHOMPedit: Needed for admin logs.
+	var/turf/location = get_turf(pdaUser)
 	if(!pda.id)
-		to_chat(usr, span_notice("No ID is inserted."))
+		to_chat(pdaUser, span_notice("No ID is inserted."))
 		return FALSE
 	else
-		message_admins("[key_name_admin(usr)] has modified '[pda.id.registered_name]' 's ID with a pda timeclock. [ADMIN_JMP(location)]") // CHOMPedit: Logging
-		log_game("[key_name_admin(usr)] has modified '[pda.id.registered_name]' 's ID with a pda timeclock.") // CHOMPedit: Logging
+		message_admins("[key_name_admin(pdaUser)] has modified '[pda.id.registered_name]' 's ID with a pda timeclock. [ADMIN_JMP(location)]")
+		log_game("[key_name_admin(pdaUser)] has modified '[pda.id.registered_name]' 's ID with a pda timeclock.")
 		return TRUE
