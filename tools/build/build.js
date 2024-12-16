@@ -208,7 +208,7 @@ export const DmTarget = new Juke.Target({
     'icons/**',
     'interface/**',
     'sound/**',
-<<<<<<< HEAD
+    'tgui/public/tgui.html',
     'modular_chomp/code/**',
     'modular_chomp/icons/**',
     'modular_chomp/sound/**',
@@ -217,9 +217,6 @@ export const DmTarget = new Juke.Target({
     'modular_chomp/maps/southern_cross/**/*.dmm', // Placed here so it recompiles on map changes
     'modular_chomp/maps/relic_base/**/*.dmm', // Placed here so it recompiles on map changes
     'modular_chomp/maps/submap/**/*.dmm', // Placed here so it recompiles on map changes
-=======
-    'tgui/public/tgui.html',
->>>>>>> 411503d84b (Make export chatlog work under 516 (#16713))
     `${DME_NAME}.dme`,
     NamedVersionFile,
   ],
