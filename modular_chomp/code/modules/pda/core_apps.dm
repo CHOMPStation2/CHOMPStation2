@@ -12,7 +12,7 @@
 	if(!announce)
 		announce = new /obj/item/radio/intercom(src)
 /datum/data/pda/app/timeclock/stop()
-	del(pdaUser)
+	pdaUser = null
 
 /datum/data/pda/app/timeclock/update_ui(mob/user as mob, list/data)
 	//Because tgui_data seems a bit weird with pda apps
