@@ -12,7 +12,14 @@
 	stat = DEAD
 	canmove = 0
 	blinded = 0
+<<<<<<< HEAD
 	anchored = TRUE		//  don't get pushed around
+=======
+	anchored = TRUE	//  don't get pushed around
+	var/list/visibleChunks = list()
+	var/datum/visualnet/visualnet
+	var/use_static = TRUE
+>>>>>>> 3083f0b730 (Adds a new ghost vis blocking area flag (#16696))
 
 	var/can_reenter_corpse
 	var/datum/hud/living/carbon/hud = null // hud
@@ -140,6 +147,13 @@
 	animate(pixel_y = default_pixel_y, time = 10, loop = -1)
 	observer_mob_list += src
 	..()
+	visualnet = ghostnet
+
+/mob/observer/dead/Moved(atom/old_loc, direction, forced)
+	. = ..()
+	use_static = !(check_rights(R_ADMIN|R_FUN|R_EVENT|R_SERVER, 0, src) || (client && client.buildmode))
+	if(visualnet && use_static)
+		visualnet.visibility(src, client)
 
 /mob/observer/dead/Topic(href, href_list)
 	if (href_list["track"])
@@ -454,7 +468,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 	//RS Port #658 Start
 	var/area/A = get_area(destination)
-	if(A.flag_check(AREA_BLOCK_GHOSTS))
+	if(A?.flag_check(AREA_BLOCK_GHOSTS))
 		to_chat(src,span_warning("Sorry, that area does not allow ghosts."))
 		if(following)
 			stop_following()
@@ -574,6 +588,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	return ..()
 
 /mob/observer/dead/Destroy()
+	visualnet = null
 	if(ismob(following))
 		var/mob/M = following
 		M.following_mobs -= src

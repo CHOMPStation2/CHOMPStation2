@@ -33,7 +33,11 @@
 
 /mob/verb/toggle_stomach_vision()
 	set name = "Toggle Stomach Sprites"
+<<<<<<< HEAD
 	set category = "Preferences.Vore" //CHOMPEdit
+=======
+	set category = "Preferences.Vore"
+>>>>>>> 3083f0b730 (Adds a new ghost vis blocking area flag (#16696))
 	set desc = "Toggle the ability to see stomachs or not"
 
 	var/toggle

@@ -1,7 +1,11 @@
 /client/proc/player_effects(var/mob/target in mob_list)
 	set name = "Player Effects"
 	set desc = "Modify a player character with various 'special treatments' from a list."
+<<<<<<< HEAD
 	set category = "Fun.Event Kit" //CHOMPEdit
+=======
+	set category = "Fun.Event Kit"
+>>>>>>> 3083f0b730 (Adds a new ghost vis blocking area flag (#16696))
 	if(!check_rights(R_FUN))
 		return
 

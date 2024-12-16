@@ -1,6 +1,10 @@
 /obj/item/stack/material/glass
 	name = MAT_GLASS
+<<<<<<< HEAD
 	icon_state = "sheet-glass" //CHOMPedit - replace materials update
+=======
+	icon_state = "sheet-transparent"
+>>>>>>> 3083f0b730 (Adds a new ghost vis blocking area flag (#16696))
 	default_type = MAT_GLASS
 	no_variants = FALSE
 	drop_sound = 'sound/items/drop/glass.ogg'

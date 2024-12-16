@@ -579,10 +579,15 @@ var/list/admin_verbs_event_manager = list(
 	/client/proc/start_vote,
 	/client/proc/AdminCreateVirus,
 	/client/proc/ReleaseVirus,
+<<<<<<< HEAD
 	/datum/admins/proc/quick_nif, //CHOMPStation Add,
 	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
 	/client/proc/reload_jobwhitelist, //ChompADD
 	/client/proc/reload_alienwhitelist //ChompADD
+=======
+	/client/proc/add_hidden_area,
+	/client/proc/remove_hidden_area
+>>>>>>> 3083f0b730 (Adds a new ghost vis blocking area flag (#16696))
 )
 
 /client/proc/add_admin_verbs()

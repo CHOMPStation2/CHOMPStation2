@@ -90,7 +90,11 @@
 	return ..()
 
 /client/proc/generic_item()
+<<<<<<< HEAD
 	set category = "Fun.Event Kit" //CHOMPEdit
+=======
+	set category = "Fun.Event Kit"
+>>>>>>> 3083f0b730 (Adds a new ghost vis blocking area flag (#16696))
 	set name = "Spawn Generic Item"
 	set desc = "Spawn a customisable item with a range of different options."
 

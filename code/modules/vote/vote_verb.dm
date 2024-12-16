@@ -1,5 +1,9 @@
 /client/verb/vote()
+<<<<<<< HEAD
 	set category = "OOC.Game" // CHOMPedit
+=======
+	set category = "OOC.Game"
+>>>>>>> 3083f0b730 (Adds a new ghost vis blocking area flag (#16696))
 	set name = "Vote"
 
 	if(SSvote.active_vote)
