@@ -415,6 +415,7 @@
 /datum/supply_pack/voidsuits/solgov_engineer //CHOMP explo keep
 	name = "Solgov engineering voidsuit" //CHOMP explo keep
 	desc = "A standard Solgov of Sol-Procyon Engineering voidsuit. Requires Engineering access."
+	contains = list(
 		/obj/item/clothing/suit/space/void/engineering/alt2,
 		/obj/item/clothing/head/helmet/space/void/engineering/alt2
 	)
@@ -426,6 +427,7 @@
 /datum/supply_pack/voidsuits/solgov_atmos //CHOMP explo keep
 	name = "Solgov atmos voidsuit" //CHOMP explo keep
 	desc = "A standard Solgov of Sol-Procyon Atmospherics voidsuit. Requires Atmospherics access."
+	contains = list(
 		/obj/item/clothing/suit/space/void/atmos/alt2,
 		/obj/item/clothing/head/helmet/space/void/atmos/alt2
 	)
