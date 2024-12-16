@@ -234,3 +234,15 @@
 		energy_dumped_organic += P.energy / 3
 		P.sub_velocity(P.velocity)
 		return lazy_return_testing(chex,energy_dumped_organic)
+
+#undef BULLET_PENETRATED
+#undef BULLET_BONECHECK1_TRUE
+#undef BULLET_ORGANCHECK_TRUE
+#undef BULLET_BONECHECK2_TRUE
+#undef BULLET_PASSED_LEAVE_EARLY
+#undef BULLET_PASSED_BONECHECK1
+#undef BULLET_PASSED_ORGANCHECK
+#undef BULLET_PASSED_INTERNALCHECK2
+#undef BULLET_PASSED_BONECHECK2
+#undef BULLET_PASSED_INTERNALCHECK3
+#undef BULLET_TESTS

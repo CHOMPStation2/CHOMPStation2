@@ -42,6 +42,8 @@
 #include "code\__defines\assert.dm"
 #include "code\__defines\atmos.dm"
 #include "code\__defines\atoms_movable.dm"
+#include "code\__defines\atoms_movable_ch.dm"
+#include "code\__defines\ballistics_ch.dm"
 #include "code\__defines\belly_modes_ch.dm"
 #include "code\__defines\belly_modes_vr.dm"
 #include "code\__defines\blueprints.dm"

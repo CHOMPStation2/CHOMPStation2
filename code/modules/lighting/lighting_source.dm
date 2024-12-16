@@ -320,6 +320,7 @@
 				(. * _lum_g) - (OLD * _applied_lum_g),	\
 				(. * _lum_b) - (OLD * _applied_lum_b)	\
 			);
+#undef APPLY_CORNER_NEW
 		//CHOMPEdit End
 
 	var/list/datum/lighting_corner/gone_corners = effect_str - corners
