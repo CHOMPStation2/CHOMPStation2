@@ -9856,6 +9856,9 @@
 	dir = 4;
 	pixel_x = 24
 	},
+/obj/machinery/cryopod/robot{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/construction/firstdeck/construction5)
 "bco" = (
@@ -28506,6 +28509,12 @@
 /obj/effect/floor_decal/borderfloor/shifted,
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology)
+"srF" = (
+/turf/simulated/wall{
+	can_open = 1;
+	desc = "A huge chunk of metal used to seperate rooms. There are scratch marks along the floor."
+	},
+/area/construction/firstdeck/construction5)
 "srX" = (
 /obj/structure/table/steel,
 /obj/random/tech_supply,
@@ -65178,7 +65187,7 @@ ave
 cTb
 aBb
 aCO
-aJa
+srF
 aLz
 aNt
 aTI
