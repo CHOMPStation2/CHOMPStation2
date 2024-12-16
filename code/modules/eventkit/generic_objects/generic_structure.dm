@@ -108,11 +108,7 @@
 		anchored = !anchored
 
 /client/proc/generic_structure()
-<<<<<<< HEAD
-	set category = "Fun.Event Kit" //CHOMPEdit
-=======
 	set category = "Fun.Event Kit"
->>>>>>> 3083f0b730 (Adds a new ghost vis blocking area flag (#16696))
 	set name = "Spawn Generic Structure"
 	set desc = "Spawn a customisable structure with a range of different options."
 

@@ -12,14 +12,10 @@
 	stat = DEAD
 	canmove = 0
 	blinded = 0
-<<<<<<< HEAD
-	anchored = TRUE		//  don't get pushed around
-=======
 	anchored = TRUE	//  don't get pushed around
 	var/list/visibleChunks = list()
 	var/datum/visualnet/visualnet
 	var/use_static = TRUE
->>>>>>> 3083f0b730 (Adds a new ghost vis blocking area flag (#16696))
 
 	var/can_reenter_corpse
 	var/datum/hud/living/carbon/hud = null // hud

@@ -146,10 +146,7 @@ GLOBAL_LIST_INIT(acceptable_fruit_types, list(
 											PLANT_RICE,
 											PLANT_ROSE,
 											PLANT_RHUBARB,
-<<<<<<< HEAD
 											PLANT_SHAND, // CHOMPAdd
-=======
->>>>>>> 3083f0b730 (Adds a new ghost vis blocking area flag (#16696))
 											PLANT_SOYBEAN,
 											PLANT_SPINEAPPLE,
 											PLANT_SUGARCANE,

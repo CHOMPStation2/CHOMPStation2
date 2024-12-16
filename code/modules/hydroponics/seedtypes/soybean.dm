@@ -3,10 +3,7 @@
 	seed_name = PLANT_SOYBEAN
 	display_name = PLANT_SOYBEAN + "s"
 	kitchen_tag = PLANT_SOYBEAN
-<<<<<<< HEAD
 	mutants = list(PLANT_ORANGESAPBEAN,PLANT_BLUESAPBEAN,PLANT_PURPLESAPBEAN) //CHOMPEdit - Adding mutation strain for sap beans.
-=======
->>>>>>> 3083f0b730 (Adds a new ghost vis blocking area flag (#16696))
 	chems = list(REAGENT_ID_NUTRIMENT = list(1,20), REAGENT_ID_SOYMILK = list(10,20))
 
 /datum/seed/soybean/New()

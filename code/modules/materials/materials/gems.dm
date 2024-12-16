@@ -50,13 +50,8 @@
 
 /datum/material/quartz
 	name = MAT_QUARTZ
-<<<<<<< HEAD
-	display_name = ORE_QUARTZ
-	use_name = ORE_QUARTZ
-=======
 	display_name = MAT_QUARTZ
 	use_name = MAT_QUARTZ
->>>>>>> 3083f0b730 (Adds a new ghost vis blocking area flag (#16696))
 	icon_colour = "#e6d7df"
 	stack_type = /obj/item/stack/material/quartz
 	tableslam_noise = 'sound/effects/Glasshit.ogg'

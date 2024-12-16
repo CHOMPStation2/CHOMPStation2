@@ -124,11 +124,7 @@ var/global/list/env_messages = list()
 /client/proc/create_gm_message()
 	set name = "Map Message - Create"
 	set desc = "Create an ooc message in the environment for other players to see."
-<<<<<<< HEAD
-	set category = "Fun.Event Kit" //CHOMPEdit
-=======
 	set category = "Fun.Event Kit"
->>>>>>> 3083f0b730 (Adds a new ghost vis blocking area flag (#16696))
 
 	if(!check_rights(R_FUN))
 		return
@@ -158,11 +154,7 @@ var/global/list/env_messages = list()
 /client/proc/remove_gm_message()
 	set name = "Map Message - Remove"
 	set desc = "Remove any env/map message."
-<<<<<<< HEAD
-	set category =  "Fun.Event Kit" //CHOMPEdit
-=======
 	set category = "Fun.Event Kit"
->>>>>>> 3083f0b730 (Adds a new ghost vis blocking area flag (#16696))
 
 	if(!istype(src) || !src.ckey)
 		return
