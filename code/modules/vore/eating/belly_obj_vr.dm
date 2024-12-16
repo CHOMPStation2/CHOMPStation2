@@ -9,11 +9,6 @@
 // Parent type of all the various "belly" varieties.
 //
 
-// # define DM_FLAG_VORESPRITE_TAIL     0x2 //CHOMPRemove
-// # define DM_FLAG_VORESPRITE_MARKING  0x4 //CHOMPRemove
-// # define DM_FLAG_VORESPRITE_ARTICLE	0x8 //CHOMPRemove
-
-
 /obj/belly
 	name = "belly"							// Name of this location
 	desc = "It's a belly! You're in it!"	// Flavor text description of inside sight/sound/smells/feels.
