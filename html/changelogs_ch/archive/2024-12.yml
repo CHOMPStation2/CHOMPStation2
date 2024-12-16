@@ -109,3 +109,8 @@
 2024-12-14:
   Kashargul:
   - bugfix: pitchblende using the wrong name
+2024-12-16:
+  Asher-42:
+  - rscadd: Dullahan engineer chassis code and scaling issue.
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: proteans can no longer hide and rest. You only can do one or the other
