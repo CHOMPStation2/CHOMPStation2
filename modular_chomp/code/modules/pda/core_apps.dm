@@ -83,30 +83,20 @@
 /datum/data/pda/app/timeclock/proc/isNotAccessible()
 	var/area/A = get_area(pdaUser)
 	//This should hit most of the major areas, bar and kitchen are acceptable because of having tables/shutters
-	//Save a lot of checks by seeing if we're on the surface
-	if(istype(A, /area/surface/outpost))
-		return istype(A, /area/surface/outpost/mining_main) \
-			|| istype(A, /area/surface/outpost/engineering) \
-			|| istype(A, /area/surface/outpost/security) \
-			|| istype(A, /area/surface/outpost/research) \
-			|| istype(A, /area/surface/outpost/main/exploration) \
-			|| istype(A, /area/surface/outpost/main/teleporter) \
-			|| istype(A, /area/surface/outpost/main/tcomm)
-	else
-		return istype(A, /area/rnd) \
-			|| istype(A, /area/bridge) \
-			|| istype(A, /area/ai) \
-			|| istype(A, /area/security) \
-			|| istype(A, /area/assembly) \
-			|| istype(A, /area/quartermaster) \
-			|| istype(A, /area/engineering) \
-			|| istype(A, /area/hydroponics) \
-			|| istype(A, /area/crew_quarters/heads) \
-			|| istype(A, /area/teleporter) \
-			|| istype(A, /area/server) \
-			|| istype(A, /area/maintenance/substation) \
-			|| istype(A, /area/janitor) \
-			|| istype(A, /area/chapel/office)
+	return istype(A, /area/rnd) \
+		|| istype(A, /area/bridge) \
+		|| istype(A, /area/ai) \
+		|| istype(A, /area/security) \
+		|| istype(A, /area/assembly) \
+		|| istype(A, /area/quartermaster) \
+		|| istype(A, /area/engineering) \
+		|| istype(A, /area/hydroponics) \
+		|| istype(A, /area/crew_quarters/heads) \
+		|| istype(A, /area/teleporter) \
+		|| istype(A, /area/server) \
+		|| istype(A, /area/maintenance/substation) \
+		|| istype(A, /area/janitor) \
+		|| istype(A, /area/chapel/office)
 
 /datum/data/pda/app/timeclock/proc/makeOnDuty(var/newrank, var/newassignment)
 	var/datum/job/oldjob = job_master.GetJob(pda.id.rank)
