@@ -102,7 +102,6 @@
 			|| istype(A, /area/engineering) \
 			|| istype(A, /area/hydroponics) \
 			|| istype(A, /area/crew_quarters/heads) \
-			|| istype(A, /area/tcomm) \
 			|| istype(A, /area/teleporter) \
 			|| istype(A, /area/server) \
 			|| istype(A, /area/maintenance/substation) \
