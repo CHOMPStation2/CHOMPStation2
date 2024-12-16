@@ -47,16 +47,16 @@
 	contraband = 1
 
 /datum/supply_pack/munitions/bolt_rifles_militia
- 	name = "Weapon - Surplus militia rifles"
+	name = "Weapon - Surplus militia rifles"
 	desc = "Vintage ballistic rifles that fell off the back of a truck. A few centuries ago, that is."
- 	contains = list(
- 			/obj/item/gun/projectile/shotgun/pump/rifle = 3,
- 			/obj/item/ammo_magazine/clip/c762 = 6
- 			)
- 	cost = 1000
- 	contraband = 1
- 	containertype = /obj/structure/closet/crate/hedberg
- 	containername = "Ballistic weapons crate"
+	contains = list(
+			/obj/item/gun/projectile/shotgun/pump/rifle = 3,
+			/obj/item/ammo_magazine/clip/c762 = 6
+			)
+	cost = 1000
+	contraband = 1
+	containertype = /obj/structure/closet/crate/hedberg
+	containername = "Ballistic weapons crate"
 
 /datum/supply_pack/randomised/misc/telecrate
 	name = "Confiscated equipment"
