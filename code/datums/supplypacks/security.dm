@@ -747,22 +747,6 @@
 	one_access = TRUE
 //CHOMPEdit End
 
-<<<<<<< HEAD
-/datum/supply_pack/security/biosuit
-	contains = list(
-			/obj/item/clothing/head/bio_hood/security = 3,
-			/obj/item/clothing/under/rank/security = 3,
-			/obj/item/clothing/suit/bio_suit/security = 3,
-			/obj/item/clothing/shoes/white = 3,
-			/obj/item/clothing/mask/gas/clear = 3, //Chompedit: Implementation of clear gas masks
-			/obj/item/tank/oxygen = 3,
-			/obj/item/clothing/gloves/sterile/latex,
-			/obj/item/storage/box/gloves
-			)
-	cost = 40
-
-=======
->>>>>>> 6f14ca4510 (Supply Pack Details/Descriptions (#16708))
 /datum/supply_pack/security/trackingimplant
 	name = "Implants - Tracking"
 	desc = "A set of tracking implants. Requires Security access."

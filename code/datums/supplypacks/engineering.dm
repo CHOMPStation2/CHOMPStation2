@@ -247,12 +247,8 @@
 
 /datum/supply_pack/eng/smbig
 	name = "Supermatter Core"
-<<<<<<< HEAD
-	contains = list(/obj/machinery/power/supermatter/station) // CHOMPEdit: Station SM for Cargo Orders
-=======
 	desc = "A transport-safe supermatter crystal. EXTREMELY HAZARDOUS. Requires Chief Engineer access."
-	contains = list(/obj/machinery/power/supermatter)
->>>>>>> 6f14ca4510 (Supply Pack Details/Descriptions (#16708))
+	contains = list(/obj/machinery/power/supermatter/station) // CHOMPEdit: Station SM for Cargo Orders
 	cost = 150
 	containertype = /obj/structure/closet/crate/secure/phoron
 	containername = "Supermatter crate (CAUTION)"

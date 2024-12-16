@@ -47,8 +47,8 @@
 	contraband = 1
 
 /datum/supply_pack/munitions/bolt_rifles_militia
-<<<<<<< HEAD
  	name = "Weapon - Surplus militia rifles"
+	desc = "Vintage ballistic rifles that fell off the back of a truck. A few centuries ago, that is."
  	contains = list(
  			/obj/item/gun/projectile/shotgun/pump/rifle = 3,
  			/obj/item/ammo_magazine/clip/c762 = 6
@@ -60,22 +60,6 @@
 
 /datum/supply_pack/randomised/misc/telecrate
 	name = "Confiscated equipment"
-=======
-	name = "Weapon - Surplus militia rifles"
-	desc = "Vintage ballistic rifles that fell off the back of a truck. A few centuries ago, that is."
-	contains = list(
-			/obj/item/gun/projectile/shotgun/pump/rifle = 3,
-			/obj/item/ammo_magazine/clip/c762 = 6
-			)
-	cost = 50
-	contraband = 1
-	containertype = /obj/structure/closet/crate/hedberg
-	containername = "Ballistic weapons crate"
-
-/datum/supply_pack/randomised/misc/telecrate //you get something awesome, a couple of decent things, and a few weak/filler things
-	name = "ERR_NULL_ENTRY" //null crate! also dream maker is hell,
-	desc = "NO DATA FOUND"
->>>>>>> 6f14ca4510 (Supply Pack Details/Descriptions (#16708))
 	num_contained = 1
 	contains = list(
 			list( //the operator,

@@ -79,15 +79,10 @@
 	containername = "advanced hardsuit crate"
 	access = access_ce
 
-<<<<<<< HEAD
 // CHOMPStation EDIT Start: Change Commonwealth to Solgov
 /datum/supply_pack/misc/solgov_medical_rig
 	name = "solgov medical hardsuit (loaded)"
-=======
-/datum/supply_pack/hardsuits/com_medical_rig
-	name = "commonwealth medical hardsuit (loaded)"
 	desc = "A fully-equipped Commonwealth of Sol-Procyon Medical hardsuit. Requires Medical access."
->>>>>>> 6f14ca4510 (Supply Pack Details/Descriptions (#16708))
 	contains = list(
 			/obj/item/rig/baymed = 1
 			)
@@ -96,14 +91,9 @@
 	containername = "Solgov medical hardsuit crate"
 	access = access_medical
 
-<<<<<<< HEAD
 /datum/supply_pack/misc/solgov_engineering_rig
 	name = "solgov engineering hardsuit (loaded)"
-=======
-/datum/supply_pack/hardsuits/com_engineering_rig
-	name = "commonwealth engineering hardsuit (loaded)"
 	desc = "A fully-equipped Commonwealth of Sol-Procyon Engineering hardsuit. Requires Engineering access."
->>>>>>> 6f14ca4510 (Supply Pack Details/Descriptions (#16708))
 	contains = list(
 			/obj/item/rig/bayeng = 1
 			)

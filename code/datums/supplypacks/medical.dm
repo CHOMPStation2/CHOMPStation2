@@ -328,14 +328,9 @@
 			/obj/item/clothing/suit/bio_suit/scientist = 3,
 			/obj/item/clothing/suit/bio_suit/cmo,
 			/obj/item/clothing/head/bio_hood/cmo,
-<<<<<<< HEAD
-			/obj/item/clothing/mask/gas/clear = 5, //ChompEdit: Proper implementation of clear gas masks
-			/obj/item/tank/oxygen = 5,
-=======
 			/obj/item/clothing/shoes/white = 4,
-			/obj/item/clothing/mask/gas = 4,
+			/obj/item/clothing/mask/gas/clear = 4, //ChompEdit: Proper implementation of clear gas masks
 			/obj/item/tank/oxygen = 4,
->>>>>>> 6f14ca4510 (Supply Pack Details/Descriptions (#16708))
 			/obj/item/storage/box/masks,
 			/obj/item/storage/box/gloves
 			)
@@ -410,25 +405,6 @@
 	containertype = /obj/structure/closet/crate/large/nanotrasen
 	containername = "Portable stabilizer crate"
 
-<<<<<<< HEAD
-/datum/supply_pack/med/medicalbiosuits
-	contains = list(
-			/obj/item/clothing/head/bio_hood/scientist = 3,
-			/obj/item/clothing/suit/bio_suit/scientist = 3,
-			/obj/item/clothing/suit/bio_suit/virology = 3,
-			/obj/item/clothing/head/bio_hood/virology = 3,
-			/obj/item/clothing/suit/bio_suit/cmo,
-			/obj/item/clothing/head/bio_hood/cmo,
-			/obj/item/clothing/shoes/white = 7,
-			/obj/item/clothing/mask/gas/clear = 7, //ChompEdit: Proper implementation of clear gas masks
-			/obj/item/tank/oxygen = 7,
-			/obj/item/storage/box/masks,
-			/obj/item/storage/box/gloves
-			)
-	cost = 40
-
-=======
->>>>>>> 6f14ca4510 (Supply Pack Details/Descriptions (#16708))
 /datum/supply_pack/med/virologybiosuits
 	name = "Virology biohazard gear"
 	desc = "Three virology biohazard suits plus associated equipment. Requires Medical Equipment access."
