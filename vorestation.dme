@@ -99,13 +99,8 @@
 #include "code\__defines\MC.dm"
 #include "code\__defines\mecha.dm"
 #include "code\__defines\misc.dm"
-<<<<<<< HEAD
 #include "code\__defines\misc_ch.dm"
-#include "code\__defines\misc_vr.dm"
 #include "code\__defines\mob_ch.dm"
-=======
->>>>>>> 21f495a32e (fixes a few plane issues (#16712))
-#include "code\__defines\mobs.dm"
 #include "code\__defines\mobs_vr.dm"
 #include "code\__defines\mobs_yw.dm"
 #include "code\__defines\nif_ch.dm"

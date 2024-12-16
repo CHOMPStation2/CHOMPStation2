@@ -524,8 +524,8 @@ GLOBAL_LIST_INIT(all_volume_channels, list(
 #define ANNOUNCER_NAME "Facility PA"
 
 //For custom species
-#define STARTING_SPECIES_POINTS 2
-#define MAX_SPECIES_TRAITS 5
+#define STARTING_SPECIES_POINTS 1 //CHOMPEdit
+#define MAX_SPECIES_TRAITS 6	//CHOMPEdit - Cap positive traits at 6, given negatives are unlimited.
 
 // Xenochimera thing mostly
 #define REVIVING_NOW		-1
