@@ -27,7 +27,6 @@
 #include "code\__defines\_init.dm"
 #include "code\__defines\_lists.dm"
 #include "code\__defines\_planes+layers.dm"
-#include "code\__defines\_planes+layers_vr.dm"
 #include "code\__defines\_protect.dm"
 #include "code\__defines\_reagents.dm"
 #include "code\__defines\_reagents_ch.dm"
@@ -100,9 +99,12 @@
 #include "code\__defines\MC.dm"
 #include "code\__defines\mecha.dm"
 #include "code\__defines\misc.dm"
+<<<<<<< HEAD
 #include "code\__defines\misc_ch.dm"
 #include "code\__defines\misc_vr.dm"
 #include "code\__defines\mob_ch.dm"
+=======
+>>>>>>> 21f495a32e (fixes a few plane issues (#16712))
 #include "code\__defines\mobs.dm"
 #include "code\__defines\mobs_vr.dm"
 #include "code\__defines\mobs_yw.dm"
