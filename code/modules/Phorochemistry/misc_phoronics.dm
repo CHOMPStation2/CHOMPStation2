@@ -1,8 +1,3 @@
-#define REM 0.2
-#define SOLID 1
-#define LIQUID 2
-#define GAS 3
-
 proc/gaseous_reagent_check(var/mob/living/carbon/human/H) //protective clothing check
 	return (istype(H.wear_suit, /obj/item/clothing/suit/space) && istype(H.head, /obj/item/clothing/head/helmet/space)) \
 		|| (istype(H.wear_suit, /obj/item/clothing/suit/bio_suit) && istype(H.head, /obj/item/clothing/head/bio_hood) && H.gloves) \

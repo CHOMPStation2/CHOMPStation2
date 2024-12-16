@@ -130,6 +130,7 @@
 				. |= dir
 */
 	. = !.
+#undef GET_ZONE_NEIGHBOURS
 // CHOMPEdit End
 
 /turf/simulated/update_air_properties()

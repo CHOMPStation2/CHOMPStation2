@@ -1,6 +1,3 @@
-#define SOLID 1
-#define LIQUID 2
-#define GAS 3
 var/induromol_frequency = rand(700, 750) * 2 + 1 //signallers only increase by .2 increments
 var/induromol_code = rand(1, 50)
 

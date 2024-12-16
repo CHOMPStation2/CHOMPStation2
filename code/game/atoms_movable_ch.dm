@@ -1,6 +1,3 @@
-#define NON_LISTENING_ATOM		0
-#define LISTENING_ATOM			1
-#define LISTENING_PLAYER		2
 //gonna be honest this is really just a ripoff of tg's recursive hearing
 /atom/movable
 	var/recursive_listeners
