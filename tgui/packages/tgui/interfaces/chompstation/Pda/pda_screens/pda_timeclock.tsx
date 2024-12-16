@@ -11,7 +11,7 @@ import {
 } from 'tgui/components';
 import { Window } from 'tgui/layouts';
 
-import { RankIcon } from '../../common/RankIcon';
+import { RankIcon } from '../../../common/RankIcon';
 
 type Data = {
   card: string | null;
