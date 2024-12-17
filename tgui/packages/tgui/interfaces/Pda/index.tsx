@@ -25,18 +25,17 @@ type Data = {
 };
 
 const requirePdaInterface = require.context('./pda_screens', false, /\.tsx$/);
+// CHOMPEdit Start - Add check for chompstation pda_screens
 const requirePdaInterfaceCh = require.context(
   '../chompstation/Pda/pda_screens',
   false,
   /\.tsx$/,
-); // CHOMPAdd Function to check chompstation pda_screens
+);
 function getPdaApp(name: string) {
   let appModule: __WebpackModuleApi.RequireContext;
-  // CHOMPAdd Start - Add check for chompstation pda_screens
   try {
     appModule = requirePdaInterfaceCh(`./${name}.tsx`);
   } catch (err) {
-    // CHOMPADD End
     try {
       appModule = requirePdaInterface(`./${name}.tsx`);
     } catch (err) {
@@ -45,7 +44,7 @@ function getPdaApp(name: string) {
       }
       throw err;
     }
-  }
+  } // CHOMPEdit End
   const Component: () => React.JSX.Element = appModule[name];
   if (!Component) {
     return routingError('missingExport', name);
