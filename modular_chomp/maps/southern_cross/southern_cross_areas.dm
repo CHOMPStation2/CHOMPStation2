@@ -450,7 +450,7 @@
 	flags = AREA_ALLOW_CLOCKOUT
 
 /area/holodeck/alphadeck
-	flags = AREA_ALLOW_CLOCKOUT
+	flags = AREA_ALLOW_CLOCKOUT | AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS
 
 //CHOMPstation Edit 8/27/22 - VR Room for station baby~
 /area/crew_quarters/thirddeck/vrroom
