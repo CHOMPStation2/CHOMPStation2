@@ -786,13 +786,13 @@
 	msg_prey_grab_fail = "%owner steps down and squishes you with their paw, forcing you down to the ground!"
 
 // Special snowflake tails/taurhalves
-//ChompREMOVE No ckey locked items on Chomp //ChaosStation changes - re-add but blast restrictions
+/* //ChompREMOVE No ckey locked items on Chomp
 //spoopylizz: Roiz Lizden
 /datum/sprite_accessory/tail/taur/roiz_long_lizard // Not ACTUALLY a taur, but it uses 32x64 so it wouldn't fit in tails.dmi, and having it as a tail bugs up the sprite.
 	name = "Long Lizard Tail (Roiz Lizden)"
 	icon_state = "roiz_tail_s"
 	do_colouration = 0
-//	ckeys_allowed = list("spoopylizz")
+	ckeys_allowed = list("spoopylizz")
 	hide_body_parts = null
 	clip_mask_icon = null
 	clip_mask_state = null
@@ -803,27 +803,27 @@
 	icon_state = "orcamermaid_s"
 	can_ride = 1
 	do_colouration = 0
-//	ckeys_allowed = list("grallstonefist")
+	ckeys_allowed = list("grallstonefist")
 
 //wickedtemp: Chakat Tempest
 /datum/sprite_accessory/tail/taur/feline/tempest
 	name = "Feline (wickedtemp) (Taur)"
 	icon_state = "tempest_s"
-//	ckeys_allowed = list("wickedtemp")
+	ckeys_allowed = list("wickedtemp")
 	can_loaf = FALSE
 
 //silencedmp5a5: Serdykov Antoz
 /datum/sprite_accessory/tail/taur/wolf/serdy
 	name = "CyberSerdy (silencedmp5a5) (Taur)"
 	icon_state = "serdy_s"
-//	ckeys_allowed = list("silencedmp5a5")
+	ckeys_allowed = list("silencedmp5a5")
 	can_loaf = FALSE
 
 //liquidfirefly: Ariana Scol
 /datum/sprite_accessory/tail/taur/centipede
 	name = "Centipede (liquidfirefly) (Taur)"
 	icon_state = "ariana_s"
-//	ckeys_allowed = list("liquidfirefly")
+	ckeys_allowed = list("liquidfirefly")
 	do_colouration = 0
 
 	msg_owner_disarm_run = "You quickly push %prey to the ground with your leg!"
@@ -846,7 +846,7 @@
 	name = "Alraune (natje) (Taur)"
 	icon_state = "alraune_s"
 	ani_state = "alraune_closed_s"
-//	ckeys_allowed = list("natje")
+	ckeys_allowed = list("natje")
 	do_colouration = 0
 	can_ride = 0
 	clip_mask_state = "taur_clip_mask_alraune"
@@ -872,7 +872,7 @@
 
 	msg_owner_grab_fail = "You step down onto %prey with one of your vines, forcing them onto the ground!"
 	msg_prey_grab_fail = "%owner steps down onto you with one of their vines, squishing you and forcing you onto the ground!"
-//ChompREMOVE End
+*/ //ChompREMOVE End
 
 /datum/sprite_accessory/tail/taur/rat
 	name = "Rat (Taur)"
