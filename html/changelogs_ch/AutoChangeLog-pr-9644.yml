@@ -1,7 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - rscadd: "adds descriptions to supply packs that are visible in the terminal when viewing the pack info"
-  - qol: "changes the 'C' icon in the terminal to show \"Info\""
-  - qol: "fixes a few stray crate access restrictions that were wrongly assigned compared to others"
-  - qol: "cleans up some duplicate supply pack defs"

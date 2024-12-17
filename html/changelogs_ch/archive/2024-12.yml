@@ -114,3 +114,12 @@
   - rscadd: Dullahan engineer chassis code and scaling issue.
   CHOMPStation2StaffMirrorBot:
   - bugfix: proteans can no longer hide and rest. You only can do one or the other
+2024-12-17:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: adds descriptions to supply packs that are visible in the terminal when
+      viewing the pack info
+  - qol: changes the 'C' icon in the terminal to show "Info"
+  - qol: fixes a few stray crate access restrictions that were wrongly assigned compared
+      to others
+  - qol: cleans up some duplicate supply pack defs
+  - bugfix: Export chatlog works under 516
