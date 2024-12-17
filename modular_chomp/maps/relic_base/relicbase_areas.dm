@@ -60,7 +60,7 @@
 /area/surface/outside
 	ambience = AMBIENCE_THOR
 	always_unpowered = TRUE
-	flags = AREA_FLAG_IS_NOT_PERSISTENT
+	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_ALLOW_CLOCKOUT
 	outdoors = OUTDOORS_YES
 
 // The area near the outpost, so POIs don't show up right next to the outpost.
@@ -130,7 +130,7 @@
 	name = "Sesquehanna River"
 	icon_state = "bluenew"
 /area/surface/cave
-	flags = RAD_SHIELDED
+	flags = RAD_SHIELDED | AREA_ALLOW_CLOCKOUT
 	always_unpowered = TRUE
 
 /area/surface/cave
@@ -340,6 +340,7 @@
 
 /area/surface/outpost/main/laundry
 	name = "\improper Main Outpost Laundry Room"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/main/landing
 	name = "\improper Landing Pad Four"
@@ -375,20 +376,24 @@
 /area/surface/outpost/main/pool
 	name = "\improper Main Outpost Pool"
 	icon_state = "pool"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/main/restroom
 	name = "\improper Main Outpost Restroom"
 	icon_state = "toilet"
 	sound_env = SMALL_ENCLOSED
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/main/showers
 	name = "\improper Main Outpost Showers"
 	icon_state = "toilet"
 	sound_env = SMALL_ENCLOSED
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/main/gym
 	name = "\improper Gym"
 	icon_state = "fitness"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/main/garage
 	name = "\improper Disused Garage"
@@ -401,6 +406,7 @@
 /area/surface/outpost/main/crew_quarters
 	name = "\improper Main Outpost Crew Quarters"
 	sound_env = MEDIUM_SOFTFLOOR
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/main/tcomm
 	name = "\improper Main Outpost Telecommunications"
@@ -434,6 +440,7 @@
 	name = "\improper Main Outpost Gateway"
 	icon_state = "teleporter"
 	music = "signal"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/main/gateway
 	name = "\improper Main Outpost Gateway"
@@ -442,6 +449,7 @@
 /area/surface/outpost/main/corridor
 	name = "\improper Main Outpost Corridor"
 	icon_state = "dk_yellow"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/main/corridor/dorms
 	name = "\improper Main Outpost Dorm Corridor"
@@ -461,9 +469,11 @@
 /area/surface/outpost/main/bar
 	name = "\improper Club"
 	icon_state = "bar"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/main/dorms
 	name = "\improper Main Outpost Dorms"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/main/dorms/dorm_1
 	name = "\improper Apartment One"
@@ -529,6 +539,7 @@
 	name = "\improper Main Outpost Airlock"
 	icon_state = "red"
 	ambience = AMBIENCE_THOR
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/main/airlock/left_one
 	name = "\improper Outpost Left Wing Airlock One"
@@ -597,16 +608,20 @@
 /area/surface/outpost/civilian/fishing
 	name = "\improper Private Cabin"
 	icon_state = "storage"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/civilian/pool
 	name = "\improper Pool"
 	icon_state = "pool"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/civilian/sauna
 	name = "\improper Sauna"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/civilian/sauna/cryosauna
 	name = "\improper Cryosauna"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/civilian/emergency_storage
 	flags = RAD_SHIELDED
@@ -666,7 +681,7 @@ z
 	icon_state = "shuttle"
 	requires_power = 0
 	dynamic_lighting = 1
-	flags = RAD_SHIELDED
+	flags = RAD_SHIELDED | AREA_ALLOW_CLOCKOUT
 
 /area/turbolift/start
 	name = "\improper Turbolift Start"
@@ -982,12 +997,14 @@ z
 /area/crew_quarters/seconddeck/locker
 	name = "\improper Locker Room"
 	icon_state = "locker"
+	flags = AREA_ALLOW_CLOCKOUT
 
 //CHOMPStation Edit Start KSC 1/19/21 - Added area for new GYM
 
 /area/crew_quarters/seconddeck/gym
 	name = "\improper Station Gym"
 	icon_state = "fitness"
+	flags = AREA_ALLOW_CLOCKOUT
 
 //CHOMPStation Edit End
 
@@ -995,10 +1012,12 @@ z
 	name = "\improper Locker Toilets"
 	icon_state = "toilet"
 	sound_env = SMALL_ENCLOSED
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/crew_quarters/seconddeck/barrestroom
 	name = "\improper Bar Restroom"
 	icon_state = "bar"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/crew_quarters/heads/sc/
 	name = "\improper Command - Head Office"
@@ -1051,51 +1070,63 @@ z
 /area/hallway/primary/seconddeck/stairwell
 	name = "\improper Second Deck Central Stairwell Access"
 	icon_state = "hallC"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/seconddeck/fore
 	name = "\improper Second Deck Fore Hallway"
 	icon_state = "hallF"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/seconddeck/fpcenter
 	name = "\improper Second Deck Fore Port Central Hallway"
 	icon_state = "hallC1"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/seconddeck/fscenter
 	name = "\improper Second Deck Fore Starboard Central Hallway"
 	icon_state = "hallC2"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/seconddeck/apcenter
 	name = "\improper Second Deck Aft Port Central Hallway"
 	icon_state = "hallC3"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/seconddeck/ascenter
 	name = "\improper Second Deck Aft Starboard Central Hallway"
 	icon_state = "hallC4"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/seconddeck/aft
 	name = "\improper Second Deck Aft Hallway"
 	icon_state = "hallA"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/seconddeck/port
 	name = "\improper Second Deck Port Hallway"
 	icon_state = "hallP"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/seconddeck/starboard
 	name = "\improper Second Deck Starboard Hallway"
 	icon_state = "hallS"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/seconddeck/dockhallway
 	name = "\improper Departures Tram Station"
 	icon_state = "docking_hallway"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/secondary/seconddeck/research_medical
 	name = "Research Medical Hallway"
 	icon_state = "hallS"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/medical/foyer
 	name = "\improper Medbay Foyer"
 	icon_state = "medbay2"
 	music = 'sound/ambience/signal.ogg'
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/medical/medsci
 	name = "\improper Medical Science Hallway"
@@ -1246,36 +1277,44 @@ z
 /area/hallway/primary/thirddeck/central
 	name = "\improper Third Deck Port Hallway"
 	icon_state = "hallC"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/thirddeck/port
 	name = "\improper Third Deck Port Hallway"
 	icon_state = "hallP"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/thirddeck/starboard
 	name = "\improper Third Deck Starboard Hallway"
 	icon_state = "hallS"
+	flags = AREA_ALLOW_CLOCKOUT
 
 //CHOMPStation Edit Start TFF 6/2/20 KC - Added new hallway for dorms. 11/20/20 KC - Added more areas for gateway and halls.
 
 /area/hallway/primary/thirddeck/aftportcentral
 	name = "\improper Third Deck Central Aft Port Hallway"
 	icon_state = "hallC"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/thirddeck/aftstarboardcentral
 	name = "\improper Third Deck Central Aft Starboard Hallway"
 	icon_state = "hallC"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/thirddeck/stationgateway
 	name = "\improper Gateway"
 	icon_state = "teleporter"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/thirddeck/aft
 	name = "\improper Third Deck Aft Hallway"
 	icon_state = "hallA"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/thirddeck/aftdoorm
 	name = "\improper Third Deck Aft Doorm Hallway"
 	icon_state = "docking_hallway"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/maintenance/thirddeck/dormsport
 	name = "Third Deck Aft Starboard Maintenance"

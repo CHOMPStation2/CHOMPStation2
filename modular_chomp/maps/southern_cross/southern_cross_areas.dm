@@ -22,7 +22,7 @@
 	icon_state = "shuttle"
 	requires_power = 0
 	dynamic_lighting = 1
-	flags = RAD_SHIELDED
+	flags = RAD_SHIELDED | AREA_ALLOW_CLOCKOUT
 
 /area/turbolift/start
 	name = "\improper Turbolift Start"
@@ -138,10 +138,12 @@
 
 /area/crew_quarters/toilet/firstdeck
 	name = "\improper First Deck Restroom"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/maintenance/firstdeck
 	name = "First Deck Maintenance"
 	icon_state = "maintcentral"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/maintenance/firstdeck/aftstarboard
 	name = "First Deck Aft Starboard Maintenance"
@@ -176,47 +178,57 @@
 /area/hallway/primary/firstdeck/elevator
 	name = "\improper First Deck Central Elevator Access"
 	icon_state = "hallC"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/firstdeck/fore
 	name = "\improper First Deck Fore Hallway"
 	icon_state = "hallF"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/firstdeck/fpcenter
 	name = "\improper First Deck Fore Port Central Hallway"
 	icon_state = "hallC1"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/firstdeck/fscenter
 	name = "\improper First Deck Fore Starboard Central Hallway"
 	icon_state = "hallC2"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/firstdeck/apcenter
 	name = "\improper First Deck Aft Port Central Hallway"
 	icon_state = "hallC3"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/firstdeck/ascenter
 	name = "\improper First Deck Aft Starboard Central Hallway"
 	icon_state = "hallC4"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/firstdeck/aft
 	name = "\improper First Deck Aft Hallway"
 	icon_state = "hallA"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/firstdeck/port
 	name = "\improper First Deck Port Hallway"
 	icon_state = "hallP"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/firstdeck/starboard
 	name = "\improper First Deck Starboard Hallway"
 	icon_state = "hallS"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/firstdeck/auxdockaft
 	name = "\improper First Deck Aft Auxiliary Dock"
 	icon_state = "docking_hallway"
-	flags = AREA_FORBID_EVENTS
+	flags = AREA_FORBID_EVENTS | AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/firstdeck/auxdockfore
 	name = "\improper First Deck Fore Auxiliary Dock"
 	icon_state = "docking_hallway"
+	flags = AREA_ALLOW_CLOCKOUT
 
 //CHOMPStation Edit. Two new areas for the vault.
 /area/hallway/primary/firstdeck/vaultcheckpoint
@@ -357,9 +369,11 @@
 /area/teleporter/firstdeck
 	icon_state = "red"
 	name = "Teleporter Bay Core"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/teleporter/firstdeck/prep
 	name = "Teleporter Bay Prep"
+	flags = AREA_ALLOW_CLOCKOUT
 
 
 //Deck Two (Z-2)
@@ -414,25 +428,35 @@
 /area/crew_quarters/seconddeck/gym
 	name = "\improper Station Gym"
 	icon_state = "fitness"
+	flags = AREA_ALLOW_CLOCKOUT
 
 //CHOMPstation Edit 8/8/22 - Added a Art Gallery and some missing areas Kassc wanted me to add
 /area/crew_quarters/seconddeck/artgallery
 	name = "\improper Art Gallery"
 	icon_state = "art"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/crew_quarters/seconddeck/artsupplies
 	name = "\improper Art Supplies"
 	icon_state = "artsupply"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/crew_quarters/seconddeck/gameroom
 	name = "\improper Game Room"
 	icon_state = "gaming"
+	flags = AREA_ALLOW_CLOCKOUT
+
+/area/holodeck_control
+	flags = AREA_ALLOW_CLOCKOUT
+
+/area/holodeck/alphadeck
+	flags = AREA_ALLOW_CLOCKOUT
 
 //CHOMPstation Edit 8/27/22 - VR Room for station baby~
 /area/crew_quarters/thirddeck/vrroom
 	name = "\improper Virtual Reality Room"
 	icon_state = "gaming"
-	flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO //Depending on the video game, you might still get figuative cancer
+	flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO | AREA_ALLOW_CLOCKOUT //Depending on the video game, you might still get figuative cancer
 
 //CHOMPStation Edit End
 
@@ -440,10 +464,12 @@
 	name = "\improper Locker Toilets"
 	icon_state = "toilet"
 	sound_env = SMALL_ENCLOSED
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/crew_quarters/seconddeck/barrestroom
 	name = "\improper Bar Restroom"
 	icon_state = "bar"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/crew_quarters/heads/sc/
 	name = "\improper Command - Head Office"
@@ -496,51 +522,63 @@
 /area/hallway/primary/seconddeck/stairwell
 	name = "\improper Second Deck Central Stairwell Access"
 	icon_state = "hallC"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/seconddeck/fore
 	name = "\improper Second Deck Fore Hallway"
 	icon_state = "hallF"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/seconddeck/fpcenter
 	name = "\improper Second Deck Fore Port Central Hallway"
 	icon_state = "hallC1"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/seconddeck/fscenter
 	name = "\improper Second Deck Fore Starboard Central Hallway"
 	icon_state = "hallC2"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/seconddeck/apcenter
 	name = "\improper Second Deck Aft Port Central Hallway"
 	icon_state = "hallC3"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/seconddeck/ascenter
 	name = "\improper Second Deck Aft Starboard Central Hallway"
 	icon_state = "hallC4"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/seconddeck/aft
 	name = "\improper Second Deck Aft Hallway"
 	icon_state = "hallA"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/seconddeck/port
 	name = "\improper Second Deck Port Hallway"
 	icon_state = "hallP"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/seconddeck/starboard
 	name = "\improper Second Deck Starboard Hallway"
 	icon_state = "hallS"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/seconddeck/dockhallway
 	name = "\improper Shuttle Dock Hallway"
 	icon_state = "docking_hallway"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/secondary/seconddeck/research_medical
 	name = "Research Medical Hallway"
 	icon_state = "hallS"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/medical/foyer
 	name = "\improper Medbay Foyer"
 	icon_state = "medbay2"
 	music = 'sound/ambience/signal.ogg'
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/medical/first_aid_station/seconddeck/
 	name = "\improper First-Aid Station"
@@ -687,36 +725,44 @@
 /area/hallway/primary/thirddeck/central
 	name = "\improper Third Deck Port Hallway"
 	icon_state = "hallC"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/thirddeck/port
 	name = "\improper Third Deck Port Hallway"
 	icon_state = "hallP"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/thirddeck/starboard
 	name = "\improper Third Deck Starboard Hallway"
 	icon_state = "hallS"
+	flags = AREA_ALLOW_CLOCKOUT
 
 //CHOMPStation Edit Start TFF 6/2/20 KC - Added new hallway for dorms. 11/20/20 KC - Added more areas for gateway and halls.
 
 /area/hallway/primary/thirddeck/aftportcentral
 	name = "\improper Third Deck Central Aft Port Hallway"
 	icon_state = "hallC"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/thirddeck/aftstarboardcentral
 	name = "\improper Third Deck Central Aft Starboard Hallway"
 	icon_state = "hallC"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/thirddeck/stationgateway
 	name = "\improper Third Deck Central Gateway"
 	icon_state = "teleporter"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/thirddeck/aft
 	name = "\improper Third Deck Aft Hallway"
 	icon_state = "hallA"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/thirddeck/aftdoorm
 	name = "\improper Third Deck Aft Doorm Hallway"
 	icon_state = "docking_hallway"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/maintenance/thirddeck/dormsport
 	name = "Third Deck Aft Starboard Maintenance"
@@ -730,6 +776,7 @@
 /area/maintenance/thirddeck/dormsstarboard/maintbar
 	name = "Third Deck Aft Starboard Speakeasy"
 	icon_state = "asmaint"
+	flags = AREA_ALLOW_CLOCKOUT
 //CHOMPedit end
 /area/maintenance/thirddeck/dormsaft
 	name = "Third Deck Aft Starboard Maintenance"
@@ -1712,7 +1759,7 @@ End Chompstation Edit*/
 /area/maintenance/bar/dorms
 	name = "Maintenance Bar Dorms"
 	icon_state = "Sleep"
-	flags = RAD_SHIELDED | AREA_SOUNDPROOF |AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING
+	flags = RAD_SHIELDED | AREA_SOUNDPROOF |AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING | AREA_ALLOW_CLOCKOUT
 
 /area/maintenance/bar/dorms/dorm_1
 	name = "Maintenance Deck Bar Dorms 1"
@@ -1747,3 +1794,4 @@ End Chompstation Edit*/
 /area/maintenance/zerobar
 	name = "Abandoned Bar"
 	icon_state = "maint_bar"
+	flags = AREA_ALLOW_CLOCKOUT

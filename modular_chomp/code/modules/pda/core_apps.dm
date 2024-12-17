@@ -118,7 +118,8 @@
 	var/datum/job/foundjob = job_master.GetJob(pda.id.rank)
 	if(!foundjob)
 		return
-	if((get_area(pdaUser).flags & TIMECLOCK_RESTRICTED))
+	//If we're not in an area that allows clockout and not in a belly, shouldn't be able to clock out.
+	if(!get_area(pdaUser).flag_check(AREA_ALLOW_CLOCKOUT) && !isbelly(pdaUser.loc))
 		to_chat(pdaUser, span_notice("You cannot clock out from your PDA in this area"))
 		return
 	var/new_dept = foundjob.pto_type || PTO_CIVILIAN
