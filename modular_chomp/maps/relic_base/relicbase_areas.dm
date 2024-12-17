@@ -1008,6 +1008,12 @@ z
 
 //CHOMPStation Edit End
 
+/area/holodeck_control
+	flags = AREA_ALLOW_CLOCKOUT
+
+/area/holodeck/alphadeck
+	flags = AREA_ALLOW_CLOCKOUT | AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS
+
 /area/crew_quarters/seconddeck/locker/locker_toilet
 	name = "\improper Locker Toilets"
 	icon_state = "toilet"
