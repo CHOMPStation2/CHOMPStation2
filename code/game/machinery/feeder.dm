@@ -107,13 +107,13 @@
 
 	if(beaker)
 		if(beaker.reagents && beaker.reagents.reagent_list.len)
-			. += "<span class='notice'>Inserted is \a [beaker] with [beaker.reagents.total_volume] units of liquid.</span>"
+			. += span_notice("Inserted is \a [beaker] with [beaker.reagents.total_volume] units of liquid.")
 		else
-			. += "<span class='notice'>Inserted is an empty [beaker].</span>"
+			. += span_notice("Inserted is an empty [beaker].")
 	else
-		. += "<span class='notice'>No container is inserted.</span>"
+		. += span_notice("No container is inserted.")
 
-	. += "<span class='notice'>[attached ? attached : "No one"] is being fed by it.</span>"
+	. += span_notice("[attached ? attached : "No one"] is being fed by it.")
 
 /obj/machinery/feeder/CanPass(atom/movable/mover, turf/target, height = 0, air_group = 0)
 	if(height && istype(mover) && mover.checkpass(PASSTABLE)) //allow bullets, beams, thrown objects, mice, drones, and the like through.

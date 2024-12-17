@@ -18,7 +18,11 @@
 
 /obj/item/storage/box/glasses
 	name = "box of glasses"
-	can_hold = list(/obj/item/reagent_containers/food/drinks/glass2)
+	can_hold = list(/obj/item/reagent_containers/food/drinks/glass2,
+		/obj/item/reagent_containers/food/drinks/cup,
+		/obj/item/reagent_containers/food/drinks/tall,
+		/obj/item/reagent_containers/food/drinks/grande,
+		/obj/item/reagent_containers/food/drinks/venti)
 	starts_with = list(/obj/item/reagent_containers/food/drinks/glass2 = 7)
 
 /obj/item/storage/box/glasses/square
@@ -82,3 +86,15 @@
 /obj/item/storage/box/glasses/coffeemug
 	name = "box of coffee mugs"
 	starts_with = list(/obj/item/reagent_containers/food/drinks/glass2/coffeemug = 7)
+
+/obj/item/storage/box/glasses/coffeecup_tall
+	name = "box of tall cups"
+	starts_with = list(/obj/item/reagent_containers/food/drinks/tall = 7)
+
+/obj/item/storage/box/glasses/coffeecup_grande
+	name = "box of grande cups"
+	starts_with = list(/obj/item/reagent_containers/food/drinks/grande = 7)
+
+/obj/item/storage/box/glasses/coffeecup_venti
+	name = "box of venti cups"
+	starts_with = list(/obj/item/reagent_containers/food/drinks/venti = 7)

@@ -56,7 +56,7 @@
 
 	needs_reload = TRUE
 	reload_max = 7		// Not the best default, but it fits the pistol
-	ai_holder_type = /datum/ai_holder/simple_mob/merc/eclipse/ranged
+	ai_holder_type = /datum/ai_holder/hostile/ranged/robust/eclipse
 
 	loot_list = list(/obj/item/slime_extract/sepia  = 1,
 		/obj/item/bone/skull = 100
@@ -66,6 +66,7 @@
 	special_attack_min_range = 2
 	special_attack_max_range = 7
 	var/has_heal_droid = FALSE
+	var/specialattackprojectile = /obj/item/projectile/energy/phase/bolt
 
 //Want a self heal for a spefic dude, and to increase diffculty of some POIs
 /mob/living/simple_mob/humanoid/eclipse/handle_special()
@@ -85,9 +86,12 @@
 ////////////////////////////////
 //		Stealing Merc AI Types
 ////////////////////////////////
-/datum/ai_holder/simple_mob/merc/eclipse
-	threaten = FALSE
+/datum/ai_holder/hostile/ranged/robust/eclipse
 	vision_range = 7
+	conserve_ammo = TRUE
+	intelligence_level = AI_SMART
+	use_astar = TRUE
+	pointblank = TRUE
 
 /datum/ai_holder/simple_mob/merc/eclipse/hunter
 	vision_range = 7
@@ -380,7 +384,7 @@
 
 	var/poison_chance = 50
 	var/poison_per_bite = 20
-	var/poison_type = "hyperzine"
+	var/poison_type = REAGENT_ID_HYPERZINE
 
 
 //////////////////////////////////////////////
@@ -402,7 +406,7 @@
 	size_multiplier = 1.25
 	var/poison_chance = 100
 	var/poison_per_bite = 4
-	var/poison_type = "stoxin"
+	var/poison_type = REAGENT_ID_STOXIN
 
 	melee_attack_delay = 3
 
@@ -744,10 +748,10 @@
 	var/obj/item/reagent_containers/glass/beaker/bluespace/B1 = new(src)
 	var/obj/item/reagent_containers/glass/beaker/bluespace/B2 = new(src)
 
-	B1.reagents.add_reagent("cryoslurry", 150)
-	B1.reagents.add_reagent("potassium", 150)
-	B2.reagents.add_reagent("phosphorous", 150)
-	B2.reagents.add_reagent("sugar", 150)
+	B1.reagents.add_reagent(REAGENT_ID_CRYOSLURRY, 150)
+	B1.reagents.add_reagent(REAGENT_ID_POTASSIUM, 150)
+	B2.reagents.add_reagent(REAGENT_ID_PHOSPHORUS, 150)
+	B2.reagents.add_reagent(REAGENT_ID_SUGAR, 150)
 
 	detonator = new/obj/item/assembly_holder/timer_igniter(src)
 
@@ -802,35 +806,12 @@
 	special_attack_max_range = 7
 
 	projectiletype = /obj/item/projectile/energy/electrode
+	specialattackprojectile = /obj/item/projectile/energy/flash
 
 /mob/living/simple_mob/humanoid/eclipse/solar/disablernoodle/do_special_attack(atom/A)
-	visible_message(span_critical("\The [src] pulls out a flash!"))
-	if(isliving(A))
-		var/mob/living/L = A
-		if(iscarbon(L))
-			var/mob/living/carbon/C = L
-			if(C.stat != DEAD)
-				var/safety = C.eyecheck()
-				if(safety <= 0)
-					var/flash_strength = 8
-					if(ishuman(C))
-						var/mob/living/carbon/human/H = C
-						flash_strength *= H.species.flash_mod
-						if(flash_strength > 0)
-							to_chat(H, span_critical("You are disoriented by \the [src]!"))
-							H.eye_blurry = max(H.eye_blurry, flash_strength + 5)
-							H.flash_eyes()
-							H.apply_damage(flash_strength * H.species.flash_burn/5, BURN, BP_HEAD, 0, 0, "Photon burns")
-
-		else if(issilicon(L))
-			if(isrobot(L))
-				var/flashfail = FALSE
-				var/mob/living/silicon/robot/R = L
-				if(!flashfail)
-					to_chat(R, span_critical("Your optics are scrambled by \the [src]!"))
-					R.Confuse(10)
-					R.flash_eyes()
-
+	visible_message(span_warning("\The [src] begins to aim a flare gun!"))
+	Beam(A, icon_state = "sat_beam", time = 3 SECONDS, maxdistance = INFINITY)
+	addtimer(CALLBACK(src, PROC_REF(special_projectile), A), 3 SECONDS, TIMER_DELETE_ME)
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle //Bouncing bullet extreme
 	name = "Lunar Eclipse Silver Serpent"
@@ -847,13 +828,12 @@
 	special_attack_cooldown = 30 SECONDS
 	special_attack_min_range = 1
 	special_attack_max_range = 7
+	specialattackprojectile = /obj/item/projectile/beam/energy_net
 
-/mob/living/simple_mob/humanoid/eclipse/solar/disablernoodle/do_special_attack(atom/A) //I am bringing back the netgun attack. 4 seconds
+/mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle/do_special_attack(atom/A) //I am bringing back the netgun attack. 4 seconds
 	visible_message(span_warning("\The [src] begins to create an energy net!"))
 	Beam(A, icon_state = "sat_beam", time = 3 SECONDS, maxdistance = INFINITY)
-	sleep(40)
-	var/obj/item/projectile/P = new /obj/item/projectile/beam/energy_net(get_turf(src))
-	P.launch_projectile(A, BP_TORSO, src)
+	addtimer(CALLBACK(src, PROC_REF(special_projectile), A), 3 SECONDS, TIMER_DELETE_ME)
 
 
 /mob/living/simple_mob/humanoid/eclipse/solar/plant
@@ -873,12 +853,20 @@
 	special_attack_max_range = 7
 
 /mob/living/simple_mob/humanoid/eclipse/solar/plant/do_special_attack(atom/A)
-	var/mob/living/carbon/human/H = A
+	visible_message(span_warning("\The [src]'s vines spread out!"))
+	Beam(A, icon_state = "vine", time = 3 SECONDS, maxdistance = INFINITY)
+	if(ishuman(A))
+		addtimer(CALLBACK(src, PROC_REF(itemyoink), A), 3 SECONDS, TIMER_DELETE_ME)
+
+
+/mob/living/simple_mob/humanoid/eclipse/proc/itemyoink(mob/living/carbon/human/H)
+	if(!H)
+		return
 	var/obj/item/I = H.get_active_hand()
 	H.drop_item()
 	if(I)
 		I.throw_at(src, 2, 4) // Just yoinked.
-		src.visible_message(span_danger("The [name] heaves, pulling \the [A]'s weapon from their hands!"))
+		src.visible_message(span_danger("The [name] heaves, pulling \the [H]'s weapon from their hands!"))
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/experimenter
 	name = "Lunar Eclipse Experimenter"
@@ -894,16 +882,17 @@
 	special_attack_min_range = 1
 	special_attack_max_range = 7
 
-	projectiletype = /obj/item/projectile/energy/spikeenergy_ball //using the weapon found upon tyr
+	projectiletype = /obj/item/projectile/energy/wp_shotgun //using the weapon found upon tyr
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/experimenter/do_special_attack(atom/A)
 	visible_message(span_danger("The [src]'s gauntlet glows silver!"))
-	addtimer(CALLBACK(src, PROC_REF(gravity_pull), A), 1 SECOND, TIMER_DELETE_ME)
+	if(isliving(A))
+		addtimer(CALLBACK(src, PROC_REF(gravity_pull), A), 3 SECOND, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/humanoid/eclipse/proc/gravity_pull(atom/A)
-	var/D = src
-	var/mob/living/carbon/human/H = A
-	H.throw_at(D, 2, 4) // Just yoinked.
+/mob/living/simple_mob/humanoid/eclipse/proc/gravity_pull(mob/living/L)
+	if(!L)
+		return
+	L.throw_at(src, 2, 4) // Just yoinked.
 
 //The Precursor intative big folks
 /mob/living/simple_mob/humanoid/eclipse/lunar/titanhunter //lunar melee unit
@@ -945,6 +934,7 @@
 	special_attack_cooldown = 15 SECONDS
 	special_attack_min_range = 1
 	special_attack_max_range = 9
+	specialattackprojectile = /obj/item/projectile/arc/radioactive/weak
 
 
 /obj/item/projectile/arc/radioactive/weak
@@ -953,9 +943,8 @@
 /mob/living/simple_mob/humanoid/eclipse/solar/nuclear/do_special_attack(atom/A)
 	visible_message(span_warning("\The [src] begins to glow green!"))
 	Beam(A, icon_state = "sat_beam", time = 3 SECONDS, maxdistance = INFINITY)
-	sleep(30)
-	var/obj/item/projectile/P = new /obj/item/projectile/beam/energy_net(get_turf(src))
-	P.launch_projectile(A, BP_TORSO, src)
+	addtimer(CALLBACK(src, PROC_REF(special_projectile), A), 3 SECONDS, TIMER_DELETE_ME)
+
 
 //Vistors of the other
 //One is a familiar shape from Sif, the other is new and anomalous based.
@@ -978,47 +967,7 @@
 	melee_attack_delay = 1.5
 
 /mob/living/simple_mob/humanoid/eclipse/solar/froststalker/do_special_attack(atom/A)
-	// Teleport attack.
-	if(!A)
-		to_chat(src, span_warning("There's nothing to teleport to."))
-		return FALSE
-
-	var/list/nearby_things = range(4, A)
-	var/list/valid_turfs = list()
-
-	// All this work to just go to a non-dense tile.
-	for(var/turf/potential_turf in nearby_things)
-		var/valid_turf = TRUE
-		if(potential_turf.density)
-			continue
-		for(var/atom/movable/AM in potential_turf)
-			if(AM.density)
-				valid_turf = FALSE
-		if(valid_turf)
-			valid_turfs.Add(potential_turf)
-
-	if(!(valid_turfs.len))
-		to_chat(src, span_warning("There wasn't an unoccupied spot to teleport to."))
-		return FALSE
-
-	var/turf/target_turf = pick(valid_turfs)
-	var/turf/T = get_turf(src)
-
-	var/datum/effect/effect/system/spark_spread/s1 = new /datum/effect/effect/system/smoke_spread/frost
-	s1.set_up(5, 1, T)
-	var/datum/effect/effect/system/spark_spread/s2 = new /datum/effect/effect/system/smoke_spread
-	s2.set_up(5, 1, target_turf)
-
-
-	T.visible_message(span_warning("\The [src] vanishes!"))
-	s1.start()
-
-	forceMove(target_turf)
-	playsound(target_turf, 'sound/effects/phasein.ogg', 50, 1)
-	to_chat(src, span_notice("You teleport to \the [target_turf]."))
-
-	target_turf.visible_message(span_warning("\The [src] appears!"))
-	s2.start()
+	teleport(A)
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/abyssdiver
 	name = "Lunar Eclipse Abyss Diver"
@@ -1027,19 +976,31 @@
 	desc = "A strange being wearing a blunt resistaint coat."
 	projectiletype = /obj/item/projectile/scatter/shotgun
 	icon_state = "eclipse_diver" //note to self try to redo this sprite sometime
-	reload_count = 1
+	reload_max = 1
+	reload_time = 2 SECONDS
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/abyssdiver/do_special_attack(atom/A)
-	var/mob/living/L = A
 	visible_message(span_danger("\The [src] begins to mess with a wrist mounted device."))
-	sleep(30)
-	if(isliving(A))
-		if(iscarbon(L))
-			return
-		else if(issilicon(L))
-			if(isrobot(L))
-				L.Weaken(10)
+	if(isrobot(A))
+		addtimer(CALLBACK(src, PROC_REF(remote_shutdown), A), 3 SECONDS, TIMER_DELETE_ME)
 	else if(istype(A, /obj/mecha))
-		var/obj/mecha/M = A
-		visible_message(span_critical("\The [M] is remotly hacked and ejects [M.occupant]!"))
-		M.go_out()
+		addtimer(CALLBACK(src, PROC_REF(remote_eject), A), 3 SECONDS, TIMER_DELETE_ME)
+
+/mob/living/simple_mob/humanoid/eclipse/proc/remote_shutdown(var/mob/living/silicon/robot/L)
+	if(!L)
+		return
+	L.Weaken(10)
+
+
+/mob/living/simple_mob/humanoid/eclipse/proc/remote_eject(obj/mecha/M)
+	if(!M)
+		return
+	visible_message(span_critical("\The [M] is remotly hacked and ejects [M.occupant]!"))
+	M.go_out()
+
+
+/mob/living/simple_mob/humanoid/eclipse/proc/special_projectile(atom/A)
+	if(!A)
+		return
+	var/obj/item/projectile/P = new specialattackprojectile(get_turf(src))
+	P.launch_projectile(A, BP_TORSO, src)

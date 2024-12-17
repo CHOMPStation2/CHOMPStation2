@@ -249,7 +249,7 @@
 
 /obj/item/pen/reagent/sleepy/New()
 	..()
-	reagents.add_reagent("chloralhydrate", 22)	//Used to be 100 sleep toxin//30 Chloral seems to be fatal, reducing it to 22./N
+	reagents.add_reagent(REAGENT_ID_CHLORALHYDRATE, 22)	//Used to be 100 sleep toxin//30 Chloral seems to be fatal, reducing it to 22./N
 
 
 /*
@@ -260,8 +260,8 @@
 
 /obj/item/pen/reagent/paralysis/New()
 	..()
-	reagents.add_reagent("zombiepowder", 5)
-	reagents.add_reagent("cryptobiolin", 10)
+	reagents.add_reagent(REAGENT_ID_ZOMBIEPOWDER, 5)
+	reagents.add_reagent(REAGENT_ID_CRYPTOBIOLIN, 10)
 
 /*
  * Chameleon Pen

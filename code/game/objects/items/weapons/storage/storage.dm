@@ -484,7 +484,7 @@
 	//CHOMPEdit - Getting around to proper object flags
 	if(HAS_TRAIT(W, TRAIT_NODROP)) //SHOULD be handled in unEquip, but better safe than sorry.
 		if(!stop_messages)
-			to_chat(usr, "<span class='warning'>\the [W] is stuck to your hand, you can't put it in \the [src]!</span>")
+			to_chat(usr, span_warning("\the [W] is stuck to your hand, you can't put it in \the [src]!"))
 		return FALSE
 
 	return 1

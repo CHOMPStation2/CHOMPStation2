@@ -78,12 +78,12 @@
 			return
 
 		if(container && container.reagents)
-			if(!container.reagents.has_reagent("nutriment", (total*efficiency)))
+			if(!container.reagents.has_reagent(REAGENT_ID_NUTRIMENT, (total*efficiency)))
 				playsound(src, "sound/machines/buzz-sigh.ogg", 25, 0)
 				to_chat(user, span_warning("Not enough nutriment available!"))
 				return
 
-			container.reagents.remove_reagent("nutriment", (total*efficiency))
+			container.reagents.remove_reagent(REAGENT_ID_NUTRIMENT, (total*efficiency))
 
 			update_use_power(USE_POWER_ACTIVE)
 			printing = TRUE
@@ -224,7 +224,7 @@
 	playsound(src, pick('sound/effects/Glassbr1.ogg', 'sound/effects/Glassbr2.ogg', 'sound/effects/Glassbr3.ogg'), 50, 1)
 
 	message_admins("[src] attempted to create an EX donk pocket at [x], [y], [z], last touched by [fingerprintslast]")
-	log_game("[src] attempted to create an EX donk pocket at [x], [y], [z], last touched by [fingerprintslast]. (<A HREF='?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[x];Y=[y];Z=[z]'>JMP</a>)", 1)
+	log_game("[src] attempted to create an EX donk pocket at [x], [y], [z], last touched by [fingerprintslast]. (<A href='byond://?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[x];Y=[y];Z=[z]'>JMP</a>)", 1)
 
 	sleep(6 SECONDS) // GET OUT, GET OUT
 	stat = BROKEN

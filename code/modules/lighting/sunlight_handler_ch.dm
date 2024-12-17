@@ -391,5 +391,3 @@
 		return TRUE
 	else
 		return FALSE
-
-#undef GENERATE_MISSING_CORNERS

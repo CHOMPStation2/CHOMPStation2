@@ -96,11 +96,12 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 
 		if(ishuman(C.mob))
 			var/mob/living/carbon/human/H = C.mob
-			var/strangername = H.real_name //CHOMPEdit
+			// CHOMPEdit Start
+			var/strangername = H.real_name
 			if(data_core && data_core.general)
 				if(!find_general_record("name", H.real_name))
-					if(!find_record("name", H.real_name, data_core.hidden_general)) //CHOMPEdit
-						strangername = "unknown" //CHOMPEdit
+					if(!find_record("name", H.real_name, data_core.hidden_general))
+						strangername = "unknown"
 			name = strangername
 			species = "[H.custom_species ? H.custom_species : H.species.name]"
 			ooc_notes = H.ooc_notes
@@ -179,12 +180,12 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 
 			flavor_text = R.flavor_text
 
-		//CHOMPEdit Start
 		if(istype(C.mob, /mob/living/silicon/pai))
 			var/mob/living/silicon/pai/P = C.mob
 			name = P.name
 			species = "pAI"
 			ooc_notes = P.ooc_notes
+			// CHOMPEdit Start
 			if(P.ooc_notes_style && (P.ooc_notes_favs || P.ooc_notes_likes || P.ooc_notes_maybes || P.ooc_notes_dislikes))
 				ooc_notes = P.ooc_notes + "\n\n"
 				ooc_notes_favs = P.ooc_notes_favs
@@ -201,11 +202,13 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 					ooc_notes += "\n\nMAYBES\n\n[P.ooc_notes_maybes]"
 				if(P.ooc_notes_dislikes)
 					ooc_notes += "\n\nDISLIKES\n\n[P.ooc_notes_dislikes]"
+			//CHOMPEdit End
 			flavor_text = P.flavor_text
 
 		if(istype(C.mob, /mob/living/simple_mob))
 			var/mob/living/simple_mob/S = C.mob
 			name = S.name
+			// CHOMPEdit Start
 			species = S.character_directory_species()
 			ooc_notes = S.ooc_notes
 			if(S.ooc_notes_style && (S.ooc_notes_favs || S.ooc_notes_likes || S.ooc_notes_maybes || S.ooc_notes_dislikes))
@@ -224,8 +227,8 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 					ooc_notes += "\n\nMAYBES\n\n[S.ooc_notes_maybes]"
 				if(S.ooc_notes_dislikes)
 					ooc_notes += "\n\nDISLIKES\n\n[S.ooc_notes_dislikes]"
+			// CHOMPEdit End
 			flavor_text = S.desc
-		//CHOMPEdit End
 
 		// It's okay if we fail to find OOC notes and flavor text
 		// But if we can't find the name, they must be using a non-compatible mob type currently.

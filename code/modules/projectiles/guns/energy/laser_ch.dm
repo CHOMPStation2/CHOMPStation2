@@ -77,7 +77,7 @@
 	w_class = ITEMSIZE_SMALL
 	maxcharge = 7200
 	charge_amount = 20
-	matter = list("metal" = 350, "glass" = 50)
+	matter = list(MAT_METAL = 350, MAT_GLASS = 50)
 	preserve_item = 1
 	origin_tech = list(TECH_POWER = 6)
 

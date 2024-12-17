@@ -775,11 +775,17 @@
 		if(istext(belly_data["belly_fullscreen_color2"]))
 			var/new_belly_fullscreen_color2 = sanitize_hexcolor(belly_data["belly_fullscreen_color2"],new_belly.belly_fullscreen_color2)
 			new_belly.belly_fullscreen_color2 = new_belly_fullscreen_color2
+		else if(istext(belly_data["belly_fullscreen_color_secondary"])) // Inter server support between virgo and chomp!
+			var/new_belly_fullscreen_color2 = sanitize_hexcolor(belly_data["belly_fullscreen_color_secondary"],new_belly.belly_fullscreen_color2)
+			new_belly.belly_fullscreen_color2 = new_belly_fullscreen_color2
 
 		if(istext(belly_data["belly_fullscreen_color3"]))
 			var/new_belly_fullscreen_color3 = sanitize_hexcolor(belly_data["belly_fullscreen_color3"],new_belly.belly_fullscreen_color3)
 			new_belly.belly_fullscreen_color3 = new_belly_fullscreen_color3
-		//CHOMPEdit End
+		else if(istext(belly_data["belly_fullscreen_color_trinary"])) // Inter server support between virgo and chomp!
+			var/new_belly_fullscreen_color3 = sanitize_hexcolor(belly_data["belly_fullscreen_color_trinary"],new_belly.belly_fullscreen_color3)
+			new_belly.belly_fullscreen_color3 = new_belly_fullscreen_color3
+		// CHOMPEdit End
 
 		// Not implemented on virgo -> CHOMPEnable Start
 		if(istext(belly_data["belly_fullscreen_color4"]))

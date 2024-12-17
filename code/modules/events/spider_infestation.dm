@@ -6,11 +6,6 @@
 
 
 /datum/event/spider_infestation/setup()
-	if(prob(25)) //CHOMP Add 25% chance for the event to fail if chosen
-		log_debug("Spider infestation failed successfully.")
-		kill()
-		return
-
 	announceWhen = rand(announceWhen, announceWhen + 60)
 	spawncount = rand(4 * severity, 10 * severity)	//spiderlings only have a 50% chance to grow big and strong //CHOMP Edit: old: 2/4 new: 6/14 new: 4/10
 	sent_spiders_to_station = 0
@@ -29,7 +24,7 @@
 		if(!temp_vent.welded && temp_vent.network && (temp_vent.loc.z in using_map.station_levels))
 			if(temp_vent.network.normal_members.len > 10) //CHOMP Edit: Most our networks are 40. SM is 4 and toxins is 2. This needed to change to 10 from 50 in order for spawns to work.
 				var/area/A = get_area(temp_vent)
-				if(!(A.forbid_events))
+				if(!(A.flag_check(AREA_FORBID_EVENTS)))
 					vents += temp_vent
 
 	while((spawncount >= 1) && vents.len)

@@ -115,6 +115,7 @@
 #define FACTION_WOLFTAUR "wolftaur"
 #define FACTION_WORM "worm"
 #define FACTION_XENO "xeno"
+#define FACTION_CORGI "corgi"
 #define FACTION_ZORGOIA "zorgoia" // CHOMPAdd
 
 #define FACTION_PLANTS "plants"

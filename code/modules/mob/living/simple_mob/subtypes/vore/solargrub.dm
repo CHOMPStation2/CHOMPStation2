@@ -52,7 +52,7 @@ var/global/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawstamp*
 	say_list_type = /datum/say_list/solargrub
 
 	var/poison_per_bite = 5 //grubs cause a shock when they bite someone
-	var/poison_type = "shockchem"
+	var/poison_type = REAGENT_ID_SHOCKCHEM
 	var/poison_chance = 50
 	var/datum/powernet/PN            // Our powernet
 	var/obj/structure/cable/attached        // the attached cable
@@ -114,7 +114,7 @@ var/global/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawstamp*
 			death_star()
 
 /mob/living/simple_mob/vore/solargrub/proc/death_star()
-	visible_message("<span class='warning'>\The [src]'s shell rips open and evolves!</span>")
+	visible_message(span_warning("\The [src]'s shell rips open and evolves!"))
 
 /*
 //Commenting this bit out. It's unncecessary, especially since we only use one form.

@@ -1917,11 +1917,11 @@
 /area/aro2/airarea)
 "sB" = (
 /obj/structure/table/steel,
-/obj/item/magnetic_ammo/pistol/khi{
+/obj/item/magnetic_ammo/pistol{
 	pixel_x = 5;
 	pixel_y = 2
 	},
-/obj/item/magnetic_ammo/pistol/khi{
+/obj/item/magnetic_ammo/pistol{
 	pixel_x = -3;
 	pixel_y = 5
 	},

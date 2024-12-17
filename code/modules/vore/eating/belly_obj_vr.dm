@@ -9,11 +9,6 @@
 // Parent type of all the various "belly" varieties.
 //
 
-// # define DM_FLAG_VORESPRITE_TAIL     0x2 //CHOMPRemove
-// # define DM_FLAG_VORESPRITE_MARKING  0x4 //CHOMPRemove
-// # define DM_FLAG_VORESPRITE_ARTICLE	0x8 //CHOMPRemove
-
-
 /obj/belly
 	name = "belly"							// Name of this location
 	desc = "It's a belly! You're in it!"	// Flavor text description of inside sight/sound/smells/feels.
@@ -473,7 +468,7 @@
 		if(reagents.total_volume >= 5) //CHOMPEdit Start
 			if(digest_mode == DM_DIGEST && M.digestable)
 				reagents.trans_to(M, reagents.total_volume * 0.1, 1 / max(LAZYLEN(contents), 1), FALSE)
-			to_chat(M, "<span class='vwarning'><B>You splash into a pool of [reagent_name]!</B></span>")
+			to_chat(M, span_vwarning("<B>You splash into a pool of [reagent_name]!</B>"))
 	if(!isliving(thing) && count_items_for_sprite) //CHOMPEdit - If this is enabled also update fullness for non-living things
 		owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 	//if(istype(thing, /obj/item/capture_crystal)) //CHOMPEdit start: Capture crystal occupant gets to see belly text too. Moved to modular_chomp capture_crystal.dm.
@@ -484,7 +479,7 @@
 				//formatted_desc = replacetext(desc, "%belly", lowertext(name)) //replace with this belly's name
 				//formatted_desc = replacetext(formatted_desc, "%pred", owner) //replace with this belly's owner
 				//formatted_desc = replacetext(formatted_desc, "%prey", thing) //replace with whatever mob entered into this belly
-				//to_chat(CC.bound_mob, "<span class='notice'><B>[formatted_desc]</B></span>") //CHOMPedit end
+				//to_chat(CC.bound_mob, span_notice("<B>[formatted_desc]</B>")) //CHOMPedit end
 
 	/*/ Intended for simple mobs //CHMOPEdit: Counting belly cycles now.
 	if((!owner.client || autotransfer_enabled) && autotransferlocation && autotransferchance > 0)
@@ -1146,19 +1141,19 @@
 		var/mob/living/carbon/human/Pred = owner
 		if(ishuman(M))
 			var/mob/living/carbon/human/Prey = M
-			Prey.bloodstr.del_reagent("numbenzyme")
+			Prey.bloodstr.del_reagent(REAGENT_ID_NUMBENZYME)
 			Prey.bloodstr.trans_to_holder(Pred.ingested, Prey.bloodstr.total_volume, 0.5, TRUE) // Copy=TRUE because we're deleted anyway //CHOMPEdit Start
 			Prey.ingested.trans_to_holder(Pred.ingested, Prey.ingested.total_volume, 0.5, TRUE) // Therefore don't bother spending cpu
-			Prey.touching.del_reagent("stomacid") //Don't need this stuff in our bloodstream.
-			Prey.touching.del_reagent("diet_stomacid") //Don't need this stuff in our bloodstream.
-			Prey.touching.del_reagent("pacid") //Don't need this stuff in our bloodstream.
-			Prey.touching.del_reagent("sacid") //Don't need this stuff in our bloodstream.
-			Prey.touching.del_reagent("cleaner") //Don't need this stuff in our bloodstream.
+			Prey.touching.del_reagent(REAGENT_ID_STOMACID) //Don't need this stuff in our bloodstream.
+			Prey.touching.del_reagent(REAGENT_ID_DIETSTOMACID) //Don't need this stuff in our bloodstream.
+			Prey.touching.del_reagent(REAGENT_ID_PACID) //Don't need this stuff in our bloodstream.
+			Prey.touching.del_reagent(REAGENT_ID_SACID) //Don't need this stuff in our bloodstream.
+			Prey.touching.del_reagent(REAGENT_ID_CLEANER) //Don't need this stuff in our bloodstream.
 			Prey.touching.trans_to_holder(Pred.ingested, Prey.touching.total_volume, 0.5, TRUE) // On updating the prey's reagents
 		else if(M.reagents)
-			M.reagents.del_reagent("stomacid") //Don't need this stuff in our bloodstream.
-			M.reagents.del_reagent("diet_stomacid") //Don't need this stuff in our bloodstream.
-			M.reagents.del_reagent("cleaner") //Don't need this stuff in our bloodstream.
+			M.reagents.del_reagent(REAGENT_ID_STOMACID) //Don't need this stuff in our bloodstream.
+			M.reagents.del_reagent(REAGENT_ID_DIETSTOMACID) //Don't need this stuff in our bloodstream.
+			M.reagents.del_reagent(REAGENT_ID_CLEANER) //Don't need this stuff in our bloodstream.
 			M.reagents.trans_to_holder(Pred.ingested, M.reagents.total_volume, 0.5, TRUE) //CHOMPEdit End
 
 	owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
@@ -1184,7 +1179,7 @@
 				M.mind.transfer_to(hasMMI.brainmob)
 				R.mmi = null
 		else if(!R.shell) // Shells don't have brainmobs in their MMIs.
-			to_chat(R, "<span class='danger'>Oops! Something went very wrong, your MMI was unable to receive your mind. You have been ghosted. Please make a bug report so we can fix this bug.</span>")
+			to_chat(R, span_danger("Oops! Something went very wrong, your MMI was unable to receive your mind. You have been ghosted. Please make a bug report so we can fix this bug."))
 		if(R.shell) // Let the standard procedure for shells handle this.
 			qdel(R)
 			return
@@ -1225,11 +1220,11 @@
 		//Reagent sharing for absorbed with pred - Copy so both pred and prey have these reagents.
 		Prey.bloodstr.trans_to_holder(Pred.ingested, Prey.bloodstr.total_volume, copy = TRUE)
 		Prey.ingested.trans_to_holder(Pred.ingested, Prey.ingested.total_volume, copy = TRUE)
-		Prey.touching.del_reagent("stomacid") //CHOMPEdit Don't need this stuff in our bloodstream.
-		Prey.touching.del_reagent("diet_stomacid") //CHOMPEdit Don't need this stuff in our bloodstream.
-		Prey.touching.del_reagent("pacid") //Don't need this stuff in our bloodstream.
-		Prey.touching.del_reagent("sacid") //Don't need this stuff in our bloodstream.
-		Prey.touching.del_reagent("cleaner") //CHOMPEdit Don't need this stuff in our bloodstream.
+		Prey.touching.del_reagent(REAGENT_ID_STOMACID) //CHOMPEdit Don't need this stuff in our bloodstream.
+		Prey.touching.del_reagent(REAGENT_ID_DIETSTOMACID) //CHOMPEdit Don't need this stuff in our bloodstream.
+		Prey.touching.del_reagent(REAGENT_ID_PACID) //Don't need this stuff in our bloodstream.
+		Prey.touching.del_reagent(REAGENT_ID_SACID) //Don't need this stuff in our bloodstream.
+		Prey.touching.del_reagent(REAGENT_ID_CLEANER) //CHOMPEdit Don't need this stuff in our bloodstream.
 		Prey.touching.trans_to_holder(Pred.ingested, Prey.touching.total_volume, copy = TRUE)
 		// TODO - Find a way to make the absorbed prey share the effects with the pred.
 		// Currently this is infeasible because reagent containers are designed to have a single my_atom, and we get

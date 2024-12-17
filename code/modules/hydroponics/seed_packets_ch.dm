@@ -1,10 +1,10 @@
 
 /obj/item/seeds/teaseed
-	seed_type = "tea"
+	seed_type = PLANT_TEA
 
 
 /obj/item/seeds/cinnamon
-	seed_type = "cinnamon"
+	seed_type = PLANT_CINNAMON
 
 /obj/item/seeds/pitcherseed
-	seed_type = "pitcher plant"
+	seed_type = PLANT_PITCHERPLANT

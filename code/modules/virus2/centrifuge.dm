@@ -122,7 +122,7 @@
 				return TRUE
 
 			var/has_toxins = locate(/datum/reagent/toxin) in sample.reagents.reagent_list
-			var/has_radium = sample.reagents.has_reagent("radium")
+			var/has_radium = sample.reagents.has_reagent(REAGENT_ID_RADIUM)
 			if(has_toxins || has_radium)
 				state("\The [src] beeps, \"Pathogen purging speed above nominal.\"", "blue")
 				if(has_toxins)
@@ -147,9 +147,9 @@
 	if(!B) return
 
 	var/list/data = list("antibodies" = B.data["antibodies"])
-	var/amt= sample.reagents.get_reagent_amount("blood")
-	sample.reagents.remove_reagent("blood", amt)
-	sample.reagents.add_reagent("antibodies", amt, data)
+	var/amt= sample.reagents.get_reagent_amount(REAGENT_ID_BLOOD)
+	sample.reagents.remove_reagent(REAGENT_ID_BLOOD, amt)
+	sample.reagents.add_reagent(REAGENT_ID_ANTIBODIES, amt, data)
 
 	SStgui.update_uis(src)
 	update_icon()

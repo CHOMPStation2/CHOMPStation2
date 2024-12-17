@@ -378,11 +378,11 @@ rborosilicate = 12
 
 
 	if(use_one_access)
-		t1 += "Restriction Type: <a href='?src=[REF(src)];access=one'>At least one access required</a><br>"
+		t1 += "Restriction Type: <a href='byond://?src=[REF(src)];access=one'>At least one access required</a><br>"
 	else
-		t1 += "Restriction Type: <a href='?src=[REF(src)];access=one'>All accesses required</a><br>"
+		t1 += "Restriction Type: <a href='byond://?src=[REF(src)];access=one'>All accesses required</a><br>"
 
-	t1 += "<a href='?src=[REF(src)];access=all'>Remove All</a><br>"
+	t1 += "<a href='byond://?src=[REF(src)];access=all'>Remove All</a><br>"
 
 	var/accesses = ""
 	accesses += "<div align='center'>" + span_bold("Access") + "</div>"
@@ -395,15 +395,15 @@ rborosilicate = 12
 		accesses += "<td style='width:14%' valign='top'>"
 		for(var/A in get_region_accesses(i))
 			if(A in conf_access)
-				accesses += "<a href='?src=[REF(src)];access=[A]'>" + span_red("[replacetext(get_access_desc(A), " ", "&nbsp")]") + "</a> "
+				accesses += "<a href='byond://?src=[REF(src)];access=[A]'>" + span_red("[replacetext(get_access_desc(A), " ", "&nbsp")]") + "</a> "
 			else
-				accesses += "<a href='?src=[REF(src)];access=[A]'>[replacetext(get_access_desc(A), " ", "&nbsp")]</a> "
+				accesses += "<a href='byond://?src=[REF(src)];access=[A]'>[replacetext(get_access_desc(A), " ", "&nbsp")]</a> "
 			accesses += "<br>"
 		accesses += "</td>"
 	accesses += "</tr></table>"
 	t1 += "<tt>[accesses]</tt>"
 
-	t1 += "<p><a href='?src=[REF(src)];close=1'>Close</a></p>\n"
+	t1 += "<p><a href='byond://?src=[REF(src)];close=1'>Close</a></p>\n"
 
 	var/datum/browser/popup = new(user, "rcd_access", "Access Control", 900, 500, src)
 	popup.set_content(t1)
