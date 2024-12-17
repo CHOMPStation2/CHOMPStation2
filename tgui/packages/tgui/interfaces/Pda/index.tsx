@@ -25,16 +25,26 @@ type Data = {
 };
 
 const requirePdaInterface = require.context('./pda_screens', false, /\.tsx$/);
-
+const requirePdaInterfaceCh = require.context(
+  '../chompstation/Pda/pda_screens',
+  false,
+  /\.tsx$/,
+); // CHOMPAdd Function to check chompstation pda_screens
 function getPdaApp(name: string) {
   let appModule: __WebpackModuleApi.RequireContext;
+  // CHOMPAdd Start - Add check for chompstation pda_screens
   try {
-    appModule = requirePdaInterface(`./${name}.tsx`);
+    appModule = requirePdaInterfaceCh(`./${name}.tsx`);
   } catch (err) {
-    if (err.code === 'MODULE_NOT_FOUND') {
-      return routingError('notFound', name);
+    // CHOMPADD End
+    try {
+      appModule = requirePdaInterface(`./${name}.tsx`);
+    } catch (err) {
+      if (err.code === 'MODULE_NOT_FOUND') {
+        return routingError('notFound', name);
+      }
+      throw err;
     }
-    throw err;
   }
   const Component: () => React.JSX.Element = appModule[name];
   if (!Component) {
