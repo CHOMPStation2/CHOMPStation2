@@ -326,7 +326,7 @@
 	name = "Alraune (dual color)"
 	icon_state = "alraunecolor_s"
 	ani_state = "alraunecolor_closed_s"
-	ckeys_allowed = null
+	//ckeys_allowed = null
 	do_colouration = 1
 	extra_overlay = "alraunecolor_markings"
 	extra_overlay_w = "alraunecolor_closed_markings"

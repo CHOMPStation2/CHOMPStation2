@@ -264,48 +264,48 @@
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "eboop_mark"
 
-/* // Chomp REMOVE start
+ // Chomp REMOVE start
 /datum/sprite_accessory/tail/molenar_kitsune
 	name = "quintail kitsune tails (Molenar)"
 	desc = ""
 	icon_state = "molenar-kitsune"
-	ckeys_allowed = list("molenar")
+	//ckeys_allowed = list("molenar")
 
 /datum/sprite_accessory/tail/miria_fluffdragon
 	name = "fluffdragon tail (Miria Masters)"
 	desc = ""
 	icon_state = "miria-fluffdragontail"
-	ckeys_allowed = list("miriamasters")
+	//ckeys_allowed = list("miriamasters")
 
 /datum/sprite_accessory/tail/miria_kitsune
 	name = "Black kitsune tails (Miria Masters)"
 	desc = ""
 	icon_state = "miria-kitsunetail"
-	ckeys_allowed = list("miriamasters")
+	//ckeys_allowed = list("miriamasters")
 
 /datum/sprite_accessory/tail/molenar_deathclaw
 	name = "deathclaw bits (Molenar)"
 	desc = ""
 	icon_state = "molenar-deathclaw"
-	ckeys_allowed = list("molenar","silvertalismen","jertheace")
+	//ckeys_allowed = list("molenar","silvertalismen","jertheace")
 
 /datum/sprite_accessory/tail/runac
 	name = "fennecsune tails (Runac)"
 	desc = ""
 	icon_state = "runac"
-	ckeys_allowed = list("rebcom1807")
+	//ckeys_allowed = list("rebcom1807")
 
 /datum/sprite_accessory/tail/reika //Leaving this since it was too hard to split the wings from the tail.
 	name = "fox tail (+ beewings) (Reika)"
 	desc = ""
 	icon_state = "reika"
-	ckeys_allowed = list("rikaru19xjenkins")
+	//ckeys_allowed = list("rikaru19xjenkins")
 
 /datum/sprite_accessory/tail/rosey
 	name = "tritail kitsune tails (Rosey)"
 	desc = ""
 	icon_state = "rosey_three"
-	ckeys_allowed = list("joey4298")
+	//ckeys_allowed = list("joey4298")
 
 /datum/sprite_accessory/tail/rosey2
 	name = "pentatail kitsune tails (Rosey)" //I predict seven tails next. ~CK
@@ -313,39 +313,39 @@
 	icon_state = "rosey_five"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
-	ckeys_allowed = list("joey4298")
+	//ckeys_allowed = list("joey4298")
 
 /datum/sprite_accessory/tail/scree
 	name = "green taj tail (Scree)"
 	desc = ""
 	icon_state = "scree"
-	ckeys_allowed = list("scree")
+	//ckeys_allowed = list("scree")
 
 /datum/sprite_accessory/tail/aronai
 	name = "aronai tail (Aronai)"
 	desc = ""
 	icon_state = "aronai"
-	ckeys_allowed = list("arokha")
+	//ckeys_allowed = list("arokha")
 
 /datum/sprite_accessory/tail/cabletail
     name = "cabletail"
     desc = "cabletail"
     icon_state = "cabletail"
-    ckeys_allowed = list("tucker0666")
+    //ckeys_allowed = list("tucker0666")
 
 /datum/sprite_accessory/tail/featherfluff_tail
     name = "featherfluff_tail"
     desc = ""
     icon_state = "featherfluff_tail"
-    ckeys_allowed = list("tucker0666")
-*/ // Chomp REMOVE end
+    //ckeys_allowed = list("tucker0666")
+ // Chomp REMOVE end
 
 /datum/sprite_accessory/tail/ketrai_wag
 	name = "fennix tail (vwag)"
 	desc = ""
 	icon_state = "ketraitail"
 	ani_state = "ketraitail_w"
-	//ckeys_allowed = list("ketrai") //They requested it to be enabled for everyone.
+	////ckeys_allowed = list("ketrai") //They requested it to be enabled for everyone.
 
 /datum/sprite_accessory/tail/ketrainew_wag
 	name = "new fennix tail (vwag)"
@@ -386,13 +386,12 @@
 	extra_overlay = "raccoon-stripes"
 	extra_overlay_w = "raccoon-stripes_w"
 
-/* // Chomp REMOVE start
+
 /datum/sprite_accessory/tail/holly
 	name = "tigress tail (Holly)"
 	desc = ""
 	icon_state = "tigresstail"
-	ckeys_allowed = list("hoodoo")
-*/ // Chomp REMOVE end
+	//ckeys_allowed = list("hoodoo")
 
 /datum/sprite_accessory/tail/satyr
 	name = "goat legs, colorable"
@@ -1267,14 +1266,14 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
-/* // Chomp REMOVE start
+
 /datum/sprite_accessory/tail/peacocktail_red //this is ckey locked for now, but prettiebyrd wants these tails to be unlocked at a later date
 	name = "Peacock tail (vwag)"
 	desc = ""
 	icon = 'icons/mob/vore/tails_vr.dmi'
 	icon_state = "peacocktail_red"
 	ani_state = "peacocktail_red_w"
-	ckeys_allowed = list("prettiebyrd")
+	//ckeys_allowed = list("prettiebyrd")
 
 /datum/sprite_accessory/tail/peacocktail //ditto
 	name = "Peacock tail, colorable (vwag)"
@@ -1284,8 +1283,8 @@
 	ani_state = "peacocktail_w"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
-	ckeys_allowed = list("prettiebyrd")
-*/ // Chomp REMOVE end
+	//ckeys_allowed = list("prettiebyrd")
+
 
 /datum/sprite_accessory/tail/altevian
 	name = "Altevian Tail"
@@ -1311,13 +1310,13 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
-/* // Chomp REMOVE start
+
 /datum/sprite_accessory/tail/perrin_tentacles
 	name = "octopus tentacles"
 	desc = ""
 	icon_state = "perrintentacles"
-	ckeys_allowed = list("codeme", "siennaathens")
-*/ // Chomp REMOVE end
+	//ckeys_allowed = list("codeme", "siennaathens")
+
 
 /datum/sprite_accessory/tail/teshbeethorax
 	name = "Teshari bee thorax"
@@ -1439,13 +1438,13 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
-/* // Chomp REMOVE start
+
 /datum/sprite_accessory/tail/kara //SatinIsle fluff item
 	name = "Pterokara Tail"
 	icon = 'icons/mob/vore/tails_vr.dmi'
 	icon_state = "kara_tail"
-	ckeys_allowed = list("satinisle")
-*/ // Chomp REMOVE end
+	//ckeys_allowed = list("satinisle")
+
 
 //LONG TAILS ARE NOT TAUR BUTTS >:O
 /datum/sprite_accessory/tail/longtail

@@ -108,7 +108,7 @@
 	name = "gazer eyestalks"
 	desc = ""
 	icon_state = "liquidfirefly-eyestalks"
-	//ckeys_allowed = list("liquidfirefly","seiga") //At request.
+	////ckeys_allowed = list("liquidfirefly","seiga") //At request.
 
 /datum/sprite_accessory/wing/moth_full
 	name = "moth antenna and wings"

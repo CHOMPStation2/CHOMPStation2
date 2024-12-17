@@ -263,7 +263,7 @@
 	desc = ""
 	icon_state = "ketraitail"
 	ani_state = "ketraitail_w"
-	//ckeys_allowed = list("ketrai") //They requested it to be enabled for everyone.
+	////ckeys_allowed = list("ketrai") //They requested it to be enabled for everyone.
 
 /datum/sprite_accessory/tail/ketrainew_wag
 	name = "new fennix tail (vwag)"
