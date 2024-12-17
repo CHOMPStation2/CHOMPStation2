@@ -44,7 +44,8 @@ function getPdaApp(name: string) {
       }
       throw err;
     }
-  } // CHOMPEdit End
+  }
+  // CHOMPEdit End
   const Component: () => React.JSX.Element = appModule[name];
   if (!Component) {
     return routingError('missingExport', name);
