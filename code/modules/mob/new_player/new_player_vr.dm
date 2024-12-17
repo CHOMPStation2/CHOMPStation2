@@ -31,12 +31,12 @@
 		pass = FALSE
 		to_chat(src,span_warning("You are not allowed to spawn in as this species."))
 
-/*	//CHOMPEdit Begin - Check species job bans... (Only used for shadekin) //ChaosStation edit - Crewkin enabled to be in line with our lore
+	//CHOMPEdit Begin - Check species job bans... (Only used for shadekin)
 	if(J.is_species_banned(client?.prefs?.species, client?.prefs?.organ_data["brain"]))
 		pass = FALSE
 		to_chat(src,span_warning("Your species is not permitted to take this role or job."))
 	//CHOMPEdit End
-*/
+
 	//Custom species checks
 	if (client?.prefs?.species == "Custom Species")
 
