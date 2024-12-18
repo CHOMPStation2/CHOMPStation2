@@ -363,25 +363,21 @@
 /mob/proc/SelfMove(turf/n, direct, movetime)
 	return Move(n, direct, movetime)
 
-<<<<<<< HEAD
 
-//ChompEDIT START
 //Set your incorporeal movespeed
 //Important to note: world.time is always in deciseconds. Higher tickrates mean more subdivisions of world.time (20fps = 0.5, 40fps = 0.25)
 /client
-	var/incorporeal_speed = 0.5
+	var/is_leaving_belly = FALSE
+	var/incorporeal_speed = 0.5 // CHOMPAdd
 
+//ChompEDIT START
 /client/verb/set_incorporeal_speed()
-	set category = "OOC.Game Settings" //CHOMPEdit
+	set category = "OOC.Game Settings"
 	set name = "Set Incorporeal Speed"
 
 	var/input = tgui_input_number(usr, "Set an incorporeal movement delay between 0 (fastest) and 5 (slowest)", "Incorporeal movement speed", (0.5/world.tick_lag), 5, 0)
 	incorporeal_speed = input * world.tick_lag
 //ChompEDIT End
-=======
-/client
-	var/is_leaving_belly = FALSE
->>>>>>> f348a108e2 (prvents ghosts from leaving / getting tossed out bellies in areas with BLOCK ghosts flag (#16726))
 
 ///Process_Incorpmove
 ///Called by client/Move()
