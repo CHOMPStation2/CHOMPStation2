@@ -143,7 +143,7 @@
 /area/maintenance/firstdeck
 	name = "First Deck Maintenance"
 	icon_state = "maintcentral"
-	flags = AREA_ALLOW_CLOCKOUT
+	flags = AREA_ALLOW_CLOCKOUT | RAD_SHIELDED
 
 /area/maintenance/firstdeck/aftstarboard
 	name = "First Deck Aft Starboard Maintenance"
@@ -1794,4 +1794,4 @@ End Chompstation Edit*/
 /area/maintenance/zerobar
 	name = "Abandoned Bar"
 	icon_state = "maint_bar"
-	flags = AREA_ALLOW_CLOCKOUT
+	flags = AREA_ALLOW_CLOCKOUT | RAD_SHIELDED
