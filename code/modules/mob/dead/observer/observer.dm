@@ -12,7 +12,15 @@
 	stat = DEAD
 	canmove = 0
 	blinded = 0
+<<<<<<< HEAD
 	anchored = TRUE		//  don't get pushed around
+=======
+	anchored = TRUE	//  don't get pushed around
+	var/list/visibleChunks = list()
+	var/datum/visualnet/visualnet
+	var/use_static = TRUE
+	var/static_visibility_range = 16
+>>>>>>> 1a424f5bd8 (fix a runtime in the ghostnet (#16724))
 
 	var/can_reenter_corpse
 	var/datum/hud/living/carbon/hud = null // hud
