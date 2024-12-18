@@ -29,7 +29,7 @@
 	src.modules += new /obj/item/robotanalyzer(src)
 
 	// Potato
-	src.emag += new /obj/item/gun/energy/retro/mounted(src)
+	src.emag += new /obj/item/gun/energy/robotic/laser/retro(src)
 
 	var/datum/matter_synth/wire = new /datum/matter_synth/wire()
 	synths += wire
@@ -68,7 +68,7 @@
 	src.modules += new /obj/item/gripper/gravekeeper(src)
 
 	// For really persistent looters
-	src.emag += new /obj/item/gun/energy/retro/mounted(src)
+	src.emag += new /obj/item/gun/energy/robotic/laser/retro(src)
 
 	var/datum/matter_synth/wood = new /datum/matter_synth/wood(50000) //CHOMPEdit - "Buffing this to 50k on account of broken code not letting us pick up more stacks. Wee."
 	synths += wood
@@ -80,6 +80,7 @@
 	// For uwu
 	src.modules += new /obj/item/dogborg/sleeper/compactor/generic(src)
 	src.emag += new /obj/item/dogborg/pounce(src)
+<<<<<<< HEAD
 
 	//CHOMPEdit - "Giving the gravekeeper drone more modules to allow it to actually do it's job."
 	src.modules += new /obj/item/tool/wirecutters/cyborg(src) //Gotta clear those pesky landmines somehow. Also allows for deconstruction of things in the way!
@@ -158,3 +159,5 @@
 	var/obj/item/stack/material/cyborg/plastic/PL = new (src)
 	PL.synths = list(plastic)
 	src.modules += PL //CHOMEdit End
+=======
+>>>>>>> f82d1dcffa (Borg Icon Optimization and Weapon Modulation (#16705))
