@@ -76,14 +76,36 @@
 		BIOGEN_REAGENT("Universal Enzyme x50", REAGENT_ID_ENZYME, 50, 120),
 		BIOGEN_ITEM("Nutri-spread", /obj/item/reagent_containers/food/snacks/spreads, 1, 30),
 		BIOGEN_ITEM("Nutri-spread x5", /obj/item/reagent_containers/food/snacks/spreads, 5, 120),
+		//CHOMPedit - adding common condiments to the list for chefs
+		BIOGEN_REAGENT("Table Salt x10", REAGENT_ID_SODIUMCHLORIDE, 10, 20),
+		BIOGEN_REAGENT("Table Salt x50", REAGENT_ID_SODIUMCHLORIDE, 50, 100),
+		BIOGEN_REAGENT("Soy Sauce x10", REAGENT_ID_SOYSAUCE, 10, 30),
+		BIOGEN_REAGENT("Soy Sauce x50", REAGENT_ID_SOYSAUCE, 50, 120),
 	)
-	item_list["Gardening Nutrients"] = list(
-		BIOGEN_ITEM("E-Z-Nutrient", /obj/item/reagent_containers/glass/bottle/eznutrient, 1, 60),
-		BIOGEN_ITEM("E-Z-Nutrient x5", /obj/item/reagent_containers/glass/bottle/eznutrient, 5, 300),
-		BIOGEN_ITEM("Left 4 Zed", /obj/item/reagent_containers/glass/bottle/left4zed, 1, 120),
-		BIOGEN_ITEM("Left 4 Zed x5", /obj/item/reagent_containers/glass/bottle/left4zed, 5, 600),
-		BIOGEN_ITEM("Robust Harvest", /obj/item/reagent_containers/glass/bottle/robustharvest, 1, 150),
-		BIOGEN_ITEM("Robust Harvest x5", /obj/item/reagent_containers/glass/bottle/robustharvest, 5, 750),
+	item_list["Botany Chemicals"] = list(
+		BIOGEN_ITEM("E-Z-Nutrient", /obj/item/reagent_containers/glass/bottle/eznutrient, 1, 30), //CHOMPEdit - reduced costs of fertilisers
+		BIOGEN_ITEM("E-Z-Nutrient x5", /obj/item/reagent_containers/glass/bottle/eznutrient, 5, 150),
+		BIOGEN_ITEM("Left 4 Zed", /obj/item/reagent_containers/glass/bottle/left4zed, 1, 50),
+		BIOGEN_ITEM("Left 4 Zed x5", /obj/item/reagent_containers/glass/bottle/left4zed, 5, 250),
+		BIOGEN_ITEM("Robust Harvest", /obj/item/reagent_containers/glass/bottle/robustharvest, 1, 50),
+		BIOGEN_ITEM("Robust Harvest x5", /obj/item/reagent_containers/glass/bottle/robustharvest, 5, 250),
+		//CHOMPedit - adding additional fertilisers for botany use
+		BIOGEN_ITEM("Diethylamine", /obj/item/reagent_containers/glass/bottle/diethylamine, 1, 60),
+		BIOGEN_ITEM("Diethylamine x5", /obj/item/reagent_containers/glass/bottle/diethylamine, 5, 300),
+		BIOGEN_ITEM("Unstable Mutagen", /obj/item/reagent_containers/glass/bottle/mutagen, 1, 50),
+		BIOGEN_ITEM("Unstable Mutagen x5", /obj/item/reagent_containers/glass/bottle/mutagen, 5, 250),
+		BIOGEN_ITEM("Plant-B-Gone", /obj/item/reagent_containers/spray/plantbgone, 1, 50),
+		BIOGEN_ITEM("Plant-B-Gone x5", /obj/item/reagent_containers/spray/plantbgone, 5, 250),
+	)
+	item_list["Botany Tools"] = list( //CHOMPedit - Some botany tools
+		BIOGEN_ITEM("Flora Disk", /obj/item/disk/botany, 1, 100),
+		BIOGEN_ITEM("Floral Somatoray", /obj/item/gun/energy/floragun, 1, 1000),
+	)
+	item_list["Exotic Seeds"] = list( //CHOMPedit - Another source of exotic seeds
+		BIOGEN_ITEM("Mystery seed pack", /obj/item/seeds/random, 1, 150),
+		BIOGEN_ITEM("Mystery seed pack x5", /obj/item/seeds/random, 5, 750),
+		BIOGEN_ITEM("Kudzu seed pack", /obj/item/seeds/kudzuseed, 1, 100),
+		BIOGEN_ITEM("Kudzu seed pack x5", /obj/item/seeds/kudzuseed, 5, 500),
 	)
 	item_list["Leather Products"] = list(
 		BIOGEN_ITEM("Wallet", /obj/item/storage/wallet, 1, 100),
