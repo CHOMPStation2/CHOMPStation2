@@ -4,15 +4,13 @@
 	template = "pda_timeclock"
 
 	var/channel = "Common"
-	var/mob/pdaUser = null
 	var/obj/item/radio/intercom/announce
+
 /datum/data/pda/app/timeclock/start()
 	. = ..()
 	//Initialize an intercom to announce going on/off duty
 	if(!announce)
 		announce = new /obj/item/radio/intercom(src)
-/datum/data/pda/app/timeclock/stop()
-	pdaUser = null
 
 /datum/data/pda/app/timeclock/update_ui(mob/user as mob, list/data)
 	//Because tgui_data seems a bit weird with pda apps
@@ -20,8 +18,6 @@
 	if(user.client)
 		data["department_hours"] = SANITIZE_LIST(user.client.department_hours)
 	data["user_name"] = "[user]"
-	//Grab the user while we're at it, this is useful for a few bookeeping/logging things
-	pdaUser = user
 	// Data about the card that we put into it.
 	data["card"] = null
 	data["assignment"] = null
@@ -52,14 +48,14 @@
 
 	switch(action)
 		if("switch-to-onduty-rank")
-			if(checkFace())
-				if(checkCardCooldown())
-					makeOnDuty(params["switch-to-onduty-rank"], params["switch-to-onduty-assignment"])
+			if(checkFace(ui.user))
+				if(checkCardCooldown(ui.user))
+					makeOnDuty(ui.user, params["switch-to-onduty-rank"], params["switch-to-onduty-assignment"])
 			return TRUE
 		if("switch-to-offduty")
-			if(checkFace())
-				if(checkCardCooldown())
-					makeOffDuty()
+			if(checkFace(ui.user))
+				if(checkCardCooldown(ui.user))
+					makeOffDuty(ui.user)
 			return TRUE
 
 /datum/data/pda/app/timeclock/proc/getOpenOnDutyJobs(var/mob/user, var/department)
@@ -84,22 +80,22 @@
 		   && !job.disallow_jobhop \
 		   && job.timeoff_factor > 0
 
-/datum/data/pda/app/timeclock/proc/makeOnDuty(var/newrank, var/newassignment)
+/datum/data/pda/app/timeclock/proc/makeOnDuty(mob/user, var/newrank, var/newassignment)
 	var/datum/job/oldjob = job_master.GetJob(pda.id.rank)
 	var/datum/job/newjob = job_master.GetJob(newrank)
-	if(!oldjob || !isOpenOnDutyJob(pdaUser, oldjob.pto_type, newjob))
+	if(!oldjob || !isOpenOnDutyJob(user, oldjob.pto_type, newjob))
 		return
 	if(newassignment != newjob.title && !(newassignment in newjob.alt_titles))
 		return
 	if(newjob.camp_protection && round_duration_in_ds < CONFIG_GET(number/job_camp_time_limit))
 		if(SSjob.restricted_keys.len)
 			var/list/check = SSjob.restricted_keys[newjob.title]
-			if(pdaUser.client.ckey in check)
-				to_chat(pdaUser,span_danger("[newjob.title] is not presently selectable because you played as it last round. It will become available to you in [round((CONFIG_GET(number/job_camp_time_limit) - round_duration_in_ds) / 600)] minutes, if slots remain open."))
+			if(user.client.ckey in check)
+				to_chat(user,span_danger("[newjob.title] is not presently selectable because you played as it last round. It will become available to you in [round((CONFIG_GET(number/job_camp_time_limit) - round_duration_in_ds) / 600)] minutes, if slots remain open."))
 				return
 
 	if(newjob)
-		newjob.register_shift_key(pdaUser.client.ckey)
+		newjob.register_shift_key(user.client.ckey)
 		pda.id.access = newjob.get_access()
 		pda.id.rank = newjob.title
 		pda.id.assignment = newassignment
@@ -108,19 +104,20 @@
 		pda.id.last_job_switch = world.time
 		callHook("reassign_employee", list(pda.id))
 		newjob.current_positions++
-		var/mob/living/carbon/human/H = pdaUser
-		H.mind.assigned_role = pda.id.rank
-		H.mind.role_alt_title = pda.id.assignment
-		announce.autosay("[pda.id.registered_name] has moved On-Duty as [pda.id.assignment].", "Employee Oversight", channel, zlevels = using_map.get_map_levels(get_z(src)))
+		if(ishuman(user))
+			var/mob/living/carbon/human/H = user
+			H.mind.assigned_role = pda.id.rank
+			H.mind.role_alt_title = pda.id.assignment
+			announce.autosay("[pda.id.registered_name] has moved On-Duty as [pda.id.assignment].", "Employee Oversight", channel, zlevels = using_map.get_map_levels(get_z(src)))
 	return
 
-/datum/data/pda/app/timeclock/proc/makeOffDuty()
+/datum/data/pda/app/timeclock/proc/makeOffDuty(mob/user)
 	var/datum/job/foundjob = job_master.GetJob(pda.id.rank)
 	if(!foundjob)
 		return
 	//If we're not in an area that allows clockout and not in a belly, shouldn't be able to clock out.
-	if(!get_area(pdaUser).flag_check(AREA_ALLOW_CLOCKOUT) && !isbelly(pdaUser.loc))
-		to_chat(pdaUser, span_notice("You cannot clock out from your PDA in this area"))
+	if(!get_area(user).flag_check(AREA_ALLOW_CLOCKOUT) && !isbelly(user.loc))
+		to_chat(user, span_notice("You cannot clock out from your PDA in this area"))
 		return
 	var/new_dept = foundjob.pto_type || PTO_CIVILIAN
 	var/datum/job/ptojob = null
@@ -137,28 +134,29 @@
 		data_core.manifest_modify(pda.id.registered_name, pda.id.assignment, pda.id.rank)
 		pda.id.last_job_switch = world.time
 		callHook("reassign_employee", list(pda.id))
-		var/mob/living/carbon/human/H = pdaUser
-		H.mind.assigned_role = ptojob.title
-		H.mind.role_alt_title = ptojob.title
-		foundjob.current_positions--
-		announce.autosay("[pda.id.registered_name], [oldtitle], has moved Off-Duty.", "Employee Oversight", channel, zlevels = using_map.get_map_levels(get_z(src)))
+		if(ishuman(user))
+			var/mob/living/carbon/human/H = user
+			H.mind.assigned_role = ptojob.title
+			H.mind.role_alt_title = ptojob.title
+			foundjob.current_positions--
+			announce.autosay("[pda.id.registered_name], [oldtitle], has moved Off-Duty.", "Employee Oversight", channel, zlevels = using_map.get_map_levels(get_z(src)))
 	return
 
-/datum/data/pda/app/timeclock/proc/checkCardCooldown()
+/datum/data/pda/app/timeclock/proc/checkCardCooldown(mob/user)
 	if(!pda.id)
 		return FALSE
 	var/time_left = 1 MINUTE - (world.time - pda.id.last_job_switch)
 	if(time_left > 0)
-		to_chat(pdaUser, span_notice("You need to wait another [round((time_left/10)/60, 1)] minute\s before you can switch."))
+		to_chat(user, span_notice("You need to wait another [round((time_left/10)/60, 1)] minute\s before you can switch."))
 		return FALSE
 	return TRUE
 
-/datum/data/pda/app/timeclock/proc/checkFace()
-	var/turf/location = get_turf(pdaUser)
+/datum/data/pda/app/timeclock/proc/checkFace(mob/user)
+	var/turf/location = get_turf(user)
 	if(!pda.id)
-		to_chat(pdaUser, span_notice("No ID is inserted."))
+		to_chat(user, span_notice("No ID is inserted."))
 		return FALSE
 	else
-		message_admins("[key_name_admin(pdaUser)] has modified '[pda.id.registered_name]' 's ID with a pda timeclock. [ADMIN_JMP(location)]")
-		log_game("[key_name_admin(pdaUser)] has modified '[pda.id.registered_name]' 's ID with a pda timeclock.")
+		message_admins("[key_name_admin(user)] has modified '[pda.id.registered_name]' 's ID with a pda timeclock. [ADMIN_JMP(location)]")
+		log_game("[key_name_admin(user)] has modified '[pda.id.registered_name]' 's ID with a pda timeclock.")
 		return TRUE
