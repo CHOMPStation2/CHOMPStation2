@@ -17,6 +17,7 @@ type Data = {
   department_hours: Record<string, number> | undefined;
   user_name: string;
   assignment: string | null;
+  is_human: BooleanLike;
   job_datum: {
     title: string;
     departments: string;
@@ -35,6 +36,7 @@ export const pda_timeclock = (props) => {
   const {
     department_hours,
     user_name,
+    is_human,
     card,
     assignment,
     job_datum,
@@ -116,7 +118,8 @@ export const pda_timeclock = (props) => {
         allow_change_job &&
         job_datum &&
         job_datum.timeoff_factor !== 0 &&
-        assignment !== 'Dismissed'
+        assignment !== 'Dismissed' &&
+        is_human
       ) && (
         <Section title="Employment Actions">
           {(job_datum.timeoff_factor > 0 &&

@@ -18,6 +18,7 @@
 	if(user.client)
 		data["department_hours"] = SANITIZE_LIST(user.client.department_hours)
 	data["user_name"] = "[user]"
+	data["is_human"] = ishuman(user) ? 1 : 0
 	// Data about the card that we put into it.
 	data["card"] = null
 	data["assignment"] = null
@@ -93,7 +94,6 @@
 			if(user.client.ckey in check)
 				to_chat(user,span_danger("[newjob.title] is not presently selectable because you played as it last round. It will become available to you in [round((CONFIG_GET(number/job_camp_time_limit) - round_duration_in_ds) / 600)] minutes, if slots remain open."))
 				return
-
 	if(newjob)
 		newjob.register_shift_key(user.client.ckey)
 		pda.id.access = newjob.get_access()
@@ -104,11 +104,9 @@
 		pda.id.last_job_switch = world.time
 		callHook("reassign_employee", list(pda.id))
 		newjob.current_positions++
-		if(ishuman(user))
-			var/mob/living/carbon/human/H = user
-			H.mind.assigned_role = pda.id.rank
-			H.mind.role_alt_title = pda.id.assignment
-			announce.autosay("[pda.id.registered_name] has moved On-Duty as [pda.id.assignment].", "Employee Oversight", channel, zlevels = using_map.get_map_levels(get_z(src)))
+		user.mind.assigned_role = pda.id.rank
+		user.mind.role_alt_title = pda.id.assignment
+		announce.autosay("[pda.id.registered_name] has moved On-Duty as [pda.id.assignment].", "Employee Oversight", channel, zlevels = using_map.get_map_levels(get_z(src)))
 	return
 
 /datum/data/pda/app/timeclock/proc/makeOffDuty(mob/user)
@@ -134,12 +132,10 @@
 		data_core.manifest_modify(pda.id.registered_name, pda.id.assignment, pda.id.rank)
 		pda.id.last_job_switch = world.time
 		callHook("reassign_employee", list(pda.id))
-		if(ishuman(user))
-			var/mob/living/carbon/human/H = user
-			H.mind.assigned_role = ptojob.title
-			H.mind.role_alt_title = ptojob.title
-			foundjob.current_positions--
-			announce.autosay("[pda.id.registered_name], [oldtitle], has moved Off-Duty.", "Employee Oversight", channel, zlevels = using_map.get_map_levels(get_z(src)))
+		user.mind.assigned_role = ptojob.title
+		user.mind.role_alt_title = ptojob.title
+		foundjob.current_positions--
+		announce.autosay("[pda.id.registered_name], [oldtitle], has moved Off-Duty.", "Employee Oversight", channel, zlevels = using_map.get_map_levels(get_z(src)))
 	return
 
 /datum/data/pda/app/timeclock/proc/checkCardCooldown(mob/user)
