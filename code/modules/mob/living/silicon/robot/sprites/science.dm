@@ -150,14 +150,6 @@
 /datum/robot_sprite/dogborg/tall/science
 	module_type = "Research"
 	sprite_icon = 'icons/mob/robot/science_large.dmi'
-<<<<<<< HEAD
-	var/has_taser_sprite = FALSE
-
-/datum/robot_sprite/dogborg/tall/science/handle_extra_icon_updates(var/mob/living/silicon/robot/ourborg)
-	if(has_taser_sprite && istype(ourborg.module_active, /obj/item/gun/energy/taser/xeno/robot))
-		ourborg.add_overlay("[sprite_icon_state]-taser")
-=======
->>>>>>> f82d1dcffa (Borg Icon Optimization and Weapon Modulation (#16705))
 
 /datum/robot_sprite/dogborg/tall/science/do_equipment_glamour(var/obj/item/robot_module/module)
 	if(!has_custom_equipment_sprites)

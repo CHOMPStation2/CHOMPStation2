@@ -6,12 +6,6 @@
 		if(water.energy < 5)
 			. += span_notice("[src] is dry.")
 
-/obj/item/gun/energy/taser/mounted/cyborg/flare
-	name = "flare gun"
-	desc = "A flare-gun"
-	projectile_type = /obj/item/projectile/energy/flash/flare
-	fire_sound = 'sound/weapons/tablehit1.ogg'
-
 /obj/item/shield_projector/line/exploborg
 	name = "expirmental shield projector"
 	description_info = "This creates a shield in a straight line perpendicular to the direction where the user was facing when it was activated. \
@@ -22,41 +16,6 @@
 	shield_regen_amount = 25
 	line_length = 7			// How long the line is.  Recommended to be an odd number.
 	offset_from_center = 2	// How far from the projector will the line's center be.
-
-/obj/item/melee/combat_borgblade/explotailspear
-	name = "energy tail"
-	desc = "A glowing tail spear with a moderate range. It appears to be extremely sharp."
-	force = 45
-	armor_penetration = 25 //30 to try and make it not useless against armored mobs but not fully nullify it.
-	reach = 3
-	projectile_parry_chance = 15.
-
-/obj/item/melee/dogborg/jaws/big/explojaws
-	name = "explo jaws"
-	desc = "Highly lethal jaws for close range combat."
-	force = 60
-	armor_penetration = 25 //To try and make it not useless against armored mobs but not fully nullify it
-	projectile_parry_chance = 15
-
-/obj/item/gun/energy/medigun/mounted/smallmedigun
-	name = "borg directed restoration system"
-	desc = "An adapted version of the BL-3 'Phoenix, for expiremental useage in borgs."
-	projectile_type = /obj/item/projectile/beam/medical_cell/borg
-	accept_cell_type = /obj/item/cell/device
-	cell_type = /obj/item/cell/device/weapon
-	charge_cost = 600
-	fire_delay = 6
-
-/obj/item/projectile/beam/medical_cell/borg
-	range = 4
-
-/obj/item/projectile/beam/medical_cell/borg/on_hit(var/mob/living/carbon/human/target)
-	if(istype(target, /mob/living/carbon/human))
-		if(target.stat != DEAD)
-			target.adjustBruteLoss(-3.75)
-			target.adjustFireLoss(-3.75)
-	else
-		return 1
 
 // To repair a single module
 /obj/item/self_repair_system
@@ -133,3 +92,69 @@
 	power_tick = 10
 	repair_time = 15
 	repair_amount = 3
+
+// Robot Weapons
+/obj/item/gun/energy/robotic/flare
+	name = "flare gun"
+	desc = "A flare-gun"
+	projectile_type = /obj/item/projectile/energy/flash/flare
+	fire_sound = 'sound/weapons/tablehit1.ogg'
+	icon = 'icons/obj/gun.dmi'
+	icon_state = "taser"
+	charge_cost = 480
+	borg_flags = COUNTS_AS_ROBOT_GUN | COUNTS_AS_ROBOT_TASER
+
+/obj/item/gun/energy/robotic/smallmedigun
+	name = "borg directed restoration system"
+	desc = "An adapted version of the BL-3 'Phoenix, for expiremental useage in borgs."
+	projectile_type = /obj/item/projectile/beam/medical_cell/borg
+	accept_cell_type = /obj/item/cell/device
+	cell_type = /obj/item/cell/device/weapon
+	charge_cost = 600
+	fire_delay = 6
+	force = 5
+	icon_state = "medbeam"
+	icon = 'icons/obj/gun_vr.dmi'
+	accuracy = 100
+	fire_sound = 'sound/weapons/eluger.ogg'
+	self_recharge = 1
+	use_external_power = 1
+
+/obj/item/projectile/beam/medical_cell/borg
+	range = 4
+
+/obj/item/projectile/beam/medical_cell/borg/on_hit(var/mob/living/carbon/human/target)
+	if(istype(target, /mob/living/carbon/human))
+		if(target.stat != DEAD)
+			target.adjustBruteLoss(-3.75)
+			target.adjustFireLoss(-3.75)
+	else
+		return 1
+
+/obj/item/melee/robotic/blade/explotailspear
+	name = "energy tail"
+	desc = "A glowing tail spear with a moderate range. It appears to be extremely sharp."
+	force = 45
+	armor_penetration = 25 //30 to try and make it not useless against armored mobs but not fully nullify it.
+	reach = 3
+	projectile_parry_chance = 15.
+
+/obj/item/melee/robotic/jaws/big/explojaws
+	name = "explo jaws"
+	desc = "Highly lethal jaws for close range combat."
+	force = 60
+	armor_penetration = 25 //To try and make it not useless against armored mobs but not fully nullify it
+	projectile_parry_chance = 15
+
+/obj/item/gun/energy/robotic/phasegun
+	name = "EW26 Artemis Mounted"
+	desc = "The RayZar EW26 Artemis, also known as the 'phase carbine', is a downsized energy-based weapon specifically designed for use against wildlife. This one has a safety interlock that prevents firing while in proximity to the facility." //ChompEDIT
+	description_fluff = "RayZar is Ward-Takahashi’s main consumer weapons brand, known for producing and licensing a wide variety of specialist energy weapons of various types and quality primarily for the civilian market."
+	icon = 'icons/obj/gun.dmi'
+	icon_state = "phasecarbine"
+	charge_cost = 160
+	recharge_time = 16
+	projectile_type = /obj/item/projectile/energy/phase
+	use_external_power = 1
+	self_recharge = 1
+	borg_flags = COUNTS_AS_ROBOT_GUN | COUNTS_AS_ROBOT_LASER

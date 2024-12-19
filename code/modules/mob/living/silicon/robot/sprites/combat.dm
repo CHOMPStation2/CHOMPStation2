@@ -51,14 +51,10 @@
 	name = "W02M"
 	sprite_icon_state = "worm-combat" //CHOMPEdit
 	has_custom_open_sprites = TRUE
-<<<<<<< HEAD
-	has_shield_sprite = TRUE
+	sprite_flags = ROBOT_HAS_SHIELD_SPRITE
 	sprite_icon = 'modular_chomp/icons/mob/wormborg.dmi' //CHOMPEdit
 	has_vore_belly_sprites = TRUE //CHOMPEdit
 	has_dead_sprite = TRUE //CHOMPEdit
-=======
-	sprite_flags = ROBOT_HAS_SHIELD_SPRITE
->>>>>>> f82d1dcffa (Borg Icon Optimization and Weapon Modulation (#16705))
 
 /datum/robot_sprite/combat/uptall
 	name = "Feminine Humanoid"
