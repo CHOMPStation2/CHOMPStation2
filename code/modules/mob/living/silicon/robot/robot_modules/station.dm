@@ -517,13 +517,13 @@ var/global/list/robot_modules = list(
 	..()
 	src.modules += new /obj/item/handcuffs/cyborg(src)
 	src.modules += new /obj/item/melee/baton/robot(src)
-	src.modules += new /obj/item/gun/energy/taser/mounted/cyborg(src)
+	src.modules += new /obj/item/gun/energy/robotic/taser(src)
 	src.modules += new /obj/item/taperoll/police(src)
 	src.modules += new /obj/item/reagent_containers/spray/pepper(src)
 	src.modules += new /obj/item/gripper/security(src)
 	src.modules += new /obj/item/ticket_printer(src)	//VOREStation Add
-	src.modules += new /obj/item/gun/energy/locked/phasegun/unlocked/mounted/cyborg(src) // CHOMPedit: Phasegun for regular sec cyborg.
-	src.emag += new /obj/item/gun/energy/laser/mounted(src)
+	src.modules += new /obj/item/gun/energy/robotic/phasegun(src) // CHOMPedit: Phasegun for regular sec cyborg.
+	src.emag += new /obj/item/gun/energy/robotic/laser/rifle(src)
 
 	src.modules += new /obj/item/dogborg/sleeper/K9(src) //Eat criminals. Bring them to the brig.
 	src.modules += new /obj/item/dogborg/pounce(src) //Pounce
@@ -722,7 +722,7 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/gripper/miner(src)
 	src.modules += new /obj/item/mining_scanner(src)
 	src.modules += new /obj/item/card/id/cargo/miner/borg(src)
-	src.modules += new /obj/item/gun/energy/locked/phasegun/unlocked/mounted/cyborg(src) //CHOMPedit: Phasegun for regular mining cyborg.
+	src.modules += new /obj/item/gun/energy/robotic/phasegun(src) //CHOMPedit: Phasegun for regular mining cyborg.
 	src.modules += new /obj/item/vac_attachment(src) //CHOMPAdd
 	src.emag += new /obj/item/kinetic_crusher/machete/dagger(src)
 
@@ -757,7 +757,7 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/storage/part_replacer(src)
 	src.modules += new /obj/item/shockpaddles/robot/jumper(src)
 	src.modules += new /obj/item/melee/baton/slime/robot(src)
-	src.modules += new /obj/item/gun/energy/taser/xeno/robot(src)
+	src.modules += new /obj/item/gun/energy/robotic/taser/xeno(src)
 	src.modules += new /obj/item/xenoarch_multi_tool(src)
 	src.modules += new /obj/item/pickaxe/excavationdrill(src)
 
@@ -801,15 +801,15 @@ var/global/list/robot_modules = list(
 	..()
 	src.modules += new /obj/item/handcuffs/cyborg(src)
 	src.modules += new /obj/item/taperoll/police(src)
-	src.modules += new /obj/item/gun/energy/laser/mounted(src)
-	src.modules += new /obj/item/gun/energy/taser/mounted/cyborg/ertgun(src)
+	src.modules += new /obj/item/gun/energy/robotic/laser/rifle(src)
+	src.modules += new /obj/item/gun/energy/robotic/disabler(src)
 	src.modules += new /obj/item/pickaxe/plasmacutter/borg(src)
-	src.modules += new /obj/item/melee/combat_borgblade(src)
+	src.modules += new /obj/item/melee/robotic/dagger(src)
 	src.modules += new /obj/item/borg/combat/shield(src)
 	src.modules += new /obj/item/borg/combat/mobility(src)
-	src.modules += new /obj/item/melee/borg_combat_shocker(src)
+	src.modules += new /obj/item/melee/robotic/borg_combat_shocker(src)
 	src.modules += new /obj/item/ticket_printer(src)
-	src.emag += new /obj/item/gun/energy/lasercannon/mounted(src)
+	src.emag += new /obj/item/gun/energy/robotic/laser/heavy(src)
 
 	src.modules += new /obj/item/dogborg/sleeper/K9/ert(src)
 	src.modules += new /obj/item/dogborg/pounce(src)
@@ -930,5 +930,5 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/pickaxe/borgdrill(src)
 	src.modules += new /obj/item/storage/bag/ore(src)
 	src.modules += new /obj/item/storage/bag/sheetsnatcher/borg(src)
-	src.modules += new /obj/item/gun/energy/locked/phasegun/unlocked/mounted/cyborg(src)  //Chompedit, makes the mining borg able to defend itself.
+	src.modules += new /obj/item/gun/energy/robotic/phasegun(src)  //Chompedit, makes the mining borg able to defend itself.
 	src.emag += new /obj/item/pickaxe/diamonddrill(src)

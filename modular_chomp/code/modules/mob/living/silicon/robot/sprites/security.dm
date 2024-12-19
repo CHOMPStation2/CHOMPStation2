@@ -4,8 +4,6 @@
 	sprite_icon_state = "secvale"
 	sprite_hud_icon_state = "k9"
 	has_eye_light_sprites = TRUE
-	has_laser_sprite = FALSE //Missing from the dmi
-	has_taser_sprite = FALSE //ditto
 
 /datum/robot_sprite/dogborg/security/cat
 	name = "Cat"
@@ -13,8 +11,6 @@
 	sprite_icon_state = "vixsec"
 	sprite_hud_icon_state = "k9"
 	has_eye_light_sprites = TRUE
-	has_laser_sprite = FALSE //Missing from the dmi
-	has_taser_sprite = FALSE //ditto
 
 
 /datum/robot_sprite/dogborg/tall/security/dullahan
@@ -25,8 +21,6 @@
 	name = "Dullahan"
 	sprite_icon_state = "dullahansec"
 	sprite_hud_icon_state = "k9"
-	has_laser_sprite = FALSE //Missing from the dmi
-	has_taser_sprite = FALSE //ditto
 	has_eye_light_sprites = TRUE
 	has_vore_belly_sprites = TRUE
 
@@ -34,8 +28,6 @@
 	name = "Dullahan v2"
 	sprite_icon_state = "dullahansec_alt"
 	sprite_hud_icon_state = "k9"
-	has_laser_sprite = FALSE //Missing from the dmi
-	has_taser_sprite = FALSE //ditto
 	has_eye_light_sprites = TRUE
 	has_vore_belly_sprites = TRUE
 
