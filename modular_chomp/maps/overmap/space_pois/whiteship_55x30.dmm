@@ -291,10 +291,7 @@
 /turf/simulated/floor/tiled/eris/steel/techfloor_grid,
 /area/submap/whiteship)
 "tb" = (
-/obj/item/cell{
-	charge = 100;
-	maxcharge = 15000
-	},
+/obj/item/cell,
 /obj/structure/cable{
 	d2 = 8;
 	icon_state = "0-8"
@@ -441,10 +438,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/submap/whiteship)
 "zY" = (
-/obj/item/cell{
-	charge = 100;
-	maxcharge = 15000
-	},
+/obj/item/cell,
 /obj/random/trash,
 /turf/simulated/floor/tiled/eris/white/techfloor,
 /area/submap/whiteship)
