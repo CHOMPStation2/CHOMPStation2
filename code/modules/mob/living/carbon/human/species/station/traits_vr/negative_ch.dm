@@ -460,3 +460,5 @@
 	desc = "Your biochemistry is a little delicate, rendering you more susceptible to both deadly toxins and the more subtle ones. You'll probably want to list this in your medical records, and perhaps in your exploitable info as well. Toxin damages and knockout drugs are 25% stronger on you."
 	cost = -1
 	var_changes = list("chem_strength_tox" = 1.25)
+
+#undef GAUSSIAN_RANDOM

@@ -463,3 +463,8 @@ var/list/dispenser_presets = list()
 	icon_state = "suitdispenserAL"
 	dispenser_flags = GD_ONEITEM|GD_NOGREED|GD_UNLIMITED
 	one_setting = /datum/gear_disp/voidsuit/autolok
+
+#undef GD_BUSY
+#undef GD_ONEITEM
+#undef GD_NOGREED
+#undef GD_UNLIMITED

@@ -364,14 +364,15 @@
 	return Move(n, direct, movetime)
 
 
-//ChompEDIT START
 //Set your incorporeal movespeed
 //Important to note: world.time is always in deciseconds. Higher tickrates mean more subdivisions of world.time (20fps = 0.5, 40fps = 0.25)
 /client
-	var/incorporeal_speed = 0.5
+	var/is_leaving_belly = FALSE
+	var/incorporeal_speed = 0.5 // CHOMPAdd
 
+//ChompEDIT START
 /client/verb/set_incorporeal_speed()
-	set category = "OOC.Game Settings" //CHOMPEdit
+	set category = "OOC.Game Settings"
 	set name = "Set Incorporeal Speed"
 
 	var/input = tgui_input_number(usr, "Set an incorporeal movement delay between 0 (fastest) and 5 (slowest)", "Incorporeal movement speed", (0.5/world.tick_lag), 5, 0)
@@ -382,6 +383,14 @@
 ///Called by client/Move()
 ///Allows mobs to run though walls
 /client/proc/Process_Incorpmove(direct)
+	if(isbelly(mob.loc) && isobserver(mob))
+		if(is_leaving_belly)
+			return
+		is_leaving_belly = TRUE
+		if(tgui_alert(mob, "Do you want to leave your predator's belly?", "Leave belly?", list("Yes", "No")) != "Yes")
+			is_leaving_belly = FALSE
+			return
+		is_leaving_belly = FALSE
 	var/turf/mobloc = get_turf(mob)
 
 	//ChompEDIT START
@@ -410,10 +419,10 @@
 				if(isliving(mob) && A.flag_check(AREA_BLOCK_PHASE_SHIFT))
 					to_chat(mob, span_warning("Something blocks you from entering this location while phased out."))
 					return
-				if(isobserver(mob) && A.flag_check(AREA_BLOCK_GHOSTS))
+				if(isobserver(mob) && A.flag_check(AREA_BLOCK_GHOSTS) && !isbelly(mob.loc))
 					to_chat(mob, span_warning("Ghosts can't enter this location."))
 					var/area/our_area = mobloc.loc
-					if(our_area.flag_check(AREA_BLOCK_GHOSTS))
+					if(our_area.flag_check(AREA_BLOCK_GHOSTS) && !isbelly(mob.loc))
 						var/mob/observer/dead/D = mob
 						D.return_to_spawn()
 					return
