@@ -152,6 +152,9 @@
 	if(!pda.id)
 		to_chat(user, span_notice("No ID is inserted."))
 		return FALSE
+	if(pda.id.registered_name != user.real_name)
+		to_chat(user, span_notice("This does not appear to be your ID"))
+		return FALSE
 	else
 		message_admins("[key_name_admin(user)] has modified '[pda.id.registered_name]' 's ID with a pda timeclock. [ADMIN_JMP(location)]")
 		log_game("[key_name_admin(user)] has modified '[pda.id.registered_name]' 's ID with a pda timeclock.")
