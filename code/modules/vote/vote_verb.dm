@@ -1,5 +1,5 @@
 /client/verb/vote()
-	set category = "OOC.Game" // CHOMPedit
+	set category = "OOC.Game"
 	set name = "Vote"
 
 	if(SSvote.active_vote)
