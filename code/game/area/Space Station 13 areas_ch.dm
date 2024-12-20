@@ -75,7 +75,7 @@
 	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | BLUE_SHIELDED | AREA_ALLOW_LARGE_SIZE | AREA_LIMIT_DARK_RESPITE
 
 /area/security/nuke_storage
-	flags = PHASE_SHIELDED | AREA_BLOCK_GHOST_SIGHT
+	flags = PHASE_SHIELDED
 
 /area/quartermaster/disposal_sort
 	name = "\improper Cargo - Disposals Sorting"
@@ -86,10 +86,7 @@
 	name = "Maintenance Deck Field"
 
 /area/security/armoury
-	flags = PHASE_SHIELDED | AREA_BLOCK_GHOST_SIGHT
-
-/area/security/tactical
-	flags = AREA_BLOCK_GHOST_SIGHT
+	flags = PHASE_SHIELDED
 
 /area/centcom/living
 	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_SOUNDPROOF | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_GHOSTS | AREA_BLOCK_TRACKING | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_PHASE_SHIFT | AREA_BLOCK_GHOST_SIGHT
@@ -145,26 +142,26 @@
 /area/wizard_station
 	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_GHOSTS | AREA_BLOCK_TRACKING | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_PHASE_SHIFT | AREA_BLOCK_GHOST_SIGHT
 
-/area/crew_quarters/heads/sc
+/area/crew_quarters/heads/sc/hop/quarters
 	flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO | AREA_BLOCK_TRACKING | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_GHOST_SIGHT
 
-/area/ai
-	flags = AREA_BLOCK_GHOST_SIGHT
+/area/crew_quarters/heads/sc/hor/quarters
+	flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO | AREA_BLOCK_TRACKING | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_GHOST_SIGHT
 
-/area/ai/ai_cyborg_station
-	flags = 0
+/area/crew_quarters/heads/sc/chief/quarters
+	flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO | AREA_BLOCK_TRACKING | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_GHOST_SIGHT
 
-/area/ai/ai_upload
-	flags = 0
+/area/crew_quarters/heads/sc/hos/quarters
+	flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO | AREA_BLOCK_TRACKING | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_GHOST_SIGHT
 
-/area/ai/ai_upload_foyer
-	flags = 0
+/area/crew_quarters/heads/sc/cmo/quarters
+	flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO | AREA_BLOCK_TRACKING | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_GHOST_SIGHT
 
-/area/ai/ai_server_room
-	flags = 0
+/area/crew_quarters/heads/sc/restroom
+	flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO | AREA_BLOCK_TRACKING | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_GHOST_SIGHT
 
-/area/tcomm/chamber
-	flags = AREA_BLOCK_GHOST_SIGHT
+/area/crew_quarters/heads/sc/bs
+	flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO | AREA_BLOCK_TRACKING | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_GHOST_SIGHT
 
 /area/crew_quarters/toilet
 	flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO | AREA_BLOCK_TRACKING | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_GHOST_SIGHT
