@@ -1,6 +1,6 @@
 /obj/screen/alert/leash_dom
-	name = "Leash Master"
-	desc = "You've got a leash, and a cute pet on the other end."
+	name = "Leash Holder"
+	desc = "You're holding a leash, with someone on the end."
 	icon_state = "leash_master"
 
 /obj/screen/alert/leash_dom/Click()
@@ -8,8 +8,8 @@
 	owner.unleash()
 
 /obj/screen/alert/leash_pet
-	name = "Leashed Pet"
-	desc = "You're on the hook now! Be good for your master."
+	name = "Leashed"
+	desc = "You're on the hook now!"
 	icon_state = "leash_pet"
 
 /obj/screen/alert/leash_dom/Click()
@@ -21,7 +21,7 @@
 //The component variables are used for hooks, used later.
 /obj/item/leash
 	name = "leash"
-	desc = "A simple tether that can easily be hooked onto a collar. Perfect for your pet."
+	desc = "A simple tether that can easily be hooked onto a collar. Usually used to keep pets nearby."
 	icon = 'modular_chomp/icons/obj/leash.dmi'
 	icon_state = "leash"
 	item_state = "leash"
