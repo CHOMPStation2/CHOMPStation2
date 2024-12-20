@@ -173,7 +173,6 @@
 	clear_leash()
 
 /obj/item/leash/proc/clear_leash()
-	message_admins("Clearing for [leash_pet] and [leash_master]")
 	leash_pet?.clear_alert("leashed")
 	leash_pet?.remove_a_modifier_of_type(/datum/modifier/leash)
 	UnregisterSignal(leash_pet, COMSIG_MOVABLE_MOVED)
