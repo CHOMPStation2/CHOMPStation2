@@ -240,7 +240,7 @@
 	return TRUE
 
 /obj/machinery/computer/timeclock/proc/getCooldown()
-	return 1 MINUTES - (world.time - card.last_job_switch)
+	return 1 MINUTES - (world.time - card.last_job_switch) // CHOMPedit: 10 minute wait down to 1 minute.
 
 /obj/machinery/computer/timeclock/proc/checkFace(var/mob/user)
 	var/turf/location = get_turf(src) // CHOMPedit: Needed for admin logs.
