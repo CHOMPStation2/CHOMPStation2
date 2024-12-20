@@ -19,7 +19,7 @@ type Data = {
   department_hours: Record<string, number> | undefined;
   user_name: string;
   assignment: string | null;
-  card_cooldown: number | null;
+  card_cooldown: number;
   job_datum: {
     title: string;
     departments: string;
