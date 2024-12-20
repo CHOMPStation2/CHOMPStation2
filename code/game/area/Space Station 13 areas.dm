@@ -241,11 +241,9 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 
 /area/centcom/living
 	name = "\improper CentCom Living Quarters"
-	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_SOUNDPROOF | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_GHOSTS | AREA_BLOCK_TRACKING | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_PHASE_SHIFT | AREA_BLOCK_GHOST_SIGHT // CHOMPAdd
 
 /area/centcom/specops
 	name = "\improper CentCom Special Ops"
-	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_GHOSTS | AREA_BLOCK_TRACKING | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_PHASE_SHIFT | AREA_BLOCK_GHOST_SIGHT // CHOMPAdd
 
 /area/centcom/creed
 	name = "Creed's Office"
