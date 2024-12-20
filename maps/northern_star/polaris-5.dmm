@@ -16016,10 +16016,7 @@
 	},
 /area/mine/explored)
 "Fr" = (
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
+/obj/item/cell/high,
 /obj/structure/table/steel,
 /turf/simulated/floor/airless{
 	icon_state = "asteroidplating2"

@@ -72,6 +72,8 @@ jobs:
       - name: Run Tests
         run: |
           tools/ci/validate_files.sh
+      - name: Run Define Sanity Checks
+        run: tools/bootstrap/python -m define_sanity.check
       - name: Run DreamChecker
         shell: bash
         run: ~/dreamchecker 2>&1 | bash tools/ci/annotate_dm.sh
