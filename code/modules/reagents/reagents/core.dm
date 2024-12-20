@@ -242,6 +242,8 @@
 	else if(volume >= 10)
 		T.wet_floor(1)
 
+	T.apply_fire_protection() // CHOMPAdd - Apply fire protection so fires can actually be put out.
+
 /datum/reagent/water/touch_obj(var/obj/O, var/amount)
 	..()
 	if(istype(O, /obj/item/reagent_containers/food/snacks/monkeycube))
