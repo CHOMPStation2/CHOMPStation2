@@ -27,7 +27,7 @@
 /datum/robot_sprite/dogborg/wide/combat
 	module_type = "Combat"
 	has_custom_equipment_sprites = TRUE
-	sprite_flags = COUNTS_AS_ROBOT_LASER | COUNTS_AS_ROBOT_TASER | COUNTS_AS_ROBOT_BLADE
+	has_eye_sprites = FALSE
 
 /datum/robot_sprite/dogborg/wide/combat/blade/do_equipment_glamour(var/obj/item/robot_module/module)
 	if(!has_custom_equipment_sprites)
@@ -54,4 +54,4 @@
 	sprite_icon_state = "blade"
 	sprite_hud_icon_state = "ert"
 	rest_sprite_options = list()
-	sprite_flags = ROBOT_HAS_LASER_SPRITE | ROBOT_HAS_TASER_SPRITE | ROBOT_HAS_BLADE_SPRITE
+	sprite_flags = ROBOT_HAS_LASER_SPRITE | ROBOT_HAS_DISABLER_SPRITE | ROBOT_HAS_DAGGER_SPRITE
