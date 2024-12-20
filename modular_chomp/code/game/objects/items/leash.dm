@@ -36,6 +36,7 @@
 /obj/item/leash/Destroy()
 	// Just in case
 	clear_leash()
+	return ..()
 
 /obj/item/leash/process()
 	if(!leash_pet)
@@ -129,7 +130,7 @@
 
 	//This code is to check if the pet has gotten too far away, and then break the leash.
 	sleep(3) //Wait to snap the leash
-	if(!leash_master | !leash_pet) //Just to stop error messages
+	if(!leash_master || !leash_pet) //Just to stop error messages
 		return
 	if(get_dist(leash_pet, leash_master) > 5)
 		leash_pet.visible_message(
