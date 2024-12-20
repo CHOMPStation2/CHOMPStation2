@@ -1355,11 +1355,11 @@ End Chompstation Edit*/
 
 /area/expoutpost/suite1
 	name = "\improper Suite One"
-	flags = RAD_SHIELDED | AREA_BLOCK_GHOST_SIGHT
+	flags = RAD_SHIELDED
 
 /area/expoutpost/suite2
 	name = "\improper Suite Two"
-	flags = RAD_SHIELDED | AREA_BLOCK_GHOST_SIGHT
+	flags = RAD_SHIELDED
 
 /area/expoutpost/pathfinderroom
 	name = "\improper Pathfinder's Ready-Room"
@@ -1702,7 +1702,7 @@ End Chompstation Edit*/
 /area/maintenance/bar/dorms
 	name = "Maintenance Bar Dorms"
 	icon_state = "Sleep"
-	flags = RAD_SHIELDED | AREA_SOUNDPROOF |AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING | AREA_BLOCK_GHOST_SIGHT
+	flags = RAD_SHIELDED | AREA_SOUNDPROOF |AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING
 
 /area/maintenance/bar/dorms/dorm_1
 	name = "Maintenance Deck Bar Dorms 1"
