@@ -206,14 +206,11 @@
 	clear_leash()
 
 /obj/item/leash/proc/is_wearing_collar(var/mob/living/carbon/human/human)
-	if (!istype(human)) {
+	if (!istype(human))
 		return FALSE
-	}
-	for (var/obj/item/clothing/worn in human.worn_clothing) {
-		if (istype(worn, /obj/item/clothing/accessory/collar) || (locate(/obj/item/clothing/accessory/collar) in worn.accessories)) {
+	for (var/obj/item/clothing/worn in human.worn_clothing)
+		if (istype(worn, /obj/item/clothing/accessory/collar) || (locate(/obj/item/clothing/accessory/collar) in worn.accessories))
 			return TRUE
-		}
-	}
 	return FALSE
 
 /datum/modifier/leash
