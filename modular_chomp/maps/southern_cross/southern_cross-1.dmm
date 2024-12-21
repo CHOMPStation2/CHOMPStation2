@@ -3284,6 +3284,13 @@
 /obj/random/junk,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerofore)
+"mR" = (
+/obj/structure/table/reinforced,
+/obj/item/bikehorn/rubberducky/grey{
+	pixel_y = 4
+	},
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/zerocent)
 "mT" = (
 /obj/machinery/alarm{
 	pixel_y = 22
@@ -44562,7 +44569,7 @@ Rz
 we
 we
 gZ
-gZ
+mR
 gZ
 we
 we
