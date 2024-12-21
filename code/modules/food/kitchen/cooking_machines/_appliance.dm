@@ -607,6 +607,12 @@
 	smoke.set_up(10, 0, get_turf(src), 300)
 	smoke.start()
 
+	// CHOMPAdd - Chance to make a terrible fire
+	if(prob(70))
+		var/turf/T = get_turf(src)
+		T.lingering_fire(0.45)
+	// CHOMPAdd End
+
 	// Set off fire alarms!
 	var/obj/machinery/firealarm/FA = locate() in get_area(src)
 	if(FA)
