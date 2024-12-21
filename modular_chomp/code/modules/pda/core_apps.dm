@@ -18,7 +18,8 @@
 	if(user.client)
 		data["department_hours"] = SANITIZE_LIST(user.client.department_hours)
 	data["user_name"] = "[user]"
-	data["is_human"] = ishuman(user) ? 1 : 0
+	data["is_human"] = ishuman(user)
+	data["area_clockout"] = isAllowedAreaClockout(user)
 	// Data about the card that we put into it.
 	data["card"] = null
 	data["assignment"] = null
@@ -28,6 +29,7 @@
 	if(pda.id)
 		data["card"] = "[pda.id]"
 		data["assignment"] = pda.id.assignment
+		data["card_cooldown"] = getCooldown()
 		var/datum/job/job = job_master.GetJob(pda.id.rank)
 		if(job)
 			data["job_datum"] = list(
@@ -114,7 +116,7 @@
 	if(!foundjob)
 		return
 	//If we're not in an area that allows clockout and not in a belly, shouldn't be able to clock out.
-	if(!get_area(user).flag_check(AREA_ALLOW_CLOCKOUT) && !isbelly(user.loc))
+	if(!isAllowedAreaClockout(user))
 		to_chat(user, span_notice("You cannot clock out from your PDA in this area"))
 		return
 	var/new_dept = foundjob.pto_type || PTO_CIVILIAN
@@ -138,14 +140,21 @@
 		announce.autosay("[pda.id.registered_name], [oldtitle], has moved Off-Duty.", "Employee Oversight", channel, zlevels = using_map.get_map_levels(get_z(src)))
 	return
 
+/datum/data/pda/app/timeclock/proc/isAllowedAreaClockout(mob/user)
+	return (get_area(user).flag_check(AREA_ALLOW_CLOCKOUT) || isbelly(user.loc))
+
 /datum/data/pda/app/timeclock/proc/checkCardCooldown(mob/user)
 	if(!pda.id)
 		return FALSE
-	var/time_left = 1 MINUTE - (world.time - pda.id.last_job_switch)
+	var/time_left = getCooldown()
 	if(time_left > 0)
 		to_chat(user, span_notice("You need to wait another [round((time_left/10)/60, 1)] minute\s before you can switch."))
 		return FALSE
 	return TRUE
+
+
+/datum/data/pda/app/timeclock/proc/getCooldown()
+	return 1 MINUTES - (world.time - pda.id.last_job_switch)
 
 /datum/data/pda/app/timeclock/proc/checkFace(mob/user)
 	var/turf/location = get_turf(user)

@@ -10,6 +10,7 @@ import {
   Section,
 } from 'tgui/components';
 
+import { formatTime } from '../../../../format';
 import { RankIcon } from '../../../common/RankIcon';
 
 type Data = {
@@ -17,7 +18,9 @@ type Data = {
   department_hours: Record<string, number> | undefined;
   user_name: string;
   assignment: string | null;
-  is_human: BooleanLike;
+  card_cooldown: number;
+  area_clockout: boolean | false;
+  is_human: boolean | false;
   job_datum: {
     title: string;
     departments: string;
@@ -37,7 +40,9 @@ export const pda_timeclock = (props) => {
     department_hours,
     user_name,
     is_human,
+    area_clockout,
     card,
+    card_cooldown,
     assignment,
     job_datum,
     allow_change_job,
@@ -127,6 +132,15 @@ export const pda_timeclock = (props) => {
               department_hours[job_datum.pto_department] > 0 && (
                 <Button
                   fluid
+                  disabled={card_cooldown > 0 || !area_clockout}
+                  tooltip={
+                    card_cooldown > 0
+                      ? "You've recently modified your card, please wait " +
+                        formatTime(card_cooldown, 'short')
+                      : area_clockout
+                        ? 'Clock out!'
+                        : 'You cannot clock out in this area'
+                  }
                   icon="exclamation-triangle"
                   onClick={() => act('switch-to-offduty')}
                 >
@@ -145,6 +159,13 @@ export const pda_timeclock = (props) => {
                 return alt_titles.map((title) => (
                   <Button
                     key={title}
+                    disabled={card_cooldown > 0}
+                    tooltip={
+                      card_cooldown > 0
+                        ? "You've recently modified your card, please wait " +
+                          formatTime(card_cooldown, 'short')
+                        : 'Clock in!'
+                    }
                     icon="suitcase"
                     onClick={() =>
                       act('switch-to-onduty-rank', {
