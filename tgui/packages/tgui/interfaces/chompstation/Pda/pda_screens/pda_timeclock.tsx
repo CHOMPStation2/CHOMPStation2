@@ -9,8 +9,8 @@ import {
   NoticeBox,
   Section,
 } from 'tgui/components';
+import { formatTime } from 'tgui/format';
 
-import { formatTime } from '../../../../format';
 import { RankIcon } from '../../../common/RankIcon';
 
 type Data = {
