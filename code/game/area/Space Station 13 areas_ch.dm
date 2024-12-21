@@ -1,6 +1,6 @@
 /area/surface/outpost/main/dorms
 	name = "\improper Main Outpost Dorms"
-	flags = RAD_SHIELDED | AREA_SOUNDPROOF | AREA_FORBID_EVENTS | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING
+	flags = RAD_SHIELDED | AREA_SOUNDPROOF | AREA_FORBID_EVENTS | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING | AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/main/dorms/dorm_1
 	name = "\improper Main Outpost Dorm One"
@@ -21,10 +21,10 @@
 	name = "\improper Main Outpost Dorm Six"
 
 /area/crew_quarters/cafeteria
-	flags = RAD_SHIELDED
+	flags = RAD_SHIELDED | AREA_ALLOW_CLOCKOUT
 
 /area/crew_quarters/coffee_shop
-	flags = RAD_SHIELDED
+	flags = RAD_SHIELDED | AREA_ALLOW_CLOCKOUT
 
 /area/crew_quarters/kitchen
 	flags = RAD_SHIELDED
@@ -36,7 +36,7 @@
 	flags = RAD_SHIELDED
 
 /area/crew_quarters/sleep
-	flags = RAD_SHIELDED | AREA_SOUNDPROOF | AREA_FORBID_EVENTS | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING
+	flags = RAD_SHIELDED | AREA_SOUNDPROOF | AREA_FORBID_EVENTS | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING | AREA_ALLOW_CLOCKOUT
 
 /area/crew_quarters/sleep/vistor_room_1
 

@@ -43,7 +43,7 @@
 /area/surface/outside
 	ambience = AMBIENCE_SIF
 	always_unpowered = TRUE
-	flags = AREA_FLAG_IS_NOT_PERSISTENT
+	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_ALLOW_CLOCKOUT
 	outdoors = OUTDOORS_YES
 
 // The area near the outpost, so POIs don't show up right next to the outpost.
@@ -130,7 +130,7 @@
 
 
 /area/surface/cave
-	flags = RAD_SHIELDED
+	flags = RAD_SHIELDED | AREA_ALLOW_CLOCKOUT
 	always_unpowered = TRUE
 
 /area/surface/cave
@@ -173,7 +173,7 @@
 /area/surface/outpost/shelter/dorms
 	name = "Wilderness Shelter Dorms"
 	icon_state = "Sleep"
-	flags = RAD_SHIELDED | AREA_SOUNDPROOF | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING
+	flags = RAD_SHIELDED | AREA_SOUNDPROOF | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING | AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/shelter/exterior
 	name = "Wilderness Shelter Exterior"
@@ -388,6 +388,7 @@
 
 /area/surface/outpost/main/laundry
 	name = "\improper Main Outpost Laundry Room"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/main/landing
 	name = "\improper Main Outpost Shuttle Landing"
@@ -411,20 +412,24 @@
 /area/surface/outpost/main/pool
 	name = "\improper Main Outpost Pool"
 	icon_state = "pool"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/main/restroom
 	name = "\improper Main Outpost Restroom"
 	icon_state = "toilet"
 	sound_env = SMALL_ENCLOSED
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/main/showers
 	name = "\improper Main Outpost Showers"
 	icon_state = "toilet"
 	sound_env = SMALL_ENCLOSED
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/main/gym
 	name = "\improper Main Outpost Gym"
 	icon_state = "fitness"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/main/garage
 	name = "\improper Main Outpost Garage"
@@ -433,6 +438,7 @@
 /area/surface/outpost/main/crew_quarters
 	name = "\improper Main Outpost Crew Quarters"
 	sound_env = MEDIUM_SOFTFLOOR
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/main/tcomm
 	name = "\improper Main Outpost Telecommunications"
@@ -466,6 +472,7 @@
 	name = "\improper Main Outpost Gateway"
 	icon_state = "teleporter"
 	music = "signal"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/main/gateway
 	name = "\improper Main Outpost Gateway"
@@ -474,6 +481,7 @@
 /area/surface/outpost/main/corridor
 	name = "\improper Main Outpost Corridor"
 	icon_state = "dk_yellow"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/main/corridor/dorms
 	name = "\improper Main Outpost Dorm Corridor"
@@ -493,6 +501,7 @@
 /area/surface/outpost/main/bar
 	name = "\improper Main Outpost Bar"
 	icon_state = "bar"
+	flags = AREA_ALLOW_CLOCKOUT
 /*
 /area/surface/outpost/main/dorms
 	name = "\improper Main Outpost Dorms"
@@ -519,6 +528,7 @@
 	name = "\improper Main Outpost Airlock"
 	icon_state = "red"
 	ambience = AMBIENCE_SIF
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/main/airlock/left_one
 	name = "\improper Outpost Left Wing Airlock One"
@@ -568,6 +578,7 @@
 	icon_state = "red"
 	requires_power = FALSE
 	ambience = AMBIENCE_HIGHSEC
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/wall/checkpoint
 	name = "Checkpoint"
@@ -587,13 +598,16 @@
 /area/surface/outpost/civilian/fishing
 	name = "\improper Civilian Outpost Fishing Supplies"
 	icon_state = "storage"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/civilian/pool
 	name = "\improper Civilian Outpost Pool"
 	icon_state = "pool"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/civilian/sauna
 	name = "\improper Civilian Outpost Sauna"
+	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/civilian/emergency_storage
 	flags = RAD_SHIELDED
