@@ -108,7 +108,7 @@
 		anchored = !anchored
 
 /client/proc/generic_structure()
-	set category = "Fun.Event Kit" //CHOMPEdit
+	set category = "Fun.Event Kit"
 	set name = "Spawn Generic Structure"
 	set desc = "Spawn a customisable structure with a range of different options."
 
