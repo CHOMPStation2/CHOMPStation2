@@ -123,3 +123,6 @@
       to others
   - qol: cleans up some duplicate supply pack defs
   - bugfix: Export chatlog works under 516
+2024-12-21:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: 516 chat flickering
