@@ -3033,8 +3033,6 @@
 /obj/structure/table/steel,
 /obj/machinery/cell_charger,
 /obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000;
 	pixel_x = 2;
 	pixel_y = 4
 	},

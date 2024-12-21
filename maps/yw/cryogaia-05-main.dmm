@@ -5501,10 +5501,7 @@
 	},
 /obj/structure/table/steel,
 /obj/machinery/cell_charger,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
+/obj/item/cell/high,
 /turf/simulated/floor,
 /area/maintenance/substation/security)
 "chB" = (
@@ -35394,14 +35391,8 @@
 "nRV" = (
 /obj/structure/table/standard,
 /obj/machinery/cell_charger,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
+/obj/item/cell/high,
+/obj/item/cell/high,
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
@@ -37763,8 +37754,6 @@
 /area/engineering/engine_eva)
 "oPl" = (
 /obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000;
 	pixel_x = 5;
 	pixel_y = -5
 	},
@@ -37777,20 +37766,14 @@
 	pixel_y = 4
 	},
 /obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000;
 	pixel_x = 5;
 	pixel_y = -5
 	},
 /obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000;
 	pixel_x = 5;
 	pixel_y = -5
 	},
 /obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000;
 	pixel_x = 5;
 	pixel_y = -5
 	},
@@ -40343,10 +40326,7 @@
 "pOo" = (
 /obj/structure/table/reinforced,
 /obj/machinery/cell_charger,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
+/obj/item/cell/high,
 /obj/item/flashlight,
 /obj/item/tool/wrench,
 /obj/machinery/firealarm{
@@ -40973,10 +40953,7 @@
 /area/hallway/primary/starboard)
 "qeD" = (
 /obj/item/frame,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
+/obj/item/cell/high,
 /turf/simulated/floor/plating,
 /area/constructionsite/cryogaia)
 "qeT" = (
@@ -41702,19 +41679,10 @@
 "qrC" = (
 /obj/structure/table/reinforced,
 /obj/machinery/cell_charger,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
+/obj/item/cell/high,
 /obj/item/tool/wrench,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
+/obj/item/cell/high,
+/obj/item/cell/high,
 /obj/structure/disposalpipe/segment,
 /obj/item/rms,
 /turf/simulated/floor/tiled/monotile,
@@ -46054,10 +46022,7 @@
 /area/assembly/robotics)
 "sgD" = (
 /obj/structure/table/steel,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
+/obj/item/cell/high,
 /obj/item/stack/cable_coil,
 /obj/machinery/camera/network/engineering{
 	dir = 8
@@ -46761,14 +46726,8 @@
 /area/maintenance/bridge)
 "suv" = (
 /obj/structure/table/reinforced,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
+/obj/item/cell/high,
+/obj/item/cell/high,
 /obj/machinery/light{
 	dir = 1
 	},
@@ -59729,14 +59688,8 @@
 /obj/item/stack/cable_coil,
 /obj/item/multitool,
 /obj/machinery/cell_charger,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
+/obj/item/cell/high,
+/obj/item/cell/high,
 /obj/machinery/atmospherics/pipe/simple/visible,
 /turf/simulated/floor/tiled/white,
 /area/rnd/phoronics)

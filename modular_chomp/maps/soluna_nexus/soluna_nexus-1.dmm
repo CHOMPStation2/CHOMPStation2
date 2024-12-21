@@ -18779,14 +18779,10 @@
 	pixel_y = 11
 	},
 /obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000;
 	pixel_x = 6;
 	pixel_y = -3
 	},
 /obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000;
 	pixel_x = 8;
 	pixel_y = 4
 	},
@@ -25563,14 +25559,10 @@
 	pixel_y = 11
 	},
 /obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000;
 	pixel_x = 6;
 	pixel_y = -3
 	},
 /obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000;
 	pixel_x = 6;
 	pixel_y = 4
 	},
@@ -51795,14 +51787,10 @@
 	pixel_y = 11
 	},
 /obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000;
 	pixel_x = 6;
 	pixel_y = -3
 	},
 /obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000;
 	pixel_x = 6;
 	pixel_y = 4
 	},
@@ -57903,14 +57891,10 @@
 	pixel_y = 11
 	},
 /obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000;
 	pixel_x = 6;
 	pixel_y = -3
 	},
 /obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000;
 	pixel_x = 6;
 	pixel_y = 4
 	},
@@ -66068,14 +66052,10 @@
 	pixel_y = 11
 	},
 /obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000;
 	pixel_x = 6;
 	pixel_y = -3
 	},
 /obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000;
 	pixel_x = 6;
 	pixel_y = 4
 	},
@@ -68725,14 +68705,10 @@
 	pixel_x = -4
 	},
 /obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000;
 	pixel_y = -4;
 	pixel_x = 7
 	},
 /obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000;
 	pixel_x = 9
 	},
 /obj/effect/floor_decal/borderfloorblack{
