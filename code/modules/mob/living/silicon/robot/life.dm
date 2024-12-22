@@ -85,19 +85,10 @@
 	if(health < CONFIG_GET(number/health_threshold_dead) && stat != 2) //die only once
 		death()
 
-<<<<<<< HEAD
 	if (src.stat != 2) //Alive.
-		if (src.paralysis || src.stunned || src.weakened || !src.has_power) //Stunned etc.
-			src.set_stat(UNCONSCIOUS)
-			if (src.stunned > 0)
-=======
-	if (stat != 2) //Alive.
-		if (weakened > 0)	// Do not fullstun on weaken
-			AdjustWeakened(-1)
-		if (paralysis || stunned || !has_power) //Stunned etc.
+		if (paralysis || stunned || weakened || !has_power) //Stunned etc.
 			set_stat(UNCONSCIOUS)
 			if (stunned > 0)
->>>>>>> 822d60e32d (Fixes borg overlays (#16744))
 				AdjustStunned(-1)
 			if (weakened > 0)
 				AdjustWeakened(-1)
@@ -123,25 +114,16 @@
 		AdjustBlinded(-1)
 		blinded = 1
 
-<<<<<<< HEAD
-	if (src.ear_deaf > 0)
-		src.ear_deaf--
-	if (src.ear_damage < 25)
-		src.ear_damage -= 0.05
-		src.ear_damage = max(src.ear_damage, 0)
-
-	if(src.ear_deaf <= 0) // CHOMPStation Add: Ear Ringing/Deafness - Not sure if we need this, but, safety.
-		deaf_loop.stop() // CHOMPStation Add: Ear Ringing/Deafness - Not sure if we need this, but, safety.
-
-	src.density = !( src.lying )
-=======
-	if (ear_deaf > 0) ear_deaf--
+	if (ear_deaf > 0)
+		ear_deaf--
 	if (ear_damage < 25)
 		ear_damage -= 0.05
 		ear_damage = max(ear_damage, 0)
 
+	if(ear_deaf <= 0) // CHOMPStation Add: Ear Ringing/Deafness - Not sure if we need this, but, safety.
+		deaf_loop.stop() // CHOMPStation Add: Ear Ringing/Deafness - Not sure if we need this, but, safety.
+
 	density = !( lying )
->>>>>>> 822d60e32d (Fixes borg overlays (#16744))
 
 	if (sdisabilities & BLIND)
 		blinded = 1
@@ -210,16 +192,10 @@
 		see_in_dark = 8
 		see_invisible = SEE_INVISIBLE_LEVEL_TWO
 		fullbright = TRUE
-<<<<<<< HEAD
 	/* //ChompEDIT START - remove this for now
-	else if (src.sight_mode & BORGANOMALOUS)
-		src.see_in_dark = 8
-		src.see_invisible = INVISIBILITY_SHADEKIN
-=======
 	else if (sight_mode & BORGANOMALOUS)
 		see_in_dark = 8
 		see_invisible = INVISIBILITY_SHADEKIN
->>>>>>> 822d60e32d (Fixes borg overlays (#16744))
 		fullbright = TRUE
 	*/ //ChompEDIT END
 	else if (!seedarkness)
