@@ -474,7 +474,6 @@
 /area/crew_quarters/heads/sc/
 	name = "\improper Command - Head Office"
 	icon_state = "head_quarters"
-	flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO
 	sound_env = MEDIUM_SOFTFLOOR
 
 /area/crew_quarters/heads/sc/hop
@@ -509,7 +508,6 @@
 /area/engineering/engi_restroom
 	name = "\improper Engineering Restroom"
 	icon_state = "toilet"
-	flags = RAD_SHIELDED
 	sound_env = SMALL_ENCLOSED
 
 /area/engineering/hallway/atmos_hallway
@@ -599,7 +597,6 @@
 /area/medical/medical_restroom
 	name = "\improper Medbay Restroom"
 	icon_state = "medbay_restroom"
-	flags = RAD_SHIELDED
 	sound_env = SMALL_ENCLOSED
 
 /area/security/aid_station
@@ -613,7 +610,6 @@
 /area/security/security_restroom
 	name = "\improper Security - Restroom"
 	icon_state = "security_bathroom"
-	flags = RAD_SHIELDED
 	sound_env = SMALL_ENCLOSED
 
 /area/storage/emergency_storage/seconddeck/ap_emergency
@@ -637,7 +633,6 @@
 /area/rnd/research_restroom_sc
 	name = "\improper Research Restroom"
 	icon_state = "research_restroom"
-	flags = RAD_SHIELDED
 	sound_env = SMALL_ENCLOSED
 
 /area/rnd/research_lockerroom
@@ -869,7 +864,6 @@
 	name = "\improper Response Team Ship"
 	icon_state = "shuttlered"
 	requires_power = 0
-	flags = RAD_SHIELDED
 	ambience = AMBIENCE_HIGHSEC
 
 /* Chompstation Edit - Removing Shuttle 1 & 2
@@ -995,7 +989,6 @@ End Chompstation Edit*/
 	icon_state = "syndie-ship"
 	requires_power = 0
 	dynamic_lighting = 0
-	flags = RAD_SHIELDED
 	ambience = AMBIENCE_HIGHSEC
 
 /area/syndicate_station
@@ -1003,7 +996,6 @@ End Chompstation Edit*/
 	icon_state = "syndie-ship"
 	requires_power = 0
 	dynamic_lighting = 0
-	flags = RAD_SHIELDED
 	ambience = AMBIENCE_HIGHSEC
 
 /area/syndicate_station/start
@@ -1064,7 +1056,6 @@ End Chompstation Edit*/
 	icon_state = "yellow"
 	requires_power = 0
 	dynamic_lighting = 0
-	flags = RAD_SHIELDED
 	ambience = AMBIENCE_HIGHSEC
 
 /area/skipjack_station/transit
@@ -1118,7 +1109,6 @@ End Chompstation Edit*/
 	name = "\improper Ninja Base"
 	icon_state = "green"
 	requires_power = 0
-	flags = RAD_SHIELDED
 	ambience = AMBIENCE_HIGHSEC
 
 /area/ninja_dojo/dojo

@@ -112,6 +112,7 @@
 #define AREA_ALLOW_LARGE_SIZE		0x400	// If mob size is limited in the area.
 #define AREA_BLOCK_SUIT_SENSORS		0x800	// If suit sensors are blocked in the area.
 #define AREA_BLOCK_TRACKING			0x1000	// If camera tracking is blocked in the area.
+#define AREA_BLOCK_GHOST_SIGHT		0x2000	// If an area blocks sight for ghosts
 
 // CHOMPAdd Start/area
 #define PHASE_SHIELDED				0x200000 // A less rough way to prevent phase shifting without blocking access
