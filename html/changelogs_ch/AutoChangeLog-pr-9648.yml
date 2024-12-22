@@ -1,0 +1,7 @@
+author: "Asher-42"
+delete-after: True
+changes:
+  - rscadd: "Added sloog ears"
+  - rscadd: "Added sloog shell"
+  - rscadd: "Added sloog taur body"
+  - rscadd: "Added sloog head"
