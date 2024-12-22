@@ -1038,7 +1038,6 @@ z
 /area/engineering/engi_restroom
 	name = "\improper Engineering Restroom"
 	icon_state = "toilet"
-	flags = RAD_SHIELDED
 	sound_env = SMALL_ENCLOSED
 
 /area/engineering/hallway/atmos_hallway
@@ -1120,7 +1119,6 @@ z
 /area/medical/medical_restroom
 	name = "\improper Medbay Restroom"
 	icon_state = "medbay_restroom"
-	flags = RAD_SHIELDED
 	sound_env = SMALL_ENCLOSED
 
 /area/security/aid_station
@@ -1134,7 +1132,6 @@ z
 /area/security/security_restroom
 	name = "\improper Security - Restroom"
 	icon_state = "security_bathroom"
-	flags = RAD_SHIELDED
 	sound_env = SMALL_ENCLOSED
 
 /area/storage/emergency_storage/seconddeck/ap_emergency
@@ -1158,7 +1155,6 @@ z
 /area/rnd/research_restroom_sc
 	name = "\improper Research Restroom"
 	icon_state = "research_restroom"
-	flags = RAD_SHIELDED
 	sound_env = SMALL_ENCLOSED
 
 /area/rnd/research_lockerroom
