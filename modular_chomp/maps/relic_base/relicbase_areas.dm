@@ -997,33 +997,23 @@ z
 /area/crew_quarters/seconddeck/locker
 	name = "\improper Locker Room"
 	icon_state = "locker"
-	flags = AREA_ALLOW_CLOCKOUT
 
 //CHOMPStation Edit Start KSC 1/19/21 - Added area for new GYM
 
 /area/crew_quarters/seconddeck/gym
 	name = "\improper Station Gym"
 	icon_state = "fitness"
-	flags = AREA_ALLOW_CLOCKOUT
 
 //CHOMPStation Edit End
-
-/area/holodeck_control
-	flags = AREA_ALLOW_CLOCKOUT
-
-/area/holodeck/alphadeck
-	flags = AREA_ALLOW_CLOCKOUT | AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS
 
 /area/crew_quarters/seconddeck/locker/locker_toilet
 	name = "\improper Locker Toilets"
 	icon_state = "toilet"
 	sound_env = SMALL_ENCLOSED
-	flags = AREA_ALLOW_CLOCKOUT
 
 /area/crew_quarters/seconddeck/barrestroom
 	name = "\improper Bar Restroom"
 	icon_state = "bar"
-	flags = AREA_ALLOW_CLOCKOUT
 
 /area/crew_quarters/heads/sc/
 	name = "\improper Command - Head Office"
@@ -1075,63 +1065,51 @@ z
 /area/hallway/primary/seconddeck/stairwell
 	name = "\improper Second Deck Central Stairwell Access"
 	icon_state = "hallC"
-	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/seconddeck/fore
 	name = "\improper Second Deck Fore Hallway"
 	icon_state = "hallF"
-	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/seconddeck/fpcenter
 	name = "\improper Second Deck Fore Port Central Hallway"
 	icon_state = "hallC1"
-	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/seconddeck/fscenter
 	name = "\improper Second Deck Fore Starboard Central Hallway"
 	icon_state = "hallC2"
-	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/seconddeck/apcenter
 	name = "\improper Second Deck Aft Port Central Hallway"
 	icon_state = "hallC3"
-	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/seconddeck/ascenter
 	name = "\improper Second Deck Aft Starboard Central Hallway"
 	icon_state = "hallC4"
-	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/seconddeck/aft
 	name = "\improper Second Deck Aft Hallway"
 	icon_state = "hallA"
-	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/seconddeck/port
 	name = "\improper Second Deck Port Hallway"
 	icon_state = "hallP"
-	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/seconddeck/starboard
 	name = "\improper Second Deck Starboard Hallway"
 	icon_state = "hallS"
-	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/seconddeck/dockhallway
 	name = "\improper Departures Tram Station"
 	icon_state = "docking_hallway"
-	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/secondary/seconddeck/research_medical
 	name = "Research Medical Hallway"
 	icon_state = "hallS"
-	flags = AREA_ALLOW_CLOCKOUT
 
 /area/medical/foyer
 	name = "\improper Medbay Foyer"
 	icon_state = "medbay2"
 	music = 'sound/ambience/signal.ogg'
-	flags = AREA_ALLOW_CLOCKOUT
 
 /area/medical/medsci
 	name = "\improper Medical Science Hallway"
@@ -1279,44 +1257,36 @@ z
 /area/hallway/primary/thirddeck/central
 	name = "\improper Third Deck Port Hallway"
 	icon_state = "hallC"
-	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/thirddeck/port
 	name = "\improper Third Deck Port Hallway"
 	icon_state = "hallP"
-	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/thirddeck/starboard
 	name = "\improper Third Deck Starboard Hallway"
 	icon_state = "hallS"
-	flags = AREA_ALLOW_CLOCKOUT
 
 //CHOMPStation Edit Start TFF 6/2/20 KC - Added new hallway for dorms. 11/20/20 KC - Added more areas for gateway and halls.
 
 /area/hallway/primary/thirddeck/aftportcentral
 	name = "\improper Third Deck Central Aft Port Hallway"
 	icon_state = "hallC"
-	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/thirddeck/aftstarboardcentral
 	name = "\improper Third Deck Central Aft Starboard Hallway"
 	icon_state = "hallC"
-	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/thirddeck/stationgateway
 	name = "\improper Gateway"
 	icon_state = "teleporter"
-	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/thirddeck/aft
 	name = "\improper Third Deck Aft Hallway"
 	icon_state = "hallA"
-	flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/thirddeck/aftdoorm
 	name = "\improper Third Deck Aft Doorm Hallway"
 	icon_state = "docking_hallway"
-	flags = AREA_ALLOW_CLOCKOUT
 
 /area/maintenance/thirddeck/dormsport
 	name = "Third Deck Aft Starboard Maintenance"

@@ -172,7 +172,6 @@
 /area/hallway/primary/firstdeck/elevator
 	name = "\improper First Deck Central Elevator Access"
 	icon_state = "hallC"
-	flags = AREA_ALLOW_CLOCKOUT
 
 /area/rnd/xenobiology/xenoflora_isolation
 	name = "\improper Xenoflora Isolation"
@@ -2064,7 +2063,6 @@
     icon_state = "hallA"
     ambience = AMBIENCE_GENERIC
     sound_env = MEDIUM_SOFTFLOOR
-    flags = AREA_ALLOW_CLOCKOUT
 
 /area/hallway/ForPort_1_Deck_Observatory
     name = "\improper ForPort 1 Deck Observatory"
