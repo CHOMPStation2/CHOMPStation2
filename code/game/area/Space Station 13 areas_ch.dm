@@ -190,7 +190,7 @@
 /area/hallway
 	flags = AREA_ALLOW_CLOCKOUT
 
-/area/crew_quarters/seconddeck
+/area/crew_quarters
 	flags = AREA_ALLOW_CLOCKOUT
 
 /area/holodeck_control
@@ -198,3 +198,15 @@
 
 /area/holodeck/alphadeck
 	flags = AREA_ALLOW_CLOCKOUT | AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS
+
+/area/turbolift
+	flags = RAD_SHIELDED | AREA_ALLOW_CLOCKOUT
+
+/area/surface/outpost/civilian
+	flags = AREA_ALLOW_CLOCKOUT
+
+/area/surface/outside
+	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_ALLOW_CLOCKOUT
+
+/area/surface/cave
+	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_ALLOW_CLOCKOUT

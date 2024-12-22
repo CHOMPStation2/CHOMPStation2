@@ -22,7 +22,6 @@
 	icon_state = "shuttle"
 	requires_power = 0
 	dynamic_lighting = 1
-	flags = RAD_SHIELDED | AREA_ALLOW_CLOCKOUT
 
 /area/turbolift/start
 	name = "\improper Turbolift Start"

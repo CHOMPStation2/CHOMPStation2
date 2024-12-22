@@ -22,7 +22,6 @@
 	icon_state = "shuttle"
 	requires_power = 0
 	dynamic_lighting = 1
-	flags = RAD_SHIELDED | AREA_ALLOW_CLOCKOUT
 
 /area/turbolift/start
 	name = "\improper Turbolift Start"
@@ -1809,7 +1808,6 @@
 /area/crew_quarters/Holodeck
     name = "\improper Holodeck"
     icon_state = "gaming"
-    flags = AREA_ALLOW_CLOCKOUT
 
 /area/crew_quarters/Midnight_Bar
     name = "\improper Midnight Bar"
@@ -1824,28 +1822,23 @@
 /area/crew_quarters/Gallery
     name = "\improper Gallery"
     icon_state = "gaming"
-    flags = AREA_ALLOW_CLOCKOUT
 
 /area/crew_quarters/VR
     name = "\improper VR"
     icon_state = "gaming"
-    flags = AREA_ALLOW_CLOCKOUT
 
 /area/crew_quarters/Gym
     name = "\improper Gym"
     icon_state = "gaming"
-    flags = AREA_ALLOW_CLOCKOUT
 
 /area/crew_quarters/Gym_Sauna
     name = "\improper Gym Sauna"
     icon_state = "gaming"
-    flags = AREA_ALLOW_CLOCKOUT
 
 /area/crew_quarters/Chapel_Lobby
     name = "\improper Chapel Lobby"
     icon_state = "gaming"
     ambience = AMBIENCE_CHAPEL
-    flags = AREA_ALLOW_CLOCKOUT
 
 /area/crew_quarters/Chapel_Morgue
     name = "\improper Chapel Morgue"
@@ -1891,13 +1884,11 @@
     name = "\improper Library"
     icon_state = "gaming"
     ambience = AMBIENCE_SPACE
-    flags = AREA_ALLOW_CLOCKOUT
 
 /area/crew_quarters/Library_Cafe
     name = "\improper Library Cafe"
     icon_state = "gaming"
     ambience = AMBIENCE_SPACE
-    flags = AREA_ALLOW_CLOCKOUT
 
 /area/crew_quarters/Library_Office
     name = "\improper Library Office"
@@ -1907,12 +1898,10 @@
 /area/crew_quarters/Rec_Lounge
     name = "\improper Rec Lounge"
     icon_state = "gaming"
-    flags = AREA_ALLOW_CLOCKOUT
 
 /area/crew_quarters/Office_Lounge
     name = "\improper Office Lounge"
     icon_state = "gaming"
-    flags = AREA_ALLOW_CLOCKOUT
 
 /area/crew_quarters/Chomp_Hydroponics
     name = "\improper Chomp Hydroponics"
@@ -1949,7 +1938,6 @@
 /area/crew_quarters/Public_Hydroponics
     name = "\improper Public Hydroponics"
     icon_state = "gaming"
-    flags = AREA_ALLOW_CLOCKOUT
 
 /area/crew_quarters/Botanical_Shop
     name = "\improper Botanical Shop"
@@ -1958,17 +1946,14 @@
 /area/crew_quarters/Observation_Atrium
     name = "\improper Observation Atrium"
     icon_state = "gaming"
-    flags = AREA_ALLOW_CLOCKOUT
 
 /area/crew_quarters/Observation_Lounge
     name = "\improper Observation Lounge"
     icon_state = "gaming"
-    flags = AREA_ALLOW_CLOCKOUT
 
 /area/crew_quarters/Public_Garden
     name = "\improper Public Garden"
     icon_state = "gaming"
-    flags = AREA_ALLOW_CLOCKOUT
 
 /area/crew_quarters/sleep
     flags = RAD_SHIELDED | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING | AREA_SOUNDPROOF | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO | AREA_ALLOW_CLOCKOUT
@@ -2015,36 +2000,30 @@
     name = "\improper Dorm Corridor 1"
     icon_state = "gaming"
     lightswitch = 1
-    flags = AREA_ALLOW_CLOCKOUT
 
 /area/crew_quarters/Dorm_Corridor_2
     name = "\improper Dorm Corridor 2"
     icon_state = "gaming"
     lightswitch = 1
-    flags = AREA_ALLOW_CLOCKOUT
 
 /area/crew_quarters/Dorm_Corridor_3
     name = "\improper Dorm Corridor 3"
     icon_state = "gaming"
     lightswitch = 1
-    flags = AREA_ALLOW_CLOCKOUT
 
 /area/crew_quarters/Dorm_Corridor_4
     name = "\improper Dorm Corridor 4"
     icon_state = "gaming"
     lightswitch = 1
-    flags = AREA_ALLOW_CLOCKOUT
 
 /area/crew_quarters/Dorm_Foyer
     name = "\improper Dorm Foyer"
     icon_state = "gaming"
     lightswitch = 1
-    flags = AREA_ALLOW_CLOCKOUT
 
 /area/crew_quarters/Public_Gateway
     name = "\improper Public Gateway"
     icon_state = "gaming"
-    flags = AREA_ALLOW_CLOCKOUT
 
 /area/crew_quarters/Emergency_EVA
     name = "\improper Emergency EVA"

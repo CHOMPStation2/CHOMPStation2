@@ -43,7 +43,6 @@
 /area/surface/outside
 	ambience = AMBIENCE_SIF
 	always_unpowered = TRUE
-	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_ALLOW_CLOCKOUT
 	outdoors = OUTDOORS_YES
 
 // The area near the outpost, so POIs don't show up right next to the outpost.
@@ -130,7 +129,6 @@
 
 
 /area/surface/cave
-	flags = RAD_SHIELDED | AREA_ALLOW_CLOCKOUT
 	always_unpowered = TRUE
 
 /area/surface/cave
@@ -598,16 +596,13 @@
 /area/surface/outpost/civilian/fishing
 	name = "\improper Civilian Outpost Fishing Supplies"
 	icon_state = "storage"
-	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/civilian/pool
 	name = "\improper Civilian Outpost Pool"
 	icon_state = "pool"
-	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/civilian/sauna
 	name = "\improper Civilian Outpost Sauna"
-	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/civilian/emergency_storage
 	flags = RAD_SHIELDED

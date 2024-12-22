@@ -60,7 +60,6 @@
 /area/surface/outside
 	ambience = AMBIENCE_THOR
 	always_unpowered = TRUE
-	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_ALLOW_CLOCKOUT
 	outdoors = OUTDOORS_YES
 
 // The area near the outpost, so POIs don't show up right next to the outpost.
@@ -130,7 +129,6 @@
 	name = "Sesquehanna River"
 	icon_state = "bluenew"
 /area/surface/cave
-	flags = RAD_SHIELDED | AREA_ALLOW_CLOCKOUT
 	always_unpowered = TRUE
 
 /area/surface/cave
@@ -608,20 +606,16 @@
 /area/surface/outpost/civilian/fishing
 	name = "\improper Private Cabin"
 	icon_state = "storage"
-	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/civilian/pool
 	name = "\improper Pool"
 	icon_state = "pool"
-	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/civilian/sauna
 	name = "\improper Sauna"
-	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/civilian/sauna/cryosauna
 	name = "\improper Cryosauna"
-	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/civilian/emergency_storage
 	flags = RAD_SHIELDED
@@ -681,7 +675,6 @@ z
 	icon_state = "shuttle"
 	requires_power = 0
 	dynamic_lighting = 1
-	flags = RAD_SHIELDED | AREA_ALLOW_CLOCKOUT
 
 /area/turbolift/start
 	name = "\improper Turbolift Start"
