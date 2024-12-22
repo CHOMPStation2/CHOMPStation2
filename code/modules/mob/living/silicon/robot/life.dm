@@ -85,7 +85,7 @@
 	if(health < CONFIG_GET(number/health_threshold_dead) && stat != 2) //die only once
 		death()
 
-	if (src.stat != 2) //Alive.
+	if (stat != 2) //Alive.
 		if (paralysis || stunned || weakened || !has_power) //Stunned etc.
 			set_stat(UNCONSCIOUS)
 			if (stunned > 0)
