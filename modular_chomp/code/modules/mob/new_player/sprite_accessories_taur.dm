@@ -349,3 +349,10 @@
 	fullness_icons = 3
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/taur/ch/sloog
+	name = "Sloog (Taur)"
+	icon_state = "sloog"
+	extra_overlay = "sloog_glowstripe"
+	extra_overlay_w = "sloog_glowstripe"
+	can_loaf = FALSE

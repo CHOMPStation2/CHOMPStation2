@@ -258,3 +258,12 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	wing_offset = 16
+
+/datum/sprite_accessory/wing/sloogshell
+	name = "Sloog shell"
+	desc = ""
+	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/wings64.dmi'
+	icon_state = "sloogshell"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	wing_offset = 16
