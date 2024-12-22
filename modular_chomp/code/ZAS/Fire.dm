@@ -2,6 +2,14 @@
 	return
 
 /turf/simulated/lingering_fire(fl)
+	if(istype(src, /turf/space) || istype(src, /turf/simulated/floor/water) || istype(src, /turf/simulated/flesh))
+		return FALSE
+
+	if(istype(src, /turf/simulated/open))
+		var/turf/below = GetBelow(src)
+		if(below)
+			return below.lingering_fire(fl)
+
 	if(!zone)
 		return TRUE
 

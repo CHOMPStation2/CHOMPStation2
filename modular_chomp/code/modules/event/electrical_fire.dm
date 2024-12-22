@@ -45,3 +45,7 @@
 
 		var/turf/T = get_turf(M)
 		T.lingering_fire(0.6)
+
+		var/area/A = get_area(T)
+		log_admin("Electrical event: [M] in [A] caught fire.")
+		message_admins("Electrical event: [M] in [A] caught fire.")
