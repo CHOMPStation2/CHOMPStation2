@@ -105,7 +105,7 @@
  * * height: The height of the grid.
  */
 #define rustg_cnoise_generate(percentage, smoothing_iterations, birth_limit, death_limit, width, height) \
-        RUSTG_CALL(RUST_G, "cnoise_generate")(percentage, smoothing_iterations, birth_limit, death_limit, width, height)
+	RUSTG_CALL(RUST_G, "cnoise_generate")(percentage, smoothing_iterations, birth_limit, death_limit, width, height)
 
 /**
  * This proc generates a grid of perlin-like noise
@@ -185,63 +185,6 @@
         #define md5(thing) (isfile(thing) ? rustg_hash_file(RUSTG_HASH_MD5, "[thing]") : rustg_hash_string(RUSTG_HASH_MD5, thing))
 #endif
 
-/**
- * Sets up the Aho-Corasick automaton with its default options.
- *
- * The search patterns list and the replacements must be of the same length when replace is run, but an empty replacements list is allowed if replacements are supplied with the replace call
- * Arguments:
- * * key - The key for the automaton, to be used with subsequent rustg_acreplace/rustg_acreplace_with_replacements calls
- * * patterns - A non-associative list of strings to search for
- * * replacements - Default replacements for this automaton, used with rustg_acreplace
- */
-#define rustg_setup_acreplace(key, patterns, replacements) RUSTG_CALL(RUST_G, "setup_acreplace")(key, json_encode(patterns), json_encode(replacements))
-
-/**
- * Sets up the Aho-Corasick automaton using supplied options.
- *
- * The search patterns list and the replacements must be of the same length when replace is run, but an empty replacements list is allowed if replacements are supplied with the replace call
- * Arguments:
- * * key - The key for the automaton, to be used with subsequent rustg_acreplace/rustg_acreplace_with_replacements calls
- * * options - An associative list like list("anchored" = 0, "ascii_case_insensitive" = 0, "match_kind" = "Standard"). The values shown on the example are the defaults, and default values may be omitted. See the identically named methods at https://docs.rs/aho-corasick/latest/aho_corasick/struct.AhoCorasickBuilder.html to see what the options do.
- * * patterns - A non-associative list of strings to search for
- * * replacements - Default replacements for this automaton, used with rustg_acreplace
- */
-#define rustg_setup_acreplace_with_options(key, options, patterns, replacements) RUSTG_CALL(RUST_G, "setup_acreplace")(key, json_encode(options), json_encode(patterns), json_encode(replacements))
-
-/**
- * Run the specified replacement engine with the provided haystack text to replace, returning replaced text.
- *
- * Arguments:
- * * key - The key for the automaton
- * * text - Text to run replacements on
- */
-#define rustg_acreplace(key, text) RUSTG_CALL(RUST_G, "acreplace")(key, text)
-
-/**
- * Run the specified replacement engine with the provided haystack text to replace, returning replaced text.
- *
- * Arguments:
- * * key - The key for the automaton
- * * text - Text to run replacements on
- * * replacements - Replacements for this call. Must be the same length as the set-up patterns
- */
-#define rustg_acreplace_with_replacements(key, text, replacements) RUSTG_CALL(RUST_G, "acreplace_with_replacements")(key, text, json_encode(replacements))
-
-/**
- * This proc generates a cellular automata noise grid which can be used in procedural generation methods.
- *
- * Returns a single string that goes row by row, with values of 1 representing an alive cell, and a value of 0 representing a dead cell.
- *
- * Arguments:
- * * percentage: The chance of a turf starting closed
- * * smoothing_iterations: The amount of iterations the cellular automata simulates before returning the results
- * * birth_limit: If the number of neighboring cells is higher than this amount, a cell is born
- * * death_limit: If the number of neighboring cells is lower than this amount, a cell dies
- * * width: The width of the grid.
- * * height: The height of the grid.
- */
-#define rustg_cnoise_generate(percentage, smoothing_iterations, birth_limit, death_limit, width, height) \
-	RUSTG_CALL(RUST_G, "cnoise_generate")(percentage, smoothing_iterations, birth_limit, death_limit, width, height)
 
 
 #define RUSTG_HTTP_METHOD_GET "get"
@@ -429,8 +372,6 @@
  */
 #define rustg_sanitize_html(text, attribute_whitelist_json, tag_whitelist_json) RUSTG_CALL(RUST_G, "sanitize_html")(text, attribute_whitelist_json, tag_whitelist_json)
 
-<<<<<<< HEAD
-=======
 /// Provided a static RSC file path or a raw text file path, returns the duration of the file in deciseconds as a float.
 /proc/rustg_sound_length(file_path)
         var/static/list/sound_cache
@@ -474,7 +415,6 @@
 */
 #define rustg_sound_length_list(file_paths) json_decode(RUSTG_CALL(RUST_G, "sound_len_list")(json_encode(file_paths)))
 
->>>>>>> ccc5aeab13 (rust-g binary update (#16745))
 #define rustg_sql_connect_pool(options) RUSTG_CALL(RUST_G, "sql_connect_pool")(options)
 #define rustg_sql_query_async(handle, query, params) RUSTG_CALL(RUST_G, "sql_query_async")(handle, query, params)
 #define rustg_sql_query_blocking(handle, query, params) RUSTG_CALL(RUST_G, "sql_query_blocking")(handle, query, params)
