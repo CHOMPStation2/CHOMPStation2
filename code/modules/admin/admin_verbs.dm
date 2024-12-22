@@ -68,18 +68,12 @@
 		if(build_mode)
 			togglebuildmode(body)
 			ghost = body.ghostize(1, TRUE)
-<<<<<<< HEAD
 			log_and_message_admins("[key_name(src)] admin-ghosted.") // CHOMPEdit - Add logging.
-=======
->>>>>>> d421a56cc4 (More area flag option fixes (#16740))
 			if(build_mode == "Yes")
 				togglebuildmode(ghost)
 		else
 			ghost = body.ghostize(1, TRUE)
-<<<<<<< HEAD
 			log_and_message_admins("[key_name(src)] admin-ghosted.") // CHOMPEdit - Add logging.
-=======
->>>>>>> d421a56cc4 (More area flag option fixes (#16740))
 		init_verbs()
 		if(body)
 			body.teleop = ghost
