@@ -56,7 +56,12 @@ generic_filth = TRUE means when the decal is saved, it will be switched out for 
 	hud.layer = BELOW_MOB_LAYER
 	hud.mouse_opacity = 0
 	//HUD VARIANT: Allows the hud to show up with it's normal alpha, even if the 'dirty thing' it's attached to has a low alpha (ex: dirt). If you want to disable it, simply comment out the lines between the 'HUD VARIANT' tag!
+<<<<<<< HEAD
 	//hud.appearance_flags = RESET_ALPHA // CHOMPRemove
 	//hud.alpha = 255 // CHOMPRemove
+=======
+	hud.appearance_flags = RESET_ALPHA | RESET_COLOR
+	hud.alpha = 255
+>>>>>>> df3cec1c3a (Fixes janihud color being incorrect on mapspawn objects (#16739))
 	//HUD VARIANT end
 	add_overlay(hud)
