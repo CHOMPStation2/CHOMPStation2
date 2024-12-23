@@ -223,3 +223,81 @@
 		put_mob(L)
 
 */
+
+//Rocc and stone
+
+
+/obj/structure/outcrop/diamond/tyr
+	mindrop = 4
+	upperdrop = 8
+
+/obj/structure/outcrop/phoron/tyr
+	mindrop = 8
+	upperdrop = 16
+
+/obj/structure/outcrop/iron/tyr
+	mindrop = 20
+	upperdrop = 40
+
+/obj/structure/outcrop/coal/tyr
+	mindrop = 20
+	upperdrop = 40
+
+/obj/structure/outcrop/lead/tyr
+	mindrop = 4
+	upperdrop = 10
+
+/obj/structure/outcrop/gold/tyr
+	mindrop = 8
+	upperdrop = 12
+
+/obj/structure/outcrop/silver/tyr
+	mindrop = 12
+	upperdrop = 16
+
+/obj/structure/outcrop/platinum/tyr
+	mindrop = 4
+	upperdrop = 10
+
+/obj/structure/outcrop/uranium/tyr
+	mindrop = 8
+	upperdrop = 16
+
+/obj/structure/outcrop/hydrogen
+	name = "spiky outcrop"
+	desc = "A spiky rocky outcrop."
+	icon = 'modular_chomp/icons/obj/tribal_gear.dmi'
+	icon_state = "outcrop-hydrogen"
+	mindrop = 4
+	upperdrop = 8
+	outcropdrop = /obj/item/ore/hydrogen
+
+/obj/structure/outcrop/verdantium
+	name = "spiky outcrop"
+	desc = "A spiky rocky outcrop."
+	icon = 'modular_chomp/icons/obj/tribal_gear.dmi'
+	icon_state = "outcrop-verdantium"
+	mindrop = 4
+	upperdrop = 8
+	outcropdrop = /obj/item/ore/verdantium
+
+/obj/random/tyroutcrop //In case you want an outcrop without pre-determining the type of ore.
+	name = "random rock outcrop"
+	desc = "This is a random rock outcrop."
+	icon = 'icons/obj/outcrop.dmi'
+	icon_state = "outcrop-random"
+
+
+/obj/random/outcrop/item_to_spawn()
+	return pick(prob(100);/obj/structure/outcrop/verdantium,
+				prob(100);/obj/structure/outcrop/iron/tyr,
+				prob(100);/obj/structure/outcrop/coal/tyr,
+				prob(65);/obj/structure/outcrop/silver/tyr,
+				prob(50);/obj/structure/outcrop/gold/tyr,
+				prob(30);/obj/structure/outcrop/uranium/tyr,
+				prob(30);/obj/structure/outcrop/phoron/tyr,
+				prob(7);/obj/structure/outcrop/diamond/tyr,
+				prob(15);/obj/structure/outcrop/platinum/tyr,
+				prob(15);/obj/structure/outcrop/weathered_gate,
+				prob(15);/obj/structure/outcrop/hydrogen,
+				prob(15);/obj/structure/outcrop/lead/tyr)

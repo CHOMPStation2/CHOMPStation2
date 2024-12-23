@@ -110,6 +110,7 @@
 	spawn_types = list(
 	/mob/living/simple_mob/animal/tyr/electronic_beetle = 1,
 	/mob/living/simple_mob/animal/tyr/explode_beetle = 1,
+	/mob/living/simple_mob/animal/tyr/glowing_beetle = 1,
 	)
 
 	simultaneous_spawns = 2
@@ -177,3 +178,27 @@
 	if(isliving(A))
 		var/mob/living/L = A
 		L.add_modifier(/datum/modifier/fire, 3 SECONDS)
+
+/mob/living/simple_mob/animal/tyr/glowing_beetle
+	name = "glowing beetle"
+	desc = "A large insect."
+	icon_state = "green_beetle"
+	icon_dead = "beetle_dead"
+	maxHealth = 40
+	health = 40
+	pass_flags = PASSTABLE
+	movement_cooldown = 1
+
+	ai_holder_type = /datum/ai_holder/hostile/ranged/robust
+	projectiletype = /obj/item/projectile/arc/spore
+
+	meat_type = /obj/item/reagent_containers/food/snacks/deathclawmeat
+	meat_amount = 2
+
+	butchery_loot = list(\
+		/obj/item/stack/material/chitin = 1\
+		)
+
+	see_in_dark = 3
+	melee_damage_lower = 16
+	melee_damage_upper = 16
