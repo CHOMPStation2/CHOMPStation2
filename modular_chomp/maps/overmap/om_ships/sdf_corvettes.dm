@@ -179,7 +179,7 @@
 	vessel_mass = 1000
 	vessel_size = SHIP_SIZE_TINY
 	shuttle = "SDF Corvette Civilian"
-
+	known = FALSE
 
 /datum/map_template/shelter/superpose/sdf_corvette
 	shelter_id = "SDFCorvette"
