@@ -135,7 +135,7 @@
 
 /mob/living/simple_mob/humanoid/eclipse/solar/bullet_act(obj/item/projectile/P)
 	if(istype(P, /obj/item/projectile/energy) || istype(P, /obj/item/projectile/beam))
-		visible_message(span_boldwarning(span_warning("[P] seems ineffective!.")))
+		visible_message(span_boldwarning("[P] seems ineffective!."))
 		..()
 	else
 		..()
@@ -227,7 +227,7 @@
 
 	if(ranged_cooldown_time) //If you have a non-zero number in a mob's variables, this pattern begins.
 		if(ranged_cooldown <= world.time) //Further down, a timer keeps adding to the ranged_cooldown variable automatically.
-			visible_message(span_danger(span_bold("\The [src]") + " fires at \the [A]!")) //Leave notice of shooting.
+			visible_message(span_bolddanger("\The [src]") + " fires at \the [A]!") //Leave notice of shooting.
 			shoot(A) //Perform the shoot action
 			if(casingtype) //If the mob is designated to leave casings...
 				new casingtype(loc) //... leave the casing.
@@ -443,7 +443,7 @@
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/bullet_act(obj/item/projectile/P)
 	if(istype(P, /obj/item/projectile/bullet))
-		visible_message(span_boldwarning(span_warning("[P] seems ineffective!.")))
+		visible_message(span_boldwarning("[P] seems ineffective!."))
 		..()
 	else
 		..()
@@ -537,7 +537,7 @@
 
 	if(ranged_cooldown_time) //If you have a non-zero number in a mob's variables, this pattern begins.
 		if(ranged_cooldown <= world.time) //Further down, a timer keeps adding to the ranged_cooldown variable automatically.
-			visible_message(span_danger(span_bold("\The [src]") + " fires at \the [A]!")) //Leave notice of shooting.
+			visible_message(span_bolddanger("\The [src]") + " fires at \the [A]!") //Leave notice of shooting.
 			shoot(A) //Perform the shoot action
 			if(casingtype) //If the mob is designated to leave casings...
 				new casingtype(loc) //... leave the casing.
