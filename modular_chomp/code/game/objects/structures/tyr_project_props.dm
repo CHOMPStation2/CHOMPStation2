@@ -297,6 +297,6 @@
 				prob(1);/obj/structure/outcrop/uranium/tyr,
 				prob(3);/obj/structure/outcrop/diamond/tyr,
 				prob(1);/obj/structure/outcrop/platinum/tyr,
-				prob(5);/obj/structure/outcrop/weathered_agate,
+				prob(5);/obj/structure/outcrop/weathered_gate,
 				prob(3);/obj/structure/outcrop/hydrogen,
 				prob(1);/obj/structure/outcrop/lead/tyr)
