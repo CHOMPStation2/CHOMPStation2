@@ -288,7 +288,7 @@
 	icon_state = "outcrop-random"
 
 
-/obj/random/outcrop/item_to_spawn()
+/obj/random/tyroutcrop/item_to_spawn()
 	return pick(prob(3);/obj/structure/outcrop/verdantium,
 				prob(1);/obj/structure/outcrop/iron/tyr,
 				prob(1);/obj/structure/outcrop/coal/tyr,
