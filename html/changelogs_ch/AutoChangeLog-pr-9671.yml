@@ -1,4 +1,0 @@
-author: "Colfer1"
-delete-after: True
-changes:
-  - bugfix: "fixed exploit allowing vr users to escape into the real world"

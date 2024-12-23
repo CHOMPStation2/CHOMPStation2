@@ -126,3 +126,17 @@
 2024-12-21:
   CHOMPStation2StaffMirrorBot:
   - bugfix: 516 chat flickering
+2024-12-23:
+  Asher-42:
+  - rscadd: Added sloog ears
+  - rscadd: Added sloog shell
+  - rscadd: Added sloog taur body
+  - rscadd: Added sloog head
+  CHOMPStation2StaffMirrorBot:
+  - qol: 516 clients are served an Edge-optimized bundle.
+  Colfer1:
+  - bugfix: fixed exploit allowing vr users to escape into the real world
+  Kashargul:
+  - admin: fix admin resize
+  tacoguy7765093:
+  - bugfix: paralysis toxin now commits paralysis.
