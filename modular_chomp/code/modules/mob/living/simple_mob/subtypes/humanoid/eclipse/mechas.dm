@@ -1037,7 +1037,7 @@
 		return TRUE	//End these commands here.
 	// CHOMPAddition End
 
-	visible_message(span_danger(span_bold("\The [src]") + " fires at \the [orig_targ]!"))
+	visible_message(span_bolddanger("\The [src]") + " fires at \the [orig_targ]!"))
 	shoot(A)
 	if(casingtype)
 		new casingtype(loc)
