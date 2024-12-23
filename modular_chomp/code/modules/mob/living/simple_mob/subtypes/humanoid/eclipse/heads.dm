@@ -122,7 +122,7 @@
 /mob/living/simple_mob/mechanical/hivebot/swarm/eclipse
 	faction = FACTION_ECLIPSE
 
-mob/living/simple_mob/mechanical/combat_drone/artillery
+/mob/living/simple_mob/mechanical/combat_drone/artillery
 	faction = FACTION_ECLIPSE
 	projectiletype = /obj/item/projectile/arc/blue_energy
 
