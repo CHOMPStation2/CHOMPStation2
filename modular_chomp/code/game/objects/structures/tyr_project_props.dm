@@ -289,15 +289,14 @@
 
 
 /obj/random/outcrop/item_to_spawn()
-	return pick(prob(100);/obj/structure/outcrop/verdantium,
-				prob(100);/obj/structure/outcrop/iron/tyr,
-				prob(100);/obj/structure/outcrop/coal/tyr,
-				prob(65);/obj/structure/outcrop/silver/tyr,
-				prob(50);/obj/structure/outcrop/gold/tyr,
-				prob(30);/obj/structure/outcrop/uranium/tyr,
-				prob(30);/obj/structure/outcrop/phoron/tyr,
-				prob(7);/obj/structure/outcrop/diamond/tyr,
-				prob(15);/obj/structure/outcrop/platinum/tyr,
-				prob(15);/obj/structure/outcrop/weathered_gate,
-				prob(15);/obj/structure/outcrop/hydrogen,
-				prob(15);/obj/structure/outcrop/lead/tyr)
+	return pick(prob(3);/obj/structure/outcrop/verdantium,
+				prob(1);/obj/structure/outcrop/iron/tyr,
+				prob(1);/obj/structure/outcrop/coal/tyr,
+				prob(1);/obj/structure/outcrop/silver/tyr,
+				prob(1);/obj/structure/outcrop/gold/tyr,
+				prob(1);/obj/structure/outcrop/uranium/tyr,
+				prob(3);/obj/structure/outcrop/diamond/tyr,
+				prob(1);/obj/structure/outcrop/platinum/tyr,
+				prob(5);/obj/structure/outcrop/weathered_agate,
+				prob(3);/obj/structure/outcrop/hydrogen,
+				prob(1);/obj/structure/outcrop/lead/tyr)
