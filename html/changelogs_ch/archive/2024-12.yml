@@ -140,3 +140,6 @@
   - admin: fix admin resize
   tacoguy7765093:
   - bugfix: paralysis toxin now commits paralysis.
+2024-12-24:
+  tacoguy7765093:
+  - maptweak: Fixed the SDF corvettes docking issues,
