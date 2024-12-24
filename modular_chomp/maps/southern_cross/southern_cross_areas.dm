@@ -22,7 +22,6 @@
 	icon_state = "shuttle"
 	requires_power = 0
 	dynamic_lighting = 1
-	flags = RAD_SHIELDED
 
 /area/turbolift/start
 	name = "\improper Turbolift Start"
@@ -212,7 +211,7 @@
 /area/hallway/primary/firstdeck/auxdockaft
 	name = "\improper First Deck Aft Auxiliary Dock"
 	icon_state = "docking_hallway"
-	flags = AREA_FORBID_EVENTS
+	flags = AREA_FORBID_EVENTS | AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/firstdeck/auxdockfore
 	name = "\improper First Deck Fore Auxiliary Dock"
@@ -432,7 +431,7 @@
 /area/crew_quarters/thirddeck/vrroom
 	name = "\improper Virtual Reality Room"
 	icon_state = "gaming"
-	flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO //Depending on the video game, you might still get figuative cancer
+	flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO | AREA_ALLOW_CLOCKOUT //Depending on the video game, you might still get figuative cancer
 
 //CHOMPStation Edit End
 
@@ -725,6 +724,7 @@
 /area/maintenance/thirddeck/dormsstarboard/maintbar
 	name = "Third Deck Aft Starboard Speakeasy"
 	icon_state = "asmaint"
+
 //CHOMPedit end
 /area/maintenance/thirddeck/dormsaft
 	name = "Third Deck Aft Starboard Maintenance"
@@ -1702,7 +1702,7 @@ End Chompstation Edit*/
 /area/maintenance/bar/dorms
 	name = "Maintenance Bar Dorms"
 	icon_state = "Sleep"
-	flags = RAD_SHIELDED | AREA_SOUNDPROOF |AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING
+	flags = RAD_SHIELDED | AREA_SOUNDPROOF |AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING | AREA_ALLOW_CLOCKOUT
 
 /area/maintenance/bar/dorms/dorm_1
 	name = "Maintenance Deck Bar Dorms 1"
@@ -1737,3 +1737,4 @@ End Chompstation Edit*/
 /area/maintenance/zerobar
 	name = "Abandoned Bar"
 	icon_state = "maint_bar"
+	flags = AREA_ALLOW_CLOCKOUT | RAD_SHIELDED

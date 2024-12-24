@@ -69,6 +69,7 @@ var/global/list/obj/item/pda/PDAs = list()
 	var/list/programs = list(
 		new/datum/data/pda/app/main_menu,
 		new/datum/data/pda/app/notekeeper,
+		new/datum/data/pda/app/timeclock, //CHOMPEdit: Add the timeclock to default apps
 		new/datum/data/pda/app/news,
 		new/datum/data/pda/app/messenger,
 		new/datum/data/pda/app/manifest,

@@ -1,6 +1,6 @@
 /area/surface/outpost/main/dorms
 	name = "\improper Main Outpost Dorms"
-	flags = RAD_SHIELDED | AREA_SOUNDPROOF | AREA_FORBID_EVENTS | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING
+	flags = RAD_SHIELDED | AREA_SOUNDPROOF | AREA_FORBID_EVENTS | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING | AREA_FORBID_SINGULO | AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/main/dorms/dorm_1
 	name = "\improper Main Outpost Dorm One"
@@ -20,11 +20,14 @@
 /area/surface/outpost/main/dorms/dorm_6
 	name = "\improper Main Outpost Dorm Six"
 
+/area/crew_quarters
+	flags = AREA_ALLOW_CLOCKOUT
+
 /area/crew_quarters/cafeteria
-	flags = RAD_SHIELDED
+	flags = RAD_SHIELDED | AREA_ALLOW_CLOCKOUT
 
 /area/crew_quarters/coffee_shop
-	flags = RAD_SHIELDED
+	flags = RAD_SHIELDED | AREA_ALLOW_CLOCKOUT
 
 /area/crew_quarters/kitchen
 	flags = RAD_SHIELDED
@@ -33,7 +36,7 @@
 	flags = RAD_SHIELDED
 
 /area/crew_quarters/sleep
-	flags = RAD_SHIELDED | AREA_SOUNDPROOF | AREA_FORBID_EVENTS | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING | AREA_FORBID_SINGULO
+	flags = RAD_SHIELDED | AREA_SOUNDPROOF | AREA_FORBID_EVENTS | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING | AREA_FORBID_SINGULO | AREA_ALLOW_CLOCKOUT
 
 /area/crew_quarters/sleep/vistor_room_1
 
@@ -72,7 +75,7 @@
 	icon_state = "blue"
 	requires_power = 0
 	ambience = AMBIENCE_OTHERWORLDLY
-	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | BLUE_SHIELDED | AREA_ALLOW_LARGE_SIZE | AREA_LIMIT_DARK_RESPITE
+	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | BLUE_SHIELDED | AREA_ALLOW_LARGE_SIZE | AREA_LIMIT_DARK_RESPITE | AREA_ALLOW_CLOCKOUT
 
 /area/security/nuke_storage
 	flags = PHASE_SHIELDED
@@ -185,4 +188,73 @@
 	flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO | AREA_BLOCK_TRACKING | AREA_BLOCK_SUIT_SENSORS
 
 /area/crew_quarters/toilet/firstdeck
-	flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO | AREA_BLOCK_TRACKING | AREA_BLOCK_SUIT_SENSORS
+	flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO | AREA_BLOCK_TRACKING | AREA_BLOCK_SUIT_SENSORS | AREA_ALLOW_CLOCKOUT
+
+/area/hallway
+	flags = AREA_ALLOW_CLOCKOUT
+
+/area/hallway/secondary/entry
+	flags = AREA_FORBID_EVENTS | AREA_ALLOW_CLOCKOUT
+
+/area/hallway/secondary/entry/D1
+	flags = AREA_FORBID_EVENTS | AREA_ALLOW_CLOCKOUT
+
+/area/hallway/secondary/entry/D2
+	flags = AREA_FORBID_EVENTS | AREA_ALLOW_CLOCKOUT
+
+/area/hallway/secondary/entry/D3
+	flags = AREA_FORBID_EVENTS | AREA_ALLOW_CLOCKOUT
+
+/area/teleporter/firstdeck
+	flags = AREA_ALLOW_CLOCKOUT
+
+/area/holodeck_control
+	flags = AREA_ALLOW_CLOCKOUT
+
+/area/holodeck/alphadeck
+	flags = AREA_ALLOW_CLOCKOUT | AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS
+
+/area/turbolift
+	flags = RAD_SHIELDED | AREA_ALLOW_CLOCKOUT
+
+/area/surface/outpost/civilian
+	flags = AREA_ALLOW_CLOCKOUT
+
+/area/surface/outside
+	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_ALLOW_CLOCKOUT
+
+/area/surface/cave
+	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_ALLOW_CLOCKOUT
+
+/area/surface/outpost/main/corridor
+	flags = AREA_ALLOW_CLOCKOUT
+
+/area/surface/outpost/main/pool
+	flags = AREA_ALLOW_CLOCKOUT
+
+/area/surface/outpost/main/restroom
+	flags = AREA_ALLOW_CLOCKOUT
+
+/area/surface/outpost/main/showers
+	flags = AREA_ALLOW_CLOCKOUT
+
+/area/surface/outpost/main/gym
+	flags = AREA_ALLOW_CLOCKOUT
+
+/area/surface/outpost/main/crew_quarters
+	flags = AREA_ALLOW_CLOCKOUT
+
+/area/surface/outpost/main/gateway
+	flags = AREA_ALLOW_CLOCKOUT
+
+/area/surface/outpost/main/laundry
+	flags = AREA_ALLOW_CLOCKOUT
+
+/area/surface/outpost/main/dorms
+	flags = AREA_ALLOW_CLOCKOUT
+
+/area/surface/outpost/main/bar
+	flags = AREA_ALLOW_CLOCKOUT
+
+/area/surface/outpost/main/airlock
+	flags = AREA_ALLOW_CLOCKOUT
