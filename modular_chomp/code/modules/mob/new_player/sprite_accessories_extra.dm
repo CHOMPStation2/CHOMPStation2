@@ -262,7 +262,12 @@
 	body_parts = list(BP_HEAD)
 	color_blend_mode = ICON_MULTIPLY
 
-
+/datum/sprite_accessory/marking/ch/sloog_head
+	name = "sloog head"
+	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/sloog.dmi'
+	icon_state = "slooghead"
+	body_parts = list(BP_HEAD)
+	// placed in seperate dmi till normal one is functional.
 
 
 /// NEW XENOMORPH SPRITE_ACCESSORIES - Basesprites borrowed from Citadel and tidied up by Makkinindorn, should blend a bit more nicely. ///

@@ -50,8 +50,8 @@
 
 /datum/material/quartz
 	name = MAT_QUARTZ
-	display_name = ORE_QUARTZ
-	use_name = ORE_QUARTZ
+	display_name = MAT_QUARTZ
+	use_name = MAT_QUARTZ
 	icon_colour = "#e6d7df"
 	stack_type = /obj/item/stack/material/quartz
 	tableslam_noise = 'sound/effects/Glasshit.ogg'

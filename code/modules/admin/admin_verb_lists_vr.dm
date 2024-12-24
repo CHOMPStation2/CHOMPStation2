@@ -579,6 +579,8 @@ var/list/admin_verbs_event_manager = list(
 	/client/proc/start_vote,
 	/client/proc/AdminCreateVirus,
 	/client/proc/ReleaseVirus,
+	/client/proc/add_hidden_area,
+	/client/proc/remove_hidden_area,
 	/datum/admins/proc/quick_nif, //CHOMPStation Add,
 	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
 	/client/proc/reload_jobwhitelist, //ChompADD

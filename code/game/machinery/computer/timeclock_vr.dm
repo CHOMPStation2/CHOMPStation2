@@ -92,6 +92,7 @@
 	if(card)
 		data["card"] = "[card]"
 		data["assignment"] = card.assignment
+		data["card_cooldown"] = getCooldown()
 		var/datum/job/job = job_master.GetJob(card.rank)
 		if(job)
 			data["job_datum"] = list(
@@ -231,11 +232,14 @@
 /obj/machinery/computer/timeclock/proc/checkCardCooldown(var/mob/user)
 	if(!card)
 		return FALSE
-	var/time_left = 1 MINUTE - (world.time - card.last_job_switch) // CHOMPedit: 10 minute wait down to 1 minute.
+	var/time_left = getCooldown()
 	if(time_left > 0)
 		to_chat(user, "You need to wait another [round((time_left/10)/60, 1)] minute\s before you can switch.")
 		return FALSE
 	return TRUE
+
+/obj/machinery/computer/timeclock/proc/getCooldown()
+	return 1 MINUTES - (world.time - card.last_job_switch) // CHOMPedit: 10 minute wait down to 1 minute.
 
 /obj/machinery/computer/timeclock/proc/checkFace(var/mob/user)
 	var/turf/location = get_turf(src) // CHOMPedit: Needed for admin logs.

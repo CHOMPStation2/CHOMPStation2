@@ -123,3 +123,23 @@
       to others
   - qol: cleans up some duplicate supply pack defs
   - bugfix: Export chatlog works under 516
+2024-12-21:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: 516 chat flickering
+2024-12-23:
+  Asher-42:
+  - rscadd: Added sloog ears
+  - rscadd: Added sloog shell
+  - rscadd: Added sloog taur body
+  - rscadd: Added sloog head
+  CHOMPStation2StaffMirrorBot:
+  - qol: 516 clients are served an Edge-optimized bundle.
+  Colfer1:
+  - bugfix: fixed exploit allowing vr users to escape into the real world
+  Kashargul:
+  - admin: fix admin resize
+  tacoguy7765093:
+  - bugfix: paralysis toxin now commits paralysis.
+2024-12-24:
+  tacoguy7765093:
+  - maptweak: Fixed the SDF corvettes docking issues,
