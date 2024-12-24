@@ -1,0 +1,68 @@
+"a" = (/turf/template_noop,/area/template_noop)
+"c" = (/obj/structure/table/woodentable,/turf/simulated/floor/wood/turfpack/sif,/area/submap/PirateLake)
+"d" = (/obj/structure/table/woodentable{dir = 4; flipped = 1; icon_state = "wood_flip0"},/turf/simulated/floor/wood/turfpack/sif,/area/submap/PirateLake)
+"i" = (/turf/simulated/floor/wood/turfpack/sif,/area/submap/PirateLake)
+"l" = (/obj/structure/table/woodentable,/obj/item/storage/fancy/candle_box,/turf/simulated/floor/wood/turfpack/sif,/area/submap/PirateLake)
+"n" = (/obj/structure/curtain/open/bed,/turf/simulated/floor/wood/turfpack/sif,/area/submap/PirateLake)
+"o" = (/obj/structure/table/bench/sifwooden,/mob/living/simple_mob/humanoid/pirate/mate/ranged/rifle,/turf/simulated/floor/wood/turfpack/sif,/area/submap/PirateLake)
+"p" = (/obj/structure/closet,/obj/item/contraband,/obj/random/maintenance/foodstuff,/obj/random/maintenance/foodstuff,/obj/random/maintenance/foodstuff,/obj/random/maintenance/foodstuff,/obj/random/maintenance/foodstuff,/obj/random/maintenance/foodstuff,/obj/random/maintenance/foodstuff,/turf/simulated/floor/wood/turfpack/sif,/area/submap/PirateLake)
+"s" = (/obj/structure/table/woodentable,/obj/item/flame/candle/candelabra,/turf/simulated/floor/wood/turfpack/sif,/area/submap/PirateLake)
+"t" = (/obj/structure/table/woodentable{dir = 8; flipped = 1; icon_state = "wood_flip0"},/turf/simulated/floor/wood/turfpack/sif,/area/submap/PirateLake)
+"u" = (/obj/structure/loot_pile/mecha/ripley/pirate,/turf/simulated/floor/wood/turfpack/sif,/area/submap/PirateLake)
+"v" = (/obj/structure/table/bench/sifwooden,/mob/living/simple_mob/humanoid/pirate/ranged,/turf/simulated/floor/wood/turfpack/sif,/area/submap/PirateLake)
+"x" = (/turf/simulated/floor/outdoors/rocks/sif/planetuse,/area/submap/PirateLake)
+"z" = (/turf/template_noop,/area/submap/PirateLake)
+"C" = (/obj/structure/table/woodentable{flipped = 1; icon_state = "wood_flip0"},/turf/simulated/floor/wood/turfpack/sif,/area/submap/PirateLake)
+"D" = (/obj/structure/table/bench/sifwooden,/mob/living/simple_mob/humanoid/pirate/las,/turf/simulated/floor/wood/turfpack/sif,/area/submap/PirateLake)
+"I" = (/turf/simulated/floor/water/deep,/area/submap/PirateLake)
+"J" = (/turf/simulated/floor/outdoors/grass/sif/forest,/area/submap/PirateLake)
+"K" = (/turf/simulated/wall/wood,/area/submap/PirateLake)
+"L" = (/obj/structure/closet,/obj/item/clothing/suit/space/pirate,/obj/item/clothing/suit/space/pirate,/obj/item/clothing/head/helmet/space/pirate,/obj/item/clothing/head/helmet/space/pirate,/turf/simulated/floor/wood/turfpack/sif,/area/submap/PirateLake)
+"N" = (/obj/structure/table/woodentable,/obj/structure/safe/floor,/obj/item/gun/projectile/deagle/gold,/obj/item/soap/golden_soap,/obj/item/reagent_containers/food/drinks/golden_cup,/obj/item/toy/plushie/gold_eastdragon,/obj/item/slime_extract/gold,/turf/simulated/floor/wood/turfpack/sif,/area/submap/PirateLake)
+"Q" = (/obj/structure/closet/crate/secure/loot,/turf/simulated/floor/wood/turfpack/sif,/area/submap/PirateLake)
+"R" = (/obj/structure/table/woodentable{dir = 1; flipped = 1; icon_state = "wood_flip0"},/turf/simulated/floor/wood/turfpack/sif,/area/submap/PirateLake)
+"T" = (/turf/simulated/floor/water,/area/submap/PirateLake)
+"X" = (/obj/structure/table/bench/sifwooden,/turf/simulated/floor/wood/turfpack/sif,/area/submap/PirateLake)
+
+(1,1,1) = {"
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+azzzzzzzzzzzxxxxxxxxxxxxxxxxzzzzzzzzzzza
+azzzzzzzzxxxxTTTTTTTTTTTTTTxxxzzzzzzzzza
+azzzzzxxxxTTTTTTTTTTTTTTTTTTTxxzzzzzzzza
+azzzzxxTTTTTTTTIIIIIIIIIITTTTTxxxzzzzzza
+azzzzxTTTTTTTIIIIIIIIIIIIIITTTTTxxxzzzza
+azzzxxTTTTIIIIIITTTTTTTIIIIIITTTTTxxzzza
+azzxxTTTIIIIIIITTTTTTTTTTIIIIITTTTTxxzza
+azxxTTTIIIIIITTTxxxxxxxTTTTTIIIITTTTxxza
+azxTTTIIIIIITTTxxKRRRRKxxTTTTTIIIITTTxza
+azxTTTIIIIITTxxxJKiviiKJxxxxTTTIIITTTxxa
+azxTTTIIIITTxxJJJKiiiiKJJJJxxxTTIIITTTxa
+axxTTTIIIITTxJJJKKKnnKKKKJJJJxTTIIITTTxa
+axTTTIIIITTxxKKKKuiiiQppKKKKJxTTIITTTxxa
+axTTTIIIITTxJtiiKiiiXiiiKiidJxTTIITTTxza
+axTTTIIIITTxJtviniiscciiniidJxxTTITTTxza
+axTTTIIIITTxJtiiniDcNcXinivdJJxTTITTTxza
+axTTTIIIITTxJtiiKiiccliiKiidJJxTTITTTxza
+axTTTIIIITTxxKKKKiiiDiiiKKKKJxxTTITTTxza
+axxTTTIIIITTxxJJKiiiiiiiKKKKxxTTIITTTxza
+azxxTTTIIIITTxJJKiiiiKnKKKKJxTTIIITTTxxa
+azzxTTTIIIITTxxJKQiiQKiciLKJxTTIIIITTTxa
+azzxTTTIIIIITTxJKKnnKKicoiKxxTTIIIITTTxa
+azzxTTTIIIIITTxxKiiiiKicciKxTTIIIIITTTxa
+azzxTTTIIIIIITTxKiviiKiiiiKxTTIIIITTTxxa
+azzxxTTTIIIIITTxKCCCCKKKKKKTTIIIIITTTxza
+azzzxTTTIIIIIITTxxJJJJJJJxxTTIIIIITTTxza
+azzzxxTTTIIIIIITTxJJJJJJJxTTIIIIITTTxxza
+azzzzxTTTIIIIIITTxxxJJxxxxTTIIIIITTTxzza
+azzzzxxTTTIIIIIITTTxxxxTTTTIIIIIITTTxzza
+azzzzzxTTTIIIIIIITTTTTTTTTIIIIITTTTxxzza
+azzzzzxTTTIIIIIIIIITTTTIIIIIIITTTTTxzzza
+azzzzzxxTTTTIIIIIIIIIIIIIIIITTTTTTxxzzza
+azzzzzzxxTTTTIIIIIIIIIIIIIIITTTxxxxzzzza
+azzzzzzzxxTTTTTIIIIIIIIIIITTTTxxzzzzzzza
+azzzzzzzzxxxTTTTTTTTTTTTTTTTxxxzzzzzzzza
+azzzzzzzzzzxxTTTTTTTTTTTTTTTxzzzzzzzzzza
+azzzzzzzzzzzxxxTTTTTTTTTTTxxxzzzzzzzzzza
+azzzzzzzzzzzzzxxxxxxxxxxxxxzzzzzzzzzzzza
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+"}
