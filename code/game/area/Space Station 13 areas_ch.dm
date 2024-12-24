@@ -20,6 +20,9 @@
 /area/surface/outpost/main/dorms/dorm_6
 	name = "\improper Main Outpost Dorm Six"
 
+/area/crew_quarters
+	flags = AREA_ALLOW_CLOCKOUT
+
 /area/crew_quarters/cafeteria
 	flags = RAD_SHIELDED | AREA_ALLOW_CLOCKOUT
 
@@ -190,7 +193,19 @@
 /area/hallway
 	flags = AREA_ALLOW_CLOCKOUT
 
-/area/crew_quarters
+/area/hallway/secondary/entry
+	flags = AREA_FORBID_EVENTS | AREA_ALLOW_CLOCKOUT
+
+/area/hallway/secondary/entry/D1
+	flags = AREA_FORBID_EVENTS | AREA_ALLOW_CLOCKOUT
+
+/area/hallway/secondary/entry/D2
+	flags = AREA_FORBID_EVENTS | AREA_ALLOW_CLOCKOUT
+
+/area/hallway/secondary/entry/D3
+	flags = AREA_FORBID_EVENTS | AREA_ALLOW_CLOCKOUT
+
+/area/teleporter/firstdeck
 	flags = AREA_ALLOW_CLOCKOUT
 
 /area/holodeck_control
@@ -210,3 +225,36 @@
 
 /area/surface/cave
 	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_ALLOW_CLOCKOUT
+
+/area/surface/outpost/main/corridor
+	flags = AREA_ALLOW_CLOCKOUT
+
+/area/surface/outpost/main/pool
+	flags = AREA_ALLOW_CLOCKOUT
+
+/area/surface/outpost/main/restroom
+	flags = AREA_ALLOW_CLOCKOUT
+
+/area/surface/outpost/main/showers
+	flags = AREA_ALLOW_CLOCKOUT
+
+/area/surface/outpost/main/gym
+	flags = AREA_ALLOW_CLOCKOUT
+
+/area/surface/outpost/main/crew_quarters
+	flags = AREA_ALLOW_CLOCKOUT
+
+/area/surface/outpost/main/gateway
+	flags = AREA_ALLOW_CLOCKOUT
+
+/area/surface/outpost/main/laundry
+	flags = AREA_ALLOW_CLOCKOUT
+
+/area/surface/outpost/main/dorms
+	flags = AREA_ALLOW_CLOCKOUT
+
+/area/surface/outpost/main/bar
+	flags = AREA_ALLOW_CLOCKOUT
+
+/area/surface/outpost/main/airlock
+	flags = AREA_ALLOW_CLOCKOUT

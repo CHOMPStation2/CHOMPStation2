@@ -338,7 +338,6 @@
 
 /area/surface/outpost/main/laundry
 	name = "\improper Main Outpost Laundry Room"
-	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/main/landing
 	name = "\improper Landing Pad Four"
@@ -374,24 +373,20 @@
 /area/surface/outpost/main/pool
 	name = "\improper Main Outpost Pool"
 	icon_state = "pool"
-	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/main/restroom
 	name = "\improper Main Outpost Restroom"
 	icon_state = "toilet"
 	sound_env = SMALL_ENCLOSED
-	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/main/showers
 	name = "\improper Main Outpost Showers"
 	icon_state = "toilet"
 	sound_env = SMALL_ENCLOSED
-	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/main/gym
 	name = "\improper Gym"
 	icon_state = "fitness"
-	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/main/garage
 	name = "\improper Disused Garage"
@@ -404,7 +399,6 @@
 /area/surface/outpost/main/crew_quarters
 	name = "\improper Main Outpost Crew Quarters"
 	sound_env = MEDIUM_SOFTFLOOR
-	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/main/tcomm
 	name = "\improper Main Outpost Telecommunications"
@@ -438,7 +432,6 @@
 	name = "\improper Main Outpost Gateway"
 	icon_state = "teleporter"
 	music = "signal"
-	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/main/gateway
 	name = "\improper Main Outpost Gateway"
@@ -447,7 +440,6 @@
 /area/surface/outpost/main/corridor
 	name = "\improper Main Outpost Corridor"
 	icon_state = "dk_yellow"
-	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/main/corridor/dorms
 	name = "\improper Main Outpost Dorm Corridor"
@@ -467,11 +459,9 @@
 /area/surface/outpost/main/bar
 	name = "\improper Club"
 	icon_state = "bar"
-	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/main/dorms
 	name = "\improper Main Outpost Dorms"
-	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/main/dorms/dorm_1
 	name = "\improper Apartment One"
@@ -537,7 +527,6 @@
 	name = "\improper Main Outpost Airlock"
 	icon_state = "red"
 	ambience = AMBIENCE_THOR
-	flags = AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/main/airlock/left_one
 	name = "\improper Outpost Left Wing Airlock One"

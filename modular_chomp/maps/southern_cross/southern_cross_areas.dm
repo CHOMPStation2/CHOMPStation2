@@ -141,7 +141,6 @@
 /area/maintenance/firstdeck
 	name = "First Deck Maintenance"
 	icon_state = "maintcentral"
-	flags = AREA_ALLOW_CLOCKOUT | RAD_SHIELDED
 
 /area/maintenance/firstdeck/aftstarboard
 	name = "First Deck Aft Starboard Maintenance"
@@ -357,7 +356,6 @@
 /area/teleporter/firstdeck
 	icon_state = "red"
 	name = "Teleporter Bay Core"
-	flags = AREA_ALLOW_CLOCKOUT
 
 /area/teleporter/firstdeck/prep
 	name = "Teleporter Bay Prep"
