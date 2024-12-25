@@ -291,7 +291,6 @@
 	name = "\improper First Deck First-Aid Station"
 
 /area/storage/emergency_storage/
-	flags = RAD_SHIELDED
 	name = "Emergency Storage"
 	icon_state = "emergencystorage"
 
@@ -1348,18 +1347,15 @@ End Chompstation Edit*/
 
 /area/expoutpost/bar
 	name = "\improper Bar"
-	flags = RAD_SHIELDED
 
 /area/expoutpost/starbowhallway
 	name = "\improper Starboard Bow Hallway"
 
 /area/expoutpost/suite1
 	name = "\improper Suite One"
-	flags = RAD_SHIELDED
 
 /area/expoutpost/suite2
 	name = "\improper Suite Two"
-	flags = RAD_SHIELDED
 
 /area/expoutpost/pathfinderroom
 	name = "\improper Pathfinder's Ready-Room"
@@ -1737,4 +1733,3 @@ End Chompstation Edit*/
 /area/maintenance/zerobar
 	name = "Abandoned Bar"
 	icon_state = "maint_bar"
-	flags = AREA_ALLOW_CLOCKOUT | RAD_SHIELDED

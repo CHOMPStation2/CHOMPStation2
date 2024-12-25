@@ -732,18 +732,15 @@
 
 /area/expoutpost/bar
 	name = "\improper Bar"
-	flags = RAD_SHIELDED
 
 /area/expoutpost/starbowhallway
 	name = "\improper Starboard Bow Hallway"
 
 /area/expoutpost/suite1
 	name = "\improper Suite One"
-	flags = RAD_SHIELDED
 
 /area/expoutpost/suite2
 	name = "\improper Suite Two"
-	flags = RAD_SHIELDED
 
 /area/expoutpost/pathfinderroom
 	name = "\improper Pathfinder's Ready-Room"
@@ -2421,7 +2418,6 @@
 
 /area/maintenance
     icon_state = "fsmaint"
-    flags = RAD_SHIELDED
     ambience = AMBIENCE_MAINTENANCE
     sound_env = SOUND_ENVIRONMENT_SEWER_PIPE
 

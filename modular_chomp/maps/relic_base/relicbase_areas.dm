@@ -877,7 +877,6 @@ z
 	name = "\improper First Deck First-Aid Station"
 
 /area/storage/emergency_storage/
-	flags = RAD_SHIELDED
 	name = "Emergency Storage"
 	icon_state = "emergencystorage"
 
