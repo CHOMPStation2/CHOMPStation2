@@ -717,6 +717,14 @@
 		src.forceMove(get_turf(F))
 		log_and_message_admins("[key_name(src)] used the OOC escape button to get out of a food item.")
 
+	// CHOMPEdit start: You are leashed
+	else if(src.alerts["leashed"])
+		var/obj/screen/alert/leash_pet/pet_alert = src.alerts["leashed"]
+		var/obj/item/leash/owner = pet_alert.master
+		owner.clear_leash()
+		log_and_message_admins("[key_name(src)] used the OOC escape button to get out of a leash.")
+	// CHOMPEdit end
+
 	//Don't appear to be in a vore situation
 	else
 		to_chat(src,span_warning("You aren't inside anyone, though, is the thing."))
