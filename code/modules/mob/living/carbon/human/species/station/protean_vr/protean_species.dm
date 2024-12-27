@@ -132,13 +132,13 @@
 		"dragon_hornsPointy" = "#FFFFFF",
 		"dragon_eyesNormal" = "#FFFFFF"
 	)
-	var/list/dullahan_overlays = list(
+	var/list/dullahan_overlays = list( //chomp edit
 		"dullahanbody" = "#FFFFFF",
 		"dullahanhead" = "#FFFFFF",
 		"dullahanmetal" = "#FFFFFF",
 		"dullahaneyes" = "#FFFFFF",
 		"dullahandecals" = "#FFFFFF"
-	)
+	) //chomp edit end
 
 	var/pseudodead = 0
 

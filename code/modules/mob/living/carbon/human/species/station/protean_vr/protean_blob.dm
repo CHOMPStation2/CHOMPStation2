@@ -746,7 +746,7 @@
 			I.plane = PLANE_LIGHTING_ABOVE
 			add_overlay(I)
 			qdel(I)
-		if(S.blob_appearance == "dullahan")
+		if(S.blob_appearance == "dullahan") //chomp edit
 			icon = 'modular_chomp/icons/mob/dullahanborg/Dullahanprotean64x64.dmi'
 			vis_height = 64
 			var/image/I = image(icon, "[S.dullahan_overlays[1]][resting? "-rest" : (vore_fullness? "-[vore_fullness]" : null)]", pixel_x = -16)
