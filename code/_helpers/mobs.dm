@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 //CHOMPEdit Begin
+=======
+>>>>>>> 37e8ca6194 (Turret & Sound Optimizations (#16754))
 /atom/movable/proc/get_mob()
 	if(buckled_mobs) return buckled_mobs.Copy()
 
@@ -25,6 +28,11 @@
 
 	return mobs
 
+<<<<<<< HEAD
+=======
+/// This gets a list of mobs ALL around us as if we had xray vision and can see through walls.
+/// Currently only used in portable_turret.dm if you wish to see an example of how to use it.
+>>>>>>> 37e8ca6194 (Turret & Sound Optimizations (#16754))
 /proc/mobs_in_xray_view(range, source)
 	var/list/mobs = list()
 	for(var/atom/movable/AM in orange(range, source))
@@ -33,7 +41,11 @@
 			mobs += M
 
 	return mobs
+<<<<<<< HEAD
 //CHOMPEdit End
+=======
+
+>>>>>>> 37e8ca6194 (Turret & Sound Optimizations (#16754))
 /proc/random_hair_style(gender, species = SPECIES_HUMAN)
 	var/h_style = "Bald"
 
