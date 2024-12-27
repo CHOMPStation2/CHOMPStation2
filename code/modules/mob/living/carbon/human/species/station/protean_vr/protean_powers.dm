@@ -561,7 +561,7 @@
 				if("Body")
 					options = Dullahan_metal_styles
 					for(var/option in options)
-						var/image/I = image('modular_chomp/icons/mob/dullahanborg/Dullahanprotean64x64.dmi', option, dir = 1, pixel_x = -16)
+						var/image/I = image('modular_chomp/icons/mob/dullahanborg/Dullahanprotean64x64.dmi', option, dir = 2, pixel_x = -16)
 						LAZYSET(options, option, I)
 					choice = show_radial_menu(protie, protie, options, radius = 90)
 					if(!choice || QDELETED(protie) || protie.incapacitated())
@@ -574,7 +574,7 @@
 				if("Eyes")
 					options = Dullahan_eye_styles
 					for(var/option in options)
-						var/image/I = image('modular_chomp/icons/mob/dullahanborg/Dullahanprotean64x64.dmi', option, dir = 1, pixel_x = -16)
+						var/image/I = image('modular_chomp/icons/mob/dullahanborg/Dullahanprotean64x64.dmi', option, dir = 2, pixel_x = -16)
 						LAZYSET(options, option, I)
 					choice = show_radial_menu(protie, protie, options, radius = 90)
 					if(!choice || QDELETED(protie) || protie.incapacitated())
@@ -587,7 +587,7 @@
 				if("Decals")
 					options = Dullahan_decal_styles
 					for(var/option in options)
-						var/image/I = image('modular_chomp/icons/mob/dullahanborg/Dullahanprotean64x64.dmi', option, dir = 1, pixel_x = -16)
+						var/image/I = image('modular_chomp/icons/mob/dullahanborg/Dullahanprotean64x64.dmi', option, dir = 2, pixel_x = -16)
 						LAZYSET(options, option, I)
 					choice = show_radial_menu(protie, protie, options, radius = 90)
 					if(!choice || QDELETED(protie) || protie.incapacitated())
