@@ -1,5 +1,0 @@
-author: "Fracshun"
-delete-after: True
-changes:
-  - qol: "Death messages of the original body during Mob TF are now muffled"
-  - bugfix: "Body swapping no longer links life state"
