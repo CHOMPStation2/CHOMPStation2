@@ -120,8 +120,13 @@
 	var/mob/living/simple_mob/newPred = new mobtype(get_turf(src))
 	qdel(newPred.ai_holder)
 	newPred.ai_holder = null
+<<<<<<< HEAD
 	newPred.voremob_loaded = TRUE //CHOMPedit: On-demand belly loading.
 	newPred.init_vore() //CHOMPedit: On-demand belly loading.
+=======
+	newPred.voremob_loaded = TRUE // On-demand belly loading.
+	newPred.init_vore() // On-demand belly loading.
+>>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 	//newPred.movement_cooldown = 0			// The "needless artificial speed cap" exists for a reason
 	if(M.mind)
 		M.mind.transfer_to(newPred)
@@ -159,8 +164,13 @@
 		return
 
 	var/mob/living/simple_mob/vore/morph/newMorph = new /mob/living/simple_mob/vore/morph(get_turf(src))
+<<<<<<< HEAD
 	newMorph.voremob_loaded = TRUE //CHOMPedit: On-demand belly loading.
 	newMorph.init_vore() //CHOMPedit: On-demand belly loading.
+=======
+	newMorph.voremob_loaded = TRUE // On-demand belly loading.
+	newMorph.init_vore() // On-demand belly loading.
+>>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 	if(M.mind)
 		M.mind.transfer_to(newMorph)
 	to_chat(M, span_notice("You are a " + span_bold("Morph") + ", somehow having gotten aboard the station in your wandering. \

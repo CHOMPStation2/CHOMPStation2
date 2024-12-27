@@ -146,7 +146,11 @@
 		if("confirm")
 			R.apply_name(new_name)
 			R.apply_module(sprite_datum, selected_module)
+<<<<<<< HEAD
 			R.update_multibelly() // CHOMPAdd Multibelly
+=======
+			R.update_multibelly()
+>>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 			R.transform_module()
 			close_ui()
 			. = TRUE

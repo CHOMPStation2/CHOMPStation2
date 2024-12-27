@@ -56,9 +56,15 @@
 	return
 
 /mob/living/simple_mob/vore/sheep/init_vore()
+<<<<<<< HEAD
 	if(!voremob_loaded) //CHOMPEdit
 		return
 	.=..()
+=======
+	if(!voremob_loaded)
+		return
+	. = ..()
+>>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "With a final few gulps, the sheep finishes swallowing you down into its hot, dark guts… The wool on the outside is doing you no favors with its insulation. The toasty organic flesh kneads and grinds around you with the stank of wet grass. The sheep seems to have already forgotten about you as it lets out a soft BAAH like belch and carries on doing nothing. "

@@ -70,11 +70,17 @@
 	vore_default_item_mode = IM_DIGEST
 
 /mob/living/simple_mob/vore/squirrel/init_vore()
+<<<<<<< HEAD
  	//CHOMPEdit Start
 	if(!voremob_loaded)
 		return
 	.=..()
 	//CHOMPEdit End
+=======
+	if(!voremob_loaded)
+		return
+	. = ..()
+>>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.digest_mode = DM_SELECT

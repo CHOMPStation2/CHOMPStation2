@@ -94,9 +94,15 @@
 
 
 /mob/living/simple_mob/vore/alienanimals/startreader/init_vore()
+<<<<<<< HEAD
 	if(!voremob_loaded) //CHOMPAdd
 		return //CHOMPAdd
 	.=..() //CHOMPEdit
+=======
+	if(!voremob_loaded)
+		return
+	. = ..()
+>>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 	var/obj/belly/B = vore_selected
 	B.name = "gastric sac"
 	B.desc = "It's cramped and hot! You're forced into a small ball as your shape is squeezed into the slick, wet chamber. Despite being swallowed into the creature, you find that you actually stretch out of the top a ways, and can JUST BARELY wiggle around..."

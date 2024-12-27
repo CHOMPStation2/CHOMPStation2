@@ -7,7 +7,10 @@
 
 	var/vore_active = 0					// If vore behavior is enabled for this mob
 
+<<<<<<< HEAD
 	//CHOMPEdit - Vore_capacity is now defined on code/modules/vore/eating/living_ch.dm
+=======
+>>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 	vore_capacity = 1					// The capacity (in people) this person can hold
 	var/vore_max_size = RESIZE_HUGE		// The max size this mob will consider eating
 	var/vore_min_size = RESIZE_TINY 	// The min size this mob will consider eating
@@ -37,6 +40,7 @@
 	var/vore_default_contamination_flavor = "Generic"	//Contamination descriptors
 	var/vore_default_contamination_color = "green"		//Contamination color
 
+<<<<<<< HEAD
 	//CHOMPEDIT start - Moved to code/modules/vore/eating/living_ch
 	//var/vore_fullness = 0				// How "full" the belly is (controls icons)
 	//var/vore_icons = 0					// Bitfield for which fields we have vore icons for.
@@ -44,6 +48,8 @@
 	//var/belly_size_multiplier = 1
 	//CHOMPEDIT end.
 
+=======
+>>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 	var/life_disabled = 0				// For performance reasons
 
 	var/vore_attack_override = FALSE	// Enable on mobs you want to have special behaviour on melee grab attack.
@@ -59,7 +65,11 @@
 
 	var/nom_mob = FALSE //If a mob is meant to be hostile for vore purposes but is otherwise not hostile, if true makes certain AI ignore the mob
 
+<<<<<<< HEAD
 	var/voremob_loaded = FALSE //CHOMPedit: On-demand belly loading.
+=======
+	var/voremob_loaded = FALSE // On-demand belly loading.
+>>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 
 // Release belly contents before being gc'd!
 /mob/living/simple_mob/Destroy()
@@ -77,6 +87,7 @@
 	if(myid)
 		return myid
 
+<<<<<<< HEAD
 // Update fullness based on size & quantity of belly contents
 /* CHOMPEdit - moved to code/modules/vore/eating/living_ch
 /mob/living/simple_mob/proc/update_fullness()
@@ -91,6 +102,8 @@
 	vore_fullness = min(vore_capacity, new_fullness)
 */
 
+=======
+>>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 /mob/living/simple_mob/update_icon()
 	. = ..()
 	if(vore_active)
@@ -111,6 +124,10 @@
 			remove_eyes()
 			add_eyes()
 	update_transform()
+	for(var/belly_class in vore_fullness_ex)
+		var/vs_fullness = vore_fullness_ex[belly_class]
+		if(vs_fullness > 0)
+			add_overlay("[icon_state]_[belly_class]-[vs_fullness]")
 
 /mob/living/simple_mob/regenerate_icons()
 	..()
@@ -232,7 +249,11 @@
 
 // Make sure you don't call ..() on this one, otherwise you duplicate work.
 /mob/living/simple_mob/init_vore()
+<<<<<<< HEAD
 	if(!vore_active || no_vore || !voremob_loaded) //CHOMPedit: On-demand belly loading.
+=======
+	if(!vore_active || no_vore || !voremob_loaded)
+>>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 		return
 
 	AddElement(/datum/element/slosh) // Sloshy element
@@ -260,7 +281,11 @@
 	var/obj/belly/B = new /obj/belly(src)
 	vore_selected = B
 	B.immutable = 1
+<<<<<<< HEAD
 	B.affects_vore_sprites = TRUE //CHOMPEdit - vore sprites enabled for simplemobs!
+=======
+	B.affects_vore_sprites = TRUE
+>>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 	B.name = vore_stomach_name ? vore_stomach_name : "stomach"
 	B.desc = vore_stomach_flavor ? vore_stomach_flavor : "Your surroundings are warm, soft, and slimy. Makes sense, considering you're inside \the [name]."
 	B.digest_mode = vore_default_mode

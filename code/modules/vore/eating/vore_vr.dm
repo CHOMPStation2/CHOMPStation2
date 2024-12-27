@@ -69,6 +69,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	var/step_mechanics_pref = FALSE
 	var/pickup_pref = TRUE
 	var/vore_sprite_color = list("stomach" = "#000", "taur belly" = "#000")
+	var/vore_sprite_multiply = list("stomach" = FALSE, "taur belly" = FALSE)
 	var/allow_mind_transfer = FALSE
 
 	//CHOMP stuff
@@ -142,7 +143,11 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 //
 /proc/is_vore_predator(mob/living/O)
 	if(istype(O,/mob/living))
+<<<<<<< HEAD
 		if(istype(O,/mob/living/simple_mob)) //CHOMPEdit: On-demand belly loading.
+=======
+		if(istype(O,/mob/living/simple_mob)) //On-demand belly loading.
+>>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 			var/mob/living/simple_mob/SM = O
 			if(SM.vore_active && !SM.voremob_loaded)
 				SM.voremob_loaded = TRUE

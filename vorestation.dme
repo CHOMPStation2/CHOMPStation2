@@ -3225,6 +3225,7 @@
 #include "code\modules\mob\living\carbon\human\gradient.dm"
 #include "code\modules\mob\living\carbon\human\human.dm"
 #include "code\modules\mob\living\carbon\human\human_attackhand.dm"
+#include "code\modules\mob\living\carbon\human\human_bellies.dm"
 #include "code\modules\mob\living\carbon\human\human_damage.dm"
 #include "code\modules\mob\living\carbon\human\human_defense.dm"
 #include "code\modules\mob\living\carbon\human\human_defines.dm"
@@ -3378,6 +3379,7 @@
 #include "code\modules\mob\living\silicon\robot\photos.dm"
 #include "code\modules\mob\living\silicon\robot\robot.dm"
 #include "code\modules\mob\living\silicon\robot\robot_animation_vr.dm"
+#include "code\modules\mob\living\silicon\robot\robot_bellies.dm"
 #include "code\modules\mob\living\silicon\robot\robot_damage.dm"
 #include "code\modules\mob\living\silicon\robot\robot_items.dm"
 #include "code\modules\mob\living\silicon\robot\robot_movement.dm"
@@ -4596,7 +4598,11 @@
 #include "code\modules\vore\eating\exportpanel_vr.dm"
 #include "code\modules\vore\eating\inbelly_spawn.dm"
 #include "code\modules\vore\eating\leave_remains_vr.dm"
+<<<<<<< HEAD
 #include "code\modules\vore\eating\living_ch.dm"
+=======
+#include "code\modules\vore\eating\living_bellies.dm"
+>>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 #include "code\modules\vore\eating\living_vr.dm"
 #include "code\modules\vore\eating\mob_ch.dm"
 #include "code\modules\vore\eating\mob_vr.dm"

@@ -88,9 +88,15 @@
 	emote_hear = list("rattles","makes a spooky sound","cackles madly","plinks","clacks")
 
 /mob/living/simple_mob/vore/alienanimals/skeleton/init_vore()
+<<<<<<< HEAD
 	if(!voremob_loaded) //CHOMPAdd
 		return //CHOMPAdd
 	.=..() //CHOMPEdit
+=======
+	if(!voremob_loaded)
+		return
+	. = ..()
+>>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "You're not sure quite how, but you've found your way inside of the skeleton's stomach! It's cramped and cold and sounds heavily of xylophones!"

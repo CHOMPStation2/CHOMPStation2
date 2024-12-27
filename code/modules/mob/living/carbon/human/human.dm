@@ -7,6 +7,7 @@
 
 	has_huds = TRUE 					//We do have HUDs (like health, wanted, status, not inventory slots)
 
+<<<<<<< HEAD
 	vore_capacity = 3 // CHOMPEdit
 	vore_capacity_ex = list("stomach" = 3, "taur belly" = 3) //CHOMPEdit
 	vore_fullness_ex = list("stomach" = 0, "taur belly" = 0) //CHOMPEdit
@@ -18,6 +19,15 @@
 	var/vore_sprite_multiply = list("stomach" = TRUE, "taur belly" = TRUE)
 	var/vore_fullness = 0
 	*/// CHOMPRemove End
+=======
+
+	vore_capacity = 3
+	vore_capacity_ex = list("stomach" = 3, "taur belly" = 3)
+	vore_fullness_ex = list("stomach" = 0, "taur belly" = 0)
+	vore_icon_bellies = list("stomach", "taur belly")
+	var/struggle_anim_stomach = FALSE
+	var/struggle_anim_taur = FALSE
+>>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 
 	var/embedded_flag					//To check if we've need to roll for damage on movement while an item is imbedded in us.
 	var/obj/item/rig/wearing_rig // This is very not good, but it's much much better than calling get_rig() every update_canmove() call.
@@ -1836,7 +1846,11 @@
 /mob/living/carbon/human/verb/lay_down_left()
 	set name = "Rest-Left"
 
+<<<<<<< HEAD
 	rest_dir = 1 // CHOMPEdit
+=======
+	rest_dir = -1
+>>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 	resting = !resting
 	to_chat(src, span_notice("You are now [resting ? "resting" : "getting up"]."))
 	update_canmove()
@@ -1844,6 +1858,7 @@
 /mob/living/carbon/human/verb/lay_down_right()
 	set name = "Rest-Right"
 
+<<<<<<< HEAD
 	rest_dir = 0 // CHOMPEdit
 	resting = !resting
 	to_chat(src, span_notice("You are now [resting ? "resting" : "getting up"]."))
@@ -1866,3 +1881,9 @@
 	update_vore_belly_sprite()
 	update_vore_tail_sprite()
 *///CHOMPRemove End
+=======
+	rest_dir = 1
+	resting = !resting
+	to_chat(src, span_notice("You are now [resting ? "resting" : "getting up"]."))
+	update_canmove()
+>>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))

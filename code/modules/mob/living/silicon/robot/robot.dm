@@ -134,6 +134,11 @@
 	buckle_movable = TRUE
 	buckle_lying = FALSE
 
+	var/list/vore_light_states = list() //Robot exclusive
+	vore_capacity_ex = list()
+	vore_fullness_ex = list()
+	vore_icon_bellies = list()
+
 /mob/living/silicon/robot/New(loc, var/unfinished = 0)
 	spark_system = new /datum/effect/effect/system/spark_spread()
 	spark_system.set_up(5, 0, src)
@@ -785,6 +790,9 @@
 	updatename("Default")
 	has_recoloured = FALSE
 	robotact?.update_static_data_for_all_viewers()
+	vore_capacity_ex = list()
+	vore_fullness_ex = list()
+	vore_light_states = list()
 
 /mob/living/silicon/robot/proc/ColorMate()
 	set name = "Recolour Module"
@@ -929,8 +937,11 @@
 		old_x = sprite_datum.pixel_x
 
 	if(stat == CONSCIOUS)
+<<<<<<< HEAD
 		//CHOMPAdd Start
 		// Let us handle the bellies with our own system
+=======
+>>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 		update_fullness()
 		for(var/belly_class in vore_fullness_ex)
 			reset_belly_lights(belly_class)
@@ -949,6 +960,7 @@
 			else
 				update_belly_lights(belly_class)
 				add_overlay(sprite_datum.get_belly_overlay(src, vs_fullness, belly_class))
+<<<<<<< HEAD
 		//CHOMPAdd End
 		/*CHOMPRemove Start
 		var/belly_size = 0
@@ -998,6 +1010,8 @@
 			else if(!resting)
 				add_overlay(sprite_datum.get_belly_overlay(src, belly_size))
 		*///CHOMPRemove End
+=======
+>>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 
 		sprite_datum.handle_extra_icon_updates(src)			// Various equipment-based sprites go here.
 
