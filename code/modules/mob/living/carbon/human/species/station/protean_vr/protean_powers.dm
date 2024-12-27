@@ -544,8 +544,6 @@
 			)
 			if(mind.assigned_role in command_positions)
 				Dullahan_metal_styles.Add("dullahancommand")
-			//else if(mind.assigned_role in command_positions)
-			//	Dullahan_metal_styles.Add("dullahancommand")
 			var/list/Dullahan_eye_styles = list(
 				"dullahaneyes"
 			)
