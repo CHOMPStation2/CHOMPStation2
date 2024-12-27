@@ -20,7 +20,10 @@
 
 	if(isbelly(loc) && tf_mob_holder)
 		mind?.vore_death = TRUE
-		tf_mob_holder.mind?.vore_death = TRUE
+		//CHOMPEdit Start - Holder is used for OOC Escape now, make sure not to kill body swapped minds too
+		if(tf_mob_holder.loc == src)
+			tf_mob_holder.mind?.vore_death = TRUE
+		//CHOMPEdit End
 
 	for(var/datum/soul_link/S as anything in owned_soul_links)
 		S.owner_died(gibbed)

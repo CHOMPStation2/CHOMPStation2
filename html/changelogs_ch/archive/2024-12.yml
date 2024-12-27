@@ -143,3 +143,7 @@
 2024-12-24:
   tacoguy7765093:
   - maptweak: Fixed the SDF corvettes docking issues,
+2024-12-27:
+  Fracshun:
+  - qol: Death messages of the original body during Mob TF are now muffled
+  - bugfix: Body swapping no longer links life state
