@@ -132,6 +132,13 @@
 		"dragon_hornsPointy" = "#FFFFFF",
 		"dragon_eyesNormal" = "#FFFFFF"
 	)
+	var/list/dullahan_overlays = list(
+		"dullahanbody" = "#FFFFFF",
+		"dullahanhead" = "#FFFFFF",
+		"dullahanmetal" = "#FFFFFF",
+		"dullahaneyes" = "#FFFFFF",
+		"dullahandecals" = "#FFFFFF"
+	)
 
 	var/pseudodead = 0
 
