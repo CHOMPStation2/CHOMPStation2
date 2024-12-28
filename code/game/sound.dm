@@ -14,11 +14,6 @@
 	var/sound/S = sound(get_sfx(soundin))
 	var/maxdistance = (world.view + extrarange) * 2  //VOREStation Edit - 3 to 2
 	var/list/listeners = player_list.Copy()
-	/*if(!ignore_walls) //these sounds don't carry through walls CHOMP Removal, ripping this logic up because it's unreliable and unnecessary.
-		/*for(var/mob/listen in listeners) //This is beyond fucking horrible. Please do not repeatedly call hear.
-			if(!(get_turf(listen) in hear(maxdistance,source)))
-				listeners -= listen*/
-		listeners = listeners & hearers(maxdistance,turf_source)*/
 	for(var/mob/M as anything in listeners)
 		if(!M || !M.client)
 			continue
@@ -29,8 +24,6 @@
 		if((A.flag_check(AREA_SOUNDPROOF) || area_source.flag_check(AREA_SOUNDPROOF)) && (A != area_source))
 			continue
 		//var/distance = get_dist(T, turf_source) Save get_dist for later because it's more expensive
-
-		//CHOMPEdit Begin
 
 		if(!T || T.z != turf_source.z) //^ +1
 			continue
@@ -72,7 +65,7 @@
 	vol *= client.get_preference_volume_channel(VOLUME_CHANNEL_MASTER)
 	S.volume = vol
 
-	if(vary || frequency) //CHOMPEdit
+	if(vary || frequency)
 		if(frequency)
 			S.frequency = frequency
 		else
