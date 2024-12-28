@@ -4,9 +4,6 @@
 	var/speech_chance = 75 //mobs can be a bit more emotive than carbon/humans
 	var/speech_sound_enabled = TRUE
 
-	//vars for vore_icons toggle control
-	var/vore_icons_cache = null // null by default. Going from ON to OFF should store vore_icons val here, OFF to ON reset as null
-
 	//spitting projectiles
 	var/spitting = 0
 	var/spit_projectile = null // what our spit projectile is. Can be anything
@@ -18,25 +15,6 @@
 	if(!isnull(spit_projectile) && spitting)
 		Spit(A)
 	. = ..()
-
-/mob/living/simple_mob/verb/toggle_vore_icons()
-
-	set name = "Toggle Vore Sprite"
-	set desc = "Toggle visibility of changed mob sprite when you have eaten other things."
-	set category = "Abilities.Vore"
-
-	if(!vore_icons && !vore_icons_cache)
-		to_chat(src,span_warning("This simplemob has no vore sprite."))
-	else if(isnull(vore_icons_cache))
-		vore_icons_cache = vore_icons
-		vore_icons = 0
-		to_chat(src,span_warning("Vore sprite disabled."))
-	else
-		vore_icons = vore_icons_cache
-		vore_icons_cache = null
-		to_chat(src,span_warning("Vore sprite enabled."))
-
-	update_icon()
 
 /mob/living/simple_mob/verb/toggle_speech_sounds()
 	set name = "Toggle Species Speech Sounds"

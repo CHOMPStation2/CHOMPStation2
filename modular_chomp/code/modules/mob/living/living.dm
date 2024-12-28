@@ -44,9 +44,6 @@
 	QDEL_NULL(firesoundloop)
 	// QDEL_NULL(stunnedloop)
 
-/mob/living/proc/vs_animate(var/belly_to_animate)
-	return
-
 /*
 Maybe later, gotta figure out a way to click yourself when in a locker etc.
 
