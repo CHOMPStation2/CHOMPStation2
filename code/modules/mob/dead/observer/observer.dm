@@ -457,11 +457,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 	ManualFollow(M || jumpable_mobs()[mobname])
 
-<<<<<<< HEAD
-/mob/observer/dead/forceMove(atom/destination, direction, movetime) //ChompEDIT - pass movetime through
-=======
-/mob/observer/dead/forceMove(atom/destination, just_spawned = FALSE)
->>>>>>> fc57eb0085 (initial ghost spawn is important... (#16760))
+/mob/observer/dead/forceMove(atom/destination, direction, movetime, just_spawned = FALSE) //ChompEDIT - pass movetime through
 	if(client?.holder)
 		return ..()
 
