@@ -1,5 +1,4 @@
 /mob/living/silicon/pai
-	//var/people_eaten = 0 //CHOMPEdit - no longer needed.
 	icon = 'icons/mob/pai_vr.dmi'
 	softfall = TRUE
 	var/eye_glow = TRUE
@@ -156,20 +155,18 @@
 		add_eyes()
 		return
 	update_fullness()
-	//CHOMPEdit begin - Add multiple belly size support
 	//Add a check when selecting a chassis if you add in support for this, to set vore_capacity to 2 or however many states you have.
 	var/fullness_extension = ""
 	if(vore_capacity > 1 && vore_fullness > 1)
 		fullness_extension = "_[vore_fullness]"
-	//CHOMPEdit end
-	if(!vore_fullness && !resting) //CHOMPEdit - Use vore_fullness instead of people_eaten
+	if(!vore_fullness && !resting)
 		icon_state = "[chassis]"
-	else if(!vore_fullness && resting) //CHOMPEdit - Use vore_fullness instead of people_eaten
+	else if(!vore_fullness && resting)
 		icon_state = "[chassis]_rest"
-	else if(vore_fullness && !resting) //CHOMPEdit - Use vore_fullness instead of people_eaten
-		icon_state = "[chassis]_full[fullness_extension]" //CHOMPEdit begin - Add multiple belly size support
-	else if(vore_fullness && resting) //CHOMPEdit - Use vore_fullness instead of people_eaten
-		icon_state = "[chassis]_rest_full[fullness_extension]" //CHOMPEdit begin - Add multiple belly size support
+	else if(vore_fullness && !resting)
+		icon_state = "[chassis]_full[fullness_extension]"
+	else if(vore_fullness && resting)
+		icon_state = "[chassis]_rest_full[fullness_extension]"
 	if(chassis in wide_chassis)
 		pixel_x = -16
 		default_pixel_x = -16
