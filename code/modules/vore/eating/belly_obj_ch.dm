@@ -99,8 +99,6 @@
 	REAGENT_TRICORDRAZINE
 	)
 
-	var/undergarment_if_none
-	var/undergarment_color = COLOR_GRAY
 	var/tail_colouration = FALSE
 	//var/marking_to_add = NULL
 	//var/marking_color = NULL

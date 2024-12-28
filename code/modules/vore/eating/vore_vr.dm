@@ -82,7 +82,6 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	var/latejoin_prey = FALSE
 	var/autotransferable = TRUE
 	var/strip_pref = FALSE
-	var/vore_sprite_multiply = list("stomach" = FALSE, "taur belly" = FALSE)
 	var/no_latejoin_vore_warning = FALSE // Only load, when... no_latejoin_vore_warning_persists
 	var/no_latejoin_prey_warning = FALSE // Only load, when... no_latejoin_vore_warning_persists
 	var/no_latejoin_vore_warning_time = 15 // Only load, when... no_latejoin_vore_warning_persists
