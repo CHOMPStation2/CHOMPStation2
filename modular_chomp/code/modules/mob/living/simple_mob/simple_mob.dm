@@ -19,25 +19,6 @@
 		Spit(A)
 	. = ..()
 
-/mob/living/simple_mob/verb/toggle_vore_icons()
-
-	set name = "Toggle Vore Sprite"
-	set desc = "Toggle visibility of changed mob sprite when you have eaten other things."
-	set category = "Abilities.Vore"
-
-	if(!vore_icons && !vore_icons_cache)
-		to_chat(src,span_warning("This simplemob has no vore sprite."))
-	else if(isnull(vore_icons_cache))
-		vore_icons_cache = vore_icons
-		vore_icons = 0
-		to_chat(src,span_warning("Vore sprite disabled."))
-	else
-		vore_icons = vore_icons_cache
-		vore_icons_cache = null
-		to_chat(src,span_warning("Vore sprite enabled."))
-
-	update_icon()
-
 /mob/living/simple_mob/verb/toggle_speech_sounds()
 	set name = "Toggle Species Speech Sounds"
 	set desc = "Toggle if your species defined speech sound has a chance of playing on a Say"

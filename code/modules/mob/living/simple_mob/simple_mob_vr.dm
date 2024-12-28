@@ -7,10 +7,6 @@
 
 	var/vore_active = 0					// If vore behavior is enabled for this mob
 
-<<<<<<< HEAD
-	//CHOMPEdit - Vore_capacity is now defined on code/modules/vore/eating/living_ch.dm
-=======
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 	vore_capacity = 1					// The capacity (in people) this person can hold
 	var/vore_max_size = RESIZE_HUGE		// The max size this mob will consider eating
 	var/vore_min_size = RESIZE_TINY 	// The min size this mob will consider eating
@@ -40,16 +36,6 @@
 	var/vore_default_contamination_flavor = "Generic"	//Contamination descriptors
 	var/vore_default_contamination_color = "green"		//Contamination color
 
-<<<<<<< HEAD
-	//CHOMPEDIT start - Moved to code/modules/vore/eating/living_ch
-	//var/vore_fullness = 0				// How "full" the belly is (controls icons)
-	//var/vore_icons = 0					// Bitfield for which fields we have vore icons for.
-	//var/vore_eyes = FALSE				// For mobs with fullness specific eye overlays.
-	//var/belly_size_multiplier = 1
-	//CHOMPEDIT end.
-
-=======
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 	var/life_disabled = 0				// For performance reasons
 
 	var/vore_attack_override = FALSE	// Enable on mobs you want to have special behaviour on melee grab attack.

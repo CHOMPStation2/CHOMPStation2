@@ -4598,11 +4598,8 @@
 #include "code\modules\vore\eating\exportpanel_vr.dm"
 #include "code\modules\vore\eating\inbelly_spawn.dm"
 #include "code\modules\vore\eating\leave_remains_vr.dm"
-<<<<<<< HEAD
 #include "code\modules\vore\eating\living_ch.dm"
-=======
 #include "code\modules\vore\eating\living_bellies.dm"
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 #include "code\modules\vore\eating\living_vr.dm"
 #include "code\modules\vore\eating\mob_ch.dm"
 #include "code\modules\vore\eating\mob_vr.dm"

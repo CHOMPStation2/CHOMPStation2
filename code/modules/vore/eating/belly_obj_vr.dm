@@ -69,21 +69,12 @@
 	var/private_struggle = FALSE			// If struggles are made public or not //CHOMPAdd
 
 
-<<<<<<< HEAD
-	var/vore_sprite_flags = DM_FLAG_VORESPRITE_BELLY //CHOMPEdit
-	var/tmp/static/list/vore_sprite_flag_list= list(
-		"Normal Belly Sprite" = DM_FLAG_VORESPRITE_BELLY, //CHOMPEdit
-		//"Tail adjustment" = DM_FLAG_VORESPRITE_TAIL,
-		//"Marking addition" = DM_FLAG_VORESPRITE_MARKING
-		"Undergarment addition" = DM_FLAG_VORESPRITE_ARTICLE, //CHOMPAdd
-=======
 	var/vore_sprite_flags = DM_FLAG_VORESPRITE_BELLY
 	var/tmp/static/list/vore_sprite_flag_list= list(
 		"Normal Belly Sprite" = DM_FLAG_VORESPRITE_BELLY,
 		//"Tail adjustment" = DM_FLAG_VORESPRITE_TAIL,
 		//"Marking addition" = DM_FLAG_VORESPRITE_MARKING
 		"Undergarment addition" = DM_FLAG_VORESPRITE_ARTICLE,
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 		)
 	var/affects_vore_sprites = FALSE
 	var/count_absorbed_prey_for_sprite = TRUE
@@ -495,15 +486,8 @@
 				//formatted_desc = replacetext(formatted_desc, "%prey", thing) //replace with whatever mob entered into this belly
 				//to_chat(CC.bound_mob, span_notice("<B>[formatted_desc]</B>")) //CHOMPedit end
 
-<<<<<<< HEAD
 	/*/ Intended for simple mobs //CHMOPEdit: Counting belly cycles now.
 	if((!owner.client || autotransfer_enabled) && autotransferlocation && autotransferchance > 0)
-=======
-		owner.update_fullness()
-
-	// Intended for simple mobs
-	if(!owner.client && autotransferlocation && autotransferchance > 0)
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 		addtimer(CALLBACK(src, TYPE_PROC_REF(/obj/belly, check_autotransfer), thing, autotransferlocation), autotransferwait)
 	*/
 
@@ -523,7 +507,6 @@
 	var/list/endfx = list()
 	if(isliving(thing))
 		var/mob/living/L = thing
-<<<<<<< HEAD
 		endfx.Add(L)
 		endfx.Add(get_belly_surrounding(L.contents))
 	if(istype(thing,/obj/item))
@@ -559,20 +542,6 @@
 			I.d_stage_overlay = temp
 			for(var/count in I.d_mult to 1 step 0.25)
 				I.add_overlay(I.d_stage_overlay, TRUE) //CHOMPEdit end
-=======
-		L.clear_fullscreen("belly")
-		L.clear_fullscreen("belly2")
-		L.clear_fullscreen("belly3")
-		L.clear_fullscreen("belly4")
-		if(L.hud_used)
-			if(!L.hud_used.hud_shown)
-				L.toggle_hud_vis()
-		if((L.stat != DEAD) && L.ai_holder)
-			L.ai_holder.go_wake()
-	owner.update_fullness()
-	return
-
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 
 // CHOMPedit: SEND_SIGNAL(COMSIG_BELLY_UPDATE_VORE_FX) is sometimes used when calling vore_fx() to send belly visuals
 // to certain non-belly atoms. Not called here as vore_fx() is usually only called if a mob is in the belly.
@@ -1192,11 +1161,9 @@
 			M.reagents.del_reagent(REAGENT_ID_CLEANER) //Don't need this stuff in our bloodstream.
 			M.reagents.trans_to_holder(Pred.ingested, M.reagents.total_volume, 0.5, TRUE) //CHOMPEdit End
 
-	owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 	//Incase they have the loop going, let's double check to stop it.
 	M.stop_sound_channel(CHANNEL_PREYLOOP)
 	// Delete the digested mob
-<<<<<<< HEAD
 	//CHOMPEdit start - Changed qdel to a forceMove to allow reforming, and... handled robots special.
 	if(isrobot(M))
 		var/mob/living/silicon/robot/R = M
@@ -1235,19 +1202,11 @@
 			M.forceMove(G)
 		else
 			qdel(M)
-	if(isanimal(owner))
-		owner.update_icon()
 	//CHOMPEdit End
-=======
-	var/mob/observer/G = M.ghostize() //Ports CHOMPStation PR#3074 Make sure they're out, so we can copy attack logs and such.
-	if(G)
-		G.forceMove(src)
-	qdel(M)
 	if(isanimal(owner))
 		owner.update_icon()
 	else
 		owner.update_fullness()
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 
 // Handle a mob being absorbed
 /obj/belly/proc/absorb_living(mob/living/M)
@@ -1427,15 +1386,8 @@
 	var/sound/struggle_snuggle
 	var/sound/struggle_rustle = sound(get_sfx("rustle"))
 
-<<<<<<< HEAD
-	//CHOMPEdit Start - vore sprites struggle animation
-	if((vore_sprite_flags & DM_FLAG_VORESPRITE_BELLY) && (owner.vore_capacity_ex[belly_sprite_to_affect] >= 1) && !private_struggle && resist_triggers_animation && affects_vore_sprites)
+	if((vore_sprite_flags & DM_FLAG_VORESPRITE_BELLY) && (owner.vore_capacity_ex[belly_sprite_to_affect] >= 1) && !private_struggle && resist_triggers_animation && affects_vore_sprites) // CHOMPEdit
 		owner.vs_animate(belly_sprite_to_affect)
-	//CHOMPEdit End
-=======
-	if((vore_sprite_flags & DM_FLAG_VORESPRITE_BELLY) && (owner.vore_capacity_ex[belly_sprite_to_affect] >= 1) /*&& !private_struggle*/ && resist_triggers_animation && affects_vore_sprites)
-		owner.vs_animate(belly_sprite_to_affect)
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 
 	//CHOMPEdit Start
 	if(!private_struggle)
@@ -2214,24 +2166,14 @@
 			if(M.absorbed)
 				fullness_to_add *= absorbed_multiplier
 			if(health_impacts_size)
-<<<<<<< HEAD
-			//CHOMPEdit Start
-=======
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 				if(ishuman(M))
 					fullness_to_add *= (M.health + 100) / (M.getMaxHealth() + 100)
 				else
 					fullness_to_add *= M.health / M.getMaxHealth()
 			if(fullness_to_add > 0)
 				belly_fullness += fullness_to_add
-<<<<<<< HEAD
-			//CHOMPEdit End
-	if(count_liquid_for_sprite)
-		belly_fullness += (reagents.total_volume / 100) * liquid_multiplier
-=======
-	/*if(count_liquid_for_sprite)
-		belly_fullness += (reagents.total_volume / 100) * liquid_multiplier*/// Not yet implemented here
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
+	if(count_liquid_for_sprite) // CHOMPEnable
+		belly_fullness += (reagents.total_volume / 100) * liquid_multiplier // CHOMPEnable
 	if(count_items_for_sprite)
 		for(var/obj/item/I in src)
 			var/fullness_to_add = 0
@@ -2246,11 +2188,7 @@
 			else if(I.w_class == ITEMSIZE_HUGE)
 				fullness_to_add = ITEMSIZE_COST_HUGE
 			else
-<<<<<<< HEAD
-				fullness_to_add = I.w_class //CHOMPEdit
-=======
 				fullness_to_add = I.w_class
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 			fullness_to_add /= 32
 			belly_fullness += fullness_to_add * item_multiplier
 	belly_fullness *= size_factor_for_sprite

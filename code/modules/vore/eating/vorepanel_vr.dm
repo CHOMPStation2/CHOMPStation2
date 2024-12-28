@@ -277,17 +277,15 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			"resist_animation" = selected.resist_triggers_animation,
 			"voresprite_size_factor" = selected.size_factor_for_sprite,
 			"belly_sprite_to_affect" = selected.belly_sprite_to_affect,
-<<<<<<< HEAD
-			"belly_sprite_option_shown" = LAZYLEN(host.vore_icon_bellies) >= 1 ? TRUE : FALSE, //CHOMPEdit
-=======
 			"belly_sprite_option_shown" = LAZYLEN(host.vore_icon_bellies) >= 1 ? TRUE : FALSE,
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 			"tail_option_shown" = istype(host, /mob/living/carbon/human),
 			"tail_to_change_to" = selected.tail_to_change_to,
 			"tail_colouration" = selected.tail_colouration,
 			"tail_extra_overlay" = selected.tail_extra_overlay,
 			"tail_extra_overlay2" = selected.tail_extra_overlay2,
-<<<<<<< HEAD
+			"undergarment_chosen" = selected.undergarment_chosen,
+			"undergarment_if_none" = selected.undergarment_if_none || "None",
+			"undergarment_color" = selected.undergarment_color,
 			//CHOMP add: vore sprite options and additional stuff
 			"belly_fullscreen_color" = selected.belly_fullscreen_color,
 			//"belly_fullscreen_color_secondary" = selected.belly_fullscreen_color_secondary, // Chomp REMOVE - use our solution, not upstream's
@@ -318,19 +316,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			"vorespawn_whitelist" = selected.vorespawn_whitelist,
 			"vorespawn_absorbed" = (global_flag_check(selected.vorespawn_absorbed, VS_FLAG_ABSORB_YES) + global_flag_check(selected.vorespawn_absorbed, VS_FLAG_ABSORB_PREY)),
 			"sound_volume" = selected.sound_volume,
-			"undergarment_chosen" = selected.undergarment_chosen,
-			"undergarment_if_none" = selected.undergarment_if_none || "None",
-			"undergarment_color" = selected.undergarment_color,
 			"noise_freq" = selected.noise_freq,
 			"item_digest_logs" = selected.item_digest_logs,
 			"private_struggle" = selected.private_struggle,
 			//"marking_to_add" = selected.marking_to_add
 			//CHOMPEdit end
-=======
-			"undergarment_chosen" = selected.undergarment_chosen,
-			"undergarment_if_none" = selected.undergarment_if_none || "None",
-			"undergarment_color" = selected.undergarment_color
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 		)
 
 		var/list/addons = list()
@@ -1014,7 +1004,6 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			host.weight_message_visible = !host.weight_message_visible
 			unsaved_changes = TRUE
 			return TRUE
-		//CHOMPEdit start - vore sprites color
 		if("set_vs_color")
 			var/belly_choice = tgui_input_list(ui.user, "Which vore sprite are you going to edit the color of?", "Vore Sprite Color", host.vore_icon_bellies)
 			if(belly_choice)
@@ -1029,7 +1018,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 					host.update_icons_body()
 					unsaved_changes = TRUE
 			return TRUE
-<<<<<<< HEAD
+		//CHOMPAdd start - vore sprites color
 		if("set_belly_rub")
 			host.belly_rub_target = tgui_input_list(ui.user, "Which belly would you prefer to be rubbed?","Select Target", host.vore_organs)
 			if(!(host.belly_rub_target))
@@ -1248,9 +1237,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				unsaved_changes = TRUE
 				host.soulgem.set_custom_message(message, "delete")
 			return TRUE
-		//CHOMPEdit end
-=======
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
+		//CHOMPAdd end
 
 /datum/vore_look/proc/pick_from_inside(mob/user, params)
 	var/atom/movable/target = locate(params["pick"])
@@ -2252,17 +2239,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			list("Sleeper", "Vorebelly", "Both"))
 			if(belly_choice == null)
 				return FALSE
-<<<<<<< HEAD
-			//CHOMPEdit Start, changed to sync the setting among all sleepers for multibelly support
 			for (var/belly in host.vore_organs)
 				var/obj/belly/B = belly
 				B.silicon_belly_overlay_preference = belly_choice
-			//CHOMPEdit End
-=======
-			for (var/belly in host.vore_organs)
-				var/obj/belly/B = belly
-				B.silicon_belly_overlay_preference = belly_choice
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 			host.update_icon()
 			. = TRUE
 		if("b_belly_mob_mult")
@@ -2799,17 +2778,6 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				return FALSE
 			else
 				host.vore_selected.belly_sprite_to_affect = belly_choice
-<<<<<<< HEAD
-				host.update_fullness()
-			. = TRUE
-		if("b_affects_vore_sprites")
-			host.vore_selected.affects_vore_sprites = !host.vore_selected.affects_vore_sprites
-			host.update_fullness()
-			. = TRUE
-		if("b_count_absorbed_prey_for_sprites")
-			host.vore_selected.count_absorbed_prey_for_sprite = !host.vore_selected.count_absorbed_prey_for_sprite
-			host.update_fullness()
-=======
 				if(isanimal(host))
 					host.update_icon()
 				else
@@ -2828,19 +2796,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.update_icon()
 			else
 				host.update_fullness()
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 			. = TRUE
 		if("b_absorbed_multiplier")
 			var/absorbed_multiplier_input = input(user, "Set the impact absorbed prey's size have on your vore sprite. 1 means no scaling, 0.5 means absorbed prey count half as much, 2 means absorbed prey count double. (Range from 0.1 - 3)", "Absorbed Multiplier") as num|null
 			if(!isnull(absorbed_multiplier_input))
 				host.vore_selected.absorbed_multiplier = CLAMP(absorbed_multiplier_input, 0.1, 3)
-<<<<<<< HEAD
-				host.update_fullness()
-			. = TRUE
-		if("b_count_items_for_sprites")
-			host.vore_selected.count_items_for_sprite = !host.vore_selected.count_items_for_sprite
-			host.update_fullness()
-=======
 				if(isanimal(host))
 					host.update_icon()
 				else
@@ -2852,19 +2812,11 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.update_icon()
 			else
 				host.update_fullness()
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 			. = TRUE
 		if("b_item_multiplier")
 			var/item_multiplier_input = input(user, "Set the impact items will have on your vore sprite. 1 means a belly with 8 normal-sized items will count as 1 normal sized prey-thing's worth, 0.5 means items count half as much, 2 means items count double. (Range from 0.1 - 10)", "Item Multiplier") as num|null
 			if(!isnull(item_multiplier_input))
 				host.vore_selected.item_multiplier = CLAMP(item_multiplier_input, 0.1, 10)
-<<<<<<< HEAD
-				host.update_fullness()
-			. = TRUE
-		if("b_health_impacts_size")
-			host.vore_selected.health_impacts_size = !host.vore_selected.health_impacts_size
-			host.update_fullness()
-=======
 				if(isanimal(host))
 					host.update_icon()
 				else
@@ -2876,7 +2828,6 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.update_icon()
 			else
 				host.update_fullness()
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 			. = TRUE
 		if("b_resist_animation")
 			host.vore_selected.resist_triggers_animation = !host.vore_selected.resist_triggers_animation
@@ -2885,40 +2836,35 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			var/size_factor_input = input(user, "Set the impact all belly content's collective size has on your vore sprite. 1 means no scaling, 0.5 means content counts half as much, 2 means contents count double. (Range from 0.1 - 3)", "Size Factor") as num|null
 			if(!isnull(size_factor_input))
 				host.vore_selected.size_factor_for_sprite = CLAMP(size_factor_input, 0.1, 3)
-<<<<<<< HEAD
-				host.update_fullness()
-			. = TRUE
-		//CHOMPEdit End
-		if("b_vore_sprite_flags") //CHOMP Addition
-=======
 				if(isanimal(host))
 					host.update_icon()
 				else
 					host.update_fullness()
 			. = TRUE
 		if("b_vore_sprite_flags")
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 			var/list/menu_list = host.vore_selected.vore_sprite_flag_list.Copy()
 			var/toggle_vs_flag = tgui_input_list(user, "Toggle Vore Sprite Modes", "Mode Choice", menu_list)
 			if(!toggle_vs_flag)
 				return FALSE
 			host.vore_selected.vore_sprite_flags ^= host.vore_selected.vore_sprite_flag_list[toggle_vs_flag]
 			. = TRUE
-<<<<<<< HEAD
 		if("b_count_liquid_for_sprites") //CHOMP Addition
 			host.vore_selected.count_liquid_for_sprite = !host.vore_selected.count_liquid_for_sprite
-			host.update_fullness()
+			if(isanimal(host))
+				host.update_icon()
+			else
+				host.update_fullness()
 			. = TRUE
 		if("b_liquid_multiplier") //CHOMP Addition
 			var/liquid_multiplier_input = input(user, "Set the impact amount of liquid reagents will have on your vore sprite. 1 means a belly with 100 reagents of fluid will count as 1 normal sized prey-thing's worth, 0.5 means liquid counts half as much, 2 means liquid counts double. (Range from 0.1 - 10)", "Liquid Multiplier") as num|null
 			if(!isnull(liquid_multiplier_input))
 				host.vore_selected.liquid_multiplier = CLAMP(liquid_multiplier_input, 0.1, 10)
-				host.update_fullness()
+				if(isanimal(host))
+					host.update_icon()
+				else
+					host.update_fullness()
 			. = TRUE
-		if("b_undergarment_choice") //CHOMP Addition
-=======
 		if("b_undergarment_choice")
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 			var/datum/category_group/underwear/undergarment_choice = tgui_input_list(user, "Which undergarment do you want to enable when your [lowertext(host.vore_selected.name)] is filled?","Select Undergarment Class", global_underwear.categories)
 			if(!undergarment_choice) //They cancelled, no changes
 				return FALSE
@@ -2926,11 +2872,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.vore_selected.undergarment_chosen = undergarment_choice.name
 				host.update_fullness()
 			. = TRUE
-<<<<<<< HEAD
-		if("b_undergarment_if_none") //CHOMP Addition
-=======
 		if("b_undergarment_if_none")
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 			var/datum/category_group/underwear/UWC = global_underwear.categories_by_name[host.vore_selected.undergarment_chosen]
 			var/datum/category_item/underwear/selected_underwear = tgui_input_list(user, "If no undergarment is equipped, which undergarment style do you want to use?","Select Underwear Style",UWC.items,host.vore_selected.undergarment_if_none)
 			if(!selected_underwear) //They cancelled, no changes
@@ -2939,11 +2881,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.vore_selected.undergarment_if_none = selected_underwear
 				host.update_fullness()
 				host.updateVRPanel()
-<<<<<<< HEAD
-		if("b_undergarment_color") //CHOMP Addition
-=======
 		if("b_undergarment_color")
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 			var/newcolor = input(user, "Choose a color.", "", host.vore_selected.undergarment_color) as color|null
 			if(newcolor)
 				host.vore_selected.undergarment_color = newcolor
@@ -2971,10 +2909,6 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			if(newcolor)
 				host.vore_selected.tail_extra_overlay2 = newcolor
 			. = TRUE
-<<<<<<< HEAD
-
-=======
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 	if(.)
 		unsaved_changes = TRUE
 

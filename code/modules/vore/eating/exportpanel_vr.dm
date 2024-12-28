@@ -1,40 +1,48 @@
-//CHOMPERemove. We got our own. We don't use this. Only here as a reminder on further PRs.
-/*
 //
 // Belly Export Panel
 //
+
 /datum/vore_look/export_panel/proc/open_export_panel(mob/user)
 	tgui_interact(user)
+
 /datum/vore_look/export_panel/tgui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
 		ui = new(user, src, "VorePanelExport", "Vore Export Panel")
 		ui.open()
 		ui.set_autoupdate(FALSE)
+
 /datum/vore_look/export_panel/tgui_fallback(payload)
 	if(..())
 		return TRUE
+
 	//var/mob/living/host = usr
 	//host.vorebelly_printout(TRUE)
+
 /datum/vore_look/export_panel/tgui_act(action, params)
 	if(..())
 		return TRUE
+
 /datum/vore_look/export_panel/tgui_data(mob/user)
 	var/list/data = list()
 	var/mob/living/host = user
+
 	data["db_version"] = "0.1"
 	data["db_repo"] = "vorestation"
 	data["mob_name"] = host.real_name
+
 	for(var/belly in host.vore_organs)
 		if(isbelly(belly))
 			var/obj/belly/B = belly
 			var/belly_data = list()
+
 			// General Information
 			belly_data["name"] = B.name
 			belly_data["desc"] = B.desc
 			belly_data["absorbed_desc"] = B.absorbed_desc
 			belly_data["vore_verb"] = B.vore_verb
 			belly_data["release_verb"] = B.release_verb
+
 			// Controls
 			belly_data["mode"] = B.digest_mode
 			var/list/addons = list()
@@ -44,84 +52,107 @@
 			belly_data["addons"] = addons
 			belly_data["item_mode"] = B.item_digest_mode
 			belly_data["message_mode"] = B.message_mode
+
 			// Messages
 			belly_data["struggle_messages_outside"] = list()
 			for(var/msg in B.struggle_messages_outside)
 				belly_data["struggle_messages_outside"] += msg
+
 			belly_data["struggle_messages_inside"] = list()
 			for(var/msg in B.struggle_messages_inside)
 				belly_data["struggle_messages_inside"] += msg
+
 			belly_data["absorbed_struggle_messages_outside"] = list()
 			for(var/msg in B.absorbed_struggle_messages_outside)
 				belly_data["absorbed_struggle_messages_outside"] += msg
+
 			belly_data["absorbed_struggle_messages_inside"] = list()
 			for(var/msg in B.absorbed_struggle_messages_inside)
 				belly_data["absorbed_struggle_messages_inside"] += msg
+
 			belly_data["escape_attempt_messages_owner"] = list()
 			for(var/msg in B.escape_attempt_messages_owner)
 				belly_data["escape_attempt_messages_owner"] += msg
+
 			belly_data["escape_attempt_messages_prey"] = list()
 			for(var/msg in B.escape_attempt_messages_prey)
 				belly_data["escape_attempt_messages_prey"] += msg
+
 			belly_data["escape_messages_owner"] = list()
 			for(var/msg in B.escape_messages_owner)
 				belly_data["escape_messages_owner"] += msg
+
 			belly_data["escape_messages_prey"] = list()
 			for(var/msg in B.escape_messages_prey)
 				belly_data["escape_messages_prey"] += msg
+
 			belly_data["escape_messages_outside"] = list()
 			for(var/msg in B.escape_messages_outside)
 				belly_data["escape_messages_outside"] += msg
+
 			belly_data["escape_item_messages_owner"] = list()
 			for(var/msg in B.escape_item_messages_owner)
 				belly_data["escape_item_messages_owner"] += msg
+
 			belly_data["escape_item_messages_prey"] = list()
 			for(var/msg in B.escape_item_messages_prey)
 				belly_data["escape_item_messages_prey"] += msg
+
 			belly_data["escape_item_messages_outside"] = list()
 			for(var/msg in B.escape_item_messages_outside)
 				belly_data["escape_item_messages_outside"] += msg
+
 			belly_data["escape_fail_messages_owner"] = list()
 			for(var/msg in B.escape_fail_messages_owner)
 				belly_data["escape_fail_messages_owner"] += msg
+
 			belly_data["escape_fail_messages_prey"] = list()
 			for(var/msg in B.escape_fail_messages_prey)
 				belly_data["escape_fail_messages_prey"] += msg
+
 			belly_data["escape_attempt_absorbed_messages_owner"] = list()
 			for(var/msg in B.escape_attempt_absorbed_messages_owner)
 				belly_data["escape_attempt_absorbed_messages_owner"] += msg
+
 			belly_data["escape_attempt_absorbed_messages_prey"] = list()
 			for(var/msg in B.escape_attempt_absorbed_messages_prey)
 				belly_data["escape_attempt_absorbed_messages_prey"] += msg
+
 			belly_data["escape_absorbed_messages_owner"] = list()
 			for(var/msg in B.escape_absorbed_messages_owner)
 				belly_data["escape_absorbed_messages_owner"] += msg
+
 			belly_data["escape_absorbed_messages_prey"] = list()
 			for(var/msg in B.escape_absorbed_messages_prey)
 				belly_data["escape_absorbed_messages_prey"] += msg
+
 			belly_data["escape_absorbed_messages_outside"] = list()
 			for(var/msg in B.escape_absorbed_messages_outside)
 				belly_data["escape_absorbed_messages_outside"] += msg
+
 			belly_data["escape_fail_absorbed_messages_owner"] = list()
 			for(var/msg in B.escape_fail_absorbed_messages_owner)
 				belly_data["escape_fail_absorbed_messages_owner"] += msg
+
 			belly_data["escape_fail_absorbed_messages_prey"] = list()
 			for(var/msg in B.escape_fail_absorbed_messages_prey)
 				belly_data["escape_fail_absorbed_messages_prey"] += msg
+
 			belly_data["primary_transfer_messages_owner"] = list()
 			for(var/msg in B.primary_transfer_messages_owner)
 				belly_data["primary_transfer_messages_owner"] += msg
+
 			belly_data["primary_transfer_messages_prey"] = list()
 			for(var/msg in B.primary_transfer_messages_prey)
 				belly_data["primary_transfer_messages_prey"] += msg
+
 			belly_data["secondary_transfer_messages_owner"] = list()
 			for(var/msg in B.secondary_transfer_messages_owner)
 				belly_data["secondary_transfer_messages_owner"] += msg
+
 			belly_data["secondary_transfer_messages_prey"] = list()
 			for(var/msg in B.secondary_transfer_messages_prey)
 				belly_data["secondary_transfer_messages_prey"] += msg
-<<<<<<< HEAD
-=======
 
 			/* Not yet implemented on virgo
 			belly_data["primary_autotransfer_messages_owner"] = list()
@@ -141,89 +172,113 @@
 				belly_data["secondary_autotransfer_messages_prey"] += msg
 			*/
 
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 			belly_data["digest_chance_messages_owner"] = list()
 			for(var/msg in B.digest_chance_messages_owner)
 				belly_data["digest_chance_messages_owner"] += msg
+
 			belly_data["digest_chance_messages_prey"] = list()
 			for(var/msg in B.digest_chance_messages_prey)
 				belly_data["digest_chance_messages_prey"] += msg
+
 			belly_data["absorb_chance_messages_owner"] = list()
 			for(var/msg in B.absorb_chance_messages_owner)
 				belly_data["absorb_chance_messages_owner"] += msg
+
 			belly_data["absorb_chance_messages_prey"] = list()
 			for(var/msg in B.absorb_chance_messages_prey)
 				belly_data["absorb_chance_messages_prey"] += msg
+
 			belly_data["digest_messages_owner"] = list()
 			for(var/msg in B.digest_messages_owner)
 				belly_data["digest_messages_owner"] += msg
+
 			belly_data["digest_messages_prey"] = list()
 			for(var/msg in B.digest_messages_prey)
 				belly_data["digest_messages_prey"] += msg
+
 			belly_data["absorb_messages_owner"] = list()
 			for(var/msg in B.absorb_messages_owner)
 				belly_data["absorb_messages_owner"] += msg
+
 			belly_data["absorb_messages_prey"] = list()
 			for(var/msg in B.absorb_messages_prey)
 				belly_data["absorb_messages_prey"] += msg
+
 			belly_data["unabsorb_messages_owner"] = list()
 			for(var/msg in B.unabsorb_messages_owner)
 				belly_data["unabsorb_messages_owner"] += msg
+
 			belly_data["unabsorb_messages_prey"] = list()
 			for(var/msg in B.unabsorb_messages_prey)
 				belly_data["unabsorb_messages_prey"] += msg
+
 			belly_data["examine_messages"] = list()
 			for(var/msg in B.examine_messages)
 				belly_data["examine_messages"] += msg
+
 			belly_data["examine_messages_absorbed"] = list()
 			for(var/msg in B.examine_messages_absorbed)
 				belly_data["examine_messages_absorbed"] += msg
+
 			//belly_data["emote_list"] = list()
 			//for(var/EL in B.emote_lists)
 			//	for(var/msg in B.emote_lists[EL])
 			//		msg_list += msg
 			//
 			//	belly_data["emote_lists"] += list(EL, msg_list)
+
 			// I will use this first before the code above gets fixed
 			belly_data["emotes_digest"] = list()
 			for(var/msg in B.emote_lists[DM_DIGEST])
 				belly_data["emotes_digest"] += msg
+
 			belly_data["emotes_hold"] = list()
 			for(var/msg in B.emote_lists[DM_HOLD])
 				belly_data["emotes_hold"] += msg
+
 			belly_data["emotes_holdabsorbed"] = list()
 			for(var/msg in B.emote_lists[DM_HOLD_ABSORBED])
 				belly_data["emotes_holdabsorbed"] += msg
+
 			belly_data["emotes_absorb"] = list()
 			for(var/msg in B.emote_lists[DM_ABSORB])
 				belly_data["emotes_absorb"] += msg
+
 			belly_data["emotes_heal"] = list()
 			for(var/msg in B.emote_lists[DM_HEAL])
 				belly_data["emotes_heal"] += msg
+
 			belly_data["emotes_drain"] = list()
 			for(var/msg in B.emote_lists[DM_DRAIN])
 				belly_data["emotes_drain"] += msg
+
 			belly_data["emotes_steal"] = list()
 			for(var/msg in B.emote_lists[DM_SIZE_STEAL])
 				belly_data["emotes_steal"] += msg
+
 			belly_data["emotes_egg"] = list()
 			for(var/msg in B.emote_lists[DM_EGG])
 				belly_data["emotes_egg"] += msg
+
 			belly_data["emotes_shrink"] = list()
 			for(var/msg in B.emote_lists[DM_SHRINK])
 				belly_data["emotes_shrink"] += msg
+
 			belly_data["emotes_grow"] = list()
 			for(var/msg in B.emote_lists[DM_GROW])
 				belly_data["emotes_grow"] += msg
+
 			belly_data["emotes_unabsorb"] = list()
 			for(var/msg in B.emote_lists[DM_UNABSORB])
 				belly_data["emotes_unabsorb"] += msg
+
 			// Options
 			belly_data["digest_brute"] = B.digest_brute
 			belly_data["digest_burn"] = B.digest_burn
 			belly_data["digest_oxy"] = B.digest_oxy
 			belly_data["digest_tox"] = B.digest_tox
 			belly_data["digest_clone"] = B.digest_clone
+
 			belly_data["can_taste"] = B.can_taste
 			// belly_data["is_feedable"] = B.is_feedable // Not yet implemented on virgo
 			belly_data["contaminates"] = B.contaminates
@@ -247,8 +302,6 @@
 			belly_data["egg_size"] = B.egg_size
 			*/
 			belly_data["selective_preference"] = B.selective_preference
-<<<<<<< HEAD
-=======
 			/* Not yet implemented on virgo
 			belly_data["recycling"] = B.recycling
 			belly_data["storing_nutrition"] = B.storing_nutrition
@@ -258,17 +311,12 @@
 			belly_data["private_struggle"] = B.private_struggle
 			*/
 
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 			// Sounds
 			belly_data["is_wet"] = B.is_wet
 			belly_data["wet_loop"] = B.wet_loop
 			belly_data["fancy_vore"] = B.fancy_vore
 			belly_data["vore_sound"] = B.vore_sound
 			belly_data["release_sound"] = B.release_sound
-<<<<<<< HEAD
-			// Visuals (Vore FX)
-			belly_data["disable_hud"] = B.disable_hud
-=======
 			/*  Not yet implemented on virgo
 			belly_data["sound_volume"] = B.sound_volume
 			belly_data["noise_freq"] = B.noise_freq
@@ -313,28 +361,23 @@
 			belly_data["disable_hud"] = B.disable_hud
 			// belly_data["belly_fullscreen"] = B.belly_fullscreen // Not yet implemented on virgo
 
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 			// Interactions
 			belly_data["escapable"] = B.escapable
+
 			belly_data["escapechance"] = B.escapechance
 			belly_data["escapechance_absorbed"] = B.escapechance_absorbed
-<<<<<<< HEAD
-			belly_data["escapetime"] = B.escapetime
-=======
 			belly_data["escapetime"] = B.escapetime/10
 
 			// belly_data["belchchance"] = B.belchchance //  Not yet implemented on virgo
 
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 			belly_data["transferchance"] = B.transferchance
 			belly_data["transferlocation"] = B.transferlocation
+
 			belly_data["transferchance_secondary"] = B.transferchance_secondary
 			belly_data["transferlocation_secondary"] = B.transferlocation_secondary
+
 			belly_data["absorbchance"] = B.absorbchance
 			belly_data["digestchance"] = B.digestchance
-<<<<<<< HEAD
-			data["bellies"] += list(belly_data)
-=======
 
 			// Interactions (Auto-Transfer)
 			/* Not yet implemented on virgo
@@ -454,6 +497,4 @@
 				belly_data["fullness5_messages"] += msg
 			*/
 
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 	return data
-	*/
