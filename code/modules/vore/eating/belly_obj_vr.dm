@@ -1161,6 +1161,8 @@
 			M.reagents.del_reagent(REAGENT_ID_CLEANER) //Don't need this stuff in our bloodstream.
 			M.reagents.trans_to_holder(Pred.ingested, M.reagents.total_volume, 0.5, TRUE) //CHOMPEdit End
 
+	owner.update_fullness()
+
 	//Incase they have the loop going, let's double check to stop it.
 	M.stop_sound_channel(CHANNEL_PREYLOOP)
 	// Delete the digested mob
@@ -1202,11 +1204,9 @@
 			M.forceMove(G)
 		else
 			qdel(M)
-	//CHOMPEdit End
 	if(isanimal(owner))
 		owner.update_icon()
-	else
-		owner.update_fullness()
+	//CHOMPEdit End
 
 // Handle a mob being absorbed
 /obj/belly/proc/absorb_living(mob/living/M)
@@ -1259,7 +1259,6 @@
 
 	//Update owner
 	owner.updateVRPanel()
-	owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 	if(isanimal(owner))
 		owner.update_icon()
 	else
@@ -1290,7 +1289,6 @@
 
 	//Update owner
 	owner.updateVRPanel()
-	owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 	if(isanimal(owner))
 		owner.update_icon()
 	else
