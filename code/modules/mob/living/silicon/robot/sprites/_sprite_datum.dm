@@ -28,6 +28,8 @@
 	var/is_whitelisted = FALSE
 	var/whitelist_ckey
 	var/whitelist_charname
+	var/list/belly_light_list = list() // Support multiple sleepers with r/g light "sleeper"
+	var/list/belly_capacity_list = list() //Support multiple bellies with multiple sizes, default: "sleeper" = 1
 
 /// Determines if the borg has the proper flags to show an overlay.
 /datum/robot_sprite/proc/sprite_flag_check(var/flag_to_check)
@@ -85,9 +87,8 @@
 			continue //Go on to the next.
 	return
 
-/datum/robot_sprite/proc/get_belly_overlay(var/mob/living/silicon/robot/ourborg, var/size = 1, var/b_class) //CHOMPEdit, allows use of our multi belly system
+/datum/robot_sprite/proc/get_belly_overlay(var/mob/living/silicon/robot/ourborg, var/size = 1, var/b_class)
 	//Size
-	//CHOMPEdit Start, using our own belly handling
 	if(has_sleeper_light_indicator || belly_light_list.len)
 		if(belly_light_list.len)
 			if(belly_light_list.Find(b_class))
@@ -107,18 +108,17 @@
 				sleeperColor = "r"
 			return "[sprite_icon_state]-[b_class]-[size]-[sleeperColor]"
 	return "[sprite_icon_state]-[b_class]-[size]"
-	//CHOMPEdit End
 
-/datum/robot_sprite/proc/get_belly_resting_overlay(var/mob/living/silicon/robot/ourborg, var/size = 1, var/b_class) //CHOMPEdit, allows use of our multi belly system
+/datum/robot_sprite/proc/get_belly_resting_overlay(var/mob/living/silicon/robot/ourborg, var/size = 1, var/b_class)
 	if(!(ourborg.rest_style in rest_sprite_options))
 		ourborg.rest_style = "Default"
 	switch(ourborg.rest_style)
 		if("Sit")
-			return "[get_belly_overlay(ourborg, size, b_class)]-sit" //CHOMPEdit, allows use of our multi belly system
+			return "[get_belly_overlay(ourborg, size, b_class)]-sit"
 		if("Bellyup")
-			return "[get_belly_overlay(ourborg, size, b_class)]-bellyup" //CHOMPEdit, allows use of our multi belly system
+			return "[get_belly_overlay(ourborg, size, b_class)]-bellyup"
 		else
-			return "[get_belly_overlay(ourborg, size, b_class)]-rest" //CHOMPEdit, allows use of our multi belly system
+			return "[get_belly_overlay(ourborg, size, b_class)]-rest"
 
 /datum/robot_sprite/proc/get_eyes_overlay(var/mob/living/silicon/robot/ourborg)
 	if(!(ourborg.resting && has_rest_sprites))

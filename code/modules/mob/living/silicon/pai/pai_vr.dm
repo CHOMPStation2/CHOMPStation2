@@ -68,10 +68,8 @@
 	var/soft_si = FALSE	//signaler
 	var/soft_ar = FALSE	//ar hud
 
-	//CHOMPEdit Begin - Add vore capacity
 	vore_capacity = 1
 	vore_capacity_ex = list("stomach" = 1)
-	//CHOMPEdit End
 
 /mob/living/silicon/pai/Initialize()
 	. = ..()
@@ -113,15 +111,6 @@
 		return
 	return feed_grabbed_to_self(src,T)
 
-/*CHOMPEdit - Just using the update_fullness from living now.
-/mob/living/silicon/pai/proc/update_fullness_pai() //Determines if they have something in their stomach. Copied and slightly modified.
-	var/new_people_eaten = 0
-	for(var/obj/belly/B as anything in vore_organs)
-		for(var/mob/living/M in B)
-			new_people_eaten += M.size_multiplier
-	people_eaten = min(1, new_people_eaten)
-*/
-
 /mob/living/silicon/pai/update_icon() //Some functions cause this to occur, such as resting
 	..()
 	if(chassis == "13")
@@ -129,28 +118,27 @@
 		add_eyes()
 		return
 
-	update_fullness() //CHOMPEdit - Switch to /living update_fullness
-	//CHOMPEdit begin - Add multiple belly size support
+	update_fullness()
+
 	//Add a check when selecting a chassis if you add in support for this, to set vore_capacity to 2 or however many states you have.
 	var/fullness_extension = ""
 	if(vore_capacity > 1 && vore_fullness > 1)
 		fullness_extension = "_[vore_fullness]"
-	//CHOMPEdit end
 
-	if(!vore_fullness && !resting) //CHOMPEdit - Use vore_fullness instead of people_eaten
+	if(!vore_fullness && !resting)
 		icon_state = "[chassis]" //Using icon_state here resulted in quite a few bugs. Chassis is much less buggy.
-	else if(!vore_fullness && resting) //CHOMPEdit - Use vore_fullness instead of people_eaten
+	else if(!vore_fullness && resting)
 		icon_state = "[chassis]_rest"
 
 	// Unfortunately not all these states exist, ugh.
-	else if(vore_fullness && !resting) //CHOMPEdit - Use vore_fullness instead of people_eaten
-		if("[chassis]_full[fullness_extension]" in cached_icon_states(icon)) //CHOMPEdit begin - Add multiple belly size support
-			icon_state = "[chassis]_full[fullness_extension]" //CHOMPEdit - Add multiple belly size support
+	else if(vore_fullness && !resting)
+		if("[chassis]_full[fullness_extension]" in cached_icon_states(icon))
+			icon_state = "[chassis]_full[fullness_extension]"
 		else
 			icon_state = "[chassis]"
-	else if(vore_fullness && resting) //CHOMPEdit - Use vore_fullness instead of people_eaten
-		if("[chassis]_rest_full[fullness_extension]" in cached_icon_states(icon)) //CHOMPEdit begin - Add multiple belly size support
-			icon_state = "[chassis]_rest_full[fullness_extension]" //CHOMPEdit begin - Add multiple belly size support
+	else if(vore_fullness && resting)
+		if("[chassis]_rest_full[fullness_extension]" in cached_icon_states(icon))
+			icon_state = "[chassis]_rest_full[fullness_extension]"
 		else
 			icon_state = "[chassis]_rest"
 	if(chassis in wide_chassis)
@@ -202,17 +190,8 @@
 	resize(1, FALSE, TRUE, TRUE, FALSE)		//We resize ourselves to normal here for a moment to let the vis_height get reset
 	chassis = possible_chassis[choice]
 
-	//CHOMPEdit Begin - Reset vore_capacity to allow multiple belly sizes as an option
 	vore_capacity = 1
 	vore_capacity_ex = list("stomach" = 1)
-	//As an example of how you would add support for multiple belly sizes...
-	/*
-	if(chassis == "example")
-		vore_capacity = 2
-		vore_capacity_ex = list("stomach" = 2)
-	*/
-	//Vore sprites would need to be added with sizes being example, example_full, example_full_2, example_full_3, and so forth
-	//CHOMPEdit End
 
 	if(chassis == "13")
 		if(!holo_icon)
