@@ -1,37 +1,16 @@
 FROM ubuntu:22.04 AS base
 
-<<<<<<< HEAD
-ARG BYOND_MAJOR=515
-ARG BYOND_MINOR=1640
-=======
 RUN dpkg --add-architecture i386 \
 	&& apt-get update \
 	&& apt-get upgrade -y \
 	&& apt-get dist-upgrade -y \
 	&& apt-get install -y --no-install-recommends \
 		ca-certificates
->>>>>>> df8cea1443 (docker file and version update (#16761))
 
 FROM base AS byond
 WORKDIR /byond
 
 RUN apt-get install -y --no-install-recommends \
-<<<<<<< HEAD
-    libssl-dev \
-    pkg-config \
-    curl \
-    gcc-multilib \
-    && curl https://sh.rustup.rs -sSf | sh -s -- -y --default-host i686-unknown-linux-gnu \
-    && git init \
-    && git remote add origin https://github.com/tgstation/rust-g
-
-COPY dependencies.sh .
-
-RUN /bin/bash -c "source dependencies.sh \
-    && git fetch --depth 1 origin \$RUST_G_VERSION" \
-    && git checkout FETCH_HEAD \
-    && ~/.cargo/bin/cargo build --release
-=======
 	curl \
 	unzip \
 	make \
@@ -49,7 +28,6 @@ RUN . ./dependencies.sh \
 	&& apt-get purge -y --auto-remove curl unzip make \
 	&& cd .. \
 	&& rm -rf byond byond.zip
->>>>>>> df8cea1443 (docker file and version update (#16761))
 
 FROM byond AS build
 
