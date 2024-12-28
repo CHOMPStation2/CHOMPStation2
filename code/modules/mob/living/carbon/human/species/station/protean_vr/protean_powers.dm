@@ -556,10 +556,6 @@
 				"dullahandecals5",
 				"emptydecals"
 			)
-			var/list/Dullahan_extended_styles = list(
-				"dullahanextendedon",
-				"dullahanextendedoff"
-			)
 			//if(user.mind.assigned_role != JOB_CHAPLAIN)
 				//return FALSE
 			switch(choice)
@@ -580,7 +576,8 @@
 					S.dullahan_overlays[S.dullahan_overlays[3]] = new_color
 					if(choice == "dullahanmetal2")
 						S.dullahan_overlays[6] = extraon
-						S.dullahan_overlays[S.dullahan_overlays[6]] = new_color
+						var/tempcolor ="#FFFFFF"
+						S.dullahan_overlays[S.dullahan_overlays[6]] = tempcolor
 					else
 						S.dullahan_overlays[6] = extraoff
 				if("Eyes")
@@ -599,7 +596,7 @@
 				if("Decals")
 					options = Dullahan_decal_styles
 					for(var/option in options)
-						var/image/I = image('modular_chomp/icons/mob/dullahanborg/Dullahanprotean64x64.dmi', option, dir = 2, pixel_x = -16)
+						var/image/I = image('modular_chomp/icons/mob/dullahanborg/Dullahanprotean64x64.dmi', option, dir = 2, pixel_x = -16, pixel_y = -16)
 						LAZYSET(options, option, I)
 					choice = show_radial_menu(protie, protie, options, radius = 90)
 					if(!choice || QDELETED(protie) || protie.incapacitated())
