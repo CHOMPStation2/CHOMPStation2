@@ -746,7 +746,8 @@
 			I.plane = PLANE_LIGHTING_ABOVE
 			add_overlay(I)
 			qdel(I)
-		if(S.blob_appearance == "dullahan") //chomp edit
+		// chomp edit begin
+		if(S.blob_appearance == "dullahan")
 			icon = 'modular_chomp/icons/mob/dullahanborg/Dullahanprotean64x64.dmi'
 			vis_height = 64
 			var/image/I = image(icon, "[S.dullahan_overlays[1]][resting? "-rest" : (vore_fullness? "-[vore_fullness]" : null)]", pixel_x = -16)
@@ -796,6 +797,7 @@
 			I.layer = MOB_LAYER
 			add_overlay(I)
 			qdel(I)
+			//chompedit end
 		if(S.blob_appearance in wide_icons)
 			icon = 'icons/mob/species/protean/protean64x32.dmi'
 			default_pixel_x = -16
