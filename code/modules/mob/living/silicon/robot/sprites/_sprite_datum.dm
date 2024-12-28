@@ -86,14 +86,8 @@
 			continue //Go on to the next.
 	return
 
-<<<<<<< HEAD
-/datum/robot_sprite/proc/get_belly_overlay(var/mob/living/silicon/robot/ourborg, var/size = 1, var/b_class) //CHOMPEdit, allows use of our multi belly system
-	//Size
-	//CHOMPEdit Start, using our own belly handling
-=======
 /datum/robot_sprite/proc/get_belly_overlay(var/mob/living/silicon/robot/ourborg, var/size = 1, var/b_class)
 	//Size
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 	if(has_sleeper_light_indicator || belly_light_list.len)
 		if(belly_light_list.len)
 			if(belly_light_list.Find(b_class))
@@ -113,31 +107,17 @@
 				sleeperColor = "r"
 			return "[sprite_icon_state]-[b_class]-[size]-[sleeperColor]"
 	return "[sprite_icon_state]-[b_class]-[size]"
-<<<<<<< HEAD
-	//CHOMPEdit End
-
-/datum/robot_sprite/proc/get_belly_resting_overlay(var/mob/living/silicon/robot/ourborg, var/size = 1, var/b_class) //CHOMPEdit, allows use of our multi belly system
-=======
 
 /datum/robot_sprite/proc/get_belly_resting_overlay(var/mob/living/silicon/robot/ourborg, var/size = 1, var/b_class)
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 	if(!(ourborg.rest_style in rest_sprite_options))
 		ourborg.rest_style = "Default"
 	switch(ourborg.rest_style)
 		if("Sit")
-<<<<<<< HEAD
-			return "[get_belly_overlay(ourborg, size, b_class)]-sit" //CHOMPEdit, allows use of our multi belly system
-		if("Bellyup")
-			return "[get_belly_overlay(ourborg, size, b_class)]-bellyup" //CHOMPEdit, allows use of our multi belly system
-		else
-			return "[get_belly_overlay(ourborg, size, b_class)]-rest" //CHOMPEdit, allows use of our multi belly system
-=======
 			return "[get_belly_overlay(ourborg, size, b_class)]-sit"
 		if("Bellyup")
 			return "[get_belly_overlay(ourborg, size, b_class)]-bellyup"
 		else
 			return "[get_belly_overlay(ourborg, size, b_class)]-rest"
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 
 /datum/robot_sprite/proc/get_eyes_overlay(var/mob/living/silicon/robot/ourborg)
 	if(!(ourborg.resting && has_rest_sprites))

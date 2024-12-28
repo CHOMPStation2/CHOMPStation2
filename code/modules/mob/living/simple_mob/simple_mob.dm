@@ -237,11 +237,7 @@
 /mob/living/simple_mob/Login()
 	. = ..()
 	to_chat(src,span_boldnotice("You are \the [src].") + " [player_msg]")
-<<<<<<< HEAD
-	if(vore_active && !voremob_loaded) //CHOMPedit: On-demand belly loading.
-=======
 	if(vore_active && !voremob_loaded)
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 		voremob_loaded = TRUE
 		init_vore()
 	if(hasthermals)

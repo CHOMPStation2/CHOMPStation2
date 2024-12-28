@@ -65,11 +65,7 @@
 
 	var/nom_mob = FALSE //If a mob is meant to be hostile for vore purposes but is otherwise not hostile, if true makes certain AI ignore the mob
 
-<<<<<<< HEAD
-	var/voremob_loaded = FALSE //CHOMPedit: On-demand belly loading.
-=======
 	var/voremob_loaded = FALSE // On-demand belly loading.
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 
 // Release belly contents before being gc'd!
 /mob/living/simple_mob/Destroy()
@@ -87,23 +83,6 @@
 	if(myid)
 		return myid
 
-<<<<<<< HEAD
-// Update fullness based on size & quantity of belly contents
-/* CHOMPEdit - moved to code/modules/vore/eating/living_ch
-/mob/living/simple_mob/proc/update_fullness()
-	var/new_fullness = 0
-	for(var/obj/belly/B as anything in vore_organs)
-		for(var/mob/living/M in B)
-			if(!M.absorbed || B.count_absorbed_prey_for_sprite)
-				new_fullness += M.size_multiplier
-	new_fullness = new_fullness / size_multiplier //Divided by pred's size so a macro mob won't get macro belly from a regular prey.
-	new_fullness = new_fullness * belly_size_multiplier // Some mobs are small even at 100% size. Let's account for that.
-	new_fullness = round(new_fullness, 1) // Because intervals of 0.25 are going to make sprite artists cry.
-	vore_fullness = min(vore_capacity, new_fullness)
-*/
-
-=======
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 /mob/living/simple_mob/update_icon()
 	. = ..()
 	if(vore_active)
@@ -249,11 +228,7 @@
 
 // Make sure you don't call ..() on this one, otherwise you duplicate work.
 /mob/living/simple_mob/init_vore()
-<<<<<<< HEAD
-	if(!vore_active || no_vore || !voremob_loaded) //CHOMPedit: On-demand belly loading.
-=======
 	if(!vore_active || no_vore || !voremob_loaded)
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 		return
 
 	AddElement(/datum/element/slosh) // Sloshy element
@@ -281,11 +256,7 @@
 	var/obj/belly/B = new /obj/belly(src)
 	vore_selected = B
 	B.immutable = 1
-<<<<<<< HEAD
-	B.affects_vore_sprites = TRUE //CHOMPEdit - vore sprites enabled for simplemobs!
-=======
 	B.affects_vore_sprites = TRUE
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 	B.name = vore_stomach_name ? vore_stomach_name : "stomach"
 	B.desc = vore_stomach_flavor ? vore_stomach_flavor : "Your surroundings are warm, soft, and slimy. Makes sense, considering you're inside \the [name]."
 	B.digest_mode = vore_default_mode

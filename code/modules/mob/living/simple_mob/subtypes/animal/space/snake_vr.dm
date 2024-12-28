@@ -47,33 +47,24 @@
 	say_list_type = /datum/say_list/snake
 	ai_holder_type = /datum/ai_holder/simple_mob/passive
 
-<<<<<<< HEAD
 	// CHOMPEdit Start - New sprites & Added vore
 	/*
-=======
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 	icon_state = "python"
 	icon_living = "python"
 	icon_dead = "python_dead"
 	icon = 'icons/mob/snake_vr.dmi'
-<<<<<<< HEAD
 	*/
 	icon_state = "snek"
 	icon_living = "snek"
 	icon_dead = "snek_dead"
 	icon_rest = "snek_rest"
 	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
-=======
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
+	// CHOMPEdit End
 
 	vore_active = 1
 	vore_capacity = 1
 	vore_default_mode = DM_DIGEST
-<<<<<<< HEAD
-	vore_icons = SA_ICON_LIVING | SA_ICON_REST
-=======
-	// vore_icons = SA_ICON_LIVING | SA_ICON_REST // Woul require the downstream sprites
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
+	vore_icons = SA_ICON_LIVING | SA_ICON_REST // CHOMPEdit
 	vore_escape_chance = 20
 	swallowTime = 50
 	vore_bump_chance = 10
@@ -86,11 +77,7 @@
 /mob/living/simple_mob/animal/passive/snake/init_vore()
 	if(!voremob_loaded)
 		return
-<<<<<<< HEAD
-	.=..()
-=======
 	. = ..()
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "The snake coils its tail around you, pushing you to the ground and pinning you with its weight. It flicks its tongue at you, before pouncing onto your head, engulfing the upper half of your body with ease as it unhinges its jaw. With greedy swallows, it pulls you deeper, and deeper. The tight walls undulate rhythmically as the danger noodle rumbles contentedly at this new meal. The snake sends the last of you down with a deep swallow, hissing softly and closing its eyes as it enjoys its new meal, tucked away nicely under those beautiful, green scales."
@@ -122,10 +109,6 @@
 		"\the [name]'s tail lurches with the struggles of a live meal.")
 	B.examine_messages = list(
 		"\the [name]'s tail is swollen fat with a lump of prey it swallowed whole.")
-<<<<<<< HEAD
-// CHOMPEdit End
-=======
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 
 /datum/say_list/snake
 	emote_hear = list("hisses")
@@ -161,11 +144,7 @@
 
 	makes_dirt = FALSE
 
-<<<<<<< HEAD
-	vore_default_mode = DM_HOLD // CHOMPEdit because Noodle isn't a meanie! Unless you struggle. Honestly I'm happy leaving it as digestion, but since he can bump nom now, maybe don't have gurgles on by default. -Ace
-=======
 	vore_default_mode = DM_HOLD
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 
 	var/turns_since_scan = 0
 	var/obj/movement_target

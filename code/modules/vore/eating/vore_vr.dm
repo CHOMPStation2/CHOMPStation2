@@ -143,11 +143,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 //
 /proc/is_vore_predator(mob/living/O)
 	if(istype(O,/mob/living))
-<<<<<<< HEAD
-		if(istype(O,/mob/living/simple_mob)) //CHOMPEdit: On-demand belly loading.
-=======
 		if(istype(O,/mob/living/simple_mob)) //On-demand belly loading.
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 			var/mob/living/simple_mob/SM = O
 			if(SM.vore_active && !SM.voremob_loaded)
 				SM.voremob_loaded = TRUE

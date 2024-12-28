@@ -149,15 +149,9 @@
 		ai_holder.remove_target()
 
 /mob/living/simple_mob/vore/pakkun/init_vore()
-<<<<<<< HEAD
-	if(!voremob_loaded) //CHOMPAdd
-		return //CHOMPAdd
-	.=..() //CHOMPEdit
-=======
 	if(!voremob_loaded)
 		return
 	. = ..()
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 	var/obj/belly/B = vore_selected
 	if(isbelly(B)) //ChompEDIT - fix a runtime
 		B.name = "stomach"
@@ -282,15 +276,9 @@
 	..()
 
 /mob/living/simple_mob/vore/pakkun/snapdragon/snappy/init_vore()
-<<<<<<< HEAD
-	if(!voremob_loaded) //CHOMPAdd
-		return //CHOMPAdd
-	.=..() //CHOMPEdit
-=======
 	if(!voremob_loaded)
 		return
 	. = ..()
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 	var/obj/belly/B = vore_selected
 	if(isbelly(B)) //ChompEDIT - fix a runtime
 		B.digest_mode = DM_HOLD

@@ -36,17 +36,9 @@
 	projectile_accuracy = -20
 
 /mob/living/simple_mob/vore/horse/unicorn/init_vore()
-<<<<<<< HEAD
- 	//CHOMPEdit Start
-	if(!voremob_loaded)
-		return
-	.=..()
-	//CHOMPEdit End
-=======
 	if(!voremob_loaded)
 		return
 	. = ..()
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "With a final few gulps, the unicorn finishes swallowing you down into its hot, humid gut... and with a slosh, your weight makes the equine's belly hang down slightly like some sort of organic hammock. The thick, damp air is tinged with the smell of... candyfloss(?), and the surrounding flesh wastes no time in clenching and massaging down over its newfound fodder."

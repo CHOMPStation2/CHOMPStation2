@@ -1,11 +1,7 @@
 /mob/living/simple_mob/animal/passive/cat/runtime/init_vore()
 	if(!voremob_loaded)
 		return
-<<<<<<< HEAD
-	.=..()
-=======
 	. = ..()
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 	var/obj/belly/B = vore_selected
 	B.name = "Stomach"
 	B.desc = "The slimy wet insides of Runtime! Not quite as clean as the cat on the outside."

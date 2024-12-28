@@ -43,7 +43,6 @@ GLOBAL_LIST_INIT(digest_modes, list())
 			B.handle_digestion_death(L)
 		if(!L)
 			B.owner.update_fullness()
-<<<<<<< HEAD
 			return list("to_update" = TRUE)
 	if(!L)
 		return //CHOMPEdit End
@@ -61,11 +60,6 @@ GLOBAL_LIST_INIT(digest_modes, list())
 			return
 
  		//CHOMPedit end
-=======
-		if(!B.fancy_vore)
-			return list("to_update" = TRUE, "soundToPlay" = sound(get_sfx("classic_death_sounds")))
-		return list("to_update" = TRUE, "soundToPlay" = sound(get_sfx("fancy_death_pred")))
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 
 	// Deal digestion damage (and feed the pred)
 	var/old_health = L.health
@@ -94,13 +88,8 @@ GLOBAL_LIST_INIT(digest_modes, list())
 	var/offset = (1 + ((L.weight - 137) / 137)) // 130 pounds = .95 140 pounds = 1.02
 	var/difference = B.owner.size_multiplier / L.size_multiplier
 
-<<<<<<< HEAD
-	if(B.health_impacts_size) //CHOMPEdit - Health probably changed so...
-		B.owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
-=======
 	if(B.health_impacts_size)
 		B.owner.update_fullness()
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 
 	consider_healthbar(L, old_health, B.owner)
 	/*if(isrobot(B.owner)) //CHOMPEdit: Borgos can now use nutrition too
@@ -167,15 +156,9 @@ GLOBAL_LIST_INIT(digest_modes, list())
 /datum/digest_mode/drain/shrink/process_mob(obj/belly/B, mob/living/L)
 	if(L.size_multiplier > B.shrink_grow_size)
 		L.resize(L.size_multiplier - 0.01) // Shrink by 1% per tick
-<<<<<<< HEAD
-		if(L.size_multiplier <= B.shrink_grow_size) //CHOMPEdit - Adds some feedback so the pred knows their prey has stopped shrinking.
-			to_chat(B.owner, span_notice("You feel [L] get as small as you would like within your [lowertext(B.name)]."))
-		B.owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
-=======
 		if(L.size_multiplier <= B.shrink_grow_size) // Adds some feedback so the pred knows their prey has stopped shrinking.
 			to_chat(B.owner, span_vnotice("You feel [L] get as small as you would like within your [lowertext(B.name)]."))
 		B.owner.update_fullness()
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 		. = ..()
 
 /datum/digest_mode/grow
@@ -185,15 +168,9 @@ GLOBAL_LIST_INIT(digest_modes, list())
 /datum/digest_mode/grow/process_mob(obj/belly/B, mob/living/L)
 	if(L.size_multiplier < B.shrink_grow_size)
 		L.resize(L.size_multiplier + 0.01) // Shrink by 1% per tick
-<<<<<<< HEAD
-		if(L.size_multiplier >= B.shrink_grow_size) //CHOMPEdit - Adds some feedback so the pred knows their prey has stopped growing.
-			to_chat(B.owner, span_notice("You feel [L] get as big as you would like within your [lowertext(B.name)]."))
-		B.owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
-=======
 		if(L.size_multiplier >= B.shrink_grow_size) // Adds some feedback so the pred knows their prey has stopped growing.
 			to_chat(B.owner, span_vnotice("You feel [L] get as big as you would like within your [lowertext(B.name)]."))
 	B.owner.update_fullness()
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 
 /datum/digest_mode/drain/sizesteal
 	id = DM_SIZE_STEAL
@@ -201,21 +178,12 @@ GLOBAL_LIST_INIT(digest_modes, list())
 /datum/digest_mode/drain/sizesteal/process_mob(obj/belly/B, mob/living/L)
 	if(L.size_multiplier > B.shrink_grow_size && B.owner.size_multiplier < 2) //Grow until either pred is large or prey is small.
 		B.owner.resize(B.owner.size_multiplier + 0.01) //Grow by 1% per tick.
-<<<<<<< HEAD
-		if(B.owner.size_multiplier >= 2) //CHOMPEdit - Adds some feedback so the pred knows they can't grow anymore.
-			to_chat(B.owner, span_notice("You feel you have grown as much as you can."))
-		L.resize(L.size_multiplier - 0.01) //Shrink by 1% per tick
-		if(L.size_multiplier <= B.shrink_grow_size) //CHOMPEdit - Adds some feedback so the pred knows their prey has stopped shrinking.
-			to_chat(B.owner, span_notice("You feel [L] get as small as you would like within your [lowertext(B.name)]."))
-		B.owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
-=======
 		if(B.owner.size_multiplier >= 2) // Adds some feedback so the pred knows they can't grow anymore.
 			to_chat(B.owner, span_notice("You feel you have grown as much as you can."))
 		L.resize(L.size_multiplier - 0.01) //Shrink by 1% per tick
 		if(L.size_multiplier <= B.shrink_grow_size) // Adds some feedback so the pred knows their prey has stopped shrinking.
 			to_chat(B.owner, span_notice("You feel [L] get as small as you would like within your [lowertext(B.name)]."))
 		B.owner.update_fullness()
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 		. = ..()
 
 /datum/digest_mode/heal
@@ -233,25 +201,15 @@ GLOBAL_LIST_INIT(digest_modes, list())
 			if(O.brute_dam > 0 || O.burn_dam > 0) //Making sure healing continues until fixed.
 				O.heal_damage(0.5, 0.5, 0, 1) // Less effective healing as able to fix broken limbs
 				B.owner.adjust_nutrition(-5)  // More costly for the pred, since metals and stuff
-<<<<<<< HEAD
-				if(B.health_impacts_size) //CHOMPEdit - Health probably changed so...
-					B.owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
-=======
 				if(B.health_impacts_size)
 					B.owner.update_fullness()
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 			if(L.health < L.maxHealth)
 				L.adjustToxLoss(-2)
 				L.adjustOxyLoss(-2)
 				L.adjustCloneLoss(-1)
 				B.owner.adjust_nutrition(-1)  // Normal cost per old functionality
-<<<<<<< HEAD
-				if(B.health_impacts_size) //CHOMPEdit - Health probably changed so...
-					B.owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
-=======
 				if(B.health_impacts_size)
 					B.owner.update_fullness()
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 	if(B.owner.nutrition > 90 && (L.health < L.maxHealth) && !H.isSynthetic())
 		L.adjustBruteLoss(-2.5)
 		L.adjustFireLoss(-2.5)
@@ -259,13 +217,8 @@ GLOBAL_LIST_INIT(digest_modes, list())
 		L.adjustOxyLoss(-5)
 		L.adjustCloneLoss(-1.25)
 		B.owner.adjust_nutrition(-2)
-<<<<<<< HEAD
-		if(B.health_impacts_size) //CHOMPEdit - Health probably changed so...
-			B.owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
-=======
 		if(B.health_impacts_size)
 			B.owner.update_fullness()
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 		if(L.nutrition <= 400)
 			L.adjust_nutrition(1)
 	else if(B.owner.nutrition > 90 && (L.nutrition <= 400))

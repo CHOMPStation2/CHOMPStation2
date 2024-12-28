@@ -351,8 +351,7 @@
 	nutrition_messages = P.nutrition_messages
 	weight_message_visible = P.weight_message_visible
 	weight_messages = P.weight_messages
-<<<<<<< HEAD
-	vore_sprite_color = P.vore_sprite_color //CHOMPEdit
+	vore_sprite_color = P.vore_sprite_color
 	allow_mind_transfer = P.allow_mind_transfer
 
 	//CHOMP stuff
@@ -375,11 +374,6 @@
 	belly_rub_target = P.belly_rub_target
 	soulcatcher_pref_flags = P.soulcatcher_pref_flags
 
-=======
-	vore_sprite_color = P.vore_sprite_color
-	allow_mind_transfer = P.allow_mind_transfer
-
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 	if(bellies)
 		if(isliving(src))
 			var/mob/living/L = src

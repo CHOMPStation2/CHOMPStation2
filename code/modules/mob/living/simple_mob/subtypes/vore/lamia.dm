@@ -54,25 +54,9 @@
 
 	say_list_type = /datum/say_list/lamia
 	ai_holder_type = /datum/ai_holder/simple_mob/passive
-	
+
 	can_be_drop_prey = FALSE //CHOMP Add
 
-<<<<<<< HEAD
-/* CHOMPEdit - now handled by new belly features.
-/mob/living/simple_mob/vore/lamia/update_fullness()
-	var/new_fullness = 0
-	// We only want to count our upper_stomach towards capacity
-	for(var/obj/belly/B as anything in vore_organs)
-		if(B.name == "upper stomach")
-			for(var/mob/living/M in B)
-				new_fullness += M.size_multiplier
-	new_fullness /= size_multiplier
-	new_fullness = round(new_fullness, 1)
-	vore_fullness = min(vore_capacity, new_fullness)
-*/
-
-=======
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 /mob/living/simple_mob/vore/lamia/update_icon()
 	. = ..()
 
@@ -83,28 +67,6 @@
 		// And copper_vore_1_0 is full upper stomach, but empty tail stomach
 		// For unconscious: [icon_rest]_vore_[upper]_[tail]
 		// For dead, it doesn't show.
-<<<<<<< HEAD
-		/* CHOMPEdit - Handled differently now.
-		var/upper_shows = FALSE
-		var/tail_shows = FALSE
-
-		for(var/obj/belly/B as anything in vore_organs)
-			if(!(B.name in list("upper stomach", "tail stomach")))
-				continue
-			var/belly_fullness = 0
-			for(var/mob/living/M in B)
-				belly_fullness += M.size_multiplier
-			belly_fullness /= size_multiplier
-			belly_fullness = round(belly_fullness, 1)
-
-			if(belly_fullness)
-				if(B.name == "upper stomach")
-					upper_shows = TRUE
-				else if(B.name == "tail stomach")
-					tail_shows = TRUE
-		*/
-=======
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 		var/upper_shows = vore_fullness_ex["stomach"]
 		var/tail_shows = vore_fullness_ex["tail"]
 
@@ -128,11 +90,7 @@
 
 	var/obj/belly/tail = new /obj/belly(src)
 	tail.immutable = TRUE
-<<<<<<< HEAD
-	tail.affects_vore_sprites = TRUE //CHOMPEdit - vore sprites enabled for simplemobs!
-=======
 	tail.affects_vore_sprites = TRUE
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 	tail.name = "tail stomach"
 	tail.desc = "You slide out into the narrow, constricting tube of flesh that is the lamia's snake half, heated walls and strong muscles all around clinging to your form with every slither."
 	tail.digest_mode = vore_default_mode
@@ -150,11 +108,7 @@
 	tail.human_prey_swallow_time = swallowTime
 	tail.nonhuman_prey_swallow_time = swallowTime
 	tail.vore_verb = "stuff"
-<<<<<<< HEAD
-	tail.belly_sprite_to_affect = "tail" //CHOMPEdit - So that tail belly affects tail vore sprite.
-=======
 	tail.belly_sprite_to_affect = "tail"
->>>>>>> b324befde5 (On demand belly loading & multibelly (#16758))
 	tail.emote_lists[DM_HOLD] = B.emote_lists[DM_HOLD].Copy()
 	tail.emote_lists[DM_DIGEST] = B.emote_lists[DM_DIGEST].Copy()
 
