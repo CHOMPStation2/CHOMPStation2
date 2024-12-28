@@ -540,7 +540,8 @@
 				return FALSE
 			. = TRUE
 			var/list/Dullahan_metal_styles = list(
-				"dullahanmetal"
+				"dullahanmetal",
+				"dullahanmetal2"
 			)
 			if(mind.assigned_role in command_positions)
 				Dullahan_metal_styles.Add("dullahancommand")
@@ -555,10 +556,16 @@
 				"dullahandecals5",
 				"emptydecals"
 			)
+			var/list/Dullahan_extended_styles = list(
+				"dullahanextendedon",
+				"dullahanextendedoff"
+			)
 			//if(user.mind.assigned_role != JOB_CHAPLAIN)
 				//return FALSE
 			switch(choice)
 				if("Body")
+					var/extraon = "dullahanextendedon"
+					var/extraoff = "dullahanextendedoff"
 					options = Dullahan_metal_styles
 					for(var/option in options)
 						var/image/I = image('modular_chomp/icons/mob/dullahanborg/Dullahanprotean64x64.dmi', option, dir = 2, pixel_x = -16)
@@ -571,6 +578,11 @@
 						return 0
 					S.dullahan_overlays[3] = choice //metal overlay is 3, eyes is 4
 					S.dullahan_overlays[S.dullahan_overlays[3]] = new_color
+					if(choice == "dullahanmetal2")
+						S.dullahan_overlays[6] = extraon
+						S.dullahan_overlays[S.dullahan_overlays[6]] = new_color
+					else
+						S.dullahan_overlays[6] = extraoff
 				if("Eyes")
 					options = Dullahan_eye_styles
 					for(var/option in options)

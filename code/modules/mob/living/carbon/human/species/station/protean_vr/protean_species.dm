@@ -137,7 +137,8 @@
 		"dullahanhead" = "#FFFFFF",
 		"dullahanmetal" = "#FFFFFF",
 		"dullahaneyes" = "#FFFFFF",
-		"dullahandecals" = "#FFFFFF"
+		"dullahandecals" = "#FFFFFF",
+		"dullahanextended" = "#FFFFFF"
 	) //chomp edit end
 
 	var/pseudodead = 0
