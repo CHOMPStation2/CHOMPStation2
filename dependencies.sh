@@ -5,13 +5,6 @@
 
 # byond version
 export BYOND_MAJOR=515
-<<<<<<< HEAD
-export BYOND_MINOR=1637
-export MACRO_COUNT=8
-
-#rust_g git tag
-export RUST_G_VERSION=3.4.0
-=======
 export BYOND_MINOR=1647
 
 # Macro Count
@@ -19,7 +12,6 @@ export MACRO_COUNT=8
 
 #rust_g git tag
 export RUST_G_VERSION=3.5.1
->>>>>>> df8cea1443 (docker file and version update (#16761))
 
 #node version
 export NODE_VERSION_LTS=20.13.0
