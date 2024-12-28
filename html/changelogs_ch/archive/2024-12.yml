@@ -147,3 +147,7 @@
   Fracshun:
   - qol: Death messages of the original body during Mob TF are now muffled
   - bugfix: Body swapping no longer links life state
+2024-12-28:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: '"Launch" button to vore panel, ejects occupant and throws them three
+      tiles in the direction you''re facing.'

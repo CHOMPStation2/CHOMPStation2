@@ -1,4 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - rscadd: "\"Launch\" button to vore panel, ejects occupant and throws them three tiles in the direction you're facing."
