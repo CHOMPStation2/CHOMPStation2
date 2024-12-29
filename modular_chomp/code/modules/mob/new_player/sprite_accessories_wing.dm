@@ -193,6 +193,12 @@
 	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/wings.dmi'
 	icon_state = "mothwings_angel"
 
+/datum/sprite_accessory/wing/mothwings_no_antennae_colorable
+	name = "Moth Wings (Colorable)"
+	desc = ""
+	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/wings.dmi'
+	icon_state = "mothwings_no_antennae_colorable"
+
 /// XENO BACKPLATES ///
 
 /datum/sprite_accessory/wing/xeno_standard_backplate
