@@ -531,7 +531,7 @@
 					S.dragon_overlays[6] = choice
 					S.dragon_overlays[S.dragon_overlays[6]] = new_color
 			S.blob_appearance = "dragon"
-		// chomp edit start
+		// CHOMPEdit Start
 		if("dullahan")
 			var/list/options = list("Body","Eyes","Decals")
 			for(var/option in options)
@@ -608,7 +608,7 @@
 					S.dullahan_overlays[5] = choice //metal overlay is 3, eyes is 4
 					S.dullahan_overlays[S.dullahan_overlays[5]] = new_color
 			S.blob_appearance = "dullahan"
-			//chomp edit end
+			// CHOMPEdit End
 		if("Primary")
 			var/new_color = input("Pick primary color:","Protean Primary", "#FF0000") as null|color
 			if(!new_color)
