@@ -237,7 +237,7 @@
 	visible_message("[src] lets out a horrible cry as it collapses into an inky black pile of gore!")
 	playsound(src, 'sound/metroid/metroiddeath.ogg', 100, 1)
 
-mob/living/simple_mob/vore/blackhole/ranged
+/mob/living/simple_mob/vore/blackhole/ranged
 	name = "Black Hole trooper"
 	desc = "A tough looking armored feline creature armed with a pistol. They wear various insignias identifying them as a member of Black Hole."
 	icon = 'modular_chomp/icons/blackhole/blackhole32x32_ch.dmi'
@@ -255,7 +255,7 @@ mob/living/simple_mob/vore/blackhole/ranged
 	reload_max = 12
 	ai_holder_type = /datum/ai_holder/simple_mob/merc/ranged/blackhole
 
-mob/living/simple_mob/vore/blackhole/ranged/smg
+/mob/living/simple_mob/vore/blackhole/ranged/smg
 	name = "Black Hole gunner"
 	desc = "A tough looking armored feline creature armed with an SMG. They wear various insignias identifying them as a member of Black Hole."
 	icon = 'modular_chomp/icons/blackhole/blackhole32x32_ch.dmi'
@@ -273,7 +273,7 @@ mob/living/simple_mob/vore/blackhole/ranged/smg
 	reload_max = 25
 	ai_holder_type = /datum/ai_holder/simple_mob/merc/ranged/blackhole
 
-mob/living/simple_mob/vore/blackhole/ranged/rifle
+/mob/living/simple_mob/vore/blackhole/ranged/rifle
 	name = "Black Hole rifleman"
 	desc = "A tough looking armored feline creature armed with a rifle. They wear various insignias identifying them as a member of Black Hole."
 	icon = 'modular_chomp/icons/blackhole/blackhole32x32_ch.dmi'
@@ -291,7 +291,7 @@ mob/living/simple_mob/vore/blackhole/ranged/rifle
 	reload_max = 30
 	ai_holder_type = /datum/ai_holder/simple_mob/merc/ranged/blackhole
 
-mob/living/simple_mob/vore/blackhole/ranged/lmg
+/mob/living/simple_mob/vore/blackhole/ranged/lmg
 	name = "Black Hole machinegunner"
 	desc = "A tough looking armored feline creature armed with a light machinegun. They wear various insignias identifying them as a member of Black Hole."
 	icon = 'modular_chomp/icons/blackhole/blackhole32x32_ch.dmi'
@@ -687,7 +687,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	response_help = "touches"
 	response_disarm = "pushes against"
 	response_harm = "slams their fists against"
-	movement_cooldown = 999999999999999999999
+	movement_cooldown = 999
 	min_oxy = 0
 	max_oxy = 0
 	min_tox = 0
