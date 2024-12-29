@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #undef VIS_COUNT
 
 #define VIS_CH_STATUS_R		28
@@ -12,6 +13,8 @@
 
 #define VIS_COUNT			34
 
+=======
+>>>>>>> 845d0caffe (Makes viruses (and borers and death icons) not show up on everyone. (#16781))
 //Protean organs
 #define O_ORCH		"orchestrator"
 #define O_FACT		"refactory"
