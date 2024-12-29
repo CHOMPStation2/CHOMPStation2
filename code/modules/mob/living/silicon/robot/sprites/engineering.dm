@@ -216,8 +216,6 @@
 	has_custom_open_sprites = TRUE
 	has_vore_belly_sprites = FALSE
 	rest_sprite_options = list("Default", "Bellyup")
-<<<<<<< HEAD
-=======
 
 /datum/robot_sprite/dogborg/tall/engineering/dullahanv3
 	sprite_icon = 'icons/mob/tallborg/dullahans64x64.dmi'
@@ -231,4 +229,3 @@
 	has_vore_belly_sprites = TRUE
 	has_robotdecal_sprites = TRUE
 	rest_sprite_options = list("Default", "sit")
->>>>>>> 1d28e8abe9 (part 2 borg customization - First downstream of new dullahan sprites. (#16762))
