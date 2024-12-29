@@ -10,7 +10,11 @@
 
 /mob/living/voice/Initialize(loc)
 	add_language(LANGUAGE_GALCOM)
+<<<<<<< HEAD
 	apply_default_language(GLOB.all_languages[LANGUAGE_GALCOM]) //CHOMPEdit
+=======
+	apply_default_language(GLOB.all_languages[LANGUAGE_GALCOM])
+>>>>>>> 9f1b379242 (more things that were forgotten (#16786))
 
 	if(istype(loc, /obj/item/communicator))
 		comm = loc
