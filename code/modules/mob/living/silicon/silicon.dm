@@ -33,11 +33,7 @@
 	silicon_mob_list |= src
 	..()
 	add_language(LANGUAGE_GALCOM)
-<<<<<<< HEAD
-	apply_default_language(GLOB.all_languages[LANGUAGE_GALCOM]) //CHOMPEdit
-=======
 	apply_default_language(GLOB.all_languages[LANGUAGE_GALCOM])
->>>>>>> 9f1b379242 (more things that were forgotten (#16786))
 	init_id()
 	init_subsystems()
 
