@@ -8,7 +8,7 @@
 	name = "Black Hole attack otie"
 	desc = "The classic bioengineered longdog. This one seems to have developed a mutation from an abnormally phoron-rich diet. Now in fanatical cultist flavor!"
 	tt_desc = "Otus robustus"
-	icon = 'modular_chomp/icons/blackhole/blackhole64x32_ch.dmi'
+	icon = 'modular_chomp/icons/blackhole/blackhole64x32.dmi'
 	icon_state = "bhotie"
 	icon_living = "bhotie"
 	icon_dead = "bhotie-dead"
@@ -125,7 +125,7 @@
 /mob/living/simple_mob/vore/blackhole
 	name = "Black Hole fanatic"
 	desc = "A tough looking armored feline creature. They wear various insignias identifying them as a member of Black Hole."
-	icon = 'modular_chomp/icons/blackhole/blackhole32x32_ch.dmi'
+	icon = 'modular_chomp/icons/blackhole/blackhole32x32.dmi'
 	faction = "blackhole"
 	icon_dead = "trooper-dead"
 	icon_living = "trooper"
@@ -185,7 +185,7 @@
 /mob/living/simple_mob/vore/blackhole/shield
 	name = "Black Hole bulwark"
 	desc = "A tough looking armored feline creature armed with a shield and an energy lance. They wear various insignias identifying them as a member of Black Hole."
-	icon = 'modular_chomp/icons/blackhole/blackhole32x32_ch.dmi'
+	icon = 'modular_chomp/icons/blackhole/blackhole32x32.dmi'
 	faction = "blackhole"
 	icon_dead = "trooper-dead"
 	icon_living = "trooper_shield"
@@ -213,7 +213,7 @@
 /mob/living/simple_mob/vore/blackhole/grotesque
 	name = "grotesque"
 	desc = "A horribly mutated, pale creature, poorly morphed into some hyperaggressive feline abomination. This is what tends to happen to those that Black Hole take prisoner-- Cannonfodder."
-	icon = 'modular_chomp/icons/blackhole/blackhole32x32_ch.dmi'
+	icon = 'modular_chomp/icons/blackhole/blackhole32x32.dmi'
 	faction = "blackhole"
 	icon_dead = "grotesque-dead"
 	icon_living = "grotesque"
@@ -240,7 +240,7 @@
 /mob/living/simple_mob/vore/blackhole/ranged
 	name = "Black Hole trooper"
 	desc = "A tough looking armored feline creature armed with a pistol. They wear various insignias identifying them as a member of Black Hole."
-	icon = 'modular_chomp/icons/blackhole/blackhole32x32_ch.dmi'
+	icon = 'modular_chomp/icons/blackhole/blackhole32x32.dmi'
 	faction = "blackhole"
 	icon_dead = "trooper-dead"
 	icon_living = "trooper_pistol"
@@ -258,7 +258,7 @@
 /mob/living/simple_mob/vore/blackhole/ranged/smg
 	name = "Black Hole gunner"
 	desc = "A tough looking armored feline creature armed with an SMG. They wear various insignias identifying them as a member of Black Hole."
-	icon = 'modular_chomp/icons/blackhole/blackhole32x32_ch.dmi'
+	icon = 'modular_chomp/icons/blackhole/blackhole32x32.dmi'
 	faction = "blackhole"
 	icon_dead = "trooper-dead"
 	icon_living = "trooper_smg"
@@ -276,7 +276,7 @@
 /mob/living/simple_mob/vore/blackhole/ranged/rifle
 	name = "Black Hole rifleman"
 	desc = "A tough looking armored feline creature armed with a rifle. They wear various insignias identifying them as a member of Black Hole."
-	icon = 'modular_chomp/icons/blackhole/blackhole32x32_ch.dmi'
+	icon = 'modular_chomp/icons/blackhole/blackhole32x32.dmi'
 	faction = "blackhole"
 	icon_dead = "trooper-dead"
 	icon_living = "trooper_rifle"
@@ -294,7 +294,7 @@
 /mob/living/simple_mob/vore/blackhole/ranged/lmg
 	name = "Black Hole machinegunner"
 	desc = "A tough looking armored feline creature armed with a light machinegun. They wear various insignias identifying them as a member of Black Hole."
-	icon = 'modular_chomp/icons/blackhole/blackhole32x32_ch.dmi'
+	icon = 'modular_chomp/icons/blackhole/blackhole32x32.dmi'
 	faction = "blackhole"
 	icon_dead = "trooper-dead"
 	icon_living = "trooper_lmg"
@@ -316,7 +316,7 @@
 /mob/living/simple_mob/vore/blackhole/taur
 	name = "Black Hole fanatic"
 	desc = "A tough looking armored feline taur. They wear various insignias identifying them as a member of Black Hole."
-	icon = 'modular_chomp/icons/blackhole/blackhole64x32_ch.dmi'
+	icon = 'modular_chomp/icons/blackhole/blackhole64x32.dmi'
 	faction = "blackhole"
 	icon_dead = "heavytrooper-dead"
 	icon_living = "heavytrooper"
@@ -365,7 +365,7 @@
 /mob/living/simple_mob/vore/blackhole/taur/shield
 	name = "Black Hole heavy bulwark"
 	desc = "A tough looking armored feline taur armed with a shield and an energy lance. They wear various insignias identifying them as a member of Black Hole."
-	icon = 'modular_chomp/icons/blackhole/blackhole64x32_ch.dmi'
+	icon = 'modular_chomp/icons/blackhole/blackhole64x32.dmi'
 	icon_living = "heavytrooper_shield"
 	icon_state = "heavytrooper_shield"
 	icon_rest = "heavytrooper_shield"
@@ -389,7 +389,7 @@
 /mob/living/simple_mob/vore/blackhole/taur/ranged
 	name = "Black Hole machinegunner"
 	desc = "A tough looking armored feline taur wielding a light machinegun. They wear various insignias identifying them as a member of Black Hole."
-	icon = 'modular_chomp/icons/blackhole/blackhole64x32_ch.dmi'
+	icon = 'modular_chomp/icons/blackhole/blackhole64x32.dmi'
 	faction = "blackhole"
 	icon_dead = "heavytrooper-dead"
 	icon_living = "heavytrooper_lmg"
@@ -407,7 +407,7 @@
 /mob/living/simple_mob/vore/blackhole/taur/ranged/hmg
 	name = "Black Hole heavy machinegunner"
 	desc = "A tough looking armored feline taur wielding a harness mounted heavy machinegun. They wear various insignias identifying them as a member of Black Hole."
-	icon = 'modular_chomp/icons/blackhole/blackhole64x32_ch.dmi'
+	icon = 'modular_chomp/icons/blackhole/blackhole64x32.dmi'
 	icon_living = "heavytrooper_hmg"
 	icon_state = "heavytrooper_hmg"
 	icon_rest = "heavytrooper_hmg"
@@ -423,7 +423,7 @@
 /mob/living/simple_mob/humanoid/merc/ranged/sniper/blackhole
 	name = "Black Hole sniper"
 	desc = "A tough looking armored feline taur wielding a large caliber sniper rifle. They wear various insignias identifying them as a member of Black Hole."
-	icon = 'modular_chomp/icons/blackhole/blackhole64x32_ch.dmi'
+	icon = 'modular_chomp/icons/blackhole/blackhole64x32.dmi'
 	icon_living = "heavytrooper_sniper"
 	icon_state = "heavytrooper_sniper"
 	icon_rest = "heavytrooper_sniper"
@@ -492,7 +492,7 @@
 /mob/living/simple_mob/humanoid/merc/ranged/sniper/blackhole/rocket
 	name = "Black Hole anti tank"
 	desc = "A tough looking armored feline creature wielding a rocket launcher! They wear various insignias identifying them as a member of Black Hole."
-	icon = 'modular_chomp/icons/blackhole/blackhole32x32_ch.dmi'
+	icon = 'modular_chomp/icons/blackhole/blackhole32x32.dmi'
 	icon_living = "trooper_rpg"
 	icon_state = "trooper_rpg"
 	icon_rest = "trooper_rpg"
@@ -517,7 +517,7 @@
 /mob/living/simple_mob/vore/blackhole/bikers
 	name = "Black Hole mechanized troopers"
 	desc = "A pair of armed Black Hole troops riding an armored motorcycle. Watch out!"
-	icon = 'modular_chomp/icons/blackhole/blackhole64x64_ch.dmi'
+	icon = 'modular_chomp/icons/blackhole/blackhole64x64.dmi'
 	faction = "blackhole"
 	icon_dead = "bikeus"
 	icon_living = "bikeus"
@@ -583,7 +583,7 @@
 	desc = "An experimental exosuit that utilizes advanced materials to allow for greater protection while still being lightweight and fast. \
 	It also is armed with an array of next-generation weaponry."
 	catalogue_data = list(/datum/category_item/catalogue/fauna/mercenary/blackhole)
-	icon = 'modular_chomp/icons/blackhole/blackhole32x32_ch.dmi'
+	icon = 'modular_chomp/icons/blackhole/blackhole32x32.dmi'
 	faction = "blackhole"
 	icon_living = "mech2"
 	icon_state = "mech2"
@@ -609,14 +609,14 @@
 				)
 
 /obj/structure/loot_pile/mecha/gygax/dark/adv/blackhole
-	icon = 'modular_chomp/icons/blackhole/blackhole32x32_ch.dmi'
+	icon = 'modular_chomp/icons/blackhole/blackhole32x32.dmi'
 	icon_state = "mech2_wreck"
 
 /mob/living/simple_mob/mechanical/mecha/combat/durand/blackhole
 	name = "singularity vulture"
 	desc = "A robust, advanced exosuit of Black Hole design, utilizing highly dangerous tesla weaponry."
 	catalogue_data = list(/datum/category_item/catalogue/fauna/mercenary/blackhole)
-	icon = 'modular_chomp/icons/blackhole/blackhole32x32_ch.dmi'
+	icon = 'modular_chomp/icons/blackhole/blackhole32x32.dmi'
 	faction = "blackhole"
 	icon_living = "mech1"
 	icon_state = "mech1"
@@ -624,8 +624,8 @@
 	has_eye_glow = TRUE
 	movement_cooldown = 1
 	wreckage = /obj/structure/loot_pile/mecha/durand/blackhole
-	icon_scale_x = 1.5
-	icon_scale_y = 1.5
+	icon_scale_x = 2
+	icon_scale_y = 2
 	maxHealth = 400
 	deflect_chance = 20
 	armor = list(
@@ -649,7 +649,7 @@
 
 /obj/structure/loot_pile/mecha/durand/blackhole
 	name = "vulture wreckage"
-	icon = 'modular_chomp/icons/blackhole/blackhole32x32_ch.dmi'
+	icon = 'modular_chomp/icons/blackhole/blackhole32x32.dmi'
 	icon_state = "mech1_wreck"
 
 
@@ -671,13 +671,13 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 
 /mob/living/simple_mob/vore/blackhole_obelisk
 	name = "Black Hole Obelisk"
-	desc = "A massive polished stone structure with twelve sides. <font color='#A663FF'><span class='sinister' style='font-size:15pt'><i><b>It throbs with unknown energies, your mere presence near it makes your head ache horribly, and fills your mind with foreign images and language...</b></i></span></font>"
-	tt_desc = "<font color='#A663FF'><span class='sinister' style='font-size:12pt'><i><b>!@ %*!($*- COME TO ME. @#%*(@#%</b></i></span></font>"
+	desc = "A massive polished stone structure with twelve sides. It throbs with unknown energies, your mere presence near it makes your head ache horribly, and fills your mind with foreign images and language..."
+	tt_desc = "!@ %*!($*- COME TO ME. @#%*(@#%"
 	has_eye_glow = TRUE
 	icon_state = "obelisk"
 	icon_living = "obelisk"
 	icon_dead = "obelisk-dead"
-	icon = 'modular_chomp/icons/blackhole/blackhole64x64_ch.dmi'
+	icon = 'modular_chomp/icons/blackhole/blackhole64x64.dmi'
 	faction = "blackhole"
 	a_intent = "harm"
 	anchored = 1
@@ -745,13 +745,13 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 
 /mob/living/simple_mob/vore/blackhole_obelisk/monolith
 	name = "Black Hole Monolith"
-	desc = "<font color='#A663FF'><span class='sinister' style='font-size:15pt'><i><b>A towering, polished stone spire of dark psychic energy, with four sides, covered in constantly shifting inscriptions... It throbs with unknown energies, your mere presence near it makes your head ache horribly, and fills your mind with foreign images and language...</b></i></span></font>"
-	tt_desc = "<font color='#A663FF'><span class='sinister' style='font-size:12pt'><i><b>!@ %*!($*- COME TO ME. @#%*(@#%</b></i></span></font>"
+	desc = "A towering, polished stone spire of dark psychic energy, with four sides, covered in constantly shifting inscriptions... It throbs with unknown energies, your mere presence near it makes your head ache horribly, and fills your mind with foreign images and language..."
+	tt_desc = "!@ %*!($*- COME TO ME. @#%*(@#%"
 	has_eye_glow = TRUE
 	icon_state = "monolith"
 	icon_living = "monolith"
 	icon_dead = "monolith-dead"
-	icon = 'modular_chomp/icons/blackhole/blackhole32x96_ch.dmi'
+	icon = 'modular_chomp/icons/blackhole/blackhole32x96.dmi'
 	old_x = 0
 	old_y = 0
 	default_pixel_x = 0
@@ -791,15 +791,15 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 			if(isSynthetic(H))
 				continue
 			if(src.Adjacent(H))
-				to_chat(H,span_red("<span class='sinister' style='font-size:20pt'><i><b>The overwhelming psychic influence from \the [src] makes your senses reel!</b></i></span></font>"))
+				to_chat(H,span_critical("The overwhelming psychic influence from \the [src] makes your senses reel!"))
 				H.Confuse(scent_strength)
 				continue
 			else
-				to_chat(H,span_red("<span class='sinister' style='font-size:10pt'><i><b>[pick(obelisk_lure_messages)]</b></i></span></font>"))
+				to_chat(H,span_red("[pick(obelisk_lure_messages)]"))
 				return
 
 /datum/looping_sound/obelisk ///thanks to BM for helpin' me make this work <3
-	mid_sounds = 'sound/effects/monolith_ambience.ogg'
+	mid_sounds = 'modular_chomp/sound/effects/monolith_ambience.ogg'
 	mid_length = 50
 	chance = 100
 	volume = 35
@@ -837,14 +837,14 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 			if (!(status_flags & CANPUSH))
 				return
 			if(!incapacitated(INCAPACITATION_ALL) && prob(grab_resist))
-				L.visible_message(span_warning("<font color='#A663FF'><span class='sinister' style='font-size:14pt'><i><b>[src] pulses ominously at [L], forcefully pushing them away with psychic energy as they try to grab it!</b></i></span></font>"))
+				L.visible_message(span_warning("[src] pulses ominously at [L], forcefully pushing them away with psychic energy as they try to grab it!"))
 				return
 
 
 /mob/living/simple_mob/vore/blackhole_obelisk/death()
 	..()
 	visible_message("[src] flashes brightly, crumbling as its psychic influence suddenly vanishes from the minds of those nearby...")
-	playsound(src, 'sound/effects/monolith_death.ogg', 100)
+	playsound(src, 'modular_chomp/sound/effects/monolith_death.ogg', 50)
 
 #undef OBELISK_LURE
 
@@ -1036,31 +1036,31 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 
 /obj/item/projectile/bullet/pistol/bh1
 	name = "7mm bullet"
-	icon = 'modular_chomp/icons/blackhole/blackhole32x32_ch.dmi'
+	icon = 'modular_chomp/icons/blackhole/blackhole32x32.dmi'
 	icon_state = "bullet"
 	fire_sound = 'sound/weapons/serdy/9mmpistol.ogg'
 	speed = 0.6
 /obj/item/projectile/bullet/pistol/bh2
 	name = "10mm bullet"
-	icon = 'modular_chomp/icons/blackhole/blackhole32x32_ch.dmi'
+	icon = 'modular_chomp/icons/blackhole/blackhole32x32.dmi'
 	icon_state = "bullet"
 	fire_sound = 'sound/weapons/serdy/vityaz.ogg'
 	speed = 0.6
 /obj/item/projectile/bullet/pistol/bh3
 	name = "9mm bullet"
-	icon = 'modular_chomp/icons/blackhole/blackhole32x32_ch.dmi'
+	icon = 'modular_chomp/icons/blackhole/blackhole32x32.dmi'
 	icon_state = "bullet"
 	fire_sound = 'sound/weapons/serdy/ak74.ogg'
 	speed = 0.6
 /obj/item/projectile/bullet/rifle/a545/bh1
 	name = "6mm rifle bullet"
-	icon = 'modular_chomp/icons/blackhole/blackhole32x32_ch.dmi'
+	icon = 'modular_chomp/icons/blackhole/blackhole32x32.dmi'
 	icon_state = "bullet"
 	fire_sound = 'sound/weapons/serdy/sks.ogg'
 	speed = 0.6
 /obj/item/projectile/bullet/rifle/a545/bh2
 	name = "15mm MG bullet"
-	icon = 'modular_chomp/icons/blackhole/blackhole32x32_ch.dmi'
+	icon = 'modular_chomp/icons/blackhole/blackhole32x32.dmi'
 	icon_state = "bullet"
 	fire_sound = 'sound/weapons/serdy/strela.ogg'
 	speed = 0.6
@@ -1082,7 +1082,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 
 /obj/item/projectile/explosive_rocket/blackhole
 	name = "80mm rocket propelled grenade"
-	icon = 'modular_chomp/icons/blackhole/blackhole32x32_ch.dmi'
+	icon = 'modular_chomp/icons/blackhole/blackhole32x32.dmi'
 	icon_state = "rocket"
 	fire_sound = 'sound/weapons/rpg.ogg'
 	damage = 40
