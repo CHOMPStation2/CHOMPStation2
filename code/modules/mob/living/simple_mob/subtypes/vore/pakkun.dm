@@ -81,21 +81,13 @@
 		return
 
 	if(resting)
-<<<<<<< HEAD
-		if(isbelly(vore_selected)) //CHOMPEdit Start
-=======
 		if(isbelly(vore_selected))
->>>>>>> 2da9dcd433 (fix pakkun and simple mob language (#16777))
 			vore_selected.digest_mode = DM_UNABSORB
 		ai_holder.go_sleep()
 
 	else
 		if(isbelly(vore_selected))
-<<<<<<< HEAD
-			vore_selected.digest_mode = vore_default_mode //CHOMPEdit End
-=======
 			vore_selected.digest_mode = vore_default_mode
->>>>>>> 2da9dcd433 (fix pakkun and simple mob language (#16777))
 		ai_holder.go_wake()
 
 /mob/living/simple_mob/vore/pakkun/attack_hand(mob/user)
