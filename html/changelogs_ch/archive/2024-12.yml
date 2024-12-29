@@ -151,3 +151,6 @@
   CHOMPStation2StaffMirrorBot:
   - rscadd: '"Launch" button to vore panel, ejects occupant and throws them three
       tiles in the direction you''re facing.'
+2024-12-29:
+  TheCaramelion:
+  - bugfix: fixed medical holo-barriers throwing false positives
