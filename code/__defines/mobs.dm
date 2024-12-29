@@ -435,7 +435,7 @@
 
 #define VIS_SOULCATCHER		35 // CHOMPAdd
 
-#define VIS_COUNT			35 //Must be highest number from above.
+#define VIS_COUNT			35 //Must be highest number from above. // CHOMPEdit
 
 //Some mob icon layering defines
 #define BODY_LAYER		-100
