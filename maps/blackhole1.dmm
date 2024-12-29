@@ -1,0 +1,171 @@
+"aD" = (/obj/structure/table/bench/steel,/turf/simulated/floor/blackhole/grate,/area/mothership)
+"bv" = (/obj/structure/hull_corner{color = "#2D2D2D"},/turf/template_noop,/area/template_noop)
+"bw" = (/obj/structure/table/alien,/turf/simulated/floor/blackhole/spirals,/area/mothership)
+"dg" = (/obj/machinery/transhuman/resleever/abductor,/turf/simulated/floor/blackhole/spirals,/area/mothership)
+"dC" = (/mob/living/simple_mob/vore/blackhole/grotesque,/obj/effect/map_effect/perma_light/brighter{light_color = "#A663FF"; light_range = 7},/turf/simulated/floor/blackhole,/area/mothership)
+"fm" = (/obj/machinery/power/apc/super/critical{dir = 4; name = "east bump"; pixel_x = 24},/turf/simulated/floor/blackhole/spirals,/area/mothership)
+"fJ" = (/obj/machinery/transhuman/resleever/abductor{dir = 1},/turf/simulated/floor/blackhole/spirals,/area/mothership)
+"fK" = (/mob/living/simple_mob/vore/blackhole/grotesque,/turf/simulated/floor/blackhole,/area/mothership)
+"gW" = (/mob/living/simple_mob/vore/blackhole/ranged/lmg,/turf/simulated/floor/blackhole/grate,/area/mothership)
+"hF" = (/obj/machinery/porta_turret/alien{faction = "blackhole"; name = "anti-boarding turret"},/turf/simulated/floor/plating/eris/under,/area/mothership)
+"hX" = (/mob/living/simple_mob/vore/blackhole/shield,/turf/simulated/floor/blackhole/spirals,/area/mothership)
+"iC" = (/obj/structure/hull_corner/long_vert{color = "#2D2D2D"; dir = 5},/turf/template_noop,/area/template_noop)
+"iG" = (/obj/machinery/cryopod{dir = 2},/turf/simulated/floor/blackhole,/area/mothership)
+"jh" = (/mob/living/simple_mob/vore/blackhole/shield,/turf/simulated/floor/blackhole/grate,/area/mothership)
+"jm" = (/obj/effect/map_effect/perma_light/brighter{light_color = "#A663FF"; light_range = 7},/turf/simulated/floor/blackhole,/area/mothership)
+"jB" = (/obj/structure/hull_corner/long_vert{color = "#2D2D2D"; dir = 10},/turf/template_noop,/area/template_noop)
+"kb" = (/obj/structure/hull_corner/long_vert{color = "#2D2D2D"; dir = 6},/turf/template_noop,/area/template_noop)
+"kM" = (/obj/structure/table/alien,/turf/simulated/floor/blackhole,/area/mothership)
+"li" = (/obj/structure/hull_corner/long_vert{color = "#2D2D2D"; dir = 9},/turf/template_noop,/area/template_noop)
+"lS" = (/obj/structure/table/alien,/turf/simulated/floor/blackhole/grate,/area/mothership)
+"mj" = (/obj/effect/map_effect/perma_light/brighter{light_color = "#A663FF"; light_range = 7},/obj/structure/railing/grey{alpha = 0; dir = 8},/obj/structure/railing/grey{alpha = 0; dir = 1},/obj/structure/railing/grey{alpha = 0; dir = 4},/obj/structure/railing/grey{alpha = 0},/mob/living/simple_mob/vore/blackhole_obelisk,/turf/simulated/floor/tiled/dark,/area/mothership)
+"mE" = (/turf/simulated/floor/blackhole,/area/mothership)
+"mN" = (/mob/living/simple_mob/vore/blackhole/ranged,/turf/simulated/floor/blackhole,/area/mothership)
+"oc" = (/mob/living/simple_mob/vore/blackhole_obelisk/monolith,/obj/effect/map_effect/perma_light/brighter{light_color = "#A663FF"; light_range = 7},/obj/structure/railing/grey{alpha = 0; dir = 8},/obj/structure/railing/grey{alpha = 0; dir = 1},/obj/structure/railing/grey{alpha = 0; dir = 4},/obj/structure/railing/grey{alpha = 0},/turf/simulated/floor/tiled/dark,/area/mothership)
+"oA" = (/mob/living/simple_mob/vore/blackhole/ranged/smg,/turf/simulated/floor/blackhole,/area/mothership)
+"oD" = (/mob/living/simple_mob/vore/blackhole/ranged/rifle,/turf/simulated/floor/blackhole/grate,/area/mothership)
+"oF" = (/obj/effect/map_effect/perma_light/brighter{light_color = "#A663FF"; light_range = 7},/turf/simulated/floor/blackhole/grate,/area/mothership)
+"oM" = (/obj/structure/window/phoronreinforced{dir = 1},/obj/structure/grille,/turf/simulated/floor/plating/eris/under,/area/mothership)
+"pc" = (/obj/effect/floor_decal/stairs/dark_stairs{dir = 8},/turf/simulated/floor/blackhole,/area/mothership)
+"pP" = (/obj/machinery/door/airlock/alien/blue{color = "#636363"},/turf/simulated/floor/blackhole/grate,/area/mothership)
+"qm" = (/obj/structure/hull_corner{color = "#2D2D2D"; dir = 8},/turf/template_noop,/area/template_noop)
+"tD" = (/mob/living/simple_mob/vore/blackhole/ranged/smg,/turf/simulated/floor/blackhole/grate,/area/mothership)
+"tJ" = (/obj/structure/hull_corner/long_horiz{color = "#2D2D2D"; dir = 10},/turf/template_noop,/area/template_noop)
+"ub" = (/obj/machinery/atmospherics/binary/circulator,/turf/simulated/floor/plating/eris/under,/area/mothership)
+"uH" = (/obj/effect/map_effect/perma_light{light_color = "#A663FF"},/turf/simulated/floor/blackhole/spirals,/area/mothership)
+"vd" = (/mob/living/simple_mob/vore/blackhole/ranged/smg,/turf/simulated/floor/blackhole/spirals,/area/mothership)
+"vD" = (/mob/living/simple_mob/vore/blackhole/ranged/rifle,/obj/effect/map_effect/perma_light/brighter{light_color = "#A663FF"; light_range = 7},/turf/simulated/floor/blackhole,/area/mothership)
+"wW" = (/obj/structure/cryofeed{dir = 4},/turf/simulated/floor/blackhole/spirals,/area/mothership)
+"xm" = (/mob/living/simple_mob/mechanical/mecha/combat/durand/blackhole,/turf/simulated/floor/blackhole/grate,/area/mothership)
+"xr" = (/mob/living/simple_mob/vore/blackhole/taur/shield,/turf/simulated/floor/blackhole,/area/mothership)
+"yw" = (/mob/living/simple_mob/vore/blackhole/ranged/lmg,/turf/simulated/floor/blackhole,/area/mothership)
+"AM" = (/mob/living/simple_mob/vore/blackhole/ranged,/turf/simulated/floor/blackhole/spirals,/area/mothership)
+"AY" = (/obj/machinery/cryopod{dir = 4},/turf/simulated/floor/blackhole/spirals,/area/mothership)
+"Bh" = (/obj/structure/table/bench/steel,/mob/living/simple_mob/vore/blackhole/shield,/turf/simulated/floor/blackhole/grate,/area/mothership)
+"Bm" = (/obj/structure/table/bench/steel,/turf/simulated/floor/blackhole/spirals,/area/mothership)
+"Bv" = (/turf/simulated/floor/plating/eris/under,/area/mothership)
+"Bw" = (/obj/machinery/computer/operating{dir = 4},/turf/simulated/floor/blackhole,/area/mothership)
+"BG" = (/obj/machinery/atmospherics/binary/circulator{dir = 1},/turf/simulated/floor/plating/eris/under,/area/mothership)
+"Cc" = (/obj/machinery/teleport/hub,/turf/simulated/floor/blackhole/spirals,/area/mothership)
+"Ce" = (/obj/structure/hull_corner/long_horiz{color = "#2D2D2D"; dir = 6},/turf/template_noop,/area/template_noop)
+"Dp" = (/obj/structure/prop/statue/pillar/dark,/turf/simulated/floor/blackhole/spirals,/area/mothership)
+"Dz" = (/mob/living/simple_mob/vore/blackhole/ranged/rifle,/turf/simulated/floor/blackhole,/area/mothership)
+"Ey" = (/obj/effect/floor_decal/stairs/dark_stairs,/turf/simulated/floor/blackhole,/area/mothership)
+"EJ" = (/mob/living/simple_mob/vore/otie/syndicate/blackhole,/turf/simulated/floor/blackhole,/area/mothership)
+"GD" = (/obj/structure/prop/altevian_generator_wrecked,/turf/simulated/floor/plating/eris/under,/area/mothership)
+"GT" = (/obj/effect/floor_decal/stairs/dark_stairs{dir = 4},/turf/simulated/floor/blackhole,/area/mothership)
+"Hi" = (/obj/structure/table/bench/steel,/turf/simulated/floor/blackhole,/area/mothership)
+"Ht" = (/mob/living/simple_mob/humanoid/merc/ranged/sniper/blackhole,/obj/structure/railing/grey{dir = 8},/obj/structure/railing/grey{dir = 1},/turf/simulated/floor/plating/eris/under,/area/mothership)
+"Hy" = (/obj/machinery/atmospherics/unary/cryo_cell{desc = "The source of the horribly mutated 'Grotesque' cannonfodder, it seems."; icon_state = "cellold2"; name = "gene vat"},/turf/simulated/floor/blackhole/spirals,/area/mothership)
+"Ic" = (/obj/effect/floor_decal/stairs/dark_stairs{dir = 1},/turf/simulated/floor/blackhole,/area/mothership)
+"Ij" = (/mob/living/simple_mob/humanoid/merc/ranged/sniper/blackhole/rocket,/turf/simulated/floor/blackhole,/area/mothership)
+"Jg" = (/obj/machinery/atmospherics/unary/engine/bigger{dir = 1},/turf/simulated/floor/plating/eris/under,/area/template_noop)
+"JA" = (/obj/structure/shuttle/engine/heater,/turf/simulated/wall/rthull{color = "#2D2D2D"},/area/mothership)
+"Lf" = (/obj/machinery/cryopod,/turf/simulated/floor/blackhole/spirals,/area/mothership)
+"LU" = (/mob/living/simple_mob/vore/blackhole/taur/ranged/hmg,/turf/simulated/floor/blackhole/grate,/area/mothership)
+"Mz" = (/turf/simulated/wall/rthull{color = "#2D2D2D"},/area/mothership)
+"MD" = (/obj/machinery/optable,/turf/simulated/floor/blackhole,/area/mothership)
+"MN" = (/turf/simulated/floor/blackhole/spirals,/area/mothership)
+"MQ" = (/obj/structure/cryofeed{dir = 2},/turf/simulated/floor/blackhole,/area/mothership)
+"NK" = (/turf/simulated/floor/plating/eris/under,/area/template_noop)
+"NP" = (/mob/living/simple_mob/vore/blackhole/shield,/turf/simulated/floor/blackhole,/area/mothership)
+"Ox" = (/obj/machinery/power/generator{dir = 4},/turf/simulated/floor/plating/eris/under,/area/mothership)
+"OX" = (/mob/living/simple_mob/humanoid/merc/ranged/sniper/blackhole,/obj/structure/railing/grey{dir = 4},/obj/structure/railing/grey,/turf/simulated/floor/plating/eris/under,/area/mothership)
+"PB" = (/mob/living/simple_mob/vore/blackhole/ranged/rifle,/turf/simulated/floor/blackhole/spirals,/area/mothership)
+"PS" = (/obj/machinery/atmospherics/unary/engine/biggest{dir = 1},/turf/simulated/floor/plating/eris/under,/area/template_noop)
+"PT" = (/obj/machinery/computer/operating{dir = 8},/turf/simulated/floor/blackhole,/area/mothership)
+"Qw" = (/mob/living/simple_mob/humanoid/merc/ranged/sniper/blackhole,/obj/structure/railing/grey{dir = 1},/obj/structure/railing/grey{dir = 4},/turf/simulated/floor/plating/eris/under,/area/mothership)
+"Sz" = (/obj/structure/cryofeed,/turf/simulated/floor/blackhole/spirals,/area/mothership)
+"SE" = (/turf/template_noop,/area/template_noop)
+"SZ" = (/mob/living/simple_mob/vore/blackhole/taur/shield,/turf/simulated/floor/blackhole/grate,/area/mothership)
+"Uy" = (/mob/living/simple_mob/vore/blackhole/grotesque,/turf/simulated/floor/blackhole/spirals,/area/mothership)
+"Vq" = (/mob/living/simple_mob/vore/blackhole/ranged/smg,/obj/structure/table/bench/steel,/turf/simulated/floor/blackhole/grate,/area/mothership)
+"VD" = (/obj/structure/fans/hardlight/colorable/abductor,/turf/simulated/floor/plating/eris/under,/area/mothership)
+"VF" = (/mob/living/simple_mob/mechanical/mecha/combat/gygax/dark/advanced/blackhole,/turf/simulated/floor/blackhole,/area/mothership)
+"VN" = (/mob/living/simple_mob/humanoid/merc/ranged/sniper/blackhole,/obj/structure/railing/grey,/obj/structure/railing/grey{dir = 8},/turf/simulated/floor/plating/eris/under,/area/mothership)
+"VP" = (/mob/living/simple_mob/mechanical/mecha/combat/durand/blackhole,/turf/simulated/floor/blackhole,/area/mothership)
+"Zd" = (/turf/simulated/floor/blackhole/grate,/area/mothership)
+"Zj" = (/mob/living/simple_mob/humanoid/merc/ranged/sniper/blackhole,/turf/simulated/floor/blackhole/spirals,/area/mothership)
+
+(1,1,1) = {"
+SESESESESESESESECeSEMzMzMzMzMzMzMzMzMztJSESESESESESESESESESE
+SESESESESESESEbvMzMzMzMzMzMzMzMzMzMzMzMzMzqmSESESESESESESESE
+SESESESESESEhFMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzhFSESESESESESESE
+SESESESESESESEMzuHMNMNMNMNMNMNMNMNMNMNMNuHMzSESESESESESESESE
+SESESESESESESEMzMNZdZdZdZdZdZdZdZdZdZdZdMNMzSESESESESESESESE
+SESESESESESEkbMzMNtDMzoAmEmEmEmEmEoAMztDMNMzjBSESESESESESESE
+SESESESESESEMzMzMNZdoAZdZdZdZdZdZdZdoAZdMNMzMzSESESESESESESE
+SESESESESEhFMzMzMNZdmEZdMzmEmEmEMzZdmEZdMNMzMzhFSESESESESESE
+SESESESESESEMzMzMNZdmEZdmEmNIcmNmEZdmEZdMNMzMzSESESESESESESE
+SESESESESESEMzMzMNZdmEZdmEGTocpcmEZdmEZdMNMzMzSESESESESESESE
+SESESESESESESEMzMNZdmEZdmEmNEymNmEZdmEZdMNMzSESESESESESESESE
+SESESESESESEiCMzMNZdmEZdMzIjVFIjMzZdmEZdMNMzliSESESESESESESE
+SESESESESESESEMzMNZdmEZdLUZdZdZdLUZdmEZdMNMzSESESESESESESESE
+SESESESESESESEMzMNgWMzywmEmEmEmEmEywMzgWMNMzSESESESESESESESE
+SESESESESESESEMzMNZdgWZdZdZdZdZdZdZdgWZdMNMzSESESESESESESESE
+SESESESESESEkbMzuHMNMNMNMNMNMNMNMNMNMNMNuHMzjBSESESESESESESE
+SESESESESEhFMzMzMzMzMzMzMzZdZdZdMzMzMzMzMzMzMzhFSESESESESESE
+SESESESESESEMzfJdgHyfJdgMzmEmEmEMzfJdgHyfJdgMzSESESESESESESE
+SESESESESESEMzUyfKfKfKMNZdmEmEmEZdMNfKfKfKUyMzSESESESESESESE
+SESESESESESEMzMNmEjmfKUyZdmEjmmEZdMNfKdCfKUyMzSESESESESESESE
+SESESESESESEMzUyfKmEmEUyZdmEmEmEZdUymEmEfKUyMzSESESESESESESE
+SESESESESEkbMzCcCcCcCcCcMzmEmEmEMzCcCcCcCcCcMzjBSESESESESESE
+SESESESESEMzMzMzMzMzMzMzMzZdZdZdMzMzMzMzMzMzMzMzSESESESESESE
+SESESESESEMzPBMNMNMNZjZjPBhXhXhXPBZjZjMNMNMNPBMzSESESESESESE
+SESESESESEMzMNmEmEmEmEmEmEmEmEmEmEmEmEmEmEmEMNMzSESESESESESE
+SESESESESEMzMNmEMzMzmEmNMzZdZdZdMzmNmEMzMzmEMNMzSESESESESESE
+SESESESESEMzMNmNMzMzmEmEZdmEmEmEZdmEmEMzMzmNMNMzSESESESESESE
+SESESESEhFMzMNjmmEmEmEmEZdxrmjxrZdmEmEmEmEjmMNMzhFSESESESESE
+SESESESESEMzMNmEMzMzmEmEZdmEmEmEZdmEmEMzMzmEMNMzSESESESESESE
+SESESESESEMzMNmEMzMzNPVPMzjhxmjhMzVPNPMzMzmEMNMzSESESESESESE
+SESESESESEMzMNmEmEEJEJEJEJEJEJEJEJEJEJEJmEmEMNMzSESESESESESE
+SESESESESEMzPBMNMNMNMNMNMNMNMNMNMNMNMNMNMNMNPBMzSESESESESESE
+SESESESESEMzMzMzMzMzMzMzMzZdZdZdMzMzMzMzMzMzMzMzSESESESESESE
+SESESESESESEMzwWAYMzMzAMAMMNPBMNAMAMMzMzLfSzMzSESESESESESESE
+SESESESESEiCMzuHMNpPMNmEmEmEmEmEmEmEMNpPMNuHMzliSESESESESESE
+SESESESESESEMzMzMzMzMzjmMzMzSZMzMzjmMzMzMzMzMzSESESESESESESE
+SESESESESESEMzwWAYMzvdoAMzoDLUoDMzoAvdMzLfSzMzSESESESESESESE
+SESESESESESEMzuHMNpPMNmEtDZdZdZdtDmEMNpPMNuHMzSESESESESESESE
+SESESESESEhFMzMzMzMzPBmEZdZdZdZdZdmEPBMzMzMzMzhFSESESESESESE
+SESESESESESEMzwWAYMzMNmEZdZdZdZdZdmEMNMzLfSzMzSESESESESESESE
+SESESESESESEMzuHMNpPMNmEZdZdZdZdZdmEMNpPMNuHMzSESESESESESESE
+SESESESESESEMzMzMzMzMNmEMzZdZdZdMzmEMNMzMzMzMzSESESESESESESE
+SESESESESESEMzwWAYMzMzjmMzMzZdMzMzjmMzMzLfSzMzSESESESESESESE
+SESESESESESEMzuHMNpPMNmEmEmEmEmEmEmEMNpPMNuHMzSESESESESESESE
+SESESESESEkbMzMzMzMzMzMNMNMNMNMNMNMNMzMzMzMzMzjBSESESESESESE
+SESESESEbvMzMzMQMQMzMzMzMzoDZdoDMzMzMzMzMQMQMzMzqmSESESESESE
+SESESEbvMzMzkMiGiGMzDpPBMNMNMNMNMNPBDpMziGiGkMMzMzqmSESESESE
+SESESEMzMzkMkMZdmEpPMNmEZdmEmEmEZdmEMNpPmEZdkMkMMzMzSESESESE
+SESESEMzMDmEZdZdMDMzMNmEZdMzMzMzZdmEMNMzMDZdZdmEMDMzSESESESE
+SESESEMzBwZdoFZdPTMzDpvDZdMzMzMzZdvDDpMzBwZdoFZdPTMzSESESESE
+SESESEMzBwZdZdZdkMMzMNmEZdMzMzMzZdmEMNMzkMZdZdZdPTMzSESESESE
+SESEHtMzMDmEkMmEmEMzMNmEZdMzMzMzZdmEMNMzmEmEkMmEMDMzQwSESESE
+SEhFMzMzMzMzMzMzpPMzDpDzZdZdoFZdZdDzDpMzpPMzMzMzMzMzMzhFSESE
+SESEVDpPNPmEpPMNMNMNMNmEZdMzZdMzZdmEMNMNMNMNpPmENPpPVDSESESE
+SESEVDpPNPmEpPMNmEmEmEmEZdZdtDZdZdmEmEmEmEMNpPmENPpPVDSESESE
+SEhFMzMzMzMzMzMNmEMzoDZdBhaDaDaDBhZdoDMzmEMNMzMzMzMzMzhFSESE
+SESEVNMzbwbwbwMNmEMzZdZdaDkMkMkMaDZdZdMzmEMNbwbwbwMzOXSESESE
+SESESEMzbwHiHimEmEZdZdZdaDkMmjkMaDZdZdZdmEmEHiHibwMzSESESESE
+SESESEMzbwHioFZdaDaDZdZdVqkMkMkMVqZdZdaDaDZdoFHibwMzSESESESE
+SESESEMzbwHiZdaDlSlSaDZdaDaDaDaDaDZdaDlSlSaDZdHibwMzSESESESE
+SESESEMzbwHiZdaDlSlSaDZdZdZdZdZdZdZdaDlSlSaDZdHibwMzSESESESE
+SESESEMzBmHimEmEHiHimEmEmEmEmEmEmEmEmEHiHimEmEHiBmMzSESESESE
+SESESEMzMNMNMNMNMNMNMNMNMNMNMNMNMNMNMNMNMNMNMNMNMNMzSESESESE
+SESEhFMzMzMzMzMzMzMzMzMzMzpPMzpPMzMzMzMzMzMzMzMzMzMzhFSESESE
+SESESEMzvdMNMNMNMNMNMNMNhXMNhXMNhXMNMNMNMNMNMNMNvdMzSESESESE
+SESESEMzMNmEmEmEmEmEmEmEmEmEmEmEmEmEmEmEmEmEmEmEMNMzSESESESE
+SESESEMzMNmEZdZdZdZdZdtDZdtDZdtDZdtDZdZdZdZdZdmEfmMzSESESESE
+SESESEMzMNmEZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdmEMNMzSESESESE
+SESESEMzMNmEmEmEmEmEmEmEmEmEVPmEmEmEmEmEmEmEmEmEMNMzSESESESE
+SESESEMzMNmEMNvdMNMNMNMNMNMNMNMNMNMNMNMNMNvdMNmEMNMzSESESESE
+SESESEMzMNMNMNMzBGOxubMzGDBvMzGDBvMzBGOxubMzMNMNMNMzSESESESE
+SESESEMzBGOxubMzoMoMoMMzoMoMMzoMoMMzoMoMoMMzBGOxubMzSESESESE
+SESESEMzoMoMoMMzJAJAJAMzJAJAMzJAJAMzJAJAJAMzoMoMoMMzSESESESE
+SESESEMzJAJAJAMzNKNKNKMzNKNKMzNKNKMzNKNKNKMzJAJAJAMzSESESESE
+SESESEMzNKNKNKMzNKNKNKMzJgNKMzJgNKMzNKNKNKMzNKNKNKMzSESESESE
+SESESEMzNKNKNKMzPSNKNKMzSESEMzSESEMzPSNKNKMzNKNKNKMzSESESESE
+SESESEMzPSNKNKMzSESESEhFSESEhFSESEhFSESESEMzPSNKNKMzSESESESE
+SESESEhFSESESESESESESESESESESESESESESESESESESESESEhFSESESESE
+SESESESESESESESESESESESESESESESESESESESESESESESESESESESESESE
+SESESESESESESESESESESESESESESESESESESESESESESESESESESESESESE
+"}
