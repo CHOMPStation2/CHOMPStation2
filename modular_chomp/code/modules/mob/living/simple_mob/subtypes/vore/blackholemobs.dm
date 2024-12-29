@@ -644,7 +644,7 @@
 	projectilesound = 'sound/effects/lightningbolt.ogg'
 	projectile_dispersion = 12
 	projectile_accuracy = -25
-	base_attack_cooldown = 8
+	base_attack_cooldown = 12
 	ai_holder_type = /datum/ai_holder/simple_mob/merc/ranged/blackhole/lmg
 
 /obj/structure/loot_pile/mecha/durand/blackhole
@@ -791,7 +791,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 			if(isSynthetic(H))
 				continue
 			if(src.Adjacent(H))
-				to_chat(H,span_critical("The overwhelming psychic influence from \the [src] makes your senses reel!"))
+				to_chat(H,span_red("The overwhelming psychic influence from \the [src] makes your senses reel!"))
 				H.Confuse(scent_strength)
 				continue
 			else
@@ -844,7 +844,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 /mob/living/simple_mob/vore/blackhole_obelisk/death()
 	..()
 	visible_message("[src] flashes brightly, crumbling as its psychic influence suddenly vanishes from the minds of those nearby...")
-	playsound(src, 'modular_chomp/sound/effects/monolith_death.ogg', 50)
+	playsound(src, 'modular_chomp/sound/effects/monolith_death.ogg', 100)
 
 #undef OBELISK_LURE
 
@@ -1039,31 +1039,31 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	icon = 'modular_chomp/icons/blackhole/blackhole32x32.dmi'
 	icon_state = "bullet"
 	fire_sound = 'sound/weapons/serdy/9mmpistol.ogg'
-	speed = 0.6
+	speed = 0.8
 /obj/item/projectile/bullet/pistol/bh2
 	name = "10mm bullet"
 	icon = 'modular_chomp/icons/blackhole/blackhole32x32.dmi'
 	icon_state = "bullet"
 	fire_sound = 'sound/weapons/serdy/vityaz.ogg'
-	speed = 0.6
+	speed = 0.8
 /obj/item/projectile/bullet/pistol/bh3
 	name = "9mm bullet"
 	icon = 'modular_chomp/icons/blackhole/blackhole32x32.dmi'
 	icon_state = "bullet"
 	fire_sound = 'sound/weapons/serdy/ak74.ogg'
-	speed = 0.6
+	speed = 0.8
 /obj/item/projectile/bullet/rifle/a545/bh1
 	name = "6mm rifle bullet"
 	icon = 'modular_chomp/icons/blackhole/blackhole32x32.dmi'
 	icon_state = "bullet"
 	fire_sound = 'sound/weapons/serdy/sks.ogg'
-	speed = 0.6
+	speed = 0.8
 /obj/item/projectile/bullet/rifle/a545/bh2
 	name = "15mm MG bullet"
 	icon = 'modular_chomp/icons/blackhole/blackhole32x32.dmi'
 	icon_state = "bullet"
 	fire_sound = 'sound/weapons/serdy/strela.ogg'
-	speed = 0.6
+	speed = 0.8
 /obj/item/projectile/beam/shock/bh1
 	name = "tesla beam"
 	icon_state = "lightning"
