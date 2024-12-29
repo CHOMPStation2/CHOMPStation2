@@ -17,6 +17,10 @@
 			icon_state = initial(G.base_icon)
 		if(ispath(item, /obj/item/reagent_containers/hypospray/autoinjector))
 			icon_state += "0"
+		//CHOMPadd start
+		if(ispath(item, /obj/item/melee/shock_maul))
+			icon_state += "0"
+		//CHOMPadd end
 
 		var/icon/I
 

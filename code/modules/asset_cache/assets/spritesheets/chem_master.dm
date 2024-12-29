@@ -8,3 +8,7 @@
 
 	for(var/i = 1 to 4)
 		Insert("bottle-[i]", 'icons/obj/chemical.dmi', "bottle-[i]")
+	// CHOMPAdd Start
+	for(var/i = 1 to 4)
+		Insert("patch[i].png", 'icons/obj/chemical.dmi', "patch[i]")
+	// CHOMPAdd End
