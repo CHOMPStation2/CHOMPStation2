@@ -72,3 +72,6 @@
 
 // Diveable water
 #define isdiveablewater(A)	istype(A, /turf/simulated/floor/water/deep/ocean/diving)
+
+/// NaN isn't a number, damn it. Infinity is a problem too.
+#define isnum_safe(x) ( isnum((x)) && !isnan((x)) && !isinf((x)) )
