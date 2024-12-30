@@ -98,6 +98,10 @@ FIREACT_BURNS(/obj/structure/trash_pile,LOW_CHANCE,MEGA_BURN,BURN_TEMP_PLASTIC)
 /obj/item/clothing/suit/fire_act()
 	return
 
+// If cables can burn, do not burn these, no way to make them properly ingame
+/obj/structure/cable/heavyduty/fire_act()
+	return
+
 // anti-lag ash cleanup, also includes blood and oil fuel sources
 /obj/effect/decal/cleanable/fire_act()
 	if(prob(MED_CHANCE))
