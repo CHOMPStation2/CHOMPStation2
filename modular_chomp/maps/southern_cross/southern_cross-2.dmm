@@ -14438,21 +14438,8 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/obj/item/reagent_containers/glass/bottle/diethylamine{
-	pixel_x = 5
-	},
-/obj/item/reagent_containers/glass/bottle/diethylamine{
-	pixel_x = -5
-	},
-/obj/item/reagent_containers/glass/bottle/mutagen{
-	pixel_y = 10;
-	pixel_x = -5
-	},
-/obj/item/reagent_containers/glass/bottle/mutagen{
-	pixel_x = 5;
-	pixel_y = 10
-	},
 /obj/structure/table/standard,
+/obj/machinery/chemical_dispenser/xenoflora/full,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "dZe" = (
