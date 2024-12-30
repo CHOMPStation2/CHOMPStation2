@@ -19,10 +19,6 @@
 		fire.firelevel = max(fl, fire.firelevel)
 		return TRUE
 
-	var/obj/effect/map_effect/interval/burnpit/BP = locate() in src
-	if(BP)
-		return 0
-
 	fire = new /obj/fire/lingering(src, fl)
 	SSair.active_fire_zones |= zone
 	zone.fire_tiles |= src
