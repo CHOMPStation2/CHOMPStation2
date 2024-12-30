@@ -541,7 +541,7 @@
 	pixel_x = -16
 	pixel_y = 0
 
-	movement_sound = 'sound/effects/carrev.ogg'
+	movement_sound = 'modular_chomp/sound/effects/carrev.ogg'
 
 	min_oxy = 0
 	max_oxy = 0
