@@ -323,7 +323,7 @@
 	name = "An unfinished cake"
 	desc = "A single layer of a strange cake, you can see the cherry paste ooze, but it feels very incomplete..."
 
-	icon = 'icons/obj/food.dmi'
+	icon = 'icons/obj/food64x64.dmi'
 	icon_state = "chaoscake_unfinished-1"
 	pixel_x = -16
 
