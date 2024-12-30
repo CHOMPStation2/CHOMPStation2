@@ -1,5 +1,0 @@
-author: "NickBelmont"
-delete-after: True
-changes:
-  - rscadd: "Timeclock app to the set of default PDA applications"
-  - rscadd: "AREA_ALLOW_CLOCKOUT flag for setting which areas allow players to clock out using the pda timeclock"
