@@ -60,7 +60,6 @@
 /area/surface/outside
 	ambience = AMBIENCE_THOR
 	always_unpowered = TRUE
-	flags = AREA_FLAG_IS_NOT_PERSISTENT
 	outdoors = OUTDOORS_YES
 
 // The area near the outpost, so POIs don't show up right next to the outpost.
@@ -130,7 +129,6 @@
 	name = "Sesquehanna River"
 	icon_state = "bluenew"
 /area/surface/cave
-	flags = RAD_SHIELDED
 	always_unpowered = TRUE
 
 /area/surface/cave
@@ -666,7 +664,6 @@ z
 	icon_state = "shuttle"
 	requires_power = 0
 	dynamic_lighting = 1
-	flags = RAD_SHIELDED
 
 /area/turbolift/start
 	name = "\improper Turbolift Start"
@@ -880,7 +877,6 @@ z
 	name = "\improper First Deck First-Aid Station"
 
 /area/storage/emergency_storage/
-	flags = RAD_SHIELDED
 	name = "Emergency Storage"
 	icon_state = "emergencystorage"
 
