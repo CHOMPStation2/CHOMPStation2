@@ -4848,6 +4848,7 @@
 #include "modular_chomp\code\game\objects\items.dm"
 #include "modular_chomp\code\game\objects\mob_spawner.dm"
 #include "modular_chomp\code\game\objects\effects\dark_growth.dm"
+#include "modular_chomp\code\game\objects\effects\explosion.dm"
 #include "modular_chomp\code\game\objects\effects\step_triggers.dm"
 #include "modular_chomp\code\game\objects\items\contraband.dm"
 #include "modular_chomp\code\game\objects\items\holosign_creator.dm"
