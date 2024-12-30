@@ -81,13 +81,13 @@
 		return
 
 	if(resting)
-		if(isbelly(vore_selected)) //CHOMPEdit Start
+		if(isbelly(vore_selected))
 			vore_selected.digest_mode = DM_UNABSORB
 		ai_holder.go_sleep()
 
 	else
 		if(isbelly(vore_selected))
-			vore_selected.digest_mode = vore_default_mode //CHOMPEdit End
+			vore_selected.digest_mode = vore_default_mode
 		ai_holder.go_wake()
 
 /mob/living/simple_mob/vore/pakkun/attack_hand(mob/user)

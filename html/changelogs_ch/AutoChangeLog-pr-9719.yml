@@ -1,5 +1,0 @@
-author: "Scarlet-Oduko"
-delete-after: True
-changes:
-  - rscadd: "colorable no-antennae moth wings"
-  - bugfix: "Deathhead moth wings no longer visually clip in and out due to random frame"

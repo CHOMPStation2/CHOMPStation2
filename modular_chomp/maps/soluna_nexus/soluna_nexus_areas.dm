@@ -22,7 +22,6 @@
 	icon_state = "shuttle"
 	requires_power = 0
 	dynamic_lighting = 1
-	flags = RAD_SHIELDED
 
 /area/turbolift/start
 	name = "\improper Turbolift Start"
@@ -172,6 +171,7 @@
 /area/hallway/primary/firstdeck/elevator
 	name = "\improper First Deck Central Elevator Access"
 	icon_state = "hallC"
+
 /area/rnd/xenobiology/xenoflora_isolation
 	name = "\improper Xenoflora Isolation"
 	icon_state = "xeno_f_store"
@@ -732,18 +732,15 @@
 
 /area/expoutpost/bar
 	name = "\improper Bar"
-	flags = RAD_SHIELDED
 
 /area/expoutpost/starbowhallway
 	name = "\improper Starboard Bow Hallway"
 
 /area/expoutpost/suite1
 	name = "\improper Suite One"
-	flags = RAD_SHIELDED
 
 /area/expoutpost/suite2
 	name = "\improper Suite Two"
-	flags = RAD_SHIELDED
 
 /area/expoutpost/pathfinderroom
 	name = "\improper Pathfinder's Ready-Room"
@@ -1812,12 +1809,12 @@
 /area/crew_quarters/Midnight_Bar
     name = "\improper Midnight Bar"
     icon_state = "gaming"
-    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO
+    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO | AREA_ALLOW_CLOCKOUT
 
 /area/crew_quarters/Midnight_Kitchen
     name = "\improper Midnight Kitchen"
     icon_state = "gaming"
-    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO
+    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO | AREA_ALLOW_CLOCKOUT
 
 /area/crew_quarters/Gallery
     name = "\improper Gallery"
@@ -1853,31 +1850,31 @@
 /area/crew_quarters/Central_Restroom
     name = "\improper Central Restroom"
     icon_state = "gaming"
-    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO
+    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO | AREA_ALLOW_CLOCKOUT
     lightswitch = 1
 
 /area/crew_quarters/For_Restroom
     name = "\improper For Restroom"
     icon_state = "gaming"
-    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO
+    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO | AREA_ALLOW_CLOCKOUT
     lightswitch = 1
 
 /area/crew_quarters/Star_Restroom
     name = "\improper Star Restroom"
     icon_state = "gaming"
-    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO
+    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO | AREA_ALLOW_CLOCKOUT
     lightswitch = 1
 
 /area/crew_quarters/Aft_Restroom
     name = "\improper Aft Restroom"
     icon_state = "gaming"
-    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO
+    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO | AREA_ALLOW_CLOCKOUT
     lightswitch = 1
 
 /area/crew_quarters/Port_Restroom
     name = "\improper Port Restroom"
     icon_state = "gaming"
-    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO
+    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO | AREA_ALLOW_CLOCKOUT
     lightswitch = 1
 
 /area/crew_quarters/Library
@@ -1906,12 +1903,12 @@
 /area/crew_quarters/Chomp_Hydroponics
     name = "\improper Chomp Hydroponics"
     icon_state = "gaming"
-    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO
+    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO | AREA_ALLOW_CLOCKOUT
 
 /area/crew_quarters/Chomp_Stage
     name = "\improper Chomp Convention Stage"
     icon_state = "gaming"
-    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO
+    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO | AREA_ALLOW_CLOCKOUT
 
 /area/crew_quarters/Chomp_Kitchen
     name = "\improper Chomp Kitchen"
@@ -1921,19 +1918,19 @@
 /area/crew_quarters/Chomp_Dinner_1
     name = "\improper Chomp Dinner 1"
     icon_state = "gaming"
-    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO
+    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO | AREA_ALLOW_CLOCKOUT
     lightswitch = 1
 
 /area/crew_quarters/Chomp_Dinner_2
     name = "\improper Chomp Dinner 2"
     icon_state = "gaming"
-    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO
+    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO | AREA_ALLOW_CLOCKOUT
     lightswitch = 1
 
 /area/crew_quarters/Chomp_Lounge
     name = "\improper Chomp Lounge"
     icon_state = "gaming"
-    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO
+    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO | AREA_ALLOW_CLOCKOUT
 
 /area/crew_quarters/Public_Hydroponics
     name = "\improper Public Hydroponics"
@@ -1956,7 +1953,7 @@
     icon_state = "gaming"
 
 /area/crew_quarters/sleep
-    flags = RAD_SHIELDED | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING | AREA_SOUNDPROOF | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO
+    flags = RAD_SHIELDED | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING | AREA_SOUNDPROOF | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO | AREA_ALLOW_CLOCKOUT
     lightswitch = 0
     icon_state = "gaming"
 
@@ -2082,7 +2079,7 @@
 /area/hallway/Star_Transit_Foyer
     name = "\improper Star Transit Foyer"
     icon_state = "hallA"
-    flags = RAD_SHIELDED
+    flags = RAD_SHIELDED | AREA_ALLOW_CLOCKOUT
 
 /area/hallway/Aft_Transit_Lobby
     name = "\improper Aft Transit Lobby"
@@ -2091,7 +2088,7 @@
 /area/hallway/Port_Transit_Foyer
     name = "\improper Port Transit Foyer"
     icon_state = "hallA"
-    flags = RAD_SHIELDED
+    flags = RAD_SHIELDED | AREA_ALLOW_CLOCKOUT
 
 /area/hallway/For_1_Deck_Stairwell
     name = "\improper For 1 Deck Stairwell"
@@ -2421,7 +2418,6 @@
 
 /area/maintenance
     icon_state = "fsmaint"
-    flags = RAD_SHIELDED
     ambience = AMBIENCE_MAINTENANCE
     sound_env = SOUND_ENVIRONMENT_SEWER_PIPE
 

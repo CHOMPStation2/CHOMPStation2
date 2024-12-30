@@ -43,7 +43,6 @@
 /area/surface/outside
 	ambience = AMBIENCE_SIF
 	always_unpowered = TRUE
-	flags = AREA_FLAG_IS_NOT_PERSISTENT
 	outdoors = OUTDOORS_YES
 
 // The area near the outpost, so POIs don't show up right next to the outpost.
@@ -130,7 +129,6 @@
 
 
 /area/surface/cave
-	flags = RAD_SHIELDED
 	always_unpowered = TRUE
 
 /area/surface/cave
@@ -173,7 +171,7 @@
 /area/surface/outpost/shelter/dorms
 	name = "Wilderness Shelter Dorms"
 	icon_state = "Sleep"
-	flags = RAD_SHIELDED | AREA_SOUNDPROOF | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING
+	flags = RAD_SHIELDED | AREA_SOUNDPROOF | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING | AREA_ALLOW_CLOCKOUT
 
 /area/surface/outpost/shelter/exterior
 	name = "Wilderness Shelter Exterior"
