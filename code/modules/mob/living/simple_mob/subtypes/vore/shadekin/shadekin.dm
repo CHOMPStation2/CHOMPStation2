@@ -143,15 +143,15 @@
 	. = ..()
 
 /mob/living/simple_mob/shadekin/init_vore()
-	if(!voremob_loaded) //CHOMPAdd
-		return //CHOMPAdd
+	if(!voremob_loaded)
+		return
 	if(LAZYLEN(vore_organs))
 		return
 
 	var/obj/belly/B = new /obj/belly(src)
 	vore_selected = B
 	B.immutable = 1
-	B.affects_vore_sprites = TRUE //CHOMPEdit - vore sprites enabled for simplemobs!
+	B.affects_vore_sprites = TRUE
 	B.name = vore_stomach_name ? vore_stomach_name : "stomach"
 	B.desc = vore_stomach_flavor ? vore_stomach_flavor : "Your surroundings are warm, soft, and slimy. Makes sense, considering you're inside \the [name]."
 	B.digest_mode = vore_default_mode

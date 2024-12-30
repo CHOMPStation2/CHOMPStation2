@@ -147,3 +147,22 @@
   Fracshun:
   - qol: Death messages of the original body during Mob TF are now muffled
   - bugfix: Body swapping no longer links life state
+2024-12-28:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: '"Launch" button to vore panel, ejects occupant and throws them three
+      tiles in the direction you''re facing.'
+2024-12-29:
+  TheCaramelion:
+  - bugfix: fixed medical holo-barriers throwing false positives
+2024-12-30:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: 516 webroot css assets not working
+  - refactor: Sorted assets into their own files for cleanliness.
+  NickBelmont:
+  - rscadd: Timeclock app to the set of default PDA applications
+  - rscadd: AREA_ALLOW_CLOCKOUT flag for setting which areas allow players to clock
+      out using the pda timeclock
+  Scarlet-Oduko:
+  - rscadd: colorable no-antennae moth wings
+  - bugfix: Deathhead moth wings no longer visually clip in and out due to random
+      frame
