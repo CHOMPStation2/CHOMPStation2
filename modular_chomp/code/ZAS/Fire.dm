@@ -1,4 +1,3 @@
-
 #define FIRE_MAX_TEMP 20000
 
 /turf/proc/lingering_fire(fl)
