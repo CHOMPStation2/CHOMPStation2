@@ -791,11 +791,11 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 			if(isSynthetic(H))
 				continue
 			if(src.Adjacent(H))
-				to_chat(H,span_red("The overwhelming psychic influence from \the [src] makes your senses reel!"))
+				to_chat(H,span_danger("The overwhelming psychic influence from \the [src] makes your senses reel!"))
 				H.Confuse(scent_strength)
 				continue
 			else
-				to_chat(H,span_red("[pick(obelisk_lure_messages)]"))
+				to_chat(H,span_danger("[pick(obelisk_lure_messages)]"))
 				return
 
 /datum/looping_sound/obelisk ///thanks to BM for helpin' me make this work <3
