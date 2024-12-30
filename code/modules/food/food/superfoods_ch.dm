@@ -359,7 +359,7 @@
 /obj/item/chaoscake_layer
 	name = "A layer of cake"
 	desc = "a layer of cake, it is made out of colourful cream."
-	icon = 'icons/obj/food_ch.dmi'
+	icon = 'icons/obj/food64x64.dmi'
 	icon_state = "chaoscake_layer-2"
 	var/layer_stage = 1
 
