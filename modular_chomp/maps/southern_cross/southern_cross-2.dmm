@@ -11839,6 +11839,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/teleporter/firstdeck)
+"cIG" = (
+/obj/structure/bed/chair/office/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/rnd/xenochemistry)
 "cJx" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/wingrille_spawn/reinforced,
@@ -15942,6 +15948,11 @@
 /obj/machinery/computer/ship/navigation,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/spacebus)
+"eXs" = (
+/obj/effect/floor_decal/borderfloorwhite,
+/obj/effect/floor_decal/corner/purple/border,
+/turf/simulated/floor/tiled/white,
+/area/rnd/xenochemistry)
 "eXR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/hydro,
@@ -20486,6 +20497,12 @@
 "jKH" = (
 /obj/structure/table/standard,
 /obj/machinery/chemical_dispenser/xenoflora/full,
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/purple/border{
+	dir = 5
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenochemistry)
 "jLb" = (
@@ -21852,6 +21869,12 @@
 	},
 /obj/structure/table/standard,
 /obj/machinery/chemical_dispenser/full,
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/purple/border{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenochemistry)
 "lok" = (
@@ -22727,7 +22750,18 @@
 	dir = 8
 	},
 /obj/structure/table/glass,
-/obj/machinery/reagentgrinder,
+/obj/item/paper_bin{
+	pixel_x = -2;
+	pixel_y = 5
+	},
+/obj/item/pen/blue{
+	pixel_x = -5;
+	pixel_y = -1
+	},
+/obj/item/pen/red{
+	pixel_x = -1;
+	pixel_y = 3
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenochemistry)
 "mnt" = (
@@ -22835,6 +22869,9 @@
 	c_tag = "SCI - Xenochemistry";
 	dir = 1
 	},
+/obj/machinery/chemical_analyzer,
+/obj/effect/floor_decal/borderfloorwhite/corner,
+/obj/effect/floor_decal/corner/purple/bordercorner,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenochemistry)
 "mtY" = (
@@ -27669,6 +27706,15 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/spacebus)
+"rwc" = (
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/purple/border{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/white,
+/area/rnd/xenochemistry)
 "rwj" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -28443,7 +28489,8 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
-/obj/machinery/chemical_analyzer,
+/obj/structure/table/glass,
+/obj/machinery/reagentgrinder,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenochemistry)
 "slt" = (
@@ -30041,6 +30088,15 @@
 /obj/effect/floor_decal/industrial/warning/corner,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology)
+"tPh" = (
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/purple/border{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/white,
+/area/rnd/xenochemistry)
 "tPr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -30671,6 +30727,15 @@
 /obj/machinery/computer/ship/sensors,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/spacebus)
+"utF" = (
+/obj/effect/floor_decal/borderfloorwhite/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/purple/bordercorner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/rnd/xenochemistry)
 "uvx" = (
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk,
@@ -83225,7 +83290,7 @@ eaG
 eTN
 fXY
 sfM
-lkw
+utF
 jJe
 slp
 mse
@@ -83483,10 +83548,10 @@ eaQ
 fau
 fYh
 gMT
-lkw
-lkw
-lkw
-lkw
+tPh
+utF
+cIG
+eXs
 itV
 itV
 qUq
@@ -83744,7 +83809,7 @@ dVH
 pBN
 jKH
 lmN
-lkw
+rwc
 isN
 pPf
 qVI
