@@ -279,6 +279,29 @@
 		dat += "<br>"
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
+		//CHOMPedit begin - malignant organs
+		for(var/obj/item/organ/internal/io in H.internal_organs)
+			if(istype(io,/obj/item/organ/internal/appendix))
+				var/obj/item/organ/internal/appendix/a = io
+				var/severity = ""
+				if(a.inflamed > 3)
+					severity = "Severe"
+				else if(a.inflamed > 2)
+					severity = "Moderate"
+				else if(a.inflamed >= 1)
+					severity = "Mild"
+				if(severity)
+					dat += span_warning("[severity] inflammation detected in subject [a.name].")
+					dat += "<br>"
+			else if(istype(io,/obj/item/organ/internal/malignant))
+				if(advscan >= 2)
+					var/obj/item/organ/internal/ORG = H.organs_by_name[io.parent_organ]
+					dat += span_warning("Anatomical irregularities detected in subject's [ORG.name].")
+					dat += "<br>"
+				else
+					dat += span_warning("Anatomical irregularities detected in subject.")
+					dat += "<br>"
+		//CHOMPedit end
 		for(var/obj/item/organ/internal/appendix/a in H.internal_organs)
 			var/severity = ""
 			if(a.inflamed > 3)
