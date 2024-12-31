@@ -78,6 +78,8 @@
 	add_attack_logs(user,C,"Leashed (attempt)")
 	if(!do_mob(user, C, leashtime)) //do_mob adds a progress bar, but then we also check to see if they have a collar
 		return
+	if(tgui_alert(C, "Would you like to be leased by [user]? You can OOC escape to escape", "Become Leashed",list("No","Yes")) != "Yes")
+		return
 
 	C.visible_message(span_danger("\The [user] puts a leash on \the [C]!"), span_danger("The leash clicks onto your collar!"))
 
