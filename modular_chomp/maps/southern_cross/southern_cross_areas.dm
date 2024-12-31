@@ -611,6 +611,10 @@
 	name = "\improper Xenoflora Isolation"
 	icon_state = "xeno_f_store"
 
+/area/rnd/xenochemistry
+	name = "\improper Xenochemistry"
+	icon_state = "chem"
+
 /area/quartermaster/lockerroom
 	name = "\improper Cargo Locker Room"
 	icon_state = "quart"
