@@ -268,7 +268,7 @@
 	specialattackprojectile = /obj/item/projectile/beam/midlaser
 	armor = list(melee = 90, bullet = 90, laser = 90, energy = 90, bomb = 90, bio = 100, rad = 100)
 	damage_threshold = 0 //So the wierd armor mechanic works
-	icon_state = "gygax_adv"
+	icon_state = "orb"
 	wreckage = /obj/structure/loot_pile/mecha/odd_gygax
 	special_attack_cooldown = 320
 
