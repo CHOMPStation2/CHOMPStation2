@@ -655,7 +655,7 @@
 	special_attack_max_range = 7
 
 	projectiletype = /obj/item/projectile/energy/wp_shotgun //using the weapon found upon tyr
-	specialattackprojectile = /obj/effect/temporary_effect/pulse/microsingulo
+	specialattackprojectile = /obj/item/projectile/arc/microsingulo
 
 	loot_list = list(/obj/item/slime_extract/sepia  = 1,
 		/obj/item/bone/skull = 100,
