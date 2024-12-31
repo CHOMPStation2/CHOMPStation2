@@ -6,6 +6,8 @@
 		// Dont give bellied people and antags cancer
 		if(player_is_antag(H.mind) || isbelly(H.loc))
 			continue
+		if(H.species.virus_immune)
+			continue
 		/*
 		if(!(A.z in using_map.event_levels))
 			continue
