@@ -97,11 +97,7 @@
 		BIOGEN_ITEM(REAGENT_PLANTBGONE, /obj/item/reagent_containers/spray/plantbgone, 1, 50),
 		BIOGEN_ITEM(REAGENT_PLANTBGONE + " x5", /obj/item/reagent_containers/spray/plantbgone, 5, 250),//CHOMPAdd End
 	)
-	//CHOMPAdd Start - Some botany tools and another source of exotic seeds
-	item_list["Botany Tools"] = list(
-		BIOGEN_ITEM("Flora Disk", /obj/item/disk/botany, 1, 100),
-		BIOGEN_ITEM("Floral Somatoray", /obj/item/gun/energy/floragun, 1, 1000),
-	)
+	//CHOMPAdd Start - Another source of exotic seeds
 	item_list["Exotic Seeds"] = list(
 		BIOGEN_ITEM("Mystery seed pack", /obj/item/seeds/random, 1, 150),
 		BIOGEN_ITEM("Mystery seed pack x5", /obj/item/seeds/random, 5, 750),
