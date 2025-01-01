@@ -33,7 +33,7 @@
 
 /* Example from Polaris code
 /datum/species/monkey/tajaran
-	name = "Farwa"
+	name = SPECIES_MONKEY_TAJ
 	name_plural = "Farwa"
 
 	icobase = 'icons/mob/human_races/monkeys/r_farwa.dmi'
@@ -69,22 +69,30 @@
 	low_sorting_priority = TRUE
 
 /mob/living/carbon/human/sharkm/New(var/new_loc)
-	..(new_loc, "Sobaka")
+	..(new_loc, SPECIES_MONKEY_AKULA)
+	species.produceCopy(species.traits.Copy(),src,null,FALSE)
 
 /mob/living/carbon/human/sergallingm
 	low_sorting_priority = TRUE
 
 /mob/living/carbon/human/sergallingm/New(var/new_loc)
-	..(new_loc, "Saru")
+	..(new_loc, SPECIES_MONKEY_SERGAL)
+	species.produceCopy(species.traits.Copy(),src,null,FALSE)
 
 /mob/living/carbon/human/sparram
 	low_sorting_priority = TRUE
 
 /mob/living/carbon/human/sparram/New(var/new_loc)
-	..(new_loc, "Sparra")
+	..(new_loc, SPECIES_MONKEY_NEVREAN)
+	species.produceCopy(species.traits.Copy(),src,null,FALSE)
 
 /mob/living/carbon/human/wolpin
 	low_sorting_priority = TRUE
 
 /mob/living/carbon/human/wolpin/New(var/new_loc)
+<<<<<<< HEAD
 	..(new_loc, "Wolpin")
+=======
+	..(new_loc, SPECIES_MONKEY_VULPKANIN)
+	species.produceCopy(species.traits.Copy(),src,null,FALSE)
+>>>>>>> e6ef8b0f2c (resize limits and designer / dna update (#16807))

@@ -97,14 +97,18 @@
 			active = !active
 		if(active)
 			if(findtext(msg,"grow"))
-				H.resize(min(H.size_multiplier*1.5, 2))
+				H.resize(min(H.size_multiplier*1.5, RESIZE_MAXIMUM))
 			else if(findtext(msg,"shrink"))
-				H.resize(max(H.size_multiplier*0.5, 0.25))
+				H.resize(max(H.size_multiplier*0.5, RESIZE_MINIMUM))
 			else if(findtext(msg, "resize"))
 				var/static/regex/size_mult = new/regex("\\d+")
 				if(size_mult.Find(msg))
 					var/resizing_value = text2num(size_mult.match)
+<<<<<<< HEAD
 					H.resize(CLAMP(resizing_value/100 , RESIZE_MINIMUM_DORMS, RESIZE_MAXIMUM_DORMS), uncapped = H.has_large_resize_bounds()) //CHOMPEdit - Let resize handle size limits. It's meant to do that.
+=======
+					H.resize(CLAMP(resizing_value/100 , RESIZE_MINIMUM, RESIZE_MAXIMUM))
+>>>>>>> e6ef8b0f2c (resize limits and designer / dna update (#16807))
 
 
 

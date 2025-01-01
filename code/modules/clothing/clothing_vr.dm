@@ -147,6 +147,7 @@
 		slot_wear_mask_str = 'modular_chomp/icons/inventory/face/mob.dmi'
 		)
 	sprite_sheets = list(
+<<<<<<< HEAD
 		SPECIES_TESHARI		= 'modular_chomp/icons/inventory/face/mob_teshari.dmi',
 		SPECIES_VOX 		= 'modular_chomp/icons/inventory/face/mob_vox.dmi',
 		SPECIES_TAJ 		= 'modular_chomp/icons/inventory/face/mob_tajaran.dmi',
@@ -159,6 +160,20 @@
 		SPECIES_VULPKANIN 	= 'modular_chomp/icons/inventory/face/mob_vulpkanin.dmi',
 		SPECIES_XENOCHIMERA	= 'modular_chomp/icons/inventory/face/mob_tajaran.dmi',
 		SPECIES_WEREBEAST	= 'modular_chomp/icons/inventory/face/mob_werebeast.dmi'
+=======
+		SPECIES_TESHARI		= 'icons/inventory/face/mob_teshari.dmi',
+		SPECIES_VOX 		= 'icons/inventory/face/mob_vox.dmi',
+		SPECIES_TAJARAN 		= 'icons/inventory/face/mob_tajaran.dmi',
+		SPECIES_UNATHI 		= 'icons/inventory/face/mob_unathi.dmi',
+		SPECIES_SERGAL 		= 'icons/inventory/face/mob_vr_sergal.dmi',
+		SPECIES_NEVREAN 	= 'icons/inventory/face/mob_vr_nevrean.dmi',
+		SPECIES_ZORREN_HIGH	= 'icons/inventory/face/mob_vr_fox.dmi',
+		SPECIES_ZORREN_FLAT = 'icons/inventory/face/mob_vr_fennec.dmi',
+		SPECIES_AKULA 		= 'icons/inventory/face/mob_vr_akula.dmi',
+		SPECIES_VULPKANIN 	= 'icons/inventory/face/mob_vr_vulpkanin.dmi',
+		SPECIES_XENOCHIMERA	= 'icons/inventory/face/mob_vr_tajaran.dmi',
+		SPECIES_WEREBEAST	= 'icons/inventory/face/mob_vr_werebeast.dmi'
+>>>>>>> e6ef8b0f2c (resize limits and designer / dna update (#16807))
 		)
 	//Chompedit End.
 

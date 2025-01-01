@@ -106,9 +106,12 @@
 #include "code\__defines\misc_ch.dm"
 #include "code\__defines\mob_ch.dm"
 #include "code\__defines\mobs.dm"
+<<<<<<< HEAD
 #include "code\__defines\mobs_vr.dm"
 #include "code\__defines\mobs_yw.dm"
 #include "code\__defines\nif_ch.dm"
+=======
+>>>>>>> e6ef8b0f2c (resize limits and designer / dna update (#16807))
 #include "code\__defines\nifsoft.dm"
 #include "code\__defines\objects.dm"
 #include "code\__defines\observer.dm"
