@@ -29,7 +29,8 @@
 	},
 /turf/unsimulated/floor{
 	icon_state = "rampbottom";
-	name = "stairs"
+	name = "stairs";
+
 	},
 /area/awaymission/labyrinth/temple/north_east)
 "af" = (
@@ -41,7 +42,8 @@
 	},
 /turf/unsimulated/floor{
 	icon_state = "rampbottom";
-	name = "stairs"
+	name = "stairs";
+
 	},
 /area/awaymission/labyrinth/temple/north_east)
 "ag" = (
@@ -469,17 +471,20 @@
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_w";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_e";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_n";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /area/awaymission/labyrinth/arrival)
 "bq" = (
@@ -491,12 +496,14 @@
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_w";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_n";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /area/awaymission/labyrinth/arrival)
 "br" = (
@@ -508,12 +515,14 @@
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_e";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_n";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /area/awaymission/labyrinth/arrival)
 "bs" = (
@@ -525,7 +534,8 @@
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_e";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /area/awaymission/labyrinth/arrival)
 "bt" = (
@@ -537,7 +547,8 @@
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_n";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /area/awaymission/labyrinth/arrival)
 "bu" = (
@@ -556,14 +567,16 @@
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_w";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /area/awaymission/labyrinth/arrival)
 "bw" = (
 /turf/unsimulated/floor{
 	dir = 8;
 	icon_state = "asteroid";
-	name = "dirt"
+	name = "dirt";
+
 	},
 /area/awaymission/labyrinth/arrival)
 "bx" = (
@@ -845,12 +858,14 @@
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_s";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_e";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /area/awaymission/labyrinth/arrival)
 "cm" = (
@@ -895,12 +910,14 @@
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_w";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_s";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /area/awaymission/labyrinth/arrival)
 "ct" = (
@@ -952,7 +969,8 @@
 /turf/unsimulated/floor{
 	dir = 1;
 	icon_state = "rampbottom";
-	name = "stairs"
+	name = "stairs";
+
 	},
 /area/awaymission/labyrinth/temple/south)
 "cz" = (
@@ -970,17 +988,20 @@
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_s";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_e";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_n";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /area/awaymission/labyrinth/arrival)
 "cB" = (
@@ -1095,7 +1116,8 @@
 /turf/unsimulated/floor{
 	dir = 8;
 	icon_state = "asteroid";
-	name = "dirt"
+	name = "dirt";
+
 	},
 /area/awaymission/labyrinth/arrival)
 "cS" = (
@@ -1103,7 +1125,8 @@
 /turf/unsimulated/floor{
 	dir = 8;
 	icon_state = "asteroid";
-	name = "dirt"
+	name = "dirt";
+
 	},
 /area/awaymission/labyrinth/arrival)
 "cT" = (
@@ -1120,7 +1143,8 @@
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_s";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /area/awaymission/labyrinth/arrival)
 "cV" = (
@@ -1132,7 +1156,8 @@
 /turf/unsimulated/floor{
 	dir = 8;
 	icon_state = "asteroid";
-	name = "dirt"
+	name = "dirt";
+
 	},
 /area/awaymission/labyrinth/arrival)
 "cW" = (
@@ -1150,17 +1175,20 @@
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_w";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_s";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_e";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /area/awaymission/labyrinth/arrival)
 "cY" = (
@@ -1168,19 +1196,22 @@
 /turf/unsimulated/floor{
 	dir = 8;
 	icon_state = "asteroid";
-	name = "dirt"
+	name = "dirt";
+
 	},
 /area/awaymission/labyrinth/arrival)
 "cZ" = (
 /turf/unsimulated/floor{
 	dir = 8;
 	icon_state = "asteroid";
-	name = "dirt"
+	name = "dirt";
+
 	},
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_s";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /area/awaymission/labyrinth/arrival)
 "da" = (
@@ -1196,7 +1227,8 @@
 /turf/unsimulated/floor{
 	dir = 8;
 	icon_state = "asteroid";
-	name = "dirt"
+	name = "dirt";
+
 	},
 /area/awaymission/labyrinth/arrival)
 "db" = (
@@ -1209,12 +1241,14 @@
 /turf/unsimulated/floor{
 	dir = 8;
 	icon_state = "asteroid";
-	name = "dirt"
+	name = "dirt";
+
 	},
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_n";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /area/awaymission/labyrinth/arrival)
 "dd" = (
@@ -1222,12 +1256,14 @@
 /turf/unsimulated/floor{
 	dir = 8;
 	icon_state = "asteroid";
-	name = "dirt"
+	name = "dirt";
+
 	},
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_n";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /area/awaymission/labyrinth/arrival)
 "de" = (
@@ -1235,7 +1271,8 @@
 /turf/unsimulated/floor{
 	dir = 8;
 	icon_state = "asteroid";
-	name = "dirt"
+	name = "dirt";
+
 	},
 /area/awaymission/labyrinth/arrival)
 "df" = (
@@ -1243,7 +1280,8 @@
 /turf/unsimulated/floor{
 	dir = 8;
 	icon_state = "asteroid";
-	name = "dirt"
+	name = "dirt";
+
 	},
 /area/awaymission/labyrinth/arrival)
 "dg" = (
@@ -1288,7 +1326,8 @@
 	},
 /turf/unsimulated/floor{
 	icon_state = "rampbottom";
-	name = "stairs"
+	name = "stairs";
+
 	},
 /area/awaymission/labyrinth/boss)
 "dm" = (
@@ -1331,13 +1370,15 @@
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_w";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /area/awaymission/labyrinth/cave)
 "dt" = (
 /turf/unsimulated/floor{
 	icon_state = "rampbottom";
-	name = "stairs"
+	name = "stairs";
+
 	},
 /area/awaymission/labyrinth/cave)
 "du" = (
@@ -1348,7 +1389,8 @@
 "dv" = (
 /turf/unsimulated/wall/exterior{
 	icon_state = "rockvault";
-	luminosity = 2
+	luminosity = 2;
+
 	},
 /area/awaymission/labyrinth/cave)
 "dw" = (
@@ -1358,53 +1400,62 @@
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_e";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /area/awaymission/labyrinth/cave)
 "dx" = (
 /turf/unsimulated/floor{
 	dir = 8;
 	icon_state = "asteroid";
-	name = "dirt"
+	name = "dirt";
+
 	},
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_w";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_n";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /area/awaymission/labyrinth/cave)
 "dy" = (
 /turf/unsimulated/floor{
 	dir = 8;
 	icon_state = "asteroid";
-	name = "dirt"
+	name = "dirt";
+
 	},
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_n";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /area/awaymission/labyrinth/cave)
 "dz" = (
 /turf/unsimulated/floor{
 	dir = 8;
 	icon_state = "asteroid";
-	name = "dirt"
+	name = "dirt";
+
 	},
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_n";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_e";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /area/awaymission/labyrinth/cave)
 "dA" = (
@@ -1414,19 +1465,22 @@
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_w";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_n";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /area/awaymission/labyrinth/cave)
 "dB" = (
 /obj/structure/HonkMother/Apex,
 /turf/unsimulated/wall/exterior{
 	icon_state = "rockvault";
-	luminosity = 2
+	luminosity = 2;
+
 	},
 /area/awaymission/labyrinth/cave)
 "dC" = (
@@ -1436,19 +1490,22 @@
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_n";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_e";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /area/awaymission/labyrinth/cave)
 "dD" = (
 /turf/unsimulated/floor{
 	dir = 8;
 	icon_state = "asteroid";
-	name = "dirt"
+	name = "dirt";
+
 	},
 /area/awaymission/labyrinth/cave)
 "dF" = (
@@ -1464,77 +1521,90 @@
 /turf/unsimulated/floor{
 	dir = 8;
 	icon_state = "asteroid";
-	name = "dirt"
+	name = "dirt";
+
 	},
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_s";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /area/awaymission/labyrinth/cave)
 "dJ" = (
 /turf/unsimulated/floor{
 	dir = 8;
 	icon_state = "asteroid";
-	name = "dirt"
+	name = "dirt";
+
 	},
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_e";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /area/awaymission/labyrinth/cave)
 "dK" = (
 /turf/unsimulated/floor{
 	dir = 8;
 	icon_state = "asteroid";
-	name = "dirt"
+	name = "dirt";
+
 	},
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_w";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /area/awaymission/labyrinth/cave)
 "dL" = (
 /turf/unsimulated/floor{
 	dir = 8;
 	icon_state = "asteroid";
-	name = "dirt"
+	name = "dirt";
+
 	},
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_s";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_e";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /area/awaymission/labyrinth/cave)
 "dM" = (
 /turf/unsimulated/floor{
 	dir = 8;
 	icon_state = "asteroid";
-	name = "dirt"
+	name = "dirt";
+
 	},
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_w";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_s";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /area/awaymission/labyrinth/cave)
 "dN" = (
 /obj/effect/mist,
 /turf/unsimulated/wall/exterior{
 	icon_state = "rockvault";
-	luminosity = 2
+	luminosity = 2;
+
 	},
 /area/awaymission/labyrinth/cave)
 "dO" = (
@@ -1542,7 +1612,8 @@
 /obj/effect/mist,
 /turf/unsimulated/wall/exterior{
 	icon_state = "rockvault";
-	luminosity = 2
+	luminosity = 2;
+
 	},
 /area/awaymission/labyrinth/cave)
 "dP" = (
@@ -1558,88 +1629,104 @@
 /turf/unsimulated/floor{
 	dir = 8;
 	icon_state = "asteroid";
-	name = "dirt"
+	name = "dirt";
+
 	},
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_w";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_n";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_e";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /area/awaymission/labyrinth/cave)
 "dR" = (
 /turf/unsimulated/floor{
 	dir = 8;
 	icon_state = "asteroid";
-	name = "dirt"
+	name = "dirt";
+
 	},
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_w";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_s";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_n";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /area/awaymission/labyrinth/cave)
 "dS" = (
 /turf/unsimulated/floor{
 	dir = 8;
 	icon_state = "asteroid";
-	name = "dirt"
+	name = "dirt";
+
 	},
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_s";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_n";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_e";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /area/awaymission/labyrinth/cave)
 "dT" = (
 /turf/unsimulated/floor{
 	dir = 8;
 	icon_state = "asteroid";
-	name = "dirt"
+	name = "dirt";
+
 	},
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_n";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_e";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_s";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /area/awaymission/labyrinth/cave)
 "dU" = (
@@ -1687,7 +1774,8 @@
 /turf/unsimulated/floor{
 	icon_state = "cult";
 	luminosity = 3;
-	name = "plating"
+	name = "plating";
+
 	},
 /area/awaymission/labyrinth/boss)
 "dZ" = (
@@ -1721,17 +1809,20 @@
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_n";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_e";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_w";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /area/awaymission/labyrinth/cave)
 "ec" = (
@@ -1747,22 +1838,26 @@
 /turf/unsimulated/floor{
 	dir = 8;
 	icon_state = "asteroid";
-	name = "dirt"
+	name = "dirt";
+
 	},
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_w";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_s";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /turf/unsimulated/wall/exterior{
 	density = 0;
 	icon_state = "rock_side_e";
-	name = "solid rock"
+	name = "solid rock";
+
 	},
 /area/awaymission/labyrinth/cave)
 "ee" = (
@@ -1775,7 +1870,8 @@
 /turf/unsimulated/floor{
 	dir = 1;
 	icon_state = "rampbottom";
-	name = "stairs"
+	name = "stairs";
+
 	},
 /area/awaymission/labyrinth/boss)
 "ef" = (
@@ -1788,7 +1884,8 @@
 /turf/unsimulated/floor{
 	dir = 1;
 	icon_state = "rampbottom";
-	name = "stairs"
+	name = "stairs";
+
 	},
 /area/awaymission/labyrinth/boss)
 

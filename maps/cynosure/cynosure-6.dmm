@@ -1205,6 +1205,13 @@
 	icon_state = "steel"
 	},
 /area/centcom/main_hall)
+"boo" = (
+/obj/structure/shuttle/falsewall_no_join{
+	icon = 'icons/turf/wall_masks_tgmc.dmi';
+	icon_state = "white2"
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/escape/centcom)
 "bos" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 10
@@ -10643,6 +10650,16 @@
 /obj/item/reagent_containers/food/drinks/cans/cola,
 /turf/unsimulated/beach/sand,
 /area/beach)
+"lQh" = (
+/obj/structure/table/standard,
+/obj/item/radio/headset/alt/syndicate,
+/obj/item/radio/headset/alt/syndicate,
+/obj/item/radio/headset/alt/syndicate,
+/obj/item/radio/headset/alt/syndicate,
+/turf/unsimulated/floor{
+	icon_state = "lino"
+	},
+/area/syndicate_station)
 "lQG" = (
 /obj/structure/table/standard,
 /obj/item/clipboard,
@@ -14623,16 +14640,6 @@
 /obj/effect/floor_decal/sign/small_4,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_chess)
-"qwr" = (
-/obj/structure/table/standard,
-/obj/item/radio/headset/alt/syndicate,
-/obj/item/radio/headset/alt/syndicate,
-/obj/item/radio/headset/alt/syndicate,
-/obj/item/radio/headset/alt/syndicate,
-/turf/unsimulated/floor{
-	icon_state = "lino"
-	},
-/area/syndicate_station)
 "qxg" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
@@ -84623,7 +84630,7 @@ iKp
 iKp
 iKp
 iKp
-qwr
+lQh
 nKa
 oXD
 iKp

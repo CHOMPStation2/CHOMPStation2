@@ -240,6 +240,7 @@
 /area/lunaship/hallway_starboard)
 "eh" = (
 /obj/structure/lattice,
+/obj/structure/lattice,
 /turf/space,
 /area/space)
 "er" = (
@@ -2677,6 +2678,10 @@
 /obj/structure/closet/walllocker_double/east,
 /turf/simulated/floor/tiled/eris/steel/bar_dance,
 /area/lunaship/bar)
+"LS" = (
+/obj/structure/lattice,
+/turf/space,
+/area/space)
 "Mb" = (
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 1
@@ -4542,7 +4547,7 @@ Bi
 Bi
 Bi
 Bi
-eh
+LS
 TA
 Ad
 si
@@ -4660,14 +4665,14 @@ si
 qx
 IY
 Gu
-eh
-eh
+LS
+LS
 ZL
 ZL
 PS
 ZL
-eh
-eh
+LS
+LS
 Rm
 Xe
 Cf
@@ -4722,14 +4727,14 @@ gQ
 Gu
 si
 si
-eh
-eh
+LS
+LS
 ZL
 ZL
 PS
 ZL
-eh
-eh
+LS
+LS
 si
 si
 Rm
@@ -4780,18 +4785,18 @@ si
 qx
 GI
 Lt
-eh
+LS
 si
 si
 si
-eh
-eh
+LS
+LS
 qz
 Dp
 BO
 qz
-eh
-eh
+LS
+LS
 si
 si
 si
@@ -4842,7 +4847,7 @@ IY
 yl
 Qu
 ZL
-eh
+LS
 si
 sC
 sC
@@ -4858,7 +4863,7 @@ Ri
 Ri
 si
 si
-eh
+LS
 ZL
 ZM
 Xe
@@ -4901,7 +4906,7 @@ aF
 Ge
 Gu
 si
-eh
+LS
 ZL
 ZL
 sC
@@ -4920,9 +4925,9 @@ oS
 Ri
 Ri
 Ri
-eh
+LS
 ZL
-eh
+LS
 si
 Rm
 HQ
@@ -4963,7 +4968,7 @@ ZY
 CJ
 si
 si
-eh
+LS
 sC
 sC
 sC
@@ -4984,10 +4989,10 @@ pR
 Ri
 Ri
 Ri
-eh
+LS
 si
 si
-eh
+LS
 xR
 kR
 Fs
@@ -5049,7 +5054,7 @@ Ri
 Ri
 Ri
 si
-eh
+LS
 ZL
 ZL
 Du
@@ -5085,7 +5090,7 @@ Rc
 si
 si
 Iv
-eh
+LS
 sC
 sC
 gl
@@ -5147,7 +5152,7 @@ si
 si
 si
 Iv
-eh
+LS
 sC
 ew
 Ee
@@ -5176,7 +5181,7 @@ jG
 Ri
 Ri
 ZL
-eh
+LS
 si
 si
 si
@@ -5238,7 +5243,7 @@ AS
 HC
 Ri
 Ri
-eh
+LS
 si
 si
 si
@@ -5982,7 +5987,7 @@ nz
 EF
 EF
 EF
-eh
+LS
 si
 si
 si
@@ -6044,7 +6049,7 @@ Hn
 EF
 EF
 ZL
-eh
+LS
 si
 si
 si
@@ -6077,7 +6082,7 @@ si
 si
 si
 Iv
-eh
+LS
 ve
 iq
 na
@@ -6165,7 +6170,7 @@ EF
 EF
 EF
 si
-eh
+LS
 ZL
 ZL
 Wn
@@ -6203,7 +6208,7 @@ VO
 CJ
 si
 si
-eh
+LS
 ve
 ve
 ve
@@ -6224,10 +6229,10 @@ qB
 EF
 EF
 EF
-eh
+LS
 si
 si
-eh
+LS
 Tg
 wP
 Gn
@@ -6265,7 +6270,7 @@ iA
 ZM
 rn
 si
-eh
+LS
 ZL
 ZL
 ve
@@ -6284,9 +6289,9 @@ lm
 EF
 EF
 EF
-eh
+LS
 ZL
-eh
+LS
 si
 cB
 mB
@@ -6330,7 +6335,7 @@ IY
 tW
 Qu
 ZL
-eh
+LS
 si
 ve
 ve
@@ -6346,7 +6351,7 @@ EF
 EF
 si
 si
-eh
+LS
 ZL
 Ge
 Xi
@@ -6396,14 +6401,14 @@ eh
 si
 si
 si
-eh
-eh
+LS
+LS
 qz
 Bi
 eN
 qz
-eh
-eh
+LS
+LS
 si
 si
 si
@@ -6458,14 +6463,14 @@ ZA
 rn
 si
 si
-eh
-eh
+LS
+LS
 ZL
 ZL
 PS
 ZL
-eh
-eh
+LS
+LS
 si
 si
 cB
@@ -6520,14 +6525,14 @@ si
 Dt
 IY
 rn
-eh
-eh
+LS
+LS
 ZL
 ZL
 PS
 ZL
-eh
-eh
+LS
+LS
 cB
 Xi
 EQ
@@ -6650,7 +6655,7 @@ Dp
 Dp
 Dp
 Dp
-eh
+LS
 YD
 Ad
 si

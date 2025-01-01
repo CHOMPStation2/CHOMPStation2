@@ -1049,6 +1049,12 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/submap/debrisfield/luxury_boat/bridge)
+"CZ" = (
+/obj/structure/grille,
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor/airless,
+/area/submap/debrisfield/luxury_boat/crew)
 "Dg" = (
 /obj/effect/decal/cleanable/blood/drip,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -1801,7 +1807,7 @@ wp
 JP
 JO
 ww
-tI
+CZ
 FB
 FB
 FB
@@ -1822,7 +1828,7 @@ dk
 MX
 pL
 JP
-tI
+CZ
 FB
 FB
 FB

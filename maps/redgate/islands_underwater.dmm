@@ -847,6 +847,10 @@
 /obj/random/humanoidremains,
 /turf/simulated/floor/water/underwater/sand,
 /area/redgate/islands/ruins)
+"qY" = (
+/obj/item/clothing/accessory/ring/material/gold,
+/turf/simulated/floor/water/underwater/sand,
+/area/redgate/islands/ruins)
 "rk" = (
 /obj/structure/flora/underwater/grass4,
 /turf/simulated/floor/water/underwater,
@@ -937,6 +941,11 @@
 /obj/structure/sign/flag/catpirate,
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/redgate/islands/piratecave)
+"tl" = (
+/obj/structure/table/woodentable,
+/obj/structure/table/woodentable,
+/turf/simulated/floor/wood/alt,
+/area/redgate/islands/bar)
 "ts" = (
 /obj/item/pickaxe/gold,
 /turf/simulated/floor/water/underwater/sand,
@@ -1223,10 +1232,6 @@
 	},
 /turf/simulated/floor/wood/alt,
 /area/redgate/islands/storeroom)
-"yn" = (
-/obj/item/clothing/accessory/ring/material/gold,
-/turf/simulated/floor/water/underwater/sand,
-/area/redgate/islands/ruins)
 "ys" = (
 /turf/simulated/floor/wood/alt,
 /area/redgate/islands/gamblingbackroom)
@@ -7024,7 +7029,7 @@ TY
 nA
 KB
 KB
-yn
+qY
 TY
 KB
 KB
@@ -18334,7 +18339,7 @@ PO
 zT
 zT
 Lx
-PO
+tl
 zT
 PO
 Ri

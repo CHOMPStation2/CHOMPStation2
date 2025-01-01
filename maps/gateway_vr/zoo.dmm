@@ -2385,6 +2385,14 @@
 	},
 /turf/simulated/floor,
 /area/awaymission/zoo/pirateship)
+"he" = (
+/obj/structure/table/standard,
+/obj/item/stack/material/glass{
+	amount = 15
+	},
+/obj/item/cell,
+/turf/simulated/shuttle/floor/darkred,
+/area/awaymission/zoo/syndieship)
 "hf" = (
 /obj/item/radio/intercom{
 	desc = "Talk through this. Evilly";
@@ -2603,6 +2611,15 @@
 "hF" = (
 /obj/machinery/recharger/wallcharger{
 	pixel_x = -25
+	},
+/turf/simulated/shuttle/floor/darkred,
+/area/awaymission/zoo/syndieship)
+"hG" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/obj/structure/bed/chair{
+	dir = 8
 	},
 /turf/simulated/shuttle/floor/darkred,
 /area/awaymission/zoo/syndieship)
@@ -8805,14 +8822,6 @@
 	},
 /turf/simulated/floor/airless,
 /area/awaymission/zoo/solars)
-"UW" = (
-/obj/structure/table/standard,
-/obj/item/stack/material/glass{
-	amount = 15
-	},
-/obj/item/cell,
-/turf/simulated/shuttle/floor/darkred,
-/area/awaymission/zoo/syndieship)
 
 (1,1,1) = {"
 aa
@@ -33109,7 +33118,7 @@ gr
 gr
 gI
 gY
-UW
+he
 gr
 gr
 gr
@@ -33726,7 +33735,7 @@ gN
 gN
 gr
 hu
-hu
+hG
 hu
 hu
 gN
