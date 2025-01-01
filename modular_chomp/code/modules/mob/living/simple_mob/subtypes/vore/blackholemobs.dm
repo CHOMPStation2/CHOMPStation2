@@ -95,12 +95,16 @@
 	to_chat(L, span_danger("\The [src] focuses on you!"))
 
 	do_windup_animation(A, leap_warmup)
+	
 	sleep(leap_warmup)
+	addtimer(CALLBACK(src, PROC_REF(doLeap), L), leap_warmup, TIMER_DELETE_ME)
 
+/mob/living/simple_mob/vore/otie/syndicate/blackhole/proc/doLeap(var/mob/living/L)
+	if(!L)
+		return
 	if(L.z != z)
 		set_AI_busy(FALSE)
 		return FALSE
-
 
 	status_flags |= LEAPING
 	visible_message(span_warning("\The [src] pounces at \the [L]!!"))
@@ -108,7 +112,6 @@
 	playsound(src, leap_sound, 75, 1)
 
 	addtimer(CALLBACK(src, PROC_REF(afterLeap), L), 0.5 SECONDS, TIMER_DELETE_ME)
-
 
 /mob/living/simple_mob/vore/otie/syndicate/blackhole/proc/afterLeap(var/mob/living/L)
 	if(status_flags & LEAPING)
@@ -876,6 +879,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 		visible_message(span_danger("\The [src]'s body violently explodes!"))
 		exploded = TRUE
 		explosion(src.loc, explosion_dev_range, explosion_heavy_range, explosion_light_range, explosion_flash_range)
+		gib(src)
 
 /mob/living/simple_mob/vore/blackhole/death()
 	visible_message(span_critical("\The [src]'s explosive implant lets out a shrill beep!!!"))
