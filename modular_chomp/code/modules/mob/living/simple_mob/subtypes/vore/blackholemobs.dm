@@ -96,7 +96,6 @@
 
 	do_windup_animation(A, leap_warmup)
 	
-	sleep(leap_warmup)
 	addtimer(CALLBACK(src, PROC_REF(doLeap), L), leap_warmup, TIMER_DELETE_ME)
 
 /mob/living/simple_mob/vore/otie/syndicate/blackhole/proc/doLeap(var/mob/living/L)
