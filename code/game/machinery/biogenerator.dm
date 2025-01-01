@@ -64,16 +64,16 @@
 
 	item_list = list()
 	item_list["Food Items"] = list(
-		BIOGEN_REAGENT("Milk x10", "milk", 10, 20),
-		BIOGEN_REAGENT("Milk x50", "milk", 50, 95),
-		BIOGEN_REAGENT("Cream x10", "cream", 10, 30),
-		BIOGEN_REAGENT("Cream x50", "cream", 50, 120),
+		BIOGEN_REAGENT("Milk x10", REAGENT_ID_MILK, 10, 20),
+		BIOGEN_REAGENT("Milk x50", REAGENT_ID_MILK, 50, 95),
+		BIOGEN_REAGENT("Cream x10", REAGENT_ID_CREAM, 10, 30),
+		BIOGEN_REAGENT("Cream x50", REAGENT_ID_CREAM, 50, 120),
 		BIOGEN_ITEM("Slab of meat", /obj/item/reagent_containers/food/snacks/meat, 1, 50),
 		BIOGEN_ITEM("Slabs of meat x5", /obj/item/reagent_containers/food/snacks/meat, 5, 250),
 	)
 	item_list["Cooking Ingredients"] = list(
-		BIOGEN_REAGENT("Universal Enzyme x10", "enzyme", 10, 30),
-		BIOGEN_REAGENT("Universal Enzyme x50", "enzyme", 50, 120),
+		BIOGEN_REAGENT("Universal Enzyme x10", REAGENT_ID_ENZYME, 10, 30),
+		BIOGEN_REAGENT("Universal Enzyme x50", REAGENT_ID_ENZYME, 50, 120),
 		BIOGEN_ITEM("Nutri-spread", /obj/item/reagent_containers/food/snacks/spreads, 1, 30),
 		BIOGEN_ITEM("Nutri-spread x5", /obj/item/reagent_containers/food/snacks/spreads, 5, 120),
 	)
@@ -135,14 +135,14 @@
 		ui = new(user, src, "Biogenerator", name)
 		ui.open()
 
-/obj/machinery/biogenerator/tgui_act(action, params)
+/obj/machinery/biogenerator/tgui_act(action, params, datum/tgui/ui)
 	if(..())
 		return
 
 	. = TRUE
 	switch(action)
 		if("activate")
-			INVOKE_ASYNC(src, PROC_REF(activate))
+			INVOKE_ASYNC(src, PROC_REF(activate), ui.user)
 			return TRUE
 		if("detach")
 			if(beaker)
@@ -166,11 +166,11 @@
 					return
 				var/cost = round(br.cost / build_eff)
 				if(cost > points)
-					to_chat(usr, span_danger("Insufficient biomass."))
+					to_chat(ui.user, span_danger("Insufficient biomass."))
 					return
 				var/amt_to_actually_dispense = round(min(beaker.reagents.get_free_space(), br.reagent_amt))
 				if(amt_to_actually_dispense <= 0)
-					to_chat(usr, span_danger("The loaded beaker is full!"))
+					to_chat(ui.user, span_danger("The loaded beaker is full!"))
 					return
 				points -= (cost * (amt_to_actually_dispense / br.reagent_amt))
 				beaker.reagents.add_reagent(br.reagent_id, amt_to_actually_dispense)
@@ -179,7 +179,7 @@
 
 			var/cost = round(bi.cost / build_eff)
 			if(cost > points)
-				to_chat(usr, span_danger("Insufficient biomass."))
+				to_chat(ui.user, span_danger("Insufficient biomass."))
 				return
 
 			points -= cost
@@ -263,20 +263,20 @@
 		return
 	tgui_interact(user)
 
-/obj/machinery/biogenerator/proc/activate()
-	if(usr.stat)
+/obj/machinery/biogenerator/proc/activate(mob/user)
+	if(user.stat)
 		return
 	if(stat) //NOPOWER etc
 		return
 	if(processing)
-		to_chat(usr, span_notice("The biogenerator is in the process of working."))
+		to_chat(user, span_notice("The biogenerator is in the process of working."))
 		return
 	var/S = 0
 	for(var/obj/item/reagent_containers/food/snacks/grown/I in contents)
 		S += 5
-		if(I.reagents.get_reagent_amount("nutriment") < 0.1)
+		if(I.reagents.get_reagent_amount(REAGENT_ID_NUTRIMENT) < 0.1)
 			points += 1
-		else points += I.reagents.get_reagent_amount("nutriment") * 10 * eat_eff
+		else points += I.reagents.get_reagent_amount(REAGENT_ID_NUTRIMENT) * 10 * eat_eff
 		qdel(I)
 	if(S)
 		processing = 1
@@ -289,7 +289,7 @@
 		playsound(src, 'sound/machines/biogenerator_end.ogg', 40, 1)
 		update_icon()
 	else
-		to_chat(usr, span_warning("Error: No growns inside. Please insert growns."))
+		to_chat(user, span_warning("Error: No growns inside. Please insert growns."))
 	return
 
 /obj/machinery/biogenerator/RefreshParts()

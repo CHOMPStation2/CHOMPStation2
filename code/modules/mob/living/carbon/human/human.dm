@@ -7,17 +7,13 @@
 
 	has_huds = TRUE 					//We do have HUDs (like health, wanted, status, not inventory slots)
 
-	vore_capacity = 3 // CHOMPEdit
-	vore_capacity_ex = list("stomach" = 3, "taur belly" = 3) //CHOMPEdit
-	vore_fullness_ex = list("stomach" = 0, "taur belly" = 0) //CHOMPEdit
-	vore_icon_bellies = list("stomach", "taur belly") //CHOMPEdit
+
+	vore_capacity = 3
+	vore_capacity_ex = list("stomach" = 3, "taur belly" = 3)
+	vore_fullness_ex = list("stomach" = 0, "taur belly" = 0)
+	vore_icon_bellies = list("stomach", "taur belly")
 	var/struggle_anim_stomach = FALSE
 	var/struggle_anim_taur = FALSE
-	/* CHOMPRemove Start, THIS ALL GOES TO MOB!
-	var/vore_sprite_color = list("stomach" = "#FFFFFF", "taur belly" = "#FFFFFF")
-	var/vore_sprite_multiply = list("stomach" = TRUE, "taur belly" = TRUE)
-	var/vore_fullness = 0
-	*/// CHOMPRemove End
 
 	var/embedded_flag					//To check if we've need to roll for damage on movement while an item is imbedded in us.
 	var/obj/item/rig/wearing_rig // This is very not good, but it's much much better than calling get_rig() every update_canmove() call.
@@ -72,7 +68,11 @@
 
 /mob/living/carbon/human/Destroy()
 	human_mob_list -= src
-	QDEL_NULL_LIST(organs)
+	QDEL_NULL_LIST(organs) // CHOMPEdit
+	/* //REMOVE - this is done on mob/living/Destroy
+	for(var/organ in organs)
+		qdel(organ)
+	*/
 	if(nif)
 		QDEL_NULL(nif)	//VOREStation Add
 	worn_clothing.Cut()
@@ -451,7 +451,7 @@
 								security_hud_text += span_bold("Major Crimes:") + " [R.fields["ma_crim"]]"
 								security_hud_text += span_bold("Details:") + " [R.fields["ma_crim_d"]]"
 								security_hud_text += span_bold("Notes:") + " [R.fields["notes"]]"
-								security_hud_text += "<a href='?src=\ref[src];secrecordComment=`'>\[View Comment Log\]</a>"
+								security_hud_text += "<a href='byond://?src=\ref[src];secrecordComment=`'>\[View Comment Log\]</a>"
 								to_chat(usr, span_filter_notice("[jointext(security_hud_text, "<br>")]"))
 								read = 1
 
@@ -480,7 +480,7 @@
 									counter++
 								if (counter == 1)
 									to_chat(usr, span_filter_notice("No comment found."))
-								to_chat(usr, span_filter_notice("<a href='?src=\ref[src];secrecordadd=`'>\[Add comment\]</a>"))
+								to_chat(usr, span_filter_notice("<a href='byond://?src=\ref[src];secrecordadd=`'>\[Add comment\]</a>"))
 
 			if(!read)
 				to_chat(usr, span_filter_notice("[span_red("Unable to locate a data core entry for this person.")]"))
@@ -571,7 +571,7 @@
 								medical_hud_text += span_bold("Major Disabilities:") + " [R.fields["ma_dis"]]"
 								medical_hud_text += span_bold("Details:") + " [R.fields["ma_dis_d"]]"
 								medical_hud_text += span_bold("Notes:") + " [R.fields["notes"]]"
-								medical_hud_text += "<a href='?src=\ref[src];medrecordComment=`'>\[View Comment Log\]</a>"
+								medical_hud_text += "<a href='byond://?src=\ref[src];medrecordComment=`'>\[View Comment Log\]</a>"
 								to_chat(usr, span_filter_notice("[jointext(medical_hud_text, "<br>")]"))
 								read = 1
 
@@ -600,7 +600,7 @@
 									counter++
 								if (counter == 1)
 									to_chat(usr, span_filter_notice("No comment found."))
-								to_chat(usr, span_filter_notice("<a href='?src=\ref[src];medrecordadd=`'>\[Add comment\]</a>"))
+								to_chat(usr, span_filter_notice("<a href='byond://?src=\ref[src];medrecordadd=`'>\[Add comment\]</a>"))
 
 			if(!read)
 				to_chat(usr, span_filter_notice("[span_red("Unable to locate a data core entry for this person.")]"))
@@ -657,7 +657,7 @@
 								emp_hud_text += span_bold("Religious Beliefs:") + " [R.fields["religion"]]"
 								emp_hud_text += span_bold("Known Languages:") + " [R.fields["languages"]]"
 								emp_hud_text += span_bold("Notes:") + " [R.fields["notes"]]"
-								emp_hud_text += "<a href='?src=\ref[src];emprecordComment=`'>\[View Comment Log\]</a>"
+								emp_hud_text += "<a href='byond://?src=\ref[src];emprecordComment=`'>\[View Comment Log\]</a>"
 								to_chat(usr, span_filter_notice("[jointext(emp_hud_text, "<br>")]"))
 								read = 1
 
@@ -686,7 +686,7 @@
 									counter++
 								if (counter == 1)
 									to_chat(usr, span_filter_notice("No comment found."))
-								to_chat(usr, span_filter_notice("<a href='?src=\ref[src];emprecordadd=`'>\[Add comment\]</a>"))
+								to_chat(usr, span_filter_notice("<a href='byond://?src=\ref[src];emprecordadd=`'>\[Add comment\]</a>"))
 
 			if(!read)
 				to_chat(usr, span_filter_notice("[span_red("Unable to locate a data core entry for this person.")]"))
@@ -948,7 +948,7 @@
 
 /mob/living/carbon/human/proc/remotesay()
 	set name = "Project mind"
-	set category = "Superpower"
+	set category = "Abilities.Superpower"
 
 	if(stat!=CONSCIOUS)
 		reset_view(0)
@@ -977,7 +977,7 @@
 
 /mob/living/carbon/human/proc/remoteobserve()
 	set name = "Remote View"
-	set category = "Superpower"
+	set category = "Abilities.Superpower"
 
 	if(stat!=CONSCIOUS)
 		remoteview_target = null
@@ -1038,7 +1038,7 @@
 /mob/living/carbon/human/revive()
 
 	if(should_have_organ(O_HEART))
-		vessel.add_reagent("blood",species.blood_volume-vessel.total_volume)
+		vessel.add_reagent(REAGENT_ID_BLOOD,species.blood_volume-vessel.total_volume)
 		fixblood()
 
 	species.create_organs(src) // Reset our organs/limbs.
@@ -1059,10 +1059,6 @@
 			dna.ResetUIFrom(src)
 			sync_organ_dna()
 	// end vorestation addition
-
-	for (var/ID in virus2)
-		var/datum/disease2/disease/V = virus2[ID]
-		V.cure(src)
 
 	losebreath = 0
 
@@ -1319,9 +1315,9 @@
 		make_blood()
 		if(vessel.total_volume < species.blood_volume)
 			vessel.maximum_volume = species.blood_volume
-			vessel.add_reagent("blood", species.blood_volume - vessel.total_volume)
+			vessel.add_reagent(REAGENT_ID_BLOOD, species.blood_volume - vessel.total_volume)
 		else if(vessel.total_volume > species.blood_volume)
-			vessel.remove_reagent("blood",vessel.total_volume - species.blood_volume) //This one should stay remove_reagent to work even lack of a O_heart
+			vessel.remove_reagent(REAGENT_ID_BLOOD,vessel.total_volume - species.blood_volume) //This one should stay remove_reagent to work even lack of a O_heart
 			vessel.maximum_volume = species.blood_volume
 		fixblood()
 		species.update_attack_types() //VOREStation Edit - Required for any trait that updates unarmed_types in setup.
@@ -1341,7 +1337,7 @@
 		return 0
 
 /mob/living/carbon/human/proc/bloody_doodle()
-	set category = "IC.Game" //CHOMPEdit
+	set category = "IC.Game"
 	set name = "Write in blood"
 	set desc = "Use blood on your hands to write a short message on the floor or a wall, murder mystery style."
 
@@ -1655,7 +1651,7 @@
 /mob/living/carbon/human/verb/pull_punches()
 	set name = "Pull Punches"
 	set desc = "Try not to hurt them."
-	set category = "IC.Game" //CHOMPEdit
+	set category = "IC.Game"
 
 	if(stat) return
 	pulling_punches = !pulling_punches
@@ -1799,7 +1795,7 @@
 		if(species?.flags & NO_BLOOD)
 			bloodtrail = 0
 		else
-			var/blood_volume = vessel.get_reagent_amount("blood")
+			var/blood_volume = vessel.get_reagent_amount(REAGENT_ID_BLOOD)
 			if(blood_volume < species?.blood_volume*species?.blood_level_fatal)
 				bloodtrail = 0	//Most of it's gone already, just leave it be
 			else
@@ -1848,21 +1844,3 @@
 	resting = !resting
 	to_chat(src, span_notice("You are now [resting ? "resting" : "getting up"]."))
 	update_canmove()
-
-/*CHOMPRemove Start
-/mob/living/carbon/human/proc/update_fullness()
-	var/list/new_fullness = list()
-	vore_fullness = 0
-	for(var/belly_class in vore_icon_bellies)
-		new_fullness[belly_class] = 0
-	for(var/obj/belly/B as anything in vore_organs)
-		new_fullness[B.belly_sprite_to_affect] += B.GetFullnessFromBelly()
-	for(var/belly_class in vore_icon_bellies)
-		new_fullness[belly_class] /= size_multiplier //Divided by pred's size so a macro mob won't get macro belly from a regular prey.
-		new_fullness[belly_class] = round(new_fullness[belly_class], 1) // Because intervals of 0.25 are going to make sprite artists cry.
-		vore_fullness_ex[belly_class] = min(vore_capacity_ex[belly_class], new_fullness[belly_class])
-		vore_fullness += new_fullness[belly_class]
-	vore_fullness = min(vore_capacity, vore_fullness)
-	update_vore_belly_sprite()
-	update_vore_tail_sprite()
-*///CHOMPRemove End

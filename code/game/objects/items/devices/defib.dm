@@ -132,7 +132,7 @@
 	if(!slot_check())
 		to_chat(user, span_warning("You need to equip [src] before taking out [paddles]."))
 	else
-		if(!usr.put_in_hands(paddles)) //Detach the paddles into the user's hands
+		if(!user.put_in_hands(paddles)) //Detach the paddles into the user's hands
 			to_chat(user, span_warning("You need a free hand to hold the paddles!"))
 		update_icon() //success
 
@@ -343,7 +343,7 @@
 	if(!heart)
 		return TRUE
 
-	var/blood_volume = H.vessel.get_reagent_amount("blood")
+	var/blood_volume = H.vessel.get_reagent_amount(REAGENT_ID_BLOOD)
 	if(!heart || heart.is_broken())
 		blood_volume *= 0.3
 	else if(heart.is_bruised())

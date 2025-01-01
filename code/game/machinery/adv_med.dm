@@ -127,7 +127,7 @@
 	if (occupant.client)
 		occupant.client.eye = occupant.client.mob
 		occupant.client.perspective = MOB_PERSPECTIVE
-	occupant.loc = src.loc
+	occupant.forceMove(src.loc) // was occupant.loc = src.loc, but that doesn't trigger exit(), and thus recursive radio listeners forwarded messages to the occupant as if they were still inside it for the rest of the round! OP21 #5f88307 Port
 	occupant = null
 	update_icon() //icon_state = "body_scanner_1" //VOREStation Edit - Health display for consoles with light and such.
 	SStgui.update_uis(src)
@@ -189,7 +189,7 @@
 		occupantData["health"] = H.health
 		occupantData["maxHealth"] = H.getMaxHealth()
 
-		occupantData["hasVirus"] = H.virus2.len
+		occupantData["hasVirus"] = LAZYLEN(H.viruses)
 
 		occupantData["bruteLoss"] = H.getBruteLoss()
 		occupantData["oxyLoss"] = H.getOxyLoss()
@@ -213,7 +213,7 @@
 
 		var/bloodData[0]
 		if(H.vessel)
-			var/blood_volume = round(H.vessel.get_reagent_amount("blood"))
+			var/blood_volume = round(H.vessel.get_reagent_amount(REAGENT_ID_BLOOD))
 			var/blood_max = H.species.blood_volume
 			bloodData["volume"] = blood_volume
 			bloodData["percent"] = round(((blood_volume / blood_max)*100))
@@ -379,8 +379,12 @@
 		dat += (occupant.health > (occupant.getMaxHealth() / 2) ? span_blue(health_text) : span_red(health_text))
 		dat += "<br>"
 
-		if(occupant.virus2.len)
-			dat += span_red("Viral pathogen detected in blood stream.") + "<BR>"
+		if(LAZYLEN(occupant.viruses))
+			for(var/datum/disease/D in occupant.GetViruses())
+				if(D.visibility_flags & HIDDEN_SCANNER)
+					continue
+				else
+					dat += span_red("Viral pathogen detected in blood stream.") + "<BR>"
 
 		var/damage_string = null
 		damage_string = "\t-Brute Damage %: [occupant.getBruteLoss()]"
@@ -412,7 +416,7 @@
 			dat += "Large growth detected in frontal lobe, possibly cancerous. Surgical removal is recommended.<br>"
 
 		if(occupant.vessel)
-			var/blood_volume = round(occupant.vessel.get_reagent_amount("blood"))
+			var/blood_volume = round(occupant.vessel.get_reagent_amount(REAGENT_ID_BLOOD))
 			var/blood_max = occupant.species.blood_volume
 			var/blood_percent =  blood_volume / blood_max
 			blood_percent *= 100

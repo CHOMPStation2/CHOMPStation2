@@ -13,7 +13,7 @@
 	thrown_force_divisor = 0.5
 	item_state = "shard-glass"
 	attack_verb = list("stabbed", "slashed", "sliced", "cut")
-	default_material = "glass"
+	default_material = MAT_GLASS
 	unbreakable = 1 //It's already broken.
 	drops_debris = 0
 
@@ -65,8 +65,7 @@
 	var/light_glove_d = rand(2, 4)
 	var/no_glove_d = rand(4, 6)
 	var/list/forbidden_gloves = list(
-			/obj/item/clothing/gloves/sterile,
-			/obj/item/clothing/gloves/knuckledusters
+			/obj/item/clothing/gloves/sterile
 		)
 
 	if(src == user.l_hand)
@@ -145,7 +144,7 @@
 
 // Preset types - left here for the code that uses them
 /obj/item/material/shard/shrapnel/New(loc)
-	..(loc, "steel")
+	..(loc, MAT_STEEL)
 
 /obj/item/material/shard/phoron/New(loc)
-	..(loc, "borosilicate glass")
+	..(loc, MAT_PGLASS)

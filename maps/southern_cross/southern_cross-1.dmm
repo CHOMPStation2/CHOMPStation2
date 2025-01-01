@@ -13549,19 +13549,6 @@
 "aAT" = (
 /turf/simulated/floor/tiled/steel,
 /area/construction/firstdeck/construction3)
-"aAU" = (
-/obj/structure/table/steel,
-/obj/machinery/cell_charger,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/turf/simulated/floor/tiled/steel,
-/area/construction/firstdeck/construction3)
 "aAV" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
@@ -21037,20 +21024,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hangar/two)
-"aPN" = (
-/obj/structure/table/steel,
-/obj/machinery/cell_charger{
-	pixel_y = 5
-	},
-/obj/item/multitool,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/stack/cable_coil,
-/obj/item/stack/cable_coil,
-/turf/simulated/floor,
-/area/storage/tech)
 "aPO" = (
 /obj/structure/table/rack{
 	dir = 8;
@@ -26854,34 +26827,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/security_lockerroom)
-"aZK" = (
-/obj/structure/closet/secure_closet/security,
-/obj/structure/cable/green{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/obj/machinery/power/apc{
-	name = "south bump";
-	pixel_y = -24
-	},
-/obj/machinery/light_switch{
-	pixel_x = 12;
-	pixel_y = -24
-	},
-/obj/item/clothing/glasses/hud/security,
-/obj/item/radio/intercom/department/security{
-	dir = 8;
-	icon_state= "secintercom";
-	pixel_x = 21
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/red/border{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/security/security_lockerroom)
 "aZL" = (
 /obj/machinery/light{
 	dir = 8
@@ -27754,25 +27699,6 @@
 	},
 /obj/effect/floor_decal/corner/red/bordercorner{
 	dir = 1
-	},
-/turf/simulated/floor/tiled,
-/area/security/main)
-"bbo" = (
-/obj/item/radio/intercom/department/security{
-	dir = 8;
-	icon_state= "secintercom";
-	pixel_x = 21
-	},
-/obj/structure/table/standard,
-/obj/machinery/chemical_dispenser/bar_soft/full{
-	dir = 8
-	},
-/obj/item/storage/box/glasses/square,
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/red/border{
-	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/security/main)
@@ -30342,32 +30268,6 @@
 	},
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 1
-	},
-/turf/simulated/floor/tiled/white,
-/area/security/aid_station)
-"bfu" = (
-/obj/structure/table/standard,
-/obj/item/radio/intercom/department/security{
-	dir = 8;
-	icon_state= "secintercom";
-	pixel_x = 21
-	},
-/obj/item/bodybag/cryobag{
-	pixel_x = 6
-	},
-/obj/item/storage/firstaid/regular{
-	pixel_x = 5;
-	pixel_y = 5
-	},
-/obj/machinery/camera/network/security{
-	c_tag = "SEC - Medical Station";
-	dir = 8
-	},
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 5
-	},
-/obj/effect/floor_decal/corner/paleblue/border{
-	dir = 5
 	},
 /turf/simulated/floor/tiled/white,
 /area/security/aid_station)
@@ -33514,18 +33414,6 @@
 "bkf" = (
 /turf/simulated/floor/lino,
 /area/security/detectives_office)
-"bkg" = (
-/obj/structure/closet/wardrobe/detective,
-/obj/item/radio/intercom/department/security{
-	dir = 8;
-	icon_state= "secintercom";
-	pixel_x = 21
-	},
-/obj/structure/noticeboard{
-	pixel_y = 30
-	},
-/turf/simulated/floor/lino,
-/area/security/detectives_office)
 "bkh" = (
 /obj/item/radio/intercom{
 	dir = 8;
@@ -33553,26 +33441,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/lobby)
-"bkj" = (
-/obj/machinery/computer/secure_data{
-	dir = 8
-	},
-/obj/item/radio/intercom/department/security{
-	dir = 8;
-	icon_state= "secintercom";
-	pixel_x = 21
-	},
-/obj/machinery/newscaster{
-	pixel_y = -30
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 6
-	},
-/obj/effect/floor_decal/corner/red/border{
-	dir = 6
-	},
-/turf/simulated/floor/tiled,
-/area/security/security_processing)
 "bkk" = (
 /obj/structure/bed/chair/office/dark,
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -33618,20 +33486,6 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 9
-	},
-/turf/simulated/floor/tiled,
-/area/security/lobby)
-"bkp" = (
-/obj/item/radio/intercom/department/security{
-	dir = 8;
-	icon_state= "secintercom";
-	pixel_x = 21
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/red/border{
-	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/security/lobby)
@@ -36239,29 +36093,6 @@
 /obj/machinery/status_display,
 /turf/simulated/wall,
 /area/security/lobby)
-"bpp" = (
-/obj/structure/filingcabinet,
-/obj/item/radio/intercom/department/security{
-	dir = 4;
-	icon_state= "secintercom";
-	pixel_x = -21
-	},
-/obj/machinery/ai_status_display{
-	pixel_x = -32;
-	pixel_y = -32
-	},
-/obj/machinery/alarm{
-	dir = 1;
-	pixel_y = -22
-	},
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 10
-	},
-/obj/effect/floor_decal/corner/blue/border{
-	dir = 10
-	},
-/turf/simulated/floor/tiled/dark,
-/area/crew_quarters/heads/sc/hos)
 "bpq" = (
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/blue/border,
@@ -37614,34 +37445,6 @@
 	dir = 1;
 	name = "Station Intercom (General)";
 	pixel_y = 21
-	},
-/turf/simulated/floor/tiled/dark,
-/area/ai_monitored/storage/eva)
-"bsh" = (
-/obj/structure/table/reinforced,
-/obj/machinery/cell_charger,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/stack/cable_coil{
-	pixel_x = 3;
-	pixel_y = -7
-	},
-/obj/item/stack/cable_coil{
-	pixel_x = 3;
-	pixel_y = -7
-	},
-/obj/item/radio/off,
-/obj/item/radio/off,
-/obj/item/radio/off,
-/obj/effect/floor_decal/industrial/warning,
-/obj/item/stack/material/copper{
-	amount = 10
 	},
 /turf/simulated/floor/tiled/dark,
 /area/ai_monitored/storage/eva)
@@ -45238,27 +45041,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
-"bFG" = (
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/obj/machinery/alarm{
-	pixel_y = 23
-	},
-/obj/structure/table/steel,
-/obj/machinery/cell_charger,
-/obj/item/stack/cable_coil,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/substation/research)
 "bFH" = (
 /obj/machinery/computer/aifixer{
 	dir = 4
@@ -51580,30 +51362,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/lab)
-"bRe" = (
-/obj/structure/table/standard,
-/obj/machinery/cell_charger,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/radio/intercom{
-	dir = 1;
-	name = "Station Intercom (General)";
-	pixel_y = 21
-	},
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/purple/border{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/white,
-/area/rnd/lab)
 "bRf" = (
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
@@ -51950,27 +51708,6 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/steel,
-/area/rnd/misc_lab)
-"bRy" = (
-/obj/structure/table/standard,
-/obj/structure/table/standard,
-/obj/item/stack/cable_coil,
-/obj/item/multitool,
-/obj/machinery/cell_charger,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/machinery/sparker{
-	dir = 4;
-	id = "Xenobio";
-	pixel_x = -25
-	},
-/turf/simulated/floor/reinforced,
 /area/rnd/misc_lab)
 "bRz" = (
 /obj/structure/table/standard,
@@ -55682,19 +55419,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/workshop)
-"bZk" = (
-/obj/structure/table/steel_reinforced,
-/obj/machinery/cell_charger,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/tool/wrench,
-/obj/machinery/status_display{
-	pixel_y = -32
-	},
-/turf/simulated/floor/tiled/dark,
-/area/engineering/workshop)
 "bZl" = (
 /obj/machinery/computer/station_alert/all{
 	dir = 4
@@ -56557,37 +56281,6 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/freezer,
-/area/crew_quarters/heads/sc/chief)
-"caY" = (
-/obj/structure/table/reinforced,
-/obj/structure/cable/green,
-/obj/machinery/power/apc{
-	name = "south bump";
-	pixel_y = -24
-	},
-/obj/machinery/light_switch{
-	pixel_x = 12;
-	pixel_y = -24
-	},
-/obj/item/rcd_ammo,
-/obj/item/rcd_ammo,
-/obj/item/rcd_ammo,
-/obj/item/rcd_ammo,
-/obj/item/rcd,
-/obj/machinery/button/windowtint{
-	id = "ceoffice";
-	pixel_x = -12;
-	pixel_y = -24
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/sc/chief)
 "caZ" = (
 /obj/structure/table/rack,
@@ -67809,44 +67502,6 @@
 /obj/machinery/status_display,
 /turf/simulated/wall,
 /area/quartermaster/qm)
-"cxv" = (
-/obj/structure/table/reinforced,
-/obj/item/stack/cable_coil{
-	pixel_x = 3;
-	pixel_y = -7
-	},
-/obj/item/stack/cable_coil{
-	pixel_x = 3;
-	pixel_y = -7
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/storage/toolbox/mechanical{
-	pixel_x = -2;
-	pixel_y = -1
-	},
-/obj/machinery/alarm{
-	dir = 1;
-	pixel_y = -22
-	},
-/obj/item/storage/briefcase/inflatable{
-	pixel_x = 3;
-	pixel_y = 6
-	},
-/obj/item/storage/briefcase/inflatable{
-	pixel_y = 3
-	},
-/obj/item/storage/briefcase/inflatable{
-	pixel_x = -3
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/ai_monitored/storage/emergency/eva)
 "cxw" = (
 /obj/structure/table/reinforced,
 /obj/machinery/cell_charger,
@@ -76097,25 +75752,6 @@
 	name_tag = "Medbay Subgrid"
 	},
 /obj/effect/floor_decal/industrial/warning/corner,
-/turf/simulated/floor/plating,
-/area/maintenance/substation/medical)
-"cMn" = (
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/obj/structure/table/steel,
-/obj/machinery/cell_charger,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/machinery/alarm{
-	dir = 8;
-	pixel_x = 22
-	},
-/obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/plating,
 /area/maintenance/substation/medical)
 "cMo" = (
@@ -93159,23 +92795,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/storage/primary)
-"drs" = (
-/obj/machinery/computer/secure_data{
-	dir = 4
-	},
-/obj/item/radio/intercom/department/security{
-	dir = 4;
-	icon_state= "secintercom";
-	pixel_x = -21
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/red/border{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/security/checkpoint2)
 "drt" = (
 /obj/random/maintenance/clean,
 /obj/random/maintenance/clean,
@@ -112938,70 +112557,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/central)
-"ebQ" = (
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000;
-	pixel_x = 5;
-	pixel_y = -5
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000;
-	pixel_x = 5;
-	pixel_y = -5
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000;
-	pixel_x = 5;
-	pixel_y = -5
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000;
-	pixel_x = 5;
-	pixel_y = -5
-	},
-/obj/item/assembly/prox_sensor{
-	pixel_x = -8;
-	pixel_y = 4
-	},
-/obj/item/assembly/prox_sensor{
-	pixel_x = -8;
-	pixel_y = 4
-	},
-/obj/item/storage/firstaid/regular{
-	empty = 1;
-	name = "First-Aid (empty)"
-	},
-/obj/item/storage/firstaid/regular{
-	empty = 1;
-	name = "First-Aid (empty)"
-	},
-/obj/item/storage/firstaid/regular{
-	empty = 1;
-	name = "First-Aid (empty)"
-	},
-/obj/item/healthanalyzer,
-/obj/item/healthanalyzer,
-/obj/item/healthanalyzer,
-/obj/item/flash/synthetic,
-/obj/item/flash/synthetic,
-/obj/item/flash/synthetic,
-/obj/item/flash/synthetic,
-/obj/item/flash/synthetic,
-/obj/item/flash/synthetic,
-/obj/item/stack/cable_coil,
-/obj/item/stack/cable_coil,
-/obj/machinery/light,
-/obj/effect/floor_decal/borderfloorwhite,
-/obj/effect/floor_decal/corner/purple/border,
-/obj/structure/closet{
-	name = "robotics parts"
-	},
-/turf/simulated/floor/tiled/white,
-/area/assembly/robotics)
 "ebR" = (
 /obj/item/clothing/glasses/welding,
 /obj/item/clothing/glasses/welding,
@@ -114172,12 +113727,194 @@
 /obj/structure/railing,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/aft)
+"fTM" = (
+/obj/structure/table/reinforced,
+/obj/machinery/cell_charger,
+/obj/item/cell/high,
+/obj/item/cell/high,
+/obj/item/stack/cable_coil{
+	pixel_x = 3;
+	pixel_y = -7
+	},
+/obj/item/stack/cable_coil{
+	pixel_x = 3;
+	pixel_y = -7
+	},
+/obj/item/radio/off,
+/obj/item/radio/off,
+/obj/item/radio/off,
+/obj/effect/floor_decal/industrial/warning,
+/obj/item/stack/material/copper{
+	amount = 10
+	},
+/turf/simulated/floor/tiled/dark,
+/area/ai_monitored/storage/eva)
+"gfv" = (
+/obj/structure/closet/wardrobe/detective,
+/obj/item/radio/intercom/department/security{
+	dir = 8;
+	icon_state= "secintercom";
+	pixel_x = 21
+	},
+/obj/structure/noticeboard{
+	pixel_y = 30
+	},
+/turf/simulated/floor/lino,
+/area/security/detectives_office)
+"guj" = (
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/table/steel,
+/obj/machinery/cell_charger,
+/obj/item/cell/high,
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 22
+	},
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/plating,
+/area/maintenance/substation/medical)
+"hDS" = (
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/machinery/alarm{
+	pixel_y = 23
+	},
+/obj/structure/table/steel,
+/obj/machinery/cell_charger,
+/obj/item/stack/cable_coil,
+/obj/item/cell/high,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/substation/research)
+"hYp" = (
+/obj/item/cell/high{
+	pixel_x = 5;
+	pixel_y = -5
+	},
+/obj/item/cell/high{
+	pixel_x = 5;
+	pixel_y = -5
+	},
+/obj/item/cell/high{
+	pixel_x = 5;
+	pixel_y = -5
+	},
+/obj/item/cell/high{
+	pixel_x = 5;
+	pixel_y = -5
+	},
+/obj/item/assembly/prox_sensor{
+	pixel_x = -8;
+	pixel_y = 4
+	},
+/obj/item/assembly/prox_sensor{
+	pixel_x = -8;
+	pixel_y = 4
+	},
+/obj/item/storage/firstaid/regular{
+	empty = 1;
+	name = "First-Aid (empty)"
+	},
+/obj/item/storage/firstaid/regular{
+	empty = 1;
+	name = "First-Aid (empty)"
+	},
+/obj/item/storage/firstaid/regular{
+	empty = 1;
+	name = "First-Aid (empty)"
+	},
+/obj/item/healthanalyzer,
+/obj/item/healthanalyzer,
+/obj/item/healthanalyzer,
+/obj/item/flash/synthetic,
+/obj/item/flash/synthetic,
+/obj/item/flash/synthetic,
+/obj/item/flash/synthetic,
+/obj/item/flash/synthetic,
+/obj/item/flash/synthetic,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/obj/machinery/light,
+/obj/effect/floor_decal/borderfloorwhite,
+/obj/effect/floor_decal/corner/purple/border,
+/obj/structure/closet{
+	name = "robotics parts"
+	},
+/turf/simulated/floor/tiled/white,
+/area/assembly/robotics)
 "ioU" = (
 /obj/structure/railing{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/central)
+"iOt" = (
+/obj/structure/table/steel,
+/obj/machinery/cell_charger,
+/obj/item/cell/high,
+/obj/item/cell/high,
+/turf/simulated/floor/tiled/steel,
+/area/construction/firstdeck/construction3)
+"jcA" = (
+/obj/structure/table/steel,
+/obj/machinery/cell_charger{
+	pixel_y = 5
+	},
+/obj/item/multitool,
+/obj/item/cell/high,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/turf/simulated/floor,
+/area/storage/tech)
+"jAW" = (
+/obj/structure/table/reinforced,
+/obj/structure/cable/green,
+/obj/machinery/power/apc{
+	name = "south bump";
+	pixel_y = -24
+	},
+/obj/machinery/light_switch{
+	pixel_x = 12;
+	pixel_y = -24
+	},
+/obj/item/rcd_ammo,
+/obj/item/rcd_ammo,
+/obj/item/rcd_ammo,
+/obj/item/rcd_ammo,
+/obj/item/rcd,
+/obj/machinery/button/windowtint{
+	id = "ceoffice";
+	pixel_x = -12;
+	pixel_y = -24
+	},
+/obj/item/cell/high,
+/obj/item/cell/high,
+/turf/simulated/floor/tiled/dark,
+/area/crew_quarters/heads/sc/chief)
+"jVJ" = (
+/obj/structure/table/standard,
+/obj/structure/table/standard,
+/obj/item/stack/cable_coil,
+/obj/item/multitool,
+/obj/machinery/cell_charger,
+/obj/item/cell/high,
+/obj/item/cell/high,
+/obj/machinery/sparker{
+	dir = 4;
+	id = "Xenobio";
+	pixel_x = -25
+	},
+/turf/simulated/floor/reinforced,
+/area/rnd/misc_lab)
 "oJY" = (
 /obj/structure/railing,
 /turf/simulated/floor/tiled,
@@ -114186,6 +113923,88 @@
 /obj/structure/railing,
 /turf/simulated/floor/tiled,
 /area/rnd/research)
+"pZk" = (
+/obj/structure/filingcabinet,
+/obj/item/radio/intercom/department/security{
+	dir = 4;
+	icon_state= "secintercom";
+	pixel_x = -21
+	},
+/obj/machinery/ai_status_display{
+	pixel_x = -32;
+	pixel_y = -32
+	},
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -22
+	},
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/dark,
+/area/crew_quarters/heads/sc/hos)
+"rhe" = (
+/obj/item/radio/intercom/department/security{
+	dir = 8;
+	icon_state= "secintercom";
+	pixel_x = 21
+	},
+/obj/structure/table/standard,
+/obj/machinery/chemical_dispenser/bar_soft/full{
+	dir = 8
+	},
+/obj/item/storage/box/glasses/square,
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/security/main)
+"svi" = (
+/obj/item/radio/intercom/department/security{
+	dir = 8;
+	icon_state= "secintercom";
+	pixel_x = 21
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/security/lobby)
+"tsV" = (
+/obj/structure/table/standard,
+/obj/item/radio/intercom/department/security{
+	dir = 8;
+	icon_state= "secintercom";
+	pixel_x = 21
+	},
+/obj/item/bodybag/cryobag{
+	pixel_x = 6
+	},
+/obj/item/storage/firstaid/regular{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/machinery/camera/network/security{
+	c_tag = "SEC - Medical Station";
+	dir = 8
+	},
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/white,
+/area/security/aid_station)
 "twa" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/glass_external{
@@ -114203,16 +114022,141 @@
 /obj/effect/landmark/engine_loader,
 /turf/space,
 /area/space)
+"uyI" = (
+/obj/structure/closet/secure_closet/security,
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/machinery/power/apc{
+	name = "south bump";
+	pixel_y = -24
+	},
+/obj/machinery/light_switch{
+	pixel_x = 12;
+	pixel_y = -24
+	},
+/obj/item/clothing/glasses/hud/security,
+/obj/item/radio/intercom/department/security{
+	dir = 8;
+	icon_state= "secintercom";
+	pixel_x = 21
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/security/security_lockerroom)
+"vTx" = (
+/obj/machinery/computer/secure_data{
+	dir = 8
+	},
+/obj/item/radio/intercom/department/security{
+	dir = 8;
+	icon_state= "secintercom";
+	pixel_x = 21
+	},
+/obj/machinery/newscaster{
+	pixel_y = -30
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 6
+	},
+/turf/simulated/floor/tiled,
+/area/security/security_processing)
+"vTF" = (
+/obj/structure/table/reinforced,
+/obj/item/stack/cable_coil{
+	pixel_x = 3;
+	pixel_y = -7
+	},
+/obj/item/stack/cable_coil{
+	pixel_x = 3;
+	pixel_y = -7
+	},
+/obj/item/cell/high,
+/obj/item/cell/high,
+/obj/item/storage/toolbox/mechanical{
+	pixel_x = -2;
+	pixel_y = -1
+	},
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -22
+	},
+/obj/item/storage/briefcase/inflatable{
+	pixel_x = 3;
+	pixel_y = 6
+	},
+/obj/item/storage/briefcase/inflatable{
+	pixel_y = 3
+	},
+/obj/item/storage/briefcase/inflatable{
+	pixel_x = -3
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/ai_monitored/storage/emergency/eva)
 "vTW" = (
 /obj/structure/railing{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/stairwell)
+"wcf" = (
+/obj/structure/table/standard,
+/obj/machinery/cell_charger,
+/obj/item/cell/high,
+/obj/item/cell/high,
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/rnd/lab)
 "xjf" = (
 /obj/machinery/smartfridge/sheets/persistent,
 /turf/simulated/floor/plating,
 /area/quartermaster/foyer)
+"xvx" = (
+/obj/structure/table/steel_reinforced,
+/obj/machinery/cell_charger,
+/obj/item/cell/high,
+/obj/item/tool/wrench,
+/obj/machinery/status_display{
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/dark,
+/area/engineering/workshop)
+"xTi" = (
+/obj/machinery/computer/secure_data{
+	dir = 4
+	},
+/obj/item/radio/intercom/department/security{
+	dir = 4;
+	icon_state= "secintercom";
+	pixel_x = -21
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/security/checkpoint2)
 
 (1,1,1) = {"
 aaa
@@ -143664,7 +143608,7 @@ aMQ
 aNI
 aOA
 aPj
-aPN
+jcA
 aNM
 aQC
 aRa
@@ -157008,7 +156952,7 @@ awr
 axJ
 ayF
 azP
-aAU
+iOt
 aCh
 aDj
 aEx
@@ -199917,7 +199861,7 @@ bSb
 bTS
 bVU
 bXF
-bZk
+xvx
 caW
 caW
 cek
@@ -201203,7 +201147,7 @@ bTW
 bVY
 chi
 bZo
-caY
+jAW
 bQk
 cel
 cen
@@ -205071,7 +205015,7 @@ cqi
 csd
 ctQ
 cvs
-cxv
+vTF
 coQ
 cAY
 cAY
@@ -210175,7 +210119,7 @@ bod
 bpi
 bqh
 brb
-bsh
+fTM
 btz
 buL
 brb
@@ -210938,7 +210882,7 @@ bgI
 bhE
 bix
 bjm
-bkg
+gfv
 bla
 bmi
 bnk
@@ -211031,7 +210975,7 @@ dok
 doY
 dpF
 dqf
-drs
+xTi
 drY
 dCZ
 dsy
@@ -213508,7 +213452,7 @@ bgQ
 bhN
 biH
 bjs
-bkp
+svi
 blk
 bmp
 blk
@@ -214027,7 +213971,7 @@ blm
 bmr
 bnu
 bop
-bpp
+pZk
 bkq
 brj
 bsw
@@ -214274,7 +214218,7 @@ bdl
 bdS
 beD
 bfk
-bkj
+vTx
 bdg
 bhQ
 biK
@@ -216835,9 +216779,9 @@ aXD
 aYf
 aYN
 aZq
-aZK
+uyI
 baw
-bbo
+rhe
 bca
 bcH
 bds
@@ -217100,7 +217044,7 @@ aYj
 bdt
 bea
 beJ
-bfu
+tsV
 bgn
 bha
 bhX
@@ -218701,7 +218645,7 @@ cGm
 cHP
 cJz
 cKV
-cMn
+guj
 cNG
 cOT
 cKV
@@ -219180,7 +219124,7 @@ bzN
 bxi
 bCC
 bDZ
-bFG
+hDS
 bHn
 bIQ
 bDZ
@@ -219444,7 +219388,7 @@ bEa
 bLN
 bNR
 bPw
-bRe
+wcf
 bSU
 bUQ
 bWN
@@ -222277,7 +222221,7 @@ bUY
 bWS
 bYD
 cag
-ebQ
+hYp
 bPC
 cfd
 cgH
@@ -225612,7 +225556,7 @@ bKA
 bMk
 bOh
 bPF
-bRy
+jVJ
 bTo
 bVk
 bXc

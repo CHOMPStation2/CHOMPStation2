@@ -52,9 +52,9 @@
 
 /obj/effect/overmap/visitable/planet/thor/Initialize()
 	atmosphere = new(CELL_VOLUME) // Necessary for the planet overmap icon to generate properly, but gas type does not seem to matter.
-	atmosphere.adjust_gas_temp("carbon_dioxide", THOR_MOL_CO2, THOR_AVG_TEMP)
-	atmosphere.adjust_gas_temp("nitrogen", THOR_MOL_N2, THOR_AVG_TEMP)
-	atmosphere.adjust_gas_temp("oxygen", THOR_MOL_O2, THOR_AVG_TEMP)
+	atmosphere.adjust_gas_temp(GAS_CO2, THOR_MOL_CO2, THOR_AVG_TEMP)
+	atmosphere.adjust_gas_temp(GAS_N2, THOR_MOL_N2, THOR_AVG_TEMP)
+	atmosphere.adjust_gas_temp(GAS_O2, THOR_MOL_O2, THOR_AVG_TEMP)
 
 	. = ..()
 
@@ -84,11 +84,7 @@
 /area/surface/thor/dorms
 	name = "Jungle Outpost Generic Dorms"
 	icon_state = "Sleep"
-	soundproofed = TRUE
-	limit_mob_size = FALSE
-	block_suit_sensors = TRUE
-	flags = RAD_SHIELDED
-	block_tracking = TRUE
+	flags = RAD_SHIELDED | AREA_SOUNDPROOF | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING
 
 /area/surface/thor/dorms/pool1
 	name = "Jungle Outpost Pool Shack 1"

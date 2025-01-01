@@ -188,8 +188,7 @@ var/list/runechat_image_cache = list()
 				if(sched_remaining > CHAT_MESSAGE_SPAWN_TIME)
 					var/remaining_time = (sched_remaining) * (CHAT_MESSAGE_EXP_DECAY ** idx++) * (CHAT_MESSAGE_HEIGHT_DECAY ** combined_height)
 					m.scheduled_destruction = world.time + remaining_time
-					spawn(remaining_time)
-						m.end_of_life()
+					m.schedule_end_of_life(remaining_time)
 
 	// Build message image
 	message = image(loc = message_loc, layer = ABOVE_MOB_LAYER)
@@ -215,13 +214,16 @@ var/list/runechat_image_cache = list()
 
 	// Prepare for destruction
 	scheduled_destruction = world.time + (lifespan - CHAT_MESSAGE_EOL_FADE)
-	spawn(lifespan - CHAT_MESSAGE_EOL_FADE)
-		end_of_life()
+	schedule_end_of_life(lifespan - CHAT_MESSAGE_EOL_FADE)
 
 /datum/chatmessage/proc/unregister_qdel_self()  // this should only call owned_by if the client is destroyed
 	UnregisterSignal(owned_by, COMSIG_PARENT_QDELETING)
 	owned_by = null
 	qdel_self()
+
+/datum/chatmessage/proc/schedule_end_of_life(var/schedule)
+	addtimer(CALLBACK(src, PROC_REF(end_of_life)), schedule, TIMER_DELETE_ME)
+
 /**
   * Applies final animations to overlay CHAT_MESSAGE_EOL_FADE deciseconds prior to message deletion
   */
@@ -230,9 +232,7 @@ var/list/runechat_image_cache = list()
 		return
 	ending_life = TRUE
 	animate(message, alpha = 0, time = fadetime, flags = ANIMATION_PARALLEL)
-	spawn(fadetime)
-		if(!QDELETED(src))
-			qdel(src)
+	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(qdel), src), fadetime, TIMER_DELETE_ME)
 
 /**
   * Creates a message overlay at a defined location for a given speaker
@@ -368,10 +368,10 @@ var/list/runechat_image_cache = list()
 	return world.icon_size * 0.95
 
 /atom/movable/runechat_x_offset(width, height)
-	return (width - bound_width) * -0.5
+	return (width - bound_width) * -0.5 + get_oversized_icon_offsets()["x"]
 
 /atom/movable/runechat_y_offset(width, height)
-	return bound_height * 0.95
+	return bound_height * 0.95 + get_oversized_icon_offsets()["y"]
 
 /* Nothing special
 /mob/runechat_x_offset(width, height)

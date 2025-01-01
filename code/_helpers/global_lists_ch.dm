@@ -15,8 +15,6 @@ GLOBAL_LIST_INIT(slosh, list(
 
 var/global/list/item_tf_spawnpoints = list() // Global variable tracking which items are item tf spawnpoints
 
-/var/global/list/existing_metroids = list() //Global variable for tracking metroids for the event announcement. Needs to go here for load order.
-
 //stuff that only synths can eat
 var/global/list/edible_tech = list(/obj/item/cell,
 				/obj/item/circuitboard,

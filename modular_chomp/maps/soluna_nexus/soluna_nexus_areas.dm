@@ -22,7 +22,6 @@
 	icon_state = "shuttle"
 	requires_power = 0
 	dynamic_lighting = 1
-	flags = RAD_SHIELDED
 
 /area/turbolift/start
 	name = "\improper Turbolift Start"
@@ -172,6 +171,7 @@
 /area/hallway/primary/firstdeck/elevator
 	name = "\improper First Deck Central Elevator Access"
 	icon_state = "hallC"
+
 /area/rnd/xenobiology/xenoflora_isolation
 	name = "\improper Xenoflora Isolation"
 	icon_state = "xeno_f_store"
@@ -732,18 +732,15 @@
 
 /area/expoutpost/bar
 	name = "\improper Bar"
-	flags = RAD_SHIELDED
 
 /area/expoutpost/starbowhallway
 	name = "\improper Starboard Bow Hallway"
 
 /area/expoutpost/suite1
 	name = "\improper Suite One"
-	flags = RAD_SHIELDED
 
 /area/expoutpost/suite2
 	name = "\improper Suite Two"
-	flags = RAD_SHIELDED
 
 /area/expoutpost/pathfinderroom
 	name = "\improper Pathfinder's Ready-Room"
@@ -1083,33 +1080,28 @@
     icon_state = "bridge"
     lightswitch = 1
 
-/area/bridge/sleeping
+/area/bridge/sleep
     icon_state = "bridge"
-    flags = RAD_SHIELDED
-    limit_mob_size = FALSE
-    block_suit_sensors = TRUE
-    block_tracking = TRUE
-    soundproofed = TRUE
-    forbid_events = TRUE
+    flags = RAD_SHIELDED | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING | AREA_SOUNDPROOF | AREA_FORBID_EVENTS
 
-/area/bridge/sleeping/HoP_Quarters
+/area/bridge/sleep/HoP_Quarters
     name = "\improper HoP Quarters"
 
-/area/bridge/sleeping/CE_Quarters
+/area/bridge/sleep/CE_Quarters
     name = "\improper CE Quarters"
 
-/area/bridge/sleeping/CMO_Quarters
+/area/bridge/sleep/CMO_Quarters
     name = "\improper CMO Quarters"
-/area/bridge/sleeping/RD_Quarters
+/area/bridge/sleep/RD_Quarters
     name = "\improper RD Quarters"
 
-/area/bridge/sleeping/HoS_Quarters
+/area/bridge/sleep/HoS_Quarters
     name = "\improper HoS Quarters"
 
-/area/bridge/sleeping/Secretary_Quarters
+/area/bridge/sleep/Secretary_Quarters
     name = "\improper Secretary Quarters"
 
-/area/bridge/sleeping/Captain_Quarters
+/area/bridge/sleep/Captain_Quarters
     name = "\improper Captain Quarters"
 
 /area/bridge/Leisure_Room
@@ -1817,12 +1809,12 @@
 /area/crew_quarters/Midnight_Bar
     name = "\improper Midnight Bar"
     icon_state = "gaming"
-    flags = RAD_SHIELDED
+    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO | AREA_ALLOW_CLOCKOUT
 
 /area/crew_quarters/Midnight_Kitchen
     name = "\improper Midnight Kitchen"
     icon_state = "gaming"
-    flags = RAD_SHIELDED
+    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO | AREA_ALLOW_CLOCKOUT
 
 /area/crew_quarters/Gallery
     name = "\improper Gallery"
@@ -1858,31 +1850,31 @@
 /area/crew_quarters/Central_Restroom
     name = "\improper Central Restroom"
     icon_state = "gaming"
-    flags = RAD_SHIELDED
+    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO | AREA_ALLOW_CLOCKOUT
     lightswitch = 1
 
 /area/crew_quarters/For_Restroom
     name = "\improper For Restroom"
     icon_state = "gaming"
-    flags = RAD_SHIELDED
+    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO | AREA_ALLOW_CLOCKOUT
     lightswitch = 1
 
 /area/crew_quarters/Star_Restroom
     name = "\improper Star Restroom"
     icon_state = "gaming"
-    flags = RAD_SHIELDED
+    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO | AREA_ALLOW_CLOCKOUT
     lightswitch = 1
 
 /area/crew_quarters/Aft_Restroom
     name = "\improper Aft Restroom"
     icon_state = "gaming"
-    flags = RAD_SHIELDED
+    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO | AREA_ALLOW_CLOCKOUT
     lightswitch = 1
 
 /area/crew_quarters/Port_Restroom
     name = "\improper Port Restroom"
     icon_state = "gaming"
-    flags = RAD_SHIELDED
+    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO | AREA_ALLOW_CLOCKOUT
     lightswitch = 1
 
 /area/crew_quarters/Library
@@ -1911,34 +1903,34 @@
 /area/crew_quarters/Chomp_Hydroponics
     name = "\improper Chomp Hydroponics"
     icon_state = "gaming"
-    flags = RAD_SHIELDED
+    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO | AREA_ALLOW_CLOCKOUT
 
 /area/crew_quarters/Chomp_Stage
     name = "\improper Chomp Convention Stage"
     icon_state = "gaming"
-    flags = RAD_SHIELDED
+    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO | AREA_ALLOW_CLOCKOUT
 
 /area/crew_quarters/Chomp_Kitchen
     name = "\improper Chomp Kitchen"
     icon_state = "gaming"
-    flags = RAD_SHIELDED
+    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO
 
 /area/crew_quarters/Chomp_Dinner_1
     name = "\improper Chomp Dinner 1"
     icon_state = "gaming"
-    flags = RAD_SHIELDED
+    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO | AREA_ALLOW_CLOCKOUT
     lightswitch = 1
 
 /area/crew_quarters/Chomp_Dinner_2
     name = "\improper Chomp Dinner 2"
     icon_state = "gaming"
-    flags = RAD_SHIELDED
+    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO | AREA_ALLOW_CLOCKOUT
     lightswitch = 1
 
 /area/crew_quarters/Chomp_Lounge
     name = "\improper Chomp Lounge"
     icon_state = "gaming"
-    flags = RAD_SHIELDED
+    flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO | AREA_ALLOW_CLOCKOUT
 
 /area/crew_quarters/Public_Hydroponics
     name = "\improper Public Hydroponics"
@@ -1960,50 +1952,45 @@
     name = "\improper Public Garden"
     icon_state = "gaming"
 
-/area/crew_quarters/sleeping
-    flags = RAD_SHIELDED
+/area/crew_quarters/sleep
+    flags = RAD_SHIELDED | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING | AREA_SOUNDPROOF | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO | AREA_ALLOW_CLOCKOUT
     lightswitch = 0
-    limit_mob_size = FALSE
-    block_suit_sensors = TRUE
-    block_tracking = TRUE
-    soundproofed = TRUE
-    forbid_events = TRUE
     icon_state = "gaming"
 
-/area/crew_quarters/sleeping/Dormitory_01
+/area/crew_quarters/sleep/Dormitory_01
     name = "\improper Dormitory 01"
 
-/area/crew_quarters/sleeping/Dormitory_02
+/area/crew_quarters/sleep/Dormitory_02
     name = "\improper Dormitory 02"
 
-/area/crew_quarters/sleeping/Dormitory_03
+/area/crew_quarters/sleep/Dormitory_03
     name = "\improper Dormitory 03"
 
-/area/crew_quarters/sleeping/Dormitory_04
+/area/crew_quarters/sleep/Dormitory_04
     name = "\improper Dormitory 04"
 
-/area/crew_quarters/sleeping/Dormitory_05
+/area/crew_quarters/sleep/Dormitory_05
     name = "\improper Dormitory 05"
 
-/area/crew_quarters/sleeping/Dormitory_06
+/area/crew_quarters/sleep/Dormitory_06
     name = "\improper Dormitory 06"
 
-/area/crew_quarters/sleeping/Dormitory_07
+/area/crew_quarters/sleep/Dormitory_07
     name = "\improper Dormitory 07"
 
-/area/crew_quarters/sleeping/Dormitory_08
+/area/crew_quarters/sleep/Dormitory_08
     name = "\improper Dormitory 08"
 
-/area/crew_quarters/sleeping/Dormitory_09
+/area/crew_quarters/sleep/Dormitory_09
     name = "\improper Dormitory 09"
 
-/area/crew_quarters/sleeping/Dormitory_10
+/area/crew_quarters/sleep/Dormitory_10
     name = "\improper Dormitory 10"
 
-/area/crew_quarters/sleeping/Dormitory_11
+/area/crew_quarters/sleep/Dormitory_11
     name = "\improper Dormitory 11"
 
-/area/crew_quarters/sleeping/Dormitory_12
+/area/crew_quarters/sleep/Dormitory_12
     name = "\improper Dormitory 12"
 
 /area/crew_quarters/Dorm_Corridor_1
@@ -2092,7 +2079,7 @@
 /area/hallway/Star_Transit_Foyer
     name = "\improper Star Transit Foyer"
     icon_state = "hallA"
-    flags = RAD_SHIELDED
+    flags = RAD_SHIELDED | AREA_ALLOW_CLOCKOUT
 
 /area/hallway/Aft_Transit_Lobby
     name = "\improper Aft Transit Lobby"
@@ -2101,7 +2088,7 @@
 /area/hallway/Port_Transit_Foyer
     name = "\improper Port Transit Foyer"
     icon_state = "hallA"
-    flags = RAD_SHIELDED
+    flags = RAD_SHIELDED | AREA_ALLOW_CLOCKOUT
 
 /area/hallway/For_1_Deck_Stairwell
     name = "\improper For 1 Deck Stairwell"
@@ -2431,7 +2418,6 @@
 
 /area/maintenance
     icon_state = "fsmaint"
-    flags = RAD_SHIELDED
     ambience = AMBIENCE_MAINTENANCE
     sound_env = SOUND_ENVIRONMENT_SEWER_PIPE
 

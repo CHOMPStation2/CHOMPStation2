@@ -3157,14 +3157,6 @@
 /obj/effect/shuttle_landmark/station_inside,
 /turf/simulated/shuttle/floor,
 /area/shuttle/webdemo)
-"hA" = (
-/obj/structure/shuttle/engine/heater,
-/turf/simulated/shuttle/plating/carry,
-/area/shuttle/webdemo)
-"hB" = (
-/obj/structure/shuttle/engine/propulsion,
-/turf/simulated/shuttle/plating/carry,
-/area/shuttle/webdemo)
 "hC" = (
 /obj/machinery/shipsensors,
 /turf/simulated/shuttle/floor/voidcraft/external/light,
@@ -3238,18 +3230,6 @@
 	},
 /turf/simulated/floor/airless,
 /area/space)
-"iT" = (
-/obj/machinery/portable_atmospherics/canister/nitrogen,
-/obj/machinery/button/remote/blast_door{
-	desc = "A remote control-switch for the engine control room blast doors.";
-	id = "EngineEmitterPortWest";
-	name = "Engine Room Blast Doors";
-	pixel_y = 25;
-	req_one_access = list(11,24)
-	},
-/obj/effect/floor_decal/industrial/outline,
-/turf/simulated/floor/tiled/techfloor,
-/area/engineering/engine_gas)
 "jc" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/black{
 	dir = 8
@@ -3365,19 +3345,6 @@
 	},
 /turf/simulated/floor,
 /area/engineering/workshop)
-"kr" = (
-/obj/structure/table/steel,
-/obj/item/storage/box/lights/mixed,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/paper{
-	info = "The big blue box recently installed in here is a 'grid checker' which will shut off the power if a dangerous power spike from the engine erupts into the powernet.  Shutting everything down protects everything from electrical damage, however the outages can be disruptive to colony operations, so it is designed to restore power after a somewhat significant delay, up to ten minutes or so.  The grid checker can be manually hacked in order to end the outage sooner.  To do that, you must cut three specific wires which do not cause a red light to shine, then pulse a fourth wire.  Electrical protection is highly recommended when doing maintenance on the grid checker.";
-	name = "grid checker info"
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/engineering/engine_monitoring)
 "kz" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -3487,6 +3454,10 @@
 /obj/machinery/atmospherics/pipe/manifold4w/visible/black,
 /turf/simulated/floor,
 /area/engineering/workshop)
+"lO" = (
+/obj/structure/shuttle/engine/propulsion,
+/turf/simulated/shuttle/plating/carry,
+/area/shuttle/webdemo)
 "lS" = (
 /obj/structure/table/reinforced,
 /obj/fiftyspawner/rods,
@@ -3701,6 +3672,18 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/pa_room)
+"or" = (
+/obj/machinery/portable_atmospherics/canister/nitrogen,
+/obj/machinery/button/remote/blast_door{
+	desc = "A remote control-switch for the engine control room blast doors.";
+	id = "EngineEmitterPortWest";
+	name = "Engine Room Blast Doors";
+	pixel_y = 25;
+	req_one_access = list(11,24)
+	},
+/obj/effect/floor_decal/industrial/outline,
+/turf/simulated/floor/tiled/techfloor,
+/area/engineering/engine_gas)
 "ov" = (
 /obj/structure/closet/emcloset,
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
@@ -4692,6 +4675,16 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/engine_room)
+"yB" = (
+/obj/structure/table/steel,
+/obj/machinery/cell_charger,
+/obj/item/stack/cable_coil{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/cell/high,
+/turf/simulated/floor/tiled/techmaint,
+/area/engineering/engine_monitoring)
 "yL" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -4776,19 +4769,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/engine_room)
-"ze" = (
-/obj/structure/table/steel,
-/obj/machinery/cell_charger,
-/obj/item/stack/cable_coil{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/engineering/engine_monitoring)
 "zf" = (
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/shuttle/floor/voidcraft/external/light,
@@ -5342,12 +5322,44 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/engine_room)
+"FX" = (
+/obj/structure/grille,
+/obj/structure/window/phoronreinforced{
+	dir = 1
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 8
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 4
+	},
+/obj/machinery/door/blast/regular{
+	dir = 2;
+	id = "SupermatterPort";
+	layer = 3.3;
+	name = "Reactor Blast Door"
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/engineering/workshop)
 "Gc" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
 /turf/simulated/floor,
 /area/engineering/workshop)
+"Ge" = (
+/obj/structure/table/steel,
+/obj/item/storage/box/lights/mixed,
+/obj/item/cell/high,
+/obj/item/paper{
+	info = "The big blue box recently installed in here is a 'grid checker' which will shut off the power if a dangerous power spike from the engine erupts into the powernet.  Shutting everything down protects everything from electrical damage, however the outages can be disruptive to colony operations, so it is designed to restore power after a somewhat significant delay, up to ten minutes or so.  The grid checker can be manually hacked in order to end the outage sooner.  To do that, you must cut three specific wires which do not cause a red light to shine, then pulse a fourth wire.  Electrical protection is highly recommended when doing maintenance on the grid checker.";
+	name = "grid checker info"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/engineering/engine_monitoring)
 "Gf" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/black,
 /obj/machinery/meter,
@@ -5730,28 +5742,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/engine_room)
-"Li" = (
-/obj/structure/grille,
-/obj/structure/window/phoronreinforced{
-	dir = 1
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 8
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 4
-	},
-/obj/machinery/door/blast/regular{
-	dir = 2;
-	id = "SupermatterPort";
-	layer = 3.3;
-	name = "Reactor Blast Door"
-	},
-/obj/machinery/atmospherics/pipe/simple/visible/red{
-	dir = 4
-	},
-/turf/simulated/floor,
-/area/engineering/workshop)
 "Lj" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -6259,6 +6249,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/medical/medbay2)
+"QF" = (
+/obj/structure/shuttle/engine/heater,
+/turf/simulated/shuttle/plating/carry,
+/area/shuttle/webdemo)
 "QR" = (
 /obj/effect/floor_decal/techfloor/orange/corner,
 /obj/structure/cable/yellow{
@@ -8858,8 +8852,8 @@ gf
 gf
 gf
 gf
-hA
-hB
+QF
+lO
 gE
 fY
 aa
@@ -9368,8 +9362,8 @@ gf
 gf
 gf
 gf
-hA
-hB
+QF
+lO
 gE
 fY
 aa
@@ -14768,7 +14762,7 @@ jQ
 Be
 YU
 tz
-iT
+or
 pC
 Ed
 ID
@@ -14964,9 +14958,9 @@ fA
 Sx
 nM
 fW
-ze
+yB
 Oj
-kr
+Ge
 QZ
 zw
 UT
@@ -16492,7 +16486,7 @@ aa
 aa
 aa
 Rv
-Li
+FX
 xb
 Pl
 od

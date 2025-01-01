@@ -1,4 +1,3 @@
-//CHOMPEdit Begin
 /atom/movable/proc/get_mob()
 	if(buckled_mobs) return buckled_mobs.Copy()
 
@@ -25,6 +24,8 @@
 
 	return mobs
 
+/// This gets a list of mobs ALL around us as if we had xray vision and can see through walls.
+/// Currently only used in portable_turret.dm if you wish to see an example of how to use it.
 /proc/mobs_in_xray_view(range, source)
 	var/list/mobs = list()
 	for(var/atom/movable/AM in orange(range, source))
@@ -33,7 +34,6 @@
 			mobs += M
 
 	return mobs
-//CHOMPEdit End
 /proc/random_hair_style(gender, species = SPECIES_HUMAN)
 	var/h_style = "Bald"
 

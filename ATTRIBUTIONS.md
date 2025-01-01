@@ -80,3 +80,15 @@
 **Creator:** VerySoft (https://github.com/TS-Rogue-Star/Rogue-Star/pull/435)<br>
 **URL:** [Website](https://rogue-star.net/)<br>
 **License:** Permission granting in writing for use by Virgo and Chomp with proper attribution
+<br>
+**File:** `icons/mob/turkey.dmi`
+**Title:** Turkey<br>
+**Creator:** VerySoft (https://github.com/TS-Rogue-Star/Rogue-Star/pull/669)<br>
+**URL:** [Website](https://rogue-star.net/)<br>
+**License:** Permission granted in writing for use by Virgo and Chomp with proper attribution
+<br>
+**File:** icons/mob/vore_grayscale_drake.dmi
+**Title:** drake<br>
+**Creator:** grayscaledrake (Discord user)<br>
+**License:** [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)
+**Notes:** Permission to use assets also given in writing, assets were created for use in Virgo and other space station 13 servers.

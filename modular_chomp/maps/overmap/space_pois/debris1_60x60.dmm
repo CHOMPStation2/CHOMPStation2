@@ -52,6 +52,12 @@
 /obj/item/stack/rods,
 /turf/simulated/floor/airless,
 /area/submap/debris1)
+"da" = (
+/obj/item/stack/material/steel{
+	amount = 18
+	},
+/turf/simulated/floor/tiled/airless,
+/area/submap/debris1)
 "de" = (
 /turf/template_noop,
 /area/template_noop)
@@ -70,14 +76,6 @@
 "fl" = (
 /obj/item/stack/material/steel,
 /mob/living/simple_mob/animal/space/carp,
-/turf/template_noop,
-/area/submap/debris1)
-"fp" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /turf/template_noop,
 /area/submap/debris1)
 "fu" = (
@@ -294,6 +292,14 @@
 "rE" = (
 /obj/random/tool,
 /turf/simulated/floor/airless,
+/area/submap/debris1)
+"rO" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/template_noop,
 /area/submap/debris1)
 "sA" = (
 /obj/structure/lattice,
@@ -798,12 +804,6 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/submap/debris1)
-"ZA" = (
-/obj/item/stack/material/cyborg/steel{
-	amount = 18
-	},
-/turf/simulated/floor/tiled/airless,
 /area/submap/debris1)
 
 (1,1,1) = {"
@@ -2571,7 +2571,7 @@ ip
 wq
 jG
 ip
-fp
+rO
 jq
 wq
 wq
@@ -3828,7 +3828,7 @@ de
 de
 de
 XP
-ZA
+da
 Wx
 AP
 Wx

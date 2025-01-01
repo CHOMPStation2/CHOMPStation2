@@ -6,17 +6,29 @@
 ////////////////////////////
 */
 /datum/sprite_accessory/ears
-	name = "You should not see this..."
+	name = DEVELOPER_WARNING_NAME
 	icon = 'icons/mob/human_races/sprite_accessories/ears.dmi'
 	do_colouration = 0 // Set to 1 to blend (ICON_ADD) hair color
 
 	color_blend_mode = ICON_ADD // Only appliciable if do_coloration = 1
 	var/extra_overlay // Icon state of an additional overlay to blend in.
 	var/extra_overlay2
-	var/desc = "You should not see this..."
+	var/desc = DEVELOPER_WARNING_NAME
 	em_block = TRUE
 
 	//species_allowed = list(SPECIES_EVENT1, SPECIES_EVENT2, SPECIES_EVENT3)			//Removing Polaris whitelits, ones we need are defined in our files
+
+/**
+ * Gets the number of color channels we have.
+ */
+/datum/sprite_accessory/ears/get_color_channel_count()
+	if(!do_colouration)
+		return 0
+	. = 1
+	if(extra_overlay)
+		. += 1
+	if(extra_overlay2)
+		. += 1
 
 /datum/sprite_accessory/ears/shadekin
 	name = "Shadekin Ears, colorable"

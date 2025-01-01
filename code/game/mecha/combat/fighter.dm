@@ -145,7 +145,7 @@
 	var/output = {"<div class='wr'>
 						<div class='header'>Special</div>
 						<div class='links'>
-						<a href='?src=\ref[src];toggle_stabilization=1'><span id="stabilization_command">[stabilization_enabled?"Dis":"En"]able thruster stabilization</span></a><br>
+						<a href='byond://?src=\ref[src];toggle_stabilization=1'><span id="stabilization_command">[stabilization_enabled?"Dis":"En"]able thruster stabilization</span></a><br>
 						</div>
 						</div>
 						"}
@@ -270,9 +270,9 @@
 
 /obj/mecha/combat/fighter/gunpod/attackby(obj/item/W as obj, mob/user as mob)
 	if(istype(W,/obj/item/multitool) && state == 1)
-		var/new_paint_location = tgui_input_list(usr, "Please select a target zone.", "Paint Zone", list("Fore Stripe", "Aft Stripe", "CANCEL"))
+		var/new_paint_location = tgui_input_list(user, "Please select a target zone.", "Paint Zone", list("Fore Stripe", "Aft Stripe", "CANCEL"))
 		if(new_paint_location && new_paint_location != "CANCEL")
-			var/new_paint_color = input(usr, "Please select a paint color.", "Paint Color", null) as color|null
+			var/new_paint_color = input(user, "Please select a paint color.", "Paint Color", null) as color|null
 			if(new_paint_color)
 				switch(new_paint_location)
 					if("Fore Stripe")

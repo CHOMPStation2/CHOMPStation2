@@ -181,6 +181,10 @@
 	var/hasthermals = TRUE
 	var/isthermal = 0
 
+	//vars for vore_icons toggle control
+	var/vore_icons_cache = null // null by default. Going from ON to OFF should store vore_icons val here, OFF to ON reset as null
+
+
 /mob/living/simple_mob/Initialize()
 	remove_verb(src, /mob/verb/observe)
 	health = maxHealth
@@ -233,7 +237,7 @@
 /mob/living/simple_mob/Login()
 	. = ..()
 	to_chat(src,span_boldnotice("You are \the [src].") + " [player_msg]")
-	if(vore_active && !voremob_loaded) //CHOMPedit: On-demand belly loading.
+	if(vore_active && !voremob_loaded)
 		voremob_loaded = TRUE
 		init_vore()
 	if(hasthermals)
@@ -363,7 +367,7 @@
 
 /mob/living/simple_mob/proc/ColorMate()
 	set name = "Recolour"
-	set category = "Abilities.Settings" //CHOMPEdit
+	set category = "Abilities.Settings"
 	set desc = "Allows to recolour once."
 
 	if(!has_recoloured)
@@ -376,7 +380,7 @@
 
 /mob/living/simple_mob/proc/hunting_vision()
 	set name = "Track Prey Through Walls"
-	set category = "Abilities.Mob" //ChompEDIT
+	set category = "Abilities.Mob"
 	set desc = "Uses you natural predatory instincts to seek out prey even through walls, or your natural survival instincts to spot predators from a distance."
 
 	if(hunting_cooldown + 5 MINUTES < world.time)
@@ -391,7 +395,7 @@
 
 /mob/living/simple_mob/proc/hunting_vision_plus()
 	set name = "Thermal vision toggle"
-	set category = "Abilities.Mob" //ChompEDIT
+	set category = "Abilities.Mob"
 	set desc = "Uses you natural predatory instincts to seek out prey even through walls, or your natural survival instincts to spot predators from a distance."
 
 	if(!isthermal)
@@ -400,3 +404,25 @@
 	else
 		to_chat(usr, "You stop sensing creatures beyond the walls.")
 		sight -= SEE_MOBS
+
+/mob/living/simple_mob/proc/character_directory_species()
+	return "simplemob"
+
+/mob/living/simple_mob/verb/toggle_vore_icons()
+
+	set name = "Toggle Vore Sprite"
+	set desc = "Toggle visibility of changed mob sprite when you have eaten other things."
+	set category = "Abilities.Vore"
+
+	if(!vore_icons && !vore_icons_cache)
+		to_chat(src,span_warning("This simplemob has no vore sprite."))
+	else if(isnull(vore_icons_cache))
+		vore_icons_cache = vore_icons
+		vore_icons = 0
+		to_chat(src,span_warning("Vore sprite disabled."))
+	else
+		vore_icons = vore_icons_cache
+		vore_icons_cache = null
+		to_chat(src,span_warning("Vore sprite enabled."))
+
+	update_icon()

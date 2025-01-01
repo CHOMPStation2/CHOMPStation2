@@ -25,8 +25,9 @@
 
 	var/list/ports = new()
 
-/obj/machinery/atmospherics/omni/New()
-	..()
+/obj/machinery/atmospherics/omni/Initialize()
+	. = ..()
+
 	icon_state = "base"
 
 	ports = new()
@@ -100,7 +101,7 @@
 	if(..())
 		return
 
-	src.add_fingerprint(usr)
+	src.add_fingerprint(user)
 	tgui_interact(user)
 	return
 

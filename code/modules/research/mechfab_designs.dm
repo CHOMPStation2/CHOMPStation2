@@ -440,7 +440,7 @@
 	id = "mech_laser_gamma"
 	req_tech = list(TECH_MATERIAL = 5, TECH_COMBAT = 5, TECH_PHORON = 4, TECH_POWER = 5, TECH_ILLEGAL = 3)
 	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/gamma
-	materials = list(DEFAULT_WALL_MATERIAL = 6000, "glass" = 4000, "phoron" = 2500, "silver" = 1000, "gold" = 500, "uranium" = 3000) //CHOMPedit end
+	materials = list(DEFAULT_WALL_MATERIAL = 6000, MAT_GLASS = 4000, MAT_PHORON = 2500, MAT_SILVER = 1000, MAT_GOLD = 500, MAT_URANIUM = 3000) //CHOMPedit end
 
 /datum/design/item/mecha/weapon/rigged_laser_xray
 	name = "Jury-Rigged Xray Rifle"
@@ -545,7 +545,7 @@
 	req_tech = list(TECH_BLUESPACE = 10, TECH_MAGNET = 5)
 	build_path = /obj/item/mecha_parts/mecha_equipment/teleporter
 
-/datum/design/item/mecha/teleporter
+/datum/design/item/mecha/cloak
 	name = "Cloaking Device"
 	desc = "A device that renders the exosuit invisible to the naked eye, though not to thermal detection. Uses large amounts of energy."
 	id = "mech_cloaking"

@@ -116,9 +116,10 @@
 	return ..()
 
 /obj/effect/dark/Destroy()
-	. = ..()
 	if(linked_node)
 		linked_node.children_effects -= src
+		linked_node = null
+	. = ..()
 
 /obj/effect/dark/process()
 	//set background = 1

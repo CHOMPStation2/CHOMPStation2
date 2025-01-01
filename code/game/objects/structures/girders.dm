@@ -233,7 +233,7 @@
 		return 0
 
 	var/wall_fake
-	add_hiddenprint(usr)
+	add_hiddenprint(user)
 
 	if(M.integrity < 50)
 		to_chat(user, span_notice("This material is too soft for use in wall construction."))
@@ -256,7 +256,7 @@
 	T.set_material(M, reinf_material, girder_material)
 	if(wall_fake)
 		T.can_open = 1
-	T.add_hiddenprint(usr)
+	T.add_hiddenprint(user)
 	qdel(src)
 	return 1
 
@@ -363,7 +363,7 @@
 	max_health = 225
 	health = 225
 	cover = 60
-	girder_material = "resin"
+	girder_material = MAT_RESIN
 
 /* CHOMPEdit - moved this block to modular_chomp\code\game\objects\items\weapons\rcd.dm
 /obj/structure/girder/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)

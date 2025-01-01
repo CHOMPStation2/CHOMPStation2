@@ -293,17 +293,6 @@
 /obj/machinery/computer,
 /turf/simulated/shuttle/floor/darkred,
 /area/space)
-"aZ" = (
-/obj/structure/table/standard,
-/obj/item/stack/material/glass{
-	amount = 15
-	},
-/obj/item/cell{
-	charge = 100;
-	maxcharge = 15000
-	},
-/turf/simulated/shuttle/floor/darkred,
-/area/space)
 "ba" = (
 /obj/item/radio/intercom{
 	desc = "Talk through this. Evilly";
@@ -544,18 +533,6 @@
 	name = "hacked cigarette machine";
 	prices = list();
 	products = list(/obj/item/storage/fancy/cigarettes = 10, /obj/item/storage/box/matches = 10, /obj/item/flame/lighter/zippo = 4, /obj/item/clothing/mask/smokable/cigarette/cigar/havana = 2)
-	},
-/turf/simulated/shuttle/floor/darkred,
-/area/space)
-"bE" = (
-/obj/structure/bed/chair{
-	dir = 8
-	},
-/obj/machinery/button/flasher{
-	id = "syndieflash";
-	name = "Flasher";
-	pixel_x = 27;
-	pixel_y = 0
 	},
 /turf/simulated/shuttle/floor/darkred,
 /area/space)
@@ -1134,6 +1111,26 @@
 	dir = 1
 	},
 /turf/simulated/floor/beach/sand/desert,
+/area/space)
+"AP" = (
+/obj/structure/table/standard,
+/obj/item/stack/material/glass{
+	amount = 15
+	},
+/obj/item/cell,
+/turf/simulated/shuttle/floor/darkred,
+/area/space)
+"VX" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/obj/machinery/button/flasher{
+	id = "syndieflash";
+	name = "Flasher";
+	pixel_x = 27;
+	pixel_y = 0
+	},
+/turf/simulated/shuttle/floor/darkred,
 /area/space)
 
 (1,1,1) = {"
@@ -11706,7 +11703,7 @@ aN
 aN
 aT
 aW
-aZ
+AP
 aN
 aN
 aN
@@ -11715,7 +11712,7 @@ aN
 aN
 aN
 aN
-bE
+VX
 aU
 aU
 aN

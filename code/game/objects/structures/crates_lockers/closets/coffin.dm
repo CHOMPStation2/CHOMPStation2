@@ -100,7 +100,7 @@
 			return
 		if(W.loc != user) // This should stop mounted modules ending up outside the module.
 			return
-		usr.drop_item()
+		user.drop_item()
 		if(W)
 			W.forceMove(src.loc)
 	else
@@ -149,7 +149,7 @@
 	return PROJECTILE_CONTINUE	// It's a hole in the ground, doesn't usually stop or even care about bullets
 
 /obj/structure/closet/grave/return_air_for_internal_lifeform(var/mob/living/L)
-	var/gasid = "carbon_dioxide"
+	var/gasid = GAS_CO2
 	if(ishuman(L))
 		var/mob/living/carbon/human/H = L
 		if(H.species && H.species.exhale_type)

@@ -254,7 +254,7 @@
 	var/phoron = (sheets+sheet_left)*20
 	var/datum/gas_mixture/environment = loc.return_air()
 	if (environment)
-		environment.adjust_gas_temp("phoron", phoron/10, temperature + T0C)
+		environment.adjust_gas_temp(GAS_PHORON, phoron/10, temperature + T0C)
 
 	sheets = 0
 	sheet_left = 0
@@ -350,11 +350,11 @@
 
 	return data
 
-/obj/machinery/power/port_gen/pacman/tgui_act(action, params)
+/obj/machinery/power/port_gen/pacman/tgui_act(action, params, datum/tgui/ui)
 	if(..())
 		return
 
-	add_fingerprint(usr)
+	add_fingerprint(ui.user)
 	switch(action)
 		if("toggle_power")
 			TogglePower()

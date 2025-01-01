@@ -91,7 +91,7 @@ world/New()
 
 // display only the reports that haven't been handled
 /client/proc/display_admin_reports()
-	set category = "Admin.Moderation" //CHOMPEdit
+	set category = "Admin.Moderation"
 	set name = "Display Admin Reports"
 	if(!src.holder) return
 
@@ -107,9 +107,9 @@ world/New()
 			output += span_bold("Offense:") + "[N.body]<br>"
 			output += "<small>Occurred at [time2text(N.date,"MM/DD hh:mm:ss")]</small><br>"
 			output += "<small>authored by <i>[N.author]</i></small><br>"
-			output += " <a href='?src=\ref[report_topic_handler];client=\ref[src];[HrefToken()];action=remove;ID=[N.ID]'>Flag as Handled</a>"
+			output += " <a href='byond://?src=\ref[report_topic_handler];client=\ref[src];[HrefToken()];action=remove;ID=[N.ID]'>Flag as Handled</a>"
 			if(src.key == N.author)
-				output += " <a href='?src=\ref[report_topic_handler];client=\ref[src];[HrefToken()];action=edit;ID=[N.ID]'>Edit</a>"
+				output += " <a href='byond://?src=\ref[report_topic_handler];client=\ref[src];[HrefToken()];action=edit;ID=[N.ID]'>Edit</a>"
 			output += "<br>"
 			output += "<br>"
 	else
@@ -119,7 +119,7 @@ world/New()
 
 
 /client/proc/Report(mob/M as mob in world)
-	set category = "Admin.Moderation" //CHOMPEdit
+	set category = "Admin.Moderation"
 	if(!src.holder)
 		return
 

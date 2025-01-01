@@ -53,7 +53,7 @@
 /mob/living/simple_mob/animal/passive/fox/init_vore()
 	if(!voremob_loaded)
 		return
-	.=..()
+	. = ..()
 	var/obj/belly/B = vore_selected
 	B.name = "Stomach"
 	B.desc = "Slick foxguts. Cute on the outside, slimy on the inside!"
@@ -110,7 +110,7 @@
 
 /mob/living/simple_mob/animal/passive/fox/renault/verb/become_friends()
 	set name = "Become Friends"
-	set category = "IC.Game" //CHOMPEdit
+	set category = "IC.Game"
 	set src in view(1)
 
 	var/mob/living/L = usr
@@ -169,7 +169,7 @@
 
 /mob/living/simple_mob/animal/passive/fox/fluff/verb/friend()
 	set name = "Become Friends"
-	set category = "IC.Game" //CHOMPEdit
+	set category = "IC.Game"
 	set src in view(1)
 
 	if(friend && usr == friend)
@@ -201,7 +201,7 @@
 /mob/living/simple_mob/animal/passive/fox/renault/init_vore()
 	if(!voremob_loaded)
 		return
-	.=..()
+	. = ..()
 	var/obj/belly/B = vore_selected
 	B.name = "Stomach"
 	B.desc = "Slick foxguts. They seem somehow more regal than perhaps other foxes!"

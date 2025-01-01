@@ -49,9 +49,9 @@
 	var/list/bodypart_targets = list(BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_TORSO,BP_GROIN,BP_HEAD)
 	var/infest_target = BP_TORSO	// The currently chosen bodypart to infest.
 	var/mob/living/carbon/host		// Our humble host.
-	var/list/produceable_chemicals = list("inaprovaline","anti_toxin","alkysine","bicaridine","tramadol","kelotane","leporazine","iron","phoron","condensedcapsaicin_v","frostoil")
-	var/randomized_reagent = "iron"	// The reagent chosen at random to be produced, if there's no one piloting the worm.
-	var/passive_reagent = "paracetamol"	// Reagent passively produced by the leech. Should usually be a painkiller.
+	var/list/produceable_chemicals = list(REAGENT_ID_INAPROVALINE,REAGENT_ID_ANTITOXIN,REAGENT_ID_ALKYSINE,REAGENT_ID_BICARIDINE,REAGENT_ID_TRAMADOL,REAGENT_ID_KELOTANE,REAGENT_ID_LEPORAZINE,REAGENT_ID_IRON,REAGENT_ID_PHORON,REAGENT_ID_CONDENSEDCAPSAICINV,REAGENT_ID_FROSTOIL)
+	var/randomized_reagent = REAGENT_ID_IRON	// The reagent chosen at random to be produced, if there's no one piloting the worm.
+	var/passive_reagent = REAGENT_ID_PARACETAMOL	// Reagent passively produced by the leech. Should usually be a painkiller.
 
 	var/feeding_delay = 30 SECONDS	// How long do we have to wait to bite our host's organs?
 	var/last_feeding = 0
@@ -159,7 +159,7 @@
 			ai_holder.hostile = FALSE
 			ai_holder.lose_target()
 		alpha = 5
-		if(host.reagents.has_reagent("cordradaxon") && !docile)	// Overwhelms the leech with food.
+		if(host.reagents.has_reagent(REAGENT_ID_CORDRADAXON) && !docile)	// Overwhelms the leech with food.
 			var/message = "We feel the rush of cardiac pluripotent cells in your host's blood, lulling us into docility."
 			to_chat(src, span_warning(message))
 			docile = TRUE
@@ -178,32 +178,32 @@
 		if(!docile && ishuman(host) && chemicals < max_chemicals)
 			var/mob/living/carbon/human/H = host
 			H.remove_blood(1)
-			if(!H.reagents.has_reagent("inaprovaline"))
-				H.reagents.add_reagent("inaprovaline", 1)
+			if(!H.reagents.has_reagent(REAGENT_ID_INAPROVALINE))
+				H.reagents.add_reagent(REAGENT_ID_INAPROVALINE, 1)
 			chemicals += 2
 
 		if(!client && !docile)	// Automatic 'AI' to manage damage levels.
 			if(host.getBruteLoss() >= 30 && chemicals > 50)
-				host.reagents.add_reagent("bicaridine", 5)
+				host.reagents.add_reagent(REAGENT_ID_BICARIDINE, 5)
 				chemicals -= 30
 
 			if(host.getToxLoss() >= 30 && chemicals > 50)
-				var/randomchem = pickweight(list("tramadol" = 7, "anti_toxin" = 15, "frostoil" = 3))
+				var/randomchem = pickweight(list(REAGENT_ID_TRAMADOL = 7, REAGENT_ID_ANTITOXIN = 15, REAGENT_ID_FROSTOIL = 3))
 				host.reagents.add_reagent(randomchem, 5)
 				chemicals -= 50
 
 			if(host.getFireLoss() >= 30 && chemicals > 50)
-				host.reagents.add_reagent("kelotane", 5)
-				host.reagents.add_reagent("leporazine", 2)
+				host.reagents.add_reagent(REAGENT_ID_KELOTANE, 5)
+				host.reagents.add_reagent(REAGENT_ID_LEPORAZINE, 2)
 				chemicals -= 50
 
 			if(host.getOxyLoss() >= 30 && chemicals > 50)
-				host.reagents.add_reagent("iron", 10)
+				host.reagents.add_reagent(REAGENT_ID_IRON, 10)
 				chemicals -= 40
 
 			if(host.getBrainLoss() >= 10 && chemicals > 100)
-				host.reagents.add_reagent("alkysine", 5)
-				host.reagents.add_reagent("tramadol", 3)
+				host.reagents.add_reagent(REAGENT_ID_ALKYSINE, 5)
+				host.reagents.add_reagent(REAGENT_ID_TRAMADOL, 3)
 				chemicals -= 100
 
 			if(prob(30) && chemicals > 50)
@@ -225,7 +225,7 @@
 		leave_host()
 
 /mob/living/simple_mob/animal/sif/leech/verb/infest()
-	set category = "Abilities.Leech" //CHOMPEdit
+	set category = "Abilities.Leech"
 	set name = "Infest"
 	set desc = "Infest a suitable humanoid host."
 
@@ -312,7 +312,7 @@
 		return
 
 /mob/living/simple_mob/animal/sif/leech/verb/uninfest()
-	set category = "Abilities.Leech" //CHOMPEdit
+	set category = "Abilities.Leech"
 	set name = "Uninfest"
 	set desc = "Leave your current host."
 
@@ -336,7 +336,7 @@
 	host = null
 
 /mob/living/simple_mob/animal/sif/leech/verb/inject_victim()
-	set category = "Abilities.Leech" //CHOMPEdit
+	set category = "Abilities.Leech"
 	set name = "Incapacitate Potential Host"
 	set desc = "Inject an organic host with an incredibly painful mixture of chemicals."
 
@@ -384,7 +384,7 @@
 	H.add_modifier(/datum/modifier/poisoned/paralysis, 15 SECONDS)
 
 /mob/living/simple_mob/animal/sif/leech/verb/medicate_host()
-	set category = "Abilities.Leech" //CHOMPEdit
+	set category = "Abilities.Leech"
 	set name = "Produce Chemicals (50)"
 	set desc = "Inject your host with possibly beneficial chemicals, to keep the blood flowing."
 
@@ -407,7 +407,7 @@
 		to_chat(src, span_alien("We injected \the [host] with five units of [chem]."))
 
 /mob/living/simple_mob/animal/sif/leech/verb/feed_on_organ()
-	set category = "Abilities.Leech" //CHOMPEdit
+	set category = "Abilities.Leech"
 	set name = "Feed on Organ"
 	set desc = "Extend probosci to feed on a piece of your host's organs."
 

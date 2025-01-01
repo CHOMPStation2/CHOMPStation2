@@ -4445,10 +4445,6 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/structure/candybowl/engineering{
-	pixel_x = 15;
-	pixel_y = -10
-	},
 /turf/simulated/floor/carpet,
 /area/engineering/break_room)
 "aly" = (
@@ -5365,14 +5361,8 @@
 	pixel_x = -12;
 	pixel_y = -24
 	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
+/obj/item/cell/high,
+/obj/item/cell/high,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/sc/chief)
 "aoW" = (
@@ -5398,7 +5388,6 @@
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 4
 	},
-/obj/effect/landmark/carved_pumpkin_spawn,
 /turf/simulated/floor/tiled,
 /area/engineering/foyer)
 "apb" = (
@@ -8817,7 +8806,7 @@
 	},
 /obj/item/radio/intercom/department/security{
 	dir = 4;
-	icon_state= "secintercom";
+	icon_override = "secintercom";
 	pixel_x = 21
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -9268,7 +9257,6 @@
 /obj/effect/floor_decal/corner/yellow/bordercorner{
 	dir = 1
 	},
-/obj/effect/landmark/carved_pumpkin_spawn,
 /turf/simulated/floor/tiled,
 /area/engineering/foyer)
 "aBp" = (
@@ -12628,7 +12616,7 @@
 "aMy" = (
 /obj/item/radio/intercom/department/security{
 	dir = 4;
-	icon_state= "secintercom";
+	icon_override = "secintercom";
 	pixel_x = 21
 	},
 /obj/structure/table/standard,
@@ -17967,10 +17955,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/hallway/primary/seconddeck/fpcenter)
-"bda" = (
-/obj/effect/landmark/carved_pumpkin_spawn,
-/turf/simulated/floor/wood,
-/area/crew_quarters/cafeteria)
 "bdb" = (
 /obj/machinery/computer/timeclock/premade/east,
 /turf/simulated/floor/tiled/dark,
@@ -19014,7 +18998,6 @@
 /obj/machinery/camera/network/second_deck{
 	c_tag = "Second Deck - Center Stair Access"
 	},
-/obj/effect/landmark/carved_pumpkin_spawn,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/stairwell)
 "bgF" = (
@@ -20365,6 +20348,9 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 5
 	},
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "bkm" = (
@@ -20857,7 +20843,6 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 4
 	},
-/obj/structure/candybowl/medical,
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "blS" = (
@@ -21006,7 +20991,7 @@
 /obj/structure/table/standard,
 /obj/item/radio/intercom/department/security{
 	dir = 4;
-	icon_state= "secintercom";
+	icon_override = "secintercom";
 	pixel_x = 21
 	},
 /obj/item/bodybag/cryobag{
@@ -22078,7 +22063,6 @@
 	dir = 8
 	},
 /obj/item/stool/padded,
-/obj/effect/landmark/carved_pumpkin_spawn,
 /turf/simulated/floor/tiled/white,
 /area/medical/foyer)
 "bpo" = (
@@ -22542,7 +22526,10 @@
 	dir = 4
 	},
 /obj/item/tool/screwdriver,
-/obj/item/organ/internal/lungs/erikLungs,
+/obj/item/organ/internal/lungs/erikLungs{
+	pixel_x = -4;
+	pixel_y = 14
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "brd" = (
@@ -22586,8 +22573,6 @@
 /obj/effect/floor_decal/corner/paleblue/bordercorner2{
 	dir = 10
 	},
-/obj/effect/spider/stickyweb,
-/obj/item/toy/plushie/spider,
 /turf/simulated/floor/tiled/white,
 /area/medical/foyer)
 "brg" = (
@@ -22667,7 +22652,7 @@
 	},
 /obj/item/radio/intercom/department/security{
 	dir = 4;
-	icon_state= "secintercom";
+	icon_override = "secintercom";
 	pixel_x = 21
 	},
 /obj/machinery/newscaster{
@@ -23110,6 +23095,9 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/lime/bordercorner{
+	dir = 8
+	},
+/obj/machinery/light{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
@@ -24758,7 +24746,6 @@
 	},
 /obj/item/mail/blank,
 /obj/item/mail/blank,
-/obj/structure/candybowl/cargo,
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
 "bxA" = (
@@ -26499,10 +26486,7 @@
 	},
 /obj/structure/table/steel,
 /obj/machinery/cell_charger,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
+/obj/item/cell/high,
 /obj/machinery/alarm{
 	dir = 8;
 	pixel_x = 22
@@ -28637,6 +28621,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 10
 	},
+/obj/structure/bed/chair/office/dark{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "bIP" = (
@@ -30245,7 +30232,7 @@
 "bOD" = (
 /obj/item/radio/intercom/department/security{
 	dir = 4;
-	icon_state= "secintercom";
+	icon_override = "secintercom";
 	pixel_x = 21
 	},
 /obj/structure/noticeboard{
@@ -30522,7 +30509,7 @@
 "bPV" = (
 /obj/item/radio/intercom/department/security{
 	dir = 4;
-	icon_state= "secintercom";
+	icon_override = "secintercom";
 	pixel_x = 21
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -30531,7 +30518,6 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 4
 	},
-/obj/effect/landmark/carved_pumpkin_spawn,
 /turf/simulated/floor/tiled,
 /area/security/lobby)
 "bPZ" = (
@@ -31188,7 +31174,6 @@
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/red/border,
-/obj/structure/candybowl/security,
 /turf/simulated/floor/tiled,
 /area/security/lobby)
 "bSF" = (
@@ -32603,7 +32588,6 @@
 	pixel_x = -2;
 	pixel_y = -2
 	},
-/obj/item/flame/candle/everburn,
 /turf/simulated/floor/wood,
 /area/crew_quarters/cafeteria)
 "bWR" = (
@@ -33701,7 +33685,6 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 10
 	},
-/obj/effect/landmark/carved_pumpkin_spawn,
 /turf/simulated/floor/tiled,
 /area/security/lobby)
 "cbk" = (
@@ -34512,7 +34495,7 @@
 /obj/structure/filingcabinet,
 /obj/item/radio/intercom/department/security{
 	dir = 8;
-	icon_state= "secintercom";
+	icon_override = "secintercom";
 	pixel_x = -21
 	},
 /obj/machinery/ai_status_display{
@@ -36000,14 +35983,8 @@
 "chJ" = (
 /obj/structure/table/reinforced,
 /obj/machinery/cell_charger,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
+/obj/item/cell/high,
+/obj/item/cell/high,
 /obj/item/stack/cable_coil{
 	pixel_x = 3;
 	pixel_y = -7
@@ -36128,7 +36105,6 @@
 	pixel_x = -5;
 	pixel_y = -2
 	},
-/obj/item/flame/candle/everburn,
 /turf/simulated/floor/wood,
 /area/crew_quarters/cafeteria)
 "chY" = (
@@ -37878,11 +37854,11 @@
 /area/hallway/primary/seconddeck/aft)
 "cnF" = (
 /obj/structure/table/marble,
+/obj/item/reagent_containers/food/snacks/pie,
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment,
-/obj/item/reagent_containers/food/snacks/sliceable/pumpkinpie,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/cafeteria)
 "cnI" = (
@@ -43868,10 +43844,7 @@
 /obj/structure/table/steel,
 /obj/machinery/cell_charger,
 /obj/item/stack/cable_coil,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
+/obj/item/cell/high,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
@@ -44538,7 +44511,9 @@
 	dir = 1
 	},
 /obj/structure/disposalpipe/sortjunction/flipped{
-	name = "Genetics"
+	name = "Genetics";
+	sortType = "Genetics";
+	dir = 2
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay2)
@@ -44880,6 +44855,9 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/paleblue/border{
+	dir = 4
+	},
+/obj/machinery/light{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
@@ -45485,7 +45463,6 @@
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 8
 	},
-/obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
 "dyd" = (
@@ -47450,7 +47427,6 @@
 /obj/effect/floor_decal/corner/brown/bordercorner{
 	dir = 1
 	},
-/obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
 "eEU" = (
@@ -48039,18 +48015,12 @@
 /turf/simulated/wall,
 /area/rnd/storage)
 "eNU" = (
-/obj/structure/table/glass,
 /obj/structure/reagent_dispensers/virusfood{
 	pixel_x = 30
 	},
-/obj/item/reagent_containers/glass/beaker/large,
 /obj/machinery/camera/network/medbay{
 	c_tag = "MED - Virology Starboard";
 	dir = 8
-	},
-/obj/item/storage/box/monkeycubes{
-	pixel_x = -7;
-	pixel_y = -3
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -48548,6 +48518,7 @@
 	},
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/paleblue/border,
+/obj/machinery/light,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
 "fdO" = (
@@ -49222,6 +49193,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 4
 	},
+/obj/structure/bed/chair/office/dark,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "fva" = (
@@ -50251,11 +50223,19 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 8
 	},
-/obj/structure/table/standard,
-/obj/item/reagent_containers/spray/cleaner,
 /obj/machinery/vending/wallmed1{
 	dir = 4;
 	pixel_x = -25
+	},
+/obj/structure/table/standard,
+/obj/machinery/reagentgrinder{
+	pixel_y = 3;
+	pixel_x = 4
+	},
+/obj/item/stack/material/phoron{
+	amount = 5;
+	pixel_x = -3;
+	pixel_y = 5
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
@@ -52044,7 +52024,6 @@
 /obj/machinery/atm{
 	pixel_y = 30
 	},
-/obj/effect/landmark/carved_pumpkin_spawn,
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
 "gQB" = (
@@ -54585,7 +54564,7 @@
 /obj/effect/floor_decal/corner/beige/border{
 	dir = 8
 	},
-/obj/structure/table/standard,
+/obj/structure/table/reinforced,
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
 "iej" = (
@@ -55053,12 +55032,10 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/dockhallway)
 "iqP" = (
-/obj/machinery/computer/diseasesplicer{
-	dir = 1
-	},
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/blue/border,
 /obj/machinery/light,
+/obj/machinery/computer/pandemic,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "iqT" = (
@@ -55805,14 +55782,8 @@
 "iNs" = (
 /obj/structure/table/standard,
 /obj/machinery/cell_charger,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
+/obj/item/cell/high,
+/obj/item/cell/high,
 /obj/item/radio/intercom{
 	dir = 1;
 	name = "Station Intercom (General)";
@@ -56230,8 +56201,6 @@
 /area/hallway/primary/seconddeck/dockhallway)
 "iYU" = (
 /obj/structure/closet/crate/freezer,
-/obj/item/virusdish/random,
-/obj/item/virusdish/random,
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
@@ -56251,6 +56220,11 @@
 	pixel_x = 12;
 	pixel_y = 25
 	},
+/obj/item/reagent_containers/glass/bottle/culture/cold{
+	pixel_x = -5;
+	pixel_y = 5
+	},
+/obj/item/reagent_containers/glass/bottle/culture/flu,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "iYZ" = (
@@ -56301,9 +56275,9 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/hallway/secondary/docking_hallway2)
 "iZI" = (
-/obj/machinery/computer/centrifuge,
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/blue/border,
+/obj/machinery/computer/pandemic,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "iZV" = (
@@ -56662,14 +56636,8 @@
 /obj/item/stack/cable_coil,
 /obj/item/multitool,
 /obj/machinery/cell_charger,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
+/obj/item/cell/high,
+/obj/item/cell/high,
 /obj/machinery/sparker{
 	dir = 4;
 	id = "Xenobio";
@@ -56755,6 +56723,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 4
 	},
+/obj/structure/bed/chair/office/dark,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "jjV" = (
@@ -61498,7 +61467,6 @@
 	pixel_x = 2
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/candybowl,
 /turf/simulated/floor/wood,
 /area/crew_quarters/cafeteria)
 "lRG" = (
@@ -61768,8 +61736,6 @@
 	layer = 4;
 	pixel_x = -32
 	},
-/obj/effect/spider/stickyweb,
-/obj/item/toy/plushie/spider,
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
 "lWH" = (
@@ -61797,14 +61763,8 @@
 	pixel_x = 3;
 	pixel_y = -7
 	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
+/obj/item/cell/high,
+/obj/item/cell/high,
 /obj/item/storage/toolbox/mechanical{
 	pixel_x = -2;
 	pixel_y = -1
@@ -63313,13 +63273,9 @@
 /obj/effect/floor_decal/corner/purple/bordercorner{
 	dir = 1
 	},
-/obj/structure/flora/skeleton{
-	pixel_y = 14
-	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research_foyer)
 "mSO" = (
-/obj/structure/bed/chair/office/dark,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -63480,8 +63436,6 @@
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 5
 	},
-/obj/effect/landmark/carved_pumpkin_spawn,
-/obj/effect/decal/cleanable/cobweb2,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research_foyer)
 "mVG" = (
@@ -63833,12 +63787,21 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "ngg" = (
-/obj/machinery/disease2/incubator,
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/paleblue/border,
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = -22
+	},
+/obj/structure/table/glass,
+/obj/item/storage/fancy/vials,
+/obj/item/storage/lockbox/vials,
+/obj/item/reagent_containers/syringe/antiviral,
+/obj/item/reagent_containers/syringe/antiviral,
+/obj/item/reagent_containers/syringe/antiviral,
+/obj/item/reagent_containers/dropper,
+/obj/item/reagent_containers/dropper{
+	pixel_y = -4
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
@@ -63905,10 +63868,7 @@
 "nkI" = (
 /obj/structure/table/steel_reinforced,
 /obj/machinery/cell_charger,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
+/obj/item/cell/high,
 /obj/item/tool/wrench,
 /obj/machinery/status_display{
 	pixel_y = -32
@@ -64338,10 +64298,6 @@
 	id = "sc-ChimeMed";
 	name = "Medbay Doorbell"
 	},
-/obj/item/flame/candle/everburn{
-	pixel_x = 1;
-	pixel_y = -2
-	},
 /turf/simulated/floor/tiled/white,
 /area/medical/foyer)
 "nwl" = (
@@ -64716,7 +64672,7 @@
 	},
 /obj/item/radio/intercom/department/security{
 	dir = 8;
-	icon_state= "secintercom";
+	icon_override = "secintercom";
 	pixel_x = -21
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -65160,10 +65116,6 @@
 /obj/machinery/door/window/eastleft{
 	name = "Robotics Desk";
 	req_access = list(29)
-	},
-/obj/item/flame/candle/everburn{
-	pixel_x = -6;
-	pixel_y = 10
 	},
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
@@ -66590,7 +66542,6 @@
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 6
 	},
-/obj/structure/candybowl/science,
 /turf/simulated/floor/tiled/white,
 /area/rnd/lab)
 "oJW" = (
@@ -66617,7 +66568,6 @@
 /obj/effect/floor_decal/corner/purple/bordercorner2{
 	dir = 9
 	},
-/obj/effect/landmark/carved_pumpkin_spawn,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research_foyer)
 "oKu" = (
@@ -66923,26 +66873,18 @@
 /area/crew_quarters/seconddeck/artgallery)
 "oVk" = (
 /obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000;
 	pixel_x = 5;
 	pixel_y = -5
 	},
 /obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000;
 	pixel_x = 5;
 	pixel_y = -5
 	},
 /obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000;
 	pixel_x = 5;
 	pixel_y = -5
 	},
 /obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000;
 	pixel_x = 5;
 	pixel_y = -5
 	},
@@ -67511,9 +67453,7 @@
 /turf/simulated/floor/carpet/bcarpet,
 /area/library)
 "pjG" = (
-/obj/structure/table/marble{
-	color = "grey"
-	},
+/obj/structure/table/reinforced,
 /obj/machinery/reagentgrinder{
 	pixel_y = 10;
 	pixel_x = -10
@@ -69697,7 +69637,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/research)
 "qrI" = (
-/obj/machinery/disease2/isolator,
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/paleblue/border,
 /obj/machinery/light,
@@ -69710,6 +69649,17 @@
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
+	},
+/obj/structure/table/glass,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/storage/box/monkeycubes{
+	pixel_x = -7;
+	pixel_y = -3
+	},
+/obj/machinery/requests_console{
+	department = "Virology";
+	name = "Virology Requests Console";
+	pixel_y = -32
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
@@ -72225,10 +72175,6 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 4
 	},
-/obj/structure/flora/skeleton{
-	pixel_y = 0;
-	pixel_x = -5
-	},
 /turf/simulated/floor/tiled/white,
 /area/medical/foyer)
 "rXY" = (
@@ -73252,9 +73198,8 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -26
+/obj/structure/sign/deathsposal{
+	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
@@ -74476,26 +74421,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/hallway/secondary/entry/D3)
-"tlx" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/paleblue/border{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/white,
-/area/medical/medbay)
 "tmd" = (
 /obj/structure/reagent_dispensers/watertank,
 /obj/machinery/light{
@@ -74640,9 +74565,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
 "tpy" = (
-/obj/structure/bed/chair/office/dark{
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 4
 	},
@@ -75237,16 +75159,13 @@
 	dir = 1
 	},
 /obj/structure/table/standard,
-/obj/item/storage/lockbox/vials,
-/obj/item/reagent_containers/syringe/antiviral,
-/obj/item/reagent_containers/syringe/antiviral,
-/obj/item/reagent_containers/syringe/antiviral,
-/obj/item/storage/fancy/vials,
-/obj/item/antibody_scanner,
-/obj/item/antibody_scanner,
-/obj/item/radio/intercom/department/medbay{
-	dir = 1;
-	pixel_y = 21
+/obj/item/storage/pill_bottle/adranol{
+	pixel_y = 1;
+	pixel_x = -6
+	},
+/obj/item/reagent_containers/glass/bottle/mutagen{
+	pixel_y = 9;
+	pixel_x = 7
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
@@ -79842,6 +79761,9 @@
 /obj/effect/floor_decal/corner/paleblue/bordercorner{
 	dir = 4
 	},
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
 "wMO" = (
@@ -80324,12 +80246,21 @@
 /turf/simulated/floor/plating,
 /area/maintenance/medbay_fore)
 "wZh" = (
-/obj/machinery/disease2/diseaseanalyser,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 6
 	},
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 6
+	},
+/obj/structure/table/glass,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/storage/box/monkeycubes{
+	pixel_x = -7;
+	pixel_y = -3
+	},
+/obj/item/radio/intercom/department/medbay{
+	dir = 4;
+	pixel_x = 21
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
@@ -80756,6 +80687,7 @@
 	pixel_x = 1;
 	pixel_y = 8
 	},
+/obj/item/reagent_containers/spray/cleaner,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "xiE" = (
@@ -82221,6 +82153,11 @@
 	},
 /obj/machinery/light{
 	dir = 1
+	},
+/obj/machinery/firealarm{
+	dir = 8;
+	layer = 3.3;
+	pixel_x = 26
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
@@ -114262,7 +114199,7 @@ bOd
 bVw
 qgm
 sYg
-bda
+crq
 crq
 crq
 tge
@@ -127403,7 +127340,7 @@ rHH
 rHH
 cUx
 qDw
-tlx
+oZU
 vyg
 wum
 vqv

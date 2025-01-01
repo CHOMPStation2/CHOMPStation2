@@ -187,6 +187,19 @@
 	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/wings.dmi'
 	icon_state = "mothwings_snow"
 
+/datum/sprite_accessory/wing/mothwings_angel
+	name = "Moth Wings (angel)"
+	desc = ""
+	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/wings.dmi'
+	icon_state = "mothwings_angel"
+
+/datum/sprite_accessory/wing/mothwings_no_antennae_colorable
+	name = "Moth Wings (Colorable)"
+	desc = ""
+	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/wings.dmi'
+	icon_state = "mothwings_no_antennae_color"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
 
 /// XENO BACKPLATES ///
 
@@ -241,6 +254,24 @@
 	desc = ""
 	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/wings64.dmi'
 	icon_state = "taurdrake_wing"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	wing_offset = 16
+
+/datum/sprite_accessory/wing/large_harpy_wings_ch
+	name = "Harpy arm-wings(Large)"
+	desc = ""
+	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/wings64.dmi'
+	icon_state = "Harpy_wings"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	wing_offset = 16
+
+/datum/sprite_accessory/wing/sloogshell
+	name = "Sloog shell"
+	desc = ""
+	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/wings64.dmi'
+	icon_state = "sloogshell"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	wing_offset = 16

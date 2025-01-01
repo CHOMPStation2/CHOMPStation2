@@ -18,8 +18,8 @@
 
 /obj/structure/toilet/attack_hand(mob/living/user as mob)
 	if(swirlie)
-		usr.setClickCooldown(user.get_attack_speed())
-		usr.visible_message(span_danger("[user] slams the toilet seat onto [swirlie.name]'s head!"), span_notice("You slam the toilet seat onto [swirlie.name]'s head!"), "You hear reverberating porcelain.")
+		user.setClickCooldown(user.get_attack_speed())
+		user.visible_message(span_danger("[user] slams the toilet seat onto [swirlie.name]'s head!"), span_notice("You slam the toilet seat onto [swirlie.name]'s head!"), "You hear reverberating porcelain.")
 		swirlie.adjustBruteLoss(5)
 		return
 
@@ -216,7 +216,7 @@
 		mymist = null
 
 	if(on)
-		add_overlay(image('icons/obj/watercloset.dmi', src, "water", MOB_LAYER + 1, dir))
+		add_overlay(image('icons/obj/watercloset.dmi', src, REAGENT_ID_WATER, MOB_LAYER + 1, dir))
 		if(temperature_settings[watertemp] < T20C)
 			return //no mist for cold water
 		if(!ismist)
@@ -265,7 +265,7 @@
 				var/mob/living/L = AM
 				process_heat(L)
 	wash_floor()
-	reagents.add_reagent("water", reagents.get_free_space())
+	reagents.add_reagent(REAGENT_ID_WATER, reagents.get_free_space())
 
 /obj/machinery/shower/proc/wash_floor()
 	if(is_washing)
@@ -519,13 +519,13 @@
 	..()
 	if(!istype(thing) || !thing.is_open_container())
 		return ..()
-	if(!usr.Adjacent(src))
+	if(!user.Adjacent(src))
 		return ..()
 	if(!thing.reagents || thing.reagents.total_volume == 0)
-		to_chat(usr, span_warning("\The [thing] is empty."))
+		to_chat(user, span_warning("\The [thing] is empty."))
 		return
 	// Clear the vessel.
-	visible_message(span_infoplain(span_bold("\The [usr]") + " tips the contents of \the [thing] into \the [src]."))
+	visible_message(span_infoplain(span_bold("\The [user]") + " tips the contents of \the [thing] into \the [src]."))
 	thing.reagents.clear_reagents()
 	thing.update_icon()
 
@@ -549,13 +549,13 @@
 		to_chat(user, span_warning("Someone's already washing here."))
 		return
 
-	to_chat(usr, span_notice("You start washing your hands."))
+	to_chat(user, span_notice("You start washing your hands."))
 	playsound(src, 'sound/effects/sink_long.ogg', 75, 1)
 
 	busy = 1
 	if(!do_after(user, 40, src))
 		busy = 0
-		to_chat(usr, span_notice("You stop washing your hands."))
+		to_chat(user, span_notice("You stop washing your hands."))
 		return
 	busy = 0
 
@@ -573,6 +573,9 @@
 				H.l_hand.clean_blood()
 			H.bloody_hands = 0
 			H.germ_level = 0
+			H.hand_blood_color = null
+			LAZYCLEARLIST(H.blood_DNA)
+		H.update_bloodied()
 	else
 		user.clean_blood()
 	for(var/mob/V in viewers(src, null))
@@ -585,7 +588,7 @@
 
 	var/obj/item/reagent_containers/RG = O
 	if (istype(RG) && RG.is_open_container())
-		RG.reagents.add_reagent("water", min(RG.volume - RG.reagents.total_volume, RG.amount_per_transfer_from_this))
+		RG.reagents.add_reagent(REAGENT_ID_WATER, min(RG.volume - RG.reagents.total_volume, RG.amount_per_transfer_from_this))
 		user.visible_message(span_notice("[user] fills \the [RG] using \the [src]."),span_notice("You fill \the [RG] using \the [src]."))
 		playsound(src, 'sound/effects/sink.ogg', 75, 1)
 		return 1
@@ -609,7 +612,7 @@
 					span_userdanger("[user] was stunned by [TU.his] wet [O]!"))
 				return 1
 	else if(istype(O, /obj/item/mop))
-		O.reagents.add_reagent("water", 5)
+		O.reagents.add_reagent(REAGENT_ID_WATER, 5)
 		to_chat(user, span_notice("You wet \the [O] in \the [src]."))
 		playsound(src, 'sound/effects/slosh.ogg', 25, 1)
 		return
@@ -626,12 +629,12 @@
 		if(J.water.energy < J.water.max_energy) return
 	//CHOMPAdd End
 
-	to_chat(usr, span_notice("You start washing \the [I]."))
+	to_chat(user, span_notice("You start washing \the [I]."))
 
 	busy = 1
 	if(!do_after(user, 40, src))
 		busy = 0
-		to_chat(usr, span_notice("You stop washing \the [I]."))
+		to_chat(user, span_notice("You stop washing \the [I]."))
 		return
 	busy = 0
 

@@ -30,6 +30,9 @@ export type Data = {
   health: number;
   max_health: number;
 
+  light_color: string;
+  theme?: string;
+
   // Modules
   modules_static: Module[];
   emag_modules_static: Module[];

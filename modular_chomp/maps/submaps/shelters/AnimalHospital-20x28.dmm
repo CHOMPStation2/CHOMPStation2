@@ -487,10 +487,7 @@
 "Bv" = (
 /obj/effect/floor_decal/corner/paleblue/full,
 /obj/structure/table/standard,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
+/obj/item/cell/high,
 /obj/item/melee/baton/cattleprod,
 /obj/machinery/recharger,
 /turf/simulated/floor/tiled,

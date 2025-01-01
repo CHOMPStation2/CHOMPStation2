@@ -37,10 +37,13 @@ Thus, the two variables affect pump operation are set in New():
 	var/id = null
 	var/datum/radio_frequency/radio_connection
 
-/obj/machinery/atmospherics/binary/pump/New()
-	..()
+/obj/machinery/atmospherics/binary/pump/Initialize()
+	. = ..()
+
 	air1.volume = ATMOS_DEFAULT_VOLUME_PUMP
 	air2.volume = ATMOS_DEFAULT_VOLUME_PUMP
+	if(frequency)
+		set_frequency(frequency)
 
 /obj/machinery/atmospherics/binary/pump/Destroy()
 	unregister_radio(src, frequency)
@@ -166,11 +169,6 @@ Thus, the two variables affect pump operation are set in New():
 
 	return data
 
-/obj/machinery/atmospherics/binary/pump/Initialize()
-	. = ..()
-	if(frequency)
-		set_frequency(frequency)
-
 /obj/machinery/atmospherics/binary/pump/receive_signal(datum/signal/signal)
 	if(!signal.data["tag"] || (signal.data["tag"] != id) || (signal.data["sigtype"]!="command"))
 		return 0
@@ -203,13 +201,13 @@ Thus, the two variables affect pump operation are set in New():
 /obj/machinery/atmospherics/binary/pump/attack_hand(mob/user)
 	if(..())
 		return
-	add_fingerprint(usr)
+	add_fingerprint(user)
 	if(!allowed(user))
 		to_chat(user, span_warning("Access denied."))
 		return
 	tgui_interact(user)
 
-/obj/machinery/atmospherics/binary/pump/tgui_act(action, params)
+/obj/machinery/atmospherics/binary/pump/tgui_act(action, params, datum/tgui/ui)
 	if(..())
 		return TRUE
 
@@ -225,11 +223,11 @@ Thus, the two variables affect pump operation are set in New():
 				if("max")
 					target_pressure = max_pressure_setting
 				if("set")
-					var/new_pressure = tgui_input_number(usr,"Enter new output pressure (0-[max_pressure_setting]kPa)","Pressure control",src.target_pressure,max_pressure_setting,0)
+					var/new_pressure = tgui_input_number(ui.user,"Enter new output pressure (0-[max_pressure_setting]kPa)","Pressure control",src.target_pressure,max_pressure_setting,0)
 					src.target_pressure = between(0, new_pressure, max_pressure_setting)
 			. = TRUE
 
-	add_fingerprint(usr)
+	add_fingerprint(ui.user)
 	update_icon()
 
 /obj/machinery/atmospherics/binary/pump/power_change()

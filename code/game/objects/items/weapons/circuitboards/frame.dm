@@ -84,8 +84,8 @@
 /obj/item/circuitboard/electrochromic
 	name = T_BOARD("electrochromic button")
 	build_path = /obj/machinery/button/windowtint
-	board_type = new /datum/frame/frame_types/electrochromic_button
-	matter = list(MAT_STEEL = 50, "glass" = 50)
+	board_type = new /datum/frame/frame_types/button
+	matter = list(MAT_STEEL = 50, MAT_GLASS = 50)
 
 //Computer
 
@@ -192,7 +192,7 @@
 	name = T_BOARD("teleporter hub")
 	build_path = /obj/machinery/teleport/hub
 	board_type = new /datum/frame/frame_types/machine //YWEdit makes buildable
-	matter = list(DEFAULT_WALL_MATERIAL = 50, "glass" = 50, MAT_GOLD = 100)
+	matter = list(MAT_STEEL = 50, MAT_GLASS = 50, MAT_GOLD = 100)
 //	origin_tech = list(TECH_DATA = 2, TECH_BLUESPACE = 4)
 //CHOMPedit Balance
 	req_components = list(
@@ -207,7 +207,7 @@
 	name = T_BOARD("teleporter station")
 	build_path = /obj/machinery/teleport/station
 	board_type = new /datum/frame/frame_types/machine //YWEdit makes buildable
-	matter = list(DEFAULT_WALL_MATERIAL = 50, "glass" = 50, MAT_GOLD = 100)
+	matter = list(MAT_STEEL = 50, MAT_GLASS = 50, MAT_GOLD = 100)
 //	origin_tech = list(TECH_DATA = 2, TECH_BLUESPACE = 3)
 	req_components = list(
 							/obj/item/stock_parts/console_screen = 1,

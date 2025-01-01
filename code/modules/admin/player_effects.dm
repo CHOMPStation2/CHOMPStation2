@@ -1,7 +1,7 @@
 /client/proc/player_effects(var/mob/target in mob_list)
 	set name = "Player Effects"
 	set desc = "Modify a player character with various 'special treatments' from a list."
-	set category = "Fun.Event Kit" //CHOMPEdit
+	set category = "Fun.Event Kit"
 	if(!check_rights(R_FUN))
 		return
 
@@ -39,11 +39,11 @@
 /datum/eventkit/player_effects/tgui_state(mob/user)
 	return GLOB.tgui_admin_state
 
-/datum/eventkit/player_effects/tgui_act(action)
+/datum/eventkit/player_effects/tgui_act(action, list/params, datum/tgui/ui)
 	. = ..()
 	if(.)
 		return
-	if(!check_rights_for(usr.client, R_SPAWN))
+	if(!check_rights_for(ui.user.client, R_SPAWN))
 		return
 
 	log_and_message_admins("[key_name(user)] used player effect: [action] on [target.ckey] playing [target.name]")
@@ -66,7 +66,7 @@
 				to_chat(user,"[target] didn't have any breakable legs, sorry.")
 
 		if("bluespace_artillery")
-			bluespace_artillery(target,usr)
+			bluespace_artillery(target, ui.user)
 
 		if("spont_combustion")
 			var/mob/living/carbon/human/Tar = target
@@ -104,6 +104,7 @@
 			var/mob/living/simple_mob/shadekin/red/shadekin = new(Ts)
 			//Abuse of shadekin
 			shadekin.real_name = shadekin.name
+			shadekin.voremob_loaded = TRUE
 			shadekin.init_vore()
 			shadekin.ability_flags |= 0x1
 			shadekin.phase_shift()
@@ -137,14 +138,14 @@
 				"Orange Eyes (Light)" = /mob/living/simple_mob/shadekin/orange/white,
 				"Orange Eyes (Brown)" = /mob/living/simple_mob/shadekin/orange/brown,
 				"Rivyr (Unique)" = /mob/living/simple_mob/shadekin/blue/rivyr)
-			var/kin_type = tgui_input_list(usr, "Select the type of shadekin for [target] nomf","Shadekin Type Choice", kin_types)
+			var/kin_type = tgui_input_list(ui.user, "Select the type of shadekin for [target] nomf","Shadekin Type Choice", kin_types)
 			if(!kin_type || !target)
 				return
 
 
 			kin_type = kin_types[kin_type]
 
-			var/myself = tgui_alert(usr, "Control the shadekin yourself or delete pred and prey after?","Control Shadekin?",list("Control","Cancel","Delete"))
+			var/myself = tgui_alert(ui.user, "Control the shadekin yourself or delete pred and prey after?","Control Shadekin?",list("Control","Cancel","Delete"))
 			if(!myself || myself == "Cancel" || !target)
 				return
 
@@ -157,6 +158,7 @@
 			target.transforming = TRUE //Cheap hack to stop them from moving
 			var/mob/living/simple_mob/shadekin/shadekin = new kin_type(Tt)
 			shadekin.real_name = shadekin.name
+			shadekin.voremob_loaded = TRUE
 			shadekin.init_vore()
 			shadekin.can_be_drop_pred = TRUE
 			shadekin.dir = SOUTH
@@ -187,13 +189,13 @@
 
 
 		if("redspace_abduct")
-			redspace_abduction(target, usr)
+			redspace_abduction(target, ui.user)
 
 		if("autosave")
-			fake_autosave(target, usr)
+			fake_autosave(target, ui.user)
 
 		if("autosave2")
-			fake_autosave(target, usr, TRUE)
+			fake_autosave(target, ui.user, TRUE)
 
 		if("adspam")
 			if(target.client)
@@ -338,6 +340,32 @@
 				M.loc = new_mob
 				M.forceMove(new_mob)
 				new_mob.tf_mob_holder = M
+
+		if("item_tf")
+			var/mob/living/M = target
+
+			if(!istype(M))
+				return
+
+			if(!M.ckey)
+				return
+
+			var/obj/item/spawning = user.client.get_path_from_partial_text()
+
+			to_chat(user,span_warning("spawning is: [spawning]"))
+
+			if(!ispath(spawning, /obj/item/))
+				to_chat(user,span_warning("Can only spawn items."))
+				return
+
+			var/obj/item/spawned_obj = new spawning(M.loc)
+			var/obj/item/original_name = spawned_obj.name
+			spawned_obj.inhabit_item(M, original_name, M)
+			var/mob/living/possessed_voice = spawned_obj.possessed_voice
+			spawned_obj.trash_eatable = M.devourable
+			spawned_obj.unacidable = !M.digestable
+			M.forceMove(possessed_voice)
+
 
 		////////MEDICAL//////////////
 
@@ -582,6 +610,12 @@
 			add_verb(Tar, /mob/living/proc/eat_trash)
 			add_verb(Tar, /mob/living/proc/toggle_trash_catching)
 
+		if("active_cloaking")
+			var/mob/living/Tar = target
+			if(!istype(Tar))
+				return
+			add_verb(Tar, /mob/living/proc/toggle_active_cloaking)
+
 
 		////////INVENTORY//////////////
 
@@ -692,7 +726,7 @@
 			if(where == "To Me")
 				user.client.Getmob(target)
 			if(where == "To Mob")
-				var/mob/selection = tgui_input_list(usr, "Select a mob to jump [target] to:", "Jump to mob", mob_list)
+				var/mob/selection = tgui_input_list(ui.user, "Select a mob to jump [target] to:", "Jump to mob", mob_list)
 				target.on_mob_jump()
 				target.forceMove(get_turf(selection))
 				log_admin("[key_name(user)] jumped [target] to [selection]")
@@ -739,22 +773,22 @@
 
 		if("ai")
 			if(!istype(target, /mob/living))
-				to_chat(usr, span_notice("This can only be used on instances of type /mob/living"))
+				to_chat(ui.user, span_notice("This can only be used on instances of type /mob/living"))
 				return
 			var/mob/living/L = target
 			if(L.client || L.teleop)
-				to_chat(usr, span_warning("This cannot be used on player mobs!"))
+				to_chat(ui.user, span_warning("This cannot be used on player mobs!"))
 				return
 
 			if(L.ai_holder)	//Cleaning up the original ai
 				var/ai_holder_old = L.ai_holder
 				L.ai_holder = null
 				qdel(ai_holder_old)	//Only way I could make #TESTING - Unable to be GC'd to stop. del() logs show it works.
-			L.ai_holder_type = tgui_input_list(usr, "Choose AI holder", "AI Type", typesof(/datum/ai_holder/))
+			L.ai_holder_type = tgui_input_list(ui.user, "Choose AI holder", "AI Type", typesof(/datum/ai_holder/))
 			L.initialize_ai_holder()
-			L.faction = sanitize(tgui_input_text(usr, "Please input AI faction", "AI faction", "neutral"))
-			L.a_intent = tgui_input_list(usr, "Please choose AI intent", "AI intent", list(I_HURT, I_HELP))
-			if(tgui_alert(usr, "Make mob wake up? This is needed for carbon mobs.", "Wake mob?", list("Yes", "No")) == "Yes")
+			L.faction = sanitize(tgui_input_text(ui.user, "Please input AI faction", "AI faction", "neutral"))
+			L.a_intent = tgui_input_list(ui.user, "Please choose AI intent", "AI intent", list(I_HURT, I_HELP))
+			if(tgui_alert(ui.user, "Make mob wake up? This is needed for carbon mobs.", "Wake mob?", list("Yes", "No")) == "Yes")
 				L.AdjustSleeping(-100)
 
 		if("cloaking")

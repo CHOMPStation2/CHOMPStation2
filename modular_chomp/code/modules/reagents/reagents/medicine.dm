@@ -1,8 +1,8 @@
 ///GENDER CHANGE REAGENTS////
 
 /datum/reagent/change_drug //base chemical
-	name = "Amorphorovir" //always the same name
-	id = "change_drug"
+	name = REAGENT_AMORPHOROVIR //always the same name
+	id = REAGENT_ID_AMORPHOROVIR
 	metabolism = 100 //set high enough that it does not process multiple times(delay implemented below)
 	description = "the bloods DNA in this seems aggressive"
 	taste_description = "this shouldn't be here" //unobtainable ingame
@@ -10,8 +10,8 @@
 	var/gender_change = null //set the gender variable here so we can set it to others in varients
 
 /datum/reagent/change_drug/male //inherits base chemical properties listed above
-	name = "Androrovir"
-	id = "change_drug_male" //unique ID for each varient
+	name = REAGENT_ANDROROVIR
+	id = REAGENT_ID_ANDROROVIR //unique ID for each varient
 	taste_description = "old spice odor blocker and body wash"
 	reagent_state = LIQUID
 	description = \
@@ -22,8 +22,8 @@
 	scannable = 1
 
 /datum/reagent/change_drug/female
-	name = "Gynorovir"
-	id = "change_drug_female"
+	name = REAGENT_GYNOROVIR
+	id = REAGENT_ID_GYNOROVIR
 	description = \
 		"A medical concoction, capable of rapidly altering genetic and physical structure of the body. This one seems\
 		to realign the target's gender to be female."
@@ -34,8 +34,8 @@
 	scannable = 1
 
 /datum/reagent/change_drug/intersex
-	name = "Androgynorovir"
-	id = "change_drug_intersex"
+	name = REAGENT_ANDROGYNOROVIR
+	id = REAGENT_ID_ANDROGYNOROVIR
 	description = \
 		"A medical concoction, capable of rapidly altering genetic and physical structure of the body. This one seems\
 		to realign the target's gender to be mixed."
@@ -66,8 +66,8 @@
 //Chemist expansion
 //deathblood
 /datum/reagent/cleansingagent
-	name = "Cleansing Agent"
-	id = "cleansingagent"
+	name = REAGENT_CLEANSINGAGENT
+	id = REAGENT_ID_CLEANSINGAGENT
 	description = "An agent that purges one's body of toxins."
 	reagent_state = LIQUID
 	color = "#225722"
@@ -86,8 +86,8 @@
 		M.accumulated_rads = max(M.accumulated_rads - 15 * removed * M.species.chem_strength_heal, 0)
 
 /datum/reagent/purifyingagent
-	name = "Purifying Agent"
-	id = "purifyingagent"
+	name = REAGENT_PURIFYINGAGENT
+	id = REAGENT_ID_PURIFYINGAGENT
 	description = "An agent that purges one's body of rads and toxins."
 	reagent_state = LIQUID
 	color = "#225722"
@@ -106,8 +106,8 @@
 
 //liquid fire
 /datum/reagent/burncard
-	name = "Burning Bicaridine"
-	id = "burncard"
+	name = REAGENT_BURNCARD
+	id = REAGENT_ID_BURNCARD
 	description = "A more powerful variation of bicard that also burns the subject."
 	taste_description = "bitterness"
 	taste_mult = 3
@@ -142,8 +142,8 @@
 						O.wounds -= W
 
 /datum/reagent/flamecure
-	name = "Flame Cure"
-	id = "flamecure"
+	name = REAGENT_FLAMECURE
+	id = REAGENT_ID_FLAMECURE
 	description = "Used to rapidly clot internal hemorrhages by burning the wounded areas"
 	reagent_state = LIQUID
 	color = "#4246C7"
@@ -173,8 +173,8 @@
 
 //neoliquidfire
 /datum/reagent/neotane
-	name = "Neo Kelotane"
-	id = "neotane"
+	name = REAGENT_NEOTANE
+	id = REAGENT_ID_NEOTANE
 	description = "An advancement of kelotane that scars and breaks apart the user's flesh to remove the burnt tissue."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
@@ -191,8 +191,8 @@
 		M.heal_organ_damage(-1 * removed, 6 * removed * chem_effective * chem_effective)
 
 /datum/reagent/bloodsealer
-	name = "Blood Sealer"
-	id = "bloodsealer"
+	name = REAGENT_BLOODSEALER
+	id = REAGENT_ID_BLOODSEALER
 	description = "A strange chemical that will stablize bloodflow by burning the subject"
 	taste_description = "bitterness"
 	reagent_state = LIQUID
@@ -207,8 +207,8 @@
 
 //meteroidliquid
 /datum/reagent/livingagent
-	name = "Living Agent"
-	id = "livingagent"
+	name = REAGENT_LIVINGAGENT
+	id = REAGENT_ID_LIVINGAGENT
 	description = "Fill the body with life, while making it more senstive to stimulus."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
@@ -233,8 +233,8 @@
 		M.add_chemical_effect(CE_PAINKILLER, -20 * M.species.chem_strength_pain)
 
 /datum/reagent/performancepeaker
-	name = "Performance Peaker"
-	id = "performancepeaker"
+	name = REAGENT_PERFORMANCEPEAKER
+	id = REAGENT_ID_PERFORMANCEPEAKER
 	description = "A chemical created to bring a body to peak condition except it's highly toxic"
 	taste_description = "bitterness"
 	reagent_state = LIQUID
@@ -253,8 +253,8 @@
 //advanced crafting
 //tier 1
 /datum/reagent/souldew
-	name = "Soul Dew"
-	id = "souldew"
+	name = REAGENT_SOULDEW
+	id = REAGENT_ID_SOULDEW
 	description = "An experimental drug that solely works upon dead bodies"
 	taste_description = "ash"
 	reagent_state = LIQUID
@@ -273,8 +273,8 @@
 		M.adjustToxLoss(-3 * removed * chem_effective)
 
 /datum/reagent/quadcord
-	name = "quadcord"
-	id = "quadcord"
+	name = REAGENT_QUADCORD
+	id = REAGENT_ID_QUADCORD
 	description = "An experimental drug that is meant to further enhance tricord"
 	taste_description = "bitterness"
 	reagent_state = LIQUID
@@ -293,8 +293,8 @@
 
 //tier 2
 /datum/reagent/juggernog
-	name = "juggernog"
-	id = "juggernog"
+	name = REAGENT_JUGGERNOG
+	id = REAGENT_ID_JUGGERNOG
 	description = "An experimental drug that toughens the body to blows and knockdown"
 	taste_description = "bitterness"
 	reagent_state = LIQUID
@@ -308,8 +308,8 @@
 	M.AdjustWeakened(-1)
 
 /datum/reagent/curea
-	name = "curea"
-	id = "curea"
+	name = REAGENT_CUREA
+	id = REAGENT_ID_CUREA
 	description = "An experimental that removes many ailments, such as poison and stiffening of muscles via frost"
 	taste_description = "bitterness"
 	reagent_state = LIQUID
@@ -330,8 +330,8 @@
 
 //tier 3
 /datum/reagent/modapplying/liquidhealer
-	name = "Liquid Healer"
-	id = "liquidhealer"
+	name = REAGENT_LIQUIDHEALER
+	id = REAGENT_ID_LIQUIDHEALER
 	description = "An experimental drug that mimics rapid regeneration seen in squishy creatures."
 	taste_description = "sweet"
 	reagent_state = LIQUID
@@ -342,7 +342,7 @@
 	modifier_duration = 3 SECONDS
 
 /datum/modifier/liquidhealer
-	name = "liquidhealer"
+	name = REAGENT_ID_LIQUIDHEALER
 	desc = "You are filled with an overwhelming healing."
 
 	on_created_text = span_critical("You feel your body's natural healing quick into overdrive!")
@@ -369,8 +369,8 @@
 
 
 /datum/reagent/phoenixbreath
-	name = "Phoenix Breath"
-	id = "phoenixbreath"
+	name = REAGENT_PHOENIXBREATH
+	id = REAGENT_ID_PHOENIXBREATH
 	description = "An improvement on the original soul dew chemical"
 	taste_description = "ash"
 	reagent_state = LIQUID
@@ -393,8 +393,8 @@
 	M.add_chemical_effect(CE_PAINKILLER, 10 * M.species.chem_strength_pain)
 
 /datum/reagent/dryagent
-	name = "Dry Agent"
-	id = "dryagent"
+	name = REAGENT_DRYAGENT
+	id = REAGENT_ID_DRYAGENT
 	description = "A desiccant. Can be used to dry things."
 	taste_description = "dryness"
 	reagent_state = LIQUID

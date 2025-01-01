@@ -323,12 +323,12 @@
 #define SPECIES_VR_VOX			"Virtual Reality Vox"
 
 // Ayyy IDs.
-#define SPECIES_XENO				"Xenomorph"
-#define SPECIES_XENO_DRONE			"Xenomorph Drone"
-#define SPECIES_XENO_HUNTER			"Xenomorph Hunter"
-#define SPECIES_XENO_SENTINEL		"Xenomorph Sentinel"
-#define SPECIES_XENO_QUEEN			"Xenomorph Queen"
-#define SPECIES_XENOMORPH_HYBRID 	"Xenomorph Hybrid" // CHOMPedit: Playable Xeno species.
+#define SPECIES_XENO			"Xenomorph"
+#define SPECIES_XENO_DRONE		"Xenomorph Drone"
+#define SPECIES_XENO_HUNTER		"Xenomorph Hunter"
+#define SPECIES_XENO_SENTINEL	"Xenomorph Sentinel"
+#define SPECIES_XENO_QUEEN		"Xenomorph Queen"
+#define SPECIES_XENOMORPH_HYBRID 	"Xenomorph Hybrid"
 
 // Misc species. Mostly unused but might as well be complete.
 #define SPECIES_SHADOW			"Shadow"
@@ -379,6 +379,14 @@
 #define STRUCTURE_MIN_DAMAGE_THRESHOLD 5
 
 //Vision flags, for dealing with plane visibility
+/// AS A SIDE NOTE, PLEASE PLEASE PLEASE PLEASE PLEASE PLEAS PLEASE PLEASE <b>PLEASE</b> for the LOVE OF ALL THAT IS HOLY
+/// IF YOU ARE ADDING MORE VISION PLANES, ADD THEM IN HERE. DO NOT ADD THEM TO A _VR FILE. DO NOT ADD THEM TO A _CH FILE. DON'T ADD THEM TO A _VFX FILE.
+/// ADD. THEM. HERE. YES, YOU CAN OVERRIDE THE VIS_COUNT IN ANOTHER FILE AND ADD A NEW DEFINE THERE AS WELL, BUT IT WILL LEAD TO
+/// HEADACHES AND SUFFERING LATER DOWN THE LINE WHEN SOMEONE ADDS A NEW VISION LAYER HERE AND IT CONFLICTS WITH ONE IN ANOTHER FILE
+/// AND EVERYONE SCRATCHES THEIR HEAD AND GOES "WHY IS THIS SUDDENLY BROKE"
+/// AND THEN SOMEONE HAD TO DIG THROUGH VISION, PLANE, AND LAYER CODE. THEY WILL NOT BE HAPPY.
+/// SO PLEASE, ADD THEM H E R E
+/// Thank you :)
 #define VIS_FULLBRIGHT		1
 #define VIS_LIGHTING		2
 #define VIS_O_LIGHT         3
@@ -416,7 +424,18 @@
 
 #define VIS_STATUS			28
 
-#define VIS_COUNT			28 //Must be highest number from above.
+#define VIS_CH_STATUS_R		29
+#define VIS_CH_HEALTH_VR	30
+#define VIS_CH_BACKUP		31
+#define VIS_CH_VANTAG		32
+
+#define VIS_AUGMENTED		33
+
+#define VIS_CH_STOMACH		34
+
+#define VIS_SOULCATCHER		35 // CHOMPAdd
+
+#define VIS_COUNT			35 //Must be highest number from above. // CHOMPEdit
 
 //Some mob icon layering defines
 #define BODY_LAYER		-100
@@ -457,3 +476,6 @@
 #define VISIBLE_GENDER_FORCE_PLURAL 1		// Used by get_visible_gender to return PLURAL
 #define VISIBLE_GENDER_FORCE_IDENTIFYING 2	// Used by get_visible_gender to return the mob's identifying gender
 #define VISIBLE_GENDER_FORCE_BIOLOGICAL 3	// Used by get_visible_gender to return the mob's biological gender
+
+// Default name for accesories
+#define DEVELOPER_WARNING_NAME "you should not see this..."

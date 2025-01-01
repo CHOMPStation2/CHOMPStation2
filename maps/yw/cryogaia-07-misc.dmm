@@ -2641,10 +2641,10 @@
 /area/shuttle/mercenary)
 "mz" = (
 /obj/structure/table/standard,
-/obj/item/radio/headset/syndicate/alt,
-/obj/item/radio/headset/syndicate/alt,
-/obj/item/radio/headset/syndicate/alt,
-/obj/item/radio/headset/syndicate/alt,
+/obj/item/radio/headset/alt/syndicate,
+/obj/item/radio/headset/alt/syndicate,
+/obj/item/radio/headset/alt/syndicate,
+/obj/item/radio/headset/alt/syndicate,
 /turf/unsimulated/floor{
 	icon_state = "lino"
 	},
@@ -7397,10 +7397,7 @@
 /obj/item/stack/material/glass{
 	amount = 15
 	},
-/obj/item/cell{
-	charge = 100;
-	maxcharge = 15000
-	},
+/obj/item/cell,
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
 "Km" = (

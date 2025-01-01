@@ -1,4 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - rscadd: "Legacy robot UIs replaced with Robotact, a new all-in-one UI for all things robot."

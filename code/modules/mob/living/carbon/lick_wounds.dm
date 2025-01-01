@@ -1,6 +1,6 @@
 /mob/living/carbon/human/proc/lick_wounds(var/mob/living/carbon/M as mob in view(1)) // Allows the user to lick themselves. Given how rarely this trait is used, I don't see an issue with a slight buff.
 	set name = "Lick Wounds"
-	set category = "Abilities.General" //CHOMPEdit
+	set category = "Abilities.General"
 	set desc = "Disinfect and heal small wounds with your saliva."
 
 	if(stat || paralysis || weakened || stunned)
@@ -12,7 +12,7 @@
 		return
 	//YW edit. Added the distance check to here. this allows the ability to lick ones own wounds. although this also means that all living/carbon/M appear on the list if used.
 	if (get_dist(src,M) >= 2)
-		to_chat(src, "<span class='warning'>You need to be closer to do that.</span>") // CHOMPEdit - don't use src << unless you have to.
+		to_chat(src, span_warning("You need to be closer to do that.")) // CHOMPEdit - don't use src << unless you have to.
 		return
 
 	if (get_dist(src,M) >= 2)

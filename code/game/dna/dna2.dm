@@ -25,13 +25,6 @@ var/global/list/assigned_blocks[DNA_SE_LENGTH]
 
 var/global/list/datum/dna/gene/dna_genes[0]
 
-/////////////////
-// GENE DEFINES
-/////////////////
-// Skip checking if it's already active.
-// Used for genes that check for value rather than a binary on/off.
-#define GENE_ALWAYS_ACTIVATE 1
-
 /datum/dna
 	// READ-ONLY, GETS OVERWRITTEN
 	// DO NOT FUCK WITH THESE OR BYOND WILL EAT YOUR FACE
@@ -139,6 +132,10 @@ var/global/list/datum/dna/gene/dna_genes[0]
 	if(character.ear_style)
 		ear_style = ear_styles_list.Find(character.ear_style.type)
 
+	var/ear_secondary_style = 0
+	if(character.ear_secondary_style)
+		ear_secondary_style = ear_styles_list.Find(character.ear_secondary_style.type)
+
 	// Demi Tails
 	var/tail_style = 0
 	if(character.tail_style)
@@ -170,10 +167,11 @@ var/global/list/datum/dna/gene/dna_genes[0]
 	src.digitigrade = character.digitigrade
 
 	// +1 to account for the none-of-the-above possibility
-	SetUIValueRange(DNA_UI_EAR_STYLE,	ear_style + 1,     ear_styles_list.len  + 1,  1)
-	SetUIValueRange(DNA_UI_TAIL_STYLE,	tail_style + 1,    tail_styles_list.len + 1,  1)
-	SetUIValueRange(DNA_UI_PLAYERSCALE,	size_multiplier,   player_sizes_list.len,     1)
-	SetUIValueRange(DNA_UI_WING_STYLE,	wing_style + 1,    wing_styles_list.len + 1,  1)
+	SetUIValueRange(DNA_UI_EAR_STYLE,             ear_style + 1,               ear_styles_list.len  + 1,  1)
+	SetUIValueRange(DNA_UI_EAR_SECONDARY_STYLE,	  ear_secondary_style + 1,     ear_styles_list.len  + 1,  1)
+	SetUIValueRange(DNA_UI_TAIL_STYLE,	          tail_style + 1,              tail_styles_list.len + 1,  1)
+	SetUIValueRange(DNA_UI_PLAYERSCALE,           size_multiplier,             player_sizes_list.len,     1)
+	SetUIValueRange(DNA_UI_WING_STYLE,            wing_style + 1,              wing_styles_list.len + 1,  1)
 
 	SetUIValueRange(DNA_UI_TAIL_R,    character.r_tail,    255,    1)
 	SetUIValueRange(DNA_UI_TAIL_G,    character.g_tail,    255,    1)
@@ -211,6 +209,15 @@ var/global/list/datum/dna/gene/dna_genes[0]
 	SetUIValueRange(DNA_UI_EARS3_G,   character.g_ears3,   255,    1)
 	SetUIValueRange(DNA_UI_EARS3_B,   character.b_ears3,   255,    1)
 
+	for(var/channel in 1 to DNA_UI_EARS_SECONDARY_COLOR_CHANNEL_COUNT)
+		var/offset = DNA_UI_EARS_SECONDARY_START + (channel - 1) * 3
+		var/list/read_rgb = ReadRGB(LAZYACCESS(character.ear_secondary_colors, channel) || "#ffffff")
+		var/red = read_rgb[1]
+		var/green = read_rgb[2]
+		var/blue = read_rgb[3]
+		SetUIValueRange(offset, red, 255, 1)
+		SetUIValueRange(offset + 1, green, 255, 1)
+		SetUIValueRange(offset + 2, blue, 255, 1)
 	// VORE Station Edit End
 
 	SetUIValueRange(DNA_UI_HAIR_R,    character.r_hair,    255,    1)

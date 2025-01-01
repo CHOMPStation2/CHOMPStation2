@@ -1793,15 +1793,6 @@
 /obj/machinery/computer/arcade/battle,
 /turf/simulated/shuttle/floor/black,
 /area/awaymission/zoo/tradeship)
-"fl" = (
-/obj/structure/table/steel_reinforced,
-/obj/structure/flora/pottedplant{
-	icon_state = "plant-09";
-	name = "Esteban";
-	pixel_y = 8
-	},
-/turf/simulated/shuttle/floor/black,
-/area/awaymission/zoo/tradeship)
 "fm" = (
 /obj/machinery/vending/assist{
 	contraband = null;
@@ -2387,32 +2378,6 @@
 /obj/machinery/computer,
 /turf/simulated/shuttle/floor/darkred,
 /area/awaymission/zoo/syndieship)
-"hb" = (
-/obj/structure/window/phoronreinforced{
-	dir = 1;
-	icon_state = "phoronrwindow";
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/window/phoronreinforced{
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 8;
-	icon_state = "phoronrwindow";
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/grille,
-/obj/structure/window/phoronreinforced{
-	dir = 4;
-	icon_state = "phoronrwindow";
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/turf/simulated/floor/plating,
-/area/awaymission/zoo)
 "hc" = (
 /turf/simulated/floor/plating,
 /area/awaymission/zoo)
@@ -2423,17 +2388,6 @@
 	},
 /turf/simulated/floor,
 /area/awaymission/zoo/pirateship)
-"he" = (
-/obj/structure/table/standard,
-/obj/item/stack/material/glass{
-	amount = 15
-	},
-/obj/item/cell{
-	charge = 100;
-	maxcharge = 15000
-	},
-/turf/simulated/shuttle/floor/darkred,
-/area/awaymission/zoo/syndieship)
 "hf" = (
 /obj/item/radio/intercom{
 	desc = "Talk through this. Evilly";
@@ -2457,60 +2411,6 @@
 	},
 /turf/simulated/shuttle/floor/darkred,
 /area/awaymission/zoo/syndieship)
-"hh" = (
-/obj/structure/window/phoronreinforced{
-	dir = 1;
-	icon_state = "phoronrwindow";
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/window/phoronreinforced{
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 8;
-	icon_state = "phoronrwindow";
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/grille,
-/turf/simulated/floor/plating,
-/area/awaymission/zoo)
-"hi" = (
-/obj/structure/window/phoronreinforced{
-	dir = 1;
-	icon_state = "phoronrwindow";
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/window/phoronreinforced{
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/grille,
-/turf/simulated/floor/plating,
-/area/awaymission/zoo)
-"hj" = (
-/obj/structure/window/phoronreinforced{
-	dir = 1;
-	icon_state = "phoronrwindow";
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/window/phoronreinforced{
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 4;
-	icon_state = "phoronrwindow";
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/grille,
-/turf/simulated/floor/plating,
-/area/awaymission/zoo)
 "hk" = (
 /obj/item/storage/box/matches,
 /obj/item/storage/fancy/cigarettes/dromedaryco,
@@ -2524,28 +2424,6 @@
 /obj/machinery/door/window/northright,
 /turf/simulated/shuttle/floor/darkred,
 /area/awaymission/zoo/syndieship)
-"hn" = (
-/obj/structure/grille,
-/obj/structure/window/phoronreinforced{
-	dir = 4;
-	icon_state = "phoronrwindow";
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 1;
-	icon_state = "phoronrwindow";
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 8;
-	icon_state = "phoronrwindow";
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/turf/simulated/floor/plating,
-/area/awaymission/zoo)
 "ho" = (
 /obj/structure/flora/pottedplant{
 	icon_state = "plant-24"
@@ -2632,22 +2510,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/zoo)
-"hC" = (
-/obj/structure/grille,
-/obj/structure/window/phoronreinforced{
-	dir = 4;
-	icon_state = "phoronrwindow";
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 8;
-	icon_state = "phoronrwindow";
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/turf/simulated/floor/plating,
-/area/awaymission/zoo)
 "hD" = (
 /obj/structure/bed/chair{
 	dir = 4
@@ -2679,26 +2541,6 @@
 /obj/structure/closet,
 /turf/simulated/shuttle/floor/darkred,
 /area/awaymission/zoo/syndieship)
-"hI" = (
-/obj/structure/grille,
-/obj/structure/window/phoronreinforced{
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 4;
-	icon_state = "phoronrwindow";
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 8;
-	icon_state = "phoronrwindow";
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/turf/simulated/floor/plating,
-/area/awaymission/zoo)
 "hJ" = (
 /obj/machinery/recharger/wallcharger{
 	pixel_x = -25
@@ -2838,18 +2680,6 @@
 	name = "hacked cigarette machine";
 	prices = list();
 	products = list(/obj/item/storage/fancy/cigarettes = 10, /obj/item/storage/box/matches = 10, /obj/item/flame/lighter/zippo = 4, /obj/item/clothing/mask/smokable/cigarette/cigar/havana = 2)
-	},
-/turf/simulated/shuttle/floor/darkred,
-/area/awaymission/zoo/syndieship)
-"ia" = (
-/obj/structure/bed/chair{
-	dir = 8
-	},
-/obj/machinery/button/flasher{
-	id = "syndieflash";
-	name = "Flasher";
-	pixel_x = 27;
-	pixel_y = 0
 	},
 /turf/simulated/shuttle/floor/darkred,
 /area/awaymission/zoo/syndieship)
@@ -3344,157 +3174,17 @@
 	},
 /turf/space,
 /area/awaymission/zoo/syndieship)
-"ja" = (
-/obj/structure/grille,
-/obj/structure/window/phoronreinforced{
-	dir = 1;
-	icon_state = "phoronrwindow";
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 8;
-	icon_state = "phoronrwindow";
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/turf/simulated/floor/plating,
-/area/awaymission/zoo)
-"jb" = (
-/obj/structure/grille,
-/obj/structure/window/phoronreinforced{
-	dir = 4;
-	icon_state = "phoronrwindow";
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 1;
-	icon_state = "phoronrwindow";
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/window/phoronreinforced{
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/turf/simulated/floor/plating,
-/area/awaymission/zoo)
 "jc" = (
 /obj/structure/symbol/es{
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/zoo)
-"jd" = (
-/obj/structure/grille,
-/obj/structure/window/phoronreinforced{
-	dir = 8;
-	icon_state = "phoronrwindow";
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 1;
-	icon_state = "phoronrwindow";
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/window/phoronreinforced{
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/turf/simulated/floor/plating,
-/area/awaymission/zoo)
-"je" = (
-/obj/structure/grille,
-/obj/structure/window/phoronreinforced{
-	dir = 1;
-	icon_state = "phoronrwindow";
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 4;
-	icon_state = "phoronrwindow";
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/turf/simulated/floor/plating,
-/area/awaymission/zoo)
 "jf" = (
 /obj/structure/symbol/sa{
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled,
-/area/awaymission/zoo)
-"jg" = (
-/obj/structure/grille,
-/obj/structure/window/phoronreinforced{
-	dir = 4;
-	icon_state = "phoronrwindow";
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/window/phoronreinforced{
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/turf/simulated/floor/plating,
-/area/awaymission/zoo)
-"jh" = (
-/obj/structure/grille,
-/obj/structure/window/phoronreinforced{
-	dir = 8;
-	icon_state = "phoronrwindow";
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/window/phoronreinforced{
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/turf/simulated/floor/plating,
-/area/awaymission/zoo)
-"ji" = (
-/obj/structure/grille,
-/obj/structure/window/phoronreinforced{
-	dir = 4;
-	icon_state = "phoronrwindow";
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 8;
-	icon_state = "phoronrwindow";
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/window/phoronreinforced{
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/turf/simulated/floor/plating,
-/area/awaymission/zoo)
-"jj" = (
-/obj/structure/grille,
-/obj/structure/window/phoronreinforced{
-	dir = 8;
-	icon_state = "phoronrwindow";
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 4;
-	icon_state = "phoronrwindow";
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/window/phoronreinforced{
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/turf/simulated/floor/plating,
 /area/awaymission/zoo)
 "jk" = (
 /obj/machinery/vending/snack,
@@ -4530,28 +4220,6 @@
 /obj/machinery/door/window/southleft,
 /turf/simulated/floor/wood,
 /area/awaymission/zoo)
-"mr" = (
-/obj/structure/window/phoronreinforced{
-	dir = 8;
-	icon_state = "phoronrwindow";
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 4;
-	icon_state = "phoronrwindow";
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 1;
-	icon_state = "phoronrwindow";
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/grille,
-/turf/simulated/floor/plating,
-/area/awaymission/zoo)
 "ms" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -4630,58 +4298,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/awaymission/zoo)
-"my" = (
-/obj/structure/window/phoronreinforced{
-	dir = 8;
-	icon_state = "phoronrwindow";
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 1;
-	icon_state = "phoronrwindow";
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 4;
-	icon_state = "phoronrwindow";
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/grille,
-/turf/simulated/floor/plating,
-/area/awaymission/zoo)
-"mz" = (
-/obj/structure/window/phoronreinforced{
-	dir = 8;
-	icon_state = "phoronrwindow";
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/window/phoronreinforced{
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/grille,
-/turf/simulated/floor/plating,
-/area/awaymission/zoo)
-"mA" = (
-/obj/structure/window/phoronreinforced{
-	dir = 4;
-	icon_state = "phoronrwindow";
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 1;
-	icon_state = "phoronrwindow";
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/grille,
-/turf/simulated/floor/plating,
-/area/awaymission/zoo)
 "mB" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -4747,56 +4363,6 @@
 /obj/structure/flora/ausbushes/reedbush,
 /turf/simulated/floor/beach/water,
 /area/awaymission/zoo)
-"mL" = (
-/obj/structure/window/phoronreinforced{
-	dir = 8;
-	icon_state = "phoronrwindow";
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 1;
-	icon_state = "phoronrwindow";
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/grille,
-/turf/simulated/floor/plating,
-/area/awaymission/zoo)
-"mM" = (
-/obj/structure/window/phoronreinforced{
-	dir = 4;
-	icon_state = "phoronrwindow";
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/window/phoronreinforced{
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/grille,
-/turf/simulated/floor/plating,
-/area/awaymission/zoo)
-"mN" = (
-/obj/structure/window/phoronreinforced{
-	dir = 4;
-	icon_state = "phoronrwindow";
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 1;
-	icon_state = "phoronrwindow";
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/window/phoronreinforced{
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/grille,
-/turf/simulated/floor/plating,
-/area/awaymission/zoo)
 "mO" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced,
@@ -4852,26 +4418,6 @@
 "mV" = (
 /obj/structure/flora/ausbushes/lavendergrass,
 /turf/simulated/floor/holofloor/grass,
-/area/awaymission/zoo)
-"mW" = (
-/obj/structure/window/phoronreinforced{
-	dir = 8;
-	icon_state = "phoronrwindow";
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 1;
-	icon_state = "phoronrwindow";
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/window/phoronreinforced{
-	maxhealth = 10000;
-	name = "robust borosilicate window"
-	},
-/obj/structure/grille,
-/turf/simulated/floor/plating,
 /area/awaymission/zoo)
 "mX" = (
 /obj/machinery/door/airlock/glass{
@@ -9086,6 +8632,457 @@
 	},
 /turf/simulated/floor/airless,
 /area/awaymission/zoo/solars)
+"yK" = (
+/obj/structure/window/phoronreinforced{
+	dir = 8;
+	icon_state = "phoronrwindow";
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 1;
+	icon_state = "phoronrwindow";
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/grille,
+/turf/simulated/floor/plating,
+/area/awaymission/zoo)
+"zi" = (
+/obj/structure/window/phoronreinforced{
+	dir = 8;
+	icon_state = "phoronrwindow";
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 1;
+	icon_state = "phoronrwindow";
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/window/phoronreinforced{
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/grille,
+/turf/simulated/floor/plating,
+/area/awaymission/zoo)
+"zY" = (
+/obj/structure/grille,
+/obj/structure/window/phoronreinforced{
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 4;
+	icon_state = "phoronrwindow";
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 8;
+	icon_state = "phoronrwindow";
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/turf/simulated/floor/plating,
+/area/awaymission/zoo)
+"Aq" = (
+/obj/structure/grille,
+/obj/structure/window/phoronreinforced{
+	dir = 8;
+	icon_state = "phoronrwindow";
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 1;
+	icon_state = "phoronrwindow";
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/window/phoronreinforced{
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/turf/simulated/floor/plating,
+/area/awaymission/zoo)
+"Cp" = (
+/obj/structure/window/phoronreinforced{
+	dir = 4;
+	icon_state = "phoronrwindow";
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 1;
+	icon_state = "phoronrwindow";
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/window/phoronreinforced{
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/grille,
+/turf/simulated/floor/plating,
+/area/awaymission/zoo)
+"Cu" = (
+/obj/structure/table/standard,
+/obj/item/stack/material/glass{
+	amount = 15
+	},
+/obj/item/cell,
+/turf/simulated/shuttle/floor/darkred,
+/area/awaymission/zoo/syndieship)
+"Fj" = (
+/obj/structure/grille,
+/obj/structure/window/phoronreinforced{
+	dir = 4;
+	icon_state = "phoronrwindow";
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 8;
+	icon_state = "phoronrwindow";
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/window/phoronreinforced{
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/turf/simulated/floor/plating,
+/area/awaymission/zoo)
+"FC" = (
+/obj/structure/window/phoronreinforced{
+	dir = 4;
+	icon_state = "phoronrwindow";
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 1;
+	icon_state = "phoronrwindow";
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/grille,
+/turf/simulated/floor/plating,
+/area/awaymission/zoo)
+"GZ" = (
+/obj/structure/table/steel_reinforced,
+/obj/structure/flora/pottedplant{
+	icon_state = "plant-09";
+	name = "Esteban";
+	pixel_y = 8
+	},
+/turf/simulated/shuttle/floor/black,
+/area/awaymission/zoo/tradeship)
+"Jn" = (
+/obj/structure/grille,
+/obj/structure/window/phoronreinforced{
+	dir = 4;
+	icon_state = "phoronrwindow";
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 1;
+	icon_state = "phoronrwindow";
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/window/phoronreinforced{
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/turf/simulated/floor/plating,
+/area/awaymission/zoo)
+"Jp" = (
+/obj/structure/grille,
+/obj/structure/window/phoronreinforced{
+	dir = 1;
+	icon_state = "phoronrwindow";
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 8;
+	icon_state = "phoronrwindow";
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/turf/simulated/floor/plating,
+/area/awaymission/zoo)
+"Kr" = (
+/obj/structure/grille,
+/obj/structure/window/phoronreinforced{
+	dir = 4;
+	icon_state = "phoronrwindow";
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/window/phoronreinforced{
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/turf/simulated/floor/plating,
+/area/awaymission/zoo)
+"KE" = (
+/obj/structure/grille,
+/obj/structure/window/phoronreinforced{
+	dir = 4;
+	icon_state = "phoronrwindow";
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 8;
+	icon_state = "phoronrwindow";
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/turf/simulated/floor/plating,
+/area/awaymission/zoo)
+"Mi" = (
+/obj/structure/grille,
+/obj/structure/window/phoronreinforced{
+	dir = 4;
+	icon_state = "phoronrwindow";
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 1;
+	icon_state = "phoronrwindow";
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 8;
+	icon_state = "phoronrwindow";
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/turf/simulated/floor/plating,
+/area/awaymission/zoo)
+"Qz" = (
+/obj/structure/grille,
+/obj/structure/window/phoronreinforced{
+	dir = 1;
+	icon_state = "phoronrwindow";
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 4;
+	icon_state = "phoronrwindow";
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/turf/simulated/floor/plating,
+/area/awaymission/zoo)
+"RC" = (
+/obj/structure/window/phoronreinforced{
+	dir = 8;
+	icon_state = "phoronrwindow";
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 1;
+	icon_state = "phoronrwindow";
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 4;
+	icon_state = "phoronrwindow";
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/grille,
+/turf/simulated/floor/plating,
+/area/awaymission/zoo)
+"UK" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/obj/machinery/button/flasher{
+	id = "syndieflash";
+	name = "Flasher";
+	pixel_x = 27;
+	pixel_y = 0
+	},
+/turf/simulated/shuttle/floor/darkred,
+/area/awaymission/zoo/syndieship)
+"Vc" = (
+/obj/structure/window/phoronreinforced{
+	dir = 8;
+	icon_state = "phoronrwindow";
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 4;
+	icon_state = "phoronrwindow";
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 1;
+	icon_state = "phoronrwindow";
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/grille,
+/turf/simulated/floor/plating,
+/area/awaymission/zoo)
+"Wp" = (
+/obj/structure/window/phoronreinforced{
+	dir = 1;
+	icon_state = "phoronrwindow";
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/window/phoronreinforced{
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 4;
+	icon_state = "phoronrwindow";
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/grille,
+/turf/simulated/floor/plating,
+/area/awaymission/zoo)
+"WW" = (
+/obj/structure/window/phoronreinforced{
+	dir = 4;
+	icon_state = "phoronrwindow";
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/window/phoronreinforced{
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/grille,
+/turf/simulated/floor/plating,
+/area/awaymission/zoo)
+"Xo" = (
+/obj/structure/window/phoronreinforced{
+	dir = 1;
+	icon_state = "phoronrwindow";
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/window/phoronreinforced{
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/grille,
+/turf/simulated/floor/plating,
+/area/awaymission/zoo)
+"XB" = (
+/obj/structure/window/phoronreinforced{
+	dir = 1;
+	icon_state = "phoronrwindow";
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/window/phoronreinforced{
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 8;
+	icon_state = "phoronrwindow";
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/grille,
+/obj/structure/window/phoronreinforced{
+	dir = 4;
+	icon_state = "phoronrwindow";
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/turf/simulated/floor/plating,
+/area/awaymission/zoo)
+"Yi" = (
+/obj/structure/window/phoronreinforced{
+	dir = 1;
+	icon_state = "phoronrwindow";
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/window/phoronreinforced{
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 8;
+	icon_state = "phoronrwindow";
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/grille,
+/turf/simulated/floor/plating,
+/area/awaymission/zoo)
+"YJ" = (
+/obj/structure/grille,
+/obj/structure/window/phoronreinforced{
+	dir = 8;
+	icon_state = "phoronrwindow";
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 4;
+	icon_state = "phoronrwindow";
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/window/phoronreinforced{
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/turf/simulated/floor/plating,
+/area/awaymission/zoo)
+"YW" = (
+/obj/structure/window/phoronreinforced{
+	dir = 8;
+	icon_state = "phoronrwindow";
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/window/phoronreinforced{
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/grille,
+/turf/simulated/floor/plating,
+/area/awaymission/zoo)
+"Zl" = (
+/obj/structure/grille,
+/obj/structure/window/phoronreinforced{
+	dir = 8;
+	icon_state = "phoronrwindow";
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/obj/structure/window/phoronreinforced{
+	maxhealth = 10000;
+	name = "robust borosilicate window"
+	},
+/turf/simulated/floor/plating,
+/area/awaymission/zoo)
 
 (1,1,1) = {"
 aa
@@ -11611,55 +11608,19 @@ aa
 aa
 aa
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 gP
-hn
-hC
-hI
-gP
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-gP
-hn
-hC
-hI
-gP
-gP
-hn
-hC
-hI
-gP
-gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 aa
 aa
@@ -11683,55 +11644,19 @@ aa
 aa
 aa
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 gP
-hn
-hC
-hI
-gP
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-gP
-hn
-hC
-hI
-gP
-gP
-hn
-hC
-hI
-gP
-gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 aa
 aa
@@ -11755,19 +11680,19 @@ aa
 aa
 aa
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 aa
 aa
@@ -11791,19 +11716,91 @@ aa
 aa
 aa
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
+gP
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+gP
+Mi
+KE
+zY
+gP
+gP
+Mi
+KE
+zY
+gP
+gP
+Mi
+KE
+zY
+gP
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+gP
+Mi
+KE
+zY
+gP
+gP
+Mi
+KE
+zY
+gP
+gP
+Mi
+KE
+zY
 gP
 aa
 aa
@@ -11916,8 +11913,8 @@ aa
 aa
 aa
 aa
-ja
-ji
+Jp
+Fj
 jk
 jl
 jA
@@ -11931,8 +11928,8 @@ hq
 jk
 jl
 jA
-mr
-mz
+Vc
+YW
 aa
 aa
 aa
@@ -11952,8 +11949,8 @@ aa
 aa
 aa
 aa
-ja
-ji
+Jp
+Fj
 hq
 hq
 hq
@@ -11967,8 +11964,8 @@ hq
 hq
 hq
 hq
-mr
-mz
+Vc
+YW
 aa
 aa
 aa
@@ -11988,8 +11985,8 @@ aa
 aa
 aa
 aa
-ja
-ji
+Jp
+Fj
 hq
 hq
 hq
@@ -12003,8 +12000,8 @@ hq
 hq
 hq
 hq
-mr
-mz
+Vc
+YW
 aa
 aa
 aa
@@ -12024,8 +12021,8 @@ aa
 aa
 aa
 aa
-ja
-ji
+Jp
+Fj
 hq
 hq
 hq
@@ -12039,8 +12036,8 @@ hq
 hq
 hq
 hq
-mr
-mz
+Vc
+YW
 aa
 aa
 aa
@@ -12060,8 +12057,8 @@ aa
 aa
 aa
 aa
-ja
-ji
+Jp
+Fj
 hq
 hq
 hq
@@ -12075,8 +12072,8 @@ hq
 hq
 hq
 hq
-mr
-mz
+Vc
+YW
 aa
 aa
 aa
@@ -12096,8 +12093,8 @@ aa
 aa
 aa
 aa
-ja
-ji
+Jp
+Fj
 hq
 hq
 hq
@@ -12111,8 +12108,8 @@ hq
 hq
 hq
 hq
-mr
-mz
+Vc
+YW
 aa
 aa
 aa
@@ -12222,8 +12219,8 @@ aa
 aa
 aa
 aa
-ja
-jg
+Jp
+Kr
 hq
 hq
 hq
@@ -12239,8 +12236,8 @@ hq
 hq
 hq
 hq
-mA
-mz
+FC
+YW
 aa
 aa
 aa
@@ -12258,8 +12255,8 @@ aa
 aa
 aa
 aa
-ja
-jg
+Jp
+Kr
 hq
 hq
 hq
@@ -12275,8 +12272,8 @@ hq
 hq
 hq
 hq
-mA
-mz
+FC
+YW
 aa
 aa
 aa
@@ -12294,8 +12291,8 @@ aa
 aa
 aa
 aa
-ja
-jg
+Jp
+Kr
 hq
 hq
 hq
@@ -12311,8 +12308,8 @@ hq
 hq
 hq
 hq
-mA
-mz
+FC
+YW
 aa
 aa
 aa
@@ -12330,8 +12327,8 @@ aa
 aa
 aa
 aa
-ja
-jg
+Jp
+Kr
 hq
 hq
 hq
@@ -12347,8 +12344,8 @@ hq
 hq
 hq
 hq
-mA
-mz
+FC
+YW
 aa
 aa
 aa
@@ -12366,8 +12363,8 @@ aa
 aa
 aa
 aa
-ja
-jg
+Jp
+Kr
 hq
 hq
 hq
@@ -12383,8 +12380,8 @@ hq
 hq
 hq
 hq
-mA
-mz
+FC
+YW
 aa
 aa
 aa
@@ -12402,8 +12399,8 @@ aa
 aa
 aa
 aa
-ja
-jg
+Jp
+Kr
 hq
 hq
 hq
@@ -12419,8 +12416,8 @@ hq
 hq
 hq
 hq
-mA
-mz
+FC
+YW
 aa
 aa
 aa
@@ -12511,10 +12508,10 @@ aa
 aa
 aa
 aa
-hb
+XB
 hc
 hc
-hb
+XB
 aa
 aa
 aa
@@ -12529,7 +12526,7 @@ aa
 aa
 aa
 gP
-jb
+Jn
 hq
 hq
 hq
@@ -12547,25 +12544,25 @@ hq
 hq
 hq
 hq
-mN
+Cp
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-jb
+Jn
 hq
 hq
 hq
@@ -12583,25 +12580,25 @@ hq
 hq
 hq
 hq
-mN
+Cp
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-jb
+Jn
 hq
 hq
 hq
@@ -12619,25 +12616,25 @@ hq
 hq
 hq
 hq
-mN
+Cp
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-jb
+Jn
 hq
 hq
 hq
@@ -12655,25 +12652,25 @@ hq
 hq
 hq
 hq
-mN
+Cp
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-jb
+Jn
 hq
 hq
 hq
@@ -12691,25 +12688,25 @@ hq
 hq
 hq
 hq
-mN
+Cp
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-jb
+Jn
 hq
 hq
 hq
@@ -12727,7 +12724,7 @@ hq
 hq
 hq
 hq
-mN
+Cp
 gP
 aa
 aa
@@ -12815,16 +12812,16 @@ ad
 aa
 aa
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 gX
 gX
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 aa
 aa
@@ -12835,7 +12832,7 @@ aa
 aa
 aa
 aa
-hh
+Yi
 hq
 hq
 hq
@@ -13035,7 +13032,7 @@ hq
 hq
 hq
 hq
-hh
+Yi
 aa
 aa
 aa
@@ -13121,7 +13118,7 @@ ag
 ad
 aa
 aa
-hh
+Yi
 ho
 hD
 hD
@@ -13132,7 +13129,7 @@ hq
 hD
 hD
 ho
-hh
+Yi
 aa
 aa
 aa
@@ -13142,7 +13139,7 @@ aa
 aa
 aa
 aa
-hi
+Xo
 hq
 hq
 hq
@@ -13342,7 +13339,7 @@ hq
 hq
 hq
 hq
-hi
+Xo
 aa
 aa
 aa
@@ -13428,7 +13425,7 @@ ad
 ad
 aa
 aa
-hi
+Xo
 hp
 hq
 hq
@@ -13439,7 +13436,7 @@ hq
 hq
 hq
 ih
-hi
+Xo
 aa
 aa
 aa
@@ -13449,7 +13446,7 @@ aa
 aa
 aa
 aa
-hj
+Wp
 hq
 hq
 hq
@@ -13649,7 +13646,7 @@ hq
 hq
 hq
 hq
-hj
+Wp
 aa
 aa
 aa
@@ -13735,7 +13732,7 @@ gE
 ad
 aa
 aa
-hj
+Wp
 hp
 hq
 hq
@@ -13746,7 +13743,7 @@ hq
 hq
 hq
 ih
-hj
+Wp
 aa
 aa
 aa
@@ -14041,7 +14038,7 @@ al
 gF
 ad
 gP
-hb
+XB
 gP
 hq
 hq
@@ -14055,13 +14052,13 @@ hq
 hq
 gP
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 gP
 jc
@@ -14570,7 +14567,7 @@ hq
 hq
 hq
 hq
-hh
+Yi
 aa
 aa
 aa
@@ -14655,15 +14652,15 @@ al
 gF
 aN
 gP
-hb
+XB
 gP
 hq
 hq
 hq
-hn
-hC
-hC
-hI
+Mi
+KE
+KE
+zY
 hq
 hq
 hq
@@ -14877,7 +14874,7 @@ hq
 hq
 hq
 hq
-hi
+Xo
 aa
 aa
 aa
@@ -15184,7 +15181,7 @@ hq
 hq
 hq
 hq
-hj
+Wp
 aa
 aa
 aa
@@ -15269,7 +15266,7 @@ al
 gF
 bd
 gP
-hb
+XB
 gP
 hq
 hq
@@ -15283,13 +15280,13 @@ hq
 hq
 gP
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 gP
 hq
@@ -15577,7 +15574,7 @@ bc
 ad
 aa
 aa
-hh
+Yi
 hp
 hq
 hq
@@ -15588,7 +15585,7 @@ hq
 hq
 hq
 ih
-hh
+Yi
 aa
 aa
 aa
@@ -15884,7 +15881,7 @@ ad
 ad
 aa
 aa
-hi
+Xo
 hp
 hq
 hq
@@ -15895,7 +15892,7 @@ hq
 hq
 hq
 ih
-hi
+Xo
 aa
 aa
 aa
@@ -15905,7 +15902,7 @@ aa
 aa
 aa
 aa
-hh
+Yi
 hq
 hq
 hq
@@ -16105,7 +16102,7 @@ hq
 hq
 hq
 hq
-hh
+Yi
 aa
 aa
 aa
@@ -16191,7 +16188,7 @@ aa
 aa
 aa
 aa
-hj
+Wp
 ho
 hE
 hE
@@ -16202,7 +16199,7 @@ hq
 hE
 hE
 ho
-hj
+Wp
 aa
 aa
 aa
@@ -16212,7 +16209,7 @@ aa
 aa
 aa
 aa
-hi
+Xo
 hq
 hq
 hq
@@ -16412,7 +16409,7 @@ hq
 hq
 hq
 hq
-hi
+Xo
 aa
 aa
 aa
@@ -16499,16 +16496,16 @@ aa
 aa
 aa
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 gX
 gX
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 aa
 aa
@@ -16519,7 +16516,7 @@ aa
 aa
 aa
 aa
-hj
+Wp
 hq
 hq
 hq
@@ -16719,7 +16716,7 @@ hq
 hq
 hq
 hq
-hj
+Wp
 aa
 aa
 aa
@@ -16809,10 +16806,10 @@ aa
 aa
 aa
 aa
-hb
+XB
 hc
 hc
-hb
+XB
 aa
 aa
 aa
@@ -16827,7 +16824,7 @@ aa
 aa
 aa
 gP
-jd
+Aq
 hq
 hq
 hq
@@ -17025,7 +17022,7 @@ hq
 hq
 hq
 hq
-mW
+zi
 gP
 aa
 aa
@@ -17134,8 +17131,8 @@ aa
 aa
 aa
 aa
-je
-jh
+Qz
+Zl
 hq
 hq
 hq
@@ -17331,8 +17328,8 @@ hq
 hq
 hq
 hq
-mL
-mM
+yK
+WW
 aa
 aa
 aa
@@ -17442,8 +17439,8 @@ aa
 aa
 aa
 aa
-je
-jj
+Qz
+YJ
 hq
 hq
 hq
@@ -17637,8 +17634,8 @@ hq
 hq
 hq
 hq
-my
-mM
+RC
+WW
 aa
 aa
 aa
@@ -18057,7 +18054,7 @@ aa
 aa
 aa
 aa
-hh
+Yi
 hq
 hq
 hq
@@ -18251,7 +18248,7 @@ jQ
 hq
 hq
 hq
-hh
+Yi
 aa
 aa
 aa
@@ -18364,7 +18361,7 @@ aa
 aa
 aa
 aa
-hi
+Xo
 hq
 hq
 hq
@@ -18558,7 +18555,7 @@ jR
 hq
 hq
 hq
-hi
+Xo
 aa
 aa
 aa
@@ -18671,7 +18668,7 @@ aa
 aa
 aa
 aa
-hj
+Wp
 hq
 hq
 hq
@@ -18865,7 +18862,7 @@ jS
 hq
 hq
 hq
-hj
+Wp
 aa
 aa
 aa
@@ -19285,7 +19282,7 @@ aa
 aa
 aa
 aa
-hh
+Yi
 hq
 hq
 hq
@@ -19479,7 +19476,7 @@ jQ
 hq
 hq
 hq
-hh
+Yi
 aa
 aa
 aa
@@ -19592,7 +19589,7 @@ aa
 aa
 aa
 aa
-hi
+Xo
 hq
 hq
 hq
@@ -19786,7 +19783,7 @@ jR
 hq
 hq
 hq
-hi
+Xo
 aa
 aa
 aa
@@ -19899,7 +19896,7 @@ aa
 aa
 aa
 aa
-hj
+Wp
 hq
 hq
 hq
@@ -20093,7 +20090,7 @@ jS
 hq
 hq
 hq
-hj
+Wp
 aa
 aa
 aa
@@ -20513,7 +20510,7 @@ aa
 aa
 aa
 aa
-hh
+Yi
 hq
 hq
 hq
@@ -20707,7 +20704,7 @@ vG
 hq
 hq
 hq
-hh
+Yi
 aa
 aa
 aa
@@ -20820,7 +20817,7 @@ aa
 aa
 aa
 aa
-hi
+Xo
 hq
 hq
 hq
@@ -21014,7 +21011,7 @@ vG
 hq
 hq
 hq
-hi
+Xo
 aa
 aa
 aa
@@ -21127,7 +21124,7 @@ aa
 aa
 aa
 aa
-hj
+Wp
 hq
 hq
 hq
@@ -21321,7 +21318,7 @@ vG
 hq
 hq
 hq
-hj
+Wp
 aa
 aa
 aa
@@ -21741,7 +21738,7 @@ aa
 aa
 aa
 aa
-hh
+Yi
 hq
 hq
 hq
@@ -21935,7 +21932,7 @@ vG
 hq
 hq
 hq
-hh
+Yi
 aa
 aa
 aa
@@ -22048,7 +22045,7 @@ aa
 aa
 aa
 aa
-hi
+Xo
 hq
 hq
 hq
@@ -22242,7 +22239,7 @@ vG
 hq
 hq
 hq
-hi
+Xo
 aa
 aa
 aa
@@ -22355,7 +22352,7 @@ aa
 aa
 aa
 aa
-hj
+Wp
 hq
 hq
 hq
@@ -22549,7 +22546,7 @@ vG
 hq
 hq
 hq
-hj
+Wp
 aa
 aa
 aa
@@ -22969,7 +22966,7 @@ aa
 aa
 aa
 aa
-hh
+Yi
 hq
 hq
 hq
@@ -23163,7 +23160,7 @@ vG
 hq
 hq
 hq
-hh
+Yi
 aa
 aa
 aa
@@ -23276,7 +23273,7 @@ aa
 aa
 aa
 aa
-hi
+Xo
 hq
 hq
 hq
@@ -23470,7 +23467,7 @@ vG
 hq
 hq
 hq
-hi
+Xo
 aa
 aa
 aa
@@ -23583,7 +23580,7 @@ aa
 aa
 aa
 aa
-hj
+Wp
 hq
 hq
 hq
@@ -23777,7 +23774,7 @@ vG
 hq
 hq
 hq
-hj
+Wp
 aa
 aa
 aa
@@ -24196,8 +24193,8 @@ aa
 aa
 aa
 aa
-ja
-ji
+Jp
+Fj
 hq
 hq
 hq
@@ -24391,8 +24388,8 @@ hq
 hq
 hq
 hq
-mr
-mz
+Vc
+YW
 aa
 aa
 aa
@@ -24502,8 +24499,8 @@ aa
 aa
 aa
 aa
-ja
-jg
+Jp
+Kr
 hq
 hq
 hq
@@ -24699,8 +24696,8 @@ hq
 hq
 hq
 hq
-mA
-mz
+FC
+YW
 aa
 aa
 aa
@@ -24791,10 +24788,10 @@ ad
 aa
 aa
 aa
-hb
+XB
 hc
 hc
-hb
+XB
 aa
 aa
 aa
@@ -24809,7 +24806,7 @@ aa
 aa
 aa
 gP
-jb
+Jn
 hq
 hq
 hq
@@ -25007,7 +25004,7 @@ hq
 hq
 hq
 hq
-mN
+Cp
 gP
 aa
 aa
@@ -25095,16 +25092,16 @@ gL
 gW
 ad
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 gX
 gX
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 aa
 aa
@@ -25115,7 +25112,7 @@ aa
 aa
 aa
 aa
-hh
+Yi
 hq
 hq
 hq
@@ -25315,7 +25312,7 @@ hq
 hq
 hq
 hq
-hh
+Yi
 aa
 aa
 aa
@@ -25401,7 +25398,7 @@ ad
 gM
 ad
 ad
-hh
+Yi
 hs
 hD
 hD
@@ -25412,7 +25409,7 @@ hq
 hD
 hD
 hs
-hh
+Yi
 aa
 aa
 aa
@@ -25422,7 +25419,7 @@ aa
 aa
 aa
 aa
-hi
+Xo
 hq
 hq
 hq
@@ -25622,7 +25619,7 @@ hq
 hq
 hq
 hq
-hi
+Xo
 aa
 aa
 aa
@@ -25708,7 +25705,7 @@ ad
 ad
 ad
 aa
-hi
+Xo
 hp
 hq
 hq
@@ -25719,7 +25716,7 @@ hq
 hq
 hq
 ih
-hi
+Xo
 aa
 aa
 aa
@@ -25729,7 +25726,7 @@ aa
 aa
 aa
 aa
-hj
+Wp
 hq
 hq
 hq
@@ -25929,7 +25926,7 @@ hq
 hq
 hq
 hq
-hj
+Wp
 aa
 aa
 aa
@@ -26015,7 +26012,7 @@ aa
 aa
 aa
 aa
-hj
+Wp
 hp
 hq
 hq
@@ -26026,7 +26023,7 @@ hq
 hq
 hq
 ih
-hj
+Wp
 aa
 aa
 aa
@@ -26321,7 +26318,7 @@ aa
 aa
 aa
 gP
-hb
+XB
 gP
 hq
 hq
@@ -26335,13 +26332,13 @@ hq
 hq
 gP
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 gP
 hq
@@ -26850,7 +26847,7 @@ hq
 hq
 hq
 hq
-hh
+Yi
 xk
 xk
 xk
@@ -26935,15 +26932,15 @@ aa
 aa
 aa
 gP
-hb
+XB
 gP
 hq
 hq
 hq
-hn
-hC
-hC
-hI
+Mi
+KE
+KE
+zY
 hq
 hq
 hq
@@ -27157,7 +27154,7 @@ hq
 hq
 hq
 hq
-hi
+Xo
 xk
 xk
 xk
@@ -27464,7 +27461,7 @@ hq
 hq
 hq
 hq
-hj
+Wp
 xk
 xk
 xk
@@ -27549,7 +27546,7 @@ aa
 aa
 aa
 gP
-hb
+XB
 gP
 hq
 hq
@@ -27563,13 +27560,13 @@ hq
 hq
 gP
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 gP
 hq
@@ -27857,7 +27854,7 @@ aa
 aa
 aa
 aa
-hh
+Yi
 hp
 hq
 hq
@@ -27868,7 +27865,7 @@ hq
 hq
 hq
 ih
-hh
+Yi
 aa
 aa
 aa
@@ -28164,7 +28161,7 @@ aa
 aa
 aa
 aa
-hi
+Xo
 hp
 hq
 hq
@@ -28175,7 +28172,7 @@ hq
 hq
 hq
 ih
-hi
+Xo
 aa
 aa
 aa
@@ -28185,7 +28182,7 @@ aa
 aa
 aa
 aa
-hh
+Yi
 hq
 hq
 hq
@@ -28385,7 +28382,7 @@ hq
 hq
 hq
 hq
-hh
+Yi
 aa
 aa
 aa
@@ -28471,7 +28468,7 @@ aa
 aa
 aa
 aa
-hj
+Wp
 hs
 hE
 hE
@@ -28482,7 +28479,7 @@ hq
 hE
 hE
 hs
-hj
+Wp
 aa
 aa
 aa
@@ -28492,7 +28489,7 @@ aa
 aa
 aa
 aa
-hi
+Xo
 hq
 hq
 hq
@@ -28692,7 +28689,7 @@ hq
 hq
 hq
 hq
-hi
+Xo
 aa
 aa
 aa
@@ -28779,16 +28776,16 @@ aa
 aa
 aa
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 gX
 gX
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 aa
 aa
@@ -28799,7 +28796,7 @@ aa
 aa
 aa
 aa
-hj
+Wp
 hq
 hq
 hq
@@ -28999,7 +28996,7 @@ hq
 hq
 hq
 hq
-hj
+Wp
 aa
 aa
 aa
@@ -29089,10 +29086,10 @@ aa
 aa
 aa
 aa
-hb
+XB
 hc
 hc
-hb
+XB
 aa
 aa
 aa
@@ -29107,7 +29104,7 @@ aa
 aa
 aa
 gP
-jd
+Aq
 hq
 hq
 hq
@@ -29305,7 +29302,7 @@ hq
 hq
 hq
 hq
-mW
+zi
 gP
 aa
 aa
@@ -29414,8 +29411,8 @@ aa
 aa
 aa
 aa
-je
-jh
+Qz
+Zl
 hq
 hq
 hq
@@ -29611,8 +29608,8 @@ hq
 hq
 hq
 hq
-mL
-mM
+yK
+WW
 aa
 aa
 aa
@@ -29722,8 +29719,8 @@ aa
 aa
 aa
 aa
-je
-jj
+Qz
+YJ
 hq
 hq
 hq
@@ -29917,8 +29914,8 @@ hq
 hq
 hq
 hq
-my
-mM
+RC
+WW
 aa
 aa
 aa
@@ -30337,7 +30334,7 @@ aa
 aa
 aa
 aa
-hh
+Yi
 hq
 hq
 hq
@@ -30531,7 +30528,7 @@ vG
 hq
 hq
 hq
-hh
+Yi
 aa
 aa
 aa
@@ -30644,7 +30641,7 @@ aa
 aa
 aa
 aa
-hi
+Xo
 hq
 hq
 hq
@@ -30838,7 +30835,7 @@ vG
 hq
 hq
 hq
-hi
+Xo
 aa
 aa
 aa
@@ -30951,7 +30948,7 @@ aa
 aa
 aa
 aa
-hj
+Wp
 hq
 hq
 hq
@@ -31145,7 +31142,7 @@ vG
 hq
 hq
 hq
-hj
+Wp
 aa
 aa
 aa
@@ -31565,7 +31562,7 @@ aa
 aa
 aa
 aa
-hh
+Yi
 hq
 hq
 hq
@@ -31759,7 +31756,7 @@ vG
 hq
 hq
 hq
-hh
+Yi
 aa
 aa
 aa
@@ -31872,7 +31869,7 @@ gr
 gr
 aa
 aa
-hi
+Xo
 hq
 hq
 hq
@@ -32066,7 +32063,7 @@ vG
 hq
 hq
 hq
-hi
+Xo
 aa
 aa
 aa
@@ -32179,7 +32176,7 @@ iW
 iX
 aa
 aa
-hj
+Wp
 hq
 hq
 hq
@@ -32373,7 +32370,7 @@ vG
 hq
 hq
 hq
-hj
+Wp
 aa
 aa
 aa
@@ -32793,7 +32790,7 @@ iW
 iZ
 aa
 aa
-hh
+Yi
 hq
 hq
 hq
@@ -32987,7 +32984,7 @@ vG
 hq
 hq
 hq
-hh
+Yi
 aa
 aa
 aa
@@ -33100,7 +33097,7 @@ gr
 gr
 aa
 aa
-hi
+Xo
 hq
 hq
 hq
@@ -33294,7 +33291,7 @@ vG
 hq
 hq
 hq
-hi
+Xo
 aa
 aa
 aa
@@ -33382,7 +33379,7 @@ gr
 gr
 gI
 gY
-he
+Cu
 gr
 gr
 gr
@@ -33391,7 +33388,7 @@ gr
 gr
 gr
 gr
-ia
+UK
 gN
 gN
 gr
@@ -33407,7 +33404,7 @@ aa
 aa
 aa
 aa
-hj
+Wp
 hq
 hq
 hq
@@ -33601,7 +33598,7 @@ vG
 hq
 hq
 hq
-hj
+Wp
 aa
 aa
 aa
@@ -34021,7 +34018,7 @@ iX
 aa
 aa
 aa
-hh
+Yi
 hq
 hq
 hq
@@ -34215,7 +34212,7 @@ vG
 hq
 hq
 hq
-hh
+Yi
 aa
 aa
 aa
@@ -34328,7 +34325,7 @@ iY
 aa
 aa
 aa
-hi
+Xo
 hq
 hq
 hq
@@ -34522,7 +34519,7 @@ vG
 hq
 hq
 hq
-hi
+Xo
 aa
 aa
 aa
@@ -34635,7 +34632,7 @@ iZ
 aa
 aa
 aa
-hj
+Wp
 hq
 hq
 hq
@@ -34829,7 +34826,7 @@ vG
 hq
 hq
 hq
-hj
+Wp
 aa
 aa
 aa
@@ -35249,7 +35246,7 @@ aa
 aa
 aa
 aa
-hh
+Yi
 hq
 hq
 hq
@@ -35443,7 +35440,7 @@ vG
 hq
 hq
 hq
-hh
+Yi
 aa
 aa
 aa
@@ -35556,7 +35553,7 @@ gr
 gr
 aa
 aa
-hi
+Xo
 hq
 hq
 hq
@@ -35750,7 +35747,7 @@ vG
 hq
 hq
 hq
-hi
+Xo
 aa
 aa
 aa
@@ -35863,7 +35860,7 @@ iW
 iX
 aa
 aa
-hj
+Wp
 hq
 hq
 hq
@@ -36057,7 +36054,7 @@ vG
 hq
 hq
 hq
-hj
+Wp
 aa
 aa
 aa
@@ -36476,8 +36473,8 @@ gN
 iW
 iZ
 aa
-ja
-ji
+Jp
+Fj
 hq
 hq
 hq
@@ -36671,8 +36668,8 @@ hq
 hq
 hq
 hq
-mr
-mz
+Vc
+YW
 aa
 aa
 aa
@@ -36782,8 +36779,8 @@ gr
 gr
 gr
 gr
-ja
-jg
+Jp
+Kr
 hq
 hq
 hq
@@ -36979,8 +36976,8 @@ hq
 hq
 hq
 hq
-mA
-mz
+FC
+YW
 aa
 aa
 aa
@@ -37071,10 +37068,10 @@ aa
 aa
 aa
 aa
-hb
+XB
 hc
 hc
-hb
+XB
 aa
 aa
 aa
@@ -37089,7 +37086,7 @@ aa
 aa
 aa
 gP
-jb
+Jn
 hq
 hq
 hq
@@ -37287,7 +37284,7 @@ hq
 hq
 hq
 hq
-mN
+Cp
 gP
 aa
 aa
@@ -37375,16 +37372,16 @@ aa
 aa
 aa
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 gQ
 gQ
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 aa
 aa
@@ -37395,7 +37392,7 @@ aa
 aa
 aa
 aa
-hh
+Yi
 hq
 hq
 hq
@@ -37595,7 +37592,7 @@ hq
 hq
 hq
 hq
-hh
+Yi
 aa
 aa
 aa
@@ -37681,7 +37678,7 @@ aa
 aa
 aa
 aa
-hh
+Yi
 hy
 hD
 hD
@@ -37692,7 +37689,7 @@ hq
 hD
 hD
 hy
-hh
+Yi
 aa
 aa
 aa
@@ -37702,7 +37699,7 @@ aa
 aa
 aa
 aa
-hi
+Xo
 hq
 hq
 hq
@@ -37902,7 +37899,7 @@ hq
 hq
 hq
 hq
-hi
+Xo
 aa
 aa
 aa
@@ -37988,7 +37985,7 @@ aa
 aa
 aa
 aa
-hi
+Xo
 hp
 hq
 hq
@@ -37999,7 +37996,7 @@ hq
 hq
 hq
 ih
-hi
+Xo
 aa
 aa
 aa
@@ -38009,7 +38006,7 @@ aa
 aa
 aa
 aa
-hj
+Wp
 hq
 hq
 hq
@@ -38209,7 +38206,7 @@ hq
 hq
 hq
 hq
-hj
+Wp
 aa
 aa
 aa
@@ -38295,7 +38292,7 @@ aa
 aa
 aa
 aa
-hj
+Wp
 hp
 hq
 hq
@@ -38306,7 +38303,7 @@ hq
 hq
 hq
 ih
-hj
+Wp
 aa
 aa
 aa
@@ -38601,7 +38598,7 @@ aa
 aa
 aa
 gP
-hb
+XB
 gP
 hq
 hq
@@ -38615,13 +38612,13 @@ hq
 hq
 gP
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 gP
 jf
@@ -39130,7 +39127,7 @@ hq
 hq
 hq
 hq
-hh
+Yi
 xk
 xk
 xk
@@ -39215,15 +39212,15 @@ aa
 aa
 aa
 gP
-hb
+XB
 gP
 hq
 hq
 hq
-hn
-hC
-hC
-hI
+Mi
+KE
+KE
+zY
 hq
 hq
 hq
@@ -39437,7 +39434,7 @@ hq
 hq
 hq
 hq
-hi
+Xo
 xk
 xk
 xk
@@ -39744,7 +39741,7 @@ hq
 hq
 hq
 hq
-hj
+Wp
 xk
 xk
 xk
@@ -39829,7 +39826,7 @@ aa
 aa
 aa
 gP
-hb
+XB
 gP
 hq
 hq
@@ -39843,13 +39840,13 @@ hq
 hq
 gP
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 gP
 hq
@@ -40137,7 +40134,7 @@ aa
 aa
 aa
 aa
-hh
+Yi
 hp
 hq
 hq
@@ -40148,7 +40145,7 @@ hq
 hq
 hq
 ih
-hh
+Yi
 aa
 aa
 aa
@@ -40444,7 +40441,7 @@ aa
 aa
 aa
 aa
-hi
+Xo
 hp
 hq
 hq
@@ -40455,7 +40452,7 @@ hq
 hq
 hq
 ih
-hi
+Xo
 aa
 aa
 aa
@@ -40465,7 +40462,7 @@ aa
 aa
 aa
 aa
-hh
+Yi
 hq
 hq
 hq
@@ -40665,7 +40662,7 @@ hq
 hq
 hq
 hq
-hh
+Yi
 aa
 aa
 aa
@@ -40751,7 +40748,7 @@ aa
 aa
 aa
 aa
-hj
+Wp
 hy
 hE
 hE
@@ -40762,7 +40759,7 @@ hq
 hE
 hE
 hy
-hj
+Wp
 aa
 aa
 aa
@@ -40772,7 +40769,7 @@ aa
 aa
 aa
 aa
-hi
+Xo
 hq
 hq
 hq
@@ -40972,7 +40969,7 @@ hq
 hq
 hq
 hq
-hi
+Xo
 aa
 aa
 aa
@@ -41059,16 +41056,16 @@ aa
 aa
 aa
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 gX
 gX
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 aa
 aa
@@ -41079,7 +41076,7 @@ aa
 aa
 aa
 aa
-hj
+Wp
 hq
 hq
 hq
@@ -41279,7 +41276,7 @@ hq
 hq
 hq
 hq
-hj
+Wp
 aa
 aa
 aa
@@ -41369,10 +41366,10 @@ aa
 aa
 aa
 aa
-hb
+XB
 hc
 hc
-hb
+XB
 aa
 aa
 aa
@@ -41387,7 +41384,7 @@ aa
 aa
 aa
 gP
-jd
+Aq
 hq
 hq
 hq
@@ -41585,7 +41582,7 @@ hq
 hq
 hq
 hq
-mW
+zi
 gP
 aa
 aa
@@ -41694,8 +41691,8 @@ aa
 aa
 aa
 aa
-je
-jh
+Qz
+Zl
 hq
 hq
 hq
@@ -41891,8 +41888,8 @@ hq
 hq
 hq
 hq
-mL
-mM
+yK
+WW
 aa
 aa
 aa
@@ -42002,8 +41999,8 @@ aa
 aa
 aa
 aa
-je
-jj
+Qz
+YJ
 hq
 hq
 hq
@@ -42197,8 +42194,8 @@ hq
 hq
 hq
 hq
-my
-mM
+RC
+WW
 aa
 aa
 aa
@@ -42617,7 +42614,7 @@ aa
 aa
 aa
 aa
-hh
+Yi
 hq
 hq
 hq
@@ -42811,7 +42808,7 @@ vG
 hq
 hq
 hq
-hh
+Yi
 aa
 aa
 aa
@@ -42924,7 +42921,7 @@ aa
 aa
 aa
 aa
-hi
+Xo
 hq
 hq
 hq
@@ -43118,7 +43115,7 @@ vG
 hq
 hq
 hq
-hi
+Xo
 aa
 aa
 aa
@@ -43231,7 +43228,7 @@ aa
 aa
 aa
 aa
-hj
+Wp
 hq
 hq
 hq
@@ -43425,7 +43422,7 @@ vG
 hq
 hq
 hq
-hj
+Wp
 aa
 aa
 aa
@@ -43845,7 +43842,7 @@ aa
 aa
 aa
 aa
-hh
+Yi
 hq
 hq
 hq
@@ -44039,7 +44036,7 @@ vG
 hq
 hq
 hq
-hh
+Yi
 aa
 aa
 aa
@@ -44152,7 +44149,7 @@ aa
 aa
 aa
 aa
-hi
+Xo
 hq
 hq
 hq
@@ -44346,7 +44343,7 @@ vG
 hq
 hq
 hq
-hi
+Xo
 aa
 aa
 aa
@@ -44459,7 +44456,7 @@ aa
 aa
 aa
 aa
-hj
+Wp
 hq
 hq
 hq
@@ -44653,7 +44650,7 @@ vG
 hq
 hq
 hq
-hj
+Wp
 aa
 aa
 aa
@@ -45038,7 +45035,7 @@ ej
 es
 eI
 bJ
-fl
+GZ
 ej
 aa
 aa
@@ -45073,7 +45070,7 @@ aa
 aa
 aa
 aa
-hh
+Yi
 hq
 hq
 hq
@@ -45267,7 +45264,7 @@ vG
 hq
 hq
 hq
-hh
+Yi
 aa
 aa
 aa
@@ -45380,7 +45377,7 @@ aa
 aa
 aa
 aa
-hi
+Xo
 hq
 hq
 hq
@@ -45574,7 +45571,7 @@ vG
 hq
 hq
 hq
-hi
+Xo
 aa
 aa
 aa
@@ -45687,7 +45684,7 @@ aa
 aa
 aa
 aa
-hj
+Wp
 hq
 hq
 hq
@@ -45881,7 +45878,7 @@ vG
 hq
 hq
 hq
-hj
+Wp
 aa
 aa
 aa
@@ -46301,7 +46298,7 @@ aa
 aa
 aa
 aa
-hh
+Yi
 hq
 hq
 hq
@@ -46495,7 +46492,7 @@ vG
 hq
 hq
 hq
-hh
+Yi
 aa
 aa
 aa
@@ -46608,7 +46605,7 @@ aa
 aa
 aa
 aa
-hi
+Xo
 hq
 hq
 hq
@@ -46802,7 +46799,7 @@ vG
 hq
 hq
 hq
-hi
+Xo
 aa
 aa
 aa
@@ -46915,7 +46912,7 @@ aa
 aa
 aa
 aa
-hj
+Wp
 hq
 hq
 hq
@@ -47109,7 +47106,7 @@ vG
 hq
 hq
 hq
-hj
+Wp
 aa
 aa
 aa
@@ -47529,7 +47526,7 @@ aa
 aa
 aa
 aa
-hh
+Yi
 hq
 hq
 hq
@@ -47723,7 +47720,7 @@ vG
 hq
 hq
 hq
-hh
+Yi
 aa
 aa
 aa
@@ -47836,7 +47833,7 @@ aa
 aa
 aa
 aa
-hi
+Xo
 hq
 hq
 hq
@@ -48030,7 +48027,7 @@ vG
 hq
 hq
 hq
-hi
+Xo
 aa
 aa
 aa
@@ -48143,7 +48140,7 @@ aa
 aa
 aa
 aa
-hj
+Wp
 hq
 hq
 hq
@@ -48337,7 +48334,7 @@ vG
 hq
 hq
 hq
-hj
+Wp
 aa
 aa
 aa
@@ -48756,8 +48753,8 @@ aa
 aa
 aa
 aa
-ja
-ji
+Jp
+Fj
 hq
 hq
 hq
@@ -48951,8 +48948,8 @@ hq
 hq
 hq
 hq
-mr
-mz
+Vc
+YW
 aa
 aa
 aa
@@ -49062,8 +49059,8 @@ aa
 aa
 aa
 aa
-ja
-jg
+Jp
+Kr
 hq
 hq
 hq
@@ -49259,8 +49256,8 @@ hq
 hq
 hq
 hq
-mA
-mz
+FC
+YW
 aa
 aa
 aa
@@ -49351,10 +49348,10 @@ aa
 aa
 aa
 aa
-hb
+XB
 hc
 hc
-hb
+XB
 aa
 aa
 aa
@@ -49369,7 +49366,7 @@ aa
 aa
 aa
 gP
-jb
+Jn
 hq
 hq
 hq
@@ -49567,7 +49564,7 @@ hq
 hq
 hq
 hq
-mN
+Cp
 gP
 aa
 aa
@@ -49655,16 +49652,16 @@ aa
 aa
 aa
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 gX
 gX
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 aa
 aa
@@ -49675,7 +49672,7 @@ aa
 aa
 aa
 aa
-hh
+Yi
 hq
 hq
 hq
@@ -49875,7 +49872,7 @@ hq
 hq
 hq
 hq
-hh
+Yi
 aa
 aa
 aa
@@ -49961,7 +49958,7 @@ aa
 aa
 aa
 aa
-hh
+Yi
 hz
 hD
 hD
@@ -49972,7 +49969,7 @@ hq
 hD
 hD
 hz
-hh
+Yi
 aa
 aa
 aa
@@ -49982,7 +49979,7 @@ aa
 aa
 aa
 aa
-hi
+Xo
 hq
 hq
 hq
@@ -50182,7 +50179,7 @@ hq
 hq
 hq
 hq
-hi
+Xo
 aa
 aa
 aa
@@ -50268,7 +50265,7 @@ aa
 aa
 aa
 aa
-hi
+Xo
 hp
 hq
 hq
@@ -50279,7 +50276,7 @@ hq
 hq
 hq
 ih
-hi
+Xo
 aa
 aa
 aa
@@ -50289,7 +50286,7 @@ aa
 aa
 aa
 aa
-hj
+Wp
 hq
 hq
 hq
@@ -50489,7 +50486,7 @@ hq
 hq
 hq
 hq
-hj
+Wp
 aa
 aa
 aa
@@ -50575,7 +50572,7 @@ aa
 aa
 aa
 aa
-hj
+Wp
 hp
 hq
 hq
@@ -50586,7 +50583,7 @@ hq
 hq
 hq
 ih
-hj
+Wp
 aa
 aa
 aa
@@ -50881,7 +50878,7 @@ bn
 bn
 aa
 gP
-hb
+XB
 gP
 hq
 hq
@@ -50895,13 +50892,13 @@ hq
 hq
 gP
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 gP
 hB
@@ -51410,7 +51407,7 @@ hq
 hq
 hq
 hq
-hh
+Yi
 xk
 xk
 xk
@@ -51495,15 +51492,15 @@ gB
 bJ
 bo
 gP
-hb
+XB
 gP
 hq
 hq
 hq
-hn
-hC
-hC
-hI
+Mi
+KE
+KE
+zY
 hq
 hq
 hq
@@ -51717,7 +51714,7 @@ hq
 hq
 hq
 hq
-hi
+Xo
 xk
 xk
 xk
@@ -52024,7 +52021,7 @@ hq
 hq
 hq
 hq
-hj
+Wp
 xk
 xk
 xk
@@ -52109,7 +52106,7 @@ bn
 bn
 bn
 gP
-hb
+XB
 gP
 hq
 hq
@@ -52123,13 +52120,13 @@ hq
 hq
 gP
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 gP
 hq
@@ -52417,7 +52414,7 @@ bn
 aa
 aa
 aa
-hh
+Yi
 hp
 hq
 hq
@@ -52428,7 +52425,7 @@ hq
 hq
 hq
 ih
-hh
+Yi
 aa
 aa
 aa
@@ -52724,7 +52721,7 @@ aa
 aa
 aa
 aa
-hi
+Xo
 hp
 hq
 hq
@@ -52735,7 +52732,7 @@ hq
 hq
 hq
 ih
-hi
+Xo
 aa
 aa
 aa
@@ -52745,7 +52742,7 @@ aa
 aa
 aa
 aa
-hh
+Yi
 hq
 hq
 hq
@@ -52945,7 +52942,7 @@ hq
 hq
 hq
 hq
-hh
+Yi
 aa
 aa
 aa
@@ -53031,7 +53028,7 @@ aa
 aa
 aa
 aa
-hj
+Wp
 hz
 hE
 hE
@@ -53042,7 +53039,7 @@ hq
 hE
 hE
 hz
-hj
+Wp
 aa
 aa
 aa
@@ -53052,7 +53049,7 @@ aa
 aa
 aa
 aa
-hi
+Xo
 hq
 hq
 hq
@@ -53252,7 +53249,7 @@ hq
 hq
 hq
 hq
-hi
+Xo
 aa
 aa
 aa
@@ -53339,16 +53336,16 @@ aa
 aa
 aa
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 gX
 gX
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 aa
 aa
@@ -53359,7 +53356,7 @@ aa
 aa
 aa
 aa
-hj
+Wp
 hq
 hq
 hq
@@ -53559,7 +53556,7 @@ hq
 hq
 hq
 hq
-hj
+Wp
 aa
 aa
 aa
@@ -53649,10 +53646,10 @@ aa
 aa
 aa
 aa
-hb
+XB
 hc
 hc
-hb
+XB
 aa
 aa
 aa
@@ -53667,7 +53664,7 @@ aa
 aa
 aa
 gP
-jd
+Aq
 hq
 hq
 hq
@@ -53865,7 +53862,7 @@ hq
 hq
 hq
 hq
-mW
+zi
 gP
 aa
 aa
@@ -53974,8 +53971,8 @@ aa
 aa
 aa
 aa
-je
-jh
+Qz
+Zl
 hq
 hq
 hq
@@ -54171,8 +54168,8 @@ hq
 hq
 hq
 hq
-mL
-mM
+yK
+WW
 aa
 aa
 aa
@@ -54282,8 +54279,8 @@ aa
 aa
 aa
 aa
-je
-jj
+Qz
+YJ
 hq
 hq
 hq
@@ -54477,8 +54474,8 @@ hq
 hq
 hq
 hq
-my
-mM
+RC
+WW
 aa
 aa
 aa
@@ -54897,7 +54894,7 @@ aa
 aa
 aa
 aa
-hh
+Yi
 hq
 hq
 hq
@@ -55091,7 +55088,7 @@ vG
 hq
 hq
 hq
-hh
+Yi
 aa
 aa
 aa
@@ -55204,7 +55201,7 @@ aa
 aa
 aa
 aa
-hi
+Xo
 hq
 hq
 hq
@@ -55398,7 +55395,7 @@ vG
 hq
 hq
 hq
-hi
+Xo
 aa
 aa
 aa
@@ -55511,7 +55508,7 @@ aa
 aa
 aa
 aa
-hj
+Wp
 hq
 hq
 hq
@@ -55705,7 +55702,7 @@ vG
 hq
 hq
 hq
-hj
+Wp
 aa
 aa
 aa
@@ -56125,7 +56122,7 @@ aa
 aa
 aa
 aa
-hh
+Yi
 hq
 hq
 hq
@@ -56319,7 +56316,7 @@ vG
 hq
 hq
 hq
-hh
+Yi
 aa
 aa
 aa
@@ -56432,7 +56429,7 @@ aa
 aa
 aa
 aa
-hi
+Xo
 hq
 hq
 hq
@@ -56626,7 +56623,7 @@ vG
 hq
 hq
 hq
-hi
+Xo
 aa
 aa
 aa
@@ -56739,7 +56736,7 @@ aa
 aa
 aa
 aa
-hj
+Wp
 hq
 hq
 hq
@@ -56933,7 +56930,7 @@ vG
 hq
 hq
 hq
-hj
+Wp
 aa
 aa
 aa
@@ -57353,7 +57350,7 @@ aa
 aa
 aa
 aa
-hh
+Yi
 hq
 hq
 hq
@@ -57547,7 +57544,7 @@ vG
 hq
 hq
 hq
-hh
+Yi
 aa
 aa
 aa
@@ -57660,7 +57657,7 @@ aa
 aa
 aa
 aa
-hi
+Xo
 hq
 hq
 hq
@@ -57854,7 +57851,7 @@ vG
 hq
 hq
 hq
-hi
+Xo
 aa
 aa
 aa
@@ -57967,7 +57964,7 @@ aa
 aa
 aa
 aa
-hj
+Wp
 hq
 hq
 hq
@@ -58161,7 +58158,7 @@ vG
 hq
 hq
 hq
-hj
+Wp
 aa
 aa
 aa
@@ -58581,7 +58578,7 @@ aa
 aa
 aa
 aa
-hh
+Yi
 hq
 hq
 hq
@@ -58775,7 +58772,7 @@ vG
 hq
 hq
 hq
-hh
+Yi
 aa
 aa
 aa
@@ -58888,7 +58885,7 @@ aa
 aa
 aa
 aa
-hi
+Xo
 hq
 hq
 hq
@@ -59082,7 +59079,7 @@ vG
 hq
 hq
 hq
-hi
+Xo
 aa
 aa
 aa
@@ -59195,7 +59192,7 @@ aa
 aa
 aa
 aa
-hj
+Wp
 hq
 hq
 hq
@@ -59389,7 +59386,7 @@ vG
 hq
 hq
 hq
-hj
+Wp
 aa
 aa
 aa
@@ -59809,7 +59806,7 @@ aa
 aa
 aa
 aa
-hh
+Yi
 hq
 hq
 hq
@@ -60003,7 +60000,7 @@ vG
 hq
 hq
 hq
-hh
+Yi
 aa
 aa
 aa
@@ -60116,7 +60113,7 @@ aa
 aa
 aa
 aa
-hi
+Xo
 hq
 hq
 hq
@@ -60310,7 +60307,7 @@ vG
 hq
 hq
 hq
-hi
+Xo
 aa
 aa
 aa
@@ -60423,7 +60420,7 @@ aa
 aa
 aa
 aa
-hj
+Wp
 hq
 hq
 hq
@@ -60617,7 +60614,7 @@ vG
 hq
 hq
 hq
-hj
+Wp
 aa
 aa
 aa
@@ -61036,8 +61033,8 @@ aa
 aa
 aa
 aa
-ja
-ji
+Jp
+Fj
 hq
 hq
 hq
@@ -61231,8 +61228,8 @@ hq
 hq
 hq
 hq
-mr
-mz
+Vc
+YW
 aa
 aa
 aa
@@ -61342,8 +61339,8 @@ aa
 aa
 aa
 aa
-ja
-jg
+Jp
+Kr
 hq
 hq
 hq
@@ -61539,8 +61536,8 @@ hq
 hq
 hq
 hq
-mA
-mz
+FC
+YW
 aa
 aa
 aa
@@ -61631,10 +61628,10 @@ aa
 aa
 aa
 aa
-hb
+XB
 hc
 hc
-hb
+XB
 aa
 aa
 aa
@@ -61649,7 +61646,7 @@ aa
 aa
 aa
 gP
-jb
+Jn
 hq
 hq
 hq
@@ -61847,7 +61844,7 @@ hq
 hq
 hq
 hq
-mN
+Cp
 gP
 aa
 aa
@@ -61935,16 +61932,16 @@ aa
 aa
 aa
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 gX
 gX
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 aa
 aa
@@ -61955,7 +61952,7 @@ aa
 aa
 aa
 aa
-hh
+Yi
 hq
 hq
 hq
@@ -62155,7 +62152,7 @@ hq
 hq
 hq
 hq
-hh
+Yi
 aa
 aa
 aa
@@ -62241,7 +62238,7 @@ aa
 aa
 aa
 aa
-hh
+Yi
 hA
 hD
 hD
@@ -62252,7 +62249,7 @@ hq
 hD
 hD
 hA
-hh
+Yi
 aa
 aa
 aa
@@ -62262,7 +62259,7 @@ aa
 aa
 aa
 aa
-hi
+Xo
 hq
 hq
 hq
@@ -62462,7 +62459,7 @@ hq
 hq
 hq
 hq
-hi
+Xo
 aa
 aa
 aa
@@ -62548,7 +62545,7 @@ aa
 aa
 aa
 aa
-hi
+Xo
 hp
 hq
 hq
@@ -62559,7 +62556,7 @@ hq
 hq
 hq
 ih
-hi
+Xo
 aa
 aa
 aa
@@ -62569,7 +62566,7 @@ aa
 aa
 aa
 aa
-hj
+Wp
 hq
 hq
 hq
@@ -62769,7 +62766,7 @@ hq
 hq
 hq
 hq
-hj
+Wp
 aa
 aa
 aa
@@ -62855,7 +62852,7 @@ aa
 aa
 aa
 aa
-hj
+Wp
 hp
 hq
 hq
@@ -62866,7 +62863,7 @@ hq
 hq
 hq
 ih
-hj
+Wp
 aa
 aa
 aa
@@ -63161,7 +63158,7 @@ aa
 aa
 aa
 gP
-hb
+XB
 gP
 hq
 hq
@@ -63175,13 +63172,13 @@ hq
 hq
 gP
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 gP
 hq
@@ -63690,7 +63687,7 @@ hq
 hq
 hq
 hq
-hh
+Yi
 aa
 aa
 aa
@@ -63775,15 +63772,15 @@ aa
 aa
 aa
 gP
-hb
+XB
 gP
 hB
 hq
 hq
-hn
-hC
-hC
-hI
+Mi
+KE
+KE
+zY
 hq
 hq
 hq
@@ -63997,7 +63994,7 @@ hq
 hq
 hq
 hq
-hi
+Xo
 aa
 aa
 aa
@@ -64304,7 +64301,7 @@ hq
 hq
 hq
 hq
-hj
+Wp
 aa
 aa
 aa
@@ -64389,7 +64386,7 @@ aa
 aa
 aa
 gP
-hb
+XB
 gP
 hq
 hq
@@ -64403,13 +64400,13 @@ hq
 hq
 gP
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 gP
 hq
@@ -64697,7 +64694,7 @@ aa
 aa
 aa
 aa
-hh
+Yi
 hp
 hq
 hq
@@ -64708,7 +64705,7 @@ hq
 hq
 hq
 ih
-hh
+Yi
 aa
 aa
 aa
@@ -65004,7 +65001,7 @@ aa
 aa
 aa
 aa
-hi
+Xo
 hp
 hq
 hq
@@ -65015,7 +65012,7 @@ hq
 hq
 hq
 ih
-hi
+Xo
 aa
 aa
 aa
@@ -65025,7 +65022,7 @@ aa
 aa
 aa
 aa
-hh
+Yi
 hq
 hq
 hq
@@ -65225,7 +65222,7 @@ hq
 hq
 hq
 hq
-hh
+Yi
 aa
 aa
 aa
@@ -65311,7 +65308,7 @@ aa
 aa
 aa
 aa
-hj
+Wp
 hA
 hE
 hE
@@ -65322,7 +65319,7 @@ hq
 hE
 hE
 hA
-hj
+Wp
 aa
 aa
 aa
@@ -65332,7 +65329,7 @@ aa
 aa
 aa
 aa
-hi
+Xo
 hq
 hq
 hq
@@ -65532,7 +65529,7 @@ hq
 hq
 hq
 hq
-hi
+Xo
 aa
 aa
 aa
@@ -65619,16 +65616,16 @@ aa
 aa
 aa
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 gX
 gX
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 aa
 aa
@@ -65639,7 +65636,7 @@ aa
 aa
 aa
 aa
-hj
+Wp
 hq
 hq
 hq
@@ -65839,7 +65836,7 @@ hq
 hq
 hq
 hq
-hj
+Wp
 aa
 aa
 aa
@@ -65929,10 +65926,10 @@ aa
 aa
 aa
 aa
-hb
+XB
 hc
 hc
-hb
+XB
 aa
 aa
 aa
@@ -65947,7 +65944,7 @@ aa
 aa
 aa
 gP
-jd
+Aq
 hq
 hq
 hq
@@ -65965,25 +65962,25 @@ hq
 hq
 hq
 hq
-mW
+zi
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-jd
+Aq
 hq
 hq
 hq
@@ -66001,25 +65998,25 @@ hq
 hq
 hq
 hq
-mW
+zi
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-jd
+Aq
 hq
 hq
 hq
@@ -66037,25 +66034,25 @@ hq
 hq
 hq
 hq
-mW
+zi
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-jd
+Aq
 hq
 hq
 hq
@@ -66073,25 +66070,25 @@ hq
 hq
 hq
 hq
-mW
+zi
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-jd
+Aq
 hq
 hq
 hq
@@ -66109,25 +66106,25 @@ hq
 hq
 hq
 hq
-mW
+zi
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
-jd
+Aq
 hq
 hq
 hq
@@ -66145,7 +66142,7 @@ hq
 hq
 hq
 hq
-mW
+zi
 gP
 aa
 aa
@@ -66254,8 +66251,8 @@ aa
 aa
 aa
 aa
-je
-jh
+Qz
+Zl
 hq
 hq
 hq
@@ -66271,8 +66268,8 @@ hq
 hq
 hq
 hq
-mL
-mM
+yK
+WW
 aa
 aa
 aa
@@ -66290,8 +66287,8 @@ aa
 aa
 aa
 aa
-je
-jh
+Qz
+Zl
 hq
 hq
 hq
@@ -66307,8 +66304,8 @@ hq
 hq
 hq
 hq
-mL
-mM
+yK
+WW
 aa
 aa
 aa
@@ -66326,8 +66323,8 @@ aa
 aa
 aa
 aa
-je
-jh
+Qz
+Zl
 hq
 hq
 hq
@@ -66343,8 +66340,8 @@ hq
 hq
 hq
 hq
-mL
-mM
+yK
+WW
 aa
 aa
 aa
@@ -66362,8 +66359,8 @@ aa
 aa
 aa
 aa
-je
-jh
+Qz
+Zl
 hq
 hq
 hq
@@ -66379,8 +66376,8 @@ hq
 hq
 hq
 hq
-mL
-mM
+yK
+WW
 aa
 aa
 aa
@@ -66398,8 +66395,8 @@ aa
 aa
 aa
 aa
-je
-jh
+Qz
+Zl
 hq
 hq
 hq
@@ -66415,8 +66412,8 @@ hq
 hq
 hq
 hq
-mL
-mM
+yK
+WW
 aa
 aa
 aa
@@ -66434,8 +66431,8 @@ aa
 aa
 aa
 aa
-je
-jh
+Qz
+Zl
 hq
 hq
 hq
@@ -66451,8 +66448,8 @@ hq
 hq
 hq
 hq
-mL
-mM
+yK
+WW
 aa
 aa
 aa
@@ -66562,8 +66559,8 @@ aa
 aa
 aa
 aa
-je
-jj
+Qz
+YJ
 jk
 jl
 jA
@@ -66577,8 +66574,8 @@ hq
 jk
 jl
 jA
-my
-mM
+RC
+WW
 aa
 aa
 aa
@@ -66598,8 +66595,8 @@ aa
 aa
 aa
 aa
-je
-jj
+Qz
+YJ
 hq
 hq
 hq
@@ -66613,8 +66610,8 @@ hq
 hq
 hq
 hq
-my
-mM
+RC
+WW
 aa
 aa
 aa
@@ -66634,8 +66631,8 @@ aa
 aa
 aa
 aa
-je
-jj
+Qz
+YJ
 hq
 hq
 hq
@@ -66649,8 +66646,8 @@ hq
 hq
 hq
 hq
-my
-mM
+RC
+WW
 aa
 aa
 aa
@@ -66670,8 +66667,8 @@ aa
 aa
 aa
 aa
-je
-jj
+Qz
+YJ
 hq
 hq
 hq
@@ -66685,8 +66682,8 @@ hq
 hq
 hq
 hq
-my
-mM
+RC
+WW
 aa
 aa
 aa
@@ -66706,8 +66703,8 @@ aa
 aa
 aa
 aa
-je
-jj
+Qz
+YJ
 hq
 hq
 hq
@@ -66721,8 +66718,8 @@ hq
 hq
 hq
 hq
-my
-mM
+RC
+WW
 aa
 aa
 aa
@@ -66742,8 +66739,8 @@ aa
 aa
 aa
 aa
-je
-jj
+Qz
+YJ
 hq
 hq
 hq
@@ -66757,8 +66754,8 @@ hq
 hq
 hq
 hq
-my
-mM
+RC
+WW
 aa
 aa
 aa
@@ -66871,55 +66868,19 @@ aa
 aa
 aa
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 gP
-hn
-hC
-hI
-gP
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-gP
-hn
-hC
-hI
-gP
-gP
-hn
-hC
-hI
-gP
-gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 aa
 aa
@@ -66943,55 +66904,19 @@ aa
 aa
 aa
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 gP
-hn
-hC
-hI
-gP
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-gP
-hn
-hC
-hI
-gP
-gP
-hn
-hC
-hI
-gP
-gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 aa
 aa
@@ -67015,19 +66940,19 @@ aa
 aa
 aa
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 aa
 aa
@@ -67051,19 +66976,91 @@ aa
 aa
 aa
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
 gP
 gP
-hn
-hC
-hI
+Mi
+KE
+zY
+gP
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+gP
+Mi
+KE
+zY
+gP
+gP
+Mi
+KE
+zY
+gP
+gP
+Mi
+KE
+zY
+gP
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+gP
+Mi
+KE
+zY
+gP
+gP
+Mi
+KE
+zY
+gP
+gP
+Mi
+KE
+zY
 gP
 aa
 aa

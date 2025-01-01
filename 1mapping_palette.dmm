@@ -191,6 +191,16 @@
 /obj/effect/gibspawner/robot,
 /turf/simulated/floor/tiled/techfloor,
 /area/space)
+"ahi" = (
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/turf/simulated/floor/flesh/colour{
+	color = "red"
+	},
+/area/space)
 "ahk" = (
 /obj/effect/catwalk_plated/white,
 /turf/template_noop,
@@ -677,6 +687,19 @@
 	},
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod)
+"aAo" = (
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/effect/spider/stickyweb/dark{
+	color = "#8A0808";
+	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
+	name = "Wires of doubt"
+	},
+/turf/simulated/floor/gorefloor,
+/area/space)
 "aAz" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
@@ -1192,6 +1215,17 @@
 	},
 /turf/simulated/shuttle/plating,
 /area/space)
+"aTp" = (
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 4;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/turf/simulated/floor/flesh/colour{
+	color = "red"
+	},
+/area/space)
 "aTD" = (
 /obj/machinery/alarm/alarms_hidden{
 	dir = 8;
@@ -1413,25 +1447,6 @@
 	req_access = null
 	},
 /turf/simulated/floor/plating,
-/area/space)
-"aXO" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 1;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/effect/spider/stickyweb{
-	color = "#8A0808";
-	desc = "Like a leash you can see those strings trying to hold you back, hesitating at the thought only to exasperate the sensation of the reality you are in. . . this may not be an illusion.";
-	name = "Strings of distress"
-	},
-/turf/simulated/floor/gorefloor,
 /area/space)
 "aYg" = (
 /turf/simulated/floor/beach/water,
@@ -2352,97 +2367,6 @@
 	},
 /turf/simulated/shuttle/plating,
 /area/space)
-"bFg" = (
-/obj/machinery/smartfridge/survival_pod{
-	icon = 'icons/obj/vending.dmi';
-	icon_base = "smartfridge";
-	icon_contents = "boxes";
-	icon_state = "smartfridge";
-	name = "Advanced storage";
-	pixel_y = -1
-	},
-/obj/item/suit_cooling_unit,
-/obj/item/suit_cooling_unit,
-/obj/item/suit_cooling_unit,
-/obj/item/flashlight/maglight,
-/obj/item/flashlight/maglight,
-/obj/item/flashlight/maglight,
-/obj/fiftyspawner/glass,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/plastic,
-/obj/item/stack/material/plasteel{
-	amount = 30
-	},
-/obj/fiftyspawner/rods,
-/obj/fiftyspawner/rods,
-/obj/item/stack/material/glass/phoronrglass{
-	amount = 20
-	},
-/obj/item/storage/toolbox/mechanical{
-	pixel_y = 5
-	},
-/obj/item/storage/toolbox/mechanical{
-	pixel_y = 5
-	},
-/obj/item/storage/toolbox/electrical,
-/obj/item/storage/toolbox/emergency,
-/obj/item/storage/toolbox/emergency,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/radio/off,
-/obj/item/radio/off,
-/obj/item/radio/off,
-/obj/item/radio/off,
-/obj/item/radio/off,
-/obj/item/radio/off,
-/obj/item/radio/off,
-/obj/item/cell/device/hyper,
-/obj/item/cell/device/hyper,
-/obj/item/cell/device/hyper,
-/obj/item/clothing/glasses/meson,
-/obj/item/clothing/glasses/meson,
-/obj/item/clothing/gloves/yellow,
-/obj/item/clothing/gloves/yellow,
-/obj/item/clothing/head/welding/demon,
-/obj/item/clothing/head/welding/knight,
-/obj/item/clothing/glasses/welding,
-/obj/random/tech_supply,
-/obj/random/tech_supply,
-/obj/random/tech_supply,
-/obj/random/tech_supply,
-/obj/random/tech_supply,
-/obj/random/maintenance/engineering,
-/obj/random/maintenance/engineering,
-/obj/random/maintenance/engineering,
-/obj/random/maintenance/engineering,
-/obj/random/maintenance/engineering,
-/obj/item/inducer,
-/obj/item/storage/belt/utility/full,
-/obj/item/storage/belt/utility/full,
-/obj/item/multitool,
-/obj/item/multitool,
-/obj/item/storage/briefcase/inflatable,
-/obj/item/storage/briefcase/inflatable,
-/obj/item/storage/briefcase/inflatable,
-/obj/item/megaphone,
-/obj/item/megaphone,
-/obj/item/extinguisher/atmo,
-/obj/item/extinguisher/atmo,
-/obj/item/suit_cooling_unit,
-/obj/item/suit_cooling_unit,
-/obj/item/storage/backpack/dufflebag/eng,
-/turf/simulated/shuttle/floor/voidcraft/dark,
-/area/space)
 "bGj" = (
 /obj/machinery/sleep_console{
 	dir = 4
@@ -2457,6 +2381,22 @@
 /obj/item/pen/reagent/paralysis,
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/techfloor,
+/area/space)
+"bGD" = (
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 4;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/effect/spider/stickyweb/dark{
+	color = "#8A0808";
+	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
+	name = "Wires of doubt"
+	},
+/turf/simulated/floor/flesh/colour{
+	color = "red"
+	},
 /area/space)
 "bGE" = (
 /obj/effect/floor_decal/techfloor{
@@ -2931,6 +2871,26 @@
 /obj/machinery/door/airlock/maintenance/cargo,
 /turf/simulated/floor/outdoors/dirt,
 /area/space)
+"bVl" = (
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 8;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 1;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/effect/spider/stickyweb{
+	color = "#8A0808";
+	desc = "Like a leash you can see those strings trying to hold you back, hesitating at the thought only to exasperate the sensation of the reality you are in. . . this may not be an illusion.";
+	name = "Strings of distress"
+	},
+/turf/simulated/floor/gorefloor,
+/area/space)
 "bVY" = (
 /obj/structure/salvageable/server_os,
 /turf/simulated/floor/outdoors/dirt,
@@ -3073,20 +3033,6 @@
 "caV" = (
 /obj/machinery/smartfridge/produce,
 /turf/simulated/shuttle/wall/voidcraft/survival,
-/area/space)
-"cbn" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 8;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/effect/spider/stickyweb/dark{
-	color = "#8A0808";
-	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
-	name = "Wires of doubt"
-	},
-/turf/simulated/floor/gorefloor,
 /area/space)
 "cbr" = (
 /obj/machinery/door/airlock/glass_centcom,
@@ -3277,22 +3223,6 @@
 	nitrogen = 82.1472
 	},
 /area/space)
-"cjP" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 1;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/turf/simulated/floor/flesh/colour{
-	color = "red"
-	},
-/area/space)
 "ckB" = (
 /obj/machinery/r_n_d/destructive_analyzer,
 /turf/simulated/shuttle/floor/voidcraft/light,
@@ -3350,27 +3280,6 @@
 	},
 /turf/simulated/floor/reinforced/nitrogen{
 	nitrogen = 82.1472
-	},
-/area/space)
-"cnH" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 4;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/effect/spider/stickyweb/dark{
-	color = "#8A0808";
-	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
-	name = "Wires of doubt"
-	},
-/turf/simulated/floor/flesh/colour{
-	color = "red"
 	},
 /area/space)
 "cnI" = (
@@ -3432,6 +3341,22 @@
 	},
 /turf/simulated/shuttle/floor/black,
 /area/space)
+"cpS" = (
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 1;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/turf/simulated/floor/flesh/colour{
+	color = "red"
+	},
+/area/space)
 "cqb" = (
 /obj/structure/sign/science{
 	pixel_y = -32
@@ -3458,16 +3383,6 @@
 	dir = 1
 	},
 /turf/simulated/floor,
-/area/space)
-"cre" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/turf/simulated/floor/flesh/colour{
-	color = "red"
-	},
 /area/space)
 "cry" = (
 /obj/item/roller/adv,
@@ -3870,22 +3785,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/techfloor,
 /area/space)
-"cBO" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 8;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/effect/spider/stickyweb/dark{
-	color = "#8A0808";
-	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
-	name = "Wires of doubt"
-	},
-/turf/simulated/floor/flesh/colour{
-	color = "red"
-	},
-/area/space)
 "cBP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -3977,6 +3876,22 @@
 "cGA" = (
 /obj/machinery/computer/timeclock/premade/north,
 /turf/simulated/floor/tiled,
+/area/space)
+"cGN" = (
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 8;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/effect/spider/stickyweb/dark{
+	color = "#8A0808";
+	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
+	name = "Wires of doubt"
+	},
+/turf/simulated/floor/flesh/colour{
+	color = "red"
+	},
 /area/space)
 "cHc" = (
 /obj/machinery/sleep_console{
@@ -4777,6 +4692,27 @@
 	},
 /turf/simulated/floor,
 /area/space)
+"dbW" = (
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 1;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/structure/gootrap{
+	basecolor = #610B0B;
+	desc = "As if you stepped on a bear trap, you can feel a chilling horror crawling up your spine, gazing upon a pond of maroon fluids you can't help but experience terror upon it";
+	name = "Spill of fear"
+	},
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/turf/simulated/floor/flesh/colour{
+	color = "red"
+	},
+/area/space)
 "dcm" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/mecha_parts/mecha_equipment/cloak,
@@ -4973,6 +4909,28 @@
 /obj/structure/shuttle/engine/heater,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/yellow,
 /turf/simulated/shuttle/wall/voidcraft/green,
+/area/space)
+"dmj" = (
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 8;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 1;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/effect/spider/stickyweb{
+	color = "#8A0808";
+	desc = "Like a leash you can see those strings trying to hold you back, hesitating at the thought only to exasperate the sensation of the reality you are in. . . this may not be an illusion.";
+	name = "Strings of distress"
+	},
+/turf/simulated/floor/flesh/colour{
+	color = "red"
+	},
 /area/space)
 "dmp" = (
 /obj/effect/decal/cleanable/blood/tracks{
@@ -6595,6 +6553,27 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/space)
+"esg" = (
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 1;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/effect/spider/stickyweb/dark{
+	color = "#8A0808";
+	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
+	name = "Wires of doubt"
+	},
+/turf/simulated/floor/flesh/colour{
+	color = "red"
+	},
+/area/space)
 "esW" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 10
@@ -7211,6 +7190,28 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/space)
+"eMR" = (
+/obj/effect/spider/stickyweb{
+	color = "#8A0808";
+	desc = "Like a leash you can see those strings trying to hold you back, hesitating at the thought only to exasperate the sensation of the reality you are in. . . this may not be an illusion.";
+	name = "Strings of distress"
+	},
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 8;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 4;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/turf/simulated/floor/flesh/colour{
+	color = "red"
+	},
+/area/space)
 "eNo" = (
 /obj/structure/window/plastitanium/full,
 /obj/structure/window/reinforced/survival_pod{
@@ -7225,6 +7226,17 @@
 	name = "reinforced grille"
 	},
 /turf/simulated/shuttle/plating,
+/area/space)
+"eNr" = (
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 1;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/turf/simulated/floor/flesh/colour{
+	color = "red"
+	},
 /area/space)
 "eNv" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
@@ -7459,6 +7471,26 @@
 /obj/machinery/computer/ship/sensors,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/space)
+"eWe" = (
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 8;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 4;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/effect/spider/stickyweb/dark{
+	color = "#8A0808";
+	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
+	name = "Wires of doubt"
+	},
+/turf/simulated/floor/gorefloor,
+/area/space)
 "eWA" = (
 /obj/structure/artilleryplaceholder{
 	icon_state = "34"
@@ -7489,6 +7521,27 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor,
+/area/space)
+"eYm" = (
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 8;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/effect/spider/stickyweb/dark{
+	color = "#8A0808";
+	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
+	name = "Wires of doubt"
+	},
+/turf/simulated/floor/flesh/colour{
+	color = "red"
+	},
 /area/space)
 "eYy" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -8622,17 +8675,6 @@
 /obj/effect/floor_decal/industrial/outline/red,
 /turf/simulated/floor,
 /area/space)
-"fSo" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 4;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/turf/simulated/floor/flesh/colour{
-	color = "red"
-	},
-/area/space)
 "fSx" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -8974,6 +9016,22 @@
 /obj/structure/loot_pile/surface/alien/end,
 /turf/simulated/floor/greengrid,
 /area/space)
+"gfX" = (
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 8;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/turf/simulated/floor/flesh/colour{
+	color = "red"
+	},
+/area/space)
 "ggJ" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 5
@@ -9063,6 +9121,22 @@
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/black,
+/area/space)
+"gis" = (
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 8;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/effect/spider/stickyweb{
+	color = "#8A0808";
+	desc = "Like a leash you can see those strings trying to hold you back, hesitating at the thought only to exasperate the sensation of the reality you are in. . . this may not be an illusion.";
+	name = "Strings of distress"
+	},
+/turf/simulated/floor/flesh/colour{
+	color = "red"
+	},
 /area/space)
 "git" = (
 /turf/simulated/shuttle/wall,
@@ -9188,16 +9262,6 @@
 	},
 /turf/simulated/shuttle/floor/yellow,
 /area/space)
-"glz" = (
-/obj/effect/spider/stickyweb/dark{
-	color = "#8A0808";
-	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
-	name = "Wires of doubt"
-	},
-/turf/simulated/floor/flesh/colour{
-	color = "red"
-	},
-/area/space)
 "glT" = (
 /obj/machinery/telepad,
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -9310,23 +9374,6 @@
 	anchored = 1
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/space)
-"gpX" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 4;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 8;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/turf/simulated/floor/flesh/colour{
-	color = "red"
-	},
 /area/space)
 "gqk" = (
 /obj/machinery/seed_storage/garden,
@@ -9467,6 +9514,12 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled,
+/area/space)
+"gup" = (
+/obj/item/reagent_containers/glass/rag,
+/obj/item/clothing/accessory/ring/engagement,
+/obj/structure/table/wooden_reinforced,
+/turf/simulated/floor/wood,
 /area/space)
 "gus" = (
 /obj/effect/floor_decal/industrial/warning,
@@ -10413,27 +10466,6 @@
 /obj/item/storage/quickdraw/syringe_case,
 /turf/simulated/shuttle/floor/white,
 /area/space)
-"gXK" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 8;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 4;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/effect/step_trigger/message{
-	message = "You feel a horrible chill run up your spine. . . you really should not continue. . .";
-	once = 0
-	},
-/turf/simulated/floor/flesh/colour{
-	color = "red"
-	},
-/area/space)
 "gYa" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -10628,19 +10660,6 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
-"hei" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 4;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/effect/map_effect/interval/sound_emitter/geiger/high,
-/obj/effect/map_effect/interval/sound_emitter/thunder,
-/turf/simulated/floor/flesh/colour{
-	color = "red"
-	},
 /area/space)
 "heD" = (
 /mob/living/simple_mob/mechanical/hivebot/tank/armored,
@@ -11176,26 +11195,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/carpet/blue,
-/area/space)
-"hwQ" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 8;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 4;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/effect/spider/stickyweb/dark{
-	color = "#8A0808";
-	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
-	name = "Wires of doubt"
-	},
-/turf/simulated/floor/gorefloor,
 /area/space)
 "hxr" = (
 /obj/item/broken_gun,
@@ -11751,22 +11750,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/space)
-"hOP" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 8;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/effect/spider/stickyweb{
-	color = "#8A0808";
-	desc = "Like a leash you can see those strings trying to hold you back, hesitating at the thought only to exasperate the sensation of the reality you are in. . . this may not be an illusion.";
-	name = "Strings of distress"
-	},
-/turf/simulated/floor/flesh/colour{
-	color = "red"
-	},
-/area/space)
 "hPw" = (
 /obj/machinery/light{
 	dir = 4;
@@ -11924,6 +11907,16 @@
 	pixel_y = 32
 	},
 /turf/simulated/shuttle/floor/black,
+/area/space)
+"hTz" = (
+/obj/effect/simple_portal/linked{
+	desc = "It looks like a hole that leads to somewhere, although you can't quite see through it. . . It seems dormant and sealed closed. . .";
+	name = "Demonic portal";
+	portal_id = 20
+	},
+/turf/simulated/floor/flesh/colour{
+	color = "red"
+	},
 /area/space)
 "hTU" = (
 /obj/structure/largecrate/animal/cat,
@@ -12144,22 +12137,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor,
 /area/space)
-"ibq" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 4;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/turf/simulated/floor/flesh/colour{
-	color = "red"
-	},
-/area/space)
 "ibO" = (
 /obj/structure/table/marble,
 /obj/machinery/light{
@@ -12205,17 +12182,6 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
-/area/space)
-"iew" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 1;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/turf/simulated/floor/flesh/colour{
-	color = "red"
-	},
 /area/space)
 "ieF" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
@@ -12458,6 +12424,88 @@
 /obj/fire,
 /turf/simulated/floor/gorefloor2,
 /area/space)
+"iny" = (
+/obj/machinery/smartfridge/survival_pod{
+	icon = 'icons/obj/vending.dmi';
+	icon_base = "smartfridge";
+	icon_contents = "boxes";
+	icon_state = "smartfridge";
+	name = "Advanced storage";
+	pixel_y = -1
+	},
+/obj/item/suit_cooling_unit,
+/obj/item/suit_cooling_unit,
+/obj/item/suit_cooling_unit,
+/obj/item/flashlight/maglight,
+/obj/item/flashlight/maglight,
+/obj/item/flashlight/maglight,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/plastic,
+/obj/item/stack/material/plasteel{
+	amount = 30
+	},
+/obj/fiftyspawner/rods,
+/obj/fiftyspawner/rods,
+/obj/item/stack/material/glass/phoronrglass{
+	amount = 20
+	},
+/obj/item/storage/toolbox/mechanical{
+	pixel_y = 5
+	},
+/obj/item/storage/toolbox/mechanical{
+	pixel_y = 5
+	},
+/obj/item/storage/toolbox/electrical,
+/obj/item/storage/toolbox/emergency,
+/obj/item/storage/toolbox/emergency,
+/obj/item/cell/high,
+/obj/item/cell/high,
+/obj/item/cell/high,
+/obj/item/radio/off,
+/obj/item/radio/off,
+/obj/item/radio/off,
+/obj/item/radio/off,
+/obj/item/radio/off,
+/obj/item/radio/off,
+/obj/item/radio/off,
+/obj/item/cell/device/hyper,
+/obj/item/cell/device/hyper,
+/obj/item/cell/device/hyper,
+/obj/item/clothing/glasses/meson,
+/obj/item/clothing/glasses/meson,
+/obj/item/clothing/gloves/yellow,
+/obj/item/clothing/gloves/yellow,
+/obj/item/clothing/head/welding/demon,
+/obj/item/clothing/head/welding/knight,
+/obj/item/clothing/glasses/welding,
+/obj/random/tech_supply,
+/obj/random/tech_supply,
+/obj/random/tech_supply,
+/obj/random/tech_supply,
+/obj/random/tech_supply,
+/obj/random/maintenance/engineering,
+/obj/random/maintenance/engineering,
+/obj/random/maintenance/engineering,
+/obj/random/maintenance/engineering,
+/obj/random/maintenance/engineering,
+/obj/item/inducer,
+/obj/item/storage/belt/utility/full,
+/obj/item/storage/belt/utility/full,
+/obj/item/multitool,
+/obj/item/multitool,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/megaphone,
+/obj/item/megaphone,
+/obj/item/extinguisher/atmo,
+/obj/item/extinguisher/atmo,
+/obj/item/suit_cooling_unit,
+/obj/item/suit_cooling_unit,
+/obj/item/storage/backpack/dufflebag/eng,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/space)
 "inz" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
@@ -12483,26 +12531,6 @@
 /obj/random/tool/alien,
 /obj/item/stack/cable_coil/alien,
 /turf/simulated/shuttle/floor/alienplating/external,
-/area/space)
-"inU" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 8;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 1;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/effect/spider/stickyweb/dark{
-	color = "#8A0808";
-	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
-	name = "Wires of doubt"
-	},
-/turf/simulated/floor/gorefloor,
 /area/space)
 "inW" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
@@ -13460,19 +13488,6 @@
 /obj/item/towel/random,
 /turf/simulated/floor/wood,
 /area/space)
-"iRD" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/effect/spider/stickyweb/dark{
-	color = "#8A0808";
-	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
-	name = "Wires of doubt"
-	},
-/turf/simulated/floor/gorefloor,
-/area/space)
 "iRF" = (
 /obj/item/clothing/under/color/prison,
 /obj/item/clothing/under/color/prison,
@@ -14357,6 +14372,22 @@
 	},
 /turf/simulated/floor/outdoors/rocks,
 /area/space)
+"juc" = (
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 1;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/effect/spider/stickyweb{
+	color = "#8A0808";
+	desc = "Like a leash you can see those strings trying to hold you back, hesitating at the thought only to exasperate the sensation of the reality you are in. . . this may not be an illusion.";
+	name = "Strings of distress"
+	},
+/turf/simulated/floor/flesh/colour{
+	color = "red"
+	},
+/area/space)
 "jue" = (
 /obj/structure/cryofeed{
 	dir = 4
@@ -15167,23 +15198,6 @@
 /obj/structure/reagent_dispensers,
 /turf/simulated/floor/outdoors/dirt,
 /area/space)
-"kax" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 4;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 1;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/turf/simulated/floor/flesh/colour{
-	color = "red"
-	},
-/area/space)
 "kaP" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 4
@@ -15732,27 +15746,6 @@
 /obj/machinery/power/shield_generator/charged,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/space)
-"knf" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 8;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/effect/spider/stickyweb/dark{
-	color = "#8A0808";
-	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
-	name = "Wires of doubt"
-	},
-/turf/simulated/floor/flesh/colour{
-	color = "red"
-	},
-/area/space)
 "knl" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 6
@@ -16007,153 +16000,6 @@
 "kwC" = (
 /obj/structure/sign/mining,
 /turf/simulated/shuttle/wall/voidcraft/survival,
-/area/space)
-"kxa" = (
-/obj/machinery/smartfridge/survival_pod{
-	icon = 'icons/obj/vending.dmi';
-	icon_base = "smartfridge";
-	icon_contents = "boxes";
-	icon_state = "smartfridge";
-	name = "Advanced storage";
-	pixel_y = -1
-	},
-/obj/item/storage/toolbox/mechanical{
-	pixel_x = -2;
-	pixel_y = -1
-	},
-/obj/item/storage/toolbox/mechanical{
-	pixel_x = -2;
-	pixel_y = -1
-	},
-/obj/item/storage/toolbox/electrical{
-	pixel_x = 1;
-	pixel_y = 6
-	},
-/obj/item/storage/toolbox/electrical{
-	pixel_x = 1;
-	pixel_y = 6
-	},
-/obj/item/storage/belt/utility,
-/obj/item/storage/belt/utility,
-/obj/item/multitool{
-	pixel_x = 3
-	},
-/obj/item/multitool{
-	pixel_x = 3
-	},
-/obj/item/tool/crowbar,
-/obj/item/tool/crowbar,
-/obj/item/tool/crowbar,
-/obj/structure/window/reinforced/survival_pod{
-	dir = 1
-	},
-/obj/item/mmi,
-/obj/item/mmi,
-/obj/item/mmi,
-/obj/item/clothing/head/welding{
-	pixel_x = -3;
-	pixel_y = 5
-	},
-/obj/item/clothing/head/welding{
-	pixel_x = -3;
-	pixel_y = 5
-	},
-/obj/item/clothing/head/welding/demon,
-/obj/item/clothing/glasses/welding,
-/obj/item/clothing/glasses/welding,
-/obj/item/stack/cable_coil,
-/obj/item/stack/cable_coil,
-/obj/item/stack/cable_coil,
-/obj/item/healthanalyzer,
-/obj/item/healthanalyzer,
-/obj/item/flash/synthetic,
-/obj/item/flash/synthetic,
-/obj/item/flash/synthetic,
-/obj/item/storage/firstaid/regular{
-	empty = 1;
-	name = "First-Aid (empty)"
-	},
-/obj/item/storage/firstaid/regular{
-	empty = 1;
-	name = "First-Aid (empty)"
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000;
-	pixel_x = 5;
-	pixel_y = -5
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000;
-	pixel_x = 5;
-	pixel_y = -5
-	},
-/obj/item/assembly/prox_sensor{
-	pixel_x = -8;
-	pixel_y = 4
-	},
-/obj/item/assembly/prox_sensor{
-	pixel_x = -8;
-	pixel_y = 4
-	},
-/obj/item/stack/material/copper{
-	amount = 25
-	},
-/obj/item/stack/material/plastic{
-	max_amount = 25
-	},
-/obj/item/stack/material/plastic{
-	max_amount = 25
-	},
-/obj/item/stack/material/plasteel{
-	amount = 10
-	},
-/obj/item/stack/material/plasteel{
-	amount = 10
-	},
-/obj/item/stack/material/glass{
-	amount = 50;
-	pixel_x = -2;
-	pixel_y = 2
-	},
-/obj/item/stack/material/glass{
-	amount = 50;
-	pixel_x = -2;
-	pixel_y = 2
-	},
-/obj/item/stack/material/glass{
-	amount = 50;
-	pixel_x = -2;
-	pixel_y = 2
-	},
-/obj/item/stack/material/glass{
-	amount = 50;
-	pixel_x = -2;
-	pixel_y = 2
-	},
-/obj/item/stack/material/steel{
-	amount = 50
-	},
-/obj/item/stack/material/steel{
-	amount = 50
-	},
-/obj/item/stack/material/steel{
-	amount = 50
-	},
-/obj/item/stack/material/steel{
-	amount = 50
-	},
-/obj/item/flash,
-/obj/item/flash,
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/item/clothing/mask/gas,
-/obj/item/clothing/mask/gas,
-/obj/item/implanter,
-/obj/item/implanter,
-/obj/item/implanter,
-/obj/item/storage/backpack/dufflebag/sci,
-/turf/simulated/shuttle/floor/voidcraft/light,
 /area/space)
 "kxq" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden,
@@ -16486,6 +16332,23 @@
 	},
 /turf/simulated/shuttle/floor/alienplating,
 /area/space)
+"kLj" = (
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 8;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 1;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/turf/simulated/floor/flesh/colour{
+	color = "red"
+	},
+/area/space)
 "kLk" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 8
@@ -16653,6 +16516,23 @@
 	},
 /obj/item/flash,
 /turf/simulated/floor/wood,
+/area/space)
+"kOT" = (
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 1;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 8;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/turf/simulated/floor/flesh/colour{
+	color = "red"
+	},
 /area/space)
 "kPa" = (
 /obj/effect/floor_decal/techfloor{
@@ -17298,6 +17178,27 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/carpet/blue,
+/area/space)
+"loM" = (
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 1;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/effect/spider/stickyweb{
+	color = "#8A0808";
+	desc = "Like a leash you can see those strings trying to hold you back, hesitating at the thought only to exasperate the sensation of the reality you are in. . . this may not be an illusion.";
+	name = "Strings of distress"
+	},
+/turf/simulated/floor/flesh/colour{
+	color = "red"
+	},
 /area/space)
 "loV" = (
 /obj/structure/flora/tree/jungle_small,
@@ -18024,6 +17925,27 @@
 /obj/item/healthanalyzer/phasic,
 /turf/simulated/floor,
 /area/space)
+"lRm" = (
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 4;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/effect/spider/stickyweb{
+	color = "#8A0808";
+	desc = "Like a leash you can see those strings trying to hold you back, hesitating at the thought only to exasperate the sensation of the reality you are in. . . this may not be an illusion.";
+	name = "Strings of distress"
+	},
+/turf/simulated/floor/flesh/colour{
+	color = "red"
+	},
+/area/space)
 "lRJ" = (
 /obj/item/newspaper,
 /obj/item/tape,
@@ -18622,23 +18544,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/space)
-"mjV" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 1;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 4;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/turf/simulated/floor/flesh/colour{
-	color = "red"
-	},
-/area/space)
 "mjW" = (
 /obj/structure/kitchenspike,
 /turf/simulated/floor,
@@ -18711,6 +18616,19 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/freezer,
+/area/space)
+"mkQ" = (
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 4;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/effect/map_effect/interval/sound_emitter/geiger/high,
+/obj/effect/map_effect/interval/sound_emitter/thunder,
+/turf/simulated/floor/flesh/colour{
+	color = "red"
+	},
 /area/space)
 "mkS" = (
 /obj/structure/table/fancyblack,
@@ -18833,6 +18751,23 @@
 	req_one_access = list(777)
 	},
 /turf/simulated/shuttle/floor/voidcraft,
+/area/space)
+"mnQ" = (
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 4;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 8;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/turf/simulated/floor/flesh/colour{
+	color = "red"
+	},
 /area/space)
 "mnZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
@@ -19438,22 +19373,6 @@
 	},
 /turf/simulated/floor/wood/sif,
 /area/space)
-"mAD" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 8;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/turf/simulated/floor/flesh/colour{
-	color = "red"
-	},
-/area/space)
 "mAJ" = (
 /obj/structure/window/reinforced/survival_pod{
 	dir = 4
@@ -19990,28 +19909,6 @@
 /obj/machinery/light/poi,
 /turf/simulated/shuttle/floor/alienplating,
 /area/space)
-"mRu" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 8;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 1;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/effect/spider/stickyweb{
-	color = "#8A0808";
-	desc = "Like a leash you can see those strings trying to hold you back, hesitating at the thought only to exasperate the sensation of the reality you are in. . . this may not be an illusion.";
-	name = "Strings of distress"
-	},
-/turf/simulated/floor/flesh/colour{
-	color = "red"
-	},
-/area/space)
 "mRF" = (
 /obj/machinery/power/port_gen/pacman,
 /turf/simulated/floor/outdoors/dirt,
@@ -20064,6 +19961,28 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/techfloor,
+/area/space)
+"mTc" = (
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 4;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 1;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/effect/spider/stickyweb/dark{
+	color = "#8A0808";
+	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
+	name = "Wires of doubt"
+	},
+/turf/simulated/floor/flesh/colour{
+	color = "red"
+	},
 /area/space)
 "mTM" = (
 /obj/structure/bed/chair/bay/shuttle,
@@ -20714,6 +20633,27 @@
 /obj/machinery/mineral/equipment_vendor/survey,
 /turf/simulated/shuttle/floor/purple,
 /area/space)
+"nuY" = (
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 8;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 4;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/effect/step_trigger/message{
+	message = "You feel a horrible chill run up your spine. . . you really should not continue. . .";
+	once = 0
+	},
+/turf/simulated/floor/flesh/colour{
+	color = "red"
+	},
+/area/space)
 "nvt" = (
 /obj/structure/bed/chair/oldsofa/left{
 	dir = 1
@@ -20963,11 +20903,6 @@
 "nCe" = (
 /obj/effect/map_effect/portal/line/side_b,
 /turf/simulated/floor/outdoors/dirt,
-/area/space)
-"nCu" = (
-/turf/simulated/floor/flesh/colour{
-	color = "red"
-	},
 /area/space)
 "nCJ" = (
 /obj/structure/window/phoronreinforced{
@@ -21758,6 +21693,25 @@
 /obj/item/material/shard/phoron,
 /turf/simulated/floor/plating,
 /area/space)
+"ohk" = (
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 1;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/effect/spider/stickyweb{
+	color = "#8A0808";
+	desc = "Like a leash you can see those strings trying to hold you back, hesitating at the thought only to exasperate the sensation of the reality you are in. . . this may not be an illusion.";
+	name = "Strings of distress"
+	},
+/turf/simulated/floor/gorefloor,
+/area/space)
 "ohM" = (
 /obj/structure/window/titanium/full,
 /obj/structure/grille/cult{
@@ -22005,6 +21959,20 @@
 /obj/structure/bed/chair/wood,
 /turf/simulated/floor/wood,
 /area/space)
+"oqN" = (
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 1;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/effect/spider/stickyweb/dark{
+	color = "#8A0808";
+	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
+	name = "Wires of doubt"
+	},
+/turf/simulated/floor/gorefloor,
+/area/space)
 "org" = (
 /obj/structure/loot_pile/surface/alien/engineering,
 /turf/simulated/shuttle/floor/alien,
@@ -22075,63 +22043,6 @@
 "otc" = (
 /obj/machinery/vending/dinnerware,
 /turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
-/area/space)
-"otj" = (
-/obj/structure/window/reinforced/survival_pod{
-	opacity = 1
-	},
-/obj/machinery/smartfridge/survival_pod{
-	icon = 'icons/obj/vending.dmi';
-	icon_base = "smartfridge";
-	icon_contents = "boxes";
-	icon_state = "smartfridge";
-	name = "Advanced storage";
-	pixel_y = -1
-	},
-/obj/item/stock_parts/micro_laser,
-/obj/item/stock_parts/micro_laser,
-/obj/item/stock_parts/matter_bin,
-/obj/item/stock_parts/matter_bin,
-/obj/item/stock_parts/console_screen,
-/obj/item/stock_parts/console_screen,
-/obj/item/storage/toolbox/mechanical{
-	pixel_x = -2;
-	pixel_y = -1
-	},
-/obj/item/storage/toolbox/mechanical{
-	pixel_x = -2;
-	pixel_y = -1
-	},
-/obj/item/clothing/gloves/sterile/latex,
-/obj/item/clothing/gloves/sterile/latex,
-/obj/item/storage/belt/utility,
-/obj/item/storage/belt/utility,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/stack/material/copper{
-	amount = 25
-	},
-/obj/item/stack/material/steel{
-	amount = 50
-	},
-/obj/item/stack/material/glass{
-	amount = 50;
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/item/clothing/mask/gas,
-/obj/item/clothing/mask/gas,
-/obj/item/disk/design_disk,
-/obj/item/disk/design_disk,
-/obj/item/disk/tech_disk,
-/obj/item/disk/tech_disk,
-/turf/simulated/shuttle/floor/voidcraft/light,
 /area/space)
 "otr" = (
 /obj/effect/floor_decal/techfloor{
@@ -22219,22 +22130,6 @@
 "ovj" = (
 /obj/structure/prop/nt_biocan,
 /turf/template_noop,
-/area/space)
-"ovl" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 1;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/effect/spider/stickyweb/dark{
-	color = "#8A0808";
-	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
-	name = "Wires of doubt"
-	},
-/turf/simulated/floor/flesh/colour{
-	color = "red"
-	},
 /area/space)
 "ovB" = (
 /mob/living/silicon/decoy,
@@ -22572,32 +22467,6 @@
 /obj/structure/grille,
 /turf/simulated/floor/tiled,
 /area/space)
-"oHR" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 4;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 8;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/structure/gootrap{
-	basecolor = #610B0B;
-	desc = "As if you stepped on a bear trap, you can feel a chilling horror crawling up your spine, gazing upon a pond of maroon fluids you can't help but experience terror upon it";
-	name = "Spill of fear"
-	},
-/obj/effect/step_trigger/message{
-	message = "Your body starts to feel numb with every step you take, there is an imposing presence you have yet to face. . . Maybe this isn't as bad.";
-	once = 0
-	},
-/turf/simulated/floor/flesh/colour{
-	color = "red"
-	},
-/area/space)
 "oHU" = (
 /obj/structure/closet/alien,
 /obj/random/toolbox,
@@ -22800,28 +22669,6 @@
 /obj/item/pen,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood,
-/area/space)
-"oLX" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 4;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 1;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/effect/spider/stickyweb/dark{
-	color = "#8A0808";
-	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
-	name = "Wires of doubt"
-	},
-/turf/simulated/floor/flesh/colour{
-	color = "red"
-	},
 /area/space)
 "oLZ" = (
 /obj/machinery/computer/ship/engines{
@@ -23472,25 +23319,6 @@
 	},
 /turf/simulated/shuttle/floor/alienplating,
 /area/space)
-"plr" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 4;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/effect/spider/stickyweb/dark{
-	color = "#8A0808";
-	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
-	name = "Wires of doubt"
-	},
-/turf/simulated/floor/gorefloor,
-/area/space)
 "plK" = (
 /obj/structure/fireaxecabinet,
 /turf/simulated/floor/outdoors/dirt,
@@ -23537,23 +23365,6 @@
 	id = "atriumnorth"
 	},
 /turf/simulated/shuttle/floor/voidcraft,
-/area/space)
-"pmm" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 8;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 1;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/turf/simulated/floor/flesh/colour{
-	color = "red"
-	},
 /area/space)
 "pmu" = (
 /obj/machinery/power/thermoregulator,
@@ -23808,6 +23619,32 @@
 /area/space)
 "puU" = (
 /turf/simulated/floor,
+/area/space)
+"pvA" = (
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 4;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 8;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/structure/gootrap{
+	basecolor = #610B0B;
+	desc = "As if you stepped on a bear trap, you can feel a chilling horror crawling up your spine, gazing upon a pond of maroon fluids you can't help but experience terror upon it";
+	name = "Spill of fear"
+	},
+/obj/effect/step_trigger/message{
+	message = "Your body starts to feel numb with every step you take, there is an imposing presence you have yet to face. . . Maybe this isn't as bad.";
+	once = 0
+	},
+/turf/simulated/floor/flesh/colour{
+	color = "red"
+	},
 /area/space)
 "pvM" = (
 /obj/effect/catwalk_plated/white,
@@ -24633,36 +24470,9 @@
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/space)
-"pXp" = (
-/obj/item/reagent_containers/glass/rag,
-/obj/item/clothing/gloves/ring/engagement,
-/obj/structure/table/wooden_reinforced,
-/turf/simulated/floor/wood,
-/area/space)
 "pXy" = (
 /obj/structure/bed/chair/wood/wings,
 /turf/simulated/floor/wood/sif,
-/area/space)
-"pXF" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 1;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/effect/spider/stickyweb{
-	color = "#8A0808";
-	desc = "Like a leash you can see those strings trying to hold you back, hesitating at the thought only to exasperate the sensation of the reality you are in. . . this may not be an illusion.";
-	name = "Strings of distress"
-	},
-/turf/simulated/floor/flesh/colour{
-	color = "red"
-	},
 /area/space)
 "pYp" = (
 /obj/machinery/sleeper{
@@ -24740,16 +24550,6 @@
 /area/space)
 "qaP" = (
 /turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
-/area/space)
-"qbS" = (
-/obj/effect/simple_portal/linked{
-	desc = "It looks like a hole that leads to somewhere, although you can't quite see through it. . . It seems dormant and sealed closed. . .";
-	name = "Demonic portal";
-	portal_id = 20
-	},
-/turf/simulated/floor/flesh/colour{
-	color = "red"
-	},
 /area/space)
 "qcn" = (
 /obj/structure/cable/green{
@@ -25173,25 +24973,6 @@
 /obj/item/bedsheet/captain,
 /turf/simulated/floor/carpet/bcarpet,
 /area/space)
-"qql" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 1;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/structure/fans/hardlight/colorable{
-	invisibility = 99
-	},
-/turf/simulated/floor/flesh/colour{
-	color = "red"
-	},
-/area/space)
 "qqu" = (
 /turf/simulated/shuttle/plating/skipjack,
 /area/space)
@@ -25520,6 +25301,23 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/space)
+"qCB" = (
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 4;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 1;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/turf/simulated/floor/flesh/colour{
+	color = "red"
+	},
+/area/space)
 "qCM" = (
 /obj/machinery/door/airlock/alien{
 	name = "Left-Wing Thrusters MK-1";
@@ -25715,23 +25513,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/shuttle/wall/voidcraft/green,
 /area/space)
-"qGF" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 8;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 4;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/turf/simulated/floor/flesh/colour{
-	color = "red"
-	},
-/area/space)
 "qHF" = (
 /obj/structure/girder/cult,
 /turf/simulated/floor/lava,
@@ -25756,22 +25537,6 @@
 	},
 /turf/simulated/shuttle/floor/yellow,
 /area/space)
-"qIb" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 4;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/turf/simulated/floor/flesh/colour{
-	color = "red"
-	},
-/area/space)
 "qIh" = (
 /obj/machinery/atmospherics/unary/freezer{
 	icon_state = "freezer_1";
@@ -25791,6 +25556,16 @@
 	dir = 8
 	},
 /turf/template_noop,
+/area/space)
+"qIy" = (
+/obj/effect/spider/stickyweb/dark{
+	color = "#8A0808";
+	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
+	name = "Wires of doubt"
+	},
+/turf/simulated/floor/flesh/colour{
+	color = "red"
+	},
 /area/space)
 "qIR" = (
 /obj/machinery/particle_accelerator/control_box,
@@ -26444,28 +26219,6 @@
 /obj/machinery/recharge_station,
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/space)
-"rcM" = (
-/obj/effect/spider/stickyweb/dark{
-	color = "#8A0808";
-	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
-	name = "Wires of doubt"
-	},
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 8;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 1;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/turf/simulated/floor/flesh/colour{
-	color = "red"
-	},
-/area/space)
 "rcS" = (
 /obj/structure/cable{
 	d1 = 32;
@@ -26513,23 +26266,6 @@
 	},
 /turf/simulated/floor/tiled/eris/dark/techfloor,
 /area/space)
-"rer" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 1;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 8;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/turf/simulated/floor/flesh/colour{
-	color = "red"
-	},
-/area/space)
 "reE" = (
 /obj/structure/sign/mining/survival{
 	dir = 4
@@ -26565,6 +26301,21 @@
 "reP" = (
 /obj/item/toy/xmastree,
 /turf/simulated/floor/outdoors/dirt,
+/area/space)
+"reT" = (
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/effect/spider/stickyweb/dark{
+	color = "#8A0808";
+	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
+	name = "Wires of doubt"
+	},
+/turf/simulated/floor/flesh/colour{
+	color = "red"
+	},
 /area/space)
 "rfi" = (
 /obj/effect/floor_decal/techfloor{
@@ -26768,6 +26519,29 @@
 	},
 /turf/simulated/floor/carpet/sblucarpet,
 /area/space)
+"rmi" = (
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 1;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/effect/spider/stickyweb/dark{
+	color = "#8A0808";
+	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
+	name = "Wires of doubt"
+	},
+/obj/effect/step_trigger/message{
+	message = "Finally, you gaze upon a horror your sanity fails to understand. The numbness of your body fades as the sound of glass shattering fills your mind, the horrifying sensation of barbed wire tangling your body as every waking second you spend gazing upon this nightmare tightens those bonds. . . Is this what your mortal coil desires?. . .";
+	once = 0
+	},
+/turf/simulated/floor/gorefloor,
+/area/space)
 "rmv" = (
 /obj/structure/bed/chair/wood{
 	dir = 8
@@ -26847,6 +26621,23 @@
 /obj/structure/disposalpipe/broken,
 /turf/simulated/floor/plating,
 /area/space)
+"rnZ" = (
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 1;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 4;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/turf/simulated/floor/flesh/colour{
+	color = "red"
+	},
+/area/space)
 "roD" = (
 /obj/structure/table/alien,
 /obj/item/disk/nifsoft/compliance,
@@ -26881,6 +26672,23 @@
 	},
 /obj/random/mob/robotic/hivebot,
 /turf/simulated/floor/tiled/techfloor,
+/area/space)
+"rpF" = (
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 8;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 4;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/turf/simulated/floor/flesh/colour{
+	color = "red"
+	},
 /area/space)
 "rqE" = (
 /obj/machinery/atmospherics/binary/pump/on{
@@ -27010,26 +26818,6 @@
 /obj/item/stock_parts/capacitor/adv,
 /turf/simulated/shuttle/floor/purple,
 /area/space)
-"rtg" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 8;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 1;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/effect/spider/stickyweb{
-	color = "#8A0808";
-	desc = "Like a leash you can see those strings trying to hold you back, hesitating at the thought only to exasperate the sensation of the reality you are in. . . this may not be an illusion.";
-	name = "Strings of distress"
-	},
-/turf/simulated/floor/gorefloor,
-/area/space)
 "rtj" = (
 /obj/effect/alien/weeds,
 /turf/simulated/floor/outdoors/rocks{
@@ -27099,17 +26887,6 @@
 	req_log_access = null
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/space)
-"rwf" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 8;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/turf/simulated/floor/flesh/colour{
-	color = "red"
-	},
 /area/space)
 "rwk" = (
 /obj/effect/floor_decal/techfloor/orange,
@@ -27496,6 +27273,57 @@
 	},
 /obj/item/paicard,
 /turf/simulated/floor/carpet/bcarpet,
+/area/space)
+"rJc" = (
+/obj/structure/window/reinforced/survival_pod{
+	opacity = 1
+	},
+/obj/machinery/smartfridge/survival_pod{
+	icon = 'icons/obj/vending.dmi';
+	icon_base = "smartfridge";
+	icon_contents = "boxes";
+	icon_state = "smartfridge";
+	name = "Advanced storage";
+	pixel_y = -1
+	},
+/obj/item/stock_parts/micro_laser,
+/obj/item/stock_parts/micro_laser,
+/obj/item/stock_parts/matter_bin,
+/obj/item/stock_parts/matter_bin,
+/obj/item/stock_parts/console_screen,
+/obj/item/stock_parts/console_screen,
+/obj/item/storage/toolbox/mechanical{
+	pixel_x = -2;
+	pixel_y = -1
+	},
+/obj/item/storage/toolbox/mechanical{
+	pixel_x = -2;
+	pixel_y = -1
+	},
+/obj/item/clothing/gloves/sterile/latex,
+/obj/item/clothing/gloves/sterile/latex,
+/obj/item/storage/belt/utility,
+/obj/item/storage/belt/utility,
+/obj/item/cell/high,
+/obj/item/cell/high,
+/obj/item/stack/material/copper{
+	amount = 25
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50;
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas,
+/obj/item/disk/design_disk,
+/obj/item/disk/design_disk,
+/obj/item/disk/tech_disk,
+/obj/item/disk/tech_disk,
+/turf/simulated/shuttle/floor/voidcraft/light,
 /area/space)
 "rJp" = (
 /obj/random/junk,
@@ -27889,6 +27717,22 @@
 	},
 /turf/simulated/floor/airless,
 /area/space)
+"rZU" = (
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 4;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/turf/simulated/floor/flesh/colour{
+	color = "red"
+	},
+/area/space)
 "say" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 4
@@ -27920,27 +27764,6 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec/raised,
-/area/space)
-"sbz" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 1;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/effect/spider/stickyweb/dark{
-	color = "#8A0808";
-	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
-	name = "Wires of doubt"
-	},
-/turf/simulated/floor/flesh/colour{
-	color = "red"
-	},
 /area/space)
 "sbA" = (
 /obj/effect/floor_decal/techfloor/orange{
@@ -28082,6 +27905,27 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
+/area/space)
+"ses" = (
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 4;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/effect/spider/stickyweb/dark{
+	color = "#8A0808";
+	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
+	name = "Wires of doubt"
+	},
+/turf/simulated/floor/flesh/colour{
+	color = "red"
+	},
 /area/space)
 "seB" = (
 /obj/machinery/light{
@@ -28512,6 +28356,11 @@
 /obj/effect/gibspawner/human,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/space)
+"sqT" = (
+/turf/simulated/floor/flesh/colour{
+	color = "red"
+	},
+/area/space)
 "srA" = (
 /obj/mecha/combat/scarab,
 /turf/template_noop,
@@ -28882,6 +28731,25 @@
 	},
 /turf/simulated/floor/carpet/blue,
 /area/space)
+"sDF" = (
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 1;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/structure/fans/hardlight/colorable{
+	invisibility = 99
+	},
+/turf/simulated/floor/flesh/colour{
+	color = "red"
+	},
+/area/space)
 "sDP" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -29075,6 +28943,22 @@
 "sLy" = (
 /obj/structure/salvageable/server,
 /turf/simulated/floor/plating/external,
+/area/space)
+"sMj" = (
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 1;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/effect/spider/stickyweb/dark{
+	color = "#8A0808";
+	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
+	name = "Wires of doubt"
+	},
+/turf/simulated/floor/flesh/colour{
+	color = "red"
+	},
 /area/space)
 "sMk" = (
 /obj/structure/particle_accelerator/fuel_chamber{
@@ -29626,6 +29510,25 @@
 "tbt" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/simulated/floor/grass,
+/area/space)
+"tbV" = (
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 4;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/effect/spider/stickyweb{
+	color = "#8A0808";
+	desc = "Like a leash you can see those strings trying to hold you back, hesitating at the thought only to exasperate the sensation of the reality you are in. . . this may not be an illusion.";
+	name = "Strings of distress"
+	},
+/turf/simulated/floor/gorefloor,
 /area/space)
 "tbW" = (
 /obj/structure/closet/secure_closet/freezer/kitchen,
@@ -30367,6 +30270,19 @@
 /obj/structure/table/steel_reinforced,
 /obj/machinery/chemical_dispenser/full,
 /turf/simulated/shuttle/floor/voidcraft/light,
+/area/space)
+"tDP" = (
+/obj/structure/table/steel,
+/obj/machinery/cell_charger,
+/obj/item/cell/high{
+	pixel_x = 2;
+	pixel_y = 4
+	},
+/obj/item/cell/high,
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_y = 28
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
 /area/space)
 "tDR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
@@ -31152,6 +31068,27 @@
 	},
 /turf/simulated/floor,
 /area/space)
+"tZK" = (
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 8;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/effect/spider/stickyweb{
+	color = "#8A0808";
+	desc = "Like a leash you can see those strings trying to hold you back, hesitating at the thought only to exasperate the sensation of the reality you are in. . . this may not be an illusion.";
+	name = "Strings of distress"
+	},
+/turf/simulated/floor/flesh/colour{
+	color = "red"
+	},
+/area/space)
 "tZV" = (
 /obj/structure/reagent_dispensers/water_cooler/full{
 	dir = 8
@@ -31917,28 +31854,6 @@
 	},
 /turf/template_noop,
 /area/space)
-"uzS" = (
-/obj/effect/spider/stickyweb{
-	color = "#8A0808";
-	desc = "Like a leash you can see those strings trying to hold you back, hesitating at the thought only to exasperate the sensation of the reality you are in. . . this may not be an illusion.";
-	name = "Strings of distress"
-	},
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 8;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 4;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/turf/simulated/floor/flesh/colour{
-	color = "red"
-	},
-/area/space)
 "uAv" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 8
@@ -31971,20 +31886,6 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/steel_grid,
-/area/space)
-"uBn" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 1;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/effect/spider/stickyweb/dark{
-	color = "#8A0808";
-	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
-	name = "Wires of doubt"
-	},
-/turf/simulated/floor/gorefloor,
 /area/space)
 "uBz" = (
 /obj/machinery/atmospherics/pipe/simple/visible/blue{
@@ -32061,29 +31962,6 @@
 "uEa" = (
 /obj/structure/table/bench/glass,
 /turf/simulated/floor/carpet/oracarpet,
-/area/space)
-"uEw" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 1;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/effect/spider/stickyweb/dark{
-	color = "#8A0808";
-	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
-	name = "Wires of doubt"
-	},
-/obj/effect/step_trigger/message{
-	message = "Finally, you gaze upon a horror your sanity fails to understand. The numbness of your body fades as the sound of glass shattering fills your mind, the horrifying sensation of barbed wire tangling your body as every waking second you spend gazing upon this nightmare tightens those bonds. . . Is this what your mortal coil desires?. . .";
-	once = 0
-	},
-/turf/simulated/floor/gorefloor,
 /area/space)
 "uEJ" = (
 /obj/effect/decal/cleanable/blood/gibs,
@@ -32408,6 +32286,28 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/space)
+"uQK" = (
+/obj/effect/spider/stickyweb/dark{
+	color = "#8A0808";
+	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
+	name = "Wires of doubt"
+	},
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 8;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 1;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/turf/simulated/floor/flesh/colour{
+	color = "red"
+	},
+/area/space)
 "uQV" = (
 /obj/machinery/gear_dispenser/suit/autolok,
 /turf/simulated/floor/outdoors/dirt,
@@ -32451,24 +32351,6 @@
 "uRU" = (
 /obj/structure/largecrate/animal/goat,
 /turf/simulated/shuttle/floor/alienplating,
-/area/space)
-"uRX" = (
-/obj/structure/table/steel,
-/obj/machinery/cell_charger,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000;
-	pixel_x = 2;
-	pixel_y = 4
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/machinery/computer/security/telescreen/entertainment{
-	pixel_y = 28
-	},
-/turf/simulated/shuttle/floor/voidcraft/dark,
 /area/space)
 "uSs" = (
 /obj/structure/curtain/black{
@@ -32821,6 +32703,20 @@
 "vct" = (
 /turf/simulated/floor/greengrid,
 /area/space)
+"vcu" = (
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 8;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/effect/spider/stickyweb/dark{
+	color = "#8A0808";
+	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
+	name = "Wires of doubt"
+	},
+/turf/simulated/floor/gorefloor,
+/area/space)
 "vdT" = (
 /obj/singularity/narsie{
 	l_move_time = 0;
@@ -32890,6 +32786,149 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/techfloor,
+/area/space)
+"vfP" = (
+/obj/machinery/smartfridge/survival_pod{
+	icon = 'icons/obj/vending.dmi';
+	icon_base = "smartfridge";
+	icon_contents = "boxes";
+	icon_state = "smartfridge";
+	name = "Advanced storage";
+	pixel_y = -1
+	},
+/obj/item/storage/toolbox/mechanical{
+	pixel_x = -2;
+	pixel_y = -1
+	},
+/obj/item/storage/toolbox/mechanical{
+	pixel_x = -2;
+	pixel_y = -1
+	},
+/obj/item/storage/toolbox/electrical{
+	pixel_x = 1;
+	pixel_y = 6
+	},
+/obj/item/storage/toolbox/electrical{
+	pixel_x = 1;
+	pixel_y = 6
+	},
+/obj/item/storage/belt/utility,
+/obj/item/storage/belt/utility,
+/obj/item/multitool{
+	pixel_x = 3
+	},
+/obj/item/multitool{
+	pixel_x = 3
+	},
+/obj/item/tool/crowbar,
+/obj/item/tool/crowbar,
+/obj/item/tool/crowbar,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/item/mmi,
+/obj/item/mmi,
+/obj/item/mmi,
+/obj/item/clothing/head/welding{
+	pixel_x = -3;
+	pixel_y = 5
+	},
+/obj/item/clothing/head/welding{
+	pixel_x = -3;
+	pixel_y = 5
+	},
+/obj/item/clothing/head/welding/demon,
+/obj/item/clothing/glasses/welding,
+/obj/item/clothing/glasses/welding,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/obj/item/healthanalyzer,
+/obj/item/healthanalyzer,
+/obj/item/flash/synthetic,
+/obj/item/flash/synthetic,
+/obj/item/flash/synthetic,
+/obj/item/storage/firstaid/regular{
+	empty = 1;
+	name = "First-Aid (empty)"
+	},
+/obj/item/storage/firstaid/regular{
+	empty = 1;
+	name = "First-Aid (empty)"
+	},
+/obj/item/cell/high{
+	pixel_x = 5;
+	pixel_y = -5
+	},
+/obj/item/cell/high{
+	pixel_x = 5;
+	pixel_y = -5
+	},
+/obj/item/assembly/prox_sensor{
+	pixel_x = -8;
+	pixel_y = 4
+	},
+/obj/item/assembly/prox_sensor{
+	pixel_x = -8;
+	pixel_y = 4
+	},
+/obj/item/stack/material/copper{
+	amount = 25
+	},
+/obj/item/stack/material/plastic{
+	max_amount = 25
+	},
+/obj/item/stack/material/plastic{
+	max_amount = 25
+	},
+/obj/item/stack/material/plasteel{
+	amount = 10
+	},
+/obj/item/stack/material/plasteel{
+	amount = 10
+	},
+/obj/item/stack/material/glass{
+	amount = 50;
+	pixel_x = -2;
+	pixel_y = 2
+	},
+/obj/item/stack/material/glass{
+	amount = 50;
+	pixel_x = -2;
+	pixel_y = 2
+	},
+/obj/item/stack/material/glass{
+	amount = 50;
+	pixel_x = -2;
+	pixel_y = 2
+	},
+/obj/item/stack/material/glass{
+	amount = 50;
+	pixel_x = -2;
+	pixel_y = 2
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/flash,
+/obj/item/flash,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas,
+/obj/item/implanter,
+/obj/item/implanter,
+/obj/item/implanter,
+/obj/item/storage/backpack/dufflebag/sci,
+/turf/simulated/shuttle/floor/voidcraft/light,
 /area/space)
 "vge" = (
 /obj/structure/prop/alien/computer/hybrid{
@@ -33747,6 +33786,26 @@
 	},
 /turf/simulated/shuttle/floor/black,
 /area/space)
+"vNb" = (
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 8;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 1;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/effect/spider/stickyweb/dark{
+	color = "#8A0808";
+	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
+	name = "Wires of doubt"
+	},
+/turf/simulated/floor/gorefloor,
+/area/space)
 "vNc" = (
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled,
@@ -34127,43 +34186,6 @@
 /obj/item/pen/reagent/paralysis,
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
-"vZr" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 8;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/turf/simulated/floor/flesh/colour{
-	color = "red"
-	},
-/area/space)
-"vZv" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 4;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/effect/spider/stickyweb{
-	color = "#8A0808";
-	desc = "Like a leash you can see those strings trying to hold you back, hesitating at the thought only to exasperate the sensation of the reality you are in. . . this may not be an illusion.";
-	name = "Strings of distress"
-	},
-/turf/simulated/floor/flesh/colour{
-	color = "red"
-	},
-/area/space)
 "wab" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 8
@@ -34231,6 +34253,25 @@
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/alienplating,
+/area/space)
+"wbm" = (
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 4;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/effect/spider/stickyweb/dark{
+	color = "#8A0808";
+	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
+	name = "Wires of doubt"
+	},
+/turf/simulated/floor/gorefloor,
 /area/space)
 "wbL" = (
 /obj/structure/table/alien/blue,
@@ -34395,6 +34436,22 @@
 	name = "Floor mounted flash"
 	},
 /turf/simulated/floor/tiled/dark,
+/area/space)
+"whF" = (
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 8;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/turf/simulated/floor/flesh/colour{
+	color = "red"
+	},
 /area/space)
 "whK" = (
 /obj/effect/catwalk_plated/techfloor,
@@ -34972,22 +35029,6 @@
 /obj/structure/cult/pylon,
 /turf/simulated/floor/gorefloor2,
 /area/space)
-"wDp" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 4;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/effect/spider/stickyweb/dark{
-	color = "#8A0808";
-	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
-	name = "Wires of doubt"
-	},
-/turf/simulated/floor/flesh/colour{
-	color = "red"
-	},
-/area/space)
 "wEc" = (
 /obj/machinery/cryopod,
 /turf/simulated/floor/tiled/techfloor,
@@ -35081,22 +35122,6 @@
 /obj/structure/closet/alien,
 /obj/item/lightreplacer,
 /turf/simulated/floor/tiled/techfloor,
-/area/space)
-"wHi" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 1;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/effect/spider/stickyweb{
-	color = "#8A0808";
-	desc = "Like a leash you can see those strings trying to hold you back, hesitating at the thought only to exasperate the sensation of the reality you are in. . . this may not be an illusion.";
-	name = "Strings of distress"
-	},
-/turf/simulated/floor/flesh/colour{
-	color = "red"
-	},
 /area/space)
 "wHO" = (
 /obj/structure/catwalk,
@@ -35362,21 +35387,6 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
-/area/space)
-"wPH" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/effect/spider/stickyweb/dark{
-	color = "#8A0808";
-	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
-	name = "Wires of doubt"
-	},
-/turf/simulated/floor/flesh/colour{
-	color = "red"
-	},
 /area/space)
 "wPR" = (
 /obj/machinery/ion_engine,
@@ -35695,27 +35705,6 @@
 "xdM" = (
 /turf/simulated/wall/rshull,
 /area/space)
-"xdZ" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 8;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/effect/spider/stickyweb{
-	color = "#8A0808";
-	desc = "Like a leash you can see those strings trying to hold you back, hesitating at the thought only to exasperate the sensation of the reality you are in. . . this may not be an illusion.";
-	name = "Strings of distress"
-	},
-/turf/simulated/floor/flesh/colour{
-	color = "red"
-	},
-/area/space)
 "xec" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 1
@@ -35860,6 +35849,17 @@
 /obj/effect/floor_decal/industrial/warning/full,
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/simulated/shuttle/floor/voidcraft/dark,
+/area/space)
+"xjH" = (
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 8;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/turf/simulated/floor/flesh/colour{
+	color = "red"
+	},
 /area/space)
 "xkh" = (
 /obj/structure/grille/cult{
@@ -36394,6 +36394,22 @@
 	outdoors = 0
 	},
 /area/space)
+"xyK" = (
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/obj/structure/window/phoronreinforced{
+	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
+	dir = 4;
+	maxhealth = 500;
+	name = "Veil of sanity"
+	},
+/turf/simulated/floor/flesh/colour{
+	color = "red"
+	},
+/area/space)
 "xyL" = (
 /obj/machinery/door/airlock/angled_tgmc/wide/generic_steel{
 	dir = 4;
@@ -36645,27 +36661,6 @@
 /obj/effect/fancy_shuttle/delivery,
 /turf/template_noop,
 /area/space)
-"xIb" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 1;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/structure/gootrap{
-	basecolor = #610B0B;
-	desc = "As if you stepped on a bear trap, you can feel a chilling horror crawling up your spine, gazing upon a pond of maroon fluids you can't help but experience terror upon it";
-	name = "Spill of fear"
-	},
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/turf/simulated/floor/flesh/colour{
-	color = "red"
-	},
-/area/space)
 "xIq" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 4
@@ -36861,25 +36856,6 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
-"xNL" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 4;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/effect/spider/stickyweb{
-	color = "#8A0808";
-	desc = "Like a leash you can see those strings trying to hold you back, hesitating at the thought only to exasperate the sensation of the reality you are in. . . this may not be an illusion.";
-	name = "Strings of distress"
-	},
-/turf/simulated/floor/gorefloor,
 /area/space)
 "xNQ" = (
 /obj/effect/catwalk_plated/techfloor,
@@ -57126,7 +57102,7 @@ lzM
 ygs
 udW
 aaY
-pXp
+gup
 vHw
 sZF
 uFN
@@ -59939,7 +59915,7 @@ bDS
 bDS
 bDS
 qAN
-uRX
+tDP
 mgQ
 nwG
 qaP
@@ -62759,7 +62735,7 @@ nwG
 qAN
 aIm
 aXM
-bFg
+iny
 qBj
 dan
 doZ
@@ -62769,7 +62745,7 @@ nwG
 qAN
 oNh
 rLa
-otj
+rJc
 hZH
 kcO
 miF
@@ -63029,7 +63005,7 @@ uhz
 eMw
 tfL
 qqu
-kxa
+vfP
 hpn
 pIz
 kwC
@@ -64811,11 +64787,11 @@ dJN
 inf
 dJN
 sSC
-inU
-cbn
-cBO
-cBO
-knf
+vNb
+vcu
+cGN
+cGN
+eYm
 sSC
 dJN
 lVy
@@ -65069,11 +65045,11 @@ dJN
 dJN
 dJN
 sSC
-uBn
-nCu
-nCu
-nCu
-wPH
+oqN
+sqT
+sqT
+sqT
+reT
 sSC
 dJN
 lVy
@@ -65326,12 +65302,12 @@ dJN
 vhO
 sSC
 sSC
-mRu
-glz
-nCu
-qbS
-nCu
-iRD
+dmj
+qIy
+sqT
+hTz
+sqT
+aAo
 sSC
 dJN
 lVy
@@ -65583,13 +65559,13 @@ dJN
 dJN
 dJN
 sSC
-rcM
-fSo
-glz
-nCu
-nCu
-nCu
-iRD
+uQK
+aTp
+qIy
+sqT
+sqT
+sqT
+aAo
 sSC
 byK
 lVy
@@ -65838,16 +65814,16 @@ eML
 dJN
 sSC
 sSC
-pmm
-rwf
-uzS
-ibq
+kLj
+xjH
+eMR
+xyK
 sSC
-oLX
-wDp
-wDp
-wDp
-plr
+mTc
+bGD
+bGD
+bGD
+wbm
 sSC
 dJN
 lVy
@@ -66093,10 +66069,10 @@ dJN
 dJN
 nKM
 sSC
-rtg
-rwf
-gXK
-fSo
+bVl
+xjH
+nuY
+aTp
 xxt
 sSC
 sSC
@@ -66350,9 +66326,9 @@ wxH
 inf
 heQ
 lHP
-cBO
-nCu
-ibq
+cGN
+sqT
+xyK
 sSC
 sSC
 sSC
@@ -66606,9 +66582,9 @@ qDy
 dJN
 dJN
 sSC
-pmm
-nCu
-fSo
+kLj
+sqT
+aTp
 bIB
 sSC
 dJN
@@ -66863,9 +66839,9 @@ dzi
 inf
 dJN
 dJN
-pmm
-fSo
-xNL
+kLj
+aTp
+tbV
 sSC
 sSC
 dJN
@@ -67121,7 +67097,7 @@ dJN
 dJN
 dJN
 sSC
-xIb
+dbW
 sSC
 dJN
 dJN
@@ -67379,7 +67355,7 @@ dJN
 wDn
 dJN
 heQ
-cjP
+cpS
 sSC
 dJN
 cSr
@@ -67637,8 +67613,8 @@ dJN
 dJN
 dJN
 sSC
-mjV
-vZr
+rnZ
+gfX
 sSC
 dJN
 dJN
@@ -67896,9 +67872,9 @@ inf
 dJN
 dJN
 sSC
-mjV
-qGF
-xdZ
+rnZ
+rpF
+tZK
 sSC
 sSC
 sSC
@@ -68156,10 +68132,10 @@ dJN
 eML
 sSC
 sSC
-mjV
-qGF
-qGF
-rwf
+rnZ
+rpF
+rpF
+xjH
 ufH
 sSC
 sSC
@@ -68417,12 +68393,12 @@ dJN
 sSC
 sSC
 dJN
-kax
-fSo
-oHR
-rwf
-rwf
-xdZ
+qCB
+aTp
+pvA
+xjH
+xjH
+tZK
 sSC
 dJN
 tAG
@@ -68679,9 +68655,9 @@ dJN
 dJN
 dJN
 akM
-wDp
-nCu
-vZr
+bGD
+sqT
+gfX
 sSC
 cSr
 dJN
@@ -68939,8 +68915,8 @@ inf
 dJN
 dJN
 akM
-nCu
-vZr
+sqT
+gfX
 dJN
 dJN
 dJN
@@ -69198,7 +69174,7 @@ dJN
 dJN
 sSC
 akM
-cre
+ahi
 sSC
 inf
 inf
@@ -69443,11 +69419,11 @@ lVy
 wxH
 dJN
 sSC
-rer
+kOT
 nCJ
-hwQ
-qGF
-mAD
+eWe
+rpF
+whF
 dJN
 dJN
 dJN
@@ -69456,7 +69432,7 @@ elF
 inf
 inf
 dJN
-kax
+qCB
 ufH
 dJN
 dJN
@@ -69701,12 +69677,12 @@ lVy
 dJN
 dJN
 sSC
-cjP
+cpS
 sSC
 sSC
 dJN
 akM
-vZr
+gfX
 sSC
 dJN
 wxH
@@ -69715,7 +69691,7 @@ dJN
 dJN
 dJN
 sSC
-cjP
+cpS
 sSC
 dJN
 wxH
@@ -69964,7 +69940,7 @@ dJN
 dJN
 dJN
 sSC
-sbz
+esg
 sSC
 sTq
 khA
@@ -69973,7 +69949,7 @@ khA
 khA
 nKM
 dJN
-cjP
+cpS
 dJN
 dJN
 lVy
@@ -70216,13 +70192,13 @@ lVy
 lVy
 inf
 sSC
-rer
-vZv
+kOT
+lRm
 dJN
 cSr
 dJN
 sSC
-cjP
+cpS
 sSC
 khA
 khA
@@ -70231,8 +70207,8 @@ eQp
 khA
 dJN
 sSC
-iew
-vZr
+eNr
+gfX
 sSC
 lVy
 lVy
@@ -70474,7 +70450,7 @@ lVy
 lVy
 inf
 sSC
-cjP
+cpS
 dJN
 dJN
 wxH
@@ -70489,8 +70465,8 @@ mZt
 ewr
 dJN
 sSC
-ovl
-cre
+sMj
+ahi
 sSC
 dJN
 lVy
@@ -70747,7 +70723,7 @@ eZe
 khA
 dJN
 sSC
-iew
+eNr
 irP
 sSC
 wxH
@@ -70996,7 +70972,7 @@ dJN
 wxH
 inf
 sSC
-cjP
+cpS
 dJN
 ewr
 nAf
@@ -71005,8 +70981,8 @@ bmj
 khA
 dJN
 sSC
-wHi
-iRD
+juc
+aAo
 dJN
 dJN
 lVy
@@ -71248,13 +71224,13 @@ lVy
 lVy
 dJN
 sSC
-cjP
+cpS
 sSC
 dJN
 vhO
 dJN
 sSC
-pXF
+loM
 sSC
 khA
 khA
@@ -71263,8 +71239,8 @@ bmj
 xMJ
 dJN
 dJN
-iew
-cre
+eNr
+ahi
 sSC
 dJN
 lVy
@@ -71506,7 +71482,7 @@ lVy
 wxH
 sRY
 sRY
-qql
+sDF
 sRY
 uLe
 uLe
@@ -71521,8 +71497,8 @@ qHF
 dzi
 inf
 dJN
-uBn
-cre
+oqN
+ahi
 sSC
 dJN
 dJN
@@ -71764,14 +71740,14 @@ lVy
 dEg
 sSC
 sSC
-aXO
+ohk
 sSC
 heQ
 dEg
 wxH
 sSC
-kax
-vZr
+qCB
+gfX
 dJN
 dJN
 dJN
@@ -71780,7 +71756,7 @@ dzi
 inf
 sSC
 paL
-cre
+ahi
 sSC
 nKM
 dJN
@@ -72022,23 +71998,23 @@ lVy
 dEg
 heQ
 sSC
-cjP
+cpS
 sSC
 heQ
 jlZ
 lVy
 dJN
 dJN
-kax
-mAD
+qCB
+whF
 dJN
 dJN
 fld
 dJN
 dJN
 dJN
-iew
-cnH
+eNr
+ses
 sSC
 dJN
 dJN
@@ -72280,7 +72256,7 @@ lVy
 jlZ
 cnJ
 sSC
-pXF
+loM
 sSC
 cnJ
 oRx
@@ -72295,7 +72271,7 @@ sSC
 dJN
 dJN
 mtv
-cre
+ahi
 sSC
 dJN
 dJN
@@ -72538,7 +72514,7 @@ lVy
 dzi
 dEg
 pnH
-uEw
+rmi
 pnH
 dEg
 dzi
@@ -72546,14 +72522,14 @@ lVy
 dJN
 inf
 dJN
-kax
-gpX
+qCB
+mnQ
 qrA
-rwf
-hOP
-rwf
-nCu
-qIb
+xjH
+gis
+xjH
+sqT
+rZU
 dJN
 inf
 dJN
@@ -72796,7 +72772,7 @@ lVy
 dzi
 dzi
 lHP
-nCu
+sqT
 mPA
 dzi
 qDy
@@ -72808,9 +72784,9 @@ inf
 sSC
 dJN
 akM
-fSo
-fSo
-vZv
+aTp
+aTp
+lRm
 sSC
 dJN
 dJN
@@ -73053,9 +73029,9 @@ nwG
 lVy
 qDy
 dzi
-iew
-nCu
-cre
+eNr
+sqT
+ahi
 dzi
 qDy
 lVy
@@ -73312,7 +73288,7 @@ lVy
 qDy
 dzi
 tLU
-hei
+mkQ
 xxt
 dzi
 qDy

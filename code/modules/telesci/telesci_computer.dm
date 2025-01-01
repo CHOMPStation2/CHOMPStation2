@@ -160,11 +160,11 @@
 
 		if("send")
 			sending = 1
-			teleport(usr)
+			teleport(ui.user)
 
 		if("receive")
 			sending = 0
-			teleport(usr)
+			teleport(ui.user)
 
 		if("recal")
 			recalibrate()
@@ -273,7 +273,7 @@
 			S.set_up(5, 1, get_turf(telepad))
 			S.start()
 
-			if(!A || (A.flags & BLUE_SHIELDED) || (target.block_tele)) //CHOMPedit, consistency smh
+			if(!A || (A.flag_check(BLUE_SHIELDED)) || (target.block_tele)) //CHOMPedit, consistency smh
 				telefail()
 				temp_msg = "ERROR! Target is shielded from bluespace intersection!"
 				return

@@ -275,20 +275,6 @@
 	temperature = 295.15
 	},
 /area/submap/deepstorage)
-"aA" = (
-/obj/structure/table/standard,
-/obj/item/radio/headset/sar/alt,
-/obj/item/radio/headset/sar/alt{
-	pixel_x = 7
-	},
-/obj/item/radio/headset/sar/alt{
-	pixel_y = 0;
-	pixel_x = -6
-	},
-/turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 295.15
-	},
-/area/submap/deepstorage)
 "aB" = (
 /obj/item/stack/material/steel{
 	amount = 50;
@@ -695,26 +681,6 @@
 	temperature = 295.15
 	},
 /area/submap/deepstorage)
-"bH" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 295.15
-	},
-/area/submap/deepstorage)
-"bI" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 295.15
-	},
-/area/submap/deepstorage)
 "bJ" = (
 /obj/structure/reagent_dispensers/watertank,
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -863,14 +829,6 @@
 /obj/effect/floor_decal/borderfloorblack,
 /turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/deepstorage)
-"ic" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/plating/external,
-/area/submap/deepstorage)
 "il" = (
 /obj/effect/decal/cleanable/blood/gibs{
 	color = "red";
@@ -998,6 +956,20 @@
 	temperature = 295.15
 	},
 /area/submap/deepstorage)
+"tb" = (
+/obj/structure/table/standard,
+/obj/item/radio/headset/alt/sar,
+/obj/item/radio/headset/alt/sar{
+	pixel_x = 7
+	},
+/obj/item/radio/headset/alt/sar{
+	pixel_y = 0;
+	pixel_x = -6
+	},
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
+/area/submap/deepstorage)
 "tg" = (
 /obj/structure/table/reinforced,
 /obj/machinery/button/remote/blast_door{
@@ -1053,15 +1025,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/submap/deepstorage)
-"uJ" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/external,
-/area/submap/deepstorage)
 "vI" = (
 /turf/simulated/floor/reinforced/airless,
 /area/submap/deepstorage)
@@ -1107,6 +1070,14 @@
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 295.15
 	},
+/area/submap/deepstorage)
+"An" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating/external,
 /area/submap/deepstorage)
 "Ct" = (
 /obj/effect/floor_decal/corner/brown/diagonal,
@@ -1234,6 +1205,25 @@
 	},
 /turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/deepstorage)
+"Ng" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
+/area/submap/deepstorage)
+"NC" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/external,
+/area/submap/deepstorage)
 "NN" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
@@ -1308,6 +1298,16 @@
 	},
 /obj/structure/marker_beacon,
 /turf/simulated/floor/tiled/asteroid_steel/airless,
+/area/submap/deepstorage)
+"UA" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/deepstorage)
 "Va" = (
 /obj/effect/decal/remains/deer,
@@ -3120,7 +3120,7 @@ mL
 ac
 br
 mL
-bH
+UA
 mL
 mL
 mL
@@ -3189,7 +3189,7 @@ au
 ac
 bs
 by
-bI
+Ng
 QY
 QY
 mL
@@ -3609,7 +3609,7 @@ ac
 ab
 ab
 ab
-ic
+An
 ab
 ab
 ab
@@ -3678,7 +3678,7 @@ ac
 ab
 ab
 ab
-ic
+An
 ab
 ab
 ab
@@ -3747,7 +3747,7 @@ bc
 ab
 ab
 ab
-uJ
+NC
 ab
 ab
 ce
@@ -3885,7 +3885,7 @@ bc
 ab
 ab
 ab
-uJ
+NC
 ab
 ab
 ab
@@ -3938,7 +3938,7 @@ ab
 ab
 ab
 ac
-aA
+tb
 QY
 mL
 au
@@ -3954,7 +3954,7 @@ ac
 ab
 ab
 ab
-uJ
+NC
 ab
 ab
 ab
@@ -4023,7 +4023,7 @@ ac
 ab
 ab
 ab
-ic
+An
 ab
 ab
 ab

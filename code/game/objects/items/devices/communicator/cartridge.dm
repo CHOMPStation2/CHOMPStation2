@@ -129,13 +129,13 @@
 				return
 
 			if(world.time < internal_data["supply_reqtime"])
-				visible_message("<span class='warning'>[src] flashes, \"[internal_data["supply_reqtime"] - world.time] seconds remaining until another requisition form may be printed.\"</span>")
+				visible_message(span_warning("[src] flashes, \"[internal_data["supply_reqtime"] - world.time] seconds remaining until another requisition form may be printed.\""))
 				return
 
 			var/timeout = world.time + 600
 			var/reason = sanitize(input(user, "Reason:","Why do you require this item?","") as null|text)
 			if(world.time > timeout)
-				to_chat(user, "<span class='warning'>Error. Request timed out.</span>")
+				to_chat(user, span_warning("Error. Request timed out."))
 				return
 			if(!reason)
 				return
@@ -267,14 +267,14 @@
 		switch(href_list["send_shuttle"])
 			if("send_away")
 				if(SSsupply.shuttle.forbidden_atoms_check())
-					to_chat(usr, "<span class='warning'>For safety reasons the automated supply shuttle cannot transport live organisms, classified nuclear weaponry or homing beacons.</span>")
+					to_chat(usr, span_warning("For safety reasons the automated supply shuttle cannot transport live organisms, classified nuclear weaponry or homing beacons."))
 				else
 					SSsupply.shuttle.launch(src)
-					to_chat(usr, "<span class='notice'>Initiating launch sequence.</span>")
+					to_chat(usr, span_notice("Initiating launch sequence."))
 
 			if("send_to_station")
 				SSsupply.shuttle.launch(src)
-				to_chat(usr, "<span class='notice'>The supply shuttle has been called and will arrive in approximately [round(SSsupply.movetime/600,1)] minutes.</span>")
+				to_chat(usr, span_notice("The supply shuttle has been called and will arrive in approximately [round(SSsupply.movetime/600,1)] minutes."))
 
 			if("cancel_shuttle")
 				SSsupply.shuttle.cancel_launch(src)

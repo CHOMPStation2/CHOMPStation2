@@ -7864,7 +7864,7 @@
 /obj/item/handcuffs,
 /obj/item/clothing/accessory/storage/webbing,
 /obj/item/clothing/under/ert,
-/obj/item/radio/headset/ert/alt,
+/obj/item/radio/headset/alt/ert,
 /obj/item/clothing/shoes/boots/swat,
 /obj/item/clothing/gloves/swat,
 /obj/item/clothing/mask/balaclava/tactical,
@@ -12136,10 +12136,10 @@
 /area/centcom/security)
 "khJ" = (
 /obj/structure/table/standard,
-/obj/item/radio/headset/syndicate/alt,
-/obj/item/radio/headset/syndicate/alt,
-/obj/item/radio/headset/syndicate/alt,
-/obj/item/radio/headset/syndicate/alt,
+/obj/item/radio/headset/alt/syndicate,
+/obj/item/radio/headset/alt/syndicate,
+/obj/item/radio/headset/alt/syndicate,
+/obj/item/radio/headset/alt/syndicate,
 /turf/unsimulated/floor{
 	icon_state = "lino"
 	},

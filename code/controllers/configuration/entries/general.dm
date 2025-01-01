@@ -60,6 +60,9 @@
 /// logs graffiti
 /datum/config_entry/flag/log_graffiti
 
+/// logs all timers in buckets on automatic bucket reset (Useful for timer debugging)
+/datum/config_entry/flag/log_timers_on_bucket_reset
+
 // FIXME: Unused
 ///datum/config_entry/string/nudge_script_path // where the nudge.py script is located
 //	default = "nudge.py"
@@ -256,10 +259,10 @@
 	return num_val MINUTES
 
 /datum/config_entry/string/respawn_message
-	default = "<span class='notice'><B>Make sure to play a different character, and please roleplay correctly!</B></span>"
+	default = span_boldnotice("Make sure to play a different character, and please roleplay correctly!")
 
 /datum/config_entry/string/respawn_message/ValidateAndSet(str_val)
-	return "<span class='notice'><B>[str_val]</B></span>"
+	return span_boldnotice("[str_val]")
 
 /datum/config_entry/flag/guest_jobban
 	default = TRUE
@@ -546,13 +549,12 @@
 /datum/config_entry/flag/persistence_ignore_mapload
 
 /datum/config_entry/flag/allow_byond_links
-	default = TRUE //CHOMP Edit turned this on
-
+	default = TRUE
 /datum/config_entry/flag/allow_discord_links
-	default = TRUE //CHOMP Edit turned this on
+	default = TRUE
 
 /datum/config_entry/flag/allow_url_links
-	default = TRUE // honestly if I were you i'd leave this one off, only use in dire situations //CHOMP Edit: pussy.
+	default = TRUE // honestly if I were you i'd leave this one off, only use in dire situations
 
 /datum/config_entry/flag/starlight // Whether space turfs have ambient light or not
 

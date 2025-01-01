@@ -17,6 +17,7 @@
 	blocks_emissive = EMISSIVE_BLOCK_UNIQUE
 
 	var/lights_on = 0 // Is our integrated light on?
+	var/robot_light_col = "#FFFFFF"
 	var/used_power_this_tick = 0
 	var/sight_mode = 0
 	var/custom_name = ""
@@ -25,6 +26,7 @@
 	var/crisis //Admin-settable for combat module use.
 	var/crisis_override = 0
 	var/integrated_light_power = 6
+	var/robotdecal_on = 0
 	var/datum/wires/robot/wires
 
 	can_be_antagged = TRUE
@@ -32,8 +34,7 @@
 //Icon stuff
 
 	var/datum/robot_sprite/sprite_datum 				// Sprite datum, holding all our sprite data
-	var/icon_selected = 1								// If icon selection has been completed yet
-	var/icon_selection_tries = 0						// Remaining attempts to select icon before a selection is forced
+	var/icon_selected = FALSE								// If icon selection has been completed yet
 	var/list/sprite_extra_customization = list()
 	var/rest_style = "Default"
 	var/notransform
@@ -47,6 +48,9 @@
 
 	var/shown_robot_modules = 0 //Used to determine whether they have the module menu shown or not
 	var/obj/screen/robot_modules_background
+
+	var/ui_theme
+	var/selecting_module = FALSE
 
 //3 Modules can be activated at any one time.
 	var/obj/item/robot_module/module = null
@@ -130,6 +134,11 @@
 	can_buckle = TRUE
 	buckle_movable = TRUE
 	buckle_lying = FALSE
+
+	var/list/vore_light_states = list() //Robot exclusive
+	vore_capacity_ex = list()
+	vore_fullness_ex = list()
+	vore_icon_bellies = list()
 
 /mob/living/silicon/robot/New(loc, var/unfinished = 0)
 	spark_system = new /datum/effect/effect/system/spark_spread()
@@ -338,50 +347,21 @@
 	return module_sprites
 */
 /mob/living/silicon/robot/proc/pick_module()
+	if(icon_selected)
+		return
 	if(module)
-		return
-	var/list/modules = list()
-	//VOREStatation Edit Start: shell restrictions //CHOMPstaton change to blacklist
-	if(shell)
-		if(restrict_modules_to.len > 0)
-			modules.Add(restrict_modules_to)
-		else
-			modules.Add(robot_module_types)
-			modules.Remove(GLOB.shell_module_blacklist) // CHOMPEdit - Managed Globals
-			//CHOMPedit Add
-			if(crisis || security_level == SEC_LEVEL_RED || crisis_override)
-				to_chat(src, span_red("Crisis mode active. Combat module available."))
-				modules |= emergency_module_types
-			//CHOMPedit end
-	else
-		if(restrict_modules_to.len > 0)
-			modules.Add(restrict_modules_to)
-		else
-			modules.Add(robot_module_types)
-			if(crisis || security_level == SEC_LEVEL_RED || crisis_override)
-				to_chat(src, span_red("Crisis mode active. Combat module available."))
-				modules |= emergency_module_types
-			for(var/module_name in whitelisted_module_types)
-				if(is_borg_whitelisted(src, module_name))
-					modules |= module_name
-	//VOREStatation Edit End: shell restrictions
-	modtype = tgui_input_list(usr, "Please, select a module!", "Robot module", modules)
-
-	if(module)
-		return
-	if(!(modtype in robot_modules))
-		return
-
-	var/module_type = robot_modules[modtype]
-	transform_with_anim()	//VOREStation edit: sprite animation
-	new module_type(src)
-
-	hands.icon_state = get_hud_module_icon()
-	feedback_inc("cyborg_[lowertext(modtype)]",1)
-	updatename()
-	hud_used.update_robot_modules_display()
-	notify_ai(ROBOT_NOTIFICATION_NEW_MODULE, module.name)
-	robotact?.update_static_data_for_all_viewers()
+		var/list/module_sprites = SSrobot_sprites.get_module_sprites(module, src)
+		if(module_sprites.len == 1 || !client)
+			if(!module_sprites.len)
+				return
+			sprite_datum = module_sprites[1]
+			sprite_datum.do_equipment_glamour(module)
+			return
+	if(mind)
+		sprite_name = mind.name
+	if(!selecting_module)
+		var/datum/tgui_module/robot_ui_module/ui = new(src)
+		ui.tgui_interact(src)
 
 /mob/living/silicon/robot/proc/update_braintype()
 	if(istype(mmi, /obj/item/mmi/digital/posibrain))
@@ -441,25 +421,22 @@
 
 /mob/living/silicon/robot/verb/namepick()
 	set name = "Pick Name"
-	set category = "Abilities.Settings" //ChompEDIT - TGPanel
+	set category = "Abilities.Settings"
 
 	if(custom_name)
 		to_chat(usr, "You can't pick another custom name. [isshell(src) ? "" : "Go ask for a name change."]")
 		return 0
 
-	spawn(0)
-		var/newname
-		newname = sanitizeSafe(tgui_input_text(src,"You are a robot. Enter a name, or leave blank for the default name.", "Name change","", MAX_NAME_LEN), MAX_NAME_LEN)
-		if (newname)
-			custom_name = newname
-			sprite_name = newname
+	var/newname = sanitizeSafe(tgui_input_text(src,"You are a robot. Enter a name, or leave blank for the default name.", "Name change","", MAX_NAME_LEN), MAX_NAME_LEN)
+	if (newname)
+		custom_name = newname
+		sprite_name = newname
 
-		updatename()
-		update_icon()
+	updatename()
 
 /mob/living/silicon/robot/verb/extra_customization()
 	set name = "Customize Appearance"
-	set category = "Abilities.Settings" //ChompEDIT - TGPanel
+	set category = "Abilities.Settings"
 	set desc = "Customize your appearance (assuming your chosen sprite allows)."
 
 	if(!sprite_datum || !sprite_datum.has_extra_customization)
@@ -475,6 +452,13 @@
 	lights_on = !lights_on
 	to_chat(usr, span_filter_notice("You [lights_on ? "enable" : "disable"] your integrated light."))
 	handle_light()
+	update_icon()
+
+/mob/living/silicon/robot/verb/toggle_robot_decals() // loads overlay UNDER lights.
+	set category = "Abilities.Silicon"
+	set name = "Toggle extras"
+	robotdecal_on = !robotdecal_on
+	to_chat(usr, span_filter_notice("You [robotdecal_on ? "enable" : "disable"] your extra apperances."))
 	update_icon()
 
 /mob/living/silicon/robot/verb/spark_plug() //So you can still sparkle on demand without violence.
@@ -514,7 +498,7 @@
 // function to toggle VTEC once installed
 /mob/living/silicon/robot/proc/toggle_vtec()
 	set name = "Toggle VTEC"
-	set category = "Abilities.Silicon" //CHOMPEdit
+	set category = "Abilities.Silicon"
 	vtec_active = !vtec_active
 	hud_used.toggle_vtec_control()
 	to_chat(src, span_filter_notice("VTEC module [vtec_active  ? "enabled" : "disabled"]."))
@@ -756,6 +740,8 @@
 			to_chat(usr, span_filter_notice("You must access the borgs internals!"))
 		else if(!src.module && U.require_module)
 			to_chat(usr, span_filter_notice("The borg must choose a module before it can be upgraded!"))
+		else if(user == src && istype(W,/obj/item/borg/upgrade/utility/reset))
+			to_chat(usr, span_warning("You are restricted from reseting your own module."))
 		else if(U.locked)
 			to_chat(usr, span_filter_notice("The upgrade is locked and cannot be used yet!"))
 		else
@@ -809,14 +795,18 @@
 		notify_ai(ROBOT_NOTIFICATION_MODULE_RESET, module.name)
 	module.Reset(src)
 	qdel(module)
+	icon_selected = FALSE
 	module = null
 	updatename("Default")
 	has_recoloured = FALSE
 	robotact?.update_static_data_for_all_viewers()
+	vore_capacity_ex = list()
+	vore_fullness_ex = list()
+	vore_light_states = list()
 
 /mob/living/silicon/robot/proc/ColorMate()
 	set name = "Recolour Module"
-	set category = "Abilities.Settings" //ChompEDIT - TGPanel
+	set category = "Abilities.Settings"
 	set desc = "Allows to recolour once."
 
 	if(!has_recoloured)
@@ -916,7 +906,7 @@
 	else if(istype(M, /mob/living/silicon/robot))
 		var/mob/living/silicon/robot/R = M
 		if(check_access(R.get_active_hand()) || istype(R.get_active_hand(), /obj/item/card/robot))
-			return 1
+			return TRUE
 	return 0
 
 /mob/living/silicon/robot/proc/check_access(obj/item/I)
@@ -957,8 +947,6 @@
 		old_x = sprite_datum.pixel_x
 
 	if(stat == CONSCIOUS)
-		//CHOMPAdd Start
-		// Let us handle the bellies with our own system
 		update_fullness()
 		for(var/belly_class in vore_fullness_ex)
 			reset_belly_lights(belly_class)
@@ -977,55 +965,6 @@
 			else
 				update_belly_lights(belly_class)
 				add_overlay(sprite_datum.get_belly_overlay(src, vs_fullness, belly_class))
-		//CHOMPAdd End
-		/*CHOMPRemove Start
-		var/belly_size = 0
-		if(sprite_datum.has_vore_belly_sprites && vore_selected.belly_overall_mult != 0)
-			if(vore_selected.silicon_belly_overlay_preference == "Sleeper")
-				if(sleeper_state)
-					belly_size = sprite_datum.max_belly_size
-			else if(vore_selected.silicon_belly_overlay_preference == "Vorebelly" || vore_selected.silicon_belly_overlay_preference == "Both")
-				if(sleeper_state && vore_selected.silicon_belly_overlay_preference == "Both")
-					belly_size += 1
-				if(LAZYLEN(vore_selected.contents) > 0)
-					for(var/borgfood in vore_selected.contents) //"inspired" (kinda copied) from Chompstation's belly fullness system's procs
-						if(istype(borgfood, /mob/living))
-							if(vore_selected.belly_mob_mult <= 0) //If mobs dont contribute, dont calculate further
-								continue
-							var/mob/living/prey = borgfood //typecast to living
-							belly_size += (prey.size_multiplier / size_multiplier) / vore_selected.belly_mob_mult //Smaller prey are less filling to larger bellies
-						else if(istype(borgfood, /obj/item))
-							if(vore_selected.belly_item_mult <= 0) //If items dont contribute, dont calculate further
-								continue
-							var/obj/item/junkfood = borgfood //typecast to item
-							var/fullness_to_add = 0
-							switch(junkfood.w_class)
-								if(ITEMSIZE_TINY)
-									fullness_to_add = ITEMSIZE_COST_TINY
-								if(ITEMSIZE_SMALL)
-									fullness_to_add = ITEMSIZE_COST_SMALL
-								if(ITEMSIZE_NORMAL)
-									fullness_to_add = ITEMSIZE_COST_NORMAL
-								if(ITEMSIZE_LARGE)
-									fullness_to_add = ITEMSIZE_COST_LARGE
-								if(ITEMSIZE_HUGE)
-									fullness_to_add = ITEMSIZE_COST_HUGE
-								else
-									fullness_to_add = ITEMSIZE_COST_NO_CONTAINER
-							belly_size += (fullness_to_add / 32) // vore_selected.overlay_item_multiplier //Enable this later when vorepanel is reworked.
-						else
-							belly_size += 1 //if it's not a person, nor an item... lets just go with 1
-
-					belly_size *= vore_selected.belly_overall_mult //Enable this after vore panel rework
-					belly_size = round(belly_size, 1)
-					belly_size = clamp(belly_size, 0, sprite_datum.max_belly_size) //Value from 0 to however many bellysizes the borg has
-
-		if(belly_size > 0) //Borgs probably only have 1 belly size. but here's support for larger ones if that changes.
-			if(resting && sprite_datum.has_vore_belly_resting_sprites)
-				add_overlay(sprite_datum.get_belly_resting_overlay(src, belly_size))
-			else if(!resting)
-				add_overlay(sprite_datum.get_belly_overlay(src, belly_size))
-		*///CHOMPRemove End
 
 		sprite_datum.handle_extra_icon_updates(src)			// Various equipment-based sprites go here.
 
@@ -1037,6 +976,12 @@
 				var/eyes_overlay = sprite_datum.get_eyes_overlay(src)
 				if(eyes_overlay)
 					add_overlay(eyes_overlay)
+
+		if(robotdecal_on && sprite_datum.has_robotdecal_sprites)
+			if(!shell || deployed) // Shell borgs that are not deployed will have no eyes.
+				var/robotdecal_overlay = sprite_datum.get_robotdecal_overlay(src)
+				if(robotdecal_overlay)
+					add_overlay(robotdecal_overlay)
 
 		if(lights_on && sprite_datum.has_eye_light_sprites)
 			if(!shell || deployed) // Shell borgs that are not deployed will have no eyes.
@@ -1125,82 +1070,6 @@
 
 	return
 
-/mob/living/silicon/robot/proc/choose_icon(var/triesleft)
-	var/robot_species = null
-	if(!SSrobot_sprites)
-		to_chat(src, "Robot Sprites have not been initialized yet. How are you choosing a sprite? Harass a coder.")
-		return
-
-	var/list/module_sprites = SSrobot_sprites.get_module_sprites(modtype, src)
-	if(!module_sprites || !module_sprites.len)
-		to_chat(src, "Your module appears to have no sprite options. Harass a coder.")
-		return
-
-	icon_selected = 0
-	icon_selection_tries = triesleft
-	if(module_sprites.len == 1 || !client)
-		if(!(sprite_datum in module_sprites))
-			sprite_datum = module_sprites[1]
-	else
-		var/selection = tgui_input_list(src, "Select an icon! [triesleft ? "You have [triesleft] more chance\s." : "This is your last try."]", "Robot Icon", module_sprites)
-		sprite_datum = selection
-		if(selection)
-			sprite_datum = selection
-		else
-			sprite_datum = module_sprites[1]
-		//CHOMPEdit Start, allow multi bellies
-		vore_icon_bellies = list() //Clear any belly options that may not exist now
-		vore_capacity_ex = list()
-		vore_fullness_ex = list()
-		if(sprite_datum.belly_capacity_list.len)
-			for(var/belly in sprite_datum.belly_capacity_list) //vore icons list only contains a list of names with no associated data
-				vore_capacity_ex[belly] = sprite_datum.belly_capacity_list[belly] //I dont know why but this wasnt working when I just
-				vore_fullness_ex[belly] = 0 //set the lists equal to the old lists
-				vore_icon_bellies += belly
-			for(var/belly in sprite_datum.belly_light_list)
-				vore_light_states[belly] = 0
-		else if(sprite_datum.has_vore_belly_sprites)
-			vore_capacity_ex = list("sleeper" = 1)
-			vore_fullness_ex = list("sleeper" = 0)
-			vore_icon_bellies = list("sleeper")
-			if(sprite_datum.has_sleeper_light_indicator)
-				vore_light_states = list("sleeepr" = 0)
-				sprite_datum.belly_light_list = list("sleeper")
-		update_fullness() //Set how full the newly defined bellies are, if they're already full
-		//CHOMPEdit End
-		if(!istype(src,/mob/living/silicon/robot/drone))
-			robot_species = sprite_datum.name
-		if(notransform)
-			to_chat(src, "Your current transformation has not finished yet!")
-			choose_icon(icon_selection_tries)
-			return
-		else
-			transform_with_anim()
-
-	var/tempheight = vis_height
-	update_icon()
-	// This is bad but I dunno other way to 'reset' our resize offset based on vis_height changes other than resizing to normal and back.
-	if(tempheight != vis_height)
-		var/tempsize = size_multiplier
-		resize(1)
-		resize(tempsize)
-
-
-	if (module_sprites.len > 1 && triesleft >= 1 && client)
-		icon_selection_tries--
-		var/choice = tgui_alert(usr, "Look at your icon - is this what you want?", "Icon Choice", list("Yes","No"))
-		if(choice == "No")
-			choose_icon(icon_selection_tries)
-			return
-
-
-	icon_selected = 1
-	icon_selection_tries = 0
-	sprite_type = robot_species
-	if(hands)
-		update_hud()
-	to_chat(src, span_filter_notice("Your icon has been set. You now require a module reset to change it."))
-
 /mob/living/silicon/robot/proc/set_default_module_icon()
 	if(!SSrobot_sprites)
 		return
@@ -1288,7 +1157,7 @@
 			if(first_arg != second_arg)
 				to_chat(connected_ai, span_filter_notice("<br><br>" + span_notice("NOTICE - [braintype] reclassification detected: [first_arg] is now designated as [second_arg].") + "<br>"))
 		if(ROBOT_NOTIFICATION_AI_SHELL) //New Shell
-			to_chat(connected_ai, span_filter_notice("<br><br>" + span_notice("NOTICE - New AI shell detected: <a href='?src=[REF(connected_ai)];track2=[html_encode(name)]'>[name]</a>") + "<br>"))
+			to_chat(connected_ai, span_filter_notice("<br><br>" + span_notice("NOTICE - New AI shell detected: <a href='byond://?src=[REF(connected_ai)];track2=[html_encode(name)]'>[name]</a>") + "<br>"))
 
 /mob/living/silicon/robot/proc/disconnect_from_ai()
 	if(connected_ai)
@@ -1428,7 +1297,7 @@
 /mob/living/silicon/robot/verb/rest_style()
 	set name = "Switch Rest Style"
 	set desc = "Select your resting pose."
-	set category = "IC.Settings" //CHOMPEdit
+	set category = "IC.Settings"
 
 	if(!sprite_datum || !sprite_datum.has_rest_sprites || sprite_datum.rest_sprite_options.len < 1)
 		to_chat(src, span_notice("Your current appearance doesn't have any resting styles!"))
@@ -1446,7 +1315,7 @@
 
 /mob/living/silicon/robot/verb/robot_nom(var/mob/living/T in living_mobs_in_view(1)) //CHOMPEdit
 	set name = "Robot Nom"
-	set category = "Abilities.Vore" //CHOMPEdit
+	set category = "Abilities.Vore"
 	set desc = "Allows you to eat someone."
 
 	if (stat != CONSCIOUS)
@@ -1520,7 +1389,7 @@
 
 /mob/living/silicon/robot/proc/robot_mount(var/mob/living/M in living_mobs(1))
 	set name = "Robot Mount/Dismount"
-	set category = "Abilities.General" //CHOMPEdit
+	set category = "Abilities.General"
 	set desc = "Let people ride on you."
 
 	if(LAZYLEN(buckled_mobs))
@@ -1604,7 +1473,7 @@
 		else
 			return FALSE
 	if(given_type == /obj/item/borg/upgrade/restricted/tasercooler)
-		var/obj/item/gun/energy/taser/mounted/cyborg/T = has_upgrade_module(/obj/item/gun/energy/taser/mounted/cyborg)
+		var/obj/item/gun/energy/robotic/taser/T = has_upgrade_module(/obj/item/gun/energy/robotic/taser)
 		if(T && T.recharge_time <= 2)
 			return T
 		else if(!T)
@@ -1650,3 +1519,12 @@
 			robotact?.update_static_data_for_all_viewers()
 
 	. = ..()
+
+/// This proc checks to see if a borg has access to whatever they're interacting with
+/obj/proc/siliconaccess(mob/user)
+	var/mob/living/silicon/robot/R = user
+	if(istype(R))
+		return check_access(R.idcard)
+	if(issilicon(user))
+		return TRUE
+	return FALSE

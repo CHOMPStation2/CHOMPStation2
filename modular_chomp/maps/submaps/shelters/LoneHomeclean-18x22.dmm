@@ -455,7 +455,7 @@
 /area/survivalpod/superpose/LoneHomeclean)
 "bG" = (
 /obj/item/reagent_containers/glass/rag,
-/obj/item/clothing/gloves/ring/engagement,
+/obj/item/clothing/accessory/ring/engagement,
 /obj/structure/table/wooden_reinforced,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/LoneHomeclean)

@@ -3487,6 +3487,11 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/reinforced,
 /area/expoutpost/telecomms)
+"cQJ" = (
+/obj/machinery/computer/rdconsole/core,
+/obj/effect/floor_decal/milspec/color/purple,
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/ursula)
 "cRL" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -5310,11 +5315,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/midsternhallway)
-"etp" = (
-/obj/machinery/chem_master,
-/obj/effect/floor_decal/milspec/color/purple,
-/turf/simulated/floor/tiled/milspec,
-/area/shuttle/ursula)
 "ets" = (
 /obj/machinery/cell_charger,
 /obj/structure/table/woodentable,
@@ -18957,6 +18957,11 @@
 /obj/effect/floor_decal/corner/green/border,
 /turf/simulated/floor/tiled,
 /area/expoutpost/gatewayeva)
+"oKM" = (
+/obj/machinery/r_n_d/destructive_analyzer,
+/obj/effect/floor_decal/milspec/color/purple,
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/ursula)
 "oLo" = (
 /obj/structure/table/steel,
 /obj/item/grenade/chem_grenade/cleaner,
@@ -19873,6 +19878,20 @@
 	},
 /turf/simulated/floor,
 /area/shuttle/needle)
+"pCI" = (
+/obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/corner/red/border,
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -26
+	},
+/obj/item/radio/intercom/department/security{
+	dir = 4;
+	icon_state = "secintercom";
+	pixel_x = 21
+	},
+/turf/simulated/floor/tiled,
+/area/expoutpost/secarmory)
 "pDu" = (
 /obj/structure/railing/overhang/waterless/grey,
 /obj/structure/railing/overhang/waterless/grey{
@@ -29653,20 +29672,6 @@
 /obj/item/storage/briefcase/inflatable,
 /turf/simulated/floor/tiled,
 /area/expoutpost/engstorage)
-"wOA" = (
-/obj/effect/floor_decal/borderfloorblack,
-/obj/effect/floor_decal/corner/red/border,
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -26
-	},
-/obj/item/radio/intercom/department/security{
-	dir = 4;
-	icon_state = "secintercom";
-	pixel_x = 21
-	},
-/turf/simulated/floor/tiled,
-/area/expoutpost/secarmory)
 "wPD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 8
@@ -31471,14 +31476,6 @@
 	},
 /turf/simulated/floor,
 /area/expoutpost/reactoraccess)
-"xZQ" = (
-/obj/machinery/chemical_dispenser/full{
-	pixel_y = 5
-	},
-/obj/structure/table/darkglass,
-/obj/effect/floor_decal/milspec/color/purple,
-/turf/simulated/floor/tiled/milspec,
-/area/shuttle/ursula)
 "yad" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -61436,7 +61433,7 @@ bYa
 bYa
 bYa
 kXq
-etp
+cQJ
 mmL
 tYt
 gDR
@@ -61694,7 +61691,7 @@ bYa
 bYa
 bYa
 cPL
-xZQ
+oKM
 fQz
 phx
 nVg
@@ -72317,7 +72314,7 @@ ixG
 jWP
 oBS
 ckM
-wOA
+pCI
 jWP
 pzz
 rlq

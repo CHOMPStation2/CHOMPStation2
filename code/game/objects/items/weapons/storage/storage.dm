@@ -484,7 +484,7 @@
 	//CHOMPEdit - Getting around to proper object flags
 	if(HAS_TRAIT(W, TRAIT_NODROP)) //SHOULD be handled in unEquip, but better safe than sorry.
 		if(!stop_messages)
-			to_chat(usr, "<span class='warning'>\the [W] is stuck to your hand, you can't put it in \the [src]!</span>")
+			to_chat(usr, span_warning("\the [W] is stuck to your hand, you can't put it in \the [src]!"))
 		return FALSE
 
 	return 1
@@ -797,7 +797,7 @@
 	var/open = 0
 	storage_slots = 1
 	can_hold = list(
-		/obj/item/clothing/gloves/ring,
+		/obj/item/clothing/accessory/ring,
 		/obj/item/coin,
 		/obj/item/clothing/accessory/medal
 		)
@@ -811,7 +811,7 @@
 
 		if(contents.len >= 1)
 			var/contained_image = null
-			if(istype(contents[1],  /obj/item/clothing/gloves/ring))
+			if(istype(contents[1],  /obj/item/clothing/accessory/ring))
 				contained_image = "ring_trinket"
 			else if(istype(contents[1], /obj/item/coin))
 				contained_image = "coin_trinket"

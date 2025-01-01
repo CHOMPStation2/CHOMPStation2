@@ -95,7 +95,7 @@ GLOBAL_LIST_BOILERPLATE(all_singularities, /obj/singularity)
 	var/count = locate(/obj/machinery/containment_field) in orange(30, src)
 
 	if (!count)
-		message_admins("A singulo has been created without containment fields active ([x], [y], [z] - <A HREF='?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[x];Y=[y];Z=[z]'>JMP</a>).")
+		message_admins("A singulo has been created without containment fields active ([x], [y], [z] - <A href='byond://?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[x];Y=[y];Z=[z]'>JMP</a>).")
 
 	investigate_log("was created. [count ? "" : "<font color='red'>No containment fields were active.</font>"]", I_SINGULO)
 
@@ -366,7 +366,7 @@ GLOBAL_LIST_BOILERPLATE(all_singularities, /obj/singularity)
 
 	// VOREStation Edit Start
 	var/area/A = get_area(T)
-	if(A.forbid_singulo) //No going to dorms
+	if(A.flag_check(AREA_FORBID_SINGULO)) //No going to dorms
 		return 0
 	// VOREStation Edit End
 
@@ -445,10 +445,10 @@ GLOBAL_LIST_BOILERPLATE(all_singularities, /obj/singularity)
 /obj/singularity/proc/smwave()
 	for(var/mob/living/M in view(10, src.loc))
 		if(prob(67))
-			to_chat(M, span_warning("You hear an uneartly ringing, then what sounds like a shrilling kettle as you are washed with a wave of heat."))
+			to_chat(M, span_warning("You hear an unearthly ringing, then what sounds like a shrilling kettle as you are washed with a wave of heat."))
 			to_chat(M, span_notice("Miraculously, it fails to kill you."))
 		else
-			to_chat(M, span_danger("You hear an uneartly ringing, then what sounds like a shrilling kettle as you are washed with a wave of heat."))
+			to_chat(M, span_danger("You hear an unearthly ringing, then what sounds like a shrilling kettle as you are washed with a wave of heat."))
 			to_chat(M, span_danger("You don't even have a moment to react as you are reduced to ashes by the intense radiation."))
 			M.dust()
 	SSradiation.radiate(src, rand(energy))

@@ -11,6 +11,7 @@
 	pref.all_underwear_metadata		= check_list_copy(save_data["all_underwear_metadata"])
 	for(var/i in pref.all_underwear_metadata)
 		pref.all_underwear_metadata[i] = path2text_list(pref.all_underwear_metadata[i])
+	pref.headset					= save_data["headset"]
 	pref.backbag					= save_data["backbag"]
 	pref.pdachoice					= save_data["pdachoice"]
 	pref.communicator_visibility	= save_data["communicator_visibility"]
@@ -23,6 +24,7 @@
 	for(var/i in pref.all_underwear_metadata)
 		underwear[i] = check_list_copy(pref.all_underwear_metadata[i])
 	save_data["all_underwear_metadata"] 	= underwear
+	save_data["headset"]					= pref.headset
 	save_data["backbag"]					= pref.backbag
 	save_data["pdachoice"]					= pref.pdachoice
 	save_data["communicator_visibility"]	= pref.communicator_visibility
@@ -73,6 +75,10 @@ var/global/list/valid_ringtones = list(
 			pref.all_underwear -= underwear_category_name
 
 	// TODO - Looks like this is duplicating the work of sanitize_character() if so, remove
+	if(pref.headset > GLOB.headsetlist.len || pref.headset < 1)
+		pref.headset = 1 //Same as above
+	character.headset = pref.headset
+
 	if(pref.backbag > backbaglist.len || pref.backbag < 1)
 		pref.backbag = 2 //Same as above
 	character.backbag = pref.backbag
@@ -108,6 +114,7 @@ var/global/list/valid_ringtones = list(
 	for(var/underwear_metadata in pref.all_underwear_metadata)
 		if(!(underwear_metadata in pref.all_underwear))
 			pref.all_underwear_metadata -= underwear_metadata
+	pref.headset	= sanitize_integer(pref.headset, 1, GLOB.headsetlist.len, initial(pref.headset))
 	pref.backbag	= sanitize_integer(pref.backbag, 1, backbaglist.len, initial(pref.backbag))
 	pref.pdachoice	= sanitize_integer(pref.pdachoice, 1, pdachoicelist.len, initial(pref.pdachoice))
 	pref.ringtone	= sanitize(pref.ringtone, 20)
@@ -117,18 +124,19 @@ var/global/list/valid_ringtones = list(
 	. += span_bold("Equipment:") + "<br>"
 	for(var/datum/category_group/underwear/UWC in global_underwear.categories)
 		var/item_name = pref.all_underwear[UWC.name] ? pref.all_underwear[UWC.name] : "None"
-		. += "[UWC.name]: <a href='?src=\ref[src];change_underwear=[UWC.name]'><b>[item_name]</b></a>"
+		. += "[UWC.name]: <a href='byond://?src=\ref[src];change_underwear=[UWC.name]'><b>[item_name]</b></a>"
 		var/datum/category_item/underwear/UWI = UWC.items_by_name[item_name]
 		if(UWI)
 			for(var/datum/gear_tweak/gt in UWI.tweaks)
-				. += " <a href='?src=\ref[src];underwear=[UWC.name];tweak=\ref[gt]'>[gt.get_contents(get_metadata(UWC.name, gt))]</a>"
+				. += " <a href='byond://?src=\ref[src];underwear=[UWC.name];tweak=\ref[gt]'>[gt.get_contents(get_metadata(UWC.name, gt))]</a>"
 
 		. += "<br>"
-	. += "Backpack Type: <a href='?src=\ref[src];change_backpack=1'><b>[backbaglist[pref.backbag]]</b></a><br>"
-	. += "PDA Type: <a href='?src=\ref[src];change_pda=1'><b>[pdachoicelist[pref.pdachoice]]</b></a><br>"
-	. += "Communicator Visibility: <a href='?src=\ref[src];toggle_comm_visibility=1'><b>[(pref.communicator_visibility) ? "Yes" : "No"]</b></a><br>"
-	. += "Ringtone (leave blank for job default): <a href='?src=\ref[src];set_ringtone=1'><b>[pref.ringtone]</b></a><br>"
-	//. += "Spawn With Shoes:<a href='?src=\ref[src];toggle_shoes=1'><b>[(pref.shoe_hater) ? "No" : "Yes"]</b></a><br>" //RS Addition //CHOMPRemove, remove RS No shoes
+	. += "Headset Type: <a href='byond://?src=\ref[src];change_headset=1'><b>[GLOB.headsetlist[pref.headset]]</b></a><br>"
+	. += "Backpack Type: <a href='byond://?src=\ref[src];change_backpack=1'><b>[backbaglist[pref.backbag]]</b></a><br>"
+	. += "PDA Type: <a href='byond://?src=\ref[src];change_pda=1'><b>[pdachoicelist[pref.pdachoice]]</b></a><br>"
+	. += "Communicator Visibility: <a href='byond://?src=\ref[src];toggle_comm_visibility=1'><b>[(pref.communicator_visibility) ? "Yes" : "No"]</b></a><br>"
+	. += "Ringtone (leave blank for job default): <a href='byond://?src=\ref[src];set_ringtone=1'><b>[pref.ringtone]</b></a><br>"
+	//. += "Spawn With Shoes:<a href='byond://?src=\ref[src];toggle_shoes=1'><b>[(pref.shoe_hater) ? "No" : "Yes"]</b></a><br>" //RS Addition //CHOMPRemove, remove RS No shoes
 
 	return jointext(.,null)
 
@@ -150,6 +158,12 @@ var/global/list/valid_ringtones = list(
 
 
 /datum/category_item/player_setup_item/general/equipment/OnTopic(var/href,var/list/href_list, var/mob/user)
+	if(href_list["change_headset"])
+		var/new_headset = tgui_input_list(user, "Choose your character's style of headset:", "Character Preference", GLOB.headsetlist, GLOB.headsetlist[pref.headset])
+		if(!isnull(new_headset) && CanUseTopic(user))
+			pref.headset = GLOB.headsetlist.Find(new_headset)
+			return TOPIC_REFRESH_UPDATE_PREVIEW
+
 	if(href_list["change_backpack"])
 		var/new_backbag = tgui_input_list(user, "Choose your character's style of bag:", "Character Preference", backbaglist, backbaglist[pref.backbag])
 		if(!isnull(new_backbag) && CanUseTopic(user))

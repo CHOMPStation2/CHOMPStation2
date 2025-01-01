@@ -48,7 +48,7 @@ BLIND     // can't see anything
 	// Prevent people from just turning their goggles back on.
 	if(!active && (vision_flags & (SEE_TURFS|SEE_OBJS)))
 		var/area/A = get_area(src)
-		if(A.no_spoilers)
+		if(A.flag_check(AREA_NO_SPOILERS))
 			return FALSE
 
 	return TRUE
@@ -71,7 +71,7 @@ BLIND     // can't see anything
 		tint = initial(tint)
 		enables_planes = away_planes
 		away_planes = null
-	user.update_action_buttons_icon()
+	user.update_mob_action_buttons()
 	user.recalculate_vis()
 
 /obj/item/clothing/glasses/attack_self(mob/user)
@@ -408,7 +408,7 @@ BLIND     // can't see anything
 			tint = TINT_NONE
 			to_chat(usr, "You push \the [src] up out of your face.")
 		update_clothing_icon()
-		usr.update_action_buttons_icon()
+		usr.update_mob_action_buttons()
 
 /obj/item/clothing/glasses/welding/superior
 	name = "superior welding goggles"
@@ -422,6 +422,7 @@ BLIND     // can't see anything
 	icon_state = "blindfold"
 	item_state_slots = list(slot_r_hand_str = "blindfold", slot_l_hand_str = "blindfold")
 	flash_protection = FLASH_PROTECTION_MAJOR
+	body_parts_covered = EYES
 	tint = BLIND
 	drop_sound = 'sound/items/drop/gloves.ogg'
 	pickup_sound = 'sound/items/pickup/gloves.ogg'
@@ -436,6 +437,7 @@ BLIND     // can't see anything
 	desc = "A thin blindfold to help protect sensitive eyes while still allowing some sight"
 	icon_state = "blindfoldwhite"
 	flash_protection = FLASH_PROTECTION_MODERATE //not as thick, only offers some protection
+	body_parts_covered = EYES
 	tint = TINT_HEAVY
 
 /obj/item/clothing/glasses/sunglasses/blindfold/tape
@@ -445,6 +447,7 @@ BLIND     // can't see anything
 	icon_state = "tape_cross"
 	item_state_slots = list(slot_r_hand_str = null, slot_l_hand_str = null)
 	w_class = ITEMSIZE_TINY
+	body_parts_covered = EYES
 
 /obj/item/clothing/glasses/sunglasses/prescription
 	name = "prescription sunglasses"
@@ -503,7 +506,7 @@ BLIND     // can't see anything
 		user << activation_sound
 		user.recalculate_vis()
 		user.update_inv_glasses()
-		user.update_action_buttons_icon()
+		user.update_mob_action_buttons()
 
 /obj/item/clothing/glasses/sunglasses/sechud/aviator/update_icon()
 	if(on)
@@ -623,4 +626,4 @@ BLIND     // can't see anything
 			icon_state = "[initial(icon_state)]up"
 			to_chat(usr, "You push \the [src] up from in front of your eyes.")
 		update_clothing_icon()
-		usr.update_action_buttons_icon()
+		usr.update_mob_action_buttons()

@@ -99,7 +99,6 @@ var/list/admin_verbs_admin = list(
 	/client/proc/cmd_admin_rejuvenate,
 	/client/proc/toggleghostwriters,
 	/client/proc/toggledrones,
-	/datum/admins/proc/show_skills,
 	/client/proc/check_customitem_activity,
 	/client/proc/man_up,
 	/client/proc/global_man_up,
@@ -192,7 +191,6 @@ var/list/admin_verbs_spawn = list(
 	/client/proc/cmd_admin_droppod_spawn,
 	/client/proc/respawn_character,
 	/client/proc/spawn_character_mob,  //VOREStation Add,
-	/client/proc/virus2_editor,
 	/client/proc/spawn_chemdisp_cartridge,
 	/client/proc/map_template_load,
 	/client/proc/map_template_upload,
@@ -201,7 +199,10 @@ var/list/admin_verbs_spawn = list(
 	/client/proc/generic_structure, //VOREStation Add
 	/client/proc/generic_item, //VOREStation Add
 	/client/proc/create_gm_message,
-	/client/proc/remove_gm_message
+	/client/proc/remove_gm_message,
+	/client/proc/AdminCreateVirus,
+	/client/proc/ReleaseVirus,
+	/client/proc/spawn_reagent
 	)
 
 var/list/admin_verbs_server = list(
@@ -286,10 +287,13 @@ var/list/admin_verbs_debug = list(
 	/datum/admins/proc/set_uplink, //VOREStation Add,
 	/datum/admins/proc/change_weather,
 	/datum/admins/proc/change_time,
+	/client/proc/cmd_regenerate_asset_cache,
+	/client/proc/cmd_clear_smart_asset_cache,
 	/client/proc/admin_give_modifier,
 	/client/proc/simple_DPS,
 	/datum/admins/proc/view_feedback,
 	/client/proc/stop_sounds,
+	/client/proc/spawn_reagent,
 	/datum/admins/proc/quick_nif, //CHOMPStation Add,
 	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
 	/client/proc/reload_jobwhitelist, //ChompADD
@@ -414,7 +418,6 @@ var/list/admin_verbs_mod = list(
 	/client/proc/colorooc,
 	/client/proc/player_panel_new,
 	/client/proc/dsay,
-	/datum/admins/proc/show_skills,
 	/datum/admins/proc/show_player_panel,
 	/client/proc/check_antagonists,
 	/client/proc/aooc,
@@ -465,6 +468,8 @@ var/list/admin_verbs_event_manager = list(
 	/proc/release,
 	/datum/admins/proc/change_weather,
 	/datum/admins/proc/change_time,
+	/client/proc/cmd_regenerate_asset_cache,
+	/client/proc/cmd_clear_smart_asset_cache,
 	/client/proc/admin_give_modifier,
 	/client/proc/Jump,
 	/client/proc/jumptomob,
@@ -492,6 +497,8 @@ var/list/admin_verbs_event_manager = list(
 	// /client/proc/show_gm_status,  // VOREStation Edit - We don't use SSgame_master yet.
 	/datum/admins/proc/change_weather,
 	/datum/admins/proc/change_time,
+	/client/proc/cmd_regenerate_asset_cache,
+	/client/proc/cmd_clear_smart_asset_cache,
 	/client/proc/admin_give_modifier,
 	/datum/admins/proc/cmd_admin_dress,
 	/client/proc/cmd_admin_gib_self,
@@ -546,7 +553,6 @@ var/list/admin_verbs_event_manager = list(
 	/client/proc/cmd_admin_change_custom_event,
 	/client/proc/cmd_admin_rejuvenate,
 	/client/proc/toggleghostwriters,
-	/datum/admins/proc/show_skills,
 	/client/proc/man_up,
 	/client/proc/global_man_up,
 	/client/proc/response_team, // Response Teams admin verb,
@@ -577,6 +583,10 @@ var/list/admin_verbs_event_manager = list(
 	/client/proc/modify_server_news,
 	/client/proc/toggle_spawning_with_recolour,
 	/client/proc/start_vote,
+	/client/proc/AdminCreateVirus,
+	/client/proc/ReleaseVirus,
+	/client/proc/add_hidden_area,
+	/client/proc/remove_hidden_area,
 	/datum/admins/proc/quick_nif, //CHOMPStation Add,
 	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
 	/client/proc/reload_jobwhitelist, //ChompADD

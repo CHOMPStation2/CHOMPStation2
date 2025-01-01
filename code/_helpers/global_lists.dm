@@ -52,8 +52,9 @@ GLOBAL_LIST_INIT(custom_species_bases, new) // Species that can be used for a Cu
 	//Underwear
 var/datum/category_collection/underwear/global_underwear = new()
 
-	//Backpacks
-var/global/list/backbaglist = list("Nothing", "Backpack", "Satchel", "Satchel Alt", "Messenger Bag", "Sports Bag", "Strapless Satchel") //VOREStation edit
+	//Customizables
+GLOBAL_LIST_INIT(headsetlist, list("Standard","Bowman","Earbud"))
+var/global/list/backbaglist = list("Nothing", "Backpack", "Satchel", "Satchel Alt", "Messenger Bag", "Sports Bag", "Strapless Satchel")
 var/global/list/pdachoicelist = list("Default", "Slim", "Old", "Rugged", "Holographic", "Wrist-Bound","Slider", "Vintage")
 var/global/list/exclude_jobs = list(/datum/job/ai,/datum/job/cyborg)
 
@@ -61,6 +62,7 @@ var/global/list/exclude_jobs = list(/datum/job/ai,/datum/job/cyborg)
 var/list/datum/visualnet/visual_nets = list()
 var/datum/visualnet/camera/cameranet = new()
 var/datum/visualnet/cult/cultnet = new()
+var/datum/visualnet/ghost/ghostnet = new()
 
 // Runes
 var/global/list/rune_list = new()

@@ -52,6 +52,10 @@
 	var/mob/living/silicon/robot/R = host
 
 	data["module_name"] = R.module ? "[R.module]" : null
+	if(R.emagged)
+		data["theme"] = "syndicate"
+	else if (R.ui_theme)
+		data["theme"] = R.ui_theme
 
 	if(!R.module)
 		return data
@@ -62,6 +66,7 @@
 	data["max_charge"] = R.cell?.maxcharge
 	data["health"] = R.health
 	data["max_health"] = R.getMaxHealth()
+	data["light_color"] = R.robot_light_col
 
 	data["weapon_lock"] = R.weapon_lock
 
@@ -103,7 +108,7 @@
 
 	return data
 
-/datum/tgui_module/robot_ui/tgui_act(action, params)
+/datum/tgui_module/robot_ui/tgui_act(action, params, datum/tgui/ui)
 	. = ..()
 	if(.)
 		return
@@ -111,6 +116,11 @@
 	var/mob/living/silicon/robot/R = host
 
 	switch(action)
+		if("set_light_col")
+			var/new_color = params["value"]
+			if(findtext(new_color, GLOB.is_color))
+				R.robot_light_col = new_color
+			. = TRUE
 		if("select_module")
 			R.pick_module()
 			. = TRUE
@@ -120,13 +130,13 @@
 			if(istype(C))
 				C.toggled = !C.toggled
 				if(C.toggled)
-					to_chat(usr, span_notice("You enable [C]."))
+					to_chat(ui.user, span_notice("You enable [C]."))
 				else
-					to_chat(usr, span_warning("You disable [C]."))
+					to_chat(ui.user, span_warning("You disable [C]."))
 			. = TRUE
 		if("toggle_module")
 			if(R.weapon_lock)
-				to_chat(usr, span_danger("Error: Modules locked."))
+				to_chat(ui.user, span_danger("Error: Modules locked."))
 				return
 			var/obj/item/module = locate(params["ref"])
 			if(istype(module))

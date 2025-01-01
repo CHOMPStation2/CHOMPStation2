@@ -1,7 +1,7 @@
 //Brain slug proc for voluntary removal of control.
 /mob/living/carbon/proc/release_control()
 
-	set category = "Abilities.Brainslug" //CHOMPEdit
+	set category = "Abilities.Brainslug"
 	set name = "Release Control"
 	set desc = "Release control of your host's body."
 
@@ -21,7 +21,7 @@
 
 //Brain slug proc for tormenting the host.
 /mob/living/carbon/proc/punish_host()
-	set category = "Abilities.Brainslug" //CHOMPEdit
+	set category = "Abilities.Brainslug"
 	set name = "Torment host"
 	set desc = "Punish your host with agony."
 
@@ -39,7 +39,7 @@
 			to_chat(B.host_brain, span_danger("<FONT size=3>Horrific, burning agony lances through you, ripping a soundless scream from your trapped mind!</FONT>"))
 
 /mob/living/carbon/proc/spawn_larvae()
-	set category = "Abilities.Brainslug" //CHOMPEdit
+	set category = "Abilities.Brainslug"
 	set name = "Reproduce"
 	set desc = "Spawn several young."
 
@@ -60,3 +60,23 @@
 	else
 		to_chat(src, span_warning("You do not have enough chemicals stored to reproduce."))
 		return
+
+/mob/living/proc/toggle_active_cloaking() // Borrowed from Rogue Star, thanks guys!
+	set category = "Abilities.General"
+	set name = "Toggle Active Cloaking"
+
+	if(invisibility == INVISIBILITY_OBSERVER)
+		invisibility = initial(invisibility)
+		to_chat(src, span_notice("You are now visible."))
+		alpha = max(alpha + 100, 255)
+	else
+		invisibility = INVISIBILITY_OBSERVER
+		to_chat(src, span_notice("You are now invisible."))
+		alpha = max(alpha - 100, 0)
+
+	var/datum/effect/effect/system/spark_spread/sparks = new /datum/effect/effect/system/spark_spread()
+	sparks.set_up(5, 0, src)
+	sparks.attach(loc)
+	sparks.start()
+	visible_message(span_warning("Electrical sparks manifest around \the [src] as they suddenly appear!"))
+	qdel(sparks)

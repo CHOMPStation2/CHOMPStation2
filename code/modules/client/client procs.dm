@@ -148,7 +148,6 @@
 		if("openLink")
 			src << link(href_list["link"])
 
-	// CHOMPEdit Start
 	if (hsrc)
 		var/datum/real_src = hsrc
 		if(QDELETED(real_src))
@@ -158,13 +157,12 @@
 	//overloaded
 	if(hsrc && hsrc != holder && DEFAULT_TRY_QUEUE_VERB(VERB_CALLBACK(src, PROC_REF(_Topic), hsrc, href, href_list)))
 		return
-	..()	//redirect to hsrc.Topic()
+	..() //redirect to hsrc.Topic()
 
 ///dumb workaround because byond doesnt seem to recognize the Topic() typepath for /datum/proc/Topic() from the client Topic,
 ///so we cant queue it without this
 /client/proc/_Topic(datum/hsrc, href, list/href_list)
 	return hsrc.Topic(href, href_list)
-// CHOMPEdit End
 
 //This stops files larger than UPLOAD_LIMIT being sent from client to server via input(), client.Import() etc.
 /client/AllowUpload(filename, filelength)
@@ -185,6 +183,10 @@
 	//CONNECT//
 	///////////
 /client/New(TopicData)
+	// TODO: Remove version check with 516
+	if(byond_version >= 516) // Enable 516 compat browser storage mechanisms
+		winset(src, null, "browser-options=[DEFAULT_CLIENT_BROWSER_OPTIONS]")
+
 	TopicData = null							//Prevent calls to client.Topic from connect
 
 	if(!(connection in list("seeker", "web")))					//Invalid connection type.
@@ -313,6 +315,12 @@
 		//VOREStation Edit end.
 	fully_created = TRUE
 	attempt_auto_fit_viewport()
+
+	// TODO: Remove version check with 516
+	if(byond_version >= 516)
+		// Now that we're fully initialized, use our prefs
+		if(prefs?.read_preference(/datum/preference/toggle/browser_dev_tools))
+			winset(src, null, "browser-options=[DEFAULT_CLIENT_BROWSER_OPTIONS],devtools")
 
 	//////////////
 	//DISCONNECT//
@@ -526,13 +534,13 @@
 
 /client/verb/character_setup()
 	set name = "Character Setup"
-	set category = "Preferences.Character" //CHOMPEdit
+	set category = "Preferences.Character"
 	if(prefs)
 		prefs.ShowChoices(usr)
 
 /client/verb/game_options()
 	set name = "Game Options"
-	set category = "Preferences.Game" //CHOMPEdit
+	set category = "Preferences.Game"
 	if(prefs)
 		prefs.tgui_interact(usr)
 
@@ -634,7 +642,7 @@
 
 /client/verb/toggle_fullscreen()
 	set name = "Toggle Fullscreen"
-	set category = "OOC.Client Settings" //CHOMPEdit
+	set category = "OOC.Client Settings"
 
 	fullscreen = !fullscreen
 
@@ -656,7 +664,7 @@
 /*CHOMPRemove Start, we use TGPanel
 /client/verb/toggle_verb_panel()
 	set name = "Toggle Verbs"
-	set category = "OOC.Client Settings" //CHOMPEdit
+	set category = "OOC.Client Settings"
 
 	show_verb_panel = !show_verb_panel
 
@@ -666,7 +674,7 @@
 /*
 /client/verb/toggle_status_bar()
 	set name = "Toggle Status Bar"
-	set category = "OOC.Client Settings" //CHOMPEdit
+	set category = "OOC.Client Settings"
 
 	show_status_bar = !show_status_bar
 
@@ -678,7 +686,7 @@
 
 /client/verb/show_active_playtime()
 	set name = "Active Playtime"
-	set category = "IC.Game"
+	set category = "OOC.Game"
 
 	if(!play_hours.len)
 		to_chat(src, span_warning("Persistent playtime disabled!"))
@@ -714,7 +722,7 @@
 /client/proc/check_panel_loaded()
 	if(stat_panel && stat_panel.is_ready())
 		return
-	to_chat(src, "<span class='danger'>Statpanel failed to load, click <a href='?src=[REF(src)];reload_statbrowser=1'>here</a> to reload the panel. If this does not work, reconnecting will reassign a new panel.</span>")
+	to_chat(src, span_danger("Statpanel failed to load, click <a href='byond://?src=[REF(src)];reload_statbrowser=1'>here</a> to reload the panel. If this does not work, reconnecting will reassign a new panel."))
 
 /**
  * Handles incoming messages from the stat-panel TGUI.
@@ -732,3 +740,9 @@
 		if("Set-Tab")
 			stat_tab = payload["tab"]
 			SSstatpanels.immediate_send_stat_data(src)
+
+
+// Mouse stuff
+/client/Click(atom/object, atom/location, control, params)
+	SEND_SIGNAL(src, COMSIG_CLIENT_CLICK, object, location, control, params, usr)
+	. = ..()

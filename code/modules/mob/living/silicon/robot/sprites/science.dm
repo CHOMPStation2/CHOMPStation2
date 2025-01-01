@@ -150,11 +150,6 @@
 /datum/robot_sprite/dogborg/tall/science
 	module_type = "Research"
 	sprite_icon = 'icons/mob/robot/science_large.dmi'
-	var/has_taser_sprite = FALSE
-
-/datum/robot_sprite/dogborg/tall/science/handle_extra_icon_updates(var/mob/living/silicon/robot/ourborg)
-	if(has_taser_sprite && istype(ourborg.module_active, /obj/item/gun/energy/taser/xeno/robot))
-		ourborg.add_overlay("[sprite_icon_state]-taser")
 
 /datum/robot_sprite/dogborg/tall/science/do_equipment_glamour(var/obj/item/robot_module/module)
 	if(!has_custom_equipment_sprites)
@@ -173,7 +168,7 @@
 	name = "Raptor V-4"
 	sprite_icon_state = "raptor"
 	has_custom_equipment_sprites = TRUE
-	has_taser_sprite = TRUE
+	sprite_flags = ROBOT_HAS_TASER_SPRITE
 	rest_sprite_options = list("Default", "Bellyup")
 
 /datum/robot_sprite/dogborg/tall/science/meka
@@ -212,3 +207,14 @@
 	has_custom_open_sprites = TRUE
 	has_vore_belly_sprites = FALSE
 	rest_sprite_options = list("Default", "Bellyup")
+
+/datum/robot_sprite/dogborg/tall/science/dullahanv3
+	sprite_icon = 'icons/mob/tallborg/dullahans64x64.dmi'
+	//named v3 to avoid conflicts with downstream
+
+/datum/robot_sprite/dogborg/tall/science/dullahanv3/sciencedully
+	name = "Dullahan science v3"
+	sprite_icon_state = "dullahanscience"
+	has_vore_belly_sprites = TRUE
+	has_robotdecal_sprites = TRUE
+	rest_sprite_options = list("Default", "sit")

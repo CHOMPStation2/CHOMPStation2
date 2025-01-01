@@ -4452,6 +4452,15 @@
 "ahc" = (
 /turf/simulated/wall,
 /area/tether/surfacebase/medical/resleeving)
+"ahd" = (
+/obj/structure/bookcase,
+/obj/item/book/manual/wiki/security_space_law,
+/obj/item/book/manual/wiki/security_space_law,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/carpet,
+/area/tether/surfacebase/security/detective/officea)
 "ahe" = (
 /obj/structure/filingcabinet/chestdrawer,
 /obj/machinery/power/apc{
@@ -4490,6 +4499,15 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "0-2"
+	},
+/turf/simulated/floor/carpet,
+/area/tether/surfacebase/security/detective/officeb)
+"ahk" = (
+/obj/structure/bookcase,
+/obj/item/book/manual/wiki/security_space_law,
+/obj/item/book/manual/wiki/security_space_law,
+/obj/machinery/light{
+	dir = 1
 	},
 /turf/simulated/floor/carpet,
 /area/tether/surfacebase/security/detective/officeb)
@@ -6507,6 +6525,16 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/tether/surfacebase/medical/morgue)
+"akv" = (
+/obj/structure/bookcase/manuals/medical,
+/obj/item/book/manual/resleeving,
+/obj/item/book/manual/stasis,
+/obj/item/book/manual/wiki/medical_diagnostics_manual{
+	pixel_y = 7
+	},
+/obj/effect/floor_decal/corner/paleblue/diagonal,
+/turf/simulated/floor/tiled/white,
+/area/tether/surfacebase/medical/breakroom)
 "akw" = (
 /obj/machinery/computer/security/telescreen/entertainment{
 	desc = "Looks like it's set to Free-Anur-ntertanment, I wonder what else is on?";
@@ -10863,28 +10891,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/evastorage)
-"arL" = (
-/obj/structure/table/reinforced,
-/obj/item/suit_cooling_unit,
-/obj/item/suit_cooling_unit,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/machinery/status_display{
-	pixel_x = 32
-	},
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 8
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/red/border{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/tether/surfacebase/security/evastorage)
 "arM" = (
 /obj/effect/floor_decal/borderfloorblack/full,
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -11328,6 +11334,24 @@
 	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/middlehall)
+"asE" = (
+/obj/item/book/manual/wiki/security_space_law,
+/obj/item/gunbox/warden,
+/obj/structure/closet/secure_closet/warden,
+/obj/machinery/light,
+/obj/effect/floor_decal/borderfloor{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 10
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/item/ticket_printer,
+/obj/item/gun/energy/sizegun,
+/turf/simulated/floor/tiled/dark,
+/area/tether/surfacebase/security/warden)
 "asF" = (
 /obj/machinery/power/apc{
 	name = "south bump";
@@ -18540,6 +18564,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/carpet/sblucarpet,
 /area/bridge/meeting_room)
+"aHb" = (
+/obj/item/book/manual/wiki/security_space_law,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/obj/structure/table/fancyblack,
+/turf/simulated/floor/carpet/sblucarpet,
+/area/bridge/meeting_room)
 "aHc" = (
 /obj/item/folder/red,
 /obj/structure/disposalpipe/segment,
@@ -21772,6 +21804,13 @@
 /obj/machinery/disposal,
 /turf/simulated/floor/tiled,
 /area/engineering/lower/lobby)
+"aNL" = (
+/obj/structure/bookcase,
+/obj/item/book/manual/wiki/engineering_guide,
+/obj/item/book/manual/wiki/engineering_construction,
+/obj/item/book/manual/atmospipes,
+/turf/simulated/floor/tiled/dark,
+/area/engineering/lower/breakroom)
 "aNM" = (
 /obj/structure/cable/cyan{
 	icon_state = "0-2"
@@ -31718,15 +31757,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/evastorage)
-"deQ" = (
-/obj/structure/bookcase,
-/obj/item/book/manual/wiki/security_space_law,
-/obj/item/book/manual/wiki/security_space_law,
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/simulated/floor/carpet,
-/area/tether/surfacebase/security/detective/officeb)
 "dio" = (
 /obj/structure/closet/crate,
 /obj/random/maintenance/clean,
@@ -31988,26 +32018,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/lower/mining)
-"gaG" = (
-/obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "xenobiopen5";
-	name = "Pen 5 Blast Doors";
-	opacity = 0
-	},
-/obj/machinery/door/firedoor,
-/obj/structure/window/reinforced/full,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/turf/simulated/floor/reinforced,
-/area/rnd/outpost/xenobiology/outpost_slimepens)
 "gaR" = (
 /obj/item/radio/intercom/locked/ai_private{
 	dir = 4;
@@ -32016,16 +32026,6 @@
 /obj/effect/floor_decal/techfloor,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai_upload)
-"gcw" = (
-/obj/structure/bookcase/manuals/medical,
-/obj/item/book/manual/resleeving,
-/obj/item/book/manual/stasis,
-/obj/item/book/manual/wiki/medical_diagnostics_manual{
-	pixel_y = 7
-	},
-/obj/effect/floor_decal/corner/paleblue/diagonal,
-/turf/simulated/floor/tiled/white,
-/area/tether/surfacebase/medical/breakroom)
 "geH" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -32259,6 +32259,25 @@
 	},
 /turf/simulated/floor/bluegrid,
 /area/ai_upload)
+"iDE" = (
+/obj/structure/table/reinforced,
+/obj/item/suit_cooling_unit,
+/obj/item/suit_cooling_unit,
+/obj/item/cell/high,
+/obj/machinery/status_display{
+	pixel_x = 32
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/security/evastorage)
 "iLF" = (
 /obj/effect/landmark{
 	name = "maint_pred"
@@ -32339,15 +32358,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/tether/surfacebase/reading_room)
-"jQa" = (
-/obj/structure/bookcase,
-/obj/item/book/manual/wiki/security_space_law,
-/obj/item/book/manual/wiki/security_space_law,
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/simulated/floor/carpet,
-/area/tether/surfacebase/security/detective/officea)
 "jSc" = (
 /obj/move_trader_landmark{
 	dir = 8;
@@ -32397,24 +32407,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai_upload_foyer)
-"kbW" = (
-/obj/item/book/manual/wiki/security_space_law,
-/obj/item/gunbox/warden,
-/obj/structure/closet/secure_closet/warden,
-/obj/machinery/light,
-/obj/effect/floor_decal/borderfloor{
-	dir = 10
-	},
-/obj/effect/floor_decal/corner/red/border{
-	dir = 10
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/item/ticket_printer,
-/obj/item/gun/energy/sizegun,
-/turf/simulated/floor/tiled/dark,
-/area/tether/surfacebase/security/warden)
 "kdz" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -32603,14 +32595,26 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai_upload)
-"kWJ" = (
-/obj/item/book/manual/wiki/security_space_law,
-/obj/machinery/atmospherics/unary/vent_pump/on{
+"kVV" = (
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "xenobiopen5";
+	name = "Pen 5 Blast Doors";
+	opacity = 0
+	},
+/obj/machinery/door/firedoor,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/grille,
+/obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/structure/table/fancyblack,
-/turf/simulated/floor/carpet/sblucarpet,
-/area/bridge/meeting_room)
+/turf/simulated/floor/reinforced,
+/area/rnd/outpost/xenobiology/outpost_slimepens)
 "laD" = (
 /obj/structure/catwalk,
 /turf/simulated/floor/tiled/techfloor,
@@ -33879,13 +33883,6 @@
 /obj/effect/floor_decal/techfloor,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai)
-"wDj" = (
-/obj/structure/bookcase,
-/obj/item/book/manual/wiki/engineering_guide,
-/obj/item/book/manual/wiki/engineering_construction,
-/obj/item/book/manual/atmospipes,
-/turf/simulated/floor/tiled/dark,
-/area/engineering/lower/breakroom)
 "wEf" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -39315,7 +39312,7 @@ bhK
 bdS
 biM
 bjl
-gaG
+kVV
 bdS
 bku
 bkH
@@ -40789,7 +40786,7 @@ acm
 acm
 acm
 acm
-jQa
+ahd
 ahR
 aiY
 ajW
@@ -41925,7 +41922,7 @@ acm
 aeN
 acm
 acm
-deQ
+ahk
 ahX
 ajf
 akd
@@ -42646,7 +42643,7 @@ aou
 apJ
 aqK
 arF
-kbW
+asE
 ann
 auy
 auA
@@ -43781,7 +43778,7 @@ anr
 aoB
 apN
 aqQ
-arL
+iDE
 asL
 anr
 auA
@@ -45804,7 +45801,7 @@ aLj
 aLO
 aMB
 aNj
-wDj
+aNL
 aOD
 aPo
 aQf
@@ -46218,7 +46215,7 @@ aCI
 aFq
 aGd
 aGH
-kWJ
+aHb
 aHs
 aHM
 ncG
@@ -46619,7 +46616,7 @@ alF
 anH
 anH
 amL
-gcw
+akv
 ajG
 ajE
 amS

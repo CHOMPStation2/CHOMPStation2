@@ -41,9 +41,8 @@
 		if(istype(unsim, /turf/simulated))
 
 			var/turf/simulated/sim = unsim
-			if(air_master.has_valid_zone(sim))
-
-				air_master.connect(sim, src)
+			if(HAS_VALID_ZONE(sim))
+				SSair.connect(sim, src)
 
 // CHOMPAdd
 #define GET_ZONE_NEIGHBOURS(T, ret) \
@@ -131,6 +130,7 @@
 				. |= dir
 */
 	. = !.
+#undef GET_ZONE_NEIGHBOURS
 // CHOMPEdit End
 
 /turf/simulated/update_air_properties()
@@ -240,7 +240,7 @@
 					if(verbose) to_world("Connecting to [sim.zone]")
 					#endif
 
-					SSair.connect(src, sim) // CHOMPEdit
+					SSair.connect(src, sim)
 
 
 			#ifdef ZASDBG
@@ -268,7 +268,7 @@
 	//At this point, a zone should have happened. If it hasn't, don't add more checks, fix the bug.
 
 	for(var/turf/T in postponed)
-		SSair.connect(src, T) // CHOMPEdit
+		SSair.connect(src, T)
 
 /turf/proc/post_update_air_properties()
 	if(connections) connections.update_all()
@@ -283,7 +283,7 @@
 	//Create gas mixture to hold data for passing
 	var/datum/gas_mixture/GM = new
 
-	GM.adjust_multi("oxygen", oxygen, "carbon_dioxide", carbon_dioxide, "nitrogen", nitrogen, "phoron", phoron)
+	GM.adjust_multi(GAS_O2, oxygen, GAS_CO2, carbon_dioxide, GAS_N2, nitrogen, GAS_PHORON, phoron)
 	GM.temperature = temperature
 
 	return GM
@@ -293,10 +293,10 @@
 
 	var/sum = oxygen + carbon_dioxide + nitrogen + phoron
 	if(sum>0)
-		GM.gas["oxygen"] = (oxygen/sum)*amount
-		GM.gas["carbon_dioxide"] = (carbon_dioxide/sum)*amount
-		GM.gas["nitrogen"] = (nitrogen/sum)*amount
-		GM.gas["phoron"] = (phoron/sum)*amount
+		GM.gas[GAS_O2] = (oxygen/sum)*amount
+		GM.gas[GAS_CO2] = (carbon_dioxide/sum)*amount
+		GM.gas[GAS_N2] = (nitrogen/sum)*amount
+		GM.gas[GAS_PHORON] = (phoron/sum)*amount
 
 	GM.temperature = temperature
 	GM.update_values()
@@ -324,7 +324,7 @@
 /turf/simulated/return_air()
 	if(zone)
 		if(!zone.invalid)
-			air_master.mark_zone_update(zone)
+			SSair.mark_zone_update(zone)
 			return zone.air
 		else
 			if(!air)
@@ -339,7 +339,7 @@
 /turf/proc/make_air()
 	air = new/datum/gas_mixture
 	air.temperature = temperature
-	air.adjust_multi("oxygen", oxygen, "carbon_dioxide", carbon_dioxide, "nitrogen", nitrogen, "phoron", phoron)
+	air.adjust_multi(GAS_O2, oxygen, GAS_CO2, carbon_dioxide, GAS_N2, nitrogen, GAS_PHORON, phoron)
 	air.group_multiplier = 1
 	air.volume = CELL_VOLUME
 

@@ -183,6 +183,7 @@ export const DmMapsIncludeTarget = new Juke.Target({
       //...Juke.glob('_maps/templates/**/*.dmm'),
       ...Juke.glob('modular_chomp/maps/soluna_nexus/**/*.dmm'),
       ...Juke.glob('modular_chomp/maps/southern_cross/**/*.dmm'),
+      ...Juke.glob('modular_chomp/maps/relic_base/**/*.dmm'),
       ...Juke.glob('modular_chomp/maps/submap/**/*.dmm'),
     ];
     const content = folders
@@ -207,12 +208,14 @@ export const DmTarget = new Juke.Target({
     'icons/**',
     'interface/**',
     'sound/**',
+    'tgui/public/tgui.html',
     'modular_chomp/code/**',
     'modular_chomp/icons/**',
     'modular_chomp/sound/**',
     'modular_chomp/maps/**/*.dm',
     'modular_chomp/maps/soluna_nexus/**/*.dmm', // Placed here so it recompiles on map changes
     'modular_chomp/maps/southern_cross/**/*.dmm', // Placed here so it recompiles on map changes
+    'modular_chomp/maps/relic_base/**/*.dmm', // Placed here so it recompiles on map changes
     'modular_chomp/maps/submap/**/*.dmm', // Placed here so it recompiles on map changes
     `${DME_NAME}.dme`,
     NamedVersionFile,

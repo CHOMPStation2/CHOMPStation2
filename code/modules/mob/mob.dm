@@ -123,6 +123,17 @@
 /atom/proc/drain_power(var/drain_check,var/surge, var/amount = 0)
 	return -1
 
+ // used for petrification machines
+/atom/proc/get_ultimate_mob()
+	var/mob/ultimate_mob
+	var/atom/to_check = loc
+	var/n = 0
+	while (to_check && !isturf(to_check) && n++ < 16)
+		if (ismob(to_check))
+			ultimate_mob = to_check
+			to_check = to_check.loc
+	return ultimate_mob
+
 // Show a message to all mobs and objects in earshot of this one
 // This would be for audible actions by the src mob
 // message is the message output to anyone who can hear.
@@ -285,7 +296,7 @@
 
 /mob/verb/memory()
 	set name = "Notes"
-	set category = "IC.Game" //CHOMPEdit
+	set category = "IC.Game"
 	if(mind)
 		mind.show_memory(src)
 	else
@@ -293,7 +304,7 @@
 
 /mob/verb/add_memory(msg as message)
 	set name = "Add Note"
-	set category = "IC.Game" //CHOMPEdit
+	set category = "IC.Game"
 
 	msg = sanitize(msg)
 
@@ -381,7 +392,7 @@
 
 /mob/verb/abandon_mob()
 	set name = "Return to Menu"
-	set category = "OOC.Game" //CHOMPEdit
+	set category = "OOC.Game"
 
 	if(stat != DEAD || !ticker)
 		to_chat(usr, span_boldnotice("You must be dead to use this!"))
@@ -462,7 +473,7 @@
 
 /client/verb/changes()
 	set name = "Changelog"
-	set category = "OOC.Resources" //CHOMPEdit
+	set category = "OOC.Resources"
 	// CHOMPedit Start - Better Changelog
 	//src << browse('html/changelog.html', "window=changes;size=675x650")
 	//return
@@ -478,7 +489,7 @@
 
 /mob/verb/observe()
 	set name = "Observe"
-	set category = "OOC.Game" //CHOMPEdit
+	set category = "OOC.Game"
 	var/is_admin = 0
 
 	if(client.holder && (client.holder.rights & R_ADMIN|R_EVENT))
@@ -520,7 +531,7 @@
 
 /mob/verb/cancel_camera()
 	set name = "Cancel Camera View"
-	set category = "OOC.Game" //CHOMPEdit
+	set category = "OOC.Game"
 	unset_machine()
 	reset_view(null)
 
@@ -535,8 +546,7 @@
 		onclose(usr, "[name]")
 	if(href_list["flavor_change"])
 		update_flavor_text()
-//	..()
-	return
+	return ..()
 
 
 /mob/proc/pull_damage()
@@ -545,7 +555,7 @@
 /mob/verb/stop_pulling()
 
 	set name = "Stop Pulling"
-	set category = "IC.Game" //CHOMPEdit
+	set category = "IC.Game"
 
 	if(pulling)
 		if(ishuman(pulling))
@@ -1003,7 +1013,7 @@
 /mob/verb/face_direction()
 
 	set name = "Face Direction"
-	set category = "IC.Game" //CHOMPEdit
+	set category = "IC.Game"
 	set src = usr
 
 	set_face_dir()

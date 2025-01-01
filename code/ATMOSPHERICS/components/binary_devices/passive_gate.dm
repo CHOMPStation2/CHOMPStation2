@@ -27,10 +27,12 @@
 	var/id = null
 	var/datum/radio_frequency/radio_connection
 
-/obj/machinery/atmospherics/binary/passive_gate/New()
-	..()
+/obj/machinery/atmospherics/binary/passive_gate/Initialize()
+	. = ..()
 	air1.volume = ATMOS_DEFAULT_VOLUME_PUMP * 2.5
 	air2.volume = ATMOS_DEFAULT_VOLUME_PUMP * 2.5
+	if(frequency)
+		set_frequency(frequency)
 
 /obj/machinery/atmospherics/binary/passive_gate/Destroy()
 	unregister_radio(src, frequency)
@@ -169,11 +171,6 @@
 
 	return 1
 
-/obj/machinery/atmospherics/binary/passive_gate/Initialize()
-	. = ..()
-	if(frequency)
-		set_frequency(frequency)
-
 /obj/machinery/atmospherics/binary/passive_gate/receive_signal(datum/signal/signal)
 	if(!signal.data["tag"] || (signal.data["tag"] != id) || (signal.data["sigtype"]!="command"))
 		return 0
@@ -206,7 +203,7 @@
 /obj/machinery/atmospherics/binary/passive_gate/attack_hand(user as mob)
 	if(..())
 		return
-	add_fingerprint(usr)
+	add_fingerprint(user)
 	if(!allowed(user))
 		to_chat(user, span_warning("Access denied."))
 		return
@@ -238,7 +235,7 @@
 	return data
 
 
-/obj/machinery/atmospherics/binary/passive_gate/tgui_act(action, params)
+/obj/machinery/atmospherics/binary/passive_gate/tgui_act(action, params, datum/tgui/ui)
 	if(..())
 		return TRUE
 
@@ -261,7 +258,7 @@
 				if("max")
 					target_pressure = max_pressure_setting
 				if("set")
-					var/new_pressure = tgui_input_number(usr,"Enter new output pressure (0-[max_pressure_setting]kPa)","Pressure Control",src.target_pressure,max_pressure_setting,0)
+					var/new_pressure = tgui_input_number(ui.user,"Enter new output pressure (0-[max_pressure_setting]kPa)","Pressure Control",src.target_pressure,max_pressure_setting,0)
 					src.target_pressure = between(0, new_pressure, max_pressure_setting)
 
 		if("set_flow_rate")
@@ -272,11 +269,11 @@
 				if("max")
 					set_flow_rate = air1.volume
 				if("set")
-					var/new_flow_rate = tgui_input_number(usr,"Enter new flow rate limit (0-[air1.volume]L/s)","Flow Rate Control",src.set_flow_rate,air1.volume,0)
+					var/new_flow_rate = tgui_input_number(ui.user,"Enter new flow rate limit (0-[air1.volume]L/s)","Flow Rate Control",src.set_flow_rate,air1.volume,0)
 					src.set_flow_rate = between(0, new_flow_rate, air1.volume)
 
 	update_icon()
-	add_fingerprint(usr)
+	add_fingerprint(ui.user)
 
 /obj/machinery/atmospherics/binary/passive_gate/attackby(var/obj/item/W as obj, var/mob/user as mob)
 	if (!W.has_tool_quality(TOOL_WRENCH))

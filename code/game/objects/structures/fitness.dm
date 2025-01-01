@@ -52,7 +52,7 @@
 		to_chat(user, span_warning("You need more energy to lift weights. Go eat something."))
 		return
 	if(user.weight < 70) //CHOMPAdd Begin Add weight loss to old fitness equipment
-		to_chat(user, "<span class='notice'>You're too skinny to risk losing any more weight!</span>")
+		to_chat(user, span_notice("You're too skinny to risk losing any more weight!"))
 		return //CHOMPAdd End
 	if(being_used)
 		to_chat(user, span_warning("The weight machine is already in use by somebody else."))

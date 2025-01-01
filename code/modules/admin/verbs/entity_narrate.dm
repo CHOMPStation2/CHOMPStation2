@@ -27,7 +27,7 @@
 /client/proc/add_mob_for_narration(E as obj|mob|turf in orange(world.view))
 	set name = "Narrate Entity (Add ref)"
 	set desc = "Saves a reference of target mob to be called when narrating."
-	set category = "Fun.Narrate" //CHOMPEdit
+	set category = "Fun.Narrate"
 
 	if(!check_rights(R_FUN)) return
 
@@ -77,7 +77,7 @@
 /client/proc/remove_mob_for_narration()
 	set name = "Narrate Entity (Remove ref)"
 	set desc = "Remove mobs you're no longer narrating from your list for easier work."
-	set category = "Fun.Narrate" //CHOMPEdit
+	set category = "Fun.Narrate"
 
 	if(!check_rights(R_FUN)) return
 
@@ -107,7 +107,7 @@
 /client/proc/narrate_mob()
 	set name = "Narrate Entity (Interface)"
 	set desc = "Send either a visible or audiable message through your chosen entities using an interface"
-	set category = "Fun.Narrate" //CHOMPEdit
+	set category = "Fun.Narrate"
 
 	if(!check_rights(R_FUN)) return
 
@@ -138,7 +138,7 @@
 /client/proc/narrate_mob_args(name as text, mode as text, message as text)
 	set name = "Narrate Entity"
 	set desc = "Narrate entities using positional arguments. Name should be as saved in ref list, mode should be Speak or Emote, follow with message"
-	set category = "Fun.Narrate" //CHOMPEdit
+	set category = "Fun.Narrate"
 
 
 
@@ -221,11 +221,11 @@
 
 	return data
 
-/datum/entity_narrate/tgui_act(action, list/params)
+/datum/entity_narrate/tgui_act(action, list/params, datum/tgui/ui)
 	. = ..()
 
 	if(.)	return
-	if(!check_rights_for(usr.client, R_FUN)) return
+	if(!check_rights_for(ui.user.client, R_FUN)) return
 
 	switch(action)
 		if("change_mode_multi")
@@ -260,7 +260,7 @@
 					var/datum/weakref/wref = entity_refs[tgui_selected_id]
 					tgui_selected_refs = wref.resolve()
 					if(!tgui_selected_refs)
-						to_chat(usr, span_notice("[tgui_selected_id] has invalid reference, deleting"))
+						to_chat(ui.user, span_notice("[tgui_selected_id] has invalid reference, deleting"))
 						entity_names -= tgui_selected_id
 						entity_refs -= tgui_selected_id
 						tgui_selected_id = ""
@@ -281,9 +281,9 @@
 						tgui_selected_name = A.name
 		if("narrate")
 			if(world.time < (tgui_last_message + 0.5 SECONDS))
-				to_chat(usr, span_notice("You can't messages that quickly! Wait at least half a second"))
+				to_chat(ui.user, span_notice("You can't messages that quickly! Wait at least half a second"))
 			else
-				to_chat(usr, span_notice("Message successfully sent!"))
+				to_chat(ui.user, span_notice("Message successfully sent!"))
 				tgui_last_message = world.time
 				var/message = params["message"] //Sanitizing before speaking it
 				if(tgui_selection_mode)
@@ -291,7 +291,7 @@
 						var/datum/weakref/wref = entity_refs[entity]
 						var/ref = wref.resolve()
 						if(!ref)
-							to_chat(usr, span_notice("[entity] has invalid reference, deleting"))
+							to_chat(ui.user, span_notice("[entity] has invalid reference, deleting"))
 							entity_names -= entity
 							entity_refs -= entity
 							tgui_selected_id_multi -= entity
@@ -299,7 +299,7 @@
 						if(istype(ref, /mob/living))
 							var/mob/living/L = ref
 							if(L.client)
-								log_and_message_admins("used entity-narrate to speak through [L.ckey]'s mob", usr)
+								log_and_message_admins("used entity-narrate to speak through [L.ckey]'s mob", ui.user)
 							narrate_tgui_mob(L, message)
 						else if(istype(ref, /atom))
 							var/atom/A = ref
@@ -308,7 +308,7 @@
 					var/datum/weakref/wref = entity_refs[tgui_selected_id]
 					var/ref = wref.resolve()
 					if(!ref)
-						to_chat(usr, span_notice("[tgui_selected_id] has invalid reference, deleting"))
+						to_chat(ui.user, span_notice("[tgui_selected_id] has invalid reference, deleting"))
 						entity_names -= tgui_selected_id
 						entity_refs -= tgui_selected_id
 						tgui_selected_id = ""
@@ -319,7 +319,7 @@
 					if(istype(ref, /mob/living))
 						var/mob/living/L = ref
 						if(L.client)
-							log_and_message_admins("used entity-narrate to speak through [L.ckey]'s mob", usr)
+							log_and_message_admins("used entity-narrate to speak through [L.ckey]'s mob", ui.user)
 						narrate_tgui_mob(L, message)
 					else if(istype(ref, /atom))
 						var/atom/A = ref

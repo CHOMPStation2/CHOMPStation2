@@ -226,6 +226,29 @@
 
 //////////////////////////////////////////////////////////////////////////////////////
 
+#ifdef AWAY_MISSION_TEST
+#include "../redgate/falls/falls.dmm"
+#include "../redgate/abandonedisland.dmm"
+#include "../redgate/cybercity.dmm"
+#include "../redgate/darkadventure.dmm"
+#include "../redgate/eggnogtown.dmm"
+#include "../redgate/eggnogtownunderground.dmm"
+#include "../redgate/facility.dmm"
+#include "../redgate/fantasy_dungeon.dmm"
+#include "../redgate/fantasy.dmm"
+#include "../redgate/hotsprings.dmm"
+#include "../redgate/innland.dmm"
+#include "../redgate/islands_underwater.dmm"
+#include "../redgate/islands.dmm"
+#include "../redgate/jungle_underground.dmm"
+#include "../redgate/jungle.dmm"
+#include "../redgate/laserdome.dmm"
+#include "../redgate/stardog.dmm"
+#include "../redgate/teppiranch.dmm"
+#include "../redgate/train_upper.dmm"
+#include "../redgate/train.dmm"
+#endif
+
 /datum/map_template/common_lateload/redgate
 	name = "Redgate Submap"
 	desc = "Please do not use this."
@@ -497,21 +520,21 @@
 
 				var/list/gaslist = env.gas
 				if(my_mob.min_oxy)
-					my_mob.min_oxy = gaslist["oxygen"] * 0.8
+					my_mob.min_oxy = gaslist[GAS_O2] * 0.8
 				if(my_mob.min_tox)
-					my_mob.min_tox = gaslist["phoron"] * 0.8
+					my_mob.min_tox = gaslist[GAS_PHORON] * 0.8
 				if(my_mob.min_n2)
-					my_mob.min_n2 = gaslist["nitrogen"] * 0.8
+					my_mob.min_n2 = gaslist[GAS_N2] * 0.8
 				if(my_mob.min_co2)
-					my_mob.min_co2 = gaslist["carbon_dioxide"] * 0.8
+					my_mob.min_co2 = gaslist[GAS_CO2] * 0.8
 				if(my_mob.max_oxy)
-					my_mob.max_oxy = gaslist["oxygen"] * 1.2
+					my_mob.max_oxy = gaslist[GAS_O2] * 1.2
 				if(my_mob.max_tox)
-					my_mob.max_tox = gaslist["phoron"] * 1.2
+					my_mob.max_tox = gaslist[GAS_PHORON] * 1.2
 				if(my_mob.max_n2)
-					my_mob.max_n2 = gaslist["nitrogen"] * 1.2
+					my_mob.max_n2 = gaslist[GAS_N2] * 1.2
 				if(my_mob.max_co2)
-					my_mob.max_co2 = gaslist["carbon_dioxide"] * 1.2
+					my_mob.max_co2 = gaslist[GAS_CO2] * 1.2
 /* //VORESTATION AI TEMPORARY REMOVAL
 		if(guard)
 			my_mob.returns_home = TRUE

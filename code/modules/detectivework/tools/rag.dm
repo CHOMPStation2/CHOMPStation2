@@ -162,14 +162,16 @@
 	if(exposed_temperature >= 50 + T0C)
 		src.ignite()
 	if(exposed_temperature >= 900 + T0C)
+		var/turf/T = get_turf(src)
+		T?.feed_lingering_fire(0.1) // CHOMPAdd - Lingering fire, feeding fires
 		new /obj/effect/decal/cleanable/ash(get_turf(src))
 		qdel(src)
 
 //rag must have a minimum of 2 units welder fuel or ehtanol based reagents and at least 80% of the reagents must so.
 /obj/item/reagent_containers/glass/rag/proc/can_ignite()
 	var/fuel
-	if(reagents.get_reagent_amount("fuel"))
-		fuel += reagents.get_reagent_amount("fuel")
+	if(reagents.get_reagent_amount(REAGENT_ID_FUEL))
+		fuel += reagents.get_reagent_amount(REAGENT_ID_FUEL)
 
 	else
 		for(var/datum/reagent/ethanol/R in reagents.reagent_list)
@@ -184,10 +186,10 @@
 		return
 
 	//also copied from matches
-	if(reagents.get_reagent_amount("phoron")) // the phoron explodes when exposed to fire
+	if(reagents.get_reagent_amount(REAGENT_ID_PHORON)) // the phoron explodes when exposed to fire
 		visible_message(span_danger("\The [src] conflagrates violently!"))
 		var/datum/effect/effect/system/reagents_explosion/e = new()
-		e.set_up(round(reagents.get_reagent_amount("phoron") / 2.5, 1), get_turf(src), 0, 0)
+		e.set_up(round(reagents.get_reagent_amount(REAGENT_ID_PHORON) / 2.5, 1), get_turf(src), 0, 0)
 		e.start()
 		qdel(src)
 		return
@@ -231,7 +233,7 @@
 		qdel(src)
 		return
 
-	reagents.remove_reagent("fuel", reagents.maximum_volume/25)
+	reagents.remove_reagent(REAGENT_ID_FUEL, reagents.maximum_volume/25)
 	for(var/datum/reagent/ethanol/R in reagents.reagent_list)
 		if(istype(R, /datum/reagent/ethanol))
 			reagents.remove_reagent(R.id, reagents.maximum_volume/25)

@@ -84,11 +84,11 @@
 	if(..())
 		return TRUE
 
-	add_fingerprint(usr)
+	add_fingerprint(ui.user)
 
 	switch(action)
 		if("power")
-			if(!access_scanner.allowed(usr))
+			if(!access_scanner.allowed(ui.user))
 				return FALSE
 			if(on)
 				turn_off()
@@ -222,7 +222,7 @@
 				if(do_after(src, 30, A))
 
 					visible_message(span_notice("[src] fertilizes \the [A]."))
-					T.reagents.add_reagent("ammonia", 10)
+					T.reagents.add_reagent(REAGENT_ID_AMMONIA, 10)
 
 		busy = 0
 		action = ""
@@ -412,7 +412,7 @@
 		t = sanitize(t, MAX_NAME_LEN)
 		if(!t)
 			return
-		if(!in_range(src, usr) && loc != usr)
+		if(!in_range(src, user) && loc != user)
 			return
 
 		created_name = t

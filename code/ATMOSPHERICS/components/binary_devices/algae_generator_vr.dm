@@ -30,8 +30,8 @@
 	var/ui_error = null // For error messages to show up in nano ui.
 
 	var/datum/gas_mixture/internal = new()
-	var/const/input_gas = "carbon_dioxide"
-	var/const/output_gas = "oxygen"
+	var/const/input_gas = GAS_CO2
+	var/const/output_gas = GAS_O2
 
 /obj/machinery/atmospherics/binary/algae_farm/filled
 	stored_material = list(MAT_ALGAE = 10000, MAT_GRAPHITE = 0)
@@ -206,10 +206,10 @@
 
 	return data
 
-/obj/machinery/atmospherics/binary/algae_farm/tgui_act(action, params)
+/obj/machinery/atmospherics/binary/algae_farm/tgui_act(action, params, datum/tgui/ui)
 	if(..())
 		return TRUE
-	add_fingerprint(usr)
+	add_fingerprint(ui.user)
 
 	switch(action)
 		if("toggle")

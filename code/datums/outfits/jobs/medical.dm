@@ -1,16 +1,19 @@
 /decl/hierarchy/outfit/job/medical
 	hierarchy_type = /decl/hierarchy/outfit/job/medical
-	l_ear = /obj/item/radio/headset/headset_med
 	shoes = /obj/item/clothing/shoes/white
 	pda_type = /obj/item/pda/medical
 	pda_slot = slot_l_store
+
 	backpack = /obj/item/storage/backpack/medic
 	satchel_one = /obj/item/storage/backpack/satchel/med
 	messenger_bag = /obj/item/storage/backpack/messenger/med
 
+	headset = /obj/item/radio/headset/headset_med
+	headset_alt = /obj/item/radio/headset/alt/headset_med
+	headset_earbud = /obj/item/radio/headset/earbud/headset_med
+
 /decl/hierarchy/outfit/job/medical/cmo
 	name = OUTFIT_JOB_NAME(JOB_CHIEF_MEDICAL_OFFICER)
-	l_ear  =/obj/item/radio/headset/heads/cmo
 	uniform = /obj/item/clothing/under/rank/chief_medical_officer
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat/cmo
 	shoes = /obj/item/clothing/shoes/brown
@@ -18,6 +21,10 @@
 	r_pocket = /obj/item/healthanalyzer
 	id_type = /obj/item/card/id/medical/head
 	pda_type = /obj/item/pda/heads/cmo
+
+	headset = /obj/item/radio/headset/heads/cmo
+	headset_alt = /obj/item/radio/headset/alt/heads/cmo
+	headset_earbud = /obj/item/radio/headset/earbud/heads/cmo
 
 /decl/hierarchy/outfit/job/medical/doctor
 	name = OUTFIT_JOB_NAME(JOB_MEDICAL_DOCTOR)
@@ -71,7 +78,6 @@
 
 /decl/hierarchy/outfit/job/medical/geneticist
 	name = OUTFIT_JOB_NAME(JOB_GENETICIST)
-	l_ear = /obj/item/radio/headset/headset_medsci // CHOMPAdd - Geneticists get their cool headset
 	uniform = /obj/item/clothing/under/rank/geneticist
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat/genetics
 	backpack = /obj/item/storage/backpack/genetics
@@ -79,6 +85,12 @@
 	satchel_one = /obj/item/storage/backpack/satchel/gen
 	id_type = /obj/item/card/id/medical/geneticist
 	pda_type = /obj/item/pda/geneticist
+
+	// CHOMPAdd Start - Geneticists get their cool headset
+	headset = /obj/item/radio/headset/headset_medsci
+	headset_alt = /obj/item/radio/headset/headset_medsci
+	headset_earbud = /obj/item/radio/headset/headset_medsci
+	// CHOMPAdd End
 
 /decl/hierarchy/outfit/job/medical/psychiatrist
 	name = OUTFIT_JOB_NAME(JOB_PSYCHIATRIST)

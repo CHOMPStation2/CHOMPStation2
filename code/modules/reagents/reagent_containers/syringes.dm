@@ -34,7 +34,7 @@
 	var/used = FALSE
 	var/dirtiness = 0
 	var/list/targets
-	var/list/datum/disease2/disease/viruses
+	var/list/datum/disease/viruses
 	drop_sound = 'sound/items/drop/glass.ogg'
 	pickup_sound = 'sound/items/pickup/glass.ogg'
 
@@ -109,7 +109,7 @@
 				return
 
 			if(ismob(target))//Blood!
-				if(reagents.has_reagent("blood"))
+				if(reagents.has_reagent(REAGENT_ID_BLOOD))
 					to_chat(user, span_notice("There is already a blood sample in this syringe."))
 					return
 
@@ -343,7 +343,7 @@
 
 /obj/item/reagent_containers/syringe/inaprovaline/Initialize()
 	. = ..()
-	reagents.add_reagent("inaprovaline", 15)
+	reagents.add_reagent(REAGENT_ID_INAPROVALINE, 15)
 	//mode = SYRINGE_INJECT //VOREStation Edit - Starts capped
 	//update_icon()
 
@@ -353,7 +353,7 @@
 
 /obj/item/reagent_containers/syringe/antitoxin/Initialize()
 	. = ..()
-	reagents.add_reagent("anti_toxin", 15)
+	reagents.add_reagent(REAGENT_ID_ANTITOXIN, 15)
 	//mode = SYRINGE_INJECT //VOREStation Edit - Starts capped
 	//update_icon()
 
@@ -363,7 +363,7 @@
 
 /obj/item/reagent_containers/syringe/antiviral/Initialize()
 	. = ..()
-	reagents.add_reagent("spaceacillin", 15)
+	reagents.add_reagent(REAGENT_ID_SPACEACILLIN, 15)
 	//mode = SYRINGE_INJECT //VOREStation Edit - Starts capped
 	//update_icon()
 
@@ -373,15 +373,15 @@
 
 /obj/item/reagent_containers/syringe/drugs/Initialize()
 	. = ..()
-	reagents.add_reagent("bliss",  5)
-	reagents.add_reagent("mindbreaker",  5)
-	reagents.add_reagent("cryptobiolin", 5)
+	reagents.add_reagent(REAGENT_ID_BLISS,  5)
+	reagents.add_reagent(REAGENT_ID_MINDBREAKER,  5)
+	reagents.add_reagent(REAGENT_ID_CRYPTOBIOLIN, 5)
 	//mode = SYRINGE_INJECT //VOREStation Edit - Starts capped
 	//update_icon()
 
 /obj/item/reagent_containers/syringe/ld50_syringe/choral/Initialize()
 	. = ..()
-	reagents.add_reagent("chloralhydrate", 50)
+	reagents.add_reagent(REAGENT_ID_CHLORALHYDRATE, 50)
 	mode = SYRINGE_INJECT
 	update_icon()
 
@@ -391,8 +391,8 @@
 
 /obj/item/reagent_containers/syringe/steroid/Initialize()
 	..()
-	//reagents.add_reagent("adrenaline",5) //VOREStation Edit - No thanks.
-	reagents.add_reagent("hyperzine",10)
+	//reagents.add_reagent(REAGENT_ID_ADRENALINE,5) //VOREStation Edit - No thanks.
+	reagents.add_reagent(REAGENT_ID_HYPERZINE,10)
 
 /obj/item/reagent_containers/syringe/proc/dirty(var/mob/living/carbon/human/target, var/obj/item/organ/external/eo)
 	if(!ishuman(loc))
@@ -407,10 +407,10 @@
 	targets |= hash
 
 	//Grab any viruses they have
-	if(iscarbon(target) && LAZYLEN(target.virus2.len))
+	if(iscarbon(target) && LAZYLEN(target.viruses.len))
 		LAZYINITLIST(viruses)
-		var/datum/disease2/disease/virus = pick(target.virus2.len)
-		viruses[hash] = virus.getcopy()
+		var/datum/disease/virus = pick(target.viruses.len)
+		viruses[hash] = virus.Copy()
 
 	//Dirtiness should be very low if you're the first injectee. If you're spam-injecting 4 people in a row around you though,
 	//This gives the last one a 30% chance of infection.
@@ -426,8 +426,8 @@
 	if(LAZYLEN(viruses) && prob(75))
 		var/old_hash = pick(viruses)
 		if(hash != old_hash) //Same virus you already had?
-			var/datum/disease2/disease/virus = viruses[old_hash]
-			infect_virus2(target,virus.getcopy())
+			var/datum/disease/virus = viruses[old_hash]
+			target.ContractDisease(virus)
 
 	if(!used)
 		START_PROCESSING(SSobj, src)

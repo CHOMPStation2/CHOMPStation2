@@ -3368,19 +3368,6 @@
 	},
 /turf/simulated/floor,
 /area/engineering/workshop)
-"kr" = (
-/obj/structure/table/steel,
-/obj/item/storage/box/lights/mixed,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/paper{
-	info = "The big blue box recently installed in here is a 'grid checker' which will shut off the power if a dangerous power spike from the engine erupts into the powernet.  Shutting everything down protects everything from electrical damage, however the outages can be disruptive to colony operations, so it is designed to restore power after a somewhat significant delay, up to ten minutes or so.  The grid checker can be manually hacked in order to end the outage sooner.  To do that, you must cut three specific wires which do not cause a red light to shine, then pulse a fourth wire.  Electrical protection is highly recommended when doing maintenance on the grid checker.";
-	name = "grid checker info"
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/engineering/engine_monitoring)
 "kz" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -3437,10 +3424,6 @@
 /obj/effect/floor_decal/corner/yellow/bordercorner,
 /turf/simulated/floor/tiled,
 /area/engineering/engine_room)
-"kT" = (
-/obj/structure/lattice,
-/turf/space,
-/area/space)
 "kU" = (
 /obj/structure/shuttle,
 /turf/simulated/shuttle/wall/voidcraft/green,
@@ -4484,6 +4467,10 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/engine_monitoring)
+"wW" = (
+/obj/structure/lattice,
+/turf/space,
+/area/space)
 "wY" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/cyan{
 	dir = 4
@@ -4774,19 +4761,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/engine_room)
-"ze" = (
-/obj/structure/table/steel,
-/obj/machinery/cell_charger,
-/obj/item/stack/cable_coil{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/engineering/engine_monitoring)
 "zf" = (
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/shuttle/floor/voidcraft/external/light,
@@ -5024,6 +4998,16 @@
 /area/engineering/workshop)
 "By" = (
 /obj/machinery/suit_cycler/engineering,
+/turf/simulated/floor/tiled/techmaint,
+/area/engineering/engine_monitoring)
+"BA" = (
+/obj/structure/table/steel,
+/obj/machinery/cell_charger,
+/obj/item/stack/cable_coil{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/cell/high,
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/engine_monitoring)
 "BO" = (
@@ -6926,6 +6910,16 @@
 	},
 /turf/space,
 /area/space)
+"Yw" = (
+/obj/structure/table/steel,
+/obj/item/storage/box/lights/mixed,
+/obj/item/cell/high,
+/obj/item/paper{
+	info = "The big blue box recently installed in here is a 'grid checker' which will shut off the power if a dangerous power spike from the engine erupts into the powernet.  Shutting everything down protects everything from electrical damage, however the outages can be disruptive to colony operations, so it is designed to restore power after a somewhat significant delay, up to ten minutes or so.  The grid checker can be manually hacked in order to end the outage sooner.  To do that, you must cut three specific wires which do not cause a red light to shine, then pulse a fourth wire.  Electrical protection is highly recommended when doing maintenance on the grid checker.";
+	name = "grid checker info"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/engineering/engine_monitoring)
 "YF" = (
 /obj/machinery/light{
 	dir = 1
@@ -11902,8 +11896,8 @@ aa
 aa
 OV
 VK
-kT
-kT
+wW
+wW
 VK
 US
 Vk
@@ -11915,8 +11909,8 @@ VK
 Vk
 US
 iy
-kT
-kT
+wW
+wW
 VK
 VK
 aa
@@ -12010,9 +12004,9 @@ VK
 BX
 VK
 aa
-kT
+wW
 aa
-kT
+wW
 aa
 VK
 BX
@@ -12111,11 +12105,11 @@ aa
 VK
 US
 VK
-kT
+wW
 BO
 VK
 BO
-kT
+wW
 VK
 US
 VK
@@ -12208,8 +12202,8 @@ aa
 aa
 tW
 VK
-kT
-kT
+wW
+wW
 vf
 US
 VK
@@ -12221,8 +12215,8 @@ aa
 VK
 US
 iy
-kT
-kT
+wW
+wW
 VK
 tW
 aa
@@ -12315,11 +12309,11 @@ aa
 VK
 US
 VK
-kT
+wW
 BO
 VK
 BO
-kT
+wW
 VK
 US
 VK
@@ -12418,9 +12412,9 @@ VK
 BX
 VK
 aa
-kT
+wW
 aa
-kT
+wW
 aa
 VK
 BX
@@ -12514,8 +12508,8 @@ aa
 aa
 tW
 VK
-kT
-kT
+wW
+wW
 VK
 US
 Vk
@@ -12527,8 +12521,8 @@ VK
 Vk
 US
 iy
-kT
-kT
+wW
+wW
 VK
 tW
 aa
@@ -12735,9 +12729,9 @@ VK
 VK
 VK
 tW
-kT
-kT
-kT
+wW
+wW
+wW
 Zp
 aa
 aa
@@ -12839,7 +12833,7 @@ Dd
 Gk
 aa
 aa
-kT
+wW
 aa
 aa
 aa
@@ -12941,7 +12935,7 @@ xp
 Vd
 Vd
 aa
-kT
+wW
 aa
 aa
 aa
@@ -13043,7 +13037,7 @@ nO
 LN
 Vd
 aa
-kT
+wW
 aa
 aa
 aa
@@ -13145,7 +13139,7 @@ pZ
 Vd
 Vd
 aa
-kT
+wW
 aa
 aa
 aa
@@ -13247,7 +13241,7 @@ Ox
 Vd
 aa
 aa
-kT
+wW
 aa
 aa
 aa
@@ -13349,7 +13343,7 @@ KX
 Vd
 aa
 aa
-kT
+wW
 aa
 aa
 aa
@@ -13451,7 +13445,7 @@ Vd
 Vd
 Vd
 aa
-kT
+wW
 aa
 aa
 aa
@@ -13553,7 +13547,7 @@ PO
 PO
 Vd
 aa
-kT
+wW
 aa
 aa
 aa
@@ -13655,7 +13649,7 @@ PO
 Sd
 Vd
 aa
-kT
+wW
 aa
 aa
 aa
@@ -13757,7 +13751,7 @@ Vd
 Vd
 Vd
 aa
-kT
+wW
 aa
 aa
 aa
@@ -13859,7 +13853,7 @@ aa
 aa
 aa
 aa
-kT
+wW
 aa
 aa
 aa
@@ -13961,7 +13955,7 @@ fH
 aa
 aa
 aa
-kT
+wW
 aa
 aa
 aa
@@ -14063,7 +14057,7 @@ fH
 aa
 aa
 aa
-kT
+wW
 aa
 aa
 aa
@@ -14165,7 +14159,7 @@ fH
 aa
 aa
 aa
-kT
+wW
 aa
 aa
 aa
@@ -14267,7 +14261,7 @@ aa
 aa
 aa
 aa
-kT
+wW
 aa
 aa
 aa
@@ -14369,7 +14363,7 @@ aa
 aa
 aa
 aa
-kT
+wW
 aa
 aa
 aa
@@ -14471,7 +14465,7 @@ aa
 aa
 aa
 aa
-kT
+wW
 aa
 aa
 aa
@@ -14573,7 +14567,7 @@ tz
 aa
 aa
 aa
-kT
+wW
 aa
 aa
 aa
@@ -14675,7 +14669,7 @@ tz
 aa
 aa
 aa
-kT
+wW
 aa
 aa
 aa
@@ -14777,7 +14771,7 @@ tz
 aa
 aa
 aa
-kT
+wW
 aa
 aa
 aa
@@ -14877,14 +14871,14 @@ qQ
 lx
 tz
 Zp
-kT
-kT
-kT
-kT
-kT
-kT
+wW
+wW
+wW
+wW
+wW
+wW
 Zp
-kT
+wW
 aa
 aa
 aa
@@ -14965,9 +14959,9 @@ fA
 Sx
 nM
 fW
-ze
+BA
 Oj
-kr
+Yw
 QZ
 zw
 UT
@@ -15088,7 +15082,7 @@ II
 GB
 pL
 Vj
-kT
+wW
 aa
 aa
 aa
@@ -15159,11 +15153,11 @@ aa
 aa
 aa
 aa
-kT
-kT
-kT
-kT
-kT
+wW
+wW
+wW
+wW
+wW
 od
 Si
 Si
@@ -15190,7 +15184,7 @@ II
 GB
 Jo
 Vj
-kT
+wW
 aa
 aa
 aa
@@ -15261,7 +15255,7 @@ aa
 aa
 aa
 aa
-kT
+wW
 Pp
 pL
 Pp
@@ -15283,7 +15277,7 @@ Im
 Si
 od
 aa
-kT
+wW
 oG
 II
 GB
@@ -15292,7 +15286,7 @@ II
 GB
 pL
 Vj
-kT
+wW
 aa
 aa
 aa
@@ -15363,7 +15357,7 @@ aa
 aa
 aa
 aa
-kT
+wW
 Vj
 Vj
 Vj
@@ -15384,8 +15378,8 @@ Si
 vh
 mP
 od
-kT
-kT
+wW
+wW
 Pp
 II
 GB
@@ -15394,7 +15388,7 @@ II
 GB
 Jo
 Vj
-kT
+wW
 aa
 aa
 aa
@@ -15465,7 +15459,7 @@ aa
 aa
 aa
 aa
-kT
+wW
 sf
 sf
 sf
@@ -15487,7 +15481,7 @@ MJ
 zq
 od
 aa
-kT
+wW
 oG
 II
 GB
@@ -15496,7 +15490,7 @@ II
 GB
 pL
 Vj
-kT
+wW
 aa
 aa
 aa
@@ -15567,7 +15561,7 @@ aa
 aa
 aa
 aa
-kT
+wW
 Vj
 Vj
 Vj
@@ -15589,7 +15583,7 @@ jW
 Tx
 od
 aa
-kT
+wW
 Pp
 II
 GB
@@ -15598,7 +15592,7 @@ II
 GB
 Jo
 Vj
-kT
+wW
 aa
 aa
 aa
@@ -15669,7 +15663,7 @@ aa
 aa
 aa
 aa
-kT
+wW
 xZ
 xZ
 xZ
@@ -15691,7 +15685,7 @@ RL
 zs
 rE
 aa
-kT
+wW
 oG
 II
 GB
@@ -15700,7 +15694,7 @@ II
 GB
 pL
 Vj
-kT
+wW
 aa
 aa
 aa
@@ -15771,7 +15765,7 @@ aa
 aa
 aa
 aa
-kT
+wW
 qd
 pY
 pY
@@ -15793,7 +15787,7 @@ Hb
 uq
 od
 aa
-kT
+wW
 Pp
 II
 GB
@@ -15802,7 +15796,7 @@ II
 GB
 Jo
 Vj
-kT
+wW
 aa
 aa
 aa
@@ -15873,7 +15867,7 @@ aa
 aa
 aa
 aa
-kT
+wW
 AI
 AI
 AI
@@ -15895,7 +15889,7 @@ GM
 Tz
 od
 od
-kT
+wW
 oG
 II
 GB
@@ -15904,7 +15898,7 @@ II
 GB
 pL
 Vj
-kT
+wW
 aa
 aa
 aa
@@ -15975,7 +15969,7 @@ aa
 aa
 aa
 aa
-kT
+wW
 Vj
 Vj
 Vj
@@ -16077,7 +16071,7 @@ aa
 aa
 aa
 aa
-kT
+wW
 sf
 sf
 sf
@@ -16179,7 +16173,7 @@ aa
 aa
 aa
 aa
-kT
+wW
 Vj
 Vj
 Vj
@@ -16201,7 +16195,7 @@ od
 od
 od
 od
-kT
+wW
 Pp
 II
 GB
@@ -16210,7 +16204,7 @@ II
 GB
 Jo
 Vj
-kT
+wW
 aa
 aa
 aa
@@ -16281,7 +16275,7 @@ aa
 aa
 aa
 aa
-kT
+wW
 oG
 Jo
 oG
@@ -16303,7 +16297,7 @@ od
 Ed
 Qs
 tz
-kT
+wW
 oG
 II
 GB
@@ -16312,7 +16306,7 @@ II
 GB
 pL
 Vj
-kT
+wW
 aa
 aa
 aa
@@ -16383,11 +16377,11 @@ aa
 aa
 aa
 aa
-kT
-kT
-kT
-kT
-kT
+wW
+wW
+wW
+wW
+wW
 od
 od
 od
@@ -16405,7 +16399,7 @@ od
 Ed
 Ed
 tz
-kT
+wW
 Pp
 II
 GB
@@ -16414,7 +16408,7 @@ II
 GB
 Jo
 Vj
-kT
+wW
 aa
 aa
 aa
@@ -16507,7 +16501,7 @@ JB
 lx
 lx
 tz
-kT
+wW
 oG
 II
 GB
@@ -16516,7 +16510,7 @@ II
 GB
 pL
 Vj
-kT
+wW
 aa
 aa
 aa
@@ -16609,7 +16603,7 @@ JB
 lx
 lx
 tz
-kT
+wW
 Pp
 II
 GB
@@ -16618,7 +16612,7 @@ II
 GB
 Jo
 Vj
-kT
+wW
 aa
 aa
 aa
@@ -16711,7 +16705,7 @@ JB
 lx
 lx
 tz
-kT
+wW
 oG
 II
 GB
@@ -16720,7 +16714,7 @@ II
 GB
 pL
 Vj
-kT
+wW
 aa
 aa
 aa
@@ -16813,7 +16807,7 @@ od
 mo
 Oy
 tz
-kT
+wW
 Pp
 II
 GB
@@ -16822,7 +16816,7 @@ II
 GB
 Jo
 Vj
-kT
+wW
 aa
 aa
 aa
@@ -16915,7 +16909,7 @@ od
 mo
 zA
 tz
-kT
+wW
 oG
 II
 GB
@@ -16924,7 +16918,7 @@ II
 GB
 pL
 Vj
-kT
+wW
 aa
 aa
 aa
@@ -17017,7 +17011,7 @@ od
 tz
 tz
 tz
-kT
+wW
 Pp
 II
 GB
@@ -17026,7 +17020,7 @@ II
 GB
 Jo
 Vj
-kT
+wW
 aa
 aa
 aa
@@ -17221,16 +17215,16 @@ aa
 aa
 aa
 aa
-kT
+wW
 Zp
-kT
-kT
-kT
-kT
-kT
-kT
+wW
+wW
+wW
+wW
+wW
+wW
 Zp
-kT
+wW
 aa
 aa
 aa

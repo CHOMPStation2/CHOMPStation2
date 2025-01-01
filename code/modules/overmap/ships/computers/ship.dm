@@ -34,7 +34,7 @@ somewhere on that shuttle. Subtypes of these can be then used to perform ship ov
 
 /obj/machinery/computer/ship/proc/display_reconnect_dialog(var/mob/user, var/flavor)
 	var/datum/browser/popup = new (user, "[src]", "[src]")
-	popup.set_content("<center><strong><font color = 'red'>Error</strong></font><br>Unable to connect to [flavor].<br><a href='?src=\ref[src];sync=1'>Reconnect</a></center>")
+	popup.set_content("<center><strong><font color = 'red'>Error</strong></font><br>Unable to connect to [flavor].<br><a href='byond://?src=\ref[src];sync=1'>Reconnect</a></center>")
 	popup.open()
 
 /obj/machinery/computer/ship/Topic(href, href_list)
@@ -55,11 +55,11 @@ somewhere on that shuttle. Subtypes of these can be then used to perform ship ov
 		return TRUE
 	switch(action)
 		if("sync")
-			sync_linked(usr)
+			sync_linked(ui.user)
 			return TRUE
 		if("close")
-			unlook(usr)
-			usr.unset_machine()
+			unlook(ui.user)
+			ui.user.unset_machine()
 			return TRUE
 	return FALSE
 

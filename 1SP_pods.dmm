@@ -1468,13 +1468,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/survivalpod/superpose/CultShip)
-"bbP" = (
-/obj/structure/hull_corner{
-	dir = 4
-	},
-/obj/structure/lattice,
-/turf/template_noop,
-/area/template_noop)
 "bcf" = (
 /obj/structure/table/standard,
 /obj/machinery/reagentgrinder,
@@ -1578,6 +1571,12 @@
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/template_noop)
+"bhX" = (
+/obj/item/reagent_containers/glass/rag,
+/obj/item/clothing/accessory/ring/engagement,
+/obj/structure/table/wooden_reinforced,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
 "bia" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
@@ -2610,6 +2609,23 @@
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/template_noop)
+"bWt" = (
+/obj/item/clothing/accessory/ring/material/gold,
+/obj/item/clothing/ears/earring/stud/gold,
+/obj/item/gun/projectile/deagle/gold{
+	pixel_x = -11;
+	pixel_y = -22
+	},
+/obj/item/coin/gold{
+	pixel_x = -7;
+	pixel_y = -2
+	},
+/obj/item/coin/gold{
+	pixel_x = 5;
+	pixel_y = 7
+	},
+/turf/simulated/floor/outdoors/newdirt,
+/area/survivalpod/superpose/DragonCave)
 "bWy" = (
 /obj/machinery/floodlight,
 /turf/simulated/floor/plating,
@@ -4646,6 +4662,149 @@
 	},
 /turf/simulated/shuttle/floor,
 /area/survivalpod)
+"dAy" = (
+/obj/machinery/smartfridge/survival_pod{
+	icon = 'icons/obj/vending.dmi';
+	icon_base = "smartfridge";
+	icon_contents = "boxes";
+	icon_state = "smartfridge";
+	name = "Advanced storage";
+	pixel_y = -1
+	},
+/obj/item/storage/toolbox/mechanical{
+	pixel_x = -2;
+	pixel_y = -1
+	},
+/obj/item/storage/toolbox/mechanical{
+	pixel_x = -2;
+	pixel_y = -1
+	},
+/obj/item/storage/toolbox/electrical{
+	pixel_x = 1;
+	pixel_y = 6
+	},
+/obj/item/storage/toolbox/electrical{
+	pixel_x = 1;
+	pixel_y = 6
+	},
+/obj/item/storage/belt/utility,
+/obj/item/storage/belt/utility,
+/obj/item/multitool{
+	pixel_x = 3
+	},
+/obj/item/multitool{
+	pixel_x = 3
+	},
+/obj/item/tool/crowbar,
+/obj/item/tool/crowbar,
+/obj/item/tool/crowbar,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/item/mmi,
+/obj/item/mmi,
+/obj/item/mmi,
+/obj/item/clothing/head/welding{
+	pixel_x = -3;
+	pixel_y = 5
+	},
+/obj/item/clothing/head/welding{
+	pixel_x = -3;
+	pixel_y = 5
+	},
+/obj/item/clothing/head/welding/demon,
+/obj/item/clothing/glasses/welding,
+/obj/item/clothing/glasses/welding,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/obj/item/healthanalyzer,
+/obj/item/healthanalyzer,
+/obj/item/flash/synthetic,
+/obj/item/flash/synthetic,
+/obj/item/flash/synthetic,
+/obj/item/storage/firstaid/regular{
+	empty = 1;
+	name = "First-Aid (empty)"
+	},
+/obj/item/storage/firstaid/regular{
+	empty = 1;
+	name = "First-Aid (empty)"
+	},
+/obj/item/cell/high{
+	pixel_x = 5;
+	pixel_y = -5
+	},
+/obj/item/cell/high{
+	pixel_x = 5;
+	pixel_y = -5
+	},
+/obj/item/assembly/prox_sensor{
+	pixel_x = -8;
+	pixel_y = 4
+	},
+/obj/item/assembly/prox_sensor{
+	pixel_x = -8;
+	pixel_y = 4
+	},
+/obj/item/stack/material/copper{
+	amount = 25
+	},
+/obj/item/stack/material/plastic{
+	max_amount = 25
+	},
+/obj/item/stack/material/plastic{
+	max_amount = 25
+	},
+/obj/item/stack/material/plasteel{
+	amount = 10
+	},
+/obj/item/stack/material/plasteel{
+	amount = 10
+	},
+/obj/item/stack/material/glass{
+	amount = 50;
+	pixel_x = -2;
+	pixel_y = 2
+	},
+/obj/item/stack/material/glass{
+	amount = 50;
+	pixel_x = -2;
+	pixel_y = 2
+	},
+/obj/item/stack/material/glass{
+	amount = 50;
+	pixel_x = -2;
+	pixel_y = 2
+	},
+/obj/item/stack/material/glass{
+	amount = 50;
+	pixel_x = -2;
+	pixel_y = 2
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/flash,
+/obj/item/flash,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas,
+/obj/item/implanter,
+/obj/item/implanter,
+/obj/item/implanter,
+/obj/item/storage/backpack/dufflebag/sci,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/template_noop)
 "dAA" = (
 /obj/machinery/atmospherics/pipe/tank/phoron/full{
 	dir = 4
@@ -6319,6 +6478,88 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled,
 /area/survivalpod/superpose/HydroCave)
+"eyJ" = (
+/obj/machinery/smartfridge/survival_pod{
+	icon = 'icons/obj/vending.dmi';
+	icon_base = "smartfridge";
+	icon_contents = "boxes";
+	icon_state = "smartfridge";
+	name = "Advanced storage";
+	pixel_y = -1
+	},
+/obj/item/suit_cooling_unit,
+/obj/item/suit_cooling_unit,
+/obj/item/suit_cooling_unit,
+/obj/item/flashlight/maglight,
+/obj/item/flashlight/maglight,
+/obj/item/flashlight/maglight,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/plastic,
+/obj/item/stack/material/plasteel{
+	amount = 30
+	},
+/obj/fiftyspawner/rods,
+/obj/fiftyspawner/rods,
+/obj/item/stack/material/glass/phoronrglass{
+	amount = 20
+	},
+/obj/item/storage/toolbox/mechanical{
+	pixel_y = 5
+	},
+/obj/item/storage/toolbox/mechanical{
+	pixel_y = 5
+	},
+/obj/item/storage/toolbox/electrical,
+/obj/item/storage/toolbox/emergency,
+/obj/item/storage/toolbox/emergency,
+/obj/item/cell/high,
+/obj/item/cell/high,
+/obj/item/cell/high,
+/obj/item/radio/off,
+/obj/item/radio/off,
+/obj/item/radio/off,
+/obj/item/radio/off,
+/obj/item/radio/off,
+/obj/item/radio/off,
+/obj/item/radio/off,
+/obj/item/cell/device/hyper,
+/obj/item/cell/device/hyper,
+/obj/item/cell/device/hyper,
+/obj/item/clothing/glasses/meson,
+/obj/item/clothing/glasses/meson,
+/obj/item/clothing/gloves/yellow,
+/obj/item/clothing/gloves/yellow,
+/obj/item/clothing/head/welding/demon,
+/obj/item/clothing/head/welding/knight,
+/obj/item/clothing/glasses/welding,
+/obj/random/tech_supply,
+/obj/random/tech_supply,
+/obj/random/tech_supply,
+/obj/random/tech_supply,
+/obj/random/tech_supply,
+/obj/random/maintenance/engineering,
+/obj/random/maintenance/engineering,
+/obj/random/maintenance/engineering,
+/obj/random/maintenance/engineering,
+/obj/random/maintenance/engineering,
+/obj/item/inducer,
+/obj/item/storage/belt/utility/full,
+/obj/item/storage/belt/utility/full,
+/obj/item/multitool,
+/obj/item/multitool,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/megaphone,
+/obj/item/megaphone,
+/obj/item/extinguisher/atmo,
+/obj/item/extinguisher/atmo,
+/obj/item/suit_cooling_unit,
+/obj/item/suit_cooling_unit,
+/obj/item/storage/backpack/dufflebag/eng,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/template_noop)
 "eyY" = (
 /obj/structure/window/reinforced/polarized{
 	id = "SP-Hydro"
@@ -6857,6 +7098,57 @@
 "eQk" = (
 /obj/structure/bed/chair,
 /turf/simulated/floor/outdoors/rocks,
+/area/template_noop)
+"eRd" = (
+/obj/structure/window/reinforced/survival_pod{
+	opacity = 1
+	},
+/obj/machinery/smartfridge/survival_pod{
+	icon = 'icons/obj/vending.dmi';
+	icon_base = "smartfridge";
+	icon_contents = "boxes";
+	icon_state = "smartfridge";
+	name = "Advanced storage";
+	pixel_y = -1
+	},
+/obj/item/stock_parts/micro_laser,
+/obj/item/stock_parts/micro_laser,
+/obj/item/stock_parts/matter_bin,
+/obj/item/stock_parts/matter_bin,
+/obj/item/stock_parts/console_screen,
+/obj/item/stock_parts/console_screen,
+/obj/item/storage/toolbox/mechanical{
+	pixel_x = -2;
+	pixel_y = -1
+	},
+/obj/item/storage/toolbox/mechanical{
+	pixel_x = -2;
+	pixel_y = -1
+	},
+/obj/item/clothing/gloves/sterile/latex,
+/obj/item/clothing/gloves/sterile/latex,
+/obj/item/storage/belt/utility,
+/obj/item/storage/belt/utility,
+/obj/item/cell/high,
+/obj/item/cell/high,
+/obj/item/stack/material/copper{
+	amount = 25
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50;
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas,
+/obj/item/disk/design_disk,
+/obj/item/disk/design_disk,
+/obj/item/disk/tech_disk,
+/obj/item/disk/tech_disk,
+/turf/simulated/shuttle/floor/voidcraft/light,
 /area/template_noop)
 "eRn" = (
 /obj/structure/disposalpipe/segment,
@@ -8028,12 +8320,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/template_noop)
-"fGT" = (
-/obj/item/reagent_containers/glass/rag,
-/obj/item/clothing/gloves/ring/engagement,
-/obj/structure/table/wooden_reinforced,
-/turf/simulated/floor/wood,
-/area/survivalpod/superpose/LoneHome)
 "fHf" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -9260,153 +9546,6 @@
 	},
 /turf/simulated/shuttle/floor/purple,
 /area/survivalpod/superpose/ScienceShip)
-"gDk" = (
-/obj/machinery/smartfridge/survival_pod{
-	icon = 'icons/obj/vending.dmi';
-	icon_base = "smartfridge";
-	icon_contents = "boxes";
-	icon_state = "smartfridge";
-	name = "Advanced storage";
-	pixel_y = -1
-	},
-/obj/item/storage/toolbox/mechanical{
-	pixel_x = -2;
-	pixel_y = -1
-	},
-/obj/item/storage/toolbox/mechanical{
-	pixel_x = -2;
-	pixel_y = -1
-	},
-/obj/item/storage/toolbox/electrical{
-	pixel_x = 1;
-	pixel_y = 6
-	},
-/obj/item/storage/toolbox/electrical{
-	pixel_x = 1;
-	pixel_y = 6
-	},
-/obj/item/storage/belt/utility,
-/obj/item/storage/belt/utility,
-/obj/item/multitool{
-	pixel_x = 3
-	},
-/obj/item/multitool{
-	pixel_x = 3
-	},
-/obj/item/tool/crowbar,
-/obj/item/tool/crowbar,
-/obj/item/tool/crowbar,
-/obj/item/mmi,
-/obj/item/mmi,
-/obj/item/mmi,
-/obj/item/clothing/head/welding{
-	pixel_x = -3;
-	pixel_y = 5
-	},
-/obj/item/clothing/head/welding{
-	pixel_x = -3;
-	pixel_y = 5
-	},
-/obj/item/clothing/head/welding/demon,
-/obj/item/clothing/glasses/welding,
-/obj/item/clothing/glasses/welding,
-/obj/item/stack/cable_coil,
-/obj/item/stack/cable_coil,
-/obj/item/stack/cable_coil,
-/obj/item/healthanalyzer,
-/obj/item/healthanalyzer,
-/obj/item/flash/synthetic,
-/obj/item/flash/synthetic,
-/obj/item/flash/synthetic,
-/obj/item/storage/firstaid/regular{
-	empty = 1;
-	name = "First-Aid (empty)"
-	},
-/obj/item/storage/firstaid/regular{
-	empty = 1;
-	name = "First-Aid (empty)"
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000;
-	pixel_x = 5;
-	pixel_y = -5
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000;
-	pixel_x = 5;
-	pixel_y = -5
-	},
-/obj/item/assembly/prox_sensor{
-	pixel_x = -8;
-	pixel_y = 4
-	},
-/obj/item/assembly/prox_sensor{
-	pixel_x = -8;
-	pixel_y = 4
-	},
-/obj/item/stack/material/copper{
-	amount = 25
-	},
-/obj/item/stack/material/plastic{
-	max_amount = 25
-	},
-/obj/item/stack/material/plastic{
-	max_amount = 25
-	},
-/obj/item/stack/material/plasteel{
-	amount = 10
-	},
-/obj/item/stack/material/plasteel{
-	amount = 10
-	},
-/obj/item/stack/material/glass{
-	amount = 50;
-	pixel_x = -2;
-	pixel_y = 2
-	},
-/obj/item/stack/material/glass{
-	amount = 50;
-	pixel_x = -2;
-	pixel_y = 2
-	},
-/obj/item/stack/material/glass{
-	amount = 50;
-	pixel_x = -2;
-	pixel_y = 2
-	},
-/obj/item/stack/material/glass{
-	amount = 50;
-	pixel_x = -2;
-	pixel_y = 2
-	},
-/obj/item/stack/material/steel{
-	amount = 50
-	},
-/obj/item/stack/material/steel{
-	amount = 50
-	},
-/obj/item/stack/material/steel{
-	amount = 50
-	},
-/obj/item/stack/material/steel{
-	amount = 50
-	},
-/obj/item/flash,
-/obj/item/flash,
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/item/clothing/mask/gas,
-/obj/item/clothing/mask/gas,
-/obj/item/implanter,
-/obj/item/implanter,
-/obj/item/implanter,
-/obj/item/storage/backpack/dufflebag/sci,
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/simulated/shuttle/floor/voidcraft/light,
-/area/template_noop)
 "gDA" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -11047,97 +11186,6 @@
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/template_noop)
-"hMm" = (
-/obj/machinery/smartfridge/survival_pod{
-	icon = 'icons/obj/vending.dmi';
-	icon_base = "smartfridge";
-	icon_contents = "boxes";
-	icon_state = "smartfridge";
-	name = "Advanced storage";
-	pixel_y = -1
-	},
-/obj/item/suit_cooling_unit,
-/obj/item/suit_cooling_unit,
-/obj/item/suit_cooling_unit,
-/obj/item/flashlight/maglight,
-/obj/item/flashlight/maglight,
-/obj/item/flashlight/maglight,
-/obj/fiftyspawner/glass,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/plastic,
-/obj/item/stack/material/plasteel{
-	amount = 30
-	},
-/obj/fiftyspawner/rods,
-/obj/fiftyspawner/rods,
-/obj/item/stack/material/glass/phoronrglass{
-	amount = 20
-	},
-/obj/item/storage/toolbox/mechanical{
-	pixel_y = 5
-	},
-/obj/item/storage/toolbox/mechanical{
-	pixel_y = 5
-	},
-/obj/item/storage/toolbox/electrical,
-/obj/item/storage/toolbox/emergency,
-/obj/item/storage/toolbox/emergency,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/radio/off,
-/obj/item/radio/off,
-/obj/item/radio/off,
-/obj/item/radio/off,
-/obj/item/radio/off,
-/obj/item/radio/off,
-/obj/item/radio/off,
-/obj/item/cell/device/hyper,
-/obj/item/cell/device/hyper,
-/obj/item/cell/device/hyper,
-/obj/item/clothing/glasses/meson,
-/obj/item/clothing/glasses/meson,
-/obj/item/clothing/gloves/yellow,
-/obj/item/clothing/gloves/yellow,
-/obj/item/clothing/head/welding/demon,
-/obj/item/clothing/head/welding/knight,
-/obj/item/clothing/glasses/welding,
-/obj/random/tech_supply,
-/obj/random/tech_supply,
-/obj/random/tech_supply,
-/obj/random/tech_supply,
-/obj/random/tech_supply,
-/obj/random/maintenance/engineering,
-/obj/random/maintenance/engineering,
-/obj/random/maintenance/engineering,
-/obj/random/maintenance/engineering,
-/obj/random/maintenance/engineering,
-/obj/item/inducer,
-/obj/item/storage/belt/utility/full,
-/obj/item/storage/belt/utility/full,
-/obj/item/multitool,
-/obj/item/multitool,
-/obj/item/storage/briefcase/inflatable,
-/obj/item/storage/briefcase/inflatable,
-/obj/item/storage/briefcase/inflatable,
-/obj/item/megaphone,
-/obj/item/megaphone,
-/obj/item/extinguisher/atmo,
-/obj/item/extinguisher/atmo,
-/obj/item/suit_cooling_unit,
-/obj/item/suit_cooling_unit,
-/obj/item/storage/backpack/dufflebag/eng,
-/turf/simulated/shuttle/floor/voidcraft/dark,
-/area/template_noop)
 "hMS" = (
 /obj/effect/catwalk_plated/dark,
 /turf/simulated/floor/tiled/steel_dirty{
@@ -12530,6 +12578,11 @@
 "iTi" = (
 /obj/item/tape_roll,
 /turf/simulated/floor/tiled/techmaint,
+/area/template_noop)
+"iTI" = (
+/turf/simulated/floor/flesh/colour{
+	color = "red"
+	},
 /area/template_noop)
 "iUt" = (
 /obj/item/reagent_containers/food/condiment/enzyme,
@@ -15994,153 +16047,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/HydroCave)
-"lnr" = (
-/obj/machinery/smartfridge/survival_pod{
-	icon = 'icons/obj/vending.dmi';
-	icon_base = "smartfridge";
-	icon_contents = "boxes";
-	icon_state = "smartfridge";
-	name = "Advanced storage";
-	pixel_y = -1
-	},
-/obj/item/storage/toolbox/mechanical{
-	pixel_x = -2;
-	pixel_y = -1
-	},
-/obj/item/storage/toolbox/mechanical{
-	pixel_x = -2;
-	pixel_y = -1
-	},
-/obj/item/storage/toolbox/electrical{
-	pixel_x = 1;
-	pixel_y = 6
-	},
-/obj/item/storage/toolbox/electrical{
-	pixel_x = 1;
-	pixel_y = 6
-	},
-/obj/item/storage/belt/utility,
-/obj/item/storage/belt/utility,
-/obj/item/multitool{
-	pixel_x = 3
-	},
-/obj/item/multitool{
-	pixel_x = 3
-	},
-/obj/item/tool/crowbar,
-/obj/item/tool/crowbar,
-/obj/item/tool/crowbar,
-/obj/structure/window/reinforced/survival_pod{
-	dir = 1
-	},
-/obj/item/mmi,
-/obj/item/mmi,
-/obj/item/mmi,
-/obj/item/clothing/head/welding{
-	pixel_x = -3;
-	pixel_y = 5
-	},
-/obj/item/clothing/head/welding{
-	pixel_x = -3;
-	pixel_y = 5
-	},
-/obj/item/clothing/head/welding/demon,
-/obj/item/clothing/glasses/welding,
-/obj/item/clothing/glasses/welding,
-/obj/item/stack/cable_coil,
-/obj/item/stack/cable_coil,
-/obj/item/stack/cable_coil,
-/obj/item/healthanalyzer,
-/obj/item/healthanalyzer,
-/obj/item/flash/synthetic,
-/obj/item/flash/synthetic,
-/obj/item/flash/synthetic,
-/obj/item/storage/firstaid/regular{
-	empty = 1;
-	name = "First-Aid (empty)"
-	},
-/obj/item/storage/firstaid/regular{
-	empty = 1;
-	name = "First-Aid (empty)"
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000;
-	pixel_x = 5;
-	pixel_y = -5
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000;
-	pixel_x = 5;
-	pixel_y = -5
-	},
-/obj/item/assembly/prox_sensor{
-	pixel_x = -8;
-	pixel_y = 4
-	},
-/obj/item/assembly/prox_sensor{
-	pixel_x = -8;
-	pixel_y = 4
-	},
-/obj/item/stack/material/copper{
-	amount = 25
-	},
-/obj/item/stack/material/plastic{
-	max_amount = 25
-	},
-/obj/item/stack/material/plastic{
-	max_amount = 25
-	},
-/obj/item/stack/material/plasteel{
-	amount = 10
-	},
-/obj/item/stack/material/plasteel{
-	amount = 10
-	},
-/obj/item/stack/material/glass{
-	amount = 50;
-	pixel_x = -2;
-	pixel_y = 2
-	},
-/obj/item/stack/material/glass{
-	amount = 50;
-	pixel_x = -2;
-	pixel_y = 2
-	},
-/obj/item/stack/material/glass{
-	amount = 50;
-	pixel_x = -2;
-	pixel_y = 2
-	},
-/obj/item/stack/material/glass{
-	amount = 50;
-	pixel_x = -2;
-	pixel_y = 2
-	},
-/obj/item/stack/material/steel{
-	amount = 50
-	},
-/obj/item/stack/material/steel{
-	amount = 50
-	},
-/obj/item/stack/material/steel{
-	amount = 50
-	},
-/obj/item/stack/material/steel{
-	amount = 50
-	},
-/obj/item/flash,
-/obj/item/flash,
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/item/clothing/mask/gas,
-/obj/item/clothing/mask/gas,
-/obj/item/implanter,
-/obj/item/implanter,
-/obj/item/implanter,
-/obj/item/storage/backpack/dufflebag/sci,
-/turf/simulated/shuttle/floor/voidcraft/light,
-/area/template_noop)
 "lnv" = (
 /obj/machinery/newscaster{
 	pixel_x = 30
@@ -22056,6 +21962,19 @@
 	},
 /turf/simulated/shuttle/floor/purple,
 /area/survivalpod)
+"pkz" = (
+/obj/structure/table/steel,
+/obj/machinery/cell_charger,
+/obj/item/cell/high{
+	pixel_x = 2;
+	pixel_y = 4
+	},
+/obj/item/cell/high,
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_y = 28
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/template_noop)
 "pkC" = (
 /obj/machinery/vending/foodfish,
 /turf/simulated/shuttle/floor/black,
@@ -24301,24 +24220,6 @@
 /obj/item/survivalcapsule/superpose,
 /turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
-"pLO" = (
-/obj/structure/table/steel,
-/obj/machinery/cell_charger,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000;
-	pixel_x = 2;
-	pixel_y = 4
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/machinery/computer/security/telescreen/entertainment{
-	pixel_y = 28
-	},
-/turf/simulated/shuttle/floor/voidcraft/dark,
-/area/template_noop)
 "pLQ" = (
 /turf/simulated/wall/wood,
 /area/template_noop)
@@ -24537,63 +24438,6 @@
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/wood,
 /area/template_noop)
-"pUy" = (
-/obj/structure/window/reinforced/survival_pod{
-	opacity = 1
-	},
-/obj/machinery/smartfridge/survival_pod{
-	icon = 'icons/obj/vending.dmi';
-	icon_base = "smartfridge";
-	icon_contents = "boxes";
-	icon_state = "smartfridge";
-	name = "Advanced storage";
-	pixel_y = -1
-	},
-/obj/item/stock_parts/micro_laser,
-/obj/item/stock_parts/micro_laser,
-/obj/item/stock_parts/matter_bin,
-/obj/item/stock_parts/matter_bin,
-/obj/item/stock_parts/console_screen,
-/obj/item/stock_parts/console_screen,
-/obj/item/storage/toolbox/mechanical{
-	pixel_x = -2;
-	pixel_y = -1
-	},
-/obj/item/storage/toolbox/mechanical{
-	pixel_x = -2;
-	pixel_y = -1
-	},
-/obj/item/clothing/gloves/sterile/latex,
-/obj/item/clothing/gloves/sterile/latex,
-/obj/item/storage/belt/utility,
-/obj/item/storage/belt/utility,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/stack/material/copper{
-	amount = 25
-	},
-/obj/item/stack/material/steel{
-	amount = 50
-	},
-/obj/item/stack/material/glass{
-	amount = 50;
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/item/clothing/mask/gas,
-/obj/item/clothing/mask/gas,
-/obj/item/disk/design_disk,
-/obj/item/disk/design_disk,
-/obj/item/disk/tech_disk,
-/obj/item/disk/tech_disk,
-/turf/simulated/shuttle/floor/voidcraft/light,
-/area/template_noop)
 "pUP" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/table/standard,
@@ -24727,11 +24571,6 @@
 	},
 /turf/template_noop,
 /area/survivalpod/superpose/LoneHome)
-"qaP" = (
-/turf/simulated/floor/flesh/colour{
-	color = "red"
-	},
-/area/survivalpod/superpose/HellCave)
 "qaS" = (
 /obj/structure/dispenser/oxygen,
 /turf/simulated/mineral/floor/ignore_mapgen,
@@ -25620,23 +25459,6 @@
 /obj/item/fulton_core,
 /turf/simulated/floor/tiled/techmaint,
 /area/template_noop)
-"qFp" = (
-/obj/item/clothing/gloves/ring/material/gold,
-/obj/item/clothing/ears/earring/stud/gold,
-/obj/item/gun/projectile/deagle/gold{
-	pixel_x = -11;
-	pixel_y = -22
-	},
-/obj/item/coin/gold{
-	pixel_x = -7;
-	pixel_y = -2
-	},
-/obj/item/coin/gold{
-	pixel_x = 5;
-	pixel_y = 7
-	},
-/turf/simulated/floor/outdoors/newdirt,
-/area/survivalpod/superpose/DragonCave)
 "qFs" = (
 /obj/machinery/button/remote/blast_door{
 	dir = 8;
@@ -26580,6 +26402,13 @@
 /obj/random/meat,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/Farm)
+"rug" = (
+/obj/structure/hull_corner{
+	dir = 4
+	},
+/obj/structure/lattice,
+/turf/template_noop,
+/area/template_noop)
 "ruW" = (
 /obj/structure/flora/tree/sif,
 /turf/template_noop,
@@ -32661,11 +32490,6 @@
 	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/survivalpod/superpose/GrandLibrary)
-"whZ" = (
-/turf/simulated/floor/flesh/colour{
-	color = "red"
-	},
-/area/template_noop)
 "wiQ" = (
 /obj/machinery/power/generator,
 /turf/simulated/shuttle/plating/skipjack,
@@ -33121,6 +32945,149 @@
 "wyB" = (
 /obj/structure/sign/science,
 /turf/simulated/shuttle/wall/voidcraft/survival,
+/area/template_noop)
+"wzm" = (
+/obj/machinery/smartfridge/survival_pod{
+	icon = 'icons/obj/vending.dmi';
+	icon_base = "smartfridge";
+	icon_contents = "boxes";
+	icon_state = "smartfridge";
+	name = "Advanced storage";
+	pixel_y = -1
+	},
+/obj/item/storage/toolbox/mechanical{
+	pixel_x = -2;
+	pixel_y = -1
+	},
+/obj/item/storage/toolbox/mechanical{
+	pixel_x = -2;
+	pixel_y = -1
+	},
+/obj/item/storage/toolbox/electrical{
+	pixel_x = 1;
+	pixel_y = 6
+	},
+/obj/item/storage/toolbox/electrical{
+	pixel_x = 1;
+	pixel_y = 6
+	},
+/obj/item/storage/belt/utility,
+/obj/item/storage/belt/utility,
+/obj/item/multitool{
+	pixel_x = 3
+	},
+/obj/item/multitool{
+	pixel_x = 3
+	},
+/obj/item/tool/crowbar,
+/obj/item/tool/crowbar,
+/obj/item/tool/crowbar,
+/obj/item/mmi,
+/obj/item/mmi,
+/obj/item/mmi,
+/obj/item/clothing/head/welding{
+	pixel_x = -3;
+	pixel_y = 5
+	},
+/obj/item/clothing/head/welding{
+	pixel_x = -3;
+	pixel_y = 5
+	},
+/obj/item/clothing/head/welding/demon,
+/obj/item/clothing/glasses/welding,
+/obj/item/clothing/glasses/welding,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/obj/item/healthanalyzer,
+/obj/item/healthanalyzer,
+/obj/item/flash/synthetic,
+/obj/item/flash/synthetic,
+/obj/item/flash/synthetic,
+/obj/item/storage/firstaid/regular{
+	empty = 1;
+	name = "First-Aid (empty)"
+	},
+/obj/item/storage/firstaid/regular{
+	empty = 1;
+	name = "First-Aid (empty)"
+	},
+/obj/item/cell/high{
+	pixel_x = 5;
+	pixel_y = -5
+	},
+/obj/item/cell/high{
+	pixel_x = 5;
+	pixel_y = -5
+	},
+/obj/item/assembly/prox_sensor{
+	pixel_x = -8;
+	pixel_y = 4
+	},
+/obj/item/assembly/prox_sensor{
+	pixel_x = -8;
+	pixel_y = 4
+	},
+/obj/item/stack/material/copper{
+	amount = 25
+	},
+/obj/item/stack/material/plastic{
+	max_amount = 25
+	},
+/obj/item/stack/material/plastic{
+	max_amount = 25
+	},
+/obj/item/stack/material/plasteel{
+	amount = 10
+	},
+/obj/item/stack/material/plasteel{
+	amount = 10
+	},
+/obj/item/stack/material/glass{
+	amount = 50;
+	pixel_x = -2;
+	pixel_y = 2
+	},
+/obj/item/stack/material/glass{
+	amount = 50;
+	pixel_x = -2;
+	pixel_y = 2
+	},
+/obj/item/stack/material/glass{
+	amount = 50;
+	pixel_x = -2;
+	pixel_y = 2
+	},
+/obj/item/stack/material/glass{
+	amount = 50;
+	pixel_x = -2;
+	pixel_y = 2
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/flash,
+/obj/item/flash,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas,
+/obj/item/implanter,
+/obj/item/implanter,
+/obj/item/implanter,
+/obj/item/storage/backpack/dufflebag/sci,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
 /area/template_noop)
 "wzw" = (
 /obj/structure/grille/broken/cult,
@@ -34436,6 +34403,11 @@
 /obj/structure/table/hardwoodtable,
 /turf/simulated/floor/carpet,
 /area/template_noop)
+"xmF" = (
+/turf/simulated/floor/flesh/colour{
+	color = "red"
+	},
+/area/survivalpod/superpose/HellCave)
 "xmG" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /turf/simulated/floor/tiled/white,
@@ -36532,7 +36504,7 @@ jtI
 jtI
 jtI
 vIX
-pLO
+pkz
 lBN
 ktQ
 ljl
@@ -37130,7 +37102,7 @@ iru
 xFS
 oPZ
 uHE
-bbP
+rug
 nko
 rZR
 ktQ
@@ -37388,7 +37360,7 @@ wWX
 lUH
 uHE
 uHE
-bbP
+rug
 rZR
 rZR
 ktQ
@@ -39958,7 +39930,7 @@ wWX
 uHE
 wWX
 uHE
-bbP
+rug
 pIr
 pIr
 pIr
@@ -41735,7 +41707,7 @@ ljl
 cAb
 xNr
 xNr
-pUy
+eRd
 uxZ
 xNr
 xNr
@@ -42425,7 +42397,7 @@ ktQ
 vIX
 uSV
 ppI
-hMm
+eyJ
 thn
 ymd
 enm
@@ -42435,7 +42407,7 @@ ktQ
 vIX
 oIA
 qoz
-pUy
+eRd
 iEQ
 dxl
 sEI
@@ -42694,7 +42666,7 @@ ske
 mnQ
 bnA
 xNr
-lnr
+dAy
 tFt
 qpl
 aoX
@@ -42760,7 +42732,7 @@ rKi
 rzQ
 ktQ
 ljl
-gDk
+wzm
 xNr
 xNr
 ceL
@@ -61709,7 +61681,7 @@ hsG
 uvB
 ciK
 sCA
-fGT
+bhX
 aww
 xUr
 xaq
@@ -80734,9 +80706,9 @@ wkD
 wEE
 wEE
 kag
-qaP
-qaP
-qaP
+xmF
+xmF
+xmF
 wEE
 wkD
 kag
@@ -80991,9 +80963,9 @@ wkD
 wEE
 kag
 kag
-qaP
-qaP
-qaP
+xmF
+xmF
+xmF
 wEE
 wkD
 kag
@@ -81245,11 +81217,11 @@ wkD
 kkC
 wEE
 wEE
-qaP
-qaP
-qaP
-qaP
-qaP
+xmF
+xmF
+xmF
+xmF
+xmF
 wEE
 wEE
 wkD
@@ -81501,12 +81473,12 @@ wkD
 wkD
 wkD
 wEE
-qaP
-qaP
-qaP
-qaP
-qaP
-qaP
+xmF
+xmF
+xmF
+xmF
+xmF
+xmF
 wEE
 wEE
 wkD
@@ -81755,15 +81727,15 @@ nNa
 wkD
 wEE
 wEE
-qaP
-qaP
-qaP
-qaP
+xmF
+xmF
+xmF
+xmF
 wEE
-qaP
-qaP
-qaP
-qaP
+xmF
+xmF
+xmF
+xmF
 wEE
 wEE
 kag
@@ -82010,9 +81982,9 @@ wkD
 ocd
 wEE
 wEE
-qaP
-qaP
-qaP
+xmF
+xmF
+xmF
 wEE
 wEE
 wEE
@@ -82265,9 +82237,9 @@ btE
 nRS
 bkY
 wEE
-qaP
-qaP
-qaP
+xmF
+xmF
+xmF
 wEE
 wEE
 wEE
@@ -82520,9 +82492,9 @@ ehT
 wkD
 wkD
 wEE
-qaP
-qaP
-qaP
+xmF
+xmF
+xmF
 wEE
 wEE
 wkD
@@ -82776,8 +82748,8 @@ gdY
 nRS
 wkD
 wkD
-qaP
-qaP
+xmF
+xmF
 wEE
 wEE
 wEE
@@ -83033,7 +83005,7 @@ cHg
 wkD
 wkD
 wEE
-qaP
+xmF
 wEE
 wkD
 wkD
@@ -83290,7 +83262,7 @@ wkD
 dob
 wkD
 bkY
-qaP
+xmF
 wEE
 wkD
 cbz
@@ -83547,8 +83519,8 @@ qAy
 wkD
 wkD
 wEE
-qaP
-qaP
+xmF
+xmF
 wEE
 wkD
 wkD
@@ -83805,9 +83777,9 @@ nRS
 wkD
 wkD
 wEE
-qaP
-qaP
-qaP
+xmF
+xmF
+xmF
 wEE
 wEE
 wEE
@@ -84064,10 +84036,10 @@ wkD
 nNa
 wEE
 wEE
-qaP
-qaP
-qaP
-qaP
+xmF
+xmF
+xmF
+xmF
 wEE
 wEE
 wEE
@@ -84324,12 +84296,12 @@ wkD
 wEE
 wEE
 wkD
-qaP
-qaP
-qaP
-qaP
-qaP
-qaP
+xmF
+xmF
+xmF
+xmF
+xmF
+xmF
 wEE
 wkD
 wkD
@@ -84585,9 +84557,9 @@ wkD
 wkD
 wkD
 wEE
-qaP
-qaP
-qaP
+xmF
+xmF
+xmF
 wEE
 cbz
 wkD
@@ -84844,8 +84816,8 @@ nRS
 wkD
 wkD
 wEE
-qaP
-qaP
+xmF
+xmF
 wkD
 wkD
 wkD
@@ -85102,7 +85074,7 @@ wkD
 wkD
 wEE
 wEE
-qaP
+xmF
 wEE
 nRS
 nRS
@@ -85346,11 +85318,11 @@ qzX
 btE
 wkD
 wEE
-qaP
+xmF
 wEE
 wEE
-qaP
-qaP
+xmF
+xmF
 wkD
 wkD
 wkD
@@ -85359,7 +85331,7 @@ jYs
 nRS
 nRS
 wkD
-qaP
+xmF
 wEE
 wkD
 wkD
@@ -85603,12 +85575,12 @@ qzX
 dob
 wkD
 wEE
-qaP
+xmF
 wEE
 wEE
 wkD
 wEE
-qaP
+xmF
 wEE
 wkD
 btE
@@ -85617,7 +85589,7 @@ wkD
 wkD
 wkD
 wEE
-qaP
+xmF
 wEE
 wkD
 qAy
@@ -85865,7 +85837,7 @@ wkD
 wkD
 wkD
 wEE
-qaP
+xmF
 wEE
 xky
 qAy
@@ -85874,7 +85846,7 @@ qAy
 qAy
 ocd
 wkD
-qaP
+xmF
 wkD
 wkD
 qAy
@@ -86116,13 +86088,13 @@ qzX
 qzX
 nRS
 wEE
-qaP
-qaP
+xmF
+xmF
 wkD
 cbz
 wkD
 wEE
-qaP
+xmF
 wEE
 qAy
 qAy
@@ -86131,8 +86103,8 @@ crT
 qAy
 wkD
 wEE
-qaP
-qaP
+xmF
+xmF
 qAy
 qzX
 qzX
@@ -86373,7 +86345,7 @@ kag
 qzX
 nRS
 wEE
-qaP
+xmF
 wkD
 wkD
 btE
@@ -86388,8 +86360,8 @@ eNg
 iIe
 wkD
 wEE
-qaP
-qaP
+xmF
+xmF
 wEE
 wkD
 qzX
@@ -86645,7 +86617,7 @@ aui
 qAy
 wkD
 wEE
-qaP
+xmF
 wEE
 wEE
 qAy
@@ -86893,7 +86865,7 @@ wkD
 btE
 nRS
 wEE
-qaP
+xmF
 wkD
 iIe
 hAz
@@ -86902,7 +86874,7 @@ xmX
 qAy
 wkD
 wEE
-qaP
+xmF
 wEE
 wkD
 wkD
@@ -87144,13 +87116,13 @@ qzX
 qzX
 wkD
 wEE
-qaP
+xmF
 wEE
 wkD
 kkC
 wkD
 wEE
-qaP
+xmF
 wEE
 qAy
 qAy
@@ -87159,8 +87131,8 @@ xmX
 suW
 wkD
 wkD
-qaP
-qaP
+xmF
+xmF
 wEE
 wkD
 qAy
@@ -87401,7 +87373,7 @@ kag
 btE
 wEE
 wEE
-qaP
+xmF
 wEE
 wkD
 wkD
@@ -87417,7 +87389,7 @@ gdY
 nRS
 wkD
 wEE
-qaP
+xmF
 wEE
 wkD
 wkD
@@ -87664,8 +87636,8 @@ bkY
 xYQ
 btE
 wEE
-qaP
-qaP
+xmF
+xmF
 wkD
 wkD
 wkD
@@ -87674,7 +87646,7 @@ gdY
 nRS
 wEE
 wEE
-qaP
+xmF
 wEE
 ocd
 qAy
@@ -87915,23 +87887,23 @@ wkD
 xYQ
 bkY
 wEE
-qaP
+xmF
 wEE
 bkY
 dDO
 qzX
 wkD
 wkD
-qaP
-qaP
+xmF
+xmF
 wkD
 wkD
 dob
 wkD
 wkD
 wkD
-qaP
-qaP
+xmF
+xmF
 kag
 qAy
 kag
@@ -88172,7 +88144,7 @@ wkD
 dDO
 bkY
 wEE
-qaP
+xmF
 wEE
 wEE
 oxD
@@ -88187,7 +88159,7 @@ wEE
 wkD
 wkD
 wEE
-qaP
+xmF
 wEE
 wkD
 wkD
@@ -88437,14 +88409,14 @@ qzX
 hqs
 nRS
 wkD
-qaP
-qaP
+xmF
+xmF
 wEE
-qaP
-qaP
-qaP
-qaP
-qaP
+xmF
+xmF
+xmF
+xmF
+xmF
 wkD
 nRS
 wkD
@@ -88686,7 +88658,7 @@ wkD
 gdY
 gdY
 wEE
-qaP
+xmF
 wEE
 gdY
 ehT
@@ -88698,9 +88670,9 @@ nRS
 wEE
 wkD
 wEE
-qaP
-qaP
-qaP
+xmF
+xmF
+xmF
 wEE
 wkD
 wkD
@@ -88942,9 +88914,9 @@ ktQ
 kag
 ehT
 gdY
-qaP
-qaP
-qaP
+xmF
+xmF
+xmF
 gdY
 ehT
 qzX
@@ -89200,7 +89172,7 @@ qzX
 ndN
 gdY
 wEE
-qaP
+xmF
 wEE
 gdY
 ehT
@@ -91823,9 +91795,9 @@ sdj
 sRi
 sEe
 sEe
-whZ
-whZ
-whZ
+iTI
+iTI
+iTI
 iyj
 aVJ
 uyW
@@ -92078,9 +92050,9 @@ sRi
 uuk
 sEe
 sEe
-whZ
-whZ
-whZ
+iTI
+iTI
+iTI
 sEe
 sEe
 eaw
@@ -92333,9 +92305,9 @@ vHY
 sRi
 sEe
 sEe
-whZ
-whZ
-whZ
+iTI
+iTI
+iTI
 sEe
 sEe
 sEe
@@ -92588,9 +92560,9 @@ bML
 sRi
 sRi
 tsy
-whZ
-whZ
-whZ
+iTI
+iTI
+iTI
 sEe
 sEe
 qEO
@@ -92844,8 +92816,8 @@ bML
 sRi
 sRi
 sRi
-whZ
-whZ
+iTI
+iTI
 sEe
 sEe
 sEe
@@ -93101,7 +93073,7 @@ sRi
 sRi
 sRi
 sEe
-whZ
+iTI
 sEe
 sRi
 sRi
@@ -93358,7 +93330,7 @@ sRi
 tCx
 sRi
 sEe
-whZ
+iTI
 sEe
 sRi
 hFh
@@ -93615,8 +93587,8 @@ rlm
 sRi
 sRi
 sEe
-whZ
-whZ
+iTI
+iTI
 tsy
 sRi
 sRi
@@ -93873,9 +93845,9 @@ sRi
 sRi
 sRi
 sEe
-whZ
-whZ
-whZ
+iTI
+iTI
+iTI
 sEe
 sEe
 sEe
@@ -94132,10 +94104,10 @@ sRi
 sdj
 sEe
 sEe
-whZ
-whZ
-whZ
-whZ
+iTI
+iTI
+iTI
+iTI
 sEe
 sEe
 sEe
@@ -94392,12 +94364,12 @@ sRi
 sEe
 sEe
 qEO
-whZ
-whZ
-whZ
-whZ
-whZ
-whZ
+iTI
+iTI
+iTI
+iTI
+iTI
+iTI
 sEe
 sRi
 sRi
@@ -94649,13 +94621,13 @@ sRi
 sRi
 sEe
 sEe
-whZ
-whZ
+iTI
+iTI
 sEe
 sEe
-whZ
-whZ
-whZ
+iTI
+iTI
+iTI
 sEe
 hFh
 sRi
@@ -94905,15 +94877,15 @@ sRi
 sRi
 sEe
 sEe
-whZ
+iTI
 sEe
 sEe
 sEe
 sEe
 sEe
 sEe
-whZ
-whZ
+iTI
+iTI
 sRi
 sRi
 sRi
@@ -95161,7 +95133,7 @@ sEe
 sEe
 sEe
 sEe
-whZ
+iTI
 sEe
 sEe
 gGt
@@ -95170,7 +95142,7 @@ gGt
 gGt
 sEe
 sEe
-whZ
+iTI
 sEe
 sRi
 sRi
@@ -95415,10 +95387,10 @@ vHY
 sRi
 sEe
 sEe
-whZ
+iTI
 sEe
-whZ
-whZ
+iTI
+iTI
 sRi
 sRi
 gGt
@@ -95427,7 +95399,7 @@ aVJ
 gGt
 gGt
 gGt
-whZ
+iTI
 tsy
 sRi
 sRi
@@ -95671,12 +95643,12 @@ rlm
 tCx
 sRi
 sEe
-whZ
+iTI
 sEe
 sEe
 sRi
 sEe
-whZ
+iTI
 sEe
 gGt
 aVJ
@@ -95685,7 +95657,7 @@ aVJ
 aVJ
 gGt
 sEe
-whZ
+iTI
 sEe
 sRi
 sRi
@@ -95933,7 +95905,7 @@ sRi
 sRi
 sRi
 sEe
-whZ
+iTI
 sEe
 dro
 aVJ
@@ -95942,7 +95914,7 @@ aVJ
 aVJ
 dro
 sRi
-whZ
+iTI
 sRi
 sRi
 rlm
@@ -96190,7 +96162,7 @@ sRi
 hFh
 sRi
 sEe
-whZ
+iTI
 sEe
 gGt
 gGt
@@ -96199,8 +96171,8 @@ iyj
 gGt
 gGt
 sEe
-whZ
-whZ
+iTI
+iTI
 gGt
 rlm
 rlm
@@ -96456,8 +96428,8 @@ aVJ
 aVJ
 gGt
 sEe
-whZ
-whZ
+iTI
+iTI
 sEe
 sRi
 rlm
@@ -96713,7 +96685,7 @@ sNP
 aVJ
 dro
 sEe
-whZ
+iTI
 sEe
 sEe
 gGt
@@ -96961,7 +96933,7 @@ sRi
 vHY
 sRi
 sEe
-whZ
+iTI
 sRi
 gGt
 jvl
@@ -96970,7 +96942,7 @@ bjy
 uyW
 gGt
 sEe
-whZ
+iTI
 sEe
 sRi
 sRi
@@ -97218,7 +97190,7 @@ sRi
 vHY
 sRi
 sEe
-whZ
+iTI
 sEe
 dro
 mzj
@@ -97227,8 +97199,8 @@ oaL
 uyW
 gGt
 sRi
-whZ
-whZ
+iTI
+iTI
 sEe
 sRi
 rlm
@@ -97255,7 +97227,7 @@ vpW
 hsH
 ate
 tHI
-qFp
+bWt
 tKK
 bwD
 ktQ
@@ -97485,7 +97457,7 @@ uyW
 dro
 sRi
 tsy
-whZ
+iTI
 sEe
 sRi
 rlm
@@ -97732,8 +97704,8 @@ sEe
 bjl
 vHY
 sEe
-whZ
-whZ
+iTI
+iTI
 gGt
 gGt
 qYA
@@ -97742,7 +97714,7 @@ qYA
 gGt
 sEe
 sEe
-whZ
+iTI
 sEe
 uuk
 rlm
@@ -97990,16 +97962,16 @@ bjl
 rlm
 sRi
 sRi
-whZ
-whZ
+iTI
+iTI
 gGt
 gGt
 dro
 gGt
 gGt
 sRi
-whZ
-whZ
+iTI
+iTI
 sEe
 gGt
 rlm
@@ -98255,7 +98227,7 @@ sEe
 sRi
 sRi
 sEe
-whZ
+iTI
 sEe
 sRi
 sRi
@@ -98505,14 +98477,14 @@ rlm
 edW
 sRi
 sRi
-whZ
-whZ
+iTI
+iTI
 sEe
-whZ
-whZ
-whZ
-whZ
-whZ
+iTI
+iTI
+iTI
+iTI
+iTI
 sRi
 sRi
 sRi
@@ -98766,9 +98738,9 @@ sRi
 sEe
 qEO
 sEe
-whZ
-whZ
-whZ
+iTI
+iTI
+iTI
 sEe
 sRi
 sRi

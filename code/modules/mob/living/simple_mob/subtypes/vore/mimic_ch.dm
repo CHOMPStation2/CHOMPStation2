@@ -64,19 +64,19 @@
 	icon_state = "amimicopen"
 	icon_living = "amimicopen"
 
-	maxHealth = 250
-	health = 250
+	maxHealth = 50
+	health = 50
 	movement_cooldown = 10
 
-	melee_damage_lower = 15
-	melee_damage_upper = 30
-	attack_armor_pen = 50 //Its jaw is an airlock. Its got enough bite strength.
+	melee_damage_lower = 8
+	melee_damage_upper = 8
+	attack_armor_pen = 0 
 
 	armor = list(
-				"melee" = 70,
-				"bullet" = 30,
-				"laser" = 30,
-				"energy" = 30,
+				"melee" = 10,
+				"bullet" = 10,
+				"laser" = 10,
+				"energy" = 10,
 				"bomb" = 10,
 				"bio" = 100,
 				"rad" = 100) //Its an airlock.
@@ -159,12 +159,12 @@
 	icon_state = "cmimicopen"
 	icon_living = "cmimicopen"
 
-	maxHealth = 150
-	health = 150
+	maxHealth = 50
+	health = 50
 	movement_cooldown = 7
 
-	melee_damage_lower = 10
-	melee_damage_upper = 20
+	melee_damage_lower = 8
+	melee_damage_upper = 8
 	attack_armor_pen =  25 // NOM NOM
 
 	armor = list(

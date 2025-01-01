@@ -3482,26 +3482,6 @@
 "aoJ" = (
 /turf/simulated/wall,
 /area/ai_monitored/storage/eva/aux)
-"aoL" = (
-/obj/machinery/computer/secure_data{
-	dir = 4
-	},
-/obj/machinery/light{
-	dir = 8
-	},
-/obj/item/radio/intercom/department/security{
-	dir = 8;
-	icon_state = "secintercom";
-	pixel_x = -21
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 10
-	},
-/obj/effect/floor_decal/corner/red/border{
-	dir = 10
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/primary/firstdeck/vaultcheckpoint)
 "aoV" = (
 /obj/structure/table/standard,
 /obj/machinery/recharger,
@@ -9861,6 +9841,17 @@
 "bco" = (
 /turf/simulated/floor/plating,
 /area/construction/firstdeck/construction3)
+"bcp" = (
+/obj/structure/table/standard,
+/obj/machinery/camera/network/research{
+	c_tag = "SCI - Xenobiology Fore Port"
+	},
+/obj/effect/floor_decal/corner_steel_grid{
+	dir = 5
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled,
+/area/rnd/xenobiology)
 "bcW" = (
 /obj/machinery/firealarm{
 	dir = 8;
@@ -11737,30 +11728,6 @@
 /obj/structure/closet/emcloset/legacy,
 /turf/simulated/floor/tiled,
 /area/expoutpost/stationshuttle)
-"cFh" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 9
-	},
-/obj/effect/floor_decal/corner/red/border{
-	dir = 9
-	},
-/obj/item/radio/intercom{
-	dir = 1;
-	name = "Station Intercom (General)";
-	pixel_y = 22
-	},
-/obj/item/radio/intercom/department/security{
-	dir = 8;
-	icon_state = "secintercom";
-	pixel_x = -21
-	},
-/obj/structure/table/reinforced,
-/obj/machinery/recharger/wallcharger{
-	pixel_x = 5;
-	pixel_y = 33
-	},
-/turf/simulated/floor/tiled,
-/area/teleporter/firstdeck)
 "cGE" = (
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/machinery/hologram/holopad,
@@ -13237,20 +13204,6 @@
 "dWv" = (
 /turf/simulated/wall/r_wall,
 /area/storage/tech)
-"dWw" = (
-/obj/structure/table/steel,
-/obj/machinery/cell_charger{
-	pixel_y = 5
-	},
-/obj/item/multitool,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/stack/cable_coil,
-/obj/item/stack/cable_coil,
-/turf/simulated/floor,
-/area/storage/tech)
 "dWx" = (
 /obj/structure/table/rack/holorack,
 /obj/item/circuitboard/machine/power_turbine{
@@ -14427,25 +14380,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/aft)
-"dZd" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
-	dir = 8
-	},
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/obj/machinery/chemical_dispenser/full{
-	density = 1
-	},
-/turf/simulated/floor/tiled/hydro,
-/area/rnd/xenobiology/xenoflora)
 "dZe" = (
 /obj/machinery/seed_extractor,
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
@@ -18491,25 +18425,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/fscenter)
-"hHb" = (
-/obj/effect/floor_decal/borderfloor/corner{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/brown/bordercorner{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5
-	},
-/obj/structure/closet/secure_closet/cargotech{
-	name = "mailman's locker";
-	starts_with = list(/obj/item/clothing/under/rank/mailman,/obj/item/clothing/head/mailman,/obj/item/clothing/shoes/black,/obj/item/radio/headset/headset_cargo,/obj/item/radio/headset/headset_cargo/alt,/obj/item/storage/bag/mail,/obj/item/destTagger)
-	},
-/obj/item/mail_scanner,
-/obj/item/mail_scanner,
-/obj/item/mail_scanner,
-/turf/simulated/floor/tiled,
-/area/quartermaster/delivery)
 "hIE" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
@@ -18761,6 +18676,17 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/firstdeck/hallway)
+"hVs" = (
+/obj/structure/table/steel,
+/obj/machinery/cell_charger{
+	pixel_y = 5
+	},
+/obj/item/multitool,
+/obj/item/cell/high,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/turf/simulated/floor,
+/area/storage/tech)
 "hVG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -18884,6 +18810,30 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/aft)
+"iel" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 9
+	},
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 22
+	},
+/obj/item/radio/intercom/department/security{
+	dir = 8;
+	icon_state = "secintercom";
+	pixel_x = -21
+	},
+/obj/structure/table/reinforced,
+/obj/machinery/recharger/wallcharger{
+	pixel_x = 5;
+	pixel_y = 33
+	},
+/turf/simulated/floor/tiled,
+/area/teleporter/firstdeck)
 "ife" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -20953,6 +20903,37 @@
 /obj/effect/floor_decal/corner/green/bordercorner,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/apcenter)
+"kif" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/item/reagent_containers/glass/bottle/diethylamine{
+	pixel_x = 5
+	},
+/obj/item/reagent_containers/glass/bottle/diethylamine{
+	pixel_x = -5
+	},
+/obj/item/reagent_containers/glass/bottle/mutagen{
+	pixel_y = 10;
+	pixel_x = -5
+	},
+/obj/item/reagent_containers/glass/bottle/mutagen{
+	pixel_x = 5;
+	pixel_y = 10
+	},
+/obj/structure/table/standard,
+/turf/simulated/floor/tiled/hydro,
+/area/rnd/xenobiology/xenoflora)
 "kiF" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -23115,6 +23096,22 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
+"mIi" = (
+/obj/structure/table/standard,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/item/stack/material/phoron{
+	amount = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/floor_decal/corner_steel_grid{
+	dir = 6
+	},
+/turf/simulated/floor/tiled,
+/area/rnd/xenobiology)
 "mIU" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 8
@@ -23130,19 +23127,6 @@
 /obj/random/mob/mouse,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
-"mJJ" = (
-/obj/structure/table/steel,
-/obj/machinery/cell_charger,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/turf/simulated/floor/tiled/steel,
-/area/construction/firstdeck/construction3)
 "mKw" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
@@ -23763,6 +23747,26 @@
 /obj/item/stack/rods,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/forestarboard)
+"nho" = (
+/obj/machinery/computer/secure_data{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/item/radio/intercom/department/security{
+	dir = 8;
+	icon_state = "secintercom";
+	pixel_x = -21
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 10
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/primary/firstdeck/vaultcheckpoint)
 "nhA" = (
 /turf/simulated/wall/r_wall,
 /area/maintenance/firstdeck/aftstarboard)
@@ -26115,20 +26119,6 @@
 /obj/effect/floor_decal/corner_steel_grid/full{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
-/area/rnd/xenobiology)
-"pPP" = (
-/obj/structure/table/standard,
-/obj/machinery/chemical_dispenser/full{
-	density = 1
-	},
-/obj/machinery/camera/network/research{
-	c_tag = "SCI - Xenobiology Fore Port"
-	},
-/obj/effect/floor_decal/corner_steel_grid{
-	dir = 5
-	},
-/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology)
 "pQF" = (
@@ -28980,6 +28970,13 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/spacebus)
+"sPf" = (
+/obj/structure/table/steel,
+/obj/machinery/cell_charger,
+/obj/item/cell/high,
+/obj/item/cell/high,
+/turf/simulated/floor/tiled/steel,
+/area/construction/firstdeck/construction3)
 "sPh" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/machinery/light{
@@ -32509,6 +32506,25 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/starboard)
+"waU" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/brown/bordercorner{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/structure/closet/secure_closet/cargotech{
+	name = "mailman's locker";
+	starts_with = list(/obj/item/clothing/under/rank/mailman,/obj/item/clothing/head/mailman,/obj/item/clothing/shoes/black,/obj/item/radio/headset/cargo,/obj/item/radio/headset/alt/cargo,/obj/item/storage/bag/mail,/obj/item/destTagger)
+	},
+/obj/item/mail_scanner,
+/obj/item/mail_scanner,
+/obj/item/mail_scanner,
+/turf/simulated/floor/tiled,
+/area/quartermaster/delivery)
 "wbn" = (
 /obj/machinery/firealarm{
 	dir = 1;
@@ -33189,22 +33205,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/spacebus)
-"wMA" = (
-/obj/structure/table/standard,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/item/stack/material/phoron{
-	amount = 10
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/effect/floor_decal/corner_steel_grid{
-	dir = 6
-	},
-/turf/simulated/floor/tiled,
-/area/rnd/xenobiology)
 "wME" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 10
@@ -58233,7 +58233,7 @@ aeY
 anM
 ylD
 gGm
-hHb
+waU
 dWn
 uHg
 aEI
@@ -58726,7 +58726,7 @@ aMG
 ajn
 ajn
 aiY
-cFh
+iel
 fMV
 gMA
 aaA
@@ -67279,7 +67279,7 @@ aCY
 nbu
 dWv
 jXi
-dWw
+hVs
 sRE
 hTg
 dXu
@@ -69807,7 +69807,7 @@ aOh
 agl
 aUe
 sXr
-aoL
+nho
 asm
 amk
 ayv
@@ -78098,7 +78098,7 @@ uWA
 woI
 xBj
 srX
-mJJ
+sPf
 vYH
 dWL
 qcw
@@ -81434,7 +81434,7 @@ aaa
 dVJ
 dWr
 dXL
-dZd
+kif
 eaH
 eVQ
 fFB
@@ -84024,7 +84024,7 @@ itV
 itV
 itV
 itV
-pPP
+bcp
 qWY
 slp
 tUz
@@ -84545,7 +84545,7 @@ rbf
 smH
 tZr
 vhp
-wMA
+mIi
 xZg
 hAX
 cvY

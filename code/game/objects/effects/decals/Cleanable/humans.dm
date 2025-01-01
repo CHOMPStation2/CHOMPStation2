@@ -19,7 +19,7 @@ var/global/list/image/splatter_cache=list()
 	blood_DNA = list()
 	var/basecolor="#A10808" // Color when wet.
 	var/synthblood = 0
-	var/list/datum/disease2/disease/virus2 = list()
+	var/list/datum/disease/viruses = list()
 	var/amount = 5
 	generic_filth = TRUE
 	persistent = FALSE
@@ -70,6 +70,8 @@ var/global/list/image/splatter_cache=list()
 	else
 		name = initial(name)
 		desc = initial(desc)
+	cut_overlays()
+	add_janitor_hud_overlay()
 
 /obj/effect/decal/cleanable/blood/Crossed(mob/living/carbon/human/perp)
 	if(perp.is_incorporeal())
@@ -112,6 +114,11 @@ var/global/list/image/splatter_cache=list()
 		var/obj/structure/bed/chair/wheelchair/W = perp.buckled
 		W.bloodiness = 4
 
+	if(viruses)
+		for(var/datum/disease/D in viruses)
+			if(D.IsSpreadByTouch())
+				perp.ContractDisease(D)
+
 	amount--
 
 /obj/effect/decal/cleanable/blood/proc/dry()
@@ -124,6 +131,7 @@ var/global/list/image/splatter_cache=list()
 	..()
 	if (amount && istype(user))
 		add_fingerprint(user)
+
 		if (user.gloves)
 			return
 		var/taken = rand(1,amount)
@@ -136,6 +144,11 @@ var/global/list/image/splatter_cache=list()
 		user.hand_blood_color = basecolor
 		user.update_inv_gloves(1)
 		add_verb(user, /mob/living/carbon/human/proc/bloody_doodle)
+
+	if(viruses)
+		for(var/datum/disease/D in viruses)
+			if(D.IsSpreadByTouch())
+				user.ContractDisease(D)
 
 /obj/effect/decal/cleanable/blood/splatter
         random_icon_states = list("mgibbl1", "mgibbl2", "mgibbl3", "mgibbl4", "mgibbl5")
@@ -183,7 +196,7 @@ var/global/list/image/splatter_cache=list()
 	density = FALSE
 	anchored = TRUE
 	icon = 'icons/effects/blood.dmi'
-	icon_state = "gibbl5"
+	icon_state = "gib1"
 	random_icon_states = list("gib1", "gib2", "gib3", "gib5", "gib6")
 	var/fleshcolor = "#FFFFFF"
 
@@ -201,6 +214,7 @@ var/global/list/image/splatter_cache=list()
 	icon = blood
 	cut_overlays()
 	add_overlay(giblets)
+	add_janitor_hud_overlay()
 
 /obj/effect/decal/cleanable/blood/gibs/up
 	random_icon_states = list("gib1", "gib2", "gib3", "gib5", "gib6","gibup1","gibup1","gibup1")
@@ -242,7 +256,7 @@ var/global/list/image/splatter_cache=list()
 	icon_state = "mucus"
 	random_icon_states = list("mucus")
 
-	var/list/datum/disease2/disease/virus2 = list()
+	var/list/datum/disease/viruses = list()
 	var/dry = 0 // Keeps the lag down
 	var/sampled = FALSE
 
@@ -253,11 +267,30 @@ var/global/list/image/splatter_cache=list()
 //This version should be used for admin spawns and pre-mapped virus vectors (e.g. in PoIs), this version does not dry
 /obj/effect/decal/cleanable/mucus/mapped/Initialize()
 	. = ..()
-	virus2 |= new /datum/disease2/disease
-	virus2[1].makerandom()
+	viruses |= new /datum/disease/advance
 
 /obj/effect/decal/cleanable/mucus/mapped/Destroy()
-	virus2.Cut()
+	viruses.Cut()
 	return ..()
+
+/obj/effect/decal/cleanable/mucus/Crossed(mob/living/carbon/human/perp)
+	if(viruses)
+		for(var/datum/disease/D in viruses)
+			perp.ContractDisease(D)
+
+/obj/effect/decal/cleanable/mucus/attack_hand(mob/living/carbon/human/perp)
+	if(viruses)
+		for(var/datum/disease/D in viruses)
+			perp.ContractDisease(D)
+
+/obj/effect/decal/cleanable/vomit/Crossed(mob/living/carbon/human/perp)
+	if(viruses)
+		for(var/datum/disease/D in viruses)
+			perp.ContractDisease(D)
+
+/obj/effect/decal/cleanable/vomit/Crossed(mob/living/carbon/human/perp)
+	if(viruses)
+		for(var/datum/disease/D in viruses)
+			perp.ContractDisease(D)
 
 #undef DRYING_TIME

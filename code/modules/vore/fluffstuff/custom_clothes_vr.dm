@@ -668,7 +668,9 @@
 
 /obj/item/clothing/head/fluff/avida/mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = 0)
 	if(..())
-		if(H.ear_style && (H.ear_style.name == "Bnnuy Ears" || H.ear_style.name == "Bnnuy Ears 2")) //check if wearer's ear sprite is compatible with trimmed icon
+		var/static/list/allowed_ear_names = list("Bnnuy Ears", "Bnnuy Ears 2")
+		//check if wearer's ear sprite is compatible with trimmed icon
+		if((H.ear_style?.name in allowed_ear_names) || (H.ear_secondary_style?.name in allowed_ear_names))
 			item_state = initial(src.item_state)
 		else //if not, just use a generic icon
 			item_state = "avidahatnoears"
@@ -814,25 +816,6 @@
 		var/mob/living/carbon/human/H = user
 		if(H.head == src)
 			H.update_inv_head()
-/*
-/obj/item/rig/light/hacker/fluff/aronai
-	name = "KHI-99-AAR suit module"
-	suit_type = "nano"
-	desc = "A thin collapsable spacesuit for synths from Kitsuhana Heavy Industries."
-	airtight = 1 //Not because it should be airtight but because suit coolers don't work w/o it.
-	armor = list(melee = 25, bullet = 15, laser = 15, energy = 60, bomb = 30, bio = 70, rad = 100)
-	air_type = null //No O2 tank, why would it have one?
-
-	cell_type =  /obj/item/cell/hyper
-	req_access = list(access_medical)
-
-	initial_modules = list(
-		/obj/item/rig_module/maneuvering_jets,
-		/obj/item/rig_module/teleporter
-		)
-
-No. With a teleporter? Just *no*. - Hawk, YW
-*/
 //Viveret:Keturah
 /obj/item/clothing/under/dress/maid
 	name = "Maid Outfit"
@@ -914,7 +897,6 @@ No. With a teleporter? Just *no*. - Hawk, YW
 /obj/item/clothing/under/rank/khi
 	name = "Delete Me"
 	desc = "Why did you spawn this one? Dork."
-	//catalogue_data = list(/datum/category_item/catalogue/information/organization/khi)
 	sensor_mode = 3
 
 	icon = 'icons/inventory/uniform/item_vr.dmi'
@@ -1131,7 +1113,7 @@ No. With a teleporter? Just *no*. - Hawk, YW
 		if (ismob(loc)) //should allow masks to update when it is opened/closed
 			var/mob/M = loc
 			M.update_inv_wear_mask()
-		usr.update_action_buttons_icon()
+		usr.update_mob_action_buttons()
 
 //Vorrarkul: Theodora Lindt
 /obj/item/clothing/suit/chococoat
@@ -1687,14 +1669,14 @@ Departamental Swimsuits, for general use
 	item_state = "kilanosuit_p_mob"
 
 //Mewchild: Phi Vietsi
-/obj/item/clothing/gloves/ring/seal/signet/fluff/phi
+/obj/item/clothing/accessory/ring/seal/signet/fluff/phi
 	name = "Phi's Bone Signet Ring"
 	desc = "A signet ring belonging to Phi, carved from the bones of something long extinct, as a ward against bad luck."
 
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_state = "phi_ring"
 
-/obj/item/clothing/gloves/ring/seal/signet/fluff/phi/change_name(var/signet_name = "Unknown")
+/obj/item/clothing/accessory/ring/seal/signet/fluff/phi/change_name(var/signet_name = "Unknown")
 	name = "[signet_name]'s Bone Signet Ring"
 	desc = "A signet ring belonging to [signet_name], carved from the bones of something long extinct, as a ward against bad luck."
 
@@ -1951,12 +1933,13 @@ Departamental Swimsuits, for general use
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
 
 //CappyCat:Cappy Fuzzlyfeathers
-/obj/item/clothing/accessory/watch
+/obj/item/clothing/accessory/watch/custom
 	name = "silver pocket watch"
 	desc = "A fancy silver-plated digital pocket watch. Looks expensive."
 	icon = 'icons/obj/deadringer.dmi'
 	icon_state = "deadringer"
 	w_class = ITEMSIZE_SMALL
+	slot = ACCESSORY_SLOT_INSIGNIA
 	slot_flags = SLOT_ID | SLOT_BELT | SLOT_TIE
 
 //Pimientopyro:Zaku Fyodorovna
@@ -2601,7 +2584,7 @@ Departamental Swimsuits, for general use
 		if (ismob(loc)) //should allow masks to update when it is opened/closed
 			var/mob/M = loc
 			M.update_inv_wear_mask()
-		usr.update_action_buttons_icon()
+		usr.update_mob_action_buttons()
 
 /obj/item/clothing/suit/storage/toggle/labcoat/fluff/zeracloak
 	name = "Grand Purple Cloak"
@@ -2674,7 +2657,8 @@ End CHOMP Removal*/
 
 //Halored: Mercury
 
-/* /obj/item/clothing/gloves/ring/material/void_opal/fluff/mercury //Chomp REMOVE Start
+/* Chomp REMOVE Start
+/obj/item/clothing/accessory/ring/material/void_opal/fluff/mercury
 	name = "Mercury's Mate Ring"
 	desc = "A band of void opal, given to Mercury by Lumen"
 
