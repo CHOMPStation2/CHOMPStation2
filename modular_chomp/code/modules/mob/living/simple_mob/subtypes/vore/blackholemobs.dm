@@ -97,10 +97,11 @@
 	do_windup_animation(A, leap_warmup)
 	
 	addtimer(CALLBACK(src, PROC_REF(doLeap), L), leap_warmup, TIMER_DELETE_ME)
+	return TRUE
 
 /mob/living/simple_mob/vore/otie/syndicate/blackhole/proc/doLeap(var/mob/living/L)
 	if(!L)
-		return
+		return FALSE
 	if(L.z != z)
 		set_AI_busy(FALSE)
 		return FALSE
@@ -118,9 +119,10 @@
 
 	set_AI_busy(FALSE)
 	if(!L)
-		return
+		return FALSE
 	if(Adjacent(L))
 		L.Weaken(1)
+	return TRUE
 
 ///-------------------------------------------------------------------------------------------------------------------------------------------------------------///
 ///the black hole fanatics!///
