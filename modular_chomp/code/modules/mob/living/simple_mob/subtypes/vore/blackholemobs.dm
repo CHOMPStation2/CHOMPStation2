@@ -778,7 +778,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 
 // hackified shitcode poached from the pitcher plant for ~~cool flavor text~~ when you're near either 'structure'
 
-/mob/living/simple_mob/vore/blackhole_obelisk/New()
+/mob/living/simple_mob/vore/blackhole_obelisk/Initialize()
 	..()
 	obelisk_lure_messages = GLOB.obelisk_lure_messages
 
