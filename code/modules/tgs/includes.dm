@@ -20,9 +20,6 @@
 #include "v5\commands.dm"
 #include "v5\chat_commands.dm" //CHOMPEdit
 #include "v5\chat_commands_zz_ch.dm" //CHOMPEdit
-#include "v5\bridge.dm"
-#include "v5\chunking.dm"
-#include "v5\commands.dm"
 #include "v5\serializers.dm"
 #include "v5\topic.dm"
 #include "v5\undefs.dm"
