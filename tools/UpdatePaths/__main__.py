@@ -29,7 +29,7 @@ Old paths properties:
     property = @ANY - will apply the rule when the property is mapedited, regardless of its value.
 """
 
-default_map_directory = "../../"
+default_map_directory = "../../modular_chomp/maps"
 replacement_re = re.compile(r'\s*(?P<path>[^{]*)\s*(\{(?P<props>.*)\})?')
 
 #urgent todo: replace with actual parser, this is slow as janitor in crit
@@ -184,7 +184,7 @@ def main(args):
     if args.map:
         update_map(args.map, updates, verbose=args.verbose)
     else:
-        map_directory = args.directory or frontend.read_settings().map_folder
+        map_directory = args.directory or os.path.join('..', default_map_directory)
         update_all_maps(map_directory, updates, verbose=args.verbose)
 
 
@@ -195,8 +195,8 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(prog=prog, description=desc, formatter_class=argparse.RawTextHelpFormatter)
     parser.add_argument("update_source", help="update file path / line of update notation")
-    parser.add_argument("--map", "-m", help="path to update, defaults to all maps in maps directory")
-    parser.add_argument("--directory", "-d", help="path to maps directory, defaults to maps/")
+    parser.add_argument("--map", "-m", help="path to update, defaults to all maps in directory")
+    parser.add_argument("--directory", "-d", help="path to maps directory, defaults to modular_chomp/maps")
     parser.add_argument("--inline", "-i", help="treat update source as update string instead of path", action="store_true")
     parser.add_argument("--verbose", "-v", help="toggle detailed update information", action="store_true")
     main(parser.parse_args())
