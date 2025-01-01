@@ -29,7 +29,6 @@ Old paths properties:
     property = @ANY - will apply the rule when the property is mapedited, regardless of its value.
 """
 
-default_map_directory = "../../modular_chomp/maps"
 replacement_re = re.compile(r'\s*(?P<path>[^{]*)\s*(\{(?P<props>.*)\})?')
 
 #urgent todo: replace with actual parser, this is slow as janitor in crit
@@ -184,7 +183,7 @@ def main(args):
     if args.map:
         update_map(args.map, updates, verbose=args.verbose)
     else:
-        map_directory = args.directory or os.path.join('..', default_map_directory)
+        map_directory = args.directory or frontend.read_settings().map_folder
         update_all_maps(map_directory, updates, verbose=args.verbose)
 
 

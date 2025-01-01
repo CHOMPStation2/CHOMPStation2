@@ -1,5 +1,7 @@
 import os
 import sys
+
+from tools.mapmerge2 import frontend
 from .dmm import *
 
 def green(text):
@@ -16,12 +18,10 @@ def has_tgm_header(fname):
 class LintException(Exception):
     pass
 
-default_map_directory = "./modular_chomp/maps"
-
 def _self_test():
     count = 0
     failed = 0
-    for dirpath, dirnames, filenames in os.walk(default_map_directory):
+    for dirpath, dirnames, filenames in os.walk(frontend.read_settings().map_folder):
         if '.git' in dirnames:
             dirnames.remove('.git')
         for filename in filenames:
