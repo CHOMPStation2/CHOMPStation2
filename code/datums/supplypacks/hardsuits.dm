@@ -32,7 +32,7 @@
 	containertype = /obj/structure/closet/crate/secure/gear
 	containername = "industrial hardsuit crate"
 	access = list(access_mining,
-				  access_eva)
+				  access_eva)d
 	one_access = TRUE
 
 /datum/supply_pack/hardsuits/medical_rig
@@ -84,7 +84,7 @@
 	name = "solgov medical hardsuit (loaded)"
 	desc = "A fully-equipped Commonwealth of Sol-Procyon Medical hardsuit. Requires Medical access."
 	contains = list(
-			/obj/item/rig/baymed/equipped = 1
+			/obj/item/rig/baymed/equipped = 1 // CHOMPEdit
 			)
 	cost = 250
 	containertype = /obj/structure/closet/crate/secure/gear
