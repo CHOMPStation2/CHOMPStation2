@@ -107,15 +107,17 @@
 	throw_at(get_step(L, get_turf(src)), special_attack_max_range+1, 1, src)
 	playsound(src, leap_sound, 75, 1)
 
-	sleep(5)
+	addtimer(CALLBACK(src, PROC_REF(afterLeap)), 0.5 SECONDS, TIMER_DELETE_ME)
 
+
+/mob/living/simple_mob/vore/otie/syndicate/blackhole/proc/afterLeap(var/mob/living/L)
 	if(status_flags & LEAPING)
 		status_flags &= ~LEAPING
 
 	set_AI_busy(FALSE)
 	if(Adjacent(L))
 		L.Weaken(1)
-
+		return
 
 ///-------------------------------------------------------------------------------------------------------------------------------------------------------------///
 ///the black hole fanatics!///
@@ -852,20 +854,20 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 ///size randomization!///
 ///-------------------------------------------------------------------------------------------------------------------------------------------------------------///
 
-/mob/living/simple_mob/vore/blackhole/New()
+/mob/living/simple_mob/vore/blackhole/Initialize()
 	..()
 	var/oursize = rand(90, 150) / 100
 	resize(oursize)
 
-/mob/living/simple_mob/vore/blackhole/bikers/New()
+/mob/living/simple_mob/vore/blackhole/bikers/Initialize()
 	..()
 	var/oursize = rand(100, 100) / 100
 	resize(oursize)
-/mob/living/simple_mob/vore/otie/syndicate/blackhole/New()
+/mob/living/simple_mob/vore/otie/syndicate/blackhole/Initialize()
 	..()
 	var/oursize = rand(100, 180) / 100
 	resize(oursize)
-/mob/living/simple_mob/humanoid/merc/ranged/sniper/blackhole/New()
+/mob/living/simple_mob/humanoid/merc/ranged/sniper/blackhole/Initialize()
 	..()
 	var/oursize = rand(100, 180) / 100
 	resize(oursize)
@@ -873,70 +875,46 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 ///explode on death!///
 ///-------------------------------------------------------------------------------------------------------------------------------------------------------------///
 
+/mob/living/simple_mob/vore/blackhole/proc/explode()
+	if(src && !exploded)
+		visible_message(span_danger("\The [src]'s body violently explodes!"))
+		exploded = TRUE
+		explosion(src.loc, explosion_dev_range, explosion_heavy_range, explosion_light_range, explosion_flash_range)
+
 /mob/living/simple_mob/vore/blackhole/death()
 	visible_message(span_critical("\The [src]'s explosive implant lets out a shrill beep!!!"))
 	var/delay = rand(explosion_delay_lower, explosion_delay_upper)
-	spawn(0)
-		// Flash as a warning.
-		for(var/i = 1 to delay)
-			if(i % 2 == 0)
-				color = "#FFFFFF"
-			else
-				color = "#FF7777"
-			sleep(1)
-
-	spawn(delay)
-		// The actual boom.
-		if(src && !exploded)
-			visible_message(span_danger("\The [src]'s body violently explodes!"))
-			exploded = TRUE
-			new /obj/effect/decal/cleanable/blood/gibs(src.loc)
-			explosion(src.loc, explosion_dev_range, explosion_heavy_range, explosion_light_range, explosion_flash_range)
-			gib(src)
+	animate(src, color = "#FFFFFF", time = 0.1 SECONDS, loop = ceil(delay/2))
+	animate(color = "#A663FF", time = 0.1 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(explode)), delay, TIMER_DELETE_ME)
 	return ..()
+
+/mob/living/simple_mob/vore/otie/syndicate/blackhole/proc/explode()
+	if(src && !exploded)
+		visible_message(span_danger("\The [src]'s body violently explodes!"))
+		exploded = TRUE
+		explosion(src.loc, explosion_dev_range, explosion_heavy_range, explosion_light_range, explosion_flash_range)
 
 /mob/living/simple_mob/vore/otie/syndicate/blackhole/death()
 	visible_message(span_critical("\The [src]'s explosive implant lets out a shrill beep!!!"))
 	var/delay = rand(explosion_delay_lower, explosion_delay_upper)
-	spawn(0)
-		// Flash as a warning.
-		for(var/i = 1 to delay)
-			if(i % 2 == 0)
-				color = "#FFFFFF"
-			else
-				color = "#FF7777"
-			sleep(1)
-
-	spawn(delay)
-		// The actual boom.
-		if(src && !exploded)
-			visible_message(span_danger("\The [src]'s body violently explodes!"))
-			exploded = TRUE
-			new /obj/effect/decal/cleanable/blood/gibs(src.loc)
-			explosion(src.loc, explosion_dev_range, explosion_heavy_range, explosion_light_range, explosion_flash_range)
-			gib(src)
+	animate(src, color = "#FFFFFF", time = 0.1 SECONDS, loop = ceil(delay/2))
+	animate(color = "#A663FF", time = 0.1 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(explode)), delay, TIMER_DELETE_ME)
 	return ..()
 
-/mob/living/simple_mob/vore/blackhole_obelisk/death()
-	visible_message(span_critical("\The [src] suddenly destablizes!"))
-	var/delay = rand(explosion_delay_lower, explosion_delay_upper)
-	spawn(0)
-		// Flash as a warning.
-		for(var/i = 1 to delay)
-			if(i % 2 == 0)
-				color = "#FFFFFF"
-			else
-				color = "#A663FF"
-			sleep(1)
+/mob/living/simple_mob/vore/blackhole_obelisk/proc/explode()
+	if(src && !exploded)
+		visible_message(span_danger("\The [src] violently explodes!"))
+		exploded = TRUE
+		explosion(src.loc, explosion_dev_range, explosion_heavy_range, explosion_light_range, explosion_flash_range)
 
-	spawn(delay)
-		// The actual boom.
-		if(src && !exploded)
-			visible_message(span_danger("\The [src] violently explodes!"))
-			exploded = TRUE
-			new /obj/effect/decal/cleanable/blood/gibs(src.loc)
-			explosion(src.loc, explosion_dev_range, explosion_heavy_range, explosion_light_range, explosion_flash_range)
-			gib(src)
+/mob/living/simple_mob/vore/blackhole_obelisk/death()
+	visible_message(span_critical("\\The [src] suddenly destablizes!"))
+	var/delay = rand(explosion_delay_lower, explosion_delay_upper)
+	animate(src, color = "#FFFFFF", time = 0.1 SECONDS, loop = ceil(delay/2))
+	animate(color = "#A663FF", time = 0.1 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(explode)), delay, TIMER_DELETE_ME)
 	return ..()
 
 ///-------------------------------------------------------------------------------------------------------------------------------------------------------------///
