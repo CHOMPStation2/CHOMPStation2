@@ -124,7 +124,6 @@
 ///the black hole fanatics!///
 ///-------------------------------------------------------------------------------------------------------------------------------------------------------------///
 
-
 /mob/living/simple_mob/vore/blackhole
 	name = "Black Hole fanatic"
 	desc = "A tough looking armored feline creature. They wear various insignias identifying them as a member of Black Hole."
@@ -580,7 +579,6 @@
 ///mechs!///
 ///-------------------------------------------------------------------------------------------------------------------------------------------------------------///
 
-
 /mob/living/simple_mob/mechanical/mecha/combat/gygax/dark/advanced/blackhole
 	name = "singularity gygax"
 	desc = "An experimental exosuit that utilizes advanced materials to allow for greater protection while still being lightweight and fast. \
@@ -782,10 +780,6 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	..()
 	obelisk_lure_messages = GLOB.obelisk_lure_messages
 
-/mob/living/simple_mob/vore/blackhole_obelisk/Initialize()
-	..()
-	obelisk_lure_messages = obelisk_lure_messages
-
 /mob/living/simple_mob/vore/blackhole_obelisk/proc/handle_hungry()
 	if(nutrition <= OBELISK_LURE)
 		for(var/mob/living/carbon/human/H in oview(6, src))
@@ -862,12 +856,13 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 
 /mob/living/simple_mob/vore/blackhole/bikers/Initialize()
 	..()
-	var/oursize = rand(100, 100) / 100
-	resize(oursize)
+	resize(1) // Scale them back down
+
 /mob/living/simple_mob/vore/otie/syndicate/blackhole/Initialize()
 	..()
 	var/oursize = rand(100, 180) / 100
 	resize(oursize)
+
 /mob/living/simple_mob/humanoid/merc/ranged/sniper/blackhole/Initialize()
 	..()
 	var/oursize = rand(100, 180) / 100
@@ -1019,30 +1014,35 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	icon_state = "bullet"
 	fire_sound = 'sound/weapons/serdy/9mmpistol.ogg'
 	speed = 0.8
+
 /obj/item/projectile/bullet/pistol/bh2
 	name = "10mm bullet"
 	icon = 'modular_chomp/icons/blackhole/blackhole32x32.dmi'
 	icon_state = "bullet"
 	fire_sound = 'sound/weapons/serdy/vityaz.ogg'
 	speed = 0.8
+
 /obj/item/projectile/bullet/pistol/bh3
 	name = "9mm bullet"
 	icon = 'modular_chomp/icons/blackhole/blackhole32x32.dmi'
 	icon_state = "bullet"
 	fire_sound = 'sound/weapons/serdy/ak74.ogg'
 	speed = 0.8
+
 /obj/item/projectile/bullet/rifle/a545/bh1
 	name = "6mm rifle bullet"
 	icon = 'modular_chomp/icons/blackhole/blackhole32x32.dmi'
 	icon_state = "bullet"
 	fire_sound = 'sound/weapons/serdy/sks.ogg'
 	speed = 0.8
+
 /obj/item/projectile/bullet/rifle/a545/bh2
 	name = "15mm MG bullet"
 	icon = 'modular_chomp/icons/blackhole/blackhole32x32.dmi'
 	icon_state = "bullet"
 	fire_sound = 'sound/weapons/serdy/strela.ogg'
 	speed = 0.8
+
 /obj/item/projectile/beam/shock/bh1
 	name = "tesla beam"
 	icon_state = "lightning"
@@ -1067,6 +1067,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	damage = 40
 	speed = 0.6
 	armor_penetration = 90
+
 /obj/item/projectile/explosive_rocket/blackhole/on_impact(turf/T)
 	new /obj/effect/explosion(T) // Weak explosions don't produce this on their own, apparently.
 	explosion(T, 0, 0, 3, adminlog = FALSE)
