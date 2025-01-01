@@ -107,7 +107,7 @@
 	throw_at(get_step(L, get_turf(src)), special_attack_max_range+1, 1, src)
 	playsound(src, leap_sound, 75, 1)
 
-	addtimer(CALLBACK(src, PROC_REF(afterLeap)), 0.5 SECONDS, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(afterLeap), L), 0.5 SECONDS, TIMER_DELETE_ME)
 
 
 /mob/living/simple_mob/vore/otie/syndicate/blackhole/proc/afterLeap(var/mob/living/L)
@@ -115,9 +115,10 @@
 		status_flags &= ~LEAPING
 
 	set_AI_busy(FALSE)
+	if(!L)
+		return
 	if(Adjacent(L))
 		L.Weaken(1)
-		return
 
 ///-------------------------------------------------------------------------------------------------------------------------------------------------------------///
 ///the black hole fanatics!///
