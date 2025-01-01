@@ -1,5 +1,0 @@
-author: "Missile597"
-delete-after: True
-changes:
-  - rscadd: "Added new materials to the biogenerator list: Diethylamine, Unstable Mutagen, Plant-B-Gone, Table Salt, Soy Sauce, Flora Disk, Floral Somatoray, Kudzu Seeds, Random Exotic Seeds"
-  - balance: "Lowered the costs of the fertilisers and botany materials to make them easier to obtain. After all, the department uses these a lot."

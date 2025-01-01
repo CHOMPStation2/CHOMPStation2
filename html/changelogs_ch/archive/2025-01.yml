@@ -1,0 +1,12 @@
+2025-01-01:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: record updates being applied without consent on ui close
+  Missile597:
+  - rscadd: 'Added new materials to the biogenerator list: Diethylamine, Unstable
+      Mutagen, Plant-B-Gone, Table Salt, Soy Sauce, Flora Disk, Floral Somatoray,
+      Kudzu Seeds, Random Exotic Seeds'
+  - balance: Lowered the costs of the fertilisers and botany materials to make them
+      easier to obtain. After all, the department uses these a lot.
+  whooshboom:
+  - rscadd: 'Added keybinds from TGstation to engineering (Ctrl-click: Toggle, Alt-click:
+      Max)'

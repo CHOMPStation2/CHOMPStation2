@@ -1,4 +1,0 @@
-author: "whooshboom"
-delete-after: True
-changes:
-  - rscadd: "Added keybinds from TGstation to engineering (Ctrl-click: Toggle, Alt-click: Max)"
