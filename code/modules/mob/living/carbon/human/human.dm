@@ -1824,8 +1824,6 @@
 			rig.visor.deactivate()
 			to_chat(src, span_warning("\The [rig]'s visor has shuddenly deactivated!"))
 
-	..()
-
 /mob/living/carbon/human/get_mob_riding_slots()
 	return list(back, head, wear_suit)
 
