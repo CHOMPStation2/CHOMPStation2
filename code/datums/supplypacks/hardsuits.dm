@@ -32,7 +32,7 @@
 	containertype = /obj/structure/closet/crate/secure/gear
 	containername = "industrial hardsuit crate"
 	access = list(access_mining,
-				  access_eva)d
+				  access_eva)
 	one_access = TRUE
 
 /datum/supply_pack/hardsuits/medical_rig
