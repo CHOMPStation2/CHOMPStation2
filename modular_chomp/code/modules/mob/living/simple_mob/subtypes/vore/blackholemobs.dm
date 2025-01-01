@@ -721,8 +721,8 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	pixel_x = -16
 	pixel_y = 0
 	var/exploded = FALSE
-	var/explosion_dev_range		= 0
-	var/explosion_heavy_range	= 1
+	var/explosion_dev_range		= 1
+	var/explosion_heavy_range	= 2
 	var/explosion_light_range	= 4
 	var/explosion_flash_range	= 12
 
