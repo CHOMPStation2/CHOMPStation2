@@ -106,14 +106,21 @@
 //CHOMPAdd Start
 /datum/language/marish
 	name = LANGUAGE_MARISH
-	desc = "Where shadekin have a language rooted in empathy, there are still subtle tones and syllables that are as delicate as the emotions that shadekin normally communicate with."
-	speech_verb = "mars"
-	ask_verb = "mars"
-	exclaim_verb = "MARS"
+	desc = "Where shadekin have a language rooted in empathy, there are still subtle tones and gestures that are as delicate as the emotions that shadekin normally communicate with."
 	key = "9"
+	signlang_verb = list("shifts their ears", "mars subtly", "swivels their ears", "twitches their nose", "leers intently", "hackles their fur")
+	signlang_verb_understood = list("mars")
 	colour = "marish"
-	syllables = list("mar", "mwrrr", "maaAr", "'aarrr", "wrurrl", "mmar")
+	flags = INAUDIBLE
+	ignore_adverb = TRUE
 	machine_understands = FALSE
+
+/datum/language/marish/scramble(var/input, var/list/known_languages)
+	return stars(input)
+
+/datum/language/marish/broadcast(var/mob/living/speaker, var/message, var/speaker_mask)
+	log_say("(INAUDIBLE) [message]", speaker)
+	speaker.say_signlang(format_message(message), pick(signlang_verb), pick(signlang_verb_understood), src, 2)
 
 /datum/language/slavic
 	name = LANGUAGE_SLAVIC
