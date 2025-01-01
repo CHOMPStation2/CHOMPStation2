@@ -25,4 +25,4 @@
 /area/shuttle/escape/station{base_turf=/turf/simulated/floor/tiled/techfloor/grid;} : /area/shuttle/escape/station/simulated_grid
 /area/shuttle/response_ship{base_turf=/turf/simulated/floor/reinforced;} : /area/shuttle/response_ship/simulated_reinforced
 /area/surface/outpost/mining_main/exterior{name="Surface Mines Operations Pad";} : /area/surface/outpost/mining_main/exterior/pad
-/area/surface/outside/plains/outpost{outdoors=-1.0;} : /area/surface/outside/plains/outpost/outdoors_area
+/area/surface/outside/plains/outpost{outdoors=-1;} : /area/surface/outside/plains/outpost/outdoors_area
