@@ -6,12 +6,8 @@
 	desc = "Allows you to move faster on average than baseline."
 	cost = 4 //CHOMPEdit
 	var_changes = list("slowdown" = -0.5)
-<<<<<<< HEAD
 	excludes = list(/datum/trait/positive/hardy,/datum/trait/positive/hardy_extreme,/datum/trait/positive/hardy_plus)
-//	banned_species = list(SPECIES_ALRAUNE, SPECIES_SHADEKIN_CREW, SPECIES_TESHARI, SPECIES_TAJ, SPECIES_DIONA, SPECIES_UNATHI) //Either not applicable or buffs ruin species flavour/balance
-=======
 //	banned_species = list(SPECIES_ALRAUNE, SPECIES_SHADEKIN_CREW, SPECIES_TESHARI, SPECIES_TAJARAN, SPECIES_DIONA, SPECIES_UNATHI) //Either not applicable or buffs ruin species flavour/balance
->>>>>>> e6ef8b0f2c (resize limits and designer / dna update (#16807))
 //	custom_only = FALSE //Keeping these in comments in case we decide to open them up in future, so the species are already organised.
 
 /datum/trait/positive/hardy

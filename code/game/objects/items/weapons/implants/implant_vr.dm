@@ -104,11 +104,7 @@
 				var/static/regex/size_mult = new/regex("\\d+")
 				if(size_mult.Find(msg))
 					var/resizing_value = text2num(size_mult.match)
-<<<<<<< HEAD
 					H.resize(CLAMP(resizing_value/100 , RESIZE_MINIMUM_DORMS, RESIZE_MAXIMUM_DORMS), uncapped = H.has_large_resize_bounds()) //CHOMPEdit - Let resize handle size limits. It's meant to do that.
-=======
-					H.resize(CLAMP(resizing_value/100 , RESIZE_MINIMUM, RESIZE_MAXIMUM))
->>>>>>> e6ef8b0f2c (resize limits and designer / dna update (#16807))
 
 
 

@@ -107,11 +107,7 @@
 	if(H.dna && reset_dna)
 		H.dna.ready_dna(H)
 
-<<<<<<< HEAD
-	handle_base_eyes(H, custom_base) //ChompEDIT. ensure custom species with a base get the correct eyes
-=======
 	handle_base_eyes(H, custom_base)
->>>>>>> e6ef8b0f2c (resize limits and designer / dna update (#16807))
 
 	return new_copy
 

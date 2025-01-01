@@ -460,7 +460,7 @@
 		P.flavor_texts[key]	= active_br.mydna.flavor[key]
 	P.fuzzy = active_br.mydna.dna.scale_appearance
 	P.offset_override = active_br.mydna.dna.offset_override
-	// P.species_sound = active_br.mydna.dna.species_sounds // Currently not implemented on virgo
+	P.species_sound = active_br.mydna.dna.species_sounds // CHOMPEnable
 
 	// Now we start using the player_setup objects to do stuff!
 	var/datum/category_collection/CC = P.player_setup
@@ -542,9 +542,10 @@
 				update_preview_icon()
 				return TRUE
 			if("species_sound_options")
-				/* Currently not implemented on virgo
+				// CHOMPEnable Start
 				active_br.mydna.dna.species_sounds = P.species_sound
-				update_preview_icon() */
+				update_preview_icon()
+				// CHOMPEnable End
 				return TRUE
 		to_use.copy_to_mob(mannequin)
 		mannequin.species.blood_color = active_br.mydna.dna.blood_color

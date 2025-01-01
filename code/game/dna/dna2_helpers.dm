@@ -273,12 +273,12 @@
 		// VOREStation Edit End
 
 		H.species.blood_reagents = dna.blood_reagents
-		/* Currently not implemented on virgo
+		// CHOMPEnable Start
 		H.species.species_sounds = dna.species_sounds
 		H.species.gender_specific_species_sounds = dna.gender_specific_species_sounds
 		H.species.species_sounds_male = dna.species_sounds_male
 		H.species.species_sounds_female = dna.species_sounds_female
-		*/
+		// CHOMPEnable ENd
 
 		H.force_update_organs() //VOREStation Add - Gotta do this too
 		H.force_update_limbs()

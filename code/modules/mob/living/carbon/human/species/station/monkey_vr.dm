@@ -90,9 +90,5 @@
 	low_sorting_priority = TRUE
 
 /mob/living/carbon/human/wolpin/New(var/new_loc)
-<<<<<<< HEAD
-	..(new_loc, "Wolpin")
-=======
 	..(new_loc, SPECIES_MONKEY_VULPKANIN)
 	species.produceCopy(species.traits.Copy(),src,null,FALSE)
->>>>>>> e6ef8b0f2c (resize limits and designer / dna update (#16807))
