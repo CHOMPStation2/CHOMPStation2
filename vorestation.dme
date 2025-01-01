@@ -106,7 +106,6 @@
 #include "code\__defines\misc_ch.dm"
 #include "code\__defines\mob_ch.dm"
 #include "code\__defines\mobs.dm"
-#include "code\__defines\mobs_vr.dm"
 #include "code\__defines\mobs_yw.dm"
 #include "code\__defines\nif_ch.dm"
 #include "code\__defines\nifsoft.dm"
