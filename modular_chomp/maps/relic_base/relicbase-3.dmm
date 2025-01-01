@@ -21099,9 +21099,7 @@
 /turf/simulated/floor/plating{
 	outdoors = 1
 	},
-/area/maintenance/substation/atmospherics{
-	name = "Exploration Substation"
-	})
+/area/maintenance/substation/atmospherics/exploration)
 "iAC" = (
 /obj/effect/floor_decal/chapel{
 	dir = 4
@@ -24454,9 +24452,7 @@
 	},
 /obj/structure/cable/green,
 /turf/simulated/floor/plating,
-/area/maintenance/substation/atmospherics{
-	name = "Exploration Substation"
-	})
+/area/maintenance/substation/atmospherics/exploration)
 "jVM" = (
 /obj/machinery/camera/network/exterior{
 	c_tag = "EXT - Research South 8"
@@ -30124,9 +30120,7 @@
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/substation/atmospherics{
-	name = "Exploration Substation"
-	})
+/area/maintenance/substation/atmospherics/exploration)
 "mrz" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -33593,9 +33587,7 @@
 	name_tag = "Exploration Subgrid"
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/substation/atmospherics{
-	name = "Exploration Substation"
-	})
+/area/maintenance/substation/atmospherics/exploration)
 "nND" = (
 /turf/simulated/shuttle/wall/voidcraft/no_join,
 /area/shuttle/needle)
@@ -37786,9 +37778,7 @@
 	RCon_tag = "Exploration Substation Bypass"
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/substation/atmospherics{
-	name = "Exploration Substation"
-	})
+/area/maintenance/substation/atmospherics/exploration)
 "pDC" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/firealarm{
@@ -39465,9 +39455,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/substation/atmospherics{
-	name = "Exploration Substation"
-	})
+/area/maintenance/substation/atmospherics/exploration)
 "qgN" = (
 /obj/structure/bed/chair/office/light{
 	dir = 8
@@ -49561,9 +49549,7 @@
 /area/holodeck_control)
 "usd" = (
 /turf/simulated/floor/plating,
-/area/maintenance/substation/atmospherics{
-	name = "Exploration Substation"
-	})
+/area/maintenance/substation/atmospherics/exploration)
 "usC" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 10
@@ -50428,9 +50414,7 @@
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/substation/atmospherics{
-	name = "Exploration Substation"
-	})
+/area/maintenance/substation/atmospherics/exploration)
 "uGB" = (
 /obj/machinery/button/remote/airlock{
 	id = "unit2";
@@ -53722,9 +53706,7 @@
 /area/crew_quarters/kitchen)
 "vNh" = (
 /turf/simulated/wall/r_wall,
-/area/maintenance/substation/atmospherics{
-	name = "Exploration Substation"
-	})
+/area/maintenance/substation/atmospherics/exploration)
 "vNR" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/wood/alt/panel,
@@ -53821,9 +53803,7 @@
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/substation/atmospherics{
-	name = "Exploration Substation"
-	})
+/area/maintenance/substation/atmospherics/exploration)
 "vQW" = (
 /obj/structure/flora/ausbushes/grassybush{
 	opacity = 1
@@ -56063,9 +56043,7 @@
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/substation/atmospherics{
-	name = "Exploration Substation"
-	})
+/area/maintenance/substation/atmospherics/exploration)
 "wJc" = (
 /obj/structure/cable/green{
 	d1 = 4;

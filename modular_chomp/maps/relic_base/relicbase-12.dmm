@@ -8725,9 +8725,7 @@
 /area/centcom/medical)
 "jlo" = (
 /turf/simulated/wall/thull,
-/area/shuttle/response_ship{
-	base_turf = /turf/simulated/floor/reinforced
-	})
+/area/shuttle/response_ship/simulated_reinforced)
 "jlK" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -14391,9 +14389,7 @@
 /turf/simulated/floor/reinforced{
 	outdoors = 1
 	},
-/area/shuttle/response_ship{
-	base_turf = /turf/simulated/floor/reinforced
-	})
+/area/shuttle/response_ship/simulated_reinforced)
 "pNL" = (
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 6
@@ -14625,9 +14621,7 @@
 /turf/simulated/floor/reinforced{
 	outdoors = 1
 	},
-/area/shuttle/response_ship{
-	base_turf = /turf/simulated/floor/reinforced
-	})
+/area/shuttle/response_ship/simulated_reinforced)
 "qez" = (
 /obj/machinery/robotic_fabricator,
 /turf/simulated/shuttle/floor/red,
@@ -15581,9 +15575,7 @@
 /turf/simulated/floor/reinforced{
 	outdoors = 1
 	},
-/area/shuttle/response_ship{
-	base_turf = /turf/simulated/floor/reinforced
-	})
+/area/shuttle/response_ship/simulated_reinforced)
 "rwa" = (
 /obj/structure/table/standard,
 /obj/item/autopsy_scanner,
@@ -15654,9 +15646,7 @@
 /turf/simulated/floor/reinforced{
 	outdoors = 1
 	},
-/area/shuttle/response_ship{
-	base_turf = /turf/simulated/floor/reinforced
-	})
+/area/shuttle/response_ship/simulated_reinforced)
 "rAB" = (
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	dir = 4;
@@ -15773,9 +15763,7 @@
 	dir = 4
 	},
 /turf/simulated/shuttle/floor/red,
-/area/shuttle/response_ship{
-	base_turf = /turf/simulated/floor/reinforced
-	})
+/area/shuttle/response_ship/simulated_reinforced)
 "rJt" = (
 /turf/simulated/wall/tgmc/plain_redstripe_r,
 /area/centcom/specops)
@@ -15799,9 +15787,7 @@
 	tag_door = "response_shuttle_door"
 	},
 /turf/simulated/shuttle/floor/red,
-/area/shuttle/response_ship{
-	base_turf = /turf/simulated/floor/reinforced
-	})
+/area/shuttle/response_ship/simulated_reinforced)
 "rKZ" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/largecrate/animal/corgi,
@@ -15861,9 +15847,7 @@
 /area/centcom/medical)
 "rMY" = (
 /turf/simulated/shuttle/floor/red,
-/area/shuttle/response_ship{
-	base_turf = /turf/simulated/floor/reinforced
-	})
+/area/shuttle/response_ship/simulated_reinforced)
 "rNI" = (
 /obj/machinery/door/blast/angled/open{
 	dir = 4
@@ -15945,9 +15929,7 @@
 	pixel_x = 28
 	},
 /turf/simulated/shuttle/floor/red,
-/area/shuttle/response_ship{
-	base_turf = /turf/simulated/floor/reinforced
-	})
+/area/shuttle/response_ship/simulated_reinforced)
 "rPA" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/mecha_parts/mecha_equipment/tool/passenger,
@@ -16665,9 +16647,7 @@
 	dir = 4
 	},
 /turf/simulated/shuttle/floor/red,
-/area/shuttle/response_ship{
-	base_turf = /turf/simulated/floor/reinforced
-	})
+/area/shuttle/response_ship/simulated_reinforced)
 "sCn" = (
 /obj/structure/table/glass,
 /turf/unsimulated/floor{
@@ -16759,9 +16739,7 @@
 	dir = 8
 	},
 /turf/simulated/shuttle/floor/red,
-/area/shuttle/response_ship{
-	base_turf = /turf/simulated/floor/reinforced
-	})
+/area/shuttle/response_ship/simulated_reinforced)
 "sGE" = (
 /obj/machinery/computer/crew,
 /turf/simulated/shuttle/floor/black,
@@ -18146,9 +18124,7 @@
 	},
 /obj/structure/fans/tiny,
 /turf/simulated/shuttle/floor/red,
-/area/shuttle/response_ship{
-	base_turf = /turf/simulated/floor/reinforced
-	})
+/area/shuttle/response_ship/simulated_reinforced)
 "uvg" = (
 /obj/structure/table/rack/gun_rack/steel,
 /obj/item/storage/belt/holding{
@@ -18227,9 +18203,7 @@
 	name = "ERT Shuttle Bay"
 	},
 /turf/simulated/shuttle/floor/red,
-/area/shuttle/response_ship{
-	base_turf = /turf/simulated/floor/reinforced
-	})
+/area/shuttle/response_ship/simulated_reinforced)
 "uxC" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -18260,9 +18234,7 @@
 	dir = 4
 	},
 /turf/simulated/shuttle/floor/red,
-/area/shuttle/response_ship{
-	base_turf = /turf/simulated/floor/reinforced
-	})
+/area/shuttle/response_ship/simulated_reinforced)
 "uBe" = (
 /obj/machinery/door/airlock/medical,
 /turf/unsimulated/floor{
@@ -18286,9 +18258,7 @@
 	dir = 8
 	},
 /turf/simulated/shuttle/floor/red,
-/area/shuttle/response_ship{
-	base_turf = /turf/simulated/floor/reinforced
-	})
+/area/shuttle/response_ship/simulated_reinforced)
 "uEH" = (
 /obj/effect/forcefield{
 	desc = "You can't get in. Heh.";
@@ -18371,9 +18341,7 @@
 	dir = 1
 	},
 /turf/simulated/wall/thull,
-/area/shuttle/response_ship{
-	base_turf = /turf/simulated/floor/reinforced
-	})
+/area/shuttle/response_ship/simulated_reinforced)
 "uKz" = (
 /turf/simulated/shuttle/wall/dark/no_join,
 /area/centcom/evac)
@@ -18415,9 +18383,7 @@
 	icon_state = "burst_r"
 	},
 /turf/simulated/shuttle/plating/airless/carry,
-/area/shuttle/response_ship{
-	base_turf = /turf/simulated/floor/reinforced
-	})
+/area/shuttle/response_ship/simulated_reinforced)
 "uOy" = (
 /obj/machinery/door/airlock/centcom{
 	icon_state = "door_locked";
