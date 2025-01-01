@@ -94,6 +94,8 @@
 	use_astar = TRUE
 	pointblank = TRUE
 	firing_lanes = TRUE
+	call_distance = 2
+	wander = FALSE
 	var/closest_desired_distance = 4
 	var/multiplayer_threshold = 3
 
@@ -244,6 +246,11 @@
 		ranged_post_animation(A)
 
 	return TRUE
+
+/mob/living/simple_mob/humanoid/eclipse/solar/snipertesh/handle_special()
+	if(!cloaked && can_cloak())
+		cloak()
+
 
 /mob/living/simple_mob/humanoid/eclipse/solar/plant
 	name = "Solar Eclipse Bioexpirment"
@@ -466,8 +473,8 @@
 	reload_max = 1
 	reload_time = 2.5 SECONDS
 	ranged_attack_delay = 1.5 SECONDS
-	var/cloaked_alpha = 60			// Lower = Harder to see.
-	var/cloak_cooldown = 5 SECONDS	// Amount of time needed to re-cloak after losing it.
+	var/cloaked_alpha = 40			// Lower = Harder to see.
+	var/cloak_cooldown = 1 SECONDS	// Amount of time needed to re-cloak after losing it.
 	var/last_uncloak = 0
 
 	loot_list = list(/obj/item/slime_extract/sepia  = 1,
@@ -555,6 +562,10 @@
 
 	return TRUE
 
+/mob/living/simple_mob/humanoid/eclipse/lunar/bulletstorm/handle_special()
+	if(!cloaked && can_cloak())
+		cloak()
+
 /mob/living/simple_mob/mechanical/mining_drone/scavenger/eclipse
 	health = 1
 	maxHealth = 1
@@ -589,8 +600,8 @@
 			Beam(A, icon_state = "sat_beam", time = 4.5 SECONDS, maxdistance = INFINITY)
 			addtimer(CALLBACK(src, PROC_REF(special_projectile), A), 5 SECONDS, TIMER_DELETE_ME)
 		else
-			specialattackprojectile = /obj/item/projectile/beam/energy_net
-			visible_message(span_warning("\The [src] pulls out a decloner!"))
+			specialattackprojectile = /obj/item/projectile/temp/hot
+			visible_message(span_warning("\The [src] pulls out a tempature gun!"))
 			Beam(A, icon_state = "sat_beam", time = 1.5 SECONDS, maxdistance = INFINITY)
 			addtimer(CALLBACK(src, PROC_REF(special_projectile), A), 2 SECONDS, TIMER_DELETE_ME)
 

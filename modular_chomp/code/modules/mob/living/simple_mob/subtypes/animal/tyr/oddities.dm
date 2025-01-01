@@ -54,8 +54,8 @@
 	vore_bump_emote = "slurps up" //Not really a good way to make the grammar work with a passive vore plant.
 	vore_active = 1
 	vore_capacity = 1
-	vore_pounce_chance = 0 //Plants only eat people who stumble into them.
-	swallowTime = 3 //3 deciseconds. This is intended to be nearly instant, e.g. victim trips and falls in.
+	vore_pounce_chance = 100
+	swallowTime = 3
 	vore_ignores_undigestable = 0
 	vore_default_mode = DM_DIGEST
 
@@ -123,8 +123,8 @@
 	desc = "A large insect."
 	icon_state = "lighting_beetle"
 	icon_dead = "beetle_dead"
-	maxHealth = 40
-	health = 40
+	maxHealth = 18
+	health = 18
 	pass_flags = PASSTABLE //flying bug
 	movement_cooldown = 1
 
@@ -156,8 +156,8 @@
 	desc = "A large insect."
 	icon_state = "fire_beetle"
 	icon_dead = "beetle_dead"
-	maxHealth = 40
-	health = 40
+	maxHealth = 18
+	health = 18
 	pass_flags = PASSTABLE //flying bug
 	movement_cooldown = 1
 
@@ -184,8 +184,8 @@
 	desc = "A large insect."
 	icon_state = "green_beetle"
 	icon_dead = "beetle_dead"
-	maxHealth = 40
-	health = 40
+	maxHealth = 18
+	health = 18
 	pass_flags = PASSTABLE
 	movement_cooldown = 1
 
@@ -202,3 +202,5 @@
 	see_in_dark = 3
 	melee_damage_lower = 16
 	melee_damage_upper = 16
+
+	ranged_cooldown = 30
