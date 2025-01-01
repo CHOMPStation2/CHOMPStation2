@@ -2,24 +2,53 @@ import os
 import sys
 from .dmm import *
 
+def green(text):
+    return "\033[32m" + str(text) + "\033[0m"
+
+def red(text):
+    return "\033[31m" + str(text) + "\033[0m"
+
+def has_tgm_header(fname):
+    with open(fname, 'r', encoding=ENCODING) as f:
+        data = f.read(len(TGM_HEADER))
+        return data.startswith(TGM_HEADER)
+
+class LintException(Exception):
+    pass
+
+default_map_directory = "./modular_chomp/maps"
 
 def _self_test():
-    # test: can we load every DMM in the tree
     count = 0
-    for dirpath, dirnames, filenames in os.walk('.'):
+    failed = 0
+    for dirpath, dirnames, filenames in os.walk(default_map_directory):
         if '.git' in dirnames:
             dirnames.remove('.git')
         for filename in filenames:
             if filename.endswith('.dmm'):
                 fullpath = os.path.join(dirpath, filename)
+                path = fullpath.replace("\\", "/").removeprefix("./")
                 try:
+                    # test: can we load every DMM in the tree
                     DMM.from_file(fullpath)
+
+                    # test: is every DMM in TGM format
+                    if not has_tgm_header(fullpath):
+                        raise LintException('Map is not in TGM format! Please run `/tools/mapmerge2/I Forgot To Map Merge.bat`')
+                except LintException as error:
+                    failed += 1
+                    print(red(f'Failed on: {path}'))
+                    print(error)
                 except Exception:
-                    print('Failed on:', fullpath)
+                    failed += 1
+                    print(red(f'Failed on: {path}'))
                     raise
                 count += 1
 
-    print(f"{os.path.relpath(__file__)}: successfully parsed {count} .dmm files")
+    print(f"{os.path.relpath(__file__)}: {green(f'successfully parsed {count-failed} .dmm files')}")
+    if failed > 0:
+        print(f"{os.path.relpath(__file__)}: {red(f'failed to parse {failed} .dmm files')}")
+        exit(1)
 
 
 def _usage():
