@@ -7,7 +7,7 @@
 	cost = 4 //CHOMPEdit
 	var_changes = list("slowdown" = -0.5)
 	excludes = list(/datum/trait/positive/hardy,/datum/trait/positive/hardy_extreme,/datum/trait/positive/hardy_plus)
-//	banned_species = list(SPECIES_ALRAUNE, SPECIES_SHADEKIN_CREW, SPECIES_TESHARI, SPECIES_TAJ, SPECIES_DIONA, SPECIES_UNATHI) //Either not applicable or buffs ruin species flavour/balance
+//	banned_species = list(SPECIES_ALRAUNE, SPECIES_SHADEKIN_CREW, SPECIES_TESHARI, SPECIES_TAJARAN, SPECIES_DIONA, SPECIES_UNATHI) //Either not applicable or buffs ruin species flavour/balance
 //	custom_only = FALSE //Keeping these in comments in case we decide to open them up in future, so the species are already organised.
 
 /datum/trait/positive/hardy
@@ -268,7 +268,7 @@
 	a climbable wall. To climbe like so, use the verb 'Climb Down Wall' in IC tab!"
 	cost = 1
 	custom_only = FALSE
-	banned_species = list(SPECIES_TAJ, SPECIES_VASILISSAN)	// They got unique climbing delay.
+	banned_species = list(SPECIES_TAJARAN, SPECIES_VASILISSAN)	// They got unique climbing delay.
 	var_changes = list("can_climb" = TRUE, "climb_mult" = 0.75)
 	excludes = list(/datum/trait/positive/wall_climber_pro, /datum/trait/positive/wall_climber_natural)
 
@@ -301,7 +301,7 @@
 	excludes = list(/datum/trait/positive/wall_climber,/datum/trait/positive/wall_climber_natural)
 
 // This feels jank, but it's the cleanest way I could do TRAIT_VARCHANGE_LESS_BETTER while having a boolean var change
-// Alternate would've been banned_species = list(SPECIES_TAJ, SPECIES_VASSILISIAN)
+// Alternate would've been banned_species = list(SPECIES_TAJARAN, SPECIES_VASSILISIAN)
 // Opted for this as it's "future proof"
 /datum/trait/positive/wall_climber_pro/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
