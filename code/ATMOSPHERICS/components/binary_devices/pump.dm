@@ -254,3 +254,25 @@ Thus, the two variables affect pump operation are set in New():
 			span_notice("You have unfastened \the [src]."), \
 			"You hear ratchet.")
 		deconstruct()
+
+//CHOMPEdit Start - Adds TGStation keybinds to save our engineers some time.
+/obj/machinery/atmospherics/binary/pump/AltClick(mob/user as mob)
+	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
+	if(allowed(user))
+		to_chat(user, span_notice("You set the pump to max output"))
+		target_pressure = max_pressure_setting
+	else
+		to_chat(user, span_warning("Access denied."))
+
+/obj/machinery/atmospherics/binary/pump/CtrlClick(mob/user as mob)
+	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
+	if(allowed(user))
+		update_use_power(!use_power)
+		if(use_power)
+			to_chat(user, span_notice("You turn the pump on."))
+		else
+			to_chat(user, span_notice("You turn the pump off."))
+
+	else
+		to_chat(user, span_warning("Access denied."))
+//CHOMPEdit End
