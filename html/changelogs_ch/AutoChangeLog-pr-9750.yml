@@ -1,0 +1,4 @@
+author: "Aroliacue"
+delete-after: True
+changes:
+  - maptweak: "Patient rooms in medbay now have rad-shielding."
