@@ -164,6 +164,20 @@
 /obj/random/junk,
 /turf/simulated/floor/tiled/eris/white/techfloor,
 /area/submap/whiteship)
+"iF" = (
+/obj/item/cell,
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/machinery/power/terminal,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/eris/white/techfloor,
+/area/submap/whiteship)
 "kz" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 10
@@ -191,6 +205,11 @@
 	dir = 10
 	},
 /turf/simulated/wall/rthull,
+/area/submap/whiteship)
+"mw" = (
+/obj/item/cell,
+/obj/random/trash,
+/turf/simulated/floor/tiled/eris/white/techfloor,
 /area/submap/whiteship)
 "mI" = (
 /obj/effect/decal/cleanable/dirt,
@@ -289,20 +308,6 @@
 "sn" = (
 /obj/random/junk,
 /turf/simulated/floor/tiled/eris/steel/techfloor_grid,
-/area/submap/whiteship)
-"tb" = (
-/obj/item/cell,
-/obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/obj/machinery/power/terminal,
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/eris/white/techfloor,
 /area/submap/whiteship)
 "tc" = (
 /obj/effect/decal/cleanable/dirt,
@@ -437,11 +442,6 @@
 /obj/random/trash,
 /turf/simulated/floor/tiled/techmaint,
 /area/submap/whiteship)
-"zY" = (
-/obj/item/cell,
-/obj/random/trash,
-/turf/simulated/floor/tiled/eris/white/techfloor,
-/area/submap/whiteship)
 "An" = (
 /obj/structure/table/standard,
 /obj/item/radio/off,
@@ -516,11 +516,6 @@
 /obj/effect/decal/cleanable/dirt,
 /mob/living/simple_mob/metroid/juvenile/super,
 /turf/simulated/floor/tiled/eris/white/techfloor,
-/area/submap/whiteship)
-"FB" = (
-/obj/structure/lattice,
-/obj/structure/lattice,
-/turf/template_noop,
 /area/submap/whiteship)
 "FT" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
@@ -1184,7 +1179,7 @@ co
 qz
 gr
 Br
-zY
+mw
 sj
 gJ
 gJ
@@ -1354,7 +1349,7 @@ qz
 Xy
 wx
 sj
-tb
+iF
 QH
 gJ
 gJ
@@ -2056,7 +2051,7 @@ fR
 fR
 EE
 Nc
-FB
+EE
 Nc
 fR
 fR
@@ -2114,7 +2109,7 @@ fR
 fR
 fR
 EE
-FB
+EE
 EE
 gJ
 gJ

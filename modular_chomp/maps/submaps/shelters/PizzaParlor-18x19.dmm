@@ -1083,11 +1083,11 @@
 	},
 /obj/item/clothing/under/pizzaguy{
 	rolled_down = 1;
-	icon_override = icons/inventory/uniform/mob_vr_rolled_down.dmi
+	icon_override = 'icons/inventory/uniform/mob_vr_rolled_down.dmi'
 	},
 /obj/item/clothing/under/pizzaguy{
 	rolled_down = 1;
-	icon_override = icons/inventory/uniform/mob_vr_rolled_down.dmi
+	icon_override = 'icons/inventory/uniform/mob_vr_rolled_down.dmi'
 	},
 /obj/item/clothing/head/soft/red,
 /obj/item/clothing/head/soft/red,

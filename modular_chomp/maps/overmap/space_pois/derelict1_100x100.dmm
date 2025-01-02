@@ -28,8 +28,7 @@
 /area/submap/derelict1)
 "bL" = (
 /obj/structure/window/reinforced{
-	dir = 1;
-	tag = "icon-rwindow (NORTH)"
+	dir = 1
 	},
 /turf/template_noop,
 /area/submap/derelict1)
@@ -49,8 +48,7 @@
 /area/submap/derelict1)
 "cU" = (
 /obj/machinery/light/small{
-	dir = 4;
-	tag = "icon-bulb1 (EAST)"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/asteroid_steel/airless{
 	temperature = 293.15
@@ -279,12 +277,10 @@
 /area/submap/derelict1)
 "sF" = (
 /obj/structure/window/reinforced{
-	dir = 4;
-	tag = "icon-rwindow (EAST)"
+	dir = 4
 	},
 /obj/structure/window/reinforced{
-	dir = 8;
-	tag = "icon-rwindow (WEST)"
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/submap/derelict1)
@@ -313,8 +309,7 @@
 /area/submap/derelict1)
 "tV" = (
 /obj/machinery/light/small{
-	dir = 8;
-	tag = "icon-bulb1 (WEST)"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/asteroid_steel/airless{
 	temperature = 293.15
@@ -336,8 +331,7 @@
 /area/submap/derelict1)
 "vP" = (
 /obj/machinery/light/small{
-	dir = 1;
-	tag = "icon-bulb1 (NORTH)"
+	dir = 1
 	},
 /obj/machinery/power/apc{
 	dir = 8;
@@ -362,8 +356,7 @@
 /area/submap/derelict1)
 "wx" = (
 /obj/structure/window/reinforced{
-	dir = 4;
-	tag = "icon-rwindow (EAST)"
+	dir = 4
 	},
 /turf/template_noop,
 /area/submap/derelict1)
@@ -409,8 +402,7 @@
 /area/submap/derelict1)
 "ze" = (
 /obj/structure/window/reinforced{
-	dir = 8;
-	tag = "icon-rwindow (WEST)"
+	dir = 8
 	},
 /obj/structure/bed/chair/bay/comfy/lime{
 	dir = 1
@@ -460,8 +452,7 @@
 "AR" = (
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
-	dir = 1;
-	tag = "icon-rwindow (NORTH)"
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/submap/derelict1)
@@ -471,8 +462,7 @@
 /area/submap/derelict1)
 "Cy" = (
 /obj/structure/shuttle/engine/propulsion{
-	dir = 4;
-	tag = "icon-propulsion (WEST)"
+	dir = 4
 	},
 /turf/simulated/shuttle/plating,
 /area/submap/derelict1)
@@ -518,8 +508,7 @@
 /area/submap/derelict1)
 "Fb" = (
 /obj/structure/window/reinforced{
-	dir = 8;
-	tag = "icon-rwindow (WEST)"
+	dir = 8
 	},
 /obj/structure/bed/chair/bay/comfy/lime,
 /turf/simulated/shuttle/floor,
@@ -674,11 +663,6 @@
 /obj/structure/salvageable/server,
 /turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/derelict1)
-"Pb" = (
-/obj/structure/lattice,
-/obj/structure/lattice,
-/turf/template_noop,
-/area/submap/derelict1)
 "Pr" = (
 /obj/random/maintenance/clean,
 /turf/simulated/floor/tiled/asteroid_steel/airless,
@@ -728,11 +712,6 @@
 	temperature = 293.15
 	},
 /area/submap/derelict1)
-"St" = (
-/obj/structure/lattice,
-/obj/structure/lattice,
-/turf/template_noop,
-/area/template_noop)
 "SF" = (
 /obj/effect/alien/weeds/node,
 /mob/living/simple_mob/animal/space/alien/sentinel,
@@ -750,8 +729,7 @@
 /area/template_noop)
 "Tr" = (
 /obj/structure/window/reinforced{
-	dir = 8;
-	tag = "icon-rwindow (WEST)"
+	dir = 8
 	},
 /turf/template_noop,
 /area/submap/derelict1)
@@ -1795,7 +1773,7 @@ Hh
 Hh
 Hh
 Hh
-St
+jR
 jR
 jR
 jR
@@ -2914,7 +2892,7 @@ jR
 iM
 iM
 jR
-St
+jR
 jR
 jR
 iM
@@ -3010,7 +2988,7 @@ iM
 iM
 iM
 iM
-St
+jR
 jR
 jR
 jR
@@ -3524,7 +3502,7 @@ iM
 jR
 jR
 jR
-St
+jR
 jR
 iM
 iM
@@ -3626,7 +3604,7 @@ iM
 iM
 jR
 jR
-St
+jR
 jR
 iM
 iM
@@ -3932,7 +3910,7 @@ iM
 iM
 iM
 iM
-St
+jR
 jR
 iM
 iM
@@ -7220,7 +7198,7 @@ qm
 GS
 GS
 jG
-Pb
+GS
 GS
 Ec
 jG

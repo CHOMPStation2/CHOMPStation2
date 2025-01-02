@@ -1,14 +1,18 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"aB" = (
-/obj/structure/table/steel,
-/obj/machinery/recharger,
-/obj/effect/floor_decal/corner/grey/diagonal,
-/obj/random/material/precious,
-/turf/simulated/floor/concrete,
-/area/submap/BountyHunters)
 "aF" = (
 /obj/effect/floor_decal/corner/grey/diagonal,
 /obj/effect/map_helper/no_phaseshift/area,
+/turf/simulated/floor/concrete,
+/area/submap/BountyHunters)
+"ba" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/machinery/door/blast/regular{
+	id = "bountycellB"
+	},
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
 "be" = (
@@ -28,8 +32,7 @@
 /area/submap/BountyHunters)
 "cI" = (
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/concrete,
@@ -49,12 +52,6 @@
 	},
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/BountyHunters)
-"eH" = (
-/obj/structure/table/steel,
-/obj/effect/floor_decal/corner/grey/diagonal,
-/obj/random/material/precious,
-/turf/simulated/floor/concrete,
-/area/submap/BountyHunters)
 "eY" = (
 /obj/machinery/door/airlock,
 /turf/simulated/floor/concrete,
@@ -73,24 +70,6 @@
 /obj/structure/window/reinforced,
 /obj/machinery/door/blast/regular{
 	id = "bountycellA"
-	},
-/turf/simulated/floor/concrete,
-/area/submap/BountyHunters)
-"gT" = (
-/obj/structure/grille,
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced,
-/obj/machinery/door/blast/regular{
-	id = "bountycellB"
 	},
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
@@ -132,7 +111,6 @@
 /area/submap/BountyHunters)
 "nD" = (
 /obj/structure/table/sifwoodentable,
-/obj/structure/table/sifwoodentable,
 /obj/machinery/light/small{
 	dir = 8
 	},
@@ -158,22 +136,9 @@
 /obj/structure/table/steel,
 /obj/random/maintenance/foodstuff,
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /obj/effect/floor_decal/corner/grey/diagonal,
-/turf/simulated/floor/concrete,
-/area/submap/BountyHunters)
-"pG" = (
-/obj/structure/grille,
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced,
-/obj/machinery/door/blast/regular{
-	id = "bountycellB"
-	},
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
 "qy" = (
@@ -214,6 +179,20 @@
 "tM" = (
 /mob/living/simple_mob/humanoid/eclipse/solar/snipertesh,
 /obj/effect/floor_decal/corner/grey/diagonal,
+/turf/simulated/floor/concrete,
+/area/submap/BountyHunters)
+"ub" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/machinery/door/blast/regular{
+	id = "bountycellB"
+	},
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
 "uh" = (
@@ -258,7 +237,6 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "PAPC";
-	pixel_x = 0;
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
@@ -273,9 +251,6 @@
 	id = "bountycellB"
 	},
 /obj/structure/table/steel,
-/obj/machinery/light/small{
-	dir = 4
-	},
 /obj/machinery/light/small{
 	dir = 4
 	},
@@ -310,6 +285,12 @@
 	dir = 9
 	},
 /turf/simulated/floor/outdoors/dirt,
+/area/submap/BountyHunters)
+"FW" = (
+/obj/structure/table/steel,
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/random/material/precious,
+/turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
 "Gz" = (
 /obj/structure/grille,
@@ -351,8 +332,7 @@
 /area/submap/BountyHunters)
 "IW" = (
 /obj/machinery/power/terminal{
-	dir = 1;
-	icon_state = "term"
+	dir = 1
 	},
 /obj/structure/cable{
 	d2 = 4;
@@ -364,8 +344,7 @@
 "Jn" = (
 /obj/structure/railing,
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/concrete,
@@ -375,22 +354,6 @@
 	dir = 8
 	},
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/BountyHunters)
-"Ly" = (
-/obj/structure/grille,
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced,
-/obj/machinery/door/blast/regular{
-	id = "bountycellB"
-	},
-/turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
 "MV" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -413,6 +376,20 @@
 	dir = 5
 	},
 /turf/simulated/floor/outdoors/dirt,
+/area/submap/BountyHunters)
+"OS" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/machinery/door/blast/regular{
+	id = "bountycellB"
+	},
+/turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
 "Pr" = (
 /obj/structure/table/steel,
@@ -448,17 +425,18 @@
 /area/submap/BountyHunters)
 "SL" = (
 /obj/structure/table/sifwoodentable,
-/obj/structure/table/sifwoodentable,
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
-	},
-/obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /obj/random/maintenance/morestuff,
 /obj/effect/floor_decal/corner/grey/diagonal,
+/turf/simulated/floor/concrete,
+/area/submap/BountyHunters)
+"Tc" = (
+/obj/structure/table/steel,
+/obj/machinery/recharger,
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/random/material/precious,
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
 "Ur" = (
@@ -497,8 +475,7 @@
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
-	icon_state = "4-8";
-	pixel_x = 0
+	icon_state = "4-8"
 	},
 /mob/living/simple_mob/humanoid/merc/ranged/sniper{
 	name = "bounty sniper"
@@ -521,16 +498,6 @@
 /obj/machinery/door/blast/regular{
 	id = "bountycellA"
 	},
-/turf/simulated/floor/concrete,
-/area/submap/BountyHunters)
-"ZM" = (
-/obj/structure/railing,
-/obj/structure/railing,
-/obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
-	},
-/obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
 
@@ -816,8 +783,8 @@ Hj
 Wj
 mf
 yz
-aB
-eH
+Tc
+FW
 Pr
 rC
 rC
@@ -924,7 +891,7 @@ Hj
 Wj
 mf
 yz
-eH
+FW
 mY
 pF
 rC
@@ -1003,7 +970,7 @@ Wj
 Wj
 Hj
 Wj
-gT
+OS
 rC
 rC
 rC
@@ -1030,7 +997,7 @@ Wj
 Wj
 Hj
 Wj
-pG
+ba
 rC
 tM
 rC
@@ -1057,7 +1024,7 @@ Wj
 Wj
 Hj
 Wj
-Ly
+ub
 rC
 rC
 rC
@@ -1068,7 +1035,7 @@ mf
 rC
 rC
 rC
-ZM
+Jn
 PK
 PK
 PK

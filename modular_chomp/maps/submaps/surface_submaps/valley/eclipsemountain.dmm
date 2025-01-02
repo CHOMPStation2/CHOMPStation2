@@ -83,10 +83,6 @@
 /obj/structure/cliff/automatic,
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/eclipsemountain)
-"hP" = (
-/turf/simulated/floor/tiled/steel,
-/turf/simulated/wall/r_wall,
-/area/submap/eclipsemountain)
 "iU" = (
 /turf/simulated/floor/tiled/steel,
 /area/submap/eclipsemountain)
@@ -242,8 +238,7 @@
 /area/submap/eclipsemountain)
 "tS" = (
 /obj/machinery/power/terminal{
-	dir = 1;
-	icon_state = "term"
+	dir = 1
 	},
 /obj/structure/cable{
 	d2 = 2;
@@ -284,8 +279,7 @@
 /area/submap/eclipsemountain)
 "vx" = (
 /obj/machinery/power/terminal{
-	dir = 1;
-	icon_state = "term"
+	dir = 1
 	},
 /obj/structure/cable{
 	d2 = 4;
@@ -341,8 +335,7 @@
 /area/submap/eclipsemountain)
 "zZ" = (
 /obj/machinery/power/terminal{
-	dir = 1;
-	icon_state = "term"
+	dir = 1
 	},
 /obj/structure/cable{
 	d2 = 8;
@@ -374,8 +367,7 @@
 /area/submap/eclipsemountain)
 "Ec" = (
 /obj/machinery/power/terminal{
-	dir = 1;
-	icon_state = "term"
+	dir = 1
 	},
 /obj/structure/cable{
 	d2 = 8;
@@ -642,8 +634,7 @@
 /area/submap/eclipsemountain)
 "Wd" = (
 /obj/machinery/power/terminal{
-	dir = 1;
-	icon_state = "term"
+	dir = 1
 	},
 /obj/structure/cable{
 	d2 = 4;
@@ -1047,7 +1038,7 @@ Cz
 MM
 lX
 PP
-hP
+MM
 pE
 pE
 MM
