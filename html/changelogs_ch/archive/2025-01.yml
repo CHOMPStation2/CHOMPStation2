@@ -10,3 +10,6 @@
   whooshboom:
   - rscadd: 'Added keybinds from TGstation to engineering (Ctrl-click: Toggle, Alt-click:
       Max)'
+2025-01-02:
+  Asher-42:
+  - bugfix: adds modules to med solgov hardsuit, due to it using the wrong obj path.
