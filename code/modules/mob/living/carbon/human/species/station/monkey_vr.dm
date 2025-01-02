@@ -69,42 +69,26 @@
 	low_sorting_priority = TRUE
 
 /mob/living/carbon/human/sharkm/Initialize(var/new_loc)
-<<<<<<< HEAD
-	..(new_loc, SPECIES_MONKEY_AKULA)
-=======
 	. = ..(new_loc, SPECIES_MONKEY_AKULA)
->>>>>>> 2876996214 (some more strings to defines (#16810))
 	species.produceCopy(species.traits.Copy(),src,null,FALSE)
 
 /mob/living/carbon/human/sergallingm
 	low_sorting_priority = TRUE
 
 /mob/living/carbon/human/sergallingm/Initialize(var/new_loc)
-<<<<<<< HEAD
-	..(new_loc, SPECIES_MONKEY_SERGAL)
-=======
 	. = ..(new_loc, SPECIES_MONKEY_SERGAL)
->>>>>>> 2876996214 (some more strings to defines (#16810))
 	species.produceCopy(species.traits.Copy(),src,null,FALSE)
 
 /mob/living/carbon/human/sparram
 	low_sorting_priority = TRUE
 
 /mob/living/carbon/human/sparram/Initialize(var/new_loc)
-<<<<<<< HEAD
-	..(new_loc, SPECIES_MONKEY_NEVREAN)
-=======
 	. = ..(new_loc, SPECIES_MONKEY_NEVREAN)
->>>>>>> 2876996214 (some more strings to defines (#16810))
 	species.produceCopy(species.traits.Copy(),src,null,FALSE)
 
 /mob/living/carbon/human/wolpin
 	low_sorting_priority = TRUE
 
 /mob/living/carbon/human/wolpin/Initialize(var/new_loc)
-<<<<<<< HEAD
-	..(new_loc, SPECIES_MONKEY_VULPKANIN)
-=======
 	. = ..(new_loc, SPECIES_MONKEY_VULPKANIN)
->>>>>>> 2876996214 (some more strings to defines (#16810))
 	species.produceCopy(species.traits.Copy(),src,null,FALSE)
