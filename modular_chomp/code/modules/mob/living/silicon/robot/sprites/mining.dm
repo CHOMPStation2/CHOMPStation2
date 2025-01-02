@@ -117,15 +117,15 @@
 
 
 /datum/robot_sprite/dogborg/mining/smolraptorminer/miner
-	name = "Small Raptor"
-	sprite_icon_state = "smolraptor"
+	name = "Small Raptor Miner"
+	sprite_icon_state = "smolraptor_min"
 	has_eye_light_sprites = TRUE
 	has_vore_belly_sprites = TRUE
 	rest_sprite_options = list("Default", "Sit")
 
 /datum/robot_sprite/dogborg/mining/smolraptorcargo/cargo
-	name = "Small Raptor"
-	sprite_icon_state = "smolraptor"
+	name = "Small Raptor Cargo"
+	sprite_icon_state = "smolraptor_car"
 	has_eye_light_sprites = TRUE
 	has_vore_belly_sprites = TRUE
 	rest_sprite_options = list("Default", "Sit")
