@@ -84,7 +84,7 @@
 	name = "solgov medical hardsuit (loaded)"
 	desc = "A fully-equipped Commonwealth of Sol-Procyon Medical hardsuit. Requires Medical access."
 	contains = list(
-			/obj/item/rig/baymed = 1
+			/obj/item/rig/baymed/equipped = 1 // CHOMPEdit
 			)
 	cost = 250
 	containertype = /obj/structure/closet/crate/secure/gear

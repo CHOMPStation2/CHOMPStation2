@@ -149,7 +149,7 @@
 	sprite_sheets = list(
 		SPECIES_TESHARI		= 'modular_chomp/icons/inventory/face/mob_teshari.dmi',
 		SPECIES_VOX 		= 'modular_chomp/icons/inventory/face/mob_vox.dmi',
-		SPECIES_TAJ 		= 'modular_chomp/icons/inventory/face/mob_tajaran.dmi',
+		SPECIES_TAJARAN 	= 'modular_chomp/icons/inventory/face/mob_tajaran.dmi',
 		SPECIES_UNATHI 		= 'modular_chomp/icons/inventory/face/mob_unathi.dmi',
 		SPECIES_SERGAL 		= 'modular_chomp/icons/inventory/face/mob_sergal.dmi',
 		SPECIES_NEVREAN 	= 'modular_chomp/icons/inventory/face/mob_nevrean.dmi',

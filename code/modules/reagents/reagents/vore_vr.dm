@@ -13,7 +13,8 @@
 	mrate_static = TRUE
 
 /datum/reagent/macrocillin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	M.resize(M.size_multiplier+0.01, animate = FALSE, uncapped = M.has_large_resize_bounds()) //Incrrease 1% per tick. //CHOMP Edit: don't do fancy animates. Unnecessary on 1% changes. Laggy.
+	var/new_size = clamp((M.size_multiplier + 0.01), RESIZE_MINIMUM_DORMS, RESIZE_MAXIMUM_DORMS)
+	M.resize(new_size, animate = FALSE, uncapped = M.has_large_resize_bounds()) //Incrrease 1% per tick. //CHOMP Edit: don't do fancy animates. Unnecessary on 1% changes. Laggy.
 	return
 
 /datum/reagent/microcillin
@@ -26,7 +27,8 @@
 	mrate_static = TRUE
 
 /datum/reagent/microcillin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	M.resize(M.size_multiplier-0.01, animate = FALSE, uncapped = M.has_large_resize_bounds()) //Decrease 1% per tick. //CHOMP Edit: don't do fancy animates. Unnecessary on 1% changes. Laggy.
+	var/new_size = clamp((M.size_multiplier - 0.01), RESIZE_MINIMUM_DORMS, RESIZE_MAXIMUM_DORMS)
+	M.resize(new_size, animate = FALSE, uncapped = M.has_large_resize_bounds()) //Decrease 1% per tick. //CHOMP Edit: don't do fancy animates. Unnecessary on 1% changes. Laggy.
 	return
 
 

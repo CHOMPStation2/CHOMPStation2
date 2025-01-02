@@ -11,7 +11,7 @@ jobs:
   run_linters:
     if: ( !contains(github.event.head_commit.message, '[ci skip]') )
     name: Run Linters
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     concurrency:
       group: run_linters-${{ github.head_ref || github.run_id }}
       cancel-in-progress: true
@@ -82,7 +82,7 @@ jobs:
 
   dreamchecker:
     name: DreamChecker
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
 
@@ -117,7 +117,7 @@ jobs:
     # name: Integration Tests (${{ matrix.map }})
     name: Integration Tests
     # needs: ['run_linters', 'dreamchecker']
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - name: Ensure +x on CI directory
@@ -133,7 +133,7 @@ jobs:
           sudo dpkg --add-architecture i386
           sudo apt update || true
           sudo apt install gcc-multilib
-          sudo apt install zlib1g-dev:i386 libssl-dev:i386
+          sudo apt install zlib1g-dev:i386
           ldd librust_g.so
           ldd libbapi_dmm_reader.so
           ldd libverdigris.so
@@ -159,7 +159,7 @@ jobs:
     if: ( !contains(github.event.head_commit.message, '[ci skip]') )
     name: Integration Tests
     needs: ['run_linters', 'dreamchecker', 'unit_tests']
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       - name: Report Success
         run: |
