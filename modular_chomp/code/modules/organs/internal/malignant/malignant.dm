@@ -333,9 +333,7 @@
 		// SURPRISE!
 		playsound(owner, 'sound/items/confetti.ogg', 75, 1)
 		playsound(src, 'sound/effects/snap.ogg', 50, 1)
-		owner.apply_damage(200,BRUTE,BP_TORSO)
-		owner.death()
-		//owner.gib() //Gibs too disruptive for chomp
+		owner.gib()
 		T = owner.loc
 	else
 		// only the organ pops!
@@ -497,9 +495,7 @@
 
 /obj/item/organ/internal/malignant/tumor/moneyorgan/proc/pop()
 	if(owner)
-		owner.apply_damage(200,BRUTE,BP_TORSO)
-		owner.death()
-		//owner.gib() //Gibs too disruptive for chomp
+		owner.gib() //Kaboom!
 
 	playsound(src, 'sound/effects/snap.ogg', 50, 1)
 
