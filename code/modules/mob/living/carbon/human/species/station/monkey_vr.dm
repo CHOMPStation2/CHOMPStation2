@@ -4,7 +4,7 @@
 	icobase = 'icons/mob/human_races/monkeys/r_sobaka_vr.dmi'
 	deform = 'icons/mob/human_races/monkeys/r_sobaka_vr.dmi'
 	tail = null //The tail is part of its body due to tail using the "icons/effects/species.dmi" file. It must be null, or they'll have a chimp tail.
-	greater_form = "Akula"
+	greater_form = SPECIES_AKULA
 	default_language = "Skrellian" //Closest we have.
 	// male_scream_sound = null //CHOMPedit
 	// female_scream_sound = null //CHOMPedit
@@ -22,7 +22,7 @@
 /datum/species/monkey/sparra
 	name = SPECIES_MONKEY_NEVREAN
 	name_plural = "Sparra"
-	greater_form = "Nevrean"
+	greater_form = SPECIES_NEVREAN
 	tail = null
 	icobase = 'icons/mob/human_races/monkeys/r_sparra_vr.dmi'
 	deform = 'icons/mob/human_races/monkeys/r_sparra_vr.dmi'
@@ -39,7 +39,7 @@
 	icobase = 'icons/mob/human_races/monkeys/r_farwa.dmi'
 	deform = 'icons/mob/human_races/monkeys/r_farwa.dmi'
 
-	greater_form = "Tajaran"
+	greater_form = SPECIES_TAJARAN
 	default_language = "Farwa"
 	flesh_color = "#AFA59E"
 	base_color = "#333333"
@@ -53,7 +53,7 @@
 	icobase = 'icons/mob/human_races/monkeys/r_wolpin.dmi'
 	deform = 'icons/mob/human_races/monkeys/r_wolpin.dmi'
 
-	greater_form = "Vulpkanin"
+	greater_form = SPECIES_VULPKANIN
 	default_language = LANGUAGE_CANILUNZT
 	flesh_color = "#966464"
 	base_color = "#000000"
@@ -69,26 +69,42 @@
 	low_sorting_priority = TRUE
 
 /mob/living/carbon/human/sharkm/Initialize(var/new_loc)
+<<<<<<< HEAD
 	..(new_loc, SPECIES_MONKEY_AKULA)
+=======
+	. = ..(new_loc, SPECIES_MONKEY_AKULA)
+>>>>>>> 2876996214 (some more strings to defines (#16810))
 	species.produceCopy(species.traits.Copy(),src,null,FALSE)
 
 /mob/living/carbon/human/sergallingm
 	low_sorting_priority = TRUE
 
 /mob/living/carbon/human/sergallingm/Initialize(var/new_loc)
+<<<<<<< HEAD
 	..(new_loc, SPECIES_MONKEY_SERGAL)
+=======
+	. = ..(new_loc, SPECIES_MONKEY_SERGAL)
+>>>>>>> 2876996214 (some more strings to defines (#16810))
 	species.produceCopy(species.traits.Copy(),src,null,FALSE)
 
 /mob/living/carbon/human/sparram
 	low_sorting_priority = TRUE
 
 /mob/living/carbon/human/sparram/Initialize(var/new_loc)
+<<<<<<< HEAD
 	..(new_loc, SPECIES_MONKEY_NEVREAN)
+=======
+	. = ..(new_loc, SPECIES_MONKEY_NEVREAN)
+>>>>>>> 2876996214 (some more strings to defines (#16810))
 	species.produceCopy(species.traits.Copy(),src,null,FALSE)
 
 /mob/living/carbon/human/wolpin
 	low_sorting_priority = TRUE
 
 /mob/living/carbon/human/wolpin/Initialize(var/new_loc)
+<<<<<<< HEAD
 	..(new_loc, SPECIES_MONKEY_VULPKANIN)
+=======
+	. = ..(new_loc, SPECIES_MONKEY_VULPKANIN)
+>>>>>>> 2876996214 (some more strings to defines (#16810))
 	species.produceCopy(species.traits.Copy(),src,null,FALSE)
