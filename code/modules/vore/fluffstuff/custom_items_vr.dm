@@ -532,8 +532,8 @@
 	var/client/owner_c = null //They'll be dead when we message them probably.
 	var/state = 0 //0 - New, 1 - Paired, 2 - Breaking, 3 - Broken (same as iconstates)
 
-/obj/item/clothing/accessory/collar/khcrystal/New()
-	..()
+/obj/item/clothing/accessory/collar/khcrystal/Initialize()
+	. = ..()
 	update_state(0)
 
 /obj/item/clothing/accessory/collar/khcrystal/Destroy() //Waitwaitwait
@@ -618,8 +618,8 @@
 	max_storage_space = ITEMSIZE_COST_SMALL * 2
 	w_class = ITEMSIZE_SMALL
 
-/obj/item/storage/box/khcrystal/New()
-	..()
+/obj/item/storage/box/khcrystal/Initialize()
+	. = ..()
 	new /obj/item/paper/khcrystal_manual(src)
 	new /obj/item/clothing/accessory/collar/khcrystal(src)
 
@@ -902,8 +902,8 @@
 				slot_r_hand_str = 'icons/vore/custom_items_right_hand_vr.dmi',
 				)
 
-/obj/item/material/twohanded/fluff/New(var/newloc)
-	..(newloc," ") //See materials_vr_dmi for more information as to why this is a blank space.
+/obj/item/material/twohanded/fluff/Initialize(var/newloc)
+	. = ..(newloc," ") //See materials_vr_dmi for more information as to why this is a blank space.
 
 //jacknoir413:Areax Third
 /obj/item/melee/baton/fluff/stunstaff
@@ -926,11 +926,10 @@
 	var/wielded = 0
 	var/base_name = "stunstaff"
 
-/obj/item/melee/baton/fluff/stunstaff/New()
-	..()
+/obj/item/melee/baton/fluff/stunstaff/Initialize()
+	. = ..()
 	bcell = new/obj/item/cell/device/weapon(src)
 	update_icon()
-	return
 
 /obj/item/melee/baton/fluff/stunstaff/update_held_icon()
 	var/mob/living/M = loc
@@ -996,8 +995,8 @@
 	max_w_class = ITEMSIZE_HUGE
 	max_storage_space = 16
 
-/obj/item/storage/backpack/fluff/stunstaff/New()
-	..()
+/obj/item/storage/backpack/fluff/stunstaff/Initialize()
+	. = ..()
 	new /obj/item/melee/baton/fluff/stunstaff(src)
 
 
@@ -1349,12 +1348,12 @@ End CHOMP Removal*/
 	w_class = ITEMSIZE_TINY
 	starts_with = list(/obj/item/clothing/mask/smokable/cigarette = 7)
 
-/obj/item/storage/fancy/fluff/charlotte/New()
+/obj/item/storage/fancy/fluff/charlotte/Initialize()
 	if(!open_state)
 		open_state = "[initial(icon_state)]0"
 	if(!closed_state)
 		closed_state = "[initial(icon_state)]"
-	..()
+	. = ..()
 
 /obj/item/storage/fancy/fluff/charlotte/update_icon()
 	cut_overlays()
@@ -1569,8 +1568,9 @@ End CHOMP Removal*/
 	..()
 	icon_state = "ceph_d6[result]"
 
-/obj/item/dice/loaded/ceph/New()
+/obj/item/dice/loaded/ceph/Initialize()
 	icon_state = "ceph_d6[rand(1,sides)]"
+	. = ..()
 
 
 //abc123: Mira Nesyne

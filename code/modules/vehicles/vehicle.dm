@@ -47,6 +47,7 @@
 //-------------------------------------------
 // Standard procs
 //-------------------------------------------
+<<<<<<< HEAD
 //ChompADD START
 /obj/vehicle/Initialize()
 	.=..()
@@ -57,6 +58,11 @@
 ///obj/vehicle/New()
 //	..()
 //	//spawn the cell you want in each vehicle // CHOMPedit: Commented out in favour of initialize.
+=======
+/obj/vehicle/Initialize(mapload)
+	. = ..()
+	//spawn the cell you want in each vehicle
+>>>>>>> 987be6070d (bunch of inits without return and a few easy new to init (#16815))
 
 /obj/vehicle/Destroy()
 	QDEL_NULL(riding_datum)

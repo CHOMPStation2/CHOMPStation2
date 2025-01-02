@@ -78,8 +78,8 @@
 	center_of_mass_y = 8 //CHOMPEdit
 
 /obj/item/reagent_containers/food/drinks/cans/dr_gibb/Initialize()
-		..()
-		reagents.add_reagent(REAGENT_ID_DRGIBB, 30)
+	. = ..()
+	reagents.add_reagent(REAGENT_ID_DRGIBB, 30)
 
 /obj/item/reagent_containers/food/drinks/cans/dr_gibb_diet
 	name = "\improper Diet Dr. Gibb"
@@ -90,8 +90,8 @@
 	center_of_mass_y = 8 //CHOMPEdit
 
 /obj/item/reagent_containers/food/drinks/cans/dr_gibb_diet/Initialize()
-		..()
-		reagents.add_reagent(REAGENT_ID_DIETDRGIBB, 30)
+	. = ..()
+	reagents.add_reagent(REAGENT_ID_DIETDRGIBB, 30)
 
 /obj/item/reagent_containers/food/drinks/cans/starkist
 	name = "\improper Star-kist"
