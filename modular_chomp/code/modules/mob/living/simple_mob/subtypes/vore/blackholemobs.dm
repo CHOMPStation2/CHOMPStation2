@@ -491,6 +491,7 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/merc/ranged/sniper/blackhole
 
 	ranged_attack_delay = 1.5 SECONDS
+
 /mob/living/simple_mob/humanoid/merc/ranged/sniper/blackhole/ranged_pre_animation(atom/A)
 	Beam(get_turf(A), icon_state = "sniper_beam", time = 1 SECONDS, maxdistance = 20)
 
@@ -781,8 +782,10 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 // hackified shitcode poached from the pitcher plant for ~~cool flavor text~~ when you're near either 'structure'
 
 /mob/living/simple_mob/vore/blackhole_obelisk/Initialize()
-	..()
+	. = ..()
 	obelisk_lure_messages = GLOB.obelisk_lure_messages
+	loopy = new(list(src),FALSE)
+	loopy.start()
 
 /mob/living/simple_mob/vore/blackhole_obelisk/proc/handle_hungry()
 	if(nutrition <= OBELISK_LURE)
@@ -807,14 +810,9 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	exclusive = TRUE
 	volume_chan = VOLUME_CHANNEL_MACHINERY
 
-/mob/living/simple_mob/vore/blackhole_obelisk/Initialize()
-	.=..()
-	loopy = new(list(src),FALSE)
-	loopy.start()
-
 /mob/living/simple_mob/vore/blackhole_obelisk/Destroy()
 	QDEL_NULL(loopy)
-	.=..()
+	. = ..()
 
 /mob/living/simple_mob/vore/blackhole_obelisk/attack_hand(mob/living/L)
 	..()
@@ -854,21 +852,21 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 ///-------------------------------------------------------------------------------------------------------------------------------------------------------------///
 
 /mob/living/simple_mob/vore/blackhole/Initialize()
-	..()
+	. = ..()
 	var/oursize = rand(90, 150) / 100
 	resize(oursize)
 
 /mob/living/simple_mob/vore/blackhole/bikers/Initialize()
-	..()
+	. = ..()
 	resize(1) // Scale them back down
 
 /mob/living/simple_mob/vore/otie/syndicate/blackhole/Initialize()
-	..()
+	. = ..()
 	var/oursize = rand(100, 180) / 100
 	resize(oursize)
 
 /mob/living/simple_mob/humanoid/merc/ranged/sniper/blackhole/Initialize()
-	..()
+	. = ..()
 	var/oursize = rand(100, 180) / 100
 	resize(oursize)
 ///-------------------------------------------------------------------------------------------------------------------------------------------------------------///
