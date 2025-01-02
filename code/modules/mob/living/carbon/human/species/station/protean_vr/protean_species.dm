@@ -132,7 +132,7 @@
 		"dragon_hornsPointy" = "#FFFFFF",
 		"dragon_eyesNormal" = "#FFFFFF"
 	)
-	// CHOMPEdit End
+	// CHOMPEdit Start
 	var/list/dullahan_overlays = list(
 		"dullahanbody" = "#FFFFFF",
 		"dullahanhead" = "#FFFFFF",
