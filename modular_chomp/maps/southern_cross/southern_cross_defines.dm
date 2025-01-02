@@ -137,7 +137,6 @@ but they don't actually change anything about the load order
 		list("Snow Field"),
 		list("Maddness Lab"),
 		list("Abandoned City"),
-		list("Distant Mining Facility"),
 		list("Skyscraper")
 		) //CHOMPedit: Gateway maps. For now nothing fancy, just some already existing maps while we make our own.
 

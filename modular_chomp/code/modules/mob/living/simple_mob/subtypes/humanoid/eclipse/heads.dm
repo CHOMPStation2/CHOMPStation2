@@ -20,81 +20,28 @@
 	special_attack_cooldown = 10 SECONDS
 	special_attack_min_range = 1
 	special_attack_max_range = 8
+	has_heal_droid = TRUE
+	specialattackprojectile = /obj/item/projectile/bullet/dragon
 	loot_list = list(/obj/item/gun/energy/flamegun = 100,
 		/obj/item/bone/skull = 100
 			)
 
-
-/mob/living/simple_mob/humanoid/eclipse/head/security/updatehealth()
-	. = ..()
-
-	if(vore_fullness == 1)
-		ranged_cooldown = 8
-		projectiletype = /obj/item/projectile/energy/flamecrystal
-	else if(vore_fullness == 2)
-		ranged_cooldown = 12
-		projectiletype = /obj/item/projectile/energy/fireball
-	else if (vore_fullness > 2)
-		ranged_cooldown = 16
-		projectiletype = /obj/item/projectile/energy/fireball
-	else
-		ranged_cooldown = 5
-
 /mob/living/simple_mob/humanoid/eclipse/head/security/do_special_attack(atom/A)
-	if(vore_fullness < 2)
+	if(vore_fullness > 3)
+		bomb_chaos(A)
+	else if(vore_fullness > 0)
+		visible_message(span_warning("\The [src]'s maw glows!"))
+		Beam(A, icon_state = "sat_beam", time = 2.5 SECONDS, maxdistance = INFINITY)
+		addtimer(CALLBACK(src, PROC_REF(special_projectile), A), 3 SECONDS, TIMER_DELETE_ME)
+	else
 		if(prob(50))
-			rapidfire(A)
+			visible_message(span_warning("\The [src] throws out a chain!"))
+			Beam(A, icon_state = "chain", time = 3 SECONDS, maxdistance = INFINITY)
+			addtimer(CALLBACK(src, PROC_REF(gravity_pull), A), 3 SECOND, TIMER_DELETE_ME)
 		else
-			tornado_maw(A)
-	else if(vore_fullness == 2)
-		tornado_maw(A)
-	else if(vore_fullness > 2)
-		if(prob(50))
-			deathtoll(A)
-		else
-			tornado_maw(A)
-
-/mob/living/simple_mob/humanoid/eclipse/head/security/proc/rapidfire(atom/A)
-	var/obj/item/projectile/P = new /obj/item/projectile/energy/flamecrystal(get_turf(src))
-	P.launch_projectile(A, BP_TORSO, src)
-	sleep(1)
-	P.launch_projectile(A, BP_TORSO, src)
-	sleep(1)
-	P.launch_projectile(A, BP_TORSO, src)
-	sleep(1)
-	P.launch_projectile(A, BP_TORSO, src)
-	sleep(1)
-	P.launch_projectile(A, BP_TORSO, src)
-
-/mob/living/simple_mob/humanoid/eclipse/head/security/proc/tornado_maw(atom/A)
-	var/turf/T = get_turf(src)
-
-	var/datum/effect/effect/system/grav_pull/s1 = new /datum/effect/effect/system/grav_pull
-	s1.set_up(5, 1, T)
-	s1.start()
-
-/mob/living/simple_mob/humanoid/eclipse/head/security/proc/deathtoll(atom/A)
-	var/list/potential_targets = ai_holder.list_targets()
-	for(var/atom/entry in potential_targets)
-		if(istype(entry, /mob/living/simple_mob/humanoid/eclipse))
-			potential_targets -= entry
-	if(potential_targets.len)
-		var/iteration = clamp(potential_targets.len, 1, 3)
-		for(var/i = 0, i < iteration, i++)
-			if(!(potential_targets.len))
-				break
-			var/mob/target = pick(potential_targets)
-			potential_targets -= target
-			deathtollfollow(target)
-
-/mob/living/simple_mob/humanoid/eclipse/head/security/proc/deathtollfollow(atom/target)
-	var/list/bomb_range = block(locate(target.x-6, target.y-6, target.z), locate(target.x+6, target.y+6, target.z))
-	var/obj/item/projectile/P = new /obj/item/projectile/bullet/flamegun(get_turf(src))
-	bomb_range -= get_turf(target)
-	for(var/i = 0, i < 4, i++)
-		var/turf/T = pick(bomb_range)
-		P.launch_projectile(target, BP_TORSO, src)
-		bomb_range -= T
+			visible_message(span_warning("\The [src] throws out a chain!"))
+			Beam(A, icon_state = "chain", time = 3 SECONDS, maxdistance = INFINITY)
+			addtimer(CALLBACK(src, PROC_REF(itemyoink), A), 3 SECOND, TIMER_DELETE_ME)
 
 /obj/item/projectile/energy/flamecrystal
 	name = "Flame Crystal"
@@ -132,9 +79,11 @@
 	special_attack_max_range = 10
 	projectiletype = /obj/item/projectile/bullet/pistol/ap
 
-	loot_list = list(/obj/item/circuitboard/mecha/hades/targeting = 100,
-		/obj/item/circuitboard/mecha/hades/peripherals = 100,
-		/obj/item/circuitboard/mecha/hades/main = 100,
+	loot_list = list(/obj/item/circuitboard/mecha/imperion/targeting = 60,
+		/obj/item/circuitboard/mecha/gygax/peripherals = 60,
+		/obj/item/prop/alien/phasecoil = 60,
+		/obj/item/circuitboard/mecha/durand/peripherals = 60,
+		/obj/item/bluespace_harpoon = 10,
 		/obj/item/bone/skull = 100
 			)
 
@@ -173,184 +122,18 @@
 /mob/living/simple_mob/mechanical/hivebot/swarm/eclipse
 	faction = FACTION_ECLIPSE
 
+/mob/living/simple_mob/mechanical/combat_drone/artillery
+	faction = FACTION_ECLIPSE
+	projectiletype = /obj/item/projectile/arc/blue_energy
 
 /mob/living/simple_mob/humanoid/eclipse/head/captain
 	name = "Eclipse Expedition Leader"
 	icon_state = "captain"
 
-	loot_list = list(/obj/item/slime_extract/dark = 20,
-			/obj/item/prop/alien/junk = 60,
-			/obj/random/tool/alien = 60,
-			/obj/random/tool/alien = 60,
-			/obj/item/cell/device/weapon/recharge/alien = 60,
-			/obj/random/tool/alien = 60,
-			/obj/item/cell/device/weapon/recharge/alien = 60,
-			/obj/item/bluespace_harpoon = 60,
-			/obj/item/flame/lighter/supermatter/syndismzippo = 60,
-			/obj/item/gun/energy/medigun = 60,
-			/obj/item/bone/skull = 100
-			)
-
-	var/obj/item/shield_projector/shield1 = null
-
-/mob/living/simple_mob/humanoid/eclipse/head/captain/Initialize(mapload)
-	shield1 = new /obj/item/shield_projector/rectangle/automatic/eclipse/big(src)
-
-/mob/living/simple_mob/humanoid/eclipse/head/captain/updatehealth() //This is a mistake
-	. = ..()
-
-	if(vore_fullness == 1)
-		ranged_cooldown = 4
-		projectiletype = /obj/item/projectile/energy/frostsphere
-		movement_cooldown = 1
-		melee_attack_delay = 1.3
-		melee_damage_lower = 20
-		melee_damage_upper = 35
-		armor = list(melee = 35, bullet = 35, laser = 35, energy = 35, bomb = 100, bio = 100, rad = 100)
-		armor_soak = list(melee = 7, bullet = 7, laser = 7, energy = 7, bomb = 0, bio = 0, rad = 0)
-		special_attack_cooldown = 15
-	else if(vore_fullness == 2)
-		ranged_cooldown = 0.5
-		projectiletype = /obj/item/projectile/energy/muckblob
-		movement_cooldown = 2
-		melee_attack_delay = 1.8
-		melee_damage_lower = 20
-		melee_damage_upper = 40
-		armor = list(melee = 50, bullet = 50, laser = 50, energy = 50, bomb = 100, bio = 100, rad = 100)
-		armor_soak = list(melee = 6, bullet = 6, laser = 6, energy = 6, bomb = 0, bio = 0, rad = 0)
-		special_attack_cooldown = 20
-	else if (vore_fullness > 2)
-		ranged_cooldown = 16
-		projectiletype = /obj/item/projectile/energy/mob/ionbeam
-		movement_cooldown = 3
-		melee_attack_delay = 2
-		melee_damage_lower = 30
-		melee_damage_upper = 40
-		armor = list(melee = 60, bullet = 60, laser = 60, energy = 60, bomb = 100, bio = 100, rad = 100)
-		armor_soak = list(melee = 5, bullet = 5, laser = 5, energy = 5, bomb = 0, bio = 0, rad = 0)
-		special_attack_cooldown = 30
-	else
-		ranged_cooldown = 8
-		projectiletype = /obj/item/projectile/bullet/flamegun
-		movement_cooldown = 0
-		melee_attack_delay = 1.1
-		melee_damage_lower = 20
-		melee_damage_upper = 25
-		armor = list(melee = 20, bullet = 20, laser = 20, energy = 20, bomb = 100, bio = 100, rad = 100)
-		armor_soak = list(melee = 7, bullet = 7, laser = 7, energy = 7, bomb = 0, bio = 0, rad = 0)
-		special_attack_cooldown = 10
-
-
-/mob/living/simple_mob/humanoid/eclipse/head/captain/do_special_attack(atom/A) //note to self, try to make fullness alts for this attacks
-	if(prob(20))
-		invokesec(A)
-	else if(prob(20))
-		invokesci(A)
-	else if(prob(20))
-		invokeengi(A)
-	else if(prob(20))
-		invokemedical(A)
-	else
-		invokecargo(A)
-
-
-/mob/living/simple_mob/humanoid/eclipse/head/captain/proc/invokesec(atom/A)
-	var/list/potential_targets = ai_holder.list_targets()
-	for(var/atom/entry in potential_targets)
-		if(istype(entry, /mob/living/simple_mob/humanoid/eclipse))
-			potential_targets -= entry
-	if(potential_targets.len)
-		var/iteration = clamp(potential_targets.len, 1, 3)
-		for(var/i = 0, i < iteration, i++)
-			if(!(potential_targets.len))
-				break
-			var/mob/target = pick(potential_targets)
-			potential_targets -= target
-			secattack(target)
-
-/mob/living/simple_mob/humanoid/eclipse/head/captain/proc/secattack(atom/target)
-	var/list/bomb_range = block(locate(target.x-4, target.y-4, target.z), locate(target.x+4, target.y+4, target.z))
-	var/obj/item/projectile/P = new /obj/item/projectile/energy/flamecrystal(get_turf(src))
-	bomb_range -= get_turf(target)
-	for(var/i = 0, i < 4, i++)
-		var/turf/T = pick(bomb_range)
-		P.launch_projectile(target, BP_TORSO, src)
-		bomb_range -= T
-
-/mob/living/simple_mob/humanoid/eclipse/head/captain/proc/invokecargo(atom/A)
-	visible_message(span_warning("\The [src] calls for their help on radio!"))
-
-/mob/living/simple_mob/humanoid/eclipse/head/captain/proc/invokeengi(atom/A) //place holdery
-	var/obj/item/projectile/P = new /obj/item/projectile/temp(get_turf(src))
-	P.launch_projectile(A, BP_TORSO, src)
-	var/obj/item/projectile/P2 = new /obj/item/projectile/temp/hot(get_turf(src))
-	P2.launch_projectile(A, BP_TORSO, src)
-
-/mob/living/simple_mob/humanoid/eclipse/head/captain/proc/invokesci(atom/A)
-	visible_message(span_warning("\The [src] begins to fabricate drones!"))
-	sleep(3)
-	new /mob/living/simple_mob/mechanical/hivebot/swarm/eclipse (src.loc)
-	new /mob/living/simple_mob/mechanical/hivebot/swarm/eclipse (src.loc)
-	new /mob/living/simple_mob/mechanical/hivebot/swarm/eclipse (src.loc)
-
-/mob/living/simple_mob/humanoid/eclipse/head/captain/proc/invokemedical(atom/A)
-	visible_message(span_warning("\The [src] begins to tend to their wounds!"))
-	sleep(3)
-	adjustBruteLoss(-12)
-	adjustFireLoss(-12)
-	adjustToxLoss(-12)
-	adjustOxyLoss(-12)
-	adjustCloneLoss(-12)
-
-
-/mob/living/simple_mob/humanoid/eclipse/head/shade
-	name = "???"
-	icon_state = "shade"
-	health = 300
-	maxHealth = 300 //18 20 damage shots
-
-	armor = list(melee = 20, bullet = 20, laser = 20, energy = 20, bomb = 100, bio = 100, rad = 100)
-
-	projectiletype = /obj/item/projectile/bullet/lightingburst
-
-	special_attack_cooldown = 10 SECONDS
-	special_attack_min_range = 0
-	special_attack_max_range = 7
-
-	loot_list = list(/obj/item/gun/energy/pulseglove = 100
-			)
-
-
-/mob/living/simple_mob/humanoid/eclipse/head/shade/do_special_attack(atom/A)
-	var/list/potential_targets = ai_holder.list_targets()
-	for(var/atom/entry in potential_targets)
-		if(istype(entry, /mob/living/simple_mob/humanoid/eclipse))
-			potential_targets -= entry
-	if(potential_targets.len)
-		var/iteration = clamp(potential_targets.len, 1, 5)
-		for(var/i = 0, i < iteration, i++)
-			if(!(potential_targets.len))
-				break
-			var/mob/target = pick(potential_targets)
-			potential_targets -= target
-			bullethell(target)
-
-/mob/living/simple_mob/humanoid/eclipse/head/shade/proc/bullethell(atom/target)
-	var/list/bomb_range = block(locate(target.x-6, target.y-6, target.z), locate(target.x+6, target.y+6, target.z))
-	var/obj/item/projectile/P = new /obj/item/projectile/bullet/meteorstorm(get_turf(src))
-	bomb_range -= get_turf(target)
-	for(var/i = 0, i < 4, i++)
-		var/turf/T = pick(bomb_range)
-		P.launch_projectile(target, BP_TORSO, src)
-		bomb_range -= T
-
-/mob/living/simple_mob/mechanical/combat_drone/artillery
-	faction = FACTION_ECLIPSE
-	projectiletype = /obj/item/projectile/arc/blue_energy
-
 /mob/living/simple_mob/humanoid/eclipse/head/tyrlead
 	name = "Eclipse Precursor Overseer"
 	icon_state = "overseer_shield"
+	icon_living = "overseer_shield"
 	special_attack_cooldown = 4 SECONDS
 	special_attack_min_range = 1
 	special_attack_max_range = 8
@@ -392,18 +175,29 @@
 
 /mob/living/simple_mob/humanoid/eclipse/head/engineer //teshari
 	name = "Eclipse Chief Engineer"
+	icon_state = "engi"
+	icon_living = "engi"
 	health = 50
 	maxHealth = 50
 	melee_damage_lower = 60 //Durasteel fireaxe
 	melee_damage_upper = 60
 	projectiletype = null
 
+	loot_list = list(/obj/item/stock_parts/matter_bin/omni = 60,
+		/obj/item/material/twohanded/fireaxe  = 60,
+		/obj/item/storage/toolbox/syndicate/powertools = 60,
+		/obj/item/rig/ce = 60,
+		/obj/item/rig_module/teleporter = 5
+			)
+
 /mob/living/simple_mob/humanoid/eclipse/head/engineer/Initialize()
 	add_modifier(/datum/modifier/technomancer/haste, null, src) // tesh goes nyooooom
 	return ..()
 
-/mob/living/simple_mob/humanoid/eclipse/head/medical //noodl
+/mob/living/simple_mob/humanoid/eclipse/head/medical
 	name = "Eclipse Chief Medical Officer"
+	icon_state = "medi"
+	icon_living = "medi"
 	health = 150
 	maxHealth = 150
 	special_attack_cooldown = 5 SECONDS
@@ -413,6 +207,16 @@
 	melee_damage_upper = 15
 	attack_armor_pen = 60
 	projectiletype = null
+
+	loot_list = list(/obj/item/rig_module/atmos_shield  = 60,
+		/obj/item/rig_module/rad_shield/advanced = 60,
+		/obj/item/rig/baymed = 60,
+		/obj/item/ammo_casing/microbattery/medical/brute3 = 15,
+		/obj/item/ammo_casing/microbattery/medical/burn3 = 15,
+		/obj/item/ammo_casing/microbattery/medical/toxin3 = 15,
+		/obj/item/ammo_casing/microbattery/medical/omni3 = 5
+			)
+
 	var/cloaked_alpha = 45			// Lower = Harder to see.
 	var/cloak_cooldown = 5 SECONDS	// Amount of time needed to re-cloak after losing it.
 	var/last_uncloak = 0			// world.time
