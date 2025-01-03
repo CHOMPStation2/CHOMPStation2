@@ -4,7 +4,11 @@ PROCESSING_SUBSYSTEM_DEF(fastprocess)
 	name = "Fast Processing"
 	wait = 2
 	stat_tag = "FP"
+<<<<<<< HEAD
 	flags = SS_NO_INIT // CHOMPEdit
+=======
+	flags = SS_NO_INIT
+>>>>>>> f48022188f (Subsystem return update (#16820))
 
 /datum/controller/subsystem/processing/fastprocess/Recover()
 	log_debug("[name] subsystem Recover().")

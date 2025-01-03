@@ -7,11 +7,19 @@ SUBSYSTEM_DEF(sqlite)
 	flags = SS_NO_FIRE
 	var/database/sqlite_db = null
 
+<<<<<<< HEAD
 /datum/controller/subsystem/sqlite/Initialize() // CHOMPEdit
 	connect()
 	if(sqlite_db)
 		init_schema(sqlite_db)
 	return SS_INIT_SUCCESS // CHOMPEdit
+=======
+/datum/controller/subsystem/sqlite/Initialize()
+	connect()
+	if(sqlite_db)
+		init_schema(sqlite_db)
+	return SS_INIT_SUCCESS
+>>>>>>> f48022188f (Subsystem return update (#16820))
 
 /datum/controller/subsystem/sqlite/proc/connect()
 	if(!CONFIG_GET(flag/sqlite_enabled))

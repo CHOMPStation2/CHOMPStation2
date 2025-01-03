@@ -14,9 +14,15 @@ SUBSYSTEM_DEF(holomaps)
 /datum/controller/subsystem/holomaps/Recover()
 	flags |= SS_NO_INIT // Make extra sure we don't initialize twice.
 
+<<<<<<< HEAD
 /datum/controller/subsystem/holomaps/Initialize() // CHOMPEdit
 	generateHoloMinimaps()
 	return SS_INIT_SUCCESS // CHOMPEdit
+=======
+/datum/controller/subsystem/holomaps/Initialize()
+	generateHoloMinimaps()
+	return SS_INIT_SUCCESS
+>>>>>>> f48022188f (Subsystem return update (#16820))
 
 /datum/controller/subsystem/holomaps/stat_entry(msg)
 	if (!Debug2)

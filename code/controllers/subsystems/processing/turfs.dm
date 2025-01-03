@@ -1,7 +1,11 @@
 PROCESSING_SUBSYSTEM_DEF(turfs)
 	name = "Turf Processing"
 	wait = 20
+<<<<<<< HEAD
 	flags = SS_NO_INIT // CHOMPEdit
+=======
+	flags = SS_NO_INIT
+>>>>>>> f48022188f (Subsystem return update (#16820))
 
 /datum/controller/subsystem/processing/turfs/Recover()
 	log_debug("[name] subsystem Recover().")

@@ -30,12 +30,20 @@ SUBSYSTEM_DEF(machines)
 	var/list/powernets = list()
 	var/list/powerobjs = list()
 
+<<<<<<< HEAD
 /datum/controller/subsystem/machines/Initialize() // CHOMPEdit
+=======
+/datum/controller/subsystem/machines/Initialize()
+>>>>>>> f48022188f (Subsystem return update (#16820))
 	makepowernets()
 	admin_notice(span_danger("Initializing atmos machinery."), R_DEBUG)
 	setup_atmos_machinery(all_machines)
 	fire()
+<<<<<<< HEAD
 	return SS_INIT_SUCCESS // CHOMPEdit
+=======
+	return SS_INIT_SUCCESS
+>>>>>>> f48022188f (Subsystem return update (#16820))
 
 /datum/controller/subsystem/machines/fire(resumed = 0)
 	var/timer = TICK_USAGE

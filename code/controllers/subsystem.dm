@@ -227,13 +227,19 @@
 /// Called after the config has been loaded or reloaded.
 /datum/controller/subsystem/proc/OnConfigLoad()
 
+<<<<<<< HEAD
 // CHOMPEdit Start
+=======
+>>>>>>> f48022188f (Subsystem return update (#16820))
 /**
  * Used to initialize the subsystem. This is expected to be overriden by subtypes.
  */
 /datum/controller/subsystem/Initialize()
 	return SS_INIT_NONE
+<<<<<<< HEAD
 // CHOMPEdit End
+=======
+>>>>>>> f48022188f (Subsystem return update (#16820))
 
 //hook for printing stats to the "MC" statuspanel for admins to see performance and related stats etc.
 /datum/controller/subsystem/stat_entry(msg)

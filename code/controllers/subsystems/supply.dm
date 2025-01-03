@@ -33,7 +33,11 @@ SUBSYSTEM_DEF(supply)
 		else
 			qdel(P)
 
+<<<<<<< HEAD
 	return SS_INIT_SUCCESS // CHOMPEdit
+=======
+	return SS_INIT_SUCCESS
+>>>>>>> f48022188f (Subsystem return update (#16820))
 
 // Supply shuttle ticker - handles supply point regeneration. Just add points over time.
 /datum/controller/subsystem/supply/fire()

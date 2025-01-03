@@ -17,13 +17,21 @@ SUBSYSTEM_DEF(atoms)
 
 	var/list/BadInitializeCalls = list()
 
+<<<<<<< HEAD
 /datum/controller/subsystem/atoms/Initialize() // CHOMPEdit
+=======
+/datum/controller/subsystem/atoms/Initialize()
+>>>>>>> f48022188f (Subsystem return update (#16820))
 	setupgenetics() //to set the mutations' place in structural enzymes, so initializers know where to put mutations.
 	initialized = INITIALIZATION_INNEW_MAPLOAD
 	to_world_log("Initializing objects")
 	admin_notice(span_danger("Initializing objects"), R_DEBUG)
 	InitializeAtoms()
+<<<<<<< HEAD
 	return SS_INIT_SUCCESS // CHOMPEdit
+=======
+	return SS_INIT_SUCCESS
+>>>>>>> f48022188f (Subsystem return update (#16820))
 
 /datum/controller/subsystem/atoms/proc/InitializeAtoms(list/atoms)
 	if(initialized == INITIALIZATION_INSSATOMS)

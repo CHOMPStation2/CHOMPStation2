@@ -18,7 +18,10 @@ SUBSYSTEM_DEF(persistence)
 			persistence_datums[P.type] = P
 			P.Initialize()
 	return SS_INIT_SUCCESS
+<<<<<<< HEAD
 // CHOMPEdit End
+=======
+>>>>>>> f48022188f (Subsystem return update (#16820))
 
 /datum/controller/subsystem/persistence/Shutdown()
 	for(var/thing in persistence_datums)

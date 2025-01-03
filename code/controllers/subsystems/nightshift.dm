@@ -17,7 +17,11 @@ SUBSYSTEM_DEF(nightshift)
 	if(config.randomize_shift_time)
 		GLOB.gametime_offset = rand(0, 23) HOURS
 	*/
+<<<<<<< HEAD
 	return SS_INIT_SUCCESS // CHOMPEdit
+=======
+	return SS_INIT_SUCCESS
+>>>>>>> f48022188f (Subsystem return update (#16820))
 
 /datum/controller/subsystem/nightshift/fire(resumed = FALSE)
 	if(round_duration_in_ds < nightshift_first_check)

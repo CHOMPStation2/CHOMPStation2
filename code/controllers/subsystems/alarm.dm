@@ -18,7 +18,11 @@ SUBSYSTEM_DEF(alarm)
 
 /datum/controller/subsystem/alarm/Initialize()
 	all_handlers = list(atmosphere_alarm, camera_alarm, fire_alarm, motion_alarm, power_alarm)
+<<<<<<< HEAD
 	return SS_INIT_SUCCESS // CHOMPEdit
+=======
+	return SS_INIT_SUCCESS
+>>>>>>> f48022188f (Subsystem return update (#16820))
 
 /datum/controller/subsystem/alarm/fire(resumed = FALSE)
 	if(!resumed)

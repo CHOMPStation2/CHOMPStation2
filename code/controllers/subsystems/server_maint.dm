@@ -18,7 +18,11 @@ SUBSYSTEM_DEF(server_maint)
 /*/datum/controller/subsystem/server_maint/PreInit()
 	world.hub_password = "" *///quickly! before the hubbies see us.
 
+<<<<<<< HEAD
 /datum/controller/subsystem/server_maint/Initialize() // CHOMPEdit
+=======
+/datum/controller/subsystem/server_maint/Initialize()
+>>>>>>> f48022188f (Subsystem return update (#16820))
 	if (fexists("tmp/"))
 		fdel("tmp/")
 	//if (CONFIG_GET(flag/hub))

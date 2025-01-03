@@ -205,5 +205,10 @@ var/global/list/runlevel_flags = list(RUNLEVEL_LOBBY, RUNLEVEL_SETUP, RUNLEVEL_G
 */
 #define addtimer(args...) _addtimer(args, file = __FILE__, line = __LINE__)
 
+<<<<<<< HEAD
 /// The timer key used to know how long subsystem initialization takes // CHOMPEdit
 #define SS_INIT_TIMER_KEY "ss_init" // CHOMPEdit
+=======
+/// The timer key used to know how long subsystem initialization takes
+#define SS_INIT_TIMER_KEY "ss_init"
+>>>>>>> f48022188f (Subsystem return update (#16820))
