@@ -185,7 +185,7 @@
 #include "code\__defines\dcs\helpers.dm"
 #include "code\__defines\dcs\signals.dm"
 #include "code\__defines\dcs\signals_ch.dm"
-#include "code\__defines\dcs\signals_ch\signals_subsystem.dm"
+#include "code\__defines\dcs\signals\signals_subsystem.dm"
 #include "code\__defines\dcs\signals_ch\signals_mob\signals_mob_main_ch.dm"
 #include "code\__defines\traits\_traits.dm"
 #include "code\__defines\traits\declarations.dm"
