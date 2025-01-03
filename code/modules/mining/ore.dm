@@ -174,13 +174,8 @@
 /obj/item/ore_chunk
 	name = "ore chunk"
 	desc = "A conglomerate of ore."
-<<<<<<< HEAD
-	icon = 'icons/obj/xenoarchaeology.dmi' //CHOMPEdit
-	icon_state = "strange"
-=======
 	icon = 'icons/obj/mining_ore_vr.dmi'
 	icon_state = "ore2"
->>>>>>> 16e2f73e22 (fix use of nonexisteing icon state (#16818))
 	randpixel = 8
 	w_class = ITEMSIZE_LARGE //CHOMPEdit
 	var/list/stored_ore = list(
