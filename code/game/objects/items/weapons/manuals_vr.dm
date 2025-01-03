@@ -447,13 +447,8 @@
 	author = "Pontifex Publishing"
 	title = "Synthetics"
 
-<<<<<<< HEAD
-/obj/item/book/manual/synthetic_life/New() // CHOMPedit: Removed references to upstream factions which don't exist here.
-	..()
-=======
 /obj/item/book/manual/synthetic_life/Initialize()
 	. = ..()
->>>>>>> 987be6070d (bunch of inits without return and a few easy new to init (#16815))
 	dat = {"
 <html lang="en">
 	<head>

@@ -44,16 +44,9 @@
 	. = ..()
 
 /obj/effect/temporary_effect/pulse/proc/pulse_loop()
-	set waitfor = FALSE
 
-<<<<<<< HEAD
 	if(pulses_remaining > 0)
 		pulsetimer = addtimer(CALLBACK(src, PROC_REF(pulse_loop)), pulse_delay, TIMER_STOPPABLE)
-=======
-	while(pulses_remaining)
-		sleep(pulse_delay)
-		on_pulse()
->>>>>>> 987be6070d (bunch of inits without return and a few easy new to init (#16815))
 		pulses_remaining--
 		on_pulse()
 	else

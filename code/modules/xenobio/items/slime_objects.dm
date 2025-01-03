@@ -145,11 +145,7 @@
 	light_system = STATIC_LIGHT
 
 /obj/item/flashlight/slime/Initialize()
-<<<<<<< HEAD
-	.=..()
-=======
 	. = ..()
->>>>>>> 987be6070d (bunch of inits without return and a few easy new to init (#16815))
 	set_light(light_range, light_power, light_color)
 
 /obj/item/flashlight/slime/update_brightness()
