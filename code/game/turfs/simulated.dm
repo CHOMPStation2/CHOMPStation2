@@ -159,7 +159,7 @@
 					floor_type = "dirty"
 				else if(outdoors)
 					floor_type = "uneven"
-				if(src.wet == 0 && M.m_intent == "walk")
+				if(src.wet == 0 && M.m_intent == I_WALK)
 					return
 			//CHOMPEdit End
 			switch(src.wet)

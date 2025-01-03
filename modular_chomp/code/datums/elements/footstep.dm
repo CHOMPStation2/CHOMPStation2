@@ -81,7 +81,7 @@
 		var/mob/living/carbon/carbon_source = source
 		if(!carbon_source.get_organ(BP_L_LEG) && !carbon_source.get_organ(BP_R_LEG))
 			return
-		if(carbon_source.m_intent == "walk")
+		if(carbon_source.m_intent == I_WALK)
 			return// stealth
 	steps_for_living[source] += 1
 	var/steps = steps_for_living[source]

@@ -13,7 +13,7 @@
 	icon_living = "bhotie"
 	icon_dead = "bhotie-dead"
 	icon_rest = "bhotie-dead"
-	faction = "blackhole"
+	faction = FACTION_BLACKHOLE
 	maxHealth = 200
 	health = 200
 	minbodytemp = 200
@@ -95,7 +95,7 @@
 	to_chat(L, span_danger("\The [src] focuses on you!"))
 
 	do_windup_animation(A, leap_warmup)
-	
+
 	addtimer(CALLBACK(src, PROC_REF(doLeap), L), leap_warmup, TIMER_DELETE_ME)
 	return TRUE
 
@@ -132,7 +132,7 @@
 	name = "Black Hole fanatic"
 	desc = "A tough looking armored feline creature. They wear various insignias identifying them as a member of Black Hole."
 	icon = 'modular_chomp/icons/blackhole/blackhole32x32.dmi'
-	faction = "blackhole"
+	faction = FACTION_BLACKHOLE
 	icon_dead = "trooper-dead"
 	icon_living = "trooper"
 	icon_state = "trooper"
@@ -192,7 +192,7 @@
 	name = "Black Hole bulwark"
 	desc = "A tough looking armored feline creature armed with a shield and an energy lance. They wear various insignias identifying them as a member of Black Hole."
 	icon = 'modular_chomp/icons/blackhole/blackhole32x32.dmi'
-	faction = "blackhole"
+	faction = FACTION_BLACKHOLE
 	icon_dead = "trooper-dead"
 	icon_living = "trooper_shield"
 	icon_state = "trooper_shield"
@@ -220,7 +220,7 @@
 	name = "grotesque"
 	desc = "A horribly mutated, pale creature, poorly morphed into some hyperaggressive feline abomination. This is what tends to happen to those that Black Hole take prisoner-- Cannonfodder."
 	icon = 'modular_chomp/icons/blackhole/blackhole32x32.dmi'
-	faction = "blackhole"
+	faction = FACTION_BLACKHOLE
 	icon_dead = "grotesque-dead"
 	icon_living = "grotesque"
 	icon_state = "grotesque"
@@ -247,7 +247,7 @@
 	name = "Black Hole trooper"
 	desc = "A tough looking armored feline creature armed with a pistol. They wear various insignias identifying them as a member of Black Hole."
 	icon = 'modular_chomp/icons/blackhole/blackhole32x32.dmi'
-	faction = "blackhole"
+	faction = FACTION_BLACKHOLE
 	icon_dead = "trooper-dead"
 	icon_living = "trooper_pistol"
 	icon_state = "trooper_pistol"
@@ -265,7 +265,7 @@
 	name = "Black Hole gunner"
 	desc = "A tough looking armored feline creature armed with an SMG. They wear various insignias identifying them as a member of Black Hole."
 	icon = 'modular_chomp/icons/blackhole/blackhole32x32.dmi'
-	faction = "blackhole"
+	faction = FACTION_BLACKHOLE
 	icon_dead = "trooper-dead"
 	icon_living = "trooper_smg"
 	icon_state = "trooper_smg"
@@ -283,7 +283,7 @@
 	name = "Black Hole rifleman"
 	desc = "A tough looking armored feline creature armed with a rifle. They wear various insignias identifying them as a member of Black Hole."
 	icon = 'modular_chomp/icons/blackhole/blackhole32x32.dmi'
-	faction = "blackhole"
+	faction = FACTION_BLACKHOLE
 	icon_dead = "trooper-dead"
 	icon_living = "trooper_rifle"
 	icon_state = "trooper_rifle"
@@ -301,7 +301,7 @@
 	name = "Black Hole machinegunner"
 	desc = "A tough looking armored feline creature armed with a light machinegun. They wear various insignias identifying them as a member of Black Hole."
 	icon = 'modular_chomp/icons/blackhole/blackhole32x32.dmi'
-	faction = "blackhole"
+	faction = FACTION_BLACKHOLE
 	icon_dead = "trooper-dead"
 	icon_living = "trooper_lmg"
 	icon_state = "trooper_lmg"
@@ -323,7 +323,7 @@
 	name = "Black Hole fanatic"
 	desc = "A tough looking armored feline taur. They wear various insignias identifying them as a member of Black Hole."
 	icon = 'modular_chomp/icons/blackhole/blackhole64x32.dmi'
-	faction = "blackhole"
+	faction = FACTION_BLACKHOLE
 	icon_dead = "heavytrooper-dead"
 	icon_living = "heavytrooper"
 	icon_state = "heavytrooper"
@@ -396,7 +396,7 @@
 	name = "Black Hole machinegunner"
 	desc = "A tough looking armored feline taur wielding a light machinegun. They wear various insignias identifying them as a member of Black Hole."
 	icon = 'modular_chomp/icons/blackhole/blackhole64x32.dmi'
-	faction = "blackhole"
+	faction = FACTION_BLACKHOLE
 	icon_dead = "heavytrooper-dead"
 	icon_living = "heavytrooper_lmg"
 	icon_state = "heavytrooper_lmg"
@@ -435,7 +435,7 @@
 	icon_rest = "heavytrooper_sniper"
 	projectiletype = /obj/item/projectile/bullet/rifle/a145/highvel // Really scary bullet.
 	projectilesound = 'sound/weapons/serdy/molniyab.ogg'
-	faction = "blackhole"
+	faction = FACTION_BLACKHOLE
 	movement_cooldown = 0
 	harm_intent_damage = 5
 	melee_damage_lower = 15
@@ -525,7 +525,7 @@
 	name = "Black Hole mechanized troopers"
 	desc = "A pair of armed Black Hole troops riding an armored motorcycle. Watch out!"
 	icon = 'modular_chomp/icons/blackhole/blackhole64x64.dmi'
-	faction = "blackhole"
+	faction = FACTION_BLACKHOLE
 	icon_dead = "bikeus"
 	icon_living = "bikeus"
 	icon_state = "bikeus"
@@ -590,7 +590,7 @@
 	It also is armed with an array of next-generation weaponry."
 	catalogue_data = list(/datum/category_item/catalogue/fauna/mercenary/blackhole)
 	icon = 'modular_chomp/icons/blackhole/blackhole32x32.dmi'
-	faction = "blackhole"
+	faction = FACTION_BLACKHOLE
 	icon_living = "mech2"
 	icon_state = "mech2"
 	icon_rest = "mech2"
@@ -623,7 +623,7 @@
 	desc = "A robust, advanced exosuit of Black Hole design, utilizing highly dangerous tesla weaponry."
 	catalogue_data = list(/datum/category_item/catalogue/fauna/mercenary/blackhole)
 	icon = 'modular_chomp/icons/blackhole/blackhole32x32.dmi'
-	faction = "blackhole"
+	faction = FACTION_BLACKHOLE
 	icon_living = "mech1"
 	icon_state = "mech1"
 	icon_rest = "mech1"
@@ -684,8 +684,8 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 	icon_living = "obelisk"
 	icon_dead = "obelisk-dead"
 	icon = 'modular_chomp/icons/blackhole/blackhole64x64.dmi'
-	faction = "blackhole"
-	a_intent = "harm"
+	faction = FACTION_BLACKHOLE
+	a_intent = I_HURT
 	anchored = 1
 	maxHealth = 400
 	health = 400
