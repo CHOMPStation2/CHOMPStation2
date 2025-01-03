@@ -181,14 +181,6 @@
 */ //CHOMP Remove end
 //this is largely hacky and bad :(	-Pete //less hacky and bad now :) -Ghost
 /obj/item/gun/projectile/shotgun/doublebarrel/attackby(var/obj/item/A as obj, mob/user as mob)
-<<<<<<< HEAD
-	if(istype(A, /obj/item/ammo_casing/a12g) || istype(A, /obj/item/ammo_magazine)) //CHOMPEdit: Trying to make sawn offs reload able
-		..()
-	if(sawn_off)
-		to_chat(user, span_warning("The [src] is already shortened!"))
-		return
-=======
->>>>>>> f7fa0eee62 (fix sawn off shotguns (#16823))
 	if(istype(A, /obj/item/surgical/circular_saw) || istype(A, /obj/item/melee/energy) || istype(A, /obj/item/pickaxe/plasmacutter))
 		if(sawn_off)
 			to_chat(user, span_warning("The [src] is already shortened!"))
