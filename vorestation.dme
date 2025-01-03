@@ -184,13 +184,8 @@
 #include "code\__defines\dcs\flags.dm"
 #include "code\__defines\dcs\helpers.dm"
 #include "code\__defines\dcs\signals.dm"
-<<<<<<< HEAD
-#include "code\__defines\dcs\signals_ch.dm"
-#include "code\__defines\dcs\signals_ch\signals_subsystem.dm"
-#include "code\__defines\dcs\signals_ch\signals_mob\signals_mob_main_ch.dm"
-=======
 #include "code\__defines\dcs\signals\signals_subsystem.dm"
->>>>>>> f48022188f (Subsystem return update (#16820))
+#include "code\__defines\dcs\signals_ch\signals_subsystem.dm"
 #include "code\__defines\traits\_traits.dm"
 #include "code\__defines\traits\declarations.dm"
 #include "code\__defines\traits\sources.dm"
