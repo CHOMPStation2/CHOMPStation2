@@ -314,6 +314,7 @@
 	if(!S) return
 
 	// Play every 20 steps while walking, for the sneak
+<<<<<<< HEAD
 	if(m_intent == "walk" && step_count++ % 20 != 0)
 		check_vorefootstep(m_intent, T) //CHOMPstation edit: sloshing reagent belly walk system
 	// Play every other step while running
@@ -325,12 +326,19 @@
 			return
 	/*
 	if(step_count % 2 == 0)	//CHOMPAdd, since I removed the returns up above, need this to track each odd step.
+=======
+	if(m_intent == I_WALK && step_count++ % 20 != 0)
+		return
+
+	// Play every other step while running
+	if(m_intent == I_RUN && step_count++ % 2 != 0)
+>>>>>>> 3094e65b71 (intent cleanup (#16825))
 		return
 
 	var/volume = CONFIG_GET(number/footstep_volume)
 
 	// Reduce volume while walking or barefoot
-	if(!shoes || m_intent == "walk")
+	if(!shoes || m_intent == I_WALK)
 		volume *= 0.5
 	else if(shoes)
 		var/obj/item/clothing/shoes/feet = shoes

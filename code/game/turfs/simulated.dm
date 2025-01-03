@@ -125,7 +125,11 @@
 			if(H.shoes)
 				var/obj/item/clothing/shoes/S = H.shoes
 				if(istype(S))
+<<<<<<< HEAD
 					S.handle_movement(src,(H.m_intent == "run" ? 1 : 0), H) // CHOMPEdit handle_movement now needs to know who is moving, for inshoe steppies
+=======
+					S.handle_movement(src,(H.m_intent == I_RUN ? 1 : 0))
+>>>>>>> 3094e65b71 (intent cleanup (#16825))
 					if(S.track_blood && S.blood_DNA)
 						bloodDNA = S.blood_DNA
 						bloodcolor=S.blood_color
@@ -146,7 +150,7 @@
 
 		if(src.wet || (dirtslip && (dirt > 50 || outdoors == 1)))	//CHOMPEdit
 
-			if(M.buckled || (src.wet == 1 && M.m_intent == "walk"))
+			if(M.buckled || (src.wet == 1 && M.m_intent == I_WALK))
 				return
 
 			var/slip_dist = 1
