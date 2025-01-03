@@ -40,7 +40,7 @@
 	switch(pred.a_intent)
 		if(I_HELP)
 			if(prob(10)) //Reducing spam exclusively on I_HELP. Still more frequent than old pitiful prob(1)
-				if(pred.m_intent == "run")
+				if(pred.m_intent == I_RUN)
 					message_prey = pick(
 						"You feel weightless for a brief moment as \the [name] move upwards.",
 						"[pred]'s weight bears down on you with each of their steps.",
@@ -61,7 +61,7 @@
 			return  //No message for pred if I_HELP
 
 		if(I_DISARM)
-			if(pred.m_intent == "run")
+			if(pred.m_intent == I_RUN)
 				message_pred = "You step on [prey], squishing and pinning them within your [name]!"
 				message_prey = "[pred] steps on you, squishing and pinning you within their [name]!"
 			else
@@ -71,7 +71,7 @@
 				add_attack_logs(pred, prey, "Pinned inshoe (walk, weaken(5))")
 
 		if(I_GRAB)
-			if(pred.m_intent == "run")
+			if(pred.m_intent == I_RUN)
 				message_pred = "You step down onto [prey], squishing and trapping them inbetween your toes!"
 				message_prey = "[pred] steps down on you, squishing and trapping you inbetween their toes!"
 			else
@@ -89,7 +89,7 @@
 			//Assuming regular micro pickup sizes outside dorms, size_damage multiplier should range from .25 to 1.75... right?
 			var/damage = (rand(5, 15) * size_damage_multiplier) / 10 // This will sting, but not kill unless pred walks. Will range from .125 to 2.625 damage, randomly, to each limb
 
-			if(pred.m_intent == "run")
+			if(pred.m_intent == I_RUN)
 				message_pred = "You carelessly step down onto [prey], crushing them within your [name]!"
 				message_prey = "[pred] steps carelessly on your body, crushing you within their [name]!"
 				add_attack_logs(pred, prey, "Crushed inshoe (run, about [damage] damage per limb)")
