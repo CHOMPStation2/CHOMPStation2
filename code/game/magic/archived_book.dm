@@ -53,13 +53,13 @@ var/global/datum/book_manager/book_mgr = new()
 		dat += "<h3>ADMINISTRATIVE MANAGEMENT</h3>"
 		establish_old_db_connection()
 
-		if(!SSdbcore.IsConnected()) //CHOMP Edit
+		if(!SSdbcore.IsConnected()) //CHOMP Edit Start
 			dat += "<font color=red><b>ERROR</b>: Unable to contact External Archive. Please contact your system administrator for assistance.</font>"
 		else
-			var/datum/db_query/query = dbcon.NewQuery("DELETE FROM library WHERE id=[isbn]")
+			var/datum/db_query/query = SSdbcore.NewQuery("DELETE FROM library WHERE id=[isbn]")
 			if(!query.Execute())
 				to_chat(usr,query.ErrorMsg())
-			dbcon.Disconnect()
+			qdel(query) //CHOMPEdit End TGSQL
 	else
 		book_mgr.remove(isbn)
 	log_admin("[usr.key] has deleted the book [isbn]")

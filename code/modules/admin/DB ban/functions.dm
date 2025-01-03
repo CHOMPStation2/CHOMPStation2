@@ -176,6 +176,7 @@
 		reason = query.item[3]
 	else
 		to_chat(usr, span_filter_adminlog("Invalid ban id. Contact the database admin"))
+		qdel(query) //CHOMPEdit TGSQL
 		return
 	qdel(query) //CHOMPEdit TGSQL
 	reason = sql_sanitize_text(reason)
