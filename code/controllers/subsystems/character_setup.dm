@@ -2,11 +2,7 @@ SUBSYSTEM_DEF(character_setup)
 	name = "Character Setup"
 	init_order = INIT_ORDER_DEFAULT
 	priority = FIRE_PRIORITY_CHARSETUP
-<<<<<<< HEAD
-	flags = SS_BACKGROUND | SS_NO_INIT // CHOMPEdit
-=======
 	flags = SS_BACKGROUND | SS_NO_INIT
->>>>>>> f48022188f (Subsystem return update (#16820))
 	wait = 1 SECOND
 	runlevels = RUNLEVEL_LOBBY | RUNLEVELS_DEFAULT
 

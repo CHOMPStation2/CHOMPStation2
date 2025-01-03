@@ -17,15 +17,9 @@ SUBSYSTEM_DEF(circuit)
 /datum/controller/subsystem/circuit/Recover()
 	flags |= SS_NO_INIT // Make extra sure we don't initialize twice.
 
-<<<<<<< HEAD
-/datum/controller/subsystem/circuit/Initialize() // CHOMPEdit
-	circuits_init()
-	return SS_INIT_SUCCESS // CHOMPEdit
-=======
 /datum/controller/subsystem/circuit/Initialize()
 	circuits_init()
 	return SS_INIT_SUCCESS
->>>>>>> f48022188f (Subsystem return update (#16820))
 
 /datum/controller/subsystem/circuit/proc/circuits_init()
 	//Cached lists for free performance

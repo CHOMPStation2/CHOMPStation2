@@ -25,11 +25,7 @@ SUBSYSTEM_DEF(sounds)
 
 /datum/controller/subsystem/sounds/Initialize()
 	setup_available_channels()
-<<<<<<< HEAD
-	return SS_INIT_SUCCESS // CHOMPEdit
-=======
 	return SS_INIT_SUCCESS
->>>>>>> f48022188f (Subsystem return update (#16820))
 
 /datum/controller/subsystem/sounds/proc/setup_available_channels()
 	channel_list = list()

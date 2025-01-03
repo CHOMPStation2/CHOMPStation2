@@ -12,11 +12,7 @@ SUBSYSTEM_DEF(mapping)
 	flags |= SS_NO_INIT // Make extra sure we don't initialize twice.
 	shelter_templates = SSmapping.shelter_templates
 
-<<<<<<< HEAD
-/datum/controller/subsystem/mapping/Initialize() // CHOMPEdit
-=======
 /datum/controller/subsystem/mapping/Initialize()
->>>>>>> f48022188f (Subsystem return update (#16820))
 	if(subsystem_initialized)
 		return
 	world.max_z_changed() // This is to set up the player z-level list, maxz hasn't actually changed (probably)
@@ -33,11 +29,7 @@ SUBSYSTEM_DEF(mapping)
 	// Lateload Code related to Expedition areas.
 	if(using_map) // VOREStation Edit: Re-enable this.
 		loadLateMaps()
-<<<<<<< HEAD
-	return SS_INIT_SUCCESS // CHOMPEdit
-=======
 	return SS_INIT_SUCCESS
->>>>>>> f48022188f (Subsystem return update (#16820))
 
 /datum/controller/subsystem/mapping/proc/load_map_templates()
 	for(var/datum/map_template/template as anything in subtypesof(/datum/map_template))

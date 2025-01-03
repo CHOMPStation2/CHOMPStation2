@@ -29,11 +29,6 @@ SUBSYSTEM_DEF(overlays)
 		atom.flags &= ~OVERLAY_QUEUED
 		CHECK_TICK
 
-<<<<<<< HEAD
-//CHOMPEdit Begin
-=======
-
->>>>>>> f48022188f (Subsystem return update (#16820))
 /datum/controller/subsystem/overlays/Initialize()
 	fire(FALSE, TRUE)
 	return SS_INIT_SUCCESS

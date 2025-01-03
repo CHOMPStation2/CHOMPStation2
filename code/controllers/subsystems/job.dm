@@ -14,25 +14,16 @@ SUBSYSTEM_DEF(job)
 	var/list/shift_keys = list()				// CHOMPadd
 	var/list/restricted_keys = list()			// CHOMPadd
 
-<<<<<<< HEAD
-
-/datum/controller/subsystem/job/Initialize() // CHOMPEdit
-=======
 /datum/controller/subsystem/job/Initialize()
->>>>>>> f48022188f (Subsystem return update (#16820))
 	if(!department_datums.len)
 		setup_departments()
 	if(!occupations.len)
 		setup_occupations()
-<<<<<<< HEAD
 	//CHOMPadd begin
 	if(CONFIG_GET(number/job_camp_time_limit))
 		load_camp_lists()
 	//CHOMPadd end
-	return SS_INIT_SUCCESS // CHOMPEdit
-=======
 	return SS_INIT_SUCCESS
->>>>>>> f48022188f (Subsystem return update (#16820))
 
 /datum/controller/subsystem/job/proc/setup_occupations(faction = FACTION_STATION)
 	occupations = list()

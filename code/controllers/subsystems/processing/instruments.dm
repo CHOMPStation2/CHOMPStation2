@@ -24,11 +24,7 @@ PROCESSING_SUBSYSTEM_DEF(instruments)
 /datum/controller/subsystem/processing/instruments/Initialize()
 	initialize_instrument_data()
 	synthesizer_instrument_ids = get_allowed_instrument_ids()
-<<<<<<< HEAD
-	return SS_INIT_SUCCESS // CHOMPEdit
-=======
 	return SS_INIT_SUCCESS
->>>>>>> f48022188f (Subsystem return update (#16820))
 
 /datum/controller/subsystem/processing/instruments/proc/on_song_new(datum/song/S)
 	songs += S

@@ -2,11 +2,7 @@ SUBSYSTEM_DEF(input)
 	name = "Input"
 	wait = 1 // SS_TICKER means this runs every tick
 	init_order = INIT_ORDER_INPUT
-<<<<<<< HEAD
-	flags = SS_TICKER | SS_NO_INIT // CHOMPEdit
-=======
 	flags = SS_TICKER | SS_NO_INIT
->>>>>>> f48022188f (Subsystem return update (#16820))
 	priority = FIRE_PRIORITY_INPUT
 	runlevels = RUNLEVELS_DEFAULT | RUNLEVEL_LOBBY
 

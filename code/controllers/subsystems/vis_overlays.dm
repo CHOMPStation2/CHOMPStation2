@@ -9,11 +9,7 @@ SUBSYSTEM_DEF(vis_overlays)
 
 /datum/controller/subsystem/vis_overlays/Initialize()
 	vis_overlay_cache = list()
-<<<<<<< HEAD
-	return SS_INIT_SUCCESS // CHOMPEdit
-=======
 	return SS_INIT_SUCCESS
->>>>>>> f48022188f (Subsystem return update (#16820))
 
 /datum/controller/subsystem/vis_overlays/fire(resumed = FALSE)
 	if(!resumed)

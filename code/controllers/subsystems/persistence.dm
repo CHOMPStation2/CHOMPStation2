@@ -10,7 +10,6 @@ SUBSYSTEM_DEF(persistence)
 	var/list/all_paintings = list()
 	var/list/unpicked_paintings = list()
 
-// CHOMPEdit Start
 /datum/controller/subsystem/persistence/Initialize()
 	for(var/datum/persistent/P as anything in subtypesof(/datum/persistent))
 		if(initial(P.name))
@@ -18,10 +17,6 @@ SUBSYSTEM_DEF(persistence)
 			persistence_datums[P.type] = P
 			P.Initialize()
 	return SS_INIT_SUCCESS
-<<<<<<< HEAD
-// CHOMPEdit End
-=======
->>>>>>> f48022188f (Subsystem return update (#16820))
 
 /datum/controller/subsystem/persistence/Shutdown()
 	for(var/thing in persistence_datums)

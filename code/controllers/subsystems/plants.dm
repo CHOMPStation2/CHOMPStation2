@@ -26,17 +26,9 @@ SUBSYSTEM_DEF(plants)
 	msg = "P:[processing.len]|S:[seeds.len]"
 	return ..()
 
-<<<<<<< HEAD
-//CHOMPEdit Begin
 /datum/controller/subsystem/plants/Initialize()
 	setup()
 	return SS_INIT_SUCCESS
-//CHOMPEdit End
-=======
-/datum/controller/subsystem/plants/Initialize()
-	setup()
-	return SS_INIT_SUCCESS
->>>>>>> f48022188f (Subsystem return update (#16820))
 
 // Predefined/roundstart varieties use a string key to make it
 // easier to grab the new variety when mutating. Post-roundstart

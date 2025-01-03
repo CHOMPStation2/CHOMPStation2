@@ -32,11 +32,7 @@ SUBSYSTEM_DEF(shuttles)
 
 	var/tmp/list/current_run                       // Shuttles remaining to process this fire() tick
 
-<<<<<<< HEAD
-/datum/controller/subsystem/shuttles/Initialize() // CHOMPEdit
-=======
 /datum/controller/subsystem/shuttles/Initialize()
->>>>>>> f48022188f (Subsystem return update (#16820))
 	last_landmark_registration_time = world.time
 	// Find all declared shuttle datums and initailize them. (Okay, queue them for initialization a few lines further down)
 	for(var/shuttle_type in subtypesof(/datum/shuttle)) // This accounts for most shuttles, though away maps can queue up more.
@@ -47,11 +43,7 @@ SUBSYSTEM_DEF(shuttles)
 			LAZYDISTINCTADD(shuttles_to_initialize, shuttle_type)
 	block_init_queue = FALSE
 	process_init_queues()
-<<<<<<< HEAD
-	return SS_INIT_SUCCESS // CHOMPEdit
-=======
 	return SS_INIT_SUCCESS
->>>>>>> f48022188f (Subsystem return update (#16820))
 
 /datum/controller/subsystem/shuttles/fire(resumed = 0)
 	if (!resumed)
