@@ -413,58 +413,9 @@
 					prey.drip(3)
 					add_attack_logs(pred, prey, "Crushed underfoot (walk, about [calculated_damage] damage)")
 
-<<<<<<< HEAD
 		to_chat(pred, span_danger("[message_pred]"))
 		to_chat(prey, span_danger("[message_prey]"))
 		return TRUE
-=======
-	if(m_intent == I_RUN)
-		switch(a_intent)
-			if(I_DISARM)
-				message_pred = "You quickly push [prey] to the ground with your foot!"
-				message_prey = "[pred] pushes you down to the ground with their foot!"
-				if(tail)
-					message_pred = STEP_TEXT_OWNER(tail.msg_owner_disarm_run)
-					message_prey = STEP_TEXT_PREY(tail.msg_prey_disarm_run)
-				add_attack_logs(pred, prey, "Pinned underfoot (run, no halloss)")
-			if(I_HURT)
-				message_pred = "You carelessly step down onto [prey], crushing them!"
-				message_prey = "[pred] steps carelessly on your body, crushing you!"
-				if(tail)
-					message_pred = STEP_TEXT_OWNER(tail.msg_owner_harm_run)
-					message_prey = STEP_TEXT_PREY(tail.msg_prey_harm_run)
-
-				for(var/obj/item/organ/external/I in prey.organs)
-					I.take_damage(calculated_damage, 0) // 5 damage min, 26.25 damage max, depending on size & RNG. If they're only stepped on once, the damage will (probably not...) heal over time.
-				prey.drip(0.1)
-				add_attack_logs(pred, prey, "Crushed underfoot (run, about [calculated_damage] damage)")
-	else
-		switch(a_intent)
-			if(I_DISARM)
-				message_pred = "You firmly push your foot down on [prey], painfully but harmlessly pinning them to the ground!"
-				message_prey = "[pred] firmly pushes their foot down on you, quite painfully but harmlessly pinning you to the ground!"
-				if(tail)
-					message_pred = STEP_TEXT_OWNER(tail.msg_owner_disarm_walk)
-					message_prey = STEP_TEXT_PREY(tail.msg_prey_disarm_walk)
-				add_attack_logs(pred, prey, "Pinned underfoot (walk, about [damage] halloss)")
-				tmob.Weaken(2) //Removed halloss because it was being abused
-			if(I_HURT)
-				message_pred = "You methodically place your foot down upon [prey]'s body, slowly applying pressure, crushing them against the floor below!"
-				message_prey = "[pred] methodically places their foot upon your body, slowly applying pressure, crushing you against the floor below!"
-				if(tail)
-					message_pred = STEP_TEXT_OWNER(tail.msg_owner_harm_walk)
-					message_prey = STEP_TEXT_PREY(tail.msg_prey_harm_walk)
-				// Multiplies the above damage by 3.5. This means a min of 1.75 damage, or a max of 9.1875. damage to each limb, depending on size and RNG.
-				calculated_damage *= 3.5
-				for(var/obj/item/organ/I in prey.organs)
-					I.take_damage(calculated_damage, 0)
-				prey.drip(3)
-				add_attack_logs(pred, prey, "Crushed underfoot (walk, about [calculated_damage] damage)")
-
-	to_chat(pred, span_danger("[message_pred]"))
-	to_chat(prey, span_danger("[message_prey]"))
-	return TRUE
->>>>>>> 3094e65b71 (intent cleanup (#16825))
 
 /mob/living/verb/toggle_pickups()
 	set name = "Toggle Micro Pick-up"

@@ -450,15 +450,9 @@ var/list/mob/living/forced_ambiance_list = new
 		if(H.species.can_zero_g_move || H.species.can_space_freemove)
 			return
 
-<<<<<<< HEAD
-		if(H.m_intent == "run")
+		if(H.m_intent == I_RUN)
 			H.AdjustStunned(1) // CHOMPedit: No longer a supermassive long stun.
 //			H.AdjustWeakened(6) // CHOMPedit: No longer weakens.
-=======
-		if(H.m_intent == I_RUN)
-			H.AdjustStunned(6)
-			H.AdjustWeakened(6)
->>>>>>> 3094e65b71 (intent cleanup (#16825))
 		else
 			H.AdjustStunned(1) // CHOMPedit: No longer a supermassive long stun.
 //			H.AdjustWeakened(3) // CHOMPedit: No longer weakens.
