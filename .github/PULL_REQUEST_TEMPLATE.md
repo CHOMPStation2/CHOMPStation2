@@ -3,6 +3,7 @@
 ## About The Pull Request
 
 <!-- Describe The Pull Request. -->
+<<<<<<< HEAD
 
 ## Changelog
 
@@ -28,3 +29,5 @@ server: something server ops should know
 
 <!-- Both :cl:'s are required for the changelog to work! You can put your name to the right of the first :cl: if you want to overwrite your GitHub username as author ingame. -->
 <!-- You can use multiple of the same prefix (they're only used for the icon ingame) and delete the unneeded ones. Despite some of the tags, changelogs should generally represent how a player might be affected by the changes rather than a summary of the PR's contents. -->
+=======
+>>>>>>> 35467d64eb (Added missing CI scripts (#16832))
