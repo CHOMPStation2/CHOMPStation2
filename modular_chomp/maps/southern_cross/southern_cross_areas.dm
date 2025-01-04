@@ -559,6 +559,14 @@
 	icon_state = "medbay_restroom"
 	sound_env = SMALL_ENCLOSED
 
+/area/medical/sc_patient_a
+	name ="\improper Patient A"
+	icon_state = "medbay_patient_room_a"
+
+/area/medical/sc_patient_b
+	name ="\improper Patient B"
+	icon_state = "medbay_patient_room_b"
+
 /area/security/aid_station
 	name = "\improper Security - Aid Station"
 	icon_state = "security_aid_station"

@@ -36,7 +36,7 @@ SUBSYSTEM_DEF(game_master)
 	if(config && !CONFIG_GET(flag/enable_game_master)) // CHOMPEdit
 		can_fire = FALSE
 
-	return SS_INIT_SUCCESS // CHOMPEdit
+	return SS_INIT_SUCCESS
 
 /datum/controller/subsystem/game_master/fire(resumed)
 	adjust_staleness(1)

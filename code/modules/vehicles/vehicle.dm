@@ -49,9 +49,8 @@
 //-------------------------------------------
 //ChompADD START
 /obj/vehicle/Initialize()
-	.=..()
+	. = ..()
 	soundloop = new(list(src), FALSE)
-	return
 //ChompADD END
 
 ///obj/vehicle/New()

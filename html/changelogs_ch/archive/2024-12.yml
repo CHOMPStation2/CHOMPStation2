@@ -166,3 +166,11 @@
   - rscadd: colorable no-antennae moth wings
   - bugfix: Deathhead moth wings no longer visually clip in and out due to random
       frame
+2024-12-31:
+  Kashargul:
+  - bugfix: apparently some fire issues
+  TheCaramelion:
+  - qol: Fire is a proper danger now
+  - rscadd: Electrical Fire event
+  tacoguy7765093:
+  - rscadd: Added /effect/instantboom and subtypes for eventmins.
