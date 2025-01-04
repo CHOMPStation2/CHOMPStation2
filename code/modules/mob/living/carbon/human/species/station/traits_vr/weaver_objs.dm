@@ -24,6 +24,8 @@
 		qdel(src)
 
 /obj/effect/weaversilk/fire_act(datum/gas_mixture/air, exposed_temperature, exposed_volume)
+	var/turf/T = get_turf(src)
+	T?.feed_lingering_fire(0.1) // CHOMPAdd - Lingering fire, feeding fires
 	qdel(src)
 
 /obj/effect/weaversilk/attack_generic(mob/user as mob, var/damage)
@@ -42,7 +44,7 @@
 	layer = DIRTY_LAYER
 
 /obj/effect/weaversilk/floor/Initialize()
-	..()
+	. = ..()
 	icon_state = pick(possible_icon_states)
 
 /obj/effect/weaversilk/wall
@@ -53,7 +55,7 @@
 	density = TRUE
 
 /obj/effect/weaversilk/wall/Initialize()
-	..()
+	. = ..()
 	icon_state = pick(possible_icon_states)
 
 /obj/effect/weaversilk/wall/CanPass(atom/movable/mover, turf/target)
@@ -100,7 +102,7 @@
 			return
 	if(isliving(AM) && trap_active)
 		var/mob/living/L = AM
-		if(L.m_intent == "run")
+		if(L.m_intent == I_RUN)
 			L.visible_message(
 				span_danger("[L] steps on \the [src]."),
 				span_danger("You step on \the [src]!"),

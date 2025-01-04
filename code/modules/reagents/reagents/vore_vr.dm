@@ -13,7 +13,8 @@
 	mrate_static = TRUE
 
 /datum/reagent/macrocillin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	M.resize(M.size_multiplier+0.01, animate = FALSE, uncapped = M.has_large_resize_bounds()) //Incrrease 1% per tick. //CHOMP Edit: don't do fancy animates. Unnecessary on 1% changes. Laggy.
+	var/new_size = clamp((M.size_multiplier + 0.01), RESIZE_MINIMUM_DORMS, RESIZE_MAXIMUM_DORMS)
+	M.resize(new_size, animate = FALSE, uncapped = M.has_large_resize_bounds()) //Incrrease 1% per tick. //CHOMP Edit: don't do fancy animates. Unnecessary on 1% changes. Laggy.
 	return
 
 /datum/reagent/microcillin
@@ -26,7 +27,8 @@
 	mrate_static = TRUE
 
 /datum/reagent/microcillin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	M.resize(M.size_multiplier-0.01, animate = FALSE, uncapped = M.has_large_resize_bounds()) //Decrease 1% per tick. //CHOMP Edit: don't do fancy animates. Unnecessary on 1% changes. Laggy.
+	var/new_size = clamp((M.size_multiplier - 0.01), RESIZE_MINIMUM_DORMS, RESIZE_MAXIMUM_DORMS)
+	M.resize(new_size, animate = FALSE, uncapped = M.has_large_resize_bounds()) //Decrease 1% per tick. //CHOMP Edit: don't do fancy animates. Unnecessary on 1% changes. Laggy.
 	return
 
 
@@ -99,7 +101,7 @@
 	M.adjustHalLoss(1)
 	if(!M.confused) M.confused = 1
 	M.confused = max(M.confused, 20)
-	M.hallucination += 15
+	M.hallucination = max(M.hallucination, 20) //This used to be += 15 resulting in INFINITE HALLUCINATION
 
 	for(var/obj/belly/B as anything in M.vore_organs)
 
@@ -223,8 +225,9 @@
 	scannable = 0 //YOU ARE NOT SCANNING THE FUNNY PARALYSIS TOXIN. NO. BAD. STAY AWAY.
 
 /datum/reagent/paralysis_toxin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(M.weakened < 50) //Let's not leave them PERMA stuck, after all.
+	if(M.weakened < 50 || M.stunned <50 ) //Let's not leave them PERMA stuck, after all. //CHOMPedit, stun accounting for crawl
 		M.AdjustWeakened(5) //Stand in for paralyze so you can still talk/emote/see
+		M.AdjustStunned(5) //CHOMPadd, stun accounting for crawl
 
 /datum/reagent/pain_enzyme
 	name = REAGENT_PAINENZYME

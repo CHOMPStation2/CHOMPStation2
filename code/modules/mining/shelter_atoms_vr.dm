@@ -42,8 +42,14 @@ GLOBAL_LIST_EMPTY(unique_deployable)
 	else
 		. += "This capsule has an unknown template stored."
 
-/obj/item/survivalcapsule/attack_self()
+// CHOMPEdit Start
+/obj/item/survivalcapsule/attack_self(mob/user as mob)
 	//Can't grab when capsule is New() because templates aren't loaded then
+	if(istype(get_area(user), /area/vr))
+		to_chat(user, span_danger("\The [src] does not appear to work in VR! This is useless to you!"))
+		return
+	. = ..()
+// CHOMPEdit End
 	get_template()
 	if(!used)
 		loc.visible_message(span_warning("\The [src] begins to shake. Stand back!"))
@@ -254,8 +260,8 @@ GLOBAL_LIST_EMPTY(unique_deployable)
 	icon = 'icons/obj/survival_pod.dmi'
 	icon_state = "bed"
 
-/obj/structure/bed/pod/New(var/newloc)
-	..(newloc,MAT_STEEL,"cotton")
+/obj/structure/bed/pod/Initialize(var/newloc)
+	. = ..(newloc, MAT_STEEL, MAT_COTTON)
 
 //Survival Storage Unit
 /obj/machinery/smartfridge/survival_pod

@@ -255,6 +255,8 @@ Thus, the two variables affect pump operation are set in New():
 			"You hear ratchet.")
 		deconstruct()
 
+
+
 //CHOMPEdit Start - Adds TGStation keybinds to save our engineers some time.
 /obj/machinery/atmospherics/binary/pump/AltClick(mob/user)
 	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)

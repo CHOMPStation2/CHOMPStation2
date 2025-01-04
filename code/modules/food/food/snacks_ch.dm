@@ -153,7 +153,7 @@
 /obj/item/reagent_containers/food/snacks/steamtealeaf
 	name = "Steamed tea leaf"
 	desc = "A freshly picked tea leaf steamed to inhibit oxidation. Needs rolling."
-	icon = 'icons/obj/food.dmi'
+	icon = 'icons/obj/food_ch.dmi'
 	icon_state = "tealeafsteam"
 	nutriment_amt = 0
 	nutriment_desc = list(REAGENT_ID_NOTHING = 1)
@@ -171,7 +171,7 @@
 /obj/item/reagent_containers/food/snacks/steamrolltealeaf
 	name = "Rolled steamed tea leaf"
 	desc = "A steamed tea leaf ready for drying."
-	icon = 'icons/obj/food.dmi'
+	icon = 'icons/obj/food_ch.dmi'
 	icon_state = "tealeafsteamroll"
 	nutriment_amt = 0
 	nutriment_desc = list(REAGENT_ID_NOTHING = 1)
@@ -183,7 +183,7 @@
 /obj/item/reagent_containers/food/snacks/greentealeaf
 	name = "Green tea leaf"
 	desc = "Green tea! Just grind and mix with hot water."
-	icon = 'icons/obj/food.dmi'
+	icon = 'icons/obj/food_ch.dmi'
 	icon_state = "greentealeaf"
 	nutriment_amt = 0
 	nutriment_desc = list(REAGENT_ID_NOTHING = 1)

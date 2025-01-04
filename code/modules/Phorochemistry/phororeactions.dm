@@ -66,3 +66,5 @@
 
 
 		//garbage collection should deal with reagents
+
+#undef PHORONICS_TESTING

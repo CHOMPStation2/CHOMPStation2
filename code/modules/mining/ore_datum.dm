@@ -15,7 +15,7 @@
 		"million" = 999
 		)
 	var/xarch_source_mineral = REAGENT_ID_IRON
-	var/reagent = REAGENT_SILICATE
+	var/reagent = REAGENT_ID_SILICATE
 
 /ore/New()
 	. = ..()
@@ -23,7 +23,7 @@
 		display_name = name
 
 /ore/uranium
-	name = ORE_LEAD
+	name = ORE_URANIUM
 	display_name = "pitchblende"
 	smelts_to = MAT_URANIUM
 	result_amount = 5

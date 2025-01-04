@@ -5361,14 +5361,8 @@
 	pixel_x = -12;
 	pixel_y = -24
 	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
+/obj/item/cell/high,
+/obj/item/cell/high,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/sc/chief)
 "aoW" = (
@@ -7608,7 +7602,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/white,
-/area/medical/patient_b)
+/area/medical/sc_patient_b)
 "avJ" = (
 /obj/structure/closet,
 /obj/item/clothing/glasses/welding,
@@ -23075,7 +23069,7 @@
 	name = "Patient Room B"
 	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/medical/patient_b)
+/area/medical/sc_patient_b)
 "bsD" = (
 /obj/random/trash_pile,
 /turf/simulated/floor,
@@ -26492,10 +26486,7 @@
 	},
 /obj/structure/table/steel,
 /obj/machinery/cell_charger,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
+/obj/item/cell/high,
 /obj/machinery/alarm{
 	dir = 8;
 	pixel_x = 22
@@ -35992,14 +35983,8 @@
 "chJ" = (
 /obj/structure/table/reinforced,
 /obj/machinery/cell_charger,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
+/obj/item/cell/high,
+/obj/item/cell/high,
 /obj/item/stack/cable_coil{
 	pixel_x = 3;
 	pixel_y = -7
@@ -43859,10 +43844,7 @@
 /obj/structure/table/steel,
 /obj/machinery/cell_charger,
 /obj/item/stack/cable_coil,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
+/obj/item/cell/high,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
@@ -45191,7 +45173,7 @@
 	id = "pr1_window_tint"
 	},
 /turf/simulated/floor/plating,
-/area/medical/patient_a)
+/area/medical/sc_patient_a)
 "dsj" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -47218,7 +47200,7 @@
 	name = "Patient Room A"
 	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/medical/patient_a)
+/area/medical/sc_patient_a)
 "evZ" = (
 /obj/effect/landmark{
 	name = "blobstart"
@@ -49026,7 +49008,7 @@
 	},
 /obj/machinery/iv_drip,
 /turf/simulated/floor/tiled/white,
-/area/medical/patient_a)
+/area/medical/sc_patient_a)
 "fql" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/wingrille_spawn/reinforced,
@@ -51590,7 +51572,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/white,
-/area/medical/patient_b)
+/area/medical/sc_patient_b)
 "gEM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/wall/r_wall,
@@ -52263,7 +52245,7 @@
 /area/medical/patient_wing)
 "gVw" = (
 /turf/simulated/wall/r_wall,
-/area/medical/patient_a)
+/area/medical/sc_patient_a)
 "gWf" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/bed/chair{
@@ -54931,7 +54913,7 @@
 	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
-/area/medical/patient_b)
+/area/medical/sc_patient_b)
 "ini" = (
 /obj/effect/floor_decal/borderfloorwhite/corner,
 /obj/effect/floor_decal/corner/purple/bordercorner,
@@ -55265,7 +55247,7 @@
 	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
-/area/medical/patient_a)
+/area/medical/sc_patient_a)
 "izw" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 8
@@ -55800,14 +55782,8 @@
 "iNs" = (
 /obj/structure/table/standard,
 /obj/machinery/cell_charger,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
+/obj/item/cell/high,
+/obj/item/cell/high,
 /obj/item/radio/intercom{
 	dir = 1;
 	name = "Station Intercom (General)";
@@ -56660,14 +56636,8 @@
 /obj/item/stack/cable_coil,
 /obj/item/multitool,
 /obj/machinery/cell_charger,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
+/obj/item/cell/high,
+/obj/item/cell/high,
 /obj/machinery/sparker{
 	dir = 4;
 	id = "Xenobio";
@@ -59187,7 +59157,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/medical/patient_b)
+/area/medical/sc_patient_b)
 "kzz" = (
 /obj/machinery/pipedispenser,
 /turf/simulated/floor/tiled,
@@ -61681,7 +61651,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/medical/patient_a)
+/area/medical/sc_patient_a)
 "lUC" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -61697,7 +61667,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/medical/patient_a)
+/area/medical/sc_patient_a)
 "lUX" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 5
@@ -61793,14 +61763,8 @@
 	pixel_x = 3;
 	pixel_y = -7
 	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
+/obj/item/cell/high,
+/obj/item/cell/high,
 /obj/item/storage/toolbox/mechanical{
 	pixel_x = -2;
 	pixel_y = -1
@@ -62463,7 +62427,7 @@
 	},
 /obj/structure/closet/secure_closet/personal/patient,
 /turf/simulated/floor/tiled/white,
-/area/medical/patient_b)
+/area/medical/sc_patient_b)
 "mrF" = (
 /obj/machinery/door/window{
 	dir = 8;
@@ -63904,10 +63868,7 @@
 "nkI" = (
 /obj/structure/table/steel_reinforced,
 /obj/machinery/cell_charger,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
+/obj/item/cell/high,
 /obj/item/tool/wrench,
 /obj/machinery/status_display{
 	pixel_y = -32
@@ -64554,7 +64515,7 @@
 /area/teleporter)
 "nDN" = (
 /turf/simulated/wall,
-/area/medical/patient_a)
+/area/medical/sc_patient_a)
 "nDS" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -64678,7 +64639,7 @@
 /area/maintenance/bar)
 "nGr" = (
 /turf/simulated/wall/r_wall,
-/area/medical/patient_b)
+/area/medical/sc_patient_b)
 "nGH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -65751,7 +65712,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/medical/patient_a)
+/area/medical/sc_patient_a)
 "okh" = (
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/effect/floor_decal/industrial/outline/blue,
@@ -66734,7 +66695,7 @@
 	},
 /obj/machinery/iv_drip,
 /turf/simulated/floor/tiled/white,
-/area/medical/patient_b)
+/area/medical/sc_patient_b)
 "oRM" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/wingrille_spawn/reinforced,
@@ -66912,26 +66873,18 @@
 /area/crew_quarters/seconddeck/artgallery)
 "oVk" = (
 /obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000;
 	pixel_x = 5;
 	pixel_y = -5
 	},
 /obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000;
 	pixel_x = 5;
 	pixel_y = -5
 	},
 /obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000;
 	pixel_x = 5;
 	pixel_y = -5
 	},
 /obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000;
 	pixel_x = 5;
 	pixel_y = -5
 	},
@@ -68686,7 +68639,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/medical/patient_b)
+/area/medical/sc_patient_b)
 "pOW" = (
 /obj/structure/table/steel,
 /obj/fiftyspawner/steel,
@@ -68787,7 +68740,7 @@
 	},
 /obj/machinery/vitals_monitor,
 /turf/simulated/floor/tiled/white,
-/area/medical/patient_a)
+/area/medical/sc_patient_a)
 "pQK" = (
 /obj/machinery/light,
 /obj/structure/bookcase{
@@ -69782,7 +69735,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/medical/patient_a)
+/area/medical/sc_patient_a)
 "qtD" = (
 /obj/structure/cable{
 	d2 = 8;
@@ -70071,7 +70024,7 @@
 /obj/effect/floor_decal/corner/pink/border,
 /obj/machinery/light,
 /turf/simulated/floor/tiled/white,
-/area/medical/patient_a)
+/area/medical/sc_patient_a)
 "qAW" = (
 /obj/machinery/door/blast/shutters{
 	dir = 2;
@@ -71607,7 +71560,7 @@
 	id = "pr2_window_tint"
 	},
 /turf/simulated/floor/plating,
-/area/medical/patient_b)
+/area/medical/sc_patient_b)
 "rEd" = (
 /obj/structure/bed/chair,
 /obj/effect/floor_decal/borderfloor{
@@ -71796,7 +71749,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/white,
-/area/medical/patient_a)
+/area/medical/sc_patient_a)
 "rIU" = (
 /obj/structure/disposalpipe/junction{
 	dir = 4;
@@ -71840,7 +71793,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/medical/patient_b)
+/area/medical/sc_patient_b)
 "rKQ" = (
 /obj/structure/bed/chair{
 	dir = 8
@@ -72740,7 +72693,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/medical/patient_b)
+/area/medical/sc_patient_b)
 "siq" = (
 /obj/structure/sign/directions/engineering{
 	dir = 8;
@@ -73026,7 +72979,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/white,
-/area/medical/patient_a)
+/area/medical/sc_patient_a)
 "sup" = (
 /obj/machinery/papershredder,
 /obj/machinery/alarm{
@@ -73928,7 +73881,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/medical/patient_b)
+/area/medical/sc_patient_b)
 "sVp" = (
 /obj/effect/shuttle_landmark{
 	base_area = /area/space;
@@ -75599,7 +75552,7 @@
 	},
 /obj/machinery/vitals_monitor,
 /turf/simulated/floor/tiled/white,
-/area/medical/patient_b)
+/area/medical/sc_patient_b)
 "ubP" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/wingrille_spawn/reinforced,
@@ -77237,7 +77190,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/medical/patient_a)
+/area/medical/sc_patient_a)
 "vdd" = (
 /obj/effect/floor_decal/industrial/warning/corner,
 /turf/simulated/floor/tiled,
@@ -77813,7 +77766,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/medical/patient_b)
+/area/medical/sc_patient_b)
 "vxG" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -78160,7 +78113,7 @@
 /obj/effect/floor_decal/corner/pink/border,
 /obj/machinery/light,
 /turf/simulated/floor/tiled/white,
-/area/medical/patient_b)
+/area/medical/sc_patient_b)
 "vHd" = (
 /obj/machinery/shower{
 	dir = 8;
@@ -79103,7 +79056,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/medical/patient_a)
+/area/medical/sc_patient_a)
 "wmj" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -80110,7 +80063,7 @@
 	},
 /obj/structure/closet/secure_closet/personal/patient,
 /turf/simulated/floor/tiled/white,
-/area/medical/patient_a)
+/area/medical/sc_patient_a)
 "wUN" = (
 /obj/machinery/vending/hydronutrients,
 /turf/simulated/floor/tiled/hydro,

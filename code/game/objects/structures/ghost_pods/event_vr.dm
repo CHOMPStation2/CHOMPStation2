@@ -120,12 +120,12 @@
 	var/mob/living/simple_mob/newPred = new mobtype(get_turf(src))
 	qdel(newPred.ai_holder)
 	newPred.ai_holder = null
-	newPred.voremob_loaded = TRUE //CHOMPedit: On-demand belly loading.
-	newPred.init_vore() //CHOMPedit: On-demand belly loading.
+	newPred.voremob_loaded = TRUE // On-demand belly loading.
+	newPred.init_vore() // On-demand belly loading.
 	//newPred.movement_cooldown = 0			// The "needless artificial speed cap" exists for a reason
 	if(M.mind)
 		M.mind.transfer_to(newPred)
-	to_chat(M, span_notice("You are " + span_bold(newPred) + ", somehow having gotten aboard the station in search of food. \
+	to_chat(M, span_notice("You are " + span_bold("[newPred]") + ", somehow having gotten aboard the station in search of food. \
 	You are wary of environment around you, but you do feel rather peckish. Stick around dark, secluded places to avoid danger or, \
 	if you are cute enough, try to make friends with this place's inhabitants."))
 	to_chat(M, span_critical("Please be advised, this role is NOT AN ANTAGONIST."))
@@ -159,8 +159,8 @@
 		return
 
 	var/mob/living/simple_mob/vore/morph/newMorph = new /mob/living/simple_mob/vore/morph(get_turf(src))
-	newMorph.voremob_loaded = TRUE //CHOMPedit: On-demand belly loading.
-	newMorph.init_vore() //CHOMPedit: On-demand belly loading.
+	newMorph.voremob_loaded = TRUE // On-demand belly loading.
+	newMorph.init_vore() // On-demand belly loading.
 	if(M.mind)
 		M.mind.transfer_to(newMorph)
 	to_chat(M, span_notice("You are a " + span_bold("Morph") + ", somehow having gotten aboard the station in your wandering. \
@@ -188,7 +188,7 @@
 	icon_state_opened = "redgate_hole"
 
 /obj/structure/ghost_pod/ghost_activated/maintpred/redgate/Initialize()
-	..()
+	. = ..()
 	if(!(src in active_ghost_pods))
 		active_ghost_pods += src
 
@@ -267,6 +267,6 @@
 	qdel(src)
 
 /obj/structure/ghost_pod/ghost_activated/maint_lurker/Initialize()
-	..()
+	. = ..()
 	if(!(src in active_ghost_pods))
 		active_ghost_pods += src

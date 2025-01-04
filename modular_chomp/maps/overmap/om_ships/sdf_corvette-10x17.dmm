@@ -10,7 +10,7 @@
 /obj/fiftyspawner/rglass,
 /obj/item/storage/toolbox/mechanical,
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "bn" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -27,13 +27,13 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "cJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 10
 	},
 /turf/simulated/wall/rshull,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "cS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/universal{
 	dir = 4
@@ -47,7 +47,7 @@
 	amount = 50
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "dv" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -55,13 +55,13 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/wall/rshull,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "dG" = (
 /obj/machinery/sleeper{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "dQ" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
@@ -79,7 +79,7 @@
 	specialfunctions = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "en" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -90,7 +90,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "eD" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
@@ -104,7 +104,7 @@
 	name = "Blast Shield"
 	},
 /turf/simulated/floor/plating,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "eT" = (
 /obj/machinery/atmospherics/pipe/tank/phoron,
 /obj/structure/window/reinforced{
@@ -112,7 +112,7 @@
 	},
 /obj/effect/floor_decal/industrial/warning/full,
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "fX" = (
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/warning{
@@ -124,7 +124,7 @@
 	locked = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "hn" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
@@ -134,7 +134,7 @@
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/machinery/light,
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "hy" = (
 /obj/machinery/power/smes/buildable/point_of_interest,
 /obj/structure/cable/green{
@@ -142,7 +142,7 @@
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "jK" = (
 /obj/structure/handrail,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden,
@@ -152,13 +152,13 @@
 	frequency = 1380
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "jS" = (
 /obj/machinery/computer/ship/helm{
 	req_one_access = list()
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "kI" = (
 /obj/structure/bed/chair/shuttle{
 	dir = 1
@@ -170,7 +170,7 @@
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber,
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "lI" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 8;
@@ -179,11 +179,11 @@
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "lJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/wall/rshull,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "lN" = (
 /obj/structure/cable{
 	d1 = 2;
@@ -195,7 +195,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "lW" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -211,7 +211,7 @@
 	},
 /obj/effect/map_helper/airlock/sensor/int_sensor,
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "ms" = (
 /obj/machinery/computer/ship/sensors{
 	dir = 4
@@ -222,7 +222,7 @@
 	pixel_y = 24
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "mT" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -235,13 +235,13 @@
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "nh" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 6
 	},
 /turf/simulated/wall/rshull,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "nq" = (
 /obj/structure/handrail,
 /obj/effect/floor_decal/industrial/warning{
@@ -254,7 +254,7 @@
 	specialfunctions = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "nr" = (
 /obj/machinery/pointdefense_control{
 	id_tag = "sdfc_pd"
@@ -265,7 +265,7 @@
 	locked = 0
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "pl" = (
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 8
@@ -284,11 +284,11 @@
 	locked = 0
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "pu" = (
 /obj/machinery/sleep_console,
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "pG" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
@@ -301,7 +301,7 @@
 	nitrogen = 0;
 	oxygen = 0
 	},
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "ri" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
@@ -319,7 +319,7 @@
 	name = "Blast Shield"
 	},
 /turf/simulated/floor/plating,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "rX" = (
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 4
@@ -336,7 +336,7 @@
 	pixel_x = -30
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "sG" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -350,7 +350,7 @@
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "tg" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -369,7 +369,7 @@
 /obj/item/ammo_magazine/a57p90,
 /obj/item/ammo_magazine/a57p90,
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "tt" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
 	dir = 8
@@ -383,11 +383,11 @@
 	dir = 8
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
-/obj/effect/shuttle_landmark/shuttle_initializer/sdf_corvette,
-/obj/effect/overmap/visitable/ship/landable/sdf_corvette,
+/obj/effect/shuttle_landmark/shuttle_initializer/sdf_corvette2,
+/obj/effect/overmap/visitable/ship/landable/sdf_corvette2,
 /obj/machinery/light,
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "uw" = (
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 8
@@ -397,7 +397,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "uD" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -410,7 +410,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "wl" = (
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/machinery/light{
@@ -422,7 +422,7 @@
 	id_tag = "expshuttle_vent"
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "wn" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
 	dir = 1
@@ -431,7 +431,7 @@
 	dir = 9
 	},
 /turf/simulated/wall/rshull,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "wQ" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -445,7 +445,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "xk" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -462,11 +462,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "ye" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/fuel,
 /turf/simulated/wall/rshull,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "yA" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -482,7 +482,7 @@
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "yN" = (
 /obj/machinery/atmospherics/unary/vent_pump{
 	dir = 8
@@ -494,7 +494,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/airless,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "zb" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -504,7 +504,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "zn" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/sign/warning/airlock{
@@ -512,7 +512,7 @@
 	},
 /obj/machinery/light,
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "zX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
@@ -523,7 +523,7 @@
 	},
 /obj/machinery/light,
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "Cg" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -537,7 +537,7 @@
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "Cq" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -553,7 +553,7 @@
 	pixel_y = 24
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "Eg" = (
 /obj/structure/cable/green{
 	d2 = 2;
@@ -566,13 +566,13 @@
 	id_tag = "sdfc_pd"
 	},
 /turf/simulated/floor/airless,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "Eo" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
 /turf/simulated/floor/airless,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "EN" = (
 /obj/structure/handrail,
 /obj/machinery/atmospherics/pipe/manifold/hidden{
@@ -583,7 +583,7 @@
 	},
 /obj/effect/map_helper/airlock/sensor/chamber_sensor,
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "Fb" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -591,13 +591,13 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/wall/rshull,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "Fp" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
 /turf/simulated/wall/rshull,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "Hb" = (
 /obj/machinery/shipsensors{
 	dir = 1
@@ -606,13 +606,13 @@
 	dir = 9
 	},
 /turf/simulated/floor/airless,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "Hu" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
 	dir = 1
 	},
 /turf/simulated/wall/rshull,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "Ib" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 4
@@ -635,7 +635,7 @@
 	},
 /obj/effect/map_helper/airlock/sensor/ext_sensor,
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "IY" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
@@ -648,7 +648,7 @@
 	name = "Blast Shield"
 	},
 /turf/simulated/floor/plating,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "JX" = (
 /obj/structure/handrail{
 	dir = 1
@@ -659,11 +659,11 @@
 	pixel_y = -28
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "Kj" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
 /turf/simulated/wall/rshull,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "KJ" = (
 /obj/structure/handrail{
 	dir = 1
@@ -682,7 +682,7 @@
 	specialfunctions = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "KM" = (
 /turf/template_noop,
 /area/template_noop)
@@ -698,7 +698,7 @@
 	name = "Blast Shield"
 	},
 /turf/simulated/floor/plating,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "LM" = (
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 8
@@ -716,7 +716,7 @@
 	pixel_y = -2
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "Ms" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 4
@@ -731,7 +731,7 @@
 	locked = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "Oc" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -748,7 +748,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "PO" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -761,14 +761,14 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "Qn" = (
 /obj/structure/bed/chair/shuttle{
 	dir = 1
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "QG" = (
 /obj/structure/cable/green{
 	d2 = 4;
@@ -781,11 +781,11 @@
 	id_tag = "sdfc_pd"
 	},
 /turf/simulated/floor/airless,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "Rb" = (
-/obj/machinery/computer/shuttle_control/explore/sdf_corvette,
+/obj/machinery/computer/shuttle_control/explore/sdf_corvette2,
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "RW" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
@@ -798,7 +798,7 @@
 	nitrogen = 0;
 	oxygen = 0
 	},
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "Tf" = (
 /obj/structure/cable/green{
 	d2 = 8;
@@ -813,7 +813,7 @@
 	department = "Corvette"
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "TK" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 1
@@ -828,10 +828,10 @@
 	anchored = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "UB" = (
 /turf/simulated/wall/rshull,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "VN" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -841,13 +841,13 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "Wf" = (
 /obj/machinery/atmospherics/unary/engine{
 	dir = 1
 	},
 /turf/simulated/shuttle/plating/airless/carry,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "Wy" = (
 /obj/structure/cable/green{
 	d2 = 8;
@@ -860,7 +860,7 @@
 	id_tag = "sdfc_pd"
 	},
 /turf/simulated/floor/airless,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "WA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 4
@@ -870,7 +870,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 "WR" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
@@ -883,7 +883,7 @@
 	pixel_x = -30
 	},
 /turf/simulated/floor/airless,
-/area/shuttle/sdf_corvette)
+/area/shuttle/sdf_corvette2)
 
 (1,1,1) = {"
 KM

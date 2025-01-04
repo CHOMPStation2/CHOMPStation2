@@ -8,7 +8,8 @@
 	group = "Hardsuits"
 
 /datum/supply_pack/hardsuits/eva_rig
-	name = "eva hardsuit (empty)"
+	name = "EVA hardsuit (empty)"
+	desc = "An EVA hardsuit with no components. Requires Mining, EVA, or Pilot's access."
 	contains = list(
 			/obj/item/rig/eva = 1
 			)
@@ -23,6 +24,7 @@
 
 /datum/supply_pack/hardsuits/mining_rig
 	name = "industrial hardsuit (empty)"
+	desc = "A standard mining hardsuit with no components. Requires Mining or EVA access."
 	contains = list(
 			/obj/item/rig/industrial = 1
 			)
@@ -35,6 +37,7 @@
 
 /datum/supply_pack/hardsuits/medical_rig
 	name = "medical hardsuit (empty)"
+	desc = "A medical hardsuit with no components. Requires Medical access."
 	contains = list(
 			/obj/item/rig/medical = 1
 			)
@@ -45,6 +48,7 @@
 
 /datum/supply_pack/hardsuits/security_rig
 	name = "hazard hardsuit (empty)"
+	desc = "A hazardous environment combat hardsuit with no components. Requires Armory access."
 	contains = list(
 			/obj/item/rig/hazard = 1
 			)
@@ -55,6 +59,7 @@
 
 /datum/supply_pack/hardsuits/science_rig
 	name = "ami hardsuit (empty)"
+	desc = "An advanced Materials hardsuit, with no components. Requires Research Director authorization."
 	contains = list(
 			/obj/item/rig/hazmat = 1
 			)
@@ -65,6 +70,7 @@
 
 /datum/supply_pack/hardsuits/ce_rig
 	name = "advanced hardsuit (empty)"
+	desc = "An advanced Engineering hardsuit, with no components. Requires Chief Engineer authorization."
 	contains = list(
 			/obj/item/rig/ce = 1
 			)
@@ -76,8 +82,9 @@
 // CHOMPStation EDIT Start: Change Commonwealth to Solgov
 /datum/supply_pack/misc/solgov_medical_rig
 	name = "solgov medical hardsuit (loaded)"
+	desc = "A fully-equipped Commonwealth of Sol-Procyon Medical hardsuit. Requires Medical access."
 	contains = list(
-			/obj/item/rig/baymed = 1
+			/obj/item/rig/baymed/equipped = 1 // CHOMPEdit
 			)
 	cost = 250
 	containertype = /obj/structure/closet/crate/secure/gear
@@ -86,6 +93,7 @@
 
 /datum/supply_pack/misc/solgov_engineering_rig
 	name = "solgov engineering hardsuit (loaded)"
+	desc = "A fully-equipped Commonwealth of Sol-Procyon Engineering hardsuit. Requires Engineering access."
 	contains = list(
 			/obj/item/rig/bayeng = 1
 			)
@@ -98,6 +106,7 @@
 
 /datum/supply_pack/hardsuits/breacher_rig
 	name = "unathi breacher hardsuit (empty)"
+	desc = "A Hegemony \'Breacher\' combat hardsuit. Requires Armory access, and can only be worn by unathi."
 	contains = list(
 			/obj/item/rig/breacher = 1
 			)
@@ -108,6 +117,7 @@
 
 /datum/supply_pack/hardsuits/zero_rig
 	name = "null hardsuit (jets)"
+	desc = "A low-profile hardsuit with pre-installed maneuvering jets."
 	contains = list(
 			/obj/item/rig/zero = 1
 			)

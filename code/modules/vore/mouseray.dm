@@ -279,6 +279,7 @@
 /mob/living/proc/handle_tf_holder()
 	if(!tf_mob_holder)
 		return
+	if(tf_mob_holder.loc != src) return //CHOMPAdd - Prevent bodyswapped creatures having their life linked
 	if(stat != tf_mob_holder.stat)
 		if(stat == DEAD)
 			tf_mob_holder.death(FALSE, null)

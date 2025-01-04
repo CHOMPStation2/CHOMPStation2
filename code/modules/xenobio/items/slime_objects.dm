@@ -145,7 +145,7 @@
 	light_system = STATIC_LIGHT
 
 /obj/item/flashlight/slime/Initialize()
-	.=..()
+	. = ..()
 	set_light(light_range, light_power, light_color)
 
 /obj/item/flashlight/slime/update_brightness()
@@ -167,10 +167,10 @@
 	light_range = 2
 	w_class = ITEMSIZE_TINY
 
-/obj/item/slime_irradiator/New()
+/obj/item/slime_irradiator/Initialize()
+	. = ..()
 	START_PROCESSING(SSobj, src)
 	set_light(light_range, light_power, light_color)
-	return ..()
 
 /obj/item/slime_irradiator/process()
 	SSradiation.radiate(src, 5)

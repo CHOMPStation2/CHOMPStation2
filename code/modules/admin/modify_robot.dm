@@ -45,13 +45,13 @@
 
 /datum/eventkit/modify_robot/ui_assets(mob/user)
 	return list(
-		get_asset_datum(/datum/asset/spritesheet/robot_icons)
+		get_asset_datum(/datum/asset/spritesheet_batched/robot_icons)
 	)
 
 /datum/eventkit/modify_robot/tgui_data(mob/user)
 	. = list()
 	// Target section for general data
-	var/datum/asset/spritesheet/robot_icons/spritesheet = get_asset_datum(/datum/asset/spritesheet/robot_icons)
+	var/datum/asset/spritesheet_batched/robot_icons/spritesheet = get_asset_datum(/datum/asset/spritesheet_batched/robot_icons)
 
 	if(target)
 		.["target"] = list()
@@ -338,7 +338,7 @@
 			return TRUE
 		if("add_channel")
 			var/selected_radio_channel = params["channel"]
-			if(selected_radio_channel == CHANNEL_SPECIAL_OPS)
+			if(selected_radio_channel == CHANNEL_SPECIAL_OPS || selected_radio_channel == CHANNEL_RESPONSE_TEAM)
 				target.radio.centComm = 1
 			if(selected_radio_channel == CHANNEL_RAIDER)
 				qdel(target.radio.keyslot)
@@ -354,7 +354,7 @@
 			return TRUE
 		if("rem_channel")
 			var/selected_radio_channel = params["channel"]
-			if(selected_radio_channel == CHANNEL_SPECIAL_OPS)
+			if((selected_radio_channel == CHANNEL_SPECIAL_OPS || selected_radio_channel == CHANNEL_RESPONSE_TEAM) && !(target.module.channels[CHANNEL_SPECIAL_OPS] || target.module.channels[CHANNEL_RESPONSE_TEAM]))
 				target.radio.centComm = 0
 			target.module.channels -= selected_radio_channel
 			if((selected_radio_channel == CHANNEL_MERCENARY || selected_radio_channel == CHANNEL_RAIDER) && !(target.module.channels[CHANNEL_RAIDER] || target.module.channels[CHANNEL_MERCENARY]))
@@ -589,7 +589,7 @@
 		target_items += list(list("name" = item.name, "ref" = "\ref[item]", "icon" = icon2html(item, user, sourceonly=TRUE), "desc" = item.desc))
 	return target_items
 
-/datum/eventkit/modify_robot/proc/get_module_source(var/mob/user, var/datum/asset/spritesheet/robot_icons/spritesheet)
+/datum/eventkit/modify_robot/proc/get_module_source(var/mob/user, var/datum/asset/spritesheet_batched/robot_icons/spritesheet)
 	var/list/source_list = list()
 	source_list["model"] = source.module
 	source_list["sprite"] = sanitize_css_class_name("[source.sprite_datum.type]")
