@@ -406,7 +406,7 @@
 	matter = list(MAT_STEEL = 4000, MAT_PLASTEEL = 1000) //CHOMPedit Makes them a bit more expensive
 
 /obj/item/ammo_casing/a145/spent/Initialize()
-	..()
+	. = ..()
 	expend()
 
 /*

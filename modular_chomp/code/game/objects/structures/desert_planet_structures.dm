@@ -29,7 +29,7 @@
 		return
 	if(istype(AM, /mob/living))
 		var/mob/living/M = AM
-		if(M.m_intent == "run" && prob(5))
+		if(M.m_intent == I_RUN && prob(5))
 			M.Weaken(2)
 			to_chat(M, "You trip over the [src]!")
 

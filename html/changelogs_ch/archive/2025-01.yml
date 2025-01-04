@@ -29,3 +29,14 @@
   - rscadd: Some Event related turfs
   - rscadd: Event mob related sounds
   - rscadd: A bunch of related icons
+2025-01-04:
+  CHOMPStation2StaffMirrorBot:
+  - qol: added consolidated versions of the campbell tattoos and modular longsock
+      markings
+  - rscadd: icon states for the black half-mask on vulp-base icons
+  FluffMedic:
+  - bugfix: fixed t-12 and  SR-25 Carbine ammo
+  Kashargul:
+  - bugfix: bonfire examine
+  whooshboom:
+  - qol: Reverts marish to audible condition. Happy marring!

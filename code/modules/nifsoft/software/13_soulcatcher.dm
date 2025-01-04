@@ -486,7 +486,7 @@
 		var/obj/belly/B = L.loc
 		var/mob/living/owner = B.owner
 		var/obj/soulgem/gem = owner.soulgem
-		if(owner && gem.flag_check(SOULGEM_ACTIVE | NIF_SC_CATCHING_OTHERS, TRUE))
+		if(gem && gem.flag_check(SOULGEM_ACTIVE | NIF_SC_CATCHING_OTHERS, TRUE))
 			var/to_use_custom_name = null
 			if(isanimal(L))
 				to_use_custom_name = L.name
