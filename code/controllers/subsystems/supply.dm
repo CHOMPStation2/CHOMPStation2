@@ -127,6 +127,22 @@ SUBSYSTEM_DEF(supply)
 						EC.contents[EC.contents.len]["value"] = salvagedStuff.worth
 					// CHOMPAdd End
 
+				// CHOMPedit begin - Selling engineered organs
+					if(istype(A, /obj/item/organ/internal))
+						var/obj/item/organ/internal/organ_stuff = A
+						if(!istype(CR,/obj/structure/closet/crate/freezer))
+							EC.contents = list(
+								"error" = "Error: Product was improperly packaged. Send contents in freezer crate to preserve contents for transport."
+							)
+						else if(organ_stuff.health != initial(organ_stuff.health) )
+							EC.contents = list(
+								"error" = "Error: Product was damaged on arrival."
+							)
+						else
+							EC.contents[EC.contents.len]["value"] = organ_stuff.supply_conversion_value
+							EC.value += EC.contents[EC.contents.len]["value"]
+					// CHOMPedit end
+
 
 			// Make a log of it, but it wasn't shipped properly, and so isn't worth anything
 			else

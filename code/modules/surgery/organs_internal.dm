@@ -395,6 +395,18 @@
 		user.balloon_alert(user, "There is a [o_a][O.organ_tag] already!") // CHOMPEdit
 		return SURGERY_FAILURE
 
+	// CHOMPadd begin - Malignant organs
+	if(O && istype(O,/obj/item/organ/internal/malignant))
+		// malignant organs use a whitelist for allowed locations, and may be placed anywhere in it, not just one organ slot!
+		var/obj/item/organ/internal/malignant/ML = O
+		if(affected.organ_tag in ML.surgeryAllowedSites)
+			ML.parent_organ = affected.organ_tag
+			organ_compatible = 1
+		else
+			to_chat(user, "<span class='warning'>\The [O] won't fit in \the [affected.name].</span>")
+			return SURGERY_FAILURE
+	// CHOMPadd end
+
 	if(O && affected.organ_tag == O.parent_organ)
 		organ_compatible = 1
 
