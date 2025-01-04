@@ -9,7 +9,7 @@
 	if(istype(mover, /obj/item/projectile))
 		var/obj/item/projectile/P = mover
 		return !P.can_hit_target(src, P.permutated, src == P.original, TRUE)
-	return (!mover.density || !density || lying)
+	return (!mover.density || !density || lying || is_incorporeal()) // CHOMPEdit
 
 /mob/CanZASPass(turf/T, is_zone)
 	return ATMOS_PASS_YES
@@ -48,7 +48,7 @@ default behaviour is:
 		return 0
 
 /mob/living/Bump(atom/movable/AM)
-	if(now_pushing || !loc || buckled == AM)
+	if(now_pushing || !loc || buckled == AM || AM.is_incorporeal())
 		return
 	now_pushing = 1
 	if (istype(AM, /mob/living))

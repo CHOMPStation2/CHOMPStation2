@@ -390,6 +390,10 @@ emp_act
 
 //this proc handles being hit by a thrown atom
 /mob/living/carbon/human/hitby(atom/movable/AM as mob|obj,var/speed = THROWFORCE_SPEED_DIVISOR)
+	// CHOMPADD Start
+	if(src.is_incorporeal())
+		return
+	// CHOMPAdd End
 //	if(buckled && buckled == AM)
 //		return // Don't get hit by the thing we're buckled to.
 
@@ -438,9 +442,6 @@ emp_act
 						visible_message(span_warning("[src] catches [O]!"))
 						throw_mode_off()
 						return
-
-		if(src.is_incorporeal()) // CHOMPADD - Don't hit what's not there.
-			return
 
 		var/dtype = O.damtype
 		var/throw_damage = O.throwforce*(speed/THROWFORCE_SPEED_DIVISOR)
