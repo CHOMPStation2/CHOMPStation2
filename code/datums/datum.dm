@@ -89,7 +89,11 @@
  */
 /datum/proc/Destroy(force=FALSE)
 	SHOULD_CALL_PARENT(TRUE)
+<<<<<<< HEAD
 	// SHOULD_NOT_SLEEP(TRUE) FIXME: Causing some big issues still
+=======
+	//SHOULD_NOT_SLEEP(TRUE)
+>>>>>>> ee8fe38a8a (Enables SHOULD_CALL_PARENT for datum Destroy proc (#16828))
 	tag = null
 	weak_reference = null //ensure prompt GCing of weakref.
 
