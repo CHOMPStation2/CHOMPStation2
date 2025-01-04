@@ -35,11 +35,7 @@ export async function processAutoChangelog({ github, context }) {
 	github.rest.repos.createOrUpdateFileContents({
 		owner: context.repo.owner,
 		repo: context.repo.repo,
-<<<<<<< HEAD
-		path: `html/changelogs_ch/AutoChangeLog-pr-${context.payload.pull_request.number}.yml`,
-=======
-		path: `html/changelogs/AutoChangeLog-pr-${context.payload.pull_request.number}.yml`,
->>>>>>> 35467d64eb (Added missing CI scripts (#16832))
+		path: `html/changelogs_ch/AutoChangeLog-pr-${context.payload.pull_request.number}.yml`, // CHOMPEdit
 		message: `Automatic changelog for PR #${context.payload.pull_request.number} [ci skip]`,
 		content: Buffer.from(yml).toString("base64"),
 	});
