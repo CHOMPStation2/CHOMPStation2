@@ -246,3 +246,19 @@
 		node2_connect = turn(dir, -90)
 		node3_connect = dir
 	return list(node1_connect, node2_connect, node3_connect)
+
+//CHOMPEdit Start - Keybinds for EVEEERYTHING
+/obj/machinery/atmospherics/trinary/CtrlClick(mob/user)
+	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
+	if(allowed(user))
+		update_use_power(!use_power)
+		update_icon()
+		add_fingerprint(user)
+		if(use_power)
+			to_chat(user, span_notice("You toggle the [name] on."))
+		else
+			to_chat(user, span_notice("You toggle the [name] off."))
+
+	else
+		to_chat(user, span_warning("Access denied."))
+//CHOMPEdit End
