@@ -1,0 +1,5 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - bugfix: "Drones now use robotact"
+  - bugfix: "A few byond:// hrefs for 516"
