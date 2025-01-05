@@ -49,9 +49,17 @@
 					"Vehicle",
 					"Rigsuit",
 					"Phazon",
+<<<<<<< HEAD
 					//"Gopher", // VOREStation Add //CHOMPedit commented micromech stuff, because fuck this trash
 					//"Polecat", // VOREStation Add //CHOMPedit commented micromech stuff, because fuck this trash
 					//"Weasel", // VOREStation Add //CHOMPedit commented micromech stuff, because fuck this trash
+=======
+					"Pinnace",
+					"Baron",
+					"Gopher", // VOREStation Add
+					"Polecat", // VOREStation Add
+					"Weasel", // VOREStation Add
+>>>>>>> c556381b57 (Improved/Buildable Fighter Exosuits (#16797))
 					"Exosuit Equipment",
 					"Exosuit Internals",
 					"Exosuit Ammunition",
