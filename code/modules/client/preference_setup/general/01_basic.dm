@@ -62,13 +62,8 @@
 	. += "<br>"
 	. += span_bold("Biological Sex:") + " <a href='byond://?src=\ref[src];bio_gender=1'><b>[gender2text(pref.biological_gender)]</b></a><br>"
 	. += span_bold("Pronouns:") + " <a href='byond://?src=\ref[src];id_gender=1'><b>[gender2text(pref.identifying_gender)]</b></a><br>"
-<<<<<<< HEAD
-	. += span_bold("Age:") + " <a href='byond://?src=\ref[src];age=1'>[pref.age]</a> <b>Birthday:</b> <a href='byond://?src=\ref[src];bday_month=1'>[pref.bday_month]</a><b>/</b><a href='byond://?src=\ref[src];bday_day=1'>[pref.bday_day]</a> - <b>Announce?:</b> <a href='byond://?src=\ref[src];bday_announce=1'>[pref.bday_announce ? "Yes" : "Disabled"]</a><br>" //ChompEDIT - DISABLE the announcement
-	. += span_bold("Spawn Point") + ": <a href='byond://?src=\ref[src];spawnpoint=1'>[pref.spawnpoint]</a><br>"
-=======
-	. += span_bold("Age:") + " <a href='byond://?src=\ref[src];age=1'>[pref.read_preference(/datum/preference/numeric/human/age)]</a> <b>Birthday:</b> <a href='byond://?src=\ref[src];bday_month=1'>[pref.read_preference(/datum/preference/numeric/human/bday_month)]</a><b>/</b><a href='byond://?src=\ref[src];bday_day=1'>[pref.read_preference(/datum/preference/numeric/human/bday_day)]</a> - <b>Announce?:</b> <a href='byond://?src=\ref[src];bday_announce=1'>[pref.read_preference(/datum/preference/toggle/human/bday_announce) ? "Yes" : "No"]</a><br>"
+	. += span_bold("Age:") + " <a href='byond://?src=\ref[src];age=1'>[pref.read_preference(/datum/preference/numeric/human/age)]</a> <b>Birthday:</b> <a href='byond://?src=\ref[src];bday_month=1'>[pref.read_preference(/datum/preference/numeric/human/bday_month)]</a><b>/</b><a href='byond://?src=\ref[src];bday_day=1'>[pref.read_preference(/datum/preference/numeric/human/bday_day)]</a> - <b>Announce?:</b> <a href='byond://?src=\ref[src];bday_announce=1'>[pref.read_preference(/datum/preference/toggle/human/bday_announce) ? "Yes" : "Disabled"]</a><br>" //ChompEDIT - DISABLE the announcement
 	. += span_bold("Spawn Point:") + " <a href='byond://?src=\ref[src];spawnpoint=1'>[pref.read_preference(/datum/preference/choiced/human/spawnpoint)]</a><br>"
->>>>>>> b57023cd11 (Convert preferences to /tg/ preferences (#16449))
 	if(CONFIG_GET(flag/allow_metadata))
 		//CHOMPEdit Start
 		. += span_bold("OOC Notes: <a href='byond://?src=\ref[src];edit_ooc_notes=1'>Edit</a><a href='byond://?src=\ref[src];edit_ooc_note_favs=1'>Favs</a><a href='byond://?src=\ref[src];edit_ooc_note_likes=1'>Likes</a><a href='byond://?src=\ref[src];edit_ooc_note_maybes=1'>Maybes</a><a href='byond://?src=\ref[src];edit_ooc_note_dislikes=1'>Dislikes</a>") + "<br>"
@@ -182,11 +177,7 @@
 		return TOPIC_REFRESH
 
 	else if(href_list["bday_announce"])
-<<<<<<< HEAD
-		pref.bday_announce = 0 //ChompEDIT - Disable this
-=======
-		pref.update_preference_by_type(/datum/preference/toggle/human/bday_announce, !pref.read_preference(/datum/preference/toggle/human/bday_announce))
->>>>>>> b57023cd11 (Convert preferences to /tg/ preferences (#16449))
+		pref.update_preference_by_type(/datum/preference/toggle/human/bday_announce, /*!pref.read_preference(/datum/preference/toggle/human/bday_announce)*/ FALSE) // CHOMPEdit
 		return TOPIC_REFRESH
 
 	else if(href_list["spawnpoint"])
@@ -199,37 +190,28 @@
 		return TOPIC_REFRESH
 
 	else if(href_list["edit_ooc_notes"])
-<<<<<<< HEAD
-		var/new_metadata = strip_html_simple(tgui_input_text(user, "Enter any information you'd like others to see, such as Roleplay-preferences. This will not be saved permanently unless you click save in the Character Setup panel!", "Game Preference" , html_decode(pref.metadata), multiline = TRUE,  prevent_enter = TRUE)) //ChompEDIT - usr removal
-=======
-		var/new_metadata = strip_html_simple(tgui_input_text(usr, "Enter any information you'd like others to see, such as Roleplay-preferences. This will not be saved permanently unless you click save in the Character Setup panel!", "Game Preference" , html_decode(pref.read_preference(/datum/preference/text/living/ooc_notes)), multiline = TRUE,  prevent_enter = TRUE))
->>>>>>> b57023cd11 (Convert preferences to /tg/ preferences (#16449))
+		var/new_metadata = strip_html_simple(tgui_input_text(user, "Enter any information you'd like others to see, such as Roleplay-preferences. This will not be saved permanently unless you click save in the Character Setup panel!", "Game Preference" , html_decode(pref.read_preference(/datum/preference/text/living/ooc_notes)), multiline = TRUE,  prevent_enter = TRUE)) //ChompEDIT - usr removal
 		if(new_metadata && CanUseTopic(user))
 			pref.update_preference_by_type(/datum/preference/text/living/ooc_notes, new_metadata)
 	else if(href_list["edit_ooc_note_likes"])
-<<<<<<< HEAD
-		var/new_metadata = strip_html_simple(tgui_input_text(user, "Enter any information you'd like others to see relating to your LIKED roleplay preferences. This will not be saved permanently unless you click save in the Character Setup panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(pref.metadata_likes), multiline = TRUE,  prevent_enter = TRUE)) //ChompEDIT - usr removal
-=======
-		var/new_metadata = strip_html_simple(tgui_input_text(usr, "Enter any information you'd like others to see relating to your LIKED roleplay preferences. This will not be saved permanently unless you click save in the Character Setup panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(pref.read_preference(/datum/preference/text/living/ooc_notes_likes)), multiline = TRUE,  prevent_enter = TRUE))
->>>>>>> b57023cd11 (Convert preferences to /tg/ preferences (#16449))
+		var/new_metadata = strip_html_simple(tgui_input_text(user, "Enter any information you'd like others to see relating to your LIKED roleplay preferences. This will not be saved permanently unless you click save in the Character Setup panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(pref.read_preference(/datum/preference/text/living/ooc_notes_likes)), multiline = TRUE,  prevent_enter = TRUE)) //ChompEDIT - usr removal
 		if(new_metadata && CanUseTopic(user))
 			if(new_metadata == "!clear")
 				new_metadata = ""
 			pref.update_preference_by_type(/datum/preference/text/living/ooc_notes_likes, new_metadata)
 	else if(href_list["edit_ooc_note_dislikes"])
-<<<<<<< HEAD
-		var/new_metadata = strip_html_simple(tgui_input_text(user, "Enter any information you'd like others to see relating to your DISLIKED roleplay preferences. This will not be saved permanently unless you click save in the Character Setup panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(pref.metadata_dislikes), multiline = TRUE,  prevent_enter = TRUE)) //ChompEDIT - usr removal
+		var/new_metadata = strip_html_simple(tgui_input_text(user, "Enter any information you'd like others to see relating to your DISLIKED roleplay preferences. This will not be saved permanently unless you click save in the Character Setup panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(pref.read_preference(/datum/preference/text/living/ooc_notes_dislikes)), multiline = TRUE,  prevent_enter = TRUE)) //ChompEDIT - usr removal
 		if(new_metadata && CanUseTopic(user))
 			if(new_metadata == "!clear")
 				new_metadata = ""
-			pref.metadata_dislikes = new_metadata
+			pref.update_preference_by_type(/datum/preference/text/living/ooc_notes_dislikes, new_metadata)
 	//CHOMPEdit Start
 	else if(href_list["edit_ooc_note_favs"])
 		var/new_metadata = strip_html_simple(tgui_input_text(user, "Enter any information you'd like others to see relating to your FAVOURITE roleplay preferences. This will not be saved permanently unless you click save in the Character Setup panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(pref.metadata_favs), multiline = TRUE,  prevent_enter = TRUE)) //ChompEDIT - usr removal
 		if(new_metadata && CanUseTopic(user))
 			if(new_metadata == "!clear")
 				new_metadata = ""
-			pref.metadata_favs = new_metadata
+			pref.update_preference_by_type(/datum/preference/text/living/ooc_notes_favs, new_metadata)
 	else if(href_list["edit_ooc_note_maybes"])
 		var/new_metadata = strip_html_simple(tgui_input_text(user, "Enter any information you'd like others to see relating to your MAYBE roleplay preferences. This will not be saved permanently unless you click save in the Character Setup panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(pref.metadata_maybes), multiline = TRUE,  prevent_enter = TRUE)) //ChompEDIT - usr removal
 		if(new_metadata && CanUseTopic(user))
@@ -237,16 +219,9 @@
 				new_metadata = ""
 			pref.metadata_maybes = new_metadata
 	else if(href_list["edit_ooc_note_style"])
-		pref.matadata_ooc_style = !pref.matadata_ooc_style
+		pref.update_preference_by_type(/datum/preference/toggle/living/ooc_notes_style, !pref.read_preference(/datum/preference/toggle/living/ooc_notes_style))
 		return TOPIC_REFRESH
 	//CHOMPEdit End
-=======
-		var/new_metadata = strip_html_simple(tgui_input_text(usr, "Enter any information you'd like others to see relating to your DISLIKED roleplay preferences. This will not be saved permanently unless you click save in the Character Setup panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(pref.read_preference(/datum/preference/text/living/ooc_notes_dislikes)), multiline = TRUE,  prevent_enter = TRUE))
-		if(new_metadata && CanUseTopic(user))
-			if(new_metadata == "!clear")
-				new_metadata = ""
-			pref.update_preference_by_type(/datum/preference/text/living/ooc_notes_dislikes, new_metadata)
->>>>>>> b57023cd11 (Convert preferences to /tg/ preferences (#16449))
 	return ..()
 
 /datum/category_item/player_setup_item/general/basic/proc/get_genders()
