@@ -1,0 +1,5 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - rscadd: "Fighter Exosuits now have landing gear."
+  - rscadd: "Science can now build and assemble the Pinnace and Baron Fighter Exosuits."
