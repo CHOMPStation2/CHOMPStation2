@@ -101,12 +101,8 @@
 			dirtoverlay.alpha = min((dirt - 50) * 5, 255)
 
 /turf/simulated/Entered(atom/A, atom/OL)
-<<<<<<< HEAD
-	if (istype(A,/mob/living))
-		var/dirtslip = FALSE	//CHOMPEdit
-=======
 	if (isliving(A))
->>>>>>> 59b9802628 (some istype to macros (#16826))
+		var/dirtslip = FALSE	//CHOMPEdit
 		var/mob/living/M = A
 		if(M.lying || M.flying || M.is_incorporeal()) //VOREStation Edit - CHOMPADD - Don't forget the phased ones.
 			return ..()

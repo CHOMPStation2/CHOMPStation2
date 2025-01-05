@@ -24,18 +24,13 @@ GLOBAL_LIST_BOILERPLATE(all_portals, /obj/effect/portal)
 /obj/effect/portal/Crossed(atom/movable/AM as mob|obj)
 	// CHOMPEdit Start - Dephase kins on crossed
 	if(AM.is_incorporeal())
-<<<<<<< HEAD
 		if(event)
 			if(iscarbon(AM))
 				var/mob/living/carbon/human/H = AM
 				H.attack_dephase()
 		else return
 	// CHOMPEdit End
-	if(istype(AM,/mob) && !(istype(AM,/mob/living)))
-=======
-		return
 	if(ismob(AM) && !(isliving(AM)))
->>>>>>> 59b9802628 (some istype to macros (#16826))
 		return	//do not send ghosts, zshadows, ai eyes, etc
 	spawn(0)
 		src.teleport(AM)

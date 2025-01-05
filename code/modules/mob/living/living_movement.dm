@@ -158,15 +158,10 @@ default behaviour is:
 		// Handle grabbing, stomping, and such of micros!
 		if(step_mechanics_pref && tmob.step_mechanics_pref)
 			if(handle_micro_bump_other(tmob)) return
-<<<<<<< HEAD
 		else
 			if(handle_micro_bump_other(tmob,1)) return
 		// CHOMPSTATION edit end
-		if(istype(tmob, /mob/living/carbon/human) && (FAT in tmob.mutations))
-=======
-		// VOREStation Edit - End
 		if(ishuman(tmob) && (FAT in tmob.mutations))
->>>>>>> 59b9802628 (some istype to macros (#16826))
 			if(prob(40) && !(FAT in src.mutations))
 				to_chat(src, span_danger("You fail to push [tmob]'s fat ass out of the way."))
 				now_pushing = 0

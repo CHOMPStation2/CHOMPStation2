@@ -113,23 +113,8 @@
 	for(var/mob/M in player_list)
 		if(zlevels && !(M.z in zlevels))
 			continue
-<<<<<<< HEAD
-		if(!istype(M,/mob/new_player) && !isdeaf(M))
-			M << message_sound
-=======
 		if(!isnewplayer(M) && !isdeaf(M))
-			M << 'sound/AI/preamble.ogg'
-
-	if(!message_sound)
-		return
-
-	spawn(22) // based on length of preamble.ogg + arbitrary delay
-		for(var/mob/M in player_list)
-			if(zlevels && !(M.z in zlevels))
-				continue
-			if(!isnewplayer(M) && !isdeaf(M))
-				M << message_sound
->>>>>>> 59b9802628 (some istype to macros (#16826))
+			M << message_sound
 
 /datum/announcement/proc/Sound(var/message_sound, var/list/zlevels)
 	PlaySound(message_sound, zlevels)

@@ -17,19 +17,13 @@
 
 /mob/living/Bump(atom/movable/AM)
 	//. = ..()
-<<<<<<< HEAD
-	if(istype(AM, /mob/living))
+	if(isliving(AM))
 		// CHOMPEdit Start
 		var/mob/living/L = AM
 		if(!L.is_incorporeal())
 			if(buckled != AM && (((confused || is_blind()) && stat == CONSCIOUS && prob(50) && m_intent==I_RUN) || flying && flight_vore))
 				AM.stumble_into(src)
 		// CHOMPEdit End
-=======
-	if(isliving(AM))
-		if(buckled != AM && (((confused || is_blind()) && stat == CONSCIOUS && prob(50) && m_intent==I_RUN) || flying && flight_vore))
-			AM.stumble_into(src)
->>>>>>> 59b9802628 (some istype to macros (#16826))
 	return ..()
 // Because flips toggle density
 /mob/living/Crossed(var/atom/movable/AM)

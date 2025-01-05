@@ -279,7 +279,6 @@
 	P.vore_sprite_color = src.vore_sprite_color // CHOMPEdit
 	P.allow_mind_transfer = src.allow_mind_transfer
 
-<<<<<<< HEAD
 	//CHOMP stuff Start
 	P.phase_vore = src.phase_vore
 	P.noisy_full = src.noisy_full
@@ -300,9 +299,6 @@
 	P.belly_rub_target = src.belly_rub_target
 	P.soulcatcher_pref_flags = src.soulcatcher_pref_flags
 	//CHOMP Stuff End
-=======
-	P.vore_sprite_color = ishuman(src) ? src:vore_sprite_color : null
->>>>>>> 59b9802628 (some istype to macros (#16826))
 
 	var/list/serialized = list()
 	for(var/obj/belly/B as anything in src.vore_organs)
