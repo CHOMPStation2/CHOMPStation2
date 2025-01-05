@@ -931,6 +931,10 @@
 
 
 /mob/living/proc/feed_grabbed_to_self_falling_nom(var/mob/living/user, var/mob/living/prey)
+	// CHOMPAdd Start
+	if(user.is_incorporeal())
+		return FALSE
+	// CHOMPAdd End
 	var/belly = user.vore_selected
 	return perform_the_nom(user, prey, user, belly, delay = 1) //1/10th of a second is probably fine.
 

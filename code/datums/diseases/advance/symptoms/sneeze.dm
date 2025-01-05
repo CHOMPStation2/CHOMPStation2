@@ -109,7 +109,7 @@ Bonus
 
 	var/mob/living/carbon/human/unlucky = locate() in place
 
-	if(unlucky)
+	if(unlucky && !unlucky.is_incorporeal()) // CHOMPEdit
 		if(unlucky.can_be_drop_pred && H.can_be_drop_prey && H.devourable)
 			place = unlucky.vore_selected
 		else if(unlucky.devourable && unlucky.can_be_drop_prey && H.can_be_drop_pred)
