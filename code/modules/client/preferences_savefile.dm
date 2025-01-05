@@ -117,16 +117,19 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 
 // General preferences, have to be preloaded
 /datum/preferences/proc/load_early_prefs()
+	lastchangelog	= savefile.get_entry("lastchangelog", lastchangelog) // CHOMPAdd
 	default_slot	= savefile.get_entry("default_slot", default_slot)
 	lastnews		= savefile.get_entry("lastnews", lastnews)
 	lastlorenews	= savefile.get_entry("lastlorenews", lastlorenews)
 
 /datum/preferences/proc/sanitize_early_prefs()
+	lastchangelog	= sanitize_text(lastchangelog, initial(lastchangelog)) // CHOMPAdd
 	default_slot 	= sanitize_integer(default_slot, 1, CONFIG_GET(number/character_slots), initial(default_slot))
 	lastnews		= sanitize_text(lastnews, initial(lastnews))
 	lastlorenews	= sanitize_text(lastlorenews, initial(lastlorenews))
 
 /datum/preferences/proc/save_early_prefs()
+	savefile.set_entry("lastchangelog",	lastchangelog) // CHOMPAdd
 	savefile.set_entry("default_slot",	default_slot)
 	savefile.set_entry("lastnews",		lastnews)
 	savefile.set_entry("lastlorenews",	lastlorenews)

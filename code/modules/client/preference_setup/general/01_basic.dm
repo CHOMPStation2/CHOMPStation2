@@ -15,46 +15,12 @@
 	pref.nickname						= save_data["nickname"]
 	pref.biological_gender				= save_data["gender"]
 	pref.identifying_gender				= save_data["id_gender"]
-<<<<<<< HEAD
-	pref.age							= save_data["age"]
-	pref.bday_month						= save_data["bday_month"]
-	pref.bday_day						= save_data["bday_day"]
-	pref.last_birthday_notification		= save_data["last_bday_note"]
-	pref.bday_announce					= save_data["bday_announce"]
-	pref.spawnpoint						= save_data["spawnpoint"]
-	pref.metadata						= save_data["OOC_Notes"]
-	pref.metadata_likes					= save_data["OOC_Notes_Likes"]
-	pref.metadata_dislikes				= save_data["OOC_Notes_Disikes"]
-	//CHOMPAdd Start
-	pref.metadata_maybes				= save_data["OOC_Notes_Maybes"]
-	pref.metadata_favs					= save_data["OOC_Notes_Favs"]
-	pref.matadata_ooc_style				= save_data["OOC_Notes_System"]
-	//CHOMPAdd End
-=======
->>>>>>> b57023cd11 (Convert preferences to /tg/ preferences (#16449))
 
 /datum/category_item/player_setup_item/general/basic/save_character(list/save_data)
 	save_data["real_name"]				= pref.real_name
 	save_data["nickname"]				= pref.nickname
 	save_data["gender"]					= pref.biological_gender
 	save_data["id_gender"]				= pref.identifying_gender
-<<<<<<< HEAD
-	save_data["age"]					= pref.age
-	save_data["bday_month"]				= pref.bday_month
-	save_data["bday_day"]				= pref.bday_day
-	save_data["last_bday_note"]			= pref.last_birthday_notification
-	save_data["bday_announce"]			= pref.bday_announce
-	save_data["spawnpoint"]				= pref.spawnpoint
-	save_data["OOC_Notes"]				= pref.metadata
-	save_data["OOC_Notes_Likes"]		= pref.metadata_likes
-	save_data["OOC_Notes_Disikes"]		= pref.metadata_dislikes
-	//CHOMPAdd Start
-	save_data["OOC_Notes_Maybes"]		= pref.metadata_maybes
-	save_data["OOC_Notes_Favs"]			= pref.metadata_favs
-	save_data["OOC_Notes_System"]		= pref.matadata_ooc_style
-	//CHOMPAdd End
-=======
->>>>>>> b57023cd11 (Convert preferences to /tg/ preferences (#16449))
 
 /datum/category_item/player_setup_item/general/basic/sanitize_character()
 	pref.biological_gender  = sanitize_inlist(pref.biological_gender, get_genders(), pick(get_genders()))

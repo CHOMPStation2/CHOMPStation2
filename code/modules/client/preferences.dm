@@ -15,6 +15,7 @@ var/list/preferences_datums = list()
 	var/last_id
 
 	//game-preferences
+	var/lastchangelog = ""				//Saved changlog filesize to detect if there was a change // CHOMPAdd
 	var/be_special = 0					//Special role selection
 
 	//character preferences
@@ -605,20 +606,14 @@ var/list/preferences_datums = list()
 		character.flavor_texts["legs"]		= flavor_texts["legs"]
 		character.flavor_texts["feet"]		= flavor_texts["feet"]
 	if (copy_ooc_notes)
-<<<<<<< HEAD
-		character.ooc_notes 				= metadata
-		character.ooc_notes_dislikes 		= metadata_dislikes
-		character.ooc_notes_likes 			= metadata_likes
-		// CHOMPAdd Start
-		character.ooc_notes_favs 			= metadata_favs
-		character.ooc_notes_maybes 			= metadata_maybes
-		character.ooc_notes_style 			= matadata_ooc_style
-		// CHOMPAdd End
-=======
 		character.ooc_notes 				= read_preference(/datum/preference/text/living/ooc_notes)
 		character.ooc_notes_dislikes 		= read_preference(/datum/preference/text/living/ooc_notes_dislikes)
 		character.ooc_notes_likes 			= read_preference(/datum/preference/text/living/ooc_notes_likes)
->>>>>>> b57023cd11 (Convert preferences to /tg/ preferences (#16449))
+		// CHOMPAdd Start
+		character.ooc_notes_favs 			= read_preference(/datum/preference/text/living/ooc_notes_favs)
+		character.ooc_notes_maybes 			= read_preference(/datum/preference/text/living/ooc_notes_maybes)
+		character.ooc_notes_style 			= read_preference(/datum/preference/toggle/living/ooc_notes_style)
+		// CHOMPAdd End
 
 	character.weight			= weight_vr
 	character.weight_gain		= weight_gain

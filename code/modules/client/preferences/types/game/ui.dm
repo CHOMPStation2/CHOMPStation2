@@ -21,8 +21,6 @@
 	if(before != client.tgui_panel.oldchat)
 		client.nuke_chat()
 
-<<<<<<< HEAD:code/modules/client/preferences/types/ui.dm
-=======
 /datum/preference/toggle/tgui_fancy
 	category = PREFERENCE_CATEGORY_GAME_PREFERENCES
 	savefile_key = "tgui_fancy"
@@ -53,7 +51,6 @@
 	default_value = FALSE
 	savefile_identifier = PREFERENCE_PLAYER
 
->>>>>>> b57023cd11 (Convert preferences to /tg/ preferences (#16449)):code/modules/client/preferences/types/game/ui.dm
 /datum/preference/toggle/tgui_say
 	category = PREFERENCE_CATEGORY_GAME_PREFERENCES
 	savefile_key = "TGUI_SAY"

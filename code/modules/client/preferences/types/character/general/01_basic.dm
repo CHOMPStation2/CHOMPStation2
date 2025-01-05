@@ -124,7 +124,7 @@
 	can_randomize = FALSE
 
 /datum/preference/toggle/living/ooc_notes_style/apply_to_living(mob/living/target, value)
-	// target.ooc_notes_style // Not available on virgo
+	target.ooc_notes_style // CHOMPEnable
 	return
 
 /datum/preference/text/living/ooc_notes_maybes
@@ -135,7 +135,7 @@
 	can_randomize = FALSE
 
 /datum/preference/text/living/ooc_notes_maybes/apply_to_living(mob/living/target, value)
-	// target.ooc_notes_maybes = value // Not available on virgo
+	target.ooc_notes_maybes = value // CHOMPEnable
 	return
 
 /datum/preference/text/living/ooc_notes_favs
@@ -146,7 +146,7 @@
 	can_randomize = FALSE
 
 /datum/preference/text/living/ooc_notes_favs/apply_to_living(mob/living/target, value)
-	// target.ooc_notes_favs = value // Not available on virgo
+	target.ooc_notes_favs = value // CHOMPEnable
 	return
 
 /datum/preference/toggle/human/name_is_always_random

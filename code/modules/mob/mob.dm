@@ -65,13 +65,8 @@
 	. = ..()
 	//return QDEL_HINT_HARDDEL_NOW Just keep track of mob references. They delete SO much faster now.
 
-<<<<<<< HEAD
 /mob/show_message(msg, type, alt, alt_type)//Message, type of message (1 or 2), alternative message, alt message type (1 or 2) //CHOMPEdit show_message() moved to /atom/movable
-	var/time = say_timestamp()
 
-=======
-/mob/proc/show_message(msg, type, alt, alt_type)//Message, type of message (1 or 2), alternative message, alt message type (1 or 2)
->>>>>>> b57023cd11 (Convert preferences to /tg/ preferences (#16449))
 	if(!client && !teleop)	return
 
 	if (type)
