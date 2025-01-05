@@ -1569,8 +1569,8 @@ End CHOMP Removal*/
 	icon_state = "ceph_d6[result]"
 
 /obj/item/dice/loaded/ceph/Initialize()
-	icon_state = "ceph_d6[rand(1,sides)]"
 	. = ..()
+	icon_state = "ceph_d6[rand(1,sides)]"
 
 
 //abc123: Mira Nesyne
