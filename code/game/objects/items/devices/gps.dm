@@ -93,12 +93,7 @@ GLOBAL_LIST_EMPTY(GPS_list)
 /obj/item/gps/Destroy()
 	STOP_PROCESSING(SSobj, src)
 	is_in_processing_list = FALSE
-<<<<<<< HEAD
-	GPS_list -= src
-=======
 	GLOB.GPS_list -= src
-	. = ..()
->>>>>>> ed54afbbf0 (fix an issue with multi borg module registering (#16835))
 	update_holder()
 	QDEL_NULL(compass)
 	. = ..()
