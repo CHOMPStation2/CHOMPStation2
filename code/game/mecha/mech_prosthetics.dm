@@ -49,6 +49,8 @@
 					"Vehicle",
 					"Rigsuit",
 					"Phazon",
+					"Pinnace",
+					"Baron",
 					//"Gopher", // VOREStation Add //CHOMPedit commented micromech stuff, because fuck this trash
 					//"Polecat", // VOREStation Add //CHOMPedit commented micromech stuff, because fuck this trash
 					//"Weasel", // VOREStation Add //CHOMPedit commented micromech stuff, because fuck this trash
