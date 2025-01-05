@@ -40,3 +40,13 @@
   - bugfix: bonfire examine
   whooshboom:
   - qol: Reverts marish to audible condition. Happy marring!
+2025-01-05:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Drones now use robotact
+  - bugfix: A few byond:// hrefs for 516
+  FluffMedic:
+  - bugfix: Vepr Cell fix
+  whooshboom:
+  - rscadd: Similar keybinds to the recent pump additions are now on most atmospheric
+      devices.
+  - bugfix: Fixes issue where using the keybind on a pump would not update the icon.

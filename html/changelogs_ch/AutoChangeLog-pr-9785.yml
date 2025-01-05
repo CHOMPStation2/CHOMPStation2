@@ -1,5 +1,0 @@
-author: "whooshboom"
-delete-after: True
-changes:
-  - rscadd: "Similar keybinds to the recent pump additions are now on most atmospheric devices."
-  - bugfix: "Fixes issue where using the keybind on a pump would not update the icon."
