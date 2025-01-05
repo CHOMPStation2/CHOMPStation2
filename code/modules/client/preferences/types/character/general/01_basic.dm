@@ -124,7 +124,7 @@
 	can_randomize = FALSE
 
 /datum/preference/toggle/living/ooc_notes_style/apply_to_living(mob/living/target, value)
-	target.ooc_notes_style // CHOMPEnable
+	target.ooc_notes_style = value // CHOMPEnable
 	return
 
 /datum/preference/text/living/ooc_notes_maybes
