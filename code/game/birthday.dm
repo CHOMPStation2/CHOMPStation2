@@ -18,7 +18,7 @@
 /mob/living/carbon/human/proc/birthday(var/birthday = 0)
 	var/msg
 	var/lastyear = read_preference(/datum/preference/numeric/human/last_bday_note)
-	write_preference_directly(/datum/preference/numeric/human/last_bday_note, world_time_year)	//We only want to ask once a year per character, this persists, update early in case of shenanigans
+	write_preference_directly(/datum/preference/numeric/human/last_bday_note, GLOB.world_time_year)	//We only want to ask once a year per character, this persists, update early in case of shenanigans // CHOMPEdit - Managed Globals
 	if(birthday)	//woo
 		msg = "Today is your birthday! Do you want to increase your character's listed age?"
 		/* //Chomp DISABLE - Absolutely not.

@@ -641,16 +641,6 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 			pref.update_preference_by_type(/datum/preference/color/human/grad_color, new_grad)
 			return TOPIC_REFRESH_UPDATE_PREVIEW
 
-	else if(href_list["grad_color"])
-		if(!has_flag(mob_species, HAS_HAIR_COLOR))
-			return TOPIC_NOACTION
-		var/new_grad = input(user, "Choose your character's secondary hair color:", "Character Preference", rgb(pref.r_grad, pref.g_grad, pref.b_grad)) as color|null
-		if(new_grad && has_flag(mob_species, HAS_HAIR_COLOR) && CanUseTopic(user))
-			pref.r_grad = hex2num(copytext(new_grad, 2, 4))
-			pref.g_grad = hex2num(copytext(new_grad, 4, 6))
-			pref.b_grad = hex2num(copytext(new_grad, 6, 8))
-			return TOPIC_REFRESH_UPDATE_PREVIEW
-
 	else if(href_list["hair_style"])
 		var/list/valid_hairstyles = pref.get_valid_hairstyles()
 
