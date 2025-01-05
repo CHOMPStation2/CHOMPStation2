@@ -863,9 +863,7 @@ CIRCUITS BELOW
 	req_tech = list(TECH_MATERIAL = 2)
 	build_path = /obj/item/circuitboard/recycler_stamper
 	sort_string = "OAABE"
-<<<<<<< HEAD
 	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
-=======
 
 ///Fighters///
 
@@ -928,4 +926,3 @@ CIRCUITS BELOW
 	req_tech = list(TECH_DATA = 5, TECH_POWER = 4, TECH_COMBAT = 3)
 	build_path = /obj/item/circuitboard/mecha/fighter/baron/cockpitboard
 	sort_string = "NAAHD"
->>>>>>> c556381b57 (Improved/Buildable Fighter Exosuits (#16797))
