@@ -12,7 +12,11 @@
 	set category = "Object"
 	set src in view(1)
 
+<<<<<<< HEAD
 	if(usr.incapacitated() || !istype(usr, /mob/living) || istype(usr, /mob/living/simple_mob)) //CHOMPEdit - Preventing simple_mobs from interacting
+=======
+	if(usr.incapacitated() || !isliving(usr))
+>>>>>>> 59b9802628 (some istype to macros (#16826))
 		to_chat(usr, span_warning("You can't do that."))
 		return
 
@@ -36,7 +40,11 @@
 	set category = "Object"
 	set src in view(1)
 
+<<<<<<< HEAD
 	if(usr.incapacitated() || !istype(usr, /mob/living) || istype(usr, /mob/living/simple_mob)) //CHOMPEdit - Preventing simple_mobs from interacting
+=======
+	if(usr.incapacitated() || !isliving(usr))
+>>>>>>> 59b9802628 (some istype to macros (#16826))
 		to_chat(usr, span_warning("You can't do that."))
 		return
 
@@ -52,7 +60,11 @@
 	set category = "Object"
 	set src in view(1)
 
+<<<<<<< HEAD
 	if(usr.incapacitated() || !istype(usr, /mob/living) || istype(usr, /mob/living/simple_mob)) //CHOMPEdit - Preventing simple_mobs from interacting
+=======
+	if(usr.incapacitated() || !isliving(usr))
+>>>>>>> 59b9802628 (some istype to macros (#16826))
 		to_chat(usr, span_warning("You can't do that."))
 		return
 

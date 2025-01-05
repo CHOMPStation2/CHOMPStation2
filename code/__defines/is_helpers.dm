@@ -42,7 +42,11 @@
 #define iscorgi(A)		istype(A, /mob/living/simple_mob/animal/passive/dog/corgi)
 #define isslime(A)		istype(A, /mob/living/simple_mob/slime)
 #define isxeno(A)		istype(A, /mob/living/simple_mob/animal/space/alien)
+<<<<<<< HEAD
 #define ismetroid(A)	istype(A, /mob/living/simple_mob/metroid) //CHOMP Addition
+=======
+#define issimplekin(A)	istype(A, /mob/living/simple_mob/shadekin)
+>>>>>>> 59b9802628 (some istype to macros (#16826))
 
 #define iscarbon(A)		istype(A, /mob/living/carbon)
 #define isalien(A)		istype(A, /mob/living/carbon/alien)

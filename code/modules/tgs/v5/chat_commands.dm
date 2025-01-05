@@ -16,6 +16,7 @@
 		var/client/C = X
 		if(C)
 			counts++
+<<<<<<< HEAD
 			if(!(istype(C.mob,/mob/new_player) || istype(C.mob, /mob/observer)))
 				if(C.mob && isbelly(C.mob.loc))
 					bellied++
@@ -23,6 +24,15 @@
 				afks++
 			else
 				active++
+=======
+		if(C && !(isnewplayer(C.mob) || istype(C.mob, /mob/observer)))
+			if(C && C.mob && isbelly(C.mob.loc))
+				bellied++
+		if(C.is_afk())
+			afks++
+		else
+			active++
+>>>>>>> 59b9802628 (some istype to macros (#16826))
 
 	return "Current server status:\n**Web Manifest:** <http://manifest.chompstation13.net/>\n**Players:** [counts]\n**Active:** [active]\n**Bar Statues:** [afks]\n**Bellied:** [bellied]\n\n**Round Duration:** [roundduration2text()]" //CHOMPEdit
 

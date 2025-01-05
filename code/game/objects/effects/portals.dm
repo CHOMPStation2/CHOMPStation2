@@ -14,7 +14,7 @@ GLOBAL_LIST_BOILERPLATE(all_portals, /obj/effect/portal)
 	var/event = FALSE // CHOMPAdd
 
 /obj/effect/portal/Bumped(mob/M as mob|obj)
-	if(istype(M,/mob) && !(istype(M,/mob/living)))
+	if(ismob(M) && !(isliving(M)))
 		return	//do not send ghosts, zshadows, ai eyes, etc
 	spawn(0)
 		src.teleport(M)
@@ -24,6 +24,7 @@ GLOBAL_LIST_BOILERPLATE(all_portals, /obj/effect/portal)
 /obj/effect/portal/Crossed(atom/movable/AM as mob|obj)
 	// CHOMPEdit Start - Dephase kins on crossed
 	if(AM.is_incorporeal())
+<<<<<<< HEAD
 		if(event)
 			if(iscarbon(AM))
 				var/mob/living/carbon/human/H = AM
@@ -31,6 +32,10 @@ GLOBAL_LIST_BOILERPLATE(all_portals, /obj/effect/portal)
 		else return
 	// CHOMPEdit End
 	if(istype(AM,/mob) && !(istype(AM,/mob/living)))
+=======
+		return
+	if(ismob(AM) && !(isliving(AM)))
+>>>>>>> 59b9802628 (some istype to macros (#16826))
 		return	//do not send ghosts, zshadows, ai eyes, etc
 	spawn(0)
 		src.teleport(AM)
@@ -38,7 +43,7 @@ GLOBAL_LIST_BOILERPLATE(all_portals, /obj/effect/portal)
 	return
 
 /obj/effect/portal/attack_hand(mob/user as mob)
-	if(istype(user) && !(istype(user,/mob/living)))
+	if(istype(user) && !(isliving(user)))
 		return	//do not send ghosts, zshadows, ai eyes, etc
 	spawn(0)
 		src.teleport(user)
@@ -61,7 +66,7 @@ GLOBAL_LIST_BOILERPLATE(all_portals, /obj/effect/portal)
 		return
 	if (istype(M, /atom/movable))
 		//VOREStation Addition Start: Prevent taurriding abuse
-		if(istype(M, /mob/living))
+		if(isliving(M))
 			var/mob/living/L = M
 			if(LAZYLEN(L.buckled_mobs))
 				var/datum/riding/R = L.riding_datum

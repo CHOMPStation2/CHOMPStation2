@@ -54,7 +54,7 @@
 
 /datum/announcement/proc/Message(message as text, message_title as text, var/list/zlevels)
 	for(var/mob/M in player_list)
-		if(!istype(M,/mob/new_player) && !isdeaf(M))
+		if(!isnewplayer(M) && !isdeaf(M))
 			to_chat(M, "<h2 class='alert'>[title]</h2>")
 			to_chat(M, span_alert("[message]"))
 			if (announcer)
@@ -82,7 +82,7 @@
 	for(var/mob/M in player_list)
 		if(zlevels && !(get_z(M) in zlevels))
 			continue
-		if(!istype(M,/mob/new_player) && !isdeaf(M))
+		if(!isnewplayer(M) && !isdeaf(M))
 			to_chat(M, command)
 
 /datum/announcement/priority/Message(var/message as text, var/message_title as text, var/list/zlevels)
@@ -113,8 +113,23 @@
 	for(var/mob/M in player_list)
 		if(zlevels && !(M.z in zlevels))
 			continue
+<<<<<<< HEAD
 		if(!istype(M,/mob/new_player) && !isdeaf(M))
 			M << message_sound
+=======
+		if(!isnewplayer(M) && !isdeaf(M))
+			M << 'sound/AI/preamble.ogg'
+
+	if(!message_sound)
+		return
+
+	spawn(22) // based on length of preamble.ogg + arbitrary delay
+		for(var/mob/M in player_list)
+			if(zlevels && !(M.z in zlevels))
+				continue
+			if(!isnewplayer(M) && !isdeaf(M))
+				M << message_sound
+>>>>>>> 59b9802628 (some istype to macros (#16826))
 
 /datum/announcement/proc/Sound(var/message_sound, var/list/zlevels)
 	PlaySound(message_sound, zlevels)

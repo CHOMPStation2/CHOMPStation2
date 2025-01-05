@@ -52,6 +52,7 @@
 		return
 	shock(L)
 
+<<<<<<< HEAD
 // CHOMPEdit Start
 /obj/machinery/containment_field/HasProximity(turf/T, datum/weakref/WF, old_loc)
 	SIGNAL_HANDLER
@@ -63,6 +64,10 @@
 		return
 // CHOMPEdit End
 	if(!istype(AM, /mob/living) || AM:incorporeal_move)
+=======
+/obj/machinery/containment_field/HasProximity(turf/T, atom/movable/AM, old_loc)
+	if(!isliving(AM) || AM:incorporeal_move)
+>>>>>>> 59b9802628 (some istype to macros (#16826))
 		return 0
 	if(!(get_dir(src,AM) in shockdirs))
 		return 0

@@ -337,7 +337,7 @@
 
 	//VORESTATION EDIT START - Allows for thrown vore! //CHOMPEdit Start
 	//Throwing a prey into a pred takes priority. After that it checks to see if the person being thrown is a pred.
-	if(istype(AM, /mob/living))
+	if(isliving(AM))
 		var/mob/living/thrown_mob = AM
 
 		// PERSON BEING HIT: CAN BE DROP PRED, ALLOWS THROW VORE.
