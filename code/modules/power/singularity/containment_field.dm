@@ -62,7 +62,7 @@
 		log_debug("DEBUG: HasProximity called without reference on [src].")
 		return
 // CHOMPEdit End
-	if(!istype(AM, /mob/living) || AM:incorporeal_move)
+	if(!isliving(AM) || AM:incorporeal_move)
 		return 0
 	if(!(get_dir(src,AM) in shockdirs))
 		return 0

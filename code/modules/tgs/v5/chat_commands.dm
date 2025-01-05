@@ -16,7 +16,7 @@
 		var/client/C = X
 		if(C)
 			counts++
-			if(!(istype(C.mob,/mob/new_player) || istype(C.mob, /mob/observer)))
+			if(!(isnewplayer(C.mob) || istype(C.mob, /mob/observer)))
 				if(C.mob && isbelly(C.mob.loc))
 					bellied++
 			if(C.is_afk())

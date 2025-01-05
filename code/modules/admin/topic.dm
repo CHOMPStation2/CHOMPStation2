@@ -1098,7 +1098,7 @@
 		if(!ismob(M))
 			to_chat(usr, span_filter_adminlog("This can only be used on instances of type /mob"))
 			return
-		if(istype(M, /mob/living/silicon/ai))
+		if(isAI(M))
 			to_chat(usr, span_filter_adminlog("This cannot be used on instances of type /mob/living/silicon/ai"))
 			return
 
@@ -1119,7 +1119,7 @@
 		if(!M)	return
 
 		M.loc = prison_cell
-		if(istype(M, /mob/living/carbon/human))
+		if(ishuman(M))
 			var/mob/living/carbon/human/prisoner = M
 			prisoner.equip_to_slot_or_del(new /obj/item/clothing/under/color/prison(prisoner), slot_w_uniform)
 			prisoner.equip_to_slot_or_del(new /obj/item/clothing/shoes/orange(prisoner), slot_shoes)
@@ -1161,7 +1161,7 @@
 		if(!ismob(M))
 			to_chat(usr, span_filter_adminlog("This can only be used on instances of type /mob"))
 			return
-		if(istype(M, /mob/living/silicon/ai))
+		if(isAI(M))
 			to_chat(usr, span_filter_adminlog("This cannot be used on instances of type /mob/living/silicon/ai"))
 			return
 
@@ -1186,7 +1186,7 @@
 		if(!ismob(M))
 			to_chat(usr, span_filter_adminlog("This can only be used on instances of type /mob"))
 			return
-		if(istype(M, /mob/living/silicon/ai))
+		if(isAI(M))
 			to_chat(usr, span_filter_adminlog("This cannot be used on instances of type /mob/living/silicon/ai"))
 			return
 
@@ -1211,7 +1211,7 @@
 		if(!ismob(M))
 			to_chat(usr, span_filter_adminlog("This can only be used on instances of type /mob"))
 			return
-		if(istype(M, /mob/living/silicon/ai))
+		if(isAI(M))
 			to_chat(usr, span_filter_adminlog("This cannot be used on instances of type /mob/living/silicon/ai"))
 			return
 
@@ -1233,14 +1233,14 @@
 		if(!ismob(M))
 			to_chat(usr, span_filter_adminlog("This can only be used on instances of type /mob"))
 			return
-		if(istype(M, /mob/living/silicon/ai))
+		if(isAI(M))
 			to_chat(usr, span_filter_adminlog("This cannot be used on instances of type /mob/living/silicon/ai"))
 			return
 
 		for(var/obj/item/I in M)
 			M.drop_from_inventory(I)
 
-		if(istype(M, /mob/living/carbon/human))
+		if(ishuman(M))
 			var/mob/living/carbon/human/observer = M
 			observer.equip_to_slot_or_del(new /obj/item/clothing/under/suit_jacket(observer), slot_w_uniform)
 			observer.equip_to_slot_or_del(new /obj/item/clothing/shoes/black(observer), slot_shoes)
@@ -1303,7 +1303,7 @@
 		if(!check_rights(R_SPAWN))	return
 
 		var/mob/M = locate(href_list["makeanimal"])
-		if(istype(M, /mob/new_player))
+		if(isnewplayer(M))
 			to_chat(usr, span_filter_adminlog("This cannot be used on instances of type /mob/new_player"))
 			return
 

@@ -394,7 +394,7 @@
 
 //called when src is thrown into hit_atom
 /atom/movable/proc/throw_impact(atom/hit_atom, var/speed)
-	if(istype(hit_atom,/mob/living))
+	if(isliving(hit_atom))
 		var/mob/living/M = hit_atom
 		if(M.buckled == src)
 			return // Don't hit the thing we're buckled to.
@@ -416,7 +416,7 @@
 	if(src.throwing)
 		for(var/atom/A in get_turf(src))
 			if(A == src) continue
-			if(istype(A,/mob/living))
+			if(isliving(A))
 				if(A:lying) continue
 				if(A.is_incorporeal()) continue // CHOMPEdit - For phased entities
 				src.throw_impact(A,speed)
