@@ -5,9 +5,15 @@
 /* FOR LIVE SERVER   */
 /*********************/
 
+<<<<<<< HEAD
 // #define USE_MAP_TETHER
 #define USE_MAP_STELLARDELIGHT
 // #define USE_MAP_GROUNDBASE
+=======
+#define USE_MAP_TETHER
+//#define USE_MAP_STELLARDELIGHT
+//#define USE_MAP_GROUNDBASE
+>>>>>>> 030cc1c66e (Merge pull request #16846 from VOREStation/Map-Swap)
 
 // Debug
 // #define USE_MAP_MINITEST
