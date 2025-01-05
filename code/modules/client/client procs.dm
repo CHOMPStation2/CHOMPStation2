@@ -292,6 +292,7 @@
 		void = new()
 	screen += void
 
+<<<<<<< HEAD
 	//disabled because we don't use the ingame changelog system any more // CHOMPEdit: Enabled because we do
 	if((prefs.lastchangelog != changelog_hash) && isnewplayer(src.mob)) //bolds the changelog button on the interface so we know there are updates.
 		to_chat(src, span_info("You have unread updates in the changelog."))
@@ -299,6 +300,8 @@
 		if(CONFIG_GET(flag/aggressive_changelog)) // CHOMPEdit
 			src.changes()
 
+=======
+>>>>>>> b57023cd11 (Convert preferences to /tg/ preferences (#16449))
 	if(CONFIG_GET(flag/paranoia_logging))
 		var/alert = FALSE //VOREStation Edit start.
 		if(isnum(player_age) && player_age == 0)

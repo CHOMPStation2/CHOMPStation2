@@ -407,6 +407,7 @@
 		else
 			flavor_text = client.prefs.flavour_texts_robot["Default"]
 		// Vorestation Edit: and meta info
+<<<<<<< HEAD
 		var/meta_info = client.prefs.metadata
 		if (meta_info)
 			ooc_notes = meta_info
@@ -417,6 +418,11 @@
 			ooc_notes_maybes = client.prefs.metadata_maybes
 			ooc_notes_style = client.prefs.matadata_ooc_style
 			//CHOMPEdit End
+=======
+		ooc_notes = client.prefs.read_preference(/datum/preference/text/living/ooc_notes)
+		ooc_notes_likes = client.prefs.read_preference(/datum/preference/text/living/ooc_notes_likes)
+		ooc_notes_dislikes = client.prefs.read_preference(/datum/preference/text/living/ooc_notes_dislikes)
+>>>>>>> b57023cd11 (Convert preferences to /tg/ preferences (#16449))
 		custom_link = client.prefs.custom_link
 
 /mob/living/silicon/robot/verb/namepick()

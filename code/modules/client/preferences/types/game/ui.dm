@@ -21,6 +21,39 @@
 	if(before != client.tgui_panel.oldchat)
 		client.nuke_chat()
 
+<<<<<<< HEAD:code/modules/client/preferences/types/ui.dm
+=======
+/datum/preference/toggle/tgui_fancy
+	category = PREFERENCE_CATEGORY_GAME_PREFERENCES
+	savefile_key = "tgui_fancy"
+	default_value = TRUE
+	savefile_identifier = PREFERENCE_PLAYER
+
+/datum/preference/toggle/tgui_lock
+	category = PREFERENCE_CATEGORY_GAME_PREFERENCES
+	savefile_key = "tgui_lock"
+	default_value = FALSE
+	savefile_identifier = PREFERENCE_PLAYER
+
+/datum/preference/toggle/tgui_input_mode
+	category = PREFERENCE_CATEGORY_GAME_PREFERENCES
+	savefile_key = "tgui_input_mode"
+	default_value = FALSE
+	savefile_identifier = PREFERENCE_PLAYER
+
+/datum/preference/toggle/tgui_large_buttons
+	category = PREFERENCE_CATEGORY_GAME_PREFERENCES
+	savefile_key = "tgui_large_buttons"
+	default_value = TRUE
+	savefile_identifier = PREFERENCE_PLAYER
+
+/datum/preference/toggle/tgui_swapped_buttons
+	category = PREFERENCE_CATEGORY_GAME_PREFERENCES
+	savefile_key = "tgui_swapped_buttons"
+	default_value = FALSE
+	savefile_identifier = PREFERENCE_PLAYER
+
+>>>>>>> b57023cd11 (Convert preferences to /tg/ preferences (#16449)):code/modules/client/preferences/types/game/ui.dm
 /datum/preference/toggle/tgui_say
 	category = PREFERENCE_CATEGORY_GAME_PREFERENCES
 	savefile_key = "TGUI_SAY"
