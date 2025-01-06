@@ -243,7 +243,10 @@
 		var/turf/location = get_turf(src)
 		var/datum/effect/effect/system/smoke_spread/chem/blob/S = new /datum/effect/effect/system/smoke_spread/chem/blob
 		S.attach(location)
-		S.set_up(reagents, rand(1, splatter_volume), 0, location)
+		var/datum/reagents/R = new/datum/reagents(splatter_volume)
+		for(var/chem in my_chems)
+			R.add_reagent(chem, splatter_volume / my_chems.len)
+		S.set_up(R, rand(1, splatter_volume), 0, location)
 		playsound(location, 'sound/effects/slime_squish.ogg', 30, 1, -3)
 		spawn(0)
 			S.start()
