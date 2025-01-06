@@ -208,7 +208,11 @@ var/list/possible_cable_coil_colours = list(
 					if(c.d1 == UP || c.d2 == UP)
 						qdel(c)
 
+<<<<<<< HEAD
 		investigate_log("was cut by [key_name(user, user.client)] in [user.loc.loc]","wires") //ChompEDIT usr --> user
+=======
+		investigate_log("was cut by [key_name(user, user.client)] in [user.loc.loc]","wires")
+>>>>>>> 04c482e97b (fix a runtime and some usr to user (#16849))
 
 		qdel(src)
 		return
@@ -245,7 +249,11 @@ var/list/possible_cable_coil_colours = list(
 		var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
 		s.set_up(5, 1, src)
 		s.start()
+<<<<<<< HEAD
 		if(user.stunned) //ChompEDIT usr --> user
+=======
+		if(user.stunned)
+>>>>>>> 04c482e97b (fix a runtime and some usr to user (#16849))
 			return 1
 	return 0
 
@@ -601,8 +609,13 @@ var/list/possible_cable_coil_colours = list(
 
 /obj/item/stack/cable_coil/attackby(obj/item/W, mob/user)
 	if(istype(W, /obj/item/multitool))
+<<<<<<< HEAD
 		var/selected_type = tgui_input_list(user, "Pick new colour.", "Cable Colour", possible_cable_coil_colours) //ChompEDIT usr --> user
 		set_cable_color(selected_type, user) //ChompEDIT usr --> user
+=======
+		var/selected_type = tgui_input_list(user, "Pick new colour.", "Cable Colour", possible_cable_coil_colours)
+		set_cable_color(selected_type, user)
+>>>>>>> 04c482e97b (fix a runtime and some usr to user (#16849))
 		return
 	return ..()
 
@@ -981,7 +994,11 @@ var/list/possible_cable_coil_colours = list(
 
 /obj/item/stack/cable_coil/alien/attack_hand(mob/user as mob)
 	if (user.get_inactive_hand() == src)
+<<<<<<< HEAD
 		var/N = tgui_input_number(user, "How many units of wire do you want to take from [src]?  You can only take up to [amount] at a time.", "Split stacks", 1, amount) //ChompEDIT usr --> user
+=======
+		var/N = tgui_input_number(user, "How many units of wire do you want to take from [src]? You can only take up to [amount] at a time.", "Split stacks", 1, amount)
+>>>>>>> 04c482e97b (fix a runtime and some usr to user (#16849))
 		if(N && N <= amount)
 			var/obj/item/stack/cable_coil/CC = new/obj/item/stack/cable_coil(user.loc)
 			CC.amount = N
@@ -992,8 +1009,13 @@ var/list/possible_cable_coil_colours = list(
 				src.add_fingerprint(user)
 				CC.add_fingerprint(user)
 				spawn(0)
+<<<<<<< HEAD
 					if (src && user.machine==src) //ChompEDIT usr --> user
 						src.interact(user) //ChompEDIT usr --> user
+=======
+					if (src && user.machine==src)
+						src.interact(user)
+>>>>>>> 04c482e97b (fix a runtime and some usr to user (#16849))
 		else
 			return
 	else
