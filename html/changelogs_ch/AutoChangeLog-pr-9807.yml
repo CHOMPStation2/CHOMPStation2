@@ -1,4 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - qol: "renamed antagonism tag and hid most of the options there as they're not relevant for our purposes"

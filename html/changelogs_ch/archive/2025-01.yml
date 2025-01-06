@@ -50,3 +50,13 @@
   - rscadd: Similar keybinds to the recent pump additions are now on most atmospheric
       devices.
   - bugfix: Fixes issue where using the keybind on a pump would not update the icon.
+2025-01-06:
+  CHOMPStation2StaffMirrorBot:
+  - qol: Tgui-say colors adjusted for better contrast
+  - qol: renamed antagonism tag and hid most of the options there as they're not relevant
+      for our purposes
+  - qol: adds mirrors to all resleeving and autoresleeving rooms
+  - rscadd: Fighter Exosuits now have landing gear.
+  - rscadd: Science can now build and assemble the Pinnace and Baron Fighter Exosuits.
+  Kashargul:
+  - bugfix: over 10 known shadekin exploits...
