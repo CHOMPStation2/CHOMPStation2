@@ -207,17 +207,17 @@
 			pref.update_preference_by_type(/datum/preference/text/living/ooc_notes_dislikes, new_metadata)
 	//CHOMPEdit Start
 	else if(href_list["edit_ooc_note_favs"])
-		var/new_metadata = strip_html_simple(tgui_input_text(user, "Enter any information you'd like others to see relating to your FAVOURITE roleplay preferences. This will not be saved permanently unless you click save in the Character Setup panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(pref.metadata_favs), multiline = TRUE,  prevent_enter = TRUE)) //ChompEDIT - usr removal
+		var/new_metadata = strip_html_simple(tgui_input_text(user, "Enter any information you'd like others to see relating to your FAVOURITE roleplay preferences. This will not be saved permanently unless you click save in the Character Setup panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(pref.read_preference(/datum/preference/text/living/ooc_notes_favs)), multiline = TRUE,  prevent_enter = TRUE)) //ChompEDIT - usr removal
 		if(new_metadata && CanUseTopic(user))
 			if(new_metadata == "!clear")
 				new_metadata = ""
 			pref.update_preference_by_type(/datum/preference/text/living/ooc_notes_favs, new_metadata)
 	else if(href_list["edit_ooc_note_maybes"])
-		var/new_metadata = strip_html_simple(tgui_input_text(user, "Enter any information you'd like others to see relating to your MAYBE roleplay preferences. This will not be saved permanently unless you click save in the Character Setup panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(pref.metadata_maybes), multiline = TRUE,  prevent_enter = TRUE)) //ChompEDIT - usr removal
+		var/new_metadata = strip_html_simple(tgui_input_text(user, "Enter any information you'd like others to see relating to your MAYBE roleplay preferences. This will not be saved permanently unless you click save in the Character Setup panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(pref.read_preference(/datum/preference/text/living/ooc_notes_maybes)), multiline = TRUE,  prevent_enter = TRUE)) //ChompEDIT - usr removal
 		if(new_metadata && CanUseTopic(user))
 			if(new_metadata == "!clear")
 				new_metadata = ""
-			pref.metadata_maybes = new_metadata
+			pref.update_preference_by_type(/datum/preference/text/living/ooc_notes_maybes, new_metadata)
 	else if(href_list["edit_ooc_note_style"])
 		pref.update_preference_by_type(/datum/preference/toggle/living/ooc_notes_style, !pref.read_preference(/datum/preference/toggle/living/ooc_notes_style))
 		return TOPIC_REFRESH
