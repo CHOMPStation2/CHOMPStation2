@@ -18,7 +18,7 @@ GLOBAL_VAR_INIT(queen_amount, 0) //We only gonna want 1 queen in the world.
 	movement_cooldown = 6
 	harm_intent_damage = 2
 	armor = list(
-				"melee" = 50,
+				"melee" = 40,
 				"bullet" = -90,
 				"laser" = 0,
 				"energy" = -50,
