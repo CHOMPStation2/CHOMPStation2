@@ -264,8 +264,6 @@
 "nq" = (
 /obj/item/gps/computer,
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/wood,
@@ -1130,8 +1128,6 @@
 	pixel_y = 32
 	},
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/wood,
@@ -1157,7 +1153,6 @@
 	pixel_y = 32
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/port_gen/pacman,

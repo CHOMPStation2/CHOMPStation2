@@ -102,11 +102,9 @@
 	},
 /obj/effect/overlay/snow/floor,
 /obj/structure/cable/heavyduty{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable/blue{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/disposalpipe/segment{
@@ -128,7 +126,6 @@
 "aw" = (
 /obj/effect/overlay/snow/floor,
 /obj/structure/cable/blue{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
@@ -295,7 +292,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable/blue{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/item/clothing/head/hardhat/orange,
@@ -1427,7 +1423,6 @@
 	pixel_x = 24
 	},
 /obj/structure/cable/blue{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
@@ -1669,7 +1664,6 @@
 	dir = 9
 	},
 /obj/structure/cable/blue{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/light_switch{
@@ -2063,7 +2057,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable/blue{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled,
@@ -3109,7 +3102,6 @@
 /area/surface/outpost/mining_main/gen_room)
 "gK" = (
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/port_gen/pacman,
@@ -3438,7 +3430,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
@@ -3452,7 +3443,6 @@
 	output_level = 150000
 	},
 /obj/structure/cable/blue{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
@@ -3524,8 +3514,6 @@
 /area/surface/outpost/mining_main/gen_room)
 "hJ" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2";
 	pixel_y = 0
 	},
@@ -3721,8 +3709,6 @@
 /area/surface/outpost/mining_main/gen_room)
 "il" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2";
 	pixel_y = 0
 	},
@@ -3832,7 +3818,6 @@
 /area/surface/outpost/main/telecomms)
 "iy" = (
 /obj/structure/cable/blue{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
@@ -3939,7 +3924,6 @@
 "iK" = (
 /obj/machinery/power/terminal,
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable/yellow,
@@ -3948,7 +3932,6 @@
 "iL" = (
 /obj/machinery/power/terminal,
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
@@ -4076,7 +4059,6 @@
 	pixel_y = -24
 	},
 /obj/structure/cable/blue{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/item/tool/crowbar/red,
@@ -4154,7 +4136,6 @@
 	output_level_max = 750000
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
@@ -4171,12 +4152,9 @@
 	output_level_max = 750000
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -4184,14 +4162,10 @@
 /area/surface/outpost/mining_main/gen_room)
 "jf" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/closet/toolcloset,
@@ -4203,8 +4177,6 @@
 /obj/structure/table/steel,
 /obj/machinery/cell_charger,
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating,
@@ -4344,7 +4316,6 @@
 "jx" = (
 /obj/structure/cable,
 /obj/structure/cable/heavyduty{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/wall/r_wall,
@@ -4837,7 +4808,6 @@
 	output_level_max = 750000
 	},
 /obj/structure/cable/blue{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
@@ -4946,7 +4916,6 @@
 /area/surface/outpost/main/gym)
 "kO" = (
 /obj/structure/cable/blue{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
@@ -5255,7 +5224,6 @@
 	output_level = 150000
 	},
 /obj/structure/cable/blue{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
@@ -5291,7 +5259,6 @@
 /area/surface/outpost/main/bar)
 "lH" = (
 /obj/structure/cable/blue{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
@@ -5779,7 +5746,6 @@
 /area/surface/outpost/main/construction_area)
 "mM" = (
 /obj/structure/cable/blue{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/table/steel,
@@ -5960,7 +5926,6 @@
 /area/surface/outpost/main/construction_area)
 "nj" = (
 /obj/structure/cable/blue{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
@@ -6252,7 +6217,6 @@
 "nV" = (
 /obj/item/stool/padded,
 /obj/structure/cable/blue{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
@@ -6722,7 +6686,6 @@
 /area/surface/outpost/main/corridor)
 "oQ" = (
 /obj/structure/cable/blue{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
@@ -7878,7 +7841,6 @@
 	pixel_x = -36
 	},
 /obj/structure/cable/blue{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
@@ -8018,11 +7980,9 @@
 	pixel_y = -24
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/blue{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -8215,7 +8175,6 @@
 /area/surface/outpost/main/dorms)
 "rA" = (
 /obj/structure/cable/blue{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
@@ -8503,7 +8462,6 @@
 /area/surface/outpost/main/pool)
 "sc" = (
 /obj/structure/cable/blue{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
@@ -9647,7 +9605,6 @@
 	output_level = 150000
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
@@ -9696,7 +9653,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -9728,7 +9684,6 @@
 /obj/random/soap,
 /obj/random/soap,
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/firealarm{
@@ -9869,7 +9824,6 @@
 /area/surface/outpost/research/xenoresearch/emergencystorage)
 "vt" = (
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
@@ -9897,11 +9851,9 @@
 /area/surface/outpost/research/xenoresearch/smes)
 "vv" = (
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/sensor{
@@ -9912,14 +9864,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoresearch/smes)
 "vw" = (
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
@@ -10310,7 +10260,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled/white,
@@ -10879,7 +10828,6 @@
 	opacity = 0
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
@@ -10897,11 +10845,9 @@
 	},
 /obj/structure/cable/green,
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
@@ -10918,7 +10864,6 @@
 	opacity = 0
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
@@ -10977,7 +10922,6 @@
 	opacity = 0
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
@@ -10995,11 +10939,9 @@
 	},
 /obj/structure/cable/green,
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
@@ -11016,7 +10958,6 @@
 	opacity = 0
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
@@ -11034,7 +10975,6 @@
 	pixel_x = -36
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/white,
@@ -11098,7 +11038,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/hydro,
@@ -11629,7 +11568,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled,

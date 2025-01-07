@@ -5,8 +5,6 @@
 "c" = (
 /obj/machinery/light,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/shuttle/floor/voidcraft,
@@ -38,8 +36,6 @@
 /area/survivalpod/superpose/BroadcastingPod)
 "j" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/shuttle/floor/voidcraft,
@@ -61,7 +57,6 @@
 "n" = (
 /obj/machinery/power/port_gen/pacman,
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/item/stack/material/phoron{
@@ -231,8 +226,6 @@
 /obj/structure/table/glass,
 /obj/item/camerabug,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/shuttle/floor/voidcraft,
@@ -253,8 +246,6 @@
 	pixel_y = -4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/shuttle/floor/voidcraft,
@@ -396,7 +387,6 @@
 	pixel_x = -5
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/shuttle/floor/voidcraft,

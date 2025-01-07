@@ -40,7 +40,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/airless,
@@ -48,7 +47,6 @@
 "am" = (
 /obj/machinery/teleport/station,
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/airless,
@@ -205,16 +203,12 @@
 	icon_state = "intact-supply"
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/maint)
 "aW" = (
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating/eris/under,
@@ -258,7 +252,6 @@
 	dir = 4
 	},
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/cyan,
@@ -295,29 +288,21 @@
 /area/tether_away/guttersite/atmos)
 "bj" = (
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/storage)
 "bk" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating/eris/under,
 /area/tether_away/guttersite/engines)
 "bl" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	dir = 4;
 	icon_state = "2-8"
 	},
@@ -325,13 +310,9 @@
 /area/tether_away/guttersite/engines)
 "bm" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -344,8 +325,6 @@
 /area/tether_away/guttersite/engines)
 "bn" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -390,8 +369,6 @@
 /area/tether_away/guttersite/storage)
 "bu" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -404,8 +381,6 @@
 /area/tether_away/guttersite/maint)
 "bv" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
@@ -414,8 +389,6 @@
 /area/tether_away/guttersite/maint)
 "bw" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -425,8 +398,6 @@
 	dir = 8
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable/cyan{
@@ -436,8 +407,6 @@
 /area/tether_away/guttersite/maint)
 "bx" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -450,8 +419,6 @@
 /area/tether_away/guttersite/maint)
 "by" = (
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
@@ -465,11 +432,9 @@
 	dir = 4
 	},
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/cyan{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating/eris/under,
@@ -482,22 +447,16 @@
 	},
 /obj/structure/table/darkglass,
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/commons)
 "bB" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	dir = 1;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	dir = 4;
 	icon_state = "1-4"
 	},
@@ -505,8 +464,6 @@
 /area/tether_away/guttersite/engines)
 "bC" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -520,16 +477,12 @@
 /area/tether_away/guttersite/engines)
 "bE" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/dark,
 /area/tether_away/guttersite/maint)
 "bF" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -537,16 +490,12 @@
 /area/tether_away/guttersite/atmos)
 "bG" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/plating/eris/under,
 /area/tether_away/guttersite/engines)
 "bH" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating/eris/under,
@@ -614,8 +563,6 @@
 /area/tether_away/guttersite/atmos)
 "bQ" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	dir = 4;
 	icon_state = "1-4"
 	},
@@ -623,8 +570,6 @@
 /area/tether_away/guttersite/engines)
 "bR" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/eris/dark,
@@ -634,8 +579,6 @@
 	dir = 4
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -697,8 +640,6 @@
 	},
 /obj/structure/bed/chair/bay/comfy/black,
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -718,8 +659,6 @@
 	icon_state = "intact-supply"
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/firealarm{
@@ -766,8 +705,6 @@
 /area/tether_away/guttersite/storage)
 "ci" = (
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -792,13 +729,9 @@
 	},
 /obj/structure/table/darkglass,
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/eris/white/monofloor,
@@ -911,8 +844,6 @@
 	icon_state = "intact-supply"
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -927,8 +858,6 @@
 	icon_state = "intact-supply"
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -961,8 +890,6 @@
 	dir = 1
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -996,8 +923,6 @@
 /area/tether_away/guttersite/teleporter)
 "cK" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -1024,7 +949,6 @@
 	pixel_x = 24
 	},
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -1039,7 +963,6 @@
 /area/tether_away/guttersite/commons)
 "cQ" = (
 /obj/structure/cable/cyan{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/smes/buildable/point_of_interest,
@@ -1075,8 +998,6 @@
 	dir = 5
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -1091,8 +1012,6 @@
 	},
 /obj/machinery/light,
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -1111,8 +1030,6 @@
 	req_one_access = list(10)
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -1126,8 +1043,6 @@
 	icon_state = "intact-supply"
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -1182,8 +1097,6 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -1200,8 +1113,6 @@
 	dir = 6
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/eris/steel/bar_light,
@@ -1224,8 +1135,6 @@
 	icon_state = "intact-supply"
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable/cyan{
@@ -1249,8 +1158,6 @@
 	dir = 1
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -1266,8 +1173,6 @@
 	dir = 1
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -1285,8 +1190,6 @@
 	req_one_access = list(10)
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -1304,8 +1207,6 @@
 	req_one_access = list(10)
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -1318,8 +1219,6 @@
 	dir = 1
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -1330,8 +1229,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -1381,8 +1278,6 @@
 	dir = 4
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -1437,8 +1332,6 @@
 	icon_state = "intact-scrubbers"
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -1487,8 +1380,6 @@
 	dir = 4
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -1586,8 +1477,6 @@
 	icon_state = "intact-supply"
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -1600,8 +1489,6 @@
 	dir = 8
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -1612,8 +1499,6 @@
 /area/tether_away/guttersite/commons)
 "dY" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
@@ -1631,8 +1516,6 @@
 	dir = 4
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/eris/steel/bar_light,
@@ -1645,8 +1528,6 @@
 	dir = 4
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /mob/living/simple_mob/vore/catgirl{
@@ -1741,8 +1622,6 @@
 	icon_state = "intact-supply"
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -1765,8 +1644,6 @@
 	dir = 1
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	dir = 1;
 	icon_state = "1-2"
 	},
@@ -1787,8 +1664,6 @@
 	dir = 1
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	dir = 1;
 	icon_state = "1-2"
 	},
@@ -1831,8 +1706,6 @@
 	dir = 1
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/steel/bar_dance,
@@ -1845,7 +1718,6 @@
 	pixel_x = -24
 	},
 /obj/structure/cable/cyan{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/eris/steel/bar_dance,
@@ -1856,8 +1728,6 @@
 	icon_state = "bay_comfychair_preview"
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/eris/steel/bar_dance,
@@ -1865,8 +1735,6 @@
 "eB" = (
 /obj/structure/table/darkglass,
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/eris/steel/bar_dance,
@@ -1883,8 +1751,6 @@
 	icon_state = "bay_comfychair_preview"
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/cyan{
@@ -1902,8 +1768,6 @@
 	req_one_access = list()
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -1923,13 +1787,9 @@
 	icon_state = "bay_comfychair_preview"
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/steel/bar_dance,
@@ -1944,8 +1804,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -1975,8 +1833,6 @@
 	dir = 4
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/steel/bar_dance,
@@ -2010,8 +1866,6 @@
 	dir = 1
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/steel/bar_dance,
@@ -2031,8 +1885,6 @@
 	dir = 4
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -2049,8 +1901,6 @@
 	req_one_access = list()
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -2063,8 +1913,6 @@
 	dir = 1
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -2080,8 +1928,6 @@
 	dir = 4
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -2094,8 +1940,6 @@
 /obj/structure/bed/padded,
 /obj/item/bedsheet/medical,
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -2113,8 +1957,6 @@
 	dir = 1
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -2125,16 +1967,12 @@
 	icon_state = "map_scrubber_on"
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/medbay)
 "eX" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -2150,7 +1988,6 @@
 	icon_state = "bay_comfychair_preview"
 	},
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -2184,7 +2021,6 @@
 	pixel_x = 24
 	},
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -2201,8 +2037,6 @@
 	req_one_access = list()
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -2229,8 +2063,6 @@
 /area/tether_away/guttersite/vault)
 "fg" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -2241,8 +2073,6 @@
 	icon_state = "bay_comfychair_preview"
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -2253,8 +2083,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -2267,7 +2095,6 @@
 	pixel_x = -24
 	},
 /obj/structure/cable/cyan{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -2306,8 +2133,6 @@
 /area/tether_away/guttersite/office)
 "fp" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -2327,13 +2152,9 @@
 	dir = 8
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/cyan{
@@ -2357,8 +2178,6 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -2382,8 +2201,6 @@
 	dir = 8
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -2461,8 +2278,6 @@
 	req_one_access = list()
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -2476,8 +2291,6 @@
 	dir = 8
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -2495,8 +2308,6 @@
 	req_one_access = list()
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -2510,13 +2321,9 @@
 	dir = 8
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -2530,8 +2337,6 @@
 	icon_state = "map-supply"
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -2546,16 +2351,12 @@
 	icon_state = "intact-scrubbers"
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/bridge)
 "fP" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -2567,15 +2368,12 @@
 	pixel_x = 24
 	},
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/bridge)
 "fR" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -2589,8 +2387,6 @@
 	dir = 6
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -2605,8 +2401,6 @@
 	},
 /obj/machinery/door/firedoor,
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/hatch{
@@ -2880,8 +2674,6 @@
 	dir = 8
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -3023,8 +2815,6 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/vault/bolted,
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -3037,8 +2827,6 @@
 	dir = 1
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/alarm{
@@ -3133,8 +2921,6 @@
 	dir = 8
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -3196,8 +2982,6 @@
 	dir = 5
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -3215,8 +2999,6 @@
 	icon_state = "tube1"
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -3279,8 +3061,6 @@
 	req_one_access = list()
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -3349,8 +3129,6 @@
 	pixel_y = 0
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -3495,8 +3273,6 @@
 	dir = 1
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/firealarm{
@@ -3526,8 +3302,6 @@
 	dir = 8
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/firealarm{
@@ -3593,8 +3367,6 @@
 	dir = 8
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/firealarm{
@@ -3637,8 +3409,6 @@
 	dir = 8
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -3670,8 +3440,6 @@
 /obj/structure/window/basic,
 /obj/structure/table/darkglass,
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/eris/white/monofloor,
@@ -3686,8 +3454,6 @@
 	},
 /obj/structure/table/darkglass,
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/eris/white/monofloor,
@@ -3775,8 +3541,6 @@
 /obj/structure/table/darkglass,
 /obj/item/pen/blue,
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/eris/white/monofloor,
@@ -3800,8 +3564,6 @@
 /obj/structure/table/darkglass,
 /obj/item/paper_bin,
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/eris/white/monofloor,
@@ -3831,8 +3593,6 @@
 	dir = 8
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/cyan{
@@ -3866,8 +3626,6 @@
 /area/tether_away/guttersite/office)
 "iw" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -3879,8 +3637,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -3895,8 +3651,6 @@
 /area/tether_away/guttersite/office)
 "iz" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -3907,8 +3661,6 @@
 /area/tether_away/guttersite/vault)
 "iB" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -3958,8 +3710,6 @@
 /area/tether_away/guttersite/unexplored)
 "iK" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /mob/living/simple_mob/humanoid/merc/ranged/grenadier,
@@ -3979,7 +3729,6 @@
 	},
 /obj/random/cutout,
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -4209,8 +3958,6 @@
 	req_one_access = list(38)
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -4257,8 +4004,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -4270,8 +4015,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -4289,8 +4032,6 @@
 	dir = 1
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -4301,8 +4042,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -4315,7 +4054,6 @@
 	pixel_x = -24
 	},
 /obj/structure/cable/cyan{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -4402,8 +4140,6 @@
 	icon_state = "intact-supply"
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -4443,8 +4179,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor/glass/hidden/steel{
@@ -4489,8 +4223,6 @@
 "kj" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -4612,8 +4344,6 @@
 	dir = 1
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	dir = 1;
 	icon_state = "1-2"
 	},
@@ -4639,8 +4369,6 @@
 /area/tether_away/guttersite/commons)
 "kG" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	dir = 1;
 	icon_state = "1-2"
 	},
@@ -4659,8 +4387,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -4684,15 +4410,12 @@
 	icon_state = "map"
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/docking)
 "kK" = (
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
@@ -4752,8 +4475,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -4776,8 +4497,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -4787,8 +4506,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -5017,7 +4734,6 @@
 	pixel_x = 24
 	},
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -5045,8 +4761,6 @@
 	dir = 1
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	dir = 1;
 	icon_state = "1-2"
 	},
@@ -5246,8 +4960,6 @@
 	icon_state = "tube1"
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/alarm{
@@ -5496,8 +5208,6 @@
 "mV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -5542,8 +5252,6 @@
 	icon_state = "intact-supply"
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -5667,8 +5375,6 @@
 	icon_state = "intact-supply"
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /mob/living/simple_mob/humanoid/merc/melee/poi{
@@ -5829,8 +5535,6 @@
 	req_one_access = list(38)
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -5844,8 +5548,6 @@
 /area/tether_away/guttersite/security)
 "nP" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
@@ -5866,8 +5568,6 @@
 	dir = 4
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/alarm{
@@ -6148,8 +5848,6 @@
 /area/tether_away/guttersite/unexplored)
 "Ob" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,

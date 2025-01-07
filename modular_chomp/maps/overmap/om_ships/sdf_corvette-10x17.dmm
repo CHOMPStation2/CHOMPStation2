@@ -13,13 +13,9 @@
 /area/shuttle/sdf_corvette2)
 "bn" = (
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -39,8 +35,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/item/stack/material/phoron{
@@ -50,8 +44,6 @@
 /area/shuttle/sdf_corvette2)
 "dv" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/wall/rshull,
@@ -82,8 +74,6 @@
 /area/shuttle/sdf_corvette2)
 "en" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -138,7 +128,6 @@
 "hy" = (
 /obj/machinery/power/smes/buildable/point_of_interest,
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -164,8 +153,6 @@
 	dir = 1
 	},
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber,
@@ -186,8 +173,6 @@
 /area/shuttle/sdf_corvette2)
 "lN" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -198,8 +183,6 @@
 /area/shuttle/sdf_corvette2)
 "lW" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -225,13 +208,9 @@
 /area/shuttle/sdf_corvette2)
 "mT" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -271,8 +250,6 @@
 	dir = 8
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber{
@@ -310,8 +287,6 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/machinery/door/blast/regular/open{
@@ -328,7 +303,6 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/extinguisher_cabinet{
@@ -339,8 +313,6 @@
 /area/shuttle/sdf_corvette2)
 "sG" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
@@ -353,8 +325,6 @@
 /area/shuttle/sdf_corvette2)
 "tg" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/closet/secure_closet/guncabinet{
@@ -375,8 +345,6 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/unary/vent_pump{
@@ -400,13 +368,9 @@
 /area/shuttle/sdf_corvette2)
 "uD" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -434,8 +398,6 @@
 /area/shuttle/sdf_corvette2)
 "wQ" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -448,13 +410,9 @@
 /area/shuttle/sdf_corvette2)
 "xk" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -469,16 +427,12 @@
 /area/shuttle/sdf_corvette2)
 "yA" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -497,8 +451,6 @@
 /area/shuttle/sdf_corvette2)
 "zb" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -526,8 +478,6 @@
 /area/shuttle/sdf_corvette2)
 "Cg" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
@@ -540,8 +490,6 @@
 /area/shuttle/sdf_corvette2)
 "Cq" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/computer/ship/engines{
@@ -556,7 +504,6 @@
 /area/shuttle/sdf_corvette2)
 "Eg" = (
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -586,8 +533,6 @@
 /area/shuttle/sdf_corvette2)
 "Fb" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/wall/rshull,
@@ -618,8 +563,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -669,8 +612,6 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/hidden,
@@ -734,13 +675,9 @@
 /area/shuttle/sdf_corvette2)
 "Oc" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/closet/walllocker/emerglocker/north,
@@ -771,7 +708,6 @@
 /area/shuttle/sdf_corvette2)
 "QG" = (
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -801,7 +737,6 @@
 /area/shuttle/sdf_corvette2)
 "Tf" = (
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc/alarms_hidden{
@@ -821,7 +756,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/closet/walllocker/emerglocker/south,
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/port_gen/pacman{
@@ -850,7 +784,6 @@
 /area/shuttle/sdf_corvette2)
 "Wy" = (
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/effect/floor_decal/industrial/warning{

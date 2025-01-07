@@ -99,8 +99,6 @@
 /area/submap/whiteship)
 "fr" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/eris/white/techfloor,
@@ -116,8 +114,6 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/white/techfloor,
@@ -220,7 +216,6 @@
 	pixel_x = -24
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/eris/white/techfloor,
@@ -293,13 +288,10 @@
 "tb" = (
 /obj/item/cell,
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/terminal,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/eris/white/techfloor,
@@ -347,8 +339,6 @@
 "va" = (
 /obj/random/trash,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/white/techfloor,
@@ -405,8 +395,6 @@
 "yA" = (
 /obj/machinery/door/airlock/voidcraft/survival_pod,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/white/techfloor,
@@ -492,8 +480,6 @@
 /area/submap/whiteship)
 "Ex" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/white/techfloor,
@@ -640,8 +626,6 @@
 	pixel_x = 27
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/white/techfloor,
@@ -752,8 +736,6 @@
 /area/submap/whiteship)
 "Wx" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -767,8 +749,6 @@
 "Xs" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/white/techfloor,

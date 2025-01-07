@@ -580,15 +580,12 @@
 	pixel_x = -26
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/ExplorerHome)
 "sV" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/wood,
@@ -603,8 +600,6 @@
 /obj/structure/grille/rustic,
 /obj/structure/window/reinforced/full,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,

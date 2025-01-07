@@ -10,8 +10,6 @@
 /area/survivalpod/superpose/MechStorageFab)
 "aq" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/steel_dirty,
@@ -42,16 +40,12 @@
 /area/survivalpod/superpose/MechStorageFab)
 "bh" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/plating/external,
 /area/survivalpod/superpose/MechStorageFab)
 "bu" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/plating/external,
@@ -123,8 +117,6 @@
 /area/survivalpod/superpose/MechStorageFab)
 "gz" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/asteroid_steel,
@@ -153,7 +145,6 @@
 /area/survivalpod/superpose/MechStorageFab)
 "ij" = (
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc/alarms_hidden{
@@ -211,8 +202,6 @@
 "ly" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/steel_dirty,
@@ -281,13 +270,9 @@
 "nZ" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden,
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/asteroid_steel,
@@ -337,8 +322,6 @@
 /area/survivalpod/superpose/MechStorageFab)
 "qy" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/plating/external,
@@ -368,8 +351,6 @@
 /area/survivalpod/superpose/MechStorageFab)
 "rl" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating/external,
@@ -387,8 +368,6 @@
 	dir = 9
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel,
@@ -423,13 +402,9 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/steel_dirty,
@@ -481,7 +456,6 @@
 "us" = (
 /obj/effect/map_effect/interval/effect_emitter/sparks,
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/rtg/advanced,
@@ -507,8 +481,6 @@
 /obj/random/junk,
 /obj/random/maintenance,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/asteroid_steel,
@@ -530,8 +502,6 @@
 	req_one_access = null
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating/external,
@@ -557,13 +527,9 @@
 /area/survivalpod/superpose/MechStorageFab)
 "Ar" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating/external,
@@ -581,8 +547,6 @@
 "Bu" = (
 /obj/random/junk,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel,
@@ -624,8 +588,6 @@
 /area/survivalpod/superpose/MechStorageFab)
 "DQ" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/asteroid_steel,
@@ -655,7 +617,6 @@
 "Go" = (
 /obj/machinery/power/smes/buildable/point_of_interest,
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating/external,
@@ -701,8 +662,6 @@
 "IS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating/external,
@@ -710,7 +669,6 @@
 "IX" = (
 /obj/machinery/power/terminal,
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating/external,
@@ -813,8 +771,6 @@
 	},
 /obj/random/maintenance,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel,
@@ -961,8 +917,6 @@
 	},
 /obj/random/junk,
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/steel_dirty,
@@ -1045,8 +999,6 @@
 	amount = 50
 	},
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating,
@@ -1084,16 +1036,12 @@
 "Pt" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/survivalpod/superpose/MechStorageFab)
 "Qd" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating/external,
@@ -1135,8 +1083,6 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -1162,8 +1108,6 @@
 "Uq" = (
 /obj/random/junk,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating/external,
@@ -1206,8 +1150,6 @@
 	dir = 10
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel,
@@ -1217,8 +1159,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating/external,
@@ -1231,8 +1171,6 @@
 	req_one_access = null
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating/external,
@@ -1274,8 +1212,6 @@
 /area/survivalpod/superpose/MechStorageFab)
 "Zf" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel,

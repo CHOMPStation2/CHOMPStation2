@@ -19,8 +19,6 @@
 	icon_state = "intact-scrubbers"
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/white,
@@ -82,8 +80,6 @@
 	icon_state = "intact-scrubbers"
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -155,8 +151,6 @@
 	icon_state = "intact-scrubbers"
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -174,13 +168,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -224,8 +214,6 @@
 /area/ship/adminships/main_corridor)
 "ee" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -236,8 +224,6 @@
 	icon_state = "bordercolor"
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -310,8 +296,6 @@
 	dir = 8
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -334,8 +318,6 @@
 	icon_state = "intact"
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/item/storage/toolbox/electrical,
@@ -463,18 +445,12 @@
 /area/ship/adminships/engine_bay)
 "ic" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
@@ -489,8 +465,6 @@
 	dir = 4
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -533,8 +507,6 @@
 	icon_state = "intact-scrubbers"
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -574,8 +546,6 @@
 	req_access = list(103)
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -590,7 +560,6 @@
 /area/ship/adminships/medbay)
 "jz" = (
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc/alarms_hidden{
@@ -615,8 +584,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -652,8 +619,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -669,8 +634,6 @@
 /area/ship/adminships/engine_bay)
 "kC" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/closet/walllocker/emerglocker/west,
@@ -746,25 +709,18 @@
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ship/adminships/main_corridor)
 "lJ" = (
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc/alarms_hidden{
@@ -849,16 +805,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ship/adminships/engine_bay)
 "oc" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -1080,8 +1032,6 @@
 /area/ship/adminships/engine_bay)
 "sx" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -1173,8 +1123,6 @@
 	icon_state = "intact-scrubbers"
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -1226,8 +1174,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -1273,8 +1219,6 @@
 	icon_state = "intact-scrubbers"
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -1396,8 +1340,6 @@
 	icon_state = "intact-scrubbers"
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/carpet/sblucarpet,
@@ -1458,8 +1400,6 @@
 	dir = 4
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -1492,8 +1432,6 @@
 	dir = 4
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -1515,8 +1453,6 @@
 	req_access = list(103)
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -1595,8 +1531,6 @@
 	dir = 4
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -1627,8 +1561,6 @@
 /area/ship/adminships/engine_bay)
 "Cp" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -1655,13 +1587,9 @@
 	dir = 8
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -1725,7 +1653,6 @@
 	icon_state = "0-4"
 	},
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
@@ -1776,8 +1703,6 @@
 	dir = 4
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -1791,8 +1716,6 @@
 "Fb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/purple,
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/plating,
@@ -1807,8 +1730,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -1855,8 +1776,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -1917,13 +1836,9 @@
 	dir = 4
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -2075,8 +1990,6 @@
 /area/ship/adminships/engine_bay)
 "KC" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
@@ -2173,15 +2086,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/machinery/shield_capacitor/advanced,
 /obj/structure/cable/cyan,
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -2299,8 +2208,6 @@
 /area/ship/adminships/main_corridor)
 "NK" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/light_switch{
@@ -2318,8 +2225,6 @@
 	icon_state = "intact-scrubbers"
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/centcom{
@@ -2336,8 +2241,6 @@
 	pixel_x = 28
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -2508,7 +2411,6 @@
 	pixel_x = 28
 	},
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -2530,8 +2432,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -2541,8 +2441,6 @@
 /area/ship/adminships/engine_bay)
 "QF" = (
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -2692,7 +2590,6 @@
 /area/shuttle/adminshuttle)
 "TJ" = (
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc/alarms_hidden{
@@ -2704,8 +2601,6 @@
 /area/ship/adminships/corridor)
 "TK" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/table/borosilicate,
@@ -2747,13 +2642,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -2773,8 +2664,6 @@
 	icon_state = "bordercolor"
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -2792,8 +2681,6 @@
 	dir = 4
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -2969,8 +2856,6 @@
 	icon_state = "intact-scrubbers"
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/carpet/sblucarpet,

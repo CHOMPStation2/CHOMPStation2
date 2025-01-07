@@ -1066,7 +1066,6 @@
 	pixel_x = 24
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/camera/network/talon{
@@ -1235,7 +1234,6 @@
 	pixel_y = 28
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/brown_perforated,
@@ -1881,7 +1879,6 @@
 	icon_state = "16-0"
 	},
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable/yellow{
@@ -2279,7 +2276,6 @@
 /area/space)
 "pJ" = (
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc/talon{
@@ -2311,7 +2307,6 @@
 /area/space)
 "qe" = (
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc/talon{
@@ -2378,7 +2373,6 @@
 	anchored = 1
 	},
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/eris/dark/cyancorner,
@@ -2694,7 +2688,6 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable/yellow{
@@ -2876,7 +2869,6 @@
 /area/space)
 "yN" = (
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/smes/buildable/offmap_spawn{
@@ -2917,7 +2909,6 @@
 /area/space)
 "zx" = (
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc/talon{
@@ -3100,7 +3091,6 @@
 	icon_state = "16-0"
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/sensor{
@@ -3123,7 +3113,6 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/yellow{
@@ -3671,7 +3660,6 @@
 /area/space)
 "JC" = (
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc/talon{
@@ -3724,7 +3712,6 @@
 	icon_state = "16-0"
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/sensor{
@@ -3795,7 +3782,6 @@
 	icon_state = "16-0"
 	},
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/yellow{
@@ -4350,7 +4336,6 @@
 /area/space)
 "Se" = (
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/smes/buildable/offmap_spawn{
@@ -4428,7 +4413,6 @@
 	anchored = 1
 	},
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/eris/dark/cyancorner,

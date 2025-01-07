@@ -185,7 +185,6 @@
 	icon_state = "0-4"
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled/asteroid_steel,
@@ -317,8 +316,6 @@
 /area/tether_away/beach/jungle)
 "sP" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -580,8 +577,6 @@
 	icon_state = "danger"
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -912,8 +907,6 @@
 /area/tether_away/beach/jungle)
 "SX" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},

@@ -58,7 +58,6 @@
 /area/space)
 "ao" = (
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/solar,
@@ -779,7 +778,6 @@
 	icon_state = "0-8"
 	},
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/wall/rshull,
@@ -836,7 +834,6 @@
 	icon_state = "0-4"
 	},
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/wall/rshull,
@@ -1416,7 +1413,6 @@
 "iv" = (
 /obj/machinery/power/tracker,
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -1445,7 +1441,6 @@
 "iz" = (
 /obj/machinery/power/tracker,
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -1484,7 +1479,6 @@
 /area/space)
 "jz" = (
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc/talon{
@@ -2067,7 +2061,6 @@
 /area/space)
 "tY" = (
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/solar,
@@ -2089,7 +2082,6 @@
 	pixel_x = -24
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/closet/crate/plastic,
@@ -2249,7 +2241,6 @@
 	},
 /obj/structure/cable/heavyduty,
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/hull/airless,
@@ -2799,7 +2790,6 @@
 /area/space)
 "HF" = (
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/solar,
@@ -3327,7 +3317,6 @@
 "Qi" = (
 /obj/structure/catwalk,
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc/talon{
@@ -3357,7 +3346,6 @@
 "QJ" = (
 /obj/machinery/power/solar,
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating/eris/under/airless,
@@ -3383,7 +3371,6 @@
 	},
 /obj/structure/cable/heavyduty,
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/hull/airless,
@@ -3579,7 +3566,6 @@
 	icon_state = "0-2"
 	},
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/hull/airless,
@@ -3747,7 +3733,6 @@
 /area/space)
 "Xn" = (
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/heavyduty,

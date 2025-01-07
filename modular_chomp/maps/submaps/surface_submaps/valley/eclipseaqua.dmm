@@ -52,8 +52,6 @@
 /area/submap/eclipseaqua)
 "eb" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/effect/floor_decal/corner/grey,
@@ -109,8 +107,6 @@
 /area/submap/eclipseaqua)
 "iy" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/effect/floor_decal/corner/grey,
@@ -275,7 +271,6 @@
 	icon_state = "term"
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/floor_decal/corner/grey,
@@ -391,8 +386,6 @@
 /area/submap/eclipseaqua)
 "Ej" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/corner/grey,
@@ -486,7 +479,6 @@
 	icon_state = "term"
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/floor_decal/corner/grey,
@@ -779,13 +771,9 @@
 /area/submap/eclipseaqua)
 "Zm" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/corner/grey,

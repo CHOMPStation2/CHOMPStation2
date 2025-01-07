@@ -326,7 +326,6 @@
 /area/sc_away/fueldepot)
 "aR" = (
 /obj/structure/cable/green{
-	dir = 1;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
@@ -343,7 +342,6 @@
 	icon_state = "1-8"
 	},
 /obj/structure/cable/green{
-	dir = 1;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -365,7 +363,6 @@
 	dir = 10
 	},
 /obj/structure/cable/green{
-	dir = 1;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -540,7 +537,6 @@
 /area/sc_away/fueldepot)
 "bq" = (
 /obj/structure/cable/green{
-	dir = 1;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/aux{
@@ -580,7 +576,6 @@
 	dir = 10
 	},
 /obj/structure/cable/green{
-	dir = 1;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/green{
@@ -591,7 +586,6 @@
 /area/sc_away/fueldepot)
 "bw" = (
 /obj/structure/cable/green{
-	dir = 1;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/visible/fuel{
@@ -603,7 +597,6 @@
 /area/sc_away/fueldepot)
 "bx" = (
 /obj/structure/cable/green{
-	dir = 1;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -611,7 +604,6 @@
 /area/sc_away/fueldepot)
 "by" = (
 /obj/structure/cable/green{
-	dir = 1;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
@@ -628,7 +620,6 @@
 	dir = 8
 	},
 /obj/structure/cable/green{
-	dir = 1;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -642,7 +633,6 @@
 	dir = 8
 	},
 /obj/structure/cable/green{
-	dir = 1;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -689,7 +679,6 @@
 /area/sc_away/fueldepot)
 "bF" = (
 /obj/structure/cable/green{
-	dir = 1;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
@@ -700,7 +689,6 @@
 /area/sc_away/fueldepot)
 "bG" = (
 /obj/structure/cable/green{
-	dir = 1;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
@@ -711,7 +699,6 @@
 /area/sc_away/fueldepot)
 "bH" = (
 /obj/structure/cable/green{
-	dir = 1;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/visible/fuel{
@@ -729,7 +716,6 @@
 	dir = 6
 	},
 /obj/structure/cable/green{
-	dir = 1;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/green{
@@ -998,7 +984,6 @@
 	dir = 5
 	},
 /obj/structure/cable/green{
-	dir = 1;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -1452,7 +1437,6 @@
 	icon_state = "1-2"
 	},
 /obj/structure/cable/green{
-	dir = 1;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/visible/fuel,
@@ -1529,7 +1513,6 @@
 	dir = 8
 	},
 /obj/structure/cable/green{
-	dir = 1;
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
@@ -1810,7 +1793,6 @@
 	pixel_x = 24
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/techmaint,

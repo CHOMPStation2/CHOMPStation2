@@ -74,8 +74,6 @@
 /area/submap/debris1)
 "fp" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	tag = ""
 	},
@@ -708,8 +706,6 @@
 /area/submap/debris1)
 "TO" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/template_noop,

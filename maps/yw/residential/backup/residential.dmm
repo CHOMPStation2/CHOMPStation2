@@ -970,7 +970,6 @@
 	target_temp = 233.15
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/carpet/oracarpet,
@@ -1066,8 +1065,6 @@
 /area/residential/ship_bay)
 "dr" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2";
 	pixel_y = 0
 	},
@@ -1266,8 +1263,6 @@
 "dV" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2";
 	pixel_y = 0
 	},
@@ -1321,8 +1316,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2";
 	pixel_y = 0
 	},
@@ -1449,8 +1442,6 @@
 /area/residential/ship_bay)
 "ex" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -1460,21 +1451,15 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/reinforced,
 /area/residential/ship_bay)
 "ez" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/reinforced,
@@ -1485,8 +1470,6 @@
 	pixel_y = -25
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/reinforced,
@@ -1494,8 +1477,6 @@
 "eB" = (
 /obj/machinery/light,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/reinforced,
@@ -1545,8 +1526,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -1584,8 +1563,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
@@ -1685,8 +1662,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor/glass/hidden,
@@ -1792,8 +1767,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/light{
@@ -2112,7 +2085,6 @@
 	pixel_x = -28
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2";
 	pixel_y = 0
 	},
@@ -2120,8 +2092,6 @@
 /area/residential/powerroom)
 "gy" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -2243,8 +2213,6 @@
 /area/residential/lobby)
 "gO" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -2332,8 +2300,6 @@
 /area/residential/powerroom)
 "hb" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2";
 	pixel_y = 0
 	},
@@ -2377,8 +2343,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/white,
@@ -2396,8 +2360,6 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
@@ -2421,8 +2383,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -2437,8 +2397,6 @@
 /obj/machinery/door/airlock/engineering,
 /obj/machinery/door/blast/regular,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2";
 	pixel_y = 0
 	},
@@ -2466,8 +2424,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -2538,8 +2494,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/light{
@@ -2560,8 +2514,6 @@
 /area/residential/powerroom)
 "hE" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2";
 	pixel_y = 0
 	},
@@ -2625,8 +2577,6 @@
 "hL" = (
 /obj/machinery/door/airlock/engineering,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2";
 	pixel_y = 0
 	},
@@ -2640,16 +2590,12 @@
 /area/residential/corridors)
 "hN" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled,
@@ -2669,8 +2615,6 @@
 /area/residential/mansion)
 "hQ" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/carpet,
@@ -2738,8 +2682,6 @@
 /area/residential/corridors)
 "ia" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2";
 	pixel_y = 0
 	},
@@ -2834,8 +2776,6 @@
 /area/residential/docking_lobby)
 "ij" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -2852,8 +2792,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -2863,8 +2801,6 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -2882,8 +2818,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -2899,8 +2833,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -2918,8 +2850,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -2932,13 +2862,10 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
 /obj/structure/cable{
-	dir = 4;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled,
@@ -2949,8 +2876,6 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -2963,8 +2888,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -2978,8 +2901,6 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -3007,8 +2928,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -3027,8 +2946,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -3037,8 +2954,6 @@
 "ix" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -3046,8 +2961,6 @@
 /area/residential/corridors)
 "iy" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -3055,8 +2968,6 @@
 /area/residential/corridors)
 "iz" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -3065,8 +2976,6 @@
 /area/residential/corridors)
 "iA" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -3079,8 +2988,6 @@
 	req_access = list(8100)
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
@@ -3216,8 +3123,6 @@
 /area/residential/docking_lobby)
 "iR" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
@@ -3307,8 +3212,6 @@
 /area/residential/room3)
 "jd" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -3322,8 +3225,6 @@
 	dir = 6
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -3338,8 +3239,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -3355,8 +3254,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -3368,8 +3265,6 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -3386,8 +3281,6 @@
 "jk" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -3447,8 +3340,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -3617,8 +3508,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -3634,8 +3523,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -3650,8 +3537,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -3841,8 +3726,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
@@ -3881,8 +3764,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -3908,8 +3789,6 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable{
@@ -3933,8 +3812,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -3949,8 +3826,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -3965,8 +3840,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -3983,8 +3856,6 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -4000,8 +3871,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -4017,8 +3886,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/wood,
@@ -4121,8 +3988,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -4139,8 +4004,6 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -4201,8 +4064,6 @@
 /area/residential/room5)
 "lb" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/wood,
@@ -4253,8 +4114,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -4360,8 +4219,6 @@
 /area/residential/corridors)
 "ly" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/wall,
@@ -4407,8 +4264,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating,
@@ -4517,8 +4372,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -4529,8 +4382,6 @@
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable{
@@ -4554,8 +4405,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -4632,8 +4481,6 @@
 /area/residential/room3)
 "lZ" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/mopbucket,
@@ -4732,8 +4579,6 @@
 /area/residential/room3)
 "mm" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock,
@@ -5458,8 +5303,6 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
@@ -5544,8 +5387,6 @@
 	name = "Thermal Regulator Vent"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2";
 	pixel_y = 0
 	},
@@ -5784,8 +5625,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -5801,8 +5640,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -5832,8 +5669,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -6135,8 +5970,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -6151,8 +5984,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -6167,8 +5998,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -6186,8 +6015,6 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -6203,8 +6030,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -6220,8 +6045,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/lino,
@@ -6333,8 +6156,6 @@
 	req_access = list(8006)
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -6367,8 +6188,6 @@
 /area/residential/room6)
 "qx" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/lino,
@@ -6421,8 +6240,6 @@
 /area/residential/corridors)
 "qG" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/wall,
@@ -6443,8 +6260,6 @@
 /area/residential/room6)
 "qJ" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/closet/crate/bin,
@@ -6486,8 +6301,6 @@
 /area/residential/room6)
 "qQ" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/flora/pottedplant{
@@ -6548,8 +6361,6 @@
 /area/residential/room6)
 "qY" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/wood,
@@ -6988,8 +6799,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
