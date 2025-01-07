@@ -1,4 +1,5 @@
 //Time to add our own awesome guns! >:D
+// Cutting out a bunch of guns that have little reason to exist, and renaming others. Leaving the Combloc stuff alone though, since its used in the gateway. -- Serdy/Ocelot
 /obj/item/gun/projectile/fiveseven
 	name = "Five-seven handgun"
 	desc = "A unique pistol that fires 5.7x28mm instead of typical handgun cartridges"
@@ -107,7 +108,8 @@
 
 //AK Variants
 
-/obj/item/gun/projectile/automatic/serdy/asval
+/*
+/obj/item/gun/projectile/automatic/serdy/asval //Banished. -- Serdy/Ocelot
 	name = "AS-VAL"
 	desc = "A somewhat competent remake of an ancient russian assault rifle. Commonly found in the hands of criminals, and on pan-slavic rimworlds. Integrally suppressed, chambered in 7.62x39mm."
 	caliber = "9x39mm"
@@ -125,6 +127,7 @@
 	w_class = ITEMSIZE_HUGE
 	one_handed_penalty = 50
 	fire_sound = "sound/weapons/serdy/ak74.ogg"
+*/
 
 /obj/item/gun/projectile/automatic/serdy/krinkov
 	name = "Krinkov"
@@ -152,7 +155,7 @@
 
 /obj/item/gun/projectile/automatic/serdy/akm
 	name = "AKM"
-	desc = "The tried and true, old fashioned chatterbox. Ivan's favorite. Best used while at least somewhat inebriated. Chambered in 7.62x39mm."
+	desc = "An ancient, iconic rifle, that has truly earned itself a place in every corner of the galaxy. This can't be an original, but it's a faithful copy. Best used while somewhat inebriated. Chambered in 7.62x39mm."
 	caliber = "7.62x39mm"
 	item_icons = list(
 		slot_l_hand_str = 'icons/mob/items/lefthand_guns_ch.dmi',
@@ -256,7 +259,7 @@
 
 /obj/item/gun/projectile/automatic/serdy/hunter
 	name = "SOK-94"
-	desc = "Otherwise known as a Vepr Super. An AK pattern rifle, based on the beefier RPK chassis, to handle larger caliber rounds. Like an SVD but cooler. Chambered in 7.62x54mmR."
+	desc = "Otherwise known as a Vepr Super. This pan-slavic rifle is very accurate, and very deadly. Like an SVD but cooler. Chambered in 7.62x54mmR."
 	caliber = "7.62x54mmR"
 	item_icons = list(
 		slot_l_hand_str = 'icons/mob/items/lefthand_guns_ch.dmi',
@@ -290,7 +293,8 @@
 
 // AR Variants
 
-/obj/item/gun/projectile/automatic/serdy/m16a2
+/*
+/obj/item/gun/projectile/automatic/serdy/m16a2 //Banished. -- Serdy/Ocelot
 	name = "M16A2"
 	desc = "A favorite service rifle everywhere, even today. It might be a reproduction, but Eugene Stoner smiles upon every man or woman who wields this beautiful democracy dispensing machine, even if it's never seen the soil of Terra, and never will. Chambered in 5.56x45mm."
 	caliber = "5.56x45mm"
@@ -337,6 +341,7 @@
 	w_class = ITEMSIZE_HUGE
 	one_handed_penalty = 50
 	fire_sound = "sound/weapons/serdy/m41a.ogg"
+*/
 
 /obj/item/gun/projectile/automatic/serdy/patriot
 	name = "Patriot"
@@ -362,7 +367,8 @@
 	w_class = ITEMSIZE_LARGE
 	one_handed_penalty = 40
 
-/obj/item/gun/projectile/automatic/serdy/ar10
+/*
+/obj/item/gun/projectile/automatic/serdy/ar10 //Banished. -- Serdy/Ocelot
 	name = "AR-10"
 	desc = "A semi-auto replica of an original AR-10. The precursor to the M16 and the M4 that everyone loves. Chambered in 7.62x51mm."
 	caliber = "7.62mm"
@@ -376,6 +382,7 @@
 	w_class = ITEMSIZE_HUGE
 	one_handed_penalty = 60
 	fire_sound = "sound/weapons/serdy/sks.ogg"
+*/
 
 //Other rifles
 
@@ -402,6 +409,7 @@
 	w_class = ITEMSIZE_HUGE
 	one_handed_penalty = 50
 	fire_sound = "sound/weapons/serdy/m41a.ogg"
+	description_fluff = "Scarborough Arms, a specialist high-end weapons manufacturer based out of Titan, Sol. Scarborough has resisted numerous efforts by Trans-Stellars to acquire the brand since its founding in 2511, and has gained a dedicated following among a certain flavor of private operative."
 
 /obj/item/gun/projectile/automatic/serdy/m41a //This gun is pretty overpowered. Leaving it as an admin spawn. Might even interfere with lore.
 	name = "M41A"
@@ -426,10 +434,12 @@
 	w_class = ITEMSIZE_HUGE
 	one_handed_penalty = 50
 	fire_sound = "sound/weapons/serdy/m41a.ogg"
+	description_fluff = "Terran Armories, established by humanity sometime around their first forays into FTL travel, currently based on Europa, within the Sol sector. They have a galaxy spanning reputation for producing some of the best firearms on the market, specializing in caseless weapons systems, and have been the primary supplier of firearms to the Sol Central Government since its inception."
 
 /obj/item/gun/projectile/automatic/serdy/t12 //This gun is pretty overpowered. Leaving it as an admin spawn.
 	name = "T-12"
-	desc = "The standard issue rifle of both the SGC and the USDF nowadays, alongside the newer versions of the M41A/2. A caseless version of the classic G36E. Some folk call it the lego gun because of how light it is, even when loaded. Chambered in 10x24mm Caseless."
+	desc = "The standard issue rifle of both the SGC and the USDF nowadays, alongside the newer versions of the M41A/2. Some folk call it the lego gun because of how light it is, even when loaded. Chambered in 10x24mm Caseless."
+	description_fluff = "Terran Armories, established by humanity sometime around their first forays into FTL travel, currently based on Europa, within the Sol sector. They have a galaxy spanning reputation for producing some of the best firearms on the market, specializing in caseless weapons systems, and have been the primary supplier of firearms to the Sol Central Government since its inception."
 	caliber = "10x24mm"
 	magazine_type = /obj/item/ammo_magazine/t12
 	allowed_magazines = list(/obj/item/ammo_magazine/t12)
@@ -445,7 +455,8 @@
 	one_handed_penalty = 50
 	fire_sound = "sound/weapons/serdy/type901.ogg"
 
-/obj/item/gun/projectile/automatic/serdy/fal
+/*
+/obj/item/gun/projectile/automatic/serdy/fal //Banished. -- Serdy/Ocelot
 	name = "FN-FAL"
 	desc = "The right arm of the free galaxy. Chambered in 7.62x51mm."
 	caliber = "7.62mm"
@@ -459,6 +470,7 @@
 	w_class = ITEMSIZE_HUGE
 	one_handed_penalty = 40
 	fire_sound = "sound/weapons/serdy/sks.ogg"
+*/
 
 /obj/item/gun/projectile/automatic/serdy/keltec
 	name = "RDB-S"
@@ -474,6 +486,7 @@
 	w_class = ITEMSIZE_LARGE
 	one_handed_penalty = 40
 	fire_sound = "sound/weapons/serdy/sks.ogg"
+	description_fluff = "Terran Armories, established by humanity sometime around their first forays into FTL travel, currently based on Europa, within the Sol sector. They have a galaxy spanning reputation for producing some of the best firearms on the market, specializing in caseless weapons systems, and have been the primary supplier of firearms to the Sol Central Government since its inception."
 
 /obj/item/gun/projectile/automatic/serdy/keltec/black
 	icon_state = "keltecB"
@@ -490,8 +503,8 @@
 /obj/item/gun/projectile/automatic/serdy/keltec/tan
 	icon_state = "keltecD"
 	desc = "A snazzy survival rifle, small enough to fit into a backpack. Despite it's odd shape, it's pretty comfortable in the hands. This one is coyote tan. Chambered in 5.56x45mm."
-
-/obj/item/gun/projectile/automatic/serdy/sks 	//Reminder to myself to make sure this works and also to make sure that people are able to empty the internal mag
+/*
+/obj/item/gun/projectile/automatic/serdy/sks 	//Reminder to myself to make sure this works and also to make sure that people are able to empty the internal mag //Banished. -- Serdy/Ocelot
 	name = "SKS"
 	desc = "Just looking at it makes you want to buy a tacticool turtleneck, go into the woods, and -operate-. Chambered in 7.62x39mm."
 	caliber = "7.62x39mm"
@@ -505,6 +518,7 @@
 	w_class = ITEMSIZE_HUGE
 	one_handed_penalty = 60
 	fire_sound = "sound/weapons/serdy/sks.ogg"
+*/
 
 /obj/item/gun/projectile/automatic/serdy/mosin
 	name = "Mosin Nagant"
@@ -603,6 +617,7 @@
 	sound_eject = 'sound/weapons/ballistics/boltactionopen.ogg'
 	sound_chamber = 'sound/weapons/ballistics/boltactionclose.ogg'
 	fire_sound = "sound/weapons/serdy/sks.ogg"
+	description_fluff = "Scarborough Arms, a specialist high-end weapons manufacturer based out of Titan, Sol. Scarborough has resisted numerous efforts by Trans-Stellars to acquire the brand since its founding in 2511, and has gained a dedicated following among a certain flavor of private operative."
 
 /obj/item/gun/projectile/automatic/serdy/awp/ui_action_click()
 	scope()
@@ -615,8 +630,9 @@
 	toggle_scope(2.0)
 
 /obj/item/gun/projectile/automatic/serdy/hectate
-	name = "Hectate II"
-	desc = "An old world anti material rifle. Ideal for dealing with mechs, armored personnel, and space dragons. Chambered in .50 BMG."
+	name = "AAMR-II"
+	desc = "A cumbersome bolt action anti material rifle, manufactured by Terran Armories. Ideal for dealing with mechs, armored personnel, and space dragons. Chambered in .50 BMG."
+	description_fluff = "Terran Armories, established by humanity sometime around their first forays into FTL travel, currently based on Europa, within the Sol sector. They have a galaxy spanning reputation for producing some of the best firearms on the market, specializing in caseless weapons systems, and have been the primary supplier of firearms to the Sol Central Government since its inception."
 	caliber = ".50 BMG"
 	item_icons = list(
 		slot_l_hand_str = 'icons/mob/items/lefthand_guns_ch.dmi',
@@ -678,8 +694,8 @@
 	fire_sound = "sound/weapons/serdy/ak74.ogg"
 
 /obj/item/gun/projectile/automatic/serdy/tkb408
-	name = "TKB-408"
-	desc ="An odd, bullpup, slavic assault rifle from some distant rimworld. Very sturdy, unbeleivably reliable. Chambered in 7.62x39mm."
+	name = "Obj. 408"
+	desc ="An odd bullpup assault rifle of slavic origin, from some distant rimworld. Very sturdy, and unbeleivably reliable, though a bit unergonomic. Chambered in 7.62x39mm."
 	caliber = "7.62x39mm"
 	magazine_type = /obj/item/ammo_magazine/akm
 	allowed_magazines = list(/obj/item/ammo_magazine/akm)
@@ -697,7 +713,7 @@
 	fire_sound = "sound/weapons/serdy/ak74.ogg"
 
 /obj/item/gun/projectile/automatic/serdy/groza
-	name = "OTs-14"
+	name = "Minotavr"
 	desc = "A strangely ergonomic bullpup version of an AK. Commonly found in Pan-slavic speaking regions of space. All of the inscriptions on this thing are in pan-slavic. Chambered in 7.62x39mm."
 	caliber = "7.62x39mm"
 	magazine_type = /obj/item/ammo_magazine/akm
@@ -714,9 +730,9 @@
 	fire_sound = "sound/weapons/serdy/ak74.ogg"
 
 /obj/item/gun/projectile/automatic/serdy/plamya
-	name = "WKHM 'Plamya' Mk. 1"
+	name = "Plamya Mk. 1"
 	desc = "The original Plamya assault rifle, produced by WKHM back in the 2330's. Highly sought after for their collectability, and their superb reliability. They don't quite make them like they used to. It may not fire as fast as the newer ones, but these old models haven't survived this long for no reason. This one has a classic walnut thumbhole stock and foregrip. It has a heavy titanium chassis, durasteel bolt, and the original style 'PPSh' heatshield. The gun is dated 2336, and bears the 'WKHM Endurance' arkship's production stamp on the buttstock. 'A light in the dark' is stamped into the receiver. Chambered in 9x39mm."
-	description_fluff = "WKHM, is a minor arms company that has been around for quite some time, established in 2408. Known for being one of the many suppliers of weapons to dangerous worlds on the rim, and a part of the FTU. They produce a large variety of firearms, strike craft, and armored vehicles to fufill various their various contracts, and are largely migrant, moving wherever the money is. Found almost entirely on mobile production ships and various escort craft. Identifiable by their logo, a red Omega symbol with a black or white W in the middle. The sheer quantity of their firearms produced ensures they can be found.. just about anywhere, and they are very sought after by pirates for their reliability."
+	description_fluff = "WKHM, is a minor arms company that has been around for quite some time, established in 2208. Known for being one of the many suppliers of weapons to dangerous worlds on the rim, and a part of the FTU. They produce a large variety of firearms, strike craft, and armored vehicles to fufill various their various contracts, and are largely migrant, moving wherever the money is. Found almost entirely on mobile production ships and various escort craft. Identifiable by their logo, a red Omega symbol with a black or white W in the middle. The sheer quantity of their firearms produced ensures they can be found.. just about anywhere, and they are very sought after by pirates for their reliability."
 	caliber = "9x39mm"
 	magazine_type = /obj/item/ammo_magazine/plamya
 	allowed_magazines = list(/obj/item/ammo_magazine/plamya)
@@ -734,7 +750,7 @@
 	fire_sound = "sound/weapons/serdy/plamya.ogg"
 
 /obj/item/gun/projectile/automatic/serdy/plamya/mk2
-	name = "WKHM 'Plamya' Mk. 2"
+	name = "Plamya Mk. 2"
 	icon_state = "plamya"
 	desc = "An old school assault rifle. A favorite on the rimworld for it's blisteringly high rate of fire. One of the best selling products of W-K Heavy Manufacturing. Virtually impossible to break. The gold standard, with a rosewood thumbhole stock, a full length barrel, and an improved heatshield. The most mass produced firearm in WKHM's lineup. This one bears the 'WKHM Adamant' arkship's production stamp. Chambered in 9x39mm."
 	firemodes = list(
@@ -744,7 +760,7 @@
 	muzzle_velocity = 305
 
 /obj/item/gun/projectile/automatic/serdy/plamya/mk3
-	name = "WKHM 'Plamya' Mk. 3"
+	name = "Plamya Mk. 3"
 	icon_state = "plamyac"
 	desc = "An old school assault rifle with a modern twist. A favorite on the rimworld for it's blisteringly high rate of fire. One of the best selling products of W-K Heavy Manufacturing. Virtually impossible to break. This is a newer variant, with a fully synthetic stock, and a shorter barrel. The serial number and production stamp has been sanded off. Chambered in 9x39mm."
 	firemodes = list(
@@ -756,9 +772,9 @@
 //shotguns
 
 /obj/item/gun/projectile/automatic/serdy/strela
-	name = "WKHM 'Strela'"
+	name = "Strela"
 	desc = "A fully automatic, 12 gauge assault shotgun, that goes by many names. The Strela, The Bear, The Mule- The list goes on. If the Plamya is the scalpel, This heavy chunk of forged steel and titanium is the sledgehammer. Bring a shoulder pad and some tramadol. This one has a nice walnut thumbhole stock, and an AK style fore end. It also bears the 'WKHM Endurance' arkship's production stamp. Chambered in 12 gauge."
-	description_fluff = "WKHM, is a minor arms company that has been around for quite some time, established in 2408. Known for being one of the many suppliers of weapons to dangerous worlds on the rim, and a part of the FTU. They produce a large variety of firearms, strike craft, and armored vehicles to fufill various their various contracts, and are largely migrant, moving wherever the money is. Found almost entirely on mobile production ships and various escort craft. Identifiable by their logo, a red Omega symbol with a black or white W in the middle. The sheer quantity of their firearms produced ensures they can be found.. just about anywhere, and they are very sought after by pirates for their reliability."
+	description_fluff = "WKHM, is a minor arms company that has been around for quite some time, established in 2208. Known for being one of the many suppliers of weapons to dangerous worlds on the rim, and a part of the FTU. They produce a large variety of firearms, strike craft, and armored vehicles to fufill various their various contracts, and are largely migrant, moving wherever the money is. Found almost entirely on mobile production ships and various escort craft. Identifiable by their logo, a red Omega symbol with a black or white W in the middle. The sheer quantity of their firearms produced ensures they can be found.. just about anywhere, and they are very sought after by pirates for their reliability."
 	caliber = "12g"
 	magazine_type = /obj/item/ammo_magazine/strela
 	allowed_magazines = list(/obj/item/ammo_magazine/strela)
@@ -778,7 +794,8 @@
 
 /obj/item/gun/projectile/automatic/serdy/spas35
 	name = "Spas-35"
-	desc = "A complex pump shotgun, modelled after the classic Spas-12. Upgraded with durable parts to fix the flaws of the classic. Also sometimes called the T-35, if you're with the SGC or the USDF. The absolute king of CQC encounters. 8 round capacity, chambered in 12 gauge."
+	desc = "A complex pump/semi auto shotgun, manufactured by Terran Armories. Also sometimes called the T-35, if you're with the SGC or the USDF. The absolute king of CQC encounters. 8 round capacity, chambered in 12 gauge."
+	description_fluff = "Terran Armories, established by humanity sometime around their first forays into FTL travel, currently based on Europa, within the Sol sector. They have a galaxy spanning reputation for producing some of the best firearms on the market, specializing in caseless weapons systems, and have been the primary supplier of firearms to the Sol Central Government since its inception."
 	caliber = "12g"
 	item_icons = list(
 		slot_l_hand_str = 'icons/mob/items/lefthand_guns_ch.dmi',
@@ -826,8 +843,9 @@
 	fire_sound = "sound/weapons/Gunshot1.ogg"
 
 /obj/item/gun/projectile/automatic/serdy/mp5
-	name = "MP5"
-	desc = "A favorite of law enforcement and corporate security across the galaxy for centuries. This old H&K design has survived the test of time. And while in many places it has been replaced long ago, it still stands as a reliable weapon platform. No need to fix what isn't broken. Chambered in 9mm."
+	name = "MP-25"
+	desc = "An MP-25, from Terran Armories. A favorite of law enforcement and corporate security across the galaxy for centuries. Chambered in 9mm."
+	description_fluff = "Terran Armories, established by humanity sometime around their first forays into FTL travel, currently based on Europa, within the Sol sector. They have a galaxy spanning reputation for producing some of the best firearms on the market, specializing in caseless weapons systems, and have been the primary supplier of firearms to the Sol Central Government since its inception."
 	caliber = "9mm"
 	item_icons = list(
 		slot_l_hand_str = 'icons/mob/items/lefthand_guns_ch.dmi',
@@ -865,7 +883,7 @@
 	is_long = FALSE
 
 /obj/item/gun/projectile/automatic/serdy/vityaz
-	name = "WKHM 'Vityaz'"
+	name = "Vityaz"
 	desc = "A swarm of angry bees. The Plamya's baby brother. With 12 total moving parts, including the trigger mechanism, this gun was built with one purpose. Longevity and reliability. Commonly found in the hands of private security, criminals, and law enforcement alike across many worlds. This one is unmarked. Chambered in 10mm."
 	description_fluff = "WKHM, is a minor arms company that has been around for quite some time, established in 2408. Known for being one of the many suppliers of weapons to dangerous worlds on the rim, and a part of the FTU. They produce a large variety of firearms, strike craft, and armored vehicles to fufill various their various contracts, and are largely migrant, moving wherever the money is. Found almost entirely on mobile production ships and various escort craft. Identifiable by their logo, a red Omega symbol with a black or white W in the middle. The sheer quantity of their firearms produced ensures they can be found.. just about anywhere, and they are very sought after by pirates for their reliability."
 	caliber = "10mm"
@@ -885,9 +903,9 @@
 	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/gun/projectile/automatic/serdy/vityazb
-	name = "WKHM 'Vityaz-B'"
+	name = "Vityaz-B"
 	desc = "A swarm of angry bees. The Plamya's baby brother. With 12 total moving parts, including the trigger mechanism, this gun was built with one purpose. Longevity and reliability. Commonly found in the hands of private security, criminals, and law enforcement alike across many worlds. This one is a B model, made to fire faster, at the expense of reliability. Chambered in 10mm."
-	description_fluff = "WKHM, is a minor arms company that has been around for quite some time, established in 2408. Known for being one of the many suppliers of weapons to dangerous worlds on the rim, and a part of the FTU. They produce a large variety of firearms, strike craft, and armored vehicles to fufill various their various contracts, and are largely migrant, moving wherever the money is. Found almost entirely on mobile production ships and various escort craft. Identifiable by their logo, a red Omega symbol with a black or white W in the middle. The sheer quantity of their firearms produced ensures they can be found.. just about anywhere, and they are very sought after by pirates for their reliability."
+	description_fluff = "WKHM, is a minor arms company that has been around for quite some time, established in 2208. Known for being one of the many suppliers of weapons to dangerous worlds on the rim, and a part of the FTU. They produce a large variety of firearms, strike craft, and armored vehicles to fufill various their various contracts, and are largely migrant, moving wherever the money is. Found almost entirely on mobile production ships and various escort craft. Identifiable by their logo, a red Omega symbol with a black or white W in the middle. The sheer quantity of their firearms produced ensures they can be found.. just about anywhere, and they are very sought after by pirates for their reliability."
 	caliber = "10mm"
 	magazine_type = /obj/item/ammo_magazine/m10mm
 	allowed_magazines = list(/obj/item/ammo_magazine/m10mm)
@@ -909,9 +927,9 @@
 //LMGs
 
 /obj/item/gun/projectile/automatic/serdy/molniya //this is essentially a space MG42
-	name = "WKHM 'Molniya'"
+	name = "Molniya"
 	desc = "A light machinegun manufactured by WKHM for various paramilitaries, private security companies, and rimworld governments. Big, heavy, and with a fire rate similar to that of an MG42. Often used in emplacements and on top of armored vehicles, or as a squad support weapon. Nicknamed the 'Pig' or the 'Sawzall', this one has a solid oak stock, and bears the 'WKHM Adamant' arkship's production stamp. If you ever see this gun, there is no doubt shit's about to go down. Chambered in 7.62x51mm."
-	description_fluff = "WKHM, is a minor arms company that has been around for quite some time, established in 2408. Known for being one of the many suppliers of weapons to dangerous worlds on the rim, and a part of the FTU. They produce a large variety of firearms, strike craft, and armored vehicles to fufill various their various contracts, and are largely migrant, moving wherever the money is. Found almost entirely on mobile production ships and various escort craft. Identifiable by their logo, a red Omega symbol with a black or white W in the middle. The sheer quantity of their firearms produced ensures they can be found.. just about anywhere, and they are very sought after by pirates for their reliability."
+	description_fluff = "WKHM, is a minor arms company that has been around for quite some time, established in 2208. Known for being one of the many suppliers of weapons to dangerous worlds on the rim, and a part of the FTU. They produce a large variety of firearms, strike craft, and armored vehicles to fufill various their various contracts, and are largely migrant, moving wherever the money is. Found almost entirely on mobile production ships and various escort craft. Identifiable by their logo, a red Omega symbol with a black or white W in the middle. The sheer quantity of their firearms produced ensures they can be found.. just about anywhere, and they are very sought after by pirates for their reliability."
 	caliber = "7.62mm"
 	burst_delay = 1
 	magazine_type = /obj/item/ammo_magazine/molniya
@@ -1087,7 +1105,7 @@
 //Pistols
 
 /obj/item/gun/projectile/automatic/serdy/ssp4_silenced
-	name = "WKHM SSP4-S"
+	name = "SSP4-S"
 	desc = "A unique, high end service pistol carried by W-K security personnel in the outer rim, and various law enforcement agencies across the galaxy. Features a hidden ejector port, and an integral laser sight. Surprisingly reliable despite its unorthodox design. This one is unmarked and is suppressed. Due to the minimal amount of moving parts, this gun is almost completely silent when used with subsonic ammunition. Chambered in 10mm."
 	caliber = "10mm"
 	magazine_type = /obj/item/ammo_magazine/ssp4
@@ -1112,9 +1130,9 @@
 	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/gun/projectile/serdy_pistols/ssp4
-	name = "WKHM SSP4"
+	name = "SSP4"
 	desc = "A unique, high end service pistol carried by W-K security personnel in the outer rim, and various law enforcement agencies across the galaxy. Features a hidden ejector port, and an integral laser sight. Surprisingly reliable despite its unorthodox design. This one bears the 'WKHM Obsidian' arkship's production stamp. Chambered in 10mm."
-	description_fluff = "WKHM, is a minor arms company that has been around for quite some time, established in 2408. Known for being one of the many suppliers of weapons to dangerous worlds on the rim, and a part of the FTU. They produce a large variety of firearms, strike craft, and armored vehicles to fufill various their various contracts, and are largely migrant, moving wherever the money is. Found almost entirely on mobile production ships and various escort craft. Identifiable by their logo, a red Omega symbol with a black or white W in the middle. The sheer quantity of their firearms produced ensures they can be found.. just about anywhere, and they are very sought after by pirates for their reliability."
+	description_fluff = "WKHM, is a minor arms company that has been around for quite some time, established in 2208. Known for being one of the many suppliers of weapons to dangerous worlds on the rim, and a part of the FTU. They produce a large variety of firearms, strike craft, and armored vehicles to fufill various their various contracts, and are largely migrant, moving wherever the money is. Found almost entirely on mobile production ships and various escort craft. Identifiable by their logo, a red Omega symbol with a black or white W in the middle. The sheer quantity of their firearms produced ensures they can be found.. just about anywhere, and they are very sought after by pirates for their reliability."
 	caliber = "10mm"
 	magazine_type = /obj/item/ammo_magazine/ssp4
 	allowed_magazines = list(/obj/item/ammo_magazine/ssp4)
@@ -1122,6 +1140,14 @@
 	projectile_type = /obj/item/projectile/bullet/a10mm
 	muzzle_velocity = 405
 	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
+
+/obj/item/gun/projectile/serdy_pistols/ssp4/plum
+	name = "SSP4"
+	icon_state = "ssp4a1"
+
+/obj/item/gun/projectile/serdy_pistols/ssp4/black
+	name = "SSP4"
+	icon_state = "ssp4a2"
 
 /obj/item/gun/projectile/serdy_pistols/makarov
 	name = "Makarov PM"
@@ -1134,8 +1160,9 @@
 	muzzle_velocity = 315
 
 /obj/item/gun/projectile/serdy_pistols/vp70m
-	name = "VP70M"
-	desc = "Old Matilda. An ancient design, one of the first, if not the first entirely polymer framed pistols. Can commonly be found in the hands of.. well, anybody with access to a 3d printer. The designs for this pistol are absolutely everywhere, and it's still a favorite to this day, 500 some-odd years later. Chambered in 9mm."
+	name = "Matilda"
+	desc = "Old Matilda. A very old design, but still a solid choice of pistol. Can commonly be found in the hands of.. well, anybody with access to a 3d printer. The designs for this pistol are absolutely everywhere, and it's still a favorite to this day, 400 some-odd years later. Chambered in 9mm."
+	description_fluff = "Terran Armories, established by humanity sometime around their first forays into FTL travel, currently based on Europa, within the Sol sector. They have a galaxy spanning reputation for producing some of the best firearms on the market, specializing in caseless weapons systems, and have been the primary supplier of firearms to the Sol Central Government since its inception."
 	icon_state = "vp70"
 	caliber = "9mm"
 	magazine_type = /obj/item/ammo_magazine/m9mm/vp70
@@ -1149,8 +1176,9 @@
 	fire_sound = "sound/weapons/serdy/40pistol.ogg"
 
 /obj/item/gun/projectile/serdy_pistols/glock71
-	name = "Glock 71"
-	desc = "Following the same design for centuries, the Glock 71 is one of the most reliable sidearms you can buy for cheap these days. These things are everywhere, and for good reason. Chambered in 9mm."
+	name = "Glock 771"
+	desc = "Following the same rough design for centuries, the Glock 771 is one of the most reliable sidearms you can buy for cheap these days. These things are everywhere, and for good reason. Chambered in 9mm."
+	description_fluff = "Terran Armories, established by humanity sometime around their first forays into FTL travel, currently based on Europa, within the Sol sector. They have a galaxy spanning reputation for producing some of the best firearms on the market, specializing in caseless weapons systems, and have been the primary supplier of firearms to the Sol Central Government since its inception."
 	icon_state = "glock"
 	caliber = "9mm"
 	magazine_type = /obj/item/ammo_magazine/m9mm/large
@@ -1162,6 +1190,7 @@
 /obj/item/gun/projectile/serdy_pistols/tp23s
 	name = "TP-23 Terran Special"
 	desc = "A high end service pistol, that outclasses most of its type, due to its slick operation, ease of concealment, and its built in laser/flashlight combo, and its unusual choice of caliber. Spits some pretty nasty fireballs from the muzzle. Most often seen in the holsters of high ranking SGC, or NT officials. Chambered in .44 magnum."
+	description_fluff = "Terran Armories, established by humanity sometime around their first forays into FTL travel, currently based on Europa, within the Sol sector. They have a galaxy spanning reputation for producing some of the best firearms on the market, specializing in caseless weapons systems, and have been the primary supplier of firearms to the Sol Central Government since its inception."
 	icon_state = "tp23b"
 	caliber = ".44"
 	magazine_type = /obj/item/ammo_magazine/tp23s
@@ -1172,7 +1201,8 @@
 
 /obj/item/gun/projectile/serdy_pistols/tp23
 	name = "TP-23"
-	desc = "A classic service pistol, that outclasses most of its type, due to its slick operation, ease of concealment, and its built in laser/flashlight combo, and its unusual choice of caliber. Most often seen in the holsters of SGC and USDF troops and peacekeepers, or in the hands of NT security personnel with money to spend, and officers. Chambered in .45 ACP."
+	desc = "A classic service pistol, that outclasses most of its type, due to its slick operation, ease of concealment, and its built in laser/flashlight combo. Most often seen in the holsters of SGC and USDF troops and peacekeepers, or in the hands of NT security personnel with money to spend, and officers. Chambered in .45 ACP."
+	description_fluff = "Terran Armories, established by humanity sometime around their first forays into FTL travel, currently based on Europa, within the Sol sector. They have a galaxy spanning reputation for producing some of the best firearms on the market, specializing in caseless weapons systems, and have been the primary supplier of firearms to the Sol Central Government since its inception."
 	icon_state = "tp23"
 	caliber = ".45"
 	magazine_type = /obj/item/ammo_magazine/tp23/rubber
