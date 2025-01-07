@@ -60,3 +60,6 @@
   - rscadd: Science can now build and assemble the Pinnace and Baron Fighter Exosuits.
   Kashargul:
   - bugfix: over 10 known shadekin exploits...
+2025-01-07:
+  Kashargul:
+  - bugfix: arc vial projectiles not working
