@@ -132,7 +132,6 @@
 /area/submap/Chapel1)
 "aD" = (
 /obj/structure/cable/cyan{
-	d2 = 4;
 	dir = 1;
 	icon_state = "0-4"
 	},
@@ -423,7 +422,6 @@
 /area/submap/Chapel1)
 "bB" = (
 /obj/structure/cable/cyan{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/port_gen/pacman{
@@ -436,8 +434,6 @@
 /area/submap/Chapel1)
 "bC" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/industrial/warning/dust{
@@ -457,13 +453,9 @@
 /area/submap/Chapel1)
 "cQ" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	dir = 1;
 	icon_state = "2-8"
 	},
@@ -517,15 +509,12 @@
 /area/submap/Chapel1)
 "pp" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/wall/log_sif,
 /area/submap/Chapel1)
 "qO" = (
 /obj/structure/cable/cyan{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/rtg/advanced{
@@ -535,8 +524,6 @@
 	dir = 5
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	dir = 1;
 	icon_state = "2-8"
 	},
@@ -544,7 +531,6 @@
 /area/submap/Chapel1)
 "rm" = (
 /obj/structure/cable/cyan{
-	d2 = 4;
 	dir = 1;
 	icon_state = "0-4"
 	},
@@ -588,12 +574,9 @@
 	dir = 4
 	},
 /obj/structure/cable/cyan{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/effect/floor_decal/industrial/warning/dust/corner{
@@ -603,7 +586,6 @@
 /area/submap/Chapel1)
 "Eq" = (
 /obj/structure/cable/cyan{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/rtg/advanced{
@@ -630,8 +612,6 @@
 /area/submap/Chapel1)
 "OZ" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	dir = 4;
 	icon_state = "4-8"
 	},
@@ -651,7 +631,6 @@
 	input_level_max = 250000
 	},
 /obj/structure/cable/cyan{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor,
@@ -667,8 +646,6 @@
 /area/submap/Chapel1)
 "TH" = (
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/machinery/power/apc/hyper{
@@ -677,8 +654,6 @@
 	req_access = list(511)
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	dir = 4;
 	icon_state = "2-8"
 	},

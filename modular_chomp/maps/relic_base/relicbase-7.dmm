@@ -286,7 +286,6 @@
 /area/surface/outpost/shelter)
 "NF" = (
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/port_gen/pacman,
