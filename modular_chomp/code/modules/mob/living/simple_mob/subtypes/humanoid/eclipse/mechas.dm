@@ -268,7 +268,7 @@
 	specialattackprojectile = /obj/item/projectile/beam/midlaser
 	armor = list(melee = 90, bullet = 90, laser = 90, energy = 90, bomb = 90, bio = 100, rad = 100)
 	damage_threshold = 0 //So the wierd armor mechanic works
-	icon_state = "gygax_adv"
+	icon_state = "orb"
 	wreckage = /obj/structure/loot_pile/mecha/odd_gygax
 	special_attack_cooldown = 320
 
@@ -959,3 +959,90 @@
 	specialattackprojectile = /obj/item/projectile/energy/darkspike
 	addtimer(CALLBACK(src, PROC_REF(random_firing), target, 20, 1, 0.2 SECONDS), 0.5 SECONDS, TIMER_DELETE_ME)
 	attackcycle = 0
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/engimecha
+	name = "Eclipse Expirmental Mining Mecha"
+	health = 300
+	maxHealth = 300
+	specialattackprojectile = /obj/item/projectile/energy/excavate/weak
+	armor = list(melee = 30, bullet = 30, laser = 30, energy = 40, bomb = 90, bio = 100, rad = 100)
+	armor_soak = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
+	icon_state = "engi_spider"
+	shock_resist = 1
+	projectiletype = /obj/item/projectile/beam/chain_lightning
+	reload_max = 1
+	reload_time = 0.5 SECONDS
+	ranged_attack_delay = 2 SECONDS
+
+	glow_color = "#14ff20"
+	light_color = "#14ff20"
+	glow_range = 5
+	glow_intensity = 3
+
+	special_attack_cooldown = 120
+
+	pilot_type = /mob/living/simple_mob/humanoid/eclipse/head/engineer
+
+	var/rads = 5
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/engimecha/do_special_attack(atom/A)
+	rads += 15
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/engimecha/handle_special()
+	if(stat != DEAD)
+		irradiate()
+	..()
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/engimecha/proc/irradiate()
+	SSradiation.radiate(src, rads)
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/engimecha/ranged_pre_animation(atom/A)
+	Beam(get_turf(A), icon_state = "sniper_beam", time = 2 SECONDS, maxdistance = 15)
+	. = ..()
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/engimecha/shoot_target(atom/A)
+	set waitfor = FALSE
+
+	if(!istype(A) || QDELETED(A))
+		return
+
+	setClickCooldown(get_attack_speed())
+
+	face_atom(A)
+
+	var/atom/orig_targ = A
+
+	if(ranged_attack_delay)
+		A = get_turf(orig_targ)
+		ranged_pre_animation(A)
+		handle_attack_delay(A, ranged_attack_delay) // This will sleep this proc for a bit, which is why waitfor is false.
+
+	if(needs_reload)
+		if(reload_count >= reload_max)
+			try_reload()
+			return FALSE
+
+	/*
+	 * CHOMP Addition: This section here is (duplicated) special snowflake code because sniper does not call parent. Basically, this is a non-stupid version of the above intended for ranged mobs.
+	 * ranged_attack_delay is stupid because it sleeps the entire mob.
+	 * This new ranged_cooldown_time is smarter in the sense that it is an internalized timer. Try not to confuse the names.
+	*/
+	if(ranged_cooldown_time) //If you have a non-zero number in a mob's variables, this pattern begins.
+		if(ranged_cooldown <= world.time) //Further down, a timer keeps adding to the ranged_cooldown variable automatically.
+			visible_message(span_bolddanger("\The [src]") + " fires at \the [A]!") //Leave notice of shooting.
+			shoot(A) //Perform the shoot action
+			if(casingtype) //If the mob is designated to leave casings...
+				new casingtype(loc) //... leave the casing.
+			ranged_cooldown = world.time + ranged_cooldown_time + ((injury_level / 2) SECONDS) //Special addition here. This is a timer. Keeping updating the time after shooting. Add that ranged cooldown time specified in the mob to the world time.
+		return TRUE	//End these commands here.
+	// CHOMPAddition End
+
+	visible_message(span_bolddanger("\The [src]") + " fires at \the [orig_targ]!")
+	shoot(A)
+	if(casingtype)
+		new casingtype(loc)
+
+	if(ranged_attack_delay)
+		ranged_post_animation(A)
+
+	return TRUE

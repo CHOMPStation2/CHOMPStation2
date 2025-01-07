@@ -250,7 +250,7 @@ ANT STRUCTURES
 		var/mob/living/L = AM
 		if(L == /mob/living/simple_mob/animal/tyr/mineral_ants)
 			return
-		else if(L.m_intent == "run")
+		else if(L.m_intent == I_RUN)
 			L.visible_message(
 				span_danger("[L] steps in \the [src]."),
 				span_danger("You step in \the [src]!"),

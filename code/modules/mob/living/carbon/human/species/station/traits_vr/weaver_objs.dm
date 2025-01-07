@@ -44,7 +44,7 @@
 	layer = DIRTY_LAYER
 
 /obj/effect/weaversilk/floor/Initialize()
-	..()
+	. = ..()
 	icon_state = pick(possible_icon_states)
 
 /obj/effect/weaversilk/wall
@@ -55,11 +55,11 @@
 	density = TRUE
 
 /obj/effect/weaversilk/wall/Initialize()
-	..()
+	. = ..()
 	icon_state = pick(possible_icon_states)
 
 /obj/effect/weaversilk/wall/CanPass(atom/movable/mover, turf/target)
-	if(istype(mover, /mob/living/carbon/human))
+	if(ishuman(mover))
 		var/mob/living/carbon/human/H = mover
 		if(H.species.is_weaver)
 			return TRUE
@@ -96,13 +96,13 @@
 /obj/effect/weaversilk/trap/Crossed(atom/movable/AM as mob|obj)
 	if(AM.is_incorporeal())
 		return
-	if(istype(AM, /mob/living/carbon/human))
+	if(ishuman(AM))
 		var/mob/living/carbon/human/H = AM
 		if(H.species.is_weaver)
 			return
 	if(isliving(AM) && trap_active)
 		var/mob/living/L = AM
-		if(L.m_intent == "run")
+		if(L.m_intent == I_RUN)
 			L.visible_message(
 				span_danger("[L] steps on \the [src]."),
 				span_danger("You step on \the [src]!"),

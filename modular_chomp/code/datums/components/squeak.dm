@@ -101,7 +101,7 @@
 	if(CHECK_MOVE_LOOP_FLAGS(owner, MOVEMENT_LOOP_OUTSIDE_CONTROL))
 		return
 	*/
-	if(running == "walk")
+	if(running == I_WALK)
 		running = 0.25
 	else
 		running = 1

@@ -307,6 +307,12 @@
 /area/storage/emergency_storage
 	flags = AREA_ALLOW_CLOCKOUT | RAD_SHIELDED
 
+/area/medical/sc_patient_a
+	flags = RAD_SHIELDED
+
+/area/medical/sc_patient_b
+	flags = RAD_SHIELDED
+
 //Carrier Areas
 /area/expoutpost/suite1
 	flags = AREA_ALLOW_CLOCKOUT | RAD_SHIELDED

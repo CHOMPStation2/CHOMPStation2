@@ -10,3 +10,56 @@
   whooshboom:
   - rscadd: 'Added keybinds from TGstation to engineering (Ctrl-click: Toggle, Alt-click:
       Max)'
+2025-01-02:
+  Asher-42:
+  - bugfix: adds modules to med solgov hardsuit, due to it using the wrong obj path.
+2025-01-03:
+  Aroliacue:
+  - maptweak: Patient rooms in medbay now have rad-shielding.
+  Asher-42:
+  - bugfix: fixed small rpator miner/cargo sprites.
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: fixed sample containers being able to hold more samples if you use the
+      scoop functions
+  FluffMedic:
+  - rscadd: Added more stuff to Tyr
+  - rscadd: Some bonu stuff for wilderness
+  SilencedMP5A5:
+  - rscadd: Assorted Event mobs
+  - rscadd: Some Event related turfs
+  - rscadd: Event mob related sounds
+  - rscadd: A bunch of related icons
+2025-01-04:
+  CHOMPStation2StaffMirrorBot:
+  - qol: added consolidated versions of the campbell tattoos and modular longsock
+      markings
+  - rscadd: icon states for the black half-mask on vulp-base icons
+  FluffMedic:
+  - bugfix: fixed t-12 and  SR-25 Carbine ammo
+  Kashargul:
+  - bugfix: bonfire examine
+  whooshboom:
+  - qol: Reverts marish to audible condition. Happy marring!
+2025-01-05:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Drones now use robotact
+  - bugfix: A few byond:// hrefs for 516
+  FluffMedic:
+  - bugfix: Vepr Cell fix
+  whooshboom:
+  - rscadd: Similar keybinds to the recent pump additions are now on most atmospheric
+      devices.
+  - bugfix: Fixes issue where using the keybind on a pump would not update the icon.
+2025-01-06:
+  CHOMPStation2StaffMirrorBot:
+  - qol: Tgui-say colors adjusted for better contrast
+  - qol: renamed antagonism tag and hid most of the options there as they're not relevant
+      for our purposes
+  - qol: adds mirrors to all resleeving and autoresleeving rooms
+  - rscadd: Fighter Exosuits now have landing gear.
+  - rscadd: Science can now build and assemble the Pinnace and Baron Fighter Exosuits.
+  Kashargul:
+  - bugfix: over 10 known shadekin exploits...
+2025-01-07:
+  Kashargul:
+  - bugfix: arc vial projectiles not working

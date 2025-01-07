@@ -14,9 +14,9 @@ SUBSYSTEM_DEF(xenoarch)
 	var/list/artifact_spawning_turfs = list()
 	var/list/digsite_spawning_turfs = list()
 
-/datum/controller/subsystem/xenoarch/Initialize() // CHOMPEdit
+/datum/controller/subsystem/xenoarch/Initialize()
 	SetupXenoarch()
-	return SS_INIT_SUCCESS // CHOMPEdit
+	return SS_INIT_SUCCESS
 
 /datum/controller/subsystem/xenoarch/Recover()
 	if (istype(SSxenoarch.artifact_spawning_turfs))
