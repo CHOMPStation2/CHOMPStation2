@@ -1406,6 +1406,12 @@
 //caseless.dm
 /obj/item/gun/projectile/caseless
 	bolt_name="charging handle"
+	icon = 'icons/obj/64x32guns_ch.dmi'
+	icon_state = "caseless"
+	icon_expected_height = 32
+	icon_expected_width = 64
+	var/is_picked_up = FALSE
+	var/is_long = TRUE
 	muzzle_velocity = 380 //Based of 9mm, because this fires 9mm projectiles. Will be fixed in future updates, likely.
 
 //contender.dm
