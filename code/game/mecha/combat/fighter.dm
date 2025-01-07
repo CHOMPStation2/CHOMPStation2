@@ -28,6 +28,7 @@
 	wreckage = /obj/effect/decal/mecha_wreckage/gunpod
 
 	stomp_sound = 'sound/mecha/fighter/engine_mid_fighter_move.ogg'
+	stomp_sound_2 = 'sound/mecha/fighter/engine_mid_fighter_move.ogg' // CHOMPedit: Fix for additional move sound on Chomp mecha.
 	swivel_sound = 'sound/mecha/fighter/engine_mid_boost_01.ogg'
 
 	bound_height = 64
