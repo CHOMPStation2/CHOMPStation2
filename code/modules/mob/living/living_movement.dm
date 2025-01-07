@@ -9,7 +9,7 @@
 	if(istype(mover, /obj/item/projectile))
 		var/obj/item/projectile/P = mover
 		return !P.can_hit_target(src, P.permutated, src == P.original, TRUE)
-	return (!mover.density || !density || lying)
+	return (!mover.density || !density || lying || is_incorporeal()) // CHOMPEdit
 
 /mob/CanZASPass(turf/T, is_zone)
 	return ATMOS_PASS_YES
@@ -48,10 +48,10 @@ default behaviour is:
 		return 0
 
 /mob/living/Bump(atom/movable/AM)
-	if(now_pushing || !loc || buckled == AM)
+	if(now_pushing || !loc || buckled == AM || AM.is_incorporeal())
 		return
 	now_pushing = 1
-	if (istype(AM, /mob/living))
+	if (isliving(AM))
 		var/mob/living/tmob = AM
 
 		//Even if we don't push/swap places, we "touched" them, so spread fire
@@ -161,7 +161,7 @@ default behaviour is:
 		else
 			if(handle_micro_bump_other(tmob,1)) return
 		// CHOMPSTATION edit end
-		if(istype(tmob, /mob/living/carbon/human) && (FAT in tmob.mutations))
+		if(ishuman(tmob) && (FAT in tmob.mutations))
 			if(prob(40) && !(FAT in src.mutations))
 				to_chat(src, span_danger("You fail to push [tmob]'s fat ass out of the way."))
 				now_pushing = 0

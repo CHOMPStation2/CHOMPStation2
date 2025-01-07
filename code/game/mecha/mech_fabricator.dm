@@ -68,6 +68,8 @@
 								"Vehicle",
 								"Rigsuit",
 								"Phazon",
+								"Pinnace",
+								"Baron",
 								//"Gopher", // VOREStation Add //CHOMPedit commented micromech stuff, because fuck this trash
 								//"Polecat", // VOREStation Add //CHOMPedit commented micromech stuff, because fuck this trash
 								//"Weasel", // VOREStation Add //CHOMPedit commented micromech stuff, because fuck this trash
@@ -184,6 +186,10 @@
 					category_override += "Durand"
 				if(mech_types & EXOSUIT_MODULE_PHAZON)
 					category_override += "Phazon"
+				if(mech_types & EXOSUIT_MODULE_PINNACE)
+					category_override += "Pinnace"
+				if(mech_types & EXOSUIT_MODULE_BARON)
+					category_override += "Baron"
 
 	var/list/part = list(
 		"name" = D.name,
