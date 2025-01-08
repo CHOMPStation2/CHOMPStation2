@@ -1089,4 +1089,4 @@
 	special_attack_cooldown = 320
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/do_special_attack(atom/A)
-	addtimer(CALLBACK(src, PROC_REF(random_firing), target, 12, 3, 0.5 SECONDS), 0.5 SECONDS, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(random_firing), A, 12, 3, 0.5 SECONDS), 0.5 SECONDS, TIMER_DELETE_ME)
