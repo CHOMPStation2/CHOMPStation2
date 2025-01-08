@@ -1,0 +1,347 @@
+[2024-08-07 20:48:31.472] START: Starting up data/logs/2024/08-August/07-Wednesday/round-16-48-51.
+[2024-08-09 02:13:40.001] RUNTIME: [2024-08-08T22:13:39] Runtime in code/_helpers/unsorted.dm,1540: Too many overlays on /turf/simulated/shuttle/wall - 100, refusing to update and cutting.
+ -  What follows is a printout of all existing overlays at the time of the overflow 
+ - (icons/effects/lighting_object.dmi-diagonals-10) = 100
+[2024-08-09 02:13:40.116] RUNTIME:   proc name: stack trace (/datum/proc/stack_trace)
+[2024-08-09 02:13:40.119] RUNTIME:   src: the wall (123,69,3) (/turf/simulated/shuttle/wall)
+[2024-08-09 02:13:40.157] RUNTIME:   call stack:
+[2024-08-09 02:13:40.159] RUNTIME:   the wall (123,69,3) (/turf/simulated/shuttle/wall): stack trace("Too many overlays on /turf/sim...")
+[2024-08-09 02:13:40.162] RUNTIME:   the wall (123,69,3) (/turf/simulated/shuttle/wall): add overlay(, 1)
+[2024-08-09 02:13:40.165] RUNTIME:   the wall (123,69,3) (/turf/simulated/shuttle/wall): update breaklights()
+[2024-08-09 02:13:40.168] RUNTIME:   the wall (123,69,3) (/turf/simulated/shuttle/wall): underlay update()
+[2024-08-09 02:13:40.697] RUNTIME: [2024-08-08T22:13:40] Runtime in code/_helpers/unsorted.dm,1540: Too many overlays on /turf/simulated/shuttle/wall - 100, refusing to update and cutting.
+ -  What follows is a printout of all existing overlays at the time of the overflow 
+ - (icons/effects/lighting_object.dmi-diagonals-10) = 100
+[2024-08-09 02:13:40.699] RUNTIME:   proc name: stack trace (/datum/proc/stack_trace)
+[2024-08-09 02:13:40.702] RUNTIME:   src: the wall (122,70,3) (/turf/simulated/shuttle/wall)
+[2024-08-09 02:13:40.704] RUNTIME:   call stack:
+[2024-08-09 02:13:40.706] RUNTIME:   the wall (122,70,3) (/turf/simulated/shuttle/wall): stack trace("Too many overlays on /turf/sim...")
+[2024-08-09 02:13:40.708] RUNTIME:   the wall (122,70,3) (/turf/simulated/shuttle/wall): add overlay(, 1)
+[2024-08-09 02:13:40.710] RUNTIME:   the wall (122,70,3) (/turf/simulated/shuttle/wall): update breaklights()
+[2024-08-09 02:13:40.712] RUNTIME:   the wall (122,70,3) (/turf/simulated/shuttle/wall): underlay update()
+[2024-08-09 15:45:20.662] RUNTIME: [2024-08-09T11:45:20] Runtime in code/modules/vore/eating/living_vr.dm,1295: Cannot read null.name
+[2024-08-09 15:45:20.664] RUNTIME:   proc name: display voreprefs (/mob/living/proc/display_voreprefs)
+[2024-08-09 15:45:20.666] RUNTIME:   usr: Simple Mob (/mob/observer/dead) @ (the snow) (185,89,11) (/turf/simulated/floor/snow) (ckey=riotscopez)
+[2024-08-09 15:45:20.668] RUNTIME:   usr.loc: (the snow) (185,89,11) (/turf/simulated/floor/snow)
+[2024-08-09 15:45:20.673] RUNTIME:   src: Solar Eclipse Cryomancer (/mob/living/simple_mob/humanoid/eclipse/solar/cryomancer)
+[2024-08-09 15:45:20.675] RUNTIME:   src.loc: the snow (185,90,11) (/turf/simulated/floor/snow)
+[2024-08-09 15:45:20.677] RUNTIME:   call stack:
+[2024-08-09 15:45:20.680] RUNTIME:   Solar Eclipse Cryomancer (/mob/living/simple_mob/humanoid/eclipse/solar/cryomancer): display voreprefs(Simple Mob (/mob/observer/dead))
+[2024-08-09 15:45:20.682] RUNTIME:   Solar Eclipse Cryomancer (/mob/living/simple_mob/humanoid/eclipse/solar/cryomancer): Topic("src=\[0x3000244];vore_prefs=1", /list (/list))
+[2024-08-09 15:45:20.685] RUNTIME:   RiotScopez (/client): Topic("src=\[0x3000244];vore_prefs=1", /list (/list), Solar Eclipse Cryomancer (/mob/living/simple_mob/humanoid/eclipse/solar/cryomancer))
+[2024-08-10 02:17:13.250] RUNTIME: [2024-08-09T22:17:13] Runtime in code/_helpers/unsorted.dm,1540: Too many overlays on /turf/simulated/shuttle/wall - 100, refusing to update and cutting.
+ -  What follows is a printout of all existing overlays at the time of the overflow 
+ - (icons/effects/lighting_object.dmi-diagonals-5) = 100
+[2024-08-10 02:17:13.252] RUNTIME:   proc name: stack trace (/datum/proc/stack_trace)
+[2024-08-10 02:17:13.255] RUNTIME:   src: the wall (16,44,9) (/turf/simulated/shuttle/wall)
+[2024-08-10 02:17:13.257] RUNTIME:   call stack:
+[2024-08-10 02:17:13.260] RUNTIME:   the wall (16,44,9) (/turf/simulated/shuttle/wall): stack trace("Too many overlays on /turf/sim...")
+[2024-08-10 02:17:13.262] RUNTIME:   the wall (16,44,9) (/turf/simulated/shuttle/wall): add overlay(, 1)
+[2024-08-10 02:17:13.265] RUNTIME:   the wall (16,44,9) (/turf/simulated/shuttle/wall): update breaklights()
+[2024-08-10 02:17:13.267] RUNTIME:   the wall (16,44,9) (/turf/simulated/shuttle/wall): underlay update()
+[2024-08-10 02:17:13.270] RUNTIME: [2024-08-09T22:17:13] Runtime in code/_helpers/unsorted.dm,1540: Too many overlays on /turf/simulated/shuttle/wall - 100, refusing to update and cutting.
+ -  What follows is a printout of all existing overlays at the time of the overflow 
+ - (icons/effects/lighting_object.dmi-diagonals-9) = 100
+[2024-08-10 02:17:13.272] RUNTIME:   proc name: stack trace (/datum/proc/stack_trace)
+[2024-08-10 02:17:13.274] RUNTIME:   src: the wall (20,44,9) (/turf/simulated/shuttle/wall)
+[2024-08-10 02:17:13.277] RUNTIME:   call stack:
+[2024-08-10 02:17:13.280] RUNTIME:   the wall (20,44,9) (/turf/simulated/shuttle/wall): stack trace("Too many overlays on /turf/sim...")
+[2024-08-10 02:17:13.282] RUNTIME:   the wall (20,44,9) (/turf/simulated/shuttle/wall): add overlay(, 1)
+[2024-08-10 02:17:13.284] RUNTIME:   the wall (20,44,9) (/turf/simulated/shuttle/wall): update breaklights()
+[2024-08-10 02:17:13.286] RUNTIME:   the wall (20,44,9) (/turf/simulated/shuttle/wall): underlay update()
+[2024-08-10 02:17:13.289] RUNTIME: [2024-08-09T22:17:13] Runtime in code/_helpers/unsorted.dm,1540: Too many overlays on /turf/simulated/shuttle/wall - 100, refusing to update and cutting.
+ -  What follows is a printout of all existing overlays at the time of the overflow 
+ - (icons/effects/lighting_object.dmi-diagonals-5) = 100
+[2024-08-10 02:17:13.291] RUNTIME:   proc name: stack trace (/datum/proc/stack_trace)
+[2024-08-10 02:17:13.293] RUNTIME:   src: the wall (13,45,9) (/turf/simulated/shuttle/wall)
+[2024-08-10 02:17:13.295] RUNTIME:   call stack:
+[2024-08-10 02:17:13.299] RUNTIME:   the wall (13,45,9) (/turf/simulated/shuttle/wall): stack trace("Too many overlays on /turf/sim...")
+[2024-08-10 02:17:13.301] RUNTIME:   the wall (13,45,9) (/turf/simulated/shuttle/wall): add overlay(, 1)
+[2024-08-10 02:17:13.304] RUNTIME:   the wall (13,45,9) (/turf/simulated/shuttle/wall): update breaklights()
+[2024-08-10 02:17:13.306] RUNTIME:   the wall (13,45,9) (/turf/simulated/shuttle/wall): underlay update()
+[2024-08-10 02:17:13.310] RUNTIME: [2024-08-09T22:17:13] Runtime in code/_helpers/unsorted.dm,1540: Too many overlays on /turf/simulated/shuttle/wall - 100, refusing to update and cutting.
+ -  What follows is a printout of all existing overlays at the time of the overflow 
+ - (icons/effects/lighting_object.dmi-diagonals-9) = 100
+[2024-08-10 02:17:13.314] RUNTIME:   proc name: stack trace (/datum/proc/stack_trace)
+[2024-08-10 02:17:13.318] RUNTIME:   src: the wall (23,45,9) (/turf/simulated/shuttle/wall)
+[2024-08-10 02:17:13.320] RUNTIME:   call stack:
+[2024-08-10 02:17:13.323] RUNTIME:   the wall (23,45,9) (/turf/simulated/shuttle/wall): stack trace("Too many overlays on /turf/sim...")
+[2024-08-10 02:17:13.325] RUNTIME:   the wall (23,45,9) (/turf/simulated/shuttle/wall): add overlay(, 1)
+[2024-08-10 02:17:13.330] RUNTIME:   the wall (23,45,9) (/turf/simulated/shuttle/wall): update breaklights()
+[2024-08-10 02:17:13.332] RUNTIME:   the wall (23,45,9) (/turf/simulated/shuttle/wall): underlay update()
+[2024-08-10 02:17:13.336] RUNTIME: [2024-08-09T22:17:13] Runtime in code/_helpers/unsorted.dm,1540: Too many overlays on /turf/simulated/shuttle/wall - 100, refusing to update and cutting.
+ -  What follows is a printout of all existing overlays at the time of the overflow 
+ - (icons/effects/lighting_object.dmi-diagonals-6) = 100
+[2024-08-10 02:17:13.338] RUNTIME:   proc name: stack trace (/datum/proc/stack_trace)
+[2024-08-10 02:17:13.340] RUNTIME:   src: the wall (14,65,9) (/turf/simulated/shuttle/wall)
+[2024-08-10 02:17:13.342] RUNTIME:   call stack:
+[2024-08-10 02:17:13.345] RUNTIME:   the wall (14,65,9) (/turf/simulated/shuttle/wall): stack trace("Too many overlays on /turf/sim...")
+[2024-08-10 02:17:13.347] RUNTIME:   the wall (14,65,9) (/turf/simulated/shuttle/wall): add overlay(, 1)
+[2024-08-10 02:17:13.350] RUNTIME:   the wall (14,65,9) (/turf/simulated/shuttle/wall): update breaklights()
+[2024-08-10 02:17:13.353] RUNTIME:   the wall (14,65,9) (/turf/simulated/shuttle/wall): underlay update()
+[2024-08-10 02:17:13.359] RUNTIME: [2024-08-09T22:17:13] Runtime in code/_helpers/unsorted.dm,1540: Too many overlays on /turf/simulated/shuttle/wall - 100, refusing to update and cutting.
+ -  What follows is a printout of all existing overlays at the time of the overflow 
+ - (icons/Testing/greyscale_error.dmi--2) = 1
+ - (icons/effects/lighting_object.dmi-diagonals-10) = 99
+[2024-08-10 02:17:13.362] RUNTIME:   proc name: stack trace (/datum/proc/stack_trace)
+[2024-08-10 02:17:13.365] RUNTIME:   src: the wall (22,65,9) (/turf/simulated/shuttle/wall)
+[2024-08-10 02:17:13.367] RUNTIME:   call stack:
+[2024-08-10 02:17:13.369] RUNTIME:   the wall (22,65,9) (/turf/simulated/shuttle/wall): stack trace("Too many overlays on /turf/sim...")
+[2024-08-10 02:17:13.371] RUNTIME:   the wall (22,65,9) (/turf/simulated/shuttle/wall): add overlay(, 1)
+[2024-08-10 02:17:13.373] RUNTIME:   the wall (22,65,9) (/turf/simulated/shuttle/wall): update breaklights()
+[2024-08-10 02:17:13.375] RUNTIME:   the wall (22,65,9) (/turf/simulated/shuttle/wall): underlay update()
+[2024-08-10 02:17:13.380] RUNTIME: [2024-08-09T22:17:13] Runtime in code/_helpers/unsorted.dm,1540: Too many overlays on /turf/simulated/shuttle/wall - 100, refusing to update and cutting.
+ -  What follows is a printout of all existing overlays at the time of the overflow 
+ - (icons/effects/lighting_object.dmi-diagonals-6) = 100
+[2024-08-10 02:17:13.382] RUNTIME:   proc name: stack trace (/datum/proc/stack_trace)
+[2024-08-10 02:17:13.384] RUNTIME:   src: the wall (15,66,9) (/turf/simulated/shuttle/wall)
+[2024-08-10 02:17:13.386] RUNTIME:   call stack:
+[2024-08-10 02:17:13.388] RUNTIME:   the wall (15,66,9) (/turf/simulated/shuttle/wall): stack trace("Too many overlays on /turf/sim...")
+[2024-08-10 02:17:13.391] RUNTIME:   the wall (15,66,9) (/turf/simulated/shuttle/wall): add overlay(, 1)
+[2024-08-10 02:17:13.393] RUNTIME:   the wall (15,66,9) (/turf/simulated/shuttle/wall): update breaklights()
+[2024-08-10 02:17:13.396] RUNTIME:   the wall (15,66,9) (/turf/simulated/shuttle/wall): underlay update()
+[2024-08-10 02:17:13.401] RUNTIME: [2024-08-09T22:17:13] Runtime in code/_helpers/unsorted.dm,1540: Too many overlays on /turf/simulated/shuttle/wall - 100, refusing to update and cutting.
+ -  What follows is a printout of all existing overlays at the time of the overflow 
+ - (icons/Testing/greyscale_error.dmi--2) = 1
+ - (icons/effects/lighting_object.dmi-diagonals-10) = 99
+[2024-08-10 02:17:13.403] RUNTIME:   proc name: stack trace (/datum/proc/stack_trace)
+[2024-08-10 02:17:13.405] RUNTIME:   src: the wall (21,66,9) (/turf/simulated/shuttle/wall)
+[2024-08-10 02:17:13.407] RUNTIME:   call stack:
+[2024-08-10 02:17:13.410] RUNTIME:   the wall (21,66,9) (/turf/simulated/shuttle/wall): stack trace("Too many overlays on /turf/sim...")
+[2024-08-10 02:17:13.412] RUNTIME:   the wall (21,66,9) (/turf/simulated/shuttle/wall): add overlay(, 1)
+[2024-08-10 02:17:13.414] RUNTIME:   the wall (21,66,9) (/turf/simulated/shuttle/wall): update breaklights()
+[2024-08-10 02:17:13.416] RUNTIME:   the wall (21,66,9) (/turf/simulated/shuttle/wall): underlay update()
+[2024-08-10 04:54:35.934] RUNTIME: [2024-08-10T00:54:35] Runtime in code/game/turfs/turf_changing.dm,183: undefined proc or verb /turf/space/make outdoors().
+ - 
+[2024-08-10 04:54:35.937] RUNTIME:   proc name: ChangeTurf (/turf/proc/ChangeTurf)
+[2024-08-10 04:54:35.939] RUNTIME:   src: the open space (59,127,3) (/turf/simulated/open)
+[2024-08-10 04:54:35.944] RUNTIME:   call stack:
+[2024-08-10 04:54:35.946] RUNTIME:   the open space (59,127,3) (/turf/simulated/open): ChangeTurf(/turf/simulated/open (/turf/simulated/open), 1, 0, 0)
+[2024-08-10 04:54:35.948] RUNTIME:   the open space (59,127,3) (/turf/simulated/open): ReplaceWithLattice()
+[2024-08-10 04:54:35.951] RUNTIME:   the open space (59,127,3) (/turf/simulated/open): ex act(2)
+[2024-08-10 04:54:35.954] RUNTIME:   explosion(the processing strata (56,138,3) (/turf/simulated/floor/greengrid/nitrogen), 6, 12, 24, 48, 1, 48, null)
+[2024-08-10 04:54:36.654] RUNTIME: [2024-08-10T00:54:36] Runtime in code/game/turfs/turf_changing.dm,183: undefined proc or verb /turf/space/make outdoors().
+ - 
+[2024-08-10 04:54:36.656] RUNTIME:   proc name: ChangeTurf (/turf/proc/ChangeTurf)
+[2024-08-10 04:54:36.660] RUNTIME:   src: the open space (59,129,3) (/turf/simulated/open)
+[2024-08-10 04:54:36.662] RUNTIME:   call stack:
+[2024-08-10 04:54:36.664] RUNTIME:   the open space (59,129,3) (/turf/simulated/open): ChangeTurf(/turf/simulated/open (/turf/simulated/open), 1, 0, 0)
+[2024-08-10 04:54:36.667] RUNTIME:   the open space (59,129,3) (/turf/simulated/open): ReplaceWithLattice()
+[2024-08-10 04:54:36.670] RUNTIME:   the open space (59,129,3) (/turf/simulated/open): ex act(2)
+[2024-08-10 04:54:36.673] RUNTIME:   explosion(the processing strata (56,138,3) (/turf/simulated/floor/greengrid/nitrogen), 6, 12, 24, 48, 1, 48, null)
+[2024-08-10 04:54:36.678] RUNTIME: [2024-08-10T00:54:36] Runtime in code/game/turfs/turf_changing.dm,183: undefined proc or verb /turf/space/make outdoors().
+ - 
+[2024-08-10 04:54:36.681] RUNTIME:   proc name: ChangeTurf (/turf/proc/ChangeTurf)
+[2024-08-10 04:54:36.684] RUNTIME:   src: the open space (61,129,3) (/turf/simulated/open)
+[2024-08-10 04:54:36.687] RUNTIME:   call stack:
+[2024-08-10 04:54:36.693] RUNTIME:   the open space (61,129,3) (/turf/simulated/open): ChangeTurf(/turf/simulated/open (/turf/simulated/open), 1, 0, 0)
+[2024-08-10 04:54:36.696] RUNTIME:   the open space (61,129,3) (/turf/simulated/open): ReplaceWithLattice()
+[2024-08-10 04:54:36.700] RUNTIME:   the open space (61,129,3) (/turf/simulated/open): ex act(2)
+[2024-08-10 04:54:36.703] RUNTIME:   explosion(the processing strata (56,138,3) (/turf/simulated/floor/greengrid/nitrogen), 6, 12, 24, 48, 1, 48, null)
+[2024-08-10 04:54:36.707] RUNTIME: [2024-08-10T00:54:36] Runtime in code/game/turfs/turf_changing.dm,183: undefined proc or verb /turf/space/make outdoors().
+ - 
+[2024-08-10 04:54:36.710] RUNTIME:   proc name: ChangeTurf (/turf/proc/ChangeTurf)
+[2024-08-10 04:54:36.712] RUNTIME:   src: the open space (62,129,3) (/turf/simulated/open)
+[2024-08-10 04:54:36.716] RUNTIME:   call stack:
+[2024-08-10 04:54:36.719] RUNTIME:   the open space (62,129,3) (/turf/simulated/open): ChangeTurf(/turf/simulated/open (/turf/simulated/open), 1, 0, 0)
+[2024-08-10 04:54:36.721] RUNTIME:   the open space (62,129,3) (/turf/simulated/open): ex act(2)
+[2024-08-10 04:54:36.723] RUNTIME:   explosion(the processing strata (56,138,3) (/turf/simulated/floor/greengrid/nitrogen), 6, 12, 24, 48, 1, 48, null)
+[2024-08-10 04:54:36.744] RUNTIME: [2024-08-10T00:54:36] Runtime in code/game/turfs/turf_changing.dm,183: undefined proc or verb /turf/space/make outdoors().
+ - 
+[2024-08-10 04:54:36.746] RUNTIME:   proc name: ChangeTurf (/turf/proc/ChangeTurf)
+[2024-08-10 04:54:36.748] RUNTIME:   src: the open space (63,129,3) (/turf/simulated/open)
+[2024-08-10 04:54:36.751] RUNTIME:   call stack:
+[2024-08-10 04:54:36.754] RUNTIME:   the open space (63,129,3) (/turf/simulated/open): ChangeTurf(/turf/simulated/open (/turf/simulated/open), 1, 0, 0)
+[2024-08-10 04:54:36.756] RUNTIME:   the open space (63,129,3) (/turf/simulated/open): ex act(2)
+[2024-08-10 04:54:36.759] RUNTIME:   explosion(the processing strata (56,138,3) (/turf/simulated/floor/greengrid/nitrogen), 6, 12, 24, 48, 1, 48, null)
+[2024-08-10 04:54:37.130] RUNTIME: [2024-08-10T00:54:37] Runtime in code/game/turfs/turf_changing.dm,183: undefined proc or verb /turf/space/make outdoors().
+ - 
+[2024-08-10 04:54:37.132] RUNTIME:   proc name: ChangeTurf (/turf/proc/ChangeTurf)
+[2024-08-10 04:54:37.134] RUNTIME:   src: the open space (55,130,3) (/turf/simulated/open)
+[2024-08-10 04:54:37.137] RUNTIME:   call stack:
+[2024-08-10 04:54:37.139] RUNTIME:   the open space (55,130,3) (/turf/simulated/open): ChangeTurf(/turf/simulated/open (/turf/simulated/open), 1, 0, 0)
+[2024-08-10 04:54:37.142] RUNTIME:   the open space (55,130,3) (/turf/simulated/open): ReplaceWithLattice()
+[2024-08-10 04:54:37.144] RUNTIME:   the open space (55,130,3) (/turf/simulated/open): ex act(2)
+[2024-08-10 04:54:37.146] RUNTIME:   explosion(the processing strata (56,138,3) (/turf/simulated/floor/greengrid/nitrogen), 6, 12, 24, 48, 1, 48, null)
+[2024-08-10 04:54:37.150] RUNTIME: [2024-08-10T00:54:37] Runtime in code/game/turfs/turf_changing.dm,183: undefined proc or verb /turf/space/make outdoors().
+ - 
+[2024-08-10 04:54:37.153] RUNTIME:   proc name: ChangeTurf (/turf/proc/ChangeTurf)
+[2024-08-10 04:54:37.157] RUNTIME:   src: the open space (57,130,3) (/turf/simulated/open)
+[2024-08-10 04:54:37.159] RUNTIME:   call stack:
+[2024-08-10 04:54:37.161] RUNTIME:   the open space (57,130,3) (/turf/simulated/open): ChangeTurf(/turf/simulated/open (/turf/simulated/open), 1, 0, 0)
+[2024-08-10 04:54:37.164] RUNTIME:   the open space (57,130,3) (/turf/simulated/open): ex act(2)
+[2024-08-10 04:54:37.166] RUNTIME:   explosion(the processing strata (56,138,3) (/turf/simulated/floor/greengrid/nitrogen), 6, 12, 24, 48, 1, 48, null)
+[2024-08-10 04:54:37.172] RUNTIME: [2024-08-10T00:54:37] Runtime in code/game/turfs/turf_changing.dm,183: undefined proc or verb /turf/space/make outdoors().
+ - 
+[2024-08-10 04:54:37.174] RUNTIME:   proc name: ChangeTurf (/turf/proc/ChangeTurf)
+[2024-08-10 04:54:37.177] RUNTIME:   src: the open space (60,130,3) (/turf/simulated/open)
+[2024-08-10 04:54:37.179] RUNTIME:   call stack:
+[2024-08-10 04:54:37.182] RUNTIME:   the open space (60,130,3) (/turf/simulated/open): ChangeTurf(/turf/simulated/open (/turf/simulated/open), 1, 0, 0)
+[2024-08-10 04:54:37.184] RUNTIME:   the open space (60,130,3) (/turf/simulated/open): ReplaceWithLattice()
+[2024-08-10 04:54:37.187] RUNTIME:   the open space (60,130,3) (/turf/simulated/open): ex act(2)
+[2024-08-10 04:54:37.189] RUNTIME:   explosion(the processing strata (56,138,3) (/turf/simulated/floor/greengrid/nitrogen), 6, 12, 24, 48, 1, 48, null)
+[2024-08-10 04:54:37.194] RUNTIME: [2024-08-10T00:54:37] Runtime in code/game/turfs/turf_changing.dm,183: undefined proc or verb /turf/space/make outdoors().
+ - 
+[2024-08-10 04:54:37.196] RUNTIME:   proc name: ChangeTurf (/turf/proc/ChangeTurf)
+[2024-08-10 04:54:37.367] RUNTIME: [2024-08-10T00:54:37] Runtime in code/game/turfs/turf_changing.dm,183: undefined proc or verb /turf/space/make outdoors().
+ - 
+[2024-08-10 04:54:37.370] RUNTIME:   proc name: ChangeTurf (/turf/proc/ChangeTurf)
+[2024-08-10 04:54:37.372] RUNTIME:   (This error will now be silenced for 10 minutes)
+[2024-08-10 05:06:06.355] RUNTIME: [2024-08-10T01:06:06] Skipped 174 runtimes in code/game/turfs/turf_changing.dm,183.
+[2024-08-11 04:08:37.830] RUNTIME: [2024-08-11T00:08:37] Runtime in code/_helpers/unsorted.dm,1540: Too many overlays on /turf/simulated/shuttle/wall - 100, refusing to update and cutting.
+ -  What follows is a printout of all existing overlays at the time of the overflow 
+ - (icons/Testing/greyscale_error.dmi--2) = 1
+ - (icons/effects/lighting_object.dmi-diagonals-10) = 99
+[2024-08-11 04:08:38.006] RUNTIME: [2024-08-11T00:08:38] Runtime in code/_helpers/unsorted.dm,1540: Too many overlays on /turf/simulated/shuttle/wall - 100, refusing to update and cutting.
+ -  What follows is a printout of all existing overlays at the time of the overflow 
+ - (icons/Testing/greyscale_error.dmi--2) = 1
+ - (icons/effects/lighting_object.dmi-diagonals-10) = 99
+[2024-08-11 20:09:10.737] RUNTIME: [2024-08-11T16:09:10] Runtime in code/modules/mob/new_player/new_player.dm,109: Cannot read null.prefs
+[2024-08-11 20:09:10.740] RUNTIME:   usr: RiotScopez (/mob/new_player) @ (NULL) (0,0,0) (NULL) (ckey=)
+[2024-08-11 20:09:10.742] RUNTIME:   usr.loc: *null*
+[2024-08-11 20:09:12.872] RUNTIME: [2024-08-11T16:09:12] Runtime in code/modules/mob/new_player/new_player.dm,109: Cannot read null.prefs
+[2024-08-11 20:09:12.876] RUNTIME:   usr: RiotScopez (/mob/new_player) @ (NULL) (0,0,0) (NULL) (ckey=)
+[2024-08-11 20:09:12.880] RUNTIME:   usr.loc: *null*
+[2024-08-11 20:13:25.345] RUNTIME: [2024-08-11T16:13:25] Runtime in modular_chomp/code/modules/mob/living/carbon/human/species/station/protean/protean_rig.dm,63: Undefined variable /datum/species/custom/var/OurRig
+ - 
+[2024-08-11 20:13:25.350] RUNTIME:   usr: RiotScopez (/mob/new_player) @ (the start area) (8,177,8) (/turf/closed/indestructible/start_area) (ckey=riotscopez)
+[2024-08-11 20:13:25.355] RUNTIME:   usr.loc: (the start area) (8,177,8) (/turf/closed/indestructible/start_area)
+[2024-08-11 20:15:07.455] RUNTIME: [2024-08-11T16:15:07] Runtime in modular_chomp/code/modules/mob/living/carbon/human/species/station/protean/protean_rig.dm,63: Undefined variable /datum/species/custom/var/OurRig
+ - 
+[2024-08-11 20:15:07.460] RUNTIME:   usr: RiotScopez (/mob/new_player) @ (the start area) (8,177,8) (/turf/closed/indestructible/start_area) (ckey=riotscopez)
+[2024-08-11 20:15:07.465] RUNTIME:   usr.loc: (the start area) (8,177,8) (/turf/closed/indestructible/start_area)
+[2024-08-12 04:13:39.843] RUNTIME: [2024-08-12T00:13:39] Runtime in code/_helpers/unsorted.dm,1540: Too many overlays on /turf/simulated/shuttle/wall - 100, refusing to update and cutting.
+ -  What follows is a printout of all existing overlays at the time of the overflow 
+ - (icons/Testing/greyscale_error.dmi--2) = 1
+ - (icons/effects/lighting_object.dmi-diagonals-5) = 99
+[2024-08-12 04:13:40.104] RUNTIME: [2024-08-12T00:13:40] Runtime in code/_helpers/unsorted.dm,1540: Too many overlays on /turf/simulated/shuttle/wall - 100, refusing to update and cutting.
+ -  What follows is a printout of all existing overlays at the time of the overflow 
+ - (icons/Testing/greyscale_error.dmi--2) = 1
+ - (icons/effects/lighting_object.dmi-diagonals-9) = 99
+[2024-08-12 04:13:40.107] RUNTIME: [2024-08-12T00:13:40] Runtime in code/_helpers/unsorted.dm,1540: Too many overlays on /turf/simulated/shuttle/wall - 100, refusing to update and cutting.
+ -  What follows is a printout of all existing overlays at the time of the overflow 
+ - (icons/Testing/greyscale_error.dmi--2) = 1
+ - (icons/effects/lighting_object.dmi-diagonals-5) = 99
+[2024-08-12 04:13:40.109] RUNTIME: [2024-08-12T00:13:40] Runtime in code/_helpers/unsorted.dm,1540: Too many overlays on /turf/simulated/shuttle/wall - 100, refusing to update and cutting.
+ -  What follows is a printout of all existing overlays at the time of the overflow 
+ - (icons/Testing/greyscale_error.dmi--2) = 1
+ - (icons/effects/lighting_object.dmi-diagonals-9) = 99
+[2024-08-12 04:13:40.113] RUNTIME: [2024-08-12T00:13:40] Runtime in code/_helpers/unsorted.dm,1540: Too many overlays on /turf/simulated/shuttle/wall - 100, refusing to update and cutting.
+ -  What follows is a printout of all existing overlays at the time of the overflow 
+ - (icons/Testing/greyscale_error.dmi--2) = 1
+ - (icons/effects/lighting_object.dmi-diagonals-6) = 99
+[2024-08-12 04:13:40.117] RUNTIME: [2024-08-12T00:13:40] Runtime in code/_helpers/unsorted.dm,1540: Too many overlays on /turf/simulated/shuttle/wall - 100, refusing to update and cutting.
+ -  What follows is a printout of all existing overlays at the time of the overflow 
+ - (icons/Testing/greyscale_error.dmi--2) = 1
+ - (icons/effects/lighting_object.dmi-diagonals-10) = 99
+[2024-08-12 04:13:40.120] RUNTIME: [2024-08-12T00:13:40] Runtime in code/_helpers/unsorted.dm,1540: Too many overlays on /turf/simulated/shuttle/wall - 100, refusing to update and cutting.
+ -  What follows is a printout of all existing overlays at the time of the overflow 
+ - (icons/Testing/greyscale_error.dmi--2) = 1
+ - (icons/effects/lighting_object.dmi-diagonals-6) = 99
+[2024-08-12 04:13:40.123] RUNTIME: [2024-08-12T00:13:40] Runtime in code/_helpers/unsorted.dm,1540: Too many overlays on /turf/simulated/shuttle/wall - 100, refusing to update and cutting.
+ -  What follows is a printout of all existing overlays at the time of the overflow 
+ - (icons/Testing/greyscale_error.dmi--2) = 1
+ - (icons/effects/lighting_object.dmi-diagonals-10) = 99
+[2024-08-13 04:19:05.925] RUNTIME: [2024-08-13T00:19:05] Runtime in code/_helpers/unsorted.dm,1540: Too many overlays on /turf/simulated/shuttle/wall - 100, refusing to update and cutting.
+ -  What follows is a printout of all existing overlays at the time of the overflow 
+ - (icons/Testing/greyscale_error.dmi--2) = 1
+ - (icons/effects/lighting_object.dmi-diagonals-10) = 99
+[2024-08-13 04:19:06.010] RUNTIME: [2024-08-13T00:19:06] Runtime in code/_helpers/unsorted.dm,1540: Too many overlays on /turf/simulated/shuttle/wall - 100, refusing to update and cutting.
+ -  What follows is a printout of all existing overlays at the time of the overflow 
+ - (icons/Testing/greyscale_error.dmi--2) = 1
+ - (icons/effects/lighting_object.dmi-diagonals-10) = 99
+[2024-08-13 17:42:12.432] RUNTIME: [2024-08-13T13:42:12] Runtime in code/modules/admin/admin.dm,1490: Cannot read null.tcrystals
+[2024-08-13 17:42:12.451] RUNTIME:   usr: Simple Mob (/mob/observer/dead) @ (the dirt) (15,10,15) (/turf/simulated/floor/outdoors/newdirt) (ckey=riotscopez)
+[2024-08-13 17:42:12.453] RUNTIME:   usr.loc: (the dirt) (15,10,15) (/turf/simulated/floor/outdoors/newdirt)
+[2024-08-13 17:42:12.613] RUNTIME: [2024-08-13T13:42:12] Runtime in code/modules/admin/admin.dm,1490: Cannot read null.tcrystals
+[2024-08-13 17:42:12.615] RUNTIME:   usr: Simple Mob (/mob/observer/dead) @ (the dirt) (15,10,15) (/turf/simulated/floor/outdoors/newdirt) (ckey=riotscopez)
+[2024-08-13 17:42:12.658] RUNTIME:   usr.loc: (the dirt) (15,10,15) (/turf/simulated/floor/outdoors/newdirt)
+[2024-08-14 01:21:46.501] RUNTIME: [2024-08-13T21:21:46] Runtime in code/_helpers/unsorted.dm,1540: pathfinder timeout; check debug logs.
+[2024-08-14 01:21:57.535] RUNTIME: [2024-08-13T21:21:57] Runtime in code/_helpers/unsorted.dm,1540: pathfinder timeout; check debug logs.
+[2024-08-14 01:22:01.947] RUNTIME: [2024-08-13T21:22:01] Runtime in code/_helpers/unsorted.dm,1540: pathfinder timeout; check debug logs.
+[2024-08-14 06:08:39.417] RUNTIME: [2024-08-14T02:08:39] Runtime in code/_helpers/unsorted.dm,1540: Too many overlays on /turf/simulated/shuttle/wall - 100, refusing to update and cutting.
+ -  What follows is a printout of all existing overlays at the time of the overflow 
+ - (icons/Testing/greyscale_error.dmi--2) = 1
+ - (icons/effects/lighting_object.dmi-diagonals-5) = 99
+[2024-08-14 06:08:39.474] RUNTIME: [2024-08-14T02:08:39] Runtime in code/_helpers/unsorted.dm,1540: Too many overlays on /turf/simulated/shuttle/wall - 100, refusing to update and cutting.
+ -  What follows is a printout of all existing overlays at the time of the overflow 
+ - (icons/Testing/greyscale_error.dmi--2) = 1
+ - (icons/effects/lighting_object.dmi-diagonals-9) = 99
+[2024-08-14 06:08:39.480] RUNTIME: [2024-08-14T02:08:39] Runtime in code/_helpers/unsorted.dm,1540: Too many overlays on /turf/simulated/shuttle/wall - 100, refusing to update and cutting.
+ -  What follows is a printout of all existing overlays at the time of the overflow 
+ - (icons/Testing/greyscale_error.dmi--2) = 1
+ - (icons/effects/lighting_object.dmi-diagonals-5) = 99
+[2024-08-14 06:08:39.486] RUNTIME: [2024-08-14T02:08:39] Runtime in code/_helpers/unsorted.dm,1540: Too many overlays on /turf/simulated/shuttle/wall - 100, refusing to update and cutting.
+ -  What follows is a printout of all existing overlays at the time of the overflow 
+ - (icons/Testing/greyscale_error.dmi--2) = 1
+ - (icons/effects/lighting_object.dmi-diagonals-9) = 99
+[2024-08-14 06:08:39.492] RUNTIME: [2024-08-14T02:08:39] Runtime in code/_helpers/unsorted.dm,1540: Too many overlays on /turf/simulated/shuttle/wall - 100, refusing to update and cutting.
+ -  What follows is a printout of all existing overlays at the time of the overflow 
+ - (icons/Testing/greyscale_error.dmi--2) = 1
+ - (icons/effects/lighting_object.dmi-diagonals-6) = 99
+[2024-08-14 06:08:39.508] RUNTIME: [2024-08-14T02:08:39] Runtime in code/_helpers/unsorted.dm,1540: Too many overlays on /turf/simulated/shuttle/wall - 100, refusing to update and cutting.
+ -  What follows is a printout of all existing overlays at the time of the overflow 
+ - (icons/Testing/greyscale_error.dmi--2) = 1
+ - (icons/effects/lighting_object.dmi-diagonals-10) = 99
+[2024-08-14 06:08:39.541] RUNTIME: [2024-08-14T02:08:39] Runtime in code/_helpers/unsorted.dm,1540: Too many overlays on /turf/simulated/shuttle/wall - 100, refusing to update and cutting.
+ -  What follows is a printout of all existing overlays at the time of the overflow 
+ - (icons/Testing/greyscale_error.dmi--2) = 1
+ - (icons/effects/lighting_object.dmi-diagonals-6) = 99
+[2024-08-14 06:08:39.603] RUNTIME: [2024-08-14T02:08:39] Runtime in code/_helpers/unsorted.dm,1540: Too many overlays on /turf/simulated/shuttle/wall - 100, refusing to update and cutting.
+ -  What follows is a printout of all existing overlays at the time of the overflow 
+ - (icons/Testing/greyscale_error.dmi--2) = 1
+ - (icons/effects/lighting_object.dmi-diagonals-10) = 99
+[2024-08-15 06:17:18.236] RUNTIME: [2024-08-15T02:17:18] Runtime in code/_helpers/unsorted.dm,1540: Too many overlays on /turf/simulated/shuttle/wall - 100, refusing to update and cutting.
+ -  What follows is a printout of all existing overlays at the time of the overflow 
+ - (icons/Testing/greyscale_error.dmi--2) = 1
+ - (icons/effects/lighting_object.dmi-diagonals-10) = 99
+[2024-08-15 06:17:18.324] RUNTIME: [2024-08-15T02:17:18] Runtime in code/_helpers/unsorted.dm,1540: Too many overlays on /turf/simulated/shuttle/wall - 100, refusing to update and cutting.
+ -  What follows is a printout of all existing overlays at the time of the overflow 
+ - (icons/Testing/greyscale_error.dmi--2) = 1
+ - (icons/effects/lighting_object.dmi-diagonals-10) = 99
+[2024-08-16 06:19:10.870] RUNTIME: [2024-08-16T02:19:10] Runtime in code/_helpers/unsorted.dm,1540: Too many overlays on /turf/simulated/shuttle/wall - 100, refusing to update and cutting.
+ -  What follows is a printout of all existing overlays at the time of the overflow 
+ - (icons/Testing/greyscale_error.dmi--2) = 1
+ - (icons/effects/lighting_object.dmi-diagonals-5) = 99
+[2024-08-16 06:19:11.235] RUNTIME: [2024-08-16T02:19:11] Runtime in code/_helpers/unsorted.dm,1540: Too many overlays on /turf/simulated/shuttle/wall - 100, refusing to update and cutting.
+ -  What follows is a printout of all existing overlays at the time of the overflow 
+ - (icons/Testing/greyscale_error.dmi--2) = 1
+ - (icons/effects/lighting_object.dmi-diagonals-9) = 99
+[2024-08-16 06:19:11.260] RUNTIME: [2024-08-16T02:19:11] Runtime in code/_helpers/unsorted.dm,1540: Too many overlays on /turf/simulated/shuttle/wall - 100, refusing to update and cutting.
+ -  What follows is a printout of all existing overlays at the time of the overflow 
+ - (icons/Testing/greyscale_error.dmi--2) = 1
+ - (icons/effects/lighting_object.dmi-diagonals-5) = 99
+[2024-08-16 06:19:11.269] RUNTIME: [2024-08-16T02:19:11] Runtime in code/_helpers/unsorted.dm,1540: Too many overlays on /turf/simulated/shuttle/wall - 100, refusing to update and cutting.
+ -  What follows is a printout of all existing overlays at the time of the overflow 
+ - (icons/Testing/greyscale_error.dmi--2) = 1
+ - (icons/effects/lighting_object.dmi-diagonals-9) = 99
+[2024-08-16 06:19:11.277] RUNTIME: [2024-08-16T02:19:11] Runtime in code/_helpers/unsorted.dm,1540: Too many overlays on /turf/simulated/shuttle/wall - 100, refusing to update and cutting.
+ -  What follows is a printout of all existing overlays at the time of the overflow 
+ - (icons/Testing/greyscale_error.dmi--2) = 1
+ - (icons/effects/lighting_object.dmi-diagonals-6) = 99
+[2024-08-16 06:19:11.578] RUNTIME: [2024-08-16T02:19:11] Runtime in code/_helpers/unsorted.dm,1540: Too many overlays on /turf/simulated/shuttle/wall - 100, refusing to update and cutting.
+ -  What follows is a printout of all existing overlays at the time of the overflow 
+ - (icons/Testing/greyscale_error.dmi--2) = 1
+ - (icons/effects/lighting_object.dmi-diagonals-10) = 99
+[2024-08-16 06:19:11.584] RUNTIME: [2024-08-16T02:19:11] Runtime in code/_helpers/unsorted.dm,1540: Too many overlays on /turf/simulated/shuttle/wall - 100, refusing to update and cutting.
+ -  What follows is a printout of all existing overlays at the time of the overflow 
+ - (icons/Testing/greyscale_error.dmi--2) = 1
+ - (icons/effects/lighting_object.dmi-diagonals-6) = 99
+[2024-08-16 06:19:11.590] RUNTIME: [2024-08-16T02:19:11] Runtime in code/_helpers/unsorted.dm,1540: Too many overlays on /turf/simulated/shuttle/wall - 100, refusing to update and cutting.
+ -  What follows is a printout of all existing overlays at the time of the overflow 
+ - (icons/Testing/greyscale_error.dmi--2) = 1
+ - (icons/effects/lighting_object.dmi-diagonals-10) = 99
+[2024-08-17 08:13:42.484] RUNTIME: [2024-08-17T04:13:42] Runtime in code/_helpers/unsorted.dm,1540: Too many overlays on /turf/simulated/shuttle/wall - 100, refusing to update and cutting.
+ -  What follows is a printout of all existing overlays at the time of the overflow 
+ - (icons/Testing/greyscale_error.dmi--2) = 1
+ - (icons/effects/lighting_object.dmi-diagonals-10) = 99
+[2024-08-17 08:13:42.661] RUNTIME: [2024-08-17T04:13:42] Runtime in code/_helpers/unsorted.dm,1540: Too many overlays on /turf/simulated/shuttle/wall - 100, refusing to update and cutting.
+ -  What follows is a printout of all existing overlays at the time of the overflow 
+ - (icons/Testing/greyscale_error.dmi--2) = 1
+ - (icons/effects/lighting_object.dmi-diagonals-10) = 99
+[2024-08-17 16:29:55.657] RUNTIME: [2024-08-17T12:29:55] Runtime in code/controllers/subsystems/timer.dm,593: list index out of bounds
+[2024-08-17 16:29:55.703] RUNTIME: [2024-08-17T12:29:55] Runtime in code/controllers/subsystems/timer.dm,438: Invalid timer state: Timer created that would require a backtrack to run (addtimer would never let this happen): Timer: Event not filledPrev: NULL, Next: NULL
+[2024-08-17 16:29:55.710] RUNTIME: [2024-08-17T12:29:55] Runtime in code/controllers/subsystems/timer.dm,438: Invalid timer state: Timer created that would require a backtrack to run (addtimer would never let this happen): Timer: Event not filledPrev: NULL, Next: NULL
+[2024-08-17 16:29:55.716] RUNTIME: [2024-08-17T12:29:55] Runtime in code/controllers/subsystems/timer.dm,438: Invalid timer state: Timer created that would require a backtrack to run (addtimer would never let this happen): Timer: Event not filledPrev: NULL, Next: NULL
+[2024-08-17 16:29:55.722] RUNTIME: [2024-08-17T12:29:55] Runtime in code/controllers/subsystems/timer.dm,438: Invalid timer state: Timer created that would require a backtrack to run (addtimer would never let this happen): Timer: Event not filledPrev: NULL, Next: NULL
+[2024-08-17 16:29:55.729] RUNTIME: [2024-08-17T12:29:55] Runtime in code/controllers/subsystems/timer.dm,438: Invalid timer state: Timer created that would require a backtrack to run (addtimer would never let this happen): Timer: Event not filledPrev: NULL, Next: NULL

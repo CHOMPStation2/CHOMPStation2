@@ -1,0 +1,425 @@
+[2023-02-19T19:35:28] START: Starting up data/logs/2023/02-February/19-Sunday/round-19-35-24.
+[2023-02-19T19:35:29] ADMIN: Loading jobban_rank
+[2023-02-19T19:35:29] ADMIN: jobban_keylist was empty
+[2023-02-19T19:35:29] ADMIN: Loading Banlist
+[2023-02-19T19:35:47] START: Starting up data/logs/2023/02-February/19-Sunday/round-19-35-24.
+[2023-02-19T19:35:48] ADMIN: Loading jobban_rank
+[2023-02-19T19:35:48] ADMIN: jobban_keylist was empty
+[2023-02-19T19:35:48] ADMIN: Loading Banlist
+[2023-02-19T19:35:51] GAME: Ice Cave 1C loaded at at 197,12,5
+[2023-02-19T19:35:51] GAME: Dark Ritual loaded at at 114,25,5
+[2023-02-19T19:35:51] GAME: Speakeasy loaded at at 37,93,5
+[2023-02-19T19:35:51] GAME: Lost Explorer loaded at at 191,35,5
+[2023-02-19T19:35:52] GAME: Ice Cave 1B loaded at at 18,19,5
+[2023-02-19T19:35:52] GAME: Spy Remains loaded at at 39,79,5
+[2023-02-19T19:35:52] GAME: Rocky Base 1 loaded at at 61,103,5
+[2023-02-19T19:35:52] GAME: Mine Vault 6 loaded at at 53,92,5
+[2023-02-19T19:35:52] GAME: Ice Cave 1A loaded at at 159,94,5
+[2023-02-19T19:35:52] GAME: Dig Site loaded at at 72,10,5
+[2023-02-19T19:35:52] GAME: Abandoned Relay loaded at at 221,40,5
+[2023-02-19T19:35:52] GAME: Abandoned Mineshaft 1 loaded at at 64,46,5
+[2023-02-19T19:35:53] GAME: spatial anomaly loaded at at 14,207,5
+[2023-02-19T19:35:53] GAME: Ruptured Canister loaded at at 16,54,4
+[2023-02-19T19:35:53] GAME: Pride Rock loaded at at 41,200,4
+[2023-02-19T19:35:53] GAME: Thieves' Cave loaded at at 73,57,4
+[2023-02-19T19:35:53] ACCESS IN: RiotScopez/(RiotScopez) - IP:127.0.0.1 - CID:1871707424 - BYOND v514
+[2023-02-19T19:35:53] GAME: Boathouse loaded at at 33,12,4
+[2023-02-19T19:35:53] GAME: Ration Cache loaded at at 89,123,4
+[2023-02-19T19:35:53] GAME: Old Supply Drop loaded at at 103,34,4
+[2023-02-19T19:35:53] GAME: Merchant Stand loaded at at 74,96,4
+[2023-02-19T19:35:53] GAME: Snow 3 loaded at at 194,35,4
+[2023-02-19T19:35:53] GAME: Buried Treasure loaded at at 108,14,4
+[2023-02-19T19:35:54] GAME: Pooled Rocks loaded at at 165,51,4
+[2023-02-19T19:35:54] GAME: Mechpit loaded at at 9,183,4
+[2023-02-19T19:35:54] GAME: Hot Spring loaded at at 52,83,4
+[2023-02-19T19:35:54] GAME: Shakden loaded at at 36,101,4
+[2023-02-19T19:35:54] GAME: Empty Explorer's Home loaded at at 31,82,4
+[2023-02-19T19:35:54] GAME: Snow 5 loaded at at 13,110,4
+[2023-02-19T19:35:54] GAME: Diner loaded at at 41,165,4
+[2023-02-19T19:35:56] GAME: Old Hotel loaded at at 81,8,4
+[2023-02-19T19:35:56] GAME: Snow 2 loaded at at 151,40,4
+[2023-02-19T19:35:56] GAME: Rocky 2 loaded at at 110,35,9
+[2023-02-19T19:35:56] GAME: Military Camp 1 loaded at at 48,35,9
+[2023-02-19T19:35:56] GAME: Shack 1 loaded at at 35,64,9
+[2023-02-19T19:35:56] GAME: Chasm loaded at at 11,46,9
+[2023-02-19T19:35:56] GAME: Rocky 3 loaded at at 46,19,9
+[2023-02-19T19:35:56] GAME: Rocky 1 loaded at at 79,38,9
+[2023-02-19T19:35:56] GAME: Rocky 4 loaded at at 156,28,9
+[2023-02-19T19:35:56] GAME: Forest Lake loaded at at 97,16,9
+[2023-02-19T19:35:56] GAME: Lab 1 loaded at at 40,86,9
+[2023-02-19T19:35:56] GAME: Wolf Den loaded at at 119,88,9
+[2023-02-19T19:35:56] GAME: Musk loaded at at 145,81,9
+[2023-02-19T19:35:57] GAME: Drug Den loaded at at 60,70,9
+[2023-02-19T19:35:57] GAME: Butcher Shack loaded at at 75,28,9
+[2023-02-19T19:35:57] GAME: Mudpit loaded at at 184,46,9
+[2023-02-19T19:35:57] GAME: Smol 1 loaded at at 155,77,9
+[2023-02-19T19:35:58] GAME: Decoupled Engine loaded at at 12,12,9
+[2023-02-19T19:35:58] GAME: Snowrock 1 loaded at at 20,90,9
+[2023-02-19T19:35:58] GAME: Kururak Den loaded at at 49,10,9
+[2023-02-19T19:35:58] GAME: Frost Oasis loaded at at 200,28,9
+[2023-02-19T19:35:58] GAME: Empty Cabin loaded at at 162,60,9
+[2023-02-19T19:35:58] GAME: Frostfly Nest loaded at at 174,76,9
+[2023-02-19T19:35:58] GAME: Emergency Pod 4 loaded at at 91,83,9
+[2023-02-19T19:35:58] GAME: Government Patrol loaded at at 201,78,9
+[2023-02-19T19:36:00] GAME: Demon Pool loaded at at 176,13,9
+[2023-02-19T19:36:01] GAME: Rocky 2 loaded at at 103,62,9
+[2023-02-19T19:36:01] GAME: Rocky 2 loaded at at 127,61,9
+[2023-02-19T19:36:02] GAME: Shelter 1 loaded at at 42,75,9
+[2023-02-19T19:36:02] GAME: Rocky 2 loaded at at 204,53,9
+[2023-02-19T19:36:02] GAME: Death Den loaded at at 96,137,9
+[2023-02-19T19:36:02] GAME: Otie Shelter loaded at at 169,223,9
+[2023-02-19T19:36:03] GAME: Cliff Base loaded at at 134,145,9
+[2023-02-19T19:36:03] GAME: Derelict Engine loaded at at 38,144,9
+[2023-02-19T19:36:04] GAME: CaveS loaded at at 189,193,9
+[2023-02-19T19:36:06] GAME: DoomP loaded at at 97,187,9
+[2023-02-19T19:36:06] GAME: Leopardmander Den loaded at at 222,123,9
+[2023-02-19T19:36:07] GAME: Black Shuttle Down loaded at at 198,148,9
+[2023-02-19T19:36:07] GAME: Chapel 1 loaded at at 16,199,9
+[2023-02-19T19:36:10] GAME: Cult Bar loaded at at 46,197,9
+[2023-02-19T19:36:10] GAME: Lone Wolf loaded at at 16,148,9
+[2023-02-19T19:36:58] GAME: Z-level VR World loaded at at 1,1,11
+[2023-02-19T19:36:58] GAME: Z-level Fuel Depot - Z1 Space loaded at at 1,1,12
+[2023-02-19T19:37:03] GAME: Z-level Kara Aerostat - Z1 Aerostat loaded at at 1,1,13
+[2023-02-19T19:37:10] GAME: Z-level Kara - Z1 Northern Star loaded at at 1,1,14
+[2023-02-19T19:37:52] GAME: Z-level Snow Field loaded at at 1,1,15
+[2023-02-19T19:38:27] MISC: a the gibber didn't find an input plate.
+[2023-02-19T19:39:03] MISC: a the gibber didn't find an input plate.
+[2023-02-19T19:43:23] ADMIN: RiotScopez/(RiotScopez) delayed the game.
+[2023-02-19T19:43:31] ADMIN: EVENT Error: /mob/living/simple_mob/animal/giant_spider/broodling([0x30002c6]) took longer than 0.5 seconds to delete (took 0.5 seconds to delete)
+[2023-02-19T19:43:33] ADMIN: RiotScopez/(RiotScopez) removed the delay.
+[2023-02-19T19:43:35] ADMIN: RiotScopez/(RiotScopez) delayed the game.
+[2023-02-19T19:43:38] ADMIN: RiotScopez/(RiotScopez) has started the game.
+[2023-02-19T19:43:39] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T19:43:40] ACCESS OUT: INVALID/(RiotScopez) - IP:127.0.0.1 - CID:Logged Out - BYOND Logged Out
+[2023-02-19T19:43:40] ACCESS IN: RiotScopez/(Aura) - IP:127.0.0.1 - CID:1871707424 - BYOND v514
+[2023-02-19T19:43:44] GAME: JOINED RiotScopez/(Aura) as "Medical Doctor"
+[2023-02-19T19:43:44] GAME: SPECIES RiotScopez/(Aura) is a: "Custom Species"
+[2023-02-19T19:43:56] ADMIN: EVENT Error: /mob/living/simple_mob/humanoid/merc/ranged/ionrifle([0x30000df]) took longer than 0.5 seconds to delete (took 0.6 seconds to delete)
+[2023-02-19T19:44:00] ATTACK: INVALID/(guard hivebot) against INVALID/(mercenary): Shot with /obj/item/projectile/bullet/hivebot projectile
+[2023-02-19T19:44:00] ATTACK: INVALID/(mercenary) against INVALID/(guard hivebot): Shot with /obj/item/projectile/bullet/pistol/medium projectile
+[2023-02-19T19:44:00] ATTACK: INVALID/(mercenary) against INVALID/(crystal-feather duck): Animal-attacked (miss)
+[2023-02-19T19:44:02] ATTACK: INVALID/(guard hivebot) against INVALID/(mercenary): Shot with /obj/item/projectile/bullet/hivebot projectile
+[2023-02-19T19:44:02] ATTACK: INVALID/(mercenary) against INVALID/(guard hivebot): Shot with /obj/item/projectile/bullet/pistol/medium projectile
+[2023-02-19T19:44:02] ATTACK: INVALID/(mercenary) against INVALID/(crystal-feather duck): Generic attack (probably animal)
+[2023-02-19T19:44:04] ADMIN: EVENT Error: /mob/living/simple_mob/mechanical/hivebot/ranged_damage/strong/guard([0x30000d4]) took longer than 0.5 seconds to delete (took 0.6 seconds to delete)
+[2023-02-19T19:44:05] ADMIN: EVENT Error: /mob/living/simple_mob/humanoid/merc/ranged([0x30000d9]) took longer than 0.5 seconds to delete (took 0.6 seconds to delete)
+[2023-02-19T19:44:10] ATTACK: INVALID/(mercenary) against INVALID/(crystal-feather duck): Generic attack (probably animal)
+[2023-02-19T19:44:12] ATTACK: INVALID/(mercenary) against INVALID/(crystal-feather duck): Generic attack (probably animal)
+[2023-02-19T19:44:13] ATTACK: INVALID/(mercenary) against INVALID/(crystal-feather duck): Generic attack (probably animal)
+[2023-02-19T19:44:38] ADMIN: RiotScopez/(Aura) RiotScopez/(Aura) admin cryo'd RiotScopez/(Aura).
+[2023-02-19T19:44:47] GAME: TIDI: 27.8333;8.35;1.67;0.167
+[2023-02-19T19:44:49] ACCESS OUT: INVALID/(Aura) - IP:127.0.0.1 - CID:Logged Out - BYOND Logged Out
+[2023-02-19T19:44:49] ACCESS IN: RiotScopez/(Aura) - IP:127.0.0.1 - CID:1871707424 - BYOND v514
+[2023-02-19T19:44:49] GAME: CRYO INVALID/(Aura) cryo'd with paramedic vest (/obj/item/clothing/suit/storage/toggle/paramedic)
+[2023-02-19T19:44:49] ADMIN: INVALID/(Aura) INVALID/(Aura) (Surgeon) entered cryostorage.
+[2023-02-19T19:44:50] ADMIN: EVENT Error: /mob/living/carbon/human([0x30002fa]) took longer than 0.5 seconds to delete (took 0.5 seconds to delete)
+[2023-02-19T19:44:52] ACCESS OUT: INVALID/(Aura) - IP:127.0.0.1 - CID:Logged Out - BYOND Logged Out
+[2023-02-19T19:44:52] ACCESS IN: RiotScopez/(new player) - IP:127.0.0.1 - CID:1871707424 - BYOND v514
+[2023-02-19T19:44:54] GAME: TRAITS riotscopez/(Aura) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-02-19T19:45:11] ACCESS OUT: INVALID/(new player) - IP:127.0.0.1 - CID:Logged Out - BYOND Logged Out
+[2023-02-19T19:45:11] ACCESS IN: RiotScopez/(Cyborg) - IP:127.0.0.1 - CID:1871707424 - BYOND v514
+[2023-02-19T19:45:11] GAME: JOINED RiotScopez/(Cyborg) as "Cyborg"
+[2023-02-19T19:45:11] GAME: SPECIES RiotScopez/(Cyborg) is a: "Human"
+[2023-02-19T19:45:11] ACCESS OUT: INVALID/(Cyborg) - IP:127.0.0.1 - CID:Logged Out - BYOND Logged Out
+[2023-02-19T19:45:11] ACCESS IN: RiotScopez/(Default Cyborg-604) - IP:127.0.0.1 - CID:1871707424 - BYOND v514
+[2023-02-19T19:45:29] ADMIN: RiotScopez/(Tamakoto) has changed RiotScopez/(Tamakoto)'s size multiplier to 4.
+[2023-02-19T19:45:51] ADMIN: RiotScopez/(Tamakoto) created 1 /obj/item/weapon/tool/crowbar/heavysniper
+[2023-02-19T19:45:58] GAME: TIDI: 18.9009;11.5153;3.63906;0.514206
+[2023-02-19T19:46:01] ADMIN: RiotScopez/(Tamakoto) created 1 /obj/item/weapon/cell/infinite
+[2023-02-19T19:46:12] ADMIN: RiotScopez/(Tamakoto) created 1 /obj/item/weapon/card/id/centcom/ERT
+[2023-02-19T19:46:23] ADMIN: RiotScopez/(Tamakoto) created 1 /obj/item/borg/upgrade/vtec
+[2023-02-19T19:46:26] ADMIN: RiotScopez/(Tamakoto) created 1 /obj/item/borg/upgrade/jetpack
+[2023-02-19T19:46:27] ADMIN: RiotScopez/(Tamakoto) created 1 /obj/item/borg/upgrade/advhealth
+[2023-02-19T19:46:29] ADMIN: RiotScopez/(Tamakoto) created 1 /obj/item/borg/upgrade/syndicate
+[2023-02-19T19:46:31] ADMIN: RiotScopez/(Tamakoto) created 1 /obj/item/borg/upgrade/language
+[2023-02-19T19:46:33] ADMIN: RiotScopez/(Tamakoto) created 1 /obj/item/borg/upgrade/sizeshift
+[2023-02-19T19:46:35] ADMIN: RiotScopez/(Tamakoto) created 1 /obj/item/borg/upgrade/sizegun
+[2023-02-19T19:46:56] ADMIN: RiotScopez/(Tamakoto) created 1 /mob/living/carbon/human
+[2023-02-19T19:47:06] GAME: TIDI: 12.5729;11.8326;5.27775;0.99056
+[2023-02-19T19:47:21] ADMIN: EVENT Error: /datum/ai_holder/simple_mob/melee([0x210096ea]) took longer than 0.5 seconds to delete (took 0.5 seconds to delete)
+[2023-02-19T19:47:41] ADMIN: RiotScopez/(Tamakoto) assumed direct control of Duncan Looper.
+[2023-02-19T19:47:41] ACCESS OUT: INVALID/(Tamakoto) - IP:127.0.0.1 - CID:Logged Out - BYOND Logged Out
+[2023-02-19T19:47:41] ACCESS IN: RiotScopez/(Duncan Looper) - IP:127.0.0.1 - CID:1871707424 - BYOND v514
+[2023-02-19T19:47:48] ADMIN: EVENT Error: /datum/ai_holder/simple_mob/hivebot([0x21009164]) took longer than 0.5 seconds to delete (took 0.6 seconds to delete)
+[2023-02-19T19:48:14] GAME: TIDI: 13.8333;12.4328;6.70876;1.56238
+[2023-02-19T19:49:10] ADMIN: riotscopez/(Duncan Looper) assumed direct control of Tamakoto.
+[2023-02-19T19:49:10] ACCESS OUT: INVALID/(Duncan Looper) - IP:127.0.0.1 - CID:Logged Out - BYOND Logged Out
+[2023-02-19T19:49:10] ACCESS IN: RiotScopez/(Tamakoto) - IP:127.0.0.1 - CID:1871707424 - BYOND v514
+[2023-02-19T19:49:15] GAME: TIDI: 1.08243;9.02768;7.17254;2.1234
+[2023-02-19T19:49:30] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T19:50:15] ATTACK: riotscopez/(Tamakoto) has eaten INVALID/INVALID as a dogborg. (<a href='?_src_=holder;adminplayerobservecoodjump=1;X=135;Y=145;Z=3'>JMP</a>) against : 
+[2023-02-19T19:50:15] GAME: TIDI: 0.666667;6.51937;7.04191;2.61525
+[2023-02-19T19:50:34] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T19:51:13] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T19:51:16] GAME: TIDI: 0.833333;4.81356;6.59624;3.01335
+[2023-02-19T19:51:23] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T19:51:54] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T19:52:17] GAME: TIDI: 1.33333;3.76949;6.03089;3.3151
+[2023-02-19T19:53:00] EMOTE: INVALID/(Ian) (135,135,2): <B>Ian</B> chases their tail.
+[2023-02-19T19:53:13] ACCESS OUT: INVALID/(Tamakoto) - IP:127.0.0.1 - CID:Logged Out - BYOND Logged Out
+[2023-02-19T19:53:13] ACCESS IN: RiotScopez/(Cyborg) - IP:127.0.0.1 - CID:1871707424 - BYOND v514
+[2023-02-19T19:53:13] ADMIN: INVALID/(Tamakoto) RiotScopez/(Cyborg) admin-ghosted.
+[2023-02-19T19:53:17] GAME: TIDI: 0.5;2.78865;5.38244;3.52184
+[2023-02-19T19:53:21] ACCESS OUT: INVALID/(Cyborg) - IP:127.0.0.1 - CID:Logged Out - BYOND Logged Out
+[2023-02-19T19:53:21] ACCESS IN: RiotScopez/(new player) - IP:127.0.0.1 - CID:1871707424 - BYOND v514
+[2023-02-19T19:53:26] ACCESS OUT: INVALID/(new player) - IP:127.0.0.1 - CID:Logged Out - BYOND Logged Out
+[2023-02-19T19:53:26] ACCESS IN: RiotScopez/(Cyborg) - IP:127.0.0.1 - CID:1871707424 - BYOND v514
+[2023-02-19T19:53:26] GAME: JOINED riotscopez/(Cyborg) as "Cyborg"
+[2023-02-19T19:53:26] GAME: SPECIES riotscopez/(Cyborg) is a: "Human"
+[2023-02-19T19:53:26] ACCESS OUT: INVALID/(Cyborg) - IP:127.0.0.1 - CID:Logged Out - BYOND Logged Out
+[2023-02-19T19:53:26] ACCESS IN: RiotScopez/(Default Cyborg-284) - IP:127.0.0.1 - CID:1871707424 - BYOND v514
+[2023-02-19T19:54:19] GAME: TIDI: 2.66667;2.75205;4.85636;3.65529
+[2023-02-19T19:54:47] ADMIN: riotscopez/(KA-RA) has changed riotscopez/(KA-RA)'s size multiplier to 4.
+[2023-02-19T19:55:19] GAME: TIDI: 1.33333;2.32644;4.35038;3.7248
+[2023-02-19T19:55:28] ADMIN: riotscopez/(KA-RA) created 1 /obj/item/weapon/cell/infinite
+[2023-02-19T19:55:36] ADMIN: EVENT Error: /mob/observer/dead([0x30004d8]) took longer than 0.5 seconds to delete (took 0.6 seconds to delete)
+[2023-02-19T19:55:39] ADMIN: riotscopez/(KA-RA) created 1 /obj/item/borg/upgrade/vtec
+[2023-02-19T19:55:43] ADMIN: riotscopez/(KA-RA) created 1 /obj/item/borg/upgrade/syndicate
+[2023-02-19T19:55:44] ADMIN: riotscopez/(KA-RA) created 1 /obj/item/borg/upgrade/language
+[2023-02-19T19:55:46] ADMIN: riotscopez/(KA-RA) created 1 /obj/item/borg/upgrade/sizeshift
+[2023-02-19T19:55:49] ADMIN: riotscopez/(KA-RA) created 1 /obj/item/borg/upgrade/sizegun
+[2023-02-19T19:55:50] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T19:55:51] ADMIN: riotscopez/(KA-RA) created 1 /obj/item/borg/upgrade/bellysizeupgrade
+[2023-02-19T19:56:07] ADMIN: riotscopez/(KA-RA) created 1 /mob/living/carbon/human
+[2023-02-19T19:56:21] GAME: TIDI: 2.33333;2.32851;3.946;3.74692
+[2023-02-19T19:56:22] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T19:56:54] ADMIN: riotscopez/(KA-RA) assumed direct control of Roland Said.
+[2023-02-19T19:56:54] ACCESS OUT: INVALID/(KA-RA) - IP:127.0.0.1 - CID:Logged Out - BYOND Logged Out
+[2023-02-19T19:56:54] ACCESS IN: RiotScopez/(Roland Said) - IP:127.0.0.1 - CID:1871707424 - BYOND v514
+[2023-02-19T19:57:21] GAME: TIDI: 0.833333;1.87995;3.53279;3.72551
+[2023-02-19T19:57:42] ADMIN: riotscopez/(Roland Said) deleted the �Emergency Response Team ID at (134,145,3)
+[2023-02-19T19:57:50] ADMIN: riotscopez/(Roland Said) assumed direct control of KA-RA.
+[2023-02-19T19:57:50] ACCESS OUT: INVALID/(Roland Said) - IP:127.0.0.1 - CID:Logged Out - BYOND Logged Out
+[2023-02-19T19:57:50] ACCESS IN: RiotScopez/(KA-RA) - IP:127.0.0.1 - CID:1871707424 - BYOND v514
+[2023-02-19T19:58:22] GAME: TIDI: 0.833333;1.56597;3.13943;3.6669
+[2023-02-19T19:59:02] ATTACK: riotscopez/(KA-RA) has eaten INVALID/INVALID as a dogborg. (<a href='?_src_=holder;adminplayerobservecoodjump=1;X=133;Y=146;Z=3'>JMP</a>) against : 
+[2023-02-19T19:59:22] GAME: TIDI: 0.666667;1.29618;2.77078;3.57729
+[2023-02-19T19:59:25] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T19:59:39] EMOTE: INVALID/(Ian) (135,135,2): <B>Ian</B> chases their tail.
+[2023-02-19T20:00:23] GAME: TIDI: 1.66667;1.40732;2.49809;3.46937
+[2023-02-19T20:01:24] GAME: TIDI: 0.5;1.13513;2.2255;3.34498
+[2023-02-19T20:02:23] EMOTE: INVALID/(Ian) (135,134,2): <B>Ian</B> chases their tail.
+[2023-02-19T20:02:24] GAME: TIDI: 0.41632;0.919485;1.96429;3.20691
+[2023-02-19T20:02:33] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T20:02:43] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T20:03:25] GAME: TIDI: 1.83333;1.19364;1.81016;3.06724
+[2023-02-19T20:03:26] EMOTE: INVALID/(Ian) (136,134,2): <B>Ian</B> chases their tail.
+[2023-02-19T20:04:25] GAME: TIDI: 0.5;0.985548;1.64524;2.92504
+[2023-02-19T20:04:52] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T20:05:26] GAME: TIDI: 0.666667;0.889883;1.49417;2.78195
+[2023-02-19T20:06:25] ACCESS OUT: riotscopez/(KA-RA) - IP:127.0.0.1 - CID:Logged Out - BYOND Logged Out
+[2023-02-19T20:06:26] GAME: TIDI: 1.33333;1.02292;1.39992;2.64375
+[2023-02-19T20:06:29] ACCESS IN: RiotScopez/(KA-RA) - IP:127.0.0.1 - CID:1871707424 - BYOND v514
+[2023-02-19T20:06:32] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T20:07:32] GAME: TIDI: 9;3.41604;1.80314;2.55969
+[2023-02-19T20:08:00] EMOTE: INVALID/(Ian) (136,130,2): <B>Ian</B> dances around.
+[2023-02-19T20:08:37] GAME: TIDI: 9.33333;5.19123;2.48076;2.55179
+[2023-02-19T20:09:22] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T20:09:32] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T20:09:39] GAME: TIDI: 2.66667;4.43386;2.87138;2.58375
+[2023-02-19T20:10:39] GAME: TIDI: 0.666667;3.3037;2.95785;2.62116
+[2023-02-19T20:11:08] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T20:11:12] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T20:11:40] GAME: TIDI: 0.5;2.46259;2.85879;2.64492
+[2023-02-19T20:11:45] EMOTE: INVALID/(Ian) (138,132,2): <B>Ian</B> dances around.
+[2023-02-19T20:12:40] GAME: TIDI: 0.666667;1.92381;2.6718;2.64761
+[2023-02-19T20:13:40] GAME: TIDI: 0.5;1.49667;2.43677;2.62653
+[2023-02-19T20:14:41] GAME: TIDI: 0.5;1.19767;2.18895;2.58277
+[2023-02-19T20:15:41] GAME: TIDI: 0.5;0.988368;1.94884;2.51938
+[2023-02-19T20:16:41] GAME: TIDI: 0.5;0.841858;1.72744;2.44018
+[2023-02-19T20:17:42] GAME: TIDI: 0.666667;0.7893;1.53981;2.35015
+[2023-02-19T20:17:57] ADMIN: EVENT Error: /mob/living/simple_mob/mechanical/hivebot/swarm([0x30000b4]) took longer than 0.5 seconds to delete (took 0.6 seconds to delete)
+[2023-02-19T20:18:24] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T20:18:28] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T20:18:31] ADMIN: EVENT Error: /mob/living/simple_mob/mechanical/hivebot/tank([0x30000b9]) took longer than 0.5 seconds to delete (took 0.5 seconds to delete)
+[2023-02-19T20:18:44] ADMIN: RiotScopez/(KA-RA) deleted the metamorphic glass at (125,113,2)
+[2023-02-19T20:18:52] GAME: TIDI: 17;5.65251;2.36235;2.35137
+[2023-02-19T20:19:01] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T20:19:52] GAME: TIDI: 0.5;4.10676;2.71123;2.38735
+[2023-02-19T20:20:39] EMOTE: INVALID/(Ian) (138,131,2): <B>Ian</B> dances around.
+[2023-02-19T20:20:53] EMOTE: INVALID/(Ian) (138,131,2): <B>Ian</B> chases their tail.
+[2023-02-19T20:20:59] GAME: TIDI: 11.5;6.32473;3.43393;2.49201
+[2023-02-19T20:21:36] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T20:22:01] GAME: TIDI: 3;5.32731;3.81261;2.62407
+[2023-02-19T20:22:18] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T20:23:01] GAME: TIDI: 0.666667;3.92912;3.83591;2.74525
+[2023-02-19T20:24:02] GAME: TIDI: 0.666667;2.95038;3.6588;2.83661
+[2023-02-19T20:25:02] GAME: TIDI: 0.5;2.21527;3.3701;2.88996
+[2023-02-19T20:25:55] EMOTE: INVALID/(Ian) (135,132,2): <B>Ian</B> chases their tail.
+[2023-02-19T20:26:02] GAME: TIDI: 0.666667;1.75069;3.04622;2.90558
+[2023-02-19T20:27:03] GAME: TIDI: 0.5;1.37548;2.71207;2.88623
+[2023-02-19T20:27:14] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T20:27:24] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T20:27:56] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T20:28:03] GAME: TIDI: 0.666667;1.16284;2.40222;2.83783
+[2023-02-19T20:28:06] EMOTE: INVALID/(Ian) (136,134,2): <B>Ian</B> dances around.
+[2023-02-19T20:28:24] EMOTE: INVALID/(Ian) (135,134,2): <B>Ian</B> chases their tail.
+[2023-02-19T20:29:04] GAME: TIDI: 0.666667;1.01399;2.12457;2.76651
+[2023-02-19T20:29:39] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T20:29:44] ATTACK: RiotScopez/(KA-RA) has eaten INVALID/INVALID as a dogborg. (<a href='?_src_=holder;adminplayerobservecoodjump=1;X=118;Y=115;Z=2'>JMP</a>) against : 
+[2023-02-19T20:30:03] EMOTE: INVALID/(Ian) (135,131,2): <B>Ian</B> chases their tail.
+[2023-02-19T20:30:04] GAME: TIDI: 0.666667;0.90979;1.88162;2.67802
+[2023-02-19T20:31:04] GAME: TIDI: 0.5;0.786853;1.66267;2.57648
+[2023-02-19T20:31:37] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T20:32:05] GAME: TIDI: 0.5;0.700797;1.47029;2.46586
+[2023-02-19T20:32:27] EMOTE: INVALID/(Ian) (136,132,2): <B>Ian</B> chases their tail.
+[2023-02-19T20:33:05] GAME: TIDI: 0.833333;0.740558;1.32434;2.35171
+[2023-02-19T20:33:10] EMOTE: INVALID/(Ian) (137,132,2): <B>Ian</B> dances around.
+[2023-02-19T20:33:40] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T20:33:54] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T20:34:05] GAME: TIDI: 0.666667;0.718391;1.20315;2.23685
+[2023-02-19T20:35:06] GAME: TIDI: 0.5;0.652873;1.0931;2.12248
+[2023-02-19T20:36:06] GAME: TIDI: 0.666667;0.657011;1.00588;2.01082
+[2023-02-19T20:36:25] EMOTE: INVALID/(Ian) (135,135,2): <B>Ian</B> chases their tail.
+[2023-02-19T20:36:33] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T20:36:37] EMOTE: INVALID/(Ian) (135,135,2): <B>Ian</B> chases their tail.
+[2023-02-19T20:36:59] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T20:37:06] GAME: TIDI: 0.5;0.609908;0.926686;1.90241
+[2023-02-19T20:37:07] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T20:37:13] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T20:37:21] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T20:38:07] GAME: TIDI: 0.5;0.576936;0.856736;1.79784
+[2023-02-19T20:38:40] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T20:39:07] GAME: TIDI: 0.666667;0.603855;0.80616;1.69867
+[2023-02-19T20:39:08] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T20:40:07] GAME: TIDI: 0.5;0.572698;0.759468;1.60475
+[2023-02-19T20:40:32] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T20:41:08] GAME: TIDI: 0.666667;0.600889;0.727752;1.51705
+[2023-02-19T20:41:11] EMOTE: INVALID/(Ian) (135,130,2): <B>Ian</B> chases their tail.
+[2023-02-19T20:42:13] GAME: TIDI: 8.5;2.97062;1.17633;1.48298
+[2023-02-19T20:43:15] GAME: TIDI: 2.83333;2.92944;1.52695;1.48738
+[2023-02-19T20:43:34] EMOTE: INVALID/(Ian) (136,134,2): <B>Ian</B> dances around.
+[2023-02-19T20:44:15] GAME: TIDI: 0.5;2.20061;1.66168;1.50481
+[2023-02-19T20:44:46] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T20:45:10] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T20:45:15] GAME: TIDI: 0.666667;1.74042;1.67743;1.52207
+[2023-02-19T20:45:34] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T20:46:16] GAME: TIDI: 0.666667;1.4183;1.6256;1.53242
+[2023-02-19T20:47:16] GAME: TIDI: 0.5;1.14281;1.52904;1.53208
+[2023-02-19T20:48:19] GAME: TIDI: 4.16667;2.04997;1.63323;1.5422
+[2023-02-19T20:49:19] GAME: TIDI: 0.5;1.58498;1.62358;1.55034
+[2023-02-19T20:50:12] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T20:50:19] GAME: TIDI: 0.5;1.25948;1.55076;1.55038
+[2023-02-19T20:51:20] GAME: TIDI: 0.666667;1.08164;1.45693;1.54103
+[2023-02-19T20:52:20] GAME: TIDI: 0.333333;0.857147;1.33698;1.52063
+[2023-02-19T20:53:04] ATTACK: INVALID/(rat (816)) against INVALID/(cockroach): Animal-attacked (dodged)
+[2023-02-19T20:53:06] ADMIN: EVENT Error: /mob/living/simple_mob/animal/passive/cockroach([0x30004f2]) took longer than 0.5 seconds to delete (took 0.7 seconds to delete)
+[2023-02-19T20:53:21] GAME: TIDI: 1.66667;1.1;1.28958;1.49752
+[2023-02-19T20:54:21] GAME: TIDI: 0.5;0.920002;1.21567;1.46934
+[2023-02-19T20:55:18] ADMIN: EVENT Error: /datum/ai_holder/simple_mob/passive([0x210068d4]) took longer than 0.5 seconds to delete (took 0.6 seconds to delete)
+[2023-02-19T20:55:21] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T20:55:22] GAME: TIDI: 1.5;1.094;1.19133;1.44154
+[2023-02-19T20:55:23] EMOTE: INVALID/(Ian) (136,130,2): <B>Ian</B> dances around.
+[2023-02-19T20:56:03] EMOTE: INVALID/(Ian) (136,130,2): <B>Ian</B> chases their tail.
+[2023-02-19T20:56:24] GAME: TIDI: 4;1.9658;1.34623;1.43201
+[2023-02-19T20:56:31] EMOTE: INVALID/(Ian) (136,131,2): <B>Ian</B> chases their tail.
+[2023-02-19T20:57:25] GAME: TIDI: 0.5;1.52606;1.38219;1.42702
+[2023-02-19T20:58:25] GAME: TIDI: 0.5;1.21824;1.3494;1.41926
+[2023-02-19T20:59:16] EMOTE: INVALID/(Ian) (137,132,2): <B>Ian</B> chases their tail.
+[2023-02-19T20:59:25] GAME: TIDI: 0.666667;1.05277;1.29008;1.40634
+[2023-02-19T21:00:26] GAME: TIDI: 0.5;0.886939;1.20945;1.38665
+[2023-02-19T21:00:51] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T21:01:26] GAME: TIDI: 0.5;0.770857;1.12173;1.36016
+[2023-02-19T21:02:28] GAME: TIDI: 4.16667;1.7896;1.2553;1.34968
+[2023-02-19T21:03:29] GAME: TIDI: 0.666667;1.45272;1.29479;1.34419
+[2023-02-19T21:04:08] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T21:04:29] GAME: TIDI: 0.5;1.1669;1.26921;1.33669
+[2023-02-19T21:05:29] GAME: TIDI: 0.5;0.966833;1.20874;1.32389
+[2023-02-19T21:05:32] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T21:06:25] EMOTE: INVALID/(Ian) (138,132,2): <B>Ian</B> chases their tail.
+[2023-02-19T21:06:30] GAME: TIDI: 0.5;0.826783;1.13234;1.30474
+[2023-02-19T21:06:33] EMOTE: INVALID/(Ian) (138,132,2): <B>Ian</B> dances around.
+[2023-02-19T21:07:33] GAME: TIDI: 5.5;2.22875;1.35163;1.30943
+[2023-02-19T21:08:08] EMOTE: INVALID/(Ian) (135,133,2): <B>Ian</B> dances around.
+[2023-02-19T21:08:20] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T21:08:33] GAME: TIDI: 0.5;1.71012;1.42333;1.32082
+[2023-02-19T21:09:00] EMOTE: INVALID/(Ian) (137,131,2): <B>Ian</B> dances around.
+[2023-02-19T21:09:34] GAME: TIDI: 0.5;1.34709;1.40808;1.32954
+[2023-02-19T21:09:59] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T21:10:34] GAME: TIDI: 0.5;1.09296;1.34505;1.33109
+[2023-02-19T21:11:34] GAME: TIDI: 0.5;0.915072;1.25906;1.32389
+[2023-02-19T21:11:37] EMOTE: INVALID/(Ian) (138,131,2): <B>Ian</B> chases their tail.
+[2023-02-19T21:11:53] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T21:12:37] GAME: TIDI: 4.16667;1.89055;1.38536;1.33004
+[2023-02-19T21:13:10] EMOTE: INVALID/(Ian) (137,131,2): <B>Ian</B> dances around.
+[2023-02-19T21:13:37] GAME: TIDI: 0.5;1.47339;1.40296;1.33733
+[2023-02-19T21:14:34] EMOTE: INVALID/(Ian) (135,131,2): <B>Ian</B> dances around.
+[2023-02-19T21:14:34] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T21:14:37] GAME: TIDI: 0.333333;1.13137;1.34864;1.33846
+[2023-02-19T21:15:08] EMOTE: INVALID/(Ian) (135,131,2): <B>Ian</B> chases their tail.
+[2023-02-19T21:15:38] GAME: TIDI: 0.666667;0.991959;1.27731;1.33235
+[2023-02-19T21:16:31] EMOTE: INVALID/(Ian) (136,130,2): <B>Ian</B> dances around.
+[2023-02-19T21:16:38] GAME: TIDI: 0.833333;0.944371;1.21072;1.32018
+[2023-02-19T21:16:45] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T21:17:33] EMOTE: INVALID/(Ian) (136,130,2): <B>Ian</B> chases their tail.
+[2023-02-19T21:17:39] GAME: TIDI: 0.666667;0.86106;1.14079;1.30224
+[2023-02-19T21:17:41] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T21:17:45] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T21:18:39] GAME: TIDI: 0.5;0.752742;1.06318;1.27834
+[2023-02-19T21:18:40] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T21:19:39] GAME: TIDI: 0.5;0.676919;0.985927;1.2491
+[2023-02-19T21:20:40] GAME: TIDI: 0.666667;0.673844;0.92351;1.21654
+[2023-02-19T21:21:40] GAME: TIDI: 0.666667;0.67169;0.873146;1.1822
+[2023-02-19T21:22:03] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T21:22:25] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T21:22:40] GAME: TIDI: 0.5;0.620183;0.822554;1.14623
+[2023-02-19T21:23:03] EMOTE: INVALID/(Ian) (135,131,2): <B>Ian</B> chases their tail.
+[2023-02-19T21:23:41] GAME: TIDI: 0.833333;0.684128;0.794869;1.1111
+[2023-02-19T21:24:41] GAME: TIDI: 0.666667;0.67889;0.771673;1.07715
+[2023-02-19T21:25:22] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T21:25:30] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T21:25:36] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T21:25:41] GAME: TIDI: 0.5;0.625223;0.742383;1.04368
+[2023-02-19T21:26:18] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T21:26:20] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T21:26:42] GAME: TIDI: 0.5;0.587656;0.711438;1.01045
+[2023-02-19T21:27:31] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T21:27:44] GAME: TIDI: 3;1.31136;0.831422;0.99255
+[2023-02-19T21:28:23] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T21:28:44] GAME: TIDI: 0.666667;1.11795;0.888728;0.982168
+[2023-02-19T21:28:45] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T21:29:44] GAME: TIDI: 0.5;0.932566;0.897496;0.973701
+[2023-02-19T21:30:45] GAME: TIDI: 0.666667;0.852796;0.888556;0.965186
+[2023-02-19T21:31:44] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T21:31:45] GAME: TIDI: 0.5;0.746957;0.860236;0.954691
+[2023-02-19T21:32:45] GAME: TIDI: 0.666667;0.72287;0.832763;0.942499
+[2023-02-19T21:33:00] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T21:33:46] GAME: TIDI: 0.5;0.656009;0.797412;0.92799
+[2023-02-19T21:33:54] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T21:34:46] GAME: TIDI: 0.5;0.609206;0.759771;0.911168
+[2023-02-19T21:35:46] GAME: TIDI: 0.5;0.576444;0.723106;0.892362
+[2023-02-19T21:36:47] GAME: TIDI: 0.5;0.553511;0.689187;0.872044
+[2023-02-19T21:37:47] GAME: TIDI: 0.666667;0.587458;0.668841;0.851724
+[2023-02-19T21:38:47] GAME: TIDI: 0.5;0.56122;0.647317;0.831283
+[2023-02-19T21:39:24] EMOTE: INVALID/(Ian) (136,130,2): <B>Ian</B> dances around.
+[2023-02-19T21:39:40] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T21:39:48] GAME: TIDI: 0.5;0.542854;0.626424;0.810797
+[2023-02-19T21:40:23] EMOTE: INVALID/(Ian) (135,130,2): <B>Ian</B> dances around.
+[2023-02-19T21:40:48] GAME: TIDI: 0.5;0.529998;0.607139;0.790431
+[2023-02-19T21:41:48] GAME: TIDI: 0.5;0.520999;0.589911;0.770379
+[2023-02-19T21:42:48] GAME: TIDI: 0.5;0.514699;0.574869;0.750828
+[2023-02-19T21:43:49] GAME: TIDI: 0.5;0.510289;0.561953;0.731941
+[2023-02-19T21:44:02] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T21:44:34] EMOTE: INVALID/(Ian) (136,132,2): <B>Ian</B> chases their tail.
+[2023-02-19T21:44:48] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T21:44:49] GAME: TIDI: 0.833333;0.607203;0.571003;0.715847
+[2023-02-19T21:44:50] EMOTE: INVALID/(Ian) (136,131,2): <B>Ian</B> chases their tail.
+[2023-02-19T21:45:44] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T21:45:50] GAME: TIDI: 0.5;0.575042;0.571811;0.701443
+[2023-02-19T21:46:04] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T21:46:50] GAME: TIDI: 0.5;0.552529;0.567954;0.688094
+[2023-02-19T21:47:09] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T21:47:50] GAME: TIDI: 0.5;0.53677;0.561718;0.675457
+[2023-02-19T21:48:11] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T21:48:51] GAME: TIDI: 0.666667;0.575739;0.564522;0.664363
+[2023-02-19T21:49:32] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T21:49:51] GAME: TIDI: 0.5;0.553017;0.562221;0.654149
+[2023-02-19T21:50:51] GAME: TIDI: 0.5;0.537112;0.557199;0.644454
+[2023-02-19T21:51:52] GAME: TIDI: 0.666667;0.575979;0.560955;0.636104
+[2023-02-19T21:52:37] EMOTE: INVALID/(Fitz) (129,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-19T21:52:52] GAME: TIDI: 0.666667;0.603185;0.569401;0.629434
+[2023-02-19T21:53:21] EMOTE: INVALID/(Ian) (138,132,2): <B>Ian</B> dances around.
+[2023-02-19T21:53:55] GAME: TIDI: 5.16667;1.97223;0.849967;0.651487
+[2023-02-19T21:54:55] GAME: TIDI: 0.5;1.53056;0.986086;0.684947
+[2023-02-19T21:55:56] GAME: TIDI: 0.666667;1.27139;1.04315;0.720767
+[2023-02-19T21:56:06] ACCESS OUT: RiotScopez/(KA-RA) - IP:127.0.0.1 - CID:Logged Out - BYOND Logged Out

@@ -1,0 +1,648 @@
+[2023-03-12T03:29:10] START: Starting up data/logs/2023/03-March/12-Sunday/round-03-29-16.
+[2023-03-12T03:29:11] ADMIN: Loading jobban_rank
+[2023-03-12T03:29:11] ADMIN: jobban_keylist was empty
+[2023-03-12T03:29:11] ADMIN: Loading Banlist
+[2023-03-12T03:29:13] GAME: Rat Den loaded at at 170,65,5
+[2023-03-12T03:29:15] GAME: Abandoned Temple loaded at at 71,18,5
+[2023-03-12T03:29:15] GAME: Mine Vault 3 loaded at at 49,20,5
+[2023-03-12T03:29:15] GAME: Lost Explorer loaded at at 193,57,5
+[2023-03-12T03:29:15] GAME: Ore-Rich Geyser loaded at at 109,121,5
+[2023-03-12T03:29:15] GAME: Spider Cave 1 loaded at at 184,19,5
+[2023-03-12T03:29:15] GAME: Prepper Bunker loaded at at 30,52,5
+[2023-03-12T03:29:16] GAME: Quarantined Shuttle loaded at at 44,63,5
+[2023-03-12T03:29:16] GAME: Lost Explorer loaded at at 59,15,5
+[2023-03-12T03:29:16] GAME: Crystal Cave 3 loaded at at 213,58,5
+[2023-03-12T03:29:16] GAME: Cursed Sword Cave loaded at at 148,80,5
+[2023-03-12T03:29:16] GAME: Lost Explorer loaded at at 104,30,5
+[2023-03-12T03:29:16] GAME: spatial anomaly loaded at at 181,196,5
+[2023-03-12T03:29:16] GAME: Snow 5 loaded at at 23,21,4
+[2023-03-12T03:29:16] GAME: Merchant Stand loaded at at 17,165,4
+[2023-03-12T03:29:16] GAME: Field loaded at at 179,141,4
+[2023-03-12T03:29:16] GAME: Irradiated Manhole Cover loaded at at 47,15,4
+[2023-03-12T03:29:16] GAME: Old Hotel loaded at at 43,93,4
+[2023-03-12T03:29:16] GAME: Buried Treasure 3 loaded at at 40,80,4
+[2023-03-12T03:29:16] GAME: Empty Explorer's Home loaded at at 182,33,4
+[2023-03-12T03:29:16] GAME: Abandoned Bonfire loaded at at 165,100,4
+[2023-03-12T03:29:17] GAME: Pride Rock loaded at at 106,97,4
+[2023-03-12T03:29:17] GAME: Old Supply Drop loaded at at 59,158,4
+[2023-03-12T03:29:17] GAME: Meth Lab loaded at at 77,31,4
+[2023-03-12T03:29:17] GAME: Emergency Pod 2 loaded at at 63,61,4
+[2023-03-12T03:29:17] GAME: Thieves' Cave loaded at at 199,42,4
+[2023-03-12T03:29:17] GAME: Snow 2 loaded at at 14,38,4
+[2023-03-12T03:29:17] GAME: VR Den loaded at at 98,69,4
+[2023-03-12T03:29:17] GAME: Snow loaded at at 186,89,4
+[2023-03-12T03:29:17] GAME: Shakden loaded at at 11,193,4
+[2023-03-12T03:29:17] GAME: Farm loaded at at 74,93,4
+[2023-03-12T03:29:18] GAME: Snow 4 loaded at at 212,23,4
+[2023-03-12T03:29:18] GAME: Ration Cache loaded at at 87,127,4
+[2023-03-12T03:29:18] GAME: Construction Site loaded at at 199,71,4
+[2023-03-12T03:29:18] GAME: Rocky 1 loaded at at 55,36,9
+[2023-03-12T03:29:18] GAME: Chasm loaded at at 184,61,9
+[2023-03-12T03:29:18] GAME: Government Patrol loaded at at 138,33,9
+[2023-03-12T03:29:18] GAME: Rocky 4 loaded at at 117,62,9
+[2023-03-12T03:29:18] GAME: Frostfly Nest loaded at at 74,26,9
+[2023-03-12T03:29:18] GAME: Kururak Den loaded at at 215,50,9
+[2023-03-12T03:29:18] GAME: Demon Pool loaded at at 71,68,9
+[2023-03-12T03:29:18] GAME: Wolf Den loaded at at 177,82,9
+[2023-03-12T03:29:18] GAME: Rocky 1 loaded at at 19,84,9
+[2023-03-12T03:29:18] GAME: Shack 1 loaded at at 202,55,9
+[2023-03-12T03:29:19] ACCESS IN: RiotScopez/(RiotScopez) - IP:127.0.0.1 - CID:1871707424 - BYOND v514
+[2023-03-12T03:29:19] GAME: Rocky 1 loaded at at 8,54,9
+[2023-03-12T03:29:19] GAME: Mudpit loaded at at 36,31,9
+[2023-03-12T03:29:19] GAME: Spider Nest 1 loaded at at 165,50,9
+[2023-03-12T03:29:19] GAME: Rocky 1 loaded at at 119,76,9
+[2023-03-12T03:29:19] GAME: Forest Lake loaded at at 150,20,9
+[2023-03-12T03:29:19] GAME: Musk loaded at at 40,12,9
+[2023-03-12T03:29:19] GAME: Rocky 2 loaded at at 45,61,9
+[2023-03-12T03:29:19] GAME: Military Camp 1 loaded at at 102,18,9
+[2023-03-12T03:29:19] GAME: Spider Nest 1 loaded at at 125,17,9
+[2023-03-12T03:29:21] GAME: Decoupled Engine loaded at at 78,39,9
+[2023-03-12T03:29:21] GAME: Spider Nest 1 loaded at at 189,15,9
+[2023-03-12T03:29:21] GAME: Empty Cabin loaded at at 13,22,9
+[2023-03-12T03:29:21] GAME: Emergency Pod 4 loaded at at 214,66,9
+[2023-03-12T03:29:21] GAME: Smol 1 loaded at at 55,85,9
+[2023-03-12T03:29:23] GAME: Drug Den loaded at at 187,28,9
+[2023-03-12T03:29:24] GAME: Lab 1 loaded at at 98,71,9
+[2023-03-12T03:29:24] GAME: Butcher Shack loaded at at 127,52,9
+[2023-03-12T03:29:25] GAME: Rocky 1 loaded at at 139,46,9
+[2023-03-12T03:29:25] GAME: Frost Oasis loaded at at 8,36,9
+[2023-03-12T03:29:26] GAME: Dragon Plateu loaded at at 151,130,9
+[2023-03-12T03:29:26] GAME: Cult Bar loaded at at 201,194,9
+[2023-03-12T03:29:26] GAME: Leopardmander Den loaded at at 30,146,9
+[2023-03-12T03:29:26] GAME: Death Den loaded at at 170,178,9
+[2023-03-12T03:29:26] GAME: Emergency Pod 3 loaded at at 74,225,9
+[2023-03-12T03:29:26] GAME: Chapel 1 loaded at at 203,134,9
+[2023-03-12T03:29:26] GAME: DJOutpost 3 loaded at at 63,188,9
+[2023-03-12T03:29:27] GAME: Raided Mech Hanger loaded at at 112,180,9
+[2023-03-12T03:29:27] GAME: Great Wolf Den loaded at at 106,128,9
+[2023-03-12T03:29:27] GAME: Cliff Base loaded at at 50,127,9
+[2023-03-12T03:29:29] GAME: Rocky Base loaded at at 8,172,9
+[2023-03-12T03:29:30] GAME: Abandoned Lab loaded at at 92,217,9
+[2023-03-12T03:29:30] GAME: Lone Wolf loaded at at 140,169,9
+[2023-03-12T03:29:31] GAME: Dog Base loaded at at 83,179,9
+[2023-03-12T03:29:31] GAME: Syndi Sniper loaded at at 142,207,9
+[2023-03-12T03:30:18] GAME: Z-level VR World loaded at at 1,1,11
+[2023-03-12T03:30:19] GAME: Z-level Fuel Depot - Z1 Space loaded at at 1,1,12
+[2023-03-12T03:30:23] GAME: Z-level Kara Aerostat - Z1 Aerostat loaded at at 1,1,13
+[2023-03-12T03:30:29] GAME: Z-level Kara - Z1 Northern Star loaded at at 1,1,14
+[2023-03-12T03:31:09] GAME: Z-level Snow Field loaded at at 1,1,15
+[2023-03-12T03:31:40] MISC: a the gibber didn't find an input plate.
+[2023-03-12T03:32:15] MISC: a the gibber didn't find an input plate.
+[2023-03-12T03:35:53] ADMIN: EVENT Error: /mob/living/simple_mob/animal/giant_spider/broodling([0x30002bd]) took longer than 0.5 seconds to delete (took 0.5 seconds to delete)
+[2023-03-12T03:35:58] ACCESS OUT: INVALID/(RiotScopez) - IP:127.0.0.1 - CID:Logged Out - BYOND Logged Out
+[2023-03-12T03:35:58] ACCESS IN: RiotScopez/(Cyborg) - IP:127.0.0.1 - CID:1871707424 - BYOND v514
+[2023-03-12T03:36:03] ADMIN: RiotScopez/(Cyborg) delayed the game.
+[2023-03-12T03:36:30] ADMIN: EVENT Error: /icon([0x21014ffc]) took longer than 0.5 seconds to delete (took 0.5 seconds to delete)
+[2023-03-12T03:36:56] ADMIN: RiotScopez/(Cyborg) has used rudimentary transformation on RiotScopez/(Cyborg). Transforming to robot; deletemob=1
+[2023-03-12T03:36:57] ACCESS OUT: INVALID/(Cyborg) - IP:127.0.0.1 - CID:Logged Out - BYOND Logged Out
+[2023-03-12T03:36:57] ACCESS IN: RiotScopez/(Cyborg) - IP:127.0.0.1 - CID:1871707424 - BYOND v514
+[2023-03-12T03:36:59] GAME: TIDI: 10.6667;3.2;0.64;0.064
+[2023-03-12T03:37:08] ADMIN: RiotScopez/(Cyborg) has changed RiotScopez/(Cyborg)'s size multiplier to 1.
+[2023-03-12T03:37:18] ADMIN: RiotScopez/(Cyborg) has changed RiotScopez/(Cyborg)'s size multiplier to 5.
+[2023-03-12T03:37:55] ACCESS OUT: INVALID/(Medihound Cyborg-95) - IP:127.0.0.1 - CID:Logged Out - BYOND Logged Out
+[2023-03-12T03:37:55] ACCESS IN: RiotScopez/(Cyborg) - IP:127.0.0.1 - CID:1871707424 - BYOND v514
+[2023-03-12T03:37:55] ADMIN: INVALID/(Medihound Cyborg-95) RiotScopez/(Cyborg) admin-ghosted.
+[2023-03-12T03:38:01] ACCESS OUT: INVALID/(Cyborg) - IP:127.0.0.1 - CID:Logged Out - BYOND Logged Out
+[2023-03-12T03:38:01] ACCESS IN: RiotScopez/(Medihound Cyborg-95) - IP:127.0.0.1 - CID:1871707424 - BYOND v514
+[2023-03-12T03:38:06] GAME: TIDI: 12;5.84;1.68;0.2256
+[2023-03-12T03:39:13] GAME: TIDI: 11.5;7.538;2.8516;0.4882
+[2023-03-12T03:39:16] ADMIN: RiotScopez/(Medihound Cyborg-95) created 1 /mob/living/carbon/human
+[2023-03-12T03:39:26] ADMIN: EVENT Error: /datum/ai_holder/simple_mob/melee([0x21008fdc]) took longer than 0.5 seconds to delete (took 0.6 seconds to delete)
+[2023-03-12T03:39:50] ADMIN: RiotScopez/(Medihound Cyborg-95) created 1 /obj/item/weapon/tool/crowbar/heavysniper
+[2023-03-12T03:39:59] ADMIN: RiotScopez/(Medihound Cyborg-95) created 1 /obj/item/weapon/cell/infinite
+[2023-03-12T03:40:12] ADMIN: RiotScopez/(Medihound Cyborg-95) created 1 /obj/item/weapon/card/id/centcom/ERT
+[2023-03-12T03:40:17] GAME: TIDI: 6.66667;7.2766;3.7366;0.81304
+[2023-03-12T03:40:40] ADMIN: RiotScopez/(Medihound Cyborg-95) created 1 /obj/item/borg/upgrade/vtec
+[2023-03-12T03:40:43] ADMIN: RiotScopez/(Medihound Cyborg-95) created 1 /obj/item/borg/upgrade/jetpack
+[2023-03-12T03:40:44] ADMIN: RiotScopez/(Medihound Cyborg-95) created 1 /obj/item/borg/upgrade/advhealth
+[2023-03-12T03:40:46] ADMIN: RiotScopez/(Medihound Cyborg-95) created 1 /obj/item/borg/upgrade/syndicate
+[2023-03-12T03:40:47] ADMIN: RiotScopez/(Medihound Cyborg-95) created 1 /obj/item/borg/upgrade/language
+[2023-03-12T03:40:49] ADMIN: RiotScopez/(Medihound Cyborg-95) created 1 /obj/item/borg/upgrade/sizegun
+[2023-03-12T03:41:09] ADMIN: RiotScopez/(Medihound Cyborg-95) assumed direct control of Duro Aegis.
+[2023-03-12T03:41:09] ACCESS OUT: INVALID/(Medihound Cyborg-95) - IP:127.0.0.1 - CID:Logged Out - BYOND Logged Out
+[2023-03-12T03:41:09] ACCESS IN: RiotScopez/(Duro Aegis) - IP:127.0.0.1 - CID:1871707424 - BYOND v514
+[2023-03-12T03:41:18] GAME: TIDI: 1;5.39362;4.068;1.13854
+[2023-03-12T03:42:09] ADMIN: riotscopez/(Duro Aegis) assumed direct control of Medihound Cyborg-95.
+[2023-03-12T03:42:09] ACCESS OUT: INVALID/(Duro Aegis) - IP:127.0.0.1 - CID:Logged Out - BYOND Logged Out
+[2023-03-12T03:42:09] ACCESS IN: RiotScopez/(Medihound Cyborg-95) - IP:127.0.0.1 - CID:1871707424 - BYOND v514
+[2023-03-12T03:42:18] GAME: TIDI: 0.5;3.92553;4.03951;1.42863
+[2023-03-12T03:43:18] GAME: TIDI: 0;2.74787;3.78118;1.66389
+[2023-03-12T03:44:01] ACCESS OUT: INVALID/(KI-RA) - IP:127.0.0.1 - CID:Logged Out - BYOND Logged Out
+[2023-03-12T03:44:01] ACCESS IN: RiotScopez/(Cyborg) - IP:127.0.0.1 - CID:1871707424 - BYOND v514
+[2023-03-12T03:44:01] ADMIN: INVALID/(KI-RA) RiotScopez/(Cyborg) admin-ghosted.
+[2023-03-12T03:44:18] GAME: TIDI: 0.166667;1.97351;3.41965;1.83946
+[2023-03-12T03:44:23] ADMIN: riotscopez/(Cyborg) has used rudimentary transformation on riotscopez/(Cyborg). Transforming to robot; deletemob=1
+[2023-03-12T03:44:24] ACCESS OUT: INVALID/(Cyborg) - IP:127.0.0.1 - CID:Logged Out - BYOND Logged Out
+[2023-03-12T03:44:24] ACCESS IN: RiotScopez/(Cyborg) - IP:127.0.0.1 - CID:1871707424 - BYOND v514
+[2023-03-12T03:44:43] ADMIN: riotscopez/(Cyborg) stuffed riotscopez into Cyborg.
+[2023-03-12T03:44:43] ACCESS OUT: INVALID/(Cyborg) - IP:127.0.0.1 - CID:Logged Out - BYOND Logged Out
+[2023-03-12T03:44:43] ACCESS IN: RiotScopez/(Cyborg) - IP:127.0.0.1 - CID:1871707424 - BYOND v514
+[2023-03-12T03:44:54] ADMIN: riotscopez/(Cyborg) has changed riotscopez/(Cyborg)'s size multiplier to 5.
+[2023-03-12T03:45:19] GAME: TIDI: 1.83333;1.93146;3.12201;1.96772
+[2023-03-12T03:45:53] ADMIN: riotscopez/(Tamakoto) assumed direct control of Duro Aegis.
+[2023-03-12T03:45:53] ACCESS OUT: INVALID/(Tamakoto) - IP:127.0.0.1 - CID:Logged Out - BYOND Logged Out
+[2023-03-12T03:45:53] ACCESS IN: RiotScopez/(Duro Aegis) - IP:127.0.0.1 - CID:1871707424 - BYOND v514
+[2023-03-12T03:46:18] ADMIN: riotscopez/(Duro Aegis) created 1 /obj/item/weapon/cell/infinite
+[2023-03-12T03:46:20] GAME: TIDI: 1;1.65202;2.82801;2.05375
+[2023-03-12T03:46:32] ADMIN: riotscopez/(Duro Aegis) created 1 /obj/item/borg/upgrade/vtec
+[2023-03-12T03:46:34] ADMIN: riotscopez/(Duro Aegis) created 1 /obj/item/borg/upgrade/jetpack
+[2023-03-12T03:46:36] ADMIN: riotscopez/(Duro Aegis) created 1 /obj/item/borg/upgrade/advhealth
+[2023-03-12T03:46:37] ADMIN: EVENT Error: /mob/observer/dead([0x30002f1]) took longer than 0.5 seconds to delete (took 0.5 seconds to delete)
+[2023-03-12T03:46:38] ADMIN: riotscopez/(Duro Aegis) created 1 /obj/item/borg/upgrade/syndicate
+[2023-03-12T03:46:39] ADMIN: riotscopez/(Duro Aegis) created 1 /obj/item/borg/upgrade/language
+[2023-03-12T03:46:41] ADMIN: riotscopez/(Duro Aegis) created 1 /obj/item/borg/upgrade/sizeshift
+[2023-03-12T03:46:43] ADMIN: riotscopez/(Duro Aegis) created 1 /obj/item/borg/upgrade/sizegun
+[2023-03-12T03:47:21] GAME: TIDI: 1.66667;1.65641;2.59369;2.10774
+[2023-03-12T03:47:28] ADMIN: riotscopez/(Duro Aegis) deleted the �Emergency Response Team ID at (171,114,2)
+[2023-03-12T03:47:34] ADMIN: riotscopez/(Duro Aegis) assumed direct control of Tamakoto.
+[2023-03-12T03:47:34] ACCESS OUT: INVALID/(Duro Aegis) - IP:127.0.0.1 - CID:Logged Out - BYOND Logged Out
+[2023-03-12T03:47:34] ACCESS IN: RiotScopez/(Tamakoto) - IP:127.0.0.1 - CID:1871707424 - BYOND v514
+[2023-03-12T03:48:02] ADMIN: riotscopez/(Tamakoto) deleted Duro Aegis at (171,114,2)
+[2023-03-12T03:48:03] ADMIN: riotscopez/(Tamakoto) Error: /mob/living/carbon/human([0x300047a]) took longer than 0.5 seconds to delete (took 0.5 seconds to delete)
+[2023-03-12T03:48:22] GAME: TIDI: 1.5;1.60949;2.39685;2.13665
+[2023-03-12T03:48:31] ACCESS OUT: INVALID/(Tamakoto) - IP:127.0.0.1 - CID:Logged Out - BYOND Logged Out
+[2023-03-12T03:48:31] ACCESS IN: RiotScopez/(Cyborg) - IP:127.0.0.1 - CID:1871707424 - BYOND v514
+[2023-03-12T03:48:31] ADMIN: INVALID/(Tamakoto) RiotScopez/(Cyborg) admin-ghosted.
+[2023-03-12T03:48:35] ADMIN: riotscopez/(Cyborg) stuffed riotscopez into KI-RA.
+[2023-03-12T03:48:35] ACCESS OUT: INVALID/(Cyborg) - IP:127.0.0.1 - CID:Logged Out - BYOND Logged Out
+[2023-03-12T03:48:35] ACCESS IN: RiotScopez/(KI-RA) - IP:127.0.0.1 - CID:1871707424 - BYOND v514
+[2023-03-12T03:49:13] ACCESS OUT: INVALID/(KI-RA) - IP:127.0.0.1 - CID:Logged Out - BYOND Logged Out
+[2023-03-12T03:49:13] ACCESS IN: RiotScopez/(KI-RA) - IP:127.0.0.1 - CID:1871707424 - BYOND v514
+[2023-03-12T03:49:13] ADMIN: INVALID/(KI-RA) RiotScopez/(KI-RA) admin-ghosted.
+[2023-03-12T03:49:22] GAME: TIDI: 0.5;1.27664;2.17281;2.14027
+[2023-03-12T03:49:23] ADMIN: riotscopez/(KI-RA) stuffed riotscopez into Tamakoto.
+[2023-03-12T03:49:23] ACCESS OUT: INVALID/(KI-RA) - IP:127.0.0.1 - CID:Logged Out - BYOND Logged Out
+[2023-03-12T03:49:23] ACCESS IN: RiotScopez/(Tamakoto) - IP:127.0.0.1 - CID:1871707424 - BYOND v514
+[2023-03-12T03:49:31] ACCESS OUT: INVALID/(Tamakoto) - IP:127.0.0.1 - CID:Logged Out - BYOND Logged Out
+[2023-03-12T03:49:31] ACCESS IN: RiotScopez/(Cyborg) - IP:127.0.0.1 - CID:1871707424 - BYOND v514
+[2023-03-12T03:49:31] ADMIN: INVALID/(Tamakoto) RiotScopez/(Cyborg) admin-ghosted.
+[2023-03-12T03:49:55] ADMIN: riotscopez/(Cyborg) spawned /mob/living/carbon/human at (161,138,2)
+[2023-03-12T03:50:00] ADMIN: riotscopez/(Cyborg) stuffed riotscopez into Kasper Kemble.
+[2023-03-12T03:50:00] ACCESS OUT: INVALID/(Cyborg) - IP:127.0.0.1 - CID:Logged Out - BYOND Logged Out
+[2023-03-12T03:50:00] ACCESS IN: RiotScopez/(Kasper Kemble) - IP:127.0.0.1 - CID:1871707424 - BYOND v514
+[2023-03-12T03:50:22] GAME: TIDI: 0.666667;1.09365;1.95698;2.12194
+[2023-03-12T03:50:28] ADMIN: EVENT Error: /obj/item/weapon/cell([0x20312bd]) took longer than 0.5 seconds to delete (took 0.6 seconds to delete)
+[2023-03-12T03:50:32] ADMIN: riotscopez/(Kasper Kemble) changed the equipment of riotscopez/(Kasper Kemble) to Job - Pilot.
+[2023-03-12T03:50:47] ADMIN: riotscopez/(Kasper Kemble) changed the equipment of riotscopez/(Kasper Kemble) to Job - Visitor.
+[2023-03-12T03:51:27] GAME: TIDI: 8.5;3.31556;2.22869;2.13262
+[2023-03-12T03:52:36] GAME: TIDI: 14.6667;6.72089;3.12713;2.23207
+[2023-03-12T03:52:40] ADMIN: riotscopez/(Kasper Kemble) has started the game.
+[2023-03-12T03:52:41] GAME: JOINED riotscopez/(Kasper Kemble) as "Visitor"
+[2023-03-12T03:52:41] GAME: SPECIES riotscopez/(Kasper Kemble) is a: "Human"
+[2023-03-12T03:52:44] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T03:52:50] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T03:53:00] ADMIN: riotscopez/(Kasper Kemble) jumped to the �Medbay Hallway - Starboard
+[2023-03-12T03:53:11] ADMIN: riotscopez/(Kasper Kemble) jumped to 174,125,2 in the �Medbay Hallway - Port
+[2023-03-12T03:53:14] ADMIN: riotscopez/(Kasper Kemble) jumped to 171,132,2 in the �Medbay Foyer
+[2023-03-12T03:53:17] SAY: INVALID/(Medibot) (50,181,9): What kind of medbay is this? Everyone's dropping like flies.
+[2023-03-12T03:53:38] GAME: TIDI: 3.66667;5.80462;3.66263;2.37512
+[2023-03-12T03:53:40] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T03:54:28] SAY: riotscopez/(Kasper Kemble) (160,138,2): Help me
+[2023-03-12T03:54:30] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T03:54:39] GAME: TIDI: 1;4.36324;3.80275;2.51789
+[2023-03-12T03:55:01] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T03:55:01] SAY: INVALID/(Medibot) (50,181,9): Radar, put a mask on!
+[2023-03-12T03:55:17] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T03:55:40] GAME: TIDI: 1.66667;3.55426;3.75305;2.6414
+[2023-03-12T03:56:08] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T03:56:40] GAME: TIDI: 0.666667;2.68799;3.54004;2.73127
+[2023-03-12T03:56:52] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T03:57:41] GAME: TIDI: 0.833333;2.13159;3.25835;2.78398
+[2023-03-12T03:58:27] SAY: INVALID/(Medibot) (50,181,9): What kind of medbay is this? Everyone's dropping like flies.
+[2023-03-12T03:58:41] GAME: TIDI: 0.833333;1.74211;2.9551;2.80109
+[2023-03-12T03:59:35] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T03:59:42] GAME: TIDI: 0.666667;1.41948;2.64798;2.78578
+[2023-03-12T03:59:47] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T04:00:42] GAME: TIDI: 1;1.29364;2.37711;2.74491
+[2023-03-12T04:00:52] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T04:01:18] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T04:01:43] GAME: TIDI: 0.5;1.05554;2.1128;2.6817
+[2023-03-12T04:01:54] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T04:02:10] SAY: INVALID/(Medibot) (50,181,9): What kind of medbay is this? Everyone's dropping like flies.
+[2023-03-12T04:02:43] GAME: TIDI: 0.333333;0.838881;1.85801;2.59933
+[2023-03-12T04:03:11] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T04:03:33] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T04:03:44] GAME: TIDI: 1.16667;0.937217;1.67385;2.50678
+[2023-03-12T04:04:33] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T04:04:43] SAY: INVALID/(Medibot) (50,181,9): There's always a catch, and it's the best there is.
+[2023-03-12T04:04:44] GAME: TIDI: 0.5;0.806052;1.50029;2.40613
+[2023-03-12T04:05:03] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T04:05:44] GAME: TIDI: 0.333333;0.664236;1.33308;2.29883
+[2023-03-12T04:06:12] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T04:06:20] SAY: INVALID/(Medibot) (50,181,9): There's always a catch, and it's the best there is.
+[2023-03-12T04:06:32] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T04:06:44] GAME: TIDI: 0.666667;0.664965;1.19946;2.18889
+[2023-03-12T04:07:20] EMOTE: INVALID/(Ian) (135,133,2): <B>Ian</B> chases their tail.
+[2023-03-12T04:07:45] GAME: TIDI: 0.166667;0.515476;1.06266;2.07627
+[2023-03-12T04:07:48] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T04:07:58] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T04:08:17] ADMIN: riotscopez/(Kasper Kemble) delayed the round end.
+[2023-03-12T04:08:45] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T18:59:23] GAME: TIDI: 89064.5;26719.7;5344.79;536.348
+[2023-03-12T18:59:27] GAME: Autotransfer has called the shuttle.
+[2023-03-12T19:00:03] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T19:31:43] GAME: TIDI: 3133;19643.7;8204.57;1303.17
+[2023-03-12T19:32:40] SAY: INVALID/(Medibot) (50,181,9): Delicious!
+[2023-03-12T19:32:45] GAME: TIDI: 2.66667;13751.4;9313.94;2104.25
+[2023-03-12T19:33:42] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T19:33:45] GAME: TIDI: 0.5;9626.12;9376.37;2831.46
+[2023-03-12T19:34:05] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T19:34:13] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T19:34:45] GAME: TIDI: 0.666667;6738.49;8848.8;3433.19
+[2023-03-12T19:35:45] EMOTE: INVALID/(Ian) (135,135,2): <B>Ian</B> chases their tail.
+[2023-03-12T19:35:46] GAME: TIDI: 0.5;4717.09;8022.45;3892.12
+[2023-03-12T19:36:46] GAME: TIDI: 0.833333;3302.21;7078.41;4210.75
+[2023-03-12T19:36:58] EMOTE: INVALID/(Ian) (135,135,2): <B>Ian</B> chases their tail.
+[2023-03-12T19:36:58] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T19:37:12] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T19:37:46] GAME: TIDI: 0.333333;2311.65;6125.05;4402.18
+[2023-03-12T19:38:34] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T19:38:38] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T19:38:47] GAME: TIDI: 0.666667;1618.35;5223.71;4484.33
+[2023-03-12T19:39:47] GAME: TIDI: 0.333333;1132.95;4405.56;4476.46
+[2023-03-12T19:39:52] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T19:40:37] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T19:40:47] GAME: TIDI: 0.5;793.213;3683.09;4397.12
+[2023-03-12T19:40:59] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T19:41:31] EMOTE: INVALID/(Ian) (135,132,2): <B>Ian</B> dances around.
+[2023-03-12T19:41:45] SAY: INVALID/(Medibot) (50,181,9): I knew it, I should've been a plastic surgeon.
+[2023-03-12T19:41:48] GAME: TIDI: 0.833333;555.499;3057.57;4263.16
+[2023-03-12T19:42:36] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T19:42:46] SAY: INVALID/(Medibot) (50,181,9): There's always a catch, and it's the best there is.
+[2023-03-12T19:42:48] GAME: TIDI: 0.5;389;2523.86;4089.23
+[2023-03-12T19:42:56] EMOTE: INVALID/(Ian) (136,133,2): <B>Ian</B> chases their tail.
+[2023-03-12T19:43:48] GAME: TIDI: 0.666667;272.5;2073.59;3887.67
+[2023-03-12T19:44:12] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T19:44:42] EMOTE: INVALID/(Ian) (135,133,2): <B>Ian</B> dances around.
+[2023-03-12T19:44:43] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T19:44:49] GAME: TIDI: 1;191.05;1697.08;3668.61
+[2023-03-12T19:45:05] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T19:45:39] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T19:45:49] GAME: TIDI: 0.5;133.885;1384.44;3440.19
+[2023-03-12T19:46:39] GAME: Antagonists at round end were...
+[2023-03-12T19:46:50] GAME: TIDI: 0.666667;93.9194;1126.34;3208.81
+[2023-03-12T19:47:15] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T19:47:17] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T19:47:31] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T19:47:50] GAME: TIDI: 0.5;65.8936;914.248;2979.35
+[2023-03-12T19:48:08] SAY: INVALID/(Medibot) (50,181,9): What kind of medbay is this? Everyone's dropping like flies.
+[2023-03-12T19:48:28] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T19:48:50] GAME: TIDI: 0.5;46.2755;740.653;2755.48
+[2023-03-12T19:49:38] EMOTE: INVALID/(Ian) (137,132,2): <B>Ian</B> dances around.
+[2023-03-12T19:49:51] GAME: TIDI: 0.5;32.5429;599.031;2539.84
+[2023-03-12T19:49:56] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T19:50:29] SAY: INVALID/(Medibot) (50,181,9): I knew it, I should've been a plastic surgeon.
+[2023-03-12T19:50:35] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T19:50:51] GAME: TIDI: 1;23.08;483.841;2334.24
+[2023-03-12T19:51:17] SAY: INVALID/(Medibot) (50,181,9): There's always a catch, and it's the best there is.
+[2023-03-12T19:51:31] SAY: INVALID/(Medibot) (50,181,9): Delicious!
+[2023-03-12T19:51:39] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T19:51:47] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T19:51:47] GAME: Autotransfer has called the shuttle.
+[2023-03-12T19:51:52] GAME: TIDI: 0.833333;16.406;390.354;2139.85
+[2023-03-12T19:52:52] GAME: TIDI: 0.5;11.6342;314.61;1957.32
+[2023-03-12T19:53:50] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T19:53:52] GAME: TIDI: 0.5;8.29394;253.347;1786.93
+[2023-03-12T19:53:54] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T19:54:04] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T19:54:08] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T19:54:26] SAY: INVALID/(Medibot) (50,181,9): There's always a catch, and it's the best there is.
+[2023-03-12T19:54:53] GAME: TIDI: 0.5;5.95576;203.869;1628.62
+[2023-03-12T19:55:42] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T19:55:53] GAME: TIDI: 0.5;4.31903;163.959;1482.15
+[2023-03-12T19:55:54] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T19:56:37] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T19:56:53] GAME: TIDI: 0.666667;3.22332;131.812;1347.12
+[2023-03-12T19:57:05] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T19:57:21] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T19:57:54] GAME: TIDI: 0.666667;2.45632;105.941;1223
+[2023-03-12T19:57:55] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T19:58:19] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T19:58:23] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T19:58:32] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T19:58:42] SAY: INVALID/(Medibot) (50,181,9): Radar, put a mask on!
+[2023-03-12T19:58:54] GAME: TIDI: 0.666667;1.91943;85.1363;1109.22
+[2023-03-12T19:58:58] EMOTE: INVALID/(Ian) (135,133,2): <B>Ian</B> chases their tail.
+[2023-03-12T19:59:30] SAY: INVALID/(Medibot) (50,181,9): Radar, put a mask on!
+[2023-03-12T19:59:34] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T19:59:42] EMOTE: INVALID/(Ian) (135,134,2): <B>Ian</B> chases their tail.
+[2023-03-12T19:59:44] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T19:59:54] EMOTE: INVALID/(Ian) (136,134,2): <B>Ian</B> dances around.
+[2023-03-12T19:59:54] GAME: TIDI: 0.5;1.4936;68.4078;1005.13
+[2023-03-12T20:00:10] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:00:55] GAME: TIDI: 0.5;1.19552;54.9653;910.118
+[2023-03-12T20:01:26] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:01:55] GAME: TIDI: 0.5;0.986863;44.1696;823.523
+[2023-03-12T20:01:57] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:02:56] GAME: TIDI: 1;0.990804;35.5339;744.724
+[2023-03-12T20:03:11] SAY: INVALID/(Medibot) (50,181,9): Delicious!
+[2023-03-12T20:03:49] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:03:56] GAME: TIDI: 0.5;0.843563;28.5958;673.111
+[2023-03-12T20:04:56] GAME: TIDI: 0.666667;0.790494;23.0348;608.104
+[2023-03-12T20:05:18] SAY: INVALID/(Medibot) (50,181,9): There's always a catch, and it's the best there is.
+[2023-03-12T20:05:26] SAY: INVALID/(Medibot) (50,181,9): Delicious!
+[2023-03-12T20:05:57] GAME: TIDI: 1;0.853346;18.5985;549.153
+[2023-03-12T20:06:37] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:06:51] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:06:57] GAME: TIDI: 0.5;0.747342;15.0282;495.741
+[2023-03-12T20:07:09] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:07:58] GAME: TIDI: 1;0.823139;12.1872;447.385
+[2023-03-12T20:08:23] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:08:25] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:08:44] SAY: INVALID/(Medibot) (50,181,9): Delicious!
+[2023-03-12T20:08:58] GAME: TIDI: 0.666667;0.776198;9.90502;403.637
+[2023-03-12T20:09:22] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:09:36] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:09:52] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:09:59] GAME: TIDI: 0.5;0.693338;8.06268;364.08
+[2023-03-12T20:10:26] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:10:28] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:10:40] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:10:42] SAY: INVALID/(Medibot) (50,181,9): Radar, put a mask on!
+[2023-03-12T20:10:59] GAME: TIDI: 0.5;0.635337;6.57721;328.329
+[2023-03-12T20:11:06] SAY: INVALID/(Medibot) (50,181,9): I knew it, I should've been a plastic surgeon.
+[2023-03-12T20:11:28] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:11:49] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:11:59] GAME: TIDI: 0.5;0.594736;5.38072;296.035
+[2023-03-12T20:12:59] GAME: TIDI: 0.5;0.566315;4.41784;266.873
+[2023-03-12T20:13:27] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:13:55] EMOTE: INVALID/(Ian) (138,132,2): <B>Ian</B> chases their tail.
+[2023-03-12T20:14:00] GAME: TIDI: 0.5;0.546421;3.64355;240.55
+[2023-03-12T20:14:47] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:15:00] GAME: TIDI: 0.5;0.532494;3.02134;216.797
+[2023-03-12T20:15:10] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:15:32] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:15:42] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:16:00] GAME: TIDI: 0.5;0.522746;2.52162;195.37
+[2023-03-12T20:16:36] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:17:01] GAME: TIDI: 0.666667;0.565922;2.13048;176.046
+[2023-03-12T20:17:02] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:17:12] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:17:22] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:17:50] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:17:54] SAY: INVALID/(Medibot) (50,181,9): What kind of medbay is this? Everyone's dropping like flies.
+[2023-03-12T20:18:01] GAME: TIDI: 0.333333;0.496146;1.80362;158.621
+[2023-03-12T20:18:06] SAY: INVALID/(Medibot) (50,181,9): What kind of medbay is this? Everyone's dropping like flies.
+[2023-03-12T20:18:10] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:18:15] EMOTE: INVALID/(Ian) (135,131,2): <B>Ian</B> chases their tail.
+[2023-03-12T20:18:45] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:19:01] GAME: TIDI: 0.5;0.497302;1.54235;142.914
+[2023-03-12T20:19:03] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:19:05] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:19:39] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:19:57] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:20:02] GAME: TIDI: 0.5;0.498111;1.3335;128.756
+[2023-03-12T20:20:39] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:21:02] GAME: TIDI: 0.5;0.498678;1.16654;115.997
+[2023-03-12T20:21:11] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:21:20] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:21:36] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:21:56] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:22:00] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:22:02] GAME: TIDI: 0.666667;0.549075;1.04305;104.501
+[2023-03-12T20:22:46] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:22:50] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:23:03] GAME: TIDI: 0.5;0.534352;0.941307;94.1452
+[2023-03-12T20:23:08] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:24:03] GAME: TIDI: 0.666667;0.574047;0.867855;84.8175
+[2023-03-12T20:24:29] SAY: INVALID/(Medibot) (50,181,9): There's always a catch, and it's the best there is.
+[2023-03-12T20:24:31] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:24:51] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:25:03] GAME: TIDI: 0.333333;0.501833;0.794651;76.4152
+[2023-03-12T20:25:07] SAY: INVALID/(Medibot) (50,181,9): I knew it, I should've been a plastic surgeon.
+[2023-03-12T20:25:33] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:26:03] GAME: TIDI: 0.5;0.501283;0.735977;68.8473
+[2023-03-12T20:26:05] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:26:17] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:26:41] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:27:04] GAME: TIDI: 0.5;0.500898;0.688961;62.0315
+[2023-03-12T20:27:17] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:27:19] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:27:31] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:27:47] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:28:04] GAME: TIDI: 0.666667;0.550629;0.661295;55.8944
+[2023-03-12T20:28:08] EMOTE: INVALID/(Ian) (135,132,2): <B>Ian</B> dances around.
+[2023-03-12T20:28:50] EMOTE: INVALID/(Ian) (135,132,2): <B>Ian</B> chases their tail.
+[2023-03-12T20:29:04] GAME: TIDI: 0.333333;0.48544;0.626124;50.3676
+[2023-03-12T20:29:20] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:30:05] GAME: TIDI: 0.5;0.489808;0.598861;45.3907
+[2023-03-12T20:30:56] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:31:05] GAME: TIDI: 0.5;0.492866;0.577662;40.9094
+[2023-03-12T20:31:20] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:31:49] EMOTE: INVALID/(Ian) (135,131,2): <B>Ian</B> dances around.
+[2023-03-12T20:32:05] GAME: TIDI: 0.5;0.495006;0.561131;36.8746
+[2023-03-12T20:32:59] SAY: INVALID/(Medibot) (50,181,9): Radar, put a mask on!
+[2023-03-12T20:33:06] GAME: TIDI: 0.666667;0.546504;0.558205;33.243
+[2023-03-12T20:33:43] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:34:06] GAME: TIDI: 0.5;0.532553;0.553075;29.974
+[2023-03-12T20:34:24] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:34:32] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:35:00] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:35:06] GAME: TIDI: 0.5;0.522787;0.547017;27.0313
+[2023-03-12T20:35:22] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:36:08] GAME: TIDI: 2.91424;1.24022;0.685658;24.3967
+[2023-03-12T20:36:46] ACCESS OUT: riotscopez/(Kasper Kemble) - IP:127.0.0.1 - CID:Logged Out - BYOND Logged Out
+[2023-03-12T20:36:55] SAY: INVALID/(Medibot) (50,181,9): There's always a catch, and it's the best there is.
+[2023-03-12T20:37:12] GAME: TIDI: 6.5;2.81816;1.11216;22.0683
+[2023-03-12T20:38:12] GAME: TIDI: 0.333333;2.07271;1.30427;19.9919
+[2023-03-12T20:39:13] GAME: TIDI: 1.08243;1.77563;1.39854;18.1325
+[2023-03-12T20:40:13] GAME: TIDI: 0.5;1.39294;1.39742;16.459
+[2023-03-12T20:40:41] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:40:41] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:41:03] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:41:13] GAME: TIDI: 0.5;1.12506;1.34295;14.9474
+[2023-03-12T20:42:14] GAME: TIDI: 0.5;0.93754;1.26187;13.5788
+[2023-03-12T20:43:14] GAME: TIDI: 0.5;0.806278;1.17075;12.338
+[2023-03-12T20:44:14] GAME: TIDI: 0.333333;0.664394;1.06948;11.2112
+[2023-03-12T20:44:44] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:45:12] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:45:15] GAME: TIDI: 0.5;0.615076;0.978597;10.1879
+[2023-03-12T20:46:15] GAME: TIDI: 0.333333;0.530553;0.888988;9.25803
+[2023-03-12T20:47:08] SAY: INVALID/(Medibot) (50,181,9): Delicious!
+[2023-03-12T20:47:15] GAME: TIDI: 0.5;0.521387;0.815468;8.41377
+[2023-03-12T20:47:16] SAY: INVALID/(Medibot) (50,181,9): I knew it, I should've been a plastic surgeon.
+[2023-03-12T20:48:09] SAY: INVALID/(Medibot) (50,181,9): Radar, put a mask on!
+[2023-03-12T20:48:15] GAME: TIDI: 0.5;0.514971;0.755369;7.64793
+[2023-03-12T20:49:16] GAME: TIDI: 0.333333;0.46048;0.696391;6.95278
+[2023-03-12T20:49:29] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:50:16] GAME: TIDI: 0.5;0.472336;0.65158;6.32266
+[2023-03-12T20:51:12] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:51:16] GAME: TIDI: 0.5;0.480635;0.617391;5.75213
+[2023-03-12T20:51:20] SAY: INVALID/(Medibot) (50,181,9): Delicious!
+[2023-03-12T20:52:16] GAME: TIDI: 0.5;0.486445;0.591202;5.23604
+[2023-03-12T20:52:40] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:53:17] GAME: TIDI: 0.5;0.490511;0.571064;4.76954
+[2023-03-12T20:53:30] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:54:17] GAME: TIDI: 0.333333;0.443358;0.545522;4.34714
+[2023-03-12T20:55:03] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:55:17] GAME: TIDI: 0.5;0.46035;0.528488;3.96527
+[2023-03-12T20:55:33] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:56:03] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:56:05] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T20:56:17] GAME: TIDI: 0.166667;0.372245;0.49724;3.61847
+[2023-03-12T20:57:18] GAME: TIDI: 0.666667;0.460572;0.489906;3.30561
+[2023-03-12T20:58:18] GAME: TIDI: 0.333333;0.4224;0.476405;3.02269
+[2023-03-12T20:59:20] GAME: TIDI: 3.33333;1.29568;0.64026;2.78445
+[2023-03-12T20:59:34] SAY: INVALID/(Medibot) (50,181,9): I knew it, I should've been a plastic surgeon.
+[2023-03-12T21:00:25] GAME: TIDI: 8.0766;3.32996;1.1782;2.62382
+[2023-03-12T21:01:25] GAME: TIDI: 0.5;2.48097;1.43875;2.50532
+[2023-03-12T21:02:25] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T21:02:25] GAME: TIDI: 0.5;1.88668;1.52834;2.40762
+[2023-03-12T21:02:31] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T21:03:01] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T21:03:17] SAY: INVALID/(Medibot) (50,181,9): Delicious!
+[2023-03-12T21:03:26] GAME: TIDI: 0.333333;1.42068;1.50681;2.31754
+[2023-03-12T21:04:26] GAME: TIDI: 0.5;1.14447;1.43434;2.22922
+[2023-03-12T21:04:41] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T21:05:28] GAME: TIDI: 2.66667;1.60113;1.4677;2.15307
+[2023-03-12T21:05:45] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T21:06:28] GAME: TIDI: 0.5;1.27079;1.42832;2.08059
+[2023-03-12T21:06:31] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T21:07:01] SAY: INVALID/(Medibot) (50,181,9): I knew it, I should've been a plastic surgeon.
+[2023-03-12T21:07:35] GAME: TIDI: 12.5;4.63955;2.07056;2.07959
+[2023-03-12T21:07:39] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T21:07:58] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T21:08:22] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T21:08:37] GAME: TIDI: 2.66667;4.04769;2.46599;2.11823
+[2023-03-12T21:09:08] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T21:09:37] GAME: TIDI: 0.5;2.98338;2.56947;2.16335
+[2023-03-12T21:09:49] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T21:10:07] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T21:10:07] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T21:10:38] GAME: TIDI: 0.5;2.23837;2.50325;2.19734
+[2023-03-12T21:11:38] GAME: TIDI: 0.333333;1.66686;2.33597;2.2112
+[2023-03-12T21:11:41] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T21:11:47] SAY: INVALID/(Medibot) (50,181,9): Delicious!
+[2023-03-12T21:12:21] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T21:12:38] GAME: TIDI: 0;1.1668;2.10214;2.2003
+[2023-03-12T21:13:00] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T21:13:14] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T21:13:38] GAME: TIDI: 1.16667;1.16676;1.91506;2.17177
+[2023-03-12T21:14:18] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T21:14:38] GAME: TIDI: 0;0.816732;1.69539;2.12414
+[2023-03-12T21:14:56] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T21:15:20] SAY: INVALID/(Medibot) (50,181,9): What kind of medbay is this? Everyone's dropping like flies.
+[2023-03-12T21:15:38] GAME: TIDI: 0;0.571712;1.47066;2.05879
+[2023-03-12T21:15:44] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T21:16:34] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T21:16:39] GAME: TIDI: 0.166667;0.450199;1.26657;1.97957
+[2023-03-12T21:17:39] GAME: TIDI: 0;0.315139;1.07628;1.88924
+[2023-03-12T21:17:49] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T21:18:26] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T21:18:41] GAME: TIDI: 3.66667;1.3206;1.12514;1.81283
+[2023-03-12T21:19:03] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-12T21:19:42] GAME: TIDI: 2.16667;1.57442;1.215;1.75304
+[2023-03-13T00:00:01] GAME: Autotransfer has called the shuttle.
+[2023-03-13T00:00:35] SAY: INVALID/(Medibot) (50,181,9): What kind of medbay is this? Everyone's dropping like flies.
+[2023-03-13T03:00:07] GAME: TIDI: 33941.5;10183.6;2037.68;205.346
+[2023-03-13T10:09:00] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T15:58:54] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T15:59:03] GAME: TIDI: 77793.2;30466.4;7723.43;957.155
+[2023-03-13T15:59:28] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T15:59:50] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:00:03] GAME: TIDI: 0.249792;21326.6;10444.1;1905.85
+[2023-03-13T16:00:40] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:01:03] GAME: TIDI: 0.166667;14928.7;11341;2849.36
+[2023-03-13T16:01:08] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:01:26] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:01:38] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:02:03] GAME: TIDI: 0.166667;10450.1;11162.8;3680.7
+[2023-03-13T16:03:04] GAME: TIDI: 0.41632;7315.2;10393.3;4351.96
+[2023-03-13T16:03:47] SAY: INVALID/(Medibot) (50,181,9): What kind of medbay is this? Everyone's dropping like flies.
+[2023-03-13T16:04:01] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:04:04] GAME: TIDI: 0.666667;5120.84;9338.8;4850.64
+[2023-03-13T16:04:31] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:04:35] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:04:47] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:05:04] GAME: TIDI: 0;3584.59;8187.95;5184.38
+[2023-03-13T16:05:53] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:06:04] GAME: TIDI: 0.333333;2509.31;7052.23;5371.16
+[2023-03-13T16:06:47] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:07:04] GAME: TIDI: 0.166667;1756.57;5993.09;5433.35
+[2023-03-13T16:07:38] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:08:02] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:08:05] GAME: TIDI: 0.666667;1229.8;5040.44;5394.06
+[2023-03-13T16:09:05] GAME: TIDI: 0.166667;860.908;4204.53;5275.11
+[2023-03-13T16:10:05] GAME: TIDI: 0.166667;602.686;3484.16;5096.01
+[2023-03-13T16:10:36] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:11:05] GAME: TIDI: 0.5;422.03;2871.73;4873.59
+[2023-03-13T16:12:06] GAME: TIDI: 0.666667;295.621;2356.51;4621.88
+[2023-03-13T16:12:35] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:13:01] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:13:03] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:13:06] GAME: TIDI: 0.166667;206.985;1926.61;4352.35
+[2023-03-13T16:14:06] GAME: TIDI: 0.333333;144.989;1570.28;4074.14
+[2023-03-13T16:14:39] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:15:06] GAME: TIDI: 0.166667;101.543;1276.54;3794.38
+[2023-03-13T16:15:37] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:16:06] GAME: TIDI: 0;71.0798;1035.44;3518.49
+[2023-03-13T16:16:23] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:16:25] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:17:06] GAME: TIDI: 0.249792;49.8308;838.322;3250.47
+[2023-03-13T16:17:29] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:17:51] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:18:06] GAME: TIDI: 0.166667;34.9315;677.644;2993.19
+[2023-03-13T16:19:06] GAME: TIDI: 0.333333;24.5521;547.025;2748.57
+[2023-03-13T16:20:07] GAME: TIDI: 0.333333;17.2865;441.078;2517.82
+[2023-03-13T16:20:16] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:21:07] GAME: TIDI: 0.5;12.2505;355.312;2301.57
+[2023-03-13T16:21:10] SAY: INVALID/(Medibot) (50,181,9): What kind of medbay is this? Everyone's dropping like flies.
+[2023-03-13T16:21:24] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:21:52] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:22:07] GAME: TIDI: 0.166667;8.62536;285.975;2100.01
+[2023-03-13T16:23:07] GAME: TIDI: 0.166667;6.08775;229.997;1913.01
+[2023-03-13T16:23:10] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:23:12] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:23:26] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:24:07] GAME: TIDI: 0;4.26143;184.85;1740.19
+[2023-03-13T16:25:07] GAME: TIDI: 0.333333;3.083;148.497;1581.02
+[2023-03-13T16:25:59] SAY: INVALID/(Medibot) (50,181,9): There's always a catch, and it's the best there is.
+[2023-03-13T16:26:08] GAME: TIDI: 0.333333;2.2581;119.249;1434.85
+[2023-03-13T16:27:08] GAME: TIDI: 0.333333;1.68067;95.7354;1300.94
+[2023-03-13T16:28:01] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:28:08] GAME: TIDI: 0;1.17647;76.8236;1178.52
+[2023-03-13T16:29:08] GAME: TIDI: 0.5;0.973528;61.6536;1066.84
+[2023-03-13T16:30:08] GAME: TIDI: 0.166667;0.73147;49.4692;965.101
+[2023-03-13T16:30:19] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:31:08] GAME: TIDI: 0.5;0.662029;39.7077;872.561
+[2023-03-13T16:31:44] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:32:06] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:32:09] GAME: TIDI: 0.166667;0.51342;31.8689;788.492
+[2023-03-13T16:32:16] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:32:30] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:33:09] GAME: TIDI: 0.333333;0.459394;25.587;712.201
+[2023-03-13T16:34:09] GAME: TIDI: 0.166667;0.371576;20.5439;643.036
+[2023-03-13T16:34:32] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:35:02] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:35:08] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:35:09] GAME: TIDI: 0.166667;0.310103;16.4971;580.382
+[2023-03-13T16:35:46] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:36:09] GAME: TIDI: 0.166667;0.267072;13.2511;523.669
+[2023-03-13T16:36:32] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:36:46] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:37:09] GAME: TIDI: 0.166667;0.236951;10.6483;472.367
+[2023-03-13T16:37:38] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:38:09] SAY: INVALID/(Medibot) (50,181,9): Radar, put a mask on!
+[2023-03-13T16:38:09] GAME: TIDI: 0.333333;0.265865;8.57181;425.987
+[2023-03-13T16:39:09] GAME: TIDI: 0.166667;0.236106;6.90467;384.079
+[2023-03-13T16:39:15] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:39:29] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:39:37] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:40:10] GAME: TIDI: 0.333333;0.265274;5.57679;346.229
+[2023-03-13T16:40:17] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:40:43] SAY: INVALID/(Medibot) (50,181,9): Radar, put a mask on!
+[2023-03-13T16:41:10] GAME: TIDI: 0.166667;0.235692;4.50857;312.057
+[2023-03-13T16:41:13] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:41:19] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:41:19] SAY: INVALID/(Medibot) (50,181,9): I knew it, I should've been a plastic surgeon.
+[2023-03-13T16:41:59] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:42:10] GAME: TIDI: 0;0.164984;3.63985;281.215
+[2023-03-13T16:43:09] EMOTE: INVALID/(Cleanbot) (88,198,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:43:10] GAME: TIDI: 0.166667;0.165489;2.94498;253.388
+[2023-03-13T16:43:33] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:43:35] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:44:10] GAME: TIDI: 0.166667;0.165842;2.38915;228.288
+[2023-03-13T16:45:10] GAME: TIDI: 0.166667;0.16609;1.94454;205.654
+[2023-03-13T16:46:10] GAME: TIDI: 0.5;0.266263;1.60888;185.249
+[2023-03-13T16:46:57] EMOTE: INVALID/(Cleanbot) (35,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-13T16:47:10] GAME: TIDI: 0;0.186384;1.32438;166.857

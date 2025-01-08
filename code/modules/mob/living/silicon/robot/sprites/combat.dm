@@ -81,10 +81,10 @@
 
 	..()
 
-	var/obj/item/melee/robotic/dagger/CBB = locate() in module.modules
+	var/obj/item/melee/robotic/blade/CBB = locate() in module.modules
 	if(CBB)
 		CBB.name = "sword tail"
-		CBB.desc = "A glowing dagger normally attached to the end of a cyborg's tail. It appears to be extremely sharp."
+		CBB.desc = "A glowing energy sword normally attached to the end of a cyborg's tail. It appears to be extremely sharp."
 	var/obj/item/melee/robotic/borg_combat_shocker/BCS = locate() in module.modules
 	if(BCS)
 		BCS.name = "combat jaws"
