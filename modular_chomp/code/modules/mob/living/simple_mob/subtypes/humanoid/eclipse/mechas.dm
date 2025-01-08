@@ -839,7 +839,7 @@
 	name = "Eclipse Expirmental Janus"
 	armor = list(melee = 60, bullet = 60, laser = 60, energy = 60, bomb = 80, bio = 100, rad = 100)
 	specialattackprojectile = /obj/item/projectile/energy/darkspike
-	pilot_type = /mob/living/simple_mob/humanoid/merc/ranged
+	pilot_type = /mob/living/simple_mob/humanoid/eclipse/head/tyrlead
 	icon_state = "eclipse_janus"
 	attackcycle = 1
 
