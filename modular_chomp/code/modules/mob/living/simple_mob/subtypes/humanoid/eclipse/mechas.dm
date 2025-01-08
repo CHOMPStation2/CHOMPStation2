@@ -839,7 +839,7 @@
 	name = "Eclipse Expirmental Janus"
 	armor = list(melee = 60, bullet = 60, laser = 60, energy = 60, bomb = 80, bio = 100, rad = 100)
 	specialattackprojectile = /obj/item/projectile/energy/darkspike
-	pilot_type = /mob/living/simple_mob/humanoid/merc/ranged
+	pilot_type = /mob/living/simple_mob/humanoid/eclipse/head/tyrlead
 	icon_state = "eclipse_janus"
 	attackcycle = 1
 
@@ -946,7 +946,7 @@
 
 //Phase three 2 wierd patterns, and 1 strange attack.
 /mob/living/simple_mob/mechanical/mecha/eclipse/darkmatter_assualt/proc/phasethree_cycleone(atom/target)
-	specialattackprojectile = /obj/item/projectile/energy/infernosphere
+	specialattackprojectile = /obj/item/projectile/bullet/eclipsejanus
 	addtimer(CALLBACK(src, PROC_REF(spin_to_win), target, 2), 2 SECONDS, TIMER_DELETE_ME)
 	attackcycle = 0
 
@@ -956,7 +956,7 @@
 	attackcycle = 0
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/darkmatter_assualt/proc/phasethree_cyclethree(atom/target) //eight spinning death beams
-	specialattackprojectile = /obj/item/projectile/energy/darkspike
+	specialattackprojectile = /obj/item/projectile/bullet/eclipsejanus
 	addtimer(CALLBACK(src, PROC_REF(random_firing), target, 20, 1, 0.2 SECONDS), 0.5 SECONDS, TIMER_DELETE_ME)
 	attackcycle = 0
 
@@ -1046,3 +1046,47 @@
 		ranged_post_animation(A)
 
 	return TRUE
+
+
+//Jank code?
+/obj/item/projectile/energy/spintowin
+	name = "burning plasma"
+	icon = 'modular_chomp/icons/obj/guns/precursor/tyr.dmi'
+	icon_state = "plasma"
+	damage = 50
+	speed = 15
+	var/spinvaule = 120
+
+/obj/item/projectile/energy/spintowin/Move()
+	. = ..()
+	yo ++
+	xo ++
+
+/obj/item/gun/energy/curse_tyrshotgun/debuggun
+	projectile_type = /obj/item/projectile/energy/spintowin
+
+/obj/item/projectile/energy/randospeed
+	name = "burning plasma"
+	icon = 'modular_chomp/icons/obj/guns/precursor/tyr.dmi'
+	icon_state = "plasma"
+	damage = 50
+	speed = 15
+	var/spinvaule = 3
+
+/obj/item/projectile/energy/randospeed/Move()
+	. = ..()
+	if(prob(50))
+		speed += spinvaule
+	else
+		speed -= spinvaule
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/eventplaceholder //So I can use the random fire BH for one time event mobs
+	name = "Expirmental Mecha Unit"
+	specialattackprojectile = /obj/item/projectile/beam/midlaser
+	armor = list(melee = 40, bullet = 40, laser = 40, energy = 40, bomb = 40, bio = 100, rad = 100)
+	icon_state = "orb"
+	wreckage = /obj/structure/loot_pile/mecha/odd_gygax
+	special_attack_cooldown = 320
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/do_special_attack(atom/A)
+	addtimer(CALLBACK(src, PROC_REF(random_firing), A, 12, 3, 0.5 SECONDS), 0.5 SECONDS, TIMER_DELETE_ME)
