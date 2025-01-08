@@ -167,9 +167,7 @@
 
 /datum/preference/choiced/living/spawnpoint/init_possible_values()
 	var/list/spawnkeys = list()
-	if(!LAZYLEN(spawntypes))
-		populate_spawn_points()
-	for(var/spawntype in spawntypes)
+	for(var/spawntype in get_spawn_points())
 		spawnkeys += spawntype
 	return spawnkeys
 
