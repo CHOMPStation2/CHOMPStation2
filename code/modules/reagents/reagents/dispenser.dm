@@ -448,7 +448,6 @@
 		remove_self(meltdose) // 10 units of acid will not melt EVERYTHING on the tile
 
 /datum/reagent/acid/touch_mob(var/mob/living/L) //CHOMPAdd Start
-	..()
 	if(!isliving(L))
 		return
 	if(isbelly(L.loc))
