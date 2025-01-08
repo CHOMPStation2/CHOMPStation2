@@ -683,6 +683,7 @@ var/global/datum/controller/occupations/job_master
 
 	//Spawn them at their preferred one
 	if(C && C.prefs.read_preference(/datum/preference/choiced/living/spawnpoint))
+<<<<<<< HEAD
 		if(C.prefs.read_preference(/datum/preference/choiced/living/spawnpoint) == "Vorespawn - Prey")
 			var/list/preds = list()
 			var/list/pred_names = list() //This is cringe
@@ -965,6 +966,17 @@ var/global/datum/controller/occupations/job_master
 					spawnpos = null
 			else
 				spawnpos = spawntypes[C.prefs.read_preference(/datum/preference/choiced/living/spawnpoint)]
+=======
+		if(!(C.prefs.read_preference(/datum/preference/choiced/living/spawnpoint) in using_map.allowed_spawns))
+			if(fail_deadly)
+				to_chat(C, span_warning("Your chosen spawnpoint is unavailable for this map and your job requires a specific spawnpoint. Please correct your spawn point choice."))
+				return
+			else
+				to_chat(C, span_warning("Your chosen spawnpoint ([C.prefs.read_preference(/datum/preference/choiced/living/spawnpoint)]) is unavailable for the current map. Spawning you at one of the enabled spawn points instead."))
+				spawnpos = null
+		else
+			spawnpos = spawntypes[C.prefs.read_preference(/datum/preference/choiced/living/spawnpoint)]
+>>>>>>> 42b7bd89f0 (Fix synth_color not working (#16866))
 
 	//We will return a list key'd by "turf" and "msg"
 	. = list("turf","msg", "voreny", "prey", "itemtf", "vorgans", "carrier") //CHOMPEdit - Item TF spawnpoints, spawn as mob
