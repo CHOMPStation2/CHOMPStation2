@@ -103,6 +103,7 @@
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Space Dust",				/datum/event/dust,	 					0,		list(ASSIGNMENT_ENGINEER = 20), 1, 0, 50),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Spacefish Migration",		/datum/event/spacefish_migration,		0, 		list(ASSIGNMENT_SECURITY = 40, ASSIGNMENT_MEDICAL = 5), 1, min_jobs = list(ASSIGNMENT_SECURITY = 3)),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Spider Infestation",		/datum/event/spider_infestation, 		-20,	list(ASSIGNMENT_SECURITY = 30, ASSIGNMENT_HOS = 20, ASSIGNMENT_WARDEN = 20), 0, min_jobs = list(ASSIGNMENT_SECURITY = 1)),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Spontaneous Malignant Organ", 	/datum/event/spontaneous_malignant_organ, 	-30,	list(ASSIGNMENT_MEDICAL = 30), 1, min_jobs = list(ASSIGNMENT_MEDICAL = 2)),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Supply Demand",			/datum/event/supply_demand,				0,		list(ASSIGNMENT_ANY = 5, ASSIGNMENT_SCIENCE = 15, ASSIGNMENT_GARDENER = 10, ASSIGNMENT_ENGINEER = 10, ASSIGNMENT_MEDICAL = 15), 1),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Virology Breach",			/datum/event/prison_break/virology,		0,		list(ASSIGNMENT_MEDICAL = 100), 1, min_jobs = list(ASSIGNMENT_MEDICAL = 1)),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Wormholes",				/datum/event/wormholes,	 				20,		list(ASSIGNMENT_ANY = 5)),

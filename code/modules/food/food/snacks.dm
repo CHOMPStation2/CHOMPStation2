@@ -1472,6 +1472,18 @@
 	nutriment_desc = list("bun" = 2, "clown shoe" = 3)
 	bitesize = 2
 
+// CHOMPedit begin - honkwork infection
+/obj/item/reagent_containers/food/snacks/clownburger/Initialize()
+	. = ..()
+	reagents.add_reagent("protein", 2) // needed to call On_Consume()... Is this actually an issue?
+
+/obj/item/reagent_containers/food/snacks/clownburger/On_Consume(var/mob/living/user)
+	if(user && ishuman(user) && prob(3))
+		var/mob/living/carbon/human/H = user
+		H.malignant_organ_spawn( /obj/item/organ/internal/malignant/parasite/honker )
+	. = ..()
+// CHOMPedit end
+
 
 /obj/item/reagent_containers/food/snacks/mimeburger
 	name = JOB_MIME + " Burger"
