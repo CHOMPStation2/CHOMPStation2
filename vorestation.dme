@@ -4929,6 +4929,7 @@
 #include "modular_chomp\code\modules\clothing\spacesuits\rig\crystal.dm"
 #include "modular_chomp\code\modules\clothing\spacesuits\rig\other.dm"
 #include "modular_chomp\code\modules\clothing\spacesuits\rig\precursor.dm"
+#include "modular_chomp\code\modules\clothing\spacesuits\rig\tyr.dm"
 #include "modular_chomp\code\modules\clothing\spacesuits\rig\modules\specific\defib.dm"
 #include "modular_chomp\code\modules\clothing\spacesuits\rig\modules\specific\mounted_gun.dm"
 #include "modular_chomp\code\modules\clothing\spacesuits\rig\suits\alien.dm"
