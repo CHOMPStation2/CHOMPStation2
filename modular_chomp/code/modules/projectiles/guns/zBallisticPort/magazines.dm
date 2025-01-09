@@ -506,6 +506,14 @@
 	name = "mp5 magazine(9x19mm rubber)"
 	ammo_type = /obj/item/ammo_casing/a9mm/rubber
 
+/obj/item/ammo_magazine/mp5mag/rubber/ap
+	name = "mp5 magazine(9x19mm AP)"
+	ammo_type = /obj/item/ammo_casing/a9mm/ap
+
+/obj/item/ammo_magazine/mp5mag/hp
+	name = "mp5 magazine(9x19mm HP)"
+	ammo_type = /obj/item/ammo_casing/a9mm/hp
+
 /obj/item/ammo_magazine/pitchmag
 	name = "pitchgun magazine(.44)"
 	icon = 'icons/obj/ammo_ch.dmi'
