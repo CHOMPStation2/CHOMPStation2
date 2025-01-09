@@ -506,7 +506,7 @@
 	name = "mp5 magazine(9x19mm rubber)"
 	ammo_type = /obj/item/ammo_casing/a9mm/rubber
 
-/obj/item/ammo_magazine/mp5mag/rubber/ap
+/obj/item/ammo_magazine/mp5mag/ap
 	name = "mp5 magazine(9x19mm AP)"
 	ammo_type = /obj/item/ammo_casing/a9mm/ap
 
