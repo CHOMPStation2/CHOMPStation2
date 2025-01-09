@@ -30,24 +30,6 @@
 	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/submap/OtieShelter)
-"cU" = (
-/obj/machinery/power/port_gen/pacman,
-/obj/structure/cable{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/submap/OtieShelter)
-"eI" = (
-/obj/machinery/power/terminal{
-	dir = 1
-	},
-/obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/submap/OtieShelter)
 "fw" = (
 /obj/machinery/door/airlock,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -131,6 +113,13 @@
 	icon_state = "tracks"
 	},
 /turf/simulated/floor/tiled,
+/area/submap/OtieShelter)
+"kE" = (
+/obj/machinery/power/smes/buildable/point_of_interest,
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/submap/OtieShelter)
 "kF" = (
 /obj/structure/window/phoronreinforced{
@@ -443,6 +432,15 @@
 	},
 /turf/simulated/floor/tiled,
 /area/submap/OtieShelter)
+"LK" = (
+/obj/machinery/power/terminal{
+	dir = 1
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/submap/OtieShelter)
 "Mc" = (
 /obj/structure/fireaxecabinet{
 	pixel_y = 29
@@ -469,11 +467,6 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/turf/simulated/floor/carpet/turcarpet,
-/area/submap/OtieShelter)
-"Nd" = (
-/obj/structure/table/marble,
-/obj/item/radio/phone,
 /turf/simulated/floor/carpet/turcarpet,
 /area/submap/OtieShelter)
 "Nh" = (
@@ -516,6 +509,17 @@
 /obj/item/ammo_casing/spent,
 /turf/simulated/floor/tiled,
 /area/submap/OtieShelter)
+"OL" = (
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "PAPC";
+	pixel_y = 24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/submap/OtieShelter)
 "Pn" = (
 /obj/structure/window/phoronreinforced{
 	dir = 1
@@ -539,25 +543,17 @@
 "Ro" = (
 /turf/simulated/floor/carpet/turcarpet,
 /area/submap/OtieShelter)
-"RW" = (
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "PAPC";
-	pixel_y = 24
-	},
-/obj/structure/cable/green{
-	d2 = 4;
+"RU" = (
+/obj/machinery/power/port_gen/pacman,
+/obj/structure/cable{
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/submap/OtieShelter)
-"TP" = (
-/obj/machinery/power/smes/buildable/point_of_interest,
-/obj/structure/cable/green{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
+"Uz" = (
+/obj/structure/table/marble,
+/obj/item/radio/phone,
+/turf/simulated/floor/carpet/turcarpet,
 /area/submap/OtieShelter)
 "UF" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -862,7 +858,7 @@ OJ
 IF
 ob
 jy
-Nd
+Uz
 nR
 Mz
 Qr
@@ -991,8 +987,8 @@ Qr
 Qr
 Qr
 Mz
-RW
-cU
+OL
+RU
 Mz
 Qr
 Qr
@@ -1013,8 +1009,8 @@ Qr
 Qr
 Qr
 Mz
-TP
-eI
+kE
+LK
 Mz
 Qr
 Qr

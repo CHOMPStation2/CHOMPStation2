@@ -22,8 +22,6 @@
 /area/surface/outside/thor/outpost)
 "az" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating/thor/planetuse{
@@ -32,13 +30,9 @@
 /area/surface/thor/commstower)
 "aK" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
@@ -59,7 +53,6 @@
 	wall_mounted = 1
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc/alarms_hidden{
@@ -170,8 +163,6 @@
 /area/shuttle/junker)
 "bK" = (
 /obj/structure/cable/blue{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/rust,
@@ -189,8 +180,6 @@
 /area/surface/outside/thor/jungle)
 "bW" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/light_switch{
@@ -202,8 +191,6 @@
 /area/surface/thor/dorms/pool3)
 "bX" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
@@ -226,8 +213,6 @@
 /area/surface/thor/engi)
 "cl" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
@@ -252,8 +237,6 @@
 "cA" = (
 /obj/machinery/door/airlock/sandstone,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/wood/alt,
@@ -342,8 +325,6 @@
 	id_tag = "thorpool3"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/asteroid_steel,
@@ -356,8 +337,6 @@
 /area/surface/thor/janitor)
 "dK" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -451,8 +430,6 @@
 	id_tag = "thorpool2"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/asteroid_steel,
@@ -540,8 +517,6 @@
 /area/surface/outside/thor/jungle)
 "fL" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
@@ -646,8 +621,6 @@
 /area/surface/thor/kitchen)
 "hh" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/corner/grey/diagonal{
@@ -696,8 +669,6 @@
 /area/surface/thor/dorms/pool3)
 "hD" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/concrete/outdoors/thor,
@@ -737,8 +708,6 @@
 /area/surface/outside/thor/beach)
 "ib" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/table/steel_reinforced,
@@ -800,13 +769,9 @@
 /area/surface/outside/thor/jungle/deep)
 "iv" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
@@ -961,8 +926,6 @@
 /area/surface/thor/caves)
 "kl" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/corner/grey/diagonal{
@@ -986,8 +949,6 @@
 /area/surface/outside/thor/jungle)
 "ku" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/light_switch{
@@ -1031,7 +992,6 @@
 /area/surface/outside/thor/ocean)
 "kR" = (
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/item/solar_assembly,
@@ -1078,8 +1038,6 @@
 /area/surface/thor/abandonedhouse)
 "lu" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/flora/ausbushes/fullgrass,
@@ -1123,8 +1081,6 @@
 "lX" = (
 /obj/structure/table/woodentable,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/wood,
@@ -1134,31 +1090,21 @@
 	id_tag = "thorpool1"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/surface/thor/dorms/pool1)
 "mb" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor{
@@ -1230,13 +1176,9 @@
 /area/surface/thor/dorms/pool1)
 "mJ" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor{
@@ -1274,7 +1216,6 @@
 	pixel_x = -27
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/floor_decal/corner/grey/diagonal{
@@ -1284,7 +1225,6 @@
 /area/surface/thor/kitchen)
 "nl" = (
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
@@ -1322,12 +1262,9 @@
 /area/surface/outside/thor/jungle)
 "nx" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/item/solar_assembly,
@@ -1401,8 +1338,6 @@
 	pixel_y = 18
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/wood,
@@ -1440,7 +1375,6 @@
 /area/surface/thor/kitchen)
 "oB" = (
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/solar_control,
@@ -1472,8 +1406,6 @@
 /area/surface/thor/abandonedhouse)
 "oR" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/outdoors/grass/forest/thor{
@@ -1497,8 +1429,6 @@
 /area/surface/outside/thor/jungle)
 "oU" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/random/pottedplant,
@@ -1599,8 +1529,6 @@
 /area/surface/outside/thor/jungle/deep)
 "pA" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/corner/paleblue/diagonal,
@@ -1641,15 +1569,12 @@
 /area/surface/thor/kitchen)
 "pK" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/power/terminal{
 	dir = 4
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
@@ -1737,8 +1662,6 @@
 /area/surface/thor/kitchen)
 "qP" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/asteroid_steel,
@@ -1777,8 +1700,6 @@
 /area/shuttle/junker)
 "qW" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
@@ -1830,8 +1751,6 @@
 /area/surface/thor/kitchen)
 "rs" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/wood/alt,
@@ -1942,8 +1861,6 @@
 /area/surface/outside/thor/outpost)
 "sH" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/outdoors/grass/forest/thor,
@@ -1989,13 +1906,9 @@
 /area/surface/thor/caves)
 "tl" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
@@ -2022,8 +1935,6 @@
 /area/surface/outside/thor/jungle)
 "tv" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
@@ -2070,16 +1981,12 @@
 /area/surface/outside/thor/beach)
 "uj" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
 /area/surface/outside/thor/jungle)
 "uq" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/item/stock_parts/subspace/sub_filter,
@@ -2165,8 +2072,6 @@
 /obj/item/material/knife/tacknife/survival,
 /obj/item/material/knife/tacknife/survival,
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
@@ -2292,7 +2197,6 @@
 	pixel_x = 26
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
@@ -2355,8 +2259,6 @@
 /area/surface/outside/thor/jungle)
 "xK" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -2445,16 +2347,12 @@
 "zc" = (
 /obj/structure/simple_door/wood,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/surface/thor/janitor)
 "ze" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
@@ -2512,7 +2410,6 @@
 	wall_mounted = 1
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc/alarms_hidden{
@@ -2602,8 +2499,6 @@
 "AD" = (
 /obj/item/stool/padded,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
@@ -2639,8 +2534,6 @@
 /area/surface/outside/thor/landingpad)
 "Bc" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
@@ -2667,7 +2560,6 @@
 	},
 /obj/machinery/power/smes/batteryrack,
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/item/cell/high,
@@ -2720,8 +2612,6 @@
 "BM" = (
 /obj/machinery/door/airlock/sandstone,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/wood/alt,
@@ -2731,8 +2621,6 @@
 /area/surface/outside/thor/outpost)
 "BU" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/outdoors/grass/forest/thor{
@@ -2868,8 +2756,6 @@
 	dir = 8
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/rust,
@@ -2944,16 +2830,12 @@
 /area/surface/thor/med)
 "DG" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
 /area/surface/outside/thor/outpost)
 "DH" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -2975,7 +2857,6 @@
 "DL" = (
 /obj/machinery/power/tracker,
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor{
@@ -2984,13 +2865,9 @@
 /area/surface/outside/thor/jungle)
 "DM" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
@@ -3031,7 +2908,6 @@
 	pixel_y = -20
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
@@ -3112,13 +2988,9 @@
 /area/surface/outside/thor/ocean)
 "EW" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
@@ -3142,8 +3014,6 @@
 /area/surface/thor/abandonedhouse)
 "Fp" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/wood,
@@ -3168,8 +3038,6 @@
 "FX" = (
 /obj/machinery/door/airlock,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating/thor/planetuse{
@@ -3214,7 +3082,6 @@
 	pixel_x = 24
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/portable_atmospherics/canister/phoron,
@@ -3333,8 +3200,6 @@
 /area/surface/thor/dorms/pool2)
 "HI" = (
 /obj/structure/cable/blue{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/effect/floor_decal/rust,
@@ -3400,8 +3265,6 @@
 /area/surface/thor/kitchen)
 "It" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/wood/alt,
@@ -3423,8 +3286,6 @@
 	req_one_access = null
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/corner/paleblue/diagonal,
@@ -3451,8 +3312,6 @@
 /area/shuttle/junker)
 "IL" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/table/rack/steel,
@@ -3492,7 +3351,6 @@
 	pixel_x = -27
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/floor_decal/corner/paleblue/diagonal,
@@ -3546,7 +3404,6 @@
 /area/surface/outside/thor/beach)
 "Jv" = (
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/prop/machine/comm_tower,
@@ -3555,8 +3412,6 @@
 "JG" = (
 /obj/structure/simple_door/wood,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
@@ -3568,7 +3423,6 @@
 /obj/item/cell/high/empty,
 /obj/item/cell/high/empty,
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating/thor/planetuse{
@@ -3615,13 +3469,9 @@
 /area/surface/outside/thor/jungle)
 "JU" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
@@ -3632,8 +3482,6 @@
 	pixel_y = 18
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/wood,
@@ -3854,8 +3702,6 @@
 /area/surface/thor/kitchen)
 "Np" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
@@ -3895,8 +3741,6 @@
 "NN" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
@@ -3909,8 +3753,6 @@
 /area/surface/thor/abandonedhouse)
 "NT" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
@@ -3965,8 +3807,6 @@
 	pixel_y = 18
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/wood,
@@ -3996,13 +3836,9 @@
 /area/surface/thor/abandonedhouse)
 "Ox" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -4018,8 +3854,6 @@
 /area/surface/outside/thor/jungle)
 "OH" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/machinery/button/remote/blast_door{
@@ -4058,8 +3892,6 @@
 "Pj" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating/thor/planetuse{
@@ -4090,8 +3922,6 @@
 	pixel_x = -26
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable,
@@ -4146,7 +3976,6 @@
 	pixel_x = -27
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/wood,
@@ -4211,7 +4040,6 @@
 "Qv" = (
 /obj/machinery/power/smes/buildable/offmap_spawn/empty,
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
@@ -4268,8 +4096,6 @@
 /area/surface/thor/kitchen)
 "QQ" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/corner/paleblue/diagonal,
@@ -4295,8 +4121,6 @@
 /area/surface/thor/med)
 "QW" = (
 /obj/structure/cable/blue{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/rust,
@@ -4309,8 +4133,6 @@
 /area/shuttle/junker)
 "QZ" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
@@ -4360,13 +4182,9 @@
 /area/surface/thor/bar)
 "Rz" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -4378,8 +4196,6 @@
 /area/surface/outside/thor/pool)
 "RB" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
@@ -4467,8 +4283,6 @@
 /area/surface/outside/thor/jungle)
 "SQ" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/effect/floor_decal/corner/paleblue/diagonal,
@@ -4507,8 +4321,6 @@
 /area/surface/outside/thor/jungle)
 "Ty" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor{
@@ -4562,8 +4374,6 @@
 /area/surface/thor/abandonedhouse)
 "Ue" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/outdoors/grass/forest/thor{
@@ -4587,8 +4397,6 @@
 /area/surface/outside/thor/outpost)
 "Ur" = (
 /obj/structure/cable/blue{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/hatch{
@@ -4620,8 +4428,6 @@
 /area/surface/outside/thor/jungle)
 "UD" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/wood/alt,
@@ -4770,13 +4576,9 @@
 /area/surface/outside/thor/jungle)
 "Wj" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
@@ -4788,7 +4590,6 @@
 /area/surface/outside/thor/jungle/deep)
 "Wo" = (
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
@@ -4852,8 +4653,6 @@
 /area/surface/outside/thor/pool)
 "WR" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
@@ -4889,8 +4688,6 @@
 /area/surface/thor/caves)
 "Xm" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/light_switch{
@@ -5002,7 +4799,6 @@
 "YN" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/item/circuitboard/telecomms/relay,
@@ -5102,8 +4898,6 @@
 	icon_state = "1-8"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating,
@@ -5113,13 +4907,9 @@
 /area/surface/outside/thor/jungle/deep)
 "ZF" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor{

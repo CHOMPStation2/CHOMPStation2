@@ -1,72 +1,4 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"aa" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/door/firedoor/glass,
-/obj/structure/window/reinforced/full,
-/obj/structure/grille,
-/turf/simulated/floor/plating,
-/area/submap/abandonedzoo)
-"ab" = (
-/obj/machinery/shieldwallgen{
-	active = 2;
-	anchored = 1;
-	power = 1
-	},
-/obj/structure/cable{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/turf/simulated/floor/plating,
-/area/submap/abandonedzoo)
-"ac" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/grille,
-/obj/machinery/door/firedoor/glass,
-/obj/structure/window/reinforced/full,
-/turf/simulated/floor/plating,
-/area/submap/abandonedzoo)
-"ad" = (
-/obj/machinery/shieldwallgen{
-	active = 2;
-	anchored = 1;
-	power = 1
-	},
-/obj/structure/cable{
-	d2 = 2;
-	icon_state = "0-2"
-	},
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/turf/simulated/floor/plating,
-/area/submap/abandonedzoo)
-"ae" = (
-/obj/machinery/shieldwallgen{
-	active = 2;
-	anchored = 1;
-	power = 1
-	},
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/obj/structure/cable{
-	d2 = 2;
-	icon_state = "0-2"
-	},
-/turf/simulated/floor/plating,
-/area/submap/abandonedzoo)
 "af" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -85,17 +17,6 @@
 "aj" = (
 /mob/living/simple_mob/vore/solargrub,
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
-/area/submap/abandonedzoo)
-"ak" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/grille,
-/obj/machinery/door/firedoor/glass,
-/obj/structure/window/reinforced/full,
-/turf/simulated/floor/plating,
 /area/submap/abandonedzoo)
 "al" = (
 /obj/structure/flora/ausbushes/genericbush,
@@ -170,114 +91,18 @@
 /obj/structure/flora/ausbushes/ppflowers,
 /turf/simulated/floor/grass2,
 /area/submap/abandonedzoo)
-"aD" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/door/airlock/highsecurity{
-	name = "Bio Containment"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/submap/abandonedzoo)
-"aE" = (
-/obj/machinery/shieldwallgen{
-	active = 2;
-	anchored = 1;
-	power = 1
-	},
-/obj/structure/cable{
-	d2 = 2;
-	icon_state = "0-2"
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/plating,
-/area/submap/abandonedzoo)
-"aF" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/wall/r_wall,
-/area/submap/abandonedzoo)
-"aG" = (
-/obj/structure/table/reinforced,
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/item/gun/energy/floragun,
-/turf/simulated/floor/tiled/dark,
-/area/submap/abandonedzoo)
 "aH" = (
 /obj/structure/railing/grey{
 	dir = 4
 	},
 /turf/template_noop,
 /area/space)
-"aI" = (
-/obj/structure/table/reinforced,
-/obj/machinery/computer/med_data/laptop,
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/submap/abandonedzoo)
-"aJ" = (
-/obj/machinery/shieldwallgen{
-	active = 2;
-	anchored = 1;
-	power = 1
-	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/turf/simulated/floor/plating,
-/area/submap/abandonedzoo)
 "aK" = (
 /obj/structure/window/reinforced/tinted/frosted,
 /turf/template_noop,
 /area/submap/abandonedzoo)
 "aL" = (
 /turf/simulated/floor/tiled/dark,
-/area/submap/abandonedzoo)
-"aM" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/wall/r_wall,
 /area/submap/abandonedzoo)
 "aN" = (
 /obj/structure/table/reinforced,
@@ -312,22 +137,6 @@
 /area/submap/abandonedzoo)
 "aS" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/dark,
-/area/submap/abandonedzoo)
-"aT" = (
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/table/rack/shelf/steel,
-/obj/item/clothing/suit/space/rig/military,
-/obj/item/tank/emergency/oxygen/double,
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "aU" = (
@@ -447,30 +256,6 @@
 /obj/item/reagent_containers/food/snacks/slice/bigbeanburrito,
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
-"bo" = (
-/obj/machinery/shieldwallgen{
-	active = 2;
-	anchored = 1;
-	power = 1
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/obj/structure/cable,
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/turf/simulated/floor/plating,
-/area/submap/abandonedzoo)
 "bp" = (
 /obj/structure/bed,
 /obj/structure/disposalpipe/segment,
@@ -478,34 +263,6 @@
 /area/submap/abandonedzoo)
 "bq" = (
 /turf/unsimulated/beach/sand,
-/area/submap/abandonedzoo)
-"br" = (
-/obj/structure/table/reinforced,
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/microwave,
-/turf/simulated/floor/tiled/dark,
-/area/submap/abandonedzoo)
-"bs" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/obj/machinery/shieldwallgen,
-/turf/simulated/floor/plating,
 /area/submap/abandonedzoo)
 "bt" = (
 /turf/simulated/floor/concrete{
@@ -566,17 +323,6 @@
 /obj/effect/alien/weeds/node,
 /turf/simulated/floor/plating,
 /area/submap/abandonedzoo)
-"bD" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/door/firedoor/glass,
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/turf/simulated/floor/plating,
-/area/submap/abandonedzoo)
 "bE" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/simulated/floor/grass,
@@ -629,35 +375,11 @@
 /obj/structure/lattice,
 /turf/template_noop,
 /area/submap/abandonedzoo)
-"bQ" = (
-/obj/machinery/shieldwallgen{
-	active = 2;
-	anchored = 1;
-	power = 1
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/obj/structure/cable,
-/turf/simulated/floor/plating,
-/area/submap/abandonedzoo)
 "bR" = (
 /obj/structure/disposalpipe/trunk{
 	dir = 1
 	},
 /obj/structure/disposaloutlet,
-/turf/simulated/floor/plating,
-/area/submap/abandonedzoo)
-"bS" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/obj/structure/cable,
-/obj/machinery/shieldwallgen,
 /turf/simulated/floor/plating,
 /area/submap/abandonedzoo)
 "bT" = (
@@ -672,20 +394,30 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/submap/abandonedzoo)
-"bV" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/door/firedoor/glass,
-/obj/structure/window/reinforced/full,
-/obj/structure/grille,
-/turf/simulated/floor/plating,
-/area/submap/abandonedzoo)
 "bW" = (
 /obj/random/outcrop,
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/submap/abandonedzoo)
+"bX" = (
+/obj/machinery/shieldwallgen{
+	active = 2;
+	anchored = 1;
+	power = 1
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/structure/cable,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
+/area/submap/abandonedzoo)
+"cH" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/template_noop,
 /area/submap/abandonedzoo)
 "cI" = (
 /obj/machinery/portable_atmospherics/canister/phoron/cold,
@@ -701,12 +433,6 @@
 /obj/structure/table/standard,
 /turf/simulated/floor/plating,
 /area/submap/abandonedzoo)
-"do" = (
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/turf/template_noop,
-/area/submap/abandonedzoo)
 "dE" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/ammo_magazine/m9mm/compact,
@@ -715,9 +441,35 @@
 	},
 /turf/simulated/floor/plating,
 /area/submap/abandonedzoo)
+"dK" = (
+/obj/machinery/shieldwallgen{
+	active = 2;
+	anchored = 1;
+	power = 1
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/submap/abandonedzoo)
 "dM" = (
 /obj/structure/flora/pottedplant/sticky,
 /turf/simulated/floor/tiled/dark,
+/area/submap/abandonedzoo)
+"dO" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/template_noop,
 /area/submap/abandonedzoo)
 "ep" = (
 /obj/structure/window/reinforced/tinted/frosted{
@@ -732,23 +484,13 @@
 	},
 /turf/template_noop,
 /area/space)
-"gd" = (
+"gi" = (
 /obj/structure/cable{
-	d2 = 4;
-	icon_state = "0-4"
+	icon_state = "1-4"
 	},
-/obj/machinery/power/apc{
-	dir = 8;
-	name = "west bump";
-	pixel_x = -24
-	},
-/obj/structure/table/rack/shelf/steel,
-/obj/item/weldingtool/experimental/hybrid,
-/obj/item/tool/wrench/hybrid,
-/obj/item/tool/wirecutters/hybrid,
-/obj/item/tool/screwdriver/hybrid,
-/obj/item/tool/crowbar/hybrid,
-/turf/simulated/floor/tiled/dark,
+/obj/structure/cable,
+/obj/machinery/shieldwallgen,
+/turf/simulated/floor/plating,
 /area/submap/abandonedzoo)
 "gE" = (
 /obj/structure/railing/grey{
@@ -759,14 +501,6 @@
 	},
 /turf/template_noop,
 /area/space)
-"gY" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/plating,
-/area/submap/abandonedzoo)
 "hf" = (
 /obj/structure/bed/chair/comfy/black{
 	dir = 4
@@ -806,35 +540,29 @@
 /obj/item/gun/energy/netgun,
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
-"iA" = (
-/obj/structure/closet/crate/freezer,
-/obj/machinery/light/small{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/dark,
-/area/submap/abandonedzoo)
 "iJ" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
 /area/submap/abandonedzoo)
-"jT" = (
+"iY" = (
+/obj/machinery/door/airlock/highsecurity{
+	name = "Bio Containment"
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/abandonedzoo)
+"jI" = (
 /obj/machinery/shieldwallgen{
 	active = 2;
 	anchored = 1;
 	power = 1
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating,
@@ -866,6 +594,23 @@
 	temperature = 293.15
 	},
 /area/submap/abandonedzoo)
+"kJ" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
+/area/submap/abandonedzoo)
+"kK" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor/plating,
+/area/submap/abandonedzoo)
 "li" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/gun/projectile/pistol,
@@ -874,6 +619,16 @@
 "ly" = (
 /mob/living/simple_mob/animal/sif/kururak,
 /turf/simulated/floor/outdoors/grass/sif,
+/area/submap/abandonedzoo)
+"lJ" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4;
+	health = 1e+006
+	},
+/turf/template_noop,
 /area/submap/abandonedzoo)
 "lM" = (
 /mob/living/simple_mob/vore/otie/red,
@@ -904,17 +659,6 @@
 	temperature = 293.15
 	},
 /area/submap/abandonedzoo)
-"nf" = (
-/obj/machinery/power/terminal,
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 293.15
-	},
-/area/submap/abandonedzoo)
 "nn" = (
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
@@ -922,16 +666,6 @@
 	health = 1e+006
 	},
 /turf/template_noop,
-/area/submap/abandonedzoo)
-"oi" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 293.15
-	},
 /area/submap/abandonedzoo)
 "oC" = (
 /mob/living/simple_mob/animal/passive/crab,
@@ -948,6 +682,15 @@
 	amount = 20
 	},
 /turf/simulated/floor/tiled/dark,
+/area/submap/abandonedzoo)
+"oU" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor/plating,
 /area/submap/abandonedzoo)
 "pa" = (
 /obj/effect/decal/cleanable/dirt,
@@ -977,11 +720,26 @@
 	},
 /turf/template_noop,
 /area/submap/abandonedzoo)
-"qg" = (
+"qP" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+	icon_state = "4-8"
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced/full,
+/obj/structure/grille,
+/turf/simulated/floor/plating,
+/area/submap/abandonedzoo)
+"qY" = (
+/obj/machinery/shieldwallgen{
+	active = 2;
+	anchored = 1;
+	power = 1
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
 /area/submap/abandonedzoo)
@@ -989,6 +747,45 @@
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
+/turf/simulated/floor/plating,
+/area/submap/abandonedzoo)
+"rA" = (
+/obj/machinery/shieldwallgen{
+	active = 2;
+	anchored = 1;
+	power = 1
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/structure/cable,
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/plating,
+/area/submap/abandonedzoo)
+"rN" = (
+/obj/machinery/shieldwallgen{
+	active = 2;
+	anchored = 1;
+	power = 1
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/structure/cable,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/window/reinforced/tinted/frosted{
+	dir = 1
+	},
+/obj/structure/window/reinforced/tinted/frosted{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/submap/abandonedzoo)
 "rS" = (
@@ -1001,23 +798,28 @@
 	temperature = 293.15
 	},
 /area/submap/abandonedzoo)
-"tn" = (
+"sL" = (
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/table/rack/shelf/steel,
+/obj/item/clothing/suit/space/rig/military,
+/obj/item/tank/emergency/oxygen/double,
+/turf/simulated/floor/tiled/dark,
+/area/submap/abandonedzoo)
+"tw" = (
 /obj/machinery/shieldwallgen{
 	active = 2;
 	anchored = 1;
 	power = 1
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable,
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/plating,
 /area/submap/abandonedzoo)
 "tB" = (
@@ -1039,12 +841,61 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
+"vM" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/wall/r_wall,
+/area/submap/abandonedzoo)
+"wW" = (
+/obj/machinery/shieldwallgen{
+	active = 2;
+	anchored = 1;
+	power = 1
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/structure/cable,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/window/reinforced/tinted/frosted,
+/obj/structure/window/reinforced/tinted/frosted{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/submap/abandonedzoo)
 "xi" = (
 /obj/machinery/light/small{
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
+/area/submap/abandonedzoo)
+"yE" = (
+/obj/machinery/shieldwallgen{
+	active = 2;
+	anchored = 1;
+	power = 1
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/structure/window/reinforced/tinted/frosted,
+/obj/structure/window/reinforced/tinted/frosted{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/submap/abandonedzoo)
+"zl" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/template_noop,
 /area/submap/abandonedzoo)
 "zN" = (
 /obj/structure/window/reinforced{
@@ -1053,46 +904,55 @@
 	},
 /turf/template_noop,
 /area/submap/abandonedzoo)
-"zU" = (
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/turf/template_noop,
-/area/submap/abandonedzoo)
-"Bn" = (
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/turf/template_noop,
-/area/submap/abandonedzoo)
-"Bq" = (
-/obj/machinery/shieldwallgen{
-	active = 2;
-	anchored = 1;
-	power = 1
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
+"zP" = (
 /obj/structure/cable,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
+	icon_state = "1-2"
+	},
+/obj/machinery/power/smes/buildable/point_of_interest,
+/turf/simulated/floor/tiled/dark,
+/area/submap/abandonedzoo)
+"An" = (
+/obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/structure/window/reinforced/tinted/frosted,
-/obj/structure/window/reinforced/tinted/frosted{
-	dir = 8
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/obj/machinery/shieldwallgen,
+/turf/simulated/floor/plating,
+/area/submap/abandonedzoo)
+"Ap" = (
+/obj/structure/cable{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
+/area/submap/abandonedzoo)
+"AU" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/submap/abandonedzoo)
+"Ci" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced/full,
+/obj/structure/grille,
+/turf/simulated/floor/plating,
+/area/submap/abandonedzoo)
+"CB" = (
+/obj/structure/table/reinforced,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/item/gun/energy/floragun,
+/turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "CD" = (
 /mob/living/simple_mob/vore/otie,
@@ -1106,6 +966,20 @@
 	temperature = 293.15
 	},
 /area/submap/abandonedzoo)
+"CP" = (
+/obj/machinery/shieldwallgen{
+	active = 2;
+	anchored = 1;
+	power = 1
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating,
+/area/submap/abandonedzoo)
 "CR" = (
 /obj/structure/window/reinforced{
 	dir = 4;
@@ -1113,47 +987,31 @@
 	},
 /turf/template_noop,
 /area/space)
+"Db" = (
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
+/obj/structure/table/rack/shelf/steel,
+/obj/item/weldingtool/experimental/hybrid,
+/obj/item/tool/wrench/hybrid,
+/obj/item/tool/wirecutters/hybrid,
+/obj/item/tool/screwdriver/hybrid,
+/obj/item/tool/crowbar/hybrid,
+/turf/simulated/floor/tiled/dark,
+/area/submap/abandonedzoo)
 "Dm" = (
 /obj/machinery/light{
 	dir = 1
 	},
 /turf/unsimulated/beach/sand,
 /area/submap/abandonedzoo)
-"Dv" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 293.15
-	},
-/area/submap/abandonedzoo)
 "Ed" = (
 /obj/item/material/shard,
-/turf/simulated/floor/plating,
-/area/submap/abandonedzoo)
-"ER" = (
-/obj/machinery/shieldwallgen{
-	active = 2;
-	anchored = 1;
-	power = 1
-	},
-/obj/structure/cable{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/obj/structure/window/reinforced/tinted/frosted{
-	dir = 4
-	},
-/obj/structure/window/reinforced/tinted/frosted{
-	dir = 1
-	},
 /turf/simulated/floor/plating,
 /area/submap/abandonedzoo)
 "EX" = (
@@ -1228,6 +1086,16 @@
 	},
 /turf/template_noop,
 /area/submap/abandonedzoo)
+"Ix" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	health = 1e+006;
+	req_access = list(5)
+	},
+/turf/template_noop,
+/area/submap/abandonedzoo)
 "IA" = (
 /mob/living/simple_mob/vore/vore_hostile/leaper,
 /turf/simulated/floor/flesh{
@@ -1242,6 +1110,24 @@
 /area/space)
 "Jb" = (
 /turf/simulated/floor/outdoors/grass/sif,
+/area/submap/abandonedzoo)
+"Ju" = (
+/obj/machinery/power/terminal,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
+/area/submap/abandonedzoo)
+"Jy" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor/plating,
 /area/submap/abandonedzoo)
 "JH" = (
 /obj/machinery/pointdefense,
@@ -1281,22 +1167,6 @@
 	},
 /turf/template_noop,
 /area/submap/abandonedzoo)
-"Lz" = (
-/obj/machinery/shieldwallgen{
-	active = 2;
-	anchored = 1;
-	power = 1
-	},
-/obj/structure/cable{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/obj/structure/window/reinforced/tinted/frosted,
-/obj/structure/window/reinforced/tinted/frosted{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/submap/abandonedzoo)
 "LB" = (
 /obj/structure/flora/tree/sif,
 /turf/simulated/floor/outdoors/grass/sif,
@@ -1319,13 +1189,12 @@
 /mob/living/simple_mob/xeno_ch/hunter,
 /turf/simulated/floor/plating,
 /area/submap/abandonedzoo)
-"Mg" = (
+"Ms" = (
 /obj/structure/window/reinforced{
-	dir = 1
+	dir = 8
 	},
 /obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
+	dir = 1
 	},
 /turf/template_noop,
 /area/submap/abandonedzoo)
@@ -1338,12 +1207,40 @@
 /obj/effect/alien/weeds/node,
 /turf/simulated/floor/plating,
 /area/submap/abandonedzoo)
+"NI" = (
+/obj/structure/closet/crate/freezer,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/abandonedzoo)
 "NM" = (
 /mob/living/simple_mob/vore/otie,
 /obj/effect/decal/cleanable/filth,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
+/area/submap/abandonedzoo)
+"NN" = (
+/obj/machinery/shieldwallgen{
+	active = 2;
+	anchored = 1;
+	power = 1
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/structure/cable{
+	icon_state = "1-4";
+	tag = "90Curve"
+	},
+/obj/structure/window/reinforced/tinted/frosted{
+	dir = 4
+	},
+/obj/structure/window/reinforced/tinted/frosted{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
 /area/submap/abandonedzoo)
 "Ok" = (
 /obj/structure/railing/grey{
@@ -1370,42 +1267,6 @@
 	dir = 8
 	},
 /turf/template_noop,
-/area/submap/abandonedzoo)
-"OW" = (
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/turf/template_noop,
-/area/submap/abandonedzoo)
-"Ps" = (
-/obj/machinery/shieldwallgen{
-	active = 2;
-	anchored = 1;
-	power = 1
-	},
-/obj/structure/cable{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/plating,
-/area/submap/abandonedzoo)
-"Pt" = (
-/obj/structure/cable,
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/power/smes/buildable/point_of_interest,
-/turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "PC" = (
 /obj/item/corncob,
@@ -1441,14 +1302,14 @@
 /obj/structure/window/reinforced,
 /turf/template_noop,
 /area/submap/abandonedzoo)
-"Rf" = (
-/obj/machinery/door/airlock/highsecurity{
-	name = "Bio Containment"
-	},
+"QZ" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/highsecurity{
+	name = "Bio Containment";
+	locked = 1;
+	welded = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
@@ -1461,25 +1322,29 @@
 	phoron = 5
 	},
 /area/submap/abandonedzoo)
-"RF" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/door/airlock/highsecurity{
-	name = "Bio Containment";
-	locked = 1;
-	welded = 1
-	},
-/turf/simulated/floor/tiled/dark,
-/area/submap/abandonedzoo)
 "RN" = (
 /obj/structure/window/reinforced{
 	dir = 8
 	},
 /obj/structure/window/reinforced,
 /turf/template_noop,
+/area/submap/abandonedzoo)
+"Sc" = (
+/obj/machinery/shieldwallgen{
+	active = 2;
+	anchored = 1;
+	power = 1
+	},
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/plating,
 /area/submap/abandonedzoo)
 "SM" = (
 /obj/machinery/light/small{
@@ -1491,6 +1356,17 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/item/stolenpackage,
 /obj/structure/grille,
+/turf/simulated/floor/plating,
+/area/submap/abandonedzoo)
+"UX" = (
+/obj/machinery/shieldwallgen{
+	active = 2;
+	anchored = 1;
+	power = 1
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/plating,
 /area/submap/abandonedzoo)
 "Vw" = (
@@ -1517,30 +1393,21 @@
 /obj/item/flashlight/lamp/green,
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
-"Xc" = (
-/obj/machinery/shieldwallgen{
-	active = 2;
-	anchored = 1;
-	power = 1
-	},
+"WM" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
+	icon_state = "1-2"
 	},
-/obj/structure/cable,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 293.15
+	},
+/area/submap/abandonedzoo)
+"Xg" = (
+/obj/structure/table/reinforced,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/structure/window/reinforced/tinted/frosted{
-	dir = 1
-	},
-/obj/structure/window/reinforced/tinted/frosted{
-	dir = 8
-	},
-/turf/simulated/floor/plating,
+/obj/machinery/microwave,
+/turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "Xv" = (
 /obj/effect/decal/cleanable/dirt,
@@ -1563,6 +1430,35 @@
 /mob/living/simple_mob/xeno_ch/sentinel,
 /turf/simulated/floor/plating,
 /area/submap/abandonedzoo)
+"Ys" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/highsecurity{
+	name = "Bio Containment"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/abandonedzoo)
+"YN" = (
+/obj/machinery/shieldwallgen{
+	active = 2;
+	anchored = 1;
+	power = 1
+	},
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/plating,
+/area/submap/abandonedzoo)
 "YR" = (
 /obj/structure/window/reinforced{
 	dir = 1;
@@ -1570,15 +1466,19 @@
 	},
 /turf/template_noop,
 /area/submap/abandonedzoo)
-"Zg" = (
-/obj/structure/window/reinforced{
-	dir = 4
+"Zh" = (
+/obj/structure/cable{
+	icon_state = "4-8"
 	},
-/obj/structure/window/reinforced{
-	health = 1e+006;
-	req_access = list(5)
+/turf/simulated/wall/r_wall,
+/area/submap/abandonedzoo)
+"ZP" = (
+/obj/structure/table/reinforced,
+/obj/machinery/computer/med_data/laptop,
+/obj/structure/cable{
+	icon_state = "4-8"
 	},
-/turf/template_noop,
+/turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 
 (1,1,1) = {"
@@ -1760,7 +1660,7 @@ hU
 hU
 hU
 bd
-iA
+NI
 aL
 aL
 Ij
@@ -1867,7 +1767,7 @@ hU
 Lw
 aL
 aL
-Bn
+zl
 hU
 hU
 hU
@@ -1919,7 +1819,7 @@ hU
 bd
 aS
 aL
-do
+cH
 hU
 hU
 hU
@@ -1971,7 +1871,7 @@ hU
 bd
 OC
 aS
-do
+cH
 hU
 hU
 hU
@@ -2013,24 +1913,24 @@ hU
 hU
 hU
 hU
-Lz
-aa
-aa
-aa
-aa
-ER
+yE
+Ci
+Ci
+Ci
+Ci
+NN
 hU
 bd
 aL
 aS
-do
+cH
 hU
-ab
+UX
 qZ
 ag
 ag
 ag
-ab
+UX
 hU
 bc
 bc
@@ -2065,24 +1965,24 @@ hU
 hU
 hU
 aK
-bV
+qP
 dE
 KC
 Xv
 pz
-bV
+qP
 pV
 nn
 aL
 aS
-Mg
+lJ
 zN
-bD
+oU
 aO
 lM
 aO
 Fe
-ac
+kK
 hU
 bc
 bc
@@ -2117,24 +2017,24 @@ hU
 hU
 hU
 aK
-bV
+qP
 LU
 li
 iJ
 KC
-RF
+QZ
 Ln
 aL
 aL
 aL
 aL
 aL
-aD
+Ys
 aO
 aO
 VW
 VW
-ac
+kK
 hU
 bc
 aH
@@ -2169,24 +2069,24 @@ hU
 hU
 hU
 aK
-bV
+qP
 cM
 KC
 iJ
 hQ
-bV
+qP
 VS
 Lw
 aL
 aL
-Bn
+zl
 OK
-bD
+oU
 mF
 NM
 aO
 aO
-ac
+kK
 hU
 Vw
 bt
@@ -2221,24 +2121,24 @@ hU
 hU
 hU
 aK
-bV
+qP
 Tg
 LU
 Kr
 KC
-bV
+qP
 ep
 bd
 aS
 aL
-do
+cH
 hU
-bD
+oU
 aO
 aO
 aO
 CD
-ac
+kK
 hU
 Vw
 bt
@@ -2273,24 +2173,24 @@ hU
 hU
 hU
 hU
-Bq
+wW
 ag
 ag
 ag
 ag
-Xc
+rN
 hU
 bd
 aS
 aL
-do
+cH
 hU
-bo
-aa
-aa
-aa
-aa
-bQ
+rA
+Ci
+Ci
+Ci
+Ci
+tw
 hU
 Vw
 bt
@@ -2325,19 +2225,19 @@ hU
 hU
 hU
 hU
-gY
+Ap
 GG
 GG
 GG
 GG
-gY
+Ap
 hU
 bd
 OC
 aS
-do
+cH
 hU
-gY
+Ap
 GG
 GG
 GG
@@ -2377,19 +2277,19 @@ hU
 hU
 hU
 hU
-gY
+Ap
 Iq
 Iq
 Iq
 Iq
-gY
+Ap
 hU
 bd
 aL
 aS
-do
+cH
 hU
-gY
+Ap
 Iq
 Iq
 Iq
@@ -2421,32 +2321,32 @@ hU
 hU
 hU
 hU
-ab
+UX
 ag
 ag
 ag
 ag
-ab
+UX
 bH
 bH
-Ps
+qY
 ag
 ag
 ag
 ag
-Ps
+qY
 hU
 bd
 aL
 aS
-do
+cH
 hU
-Ps
-aa
-aa
-aa
-aa
-ab
+qY
+Ci
+Ci
+Ci
+Ci
+UX
 hU
 Vw
 bt
@@ -2473,32 +2373,32 @@ hU
 hU
 hU
 hU
-ac
+kK
 MX
 MX
 Rt
 Rt
-bV
+qP
 ep
 aK
-bV
+qP
 ah
 bW
 as
 ah
-ac
+kK
 af
 QU
 bb
 bb
-zU
+dO
 af
-bD
+oU
 bu
 bJ
 bI
 bJ
-ac
+kK
 hU
 Vw
 bt
@@ -2525,32 +2425,32 @@ hU
 hU
 hU
 hU
-ac
+kK
 MX
 Rt
 Rt
 Rt
-bV
+qP
 ep
 aK
-bV
+qP
 ah
 ap
 as
 XG
-aD
+Ys
 aL
 aR
 aL
 aL
 aR
 aL
-aD
+Ys
 bv
 oC
 bJ
 bJ
-ac
+kK
 hU
 Vw
 bt
@@ -2577,32 +2477,32 @@ hU
 hU
 hU
 hU
-ac
+kK
 Rt
 Rt
 IA
 HX
-bV
+qP
 ep
 aK
-bV
+qP
 as
 ah
 as
 aw
-ac
+kK
 Hv
 Hv
 Gu
 Gu
 Hv
 Hv
-bD
+oU
 bw
 bJ
 bJ
 oC
-ac
+kK
 hU
 Vw
 bt
@@ -2629,32 +2529,32 @@ hU
 hU
 hU
 hU
-ac
+kK
 Rt
 Rt
 Rt
 Rt
-bV
+qP
 ep
 aK
-bV
+qP
 aj
 as
 as
 bW
-ac
+kK
 Hv
-gd
+Db
 aO
 aO
 be
 Hv
-bD
+oU
 bx
 bE
 bv
 bJ
-ac
+kK
 hU
 Vw
 bt
@@ -2681,32 +2581,32 @@ hU
 hU
 hU
 hU
-ad
-ak
-ak
-Rf
-ak
-jT
-qg
-qg
-ad
-ak
-ak
-ak
-ak
-aE
-aM
-aT
-Dv
-nf
-Pt
-aM
-bo
-ak
-ak
-ak
-ak
-bQ
+jI
+Jy
+Jy
+iY
+Jy
+Sc
+AU
+AU
+jI
+Jy
+Jy
+Jy
+Jy
+YN
+vM
+sL
+WM
+Ju
+zP
+vM
+rA
+Jy
+Jy
+Jy
+Jy
+tw
 hU
 Vw
 bt
@@ -2737,7 +2637,7 @@ hU
 hU
 uA
 aL
-do
+cH
 hU
 hU
 hU
@@ -2746,14 +2646,14 @@ bd
 oO
 Hv
 Hv
-aF
+Zh
 Hv
 aU
 aO
 aO
 bg
 Hv
-aF
+Zh
 by
 bF
 bK
@@ -2784,12 +2684,12 @@ VY
 Fs
 Or
 aL
-zU
+dO
 af
 af
-Zg
+Ix
 aL
-zU
+dO
 af
 af
 af
@@ -2798,7 +2698,7 @@ QU
 aL
 qZ
 ax
-aG
+CB
 aN
 ii
 CM
@@ -2850,14 +2750,14 @@ bb
 aL
 bb
 aO
-oi
+kJ
 jZ
 CM
 CM
 CM
 aO
 kH
-oi
+kJ
 aO
 bG
 Fl
@@ -2902,7 +2802,7 @@ bb
 aL
 bb
 aO
-oi
+kJ
 CM
 CM
 CM
@@ -2940,12 +2840,12 @@ aL
 uY
 aL
 aL
-OW
+Ms
 OK
 OK
 PM
 aL
-OW
+Ms
 OK
 OK
 OK
@@ -2954,14 +2854,14 @@ RN
 aL
 qZ
 az
-aI
+ZP
 aP
 oN
 CM
 aO
 bi
 bn
-br
+Xg
 bA
 Hv
 Hv
@@ -2997,7 +2897,7 @@ hU
 hU
 uA
 aL
-do
+cH
 hU
 hU
 hU
@@ -3006,14 +2906,14 @@ bd
 aL
 Hv
 Hv
-aF
+Zh
 Hv
 aX
 aO
 aO
 bj
 Hv
-aF
+Zh
 Hv
 Hv
 hU
@@ -3045,32 +2945,32 @@ hU
 hU
 hU
 hU
-ab
+UX
 ag
 ag
-Rf
+iY
 ag
-ab
-qg
-qg
-ae
-ak
-ak
-ak
-ak
-aJ
+UX
+AU
+AU
+CP
+Jy
+Jy
+Jy
+Jy
+dK
 Hv
 aY
 aO
 aO
 bk
 Hv
-bs
-ak
-ak
-ak
-ak
-bS
+An
+Jy
+Jy
+Jy
+Jy
+gi
 hU
 Xy
 bt
@@ -3097,32 +2997,32 @@ hU
 hU
 hU
 hU
-ac
+kK
 bL
 Jb
 Jb
 ly
-bV
+qP
 ep
 aK
-bV
+qP
 al
 an
 am
 aA
-ac
+kK
 Hv
 aZ
 aO
 aO
 bl
 Hv
-ac
+kK
 bB
 bB
 Nd
 bH
-ac
+kK
 hU
 Xy
 bt
@@ -3149,27 +3049,27 @@ hU
 hU
 hU
 hU
-ac
+kK
 Jb
 Lo
 Jb
 LB
-bV
+qP
 ep
 aK
-bV
+qP
 am
 LM
 ao
 aB
-ac
+kK
 Hv
 Hv
 bb
 bb
 Hv
 Hv
-ac
+kK
 bC
 bH
 XM
@@ -3201,27 +3101,27 @@ hU
 hU
 hU
 hU
-ac
+kK
 Jb
 ly
 Jb
 id
-bV
+qP
 ep
 aK
-bV
+qP
 an
 aq
 au
 an
-aD
+Ys
 aL
 ba
 aL
 aL
 ba
 aL
-aD
+Ys
 bB
 Mf
 Ed
@@ -3253,27 +3153,27 @@ hU
 hU
 hU
 hU
-ac
+kK
 LB
 Jb
 bL
 Jb
-bV
+qP
 ep
 aK
-bV
+qP
 ao
 an
 av
 aC
-ac
+kK
 OK
 RN
 bb
 bb
-OW
+Ms
 OK
-ac
+kK
 bB
 bB
 bH
@@ -3305,27 +3205,27 @@ hU
 hU
 hU
 hU
-ad
-ak
-ak
-ak
-ak
-jT
+jI
+Jy
+Jy
+Jy
+Jy
+Sc
 bH
 bH
-tn
-ak
-ak
-ak
-ak
-tn
+bX
+Jy
+Jy
+Jy
+Jy
+bX
 hU
 bd
 aL
 aL
-do
+cH
 hU
-tn
+bX
 ag
 ag
 bN
@@ -3365,19 +3265,19 @@ hU
 hU
 hU
 hU
-gY
+Ap
 hU
 hU
 hU
 hU
-gY
+Ap
 hU
 bd
 aL
 aL
-do
+cH
 hU
-gY
+Ap
 hU
 hU
 hU
@@ -3417,19 +3317,19 @@ hU
 hU
 hU
 hU
-gY
+Ap
 Iq
 Iq
 Iq
 Iq
-gY
+Ap
 hU
 bd
 aL
 aL
-do
+cH
 hU
-gY
+Ap
 Iq
 Iq
 Iq
@@ -3469,24 +3369,24 @@ hU
 hU
 hU
 hU
-Ps
+qY
 qZ
 ag
 ag
 ag
-Ps
+qY
 hU
 bd
 SM
 aL
-do
+cH
 hU
-Ps
-ak
-ak
-ak
-ak
-ab
+qY
+Jy
+Jy
+Jy
+Jy
+UX
 hU
 Xy
 aQ
@@ -3521,24 +3421,24 @@ hU
 hU
 hU
 hU
-bD
+oU
 Rq
 bq
 PC
 bq
-ac
+kK
 zN
 nn
 aL
 aL
-Mg
+lJ
 zN
-bD
+oU
 bu
 bJ
 bI
 bJ
-ac
+kK
 hU
 Xy
 bt
@@ -3573,24 +3473,24 @@ hU
 hU
 hU
 hU
-bD
+oU
 bq
 Hu
 bq
 bq
-aD
+Ys
 aL
 aL
 aL
 aL
 aL
 aL
-aD
+Ys
 bJ
 bJ
 bJ
 LF
-ac
+kK
 hU
 Xy
 bt
@@ -3625,24 +3525,24 @@ hU
 hU
 hU
 hU
-bD
+oU
 Dm
 bq
 bq
 PC
-ac
+kK
 OK
 Lw
 aL
 aL
-Bn
+zl
 OK
-bD
+oU
 bw
 LF
 bJ
 bJ
-ac
+kK
 hU
 bc
 bf
@@ -3677,24 +3577,24 @@ hU
 hU
 hU
 hU
-bD
+oU
 PC
 hN
 bq
 If
-ac
+kK
 hU
 bd
 aL
 aL
-do
+cH
 hU
-bD
+oU
 bx
 bE
 bJ
 bJ
-ac
+kK
 hU
 bc
 bc
@@ -3729,24 +3629,24 @@ hU
 hU
 hU
 hU
-bo
-ak
-ak
-ak
-ak
-bQ
+rA
+Jy
+Jy
+Jy
+Jy
+tw
 hU
 bd
 aL
 aL
-do
+cH
 hU
-bo
-ak
-ak
-ak
-ak
-bQ
+rA
+Jy
+Jy
+Jy
+Jy
+tw
 hU
 bc
 bc
@@ -3791,7 +3691,7 @@ hU
 bd
 SM
 aL
-do
+cH
 hU
 hU
 hU
@@ -3843,7 +3743,7 @@ hU
 bd
 aL
 aL
-do
+cH
 hU
 hU
 hU
@@ -3895,7 +3795,7 @@ hU
 nn
 aL
 aL
-Mg
+lJ
 hU
 hU
 hU

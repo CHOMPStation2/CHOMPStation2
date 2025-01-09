@@ -127,8 +127,6 @@
 /area/submap/Hadzardzone)
 "I" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor{
@@ -181,7 +179,6 @@
 	component_parts = list(/obj/item/stack/cable_coil=5,/obj/item/stock_parts/capacitor/omni=1,/obj/item/stock_parts/micro_laser/omni=1,/obj/item/stack/material/uranium=10,/obj/item/stack/material/phoron=5)
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor{
@@ -197,7 +194,6 @@
 	state = 1
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor{
@@ -215,13 +211,9 @@
 /area/submap/Hadzardzone)
 "X" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor{

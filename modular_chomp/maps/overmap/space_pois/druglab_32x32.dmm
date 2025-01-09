@@ -13,20 +13,6 @@
 /obj/fruitspawner/corn,
 /turf/simulated/floor/plating,
 /area/submap/druglab)
-"bN" = (
-/obj/structure/cable{
-	d2 = 2;
-	icon_state = "0-2";
-	pixel_y = 1
-	},
-/obj/machinery/power/apc{
-	dir = 4;
-	layer = 5;
-	name = "east bump";
-	pixel_x = 24
-	},
-/turf/simulated/floor/plating,
-/area/submap/druglab)
 "bP" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -213,10 +199,6 @@
 /area/template_noop)
 "nV" = (
 /turf/simulated/floor/plating,
-/area/template_noop)
-"oI" = (
-/obj/structure/lattice,
-/turf/template_noop,
 /area/template_noop)
 "oO" = (
 /mob/living/simple_mob/humanoid/merc/ranged/space/tommylas,
@@ -424,6 +406,10 @@
 	icon_state = "dark"
 	},
 /area/submap/gasthelizards)
+"Dd" = (
+/obj/structure/lattice,
+/turf/template_noop,
+/area/template_noop)
 "Ek" = (
 /obj/structure/closet/crate/freezer,
 /obj/machinery/light{
@@ -651,6 +637,19 @@
 	},
 /turf/template_noop,
 /area/template_noop)
+"UT" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1
+	},
+/obj/machinery/power/apc{
+	dir = 4;
+	layer = 5;
+	name = "east bump";
+	pixel_x = 24
+	},
+/turf/simulated/floor/plating,
+/area/submap/druglab)
 "Va" = (
 /obj/item/grenade/chem_grenade/metalfoam,
 /obj/fruitspawner/corn,
@@ -753,14 +752,14 @@ nP
 nP
 nP
 nP
-oI
-oI
-oI
-oI
+Dd
+Dd
+Dd
+Dd
 nP
-oI
-oI
-oI
+Dd
+Dd
+Dd
 nP
 nP
 nP
@@ -787,8 +786,8 @@ nP
 st
 nP
 nP
-oI
-oI
+Dd
+Dd
 sO
 sO
 sO
@@ -796,7 +795,7 @@ sO
 sO
 sO
 sO
-oI
+Dd
 nP
 nP
 nP
@@ -819,10 +818,10 @@ nP
 (4,1,1) = {"
 nP
 nP
-oI
-oI
-oI
-oI
+Dd
+Dd
+Dd
+Dd
 sO
 FR
 ZQ
@@ -830,8 +829,8 @@ UN
 xV
 Eq
 sO
-oI
-oI
+Dd
+Dd
 nP
 nP
 nP
@@ -852,7 +851,7 @@ nP
 "}
 (5,1,1) = {"
 nP
-oI
+Dd
 nP
 sO
 sO
@@ -887,7 +886,7 @@ nP
 (6,1,1) = {"
 nP
 nP
-oI
+Dd
 sO
 aJ
 iM
@@ -900,7 +899,7 @@ VP
 lq
 fR
 th
-oI
+Dd
 nP
 nP
 jR
@@ -920,8 +919,8 @@ nP
 "}
 (7,1,1) = {"
 nP
-oI
-oI
+Dd
+Dd
 sO
 bP
 FP
@@ -934,14 +933,14 @@ FR
 sO
 sO
 sO
-oI
+Dd
 nP
 nP
 jR
 jR
 lJ
 kf
-bN
+UT
 dU
 Jq
 jR
@@ -955,7 +954,7 @@ nP
 (8,1,1) = {"
 nP
 nP
-oI
+Dd
 sO
 no
 np
@@ -966,9 +965,9 @@ FG
 fr
 sO
 sO
-oI
-oI
-oI
+Dd
+Dd
+Dd
 nP
 jR
 jR
@@ -988,8 +987,8 @@ nP
 "}
 (9,1,1) = {"
 nP
-oI
-oI
+Dd
+Dd
 sO
 bP
 FP
@@ -999,10 +998,10 @@ jv
 VP
 vu
 sO
-oI
-oI
+Dd
+Dd
 nP
-oI
+Dd
 jR
 jR
 jR
@@ -1033,10 +1032,10 @@ jv
 VP
 TS
 sO
-oI
+Dd
 st
 nP
-oI
+Dd
 jR
 jR
 jR
@@ -1056,8 +1055,8 @@ nP
 "}
 (11,1,1) = {"
 nP
-oI
-oI
+Dd
+Dd
 sO
 bP
 FP
@@ -1067,10 +1066,10 @@ wR
 VP
 kA
 sO
-oI
+Dd
 nP
 nP
-oI
+Dd
 nP
 nP
 jR
@@ -1090,7 +1089,7 @@ nP
 "}
 (12,1,1) = {"
 nP
-oI
+Dd
 nP
 sO
 no
@@ -1101,10 +1100,10 @@ jv
 VP
 Wo
 sO
-oI
+Dd
 nP
 nP
-oI
+Dd
 nP
 nP
 jR
@@ -1125,7 +1124,7 @@ nP
 (13,1,1) = {"
 nP
 nP
-oI
+Dd
 sO
 nr
 vV
@@ -1135,10 +1134,10 @@ VP
 VP
 Wo
 sO
-oI
+Dd
 nP
 nP
-oI
+Dd
 nP
 jR
 jR
@@ -1159,7 +1158,7 @@ nP
 (14,1,1) = {"
 nP
 nP
-oI
+Dd
 sO
 sO
 sO
@@ -1169,10 +1168,10 @@ sO
 Mb
 sO
 sO
-oI
+Dd
 nP
 nP
-oI
+Dd
 nP
 mT
 mT
@@ -1193,8 +1192,8 @@ nP
 (15,1,1) = {"
 nP
 nP
-oI
-oI
+Dd
+Dd
 sO
 SG
 Ce
@@ -1206,7 +1205,7 @@ sO
 nP
 st
 nP
-oI
+Dd
 nP
 nP
 mT
@@ -1227,8 +1226,8 @@ nP
 (16,1,1) = {"
 nP
 nP
-oI
-oI
+Dd
+Dd
 sO
 Ek
 LW
@@ -1237,13 +1236,13 @@ Ce
 lh
 Tx
 sO
-oI
-oI
-oI
-oI
-oI
-oI
-oI
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
 jR
 jR
 jR
@@ -1251,10 +1250,10 @@ jR
 jR
 jR
 jR
-oI
-oI
-oI
-oI
+Dd
+Dd
+Dd
+Dd
 nP
 nP
 "}
@@ -1262,7 +1261,7 @@ nP
 nP
 nP
 nP
-oI
+Dd
 sO
 jl
 lh
@@ -1271,10 +1270,10 @@ Yd
 Qi
 Sv
 sO
-oI
-oI
+Dd
+Dd
 nP
-oI
+Dd
 nP
 nP
 nP
@@ -1296,7 +1295,7 @@ nP
 nP
 nP
 nP
-oI
+Dd
 sO
 sO
 sO
@@ -1305,12 +1304,12 @@ sO
 sO
 sO
 sO
-oI
-oI
+Dd
+Dd
 nV
 nV
 nV
-oI
+Dd
 nP
 nP
 nP
@@ -1340,15 +1339,15 @@ nP
 nP
 nP
 nP
-oI
+Dd
 YH
 YH
 YH
-oI
+Dd
 nP
 nP
 UQ
-oI
+Dd
 nP
 nP
 nP
@@ -1366,11 +1365,11 @@ nP
 st
 nP
 nP
-oI
-oI
+Dd
+Dd
 nP
 nP
-oI
+Dd
 vi
 vi
 vi
@@ -1404,7 +1403,7 @@ nP
 nP
 nP
 nP
-oI
+Dd
 vi
 vi
 vi
@@ -1417,7 +1416,7 @@ vi
 vi
 vi
 vi
-oI
+Dd
 nP
 nP
 nP
@@ -1451,7 +1450,7 @@ yW
 vi
 vi
 vi
-oI
+Dd
 nP
 nP
 nP
@@ -1540,7 +1539,7 @@ nP
 nP
 nP
 nP
-oI
+Dd
 vi
 vi
 YH
@@ -1608,7 +1607,7 @@ nP
 nP
 nP
 nP
-oI
+Dd
 vi
 vi
 YH
@@ -1710,7 +1709,7 @@ nP
 nP
 nP
 nP
-oI
+Dd
 vi
 vi
 vi
@@ -1779,17 +1778,17 @@ nP
 nP
 nP
 UQ
-oI
+Dd
 nP
-oI
-oI
-oI
+Dd
+Dd
+Dd
 nP
-oI
-oI
-oI
+Dd
+Dd
+Dd
 UQ
-oI
+Dd
 nP
 nP
 nP

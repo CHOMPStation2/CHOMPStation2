@@ -71,6 +71,16 @@
 	},
 /turf/simulated/floor/tiled/old_tile/purple,
 /area/derelict/bridge)
+"aA" = (
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/flora/ausbushes/fullgrass,
+/obj/structure/flora/ausbushes/leafybush,
+/obj/structure/flora/ausbushes/ppflowers,
+/turf/simulated/floor/grass,
+/area/derelict/arrival)
 "aB" = (
 /obj/machinery/computer/crew,
 /turf/simulated/floor/tiled/old_tile/purple,
@@ -130,25 +140,18 @@
 	},
 /turf/simulated/floor/carpet,
 /area/derelict/bridge)
-"aR" = (
-/obj/machinery/light/spot{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/old_tile/purple,
-/area/derelict/bridge)
 "aT" = (
 /obj/machinery/vending/sovietsoda,
 /turf/simulated/floor/tiled/old_tile/purple,
 /area/derelict/bridge)
-"aU" = (
-/obj/machinery/photocopier,
-/obj/machinery/light/spot{
-	dir = 1
+"aV" = (
+/obj/structure/closet/secure_closet/chemical,
+/obj/item/paper/djstation{
+	info = "<i>A primitive rendition of a crying egg being stomped on by a boot has been scribbled in the right-hand margin of the paper.</i><br><br>Wahwahwah! True egghead! I do not give two shits about your cats or 'syence,' if you write to Chief I will tell that bitch Katerina about your baby boy crush.<br><br>Also, why you sign name on paper? I am next door, fuckhead, I know baby man note is yours as soon as I see it. You write girly letter like I am your lover, maybe if you spend less time in corner with cat you would be real man? Of course, you would still look like camel shit stuck to Totstoi's boot!";
+	name = "dear baby man"
 	},
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/old_tile/purple,
-/area/derelict/bridge)
+/turf/simulated/floor/tiled/old_tile/beige,
+/area/derelict/eva/annex)
 "aX" = (
 /obj/item/clothing/head/helmet/space/syndicate/blue{
 	desc = "This spacesuit is emblazoned with the emblem of the USSP. Glory to Space Russia!";
@@ -176,6 +179,25 @@
 /obj/effect/catwalk_plated/white,
 /turf/template_noop,
 /area/template_noop)
+"bg" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/effect/catwalk_plated/white,
+/turf/template_noop,
+/area/derelict/solar_control)
+"bh" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock{
+	name = "Central Annex"
+	},
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/arrival)
 "bk" = (
 /obj/item/trash/cigbutt{
 	pixel_x = 6;
@@ -197,93 +219,6 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/vomit,
 /turf/simulated/floor/tiled/old_tile/purple,
-/area/derelict/bridge)
-"bo" = (
-/obj/structure/cable{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/obj/machinery/power/apc/alarms_hidden{
-	dir = 8;
-	pixel_x = -23
-	},
-/turf/simulated/floor/tiled/old_tile/purple,
-/area/derelict/bridge)
-"bp" = (
-/obj/structure/bed/chair/comfy/red{
-	dir = 4
-	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/carpet,
-/area/derelict/bridge)
-"bq" = (
-/obj/structure/table/standard,
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/carpet,
-/area/derelict/bridge)
-"br" = (
-/obj/structure/bed/chair,
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/old_tile/purple,
-/area/derelict/bridge)
-"bt" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/carpet,
-/area/derelict/bridge)
-"bu" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/door/airlock/command{
-	name = "Command Wing"
-	},
-/turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
-	},
-/area/derelict/bridge)
-"bv" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/old_tile/purple,
-/area/derelict/bridge)
-"bw" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/old_tile/purple,
-/area/derelict/bridge)
-"bx" = (
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/turf/simulated/floor/carpet,
 /area/derelict/bridge)
 "by" = (
 /obj/machinery/door/airlock/command{
@@ -314,12 +249,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/old_tile/purple,
 /area/derelict/bridge)
-"bF" = (
-/obj/machinery/light/spot{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/red,
-/area/derelict/arrival)
 "bG" = (
 /obj/item/melee/classic_baton{
 	desc = "A wooden truncheon for beating capitalist scum."
@@ -327,24 +256,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/red,
 /area/derelict/arrival)
-"bH" = (
-/obj/machinery/light/spot{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/old_tile/purple,
-/area/derelict/bridge)
 "bI" = (
 /obj/structure/table/standard,
 /obj/item/trash/cigbutt,
 /turf/simulated/floor/carpet,
-/area/derelict/bridge)
-"bL" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/old_tile/purple,
 /area/derelict/bridge)
 "bM" = (
 /obj/structure/bed/chair/office/dark,
@@ -390,6 +305,16 @@
 /obj/item/pen,
 /turf/simulated/floor/tiled/old_tile/purple,
 /area/derelict/bridge)
+"ce" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/light/small{
+	dir = 4;
+	pixel_y = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/derelict/eva/annex)
 "cf" = (
 /obj/structure/table/standard,
 /obj/item/folder/red,
@@ -398,12 +323,6 @@
 "cg" = (
 /obj/structure/table/standard,
 /turf/simulated/floor/carpet,
-/area/derelict/bridge)
-"ch" = (
-/obj/machinery/light/spot{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/old_tile/purple,
 /area/derelict/bridge)
 "ci" = (
 /obj/machinery/light/small{
@@ -416,20 +335,6 @@
 "cj" = (
 /obj/effect/decal/cleanable/dirt,
 /mob/living/simple_mob/humanoid/russian,
-/turf/simulated/floor/tiled/neutral,
-/area/derelict/crew_quarters)
-"ck" = (
-/obj/machinery/shower{
-	dir = 8
-	},
-/obj/structure/curtain/open/shower,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/remains/human{
-	desc = "This guy seemed to have died in terrible way! Half his remains are dust.";
-	name = "Human remains"
-	},
-/obj/effect/decal/cleanable/blood,
-/obj/item/reagent_containers/food/snacks/meat/human,
 /turf/simulated/floor/tiled/neutral,
 /area/derelict/crew_quarters)
 "cl" = (
@@ -459,14 +364,6 @@
 "ct" = (
 /obj/machinery/light/spot,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/carpet,
-/area/derelict/bridge)
-"cu" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
 /turf/simulated/floor/carpet,
 /area/derelict/bridge)
 "cv" = (
@@ -506,29 +403,30 @@
 	},
 /turf/simulated/floor/tiled/red,
 /area/derelict/arrival)
+"cB" = (
+/obj/structure/bed/chair/office/light,
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/eva/annex)
 "cD" = (
 /turf/simulated/floor/tiled/old_tile/purple,
 /area/derelict/bridge)
 "cE" = (
 /turf/simulated/floor/tiled/techfloor,
 /area/derelict/bridge)
-"cF" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/door/airlock/command{
-	name = "Command Wing"
-	},
-/turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
-	},
-/area/derelict/bridge)
 "cG" = (
 /obj/item/trash/semki,
 /turf/simulated/floor/tiled/old_tile/purple,
 /area/derelict/bridge)
+"cH" = (
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/eva/annex)
 "cI" = (
 /obj/machinery/door/airlock{
 	name = "Bathroom"
@@ -576,19 +474,6 @@
 	},
 /turf/template_noop,
 /area/template_noop)
-"cS" = (
-/obj/structure/shuttle/window,
-/obj/structure/grille/rustic,
-/turf/simulated/floor,
-/area/derelict/eva/annex)
-"cT" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/derelict/eva/annex)
 "cU" = (
 /obj/structure/table/reinforced,
 /turf/simulated/floor/tiled/old_tile/purple,
@@ -603,6 +488,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/old_tile/purple,
 /area/derelict/bridge)
+"cX" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/eva/annex)
 "cZ" = (
 /obj/structure/table/standard,
 /obj/effect/decal/cleanable/dirt,
@@ -614,6 +508,13 @@
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/old_tile/blue,
 /area/derelict/crew_quarters)
+"db" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/stairs/dark_stairs{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
 "dc" = (
 /obj/item/bedsheet/blue,
 /obj/structure/bed,
@@ -636,28 +537,16 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/red,
 /area/derelict/arrival)
-"di" = (
-/obj/item/material/shard,
-/obj/structure/shuttle/window,
-/obj/structure/grille/rustic,
-/turf/simulated/floor,
-/area/derelict/eva/annex)
-"dj" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/light/spot{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/derelict/eva/annex)
 "dk" = (
 /obj/item/bedsheet/blue,
 /obj/structure/bed,
 /turf/simulated/floor/tiled/old_tile,
 /area/derelict/crew_quarters)
+"dl" = (
+/obj/structure/table/standard,
+/obj/item/ammo_casing/microbattery/combat/final,
+/turf/simulated/floor/tiled/old_tile/beige,
+/area/derelict/eva/annex)
 "dm" = (
 /obj/machinery/computer/security,
 /obj/effect/decal/cleanable/dirt,
@@ -695,21 +584,6 @@
 	},
 /turf/simulated/floor/tiled/red,
 /area/derelict/arrival)
-"dt" = (
-/obj/structure/table/reinforced,
-/obj/machinery/light/spot{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/red,
-/area/derelict/arrival)
-"du" = (
-/obj/structure/grille{
-	density = 0;
-	icon_state = "brokengrille"
-	},
-/turf/simulated/floor,
-/area/derelict/eva/annex)
 "dv" = (
 /obj/item/bedsheet/blue,
 /obj/structure/bed,
@@ -731,6 +605,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/old_tile/blue,
 /area/derelict/crew_quarters)
+"dA" = (
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/asteroid_steel{
+	icon_state = "dark"
+	},
+/area/derelict/arrival)
 "dB" = (
 /obj/structure/table/reinforced,
 /obj/structure/window/reinforced,
@@ -770,15 +652,9 @@
 	},
 /turf/simulated/floor/tiled/red,
 /area/derelict/arrival)
-"dG" = (
-/obj/structure/grille{
-	density = 0;
-	icon_state = "brokengrille"
-	},
-/obj/item/material/shard{
-	icon_state = "small"
-	},
-/turf/simulated/floor,
+"dF" = (
+/obj/machinery/floodlight,
+/turf/simulated/floor/tiled/old_tile/yellow,
 /area/derelict/eva/annex)
 "dH" = (
 /obj/structure/shuttle/window,
@@ -794,66 +670,39 @@
 /obj/item/tool/crowbar,
 /turf/simulated/floor/tiled/red,
 /area/derelict/arrival)
-"dN" = (
-/obj/structure/closet,
-/obj/machinery/light/spot{
-	dir = 4
-	},
-/obj/item/clothing/head/ushanka,
-/obj/item/clothing/head/ushanka,
-/obj/item/clothing/head/ushanka,
-/obj/item/clothing/under/soviet,
-/obj/item/clothing/under/soviet,
-/obj/item/clothing/under/soviet,
-/obj/item/clothing/under/soviet,
-/obj/item/clothing/head/ushanka,
-/obj/item/clothing/head/ushanka,
-/obj/item/clothing/under/soviet,
-/turf/simulated/floor/tiled/old_tile/blue,
-/area/derelict/crew_quarters)
-"dP" = (
-/obj/effect/decal/cleanable/dirt,
+"dO" = (
 /obj/structure/cable{
-	d2 = 2;
-	icon_state = "0-2"
+	icon_state = "4-8"
 	},
-/obj/machinery/power/apc/alarms_hidden{
-	dir = 1;
-	pixel_y = 24
-	},
-/turf/simulated/floor/tiled/red,
-/area/derelict/arrival)
-"dQ" = (
-/obj/machinery/recharger,
-/obj/structure/table/reinforced,
-/obj/machinery/light/spot{
+/obj/machinery/light/small{
 	dir = 1
 	},
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/red,
-/area/derelict/arrival)
+/obj/machinery/airlock_sensor{
+	frequency = 1502;
+	id_tag = "rus_sensor_2";
+	pixel_y = 27
+	},
+/obj/machinery/embedded_controller/radio/airlock/airlock_controller{
+	frequency = 1502;
+	id_tag = "rus_airlock_2";
+	pixel_y = -25;
+	tag_airpump = "rus_pump_2";
+	tag_chamber_sensor = "rus_sensor_2";
+	tag_exterior_door = "rus_outer_2";
+	tag_interior_door = "rus_inner_2"
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 8;
+	frequency = 1502;
+	id_tag = "rus_pump_2"
+	},
+/turf/simulated/floor/plating,
+/area/derelict/crew_quarters)
 "dT" = (
 /obj/structure/closet,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/old_tile/blue,
 /area/derelict/crew_quarters)
-"dX" = (
-/obj/structure/sign/securearea,
-/turf/simulated/wall/titanium,
-/area/derelict/eva/annex)
-"dY" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/door/airlock/command{
-	name = "Command Wing"
-	},
-/turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
-	},
-/area/derelict/eva/annex)
 "dZ" = (
 /obj/item/paper/crumpled{
 	info = "<b>I KNOW IT WAS YOU WHO THREW AWAY MY LUCKY UNDERWEAR THIS TIME. I SWEAR, IF I SEE YOUR SKINNY RAT NECK AROUND I AM GOING TO WRING IT UNTIL YOU GO PURPLE!<br><br>NOBODY! NOBODY TOUCHES BORIS' LUCKY UNDERWEAR WITHOUT SUFFERING THE CONSEQUENCES!</b>";
@@ -891,36 +740,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/red,
 /area/derelict/arrival)
-"eh" = (
-/obj/machinery/light/spot{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"ej" = (
-/obj/machinery/light/spot{
-	dir = 1
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
 "ek" = (
 /obj/machinery/door/airlock{
 	name = "Dormitories"
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/crew_quarters)
-"el" = (
-/obj/structure/cable{
-	d2 = 2;
-	icon_state = "0-2";
-	pixel_y = 1
-	},
-/obj/machinery/power/apc/alarms_hidden{
-	dir = 1;
-	pixel_y = 24
-	},
-/turf/simulated/floor/wood,
 /area/derelict/crew_quarters)
 "ep" = (
 /obj/structure/window/reinforced{
@@ -938,67 +762,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/red,
 /area/derelict/arrival)
-"er" = (
-/obj/structure/table/standard,
-/obj/item/storage/box/cups,
-/obj/machinery/light/spot{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/old_tile/beige,
-/area/derelict/eva/annex)
-"es" = (
-/obj/structure/reagent_dispensers/water_cooler,
-/turf/simulated/floor/tiled/old_tile/beige,
-/area/derelict/eva/annex)
-"et" = (
-/obj/structure/sign/science,
-/turf/simulated/wall/titanium,
-/area/derelict/eva/annex)
-"eu" = (
-/obj/effect/floor_decal/stairs/dark_stairs{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"ev" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/effect/floor_decal/stairs/dark_stairs{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"ew" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/floor_decal/stairs/dark_stairs{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"ex" = (
-/obj/structure/cable{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/obj/machinery/power/smes/buildable/hybrid,
-/turf/simulated/floor/tiled/old_tile/yellow,
-/area/derelict/eva/annex)
-"ey" = (
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/obj/machinery/atmospherics/pipe/tank,
-/turf/simulated/floor/tiled/old_tile/yellow,
-/area/derelict/eva/annex)
-"ez" = (
-/obj/structure/noticeboard,
-/turf/simulated/wall/titanium,
-/area/derelict/eva/annex)
 "eA" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	external_pressure_bound = 140;
@@ -1008,15 +771,25 @@
 	},
 /turf/simulated/floor/airless,
 /area/template_noop)
-"eE" = (
-/obj/structure/bed/chair/sofa/right,
-/turf/simulated/floor/wood,
-/area/derelict/crew_quarters)
-"eF" = (
-/obj/structure/bed/chair/sofa/left,
-/obj/machinery/light/spot{
+"eB" = (
+/obj/machinery/door/airlock/external,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"eC" = (
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/structure/table/reinforced,
+/obj/structure/window/reinforced{
 	dir = 1
 	},
+/turf/simulated/floor/tiled/neutral,
+/area/derelict/eva/annex)
+"eE" = (
+/obj/structure/bed/chair/sofa/right,
 /turf/simulated/floor/wood,
 /area/derelict/crew_quarters)
 "eH" = (
@@ -1038,78 +811,44 @@
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/derelict/arrival)
-"eL" = (
-/obj/structure/shuttle/window,
-/obj/structure/grille/rustic,
-/turf/simulated/floor/plating,
-/area/derelict/eva/annex)
-"eN" = (
+"eP" = (
 /obj/structure/table/standard,
-/obj/item/ammo_casing/microbattery/combat/final,
-/turf/simulated/floor/tiled/old_tile/beige,
-/area/derelict/eva/annex)
-"eO" = (
-/obj/structure/table/standard,
-/obj/item/surgical/scalpel{
-	pixel_y = 12
-	},
-/turf/simulated/floor/tiled/old_tile/beige,
-/area/derelict/eva/annex)
-"eS" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+/obj/item/newspaper{
+	desc = "An issue of The Griffon. Was Nanotrasen supplying this station at some point?"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"eV" = (
-/obj/machinery/power/terminal{
-	dir = 1
-	},
-/obj/structure/cable{
-	d2 = 2;
-	icon_state = "0-2";
-	pixel_y = 1
-	},
-/turf/simulated/floor/tiled/old_tile/yellow,
-/area/derelict/eva/annex)
-"eW" = (
-/obj/machinery/atmospherics/pipe/simple/visible{
-	dir = 5
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/old_tile,
 /area/derelict/eva/annex)
-"eZ" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/atmospherics/portables_connector{
-	dir = 1
-	},
-/obj/machinery/portable_atmospherics/powered/scrubber,
-/turf/simulated/floor/tiled/old_tile/yellow,
+"eR" = (
+/mob/living/simple_mob/animal/space/carp,
+/turf/simulated/floor/tiled/old_tile/green,
 /area/derelict/eva/annex)
-"fa" = (
-/obj/machinery/atmospherics/pipe/simple/visible,
-/obj/structure/shuttle/window,
-/obj/structure/grille/rustic,
-/turf/simulated/floor/plating,
+"eU" = (
+/obj/structure/flora/ausbushes/fullgrass{
+	pixel_x = -5;
+	pixel_y = -5
+	},
+/obj/structure/flora/ausbushes/brflowers,
+/obj/structure/window/reinforced{
+	dir = 1;
+	layer = 2.9
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/grass,
+/area/derelict/arrival)
+"fb" = (
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/neutral,
 /area/derelict/eva/annex)
 "fc" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood,
-/area/derelict/crew_quarters)
-"fd" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
 /turf/simulated/floor/wood,
 /area/derelict/crew_quarters)
 "fe" = (
@@ -1129,98 +868,11 @@
 	},
 /turf/simulated/floor/tiled/red,
 /area/derelict/arrival)
-"fj" = (
+"fi" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
-/turf/simulated/floor/tiled/old_tile,
-/area/derelict/eva/annex)
-"fk" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/derelict/eva/annex)
-"fl" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/door/airlock/science{
-	name = "Science Wing"
-	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"fn" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"fp" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/door/airlock/engineering{
-	name = "Engineering Wing"
-	},
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"fq" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/turf/simulated/floor/tiled/old_tile/yellow,
-/area/derelict/eva/annex)
-"fr" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/derelict/eva/annex)
-"fs" = (
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/derelict/eva/annex)
-"ft" = (
-/obj/item/paper/crumpled{
-	info = "<i>This note has been effaced with all manner of crude drawings that are too vile to properly give a description to.</i><br><small>Totstoi,<br><br>I know it's you who's been feeding my cats alcohol, I do not care what your reasons are but you are getting in the way of important research. This is the fifth cat that I've had to replace this month because of your crude sense of humour, and I will be speaking with Chief Borachov if you don't stop.<br><br>- <i>Nikolai Kartov</i>, Deputy Researcher";
-	name = "Desist at once!"
-	},
-/turf/simulated/floor/tiled/old_tile/yellow,
 /area/derelict/eva/annex)
 "fv" = (
 /obj/effect/decal/cleanable/blood/drip,
@@ -1237,16 +889,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/derelict/crew_quarters)
-"fx" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/table/standard,
-/obj/item/trash/candle,
-/turf/simulated/floor/wood,
-/area/derelict/crew_quarters)
 "fy" = (
 /obj/effect/decal/cleanable/vomit,
 /obj/effect/decal/cleanable/dirt,
@@ -1256,36 +898,6 @@
 /obj/structure/mopbucket,
 /turf/simulated/floor/wood,
 /area/derelict/crew_quarters)
-"fB" = (
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
-	},
-/area/derelict/arrival)
-"fC" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
-	},
-/area/derelict/arrival)
-"fD" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
-	},
-/area/derelict/arrival)
 "fE" = (
 /obj/structure/bed/chair/office/dark,
 /obj/effect/decal/cleanable/dirt,
@@ -1307,52 +919,19 @@
 /obj/structure/grille/rustic,
 /turf/simulated/floor/plating,
 /area/derelict/arrival)
-"fH" = (
-/obj/structure/window/reinforced{
-	dir = 4
+"fK" = (
+/obj/item/material/shard{
+	icon_state = "medium"
 	},
+/turf/simulated/floor/tiled/old_tile/green,
+/area/derelict/eva/annex)
+"fM" = (
+/obj/structure/window/reinforced,
 /obj/machinery/light/small{
-	dir = 1
+	dir = 8
 	},
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/simulated/floor/tiled/old_tile/beige,
-/area/derelict/eva/annex)
-"fI" = (
-/obj/structure/table/standard,
-/obj/item/surgical/circular_saw{
-	pixel_y = 10
-	},
-/turf/simulated/floor/tiled/old_tile/beige,
-/area/derelict/eva/annex)
-"fJ" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/derelict/eva/annex)
-"fL" = (
-/obj/structure/sign/nosmoking_1,
-/turf/simulated/wall/titanium,
-/area/derelict/eva/annex)
-"fP" = (
-/obj/machinery/light/spot{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/old_tile/yellow,
-/area/derelict/eva/annex)
-"fQ" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/derelict/eva/annex)
-"fR" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/old_tile,
 /area/derelict/eva/annex)
 "fW" = (
 /obj/structure/bed/chair,
@@ -1363,16 +942,6 @@
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/wood,
 /area/derelict/crew_quarters)
-"fX" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
-	},
-/area/derelict/arrival)
 "fY" = (
 /obj/structure/table/reinforced,
 /obj/item/paper/djstation{
@@ -1390,56 +959,17 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/red,
 /area/derelict/arrival)
-"ga" = (
-/obj/effect/decal/remains/human{
-	desc = "This guy seemed to have died in terrible way! Half his remains are dust.";
-	name = "gnawed bones"
-	},
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/effect/decal/cleanable/blood/splatter,
-/turf/simulated/floor/tiled/old_tile/beige,
+"ge" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/old_tile,
 /area/derelict/eva/annex)
-"gb" = (
-/obj/machinery/door/window/eastleft,
-/obj/effect/decal/cleanable/blood/splatter,
-/turf/simulated/floor/tiled/old_tile/beige,
-/area/derelict/eva/annex)
-"gd" = (
-/obj/structure/closet,
-/turf/simulated/floor/tiled/old_tile/beige,
-/area/derelict/eva/annex)
-"gf" = (
-/obj/structure/bed/chair/wood{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"gg" = (
-/obj/structure/table/standard,
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"gh" = (
-/obj/structure/bed/chair/wood{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"gi" = (
-/obj/machinery/floodlight,
-/turf/simulated/floor/tiled/old_tile/yellow,
-/area/derelict/eva/annex)
-"gj" = (
-/obj/machinery/power/solar_control{
-	id = "russolar";
-	track = 2
-	},
+"gk" = (
 /obj/structure/cable{
-	d2 = 2;
-	icon_state = "0-2";
-	pixel_y = 1
+	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/old_tile/yellow,
-/area/derelict/eva/annex)
+/obj/effect/decal/cleanable/blood/drip,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/arrival)
 "gl" = (
 /obj/structure/bed/chair/wood,
 /turf/simulated/floor/wood,
@@ -1449,6 +979,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood,
 /area/derelict/crew_quarters)
+"gn" = (
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/eva/annex)
 "gp" = (
 /obj/structure/table/reinforced,
 /obj/item/trash/cigbutt,
@@ -1459,78 +995,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/red,
 /area/derelict/arrival)
-"gt" = (
-/obj/structure/window/reinforced,
-/obj/machinery/light/small{
-	dir = 8
-	},
-/obj/effect/decal/cleanable/blood/splatter,
-/turf/simulated/floor/tiled/old_tile/beige,
-/area/derelict/eva/annex)
-"gu" = (
-/obj/structure/window/reinforced,
-/turf/simulated/floor/tiled/old_tile/beige,
-/area/derelict/eva/annex)
-"gv" = (
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced,
-/obj/effect/decal/cleanable/blood/splatter,
-/turf/simulated/floor/tiled/old_tile/beige,
-/area/derelict/eva/annex)
-"gw" = (
-/turf/simulated/floor/tiled/old_tile/beige,
-/area/derelict/eva/annex)
-"gx" = (
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/machinery/shower{
-	dir = 8
-	},
-/obj/structure/curtain/open/shower,
-/turf/simulated/floor/tiled/old_tile/beige,
-/area/derelict/eva/annex)
-"gz" = (
-/obj/machinery/recharge_station,
-/obj/effect/decal/cleanable/blood/oil,
-/turf/simulated/floor/tiled/old_tile/yellow,
-/area/derelict/eva/annex)
-"gB" = (
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/derelict/eva/annex)
-"gC" = (
-/obj/structure/cable{
-	d2 = 2;
-	icon_state = "0-2";
-	pixel_y = 1
-	},
-/obj/machinery/power/apc/alarms_hidden{
-	dir = 1;
-	pixel_y = 24
-	},
-/turf/simulated/floor/tiled/old_tile/yellow,
-/area/derelict/eva/annex)
-"gD" = (
-/obj/item/t_scanner,
-/obj/item/stack/cable_coil,
-/obj/item/stack/cable_coil,
-/obj/machinery/light/spot{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/old_tile/yellow,
-/area/derelict/eva/annex)
 "gE" = (
 /obj/structure/table/standard,
 /turf/simulated/floor/wood,
@@ -1574,45 +1038,6 @@
 	icon_state = "dark"
 	},
 /area/derelict/arrival)
-"gO" = (
-/obj/structure/reagent_dispensers/fueltank,
-/obj/effect/decal/cleanable/blood/oil,
-/turf/simulated/floor/tiled/old_tile/beige,
-/area/derelict/eva/annex)
-"gP" = (
-/obj/structure/table/standard,
-/obj/item/storage/box/syringes,
-/turf/simulated/floor/tiled/old_tile/beige,
-/area/derelict/eva/annex)
-"gQ" = (
-/obj/structure/table/standard,
-/obj/item/disk/data/demo{
-	pixel_x = -14;
-	pixel_y = -1
-	},
-/obj/item/paper/djstation{
-	info = "We have finally hit upon it, no more shall Katerina look past me in favor of other company! Experiment 432-A shows an incredible rate of cellular regeneration, and I posit that we have finally breaken down the great boundary between life and death--true biological immortality!<br><br>Of course, the aggressive behaviour is an undue side-effect, but it is only cat after all. I am certain a few sedative-laced cat treats will suffice to prep for autopsy.";
-	name = "Experiment 432-A"
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/derelict/eva/annex)
-"gT" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/derelict/eva/annex)
-"gU" = (
-/obj/structure/closet,
-/turf/simulated/floor/tiled/old_tile/yellow,
-/area/derelict/eva/annex)
 "gV" = (
 /obj/structure/table/reinforced,
 /obj/item/reagent_containers/glass/rag,
@@ -1629,30 +1054,9 @@
 	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/derelict/crew_quarters)
-"gX" = (
-/obj/structure/table/reinforced,
-/obj/item/tool/wrench,
-/obj/machinery/light/spot{
-	dir = 4
-	},
-/turf/simulated/floor/carpet/turcarpet,
-/area/derelict/crew_quarters)
 "gY" = (
 /obj/machinery/power/solar{
 	id = "russolar"
-	},
-/turf/simulated/floor/airless{
-	icon_state = "solarpanel"
-	},
-/area/derelict/solar_control)
-"gZ" = (
-/obj/machinery/power/solar{
-	id = "russolar"
-	},
-/obj/structure/cable{
-	d2 = 2;
-	icon_state = "0-2";
-	pixel_y = 1
 	},
 /turf/simulated/floor/airless{
 	icon_state = "solarpanel"
@@ -1676,48 +1080,6 @@
 /obj/structure/reagent_dispensers/water_cooler,
 /turf/simulated/floor/tiled/red,
 /area/derelict/arrival)
-"he" = (
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/tiled/old_tile/beige,
-/area/derelict/eva/annex)
-"hf" = (
-/obj/structure/bed/chair/office/light{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/old_tile/beige,
-/area/derelict/eva/annex)
-"hh" = (
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/turf/simulated/wall/titanium,
-/area/derelict/eva/annex)
-"hi" = (
-/obj/structure/table/reinforced,
-/obj/item/stack/material/glass,
-/turf/simulated/floor/tiled/old_tile/yellow,
-/area/derelict/eva/annex)
-"hj" = (
-/obj/structure/table/reinforced,
-/obj/item/paper/djstation{
-	info = "This is the fifth time this month I've had to replace the cabling to the damn lockdown circuit. It's bad enough the condensor is constantly on the fritz and the damn systems take nearly a week to cycle and reboot, but now I've got the captain breathing down my neck over his stupid shower and Commissar Grigor. Mikail was telling me the man's face went so red when the lights popped that you could see him glowing in the dark.<br><br>If he thought that was bad, well, if I hadn't installed an override in the mess hall we would have been sitting in the dark for the week.<br><br>Rusthven says we should be getting a new shipment of cabling, though I'm not sure we'll ever have enough supplies to keep this place properly operational.";
-	name = "maintenance report"
-	},
-/turf/simulated/floor/tiled/old_tile/yellow,
-/area/derelict/eva/annex)
-"hk" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/derelict/eva/annex)
 "hm" = (
 /turf/simulated/floor/wood,
 /area/derelict/crew_quarters)
@@ -1730,46 +1092,6 @@
 /obj/structure/table/reinforced,
 /turf/simulated/floor/carpet/turcarpet,
 /area/derelict/crew_quarters)
-"hp" = (
-/obj/machinery/power/solar{
-	id = "russolar"
-	},
-/obj/structure/cable{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/obj/structure/cable{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/turf/simulated/floor/airless{
-	icon_state = "solarpanel"
-	},
-/area/derelict/solar_control)
-"hr" = (
-/obj/machinery/power/solar{
-	id = "russolar"
-	},
-/obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/turf/simulated/floor/airless{
-	icon_state = "solarpanel"
-	},
-/area/derelict/solar_control)
-"hs" = (
-/obj/machinery/power/solar{
-	id = "russolar"
-	},
-/obj/structure/cable{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/turf/simulated/floor/airless{
-	icon_state = "solarpanel"
-	},
-/area/derelict/solar_control)
 "ht" = (
 /obj/structure/sign/directions/security{
 	dir = 1;
@@ -1783,116 +1105,6 @@
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/derelict/arrival)
-"hv" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/door/airlock{
-	name = "Security Wing"
-	},
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/arrival)
-"hx" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/old_tile/beige,
-/area/derelict/eva/annex)
-"hy" = (
-/obj/structure/table/standard,
-/obj/item/paper_bin,
-/obj/item/pen,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/old_tile/beige,
-/area/derelict/eva/annex)
-"hA" = (
-/obj/structure/table/reinforced,
-/obj/item/flashlight,
-/obj/item/cell/super,
-/turf/simulated/floor/tiled/old_tile/yellow,
-/area/derelict/eva/annex)
-"hB" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/old_tile/yellow,
-/area/derelict/eva/annex)
-"hC" = (
-/obj/structure/bed/chair,
-/mob/living/simple_mob/humanoid/merc/ranged/poi,
-/turf/simulated/floor/tiled/old_tile,
-/area/derelict/eva/annex)
-"hE" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/door/airlock{
-	name = "Eastern Annex"
-	},
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/crew_quarters)
-"hL" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/old_tile/yellow,
-/area/derelict/arrival)
-"hN" = (
-/obj/structure/sink{
-	dir = 8;
-	pixel_x = -12;
-	pixel_y = 2
-	},
-/turf/simulated/floor/tiled/old_tile/beige,
-/area/derelict/eva/annex)
-"hO" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/obj/effect/catwalk_plated/white,
-/turf/template_noop,
-/area/derelict/solar_control)
-"hP" = (
-/turf/simulated/floor/tiled/old_tile/yellow,
-/area/derelict/eva/annex)
-"hQ" = (
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/obj/structure/bed/chair,
-/turf/simulated/floor/tiled/old_tile,
-/area/derelict/eva/annex)
-"hR" = (
-/obj/machinery/computer/atmos_alert,
-/turf/simulated/floor/tiled/old_tile/yellow,
-/area/derelict/eva/annex)
-"hS" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
-	},
-/area/derelict/crew_quarters)
 "hT" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -1922,60 +1134,6 @@
 	icon_state = "dark"
 	},
 /area/derelict/crew_quarters)
-"ib" = (
-/obj/machinery/light/spot{
-	dir = 8
-	},
-/obj/structure/closet/l3closet/scientist,
-/obj/item/clothing/glasses/science,
-/turf/simulated/floor/tiled/old_tile/beige,
-/area/derelict/eva/annex)
-"ic" = (
-/obj/structure/table/reinforced,
-/obj/item/clipboard,
-/turf/simulated/floor/tiled/old_tile,
-/area/derelict/eva/annex)
-"id" = (
-/obj/structure/bed/chair/office/light,
-/turf/simulated/floor/tiled/old_tile,
-/area/derelict/eva/annex)
-"ie" = (
-/obj/structure/closet/secure_closet/chemical,
-/obj/item/paper/djstation{
-	info = "<i>A primitive rendition of a crying egg being stomped on by a boot has been scribbled in the right-hand margin of the paper.</i><br><br>Wahwahwah! True egghead! I do not give two shits about your cats or 'syence,' if you write to Chief I will tell that bitch Katerina about your baby boy crush.<br><br>Also, why you sign name on paper? I am next door, fuckhead, I know baby man note is yours as soon as I see it. You write girly letter like I am your lover, maybe if you spend less time in corner with cat you would be real man? Of course, you would still look like camel shit stuck to Totstoi's boot!";
-	name = "dear baby man"
-	},
-/turf/simulated/floor/tiled/old_tile/beige,
-/area/derelict/eva/annex)
-"ii" = (
-/turf/template_noop,
-/area/derelict/eva/annex)
-"ij" = (
-/obj/structure/closet/secure_closet/engineering_welding,
-/turf/simulated/floor/tiled/old_tile/yellow,
-/area/derelict/eva/annex)
-"ik" = (
-/obj/item/clothing/head/helmet/space/syndicate/black/engie{
-	desc = "This spacesuit is emblazoned with the emblem of the USSP. Glory to Space Russia!";
-	name = "Cosmonaut Engineering Helmet"
-	},
-/obj/item/clothing/suit/space/syndicate/black/engie{
-	desc = "This spacesuit is emblazoned with the emblem of the USSP. Glory to Space Russia!";
-	name = "Cosmonaut Engineering Suit"
-	},
-/turf/simulated/floor/tiled/old_tile/yellow,
-/area/derelict/eva/annex)
-"im" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/effect/floor_decal/chapel{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/crew_quarters)
 "io" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/chapel{
@@ -1992,6 +1150,10 @@
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/derelict/crew_quarters)
+"iq" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/old_tile/beige,
+/area/derelict/eva/annex)
 "it" = (
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
@@ -2004,65 +1166,19 @@
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/derelict/arrival)
-"iz" = (
-/obj/machinery/light/spot{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/old_tile/yellow,
-/area/derelict/arrival)
-"iA" = (
-/obj/item/paper/crumpled{
-	info = "<i>This note has been crossed out so many times it's hard to make out its contents.</i><br><small>Katerina,<br><br><s>Your eyes are like diamonds,<br>Forged in the very fire of Cygni-A.<br>My heart yearns for you,<br>For your soft beauty<br>Fuckfucknothat'sbad.<br><br>Your voice is like liquid gold,<br>Smothering me in its delicate contours.<br>Never before had I known,<br>The touch,<br>The touch!<br>The touch of an angel's voice</s><br><br>note to self: stick to science, poetry is not my forte.</small>";
-	name = "love poem"
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/old_tile/beige,
-/area/derelict/eva/annex)
-"iB" = (
-/obj/structure/table/reinforced,
-/obj/item/storage/fancy/vials,
-/obj/item/reagent_containers/glass/beaker{
-	pixel_x = 28
-	},
-/turf/simulated/floor/tiled/old_tile/beige,
-/area/derelict/eva/annex)
-"iC" = (
-/obj/structure/table/reinforced,
-/obj/item/reagent_containers/glass/beaker{
-	pixel_x = 7;
-	pixel_y = 3
-	},
-/obj/item/reagent_containers/dropper{
-	pixel_y = 8
-	},
-/turf/simulated/floor/tiled/old_tile/beige,
-/area/derelict/eva/annex)
-"iG" = (
-/obj/item/material/shard{
-	icon_state = "medium"
-	},
-/turf/template_noop,
-/area/derelict/eva/annex)
-"iH" = (
-/obj/machinery/vending/assist,
-/turf/simulated/floor/tiled/old_tile/yellow,
-/area/derelict/eva/annex)
-"iI" = (
-/obj/structure/closet/firecloset,
-/turf/simulated/floor/tiled/old_tile/yellow,
-/area/derelict/eva/annex)
-"iJ" = (
+"iy" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/effect/floor_decal/chapel{
-	dir = 8
+/obj/structure/cable{
+	icon_state = "1-4"
 	},
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/crew_quarters)
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/effect/catwalk_plated/white,
+/turf/template_noop,
+/area/derelict/solar_control)
 "iK" = (
 /obj/effect/floor_decal/chapel,
 /turf/simulated/floor/tiled/old_tile/gray,
@@ -2087,15 +1203,6 @@
 /obj/machinery/atmospherics/portables_connector,
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/derelict/crew_quarters)
-"iO" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/mob/living/simple_mob/humanoid/merc/ranged/space/shotgun,
-/turf/simulated/floor/tiled/old_tile,
-/area/derelict/eva/annex)
 "iQ" = (
 /obj/effect/decal/remains/human{
 	desc = "This guy seemed to have died in terrible way! Half his remains are dust.";
@@ -2122,67 +1229,9 @@
 /obj/structure/closet/crate/trashcart,
 /turf/simulated/floor/tiled/old_tile/yellow,
 /area/derelict/arrival)
-"iW" = (
-/obj/machinery/door/airlock/science{
-	name = "Science Wing"
-	},
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"iX" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/door/airlock/science{
-	name = "Science Wing"
-	},
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
 "iY" = (
 /turf/simulated/floor/airless,
 /area/template_noop)
-"iZ" = (
-/obj/effect/decal/remains/human{
-	desc = "This guy seemed to have died in terrible way! Half his remains are dust.";
-	name = "Human remains"
-	},
-/turf/simulated/floor/reinforced/airless,
-/area/derelict/eva/annex)
-"ja" = (
-/obj/structure/lattice,
-/turf/template_noop,
-/area/derelict/eva/annex)
-"jb" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/door/airlock/engineering{
-	name = "Engineering Wing"
-	},
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"jc" = (
-/obj/machinery/door/airlock/engineering{
-	name = "Engineering Wing"
-	},
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"jd" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/bed/chair/wood{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
-	},
-/area/derelict/crew_quarters)
 "je" = (
 /obj/structure/bed/chair/wood{
 	dir = 4
@@ -2192,14 +1241,6 @@
 "jf" = (
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/carpet,
-/area/derelict/crew_quarters)
-"jg" = (
-/obj/machinery/light/spot{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood,
 /area/derelict/crew_quarters)
 "ji" = (
 /obj/machinery/light/small{
@@ -2225,63 +1266,38 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/derelict/arrival)
-"jp" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+"jo" = (
+/obj/structure/table/standard,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
 	},
-/obj/effect/decal/cleanable/blood/drip,
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/arrival)
-"jw" = (
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/eva/annex)
+"jz" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/catwalk_plated/white,
+/turf/template_noop,
+/area/derelict/solar_control)
+"jE" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/portables_connector{
+	dir = 8
+	},
+/obj/machinery/portable_atmospherics/powered/pump,
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/derelict/eva/annex)
+"jF" = (
+/obj/structure/closet/radiation,
 /obj/structure/sign/securearea{
 	desc = "A warning sign which reads 'RADIOACTIVE AREA'";
 	icon_state = "radiation";
 	name = "RADIOACTIVE AREA";
 	pixel_x = 32
 	},
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"jx" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/effect/catwalk_plated/white,
-/turf/template_noop,
-/area/derelict/solar_control)
-"jy" = (
-/obj/structure/window/reinforced,
-/turf/template_noop,
-/area/derelict/eva/annex)
-"jA" = (
-/obj/machinery/power/singularity_beacon/syndicate,
-/mob/living/simple_mob/animal/space/carp,
-/turf/simulated/floor/reinforced/airless,
-/area/derelict/eva/annex)
-"jC" = (
-/obj/structure/closet/radiation,
-/obj/structure/sign/securearea{
-	desc = "A warning sign which reads 'RADIOACTIVE AREA'";
-	icon_state = "radiation";
-	name = "RADIOACTIVE AREA";
-	pixel_x = -32
-	},
-/obj/machinery/light/small{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"jG" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/floor_decal/stairs/dark_stairs{
-	dir = 8
-	},
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/derelict/eva/annex)
 "jI" = (
@@ -2289,89 +1305,6 @@
 /obj/item/flame/candle/everburn,
 /turf/simulated/floor/wood,
 /area/derelict/crew_quarters)
-"jJ" = (
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 8
-	},
-/turf/simulated/floor/wood,
-/area/derelict/crew_quarters)
-"jK" = (
-/obj/machinery/door/airlock/external{
-	frequency = 1502;
-	id_tag = "rus_inner_2"
-	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/derelict/crew_quarters)
-"jL" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/light/small,
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 8;
-	frequency = 1502;
-	id_tag = "rus_pump_2"
-	},
-/turf/simulated/floor/plating,
-/area/derelict/crew_quarters)
-"jM" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/door/airlock/external{
-	frequency = 1502;
-	id_tag = "rus_outer_2"
-	},
-/turf/simulated/floor/plating,
-/area/derelict/crew_quarters)
-"jN" = (
-/obj/structure/window/reinforced,
-/obj/machinery/light/small{
-	pixel_x = 16;
-	pixel_y = 5
-	},
-/turf/template_noop,
-/area/derelict/eva/annex)
-"jO" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/effect/catwalk_plated/white,
-/turf/template_noop,
-/area/derelict/solar_control)
-"jP" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/obj/effect/catwalk_plated/white,
-/turf/template_noop,
-/area/derelict/solar_control)
 "jQ" = (
 /obj/structure/bed/chair/comfy{
 	dir = 4
@@ -2388,379 +1321,22 @@
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/derelict/arrival)
-"jY" = (
+"kl" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/arrival)
-"jZ" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/arrival)
-"ka" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/old_tile/yellow,
-/area/derelict/arrival)
-"kb" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/door/airlock{
-	name = "Central Annex"
-	},
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/arrival)
-"kc" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/light/small{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/derelict/eva/annex)
-"kd" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/blood/tracks{
-	color = "red";
-	desc = "Your instincts say you shouldn't be following these.";
-	dir = 4;
-	icon = 'icons/effects/blood.dmi';
-	icon_state = "tracks"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/derelict/eva/annex)
-"ke" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/techfloor,
-/area/derelict/eva/annex)
-"kf" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/effect/decal/cleanable/blood/splatter,
-/turf/simulated/floor/tiled/techfloor,
-/area/derelict/eva/annex)
-"kg" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/door/airlock{
-	name = "Central Annex"
-	},
-/obj/effect/decal/cleanable/blood/tracks{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/blood/tracks{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"kh" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/effect/decal/cleanable/blood/tracks{
-	color = "red";
-	desc = "Your instincts say you shouldn't be following these.";
-	dir = 4;
-	icon = 'icons/effects/blood.dmi';
-	icon_state = "tracks"
-	},
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"ki" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/effect/decal/cleanable/blood/tracks{
-	color = "red";
-	desc = "Your instincts say you shouldn't be following these.";
-	dir = 4;
-	icon = 'icons/effects/blood.dmi';
-	icon_state = "tracks"
-	},
-/obj/effect/floor_decal/stairs/dark_stairs{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"kj" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/effect/decal/cleanable/blood,
-/obj/effect/decal/cleanable/blood,
-/obj/effect/decal/remains/human{
-	desc = "This guy seemed to have died in terrible way! Half his remains are dust.";
-	name = "Human remains"
-	},
-/obj/effect/decal/cleanable/blood/tracks{
-	color = "red";
-	desc = "Your instincts say you shouldn't be following these.";
-	dir = 4;
-	icon = 'icons/effects/blood.dmi';
-	icon_state = "tracks"
-	},
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"km" = (
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating,
-/area/derelict/eva/annex)
-"kn" = (
-/obj/machinery/door/airlock/external,
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"kq" = (
-/obj/structure/cable{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/obj/machinery/power/apc/alarms_hidden{
-	dir = 1;
-	pixel_y = 24
-	},
-/turf/simulated/floor/reinforced/airless,
-/area/derelict/eva/annex)
-"kr" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/door/airlock/external,
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"ks" = (
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating,
-/area/derelict/eva/annex)
-"kt" = (
-/obj/machinery/door/airlock/external,
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"ku" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"kv" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/tiled/old_tile/gray,
+/turf/simulated/floor/tiled/old_tile,
 /area/derelict/eva/annex)
-"kw" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/stairs/dark_stairs{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/old_tile/gray,
+"kp" = (
+/turf/simulated/floor/tiled/old_tile/beige,
 /area/derelict/eva/annex)
-"kx" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/door/airlock{
-	name = "Central Annex"
-	},
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"ky" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/light/small,
-/turf/simulated/floor/tiled/techfloor,
-/area/derelict/eva/annex)
-"kz" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/door/airlock{
-	name = "Central Annex"
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/crew_quarters)
-"kA" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/carpet,
-/area/derelict/crew_quarters)
-"kB" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/turf/simulated/floor/carpet,
-/area/derelict/crew_quarters)
-"kC" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/carpet,
-/area/derelict/crew_quarters)
-"kD" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/item/storage/bible{
-	layer = 4.1
-	},
-/obj/item/paper/djstation{
-	info = "I am worried about Totstoi. It is the fifth time this week he has been sent to the drunk tank, and no matter how many times I come to him he can only seem to find God at the bottom of a glass of Tunguska.<br><br>All this drinking, I hate to think poorly of the USSP but, in placing no cost on such things are we not just as bad as the TSF? Many have even forgotten their true heritage in favour of Galactic Common. Such indulgence, such forgetfulness, it can not be good for the spirits, let alone the soul.";
-	layer = 2;
-	name = "a confession"
-	},
-/obj/structure/table/fancyblack,
-/turf/simulated/floor/wood,
-/area/derelict/crew_quarters)
-"kE" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood,
-/area/derelict/crew_quarters)
-"kF" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden,
-/turf/simulated/floor/wood,
-/area/derelict/crew_quarters)
 "kG" = (
 /obj/structure/sign/vacuum,
 /turf/simulated/wall/titanium,
 /area/derelict/crew_quarters)
-"kH" = (
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/obj/effect/catwalk_plated/white,
-/turf/template_noop,
-/area/derelict/solar_control)
 "kI" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -2779,87 +1355,28 @@
 /obj/effect/catwalk_plated/white,
 /turf/template_noop,
 /area/derelict/solar_control)
-"kK" = (
-/obj/machinery/power/tracker,
+"kN" = (
 /obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
+	icon_state = "4-8"
 	},
-/turf/simulated/floor/airless{
-	icon_state = "solarpanel"
-	},
-/area/derelict/solar_control)
-"kR" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/old_tile/gray,
+/turf/simulated/floor/tiled/old_tile/yellow,
 /area/derelict/arrival)
-"kU" = (
-/obj/machinery/light/small,
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"kV" = (
-/obj/effect/floor_decal/stairs/dark_stairs{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"kZ" = (
-/obj/structure/closet/radiation,
-/obj/structure/sign/securearea{
-	desc = "A warning sign which reads 'RADIOACTIVE AREA'";
-	icon_state = "radiation";
-	name = "RADIOACTIVE AREA";
-	pixel_x = 32
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"la" = (
+"kP" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
-/obj/effect/catwalk_plated/white,
-/turf/template_noop,
-/area/derelict/solar_control)
-"lb" = (
-/obj/structure/window/reinforced{
-	dir = 1
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
 	},
-/turf/template_noop,
+/turf/simulated/floor/tiled/old_tile,
 /area/derelict/eva/annex)
-"lc" = (
-/turf/simulated/wall/titanium,
-/area/derelict/eva/annex)
-"le" = (
-/obj/structure/sign/securearea{
-	desc = "A warning sign which reads 'RADIOACTIVE AREA'";
-	icon_state = "radiation";
-	name = "RADIOACTIVE AREA";
-	pixel_x = -32
+"kT" = (
+/obj/structure/cable{
+	icon_state = "1-2"
 	},
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"li" = (
-/obj/machinery/light/small,
-/obj/effect/floor_decal/stairs/dark_stairs{
-	dir = 8
+/obj/machinery/door/airlock{
+	name = "Mess Hall"
 	},
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"lj" = (
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/derelict/eva/annex)
 "lk" = (
@@ -2871,114 +1388,12 @@
 	icon_state = "dark"
 	},
 /area/derelict/crew_quarters)
-"ll" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/carpet,
-/area/derelict/bridge)
 "lm" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/fancyblack,
 /obj/item/flame/candle/everburn,
 /turf/simulated/floor/wood,
 /area/derelict/crew_quarters)
-"ln" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 5
-	},
-/turf/simulated/floor/wood,
-/area/derelict/crew_quarters)
-"lo" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
-/obj/machinery/door/airlock/external{
-	frequency = 1502;
-	id_tag = "rus_inner_2"
-	},
-/turf/simulated/floor/plating,
-/area/derelict/crew_quarters)
-"lp" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/light/small{
-	dir = 1
-	},
-/obj/machinery/airlock_sensor{
-	frequency = 1502;
-	id_tag = "rus_sensor_2";
-	pixel_y = 27
-	},
-/obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	frequency = 1502;
-	id_tag = "rus_airlock_2";
-	pixel_y = -25;
-	tag_airpump = "rus_pump_2";
-	tag_chamber_sensor = "rus_sensor_2";
-	tag_exterior_door = "rus_outer_2";
-	tag_interior_door = "rus_inner_2"
-	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 8;
-	frequency = 1502;
-	id_tag = "rus_pump_2"
-	},
-/turf/simulated/floor/plating,
-/area/derelict/crew_quarters)
-"lq" = (
-/obj/machinery/door/airlock/external{
-	frequency = 1502;
-	id_tag = "rus_outer_2"
-	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/plating,
-/area/derelict/crew_quarters)
-"lr" = (
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/machinery/light/small{
-	dir = 1;
-	pixel_x = 16;
-	pixel_y = -5
-	},
-/turf/template_noop,
-/area/derelict/eva/annex)
-"ls" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/obj/effect/catwalk_plated/white,
-/turf/template_noop,
-/area/derelict/solar_control)
 "lt" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -3005,56 +1420,19 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/old_tile/yellow,
 /area/derelict/arrival)
-"lz" = (
-/obj/structure/sign/botany,
-/turf/simulated/wall/titanium,
-/area/derelict/eva/annex)
-"lC" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
+"lF" = (
+/obj/structure/flora/ausbushes/fullgrass{
+	pixel_x = -5;
+	pixel_y = 5
 	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
+/obj/structure/flora/ausbushes/ppflowers{
+	pixel_y = 5
 	},
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/obj/effect/catwalk_plated/white,
-/turf/template_noop,
-/area/derelict/solar_control)
-"lD" = (
-/turf/simulated/floor/reinforced/airless,
-/area/derelict/eva/annex)
-"lE" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/door/airlock{
-	name = "Mess Hall"
-	},
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"lG" = (
-/obj/machinery/light/spot{
+/obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1502;
-	master_tag = "rus_airlock_2";
-	name = "interior access button";
-	pixel_x = 25
-	},
-/turf/simulated/floor/wood,
-/area/derelict/crew_quarters)
+/turf/simulated/floor/grass,
+/area/derelict/arrival)
 "lH" = (
 /obj/machinery/power/solar{
 	id = "russolar"
@@ -3079,64 +1457,8 @@
 /obj/structure/dispenser/oxygen,
 /turf/simulated/floor/tiled/old_tile/yellow,
 /area/derelict/arrival)
-"lN" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/airless,
-/area/derelict/eva/annex)
-"lP" = (
-/obj/machinery/light/small{
-	dir = 1
-	},
+"lU" = (
 /turf/simulated/floor/tiled/old_tile/green,
-/area/derelict/eva/annex)
-"lQ" = (
-/obj/structure/closet/crate/hydroponics,
-/turf/simulated/floor/tiled/old_tile/green,
-/area/derelict/eva/annex)
-"lR" = (
-/obj/structure/table/standard,
-/obj/item/newspaper{
-	desc = "An issue of The Griffon. Was Nanotrasen supplying this station at some point?"
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/floor_decal/corner/grey/diagonal{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/derelict/eva/annex)
-"lS" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/floor_decal/corner/grey/diagonal{
-	dir = 4
-	},
-/obj/structure/bed/chair{
-	dir = 8;
-	icon_state = "chair"
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/derelict/eva/annex)
-"lT" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/effect/floor_decal/corner/grey/diagonal{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/derelict/eva/annex)
-"lV" = (
-/obj/machinery/light/spot{
-	dir = 4
-	},
-/obj/item/trash/tastybread,
-/obj/effect/decal/cleanable/dirt,
-/obj/item/trash/candy,
-/obj/effect/floor_decal/corner/grey/diagonal{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/old_tile,
 /area/derelict/eva/annex)
 "lW" = (
 /obj/structure/closet/coffin,
@@ -3168,17 +1490,6 @@
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/derelict/crew_quarters)
-"ma" = (
-/obj/item/material/shard,
-/turf/template_noop,
-/area/derelict/eva/annex)
-"mc" = (
-/obj/structure/shuttle/engine/heater{
-	dir = 1
-	},
-/obj/structure/shuttle/engine/propulsion,
-/turf/simulated/shuttle/plating,
-/area/derelict/arrival)
 "me" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/drip,
@@ -3187,51 +1498,9 @@
 "mf" = (
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/derelict/arrival)
-"mg" = (
-/obj/machinery/seed_extractor,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"mi" = (
-/turf/simulated/floor/tiled/old_tile,
-/area/derelict/eva/annex)
 "mm" = (
 /turf/simulated/wall/thull,
 /area/derelict/arrival)
-"mn" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/floor_decal/corner/grey/diagonal{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/derelict/eva/annex)
-"mo" = (
-/obj/structure/bed/chair,
-/obj/effect/floor_decal/corner/grey/diagonal{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/derelict/eva/annex)
-"mp" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/floor_decal/corner/grey/diagonal{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/derelict/eva/annex)
-"mq" = (
-/obj/machinery/vending/sovietsoda,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/floor_decal/corner/grey/diagonal{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/derelict/eva/annex)
 "mr" = (
 /obj/structure/closet/coffin,
 /obj/machinery/door/window/eastleft,
@@ -3263,16 +1532,6 @@
 "mx" = (
 /turf/simulated/floor/tiled/old_tile/yellow,
 /area/derelict/arrival)
-"my" = (
-/obj/item/material/shard{
-	icon_state = "medium"
-	},
-/turf/simulated/floor/airless,
-/area/derelict/eva/annex)
-"mC" = (
-/obj/item/shovel,
-/turf/template_noop,
-/area/derelict/eva/annex)
 "mD" = (
 /obj/structure/closet/coffin,
 /obj/machinery/door/window/eastleft,
@@ -3298,54 +1557,17 @@
 /obj/structure/sign/greencross,
 /turf/simulated/wall/titanium,
 /area/derelict/arrival)
-"mJ" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/door/airlock/medical{
-	name = "Medical Wing";
-	welded = 1
-	},
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/arrival)
 "mK" = (
 /obj/structure/sign/directions/medical,
 /turf/simulated/wall/titanium,
 /area/derelict/arrival)
-"mN" = (
+"mL" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/obj/effect/floor_decal/corner/grey/diagonal{
-	dir = 4
+	icon_state = "1-4";
+	tag = "90Curve"
 	},
 /turf/simulated/floor/tiled/old_tile,
-/area/derelict/eva/annex)
-"mO" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/obj/effect/floor_decal/corner/grey/diagonal{
-	dir = 4
-	},
-/obj/structure/bed/chair{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/derelict/eva/annex)
-"mP" = (
-/obj/structure/table/standard,
-/obj/effect/floor_decal/corner/grey/diagonal{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/derelict/eva/annex)
+/area/derelict/arrival)
 "mQ" = (
 /obj/machinery/door/airlock{
 	name = "Eastern Annex"
@@ -3357,14 +1579,19 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/old_tile/blue,
 /area/derelict/arrival)
-"mT" = (
+"mS" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled/old_tile/blue,
-/area/derelict/arrival)
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/machinery/door/airlock/external{
+	frequency = 1502;
+	id_tag = "rus_inner_2"
+	},
+/turf/simulated/floor/plating,
+/area/derelict/crew_quarters)
 "mU" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/old_tile/blue,
@@ -3380,66 +1607,6 @@
 	},
 /turf/template_noop,
 /area/template_noop)
-"mZ" = (
-/obj/effect/floor_decal/corner/grey/diagonal{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/derelict/eva/annex)
-"na" = (
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/machinery/appliance/cooker/oven,
-/turf/simulated/floor/tiled/neutral,
-/area/derelict/eva/annex)
-"nb" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/obj/structure/table/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/neutral,
-/area/derelict/eva/annex)
-"nc" = (
-/obj/structure/table/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/machinery/microwave{
-	pixel_x = -3;
-	pixel_y = 6
-	},
-/turf/simulated/floor/tiled/neutral,
-/area/derelict/eva/annex)
-"nd" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/old_tile/beige,
-/area/derelict/eva/annex)
-"ne" = (
-/obj/machinery/shower{
-	dir = 4
-	},
-/obj/structure/curtain/open/shower,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/old_tile,
-/area/derelict/crew_quarters)
 "nf" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -3467,45 +1634,6 @@
 /obj/structure/bed/chair,
 /turf/simulated/floor/tiled/old_tile/blue,
 /area/derelict/arrival)
-"nn" = (
-/obj/structure/grille/broken,
-/turf/simulated/floor/airless,
-/area/derelict/eva/annex)
-"no" = (
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/tiled/neutral,
-/area/derelict/eva/annex)
-"np" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/turf/simulated/floor/tiled/neutral,
-/area/derelict/eva/annex)
-"nq" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/neutral,
-/area/derelict/eva/annex)
-"nr" = (
-/obj/structure/table/reinforced,
-/obj/machinery/reagentgrinder,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/neutral,
-/area/derelict/eva/annex)
-"ns" = (
-/obj/machinery/shower{
-	dir = 4
-	},
-/obj/structure/curtain/open/shower,
-/obj/structure/window/reinforced,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/old_tile,
-/area/derelict/crew_quarters)
 "nt" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -3534,46 +1662,19 @@
 	},
 /turf/simulated/floor/tiled/old_tile/blue,
 /area/derelict/arrival)
-"nz" = (
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/turf/simulated/wall/titanium,
-/area/derelict/eva/annex)
-"nB" = (
-/turf/simulated/floor/tiled/neutral,
-/area/derelict/eva/annex)
-"nC" = (
-/obj/structure/sink{
-	dir = 4;
-	pixel_x = 12;
-	pixel_y = 2
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/neutral,
-/area/derelict/eva/annex)
 "nD" = (
 /obj/item/soap,
-/turf/simulated/floor/tiled/old_tile,
-/area/derelict/crew_quarters)
-"nE" = (
-/obj/item/beach_ball/holoball,
-/obj/machinery/light/spot{
-	dir = 4
-	},
 /turf/simulated/floor/tiled/old_tile,
 /area/derelict/crew_quarters)
 "nF" = (
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/old_tile/blue,
 /area/derelict/arrival)
-"nH" = (
+"nI" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
+	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled/old_tile,
+/turf/simulated/floor/tiled/old_tile/gray,
 /area/derelict/arrival)
 "nJ" = (
 /obj/effect/decal/remains/human{
@@ -3582,55 +1683,11 @@
 	},
 /turf/simulated/floor/tiled/old_tile,
 /area/derelict/arrival)
-"nO" = (
-/obj/item/clothing/under/pants/track,
-/obj/item/clothing/shoes/black,
-/obj/item/clothing/head/soft/black,
-/obj/structure/closet,
-/turf/simulated/floor/tiled/old_tile/green,
-/area/derelict/eva/annex)
-"nP" = (
-/obj/structure/bed/chair/comfy/brown,
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"nQ" = (
-/obj/structure/table/glass,
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"nR" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
-/obj/structure/table/glass,
-/obj/item/paper_bin{
-	pixel_y = 8
-	},
-/obj/item/pen/red,
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"nS" = (
-/obj/structure/table/standard,
-/obj/item/reagent_containers/food/snacks/beetsoup,
-/obj/effect/floor_decal/corner/grey/diagonal{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/derelict/eva/annex)
-"nT" = (
+"nL" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
+	icon_state = "1-2"
 	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/appliance/cooker/grill,
-/turf/simulated/floor/tiled/neutral,
+/turf/simulated/floor/tiled/old_tile/beige,
 /area/derelict/eva/annex)
 "nV" = (
 /obj/effect/floor_decal/corner/green/full{
@@ -3661,52 +1718,6 @@
 /obj/structure/grille/broken,
 /turf/simulated/floor/airless,
 /area/template_noop)
-"oe" = (
-/mob/living/simple_mob/animal/space/carp,
-/turf/template_noop,
-/area/derelict/eva/annex)
-"of" = (
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"og" = (
-/obj/structure/bed/chair/comfy/brown{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"oh" = (
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/floor_decal/corner/grey/diagonal{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/derelict/eva/annex)
-"oi" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/obj/structure/table/reinforced,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/item/reagent_containers/food/condiment/carton/flour,
-/obj/item/reagent_containers/food/condiment/carton/flour{
-	pixel_y = -6
-	},
-/turf/simulated/floor/tiled/neutral,
-/area/derelict/eva/annex)
-"oj" = (
-/obj/machinery/light/spot,
-/turf/simulated/floor/tiled/neutral,
-/area/derelict/eva/annex)
 "ok" = (
 /obj/effect/floor_decal/corner/green/border{
 	dir = 8
@@ -3719,92 +1730,6 @@
 	},
 /turf/simulated/floor/tiled/old_tile,
 /area/derelict/crew_quarters)
-"on" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/red,
-/area/derelict/arrival)
-"oq" = (
-/obj/item/material/shard{
-	icon_state = "medium"
-	},
-/turf/simulated/floor/tiled/old_tile/green,
-/area/derelict/eva/annex)
-"or" = (
-/turf/simulated/floor/airless,
-/area/derelict/eva/annex)
-"os" = (
-/obj/effect/decal/remains/human{
-	desc = "This guy seemed to have died in terrible way! Half his remains are dust.";
-	name = "Human remains"
-	},
-/turf/simulated/floor/airless,
-/area/derelict/eva/annex)
-"ou" = (
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"ov" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"ow" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/door/airlock{
-	name = "Mess Hall"
-	},
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"ox" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/corner/grey/diagonal{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/derelict/eva/annex)
-"oy" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/obj/structure/bed/chair,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/floor_decal/corner/grey/diagonal{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/derelict/eva/annex)
-"oz" = (
-/obj/structure/table/reinforced,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/neutral,
-/area/derelict/eva/annex)
-"oA" = (
-/obj/structure/table/reinforced,
-/turf/simulated/floor/tiled/neutral,
-/area/derelict/eva/annex)
 "oB" = (
 /obj/item/beach_ball/holoball,
 /obj/effect/floor_decal/corner/green/border{
@@ -3826,6 +1751,15 @@
 	},
 /turf/template_noop,
 /area/derelict/arrival)
+"oE" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/eva/annex)
 "oG" = (
 /turf/simulated/shuttle/floor,
 /area/derelict/arrival)
@@ -3842,91 +1776,21 @@
 /obj/item/stack/rods,
 /turf/template_noop,
 /area/derelict/arrival)
-"oK" = (
-/obj/machinery/light/small,
-/turf/simulated/floor/tiled/old_tile/green,
-/area/derelict/eva/annex)
-"oL" = (
-/turf/simulated/floor/tiled/old_tile/green,
-/area/derelict/eva/annex)
-"oM" = (
-/obj/machinery/door/airlock/glass{
-	name = "Hydroponics";
-	welded = 1
-	},
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"oN" = (
+"oS" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"oO" = (
-/obj/machinery/door/airlock{
-	name = "Mess Hall"
+/obj/effect/decal/cleanable/blood/tracks{
+	color = "red";
+	desc = "Your instincts say you shouldn't be following these.";
+	dir = 4;
+	icon = 'icons/effects/blood.dmi';
+	icon_state = "tracks"
 	},
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"oP" = (
-/obj/structure/table/standard,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/floor_decal/corner/grey/diagonal{
+/obj/effect/floor_decal/stairs/dark_stairs{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/old_tile,
-/area/derelict/eva/annex)
-"oT" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/old_tile/green,
-/area/derelict/eva/annex)
-"oU" = (
-/obj/item/reagent_containers/spray/plantbgone,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/old_tile/green,
-/area/derelict/eva/annex)
-"oV" = (
-/obj/machinery/light/small{
-	dir = 8
-	},
-/obj/effect/floor_decal/stairs/dark_stairs,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"oW" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/effect/floor_decal/stairs/dark_stairs,
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"oX" = (
-/obj/effect/floor_decal/stairs/dark_stairs,
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"oY" = (
-/obj/structure/coatrack,
-/obj/effect/floor_decal/corner/grey/diagonal{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/derelict/eva/annex)
-"oZ" = (
-/obj/item/newspaper{
-	desc = "An issue of The Griffon. Was Nanotrasen supplying this station at some point?"
-	},
-/obj/machinery/newscaster{
-	desc = "A standard Nanotrasen-licensed newsfeed handler for use in commercial space stations. Strange that it's on a Russian station.";
-	layer = 3.3;
-	pixel_x = 27
-	},
-/obj/effect/floor_decal/corner/grey/diagonal{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/old_tile,
 /area/derelict/eva/annex)
 "pa" = (
 /obj/structure/reagent_dispensers/water_cooler,
@@ -3944,26 +1808,6 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/crew_quarters)
-"pd" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/old_tile/beige,
-/area/derelict/eva/annex)
-"pe" = (
-/obj/structure/closet/emcloset,
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
-"pf" = (
-/obj/structure/table/standard,
-/obj/item/storage/box/cups,
-/obj/machinery/light/spot{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/old_tile,
 /area/derelict/crew_quarters)
 "pg" = (
 /obj/structure/closet/walllocker{
@@ -3990,18 +1834,16 @@
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/derelict/crew_quarters)
-"pl" = (
+"pk" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock{
-	name = "Central Annex"
+/obj/machinery/door/airlock/medical{
+	name = "Medical Wing";
+	welded = 1
 	},
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/eva/annex)
+/area/derelict/arrival)
 "pm" = (
 /turf/simulated/wall/titanium,
 /area/derelict/crew_quarters)
@@ -4014,36 +1856,8 @@
 	},
 /turf/template_noop,
 /area/derelict/arrival)
-"pr" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/old_tile/yellow,
-/area/derelict/eva/annex)
-"ps" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/techfloor,
-/area/derelict/eva/annex)
 "pt" = (
 /obj/structure/closet/jcloset,
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/crew_quarters)
-"pu" = (
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/item/mop,
-/obj/machinery/light/small{
-	dir = 1
-	},
-/obj/item/storage/bag/trash,
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/derelict/crew_quarters)
 "pv" = (
@@ -4069,18 +1883,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/old_tile,
 /area/derelict/crew_quarters)
-"pB" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 8
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/derelict/eva/annex)
 "pE" = (
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/old_tile,
@@ -4090,12 +1892,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/old_tile,
 /area/derelict/crew_quarters)
-"pI" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/old_tile/blue,
-/area/derelict/arrival)
 "pK" = (
 /obj/structure/window/reinforced,
 /obj/structure/janitorialcart,
@@ -4110,13 +1906,6 @@
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/derelict/crew_quarters)
 "pM" = (
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/crew_quarters)
-"pN" = (
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/effect/spider/stickyweb/dark,
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/derelict/crew_quarters)
 "pO" = (
@@ -4176,16 +1965,6 @@
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/neutral,
 /area/derelict/crew_quarters)
-"pX" = (
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 1;
-	layer = 2.9
-	},
-/turf/simulated/floor/tiled/neutral,
-/area/derelict/crew_quarters)
 "pZ" = (
 /obj/effect/floor_decal/stairs/dark_stairs,
 /turf/simulated/floor/tiled/old_tile,
@@ -4196,17 +1975,6 @@
 	},
 /turf/simulated/floor/tiled/old_tile,
 /area/derelict/arrival)
-"qb" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/derelict/eva/annex)
 "qc" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -4216,13 +1984,6 @@
 /area/derelict/crew_quarters)
 "qd" = (
 /obj/effect/spider/stickyweb/dark,
-/turf/simulated/floor/tiled/neutral,
-/area/derelict/crew_quarters)
-"qe" = (
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/neutral,
 /area/derelict/crew_quarters)
 "qf" = (
@@ -4257,14 +2018,6 @@
 /obj/structure/closet/secure_closet/freezer/kitchen,
 /turf/simulated/floor/tiled/neutral,
 /area/derelict/crew_quarters)
-"qo" = (
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/kitchenspike,
-/turf/simulated/floor/tiled/neutral,
-/area/derelict/crew_quarters)
 "qp" = (
 /mob/living/simple_mob/humanoid/merc/ranged/space,
 /turf/simulated/floor/tiled/old_tile/green,
@@ -4285,72 +2038,33 @@
 /obj/structure/sign/nosmoking_2,
 /turf/simulated/wall/titanium,
 /area/derelict/arrival)
-"qx" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/door/airlock{
-	name = "Central Annex"
-	},
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/arrival)
-"qz" = (
-/obj/machinery/light/spot{
+"qt" = (
+/obj/structure/bed/chair,
+/obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/newscaster{
-	desc = "A standard Nanotrasen-licensed newsfeed handler for use in commercial space stations. Strange that it's on a Russian station.";
-	layer = 3.3;
-	pixel_x = 27
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/eva/annex)
+"qv" = (
+/obj/structure/cable{
+	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/old_tile/green,
-/area/derelict/arrival)
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/eva/annex)
 "qA" = (
 /turf/simulated/floor/tiled/old_tile,
 /area/derelict/crew_quarters)
-"qB" = (
+"qC" = (
 /obj/structure/cable{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/obj/machinery/power/apc/alarms_hidden{
-	pixel_y = -24
-	},
-/turf/simulated/floor/tiled/old_tile/blue,
-/area/derelict/arrival)
-"qD" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/medical{
-	name = "Medical Wing";
-	welded = 1
+/obj/effect/floor_decal/stairs/dark_stairs{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/arrival)
-"qE" = (
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/derelict/arrival)
+/area/derelict/eva/annex)
 "qG" = (
 /obj/structure/closet/emcloset,
-/turf/simulated/floor/tiled/old_tile/green,
-/area/derelict/arrival)
-"qH" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
 /turf/simulated/floor/tiled/old_tile/green,
 /area/derelict/arrival)
 "qI" = (
@@ -4376,12 +2090,6 @@
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/derelict/arrival)
-"qN" = (
-/obj/machinery/light/spot{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/old_tile/green,
-/area/derelict/arrival)
 "qO" = (
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
@@ -4393,16 +2101,6 @@
 "qP" = (
 /obj/structure/window/reinforced,
 /obj/structure/flora/ausbushes/grassybush,
-/turf/simulated/floor/grass,
-/area/derelict/arrival)
-"qQ" = (
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/flora/ausbushes/fullgrass,
-/obj/structure/flora/ausbushes/leafybush,
-/obj/structure/flora/ausbushes/ppflowers,
 /turf/simulated/floor/grass,
 /area/derelict/arrival)
 "qS" = (
@@ -4422,14 +2120,6 @@
 /obj/structure/flora/ausbushes/pointybush,
 /turf/simulated/floor/grass,
 /area/derelict/arrival)
-"qV" = (
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/flora/ausbushes/ywflowers,
-/turf/simulated/floor/grass,
-/area/derelict/arrival)
 "qW" = (
 /obj/machinery/door/airlock/hatch{
 	locked = 1;
@@ -4444,86 +2134,6 @@
 /area/derelict/crew_quarters)
 "qZ" = (
 /turf/simulated/floor/tiled/old_tile/blue,
-/area/derelict/arrival)
-"ra" = (
-/obj/machinery/light/spot{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/old_tile/green,
-/area/derelict/arrival)
-"rb" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/obj/structure/bed/chair,
-/turf/simulated/floor/tiled/old_tile,
-/area/derelict/arrival)
-"rc" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/table/standard,
-/turf/simulated/floor/tiled/old_tile,
-/area/derelict/arrival)
-"rd" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/table/standard,
-/obj/item/trash/cigbutt,
-/turf/simulated/floor/tiled/old_tile,
-/area/derelict/arrival)
-"re" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/bed/chair,
-/turf/simulated/floor/tiled/old_tile,
-/area/derelict/arrival)
-"rf" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/derelict/arrival)
-"rh" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/old_tile/green,
-/area/derelict/arrival)
-"ri" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/turf/simulated/floor/tiled/old_tile/green,
-/area/derelict/arrival)
-"rj" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/turf/simulated/floor/tiled/old_tile/green,
 /area/derelict/arrival)
 "rl" = (
 /obj/item/newspaper{
@@ -4546,26 +2156,6 @@
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/old_tile,
 /area/derelict/arrival)
-"rr" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/flora/ausbushes/fullgrass{
-	pixel_x = 5;
-	pixel_y = -5
-	},
-/obj/structure/flora/ausbushes/ppflowers,
-/obj/structure/window/reinforced{
-	dir = 1;
-	layer = 2.9
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/turf/simulated/floor/grass,
-/area/derelict/arrival)
 "rs" = (
 /obj/structure/flora/ausbushes/fullgrass{
 	pixel_y = -5
@@ -4577,45 +2167,17 @@
 	},
 /turf/simulated/floor/grass,
 /area/derelict/arrival)
-"rt" = (
-/obj/structure/flora/ausbushes/fullgrass{
-	pixel_x = -5;
-	pixel_y = -5
-	},
-/obj/structure/flora/ausbushes/brflowers,
-/obj/structure/window/reinforced{
-	dir = 1;
-	layer = 2.9
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/turf/simulated/floor/grass,
-/area/derelict/arrival)
 "rv" = (
 /obj/structure/bed/chair/comfy/brown{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/old_tile/green,
 /area/derelict/arrival)
-"ry" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/flora/ausbushes/fullgrass{
-	pixel_x = 5;
-	pixel_y = 5
-	},
-/obj/structure/flora/ausbushes/brflowers{
-	pixel_y = 5
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/turf/simulated/floor/grass,
-/area/derelict/arrival)
+"rw" = (
+/mob/living/simple_mob/animal/space/carp,
+/obj/item/stack/material/steel,
+/turf/template_noop,
+/area/derelict/eva/annex)
 "rz" = (
 /obj/structure/flora/ausbushes/fullgrass{
 	pixel_y = 5
@@ -4625,29 +2187,8 @@
 /obj/structure/closet/statue,
 /turf/simulated/floor/grass,
 /area/derelict/arrival)
-"rA" = (
-/obj/structure/flora/ausbushes/fullgrass{
-	pixel_x = -5;
-	pixel_y = 5
-	},
-/obj/structure/flora/ausbushes/ppflowers{
-	pixel_y = 5
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/turf/simulated/floor/grass,
-/area/derelict/arrival)
 "rB" = (
 /obj/structure/bed/chair,
-/turf/simulated/floor/tiled/old_tile,
-/area/derelict/arrival)
-"rE" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
 /turf/simulated/floor/tiled/old_tile,
 /area/derelict/arrival)
 "rF" = (
@@ -4698,18 +2239,6 @@
 /obj/structure/flora/ausbushes/leafybush,
 /turf/simulated/floor/grass,
 /area/derelict/arrival)
-"rM" = (
-/obj/structure/window/reinforced{
-	dir = 1;
-	layer = 2.9
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/flora/ausbushes/ppflowers,
-/obj/structure/flora/ausbushes/sparsegrass,
-/turf/simulated/floor/grass,
-/area/derelict/arrival)
 "rN" = (
 /obj/machinery/portable_atmospherics/canister/air,
 /obj/machinery/atmospherics/portables_connector{
@@ -4721,53 +2250,6 @@
 /obj/machinery/light/spot,
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
-	},
-/turf/simulated/floor/tiled/old_tile/green,
-/area/derelict/arrival)
-"rP" = (
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 1
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/old_tile/green,
-/area/derelict/arrival)
-"rQ" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
-/obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1501;
-	master_tag = "rus_airlock_1";
-	name = "interior access button";
-	pixel_y = -25
-	},
-/turf/simulated/floor/tiled/old_tile/green,
-/area/derelict/arrival)
-"rR" = (
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 10;
-	initialize_directions = 10
 	},
 /turf/simulated/floor/tiled/old_tile/green,
 /area/derelict/arrival)
@@ -4800,17 +2282,6 @@
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/simulated/floor/grass,
 /area/derelict/arrival)
-"rW" = (
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 1;
-	layer = 2.9
-	},
-/obj/structure/flora/ausbushes/ywflowers,
-/turf/simulated/floor/grass,
-/area/derelict/arrival)
 "rX" = (
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/old_tile/green,
@@ -4822,103 +2293,6 @@
 "rZ" = (
 /obj/structure/sign/vacuum,
 /turf/simulated/wall/titanium,
-/area/derelict/arrival)
-"sa" = (
-/obj/machinery/door/airlock/external{
-	frequency = 1501;
-	id_tag = "rus_inner_1"
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden,
-/turf/simulated/floor/plating,
-/area/derelict/arrival)
-"sb" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden,
-/obj/machinery/door/airlock/external{
-	frequency = 1501;
-	id_tag = "rus_inner_1"
-	},
-/turf/simulated/floor/plating,
-/area/derelict/arrival)
-"sc" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/light/small{
-	dir = 4
-	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 1;
-	frequency = 1501;
-	id_tag = "rus_pump_1"
-	},
-/obj/machinery/airlock_sensor{
-	frequency = 1501;
-	id_tag = "rus_sensor_1";
-	pixel_x = 25;
-	pixel_y = -5
-	},
-/obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	frequency = 1501;
-	id_tag = "rus_airlock_1";
-	pixel_x = -25;
-	tag_airpump = "rus_pump_1";
-	tag_chamber_sensor = "rus_sensor_1";
-	tag_exterior_door = "rus_outer_1";
-	tag_interior_door = "rus_inner_1"
-	},
-/turf/simulated/floor/plating,
-/area/derelict/arrival)
-"sd" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/light/small{
-	dir = 8
-	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 1;
-	frequency = 1501;
-	id_tag = "rus_pump_1"
-	},
-/turf/simulated/floor/plating,
-/area/derelict/arrival)
-"se" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/door/airlock/external{
-	frequency = 1501;
-	id_tag = "rus_outer_1"
-	},
-/turf/simulated/floor/plating,
-/area/derelict/arrival)
-"sf" = (
-/obj/machinery/door/airlock/external{
-	frequency = 1501;
-	id_tag = "rus_outer_1"
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/plating,
 /area/derelict/arrival)
 "sg" = (
 /obj/item/stack/cable_coil{
@@ -4940,72 +2314,6 @@
 /obj/effect/catwalk_plated/white,
 /turf/template_noop,
 /area/derelict/arrival)
-"si" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/obj/effect/catwalk_plated/white,
-/turf/template_noop,
-/area/derelict/solar_control)
-"sj" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/obj/effect/catwalk_plated/white,
-/turf/template_noop,
-/area/derelict/solar_control)
-"sk" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/obj/effect/catwalk_plated/white,
-/turf/template_noop,
-/area/derelict/solar_control)
-"sl" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/obj/effect/catwalk_plated/white,
-/turf/template_noop,
-/area/derelict/solar_control)
 "sm" = (
 /obj/structure/bed/chair/wood{
 	dir = 4
@@ -5039,25 +2347,6 @@
 /obj/structure/lattice,
 /turf/template_noop,
 /area/derelict/solar_control)
-"ss" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/obj/effect/catwalk_plated/white,
-/turf/template_noop,
-/area/derelict/solar_control)
 "st" = (
 /obj/structure/cable,
 /obj/machinery/power/tracker,
@@ -5066,156 +2355,390 @@
 	icon_state = "solarpanel"
 	},
 /area/derelict/solar_control)
-"su" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/obj/effect/catwalk_plated/white,
-/turf/template_noop,
-/area/derelict/solar_control)
+"sA" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/old_tile/green,
+/area/derelict/eva/annex)
 "sC" = (
 /obj/effect/spider/stickyweb/dark,
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/derelict/crew_quarters)
+"sF" = (
+/obj/machinery/door/window/eastleft,
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/simulated/floor/tiled/old_tile/beige,
+/area/derelict/eva/annex)
+"sL" = (
+/obj/machinery/power/solar{
+	id = "russolar"
+	},
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1
+	},
+/turf/simulated/floor/airless{
+	icon_state = "solarpanel"
+	},
+/area/derelict/solar_control)
 "sN" = (
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/derelict/crew_quarters)
+"sR" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1
+	},
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 1;
+	pixel_y = 24
+	},
+/turf/simulated/floor/wood,
+/area/derelict/crew_quarters)
+"sV" = (
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 1
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/old_tile/green,
+/area/derelict/arrival)
+"sX" = (
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/machinery/power/apc/alarms_hidden{
+	pixel_y = -24
+	},
+/turf/simulated/floor/tiled/old_tile/blue,
+/area/derelict/arrival)
+"ti" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock{
+	name = "Central Annex"
+	},
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/arrival)
+"tm" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/asteroid_steel{
+	icon_state = "dark"
+	},
+/area/derelict/arrival)
+"tn" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/arrival)
+"tE" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock{
+	name = "Central Annex"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/crew_quarters)
+"tV" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/old_tile/green,
+/area/derelict/arrival)
+"ub" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock{
+	name = "Central Annex"
+	},
+/obj/effect/decal/cleanable/blood/tracks{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/blood/tracks{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"ue" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock/science{
+	name = "Science Wing"
+	},
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
 "uf" = (
 /obj/structure/closet/crate/focalpoint,
 /turf/simulated/floor/tiled/old_tile/yellow,
 /area/derelict/arrival)
-"uz" = (
-/mob/living/simple_mob/animal/space/carp/large,
-/turf/template_noop,
+"uh" = (
+/obj/structure/closet,
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/derelict/eva/annex)
+"ui" = (
+/obj/structure/closet/crate/hydroponics,
+/turf/simulated/floor/tiled/old_tile/green,
+/area/derelict/eva/annex)
+"ur" = (
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/structure/bed/chair,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/eva/annex)
+"uu" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/techfloor,
+/area/derelict/eva/annex)
+"uC" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/external,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"uH" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/old_tile/beige,
 /area/derelict/eva/annex)
 "uL" = (
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/neutral,
 /area/derelict/crew_quarters)
+"uR" = (
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/appliance/cooker/grill,
+/turf/simulated/floor/tiled/neutral,
+/area/derelict/eva/annex)
+"uU" = (
+/obj/structure/closet/emcloset,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"uW" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/mob/living/simple_mob/humanoid/merc/ranged/space/shotgun,
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/eva/annex)
+"uZ" = (
+/obj/structure/grille{
+	density = 0;
+	icon_state = "brokengrille"
+	},
+/obj/item/material/shard{
+	icon_state = "small"
+	},
+/turf/simulated/floor,
+/area/derelict/eva/annex)
+"vf" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/effect/catwalk_plated/white,
+/turf/template_noop,
+/area/derelict/solar_control)
+"vh" = (
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"vj" = (
+/obj/item/stack/material/steel,
+/turf/template_noop,
+/area/derelict/eva/annex)
+"vl" = (
+/obj/machinery/shower{
+	dir = 4
+	},
+/obj/structure/curtain/open/shower,
+/obj/structure/window/reinforced,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/crew_quarters)
+"vz" = (
+/obj/structure/reagent_dispensers/water_cooler,
+/turf/simulated/floor/tiled/old_tile/beige,
+/area/derelict/eva/annex)
+"vB" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/carpet,
+/area/derelict/crew_quarters)
+"vC" = (
+/obj/machinery/vending/sovietsoda,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/eva/annex)
+"vF" = (
+/obj/machinery/shower{
+	dir = 8
+	},
+/obj/structure/curtain/open/shower,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/remains/human{
+	desc = "This guy seemed to have died in terrible way! Half his remains are dust.";
+	name = "Human remains"
+	},
+/obj/item/reagent_containers/food/snacks/meat/human,
+/turf/simulated/floor/tiled/neutral,
+/area/derelict/crew_quarters)
+"vI" = (
+/obj/machinery/light/spot{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/newscaster{
+	desc = "A standard Nanotrasen-licensed newsfeed handler for use in commercial space stations. Strange that it's on a Russian station.";
+	layer = 3.3;
+	pixel_x = 27
+	},
+/turf/simulated/floor/tiled/old_tile/green,
+/area/derelict/arrival)
+"vK" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/flora/ausbushes/fullgrass{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/structure/flora/ausbushes/brflowers{
+	pixel_y = 5
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/grass,
+/area/derelict/arrival)
 "vN" = (
 /obj/item/reagent_containers/food/snacks/meat/human,
 /turf/simulated/floor/tiled/old_tile,
 /area/derelict/crew_quarters)
+"vT" = (
+/obj/structure/table/standard,
+/obj/item/disk/data/demo{
+	pixel_x = -14;
+	pixel_y = -1
+	},
+/obj/item/paper/djstation{
+	info = "We have finally hit upon it, no more shall Katerina look past me in favor of other company! Experiment 432-A shows an incredible rate of cellular regeneration, and I posit that we have finally breaken down the great boundary between life and death--true biological immortality!<br><br>Of course, the aggressive behaviour is an undue side-effect, but it is only cat after all. I am certain a few sedative-laced cat treats will suffice to prep for autopsy.";
+	name = "Experiment 432-A"
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/eva/annex)
 "vU" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spider/stickyweb/dark,
 /turf/simulated/floor/tiled/old_tile,
 /area/derelict/crew_quarters)
+"vY" = (
+/obj/machinery/light/spot{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
+/area/derelict/crew_quarters)
+"wd" = (
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/derelict/crew_quarters)
+"we" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/stairs/dark_stairs,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"wf" = (
+/mob/living/simple_mob/animal/space/carp,
+/turf/template_noop,
+/area/derelict/eva/annex)
 "wn" = (
 /mob/living/simple_mob/humanoid/merc/ranged/space,
 /turf/simulated/floor/tiled/red,
 /area/derelict/arrival)
-"xk" = (
+"wo" = (
+/obj/structure/table/standard,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"wx" = (
+/obj/structure/sign/securearea,
+/turf/simulated/wall/titanium,
+/area/derelict/eva/annex)
+"wy" = (
+/obj/structure/bed/chair/comfy/brown{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"wz" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/crew_quarters)
+"wB" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
+	icon_state = "1-2"
+	},
+/obj/machinery/light/spot{
+	dir = 4;
+	tag = "icon-tube1 (EAST)"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/derelict/eva/annex)
-"xS" = (
-/mob/living/simple_mob/animal/space/carp/large,
-/turf/template_noop,
-/area/template_noop)
-"ya" = (
-/obj/structure/closet/crate/heph,
-/turf/simulated/floor/tiled/old_tile/yellow,
-/area/derelict/arrival)
-"ye" = (
-/obj/structure/table/standard,
-/obj/item/circuitboard/teleporter,
-/turf/simulated/floor/carpet,
-/area/derelict/bridge)
-"yE" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/floor_decal/corner/grey/diagonal{
-	dir = 4
-	},
-/obj/structure/bed/chair{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/derelict/eva/annex)
-"zm" = (
-/obj/item/stack/material/steel,
-/turf/template_noop,
-/area/derelict/arrival)
-"At" = (
-/mob/living/simple_mob/animal/space/carp,
-/obj/machinery/power/smes,
-/turf/template_noop,
-/area/template_noop)
-"AR" = (
-/mob/living/simple_mob/animal/space/carp/large,
-/turf/simulated/floor/tiled/old_tile,
-/area/derelict/eva/annex)
-"Bc" = (
-/obj/effect/floor_decal/stairs/dark_stairs,
-/turf/simulated/floor/tiled/neutral,
-/area/derelict/crew_quarters)
-"By" = (
-/mob/living/simple_mob/animal/space/carp,
-/obj/item/stack/material/steel,
-/turf/template_noop,
-/area/derelict/eva/annex)
-"BI" = (
-/mob/living/simple_mob/humanoid/merc/ranged/laser,
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/arrival)
-"BZ" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/crate/einstein,
-/turf/simulated/floor/tiled/old_tile/yellow,
-/area/derelict/arrival)
-"Cw" = (
-/obj/effect/decal/cleanable/blood/drip,
-/turf/simulated/floor/tiled/old_tile/yellow,
-/area/derelict/arrival)
-"CA" = (
-/obj/effect/floor_decal/corner/green/bordercee,
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/crew_quarters)
-"CH" = (
-/mob/living/simple_mob/animal/space/carp/large,
-/turf/simulated/floor/tiled/old_tile,
-/area/derelict/arrival)
-"Do" = (
-/mob/living/simple_mob/animal/space/carp,
-/turf/simulated/floor/tiled/old_tile/green,
-/area/derelict/eva/annex)
-"Gt" = (
-/obj/item/stack/material/steel,
-/turf/template_noop,
-/area/derelict/eva/annex)
-"GG" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/table/reinforced,
-/obj/item/storage/toolbox/syndicate/powertools,
-/obj/item/storage/belt/utility/holding,
-/turf/simulated/floor/tiled/old_tile/yellow,
-/area/derelict/eva/annex)
-"JE" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/crate/cooper,
-/turf/simulated/floor/tiled/old_tile/yellow,
-/area/derelict/arrival)
-"Kn" = (
+"wC" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/neutral,
+/area/derelict/eva/annex)
+"wM" = (
+/obj/structure/cable{
 	icon_state = "4-8"
 	},
 /obj/machinery/light/small{
@@ -5230,40 +2753,1301 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/derelict/eva/annex)
+"wP" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/simulated/floor/tiled/techfloor,
+/area/derelict/eva/annex)
+"xe" = (
+/obj/machinery/power/solar{
+	id = "russolar"
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/airless{
+	icon_state = "solarpanel"
+	},
+/area/derelict/solar_control)
+"xt" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/blood/tracks{
+	color = "red";
+	desc = "Your instincts say you shouldn't be following these.";
+	dir = 4;
+	icon = 'icons/effects/blood.dmi';
+	icon_state = "tracks"
+	},
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"xF" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/effect/catwalk_plated/white,
+/turf/template_noop,
+/area/derelict/solar_control)
+"xK" = (
+/obj/structure/table/standard,
+/obj/item/storage/box/cups,
+/obj/machinery/light/spot{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/crew_quarters)
+"xN" = (
+/obj/structure/table/reinforced,
+/obj/machinery/reagentgrinder,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/neutral,
+/area/derelict/eva/annex)
+"xS" = (
+/mob/living/simple_mob/animal/space/carp/large,
+/turf/template_noop,
+/area/template_noop)
+"xT" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/eva/annex)
+"xV" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock/command{
+	name = "Command Wing"
+	},
+/turf/simulated/floor/tiled/asteroid_steel{
+	icon_state = "dark"
+	},
+/area/derelict/bridge)
+"xZ" = (
+/obj/structure/table/standard,
+/obj/item/gun/energy/medigun,
+/turf/simulated/floor/tiled/old_tile/beige,
+/area/derelict/eva/annex)
+"ya" = (
+/obj/structure/closet/crate/heph,
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/derelict/arrival)
+"ye" = (
+/obj/structure/table/standard,
+/obj/item/circuitboard/teleporter,
+/turf/simulated/floor/carpet,
+/area/derelict/bridge)
+"yp" = (
+/obj/machinery/seed_extractor,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"yu" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock/command{
+	name = "Command Wing"
+	},
+/turf/simulated/floor/tiled/asteroid_steel{
+	icon_state = "dark"
+	},
+/area/derelict/eva/annex)
+"yA" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/mob/living/simple_mob/humanoid/merc/ranged/space,
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/arrival)
+"yD" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "1-4";
+	tag = "90Curve"
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/effect/catwalk_plated/white,
+/turf/template_noop,
+/area/derelict/solar_control)
+"yH" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/effect/catwalk_plated/white,
+/turf/template_noop,
+/area/derelict/solar_control)
+"yV" = (
+/obj/machinery/light/spot{
+	dir = 4
+	},
+/obj/item/trash/tastybread,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/trash/candy,
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/eva/annex)
+"zg" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/tiled/neutral,
+/area/derelict/crew_quarters)
+"zm" = (
+/obj/item/stack/material/steel,
+/turf/template_noop,
+/area/derelict/arrival)
+"zt" = (
+/obj/structure/window/reinforced{
+	dir = 1;
+	layer = 2.9
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/flora/ausbushes/ppflowers,
+/obj/structure/flora/ausbushes/sparsegrass,
+/turf/simulated/floor/grass,
+/area/derelict/arrival)
+"zB" = (
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 12;
+	pixel_y = 2
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/neutral,
+/area/derelict/eva/annex)
+"zM" = (
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/kitchenspike,
+/turf/simulated/floor/tiled/neutral,
+/area/derelict/crew_quarters)
+"zS" = (
+/obj/machinery/light/small,
+/obj/effect/floor_decal/stairs/dark_stairs{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"zV" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/old_tile/blue,
+/area/derelict/arrival)
+"Ar" = (
+/obj/structure/table/standard,
+/obj/item/paper_bin,
+/obj/item/pen,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/old_tile/beige,
+/area/derelict/eva/annex)
+"At" = (
+/mob/living/simple_mob/animal/space/carp,
+/obj/machinery/power/smes,
+/turf/template_noop,
+/area/template_noop)
+"Au" = (
+/obj/structure/shuttle/window,
+/obj/structure/grille/rustic,
+/turf/simulated/floor/plating,
+/area/derelict/eva/annex)
+"Av" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"Ax" = (
+/obj/effect/decal/remains/human{
+	desc = "This guy seemed to have died in terrible way! Half his remains are dust.";
+	name = "Human remains"
+	},
+/turf/simulated/floor/airless,
+/area/derelict/eva/annex)
+"Az" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/old_tile/purple,
+/area/derelict/bridge)
+"AB" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/old_tile/purple,
+/area/derelict/bridge)
+"AC" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/command{
+	name = "Command Wing"
+	},
+/turf/simulated/floor/tiled/asteroid_steel{
+	icon_state = "dark"
+	},
+/area/derelict/bridge)
+"AO" = (
+/turf/template_noop,
+/area/derelict/eva/annex)
+"AU" = (
+/obj/item/material/shard,
+/obj/structure/shuttle/window,
+/obj/structure/grille/rustic,
+/turf/simulated/floor,
+/area/derelict/eva/annex)
+"AV" = (
+/obj/machinery/light/spot{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/old_tile/green,
+/area/derelict/arrival)
+"AX" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 1;
+	layer = 2.9
+	},
+/turf/simulated/floor/tiled/neutral,
+/area/derelict/crew_quarters)
+"Bc" = (
+/obj/effect/floor_decal/stairs/dark_stairs,
+/turf/simulated/floor/tiled/neutral,
+/area/derelict/crew_quarters)
+"Bf" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/obj/effect/catwalk_plated/white,
+/turf/template_noop,
+/area/derelict/solar_control)
+"Bg" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/arrival)
+"Bj" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 1;
+	pixel_y = 24
+	},
+/turf/simulated/floor/tiled/red,
+/area/derelict/arrival)
+"Bm" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"BI" = (
+/mob/living/simple_mob/humanoid/merc/ranged/laser,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/arrival)
+"BK" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/effect/catwalk_plated/white,
+/turf/template_noop,
+/area/derelict/solar_control)
+"BY" = (
+/obj/item/clothing/head/helmet/space/syndicate/black/engie{
+	desc = "This spacesuit is emblazoned with the emblem of the USSP. Glory to Space Russia!";
+	name = "Cosmonaut Engineering Helmet"
+	},
+/obj/item/clothing/suit/space/syndicate/black/engie{
+	desc = "This spacesuit is emblazoned with the emblem of the USSP. Glory to Space Russia!";
+	name = "Cosmonaut Engineering Suit"
+	},
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/derelict/eva/annex)
+"BZ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/crate/einstein,
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/derelict/arrival)
+"Cc" = (
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/derelict/eva/annex)
+"Cd" = (
+/obj/structure/table/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/microwave{
+	pixel_x = -3;
+	pixel_y = 6
+	},
+/turf/simulated/floor/tiled/neutral,
+/area/derelict/eva/annex)
+"Ce" = (
+/obj/effect/decal/remains/human{
+	desc = "This guy seemed to have died in terrible way! Half his remains are dust.";
+	name = "Human remains"
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/derelict/eva/annex)
+"Cm" = (
+/obj/structure/window/reinforced,
+/obj/machinery/light/small{
+	pixel_x = 16;
+	pixel_y = 5
+	},
+/turf/template_noop,
+/area/derelict/eva/annex)
+"Cp" = (
+/obj/machinery/door/airlock/engineering{
+	name = "Engineering Wing"
+	},
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"Ct" = (
+/obj/effect/floor_decal/stairs/dark_stairs{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"Cw" = (
+/obj/effect/decal/cleanable/blood/drip,
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/derelict/arrival)
+"CA" = (
+/obj/effect/floor_decal/corner/green/bordercee,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/crew_quarters)
+"CB" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
+/area/derelict/crew_quarters)
+"CH" = (
+/mob/living/simple_mob/animal/space/carp/large,
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/arrival)
+"CQ" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/derelict/arrival)
+"CV" = (
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/effect/catwalk_plated/white,
+/turf/template_noop,
+/area/derelict/solar_control)
+"CX" = (
+/obj/structure/table/standard,
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/eva/annex)
+"De" = (
+/obj/structure/closet,
+/turf/simulated/floor/tiled/old_tile/beige,
+/area/derelict/eva/annex)
+"Dq" = (
+/obj/machinery/light/spot{
+	dir = 8
+	},
+/obj/structure/closet/l3closet/scientist,
+/obj/item/clothing/glasses/science,
+/turf/simulated/floor/tiled/old_tile/beige,
+/area/derelict/eva/annex)
+"DD" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/structure/bed/chair{
+	dir = 8;
+	icon_state = "chair"
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/eva/annex)
+"DJ" = (
+/obj/structure/table/glass,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"DO" = (
+/obj/structure/sign/securearea{
+	desc = "A warning sign which reads 'RADIOACTIVE AREA'";
+	icon_state = "radiation";
+	name = "RADIOACTIVE AREA";
+	pixel_x = 32
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"DR" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"DS" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/table/standard,
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/arrival)
+"DZ" = (
+/obj/structure/window/reinforced,
+/turf/simulated/floor/tiled/old_tile/beige,
+/area/derelict/eva/annex)
+"Ea" = (
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/obj/structure/bed/chair,
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/arrival)
+"Ei" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/light/small{
+	dir = 4;
+	tag = "icon-bulb1 (EAST)"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/derelict/eva/annex)
+"Eu" = (
+/obj/item/clothing/under/pants/track,
+/obj/item/clothing/shoes/black,
+/obj/item/clothing/head/soft/black,
+/obj/structure/closet,
+/turf/simulated/floor/tiled/old_tile/green,
+/area/derelict/eva/annex)
+"Ev" = (
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/eva/annex)
+"Ez" = (
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/eva/annex)
+"EF" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock{
+	name = "Central Annex"
+	},
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"ET" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/machinery/access_button{
+	command = "cycle_interior";
+	frequency = 1501;
+	master_tag = "rus_airlock_1";
+	name = "interior access button";
+	pixel_y = -25
+	},
+/turf/simulated/floor/tiled/old_tile/green,
+/area/derelict/arrival)
+"EV" = (
+/obj/machinery/power/solar_control{
+	id = "russolar";
+	track = 2
+	},
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1
+	},
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/derelict/eva/annex)
+"Fc" = (
+/obj/machinery/light/spot{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/derelict/arrival)
+"Ff" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/derelict/eva/annex)
+"Fl" = (
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/derelict/eva/annex)
+"Fo" = (
+/obj/structure/table/reinforced,
+/obj/item/stack/material/glass,
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/derelict/eva/annex)
+"Fq" = (
+/obj/structure/bed/chair/comfy/brown,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"Fx" = (
+/obj/structure/closet/firecloset,
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/derelict/eva/annex)
+"Fz" = (
+/obj/item/paper/crumpled{
+	info = "<i>This note has been effaced with all manner of crude drawings that are too vile to properly give a description to.</i><br><small>Totstoi,<br><br>I know it's you who's been feeding my cats alcohol, I do not care what your reasons are but you are getting in the way of important research. This is the fifth cat that I've had to replace this month because of your crude sense of humour, and I will be speaking with Chief Borachov if you don't stop.<br><br>- <i>Nikolai Kartov</i>, Deputy Researcher";
+	name = "Desist at once!"
+	},
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/derelict/eva/annex)
+"FA" = (
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/eva/annex)
+"FM" = (
+/obj/structure/table/standard,
+/obj/item/reagent_containers/food/snacks/beetsoup,
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/eva/annex)
+"FZ" = (
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/eva/annex)
+"Gn" = (
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/appliance/cooker/oven,
+/turf/simulated/floor/tiled/neutral,
+/area/derelict/eva/annex)
+"Gr" = (
+/obj/machinery/shower{
+	dir = 8
+	},
+/obj/structure/curtain/open/shower,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/remains/human{
+	desc = "This guy seemed to have died in terrible way! Half his remains are dust.";
+	name = "Human remains"
+	},
+/obj/effect/decal/cleanable/blood,
+/obj/item/reagent_containers/food/snacks/meat/human,
+/turf/simulated/floor/tiled/neutral,
+/area/derelict/crew_quarters)
+"Gz" = (
+/obj/structure/bed/chair/comfy/red{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/carpet,
+/area/derelict/bridge)
+"GE" = (
+/obj/structure/table/reinforced,
+/turf/simulated/floor/tiled/neutral,
+/area/derelict/eva/annex)
+"GK" = (
+/obj/machinery/door/airlock/external,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"GN" = (
+/obj/item/paper/crumpled{
+	info = "<i>This note has been crossed out so many times it's hard to make out its contents.</i><br><small>Katerina,<br><br><s>Your eyes are like diamonds,<br>Forged in the very fire of Cygni-A.<br>My heart yearns for you,<br>For your soft beauty<br>Fuckfucknothat'sbad.<br><br>Your voice is like liquid gold,<br>Smothering me in its delicate contours.<br>Never before had I known,<br>The touch,<br>The touch!<br>The touch of an angel's voice</s><br><br>note to self: stick to science, poetry is not my forte.</small>";
+	name = "love poem"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/old_tile/beige,
+/area/derelict/eva/annex)
+"GO" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/effect/catwalk_plated/white,
+/turf/template_noop,
+/area/derelict/solar_control)
+"GP" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock{
+	name = "Eastern Annex"
+	},
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/crew_quarters)
+"GW" = (
+/obj/machinery/door/airlock{
+	name = "Mess Hall"
+	},
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"He" = (
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 5
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/eva/annex)
+"Hg" = (
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"Hj" = (
+/obj/structure/bed/chair/sofa/left,
+/obj/machinery/light/spot{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/derelict/crew_quarters)
+"Hp" = (
+/obj/machinery/light/spot{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/old_tile/green,
+/area/derelict/arrival)
+"Hq" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock{
+	name = "Mess Hall"
+	},
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"Ht" = (
+/obj/machinery/light/spot{
+	dir = 4
+	},
+/obj/machinery/access_button{
+	command = "cycle_interior";
+	frequency = 1502;
+	master_tag = "rus_airlock_2";
+	name = "interior access button";
+	pixel_x = 25
+	},
+/turf/simulated/floor/wood,
+/area/derelict/crew_quarters)
+"Hv" = (
+/obj/structure/sign/nosmoking_1,
+/turf/simulated/wall/titanium,
+/area/derelict/eva/annex)
+"Hx" = (
+/obj/machinery/light/spot{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/old_tile/purple,
+/area/derelict/bridge)
+"HD" = (
+/obj/item/material/shard{
+	icon_state = "medium"
+	},
+/turf/template_noop,
+/area/derelict/eva/annex)
+"HG" = (
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/floor/wood,
+/area/derelict/crew_quarters)
+"HT" = (
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/eva/annex)
+"HV" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/red,
+/area/derelict/arrival)
+"HX" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/old_tile/green,
+/area/derelict/arrival)
+"If" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/eva/annex)
+"IA" = (
+/obj/structure/bed/chair/wood{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"IJ" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced,
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/simulated/floor/tiled/old_tile/beige,
+/area/derelict/eva/annex)
+"IM" = (
+/obj/structure/table/reinforced,
+/obj/machinery/light/spot{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/red,
+/area/derelict/arrival)
+"IT" = (
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/derelict/eva/annex)
+"IV" = (
+/obj/machinery/light/spot{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/red,
+/area/derelict/arrival)
+"IW" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/derelict/eva/annex)
+"IZ" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/structure/table/glass,
+/obj/item/paper_bin{
+	pixel_y = 8
+	},
+/obj/item/pen/red,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"Jn" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/bed/chair/wood{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/asteroid_steel{
+	icon_state = "dark"
+	},
+/area/derelict/crew_quarters)
+"JC" = (
+/obj/item/material/shard,
+/obj/item/stack/material/steel,
+/turf/template_noop,
+/area/derelict/eva/annex)
+"JD" = (
+/obj/structure/table/reinforced,
+/obj/item/reagent_containers/glass/beaker{
+	pixel_x = 7;
+	pixel_y = 3
+	},
+/obj/item/reagent_containers/dropper{
+	pixel_y = 8
+	},
+/turf/simulated/floor/tiled/old_tile/beige,
+/area/derelict/eva/annex)
+"JE" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/crate/cooper,
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/derelict/arrival)
+"JI" = (
+/obj/effect/decal/remains/human{
+	desc = "This guy seemed to have died in terrible way! Half his remains are dust.";
+	name = "gnawed bones"
+	},
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/simulated/floor/tiled/old_tile/beige,
+/area/derelict/eva/annex)
+"JM" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/old_tile/blue,
+/area/derelict/arrival)
+"JN" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/arrival)
+"JO" = (
+/obj/machinery/door/airlock/external{
+	frequency = 1502;
+	id_tag = "rus_outer_2"
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
+/area/derelict/crew_quarters)
+"JQ" = (
+/obj/machinery/door/airlock/external{
+	frequency = 1502;
+	id_tag = "rus_inner_2"
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/derelict/crew_quarters)
+"JS" = (
+/obj/structure/reagent_dispensers/fueltank,
+/obj/effect/decal/cleanable/blood/oil,
+/turf/simulated/floor/tiled/old_tile/beige,
+/area/derelict/eva/annex)
+"JV" = (
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/old_tile/green,
+/area/derelict/arrival)
+"JZ" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/item/mop,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/item/storage/bag/trash,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/crew_quarters)
+"Ki" = (
+/obj/machinery/recharger,
+/obj/structure/table/reinforced,
+/obj/machinery/light/spot{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/red,
+/area/derelict/arrival)
+"Ko" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/carpet,
+/area/derelict/bridge)
+"Kq" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/arrival)
+"Ku" = (
+/obj/structure/bed/chair/wood{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"Kw" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/carpet,
+/area/derelict/bridge)
+"Ky" = (
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/asteroid_steel{
+	icon_state = "dark"
+	},
+/area/derelict/arrival)
+"KF" = (
+/obj/machinery/vending/assist,
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/derelict/eva/annex)
 "KG" = (
 /obj/effect/spider/stickyweb,
 /mob/living/simple_mob/animal/giant_spider/ion,
 /turf/simulated/floor/tiled/old_tile,
 /area/derelict/crew_quarters)
+"KO" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/light/small,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 8;
+	frequency = 1502;
+	id_tag = "rus_pump_2"
+	},
+/turf/simulated/floor/plating,
+/area/derelict/crew_quarters)
+"KU" = (
+/obj/machinery/computer/atmos_alert,
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/derelict/eva/annex)
+"KY" = (
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/effect/catwalk_plated/white,
+/turf/template_noop,
+/area/derelict/solar_control)
+"KZ" = (
+/obj/structure/table/standard,
+/obj/item/storage/box/syringes,
+/turf/simulated/floor/tiled/old_tile/beige,
+/area/derelict/eva/annex)
+"Lc" = (
+/obj/structure/closet,
+/obj/machinery/light/spot{
+	dir = 4
+	},
+/obj/item/clothing/head/ushanka,
+/obj/item/clothing/head/ushanka,
+/obj/item/clothing/head/ushanka,
+/obj/item/clothing/under/soviet,
+/obj/item/clothing/under/soviet,
+/obj/item/clothing/under/soviet,
+/obj/item/clothing/under/soviet,
+/obj/item/clothing/head/ushanka,
+/obj/item/clothing/head/ushanka,
+/obj/item/clothing/under/soviet,
+/turf/simulated/floor/tiled/old_tile/blue,
+/area/derelict/crew_quarters)
+"Ld" = (
+/obj/effect/floor_decal/stairs/dark_stairs{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"Le" = (
+/obj/structure/table/reinforced,
+/obj/item/clipboard,
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/eva/annex)
+"Lg" = (
+/obj/machinery/photocopier,
+/obj/machinery/light/spot{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/old_tile/purple,
+/area/derelict/bridge)
+"Lm" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/item/storage/bible{
+	layer = 4.1
+	},
+/obj/item/paper/djstation{
+	info = "I am worried about Totstoi. It is the fifth time this week he has been sent to the drunk tank, and no matter how many times I come to him he can only seem to find God at the bottom of a glass of Tunguska.<br><br>All this drinking, I hate to think poorly of the USSP but, in placing no cost on such things are we not just as bad as the TSF? Many have even forgotten their true heritage in favour of Galactic Common. Such indulgence, such forgetfulness, it can not be good for the spirits, let alone the soul.";
+	layer = 2;
+	name = "a confession"
+	},
+/obj/structure/table/fancyblack,
+/turf/simulated/floor/wood,
+/area/derelict/crew_quarters)
+"Ln" = (
+/obj/structure/table/reinforced,
+/obj/item/inducer/syndicate,
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/derelict/eva/annex)
 "Lo" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/corner/green/border,
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/derelict/crew_quarters)
+"Lw" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/machinery/door/airlock/external{
+	frequency = 1501;
+	id_tag = "rus_inner_1"
+	},
+/turf/simulated/floor/plating,
+/area/derelict/arrival)
+"LJ" = (
+/obj/machinery/power/tracker,
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/airless{
+	icon_state = "solarpanel"
+	},
+/area/derelict/solar_control)
+"LM" = (
+/obj/structure/table/standard,
+/obj/item/surgical/scalpel{
+	pixel_y = 12
+	},
+/turf/simulated/floor/tiled/old_tile/beige,
+/area/derelict/eva/annex)
+"LO" = (
+/obj/machinery/door/airlock/external{
+	frequency = 1501;
+	id_tag = "rus_inner_1"
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/floor/plating,
+/area/derelict/arrival)
 "Mn" = (
 /obj/effect/floor_decal/corner/green/full{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/derelict/crew_quarters)
-"MN" = (
+"Mo" = (
 /obj/machinery/light/spot{
-	dir = 4
+	dir = 8
 	},
-/obj/structure/closet/crate/internals,
-/turf/simulated/floor/tiled/old_tile/yellow,
+/turf/simulated/floor/tiled/old_tile/purple,
+/area/derelict/bridge)
+"Mr" = (
+/obj/machinery/door/airlock/external{
+	frequency = 1501;
+	id_tag = "rus_outer_1"
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
 /area/derelict/arrival)
+"Ms" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/neutral,
+/area/derelict/eva/annex)
+"Mv" = (
+/obj/item/shovel,
+/turf/template_noop,
+/area/derelict/eva/annex)
 "MO" = (
 /obj/effect/spider/stickyweb/dark,
 /turf/simulated/floor/tiled/old_tile,
 /area/derelict/crew_quarters)
-"Ob" = (
+"MQ" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
+	icon_state = "1-2"
 	},
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 1;
+	frequency = 1501;
+	id_tag = "rus_pump_1"
+	},
+/turf/simulated/floor/plating,
+/area/derelict/arrival)
+"MR" = (
+/obj/machinery/power/solar{
+	id = "russolar"
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/airless{
+	icon_state = "solarpanel"
+	},
+/area/derelict/solar_control)
+"MT" = (
+/obj/structure/closet/secure_closet/engineering_welding,
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/derelict/eva/annex)
+"MU" = (
+/obj/structure/table/reinforced,
+/obj/item/flashlight,
+/obj/item/cell/super,
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/derelict/eva/annex)
+"Nc" = (
+/obj/effect/floor_decal/stairs/dark_stairs,
 /turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"Ne" = (
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/eva/annex)
+"Nf" = (
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/flora/ausbushes/ywflowers,
+/turf/simulated/floor/grass,
+/area/derelict/arrival)
+"Nl" = (
+/obj/machinery/light/spot,
+/turf/simulated/floor/tiled/neutral,
+/area/derelict/eva/annex)
+"Nn" = (
+/turf/simulated/floor/tiled/neutral,
+/area/derelict/eva/annex)
+"No" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/old_tile/green,
+/area/derelict/arrival)
+"Np" = (
+/obj/structure/sign/science,
+/turf/simulated/wall/titanium,
+/area/derelict/eva/annex)
+"Nq" = (
+/obj/machinery/light/spot{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/old_tile/purple,
+/area/derelict/bridge)
+"Ns" = (
+/turf/simulated/wall/titanium,
+/area/derelict/eva/annex)
+"NA" = (
+/obj/structure/window/reinforced,
+/turf/template_noop,
+/area/derelict/eva/annex)
+"ND" = (
+/obj/item/material/shard{
+	icon_state = "medium"
+	},
+/turf/simulated/floor/airless,
+/area/derelict/eva/annex)
+"NX" = (
+/obj/structure/coatrack,
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/old_tile,
 /area/derelict/eva/annex)
 "Oe" = (
 /obj/item/clothing/gloves/combat,
@@ -5271,33 +4055,62 @@
 /obj/structure/closet/secure_closet/warden,
 /turf/simulated/floor/tiled/red,
 /area/derelict/arrival)
+"Of" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/derelict/eva/annex)
 "Og" = (
 /mob/living/simple_mob/animal/giant_spider/hunter,
 /obj/effect/spider/stickyweb/dark,
 /turf/simulated/floor/tiled/old_tile,
 /area/derelict/crew_quarters)
-"Ol" = (
-/obj/structure/table/standard,
-/obj/item/gun/energy/medigun,
-/turf/simulated/floor/tiled/old_tile/beige,
+"Oo" = (
+/obj/structure/table/reinforced,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/neutral,
 /area/derelict/eva/annex)
-"OW" = (
-/obj/effect/floor_decal/corner/grey/diagonal{
-	dir = 4
+"Oq" = (
+/obj/structure/cable{
+	icon_state = "1-2"
 	},
-/obj/structure/bed/chair{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/old_tile,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/old_tile/gray,
 /area/derelict/eva/annex)
-"OY" = (
-/obj/effect/floor_decal/corner/grey/diagonal{
-	dir = 4
+"Ox" = (
+/obj/structure/window/reinforced{
+	dir = 8
 	},
-/obj/structure/bed/chair{
+/turf/simulated/wall/titanium,
+/area/derelict/eva/annex)
+"OD" = (
+/obj/machinery/door/airlock/glass{
+	name = "Hydroponics";
+	welded = 1
+	},
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"OG" = (
+/obj/machinery/light/spot{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/old_tile,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"OS" = (
+/obj/structure/table/standard,
+/obj/item/surgical/circular_saw{
+	pixel_y = 10
+	},
+/turf/simulated/floor/tiled/old_tile/beige,
+/area/derelict/eva/annex)
+"OT" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/old_tile/gray,
 /area/derelict/eva/annex)
 "Pa" = (
 /obj/effect/decal/cleanable/dirt,
@@ -5313,90 +4126,737 @@
 /mob/living/simple_mob/humanoid/merc/ranged/space/shotgun/auto,
 /turf/simulated/shuttle/floor/black,
 /area/derelict/arrival)
+"Pm" = (
+/mob/living/simple_mob/animal/space/carp/large,
+/turf/template_noop,
+/area/derelict/eva/annex)
+"Pq" = (
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/eva/annex)
+"PE" = (
+/mob/living/simple_mob/animal/space/carp/large,
+/turf/simulated/floor/airless,
+/area/derelict/eva/annex)
+"PH" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/carpet,
+/area/derelict/crew_quarters)
+"PN" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/stairs/dark_stairs{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"PQ" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/chapel{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/crew_quarters)
+"PV" = (
+/obj/machinery/power/solar{
+	id = "russolar"
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/airless{
+	icon_state = "solarpanel"
+	},
+/area/derelict/solar_control)
+"PW" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/eva/annex)
+"PZ" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/old_tile/green,
+/area/derelict/eva/annex)
+"Qi" = (
+/obj/structure/shuttle/window,
+/obj/structure/grille/rustic,
+/turf/simulated/floor,
+/area/derelict/eva/annex)
 "Ql" = (
 /obj/structure/table/standard,
 /obj/item/reagent_containers/food/snacks/meat/human,
 /obj/item/reagent_containers/food/snacks/meat/human,
 /turf/simulated/floor/tiled/old_tile/blue,
 /area/derelict/crew_quarters)
+"Qm" = (
+/obj/structure/table/reinforced,
+/obj/item/tool/wrench,
+/obj/machinery/light/spot{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/turcarpet,
+/area/derelict/crew_quarters)
+"Qw" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 1;
+	layer = 2.9
+	},
+/obj/structure/flora/ausbushes/ywflowers,
+/turf/simulated/floor/grass,
+/area/derelict/arrival)
+"Qz" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/obj/effect/catwalk_plated/white,
+/turf/template_noop,
+/area/derelict/solar_control)
+"QJ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/table/reinforced,
+/obj/item/storage/toolbox/syndicate/powertools,
+/obj/item/storage/belt/utility/holding,
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/derelict/eva/annex)
+"QY" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/blood,
+/obj/effect/decal/cleanable/blood,
+/obj/effect/decal/remains/human{
+	desc = "This guy seemed to have died in terrible way! Half his remains are dust.";
+	name = "Human remains"
+	},
+/obj/effect/decal/cleanable/blood/tracks{
+	color = "red";
+	desc = "Your instincts say you shouldn't be following these.";
+	dir = 4;
+	icon = 'icons/effects/blood.dmi';
+	icon_state = "tracks"
+	},
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"Rk" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/blood/tracks{
+	color = "red";
+	desc = "Your instincts say you shouldn't be following these.";
+	dir = 4;
+	icon = 'icons/effects/blood.dmi';
+	icon_state = "tracks"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/derelict/eva/annex)
+"Rl" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/derelict/eva/annex)
+"Rn" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/light/small,
+/turf/simulated/floor/tiled/techfloor,
+/area/derelict/eva/annex)
 "Rq" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/reagent_containers/food/snacks/meat/human,
 /turf/simulated/floor/carpet,
 /area/derelict/crew_quarters)
+"Rr" = (
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/machinery/power/smes/buildable/hybrid,
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/derelict/eva/annex)
+"Ru" = (
+/obj/machinery/shower{
+	dir = 4
+	},
+/obj/structure/curtain/open/shower,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/crew_quarters)
+"Rw" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/engineering{
+	name = "Engineering Wing"
+	},
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"Ry" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/asteroid_steel{
+	icon_state = "dark"
+	},
+/area/derelict/arrival)
+"Rz" = (
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5
+	},
+/turf/simulated/floor/wood,
+/area/derelict/crew_quarters)
 "RE" = (
 /mob/living/simple_mob/animal/space/carp,
 /turf/template_noop,
 /area/template_noop)
-"Sp" = (
-/obj/machinery/shower{
+"RF" = (
+/obj/machinery/atmospherics/pipe/simple/visible,
+/obj/structure/shuttle/window,
+/obj/structure/grille/rustic,
+/turf/simulated/floor/plating,
+/area/derelict/eva/annex)
+"RL" = (
+/obj/structure/sign/securearea{
+	desc = "A warning sign which reads 'RADIOACTIVE AREA'";
+	icon_state = "radiation";
+	name = "RADIOACTIVE AREA";
+	pixel_x = -32
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"RM" = (
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/carpet,
+/area/derelict/bridge)
+"RT" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/old_tile/blue,
+/area/derelict/arrival)
+"RU" = (
+/mob/living/simple_mob/animal/space/carp/large,
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/eva/annex)
+"RZ" = (
+/obj/machinery/recharge_station,
+/obj/effect/decal/cleanable/blood/oil,
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/derelict/eva/annex)
+"Sg" = (
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/structure/table/reinforced,
+/obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/structure/curtain/open/shower,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/remains/human{
-	desc = "This guy seemed to have died in terrible way! Half his remains are dust.";
-	name = "Human remains"
+/obj/item/reagent_containers/food/condiment/carton/flour,
+/obj/item/reagent_containers/food/condiment/carton/flour{
+	pixel_y = -6
 	},
-/obj/item/reagent_containers/food/snacks/meat/human,
 /turf/simulated/floor/tiled/neutral,
-/area/derelict/crew_quarters)
-"Td" = (
-/obj/structure/window/reinforced{
+/area/derelict/eva/annex)
+"Sj" = (
+/obj/structure/noticeboard,
+/turf/simulated/wall/titanium,
+/area/derelict/eva/annex)
+"Ss" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/bed/chair,
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/arrival)
+"Sy" = (
+/obj/structure/bed/chair/office/light{
 	dir = 4
 	},
-/obj/effect/spider/stickyweb,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/old_tile/beige,
+/area/derelict/eva/annex)
+"SF" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock{
+	name = "Central Annex"
+	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"SI" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/light/small{
+	dir = 1;
+	pixel_x = 16;
+	pixel_y = -5
+	},
+/turf/template_noop,
+/area/derelict/eva/annex)
+"SL" = (
+/obj/structure/table/reinforced,
+/obj/item/paper/djstation{
+	info = "This is the fifth time this month I've had to replace the cabling to the damn lockdown circuit. It's bad enough the condensor is constantly on the fritz and the damn systems take nearly a week to cycle and reboot, but now I've got the captain breathing down my neck over his stupid shower and Commissar Grigor. Mikail was telling me the man's face went so red when the lights popped that you could see him glowing in the dark.<br><br>If he thought that was bad, well, if I hadn't installed an override in the mess hall we would have been sitting in the dark for the week.<br><br>Rusthven says we should be getting a new shipment of cabling, though I'm not sure we'll ever have enough supplies to keep this place properly operational.";
+	name = "maintenance report"
+	},
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/derelict/eva/annex)
+"SM" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock/engineering{
+	name = "Engineering Wing"
+	},
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"SN" = (
+/turf/simulated/floor/airless,
+/area/derelict/eva/annex)
+"SR" = (
+/obj/machinery/light/spot{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/derelict/eva/annex)
+"SX" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/carpet,
+/area/derelict/bridge)
+"Tg" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/table/standard,
+/obj/item/trash/candle,
+/turf/simulated/floor/wood,
 /area/derelict/crew_quarters)
+"Th" = (
+/obj/structure/closet/radiation,
+/obj/structure/sign/securearea{
+	desc = "A warning sign which reads 'RADIOACTIVE AREA'";
+	icon_state = "radiation";
+	name = "RADIOACTIVE AREA";
+	pixel_x = -32
+	},
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"Tj" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/asteroid_steel{
+	icon_state = "dark"
+	},
+/area/derelict/arrival)
+"Tt" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/obj/effect/catwalk_plated/white,
+/turf/template_noop,
+/area/derelict/solar_control)
+"Tv" = (
+/obj/machinery/power/terminal{
+	dir = 1
+	},
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1
+	},
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/derelict/eva/annex)
+"Tz" = (
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/machinery/atmospherics/pipe/tank,
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/derelict/eva/annex)
 "TA" = (
 /turf/simulated/wall/titanium,
 /area/template_noop)
-"Ud" = (
-/mob/living/simple_mob/animal/space/carp/large,
-/turf/simulated/floor/airless,
+"TC" = (
+/obj/item/reagent_containers/spray/plantbgone,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/old_tile/green,
+/area/derelict/eva/annex)
+"TJ" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock{
+	name = "Security Wing"
+	},
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/arrival)
+"TL" = (
+/obj/item/t_scanner,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/obj/machinery/light/spot{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/derelict/eva/annex)
+"TR" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/stairs/dark_stairs{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"TS" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/flora/ausbushes/fullgrass{
+	pixel_x = 5;
+	pixel_y = -5
+	},
+/obj/structure/flora/ausbushes/ppflowers,
+/obj/structure/window/reinforced{
+	dir = 1;
+	layer = 2.9
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/grass,
+/area/derelict/arrival)
+"TY" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/effect/floor_decal/stairs/dark_stairs,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"Uf" = (
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/old_tile,
 /area/derelict/eva/annex)
 "Uk" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/old_tile,
 /area/derelict/arrival)
-"VY" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/atmospherics/portables_connector{
-	dir = 8
+"Uv" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1
 	},
-/obj/machinery/portable_atmospherics/powered/pump,
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 1;
+	pixel_y = 24
+	},
 /turf/simulated/floor/tiled/old_tile/yellow,
 /area/derelict/eva/annex)
-"Wd" = (
+"Uz" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/old_tile/purple,
+/area/derelict/bridge)
+"UD" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/derelict/eva/annex)
+"UF" = (
+/obj/machinery/power/singularity_beacon/syndicate,
+/mob/living/simple_mob/animal/space/carp,
+/turf/simulated/floor/reinforced/airless,
+/area/derelict/eva/annex)
+"UJ" = (
+/obj/machinery/light/small,
+/turf/simulated/floor/tiled/old_tile/green,
+/area/derelict/eva/annex)
+"UV" = (
+/obj/structure/table/reinforced,
+/obj/item/storage/fancy/vials,
+/obj/item/reagent_containers/glass/beaker{
+	pixel_x = 28
+	},
+/turf/simulated/floor/tiled/old_tile/beige,
+/area/derelict/eva/annex)
+"UY" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/derelict/eva/annex)
+"UZ" = (
+/obj/structure/cable{
 	icon_state = "1-2"
 	},
-/mob/living/simple_mob/humanoid/merc/ranged/space,
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/effect/floor_decal/chapel{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/crew_quarters)
+"Vh" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/effect/spider/stickyweb/dark,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/crew_quarters)
+"Vo" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/techfloor,
+/area/derelict/eva/annex)
+"Vv" = (
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/old_tile,
+/area/derelict/eva/annex)
+"VA" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/simulated/wall/titanium,
+/area/derelict/eva/annex)
+"VH" = (
+/obj/machinery/door/airlock/science{
+	name = "Science Wing"
+	},
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"VM" = (
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 1;
+	pixel_y = 24
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/derelict/eva/annex)
+"VN" = (
+/obj/structure/bed/chair,
+/mob/living/simple_mob/humanoid/merc/ranged/poi,
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/eva/annex)
+"VT" = (
+/obj/structure/table/standard,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/carpet,
+/area/derelict/bridge)
+"VW" = (
+/turf/simulated/floor/reinforced/airless,
+/area/derelict/eva/annex)
+"VX" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/external{
+	frequency = 1502;
+	id_tag = "rus_outer_2"
+	},
+/turf/simulated/floor/plating,
+/area/derelict/crew_quarters)
+"VZ" = (
+/obj/structure/shuttle/engine/heater{
+	dir = 1
+	},
+/obj/structure/shuttle/engine/propulsion,
+/turf/simulated/shuttle/plating,
 /area/derelict/arrival)
+"Wp" = (
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/eva/annex)
+"WA" = (
+/obj/item/newspaper{
+	desc = "An issue of The Griffon. Was Nanotrasen supplying this station at some point?"
+	},
+/obj/machinery/newscaster{
+	desc = "A standard Nanotrasen-licensed newsfeed handler for use in commercial space stations. Strange that it's on a Russian station.";
+	layer = 3.3;
+	pixel_x = 27
+	},
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/eva/annex)
 "WC" = (
 /mob/living/simple_mob/animal/giant_spider/hunter,
 /turf/simulated/floor/tiled/old_tile,
 /area/derelict/crew_quarters)
-"WX" = (
-/obj/structure/table/reinforced,
-/obj/item/inducer/syndicate,
-/turf/simulated/floor/tiled/old_tile/yellow,
-/area/derelict/eva/annex)
-"Xi" = (
+"WE" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
+	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/old_tile/blue,
+/turf/simulated/floor/tiled/old_tile/gray,
 /area/derelict/arrival)
-"XW" = (
-/obj/item/material/shard,
-/obj/item/stack/material/steel,
+"WF" = (
+/obj/machinery/light/spot{
+	dir = 4
+	},
+/obj/structure/closet/crate/internals,
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/derelict/arrival)
+"WG" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/wood,
+/area/derelict/crew_quarters)
+"WJ" = (
+/obj/machinery/light/spot{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"WQ" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
 /turf/template_noop,
+/area/derelict/eva/annex)
+"Xk" = (
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/structure/bed/chair,
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/eva/annex)
+"Xm" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/light/small{
+	dir = 4;
+	tag = "icon-bulb1 (EAST)"
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 1;
+	frequency = 1501;
+	id_tag = "rus_pump_1"
+	},
+/obj/machinery/airlock_sensor{
+	frequency = 1501;
+	id_tag = "rus_sensor_1";
+	pixel_x = 25;
+	pixel_y = -5
+	},
+/obj/machinery/embedded_controller/radio/airlock/airlock_controller{
+	frequency = 1501;
+	id_tag = "rus_airlock_1";
+	pixel_x = -25;
+	tag_airpump = "rus_pump_1";
+	tag_chamber_sensor = "rus_sensor_1";
+	tag_exterior_door = "rus_outer_1";
+	tag_interior_door = "rus_inner_1"
+	},
+/turf/simulated/floor/plating,
+/area/derelict/arrival)
+"Xs" = (
+/obj/structure/grille/broken,
+/turf/simulated/floor/airless,
+/area/derelict/eva/annex)
+"Xy" = (
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"XB" = (
+/obj/structure/lattice,
+/turf/template_noop,
+/area/derelict/eva/annex)
+"XK" = (
+/obj/structure/sign/botany,
+/turf/simulated/wall/titanium,
+/area/derelict/eva/annex)
+"XN" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/eva/annex)
+"XR" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/simulated/floor/tiled/old_tile/beige,
 /area/derelict/eva/annex)
 "XY" = (
 /obj/effect/decal/cleanable/dirt,
@@ -5404,10 +4864,185 @@
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/old_tile,
 /area/derelict/crew_quarters)
+"Ya" = (
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 8;
+	pixel_x = -23
+	},
+/turf/simulated/floor/tiled/old_tile/purple,
+/area/derelict/bridge)
+"Yb" = (
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 10;
+	initialize_directions = 10
+	},
+/turf/simulated/floor/tiled/old_tile/green,
+/area/derelict/arrival)
+"Yh" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/table/standard,
+/obj/item/trash/cigbutt,
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/arrival)
+"Yq" = (
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/old_tile/beige,
+/area/derelict/eva/annex)
+"Yu" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock/medical{
+	name = "Medical Wing";
+	welded = 1
+	},
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/arrival)
+"YA" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock/external{
+	frequency = 1501;
+	id_tag = "rus_outer_1"
+	},
+/turf/simulated/floor/plating,
+/area/derelict/arrival)
+"YC" = (
+/obj/structure/bed/chair,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/old_tile/purple,
+/area/derelict/bridge)
+"YN" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/science{
+	name = "Science Wing"
+	},
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"YO" = (
+/obj/structure/grille{
+	density = 0;
+	icon_state = "brokengrille"
+	},
+/turf/simulated/floor,
+/area/derelict/eva/annex)
+"YS" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/portables_connector{
+	dir = 1
+	},
+/obj/machinery/portable_atmospherics/powered/scrubber,
+/turf/simulated/floor/tiled/old_tile/yellow,
+/area/derelict/eva/annex)
+"YT" = (
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"YV" = (
+/obj/structure/table/standard,
+/obj/item/storage/box/cups,
+/obj/machinery/light/spot{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/old_tile/beige,
+/area/derelict/eva/annex)
+"Za" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/effect/catwalk_plated/white,
+/turf/template_noop,
+/area/derelict/solar_control)
+"Zf" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/airless,
+/area/derelict/eva/annex)
+"Zn" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/asteroid_steel{
+	icon_state = "dark"
+	},
+/area/derelict/crew_quarters)
+"Zr" = (
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -12;
+	pixel_y = 2
+	},
+/turf/simulated/floor/tiled/old_tile/beige,
+/area/derelict/eva/annex)
+"Zv" = (
+/obj/machinery/light/small,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/derelict/eva/annex)
+"Zy" = (
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/arrival)
 "Zz" = (
 /obj/effect/floor_decal/stairs/dark_stairs,
 /obj/effect/spider/stickyweb/dark,
 /turf/simulated/floor/tiled/old_tile,
+/area/derelict/crew_quarters)
+"ZJ" = (
+/obj/item/material/shard,
+/turf/template_noop,
+/area/derelict/eva/annex)
+"ZL" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/shower{
+	dir = 8
+	},
+/obj/structure/curtain/open/shower,
+/turf/simulated/floor/tiled/old_tile/beige,
+/area/derelict/eva/annex)
+"ZQ" = (
+/obj/item/beach_ball/holoball,
+/obj/machinery/light/spot{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/derelict/crew_quarters)
+"ZS" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/carpet,
 /area/derelict/crew_quarters)
 
 (1,1,1) = {"
@@ -5551,7 +5186,7 @@ jQ
 jQ
 lt
 lI
-mc
+VZ
 ac
 ac
 ac
@@ -5643,7 +5278,7 @@ jk
 jk
 jk
 lI
-mc
+VZ
 ac
 ac
 ac
@@ -5735,7 +5370,7 @@ jR
 jR
 jk
 lJ
-mc
+VZ
 ac
 ac
 ac
@@ -6548,28 +6183,28 @@ ed
 ha
 eI
 fg
-fB
-fX
-fX
-fX
-on
-hv
-hL
-kR
-kR
-kR
-jp
-jY
-kR
-kR
-kR
-kR
-hL
-mJ
-mT
-rE
-rE
-nH
+dA
+Ry
+Ry
+Ry
+HV
+TJ
+CQ
+Bg
+Bg
+Bg
+gk
+JN
+Bg
+Bg
+Bg
+Bg
+CQ
+Yu
+RT
+Kq
+Kq
+mL
 CH
 qS
 oH
@@ -6640,7 +6275,7 @@ gM
 gM
 eJ
 gM
-fC
+Tj
 gM
 gM
 gM
@@ -6648,21 +6283,21 @@ hc
 ro
 BZ
 mv
-iz
+Fc
 mx
 mx
-jZ
+nI
 mf
 lx
 mx
-MN
+WF
 ya
 mK
 mU
 qS
 qS
-qE
-rE
+Zy
+Kq
 oD
 oI
 oc
@@ -6726,13 +6361,13 @@ ac
 ac
 ro
 ro
-dP
-fX
-fX
-fX
-kR
-fX
-fD
+Bj
+tm
+tm
+tm
+WE
+tm
+Ky
 fY
 gM
 ha
@@ -6743,7 +6378,7 @@ ro
 ro
 ro
 mx
-ka
+kN
 mv
 ly
 ro
@@ -6818,7 +6453,7 @@ ro
 ro
 ro
 ro
-dQ
+Ki
 gM
 gM
 ha
@@ -6835,7 +6470,7 @@ ac
 ac
 ro
 ro
-kb
+ti
 ro
 ro
 ro
@@ -6926,9 +6561,9 @@ ac
 ac
 ac
 ac
-cS
-xk
-cS
+Qi
+Ff
+Qi
 ac
 ac
 ac
@@ -7018,9 +6653,9 @@ ac
 ac
 ac
 ac
-cS
-kc
-cS
+Qi
+UD
+Qi
 ac
 ac
 ac
@@ -7110,9 +6745,9 @@ ac
 ac
 ac
 ac
-cS
-kd
-cS
+Qi
+Rk
+Qi
 ac
 ac
 ac
@@ -7202,9 +6837,9 @@ ac
 ac
 ac
 ac
-cS
-ke
-cS
+Qi
+Vo
+Qi
 ac
 ac
 ac
@@ -7294,9 +6929,9 @@ ac
 ac
 ac
 ac
-cS
-Kn
-cS
+Qi
+wM
+Qi
 ac
 ac
 ac
@@ -7386,9 +7021,9 @@ ac
 ac
 ac
 ac
-cS
-kf
-cS
+Qi
+wP
+Qi
 ac
 ac
 ac
@@ -7411,7 +7046,7 @@ nJ
 CH
 qS
 qS
-qB
+sX
 ro
 ro
 ac
@@ -7477,11 +7112,11 @@ ac
 ac
 ac
 ac
-lc
-lc
-kg
-lc
-lc
+Ns
+Ns
+ub
+Ns
+Ns
 ac
 ac
 ac
@@ -7498,12 +7133,12 @@ ai
 ac
 ro
 ro
-pI
+JM
 qS
 qS
 qS
 qS
-rf
+tn
 mU
 ro
 ro
@@ -7545,7 +7180,7 @@ ac
 ac
 ac
 ro
-bF
+IV
 fF
 fF
 ha
@@ -7566,17 +7201,17 @@ ac
 ac
 ac
 ac
-lc
-lc
-lc
-lc
-lj
-kh
-kU
-lc
-lc
-lc
-lc
+Ns
+Ns
+Ns
+Ns
+Bm
+xt
+Zv
+Ns
+Ns
+Ns
+Ns
 ac
 ac
 ac
@@ -7595,7 +7230,7 @@ pS
 qa
 qS
 qS
-rf
+tn
 Uk
 qZ
 ro
@@ -7643,7 +7278,7 @@ ha
 ha
 ro
 dh
-dt
+IM
 fG
 ag
 ac
@@ -7656,21 +7291,21 @@ ac
 ac
 ac
 ac
-lc
-lc
-lc
-ib
-iA
-et
-kV
-ki
-kV
-lz
-oT
-mg
-lc
-lc
-ja
+Ns
+Ns
+Ns
+Dq
+GN
+Np
+Ct
+oS
+Ct
+XK
+sA
+yp
+Ns
+Ns
+XB
 cR
 ac
 ag
@@ -7687,7 +7322,7 @@ pT
 mU
 mU
 qZ
-Xi
+zV
 qZ
 qZ
 rn
@@ -7746,24 +7381,24 @@ ac
 ac
 ac
 ac
-lc
-eL
-lc
-hN
-hN
-mi
-gw
-iW
-lj
-kj
-of
-oM
-lN
-oL
-or
-oL
-or
-ii
+Ns
+Au
+Ns
+Zr
+Zr
+Wp
+kp
+VH
+Bm
+QY
+Hg
+OD
+Zf
+lU
+SN
+lU
+SN
+AO
 ac
 ac
 ac
@@ -7779,7 +7414,7 @@ ro
 ro
 qh
 qs
-qD
+pk
 qL
 ro
 mI
@@ -7820,8 +7455,8 @@ ac
 ac
 as
 aX
-bo
-bH
+Ya
+Mo
 cW
 ap
 cE
@@ -7837,26 +7472,26 @@ ac
 ac
 ac
 ac
-lc
-lc
-gO
-he
-hk
-hk
-iO
-pd
-iX
-oN
-Ob
-of
-oM
-or
-AR
-my
-or
-ii
-ii
-Gt
+Ns
+Ns
+JS
+Yq
+qv
+qv
+uW
+nL
+ue
+Av
+vh
+Hg
+OD
+SN
+RU
+ND
+SN
+AO
+AO
+vj
 ac
 ac
 ac
@@ -7871,9 +7506,9 @@ ro
 ro
 qi
 rF
-rh
+tV
 rF
-ra
+Hp
 rF
 rF
 ro
@@ -7912,7 +7547,7 @@ ac
 ac
 as
 bb
-bp
+Gz
 bI
 cD
 cq
@@ -7928,28 +7563,28 @@ ac
 ac
 ac
 ac
-lc
-lc
-gt
-gP
-fk
-mi
-mi
-ic
-iB
-lc
-of
-of
-lj
-lc
-lP
-or
-or
-or
-ii
-ja
-ii
-ma
+Ns
+Ns
+fM
+KZ
+PW
+Wp
+Wp
+Le
+UV
+Ns
+Hg
+Hg
+Bm
+Ns
+PZ
+SN
+SN
+SN
+AO
+XB
+AO
+ZJ
 od
 ac
 ac
@@ -7963,9 +7598,9 @@ ag
 fG
 qj
 qS
-qE
-rE
-rb
+Zy
+Kq
+Ea
 rB
 rF
 ro
@@ -8004,7 +7639,7 @@ ac
 ap
 ap
 ye
-bq
+VT
 cg
 cD
 ap
@@ -8019,31 +7654,31 @@ ac
 ak
 ac
 ag
-lc
-lc
-ga
-gu
-gQ
-fk
-mi
-mi
-id
-iC
-lc
-jw
-lj
-kZ
-lc
-lQ
-or
-or
-ii
-ii
-Gt
-ii
-ii
-ii
-ja
+Ns
+Ns
+JI
+DZ
+vT
+PW
+Wp
+Wp
+cB
+JD
+Ns
+DO
+Bm
+jF
+Ns
+ui
+SN
+SN
+AO
+AO
+vj
+AO
+AO
+AO
+XB
 ag
 ag
 ag
@@ -8057,7 +7692,7 @@ ro
 rT
 qS
 rB
-rc
+DS
 rp
 rB
 rF
@@ -8096,7 +7731,7 @@ ac
 as
 cD
 cD
-br
+YC
 cW
 cD
 ap
@@ -8110,33 +7745,33 @@ ac
 ag
 ak
 ag
-lc
-lc
-fH
-gb
-gv
-fj
-fJ
-mi
-gw
-ie
-lc
-lc
-lc
-kn
-lc
-lc
-lc
-Do
-or
-ja
-ii
-ii
-ii
-ja
-or
-lc
-lc
+Ns
+Ns
+XR
+sF
+IJ
+Pq
+Ev
+Wp
+kp
+aV
+Ns
+Ns
+Ns
+GK
+Ns
+Ns
+Ns
+eR
+SN
+XB
+AO
+AO
+AO
+XB
+SN
+Ns
+Ns
 ac
 ac
 ac
@@ -8149,7 +7784,7 @@ fG
 rT
 Uk
 rB
-rd
+Yh
 rp
 rB
 rF
@@ -8188,7 +7823,7 @@ ac
 as
 aG
 cD
-bv
+Az
 cD
 cD
 cr
@@ -8202,33 +7837,33 @@ ac
 ac
 ac
 ag
-eL
-eN
-fI
-mi
-fj
-fJ
-fR
-hx
-lc
-eL
-lc
+Au
+dl
+OS
+Wp
+Pq
+Ev
+ge
+iq
+Ns
+Au
+Ns
 ac
-jy
-km
-lb
+NA
+Cc
+WQ
 ac
-lc
-nn
-ii
-ii
-ii
-ii
-ii
-or
-or
-oL
-eL
+Ns
+Xs
+AO
+AO
+AO
+AO
+AO
+SN
+SN
+lU
+Au
 ag
 ac
 ac
@@ -8241,7 +7876,7 @@ ro
 ro
 rF
 qS
-re
+Ss
 rB
 qS
 rT
@@ -8251,11 +7886,11 @@ ac
 ac
 ac
 ac
-hs
+MR
 ac
 ac
 ac
-hs
+MR
 ac
 ac
 ac
@@ -8280,7 +7915,7 @@ ac
 as
 aH
 bb
-bt
+SX
 bb
 cW
 cW
@@ -8293,35 +7928,35 @@ ac
 ac
 ac
 ac
-lc
-lc
-gw
-mi
-fj
-fJ
-fR
-hf
-hy
-eL
+Ns
+Ns
+kp
+Wp
+Pq
+Ev
+ge
+Sy
+Ar
+Au
 ac
 ac
 ac
-jN
-km
-lr
+Cm
+Cc
+SI
 ak
 ac
 ag
-mC
-ii
-or
-oe
-ii
-or
-or
-oq
-lc
-lc
+Mv
+AO
+SN
+wf
+AO
+SN
+SN
+fK
+Ns
+Ns
 ag
 ac
 ac
@@ -8333,7 +7968,7 @@ ac
 fG
 qG
 qS
-rf
+tn
 qS
 qS
 qS
@@ -8342,12 +7977,12 @@ ro
 ac
 ac
 ac
-gZ
-si
+sL
+Tt
 lH
 ac
-gZ
-si
+sL
+Tt
 lH
 ac
 ag
@@ -8372,7 +8007,7 @@ ap
 ap
 ap
 ap
-bu
+AC
 ap
 ap
 ap
@@ -8385,35 +8020,35 @@ ac
 ac
 ac
 ac
-lc
-Ol
-mi
-fj
-fJ
-mi
-gw
-hx
-lc
-lc
+Ns
+xZ
+Wp
+Pq
+Ev
+Wp
+kp
+iq
+Ns
+Ns
 ac
 ac
 ac
-jy
-km
-lb
+NA
+Cc
+WQ
 ac
 ac
 ac
 pQ
-ii
-ii
-ja
-ii
-or
-Ud
-or
-oK
-lc
+AO
+AO
+XB
+AO
+SN
+PE
+SN
+UJ
+Ns
 ag
 ac
 ac
@@ -8424,8 +8059,8 @@ ac
 ac
 ro
 ro
-qN
-rf
+AV
+tn
 qS
 qS
 rF
@@ -8434,12 +8069,12 @@ fG
 ac
 ac
 ac
-gZ
-si
+sL
+Tt
 lH
 ac
-gZ
-si
+sL
+Tt
 lH
 ac
 ac
@@ -8462,9 +8097,9 @@ ac
 ac
 ap
 qr
-bH
+Mo
 cD
-bv
+Az
 cD
 bW
 as
@@ -8476,37 +8111,37 @@ ac
 ac
 ac
 ac
-lc
-lc
-eO
-fj
-fJ
-mi
-gw
-lc
-eL
-lc
+Ns
+Ns
+LM
+Pq
+Ev
+Wp
+kp
+Ns
+Au
+Ns
 ag
 ac
 ac
 ac
-jy
-km
-lb
+NA
+Cc
+WQ
 ai
 ag
 ac
 ac
 ac
-ii
-nn
-ja
-or
-mi
-or
-oL
-lc
-lc
+AO
+Xs
+XB
+SN
+Wp
+SN
+lU
+Ns
+Ns
 ac
 ac
 ac
@@ -8517,7 +8152,7 @@ ac
 ac
 fG
 qO
-rh
+tV
 qS
 Uk
 rF
@@ -8526,12 +8161,12 @@ fG
 ac
 ac
 ac
-gZ
-si
+sL
+Tt
 lH
 ac
-gZ
-si
+sL
+Tt
 sp
 ac
 ac
@@ -8556,7 +8191,7 @@ as
 au
 bb
 bd
-ll
+Kw
 cD
 bX
 as
@@ -8568,37 +8203,37 @@ ac
 ac
 ac
 ac
-lc
-er
-mi
-fk
-mi
-mi
-gx
-eL
+Ns
+YV
+Wp
+PW
+Wp
+Wp
+ZL
+Au
 ac
 ac
 ac
 ac
 ac
-lc
-lc
-kn
-lc
-ii
+Ns
+Ns
+GK
+Ns
+AO
 ac
 ac
 ag
 pQ
 ak
-eL
-oL
-oL
-or
-os
-oL
-oT
-lc
+Au
+lU
+lU
+SN
+Ax
+lU
+sA
+Ns
 ac
 ac
 ac
@@ -8609,21 +8244,21 @@ ac
 ac
 fG
 qP
-rh
+tV
 qS
 qS
 rF
-rM
+zt
 fG
 ac
 ac
 ac
-gZ
-si
+sL
+Tt
 lH
 ac
-gZ
-si
+sL
+Tt
 lH
 ac
 ac
@@ -8648,7 +8283,7 @@ as
 cD
 aK
 bb
-bt
+SX
 cD
 cU
 as
@@ -8660,37 +8295,37 @@ ac
 ac
 ac
 ac
-lc
-es
-gw
-nd
-gw
-gd
-lc
-lc
+Ns
+vz
+kp
+uH
+kp
+De
+Ns
+Ns
 ac
 ac
 ag
 ac
-lc
-lc
-lc
-lD
-ii
-ii
-By
+Ns
+Ns
+Ns
+VW
+AO
+AO
+rw
 ac
 mX
 ac
 ac
-lc
-lc
-nO
-lN
-lN
-lN
-oU
-lc
+Ns
+Ns
+Eu
+Zf
+Zf
+Zf
+TC
+Ns
 ac
 ac
 ac
@@ -8700,8 +8335,8 @@ ac
 ac
 ac
 fG
-qQ
-rh
+aA
+tV
 qS
 qS
 qS
@@ -8710,12 +8345,12 @@ ro
 ac
 ac
 ac
-gZ
-si
+sL
+Tt
 lH
 ac
-gZ
-si
+sL
+Tt
 lH
 ac
 ac
@@ -8740,7 +8375,7 @@ as
 cU
 aL
 cD
-bw
+Uz
 cD
 cD
 ap
@@ -8751,39 +8386,39 @@ ac
 ac
 ac
 ac
-lc
-lc
-et
-iW
-fl
-fL
-lc
-lc
+Ns
+Ns
+Np
+VH
+YN
+Hv
+Ns
+Ns
 ac
 ac
 ac
 ag
-lc
-lc
-lc
-lD
-lD
-uz
-XW
-ii
-ii
+Ns
+Ns
+Ns
+VW
+VW
+Pm
+JC
+AO
+AO
 ac
 ac
 ac
 ac
-lc
-lc
-lc
-oM
-oM
-lz
-lc
-lc
+Ns
+Ns
+Ns
+OD
+OD
+XK
+Ns
+Ns
 ac
 ac
 ac
@@ -8793,7 +8428,7 @@ ac
 ro
 ro
 rF
-rf
+tn
 qp
 rF
 qS
@@ -8803,15 +8438,15 @@ ro
 ro
 ac
 ac
-jO
+jz
 ac
 ac
 ac
-jO
+jz
 ac
 ac
-hs
-hs
+MR
+MR
 ac
 "}
 (38,1,1) = {"
@@ -8832,78 +8467,78 @@ ap
 ax
 bb
 bb
-bt
+SX
 cD
 bb
 ct
 ap
-cS
-di
-du
-dG
-cS
-cS
-dX
-eh
-eu
-lj
-ku
-lj
-gf
-lc
+Qi
+AU
+YO
+uZ
+Qi
+Qi
+wx
+OG
+Ld
+Bm
+DR
+Bm
+IA
+Ns
 ac
 ac
 ac
 ac
-lc
-lc
-lD
-lD
-ii
-ii
-ja
-lD
-ja
+Ns
+Ns
+VW
+VW
+AO
+AO
+XB
+VW
+XB
 ac
 ac
 ac
 ac
-lc
-nP
-of
-of
-of
-oV
-pe
-lc
-cS
-cS
-cS
-cS
-cS
-cS
+Ns
+Fq
+Hg
+Hg
+Hg
+TY
+uU
+Ns
+Qi
+Qi
+Qi
+Qi
+Qi
+Qi
 ro
 rF
 qS
-ri
-rr
-ry
-rE
-rP
-sa
-sc
-se
-jx
-jx
-sj
-jx
-jx
-jx
-sj
-jx
-jx
-sj
-ss
+HX
+TS
+vK
+Kq
+sV
+LO
+Xm
+YA
+vf
+vf
+xF
+vf
+vf
+vf
+xF
+vf
+vf
+xF
+Bf
 lH
 "}
 (39,1,1) = {"
@@ -8924,64 +8559,64 @@ ap
 cD
 aM
 bb
-bx
-bL
-cu
-cu
-cF
-cT
-dj
-cT
-cT
-dj
-cT
-dY
-eS
-ev
-eS
-fn
-of
-gg
-eL
+RM
+AB
+Ko
+Ko
+xV
+IW
+wB
+IW
+IW
+wB
+IW
+yu
+Oq
+PN
+Oq
+Xy
+Hg
+wo
+Au
 ac
 RE
 ac
 ag
-lD
-lD
-ja
-ii
-ii
-lD
-lD
-lD
-lD
+VW
+VW
+XB
+AO
+AO
+VW
+VW
+VW
+VW
 ac
 ac
 ac
 ac
-eL
-nQ
-of
-ou
-oN
-oW
-oN
-pl
-ps
-pB
-cT
-ps
-qb
-cT
-qx
-qH
-Wd
-rj
+Au
+DJ
+Hg
+fi
+Av
+we
+Av
+SF
+uu
+ce
+IW
+uu
+Ei
+IW
+bh
+No
+yA
+JV
 rs
 rz
 qS
-rQ
+ET
 ro
 ro
 ro
@@ -8995,7 +8630,7 @@ kJ
 aY
 aY
 aY
-ls
+bg
 st
 "}
 (40,1,1) = {"
@@ -9021,73 +8656,73 @@ cD
 bb
 cv
 ap
-cS
-cS
-cS
-cS
-cS
-cS
-dX
-ej
-ew
-of
-ov
-of
-gh
-lc
+Qi
+Qi
+Qi
+Qi
+Qi
+Qi
+wx
+WJ
+TR
+Hg
+OT
+Hg
+Ku
+Ns
 ac
 ac
 cR
 ac
-lD
-iG
-ii
-jA
-ii
-lD
-lD
-lc
-lc
+VW
+HD
+AO
+UF
+AO
+VW
+VW
+Ns
+Ns
 ac
 ac
 ac
 ac
-lc
-nR
-og
-ov
-of
-oX
-of
-lc
-cS
-cS
-cS
-cS
-cS
-cS
+Ns
+IZ
+wy
+OT
+Hg
+Nc
+Hg
+Ns
+Qi
+Qi
+Qi
+Qi
+Qi
+Qi
 ro
 rT
 qS
 rF
-rt
-rA
+eU
+lF
 qS
-rR
-sb
-sd
-sf
-jx
-jx
-sk
-jx
-jx
-jx
-sk
-jx
-jx
-sk
-su
+Yb
+Lw
+MQ
+Mr
+vf
+vf
+Qz
+vf
+vf
+vf
+Qz
+vf
+vf
+Qz
+iy
 lH
 "}
 (41,1,1) = {"
@@ -9119,39 +8754,39 @@ ac
 ac
 ac
 ac
-lc
-lc
-lc
-jc
-fp
-lc
-lc
-lc
+Ns
+Ns
+Ns
+Cp
+Rw
+Ns
+Ns
+Ns
 ac
 ac
 ac
 ac
-uz
-ii
-ii
-lD
-lD
-lD
-lc
-lc
-lc
+Pm
+AO
+AO
+VW
+VW
+VW
+Ns
+Ns
+Ns
 ac
 ac
 ac
 ac
-lc
-lc
-lc
-ow
-oO
-lc
-lc
-lc
+Ns
+Ns
+Ns
+Hq
+GW
+Ns
+Ns
+Ns
 ac
 ac
 ac
@@ -9171,15 +8806,15 @@ ro
 ro
 ac
 ac
-jO
+jz
 ac
 ac
 ac
-jO
+jz
 ac
 ac
-hr
-hr
+xe
+xe
 ac
 "}
 (42,1,1) = {"
@@ -9212,37 +8847,37 @@ ac
 ac
 ac
 ac
-lc
-ex
-eV
-fq
-fP
-gi
-lc
-lc
+Ns
+Rr
+Tv
+UY
+SR
+dF
+Ns
+Ns
 ac
 ai
 ac
 ac
-ja
-iZ
-lc
-kq
-lc
-lc
-lc
+XB
+Ce
+Ns
+VM
+Ns
+Ns
+Ns
 ac
 ac
 ac
 ac
-lc
-lc
-OW
-mZ
-ox
-mZ
-oY
-lc
+Ns
+Ns
+Ez
+Vv
+cX
+Vv
+NX
+Ns
 ac
 ac
 ac
@@ -9262,12 +8897,12 @@ ro
 ac
 ac
 ac
-gZ
-sl
+sL
+yH
 lH
 ac
-gZ
-sl
+sL
+yH
 lH
 ac
 ac
@@ -9304,37 +8939,37 @@ ac
 ac
 ac
 ac
-lc
-ey
-eW
-fr
-mi
-hP
-gz
-eL
+Ns
+Tz
+He
+kl
+Wp
+IT
+RZ
+Au
 ak
 ac
 ac
 ak
 ac
-lc
-lc
-kr
-lc
-lc
+Ns
+Ns
+uC
+Ns
+Ns
 ac
 ag
 ag
 ag
 ac
-eL
-mo
-nS
-mZ
-ox
-mZ
-oZ
-lc
+Au
+qt
+FM
+Vv
+cX
+Vv
+WA
+Ns
 ac
 ac
 ac
@@ -9354,12 +8989,12 @@ fG
 ac
 ac
 ac
-gZ
-sl
+sL
+yH
 lH
 ac
-gZ
-sl
+sL
+yH
 lH
 ac
 ac
@@ -9382,7 +9017,7 @@ ac
 ac
 ap
 cw
-aR
+Nq
 cD
 cD
 bN
@@ -9396,37 +9031,37 @@ ac
 ac
 ac
 ac
-lc
-ez
-VY
-fs
-fQ
-mi
-hP
-lc
-eL
-lc
+Ns
+Sj
+jE
+Ne
+gn
+Wp
+IT
+Ns
+Au
+Ns
 ac
 ag
 ai
 ac
-jy
-ks
-lb
+NA
+Fl
+WQ
 ag
 ag
 ag
 ag
-lc
-eL
-lc
-mZ
-mZ
-mZ
-ox
-yE
-lc
-lc
+Ns
+Au
+Ns
+Vv
+Vv
+Vv
+cX
+xT
+Ns
+Ns
 ac
 ac
 ac
@@ -9436,7 +9071,7 @@ ac
 ac
 ac
 fG
-qV
+Nf
 rF
 qS
 qS
@@ -9446,8 +9081,8 @@ fG
 ac
 ac
 ac
-gZ
-sl
+sL
+yH
 lH
 ac
 gY
@@ -9489,35 +9124,35 @@ ac
 ac
 ac
 ag
-lc
-hB
-mi
-fs
-fQ
-mi
-hB
-hi
-lc
-lc
+Ns
+Rl
+Wp
+Ne
+gn
+Wp
+Rl
+Fo
+Ns
+Ns
 ag
 ac
 cR
-jN
-ks
-lr
+Cm
+Fl
+SI
 ac
 ac
 ac
-lc
-lc
-mZ
-mZ
-mZ
-mZ
-oh
-oy
-oP
-lc
+Ns
+Ns
+Vv
+Vv
+Vv
+Vv
+cH
+ur
+jo
+Ns
 ag
 ac
 ac
@@ -9528,18 +9163,18 @@ ac
 ac
 ro
 ro
-qN
+AV
 qS
 qS
 qS
 rF
-rW
+Qw
 fG
 ac
 ac
 ag
-gZ
-sl
+sL
+yH
 lH
 ac
 sn
@@ -9581,35 +9216,35 @@ ac
 ac
 ac
 ag
-lc
-lc
-ft
-mi
-fs
-fQ
-fR
-hj
-hA
-eL
+Ns
+Ns
+Fz
+Wp
+Ne
+gn
+ge
+SL
+MU
+Au
 ac
 ac
 ac
-jy
-ks
-lb
+NA
+Fl
+WQ
 ac
 ac
 ac
-eL
-mP
-OY
-mZ
-mZ
-nT
-oi
-oz
-nz
-lc
+Au
+CX
+FZ
+Vv
+Vv
+uR
+Sg
+Oo
+Ox
+Ns
 ag
 ac
 ac
@@ -9630,8 +9265,8 @@ ro
 ac
 ac
 ac
-gZ
-sl
+sL
+yH
 lH
 ac
 so
@@ -9674,33 +9309,33 @@ ac
 ac
 ag
 eA
-fa
-eZ
-fR
-mi
-gB
-fQ
-mi
-hB
-lc
-eL
-lc
+RF
+YS
+ge
+Wp
+FA
+gn
+Wp
+Rl
+Ns
+Au
+Ns
 ac
-jy
-ks
-lb
+NA
+Fl
+WQ
 ac
-lc
-eL
-lc
-mo
-mZ
-mn
-no
-np
-nB
-oA
-eL
+Ns
+Au
+Ns
+qt
+Vv
+If
+wC
+fb
+Nn
+GE
+Au
 ag
 ag
 ac
@@ -9723,7 +9358,7 @@ ac
 ac
 ac
 ac
-hr
+xe
 ac
 ac
 ac
@@ -9750,7 +9385,7 @@ ac
 ac
 ac
 as
-aU
+Lg
 cD
 cg
 bO
@@ -9766,33 +9401,33 @@ ac
 ag
 ag
 ag
-lc
-lc
-GG
-gj
-fJ
-fk
-mi
-mi
-hP
-ij
-lc
-lc
-lc
-kt
-lc
-lc
-lc
-mn
-mZ
-mZ
-mZ
-no
-np
-nB
-oj
-lc
-lc
+Ns
+Ns
+QJ
+EV
+Ev
+PW
+Wp
+Wp
+IT
+MT
+Ns
+Ns
+Ns
+eB
+Ns
+Ns
+Ns
+If
+Vv
+Vv
+Vv
+wC
+fb
+Nn
+Nl
+Ns
+Ns
 ag
 ag
 ag
@@ -9859,31 +9494,31 @@ ag
 ag
 ag
 ag
-lc
-lc
-lc
-gC
-gT
-hk
-hk
-fQ
-hP
-iH
-lc
-jC
-ku
-le
-lc
-lR
-OY
-mZ
-mZ
-na
-np
-nB
-nB
-lc
-lc
+Ns
+Ns
+Ns
+Uv
+HT
+qv
+qv
+gn
+IT
+KF
+Ns
+Th
+DR
+RL
+Ns
+eP
+FZ
+Vv
+Vv
+Gn
+fb
+Nn
+Nn
+Ns
+Ns
 ag
 ag
 ac
@@ -9952,29 +9587,29 @@ ac
 ac
 ac
 ac
-lc
-lc
-gD
-mi
-mi
-mi
-fk
-mi
-hP
-lc
-of
-ov
-lj
-lc
-lS
-mZ
-mn
-mN
-nb
-nq
-nC
-lc
-lc
+Ns
+Ns
+TL
+Wp
+Wp
+Wp
+PW
+Wp
+IT
+Ns
+Hg
+OT
+Bm
+Ns
+DD
+Vv
+If
+kP
+eC
+Ms
+zB
+Ns
+Ns
 ac
 ac
 ac
@@ -10030,7 +9665,7 @@ as
 bl
 bD
 cW
-ch
+Hx
 cD
 cW
 cW
@@ -10045,27 +9680,27 @@ ac
 ac
 ac
 ac
-lc
-lc
-gU
-hP
-hC
-hQ
-hk
-pr
-jb
-oN
-kv
-oN
-lE
-lT
-mp
-mp
-mO
-nc
-nr
-lc
-lc
+Ns
+Ns
+uh
+IT
+VN
+Xk
+qv
+Of
+SM
+Av
+YT
+Av
+kT
+oE
+XN
+XN
+Uf
+Cd
+xN
+Ns
+Ns
 ac
 ac
 ac
@@ -10078,7 +9713,7 @@ ag
 ro
 ro
 qm
-qz
+vI
 rT
 rF
 rl
@@ -10138,25 +9773,25 @@ ac
 ac
 ac
 ac
-lc
-eL
-lc
-WX
-hR
-mi
-hP
-jc
-of
-ov
-of
-oO
-mZ
-mZ
-mo
-mP
-hh
-eL
-lc
+Ns
+Au
+Ns
+Ln
+KU
+Wp
+IT
+Cp
+Hg
+OT
+Hg
+GW
+Vv
+Vv
+qt
+CX
+VA
+Au
+Ns
 ac
 ac
 ac
@@ -10232,21 +9867,21 @@ ac
 ac
 ac
 ac
-lc
-lc
-lc
-ik
-iI
-lc
-jG
-kw
-li
-lc
-lV
-mq
-lc
-lc
-lc
+Ns
+Ns
+Ns
+BY
+Fx
+Ns
+db
+qC
+zS
+Ns
+yV
+vC
+Ns
+Ns
+Ns
 ac
 ac
 ac
@@ -10326,17 +9961,17 @@ ac
 ac
 ac
 ac
-lc
-lc
-lc
-lc
-lj
-ov
-lj
-lc
-lc
-lc
-lc
+Ns
+Ns
+Ns
+Ns
+Bm
+OT
+Bm
+Ns
+Ns
+Ns
+Ns
 ac
 ac
 ac
@@ -10398,8 +10033,8 @@ ac
 ac
 pm
 pm
-ck
-Sp
+Gr
+vF
 pm
 cZ
 qA
@@ -10421,11 +10056,11 @@ ac
 ac
 ac
 ac
-lc
-lc
-kx
-lc
-lc
+Ns
+Ns
+EF
+Ns
+Ns
 ac
 ac
 ac
@@ -10514,9 +10149,9 @@ ac
 ac
 ac
 ac
-cS
-xk
-cS
+Qi
+Ff
+Qi
 ac
 ac
 ac
@@ -10535,9 +10170,9 @@ pm
 pm
 pM
 pL
-pX
-qe
-qo
+AX
+zg
+zM
 bz
 qK
 pm
@@ -10606,9 +10241,9 @@ ac
 ac
 ac
 ac
-cS
-ky
-cS
+Qi
+Rn
+Qi
 ac
 ac
 ac
@@ -10698,9 +10333,9 @@ ac
 ac
 ac
 ac
-cS
-xk
-cS
+Qi
+Ff
+Qi
 ac
 ac
 ac
@@ -10716,9 +10351,9 @@ pm
 dH
 pm
 pm
-pu
-pN
-Td
+JZ
+Vh
+wz
 pZ
 MO
 MO
@@ -10790,9 +10425,9 @@ ac
 ac
 ac
 ac
-cS
-xk
-cS
+Qi
+Ff
+Qi
 ac
 ac
 ac
@@ -10806,7 +10441,7 @@ ac
 pm
 pm
 pa
-pf
+xK
 pm
 pv
 pE
@@ -10882,9 +10517,9 @@ ac
 ac
 ac
 ac
-cS
-ky
-cS
+Qi
+Rn
+Qi
 ac
 ac
 ac
@@ -10974,9 +10609,9 @@ ac
 ac
 ac
 ac
-cS
-ke
-cS
+Qi
+Vo
+Qi
 ac
 ac
 ac
@@ -11067,7 +10702,7 @@ ac
 ac
 pm
 pm
-kz
+tE
 pm
 pm
 ac
@@ -11141,11 +10776,11 @@ ac
 ac
 pm
 pm
-dN
+Lc
 dT
 pm
 pm
-eF
+Hj
 hm
 fw
 hm
@@ -11159,15 +10794,15 @@ pm
 pm
 pm
 sm
-kA
+vB
 lk
 pm
 pm
 pm
 pm
 pm
-ne
-ns
+Ru
+vl
 qA
 nW
 pM
@@ -11236,22 +10871,22 @@ pm
 pm
 pm
 pm
-el
-fd
-fd
-fx
-fd
-fd
-fd
-fd
-fd
-hE
-hS
-im
-iJ
-jd
-jd
-kB
+sR
+WG
+WG
+Tg
+WG
+WG
+WG
+WG
+WG
+GP
+Zn
+PQ
+UZ
+Jn
+Jn
+PH
 sm
 sm
 lW
@@ -11343,7 +10978,7 @@ lX
 iK
 je
 je
-kC
+ZS
 je
 je
 lX
@@ -11435,7 +11070,7 @@ eb
 ec
 jf
 eb
-kC
+ZS
 eb
 eb
 eb
@@ -11527,7 +11162,7 @@ eb
 eb
 hm
 jI
-kD
+Lm
 lm
 hm
 eb
@@ -11611,7 +11246,7 @@ dH
 dH
 pm
 gI
-gX
+Qm
 ho
 pm
 hV
@@ -11619,7 +11254,7 @@ io
 iM
 hm
 hm
-kE
+CB
 fc
 hm
 lY
@@ -11628,7 +11263,7 @@ mE
 pm
 nh
 nv
-nE
+ZQ
 pm
 dH
 dH
@@ -11709,11 +11344,11 @@ pm
 hW
 ip
 iN
-jg
-jJ
-kF
-ln
-lG
+vY
+wd
+HG
+Rz
+Ht
 lZ
 ms
 mF
@@ -11802,9 +11437,9 @@ pm
 dH
 dH
 pm
-jK
+JQ
 kG
-lo
+mS
 pm
 dH
 dH
@@ -11894,9 +11529,9 @@ ac
 ac
 ac
 pm
-jL
+KO
 pm
-lp
+dO
 pm
 ac
 ag
@@ -11986,9 +11621,9 @@ ac
 ac
 ac
 pm
-jM
+VX
 pm
-lq
+JO
 pm
 ag
 ag
@@ -12078,9 +11713,9 @@ ac
 ac
 ac
 ac
-jO
+jz
 kI
-jO
+jz
 ac
 ag
 ac
@@ -12164,21 +11799,21 @@ ac
 ac
 ac
 ac
-hp
-hp
-hp
-hp
-hp
+PV
+PV
+PV
+PV
+PV
 ac
-jO
+jz
 aY
-jO
+jz
 ag
-hs
-hp
-hs
-hs
-hs
+MR
+PV
+MR
+MR
+MR
 ac
 ac
 ac
@@ -12256,21 +11891,21 @@ ac
 ac
 ac
 gY
-hO
-hO
-hO
-hO
-hO
-jx
-jP
+GO
+GO
+GO
+GO
+GO
+vf
+BK
 kJ
-ls
-jx
-su
-su
-su
-su
-su
+bg
+vf
+yD
+yD
+yD
+yD
+yD
 lH
 ac
 ac
@@ -12348,21 +11983,21 @@ ac
 ac
 ac
 ac
-hr
-hr
-hr
-hr
-hr
+xe
+xe
+xe
+xe
+xe
 ac
-jO
+jz
 aY
-jO
+jz
 ac
-hr
-hr
-hr
-hr
-hr
+xe
+xe
+xe
+xe
+xe
 ag
 ac
 ac
@@ -12446,9 +12081,9 @@ ac
 ac
 ac
 ac
-jO
+jz
 aY
-jO
+jz
 ac
 ac
 ac
@@ -12532,21 +12167,21 @@ ac
 ac
 ac
 ac
-hs
-hs
-hs
-hs
-hs
+MR
+MR
+MR
+MR
+MR
 ac
-jO
+jz
 aY
-jO
+jz
 ac
-hs
-hs
-hs
-hs
-hs
+MR
+MR
+MR
+MR
+MR
 ac
 ac
 ac
@@ -12623,22 +12258,22 @@ ac
 ac
 ac
 ac
-gZ
-hO
-hO
-hO
-hO
-hO
-jx
-jP
+sL
+GO
+GO
+GO
+GO
+GO
+vf
+BK
 kJ
-ls
-jx
-su
-su
-su
-su
-su
+bg
+vf
+yD
+yD
+yD
+yD
+yD
 lH
 ac
 ac
@@ -12716,21 +12351,21 @@ ac
 ac
 ac
 ac
-hr
-hr
-hr
-hr
-hr
+xe
+xe
+xe
+xe
+xe
 ac
-jO
+jz
 aY
-jO
+jz
 ac
-hr
-hr
-hr
-hr
-hr
+xe
+xe
+xe
+xe
+xe
 ac
 ac
 ac
@@ -12814,9 +12449,9 @@ ac
 ac
 ac
 ac
-jO
+jz
 aY
-jO
+jz
 ac
 ac
 ac
@@ -12905,10 +12540,10 @@ ac
 ac
 ac
 ac
-gZ
-jP
+sL
+BK
 aY
-ls
+bg
 gY
 ac
 ac
@@ -12997,10 +12632,10 @@ ac
 ac
 ac
 ac
-gZ
-kH
-la
-lC
+sL
+CV
+Za
+KY
 lH
 ac
 ac
@@ -13090,9 +12725,9 @@ ac
 ac
 ac
 ac
-hr
-kK
-hr
+xe
+LJ
+xe
 ac
 ac
 ac

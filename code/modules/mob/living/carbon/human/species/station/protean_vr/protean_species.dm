@@ -132,7 +132,16 @@
 		"dragon_hornsPointy" = "#FFFFFF",
 		"dragon_eyesNormal" = "#FFFFFF"
 	)
-
+	// CHOMPEdit Start
+	var/list/dullahan_overlays = list(
+		"dullahanbody" = "#FFFFFF",
+		"dullahanhead" = "#FFFFFF",
+		"dullahanmetal" = "#FFFFFF",
+		"dullahaneyes" = "#FFFFFF",
+		"dullahandecals" = "#FFFFFF",
+		"dullahanextended" = "#FFFFFF"
+	)
+	// CHOMPEdit End
 	var/pseudodead = 0
 
 /datum/species/protean/New()

@@ -7,6 +7,7 @@
 #define TOXIN_DAMAGE 0x40
 #define OXY_DAMAGE 0x80
 #define HUSKED_BODY 0x100
+#define WEIRD_ORGANS 0x200 //CHOMPedit malignant
 
 /obj/machinery/medical_kiosk
 	name = "medical kiosk"
@@ -126,6 +127,10 @@
 			problems |= SERIOUS_INTERNAL_DAMAGE
 		if(I.status & ORGAN_BLEEDING)
 			problems |= INTERNAL_BLEEDING
+		//CHOMPedit begin- malignants
+		if(istype(I,/obj/item/organ/internal/malignant))
+			problems |= WEIRD_ORGANS
+		//CHOMPedit end
 
 	if(HUSK in user.mutations)
 		problems |= HUSKED_BODY
@@ -162,6 +167,10 @@
 		problem_text += "<br>" + span_warning("Exposure to toxic materials detected - induce vomiting if you have consumed anything recently.")
 	if(problems & OXY_DAMAGE)
 		problem_text += "<br>" + span_warning("Blood/air perfusion level is below acceptable norms - use concentrated oxygen if necessary.")
+	//CHOMPedit begin malignants
+	if(problems & WEIRD_ORGANS)
+		problem_text += "<br>" + span_warning("Anatomical irregularities detected - Please see a medical professional.")
+	//CHOMPedit end
 	if(problems & HUSKED_BODY)
 		problem_text += "<br>" + span_danger("Anatomical structure lost, resuscitation not possible!")
 
@@ -192,3 +201,4 @@
 #undef TOXIN_DAMAGE
 #undef OXY_DAMAGE
 #undef HUSKED_BODY
+#undef WEIRD_ORGANS // CHOMPedit - malignants

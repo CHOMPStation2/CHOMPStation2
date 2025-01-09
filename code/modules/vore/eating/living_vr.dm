@@ -935,6 +935,17 @@
     gas = list(
         GAS_N2 = 100)
 
+//CHOMPEdit Start - for CO2 breathers
+/datum/gas_mixture/belly_air/carbon_dioxide_breather
+    volume = 2500
+    temperature = 293.150
+    total_moles = 104
+
+/datum/gas_mixture/carbon_dioxide_breather/New()
+    . = ..()
+    gas = list(
+        GAS_CO2 = 100)
+//CHOMPEdit End
 
 /mob/living/proc/feed_grabbed_to_self_falling_nom(var/mob/living/user, var/mob/living/prey)
 	// CHOMPAdd Start

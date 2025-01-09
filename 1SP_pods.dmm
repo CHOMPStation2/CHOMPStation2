@@ -337,23 +337,6 @@
 /obj/structure/kitchenspike,
 /turf/simulated/floor/tiled/freezer,
 /area/survivalpod/superpose/Dinner)
-"akI" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
-/obj/machinery/light{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/cable/green{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/obj/machinery/power/shield_generator/charged{
-	field_radius = 8;
-	initial_shield_modes = 2153;
-	target_radius = 8
-	},
-/turf/simulated/shuttle/plating,
-/area/survivalpod/superpose/ScienceShip)
 "akZ" = (
 /obj/structure/table/steel_reinforced,
 /obj/machinery/recharger{
@@ -847,6 +830,13 @@
 /obj/machinery/door/airlock/voidcraft/survival_pod,
 /turf/simulated/floor/tiled/techmaint,
 /area/template_noop)
+"aET" = (
+/obj/machinery/power/port_gen/pacman,
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor,
+/area/survivalpod/superpose/WoodenCamp)
 "aFn" = (
 /obj/structure/cult/talisman,
 /turf/simulated/floor/wood/alt{
@@ -1278,6 +1268,22 @@
 	},
 /turf/simulated/shuttle/plating/skipjack,
 /area/template_noop)
+"aSX" = (
+/obj/machinery/power/rtg/fake_gen{
+	desc = "Some power generation equipment that is powering the current area's thermal regulators.";
+	irradiate = 0;
+	layer = 3.01;
+	name = "air conditioning power generator";
+	power_gen = 30000
+	},
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/tiled/white,
+/area/survivalpod)
 "aTe" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
@@ -1454,10 +1460,32 @@
 /obj/structure/flora/tree/sif,
 /turf/template_noop,
 /area/survivalpod/superpose/LoneHome)
+"aZM" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock/voidcraft/survival_pod{
+	id_tag = null;
+	maxhealth = 8000000000;
+	normalspeed = 0;
+	req_one_access = null
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod)
 "bab" = (
 /obj/structure/table/steel,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/Farm)
+"bas" = (
+/obj/machinery/power/thermoregulator/southerncross{
+	dir = 4;
+	pixel_x = -28
+	},
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod)
 "baZ" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 4
@@ -1473,6 +1501,19 @@
 /obj/machinery/reagentgrinder,
 /turf/simulated/floor/tiled/hydro,
 /area/survivalpod/superpose/HydroCave)
+"bcO" = (
+/obj/machinery/power/apc{
+	cell_type = /obj/item/cell/hyper;
+	dir = 8;
+	name = "Unknown APC";
+	operating = 0;
+	pixel_x = -24
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/FieldLab)
 "bdp" = (
 /obj/item/reagent_containers/food/condiment/small/sugar,
 /obj/effect/decal/cleanable/dirt,
@@ -1571,12 +1612,6 @@
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/template_noop)
-"bhX" = (
-/obj/item/reagent_containers/glass/rag,
-/obj/item/clothing/accessory/ring/engagement,
-/obj/structure/table/wooden_reinforced,
-/turf/simulated/floor/wood,
-/area/survivalpod/superpose/LoneHome)
 "bia" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
@@ -1866,6 +1901,11 @@
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/template_noop)
+"bsb" = (
+/turf/simulated/floor/flesh/colour{
+	color = "red"
+	},
+/area/survivalpod/superpose/HellCave)
 "bst" = (
 /obj/structure/bookcase,
 /obj/item/book/custom_library/fiction,
@@ -1899,27 +1939,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/alt/parquet,
 /area/survivalpod/superpose/DragonCave)
-"buk" = (
-/obj/machinery/light{
-	dir = 8
-	},
-/obj/machinery/button/flasher{
-	id = "SP-Cell flash";
-	name = "Cell Flash";
-	pixel_x = 7;
-	pixel_y = 26;
-	req_access = list(2,4)
-	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/bed/chair/bay/chair/padded/black{
-	dir = 8
-	},
-/turf/simulated/shuttle/plating/skipjack,
-/area/template_noop)
 "bur" = (
 /obj/structure/cliff/automatic/corner{
 	dir = 9
@@ -2053,18 +2072,6 @@
 /obj/structure/window/reinforced/full,
 /obj/machinery/door/firedoor,
 /turf/simulated/shuttle/plating,
-/area/template_noop)
-"bAU" = (
-/obj/machinery/door/airlock/maintenance/sec{
-	name = "Security Door";
-	req_one_access = null
-	},
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/techmaint,
 /area/template_noop)
 "bBS" = (
 /obj/structure/bookcase/manuals/research_and_development,
@@ -2303,17 +2310,6 @@
 	},
 /turf/simulated/wall/r_wall,
 /area/survivalpod/superpose/HydroCave)
-"bLf" = (
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/obj/effect/floor_decal/industrial/loading{
-	dir = 1
-	},
-/turf/simulated/shuttle/floor/voidcraft/light,
-/area/template_noop)
 "bLw" = (
 /obj/structure/table/marble,
 /obj/machinery/microwave,
@@ -2609,27 +2605,19 @@
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/template_noop)
-"bWt" = (
-/obj/item/clothing/accessory/ring/material/gold,
-/obj/item/clothing/ears/earring/stud/gold,
-/obj/item/gun/projectile/deagle/gold{
-	pixel_x = -11;
-	pixel_y = -22
-	},
-/obj/item/coin/gold{
-	pixel_x = -7;
-	pixel_y = -2
-	},
-/obj/item/coin/gold{
-	pixel_x = 5;
-	pixel_y = 7
-	},
-/turf/simulated/floor/outdoors/newdirt,
-/area/survivalpod/superpose/DragonCave)
 "bWy" = (
 /obj/machinery/floodlight,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/Farm)
+"bWE" = (
+/obj/machinery/power/terminal{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
 "bWO" = (
 /obj/structure/bed/chair/bay/chair/padded/blue,
 /obj/structure/sign/nanotrasen{
@@ -2831,6 +2819,27 @@
 "cfz" = (
 /turf/simulated/floor/gorefloor,
 /area/survivalpod/superpose/DemonPool)
+"cfS" = (
+/obj/machinery/door/airlock/glass_medical/polarized{
+	hackProof = 1;
+	id_tag = "Teshnomancer_Private_doors";
+	id_tint = "tesh_private_tint";
+	maxhealth = 8000000000;
+	name = "Electrochromic Airlock";
+	normalspeed = 0;
+	req_one_access = list(300);
+	secured_wires = 1
+	},
+/obj/machinery/door/blast/puzzle{
+	desc = "A large, virtually indestructible door. This one is a lot tougher then most other blast doors. Seems a little excessive for a privacy shutter...";
+	id = "Teshnomancer_Private_blastdoors";
+	name = "Privacy blast door"
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod)
 "cgk" = (
 /obj/machinery/light{
 	dir = 1
@@ -2997,17 +3006,6 @@
 /obj/machinery/space_heater,
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/ScienceShip)
-"coK" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/obj/structure/cable/cyan{
-	d2 = 2;
-	icon_state = "0-2"
-	},
-/turf/simulated/floor,
-/area/survivalpod/superpose/CrashedInfestedShip)
 "cpf" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/floor_decal/borderfloorwhite/corner{
@@ -3352,6 +3350,12 @@
 /obj/machinery/light/small,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/HydroCave)
+"cAt" = (
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
 "cAC" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock,
@@ -3774,6 +3778,29 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/dark,
 /area/survivalpod/superpose/HydroCave)
+"cQk" = (
+/obj/machinery/button/remote/blast_door{
+	id = "SP-Cell";
+	name = "Cell Door";
+	pixel_x = 6;
+	pixel_y = -33;
+	req_one_access = list(2,4)
+	},
+/obj/machinery/button/flasher{
+	id = "SP-Cell flash";
+	name = "Cell Flash";
+	pixel_x = 7;
+	pixel_y = -24;
+	req_access = list(2,4)
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/shuttle/plating/skipjack,
+/area/template_noop)
 "cQD" = (
 /obj/effect/decal/remains/xeno,
 /turf/simulated/shuttle/floor{
@@ -3815,6 +3842,11 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
+/area/template_noop)
+"cRf" = (
+/turf/simulated/floor/flesh/colour{
+	color = "red"
+	},
 /area/template_noop)
 "cRh" = (
 /obj/machinery/vending/hydroseeds{
@@ -3981,20 +4013,6 @@
 /obj/structure/table/darkglass,
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/HydroCave)
-"cXq" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/door/airlock/voidcraft/survival_pod{
-	id_tag = null;
-	maxhealth = 8000000000;
-	normalspeed = 0;
-	req_one_access = null
-	},
-/turf/simulated/shuttle/floor/voidcraft/dark,
-/area/survivalpod)
 "cXM" = (
 /obj/structure/outcrop/lead,
 /turf/template_noop,
@@ -4083,16 +4101,6 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/survivalpod/superpose/FieldLab)
-"ddn" = (
-/obj/machinery/power/terminal{
-	dir = 4
-	},
-/obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/FieldLab)
 "ddo" = (
 /obj/structure/bed/chair/bay/comfy/blue,
@@ -4265,6 +4273,25 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden,
 /turf/simulated/shuttle/floor/white,
 /area/survivalpod/superpose/ScienceShip)
+"dlH" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/machinery/button/flasher{
+	id = "SP-Cell flash";
+	name = "Cell Flash";
+	pixel_x = 7;
+	pixel_y = 26;
+	req_access = list(2,4)
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/bed/chair/bay/chair/padded/black{
+	dir = 8
+	},
+/turf/simulated/shuttle/plating/skipjack,
+/area/template_noop)
 "dlO" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
@@ -4662,149 +4689,6 @@
 	},
 /turf/simulated/shuttle/floor,
 /area/survivalpod)
-"dAy" = (
-/obj/machinery/smartfridge/survival_pod{
-	icon = 'icons/obj/vending.dmi';
-	icon_base = "smartfridge";
-	icon_contents = "boxes";
-	icon_state = "smartfridge";
-	name = "Advanced storage";
-	pixel_y = -1
-	},
-/obj/item/storage/toolbox/mechanical{
-	pixel_x = -2;
-	pixel_y = -1
-	},
-/obj/item/storage/toolbox/mechanical{
-	pixel_x = -2;
-	pixel_y = -1
-	},
-/obj/item/storage/toolbox/electrical{
-	pixel_x = 1;
-	pixel_y = 6
-	},
-/obj/item/storage/toolbox/electrical{
-	pixel_x = 1;
-	pixel_y = 6
-	},
-/obj/item/storage/belt/utility,
-/obj/item/storage/belt/utility,
-/obj/item/multitool{
-	pixel_x = 3
-	},
-/obj/item/multitool{
-	pixel_x = 3
-	},
-/obj/item/tool/crowbar,
-/obj/item/tool/crowbar,
-/obj/item/tool/crowbar,
-/obj/structure/window/reinforced/survival_pod{
-	dir = 1
-	},
-/obj/item/mmi,
-/obj/item/mmi,
-/obj/item/mmi,
-/obj/item/clothing/head/welding{
-	pixel_x = -3;
-	pixel_y = 5
-	},
-/obj/item/clothing/head/welding{
-	pixel_x = -3;
-	pixel_y = 5
-	},
-/obj/item/clothing/head/welding/demon,
-/obj/item/clothing/glasses/welding,
-/obj/item/clothing/glasses/welding,
-/obj/item/stack/cable_coil,
-/obj/item/stack/cable_coil,
-/obj/item/stack/cable_coil,
-/obj/item/healthanalyzer,
-/obj/item/healthanalyzer,
-/obj/item/flash/synthetic,
-/obj/item/flash/synthetic,
-/obj/item/flash/synthetic,
-/obj/item/storage/firstaid/regular{
-	empty = 1;
-	name = "First-Aid (empty)"
-	},
-/obj/item/storage/firstaid/regular{
-	empty = 1;
-	name = "First-Aid (empty)"
-	},
-/obj/item/cell/high{
-	pixel_x = 5;
-	pixel_y = -5
-	},
-/obj/item/cell/high{
-	pixel_x = 5;
-	pixel_y = -5
-	},
-/obj/item/assembly/prox_sensor{
-	pixel_x = -8;
-	pixel_y = 4
-	},
-/obj/item/assembly/prox_sensor{
-	pixel_x = -8;
-	pixel_y = 4
-	},
-/obj/item/stack/material/copper{
-	amount = 25
-	},
-/obj/item/stack/material/plastic{
-	max_amount = 25
-	},
-/obj/item/stack/material/plastic{
-	max_amount = 25
-	},
-/obj/item/stack/material/plasteel{
-	amount = 10
-	},
-/obj/item/stack/material/plasteel{
-	amount = 10
-	},
-/obj/item/stack/material/glass{
-	amount = 50;
-	pixel_x = -2;
-	pixel_y = 2
-	},
-/obj/item/stack/material/glass{
-	amount = 50;
-	pixel_x = -2;
-	pixel_y = 2
-	},
-/obj/item/stack/material/glass{
-	amount = 50;
-	pixel_x = -2;
-	pixel_y = 2
-	},
-/obj/item/stack/material/glass{
-	amount = 50;
-	pixel_x = -2;
-	pixel_y = 2
-	},
-/obj/item/stack/material/steel{
-	amount = 50
-	},
-/obj/item/stack/material/steel{
-	amount = 50
-	},
-/obj/item/stack/material/steel{
-	amount = 50
-	},
-/obj/item/stack/material/steel{
-	amount = 50
-	},
-/obj/item/flash,
-/obj/item/flash,
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/item/clothing/mask/gas,
-/obj/item/clothing/mask/gas,
-/obj/item/implanter,
-/obj/item/implanter,
-/obj/item/implanter,
-/obj/item/storage/backpack/dufflebag/sci,
-/turf/simulated/shuttle/floor/voidcraft/light,
-/area/template_noop)
 "dAA" = (
 /obj/machinery/atmospherics/pipe/tank/phoron/full{
 	dir = 4
@@ -5392,33 +5276,6 @@
 	},
 /turf/simulated/floor/carpet/sblucarpet,
 /area/survivalpod)
-"dSa" = (
-/obj/machinery/button/remote/blast_door{
-	id = "SP-Cell";
-	name = "Cell Door";
-	pixel_x = 6;
-	pixel_y = -33;
-	req_one_access = list(2,4)
-	},
-/obj/machinery/button/flasher{
-	id = "SP-Cell flash";
-	name = "Cell Flash";
-	pixel_x = 7;
-	pixel_y = -24;
-	req_access = list(2,4)
-	},
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/shuttle/plating/skipjack,
-/area/template_noop)
 "dSC" = (
 /turf/simulated/floor/cult,
 /area/survivalpod/superpose/DemonPool)
@@ -5527,29 +5384,6 @@
 "dVP" = (
 /obj/item/material/knife/tacknife/survival,
 /turf/simulated/floor/tiled/techmaint,
-/area/template_noop)
-"dWH" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/polarized{
-	dir = 1;
-	id = "SP-Sec"
-	},
-/obj/structure/window/reinforced/polarized{
-	dir = 4;
-	id = "SP-Sec"
-	},
-/obj/structure/window/reinforced/polarized{
-	dir = 8;
-	id = "SP-Sec"
-	},
-/obj/structure/window/reinforced/polarized{
-	id = "SP-Sec"
-	},
-/obj/structure/cable/green{
-	d2 = 2;
-	icon_state = "0-2"
-	},
-/turf/simulated/floor/plating,
 /area/template_noop)
 "dWQ" = (
 /obj/effect/floor_decal/techfloor{
@@ -5683,6 +5517,17 @@
 /obj/machinery/light/small,
 /turf/simulated/shuttle/floor/white,
 /area/survivalpod/superpose/TradingShip)
+"eaG" = (
+/obj/structure/cable/cyan{
+	icon_state = "2-4"
+	},
+/obj/structure/cable/cyan{
+	icon_state = "4-8"
+	},
+/obj/random/maintenance/engineering,
+/obj/random/maintenance/clean,
+/turf/simulated/floor,
+/area/survivalpod/superpose/CrashedInfestedShip)
 "eaM" = (
 /obj/machinery/light{
 	dir = 8
@@ -5706,34 +5551,6 @@
 "ebv" = (
 /obj/structure/closet/walllocker_double/survival/west,
 /turf/simulated/shuttle/plating/skipjack,
-/area/template_noop)
-"ebA" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/polarized{
-	dir = 1;
-	id = "SP-Sec"
-	},
-/obj/structure/window/reinforced/polarized{
-	dir = 4;
-	id = "SP-Sec"
-	},
-/obj/structure/window/reinforced/polarized{
-	dir = 8;
-	id = "SP-Sec"
-	},
-/obj/structure/window/reinforced/polarized{
-	id = "SP-Sec"
-	},
-/obj/structure/cable/green{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/plating,
 /area/template_noop)
 "ecg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
@@ -6478,88 +6295,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled,
 /area/survivalpod/superpose/HydroCave)
-"eyJ" = (
-/obj/machinery/smartfridge/survival_pod{
-	icon = 'icons/obj/vending.dmi';
-	icon_base = "smartfridge";
-	icon_contents = "boxes";
-	icon_state = "smartfridge";
-	name = "Advanced storage";
-	pixel_y = -1
-	},
-/obj/item/suit_cooling_unit,
-/obj/item/suit_cooling_unit,
-/obj/item/suit_cooling_unit,
-/obj/item/flashlight/maglight,
-/obj/item/flashlight/maglight,
-/obj/item/flashlight/maglight,
-/obj/fiftyspawner/glass,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/plastic,
-/obj/item/stack/material/plasteel{
-	amount = 30
-	},
-/obj/fiftyspawner/rods,
-/obj/fiftyspawner/rods,
-/obj/item/stack/material/glass/phoronrglass{
-	amount = 20
-	},
-/obj/item/storage/toolbox/mechanical{
-	pixel_y = 5
-	},
-/obj/item/storage/toolbox/mechanical{
-	pixel_y = 5
-	},
-/obj/item/storage/toolbox/electrical,
-/obj/item/storage/toolbox/emergency,
-/obj/item/storage/toolbox/emergency,
-/obj/item/cell/high,
-/obj/item/cell/high,
-/obj/item/cell/high,
-/obj/item/radio/off,
-/obj/item/radio/off,
-/obj/item/radio/off,
-/obj/item/radio/off,
-/obj/item/radio/off,
-/obj/item/radio/off,
-/obj/item/radio/off,
-/obj/item/cell/device/hyper,
-/obj/item/cell/device/hyper,
-/obj/item/cell/device/hyper,
-/obj/item/clothing/glasses/meson,
-/obj/item/clothing/glasses/meson,
-/obj/item/clothing/gloves/yellow,
-/obj/item/clothing/gloves/yellow,
-/obj/item/clothing/head/welding/demon,
-/obj/item/clothing/head/welding/knight,
-/obj/item/clothing/glasses/welding,
-/obj/random/tech_supply,
-/obj/random/tech_supply,
-/obj/random/tech_supply,
-/obj/random/tech_supply,
-/obj/random/tech_supply,
-/obj/random/maintenance/engineering,
-/obj/random/maintenance/engineering,
-/obj/random/maintenance/engineering,
-/obj/random/maintenance/engineering,
-/obj/random/maintenance/engineering,
-/obj/item/inducer,
-/obj/item/storage/belt/utility/full,
-/obj/item/storage/belt/utility/full,
-/obj/item/multitool,
-/obj/item/multitool,
-/obj/item/storage/briefcase/inflatable,
-/obj/item/storage/briefcase/inflatable,
-/obj/item/storage/briefcase/inflatable,
-/obj/item/megaphone,
-/obj/item/megaphone,
-/obj/item/extinguisher/atmo,
-/obj/item/extinguisher/atmo,
-/obj/item/suit_cooling_unit,
-/obj/item/suit_cooling_unit,
-/obj/item/storage/backpack/dufflebag/eng,
-/turf/simulated/shuttle/floor/voidcraft/dark,
-/area/template_noop)
 "eyY" = (
 /obj/structure/window/reinforced/polarized{
 	id = "SP-Hydro"
@@ -6601,14 +6336,6 @@
 "eAn" = (
 /turf/simulated/floor/outdoors/dirt,
 /area/survivalpod/superpose/DragonCave)
-"eAz" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/freezer/cold,
-/area/survivalpod)
 "eAS" = (
 /obj/structure/closet/secure_closet/guncabinet,
 /obj/item/gun/projectile/shotgun/pump/rifle/scoped,
@@ -7005,15 +6732,6 @@
 /obj/item/storage/toolbox/electrical,
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/HydroCave)
-"eMp" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/gear_painter,
-/turf/simulated/shuttle/wall/voidcraft/blue,
-/area/survivalpod)
 "eMS" = (
 /obj/effect/floor_decal/techfloor,
 /obj/fire,
@@ -7055,6 +6773,13 @@
 	},
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/template_noop)
+"eOV" = (
+/obj/structure/cable/cyan{
+	icon_state = "1-4"
+	},
+/obj/fire,
+/turf/simulated/floor,
+/area/survivalpod/superpose/CrashedInfestedShip)
 "eOW" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
@@ -7098,57 +6823,6 @@
 "eQk" = (
 /obj/structure/bed/chair,
 /turf/simulated/floor/outdoors/rocks,
-/area/template_noop)
-"eRd" = (
-/obj/structure/window/reinforced/survival_pod{
-	opacity = 1
-	},
-/obj/machinery/smartfridge/survival_pod{
-	icon = 'icons/obj/vending.dmi';
-	icon_base = "smartfridge";
-	icon_contents = "boxes";
-	icon_state = "smartfridge";
-	name = "Advanced storage";
-	pixel_y = -1
-	},
-/obj/item/stock_parts/micro_laser,
-/obj/item/stock_parts/micro_laser,
-/obj/item/stock_parts/matter_bin,
-/obj/item/stock_parts/matter_bin,
-/obj/item/stock_parts/console_screen,
-/obj/item/stock_parts/console_screen,
-/obj/item/storage/toolbox/mechanical{
-	pixel_x = -2;
-	pixel_y = -1
-	},
-/obj/item/storage/toolbox/mechanical{
-	pixel_x = -2;
-	pixel_y = -1
-	},
-/obj/item/clothing/gloves/sterile/latex,
-/obj/item/clothing/gloves/sterile/latex,
-/obj/item/storage/belt/utility,
-/obj/item/storage/belt/utility,
-/obj/item/cell/high,
-/obj/item/cell/high,
-/obj/item/stack/material/copper{
-	amount = 25
-	},
-/obj/item/stack/material/steel{
-	amount = 50
-	},
-/obj/item/stack/material/glass{
-	amount = 50;
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/item/clothing/mask/gas,
-/obj/item/clothing/mask/gas,
-/obj/item/disk/design_disk,
-/obj/item/disk/design_disk,
-/obj/item/disk/tech_disk,
-/obj/item/disk/tech_disk,
-/turf/simulated/shuttle/floor/voidcraft/light,
 /area/template_noop)
 "eRn" = (
 /obj/structure/disposalpipe/segment,
@@ -7274,18 +6948,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/survivalpod/superpose/OldHotel)
-"eVH" = (
-/obj/machinery/power/rad_collector,
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/obj/structure/cable/cyan{
-	d2 = 2;
-	icon_state = "0-2"
-	},
-/turf/simulated/floor,
-/area/survivalpod/superpose/CrashedInfestedShip)
 "eVP" = (
 /obj/machinery/power/apc/alarms_hidden{
 	dir = 1;
@@ -7364,34 +7026,6 @@
 /obj/machinery/door/airlock/external,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/FieldLab)
-"fak" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/polarized{
-	dir = 1;
-	id = "SP-Sec"
-	},
-/obj/structure/window/reinforced/polarized{
-	dir = 4;
-	id = "SP-Sec"
-	},
-/obj/structure/window/reinforced/polarized{
-	dir = 8;
-	id = "SP-Sec"
-	},
-/obj/structure/window/reinforced/polarized{
-	id = "SP-Sec"
-	},
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/obj/structure/cable/green{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/turf/simulated/floor/plating,
-/area/template_noop)
 "fam" = (
 /obj/machinery/button/remote/blast_door{
 	id = "Teshnomancer_frontdoor";
@@ -7565,14 +7199,6 @@
 	},
 /turf/simulated/shuttle/floor/alienplating,
 /area/survivalpod/superpose/CrashedInfestedShip)
-"fgs" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/survivalpod/superpose/ScienceShip)
 "fgz" = (
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techfloor,
@@ -7638,6 +7264,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/LoneHome)
+"fke" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/shuttle/plating/skipjack,
+/area/template_noop)
 "fkn" = (
 /obj/machinery/atmospherics/unary/engine/bigger{
 	dir = 4;
@@ -8023,20 +7655,6 @@
 /obj/item/flame/lighter,
 /turf/simulated/floor/outdoors/dirt,
 /area/survivalpod/superpose/WoodenCamp)
-"fyt" = (
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	dir = 4;
-	icon_state = "2-4"
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/turf/simulated/shuttle/wall/voidcraft/blue,
-/area/survivalpod)
 "fyJ" = (
 /obj/machinery/recharger/wallcharger{
 	pixel_y = 32
@@ -8320,6 +7938,12 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/template_noop)
+"fGT" = (
+/obj/item/reagent_containers/glass/rag,
+/obj/item/clothing/accessory/ring/engagement,
+/obj/structure/table/wooden_reinforced,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/LoneHome)
 "fHf" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -8428,6 +8052,24 @@
 	},
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
+"fJQ" = (
+/obj/structure/table/steel_reinforced,
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 4;
+	pixel_x = 24
+	},
+/obj/structure/cable/green,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
 "fJV" = (
 /obj/structure/bed/chair/backed_red,
 /turf/simulated/shuttle/floor/voidcraft/dark,
@@ -8489,6 +8131,31 @@
 	},
 /turf/simulated/floor/carpet,
 /area/survivalpod/superpose/TradingShip)
+"fMx" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/polarized{
+	dir = 1;
+	id = "SP-Sec"
+	},
+/obj/structure/window/reinforced/polarized{
+	dir = 4;
+	id = "SP-Sec"
+	},
+/obj/structure/window/reinforced/polarized{
+	dir = 8;
+	id = "SP-Sec"
+	},
+/obj/structure/window/reinforced/polarized{
+	id = "SP-Sec"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/plating,
+/area/template_noop)
 "fMT" = (
 /obj/structure/sign/redcross{
 	desc = "The Star of Life, a symbol of Medical Aid.";
@@ -8572,6 +8239,17 @@
 /obj/item/gps/computer,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/template_noop)
+"fQh" = (
+/obj/machinery/power/rad_collector,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/structure/cable/cyan{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor,
+/area/survivalpod/superpose/CrashedInfestedShip)
 "fQz" = (
 /obj/structure/closet/secure_closet/miner{
 	locked = 0
@@ -8849,20 +8527,6 @@
 	},
 /turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
-"gbD" = (
-/obj/machinery/power/apc{
-	cell_type = /obj/item/cell/hyper;
-	dir = 8;
-	name = "Unknown APC";
-	operating = 0;
-	pixel_x = -24
-	},
-/obj/structure/cable{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/turf/simulated/floor/tiled/steel_dirty,
-/area/survivalpod/superpose/FieldLab)
 "gcd" = (
 /obj/structure/prop/alien/pod/open,
 /obj/effect/floor_decal/industrial/warning{
@@ -8991,19 +8655,6 @@
 /obj/random/unidentified_medicine,
 /turf/simulated/floor/tiled,
 /area/survivalpod/superpose/LoneHome)
-"gjM" = (
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/turf/simulated/shuttle/wall/voidcraft/blue,
-/area/survivalpod)
 "gkK" = (
 /obj/machinery/atmospherics/portables_connector,
 /obj/machinery/portable_atmospherics/canister/empty/nitrogen,
@@ -9016,6 +8667,12 @@
 	},
 /turf/simulated/floor/carpet/tealcarpet,
 /area/template_noop)
+"gkU" = (
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/turf/simulated/shuttle/wall/voidcraft/blue,
+/area/survivalpod)
 "glG" = (
 /obj/machinery/portable_atmospherics/hydroponics,
 /turf/simulated/shuttle/floor/voidcraft/dark,
@@ -9192,6 +8849,14 @@
 	},
 /turf/simulated/floor/wood,
 /area/template_noop)
+"gsU" = (
+/obj/structure/cable/cyan{
+	icon_state = "2-4"
+	},
+/obj/random/maintenance/engineering,
+/obj/fire,
+/turf/simulated/floor,
+/area/survivalpod/superpose/CrashedInfestedShip)
 "gtC" = (
 /obj/structure/window/reinforced/tinted{
 	dir = 8
@@ -9546,6 +9211,149 @@
 	},
 /turf/simulated/shuttle/floor/purple,
 /area/survivalpod/superpose/ScienceShip)
+"gDk" = (
+/obj/machinery/smartfridge/survival_pod{
+	icon = 'icons/obj/vending.dmi';
+	icon_base = "smartfridge";
+	icon_contents = "boxes";
+	icon_state = "smartfridge";
+	name = "Advanced storage";
+	pixel_y = -1
+	},
+/obj/item/storage/toolbox/mechanical{
+	pixel_x = -2;
+	pixel_y = -1
+	},
+/obj/item/storage/toolbox/mechanical{
+	pixel_x = -2;
+	pixel_y = -1
+	},
+/obj/item/storage/toolbox/electrical{
+	pixel_x = 1;
+	pixel_y = 6
+	},
+/obj/item/storage/toolbox/electrical{
+	pixel_x = 1;
+	pixel_y = 6
+	},
+/obj/item/storage/belt/utility,
+/obj/item/storage/belt/utility,
+/obj/item/multitool{
+	pixel_x = 3
+	},
+/obj/item/multitool{
+	pixel_x = 3
+	},
+/obj/item/tool/crowbar,
+/obj/item/tool/crowbar,
+/obj/item/tool/crowbar,
+/obj/item/mmi,
+/obj/item/mmi,
+/obj/item/mmi,
+/obj/item/clothing/head/welding{
+	pixel_x = -3;
+	pixel_y = 5
+	},
+/obj/item/clothing/head/welding{
+	pixel_x = -3;
+	pixel_y = 5
+	},
+/obj/item/clothing/head/welding/demon,
+/obj/item/clothing/glasses/welding,
+/obj/item/clothing/glasses/welding,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/obj/item/healthanalyzer,
+/obj/item/healthanalyzer,
+/obj/item/flash/synthetic,
+/obj/item/flash/synthetic,
+/obj/item/flash/synthetic,
+/obj/item/storage/firstaid/regular{
+	empty = 1;
+	name = "First-Aid (empty)"
+	},
+/obj/item/storage/firstaid/regular{
+	empty = 1;
+	name = "First-Aid (empty)"
+	},
+/obj/item/cell/high{
+	pixel_x = 5;
+	pixel_y = -5
+	},
+/obj/item/cell/high{
+	pixel_x = 5;
+	pixel_y = -5
+	},
+/obj/item/assembly/prox_sensor{
+	pixel_x = -8;
+	pixel_y = 4
+	},
+/obj/item/assembly/prox_sensor{
+	pixel_x = -8;
+	pixel_y = 4
+	},
+/obj/item/stack/material/copper{
+	amount = 25
+	},
+/obj/item/stack/material/plastic{
+	max_amount = 25
+	},
+/obj/item/stack/material/plastic{
+	max_amount = 25
+	},
+/obj/item/stack/material/plasteel{
+	amount = 10
+	},
+/obj/item/stack/material/plasteel{
+	amount = 10
+	},
+/obj/item/stack/material/glass{
+	amount = 50;
+	pixel_x = -2;
+	pixel_y = 2
+	},
+/obj/item/stack/material/glass{
+	amount = 50;
+	pixel_x = -2;
+	pixel_y = 2
+	},
+/obj/item/stack/material/glass{
+	amount = 50;
+	pixel_x = -2;
+	pixel_y = 2
+	},
+/obj/item/stack/material/glass{
+	amount = 50;
+	pixel_x = -2;
+	pixel_y = 2
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/flash,
+/obj/item/flash,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas,
+/obj/item/implanter,
+/obj/item/implanter,
+/obj/item/implanter,
+/obj/item/storage/backpack/dufflebag/sci,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/template_noop)
 "gDA" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -9834,6 +9642,15 @@
 	temperature = 80
 	},
 /area/survivalpod/superpose/CrashedInfestedShip)
+"gKL" = (
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/turf/simulated/shuttle/wall/voidcraft/blue,
+/area/survivalpod)
 "gKR" = (
 /obj/machinery/button/remote/airlock/survival_pod{
 	dir = 10;
@@ -9934,6 +9751,12 @@
 	color = "grey"
 	},
 /area/survivalpod/superpose/CultShip)
+"gRd" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/shuttle/wall/voidcraft/blue,
+/area/survivalpod)
 "gSa" = (
 /obj/machinery/smartfridge/survival_pod,
 /obj/item/storage/mre/random,
@@ -10149,6 +9972,17 @@
 	},
 /turf/simulated/floor/wood,
 /area/template_noop)
+"har" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/vending/dinnerware{
+	categories = 3;
+	req_log_access = 300;
+	req_one_access = list(300)
+	},
+/turf/simulated/shuttle/wall/voidcraft/blue,
+/area/survivalpod)
 "haB" = (
 /obj/effect/floor_decal/techfloor,
 /obj/machinery/light/poi{
@@ -10617,15 +10451,26 @@
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/template_noop)
-"hrp" = (
-/obj/machinery/atmospherics/pipe/simple/hidden,
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
+"hqO" = (
+/obj/structure/table/steel_reinforced,
+/obj/structure/cable/green{
+	icon_state = "1-2"
 	},
-/turf/simulated/shuttle/wall/voidcraft/blue,
-/area/survivalpod)
+/obj/random/maintenance,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 4
+	},
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/machinery/alarm/alarms_hidden{
+	dir = 8;
+	pixel_x = 22
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
 "hrX" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 1
@@ -10754,19 +10599,6 @@
 	},
 /turf/simulated/floor/carpet,
 /area/survivalpod/superpose/TradingShip)
-"hxz" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/shuttle/floor/voidcraft,
-/area/template_noop)
 "hyu" = (
 /obj/structure/table/standard,
 /obj/item/book/manual/chef_recipes,
@@ -11174,6 +11006,21 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/wall/r_wall,
 /area/survivalpod/superpose/HydroCave)
+"hLy" = (
+/obj/item/tape/random,
+/obj/item/taperecorder,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/item/paper_bin{
+	pixel_x = -3;
+	pixel_y = 7
+	},
+/obj/item/pen,
+/obj/item/pen,
+/obj/structure/table/survival_pod,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/template_noop)
 "hMg" = (
 /obj/structure/table/survival_pod,
 /obj/machinery/recharger{
@@ -11185,6 +11032,88 @@
 	pixel_y = 15
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
+/area/template_noop)
+"hMm" = (
+/obj/machinery/smartfridge/survival_pod{
+	icon = 'icons/obj/vending.dmi';
+	icon_base = "smartfridge";
+	icon_contents = "boxes";
+	icon_state = "smartfridge";
+	name = "Advanced storage";
+	pixel_y = -1
+	},
+/obj/item/suit_cooling_unit,
+/obj/item/suit_cooling_unit,
+/obj/item/suit_cooling_unit,
+/obj/item/flashlight/maglight,
+/obj/item/flashlight/maglight,
+/obj/item/flashlight/maglight,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/plastic,
+/obj/item/stack/material/plasteel{
+	amount = 30
+	},
+/obj/fiftyspawner/rods,
+/obj/fiftyspawner/rods,
+/obj/item/stack/material/glass/phoronrglass{
+	amount = 20
+	},
+/obj/item/storage/toolbox/mechanical{
+	pixel_y = 5
+	},
+/obj/item/storage/toolbox/mechanical{
+	pixel_y = 5
+	},
+/obj/item/storage/toolbox/electrical,
+/obj/item/storage/toolbox/emergency,
+/obj/item/storage/toolbox/emergency,
+/obj/item/cell/high,
+/obj/item/cell/high,
+/obj/item/cell/high,
+/obj/item/radio/off,
+/obj/item/radio/off,
+/obj/item/radio/off,
+/obj/item/radio/off,
+/obj/item/radio/off,
+/obj/item/radio/off,
+/obj/item/radio/off,
+/obj/item/cell/device/hyper,
+/obj/item/cell/device/hyper,
+/obj/item/cell/device/hyper,
+/obj/item/clothing/glasses/meson,
+/obj/item/clothing/glasses/meson,
+/obj/item/clothing/gloves/yellow,
+/obj/item/clothing/gloves/yellow,
+/obj/item/clothing/head/welding/demon,
+/obj/item/clothing/head/welding/knight,
+/obj/item/clothing/glasses/welding,
+/obj/random/tech_supply,
+/obj/random/tech_supply,
+/obj/random/tech_supply,
+/obj/random/tech_supply,
+/obj/random/tech_supply,
+/obj/random/maintenance/engineering,
+/obj/random/maintenance/engineering,
+/obj/random/maintenance/engineering,
+/obj/random/maintenance/engineering,
+/obj/random/maintenance/engineering,
+/obj/item/inducer,
+/obj/item/storage/belt/utility/full,
+/obj/item/storage/belt/utility/full,
+/obj/item/multitool,
+/obj/item/multitool,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/megaphone,
+/obj/item/megaphone,
+/obj/item/extinguisher/atmo,
+/obj/item/extinguisher/atmo,
+/obj/item/suit_cooling_unit,
+/obj/item/suit_cooling_unit,
+/obj/item/storage/backpack/dufflebag/eng,
+/turf/simulated/shuttle/floor/voidcraft/dark,
 /area/template_noop)
 "hMS" = (
 /obj/effect/catwalk_plated/dark,
@@ -11748,14 +11677,6 @@
 /obj/item/seeds/ambrosiadeusseed,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/survivalpod/superpose/MethLab)
-"iiA" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/shuttle/wall/voidcraft/blue,
-/area/survivalpod)
 "iiE" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 6
@@ -11832,6 +11753,15 @@
 /obj/item/material/kitchen/rollingpin,
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/template_noop)
+"inc" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
 "ino" = (
 /obj/structure/sign/periodic,
 /turf/simulated/wall/wood,
@@ -11971,6 +11901,31 @@
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/red,
 /area/survivalpod/superpose/HydroCave)
+"isx" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/polarized{
+	dir = 1;
+	id = "SP-Sec"
+	},
+/obj/structure/window/reinforced/polarized{
+	dir = 4;
+	id = "SP-Sec"
+	},
+/obj/structure/window/reinforced/polarized{
+	dir = 8;
+	id = "SP-Sec"
+	},
+/obj/structure/window/reinforced/polarized{
+	id = "SP-Sec"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/plating,
+/area/template_noop)
 "isO" = (
 /obj/structure/fence/corner{
 	dir = 10
@@ -11990,28 +11945,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/HydroCave)
-"itA" = (
-/obj/structure/table/steel_reinforced,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/random/maintenance,
-/obj/random/maintenance,
-/obj/random/maintenance,
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 4
-	},
-/obj/random/maintenance/research,
-/obj/random/maintenance/research,
-/obj/random/maintenance/research,
-/obj/machinery/alarm/alarms_hidden{
-	dir = 8;
-	pixel_x = 22
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/survivalpod/superpose/ScienceShip)
 "itF" = (
 /obj/machinery/light{
 	dir = 1
@@ -12145,6 +12078,12 @@
 /obj/item/material/shard,
 /turf/simulated/floor/outdoors/grass/heavy,
 /area/survivalpod/superpose/LoneHome)
+"iBo" = (
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
 "iBE" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/clothing/under/suit_jacket,
@@ -12159,16 +12098,6 @@
 /obj/item/extraction_pack,
 /turf/simulated/floor/tiled/techmaint,
 /area/template_noop)
-"iCM" = (
-/obj/machinery/power/port_gen/pacman,
-/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
-/obj/structure/cable{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/shuttle/plating,
-/area/survivalpod/superpose/ScienceShip)
 "iDe" = (
 /obj/item/pen,
 /obj/effect/decal/cleanable/dirt,
@@ -12494,20 +12423,6 @@
 /obj/structure/simple_door/cult,
 /turf/template_noop,
 /area/template_noop)
-"iQm" = (
-/obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/fire,
-/turf/simulated/floor,
-/area/survivalpod/superpose/CrashedInfestedShip)
 "iQG" = (
 /obj/random/trash,
 /turf/simulated/floor/tiled/steel_dirty,
@@ -12579,11 +12494,6 @@
 /obj/item/tape_roll,
 /turf/simulated/floor/tiled/techmaint,
 /area/template_noop)
-"iTI" = (
-/turf/simulated/floor/flesh/colour{
-	color = "red"
-	},
-/area/template_noop)
 "iUt" = (
 /obj/item/reagent_containers/food/condiment/enzyme,
 /obj/structure/window/reinforced/polarized{
@@ -12644,6 +12554,17 @@
 	},
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/ScienceShip)
+"iXZ" = (
+/obj/structure/cable/cyan{
+	icon_state = "2-4"
+	},
+/obj/structure/cable/cyan{
+	icon_state = "4-8"
+	},
+/obj/fire,
+/obj/fire,
+/turf/simulated/floor,
+/area/survivalpod/superpose/CrashedInfestedShip)
 "iYk" = (
 /obj/item/tool/wrench{
 	pixel_x = 10;
@@ -13373,6 +13294,18 @@
 /obj/effect/floor_decal/techfloor,
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/CrashedInfestedShip)
+"jwB" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/turf/simulated/shuttle/wall/voidcraft/hard_corner/blue,
+/area/survivalpod)
 "jxl" = (
 /obj/item/storage/bag/trash,
 /turf/simulated/floor/tiled/techmaint,
@@ -13381,21 +13314,6 @@
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/Dinner)
-"jyy" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/power/smes/buildable{
-	icon = 'icons/obj/alien_smes.dmi';
-	icon_state = "unit";
-	input_level = 950000;
-	name = "Alien Royal Capacitor";
-	output_level = 950000
-	},
-/obj/structure/cable/cyan{
-	d2 = 2;
-	icon_state = "0-2"
-	},
-/turf/simulated/floor,
-/area/survivalpod/superpose/CrashedInfestedShip)
 "jzc" = (
 /turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
@@ -13504,19 +13422,6 @@
 /obj/structure/flora/tree/sif,
 /turf/template_noop,
 /area/survivalpod/superpose/Dinner)
-"jCG" = (
-/obj/effect/floor_decal/industrial/warning,
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
-/obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/fire,
-/turf/simulated/floor,
-/area/survivalpod/superpose/CrashedInfestedShip)
 "jCU" = (
 /obj/structure/bookcase/bookcart,
 /turf/simulated/floor/wood,
@@ -13681,6 +13586,16 @@
 /obj/item/bedsheet/rd,
 /turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
+"jIB" = (
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/obj/effect/floor_decal/industrial/warning/corner,
+/obj/machinery/gear_dispenser/suit/ert{
+	req_one_access = null
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
 "jJt" = (
 /obj/machinery/light{
 	dir = 8;
@@ -13931,6 +13846,15 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating,
+/area/template_noop)
+"jTc" = (
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/shuttle/floor/voidcraft,
 /area/template_noop)
 "jTe" = (
 /obj/structure/grille/cult,
@@ -14380,18 +14304,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/CrashedInfestedShip)
-"kgy" = (
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/obj/effect/floor_decal/industrial/warning/corner,
-/obj/machinery/gear_dispenser/suit/ert{
-	req_one_access = null
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/survivalpod/superpose/ScienceShip)
 "kgQ" = (
 /obj/item/flashlight/color/yellow,
 /turf/simulated/floor/tiled/techmaint,
@@ -14564,14 +14476,6 @@
 /obj/effect/floor_decal/industrial/warning/full,
 /turf/simulated/floor/tiled/techmaint,
 /area/template_noop)
-"kmz" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/turf/simulated/shuttle/wall/voidcraft/blue,
-/area/survivalpod)
 "kmR" = (
 /obj/item/fbp_backup_cell,
 /turf/simulated/floor/tiled/techmaint,
@@ -14775,26 +14679,6 @@
 /obj/machinery/light/small,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/HydroCave)
-"krS" = (
-/obj/structure/table/steel_reinforced,
-/obj/machinery/power/apc/alarms_hidden{
-	dir = 4;
-	pixel_x = 24
-	},
-/obj/structure/cable/green,
-/obj/random/maintenance,
-/obj/random/maintenance,
-/obj/random/maintenance,
-/obj/random/maintenance/research,
-/obj/random/maintenance/research,
-/obj/random/maintenance/research,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/survivalpod/superpose/ScienceShip)
 "krT" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/closet,
@@ -15073,15 +14957,6 @@
 /obj/item/clothing/accessory/medal/bronze_heart,
 /turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
-"kEc" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden,
-/turf/simulated/shuttle/wall/voidcraft/blue,
-/area/survivalpod)
 "kEJ" = (
 /obj/structure/window/reinforced/survival_pod{
 	opacity = 1
@@ -15399,6 +15274,12 @@
 	},
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/template_noop)
+"kXM" = (
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/template_noop)
 "kXY" = (
 /turf/simulated/floor/wood/broken,
 /area/survivalpod/superpose/OldHotel)
@@ -15612,14 +15493,6 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/template_noop)
-"lcC" = (
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/turf/simulated/shuttle/wall/voidcraft/hard_corner/blue,
-/area/survivalpod)
 "lcD" = (
 /obj/item/cell/device/weapon{
 	pixel_x = -2;
@@ -16047,6 +15920,149 @@
 	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/HydroCave)
+"lnr" = (
+/obj/machinery/smartfridge/survival_pod{
+	icon = 'icons/obj/vending.dmi';
+	icon_base = "smartfridge";
+	icon_contents = "boxes";
+	icon_state = "smartfridge";
+	name = "Advanced storage";
+	pixel_y = -1
+	},
+/obj/item/storage/toolbox/mechanical{
+	pixel_x = -2;
+	pixel_y = -1
+	},
+/obj/item/storage/toolbox/mechanical{
+	pixel_x = -2;
+	pixel_y = -1
+	},
+/obj/item/storage/toolbox/electrical{
+	pixel_x = 1;
+	pixel_y = 6
+	},
+/obj/item/storage/toolbox/electrical{
+	pixel_x = 1;
+	pixel_y = 6
+	},
+/obj/item/storage/belt/utility,
+/obj/item/storage/belt/utility,
+/obj/item/multitool{
+	pixel_x = 3
+	},
+/obj/item/multitool{
+	pixel_x = 3
+	},
+/obj/item/tool/crowbar,
+/obj/item/tool/crowbar,
+/obj/item/tool/crowbar,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/item/mmi,
+/obj/item/mmi,
+/obj/item/mmi,
+/obj/item/clothing/head/welding{
+	pixel_x = -3;
+	pixel_y = 5
+	},
+/obj/item/clothing/head/welding{
+	pixel_x = -3;
+	pixel_y = 5
+	},
+/obj/item/clothing/head/welding/demon,
+/obj/item/clothing/glasses/welding,
+/obj/item/clothing/glasses/welding,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/obj/item/healthanalyzer,
+/obj/item/healthanalyzer,
+/obj/item/flash/synthetic,
+/obj/item/flash/synthetic,
+/obj/item/flash/synthetic,
+/obj/item/storage/firstaid/regular{
+	empty = 1;
+	name = "First-Aid (empty)"
+	},
+/obj/item/storage/firstaid/regular{
+	empty = 1;
+	name = "First-Aid (empty)"
+	},
+/obj/item/cell/high{
+	pixel_x = 5;
+	pixel_y = -5
+	},
+/obj/item/cell/high{
+	pixel_x = 5;
+	pixel_y = -5
+	},
+/obj/item/assembly/prox_sensor{
+	pixel_x = -8;
+	pixel_y = 4
+	},
+/obj/item/assembly/prox_sensor{
+	pixel_x = -8;
+	pixel_y = 4
+	},
+/obj/item/stack/material/copper{
+	amount = 25
+	},
+/obj/item/stack/material/plastic{
+	max_amount = 25
+	},
+/obj/item/stack/material/plastic{
+	max_amount = 25
+	},
+/obj/item/stack/material/plasteel{
+	amount = 10
+	},
+/obj/item/stack/material/plasteel{
+	amount = 10
+	},
+/obj/item/stack/material/glass{
+	amount = 50;
+	pixel_x = -2;
+	pixel_y = 2
+	},
+/obj/item/stack/material/glass{
+	amount = 50;
+	pixel_x = -2;
+	pixel_y = 2
+	},
+/obj/item/stack/material/glass{
+	amount = 50;
+	pixel_x = -2;
+	pixel_y = 2
+	},
+/obj/item/stack/material/glass{
+	amount = 50;
+	pixel_x = -2;
+	pixel_y = 2
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/flash,
+/obj/item/flash,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas,
+/obj/item/implanter,
+/obj/item/implanter,
+/obj/item/implanter,
+/obj/item/storage/backpack/dufflebag/sci,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/template_noop)
 "lnv" = (
 /obj/machinery/newscaster{
 	pixel_x = 30
@@ -16081,17 +16097,6 @@
 /obj/fiftyspawner/steel,
 /turf/simulated/floor,
 /area/survivalpod/superpose/HydroCave)
-"lop" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/survivalpod/superpose/ScienceShip)
 "los" = (
 /obj/structure/closet/crate/secure/science{
 	icon_state = "scisecurecrateopen";
@@ -16297,17 +16302,6 @@
 	icon_state = "floor_yellow"
 	},
 /area/survivalpod/superpose/CrashedQurantineShip)
-"lxQ" = (
-/obj/machinery/power/apc/alarms_hidden{
-	dir = 1;
-	pixel_y = 20
-	},
-/obj/structure/cable/green{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/turf/simulated/floor,
-/area/survivalpod/superpose/WoodenCamp)
 "lxX" = (
 /obj/item/deck/cah{
 	pixel_x = 2;
@@ -16385,6 +16379,15 @@
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/Dinner)
+"lBb" = (
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/shuttle/wall/voidcraft/blue,
+/area/survivalpod)
 "lBe" = (
 /obj/structure/table/hardwoodtable,
 /obj/structure/stripper_pole{
@@ -16542,6 +16545,18 @@
 /obj/machinery/mech_recharger,
 /turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/ScienceShip)
+"lES" = (
+/obj/structure/cable/cyan{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/cyan{
+	icon_state = "1-8"
+	},
+/obj/random/maintenance/engineering,
+/obj/fire,
+/obj/fire,
+/turf/simulated/floor,
+/area/survivalpod/superpose/CrashedInfestedShip)
 "lFp" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 8
@@ -16705,21 +16720,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/ScienceShip)
-"lLH" = (
-/obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/fire,
-/obj/fire,
-/turf/simulated/floor,
-/area/survivalpod/superpose/CrashedInfestedShip)
 "lMe" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 4
@@ -17499,6 +17499,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/HydroCave)
+"mlG" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/shuttle/wall/voidcraft/blue,
+/area/survivalpod)
 "mlI" = (
 /obj/structure/railing/grey{
 	dir = 1
@@ -17532,25 +17539,6 @@
 /obj/fire,
 /turf/simulated/floor/airless,
 /area/survivalpod/superpose/CrashedInfestedShip)
-"mmX" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	dir = 4;
-	icon_state = "2-4"
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/turf/simulated/shuttle/wall/voidcraft/hard_corner/blue,
-/area/survivalpod)
 "mnz" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1;
@@ -17694,17 +17682,6 @@
 /obj/machinery/scale,
 /turf/simulated/floor/boxing/gym,
 /area/template_noop)
-"mss" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/survivalpod/superpose/ScienceShip)
 "msN" = (
 /obj/structure/table/darkglass,
 /obj/random/maintenance/clean,
@@ -18167,29 +18144,6 @@
 "mNm" = (
 /turf/simulated/floor/carpet/oracarpet,
 /area/survivalpod/superpose/OldHotel)
-"mNs" = (
-/obj/machinery/door/airlock/glass_medical/polarized{
-	hackProof = 1;
-	id_tag = "Teshnomancer_Private_doors";
-	id_tint = "tesh_private_tint";
-	maxhealth = 8000000000;
-	name = "Electrochromic Airlock";
-	normalspeed = 0;
-	req_one_access = list(300);
-	secured_wires = 1
-	},
-/obj/machinery/door/blast/puzzle{
-	desc = "A large, virtually indestructible door. This one is a lot tougher then most other blast doors. Seems a little excessive for a privacy shutter...";
-	id = "Teshnomancer_Private_blastdoors";
-	name = "Privacy blast door"
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/shuttle/floor/voidcraft/dark,
-/area/survivalpod)
 "mNw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -18266,23 +18220,6 @@
 	},
 /turf/simulated/floor/carpet/sblucarpet,
 /area/template_noop)
-"mPa" = (
-/obj/effect/floor_decal/techfloor{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4
-	},
-/obj/machinery/power/apc/alarms_hidden{
-	dir = 1;
-	pixel_y = 20
-	},
-/obj/structure/cable/green{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/turf/simulated/shuttle/plating/skipjack,
-/area/template_noop)
 "mPj" = (
 /obj/machinery/atmospherics/binary/pump/on{
 	dir = 8;
@@ -18324,6 +18261,13 @@
 	},
 /turf/simulated/floor,
 /area/survivalpod/superpose/CrashedInfestedShip)
+"mQi" = (
+/obj/structure/kitchenspike,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/freezer/cold,
+/area/survivalpod)
 "mQj" = (
 /obj/structure/table/glass,
 /turf/simulated/floor/tiled/dark,
@@ -18485,6 +18429,16 @@
 	},
 /turf/simulated/floor/carpet/sblucarpet,
 /area/template_noop)
+"mXv" = (
+/obj/machinery/power/thermoregulator/southerncross{
+	dir = 4;
+	pixel_x = -28
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/survivalpod)
 "mXK" = (
 /obj/structure/table/woodentable,
 /obj/item/card/id/casino{
@@ -18610,6 +18564,15 @@
 /obj/structure/bed/chair/oldsofa/left,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/LoneHome)
+"naX" = (
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/turf/simulated/shuttle/wall/voidcraft/blue,
+/area/survivalpod)
 "nbf" = (
 /obj/machinery/door/airlock/hatch{
 	icon_state = "door_locked";
@@ -18738,18 +18701,6 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled,
 /area/survivalpod/superpose/HydroCave)
-"nhv" = (
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
-	},
-/turf/simulated/shuttle/wall/voidcraft/blue,
-/area/survivalpod)
 "nhB" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -19122,14 +19073,6 @@
 	},
 /turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
-"nxC" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/survivalpod/superpose/ScienceShip)
 "nxL" = (
 /obj/fire,
 /obj/fire,
@@ -19431,6 +19374,16 @@
 	},
 /turf/simulated/shuttle/floor/alien,
 /area/survivalpod/superpose/CrashedInfestedShip)
+"nHN" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/shuttle/wall/voidcraft/blue,
+/area/survivalpod)
 "nIc" = (
 /obj/structure/table/reinforced,
 /obj/item/folder/blue,
@@ -19468,6 +19421,13 @@
 	},
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
+"nIE" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/turf/simulated/shuttle/wall/voidcraft/blue,
+/area/survivalpod)
 "nJH" = (
 /obj/machinery/atmospherics/unary/vent_pump{
 	dir = 1;
@@ -19637,17 +19597,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/HydroCave)
-"nPH" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/shuttle/wall/voidcraft/blue,
-/area/survivalpod)
 "nRd" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 6
@@ -19752,6 +19701,29 @@
 	},
 /turf/simulated/floor/plating,
 /area/template_noop)
+"nYg" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock/voidcraft/survival_pod{
+	hackProof = 1;
+	id_tag = "Teshnomancer_doors";
+	maxhealth = 8000000000;
+	normalspeed = 0;
+	req_one_access = list(300);
+	secured_wires = 1
+	},
+/obj/machinery/door/blast/puzzle{
+	desc = "A large, virtually indestructible door. This one is a lot tougher then most other blast doors.";
+	id = "Teshnomancer_innerdoor";
+	name = "Heavy Duty blast door"
+	},
+/obj/structure/fans/hardlight/colorable{
+	color = "#99ccff";
+	light_color = "#99ccff"
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/survivalpod)
 "nYn" = (
 /obj/item/melee/cultblade,
 /obj/structure/table/fancyblack,
@@ -19768,17 +19740,6 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/survivalpod/superpose/ScienceShip)
-"nYL" = (
-/obj/machinery/power/apc/alarms_hidden{
-	dir = 1;
-	pixel_y = 20
-	},
-/obj/structure/cable/green{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/turf/simulated/shuttle/floor/voidcraft,
-/area/template_noop)
 "nZb" = (
 /obj/machinery/iv_drip,
 /obj/machinery/iv_drip,
@@ -19839,17 +19800,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/LoneHome)
-"obZ" = (
-/obj/machinery/power/thermoregulator/southerncross{
-	dir = 4;
-	pixel_x = -28
-	},
-/obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/turf/simulated/floor/lino,
-/area/survivalpod)
 "ocb" = (
 /obj/item/tool/crowbar/red,
 /turf/simulated/shuttle/floor{
@@ -20506,6 +20456,20 @@
 /obj/structure/table/fancyblack,
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/survivalpod/superpose/CultShip)
+"ozt" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/power/smes/buildable{
+	icon = 'icons/obj/alien_smes.dmi';
+	icon_state = "unit";
+	input_level = 950000;
+	name = "Alien Royal Capacitor";
+	output_level = 950000
+	},
+/obj/structure/cable/cyan{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor,
+/area/survivalpod/superpose/CrashedInfestedShip)
 "ozy" = (
 /obj/structure/toilet{
 	pixel_y = 12
@@ -20570,6 +20534,15 @@
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/template_noop)
+"oBY" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/shuttle/wall/voidcraft/blue,
+/area/survivalpod)
 "oCA" = (
 /obj/machinery/computer/security/abductor{
 	icon_screen = null
@@ -21090,15 +21063,32 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/ScienceShip)
-"oKt" = (
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	dir = 4;
+"oKr" = (
+/obj/structure/closet/walllocker_double/kitchen/north{
+	dir = 8;
+	name = "Ration Cabinet";
+	pixel_x = -32;
+	pixel_y = 0
+	},
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/radio{
+	pixel_x = -5;
+	pixel_y = 5
+	},
+/obj/item/radio{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/obj/structure/cable/green{
 	icon_state = "2-4"
 	},
-/turf/simulated/shuttle/wall/voidcraft/blue,
-/area/survivalpod)
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
 "oKK" = (
 /turf/simulated/floor/cult{
 	icon_state = "cult-narsie"
@@ -21394,6 +21384,12 @@
 	},
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/template_noop)
+"oTh" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
 "oTl" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/carpet/sblucarpet,
@@ -21407,22 +21403,6 @@
 /obj/item/starcaster_news,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
-"oTF" = (
-/obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/obj/random/maintenance/engineering,
-/obj/fire,
-/obj/fire,
-/turf/simulated/floor,
-/area/survivalpod/superpose/CrashedInfestedShip)
 "oTP" = (
 /obj/structure/railing/grey{
 	dir = 1
@@ -21645,6 +21625,12 @@
 	dir = 4
 	},
 /turf/simulated/shuttle/floor/purple,
+/area/survivalpod)
+"pbV" = (
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/turf/simulated/shuttle/wall/voidcraft/hard_corner/blue,
 /area/survivalpod)
 "pcj" = (
 /obj/structure/fans,
@@ -21962,19 +21948,6 @@
 	},
 /turf/simulated/shuttle/floor/purple,
 /area/survivalpod)
-"pkz" = (
-/obj/structure/table/steel,
-/obj/machinery/cell_charger,
-/obj/item/cell/high{
-	pixel_x = 2;
-	pixel_y = 4
-	},
-/obj/item/cell/high,
-/obj/machinery/computer/security/telescreen/entertainment{
-	pixel_y = 28
-	},
-/turf/simulated/shuttle/floor/voidcraft/dark,
-/area/template_noop)
 "pkC" = (
 /obj/machinery/vending/foodfish,
 /turf/simulated/shuttle/floor/black,
@@ -24220,6 +24193,19 @@
 /obj/item/survivalcapsule/superpose,
 /turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
+"pLO" = (
+/obj/structure/table/steel,
+/obj/machinery/cell_charger,
+/obj/item/cell/high{
+	pixel_x = 2;
+	pixel_y = 4
+	},
+/obj/item/cell/high,
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_y = 28
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/template_noop)
 "pLQ" = (
 /turf/simulated/wall/wood,
 /area/template_noop)
@@ -24316,31 +24302,6 @@
 /obj/item/bedsheet/captain,
 /turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
-"pQW" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/door/airlock/voidcraft/survival_pod{
-	hackProof = 1;
-	id_tag = "Teshnomancer_doors";
-	maxhealth = 8000000000;
-	normalspeed = 0;
-	req_one_access = list(300);
-	secured_wires = 1
-	},
-/obj/machinery/door/blast/puzzle{
-	desc = "A large, virtually indestructible door. This one is a lot tougher then most other blast doors.";
-	id = "Teshnomancer_innerdoor";
-	name = "Heavy Duty blast door"
-	},
-/obj/structure/fans/hardlight/colorable{
-	color = "#99ccff";
-	light_color = "#99ccff"
-	},
-/turf/simulated/shuttle/floor/voidcraft/dark,
-/area/survivalpod)
 "pRb" = (
 /obj/effect/floor_decal/industrial/danger,
 /turf/simulated/floor/tiled,
@@ -24438,6 +24399,57 @@
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/wood,
 /area/template_noop)
+"pUy" = (
+/obj/structure/window/reinforced/survival_pod{
+	opacity = 1
+	},
+/obj/machinery/smartfridge/survival_pod{
+	icon = 'icons/obj/vending.dmi';
+	icon_base = "smartfridge";
+	icon_contents = "boxes";
+	icon_state = "smartfridge";
+	name = "Advanced storage";
+	pixel_y = -1
+	},
+/obj/item/stock_parts/micro_laser,
+/obj/item/stock_parts/micro_laser,
+/obj/item/stock_parts/matter_bin,
+/obj/item/stock_parts/matter_bin,
+/obj/item/stock_parts/console_screen,
+/obj/item/stock_parts/console_screen,
+/obj/item/storage/toolbox/mechanical{
+	pixel_x = -2;
+	pixel_y = -1
+	},
+/obj/item/storage/toolbox/mechanical{
+	pixel_x = -2;
+	pixel_y = -1
+	},
+/obj/item/clothing/gloves/sterile/latex,
+/obj/item/clothing/gloves/sterile/latex,
+/obj/item/storage/belt/utility,
+/obj/item/storage/belt/utility,
+/obj/item/cell/high,
+/obj/item/cell/high,
+/obj/item/stack/material/copper{
+	amount = 25
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50;
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas,
+/obj/item/disk/design_disk,
+/obj/item/disk/design_disk,
+/obj/item/disk/tech_disk,
+/obj/item/disk/tech_disk,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/template_noop)
 "pUP" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/table/standard,
@@ -24515,6 +24527,16 @@
 	dir = 4
 	},
 /turf/simulated/shuttle/floor/white,
+/area/survivalpod)
+"pXQ" = (
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/shuttle/wall/voidcraft/blue,
 /area/survivalpod)
 "pYg" = (
 /obj/machinery/door/window/survival_pod{
@@ -24633,19 +24655,6 @@
 	},
 /turf/simulated/floor/outdoors/dirt,
 /area/survivalpod/superpose/MethLab)
-"qdm" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/vending/dinnerware{
-	categories = 3;
-	req_log_access = 300;
-	req_one_access = list(300)
-	},
-/turf/simulated/shuttle/wall/voidcraft/blue,
-/area/survivalpod)
 "qdH" = (
 /obj/structure/flora/bboulder1,
 /turf/simulated/floor/outdoors/rocks,
@@ -24835,6 +24844,16 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/template_noop)
+"qkt" = (
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 1;
+	pixel_y = 20
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor,
+/area/survivalpod/superpose/WoodenCamp)
 "qkA" = (
 /obj/machinery/washing_machine{
 	pixel_x = 8;
@@ -24846,28 +24865,6 @@
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/template_noop)
-"qkX" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/shuttle/wall/voidcraft/blue,
-/area/survivalpod)
-"qkY" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
-/obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor,
-/area/survivalpod/superpose/CrashedInfestedShip)
 "qlo" = (
 /obj/structure/closet/crate/wooden,
 /obj/item/reagent_containers/food/drinks/bottle/rum,
@@ -25162,20 +25159,22 @@
 /obj/random/soap,
 /turf/simulated/floor/tiled/techmaint,
 /area/template_noop)
-"qvQ" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/survivalpod/superpose/ScienceShip)
 "qwe" = (
 /obj/structure/fans/tiny,
 /obj/effect/floor_decal/industrial/danger/full,
 /obj/machinery/door/airlock/voidcraft/survival_pod,
 /turf/simulated/floor/tiled/techmaint,
 /area/template_noop)
+"qwu" = (
+/obj/structure/cable/cyan{
+	icon_state = "2-4"
+	},
+/obj/structure/cable/cyan{
+	icon_state = "4-8"
+	},
+/obj/fire,
+/turf/simulated/floor,
+/area/survivalpod/superpose/CrashedInfestedShip)
 "qwz" = (
 /obj/machinery/recharge_station,
 /turf/simulated/floor/tiled/freezer,
@@ -25459,6 +25458,23 @@
 /obj/item/fulton_core,
 /turf/simulated/floor/tiled/techmaint,
 /area/template_noop)
+"qFp" = (
+/obj/item/clothing/accessory/ring/material/gold,
+/obj/item/clothing/ears/earring/stud/gold,
+/obj/item/gun/projectile/deagle/gold{
+	pixel_x = -11;
+	pixel_y = -22
+	},
+/obj/item/coin/gold{
+	pixel_x = -7;
+	pixel_y = -2
+	},
+/obj/item/coin/gold{
+	pixel_x = 5;
+	pixel_y = 7
+	},
+/turf/simulated/floor/outdoors/newdirt,
+/area/survivalpod/superpose/DragonCave)
 "qFs" = (
 /obj/machinery/button/remote/blast_door{
 	dir = 8;
@@ -25907,19 +25923,6 @@
 /obj/machinery/shieldgen,
 /turf/simulated/floor/plating,
 /area/template_noop)
-"rbS" = (
-/obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/turf/simulated/floor,
-/area/survivalpod/superpose/CrashedInfestedShip)
 "rbW" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1;
@@ -26120,14 +26123,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/ScienceShip)
-"rkb" = (
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/turf/simulated/shuttle/wall/voidcraft/blue,
-/area/survivalpod)
 "rki" = (
 /obj/structure/closet/secure_closet/scientist,
 /obj/item/gps/science,
@@ -26163,6 +26158,15 @@
 "rlf" = (
 /turf/simulated/floor/tiled/eris/cafe,
 /area/survivalpod/superpose/GrandLibrary)
+"rli" = (
+/obj/structure/cable/cyan{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/cyan{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor,
+/area/survivalpod/superpose/CrashedInfestedShip)
 "rlm" = (
 /turf/simulated/gore,
 /area/template_noop)
@@ -26310,17 +26314,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/template_noop)
-"rqq" = (
-/obj/machinery/power/thermoregulator/southerncross{
-	dir = 4;
-	pixel_x = -28
-	},
-/obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/turf/simulated/shuttle/floor/voidcraft,
-/area/survivalpod)
 "rqG" = (
 /obj/machinery/light{
 	dir = 4
@@ -26668,6 +26661,12 @@
 	},
 /turf/template_noop,
 /area/template_noop)
+"rMG" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/shuttle/wall/voidcraft/blue,
+/area/survivalpod)
 "rMI" = (
 /obj/machinery/newscaster{
 	pixel_x = 30
@@ -27008,6 +27007,12 @@
 /obj/structure/grille,
 /turf/template_noop,
 /area/template_noop)
+"rZV" = (
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/turf/simulated/shuttle/wall/voidcraft/blue,
+/area/survivalpod)
 "saB" = (
 /obj/item/material/shard,
 /turf/simulated/floor/outdoors/dirt,
@@ -27467,20 +27472,6 @@
 "spe" = (
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/MethLab)
-"spx" = (
-/obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/random/maintenance/engineering,
-/turf/simulated/floor,
-/area/survivalpod/superpose/CrashedInfestedShip)
 "spF" = (
 /obj/machinery/newscaster{
 	pixel_y = -28
@@ -27738,6 +27729,15 @@
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/template_noop)
+"sBm" = (
+/obj/machinery/power/port_gen/pacman,
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/ScienceShip)
 "sBo" = (
 /obj/structure/bed/chair{
 	dir = 8
@@ -28257,6 +28257,16 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/template_noop)
+"sTZ" = (
+/obj/structure/cable/cyan{
+	icon_state = "1-4"
+	},
+/obj/structure/cable/cyan{
+	icon_state = "4-8"
+	},
+/obj/random/maintenance/engineering,
+/turf/simulated/floor,
+/area/survivalpod/superpose/CrashedInfestedShip)
 "sUb" = (
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/survivalpod/superpose/CrashedQurantineShip)
@@ -28508,15 +28518,6 @@
 "teQ" = (
 /turf/simulated/floor,
 /area/survivalpod/superpose/OldHotel)
-"tgE" = (
-/obj/structure/kitchenspike,
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/freezer/cold,
-/area/survivalpod)
 "thn" = (
 /obj/structure/window/reinforced/survival_pod{
 	dir = 1
@@ -28525,6 +28526,17 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/plating,
 /area/template_noop)
+"thx" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/structure/cable/cyan{
+	icon_state = "1-2"
+	},
+/obj/fire,
+/turf/simulated/floor,
+/area/survivalpod/superpose/CrashedInfestedShip)
 "thD" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/angled_tgmc/security_glass{
@@ -28801,6 +28813,28 @@
 	},
 /turf/simulated/floor/wood,
 /area/template_noop)
+"tos" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/polarized{
+	dir = 1;
+	id = "SP-Sec"
+	},
+/obj/structure/window/reinforced/polarized{
+	dir = 4;
+	id = "SP-Sec"
+	},
+/obj/structure/window/reinforced/polarized{
+	dir = 8;
+	id = "SP-Sec"
+	},
+/obj/structure/window/reinforced/polarized{
+	id = "SP-Sec"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating,
+/area/template_noop)
 "toB" = (
 /obj/structure/sign/redcross{
 	desc = "The Star of Life, a symbol of Medical Aid.";
@@ -28898,23 +28932,6 @@
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/template_noop)
-"tpt" = (
-/obj/machinery/power/apc/alarms_hidden{
-	dir = 1;
-	pixel_y = 20
-	},
-/obj/structure/cable{
-	d2 = 2;
-	icon_state = "0-2"
-	},
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 9
-	},
-/obj/effect/floor_decal/corner/purple/border{
-	dir = 9
-	},
-/turf/simulated/floor/tiled/white,
-/area/survivalpod/superpose/HydroCave)
 "tpy" = (
 /obj/structure/sign/warning{
 	name = "HOSTILE LIFEFORMS";
@@ -29198,14 +29215,6 @@
 /obj/random/maintenance/clean,
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/CrashedInfestedShip)
-"tEh" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/turf/simulated/shuttle/floor/voidcraft,
-/area/template_noop)
 "tFm" = (
 /obj/effect/decal/cleanable/filth,
 /turf/simulated/floor/outdoors/newdirt,
@@ -29304,6 +29313,15 @@
 /obj/machinery/light,
 /turf/simulated/floor/water/deep/pool,
 /area/template_noop)
+"tKt" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ScienceShip)
 "tKK" = (
 /obj/item/clothing/accessory/medal/solgov/gold/sun,
 /obj/item/pickaxe/gold{
@@ -29529,23 +29547,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/HydroCave)
-"tVn" = (
-/obj/machinery/power/rtg/fake_gen{
-	desc = "Some power generation equipment that is powering the current area's thermal regulators.";
-	irradiate = 0;
-	layer = 3.01;
-	name = "air conditioning power generator";
-	power_gen = 30000
-	},
-/obj/effect/floor_decal/corner/grey/diagonal{
-	dir = 4
-	},
-/obj/structure/cable{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/turf/simulated/floor/tiled/white,
-/area/survivalpod)
 "tVq" = (
 /obj/machinery/door/airlock/angled_tgmc,
 /turf/simulated/floor/tiled/steel_grid,
@@ -30136,6 +30137,13 @@
 /obj/machinery/optable,
 /turf/simulated/shuttle/floor/white,
 /area/survivalpod/superpose/CrashedInfestedShip)
+"umQ" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/gear_painter,
+/turf/simulated/shuttle/wall/voidcraft/blue,
+/area/survivalpod)
 "unL" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8;
@@ -30216,16 +30224,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/HydroCave)
-"urh" = (
-/obj/machinery/power/terminal{
-	dir = 8
-	},
-/obj/structure/cable{
-	d2 = 2;
-	icon_state = "0-2"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/survivalpod/superpose/ScienceShip)
 "urC" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/effect/floor_decal/industrial/warning,
@@ -30461,6 +30459,12 @@
 /obj/machinery/door/window/survival_pod,
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/template_noop)
+"uBd" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/freezer/cold,
+/area/survivalpod)
 "uBk" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 1
@@ -30843,6 +30847,16 @@
 /obj/structure/curtain/open/shower,
 /turf/simulated/floor/tiled/freezer,
 /area/template_noop)
+"uRH" = (
+/obj/machinery/door/airlock/maintenance/sec{
+	name = "Security Door";
+	req_one_access = null
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/template_noop)
 "uRL" = (
 /obj/structure/barricade,
 /obj/effect/floor_decal/steeldecal/steel_decals_central5,
@@ -31037,6 +31051,15 @@
 /area/template_noop)
 "vby" = (
 /turf/simulated/shuttle/wall/voidcraft,
+/area/template_noop)
+"vbK" = (
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/obj/effect/floor_decal/industrial/loading{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
 /area/template_noop)
 "vcm" = (
 /turf/simulated/floor,
@@ -31285,21 +31308,6 @@
 	},
 /turf/simulated/shuttle/wall/voidcraft,
 /area/template_noop)
-"vkJ" = (
-/obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/random/maintenance/engineering,
-/obj/random/maintenance/clean,
-/turf/simulated/floor,
-/area/survivalpod/superpose/CrashedInfestedShip)
 "vls" = (
 /obj/structure/reagent_dispensers/watertank,
 /turf/simulated/floor/plating,
@@ -31380,6 +31388,18 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/MethLab)
+"vpm" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/structure/cable/cyan{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor,
+/area/survivalpod/superpose/CrashedInfestedShip)
 "vpK" = (
 /obj/structure/closet/walllocker_double/north{
 	name = "Survival Cabinet"
@@ -31494,23 +31514,6 @@
 "vtt" = (
 /turf/simulated/floor/wood/broken,
 /area/survivalpod/superpose/LoneHome)
-"vtN" = (
-/obj/item/tape/random,
-/obj/item/taperecorder,
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/item/paper_bin{
-	pixel_x = -3;
-	pixel_y = 7
-	},
-/obj/item/pen,
-/obj/item/pen,
-/obj/structure/table/survival_pod,
-/turf/simulated/shuttle/floor/voidcraft/light,
-/area/template_noop)
 "vuA" = (
 /obj/machinery/shower{
 	dir = 8
@@ -31618,6 +31621,22 @@
 /obj/item/module/power_control,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/survivalpod/superpose/OldHotel)
+"vxL" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 1;
+	pixel_y = 20
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/turf/simulated/shuttle/plating/skipjack,
+/area/template_noop)
 "vxV" = (
 /obj/machinery/light/small,
 /obj/item/ore/diamond,
@@ -31773,34 +31792,6 @@
 /obj/machinery/smartfridge/chemistry,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/template_noop)
-"vFo" = (
-/obj/structure/closet/walllocker_double/kitchen/north{
-	dir = 8;
-	name = "Ration Cabinet";
-	pixel_x = -32;
-	pixel_y = 0
-	},
-/obj/item/storage/mre/random,
-/obj/item/storage/mre/random,
-/obj/item/storage/mre/random,
-/obj/item/storage/mre/random,
-/obj/item/storage/mre/random,
-/obj/item/radio{
-	pixel_x = -5;
-	pixel_y = 5
-	},
-/obj/item/radio{
-	pixel_x = 5;
-	pixel_y = 5
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/survivalpod/superpose/ScienceShip)
 "vFu" = (
 /obj/machinery/cryopod,
 /obj/structure/cryofeed{
@@ -31812,17 +31803,6 @@
 	},
 /turf/simulated/shuttle/floor/alienplating,
 /area/survivalpod/superpose/CrashedInfestedShip)
-"vFy" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/shuttle/wall/voidcraft/blue,
-/area/survivalpod)
 "vFP" = (
 /obj/structure/bed/double,
 /obj/item/bedsheet/hosdouble,
@@ -31832,6 +31812,16 @@
 /obj/structure/reagent_dispensers/fueltank,
 /turf/simulated/floor/plating,
 /area/template_noop)
+"vGk" = (
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 1;
+	pixel_y = 20
+	},
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/HydroCave)
 "vGr" = (
 /obj/machinery/crystal/lava,
 /turf/simulated/floor/lava,
@@ -31973,14 +31963,6 @@
 /obj/machinery/vending/hydronutrients,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/Farm)
-"vOq" = (
-/obj/machinery/power/port_gen/pacman,
-/obj/structure/cable/green{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/turf/simulated/floor,
-/area/survivalpod/superpose/WoodenCamp)
 "vOs" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -32361,6 +32343,22 @@
 /obj/random/maintenance/cargo,
 /turf/simulated/shuttle/floor/yellow,
 /area/survivalpod/superpose/CrashedInfestedShip)
+"wcp" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/machinery/power/shield_generator/charged{
+	field_radius = 8;
+	initial_shield_modes = 2153;
+	target_radius = 8
+	},
+/turf/simulated/shuttle/plating,
+/area/survivalpod/superpose/ScienceShip)
 "wcD" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/table/reinforced,
@@ -32376,6 +32374,15 @@
 	},
 /turf/simulated/shuttle/floor/white,
 /area/survivalpod/superpose/ScienceShip)
+"wcT" = (
+/obj/machinery/power/terminal{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/FieldLab)
 "wdf" = (
 /obj/structure/table/rack,
 /obj/item/material/knife/ritual,
@@ -32590,6 +32597,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/survivalpod/superpose/HydroCave)
+"wnQ" = (
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/turf/simulated/shuttle/wall/voidcraft/blue,
+/area/survivalpod)
 "won" = (
 /obj/structure/table/rack,
 /obj/item/clothing/suit/storage/hooded/wintercoat,
@@ -32945,149 +32958,6 @@
 "wyB" = (
 /obj/structure/sign/science,
 /turf/simulated/shuttle/wall/voidcraft/survival,
-/area/template_noop)
-"wzm" = (
-/obj/machinery/smartfridge/survival_pod{
-	icon = 'icons/obj/vending.dmi';
-	icon_base = "smartfridge";
-	icon_contents = "boxes";
-	icon_state = "smartfridge";
-	name = "Advanced storage";
-	pixel_y = -1
-	},
-/obj/item/storage/toolbox/mechanical{
-	pixel_x = -2;
-	pixel_y = -1
-	},
-/obj/item/storage/toolbox/mechanical{
-	pixel_x = -2;
-	pixel_y = -1
-	},
-/obj/item/storage/toolbox/electrical{
-	pixel_x = 1;
-	pixel_y = 6
-	},
-/obj/item/storage/toolbox/electrical{
-	pixel_x = 1;
-	pixel_y = 6
-	},
-/obj/item/storage/belt/utility,
-/obj/item/storage/belt/utility,
-/obj/item/multitool{
-	pixel_x = 3
-	},
-/obj/item/multitool{
-	pixel_x = 3
-	},
-/obj/item/tool/crowbar,
-/obj/item/tool/crowbar,
-/obj/item/tool/crowbar,
-/obj/item/mmi,
-/obj/item/mmi,
-/obj/item/mmi,
-/obj/item/clothing/head/welding{
-	pixel_x = -3;
-	pixel_y = 5
-	},
-/obj/item/clothing/head/welding{
-	pixel_x = -3;
-	pixel_y = 5
-	},
-/obj/item/clothing/head/welding/demon,
-/obj/item/clothing/glasses/welding,
-/obj/item/clothing/glasses/welding,
-/obj/item/stack/cable_coil,
-/obj/item/stack/cable_coil,
-/obj/item/stack/cable_coil,
-/obj/item/healthanalyzer,
-/obj/item/healthanalyzer,
-/obj/item/flash/synthetic,
-/obj/item/flash/synthetic,
-/obj/item/flash/synthetic,
-/obj/item/storage/firstaid/regular{
-	empty = 1;
-	name = "First-Aid (empty)"
-	},
-/obj/item/storage/firstaid/regular{
-	empty = 1;
-	name = "First-Aid (empty)"
-	},
-/obj/item/cell/high{
-	pixel_x = 5;
-	pixel_y = -5
-	},
-/obj/item/cell/high{
-	pixel_x = 5;
-	pixel_y = -5
-	},
-/obj/item/assembly/prox_sensor{
-	pixel_x = -8;
-	pixel_y = 4
-	},
-/obj/item/assembly/prox_sensor{
-	pixel_x = -8;
-	pixel_y = 4
-	},
-/obj/item/stack/material/copper{
-	amount = 25
-	},
-/obj/item/stack/material/plastic{
-	max_amount = 25
-	},
-/obj/item/stack/material/plastic{
-	max_amount = 25
-	},
-/obj/item/stack/material/plasteel{
-	amount = 10
-	},
-/obj/item/stack/material/plasteel{
-	amount = 10
-	},
-/obj/item/stack/material/glass{
-	amount = 50;
-	pixel_x = -2;
-	pixel_y = 2
-	},
-/obj/item/stack/material/glass{
-	amount = 50;
-	pixel_x = -2;
-	pixel_y = 2
-	},
-/obj/item/stack/material/glass{
-	amount = 50;
-	pixel_x = -2;
-	pixel_y = 2
-	},
-/obj/item/stack/material/glass{
-	amount = 50;
-	pixel_x = -2;
-	pixel_y = 2
-	},
-/obj/item/stack/material/steel{
-	amount = 50
-	},
-/obj/item/stack/material/steel{
-	amount = 50
-	},
-/obj/item/stack/material/steel{
-	amount = 50
-	},
-/obj/item/stack/material/steel{
-	amount = 50
-	},
-/obj/item/flash,
-/obj/item/flash,
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/item/clothing/mask/gas,
-/obj/item/clothing/mask/gas,
-/obj/item/implanter,
-/obj/item/implanter,
-/obj/item/implanter,
-/obj/item/storage/backpack/dufflebag/sci,
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/simulated/shuttle/floor/voidcraft/light,
 /area/template_noop)
 "wzw" = (
 /obj/structure/grille/broken/cult,
@@ -33541,14 +33411,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/CrashedInfestedShip)
-"wMJ" = (
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/turf/simulated/shuttle/wall/voidcraft/blue,
-/area/survivalpod)
 "wMK" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 1
@@ -33585,15 +33447,6 @@
 	color = "grey"
 	},
 /area/survivalpod/superpose/CultShip)
-"wPT" = (
-/obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/obj/fire,
-/turf/simulated/floor,
-/area/survivalpod/superpose/CrashedInfestedShip)
 "wQC" = (
 /obj/machinery/sleep_console{
 	dir = 4
@@ -33710,6 +33563,22 @@
 	},
 /turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/TradingShip)
+"wTI" = (
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 1;
+	pixel_y = 20
+	},
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/purple/border{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/HydroCave)
 "wTW" = (
 /obj/machinery/atmospherics/unary/vent_pump{
 	dir = 8;
@@ -33753,18 +33622,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/template_noop)
-"wUM" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden,
-/turf/simulated/shuttle/wall/voidcraft/blue,
-/area/survivalpod)
 "wUX" = (
 /obj/structure/railing/grey{
 	dir = 8
@@ -33996,16 +33853,6 @@
 /obj/item/clothing/accessory/holster/waist,
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/template_noop)
-"xbQ" = (
-/obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/obj/random/maintenance/engineering,
-/obj/fire,
-/turf/simulated/floor,
-/area/survivalpod/superpose/CrashedInfestedShip)
 "xbR" = (
 /obj/structure/coatrack,
 /obj/machinery/button/windowtint{
@@ -34403,11 +34250,6 @@
 /obj/structure/table/hardwoodtable,
 /turf/simulated/floor/carpet,
 /area/template_noop)
-"xmF" = (
-/turf/simulated/floor/flesh/colour{
-	color = "red"
-	},
-/area/survivalpod/superpose/HellCave)
 "xmG" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /turf/simulated/floor/tiled/white,
@@ -34610,17 +34452,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/template_noop)
-"xup" = (
-/obj/machinery/power/apc/alarms_hidden{
-	dir = 1;
-	pixel_y = 20
-	},
-/obj/structure/cable{
-	d2 = 2;
-	icon_state = "0-2"
-	},
-/turf/simulated/floor/plating,
-/area/survivalpod/superpose/HydroCave)
 "xuE" = (
 /obj/structure/railing/grey,
 /obj/structure/closet/secure_closet/guncabinet,
@@ -34927,17 +34758,6 @@
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/red,
 /area/survivalpod/superpose/HydroCave)
-"xIV" = (
-/obj/machinery/power/thermoregulator/southerncross{
-	dir = 4;
-	pixel_x = -28
-	},
-/obj/structure/cable{
-	d2 = 2;
-	icon_state = "0-2"
-	},
-/turf/simulated/shuttle/floor/voidcraft/dark,
-/area/survivalpod)
 "xIY" = (
 /obj/machinery/portable_atmospherics/hydroponics,
 /obj/machinery/light,
@@ -35072,6 +34892,16 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/survivalpod/superpose/HydroCave)
+"xNo" = (
+/obj/machinery/power/thermoregulator/southerncross{
+	dir = 4;
+	pixel_x = -28
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/lino,
+/area/survivalpod)
 "xNr" = (
 /turf/simulated/shuttle/plating/skipjack,
 /area/template_noop)
@@ -35194,6 +35024,16 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled,
 /area/survivalpod/superpose/HydroCave)
+"xSd" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/structure/cable/cyan{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor,
+/area/survivalpod/superpose/CrashedInfestedShip)
 "xSr" = (
 /obj/structure/closet/secure_closet/personal,
 /obj/item/modular_computer/laptop/preset/custom_loadout/elite,
@@ -35306,14 +35146,6 @@
 /obj/random/firstaid,
 /turf/simulated/shuttle/floor/black,
 /area/survivalpod/superpose/TradingShip)
-"xVN" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/shuttle/plating/skipjack,
-/area/template_noop)
 "xWf" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/firedoor,
@@ -35704,6 +35536,16 @@
 	},
 /turf/simulated/floor/carpet/sblucarpet,
 /area/survivalpod/superpose/HydroCave)
+"ylV" = (
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 1;
+	pixel_y = 20
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/template_noop)
 "ymd" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/shieldgen,
@@ -36504,7 +36346,7 @@ jtI
 jtI
 jtI
 vIX
-pkz
+pLO
 lBN
 ktQ
 ljl
@@ -39907,8 +39749,8 @@ ktQ
 vIX
 wEV
 tFt
-dWH
-tEh
+tos
+kXM
 wRf
 wRf
 bDQ
@@ -40164,8 +40006,8 @@ ktQ
 aoX
 rXS
 ifk
-dWH
-hxz
+tos
+jTc
 pcj
 rrh
 gSa
@@ -40422,7 +40264,7 @@ vIX
 qkA
 rGq
 vIX
-nYL
+ylV
 cTU
 dVe
 otF
@@ -41707,7 +41549,7 @@ ljl
 cAb
 xNr
 xNr
-eRd
+pUy
 uxZ
 xNr
 xNr
@@ -42397,7 +42239,7 @@ ktQ
 vIX
 uSV
 ppI
-eyJ
+hMm
 thn
 ymd
 enm
@@ -42407,7 +42249,7 @@ ktQ
 vIX
 oIA
 qoz
-eRd
+pUy
 iEQ
 dxl
 sEI
@@ -42666,7 +42508,7 @@ ske
 mnQ
 bnA
 xNr
-dAy
+lnr
 tFt
 qpl
 aoX
@@ -42732,7 +42574,7 @@ rKi
 rzQ
 ktQ
 ljl
-wzm
+gDk
 xNr
 xNr
 ceL
@@ -42932,7 +42774,7 @@ vIX
 fCH
 eLw
 cMh
-ebA
+fMx
 lng
 xOX
 vIX
@@ -43186,10 +43028,10 @@ gzW
 qwe
 ktQ
 vIX
-dWH
-fak
+tos
+isx
 vIX
-buk
+dlH
 vIX
 tFt
 apk
@@ -43444,9 +43286,9 @@ vIX
 ktQ
 vIX
 pvH
-vtN
+hLy
 rFd
-xVN
+fke
 dEQ
 tFt
 dBQ
@@ -43701,9 +43543,9 @@ qyk
 ktQ
 aoX
 aPT
-bLf
-bAU
-dSa
+vbK
+uRH
+cQk
 vIX
 cRO
 vIX
@@ -43960,7 +43802,7 @@ vIX
 ble
 skJ
 vIX
-mPa
+vxL
 lnv
 bPY
 wxa
@@ -52483,8 +52325,8 @@ anP
 elG
 wXs
 bJc
-xIV
-kmz
+bas
+wnQ
 fXk
 jFN
 duO
@@ -52741,7 +52583,7 @@ elG
 bJc
 bJc
 utI
-iiA
+gRd
 eRr
 wak
 cnw
@@ -52998,7 +52840,7 @@ elG
 feF
 bJc
 klt
-iiA
+gRd
 eRr
 qTA
 qBN
@@ -53245,17 +53087,17 @@ ktQ
 lwG
 elG
 sWy
-tVn
+aSX
 pJO
 ueu
 aep
 aep
 dfi
-nhv
-qkX
-pQW
-qkX
-fyt
+pXQ
+rMG
+nYg
+rMG
+gKL
 rfr
 qTA
 aWG
@@ -53502,17 +53344,17 @@ ktQ
 hdU
 elG
 elG
-qdm
+har
 twL
-lcC
+pbV
 bGa
 mxr
 sOH
-nPH
+oBY
 gKm
 eMZ
 oYO
-iiA
+gRd
 svg
 ihs
 pAF
@@ -53759,17 +53601,17 @@ ktQ
 noD
 elG
 cDG
-eAz
+uBd
 fVD
-kEc
+mlG
 fmE
 ptG
 cyi
-wUM
+nHN
 fam
 rIQ
 dQp
-hrp
+nIE
 kaq
 aWS
 rQA
@@ -54016,13 +53858,13 @@ ktQ
 loQ
 elG
 sjL
-tgE
+mQi
 lCl
-iiA
+gRd
 mRN
 iJI
 oml
-nPH
+oBY
 xbm
 pAF
 jJI
@@ -54271,15 +54113,15 @@ jTF
 mtA
 ktQ
 fsy
-wMJ
-qkX
-gjM
-eMp
-mmX
-mNs
-qkX
-qkX
-vFy
+rZV
+rMG
+naX
+umQ
+jwB
+cfS
+rMG
+rMG
+lBb
 eMZ
 pAF
 eMZ
@@ -54528,11 +54370,11 @@ jTF
 mtA
 ktQ
 tyC
-iiA
+gRd
 gxq
 gxq
 eMZ
-rqq
+mXv
 eMZ
 qbg
 yev
@@ -54785,7 +54627,7 @@ jTF
 mtA
 ktQ
 fTP
-iiA
+gRd
 sCs
 gxq
 pAF
@@ -55042,7 +54884,7 @@ jTF
 mtA
 ktQ
 myb
-iiA
+gRd
 vwi
 eMZ
 pAF
@@ -55299,7 +55141,7 @@ jTF
 mtA
 ktQ
 myb
-iiA
+gRd
 knV
 eMZ
 pAF
@@ -55556,7 +55398,7 @@ jTF
 mtA
 ktQ
 myb
-iiA
+gRd
 xmQ
 pAF
 pAF
@@ -55813,7 +55655,7 @@ jTF
 mtA
 ktQ
 myb
-iiA
+gRd
 gWI
 pAF
 pAF
@@ -56070,7 +55912,7 @@ jTF
 mtA
 ktQ
 myb
-iiA
+gRd
 pRp
 pAF
 mCq
@@ -56327,10 +56169,10 @@ jTF
 mtA
 ktQ
 fTP
-rkb
-qkX
-cXq
-oKt
+gkU
+rMG
+aZM
+rZV
 nac
 mhA
 mhA
@@ -56587,7 +56429,7 @@ myb
 elG
 qgd
 ewY
-obZ
+xNo
 kXk
 uNn
 uNn
@@ -58360,7 +58202,7 @@ srF
 bye
 liz
 iwV
-gbD
+bcO
 ddf
 nCk
 nCk
@@ -58400,7 +58242,7 @@ dMX
 xdn
 xdn
 xdn
-vOq
+aET
 ktQ
 ktQ
 ktQ
@@ -58617,7 +58459,7 @@ srF
 srF
 srF
 srF
-ddn
+wcT
 kuy
 nCk
 nCk
@@ -58657,7 +58499,7 @@ jdx
 nJY
 uFg
 xdn
-lxQ
+qkt
 vUS
 vUS
 vUS
@@ -61681,7 +61523,7 @@ hsG
 uvB
 ciK
 sCA
-bhX
+fGT
 aww
 xUr
 xaq
@@ -71960,7 +71802,7 @@ xhp
 xhp
 xhp
 clr
-xup
+vGk
 csv
 lod
 clr
@@ -72026,7 +71868,7 @@ ktQ
 yeQ
 voH
 mNH
-xbQ
+gsU
 tCR
 nxf
 igY
@@ -72041,8 +71883,8 @@ cRP
 cRP
 edd
 nxf
-coK
-wPT
+xSd
+eOV
 kiq
 krb
 yeQ
@@ -72283,7 +72125,7 @@ ktQ
 yeQ
 dIo
 vpY
-vkJ
+eaG
 eOn
 rGa
 igY
@@ -72298,8 +72140,8 @@ xNs
 mbp
 edd
 rGa
-coK
-spx
+xSd
+sTZ
 miF
 dIo
 yeQ
@@ -72540,7 +72382,7 @@ ktQ
 yeQ
 uTU
 mNH
-iQm
+qwu
 rBL
 rGa
 gre
@@ -72555,8 +72397,8 @@ xNs
 vSb
 edd
 rGa
-coK
-spx
+xSd
+sTZ
 kiq
 uTU
 rxc
@@ -72797,7 +72639,7 @@ ktQ
 wmF
 bYf
 hBX
-lLH
+iXZ
 xlt
 rGa
 txe
@@ -72812,8 +72654,8 @@ acp
 tKW
 edd
 rGa
-coK
-spx
+xSd
+sTZ
 xXW
 bYf
 rxc
@@ -73052,9 +72894,9 @@ ktQ
 ktQ
 ktQ
 wmF
-jyy
-qkY
-oTF
+ozt
+vpm
+lES
 igX
 iIx
 txe
@@ -73069,9 +72911,9 @@ acp
 cRP
 edd
 iIx
-eVH
-rbS
-jCG
+fQh
+rli
+thx
 xym
 rxc
 ktQ
@@ -74315,12 +74157,12 @@ ozP
 oKd
 gbd
 rjX
-vFo
+oKr
 qVd
-iCM
+sBm
 lEL
 oEn
-akI
+wcp
 ngR
 rjX
 gbd
@@ -74572,12 +74414,12 @@ urJ
 awq
 czR
 mVr
-mss
-urh
-qvQ
+inc
+bWE
+cAt
 swI
 swI
-fgs
+oTh
 jKf
 mVr
 czR
@@ -74829,12 +74671,12 @@ dIC
 oOo
 iLe
 mAF
-kgy
-lop
-lop
-itA
-krS
-nxC
+jIB
+tKt
+tKt
+hqO
+fJQ
+iBo
 swI
 aIl
 iLe
@@ -80706,9 +80548,9 @@ wkD
 wEE
 wEE
 kag
-xmF
-xmF
-xmF
+bsb
+bsb
+bsb
 wEE
 wkD
 kag
@@ -80963,9 +80805,9 @@ wkD
 wEE
 kag
 kag
-xmF
-xmF
-xmF
+bsb
+bsb
+bsb
 wEE
 wkD
 kag
@@ -81217,11 +81059,11 @@ wkD
 kkC
 wEE
 wEE
-xmF
-xmF
-xmF
-xmF
-xmF
+bsb
+bsb
+bsb
+bsb
+bsb
 wEE
 wEE
 wkD
@@ -81473,12 +81315,12 @@ wkD
 wkD
 wkD
 wEE
-xmF
-xmF
-xmF
-xmF
-xmF
-xmF
+bsb
+bsb
+bsb
+bsb
+bsb
+bsb
 wEE
 wEE
 wkD
@@ -81727,15 +81569,15 @@ nNa
 wkD
 wEE
 wEE
-xmF
-xmF
-xmF
-xmF
+bsb
+bsb
+bsb
+bsb
 wEE
-xmF
-xmF
-xmF
-xmF
+bsb
+bsb
+bsb
+bsb
 wEE
 wEE
 kag
@@ -81982,9 +81824,9 @@ wkD
 ocd
 wEE
 wEE
-xmF
-xmF
-xmF
+bsb
+bsb
+bsb
 wEE
 wEE
 wEE
@@ -82237,9 +82079,9 @@ btE
 nRS
 bkY
 wEE
-xmF
-xmF
-xmF
+bsb
+bsb
+bsb
 wEE
 wEE
 wEE
@@ -82492,9 +82334,9 @@ ehT
 wkD
 wkD
 wEE
-xmF
-xmF
-xmF
+bsb
+bsb
+bsb
 wEE
 wEE
 wkD
@@ -82748,8 +82590,8 @@ gdY
 nRS
 wkD
 wkD
-xmF
-xmF
+bsb
+bsb
 wEE
 wEE
 wEE
@@ -83005,7 +82847,7 @@ cHg
 wkD
 wkD
 wEE
-xmF
+bsb
 wEE
 wkD
 wkD
@@ -83262,7 +83104,7 @@ wkD
 dob
 wkD
 bkY
-xmF
+bsb
 wEE
 wkD
 cbz
@@ -83519,8 +83361,8 @@ qAy
 wkD
 wkD
 wEE
-xmF
-xmF
+bsb
+bsb
 wEE
 wkD
 wkD
@@ -83777,9 +83619,9 @@ nRS
 wkD
 wkD
 wEE
-xmF
-xmF
-xmF
+bsb
+bsb
+bsb
 wEE
 wEE
 wEE
@@ -84036,10 +83878,10 @@ wkD
 nNa
 wEE
 wEE
-xmF
-xmF
-xmF
-xmF
+bsb
+bsb
+bsb
+bsb
 wEE
 wEE
 wEE
@@ -84296,12 +84138,12 @@ wkD
 wEE
 wEE
 wkD
-xmF
-xmF
-xmF
-xmF
-xmF
-xmF
+bsb
+bsb
+bsb
+bsb
+bsb
+bsb
 wEE
 wkD
 wkD
@@ -84557,9 +84399,9 @@ wkD
 wkD
 wkD
 wEE
-xmF
-xmF
-xmF
+bsb
+bsb
+bsb
 wEE
 cbz
 wkD
@@ -84816,8 +84658,8 @@ nRS
 wkD
 wkD
 wEE
-xmF
-xmF
+bsb
+bsb
 wkD
 wkD
 wkD
@@ -85074,7 +84916,7 @@ wkD
 wkD
 wEE
 wEE
-xmF
+bsb
 wEE
 nRS
 nRS
@@ -85318,11 +85160,11 @@ qzX
 btE
 wkD
 wEE
-xmF
+bsb
 wEE
 wEE
-xmF
-xmF
+bsb
+bsb
 wkD
 wkD
 wkD
@@ -85331,7 +85173,7 @@ jYs
 nRS
 nRS
 wkD
-xmF
+bsb
 wEE
 wkD
 wkD
@@ -85575,12 +85417,12 @@ qzX
 dob
 wkD
 wEE
-xmF
+bsb
 wEE
 wEE
 wkD
 wEE
-xmF
+bsb
 wEE
 wkD
 btE
@@ -85589,7 +85431,7 @@ wkD
 wkD
 wkD
 wEE
-xmF
+bsb
 wEE
 wkD
 qAy
@@ -85837,7 +85679,7 @@ wkD
 wkD
 wkD
 wEE
-xmF
+bsb
 wEE
 xky
 qAy
@@ -85846,7 +85688,7 @@ qAy
 qAy
 ocd
 wkD
-xmF
+bsb
 wkD
 wkD
 qAy
@@ -86088,13 +85930,13 @@ qzX
 qzX
 nRS
 wEE
-xmF
-xmF
+bsb
+bsb
 wkD
 cbz
 wkD
 wEE
-xmF
+bsb
 wEE
 qAy
 qAy
@@ -86103,8 +85945,8 @@ crT
 qAy
 wkD
 wEE
-xmF
-xmF
+bsb
+bsb
 qAy
 qzX
 qzX
@@ -86345,7 +86187,7 @@ kag
 qzX
 nRS
 wEE
-xmF
+bsb
 wkD
 wkD
 btE
@@ -86360,8 +86202,8 @@ eNg
 iIe
 wkD
 wEE
-xmF
-xmF
+bsb
+bsb
 wEE
 wkD
 qzX
@@ -86617,7 +86459,7 @@ aui
 qAy
 wkD
 wEE
-xmF
+bsb
 wEE
 wEE
 qAy
@@ -86865,7 +86707,7 @@ wkD
 btE
 nRS
 wEE
-xmF
+bsb
 wkD
 iIe
 hAz
@@ -86874,7 +86716,7 @@ xmX
 qAy
 wkD
 wEE
-xmF
+bsb
 wEE
 wkD
 wkD
@@ -87116,13 +86958,13 @@ qzX
 qzX
 wkD
 wEE
-xmF
+bsb
 wEE
 wkD
 kkC
 wkD
 wEE
-xmF
+bsb
 wEE
 qAy
 qAy
@@ -87131,8 +86973,8 @@ xmX
 suW
 wkD
 wkD
-xmF
-xmF
+bsb
+bsb
 wEE
 wkD
 qAy
@@ -87373,7 +87215,7 @@ kag
 btE
 wEE
 wEE
-xmF
+bsb
 wEE
 wkD
 wkD
@@ -87389,7 +87231,7 @@ gdY
 nRS
 wkD
 wEE
-xmF
+bsb
 wEE
 wkD
 wkD
@@ -87636,8 +87478,8 @@ bkY
 xYQ
 btE
 wEE
-xmF
-xmF
+bsb
+bsb
 wkD
 wkD
 wkD
@@ -87646,7 +87488,7 @@ gdY
 nRS
 wEE
 wEE
-xmF
+bsb
 wEE
 ocd
 qAy
@@ -87887,23 +87729,23 @@ wkD
 xYQ
 bkY
 wEE
-xmF
+bsb
 wEE
 bkY
 dDO
 qzX
 wkD
 wkD
-xmF
-xmF
+bsb
+bsb
 wkD
 wkD
 dob
 wkD
 wkD
 wkD
-xmF
-xmF
+bsb
+bsb
 kag
 qAy
 kag
@@ -88144,7 +87986,7 @@ wkD
 dDO
 bkY
 wEE
-xmF
+bsb
 wEE
 wEE
 oxD
@@ -88159,7 +88001,7 @@ wEE
 wkD
 wkD
 wEE
-xmF
+bsb
 wEE
 wkD
 wkD
@@ -88409,14 +88251,14 @@ qzX
 hqs
 nRS
 wkD
-xmF
-xmF
+bsb
+bsb
 wEE
-xmF
-xmF
-xmF
-xmF
-xmF
+bsb
+bsb
+bsb
+bsb
+bsb
 wkD
 nRS
 wkD
@@ -88658,7 +88500,7 @@ wkD
 gdY
 gdY
 wEE
-xmF
+bsb
 wEE
 gdY
 ehT
@@ -88670,9 +88512,9 @@ nRS
 wEE
 wkD
 wEE
-xmF
-xmF
-xmF
+bsb
+bsb
+bsb
 wEE
 wkD
 wkD
@@ -88914,9 +88756,9 @@ ktQ
 kag
 ehT
 gdY
-xmF
-xmF
-xmF
+bsb
+bsb
+bsb
 gdY
 ehT
 qzX
@@ -89172,7 +89014,7 @@ qzX
 ndN
 gdY
 wEE
-xmF
+bsb
 wEE
 gdY
 ehT
@@ -91795,9 +91637,9 @@ sdj
 sRi
 sEe
 sEe
-iTI
-iTI
-iTI
+cRf
+cRf
+cRf
 iyj
 aVJ
 uyW
@@ -92050,9 +91892,9 @@ sRi
 uuk
 sEe
 sEe
-iTI
-iTI
-iTI
+cRf
+cRf
+cRf
 sEe
 sEe
 eaw
@@ -92305,9 +92147,9 @@ vHY
 sRi
 sEe
 sEe
-iTI
-iTI
-iTI
+cRf
+cRf
+cRf
 sEe
 sEe
 sEe
@@ -92560,9 +92402,9 @@ bML
 sRi
 sRi
 tsy
-iTI
-iTI
-iTI
+cRf
+cRf
+cRf
 sEe
 sEe
 qEO
@@ -92816,8 +92658,8 @@ bML
 sRi
 sRi
 sRi
-iTI
-iTI
+cRf
+cRf
 sEe
 sEe
 sEe
@@ -93036,7 +92878,7 @@ nZe
 nZe
 wrH
 clr
-tpt
+wTI
 qFH
 pIa
 clr
@@ -93073,7 +92915,7 @@ sRi
 sRi
 sRi
 sEe
-iTI
+cRf
 sEe
 sRi
 sRi
@@ -93330,7 +93172,7 @@ sRi
 tCx
 sRi
 sEe
-iTI
+cRf
 sEe
 sRi
 hFh
@@ -93587,8 +93429,8 @@ rlm
 sRi
 sRi
 sEe
-iTI
-iTI
+cRf
+cRf
 tsy
 sRi
 sRi
@@ -93845,9 +93687,9 @@ sRi
 sRi
 sRi
 sEe
-iTI
-iTI
-iTI
+cRf
+cRf
+cRf
 sEe
 sEe
 sEe
@@ -94104,10 +93946,10 @@ sRi
 sdj
 sEe
 sEe
-iTI
-iTI
-iTI
-iTI
+cRf
+cRf
+cRf
+cRf
 sEe
 sEe
 sEe
@@ -94364,12 +94206,12 @@ sRi
 sEe
 sEe
 qEO
-iTI
-iTI
-iTI
-iTI
-iTI
-iTI
+cRf
+cRf
+cRf
+cRf
+cRf
+cRf
 sEe
 sRi
 sRi
@@ -94621,13 +94463,13 @@ sRi
 sRi
 sEe
 sEe
-iTI
-iTI
+cRf
+cRf
 sEe
 sEe
-iTI
-iTI
-iTI
+cRf
+cRf
+cRf
 sEe
 hFh
 sRi
@@ -94877,15 +94719,15 @@ sRi
 sRi
 sEe
 sEe
-iTI
+cRf
 sEe
 sEe
 sEe
 sEe
 sEe
 sEe
-iTI
-iTI
+cRf
+cRf
 sRi
 sRi
 sRi
@@ -95133,7 +94975,7 @@ sEe
 sEe
 sEe
 sEe
-iTI
+cRf
 sEe
 sEe
 gGt
@@ -95142,7 +94984,7 @@ gGt
 gGt
 sEe
 sEe
-iTI
+cRf
 sEe
 sRi
 sRi
@@ -95387,10 +95229,10 @@ vHY
 sRi
 sEe
 sEe
-iTI
+cRf
 sEe
-iTI
-iTI
+cRf
+cRf
 sRi
 sRi
 gGt
@@ -95399,7 +95241,7 @@ aVJ
 gGt
 gGt
 gGt
-iTI
+cRf
 tsy
 sRi
 sRi
@@ -95643,12 +95485,12 @@ rlm
 tCx
 sRi
 sEe
-iTI
+cRf
 sEe
 sEe
 sRi
 sEe
-iTI
+cRf
 sEe
 gGt
 aVJ
@@ -95657,7 +95499,7 @@ aVJ
 aVJ
 gGt
 sEe
-iTI
+cRf
 sEe
 sRi
 sRi
@@ -95905,7 +95747,7 @@ sRi
 sRi
 sRi
 sEe
-iTI
+cRf
 sEe
 dro
 aVJ
@@ -95914,7 +95756,7 @@ aVJ
 aVJ
 dro
 sRi
-iTI
+cRf
 sRi
 sRi
 rlm
@@ -96162,7 +96004,7 @@ sRi
 hFh
 sRi
 sEe
-iTI
+cRf
 sEe
 gGt
 gGt
@@ -96171,8 +96013,8 @@ iyj
 gGt
 gGt
 sEe
-iTI
-iTI
+cRf
+cRf
 gGt
 rlm
 rlm
@@ -96428,8 +96270,8 @@ aVJ
 aVJ
 gGt
 sEe
-iTI
-iTI
+cRf
+cRf
 sEe
 sRi
 rlm
@@ -96685,7 +96527,7 @@ sNP
 aVJ
 dro
 sEe
-iTI
+cRf
 sEe
 sEe
 gGt
@@ -96933,7 +96775,7 @@ sRi
 vHY
 sRi
 sEe
-iTI
+cRf
 sRi
 gGt
 jvl
@@ -96942,7 +96784,7 @@ bjy
 uyW
 gGt
 sEe
-iTI
+cRf
 sEe
 sRi
 sRi
@@ -97190,7 +97032,7 @@ sRi
 vHY
 sRi
 sEe
-iTI
+cRf
 sEe
 dro
 mzj
@@ -97199,8 +97041,8 @@ oaL
 uyW
 gGt
 sRi
-iTI
-iTI
+cRf
+cRf
 sEe
 sRi
 rlm
@@ -97227,7 +97069,7 @@ vpW
 hsH
 ate
 tHI
-bWt
+qFp
 tKK
 bwD
 ktQ
@@ -97457,7 +97299,7 @@ uyW
 dro
 sRi
 tsy
-iTI
+cRf
 sEe
 sRi
 rlm
@@ -97704,8 +97546,8 @@ sEe
 bjl
 vHY
 sEe
-iTI
-iTI
+cRf
+cRf
 gGt
 gGt
 qYA
@@ -97714,7 +97556,7 @@ qYA
 gGt
 sEe
 sEe
-iTI
+cRf
 sEe
 uuk
 rlm
@@ -97962,16 +97804,16 @@ bjl
 rlm
 sRi
 sRi
-iTI
-iTI
+cRf
+cRf
 gGt
 gGt
 dro
 gGt
 gGt
 sRi
-iTI
-iTI
+cRf
+cRf
 sEe
 gGt
 rlm
@@ -98227,7 +98069,7 @@ sEe
 sRi
 sRi
 sEe
-iTI
+cRf
 sEe
 sRi
 sRi
@@ -98477,14 +98319,14 @@ rlm
 edW
 sRi
 sRi
-iTI
-iTI
+cRf
+cRf
 sEe
-iTI
-iTI
-iTI
-iTI
-iTI
+cRf
+cRf
+cRf
+cRf
+cRf
 sRi
 sRi
 sRi
@@ -98738,9 +98580,9 @@ sRi
 sEe
 qEO
 sEe
-iTI
-iTI
-iTI
+cRf
+cRf
+cRf
 sEe
 sRi
 sRi

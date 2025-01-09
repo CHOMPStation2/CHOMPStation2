@@ -52,12 +52,6 @@
 /obj/item/stack/rods,
 /turf/simulated/floor/airless,
 /area/submap/debris1)
-"da" = (
-/obj/item/stack/material/steel{
-	amount = 18
-	},
-/turf/simulated/floor/tiled/airless,
-/area/submap/debris1)
 "de" = (
 /turf/template_noop,
 /area/template_noop)
@@ -283,6 +277,12 @@
 /obj/random/humanoidremains,
 /turf/simulated/floor/plating,
 /area/submap/debris1)
+"rd" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/template_noop,
+/area/submap/debris1)
 "rt" = (
 /obj/structure/disposalpipe/broken{
 	dir = 8
@@ -292,14 +292,6 @@
 "rE" = (
 /obj/random/tool,
 /turf/simulated/floor/airless,
-/area/submap/debris1)
-"rO" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/template_noop,
 /area/submap/debris1)
 "sA" = (
 /obj/structure/lattice,
@@ -629,6 +621,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
 /area/submap/debris1)
+"Ob" = (
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/turf/template_noop,
+/area/submap/debris1)
 "Od" = (
 /obj/random/humanoidremains,
 /turf/simulated/floor/tiled/airless,
@@ -705,14 +703,6 @@
 "TI" = (
 /obj/structure/loot_pile/surface/bones,
 /turf/simulated/floor/tiled/airless,
-/area/submap/debris1)
-"TO" = (
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/turf/template_noop,
 /area/submap/debris1)
 "Uz" = (
 /obj/item/stack/material/wood,
@@ -804,6 +794,12 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating,
+/area/submap/debris1)
+"ZA" = (
+/obj/item/stack/material/steel{
+	amount = 18
+	},
+/turf/simulated/floor/tiled/airless,
 /area/submap/debris1)
 
 (1,1,1) = {"
@@ -2571,7 +2567,7 @@ ip
 wq
 jG
 ip
-rO
+rd
 jq
 wq
 wq
@@ -2633,7 +2629,7 @@ ip
 ip
 jG
 ip
-TO
+Ob
 Fu
 wq
 wq
@@ -3828,7 +3824,7 @@ de
 de
 de
 XP
-da
+ZA
 Wx
 AP
 Wx

@@ -18,42 +18,6 @@
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled/techfloor/kara,
 /area/sc_away/aerostat/inside)
-"ae" = (
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 9
-	},
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/kara,
-/area/sc_away/aerostat/solars)
-"af" = (
-/obj/structure/cable/yellow{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 1
-	},
-/obj/machinery/power/solar,
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/kara,
-/area/sc_away/aerostat/solars)
-"ag" = (
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 1
-	},
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/kara,
-/area/sc_away/aerostat/solars)
 "ah" = (
 /obj/effect/floor_decal/industrial/warning/dust/corner,
 /obj/effect/floor_decal/industrial/warning/dust{
@@ -118,18 +82,6 @@
 /obj/structure/girder,
 /turf/simulated/floor/tiled/techfloor/kara,
 /area/sc_away/aerostat/inside)
-"aq" = (
-/obj/structure/cable/yellow{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/obj/machinery/power/solar,
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 1
-	},
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/kara,
-/area/sc_away/aerostat/solars)
 "ar" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -165,30 +117,6 @@
 "aw" = (
 /turf/unsimulated/floor/sky/kara_sky,
 /area/sc_away/aerostat)
-"ax" = (
-/obj/machinery/power/solar,
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 1
-	},
-/obj/structure/cable/yellow{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/kara,
-/area/sc_away/aerostat/solars)
-"ay" = (
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 1
-	},
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/kara,
-/area/sc_away/aerostat/solars)
 "az" = (
 /obj/machinery/atmospherics/binary/algae_farm,
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
@@ -205,18 +133,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor/kara,
 /area/sc_away/aerostat/inside)
-"aB" = (
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 5
-	},
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/kara,
-/area/sc_away/aerostat/solars)
 "aC" = (
 /obj/machinery/atmospherics/binary/algae_farm,
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
@@ -233,23 +149,6 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/kara,
 /area/sc_away/aerostat/solars)
-"aE" = (
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 8
-	},
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/kara,
-/area/sc_away/aerostat/solars)
 "aF" = (
 /obj/machinery/atmospherics/binary/algae_farm,
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
@@ -258,29 +157,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor/kara,
 /area/sc_away/aerostat/inside)
-"aG" = (
-/obj/structure/cable/yellow{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/obj/machinery/power/solar,
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/kara,
-/area/sc_away/aerostat/solars)
-"aH" = (
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/kara,
-/area/sc_away/aerostat/solars)
 "aI" = (
 /obj/machinery/atmospherics/binary/algae_farm,
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
@@ -300,14 +176,6 @@
 /turf/simulated/floor/bluegrid/kara,
 /area/sc_away/aerostat/inside)
 "aL" = (
-/turf/simulated/floor/bluegrid/kara,
-/area/sc_away/aerostat/inside)
-"aM" = (
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
 /turf/simulated/floor/bluegrid/kara,
 /area/sc_away/aerostat/inside)
 "aN" = (
@@ -364,29 +232,6 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/kara,
 /area/sc_away/aerostat/solars)
-"aU" = (
-/obj/machinery/power/solar,
-/obj/structure/cable/yellow{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/kara,
-/area/sc_away/aerostat/solars)
-"aV" = (
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/kara,
-/area/sc_away/aerostat/solars)
 "aW" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-8"
@@ -402,72 +247,6 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/kara,
 /area/sc_away/aerostat/inside)
-"aY" = (
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 4
-	},
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/kara,
-/area/sc_away/aerostat/solars)
-"aZ" = (
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/kara,
-/area/sc_away/aerostat/solars)
-"ba" = (
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/kara,
-/area/sc_away/aerostat/solars)
-"bb" = (
-/obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/kara,
-/area/sc_away/aerostat/solars)
-"bc" = (
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 8
-	},
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/kara,
-/area/sc_away/aerostat/solars)
 "bd" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -537,32 +316,6 @@
 	},
 /turf/simulated/floor/plating/kara,
 /area/sc_away/aerostat/inside)
-"bt" = (
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/kara,
-/area/sc_away/aerostat/solars)
-"bu" = (
-/obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 4
-	},
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/kara,
-/area/sc_away/aerostat/solars)
 "bv" = (
 /turf/simulated/wall/virgo2,
 /area/sc_away/aerostat/inside)
@@ -843,15 +596,6 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/kara,
 /area/sc_away/aerostat/inside)
-"cx" = (
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/kara,
-/area/sc_away/aerostat/solars)
 "cy" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 4
@@ -958,21 +702,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor/kara,
 /area/sc_away/aerostat/inside)
-"cP" = (
-/obj/sc_away_spawner/aerostat_inside,
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
-/turf/simulated/floor/bluegrid/kara,
-/area/sc_away/aerostat/inside)
 "cQ" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/effect/decal/cleanable/cobweb,
@@ -1037,63 +766,6 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/kara,
 /area/sc_away/aerostat/inside)
-"db" = (
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 8
-	},
-/obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/kara,
-/area/sc_away/aerostat/solars)
-"dc" = (
-/obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/kara,
-/area/sc_away/aerostat/solars)
-"dd" = (
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 4
-	},
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/kara,
-/area/sc_away/aerostat/solars)
-"de" = (
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/kara,
-/area/sc_away/aerostat/solars)
 "df" = (
 /obj/machinery/power/tracker,
 /obj/structure/cable/yellow,
@@ -1112,19 +784,6 @@
 	},
 /turf/simulated/floor/bluegrid/kara,
 /area/sc_away/aerostat/inside)
-"di" = (
-/obj/structure/cable/heavyduty{
-	dir = 2;
-	icon_state = "0-4"
-	},
-/obj/structure/cable/yellow,
-/obj/structure/cable/yellow{
-	d2 = 2;
-	icon_state = "0-2"
-	},
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/kara,
-/area/sc_away/aerostat/solars)
 "dj" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -1152,65 +811,6 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/kara,
 /area/sc_away/aerostat/solars)
-"dm" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "0-8"
-	},
-/obj/structure/cable/yellow,
-/obj/structure/cable/yellow{
-	d2 = 2;
-	icon_state = "0-2"
-	},
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/kara,
-/area/sc_away/aerostat/solars)
-"dn" = (
-/obj/machinery/power/terminal{
-	dir = 4
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "0-8"
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/bluegrid/kara,
-/area/sc_away/aerostat/inside)
-"do" = (
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 8
-	},
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/kara,
-/area/sc_away/aerostat/solars)
-"dp" = (
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 4
-	},
-/obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/kara,
-/area/sc_away/aerostat/solars)
-"dq" = (
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/kara,
-/area/sc_away/aerostat/solars)
 "dr" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "2-4"
@@ -1227,61 +827,9 @@
 /obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor/plating/kara,
 /area/sc_away/aerostat/inside)
-"dt" = (
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/kara,
-/area/sc_away/aerostat/solars)
-"du" = (
-/obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/kara,
-/area/sc_away/aerostat/solars)
-"dv" = (
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 4
-	},
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/kara,
-/area/sc_away/aerostat/solars)
 "dw" = (
 /obj/structure/metal_edge,
 /turf/unsimulated/floor/sky/kara_sky,
-/area/sc_away/aerostat/solars)
-"dx" = (
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 8
-	},
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/kara,
 /area/sc_away/aerostat/solars)
 "dy" = (
 /obj/structure/cable/heavyduty{
@@ -1290,54 +838,9 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/kara,
 /area/sc_away/aerostat/inside)
-"dz" = (
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/kara,
-/area/sc_away/aerostat/solars)
 "dA" = (
 /obj/effect/floor_decal/rust,
 /obj/effect/decal/cleanable/blood,
-/turf/simulated/floor/plating/kara,
-/area/sc_away/aerostat/solars)
-"dB" = (
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/kara,
-/area/sc_away/aerostat/solars)
-"dC" = (
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 4
-	},
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/kara,
 /area/sc_away/aerostat/solars)
 "dD" = (
@@ -1355,48 +858,6 @@
 	},
 /turf/simulated/floor/plating/kara,
 /area/sc_away/aerostat/solars)
-"dF" = (
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 10
-	},
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/kara,
-/area/sc_away/aerostat/solars)
-"dG" = (
-/obj/structure/cable/yellow{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/obj/effect/floor_decal/industrial/warning/dust,
-/obj/machinery/power/solar,
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/kara,
-/area/sc_away/aerostat/solars)
-"dH" = (
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/obj/effect/floor_decal/industrial/warning/dust,
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/kara,
-/area/sc_away/aerostat/solars)
-"dI" = (
-/obj/structure/cable/yellow{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/obj/machinery/power/solar,
-/obj/effect/floor_decal/industrial/warning/dust,
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/kara,
-/area/sc_away/aerostat/solars)
 "dJ" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 6
@@ -1407,29 +868,6 @@
 "dK" = (
 /obj/machinery/power/smes/buildable,
 /obj/structure/cable,
-/turf/simulated/floor/bluegrid/kara,
-/area/sc_away/aerostat/inside)
-"dL" = (
-/obj/machinery/power/terminal{
-	dir = 8
-	},
-/obj/structure/cable/heavyduty{
-	dir = 2;
-	icon_state = "0-4"
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/bluegrid/kara,
-/area/sc_away/aerostat/inside)
-"dM" = (
-/obj/machinery/power/smes/buildable,
-/obj/structure/cable{
-	d2 = 2;
-	icon_state = "0-2"
-	},
 /turf/simulated/floor/bluegrid/kara,
 /area/sc_away/aerostat/inside)
 "dN" = (
@@ -1457,38 +895,6 @@
 "dQ" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 10
-	},
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/kara,
-/area/sc_away/aerostat/solars)
-"dR" = (
-/obj/machinery/power/solar,
-/obj/effect/floor_decal/industrial/warning/dust,
-/obj/structure/cable/yellow{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/kara,
-/area/sc_away/aerostat/solars)
-"dS" = (
-/obj/effect/floor_decal/industrial/warning/dust,
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/kara,
-/area/sc_away/aerostat/solars)
-"dT" = (
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 6
-	},
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/kara,
@@ -1589,6 +995,26 @@
 /obj/structure/salvageable/implant_container,
 /turf/simulated/floor/tiled/techfloor/kara,
 /area/sc_away/aerostat/inside)
+"fR" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/kara,
+/area/sc_away/aerostat/solars)
+"fY" = (
+/obj/structure/cable/yellow{
+	icon_state = "2-4"
+	},
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 9
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/kara,
+/area/sc_away/aerostat/solars)
 "gt" = (
 /obj/structure/railing{
 	dir = 8
@@ -1613,6 +1039,46 @@
 /obj/random/contraband,
 /turf/simulated/floor/tiled/techfloor/kara,
 /area/sc_away/aerostat/inside)
+"hF" = (
+/obj/structure/cable/yellow{
+	icon_state = "2-8"
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/kara,
+/area/sc_away/aerostat/solars)
+"je" = (
+/obj/structure/cable/yellow{
+	icon_state = "2-4"
+	},
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 8
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/kara,
+/area/sc_away/aerostat/solars)
+"jM" = (
+/obj/structure/cable/yellow{
+	icon_state = "2-4"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/kara,
+/area/sc_away/aerostat/solars)
+"kA" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-4"
+	},
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 8
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/kara,
+/area/sc_away/aerostat/solars)
 "kD" = (
 /obj/effect/shuttle_landmark/premade/aerostat/aerostat_northwest,
 /turf/unsimulated/floor/sky/kara_sky,
@@ -1620,6 +1086,71 @@
 "kF" = (
 /obj/random/action_figure,
 /turf/simulated/floor/tiled/techfloor/kara,
+/area/sc_away/aerostat/inside)
+"mR" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-4"
+	},
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 10
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/kara,
+/area/sc_away/aerostat/solars)
+"pS" = (
+/obj/structure/cable/yellow{
+	icon_state = "2-4"
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/kara,
+/area/sc_away/aerostat/solars)
+"qi" = (
+/obj/machinery/power/terminal{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "0-8"
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/bluegrid/kara,
+/area/sc_away/aerostat/inside)
+"qY" = (
+/obj/structure/cable/yellow{
+	icon_state = "2-4"
+	},
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 1
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/kara,
+/area/sc_away/aerostat/solars)
+"rs" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-4"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 8
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/kara,
+/area/sc_away/aerostat/solars)
+"tm" = (
+/obj/sc_away_spawner/aerostat_inside,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/bluegrid/kara,
 /area/sc_away/aerostat/inside)
 "tZ" = (
 /obj/structure/table/standard,
@@ -1633,14 +1164,80 @@
 /obj/random/cigarettes,
 /turf/simulated/floor/tiled/techfloor/kara,
 /area/sc_away/aerostat/inside)
+"wI" = (
+/obj/machinery/power/solar,
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 1
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/kara,
+/area/sc_away/aerostat/solars)
+"xb" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-8"
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/kara,
+/area/sc_away/aerostat/solars)
+"xc" = (
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/obj/effect/floor_decal/industrial/warning/dust,
+/obj/machinery/power/solar,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/kara,
+/area/sc_away/aerostat/solars)
+"xm" = (
+/obj/machinery/power/smes/buildable,
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/bluegrid/kara,
+/area/sc_away/aerostat/inside)
 "xA" = (
 /obj/random/firstaid,
 /turf/simulated/floor/tiled/techfloor/kara,
 /area/sc_away/aerostat/inside)
+"yq" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-8"
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/kara,
+/area/sc_away/aerostat/solars)
+"yx" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-8"
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/kara,
+/area/sc_away/aerostat/solars)
 "yy" = (
 /obj/structure/salvageable/autolathe,
 /turf/simulated/floor/tiled/techfloor/kara,
 /area/sc_away/aerostat/inside)
+"zW" = (
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/obj/machinery/power/solar,
+/obj/effect/floor_decal/industrial/warning/dust,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/kara,
+/area/sc_away/aerostat/solars)
 "AS" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 4
@@ -1648,6 +1245,33 @@
 /obj/random/toolbox,
 /turf/simulated/floor/tiled/techfloor/kara,
 /area/sc_away/aerostat/inside)
+"Bi" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "0-8"
+	},
+/obj/structure/cable/yellow,
+/obj/structure/cable/yellow{
+	icon_state = "0-2"
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/kara,
+/area/sc_away/aerostat/solars)
+"BG" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/kara,
+/area/sc_away/aerostat/solars)
+"Cs" = (
+/obj/machinery/power/solar,
+/obj/effect/floor_decal/industrial/warning/dust,
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/kara,
+/area/sc_away/aerostat/solars)
 "Dt" = (
 /obj/effect/shuttle_landmark/premade/aerostat/aerostat_northeast,
 /turf/unsimulated/floor/sky/kara_sky,
@@ -1663,19 +1287,97 @@
 /obj/random/drinkbottle,
 /turf/simulated/floor/tiled/techfloor/kara,
 /area/sc_away/aerostat/inside)
+"DT" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 8
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/kara,
+/area/sc_away/aerostat/solars)
+"Ev" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-4"
+	},
+/obj/effect/floor_decal/industrial/warning/dust,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/kara,
+/area/sc_away/aerostat/solars)
+"EU" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-4"
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/kara,
+/area/sc_away/aerostat/solars)
 "Fg" = (
 /obj/random/firstaid,
 /turf/simulated/floor/plating/kara,
 /area/sc_away/aerostat/inside)
+"FU" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-4"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/kara,
+/area/sc_away/aerostat/solars)
+"Ga" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	icon_state = "2-8"
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/kara,
+/area/sc_away/aerostat/solars)
 "Gs" = (
 /obj/structure/table/standard,
 /obj/random/material,
 /turf/simulated/floor/tiled/techfloor/kara,
 /area/sc_away/aerostat/inside)
+"GV" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 1
+	},
+/obj/structure/cable/yellow{
+	icon_state = "2-8"
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/kara,
+/area/sc_away/aerostat/solars)
 "Hl" = (
 /obj/random/tank,
 /turf/simulated/floor/bluegrid/kara,
 /area/sc_away/aerostat/inside)
+"IF" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "2-4"
+	},
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 8
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/kara,
+/area/sc_away/aerostat/solars)
+"IX" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-4"
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/kara,
+/area/sc_away/aerostat/solars)
 "Jb" = (
 /obj/random/toy,
 /turf/simulated/floor/plating/kara,
@@ -1684,6 +1386,27 @@
 /obj/structure/metal_edge,
 /turf/unsimulated/floor/sky/kara_sky,
 /area/sc_away/aerostat)
+"Kf" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/yellow,
+/obj/structure/cable/yellow{
+	icon_state = "0-2"
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/kara,
+/area/sc_away/aerostat/solars)
+"KX" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 5
+	},
+/obj/structure/cable/yellow{
+	icon_state = "2-8"
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/kara,
+/area/sc_away/aerostat/solars)
 "Lw" = (
 /obj/structure/table/standard,
 /obj/random/powercell,
@@ -1693,10 +1416,78 @@
 /obj/random/material,
 /turf/simulated/floor/plating/kara,
 /area/sc_away/aerostat/inside)
+"LD" = (
+/obj/effect/floor_decal/industrial/warning/dust,
+/obj/structure/cable/yellow{
+	icon_state = "1-8"
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/kara,
+/area/sc_away/aerostat/solars)
+"Mg" = (
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/obj/machinery/power/solar,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/kara,
+/area/sc_away/aerostat/solars)
 "Mj" = (
 /obj/random/contraband,
 /turf/simulated/floor/bluegrid/kara,
 /area/sc_away/aerostat/inside)
+"MB" = (
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 1
+	},
+/obj/machinery/power/solar,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/kara,
+/area/sc_away/aerostat/solars)
+"Ng" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 6
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-8"
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/kara,
+/area/sc_away/aerostat/solars)
+"NC" = (
+/obj/structure/cable/yellow{
+	icon_state = "2-8"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/kara,
+/area/sc_away/aerostat/solars)
+"OA" = (
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/obj/machinery/power/solar,
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 1
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/kara,
+/area/sc_away/aerostat/solars)
+"OL" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "2-8"
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/kara,
+/area/sc_away/aerostat/solars)
 "ON" = (
 /obj/structure/railing{
 	dir = 1;
@@ -1714,9 +1505,41 @@
 /obj/structure/salvageable/machine,
 /turf/simulated/floor/tiled/techfloor/kara,
 /area/sc_away/aerostat/inside)
+"RU" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 4
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/kara,
+/area/sc_away/aerostat/solars)
+"Tj" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "2-8"
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/kara,
+/area/sc_away/aerostat/solars)
 "TR" = (
 /obj/structure/salvageable/computer,
 /turf/simulated/floor/tiled/techfloor/kara,
+/area/sc_away/aerostat/inside)
+"Uq" = (
+/obj/machinery/power/terminal{
+	dir = 8
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "0-4"
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/bluegrid/kara,
 /area/sc_away/aerostat/inside)
 "UC" = (
 /obj/structure/table/standard,
@@ -1724,10 +1547,41 @@
 /obj/random/toolbox,
 /turf/simulated/floor/tiled/techfloor/kara,
 /area/sc_away/aerostat/inside)
+"Vn" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "2-8"
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/kara,
+/area/sc_away/aerostat/solars)
+"VB" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "2-4"
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/kara,
+/area/sc_away/aerostat/solars)
 "VR" = (
 /obj/machinery/door/airlock/external,
 /turf/simulated/floor/plating/kara,
 /area/sc_away/aerostat/inside)
+"Wc" = (
+/obj/machinery/power/solar,
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/kara,
+/area/sc_away/aerostat/solars)
 "Wk" = (
 /obj/random/drinkbottle,
 /turf/simulated/floor/plating/kara,
@@ -1740,10 +1594,33 @@
 /obj/item/gun/energy/taser/xeno,
 /turf/simulated/floor/tiled/techfloor/kara,
 /area/sc_away/aerostat/inside)
+"Zc" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-8"
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/kara,
+/area/sc_away/aerostat/solars)
 "ZK" = (
 /obj/random/plushie,
 /turf/simulated/floor/tiled/techfloor/kara,
 /area/sc_away/aerostat/inside)
+"ZP" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-8"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/kara,
+/area/sc_away/aerostat/solars)
 
 (1,1,1) = {"
 cZ
@@ -5472,7 +5349,7 @@ aw
 aw
 aD
 aD
-aZ
+pS
 df
 aD
 aD
@@ -5614,7 +5491,7 @@ aw
 aD
 aD
 aD
-ba
+jM
 dg
 aD
 aD
@@ -5684,7 +5561,7 @@ aw
 aw
 aD
 aD
-aZ
+pS
 df
 aD
 aD
@@ -5756,7 +5633,7 @@ aD
 aD
 aD
 aD
-bb
+BG
 aD
 aD
 aD
@@ -5826,7 +5703,7 @@ aw
 aD
 aD
 aD
-ba
+jM
 dg
 aD
 aD
@@ -5893,19 +5770,19 @@ aw
 aw
 aw
 aw
-ae
-aE
-aE
-aE
-aE
-bc
+fY
+IF
+IF
+IF
+IF
+rs
 aT
-do
-dx
-dx
-dx
-dx
-dF
+je
+kA
+kA
+kA
+kA
+mR
 dw
 aw
 aw
@@ -5968,7 +5845,7 @@ aD
 aD
 aD
 aD
-bb
+BG
 aD
 aD
 aD
@@ -6035,19 +5912,19 @@ aw
 aw
 aw
 aw
-af
-aG
-aG
-aG
-aG
-bb
+MB
+Mg
+Mg
+Mg
+Mg
+BG
 aD
-bb
-aG
-aG
-aG
-aG
-dG
+BG
+Mg
+Mg
+Mg
+Mg
+xc
 dw
 aw
 aw
@@ -6105,19 +5982,19 @@ aw
 aw
 aw
 aw
-ae
-aE
-aE
-aE
-aE
-bc
+fY
+IF
+IF
+IF
+IF
+rs
 aT
-do
-dx
-dx
-dx
-dx
-dF
+je
+kA
+kA
+kA
+kA
+mR
 dw
 aw
 aw
@@ -6177,19 +6054,19 @@ aw
 aw
 aw
 aw
-ag
-aH
-aH
-aH
-aH
-bt
+qY
+VB
+VB
+VB
+VB
+FU
 aD
-ba
-dz
-dz
-dz
-dz
-dH
+jM
+EU
+EU
+EU
+EU
+Ev
 dw
 aw
 aw
@@ -6247,19 +6124,19 @@ aw
 aw
 aw
 aw
-af
-aG
-aG
-aG
-aG
-bb
+MB
+Mg
+Mg
+Mg
+Mg
+BG
 aD
-bb
-aG
-aG
-aG
-aG
-dG
+BG
+Mg
+Mg
+Mg
+Mg
+xc
 dw
 aw
 aw
@@ -6319,19 +6196,19 @@ aw
 aw
 aw
 aw
-af
-aG
-aG
-aG
-aG
-bb
+MB
+Mg
+Mg
+Mg
+Mg
+BG
 aD
-bb
-aG
-aG
-aG
-aG
-dG
+BG
+Mg
+Mg
+Mg
+Mg
+xc
 dw
 aw
 aw
@@ -6389,19 +6266,19 @@ aw
 aw
 aw
 aw
-ag
-aH
-aH
-aH
-aH
-bt
+qY
+VB
+VB
+VB
+VB
+FU
 aD
-ba
-dz
-dz
-dz
-dz
-dH
+jM
+EU
+EU
+EU
+EU
+Ev
 dw
 aw
 aw
@@ -6461,19 +6338,19 @@ aw
 aw
 aw
 aw
-ag
-aH
-aH
-aH
-aH
-bt
+qY
+VB
+VB
+VB
+VB
+FU
 aD
-ba
-dz
-dz
-dz
-dz
-dH
+jM
+EU
+EU
+EU
+EU
+Ev
 dw
 aw
 aw
@@ -6531,19 +6408,19 @@ aw
 aw
 aw
 aw
-af
-aG
-aG
-aG
-aG
-bb
+MB
+Mg
+Mg
+Mg
+Mg
+BG
 aD
-bb
-aG
-aG
-aG
-aG
-dG
+BG
+Mg
+Mg
+Mg
+Mg
+xc
 dw
 aw
 aw
@@ -6603,19 +6480,19 @@ aw
 aw
 aw
 aw
-af
-aG
-aG
-aG
-aG
-bb
+MB
+Mg
+Mg
+Mg
+Mg
+BG
 aD
-bb
-aG
-aG
-aG
-aG
-dG
+BG
+Mg
+Mg
+Mg
+Mg
+xc
 dw
 aw
 aw
@@ -6673,19 +6550,19 @@ aw
 aw
 aw
 aw
-ag
-aH
-aH
-aH
-aH
-bt
+qY
+VB
+VB
+VB
+VB
+FU
 aD
-ba
-dz
-dz
-dz
-dz
-dH
+jM
+EU
+EU
+EU
+EU
+Ev
 dw
 aw
 aw
@@ -6745,19 +6622,19 @@ aw
 aw
 aw
 aw
-ag
-aH
-aH
-aH
-aH
-bt
+qY
+VB
+VB
+VB
+VB
+FU
 aD
-ba
-dz
-dz
-dz
-dz
-dH
+jM
+EU
+EU
+EU
+EU
+Ev
 dw
 aw
 aw
@@ -6815,19 +6692,19 @@ aw
 aw
 aw
 aw
-af
-aG
-aG
-aG
-aG
-bb
+MB
+Mg
+Mg
+Mg
+Mg
+BG
 aD
-bb
-aG
-aG
-aG
-aG
-dG
+BG
+Mg
+Mg
+Mg
+Mg
+xc
 dw
 aw
 aw
@@ -6887,19 +6764,19 @@ aw
 aw
 aw
 aw
-af
-aG
-aG
-aG
-aG
-bb
+MB
+Mg
+Mg
+Mg
+Mg
+BG
 aD
-bb
-aG
-aG
-aG
-aG
-dG
+BG
+Mg
+Mg
+Mg
+Mg
+xc
 dw
 aw
 aw
@@ -6957,19 +6834,19 @@ aw
 aw
 aw
 aw
-ag
-aH
-aH
-aH
-aH
-bt
+qY
+VB
+VB
+VB
+VB
+FU
 aD
-ba
-dz
-dz
-dz
-dz
-dH
+jM
+EU
+EU
+EU
+EU
+Ev
 dw
 aw
 aw
@@ -7029,19 +6906,19 @@ aw
 aw
 aw
 aw
-ag
-aH
-aH
-aH
-aH
-bt
+qY
+VB
+VB
+VB
+VB
+FU
 aD
-ba
-dz
-dz
-dz
-dz
-dH
+jM
+EU
+EU
+EU
+EU
+Ev
 dw
 aw
 aw
@@ -7099,19 +6976,19 @@ aw
 aw
 aw
 aw
-af
-aG
-aG
-aG
-aG
-bb
+MB
+Mg
+Mg
+Mg
+Mg
+BG
 aD
-bb
-aG
-aG
-aG
-aG
-dG
+BG
+Mg
+Mg
+Mg
+Mg
+xc
 dw
 aw
 aw
@@ -7171,19 +7048,19 @@ aw
 aw
 aw
 aw
-af
-aG
-aG
-aG
-aG
-bb
+MB
+Mg
+Mg
+Mg
+Mg
+BG
 aD
-bb
-aG
-aG
-aG
-aG
-dG
+BG
+Mg
+Mg
+Mg
+Mg
+xc
 dw
 aw
 aw
@@ -7241,19 +7118,19 @@ aw
 aw
 aw
 aw
-ag
-aH
-aH
-aH
-aH
-bt
+qY
+VB
+VB
+VB
+VB
+FU
 aD
-ba
-dz
-dz
-dz
-dz
-dH
+jM
+EU
+EU
+EU
+EU
+Ev
 dw
 aw
 aw
@@ -7313,19 +7190,19 @@ aw
 aw
 aw
 aw
-ag
-aH
-aH
-aH
-aH
-bt
+qY
+VB
+VB
+VB
+VB
+FU
 aD
-ba
-dz
-dz
-dz
-dz
-dH
+jM
+EU
+EU
+EU
+EU
+Ev
 dw
 aw
 aw
@@ -7383,19 +7260,19 @@ aw
 aw
 aw
 aw
-af
-aG
-aG
-aG
-aG
-bb
+MB
+Mg
+Mg
+Mg
+Mg
+BG
 aD
-bb
-aG
-aG
-aG
-aG
-dG
+BG
+Mg
+Mg
+Mg
+Mg
+xc
 dw
 aw
 aw
@@ -7455,19 +7332,19 @@ aw
 aw
 aw
 aw
-af
-aG
-aG
-aG
-aG
-bb
+MB
+Mg
+Mg
+Mg
+Mg
+BG
 aD
-bb
-aG
-aG
-aG
-aG
-dG
+BG
+Mg
+Mg
+Mg
+Mg
+xc
 dw
 aw
 aw
@@ -7525,19 +7402,19 @@ aw
 aw
 aw
 aw
-ag
-aH
-aH
-aH
-aH
-bt
+qY
+VB
+VB
+VB
+VB
+FU
 aD
-ba
-dz
-dz
-dz
-dz
-dH
+jM
+EU
+EU
+EU
+EU
+Ev
 dw
 aw
 aw
@@ -7597,19 +7474,19 @@ aw
 aw
 aw
 aw
-ag
-aH
-aH
-aH
-aH
-bt
+qY
+VB
+VB
+VB
+VB
+FU
 aD
-ba
-dz
-dz
-dz
-dz
-dH
+jM
+EU
+EU
+EU
+EU
+Ev
 dw
 aw
 aw
@@ -7667,19 +7544,19 @@ aw
 aw
 aw
 aw
-af
-aG
-aG
-aG
-aG
-bb
+MB
+Mg
+Mg
+Mg
+Mg
+BG
 aD
-bb
-aG
-aG
-aG
-aG
-dG
+BG
+Mg
+Mg
+Mg
+Mg
+xc
 dw
 aw
 aw
@@ -7739,19 +7616,19 @@ aw
 aw
 aw
 aw
-af
-aG
-aG
-aG
-aG
-bb
+MB
+Mg
+Mg
+Mg
+Mg
+BG
 aD
-bb
-aG
-aG
-aG
-aG
-dG
+BG
+Mg
+Mg
+Mg
+Mg
+xc
 dw
 aw
 aw
@@ -7809,19 +7686,19 @@ aw
 aw
 aw
 aw
-ag
-aH
-aH
-aH
-aH
-bt
+qY
+VB
+VB
+VB
+VB
+FU
 aD
-ba
-dz
-dz
-dz
-dz
-dH
+jM
+EU
+EU
+EU
+EU
+Ev
 dw
 aw
 aw
@@ -7881,19 +7758,19 @@ aw
 aw
 aw
 aw
-ag
-aH
-aH
-aH
-aH
-bt
+qY
+VB
+VB
+VB
+VB
+FU
 aD
-ba
-dz
-dz
-dz
-dz
-dH
+jM
+EU
+EU
+EU
+EU
+Ev
 dw
 aw
 aw
@@ -7951,19 +7828,19 @@ aw
 aw
 aw
 aw
-af
-aG
-aG
-aG
-aG
-bb
+MB
+Mg
+Mg
+Mg
+Mg
+BG
 aD
-bb
-aG
-aG
-aG
-aG
-dG
+BG
+Mg
+Mg
+Mg
+Mg
+xc
 dw
 aw
 aw
@@ -8023,19 +7900,19 @@ aw
 aw
 aw
 aw
-aq
-aG
-aG
-aG
-aG
-bb
+OA
+Mg
+Mg
+Mg
+Mg
+BG
 aD
-bb
-aG
-aG
-aG
-aG
-dI
+BG
+Mg
+Mg
+Mg
+Mg
+zW
 dw
 aw
 aw
@@ -8093,19 +7970,19 @@ aw
 aw
 aw
 aw
-ag
-aH
-aH
-aH
-aH
-bt
+qY
+VB
+VB
+VB
+VB
+FU
 aD
-ba
-dz
-dz
-dz
-dz
-dH
+jM
+EU
+EU
+EU
+EU
+Ev
 dw
 aw
 aw
@@ -8170,9 +8047,9 @@ aS
 aS
 aS
 aS
-bu
+RU
 aS
-dp
+fR
 aS
 dD
 aS
@@ -8235,19 +8112,19 @@ aw
 aw
 aw
 aw
-aq
-aG
-aG
-aG
-aG
-bb
+OA
+Mg
+Mg
+Mg
+Mg
+BG
 aD
-bb
-aG
-aG
-aG
-aG
-dI
+BG
+Mg
+Mg
+Mg
+Mg
+zW
 dw
 aw
 aw
@@ -8312,9 +8189,9 @@ aD
 aD
 aD
 aD
-bb
+BG
 aD
-bb
+BG
 aD
 aD
 aD
@@ -8382,9 +8259,9 @@ aS
 aS
 aS
 aS
-bu
+RU
 aS
-dp
+fR
 aS
 aS
 aS
@@ -8454,9 +8331,9 @@ aw
 aD
 aD
 aD
-bb
+BG
 aD
-bb
+BG
 aD
 aD
 aD
@@ -8524,9 +8401,9 @@ aD
 aD
 aD
 aD
-bb
+BG
 aD
-bb
+BG
 aD
 aD
 aD
@@ -8596,9 +8473,9 @@ aw
 aw
 aD
 aD
-cx
-di
-dq
+hF
+Kf
+xb
 aD
 aD
 dw
@@ -8666,9 +8543,9 @@ aw
 aD
 aD
 aD
-bb
+BG
 aD
-bb
+BG
 aD
 aD
 aD
@@ -8808,9 +8685,9 @@ aw
 aw
 aD
 aD
-cx
-di
-dq
+hF
+Kf
+xb
 aD
 aD
 dw
@@ -11472,8 +11349,8 @@ be
 bv
 aK
 aQ
-dn
-dn
+qi
+qi
 dN
 aR
 bv
@@ -11615,7 +11492,7 @@ bv
 Mj
 bZ
 dK
-dM
+xm
 dO
 aL
 bv
@@ -11754,10 +11631,10 @@ aw
 bq
 be
 bv
-aM
-cP
+aQ
+tm
 dK
-dM
+xm
 dN
 Mj
 bv
@@ -11898,8 +11775,8 @@ be
 bv
 aO
 dh
-dL
-dL
+Uq
+Uq
 dO
 aR
 bv
@@ -14630,9 +14507,9 @@ aw
 aw
 aD
 aD
-aZ
-dm
-dt
+pS
+Bi
+IX
 aD
 aD
 dw
@@ -14702,9 +14579,9 @@ aw
 aw
 aD
 aD
-aZ
-dm
-dt
+pS
+Bi
+IX
 dA
 aD
 dw
@@ -14772,9 +14649,9 @@ aw
 aD
 aD
 aD
-bb
+BG
 aD
-bb
+BG
 aD
 aD
 aD
@@ -14844,9 +14721,9 @@ aw
 aD
 aD
 aD
-bb
+BG
 aD
-bb
+BG
 aD
 aD
 dE
@@ -14914,9 +14791,9 @@ aD
 aD
 aD
 aD
-bb
+BG
 aD
-bb
+BG
 aD
 aD
 aD
@@ -14986,9 +14863,9 @@ aD
 aD
 aD
 aD
-bb
+BG
 aD
-bb
+BG
 aD
 aD
 aD
@@ -15056,9 +14933,9 @@ aT
 aT
 aT
 aT
-db
+DT
 aT
-db
+DT
 aT
 aT
 aT
@@ -15128,9 +15005,9 @@ aT
 aT
 aT
 aT
-db
+DT
 aT
-db
+DT
 aT
 aT
 aT
@@ -15193,19 +15070,19 @@ aw
 aw
 aw
 aw
-ax
-aU
-aU
-aU
-aU
-bb
+wI
+Wc
+Wc
+Wc
+Wc
+BG
 aD
-bb
-aU
-aU
-aU
-aU
-dR
+BG
+Wc
+Wc
+Wc
+Wc
+Cs
 dw
 aw
 aw
@@ -15265,19 +15142,19 @@ aw
 aw
 aw
 aw
-ax
-aU
-aU
-aU
-aU
-bb
+wI
+Wc
+Wc
+Wc
+Wc
+BG
 aD
-bb
-aU
-aU
-aU
-aU
-dR
+BG
+Wc
+Wc
+Wc
+Wc
+Cs
 dw
 aw
 aw
@@ -15335,19 +15212,19 @@ aw
 aw
 aw
 aw
-ay
-aV
-aV
-aV
-aV
-dc
+GV
+Tj
+Tj
+Tj
+Tj
+yx
 aD
-du
-dB
-dB
-dB
-dB
-dS
+OL
+Zc
+Zc
+Zc
+Zc
+LD
 dw
 aw
 aw
@@ -15407,19 +15284,19 @@ aw
 aw
 aw
 aw
-ay
-aV
-aV
-aV
-aV
-dc
+GV
+Tj
+Tj
+Tj
+Tj
+yx
 aD
-du
-dB
-dB
-dB
-dB
-dS
+OL
+Zc
+Zc
+Zc
+Zc
+LD
 dw
 aw
 aw
@@ -15477,19 +15354,19 @@ aw
 aw
 aw
 aw
-ax
-aU
-aU
-aU
-aU
-bb
+wI
+Wc
+Wc
+Wc
+Wc
+BG
 aD
-bb
-aU
-aU
-aU
-aU
-dR
+BG
+Wc
+Wc
+Wc
+Wc
+Cs
 dw
 aw
 aw
@@ -15549,19 +15426,19 @@ aw
 aw
 aw
 aw
-ax
-aU
-aU
-aU
-aU
-bb
+wI
+Wc
+Wc
+Wc
+Wc
+BG
 aD
-bb
-aU
-aU
-aU
-aU
-dR
+BG
+Wc
+Wc
+Wc
+Wc
+Cs
 dw
 aw
 aw
@@ -15619,19 +15496,19 @@ aw
 aw
 aw
 aw
-ay
-aV
-aV
-aV
-aV
-dc
+GV
+Tj
+Tj
+Tj
+Tj
+yx
 aD
-du
-dB
-dB
-dB
-dB
-dS
+OL
+Zc
+Zc
+Zc
+Zc
+LD
 dw
 aw
 aw
@@ -15691,19 +15568,19 @@ aw
 aw
 aw
 aw
-ay
-aV
-aV
-aV
-aV
-dc
+GV
+Tj
+Tj
+Tj
+Tj
+yx
 aD
-du
-dB
-dB
-dB
-dB
-dS
+OL
+Zc
+Zc
+Zc
+Zc
+LD
 dw
 aw
 aw
@@ -15761,19 +15638,19 @@ aw
 aw
 aw
 aw
-ax
-aU
-aU
-aU
-aU
-bb
+wI
+Wc
+Wc
+Wc
+Wc
+BG
 aD
-bb
-aU
-aU
-aU
-aU
-dR
+BG
+Wc
+Wc
+Wc
+Wc
+Cs
 dw
 aw
 aw
@@ -15833,19 +15710,19 @@ aw
 aw
 aw
 aw
-ax
-aU
-aU
-aU
-aU
-bb
+wI
+Wc
+Wc
+Wc
+Wc
+BG
 aD
-bb
-aU
-aU
-aU
-aU
-dR
+BG
+Wc
+Wc
+Wc
+Wc
+Cs
 dw
 aw
 aw
@@ -15903,19 +15780,19 @@ aw
 aw
 aw
 aw
-ay
-aV
-aV
-aV
-aV
-dc
+GV
+Tj
+Tj
+Tj
+Tj
+yx
 aD
-du
-dB
-dB
-dB
-dB
-dS
+OL
+Zc
+Zc
+Zc
+Zc
+LD
 dw
 aw
 aw
@@ -15975,19 +15852,19 @@ aw
 aw
 aw
 aw
-ay
-aV
-aV
-aV
-aV
-dc
+GV
+Tj
+Tj
+Tj
+Tj
+yx
 aD
-du
-dB
-dB
-dB
-dB
-dS
+OL
+Zc
+Zc
+Zc
+Zc
+LD
 dw
 aw
 aw
@@ -16045,19 +15922,19 @@ aw
 aw
 aw
 aw
-ax
-aU
-aU
-aU
-aU
-bb
+wI
+Wc
+Wc
+Wc
+Wc
+BG
 aD
-bb
-aU
-aU
-aU
-aU
-dR
+BG
+Wc
+Wc
+Wc
+Wc
+Cs
 dw
 aw
 aw
@@ -16117,19 +15994,19 @@ aw
 aw
 aw
 aw
-ax
-aU
-aU
-aU
-aU
-bb
+wI
+Wc
+Wc
+Wc
+Wc
+BG
 aD
-bb
-aU
-aU
-aU
-aU
-dR
+BG
+Wc
+Wc
+Wc
+Wc
+Cs
 dw
 aw
 aw
@@ -16187,19 +16064,19 @@ aw
 aw
 aw
 aw
-ay
-aV
-aV
-aV
-aV
-dc
+GV
+Tj
+Tj
+Tj
+Tj
+yx
 aD
-du
-dB
-dB
-dB
-dB
-dS
+OL
+Zc
+Zc
+Zc
+Zc
+LD
 dw
 aw
 aw
@@ -16259,19 +16136,19 @@ aw
 aw
 aw
 aw
-ay
-aV
-aV
-aV
-aV
-dc
+GV
+Tj
+Tj
+Tj
+Tj
+yx
 aD
-du
-dB
-dB
-dB
-dB
-dS
+OL
+Zc
+Zc
+Zc
+Zc
+LD
 dw
 aw
 aw
@@ -16329,19 +16206,19 @@ aw
 aw
 aw
 aw
-ax
-aU
-aU
-aU
-aU
-bb
+wI
+Wc
+Wc
+Wc
+Wc
+BG
 aD
-bb
-aU
-aU
-aU
-aU
-dR
+BG
+Wc
+Wc
+Wc
+Wc
+Cs
 dw
 aw
 aw
@@ -16401,19 +16278,19 @@ aw
 aw
 aw
 aw
-ax
-aU
-aU
-aU
-aU
-bb
+wI
+Wc
+Wc
+Wc
+Wc
+BG
 aD
-bb
-aU
-aU
-aU
-aU
-dR
+BG
+Wc
+Wc
+Wc
+Wc
+Cs
 dw
 aw
 aw
@@ -16471,19 +16348,19 @@ aw
 aw
 aw
 aw
-ay
-aV
-aV
-aV
-aV
-dc
+GV
+Tj
+Tj
+Tj
+Tj
+yx
 aD
-du
-dB
-dB
-dB
-dB
-dS
+OL
+Zc
+Zc
+Zc
+Zc
+LD
 dw
 aw
 aw
@@ -16543,19 +16420,19 @@ aw
 aw
 aw
 aw
-ay
-aV
-aV
-aV
-aV
-dc
+GV
+Tj
+Tj
+Tj
+Tj
+yx
 aD
-du
-dB
-dB
-dB
-dB
-dS
+OL
+Zc
+Zc
+Zc
+Zc
+LD
 dw
 aw
 aw
@@ -16613,19 +16490,19 @@ aw
 aw
 aw
 aw
-ax
-aU
-aU
-aU
-aU
-bb
+wI
+Wc
+Wc
+Wc
+Wc
+BG
 aD
-bb
-aU
-aU
-aU
-aU
-dR
+BG
+Wc
+Wc
+Wc
+Wc
+Cs
 dw
 aw
 aw
@@ -16685,19 +16562,19 @@ aw
 aw
 aw
 aw
-ax
-aU
-aU
-aU
-aU
-bb
+wI
+Wc
+Wc
+Wc
+Wc
+BG
 aD
-bb
-aU
-aU
-aU
-aU
-dR
+BG
+Wc
+Wc
+Wc
+Wc
+Cs
 dw
 aw
 aw
@@ -16755,19 +16632,19 @@ aw
 aw
 aw
 aw
-ay
-aV
-aV
-aV
-aV
-dc
+GV
+Tj
+Tj
+Tj
+Tj
+yx
 aD
-du
-dB
-dB
-dB
-dB
-dS
+OL
+Zc
+Zc
+Zc
+Zc
+LD
 dw
 aw
 aw
@@ -16827,19 +16704,19 @@ aw
 aw
 aw
 aw
-ay
-aV
-aV
-aV
-aV
-dc
+GV
+Tj
+Tj
+Tj
+Tj
+yx
 aD
-du
-dB
-dB
-dB
-dB
-dS
+OL
+Zc
+Zc
+Zc
+Zc
+LD
 dw
 aw
 aw
@@ -16897,19 +16774,19 @@ aw
 aw
 aw
 aw
-ax
-aU
-aU
-aU
-aU
-bb
+wI
+Wc
+Wc
+Wc
+Wc
+BG
 aD
-bb
-aU
-aU
-aU
-aU
-dR
+BG
+Wc
+Wc
+Wc
+Wc
+Cs
 dw
 aw
 aw
@@ -16969,19 +16846,19 @@ aw
 aw
 aw
 aw
-ax
-aU
-aU
-aU
-aU
-bb
+wI
+Wc
+Wc
+Wc
+Wc
+BG
 aD
-bb
-aU
-aU
-aU
-aU
-dR
+BG
+Wc
+Wc
+Wc
+Wc
+Cs
 dw
 aw
 aw
@@ -17039,19 +16916,19 @@ aw
 aw
 aw
 aw
-ay
-aV
-aV
-aV
-aV
-dc
+GV
+Tj
+Tj
+Tj
+Tj
+yx
 aD
-du
-dB
-dB
-dB
-dB
-dS
+OL
+Zc
+Zc
+Zc
+Zc
+LD
 dw
 aw
 aw
@@ -17111,19 +16988,19 @@ aw
 aw
 aw
 aw
-ay
-aV
-aV
-aV
-aV
-dc
+GV
+Tj
+Tj
+Tj
+Tj
+yx
 aD
-du
-dB
-dB
-dB
-dB
-dS
+OL
+Zc
+Zc
+Zc
+Zc
+LD
 dw
 aw
 aw
@@ -17181,19 +17058,19 @@ aw
 aw
 aw
 aw
-ax
-aU
-aU
-aU
-aU
-bb
+wI
+Wc
+Wc
+Wc
+Wc
+BG
 aD
-bb
-aU
-aU
-aU
-aU
-dR
+BG
+Wc
+Wc
+Wc
+Wc
+Cs
 dw
 aw
 aw
@@ -17253,19 +17130,19 @@ aw
 aw
 aw
 aw
-ax
-aU
-aU
-aU
-aU
-bb
+wI
+Wc
+Wc
+Wc
+Wc
+BG
 aD
-bb
-aU
-aU
-aU
-aU
-dR
+BG
+Wc
+Wc
+Wc
+Wc
+Cs
 dw
 aw
 aw
@@ -17323,19 +17200,19 @@ aw
 aw
 aw
 aw
-aB
-aY
-aY
-aY
-aY
-dd
+KX
+Vn
+Vn
+Vn
+Vn
+ZP
 aS
-dv
-dC
-dC
-dC
-dC
-dT
+Ga
+yq
+yq
+yq
+yq
+Ng
 dw
 aw
 aw
@@ -17395,19 +17272,19 @@ aw
 aw
 aw
 aw
-aB
-aY
-aY
-aY
-aY
-dd
+KX
+Vn
+Vn
+Vn
+Vn
+ZP
 aS
-dv
-dC
-dC
-dC
-dC
-dT
+Ga
+yq
+yq
+yq
+yq
+Ng
 dw
 aw
 aw
@@ -17470,7 +17347,7 @@ aD
 aD
 aD
 aD
-bb
+BG
 aD
 aD
 aD
@@ -17542,7 +17419,7 @@ aD
 aD
 aD
 aD
-bb
+BG
 aD
 aD
 aD
@@ -17612,7 +17489,7 @@ aw
 aD
 aD
 dU
-de
+NC
 dg
 aD
 aD
@@ -17684,7 +17561,7 @@ aw
 aD
 aD
 aD
-de
+NC
 dg
 aD
 aD
@@ -17754,7 +17631,7 @@ aw
 aw
 aD
 aD
-cx
+hF
 df
 aD
 aD
@@ -17826,7 +17703,7 @@ aw
 aw
 aD
 aD
-cx
+hF
 df
 aD
 aD

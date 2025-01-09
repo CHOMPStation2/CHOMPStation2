@@ -63,3 +63,15 @@
 2025-01-07:
   Kashargul:
   - bugfix: arc vial projectiles not working
+2025-01-08:
+  Aroliacue:
+  - bugfix: Fixed exosuit fighters having an additional 'stomp' stepsound.
+  Asher-42:
+  - rscadd: protean borg (dullahan)
+  - rscadd: dullahan command sprite thats job locked to protean / command only.
+  Kashargul:
+  - bugfix: lingering fire now caps out at the fire max temp
+  aKromatopzia:
+  - image: smolraptors can curl up when resting; and miner lost its purple collar.
+  whooshboom:
+  - rscadd: CO2 Breather trait, CO2 tanks, and loadout double-tanks.

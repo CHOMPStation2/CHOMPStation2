@@ -241,34 +241,12 @@
 	nitrogen = 0
 	},
 /area/submap/spaceseveneleven)
-"fj" = (
-/obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/obj/machinery/power/solar,
-/turf/simulated/floor/outdoors/sidewalk/slab/city{
-	oxygen = 0;
-	nitrogen = 0
-	},
-/area/submap/spaceseveneleven)
 "fJ" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/old_tile/red,
 /area/submap/spaceseveneleven)
 "gG" = (
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/submap/spaceseveneleven)
-"hn" = (
-/obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/obj/machinery/power/solar,
-/turf/simulated/floor/outdoors/rocks{
-	nitrogen = 0;
-	oxygen = 0
-	},
 /area/submap/spaceseveneleven)
 "hq" = (
 /turf/simulated/floor/outdoors/sidewalk/slab/city{
@@ -414,6 +392,15 @@
 	nitrogen = 0
 	},
 /area/submap/spaceseveneleven)
+"lf" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/outdoors/sidewalk/slab/city{
+	oxygen = 0;
+	nitrogen = 0
+	},
+/area/submap/spaceseveneleven)
 "lp" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/structure/window/basic{
@@ -554,22 +541,6 @@
 	},
 /turf/simulated/floor/tiled/old_tile/red,
 /area/submap/spaceseveneleven)
-"ny" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/outdoors/rocks{
-	nitrogen = 0;
-	oxygen = 0
-	},
-/area/submap/spaceseveneleven)
 "nN" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 6
@@ -638,17 +609,6 @@
 	pixel_y = 31
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/submap/spaceseveneleven)
-"pj" = (
-/obj/structure/cable{
-	d2 = 2;
-	icon_state = "0-2"
-	},
-/obj/machinery/power/tracker,
-/turf/simulated/floor/outdoors/rocks{
-	nitrogen = 0;
-	oxygen = 0
-	},
 /area/submap/spaceseveneleven)
 "pk" = (
 /obj/machinery/atmospherics/portables_connector{
@@ -970,6 +930,18 @@
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/submap/spaceseveneleven)
+"uN" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/outdoors/rocks{
+	nitrogen = 0;
+	oxygen = 0
+	},
+/area/submap/spaceseveneleven)
 "uP" = (
 /obj/effect/floor_decal/corner/white/border{
 	dir = 4
@@ -1260,6 +1232,16 @@
 	nitrogen = 0
 	},
 /area/submap/spaceseveneleven)
+"Cv" = (
+/obj/machinery/power/smes/buildable/point_of_interest,
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/outdoors/sidewalk/slab/city{
+	oxygen = 0;
+	nitrogen = 0
+	},
+/area/submap/spaceseveneleven)
 "CB" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/structure/window/basic{
@@ -1432,6 +1414,21 @@
 	nitrogen = 0
 	},
 /area/submap/spaceseveneleven)
+"FQ" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/outdoors/sidewalk/slab/city{
+	oxygen = 0;
+	nitrogen = 0
+	},
+/area/submap/spaceseveneleven)
 "FV" = (
 /obj/structure/closet/crate/large,
 /obj/item/tank/phoron,
@@ -1539,17 +1536,6 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/old_tile/white,
-/area/submap/spaceseveneleven)
-"HI" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/outdoors/sidewalk/slab/city{
-	oxygen = 0;
-	nitrogen = 0
-	},
 /area/submap/spaceseveneleven)
 "HO" = (
 /obj/structure/railing/grey,
@@ -1659,21 +1645,12 @@
 	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/submap/spaceseveneleven)
-"Kl" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+"JW" = (
+/obj/machinery/power/solar_control/autostart{
+	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
+	icon_state = "0-4"
 	},
 /turf/simulated/floor/outdoors/sidewalk/slab/city{
 	oxygen = 0;
@@ -1689,6 +1666,16 @@
 /obj/item/reagent_containers/food/snacks/canned/spinach,
 /obj/item/reagent_containers/food/snacks/canned/spinach,
 /turf/simulated/floor/tiled/old_tile/white,
+/area/submap/spaceseveneleven)
+"KJ" = (
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/obj/machinery/power/solar,
+/turf/simulated/floor/outdoors/sidewalk/slab/city{
+	oxygen = 0;
+	nitrogen = 0
+	},
 /area/submap/spaceseveneleven)
 "KK" = (
 /obj/structure/table/rack/shelf/steel,
@@ -1832,11 +1819,14 @@
 	nitrogen = 0
 	},
 /area/submap/spaceseveneleven)
-"Ok" = (
-/obj/machinery/power/smes/buildable/point_of_interest,
+"Op" = (
 /obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
+	icon_state = "0-4"
+	},
+/obj/machinery/power/apc/hyper{
+	dir = 8;
+	pixel_y = 0;
+	pixel_x = -24
 	},
 /turf/simulated/floor/outdoors/sidewalk/slab/city{
 	oxygen = 0;
@@ -1855,32 +1845,14 @@
 	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/submap/spaceseveneleven)
-"Pf" = (
-/obj/machinery/power/solar_control/autostart{
-	dir = 4
-	},
+"OX" = (
 /obj/structure/cable{
-	d2 = 4;
-	icon_state = "0-4"
+	icon_state = "0-2"
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab/city{
-	oxygen = 0;
-	nitrogen = 0
-	},
-/area/submap/spaceseveneleven)
-"Pi" = (
-/obj/structure/cable{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/obj/machinery/power/apc/hyper{
-	dir = 8;
-	pixel_y = 0;
-	pixel_x = -24
-	},
-/turf/simulated/floor/outdoors/sidewalk/slab/city{
-	oxygen = 0;
-	nitrogen = 0
+/obj/machinery/power/tracker,
+/turf/simulated/floor/outdoors/rocks{
+	nitrogen = 0;
+	oxygen = 0
 	},
 /area/submap/spaceseveneleven)
 "Pt" = (
@@ -2035,27 +2007,23 @@
 	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/submap/spaceseveneleven)
+"Tv" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/outdoors/sidewalk/slab/city{
+	oxygen = 0;
+	nitrogen = 0
+	},
+/area/submap/spaceseveneleven)
 "TK" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 4
 	},
 /turf/simulated/floor/concrete{
-	oxygen = 0;
-	nitrogen = 0
-	},
-/area/submap/spaceseveneleven)
-"TW" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/outdoors/sidewalk/slab/city{
 	oxygen = 0;
 	nitrogen = 0
 	},
@@ -2163,6 +2131,16 @@
 /obj/item/reagent_containers/food/snacks/canned/tomato,
 /obj/item/reagent_containers/food/snacks/canned/tomato,
 /turf/simulated/floor/tiled/old_tile/white,
+/area/submap/spaceseveneleven)
+"Xq" = (
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/obj/machinery/power/solar,
+/turf/simulated/floor/outdoors/rocks{
+	nitrogen = 0;
+	oxygen = 0
+	},
 /area/submap/spaceseveneleven)
 "Xr" = (
 /obj/random/trash,
@@ -3948,11 +3926,11 @@ RQ
 RQ
 RQ
 hq
-Pf
+JW
 hq
 hq
 hq
-Pi
+Op
 Lr
 El
 QU
@@ -3995,11 +3973,11 @@ RQ
 RQ
 RQ
 hq
-HI
+lf
 hq
 hq
 fb
-Ok
+Cv
 Lr
 Lr
 Lr
@@ -4039,13 +4017,13 @@ RQ
 RQ
 RQ
 RQ
-pj
-ny
-TW
-Kl
-TW
-TW
-TW
+OX
+uN
+Tv
+FQ
+Tv
+Tv
+Tv
 AB
 Ad
 Ad
@@ -4087,12 +4065,12 @@ XK
 XK
 XK
 XK
-hn
-hn
-hn
-hn
-fj
-fj
+Xq
+Xq
+Xq
+Xq
+KJ
+KJ
 hq
 qJ
 qJ

@@ -421,6 +421,7 @@
 	var_changes = list("breath_type" = "null", "poison_type" = "null", "exhale_type" = "null", "water_breather" = "TRUE")
 	excludes = list(/datum/trait/negative/breathes/phoron,
 					/datum/trait/negative/breathes/nitrogen,
+					/datum/trait/negative/breathes/carbon_dioxide,
 					/datum/trait/positive/light_breather,
 					/datum/trait/negative/deep_breather
 )
