@@ -22,9 +22,7 @@
 /area/surface/outpost/wall)
 "cW" = (
 /obj/structure/cable/heavyduty{
-	icon_state = "4-8";
-	d1 = 4;
-	d2 = 8
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/surface/outpost/wall/checkpoint)
@@ -141,9 +139,7 @@
 /area/surface/outpost/mining_main/exterior/pad)
 "ud" = (
 /obj/structure/cable/heavyduty{
-	icon_state = "4-8";
-	d1 = 4;
-	d2 = 8
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/surface/outpost/mining_main/exterior/pad)
@@ -215,9 +211,7 @@
 	name = "Wilderness Containment"
 	},
 /obj/structure/cable/heavyduty{
-	icon_state = "4-8";
-	d1 = 4;
-	d2 = 8
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/surface/outpost/wall/checkpoint)
@@ -233,18 +227,14 @@
 /area/surface/outpost/wall/checkpoint)
 "MF" = (
 /obj/structure/cable/heavyduty{
-	icon_state = "1-2";
-	d1 = 1;
-	d2 = 2
+	icon_state = "1-2"
 	},
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
 /area/surface/outpost/wall/checkpoint)
 "Nd" = (
 /obj/structure/cable/heavyduty{
-	icon_state = "1-2";
-	d1 = 1;
-	d2 = 2
+	icon_state = "1-2"
 	},
 /obj/machinery/light{
 	dir = 4
@@ -253,9 +243,7 @@
 /area/surface/outpost/mining_main/exterior/pad)
 "Ox" = (
 /obj/structure/cable/heavyduty{
-	icon_state = "1-2";
-	d1 = 1;
-	d2 = 2
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
 /area/surface/outside/wilderness/mountains)
@@ -293,9 +281,7 @@
 /area/surface/outpost/mining_main/exterior/pad)
 "PZ" = (
 /obj/structure/cable/heavyduty{
-	icon_state = "4-8";
-	d1 = 4;
-	d2 = 8
+	icon_state = "4-8"
 	},
 /obj/machinery/light{
 	dir = 1
@@ -366,9 +352,7 @@
 /area/surface/outpost/mining_main/exterior/pad)
 "Yy" = (
 /obj/structure/cable/heavyduty{
-	icon_state = "1-2";
-	d1 = 1;
-	d2 = 2
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/surface/outpost/mining_main/exterior/pad)
