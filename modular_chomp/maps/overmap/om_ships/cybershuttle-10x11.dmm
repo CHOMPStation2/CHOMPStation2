@@ -62,9 +62,7 @@
 /area/shuttle/cybershuttle)
 "k" = (
 /obj/machinery/light,
-/obj/machinery/atmospherics/portables_connector{
-	dir = 2
-	},
+/obj/machinery/atmospherics/portables_connector,
 /obj/machinery/portable_atmospherics/canister/air/airlock,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/cybershuttle)
@@ -95,15 +93,6 @@
 "r" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/shuttle/cybershuttle)
-"t" = (
-/obj/structure/window/plastitanium{
-	dir = 4
-	},
-/obj/structure/window/plastitanium{
-	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/cybershuttle)
@@ -175,9 +164,7 @@
 /turf/simulated/floor/plating,
 /area/shuttle/cybershuttle)
 "E" = (
-/obj/machinery/computer/ship/sensors{
-	dir = 2
-	},
+/obj/machinery/computer/ship/sensors,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/cybershuttle)
 "F" = (
@@ -274,9 +261,7 @@
 /turf/simulated/floor/plating,
 /area/shuttle/cybershuttle)
 "Z" = (
-/obj/machinery/power/terminal{
-	dir = 2
-	},
+/obj/machinery/power/terminal,
 /obj/structure/cable/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/cybershuttle)
@@ -353,7 +338,7 @@ E
 J
 g
 S
-t
+S
 r
 g
 z

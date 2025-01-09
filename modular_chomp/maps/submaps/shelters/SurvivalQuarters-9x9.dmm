@@ -121,8 +121,8 @@
 	pixel_y = 4
 	},
 /obj/item/taperecorder,
-/obj/item/tape/random,
-/obj/item/tape/random,
+/obj/item/tape,
+/obj/item/tape,
 /obj/item/packageWrap,
 /obj/item/packageWrap,
 /obj/item/folder/yellow,

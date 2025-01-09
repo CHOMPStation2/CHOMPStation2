@@ -441,14 +441,6 @@
 /obj/random/junk,
 /turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/derelict1)
-"AN" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 293.15
-	},
-/turf/simulated/floor/plating,
-/area/submap/derelict1)
 "AR" = (
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
@@ -758,7 +750,6 @@
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/plating,
-/turf/space,
 /area/submap/derelict1)
 "Vo" = (
 /obj/random/junk,
@@ -5120,7 +5111,7 @@ wx
 wx
 wx
 wx
-AN
+Vc
 Nb
 qQ
 Iw
@@ -5324,7 +5315,7 @@ Tr
 Tr
 Tr
 Tr
-AN
+Vc
 qQ
 qQ
 qQ
@@ -5332,7 +5323,7 @@ Sf
 Ab
 xM
 Nb
-AN
+Vc
 Tr
 Tr
 Tr
@@ -5633,7 +5624,7 @@ jG
 jG
 jG
 lp
-AN
+Vc
 iK
 Vc
 lp

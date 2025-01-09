@@ -132,8 +132,7 @@
 /area/submap/Chapel1)
 "aD" = (
 /obj/structure/cable/cyan{
-	dir = 1;
-	icon_state = "0-4"
+	icon_state = "0-8"
 	},
 /obj/machinery/power/rtg/advanced{
 	component_parts = list(/obj/item/stack/cable_coil = 5, /obj/item/stock_parts/capacitor/omni = 1, /obj/item/stock_parts/micro_laser/omni = 1, /obj/item/stack/material/uranium = 10, /obj/item/stack/material/phoron = 5)
@@ -456,8 +455,7 @@
 	icon_state = "1-8"
 	},
 /obj/structure/cable/cyan{
-	dir = 1;
-	icon_state = "2-8"
+	icon_state = "1-4"
 	},
 /turf/simulated/floor/wood/sif,
 /area/submap/Chapel1)
@@ -524,15 +522,13 @@
 	dir = 5
 	},
 /obj/structure/cable/cyan{
-	dir = 1;
-	icon_state = "2-8"
+	icon_state = "1-4"
 	},
 /turf/simulated/floor/wood/sif,
 /area/submap/Chapel1)
 "rm" = (
 /obj/structure/cable/cyan{
-	dir = 1;
-	icon_state = "0-4"
+	icon_state = "0-8"
 	},
 /obj/machinery/power/rtg/advanced{
 	component_parts = list(/obj/item/stack/cable_coil = 5, /obj/item/stock_parts/capacitor/omni = 1, /obj/item/stock_parts/micro_laser/omni = 1, /obj/item/stack/material/uranium = 10, /obj/item/stack/material/phoron = 5)
@@ -610,13 +606,6 @@
 /obj/item/storage/firstaid,
 /turf/simulated/floor/wood/sif,
 /area/submap/Chapel1)
-"OZ" = (
-/obj/structure/cable/cyan{
-	dir = 4;
-	icon_state = "4-8"
-	},
-/turf/simulated/wall/log_sif,
-/area/submap/Chapel1)
 "Rf" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 10
@@ -654,8 +643,7 @@
 	req_access = list(511)
 	},
 /obj/structure/cable/cyan{
-	dir = 4;
-	icon_state = "2-8"
+	icon_state = "2-4"
 	},
 /obj/structure/cable/cyan,
 /turf/simulated/floor/wood/sif/broken,
@@ -1460,7 +1448,7 @@ aa
 ab
 vU
 Dz
-OZ
+pp
 qO
 Eq
 ac

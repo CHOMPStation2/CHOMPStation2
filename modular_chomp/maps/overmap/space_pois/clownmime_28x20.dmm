@@ -152,14 +152,6 @@
 "L" = (
 /turf/simulated/shuttle/floor,
 /area/submap/clownmime)
-"M" = (
-/turf/simulated/shuttle/wall,
-/turf/space,
-/area/submap/clownmime)
-"N" = (
-/turf/space,
-/turf/simulated/shuttle/wall,
-/area/submap/clownmime)
 "O" = (
 /turf/simulated/shuttle/floor/white,
 /area/submap/clownmime)
@@ -411,8 +403,8 @@ a
 (9,1,1) = {"
 a
 a
-M
-M
+v
+v
 m
 m
 m
@@ -431,7 +423,7 @@ a
 a
 "}
 (10,1,1) = {"
-M
+v
 e
 v
 v
@@ -519,7 +511,7 @@ m
 a
 "}
 (14,1,1) = {"
-M
+v
 e
 v
 v
@@ -543,8 +535,8 @@ a
 (15,1,1) = {"
 a
 a
-M
-M
+v
+v
 m
 m
 m
@@ -571,11 +563,11 @@ m
 a
 a
 a
-M
+v
 m
 m
 J
-M
+v
 m
 m
 m
@@ -614,13 +606,13 @@ a
 a
 a
 a
-M
-N
+v
+v
 p
 G
 K
-N
-M
+v
+v
 m
 m
 m
@@ -812,13 +804,13 @@ a
 a
 a
 a
-M
+v
 A
 A
 A
 A
 A
-M
+v
 a
 a
 a

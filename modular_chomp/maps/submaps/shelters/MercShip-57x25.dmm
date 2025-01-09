@@ -122,8 +122,7 @@
 	id = "reactorblastalien";
 	name = "Reactor Blast Doors";
 	pixel_x = -25;
-	pixel_y = 6;
-	req_access = null
+	pixel_y = 6
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MercShip)
@@ -138,8 +137,7 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/MercShip)
@@ -768,8 +766,7 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MercShip)
@@ -936,8 +933,7 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/MercShip)
@@ -1278,8 +1274,7 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/MercShip)
@@ -1360,8 +1355,7 @@
 	icon_state = "0-4"
 	},
 /obj/structure/cable/yellow{
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MercShip)
@@ -1386,8 +1380,7 @@
 "sO" = (
 /obj/machinery/power/tesla_coil,
 /obj/structure/cable/yellow{
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
@@ -1491,8 +1484,7 @@
 /area/survivalpod/superpose/MercShip)
 "vH" = (
 /obj/structure/cable/yellow{
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/floor,
 /area/survivalpod/superpose/MercShip)
@@ -1545,8 +1537,7 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	icon_state = "2-4";
-	dir = 4
+	icon_state = "1-4"
 	},
 /turf/simulated/floor,
 /area/survivalpod/superpose/MercShip)
@@ -1708,12 +1699,10 @@
 "AB" = (
 /obj/machinery/power/smes/buildable/point_of_interest,
 /obj/structure/cable/yellow{
-	icon_state = "0-8";
-	dir = 2
+	icon_state = "0-8"
 	},
 /obj/structure/cable/yellow{
-	icon_state = "0-8";
-	dir = 2
+	icon_state = "0-8"
 	},
 /turf/simulated/floor,
 /area/survivalpod/superpose/MercShip)
@@ -1759,7 +1748,7 @@
 "Bh" = (
 /obj/structure/window/reinforced/survival_pod,
 /obj/item/hand_labeler,
-/obj/item/tape/random,
+/obj/item/tape,
 /obj/structure/table/hardwoodtable,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/MercShip)
@@ -1792,8 +1781,7 @@
 	icon_state = "2-4"
 	},
 /obj/structure/cable/yellow{
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/floor,
 /area/survivalpod/superpose/MercShip)
@@ -1908,9 +1896,7 @@
 /area/survivalpod/superpose/MercShip)
 "DM" = (
 /obj/machinery/power/smes/buildable,
-/obj/structure/cable{
-	icon_state = "0-2"
-	},
+/obj/structure/cable,
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MercShip)
 "DX" = (
@@ -1966,8 +1952,7 @@
 /area/survivalpod/superpose/MercShip)
 "FL" = (
 /obj/structure/cable/yellow{
-	icon_state = "2-4";
-	dir = 8
+	icon_state = "2-8"
 	},
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
@@ -1992,8 +1977,7 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/MercShip)
@@ -2003,8 +1987,7 @@
 	icon_state = "0-4"
 	},
 /obj/structure/cable/yellow{
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/MercShip)
@@ -2224,8 +2207,7 @@
 /area/survivalpod/superpose/MercShip)
 "KT" = (
 /obj/structure/cable/yellow{
-	icon_state = "0-8";
-	dir = 2
+	icon_state = "0-8"
 	},
 /obj/machinery/power/terminal{
 	dir = 4
@@ -2270,8 +2252,7 @@
 /area/survivalpod/superpose/MercShip)
 "Mz" = (
 /obj/structure/cable/yellow{
-	icon_state = "2-4";
-	dir = 4
+	icon_state = "1-4"
 	},
 /turf/simulated/floor,
 /area/survivalpod/superpose/MercShip)
@@ -2313,8 +2294,7 @@
 "NV" = (
 /obj/machinery/power/grounding_rod/pre_mapped,
 /obj/structure/cable/yellow{
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MercShip)
@@ -2404,8 +2384,7 @@
 /area/survivalpod/superpose/MercShip)
 "Qu" = (
 /obj/structure/cable/yellow{
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MercShip)
@@ -2585,8 +2564,7 @@
 /area/survivalpod/superpose/MercShip)
 "UR" = (
 /obj/structure/cable/yellow{
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -2628,16 +2606,14 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/MercShip)
 "VF" = (
 /obj/machinery/power/terminal,
 /obj/structure/cable/yellow{
-	icon_state = "0-8";
-	dir = 2
+	icon_state = "0-8"
 	},
 /turf/simulated/floor,
 /area/survivalpod/superpose/MercShip)
@@ -2729,8 +2705,7 @@
 "Xc" = (
 /obj/machinery/power/tesla_coil,
 /obj/structure/cable/yellow{
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
@@ -2759,7 +2734,7 @@
 	dir = 1
 	},
 /obj/item/hand_labeler,
-/obj/item/tape/random,
+/obj/item/tape,
 /obj/structure/table/hardwoodtable,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/MercShip)

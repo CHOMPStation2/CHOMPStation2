@@ -427,8 +427,7 @@
 	pixel_x = 28
 	},
 /obj/structure/cable/cyan{
-	dir = 8;
-	icon_state = "0-2"
+	icon_state = "0-8"
 	},
 /obj/effect/floor_decal/corner/yellow/bordercorner,
 /turf/simulated/floor/tiled,

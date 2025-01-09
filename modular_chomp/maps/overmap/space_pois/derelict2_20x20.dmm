@@ -123,6 +123,11 @@
 	temperature = 293.15
 	},
 /area/submap/derelict2)
+"s" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor/plating,
+/area/submap/derelict2)
 "t" = (
 /obj/item/clothing/head/cowboy/fancy,
 /turf/simulated/floor/tiled/asteroid_steel/airless{
@@ -420,7 +425,7 @@ x
 L
 i
 i
-V
+s
 b
 b
 b
@@ -456,7 +461,7 @@ d
 d
 d
 d
-g
+s
 i
 i
 i
