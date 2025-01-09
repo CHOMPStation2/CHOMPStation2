@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #define DEPARTMENT_ANY "Any"
 #define JOB_AI "AI"
 #define JOB_CYBORG "Cyborg"
@@ -7,6 +8,8 @@
 #define DEPARTMENT_MEDICAL "Medical"
 #define DEPARTMENT_RESEARCH "Scientist"
 #define DEPARTMENT_SECURITY "Security"
+=======
+>>>>>>> fdcbdf15d6 (Events (#16876))
 
 //
 // VOREStation overrides to the default event manager configuration.
