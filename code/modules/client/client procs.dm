@@ -292,12 +292,13 @@
 		void = new()
 	screen += void
 
-	//disabled because we don't use the ingame changelog system any more // CHOMPEdit: Enabled because we do
+	// CHOMPAdd Start
 	if((prefs.lastchangelog != changelog_hash) && isnewplayer(src.mob)) //bolds the changelog button on the interface so we know there are updates.
 		to_chat(src, span_info("You have unread updates in the changelog."))
 		winset(src, "rpane.changelog", "background-color=#eaeaea;font-style=bold")
-		if(CONFIG_GET(flag/aggressive_changelog)) // CHOMPEdit
+		if(CONFIG_GET(flag/aggressive_changelog))
 			src.changes()
+	// CHOMPAdd End
 
 	if(CONFIG_GET(flag/paranoia_logging))
 		var/alert = FALSE //VOREStation Edit start.

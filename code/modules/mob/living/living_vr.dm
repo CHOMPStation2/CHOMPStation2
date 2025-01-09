@@ -32,7 +32,7 @@
 	var/new_metadata = strip_html_simple(tgui_input_text(usr, "Enter any information you'd like others to see, such as Roleplay-preferences. This will not be saved permanently unless you click save in the OOC notes panel!", "Game Preference" , html_decode(ooc_notes), multiline = TRUE,  prevent_enter = TRUE))
 	if(new_metadata && CanUseTopic(usr))
 		ooc_notes = new_metadata
-		client.prefs.metadata = new_metadata
+		client.prefs.update_preference_by_type(/datum/preference/text/living/ooc_notes, new_metadata)
 		to_chat(usr, span_filter_notice("OOC notes updated. Don't forget to save!"))
 		log_admin("[key_name(usr)] updated their OOC notes mid-round.")
 		ooc_notes_window(usr)
@@ -51,7 +51,7 @@
 	var/new_metadata = strip_html_simple(tgui_input_text(user, "Enter any information you'd like others to see, such as Roleplay-preferences. This will not be saved permanently unless you click save in the OOC notes panel!", "Game Preference" , html_decode(ooc_notes), multiline = TRUE,  prevent_enter = TRUE))
 	if(new_metadata && CanUseTopic(user))
 		ooc_notes = new_metadata
-		client.prefs.metadata = new_metadata
+		client.prefs.update_preference_by_type(/datum/preference/text/living/ooc_notes, new_metadata)
 		to_chat(user, span_filter_notice("OOC notes updated. Don't forget to save!"))
 		log_admin("[key_name(user)] updated their OOC notes mid-round.")
 		ooc_notes_window(user)
@@ -64,7 +64,7 @@
 		if(new_metadata == "!clear")
 			new_metadata = ""
 		ooc_notes_likes = new_metadata
-		client.prefs.metadata_likes = new_metadata
+		client.prefs.update_preference_by_type(/datum/preference/text/living/ooc_notes_likes, new_metadata)
 		to_chat(user, span_filter_notice("OOC note likes have been updated. Don't forget to save!"))
 		log_admin("[key_name(user)] updated their OOC note likes mid-round.")
 		if(reopen)
@@ -78,7 +78,7 @@
 		if(new_metadata == "!clear")
 			new_metadata = ""
 		ooc_notes_dislikes = new_metadata
-		client.prefs.metadata_dislikes = new_metadata
+		client.prefs.update_preference_by_type(/datum/preference/text/living/ooc_notes_dislikes, new_metadata)
 		to_chat(user, span_filter_notice("OOC note dislikes have been updated. Don't forget to save!"))
 		log_admin("[key_name(user)] updated their OOC note dislikes mid-round.")
 		if(reopen)
