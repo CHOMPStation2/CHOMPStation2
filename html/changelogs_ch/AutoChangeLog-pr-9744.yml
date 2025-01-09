@@ -1,7 +1,0 @@
-author: "tacoguy7765093"
-delete-after: True
-changes:
-  - rscadd: "Added malignant organs, dangerous organs gotten through radiation and random events needing surgery to remove."
-  - rscadd: "Added engineered organs, applying organ lattices in mobs to be mutated once fully grown."
-  - rscadd: "Exotic organs can be sold via cargo. Freezer crate recommended."
-  - rscadd: "Freezer crate for cargo has been added under the supply tab."

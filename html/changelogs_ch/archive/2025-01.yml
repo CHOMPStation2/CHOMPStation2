@@ -75,3 +75,19 @@
   - image: smolraptors can curl up when resting; and miner lost its purple collar.
   whooshboom:
   - rscadd: CO2 Breather trait, CO2 tanks, and loadout double-tanks.
+2025-01-09:
+  FluffMedic:
+  - rscadd: Remove alien vests from tyr and added tyr version. Sprites WIP
+  - rscadd: Event BH mecha that spams random fire.
+  - balance: Tyr alien weapons are a smidhe better
+  - bugfix: Janus uses the right projectiles for phase 3 now
+  - bugfix: tyr spawn not being protected
+  Kashargul:
+  - bugfix: reagents effects applying to the wrong mob types
+  tacoguy7765093:
+  - rscadd: Added malignant organs, dangerous organs gotten through radiation and
+      random events needing surgery to remove.
+  - rscadd: Added engineered organs, applying organ lattices in mobs to be mutated
+      once fully grown.
+  - rscadd: Exotic organs can be sold via cargo. Freezer crate recommended.
+  - rscadd: Freezer crate for cargo has been added under the supply tab.
