@@ -440,6 +440,13 @@
 /obj/item/ammo_magazine/m9mmp90/empty
 	initial_ammo = 0
 
+//CHOMPadd begin
+/obj/item/ammo_magazine/m9mmp90/rubber
+	name = "large capacity top mounted magazine (9mm rubber)"
+	ammo_type = /obj/item/ammo_casing/a9mm/rubber
+	matter = list(MAT_STEEL = 2000, MAT_PLASTIC = 1000)
+//CHOMPadd end
+
 // Stripper Clip
 /obj/item/ammo_magazine/clip/c9mm
 	name = "ammo clip (9mm)"

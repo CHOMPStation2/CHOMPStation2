@@ -5136,6 +5136,7 @@
 #include "modular_chomp\code\modules\projectiles\guns\energy\laser.dm"
 #include "modular_chomp\code\modules\projectiles\guns\energy\special.dm"
 #include "modular_chomp\code\modules\projectiles\guns\projectile\revolver.dm"
+#include "modular_chomp\code\modules\projectiles\guns\projectile\ammunition\ammo_boxes.dm"
 #include "modular_chomp\code\modules\projectiles\guns\zBallisticPort\bullet.dm"
 #include "modular_chomp\code\modules\projectiles\guns\zBallisticPort\magazines.dm"
 #include "modular_chomp\code\modules\projectiles\guns\zBallisticPort\projectiles.dm"

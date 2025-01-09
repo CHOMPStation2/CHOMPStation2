@@ -502,6 +502,10 @@
 	multiple_sprites = 1
 	ammo_type = /obj/item/ammo_casing/a9mm
 
+/obj/item/ammo_magazine/mp5mag/rubber
+	name = "mp5 magazine(9x19mm rubber)"
+	ammo_type = /obj/item/ammo_casing/a9mm/rubber
+
 /obj/item/ammo_magazine/pitchmag
 	name = "pitchgun magazine(.44)"
 	icon = 'icons/obj/ammo_ch.dmi'
