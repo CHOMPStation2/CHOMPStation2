@@ -1046,7 +1046,7 @@
 	else
 		activate(user)
 
-	if(istype(user,/mob/living/carbon/human))
+	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		H.update_inv_l_hand()
 		H.update_inv_r_hand()
@@ -1569,8 +1569,8 @@ End CHOMP Removal*/
 	icon_state = "ceph_d6[result]"
 
 /obj/item/dice/loaded/ceph/Initialize()
-	icon_state = "ceph_d6[rand(1,sides)]"
 	. = ..()
+	icon_state = "ceph_d6[rand(1,sides)]"
 
 
 //abc123: Mira Nesyne

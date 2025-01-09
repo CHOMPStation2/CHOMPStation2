@@ -29,7 +29,7 @@
 	icon = 'modular_chomp/icons/obj/guns/precursor/tyr.dmi'
 	icon_state = "shotgun_blast"
 	damage = 50
-	range = 4
+	range = 5
 	check_armour = "laser"
 
 /obj/item/projectile/energy/wp_shotgun/on_hit(var/atom/movable/target, var/blocked = 0)
@@ -44,14 +44,14 @@
 	name = "laser blast"
 	icon = 'modular_chomp/icons/obj/guns/precursor/tyr.dmi'
 	icon_state = "blaster_blast"
-	damage = 40
+	damage = 60
 	range = 5
 	check_armour = "laser"
 
 /obj/item/projectile/beam/precursor_tyr
 	name = "laser"
 	icon_state = "laser"
-	damage = 30
+	damage = 50
 	damage_type = BURN
 	check_armour = "laser"
 	range = 5

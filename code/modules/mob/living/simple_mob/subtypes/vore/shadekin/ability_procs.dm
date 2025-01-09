@@ -40,6 +40,7 @@
 
 		// change
 		ability_flags &= ~AB_PHASE_SHIFTED
+		throwpass = FALSE // CHOMPAdd
 		mouse_opacity = 1
 		name = real_name
 		for(var/obj/belly/B as anything in vore_organs)
@@ -108,6 +109,7 @@
 
 		// change
 		ability_flags |= AB_PHASE_SHIFTED
+		throwpass = TRUE // CHOMPAdd
 		mouse_opacity = 0
 		custom_emote(1,"phases out!")
 		real_name = name

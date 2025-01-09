@@ -47,8 +47,6 @@
 /area/submap/turretedoutpost)
 "dL" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -88,7 +86,6 @@
 /area/submap/turretedoutpost)
 "gL" = (
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/smes/buildable/point_of_interest,
@@ -285,7 +282,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -294,8 +290,6 @@
 /area/submap/turretedoutpost)
 "wu" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -415,8 +409,6 @@
 "GJ" = (
 /obj/machinery/door/airlock,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/airless,
@@ -498,8 +490,6 @@
 /area/submap/turretedoutpost)
 "QG" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -560,8 +550,6 @@
 /area/submap/turretedoutpost)
 "Yg" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{

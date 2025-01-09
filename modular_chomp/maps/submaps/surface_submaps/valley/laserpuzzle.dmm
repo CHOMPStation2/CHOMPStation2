@@ -19,8 +19,6 @@
 /area/submap/laserpuzzle)
 "m" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/shuttle/wall/alien,
@@ -28,12 +26,9 @@
 "n" = (
 /obj/machinery/power/rtg/advanced,
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/shuttle/floor/alien,
@@ -57,8 +52,6 @@
 /area/submap/laserpuzzle)
 "C" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/lava,
@@ -66,7 +59,6 @@
 "E" = (
 /obj/machinery/power/rtg/advanced,
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/shuttle/floor/alien,
@@ -74,8 +66,6 @@
 "F" = (
 /obj/item/areaeditor/blueprints/engineers,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/table/darkglass,
@@ -83,8 +73,6 @@
 /area/submap/laserpuzzle)
 "G" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/shuttle/floor/alien,

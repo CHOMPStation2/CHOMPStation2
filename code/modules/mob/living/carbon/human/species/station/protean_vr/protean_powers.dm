@@ -408,7 +408,8 @@
 			"teppi" = image(icon = 'icons/mob/species/protean/protean64x64.dmi', icon_state = "teppi", pixel_x = -16),
 			"panther" = image(icon = 'icons/mob/species/protean/protean64x64.dmi', icon_state = "panther", pixel_x = -16),
 			"robodrgn" = image(icon = 'icons/mob/species/protean/protean128x64.dmi', icon_state = "robodrgn", pixel_x = -48),
-			"Dragon" = image(icon = 'icons/mob/bigdragon_small.dmi', icon_state = "dragon_small")
+			"Dragon" = image(icon = 'icons/mob/bigdragon_small.dmi', icon_state = "dragon_small"),
+			"dullahan" = image(icon = 'modular_chomp/icons/mob/dullahanborg/dullahanicon.dmi', icon_state = "proticon")
 			//CHOMPEnable End
 			)
 	var/blobstyle = show_radial_menu(protie, protie, icon_choices, require_near = TRUE, tooltips = FALSE)
@@ -530,6 +531,84 @@
 					S.dragon_overlays[6] = choice
 					S.dragon_overlays[S.dragon_overlays[6]] = new_color
 			S.blob_appearance = "dragon"
+		// CHOMPEdit Start
+		if("dullahan")
+			var/list/options = list("Body","Eyes","Decals")
+			for(var/option in options)
+				LAZYSET(options, option, image('modular_chomp/icons/mob/dullahanborg/dullahansigns.dmi', option))
+			var/choice = show_radial_menu(protie, protie, options, radius = 60)
+			if(!choice || QDELETED(protie) || protie.incapacitated())
+				return FALSE
+			. = TRUE
+			var/list/Dullahan_metal_styles = list(
+				"dullahanmetal",
+				"dullahanmetal2"
+			)
+			if(mind.assigned_role in command_positions)
+				Dullahan_metal_styles.Add("dullahancommand")
+			var/list/Dullahan_eye_styles = list(
+				"dullahaneyes"
+			)
+			var/list/Dullahan_decal_styles = list(
+				"dullahandecals1",
+				"dullahandecals2",
+				"dullahandecals3",
+				"dullahandecals4",
+				"dullahandecals5",
+				"emptydecals"
+			)
+			//if(user.mind.assigned_role != JOB_CHAPLAIN)
+				//return FALSE
+			switch(choice)
+				if("Body")
+					var/extraon = "dullahanextendedon"
+					var/extraoff = "dullahanextendedoff"
+					options = Dullahan_metal_styles
+					for(var/option in options)
+						var/image/I = image('modular_chomp/icons/mob/dullahanborg/Dullahanprotean64x64.dmi', option, dir = 2, pixel_x = -16)
+						LAZYSET(options, option, I)
+					choice = show_radial_menu(protie, protie, options, radius = 90)
+					if(!choice || QDELETED(protie) || protie.incapacitated())
+						return 0
+					var/new_color = input("Pick body color:","Body Color", S.dragon_overlays[3]) as null|color
+					if(!new_color)
+						return 0
+					S.dullahan_overlays[3] = choice //metal overlay is 3, eyes is 4
+					S.dullahan_overlays[S.dullahan_overlays[3]] = new_color
+					if(choice == "dullahanmetal2")
+						S.dullahan_overlays[6] = extraon
+						var/tempcolor ="#FFFFFF"
+						S.dullahan_overlays[S.dullahan_overlays[6]] = tempcolor
+					else
+						S.dullahan_overlays[6] = extraoff
+				if("Eyes")
+					options = Dullahan_eye_styles
+					for(var/option in options)
+						var/image/I = image('modular_chomp/icons/mob/dullahanborg/Dullahanprotean64x64.dmi', option, dir = 2, pixel_x = -16)
+						LAZYSET(options, option, I)
+					choice = show_radial_menu(protie, protie, options, radius = 90)
+					if(!choice || QDELETED(protie) || protie.incapacitated())
+						return 0
+					var/new_color = input("Pick body color:","Body Color", S.dragon_overlays[4]) as null|color
+					if(!new_color)
+						return 0
+					S.dullahan_overlays[4] = choice //metal overlay is 3, eyes is 4
+					S.dullahan_overlays[S.dullahan_overlays[4]] = new_color
+				if("Decals")
+					options = Dullahan_decal_styles
+					for(var/option in options)
+						var/image/I = image('modular_chomp/icons/mob/dullahanborg/Dullahanprotean64x64.dmi', option, dir = 2, pixel_x = -16, pixel_y = -16)
+						LAZYSET(options, option, I)
+					choice = show_radial_menu(protie, protie, options, radius = 90)
+					if(!choice || QDELETED(protie) || protie.incapacitated())
+						return 0
+					var/new_color = input("Pick body color:","Body Color", S.dragon_overlays[5]) as null|color
+					if(!new_color)
+						return 0
+					S.dullahan_overlays[5] = choice //metal overlay is 3, eyes is 4
+					S.dullahan_overlays[S.dullahan_overlays[5]] = new_color
+			S.blob_appearance = "dullahan"
+			// CHOMPEdit End
 		if("Primary")
 			var/new_color = input("Pick primary color:","Protean Primary", "#FF0000") as null|color
 			if(!new_color)
@@ -572,7 +651,7 @@
 	var/obj/held_item = protie.get_active_hand()
 	if(istype(held_item,/obj/item/grab))
 		var/obj/item/grab/G = held_item
-		if(istype(G.affecting, /mob/living/carbon/human))
+		if(ishuman(G.affecting))
 			target = G.affecting
 			if(istype(target.species, /datum/species/protean))
 				to_chat(protie, span_danger("You can't latch onto a fellow Protean!"))

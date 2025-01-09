@@ -411,7 +411,7 @@
 		M.take_organ_damage(0, removed * power * 0.2) //burn damage, since it causes chemical burns. Acid doesn't make bones shatter, like brute trauma would.
 		return
 	if(!M.unacidable && removed > 0)
-		if(istype(M, /mob/living/carbon/human) && volume >= meltdose)
+		if(ishuman(M) && volume >= meltdose)
 			var/mob/living/carbon/human/H = M
 			var/obj/item/organ/external/affecting = H.get_organ(BP_HEAD)
 			if(affecting)
@@ -448,6 +448,8 @@
 		remove_self(meltdose) // 10 units of acid will not melt EVERYTHING on the tile
 
 /datum/reagent/acid/touch_mob(var/mob/living/L) //CHOMPAdd Start
+	if(!isliving(L))
+		return
 	if(isbelly(L.loc))
 		var/obj/belly/B = L.loc
 		if(B.digest_mode != DM_DIGEST || !L.digestable)

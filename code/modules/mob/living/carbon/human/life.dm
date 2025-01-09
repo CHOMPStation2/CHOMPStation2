@@ -370,9 +370,15 @@
 					to_chat(src, span_warning("You feel horribly ill."))
 					AdjustWeakened(3)
 				if(prob(5) && internal_organs.len)
-					I = pick(internal_organs) //Internal organ damage...Not good. Not good at all.
-					if(istype(I)) I.add_autopsy_data("Radiation Induced Cancerous Growth", damage)
-					I.take_damage(damage * species.radiation_mod * RADIATION_SPEED_COEFFICIENT)
+					// CHOMPedit begin - organ mutations
+					if(prob(2))
+						// random organ time!
+						random_malignant_organ(TRUE,FALSE,prob(40))
+					// CHOMPedit end
+					else
+						I = pick(internal_organs) //Internal organ damage...Not good. Not good at all.
+						if(istype(I)) I.add_autopsy_data("Radiation Induced Cancerous Growth", damage)
+						I.take_damage(damage * species.radiation_mod * RADIATION_SPEED_COEFFICIENT)
 
 
 		else if (radiation >= 400 && radiation < 1500) //Equivalent of 8.0 to 30 Gy.
@@ -401,9 +407,14 @@
 					to_chat(src, span_critical("Your entire body feels like it's on fire!"))
 					adjustHalLoss(5)
 				if(prob(10) && internal_organs.len)
-					I = pick(internal_organs) //Internal organ damage...Not good. Not good at all.
-					if(istype(I)) I.add_autopsy_data("Radiation Induced Cancerous Growth", damage)
-					I.take_damage(damage * species.radiation_mod * RADIATION_SPEED_COEFFICIENT)
+					if(prob(2))
+						// CHOMPedit begin - organ mutations
+						random_malignant_organ(TRUE,FALSE,prob(60))
+					// CHOMPedit end
+					else
+						I = pick(internal_organs) //Internal organ damage...Not good. Not good at all.
+						if(istype(I)) I.add_autopsy_data("Radiation Induced Cancerous Growth", damage)
+						I.take_damage(damage * species.radiation_mod * RADIATION_SPEED_COEFFICIENT)
 
 		else if (radiation >= 1500) //Above 30Gy. You had to get absolutely blasted with rads for this.
 			damage = 30
@@ -432,9 +443,15 @@
 					to_chat(src, span_danger("Your hand won't respond properly, you drop what you're holding!"))
 					drop_item()
 				if(internal_organs.len)
-					I = pick(internal_organs) //Internal organ damage...Not good. Not good at all.
-					if(istype(I)) I.add_autopsy_data("Radiation Induced Cancerous Growth", damage * species.radiation_mod * RADIATION_SPEED_COEFFICIENT)
-					I.take_damage(damage * species.radiation_mod * RADIATION_SPEED_COEFFICIENT)
+					// CHOMPedit begin - organ mutations
+					if(prob(2))
+						// random organ time!
+						random_malignant_organ(prob(40),FALSE,TRUE)
+					// CHOMPedit end
+					else
+						I = pick(internal_organs) //Internal organ damage...Not good. Not good at all.
+						if(istype(I)) I.add_autopsy_data("Radiation Induced Cancerous Growth", damage * species.radiation_mod * RADIATION_SPEED_COEFFICIENT)
+						I.take_damage(damage * species.radiation_mod * RADIATION_SPEED_COEFFICIENT)
 
 /* 		//Not-so-sparkledog code. TODO: Make a pref for 'special game interactions' that allows interactions that align with prefs to occur.
 		if(radiation >= 250) //Special effect stuff that occurs at certain rad levels.

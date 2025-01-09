@@ -95,3 +95,25 @@
 	icon_state = "oxygen_fr"
 	gauge_icon = "indicator_bigtank"
 	gauge_cap = 3
+
+//CHOMPEdit Start - for CO2 breathers
+/obj/item/tank/carbon_dioxide
+	icon = 'icons/obj/tank_vr.dmi'
+	icon_state = "oxygen_f"
+	gauge_icon = "indicator_bigtank"
+	gauge_cap = 3
+
+/obj/item/tank/emergency/carbon_dioxide
+	icon = 'icons/obj/tank_vr.dmi'
+	icon_state = "emergency_tst"
+	gauge_icon = "indicator_smalltank"
+	volume = 6
+	gauge_cap = 3
+
+/obj/item/tank/emergency/carbon_dioxide/double
+	icon = 'icons/obj/tank_vr.dmi'
+	icon_state = "emergency_double"
+	gauge_icon = "indicator_double"
+	volume = 12
+	gauge_cap = 3
+//CHOMPEdit End

@@ -200,6 +200,39 @@
 	gauge_icon = "indicator_double"					// Ensuring unique sprite stuff ig.
 	volume = 10
 
+//CHOMPEdit Start - for CO2 breathers
+/obj/item/tank/carbon_dioxide
+	name = "carbon dioxide tank"
+	desc = "A tank of carbon dioxide"
+	icon_state = "emergency_double"
+	distribute_pressure = ONE_ATMOSPHERE*O2STANDARD
+
+/obj/item/tank/carbon_dioxide/Initialize()
+	. = ..()
+	src.air_contents.adjust_gas(GAS_CO2, (10*ONE_ATMOSPHERE)*volume/(R_IDEAL_GAS_EQUATION*T20C))
+
+/obj/item/tank/emergency/carbon_dioxide
+	name = "emergency carbon dioxide tank"
+	desc = "An emergency tank of carbon dioxide"
+	icon_state = "emergency_tst"
+	slot_flags = SLOT_BELT
+	distribute_pressure = ONE_ATMOSPHERE*O2STANDARD
+
+/obj/item/tank/emergency/carbon_dioxide/Initialize()
+	. = ..()
+	src.air_contents.adjust_gas(GAS_CO2, (10*ONE_ATMOSPHERE)*volume/(R_IDEAL_GAS_EQUATION*T20C))
+
+/obj/item/tank/emergency/carbon_dioxide/double
+	name = "double emergency carbon dioxide tank"
+	desc = "An double tank of carbon dioxide"
+	icon_state = "emergency_double"
+	distribute_pressure = ONE_ATMOSPHERE*O2STANDARD
+
+/obj/item/tank/emergency/carbon_dioxide/double/Initialize()
+	. = ..()
+	src.air_contents.adjust_gas(GAS_CO2, (10*ONE_ATMOSPHERE)*volume/(R_IDEAL_GAS_EQUATION*T20C))
+//CHOMPEdit End
+
 /*
  * Nitrogen
  */

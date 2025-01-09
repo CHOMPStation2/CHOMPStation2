@@ -130,12 +130,12 @@
 	if(P.taser_effect)
 		stun_effect_act(0, P.agony, def_zone, P)
 		if(!P.nodamage)
-			apply_damage(P.damage, P.damage_type, def_zone, absorb, soaked, 0, P, sharp=proj_sharp, edge=proj_edge)
+			apply_damage(P.damage, P.damage_type, def_zone, absorb, soaked, 0, P, sharp=proj_sharp, edge=proj_edge, projectile=TRUE)
 		qdel(P)
 		return
 
 	if(!P.nodamage)
-		apply_damage(P.damage, P.damage_type, def_zone, absorb, soaked, 0, P, sharp=proj_sharp, edge=proj_edge)
+		apply_damage(P.damage, P.damage_type, def_zone, absorb, soaked, 0, P, sharp=proj_sharp, edge=proj_edge, projectile=TRUE)
 	P.on_hit(src, absorb, soaked, def_zone)
 
 	if(absorb == 100)
@@ -158,7 +158,7 @@
 		apply_effect(EYE_BLUR, stun_amount)
 
 	if (agony_amount)
-		apply_damage(agony_amount, HALLOSS, def_zone, 0, used_weapon)
+		apply_damage(agony_amount, HALLOSS, def_zone, 0, used_weapon=used_weapon)
 		apply_effect(STUTTER, agony_amount/10)
 		apply_effect(EYE_BLUR, agony_amount/10)
 
@@ -263,6 +263,10 @@
 
 //this proc handles being hit by a thrown atom
 /mob/living/hitby(atom/movable/AM as mob|obj,var/speed = THROWFORCE_SPEED_DIVISOR)//Standardization and logging -Sieve
+	// CHOMPAdd Start
+	if(is_incorporeal())
+		return
+	// CHOMPAdd End
 	if(istype(AM,/obj/))
 		var/obj/O = AM
 		if(stat != DEAD && istype(O,/obj/item) && trash_catching && vore_selected) //ported from chompstation
@@ -333,7 +337,7 @@
 
 	//VORESTATION EDIT START - Allows for thrown vore! //CHOMPEdit Start
 	//Throwing a prey into a pred takes priority. After that it checks to see if the person being thrown is a pred.
-	if(istype(AM, /mob/living))
+	if(isliving(AM))
 		var/mob/living/thrown_mob = AM
 
 		// PERSON BEING HIT: CAN BE DROP PRED, ALLOWS THROW VORE.

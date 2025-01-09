@@ -3,6 +3,7 @@
 	name = "xeno organ"
 	icon = 'icons/obj/surgery.dmi'
 	desc = "It smells like an accident in a chemical factory."
+	supply_conversion_value = 50 // CHOMPedit - Selling engineered organs
 
 /obj/item/organ/internal/xenos/eggsac
 	name = "egg sac"

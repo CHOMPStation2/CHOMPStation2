@@ -111,7 +111,6 @@
 /area/submap/mausarmy)
 "sg" = (
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc,
@@ -191,7 +190,6 @@
 /area/submap/mausarmy)
 "zV" = (
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/port_gen/pacman,
@@ -305,8 +303,6 @@
 /area/submap/mausarmy)
 "NM" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/outdoors/dirt/sif,

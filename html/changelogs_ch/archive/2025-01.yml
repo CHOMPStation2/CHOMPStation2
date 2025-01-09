@@ -40,6 +40,41 @@
   - bugfix: bonfire examine
   whooshboom:
   - qol: Reverts marish to audible condition. Happy marring!
+
 2025-01-05:
   Arrhythmia_V:
   - balance: ERT borg now has their sword tail back
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Drones now use robotact
+  - bugfix: A few byond:// hrefs for 516
+  FluffMedic:
+  - bugfix: Vepr Cell fix
+  whooshboom:
+  - rscadd: Similar keybinds to the recent pump additions are now on most atmospheric
+      devices.
+  - bugfix: Fixes issue where using the keybind on a pump would not update the icon.
+2025-01-06:
+  CHOMPStation2StaffMirrorBot:
+  - qol: Tgui-say colors adjusted for better contrast
+  - qol: renamed antagonism tag and hid most of the options there as they're not relevant
+      for our purposes
+  - qol: adds mirrors to all resleeving and autoresleeving rooms
+  - rscadd: Fighter Exosuits now have landing gear.
+  - rscadd: Science can now build and assemble the Pinnace and Baron Fighter Exosuits.
+  Kashargul:
+  - bugfix: over 10 known shadekin exploits...
+2025-01-07:
+  Kashargul:
+  - bugfix: arc vial projectiles not working
+2025-01-08:
+  Aroliacue:
+  - bugfix: Fixed exosuit fighters having an additional 'stomp' stepsound.
+  Asher-42:
+  - rscadd: protean borg (dullahan)
+  - rscadd: dullahan command sprite thats job locked to protean / command only.
+  Kashargul:
+  - bugfix: lingering fire now caps out at the fire max temp
+  aKromatopzia:
+  - image: smolraptors can curl up when resting; and miner lost its purple collar.
+  whooshboom:
+  - rscadd: CO2 Breather trait, CO2 tanks, and loadout double-tanks.
