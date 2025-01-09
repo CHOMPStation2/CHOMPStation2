@@ -48,14 +48,6 @@
 	character.flavor_texts["hands"]		= pref.flavor_texts["hands"]
 	character.flavor_texts["legs"]		= pref.flavor_texts["legs"]
 	character.flavor_texts["feet"]		= pref.flavor_texts["feet"]
-	character.ooc_notes 				= pref.metadata //VOREStation Add
-	character.ooc_notes_likes			= pref.metadata_likes
-	character.ooc_notes_dislikes		= pref.metadata_dislikes
-	//CHOMPEdit Start
-	character.ooc_notes_maybes			= pref.metadata_maybes
-	character.ooc_notes_favs			= pref.metadata_favs
-	character.ooc_notes_style			= pref.matadata_ooc_style
-	//CHOMPEdit End
 	character.custom_link				= pref.custom_link
 
 /datum/category_item/player_setup_item/general/flavor/content(var/mob/user)
