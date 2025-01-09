@@ -5825,21 +5825,6 @@
 	icon_state = "wood"
 	},
 /area/skipjack_station)
-"eQB" = (
-/obj/structure/table/rack,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/turf/unsimulated/floor{
-	dir = 5;
-	icon_state = "vault"
-	},
-/area/centcom/specops)
 "eQT" = (
 /obj/structure/closet/crate/medical,
 /obj/item/surgical/circular_saw,
@@ -19733,10 +19718,6 @@
 /area/ninja_dojo/dojo)
 "shL" = (
 /obj/structure/table/rack,
-/obj/item/gun/projectile/automatic/serdy/hectate,
-/obj/item/gun/projectile/automatic/serdy/hectate,
-/obj/item/gun/projectile/automatic/serdy/hectate,
-/obj/item/gun/projectile/automatic/serdy/hectate,
 /turf/unsimulated/floor{
 	dir = 5;
 	icon_state = "vault"
@@ -46393,7 +46374,7 @@ vFi
 vFi
 vFi
 nZC
-eQB
+shL
 eos
 eos
 eos
