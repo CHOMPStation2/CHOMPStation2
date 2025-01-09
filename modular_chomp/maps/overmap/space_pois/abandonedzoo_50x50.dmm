@@ -1231,8 +1231,7 @@
 	icon_state = "0-4"
 	},
 /obj/structure/cable{
-	icon_state = "1-4";
-	tag = "90Curve"
+	icon_state = "1-4"
 	},
 /obj/structure/window/reinforced/tinted/frosted{
 	dir = 4

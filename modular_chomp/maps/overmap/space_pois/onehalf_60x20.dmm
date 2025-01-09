@@ -479,8 +479,7 @@
 	icon_state = "0-2"
 	},
 /obj/structure/cable{
-	icon_state = "4-8";
-	tag = ""
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
 /area/submap/onehalf)
@@ -707,8 +706,7 @@
 /area/submap/onehalf)
 "sj" = (
 /obj/structure/disposalpipe/junction{
-	dir = 4;
-	tag = "icon-pipe-j1 (EAST)"
+	dir = 4
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -1269,8 +1267,7 @@
 	icon_state = "4-8"
 	},
 /obj/item/material/shard{
-	icon_state = "medium";
-	tag = "icon-medium"
+	icon_state = "medium"
 	},
 /turf/template_noop,
 /area/submap/onehalf)

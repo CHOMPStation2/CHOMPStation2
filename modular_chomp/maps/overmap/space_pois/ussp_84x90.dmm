@@ -1563,8 +1563,7 @@
 /area/derelict/arrival)
 "mL" = (
 /obj/structure/cable{
-	icon_state = "1-4";
-	tag = "90Curve"
+	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/old_tile,
 /area/derelict/arrival)
@@ -2726,8 +2725,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/light/spot{
-	dir = 4;
-	tag = "icon-tube1 (EAST)"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/derelict/eva/annex)
@@ -2870,20 +2868,6 @@
 /mob/living/simple_mob/humanoid/merc/ranged/space,
 /turf/simulated/floor/tiled/old_tile,
 /area/derelict/arrival)
-"yD" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/structure/cable{
-	icon_state = "1-4";
-	tag = "90Curve"
-	},
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
-/obj/effect/catwalk_plated/white,
-/turf/template_noop,
-/area/derelict/solar_control)
 "yH" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -3269,8 +3253,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/light/small{
-	dir = 4;
-	tag = "icon-bulb1 (EAST)"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/derelict/eva/annex)
@@ -4313,14 +4296,6 @@
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/derelict/eva/annex)
-"Ry" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/asteroid_steel{
-	icon_state = "dark"
-	},
-/area/derelict/arrival)
 "Rz" = (
 /obj/structure/cable{
 	icon_state = "1-4"
@@ -4747,12 +4722,6 @@
 /mob/living/simple_mob/animal/giant_spider/hunter,
 /turf/simulated/floor/tiled/old_tile,
 /area/derelict/crew_quarters)
-"WE" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/derelict/arrival)
 "WF" = (
 /obj/machinery/light/spot{
 	dir = 4
@@ -4791,8 +4760,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/light/small{
-	dir = 4;
-	tag = "icon-bulb1 (EAST)"
+	dir = 4
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
@@ -6184,9 +6152,9 @@ ha
 eI
 fg
 dA
-Ry
-Ry
-Ry
+tm
+tm
+tm
 HV
 TJ
 CQ
@@ -6365,7 +6333,7 @@ Bj
 tm
 tm
 tm
-WE
+Bg
 tm
 Ky
 fY
@@ -11901,11 +11869,11 @@ BK
 kJ
 bg
 vf
-yD
-yD
-yD
-yD
-yD
+iy
+iy
+iy
+iy
+iy
 lH
 ac
 ac
@@ -12269,11 +12237,11 @@ BK
 kJ
 bg
 vf
-yD
-yD
-yD
-yD
-yD
+iy
+iy
+iy
+iy
+iy
 lH
 ac
 ac
