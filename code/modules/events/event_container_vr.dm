@@ -1,12 +1,3 @@
-#define DEPARTMENT_ANY "Any"
-#define JOB_AI "AI"
-#define JOB_CYBORG "Cyborg"
-#define DEPARTMENT_ENGINEERING "Engineer"
-#define JOB_BOTANIST "Botanist"
-#define JOB_JANITOR "Janitor"
-#define DEPARTMENT_MEDICAL "Medical"
-#define DEPARTMENT_RESEARCH "Scientist"
-#define DEPARTMENT_SECURITY "Security"
 
 //
 // VOREStation overrides to the default event manager configuration.
