@@ -266,7 +266,6 @@
 	load_method = MAGAZINE
 	w_class = ITEMSIZE_HUGE
 	one_handed_penalty = 50
-	fire_sound = "sound/weapons/serdy/m41a.ogg"
 
 /obj/item/gun/projectile/automatic/serdy/patriot
 	name = "Patriot"
@@ -631,7 +630,7 @@
 	name = "WKHM 'Plamya' Mk. 1"
 	desc = "The original Plamya assault rifle, produced by WKHM back in the 2330's. Highly sought after for their collectability, and their superb reliability. They don't quite make them like they used to. It may not fire as fast as the newer ones, but these old models haven't survived this long for no reason. This one has a classic walnut thumbhole stock and foregrip. It has a heavy titanium chassis, durasteel bolt, and the original style 'PPSh' heatshield. The gun is dated 2336, and bears the 'WKHM Endurance' arkship's production stamp on the buttstock. 'A light in the dark' is stamped into the receiver. Chambered in 9x39mm."
 	description_fluff = "WKHM, is a minor arms company that has been around for quite some time, established in 2408. Known for being one of the many suppliers of weapons to dangerous worlds on the rim, and a part of the FTU. They produce a large variety of firearms, strike craft, and armored vehicles to fufill various their various contracts, and are largely migrant, moving wherever the money is. Found almost entirely on mobile production ships and various escort craft. Identifiable by their logo, a red Omega symbol with a black or white W in the middle. The sheer quantity of their firearms produced ensures they can be found.. just about anywhere, and they are very sought after by pirates for their reliability."
-	caliber = "9x39mm"
+	caliber = "9mm"
 	magazine_type = /obj/item/ammo_magazine/plamya
 	allowed_magazines = list(/obj/item/ammo_magazine/plamya)
 	icon_state = "plamyab"

@@ -1,5 +1,5 @@
 /obj/item/ammo_magazine/asval
-	name = "AS-Val magazine(9mm standard)"
+	name = "AS-Val magazine(9mm)"
 	icon = 'icons/obj/ammo_ch.dmi'
 	icon_state = "asval"
 	max_ammo = 20
@@ -20,7 +20,7 @@
 	matter = list(MAT_STEEL = 1000)
 	ammo_type = /obj/item/ammo_casing/a9mm/rubber
 /obj/item/ammo_magazine/akm
-	name = "AKM magazine (7.62mm standard)"
+	name = "AKM magazine (7.62mm)"
 	icon = 'icons/obj/ammo_ch.dmi'
 	icon_state = "762mag"
 	max_ammo = 30
@@ -52,7 +52,7 @@
 	ammo_type = /obj/item/ammo_casing/a762/rubber
 
 /obj/item/ammo_magazine/ak74
-	name = "AK74 magazine (5.45mm standard)"
+	name = "AK74 magazine (5.45mm)"
 	icon = 'icons/obj/ammo_ch.dmi'
 	icon_state = "545bake"
 	max_ammo = 30
@@ -88,7 +88,7 @@
 	ammo_type = /obj/item/ammo_casing/a545/rubber
 
 /obj/item/ammo_magazine/m16
-	name = "M16 magazine (5.56mm standard)"
+	name = "M16 magazine (5.56mm)"
 	icon = 'icons/obj/ammo_ch.dmi'
 	icon_state = "556mag"
 	max_ammo = 30
@@ -116,13 +116,13 @@
 	ammo_type = /obj/item/ammo_casing/a556/hp
 
 /obj/item/ammo_magazine/m16/patriot
-	name = "Patriot magazine (5.56mm standard)"
+	name = "Patriot magazine (5.56mm)"
 	matter = list(MAT_STEEL = 5000)
 	max_ammo = 100
 	icon_state = "patriotmag"
 
 /obj/item/ammo_magazine/m41
-	name = "M41A magazine (10x24mm standard)"
+	name = "M41A magazine (10x24mm)"
 	icon = 'icons/obj/ammo_ch.dmi'
 	icon_state = "m41mag"
 	max_ammo = 40
@@ -133,7 +133,7 @@
 	ammo_type = /obj/item/ammo_casing/a10x24
 
 /obj/item/ammo_magazine/m41/rubber
-	name = "M41A magazine (10x24mm standard)"
+	name = "M41A magazine (10x24mm)"
 	icon = 'icons/obj/ammo_ch.dmi'
 	icon_state = "m41rubbermag"
 	max_ammo = 40
@@ -141,7 +141,7 @@
 	ammo_type = /obj/item/ammo_casing/a10x24/rubber
 
 /obj/item/ammo_magazine/t12
-	name = "T-12 magazine (10x24mm standard)"
+	name = "T-12 magazine (10x24mm)"
 	icon = 'icons/obj/ammo_ch.dmi'
 	icon_state = "t12"
 	max_ammo = 40
@@ -152,7 +152,7 @@
 	ammo_type = /obj/item/ammo_casing/a10x24
 
 /obj/item/ammo_magazine/clip/sks
-	name = "Ammo clip(7.62mm standard)"
+	name = "Ammo clip(7.62mm)"
 	icon_state = "gclip"
 	max_ammo = 10
 	caliber = "7.62mm"
@@ -166,7 +166,7 @@
 	ammo_type = /obj/item/ammo_casing/a762/ap
 
 /obj/item/ammo_magazine/clip/mosin
-	name = "Ammo clip(7.62mm standard)"
+	name = "Ammo clip(7.62mm)"
 	icon_state = "clip_rifle"
 	max_ammo = 5
 	caliber = "7.62mm"
@@ -180,7 +180,7 @@
 	ammo_type = /obj/item/ammo_casing/a762/ap
 
 /obj/item/ammo_magazine/type901
-	name = "Type-901 magazine(7.62mm standard)"
+	name = "Type-901 magazine(7.62mm)"
 	icon = 'icons/obj/ammo_ch.dmi'
 	caliber = "7.62mm"
 	icon_state = "762mag"
@@ -196,7 +196,7 @@
 	ammo_type = /obj/item/ammo_casing/a762/ap
 
 /obj/item/ammo_magazine/ar10
-	name = "AR-10 magazine(7.62mm standard)"
+	name = "AR-10 magazine(7.62mm)"
 	icon = 'icons/obj/ammo_ch.dmi'
 	caliber = "7.62mm"
 	icon_state = "t12"
@@ -212,7 +212,7 @@
 	ammo_type = /obj/item/ammo_casing/a762/ap
 
 /obj/item/ammo_magazine/fal
-	name = "FAL magazine(7.62mm standard)"
+	name = "FAL magazine(7.62mm)"
 	icon = 'icons/obj/ammo_ch.dmi'
 	caliber = "7.62mm"
 	icon_state = "t12"
@@ -228,7 +228,7 @@
 	ammo_type = /obj/item/ammo_casing/a762/ap
 
 /obj/item/ammo_magazine/awp
-	name = "AWP magazine(.338 Lapua standard)"
+	name = "AWP magazine(.338 Lapua)"
 	icon = 'icons/obj/ammo_ch.dmi'
 	caliber = ".338"
 	icon_state = "awp"
@@ -244,7 +244,7 @@
 	ammo_type = /obj/item/ammo_casing/a338/ap
 
 /obj/item/ammo_magazine/hectate
-	name = "Hectate II magazine(.50 BMG standard)"
+	name = "Hectate II magazine(.50 BMG)"
 	icon = 'icons/obj/ammo_ch.dmi'
 	caliber = ".50 BMG"
 	icon_state = "hectate"
@@ -271,7 +271,7 @@
 	ammo_type = /obj/item/ammo_casing/a45
 
 /obj/item/ammo_magazine/plamya
-	name = "Plamya drum magazine(9mm standard)"
+	name = "Plamya drum magazine(9mm)"
 	icon = 'icons/obj/ammo_ch.dmi'
 	caliber = "9mm"
 	icon_state = "plamyamag"
@@ -308,7 +308,7 @@
 	ammo_type = /obj/item/ammo_casing/a12g
 
 /obj/item/ammo_magazine/molniya
-	name = "Molniya magazine box(7.62mm standard)"
+	name = "Molniya magazine box(7.62mm)"
 	icon = 'icons/obj/ammo_ch.dmi'
 	caliber = "7.62mm"
 	icon_state = "molniyamag"
@@ -324,7 +324,7 @@
 	ammo_type = /obj/item/ammo_casing/a762/ap
 
 /obj/item/ammo_magazine/kord
-	name = "Kord magazine box(12.7x108mm standard)"
+	name = "Kord magazine box(12.7x108mm)"
 	icon = 'icons/obj/ammo_ch.dmi'
 	caliber = "12.7x108mm"
 	icon_state = "kordmag"
@@ -335,7 +335,7 @@
 	ammo_type = /obj/item/ammo_casing/a127x108
 
 /obj/item/ammo_magazine/pkm
-	name = "PKM magazine box(7.62mm standard)"
+	name = "PKM magazine box(7.62mm)"
 	icon = 'icons/obj/ammo_ch.dmi'
 	caliber = "7.62mm"
 	icon_state = "molniyamag"
@@ -351,7 +351,7 @@
 	ammo_type = /obj/item/ammo_casing/a762/ap
 
 /obj/item/ammo_magazine/rpd
-	name = "RPD Drum magazine(7.62mm standard)" //Lil side note. These mags don't work with the AK, because the rounds inside are actually on a belt, but they might still fit inside an AK and just break it? Couldn't find any more details on what happens if you try.
+	name = "RPD Drum magazine(7.62mm)" //Lil side note. These mags don't work with the AK, because the rounds inside are actually on a belt, but they might still fit inside an AK and just break it? Couldn't find any more details on what happens if you try.
 	icon = 'icons/obj/ammo_ch.dmi'
 	caliber = "7.62mm"
 	icon_state = "rpdmag"
@@ -367,7 +367,7 @@
 	ammo_type = /obj/item/ammo_casing/a762/ap
 
 /obj/item/ammo_magazine/akm/drum
-	name = "RPK Drum magazine(7.62mm standard)" //These ARE interchangeable with AK magazines in the same caliber
+	name = "RPK Drum magazine(7.62mm)" //These ARE interchangeable with AK magazines in the same caliber
 	icon = 'icons/obj/ammo_ch.dmi'
 	caliber = "7.62mm"
 	icon_state = "rpdmag"
@@ -383,7 +383,7 @@
 	ammo_type = /obj/item/ammo_casing/a762/ap
 
 /obj/item/ammo_magazine/ssp4
-	name = "SSP4 magazine(10mm standard)"
+	name = "SSP4 magazine(10mm)"
 	icon = 'icons/obj/ammo_ch.dmi'
 	caliber = "10mm"
 	icon_state = "10mmmag"
@@ -394,13 +394,13 @@
 	ammo_type = /obj/item/ammo_casing/a10mm
 
 /obj/item/ammo_magazine/ssp4/rubber
-	name = "SSP4 magazine(10mm standard)"
+	name = "SSP4 magazine(10mm)"
 	ammo_type = /obj/item/ammo_casing/a10mm/rubber
 	icon_state = "10mmrubbermag"
 	matter = list(MAT_STEEL = 300)
 
 /obj/item/ammo_magazine/makarov
-	name = "Makarov magazine(9mm Makarov standard)"
+	name = "Makarov magazine(9mm)"
 	icon = 'icons/obj/ammo_ch.dmi'
 	caliber = "9mm"
 	icon_state = "9mmmag"
@@ -416,7 +416,7 @@
 	icon_state = "9mmrubbermag"
 
 /obj/item/ammo_magazine/m9mm/vp70
-	name = "VP70 magazine (9mm standard)"
+	name = "VP70 magazine (9mm)"
 	icon = 'icons/obj/ammo_ch.dmi'
 	icon_state = "9mmmag"
 	ammo_type = /obj/item/ammo_casing/a9mm
@@ -441,7 +441,7 @@
 	icon_state = "9mmrubbermag"
 
 /obj/item/ammo_magazine/tp23s
-	name = "TP-23 TS magazine (.44 magnum standard)"
+	name = "TP-23 TS magazine (.44 magnum)"
 	icon = 'icons/obj/ammo_ch.dmi'
 	icon_state = "45mag"
 	max_ammo = 10
