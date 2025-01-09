@@ -2383,7 +2383,7 @@
 	pixel_x = -5;
 	pixel_y = 3
 	},
-/obj/item/ammo_casing/a762x54{
+/obj/item/ammo_casing/a762{
 	pixel_x = -3;
 	pixel_y = -8
 	},
