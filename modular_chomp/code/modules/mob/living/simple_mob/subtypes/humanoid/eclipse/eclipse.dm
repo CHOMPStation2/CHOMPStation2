@@ -58,15 +58,12 @@
 	reload_time = 1.5 SECONDS
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/eclipse
 
-	loot_list = list(/obj/item/slime_extract/sepia  = 1,
-		/obj/item/bone/skull = 100
-			)
-
 	special_attack_cooldown = 15 SECONDS
 	special_attack_min_range = 2
 	special_attack_max_range = 7
 	var/has_heal_droid = FALSE
 	var/specialattackprojectile = /obj/item/projectile/energy/phase/bolt
+	var/artidrop = /obj/effect/artillery_attack
 
 //Want a self heal for a spefic dude, and to increase diffculty of some POIs
 /mob/living/simple_mob/humanoid/eclipse/handle_special()
@@ -136,11 +133,9 @@
 	armor_soak = list(melee = 0, bullet = 0, laser = 20, energy = 20, bomb = 0, bio = 0, rad = 0)
 
 /mob/living/simple_mob/humanoid/eclipse/solar/bullet_act(obj/item/projectile/P)
+	..()
 	if(istype(P, /obj/item/projectile/energy) || istype(P, /obj/item/projectile/beam))
-		visible_message(span_boldwarning("[P] seems ineffective!."))
-		..()
-	else
-		..()
+		visible_message(span_cult("[P] seems ineffective!."))
 
 /mob/living/simple_mob/humanoid/eclipse/solar/snipertesh
 	name = "Solar Eclipse Sniper"
@@ -449,14 +444,12 @@
 	armor_soak = list(melee = 20, bullet = 20, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0) //15 because every melee weapon has dumb amount of AP
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/bullet_act(obj/item/projectile/P)
+	..()
 	if(istype(P, /obj/item/projectile/bullet))
-		visible_message(span_boldwarning("[P] seems ineffective!."))
-		..()
-	else
-		..()
+		visible_message(span_cult("[P] seems ineffective!."))
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/attackby(var/obj/item/O as obj, var/mob/user as mob)
-	to_chat(user, span_warning("This weapon is ineffective, it does no damage."))
+	to_chat(user, span_cult("This weapon is ineffective, it does no damage."))
 	.=..()
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/bulletstorm //tesh got a gun
