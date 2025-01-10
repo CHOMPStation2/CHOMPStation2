@@ -40,7 +40,6 @@
   - bugfix: bonfire examine
   whooshboom:
   - qol: Reverts marish to audible condition. Happy marring!
-
 2025-01-05:
   Arrhythmia_V:
   - balance: ERT borg now has their sword tail back
@@ -94,3 +93,7 @@
       once fully grown.
   - rscadd: Exotic organs can be sold via cargo. Freezer crate recommended.
   - rscadd: Freezer crate for cargo has been added under the supply tab.
+2025-01-10:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: Massive overhaul to the backend of character creation. Any visible changes
+      are considered bugs.
