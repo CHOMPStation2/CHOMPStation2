@@ -35,12 +35,9 @@
 		//VOREStation Add end
 		if("JoinLateGateway")
 			latejoin_gateway += loc
-<<<<<<< HEAD
+			// CHOMPEdit Start
 			delete_me = 1
-=======
-			latejoin += src				//VOREStation Addition
-			// delete_me = 1
->>>>>>> 7493c14440 (fix people spawning in nullspace (#16872))
+			// CHOMPEdit End
 			return
 		//CHOMPEdit Begin
 		if("JoinLateStationGateway")
