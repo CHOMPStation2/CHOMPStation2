@@ -1,4 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - code_imp: "Massive overhaul to the backend of character creation. Any visible changes are considered bugs."

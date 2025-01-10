@@ -91,3 +91,11 @@
       once fully grown.
   - rscadd: Exotic organs can be sold via cargo. Freezer crate recommended.
   - rscadd: Freezer crate for cargo has been added under the supply tab.
+2025-01-10:
+  Asher-42:
+  - bugfix: fixed the protean dullahan rest sprite for boob plate version
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: Massive overhaul to the backend of character creation. Any visible changes
+      are considered bugs.
+  Kashargul:
+  - code_imp: cleans up event defines
