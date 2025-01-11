@@ -1917,6 +1917,7 @@
 /area/aro2/airarea)
 "sB" = (
 /obj/structure/table/steel,
+<<<<<<< HEAD
 /obj/item/magnetic_ammo/pistol{
 	pixel_x = 5;
 	pixel_y = 2
@@ -1925,6 +1926,8 @@
 	pixel_x = -3;
 	pixel_y = 5
 	},
+=======
+>>>>>>> 6db6df23d6 (Merge pull request #16864 from SatinIsle/map-archiving)
 /turf/simulated/floor/tiled/eris/techmaint_perforated,
 /area/aro2/surfluid)
 "sF" = (

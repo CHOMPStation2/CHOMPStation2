@@ -63,8 +63,12 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
+<<<<<<< HEAD
 	icon_state = "0-4";
 	
+=======
+	icon_state = "0-4"
+>>>>>>> 6db6df23d6 (Merge pull request #16864 from SatinIsle/map-archiving)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/blue_fo)
