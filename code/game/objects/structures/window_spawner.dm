@@ -58,7 +58,11 @@
 	activated = 1
 	for(var/obj/effect/wingrille_spawn/other in neighbours)
 		if(!other.activated) other.activate()
+<<<<<<< HEAD
 	if((flags & ATOM_INITIALIZED) && !QDELETED(src)) //CHOMPEdit
+=======
+	if((flags & ATOM_INITIALIZED) && !QDELETED(src))
+>>>>>>> 105213eb03 (Merge pull request #16882 from Kashargul/wire)
 		qdel(src)
 
 /obj/effect/wingrille_spawn/proc/handle_window_spawn(var/obj/structure/window/W)

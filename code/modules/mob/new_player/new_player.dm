@@ -25,6 +25,7 @@
 /mob/new_player/New()
 	mob_list += src
 	add_verb(src, /mob/proc/insidePanel)
+<<<<<<< HEAD
 	//CHOMPEdit Begin
 	if(length(GLOB.newplayer_start))
 		forceMove(pick(GLOB.newplayer_start))
@@ -32,6 +33,9 @@
 		forceMove(locate(1,1,1))
 	//CHOMPEdit End
 	flags |= ATOM_INITIALIZED // Explicitly don't use Initialize().  New players join super early and use New() //CHOMPEdit
+=======
+	flags |= ATOM_INITIALIZED // Explicitly don't use Initialize().  New players join super early and use New()
+>>>>>>> 105213eb03 (Merge pull request #16882 from Kashargul/wire)
 
 
 /mob/new_player/Destroy()

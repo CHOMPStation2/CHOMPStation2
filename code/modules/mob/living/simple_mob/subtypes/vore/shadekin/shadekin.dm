@@ -97,7 +97,11 @@
 		var/new_type = pickweight(sk_types)
 
 		new new_type(loc)
+<<<<<<< HEAD
 		flags |= ATOM_INITIALIZED //CHOMPEdit
+=======
+		flags |= ATOM_INITIALIZED
+>>>>>>> 105213eb03 (Merge pull request #16882 from Kashargul/wire)
 		return INITIALIZE_HINT_QDEL
 
 	if(icon_state == "map_example")
