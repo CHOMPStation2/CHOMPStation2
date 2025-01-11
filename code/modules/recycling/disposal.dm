@@ -544,6 +544,11 @@
 	//CHOMPEdit: fixes thrown disposal dunking with mobs~ - Reo
 	if((istype(AM, /obj/item) || istype(AM, /mob/living)) && !istype(AM, /obj/item/projectile))
 		if(prob(75))
+<<<<<<< HEAD
+=======
+			if(istype(AM, /obj/item/holder/micro))
+				log_and_message_admins("[AM] was thrown into \the [src]", null)
+>>>>>>> 5c85b6744b (Merge pull request #16848 from Kashargul/stop-double-logging)
 			AM.forceMove(src)
 			if(istype(AM, /obj/item/holder/micro) || istype(AM, /mob/living))
 				log_and_message_admins("[AM] was thrown into \the [src]")
@@ -569,7 +574,7 @@
 		if(prob(75))
 			I.forceMove(src)
 			if(istype(I, /obj/item/holder/micro))
-				log_and_message_admins("[I.name] was thrown into \the [src]")
+				log_and_message_admins("[I.name] was thrown into \the [src]", null)
 			for(var/mob/M in viewers(src))
 				M.show_message("\The [I] lands in \the [src].", 3)
 		else
