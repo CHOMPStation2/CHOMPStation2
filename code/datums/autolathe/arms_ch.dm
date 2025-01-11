@@ -308,3 +308,32 @@
 	name = "large ammo box (5.45mm hunter)"
 	path = /obj/item/ammo_magazine/ammo_box/b545/large/hunter
 	hidden = 1
+
+//9mm
+/datum/category_item/autolathe/arms/b9mm
+	name = "ammo box (9mm)"
+	path = /obj/item/ammo_magazine/ammo_box/b9mm
+	hidden = 1
+
+/datum/category_item/autolathe/arms/b9mm/practice
+	name = "ammo box (9mm practice)"
+	path = /obj/item/ammo_magazine/ammo_box/b9mm/practice
+
+/datum/category_item/autolathe/arms/b9mm/ap
+	name = "ammo box (9mm AP)"
+	path = /obj/item/ammo_magazine/ammo_box/b9mm/ap
+	hidden = 1
+
+/datum/category_item/autolathe/arms/b9mm/hp
+	name = "ammo box (9mm HP)"
+	path = /obj/item/ammo_magazine/ammo_box/b9mm/hp
+	hidden = 1
+
+/datum/category_item/autolathe/arms/b9mm/rubber
+	name = "ammo box (9mm rubber)"
+	path = /obj/item/ammo_magazine/ammo_box/b9mm/rubber
+
+/datum/category_item/autolathe/arms/b9mm/flash
+	name = "ammo box (9mm flash)"
+	path = /obj/item/ammo_magazine/ammo_box/b9mm/flash
+	hidden = 1

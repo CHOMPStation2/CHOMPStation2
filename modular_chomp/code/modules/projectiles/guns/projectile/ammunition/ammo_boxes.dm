@@ -34,7 +34,7 @@
 	icon_state = "pistol_hp"
 	caliber = "9mm"
 	ammo_type = /obj/item/ammo_casing/a9mm/hp
-	matter = list(MAT_STEEL = 1100, MAT_PLASTIC = 360)
+	matter = list(MAT_STEEL = 1100)
 	max_ammo = 24
 	multiple_sprites = 1
 
@@ -44,7 +44,7 @@
 	icon_state = "pistol_r"
 	caliber = "9mm"
 	ammo_type = /obj/item/ammo_casing/a9mm/rubber
-	matter = list(MAT_STEEL = 1100)
+	matter = list(MAT_STEEL = 1100, MAT_PLASTIC = 360)
 	max_ammo = 24
 	multiple_sprites = 1
 
