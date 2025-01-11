@@ -1,9 +1,6 @@
 #define FIRE_MAX_TEMP 20000
 
 /turf/proc/lingering_fire(fl)
-	return
-
-/turf/space/lingering_fire(fl)
 	return FALSE
 
 /turf/simulated/floor/water/lingering_fire(fl)
