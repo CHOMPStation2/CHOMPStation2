@@ -1,3 +1,24 @@
+//This enables you to load mag to mag too. This includes from box to mag.
+/obj/item/ammo_magazine/attackby(obj/item/W as obj, mob/user as mob)
+	if(istype(W, /obj/item/ammo_magazine))
+		var/obj/item/ammo_magazine/L = W
+		if(L.caliber != caliber)
+			to_chat(user, span_warning("The ammo in [L] does not fit into [src]."))
+			return
+		if(!L.stored_ammo.len)
+			to_chat(user, span_warning("There's no more ammo [L]!"))
+			return
+		if(stored_ammo.len >= max_ammo)
+			to_chat(user, span_warning("[src] is full!"))
+			return
+		while(L.stored_ammo.len && stored_ammo.len < max_ammo)
+			var/obj/item/ammo_casing/AC = L.stored_ammo[1] //select the next casing.
+			L.stored_ammo -= AC //Remove this casing from loaded list of the clip.
+			AC.forceMove(src)
+			stored_ammo.Insert(1, AC) //add it to the head of our magazine's list
+		L.update_icon()
+	..()
+
 /obj/item/ammo_magazine/asval
 	name = "AS-Val magazine(9mm)"
 	icon = 'icons/obj/ammo_ch.dmi'
