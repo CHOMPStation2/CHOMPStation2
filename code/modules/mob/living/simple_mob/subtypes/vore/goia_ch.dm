@@ -374,14 +374,6 @@
 	qdel(I)
 
 
-	I = image(icon, "[goia_overlays["underbelly"]][resting? "-rest" : null]", pixel_x = -16)
-	I.color = goia_overlays["zorgoia_underbelly"]
-	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
-	I.plane = MOB_PLANE
-	I.layer = MOB_LAYER
-	add_overlay(I)
-	qdel(I)
-
 	I = image(icon, "[goia_overlays["fluff"]][resting? "-rest" : null]", pixel_x = -16)
 	I.color = goia_overlays["zorgoia_fluff"]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
@@ -405,8 +397,16 @@
 	add_overlay(I)
 	qdel(I)
 
-	I = image(icon, "[goia_overlays["belly"]][resting? "-rest" : (vore_fullness? "-[vore_fullness]" : null)]", pixel_x = -16) //todo, check kasscs resting sprite
+	I = image(icon, "[goia_overlays["belly"]][resting? "-rest" : (vore_fullness? "-[vore_fullness]" : null)]", pixel_x = -16)
 	I.color = goia_overlays["zorgoia_belly"]
+	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
+	I.plane = MOB_PLANE
+	I.layer = MOB_LAYER
+	add_overlay(I)
+	qdel(I)
+
+	I = image(icon, "[goia_overlays["underbelly"]][resting? "-rest" : (vore_fullness? "-[vore_fullness]" : null)]", pixel_x = -16)
+	I.color = goia_overlays["zorgoia_underbelly"]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = MOB_PLANE
 	I.layer = MOB_LAYER
