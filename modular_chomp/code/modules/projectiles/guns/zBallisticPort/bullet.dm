@@ -1111,6 +1111,7 @@
 	icon_expected_height = 32
 	icon_expected_width = 64
 
+/* //Dont need it
 /obj/item/gun/projectile/automatic/c20r/update_icon()
 	..()
 	if(ammo_magazine)
@@ -1118,6 +1119,7 @@
 	else
 		icon_state = "c20r"
 	return
+*/
 
 /obj/item/gun/projectile/automatic/c20r/Initialize()
 	. = ..()
