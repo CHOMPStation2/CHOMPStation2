@@ -117,9 +117,9 @@
 // The 0x800000 is blocked by INITIALIZED, do NOT use it!
 
 // CHOMPAdd Start/area
-#define PHASE_SHIELDED				0x200000 // A less rough way to prevent phase shifting without blocking access
-#define AREA_LIMIT_DARK_RESPITE		0x400000// Shadekin will die normally in those areas
-#define AREA_ALLOW_CLOCKOUT			0x800000 //The PDA timeclock app can only be used in these areas
+#define PHASE_SHIELDED				0x100000 // A less rough way to prevent phase shifting without blocking access
+#define AREA_LIMIT_DARK_RESPITE		0x200000// Shadekin will die normally in those areas
+#define AREA_ALLOW_CLOCKOUT			0x400000 //The PDA timeclock app can only be used in these areas
 // CHOMPAdd End
 
 // OnTopic return values
