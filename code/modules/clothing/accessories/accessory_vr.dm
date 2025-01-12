@@ -101,6 +101,7 @@
 	..(S, user)
 
 /obj/item/clothing/accessory/collar/dropped()
+	..()
 	icon_override = icon_previous_override
 //ywedit end
 
