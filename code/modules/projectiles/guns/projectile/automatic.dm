@@ -443,7 +443,7 @@
 	is_picked_up = TRUE
 	update_transform()
 
-/obj/item/gun/projectile/automatic/mini_uzi/dropped()
+/obj/item/gun/projectile/automatic/mini_uzi/dropped(mob/living/user)
 	. = ..()
 	is_picked_up = FALSE
 	update_transform()

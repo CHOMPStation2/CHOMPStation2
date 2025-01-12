@@ -941,8 +941,9 @@
 		H.update_inv_wear_suit()
 	hood.forceMove(src)
 
-/obj/item/clothing/suit/storage/toggle/hoodiebuttoned/dropped()
+/obj/item/clothing/suit/storage/toggle/hoodiebuttoned/dropped(mob/living/user)
 	RemoveHood()
+	..()
 
 /obj/item/clothing/suit/storage/toggle/hoodiebuttoned/proc/ToggleHood()
 	if(!suittoggled)
