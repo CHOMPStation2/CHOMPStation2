@@ -18,7 +18,7 @@
 	is_picked_up = TRUE
 	update_transform()
 
-/obj/item/gun/energy/laser/dropped()
+/obj/item/gun/energy/laser/dropped(mob/living/user)
 	. = ..()
 	if(!istype(loc,/mob/living))
 		is_picked_up = FALSE
