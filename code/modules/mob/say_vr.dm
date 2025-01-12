@@ -195,8 +195,8 @@
 				continue
 			if(src.client && M && !(get_z(src) == get_z(M)))
 				message = span_multizsay("[message]")
-			if(isobserver(M) && (!(M.client?.prefs?.read_preference(/datum/preference/toggle/ghost_see_whisubtle) || (isbelly(M.loc) && src == M.loc:owner)) || \
-			!client?.prefs?.read_preference(/datum/preference/toggle/whisubtle_vis) && !M.client?.holder))
+			if(isobserver(M) && (!M.read_preference(/datum/preference/toggle/ghost_see_whisubtle) || \
+			(!(read_preference(/datum/preference/toggle/whisubtle_vis) || (isbelly(M.loc) && src == M.loc:owner)) && !M.client?.holder)))
 				spawn(0)
 					M.show_message(undisplayed_message, 2)
 			else
@@ -344,7 +344,7 @@
 				if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
 					M << sound(pick(voice_sounds_list), volume = 25)
 		for (var/mob/G in player_list)
-			if (istype(G, /mob/new_player))
+			if (isnewplayer(G))
 				continue
 			else if(isobserver(G) &&  G.client?.prefs?.read_preference(/datum/preference/toggle/ghost_ears) && \
 			G.client?.prefs?.read_preference(/datum/preference/toggle/ghost_see_whisubtle))
@@ -449,7 +449,7 @@
 				if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
 					M << sound(pick(voice_sounds_list), volume = 25)
 		for (var/mob/G in player_list)
-			if (istype(G, /mob/new_player))
+			if (isnewplayer(G))
 				continue
 			else if(isobserver(G) && G.client?.prefs?.read_preference(/datum/preference/toggle/ghost_ears) && \
 			G.client?.prefs?.read_preference(/datum/preference/toggle/ghost_see_whisubtle))

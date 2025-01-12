@@ -390,13 +390,17 @@ emp_act
 
 //this proc handles being hit by a thrown atom
 /mob/living/carbon/human/hitby(atom/movable/AM as mob|obj,var/speed = THROWFORCE_SPEED_DIVISOR)
+	// CHOMPADD Start
+	if(src.is_incorporeal())
+		return
+	// CHOMPAdd End
 //	if(buckled && buckled == AM)
 //		return // Don't get hit by the thing we're buckled to.
 
 	//VORESTATION EDIT START - Allows for thrown vore!
 	//Throwing a prey into a pred takes priority. After that it checks to see if the person being thrown is a pred.
 	// I put more comments here for ease of reading.
-	if(istype(AM, /mob/living))
+	if(isliving(AM))
 		var/mob/living/thrown_mob = AM
 		if(isanimal(thrown_mob) && !allowmobvore) //Is the thrown_mob an animal and we don't allow mobvore?
 			return
@@ -439,9 +443,6 @@ emp_act
 						throw_mode_off()
 						return
 
-		if(src.is_incorporeal()) // CHOMPADD - Don't hit what's not there.
-			return
-
 		var/dtype = O.damtype
 		var/throw_damage = O.throwforce*(speed/THROWFORCE_SPEED_DIVISOR)
 
@@ -450,7 +451,7 @@ emp_act
 			return
 
 		var/zone
-		if (istype(O.thrower, /mob/living))
+		if (isliving(O.thrower))
 			var/mob/living/L = O.thrower
 			zone = check_zone(L.zone_sel.selecting)
 		else
@@ -578,10 +579,11 @@ emp_act
 
 
 /mob/living/carbon/human/proc/bloody_hands(var/mob/living/source, var/amount = 2)
-	if (gloves)
-		gloves.add_blood(source)
-		gloves:transfer_blood = amount
-		gloves:bloody_hands_mob = source
+	if (istype(gloves, /obj/item/clothing/gloves))
+		var/obj/item/clothing/gloves/gl = gloves
+		gl.add_blood(source)
+		gl.transfer_blood = amount
+		gl.bloody_hands_mob = source
 	else
 		add_blood(source)
 		bloody_hands = amount

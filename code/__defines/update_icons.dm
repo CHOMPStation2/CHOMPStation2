@@ -3,8 +3,8 @@
 //Human Overlays Indexes/////////
 //CHOMPEDIT edit the file human/update_icons.dm in the modular_chomp folder as well, if you update these (and clothing/clothing.dm line 789, the hardcoded layer there in /obj/item/clothing/suit/make_worn_icon)
 #define MUTATIONS_LAYER			1		//Mutations like fat, and lasereyes
-#define TAIL_LOWER_LAYER		2		//Tail as viewed from the south //CHOMPStation edit - underneath bodyparts
-#define WING_LOWER_LAYER		3		//Wings as viewed from the south //CHOMPStation edit - underneath bodyparts
+#define TAIL_LOWER_LAYER		2		//Tail as viewed from the south
+#define WING_LOWER_LAYER		3		//Wings as viewed from the south
 #define BODYPARTS_LAYER			4		//Bodyparts layer
 #define SKIN_LAYER				5		//Skin things added by a call on species
 #define BLOOD_LAYER				6		//Bloodied hands/feet/anything else
@@ -35,14 +35,15 @@
 #define L_HAND_LAYER			31		//Left-hand item
 #define R_HAND_LAYER			32		//Right-hand item
 #define WING_LAYER				33		//Wings or protrusions over the suit.
-#define VORE_BELLY_LAYER		34		//CHOMPStation edit - Move this and everything after up if things are added.
-#define VORE_TAIL_LAYER			35		//CHOMPStation edit - Move this and everything after up if things are added.
+#define VORE_BELLY_LAYER		34		//Move this and everything after up if things are added.
+#define VORE_TAIL_LAYER			35		//Move this and everything after up if things are added.
 #define TAIL_UPPER_LAYER_ALT	36		//Modified tail-sprite layer. Tend to be larger.
 #define MODIFIER_EFFECTS_LAYER	37		//Effects drawn by modifiers
 #define FIRE_LAYER				38		//'Mob on fire' overlay layer
 #define MOB_WATER_LAYER			39		//'Mob submerged' overlay layer
 #define TARGETED_LAYER			40		//'Aimed at' overlay layer
 #define TOTAL_LAYERS			40		// <---- KEEP THIS UPDATED, should always equal the highest number here, used to initialize a list.
+
 
 //These two are only used for gargoyles currently
 #define HUMAN_BODY_LAYERS list(MUTATIONS_LAYER, TAIL_LOWER_LAYER, WING_LOWER_LAYER, BODYPARTS_LAYER, SKIN_LAYER, BLOOD_LAYER, MOB_DAM_LAYER, TAIL_UPPER_LAYER, HAIR_LAYER, HAIR_ACCESSORY_LAYER, EYES_LAYER, WING_LAYER, VORE_BELLY_LAYER, VORE_TAIL_LAYER, TAIL_UPPER_LAYER_ALT)

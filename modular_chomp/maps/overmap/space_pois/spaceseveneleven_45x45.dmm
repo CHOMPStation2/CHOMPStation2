@@ -243,7 +243,6 @@
 /area/submap/spaceseveneleven)
 "fj" = (
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/solar,
@@ -261,7 +260,6 @@
 /area/submap/spaceseveneleven)
 "hn" = (
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/solar,
@@ -556,13 +554,9 @@
 /area/submap/spaceseveneleven)
 "ny" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/outdoors/rocks{
@@ -641,7 +635,6 @@
 /area/submap/spaceseveneleven)
 "pj" = (
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/tracker,
@@ -1542,8 +1535,6 @@
 /area/submap/spaceseveneleven)
 "HI" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	tag = ""
 	},
@@ -1662,18 +1653,12 @@
 /area/submap/spaceseveneleven)
 "Kl" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/outdoors/sidewalk/slab/city{
@@ -1836,7 +1821,6 @@
 "Ok" = (
 /obj/machinery/power/smes/buildable/point_of_interest,
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/outdoors/sidewalk/slab/city{
@@ -1861,7 +1845,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/outdoors/sidewalk/slab/city{
@@ -1871,7 +1854,6 @@
 /area/submap/spaceseveneleven)
 "Pi" = (
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc/hyper{
@@ -2047,13 +2029,9 @@
 /area/submap/spaceseveneleven)
 "TW" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/outdoors/sidewalk/slab/city{

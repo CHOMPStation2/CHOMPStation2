@@ -10,16 +10,16 @@
 
 /obj/machinery/chemical_dispenser/deluxe
 	dispense_reagents = list(
-		"water", "ice", "coffee", "cream", "tea", "icetea", "cola", "spacemountainwind", "dr_gibb", "space_up", "tonic",
-		"sodawater", "lemon_lime", "sugar", "orangejuice", "limejuice", "watermelonjuice", "thirteenloko", "grapesoda",
-		"coffee", "cafe_latte", "soy_latte", "hot_coco", "milk", "cream", "tea", "ice", "orangejuice", "lemonjuice",
-		"limejuice", "berryjuice", "mint", "lemon_lime", "sugar", "orangejuice", "limejuice", "sodawater",
-		"tonic", "beer", "kahlua", "whiskey", "redwine", "vodka", "gin", "rum", "tequilla", "vermouth", "cognac",
-		"ale", "mead", "bitters", "champagne", "singulo", "doctorsdelight", "nothing", "banana", "honey", "egg",
-		"coco", "cherryjelly", "carrotjuice", "applejuice", "tomatojuice", "peanutbutter", "soymilk", "grenadine", "gingerale", "roy_rogers",
-		"patron", "goldschlager", "gelatin", "melonliquor", "bluecuracao", "thirteenloko", "deadrum", "sake", "acidspit",
-		"amasec", "beepskysmash", "atomicbomb", "nuka_cola", "threemileisland", "manhattan_proj", "psilocybin", "moonshine",
-		"specialwhiskey", "unathiliquor", "winebrandy", "matcha_latte", "snaps"
+		REAGENT_ID_WATER, REAGENT_ID_ICE, REAGENT_ID_COFFEE, REAGENT_ID_CREAM, REAGENT_ID_TEA, REAGENT_ID_ICETEA, REAGENT_ID_COLA, REAGENT_ID_SPACEMOUNTAINWIND, REAGENT_ID_DRGIBB, REAGENT_ID_SPACEUP, REAGENT_ID_TONIC,
+		REAGENT_ID_SODAWATER, REAGENT_ID_LEMONLIME, REAGENT_ID_SUGAR, REAGENT_ID_ORANGEJUICE, REAGENT_ID_LIMEJUICE, REAGENT_ID_WATERMELONJUICE, REAGENT_ID_THIRTEENLOKO, REAGENT_ID_GRAPESODA,
+		REAGENT_ID_COFFEE, REAGENT_ID_CAFELATTE, REAGENT_ID_SOYLATTE, REAGENT_ID_HOTCOCO, REAGENT_ID_MILK, REAGENT_ID_CREAM, REAGENT_ID_TEA, REAGENT_ID_WATER, REAGENT_ID_ICE, REAGENT_ID_ORANGEJUICE, REAGENT_ID_LEMONJUICE,
+		REAGENT_ID_LIMEJUICE, REAGENT_ID_BERRYJUICE, REAGENT_ID_MINT, REAGENT_ID_LEMONLIME, REAGENT_ID_SUGAR, REAGENT_ID_ORANGEJUICE, REAGENT_ID_LIMEJUICE, REAGENT_ID_SODAWATER,
+		REAGENT_ID_TONIC, REAGENT_ID_BEER, REAGENT_ID_KAHLUA, REAGENT_ID_WHISKEY, REAGENT_ID_REDWINE, REAGENT_ID_VODKA, REAGENT_ID_GIN, REAGENT_ID_RUM, REAGENT_ID_TEQUILLA, REAGENT_ID_VERMOUTH, REAGENT_ID_COGNAC,
+		REAGENT_ID_ALE, REAGENT_ID_MEAD, REAGENT_ID_BITTERS, REAGENT_ID_CHAMPAGNE, REAGENT_ID_SINGULO, REAGENT_ID_DOCTORSDELIGHT, REAGENT_ID_NOTHING, REAGENT_ID_BANANA, REAGENT_ID_HONEY, REAGENT_ID_EGG,
+		REAGENT_ID_COCO, REAGENT_ID_CHERRYJELLY, REAGENT_ID_CARROTJUICE, REAGENT_ID_APPLEJUICE, REAGENT_ID_TOMATOJUICE, REAGENT_ID_PEANUTBUTTER, REAGENT_ID_SOYMILK, REAGENT_ID_GRENADINE, REAGENT_ID_GINGERALE, REAGENT_ID_ROYROGERS,
+		REAGENT_ID_PATRON, REAGENT_ID_GOLDSCHLAGER, REAGENT_GELATIN, REAGENT_ID_MELONLIQUOR, REAGENT_ID_BLUECURACAO, REAGENT_ID_THIRTEENLOKO, REAGENT_ID_DEADRUM, REAGENT_ID_SAKE, REAGENT_ID_ACIDSPIT,
+		REAGENT_ID_AMASEC, REAGENT_ID_BEEPSKYSMASH, REAGENT_ID_ATOMICBOMB, REAGENT_ID_NUKACOLA, REAGENT_ID_THREEMILEISLAND, REAGENT_ID_MANHATTANPROJ, REAGENT_ID_PSILOCYBIN, REAGENT_ID_MOONSHINE,
+		REAGENT_ID_SPECIALWHISKEY, REAGENT_ID_UNATHILIQUOR, REAGENT_ID_WINEBRANDY, REAGENT_ID_MATCHALATTE, REAGENT_ID_SNAPS
 		)
 
 /obj/machinery/chemical_dispenser/deluxe/full

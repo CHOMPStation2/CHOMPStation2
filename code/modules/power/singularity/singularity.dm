@@ -95,7 +95,7 @@ GLOBAL_LIST_BOILERPLATE(all_singularities, /obj/singularity)
 	var/count = locate(/obj/machinery/containment_field) in orange(30, src)
 
 	if (!count)
-		message_admins("A singulo has been created without containment fields active ([x], [y], [z] - <A HREF='?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[x];Y=[y];Z=[z]'>JMP</a>).")
+		message_admins("A singulo has been created without containment fields active ([x], [y], [z] - <A href='byond://?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[x];Y=[y];Z=[z]'>JMP</a>).")
 
 	investigate_log("was created. [count ? "" : "<font color='red'>No containment fields were active.</font>"]", I_SINGULO)
 
@@ -424,7 +424,7 @@ GLOBAL_LIST_BOILERPLATE(all_singularities, /obj/singularity)
 		if(M.status_flags & GODMODE)
 			continue
 		if(M.stat == CONSCIOUS)
-			if (istype(M,/mob/living/carbon/human))
+			if (ishuman(M))
 				var/mob/living/carbon/human/H = M
 				if(istype(H.glasses,/obj/item/clothing/glasses/meson) && current_size != STAGE_SUPER)
 					to_chat(H, span_notice("You look directly into The [src.name], good thing you had your protective eyewear on!"))

@@ -167,7 +167,7 @@ var/world_topic_spam_protect_time = world.timeofday
 						continue
 					admins[C.key] = C.holder.rank
 				players += C.key
-				if(istype(C.mob, /mob/living))
+				if(isliving(C.mob))
 					active++
 
 			s["players"] = players.len
@@ -335,7 +335,7 @@ var/world_topic_spam_protect_time = world.timeofday
 			info["hasbeenrev"] = M.mind ? M.mind.has_been_rev : "No mind"
 			info["stat"] = M.stat
 			info["type"] = M.type
-			if(istype(M, /mob/living))
+			if(isliving(M))
 				var/mob/living/L = M
 				info["damage"] = list2params(list(
 							oxy = L.getOxyLoss(),
@@ -393,8 +393,8 @@ var/world_topic_spam_protect_time = world.timeofday
 		if(!rank)
 			rank = "Admin"
 
-		var/message =	span_red("IRC-[rank] PM from <b><a href='?irc_msg=[input["sender"]]'>IRC-[input["sender"]]</a></b>: [input["msg"]]")
-		var/amessage =  span_blue("IRC-[rank] PM from <a href='?irc_msg=[input["sender"]]'>IRC-[input["sender"]]</a> to <b>[key_name(C)]</b> : [input["msg"]]")
+		var/message =	span_red("IRC-[rank] PM from <b><a href='byond://?irc_msg=[input["sender"]]'>IRC-[input["sender"]]</a></b>: [input["msg"]]")
+		var/amessage =  span_blue("IRC-[rank] PM from <a href='byond://?irc_msg=[input["sender"]]'>IRC-[input["sender"]]</a> to <b>[key_name(C)]</b> : [input["msg"]]")
 
 		C.received_irc_pm = world.time
 		C.irc_admin = input["sender"]

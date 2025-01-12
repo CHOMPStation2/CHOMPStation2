@@ -715,7 +715,7 @@
 		if(istext(belly_data["belly_sprite_to_affect"]))
 			var/new_belly_sprite_to_affect = sanitize(belly_data["belly_sprite_to_affect"],MAX_MESSAGE_LEN,0,0,0)
 			if(new_belly_sprite_to_affect)
-				if (new_belly_sprite_to_affect in host.vore_icon_bellies) // CHOMPEdit, all, not only human
+				if (new_belly_sprite_to_affect in host.vore_icon_bellies)
 					new_belly.belly_sprite_to_affect = new_belly_sprite_to_affect
 
 		if(istext(belly_data["undergarment_chosen"]))
@@ -726,7 +726,6 @@
 						new_belly.undergarment_chosen = U.name
 						break
 
-		// Not implemented on virgo -> CHOMPEnable Start
 		var/datum/category_group/underwear/UWC = global_underwear.categories_by_name[new_belly.undergarment_chosen]
 		var/invalid_if_none = TRUE
 		for(var/datum/category_item/underwear/U in UWC.items)
@@ -747,7 +746,6 @@
 		if(istext(belly_data["undergarment_color"]))
 			var/new_undergarment_color = sanitize_hexcolor(belly_data["undergarment_color"],new_belly.undergarment_color)
 			new_belly.undergarment_color = new_undergarment_color
-		// CHOMPEnable End
 		/* These don't seem to actually be available yet
 		if(istext(belly_data["tail_to_change_to"]))
 			var/new_tail_to_change_to = sanitize(belly_data["tail_to_change_to"],MAX_MESSAGE_LEN,0,0,0)
@@ -775,11 +773,17 @@
 		if(istext(belly_data["belly_fullscreen_color2"]))
 			var/new_belly_fullscreen_color2 = sanitize_hexcolor(belly_data["belly_fullscreen_color2"],new_belly.belly_fullscreen_color2)
 			new_belly.belly_fullscreen_color2 = new_belly_fullscreen_color2
+		else if(istext(belly_data["belly_fullscreen_color_secondary"])) // Inter server support between virgo and chomp!
+			var/new_belly_fullscreen_color2 = sanitize_hexcolor(belly_data["belly_fullscreen_color_secondary"],new_belly.belly_fullscreen_color2)
+			new_belly.belly_fullscreen_color2 = new_belly_fullscreen_color2
 
 		if(istext(belly_data["belly_fullscreen_color3"]))
 			var/new_belly_fullscreen_color3 = sanitize_hexcolor(belly_data["belly_fullscreen_color3"],new_belly.belly_fullscreen_color3)
 			new_belly.belly_fullscreen_color3 = new_belly_fullscreen_color3
-		//CHOMPEdit End
+		else if(istext(belly_data["belly_fullscreen_color_trinary"])) // Inter server support between virgo and chomp!
+			var/new_belly_fullscreen_color3 = sanitize_hexcolor(belly_data["belly_fullscreen_color_trinary"],new_belly.belly_fullscreen_color3)
+			new_belly.belly_fullscreen_color3 = new_belly_fullscreen_color3
+		// CHOMPEdit End
 
 		// Not implemented on virgo -> CHOMPEnable Start
 		if(istext(belly_data["belly_fullscreen_color4"]))
@@ -1173,6 +1177,6 @@
 		new_belly.items_preserved.Cut()
 		new_belly.update_internal_overlay() // Signal not implemented! CHOMPEnable
 
-	host.update_fullness() // CHOMPEdit, all, not only human
+	host.update_fullness()
 	host.updateVRPanel()
 	unsaved_changes = TRUE

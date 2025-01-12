@@ -20,7 +20,7 @@
 #include "gateway/BaseBlep.dmm"
 #include "gateway/maddnesslab.dmm"
 #include "gateway/snowfield.dmm"
-#include "gateway/hiddeneclipse.dmm"
+// #include "gateway/hiddeneclipse.dmm" //needs remaping and energy is low.
 #include "../../virtual_reality/constructVR.dmm"
 #endif
 
@@ -79,14 +79,14 @@
 	desc = "Asteroid base surrounded by carp"
 	mappath = "modular_chomp/maps/southern_cross/submaps/gateway/carpfarm.dmm"
 	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
-
+/*
 #include "gateway/hiddeneclipse.dm"
 /datum/map_template/sc_lateload/gateway/hiddeneclipse
 	name = "Distant Mining Facility"
 	desc = "Asteroid mining facility, lost to unknown horrors"
 	mappath = "modular_chomp/maps/southern_cross/submaps/gateway/hiddeneclipse.dmm"
 	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
-
+*/
 //VR maps go here, tell me if theres a better way to load this
 // #include "virtual_reality/constructVR.dm" Virtual Reality areas included by default.
 //#include "modular_chomp/maps/virtual_reality/constructVR.dm" //Included in .dme
@@ -268,14 +268,14 @@
 				my_mob.maxbodytemp = env.temperature * 1.2
 
 				var/list/gaslist = env.gas
-				my_mob.min_oxy = gaslist["oxygen"] * 0.8
-				my_mob.min_tox = gaslist["phoron"] * 0.8
-				my_mob.min_n2 = gaslist["nitrogen"] * 0.8
-				my_mob.min_co2 = gaslist["carbon_dioxide"] * 0.8
-				my_mob.max_oxy = gaslist["oxygen"] * 1.2
-				my_mob.max_tox = gaslist["phoron"] * 1.2
-				my_mob.max_n2 = gaslist["nitrogen"] * 1.2
-				my_mob.max_co2 = gaslist["carbon_dioxide"] * 1.2
+				my_mob.min_oxy = gaslist[GAS_O2] * 0.8
+				my_mob.min_tox = gaslist[GAS_PHORON] * 0.8
+				my_mob.min_n2 = gaslist[GAS_N2] * 0.8
+				my_mob.min_co2 = gaslist[GAS_CO2] * 0.8
+				my_mob.max_oxy = gaslist[GAS_O2] * 1.2
+				my_mob.max_tox = gaslist[GAS_PHORON] * 1.2
+				my_mob.max_n2 = gaslist[GAS_N2] * 1.2
+				my_mob.max_co2 = gaslist[GAS_CO2] * 1.2
 /* //VORESTATION AI TEMPORARY REMOVAL
 		if(guard)
 			my_mob.returns_home = TRUE

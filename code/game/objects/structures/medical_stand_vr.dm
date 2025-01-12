@@ -226,7 +226,7 @@
 	set name = "Toggle IV Mode"
 	set src in view(1)
 
-	if(!istype(usr, /mob/living))
+	if(!isliving(usr))
 		to_chat(usr, span_warning("You can't do that."))
 		return
 
@@ -423,7 +423,7 @@
 				return
 
 			// If the human is losing too much blood, beep.
-			if(H.vessel.get_reagent_amount("blood") < H.species.blood_volume*H.species.blood_level_safe)
+			if(H.vessel.get_reagent_amount(REAGENT_ID_BLOOD) < H.species.blood_volume*H.species.blood_level_safe)
 				visible_message("\The [src] beeps loudly.")
 
 			var/datum/reagent/B = H.take_blood(beaker,amount)

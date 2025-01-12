@@ -101,7 +101,7 @@
 			dirtoverlay.alpha = min((dirt - 50) * 5, 255)
 
 /turf/simulated/Entered(atom/A, atom/OL)
-	if (istype(A,/mob/living))
+	if (isliving(A))
 		var/dirtslip = FALSE	//CHOMPEdit
 		var/mob/living/M = A
 		if(M.lying || M.flying || M.is_incorporeal()) //VOREStation Edit - CHOMPADD - Don't forget the phased ones.
@@ -111,7 +111,7 @@
 			// Dirt overlays.
 			update_dirt()
 
-		if(istype(M, /mob/living/carbon/human))
+		if(ishuman(M))
 			var/mob/living/carbon/human/H = M
 			//CHOMPEdit Begin
 			dirtslip = H.species.dirtslip
@@ -125,7 +125,7 @@
 			if(H.shoes)
 				var/obj/item/clothing/shoes/S = H.shoes
 				if(istype(S))
-					S.handle_movement(src,(H.m_intent == "run" ? 1 : 0), H) // CHOMPEdit handle_movement now needs to know who is moving, for inshoe steppies
+					S.handle_movement(src,(H.m_intent == I_RUN ? 1 : 0), H) // CHOMPEdit handle_movement now needs to know who is moving, for inshoe steppies
 					if(S.track_blood && S.blood_DNA)
 						bloodDNA = S.blood_DNA
 						bloodcolor=S.blood_color
@@ -146,7 +146,7 @@
 
 		if(src.wet || (dirtslip && (dirt > 50 || outdoors == 1)))	//CHOMPEdit
 
-			if(M.buckled || (src.wet == 1 && M.m_intent == "walk"))
+			if(M.buckled || (src.wet == 1 && M.m_intent == I_WALK))
 				return
 
 			var/slip_dist = 1
@@ -159,7 +159,7 @@
 					floor_type = "dirty"
 				else if(outdoors)
 					floor_type = "uneven"
-				if(src.wet == 0 && M.m_intent == "walk")
+				if(src.wet == 0 && M.m_intent == I_WALK)
 					return
 			//CHOMPEdit End
 			switch(src.wet)
@@ -196,7 +196,8 @@
 				B.blood_DNA = list()
 			if(!B.blood_DNA[M.dna.unique_enzymes])
 				B.blood_DNA[M.dna.unique_enzymes] = M.dna.b_type
-				B.viruses = M.viruses.Copy()
+				if(M.viruses)
+					B.viruses = M.viruses.Copy()
 			return 1 //we bloodied the floor
 		blood_splatter(src,M.get_blood(M.vessel),1)
 		return 1 //we bloodied the floor

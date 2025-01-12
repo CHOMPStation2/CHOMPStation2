@@ -23,8 +23,8 @@
 	var/obj/structure/reagent_dispensers/watertank/tank
 
 
-/mob/living/bot/farmbot/New(var/newloc, var/newTank)
-	..(newloc)
+/mob/living/bot/farmbot/Initialize(var/newloc, var/newTank)
+	. = ..(newloc)
 	if(!newTank)
 		newTank = new /obj/structure/reagent_dispensers/watertank(src)
 	tank = newTank
@@ -222,7 +222,7 @@
 				if(do_after(src, 30, A))
 
 					visible_message(span_notice("[src] fertilizes \the [A]."))
-					T.reagents.add_reagent("ammonia", 10)
+					T.reagents.add_reagent(REAGENT_ID_AMMONIA, 10)
 
 		busy = 0
 		action = ""

@@ -83,7 +83,7 @@
 /obj/item/projectile/energy/blob/moth
 	damage = 30 //old 15
 	armor_penetration = 15
-	my_chems = list("fuel", "mold")
+	my_chems = list(REAGENT_ID_FUEL, REAGENT_ID_MOLD)
 	flammability = 0.25
 	modifier_type_to_apply = /datum/modifier/fire
 	modifier_duration = 6 SECONDS

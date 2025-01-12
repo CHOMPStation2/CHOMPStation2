@@ -14,8 +14,8 @@
 	var/cooldown_on = 0
 	req_access = list(access_ai_upload)
 
-/obj/machinery/ai_slipper/New()
-	..()
+/obj/machinery/ai_slipper/Initialize(mapload)
+	. = ..()
 	update_icon()
 
 /obj/machinery/ai_slipper/power_change()
@@ -80,8 +80,8 @@
 	if(locked && (!istype(user, /mob/living/silicon)))
 		t += "<I>(Swipe ID card to unlock control panel.)</I><BR>"
 	else
-		t += text("Dispenser [] - <A href='?src=\ref[];toggleOn=1'>[]?</a><br>\n", disabled?"deactivated":"activated", src, disabled?"Enable":"Disable")
-		t += text("Uses Left: [uses]. <A href='?src=\ref[src];toggleUse=1'>Activate the dispenser?</A><br>\n")
+		t += text("Dispenser [] - <A href='byond://?src=\ref[];toggleOn=1'>[]?</a><br>\n", disabled?"deactivated":"activated", src, disabled?"Enable":"Disable")
+		t += text("Uses Left: [uses]. <A href='byond://?src=\ref[src];toggleUse=1'>Activate the dispenser?</A><br>\n")
 
 	user << browse(t, "window=computer;size=575x450")
 	onclose(user, "computer")

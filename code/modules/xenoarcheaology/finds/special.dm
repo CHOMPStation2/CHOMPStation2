@@ -8,7 +8,7 @@
 /obj/item/reagent_containers/glass/replenishing/Initialize()
 	. = ..()
 	START_PROCESSING(SSobj, src)
-	spawning_id = pick("blood","holywater","lube","stoxin","ethanol","ice","glycerol","fuel","cleaner")
+	spawning_id = pick(REAGENT_ID_BLOOD,REAGENT_ID_HOLYWATER,REAGENT_ID_LUBE,REAGENT_ID_STOXIN,REAGENT_ID_ETHANOL,REAGENT_ID_ICE,REAGENT_ID_GLYCEROL,REAGENT_ID_FUEL,REAGENT_ID_CLEANER)
 
 /obj/item/reagent_containers/glass/replenishing/process()
 	reagents.add_reagent(spawning_id, 0.3)
@@ -25,7 +25,7 @@
 	START_PROCESSING(SSobj, src)
 
 /obj/item/clothing/mask/gas/poltergeist/process()
-	if(heard_talk.len && istype(src.loc, /mob/living) && prob(10))
+	if(heard_talk.len && isliving(src.loc) && prob(10))
 		var/mob/living/M = src.loc
 		M.say(pick(heard_talk))
 
@@ -34,7 +34,7 @@
 	if(heard_talk.len > max_stored_messages)
 		heard_talk.Remove(pick(heard_talk))
 	heard_talk.Add(multilingual_to_message(message_pieces))
-	if(istype(src.loc, /mob/living) && world.time - last_twitch > 50)
+	if(isliving(src.loc) && world.time - last_twitch > 50)
 		last_twitch = world.time
 
 

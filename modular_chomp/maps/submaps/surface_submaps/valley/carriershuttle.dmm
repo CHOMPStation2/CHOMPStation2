@@ -1,8 +1,6 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aR" = (
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/machinery/light/poi{
@@ -66,7 +64,6 @@
 	pixel_x = -24
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/random/ammo,
@@ -105,8 +102,6 @@
 /area/submap/carriershuttle)
 "hS" = (
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/effect/floor_decal/corner/lime/diagonal,
@@ -114,7 +109,6 @@
 /area/submap/carriershuttle)
 "iO" = (
 /obj/structure/cable/blue{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/port_gen/pacman/super,
@@ -175,8 +169,6 @@
 /area/submap/carriershuttle)
 "oR" = (
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/effect/floor_decal/corner/red/diagonal,
@@ -195,8 +187,6 @@
 /area/submap/carriershuttle)
 "qv" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/effect/floor_decal/corner/red/diagonal,
@@ -204,8 +194,6 @@
 /area/submap/carriershuttle)
 "qI" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/effect/floor_decal/corner/lime/diagonal,
@@ -213,13 +201,9 @@
 /area/submap/carriershuttle)
 "rv" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/blue{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/table/gold,
@@ -232,8 +216,6 @@
 /area/submap/carriershuttle)
 "rE" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock,
@@ -300,8 +282,6 @@
 /area/submap/carriershuttle)
 "wY" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock,
@@ -310,13 +290,9 @@
 /area/submap/carriershuttle)
 "xm" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/machinery/light/poi{
@@ -342,11 +318,9 @@
 	icon_state = "term"
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable/blue{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/table/gold,
@@ -358,8 +332,6 @@
 /area/submap/carriershuttle)
 "zu" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/random/mob/merc/all,
@@ -425,8 +397,6 @@
 /area/submap/carriershuttle)
 "Cz" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/corner/lightorange/diagonal,
@@ -440,8 +410,6 @@
 /area/submap/carriershuttle)
 "Dy" = (
 /obj/structure/cable/blue{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/table/gold,
@@ -493,13 +461,9 @@
 /area/submap/carriershuttle)
 "Ho" = (
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable/blue{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/table/gold,
@@ -512,8 +476,6 @@
 /area/submap/carriershuttle)
 "Il" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/machinery/light/poi,
@@ -522,8 +484,6 @@
 /area/submap/carriershuttle)
 "Ip" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/light/poi{
@@ -574,8 +534,6 @@
 /area/submap/carriershuttle)
 "MI" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/corner/red/diagonal,
@@ -601,8 +559,6 @@
 /area/submap/carriershuttle)
 "NI" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock,
@@ -626,8 +582,6 @@
 /area/submap/carriershuttle)
 "Qn" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /mob/living/simple_mob/vore/alienanimals/catslug/custom/spaceslug/syndislug,
@@ -653,8 +607,6 @@
 /area/submap/carriershuttle)
 "Sy" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/corner/red/diagonal,
@@ -701,8 +653,6 @@
 /area/submap/carriershuttle)
 "XU" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/corner/lime/diagonal,

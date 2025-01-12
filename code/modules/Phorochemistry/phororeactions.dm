@@ -30,22 +30,22 @@
 		return "Reaction highly unstable, it is recommended to lower intensity"
 
 /datum/phororeactions
-	var/list/random_reagents = list("hydrogen","lithium","carbon","nitrogen","oxygen","fluorine", \
-	"sodium","aluminum","silicon","phosphorus","sulfur","chlorine","potassium","iron", \
-	"copper","mercury","radium","water","sugar","sacid","tungsten", "lube", "inaprovaline", "space_drugs", \
-	"thermite", "tramadol", "cleaner", "kelotane", "dermaline", "anti_toxin", "synaptizine", \
-	 "alkysine", "imidazoline", "hyperzine", "ammonia", "sodiumchloride", "sterilizine", "silicate", "mindbreaker", \
-	 "impedrezene", "lipozine")
+	var/list/random_reagents = list(REAGENT_ID_HYDROGEN,REAGENT_ID_LITHIUM,REAGENT_ID_CARBON,REAGENT_ID_NITROGEN,REAGENT_ID_OXYGEN,REAGENT_ID_FLUORINE, \
+	REAGENT_ID_SODIUM,REAGENT_ID_ALUMINIUM,REAGENT_ID_SILICON,REAGENT_ID_PHOSPHORUS,REAGENT_ID_SULFUR,REAGENT_ID_CHLORINE,REAGENT_ID_POTASSIUM,REAGENT_ID_IRON, \
+	REAGENT_ID_COPPER,REAGENT_ID_MERCURY,REAGENT_ID_RADIUM,REAGENT_ID_WATER,REAGENT_ID_SUGAR,REAGENT_ID_SACID,REAGENT_ID_TUNGSTEN, REAGENT_ID_LUBE, REAGENT_ID_INAPROVALINE, REAGENT_ID_SPACEDRUGS, \
+	REAGENT_ID_THERMITE, REAGENT_ID_TRAMADOL, REAGENT_ID_CLEANER, REAGENT_ID_KELOTANE, REAGENT_ID_DERMALINE, REAGENT_ID_ANTITOXIN, REAGENT_ID_SYNAPTIZINE, \
+	 REAGENT_ID_ALKYSINE, REAGENT_ID_IMIDAZOLINE, REAGENT_ID_HYPERZINE, REAGENT_ID_AMMONIA, REAGENT_ID_SODIUMCHLORIDE, REAGENT_ID_STERILIZINE, REAGENT_ID_SILICATE, REAGENT_ID_MINDBREAKER, \
+	 REAGENT_ID_IMPEDREZENE, REAGENT_ID_LIPOZINE)
 	var/list/reactions = list()
 
 /datum/phororeactions/proc/set_up_reactions()
-	reactions["tricordrazine"] = new/datum/phororeaction("tricordrazine", "bicordrazine", 1.5, 3)
-	reactions["mutagen"] = new/datum/phororeaction("mutagen", "mutagen_x", 0.5, 5)
-	reactions["ethylredoxrazine"] = new/datum/phororeaction("ethylredoxrazine", "expulsicol", 1, 2)
-	reactions["hyronalin"] = new/datum/phororeaction("hyronalin", "rad_x", 1, 3)
-	//reactions["pacid"] = new/datum/phororeaction("pacid", "phoronic_acid", 0.2, 4) removed
-	reactions["phoron"] = new/datum/phororeaction("phoron", "energized_phoron", 1, 5)
-	reactions["oxycodone"] = new/datum/phororeaction("oxycodone", "oxyphoromin", 0.5, 1)
+	reactions[REAGENT_ID_TRICORDRAZINE] = new/datum/phororeaction(REAGENT_ID_TRICORDRAZINE, REAGENT_ID_BICORDRAZINE, 1.5, 3)
+	reactions[REAGENT_ID_MUTAGEN] = new/datum/phororeaction(REAGENT_ID_MUTAGEN, REAGENT_ID_MUTAGENX, 0.5, 5)
+	reactions[REAGENT_ID_ETHYLREDOXRAZINE] = new/datum/phororeaction(REAGENT_ID_ETHYLREDOXRAZINE, REAGENT_ID_EXPULSICOL, 1, 2)
+	reactions[REAGENT_ID_HYRONALIN] = new/datum/phororeaction(REAGENT_ID_HYRONALIN, REAGENT_ID_RADX, 1, 3)
+	//reactions[REAGENT_ID_PACID] = new/datum/phororeaction(REAGENT_ID_PACID, REAGENT_ID_PHORONICACID, 0.2, 4) removed
+	reactions[REAGENT_ID_PHORON] = new/datum/phororeaction(REAGENT_ID_PHORON, REAGENT_ID_ENERGIZEDPHORON, 1, 5)
+	reactions[REAGENT_ID_OXYCODONE] = new/datum/phororeaction(REAGENT_ID_OXYCODONE, REAGENT_ID_OXYPHOROMIN, 0.5, 1)
 
 	var/list/results = typesof(/datum/reagent/phororeagent) - /datum/reagent/phororeagent - /datum/reagent/phororeagent/gaseous
 
@@ -66,3 +66,5 @@
 
 
 		//garbage collection should deal with reagents
+
+#undef PHORONICS_TESTING

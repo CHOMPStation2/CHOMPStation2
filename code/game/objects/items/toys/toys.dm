@@ -59,7 +59,7 @@
 			if(O.reagents.total_volume < 1)
 				to_chat(user, "The [O] is empty.")
 			else if(O.reagents.total_volume >= 1)
-				if(O.reagents.has_reagent("pacid", 1))
+				if(O.reagents.has_reagent(REAGENT_ID_PACID, 1))
 					to_chat(user, "The acid chews through the balloon!")
 					O.reagents.splash(user, reagents.total_volume)
 					qdel(src)
@@ -185,7 +185,7 @@
 	cut_overlays()		//So that it doesn't keep stacking overlays non-stop on top of each other
 	if(active)
 		add_overlay(blade_overlay)
-	if(istype(usr,/mob/living/carbon/human))
+	if(ishuman(usr))
 		var/mob/living/carbon/human/H = usr
 		H.update_inv_l_hand()
 		H.update_inv_r_hand()
@@ -257,7 +257,7 @@
 		return
 	if((ishuman(H))) //i guess carp and shit shouldn't set them off
 		var/mob/living/carbon/M = H
-		if(M.m_intent == "run")
+		if(M.m_intent == I_RUN)
 			to_chat(M, span_warning("You step on the snap pop!"))
 
 			var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread

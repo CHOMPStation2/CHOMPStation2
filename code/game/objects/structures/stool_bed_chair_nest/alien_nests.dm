@@ -43,7 +43,7 @@
 #undef NEST_RESIST_TIME
 
 /obj/structure/bed/nest/user_buckle_mob(mob/M as mob, mob/user as mob)
-	if ( !ismob(M) || (get_dist(src, user) > 1) || (M.loc != src.loc) || user.restrained() || user.stat || M.buckled || istype(user, /mob/living/silicon/pai) )
+	if ( !ismob(M) || (get_dist(src, user) > 1) || (M.loc != src.loc) || user.restrained() || user.stat || M.buckled || ispAI(user) )
 		return
 
 	unbuckle_mob()
@@ -92,7 +92,7 @@
 /obj/structure/bed/nest/attack_hand(mob/user as mob)
 	usr.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 	if (HULK in usr.mutations)
-		visible_message("<span class='warning'>[usr] destroys the [name]!</span>")
+		visible_message(span_warning("[usr] destroys the [name]!"))
 		health = 0
 	else
 
@@ -101,7 +101,7 @@
 			if(user.a_intent == I_HURT)
 				var/mob/living/carbon/M = usr
 				if(locate(/obj/item/organ/internal/xenos/hivenode) in M.internal_organs)
-					visible_message ("<span class='warning'>[usr] strokes the [name] and it melts away!</span>", 1)
+					visible_message (span_warning("[usr] strokes the [name] and it melts away!"), 1)
 					health = 0
 					healthcheck()
 					return

@@ -40,7 +40,7 @@ Gunshots/explosions/opening doors/less rare audio (done)
 					var/list/slots_free = list(ui_lhand,ui_rhand)
 					if(l_hand) slots_free -= ui_lhand
 					if(r_hand) slots_free -= ui_rhand
-					if(istype(src,/mob/living/carbon/human))
+					if(ishuman(src))
 						var/mob/living/carbon/human/H = src
 						if(!H.belt) slots_free += ui_belt
 						if(!H.l_store) slots_free += ui_storage1
@@ -204,7 +204,7 @@ Gunshots/explosions/opening doors/less rare audio (done)
 
 			var/button_txt = pick(possible_txt)
 
-			mocktxt += "<a href='?src=\ref[src];[button]'>[button_txt]</a><br>"
+			mocktxt += "<a href='byond://?src=\ref[src];[button]'>[button_txt]</a><br>"
 
 			buttons -= button
 			possible_txt -= button_txt
@@ -212,7 +212,7 @@ Gunshots/explosions/opening doors/less rare audio (done)
 	return start_txt + mocktxt + end_txt + "</TT></BODY></HTML>"
 
 /proc/check_panel(mob/M)
-	if (istype(M, /mob/living/carbon/human) || istype(M, /mob/living/silicon/ai))
+	if (ishuman(M) || isAI(M))
 		if(M.hallucination < 15)
 			return 1
 	return 0*/

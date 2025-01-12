@@ -20,8 +20,8 @@
 	var/target_temp = T20C
 	var/mode = MODE_IDLE
 
-/obj/machinery/power/thermoregulator/New()
-	..()
+/obj/machinery/power/thermoregulator/Initialize(mapload)
+	. = ..()
 	default_apply_parts()
 
 /obj/machinery/power/thermoregulator/examine(mob/user)
@@ -148,7 +148,7 @@
 			env.merge(removed)
 	var/turf/T = get_turf(src)
 	new /obj/effect/decal/cleanable/liquid_fuel(T, 5)
-	T.assume_gas("volatile_fuel", 5, T20C)
+	T.assume_gas(GAS_VOLATILE_FUEL, 5, T20C)
 	T.hotspot_expose(700,400)
 	var/datum/effect/effect/system/spark_spread/s = new
 	s.set_up(5, 0, T)

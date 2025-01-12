@@ -44,7 +44,7 @@
 	var/can_rename_areas_in = AREA_STATION	// Only station areas can be reanamed
 
 /obj/item/blueprints/attack_self(mob/M as mob)
-	if (!istype(M,/mob/living/carbon/human))
+	if (!ishuman(M))
 		to_chat(M, "This stack of blue paper means nothing to you.") //monkeys cannot into projecting
 		return
 	interact()
@@ -99,11 +99,11 @@
 
 	// Offer links for what user is allowed to do based on current area
 	if(curAreaType & can_create_areas_in)
-		text += "<p>You can <a href='?src=\ref[src];action=create_area'>Mark this place as new area</a>.</p>"
+		text += "<p>You can <a href='byond://?src=\ref[src];action=create_area'>Mark this place as new area</a>.</p>"
 	if(curAreaType & can_expand_areas_in)
-		text += "<p>You can <a href='?src=\ref[src];action=expand_area'>expand the area</a>.</p>"
+		text += "<p>You can <a href='byond://?src=\ref[src];action=expand_area'>expand the area</a>.</p>"
 	if(curAreaType & can_rename_areas_in)
-		text += "<p>You can <a href='?src=\ref[src];action=edit_area'>rename the area</a>.</p>"
+		text += "<p>You can <a href='byond://?src=\ref[src];action=edit_area'>rename the area</a>.</p>"
 
 	text += "</BODY></HTML>"
 	usr << browse(text, "window=blueprints")

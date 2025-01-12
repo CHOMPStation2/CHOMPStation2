@@ -109,7 +109,7 @@
 		if(locked && state == 0)
 			to_chat(M,span_warning("It's locked!"))
 			return
-		if(world.time - user.last_bumped <= 60)
+		if(world.time - last_bumped <= 60)
 			return
 		if(M.client)
 			if(iscarbon(M))
@@ -179,7 +179,7 @@
 	else if(istype(W,/obj/item) && breakable) //not sure, can't not just weapons get passed to this proc?
 		hardness -= W.force/10
 		visible_message(span_danger("[user] hits [src] with [W]!"))
-		if(material == get_material_by_name("resin"))
+		if(material == get_material_by_name(MAT_RESIN))
 			playsound(src, 'sound/effects/attackblob.ogg', 100, 1)
 		else if(material == (get_material_by_name(MAT_WOOD) || get_material_by_name(MAT_SIFWOOD) || get_material_by_name(MAT_HARDWOOD)))
 			playsound(src, 'sound/effects/woodcutting.ogg', 100, 1)
@@ -204,7 +204,7 @@
 
 /obj/structure/simple_door/attack_generic(var/mob/user, var/damage, var/attack_verb)
 	visible_message(span_danger("[user] [attack_verb] the [src]!"))
-	if(material == get_material_by_name("resin"))
+	if(material == get_material_by_name(MAT_RESIN))
 		playsound(src, 'sound/effects/attackblob.ogg', 100, 1)
 	else if(material == (get_material_by_name(MAT_WOOD) || get_material_by_name(MAT_SIFWOOD) || get_material_by_name(MAT_HARDWOOD)))
 		playsound(src, 'sound/effects/woodcutting.ogg', 100, 1)
@@ -244,41 +244,41 @@
 	SSradiation.radiate(src, round(material.radioactivity/3))
 
 /obj/structure/simple_door/iron/Initialize(mapload,var/material_name)
-	..(mapload, material_name || "iron")
+	. = ..(mapload, material_name || MAT_IRON)
 
 /obj/structure/simple_door/silver/Initialize(mapload,var/material_name)
-	..(mapload, material_name || "silver")
+	. = ..(mapload, material_name || MAT_SILVER)
 
 /obj/structure/simple_door/gold/Initialize(mapload,var/material_name)
-	..(mapload, material_name || "gold")
+	. = ..(mapload, material_name || MAT_GOLD)
 
 /obj/structure/simple_door/uranium/Initialize(mapload,var/material_name)
-	..(mapload, material_name || "uranium")
+	. = ..(mapload, material_name || MAT_URANIUM)
 
 /obj/structure/simple_door/sandstone/Initialize(mapload,var/material_name)
-	..(mapload, material_name || "sandstone")
+	. = ..(mapload, material_name || MAT_SANDSTONE)
 
 /obj/structure/simple_door/phoron/Initialize(mapload,var/material_name)
-	..(mapload, material_name || "phoron")
+	. = ..(mapload, material_name || MAT_PHORON)
 
 /obj/structure/simple_door/diamond/Initialize(mapload,var/material_name)
-	..(mapload, material_name || "diamond")
+	. = ..(mapload, material_name || MAT_DIAMOND)
 
 /obj/structure/simple_door/wood/Initialize(mapload,var/material_name)
-	..(mapload, material_name || MAT_WOOD)
+	. = ..(mapload, material_name || MAT_WOOD)
 	knock_sound = 'sound/machines/door/knock_wood.wav'
 
 /obj/structure/simple_door/hardwood/Initialize(mapload,var/material_name)
-	..(mapload, material_name || MAT_HARDWOOD)
+	. = ..(mapload, material_name || MAT_HARDWOOD)
 
 /obj/structure/simple_door/sifwood/Initialize(mapload,var/material_name)
-	..(mapload, material_name || MAT_SIFWOOD)
+	. = ..(mapload, material_name || MAT_SIFWOOD)
 
 /obj/structure/simple_door/resin/Initialize(mapload,var/material_name)
-	..(mapload, material_name || "resin")
+	. = ..(mapload, material_name || MAT_RESIN)
 
 /obj/structure/simple_door/cult/Initialize(mapload,var/material_name)
-	..(mapload, material_name || "cult")
+	. = ..(mapload, material_name || MAT_CULT)
 
 /obj/structure/simple_door/cult/TryToSwitchState(atom/user)
 	if(isliving(user))
@@ -291,7 +291,7 @@
 /obj/structure/simple_door/resin/attack_hand(mob/user as mob)
 	usr.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 	if (HULK in usr.mutations)
-		visible_message("<span class='warning'>[usr] destroys the [name]!</span>")
+		visible_message(span_warning("[usr] destroys the [name]!"))
 		hardness = 0
 	else
 
@@ -300,12 +300,12 @@
 			if(user.a_intent == I_HURT)
 				var/mob/living/carbon/M = usr
 				if(locate(/obj/item/organ/internal/xenos/hivenode) in M.internal_organs)
-					visible_message ("<span class='warning'>[usr] strokes the [name] and it melts away!</span>", 1)
+					visible_message (span_warning("[usr] strokes the [name] and it melts away!"), 1)
 					hardness = 0
 					CheckHardness()
 					return
 				else
-					visible_message("<span class='warning'>[usr] tears at the [name]!</span>")
+					visible_message(span_warning("[usr] tears at the [name]!"))
 					hardness -= 2
 					CheckHardness()
 					return

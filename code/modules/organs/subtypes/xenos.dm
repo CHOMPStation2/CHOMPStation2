@@ -3,6 +3,7 @@
 	name = "xeno organ"
 	icon = 'icons/obj/surgery.dmi'
 	desc = "It smells like an accident in a chemical factory."
+	supply_conversion_value = 50 // CHOMPedit - Selling engineered organs
 
 /obj/item/organ/internal/xenos/eggsac
 	name = "egg sac"
@@ -39,10 +40,10 @@
 
 	var/modifier = 1 - 0.5 * is_bruised()
 
-	if(owner.bloodstr.has_reagent("phoron"))
+	if(owner.bloodstr.has_reagent(REAGENT_ID_PHORON))
 		adjust_plasma(round(4 * modifier))
 
-	if(owner.ingested.has_reagent("phoron"))
+	if(owner.ingested.has_reagent(REAGENT_ID_PHORON))
 		adjust_plasma(round(2 * modifier))
 
 	adjust_plasma(1)

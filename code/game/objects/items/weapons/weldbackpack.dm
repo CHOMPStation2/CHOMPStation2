@@ -17,7 +17,7 @@
 	var/datum/reagents/R = new/datum/reagents(max_fuel) //Lotsa refills
 	reagents = R
 	R.my_atom = src
-	R.add_reagent("fuel", max_fuel)
+	R.add_reagent(REAGENT_ID_FUEL, max_fuel)
 	nozzle = new nozzle_type(src)
 	nozzle_attached = 1
 
@@ -87,7 +87,7 @@
 	return
 
 /obj/item/weldpack/attack_hand(mob/user as mob)
-	if(istype(user, /mob/living/carbon/human))
+	if(ishuman(user))
 		var/mob/living/carbon/human/wearer = user
 		if(wearer.back == src)
 			if(nozzle && nozzle_attached)

@@ -95,7 +95,7 @@
 		L = loc
 
 	if(L)
-		to_chat(L, span_notice("[icon2html(src,L.client)] Message from [who]: <b>\"[text]\"</b> (<a href='?src=\ref[src];action=Reply;target=\ref[candidate]'>Reply</a>)"))
+		to_chat(L, span_notice("[icon2html(src,L.client)] Message from [who]: <b>\"[text]\"</b> (<a href='byond://?src=\ref[src];action=Reply;target=\ref[candidate]'>Reply</a>)"))
 
 // This is the only Topic the communicators really uses
 /obj/item/communicator/Topic(href, href_list)
@@ -108,7 +108,7 @@
 				exonet.send_message(comm.exonet.address, "text", message)
 				im_list += list(list("address" = exonet.address, "to_address" = comm.exonet.address, "im" = message))
 				log_pda("(COMM: [src]) sent \"[message]\" to [exonet.get_atom_from_address(comm.exonet.address)]", usr)
-				to_chat(usr, span_notice("[icon2html(src,usr.client)] Sent message to [istype(comm, /obj/item/communicator) ? comm.owner : comm.name], <b>\"[message]\"</b> (<a href='?src=\ref[src];action=Reply;target=\ref[exonet.get_atom_from_address(comm.exonet.address)]'>Reply</a>)"))
+				to_chat(usr, span_notice("[icon2html(src,usr.client)] Sent message to [istype(comm, /obj/item/communicator) ? comm.owner : comm.name], <b>\"[message]\"</b> (<a href='byond://?src=\ref[src];action=Reply;target=\ref[exonet.get_atom_from_address(comm.exonet.address)]'>Reply</a>)"))
 
 // Verb: text_communicator()
 // Parameters: None
@@ -162,7 +162,7 @@
 			log_pda("(DCOMM: [src]) sent \"[text_message]\" to [chosen_communicator]", src)
 			for(var/mob/M in player_list)
 				if(M.stat == DEAD && M.client?.prefs?.read_preference(/datum/preference/toggle/ghost_ears))
-					if(istype(M, /mob/new_player) || M.forbid_seeing_deadchat)
+					if(isnewplayer(M) || M.forbid_seeing_deadchat)
 						continue
 					if(M == src)
 						continue

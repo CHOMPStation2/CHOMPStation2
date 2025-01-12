@@ -6,10 +6,10 @@
 		var/pressure = environment.return_pressure()
 		var/total_moles = environment.total_moles
 		if (total_moles)
-			var/o2_level = environment.gas["oxygen"]/total_moles
-			var/n2_level = environment.gas["nitrogen"]/total_moles
-			var/co2_level = environment.gas["carbon_dioxide"]/total_moles
-			var/phoron_level = environment.gas["phoron"]/total_moles
+			var/o2_level = environment.gas[GAS_O2]/total_moles
+			var/n2_level = environment.gas[GAS_N2]/total_moles
+			var/co2_level = environment.gas[GAS_CO2]/total_moles
+			var/phoron_level = environment.gas[GAS_PHORON]/total_moles
 			var/unknown_level =  1-(o2_level+n2_level+co2_level+phoron_level)
 
 			// Label is what the entry is describing
@@ -178,21 +178,21 @@
 
 		// If it's turned off, then it shouldn't be broadcasting any further info
 		if(!S.on)
-			status[++status.len] = list("tab" = "Power", "val" = "<span class='bad'>Off</span>") // Encoding the span classes here so I don't have to do complicated switches in the ui template
+			status[++status.len] = list("tab" = "Power", "val" = span_red("Off")) // Encoding the span classes here so I don't have to do complicated switches in the ui template
 			continue
-		status[++status.len] = list("tab" = "Power", "val" = "<span class='good'>On</span>")
+		status[++status.len] = list("tab" = "Power", "val" = span_green("On"))
 
 		// -- What it's doing
 		// If it's engaged, then say who it thinks it's engaging
 		if(S.target)
-			status[++status.len] = list("tab" = "Status", "val" = "<span class='bad'>Apprehending Target</span>")
+			status[++status.len] = list("tab" = "Status", "val" = span_red("Apprehending Target"))
 			status[++status.len] = list("tab" = "Target", "val" = S.target_name(S.target))
 		// Else if it's patrolling
 		else if(S.will_patrol)
-			status[++status.len] = list("tab" = "Status", "val" = "<span class='good'>Patrolling</span>")
+			status[++status.len] = list("tab" = "Status", "val" = span_green("Patrolling"))
 		// Otherwise we don't know what it's doing
 		else
-			status[++status.len] = list("tab" = "Status", "val" = "<span class='average'>Idle</span>")
+			status[++status.len] = list("tab" = "Status", "val" = span_yellow("Idle"))
 
 		// Where it is
 		status[++status.len] = list("tab" = "Location", "val" = sanitize("[get_area(S.loc)]"))
@@ -260,13 +260,13 @@
 		var/list/focus = S.return_reading_data()
 
 		// Packages the span class here so it doesn't need to be interpreted w/in the for loop in the ui template
-		var/load_stat = "<span class='good'>Optimal</span>"
+		var/load_stat = span_green("Optimal")
 		if(focus["load_percentage"] >= 95)
-			load_stat = "<span class='bad'>DANGER: Overload</span>"
+			load_stat = span_red("DANGER: Overload")
 		else if(focus["load_percentage"] >= 85)
-			load_stat = "<span class='average'>WARNING: High Load</span>"
+			load_stat = span_yellow("WARNING: High Load")
 
-		var/alarm_stat = focus["alarm"] ? "<span class='bad'>WARNING: Abnormal activity detected!</span>" : "<span class='good'>Secure</span>"
+		var/alarm_stat = focus["alarm"] ? span_red("WARNING: Abnormal activity detected!") : span_green("Secure")
 
 		if(target_sensor == S.name_tag)
 			powernet_target = list(
@@ -297,9 +297,9 @@
 	// User's location
 	var/turf/userloc = get_turf(src)
 	if(isturf(userloc))
-		janidata[++janidata.len] = list("field" = "Current Location", "val" = "<span class='good'>[userloc.x], [userloc.y], [using_map.get_zlevel_name(userloc.z)]</span>")
+		janidata[++janidata.len] = list("field" = "Current Location", "val" = span_green("[userloc.x], [userloc.y], [using_map.get_zlevel_name(userloc.z)]"))
 	else
-		janidata[++janidata.len] = list("field" = "Current Location", "val" = "<span class='bad'>Unknown</span>")
+		janidata[++janidata.len] = list("field" = "Current Location", "val" = span_red("Unknown"))
 		return janidata // If the user isn't on a valid turf, then it shouldn't be able to find anything anyways
 
 	// Mops, mop buckets, janitorial carts.
@@ -307,9 +307,9 @@
 		var/turf/T = get_turf(C)
 		if(isturf(T) )//&& T.z in using_map.get_map_levels(userloc, FALSE))
 			if(T.z == userloc.z)
-				janidata[++janidata.len] = list("field" = apply_text_macros("\proper [C.name]"), "val" = "<span class='good'>[T.x], [T.y], [using_map.get_zlevel_name(T.z)]</span>")
+				janidata[++janidata.len] = list("field" = apply_text_macros("\proper [C.name]"), "val" = span_green("[T.x], [T.y], [using_map.get_zlevel_name(T.z)]"))
 			else
-				janidata[++janidata.len] = list("field" = apply_text_macros("\proper [C.name]"), "val" = "<span class='average'>[T.x], [T.y], [using_map.get_zlevel_name(T.z)]</span>")
+				janidata[++janidata.len] = list("field" = apply_text_macros("\proper [C.name]"), "val" = span_yellow("[T.x], [T.y], [using_map.get_zlevel_name(T.z)]"))
 
 	// Cleanbots
 	for(var/mob/living/bot/cleanbot/B in living_mob_list)
@@ -319,9 +319,9 @@
 			if(B.on)
 				textout += "Status: <span class='good'>Online</span><br>"
 				if(T.z == userloc.z)
-					textout += "<span class='good'>[T.x], [T.y], [using_map.get_zlevel_name(T.z)]</span>"
+					textout += span_green("[T.x], [T.y], [using_map.get_zlevel_name(T.z)]")
 				else
-					textout += "<span class='average'>[T.x], [T.y], [using_map.get_zlevel_name(T.z)]</span>"
+					textout += span_yellow("[T.x], [T.y], [using_map.get_zlevel_name(T.z)]")
 			else
 				textout += "Status: <span class='bad'>Offline</span>"
 

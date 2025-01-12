@@ -68,7 +68,7 @@ Bonus
 	stage_speed = 0
 	transmittable = 1
 	level = 4
-	severity = 1
+	severity = 3
 
 /datum/symptom/sneeze/bluespace/Activate(datum/disease/advance/A)
 	..()
@@ -79,8 +79,9 @@ Bonus
 				M.emote("sniff")
 			else
 				SneezeTeleport(A, M)
-				A.spread(A.stage)
-				if(prob(30))
+				if(!M.wear_mask)
+					A.spread(A.stage)
+				if(prob(30) && !M.wear_mask)
 					var/obj/effect/decal/cleanable/mucus/icky = new(get_turf(M))
 					icky.viruses |= A.Copy()
 
@@ -108,7 +109,7 @@ Bonus
 
 	var/mob/living/carbon/human/unlucky = locate() in place
 
-	if(unlucky)
+	if(unlucky && !unlucky.is_incorporeal()) // CHOMPEdit
 		if(unlucky.can_be_drop_pred && H.can_be_drop_prey && H.devourable)
 			place = unlucky.vore_selected
 		else if(unlucky.devourable && unlucky.can_be_drop_prey && H.can_be_drop_pred)

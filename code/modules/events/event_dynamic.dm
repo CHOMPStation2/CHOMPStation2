@@ -136,7 +136,7 @@ var/list/event_last_fired = list()
 		if("Meteor")
 			command_alert("Meteors have been detected on collision course with the station.", "Meteor Alert")
 			for(var/mob/M in player_list)
-				if(!istype(M,/mob/new_player))
+				if(!isnewplayer(M))
 					M << sound('sound/AI/meteors.ogg')
 			spawn(100)
 				meteor_wave(10)
@@ -195,9 +195,9 @@ var/list/event_last_fired = list()
 		if(!M.mind || !M.client || M.client.is_afk(10 MINUTES)) // longer than 10 minutes AFK counts them as inactive
 			continue
 
-		active_with_role["Any"]++
+		active_with_role[DEPARTMENT_ANY]++
 
-		if(istype(M, /mob/living/silicon/robot))
+		if(isrobot(M))
 			var/mob/living/silicon/robot/R = M
 			if(R.module)
 				if(istype(R.module, /obj/item/robot_module/robot/engineering))

@@ -64,27 +64,51 @@
 
 	item_list = list()
 	item_list["Food Items"] = list(
-		BIOGEN_REAGENT("Milk x10", "milk", 10, 20),
-		BIOGEN_REAGENT("Milk x50", "milk", 50, 95),
-		BIOGEN_REAGENT("Cream x10", "cream", 10, 30),
-		BIOGEN_REAGENT("Cream x50", "cream", 50, 120),
+		BIOGEN_REAGENT("Milk x10", REAGENT_ID_MILK, 10, 20),
+		BIOGEN_REAGENT("Milk x50", REAGENT_ID_MILK, 50, 95),
+		BIOGEN_REAGENT("Cream x10", REAGENT_ID_CREAM, 10, 30),
+		BIOGEN_REAGENT("Cream x50", REAGENT_ID_CREAM, 50, 120),
 		BIOGEN_ITEM("Slab of meat", /obj/item/reagent_containers/food/snacks/meat, 1, 50),
 		BIOGEN_ITEM("Slabs of meat x5", /obj/item/reagent_containers/food/snacks/meat, 5, 250),
 	)
 	item_list["Cooking Ingredients"] = list(
-		BIOGEN_REAGENT("Universal Enzyme x10", "enzyme", 10, 30),
-		BIOGEN_REAGENT("Universal Enzyme x50", "enzyme", 50, 120),
+		BIOGEN_REAGENT("Universal Enzyme x10", REAGENT_ID_ENZYME, 10, 30),
+		BIOGEN_REAGENT("Universal Enzyme x50", REAGENT_ID_ENZYME, 50, 120),
 		BIOGEN_ITEM("Nutri-spread", /obj/item/reagent_containers/food/snacks/spreads, 1, 30),
 		BIOGEN_ITEM("Nutri-spread x5", /obj/item/reagent_containers/food/snacks/spreads, 5, 120),
+		//CHOMPAdd Start - adding common condiments to the list for chefs
+		BIOGEN_REAGENT(REAGENT_SODIUMCHLORIDE + " x10", REAGENT_ID_SODIUMCHLORIDE, 10, 20),
+		BIOGEN_REAGENT(REAGENT_SODIUMCHLORIDE + " x50", REAGENT_ID_SODIUMCHLORIDE, 50, 100),
+		BIOGEN_REAGENT(REAGENT_SOYSAUCE + " x10", REAGENT_ID_SOYSAUCE, 10, 30),
+		BIOGEN_REAGENT(REAGENT_SOYSAUCE + " x50", REAGENT_ID_SOYSAUCE, 50, 120),
+		//CHOMPAdd End
 	)
-	item_list["Gardening Nutrients"] = list(
-		BIOGEN_ITEM("E-Z-Nutrient", /obj/item/reagent_containers/glass/bottle/eznutrient, 1, 60),
-		BIOGEN_ITEM("E-Z-Nutrient x5", /obj/item/reagent_containers/glass/bottle/eznutrient, 5, 300),
-		BIOGEN_ITEM("Left 4 Zed", /obj/item/reagent_containers/glass/bottle/left4zed, 1, 120),
-		BIOGEN_ITEM("Left 4 Zed x5", /obj/item/reagent_containers/glass/bottle/left4zed, 5, 600),
-		BIOGEN_ITEM("Robust Harvest", /obj/item/reagent_containers/glass/bottle/robustharvest, 1, 150),
-		BIOGEN_ITEM("Robust Harvest x5", /obj/item/reagent_containers/glass/bottle/robustharvest, 5, 750),
+	item_list["Botany Chemicals"] = list(
+		//CHOMPEdit Start - reduced costs of fertilisers
+		BIOGEN_ITEM("E-Z-Nutrient", /obj/item/reagent_containers/glass/bottle/eznutrient, 1, 30),
+		BIOGEN_ITEM("E-Z-Nutrient x5", /obj/item/reagent_containers/glass/bottle/eznutrient, 5, 150),
+		BIOGEN_ITEM("Left 4 Zed", /obj/item/reagent_containers/glass/bottle/left4zed, 1, 50),
+		BIOGEN_ITEM("Left 4 Zed x5", /obj/item/reagent_containers/glass/bottle/left4zed, 5, 250),
+		BIOGEN_ITEM("Robust Harvest", /obj/item/reagent_containers/glass/bottle/robustharvest, 1, 50),
+		BIOGEN_ITEM("Robust Harvest x5", /obj/item/reagent_containers/glass/bottle/robustharvest, 5, 250),
+		//CHOMPEdit End
+		//CHOMPAdd Start - adding additional fertilisers for botany use
+		BIOGEN_ITEM(REAGENT_DIETHYLAMINE, /obj/item/reagent_containers/glass/bottle/diethylamine, 1, 60),
+		BIOGEN_ITEM(REAGENT_DIETHYLAMINE + " x5", /obj/item/reagent_containers/glass/bottle/diethylamine, 5, 300),
+		BIOGEN_ITEM(REAGENT_MUTAGEN, /obj/item/reagent_containers/glass/bottle/mutagen, 1, 50),
+		BIOGEN_ITEM(REAGENT_MUTAGEN + " x5", /obj/item/reagent_containers/glass/bottle/mutagen, 5, 250),
+		BIOGEN_ITEM(REAGENT_PLANTBGONE, /obj/item/reagent_containers/spray/plantbgone, 1, 50),
+		BIOGEN_ITEM(REAGENT_PLANTBGONE + " x5", /obj/item/reagent_containers/spray/plantbgone, 5, 250),
+		//CHOMPAdd End
 	)
+	//CHOMPAdd Start - Another source of exotic seeds
+	item_list["Exotic Seeds"] = list(
+		BIOGEN_ITEM("Mystery seed pack", /obj/item/seeds/random, 1, 150),
+		BIOGEN_ITEM("Mystery seed pack x5", /obj/item/seeds/random, 5, 750),
+		BIOGEN_ITEM("Kudzu seed pack", /obj/item/seeds/kudzuseed, 1, 100),
+		BIOGEN_ITEM("Kudzu seed pack x5", /obj/item/seeds/kudzuseed, 5, 500),
+	)
+	//CHOMPAdd End
 	item_list["Leather Products"] = list(
 		BIOGEN_ITEM("Wallet", /obj/item/storage/wallet, 1, 100),
 		BIOGEN_ITEM("Botanical gloves", /obj/item/clothing/gloves/botanic_leather, 1, 250),
@@ -274,9 +298,9 @@
 	var/S = 0
 	for(var/obj/item/reagent_containers/food/snacks/grown/I in contents)
 		S += 5
-		if(I.reagents.get_reagent_amount("nutriment") < 0.1)
+		if(I.reagents.get_reagent_amount(REAGENT_ID_NUTRIMENT) < 0.1)
 			points += 1
-		else points += I.reagents.get_reagent_amount("nutriment") * 10 * eat_eff
+		else points += I.reagents.get_reagent_amount(REAGENT_ID_NUTRIMENT) * 10 * eat_eff
 		qdel(I)
 	if(S)
 		processing = 1

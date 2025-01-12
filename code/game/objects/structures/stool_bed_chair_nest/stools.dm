@@ -33,7 +33,7 @@ var/global/list/stool_cache = list() //haha stool
 	update_icon()
 
 /obj/item/stool/padded/New(var/newloc, var/new_material)
-	..(newloc,"steel",MAT_CARPET) //CHOMPstation edit: New tile material system
+	..(newloc, MAT_STEEL, MAT_CARPET)
 
 /obj/item/stool/update_icon()
 	// Prep icon.
@@ -73,7 +73,7 @@ var/global/list/stool_cache = list() //haha stool
 	update_icon()
 
 /obj/item/stool/attack(mob/M as mob, mob/user as mob)
-	if (prob(5) && istype(M,/mob/living))
+	if (prob(5) && isliving(M))
 		user.visible_message(span_danger("[user] breaks [src] over [M]'s back!"))
 		user.setClickCooldown(user.get_attack_speed())
 		user.do_attack_animation(M)

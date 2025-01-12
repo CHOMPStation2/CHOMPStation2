@@ -65,12 +65,12 @@
 	water_breather = TRUE
 
 	var/list/valid_transform_species = list(
-		"Human", "Unathi", "Tajara", "Skrell",
-		"Diona", "Teshari", "Monkey","Sergal",
-		"Akula","Nevrean","Zorren",
-		"Fennec", "Vulpkanin", "Vasilissan",
-		"Rapala", "Neaera", "Stok", "Farwa", "Sobaka",
-		"Wolpin", "Saru", "Sparra", "Lleill")
+		SPECIES_HUMAN, SPECIES_UNATHI, SPECIES_TAJARAN, SPECIES_SKRELL,
+		SPECIES_DIONA, SPECIES_TESHARI, SPECIES_MONKEY, SPECIES_SERGAL,
+		SPECIES_AKULA, SPECIES_NEVREAN, SPECIES_ZORREN_HIGH,
+		SPECIES_FENNEC, SPECIES_VULPKANIN, SPECIES_VASILISSAN,
+		SPECIES_RAPALA, SPECIES_MONKEY_SKRELL, SPECIES_MONKEY_UNATHI, SPECIES_MONKEY_TAJ, SPECIES_MONKEY_AKULA,
+		SPECIES_MONKEY_VULPKANIN, SPECIES_MONKEY_SERGAL, SPECIES_MONKEY_NEVREAN, SPECIES_LLEILL)
 
 	// Looks like a lot but the majority of these are just to change their appearance.
 	inherent_verbs = list(
@@ -84,6 +84,8 @@
 		/mob/living/carbon/human/proc/shapeshifter_select_ears,
 		/mob/living/carbon/human/proc/shapeshifter_select_secondary_ears,
 		/mob/living/proc/set_size,
+		/mob/living/carbon/human/proc/shapeshifter_copy_body,
+		/mob/living/carbon/human/proc/shapeshifter_regenerate,
 //		/mob/living/carbon/human/proc/lleill_invisibility,
 //		/mob/living/carbon/human/proc/lleill_transmute,
 //		/mob/living/carbon/human/proc/lleill_rings,

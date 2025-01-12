@@ -53,7 +53,7 @@
 						continue
 
 					var/flash_time = 10
-					if(istype(O, /mob/living/carbon/human))
+					if(ishuman(O))
 						var/mob/living/carbon/human/H = O
 						//VOREStation Edit Start
 						if(H.nif && H.nif.flag_check(NIF_V_FLASHPROT,NIF_FLAGS_VISION))
@@ -82,7 +82,7 @@
 					if(get_dist(src, O) > 7)
 						continue
 
-					if(istype(O, /mob/living/carbon/human))
+					if(ishuman(O))
 						var/mob/living/carbon/human/H = O
 						H.fear = 200
 			if(sound_activated)
@@ -108,7 +108,7 @@
 		anchored = !anchored
 
 /client/proc/generic_structure()
-	set category = "Fun.Event Kit" //CHOMPEdit
+	set category = "Fun.Event Kit"
 	set name = "Spawn Generic Structure"
 	set desc = "Spawn a customisable structure with a range of different options."
 

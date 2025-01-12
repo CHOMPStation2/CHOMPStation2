@@ -3,7 +3,7 @@
 /obj/machinery/syndicate_beacon/virgo/attack_hand(var/mob/user as mob)
 	user.set_machine(src)
 	var/dat = "<font color=#005500><i>Scanning [pick("retina pattern", "voice print", "fingerprints", "dna sequence")]...<br>Identity confirmed,<br></i></font>"
-	if(istype(user, /mob/living/carbon/human) || istype(user, /mob/living/silicon/ai))
+	if(ishuman(user) || isAI(user))
 		if(is_special_character(user))
 			dat += "<font color=#07700><i>Operative record found. Greetings, Agent [user.name].</i></font><br>"
 		else if(charges < 1)
@@ -14,7 +14,7 @@
 				honorific = "Ms."
 			dat += "<font color=red><i>Identity not found in operative database. What can the Black Market do for you today, [honorific] [user.name]?</i></font><br>"
 			if(!selfdestructing)
-				dat += "<br><br><A href='?src=\ref[src];betraitor=1;traitormob=\ref[user]'>\"[pick("Send me some supplies!", "Transfer supplies.")]\"</A><BR>"
+				dat += "<br><br><A href='byond://?src=\ref[src];betraitor=1;traitormob=\ref[user]'>\"[pick("Send me some supplies!", "Transfer supplies.")]\"</A><BR>"
 	dat += temptext
 	user << browse(dat, "window=syndbeacon")
 	onclose(user, "syndbeacon")
@@ -30,7 +30,7 @@
 			updateUsrDialog()
 			return
 		charges -= 1
-		if(istype(M, /mob/living/carbon/human))
+		if(ishuman(M))
 			var/mob/living/carbon/human/N = M
 			to_chat(N, span_infoplain(span_bold("Access granted, here are the supplies!")))
 			traitors.spawn_uplink(N)

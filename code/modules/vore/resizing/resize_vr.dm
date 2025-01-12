@@ -139,6 +139,9 @@
 	if(!resizable && !ignore_prefs)
 		return 1
 	. = ..()
+	if(!ishuman(temporary_form) && isliving(temporary_form))
+		var/mob/living/temp_form = temporary_form
+		temp_form.resize(new_size, animate, uncapped, ignore_prefs, aura_animation)
 	if(LAZYLEN(hud_list) && has_huds)
 		var/new_y_offset = vis_height * (size_multiplier - 1)
 		for(var/index = 1 to hud_list.len)
@@ -297,7 +300,7 @@
 		for (var/atom/movable/M in prey.loc)
 			if (prey == M || pred == M)
 				continue
-			if (istype(M, /mob/living))
+			if (isliving(M))
 				var/mob/living/L = M
 				if (!M.CanPass(src, prey.loc) && !(get_effective_size(FALSE) - L.get_effective_size(TRUE) >= size_ratio_needed || L.lying))
 					can_pass = FALSE
@@ -367,7 +370,7 @@
 				equip_to_slot_if_possible(prey.get_scooped(pred), slot_shoes, 0, 1)
 				add_attack_logs(pred, prey, "Grabbed underfoot ([tail ? "taur" : "nontaur"], no shoes)")
 
-		if(m_intent == "run")
+		if(m_intent == I_RUN)
 			switch(a_intent)
 				if(I_DISARM)
 					message_pred = "You quickly push [prey] to the ground with your foot!"

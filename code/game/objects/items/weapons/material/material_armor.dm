@@ -92,7 +92,7 @@ Protectiveness | Armor %
 		return
 	var/turf/T = get_turf(src)
 	T.visible_message(span_danger("\The [src] [material.destruction_desc]!"))
-	if(istype(loc, /mob/living))
+	if(isliving(loc))
 		var/mob/living/M = loc
 		M.drop_from_inventory(src)
 		if(material.shard_type == SHARD_SHARD) // Wearing glass armor is a bad idea.
@@ -271,10 +271,10 @@ Protectiveness | Armor %
 	material_slowdown_multiplier = 0.4
 
 /obj/item/clothing/suit/armor/material/makeshift/durasteel
-	default_material = "durasteel"
+	default_material = MAT_DURASTEEL
 
 /obj/item/clothing/suit/armor/material/makeshift/glass
-	default_material = "glass"
+	default_material = MAT_GLASS
 
 // Used to craft sheet armor, and possibly other things in the Future(tm).
 /obj/item/material/armor_plating
@@ -363,7 +363,7 @@ Protectiveness | Armor %
 
 	if(istype(O, /obj/item/stack/material))
 		var/obj/item/stack/material/S = O
-		if(S.material == get_material_by_name("leather"))
+		if(S.material == get_material_by_name(MAT_LEATHER))
 			if(S.use(2))
 				to_chat(user, span_notice("You curve the plate inwards, and add a strap for adjustment."))
 				user.drop_from_inventory(src)
@@ -411,4 +411,4 @@ Protectiveness | Armor %
 	icon_state = "material_armor_makeshift"
 
 /obj/item/clothing/head/helmet/material/makeshift/durasteel
-	default_material = "durasteel"
+	default_material = MAT_DURASTEEL

@@ -143,15 +143,15 @@
 	. = ..()
 
 /mob/living/simple_mob/shadekin/init_vore()
-	if(!voremob_loaded) //CHOMPAdd
-		return //CHOMPAdd
+	if(!voremob_loaded)
+		return
 	if(LAZYLEN(vore_organs))
 		return
 
 	var/obj/belly/B = new /obj/belly(src)
 	vore_selected = B
 	B.immutable = 1
-	B.affects_vore_sprites = TRUE //CHOMPEdit - vore sprites enabled for simplemobs!
+	B.affects_vore_sprites = TRUE
 	B.name = vore_stomach_name ? vore_stomach_name : "stomach"
 	B.desc = vore_stomach_flavor ? vore_stomach_flavor : "Your surroundings are warm, soft, and slimy. Makes sense, considering you're inside \the [name]."
 	B.digest_mode = vore_default_mode
@@ -213,7 +213,7 @@
 		check_timer = 0
 		var/non_kin_count = 0
 		for(var/mob/living/M in view(6,src))
-			if(!istype(M, /mob/living/simple_mob/shadekin))
+			if(!issimplekin(M))
 				non_kin_count ++
 		// Technically can be combined with ||, they call the same function, but readability is poor
 		if(!non_kin_count && (ability_flags & AB_PHASE_SHIFTED))
@@ -298,7 +298,7 @@
 		//Yay digestion... presumably...
 		var/obj/belly/belly = src.loc
 		add_attack_logs(belly.owner, src, "Digested in [lowertext(belly.name)]")
-		to_chat(belly.owner, "<span class='notice'>\The [src.name] suddenly vanishes within your [belly.name]</span>")
+		to_chat(belly.owner, span_notice("\The [src.name] suddenly vanishes within your [belly.name]"))
 		forceMove(pick(floors))
 		flick("tp_in",src)
 		respite_activating = FALSE
@@ -313,7 +313,7 @@
 		spawn(10 MINUTES)
 			ability_flags &= ~AB_DARK_RESPITE
 			movement_cooldown = initial(movement_cooldown)
-			to_chat(src, "<span class='notice'>You feel like you can leave the Dark again</span>")
+			to_chat(src, span_notice("You feel like you can leave the Dark again"))
 	else
 		spawn(1 SECOND)
 			respite_activating = FALSE
@@ -326,7 +326,7 @@
 		spawn(15 MINUTES)
 			ability_flags &= ~AB_DARK_RESPITE
 			movement_cooldown = initial(movement_cooldown)
-			to_chat(src, "<span class='notice'>You feel like you can leave the Dark again</span>")
+			to_chat(src, span_notice("You feel like you can leave the Dark again"))
 	//CHOMPEdit End
 
 /* //VOREStation AI Temporary Removal

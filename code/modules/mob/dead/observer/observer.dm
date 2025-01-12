@@ -12,7 +12,10 @@
 	stat = DEAD
 	canmove = 0
 	blinded = 0
-	anchored = TRUE		//  don't get pushed around
+	anchored = TRUE	//  don't get pushed around
+	var/list/visibleChunks = list()
+	var/datum/visualnet/ghost/visualnet
+	var/static_visibility_range = 16
 
 	var/can_reenter_corpse
 	var/datum/hud/living/carbon/hud = null // hud
@@ -33,6 +36,7 @@
 	incorporeal_move = 1
 
 	var/is_manifest = 0 //If set to 1, the ghost is able to whisper. Usually only set if a cultist drags them through the veil.
+	var/toggled_invisible = 0
 	var/ghost_sprite = null
 	var/global/list/possible_ghost_sprites = list(
 		"Clear" = "blank",
@@ -88,13 +92,14 @@
 	var/last_revive_notification = null // world.time of last notification, used to avoid spamming players from defibs or cloners.
 	var/cleanup_timer // Refernece to a timer that will delete this mob if no client returns
 
-/mob/observer/dead/New(mob/body)
+/mob/observer/dead/New(mob/body, aghost = FALSE)
 
 	appearance = body
 	invisibility = INVISIBILITY_OBSERVER
 	layer = BELOW_MOB_LAYER
 	plane = PLANE_GHOSTS
 	alpha = 127
+	admin_ghosted = aghost
 
 	sight |= SEE_TURFS | SEE_MOBS | SEE_OBJS | SEE_SELF
 	see_invisible = SEE_INVISIBLE_OBSERVER
@@ -128,7 +133,7 @@
 	if(!T && length(latejoin))
 		T = pick(latejoin)			//Safety in case we cannot find the body's position
 	if(T)
-		forceMove(T)
+		forceMove(T, just_spawned = TRUE)
 	else
 		moveToNullspace()
 		to_chat(src, span_danger("Could not locate an observer spawn point. Use the Teleport verb to jump to the station map."))
@@ -140,6 +145,17 @@
 	animate(pixel_y = default_pixel_y, time = 10, loop = -1)
 	observer_mob_list += src
 	..()
+	visualnet = ghostnet
+
+/mob/observer/dead/proc/checkStatic()
+	return !(check_rights(R_ADMIN|R_FUN|R_EVENT|R_SERVER, 0, src) || (client && client.buildmode) || isbelly(loc))
+
+/mob/observer/dead/Moved(atom/old_loc, direction, forced)
+	. = ..()
+	if(isbelly(loc) && !isbelly(old_loc))
+		visualnet.addVisibility()
+	if(visualnet && checkStatic())
+		visualnet.visibility(src, client)
 
 /mob/observer/dead/Topic(href, href_list)
 	if (href_list["track"])
@@ -196,7 +212,7 @@ Works together with spawning an observer, noted above.
 	if(!isturf(loc))
 		return
 	var/area/A = get_area(src)
-	if(A.flag_check(AREA_BLOCK_GHOSTS))
+	if(A.flag_check(AREA_BLOCK_GHOSTS) && !isbelly(loc))
 		to_chat(src, span_warning("Ghosts can't enter this location."))
 		return_to_spawn()
 
@@ -209,14 +225,14 @@ Works together with spawning an observer, noted above.
 		forceMove(O.loc)
 //RS Port #658 End
 
-/mob/proc/ghostize(var/can_reenter_corpse = 1)
+/mob/proc/ghostize(var/can_reenter_corpse = 1, var/aghost = FALSE)
 	if(key)
 		if(ishuman(src))
 			var/mob/living/carbon/human/H = src
 			if(H.vr_holder && !can_reenter_corpse)
 				H.exit_vr()
 				return 0
-		var/mob/observer/dead/ghost = new(src)	//Transfer safety to observer spawning proc.
+		var/mob/observer/dead/ghost = new(src, aghost)	//Transfer safety to observer spawning proc.
 		ghost.can_reenter_corpse = can_reenter_corpse
 		ghost.timeofdeath = src.timeofdeath //BS12 EDIT
 		ghost.key = key
@@ -258,9 +274,9 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		var/turf/location = get_turf(src)
 		var/special_role = check_special_role()
 		if(!istype(loc,/obj/machinery/cryopod))
-			log_and_message_admins("has ghosted outside cryo[special_role ? " as [special_role]" : ""]. (<A HREF='?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[location.x];Y=[location.y];Z=[location.z]'>JMP</a>)",usr)
+			log_and_message_admins("has ghosted outside cryo[special_role ? " as [special_role]" : ""]. (<A href='byond://?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[location.x];Y=[location.y];Z=[location.z]'>JMP</a>)",usr)
 		else if(special_role)
-			log_and_message_admins("has ghosted in cryo as [special_role]. (<A HREF='?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[location.x];Y=[location.y];Z=[location.z]'>JMP</a>)",usr)
+			log_and_message_admins("has ghosted in cryo as [special_role]. (<A href='byond://?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[location.x];Y=[location.y];Z=[location.z]'>JMP</a>)",usr)
 		var/mob/observer/dead/ghost = ghostize(0)	// 0 parameter is so we can never re-enter our body, "Charlie, you can never come baaaack~" :3
 		if(ghost)
 			ghost.timeofdeath = world.time 	// Because the living mob won't have a time of death and we want the respawn timer to work properly.
@@ -396,7 +412,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	set category = "Ghost.Game"
 	set desc = "Teleport to a location."
 
-	if(!istype(usr, /mob/observer/dead))
+	if(!isobserver(usr))
 		to_chat(usr, span_filter_notice("Not when you're not dead!"))
 		return
 
@@ -409,7 +425,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		if(!A)
 			return
 
-	if(!istype(usr, /mob/observer/dead))
+	if(!isobserver(usr))
 		to_chat(usr, "Not when you're not dead!")
 		return
 
@@ -421,7 +437,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	set category = "Ghost.Game"
 	set desc = "Follow and haunt a mob."
 
-	if(!istype(usr, /mob/observer/dead))
+	if(!isobserver(usr))
 		to_chat(usr, "Not when you're not dead!")
 		return
 
@@ -436,13 +452,13 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		if(!M)
 			return
 
-	if(!istype(usr, /mob/observer/dead))
+	if(!isobserver(usr))
 		to_chat(usr, "Not when you're not dead!")
 		return
 
 	ManualFollow(M || jumpable_mobs()[mobname])
 
-/mob/observer/dead/forceMove(atom/destination, direction, movetime) //ChompEDIT - pass movetime through
+/mob/observer/dead/forceMove(atom/destination, direction, movetime, just_spawned = FALSE) //ChompEDIT - pass movetime through
 	if(client?.holder)
 		return ..()
 
@@ -454,7 +470,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 	//RS Port #658 Start
 	var/area/A = get_area(destination)
-	if(A.flag_check(AREA_BLOCK_GHOSTS))
+	if(A?.flag_check(AREA_BLOCK_GHOSTS) && !isbelly(destination) && !admin_ghosted && !just_spawned)
 		to_chat(src,span_warning("Sorry, that area does not allow ghosts."))
 		if(following)
 			stop_following()
@@ -574,6 +590,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	return ..()
 
 /mob/observer/dead/Destroy()
+	visualnet = null
 	if(ismob(following))
 		var/mob/M = following
 		M.following_mobs -= src
@@ -612,7 +629,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	set desc = "Teleport to a mob"
 	set popup_menu = FALSE
 
-	if(!istype(usr, /mob/observer/dead)) //Make sure they're an observer!
+	if(!isobserver(usr)) //Make sure they're an observer!
 		return
 
 	var/list/possible_mobs = jumpable_mobs()
@@ -648,7 +665,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	set name = "Analyze Air"
 	set category = "Ghost.Game"
 
-	if(!istype(usr, /mob/observer/dead)) return
+	if(!isobserver(usr)) return
 
 	// Shamelessly copied from the Gas Analyzers
 	if (!( istype(usr.loc, /turf) ))
@@ -843,15 +860,19 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 /mob/observer/dead/proc/manifest(mob/user)
 	is_manifest = TRUE
-	add_verb(src, /mob/observer/dead/proc/toggle_visibility)
-	add_verb(src, /mob/observer/dead/proc/ghost_whisper)
+	// Allows them to use the 'toggle_visibility' verb add_verb(src, /mob/observer/dead/verb/toggle_visibility)
+	// Allows them to use the 'ghost  whisper' verb add_verb(src, /mob/observer/dead/verb/ghost_whisper)
 	to_chat(src, span_filter_notice(span_purple("As you are now in the realm of the living, you can whisper to the living with the " + span_bold("Spectral Whisper") + " verb, inside the IC tab.")))
+	if(!user)
+		visible_message(span_deadsay("The ghost of \the [src] is dragged back in to our plane of reality!"))
+		toggle_ghost_visibility(TRUE)
+		return
 	if(plane != PLANE_WORLD)
 		user.visible_message( \
 			span_warning("\The [user] drags ghost, [src], to our plane of reality!"), \
 			span_warning("You drag [src] to our plane of reality!") \
 		)
-		toggle_visibility(TRUE)
+		toggle_ghost_visibility(TRUE)
 	else
 		var/datum/gender/T = gender_datums[user.get_visible_gender()]
 		user.visible_message ( \
@@ -873,12 +894,17 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		var/image/J = image('icons/mob/mob.dmi', loc = src, icon_state = icon)
 		client.images += J
 
-/mob/observer/dead/proc/toggle_visibility(var/forced = 0)
-	set category = "Ghost.Settings"
+/mob/observer/dead/verb/toggle_visibility()
+
 	set name = "Toggle Visibility"
 	set desc = "Allows you to turn (in)visible (almost) at will."
+	set category = "Ghost.Settings"
+	toggle_ghost_visibility()
 
-	var/toggled_invisible
+/mob/observer/dead/proc/toggle_ghost_visibility(var/forced = FALSE)
+	if(!is_manifest)
+		to_chat(src, span_filter_notice("You are not strong enough to pierce the veil..."))
+		return
 	if(!forced && plane == PLANE_GHOSTS && world.time < toggled_invisible + 600)
 		to_chat(src, span_filter_notice("You must gather strength before you can turn visible again..."))
 		return
@@ -974,7 +1000,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 //Culted Ghosts
 
-/mob/observer/dead/proc/ghost_whisper()
+/mob/observer/dead/verb/ghost_whisper()
 	set name = "Spectral Whisper"
 	set category = "IC.Subtle"
 
@@ -994,7 +1020,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 			return
 		return 1
 	else
-		to_chat(src, span_danger("You have not been pulled past the veil!"))
+		to_chat(src, span_danger("You have not been pulled past the veil! You can not whisper to the living."))
 
 /mob/observer/dead/verb/choose_ghost_sprite()
 	set category = "Ghost.Settings"
@@ -1081,7 +1107,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		to_chat(src, span_ghostalert("<font size=4>[message]</font>"))
 		if(source)
 			throw_alert("\ref[source]_notify_revive", /obj/screen/alert/notify_cloning, new_master = source)
-	to_chat(src, span_ghostalert("<a href=?src=[REF(src)];reenter=1>(Click to re-enter)</a>"))
+	to_chat(src, span_ghostalert("<a href='byond://?src=[REF(src)];reenter=1'>(Click to re-enter)</a>"))
 	if(sound)
 		SEND_SOUND(src, sound(sound))
 

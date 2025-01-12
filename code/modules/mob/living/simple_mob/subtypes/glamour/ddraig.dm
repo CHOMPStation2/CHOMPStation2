@@ -77,11 +77,9 @@
 	movement_cooldown = -1
 
 /mob/living/simple_mob/vore/ddraig/init_vore()
- 	//CHOMPEdit Start
 	if(!voremob_loaded)
 		return
-	.=..()
-	//CHOMPEdit End
+	. = ..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "Despite the jaws of the dragon not being particular visible, once they begin to part it reveals a rather vast maw. More than wide enough to engulf your head and upper body, the ddraig lifts you effortlessly from the ground, standing up to full height with only your legs dangling from the beast's mouth. Inside you are engulfed in the wet, slimy and hot slobber of the creature. A massive tongue beneath your body curls over you to taste and lather every inch on offer. Soon enough, the dragon tosses its head backwards, sending your body beyond the throat, wrapped in the rippled lining of the creatures gullet for a slow, dark descent into the abyss below. It is a long journey through that seemingly endless neck, but eventually you are deposited in the creature's stomach. Little sound from the outside makes it inside, all drowned out by the cacophony of bodily functions groaning, burbling and beating around you. Despite the size of the beast, the gut is not massive, the walls clench down tight around your helplessly trapped body. The stomach lining grinds roughly over your body, smearing you in a slurry of slimy fluids."
@@ -341,7 +339,7 @@
 	for(var/mob/living/possible_target in possible_targets)
 		if(!can_attack(possible_target))
 			continue
-		if(istype(target,/mob/living/simple_mob) && !check_attacker(target)) //Do not target simple mobs who didn't attack you (disengage with TF'd mobs)
+		if(isanimal(target) && !check_attacker(target)) //Do not target simple mobs who didn't attack you (disengage with TF'd mobs)
 			continue
 		. |= possible_target
 		if(!isliving(possible_target))
@@ -377,7 +375,7 @@
 		spawn(60 SECONDS)
 			holder.uncloak()
 
-	if(istype(target,/mob/living/simple_mob) && !check_attacker(target)) //Immediately disengage with TF'd mobs so you don't one shot the poor guy you turned into a mouse.
+	if(isanimal(target) && !check_attacker(target)) //Immediately disengage with TF'd mobs so you don't one shot the poor guy you turned into a mouse.
 		lose_target()
 
 	// Can we still see them?

@@ -36,12 +36,13 @@
 
 //CHOMPStation Addition Start
 /obj/structure/bonfire/examine(mob/user)
+	. = ..()
 	var/X = get_fuel_amount()
-	to_chat(user, "The fire has [X] logs in it.")
+	. += "The fire has [X] logs in it."
 	if(grill)
-		to_chat(user, "[src] has a crude grill plate over it.")
+		. += "[src] has a crude grill plate over it."
 	if(can_buckle)
-		to_chat(user, "[src] has a makeshift stake built in it, perfect for witches and space templars.")
+		. += "[src] has a makeshift stake built in it, perfect for witches and space templars."
 //CHOMPStation Addition end
 
 /obj/structure/bonfire/attackby(obj/item/W, mob/user)
@@ -160,7 +161,7 @@
 
 /obj/structure/bonfire/proc/check_oxygen()
 	var/datum/gas_mixture/G = loc.return_air()
-	if(G.gas["oxygen"] < 1)
+	if(G.gas[GAS_O2] < 1)
 		return FALSE
 	return TRUE
 
@@ -355,7 +356,7 @@
 
 /obj/structure/fireplace/proc/check_oxygen()
 	var/datum/gas_mixture/G = loc.return_air()
-	if(G.gas["oxygen"] < 1)
+	if(G.gas[GAS_O2] < 1)
 		return FALSE
 	return TRUE
 

@@ -35,7 +35,9 @@
 		//VOREStation Add end
 		if("JoinLateGateway")
 			latejoin_gateway += loc
+			// CHOMPEdit Start
 			delete_me = 1
+			// CHOMPEdit End
 			return
 		//CHOMPEdit Begin
 		if("JoinLateStationGateway")

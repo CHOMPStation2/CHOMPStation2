@@ -254,7 +254,7 @@
 	var/phoron = (sheets+sheet_left)*20
 	var/datum/gas_mixture/environment = loc.return_air()
 	if (environment)
-		environment.adjust_gas_temp("phoron", phoron/10, temperature + T0C)
+		environment.adjust_gas_temp(GAS_PHORON, phoron/10, temperature + T0C)
 
 	sheets = 0
 	sheet_left = 0
@@ -324,9 +324,9 @@
 
 	data["active"] = active
 
-	if(istype(user, /mob/living/silicon/ai))
+	if(isAI(user))
 		data["is_ai"] = TRUE
-	else if(istype(user, /mob/living/silicon/robot) && !Adjacent(user))
+	else if(isrobot(user) && !Adjacent(user))
 		data["is_ai"] = TRUE
 	else
 		data["is_ai"] = FALSE

@@ -114,3 +114,20 @@
 			visible_message(span_warning("\The [src]'s connector can't be connected, there is already a pipe at that location!"))
 			return TRUE
 	return FALSE
+
+//CHOMPEdit Start - Keybinds for EVEEERYTHING* (* = not everything))
+/obj/machinery/atmospherics/unary/CtrlClick(mob/user)
+	if((power_rating != null) && !(pipe_state in list("scrubber", "uvent", "injector"))) //TODO: Add compatibility with air alarm. When not disabled, overrides air alarm state and doesn't tell the air alarm that. Injectors have their own, different bind for enabling.
+		user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
+		if(allowed(user))
+			update_use_power(!use_power)
+			update_icon()
+			add_fingerprint(user)
+			if(use_power)
+				to_chat(user, span_notice("You toggle the [name] on."))
+			else
+				to_chat(user, span_notice("You toggle the [name] off."))
+
+		else
+			to_chat(user, span_warning("Access denied."))
+//CHOMPEdit End

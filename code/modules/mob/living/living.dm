@@ -179,7 +179,7 @@
 
 //sort of a legacy burn method for /electrocute, /shock, and the e_chair
 /mob/living/proc/burn_skin(burn_amount)
-	if(istype(src, /mob/living/carbon/human))
+	if(ishuman(src))
 		//to_world("DEBUG: burn_skin(), mutations=[mutations]")
 		if(mShock in src.mutations) //shockproof
 			return 0
@@ -194,7 +194,7 @@
 				H.UpdateDamageIcon()
 		H.updatehealth()
 		return 1
-	else if(istype(src, /mob/living/silicon/ai))
+	else if(isAI(src))
 		return 0
 
 /mob/living/proc/adjustBodyTemp(actual, desired, incrementboost)
@@ -213,7 +213,7 @@
 		temperature -= change
 		if(actual < desired)
 			temperature = desired
-//	if(istype(src, /mob/living/carbon/human))
+//	if(ishuman(src))
 //		to_world("[src] ~ [src.bodytemperature] ~ [temperature]")
 	return temperature
 
@@ -641,6 +641,11 @@
 			L += D.wrapped
 			if(istype(D.wrapped, /obj/item/storage)) //this should never happen
 				L += get_contents(D.wrapped)
+
+		for(var/obj/item/rig/R in src.contents)	//Check rigsuit storage for items
+			if(R.rig_storage)
+				L += get_contents(R.rig_storage)
+
 		return L
 
 /mob/living/proc/check_contents_for(A)
@@ -699,6 +704,9 @@
 	disabilities = 0
 	resting = FALSE
 
+	if(viruses)
+		viruses.Cut()
+
 	// fix blindness and deafness
 	blinded = 0
 	SetBlinded(0)
@@ -746,7 +754,7 @@
 			ooc_notes_window(usr)
 //			to_chat(usr, span_filter_notice("[src]'s Metainfo:<br>[ooc_notes]"))
 		else if(client)
-			to_chat(usr, span_filter_notice("[src]'s Metainfo:<br>[client.prefs.metadata]"))
+			to_chat(usr, span_filter_notice("[src]'s Metainfo:<br>[client.prefs.read_preference(/datum/preference/text/living/ooc_notes)]"))
 		else
 			to_chat(usr, span_filter_notice("[src] does not have any stored infomation!"))
 	else
@@ -1313,15 +1321,15 @@
 /mob/living/vv_get_header()
 	. = ..()
 	. += {"
-		<a href='?_src_=vars;[HrefToken()];rename=\ref[src]'><b>[src]</b></a><font size='1'>
-		<br><a href='?_src_=vars;[HrefToken()];datumedit=\ref[src];varnameedit=ckey'>[ckey ? ckey : "No ckey"]</a> / <a href='?_src_=vars;[HrefToken()];datumedit=\ref[src];varnameedit=real_name'>[real_name ? real_name : "No real name"]</a>
+		<a href='byond://?_src_=vars;[HrefToken()];rename=\ref[src]'><b>[src]</b></a><font size='1'>
+		<br><a href='byond://?_src_=vars;[HrefToken()];datumedit=\ref[src];varnameedit=ckey'>[ckey ? ckey : "No ckey"]</a> / <a href='byond://?_src_=vars;[HrefToken()];datumedit=\ref[src];varnameedit=real_name'>[real_name ? real_name : "No real name"]</a>
 		<br>
-		BRUTE:<a href='?_src_=vars;[HrefToken()];mobToDamage=\ref[src];adjustDamage=brute'>[getBruteLoss()]</a>
-		FIRE:<a href='?_src_=vars;[HrefToken()];mobToDamage=\ref[src];adjustDamage=fire'>[getFireLoss()]</a>
-		TOXIN:<a href='?_src_=vars;[HrefToken()];mobToDamage=\ref[src];adjustDamage=toxin'>[getToxLoss()]</a>
-		OXY:<a href='?_src_=vars;[HrefToken()];mobToDamage=\ref[src];adjustDamage=oxygen'>[getOxyLoss()]</a>
-		CLONE:<a href='?_src_=vars;[HrefToken()];mobToDamage=\ref[src];adjustDamage=clone'>[getCloneLoss()]</a>
-		BRAIN:<a href='?_src_=vars;[HrefToken()];mobToDamage=\ref[src];adjustDamage=brain'>[getBrainLoss()]</a>
+		BRUTE:<a href='byond://?_src_=vars;[HrefToken()];mobToDamage=\ref[src];adjustDamage=brute'>[getBruteLoss()]</a>
+		FIRE:<a href='byond://?_src_=vars;[HrefToken()];mobToDamage=\ref[src];adjustDamage=fire'>[getFireLoss()]</a>
+		TOXIN:<a href='byond://?_src_=vars;[HrefToken()];mobToDamage=\ref[src];adjustDamage=toxin'>[getToxLoss()]</a>
+		OXY:<a href='byond://?_src_=vars;[HrefToken()];mobToDamage=\ref[src];adjustDamage=oxygen'>[getOxyLoss()]</a>
+		CLONE:<a href='byond://?_src_=vars;[HrefToken()];mobToDamage=\ref[src];adjustDamage=clone'>[getCloneLoss()]</a>
+		BRAIN:<a href='byond://?_src_=vars;[HrefToken()];mobToDamage=\ref[src];adjustDamage=brain'>[getBrainLoss()]</a>
 		</font>
 		"}
 

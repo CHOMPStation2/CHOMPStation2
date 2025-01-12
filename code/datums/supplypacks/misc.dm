@@ -19,6 +19,7 @@
 			/obj/item/deck/holder
 			)
 	name = "Trading Card Crate"
+	desc = "A random set of trading cards. Gotta collect \'em all!"
 	cost = 10
 	containertype = /obj/structure/closet/crate/oculum
 	containername = "cards crate"
@@ -35,8 +36,9 @@
 			/obj/item/toy/character/lich
 			)
 	name = "Miniatures Crate"
+	desc = "Four random prepainted tabletop gaming miniatures."
 	cost = 200
-	containertype = /obj/structure/closet/crate/oculum
+	containertype = /obj/structure/closet/crate/allico
 	containername = "Miniature Crate"
 
 /datum/supply_pack/randomised/misc/plushies
@@ -107,6 +109,7 @@
 			//CHOMPStation Add End
 			)
 	name = "Plushies Crate"
+	desc = "Five random plushies from AlliCo's wide selection!"
 	cost = 15
 	containertype = /obj/structure/closet/crate/allico
 	containername = "Plushies Crate"
@@ -114,12 +117,14 @@
 /datum/supply_pack/misc/eftpos
 	contains = list(/obj/item/eftpos)
 	name = "EFTPOS scanner"
+	desc = "A handheld Electronic Funds Transfer At Point Of Sale scanner."
 	cost = 10
 	containertype = /obj/structure/closet/crate/nanotrasen
 	containername = "EFTPOS crate"
 
 /datum/supply_pack/misc/chaplaingear
 	name = JOB_CHAPLAIN + " equipment"
+	desc = "A standard set of liturgical equipment, suitable for various faiths."
 	contains = list(
 			/obj/item/clothing/under/rank/chaplain,
 			/obj/item/clothing/shoes/black,
@@ -138,6 +143,7 @@
 
 /datum/supply_pack/misc/hoverpod
 	name = "Hoverpod Shipment"
+	desc = "A hoverpod."
 	contains = list()
 	cost = 80
 	containertype = /obj/structure/largecrate/hoverpod
@@ -145,6 +151,7 @@
 
 /datum/supply_pack/randomised/misc/webbing
 	name = "Webbing crate"
+	desc = "Four random webbing sets from a modest selection."
 	num_contained = 4
 	contains = list(
 			/obj/item/clothing/accessory/storage/black_vest,
@@ -161,6 +168,7 @@
 
 /datum/supply_pack/misc/holoplant
 	name = "Holoplant Pot"
+	desc = "A holoplant, for livening up places with none of the maintenance of a regular plant."
 	contains = list(/obj/machinery/holoplant/shipped)
 	cost = 15
 	containertype = /obj/structure/closet/crate/thinktronic
@@ -169,6 +177,7 @@
 /* CHOMPedit, moved to medical.dm in modular folder
 /datum/supply_pack/misc/glucose_hypos
 	name = "Glucose Hypoinjectors"
+	desc = "A set of five glucose autoinjectors, for those with blood sugar issues."
 	contains = list(
 			/obj/item/reagent_containers/hypospray/autoinjector/biginjector/glucose = 5
 			)
@@ -179,6 +188,7 @@
 /datum/supply_pack/misc/mre_rations
 	num_contained = 6
 	name = "Emergency - MREs"
+	desc = "Six random ready-to-eat meals. Guaranteed to still be edible."
 	contains = list(/obj/item/storage/mre,
 					/obj/item/storage/mre/menu2,
 					/obj/item/storage/mre/menu3,
@@ -195,6 +205,7 @@
 
 /datum/supply_pack/misc/paste_rations
 	name = "Emergency - Paste"
+	desc = "Two packages of emergency nutripaste rations."
 	contains = list(
 			/obj/item/storage/mre/menu11 = 2
 			)
@@ -204,6 +215,7 @@
 
 /datum/supply_pack/misc/medical_rations
 	name = "Emergency - VitaPaste"
+	desc = "Two packages of high-grade \'VitaPaste\' rations."
 	contains = list(
 			/obj/item/storage/mre/menu13 = 2
 			)
@@ -213,6 +225,7 @@
 
 /datum/supply_pack/misc/reagentpump
 	name = "Machine - Pump"
+	desc = "A pump."
 	contains = list(
 			/obj/machinery/pump = 1
 			)
@@ -222,6 +235,7 @@
 
 /datum/supply_pack/misc/beltminer
 	name = "Belt-miner gear crate"
+	desc = "A set of supplies for belt mining. Requires Mining or Xenoarchaeology access."
 	contains = list(
 			/obj/item/gun/energy/particle = 2,
 			/obj/item/cell/device/weapon = 2,
@@ -239,6 +253,7 @@
 
 /datum/supply_pack/misc/jetpack
 	name = "jetpack (empty)"
+	desc = "An empty jetpack. Requires Mining, Xenoarchaeology, EVA, or Pilot's access."
 	contains = list(
 			/obj/item/tank/jetpack = 1
 			)
@@ -254,6 +269,7 @@
 
 /datum/supply_pack/randomised/misc/explorer_shield
 	name = JOB_EXPLORER + " shield"
+	desc = "A pair of shields for use by away teams. Requires EVA or Pilot's access."
 	num_contained = 2
 	contains = list(
 			/obj/item/shield/riot/explorer,
@@ -269,6 +285,7 @@
 
 /datum/supply_pack/misc/music_players
 	name = "music players (3)"
+	desc = "A trio of 'walkpod' portable music players."
 	contains = list(
 		/obj/item/walkpod = 3
 	)
@@ -278,6 +295,7 @@
 
 /datum/supply_pack/misc/juke_remotes
 	name = "jukebox remote speakers (2)"
+	desc = "A pair of remote speakers that can be linked to a jukebox."
 	contains = list(
 		/obj/item/juke_remote = 2
 	)
@@ -287,6 +305,7 @@
 
 /datum/supply_pack/misc/explorer_headsets
 	name = "shortwave-capable headsets (x4)"
+	desc = "Four headsets with shortwave fallback capacity. Requires Exploration, EVA, or Pilot's access."
 	contains = list(
 		/obj/item/radio/headset/explorer = 4
 	)
@@ -302,6 +321,7 @@
 
 /datum/supply_pack/misc/emergency_beacons
 	name = "emergency locator beacons (x4)"
+	desc = "Four personnel locator emergency beacons."
 	contains = list(
 		/obj/item/emergency_beacon = 4
 	)
@@ -318,6 +338,7 @@
 
 /datum/supply_pack/misc/random_corpo
 	name = "random corporate supply crate"
+	desc = "A random corporate supply crate. Could contain almost anything!"
 	contains = list(
 		/obj/random/multiple/corp_crate_supply
 	)
@@ -326,6 +347,7 @@
 
 /datum/supply_pack/misc/random_corpo_special
 	name = "special corporate supply crate"
+	desc = "A cache of corporate supplies. Could contain more valuable items than the random supply crate."
 	contains = list(
 		/obj/random/multiple/corp_crate
 	)

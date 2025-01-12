@@ -100,7 +100,7 @@
 	if(!ticker)
 		tgui_alert_async(usr, "Wait until the game starts")
 		return
-	if(istype(M, /mob/living/carbon/human))
+	if(ishuman(M))
 		log_admin("[key_name(src)] has robotized [M.key].")
 		spawn(10)
 			M:Robotize()
@@ -120,7 +120,7 @@
 		tgui_alert_async(usr, "That mob doesn't seem to exist, close the panel and try again.")
 		return
 
-	if(istype(M, /mob/new_player))
+	if(isnewplayer(M))
 		tgui_alert_async(usr, "The mob must not be a new_player.")
 		return
 
@@ -279,7 +279,7 @@
 	if (!ticker)
 		tgui_alert_async(usr, "Wait until the game starts")
 		return
-	if (istype(M, /mob/living/carbon/human))
+	if (ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if (H.wear_id)
 			var/obj/item/card/id/id = H.wear_id
@@ -489,7 +489,7 @@
 		if(Rad.anchored)
 			if(!Rad.P)
 				var/obj/item/tank/phoron/Phoron = new/obj/item/tank/phoron(Rad)
-				Phoron.air_contents.gas["phoron"] = 70
+				Phoron.air_contents.gas[GAS_PHORON] = 70
 				Rad.drainratio = 0
 				Rad.P = Phoron
 				Phoron.loc = Rad
@@ -528,7 +528,7 @@
 
 				var/obj/item/tank/phoron/Phoron = new/obj/item/tank/phoron(Rad)
 
-				Phoron.air_contents.gas["phoron"] = 29.1154	//This is a full tank if you filled it from a canister
+				Phoron.air_contents.gas[GAS_PHORON] = 29.1154	//This is a full tank if you filled it from a canister
 				Rad.P = Phoron
 
 				Phoron.loc = Rad
@@ -541,7 +541,7 @@
 				var/obj/machinery/atmospherics/binary/pump/Pump = M
 				if(Pump.name == "Engine Feed" && response == "Setup Completely")
 					found_the_pump = 1
-					Pump.air2.gas["nitrogen"] = 3750	//The contents of 2 canisters.
+					Pump.air2.gas[GAS_N2] = 3750	//The contents of 2 canisters.
 					Pump.air2.temperature = 50
 					Pump.air2.update_values()
 				Pump.update_use_power(USE_POWER_IDLE)
@@ -569,7 +569,7 @@
 	if(!found_the_pump && response == "Setup Completely")
 		to_chat(src, span_red("Unable to locate air supply to fill up with coolant, adding some coolant around the supermatter"))
 		var/turf/simulated/T = SM.loc
-		T.zone.air.gas["nitrogen"] += 450
+		T.zone.air.gas[GAS_N2] += 450
 		T.zone.air.temperature = 50
 		T.zone.air.update_values()
 
@@ -695,3 +695,36 @@
 				var/log = "[key_name(src)] changed [planet.name]'s time to [planet.current_time.show_time("hh:mm")]."
 				message_admins(log)
 				log_admin(log)
+
+/client/proc/cmd_regenerate_asset_cache()
+	set category = "Debug.Assets"
+	set name = "Regenerate Asset Cache"
+	set desc = "Clears the asset cache and regenerates it immediately."
+	if(!CONFIG_GET(flag/cache_assets))
+		to_chat(usr, span_warning("Asset caching is disabled in the config!"))
+		return
+	var/regenerated = 0
+	for(var/datum/asset/A as() in subtypesof(/datum/asset))
+		if(!initial(A.cross_round_cachable))
+			continue
+		if(A == initial(A._abstract))
+			continue
+		var/datum/asset/asset_datum = GLOB.asset_datums[A]
+		asset_datum.regenerate()
+		regenerated++
+	to_chat(usr, span_notice("Regenerated [regenerated] asset\s."))
+
+/client/proc/cmd_clear_smart_asset_cache()
+	set category = "Debug.Assets"
+	set name = "Clear Smart Asset Cache"
+	set desc = "Clears the smart asset cache."
+	if(!CONFIG_GET(flag/smart_cache_assets))
+		to_chat(usr, span_warning("Smart asset caching is disabled in the config!"))
+		return
+	var/cleared = 0
+	for(var/datum/asset/spritesheet_batched/A as() in subtypesof(/datum/asset/spritesheet_batched))
+		if(A == initial(A._abstract))
+			continue
+		fdel("[ASSET_CROSS_ROUND_SMART_CACHE_DIRECTORY]/spritesheet_cache.[initial(A.name)].json")
+		cleared++
+	to_chat(usr, span_notice("Cleared [cleared] asset\s."))

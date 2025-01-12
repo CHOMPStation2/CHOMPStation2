@@ -164,7 +164,7 @@
 		return
 	if(istype(O, /obj/screen))
 		return
-	if(user.restrained() || user.stat || user.stunned || user.paralysis || (!user.lying && !istype(user, /mob/living/silicon/robot)))
+	if(user.restrained() || user.stat || user.stunned || user.paralysis || (!user.lying && !isrobot(user)))
 		return
 	if((!(istype(O, /atom/movable)) || O.anchored || !Adjacent(user) || !Adjacent(O) || !user.Adjacent(O)))
 		return
@@ -294,7 +294,7 @@
 
 //expects an atom containing the reagents used to clean the turf
 /turf/proc/clean(atom/source, mob/user)
-	if(source.reagents.has_reagent("water", 1) || source.reagents.has_reagent("cleaner", 1))
+	if(source.reagents.has_reagent(REAGENT_ID_WATER, 1) || source.reagents.has_reagent(REAGENT_ID_CLEANER, 1))
 		clean_blood()
 		if(istype(src, /turf/simulated))
 			var/turf/simulated/T = src

@@ -18,7 +18,7 @@
 	color = "#CC23FF"
 	slime_color = "purple"
 	coretype = /obj/item/slime_extract/purple
-	reagent_injected = "toxin"
+	reagent_injected = REAGENT_ID_TOXIN
 
 /mob/living/simple_mob/slime/feral/orange
 	desc = "This slime is known to be flammable and can ignite enemies."
@@ -40,7 +40,7 @@
 	color = "#19FFFF"
 	slime_color = "blue"
 	coretype = /obj/item/slime_extract/blue
-	reagent_injected = "cryotoxin"
+	reagent_injected = REAGENT_ID_CRYOTOXIN
 	cold_resist = 0.50
 
 /mob/living/simple_mob/slime/feral/metal
@@ -95,12 +95,12 @@
 	color = "#660088"
 	slime_color = "dark purple"
 	coretype = /obj/item/slime_extract/dark_purple
-	reagent_injected = "phoron"
+	reagent_injected = REAGENT_ID_PHORON
 
 /mob/living/simple_mob/slime/feral/dark_purple/proc/ignite()
 	visible_message(span_critical("\The [src] erupts in an inferno!"))
 	for(var/turf/simulated/target_turf in view(2, src))
-		target_turf.assume_gas("phoron", 30, 1500+T0C)
+		target_turf.assume_gas(GAS_PHORON, 30, 1500+T0C)
 		spawn(0)
 			target_turf.hotspot_expose(1500+T0C, 400)
 	qdel(src)
@@ -250,7 +250,7 @@
 	slime_color = "green"
 	coretype = /obj/item/slime_extract/green
 	glow_toggle = TRUE
-	reagent_injected = "radium"
+	reagent_injected = REAGENT_ID_RADIUM
 	var/rads = 25
 
 /mob/living/simple_mob/slime/feral/green/handle_special()

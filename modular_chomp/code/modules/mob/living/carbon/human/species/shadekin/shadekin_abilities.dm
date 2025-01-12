@@ -125,6 +125,7 @@
 		// change
 		ability_flags &= ~AB_PHASE_SHIFTED
 		ability_flags |= AB_PHASE_SHIFTING
+		throwpass = FALSE
 		name = get_visible_name()
 		for(var/obj/belly/B as anything in vore_organs)
 			B.escapable = initial(B.escapable)
@@ -235,6 +236,7 @@
 		// change
 		ability_flags |= AB_PHASE_SHIFTED
 		ability_flags |= AB_PHASE_SHIFTING
+		throwpass = TRUE
 		custom_emote(1,"phases out!")
 		name = get_visible_name()
 
@@ -289,7 +291,7 @@
 
 
 	log_admin("[key_name_admin(src)] was stunned out of phase at [T.x],[T.y],[T.z] by [dephaser.name], last touched by [dephaser.fingerprintslast].")
-	message_admins("[key_name_admin(src)] was stunned out of phase at [T.x],[T.y],[T.z] by [dephaser.name], last touched by [dephaser.fingerprintslast]. (<A HREF='?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[T.x];Y=[T.y];Z=[T.z]'>JMP</a>)", 1)
+	message_admins("[key_name_admin(src)] was stunned out of phase at [T.x],[T.y],[T.z] by [dephaser.name], last touched by [dephaser.fingerprintslast]. (<A href='byond://?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[T.x];Y=[T.y];Z=[T.z]'>JMP</a>)", 1)
 	// start the dephase
 	phase_in(T)
 	shadekin_adjust_energy(-20) // loss of energy for the interception

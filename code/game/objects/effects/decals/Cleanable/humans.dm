@@ -76,7 +76,7 @@ var/global/list/image/splatter_cache=list()
 /obj/effect/decal/cleanable/blood/Crossed(mob/living/carbon/human/perp)
 	if(perp.is_incorporeal())
 		return
-	if (!istype(perp))
+	if(!istype(perp))
 		return
 	if(amount < 1)
 		return
@@ -116,7 +116,8 @@ var/global/list/image/splatter_cache=list()
 
 	if(viruses)
 		for(var/datum/disease/D in viruses)
-			perp.ContractDisease(D)
+			if(D.IsSpreadByTouch())
+				perp.ContractDisease(D)
 
 	amount--
 
@@ -131,10 +132,6 @@ var/global/list/image/splatter_cache=list()
 	if (amount && istype(user))
 		add_fingerprint(user)
 
-		if(viruses)
-			for(var/datum/disease/D in viruses)
-				user.ContractDisease(D)
-
 		if (user.gloves)
 			return
 		var/taken = rand(1,amount)
@@ -147,6 +144,11 @@ var/global/list/image/splatter_cache=list()
 		user.hand_blood_color = basecolor
 		user.update_inv_gloves(1)
 		add_verb(user, /mob/living/carbon/human/proc/bloody_doodle)
+
+	if(viruses)
+		for(var/datum/disease/D in viruses)
+			if(D.IsSpreadByTouch())
+				user.ContractDisease(D)
 
 /obj/effect/decal/cleanable/blood/splatter
         random_icon_states = list("mgibbl1", "mgibbl2", "mgibbl3", "mgibbl4", "mgibbl5")
@@ -272,11 +274,37 @@ var/global/list/image/splatter_cache=list()
 	return ..()
 
 /obj/effect/decal/cleanable/mucus/Crossed(mob/living/carbon/human/perp)
+	if(perp.is_incorporeal())
+		return
+	if(!istype(perp))
+		return
+	if(viruses)
+		for(var/datum/disease/D in viruses)
+			perp.ContractDisease(D)
+
+/obj/effect/decal/cleanable/mucus/attack_hand(mob/living/carbon/human/perp)
+	if(perp.is_incorporeal())
+		return
+	if(!istype(perp))
+		return
 	if(viruses)
 		for(var/datum/disease/D in viruses)
 			perp.ContractDisease(D)
 
 /obj/effect/decal/cleanable/vomit/Crossed(mob/living/carbon/human/perp)
+	if(perp.is_incorporeal())
+		return
+	if(!istype(perp))
+		return
+	if(viruses)
+		for(var/datum/disease/D in viruses)
+			perp.ContractDisease(D)
+
+/obj/effect/decal/cleanable/vomit/Crossed(mob/living/carbon/human/perp)
+	if(perp.is_incorporeal())
+		return
+	if(!istype(perp))
+		return
 	if(viruses)
 		for(var/datum/disease/D in viruses)
 			perp.ContractDisease(D)

@@ -19,7 +19,7 @@
 /obj/machinery/syndicate_beacon/attack_hand(var/mob/user as mob)
 	user.set_machine(src)
 	var/dat = "<font color=#005500><i>Scanning [pick("retina pattern", "voice print", "fingerprints", "dna sequence")]...<br>Identity confirmed,<br></i></font>"
-	if(istype(user, /mob/living/carbon/human) || istype(user, /mob/living/silicon/ai))
+	if(ishuman(user) || isAI(user))
 		if(is_special_character(user))
 			dat += "<font color=#07700><i>Operative record found. Greetings, Agent [user.name].</i></font><br>"
 		else if(charges < 1)
@@ -30,7 +30,7 @@
 				honorific = "Ms."
 			dat += "<font color=red><i>Identity not found in operative database. What can the Syndicate do for you today, [honorific] [user.name]?</i></font><br>"
 			if(!selfdestructing)
-				dat += "<br><br><A href='?src=\ref[src];betraitor=1;traitormob=\ref[user]'>\"[pick("I want to switch teams.", "I want to work for you.", "Let me join you.", "I can be of use to you.", "You want me working for you, and here's why...", "Give me an objective.", "How's the 401k over at the Syndicate?")]\"</A><BR>"
+				dat += "<br><br><A href='byond://?src=\ref[src];betraitor=1;traitormob=\ref[user]'>\"[pick("I want to switch teams.", "I want to work for you.", "Let me join you.", "I can be of use to you.", "You want me working for you, and here's why...", "Give me an objective.", "How's the 401k over at the Syndicate?")]\"</A><BR>"
 	dat += temptext
 	user << browse(dat, "window=syndbeacon")
 	onclose(user, "syndbeacon")
@@ -56,7 +56,7 @@
 				return
 			if(2)
 				return
-		if(istype(M, /mob/living/carbon/human))
+		if(ishuman(M))
 			var/mob/living/carbon/human/N = M
 			to_chat(N, span_infoplain(span_bold("You have joined the ranks of the Syndicate and become a traitor to the station!")))
 			traitors.add_antagonist(N.mind)

@@ -183,13 +183,13 @@ var/global/list/breach_burn_descriptors = list(
 		switch(W.get_material_name())
 			if(MAT_STEEL)
 				repair_power = 2
-			if("plastic")
+			if(MAT_PLASTIC)
 				repair_power = 1
 
 		if(!repair_power)
 			return
 
-		if(istype(src.loc,/mob/living))
+		if(isliving(src.loc))
 			to_chat(user, span_warning("How do you intend to patch a hardsuit while someone is wearing it?"))
 			return
 
@@ -205,7 +205,7 @@ var/global/list/breach_burn_descriptors = list(
 
 	else if(W.has_tool_quality(TOOL_WELDER))
 
-		if(istype(src.loc,/mob/living))
+		if(isliving(src.loc))
 			to_chat(user, span_red("How do you intend to patch a hardsuit while someone is wearing it?"))
 			return
 

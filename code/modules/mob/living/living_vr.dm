@@ -32,7 +32,7 @@
 	var/new_metadata = strip_html_simple(tgui_input_text(usr, "Enter any information you'd like others to see, such as Roleplay-preferences. This will not be saved permanently unless you click save in the OOC notes panel!", "Game Preference" , html_decode(ooc_notes), multiline = TRUE,  prevent_enter = TRUE))
 	if(new_metadata && CanUseTopic(usr))
 		ooc_notes = new_metadata
-		client.prefs.metadata = new_metadata
+		client.prefs.update_preference_by_type(/datum/preference/text/living/ooc_notes, new_metadata)
 		to_chat(usr, span_filter_notice("OOC notes updated. Don't forget to save!"))
 		log_admin("[key_name(usr)] updated their OOC notes mid-round.")
 		ooc_notes_window(usr)
@@ -51,7 +51,7 @@
 	var/new_metadata = strip_html_simple(tgui_input_text(user, "Enter any information you'd like others to see, such as Roleplay-preferences. This will not be saved permanently unless you click save in the OOC notes panel!", "Game Preference" , html_decode(ooc_notes), multiline = TRUE,  prevent_enter = TRUE))
 	if(new_metadata && CanUseTopic(user))
 		ooc_notes = new_metadata
-		client.prefs.metadata = new_metadata
+		client.prefs.update_preference_by_type(/datum/preference/text/living/ooc_notes, new_metadata)
 		to_chat(user, span_filter_notice("OOC notes updated. Don't forget to save!"))
 		log_admin("[key_name(user)] updated their OOC notes mid-round.")
 		ooc_notes_window(user)
@@ -64,7 +64,7 @@
 		if(new_metadata == "!clear")
 			new_metadata = ""
 		ooc_notes_likes = new_metadata
-		client.prefs.metadata_likes = new_metadata
+		client.prefs.update_preference_by_type(/datum/preference/text/living/ooc_notes_likes, new_metadata)
 		to_chat(user, span_filter_notice("OOC note likes have been updated. Don't forget to save!"))
 		log_admin("[key_name(user)] updated their OOC note likes mid-round.")
 		if(reopen)
@@ -78,7 +78,7 @@
 		if(new_metadata == "!clear")
 			new_metadata = ""
 		ooc_notes_dislikes = new_metadata
-		client.prefs.metadata_dislikes = new_metadata
+		client.prefs.update_preference_by_type(/datum/preference/text/living/ooc_notes_dislikes, new_metadata)
 		to_chat(user, span_filter_notice("OOC note dislikes have been updated. Don't forget to save!"))
 		log_admin("[key_name(user)] updated their OOC note dislikes mid-round.")
 		if(reopen)
@@ -186,56 +186,8 @@
 	set desc = "Sets your voice style!"
 	set category = "OOC.Game Settings"
 
-	//CHOMPEDIT START, Global Talk Sounds
-	var/list/possible_voice_types = get_talk_sound()/*list(
-		"beep-boop",
-		"goon speak 1",
-		"goon speak 2",
-		"goon speak 3",
-		"goon speak 4",
-		"goon speak blub",
-		"goon speak bottalk",
-		"goon speak buwoo",
-		"goon speak cow",
-		"goon speak lizard",
-		"goon speak pug",
-		"goon speak pugg",
-		"goon speak roach",
-		"goon speak skelly")
-	*/ //CHOMPEDIT END, Global Talk Sounds
+	var/list/possible_voice_types = get_talk_sound()
 	var/choice = tgui_input_list(usr, "Which set of sounds would you like to use for your character's speech sounds?", "Voice Sounds", possible_voice_types)
 	if(!choice)
 		voice_sounds_list = talk_sound
-	switch(choice)
-		if("beep-boop")
-			voice_sounds_list = talk_sound
-		if("goon speak 1")
-			voice_sounds_list = goon_speak_one_sound
-		if("goon speak 2")
-			voice_sounds_list = goon_speak_two_sound
-		if("goon speak 3")
-			voice_sounds_list = goon_speak_three_sound
-		if("goon speak 4")
-			voice_sounds_list = goon_speak_four_sound
-		if("goon speak blub")
-			voice_sounds_list = goon_speak_blub_sound
-		if("goon speak bottalk")
-			voice_sounds_list = goon_speak_bottalk_sound
-		if("goon speak buwoo")
-			voice_sounds_list = goon_speak_buwoo_sound
-		if("goon speak cow")
-			voice_sounds_list = goon_speak_cow_sound
-		if("goon speak lizard")
-			voice_sounds_list = goon_speak_lizard_sound
-		if("goon speak pug")
-			voice_sounds_list = goon_speak_pug_sound
-		if("goon speak pugg")
-			voice_sounds_list = goon_speak_pugg_sound
-		if("goon speak roach")
-			voice_sounds_list = goon_speak_roach_sound
-		if("goon speak skelly")
-			voice_sounds_list = goon_speak_skelly_sound
-//CHOMPedit start.
-		if("xeno speak")
-			voice_sounds_list = xeno_speak_sound
-//CHOMPedit end.
+	voice_sounds_list = get_talk_sound(choice)

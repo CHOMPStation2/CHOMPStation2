@@ -23,7 +23,7 @@
 
 /obj/item/reagent_containers/food/snacks/tamales/Initialize()
 	..()
-	reagents.add_reagent("protein", 5)
+	reagents.add_reagent(REAGENT_ID_PROTEIN, 5)
 	bitesize = 6
 
 /obj/item/reagent_containers/food/snacks/bigos
@@ -37,8 +37,8 @@
 
 /obj/item/reagent_containers/food/snacks/bigos/Initialize()
 	..()
-	reagents.add_reagent("protein", 4)
-	reagents.add_reagent("water", 3)
+	reagents.add_reagent(REAGENT_ID_PROTEIN, 4)
+	reagents.add_reagent(REAGENT_ID_WATER, 3)
 	bitesize = 7
 
 /obj/item/reagent_containers/food/snacks/concha
@@ -77,7 +77,7 @@
 
 /obj/item/reagent_containers/food/snacks/tocino/Initialize()
 	..()
-	reagents.add_reagent("protein", 5)
+	reagents.add_reagent(REAGENT_ID_PROTEIN, 5)
 	bitesize = 5
 
 /obj/item/reagent_containers/food/snacks/garlicbread
@@ -102,7 +102,7 @@
 
 /obj/item/reagent_containers/food/snacks/plumpburger/Initialize()
 	..()
-	reagents.add_reagent("protein", 5)
+	reagents.add_reagent(REAGENT_ID_PROTEIN, 5)
 	bitesize = 5
 
 
@@ -113,12 +113,12 @@
 	icon = 'icons/obj/food_ch.dmi'
 	icon_state = "bigbeanburrito"
 	nutriment_amt = 15
-	nutriment_desc = list("tortilla" = 2, "meat" = 3, "bean" = 5, "cheese" = 3, "Mexico" = 7)
+	nutriment_desc = list("tortilla" = 2, "meat" = 3, "bean" = 5, REAGENT_ID_CHEESE = 3, "Mexico" = 7)
 
 /obj/item/reagent_containers/food/snacks/slice/bigbeanburrito/Initialize()
 	. = ..()
-	reagents.add_reagent("protein", 12)
-	reagents.add_reagent("nutriment", 15)
+	reagents.add_reagent(REAGENT_ID_PROTEIN, 12)
+	reagents.add_reagent(REAGENT_ID_NUTRIMENT, 15)
 	bitesize = 6
 
 /obj/item/reagent_containers/food/snacks/sliceable/supremoburrito
@@ -128,15 +128,15 @@
 	icon_state = "supremoburrito"
 	slice_path = /obj/item/reagent_containers/food/snacks/slice/bigbeanburrito/filled
 	slices_num = 5
-	nutriment_desc = list("tortilla" = 2, "meat" = 4, "bean" = 7, "cheese" = 4, "chili" = 1, "Mexico" = 7)
+	nutriment_desc = list("tortilla" = 2, "meat" = 4, "bean" = 7, REAGENT_ID_CHEESE = 4, PLANT_CHILI = 1, "Mexico" = 7)
 	nutriment_amt = 50
 
 
 /obj/item/reagent_containers/food/snacks/sliceable/supremoburrito/Initialize()
 	. = ..()
-	reagents.add_reagent("protein", 50)
-	reagents.add_reagent("nutriment", 55)
-	reagents.add_reagent("capsaicin", 3)
+	reagents.add_reagent(REAGENT_ID_PROTEIN, 50)
+	reagents.add_reagent(REAGENT_ID_NUTRIMENT, 55)
+	reagents.add_reagent(REAGENT_ID_CAPSAICIN, 3)
 	bitesize = 3
 
 /obj/item/reagent_containers/food/snacks/slice/bigbeanburrito
@@ -153,10 +153,10 @@
 /obj/item/reagent_containers/food/snacks/steamtealeaf
 	name = "Steamed tea leaf"
 	desc = "A freshly picked tea leaf steamed to inhibit oxidation. Needs rolling."
-	icon = 'icons/obj/food.dmi'
+	icon = 'icons/obj/food_ch.dmi'
 	icon_state = "tealeafsteam"
 	nutriment_amt = 0
-	nutriment_desc = list("nothing" = 1)
+	nutriment_desc = list(REAGENT_ID_NOTHING = 1)
 
 /obj/item/reagent_containers/food/snacks/steamtealeaf/Initialize()
 	..()
@@ -171,10 +171,10 @@
 /obj/item/reagent_containers/food/snacks/steamrolltealeaf
 	name = "Rolled steamed tea leaf"
 	desc = "A steamed tea leaf ready for drying."
-	icon = 'icons/obj/food.dmi'
+	icon = 'icons/obj/food_ch.dmi'
 	icon_state = "tealeafsteamroll"
 	nutriment_amt = 0
-	nutriment_desc = list("nothing" = 1)
+	nutriment_desc = list(REAGENT_ID_NOTHING = 1)
 
 /obj/item/reagent_containers/food/snacks/steamrolltealeaf/Initialize()
 	..()
@@ -183,14 +183,14 @@
 /obj/item/reagent_containers/food/snacks/greentealeaf
 	name = "Green tea leaf"
 	desc = "Green tea! Just grind and mix with hot water."
-	icon = 'icons/obj/food.dmi'
+	icon = 'icons/obj/food_ch.dmi'
 	icon_state = "greentealeaf"
 	nutriment_amt = 0
-	nutriment_desc = list("nothing" = 1)
+	nutriment_desc = list(REAGENT_ID_NOTHING = 1)
 
 /obj/item/reagent_containers/food/snacks/greentealeaf/Initialize()
 	..()
-	reagents.add_reagent("tealeavesgreen", 6)
+	reagents.add_reagent(REAGENT_ID_TEALEAVESGREEN, 6)
 	bitesize = 1
 
 /obj/item/reagent_containers/food/snacks/butterscotch
@@ -297,14 +297,14 @@
 	trash = /obj/item/trash/brownies
 	filling_color = "#E39C29"
 	nutriment_amt = 8
-	nutriment_desc = list("vanilla" = 8)
+	nutriment_desc = list(REAGENT_ID_VANILLA = 8)
 	center_of_mass_x = 15 //CHOMPEdit
 	center_of_mass_y= 9 //CHOMPEdit
 	bitesize = 2
 
 /obj/item/reagent_containers/food/snacks/sliceable/blondies/Initialize()
 	. = ..()
-	reagents.add_reagent("protein", 2)
+	reagents.add_reagent(REAGENT_ID_PROTEIN, 2)
 
 /obj/item/reagent_containers/food/snacks/blondiesslice
 	name = "blondie"
@@ -314,7 +314,7 @@
 	trash = /obj/item/trash/plate
 	filling_color = "#F5B951"
 	bitesize = 2
-	nutriment_desc = list("vanilla" = 1)
+	nutriment_desc = list(REAGENT_ID_VANILLA = 1)
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 12 //CHOMPEdit
 
@@ -323,7 +323,7 @@
 
 /obj/item/reagent_containers/food/snacks/blondiesslice/filled/Initialize()
 	. = ..()
-	reagents.add_reagent("protein", 1)
+	reagents.add_reagent(REAGENT_ID_PROTEIN, 1)
 
 /obj/item/reagent_containers/food/snacks/churro
 	name = "churro"
@@ -338,4 +338,4 @@
 
 /obj/item/reagent_containers/food/snacks/churro/Initialize()
 	. = ..()
-	reagents.add_reagent("cookingoil", 1)
+	reagents.add_reagent(REAGENT_ID_COOKINGOIL, 1)

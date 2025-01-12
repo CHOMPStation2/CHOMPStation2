@@ -20,6 +20,7 @@
 #define FACTION_VIRGO3B "virgo3b"
 
 #define FACTION_ALTEVIAN "altevian"
+#define FACTION_BLACKHOLE "blackhole" //CHOMPAdd
 #define FACTION_CULT "cult"
 #define FACTION_ECLIPSE "eclipse" //CHOMPAdd
 #define FACTION_GLAMOUR "glamour"
@@ -115,6 +116,7 @@
 #define FACTION_WOLFTAUR "wolftaur"
 #define FACTION_WORM "worm"
 #define FACTION_XENO "xeno"
+#define FACTION_CORGI "corgi"
 #define FACTION_ZORGOIA "zorgoia" // CHOMPAdd
 
 #define FACTION_PLANTS "plants"

@@ -9,8 +9,8 @@
 	buckle_lying = 0 //force people to sit up in chairs when buckled
 	var/propelled = 0 // Check for fire-extinguisher-driven chairs
 
-/obj/structure/bed/chair/New(var/newloc, var/new_material, var/new_padding_material)
-	..()
+/obj/structure/bed/chair/Initialize(var/newloc, var/new_material, var/new_padding_material)
+	. = ..()
 	update_layer()
 
 /obj/structure/bed/chair/attackby(obj/item/W as obj, mob/user as mob)
@@ -127,38 +127,38 @@
 		I.color = padding_material.icon_colour
 		add_overlay(I)
 
-/obj/structure/bed/chair/comfy/brown/New(var/newloc, var/new_material, var/new_padding_material)
-	..(newloc, MAT_STEEL, MAT_LEATHER)
+/obj/structure/bed/chair/comfy/brown/Initialize(var/newloc, var/new_material, var/new_padding_material)
+	. = ..(newloc, MAT_STEEL, MAT_LEATHER)
 
-/obj/structure/bed/chair/comfy/red/New(var/newloc, var/new_material, var/new_padding_material)
-	..(newloc, MAT_STEEL, "carpet")
+/obj/structure/bed/chair/comfy/red/Initialize(var/newloc, var/new_material, var/new_padding_material)
+	. = ..(newloc, MAT_STEEL, MAT_CARPET)
 
-/obj/structure/bed/chair/comfy/teal/New(var/newloc, var/new_material, var/new_padding_material)
-	..(newloc, MAT_STEEL, "teal")
+/obj/structure/bed/chair/comfy/teal/Initialize(var/newloc, var/new_material, var/new_padding_material)
+	. = ..(newloc, MAT_STEEL, MAT_CLOTH_TEAL)
 
-/obj/structure/bed/chair/comfy/black/New(var/newloc, var/new_material, var/new_padding_material)
-	..(newloc, MAT_STEEL, "black")
+/obj/structure/bed/chair/comfy/black/Initialize(var/newloc, var/new_material, var/new_padding_material)
+	. = ..(newloc, MAT_STEEL, MAT_CLOTH_BLACK)
 
-/obj/structure/bed/chair/comfy/green/New(var/newloc, var/new_material, var/new_padding_material)
-	..(newloc, MAT_STEEL, "green")
+/obj/structure/bed/chair/comfy/green/Initialize(var/newloc, var/new_material, var/new_padding_material)
+	. = ..(newloc, MAT_STEEL, MAT_CLOTH_GREEN)
 
-/obj/structure/bed/chair/comfy/purp/New(var/newloc, var/new_material, var/new_padding_material)
-	..(newloc, MAT_STEEL, "purple")
+/obj/structure/bed/chair/comfy/purp/Initialize(var/newloc, var/new_material, var/new_padding_material)
+	. = ..(newloc, MAT_STEEL, MAT_CLOTH_PURPLE)
 
-/obj/structure/bed/chair/comfy/blue/New(var/newloc, var/new_material, var/new_padding_material)
-	..(newloc, MAT_STEEL, "blue")
+/obj/structure/bed/chair/comfy/blue/Initialize(var/newloc, var/new_material, var/new_padding_material)
+	. = ..(newloc, MAT_STEEL, MAT_CLOTH_BLUE)
 
-/obj/structure/bed/chair/comfy/beige/New(var/newloc, var/new_material, var/new_padding_material)
-	..(newloc, MAT_STEEL, "beige")
+/obj/structure/bed/chair/comfy/beige/Initialize(var/newloc, var/new_material, var/new_padding_material)
+	. = ..(newloc, MAT_STEEL, MAT_CLOTH_BEIGE)
 
-/obj/structure/bed/chair/comfy/lime/New(var/newloc, var/new_material, var/new_padding_material)
-	..(newloc, MAT_STEEL, "lime")
+/obj/structure/bed/chair/comfy/lime/Initialize(var/newloc, var/new_material, var/new_padding_material)
+	. = ..(newloc, MAT_STEEL, MAT_CLOTH_LIME)
 
-/obj/structure/bed/chair/comfy/yellow/New(var/newloc, var/new_material, var/new_padding_material)
-	..(newloc, MAT_STEEL, "yellow")
+/obj/structure/bed/chair/comfy/yellow/Initialize(var/newloc, var/new_material, var/new_padding_material)
+	. = ..(newloc, MAT_STEEL, MAT_CLOTH_YELLOW)
 
-/obj/structure/bed/chair/comfy/orange/New(var/newloc, var/new_material, var/new_padding_material)
-	..(newloc, MAT_STEEL, "orange")
+/obj/structure/bed/chair/comfy/orange/Initialize(var/newloc, var/new_material, var/new_padding_material)
+	. = ..(newloc, MAT_STEEL, MAT_CLOTH_ORANGE)
 
 /obj/structure/bed/chair/comfy/rounded
 	name = "rounded chair"
@@ -166,38 +166,38 @@
 	icon_state = "roundedchair"
 	base_icon = "roundedchair"
 
-/obj/structure/bed/chair/comfy/rounded/brown/New(var/newloc, var/new_material, var/new_padding_material)
-	..(newloc, MAT_STEEL, MAT_LEATHER)
+/obj/structure/bed/chair/comfy/rounded/brown/Initialize(var/newloc, var/new_material, var/new_padding_material)
+	. = ..(newloc, MAT_STEEL, MAT_LEATHER)
 
-/obj/structure/bed/chair/comfy/rounded/red/New(var/newloc, var/new_material, var/new_padding_material)
-	..(newloc, MAT_STEEL, "carpet")
+/obj/structure/bed/chair/comfy/rounded/red/Initialize(var/newloc, var/new_material, var/new_padding_material)
+	. = ..(newloc, MAT_STEEL, MAT_CARPET)
 
-/obj/structure/bed/chair/comfy/rounded/teal/New(var/newloc, var/new_material, var/new_padding_material)
-	..(newloc, MAT_STEEL, "teal")
+/obj/structure/bed/chair/comfy/rounded/teal/Initialize(var/newloc, var/new_material, var/new_padding_material)
+	. = ..(newloc, MAT_STEEL, MAT_CLOTH_TEAL)
 
-/obj/structure/bed/chair/comfy/rounded/black/New(var/newloc, var/new_material, var/new_padding_material)
-	..(newloc, MAT_STEEL, "black")
+/obj/structure/bed/chair/comfy/rounded/black/Initialize(var/newloc, var/new_material, var/new_padding_material)
+	. = ..(newloc, MAT_STEEL, MAT_CLOTH_BLACK)
 
-/obj/structure/bed/chair/comfy/rounded/green/New(var/newloc, var/new_material, var/new_padding_material)
-	..(newloc, MAT_STEEL, "green")
+/obj/structure/bed/chair/comfy/rounded/green/Initialize(var/newloc, var/new_material, var/new_padding_material)
+	. = ..(newloc, MAT_STEEL, MAT_CLOTH_GREEN)
 
-/obj/structure/bed/chair/comfy/rounded/purple/New(var/newloc, var/new_material, var/new_padding_material)
-	..(newloc, MAT_STEEL, "purple")
+/obj/structure/bed/chair/comfy/rounded/purple/Initialize(var/newloc, var/new_material, var/new_padding_material)
+	. = ..(newloc, MAT_STEEL, MAT_CLOTH_PURPLE)
 
-/obj/structure/bed/chair/comfy/rounded/blue/New(var/newloc, var/new_material, var/new_padding_material)
-	..(newloc, MAT_STEEL, "blue")
+/obj/structure/bed/chair/comfy/rounded/blue/Initialize(var/newloc, var/new_material, var/new_padding_material)
+	. = ..(newloc, MAT_STEEL, MAT_CLOTH_BLUE)
 
-/obj/structure/bed/chair/comfy/rounded/beige/New(var/newloc, var/new_material, var/new_padding_material)
-	..(newloc, MAT_STEEL, "beige")
+/obj/structure/bed/chair/comfy/rounded/beige/Initialize(var/newloc, var/new_material, var/new_padding_material)
+	. = ..(newloc, MAT_STEEL, MAT_CLOTH_BEIGE)
 
-/obj/structure/bed/chair/comfy/rounded/lime/New(var/newloc, var/new_material, var/new_padding_material)
-	..(newloc, MAT_STEEL, "lime")
+/obj/structure/bed/chair/comfy/rounded/lime/Initialize(var/newloc, var/new_material, var/new_padding_material)
+	. = ..(newloc, MAT_STEEL, MAT_CLOTH_LIME)
 
-/obj/structure/bed/chair/comfy/rounded/yellow/New(var/newloc, var/new_material, var/new_padding_material)
-	..(newloc, MAT_STEEL, "yellow")
+/obj/structure/bed/chair/comfy/rounded/yellow/Initialize(var/newloc, var/new_material, var/new_padding_material)
+	. = ..(newloc, MAT_STEEL, MAT_CLOTH_YELLOW)
 
-/obj/structure/bed/chair/comfy/rounded/orange/New(var/newloc, var/new_material, var/new_padding_material)
-	..(newloc, MAT_STEEL, "orange")
+/obj/structure/bed/chair/comfy/rounded/orange/Initialize(var/newloc, var/new_material, var/new_padding_material)
+	. = ..(newloc, MAT_STEEL, MAT_CLOTH_ORANGE)
 
 /obj/structure/bed/chair/office
 	anchored = FALSE
@@ -246,7 +246,7 @@
 			occupant.apply_effect(6, STUTTER, blocked)
 			occupant.apply_damage(10, BRUTE, def_zone, blocked, soaked)
 			playsound(src, 'sound/weapons/punch1.ogg', 50, 1, -1)
-			if(istype(A, /mob/living))
+			if(isliving(A))
 				var/mob/living/victim = A
 				def_zone = ran_zone()
 				blocked = victim.run_armor_check(def_zone, "melee")
@@ -277,8 +277,8 @@
 		return
 	..()
 
-/obj/structure/bed/chair/wood/New(var/newloc)
-	..(newloc, "wood")
+/obj/structure/bed/chair/wood/Initialize(var/newloc)
+	. = ..(newloc, MAT_WOOD)
 
 /obj/structure/bed/chair/wood/wings
 	icon_state = "wooden_chair_wings"
@@ -292,7 +292,7 @@
 	base_icon = "sofamiddle"
 	icon_state = "sofamiddle"
 	applies_material_colour = 1
-	var/sofa_material = "carpet"
+	var/sofa_material = MAT_CARPET
 	var/corner_piece = FALSE
 
 /obj/structure/bed/chair/sofa/update_icon()
@@ -300,7 +300,7 @@
 		var/datum/material/color_material = get_material_by_name(sofa_material)
 		color = color_material.icon_colour
 
-		if(sofa_material == "carpet")
+		if(sofa_material == MAT_CARPET)
 			name = "red [initial(name)]"
 		else
 			name = "[sofa_material] [initial(name)]"
@@ -364,8 +364,8 @@
 	color = null
 	var/padding_color = "#CC0000"
 
-/obj/structure/bed/chair/sofa/bench/New(var/newloc, var/new_material, var/new_padding_material)
-	..()
+/obj/structure/bed/chair/sofa/bench/Initialize(var/newloc, var/new_material, var/new_padding_material)
+	. = ..()
 	var/mutable_appearance/MA
 	// If we're north-facing, metal goes above mob, padding overlay goes below mob.
 	if((dir & NORTH) && !corner_piece)
@@ -415,37 +415,37 @@
 //color variations
 //Middle sofas first
 /obj/structure/bed/chair/sofa
-	sofa_material = "carpet"
+	sofa_material = MAT_CARPET
 
 /obj/structure/bed/chair/sofa/brown
-	sofa_material = "leather"
+	sofa_material = MAT_LEATHER
 
 /obj/structure/bed/chair/sofa/teal
-	sofa_material = "teal"
+	sofa_material = MAT_CLOTH_TEAL
 
 /obj/structure/bed/chair/sofa/black
-	sofa_material = "black"
+	sofa_material = MAT_CLOTH_BLACK
 
 /obj/structure/bed/chair/sofa/green
-	sofa_material = "green"
+	sofa_material = MAT_CLOTH_GREEN
 
 /obj/structure/bed/chair/sofa/purp
-	sofa_material = "purple"
+	sofa_material = MAT_CLOTH_PURPLE
 
 /obj/structure/bed/chair/sofa/blue
-	sofa_material = "blue"
+	sofa_material = MAT_CLOTH_BLUE
 
 /obj/structure/bed/chair/sofa/beige
-	sofa_material = "beige"
+	sofa_material = MAT_CLOTH_BEIGE
 
 /obj/structure/bed/chair/sofa/lime
-	sofa_material = "lime"
+	sofa_material = MAT_CLOTH_LIME
 
 /obj/structure/bed/chair/sofa/yellow
-	sofa_material = "yellow"
+	sofa_material = MAT_CLOTH_YELLOW
 
 /obj/structure/bed/chair/sofa/orange
-	sofa_material = "orange"
+	sofa_material = MAT_CLOTH_ORANGE
 
 //sofa directions
 
@@ -459,91 +459,91 @@
 	icon_state = "sofacorner"
 
 /obj/structure/bed/chair/sofa/left/brown
-	sofa_material = "leather"
+	sofa_material = MAT_LEATHER
 
 /obj/structure/bed/chair/sofa/right/brown
-	sofa_material = "leather"
+	sofa_material = MAT_LEATHER
 
 /obj/structure/bed/chair/sofa/corner/brown
-	sofa_material = "leather"
+	sofa_material = MAT_LEATHER
 
 /obj/structure/bed/chair/sofa/left/teal
-	sofa_material = "teal"
+	sofa_material = MAT_CLOTH_TEAL
 
 /obj/structure/bed/chair/sofa/right/teal
-	sofa_material = "teal"
+	sofa_material = MAT_CLOTH_TEAL
 
 /obj/structure/bed/chair/sofa/corner/teal
-	sofa_material = "teal"
+	sofa_material = MAT_CLOTH_TEAL
 
 /obj/structure/bed/chair/sofa/left/black
-	sofa_material = "black"
+	sofa_material = MAT_CLOTH_BLACK
 
 /obj/structure/bed/chair/sofa/right/black
-	sofa_material = "black"
+	sofa_material = MAT_CLOTH_BLACK
 
 /obj/structure/bed/chair/sofa/corner/black
-	sofa_material = "black"
+	sofa_material = MAT_CLOTH_BLACK
 
 /obj/structure/bed/chair/sofa/left/green
-	sofa_material = "green"
+	sofa_material = MAT_CLOTH_GREEN
 
 /obj/structure/bed/chair/sofa/right/green
-	sofa_material = "green"
+	sofa_material = MAT_CLOTH_GREEN
 
 /obj/structure/bed/chair/sofa/corner/green
-	sofa_material = "green"
+	sofa_material = MAT_CLOTH_GREEN
 
 /obj/structure/bed/chair/sofa/left/purp
-	sofa_material = "purple"
+	sofa_material = MAT_CLOTH_PURPLE
 
 /obj/structure/bed/chair/sofa/right/purp
-	sofa_material = "purple"
+	sofa_material = MAT_CLOTH_PURPLE
 
 /obj/structure/bed/chair/sofa/corner/purp
-	sofa_material = "purple"
+	sofa_material = MAT_CLOTH_PURPLE
 
 /obj/structure/bed/chair/sofa/left/blue
-	sofa_material = "blue"
+	sofa_material = MAT_CLOTH_BLUE
 
 /obj/structure/bed/chair/sofa/right/blue
-	sofa_material = "blue"
+	sofa_material = MAT_CLOTH_BLUE
 
 /obj/structure/bed/chair/sofa/corner/blue
-	sofa_material = "blue"
+	sofa_material = MAT_CLOTH_BLUE
 
 /obj/structure/bed/chair/sofa/left/beige
-	sofa_material = "beige"
+	sofa_material = MAT_CLOTH_BEIGE
 
 /obj/structure/bed/chair/sofa/right/beige
-	sofa_material = "beige"
+	sofa_material = MAT_CLOTH_BEIGE
 
 /obj/structure/bed/chair/sofa/corner/beige
-	sofa_material = "beige"
+	sofa_material = MAT_CLOTH_BEIGE
 
 /obj/structure/bed/chair/sofa/left/lime
-	sofa_material = "lime"
+	sofa_material = MAT_CLOTH_LIME
 
 /obj/structure/bed/chair/sofa/right/lime
-	sofa_material = "lime"
+	sofa_material = MAT_CLOTH_LIME
 
 /obj/structure/bed/chair/sofa/corner/lime
-	sofa_material = "lime"
+	sofa_material = MAT_CLOTH_LIME
 
 /obj/structure/bed/chair/sofa/left/yellow
-	sofa_material = "yellow"
+	sofa_material = MAT_CLOTH_YELLOW
 
 /obj/structure/bed/chair/sofa/right/yellow
-	sofa_material = "yellow"
+	sofa_material = MAT_CLOTH_YELLOW
 
 /obj/structure/bed/chair/sofa/corner/yellow
-	sofa_material = "yellow"
+	sofa_material = MAT_CLOTH_YELLOW
 
 /obj/structure/bed/chair/sofa/left/orange
-	sofa_material = "orange"
+	sofa_material = MAT_CLOTH_ORANGE
 
 /obj/structure/bed/chair/sofa/right/orange
-	sofa_material = "orange"
+	sofa_material = MAT_CLOTH_ORANGE
 
 /obj/structure/bed/chair/sofa/corner/orange
-	sofa_material = "orange"
+	sofa_material = MAT_CLOTH_ORANGE

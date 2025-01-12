@@ -175,7 +175,7 @@
 
 	set waitfor = 0
 
-	message_admins("Supermatter exploded at ([x],[y],[z] - <A HREF='?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[x];Y=[y];Z=[z]'>JMP</a>)",0,1)
+	message_admins("Supermatter exploded at ([x],[y],[z] - <A href='byond://?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[x];Y=[y];Z=[z]'>JMP</a>)",0,1)
 	log_game("SUPERMATTER([x],[y],[z]) Exploded. Power:[power], Oxygen:[oxygen], Damage:[damage], Integrity:[get_integrity()]")
 	anchored = TRUE
 	grav_pulling = 1
@@ -309,7 +309,7 @@
 		if((damage > emergency_point) && !public_alert)
 			global_announcer.autosay("WARNING: SUPERMATTER CRYSTAL DELAMINATION IMMINENT!", "Supermatter Monitor")
 			for(var/mob/M in player_list) // Rykka adds SM Delam alarm
-				if(!istype(M,/mob/new_player) && !isdeaf(M)) // Rykka adds SM Delam alarm
+				if(!isnewplayer(M) && !isdeaf(M)) // Rykka adds SM Delam alarm
 					M << message_sound // Rykka adds SM Delam alarm
 			admin_chat_message(message = "SUPERMATTER DELAMINATING!", color = "#FF2222") //VOREStation Add
 			public_alert = 1
@@ -389,7 +389,7 @@
 		damage = max( damage + min( ( (removed.temperature - CRITICAL_TEMPERATURE) / 150 ), damage_inc_limit ) , 0 )
 		//Ok, 100% oxygen atmosphere = best reaction
 		//Maxes out at 100% oxygen pressure
-		oxygen = max(min((removed.gas["oxygen"] - (removed.gas["nitrogen"] * NITROGEN_RETARDATION_FACTOR)) / removed.total_moles, 1), 0)
+		oxygen = max(min((removed.gas[GAS_O2] - (removed.gas[GAS_N2] * NITROGEN_RETARDATION_FACTOR)) / removed.total_moles, 1), 0)
 
 		//calculate power gain for oxygen reaction
 		var/temp_factor
@@ -413,8 +413,8 @@
 
 		//Release reaction gasses
 		var/heat_capacity = removed.heat_capacity()
-		removed.adjust_multi("phoron", max(device_energy / PHORON_RELEASE_MODIFIER, 0), \
-		                     "oxygen", max((device_energy + removed.temperature - T0C) / OXYGEN_RELEASE_MODIFIER, 0))
+		removed.adjust_multi(GAS_PHORON, max(device_energy / PHORON_RELEASE_MODIFIER, 0), \
+		                     GAS_O2, max((device_energy + removed.temperature - T0C) / OXYGEN_RELEASE_MODIFIER, 0))
 
 		var/thermal_power = THERMAL_RELEASE_MODIFIER * device_energy
 		if (debug)
@@ -561,7 +561,7 @@
 /obj/machinery/power/supermatter/Bumped(atom/AM as mob|obj)
 	if(istype(AM, /obj/effect))
 		return
-	if(istype(AM, /mob/living))
+	if(isliving(AM))
 		var/mob/living/M = AM
 		var/datum/gender/T = gender_datums[M.get_visible_gender()]
 		AM.visible_message(span_warning("\The [AM] slams into \the [src] inducing a resonance... [T.his] body starts to glow and catch flame before flashing into ash."),\
@@ -630,7 +630,7 @@
 	icon_state = "darkmatter_broken"
 
 /obj/item/broken_sm/New()
-	message_admins("Broken SM shard created at ([x],[y],[z] - <A HREF='?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[x];Y=[y];Z=[z]'>JMP</a>)",0,1)
+	message_admins("Broken SM shard created at ([x],[y],[z] - <A href='byond://?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[x];Y=[y];Z=[z]'>JMP</a>)",0,1)
 	START_PROCESSING(SSobj, src)
 	return ..()
 

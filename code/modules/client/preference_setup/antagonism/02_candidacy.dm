@@ -1,6 +1,7 @@
 var/global/list/special_roles = list( //keep synced with the defines BE_* in setup.dm --rastaf
 //some autodetection here.
 // Change these to 0 if the equivalent mode is disabled for whatever reason!
+	// CHOMPEdit Start
 	"traitor" = 1,										// 0
 	"operative" = 1,									// 1
 	"changeling" = 1,									// 2
@@ -8,7 +9,9 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 	"malf AI" = 1,										// 4
 	"revolutionary" = 1,								// 5
 	"alien candidate" = 1,								// 6
+	// CHOMPEdit End
 	"positronic brain" = 1,								// 7
+	// CHOMPEdit Start
 	"cultist" = 1,										// 8
 	"renegade" = 1,										// 9
 	"ninja" = 1,										// 10
@@ -17,14 +20,16 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 	"mutineer" = 1,										// 13
 	"loyalist" = 1,										// 14
 	"GHOST" = 0,										// CHOMPEDIT - add seperate section for ghost roles
+	// CHOMPEdit End
 	"pAI candidate" = 1,								// 15
 	//VOREStation Add
 	"lost drone" = 1,									// 16
 	"maint pred" = 1,									// 17
-	"morph" = 1,										// 18
-	"corgi" = 1,										// 19
-	"cursed sword" = 1,									// 20
-	"Ship Survivor" = 1,								// 21
+	"stowaway" = 1,										// 18 // CHOMPEdit
+	"morph" = 1,										// 19
+	"corgi" = 1,										// 20
+	"cursed sword" = 1,									// 21
+	"Ship Survivor" = 1,								// 22
 	//VOREStation Add End
 )
 
@@ -52,7 +57,7 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 				if(jobban_isbanned(user, i) || (i == "positronic brain" && jobban_isbanned(user, JOB_AI) && jobban_isbanned(user, JOB_CYBORG)) || (i == "pAI candidate" && jobban_isbanned(user, JOB_PAI)))
 					. += span_bold("Be [i]:") + " <font color=red><b> \[BANNED]</b></font><br>"
 				else
-					. += span_bold("Be [i]:") + " <a href='?src=\ref[src];be_special=[n]'>" + span_bold("[pref.be_special&(1<<n) ? "Yes" : "No"]") + " </a><br>"
+					. += span_bold("Be [i]:") + " <a href='byond://?src=\ref[src];be_special=[n]'>" + span_bold("[pref.be_special&(1<<n) ? "Yes" : "No"]") + " </a><br>"
 			// CHOMPEdit Start -  Add header for Ghost roles section
 			if(i == "GHOST")
 				. += "<h4>" + span_underline("GHOST ROLES") + " - Roles that are joinable as ghosts, but not true antags.</h4><br>"

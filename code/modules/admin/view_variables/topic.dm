@@ -187,7 +187,7 @@
 		if(!check_rights(0))	return
 
 		var/mob/M = locate(href_list["give_ai"])
-		if(!istype(M, /mob/living))
+		if(!isliving(M))
 			to_chat(usr, span_notice("This can only be used on instances of type /mob/living"))
 			return
 		var/mob/living/L = M
@@ -411,21 +411,25 @@
 	else if(href_list["addverb"])
 		if(!check_rights(R_DEBUG))      return
 
-		var/mob/living/H = locate(href_list["addverb"])
+		var/mob/H = locate(href_list["addverb"])
 
-		if(!istype(H))
-			to_chat(usr, "This can only be done to instances of type /mob/living")
+		if(!ismob(H))
+			to_chat(usr, "This can only be done to instances of type /mob")
 			return
 		var/list/possibleverbs = list()
 		possibleverbs += "Cancel" 								// One for the top...
-		possibleverbs += typesof(/mob/proc,/mob/verb,/mob/living/proc,/mob/living/verb)
-		if(istype(H,/mob/living/carbon/human))
+		possibleverbs += typesof(/mob/proc, /mob/verb)
+		if(isobserver(H))
+			possibleverbs += typesof(/mob/observer/dead/proc,/mob/observer/dead/verb)
+		if(isliving(H))
+			possibleverbs += typesof(/mob/living/proc,/mob/living/verb)
+		if(ishuman(H))
 			possibleverbs += typesof(/mob/living/carbon/proc,/mob/living/carbon/verb,/mob/living/carbon/human/verb,/mob/living/carbon/human/proc)
-		if(istype(H,/mob/living/silicon/robot))
+		if(isrobot(H))
 			possibleverbs += typesof(/mob/living/silicon/proc,/mob/living/silicon/robot/proc,/mob/living/silicon/robot/verb)
-		if(istype(H,/mob/living/silicon/ai))
+		if(isAI(H))
 			possibleverbs += typesof(/mob/living/silicon/proc,/mob/living/silicon/ai/proc,/mob/living/silicon/ai/verb)
-		if(istype(H,/mob/living/simple_mob))
+		if(isanimal(H))
 			possibleverbs += typesof(/mob/living/simple_mob/proc)
 		possibleverbs -= H.verbs
 		possibleverbs += "Cancel" 								// ...And one for the bottom
@@ -572,7 +576,7 @@
 		if(!thing)
 			to_chat(usr, span_warning("The object you tried to expose to [C] no longer exists (GC'd)"))
 			return
-		message_admins("[key_name_admin(usr)] Showed [key_name_admin(C)] a <a href='?_src_=vars;[HrefToken(TRUE)];datumrefresh=\ref[thing]'>VV window</a>")
+		message_admins("[key_name_admin(usr)] Showed [key_name_admin(C)] a <a href='byond://?_src_=vars;[HrefToken(TRUE)];datumrefresh=\ref[thing]'>VV window</a>")
 		log_admin("Admin [key_name(usr)] Showed [key_name(C)] a VV window of a [src]")
 		to_chat(C, "[holder.fakekey ? "an Administrator" : "[usr.client.key]"] has granted you access to view a View Variables window")
 		C.debug_variables(thing)

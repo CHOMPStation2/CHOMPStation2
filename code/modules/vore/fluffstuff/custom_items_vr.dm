@@ -532,8 +532,8 @@
 	var/client/owner_c = null //They'll be dead when we message them probably.
 	var/state = 0 //0 - New, 1 - Paired, 2 - Breaking, 3 - Broken (same as iconstates)
 
-/obj/item/clothing/accessory/collar/khcrystal/New()
-	..()
+/obj/item/clothing/accessory/collar/khcrystal/Initialize()
+	. = ..()
 	update_state(0)
 
 /obj/item/clothing/accessory/collar/khcrystal/Destroy() //Waitwaitwait
@@ -618,8 +618,8 @@
 	max_storage_space = ITEMSIZE_COST_SMALL * 2
 	w_class = ITEMSIZE_SMALL
 
-/obj/item/storage/box/khcrystal/New()
-	..()
+/obj/item/storage/box/khcrystal/Initialize()
+	. = ..()
 	new /obj/item/paper/khcrystal_manual(src)
 	new /obj/item/clothing/accessory/collar/khcrystal(src)
 
@@ -902,8 +902,8 @@
 				slot_r_hand_str = 'icons/vore/custom_items_right_hand_vr.dmi',
 				)
 
-/obj/item/material/twohanded/fluff/New(var/newloc)
-	..(newloc," ") //See materials_vr_dmi for more information as to why this is a blank space.
+/obj/item/material/twohanded/fluff/Initialize(var/newloc)
+	. = ..(newloc," ") //See materials_vr_dmi for more information as to why this is a blank space.
 
 //jacknoir413:Areax Third
 /obj/item/melee/baton/fluff/stunstaff
@@ -926,11 +926,10 @@
 	var/wielded = 0
 	var/base_name = "stunstaff"
 
-/obj/item/melee/baton/fluff/stunstaff/New()
-	..()
+/obj/item/melee/baton/fluff/stunstaff/Initialize()
+	. = ..()
 	bcell = new/obj/item/cell/device/weapon(src)
 	update_icon()
-	return
 
 /obj/item/melee/baton/fluff/stunstaff/update_held_icon()
 	var/mob/living/M = loc
@@ -996,8 +995,8 @@
 	max_w_class = ITEMSIZE_HUGE
 	max_storage_space = 16
 
-/obj/item/storage/backpack/fluff/stunstaff/New()
-	..()
+/obj/item/storage/backpack/fluff/stunstaff/Initialize()
+	. = ..()
 	new /obj/item/melee/baton/fluff/stunstaff(src)
 
 
@@ -1047,7 +1046,7 @@
 	else
 		activate(user)
 
-	if(istype(user,/mob/living/carbon/human))
+	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		H.update_inv_l_hand()
 		H.update_inv_r_hand()
@@ -1158,7 +1157,7 @@
 
 /obj/item/reagent_containers/food/drinks/flask/vacuumflask/fluff/viktor/Initialize()
 	. = ..()
-	reagents.add_reagent("pwine", 60)
+	reagents.add_reagent(REAGENT_ID_PWINE, 60)
 
 //RadiantAurora: Tiemli Kroto
 /obj/item/clothing/glasses/welding/tiemgogs
@@ -1274,8 +1273,8 @@
 
 /obj/item/reagent_containers/food/drinks/glass2/fluff/claraflask/Initialize()
 	. = ..()
-	reagents.add_reagent("tea", 40)
-	reagents.add_reagent("milk", 20)
+	reagents.add_reagent(REAGENT_ID_TEA, 40)
+	reagents.add_reagent(REAGENT_ID_MILK, 20)
 
 /obj/item/reagent_containers/food/drinks/glass2/fluff/claraflask/update_icon()
 	..()
@@ -1349,12 +1348,12 @@ End CHOMP Removal*/
 	w_class = ITEMSIZE_TINY
 	starts_with = list(/obj/item/clothing/mask/smokable/cigarette = 7)
 
-/obj/item/storage/fancy/fluff/charlotte/New()
+/obj/item/storage/fancy/fluff/charlotte/Initialize()
 	if(!open_state)
 		open_state = "[initial(icon_state)]0"
 	if(!closed_state)
 		closed_state = "[initial(icon_state)]"
-	..()
+	. = ..()
 
 /obj/item/storage/fancy/fluff/charlotte/update_icon()
 	cut_overlays()
@@ -1383,7 +1382,7 @@ End CHOMP Removal*/
 	desc = "A mostly decorative knife made from thin ceramic and toothed with large black fangs. Printed on the flat is an eight-armed cross, like an asterisk with an extra stroke, ringed by a calligraphy-style crescent."
 	attack_verb = list("mauled", "bit", "sawed", "butchered")
 	dulled = 1
-	default_material = "glass"
+	default_material = MAT_GLASS
 
 
 //Ashling - Antoinette deKaultieste
@@ -1398,7 +1397,7 @@ End CHOMP Removal*/
 	desc = "A small bottle of finely ground poppyseed and mixed dried berries."
 	icon = 'icons/obj/chemical.dmi'
 	icon_state = "bottle3"
-	prefill = list("bicaridine" = 30, "nutriment" = 30)
+	prefill = list(REAGENT_ID_BICARIDINE = 30, REAGENT_ID_NUTRIMENT = 30)
 
 /obj/item/clothing/accessory/storage/ritualharness/fluff/antoinette/Initialize()
 	. = ..()
@@ -1569,7 +1568,8 @@ End CHOMP Removal*/
 	..()
 	icon_state = "ceph_d6[result]"
 
-/obj/item/dice/loaded/ceph/New()
+/obj/item/dice/loaded/ceph/Initialize()
+	. = ..()
 	icon_state = "ceph_d6[rand(1,sides)]"
 
 
@@ -1580,3 +1580,11 @@ End CHOMP Removal*/
 
 	icon = 'icons/inventory/accessory/item.dmi'
 	icon_state = "silver"
+
+//beeholddrbeesphb: Evelynn
+/obj/item/laser_pointer/evelynn_fluff
+	name = "Evelynn's Laser Pointer"
+	desc = "A small, furry, and fluffy toy that looks like a bee. It has laser eyes. Upon firing, the lasers make a buzzing noise."
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_state = "evelynn"
+	pointer_icon_state = "purple_laser"

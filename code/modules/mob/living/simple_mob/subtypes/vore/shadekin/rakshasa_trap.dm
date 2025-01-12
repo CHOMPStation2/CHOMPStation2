@@ -30,11 +30,11 @@
 	if(has_buckled_mobs() && can_use(user))
 		var/victim = english_list(buckled_mobs)
 		user.visible_message(
-			"<span class='notice'>[user] begins freeing [victim] from \the [src].</span>",
-			"<span class='notice'>You carefully begin to free [victim] from \the [src].</span>",
+			span_notice("[user] begins freeing [victim] from \the [src]."),
+			span_notice("You carefully begin to free [victim] from \the [src]."),
 			)
 		if(do_after(user, 5))
-			user.visible_message("<span class='notice'>[victim] has been freed from \the [src] by [user].</span>")
+			user.visible_message(span_notice("[victim] has been freed from \the [src] by [user]."))
 			for(var/A in buckled_mobs)
 				unbuckle_mob(A)
 			anchored = 0
@@ -53,7 +53,7 @@
 			)
 	var/sound = pick(goo_sounds)
 	playsound(src, sound, 100, 1)
-	L << "<span class='danger'>You hear a gooey schlorp as \the [src] ensnares your leg, trapping you in place!</span>"
+	L << span_danger("You hear a gooey schlorp as \the [src] ensnares your leg, trapping you in place!")
 	deployed = 0
 	can_buckle = initial(can_buckle)
 
@@ -61,11 +61,11 @@
 /obj/structure/gootrap/Crossed(AM as mob|obj)
 	if(deployed && isliving(AM))
 		var/mob/living/L = AM
-		if(L.m_intent == "run")
+		if(L.m_intent == I_RUN)
 			L.visible_message(
-				"<span class='danger'>[L] steps on \the [src].</span>",
-				"<span class='danger'>You step on \the [src]!</span>",
-				"<b>You hear a gooey schlorp as the goo ensnares your leg!</b>"
+				span_danger("[L] steps on \the [src]."),
+				span_danger("You step on \the [src]!"),
+				span_hear(span_bold("You hear a gooey schlorp as the goo ensnares your leg!"))
 				)
 			attack_mob(L)
 			if(!has_buckled_mobs())
@@ -73,4 +73,3 @@
 			deployed = 0
 			message_admins("[key_name(usr)] has stepped in the goo trap.")
 	..()
-

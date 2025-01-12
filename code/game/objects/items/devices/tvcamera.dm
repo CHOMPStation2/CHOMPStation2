@@ -54,11 +54,11 @@
 
 /obj/item/tvcamera/proc/show_ui(mob/user)
 	var/dat = list()
-	dat += "Channel name is: <a href='?src=\ref[src];channel=1'>[channel ? channel : "unidentified broadcast"]</a><br>"
-	dat += "Video streaming is <a href='?src=\ref[src];video=1'>[camera.status ? "on" : "off"]</a><br>"
+	dat += "Channel name is: <a href='byond://?src=\ref[src];channel=1'>[channel ? channel : "unidentified broadcast"]</a><br>"
+	dat += "Video streaming is <a href='byond://?src=\ref[src];video=1'>[camera.status ? "on" : "off"]</a><br>"
 	if(camera.status && showing_name)
 		dat += "- You're showing [showing_name] to your viewers.<br>"
-	dat += "Mic is <a href='?src=\ref[src];sound=1'>[radio.broadcasting ? "on" : "off"]</a><br>"
+	dat += "Mic is <a href='byond://?src=\ref[src];sound=1'>[radio.broadcasting ? "on" : "off"]</a><br>"
 	dat += "Sound is being broadcasted on frequency [format_frequency(radio.frequency)] ([get_frequency_name(radio.frequency)])<br>"
 	var/datum/browser/popup = new(user, "Hovercamera", "Eye Buddy", 300, 390, src)
 	popup.set_content(jointext(dat,null))
@@ -218,11 +218,11 @@
 
 /obj/item/clothing/accessory/bodycam/proc/show_bodycam_ui(mob/user)
 	var/dat = list()
-	dat += "Channel name is: <a href='?src=\ref[src];channel=1'>[channel ? channel : "unidentified broadcast"]</a><br>"
-	dat += "Video streaming is <a href='?src=\ref[src];video=1'>[bcamera.status ? "on" : "off"]</a><br>"
+	dat += "Channel name is: <a href='byond://?src=\ref[src];channel=1'>[channel ? channel : "unidentified broadcast"]</a><br>"
+	dat += "Video streaming is <a href='byond://?src=\ref[src];video=1'>[bcamera.status ? "on" : "off"]</a><br>"
 	if(bcamera.status && showing_name)
 		dat += "- You're showing [showing_name] to your viewers.<br>"
-	dat += "Mic is <a href='?src=\ref[src];sound=1'>[bradio.broadcasting ? "on" : "off"]</a><br>"
+	dat += "Mic is <a href='byond://?src=\ref[src];sound=1'>[bradio.broadcasting ? "on" : "off"]</a><br>"
 	dat += "Sound is being broadcasted on frequency [format_frequency(bradio.frequency)] ([get_frequency_name(bradio.frequency)])<br>"
 	var/datum/browser/popup = new(user, "Hovercamera", "Eye Buddy", 300, 390, src)
 	popup.set_content(jointext(dat,null))
@@ -238,19 +238,19 @@
 		if(nc)
 			channel = nc
 			bcamera.c_tag = channel
-			to_chat(usr, "<span class='notice'>New channel name - '[channel]' is set</span>")
+			to_chat(usr, span_notice("New channel name - '[channel]' is set"))
 	if(href_list["video"])
 		bcamera.set_status(!bcamera.status)
 		var/turf/here = get_turf(usr)
 		if(bcamera.status)
-			to_chat(usr,"<span class='notice'>Video streaming activated. Broadcasting on channel '[channel]'</span>")
+			to_chat(usr,span_notice("Video streaming activated. Broadcasting on channel '[channel]'"))
 			if(here)
-				here.visible_message("<span class='notice'>[usr] turns on their body camera.</span>")
+				here.visible_message(span_notice("[usr] turns on their body camera."))
 			show_bodycamera_tvs(loc)
 		else
-			to_chat(usr,"<span class='notice'>Video streaming deactivated.</span>")
+			to_chat(usr,span_notice("Video streaming deactivated."))
 			if(here)
-				here.visible_message("<span class='warning'>[usr] turns off their body camera!</span>")
+				here.visible_message(span_warning("[usr] turns off their body camera!"))
 			hide_bodycamera_tvs()
 			for(var/obj/machinery/computer/security/telescreen/bodycamera/ES as anything in GLOB.bodycamera_screens)
 				ES.stop_showing()
@@ -258,9 +258,9 @@
 	if(href_list["sound"])
 		bradio.ToggleBroadcast()
 		if(bradio.broadcasting)
-			to_chat(usr,"<span class='notice'>Audio streaming activated. Broadcasting on frequency [format_frequency(bradio.frequency)].</span>")
+			to_chat(usr,span_notice("Audio streaming activated. Broadcasting on frequency [format_frequency(bradio.frequency)]."))
 		else
-			to_chat(usr,"<span class='notice'>Audio streaming deactivated.</span>")
+			to_chat(usr,span_notice("Audio streaming deactivated."))
 	if(!href_list["close"])
 		attack_self(usr)
 

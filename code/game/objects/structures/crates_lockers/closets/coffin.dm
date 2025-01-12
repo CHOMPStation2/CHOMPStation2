@@ -42,7 +42,7 @@
 		add_fingerprint(M)
 		if(ishuman(M))
 			var/mob/living/carbon/human/H = M
-			if(H.m_intent == "walk")
+			if(H.m_intent == I_WALK)
 				to_chat(H, span_warning("You stop at the edge of \the [src.name]."))
 				return FALSE
 			else
@@ -149,7 +149,7 @@
 	return PROJECTILE_CONTINUE	// It's a hole in the ground, doesn't usually stop or even care about bullets
 
 /obj/structure/closet/grave/return_air_for_internal_lifeform(var/mob/living/L)
-	var/gasid = "carbon_dioxide"
+	var/gasid = GAS_CO2
 	if(ishuman(L))
 		var/mob/living/carbon/human/H = L
 		if(H.species && H.species.exhale_type)

@@ -832,7 +832,7 @@ Turf and target are seperate in case you want to teleport some distance from a t
 
 					//Move the mobs unless it's an AI eye or other eye type.
 					for(var/mob/M in T)
-						if(istype(M, /mob/observer/eye)) continue // If we need to check for more mobs, I'll add a variable
+						if(isEye(M)) continue // If we need to check for more mobs, I'll add a variable
 						M.loc = X
 
 						if(z_level_change) // Same goes for mobs.
@@ -979,7 +979,7 @@ Turf and target are seperate in case you want to teleport some distance from a t
 
 					for(var/mob/M in T)
 
-						if(!istype(M,/mob) || istype(M, /mob/observer/eye)) continue // If we need to check for more mobs, I'll add a variable
+						if(!ismob(M) || isEye(M)) continue // If we need to check for more mobs, I'll add a variable
 						mobs += M
 
 					for(var/mob/M in mobs)
@@ -1229,7 +1229,7 @@ var/list/WALLITEMS = list(
 /proc/topic_link(var/datum/D, var/arglist, var/content)
 	if(istype(arglist,/list))
 		arglist = list2params(arglist)
-	return "<a href='?src=\ref[D];[arglist]'>[content]</a>"
+	return "<a href='byond://?src=\ref[D];[arglist]'>[content]</a>"
 
 /proc/get_random_colour(var/simple, var/lower=0, var/upper=255)
 	var/colour
@@ -1278,8 +1278,8 @@ var/mob/dview/dview_mob = new
 		color = origin.color
 		set_light(origin.light_range, origin.light_power, origin.light_color)
 
-/mob/dview/New()
-	..()
+/mob/dview/Initialize()
+	. = ..()
 	// We don't want to be in any mob lists; we're a dummy not a mob.
 	mob_list -= src
 	if(stat == DEAD)
@@ -1564,7 +1564,7 @@ GLOBAL_REAL_VAR(list/stack_trace_storage)
 // Note that object refs will be converted to text, as if \ref[thing] was done. To get the ref back on Topic() side, you will need to use locate().
 // Third one is the text that will be clickable.
 /proc/href(href_src, list/href_params, href_text)
-	return "<a href='?src=\ref[href_src];[list2params(href_params)]'>[href_text]</a>"
+	return "<a href='byond://?src=\ref[href_src];[list2params(href_params)]'>[href_text]</a>"
 
 // This is a helper for anything that wants to render the map in TGUI
 /proc/get_tgui_plane_masters()
@@ -1595,6 +1595,7 @@ GLOBAL_REAL_VAR(list/stack_trace_storage)
 
 	. += new /obj/screen/plane_master{plane = PLANE_MESONS} 			//Meson-specific things like open ceilings.
 	. += new /obj/screen/plane_master{plane = PLANE_BUILDMODE}			//Things that only show up while in build mode
+	. += new /obj/screen/plane_master{plane = PLANE_JANHUD}
 
 	// Real tangible stuff planes
 	. += new /obj/screen/plane_master/main{plane = TURF_PLANE}

@@ -87,9 +87,9 @@
 
 
 /mob/living/carbon/human/proc/hasnutriment()
-	if (bloodstr.has_reagent("nutriment", 30) || src.bloodstr.has_reagent("protein", 15)) //protein needs half as much. For reference, a steak contains 9u protein.
+	if (bloodstr.has_reagent(REAGENT_ID_NUTRIMENT, 30) || src.bloodstr.has_reagent(REAGENT_ID_PROTEIN, 15)) //protein needs half as much. For reference, a steak contains 9u protein.
 		return TRUE
-	else if (ingested.has_reagent("nutriment", 60) || src.ingested.has_reagent("protein", 30)) //try forcefeeding them, why not. Less effective.
+	else if (ingested.has_reagent(REAGENT_ID_NUTRIMENT, 60) || src.ingested.has_reagent(REAGENT_ID_PROTEIN, 30)) //try forcefeeding them, why not. Less effective.
 		return TRUE
 	else return FALSE
 
@@ -170,7 +170,7 @@
 	update_canmove()
 	stunned = 2 // CHOMPEdit - Whoops, crawling is a thing now.
 
-	revive_ready = world.time + 10 MINUTES //set the cooldown CHOMPEdit: Reduced this to 10 minutes, you're playing with fire if you're reviving that often.
+	revive_ready = world.time + 10 MINUTES //set the cooldown, Reduced this to 10 minutes, you're playing with fire if you're reviving that often.
 
 /datum/modifier/resleeving_sickness/chimera //near identical to the regular version, just with different flavortexts
 	name = "imperfect regeneration"
@@ -215,7 +215,7 @@
 						var/list/slots_free = list(ui_lhand,ui_rhand)
 						if(l_hand) slots_free -= ui_lhand
 						if(r_hand) slots_free -= ui_rhand
-						if(istype(src,/mob/living/carbon/human))
+						if(ishuman(src))
 							var/mob/living/carbon/human/H = src
 							if(!H.belt) slots_free += ui_belt
 							if(!H.l_store) slots_free += ui_storage1
@@ -1269,7 +1269,7 @@
 
 	last_special = world.time + 10 //Anti-spam.
 
-	if (!istype(src, /mob/living))
+	if (!isliving(src))
 		to_chat(src, span_warning("It doesn't work that way."))
 		return
 
@@ -1294,7 +1294,7 @@
 		var/list/targets = list() //IF IT IS NOT BROKEN. DO NOT FIX IT.
 
 		for(var/mob/living/L in range(5, src))
-			if(!istype(L, /mob/living)) //Don't eat anything that isn't mob/living. Failsafe.
+			if(!isliving(L)) //Don't eat anything that isn't mob/living. Failsafe.
 				continue
 			if(L == src) //no eating yourself. 1984.
 				continue
@@ -1310,7 +1310,7 @@
 		if(!target)
 			return
 
-		if(!istype(target, /mob/living)) //Safety.
+		if(!isliving(target)) //Safety.
 			to_chat(src, span_warning("You need to select a living target!"))
 			return
 
@@ -1360,7 +1360,7 @@
 
 /obj/item/projectile/beam/appendage/generate_hitscan_tracers()
 	if(firer) //This neat little code block allows for C O L O R A B L E tongues! Correction: 'Appendages'
-		if(istype(firer,/mob/living))
+		if(isliving(firer))
 			var/mob/living/originator = firer
 			color = originator.appendage_color
 	..()
@@ -1368,10 +1368,10 @@
 /obj/item/projectile/beam/appendage/on_hit(var/atom/target)
 	if(target == firer) //NO EATING YOURSELF
 		return
-	if(istype(target, /mob/living))
+	if(isliving(target))
 		var/mob/living/M = target
 		var/throw_range = get_dist(firer,M)
-		if(istype(firer, /mob/living)) //Let's check for any alt settings. Such as: User selected to be thrown at target.
+		if(isliving(firer)) //Let's check for any alt settings. Such as: User selected to be thrown at target.
 			var/mob/living/F = firer
 			if(F.appendage_alt_setting == 1)
 				F.throw_at(M, throw_range, firer.throw_speed, F) //Firer thrown at target.
@@ -1386,7 +1386,7 @@
 	if(istype(target, /obj/item/)) //We hit an object? Pull it. This can only happen via admin shenanigans such as a gun being VV'd with this projectile.
 		var/obj/item/hit_object = target
 		if(hit_object.density || hit_object.anchored)
-			if(istype(firer, /mob/living))
+			if(isliving(firer))
 				var/mob/living/originator = firer
 				originator.Weaken(2) //If you hit something dense or anchored, fall flat on your face.
 				originator.visible_message(span_warning("\The [originator] trips over their self and falls flat on their face!"), \
@@ -1396,7 +1396,7 @@
 		else
 			hit_object.throw_at(firer, throw_range, hit_object.throw_speed, firer)
 	if(istype(target, /turf/simulated/wall) || istype(target, /obj/machinery/door) || istype(target, /obj/structure/window)) //This can happen normally due to odd terrain. For some reason, it seems to not actually interact with walls.
-		if(istype(firer, /mob/living))
+		if(isliving(firer))
 			var/mob/living/originator = firer
 			originator.Weaken(2) //Hit a wall? Whoops!
 			originator.visible_message(span_warning("\The [originator] trips over their self and falls flat on their face!"), \
@@ -1485,7 +1485,7 @@
 
 	last_special = world.time + 10 //Anti-spam.
 
-	if (!istype(src, /mob/living))
+	if (!isliving(src))
 		to_chat(src, span_warning("It doesn't work that way."))
 		return
 
@@ -1493,7 +1493,7 @@
 		var/list/targets = list() //IF IT IS NOT BROKEN. DO NOT FIX IT.
 
 		for(var/mob/living/L in range(5, src))
-			if(!istype(L, /mob/living)) //Don't eat anything that isn't mob/living. Failsafe.
+			if(!isliving(L)) //Don't eat anything that isn't mob/living. Failsafe.
 				continue
 			if(L == src) //no eating yourself. 1984.
 				continue
@@ -1509,7 +1509,7 @@
 		if(!target)
 			return
 
-		if(!istype(target, /mob/living)) //Safety.
+		if(!isliving(target)) //Safety.
 			to_chat(src, span_warning("You need to select a living target!"))
 			return
 
@@ -1626,9 +1626,9 @@
 				continue
 			if(L == src) //no getting high off your own supply, get a nif or something, nerd.
 				continue
-			if(!L.resizable && (trait_injection_selected == "macrocillin" || trait_injection_selected == "microcillin" || trait_injection_selected == "normalcillin")) // If you're using a size reagent, ignore those with pref conflicts.
+			if(!L.resizable && (trait_injection_selected == REAGENT_ID_MACROCILLIN || trait_injection_selected == REAGENT_ID_MICROCILLIN || trait_injection_selected == REAGENT_ID_NORMALCILLIN)) // If you're using a size reagent, ignore those with pref conflicts.
 				continue
-			if(!L.allow_spontaneous_tf && (trait_injection_selected == "androrovir" || trait_injection_selected == "gynorovir" || trait_injection_selected == "androgynorovir")) // If you're using a TF reagent, ignore those with pref conflicts.
+			if(!L.allow_spontaneous_tf && (trait_injection_selected == REAGENT_ID_ANDROROVIR || trait_injection_selected == REAGENT_ID_GYNOROVIR || trait_injection_selected == REAGENT_ID_ANDROGYNOROVIR)) // If you're using a TF reagent, ignore those with pref conflicts.
 				continue
 			targets += L
 

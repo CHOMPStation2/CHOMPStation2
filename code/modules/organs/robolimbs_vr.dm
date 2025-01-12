@@ -1,3 +1,7 @@
+GLOBAL_LIST_INIT(dsi_to_species, list(SPECIES_TAJARAN = "DSI - Tajaran", SPECIES_UNATHI = "DSI - Lizard", SPECIES_SERGAL = "DSI - Sergal", SPECIES_NEVREAN = "DSI - Nevrean", \
+									SPECIES_VULPKANIN = "DSI - Vulpkanin", SPECIES_AKULA = "DSI - Akula", SPECIES_VASILISSAN = "DSI - Vasilissan", SPECIES_ZORREN = "DSI - Zorren",\
+									SPECIES_TESHARI = "DSI - Teshari", SPECIES_FENNEC = "DSI - Fennec"))
+
 //CitRP Port
 var/const/cyberbeast_monitor_styles = "blank=cyber_blank;\
 	default=cyber_default;\
@@ -87,7 +91,7 @@ var/const/cyberbeast_monitor_styles = "blank=cyber_blank;\
 	company = "Zeng-Hu Glacier"
 	desc = "This limb has a rubbery white covering with visible seams."
 	icon = 'icons/mob/human_races/cyberlimbs/zenghu/zenghu_glacier_main.dmi'
-	species_alternates = list(SPECIES_TAJ = "Zeng-Hu - Tajaran")
+	species_alternates = list(SPECIES_TAJARAN = "Zeng-Hu - Tajaran")
 	unavailable_to_build = 1
 	skin_tone = 1
 	modular_bodyparts = MODULAR_BODYPART_PROSTHETIC
