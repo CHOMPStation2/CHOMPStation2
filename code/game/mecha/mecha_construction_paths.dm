@@ -810,12 +810,7 @@
 				holder.icon_state = "gygax15"
 		if(3)
 			if(diff==FORWARD)
-<<<<<<< HEAD
-				user.visible_message("[user] installs the external armor layer to [holder].", "You install the external armor layer to [holder].")
-				//CHOMPedit. Prevents Sereniy from eating entire stacks of plasteel.
-=======
 				user.visible_message(span_infoplain("[user] installs the external armor layer to [holder]."), span_infoplain("You install the external armor layer to [holder]."))
->>>>>>> 71af457836 (Merge pull request #16871 from Kashargul/mechaFix)
 				holder.icon_state = "gygax18"
 			else
 				user.visible_message(span_infoplain("[user] cuts internal armor layer from [holder]."), span_infoplain("You cut the internal armor layer from [holder]."))
