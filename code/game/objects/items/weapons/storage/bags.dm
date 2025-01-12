@@ -316,6 +316,8 @@
 		amount = capacity - current
 	else
 		amount = S.get_amount()
+	if(amount < 0 || S.get_amount() < 0)
+		CRASH("Negative stack detected. amount was [amount], Sheet amount was [S.get_amount()], capacity was [capacity], current was [current]")
 
 	for(var/obj/item/stack/material/sheet in contents)
 		if(S.type == sheet.type)
