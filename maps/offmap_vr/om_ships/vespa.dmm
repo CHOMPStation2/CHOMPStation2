@@ -4338,10 +4338,6 @@
 	dir = 1;
 	icon_state = "bordercolor"
 	},
-<<<<<<< HEAD
-/obj/item/clothing/under/corp/hephaestus,
-=======
->>>>>>> 6db6df23d6 (Merge pull request #16864 from SatinIsle/map-archiving)
 /obj/item/clothing/suit/armor/vest,
 /obj/item/clothing/shoes/boots/duty,
 /obj/item/clothing/head/beret,
@@ -12247,10 +12243,6 @@
 	dir = 1;
 	icon_state = "bordercolor"
 	},
-<<<<<<< HEAD
-/obj/item/clothing/under/corp/hephaestus,
-=======
->>>>>>> 6db6df23d6 (Merge pull request #16864 from SatinIsle/map-archiving)
 /obj/item/clothing/suit/armor/vest,
 /obj/item/clothing/shoes/boots/duty,
 /obj/item/clothing/head/beret,
@@ -16326,13 +16318,8 @@ jV
 fY
 bX
 qf
-<<<<<<< HEAD
-cw
-cw
-=======
 jV
 jV
->>>>>>> 6db6df23d6 (Merge pull request #16864 from SatinIsle/map-archiving)
 bX
 mh
 nx
