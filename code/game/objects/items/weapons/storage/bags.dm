@@ -310,8 +310,12 @@
 	var/amount
 	var/inserted = 0
 	var/current = 0
+	var/stack = ""
 	for(var/obj/item/stack/material/S2 in contents)
 		current += S2.get_amount()
+		stack += "Material: [S2], Amount: [S2.get_amount()] ...."
+	if(current > capacity)
+		CRASH("STACK TRACE, current sheets are exceeding capcity! " + stack)
 	if(capacity < current + S.get_amount())//If the stack will fill it up
 		amount = capacity - current
 	else
