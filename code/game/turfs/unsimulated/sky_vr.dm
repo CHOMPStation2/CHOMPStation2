@@ -8,10 +8,6 @@
 	icon = 'icons/turf/floors.dmi'
 	icon_state = "sky_slow"
 	dir = SOUTH
-<<<<<<< HEAD
-	//initialized = FALSE CHOMPRemoval
-=======
->>>>>>> 105213eb03 (Merge pull request #16882 from Kashargul/wire)
 	var/does_skyfall = TRUE
 	var/list/skyfall_levels
 

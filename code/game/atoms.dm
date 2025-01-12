@@ -39,11 +39,7 @@
 	//Detective Work, used for the duplicate data points kept in the scanners
 	var/list/original_atom
 	// Track if we are already had initialize() called to prevent double-initialization.
-<<<<<<< HEAD
-	//var/initialized = FALSE CHOMPEdit moved to flag
-=======
 	//var/initialized = FALSE // using the atom flags
->>>>>>> 105213eb03 (Merge pull request #16882 from Kashargul/wire)
 
 	/// Last name used to calculate a color for the chatmessage overlays
 	var/chat_color_name
@@ -95,15 +91,9 @@
 /atom/proc/Initialize(mapload, ...)
 	if(QDELETED(src))
 		stack_trace("GC: -- [type] had initialize() called after qdel() --")
-<<<<<<< HEAD
-	if(flags & ATOM_INITIALIZED) //CHOMPEdit moved initialized to flag
-		stack_trace("Warning: [src]([type]) initialized multiple times!")
-	flags |= ATOM_INITIALIZED //CHOMPEdit moved initialized to flag
-=======
 	if(flags & ATOM_INITIALIZED)
 		stack_trace("Warning: [src]([type]) initialized multiple times!")
 	flags |= ATOM_INITIALIZED
->>>>>>> 105213eb03 (Merge pull request #16882 from Kashargul/wire)
 	return INITIALIZE_HINT_NORMAL
 
 /atom/Destroy()

@@ -7,11 +7,7 @@
 
 /turf/unsimulated/Initialize(mapload)
 	if(skip_init)
-<<<<<<< HEAD
-		flags |= ATOM_INITIALIZED //CHOMPEdit
-=======
 		flags |= ATOM_INITIALIZED
->>>>>>> 105213eb03 (Merge pull request #16882 from Kashargul/wire)
 		return INITIALIZE_HINT_NORMAL
 	. = ..()
 
@@ -21,10 +17,6 @@
 	icon = 'icons/turf/space.dmi'
 	icon_state = "0"
 	dynamic_lighting = FALSE
-<<<<<<< HEAD
-	//initialized = FALSE CHOMP Removal (what the fuck)
-=======
->>>>>>> 105213eb03 (Merge pull request #16882 from Kashargul/wire)
 
 /turf/unsimulated/fake_space/Initialize(mapload)
 	. = ..()
