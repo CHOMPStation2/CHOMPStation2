@@ -116,3 +116,31 @@
 /decl/emote/audible/scientist/get_emote_sound(var/atom/user)
 	. = ..()
 	.["vol"] *= 0.4 //these boys are pretty loud on their own lol
+
+/decl/emote/audible/yip // sounds sourced from: https://introdile.itch.io/kobold-generator
+	key = "yip"
+	emote_message_1p = "You yip."
+	emote_message_3p = "yips!"
+	emote_message_1p_target = "You yip at TARGET!"
+	emote_message_3p_target = "yips at TARGET!"
+	emote_sound = list (
+		'modular_chomp/sound/voice/emotes/yip1.ogg',
+		'modular_chomp/sound/voice/emotes/yip2.ogg',
+		'modular_chomp/sound/voice/emotes/yip3.ogg',
+	)
+
+/decl/emote/audible/squeal // Sound taken from https://github.com/shiptest-ss13/Shiptest/pull/2159
+	key = "squeal"
+	emote_message_1p = "You squeal."
+	emote_message_3p = "squeals."
+	emote_message_1p_target = "You squeal at TARGET."
+	emote_message_3p_target = "squeals at TARGET."
+	emote_sound = 'modular_chomp/sound/voice/emotes/squealemote.ogg'
+
+/decl/emote/audible/tailthump // Sound taken https://github.com/shiptest-ss13/Shiptest/pull/2159
+	key = "tailthump"
+	emote_message_1p = "You thump your tail."
+	emote_message_3p = "thumps their tail."
+	emote_message_1p_target = "You thump your tail at TARGET."
+	emote_message_3p_target = "thumps their tail at TARGET."
+	emote_sound = 'modular_chomp/sound/voice/emotes/tailthumpemote.ogg'
