@@ -1,4 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - rscdel: "removed vestigial Global tab in Character Setup, merged remaining pAI setup functionality into Special Roles tab"

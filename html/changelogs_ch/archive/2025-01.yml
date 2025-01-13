@@ -105,3 +105,21 @@
   FluffMedic:
   - rscadd: Removed Starhunter Challenge, put functional eclipse boss thing in its
       place
+2025-01-13:
+  CHOMPStation2StaffMirrorBot:
+  - rscdel: removed vestigial Global tab in Character Setup, merged remaining pAI
+      setup functionality into Special Roles tab
+  - rscadd: added full chest fluff (vulp) and inner arms markings
+  - rscadd: Exosuit Fighters now have exclusive hull and armor types, with a faster
+      top speed at the cost of reduced durability.
+  - rscadd: Exosuit Fighters now have collision mechanics. Fly responsibly.
+  - rscadd: Exosuit Fighters have new enter sound effects and a special collision
+      effect.
+  - rscadd: Pinnace has been rebalanced into a weak, entry-level fighter. Has reduced
+      health compared to other fighters, but can mount weapons and fly in atmosphere.
+  - qol: altered gorka uniforms for less icon states and easier adding of new types,
+      added plain, service, and janitor subtypes
+  - rscadd: added 'can_remove' bool to accessories, which defaults to TRUE and does
+      exactly what it sounds like
+  TheGreatKitsune:
+  - rscadd: Toggle verbs for growing/shrinking traits
