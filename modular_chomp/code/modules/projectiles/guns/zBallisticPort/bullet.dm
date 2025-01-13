@@ -1111,15 +1111,13 @@
 	icon_expected_height = 32
 	icon_expected_width = 64
 
-/* //Dont need it
 /obj/item/gun/projectile/automatic/c20r/update_icon()
 	..()
 	if(ammo_magazine)
-		icon_state = "c20r-[round(CLAMP(ammo_magazine.stored_ammo.len*2/3,0,20),4)]"
+		icon_state = "c20r-[round(ammo_magazine.stored_ammo.len,4)]"
 	else
 		icon_state = "c20r"
 	return
-*/
 
 /obj/item/gun/projectile/automatic/c20r/Initialize()
 	. = ..()
@@ -1153,10 +1151,11 @@
 	icon_expected_height = 32
 	icon_expected_width = 64
 
+/* //Dont need it
 /obj/item/gun/projectile/automatic/wt550/update_icon()
 	. = ..()
 	icon_state = ammo_magazine ? "[initial(icon_state)]" : "[initial(icon_state)]-e"
-
+*/
 /obj/item/gun/projectile/automatic/wt550/Initialize()
 	. = ..()
 	update_transform()
