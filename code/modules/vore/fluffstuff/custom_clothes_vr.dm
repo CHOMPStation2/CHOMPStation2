@@ -2689,9 +2689,6 @@ End CHOMP Removal*/
 	icon_state = "valkhorns"
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
 	item_state = "valkhorns_onmob"
-<<<<<<< HEAD
-*/ //Chomp REMOVE END
-=======
 
 //sixberry: Thistle
 
@@ -2703,4 +2700,4 @@ End CHOMP Removal*/
     icon_override = 'icons/vore/custom_clothes_vr.dmi'
     item_state = "memorycrown_onmob"
     slot_flags = SLOT_HEAD
->>>>>>> af2409151b (Merge pull request #16887 from Lilly-Lira/MemoryCrown)
+*/ //Chomp REMOVE END
