@@ -26,7 +26,12 @@ var/list/preferences_datums = list()
 	var/headset = 1						//headset type
 	var/backbag = 2						//backpack type
 	var/pdachoice = 1					//PDA type
+<<<<<<< HEAD
 	//var/shoe_hater = FALSE				//RS ADD - if true, will spawn with no shoes //CHOMPRemove, remove RS No shoes
+=======
+	var/shoe_hater = FALSE				//RS ADD - if true, will spawn with no shoes
+	var/no_jacket = FALSE				//if true, will not spawn with outfit's jacket/outer layer
+>>>>>>> 9c27ac2eff (Merge pull request #16903 from KillianKirilenko/kk-jacketbutton)
 	var/h_style = "Bald"				//Hair type
 	var/grad_style = "none"				//Gradient style
 	var/f_style = "Shaved"				//Face hair type

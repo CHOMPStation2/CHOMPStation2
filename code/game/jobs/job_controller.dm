@@ -439,8 +439,14 @@ var/global/datum/controller/occupations/job_master
 					//if(G.slot == slot_wear_mask || G.slot == slot_wear_suit || G.slot == slot_head)
 					//	custom_equip_leftovers += thing
 					//else
+<<<<<<< HEAD
 					/* CHOMPRemove Start, remove RS No shoes
 					if(G.slot == slot_shoes && H.client?.prefs?.shoe_hater)	//RS ADD
+=======
+					if(G.slot == slot_wear_suit && H.client?.prefs?.no_jacket)
+						continue
+					if(G.slot == slot_shoes && H.client?.prefs?.shoe_hater)
+>>>>>>> 9c27ac2eff (Merge pull request #16903 from KillianKirilenko/kk-jacketbutton)
 						continue
 					*///CHOMPRemove End, remove RS No shoes
 					if(H.equip_to_slot_or_del(G.spawn_item(H, metadata), G.slot))
@@ -468,8 +474,14 @@ var/global/datum/controller/occupations/job_master
 		// If some custom items could not be equipped before, try again now.
 		for(var/thing in custom_equip_leftovers)
 			var/datum/gear/G = gear_datums[thing]
+<<<<<<< HEAD
 			/* CHOMPRemove Start, remove RS No shoes
 			if(G.slot == slot_shoes && H.client?.prefs?.shoe_hater)	//RS ADD
+=======
+			if(G.slot == slot_wear_suit && H.client?.prefs?.no_jacket)
+				continue
+			if(G.slot == slot_shoes && H.client?.prefs?.shoe_hater)
+>>>>>>> 9c27ac2eff (Merge pull request #16903 from KillianKirilenko/kk-jacketbutton)
 				continue
 			*///CHOMPRemove End, remove RS No shoes
 			if(G.slot in custom_equip_slots)

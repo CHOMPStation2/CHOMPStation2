@@ -15,8 +15,14 @@
 	pref.backbag					= save_data["backbag"]
 	pref.pdachoice					= save_data["pdachoice"]
 	pref.communicator_visibility	= save_data["communicator_visibility"]
+<<<<<<< HEAD
 	pref.ringtone					= save_data["ttone"] // CHOMPEdit - We use ttone in the pref so that it doesnt get reset
 	//pref.shoe_hater					= save_data["shoe_hater"] //CHOMPRemove, remove RS No shoes
+=======
+	pref.ringtone					= save_data["ringtone"]
+	pref.shoe_hater					= save_data["shoe_hater"]
+	pref.no_jacket					= save_data["no_jacket"]
+>>>>>>> 9c27ac2eff (Merge pull request #16903 from KillianKirilenko/kk-jacketbutton)
 
 /datum/category_item/player_setup_item/general/equipment/save_character(list/save_data)
 	save_data["all_underwear"]				= pref.all_underwear
@@ -28,8 +34,14 @@
 	save_data["backbag"]					= pref.backbag
 	save_data["pdachoice"]					= pref.pdachoice
 	save_data["communicator_visibility"]	= pref.communicator_visibility
+<<<<<<< HEAD
 	save_data["ttone"]						= pref.ringtone // CHOMPEdit - We use ttone in the pref so that it doesnt get reset
 	//save_data["shoe_hater"] 				= pref.shoe_hater //CHOMPRemove, remove RS No shoes
+=======
+	save_data["ringtone"]					= pref.ringtone
+	save_data["shoe_hater"] 				= pref.shoe_hater
+	save_data["no_jacket"]					= pref.no_jacket
+>>>>>>> 9c27ac2eff (Merge pull request #16903 from KillianKirilenko/kk-jacketbutton)
 
 var/global/list/valid_ringtones = list(
 		"beep",
@@ -136,7 +148,12 @@ var/global/list/valid_ringtones = list(
 	. += "PDA Type: <a href='byond://?src=\ref[src];change_pda=1'><b>[pdachoicelist[pref.pdachoice]]</b></a><br>"
 	. += "Communicator Visibility: <a href='byond://?src=\ref[src];toggle_comm_visibility=1'><b>[(pref.communicator_visibility) ? "Yes" : "No"]</b></a><br>"
 	. += "Ringtone (leave blank for job default): <a href='byond://?src=\ref[src];set_ringtone=1'><b>[pref.ringtone]</b></a><br>"
+<<<<<<< HEAD
 	//. += "Spawn With Shoes:<a href='byond://?src=\ref[src];toggle_shoes=1'><b>[(pref.shoe_hater) ? "No" : "Yes"]</b></a><br>" //RS Addition //CHOMPRemove, remove RS No shoes
+=======
+	. += "Spawn With Shoes:<a href='byond://?src=\ref[src];toggle_shoes=1'><b>[(pref.shoe_hater) ? "No" : "Yes"]</b></a><br>"
+	. += "Spawn With Jacket:<a href='byond://?src=\ref[src];toggle_jacket=1'><b>[(pref.no_jacket) ? "No" : "Yes"]</b></a><br>"
+>>>>>>> 9c27ac2eff (Merge pull request #16903 from KillianKirilenko/kk-jacketbutton)
 
 	return jointext(.,null)
 
@@ -211,6 +228,7 @@ var/global/list/valid_ringtones = list(
 		else
 			pref.ringtone = choice
 		return TOPIC_REFRESH
+<<<<<<< HEAD
 	/*CHOMPRemove Start,  remove RS No shoes
 	else if(href_list["toggle_shoes"])	//RS ADD START
 		if(CanUseTopic(user))
@@ -218,5 +236,15 @@ var/global/list/valid_ringtones = list(
 			return TOPIC_REFRESH
 			//RS ADD END
 	*///CHOMPRemove End, remove RS No shoes
+=======
+	else if(href_list["toggle_shoes"])
+		if(CanUseTopic(user))
+			pref.shoe_hater = !pref.shoe_hater
+			return TOPIC_REFRESH
+	else if(href_list["toggle_jacket"])
+		if(CanUseTopic(user))
+			pref.no_jacket = !pref.no_jacket
+			return TOPIC_REFRESH
+>>>>>>> 9c27ac2eff (Merge pull request #16903 from KillianKirilenko/kk-jacketbutton)
 
 	return ..()
