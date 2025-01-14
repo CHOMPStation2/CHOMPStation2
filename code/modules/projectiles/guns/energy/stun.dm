@@ -28,10 +28,7 @@
 	name = "taser gun"
 <<<<<<< HEAD
 	charge_cost = 160  //Chompedit: Reduced from 400 to 160 to match VR's, which we also use.
-	recharge_time = 5 //ChompEdit: reduced from 7 to 5, Time it takes for shots to recharge (in ticks)  
-=======
-	recharge_time = 7 //Time it takes for shots to recharge (in ticks)
->>>>>>> a3ae80a4be (Merge pull request #16893 from Kashargul/robot-Taser)
+	recharge_time = 5 //ChompEdit: reduced from 7 to 5, Time it takes for shots to recharge (in ticks)
 
 /*
  * Disabler
