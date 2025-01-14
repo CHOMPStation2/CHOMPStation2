@@ -1,0 +1,175 @@
+[2023-02-16T19:33:26] START: Starting up data/logs/2023/02-February/16-Thursday/round-19-33-16.
+[2023-02-16T19:33:33] RUNTIME: [2023-02-16T19:33:33] Runtime in files.dm,4: Safety violation: tried to access 'C:\Users\benja\OneDrive\Desktop\Chompstation New [New]\CHOMPStation2\config\names\ai.txt' outside of current directory.
+[2023-02-16T19:33:33] RUNTIME:   proc name: return file text (/proc/return_file_text)
+[2023-02-16T19:33:33] RUNTIME:   src: null
+[2023-02-16T19:33:33] RUNTIME:   call stack:
+[2023-02-16T19:33:33] RUNTIME:   return file text("config/names/ai.txt")
+[2023-02-16T19:33:33] RUNTIME:   file2list("config/names/ai.txt", "\n")
+[2023-02-16T19:33:33] RUNTIME:   world: ()
+[2023-02-16T19:33:33] RUNTIME:   world: load mode()
+[2023-02-16T19:33:33] RUNTIME:   /hook/startup (/hook/startup): loadMode()
+[2023-02-16T19:33:33] RUNTIME:   callHook("startup", null)
+[2023-02-16T19:33:33] RUNTIME:   world: New()
+[2023-02-16T19:33:33] RUNTIME:   world: New()
+[2023-02-16T19:33:33] RUNTIME: [2023-02-16T19:33:33] Runtime in files.dm,4: Safety violation: tried to access 'C:\Users\benja\OneDrive\Desktop\Chompstation New [New]\CHOMPStation2\config\names\wizardfirst.txt' outside of current directory.
+[2023-02-16T19:33:33] RUNTIME:   proc name: return file text (/proc/return_file_text)
+[2023-02-16T19:33:33] RUNTIME:   src: null
+[2023-02-16T19:33:33] RUNTIME:   call stack:
+[2023-02-16T19:33:33] RUNTIME:   return file text("config/names/wizardfirst.txt")
+[2023-02-16T19:33:33] RUNTIME:   file2list("config/names/wizardfirst.txt", "\n")
+[2023-02-16T19:33:33] RUNTIME:   world: ()
+[2023-02-16T19:33:33] RUNTIME:   world: load mode()
+[2023-02-16T19:33:33] RUNTIME:   /hook/startup (/hook/startup): loadMode()
+[2023-02-16T19:33:33] RUNTIME:   callHook("startup", null)
+[2023-02-16T19:33:33] RUNTIME:   world: New()
+[2023-02-16T19:33:33] RUNTIME:   world: New()
+[2023-02-16T19:33:33] RUNTIME: [2023-02-16T19:33:33] Runtime in files.dm,4: Safety violation: tried to access 'C:\Users\benja\OneDrive\Desktop\Chompstation New [New]\CHOMPStation2\config\names\wizardsecond.txt' outside of current directory.
+[2023-02-16T19:33:33] RUNTIME:   proc name: return file text (/proc/return_file_text)
+[2023-02-16T19:33:33] RUNTIME:   src: null
+[2023-02-16T19:33:33] RUNTIME:   call stack:
+[2023-02-16T19:33:33] RUNTIME:   return file text("config/names/wizardsecond.txt")
+[2023-02-16T19:33:33] RUNTIME:   file2list("config/names/wizardsecond.txt", "\n")
+[2023-02-16T19:33:33] RUNTIME:   world: ()
+[2023-02-16T19:33:33] RUNTIME:   world: load mode()
+[2023-02-16T19:33:33] RUNTIME:   /hook/startup (/hook/startup): loadMode()
+[2023-02-16T19:33:33] RUNTIME:   callHook("startup", null)
+[2023-02-16T19:33:33] RUNTIME:   world: New()
+[2023-02-16T19:33:33] RUNTIME:   world: New()
+[2023-02-16T19:33:33] RUNTIME: [2023-02-16T19:33:33] Runtime in files.dm,4: Safety violation: tried to access 'C:\Users\benja\OneDrive\Desktop\Chompstation New [New]\CHOMPStation2\config\names\ninjatitle.txt' outside of current directory.
+[2023-02-16T19:33:33] RUNTIME:   proc name: return file text (/proc/return_file_text)
+[2023-02-16T19:33:33] RUNTIME:   src: null
+[2023-02-16T19:33:33] RUNTIME:   call stack:
+[2023-02-16T19:33:33] RUNTIME:   return file text("config/names/ninjatitle.txt")
+[2023-02-16T19:33:33] RUNTIME:   file2list("config/names/ninjatitle.txt", "\n")
+[2023-02-16T19:33:33] RUNTIME:   world: ()
+[2023-02-16T19:33:33] RUNTIME:   world: load mode()
+[2023-02-16T19:33:33] RUNTIME:   /hook/startup (/hook/startup): loadMode()
+[2023-02-16T19:33:33] RUNTIME:   callHook("startup", null)
+[2023-02-16T19:33:33] RUNTIME:   world: New()
+[2023-02-16T19:33:33] RUNTIME:   world: New()
+[2023-02-16T19:33:33] RUNTIME: [2023-02-16T19:33:33] Runtime in files.dm,4: Safety violation: tried to access 'C:\Users\benja\OneDrive\Desktop\Chompstation New [New]\CHOMPStation2\config\names\ninjaname.txt' outside of current directory.
+[2023-02-16T19:33:33] RUNTIME:   proc name: return file text (/proc/return_file_text)
+[2023-02-16T19:33:33] RUNTIME:   src: null
+[2023-02-16T19:33:33] RUNTIME:   call stack:
+[2023-02-16T19:33:33] RUNTIME:   return file text("config/names/ninjaname.txt")
+[2023-02-16T19:33:33] RUNTIME:   file2list("config/names/ninjaname.txt", "\n")
+[2023-02-16T19:33:33] RUNTIME:   world: ()
+[2023-02-16T19:33:33] RUNTIME:   world: load mode()
+[2023-02-16T19:33:33] RUNTIME:   /hook/startup (/hook/startup): loadMode()
+[2023-02-16T19:33:33] RUNTIME:   callHook("startup", null)
+[2023-02-16T19:33:33] RUNTIME:   world: New()
+[2023-02-16T19:33:33] RUNTIME:   world: New()
+[2023-02-16T19:33:33] RUNTIME: [2023-02-16T19:33:33] Runtime in files.dm,4: Safety violation: tried to access 'C:\Users\benja\OneDrive\Desktop\Chompstation New [New]\CHOMPStation2\config\names\death_commando.txt' outside of current directory.
+[2023-02-16T19:33:33] RUNTIME:   proc name: return file text (/proc/return_file_text)
+[2023-02-16T19:33:33] RUNTIME:   src: null
+[2023-02-16T19:33:33] RUNTIME:   call stack:
+[2023-02-16T19:33:33] RUNTIME:   return file text("config/names/death_commando.tx...")
+[2023-02-16T19:33:33] RUNTIME:   file2list("config/names/death_commando.tx...", "\n")
+[2023-02-16T19:33:33] RUNTIME:   world: ()
+[2023-02-16T19:33:33] RUNTIME:   world: load mode()
+[2023-02-16T19:33:33] RUNTIME:   /hook/startup (/hook/startup): loadMode()
+[2023-02-16T19:33:33] RUNTIME:   callHook("startup", null)
+[2023-02-16T19:33:33] RUNTIME:   world: New()
+[2023-02-16T19:33:33] RUNTIME:   world: New()
+[2023-02-16T19:33:33] RUNTIME: [2023-02-16T19:33:33] Runtime in files.dm,4: Safety violation: tried to access 'C:\Users\benja\OneDrive\Desktop\Chompstation New [New]\CHOMPStation2\config\names\first_male.txt' outside of current directory.
+[2023-02-16T19:33:33] RUNTIME:   proc name: return file text (/proc/return_file_text)
+[2023-02-16T19:33:33] RUNTIME:   src: null
+[2023-02-16T19:33:33] RUNTIME:   call stack:
+[2023-02-16T19:33:33] RUNTIME:   return file text("config/names/first_male.txt")
+[2023-02-16T19:33:33] RUNTIME:   file2list("config/names/first_male.txt", "\n")
+[2023-02-16T19:33:33] RUNTIME:   world: ()
+[2023-02-16T19:33:33] RUNTIME:   world: load mode()
+[2023-02-16T19:33:33] RUNTIME:   /hook/startup (/hook/startup): loadMode()
+[2023-02-16T19:33:33] RUNTIME:   callHook("startup", null)
+[2023-02-16T19:33:33] RUNTIME:   world: New()
+[2023-02-16T19:33:33] RUNTIME:   world: New()
+[2023-02-16T19:33:33] RUNTIME: [2023-02-16T19:33:33] Runtime in files.dm,4: Safety violation: tried to access 'C:\Users\benja\OneDrive\Desktop\Chompstation New [New]\CHOMPStation2\config\names\first_female.txt' outside of current directory.
+[2023-02-16T19:33:33] RUNTIME:   proc name: return file text (/proc/return_file_text)
+[2023-02-16T19:33:33] RUNTIME:   src: null
+[2023-02-16T19:33:33] RUNTIME:   call stack:
+[2023-02-16T19:33:33] RUNTIME:   return file text("config/names/first_female.txt")
+[2023-02-16T19:33:33] RUNTIME:   file2list("config/names/first_female.txt", "\n")
+[2023-02-16T19:33:33] RUNTIME:   world: ()
+[2023-02-16T19:33:33] RUNTIME:   world: load mode()
+[2023-02-16T19:33:33] RUNTIME:   /hook/startup (/hook/startup): loadMode()
+[2023-02-16T19:33:33] RUNTIME:   callHook("startup", null)
+[2023-02-16T19:33:33] RUNTIME:   world: New()
+[2023-02-16T19:33:33] RUNTIME:   world: New()
+[2023-02-16T19:33:33] RUNTIME: [2023-02-16T19:33:33] Runtime in files.dm,4: Safety violation: tried to access 'C:\Users\benja\OneDrive\Desktop\Chompstation New [New]\CHOMPStation2\config\names\last.txt' outside of current directory.
+[2023-02-16T19:33:33] RUNTIME:   proc name: return file text (/proc/return_file_text)
+[2023-02-16T19:33:33] RUNTIME:   src: null
+[2023-02-16T19:33:33] RUNTIME:   call stack:
+[2023-02-16T19:33:33] RUNTIME:   return file text("config/names/last.txt")
+[2023-02-16T19:33:33] RUNTIME:   file2list("config/names/last.txt", "\n")
+[2023-02-16T19:33:33] RUNTIME:   world: ()
+[2023-02-16T19:33:33] RUNTIME:   world: load mode()
+[2023-02-16T19:33:33] RUNTIME:   /hook/startup (/hook/startup): loadMode()
+[2023-02-16T19:33:33] RUNTIME:   callHook("startup", null)
+[2023-02-16T19:33:33] RUNTIME:   world: New()
+[2023-02-16T19:33:33] RUNTIME:   world: New()
+[2023-02-16T19:33:33] RUNTIME: [2023-02-16T19:33:33] Runtime in files.dm,4: Safety violation: tried to access 'C:\Users\benja\OneDrive\Desktop\Chompstation New [New]\CHOMPStation2\config\names\clown.txt' outside of current directory.
+[2023-02-16T19:33:33] RUNTIME:   proc name: return file text (/proc/return_file_text)
+[2023-02-16T19:33:33] RUNTIME:   src: null
+[2023-02-16T19:33:33] RUNTIME:   call stack:
+[2023-02-16T19:33:33] RUNTIME:   return file text("config/names/clown.txt")
+[2023-02-16T19:33:33] RUNTIME:   file2list("config/names/clown.txt", "\n")
+[2023-02-16T19:33:33] RUNTIME:   world: ()
+[2023-02-16T19:33:33] RUNTIME:   world: load mode()
+[2023-02-16T19:33:33] RUNTIME:   /hook/startup (/hook/startup): loadMode()
+[2023-02-16T19:33:33] RUNTIME:   callHook("startup", null)
+[2023-02-16T19:33:33] RUNTIME:   world: New()
+[2023-02-16T19:33:33] RUNTIME:   world: New()
+[2023-02-16T19:33:33] RUNTIME:   (This error will now be silenced for 10 minutes)
+[2023-02-16T19:33:33] RUNTIME: [2023-02-16T19:33:33] Runtime in world.dm,443: Safety violation: tried to access 'C:\Users\benja\OneDrive\Desktop\Chompstation New [New]\CHOMPStation2\data\mode.txt' outside of current directory.
+[2023-02-16T19:33:33] RUNTIME:   proc name: load mode (/world/proc/load_mode)
+[2023-02-16T19:33:33] RUNTIME:   src: world
+[2023-02-16T19:33:33] RUNTIME:   call stack:
+[2023-02-16T19:33:33] RUNTIME:   world: load mode()
+[2023-02-16T19:33:33] RUNTIME:   /hook/startup (/hook/startup): loadMode()
+[2023-02-16T19:33:33] RUNTIME:   callHook("startup", null)
+[2023-02-16T19:33:33] RUNTIME:   world: New()
+[2023-02-16T19:33:33] RUNTIME:   world: New()
+[2023-02-16T19:33:33] RUNTIME: [2023-02-16T19:33:33] Runtime in world.dm,464: Safety violation: tried to access 'C:\Users\benja\OneDrive\Desktop\Chompstation New [New]\CHOMPStation2\config\motd.txt' outside of current directory.
+[2023-02-16T19:33:33] RUNTIME:   proc name: load motd (/world/proc/load_motd)
+[2023-02-16T19:33:33] RUNTIME:   src: world
+[2023-02-16T19:33:33] RUNTIME:   call stack:
+[2023-02-16T19:33:33] RUNTIME:   world: load motd()
+[2023-02-16T19:33:33] RUNTIME:   /hook/startup (/hook/startup): loadMOTD()
+[2023-02-16T19:33:33] RUNTIME:   callHook("startup", null)
+[2023-02-16T19:33:33] RUNTIME:   world: New()
+[2023-02-16T19:33:33] RUNTIME:   world: New()
+[2023-02-16T19:33:33] RUNTIME: [2023-02-16T19:33:33] Runtime in world.dm,481: Safety violation: tried to access 'C:\Users\benja\OneDrive\Desktop\Chompstation New [New]\CHOMPStation2\config\moderators.txt' outside of current directory.
+[2023-02-16T19:33:33] RUNTIME:   proc name: load mods (/world/proc/load_mods)
+[2023-02-16T19:33:33] RUNTIME:   src: world
+[2023-02-16T19:33:33] RUNTIME:   call stack:
+[2023-02-16T19:33:33] RUNTIME:   world: load mods()
+[2023-02-16T19:33:33] RUNTIME:   /hook/startup (/hook/startup): loadMods()
+[2023-02-16T19:33:33] RUNTIME:   callHook("startup", null)
+[2023-02-16T19:33:33] RUNTIME:   world: New()
+[2023-02-16T19:33:33] RUNTIME:   world: New()
+[2023-02-16T19:33:33] RUNTIME: [2023-02-16T19:33:33] Runtime in world.dm,502: Safety violation: tried to access 'C:\Users\benja\OneDrive\Desktop\Chompstation New [New]\CHOMPStation2\config\mentors.txt' outside of current directory.
+[2023-02-16T19:33:33] RUNTIME:   proc name: load mentors (/world/proc/load_mentors)
+[2023-02-16T19:33:34] RUNTIME: [2023-02-16T19:33:34] Runtime in whitelist_vr.dm,9: Safety violation: tried to access 'C:\Users\benja\OneDrive\Desktop\Chompstation New [New]\CHOMPStation2\config\jobwhitelist.txt' outside of current directory.
+[2023-02-16T19:33:34] RUNTIME:   proc name: load jobwhitelist (/proc/load_jobwhitelist)
+[2023-02-16T19:33:34] RUNTIME: [2023-02-16T19:33:34] Runtime in admin_investigate.dm,19: Safety violation: tried to access 'C:\Users\benja\OneDrive\Desktop\Chompstation New [New]\CHOMPStation2\data\investigate\' outside of current directory.
+[2023-02-16T19:33:34] RUNTIME:   proc name: investigate reset (/proc/investigate_reset)
+[2023-02-16T19:33:34] RUNTIME: [2023-02-16T19:33:34] Runtime in admin_ranks.dm,11: safe mode violation: tried to write '' to '' in configuration list 'admin'.
+[2023-02-16T19:33:34] RUNTIME:   proc name: load admin ranks (/proc/load_admin_ranks)
+[2023-02-16T19:33:34] RUNTIME: [2023-02-16T19:33:34] Runtime in admin_ranks.dm,76: safe mode violation: tried to write '' to '' in configuration list 'admin'.
+[2023-02-16T19:33:34] RUNTIME:   proc name: load admins (/proc/load_admins)
+[2023-02-16T19:33:34] RUNTIME: [2023-02-16T19:33:34] Runtime in banjob.dm,63: Safety violation: tried to access 'C:\Users\benja\OneDrive\Desktop\Chompstation New [New]\CHOMPStation2\data\job_full.ban' outside of current directory.
+[2023-02-16T19:33:34] RUNTIME:   proc name: jobban loadbanfile (/proc/jobban_loadbanfile)
+[2023-02-16T19:33:34] RUNTIME: [2023-02-16T19:33:34] Runtime in NewBan.dm,66: Safety violation: tried to access 'C:\Users\benja\OneDrive\Desktop\Chompstation New [New]\CHOMPStation2\data\banlist.bdb' outside of current directory.
+[2023-02-16T19:33:34] RUNTIME:   proc name: LoadBans (/proc/LoadBans)
+[2023-02-16T19:33:34] RUNTIME: [2023-02-16T19:33:34] Runtime in item_spawning.dm,124: Safety violation: tried to access 'C:\Users\benja\OneDrive\Desktop\Chompstation New [New]\CHOMPStation2\config\custom_items.txt' outside of current directory.
+[2023-02-16T19:33:34] RUNTIME:   proc name: load custom items (/hook/startup/proc/load_custom_items)
+[2023-02-16T19:33:34] RUNTIME: [2023-02-16T19:33:34] Runtime in custom_sprites.dm,8: Safety violation: tried to access 'C:\Users\benja\OneDrive\Desktop\Chompstation New [New]\CHOMPStation2\config\custom_sprites.txt' outside of current directory.
+[2023-02-16T19:33:34] RUNTIME:   proc name: load robot custom sprites (/hook/startup/proc/load_robot_custom_sprites)
+[2023-02-16T19:33:34] RUNTIME: [2023-02-16T19:33:34] Runtime in vchat_db.dm,7: Safety violation: tried to access 'C:\Users\benja\OneDrive\Desktop\Chompstation New [New]\CHOMPStation2\data\vchat.db' outside of current directory.
+[2023-02-16T19:33:34] RUNTIME:   proc name: init vchat (/proc/init_vchat)
+[2023-02-16T19:33:34] RUNTIME: [2023-02-16T19:33:34] Runtime in world.dm,481: Safety violation: tried to access 'C:\Users\benja\OneDrive\Desktop\Chompstation New [New]\CHOMPStation2\config\moderators.txt' outside of current directory.
+[2023-02-16T19:33:34] RUNTIME:   proc name: load mods (/world/proc/load_mods)
+[2023-02-16T19:33:34] RUNTIME: [2023-02-16T19:33:34] Runtime in names.dm,216: pick() from empty list
+[2023-02-16T19:33:34] RUNTIME:   proc name: generate code phrase (/proc/generate_code_phrase)
+[2023-02-16T19:33:34] RUNTIME: [2023-02-16T19:33:34] Runtime in names.dm,216: pick() from empty list
+[2023-02-16T19:33:34] RUNTIME:   proc name: generate code phrase (/proc/generate_code_phrase)

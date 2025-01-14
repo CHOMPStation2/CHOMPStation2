@@ -1,0 +1,91 @@
+[2024-04-03 06:19:24.011] START: Starting up data/logs/2024/04-April/03-Wednesday/round-02-19-18.
+[2024-04-03 06:19:25.601] DEBUG: Rebuilding Master Controller
+[2024-04-03 06:20:56.933] DEBUG: Load: Could not find news channel Vir News Network to populate news articles.
+[2024-04-03 06:21:46.085] DEBUG: Duplicate firedoors at 160,118,1
+[2024-04-03 06:24:32.684] DEBUG: Initialized shuttle Stargazer (/datum/shuttle/autodock/overmap/stargazer)
+[2024-04-03 06:24:32.693] DEBUG: Initialized shuttle Baby_mammoth (/datum/shuttle/autodock/overmap/baby_mammoth)
+[2024-04-03 06:24:32.701] DEBUG: Initialized shuttle Ursula (/datum/shuttle/autodock/overmap/ursula)
+[2024-04-03 06:24:32.710] DEBUG: Initialized shuttle Needle (/datum/shuttle/autodock/overmap/needle)
+[2024-04-03 06:24:32.718] DEBUG: Initialized shuttle Echidna (/datum/shuttle/autodock/overmap/echidna)
+[2024-04-03 06:24:32.726] DEBUG: Initialized shuttle Space Bus (/datum/shuttle/autodock/overmap/spacebus)
+[2024-04-03 06:24:32.726] DEBUG: Initialized shuttle Junker (/datum/shuttle/autodock/overmap/junker)
+[2024-04-03 06:24:32.732] DEBUG: Initialized shuttle Escape Pod 1 (/datum/shuttle/autodock/ferry/escape_pod/escape_pod1)
+[2024-04-03 06:24:32.737] DEBUG: Initialized shuttle Escape Pod 2 (/datum/shuttle/autodock/ferry/escape_pod/escape_pod2)
+[2024-04-03 06:24:32.742] DEBUG: Initialized shuttle Escape Pod 3 (/datum/shuttle/autodock/ferry/escape_pod/escape_pod3)
+[2024-04-03 06:24:32.747] DEBUG: Initialized shuttle Escape Pod 4 (/datum/shuttle/autodock/ferry/escape_pod/escape_pod4)
+[2024-04-03 06:24:32.753] DEBUG: Initialized shuttle Escape Pod 5 (/datum/shuttle/autodock/ferry/escape_pod/escape_pod5)
+[2024-04-03 06:24:32.759] DEBUG: Initialized shuttle Escape Pod 6 (/datum/shuttle/autodock/ferry/escape_pod/escape_pod6)
+[2024-04-03 06:24:32.765] DEBUG: Initialized shuttle Escape Pod 7 (/datum/shuttle/autodock/ferry/escape_pod/escape_pod7)
+[2024-04-03 06:24:32.771] DEBUG: Initialized shuttle Escape Pod 8 (/datum/shuttle/autodock/ferry/escape_pod/escape_pod8)
+[2024-04-03 06:24:32.777] DEBUG: Initialized shuttle Cryostorage Shuttle (/datum/shuttle/autodock/ferry/escape_pod/escape_pod_cryo)
+[2024-04-03 06:24:32.782] DEBUG: Initialized shuttle Large Escape Pod 1 (/datum/shuttle/autodock/ferry/escape_pod/large_escape_pod1)
+[2024-04-03 06:24:32.787] DEBUG: Initialized shuttle Large Escape Pod 2 (/datum/shuttle/autodock/ferry/escape_pod/large_escape_pod2)
+[2024-04-03 06:24:32.787] DEBUG: Initialized shuttle Arrivals (/datum/shuttle/autodock/ferry/arrivals/southern_cross)
+[2024-04-03 06:24:32.792] DEBUG: Initialized shuttle Escape (/datum/shuttle/autodock/ferry/emergency/centcom)
+[2024-04-03 06:24:32.792] DEBUG: Initialized shuttle Supply (/datum/shuttle/autodock/ferry/supply/cargo)
+[2024-04-03 06:24:32.797] DEBUG: Initialized shuttle Exploration (/datum/shuttle/autodock/ferry/exploration)
+[2024-04-03 06:24:32.802] DEBUG: Initialized shuttle Administration Shuttle (/datum/shuttle/autodock/multi/administration)
+[2024-04-03 06:24:32.808] DEBUG: Initialized shuttle Centcom Transport Shuttle (/datum/shuttle/autodock/multi/centcom)
+[2024-04-03 06:24:32.813] DEBUG: Initialized shuttle Merchant (/datum/shuttle/autodock/multi/merchant)
+[2024-04-03 06:24:32.813] DEBUG: &lt;span class=&#39;danger&#39;&gt;warning: shuttle Skipjack can&#39;t find its controller with tag skipjack_shuttle!&lt;/span&gt;
+[2024-04-03 06:24:32.814] DEBUG: Initialized shuttle Skipjack (/datum/shuttle/autodock/multi/heist)
+[2024-04-03 06:24:32.814] DEBUG: Initialized shuttle Mercenary Ship (/datum/shuttle/autodock/multi/syndicate)
+[2024-04-03 06:24:32.814] DEBUG: Initialized shuttle Ninja Shuttle (/datum/shuttle/autodock/multi/ninja)
+[2024-04-03 06:24:32.819] DEBUG: Initialized shuttle Response Operations Shuttle (/datum/shuttle/autodock/multi/ert)
+[2024-04-03 06:24:32.824] DEBUG: Initialized shuttle Shuttle 3 (/datum/shuttle/autodock/web_shuttle/shuttle3)
+[2024-04-03 06:24:33.077] DEBUG: Generating cloud of 11 electrical storm overmap event hazards
+[2024-04-03 06:24:33.078] DEBUG: Generating cloud of 16 dust cloud overmap event hazards
+[2024-04-03 06:24:33.080] DEBUG: Generating cloud of 15 asteroid field overmap event hazards
+[2024-04-03 06:24:33.084] DEBUG: Generating cloud of 15 asteroid field overmap event hazards
+[2024-04-03 06:24:33.088] DEBUG: Generating cloud of 8 ion cloud overmap event hazards
+[2024-04-03 06:24:33.089] DEBUG: Generating cloud of 15 asteroid field overmap event hazards
+[2024-04-03 06:24:33.092] DEBUG: Generating cloud of 8 ion cloud overmap event hazards
+[2024-04-03 06:24:33.094] DEBUG: Generating cloud of 8 carp shoal overmap event hazards
+[2024-04-03 06:24:33.095] DEBUG: Generating cloud of 15 asteroid field overmap event hazards
+[2024-04-03 06:24:33.097] DEBUG: Generating cloud of 8 ion cloud overmap event hazards
+[2024-04-03 06:24:33.098] DEBUG: Generating cloud of 8 ion cloud overmap event hazards
+[2024-04-03 06:24:33.098] DEBUG: Generating cloud of 11 electrical storm overmap event hazards
+[2024-04-03 06:24:33.099] DEBUG: Generating cloud of 8 ion cloud overmap event hazards
+[2024-04-03 06:24:33.099] DEBUG: Generating cloud of 8 carp shoal overmap event hazards
+[2024-04-03 06:24:33.100] DEBUG: Generating cloud of 16 dust cloud overmap event hazards
+[2024-04-03 06:24:33.102] DEBUG: Generating cloud of 5 carp school overmap event hazards
+[2024-04-03 06:24:33.102] DEBUG: Generating cloud of 15 asteroid field overmap event hazards
+[2024-04-03 06:24:33.105] DEBUG: Generating cloud of 11 electrical storm overmap event hazards
+[2024-04-03 06:24:33.105] DEBUG: Generating cloud of 16 dust cloud overmap event hazards
+[2024-04-03 06:24:33.108] DEBUG: Generating cloud of 16 dust cloud overmap event hazards
+[2024-04-03 06:24:33.110] DEBUG: Generating cloud of 8 carp shoal overmap event hazards
+[2024-04-03 06:24:33.110] DEBUG: Generating cloud of 15 asteroid field overmap event hazards
+[2024-04-03 06:24:33.113] DEBUG: Generating cloud of 5 carp school overmap event hazards
+[2024-04-03 06:24:33.114] DEBUG: Generating cloud of 16 dust cloud overmap event hazards
+[2024-04-03 06:24:33.116] DEBUG: Generating cloud of 15 asteroid field overmap event hazards
+[2024-04-03 06:24:33.119] DEBUG: Generating cloud of 11 electrical storm overmap event hazards
+[2024-04-03 06:24:33.120] DEBUG: Generating cloud of 8 carp shoal overmap event hazards
+[2024-04-03 06:24:33.121] DEBUG: Generating cloud of 15 asteroid field overmap event hazards
+[2024-04-03 06:24:33.123] DEBUG: Generating cloud of 8 carp shoal overmap event hazards
+[2024-04-03 06:24:33.124] DEBUG: Generating cloud of 8 carp shoal overmap event hazards
+[2024-04-03 06:24:33.124] DEBUG: Generating cloud of 16 dust cloud overmap event hazards
+[2024-04-03 06:24:33.127] DEBUG: Generating cloud of 16 dust cloud overmap event hazards
+[2024-04-03 06:24:33.129] DEBUG: Generating cloud of 5 carp school overmap event hazards
+[2024-04-03 06:24:33.130] DEBUG: Generating cloud of 5 carp school overmap event hazards
+[2024-04-03 06:24:33.130] DEBUG: Generating cloud of 15 asteroid field overmap event hazards
+[2024-04-03 06:24:33.133] DEBUG: Generating cloud of 15 asteroid field overmap event hazards
+[2024-04-03 06:24:33.136] DEBUG: Generating cloud of 5 carp school overmap event hazards
+[2024-04-03 06:24:33.136] DEBUG: Generating cloud of 8 ion cloud overmap event hazards
+[2024-04-03 06:24:33.137] DEBUG: Generating cloud of 8 carp shoal overmap event hazards
+[2024-04-03 06:24:33.137] DEBUG: Generating cloud of 16 dust cloud overmap event hazards
+[2024-04-03 06:24:33.139] DEBUG: Generating cloud of 5 carp school overmap event hazards
+[2024-04-03 06:24:33.140] DEBUG: Generating cloud of 15 asteroid field overmap event hazards
+[2024-04-03 06:24:33.142] DEBUG: Generating cloud of 5 carp school overmap event hazards
+[2024-04-03 06:24:33.143] DEBUG: Generating cloud of 15 asteroid field overmap event hazards
+[2024-04-03 06:26:30.064] DEBUG: TiDi Starting Log
+[2024-04-03 06:57:13.440] DEBUG: Next event of severity Mundane in 52.824 minutes.
+[2024-04-03 06:57:13.440] DEBUG: Next event of severity Moderate in 30 minutes.
+[2024-04-03 06:57:13.441] DEBUG: Next event of severity Major in 100 minutes.
+[2024-04-03 06:57:13.465] DEBUG: Thor&#39;s weather is now rain, with a temperature of 298.15&amp;deg;K (25&amp;deg;C | 77&amp;deg;F).
+[2024-04-03 06:57:13.465] DEBUG: Thor&#39;s weather forecast is now &#39;overcast, rain,  then rain&#39;.
+[2024-04-03 06:57:14.000] DEBUG: Sif&#39;s weather is now hail, with a temperature of 271.275&amp;deg;K (-1.875&amp;deg;C | 28.625&amp;deg;F).
+[2024-04-03 06:57:14.000] DEBUG: Sif&#39;s weather forecast is now &#39;hail, storm,  then rain&#39;.
+[2024-04-03 06:59:15.054] DEBUG: Sif&#39;s weather is now hail, with a temperature of 271.275&amp;deg;K (-1.875&amp;deg;C | 28.625&amp;deg;F).
+[2024-04-03 06:59:15.055] DEBUG: Sif&#39;s weather forecast is now &#39;storm, rain,  then rain&#39;.
+[2024-04-03 07:01:16.139] DEBUG: Sif&#39;s weather is now storm, with a temperature of 242.525&amp;deg;K (-30.625&amp;deg;C | -23.125&amp;deg;F).
+[2024-04-03 07:01:16.140] DEBUG: Sif&#39;s weather forecast is now &#39;rain, rain,  then overcast&#39;.

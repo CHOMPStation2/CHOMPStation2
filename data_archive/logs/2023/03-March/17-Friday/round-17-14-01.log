@@ -1,0 +1,221 @@
+[2023-03-17T17:14:21] START: Starting up data/logs/2023/03-March/17-Friday/round-17-14-01.
+[2023-03-17T17:14:22] ADMIN: Loading jobban_rank
+[2023-03-17T17:14:22] ADMIN: jobban_keylist was empty
+[2023-03-17T17:14:22] ADMIN: Loading Banlist
+[2023-03-17T17:14:24] GAME: Mine Vault 3 loaded at at 184,28,5
+[2023-03-17T17:14:24] GAME: Supply Drop 1 loaded at at 87,58,5
+[2023-03-17T17:14:26] GAME: Crashed Cargo Shuttle loaded at at 54,10,5
+[2023-03-17T17:14:26] GAME: Dig Site loaded at at 219,62,5
+[2023-03-17T17:14:26] GAME: Crashed Med Shuttle loaded at at 154,79,5
+[2023-03-17T17:14:26] GAME: Rat Den loaded at at 56,61,5
+[2023-03-17T17:14:26] GAME: Quarantined Shuttle loaded at at 12,40,5
+[2023-03-17T17:14:26] GAME: Crystal Cave 3 loaded at at 84,25,5
+[2023-03-17T17:14:27] GAME: spatial anomaly loaded at at 197,197,5
+[2023-03-17T17:14:27] ACCESS IN: RiotScopez/(RiotScopez) - IP:127.0.0.1 - CID:1871707424 - BYOND v514
+[2023-03-17T17:14:27] GAME: Snow 2 loaded at at 192,73,4
+[2023-03-17T17:14:27] GAME: Old Hotel loaded at at 12,173,4
+[2023-03-17T17:14:27] GAME: Emergency Pod 2 loaded at at 21,18,4
+[2023-03-17T17:14:27] GAME: Snow loaded at at 70,12,4
+[2023-03-17T17:14:27] GAME: Old Library loaded at at 13,100,4
+[2023-03-17T17:14:27] GAME: Ration Cache loaded at at 221,16,4
+[2023-03-17T17:14:27] GAME: Snow 5 loaded at at 50,11,4
+[2023-03-17T17:14:27] GAME: Meth Lab loaded at at 194,140,4
+[2023-03-17T17:14:28] GAME: Boathouse loaded at at 174,26,4
+[2023-03-17T17:14:28] GAME: Shakden loaded at at 89,25,4
+[2023-03-17T17:14:28] GAME: Empty Explorer's Home loaded at at 14,48,4
+[2023-03-17T17:14:28] GAME: Buried Treasure loaded at at 177,13,4
+[2023-03-17T17:14:28] GAME: Farm loaded at at 39,43,4
+[2023-03-17T17:14:28] GAME: Merchant Stand loaded at at 37,168,4
+[2023-03-17T17:14:28] GAME: Dragon Den loaded at at 96,59,4
+[2023-03-17T17:14:28] GAME: Snow 3 loaded at at 91,126,4
+[2023-03-17T17:14:28] GAME: Rocky Outcrop loaded at at 46,96,4
+[2023-03-17T17:14:28] GAME: Camp Site loaded at at 85,110,4
+[2023-03-17T17:14:28] GAME: Hot Spring loaded at at 124,102,4
+[2023-03-17T17:14:29] GAME: Mechpit loaded at at 9,79,4
+[2023-03-17T17:14:29] GAME: Old Supply Drop loaded at at 138,60,4
+[2023-03-17T17:14:29] GAME: Emergency Pod loaded at at 10,197,4
+[2023-03-17T17:14:29] GAME: Rocky 1 loaded at at 201,65,9
+[2023-03-17T17:14:29] GAME: Wolf Den loaded at at 34,81,9
+[2023-03-17T17:14:29] GAME: Rocky 3 loaded at at 194,32,9
+[2023-03-17T17:14:29] GAME: Rocky 2 loaded at at 80,61,9
+[2023-03-17T17:14:29] GAME: Butcher Shack loaded at at 10,97,9
+[2023-03-17T17:14:29] GAME: Cragzone 1 loaded at at 166,55,9
+[2023-03-17T17:14:29] GAME: Rocky 2 loaded at at 21,11,9
+[2023-03-17T17:14:29] GAME: Empty Cabin loaded at at 8,37,9
+[2023-03-17T17:14:29] GAME: Military Camp 1 loaded at at 127,75,9
+[2023-03-17T17:14:29] GAME: Frostfly Nest loaded at at 130,60,9
+[2023-03-17T17:14:29] GAME: Mudpit loaded at at 167,20,9
+[2023-03-17T17:14:29] GAME: Rocky 2 loaded at at 60,9,9
+[2023-03-17T17:14:29] GAME: Shack 1 loaded at at 113,12,9
+[2023-03-17T17:14:30] GAME: Chasm loaded at at 143,49,9
+[2023-03-17T17:14:30] GAME: Snowrock 1 loaded at at 59,75,9
+[2023-03-17T17:14:30] GAME: Rocky 4 loaded at at 121,36,9
+[2023-03-17T17:14:30] GAME: Frost Oasis loaded at at 41,42,9
+[2023-03-17T17:14:30] GAME: Rocky 2 loaded at at 14,46,9
+[2023-03-17T17:14:31] GAME: Demon Pool loaded at at 79,35,9
+[2023-03-17T17:14:32] GAME: Government Patrol loaded at at 61,40,9
+[2023-03-17T17:14:32] GAME: Spider Nest 1 loaded at at 162,38,9
+[2023-03-17T17:14:32] GAME: Emergency Pod 4 loaded at at 184,12,9
+[2023-03-17T17:14:32] GAME: Kururak Den loaded at at 104,94,9
+[2023-03-17T17:14:32] GAME: Spider Nest 1 loaded at at 109,85,9
+[2023-03-17T17:14:35] GAME: Lab 1 loaded at at 90,10,9
+[2023-03-17T17:14:35] GAME: Shelter 1 loaded at at 117,63,9
+[2023-03-17T17:14:35] GAME: Musk loaded at at 114,96,9
+[2023-03-17T17:14:37] GAME: Spider Nest 1 loaded at at 141,39,9
+[2023-03-17T17:14:37] GAME: Spider Nest 1 loaded at at 14,82,9
+[2023-03-17T17:14:39] GAME: Smol 1 loaded at at 172,41,9
+[2023-03-17T17:14:40] GAME: Spider Nest 1 loaded at at 152,78,9
+[2023-03-17T17:14:43] GAME: Spider Nest 1 loaded at at 182,44,9
+[2023-03-17T17:14:43] GAME: Spider Nest 1 loaded at at 47,16,9
+[2023-03-17T17:14:44] GAME: Spider Nest 1 loaded at at 85,94,9
+[2023-03-17T17:14:44] GAME: Great Wolf Den loaded at at 27,128,9
+[2023-03-17T17:14:45] GAME: Dog Base loaded at at 31,192,9
+[2023-03-17T17:14:45] GAME: Borg Lab loaded at at 112,194,9
+[2023-03-17T17:14:45] GAME: Syndi Sniper loaded at at 104,156,9
+[2023-03-17T17:14:45] GAME: DJOutpost 4 loaded at at 140,218,9
+[2023-03-17T17:14:46] GAME: Black Shuttle Down loaded at at 30,160,9
+[2023-03-17T17:14:46] GAME: Abandoned Lab loaded at at 83,116,9
+[2023-03-17T17:14:46] GAME: Otie Shelter loaded at at 167,109,9
+[2023-03-17T17:14:47] GAME: Cult Bar loaded at at 176,192,9
+[2023-03-17T17:14:47] GAME: Emergency Pod 3 loaded at at 99,230,9
+[2023-03-17T17:14:48] GAME: Cliff Base loaded at at 188,151,9
+[2023-03-17T17:14:49] GAME: Dragon Plateu loaded at at 125,117,9
+[2023-03-17T17:14:50] GAME: Chapel 1 loaded at at 81,198,9
+[2023-03-17T17:14:50] GAME: Lone Wolf loaded at at 217,137,9
+[2023-03-17T17:15:39] GAME: Z-level VR World loaded at at 1,1,11
+[2023-03-17T17:15:40] GAME: Z-level Fuel Depot - Z1 Space loaded at at 1,1,12
+[2023-03-17T17:15:44] GAME: Z-level Kara Aerostat - Z1 Aerostat loaded at at 1,1,13
+[2023-03-17T17:15:52] GAME: Z-level Kara - Z1 Northern Star loaded at at 1,1,14
+[2023-03-17T17:16:33] GAME: Z-level Snow Field loaded at at 1,1,15
+[2023-03-17T17:17:09] MISC: a the gibber didn't find an input plate.
+[2023-03-17T17:17:45] MISC: a the gibber didn't find an input plate.
+[2023-03-17T17:22:02] ADMIN: EVENT Error: /mob/living/simple_mob/animal/giant_spider/broodling([0x30002c7]) took longer than 0.5 seconds to delete (took 0.6 seconds to delete)
+[2023-03-17T17:22:03] ADMIN: RiotScopez/(RiotScopez) delayed the game.
+[2023-03-17T17:23:10] GAME: TIDI: 14.3333;4.3;0.86;0.086
+[2023-03-17T17:24:18] GAME: TIDI: 13.3333;7.01;2.09;0.2864
+[2023-03-17T17:25:06] ADMIN: EVENT Error: /datum/ai_holder/simple_mob/melee([0x21009913]) took longer than 0.5 seconds to delete (took 0.6 seconds to delete)
+[2023-03-17T17:25:26] GAME: TIDI: 14.3333;9.207;3.5134;0.6091
+[2023-03-17T17:26:28] GAME: TIDI: 2.33333;7.1449;4.2397;0.97216
+[2023-03-17T17:27:07] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-17T17:27:29] GAME: TRAITS riotscopez/(Jesse Dennis) with: nothing
+[2023-03-17T17:27:30] GAME: TIDI: 3.5;6.05143;4.60205;1.33515
+[2023-03-17T17:28:30] GAME: TIDI: 0.166667;4.286;4.53884;1.65552
+[2023-03-17T17:28:43] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:28:52] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:28:58] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:29:03] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:29:07] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:29:14] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:29:21] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:29:27] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:29:31] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:29:34] GAME: TIDI: 6.66667;5.0002;4.63111;1.95308
+[2023-03-17T17:29:35] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:29:42] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:30:11] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:30:27] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:30:36] GAME: TIDI: 2.66667;4.30014;4.56492;2.21426
+[2023-03-17T17:30:48] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:30:54] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:31:03] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:31:09] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:31:25] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:31:30] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:31:39] GAME: TIDI: 4.83333;4.4601;4.54395;2.44723
+[2023-03-17T17:31:44] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:31:58] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:32:38] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:32:40] GAME: TIDI: 2.16667;3.77207;4.38958;2.64146
+[2023-03-17T17:32:45] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:32:55] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:33:14] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:33:26] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:33:42] GAME: TIDI: 4.16667;3.89045;4.28975;2.80629
+[2023-03-17T17:34:09] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:34:18] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:34:22] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:34:34] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:34:40] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:34:45] GAME: TIDI: 4.66667;4.12331;4.25646;2.95131
+[2023-03-17T17:35:14] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:35:20] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:35:26] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:35:33] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:35:44] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:35:47] GAME: TIDI: 3.16667;3.83632;4.17243;3.07342
+[2023-03-17T17:36:47] GAME: TIDI: 0.166667;2.73542;3.88503;3.15458
+[2023-03-17T17:36:49] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:37:09] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:37:10] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:37:11] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:37:12] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:37:15] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:37:28] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:37:29] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:37:30] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:37:31] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:37:51] GAME: TIDI: 6;3.7148;3.85099;3.22422
+[2023-03-17T17:37:59] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:38:01] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:38:02] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:38:02] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:38:36] GAME: TRAITS riotscopez/(Kyra Kuahara) with: nothing
+[2023-03-17T17:38:52] GAME: TIDI: 2.83333;3.45036;3.77086;3.27889
+[2023-03-17T17:39:53] GAME: TIDI: 0.333333;2.51525;3.51974;3.30297
+[2023-03-17T17:40:53] GAME: TIDI: 0;1.76068;3.16793;3.28947
+[2023-03-17T17:41:53] GAME: TIDI: 0;1.23247;2.78084;3.2386
+[2023-03-17T17:42:53] GAME: TIDI: 0;0.862731;2.39721;3.15446
+[2023-03-17T17:43:53] GAME: TIDI: 0;0.603912;2.03855;3.04287
+[2023-03-17T17:44:17] GAME: TRAITS riotscopez/(Kyra Kuahara) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/minor_brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/stuffing_feeder;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/spice_intolerance_slight,;/datum/trait/negative/deep_sleeper
+[2023-03-17T17:44:19] GAME: TRAITS riotscopez/(Kyra Kuahara) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/minor_brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/stuffing_feeder;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/spice_intolerance_slight,;/datum/trait/negative/deep_sleeper
+[2023-03-17T17:44:31] GAME: TRAITS riotscopez/(Kyra Kuahara) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/minor_brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/stuffing_feeder;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/spice_intolerance_slight,;/datum/trait/negative/deep_sleeper
+[2023-03-17T17:44:33] GAME: TRAITS riotscopez/(Kyra Kuahara) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/minor_brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/stuffing_feeder;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/spice_intolerance_slight,;/datum/trait/negative/deep_sleeper
+[2023-03-17T17:44:39] GAME: TRAITS riotscopez/(Kyra Kuahara) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/minor_brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/stuffing_feeder;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/spice_intolerance_slight,;/datum/trait/negative/deep_sleeper
+[2023-03-17T17:44:55] GAME: TIDI: 3.16667;1.37274;1.90539;2.92913
+[2023-03-17T17:44:55] GAME: TRAITS riotscopez/(Kyra Kuahara) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/minor_brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/stuffing_feeder;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/spice_intolerance_slight,;/datum/trait/negative/deep_sleeper
+[2023-03-17T17:45:16] GAME: TRAITS riotscopez/(Kyra Kuahara) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/minor_brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/stuffing_feeder;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/spice_intolerance_slight,;/datum/trait/negative/deep_sleeper
+[2023-03-17T17:45:33] GAME: TRAITS riotscopez/(Kyra Kuahara) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/minor_brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/stuffing_feeder;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/spice_intolerance_slight,;/datum/trait/negative/deep_sleeper
+[2023-03-17T17:45:43] GAME: TRAITS riotscopez/(Kyra Kuahara) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/minor_brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/stuffing_feeder;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/spice_intolerance_slight,;/datum/trait/negative/deep_sleeper
+[2023-03-17T17:45:56] GAME: TIDI: 2.66667;1.76092;1.8765;2.82386
+[2023-03-17T17:46:04] GAME: TRAITS riotscopez/(Kyra Kuahara) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/minor_brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/stuffing_feeder;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/spice_intolerance_slight,;/datum/trait/negative/deep_sleeper
+[2023-03-17T17:46:10] GAME: TRAITS riotscopez/(Kyra Kuahara) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/minor_brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/stuffing_feeder;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/spice_intolerance_slight,;/datum/trait/negative/deep_sleeper
+[2023-03-17T17:46:49] GAME: TRAITS riotscopez/(Kyra Kuahara) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/minor_brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/stuffing_feeder;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/spice_intolerance_slight,;/datum/trait/negative/deep_sleeper
+[2023-03-17T17:46:54] GAME: TRAITS riotscopez/(Kyra Kuahara) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/minor_brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/stuffing_feeder;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/spice_intolerance_slight,;/datum/trait/negative/deep_sleeper
+[2023-03-17T17:46:58] GAME: TIDI: 3;2.13264;1.92773;2.73425
+[2023-03-17T17:47:07] GAME: TRAITS riotscopez/(Kyra Kuahara) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/minor_brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/stuffing_feeder;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/spice_intolerance_slight,;/datum/trait/negative/deep_sleeper
+[2023-03-17T17:47:11] GAME: TRAITS riotscopez/(Kyra Kuahara) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/minor_brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/stuffing_feeder;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/spice_intolerance_slight,;/datum/trait/negative/deep_sleeper
+[2023-03-17T17:47:15] GAME: TRAITS riotscopez/(Kyra Kuahara) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/minor_brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/stuffing_feeder;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/spice_intolerance_slight,;/datum/trait/negative/deep_sleeper
+[2023-03-17T17:47:35] GAME: TRAITS riotscopez/(Kyra Kuahara) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/minor_brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/stuffing_feeder;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/spice_intolerance_slight,;/datum/trait/negative/deep_sleeper
+[2023-03-17T17:47:54] GAME: TRAITS riotscopez/(Kyra Kuahara) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/minor_brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/stuffing_feeder;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/spice_intolerance_slight,;/datum/trait/negative/deep_sleeper
+[2023-03-17T17:48:00] GAME: TIDI: 4.16667;2.74285;2.09075;2.6699
+[2023-03-17T17:48:48] GAME: TRAITS riotscopez/(Kyra Kuahara) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/minor_brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/stuffing_feeder;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/spice_intolerance_slight,;/datum/trait/negative/deep_sleeper
+[2023-03-17T17:49:01] GAME: TIDI: 0.833333;2.16999;2.1066;2.61357
+[2023-03-17T17:49:08] GAME: TRAITS riotscopez/(Kyra Kuahara) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/minor_brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/stuffing_feeder;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/spice_intolerance_slight,;/datum/trait/negative/deep_sleeper
+[2023-03-17T17:49:24] GAME: TRAITS riotscopez/(Kyra Kuahara) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/minor_brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/stuffing_feeder;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/spice_intolerance_slight,;/datum/trait/negative/deep_sleeper
+[2023-03-17T17:49:29] GAME: TRAITS riotscopez/(Kyra Kuahara) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/minor_brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/stuffing_feeder;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/spice_intolerance_slight,;/datum/trait/negative/deep_sleeper
+[2023-03-17T17:49:30] GAME: TRAITS riotscopez/(Kyra Kuahara) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/minor_brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/stuffing_feeder;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/spice_intolerance_slight,;/datum/trait/negative/deep_sleeper
+[2023-03-17T17:49:32] GAME: TRAITS riotscopez/(Kyra Kuahara) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/minor_brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/stuffing_feeder;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/spice_intolerance_slight,;/datum/trait/negative/deep_sleeper
+[2023-03-17T17:49:33] GAME: TRAITS riotscopez/(Kyra Kuahara) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/minor_brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/stuffing_feeder;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/spice_intolerance_slight,;/datum/trait/negative/deep_sleeper
+[2023-03-17T17:50:04] GAME: TIDI: 4.83333;2.969;2.27908;2.58012
+[2023-03-17T17:51:04] GAME: TIDI: 0.333333;2.1783;2.25892;2.548
+[2023-03-17T17:52:04] GAME: TIDI: 0;1.52481;2.1121;2.50441
+[2023-03-17T17:53:04] GAME: TIDI: 0;1.06737;1.90315;2.44428
+[2023-03-17T17:54:04] GAME: TIDI: 0;0.747156;1.67195;2.36705
+[2023-03-17T17:55:04] GAME: TIDI: 0;0.523009;1.44216;2.27456
+[2023-03-17T17:56:04] GAME: TIDI: 0.5;0.516106;1.25695;2.1728
+[2023-03-17T17:57:04] GAME: TIDI: 0;0.361274;1.07782;2.0633
+[2023-03-17T17:58:04] GAME: TIDI: 0;0.252892;0.912832;1.94826
+[2023-03-17T17:58:17] GAME: TRAITS riotscopez/(Izabella Hawking) with: nothing
+[2023-03-17T17:58:22] GAME: TRAITS riotscopez/(Izabella Hawking) with: nothing
+[2023-03-17T17:58:29] GAME: TRAITS riotscopez/(Izabella Hawking) with: nothing
+[2023-03-17T17:58:33] GAME: TRAITS riotscopez/(Izabella Hawking) with: nothing
+[2023-03-17T17:58:46] GAME: TRAITS riotscopez/(Izabella Hawking) with: nothing
+[2023-03-17T17:59:06] GAME: TIDI: 3;1.07702;0.945671;1.848
+[2023-03-17T17:59:10] GAME: TRAITS riotscopez/(Izabella Hawking) with: nothing
+[2023-03-17T17:59:29] GAME: TRAITS riotscopez/(Izabella Hawking) with: nothing
+[2023-03-17T17:59:50] GAME: TRAITS riotscopez/(Izabella Hawking) with: nothing
+[2023-03-17T17:59:54] GAME: TRAITS riotscopez/(Izabella Hawking) with: nothing
+[2023-03-17T18:00:01] GAME: TRAITS riotscopez/(Izabella Hawking) with: nothing
+[2023-03-17T18:00:09] GAME: TIDI: 4.33333;2.05392;1.16732;1.77993
+[2023-03-17T18:00:20] GAME: TRAITS riotscopez/(Kyra Kuahara) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/minor_brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/stuffing_feeder;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/spice_intolerance_slight;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/succubus_drain,;/datum/trait/negative/deep_sleeper
+[2023-03-17T18:00:27] ACCESS OUT: RiotScopez/(RiotScopez) - IP:127.0.0.1 - CID:Logged Out - BYOND Logged Out

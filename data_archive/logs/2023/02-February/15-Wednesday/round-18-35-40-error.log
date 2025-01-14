@@ -1,0 +1,41 @@
+[2023-02-15T18:35:43] START: Starting up data/logs/2023/02-February/15-Wednesday/round-18-35-40.
+[2023-02-15T19:55:47] RUNTIME: [2023-02-15T19:55:47] Runtime in lighting_source.dm,250: Cannot read null.x
+[2023-02-15T19:55:47] RUNTIME:   proc name: update corners (/datum/light_source/proc/update_corners)
+[2023-02-15T19:55:47] RUNTIME:   src: /datum/light_source (/datum/light_source)
+[2023-02-15T19:55:47] RUNTIME:   call stack:
+[2023-02-15T19:55:47] RUNTIME:   /datum/light_source (/datum/light_source): update corners()
+[2023-02-15T19:55:47] RUNTIME:   Lighting (/datum/controller/subsystem/lighting): fire(0, null)
+[2023-02-15T19:55:47] RUNTIME:   Lighting (/datum/controller/subsystem/lighting): ignite(0)
+[2023-02-15T19:55:47] RUNTIME:   Master (/datum/controller/master): RunQueue()
+[2023-02-15T19:55:47] RUNTIME:   Master (/datum/controller/master): Loop()
+[2023-02-15T19:55:47] RUNTIME:   Master (/datum/controller/master): StartProcessing(0)
+[2023-02-15T19:59:01] RUNTIME: [2023-02-15T19:59:01] Runtime in lighting_source.dm,250: Cannot read null.x
+[2023-02-15T19:59:01] RUNTIME:   proc name: update corners (/datum/light_source/proc/update_corners)
+[2023-02-15T19:59:01] RUNTIME:   src: /datum/light_source (/datum/light_source)
+[2023-02-15T19:59:01] RUNTIME:   call stack:
+[2023-02-15T19:59:01] RUNTIME:   /datum/light_source (/datum/light_source): update corners()
+[2023-02-15T19:59:01] RUNTIME:   Lighting (/datum/controller/subsystem/lighting): fire(0, null)
+[2023-02-15T19:59:01] RUNTIME:   Lighting (/datum/controller/subsystem/lighting): ignite(0)
+[2023-02-15T19:59:01] RUNTIME:   Master (/datum/controller/master): RunQueue()
+[2023-02-15T19:59:01] RUNTIME:   Master (/datum/controller/master): Loop()
+[2023-02-15T19:59:01] RUNTIME:   Master (/datum/controller/master): StartProcessing(0)
+[2023-02-15T19:59:15] RUNTIME: [2023-02-15T19:59:15] Runtime in lighting_source.dm,250: Cannot read null.x
+[2023-02-15T19:59:15] RUNTIME:   proc name: update corners (/datum/light_source/proc/update_corners)
+[2023-02-15T19:59:15] RUNTIME:   src: /datum/light_source (/datum/light_source)
+[2023-02-15T19:59:15] RUNTIME:   call stack:
+[2023-02-15T19:59:15] RUNTIME:   /datum/light_source (/datum/light_source): update corners()
+[2023-02-15T19:59:15] RUNTIME:   Lighting (/datum/controller/subsystem/lighting): fire(0, null)
+[2023-02-15T19:59:15] RUNTIME:   Lighting (/datum/controller/subsystem/lighting): ignite(0)
+[2023-02-15T19:59:15] RUNTIME:   Master (/datum/controller/master): RunQueue()
+[2023-02-15T19:59:15] RUNTIME:   Master (/datum/controller/master): Loop()
+[2023-02-15T19:59:15] RUNTIME:   Master (/datum/controller/master): StartProcessing(0)
+[2023-02-15T19:59:56] RUNTIME: [2023-02-15T19:59:56] Runtime in lighting_source.dm,250: Cannot read null.x
+[2023-02-15T19:59:56] RUNTIME:   proc name: update corners (/datum/light_source/proc/update_corners)
+[2023-02-15T19:59:56] RUNTIME:   src: /datum/light_source (/datum/light_source)
+[2023-02-15T19:59:56] RUNTIME:   call stack:
+[2023-02-15T19:59:56] RUNTIME:   /datum/light_source (/datum/light_source): update corners()
+[2023-02-15T19:59:56] RUNTIME:   Lighting (/datum/controller/subsystem/lighting): fire(0, null)
+[2023-02-15T19:59:56] RUNTIME:   Lighting (/datum/controller/subsystem/lighting): ignite(0)
+[2023-02-15T19:59:57] RUNTIME:   Master (/datum/controller/master): RunQueue()
+[2023-02-15T19:59:57] RUNTIME:   Master (/datum/controller/master): Loop()
+[2023-02-15T19:59:57] RUNTIME:   Master (/datum/controller/master): StartProcessing(0)

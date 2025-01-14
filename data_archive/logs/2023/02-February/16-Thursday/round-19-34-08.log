@@ -1,0 +1,1040 @@
+[2023-02-16T19:33:58] START: Starting up data/logs/2023/02-February/16-Thursday/round-19-34-08.
+[2023-02-16T19:33:59] ADMIN: Loading jobban_rank
+[2023-02-16T19:33:59] ADMIN: jobban_keylist was empty
+[2023-02-16T19:33:59] ADMIN: Loading Banlist
+[2023-02-16T19:34:01] GAME: Mine Vault 3 loaded at at 186,106,5
+[2023-02-16T19:34:04] GAME: Crashed UFO Frigate loaded at at 33,85,5
+[2023-02-16T19:34:04] GAME: Supply Drop 1 loaded at at 94,44,5
+[2023-02-16T19:34:04] GAME: Crystal Cave 3 loaded at at 22,58,5
+[2023-02-16T19:34:04] GAME: Cursed Sword Cave loaded at at 192,17,5
+[2023-02-16T19:34:04] GAME: Rat Den loaded at at 174,32,5
+[2023-02-16T19:34:04] GAME: Excavation Site loaded at at 44,33,5
+[2023-02-16T19:34:05] GAME: spatial anomaly loaded at at 32,160,5
+[2023-02-16T19:34:05] GAME: Snow 5 loaded at at 91,77,4
+[2023-02-16T19:34:05] GAME: Snow 2 loaded at at 58,12,4
+[2023-02-16T19:34:05] GAME: Diner loaded at at 80,21,4
+[2023-02-16T19:34:05] GAME: Rocky Outcrop loaded at at 10,180,4
+[2023-02-16T19:34:05] GAME: Snow 3 loaded at at 29,66,4
+[2023-02-16T19:34:05] GAME: Abandoned Bonfire loaded at at 75,102,4
+[2023-02-16T19:34:05] GAME: Boathouse loaded at at 173,12,4
+[2023-02-16T19:34:05] GAME: Snow loaded at at 43,170,4
+[2023-02-16T19:34:05] GAME: Buried Treasure 3 loaded at at 10,44,4
+[2023-02-16T19:34:05] GAME: Field loaded at at 29,98,4
+[2023-02-16T19:34:06] GAME: VR Den loaded at at 65,80,4
+[2023-02-16T19:34:06] GAME: Old Hotel loaded at at 34,182,4
+[2023-02-16T19:34:06] GAME: Mechpit loaded at at 194,149,4
+[2023-02-16T19:34:06] GAME: Pooled Rocks loaded at at 40,15,4
+[2023-02-16T19:34:06] GAME: Dragon Den loaded at at 42,149,4
+[2023-02-16T19:34:06] GAME: Thieves' Cave loaded at at 10,19,4
+[2023-02-16T19:34:06] GAME: Emergency Pod loaded at at 23,154,4
+[2023-02-16T19:34:06] GAME: Chasm loaded at at 78,52,9
+[2023-02-16T19:34:06] GAME: Mudpit loaded at at 155,70,9
+[2023-02-16T19:34:06] GAME: Wolf Den loaded at at 220,76,9
+[2023-02-16T19:34:06] GAME: Smol 1 loaded at at 24,86,9
+[2023-02-16T19:34:06] GAME: Spider Nest 1 loaded at at 49,95,9
+[2023-02-16T19:34:06] GAME: Shelter 1 loaded at at 22,46,9
+[2023-02-16T19:34:06] GAME: Frost Oasis loaded at at 183,66,9
+[2023-02-16T19:34:06] GAME: Butcher Shack loaded at at 175,42,9
+[2023-02-16T19:34:07] GAME: Demon Pool loaded at at 114,61,9
+[2023-02-16T19:34:07] GAME: Decoupled Engine loaded at at 73,15,9
+[2023-02-16T19:34:07] GAME: Emergency Pod 4 loaded at at 15,58,9
+[2023-02-16T19:34:07] GAME: Rocky 3 loaded at at 122,85,9
+[2023-02-16T19:34:07] GAME: Spider Nest 1 loaded at at 53,81,9
+[2023-02-16T19:34:07] GAME: Snowrock 1 loaded at at 38,38,9
+[2023-02-16T19:34:07] GAME: Rocky 2 loaded at at 14,9,9
+[2023-02-16T19:34:07] GAME: Government Patrol loaded at at 204,16,9
+[2023-02-16T19:34:07] GAME: Kururak Den loaded at at 44,11,9
+[2023-02-16T19:34:07] GAME: Rocky 2 loaded at at 110,19,9
+[2023-02-16T19:34:08] GAME: Lab 1 loaded at at 96,84,9
+[2023-02-16T19:34:09] GAME: Forest Lake loaded at at 139,36,9
+[2023-02-16T19:34:09] GAME: Rocky 1 loaded at at 195,34,9
+[2023-02-16T19:34:09] GAME: Rocky 2 loaded at at 62,78,9
+[2023-02-16T19:34:09] GAME: Spider Nest 1 loaded at at 197,58,9
+[2023-02-16T19:34:10] ACCESS IN: RiotScopez/(RiotScopez) - IP:127.0.0.1 - CID:1871707424 - BYOND v514
+[2023-02-16T19:34:10] GAME: Rocky 4 loaded at at 106,43,9
+[2023-02-16T19:34:10] GAME: Empty Cabin loaded at at 135,57,9
+[2023-02-16T19:34:10] GAME: Musk loaded at at 106,38,9
+[2023-02-16T19:34:10] GAME: Spider Nest 1 loaded at at 175,84,9
+[2023-02-16T19:34:10] GAME: Frostfly Nest loaded at at 141,83,9
+[2023-02-16T19:34:13] GAME: Shack 1 loaded at at 187,18,9
+[2023-02-16T19:34:13] GAME: Spider Nest 1 loaded at at 58,8,9
+[2023-02-16T19:34:14] GAME: Military Camp 1 loaded at at 37,58,9
+[2023-02-16T19:34:15] GAME: Derelict Engine loaded at at 118,121,9
+[2023-02-16T19:34:15] GAME: Leopardmander Den loaded at at 85,222,9
+[2023-02-16T19:34:19] GAME: DoomP loaded at at 161,164,9
+[2023-02-16T19:34:20] GAME: Abandoned Lab loaded at at 79,150,9
+[2023-02-16T19:34:21] GAME: Rocky Base loaded at at 21,142,9
+[2023-02-16T19:34:21] GAME: DJOutpost 2 loaded at at 196,126,9
+[2023-02-16T19:34:22] GAME: Cliff Base loaded at at 111,177,9
+[2023-02-16T19:34:23] GAME: CaveS loaded at at 58,181,9
+[2023-02-16T19:34:24] GAME: Black Shuttle Down loaded at at 159,128,9
+[2023-02-16T19:34:24] GAME: Otie Shelter loaded at at 16,194,9
+[2023-02-16T19:35:14] GAME: Z-level VR World loaded at at 1,1,11
+[2023-02-16T19:35:15] GAME: Z-level Fuel Depot - Z1 Space loaded at at 1,1,12
+[2023-02-16T19:35:20] GAME: Z-level Kara Aerostat - Z1 Aerostat loaded at at 1,1,13
+[2023-02-16T19:35:27] GAME: Z-level Kara - Z1 Northern Star loaded at at 1,1,14
+[2023-02-16T19:36:10] GAME: Z-level Snow Field loaded at at 1,1,15
+[2023-02-16T19:36:44] MISC: a the gibber didn't find an input plate.
+[2023-02-16T19:37:19] MISC: a the gibber didn't find an input plate.
+[2023-02-16T19:41:28] ADMIN: EVENT Error: /mob/living/simple_mob/animal/giant_spider/broodling([0x30002de]) took longer than 0.5 seconds to delete (took 0.5 seconds to delete)
+[2023-02-16T19:41:36] ADMIN: RiotScopez/(RiotScopez) delayed the game.
+[2023-02-16T19:41:37] ADMIN: RiotScopez/(RiotScopez) removed the delay.
+[2023-02-16T19:41:37] ADMIN: RiotScopez/(RiotScopez) delayed the game.
+[2023-02-16T19:42:34] GAME: TIDI: 10.8333;3.25;0.65;0.065
+[2023-02-16T19:43:41] GAME: TIDI: 12.8333;6.125;1.745;0.233
+[2023-02-16T19:44:01] ADMIN: RiotScopez/(RiotScopez) has started the game.
+[2023-02-16T19:44:02] ACCESS OUT: INVALID/(RiotScopez) - IP:127.0.0.1 - CID:Logged Out - BYOND Logged Out
+[2023-02-16T19:44:02] ACCESS IN: RiotScopez/(Cyborg) - IP:127.0.0.1 - CID:1871707424 - BYOND v514
+[2023-02-16T19:44:05] GAME: JOINED RiotScopez/(Cyborg) as "Cyborg"
+[2023-02-16T19:44:05] GAME: SPECIES RiotScopez/(Cyborg) is a: "Human"
+[2023-02-16T19:44:05] ACCESS OUT: INVALID/(Cyborg) - IP:127.0.0.1 - CID:Logged Out - BYOND Logged Out
+[2023-02-16T19:44:05] ACCESS IN: RiotScopez/(Default Cyborg-529) - IP:127.0.0.1 - CID:1871707424 - BYOND v514
+[2023-02-16T19:44:06] ADMIN: EVENT Error: /mob/living/carbon/human([0x3000305]) took longer than 0.5 seconds to delete (took 0.7 seconds to delete)
+[2023-02-16T19:44:18] ADMIN: EVENT Error: /mob/living/simple_mob/mechanical/viscerator([0x3000122]) took longer than 0.5 seconds to delete (took 0.6 seconds to delete)
+[2023-02-16T19:44:19] ADMIN: EVENT Error: /mob/living/simple_mob/humanoid/merc/ranged/ionrifle([0x30000c8]) took longer than 0.5 seconds to delete (took 0.6 seconds to delete)
+[2023-02-16T19:44:22] ATTACK: INVALID/(otie) against INVALID/(/obj/machinery/porta_turret/poi): Animal-attacked (dodged)
+[2023-02-16T19:44:22] ATTACK: INVALID/(guard hivebot) against INVALID/(mercenary): Shot with /obj/item/projectile/bullet/hivebot projectile
+[2023-02-16T19:44:22] ATTACK: INVALID/(mercenary) against INVALID/(guard hivebot): Shot with /obj/item/projectile/bullet/pistol/medium projectile
+[2023-02-16T19:44:25] ATTACK: INVALID/(guard hivebot) against INVALID/(mercenary): Shot with /obj/item/projectile/bullet/hivebot projectile
+[2023-02-16T19:44:25] ATTACK: INVALID/(mercenary) against INVALID/(guard hivebot): Shot with /obj/item/projectile/bullet/pistol/medium projectile
+[2023-02-16T19:44:27] ADMIN: EVENT Error: /mob/living/simple_mob/mechanical/hivebot/ranged_damage/strong/guard([0x30000bd]) took longer than 0.5 seconds to delete (took 0.6 seconds to delete)
+[2023-02-16T19:44:27] ADMIN: EVENT Error: /mob/living/simple_mob/humanoid/merc/ranged([0x30000c2]) took longer than 0.5 seconds to delete (took 0.6 seconds to delete)
+[2023-02-16T19:44:40] ADMIN: RiotScopez/(Mia) has changed RiotScopez/(Mia)'s size multiplier to 4.
+[2023-02-16T19:44:49] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T19:44:51] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T19:44:58] GAME: TIDI: 26.9551;12.374;3.8708;0.596781
+[2023-02-16T19:45:21] ADMIN: EVENT Error: /datum/ai_holder/simple_mob/melee([0x21009716]) took longer than 0.5 seconds to delete (took 0.5 seconds to delete)
+[2023-02-16T19:45:26] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T19:45:28] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T19:45:48] ADMIN: RiotScopez/(Mia) created 1 /obj/item/weapon/tool/crowbar
+[2023-02-16T19:45:54] ADMIN: RiotScopez/(Mia) created 1 /obj/item/weapon/tool/crowbar
+[2023-02-16T19:45:59] ADMIN: RiotScopez/(Mia) deleted the crowbar at (135,145,3)
+[2023-02-16T19:46:05] GAME: TIDI: 12.1667;12.3118;5.55901;1.093
+[2023-02-16T19:46:09] ADMIN: RiotScopez/(Mia) created 1 /obj/item/weapon/card/id/centcom/ERT
+[2023-02-16T19:46:11] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T19:46:21] ADMIN: RiotScopez/(Mia) created 1 /obj/item/weapon/cell/infinite
+[2023-02-16T19:46:29] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T19:46:33] ADMIN: RiotScopez/(Mia) created 1 /obj/item/borg/upgrade/vtec
+[2023-02-16T19:46:35] ADMIN: RiotScopez/(Mia) created 1 /obj/item/borg/upgrade/jetpack
+[2023-02-16T19:46:36] ADMIN: RiotScopez/(Mia) created 1 /obj/item/borg/upgrade/advhealth
+[2023-02-16T19:46:40] ADMIN: RiotScopez/(Mia) created 1 /obj/item/borg/upgrade/syndicate
+[2023-02-16T19:46:42] ADMIN: RiotScopez/(Mia) created 1 /obj/item/borg/upgrade/language
+[2023-02-16T19:46:43] ADMIN: EVENT Error: /datum/ai_holder/simple_mob/melee/evasive([0x21009277]) took longer than 0.5 seconds to delete (took 0.5 seconds to delete)
+[2023-02-16T19:46:44] ADMIN: RiotScopez/(Mia) created 1 /obj/item/borg/upgrade/sizeshift
+[2023-02-16T19:46:46] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T19:46:49] ADMIN: EVENT Error: /datum/ai_holder/simple_mob/merc/ranged([0x2100911f]) took longer than 0.5 seconds to delete (took 0.5 seconds to delete)
+[2023-02-16T19:46:52] ADMIN: RiotScopez/(Mia) created 1 /obj/item/borg/upgrade/sizegun
+[2023-02-16T19:46:53] ADMIN: RiotScopez/(Mia) created 1 /obj/item/borg/upgrade/bellysizeupgrade
+[2023-02-16T19:46:58] ADMIN: RiotScopez/(Mia) created 1 /obj/item/borg/upgrade/diamonddrill
+[2023-02-16T19:46:59] ADMIN: RiotScopez/(Mia) created 1 /obj/item/borg/upgrade/pka
+[2023-02-16T19:47:08] GAME: TIDI: 4.83333;10.0683;6.46086;1.62979
+[2023-02-16T19:47:13] ADMIN: RiotScopez/(Mia) created 1 /mob/living/carbon/human
+[2023-02-16T19:47:26] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T19:47:36] SAY: INVALID/(Medibot) (63,151,9): Delicious!
+[2023-02-16T19:47:45] ADMIN: RiotScopez/(Mia) assumed direct control of Ripley Chudasama.
+[2023-02-16T19:47:45] ACCESS OUT: INVALID/(Mia) - IP:127.0.0.1 - CID:Logged Out - BYOND Logged Out
+[2023-02-16T19:47:45] ACCESS IN: RiotScopez/(Ripley Chudasama) - IP:127.0.0.1 - CID:1871707424 - BYOND v514
+[2023-02-16T19:47:52] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T19:47:55] SUBTLE: riotscopez/(Ripley Chudasama) (134,145,3): gives some rubs over Mia's stomach.
+[2023-02-16T19:48:08] GAME: TIDI: 1;7.34779;6.63825;2.13063
+[2023-02-16T19:48:21] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T19:49:01] ADMIN: riotscopez/(Ripley Chudasama) deleted the �Emergency Response Team ID at (134,145,3)
+[2023-02-16T19:49:09] GAME: TIDI: 1.33333;5.54345;6.41929;2.5595
+[2023-02-16T19:49:11] ADMIN: riotscopez/(Ripley Chudasama) assumed direct control of Mia.
+[2023-02-16T19:49:11] ACCESS OUT: INVALID/(Ripley Chudasama) - IP:127.0.0.1 - CID:Logged Out - BYOND Logged Out
+[2023-02-16T19:49:11] ACCESS IN: RiotScopez/(Mia) - IP:127.0.0.1 - CID:1871707424 - BYOND v514
+[2023-02-16T19:49:49] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T19:49:53] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T19:50:11] GAME: TIDI: 3.83333;5.03042;6.14151;2.9177
+[2023-02-16T19:50:38] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T19:51:12] GAME: TIDI: 0.833333;3.77129;5.66747;3.19268
+[2023-02-16T19:51:25] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T19:52:11] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T19:52:14] GAME: TIDI: 4;3.8399;5.30196;3.40361
+[2023-02-16T19:52:51] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T19:53:15] GAME: TIDI: 0.666667;2.88793;4.81915;3.54516
+[2023-02-16T19:53:39] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T19:54:15] GAME: TIDI: 0.5;2.17155;4.28963;3.61961
+[2023-02-16T19:54:23] SAY: INVALID/(Medibot) (63,151,9): What kind of medbay is this? Everyone's dropping like flies.
+[2023-02-16T19:54:27] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T19:54:46] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T19:54:54] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T19:55:16] GAME: TIDI: 1.33333;1.92009;3.81572;3.63922
+[2023-02-16T19:55:30] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T19:55:38] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T19:56:11] SAY: INVALID/(Medibot) (63,151,9): What kind of medbay is this? Everyone's dropping like flies.
+[2023-02-16T19:56:16] GAME: TIDI: 0.833333;1.59406;3.37139;3.61244
+[2023-02-16T19:56:21] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T19:56:25] SAY: INVALID/(Medibot) (63,151,9): What kind of medbay is this? Everyone's dropping like flies.
+[2023-02-16T19:56:41] SAY: INVALID/(Medibot) (63,151,9): I knew it, I should've been a plastic surgeon.
+[2023-02-16T19:57:03] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T19:57:06] EMOTE: INVALID/(shantak) (149,93,4): <B>The shantak</B> shakes out its mane.
+[2023-02-16T19:57:17] GAME: TIDI: 0.666667;1.31584;2.96028;3.54722
+[2023-02-16T19:58:10] SAY: INVALID/(Medibot) (63,151,9): Delicious!
+[2023-02-16T19:58:18] GAME: TIDI: 1.66667;1.42109;2.65244;3.45774
+[2023-02-16T19:58:28] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T19:59:18] GAME: TIDI: 0.833333;1.24476;2.37091;3.34906
+[2023-02-16T19:59:43] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T19:59:45] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T19:59:51] SAY: INVALID/(Medibot) (63,151,9): There's always a catch, and it's the best there is.
+[2023-02-16T20:00:17] SAY: INVALID/(Medibot) (63,151,9): Delicious!
+[2023-02-16T20:00:19] GAME: TIDI: 0.666667;1.07133;2.11099;3.22525
+[2023-02-16T20:01:19] GAME: TIDI: 0.666667;0.949934;1.87878;3.09061
+[2023-02-16T20:01:29] SAY: INVALID/(Medibot) (63,151,9): Delicious!
+[2023-02-16T20:02:04] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T20:02:19] GAME: TIDI: 0.666667;0.864954;1.67602;2.94915
+[2023-02-16T20:02:42] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T20:02:50] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T20:03:14] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T20:03:20] GAME: TIDI: 0.833333;0.855468;1.51191;2.80542
+[2023-02-16T20:04:21] GAME: TIDI: 1.5;1.04883;1.41929;2.66681
+[2023-02-16T20:04:23] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T20:04:59] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T20:05:17] SAY: INVALID/(Medibot) (63,151,9): I knew it, I should've been a plastic surgeon.
+[2023-02-16T20:05:21] GAME: TIDI: 0.833333;0.984179;1.33227;2.53335
+[2023-02-16T20:05:52] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T20:06:01] SAY: INVALID/(mining drone) (47,39,5): Motion detected, judging target...
+[2023-02-16T20:06:02] SAY: INVALID/(mining drone) (47,39,5): Engaging target.
+[2023-02-16T20:06:02] ATTACK: INVALID/(space bat swarm) against INVALID/(space bat swarm): Generic attack (probably animal)
+[2023-02-16T20:06:02] ATTACK: INVALID/(space bat swarm) against INVALID/(space bat swarm): Animal-attacked (miss)
+[2023-02-16T20:06:03] ATTACK: INVALID/(space bat swarm) against INVALID/(space bat swarm): Generic attack (probably animal)
+[2023-02-16T20:06:03] ATTACK: INVALID/(space bat swarm) against INVALID/(space bat swarm): Animal-attacked (miss)
+[2023-02-16T20:06:03] ATTACK: INVALID/(space bat swarm) against INVALID/(space bat swarm): Generic attack (probably animal)
+[2023-02-16T20:06:04] ATTACK: INVALID/(space bat swarm) against INVALID/(space bat swarm): Generic attack (probably animal)
+[2023-02-16T20:06:04] ATTACK: INVALID/(space bat swarm) against INVALID/(space bat swarm): Animal-attacked (miss)
+[2023-02-16T20:06:04] ATTACK: INVALID/(space bat swarm) against INVALID/(space bat swarm): Animal-attacked (miss)
+[2023-02-16T20:06:05] ATTACK: INVALID/(space bat swarm) against INVALID/(space bat swarm): Animal-attacked (dodged)
+[2023-02-16T20:06:05] ATTACK: INVALID/(space bat swarm) against INVALID/(space bat swarm): Generic attack (probably animal)
+[2023-02-16T20:06:05] ATTACK: INVALID/(space bat swarm) against INVALID/(space bat swarm): Generic attack (probably animal)
+[2023-02-16T20:06:05] ATTACK: INVALID/(space bat swarm) against INVALID/(space bat swarm): Generic attack (probably animal)
+[2023-02-16T20:06:11] ATTACK: INVALID/(space bat swarm) against INVALID/(/turf/simulated/mineral/floor/ignore_mapgen): Animal-attacked (dodged)
+[2023-02-16T20:06:22] GAME: TIDI: 0.5;0.838925;1.2336;2.40338
+[2023-02-16T20:06:34] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T20:07:02] SAY: INVALID/(Medibot) (63,151,9): There's always a catch, and it's the best there is.
+[2023-02-16T20:07:08] SAY: INVALID/(mining drone) (44,35,5): Motion detected, judging target...
+[2023-02-16T20:07:09] SAY: INVALID/(mining drone) (44,35,5): Engaging target.
+[2023-02-16T20:07:10] ATTACK: INVALID/(mining drone) against INVALID/(space carp): Shot with /obj/item/projectile/energy/excavate projectile
+[2023-02-16T20:07:12] ATTACK: INVALID/(mining drone) against INVALID/(goose): Shot with /obj/item/projectile/energy/excavate projectile
+[2023-02-16T20:07:15] ATTACK: INVALID/(mining drone) against INVALID/(goose): Shot with /obj/item/projectile/energy/excavate projectile
+[2023-02-16T20:07:16] ATTACK: INVALID/(mining drone) against INVALID/(space bumble bee): Shot with /obj/item/projectile/energy/excavate projectile
+[2023-02-16T20:07:18] ATTACK: INVALID/(mining drone) against INVALID/(goose): Shot with /obj/item/projectile/energy/excavate projectile
+[2023-02-16T20:07:22] GAME: TIDI: 0.41632;0.712144;1.12931;2.27597
+[2023-02-16T20:07:59] ATTACK: INVALID/(Mochtroid) against riotscopez/(Mia): Generic attack (probably animal)
+[2023-02-16T20:08:01] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T20:08:09] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T20:08:11] EMOTE: INVALID/(jelly blob) (95,70,5): <B>The jelly blob</B> undulates quietly.
+[2023-02-16T20:08:23] GAME: TIDI: 1.08243;0.82323;1.06809;2.15518
+[2023-02-16T20:08:41] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T20:09:10] ATTACK: riotscopez/(Mia) against AUTOMATED/sand: Fired gun 'phase carbine' (MANUAL)
+[2023-02-16T20:09:15] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T20:09:23] GAME: TIDI: 0.666667;0.776261;1.00973;2.04064
+[2023-02-16T20:09:38] ATTACK: riotscopez/(Mia) against AUTOMATED/sand: Fired gun 'phase carbine' (MANUAL)
+[2023-02-16T20:09:38] ATTACK: riotscopez/(Mia) against INVALID/(Mochtroid): Shot with /obj/item/projectile/energy/phase projectile
+[2023-02-16T20:09:38] ATTACK: riotscopez/(Mia) against AUTOMATED/sand: Fired gun 'phase carbine' (MANUAL)
+[2023-02-16T20:10:07] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T20:10:23] GAME: TIDI: 0.5;0.693383;0.946458;1.93122
+[2023-02-16T20:10:58] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T20:11:00] SAY: INVALID/(combat drone) (68,168,9): Motion detected, judging target...
+[2023-02-16T20:11:00] SAY: INVALID/(mercenary) (114,183,9): Get out of here!
+[2023-02-16T20:11:00] SAY: INVALID/(mercenary) (114,180,9): Get out of here!
+[2023-02-16T20:11:00] SAY: INVALID/(mercenary) (147,183,9): Hey! Private Property!
+[2023-02-16T20:11:00] SAY: INVALID/(mercenary) (147,180,9): Hey! Private Property!
+[2023-02-16T20:11:00] ATTACK: INVALID/(strong hivebot) against INVALID/(mercenary): Shot with /obj/item/projectile/bullet/hivebot projectile
+[2023-02-16T20:11:00] ATTACK: INVALID/(guard hivebot) against INVALID/(mercenary): Shot with /obj/item/projectile/bullet/hivebot projectile
+[2023-02-16T20:11:00] SAY: INVALID/(mercenary) (175,136,9): Get out of here!
+[2023-02-16T20:11:00] SAY: INVALID/(mercenary) (178,135,9): Hey! Private Property!
+[2023-02-16T20:11:00] ATTACK: INVALID/(hivebot) against INVALID/(mercenary): Shot with /obj/item/projectile/bullet/hivebot projectile
+[2023-02-16T20:11:00] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:00] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:00] SAY: INVALID/(mercenary) (120,165,9): Hey! Private Property!
+[2023-02-16T20:11:00] SAY: INVALID/(mercenary anti-technical) (121,136,9): Hey! Private Property!
+[2023-02-16T20:11:00] SAY: INVALID/(mercenary) (134,123,9): Get out of here!
+[2023-02-16T20:11:00] SAY: INVALID/(mercenary) (135,123,9): Get out of here!
+[2023-02-16T20:11:01] ATTACK: INVALID/(hivebot) against INVALID/(mercenary): Generic attack (probably animal)
+[2023-02-16T20:11:01] ATTACK: INVALID/(hivebot) against INVALID/(mercenary anti-technical): Animal-attacked (miss)
+[2023-02-16T20:11:01] ATTACK: INVALID/(hivebot) against INVALID/(mercenary): Generic attack (probably animal)
+[2023-02-16T20:11:01] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:01] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:01] ATTACK: INVALID/(guard hivebot) against INVALID/(mercenary): Shot with /obj/item/projectile/bullet/hivebot projectile
+[2023-02-16T20:11:01] ATTACK: INVALID/(ember hivebot) against INVALID/(mercenary): Shot with /obj/item/projectile/fire projectile
+[2023-02-16T20:11:01] ATTACK: INVALID/(ember hivebot) against INVALID/(mercenary): Shot with /obj/item/projectile/fire projectile
+[2023-02-16T20:11:01] ATTACK: INVALID/(mercenary) against INVALID/(guard hivebot): Shot with /obj/item/projectile/bullet/pistol/medium projectile
+[2023-02-16T20:11:01] SAY: INVALID/(mercenary) (145,127,9): Get out of here!
+[2023-02-16T20:11:01] SAY: INVALID/(mercenary) (149,164,9): Hey! Private Property!
+[2023-02-16T20:11:01] SAY: INVALID/(mercenary anti-technical) (150,136,9): Get out of here!
+[2023-02-16T20:11:01] SAY: INVALID/(Tymisian Moth) (90,229,9): Kszzt...
+[2023-02-16T20:11:01] SAY: INVALID/(Tymisian Moth) (102,237,9): Kzzi!
+[2023-02-16T20:11:01] ATTACK: INVALID/(swarm hivebot) against INVALID/(Frostlit Lamp): Generic attack (probably animal)
+[2023-02-16T20:11:01] ATTACK: INVALID/(swarm hivebot) against INVALID/(mercenary): Generic attack (probably animal)
+[2023-02-16T20:11:01] ATTACK: INVALID/(hivebot) against INVALID/(mercenary): Generic attack (probably animal)
+[2023-02-16T20:11:01] ATTACK: INVALID/(backline hivebot) against INVALID/(mercenary): Shot with /obj/item/projectile/arc/blue_energy projectile
+[2023-02-16T20:11:01] ATTACK: INVALID/(mercenary) against INVALID/(backline hivebot): Shot with /obj/item/projectile/bullet/pistol/medium projectile
+[2023-02-16T20:11:01] ATTACK: INVALID/(hivebot) against INVALID/(mercenary anti-technical): Generic attack (probably animal)
+[2023-02-16T20:11:01] ATTACK: INVALID/(mercenary) against INVALID/(ember hivebot): Shot with /obj/item/projectile/bullet/pistol/medium projectile
+[2023-02-16T20:11:01] ATTACK: INVALID/(mercenary) against INVALID/(guard hivebot): Shot with /obj/item/projectile/bullet/pistol/medium projectile
+[2023-02-16T20:11:01] SAY: INVALID/(mercenary) (102,151,9): Hey! Private Property!
+[2023-02-16T20:11:01] SAY: INVALID/(combat drone) (39,147,9): Motion detected, judging target...
+[2023-02-16T20:11:01] ATTACK: INVALID/(mercenary anti-technical) against INVALID/(hivebot): Shot with /obj/item/projectile/ion projectile
+[2023-02-16T20:11:01] ATTACK: INVALID/(mercenary) against INVALID/(hivebot): Shot with /obj/item/projectile/bullet/pistol/medium projectile
+[2023-02-16T20:11:01] ATTACK: INVALID/(mercenary) against INVALID/(swarm hivebot): Shot with /obj/item/projectile/bullet/pistol/medium projectile
+[2023-02-16T20:11:01] SAY: INVALID/(mercenary) (126,128,9): Get out of here!
+[2023-02-16T20:11:01] ATTACK: INVALID/(mercenary) against INVALID/(hivebot): Shot with /obj/item/projectile/bullet/pistol/medium projectile
+[2023-02-16T20:11:01] SAY: INVALID/(mercenary) (147,183,9): Good.
+[2023-02-16T20:11:02] ATTACK: INVALID/(guard hivebot) against INVALID/(mercenary): Shot with /obj/item/projectile/bullet/hivebot projectile
+[2023-02-16T20:11:03] SAY: INVALID/(combat drone) (68,168,9): Target judgement complete. Removal required.
+[2023-02-16T20:11:03] ATTACK: INVALID/(mercenary) against INVALID/(guard hivebot): Generic attack (probably animal)
+[2023-02-16T20:11:03] ATTACK: INVALID/(mercenary anti-technical) against INVALID/(hivebot): Shot with /obj/item/projectile/ion projectile
+[2023-02-16T20:11:03] ADMIN: EVENT Error: /mob/living/simple_mob/mechanical/hivebot/tank([0x30000ea]) took longer than 0.5 seconds to delete (took 0.5 seconds to delete)
+[2023-02-16T20:11:03] ATTACK: INVALID/(strong hivebot) against INVALID/(mercenary): Shot with /obj/item/projectile/bullet/hivebot projectile
+[2023-02-16T20:11:03] ATTACK: INVALID/(mercenary) against INVALID/(hivebot): Shot with /obj/item/projectile/bullet/pistol/medium projectile
+[2023-02-16T20:11:04] ATTACK: INVALID/(ember hivebot) against INVALID/(mercenary): Shot with /obj/item/projectile/fire projectile
+[2023-02-16T20:11:04] ATTACK: INVALID/(hivebot) against INVALID/(Mercenary): Shot with /obj/item/projectile/bullet/hivebot projectile
+[2023-02-16T20:11:04] ATTACK: INVALID/(mercenary) against INVALID/(hivebot): Shot with /obj/item/projectile/bullet/pistol/medium projectile
+[2023-02-16T20:11:04] ATTACK: INVALID/(ember hivebot) against INVALID/(mercenary): Shot with /obj/item/projectile/fire projectile
+[2023-02-16T20:11:04] ATTACK: INVALID/(viscerator) against INVALID/(crystal-feather duck): Generic attack (probably animal)
+[2023-02-16T20:11:04] ATTACK: INVALID/(viscerator) against INVALID/(crystal-feather duck): Generic attack (probably animal)
+[2023-02-16T20:11:04] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:04] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:11:04] ATTACK: INVALID/(swarm hivebot) against INVALID/(mercenary): Generic attack (probably animal)
+[2023-02-16T20:11:04] ATTACK: INVALID/(hivebot) against INVALID/(mercenary anti-technical): Animal-attacked (miss)
+[2023-02-16T20:11:04] ATTACK: INVALID/(hivebot) against INVALID/(mercenary): Animal-attacked (miss)
+[2023-02-16T20:11:04] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:04] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:04] ATTACK: INVALID/(swarm hivebot) against INVALID/(mercenary anti-technical): Generic attack (probably animal)
+[2023-02-16T20:11:04] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:04] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:05] SAY: INVALID/(combat drone) (61,158,9): Motion detected, judging target...
+[2023-02-16T20:11:05] ATTACK: INVALID/(mercenary) against INVALID/(swarm hivebot): Shot with /obj/item/projectile/bullet/pistol/medium projectile
+[2023-02-16T20:11:05] ATTACK: INVALID/(mercenary anti-technical) against INVALID/(swarm hivebot): Shot with /obj/item/projectile/ion projectile
+[2023-02-16T20:11:05] ATTACK: INVALID/(mercenary) against INVALID/(hivebot): Shot with /obj/item/projectile/bullet/pistol/medium projectile
+[2023-02-16T20:11:06] ADMIN: EVENT Error: /mob/living/simple_mob/mechanical/hivebot/swarm([0x30000dd]) took longer than 0.5 seconds to delete (took 0.5 seconds to delete)
+[2023-02-16T20:11:06] SAY: INVALID/(Tymisian Moth) (90,229,9): Rszt!
+[2023-02-16T20:11:06] SAY: INVALID/(Tymisian Moth) (102,237,9): Rszt!
+[2023-02-16T20:11:06] ATTACK: INVALID/(viscerator) against INVALID/(crystal-feather duck): Generic attack (probably animal)
+[2023-02-16T20:11:06] ATTACK: INVALID/(viscerator) against INVALID/(crystal-feather duck): Generic attack (probably animal)
+[2023-02-16T20:11:06] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:11:06] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:11:06] ATTACK: INVALID/(crystal-feather duck) against INVALID/(viscerator): Generic attack (probably animal)
+[2023-02-16T20:11:06] ATTACK: INVALID/(mercenary) against INVALID/(ember hivebot): Generic attack (probably animal)
+[2023-02-16T20:11:06] ATTACK: INVALID/(hivebot) against INVALID/(mercenary): Generic attack (probably animal)
+[2023-02-16T20:11:06] ATTACK: INVALID/(hivebot) against INVALID/(mercenary): Animal-attacked (miss)
+[2023-02-16T20:11:06] ATTACK: INVALID/(swarm hivebot) against INVALID/(Frostlit Lamp): Generic attack (probably animal)
+[2023-02-16T20:11:06] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:06] ATTACK: INVALID/(swarm hivebot) against INVALID/(mercenary): Animal-attacked (miss)
+[2023-02-16T20:11:06] ATTACK: INVALID/(swarm hivebot) against INVALID/(mercenary anti-technical): Generic attack (probably animal)
+[2023-02-16T20:11:07] ATTACK: INVALID/(swarm hivebot) against INVALID/(mercenary): Animal-attacked (miss)
+[2023-02-16T20:11:07] ATTACK: INVALID/(swarm hivebot) against INVALID/(mercenary): Generic attack (probably animal)
+[2023-02-16T20:11:07] ATTACK: INVALID/(swarm hivebot) against INVALID/(mercenary): Animal-attacked (miss)
+[2023-02-16T20:11:08] SAY: INVALID/(combat drone) (39,147,9): Target judgement complete. Removal required.
+[2023-02-16T20:11:08] ATTACK: INVALID/(combat drone) against INVALID/(diyaab): Shot with /obj/item/projectile/beam/drone projectile
+[2023-02-16T20:11:08] ATTACK: INVALID/(guard hivebot) against INVALID/(mercenary): Shot with /obj/item/projectile/bullet/hivebot projectile
+[2023-02-16T20:11:08] ATTACK: INVALID/(mercenary) against INVALID/(swarm hivebot): Shot with /obj/item/projectile/bullet/pistol/medium projectile
+[2023-02-16T20:11:08] ATTACK: INVALID/(ember hivebot) against INVALID/(mercenary): Shot with /obj/item/projectile/fire projectile
+[2023-02-16T20:11:08] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:09] ATTACK: INVALID/(crystal-feather duck) against INVALID/(viscerator): Animal-attacked (miss)
+[2023-02-16T20:11:10] ATTACK: INVALID/(Frostlit Lamp) against INVALID/(swarm hivebot): Eaten via internal chamber
+[2023-02-16T20:11:12] SAY: INVALID/(Medibot) (63,151,9): Radar, put a mask on!
+[2023-02-16T20:11:13] ADMIN: EVENT Error: /mob/living/simple_mob/humanoid/merc/melee/sword/poi([0x30000c6]) took longer than 0.5 seconds to delete (took 0.6 seconds to delete)
+[2023-02-16T20:11:14] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:11:14] ATTACK: INVALID/(guard hivebot) against INVALID/(mercenary): Shot with /obj/item/projectile/bullet/hivebot projectile
+[2023-02-16T20:11:15] ATTACK: INVALID/(mercenary) against INVALID/(hivebot): Shot with /obj/item/projectile/bullet/pistol/medium projectile
+[2023-02-16T20:11:16] SAY: INVALID/(combat drone) (61,158,9): Engaging target.
+[2023-02-16T20:11:16] ATTACK: INVALID/(combat drone) against INVALID/(viscerator): Shot with /obj/item/projectile/beam/drone projectile
+[2023-02-16T20:11:16] ATTACK: INVALID/(viscerator) against INVALID/(combat drone): Generic attack (probably animal)
+[2023-02-16T20:11:16] ATTACK: INVALID/(hivebot) against INVALID/(mercenary): Animal-attacked (miss)
+[2023-02-16T20:11:16] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:16] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:16] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:18] ATTACK: INVALID/(guard hivebot) against INVALID/(mercenary): Shot with /obj/item/projectile/bullet/hivebot projectile
+[2023-02-16T20:11:19] ATTACK: INVALID/(ember hivebot) against INVALID/(mercenary): Shot with /obj/item/projectile/fire projectile
+[2023-02-16T20:11:19] ATTACK: INVALID/(mercenary) against INVALID/(swarm hivebot): Shot with /obj/item/projectile/bullet/pistol/medium projectile
+[2023-02-16T20:11:19] SAY: INVALID/(Tymisian Moth) (90,230,9): Kszsz.
+[2023-02-16T20:11:19] SAY: INVALID/(Tymisian Moth) (103,237,9): Kzzi!
+[2023-02-16T20:11:19] ATTACK: INVALID/(viscerator) against INVALID/(crystal-feather duck): Generic attack (probably animal)
+[2023-02-16T20:11:19] ATTACK: INVALID/(swarm hivebot) against INVALID/(mercenary): Animal-attacked (miss)
+[2023-02-16T20:11:19] ATTACK: INVALID/(swarm hivebot) against INVALID/(mercenary): Generic attack (probably animal)
+[2023-02-16T20:11:20] SAY: INVALID/(mercenary) (93,156,9): Hey! Private Property!
+[2023-02-16T20:11:20] SAY: INVALID/(combat drone) (39,146,9): Motion detected, judging target...
+[2023-02-16T20:11:20] ATTACK: INVALID/(hivebot) against INVALID/(mercenary): Shot with /obj/item/projectile/bullet/hivebot projectile
+[2023-02-16T20:11:20] ATTACK: INVALID/(strong hivebot) against INVALID/(mercenary): Shot with /obj/item/projectile/bullet/hivebot projectile
+[2023-02-16T20:11:20] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:11:20] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:11:20] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:20] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:20] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:20] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:11:20] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:20] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:20] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:20] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:11:23] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:23] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:23] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:23] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:23] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:23] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:23] ATTACK: INVALID/(mercenary) against INVALID/(hivebot): Shot with /obj/item/projectile/bullet/pistol/medium projectile
+[2023-02-16T20:11:23] ATTACK: INVALID/(mercenary) against INVALID/(strong hivebot): Shot with /obj/item/projectile/bullet/pistol/medium projectile
+[2023-02-16T20:11:23] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:23] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:23] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:23] ATTACK: INVALID/(space bat swarm) against INVALID/(diyaab): Animal-attacked (miss)
+[2023-02-16T20:11:23] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:23] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:11:23] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:23] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:23] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:24] ATTACK: INVALID/(hivebot) against INVALID/INVALID: Animal-attacked (dodged)
+[2023-02-16T20:11:24] ATTACK: INVALID/(ember hivebot) against INVALID/(mercenary): Shot with /obj/item/projectile/fire projectile
+[2023-02-16T20:11:34] ATTACK: INVALID/(leopardmander) against INVALID/(Tymisian Moth): Eaten via stomach
+[2023-02-16T20:11:35] SAY: INVALID/(Tymisian Moth) (103,237,9): Rszt!
+[2023-02-16T20:11:35] ATTACK: INVALID/(viscerator) against INVALID/(crystal-feather duck): Generic attack (probably animal)
+[2023-02-16T20:11:35] ATTACK: INVALID/(viscerator) against INVALID/(crystal-feather duck): Generic attack (probably animal)
+[2023-02-16T20:11:35] ATTACK: INVALID/(viscerator) against INVALID/(crystal-feather duck): Animal-attacked (miss)
+[2023-02-16T20:11:35] SAY: INVALID/(combat drone) (39,146,9): Target judgement complete. Removal required.
+[2023-02-16T20:11:35] ATTACK: INVALID/(viscerator) against INVALID/(combat drone): Generic attack (probably animal)
+[2023-02-16T20:11:35] ATTACK: INVALID/(hivebot) against INVALID/(mercenary): Shot with /obj/item/projectile/bullet/hivebot projectile
+[2023-02-16T20:11:35] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:35] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:35] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:35] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:11:35] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:35] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:11:35] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:35] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:35] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:11:35] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:35] ATTACK: INVALID/(swarm hivebot) against INVALID/(Frostlit Lamp): Generic attack (probably animal)
+[2023-02-16T20:11:35] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:11:35] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:35] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:35] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:35] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:35] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:35] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:35] ATTACK: INVALID/(mercenary) against INVALID/(hivebot): Shot with /obj/item/projectile/bullet/pistol/medium projectile
+[2023-02-16T20:11:35] ATTACK: INVALID/(crystal-feather duck) against INVALID/(viscerator): Animal-attacked (miss)
+[2023-02-16T20:11:35] ATTACK: INVALID/(crystal-feather duck) against INVALID/(viscerator): Animal-attacked (miss)
+[2023-02-16T20:11:35] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:35] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:11:35] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:11:35] SAY: INVALID/(combat drone) (70,149,9): Motion detected, judging target...
+[2023-02-16T20:11:35] ATTACK: INVALID/(combat drone) against INVALID/(diyaab): Shot with /obj/item/projectile/beam/drone projectile
+[2023-02-16T20:11:35] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:35] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:35] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:35] ATTACK: INVALID/(sakimm) against INVALID/(diyaab): Generic attack (probably animal)
+[2023-02-16T20:11:35] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:35] ATTACK: INVALID/(viscerator) against INVALID/(crystal-feather duck): Generic attack (probably animal)
+[2023-02-16T20:11:35] ATTACK: INVALID/(viscerator) against INVALID/(crystal-feather duck): Generic attack (probably animal)
+[2023-02-16T20:11:35] ATTACK: INVALID/(space bat swarm) against INVALID/(diyaab): Generic attack (probably animal)
+[2023-02-16T20:11:35] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:11:35] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:11:35] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:36] ATTACK: INVALID/(viscerator) against INVALID/(crystal-feather duck): Generic attack (probably animal)
+[2023-02-16T20:11:36] ATTACK: INVALID/(viscerator) against INVALID/(diyaab): Animal-attacked (miss)
+[2023-02-16T20:11:36] GAME: TIDI: 20.3333;6.58537;2.07424;1.94552
+[2023-02-16T20:11:37] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:37] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:37] ATTACK: INVALID/(giant spider) against INVALID/(Frostlit Lamp): Animal-attacked (miss)
+[2023-02-16T20:11:37] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:37] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:37] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:37] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:37] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:37] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:37] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:37] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:37] ATTACK: INVALID/(swarm hivebot) against INVALID/(Frostlit Lamp): Animal-attacked (miss)
+[2023-02-16T20:11:37] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:37] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:37] ATTACK: INVALID/(crystal-feather duck) against INVALID/(viscerator): Animal-attacked (miss)
+[2023-02-16T20:11:37] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:37] ATTACK: INVALID/(diyaab) against INVALID/(space bat swarm): Animal-attacked (miss)
+[2023-02-16T20:11:37] ATTACK: INVALID/(crystal-feather duck) against INVALID/(viscerator): Generic attack (probably animal)
+[2023-02-16T20:11:37] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:37] ATTACK: INVALID/(diyaab) against INVALID/(sakimm): Generic attack (probably animal)
+[2023-02-16T20:11:37] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:37] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:37] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:37] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:11:39] ATTACK: INVALID/(Frostlit Lamp) against INVALID/(swarm hivebot): Eaten via internal chamber
+[2023-02-16T20:11:39] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:39] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:39] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:39] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:39] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:11:39] ATTACK: INVALID/(swarm hivebot) against INVALID/(Frostlit Lamp): Animal-attacked (miss)
+[2023-02-16T20:11:39] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:11:39] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:39] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:39] ATTACK: INVALID/(combat drone) against INVALID/(viscerator): Shot with /obj/item/projectile/beam/drone projectile
+[2023-02-16T20:11:39] SAY: INVALID/(combat drone) (70,149,9): Target judgement complete. Removal required.
+[2023-02-16T20:11:39] ATTACK: INVALID/(combat drone) against INVALID/(diyaab): Shot with /obj/item/projectile/beam/drone projectile
+[2023-02-16T20:11:39] ATTACK: INVALID/(viscerator) against INVALID/(crystal-feather duck): Animal-attacked (miss)
+[2023-02-16T20:11:39] ATTACK: INVALID/(viscerator) against INVALID/(crystal-feather duck): Generic attack (probably animal)
+[2023-02-16T20:11:39] ATTACK: INVALID/(viscerator) against INVALID/(diyaab): Generic attack (probably animal)
+[2023-02-16T20:11:39] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:39] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:39] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:39] ATTACK: INVALID/(sakimm) against INVALID/(diyaab): Generic attack (probably animal)
+[2023-02-16T20:11:39] ATTACK: INVALID/(sakimm) against INVALID/(diyaab): Generic attack (probably animal)
+[2023-02-16T20:11:39] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:39] ATTACK: INVALID/(space bat swarm) against INVALID/(diyaab): Generic attack (probably animal)
+[2023-02-16T20:11:39] ATTACK: INVALID/(space bat swarm) against INVALID/(diyaab): Animal-attacked (dodged)
+[2023-02-16T20:11:39] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:39] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:39] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:11:40] ATTACK: INVALID/(viscerator) against INVALID/(crystal-feather duck): Animal-attacked (miss)
+[2023-02-16T20:11:40] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:40] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:40] ATTACK: INVALID/(giant spider) against INVALID/(Frostlit Lamp): Generic attack (probably animal)
+[2023-02-16T20:11:40] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:40] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:40] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:11:40] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:11:40] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:11:40] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:40] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:11:40] ATTACK: INVALID/(diyaab) against INVALID/(space bat swarm): Generic attack (probably animal)
+[2023-02-16T20:11:40] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:40] ATTACK: INVALID/(diyaab) against INVALID/(viscerator): Generic attack (probably animal)
+[2023-02-16T20:11:40] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:11:40] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:40] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:40] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:11:40] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:40] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:40] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:11:40] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:40] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:40] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:42] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:42] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:42] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:11:44] ATTACK: INVALID/(viscerator) against INVALID/(crystal-feather duck): Generic attack (probably animal)
+[2023-02-16T20:11:44] ATTACK: INVALID/(viscerator) against INVALID/(crystal-feather duck): Animal-attacked (miss)
+[2023-02-16T20:11:44] ATTACK: INVALID/(viscerator) against INVALID/(diyaab): Animal-attacked (miss)
+[2023-02-16T20:11:44] SAY: INVALID/(mercenary) (113,183,9): Bring it!
+[2023-02-16T20:11:44] SAY: INVALID/(mercenary) (113,180,9): Bring it!
+[2023-02-16T20:11:44] SAY: INVALID/(mercenary) (147,180,9): Your funeral!
+[2023-02-16T20:11:44] SAY: INVALID/(mercenary) (175,136,9): Your funeral!
+[2023-02-16T20:11:44] SAY: INVALID/(mercenary) (178,136,9): Your funeral!
+[2023-02-16T20:11:44] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:44] ATTACK: INVALID/(space bat swarm) against INVALID/(diyaab): Animal-attacked (miss)
+[2023-02-16T20:11:44] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:44] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:44] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:44] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:44] ATTACK: INVALID/(giant spider) against INVALID/(Frostlit Lamp): Generic attack (probably animal)
+[2023-02-16T20:11:44] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:44] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:44] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:44] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:11:44] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:44] ATTACK: INVALID/(crystal-feather duck) against INVALID/(viscerator): Generic attack (probably animal)
+[2023-02-16T20:11:44] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:44] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:11:44] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:44] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:44] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:44] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:44] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:44] ATTACK: INVALID/(diyaab) against INVALID/(space bat swarm): Generic attack (probably animal)
+[2023-02-16T20:11:44] ATTACK: INVALID/(diyaab) against INVALID/(viscerator): Generic attack (probably animal)
+[2023-02-16T20:11:44] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:44] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:44] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:11:44] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:11:47] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:47] ATTACK: INVALID/(Rift Walker) against INVALID/(diyaab): Animal-attacked (miss)
+[2023-02-16T20:11:47] ATTACK: INVALID/(space bat swarm) against INVALID/(diyaab): Generic attack (probably animal)
+[2023-02-16T20:11:47] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:48] ATTACK: INVALID/(Frostlit Lamp) against INVALID/(giant spider): Eaten via internal chamber
+[2023-02-16T20:11:56] ATTACK: INVALID/(viscerator) against INVALID/(crystal-feather duck): Generic attack (probably animal)
+[2023-02-16T20:11:56] ATTACK: INVALID/(viscerator) against INVALID/(crystal-feather duck): Animal-attacked (miss)
+[2023-02-16T20:11:56] SAY: INVALID/(mercenary) (93,156,9): Good.
+[2023-02-16T20:11:56] ATTACK: INVALID/(mercenary) against INVALID/(Frostlit Lamp): Generic attack (probably animal)
+[2023-02-16T20:11:56] ATTACK: INVALID/(viscerator) against INVALID/(diyaab): Animal-attacked (miss)
+[2023-02-16T20:11:56] ATTACK: INVALID/(mercenary) against INVALID/(diyaab): Generic attack (probably animal)
+[2023-02-16T20:11:56] ATTACK: INVALID/(mercenary) against INVALID/(diyaab): Generic attack (probably animal)
+[2023-02-16T20:11:56] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:56] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:56] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:56] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:11:56] ATTACK: INVALID/(Frostlit Lamp) against INVALID/(mercenary): Animal-attacked (miss)
+[2023-02-16T20:11:56] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:56] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:56] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:56] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:11:56] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:56] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:56] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:11:56] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:56] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:11:56] ATTACK: INVALID/(diyaab) against INVALID/(viscerator): Generic attack (probably animal)
+[2023-02-16T20:11:56] ATTACK: INVALID/(diyaab) against INVALID/(viscerator): Generic attack (probably animal)
+[2023-02-16T20:11:57] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:57] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:57] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:11:57] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:11:57] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:57] GAME: Explosion with non-shaped size (0, 2, 3) in area POI Wilderness - Fortified Base 
+[2023-02-16T20:11:58] GAME: EMP with size (2, 4, 7, 10) in area POI Wilderness - Fortified Base 
+[2023-02-16T20:11:58] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:11:58] ATTACK: INVALID/(diyaab) against INVALID/(mercenary): Animal-attacked (miss)
+[2023-02-16T20:12:00] ADMIN: EVENT Error: /mob/living/simple_mob/animal/sif/duck([0x300046b]) took longer than 0.5 seconds to delete (took 0.5 seconds to delete)
+[2023-02-16T20:12:01] ATTACK: INVALID/(mercenary) against INVALID/(Frostlit Lamp): Shot with /obj/item/projectile/bullet/rifle/a145/highvel projectile
+[2023-02-16T20:12:01] ATTACK: INVALID/(mercenary) against INVALID/(kururak): Shot with /obj/item/projectile/bullet/rifle/a145/highvel projectile
+[2023-02-16T20:12:02] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:02] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:02] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:02] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:02] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:02] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:05] GAME: Explosion with non-shaped size (0, 2, 3) in area POI - Dug Out Mercenaries 
+[2023-02-16T20:12:07] ATTACK: INVALID/(space bat swarm) against INVALID/(/turf/simulated/floor): Animal-attacked (dodged)
+[2023-02-16T20:12:10] ATTACK: INVALID/(mercenary) against INVALID/(Frostlit Lamp): Generic attack (probably animal)
+[2023-02-16T20:12:10] ATTACK: INVALID/(mercenary) against INVALID/(diyaab): Animal-attacked (miss)
+[2023-02-16T20:12:10] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:10] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:10] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:10] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:12:10] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:10] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:10] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:10] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:10] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:12:10] ATTACK: INVALID/(diyaab) against INVALID/(mercenary): Generic attack (probably animal)
+[2023-02-16T20:12:10] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:12:10] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:12:10] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:10] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:12:11] ATTACK: INVALID/(Frostlit Lamp) against INVALID/(savik): Eaten via internal chamber
+[2023-02-16T20:12:20] ATTACK: INVALID/(leopardmander) against INVALID/(siffet): Eaten via stomach
+[2023-02-16T20:12:20] SAY: INVALID/(combat drone) (70,149,9): Motion detected, judging target...
+[2023-02-16T20:12:20] ATTACK: INVALID/(mercenary) against INVALID/(diyaab): Generic attack (probably animal)
+[2023-02-16T20:12:20] ATTACK: INVALID/(mercenary) against INVALID/(diyaab): Animal-attacked (miss)
+[2023-02-16T20:12:20] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:21] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:12:21] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:12:21] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:21] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:12:21] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:21] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:21] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:12:21] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:12:21] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:21] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:21] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:21] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:12:21] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:12:21] ATTACK: INVALID/(swarm hivebot) against INVALID/(diyaab): Generic attack (probably animal)
+[2023-02-16T20:12:21] ATTACK: INVALID/(diyaab) against INVALID/(swarm hivebot): Animal-attacked (miss)
+[2023-02-16T20:12:23] ATTACK: INVALID/(mercenary) against INVALID/(kururak): Shot with /obj/item/projectile/bullet/rifle/a145/highvel projectile
+[2023-02-16T20:12:23] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:23] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:23] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:23] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:23] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:23] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:23] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:23] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:23] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:12:23] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:23] ATTACK: INVALID/(swarm hivebot) against INVALID/(diyaab): Generic attack (probably animal)
+[2023-02-16T20:12:23] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:23] SAY: INVALID/(combat drone) (59,160,9): Motion detected, judging target...
+[2023-02-16T20:12:23] SAY: INVALID/(combat drone) (70,149,9): Viable target found. Removing.
+[2023-02-16T20:12:23] ATTACK: INVALID/(viscerator) against INVALID/(combat drone): Generic attack (probably animal)
+[2023-02-16T20:12:23] ATTACK: INVALID/(mercenary) against INVALID/(diyaab): Shot with /obj/item/projectile/bullet/rifle/a145/highvel projectile
+[2023-02-16T20:12:23] ATTACK: INVALID/(diyaab) against INVALID/(swarm hivebot): Animal-attacked (miss)
+[2023-02-16T20:12:23] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:23] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:23] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:23] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:24] ATTACK: INVALID/(mercenary) against INVALID/(kururak): Generic attack (probably animal)
+[2023-02-16T20:12:25] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:25] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:25] SAY: INVALID/(combat drone) (69,170,9): Motion detected, judging target...
+[2023-02-16T20:12:25] ATTACK: INVALID/(combat drone) against INVALID/(viscerator): Shot with /obj/item/projectile/beam/drone projectile
+[2023-02-16T20:12:25] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:12:25] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:25] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:12:25] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:25] ATTACK: INVALID/(swarm hivebot) against INVALID/(diyaab): Generic attack (probably animal)
+[2023-02-16T20:12:25] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:12:25] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:25] ATTACK: INVALID/(kururak) against INVALID/(mercenary): Generic attack (probably animal)
+[2023-02-16T20:12:25] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:25] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:25] ATTACK: INVALID/(diyaab) against INVALID/(swarm hivebot): Generic attack (probably animal)
+[2023-02-16T20:12:25] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:25] ATTACK: INVALID/(mercenary) against INVALID/(kururak): Generic attack (probably animal)
+[2023-02-16T20:12:25] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:12:25] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:12:26] ATTACK: INVALID/(combat drone) against INVALID/(viscerator): Shot with /obj/item/projectile/beam/drone projectile
+[2023-02-16T20:12:26] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:12:26] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:27] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:12:27] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:12:27] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:27] SAY: INVALID/(combat drone) (69,170,9): Engaging target.
+[2023-02-16T20:12:27] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:27] ATTACK: INVALID/(swarm hivebot) against INVALID/(diyaab): Generic attack (probably animal)
+[2023-02-16T20:12:27] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:27] ATTACK: INVALID/(diyaab) against INVALID/(swarm hivebot): Generic attack (probably animal)
+[2023-02-16T20:12:27] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:27] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:12:27] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:29] ATTACK: INVALID/(mercenary) against INVALID/(diyaab): Generic attack (probably animal)
+[2023-02-16T20:12:29] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:29] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:29] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:29] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:29] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:12:29] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:29] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:29] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:29] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:29] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:29] ATTACK: INVALID/(diyaab) against INVALID/(mercenary): Animal-attacked (miss)
+[2023-02-16T20:12:29] SAY: INVALID/(Medibot) (63,151,9): Radar, put a mask on!
+[2023-02-16T20:12:29] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T20:12:29] ATTACK: INVALID/(combat drone) against INVALID/(glitterfly): Shot with /obj/item/projectile/beam/drone projectile
+[2023-02-16T20:12:30] ATTACK: INVALID/(viscerator) against INVALID/(glitterfly): Generic attack (probably animal)
+[2023-02-16T20:12:30] ATTACK: INVALID/(mercenary) against INVALID/(diyaab): Animal-attacked (miss)
+[2023-02-16T20:12:30] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:12:30] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:30] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:30] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:12:30] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:30] ATTACK: INVALID/(diyaab) against INVALID/(mercenary): Generic attack (probably animal)
+[2023-02-16T20:12:31] ATTACK: INVALID/(viscerator) against INVALID/(glitterfly): Generic attack (probably animal)
+[2023-02-16T20:12:31] ATTACK: INVALID/(swarm hivebot) against INVALID/(diyaab): Generic attack (probably animal)
+[2023-02-16T20:12:31] ATTACK: INVALID/(diyaab) against INVALID/(swarm hivebot): Generic attack (probably animal)
+[2023-02-16T20:12:31] ATTACK: INVALID/(mercenary) against INVALID/(diyaab): Generic attack (probably animal)
+[2023-02-16T20:12:31] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:12:31] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:31] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:12:31] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:31] ATTACK: INVALID/(viscerator) against INVALID/(glitterfly): Generic attack (probably animal)
+[2023-02-16T20:12:32] ATTACK: INVALID/(swarm hivebot) against INVALID/(diyaab): Generic attack (probably animal)
+[2023-02-16T20:12:32] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:12:32] ATTACK: INVALID/(diyaab) against INVALID/(swarm hivebot): Generic attack (probably animal)
+[2023-02-16T20:12:32] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:12:33] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:33] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:12:33] ATTACK: INVALID/(swarm hivebot) against INVALID/(diyaab): Generic attack (probably animal)
+[2023-02-16T20:12:34] ATTACK: INVALID/(diyaab) against INVALID/(swarm hivebot): Animal-attacked (miss)
+[2023-02-16T20:12:34] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:34] ATTACK: INVALID/(swarm hivebot) against INVALID/(diyaab): Generic attack (probably animal)
+[2023-02-16T20:12:34] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:34] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:34] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:35] ATTACK: INVALID/(mercenary) against INVALID/(crystal-feather duck): Shot with /obj/item/projectile/bullet/rifle/a145/highvel projectile
+[2023-02-16T20:12:35] ATTACK: INVALID/(viscerator) against INVALID/(diyaab): Generic attack (probably animal)
+[2023-02-16T20:12:35] ATTACK: INVALID/(swarm hivebot) against INVALID/(kururak): Animal-attacked (dodged)
+[2023-02-16T20:12:35] ATTACK: INVALID/(diyaab) against INVALID/(viscerator): Generic attack (probably animal)
+[2023-02-16T20:12:35] SAY: INVALID/(Medibot) (63,151,9): Delicious!
+[2023-02-16T20:12:35] ATTACK: INVALID/(hivebot) against INVALID/(kururak): Generic attack (probably animal)
+[2023-02-16T20:12:35] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:12:35] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:35] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:35] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:12:36] ATTACK: INVALID/(viscerator) against INVALID/(diyaab): Generic attack (probably animal)
+[2023-02-16T20:12:36] ATTACK: INVALID/(viscerator) against INVALID/(diyaab): Animal-attacked (miss)
+[2023-02-16T20:12:36] ATTACK: INVALID/(diyaab) against INVALID/(viscerator): Generic attack (probably animal)
+[2023-02-16T20:12:37] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:12:37] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:37] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:37] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:37] ATTACK: INVALID/(viscerator) against INVALID/(diyaab): Generic attack (probably animal)
+[2023-02-16T20:12:39] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:12:39] ATTACK: INVALID/(viscerator) against INVALID/(diyaab): Generic attack (probably animal)
+[2023-02-16T20:12:39] ATTACK: INVALID/(diyaab) against INVALID/(viscerator): Animal-attacked (dodged)
+[2023-02-16T20:12:39] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:41] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:41] ATTACK: INVALID/(combat drone) against INVALID/(diyaab): Shot with /obj/item/projectile/beam/drone projectile
+[2023-02-16T20:12:41] ATTACK: INVALID/(viscerator) against INVALID/(diyaab): Generic attack (probably animal)
+[2023-02-16T20:12:41] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:41] ATTACK: INVALID/(diyaab) against INVALID/(viscerator): Animal-attacked (dodged)
+[2023-02-16T20:12:42] ATTACK: INVALID/(viscerator) against INVALID/(diyaab): Animal-attacked (miss)
+[2023-02-16T20:12:42] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:42] ATTACK: INVALID/(diyaab) against INVALID/(viscerator): Animal-attacked (miss)
+[2023-02-16T20:12:42] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:42] ATTACK: INVALID/(giant spider) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:12:43] ATTACK: INVALID/(Frostlit Lamp) against INVALID/(diyaab): Eaten via internal chamber
+[2023-02-16T20:12:43] GAME: TIDI: 12.5;8.35976;3.33134;2.0841
+[2023-02-16T20:12:44] ATTACK: INVALID/(viscerator) against INVALID/(diyaab): Animal-attacked (miss)
+[2023-02-16T20:12:44] ATTACK: INVALID/(diyaab) against INVALID/(viscerator): Generic attack (probably animal)
+[2023-02-16T20:12:46] ATTACK: INVALID/(combat drone) against INVALID/(diyaab): Shot with /obj/item/projectile/beam/drone projectile
+[2023-02-16T20:12:47] ATTACK: INVALID/(combat drone) against INVALID/(diyaab): Shot with /obj/item/projectile/beam/drone projectile
+[2023-02-16T20:12:48] ATTACK: INVALID/(diyaab) against INVALID/(combat drone): Generic attack (probably animal)
+[2023-02-16T20:12:48] ATTACK: INVALID/(combat drone) against INVALID/(diyaab): Shot with /obj/item/projectile/beam/drone projectile
+[2023-02-16T20:12:49] ATTACK: INVALID/(mercenary) against INVALID/(crystal-feather duck): Shot with /obj/item/projectile/bullet/rifle/a145/highvel projectile
+[2023-02-16T20:12:49] ATTACK: INVALID/(diyaab) against INVALID/(combat drone): Animal-attacked (miss)
+[2023-02-16T20:12:50] ATTACK: INVALID/(combat drone) against INVALID/(diyaab): Shot with /obj/item/projectile/beam/drone projectile
+[2023-02-16T20:12:50] GAME: Explosion with non-shaped size (0, 2, 3) in area POI - Dug Out Mercenaries 
+[2023-02-16T20:12:50] ATTACK: INVALID/(swarm hivebot) against INVALID/(Frostlit Lamp): Generic attack (probably animal)
+[2023-02-16T20:12:50] ATTACK: INVALID/(Frostlit Lamp) against INVALID/(swarm hivebot): Generic attack (probably animal)
+[2023-02-16T20:12:50] ATTACK: INVALID/(combat drone) against INVALID/(diyaab): Shot with /obj/item/projectile/beam/drone projectile
+[2023-02-16T20:12:51] ATTACK: INVALID/(swarm hivebot) against INVALID/(Frostlit Lamp): Generic attack (probably animal)
+[2023-02-16T20:12:51] ATTACK: INVALID/(mercenary) against INVALID/(hivebot): Generic attack (probably animal)
+[2023-02-16T20:12:52] ATTACK: INVALID/(hivebot) against INVALID/(mercenary): Generic attack (probably animal)
+[2023-02-16T20:12:52] ATTACK: INVALID/(Frostlit Lamp) against INVALID/(swarm hivebot): Animal-attacked (miss)
+[2023-02-16T20:12:52] ATTACK: INVALID/(swarm hivebot) against INVALID/(Frostlit Lamp): Generic attack (probably animal)
+[2023-02-16T20:12:53] ATTACK: INVALID/(swarm hivebot) against INVALID/(Frostlit Lamp): Generic attack (probably animal)
+[2023-02-16T20:12:53] ATTACK: INVALID/(mercenary) against INVALID/(hivebot): Animal-attacked (miss)
+[2023-02-16T20:12:54] ATTACK: INVALID/(Frostlit Lamp) against INVALID/(swarm hivebot): Animal-attacked (miss)
+[2023-02-16T20:12:54] ATTACK: INVALID/(hivebot) against INVALID/(mercenary): Animal-attacked (miss)
+[2023-02-16T20:12:54] ATTACK: INVALID/(swarm hivebot) against INVALID/(Frostlit Lamp): Generic attack (probably animal)
+[2023-02-16T20:12:55] ATTACK: INVALID/(viscerator) against INVALID/(diyaab): Generic attack (probably animal)
+[2023-02-16T20:12:55] ATTACK: INVALID/(swarm hivebot) against INVALID/(Frostlit Lamp): Animal-attacked (miss)
+[2023-02-16T20:12:55] ATTACK: INVALID/(swarm hivebot) against INVALID/(kururak): Animal-attacked (miss)
+[2023-02-16T20:12:55] ATTACK: INVALID/(mercenary) against INVALID/(hivebot): Generic attack (probably animal)
+[2023-02-16T20:12:55] ATTACK: INVALID/(diyaab) against INVALID/(viscerator): Generic attack (probably animal)
+[2023-02-16T20:12:55] ATTACK: INVALID/(Frostlit Lamp) against INVALID/(swarm hivebot): Generic attack (probably animal)
+[2023-02-16T20:12:55] ATTACK: INVALID/(hivebot) against INVALID/(mercenary): Generic attack (probably animal)
+[2023-02-16T20:12:55] ATTACK: INVALID/(swarm hivebot) against INVALID/(Frostlit Lamp): Generic attack (probably animal)
+[2023-02-16T20:12:55] ATTACK: INVALID/(viscerator) against INVALID/(diyaab): Generic attack (probably animal)
+[2023-02-16T20:12:56] ATTACK: INVALID/(viscerator) against INVALID/(diyaab): Generic attack (probably animal)
+[2023-02-16T20:12:56] ATTACK: INVALID/(mercenary) against INVALID/(hivebot): Animal-attacked (miss)
+[2023-02-16T20:12:56] ATTACK: INVALID/(swarm hivebot) against INVALID/(Frostlit Lamp): Generic attack (probably animal)
+[2023-02-16T20:12:56] ATTACK: INVALID/(Frostlit Lamp) against INVALID/(swarm hivebot): Generic attack (probably animal)
+[2023-02-16T20:12:56] ATTACK: INVALID/(swarm hivebot) against INVALID/(Frostlit Lamp): Generic attack (probably animal)
+[2023-02-16T20:12:56] ATTACK: INVALID/(hivebot) against INVALID/(mercenary): Generic attack (probably animal)
+[2023-02-16T20:12:56] ATTACK: INVALID/(diyaab) against INVALID/(viscerator): Animal-attacked (miss)
+[2023-02-16T20:12:57] ATTACK: INVALID/(viscerator) against INVALID/(diyaab): Generic attack (probably animal)
+[2023-02-16T20:12:59] ATTACK: INVALID/(mercenary) against INVALID/(diyaab): Shot with /obj/item/projectile/bullet/rifle/a145/highvel projectile
+[2023-02-16T20:12:59] ATTACK: INVALID/(viscerator) against INVALID/(diyaab): Generic attack (probably animal)
+[2023-02-16T20:13:00] ATTACK: INVALID/(diyaab) against INVALID/(viscerator): Generic attack (probably animal)
+[2023-02-16T20:13:00] ATTACK: INVALID/(Frostlit Lamp) against INVALID/(swarm hivebot): Generic attack (probably animal)
+[2023-02-16T20:13:00] ATTACK: INVALID/(swarm hivebot) against INVALID/(Frostlit Lamp): Generic attack (probably animal)
+[2023-02-16T20:13:00] ATTACK: INVALID/(swarm hivebot) against INVALID/(Frostlit Lamp): Generic attack (probably animal)
+[2023-02-16T20:13:00] ATTACK: INVALID/(diyaab) against INVALID/(viscerator): Generic attack (probably animal)
+[2023-02-16T20:13:00] ATTACK: INVALID/(diyaab) against INVALID/(viscerator): Animal-attacked (miss)
+[2023-02-16T20:13:01] ATTACK: INVALID/(swarm hivebot) against INVALID/(Frostlit Lamp): Generic attack (probably animal)
+[2023-02-16T20:13:02] ATTACK: INVALID/(diyaab) against INVALID/INVALID: Animal-attacked (dodged)
+[2023-02-16T20:13:04] ATTACK: INVALID/(mercenary) against INVALID/(mercenary): Shot with /obj/item/projectile/bullet/rifle/a762 projectile
+[2023-02-16T20:13:04] GAME: EMP with size (2, 4, 7, 10) in area POI - Dug Out Mercenaries 
+[2023-02-16T20:13:05] ATTACK: INVALID/(mercenary) against INVALID/(kururak): Shot with /obj/item/projectile/bullet/pistol/medium projectile
+[2023-02-16T20:13:06] ATTACK: INVALID/(mercenary anti-technical) against INVALID/(kururak): Shot with /obj/item/projectile/ion projectile
+[2023-02-16T20:13:07] ATTACK: INVALID/(mercenary) against INVALID/(swarm hivebot): Generic attack (probably animal)
+[2023-02-16T20:13:07] ATTACK: INVALID/(swarm hivebot) against INVALID/(mercenary): Animal-attacked (miss)
+[2023-02-16T20:13:08] ATTACK: INVALID/(mercenary anti-technical) against INVALID/(kururak): Shot with /obj/item/projectile/ion projectile
+[2023-02-16T20:13:10] ATTACK: INVALID/(shantak) against INVALID/(Frostlit Lamp): Generic attack (probably animal)
+[2023-02-16T20:13:10] ATTACK: INVALID/(mercenary) against INVALID/(kururak): Shot with /obj/item/projectile/bullet/rifle/a145/highvel projectile
+[2023-02-16T20:13:11] ATTACK: INVALID/(shantak) against INVALID/(Frostlit Lamp): Generic attack (probably animal)
+[2023-02-16T20:13:12] ATTACK: INVALID/(Frostlit Lamp) against INVALID/(shantak): Eaten via internal chamber
+[2023-02-16T20:13:21] ADMIN: EVENT Error: /mob/living/simple_mob/mechanical/combat_drone/lesser([0x300012d]) took longer than 0.5 seconds to delete (took 0.5 seconds to delete)
+[2023-02-16T20:13:26] ATTACK: INVALID/(mercenary) against INVALID/(crystal-feather duck): Shot with /obj/item/projectile/bullet/rifle/a762 projectile
+[2023-02-16T20:13:29] ATTACK: INVALID/(kururak) against INVALID/(giant spider): Animal-attacked (miss)
+[2023-02-16T20:13:29] ATTACK: INVALID/(giant spider) against INVALID/(kururak): Generic attack (probably animal)
+[2023-02-16T20:13:29] ATTACK: INVALID/(mercenary) against INVALID/(crystal-feather duck): Shot with /obj/item/projectile/bullet/rifle/a762 projectile
+[2023-02-16T20:13:31] ATTACK: INVALID/(kururak) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:13:32] ATTACK: INVALID/(giant spider) against INVALID/(kururak): Generic attack (probably animal)
+[2023-02-16T20:13:33] ATTACK: INVALID/(kururak) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:13:34] ATTACK: INVALID/(giant spider) against INVALID/(kururak): Animal-attacked (miss)
+[2023-02-16T20:13:34] ATTACK: INVALID/(kururak) against INVALID/(giant spider): Generic attack (probably animal)
+[2023-02-16T20:13:43] GAME: Explosion with non-shaped size (0, 2, 3) in area POI - Dug Out Mercenaries 
+[2023-02-16T20:13:43] ADMIN: EVENT Error: /mob/living/simple_mob/humanoid/merc/melee/poi([0x300038a]) took longer than 0.5 seconds to delete (took 0.5 seconds to delete)
+[2023-02-16T20:13:46] GAME: Explosion with non-shaped size (0, 2, 3) in area POI - Dug Out Mercenaries 
+[2023-02-16T20:13:50] GAME: TIDI: 11.3333;9.25183;4.51544;2.32724
+[2023-02-16T20:13:53] SAY: INVALID/(Medibot) (63,151,9): There's always a catch, and it's the best there is.
+[2023-02-16T20:14:11] ADMIN: EVENT Error: /datum/ai_holder/simple_mob/hivebot([0x210091c1]) took longer than 0.5 seconds to delete (took 0.6 seconds to delete)
+[2023-02-16T20:14:12] ATTACK: INVALID/(Frostlit Lamp) against INVALID/(diyaab): Eaten via internal chamber
+[2023-02-16T20:14:27] SAY: INVALID/(Medibot) (63,151,9): What kind of medbay is this? Everyone's dropping like flies.
+[2023-02-16T20:14:35] ADMIN: EVENT Error: /datum/ai_holder/simple_mob/merc([0x21009154]) took longer than 0.5 seconds to delete (took 0.5 seconds to delete)
+[2023-02-16T20:14:42] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T20:15:00] GAME: TIDI: 17.3333;11.6763;5.94761;2.68927
+[2023-02-16T20:15:05] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T20:15:15] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T20:15:17] ADMIN: EVENT Error: /datum/ai_holder/simple_mob/ranged/kiting/threatening([0x21009260]) took longer than 0.5 seconds to delete (took 0.6 seconds to delete)
+[2023-02-16T20:15:29] ADMIN: EVENT Error: /datum/ai_holder/simple_mob/retaliate/cooperative([0x2101e2c3]) took longer than 0.5 seconds to delete (took 0.6 seconds to delete)
+[2023-02-16T20:15:49] GAME: Explosion with non-shaped size (0, 2, 3) in area POI Wilderness - Spider Cave 
+[2023-02-16T20:15:51] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T20:15:54] ADMIN: EVENT Error: /obj/item/shield_projector/rectangle/automatic/drone([0x202f327]) took longer than 0.5 seconds to delete (took 0.5 seconds to delete)
+[2023-02-16T20:16:10] GAME: TIDI: 16.3333;13.0734;7.37277;3.15762
+[2023-02-16T20:16:17] ATTACK: INVALID/(space carp) against riotscopez/(Mia): Animal-attacked (dodged)
+[2023-02-16T20:16:38] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T20:17:12] GAME: TIDI: 3.5;10.2014;7.93849;3.63571
+[2023-02-16T20:17:45] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T20:18:07] EMOTE: INVALID/(Ian) (136,134,2): <B>Ian</B> dances around.
+[2023-02-16T20:18:13] GAME: TIDI: 1;7.44096;7.83898;4.05604
+[2023-02-16T20:18:25] SAY: INVALID/(Medibot) (63,151,9): What kind of medbay is this? Everyone's dropping like flies.
+[2023-02-16T20:19:05] SAY: INVALID/(Medibot) (63,151,9): I knew it, I should've been a plastic surgeon.
+[2023-02-16T20:19:13] GAME: TIDI: 1;5.50867;7.37292;4.38773
+[2023-02-16T20:19:32] SAY: INVALID/(Medibot) (63,151,9): What kind of medbay is this? Everyone's dropping like flies.
+[2023-02-16T20:19:48] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T20:20:12] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T20:20:14] GAME: TIDI: 0.666667;4.05607;6.70955;4.61991
+[2023-02-16T20:20:48] EMOTE: INVALID/(Ian) (135,135,2): <B>Ian</B> dances around.
+[2023-02-16T20:21:10] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T20:21:14] GAME: TIDI: 1;3.13925;5.99549;4.75747
+[2023-02-16T20:21:29] EMOTE: INVALID/(Ian) (135,135,2): <B>Ian</B> chases their tail.
+[2023-02-16T20:21:35] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T20:21:47] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T20:21:51] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T20:21:55] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T20:22:09] SAY: INVALID/(Medibot) (63,151,9): I knew it, I should've been a plastic surgeon.
+[2023-02-16T20:22:15] GAME: TIDI: 0.833333;2.44748;5.28589;4.81031
+[2023-02-16T20:22:19] SAY: INVALID/(Medibot) (63,151,9): Radar, put a mask on!
+[2023-02-16T20:22:43] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T20:23:06] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T20:23:16] GAME: TIDI: 1.16667;2.06323;4.64136;4.79341
+[2023-02-16T20:23:24] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T20:23:50] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T20:24:16] GAME: TIDI: 0.5;1.59426;4.03194;4.71727
+[2023-02-16T20:24:54] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T20:25:16] GAME: TIDI: 0.666667;1.31598;3.48875;4.59441
+[2023-02-16T20:25:16] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T20:25:51] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T20:26:13] SAY: INVALID/(Medibot) (63,151,9): What kind of medbay is this? Everyone's dropping like flies.
+[2023-02-16T20:26:17] GAME: TIDI: 1;1.22119;3.03524;4.4385
+[2023-02-16T20:26:39] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T20:26:40] ADMIN: riotscopez/(Mia) spawned /mob/living/carbon/human at (167,148,2)
+[2023-02-16T20:26:51] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T20:26:52] ADMIN: riotscopez/(Mia) assumed direct control of Onindo Epimethus.
+[2023-02-16T20:26:52] ACCESS OUT: INVALID/(Mia) - IP:127.0.0.1 - CID:Logged Out - BYOND Logged Out
+[2023-02-16T20:26:52] ACCESS IN: RiotScopez/(Onindo Epimethus) - IP:127.0.0.1 - CID:1871707424 - BYOND v514
+[2023-02-16T20:27:17] GAME: TIDI: 1;1.15483;2.65916;4.26056
+[2023-02-16T20:27:33] ADMIN: riotscopez/(Onindo Epimethus) changed the equipment of riotscopez/(Onindo Epimethus) to Job - Roboticist.
+[2023-02-16T20:28:19] GAME: TIDI: 3;1.70838;2.469;4.08141
+[2023-02-16T20:28:40] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T20:28:56] SAY: INVALID/(Medibot) (63,151,9): There's always a catch, and it's the best there is.
+[2023-02-16T20:28:56] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T20:29:20] GAME: TIDI: 1.5;1.64587;2.30437;3.9037
+[2023-02-16T20:29:32] ADMIN: riotscopez/(Onindo Epimethus) assumed direct control of Mia.
+[2023-02-16T20:29:32] ACCESS OUT: INVALID/(Onindo Epimethus) - IP:127.0.0.1 - CID:Logged Out - BYOND Logged Out
+[2023-02-16T20:29:32] ACCESS IN: RiotScopez/(Mia) - IP:127.0.0.1 - CID:1871707424 - BYOND v514
+[2023-02-16T20:30:05] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T20:30:21] GAME: TIDI: 0.833333;1.40211;2.12392;3.72572
+[2023-02-16T20:30:37] SAY: INVALID/(Medibot) (63,151,9): Radar, put a mask on!
+[2023-02-16T20:30:59] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T20:31:21] GAME: TIDI: 0.666667;1.18148;1.93543;3.54669
+[2023-02-16T20:31:23] SAY: INVALID/(Medibot) (63,151,9): There's always a catch, and it's the best there is.
+[2023-02-16T20:32:23] GAME: TIDI: 2.5;1.57703;1.86375;3.3784
+[2023-02-16T20:32:31] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T20:33:23] GAME: TIDI: 0.666667;1.30392;1.75179;3.21574
+[2023-02-16T20:33:25] SAY: INVALID/(Medibot) (63,151,9): There's always a catch, and it's the best there is.
+[2023-02-16T20:33:53] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T20:34:03] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T20:34:23] GAME: TIDI: 0.5;1.06275;1.61398;3.05556
+[2023-02-16T20:34:46] SAY: INVALID/(Medibot) (63,151,9): What kind of medbay is this? Everyone's dropping like flies.
+[2023-02-16T20:35:24] GAME: TIDI: 0.666667;0.943922;1.47997;2.898
+[2023-02-16T20:35:50] SAY: INVALID/(Medibot) (63,151,9): Radar, put a mask on!
+[2023-02-16T20:36:15] ATTACK: INVALID/(Tiny) against INVALID/(mouse (607)): Generic attack (probably animal)
+[2023-02-16T20:36:24] GAME: TIDI: 0.5;0.810746;1.34612;2.74282
+[2023-02-16T20:36:36] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T20:37:04] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T20:37:29] GAME: TIDI: 8.83333;3.21752;1.7204;2.64057
+[2023-02-16T20:37:35] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T20:37:57] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T20:38:18] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T20:38:25] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T20:38:35] GAME: TIDI: 9.16667;5.00227;2.37678;2.61419
+[2023-02-16T20:39:21] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T20:39:25] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T20:39:35] GAME: TIDI: 0.5;3.65159;2.63174;2.61595
+[2023-02-16T20:39:39] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T20:40:35] GAME: TIDI: 0.5;2.70611;2.64661;2.61901
+[2023-02-16T20:41:22] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T20:41:36] GAME: TIDI: 0.666667;2.09428;2.53615;2.61073
+[2023-02-16T20:42:20] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T20:42:32] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T20:42:36] GAME: TIDI: 0.5;1.61599;2.35211;2.58487
+[2023-02-16T20:42:46] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T20:43:00] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T20:43:36] GAME: TIDI: 0.333333;1.2312;2.12793;2.53917
+[2023-02-16T20:44:37] GAME: TIDI: 0.5;1.01184;1.90471;2.47573
+[2023-02-16T20:44:49] SAY: INVALID/(Medibot) (63,151,9): There's always a catch, and it's the best there is.
+[2023-02-16T20:45:37] GAME: TIDI: 0.5;0.858286;1.69543;2.3977
+[2023-02-16T20:46:37] GAME: TIDI: 0.666667;0.8008;1.5165;2.30958
+[2023-02-16T20:46:56] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T20:47:38] GAME: TIDI: 0.5;0.71056;1.35531;2.21415
+[2023-02-16T20:48:06] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T20:48:14] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T20:48:38] GAME: TIDI: 0.666667;0.697392;1.22373;2.11511
+[2023-02-16T20:49:38] GAME: TIDI: 0.666667;0.688174;1.11662;2.01526
+[2023-02-16T20:50:19] SAY: INVALID/(Medibot) (63,151,9): What kind of medbay is this? Everyone's dropping like flies.
+[2023-02-16T20:50:37] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T20:50:39] GAME: TIDI: 0.333333;0.581722;1.00964;1.9147
+[2023-02-16T20:50:47] SAY: INVALID/(Medibot) (63,151,9): Radar, put a mask on!
+[2023-02-16T20:51:39] GAME: TIDI: 0.5;0.557205;0.919152;1.81514
+[2023-02-16T20:52:03] SAY: INVALID/(Medibot) (63,151,9): Radar, put a mask on!
+[2023-02-16T20:52:25] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T20:52:39] GAME: TIDI: 0.5;0.540044;0.843331;1.71796
+[2023-02-16T20:53:18] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T20:53:40] GAME: TIDI: 0.666667;0.578031;0.790271;1.62519
+[2023-02-16T20:53:56] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T20:54:40] GAME: TIDI: 0.5;0.554621;0.743141;1.53699
+[2023-02-16T20:55:08] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T20:55:32] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T20:55:40] GAME: TIDI: 0.5;0.538235;0.70216;1.4535
+[2023-02-16T20:55:42] SAY: INVALID/(Medibot) (63,151,9): What kind of medbay is this? Everyone's dropping like flies.
+[2023-02-16T20:55:44] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T20:56:02] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T20:56:40] GAME: TIDI: 0.5;0.526765;0.667081;1.37486
+[2023-02-16T20:56:51] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T20:57:05] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T20:57:41] GAME: TIDI: 0.333333;0.468735;0.627411;1.30012
+[2023-02-16T20:57:43] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T20:58:42] GAME: TIDI: 1.5;0.778115;0.657552;1.23586
+[2023-02-16T20:58:50] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T20:58:54] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T20:59:42] GAME: TIDI: 1;0.84468;0.694978;1.18177
+[2023-02-16T20:59:58] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T21:00:31] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T21:00:42] GAME: TIDI: 0.5;0.741276;0.704237;1.13402
+[2023-02-16T21:01:15] SAY: INVALID/(Medibot) (63,151,9): There's always a catch, and it's the best there is.
+[2023-02-16T21:01:37] SAY: INVALID/(Medibot) (63,151,9): There's always a catch, and it's the best there is.
+[2023-02-16T21:01:43] GAME: TIDI: 0.5;0.668893;0.697169;1.09033
+[2023-02-16T21:02:13] ADMIN: EVENT Error: /mob/living/simple_mob/mechanical/hivebot/ranged_damage([0x3000117]) took longer than 0.5 seconds to delete (took 0.6 seconds to delete)
+[2023-02-16T21:02:34] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T21:02:42] SAY: INVALID/(Medibot) (63,151,9): Radar, put a mask on!
+[2023-02-16T21:02:50] GAME: TIDI: 12;4.06823;1.37138;1.11844
+[2023-02-16T21:03:24] SAY: INVALID/(Medibot) (63,151,9): There's always a catch, and it's the best there is.
+[2023-02-16T21:03:42] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T21:03:50] GAME: TIDI: 0.333333;2.94776;1.68666;1.17526
+[2023-02-16T21:04:55] GAME: TIDI: 8.66667;4.66343;2.28201;1.28593
+[2023-02-16T21:05:15] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T21:05:57] GAME: TIDI: 2.16667;3.9144;2.60849;1.41819
+[2023-02-16T21:06:17] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T21:06:33] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T21:06:39] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T21:06:57] GAME: TIDI: 0.333333;2.84008;2.65481;1.54185
+[2023-02-16T21:07:05] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T21:07:47] GAME: TESLA(99,213,9) Shocked INVALID/(sakimm) for 9dmg.
+[2023-02-16T21:07:57] GAME: TIDI: 0.333333;2.08806;2.54146;1.64181
+[2023-02-16T21:08:33] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T21:08:43] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T21:08:57] GAME: TIDI: 0.5;1.61164;2.35549;1.71318
+[2023-02-16T21:09:20] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T21:09:22] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T21:09:34] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T21:09:58] GAME: TIDI: 0.5;1.27815;2.14002;1.75586
+[2023-02-16T21:10:10] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T21:10:16] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T21:10:34] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T21:10:58] GAME: TIDI: 0.666667;1.0947;1.93096;1.77337
+[2023-02-16T21:11:12] SAY: INVALID/(Medibot) (63,151,9): Delicious!
+[2023-02-16T21:11:58] GAME: TIDI: 0.5;0.916292;1.72803;1.76884
+[2023-02-16T21:12:43] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T21:12:53] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T21:12:59] GAME: TIDI: 0.5;0.791405;1.5407;1.74603
+[2023-02-16T21:13:59] GAME: TIDI: 0.5;0.703983;1.37336;1.70876
+[2023-02-16T21:14:05] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T21:14:29] SAY: INVALID/(Medibot) (63,151,9): Radar, put a mask on!
+[2023-02-16T21:14:59] GAME: TIDI: 0.666667;0.692788;1.23724;1.66161
+[2023-02-16T21:15:03] SAY: INVALID/(Medibot) (63,151,9): What kind of medbay is this? Everyone's dropping like flies.
+[2023-02-16T21:15:24] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T21:16:00] GAME: TIDI: 0.5;0.634952;1.11679;1.60713
+[2023-02-16T21:16:22] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T21:16:50] EMOTE: INVALID/(Fitz) (193,194,9): <B>Fitz</B> makes an excited booping sound!
+[2023-02-16T21:17:02] GAME: TIDI: 4;1.64447;1.22232;1.56865
+[2023-02-16T21:17:48] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T21:18:02] GAME: TIDI: 0.5;1.30113;1.23808;1.53559
+[2023-02-16T21:19:03] GAME: TIDI: 0.666667;1.11079;1.21262;1.50329
+[2023-02-16T21:19:07] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-02-16T21:19:23] EMOTE: INVALID/(Cleanbot) (48,164,9): <B>Cleanbot</B> makes an excited booping sound!

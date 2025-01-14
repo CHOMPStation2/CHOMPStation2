@@ -1,0 +1,11 @@
+[2023-02-17T12:36:27] START: Starting up data/logs/2023/02-February/17-Friday/round-12-36-25.
+[2023-02-17T14:17:11] RUNTIME: [2023-02-17T14:17:11] Runtime in health.dm,35: Cannot read null.mutations
+[2023-02-17T14:17:11] RUNTIME:   proc name: scan mob (/obj/item/device/healthanalyzer/proc/scan_mob)
+[2023-02-17T14:17:11] RUNTIME:   usr: KI-RA V1.57 (/mob/living/silicon/robot) @ (the wooden floor) (123,109,2) (/turf/simulated/floor/wood) (ckey=riotscopez)
+[2023-02-17T14:17:11] RUNTIME:   usr.loc: (the wooden floor) (123,109,2) (/turf/simulated/floor/wood)
+[2023-02-17T14:17:11] RUNTIME:   src: the health analyzer (/obj/item/device/healthanalyzer)
+[2023-02-17T14:17:11] RUNTIME:   src.loc: null
+[2023-02-17T14:17:11] RUNTIME:   call stack:
+[2023-02-17T14:17:11] RUNTIME:   the health analyzer (/obj/item/device/healthanalyzer): scan mob(null, null)
+[2023-02-17T14:17:11] RUNTIME:   Medbelly (/obj/item/device/dogborg/sleeper): Topic("src=\[0x20312f9];analyze=1", /list (/list))
+[2023-02-17T14:17:11] RUNTIME:   RiotScopez (/client): Topic("src=\[0x20312f9];analyze=1", /list (/list), Medbelly (/obj/item/device/dogborg/sleeper))

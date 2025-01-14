@@ -1,0 +1,623 @@
+[2024-04-05 20:22:42.120] START: Starting up data/logs/2024/04-April/05-Friday/round-16-22-24.
+[2024-04-05 20:22:43.519] ADMIN: Loading jobban_rank
+[2024-04-05 20:22:43.519] ADMIN: jobban_keylist was empty
+[2024-04-05 20:22:43.523] ADMIN: Loading Banlist
+[2024-04-05 20:22:52.831] GAME: Quarantined Shuttle loaded at at 58,82,5
+[2024-04-05 20:22:52.954] GAME: Dig Site loaded at at 155,67,5
+[2024-04-05 20:22:52.978] GAME: Mine Vault 3 loaded at at 8,67,5
+[2024-04-05 20:22:52.996] GAME: Dark Ritual loaded at at 40,111,5
+[2024-04-05 20:22:53.036] GAME: Supply Drop 1 loaded at at 43,11,5
+[2024-04-05 20:22:54.041] GAME: Magmatic Geyser loaded at at 189,92,5
+[2024-04-05 20:22:54.712] GAME: Ice Cave 1B loaded at at 78,15,5
+[2024-04-05 20:22:55.704] GAME: Abandoned Temple loaded at at 193,34,5
+[2024-04-05 20:22:55.830] GAME: Crystal Cave 3 loaded at at 175,72,5
+[2024-04-05 20:22:55.889] GAME: Supply Drop 1 loaded at at 38,49,5
+[2024-04-05 20:22:56.036] GAME: Abandoned Mineshaft 1 loaded at at 66,47,5
+[2024-04-05 20:22:56.232] GAME: spatial anomaly loaded at at 16,146,5
+[2024-04-05 20:22:56.531] GAME: Farm loaded at at 32,8,4
+[2024-04-05 20:22:56.556] GAME: Camp Site loaded at at 55,142,4
+[2024-04-05 20:22:56.592] GAME: Emergency Pod 2 loaded at at 213,10,4
+[2024-04-05 20:22:56.603] GAME: Buried Treasure 2 loaded at at 14,8,4
+[2024-04-05 20:22:56.663] GAME: Construction Site loaded at at 179,146,4
+[2024-04-05 20:22:56.713] GAME: Merchant Stand loaded at at 38,180,4
+[2024-04-05 20:22:57.725] GAME: Boathouse loaded at at 16,43,4
+[2024-04-05 20:22:57.795] GAME: Ruptured Canister loaded at at 187,60,4
+[2024-04-05 20:22:57.937] GAME: Old Library loaded at at 198,29,4
+[2024-04-05 20:22:57.964] GAME: Lone Kururak Den loaded at at 163,71,4
+[2024-04-05 20:22:58.302] GAME: Meth Lab loaded at at 112,95,4
+[2024-04-05 20:22:58.507] GAME: Old Hotel loaded at at 172,18,4
+[2024-04-05 20:22:58.530] GAME: Old Supply Drop loaded at at 229,15,4
+[2024-04-05 20:22:58.684] GAME: Field loaded at at 72,99,4
+[2024-04-05 20:22:58.867] GAME: Empty Explorer's Home loaded at at 86,9,4
+[2024-04-05 20:22:59.041] GAME: Mechpit loaded at at 99,63,4
+[2024-04-05 20:22:59.283] GAME: VR Den loaded at at 60,68,4
+[2024-04-05 20:22:59.326] GAME: Snow 2 loaded at at 181,78,4
+[2024-04-05 20:22:59.365] GAME: Shack 1 loaded at at 34,40,9
+[2024-04-05 20:22:59.401] GAME: Government Patrol loaded at at 141,41,9
+[2024-04-05 20:22:59.447] GAME: Empty Cabin loaded at at 31,21,9
+[2024-04-05 20:22:59.501] GAME: Rocky 4 loaded at at 66,62,9
+[2024-04-05 20:22:59.572] GAME: Mudpit loaded at at 62,81,9
+[2024-04-05 20:22:59.753] GAME: Decoupled Engine loaded at at 99,56,9
+[2024-04-05 20:22:59.962] GAME: Drug Den loaded at at 169,64,9
+[2024-04-05 20:23:00.027] GAME: Emergency Pod 4 loaded at at 145,83,9
+[2024-04-05 20:23:00.131] GAME: Military Camp 1 loaded at at 26,84,9
+[2024-04-05 20:23:00.439] GAME: Chasm loaded at at 116,31,9
+[2024-04-05 20:23:00.503] GAME: Snowrock 1 loaded at at 199,41,9
+[2024-04-05 20:23:00.546] GAME: Frostfly Nest loaded at at 15,24,9
+[2024-04-05 20:23:00.671] GAME: Rocky 1 loaded at at 128,56,9
+[2024-04-05 20:23:00.899] GAME: Forest Lake loaded at at 87,17,9
+[2024-04-05 20:23:01.256] GAME: Rocky 1 loaded at at 48,23,9
+[2024-04-05 20:23:01.826] GAME: Wolf Den loaded at at 203,77,9
+[2024-04-05 20:23:02.591] GAME: Frost Oasis loaded at at 186,19,9
+[2024-04-05 20:23:02.719] GAME: Kururak Den loaded at at 132,88,9
+[2024-04-05 20:23:03.582] GAME: Demon Pool loaded at at 11,55,9
+[2024-04-05 20:23:03.695] GAME: Shelter 1 loaded at at 69,8,9
+[2024-04-05 20:23:03.729] GAME: Smol 1 loaded at at 37,62,9
+[2024-04-05 20:23:04.258] GAME: Lab 1 loaded at at 89,86,9
+[2024-04-05 20:23:04.451] GAME: Rocky 3 loaded at at 83,40,9
+[2024-04-05 20:23:04.455] GAME: Musk loaded at at 116,8,9
+[2024-04-05 20:23:05.214] GAME: Spider Nest 1 loaded at at 31,9,9
+[2024-04-05 20:23:05.236] GAME: Spider Nest 1 loaded at at 176,46,9
+[2024-04-05 20:23:05.435] GAME: Butcher Shack loaded at at 203,62,9
+[2024-04-05 20:23:10.546] GAME: Spider Nest 1 loaded at at 149,19,9
+[2024-04-05 20:23:11.399] GAME: Derelict Engine loaded at at 184,189,9
+[2024-04-05 20:23:11.587] GAME: Xeno Hive loaded at at 158,200,9
+[2024-04-05 20:23:12.269] GAME: Manor 2 loaded at at 78,145,9
+[2024-04-05 20:23:12.404] GAME: Death Spice Den loaded at at 80,208,9
+[2024-04-05 20:23:12.694] GAME: CaveS loaded at at 9,142,9
+[2024-04-05 20:23:12.955] GAME: Otie Shelter loaded at at 102,117,9
+[2024-04-05 20:23:13.089] GAME: Raided Mech Hanger loaded at at 221,208,9
+[2024-04-05 20:23:13.167] GAME: DJOutpost 3 loaded at at 137,177,9
+[2024-04-05 20:23:13.445] GAME: Chapel 1 loaded at at 98,209,9
+[2024-04-05 20:23:13.486] GAME: Syndi Drone loaded at at 197,118,9
+[2024-04-05 20:23:13.891] GAME: Blue Shuttle Down loaded at at 213,147,9
+[2024-04-05 20:23:14.065] GAME: Puzzle Dungeon loaded at at 173,214,10
+[2024-04-05 20:23:14.238] GAME: Maze loaded at at 184,15,10
+[2024-04-05 20:23:14.516] GAME: Maus HQ loaded at at 78,196,10
+[2024-04-05 20:23:14.959] GAME: Aquatic Xenos loaded at at 73,9,10
+[2024-04-05 20:23:15.384] GAME: Dragon Den loaded at at 128,23,10
+[2024-04-05 20:23:15.590] GAME: Frost Lake loaded at at 47,215,10
+[2024-04-05 20:23:15.786] GAME: Drone Overlords loaded at at 212,45,10
+[2024-04-05 20:23:16.472] GAME: Fallen Lab loaded at at 115,200,10
+[2024-04-05 20:23:16.677] GAME: Mouse Takeover loaded at at 148,144,10
+[2024-04-05 20:23:17.284] GAME: Blood Church loaded at at 208,140,10
+[2024-04-05 20:23:17.501] GAME: Eclipse Cargo loaded at at 175,93,10
+[2024-04-05 20:23:18.302] GAME: Pirate Fort loaded at at 92,149,10
+[2024-04-05 20:23:18.456] GAME: Xenobio Lab loaded at at 86,69,10
+[2024-04-05 20:23:18.681] GAME: Assualt Base loaded at at 137,90,10
+[2024-04-05 20:23:19.905] GAME: Terraformer loaded at at 197,65,10
+[2024-04-05 20:23:20.223] GAME: Warzone loaded at at 171,145,10
+[2024-04-05 20:23:21.945] GAME: The Hive loaded at at 10,108,10
+[2024-04-05 20:24:12.114] GAME: Z-level VR World loaded at at 1,1,11
+[2024-04-05 20:24:12.617] GAME: Z-level Fuel Depot - Z1 Space loaded at at 1,1,12
+[2024-04-05 20:24:24.209] GAME: Z-level Thor Surface loaded at at 1,1,13
+[2024-04-05 20:24:36.492] GAME: Z-level Maddness Lab loaded at at 1,1,14
+[2024-04-05 20:25:10.099] MISC: a the gibber didn't find an input plate.
+[2024-04-05 20:25:12.642] MISC: a the gibber didn't find an input plate.
+[2024-04-05 20:30:29.465] GAME: TIDI: 13;3.9;0.78;0.078
+[2024-04-05 20:31:29.465] GAME: TIDI: 0;2.73;1.17;0.1872
+[2024-04-05 20:32:29.466] GAME: TIDI: 0;1.911;1.3182;0.3003
+[2024-04-05 20:32:36.698] ATTACK: INVALID/(guard hivebot) against INVALID/(mercenary): Shot with /obj/item/projectile/bullet/hivebot projectile
+[2024-04-05 20:32:36.981] ATTACK: INVALID/(mercenary) against INVALID/(guard hivebot): Shot with /obj/item/projectile/bullet/pistol/medium projectile
+[2024-04-05 20:33:30.104] GAME: TIDI: 1.16667;1.6877;1.3921;0.40948
+[2024-04-05 20:34:30.138] GAME: TIDI: 0;1.18139;1.34996;0.503528
+[2024-04-05 20:35:32.785] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 20:35:35.352] GAME: TIDI: 8.66667;3.42697;1.76536;0.629711
+[2024-04-05 20:35:43.953] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 20:36:33.780] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 20:36:40.713] GAME: TIDI: 9;5.09888;2.43207;0.809947
+[2024-04-05 20:37:33.297] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 20:37:41.635] GAME: TIDI: 1.5;4.01922;2.7495;1.0039
+[2024-04-05 20:37:55.299] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 20:38:14.295] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 20:38:42.644] GAME: TIDI: 1.66667;3.31345;2.86229;1.18974
+[2024-04-05 20:39:42.675] GAME: TIDI: 0;2.31942;2.75371;1.34614
+[2024-04-05 20:40:42.827] GAME: TIDI: 0.333333;1.72359;2.54769;1.46629
+[2024-04-05 20:41:42.852] GAME: TIDI: 0;1.20651;2.27945;1.54761
+[2024-04-05 20:42:16.525] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 20:42:42.878] GAME: TIDI: 0;0.84456;1.99247;1.5921
+[2024-04-05 20:43:35.772] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 20:43:44.111] GAME: TIDI: 2.16667;1.24119;1.84222;1.61711
+[2024-04-05 20:44:44.136] GAME: TIDI: 0;0.868834;1.64754;1.62015
+[2024-04-05 20:45:29.820] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 20:45:44.160] GAME: TIDI: 0;0.608184;1.43967;1.6021
+[2024-04-05 20:46:44.186] GAME: TIDI: 0;0.425729;1.23688;1.56558
+[2024-04-05 20:47:44.202] GAME: TIDI: 0.166667;0.34801;1.05911;1.51493
+[2024-04-05 20:48:44.216] GAME: TIDI: 0;0.243607;0.896007;1.45304
+[2024-04-05 20:49:44.265] GAME: TIDI: 0;0.170525;0.750911;1.38283
+[2024-04-05 20:49:51.926] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 20:50:17.944] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 20:50:44.286] GAME: TIDI: 0;0.119367;0.624602;1.30701
+[2024-04-05 20:51:44.312] GAME: TIDI: 0.166667;0.133557;0.526393;1.22894
+[2024-04-05 20:52:16.000] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 20:52:44.362] GAME: TIDI: 0;0.0934901;0.439813;1.15003
+[2024-04-05 20:52:56.029] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 20:53:44.390] GAME: TIDI: 0;0.065443;0.364939;1.07152
+[2024-04-05 20:54:44.412] GAME: TIDI: 0.166667;0.0958101;0.311113;0.995481
+[2024-04-05 20:55:44.445] GAME: TIDI: 0;0.0670671;0.262304;0.922163
+[2024-04-05 20:56:24.127] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 20:56:44.476] GAME: TIDI: 0;0.046947;0.219232;0.85187
+[2024-04-05 20:56:48.149] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 20:57:44.514] GAME: TIDI: 0.166667;0.0828629;0.191959;0.785879
+[2024-04-05 20:57:48.180] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 20:58:44.542] GAME: TIDI: 0;0.058004;0.165168;0.723808
+[2024-04-05 20:59:14.267] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 20:59:44.657] GAME: TIDI: 0.166667;0.0906028;0.150255;0.666452
+[2024-04-05 21:00:44.690] GAME: TIDI: 0;0.063422;0.132888;0.613096
+[2024-04-05 21:01:44.720] GAME: TIDI: 0.166667;0.0943954;0.12519;0.564305
+[2024-04-05 21:02:44.755] GAME: TIDI: 0;0.0660768;0.113367;0.519211
+[2024-04-05 21:03:44.784] GAME: TIDI: 0;0.0462537;0.0999444;0.477285
+[2024-04-05 21:04:08.450] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 21:04:44.803] GAME: TIDI: 0.166667;0.0823776;0.096431;0.439199
+[2024-04-05 21:05:44.822] GAME: TIDI: 0;0.0576643;0.0886777;0.404147
+[2024-04-05 21:06:44.838] GAME: TIDI: 0;0.040365;0.0790152;0.371634
+[2024-04-05 21:07:44.858] GAME: TIDI: 0;0.0282555;0.0688632;0.341357
+[2024-04-05 21:08:44.873] GAME: TIDI: 0;0.0197789;0.0590464;0.313126
+[2024-04-05 21:09:44.912] GAME: TIDI: 0.166667;0.0638452;0.0600061;0.287814
+[2024-04-05 21:10:44.941] GAME: TIDI: 0;0.0446916;0.0569432;0.264727
+[2024-04-05 21:11:44.977] GAME: TIDI: 0;0.0312841;0.0518114;0.243435
+[2024-04-05 21:12:45.009] GAME: TIDI: 0.166667;0.0718989;0.0558289;0.224675
+[2024-04-05 21:13:45.034] GAME: TIDI: 0;0.0503292;0.054729;0.20768
+[2024-04-05 21:14:45.082] GAME: TIDI: 0;0.0352305;0.0508293;0.191995
+[2024-04-05 21:15:45.096] GAME: TIDI: 0;0.0246613;0.0455957;0.177355
+[2024-04-05 21:16:45.217] GAME: TIDI: 0.333333;0.117263;0.0599291;0.165612
+[2024-04-05 21:17:45.317] GAME: TIDI: 0.166667;0.132084;0.0743601;0.156487
+[2024-04-05 21:18:45.364] GAME: TIDI: 0;0.0924588;0.0779799;0.148636
+[2024-04-05 21:19:45.399] GAME: TIDI: 0;0.0647212;0.0753281;0.141306
+[2024-04-05 21:20:45.421] GAME: TIDI: 0.166667;0.0953048;0.0793235;0.135107
+[2024-04-05 21:21:45.460] GAME: TIDI: 0;0.0667134;0.0768015;0.129277
+[2024-04-05 21:22:45.488] GAME: TIDI: 0;0.0466994;0.070781;0.123427
+[2024-04-05 21:23:45.503] GAME: TIDI: 0.166667;0.0826896;0.0731627;0.118401
+[2024-04-05 21:24:45.541] GAME: TIDI: 0;0.0578827;0.0701067;0.113571
+[2024-04-05 21:25:23.211] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 21:25:45.559] GAME: TIDI: 0;0.0405179;0.064189;0.108633
+[2024-04-05 21:26:21.249] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 21:26:35.256] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 21:26:45.600] GAME: TIDI: 0.166667;0.0783625;0.0670237;0.104472
+[2024-04-05 21:27:29.341] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 21:27:45.682] GAME: TIDI: 0;0.0548538;0.0645897;0.100484
+[2024-04-05 21:28:45.709] GAME: TIDI: 0.166667;0.0883976;0.0693513;0.0973707
+[2024-04-05 21:29:35.397] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 21:29:45.404] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 21:29:45.742] GAME: TIDI: 0;0.0618783;0.0678567;0.0944193
+[2024-04-05 21:30:45.773] GAME: TIDI: 0;0.0433148;0.0629483;0.0912722
+[2024-04-05 21:31:23.461] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 21:31:45.812] GAME: TIDI: 0.166667;0.0803204;0.0664227;0.0887872
+[2024-04-05 21:32:45.852] GAME: TIDI: 0;0.0562243;0.064383;0.0863468
+[2024-04-05 21:33:13.541] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 21:33:37.536] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 21:33:45.880] GAME: TIDI: 0;0.039357;0.0593778;0.0836499
+[2024-04-05 21:34:45.904] GAME: TIDI: 0.166667;0.0775499;0.0630122;0.0815861
+[2024-04-05 21:35:45.933] GAME: TIDI: 0;0.0542849;0.0612668;0.0795542
+[2024-04-05 21:36:45.955] GAME: TIDI: 0;0.0379994;0.0566133;0.0772601
+[2024-04-05 21:37:37.626] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 21:37:45.973] GAME: TIDI: 0;0.0265996;0.0506106;0.0745952
+[2024-04-05 21:38:46.012] GAME: TIDI: 0.166667;0.0686197;0.0542124;0.0725569
+[2024-04-05 21:39:46.043] GAME: TIDI: 0;0.0480338;0.0529767;0.0705989
+[2024-04-05 21:39:55.709] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 21:40:46.071] GAME: TIDI: 0;0.0336237;0.0491061;0.0684496
+[2024-04-05 21:41:46.110] GAME: TIDI: 0.166667;0.0735366;0.0539922;0.0670038
+[2024-04-05 21:41:47.772] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 21:42:07.789] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 21:42:46.161] GAME: TIDI: 0;0.0514756;0.0534889;0.0656523
+[2024-04-05 21:43:29.847] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 21:43:46.189] GAME: TIDI: 0;0.0360329;0.0499977;0.0640869
+[2024-04-05 21:44:46.209] GAME: TIDI: 0.166667;0.075223;0.0550428;0.0631825
+[2024-04-05 21:45:46.249] GAME: TIDI: 0;0.0526561;0.0545654;0.0623208
+[2024-04-05 21:46:46.286] GAME: TIDI: 0;0.0368593;0.0510242;0.0611911
+[2024-04-05 21:47:46.312] GAME: TIDI: 0.166667;0.0758015;0.0559797;0.06067
+[2024-04-05 21:48:46.330] GAME: TIDI: 0;0.0530611;0.0553959;0.0601426
+[2024-04-05 21:49:46.373] GAME: TIDI: 0;0.0371427;0.0517453;0.0593028
+[2024-04-05 21:50:46.415] GAME: TIDI: 0.166667;0.0759999;0.0565962;0.0590322
+[2024-04-05 21:51:46.443] GAME: TIDI: 0;0.0531999;0.055917;0.0587206
+[2024-04-05 21:52:46.547] GAME: TIDI: 0.166667;0.08724;0.0621816;0.0590667
+[2024-04-05 21:53:30.244] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 21:53:40.248] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 21:53:46.592] GAME: TIDI: 0;0.061068;0.0619589;0.0593559
+[2024-04-05 21:54:46.663] GAME: TIDI: 0.166667;0.0927476;0.0681166;0.060232
+[2024-04-05 21:55:46.689] GAME: TIDI: 0;0.0649233;0.0674779;0.0609566
+[2024-04-05 21:55:48.348] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 21:56:18.352] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 21:56:40.364] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 21:56:46.704] GAME: TIDI: 0.166667;0.0954463;0.0730716;0.0621681
+[2024-04-05 21:57:46.717] GAME: TIDI: 0;0.0668124;0.0718198;0.0631333
+[2024-04-05 21:58:46.733] GAME: TIDI: 0;0.0467687;0.0668096;0.0635009
+[2024-04-05 21:59:30.444] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 21:59:46.839] GAME: TIDI: 0.166667;0.0827381;0.0699953;0.0641503
+[2024-04-05 22:00:46.866] GAME: TIDI: 0;0.0579167;0.0675796;0.0644932
+[2024-04-05 22:01:46.903] GAME: TIDI: 0.166667;0.0905417;0.072172;0.0652611
+[2024-04-05 22:02:46.928] GAME: TIDI: 0;0.0633792;0.0704134;0.0657763
+[2024-04-05 22:03:46.941] GAME: TIDI: 0;0.0443654;0.0652038;0.0657191
+[2024-04-05 22:04:46.967] GAME: TIDI: 0;0.0310558;0.0583742;0.0649846
+[2024-04-05 22:05:46.996] GAME: TIDI: 0;0.0217391;0.0510472;0.0635909
+[2024-04-05 22:06:47.015] GAME: TIDI: 0.166667;0.0652173;0.0538812;0.0626199
+[2024-04-05 22:07:47.045] GAME: TIDI: 0;0.0456521;0.0522354;0.0615814
+[2024-04-05 22:08:20.732] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 22:08:47.074] GAME: TIDI: 0;0.0319565;0.0481796;0.0602413
+[2024-04-05 22:09:34.748] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 22:09:36.749] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 22:09:47.092] GAME: TIDI: 0;0.0223695;0.0430176;0.0585189
+[2024-04-05 22:10:47.167] GAME: TIDI: 0.166667;0.0656587;0.0475458;0.0574216
+[2024-04-05 22:11:47.218] GAME: TIDI: 0.166667;0.0959611;0.0572289;0.0574023
+[2024-04-05 22:12:47.246] GAME: TIDI: 0;0.0671728;0.0592177;0.0575838
+[2024-04-05 22:13:46.927] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 22:13:47.266] GAME: TIDI: 0;0.0470209;0.0567783;0.0575033
+[2024-04-05 22:14:47.306] GAME: TIDI: 0.166667;0.0829147;0.0620056;0.0579535
+[2024-04-05 22:14:50.970] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 22:15:02.970] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 22:15:47.322] GAME: TIDI: 0;0.0580403;0.0612125;0.0582794
+[2024-04-05 22:16:47.340] GAME: TIDI: 0;0.0406282;0.0570957;0.058161
+[2024-04-05 22:17:01.004] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 22:17:47.357] GAME: TIDI: 0;0.0284397;0.0513645;0.0574814
+[2024-04-05 22:18:47.442] GAME: TIDI: 0.166667;0.0699078;0.0550731;0.0572406
+[2024-04-05 22:19:37.114] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 22:19:47.454] GAME: TIDI: 0;0.0489355;0.0538456;0.0569011
+[2024-04-05 22:20:47.486] GAME: TIDI: 0;0.0342548;0.0499274;0.0562037
+[2024-04-05 22:21:47.521] GAME: TIDI: 0.166667;0.0739784;0.0547376;0.0560571
+[2024-04-05 22:22:13.187] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 22:22:47.560] GAME: TIDI: 0;0.0517849;0.0541471;0.0558661
+[2024-04-05 22:23:47.572] GAME: TIDI: 0;0.0362494;0.0505675;0.0553362
+[2024-04-05 22:24:47.607] GAME: TIDI: 0.166667;0.0753746;0.055529;0.0553555
+[2024-04-05 22:25:47.646] GAME: TIDI: 0;0.0527622;0.0549756;0.0553175
+[2024-04-05 22:26:47.686] GAME: TIDI: 0;0.0369335;0.0513672;0.0549225
+[2024-04-05 22:27:01.348] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 22:27:47.698] GAME: TIDI: 0;0.0258535;0.0462645;0.0540567
+[2024-04-05 22:28:17.366] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 22:28:21.367] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 22:28:37.375] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 22:28:47.712] GAME: TIDI: 0.166667;0.0680974;0.0506311;0.0537141
+[2024-04-05 22:29:47.749] GAME: TIDI: 0;0.0476682;0.0500385;0.0533465
+[2024-04-05 22:30:47.784] GAME: TIDI: 0;0.0333677;0.0467043;0.0526823
+[2024-04-05 22:31:47.802] GAME: TIDI: 0.166667;0.0733574;0.052035;0.0526176
+[2024-04-05 22:32:25.496] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 22:32:47.845] GAME: TIDI: 0;0.0513502;0.051898;0.0525456
+[2024-04-05 22:33:47.873] GAME: TIDI: 0;0.0359451;0.0487074;0.0521618
+[2024-04-05 22:34:37.564] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 22:34:47.914] GAME: TIDI: 0.166667;0.0751616;0.0539983;0.0523455
+[2024-04-05 22:35:47.935] GAME: TIDI: 0;0.0526131;0.0537212;0.052483
+[2024-04-05 22:36:47.966] GAME: TIDI: 0;0.0368292;0.0503428;0.052269
+[2024-04-05 22:37:13.637] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 22:37:15.632] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 22:37:47.984] GAME: TIDI: 0;0.0257804;0.0454304;0.0515851
+[2024-04-05 22:38:47.999] GAME: TIDI: 0;0.0180463;0.0399535;0.050422
+[2024-04-05 22:39:31.669] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 22:39:48.065] GAME: TIDI: 0.166667;0.0626324;0.0444893;0.0498287
+[2024-04-05 22:40:27.824] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 22:40:48.162] GAME: TIDI: 0.166667;0.0938427;0.05436;0.0502818
+[2024-04-05 22:41:48.194] GAME: TIDI: 0;0.0656899;0.056626;0.0509163
+[2024-04-05 22:42:01.856] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 22:42:48.211] GAME: TIDI: 0.166667;0.0959829;0.0644974;0.0522744
+[2024-04-05 22:42:53.873] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 22:43:48.242] GAME: TIDI: 0;0.067188;0.0650355;0.0535505
+[2024-04-05 22:44:48.258] GAME: TIDI: 0;0.0470316;0.0614347;0.0543389
+[2024-04-05 22:45:07.921] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 22:45:48.274] GAME: TIDI: 0;0.0329221;0.0557322;0.0544782
+[2024-04-05 22:46:20.013] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 22:46:48.363] GAME: TIDI: 0.166667;0.0730455;0.0591949;0.0549499
+[2024-04-05 22:47:48.368] GAME: TIDI: 0;0.0511319;0.0575823;0.0552131
+[2024-04-05 22:48:02.033] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 22:48:48.383] GAME: TIDI: 0;0.0357923;0.0532243;0.0550142
+[2024-04-05 22:49:04.184] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 22:49:20.190] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 22:49:48.544] GAME: TIDI: 0.333333;0.125055;0.0675903;0.0562719
+[2024-04-05 22:49:54.205] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 22:49:56.205] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 22:50:48.570] GAME: TIDI: 0;0.0875382;0.0715799;0.0578027
+[2024-04-05 22:51:48.593] GAME: TIDI: 0;0.0612768;0.0695193;0.0589743
+[2024-04-05 22:52:04.261] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 22:52:30.285] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 22:52:38.289] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 22:52:48.631] GAME: TIDI: 0.166667;0.0928937;0.0741942;0.0604963
+[2024-04-05 22:53:48.734] GAME: TIDI: 0.166667;0.115026;0.0823605;0.0626827
+[2024-04-05 22:54:48.758] GAME: TIDI: 0;0.0805179;0.081992;0.0646136
+[2024-04-05 22:55:48.780] GAME: TIDI: 0;0.0563626;0.0768661;0.0658389
+[2024-04-05 22:56:06.443] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 22:56:48.800] GAME: TIDI: 0.166667;0.0894538;0.0793836;0.0671934
+[2024-04-05 22:56:54.466] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 22:57:00.469] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 22:57:48.830] GAME: TIDI: 0;0.0626177;0.0760304;0.0680771
+[2024-04-05 22:58:48.856] GAME: TIDI: 0;0.0438324;0.0695908;0.0682284
+[2024-04-05 22:59:48.883] GAME: TIDI: 0;0.0306826;0.0618092;0.0675865
+[2024-04-05 23:00:18.556] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:00:48.921] GAME: TIDI: 0.166667;0.0714779;0.0637429;0.0672022
+[2024-04-05 23:01:18.601] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:01:48.965] GAME: TIDI: 0;0.0500345;0.0610012;0.0665821
+[2024-04-05 23:02:40.655] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:02:48.998] GAME: TIDI: 0;0.0350242;0.0558058;0.0655044
+[2024-04-05 23:03:36.687] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:03:49.027] GAME: TIDI: 0.166667;0.0745169;0.059548;0.0649088
+[2024-04-05 23:03:52.698] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:04:40.709] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:04:49.054] GAME: TIDI: 0;0.0521618;0.0580708;0.064225
+[2024-04-05 23:05:16.723] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:05:44.731] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:05:49.071] GAME: TIDI: 0;0.0365133;0.0537593;0.0631784
+[2024-04-05 23:06:49.092] GAME: TIDI: 0;0.0255593;0.0481193;0.0616725
+[2024-04-05 23:06:50.752] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:07:49.108] GAME: TIDI: 0.166667;0.0678915;0.0520737;0.0607126
+[2024-04-05 23:08:49.135] GAME: TIDI: 0;0.0475241;0.0511638;0.0597578
+[2024-04-05 23:09:49.163] GAME: TIDI: 0;0.0332668;0.0475844;0.0585404
+[2024-04-05 23:10:49.196] GAME: TIDI: 0;0.0232868;0.0427249;0.0569589
+[2024-04-05 23:11:26.967] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:11:49.316] GAME: TIDI: 0.333333;0.116301;0.0574401;0.057007
+[2024-04-05 23:12:49.331] GAME: TIDI: 0;0.0814105;0.0622342;0.0575297
+[2024-04-05 23:13:10.999] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:13:49.349] GAME: TIDI: 0;0.0569874;0.0611848;0.0578952
+[2024-04-05 23:14:49.454] GAME: TIDI: 0.166667;0.0898912;0.0669261;0.0587983
+[2024-04-05 23:15:11.129] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:15:49.483] GAME: TIDI: 0;0.0629238;0.0661256;0.059531
+[2024-04-05 23:16:49.540] GAME: TIDI: 0.166667;0.0940467;0.0717098;0.0607489
+[2024-04-05 23:17:11.210] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:17:49.579] GAME: TIDI: 0;0.0658327;0.0705344;0.0617274
+[2024-04-05 23:18:49.679] GAME: TIDI: 0.166667;0.0960829;0.0756441;0.0631191
+[2024-04-05 23:19:49.701] GAME: TIDI: 0.166667;0.117258;0.0839669;0.0652039
+[2024-04-05 23:19:55.369] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:20:49.735] GAME: TIDI: 0;0.0820806;0.0835896;0.0670425
+[2024-04-05 23:21:13.420] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:21:49.763] GAME: TIDI: 0;0.0574564;0.078363;0.0681745
+[2024-04-05 23:22:31.431] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:22:49.780] GAME: TIDI: 0;0.0402195;0.0707343;0.0684305
+[2024-04-05 23:23:27.713] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:23:50.093] GAME: TIDI: 0.5;0.178154;0.0922182;0.0708093
+[2024-04-05 23:24:50.122] GAME: TIDI: 0.166667;0.174708;0.108716;0.0745999
+[2024-04-05 23:25:50.191] GAME: TIDI: 0;0.122295;0.111432;0.0782831
+[2024-04-05 23:26:50.229] GAME: TIDI: 0.166667;0.135607;0.116267;0.0820815
+[2024-04-05 23:27:17.904] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:27:43.919] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:27:50.260] GAME: TIDI: 0;0.0949247;0.111998;0.0850732
+[2024-04-05 23:28:54.561] GAME: TIDI: 7.16667;2.21645;0.532888;0.129855
+[2024-04-05 23:29:59.705] GAME: TIDI: 8.66667;4.15151;1.25661;0.242531
+[2024-04-05 23:30:59.732] GAME: TIDI: 0;2.90606;1.5865;0.376928
+[2024-04-05 23:31:59.765] GAME: TIDI: 0;2.03424;1.67605;0.50684
+[2024-04-05 23:32:59.812] GAME: TIDI: 0.166667;1.47397;1.63563;0.619719
+[2024-04-05 23:33:59.858] GAME: TIDI: 0;1.03178;1.51486;0.709234
+[2024-04-05 23:34:09.520] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:34:59.903] GAME: TIDI: 0.166667;0.772245;1.36634;0.774944
+[2024-04-05 23:35:35.582] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:35:51.602] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:35:59.946] GAME: TIDI: 0;0.540571;1.20119;0.817568
+[2024-04-05 23:36:59.980] GAME: TIDI: 0;0.3784;1.03663;0.839474
+[2024-04-05 23:38:00.036] GAME: TIDI: 0.166667;0.31488;0.892279;0.844755
+[2024-04-05 23:38:19.709] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:39:00.067] GAME: TIDI: 0;0.220416;0.757906;0.83607
+[2024-04-05 23:39:17.729] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:40:00.080] GAME: TIDI: 0;0.154291;0.637183;0.816181
+[2024-04-05 23:41:00.112] GAME: TIDI: 0.166667;0.158004;0.541347;0.788698
+[2024-04-05 23:42:00.151] GAME: TIDI: 0;0.110603;0.455198;0.755348
+[2024-04-05 23:42:03.813] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:43:00.206] GAME: TIDI: 0.166667;0.127422;0.389643;0.718777
+[2024-04-05 23:43:17.875] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:43:35.883] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:44:00.227] GAME: TIDI: 0;0.0891953;0.329554;0.679855
+[2024-04-05 23:44:07.890] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:44:39.895] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:45:00.243] GAME: TIDI: 0;0.0624367;0.27613;0.639482
+[2024-04-05 23:45:09.913] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:45:25.925] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:45:47.979] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:46:00.323] GAME: TIDI: 0.166667;0.0937057;0.239645;0.599499
+[2024-04-05 23:46:33.981] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:47:00.332] GAME: TIDI: 0;0.065594;0.204835;0.560032
+[2024-04-05 23:47:38.022] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:48:00.368] GAME: TIDI: 0;0.0459158;0.173051;0.521334
+[2024-04-05 23:48:14.036] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:48:36.050] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:48:56.057] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:49:00.396] GAME: TIDI: 0;0.0321411;0.144869;0.483688
+[2024-04-05 23:49:10.064] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:50:00.427] GAME: TIDI: 0.166667;0.0724987;0.130395;0.448358
+[2024-04-05 23:51:00.453] GAME: TIDI: 0;0.0507491;0.114466;0.414969
+[2024-04-05 23:52:00.118] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:52:00.460] GAME: TIDI: 0;0.0355244;0.0986776;0.38334
+[2024-04-05 23:52:14.125] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:53:00.473] GAME: TIDI: 0;0.0248671;0.0839155;0.353397
+[2024-04-05 23:53:04.136] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:54:00.494] GAME: TIDI: 0;0.0174069;0.0706138;0.325119
+[2024-04-05 23:55:00.559] GAME: TIDI: 0.166667;0.0621849;0.068928;0.2995
+[2024-04-05 23:55:02.221] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:55:32.224] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:56:00.578] GAME: TIDI: 0;0.0435294;0.0638483;0.275935
+[2024-04-05 23:57:00.610] GAME: TIDI: 0.166667;0.0804706;0.0671728;0.255059
+[2024-04-05 23:57:32.271] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:58:00.624] GAME: TIDI: 0;0.0563294;0.0650041;0.236053
+[2024-04-05 23:58:16.301] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:58:50.314] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:59:00.652] GAME: TIDI: 0;0.0394306;0.0598894;0.218437
+[2024-04-05 23:59:36.331] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-05 23:59:44.335] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:00:00.675] GAME: TIDI: 0;0.0276014;0.0534318;0.201936
+[2024-04-06 00:01:00.694] GAME: TIDI: 0;0.019321;0.0466096;0.186404
+[2024-04-06 00:02:00.727] GAME: TIDI: 0.166667;0.0635247;0.0499926;0.172762
+[2024-04-06 00:03:00.807] GAME: TIDI: 0.166667;0.0944673;0.0588876;0.161375
+[2024-04-06 00:04:00.818] GAME: TIDI: 0;0.0661271;0.0603355;0.151271
+[2024-04-06 00:04:58.515] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:05:00.846] GAME: TIDI: 0;0.046289;0.0575262;0.141897
+[2024-04-06 00:05:48.545] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:06:00.883] GAME: TIDI: 0;0.0324023;0.0525014;0.132957
+[2024-04-06 00:07:00.548] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:07:00.888] GAME: TIDI: 0;0.0226816;0.0465374;0.124315
+[2024-04-06 00:07:20.562] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:07:36.575] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:08:00.924] GAME: TIDI: 0.166667;0.0658771;0.0504054;0.116924
+[2024-04-06 00:08:02.586] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:09:01.127] GAME: TIDI: 0.333333;0.146114;0.0695471;0.112186
+[2024-04-06 00:09:16.794] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:10:01.152] GAME: TIDI: 0;0.10228;0.0760936;0.108577
+[2024-04-06 00:11:01.161] GAME: TIDI: 0;0.0715959;0.0751941;0.105239
+[2024-04-06 00:12:01.182] GAME: TIDI: 0;0.0501171;0.0701787;0.101733
+[2024-04-06 00:12:54.865] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:13:01.204] GAME: TIDI: 0.166667;0.085082;0.0731594;0.0988755
+[2024-04-06 00:14:01.244] GAME: TIDI: 0;0.0595574;0.070439;0.0960318
+[2024-04-06 00:15:01.264] GAME: TIDI: 0;0.0416902;0.0646892;0.0928975
+[2024-04-06 00:15:22.927] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:16:01.276] GAME: TIDI: 0;0.0291831;0.057588;0.0893666
+[2024-04-06 00:17:01.350] GAME: TIDI: 0.166667;0.0704282;0.060156;0.0864455
+[2024-04-06 00:17:51.092] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:18:01.437] GAME: TIDI: 0.166667;0.0992997;0.0679848;0.0845995
+[2024-04-06 00:19:01.466] GAME: TIDI: 0;0.0695098;0.0682898;0.0829685
+[2024-04-06 00:20:01.568] GAME: TIDI: 0.166667;0.0986569;0.0743632;0.082108
+[2024-04-06 00:20:15.236] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:21:01.598] GAME: TIDI: 0;0.0690598;0.0733025;0.0812274
+[2024-04-06 00:21:37.272] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:22:01.631] GAME: TIDI: 0.166667;0.0983419;0.0783104;0.0809357
+[2024-04-06 00:22:09.296] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:22:35.307] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:23:01.650] GAME: TIDI: 0;0.0688393;0.0764162;0.0804838
+[2024-04-06 00:23:09.310] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:23:29.315] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:23:35.322] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:24:01.663] GAME: TIDI: 0;0.0481875;0.0707704;0.0795124
+[2024-04-06 00:25:01.698] GAME: TIDI: 0;0.0337313;0.0633626;0.0778974
+[2024-04-06 00:25:43.383] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:26:01.737] GAME: TIDI: 0.166667;0.0736119;0.0654125;0.0766489
+[2024-04-06 00:27:01.762] GAME: TIDI: 0;0.0515283;0.0626356;0.0752476
+[2024-04-06 00:28:01.785] GAME: TIDI: 0;0.0360698;0.0573225;0.0734551
+[2024-04-06 00:28:15.467] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:29:01.822] GAME: TIDI: 0.166667;0.0752489;0.0609078;0.0722004
+[2024-04-06 00:29:51.504] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:30:01.850] GAME: TIDI: 0;0.0526742;0.0592611;0.0709064
+[2024-04-06 00:31:01.881] GAME: TIDI: 0;0.036872;0.0547832;0.0692941
+[2024-04-06 00:32:01.901] GAME: TIDI: 0.166667;0.0758104;0.0589887;0.0682635
+[2024-04-06 00:32:11.561] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:33:01.909] GAME: TIDI: 0;0.0530673;0.0578044;0.0672176
+[2024-04-06 00:34:01.939] GAME: TIDI: 0;0.0371471;0.0536729;0.0658632
+[2024-04-06 00:35:01.960] GAME: TIDI: 0;0.026003;0.0481389;0.0640907
+[2024-04-06 00:35:37.630] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:36:01.977] GAME: TIDI: 0;0.0182021;0.0421516;0.0618968
+[2024-04-06 00:37:02.009] GAME: TIDI: 0.166667;0.0627415;0.0462695;0.0603341
+[2024-04-06 00:38:02.026] GAME: TIDI: 0;0.043919;0.0457994;0.0588806
+[2024-04-06 00:39:02.041] GAME: TIDI: 0;0.0307433;0.0427882;0.0572714
+[2024-04-06 00:40:02.063] GAME: TIDI: 0;0.0215203;0.0385346;0.0553977
+[2024-04-06 00:40:03.725] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:40:39.730] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:41:02.083] GAME: TIDI: 0;0.0150642;0.0338406;0.053242
+[2024-04-06 00:42:02.169] GAME: TIDI: 0.166667;0.060545;0.0391814;0.0518359
+[2024-04-06 00:42:25.843] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:43:02.187] GAME: TIDI: 0;0.0423815;0.0398214;0.0506345
+[2024-04-06 00:43:41.866] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:44:02.203] GAME: TIDI: 0.166667;0.079667;0.0477906;0.0503501
+[2024-04-06 00:44:39.869] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:45:02.211] GAME: TIDI: 0;0.0557669;0.0493858;0.0502537
+[2024-04-06 00:46:02.223] GAME: TIDI: 0;0.0390368;0.047316;0.0499599
+[2024-04-06 00:47:02.259] GAME: TIDI: 0;0.0273258;0.043318;0.0492957
+[2024-04-06 00:48:02.329] GAME: TIDI: 0.166667;0.0691281;0.04848;0.0492141
+[2024-04-06 00:48:38.022] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:48:56.032] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:49:02.370] GAME: TIDI: 0;0.0483896;0.0484619;0.0491389
+[2024-04-06 00:50:02.380] GAME: TIDI: 0;0.0338727;0.0455441;0.0487794
+[2024-04-06 00:50:24.051] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:50:40.053] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:51:02.407] GAME: TIDI: 0.166667;0.0737109;0.0511775;0.0490192
+[2024-04-06 00:51:14.071] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:51:38.075] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:51:42.079] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:51:46.078] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:51:50.076] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:52:02.418] GAME: TIDI: 0;0.0515976;0.0512615;0.0492435
+[2024-04-06 00:52:08.079] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:52:18.081] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:52:38.092] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:53:02.439] GAME: TIDI: 0;0.0361184;0.0482329;0.0491424
+[2024-04-06 00:53:36.116] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:54:02.445] GAME: TIDI: 0;0.0252828;0.0436429;0.0485924
+[2024-04-06 00:54:14.114] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:55:02.477] GAME: TIDI: 0;0.017698;0.0384539;0.0475786
+[2024-04-06 00:55:44.149] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:55:46.156] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:56:02.502] GAME: TIDI: 0.166667;0.0623886;0.0432408;0.0471448
+[2024-04-06 00:56:14.165] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:56:28.164] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:57:02.517] GAME: TIDI: 0;0.043672;0.0433271;0.046763
+[2024-04-06 00:58:02.536] GAME: TIDI: 0;0.0305704;0.0407757;0.0461643
+[2024-04-06 00:58:16.208] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 00:59:02.548] GAME: TIDI: 0;0.0213993;0.0369005;0.0452379
+[2024-04-06 01:00:02.563] GAME: TIDI: 0;0.0149795;0.0325163;0.0439657
+[2024-04-06 01:00:50.245] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 01:01:02.581] GAME: TIDI: 0;0.0104857;0.0281101;0.0423802
+[2024-04-06 01:02:02.665] GAME: TIDI: 0.166667;0.05734;0.0339561;0.0415378
+[2024-04-06 01:03:02.691] GAME: TIDI: 0;0.040138;0.0351925;0.0409032
+[2024-04-06 01:04:02.710] GAME: TIDI: 0.166667;0.0780966;0.0437733;0.0411903
+[2024-04-06 01:05:02.717] GAME: TIDI: 0;0.0546676;0.0459522;0.0416664
+[2024-04-06 01:06:00.417] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 01:06:02.758] GAME: TIDI: 0;0.0382673;0.0444152;0.0419413
+[2024-04-06 01:06:50.433] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 01:07:02.771] GAME: TIDI: 0;0.0267871;0.0408896;0.0418361
+[2024-04-06 01:07:08.431] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 01:08:02.781] GAME: TIDI: 0;0.018751;0.0364619;0.0412987
+[2024-04-06 01:08:20.443] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 01:09:02.791] GAME: TIDI: 0;0.0131257;0.0317946;0.0403483
+[2024-04-06 01:10:02.808] GAME: TIDI: 0.166667;0.059188;0.0372733;0.0400408
+[2024-04-06 01:11:02.818] GAME: TIDI: 0;0.0414316;0.038105;0.0398472
+[2024-04-06 01:11:18.495] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 01:12:02.833] GAME: TIDI: 0;0.0290021;0.0362844;0.0394909
+[2024-04-06 01:13:02.846] GAME: TIDI: 0;0.0203015;0.0330878;0.0388506
+[2024-04-06 01:13:44.522] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 01:14:02.864] GAME: TIDI: 0;0.014211;0.0293125;0.0378968
+[2024-04-06 01:14:58.603] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 01:15:02.951] GAME: TIDI: 0.166667;0.0599477;0.0354395;0.0376511
+[2024-04-06 01:15:04.609] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 01:15:12.621] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 01:16:02.971] GAME: TIDI: 0;0.0419634;0.0367443;0.0375604
+[2024-04-06 01:16:28.654] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 01:16:40.667] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 01:17:03.006] GAME: TIDI: 0.166667;0.0793744;0.0452703;0.0383314
+[2024-04-06 01:18:03.044] GAME: TIDI: 0;0.0555621;0.0473287;0.0392311
+[2024-04-06 01:19:03.059] GAME: TIDI: 0;0.0388935;0.0456416;0.0398722
+[2024-04-06 01:20:03.067] GAME: TIDI: 0;0.0272254;0.0419584;0.0400808
+[2024-04-06 01:20:58.777] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 01:21:03.115] GAME: TIDI: 0.166667;0.0690578;0.0473783;0.0408105
+[2024-04-06 01:22:03.143] GAME: TIDI: 0;0.0483405;0.0475707;0.0414865
+[2024-04-06 01:22:10.809] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 01:22:32.806] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 01:23:03.163] GAME: TIDI: 0;0.0338383;0.0448242;0.0418203
+[2024-04-06 01:24:03.188] GAME: TIDI: 0;0.0236868;0.0405967;0.041698
+[2024-04-06 01:24:18.852] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 01:24:56.881] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 01:25:03.215] GAME: TIDI: 0.166667;0.0665808;0.0457936;0.0421075
+[2024-04-06 01:26:03.257] GAME: TIDI: 0;0.0466065;0.0459562;0.0424924
+[2024-04-06 01:26:18.925] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 01:27:03.275] GAME: TIDI: 0;0.0326246;0.0432898;0.0425721
+[2024-04-06 01:27:18.945] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 01:27:28.950] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 01:28:03.301] GAME: TIDI: 0.166667;0.0728372;0.0491993;0.0432348
+[2024-04-06 01:28:26.966] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 01:28:44.968] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 01:29:03.323] GAME: TIDI: 0;0.050986;0.0495567;0.043867
+[2024-04-06 01:30:03.356] GAME: TIDI: 0;0.0356902;0.0467834;0.0441587
+[2024-04-06 01:31:03.374] GAME: TIDI: 0;0.0249832;0.0424233;0.0439851
+[2024-04-06 01:31:37.154] GAME: Autotransfer has called the shuttle.
+[2024-04-06 01:32:03.513] GAME: TIDI: 0.333333;0.117488;0.0574363;0.0453302
+[2024-04-06 01:33:03.548] GAME: TIDI: 0;0.0822418;0.0623974;0.047037
+[2024-04-06 01:33:55.242] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 01:34:03.586] GAME: TIDI: 0;0.0575692;0.0614318;0.0484764
+[2024-04-06 01:34:27.262] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 01:35:05.023] GAME: TIDI: 2.5;0.790298;0.207205;0.0643493
+[2024-04-06 01:35:30.690] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 01:35:38.709] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 01:36:05.052] GAME: TIDI: 0;0.553209;0.276406;0.085555
+[2024-04-06 01:37:05.218] GAME: TIDI: 0.333333;0.487246;0.318574;0.108857
+[2024-04-06 01:37:32.882] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 01:38:05.255] GAME: TIDI: 0;0.341072;0.323074;0.130279
+[2024-04-06 01:39:05.295] GAME: TIDI: 0;0.238751;0.306209;0.147872
+[2024-04-06 01:40:05.320] GAME: TIDI: 0.166667;0.217125;0.288392;0.161924
+[2024-04-06 01:41:05.402] GAME: TIDI: 0.166667;0.201988;0.271111;0.172842
+[2024-04-06 01:42:05.618] GAME: TIDI: 0.333333;0.241391;0.265167;0.182075
+[2024-04-06 01:42:27.302] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 01:43:05.689] GAME: TIDI: 0;0.168974;0.245929;0.18846
+[2024-04-06 01:43:51.398] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 01:44:05.747] GAME: TIDI: 0.166667;0.168282;0.230399;0.192654
+[2024-04-06 01:44:41.478] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 01:44:53.480] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 01:45:05.843] GAME: TIDI: 0.166667;0.167797;0.217879;0.195177
+[2024-04-06 01:45:25.749] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 01:46:06.114] GAME: TIDI: 0.5;0.267458;0.227795;0.198438
+[2024-04-06 01:46:21.778] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 01:47:06.130] GAME: TIDI: 0;0.187221;0.21968;0.200563
+[2024-04-06 01:47:19.183] GAME: Antagonists at round end were...
+[2024-04-06 01:47:21.944] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 01:48:06.296] GAME: TIDI: 0.166667;0.181054;0.211955;0.201702
+[2024-04-06 01:48:35.985] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 01:49:06.349] GAME: TIDI: 0.166667;0.176738;0.204912;0.202023
+[2024-04-06 01:49:44.041] EMOTE: INVALID/(Reality Destroyer) (234,102,14): <B>Reality Destroyer</B> makes an excited booping sound!
+[2024-04-06 01:50:06.394] GAME: TIDI: 0;0.123717;0.188673;0.200688
+[2024-04-06 01:51:06.429] GAME: TIDI: 0.166667;0.136602;0.178258;0.198445
