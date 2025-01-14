@@ -445,6 +445,10 @@
 		var/mob/living/carbon/C = M
 		C.clean_blood(TRUE)
 
+	if(istype(M, /mob/living/simple_mob/vore/aggressive/macrophage)) // Big ouch for viruses
+		var/mob/living/simple_mob/macrophage = M
+		macrophage.adjustToxLoss(20)
+
 /datum/reagent/space_cleaner/touch_obj(var/obj/O)
 	..()
 	O.clean_blood()
@@ -463,7 +467,12 @@
 		for(var/mob/living/simple_mob/slime/M in T)
 			M.adjustToxLoss(rand(5, 10))
 
+<<<<<<< HEAD
 	T.apply_fire_protection() // CHOMPAdd - Apply fire protection
+=======
+		for(var/mob/living/simple_mob/vore/aggressive/macrophage/virus in T)
+			virus.adjustToxLoss(rand(5, 10))
+>>>>>>> 1497af0573 (Merge pull request #16885 from TheCaramelion/virology)
 
 /datum/reagent/space_cleaner/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
 	if(M.r_hand)
