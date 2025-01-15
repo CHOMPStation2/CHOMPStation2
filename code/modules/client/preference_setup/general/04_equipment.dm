@@ -15,7 +15,7 @@
 	pref.backbag					= save_data["backbag"]
 	pref.pdachoice					= save_data["pdachoice"]
 	pref.communicator_visibility	= save_data["communicator_visibility"]
-	pref.ringtone					= save_data["ringtone"] // CHOMPEdit - We use ttone in the pref so that it doesnt get reset
+	pref.ringtone					= save_data["ttone"] // CHOMPEdit - We use ttone in the pref so that it doesnt get reset
 	//pref.shoe_hater					= save_data["shoe_hater"] //CHOMPRemove, remove RS No shoes
 	pref.no_jacket					= save_data["no_jacket"]
 
@@ -29,7 +29,7 @@
 	save_data["backbag"]					= pref.backbag
 	save_data["pdachoice"]					= pref.pdachoice
 	save_data["communicator_visibility"]	= pref.communicator_visibility
-	save_data["ringtone"]						= pref.ringtone // CHOMPEdit - We use ttone in the pref so that it doesnt get reset
+	save_data["ttone"]						= pref.ringtone // CHOMPEdit - We use ttone in the pref so that it doesnt get reset
 	//save_data["shoe_hater"] 				= pref.shoe_hater //CHOMPRemove, remove RS No shoes
 	save_data["no_jacket"]					= pref.no_jacket
 
