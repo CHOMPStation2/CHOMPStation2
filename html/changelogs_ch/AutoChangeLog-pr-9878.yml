@@ -1,0 +1,4 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - rscadd: "Added ACE Security outfit (undersuit + armour) for security; undersuit is available in loadout uniform selector, full outfit available in officer and warden lockers"
