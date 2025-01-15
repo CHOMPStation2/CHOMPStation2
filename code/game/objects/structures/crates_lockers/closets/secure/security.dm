@@ -138,6 +138,8 @@
 	closet_appearance = /decl/closet_appearance/secure_closet/security/warden
 
 	starts_with = list(
+		/obj/item/clothing/under/rank/security/aces,
+		/obj/item/clothing/suit/storage/vest/aces,
 		/obj/item/clothing/suit/storage/vest/warden,
 		/obj/item/clothing/under/rank/warden,
 		/obj/item/clothing/under/rank/warden/corp,
@@ -198,6 +200,8 @@
 	closet_appearance = /decl/closet_appearance/secure_closet/security
 
 	starts_with = list(
+		/obj/item/clothing/under/rank/security/aces,
+		/obj/item/clothing/suit/storage/vest/aces,
 		/obj/item/clothing/suit/storage/vest/officer,
 		/obj/item/clothing/head/helmet,
 		/obj/item/clothing/mask/gas/sechailer/swat/officer, //CHOMP ADD
