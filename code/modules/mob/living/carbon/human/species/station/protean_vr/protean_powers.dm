@@ -540,12 +540,6 @@
 			if(!choice || QDELETED(protie) || protie.incapacitated())
 				return FALSE
 			. = TRUE
-			var/list/dullahanbody_styles = list(
-				"dullahanbody"
-			)
-			var/list/dullahanhead_styles = list(
-				"dullahanhead"
-			)
 			var/list/dullahanmetal_styles = list(
 				"dullahanmetal",
 				"dullahanmetal2"
@@ -563,10 +557,6 @@
 				"dullahandecals4",
 				"dullahandecals5",
 				"emptydecals"
-			)
-			var/list/dullahanextended_styles = list(
-				"dullahanextendedoff",
-				"dullahanextendedon"
 			)
 			var/dmetal
 			var/ddecals
