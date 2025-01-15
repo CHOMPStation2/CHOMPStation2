@@ -439,6 +439,8 @@ var/global/datum/controller/occupations/job_master
 					//if(G.slot == slot_wear_mask || G.slot == slot_wear_suit || G.slot == slot_head)
 					//	custom_equip_leftovers += thing
 					//else
+					if(G.slot == slot_wear_suit && H.client?.prefs?.no_jacket)
+						continue
 					/* CHOMPRemove Start, remove RS No shoes
 					if(G.slot == slot_shoes && H.client?.prefs?.shoe_hater)	//RS ADD
 						continue
@@ -468,6 +470,8 @@ var/global/datum/controller/occupations/job_master
 		// If some custom items could not be equipped before, try again now.
 		for(var/thing in custom_equip_leftovers)
 			var/datum/gear/G = gear_datums[thing]
+			if(G.slot == slot_wear_suit && H.client?.prefs?.no_jacket)
+				continue
 			/* CHOMPRemove Start, remove RS No shoes
 			if(G.slot == slot_shoes && H.client?.prefs?.shoe_hater)	//RS ADD
 				continue
