@@ -109,9 +109,7 @@
 				prob(4);/obj/item/ammo_magazine/m45uzi,\
 				prob(4);/obj/item/ammo_magazine/m9mml,\
 				prob(4);/obj/item/ammo_magazine/m9mmt,\
-//CHOMPedit start: new P90 magazine.
-				prob(4);/obj/item/ammo_magazine/a57p90,\
-//CHOMPedit end.
+				prob(4);/obj/item/ammo_magazine/m9mmp90,\
 				prob(4);/obj/item/ammo_magazine/m10mm,\
 				prob(4);/obj/item/ammo_magazine/m545/small,\
 				prob(3);/obj/item/ammo_magazine/clip/c44,\
