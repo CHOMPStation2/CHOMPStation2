@@ -108,13 +108,8 @@ Bonus
 
 	var/mob/living/unlucky = locate() in place
 
-<<<<<<< HEAD
 	if(unlucky && !unlucky.is_incorporeal()) // CHOMPEdit
-		if(unlucky.can_be_drop_pred && H.can_be_drop_prey && H.devourable)
-=======
-	if(unlucky)
 		if(unlucky.can_be_drop_pred && mob.can_be_drop_prey && mob.devourable)
->>>>>>> 1497af0573 (Merge pull request #16885 from TheCaramelion/virology)
 			place = unlucky.vore_selected
 		else if(unlucky.devourable && unlucky.can_be_drop_prey && mob.can_be_drop_pred)
 			unlucky.forceMove(mob.vore_selected)
