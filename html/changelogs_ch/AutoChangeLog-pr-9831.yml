@@ -1,0 +1,6 @@
+author: "tacoguy7765093"
+delete-after: True
+changes:
+  - rscdel: "Lots of bloat worth of bullet chambers have been removed"
+  - rscdel: "Ammo simplification, back to calibers."
+  - qol: "Caliber simplification."

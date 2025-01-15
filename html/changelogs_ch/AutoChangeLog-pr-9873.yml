@@ -1,4 +1,4 @@
 author: "CHOMPStation2StaffMirrorBot"
 delete-after: True
 changes:
-  - bugfix: "missing overrides in some robot guns"
+  - bugfix: "runtimes when spam upgrading griders"

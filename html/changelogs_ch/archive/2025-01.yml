@@ -128,3 +128,8 @@
   - bugfix: catslugs can now actually use wawa
   tacoguy7765093:
   - rscadd: Added new sprite option for zorgoia simplemob.
+2025-01-15:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: sheet snatcher being able to have larger than the capacity would allow
+      stacks inserted when being close to full and getting a new type
+  - bugfix: missing overrides in some robot guns
