@@ -623,6 +623,8 @@
 									S.dullahan_overlays[3] = dinput_style_list[1]
 									if(dinput_style_list[1] == "dullahanmetal2")
 										S.dullahan_overlays[6] = "dullahanextendedon"
+									else
+										S.dullahan_overlays[6] = "dullahanextendedoff"
 								if(rgb2num(dinput_style_list[2]))
 									S.dullahan_overlays[S.dullahan_overlays[3]] = dinput_style_list[2] //metal shell color -2-
 							catch
