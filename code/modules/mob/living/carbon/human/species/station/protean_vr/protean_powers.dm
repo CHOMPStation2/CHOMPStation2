@@ -624,26 +624,33 @@
 					S.dullahan_overlays[5] = choice //metal overlay is 3, eyes is 4
 					S.dullahan_overlays[S.dullahan_overlays[5]] = new_color
 				if("Import")
-					var/input_style
-					input_style = sanitizeSafe(input(src,"Paste the style string you exported with Export Style.", "Style loading","") as text, MAX_MESSAGE_LEN)
-					if(input_style)
-						var/list/input_style_list = splittext(input_style, ";")
-						if((LAZYLEN(input_style_list) == 6) && (input_style_list[1] in dullahanmetal_styles) && (input_style_list[3] in dullahandecals_styles) && (input_style_list[5] in dullahaneyes_styles))
-							try
-								if(rgb2num(input_style_list[2]))
-									S.dullahan_overlays["dullahanmetal"] = input_style_list[2]
+				// need to do: convert S.dullahan_overlays["dullahanmetal"] = dinput_style_list[2] -> S.dullahan_overlays[#] & S.dullahan_overlays[S.dullahan_overlays[#]]
+					var/dinput_style
+					dinput_style = sanitizeSafe(input(protie,"Paste the style string you exported with Export Style.", "Style loading","") as text, MAX_MESSAGE_LEN)
+					if(dinput_style)
+						var/list/dinput_style_list = splittext(dinput_style, ";")
+						if((LAZYLEN(dinput_style_list) == 6) && (dinput_style_list[1] in dullahanmetal_styles) && (dinput_style_list[3] in dullahandecals_styles) && (dinput_style_list[5] in dullahaneyes_styles))
+							try // works, but doesnt accept default (decals breaks it, change the default decal). make it change the parts. -edit- test this as its added. <-2
+								if(rgb2num(dinput_style_list[2]))
+									S.dullahan_overlays[S.dullahan_overlays[3]] = dinput_style_list[2] //metal shell color -2-
+								if(dinput_style_list[1] in dullahanmetal_styles)
+									S.dullahan_overlays[3] = dinput_style_list[2]
 							catch
-								dmetal = input_style_list[1]
+								dmetal = dinput_style_list[1]
 							try
-								if(rgb2num(input_style_list[4]))
-									S.dullahan_overlays["dullahandecals"] = input_style_list[4]
+								if(rgb2num(dinput_style_list[4]))
+									S.dullahan_overlays[S.dullahan_overlays[5]] = dinput_style_list[4] // decals color
+								if(dinput_style_list[3] in dullahandecals_styles)
+									S.dullahan_overlays[5] = dinput_style_list[3]
 							catch
-								ddecals = input_style_list[3]
+								ddecals = dinput_style_list[3]
 							try
-								if(rgb2num(input_style_list[6]))
-									S.dullahan_overlays["dullahaneyes"] = input_style_list[6]
+								if(rgb2num(dinput_style_list[6]))
+									S.dullahan_overlays[S.dullahan_overlays[4]] = dinput_style_list[6] //eyes color
+								if(dinput_style_list[5] in dullahaneyes_styles)
+									S.dullahan_overlays[4] = dinput_style_list[5]
 							catch
-								ddecals = input_style_list[5]
+								ddecals = dinput_style_list[5]
 				if("Export")
 					dmetal = S.dullahan_overlays[3]
 					ddecals = S.dullahan_overlays[5]
@@ -652,7 +659,7 @@
 					ddecalscolor = S.dullahan_overlays[S.dullahan_overlays[5]]
 					deyescolor = S.dullahan_overlays[S.dullahan_overlays[4]]
 					var/output_style = jointext(list(dmetal,dmetalcolor,ddecals,ddecalscolor,deyes,deyescolor), ";")
-					to_chat(src, span_notice("Exported style string is \" [output_style] \". Use this to get the same style in the future with import style"))
+					to_chat(protie, span_notice("Exported style string is \" [output_style] \". Use this to get the same style in the future with import style"))
 			S.blob_appearance = "dullahan"
 			// CHOMPEdit End
 		if("Primary")
