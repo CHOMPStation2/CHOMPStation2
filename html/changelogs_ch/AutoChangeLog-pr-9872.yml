@@ -1,4 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - bugfix: "sheet snatcher being able to have larger than the capacity would allow stacks inserted when being close to full and getting a new type"
