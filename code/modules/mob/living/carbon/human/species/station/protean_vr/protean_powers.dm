@@ -545,7 +545,7 @@
 			)
 			var/list/dullahanhead_styles = list(
 				"dullahanhead"
-			) // Dullahan_Metalshell
+			)
 			var/list/dullahanmetal_styles = list(
 				"dullahanmetal",
 				"dullahanmetal2"
@@ -556,6 +556,7 @@
 				"dullahaneyes"
 			)
 			var/list/dullahandecals_styles = list(
+				"dullahandecals",
 				"dullahandecals1",
 				"dullahandecals2",
 				"dullahandecals3",
@@ -567,8 +568,6 @@
 				"dullahanextendedoff",
 				"dullahanextendedon"
 			)
-			//if(user.mind.assigned_role != JOB_CHAPLAIN)
-				//return FALSE
 			var/dmetal
 			var/ddecals
 			var/deyes
@@ -608,7 +607,7 @@
 					var/new_color = input("Pick eye color:","Eye Color", S.dullahan_overlays[4]) as null|color
 					if(!new_color)
 						return 0
-					S.dullahan_overlays[4] = choice //metal overlay is 3, eyes is 4
+					S.dullahan_overlays[4] = choice
 					S.dullahan_overlays[S.dullahan_overlays[4]] = new_color
 				if("Decals")
 					options = dullahandecals_styles
@@ -621,16 +620,15 @@
 					var/new_color = input("Pick decal color:","Decal Color", S.dullahan_overlays[5]) as null|color
 					if(!new_color)
 						return 0
-					S.dullahan_overlays[5] = choice //metal overlay is 3, eyes is 4
+					S.dullahan_overlays[5] = choice
 					S.dullahan_overlays[S.dullahan_overlays[5]] = new_color
 				if("Import")
-				// need to do: convert S.dullahan_overlays["dullahanmetal"] = dinput_style_list[2] -> S.dullahan_overlays[#] & S.dullahan_overlays[S.dullahan_overlays[#]]
 					var/dinput_style
 					dinput_style = sanitizeSafe(input(protie,"Paste the style string you exported with Export Style.", "Style loading","") as text, MAX_MESSAGE_LEN)
 					if(dinput_style)
 						var/list/dinput_style_list = splittext(dinput_style, ";")
 						if((LAZYLEN(dinput_style_list) == 6) && (dinput_style_list[1] in dullahanmetal_styles) && (dinput_style_list[3] in dullahandecals_styles) && (dinput_style_list[5] in dullahaneyes_styles))
-							try // works, but doesnt accept default (decals breaks it, change the default decal). make it change the parts. -edit- test this as its added. <-2 --- working now?check extended
+							try
 								if(dinput_style_list[1] in dullahanmetal_styles)
 									S.dullahan_overlays[3] = dinput_style_list[1]
 									if(dinput_style_list[1] == "dullahanmetal2")
