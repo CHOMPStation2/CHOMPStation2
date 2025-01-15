@@ -630,25 +630,27 @@
 					if(dinput_style)
 						var/list/dinput_style_list = splittext(dinput_style, ";")
 						if((LAZYLEN(dinput_style_list) == 6) && (dinput_style_list[1] in dullahanmetal_styles) && (dinput_style_list[3] in dullahandecals_styles) && (dinput_style_list[5] in dullahaneyes_styles))
-							try // works, but doesnt accept default (decals breaks it, change the default decal). make it change the parts. -edit- test this as its added. <-2
+							try // works, but doesnt accept default (decals breaks it, change the default decal). make it change the parts. -edit- test this as its added. <-2 --- working now?check extended
+								if(dinput_style_list[1] in dullahanmetal_styles)
+									S.dullahan_overlays[3] = dinput_style_list[1]
+									if(dinput_style_list[1] == "dullahanmetal2")
+										S.dullahan_overlays[6] = "dullahanextendedon"
 								if(rgb2num(dinput_style_list[2]))
 									S.dullahan_overlays[S.dullahan_overlays[3]] = dinput_style_list[2] //metal shell color -2-
-								if(dinput_style_list[1] in dullahanmetal_styles)
-									S.dullahan_overlays[3] = dinput_style_list[2]
 							catch
 								dmetal = dinput_style_list[1]
 							try
-								if(rgb2num(dinput_style_list[4]))
-									S.dullahan_overlays[S.dullahan_overlays[5]] = dinput_style_list[4] // decals color
 								if(dinput_style_list[3] in dullahandecals_styles)
 									S.dullahan_overlays[5] = dinput_style_list[3]
+								if(rgb2num(dinput_style_list[4]))
+									S.dullahan_overlays[S.dullahan_overlays[5]] = dinput_style_list[4] // decals color
 							catch
 								ddecals = dinput_style_list[3]
 							try
-								if(rgb2num(dinput_style_list[6]))
-									S.dullahan_overlays[S.dullahan_overlays[4]] = dinput_style_list[6] //eyes color
 								if(dinput_style_list[5] in dullahaneyes_styles)
 									S.dullahan_overlays[4] = dinput_style_list[5]
+								if(rgb2num(dinput_style_list[6]))
+									S.dullahan_overlays[S.dullahan_overlays[4]] = dinput_style_list[6] //eyes color
 							catch
 								ddecals = dinput_style_list[5]
 				if("Export")
