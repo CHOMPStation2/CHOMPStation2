@@ -614,7 +614,7 @@
 					S.dullahan_overlays[S.dullahan_overlays[5]] = new_color
 				if("Import")
 					var/dinput_style
-					dinput_style = input(protie,"Paste the style string you exported with Export Style.", "Style loading","")
+					dinput_style = sanitizeSafe(input(protie,"Paste the style string you exported with Export Style.", "Style loading","") as text, 128)
 					if(dinput_style)
 						var/list/dinput_style_list = splittext(dinput_style, ";")
 						if((LAZYLEN(dinput_style_list) == 6) && (dinput_style_list[1] in dullahanmetal_styles) && (dinput_style_list[3] in dullahandecals_styles) && (dinput_style_list[5] in dullahaneyes_styles))
