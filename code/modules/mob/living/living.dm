@@ -1036,7 +1036,7 @@
 		density = initial(density)
 	// CHOMPEdit Start - Rest passtable when crawling
 		if(passtable_reset)
-			passtable_reset = TRUE
+			passtable_reset = FALSE
 			pass_flags &= ~PASSTABLE
 		passtable_crawl_checked = FALSE
 	// CHOMPEdit End
