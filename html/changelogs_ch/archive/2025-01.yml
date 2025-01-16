@@ -133,3 +133,47 @@
   - bugfix: sheet snatcher being able to have larger than the capacity would allow
       stacks inserted when being close to full and getting a new type
   - bugfix: missing overrides in some robot guns
+2025-01-16:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: runtimes when spam upgrading griders
+  - rscadd: Added Blob Spores symptom
+  - rscadd: Added vaccine bottles, sellable to CentCom in a freezer, made in the PanDEMIC
+  - rscadd: Added supply packs with normal and minor experimental diseases
+  - qol: PanDEMIC now takes syringes as well
+  - qol: Mobs may be picked as targets with Bluespace Sneeze
+  - qol: Many symptoms that affected carbon now affect mobs too
+  - balance: All diseases will cure themselves eventually, as the body works up immunity
+  - balance: Shuffled the list of cures for advanced diseases
+  - balance: PanDEMIC consumes 5 blood when making vaccines now
+  - balance: Reduced the health and damage of macrophages, adding more depending on
+      the disease they're based on
+  - balance: Macrophages now shrivel up when killed, leaving behind some of their
+      bits on the ground, or in someone's stomach if eaten.
+  - balance: Macrophages would rather go after non-infected people
+  - balance: Macrophages will take a lot of damage if splashed with Space Cleaner
+  - bugfix: Fixed equipment permeability not being taken into account when attempting
+      to resist viruses
+  - bugfix: Fixed overactive Adrenal Gland syndrome not adding Hyperzine
+  - bugfix: Fixed fake GBS not showing some of the messages
+  - admin: Added various spawneable culture bottles
+  - code_imp: Added onDeath() to viruses and symptoms
+  - code_imp: Added random experimental disease and minor random experimental disease
+      datum
+  - code_imp: Added random macrophage disease datum and random blob spores datum
+  - code_imp: Added CAN_NOT_POPULATE for diseases to be avoided in random events
+  - code_imp: Sanitized many of the symptoms when affecting carbon mobs
+  - code_imp: Disease outbreak now uses disease flags instead of a list
+  - bugfix: micros stuck to bare feet breaking magboots
+  - rscadd: Added the ability to disable spawning with a jacket slot item.
+  - bugfix: Rejuvenante not updating a destroyed robot sprite
+  - rscadd: Added ACE Security outfit (undersuit + armour) for security; undersuit
+      is available in loadout uniform selector, full outfit available in officer and
+      warden lockers
+  - bugfix: an issue where the crafting ui could get stuck in a busy state if closed
+      during crafting
+  Kashargul:
+  - bugfix: an issue where crawling could reset table passing continuously
+  tacoguy7765093:
+  - rscdel: Lots of bloat worth of bullet chambers have been removed
+  - rscdel: Ammo simplification, back to calibers.
+  - qol: Caliber simplification.

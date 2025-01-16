@@ -1,4 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - bugfix: "an issue where the crafting ui could get stuck in a busy state if closed during crafting"
