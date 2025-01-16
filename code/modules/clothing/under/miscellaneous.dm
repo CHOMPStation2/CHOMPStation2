@@ -1587,7 +1587,7 @@
 /obj/item/clothing/under/leotard
     name = "black leotard"
     desc = "A black leotard with a piece of semi-transparent cloth near the bust. Perfect for showing off cleavage. Bunny ears not included."
-	icon_state = "leotard"
+    icon_state = "leotard"
 
 /obj/item/clothing/under/leotardcolor
     name = "colored leotard"
