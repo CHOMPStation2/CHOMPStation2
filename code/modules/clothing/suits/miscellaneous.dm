@@ -142,7 +142,6 @@
 
 /obj/item/clothing/suit/justice
 	name = "justice suit"
-	icon= ""
 	desc = "This pretty much looks ridiculous."
 	icon_state = "gentlecoat"
 	item_state_slots = list(slot_r_hand_str = "greatcoat", slot_l_hand_str = "greatcoat")
