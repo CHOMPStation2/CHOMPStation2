@@ -182,7 +182,7 @@
 
 	propogate_sunlight_changes(oldtype, old_density, new_turf)
 	var/turf/simulated/cur_turf = src
-	if(is_open != was_open)
+	if(istype(cur_turf) && is_open != was_open)
 		do
 			cur_turf = GetBelow(cur_turf)
 			if(is_open)
