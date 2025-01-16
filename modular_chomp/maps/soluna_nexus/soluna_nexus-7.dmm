@@ -5944,7 +5944,6 @@
 /obj/item/storage/box/donkpockets,
 /obj/item/storage/box/donkpockets,
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = 30
 	},
 /obj/effect/floor_decal/corner/orange{
@@ -14456,10 +14455,7 @@
 /turf/space,
 /area/space)
 "mcF" = (
-/turf/unsimulated/wall{
-	icon = 'icons/misc/title.dmi';
-	icon_state = "title"
-	},
+/turf/unsimulated/wall,
 /area/space)
 "mcT" = (
 /obj/effect/floor_decal/corner/red/full,
@@ -19048,7 +19044,6 @@
 	dir = 8
 	},
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = 32
 	},
 /turf/simulated/floor/carpet,

@@ -3010,7 +3010,6 @@
 "qe" = (
 /obj/structure/table/marble,
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = -30
 	},
 /turf/simulated/floor/carpet/oracarpet,
@@ -4257,7 +4256,6 @@
 /area/residential/mansion)
 "xS" = (
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = 30
 	},
 /turf/simulated/floor/carpet,
@@ -4724,7 +4722,6 @@
 /area/residential/mroom2)
 "AA" = (
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = -32
 	},
 /turf/simulated/floor/carpet/blue,
@@ -6887,7 +6884,6 @@
 /area/residential/room5)
 "Lf" = (
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = -32
 	},
 /turf/simulated/floor/wood,
@@ -8824,7 +8820,6 @@
 "UM" = (
 /obj/structure/table/woodentable,
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_y = 30
 	},
 /turf/simulated/floor/wood,
@@ -9366,7 +9361,6 @@
 /area/residential/ship_bay)
 "Yb" = (
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_y = 30
 	},
 /turf/simulated/floor/carpet,

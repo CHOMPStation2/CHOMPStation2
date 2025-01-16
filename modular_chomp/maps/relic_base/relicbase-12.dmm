@@ -11453,10 +11453,7 @@
 	},
 /area/centcom/living)
 "mcF" = (
-/turf/unsimulated/wall{
-	icon = 'icons/misc/title.dmi';
-	icon_state = "title"
-	},
+/turf/unsimulated/wall,
 /area/space)
 "mcT" = (
 /turf/simulated/floor/holofloor/lino,
@@ -14875,7 +14872,6 @@
 	dir = 8
 	},
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = 32
 	},
 /turf/simulated/floor/carpet,

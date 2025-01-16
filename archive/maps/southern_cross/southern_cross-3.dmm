@@ -6048,7 +6048,6 @@
 /obj/structure/table/standard,
 /obj/item/storage/box/cups,
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = 32;
 	pixel_y = 0
 	},
@@ -7993,7 +7992,6 @@
 /area/surface/outpost/main/dorms)
 "rl" = (
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = 0;
 	pixel_y = 32
 	},
@@ -8146,7 +8144,6 @@
 /area/surface/outpost/main/dorms)
 "ry" = (
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = 0;
 	pixel_y = 32
 	},
@@ -8299,7 +8296,6 @@
 "rO" = (
 /obj/structure/table/standard,
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = 32;
 	pixel_y = 0
 	},
@@ -8928,7 +8924,6 @@
 "tb" = (
 /obj/structure/table/standard,
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = 32;
 	pixel_y = 0
 	},
@@ -9028,7 +9023,6 @@
 /area/surface/outpost/main/pool)
 "tm" = (
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = -32;
 	pixel_y = 0
 	},
@@ -9072,7 +9066,6 @@
 /area/surface/outpost/main/pool)
 "ts" = (
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = 32;
 	pixel_y = 0
 	},
@@ -9715,7 +9708,6 @@
 "vf" = (
 /obj/structure/table/reinforced,
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = 0;
 	pixel_y = 32
 	},
@@ -9745,7 +9737,6 @@
 "vi" = (
 /obj/structure/table/standard,
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = -32;
 	pixel_y = 0
 	},

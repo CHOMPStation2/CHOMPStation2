@@ -1130,7 +1130,6 @@
 "dA" = (
 /obj/structure/table/marble,
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = -30;
 	pixel_y = 0
 	},
@@ -3465,7 +3464,6 @@
 /area/residential/room5)
 "jN" = (
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = 0;
 	pixel_y = 0
 	},
@@ -4144,7 +4142,6 @@
 "lm" = (
 /obj/structure/table/woodentable,
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = 0;
 	pixel_y = 30
 	},
@@ -6422,7 +6419,6 @@
 /area/residential/room6)
 "rk" = (
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = 0;
 	pixel_y = 0
 	},

@@ -201,7 +201,6 @@
 	dir = 8
 	},
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = 32
 	},
 /turf/simulated/shuttle/floor/black/virgo3b,
@@ -768,7 +767,7 @@
 	icon_state = "plant-09";
 	name = "Esteban";
 	pixel_y = 8;
-	
+
 	},
 /turf/simulated/shuttle/floor/black/virgo3b,
 /area/tether/surfacebase/outside/wilderness)
