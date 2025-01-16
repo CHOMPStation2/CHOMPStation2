@@ -89,7 +89,7 @@
 /area/submap/boathouse)
 "av" = (
 /turf/simulated/floor/wood{
-	icon_state = "wood_broken6"
+	icon_state = "wood-broken6"
 	},
 /area/submap/boathouse)
 "aw" = (
@@ -123,7 +123,7 @@
 /area/submap/boathouse)
 "aB" = (
 /turf/simulated/floor/wood{
-	icon_state = "wood_broken2"
+	icon_state = "wood-broken2"
 	},
 /area/submap/boathouse)
 "aC" = (
@@ -171,7 +171,7 @@
 /area/submap/boathouse)
 "aJ" = (
 /turf/simulated/floor/wood{
-	icon_state = "wood_broken4"
+	icon_state = "wood-broken4"
 	},
 /area/submap/boathouse)
 "aK" = (

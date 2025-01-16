@@ -20,6 +20,7 @@
 /obj/structure/closet/secure_closet/freezer/meat
 	name = "meat fridge"
 	icon = 'icons/obj/closets/fridge.dmi'
+	icon_state = ""
 	closet_appearance = null
 
 	open_sound = 'sound/machines/kitchen/fridge/open_fridge.ogg' // CHOMPEdit: Fridge sounds~
@@ -32,6 +33,7 @@
 /obj/structure/closet/secure_closet/freezer/fridge
 	name = "refrigerator"
 	icon = 'icons/obj/closets/fridge.dmi'
+	icon_state = ""
 	closet_appearance = null
 
 	open_sound = 'sound/machines/kitchen/fridge/open_fridge.ogg' // CHOMPEdit: Fridge sounds~
@@ -47,6 +49,7 @@
 /obj/structure/closet/secure_closet/freezer/money
 	name = "freezer"
 	icon = 'icons/obj/closets/fridge.dmi'
+	icon_state = ""
 	closet_appearance = null
 	req_access = list(access_heads_vault)
 

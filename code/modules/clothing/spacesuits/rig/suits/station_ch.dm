@@ -24,7 +24,7 @@
 //A second security suit. Comes with a grenade launcher that only accepts flashbangs and adds a new sprinter and flash modules.
 /obj/item/rig/ch/pursuit
 	name = "pursuit hardsuit control module"
-	icon = 'icons/obj/rig_modules.dmi'
+	icon = 'modular_chomp/icons/obj/rig_modules_ch.dmi'
 	icon_state = "pursuit_rig"
 	suit_type = "pursuit hardsuit"
 	desc = "A Security hardsuit designed for chasing down the grey tide."

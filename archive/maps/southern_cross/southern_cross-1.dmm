@@ -26429,7 +26429,6 @@
 /area/security/main)
 "bbj" = (
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_y = 32
 	},
 /obj/machinery/vending/cola,
@@ -26591,7 +26590,6 @@
 	dir = 1
 	},
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_y = -32
 	},
 /obj/machinery/light,
@@ -32648,7 +32646,6 @@
 	pixel_x = 32
 	},
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_y = 32
 	},
 /obj/effect/floor_decal/borderfloorblack{
@@ -43744,7 +43741,6 @@
 "bGE" = (
 /obj/structure/table/steel,
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_y = 32
 	},
 /obj/effect/floor_decal/borderfloorblack{
@@ -44969,7 +44965,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/light,
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_y = -32
 	},
 /obj/item/tabloid,
@@ -54002,7 +53997,6 @@
 	},
 /obj/effect/floor_decal/corner/white/diagonal,
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_y = -32
 	},
 /turf/simulated/floor/tiled,
@@ -63949,7 +63943,6 @@
 	pixel_y = 30
 	},
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/white,
@@ -64166,7 +64159,6 @@
 /obj/item/clothing/glasses/science,
 /obj/item/clothing/glasses/science,
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_y = 32
 	},
 /obj/machinery/light{
@@ -72806,7 +72798,6 @@
 	dir = 4
 	},
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_y = 32
 	},
 /turf/simulated/floor/carpet/sblucarpet,
@@ -76738,7 +76729,6 @@
 /obj/structure/table/glass,
 /obj/machinery/computer/med_data/laptop,
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_y = 32
 	},
 /obj/machinery/light{
@@ -77299,7 +77289,6 @@
 /obj/structure/bed/padded,
 /obj/item/bedsheet/brown,
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_y = 32
 	},
 /turf/simulated/floor/carpet,
@@ -77873,7 +77862,6 @@
 /obj/structure/bed/padded,
 /obj/item/bedsheet/brown,
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_y = 32
 	},
 /turf/simulated/floor/carpet,
@@ -81457,7 +81445,6 @@
 	pixel_x = 21
 	},
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	layer = 4;
 	pixel_y = -32
 	},
@@ -81503,7 +81490,6 @@
 	pixel_x = 30
 	},
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	layer = 4;
 	pixel_y = -32
 	},
@@ -84628,7 +84614,6 @@
 	dir = 4
 	},
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = 32
 	},
 /turf/simulated/floor/lino,
@@ -88603,7 +88588,6 @@
 	dir = 1
 	},
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = -32
 	},
 /obj/machinery/light{
@@ -88634,7 +88618,6 @@
 	dir = 1
 	},
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = 32
 	},
 /obj/machinery/light{
@@ -96578,7 +96561,6 @@
 /obj/item/folder/blue_hop,
 /obj/item/pen/multi,
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = 32
 	},
 /turf/simulated/floor/carpet,
@@ -96707,7 +96689,6 @@
 /obj/item/folder/white_cmo,
 /obj/item/pen/multi,
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = 32
 	},
 /turf/simulated/floor/carpet/blue,
@@ -96724,7 +96705,6 @@
 /obj/item/folder/white_rd,
 /obj/item/pen/multi,
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = -32
 	},
 /turf/simulated/floor/carpet,
@@ -99124,7 +99104,6 @@
 	dir = 8
 	},
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = 32
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -99141,7 +99120,6 @@
 /obj/item/folder/yellow_ce,
 /obj/item/pen/multi,
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = -32
 	},
 /turf/simulated/floor/carpet,
@@ -99301,7 +99279,6 @@
 /obj/item/folder/red_hos,
 /obj/item/pen/multi,
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = 32
 	},
 /turf/simulated/floor/carpet,
@@ -99311,7 +99288,6 @@
 	dir = 8
 	},
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = -32
 	},
 /obj/structure/table/standard,
@@ -99812,7 +99788,6 @@
 "dNA" = (
 /obj/machinery/vending/coffee,
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = 32
 	},
 /turf/simulated/floor/wood,
@@ -99897,7 +99872,6 @@
 /obj/structure/table/wooden_reinforced,
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = -32
 	},
 /obj/item/flashlight/lamp/green,
@@ -103819,7 +103793,6 @@
 /area/construction/seconddeck/construction2)
 "dVc" = (
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_y = -32
 	},
 /obj/item/stack/cable_coil{

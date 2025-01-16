@@ -2730,7 +2730,6 @@
 	dir = 8
 	},
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = 32
 	},
 /turf/simulated/floor/carpet,
@@ -5542,10 +5541,7 @@
 	},
 /area/centcom/specops)
 "ne" = (
-/turf/unsimulated/wall{
-	icon = 'icons/misc/title.dmi';
-	icon_state = "title"
-	},
+/turf/unsimulated/wall,
 /area)
 "nf" = (
 /turf/unsimulated/wall,
@@ -11635,7 +11631,6 @@
 /obj/item/storage/box/donkpockets,
 /obj/item/storage/box/donkpockets,
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = 30
 	},
 /obj/effect/floor_decal/corner/orange{
@@ -14759,7 +14754,6 @@
 "FO" = (
 /obj/structure/table/standard,
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = -30
 	},
 /turf/unsimulated/floor{
@@ -14775,7 +14769,6 @@
 "FQ" = (
 /obj/structure/table/standard,
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = 30
 	},
 /turf/unsimulated/floor{
@@ -15626,7 +15619,6 @@
 	dir = 8
 	},
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = -30
 	},
 /turf/unsimulated/floor{
@@ -18327,9 +18319,7 @@
 /turf/simulated/shuttle/floor/white,
 /area/centcom/evac)
 "Nu" = (
-/turf/unsimulated/floor{
-	icon_state = "sandwater"
-	},
+/turf/unsimulated/floor,
 /area/beach)
 "Nv" = (
 /turf/unsimulated/wall{
