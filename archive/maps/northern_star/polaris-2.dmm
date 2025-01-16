@@ -18327,9 +18327,7 @@
 /turf/simulated/shuttle/floor/white,
 /area/centcom/evac)
 "Nu" = (
-/turf/unsimulated/floor{
-	icon_state = "sandwater"
-	},
+/turf/unsimulated/floor,
 /area/beach)
 "Nv" = (
 /turf/unsimulated/wall{

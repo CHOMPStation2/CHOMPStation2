@@ -1158,9 +1158,7 @@
 /turf/simulated/floor/holofloor/tiled,
 /area/holodeck/source_basketball)
 "fy" = (
-/turf/unsimulated/floor{
-	icon_state = "sandwater"
-	},
+/turf/unsimulated/floor,
 /area/beach)
 "fz" = (
 /obj/structure/bed/chair,

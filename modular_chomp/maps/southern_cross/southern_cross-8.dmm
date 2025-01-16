@@ -12091,9 +12091,7 @@
 	},
 /area/ninja_dojo/dojo)
 "kwC" = (
-/turf/unsimulated/floor{
-	icon_state = "sandwater"
-	},
+/turf/unsimulated/floor,
 /area/beach)
 "kwM" = (
 /obj/structure/flora/ausbushes/reedbush,
