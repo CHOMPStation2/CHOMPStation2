@@ -802,7 +802,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/alarm{
 	dir = 4;
-	icon_state = "alarm0";
 	pixel_x = -22
 	},
 /turf/simulated/floor/tiled,
@@ -927,7 +926,6 @@
 /obj/structure/bed/roller,
 /obj/machinery/alarm{
 	dir = 8;
-	icon_state = "alarm0";
 	pixel_x = 22
 	},
 /obj/effect/floor_decal/borderfloorwhite{
@@ -1182,7 +1180,6 @@
 	},
 /obj/machinery/alarm{
 	dir = 4;
-	icon_state = "alarm0";
 	pixel_x = -22
 	},
 /turf/simulated/floor/tiled,
@@ -4109,7 +4106,6 @@
 "jb" = (
 /obj/machinery/alarm{
 	dir = 8;
-	icon_state = "alarm0";
 	pixel_x = 22
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -4209,7 +4205,6 @@
 "jm" = (
 /obj/machinery/alarm{
 	dir = 8;
-	icon_state = "alarm0";
 	pixel_x = 22
 	},
 /turf/simulated/floor/tiled,
@@ -4231,7 +4226,6 @@
 	},
 /obj/machinery/alarm{
 	dir = 8;
-	icon_state = "alarm0";
 	pixel_x = 22
 	},
 /turf/simulated/floor/plating,
@@ -4716,7 +4710,6 @@
 	},
 /obj/machinery/alarm{
 	dir = 4;
-	icon_state = "alarm0";
 	pixel_x = -22
 	},
 /obj/effect/floor_decal/borderfloor,
@@ -5235,7 +5228,6 @@
 /obj/structure/table/marble,
 /obj/machinery/alarm{
 	dir = 4;
-	icon_state = "alarm0";
 	pixel_x = -22
 	},
 /obj/item/reagent_containers/food/condiment/small/saltshaker,
@@ -5766,7 +5758,6 @@
 	},
 /obj/machinery/alarm{
 	dir = 8;
-	icon_state = "alarm0";
 	pixel_x = 22
 	},
 /turf/simulated/floor/plating,
@@ -5839,7 +5830,6 @@
 /obj/item/storage/firstaid/regular,
 /obj/machinery/alarm{
 	dir = 8;
-	icon_state = "alarm0";
 	pixel_x = 22
 	},
 /turf/simulated/floor/tiled,
@@ -6275,7 +6265,6 @@
 	},
 /obj/machinery/alarm{
 	dir = 8;
-	icon_state = "alarm0";
 	pixel_x = 22
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -6339,7 +6328,6 @@
 	},
 /obj/machinery/alarm{
 	dir = 4;
-	icon_state = "alarm0";
 	pixel_x = -22
 	},
 /obj/item/radio/intercom{
@@ -7773,7 +7761,6 @@
 "qO" = (
 /obj/machinery/alarm{
 	dir = 8;
-	icon_state = "alarm0";
 	pixel_x = 22
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -9787,7 +9774,6 @@
 "vm" = (
 /obj/machinery/alarm{
 	dir = 8;
-	icon_state = "alarm0";
 	pixel_x = 22
 	},
 /turf/simulated/floor/plating,
@@ -12371,7 +12357,6 @@
 /obj/machinery/portable_atmospherics/hydroponics,
 /obj/machinery/alarm{
 	dir = 8;
-	icon_state = "alarm0";
 	pixel_x = 22
 	},
 /turf/simulated/floor/tiled/hydro,
