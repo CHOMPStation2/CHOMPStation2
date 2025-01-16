@@ -5904,7 +5904,7 @@
 /obj/item/bedsheet/orange,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/wood.dmi';
-	icon_state = "wood_broken1"
+	icon_state = "wood-broken1"
 	},
 /area/skipjack_station)
 "ePF" = (
@@ -8798,7 +8798,7 @@
 "hrC" = (
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/wood.dmi';
-	icon_state = "wood_broken3"
+	icon_state = "wood-broken3"
 	},
 /area/skipjack_station)
 "hrS" = (
@@ -9494,7 +9494,7 @@
 	},
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/wood.dmi';
-	icon_state = "wood_broken2"
+	icon_state = "wood-broken2"
 	},
 /area/skipjack_station)
 "hUU" = (
@@ -10274,7 +10274,7 @@
 "iCl" = (
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/wood.dmi';
-	icon_state = "wood_broken1"
+	icon_state = "wood-broken1"
 	},
 /area/ninja_dojo/dojo)
 "iCF" = (
