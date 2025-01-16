@@ -19,7 +19,7 @@ def read_settings():
     try:
         map_folder = os.environ['MAPROOT']
     except KeyError:
-        map_folder = '../../../'
+        map_folder = 'modular_chomp/maps/'
         for _ in range(8):
             if os.path.exists(map_folder):
                 break

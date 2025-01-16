@@ -651,13 +651,6 @@
 /obj/effect/floor_decal/corner/yellow/border,
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/piratevessel)
-"Sp" = (
-/obj/structure/table/marble,
-/obj/structure/table/marble,
-/obj/random/material/precious,
-/obj/effect/floor_decal/corner/purple/diagonal,
-/turf/simulated/shuttle/floor/yellow,
-/area/submap/piratevessel)
 "Tg" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/machinery/light/poi{
@@ -1188,7 +1181,7 @@ LK
 mq
 xr
 Wd
-Sp
+tX
 qd
 ib
 mq

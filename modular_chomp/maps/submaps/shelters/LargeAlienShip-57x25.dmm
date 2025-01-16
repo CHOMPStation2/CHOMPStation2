@@ -1,8 +1,7 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aj" = (
 /obj/structure/cable/yellow{
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -11,8 +10,7 @@
 /area/survivalpod/superpose/LargeAlienShip)
 "ao" = (
 /obj/structure/cable/yellow{
-	icon_state = "2-4";
-	dir = 4
+	icon_state = "1-4"
 	},
 /turf/simulated/floor,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -70,8 +68,7 @@
 "bc" = (
 /obj/machinery/power/grounding_rod/pre_mapped,
 /obj/structure/cable/yellow{
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -96,8 +93,7 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -116,7 +112,7 @@
 	dir = 1
 	},
 /obj/item/hand_labeler,
-/obj/item/tape/random,
+/obj/item/tape,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/LargeAlienShip)
 "bO" = (
@@ -230,8 +226,7 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -363,8 +358,7 @@
 /area/survivalpod/superpose/LargeAlienShip)
 "gA" = (
 /obj/structure/cable/yellow{
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/floor,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -430,8 +424,7 @@
 	icon_state = "0-4"
 	},
 /obj/structure/cable/yellow{
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -443,8 +436,7 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -576,8 +568,7 @@
 "lJ" = (
 /obj/machinery/power/tesla_coil,
 /obj/structure/cable/yellow{
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
@@ -675,8 +666,7 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -752,8 +742,7 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	icon_state = "0-8";
-	dir = 2
+	icon_state = "0-8"
 	},
 /obj/machinery/power/terminal{
 	dir = 4
@@ -983,12 +972,10 @@
 "uU" = (
 /obj/machinery/power/smes/buildable/point_of_interest,
 /obj/structure/cable/yellow{
-	icon_state = "0-8";
-	dir = 2
+	icon_state = "0-8"
 	},
 /obj/structure/cable/yellow{
-	icon_state = "0-8";
-	dir = 2
+	icon_state = "0-8"
 	},
 /turf/simulated/floor,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -996,7 +983,7 @@
 /obj/structure/table/alien/blue,
 /obj/structure/window/reinforced/survival_pod,
 /obj/item/hand_labeler,
-/obj/item/tape/random,
+/obj/item/tape,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/LargeAlienShip)
 "vg" = (
@@ -1009,8 +996,7 @@
 	icon_state = "0-4"
 	},
 /obj/structure/cable/yellow{
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -1039,8 +1025,7 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	icon_state = "2-4";
-	dir = 4
+	icon_state = "1-4"
 	},
 /turf/simulated/floor,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -1164,9 +1149,7 @@
 	name = "Alien Royal Capacitor";
 	output_level = 950000
 	},
-/obj/structure/cable{
-	icon_state = "0-2"
-	},
+/obj/structure/cable,
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/LargeAlienShip)
 "xC" = (
@@ -1280,8 +1263,7 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -1588,8 +1570,7 @@
 	icon_state = "2-4"
 	},
 /obj/structure/cable/yellow{
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/floor,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -1668,8 +1649,7 @@
 /area/survivalpod/superpose/LargeAlienShip)
 "Ip" = (
 /obj/structure/cable/yellow{
-	icon_state = "2-4";
-	dir = 8
+	icon_state = "2-8"
 	},
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
@@ -1775,8 +1755,7 @@
 "KT" = (
 /obj/machinery/power/terminal,
 /obj/structure/cable/yellow{
-	icon_state = "0-8";
-	dir = 2
+	icon_state = "0-8"
 	},
 /turf/simulated/floor,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -1809,8 +1788,7 @@
 	id = "reactorblastalien";
 	name = "Reactor Blast Doors";
 	pixel_x = -25;
-	pixel_y = 6;
-	req_access = null
+	pixel_y = 6
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -2125,8 +2103,7 @@
 "VD" = (
 /obj/machinery/power/tesla_coil,
 /obj/structure/cable/yellow{
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
@@ -2197,8 +2174,7 @@
 /area/survivalpod/superpose/LargeAlienShip)
 "Xc" = (
 /obj/structure/cable/yellow{
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -2284,8 +2260,7 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/LargeAlienShip)

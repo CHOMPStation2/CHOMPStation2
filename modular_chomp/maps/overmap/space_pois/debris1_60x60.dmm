@@ -72,13 +72,6 @@
 /mob/living/simple_mob/animal/space/carp,
 /turf/template_noop,
 /area/submap/debris1)
-"fp" = (
-/obj/structure/cable{
-	icon_state = "4-8";
-	tag = ""
-	},
-/turf/template_noop,
-/area/submap/debris1)
 "fu" = (
 /obj/item/stack/arcadeticket/thirty,
 /turf/template_noop,
@@ -161,11 +154,6 @@
 /area/submap/debris1)
 "jG" = (
 /turf/simulated/floor/plating,
-/area/submap/debris1)
-"kf" = (
-/obj/structure/lattice,
-/obj/structure/lattice,
-/turf/template_noop,
 /area/submap/debris1)
 "kg" = (
 /obj/structure/disposalpipe/segment{
@@ -288,6 +276,12 @@
 "qH" = (
 /obj/random/humanoidremains,
 /turf/simulated/floor/plating,
+/area/submap/debris1)
+"rd" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/template_noop,
 /area/submap/debris1)
 "rt" = (
 /obj/structure/disposalpipe/broken{
@@ -627,6 +621,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
 /area/submap/debris1)
+"Ob" = (
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/turf/template_noop,
+/area/submap/debris1)
 "Od" = (
 /obj/random/humanoidremains,
 /turf/simulated/floor/tiled/airless,
@@ -703,12 +703,6 @@
 "TI" = (
 /obj/structure/loot_pile/surface/bones,
 /turf/simulated/floor/tiled/airless,
-/area/submap/debris1)
-"TO" = (
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
-/turf/template_noop,
 /area/submap/debris1)
 "Uz" = (
 /obj/item/stack/material/wood,
@@ -2573,7 +2567,7 @@ ip
 wq
 jG
 ip
-fp
+rd
 jq
 wq
 wq
@@ -2635,7 +2629,7 @@ ip
 ip
 jG
 ip
-TO
+Ob
 Fu
 wq
 wq
@@ -2821,7 +2815,7 @@ wq
 ip
 wq
 ip
-kf
+ip
 Ma
 Ma
 WW
@@ -2909,7 +2903,7 @@ gO
 Pj
 mk
 gO
-kf
+ip
 de
 de
 de
@@ -4020,7 +4014,7 @@ yk
 Wx
 AP
 AP
-kf
+ip
 wq
 wq
 wq

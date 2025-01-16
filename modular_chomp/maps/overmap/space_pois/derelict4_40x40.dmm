@@ -24,8 +24,7 @@
 /area/submap/derelict4)
 "i" = (
 /obj/structure/window/reinforced{
-	dir = 8;
-	tag = "icon-rwindow (WEST)"
+	dir = 8
 	},
 /obj/structure/bed/chair/bay/comfy/lime,
 /turf/simulated/shuttle/floor,
@@ -40,8 +39,7 @@
 /area/submap/derelict4)
 "l" = (
 /obj/structure/shuttle/engine/propulsion{
-	dir = 4;
-	tag = "icon-propulsion (WEST)"
+	dir = 4
 	},
 /turf/simulated/shuttle/plating,
 /area/submap/derelict4)
@@ -72,8 +70,7 @@
 /area/submap/derelict4)
 "r" = (
 /obj/structure/window/reinforced{
-	dir = 8;
-	tag = "icon-rwindow (WEST)"
+	dir = 8
 	},
 /obj/structure/bed/chair/bay/comfy/lime{
 	dir = 1

@@ -20,24 +20,32 @@
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/BountyHunters)
-"cL" = (
-/obj/structure/table/sifwoodentable,
-/obj/structure/table/sifwoodentable,
-/obj/machinery/light/small{
-	dir = 8
+"bO" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
 	},
-/obj/random/maintenance/morestuff,
-/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/machinery/door/blast/regular{
+	id = "bountycellB"
+	},
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
-"dd" = (
-/obj/structure/railing,
-/obj/structure/railing,
-/obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+"cA" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
 	},
-/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/machinery/door/blast/regular{
+	id = "bountycellB"
+	},
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
 "dF" = (
@@ -51,6 +59,15 @@
 /area/submap/BountyHunters)
 "dR" = (
 /turf/template_noop,
+/area/submap/BountyHunters)
+"eD" = (
+/obj/structure/table/sifwoodentable,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/random/maintenance/morestuff,
+/obj/effect/floor_decal/corner/grey/diagonal,
+/turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
 "fM" = (
 /obj/structure/grille,
@@ -83,13 +100,6 @@
 /obj/effect/map_helper/no_phaseshift/area,
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
-"jO" = (
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
-/obj/effect/floor_decal/corner/grey/diagonal,
-/turf/simulated/floor/concrete,
-/area/submap/BountyHunters)
 "kx" = (
 /obj/machinery/light/small,
 /turf/simulated/floor/outdoors/dirt,
@@ -114,13 +124,42 @@
 /obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
+"nm" = (
+/obj/structure/table/steel,
+/obj/random/maintenance/foodstuff,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/grey/diagonal,
+/turf/simulated/floor/concrete,
+/area/submap/BountyHunters)
 "oV" = (
 /obj/random/mob/merc/all,
 /obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
+"pi" = (
+/obj/machinery/button/remote/blast_door{
+	id = "bountycellB"
+	},
+/obj/structure/table/steel,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/grey/diagonal,
+/turf/simulated/floor/concrete,
+/area/submap/BountyHunters)
 "pn" = (
 /obj/machinery/door/airlock,
+/obj/effect/floor_decal/corner/grey/diagonal,
+/turf/simulated/floor/concrete,
+/area/submap/BountyHunters)
+"pM" = (
+/obj/structure/table/sifwoodentable,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/random/maintenance/morestuff,
 /obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
@@ -151,36 +190,29 @@
 /obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
+"sm" = (
+/obj/machinery/power/smes/buildable/point_of_interest,
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/corner/grey/diagonal,
+/turf/simulated/floor/concrete,
+/area/submap/BountyHunters)
 "sL" = (
 /obj/structure/table/steel,
 /obj/random/maintenance/foodstuff,
 /obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
-"tU" = (
+"tG" = (
+/obj/structure/railing,
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /obj/effect/floor_decal/corner/grey/diagonal,
-/turf/simulated/floor/concrete,
-/area/submap/BountyHunters)
-"ub" = (
-/obj/structure/grille,
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced,
-/obj/machinery/door/blast/regular{
-	id = "bountycellB"
-	},
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
 "uu" = (
@@ -189,9 +221,15 @@
 /obj/random/material/precious,
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
-"uC" = (
-/obj/item/bedsheet/purple,
-/obj/effect/floor_decal/corner/grey/diagonal,
+"uE" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/machinery/door/blast/regular{
+	id = "bountycellB"
+	},
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
 "vv" = (
@@ -241,20 +279,34 @@
 	},
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
+"za" = (
+/obj/machinery/power/terminal{
+	dir = 1;
+	icon_state = "term"
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/effect/floor_decal/corner/grey/diagonal,
+/turf/simulated/floor/concrete,
+/area/submap/BountyHunters)
 "zl" = (
 /turf/simulated/wall/r_concrete,
 /area/submap/BountyHunters)
-"DI" = (
-/obj/machinery/button/remote/blast_door{
-	id = "bountycellB"
+"BV" = (
+/obj/structure/cable{
+	icon_state = "4-8";
+	pixel_x = 0
 	},
-/obj/structure/table/steel,
-/obj/machinery/light/small{
-	dir = 4
+/mob/living/simple_mob/humanoid/merc/ranged/sniper,
+/obj/effect/floor_decal/corner/grey/diagonal,
+/turf/simulated/floor/concrete,
+/area/submap/BountyHunters)
+"BY" = (
+/obj/structure/cable{
+	icon_state = "0-2"
 	},
-/obj/machinery/light/small{
-	dir = 4
-	},
+/obj/machinery/power/port_gen/pacman,
 /obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
@@ -264,44 +316,15 @@
 /obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
-"FN" = (
+"Gd" = (
+/obj/item/bedsheet/purple,
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/structure/bed/padded,
+/turf/simulated/floor/concrete,
+/area/submap/BountyHunters)
+"GL" = (
 /obj/structure/cable{
-	icon_state = "0-2"
-	},
-/obj/machinery/power/port_gen/pacman,
-/obj/effect/floor_decal/corner/grey/diagonal,
-/turf/simulated/floor/concrete,
-/area/submap/BountyHunters)
-"Gi" = (
-/obj/structure/cable{
-	icon_state = "4-8";
-	pixel_x = 0
-	},
-/mob/living/simple_mob/humanoid/merc/ranged/sniper,
-/obj/effect/floor_decal/corner/grey/diagonal,
-/turf/simulated/floor/concrete,
-/area/submap/BountyHunters)
-"Gq" = (
-/obj/structure/table/sifwoodentable,
-/obj/structure/table/sifwoodentable,
-/obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
-	},
-/obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
-	},
-/obj/random/maintenance/morestuff,
-/obj/effect/floor_decal/corner/grey/diagonal,
-/turf/simulated/floor/concrete,
-/area/submap/BountyHunters)
-"GI" = (
-/obj/structure/table/steel,
-/obj/random/maintenance/foodstuff,
-/obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	icon_state = "1-8"
 	},
 /obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/concrete,
@@ -326,15 +349,6 @@
 	},
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/BountyHunters)
-"KN" = (
-/obj/structure/railing,
-/obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
-	},
-/obj/effect/floor_decal/corner/grey/diagonal,
-/turf/simulated/floor/concrete,
-/area/submap/BountyHunters)
 "LV" = (
 /obj/effect/floor_decal/corner/grey/diagonal,
 /obj/effect/floor_decal/corner/grey/diagonal,
@@ -357,18 +371,6 @@
 /obj/structure/window/reinforced,
 /obj/machinery/door/blast/regular{
 	id = "bountycellA"
-	},
-/turf/simulated/floor/concrete,
-/area/submap/BountyHunters)
-"Nc" = (
-/obj/structure/grille,
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced,
-/obj/machinery/door/blast/regular{
-	id = "bountycellB"
 	},
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
@@ -398,24 +400,18 @@
 /obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
+"Pp" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/grey/diagonal,
+/turf/simulated/floor/concrete,
+/area/submap/BountyHunters)
 "Pv" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/BountyHunters)
-"PP" = (
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "PAPC";
-	pixel_x = 0;
-	pixel_y = 24
-	},
-/obj/structure/cable/green{
-	icon_state = "0-8"
-	},
-/obj/effect/floor_decal/corner/grey/diagonal,
-/turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
 "QW" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -441,28 +437,6 @@
 /obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
-"SR" = (
-/obj/machinery/power/smes/buildable/point_of_interest,
-/obj/structure/cable/green{
-	icon_state = "0-4"
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/corner/grey/diagonal,
-/turf/simulated/floor/concrete,
-/area/submap/BountyHunters)
-"Tc" = (
-/obj/machinery/power/terminal{
-	dir = 1;
-	icon_state = "term"
-	},
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
-/obj/effect/floor_decal/corner/grey/diagonal,
-/turf/simulated/floor/concrete,
-/area/submap/BountyHunters)
 "Uc" = (
 /obj/machinery/door/blast/regular{
 	id = "bountycellA"
@@ -470,20 +444,17 @@
 /obj/machinery/door/airlock,
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
-"Uz" = (
-/obj/structure/grille,
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 4
+"VG" = (
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "PAPC";
+	pixel_x = 0;
+	pixel_y = 24
 	},
-/obj/structure/window/reinforced{
-	dir = 1
+/obj/structure/cable/green{
+	icon_state = "0-8"
 	},
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced,
-/obj/machinery/door/blast/regular{
-	id = "bountycellB"
-	},
+/obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
 "VU" = (
@@ -692,8 +663,8 @@ Uc
 qG
 qG
 zl
-SR
-Tc
+sm
+za
 qG
 NE
 VU
@@ -719,8 +690,8 @@ wc
 qG
 RC
 zl
-PP
-Gi
+VG
+BV
 qG
 NE
 VU
@@ -739,17 +710,17 @@ Zm
 aZ
 Zm
 zl
-uC
-Gq
+Gd
+pM
 qG
 zl
 qG
 qG
 zl
-FN
-jO
+BY
+GL
 LV
-KN
+tG
 VU
 VU
 VU
@@ -904,10 +875,10 @@ zl
 sL
 uu
 rt
-GI
+nm
 qG
 qG
-DI
+pi
 zl
 dR
 dR
@@ -955,15 +926,15 @@ Zm
 aZ
 Zm
 zl
-uC
-cL
+Gd
+eD
 qG
 zl
 qG
 qG
 zl
-SR
-Tc
+sm
+za
 qG
 lT
 VU
@@ -981,7 +952,7 @@ Zm
 Zm
 aZ
 Zm
-ub
+cA
 qG
 qG
 qG
@@ -989,8 +960,8 @@ qQ
 qG
 RC
 zl
-PP
-Gi
+VG
+BV
 qG
 NE
 VU
@@ -1008,7 +979,7 @@ Zm
 Zm
 aZ
 Zm
-Nc
+uE
 qG
 mi
 qG
@@ -1016,8 +987,8 @@ Uc
 qG
 qG
 zl
-FN
-jO
+BY
+GL
 qG
 NE
 VU
@@ -1035,7 +1006,7 @@ Zm
 Zm
 aZ
 Zm
-Uz
+bO
 qG
 qG
 qG
@@ -1046,7 +1017,7 @@ zl
 qG
 qG
 qG
-dd
+tG
 VU
 VU
 VU
@@ -1064,10 +1035,10 @@ Zl
 Zm
 zl
 aP
-tU
+Pp
 mS
 zl
-tU
+Pp
 qG
 pn
 qG

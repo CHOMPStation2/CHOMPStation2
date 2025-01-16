@@ -69,14 +69,16 @@ jobs:
           bash tools/ci/install_ripgrep.sh
           bash tools/ci/install_spaceman_dmm.sh dreamchecker
           tools/bootstrap/python -c ''
-      - name: Run Tests
-        run: |
-          tools/ci/validate_files.sh
+      - name: Run Validation Tests
+        run: bash tools/ci/validate_files.sh
       - name: Run Define Sanity Checks
         run: tools/bootstrap/python -m define_sanity.check
-      - name: Run DreamChecker
-        shell: bash
-        run: ~/dreamchecker 2>&1 | bash tools/ci/annotate_dm.sh
+      - name: Run DMI Tests
+        run: tools/bootstrap/python -m dmi.test
+      - name: Run Map Checks
+        run: |
+          tools/bootstrap/python -m tools.maplint.source
+          tools/bootstrap/python -m mapmerge2.dmm_test
       - name: Run TGUI Checks
         run: tools/build/build --ci lint tgui-test
 
