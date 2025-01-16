@@ -482,14 +482,16 @@
 /obj/item/clothing/suit/stripper/stripper_pink
 	name = "pink skimpy dress"
 	desc = "A rather skimpy pink dress."
-	icon_state = "stripper_p_over"
+	icon = 'icons/inventory/uniform/item.dmi'
+	icon_state = "stripper_p"
 	item_state_slots = list(slot_r_hand_str = "pink_labcoat", slot_l_hand_str = "pink_labcoat")
 	siemens_coefficient = 1
 
 /obj/item/clothing/suit/stripper/stripper_green
 	name = "green skimpy dress"
 	desc = "A rather skimpy green dress."
-	icon_state = "stripper_g_over"
+	icon = 'icons/inventory/uniform/item.dmi'
+	icon_state = "stripper_g"
 	item_state_slots = list(slot_r_hand_str = "green_labcoat", slot_l_hand_str = "green_labcoat")
 	siemens_coefficient = 1
 

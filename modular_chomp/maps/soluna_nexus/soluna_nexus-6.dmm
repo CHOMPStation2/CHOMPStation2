@@ -2689,7 +2689,7 @@
 /turf/simulated/floor/wood,
 /area/expoutpost/bar)
 "ctL" = (
-/obj/item/trash,
+/obj/random/trash,
 /turf/simulated/floor,
 /area/expoutpost/portuppermaint)
 "ctO" = (
@@ -10087,7 +10087,7 @@
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/suite1)
 "jbK" = (
-/obj/item/trash,
+/obj/random/trash,
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
 "jbR" = (
@@ -17079,7 +17079,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/obj/item/trash,
+/obj/random/trash,
 /obj/structure/closet/crate,
 /turf/simulated/floor,
 /area/expoutpost/staruppermaint)
@@ -23964,7 +23964,7 @@
 /turf/simulated/floor,
 /area/expoutpost/pathfinderroom)
 "uLV" = (
-/obj/item/trash,
+/obj/random/trash,
 /obj/structure/closet/crate,
 /turf/simulated/floor,
 /area/expoutpost/portuppermaint)

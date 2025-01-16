@@ -256,9 +256,7 @@
 /area/shuttle/cryo/station)
 "abq" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
-/obj/item/seeds/glowshroom{
-	icon_state = "seed"
-	},
+/obj/item/seeds/glowshroom,
 /turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Star_1Deck_Atrium)
 "abs" = (
@@ -15860,9 +15858,7 @@
 /area/hallway/For_Locker_Room)
 "dOW" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
-/obj/item/seeds/rose{
-	icon_state = "seed"
-	},
+/obj/item/seeds/rose,
 /turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Port_1Deck_Atrium)
 "dPk" = (
@@ -18517,9 +18513,7 @@
 /area/engineering/Telecomms_Control_Room)
 "emw" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
-/obj/item/seeds/lustflower{
-	icon_state = "seed"
-	},
+/obj/item/seeds/lustflower,
 /turf/simulated/floor/grass,
 /area/hallway/Port_1Deck_Atrium)
 "emE" = (
@@ -28592,9 +28586,7 @@
 /area/harbor/Dock4)
 "hVl" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
-/obj/item/seeds/sunflowerseed{
-	icon_state = "seed"
-	},
+/obj/item/seeds/sunflowerseed,
 /turf/simulated/floor/grass,
 /area/hallway/Port_1Deck_Atrium)
 "hVG" = (
@@ -30855,9 +30847,7 @@
 /area/maintenance/Deck1_Cargo_Corridor3)
 "iNr" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
-/obj/item/seeds/rose{
-	icon_state = "seed"
-	},
+/obj/item/seeds/rose,
 /turf/simulated/floor/grass,
 /area/hallway/Port_1Deck_Atrium)
 "iOk" = (
@@ -31898,9 +31888,7 @@
 /area/maintenance/Deck1_ForPort_Chamber1)
 "jkC" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
-/obj/item/seeds/siflettuce{
-	icon_state = "seed"
-	},
+/obj/item/seeds/siflettuce,
 /turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Star_1Deck_Atrium)
 "jkR" = (
@@ -50719,9 +50707,7 @@
 "pOj" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
 /obj/structure/flora/ausbushes/ppflowers,
-/obj/item/seeds/rose{
-	icon_state = "seed"
-	},
+/obj/item/seeds/rose,
 /turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Port_1Deck_Atrium)
 "pOq" = (
@@ -55316,9 +55302,7 @@
 /obj/machinery/portable_atmospherics/hydroponics/soil,
 /obj/structure/flora/ausbushes/ppflowers,
 /obj/structure/flora/ausbushes/ywflowers,
-/obj/item/seeds/lustflower{
-	icon_state = "seed"
-	},
+/obj/item/seeds/lustflower,
 /turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Port_1Deck_Atrium)
 "rqj" = (
@@ -58860,9 +58844,7 @@
 /area/engineering/GravGen_Room)
 "sER" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
-/obj/item/seeds/sunflowerseed{
-	icon_state = "seed"
-	},
+/obj/item/seeds/sunflowerseed,
 /turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Port_1Deck_Atrium)
 "sET" = (
@@ -58945,9 +58927,7 @@
 /area/crew_quarters/Public_EVA)
 "sGr" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
-/obj/item/seeds/poppyseed{
-	icon_state = "seed"
-	},
+/obj/item/seeds/poppyseed,
 /turf/simulated/floor/grass,
 /area/hallway/Port_1Deck_Atrium)
 "sGw" = (
@@ -60768,9 +60748,7 @@
 /area/rnd/Xenobotany_Lab)
 "tqp" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
-/obj/item/seeds/rose/blood{
-	icon_state = "seed"
-	},
+/obj/item/seeds/rose/blood,
 /turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Port_1Deck_Atrium)
 "tqB" = (
@@ -61261,9 +61239,7 @@
 /area/harbor/Fueling_Post)
 "tzi" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
-/obj/item/seeds/poppyseed{
-	icon_state = "seed"
-	},
+/obj/item/seeds/poppyseed,
 /turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Port_1Deck_Atrium)
 "tzt" = (
@@ -61387,9 +61363,7 @@
 /area/harbor/Ship_Bay4)
 "tAW" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
-/obj/item/seeds/sifbulb{
-	icon_state = "seed"
-	},
+/obj/item/seeds/sifbulb,
 /turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Star_1Deck_Atrium)
 "tAZ" = (
@@ -61443,9 +61417,7 @@
 "tBN" = (
 /obj/structure/flora/ausbushes/fullgrass,
 /obj/machinery/portable_atmospherics/hydroponics/soil,
-/obj/item/seeds/shrinkshroom{
-	icon_state = "seed"
-	},
+/obj/item/seeds/shrinkshroom,
 /turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Star_1Deck_Atrium)
 "tCf" = (
@@ -66358,9 +66330,7 @@
 /area/hallway/Aft_1_Deck_Stairwell)
 "voc" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
-/obj/item/seeds/lustflower{
-	icon_state = "seed"
-	},
+/obj/item/seeds/lustflower,
 /turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Port_1Deck_Atrium)
 "vof" = (
@@ -72444,9 +72414,7 @@
 	dir = 4
 	},
 /obj/structure/table/rack,
-/obj/item/seeds/siflettuce{
-	icon_state = "seed"
-	},
+/obj/item/seeds/siflettuce,
 /turf/simulated/floor/plating,
 /area/maintenance/Market_Stall_1)
 "xsB" = (
