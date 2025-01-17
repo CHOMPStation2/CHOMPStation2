@@ -140,6 +140,7 @@
 		"dullahaneyes" = "#FFFFFF",
 		"dullahandecals" = "#FFFFFF",
 		"dullahanextended" = "#FFFFFF"
+		// loads the icons from the DMI file in that order on spawn. they are overlay 1-6.
 	)
 	// CHOMPEdit End
 	var/pseudodead = 0
