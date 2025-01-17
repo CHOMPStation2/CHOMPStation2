@@ -2,6 +2,7 @@
 	icon = 'icons/obj/stationobjs.dmi'
 	anchored = TRUE
 	var/being_used = 0
+	var/weightloss_power = 1
 
 /obj/structure/fitness/punchingbag
 	name = "punching bag"
@@ -25,7 +26,7 @@
 			playsound(src, 'sound/effects/woodhit.ogg', 25, 1, -1)
 			user.do_attack_animation(src)
 			user.adjust_nutrition(-10) //CHOMPEdit Set nutrition drain to be the same as in fitness_machines_vr.dm
-			user.weight -= 0.1 * (0.01 * user.weight_loss) // CHOMPAdd Add weight loss to old fitness equipment
+			user.weight -= 0.25 * weightloss_power * (0.01 * user.weight_loss)
 			to_chat(user, span_warning("You [pick(hit_message)] \the [src]."))
 
 /obj/structure/fitness/weightlifter
@@ -65,7 +66,8 @@
 		if(do_after(user, 30 + (weight * 10))) //CHOMPEdit Set timer to be similar to the machines in fitness_machines_vr.dm
 			playsound(src, 'sound/effects/weightdrop.ogg', 25, 1)
 			user.adjust_nutrition(weight * -10)
-			user.weight -= 0.1 * weight * (0.01 * user.weight_loss) // CHOMPAdd Add weight loss to old fitness equipment
+			var/weightloss_enhanced = weightloss_power * (weight * 0.5)
+			user.weight -= 0.25 * weightloss_enhanced * (0.01 * user.weight_loss)
 			to_chat(user, span_notice("You lift the weights [qualifiers[weight]]."))
 			being_used = 0
 		else
