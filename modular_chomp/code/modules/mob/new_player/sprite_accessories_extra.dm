@@ -267,6 +267,7 @@
 	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/sloog.dmi'
 	icon_state = "slooghead"
 	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
 	// placed in seperate dmi till normal one is functional.
 
 

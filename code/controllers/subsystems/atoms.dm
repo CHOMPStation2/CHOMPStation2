@@ -39,7 +39,7 @@ SUBSYSTEM_DEF(atoms)
 		created_atoms = list()
 		count = atoms.len
 		for(var/atom/A as anything in atoms)
-			if(!(A.flags & ATOM_INITIALIZED)) //CHOMPEdit
+			if(!(A.flags & ATOM_INITIALIZED))
 				if(InitAtom(A, mapload_arg))
 					atoms -= A
 				CHECK_TICK

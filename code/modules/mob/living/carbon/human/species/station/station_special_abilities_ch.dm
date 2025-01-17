@@ -195,3 +195,27 @@ var/eggs = 0
 	src.visible_message(span_infoplain(span_red("[src] sinks their stinger into [T]!")))
 	T.bloodstr.add_reagent(REAGENT_ID_CONDENSEDCAPSAICINV,3)
 	last_special = world.time + 50 // Many little jabs instead of one big one
+
+/mob/living/carbon/proc/toggle_growth()
+	set name = "Toggle Growth"
+	set desc = "Toggles whether excess nutrition will be used to grow you or not"
+	set category = "Abilities.General"
+
+	species.grows = !species.grows
+
+	if(species.grows)
+		to_chat(src, span_notice("You now grow with excess nutrition!"))
+	else
+		to_chat(src, span_notice("You no longer grow with excess nutrition."))
+
+/mob/living/carbon/proc/toggle_shrinking()
+	set name = "Toggle Shrinking"
+	set desc = "Toggles whether a deficit of nutrition will cause you to shrink or not"
+	set category = "Abilities.General"
+
+	species.shrinks = !species.shrinks
+
+	if(species.shrinks)
+		to_chat(src, span_notice("You now shrink when not having enough nutrition!"))
+	else
+		to_chat(src, span_notice("You no longer shrink when not having enough nutrition."))

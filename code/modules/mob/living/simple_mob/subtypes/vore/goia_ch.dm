@@ -80,11 +80,13 @@
 	var/list/spots_styles = list(
 		"null",
 		"zorgoia_spots",
-		"zorgoia_stripes"
+		"zorgoia_stripes",
+		"zorgoia_backline"
 	)
 	var/list/claws_styles = list(
 		"null",
 		"zorgoia_claws",
+		"zorgoia_justfangs"
 	)
 	var/list/spines_styles = list(
 		"null",
@@ -92,17 +94,21 @@
 	)
 	var/list/fluff_styles = list(
 		"null",
-		"zorgoia_fluff"
+		"zorgoia_fluff",
+		"zorgoia_feetpaws"
 	)
 	var/list/underbelly_styles = list(
 		"zorgoia_underbelly",
+		"zorgoia_underbellystripe",
 		"null"
 	)
 	var/list/eyes_styles = list(
-		"zorgoia_eyes"
+		"zorgoia_eyes",
+		"zorgoia_eyes2"
 	)
 	var/list/spiky_styles = list(
-		"zorgoia_spike"
+		"zorgoia_spike",
+		"zorgoia_spike2"
 	)
 	var/list/belly_styles = list(
 		"zorgoia_belly"
@@ -367,16 +373,9 @@
 	add_overlay(I)
 	qdel(I)
 
+
 	I = image(icon, "[goia_overlays["fluff"]][resting? "-rest" : null]", pixel_x = -16)
 	I.color = goia_overlays["zorgoia_fluff"]
-	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
-	I.plane = MOB_PLANE
-	I.layer = MOB_LAYER
-	add_overlay(I)
-	qdel(I)
-
-	I = image(icon, "[goia_overlays["underbelly"]][resting? "-rest" : null]", pixel_x = -16)
-	I.color = goia_overlays["zorgoia_underbelly"]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = MOB_PLANE
 	I.layer = MOB_LAYER
@@ -398,8 +397,16 @@
 	add_overlay(I)
 	qdel(I)
 
-	I = image(icon, "[goia_overlays["belly"]][resting? "-rest" : (vore_fullness? "-[vore_fullness]" : null)]", pixel_x = -16) //todo, check kasscs resting sprite
+	I = image(icon, "[goia_overlays["belly"]][resting? "-rest" : (vore_fullness? "-[vore_fullness]" : null)]", pixel_x = -16)
 	I.color = goia_overlays["zorgoia_belly"]
+	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
+	I.plane = MOB_PLANE
+	I.layer = MOB_LAYER
+	add_overlay(I)
+	qdel(I)
+
+	I = image(icon, "[goia_overlays["underbelly"]][resting? "-rest" : (vore_fullness? "-[vore_fullness]" : null)]", pixel_x = -16)
+	I.color = goia_overlays["zorgoia_underbelly"]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = MOB_PLANE
 	I.layer = MOB_LAYER

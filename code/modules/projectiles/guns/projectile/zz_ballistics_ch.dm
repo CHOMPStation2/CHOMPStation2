@@ -92,7 +92,7 @@
 	is_picked_up = TRUE
 	update_transform()
 
-/obj/item/gun/projectile/automatic/serdy/dropped()
+/obj/item/gun/projectile/automatic/serdy/dropped(mob/living/user)
 	. = ..()
 	is_picked_up = FALSE
 	update_transform()
@@ -1591,7 +1591,7 @@
 	is_picked_up = TRUE
 	update_transform()
 
-/obj/item/gun/projectile/shotgun/pump/dropped()
+/obj/item/gun/projectile/shotgun/pump/dropped(mob/living/user)
 	. = ..()
 	is_picked_up = FALSE
 	update_transform()
@@ -1693,7 +1693,7 @@
 	is_picked_up = TRUE
 	update_transform()
 
-/obj/item/gun/projectile/shotgun/doublebarrel/dropped()
+/obj/item/gun/projectile/shotgun/doublebarrel/dropped(mob/living/user)
 	. = ..()
 	is_picked_up = FALSE
 	update_transform()

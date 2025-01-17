@@ -19,7 +19,7 @@
 	is_picked_up = TRUE
 	update_transform()
 
-/obj/item/gun/magnetic/railgun/dropped()
+/obj/item/gun/magnetic/railgun/dropped(mob/living/user)
 	. = ..()
 	is_picked_up = FALSE
 	update_transform()
