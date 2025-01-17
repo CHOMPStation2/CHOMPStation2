@@ -121,6 +121,20 @@ SUBSYSTEM_DEF(supply)
 						EC.contents[EC.contents.len]["quantity"] = cashmoney.worth
 						EC.value += EC.contents[EC.contents.len]["value"]
 
+					if(istype(A, /obj/item/reagent_containers/glass/bottle/vaccine))
+						var/obj/item/reagent_containers/glass/bottle/vaccine/sale_bottle = A
+						if(!istype(CR, /obj/structure/closet/crate/freezer))
+							EC.contents = list(
+								"error" = "Error: Product was improperly packaged. Send conents in freezer crate to preserve contents for transport."
+							)
+						else if(sale_bottle.reagents.reagent_list.len != 1 || sale_bottle.reagents.get_reagent_amount(REAGENT_ID_VACCINE) < sale_bottle.volume)
+							EC.contents = list(
+								"error" = "Error: Tainted product in batch. Was opened, contaminated, or was full. Payment rendered null under terms of agreement."
+							)
+						else
+							EC.contents[EC.contents.len]["value"] = 5
+							EC.value += EC.contents[EC.contents.len]["value"]
+
 					// CHOMPAdd Start - Sell salvage
 					if(istype(A, /obj/item/salvage))
 						var/obj/item/salvage/salvagedStuff = A

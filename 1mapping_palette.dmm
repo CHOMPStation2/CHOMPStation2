@@ -7040,7 +7040,6 @@
 /obj/structure/curtain/bed,
 /obj/item/bedsheet/hosdouble,
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_y = 32
 	},
 /turf/simulated/floor/wood,
@@ -14522,7 +14521,6 @@
 	pixel_y = 20
 	},
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = -32
 	},
 /obj/item/handcuffs/legcuffs/fuzzy,
@@ -15885,7 +15883,6 @@
 /obj/item/clothing/shoes/sandal,
 /obj/item/clothing/shoes/sandal,
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = -32
 	},
 /obj/item/towel/random,

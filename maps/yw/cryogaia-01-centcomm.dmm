@@ -1266,7 +1266,6 @@
 "gf" = (
 /obj/structure/table/standard,
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = 30
 	},
 /turf/unsimulated/floor{
@@ -1540,7 +1539,6 @@
 "hB" = (
 /obj/structure/table/standard,
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = -30
 	},
 /turf/unsimulated/floor{
@@ -4919,7 +4917,6 @@
 	dir = 8
 	},
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = -30
 	},
 /turf/unsimulated/floor{
@@ -6940,7 +6937,6 @@
 /obj/item/storage/box/donkpockets,
 /obj/item/storage/box/donkpockets,
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = 30
 	},
 /obj/effect/floor_decal/corner/orange{

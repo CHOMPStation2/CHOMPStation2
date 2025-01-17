@@ -464,6 +464,7 @@
 	desc = "A modernized version of the classic mono-rifle. This one has an optimized capacitor bank that allows the rifle to fire twice before requiring a recharge."
 	description_fluff = "A modern design of a classic rifle produced by a small arms company operating out of Saint Columbia. It was based on the \
 	antique mono-rifle design that was dubbed the 'Rainy Day Special' by many of its users."
+	icon = 'icons/obj/gun.dmi'
 	icon_state = "cmono"
 	item_state = "cshotgun"
 	charge_cost = 1200
