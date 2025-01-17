@@ -1614,4 +1614,4 @@
 	ckeywhitelist = list("zodiacshadow")
 	character_name = list("Nehi Maximus")
 
-*/  //CHOMPRemove End Virgo Fluffitems (Keen in mind to move this if new items are added upstream!)
+*///CHOMPRemove End Virgo Fluffitems (Keen in mind to move this if new items are added upstream!)
