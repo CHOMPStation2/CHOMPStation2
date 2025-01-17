@@ -2383,7 +2383,7 @@
 	pixel_x = -5;
 	pixel_y = 3
 	},
-/obj/item/ammo_casing/a762x54{
+/obj/item/ammo_casing/a762{
 	pixel_x = -3;
 	pixel_y = -8
 	},
@@ -13349,7 +13349,7 @@
 /turf/simulated/floor/tiled/monotile,
 /area/awaymission/snowfield/security/lobby)
 "lIw" = (
-/obj/item/ammo_casing/a762x54,
+/obj/item/ammo_casing/a762,
 /obj/item/ammo_casing/spent{
 	pixel_x = -4;
 	pixel_y = -7
@@ -17139,8 +17139,8 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/command/bridge)
 "pnD" = (
-/obj/item/ammo_casing/a762x54,
-/obj/item/ammo_casing/a762x54,
+/obj/item/ammo_casing/a762,
+/obj/item/ammo_casing/a762,
 /obj/item/tool/crowbar/red{
 	pixel_x = -10;
 	pixel_y = -15

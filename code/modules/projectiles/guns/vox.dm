@@ -54,6 +54,7 @@
 /obj/item/gun/energy/darkmatter
 	name = "dark matter gun"
 	desc = "A vicious alien beam weapon. Parts of it quiver gelatinously, as though the thing is insectile and alive."
+	icon = 'icons/obj/gun.dmi' // CHOMPAdd
 	icon_state = "darkcannon"
 	item_state = "darkcannon"
 	w_class = ITEMSIZE_HUGE
@@ -117,6 +118,7 @@
 /obj/item/gun/energy/sonic
 	name = "soundcannon"
 	desc = "A vicious alien sound weapon. Parts of it quiver gelatinously, as though the thing is insectile and alive."
+	icon = 'icons/obj/gun.dmi' // CHOMPAdd
 	icon_state = "noise"
 	item_state = "noise"
 	w_class = ITEMSIZE_HUGE

@@ -31,7 +31,7 @@
 	else
 		forceMove(locate(1,1,1))
 	//CHOMPEdit End
-	flags |= ATOM_INITIALIZED // Explicitly don't use Initialize().  New players join super early and use New() //CHOMPEdit
+	flags |= ATOM_INITIALIZED // Explicitly don't use Initialize().  New players join super early and use New()
 
 
 /mob/new_player/Destroy()

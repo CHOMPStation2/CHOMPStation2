@@ -147,9 +147,7 @@
 "pD" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/seeds/wheatseed{
-	icon_state = "seed"
-	},
+/obj/item/seeds/wheatseed,
 /turf/simulated/floor/outdoors/dirt,
 /area/survivalpod/superpose/DragonCave)
 "pF" = (
@@ -510,9 +508,7 @@
 /area/survivalpod/superpose/DragonCave)
 "Yq" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
-/obj/item/seeds/onionseed{
-	icon_state = "seed"
-	},
+/obj/item/seeds/onionseed,
 /obj/item/seeds/tomatoseed{
 	icon_state = "seed";
 	pixel_x = 4;

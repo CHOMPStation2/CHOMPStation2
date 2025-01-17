@@ -126,7 +126,6 @@
 /obj/random/handgun
 	name = "Random Handgun"
 	desc = "This is a random sidearm."
-	icon = 'icons/obj/gun.dmi'
 	icon_state = "gun"
 
 /obj/random/handgun/item_to_spawn()
@@ -239,7 +238,6 @@
 /obj/random/projectile/random
 	name = "Random Projectile Weapon"
 	desc = "This is a random projectile weapon."
-	icon = 'icons/obj/gun.dmi'
 	icon_state = "gun_2"
 
 /obj/random/projectile/random/item_to_spawn()
@@ -277,7 +275,7 @@
 			),
 			prob(1);list(
 				/obj/item/gun/projectile/automatic/p90,
-				/obj/item/ammo_magazine/a57p90 //CHOMPedit: new P90 magazine.
+				/obj/item/ammo_magazine/m9mmp90
 			),
 			prob(3);list(
 				/obj/item/gun/projectile/automatic/combatsmg,

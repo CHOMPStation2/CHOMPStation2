@@ -306,8 +306,8 @@
 
 	firemodes = list(
 		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0)),
-		list(mode_name="short bursts",	burst=5, move_delay=6, burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2))
+		list(mode_name="3-round bursts", burst=3,burst_delay=1 ,fire_delay=null, move_delay=4,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0)), //CHOMPedit, firerate buff
+		list(mode_name="short bursts",	burst=5,burst_delay=1 ,move_delay=3, burst_accuracy = list(0,-15,-15,-30,-30), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2)) //CHOMPedit, firerate buff
 		)
 
 /obj/item/gun/projectile/automatic/l6_saw/special_check(mob/user)
@@ -443,7 +443,7 @@
 	is_picked_up = TRUE
 	update_transform()
 
-/obj/item/gun/projectile/automatic/mini_uzi/dropped()
+/obj/item/gun/projectile/automatic/mini_uzi/dropped(mob/living/user)
 	. = ..()
 	is_picked_up = FALSE
 	update_transform()

@@ -2615,7 +2615,6 @@
 	},
 /obj/machinery/computer/security/telescreen/entertainment{
 	desc = "Looks like it's set to history channel, the show is talking about modern aliens.  I wonder what else is on?";
-	icon_state = "frame";
 	pixel_y = -32
 	},
 /turf/simulated/floor/tiled,
@@ -2760,7 +2759,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/computer/security/telescreen/entertainment{
 	desc = "Looks like its set to the kek-centeral. I wonder what else is on?";
-	icon_state = "frame";
 	pixel_x = 32
 	},
 /turf/simulated/floor/wood,
@@ -2801,7 +2799,6 @@
 "aeL" = (
 /obj/machinery/computer/security/telescreen/entertainment{
 	desc = "Looks like it's on MTV. Now you can't blame that demi-cowgirl for working her money maker. I wonder what else is on?";
-	icon_state = "frame";
 	pixel_y = 32
 	},
 /turf/simulated/floor/lino,
@@ -2809,7 +2806,6 @@
 "aeM" = (
 /obj/machinery/computer/security/telescreen/entertainment{
 	desc = "Looks like it's on the fishing channel. I wonder what else is on?";
-	icon_state = "frame";
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled,
@@ -19116,7 +19112,6 @@
 "aGT" = (
 /obj/machinery/computer/security/telescreen/entertainment{
 	desc = "Looks like it's on MTV. Now you can't blame that demi-cowgirl for working her money maker. I wonder what else is on?";
-	icon_state = "frame";
 	pixel_x = 16;
 	pixel_y = 64
 	},

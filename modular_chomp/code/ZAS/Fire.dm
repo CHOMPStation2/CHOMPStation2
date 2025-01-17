@@ -1,12 +1,15 @@
 #define FIRE_MAX_TEMP 20000
 
 /turf/proc/lingering_fire(fl)
-	return
+	return FALSE
+
+/turf/simulated/floor/water/lingering_fire(fl)
+	return FALSE
+
+/turf/simulated/floor/flesh/lingering_fire(fl)
+	return FALSE
 
 /turf/simulated/lingering_fire(fl)
-	if(istype(src, /turf/space) || istype(src, /turf/simulated/floor/water) || istype(src, /turf/simulated/flesh))
-		return FALSE
-
 	if(istype(src, /turf/simulated/open))
 		var/turf/below = GetBelow(src)
 		if(below)

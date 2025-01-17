@@ -10,7 +10,8 @@
 	icon_state = "taser"
 	item_state = null	//so the human update icon uses the icon_state instead.
 	projectile_type = /obj/item/projectile/beam/stun
-	charge_cost = 480
+	charge_cost = 160
+	fire_delay = 4
 
 /obj/item/gun/energy/taser/mounted
 	name = "mounted taser gun"
@@ -25,8 +26,7 @@
 
 /obj/item/gun/energy/taser/mounted/cyborg
 	name = "taser gun"
-	charge_cost = 160  //Chompedit: Reduced from 400 to 160 to match VR's, which we also use.
-	recharge_time = 5 //ChompEdit: reduced from 7 to 5, Time it takes for shots to recharge (in ticks)  
+	recharge_time = 5 //ChompEdit: reduced from 7 to 5, Time it takes for shots to recharge (in ticks)
 
 /*
  * Disabler

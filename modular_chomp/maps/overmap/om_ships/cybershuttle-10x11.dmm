@@ -15,10 +15,10 @@
 /obj/item/gps/explorer,
 /obj/structure/closet/walllocker_double/east,
 /obj/item/gun/projectile/garand,
-/obj/item/ammo_magazine/clip/medium,
-/obj/item/ammo_magazine/clip/medium,
-/obj/item/ammo_magazine/clip/medium,
 /obj/item/storage/firstaid/regular,
+/obj/item/ammo_magazine/clip/c762,
+/obj/item/ammo_magazine/clip/c762,
+/obj/item/ammo_magazine/clip/c762,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/cybershuttle)
 "e" = (
