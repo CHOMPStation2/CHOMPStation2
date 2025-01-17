@@ -177,3 +177,6 @@
   - rscdel: Lots of bloat worth of bullet chambers have been removed
   - rscdel: Ammo simplification, back to calibers.
   - qol: Caliber simplification.
+2025-01-17:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: runtime flood
