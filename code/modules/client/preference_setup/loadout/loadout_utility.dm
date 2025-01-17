@@ -268,16 +268,16 @@ modular computers
 /datum/gear/utility/dufflebag/med
 	display_name = "medical dufflebag"
 	path = /obj/item/storage/backpack/dufflebag/med
-	allowed_roles = list(JOB_MEDICAL_DOCTOR,JOB_CHIEF_MEDICAL_OFFICER,JOB_CHEMIST,JOB_PARAMEDIC,JOB_GENETICIST,JOB_PSYCHIATRIST)
+	allowed_roles = list(JOB_MEDICAL_DOCTOR,JOB_CHIEF_MEDICAL_OFFICER,JOB_CHEMIST,JOB_PARAMEDIC,JOB_GENETICIST,JOB_PSYCHIATRIST,JOB_FIELD_MEDIC) //CHOMP explo keep
 
 /datum/gear/utility/dufflebag/med/emt
 	display_name = "EMT dufflebag"
 	path = /obj/item/storage/backpack/dufflebag/emt
 
 /datum/gear/utility/dufflebag/sec
-	display_name = "security Dufflebag"
-	allowed_roles = list(JOB_HEAD_OF_SECURITY,JOB_WARDEN,JOB_DETECTIVE,JOB_SECURITY_OFFICER)
-	path = /obj/item/storage/backpack/dufflebag/sec
+    display_name = "security Dufflebag"
+    allowed_roles = list(JOB_HEAD_OF_SECURITY,JOB_WARDEN,JOB_DETECTIVE,JOB_SECURITY_OFFICER,JOB_BLUESHIELD_GUARD,JOB_SECURITY_PILOT) //YW ADDITIONS
+    path = /obj/item/storage/backpack/dufflebag/sec
 
 /datum/gear/utility/dufflebag/eng
 	display_name = "engineering dufflebag"
@@ -290,8 +290,9 @@ modular computers
 	path = /obj/item/storage/backpack/dufflebag/sci
 
 /datum/gear/utility/dufflebag/explorer
-	display_name = "away team dufflebag"
+	display_name = "explorer dufflebag" //CHOMP explo keep
 	path = /obj/item/storage/backpack/dufflebag/explorer
+	allowed_roles = list(JOB_PATHFINDER,JOB_EXPLORER) //CHOMP explo keep
 
 /datum/gear/utility/dufflebag/talon
 	display_name = "Talon dufflebag"

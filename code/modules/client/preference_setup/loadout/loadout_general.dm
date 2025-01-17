@@ -196,8 +196,6 @@
 	//coffeemugs["Talon coffee mug"] = /obj/item/reagent_containers/food/drinks/glass2/coffeemug/talon //CHOMPedit
 	gear_tweaks += new /datum/gear_tweak/path(coffeemugs)
 	gear_tweaks += new /datum/gear_tweak/reagents(lunchables_drink_reagents())
-<<<<<<< HEAD
-=======
 
 /datum/gear/ball
 	display_name = "tennis ball selection"
@@ -257,6 +255,7 @@
 	toytype["Big Red Button"] = /obj/item/toy/redbutton
 	toytype["Garden gnome"] = /obj/item/toy/gnome
 	toytype["Toy AI"] = /obj/item/toy/AI
+	toytype["Hand buzzer"] = /obj/item/clothing/gloves/ring/buzzer/toy // CHOMPAdd
 	toytype["Toy nuke"] = /obj/item/toy/nuke
 	toytype["Toy gibber"] = /obj/item/toy/minigibber
 	toytype["Toy xeno"] = /obj/item/toy/toy_xeno
@@ -306,4 +305,3 @@
 	display_name = "Customizable Permit"
 	description = "A customizable permit you can use for... just about anything! Be sure to customize the name and description. It is meant to represent generic driver's or pilot's licenses, and similar fluff items. It includes an irremovable disclaimer and may be freely confiscated or revoked at the discretion of Security and/or Command if you attempt to abuse it!"
 	path = /obj/item/card_fluff
->>>>>>> 56575082ff (Merge pull request #16891 from KillianKirilenko/kk-loadouts)

@@ -806,7 +806,7 @@
 	path = /obj/item/clothing/suit/storage/toggle/bomber/pilot
 
 /datum/gear/suit/snowsuit/medical
-	allowed_roles = list(JOB_MEDICAL_DOCTOR,JOB_CHIEF_MEDICAL_OFFICER,JOB_CHEMIST,JOB_PARAMEDIC,JOB_GENETICIST, JOB_PSYCHIATRIST)
+	allowed_roles = list(JOB_MEDICAL_DOCTOR,JOB_CHIEF_MEDICAL_OFFICER,JOB_CHEMIST,JOB_PARAMEDIC,JOB_GENETICIST, JOB_PSYCHIATRIST,JOB_FIELD_MEDIC) //CHOMP keep explo
 
 /datum/gear/suit/labcoat_colorable
 	display_name = "labcoat, colorable"
@@ -880,7 +880,7 @@
 /datum/gear/suit/paramedic_coat
 	display_name = "paramedic outerwear selection"
 	path = /obj/item/clothing/suit/storage/toggle/fr_jacket
-	allowed_roles = list(JOB_CHIEF_MEDICAL_OFFICER,JOB_PARAMEDIC,JOB_MEDICAL_DOCTOR)
+	allowed_roles = list(JOB_CHIEF_MEDICAL_OFFICER,JOB_PARAMEDIC,JOB_MEDICAL_DOCTOR,JOB_FIELD_MEDIC) //CHOMP keep explo
 
 /datum/gear/suit/paramedic_coat/New()
 	..()
@@ -919,7 +919,7 @@ Talon winter coat
 /datum/gear/suit/armor/combat/crusader_explo
 	display_name = "knight, explo"
 	path = /obj/item/clothing/suit/armor/combat/crusader_explo
-	//allowed_roles = list(JOB_EXPLORER,JOB_PATHFINDER)
+	allowed_roles = list(JOB_EXPLORER,JOB_FIELD_MEDIC,JOB_PATHFINDER) //CHOMP keep explo
 
 /datum/gear/suit/armor/combat/crusader_explo/FM
 	display_name = "knight, Field Medic"
