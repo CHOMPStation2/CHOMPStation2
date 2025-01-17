@@ -27,7 +27,7 @@
 	..()
 	gear_tweaks += gear_tweak_collar_tag
 
-/*
+/* CHOMPRemove Start Virgo Fluffitems
 //  0-9 CKEYS
 /datum/gear/fluff/malady_crop
 	path = /obj/item/material/twohanded/riding_crop/malady
@@ -1613,4 +1613,5 @@
 	display_name = "Health Service Achievement medal"
 	ckeywhitelist = list("zodiacshadow")
 	character_name = list("Nehi Maximus")
-*/
+
+*/  //CHOMPRemove End Virgo Fluffitems (Keen in mind to move this if new items are added upstream!)
