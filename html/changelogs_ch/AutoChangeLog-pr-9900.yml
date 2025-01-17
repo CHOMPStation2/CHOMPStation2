@@ -1,0 +1,5 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - balance: "Changed fitness machines to drain your weight ten times faster."
+  - balance: "Changed fitness structures to drain your weight."
