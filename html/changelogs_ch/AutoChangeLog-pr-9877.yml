@@ -1,0 +1,6 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - rscadd: "Added silver and white jackboots to loadouts"
+  - bugfix: "Fixed the traditional kimono being unselectable"
+  - refactor: "Cleaned up _vr files for loadouts"
