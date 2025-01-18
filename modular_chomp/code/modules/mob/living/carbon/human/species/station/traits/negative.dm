@@ -101,3 +101,20 @@
 	name = "Carbon Dioxide Breather"
 	desc = "You breathe carbon dioxide instead of oxygen, much like a plant. Oxygen is not poisonous to you."
 	var_changes = list("breath_type" = GAS_CO2, "exhale_type" = GAS_O2, "ideal_air_type" = /datum/gas_mixture/belly_air/carbon_dioxide_breather)
+
+/datum/trait/negative/boneless
+	name = "Boneless"
+	desc = "You have no bones! Though your limbs are also much, much easier to gib in exchange. (Seriously this can result in one shot deaths and similar)"
+	cost = -4
+	custom_only = TRUE
+	can_take = ORGANICS
+
+/datum/trait/negative/boneless/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..()
+	for(var/obj/item/organ/external/ex_organ in H.organs)
+		ex_organ.cannot_break = 1
+		ex_organ.dislocated = -1
+		ex_organ.spread_dam = 1
+		ex_organ.max_damage = floor(ex_organ.max_damage * 0.45)
+		if(istype(ex_organ, /obj/item/organ/external/head) || istype(ex_organ, /obj/item/organ/external/chest))
+			ex_organ.encased = 0
