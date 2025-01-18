@@ -498,7 +498,13 @@ var/global/list/obj/item/pda/PDAs = list()
 
 /obj/item/pda/Destroy()
 	PDAs -= src
+<<<<<<< HEAD
 	if (src.id && !delete_id && src.id.loc == src) //CHOMPEdit
+=======
+	if(id.loc != src)
+		id = null
+	if (src.id && !delete_id)
+>>>>>>> e2b68fd0ac (bunch of unhandled refs (#16919))
 		src.id.forceMove(get_turf(src.loc))
 	else
 		QDEL_NULL(src.id)

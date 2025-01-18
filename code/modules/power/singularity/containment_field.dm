@@ -29,7 +29,11 @@
 		shockdirs = list(turn(dir,90),turn(dir,-90))
 
 /obj/machinery/containment_field/Destroy()
+<<<<<<< HEAD
 	unsense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity)) // CHOMPEdit
+=======
+	unsense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity))
+>>>>>>> e2b68fd0ac (bunch of unhandled refs (#16919))
 	if(FG1 && !FG1.clean_up)
 		FG1.cleanup()
 	if(FG2 && !FG2.clean_up)
