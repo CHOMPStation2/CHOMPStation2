@@ -1,5 +1,0 @@
-author: "Hunter-Dovetail"
-delete-after: True
-changes:
-  - rscadd: "cow_head-head"
-  - rscadd: "cow_nose-head\nadd smallchubbybelly-torso"

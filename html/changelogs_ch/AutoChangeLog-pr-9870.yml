@@ -1,5 +1,0 @@
-author: "Asher-42"
-delete-after: True
-changes:
-  - rscadd: "adds import export button to radial hud for colors and part selection."
-  - bugfix: "code rehaul"
