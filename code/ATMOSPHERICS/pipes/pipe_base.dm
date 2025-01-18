@@ -99,11 +99,9 @@
 	return parent.return_network(reference)
 
 /obj/machinery/atmospherics/pipe/Destroy()
-	//CHOMPEdit Begin
 	if(parent)
 		parent.members -= src
 		parent.edges -= src
-	//CHOMPEdit End
 	QDEL_NULL(parent)
 	if(air_temporary)
 		loc.assume_air(air_temporary)
