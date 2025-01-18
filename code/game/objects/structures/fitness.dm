@@ -25,11 +25,7 @@
 			flick("[icon_state]_hit", src)
 			playsound(src, 'sound/effects/woodhit.ogg', 25, 1, -1)
 			user.do_attack_animation(src)
-<<<<<<< HEAD
 			user.adjust_nutrition(-10) //CHOMPEdit Set nutrition drain to be the same as in fitness_machines_vr.dm
-=======
-			user.adjust_nutrition(-5)
->>>>>>> e2b68fd0ac (bunch of unhandled refs (#16919))
 			user.weight -= 0.25 * weightloss_power * (0.01 * user.weight_loss)
 			to_chat(user, span_warning("You [pick(hit_message)] \the [src]."))
 

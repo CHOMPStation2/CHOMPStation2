@@ -469,11 +469,7 @@
 			impacted_mobs.Cut()
 		impacted_mobs = null
 
-<<<<<<< HEAD
-	QDEL_NULL(trajectory) //CHOMPEdit
-=======
 	QDEL_NULL(trajectory)
->>>>>>> e2b68fd0ac (bunch of unhandled refs (#16919))
 	cleanup_beam_segments()
 
 	if(my_case)

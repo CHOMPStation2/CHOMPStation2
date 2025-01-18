@@ -98,15 +98,6 @@ SUBSYSTEM_DEF(mobs)
 	..()
 	log_recent()
 
-<<<<<<< HEAD
-//CHOMPEdit Begin
-//Mobs need to immediately removed from the SS list on Destroy
 /mob/Destroy()
 	. = ..()
 	SSmobs.currentrun -= src
-//CHOMPEdit End
-=======
-/mob/Destroy()
-	. = ..()
-	SSmobs.currentrun -= src
->>>>>>> e2b68fd0ac (bunch of unhandled refs (#16919))

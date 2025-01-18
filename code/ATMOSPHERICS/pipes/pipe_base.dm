@@ -99,17 +99,9 @@
 	return parent.return_network(reference)
 
 /obj/machinery/atmospherics/pipe/Destroy()
-<<<<<<< HEAD
-	//CHOMPEdit Begin
 	if(parent)
 		parent.members -= src
 		parent.edges -= src
-	//CHOMPEdit End
-=======
-	if(parent)
-		parent.members -= src
-		parent.edges -= src
->>>>>>> e2b68fd0ac (bunch of unhandled refs (#16919))
 	QDEL_NULL(parent)
 	if(air_temporary)
 		loc.assume_air(air_temporary)
