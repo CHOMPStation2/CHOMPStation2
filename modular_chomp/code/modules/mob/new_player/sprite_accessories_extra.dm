@@ -262,23 +262,24 @@
 	body_parts = list(BP_HEAD)
 	color_blend_mode = ICON_MULTIPLY
 
-/datum/sprite_accessory/marking/ch/cow_head
-	name = "Cow Snout"
-	icon_state = "cow_head"
+/datum/sprite_accessory/marking/ch/bovine_snout
+	name = "Bovine Snout"
+	icon_state = "bovine_snout"
 	body_parts = list(BP_HEAD)
 	color_blend_mode = ICON_MULTIPLY
 
-/datum/sprite_accessory/marking/ch/cow_nose
-	name = "Cow Nose"
-	icon_state = "cow_nose"
+/datum/sprite_accessory/marking/ch/bovine_nose
+	name = "Bovine Nose"
+	icon_state = "bovine_nose"
 	body_parts = list(BP_HEAD)
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/marking/ch/smallchubbybelly
-	name = "Belly Small"
+	name = "Chubby Belly, Small"
 	icon_state = "smallchubbybelly"
-	body_parts = list(BP_TORSO)
+	body_parts = list(BP_TORSO,BP_GROIN)
 	color_blend_mode = ICON_MULTIPLY
+
 
 /datum/sprite_accessory/marking/ch/sloog_head
 	name = "sloog head"
