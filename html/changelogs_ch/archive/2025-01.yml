@@ -207,3 +207,11 @@
   - bugfix: disable long vore while incorporeal
   Mitryll:
   - rscadd: Added yip, squeal and tailthump emotes
+2025-01-19:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: cleans up some unhandled references
+  - bugfix: some more 516 windows
+  Kashargul:
+  - bugfix: a bug that could cause runtimes if a non human tried to enter VR
+  NickBelmont:
+  - maptweak: Added a box of gene disks to the XenobotanySetup outsider shelter.
