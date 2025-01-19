@@ -1,0 +1,4 @@
+author: "Kashargul"
+delete-after: True
+changes:
+  - bugfix: "a bug that could cause runtimes if a non human tried to enter VR"
