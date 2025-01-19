@@ -278,6 +278,7 @@
 	name = "Chubby Belly, Small"
 	icon_state = "smallchubbybelly"
 	body_parts = list(BP_TORSO,BP_GROIN)
+	hide_body_parts = list(BP_L_HAND,BP_R_HAND)
 	color_blend_mode = ICON_MULTIPLY
 
 
