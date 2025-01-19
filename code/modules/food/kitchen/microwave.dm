@@ -598,35 +598,6 @@
 	. = ..()
 	reagents.maximum_volume = 1000
 
-/datum/recipe/splat // We use this to handle cooking micros (or mice, etc) in a microwave. Janky but it works better than snowflake code to handle the same thing.
-	items = list(
-		/obj/item/holder
-	)
-	result = /obj/effect/decal/cleanable/blood/gibs
-
-/datum/recipe/splat/before_cook(obj/container)
-	if(istype(container, /obj/machinery/microwave))
-		var/obj/machinery/microwave/M = container
-		M.muck_start()
-		playsound(container.loc, 'sound/items/drop/flesh.ogg', 100, 1)
-	. = ..()
-
-/datum/recipe/splat/make_food(obj/container)
-	for(var/obj/item/holder/H in container)
-		if(H.held_mob)
-			to_chat(H.held_mob, span_danger("You hear an earsplitting humming and your head aches!"))
-			qdel(H.held_mob)
-			H.held_mob = null
-			qdel(H)
-
-	. = ..()
-
-/datum/recipe/splat/after_cook(obj/container)
-	if(istype(container, /obj/machinery/microwave))
-		var/obj/machinery/microwave/M = container
-		M.muck_finish()
-	.  = ..()
-
 /obj/machinery/microwave/proc/cookingContents() //VOREEdit, this is a better way to deal with the contents of a microwave, since the previous method is stupid.
 	var/list/workingList = contents.Copy() // Using the copy proc because otherwise the two lists seem to become soul bonded.
 	workingList -= component_parts
