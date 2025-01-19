@@ -277,14 +277,9 @@
 /datum/sprite_accessory/marking/ch/smallchubbybelly
 	name = "Chubby Belly, Small"
 	icon_state = "smallchubbybelly"
-	body_parts = list(BP_TORSO)
+	body_parts = list(BP_TORSO,BP_GROIN)
 	color_blend_mode = ICON_MULTIPLY
 
-/datum/sprite_accessory/marking/ch/smallchubbybelly
-	name = "Chubby Belly, Small"
-	icon_state = "smallchubbybelly"
-	body_parts = list(BP_groin)
-	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/marking/ch/sloog_head
 	name = "sloog head"
