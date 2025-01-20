@@ -1,0 +1,4 @@
+author: "Drathek"
+delete-after: True
+changes:
+  - bugfix: "Fixed escape pod UI saying ERROR instead of CLOSED for its hatch"
