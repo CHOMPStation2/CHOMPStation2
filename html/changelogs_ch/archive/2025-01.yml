@@ -215,3 +215,15 @@
   - bugfix: a bug that could cause runtimes if a non human tried to enter VR
   NickBelmont:
   - maptweak: Added a box of gene disks to the XenobotanySetup outsider shelter.
+2025-01-20:
+  Hunter-Dovetail:
+  - code_imp: '"cow_head-head", and "cow_nose-head" changed to "bovine_snout-head"
+      and "bovine_nose-head", to avoid confusion and overwriting existing "cow nose"
+      body marking.'
+  - bugfix: '"chubby belly, small" by separating the sprite via "torso" and groin",
+      and improved its look and greyscaling,'
+  - code_imp: altered the dmi for smallchubbybelly for visual improvement, and to
+      hide protruding hand sprites when facing sideways.
+  - image: visual and greyscaling improvements to bovine_snout and bovine_nose
+  Kashargul:
+  - bugfix: honkhounds losing EAL on module selection after a reset

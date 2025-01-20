@@ -1,5 +1,0 @@
-author: "Hunter-Dovetail"
-delete-after: True
-changes:
-  - code_imp: "altered the dmi for smallchubbybelly for visual improvement, and to hide protruding hand sprites when facing sideways."
-  - image: "visual and greyscaling improvements to bovine_snout and bovine_nose"

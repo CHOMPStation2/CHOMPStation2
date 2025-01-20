@@ -1,5 +1,0 @@
-author: "Hunter-Dovetail"
-delete-after: True
-changes:
-  - code_imp: "\"cow_head-head\", and \"cow_nose-head\" changed to \"bovine_snout-head\" and \"bovine_nose-head\", to avoid confusion and overwriting existing \"cow nose\" body marking."
-  - bugfix: "\"chubby belly, small\" by separating the sprite via \"torso\" and groin\", and improved its look and greyscaling,"
