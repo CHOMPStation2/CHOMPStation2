@@ -160,6 +160,7 @@
 		return
 	if(!ishuman(M))
 		to_chat(user, span_warning("\The [src] rejects [M] with a sharp beep."))
+		return
 	if(occupant)
 		to_chat(user, span_warning("\The [src] is already occupied."))
 		return

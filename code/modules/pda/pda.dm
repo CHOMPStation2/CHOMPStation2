@@ -498,10 +498,10 @@ var/global/list/obj/item/pda/PDAs = list()
 
 /obj/item/pda/Destroy()
 	PDAs -= src
-	if (src.id && !delete_id && src.id.loc == src) //CHOMPEdit
-		src.id.forceMove(get_turf(src.loc))
+	if (id && !delete_id && id.loc == src)
+		id.forceMove(get_turf(loc))
 	else
-		QDEL_NULL(src.id)
+		QDEL_NULL(id)
 
 	current_app = null
 	scanmode = null

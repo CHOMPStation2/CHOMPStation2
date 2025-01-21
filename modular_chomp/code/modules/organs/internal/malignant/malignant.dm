@@ -74,7 +74,7 @@
 		return TRUE
 
 	// welp, clean up.
-	neworgan.Destroy()
+	qdel(neworgan)
 	return FALSE
 
 
@@ -344,7 +344,7 @@
 	if(!turf_clear(T))
 		T = get_turf(src)
 	new /obj/effect/decal/cleanable/confetti(T)
-	Destroy()
+	qdel(src)
 
 
 // Teleports you randomly, until it gets you killed
@@ -515,7 +515,7 @@
 	while(thalers > 1)
 		thalers -= 1
 		spawn_money(1, src.loc)
-	Destroy()
+	qdel(src)
 
 
 /****************************************************
@@ -630,7 +630,7 @@
 					var/ourowner = owner
 					var/ourloc = parent_organ
 					var/ourtag = organ_tag
-					Destroy()
+					qdel(src)
 					new newpath(ourowner, TRUE, ourloc, ourtag)
 			cooldown = rand(2,5)
 		else

@@ -25,6 +25,11 @@
 			shandler = new(src)
 			shandler.manualInit()
 
+/turf/simulated/lighting_build_overlay()
+	..()
+	if(shandler)
+		shandler.only_sun_object = lighting_object
+
 /datum/sunlight_handler
 	var/datum/simple_sun/sun
 	var/turf/simulated/holder

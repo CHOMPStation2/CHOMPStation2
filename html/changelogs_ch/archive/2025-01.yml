@@ -182,3 +182,57 @@
 2025-01-17:
   CHOMPStation2StaffMirrorBot:
   - bugfix: runtime flood
+2025-01-18:
+  Asher-42:
+  - rscadd: adds import export button to radial hud for colors and part selection.
+  - bugfix: code rehaul
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Makes robot decals show up properly
+  - bugfix: Fixes advanced diseases being uncurable
+  - qol: Changed the name of advanced Cold and Flu to Engineered Cold and Engineered
+      Flu
+  - qol: Improves screen shake effect
+  - balance: Changed fitness machines to drain your weight ten times faster.
+  - balance: Changed fitness structures to drain your weight.
+  - rscadd: Added a craftable variant of the leash, made from a stack of cable coils
+      (at least 3 cables in it).
+  - rscadd: Added silver and white jackboots to loadouts
+  - bugfix: Fixed the traditional kimono being unselectable
+  - refactor: Cleaned up _vr files for loadouts
+  Hunter-Dovetail:
+  - rscadd: cow_head-head
+  - rscadd: 'cow_nose-head
+
+      add smallchubbybelly-torso'
+  Kashargul:
+  - bugfix: light handling going missing after area changes
+  - bugfix: disable long vore while incorporeal
+  Mitryll:
+  - rscadd: Added yip, squeal and tailthump emotes
+2025-01-19:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: cleans up some unhandled references
+  - bugfix: some more 516 windows
+  Kashargul:
+  - bugfix: a bug that could cause runtimes if a non human tried to enter VR
+  NickBelmont:
+  - maptweak: Added a box of gene disks to the XenobotanySetup outsider shelter.
+2025-01-20:
+  Hunter-Dovetail:
+  - code_imp: '"cow_head-head", and "cow_nose-head" changed to "bovine_snout-head"
+      and "bovine_nose-head", to avoid confusion and overwriting existing "cow nose"
+      body marking.'
+  - bugfix: '"chubby belly, small" by separating the sprite via "torso" and groin",
+      and improved its look and greyscaling,'
+  - code_imp: altered the dmi for smallchubbybelly for visual improvement, and to
+      hide protruding hand sprites when facing sideways.
+  - image: visual and greyscaling improvements to bovine_snout and bovine_nose
+  Kashargul:
+  - bugfix: honkhounds losing EAL on module selection after a reset
+2025-01-21:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: more 516 browser windows
+  Drathek:
+  - bugfix: Fixed escape pod UI saying ERROR instead of CLOSED for its hatch
+  Kashargul:
+  - bugfix: some invisible icons

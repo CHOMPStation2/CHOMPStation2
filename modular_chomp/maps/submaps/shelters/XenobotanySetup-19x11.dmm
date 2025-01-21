@@ -250,6 +250,7 @@
 	},
 /obj/effect/floor_decal/corner/green/border,
 /obj/structure/table/glass,
+/obj/item/storage/box/botanydisk,
 /turf/simulated/floor/tiled/hydro,
 /area/survivalpod/superpose/XenoBotanySetup)
 "wn" = (

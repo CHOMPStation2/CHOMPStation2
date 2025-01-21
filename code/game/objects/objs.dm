@@ -39,16 +39,14 @@
 			m.visible_message(span_notice("\The [m] tumbles out of \the [src]!"))
 	//VOREStation Add End
 
-	//CHOMPAdd Start possessed item cleanup
 	if(istype(src, /obj/item))
 		var/obj/item/I = src
 		if(I.possessed_voice && I.possessed_voice.len)
 			for(var/mob/living/voice/V in I.possessed_voice)
 				if(!V.tf_mob_holder)
 					V.ghostize(0)
-					V.stat = DEAD //CHOMPAdd - Helps with autosleeving
-					V.Destroy()
-	//CHOMPAdd End
+					V.stat = DEAD
+					qdel(V)
 
 	return ..()
 
