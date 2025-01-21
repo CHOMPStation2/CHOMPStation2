@@ -1,0 +1,5 @@
+author: "Hunter-Dovetail"
+delete-after: True
+changes:
+  - rscadd: "smallchubbybelly-l_hand and -r_hand"
+  - image: "improvements to hippo_upperjaw-head, hippo_lowerjaw-head, bovine_snout-head, bovine_nose-head"
