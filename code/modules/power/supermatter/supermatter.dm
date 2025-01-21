@@ -65,8 +65,8 @@
 	var/damage = 0
 	var/damage_archived = 0
 	var/safe_alert = "Crystaline hyperstructure returning to safe operating levels."
-	var/safe_warned = 0
-	var/public_alert = 0 //Stick to Engineering frequency except for big warnings when integrity bad
+	var/safe_warned = TRUE
+	var/public_alert = FALSE //Stick to Engineering frequency except for big warnings when integrity bad
 	var/warning_point = 100
 	var/warning_alert = "Danger! Crystal hyperstructure instability!"
 	var/emergency_point = 500
@@ -268,6 +268,7 @@
 	if(damage > emergency_point)
 		alert_msg = emergency_alert + alert_msg
 		lastwarning = world.timeofday - WARNING_DELAY * 4
+<<<<<<< HEAD
 		// CHOMPEdit Start
 		if(!critwarn)
 			if(src.z in using_map.station_levels)
@@ -292,11 +293,16 @@
 			engwarn = 1 // So we don't repeatedly try and start over the soundloop/etc
 		// CHOMPEdit End
 		safe_warned = 0
+=======
+		safe_warned = FALSE
+	else if(damage >= damage_archived) // The damage is still going up
+		safe_warned = FALSE
+>>>>>>> dbb271c5bb (fix sm announce (#16939))
 		alert_msg = warning_alert + alert_msg
 		lastwarning = world.timeofday
 
 	else if(!safe_warned)
-		safe_warned = 1 // We are safe, warn only once
+		safe_warned = TRUE // We are safe, warn only once
 		alert_msg = safe_alert
 		lastwarning = world.timeofday
 		reset_alarms() // CHOMPEdit: Looping Alarms
@@ -312,11 +318,11 @@
 				if(!isnewplayer(M) && !isdeaf(M)) // Rykka adds SM Delam alarm
 					M << message_sound // Rykka adds SM Delam alarm
 			admin_chat_message(message = "SUPERMATTER DELAMINATING!", color = "#FF2222") //VOREStation Add
-			public_alert = 1
+			public_alert = TRUE
 			log_game("SUPERMATTER([x],[y],[z]) Emergency PUBLIC announcement. Power:[power], Oxygen:[oxygen], Damage:[damage], Integrity:[get_integrity()]")
 		else if(safe_warned && public_alert)
 			global_announcer.autosay(alert_msg, "Supermatter Monitor")
-			public_alert = 0
+			public_alert = FALSE
 
 /obj/machinery/power/supermatter/process()
 
@@ -341,6 +347,10 @@
 			announce_warning()
 	else
 		shift_light(4,initial(light_color))
+
+	if(damage < warning_point && !safe_warned && (world.timeofday - lastwarning) >= WARNING_DELAY * 10) // In case our safe announcement was not sent, we send it latest now
+		announce_warning()
+
 	if(grav_pulling)
 		supermatter_pull(src)
 
