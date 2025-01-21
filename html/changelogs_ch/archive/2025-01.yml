@@ -227,3 +227,10 @@
   - image: visual and greyscaling improvements to bovine_snout and bovine_nose
   Kashargul:
   - bugfix: honkhounds losing EAL on module selection after a reset
+2025-01-21:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: more 516 browser windows
+  Drathek:
+  - bugfix: Fixed escape pod UI saying ERROR instead of CLOSED for its hatch
+  Kashargul:
+  - bugfix: some invisible icons
