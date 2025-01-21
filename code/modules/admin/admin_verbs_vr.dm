@@ -119,8 +119,12 @@
 			dat += "</td></tr>"
 		dat += "</table>"
 
+<<<<<<< HEAD
 		qdel(query) // CHOMPEdit
 	usr << browse(dat, "window=library")
+=======
+	usr << browse("<html>[dat]</html>", "window=library")
+>>>>>>> 7266c4c5dc (more missing tags (#16937))
 	onclose(usr, "library")
 
 /client/proc/toggle_spawning_with_recolour()
