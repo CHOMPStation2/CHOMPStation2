@@ -234,3 +234,8 @@
   - bugfix: Fixed escape pod UI saying ERROR instead of CLOSED for its hatch
   Kashargul:
   - bugfix: some invisible icons
+2025-01-22:
+  Hunter-Dovetail:
+  - rscadd: smallchubbybelly-l_hand and -r_hand
+  - image: improvements to hippo_upperjaw-head, hippo_lowerjaw-head, bovine_snout-head,
+      bovine_nose-head
