@@ -129,7 +129,7 @@
 	dat += "<BR><A href='byond://?src=\ref[src];RANDOM=1'>Build Random Engine</A><BR>"
 
 	dat += "<A href='byond://?src=\ref[user];mach_close=computer'>Close</A>"
-	user << browse(dat, "window=computer;size=575x450")
+	user << browse("<html>[dat]</html>", "window=computer;size=575x450")
 	onclose(user, "computer")
 	return
 

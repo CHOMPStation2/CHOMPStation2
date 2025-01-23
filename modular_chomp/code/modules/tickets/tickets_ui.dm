@@ -317,7 +317,7 @@
 	dat += "<br><b>Log:</b><br><br>"
 	for(var/I in _interactions)
 		dat += "[I]<br>"
-
+	dat += "</html>"
 	usr << browse(dat.Join(), "window=ahelp[id];size=620x480")
 
 /datum/tickets/proc/TicketListLegacy(var/state)
@@ -339,5 +339,5 @@
 
 	if(tickets_found == 0)
 		dat += "No [state] tickets found."
-
+	dat += "</html>"
 	usr << browse(dat.Join(), "window=ahelp-list;size=250x350")
