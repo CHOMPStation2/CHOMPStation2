@@ -1,0 +1,4 @@
+author: "NickBelmont"
+delete-after: True
+changes:
+  - code_imp: "Changes tgui/components and tgui/format to their tgui-core equivalents, and replaces a Flex element with Stack"
