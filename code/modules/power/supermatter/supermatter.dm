@@ -113,9 +113,9 @@
 
 	var/datum/looping_sound/supermatter/soundloop
 
-	var/engwarn = 0 // CHOMPEdit: Looping Alarms
-	var/critwarn = 0 // CHOMPEdit: Looping Alarms
-	var/causalitywarn = 0 // CHOMPEdit: Looping Alarms
+	var/engwarn = FALSE // CHOMPEdit: Looping Alarms
+	var/critwarn = FALSE // CHOMPEdit: Looping Alarms
+	var/causalitywarn = FALSE // CHOMPEdit: Looping Alarms
 	var/stationcrystal = FALSE // CHOMPEdit: Looping Alarms
 
 /obj/machinery/power/supermatter/New()
@@ -268,7 +268,6 @@
 	if(damage > emergency_point)
 		alert_msg = emergency_alert + alert_msg
 		lastwarning = world.timeofday - WARNING_DELAY * 4
-<<<<<<< HEAD
 		// CHOMPEdit Start
 		if(!critwarn)
 			if(src.z in using_map.station_levels)
@@ -277,8 +276,9 @@
 					if(istype(our_area, /area/engineering))
 						candidate_alarm.critalarm.start()
 						candidate_alarm.critwarn = TRUE // Tell the fire alarm we're warning engineering
-			critwarn = 1
+			critwarn = TRUE
 		// CHOMPEdit End
+		safe_warned = FALSE
 	else if(damage >= damage_archived) // The damage is still going up
 		// CHOMPEdit: Looping Alarms - we're not making a proc for initiating the alarms in this case.
 		if(!engwarn)
@@ -290,14 +290,9 @@
 							L.set_alert_engineering()
 						candidate_alarm.engalarm.start()
 						candidate_alarm.engwarn = TRUE // Tell the fire alarm we're warning engineering
-			engwarn = 1 // So we don't repeatedly try and start over the soundloop/etc
+			engwarn = TRUE // So we don't repeatedly try and start over the soundloop/etc
 		// CHOMPEdit End
-		safe_warned = 0
-=======
 		safe_warned = FALSE
-	else if(damage >= damage_archived) // The damage is still going up
-		safe_warned = FALSE
->>>>>>> dbb271c5bb (fix sm announce (#16939))
 		alert_msg = warning_alert + alert_msg
 		lastwarning = world.timeofday
 
@@ -463,7 +458,7 @@
 					if(istype(our_area, /area/engineering))
 						candidate_alarm.causality.start()
 						candidate_alarm.causalitywarn = TRUE // Tell the fire alarm it's warning, too
-			causalitywarn = 1
+			causalitywarn = TRUE
 
 	if(!(src.z in using_map.station_levels)) // CHOMPEdit: SM Global Warn Fix; Is our location the same as the station? If no, then we're not going to use a stabilization field.
 		explode() // CHOMPEdit: SM Global Warn Fix;  Just exploding, because we're not on the station's Z. No safety countdown.
@@ -657,9 +652,9 @@
 
 /obj/machinery/power/supermatter/proc/reset_alarms()
 	reset_sm_alarms()
-	engwarn = 0
-	critwarn = 0
-	causalitywarn = 0
+	engwarn = FALSE
+	critwarn = FALSE
+	causalitywarn = FALSE
 
 /proc/reset_sm_alarms()
 	for(var/obj/machinery/firealarm/candidate_alarm in global.machines)
