@@ -1393,7 +1393,7 @@
 	if(usr.stat || usr.incapacitated())
 		return
 
-	var/new_color = input(usr, "Pick a new colour", "Collar Colour", color) as color|null
+	var/new_color = tgui_color_picker(usr, "Pick a new colour", "Collar Colour", color)
 
 	if(new_color && (new_color != color))
 		color = new_color
