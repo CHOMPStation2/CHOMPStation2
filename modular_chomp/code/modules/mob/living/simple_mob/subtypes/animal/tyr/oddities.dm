@@ -189,6 +189,10 @@
 	pass_flags = PASSTABLE
 	movement_cooldown = 1
 
+	needs_reload = TRUE
+	reload_max = 1
+	reload_time = 2 SECONDS
+
 	ai_holder_type = /datum/ai_holder/hostile/ranged/robust
 	projectiletype = /obj/item/projectile/arc/spore
 
