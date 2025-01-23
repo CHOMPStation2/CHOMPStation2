@@ -1012,7 +1012,8 @@ About the new airlock wires panel:
 		..(user)
 	return
 
-/obj/machinery/door/airlock/AltClick(mob/user as mob)
+//CHOMPEdit Start - Moved custom doorbell interaction to Ctrl-click
+/*/obj/machinery/door/airlock/AltClick(mob/user as mob)
 
 	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 	if(!Adjacent(user))
@@ -1040,13 +1041,41 @@ About the new airlock wires panel:
 		src.visible_message("[user] knocks on \the [src].", "Someone knocks on \the [src].")
 		src.add_fingerprint(user)
 		playsound(src, knock_unpowered_sound, 50, 0, 3)
-	return
+	return*/
 
-/obj/machinery/door/airlock/CtrlClick(mob/user as mob) //Hold door open
+/obj/machinery/door/airlock/CtrlClick(mob/user) //Hold door open
+	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 	if(!Adjacent(user))
 		return
-	src.hold_open = user
-	src.attack_hand(user)
+	if(user.a_intent == I_HURT)
+		visible_message(span_warning("[user] hammers on \the [src]!"), span_warning("Someone hammers loudly on \the [src]!"))
+		add_fingerprint(user)
+		if(icon_state == "door_closed" && arePowerSystemsOn())
+			flick("door_deny", src)
+		playsound(src, knock_hammer_sound, 50, 0, 3)
+	else if(user.a_intent == I_GRAB) //Hold door open
+		hold_open = user
+		visible_message(span_info("[user] begins holding \the [src] open."), span_info("Someone has started holding \the [src] open."))
+		attack_hand(user)
+	else if(arePowerSystemsOn()) //ChompEDIT - removed intent check
+		if(isElectrified())
+			visible_message(span_warning("[user] presses the door bell on \the [src], making it violently spark!"), span_warning("\The [src] sparks!"))
+			add_fingerprint(user)
+			var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
+			s.set_up(5, 1, src)
+			s.start()
+		else
+			visible_message(span_info("[user] presses the door bell on \the [src]."), span_info("\The [src]'s bell rings."))
+			add_fingerprint(user)
+		if(icon_state == "door_closed")
+			flick("door_deny", src)
+		playsound(src, knock_sound, 50, 0, 3)
+	else //ChompEDIT - removed intent check
+		visible_message(span_info("[user] knocks on \the [src]."), span_info("Someone knocks on \the [src]."))
+		add_fingerprint(user)
+		playsound(src, knock_unpowered_sound, 50, 0, 3)
+	return
+//CHOMPEdit End
 
 /obj/machinery/door/airlock/tgui_act(action, params, datum/tgui/ui)
 	if(..())
