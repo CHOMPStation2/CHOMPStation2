@@ -19,12 +19,12 @@
 	name = "protective vest"
 	icon = 'icons/obj/clothing/spacesuits_ch.dmi'
 	desc = "Light weight but oddly protective plating."
-	var/shieldhealth = 200
+	var/shieldhealth = 75
 	var/cooldown = null // world.time of when this was last triggered.
 	var/cooldown_duration = 2 MINUTES
 
 /obj/item/clothing/suit/space/rig/ch/tyrprecursor/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
-	if(shieldhealth < 0)
+	if(shieldhealth < 75)
 		user.visible_message(span_danger("\The [src] completely absorbs [attack_text]!"))
 		shieldhealth -= damage
 		cooldown = world.time + cooldown_duration
@@ -33,7 +33,7 @@
 
 /obj/item/clothing/suit/space/rig/ch/tyrprecursor/proc/activate_ability(var/mob/living/wearer)
 	cooldown = world.time + cooldown_duration
-	shieldhealth = 200
+	shieldhealth = 75
 
 /obj/item/clothing/suit/space/rig/ch/tyrprecursor/equipped(var/mob/living/carbon/human/H)
 	..()
@@ -59,12 +59,12 @@
 	icon = 'icons/obj/clothing/hats_ch.dmi'
 	desc = "A protective dome for your head."
 
-	var/shieldhealth = 200
+	var/shieldhealth = 75
 	var/cooldown = null // world.time of when this was last triggered.
 	var/cooldown_duration = 2 MINUTES
 
 /obj/item/clothing/head/helmet/space/rig/ch/tyrprecursor/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
-	if(shieldhealth < 0)
+	if(shieldhealth < 75)
 		user.visible_message(span_danger("\The [src] completely absorbs [attack_text]!"))
 		shieldhealth -= damage
 		cooldown = world.time + cooldown_duration
@@ -73,7 +73,7 @@
 
 /obj/item/clothing/head/helmet/space/rig/ch/tyrprecursor/proc/activate_ability(var/mob/living/wearer)
 	cooldown = world.time + cooldown_duration
-	shieldhealth = 200
+	shieldhealth = 75
 
 /obj/item/clothing/head/helmet/space/rig/ch/tyrprecursor/equipped(var/mob/living/carbon/human/H)
 	..()
@@ -98,12 +98,12 @@
 	name = "gloves"
 	icon = 'icons/obj/clothing/gloves_ch.dmi'
 	desc = "Gloves created with alien tech"
-	var/shieldhealth = 200
+	var/shieldhealth = 75
 	var/cooldown = null // world.time of when this was last triggered.
 	var/cooldown_duration = 2 MINUTES
 
 /obj/item/clothing/gloves/gauntlets/rig/ch/tyrprecursor/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
-	if(shieldhealth < 0)
+	if(shieldhealth < 75)
 		user.visible_message(span_danger("\The [src] completely absorbs [attack_text]!"))
 		shieldhealth -= damage
 		cooldown = world.time + cooldown_duration
@@ -112,7 +112,7 @@
 
 /obj/item/clothing/gloves/gauntlets/rig/ch/tyrprecursor/proc/activate_ability(var/mob/living/wearer)
 	cooldown = world.time + cooldown_duration
-	shieldhealth = 200
+	shieldhealth = 75
 
 /obj/item/clothing/gloves/gauntlets/rig/ch/tyrprecursor/equipped(var/mob/living/carbon/human/H)
 	..()
@@ -137,12 +137,12 @@
 	name = "boots"
 	icon = 'icons/obj/clothing/shoes_ch.dmi'
 	desc = "A pair of grabby boots"
-	var/shieldhealth = 200
+	var/shieldhealth = 75
 	var/cooldown = null // world.time of when this was last triggered.
 	var/cooldown_duration = 2 MINUTES
 
 /obj/item/clothing/shoes/magboots/rig/ch/tyrprecursor/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
-	if(shieldhealth < 0)
+	if(shieldhealth < 75)
 		user.visible_message(span_danger("\The [src] completely absorbs [attack_text]!"))
 		shieldhealth -= damage
 		cooldown = world.time + cooldown_duration
@@ -151,7 +151,7 @@
 
 /obj/item/clothing/shoes/magboots/rig/ch/tyrprecursor/proc/activate_ability(var/mob/living/wearer)
 	cooldown = world.time + cooldown_duration
-	shieldhealth = 200
+	shieldhealth = 75
 
 /obj/item/clothing/shoes/magboots/rig/ch/tyrprecursor/equipped(var/mob/living/carbon/human/H)
 	..()
