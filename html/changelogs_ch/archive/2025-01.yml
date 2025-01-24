@@ -239,3 +239,18 @@
   - rscadd: smallchubbybelly-l_hand and -r_hand
   - image: improvements to hippo_upperjaw-head, hippo_lowerjaw-head, bovine_snout-head,
       bovine_nose-head
+2025-01-24:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: tgui color picker for anyone using 516 or later
+  - bugfix: more missing html tags
+  - balance: adjusted the concussion maul for better power efficiency and slightly
+      faster attack cooldown, and added a detailed info-desc
+  - bugfix: an issue where the supermatter was not announcing safe operation conditions
+      after going critical
+  FluffMedic:
+  - balance: tyr things rebalanced
+  NickBelmont:
+  - code_imp: Changes tgui/components and tgui/format to their tgui-core equivalents,
+      and replaces a Flex element with Stack
+  TheGreatKitsune:
+  - qol: doorbell functionality moved to ctrl-click.
