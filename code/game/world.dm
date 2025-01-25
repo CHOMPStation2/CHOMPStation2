@@ -58,12 +58,18 @@
 	src.update_status()
 	setup_season()	//VOREStation Addition
 
+<<<<<<< HEAD
 	// CHOMPStation Addition: Spaceman DMM Debugging
+=======
+>>>>>>> de8e47c5a6 (AuxTools Port (#16926))
 	var/debug_server = world.GetConfig("env", "AUXTOOLS_DEBUG_DLL")
 	if (debug_server)
 		call_ext(debug_server, "auxtools_init")()
 		enable_debugging()
+<<<<<<< HEAD
 	// CHOMPStation Add End
+=======
+>>>>>>> de8e47c5a6 (AuxTools Port (#16926))
 
 	. = ..()
 
@@ -797,7 +803,10 @@ var/global/game_id = null
 		t = round(t / l)
 	return 1
 
+<<<<<<< HEAD
 // CHOMPStation Add: Spaceman DMM Debugger
+=======
+>>>>>>> de8e47c5a6 (AuxTools Port (#16926))
 /proc/auxtools_stack_trace(msg)
 	CRASH(msg)
 
@@ -812,5 +821,8 @@ var/global/game_id = null
 	if (debug_server)
 		call_ext(debug_server, "auxtools_shutdown")()
 	. = ..()
+<<<<<<< HEAD
 
 // CHOMPStation Add End: Spaceman DMM Debugger
+=======
+>>>>>>> de8e47c5a6 (AuxTools Port (#16926))
