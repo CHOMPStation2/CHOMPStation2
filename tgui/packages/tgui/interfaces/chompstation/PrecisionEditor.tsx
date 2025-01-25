@@ -1,4 +1,5 @@
-import { useBackend } from '../../backend';
+import { useBackend } from 'tgui/backend';
+import { Window } from 'tgui/layouts';
 import {
   Box,
   Button,
@@ -6,8 +7,7 @@ import {
   LabeledList,
   NoticeBox,
   Section,
-} from '../../components';
-import { Window } from '../../layouts';
+} from 'tgui-core/components';
 
 type Data = {
   screenstate: string;

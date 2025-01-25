@@ -1,18 +1,17 @@
 /* eslint react/no-danger: "off" */
 import { KEY } from 'common/keys';
 import { useState } from 'react';
-
-import { useBackend } from '../../backend';
+import { useBackend } from 'tgui/backend';
+import { Window } from 'tgui/layouts';
 import {
   Box,
   Button,
   Divider,
-  Flex,
   Input,
   LabeledList,
   Section,
-} from '../../components';
-import { Window } from '../../layouts';
+  Stack,
+} from 'tgui-core/components';
 
 const Level = {
   0: 'Adminhelp',
@@ -51,60 +50,71 @@ export const TicketChat = (props) => {
   return (
     <Window width={900} height={600}>
       <Window.Content>
-        <Section
-          title={'Ticket #' + id}
-          buttons={
-            <Box nowrap>
-              <Button color={LevelColor[level]}>{Level[level]}</Button>
-            </Box>
-          }
-        >
-          <LabeledList>
-            <LabeledList.Item label="Assignee">{handler}</LabeledList.Item>
-            <LabeledList.Item label="Log" />
-          </LabeledList>
-          <Divider />
-          <Flex direction="column">
-            <Flex.Item>
-              {Object.keys(log)
-                .slice(0)
-                .map((L, i) => (
-                  <div key={i} dangerouslySetInnerHTML={{ __html: log[L] }} />
-                ))}
-            </Flex.Item>
-            <Divider />
-            <Flex.Item>
-              <Flex>
-                <Flex.Item grow>
-                  <Input
-                    autoFocus
-                    autoSelect
-                    fluid
-                    placeholder="Enter a message..."
-                    value={ticketChat}
-                    onInput={(e, value: string) => setTicketChat(value)}
-                    onKeyDown={(e) => {
-                      if (KEY.Enter === e.key) {
-                        act('send_msg', { msg: ticketChat });
-                        setTicketChat('');
-                      }
-                    }}
-                  />
-                </Flex.Item>
-                <Flex.Item>
-                  <Button
-                    onClick={() => {
-                      act('send_msg', { msg: ticketChat });
-                      setTicketChat('');
-                    }}
-                  >
-                    Send
-                  </Button>
-                </Flex.Item>
-              </Flex>
-            </Flex.Item>
-          </Flex>
-        </Section>
+        <Stack fill vertical>
+          <Stack.Item>
+            <Section
+              title={'Ticket #' + id}
+              buttons={
+                <Box nowrap>
+                  <Button color={LevelColor[level]}>{Level[level]}</Button>
+                </Box>
+              }
+            >
+              <LabeledList>
+                <LabeledList.Item label="Assignee">{handler}</LabeledList.Item>
+                <LabeledList.Item label="Log" />
+              </LabeledList>
+            </Section>
+          </Stack.Item>
+          <Stack.Item grow>
+            <Section fill scrollable>
+              <Stack fill direction="column">
+                <Stack.Item grow>
+                  {Object.keys(log)
+                    .slice(0)
+                    .map((L, i) => (
+                      <div
+                        key={i}
+                        dangerouslySetInnerHTML={{ __html: log[L] }}
+                      />
+                    ))}
+                </Stack.Item>
+                <Divider />
+                <Stack.Item grow>
+                  <Stack fill>
+                    <Stack.Item grow>
+                      <Input
+                        autoFocus
+                        updateOnPropsChange
+                        autoSelect
+                        fluid
+                        placeholder="Enter a message..."
+                        value={ticketChat}
+                        onInput={(e, value: string) => setTicketChat(value)}
+                        onKeyDown={(e) => {
+                          if (KEY.Enter === e.key) {
+                            act('send_msg', { msg: ticketChat });
+                            setTicketChat('');
+                          }
+                        }}
+                      />
+                    </Stack.Item>
+                    <Stack.Item>
+                      <Button
+                        onClick={() => {
+                          act('send_msg', { msg: ticketChat });
+                          setTicketChat('');
+                        }}
+                      >
+                        Send
+                      </Button>
+                    </Stack.Item>
+                  </Stack>
+                </Stack.Item>
+              </Stack>
+            </Section>
+          </Stack.Item>
+        </Stack>
       </Window.Content>
     </Window>
   );

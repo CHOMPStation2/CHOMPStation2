@@ -1,5 +1,6 @@
-import { useBackend } from '../../../backend';
-import { Box, Button, Flex, LabeledList, Section } from '../../../components';
+import { useBackend } from 'tgui/backend';
+import { Box, Button, LabeledList, Section, Stack } from 'tgui-core/components';
+
 import { Data } from './types';
 
 export const ChemSynthesizerQueueRecipes = (props) => {
@@ -13,8 +14,8 @@ export const ChemSynthesizerQueueRecipes = (props) => {
   } = data;
 
   return (
-    <Flex height="100%" width="100%" direction="column">
-      <Flex.Item maxHeight="50%" grow={1} basis={0}>
+    <Stack height="100%" width="100%" direction="column">
+      <Stack.Item maxHeight="50%" grow basis={0}>
         <Section
           height="100%"
           title="Queue"
@@ -81,8 +82,8 @@ export const ChemSynthesizerQueueRecipes = (props) => {
               })) || <Box m={1}>Queue Empty.</Box>}
           </LabeledList>
         </Section>
-      </Flex.Item>
-      <Flex.Item maxHeight="50%" grow={1} basis={0}>
+      </Stack.Item>
+      <Stack.Item maxHeight="50%" grow basis={0}>
         <Section
           height="100%"
           title="Recipes"
@@ -134,7 +135,7 @@ export const ChemSynthesizerQueueRecipes = (props) => {
               })) || <Box m={1}>No recipes found.</Box>}
           </LabeledList>
         </Section>
-      </Flex.Item>
-    </Flex>
+      </Stack.Item>
+    </Stack>
   );
 };

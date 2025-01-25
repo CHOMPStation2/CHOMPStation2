@@ -1,5 +1,5 @@
 import { useBackend } from 'tgui/backend';
-import { Button, LabeledList, Section } from 'tgui/components';
+import { Button, LabeledList, Section } from 'tgui-core/components';
 
 import { reagentToColor } from '../constants';
 import { LiquidColorInput } from '../LiquidColorInput';

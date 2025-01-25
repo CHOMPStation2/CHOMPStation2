@@ -1,19 +1,18 @@
 /* eslint react/no-danger: "off" */
 import { KEY } from 'common/keys';
-import { round, toFixed } from 'common/math';
 import { useState } from 'react';
-
-import { useBackend } from '../../backend';
+import { useBackend } from 'tgui/backend';
+import { Window } from 'tgui/layouts';
 import {
   Box,
   Button,
   Divider,
-  Flex,
   Input,
   LabeledList,
   Section,
-} from '../../components';
-import { Window } from '../../layouts';
+  Stack,
+} from 'tgui-core/components';
+import { round, toFixed } from 'tgui-core/math';
 
 const Level = {
   0: 'Adminhelp',
@@ -77,95 +76,109 @@ export const Ticket = (props) => {
   } = data;
   return (
     <Window width={900} height={600}>
-      <Window.Content scrollable>
-        <Section
-          title={'Ticket #' + id}
-          buttons={
-            <Box nowrap>
-              <Button icon="pen" onClick={() => act('retitle')}>
-                Rename Ticket
-              </Button>
-              <Button onClick={() => act('legacy')}>Legacy UI</Button>
-              <Button color={LevelColor[level]}>{Level[level]}</Button>
-            </Box>
-          }
-        >
-          <LabeledList>
-            <LabeledList.Item label="Ticket ID">
-              #{id}: <div dangerouslySetInnerHTML={{ __html: name }} />
-            </LabeledList.Item>
-            <LabeledList.Item label="Type">{Level[level]}</LabeledList.Item>
-            <LabeledList.Item label="State">{State[state]}</LabeledList.Item>
-            <LabeledList.Item label="Assignee">{handler}</LabeledList.Item>
-            {State[state] === State.open ? (
-              <LabeledList.Item label="Opened At">
-                {opened_at_date +
-                  ' (' +
-                  toFixed(round((opened_at / 600) * 10, 0) / 10, 1) +
-                  ' minutes ago.)'}
-              </LabeledList.Item>
-            ) : (
-              <LabeledList.Item label="Closed At">
-                {closed_at_date +
-                  ' (' +
-                  toFixed(round((closed_at / 600) * 10, 0) / 10, 1) +
-                  ' minutes ago.)'}
-                <Button onClick={() => act('reopen')}>Reopen</Button>
-              </LabeledList.Item>
-            )}
-            <LabeledList.Item label="Actions">
-              <div dangerouslySetInnerHTML={{ __html: actions }} />
-            </LabeledList.Item>
-            <LabeledList.Item label="Log" />
-          </LabeledList>
-          <Divider />
-          <Flex direction="column">
-            <Flex.Item>
-              {Object.keys(log)
-                .slice(0)
-                .map((L, i) => (
-                  <div key={i} dangerouslySetInnerHTML={{ __html: log[L] }} />
-                ))}
-            </Flex.Item>
-            <Divider />
-            <Flex.Item>
-              <Flex>
-                <Flex.Item grow>
-                  <Input
-                    autoFocus
-                    autoSelect
-                    fluid
-                    placeholder="Enter a message..."
-                    value={ticketChat}
-                    onInput={(e, value: string) => setTicketChat(value)}
-                    onKeyDown={(e) => {
-                      if (KEY.Enter === e.key) {
-                        act('send_msg', {
-                          msg: ticketChat,
-                          ticket_ref: ticket_ref,
-                        });
-                        setTicketChat('');
-                      }
-                    }}
-                  />
-                </Flex.Item>
-                <Flex.Item>
-                  <Button
-                    onClick={() => {
-                      act('send_msg', {
-                        msg: ticketChat,
-                        ticket_ref: ticket_ref,
-                      });
-                      setTicketChat('');
-                    }}
-                  >
-                    Send
+      <Window.Content>
+        <Stack fill vertical>
+          <Stack.Item>
+            <Section
+              title={'Ticket #' + id}
+              buttons={
+                <Box nowrap>
+                  <Button icon="pen" onClick={() => act('retitle')}>
+                    Rename Ticket
                   </Button>
-                </Flex.Item>
-              </Flex>
-            </Flex.Item>
-          </Flex>
-        </Section>
+                  <Button onClick={() => act('legacy')}>Legacy UI</Button>
+                  <Button color={LevelColor[level]}>{Level[level]}</Button>
+                </Box>
+              }
+            >
+              <LabeledList>
+                <LabeledList.Item label="Ticket ID">
+                  #{id}: <div dangerouslySetInnerHTML={{ __html: name }} />
+                </LabeledList.Item>
+                <LabeledList.Item label="Type">{Level[level]}</LabeledList.Item>
+                <LabeledList.Item label="State">
+                  {State[state]}
+                </LabeledList.Item>
+                <LabeledList.Item label="Assignee">{handler}</LabeledList.Item>
+                {State[state] === State.open ? (
+                  <LabeledList.Item label="Opened At">
+                    {opened_at_date +
+                      ' (' +
+                      toFixed(round((opened_at / 600) * 10, 0) / 10, 1) +
+                      ' minutes ago.)'}
+                  </LabeledList.Item>
+                ) : (
+                  <LabeledList.Item label="Closed At">
+                    {closed_at_date +
+                      ' (' +
+                      toFixed(round((closed_at / 600) * 10, 0) / 10, 1) +
+                      ' minutes ago.)'}
+                    <Button onClick={() => act('reopen')}>Reopen</Button>
+                  </LabeledList.Item>
+                )}
+                <LabeledList.Item label="Actions">
+                  <div dangerouslySetInnerHTML={{ __html: actions }} />
+                </LabeledList.Item>
+                <LabeledList.Item label="Log" />
+              </LabeledList>
+            </Section>
+            <Divider />
+          </Stack.Item>
+          <Stack.Item grow>
+            <Section scrollable fill>
+              <Stack direction="column">
+                <Stack.Item>
+                  {Object.keys(log)
+                    .slice(0)
+                    .map((L, i) => (
+                      <div
+                        key={i}
+                        dangerouslySetInnerHTML={{ __html: log[L] }}
+                      />
+                    ))}
+                </Stack.Item>
+                <Divider />
+                <Stack.Item>
+                  <Stack>
+                    <Stack.Item grow>
+                      <Input
+                        autoFocus
+                        updateOnPropsChange
+                        autoSelect
+                        fluid
+                        placeholder="Enter a message..."
+                        value={ticketChat}
+                        onInput={(e, value: string) => setTicketChat(value)}
+                        onKeyDown={(e) => {
+                          if (KEY.Enter === e.key) {
+                            act('send_msg', {
+                              msg: ticketChat,
+                              ticket_ref: ticket_ref,
+                            });
+                            setTicketChat('');
+                          }
+                        }}
+                      />
+                    </Stack.Item>
+                    <Stack.Item>
+                      <Button
+                        onClick={() => {
+                          act('send_msg', {
+                            msg: ticketChat,
+                            ticket_ref: ticket_ref,
+                          });
+                          setTicketChat('');
+                        }}
+                      >
+                        Send
+                      </Button>
+                    </Stack.Item>
+                  </Stack>
+                </Stack.Item>
+              </Stack>
+            </Section>
+          </Stack.Item>
+        </Stack>
       </Window.Content>
     </Window>
   );
