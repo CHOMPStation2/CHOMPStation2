@@ -1,6 +1,6 @@
 /* eslint react/no-danger: "off" */
 import { KEY } from 'common/keys';
-import { useState } from 'react';
+import { RefObject, useEffect, useRef, useState } from 'react';
 import { useBackend } from 'tgui/backend';
 import { Window } from 'tgui/layouts';
 import {
@@ -47,6 +47,28 @@ export const TicketChat = (props) => {
   const { act, data } = useBackend<Data>();
   const [ticketChat, setTicketChat] = useState('');
   const { id, level, handler, log } = data;
+
+  const messagesEndRef: RefObject<HTMLDivElement> = useRef(null);
+
+  useEffect(() => {
+    const scroll = messagesEndRef.current;
+    if (scroll) {
+      scroll.scrollTop = scroll.scrollHeight;
+    }
+  }, []);
+
+  useEffect(() => {
+    const scroll = messagesEndRef.current;
+    if (scroll) {
+      const height = scroll.scrollHeight;
+      const bottom = scroll.scrollTop + scroll.offsetHeight;
+      const scrollTracking = Math.abs(height - bottom) < 24;
+      if (scrollTracking) {
+        scroll.scrollTop = scroll.scrollHeight;
+      }
+    }
+  });
+
   return (
     <Window width={900} height={600}>
       <Window.Content>
@@ -65,9 +87,10 @@ export const TicketChat = (props) => {
                 <LabeledList.Item label="Log" />
               </LabeledList>
             </Section>
+            <Divider />
           </Stack.Item>
           <Stack.Item grow>
-            <Section fill scrollable>
+            <Section fill ref={messagesEndRef} scrollable>
               <Stack fill direction="column">
                 <Stack.Item grow>
                   {Object.keys(log)
@@ -79,37 +102,36 @@ export const TicketChat = (props) => {
                       />
                     ))}
                 </Stack.Item>
-                <Divider />
+              </Stack>
+            </Section>
+            <Section fill>
+              <Stack fill>
                 <Stack.Item grow>
-                  <Stack fill>
-                    <Stack.Item grow>
-                      <Input
-                        autoFocus
-                        updateOnPropsChange
-                        autoSelect
-                        fluid
-                        placeholder="Enter a message..."
-                        value={ticketChat}
-                        onInput={(e, value: string) => setTicketChat(value)}
-                        onKeyDown={(e) => {
-                          if (KEY.Enter === e.key) {
-                            act('send_msg', { msg: ticketChat });
-                            setTicketChat('');
-                          }
-                        }}
-                      />
-                    </Stack.Item>
-                    <Stack.Item>
-                      <Button
-                        onClick={() => {
-                          act('send_msg', { msg: ticketChat });
-                          setTicketChat('');
-                        }}
-                      >
-                        Send
-                      </Button>
-                    </Stack.Item>
-                  </Stack>
+                  <Input
+                    autoFocus
+                    updateOnPropsChange
+                    autoSelect
+                    fluid
+                    placeholder="Enter a message..."
+                    value={ticketChat}
+                    onInput={(e, value: string) => setTicketChat(value)}
+                    onKeyDown={(e) => {
+                      if (KEY.Enter === e.key) {
+                        act('send_msg', { msg: ticketChat });
+                        setTicketChat('');
+                      }
+                    }}
+                  />
+                </Stack.Item>
+                <Stack.Item>
+                  <Button
+                    onClick={() => {
+                      act('send_msg', { msg: ticketChat });
+                      setTicketChat('');
+                    }}
+                  >
+                    Send
+                  </Button>
                 </Stack.Item>
               </Stack>
             </Section>

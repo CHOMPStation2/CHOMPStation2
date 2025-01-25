@@ -1,6 +1,6 @@
 /* eslint react/no-danger: "off" */
 import { KEY } from 'common/keys';
-import { useState } from 'react';
+import { RefObject, useEffect, useRef, useState } from 'react';
 import { useBackend } from 'tgui/backend';
 import { Window } from 'tgui/layouts';
 import {
@@ -100,6 +100,27 @@ export const TicketsPanel = (props) => {
   const [levelFilter, setLevelFilter] = useState(2);
 
   const [ticketChat, setTicketChat] = useState('');
+
+  const messagesEndRef: RefObject<HTMLDivElement> = useRef(null);
+
+  useEffect(() => {
+    const scroll = messagesEndRef.current;
+    if (scroll) {
+      scroll.scrollTop = scroll.scrollHeight;
+    }
+  }, []);
+
+  useEffect(() => {
+    const scroll = messagesEndRef.current;
+    if (scroll) {
+      const height = scroll.scrollHeight;
+      const bottom = scroll.scrollTop + scroll.offsetHeight;
+      const scrollTracking = Math.abs(height - bottom) < 24;
+      if (scrollTracking) {
+        scroll.scrollTop = scroll.scrollHeight;
+      }
+    }
+  });
 
   let filtered_tickets = getFilteredTickets(tickets, stateFilter, levelFilter);
   return (
@@ -247,9 +268,10 @@ export const TicketsPanel = (props) => {
                       <LabeledList.Item label="Log" />
                     </LabeledList>
                   </Section>
+                  <Divider />
                 </Stack.Item>
                 <Stack.Item grow>
-                  <Section fill scrollable>
+                  <Section fill ref={messagesEndRef} scrollable>
                     <Stack direction="column">
                       <Stack.Item>
                         {Object.keys(selected_ticket.log)
@@ -263,39 +285,38 @@ export const TicketsPanel = (props) => {
                             />
                           ))}
                       </Stack.Item>
-                      <Divider />
+                    </Stack>
+                  </Section>
+                </Stack.Item>
+                <Stack.Item>
+                  <Section fill>
+                    <Stack fill>
+                      <Stack.Item grow>
+                        <Input
+                          autoFocus
+                          autoSelect
+                          fluid
+                          updateOnPropsChange
+                          placeholder="Enter a message..."
+                          value={ticketChat}
+                          onInput={(e, value: string) => setTicketChat(value)}
+                          onKeyDown={(e) => {
+                            if (KEY.Enter === e.key) {
+                              act('send_msg', { msg: ticketChat });
+                              setTicketChat('');
+                            }
+                          }}
+                        />
+                      </Stack.Item>
                       <Stack.Item>
-                        <Stack>
-                          <Stack.Item grow>
-                            <Input
-                              autoFocus
-                              autoSelect
-                              fluid
-                              updateOnPropsChange
-                              placeholder="Enter a message..."
-                              value={ticketChat}
-                              onInput={(e, value: string) =>
-                                setTicketChat(value)
-                              }
-                              onKeyDown={(e) => {
-                                if (KEY.Enter === e.key) {
-                                  act('send_msg', { msg: ticketChat });
-                                  setTicketChat('');
-                                }
-                              }}
-                            />
-                          </Stack.Item>
-                          <Stack.Item>
-                            <Button
-                              onClick={() => {
-                                act('send_msg', { msg: ticketChat });
-                                setTicketChat('');
-                              }}
-                            >
-                              Send
-                            </Button>
-                          </Stack.Item>
-                        </Stack>
+                        <Button
+                          onClick={() => {
+                            act('send_msg', { msg: ticketChat });
+                            setTicketChat('');
+                          }}
+                        >
+                          Send
+                        </Button>
                       </Stack.Item>
                     </Stack>
                   </Section>
