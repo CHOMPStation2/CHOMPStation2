@@ -1,4 +1,4 @@
-import { Button, Icon, Table } from '../../../components';
+import { Button, Icon, Table } from 'tgui-core/components';
 
 export const SortButton = (props: {
   id: string;

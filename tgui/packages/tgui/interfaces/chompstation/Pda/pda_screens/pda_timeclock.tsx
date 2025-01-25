@@ -1,6 +1,7 @@
 import { toFixed } from 'common/math';
 import { BooleanLike } from 'common/react';
 import { useBackend } from 'tgui/backend';
+import { RankIcon } from 'tgui/interfaces/common/RankIcon';
 import {
   Box,
   Button,
@@ -10,8 +11,6 @@ import {
   Stack,
 } from 'tgui-core/components';
 import { formatTime } from 'tgui-core/format';
-
-import { RankIcon } from '../../../common/RankIcon';
 
 type Data = {
   card: string | null;

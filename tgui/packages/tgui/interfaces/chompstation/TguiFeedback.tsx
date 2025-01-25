@@ -1,16 +1,15 @@
 import { useState } from 'react';
-
-import { useBackend } from '../../backend';
+import { useBackend } from 'tgui/backend';
+import { Window } from 'tgui/layouts';
 import {
   Box,
   Button,
-  Flex,
   Input,
   Section,
+  Stack,
   Tabs,
   TextArea,
-} from '../../components';
-import { Window } from '../../layouts';
+} from 'tgui-core/components';
 
 type Data = {
   open_windows: string[];
@@ -24,8 +23,8 @@ export const TguiFeedback = (props) => {
   const [comment, setComment] = useState<string>('');
   return (
     <Window width={550} height={460}>
-      <Flex>
-        <Flex.Item>
+      <Stack>
+        <Stack.Item>
           <Section title="Open Windows" scrollable>
             <Tabs vertical>
               {open_windows.map((window) => (
@@ -39,8 +38,8 @@ export const TguiFeedback = (props) => {
               ))}
             </Tabs>
           </Section>
-        </Flex.Item>
-        <Flex.Item>
+        </Stack.Item>
+        <Stack.Item>
           {selected_window && (
             <>
               <Section title="Rating">
@@ -67,8 +66,8 @@ export const TguiFeedback = (props) => {
             </>
           )}
           : {<>Please select an open window on the left!</>}
-        </Flex.Item>
-      </Flex>
+        </Stack.Item>
+      </Stack>
     </Window>
   );
 };

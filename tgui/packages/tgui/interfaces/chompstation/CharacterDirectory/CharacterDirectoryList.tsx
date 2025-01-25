@@ -1,7 +1,7 @@
 import { useState } from 'react';
+import { useBackend } from 'tgui/backend';
+import { Button, Section, Table } from 'tgui-core/components';
 
-import { useBackend } from '../../../backend';
-import { Button, Section, Table } from '../../../components';
 import { SortButton } from './CharacterDirectorySortButton';
 import { getTagColor } from './constants';
 import { mobEntry } from './types';

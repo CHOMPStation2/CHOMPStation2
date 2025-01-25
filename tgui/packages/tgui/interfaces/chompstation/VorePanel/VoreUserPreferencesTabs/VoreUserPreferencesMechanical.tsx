@@ -1,6 +1,6 @@
-import { BooleanLike } from 'common/react';
 import { useBackend } from 'tgui/backend';
-import { Button, Flex, Section } from 'tgui/components';
+import { Button, Section, Stack } from 'tgui-core/components';
+import { BooleanLike } from 'tgui-core/react';
 
 import { localPrefs } from '../types';
 import { VoreUserPreferenceItem } from '../VoreUserPreferenceItem';
@@ -36,86 +36,91 @@ export const VoreUserPreferencesMechanical = (props: {
         </Button>
       }
     >
-      <Flex spacing={1} wrap="wrap" justify="center">
-        <Flex.Item basis="33%">
+      <Stack wrap="wrap" justify="center">
+        <Stack.Item
+          basis="32%"
+          style={{
+            marginLeft: '0.5em', // Remove if tgui core implements gap
+          }}
+        >
           <VoreUserPreferenceItem
             spec={preferences.steppref}
             tooltipPosition="right"
           />
-        </Flex.Item>
-        <Flex.Item basis="33%" grow={1}>
+        </Stack.Item>
+        <Stack.Item basis="32%" grow>
           <VoreUserPreferenceItem
             spec={preferences.pickuppref}
             tooltipPosition="top"
           />
-        </Flex.Item>
-        <Flex.Item basis="33%">
+        </Stack.Item>
+        <Stack.Item basis="32%">
           <VoreUserPreferenceItem
             spec={preferences.resize}
             tooltipPosition="left"
           />
-        </Flex.Item>
-        <Flex.Item basis="33%">
+        </Stack.Item>
+        <Stack.Item basis="32%">
           <VoreUserPreferenceItem
             spec={preferences.feed}
             tooltipPosition="right"
           />
-        </Flex.Item>
-        <Flex.Item basis="33%" grow={1}>
+        </Stack.Item>
+        <Stack.Item basis="32%" grow>
           <VoreUserPreferenceItem
             spec={preferences.liquid_receive}
             tooltipPosition="top"
           />
-        </Flex.Item>
-        <Flex.Item basis="33%">
+        </Stack.Item>
+        <Stack.Item basis="32%">
           <VoreUserPreferenceItem
             spec={preferences.liquid_give}
             tooltipPosition="left"
           />
-        </Flex.Item>
-        <Flex.Item basis="33%">
+        </Stack.Item>
+        <Stack.Item basis="32%">
           <VoreUserPreferenceItem
             spec={preferences.noisy}
             tooltipPosition="right"
           />
-        </Flex.Item>
-        <Flex.Item basis="33%" grow={1}>
+        </Stack.Item>
+        <Stack.Item basis="32%" grow>
           <VoreUserPreferenceItem
             spec={preferences.noisy_full}
             tooltipPosition="top"
           />
-        </Flex.Item>
-        <Flex.Item basis="33%">
+        </Stack.Item>
+        <Stack.Item basis="32%">
           <VoreUserPreferenceItem
             spec={preferences.eating_privacy_global}
             tooltipPosition="left"
           />
-        </Flex.Item>
-        <Flex.Item basis="33%">
+        </Stack.Item>
+        <Stack.Item basis="32%">
           <VoreUserPreferenceItem
             spec={preferences.vore_fx}
             tooltipPosition="right"
           />
-        </Flex.Item>
-        <Flex.Item basis="33%" grow={1}>
+        </Stack.Item>
+        <Stack.Item basis="32%" grow>
           <VoreUserPreferenceItem
             spec={preferences.spontaneous_tf}
             tooltipPosition="top"
           />
-        </Flex.Item>
-        <Flex.Item basis="33%">
+        </Stack.Item>
+        <Stack.Item basis="32%">
           <VoreUserPreferenceItem
             spec={preferences.mind_transfer}
             tooltipPosition="left"
           />
-          <Flex.Item basis="33%">
+          <Stack.Item basis="32%">
             <VoreUserPreferenceItem
               spec={preferences.allow_mimicry}
               tooltipPosition="right"
             />
-          </Flex.Item>
-        </Flex.Item>
-      </Flex>
+          </Stack.Item>
+        </Stack.Item>
+      </Stack>
     </Section>
   );
 };
