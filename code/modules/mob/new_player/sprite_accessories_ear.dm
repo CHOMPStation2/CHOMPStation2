@@ -37,7 +37,11 @@
 	icon_state = "shadekin"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
+<<<<<<< HEAD
 	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJARAN, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW) //Chompstation Edit, cute fluffy ears for all
+=======
+	species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW)
+>>>>>>> fa3458c11b (De-collide-oscope (#16938))
 
 /datum/sprite_accessory/ears/shadekin/round
 	name = "Shadekin Ears Round, colorable"
@@ -952,7 +956,11 @@
 /datum/sprite_accessory/ears/altevian
 	name = "Altevian Ears"
 	desc = ""
+<<<<<<< HEAD
 	icon = 'icons/mob/human_races/sprite_accessories/ears.dmi'
+=======
+	icon = 'icons/mob/vore/ears_vr.dmi'
+>>>>>>> fa3458c11b (De-collide-oscope (#16938))
 	icon_state = "altevian"
 	extra_overlay = "altevian-inner"
 	do_colouration = 1
@@ -1108,6 +1116,7 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
+<<<<<<< HEAD
 /datum/sprite_accessory/ears/angler
 	name = "Angler bulb"
 	desc = ""
@@ -1116,6 +1125,8 @@
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "angler_bulb"
 
+=======
+>>>>>>> fa3458c11b (De-collide-oscope (#16938))
 //Dino frills
 /datum/sprite_accessory/ears/dino_frills
 	name = "triceratops frills"
@@ -1124,7 +1135,11 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
+<<<<<<< HEAD
 /* // Special snowflake ears go below here. //CHOMPRemove - no they don't
+=======
+// Special snowflake ears go below here.
+>>>>>>> fa3458c11b (De-collide-oscope (#16938))
 
 /datum/sprite_accessory/ears/kara //SatinIsle Fluff Item
 	name = "Pterokara horn"
@@ -1223,4 +1238,7 @@
     desc = ""
     icon_state = "pipears"
     ckeys_allowed = list("phoaly")
+<<<<<<< HEAD
 	*/ //CHOMPRemove END
+=======
+>>>>>>> fa3458c11b (De-collide-oscope (#16938))

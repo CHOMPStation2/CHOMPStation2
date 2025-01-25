@@ -769,7 +769,12 @@
 	loaf_offset = 6
 	vore_tail_sprite_variant = "Drake"
 	belly_variant_when_loaf = TRUE
+<<<<<<< HEAD
 	fullness_icons = 3
+=======
+	fullness_icons = 1
+	struggle_anim = TRUE
+>>>>>>> fa3458c11b (De-collide-oscope (#16938))
 
 /datum/sprite_accessory/tail/taur/drake/fat
 	name = "Fat Drake (Taur)"
@@ -1065,7 +1070,11 @@
 	can_loaf = TRUE
 	icon_loaf = 'icons/rogue-star/loafs_64x32.dmi'
 	loaf_offset = 4
+<<<<<<< HEAD
 /*// Special snowflake tails/taurhalves // CHOMPRemove Start
+=======
+// Special snowflake tails/taurhalves
+>>>>>>> fa3458c11b (De-collide-oscope (#16938))
 
 //spoopylizz: Roiz Lizden
 /datum/sprite_accessory/tail/taur/roiz_long_lizard // Not ACTUALLY a taur, but it uses 32x64 so it wouldn't fit in tails.dmi, and having it as a tail bugs up the sprite.
@@ -1152,4 +1161,7 @@
 
 	msg_owner_grab_fail = "You step down onto %prey with one of your vines, forcing them onto the ground!"
 	msg_prey_grab_fail = "%owner steps down onto you with one of their vines, squishing you and forcing you onto the ground!"
+<<<<<<< HEAD
 */// CHOMPRemove End
+=======
+>>>>>>> fa3458c11b (De-collide-oscope (#16938))

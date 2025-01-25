@@ -845,7 +845,10 @@ includes scars and tattoos
 	name = "Underfluff (Teshari)"
 	icon_state = "teshi_fluff"
 	body_parts = list(BP_HEAD, BP_TORSO, BP_GROIN, BP_R_LEG, BP_L_LEG)
+<<<<<<< HEAD
 	color_blend_mode = ICON_MULTIPLY
+=======
+>>>>>>> fa3458c11b (De-collide-oscope (#16938))
 	species_allowed = list(SPECIES_TESHARI)
 
 /datum/sprite_accessory/marking/teshi_heterochromia
@@ -2103,7 +2106,11 @@ includes scars and tattoos
 	color_blend_mode = ICON_MULTIPLY
 	body_parts = list(BP_L_ARM,BP_R_ARM)
 
+<<<<<<< HEAD
 	//CitRP stuff
+=======
+//CitRP stuff
+>>>>>>> fa3458c11b (De-collide-oscope (#16938))
 
 /datum/sprite_accessory/marking/vr_c_beast_body
 	name = "Cyber Body"

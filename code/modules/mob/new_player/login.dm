@@ -3,11 +3,19 @@
 var/obj/effect/lobby_image = new /obj/effect/lobby_image
 
 /obj/effect/lobby_image
+<<<<<<< HEAD
 	name = "CHOMPStation" // CHOMPEdit
 	desc = "How are you reading this?"
 	screen_loc = "1,1"
 	icon = 'icons/misc/loading.dmi'
 	icon_state = "loading(old)" // CHOMPEdit
+=======
+	name = "VORE Station"
+	desc = "How are you reading this?"
+	screen_loc = "1,1"
+	icon = 'icons/misc/loading.dmi'
+	icon_state = "loading"
+>>>>>>> fa3458c11b (De-collide-oscope (#16938))
 
 /obj/effect/lobby_image/Initialize()
 	icon = using_map.lobby_icon

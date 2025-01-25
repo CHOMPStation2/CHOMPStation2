@@ -3744,17 +3744,26 @@
 #include "code\modules\mob\new_player\sprite_accessories.dm"
 #include "code\modules\mob\new_player\sprite_accessories_beards.dm"
 #include "code\modules\mob\new_player\sprite_accessories_ear.dm"
+<<<<<<< HEAD
 #include "code\modules\mob\new_player\sprite_accessories_ear_ch.dm"
 #include "code\modules\mob\new_player\sprite_accessories_extra_ch.dm"
+=======
+>>>>>>> fa3458c11b (De-collide-oscope (#16938))
 #include "code\modules\mob\new_player\sprite_accessories_hair.dm"
 #include "code\modules\mob\new_player\sprite_accessories_hair_extra.dm"
 #include "code\modules\mob\new_player\sprite_accessories_markings.dm"
 #include "code\modules\mob\new_player\sprite_accessories_tail.dm"
+<<<<<<< HEAD
 #include "code\modules\mob\new_player\sprite_accessories_tail_ch.dm"
 #include "code\modules\mob\new_player\sprite_accessories_taur.dm"
 #include "code\modules\mob\new_player\sprite_accessories_wing.dm"
 #include "code\modules\mob\new_player\sprite_accessories_wing_large.dm"
 #include "code\modules\mob\new_player\sprite_accessories_yw.dm"
+=======
+#include "code\modules\mob\new_player\sprite_accessories_taur.dm"
+#include "code\modules\mob\new_player\sprite_accessories_wing.dm"
+#include "code\modules\mob\new_player\sprite_accessories_wing_large.dm"
+>>>>>>> fa3458c11b (De-collide-oscope (#16938))
 #include "code\modules\modular_computers\laptop_vendor.dm"
 #include "code\modules\modular_computers\computers\modular_computer\core.dm"
 #include "code\modules\modular_computers\computers\modular_computer\damage.dm"
