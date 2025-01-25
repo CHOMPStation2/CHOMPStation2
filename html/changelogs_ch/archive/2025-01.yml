@@ -254,3 +254,6 @@
       and replaces a Flex element with Stack
   TheGreatKitsune:
   - qol: doorbell functionality moved to ctrl-click.
+2025-01-25:
+  Kashargul:
+  - code_imp: migrates our chomp UIs to tgui-core
