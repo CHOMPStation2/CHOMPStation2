@@ -1344,6 +1344,7 @@
 		if(usr == src)
 			save_ooc_panel(usr) //ChompEDIT - usr arg
 	if(href_list["print_ooc_notes_to_chat"])
+<<<<<<< HEAD
 		print_ooc_notes_to_chat(usr) //ChompEDIT - usr arg
 	//CHOMPEdit Start
 	if(href_list["edit_ooc_note_favs"])
@@ -1355,6 +1356,15 @@
 	if(href_list["set_metainfo_ooc_style"])
 		set_metainfo_ooc_style(usr) //ChompEDIT - usr arg
 	//CHOMPEdit End
+=======
+		print_ooc_notes_to_chat()
+	if(href_list["save_private_notes"])
+		if(usr == src)
+			save_private_notes(usr)
+	if(href_list["edit_private_notes"])
+		if(usr == src)
+			set_metainfo_private_notes(usr)
+>>>>>>> b7b630d592 (Adds a persistent notes feature (#16923))
 	return ..()
 
 /mob/living/proc/display_voreprefs(mob/user)	//Called by Topic() calls on instances of /mob/living (and subtypes) containing vore_prefs as an argument
