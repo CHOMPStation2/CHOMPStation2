@@ -4667,15 +4667,7 @@
 #include "code\modules\xenoarcheaology\effects\animate_anomaly.dm"
 #include "code\modules\xenoarcheaology\effects\atmospheric.dm"
 #include "code\modules\xenoarcheaology\effects\berserk.dm"
-<<<<<<< HEAD
-#include "code\modules\xenoarcheaology\effects\cannibal.dm"
-#include "code\modules\xenoarcheaology\effects\cellcharge.dm"
-#include "code\modules\xenoarcheaology\effects\celldrain.dm"
-#include "code\modules\xenoarcheaology\effects\cold.dm"
-#include "code\modules\xenoarcheaology\effects\dnaswitch.dm"
-=======
 #include "code\modules\xenoarcheaology\effects\cell.dm"
->>>>>>> 09b36a7ff6 (Xenoarch Rework [Ready for Review] (#16757))
 #include "code\modules\xenoarcheaology\effects\electric_field.dm"
 #include "code\modules\xenoarcheaology\effects\emp.dm"
 #include "code\modules\xenoarcheaology\effects\feelings.dm"
@@ -4693,11 +4685,6 @@
 #include "code\modules\xenoarcheaology\effects\teleport.dm"
 #include "code\modules\xenoarcheaology\effects\temperature.dm"
 #include "code\modules\xenoarcheaology\effects\vampire.dm"
-<<<<<<< HEAD
-#include "code\modules\xenoarcheaology\finds\eguns.dm"
-#include "code\modules\xenoarcheaology\finds\eguns_vr_ch.dm"
-=======
->>>>>>> 09b36a7ff6 (Xenoarch Rework [Ready for Review] (#16757))
 #include "code\modules\xenoarcheaology\finds\find_spawning.dm"
 #include "code\modules\xenoarcheaology\finds\finds.dm"
 #include "code\modules\xenoarcheaology\finds\finds_defines.dm"
@@ -4707,6 +4694,7 @@
 #include "code\modules\xenoarcheaology\finds\talking.dm"
 #include "code\modules\xenoarcheaology\finds\Weapons\archeo_eguns.dm"
 #include "code\modules\xenoarcheaology\finds\Weapons\archeo_eguns_vr.dm"
+#include "code\modules\xenoarcheaology\finds\Weapons\archeo_eguns_vr_ch.dm"
 #include "code\modules\xenoarcheaology\finds\Weapons\archeo_guns.dm"
 #include "code\modules\xenoarcheaology\finds\Weapons\archeo_melee.dm"
 #include "code\modules\xenoarcheaology\tools\ano_device_battery.dm"
