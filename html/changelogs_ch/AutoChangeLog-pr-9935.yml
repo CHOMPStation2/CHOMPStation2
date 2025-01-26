@@ -1,0 +1,6 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - rscadd: "Added a new \"Private Notes\" option to character setup."
+  - rscadd: "Added a new \"Private Notes\" verb to the IC tab."
+  - qol: "Moved memory \"Note\" verbs to a new Notes sub category in the IC tab alongside the new Private Notes function."
