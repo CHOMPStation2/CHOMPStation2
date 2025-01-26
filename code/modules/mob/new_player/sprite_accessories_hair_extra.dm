@@ -4,10 +4,6 @@
 // Note: Creating a sub-datum to group all vore stuff together
 // would require us to exclude that datum from the global list.
 
-/datum/sprite_accessory/hair
-
-	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJARAN, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_SHADEKIN_YW, SPECIES_ALTEVIAN, SPECIES_LLEILL, SPECIES_HANNER) //This lets all races use the default hairstyles.
-
 /datum/sprite_accessory/hair/astolfo
 	name = "Astolfo"
 	icon = 'icons/mob/human_face_vr.dmi'
@@ -99,14 +95,12 @@
 	name = "Bald"
 	icon_state = "bald"
 	gender = MALE
-	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJARAN, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_ALTEVIAN) //Lets all the races be bald if they want.
 
 /datum/sprite_accessory/hair/ponytail6_fixed
 	name = "Ponytail 6 but fixed"
 	icon = 'icons/mob/human_face_vr.dmi'
 	icon_add = 'icons/mob/human_face_vr_add.dmi'
 	icon_state = "hair_ponytail6"
-	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJARAN, SPECIES_NEVREAN, SPECIES_AKULA,SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW)
 
 /datum/sprite_accessory/hair/una_hood
 	name = "Cobra Hood"
@@ -117,185 +111,142 @@
 /datum/sprite_accessory/hair/una_spines_long
 	name = "Long Unathi Spines"
 	icon_state = "soghun_longspines"
-	species_allowed = list(SPECIES_UNATHI, SPECIES_XENOCHIMERA, SPECIES_PROTEAN) //Xenochimera get most hairstyles since they're abominations.
 
 /datum/sprite_accessory/hair/una_spines_short
 	name = "Short Unathi Spines"
 	icon_state = "soghun_shortspines"
-	species_allowed = list(SPECIES_UNATHI, SPECIES_XENOCHIMERA, SPECIES_PROTEAN)
 
 /datum/sprite_accessory/hair/una_frills_long
 	name = "Long Unathi Frills"
 	icon_state = "soghun_longfrills"
-	species_allowed = list(SPECIES_UNATHI, SPECIES_XENOCHIMERA, SPECIES_PROTEAN)
 
 /datum/sprite_accessory/hair/una_frills_short
 	name = "Short Unathi Frills"
 	icon_state = "soghun_shortfrills"
-	species_allowed = list(SPECIES_UNATHI, SPECIES_XENOCHIMERA, SPECIES_PROTEAN)
 
 /datum/sprite_accessory/hair/una_horns
 	name = "Unathi Horns"
 	icon_state = "soghun_horns"
-	species_allowed = list(SPECIES_UNATHI, SPECIES_XENOCHIMERA, SPECIES_PROTEAN)
 
 /datum/sprite_accessory/hair/una_bighorns
 	name = "Unathi Big Horns"
 	icon_state = "unathi_bighorn"
-	species_allowed = list(SPECIES_UNATHI, SPECIES_XENOCHIMERA, SPECIES_PROTEAN)
 
 /datum/sprite_accessory/hair/una_smallhorns
 	name = "Unathi Small Horns"
 	icon_state = "unathi_smallhorn"
-	species_allowed = list(SPECIES_UNATHI, SPECIES_XENOCHIMERA, SPECIES_PROTEAN)
 
 /datum/sprite_accessory/hair/una_ramhorns
 	name = "Unathi Ram Horns"
 	icon_state = "unathi_ramhorn"
-	species_allowed = list(SPECIES_UNATHI, SPECIES_XENOCHIMERA, SPECIES_PROTEAN)
 
 /datum/sprite_accessory/hair/una_sidefrills
 	name = "Unathi Side Frills"
 	icon_state = "unathi_sidefrills"
-	species_allowed = list(SPECIES_UNATHI, SPECIES_XENOCHIMERA, SPECIES_PROTEAN)
 
 /datum/sprite_accessory/hair/una_doublehorns
 	name = "Double Unathi Horns"
 	icon = 'icons/mob/human_face_vr.dmi'
 	icon_add = 'icons/mob/human_face_vr_add.dmi'
 	icon_state = "soghun_dubhorns"
-	species_allowed = list(SPECIES_UNATHI, SPECIES_XENOCHIMERA, SPECIES_PROTEAN)
 
 /datum/sprite_accessory/hair/una_quinthorns
 	name = "Quintiple Unathi Horns"
 	icon = 'icons/mob/human_face_vr.dmi'
 	icon_add = 'icons/mob/human_face_vr_add.dmi'
 	icon_state = "unathi_quintiple_horns"
-	species_allowed = list(SPECIES_UNATHI, SPECIES_XENOCHIMERA, SPECIES_PROTEAN)
 
 /datum/sprite_accessory/hair/taj_ears
 	name = "Tajaran Ears"
 	icon_state = "ears_plain"
-	species_allowed = list(SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_TAJARAN, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_PROTEAN)
 
 /datum/sprite_accessory/hair/taj_ears_clean
 	name = "Tajara Clean"
 	icon_state = "hair_clean"
-	species_allowed = list(SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_TAJARAN, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_PROTEAN)
 
 /datum/sprite_accessory/hair/taj_ears_bangs
 	name = "Tajara Bangs"
 	icon_state = "hair_bangs"
-	species_allowed = list(SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_TAJARAN, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_PROTEAN)
 
 /datum/sprite_accessory/hair/taj_ears_braid
 	name = "Tajara Braid"
 	icon_state = "hair_tbraid"
-	species_allowed = list(SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_TAJARAN, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_PROTEAN)
 
 /datum/sprite_accessory/hair/taj_ears_shaggy
 	name = "Tajara Shaggy"
 	icon_state = "hair_shaggy"
-	species_allowed = list(SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_TAJARAN, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_PROTEAN)
 
 /datum/sprite_accessory/hair/taj_ears_mohawk
 	name = "Tajaran Mohawk"
 	icon_state = "hair_mohawk"
-	species_allowed = list(SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_TAJARAN, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_PROTEAN)
 
 /datum/sprite_accessory/hair/taj_ears_plait
 	name = "Tajara Plait"
 	icon_state = "hair_plait"
-	species_allowed = list(SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_TAJARAN, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_PROTEAN)
 
 /datum/sprite_accessory/hair/taj_ears_straight
 	name = "Tajara Straight"
 	icon_state = "hair_straight"
-	species_allowed = list(SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_TAJARAN, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_PROTEAN)
 
 /datum/sprite_accessory/hair/taj_ears_long
 	name = "Tajara Long"
 	icon_state = "hair_long"
-	species_allowed = list(SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_TAJARAN, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_PROTEAN)
 
 /datum/sprite_accessory/hair/taj_ears_rattail
 	name = "Tajara Rat Tail"
 	icon_state = "hair_rattail"
-	species_allowed = list(SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_TAJARAN, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_PROTEAN)
 
 /datum/sprite_accessory/hair/taj_ears_spiky
 	name = "Tajara Spiky"
 	icon_state = "hair_tajspiky"
-	species_allowed = list(SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_TAJARAN, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_PROTEAN)
 
 /datum/sprite_accessory/hair/taj_ears_messy
 	name = "Tajara Messy"
 	icon_state = "hair_messy"
-	species_allowed = list(SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_TAJARAN, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_PROTEAN)
 
 /datum/sprite_accessory/hair/taj_ears_curls
 	name = "Tajaran Curly"
 	icon_state = "hair_curly"
-	species_allowed = list(SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_TAJARAN, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_PROTEAN)
 
 /datum/sprite_accessory/hair/taj_ears_wife
 	name = "Tajaran Housewife"
 	icon_state = "hair_wife"
-	species_allowed = list(SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_TAJARAN, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_PROTEAN)
 
 /datum/sprite_accessory/hair/taj_ears_victory
 	name = "Tajaran Victory Curls"
 	icon_state = "hair_victory"
-	species_allowed = list(SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_TAJARAN, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_PROTEAN)
 
 /datum/sprite_accessory/hair/taj_ears_bob
 	name = "Tajaran Bob"
 	icon_state = "hair_tbob"
-	species_allowed = list(SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_TAJARAN, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_PROTEAN)
 
 /datum/sprite_accessory/hair/taj_ears_fingercurl
 	name = "Tajaran Finger Curls"
 	icon_state = "hair_fingerwave"
-	species_allowed = list(SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_TAJARAN, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_PROTEAN)
-
 
 //Skrell 'hairstyles' - these were requested for a chimera and screw it, if one wants to eat seafood, go nuts
 /datum/sprite_accessory/hair/skr_tentacle_veryshort
 	name = "Skrell Very Short Tentacles"
 	icon_state = "skrell_hair_veryshort"
-	species_allowed = list(SPECIES_SKRELL, SPECIES_XENOCHIMERA, SPECIES_PROTEAN)
-	gender = MALE
 
 /datum/sprite_accessory/hair/skr_tentacle_short
 	name = "Skrell Short Tentacles"
 	icon_state = "skrell_hair_short"
-	species_allowed = list(SPECIES_SKRELL, SPECIES_XENOCHIMERA, SPECIES_PROTEAN)
 
 /datum/sprite_accessory/hair/skr_tentacle_average
 	name = "Skrell Average Tentacles"
 	icon_state = "skrell_hair_average"
-	species_allowed = list(SPECIES_SKRELL, SPECIES_XENOCHIMERA, SPECIES_PROTEAN)
 
 /datum/sprite_accessory/hair/skr_tentacle_verylong
 	name = "Skrell Long Tentacles"
 	icon_state = "skrell_hair_verylong"
-	species_allowed = list(SPECIES_SKRELL, SPECIES_XENOCHIMERA, SPECIES_PROTEAN)
-	gender = FEMALE
 
 // Vulpa stuffs
-
-/datum/sprite_accessory/hair/vulp_hair_none
-	name = "None"
-	icon_state = "bald"
-	species_allowed = list(SPECIES_VULPKANIN)
-	gender = NEUTER
-
 /datum/sprite_accessory/hair/vulp_hair_kajam
 	name = "Kajam"
 	icon = 'icons/mob/human_face_vr.dmi'
 	icon_add = 'icons/mob/human_face_vr_add.dmi'
 	icon_state = "kajam"
-	species_allowed = list(SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_TAJARAN, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_PROTEAN)
 	gender = NEUTER
 
 /datum/sprite_accessory/hair/vulp_hair_keid
@@ -303,7 +254,6 @@
 	icon = 'icons/mob/human_face_vr.dmi'
 	icon_add = 'icons/mob/human_face_vr_add.dmi'
 	icon_state = "keid"
-	species_allowed = list(SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_TAJARAN, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_PROTEAN)
 	gender = NEUTER
 
 /datum/sprite_accessory/hair/vulp_hair_adhara
@@ -311,7 +261,6 @@
 	icon = 'icons/mob/human_face_vr.dmi'
 	icon_add = 'icons/mob/human_face_vr_add.dmi'
 	icon_state = "adhara"
-	species_allowed = list(SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_TAJARAN, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_PROTEAN)
 	gender = NEUTER
 
 /datum/sprite_accessory/hair/vulp_hair_kleeia
@@ -319,7 +268,6 @@
 	icon = 'icons/mob/human_face_vr.dmi'
 	icon_add = 'icons/mob/human_face_vr_add.dmi'
 	icon_state = "kleeia"
-	species_allowed = list(SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_TAJARAN, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_PROTEAN)
 	gender = NEUTER
 
 /datum/sprite_accessory/hair/vulp_hair_mizar
@@ -327,7 +275,6 @@
 	icon = 'icons/mob/human_face_vr.dmi'
 	icon_add = 'icons/mob/human_face_vr_add.dmi'
 	icon_state = "mizar"
-	species_allowed = list(SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_TAJARAN, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_PROTEAN)
 	gender = NEUTER
 
 /datum/sprite_accessory/hair/vulp_hair_apollo
@@ -335,7 +282,6 @@
 	icon = 'icons/mob/human_face_vr.dmi'
 	icon_add = 'icons/mob/human_face_vr_add.dmi'
 	icon_state = "apollo"
-	species_allowed = list(SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_TAJARAN, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_PROTEAN)
 	gender = NEUTER
 
 /datum/sprite_accessory/hair/vulp_hair_belle
@@ -343,7 +289,6 @@
 	icon = 'icons/mob/human_face_vr.dmi'
 	icon_add = 'icons/mob/human_face_vr_add.dmi'
 	icon_state = "belle"
-	species_allowed = list(SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_TAJARAN, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_PROTEAN)
 	gender = NEUTER
 
 /datum/sprite_accessory/hair/vulp_hair_bun
@@ -351,7 +296,6 @@
 	icon = 'icons/mob/human_face_vr.dmi'
 	icon_add = 'icons/mob/human_face_vr_add.dmi'
 	icon_state = "bun"
-	species_allowed = list(SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_TAJARAN, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_PROTEAN)
 	gender = NEUTER
 
 /datum/sprite_accessory/hair/vulp_hair_jagged
@@ -359,7 +303,6 @@
 	icon = 'icons/mob/human_face_vr.dmi'
 	icon_add = 'icons/mob/human_face_vr_add.dmi'
 	icon_state = "jagged"
-	species_allowed = list(SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_TAJARAN, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_PROTEAN)
 	gender = NEUTER
 
 /datum/sprite_accessory/hair/vulp_hair_curl
@@ -367,7 +310,6 @@
 	icon = 'icons/mob/human_face_vr.dmi'
 	icon_add = 'icons/mob/human_face_vr_add.dmi'
 	icon_state = "curl"
-	species_allowed = list(SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_TAJARAN, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_PROTEAN)
 	gender = NEUTER
 
 /datum/sprite_accessory/hair/vulp_hair_hawk
@@ -375,7 +317,6 @@
 	icon = 'icons/mob/human_face_vr.dmi'
 	icon_add = 'icons/mob/human_face_vr_add.dmi'
 	icon_state = "hawk"
-	species_allowed = list(SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_TAJARAN, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_PROTEAN)
 	gender = NEUTER
 
 /datum/sprite_accessory/hair/vulp_hair_anita
@@ -383,7 +324,6 @@
 	icon = 'icons/mob/human_face_vr.dmi'
 	icon_add = 'icons/mob/human_face_vr_add.dmi'
 	icon_state = "anita"
-	species_allowed = list(SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_TAJARAN, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_PROTEAN)
 	gender = NEUTER
 
 /datum/sprite_accessory/hair/vulp_hair_short
@@ -391,7 +331,6 @@
 	icon = 'icons/mob/human_face_vr.dmi'
 	icon_add = 'icons/mob/human_face_vr_add.dmi'
 	icon_state = "short"
-	species_allowed = list(SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_TAJARAN, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_PROTEAN)
 	gender = NEUTER
 
 /datum/sprite_accessory/hair/vulp_hair_spike
@@ -399,7 +338,6 @@
 	icon = 'icons/mob/human_face_vr.dmi'
 	icon_add = 'icons/mob/human_face_vr_add.dmi'
 	icon_state = "spike"
-	species_allowed = list(SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_TAJARAN, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_PROTEAN)
 	gender = NEUTER
 
 //xeno stuffs
@@ -410,6 +348,7 @@
 	icon_state = "cxeno_drone"
 	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJARAN, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_SHADEKIN_YW, SPECIES_ALTEVIAN) //ChompEDIT: allow for all
 	gender = NEUTER
+
 // figure this one out for better coloring
 /datum/sprite_accessory/hair/xeno_head_sentinel_color
 	name = "Sentinal dome"
@@ -486,82 +425,64 @@
 /datum/sprite_accessory/facial_hair
 	icon = 'icons/mob/human_face_or_vr.dmi'
 	color_blend_mode = ICON_MULTIPLY
-	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJARAN, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_ALTEVIAN, SPECIES_LLEILL, SPECIES_HANNER) //This lets all races use the facial hair styles.
 
 /datum/sprite_accessory/facial_hair/shaved
 	name = "Shaved"
 	icon_state = "bald"
 	gender = NEUTER
-	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJARAN, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_ALTEVIAN, SPECIES_LLEILL, SPECIES_VOX, SPECIES_HANNER) //This lets all races use the facial hair styles.
 
 /datum/sprite_accessory/facial_hair/neck_fluff
 	name = "Neck Fluff"
 	icon = 'icons/mob/human_face_or_vr.dmi'
 	icon_state = "facial_neckfluff"
 	gender = NEUTER
-	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJARAN, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_ALTEVIAN, SPECIES_LLEILL, SPECIES_HANNER)
-
-/datum/sprite_accessory/facial_hair/vulp_none
-	name = "None"
-	icon = 'icons/mob/human_face_vr.dmi'
-	icon_state = "none"
-	species_allowed = list(SPECIES_VULPKANIN)
-	gender = NEUTER
 
 /datum/sprite_accessory/facial_hair/vulp_blaze
 	name = "Blaze"
 	icon = 'icons/mob/human_face_vr.dmi'
 	icon_state = "vulp_facial_blaze"
-	species_allowed = list(SPECIES_VULPKANIN)
 	gender = NEUTER
 
 /datum/sprite_accessory/facial_hair/vulp_vulpine
 	name = "Vulpine"
 	icon = 'icons/mob/human_face_vr.dmi'
 	icon_state = "vulp_facial_vulpine"
-	species_allowed = list(SPECIES_VULPKANIN)
 	gender = NEUTER
 
 /datum/sprite_accessory/facial_hair/vulp_earfluff
 	name = "Earfluff"
 	icon = 'icons/mob/human_face_vr.dmi'
 	icon_state = "vulp_facial_earfluff"
-	species_allowed = list(SPECIES_VULPKANIN)
 	gender = NEUTER
 
 /datum/sprite_accessory/facial_hair/vulp_mask
 	name = "Mask"
 	icon = 'icons/mob/human_face_vr.dmi'
 	icon_state = "vulp_facial_mask"
-	species_allowed = list(SPECIES_VULPKANIN)
 	gender = NEUTER
 
 /datum/sprite_accessory/facial_hair/vulp_patch
 	name = "Patch"
 	icon = 'icons/mob/human_face_vr.dmi'
 	icon_state = "vulp_facial_patch"
-	species_allowed = list(SPECIES_VULPKANIN)
 	gender = NEUTER
 
 /datum/sprite_accessory/facial_hair/vulp_ruff
 	name = "Ruff"
 	icon = 'icons/mob/human_face_vr.dmi'
 	icon_state = "vulp_facial_ruff"
-	species_allowed = list(SPECIES_VULPKANIN)
 	gender = NEUTER
 
 /datum/sprite_accessory/facial_hair/vulp_kita
 	name = "Kita"
 	icon = 'icons/mob/human_face_vr.dmi'
 	icon_state = "vulp_facial_kita"
-	species_allowed = list(SPECIES_VULPKANIN)
 	gender = NEUTER
 
 /datum/sprite_accessory/facial_hair/vulp_swift
 	name = "Swift"
 	icon = 'icons/mob/human_face_vr.dmi'
 	icon_state = "vulp_facial_swift"
-	species_allowed = list(SPECIES_VULPKANIN)
 	gender = NEUTER
 
 /*
