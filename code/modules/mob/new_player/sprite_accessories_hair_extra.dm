@@ -4,13 +4,6 @@
 // Note: Creating a sub-datum to group all vore stuff together
 // would require us to exclude that datum from the global list.
 
-<<<<<<< HEAD:code/modules/mob/new_player/sprite_accessories_vr.dm
-/datum/sprite_accessory/hair
-
-	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJARAN, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_SHADEKIN_YW, SPECIES_ALTEVIAN, SPECIES_LLEILL, SPECIES_HANNER) //This lets all races use the default hairstyles.
-
-=======
->>>>>>> fa3458c11b (De-collide-oscope (#16938)):code/modules/mob/new_player/sprite_accessories_hair_extra.dm
 /datum/sprite_accessory/hair/astolfo
 	name = "Astolfo"
 	icon = 'icons/mob/human_face_vr.dmi'
@@ -437,10 +430,6 @@
 	name = "Shaved"
 	icon_state = "bald"
 	gender = NEUTER
-<<<<<<< HEAD:code/modules/mob/new_player/sprite_accessories_vr.dm
-	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJARAN, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_ALTEVIAN, SPECIES_LLEILL, SPECIES_VOX, SPECIES_HANNER) //This lets all races use the facial hair styles.
-=======
->>>>>>> fa3458c11b (De-collide-oscope (#16938)):code/modules/mob/new_player/sprite_accessories_hair_extra.dm
 
 /datum/sprite_accessory/facial_hair/neck_fluff
 	name = "Neck Fluff"
