@@ -32,11 +32,7 @@ SUBSYSTEM_DEF(xenoarch)
 /datum/controller/subsystem/xenoarch/stat_entry(msg)
 	if (!Debug2)
 		return // Only show up in stat panel if debugging is enabled.
-<<<<<<< HEAD
-	return ..() //CHOMPEdit
-=======
 	return ..()
->>>>>>> 09b36a7ff6 (Xenoarch Rework [Ready for Review] (#16757))
 
 /datum/controller/subsystem/xenoarch/proc/SetupXenoarch()
 	for(var/turf/simulated/mineral/M in world) //This selects every mineral turf in the world
@@ -133,13 +129,8 @@ SUBSYSTEM_DEF(xenoarch)
 		if(!M.density)
 			continue
 
-<<<<<<< HEAD
-		/*if(isnull(M.geologic_data)) CHOMP Removal. Initialized when needed now.
-			M.geologic_data = new /datum/geosample(M)*/
-=======
 		if(M.artifact_find)
 			continue
->>>>>>> 09b36a7ff6 (Xenoarch Rework [Ready for Review] (#16757))
 
 		if(!prob(XENOARCH_SPAWN_CHANCE))
 			continue

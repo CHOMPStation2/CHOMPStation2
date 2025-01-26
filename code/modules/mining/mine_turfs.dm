@@ -456,13 +456,8 @@ var/list/mining_overlay_cache = list()
 				return
 
 			var/obj/item/melee/shock_maul/S = W
-<<<<<<< HEAD
-			if(!S.wielded)	//CHOMPEdit - slight maul buff
-				to_chat(user, span_warning("\The [W] must be wielded in two hands to be used for mining!"))	//CHOMPEdit - fixed improper name
-=======
 			if(!S.wielded)
 				to_chat(user, span_warning("\The [W] must be wielded in two hands to be used for mining!"))
->>>>>>> 09b36a7ff6 (Xenoarch Rework [Ready for Review] (#16757))
 				return
 
 			var/newDepth = excavation_level + S.excavation_amount // Used commonly below
@@ -476,18 +471,12 @@ var/list/mining_overlay_cache = list()
 					wreckfinds(S.destroy_artefacts)
 
 			to_chat(user, span_notice("You smash through \the [src][fail_message]."))
-<<<<<<< HEAD
-			//CHOMPEdit start - Moved the maul sounds up here and made it not cost energy to mine
-			user.visible_message(span_warning("\The [src] discharges with a thunderous, hair-raising crackle!"))
-			playsound(src, 'sound/weapons/resonator_blast.ogg', 100, 1, -1)
-=======
 			if(S.status != 0) //We're on. This isn't just a == 1 in case someone adds some weird functionality in the future to give it multiple states.
 				user.visible_message(span_warning("\The [src] discharges with a thunderous, hair-raising crackle!"))
 				playsound(src, 'sound/weapons/resonator_blast.ogg', 100, 1, -1)
 			else
 				user.visible_message(span_warning("\The [src] plows into the rock with a thunk, smashing it to pieces."))
 				playsound(src, get_sfx("pickaxe"), 35, 1, -1) //Weak. Not on. Just as good as a normal pick.
->>>>>>> 09b36a7ff6 (Xenoarch Rework [Ready for Review] (#16757))
 
 			if(newDepth >= 200) // This means the rock is mined out fully
 				if(S.destroy_artefacts)
@@ -498,11 +487,7 @@ var/list/mining_overlay_cache = list()
 
 			excavation_level += S.excavation_amount
 			update_archeo_overlays(S.excavation_amount)
-<<<<<<< HEAD
-			geologic_data = new /datum/geosample(src) //CHOMPEdit
-=======
 			geologic_data = new /datum/geosample(src)
->>>>>>> 09b36a7ff6 (Xenoarch Rework [Ready for Review] (#16757))
 			//drop some rocks
 			next_rock += S.excavation_amount
 			while(next_rock > 50)
@@ -510,10 +495,6 @@ var/list/mining_overlay_cache = list()
 				var/obj/item/ore/O = new(src)
 				geologic_data.UpdateNearbyArtifactInfo(src)
 				O.geologic_data = geologic_data
-<<<<<<< HEAD
-			//CHOMPEdit end
-=======
->>>>>>> 09b36a7ff6 (Xenoarch Rework [Ready for Review] (#16757))
 
 		if (istype(W, /obj/item/pickaxe))
 			if(!istype(user.loc, /turf))
@@ -556,11 +537,7 @@ var/list/mining_overlay_cache = list()
 
 				excavation_level += P.excavation_amount
 				update_archeo_overlays(P.excavation_amount)
-<<<<<<< HEAD
-				geologic_data = new /datum/geosample(src) //CHOMPEdit
-=======
 				geologic_data = new /datum/geosample(src)
->>>>>>> 09b36a7ff6 (Xenoarch Rework [Ready for Review] (#16757))
 				//drop some rocks
 				next_rock += P.excavation_amount
 				while(next_rock > 50)
@@ -628,11 +605,7 @@ var/list/mining_overlay_cache = list()
 	if(!mineral)
 		return
 	clear_ore_effects()
-<<<<<<< HEAD
-	geologic_data = new /datum/geosample(src) //CHOMPEdit
-=======
 	geologic_data = new /datum/geosample(src)
->>>>>>> 09b36a7ff6 (Xenoarch Rework [Ready for Review] (#16757))
 	var/obj/item/ore/O = new mineral.ore (src)
 	if(istype(O))
 		geologic_data.UpdateNearbyArtifactInfo(src)
@@ -699,17 +672,10 @@ var/list/mining_overlay_cache = list()
 /turf/simulated/mineral/proc/excavate_find(var/is_clean = 0, var/datum/find/F)
 	//with skill and luck, players can cleanly extract finds
 	//otherwise, they come out inside a chunk of rock
-<<<<<<< HEAD
-	geologic_data = new /datum/geosample(src) //CHOMPEdit
-	var/obj/item/X
-	if(is_clean)
-		X = new /obj/item/archaeological_find(src, F.find_type) // CHOMPEdit
-=======
 	geologic_data = new /datum/geosample(src)
 	var/obj/item/X
 	if(is_clean)
 		X = new /obj/item/archaeological_find(src, F.find_type)
->>>>>>> 09b36a7ff6 (Xenoarch Rework [Ready for Review] (#16757))
 	else
 		X = new /obj/item/strangerock(src, inside_item_type = F.find_type)
 		geologic_data.UpdateNearbyArtifactInfo(src)

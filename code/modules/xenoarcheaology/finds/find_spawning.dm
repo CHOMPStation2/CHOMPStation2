@@ -4,9 +4,6 @@
 	icon_state = "ano01"
 	var/find_type = 0
 
-<<<<<<< HEAD
-/obj/item/archaeological_find/Initialize(mapload, var/new_item_type) // CHOMPEdit NEW -> Initialize
-=======
 /// Find spawning debug tool. Can be called on any /mob to spawn it at their location.
 /mob/proc/artifact_spawn_debug_tool()
 	set name = "Artifact Debug"
@@ -20,7 +17,6 @@
 	new /obj/item/archaeological_find(src.loc, type_to_spawn)
 
 /obj/item/archaeological_find/Initialize(mapload, var/new_item_type)
->>>>>>> 09b36a7ff6 (Xenoarch Rework [Ready for Review] (#16757))
 	. = ..()
 	if(new_item_type)
 		find_type = new_item_type
@@ -339,32 +335,6 @@
 			item_type = new_item.name
 		if(ARCHAEO_LASER)
 			//energy gun
-<<<<<<< HEAD
-			var/spawn_type = pick(\
-			/obj/item/gun/energy/laser/practice/xenoarch,\
-			/obj/item/gun/energy/laser/xenoarch,\
-			/obj/item/gun/energy/xray/xenoarch,\
-			/obj/item/gun/energy/captain/xenoarch)
-			if(spawn_type)
-				var/obj/item/gun/energy/new_gun = new spawn_type(src.loc)
-				new_item = new_gun
-				new_item.icon_state = "egun[rand(1,18)]" //CHOMPStation Edit: We now reference our own DMI which has 18 unique guns.
-				new_gun.desc = "This is an antique energy weapon, you're not sure if it will fire or not."
-
-				//5% chance to explode when first fired
-				//10% chance to have an unchargeable cell
-				//15% chance to gain a random amount of starting energy, otherwise start with an empty cell
-				if(prob(5))
-					new_gun.power_supply.rigged = 1
-				if(prob(10))
-					new_gun.power_supply.maxcharge = 0
-					LAZYSET(new_gun.origin_tech, TECH_ARCANE, rand(0, 1))
-				if(prob(15))
-					new_gun.power_supply.charge = rand(0, new_gun.power_supply.maxcharge)
-					LAZYSET(new_gun.origin_tech, TECH_ARCANE, 1)
-				else
-					new_gun.power_supply.charge = 0
-=======
 			var/obj/item/gun/energy/new_gun = new /obj/item/gun/energy/laser/xenoarch(src.loc)
 			var/possible_laser_paths = list()
 			possible_laser_paths |= subtypesof(/obj/item/projectile/beam)
@@ -374,9 +344,8 @@
 			var/new_laser = pick(possible_laser_paths)
 			new_gun.projectile_type = new_laser
 			new_item = new_gun
-			new_item.icon_state = "egun[rand(1,6)]"
+			new_item.icon_state = "egun[rand(1,18)]" //CHOMPStation Edit: We now reference our own DMI which has 18 unique guns.
 			new_gun.desc = "This is an antique energy weapon, you're not sure if it will fire or not."
->>>>>>> 09b36a7ff6 (Xenoarch Rework [Ready for Review] (#16757))
 
 			//10% chance to have an unchargeable cell
 			//15% chance to gain a random amount of starting energy, otherwise start with an empty cell
@@ -848,11 +817,7 @@
 
 		if(talkative)
 			new_item.talking_atom = new(new_item)
-<<<<<<< HEAD
-			if("origin_tech" in new_item.vars) //ChompEDIT - fix runtimes with items that don't have this var
-=======
 			if("origin_tech" in new_item.vars)
->>>>>>> 09b36a7ff6 (Xenoarch Rework [Ready for Review] (#16757))
 				var/list/new_tech
 				if(new_item.origin_tech)
 					new_tech = new_item.origin_tech.Copy()
@@ -899,7 +864,7 @@
 /obj/item/archaeological_find/Destroy()
 	if(src.is_anomalous())
 		var/datum/component/artifact_master/arti_mstr = GetComponent(/datum/component/artifact_master)
-		arti_mstr.ClearFromParent()
+		arti_mstr.RemoveComponent()
 		if(!QDELETED(arti_mstr))
 			qdel(arti_mstr)
 

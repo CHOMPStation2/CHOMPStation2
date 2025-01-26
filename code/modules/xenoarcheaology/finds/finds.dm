@@ -25,11 +25,7 @@
 	if(inside_item_type)
 		switch(d100)
 			if(51 to 100) //standard spawn logic 50% of the time
-<<<<<<< HEAD
-				new /obj/item/archaeological_find(src, inside_item_type) // CHOMPEdit
-=======
 				new /obj/item/archaeological_find(src, inside_item_type)
->>>>>>> 09b36a7ff6 (Xenoarch Rework [Ready for Review] (#16757))
 			if(21 to 50) // 30% chance
 				new /obj/item/research_sample/common(src)
 			if(6 to 20) // 15% chance
@@ -37,11 +33,7 @@
 			if(1 to 5) // 5% chance
 				new /obj/item/research_sample/rare(src)
 			else	//if something went wrong, somehow, generate the usual find
-<<<<<<< HEAD
-				new /obj/item/archaeological_find(src, inside_item_type) // CHOMPEdit
-=======
 				new /obj/item/archaeological_find(src, inside_item_type)
->>>>>>> 09b36a7ff6 (Xenoarch Rework [Ready for Review] (#16757))
 	else	//if this strange rock isn't set to generate a find for whatever reason, create a sample 75% of the time (this shouldn't happen unless the rock is mapped in or adminspawned)
 		switch(d100)
 			if(76 to 100)

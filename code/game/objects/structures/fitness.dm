@@ -52,14 +52,10 @@
 	if(user.nutrition < 70) //CHOMPEdit Set minimum nutrition to be the same as in fitness_machines_vr.dm
 		to_chat(user, span_warning("You need more energy to lift weights. Go eat something."))
 		return
-<<<<<<< HEAD
 	if(user.weight < 70) //CHOMPAdd Begin Add weight loss to old fitness equipment
 		to_chat(user, span_notice("You're too skinny to risk losing any more weight!"))
 		return //CHOMPAdd End
-	if(being_used)
-=======
 	if(fitness_being_used)
->>>>>>> 09b36a7ff6 (Xenoarch Rework [Ready for Review] (#16757))
 		to_chat(user, span_warning("The weight machine is already in use by somebody else."))
 		return
 	else
