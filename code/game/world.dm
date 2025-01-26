@@ -58,12 +58,10 @@
 	src.update_status()
 	setup_season()	//VOREStation Addition
 
-	// CHOMPStation Addition: Spaceman DMM Debugging
 	var/debug_server = world.GetConfig("env", "AUXTOOLS_DEBUG_DLL")
 	if (debug_server)
 		call_ext(debug_server, "auxtools_init")()
 		enable_debugging()
-	// CHOMPStation Add End
 
 	. = ..()
 
@@ -797,7 +795,6 @@ var/global/game_id = null
 		t = round(t / l)
 	return 1
 
-// CHOMPStation Add: Spaceman DMM Debugger
 /proc/auxtools_stack_trace(msg)
 	CRASH(msg)
 
@@ -812,5 +809,3 @@ var/global/game_id = null
 	if (debug_server)
 		call_ext(debug_server, "auxtools_shutdown")()
 	. = ..()
-
-// CHOMPStation Add End: Spaceman DMM Debugger
