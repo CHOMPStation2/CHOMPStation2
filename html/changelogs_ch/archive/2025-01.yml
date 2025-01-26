@@ -257,3 +257,8 @@
 2025-01-25:
   Kashargul:
   - code_imp: migrates our chomp UIs to tgui-core
+2025-01-26:
+  Kashargul:
+  - admin: heavily improves the ticket panel
+  Verkister:
+  - rscadd: Added large shark tails.
