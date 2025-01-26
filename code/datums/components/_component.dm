@@ -431,10 +431,17 @@
 		return _AddComponent(arguments)
 
 /**
+<<<<<<< HEAD
  * Removes the component from parent, ends up with a null parent
  * Used as a helper proc by the component transfer proc, does not clean up the component like Destroy does
  */
 /datum/component/proc/ClearFromParent()
+=======
+  * Removes the component from parent, ends up with a null parent
+ * Used as a helper proc by the component transfer proc, does not clean up the component like Destroy does
+  */
+/datum/component/proc/RemoveComponent()
+>>>>>>> 394b2a4789 (some destroy cleanup (#16958))
 	if(!parent)
 		return
 	var/datum/old_parent = parent
@@ -444,6 +451,7 @@
 	SEND_SIGNAL(old_parent, COMSIG_COMPONENT_REMOVING, src)
 
 /**
+<<<<<<< HEAD
  * Transfer this component to another parent
  *
  * Component is taken from source datum
@@ -451,6 +459,15 @@
  * Arguments:
  * * datum/component/target Target datum to transfer to
  */
+=======
+  * Transfer this component to another parent
+  *
+  * Component is taken from source datum
+  *
+  * Arguments:
+  * * datum/component/target Target datum to transfer to
+  */
+>>>>>>> 394b2a4789 (some destroy cleanup (#16958))
 /datum/proc/TakeComponent(datum/component/target)
 	if(!target || target.parent == src)
 		return
