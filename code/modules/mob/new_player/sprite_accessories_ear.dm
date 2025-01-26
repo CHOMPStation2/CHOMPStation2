@@ -37,7 +37,7 @@
 	icon_state = "shadekin"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
-	species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW)
+	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJARAN, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW) //Chompstation Edit, cute fluffy ears for all
 
 /datum/sprite_accessory/ears/shadekin/round
 	name = "Shadekin Ears Round, colorable"
@@ -1116,7 +1116,7 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
-// Special snowflake ears go below here.
+/* // Special snowflake ears go below here. //CHOMPRemove - no they don't
 
 /datum/sprite_accessory/ears/kara //SatinIsle Fluff Item
 	name = "Pterokara horn"
@@ -1215,3 +1215,4 @@
     desc = ""
     icon_state = "pipears"
     ckeys_allowed = list("phoaly")
+	*/ //CHOMPRemove END

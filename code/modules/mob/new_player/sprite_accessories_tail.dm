@@ -547,6 +547,14 @@
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "deertail_mark"
 
+/datum/sprite_accessory/tail/deeralt
+	name = "deer alt, colorable (vwag)"
+	desc = ""
+	icon_state = "deeralt"
+	ani_state = "deeralt_w"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
 /datum/sprite_accessory/tail/tesh_feathered
 	name = "Teshari tail"
 	desc = ""
@@ -1072,6 +1080,21 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
+/datum/sprite_accessory/tail/tail_smooth_dual
+	name = "Smooth Lizard Tail, dual color"
+	desc = ""
+	icon_state = "tail_smooth"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "tail_smooth_markings"
+
+/datum/sprite_accessory/tail/fennec_tail
+	name = "Fennec tail"
+	desc = ""
+	icon_state = "fennec_tail_s"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
 /datum/sprite_accessory/tail/fox_tail
 	name = "Fox tail, colorable"
 	desc = ""
@@ -1134,6 +1157,16 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "ninekitsune-tips"
+
+/datum/sprite_accessory/tail/hideableninetails
+    name = "Kitsune 9-in-1 tail, colourable (vwag)"
+    desc = ""
+    icon_state = "ninekitsune"
+    extra_overlay = "ninekitsune-tips"
+    do_colouration = TRUE
+    color_blend_mode = ICON_MULTIPLY
+    ani_state = "foxtail_w"
+    extra_overlay_w = "foxtail-tips_w"
 
 /datum/sprite_accessory/tail/shadekin_short
 	name = "Shadekin Short Tail, colorable"
@@ -1556,7 +1589,7 @@
 	extra_overlay = "chonksqrl-m1"
 	extra_overlay2 = "chonksqrl-m2"
 
-// Exclusive Tails
+/* // Exclusive Tails // CHOMPRemove start
 
 /datum/sprite_accessory/tail/peacocktail_red //this is ckey locked for now, but prettiebyrd wants these tails to be unlocked at a later date
 	name = "Peacock tail (vwag)"
@@ -1667,3 +1700,4 @@
 	desc = ""
 	icon_state = "tigresstail"
 	ckeys_allowed = list("hoodoo")
+*/// CHOMPRemove End

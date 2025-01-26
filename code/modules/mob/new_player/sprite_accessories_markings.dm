@@ -2102,7 +2102,7 @@ includes scars and tattoos
 	color_blend_mode = ICON_MULTIPLY
 	body_parts = list(BP_L_ARM,BP_R_ARM)
 
-//CitRP stuff
+	//CitRP stuff
 
 /datum/sprite_accessory/marking/vr_c_beast_body
 	name = "Cyber Body"
