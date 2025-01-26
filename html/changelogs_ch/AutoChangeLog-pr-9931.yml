@@ -1,0 +1,5 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - rscadd: "Added a new \"signpost_fake\" structure that looks like other sign posts, but without the teleporting functionality."
+  - maptweak: "Fixed signposts that would break your character in the fantasy redgate map."
