@@ -105,11 +105,13 @@ SUBSYSTEM_DEF(robot_sprites)
 /datum/controller/subsystem/robot_sprites/proc/get_whitelisted_sprites(var/ckey, var/spritename, var/module)
 	. = list()
 
+	ckey = null // CHOMPDisable, removing custom robot sprites
+
 	if(!ckey || !spritename || !module || !(module in whitelisted_sprites_by_module))
 		return
 
 	for(var/datum/robot_sprite/RS in whitelisted_sprites_by_module[module])
-		if(RS.whitelist_ckey == ckey && RS.whitelist_charname == spritename)
+		if(RS.whitelist_ckey == ckey) //If we're trusting people to be a custom borg, does the whitelist_charname really matter? Leaving untouched for downstream, but really.
 			. |= RS
 
 	return
