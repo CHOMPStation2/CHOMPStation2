@@ -111,14 +111,8 @@
 	var/rock_climbing = FALSE //If true, allows climbing cliffs using click drag for single Z, walls if multiZ
 	var/climbing_delay = 1 //If rock_climbing, lower better.
 
-<<<<<<< HEAD
 /obj/item/Initialize(mapload) //CHOMPedit I stg I'm going to overwrite these many uncommented edits.
 	. = ..()
-=======
-/obj/item/Initialize(mapload)
-	. = ..()
-
->>>>>>> 394b2a4789 (some destroy cleanup (#16958))
 	for(var/path in actions_types)
 		add_item_action(path)
 	if(islist(origin_tech))
