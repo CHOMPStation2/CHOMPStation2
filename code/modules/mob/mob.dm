@@ -290,7 +290,8 @@
 
 /mob/verb/memory()
 	set name = "Notes"
-	set category = "IC.Game"
+	set desc = "View notes stored for this round only."
+	set category = "IC.Notes"
 	if(mind)
 		mind.show_memory(src)
 	else
@@ -298,7 +299,8 @@
 
 /mob/verb/add_memory(msg as message)
 	set name = "Add Note"
-	set category = "IC.Game"
+	set desc = "Add notes stored for this round only."
+	set category = "IC.Notes"
 
 	msg = sanitize(msg)
 
