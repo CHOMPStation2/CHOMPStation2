@@ -12,6 +12,23 @@ azmodan412 - Xenochimera
 alphaprime1 - Protean
 bothnevarbackwards - Diona
 bricker98 - Protean
+<<<<<<< HEAD
+=======
+bricker98 - Black-Eyed Shadekin
+bubonicsweetie - Protean
+burritojustice - Protean
+camanis - Protean
+cameron653 - Protean
+cgr - Protean
+chaosdoomsday - Black-Eyed Shadekin
+chaosdoomsday - Protean
+chargae - Protean
+chemlight - Xenochimera
+chillyfang - Black-Eyed Shadekin
+chloeplayer - Protean
+comradenitro - Protean
+coolcrow420 - Black-Eyed Shadekin
+>>>>>>> ad48e56f3a (Whitelist! (#16950))
 crossexonar - Protean
 funnyman2003 - Xenochimera
 flurriee - Protean
