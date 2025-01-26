@@ -3744,7 +3744,6 @@
 #include "code\modules\mob\new_player\sprite_accessories_ear.dm"
 #include "code\modules\mob\new_player\sprite_accessories_ear_ch.dm"
 #include "code\modules\mob\new_player\sprite_accessories_extra_ch.dm"
-#include "code\modules\mob\new_player\sprite_accessories_tail.dm"
 #include "code\modules\mob\new_player\sprite_accessories_tail_ch.dm"
 #include "code\modules\mob\new_player\sprite_accessories_hair.dm"
 #include "code\modules\mob\new_player\sprite_accessories_hair_extra.dm"
