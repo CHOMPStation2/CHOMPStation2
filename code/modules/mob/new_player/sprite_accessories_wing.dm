@@ -95,6 +95,10 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9c97c90683 (some datums (#16955))
 /datum/sprite_accessory/wing/mantisarms
 	name = "Mantis arms"
 	desc = ""
@@ -430,4 +434,7 @@
 	desc = ""
 	icon_state = "citheronia_wings"
 	ckeys_allowed = list("kira72")
+<<<<<<< HEAD
 */// CHOMPRemove End
+=======
+>>>>>>> 9c97c90683 (some datums (#16955))
