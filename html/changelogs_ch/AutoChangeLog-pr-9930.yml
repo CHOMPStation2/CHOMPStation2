@@ -1,0 +1,4 @@
+author: "Drathek Rykka-Stormheart"
+delete-after: True
+changes:
+  - rscadd: "Added auxtools support for debugging in VSC (currently only 515)"
