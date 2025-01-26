@@ -272,8 +272,8 @@ export const TicketsPanel = (props) => {
                 </Stack.Item>
                 <Stack.Item grow>
                   <Section fill ref={messagesEndRef} scrollable>
-                    <Stack direction="column">
-                      <Stack.Item>
+                    <Stack fill direction="column">
+                      <Stack.Item grow>
                         {Object.keys(selected_ticket.log)
                           .slice(0)
                           .map((L, i) => (
