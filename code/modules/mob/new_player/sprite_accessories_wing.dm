@@ -278,13 +278,13 @@
 /datum/sprite_accessory/wing/teshbee
 	name = "Teshari bee wings"
 	desc = ""
-	icon = 'icons/mob/vore/wings_vr.dmi'
+	icon = 'icons/mob/human_races/sprite_accessories/wings.dmi'
 	icon_state = "beewings_tesh"
 
 /datum/sprite_accessory/wing/teshdragonfly
 	name = "Teshari dragonfly wings"
 	desc = ""
-	icon = 'icons/mob/vore/wings_vr.dmi'
+	icon = 'icons/mob/human_races/sprite_accessories/wings.dmi'
 	icon_state = "dragonfly_tesh"
 
 /datum/sprite_accessory/wing/snail_shell
@@ -298,7 +298,7 @@
 /datum/sprite_accessory/wing/sectdrone_wing //We should some day make a variable to make some wings not be able to fly
 	name = "Sect drone wings (To use with bodytype marking)"
 	desc = ""
-	icon = 'icons/mob/vore/wings_vr.dmi'
+	icon = 'icons/mob/human_races/sprite_accessories/wings.dmi'
 	icon_state = "sectdrone_wing"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
@@ -391,7 +391,7 @@
 /datum/sprite_accessory/wing/kara
 	name = "Pterokara wings"
 	desc = ""
-	icon = 'icons/mob/vore/wings_vr.dmi'
+	icon = 'icons/mob/human_races/sprite_accessories/wings.dmi'
 	icon_state = "feathered_kara"
 	ckeys_allowed = list("satinisle")
 
