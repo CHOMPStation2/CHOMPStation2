@@ -145,7 +145,11 @@
 
 		var/sql_discord = sql_sanitize_text(their_id)
 		var/sql_ckey = sql_sanitize_text(ckey)
+<<<<<<< HEAD
 		var/datum/db_query/query = SSdbcore.NewQuery("UPDATE erro_player SET discord_id = :t_discord_id WHERE ckey = :t_ckey", list("t_discord_id" = sql_discord, "t_ckey" = sql_ckey)) //CHOMPEdit TGSQL
+=======
+		var/datum/db_query/query = SSdbcore.NewQuery("UPDATE erro_player SET discord_id = '[sql_discord]' WHERE ckey = '[sql_ckey]'")
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 		if(query.Execute())
 			to_chat(src, span_notice("Registration complete! Thank you for taking the time to register your Discord ID."))
 			log_and_message_admins("[ckey] has registered their Discord ID. Their Discord snowflake ID is: [their_id]", src) //YW EDIT
@@ -401,12 +405,20 @@
 
 /proc/get_player_age(key)
 	establish_db_connection()
+<<<<<<< HEAD
 	if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
+=======
+	if(!SSdbcore.IsConnected())
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 		return null
 
 	var/sql_ckey = sql_sanitize_text(ckey(key))
 
+<<<<<<< HEAD
 	var/datum/db_query/query = SSdbcore.NewQuery("SELECT datediff(Now(),firstseen) as age FROM erro_player WHERE ckey = :t_ckey", list("t_ckey" = sql_ckey)) //CHOMPEdit TGSQL
+=======
+	var/datum/db_query/query = SSdbcore.NewQuery("SELECT datediff(Now(),firstseen) as age FROM erro_player WHERE ckey = '[sql_ckey]'")
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 	query.Execute()
 	//CHOMPEdit Begin
 	if(query.NextRow())
@@ -425,12 +437,20 @@
 		return
 
 	establish_db_connection()
+<<<<<<< HEAD
 	if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
+=======
+	if(!SSdbcore.IsConnected())
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 		return
 
 	var/sql_ckey = sql_sanitize_text(src.ckey)
 
+<<<<<<< HEAD
 	var/datum/db_query/query = SSdbcore.NewQuery("SELECT id, datediff(Now(),firstseen) as age FROM erro_player WHERE ckey = :t_ckey", list("t_ckey" = sql_ckey)) //CHOMPEdit TGSQL
+=======
+	var/datum/db_query/query = SSdbcore.NewQuery("SELECT id, datediff(Now(),firstseen) as age FROM erro_player WHERE ckey = '[sql_ckey]'")
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 	query.Execute()
 	var/sql_id = 0
 	player_age = 0	// New players won't have an entry so knowing we have a connection we set this to zero to be updated if their is a record.
@@ -440,26 +460,46 @@
 		break
 	qdel(query) //CHOMPEdit TGSQL
 	account_join_date = sanitizeSQL(findJoinDate())
+<<<<<<< HEAD
 	if(account_join_date && SSdbcore.IsConnected()) //CHOMPEdit TGSQL
 		var/datum/db_query/query_datediff = SSdbcore.NewQuery("SELECT DATEDIFF(Now(),'[account_join_date]')") //CHOMPEdit TGSQL
+=======
+	if(account_join_date && SSdbcore.IsConnected())
+		var/datum/db_query/query_datediff = SSdbcore.NewQuery("SELECT DATEDIFF(Now(),'[account_join_date]')")
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 		if(query_datediff.Execute() && query_datediff.NextRow())
 			account_age = text2num(query_datediff.item[1])
 		qdel(query_datediff) //CHOMPEdit TGSQL
 
+<<<<<<< HEAD
 	var/datum/db_query/query_ip = SSdbcore.NewQuery("SELECT ckey FROM erro_player WHERE ip = '[address]'") //CHOMPEdit TGSQL
+=======
+	var/datum/db_query/query_ip = SSdbcore.NewQuery("SELECT ckey FROM erro_player WHERE ip = '[address]'")
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 	query_ip.Execute()
 	related_accounts_ip = ""
 	while(query_ip.NextRow())
 		related_accounts_ip += "[query_ip.item[1]], "
 		break
+<<<<<<< HEAD
 	qdel(query_ip) //CHOMPEdit TGSQL
 	var/datum/db_query/query_cid = SSdbcore.NewQuery("SELECT ckey FROM erro_player WHERE computerid = '[computer_id]'") //CHOMPEdit TGSQL
+=======
+	qdel(query_ip)
+
+	var/datum/db_query/query_cid = SSdbcore.NewQuery("SELECT ckey FROM erro_player WHERE computerid = '[computer_id]'")
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 	query_cid.Execute()
 	related_accounts_cid = ""
 	while(query_cid.NextRow())
 		related_accounts_cid += "[query_cid.item[1]], "
 		break
+<<<<<<< HEAD
 	qdel(query_cid) //CHOMPEdit TGSQL
+=======
+	qdel(query_cid)
+
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 	//Just the standard check to see if it's actually a number
 	if(sql_id)
 		if(istext(sql_id))
@@ -509,7 +549,11 @@
 			log_admin("Couldn't perform IP check on [key] with [address]")
 
 	// VOREStation Edit Start - Department Hours
+<<<<<<< HEAD
 	var/datum/db_query/query_hours = SSdbcore.NewQuery("SELECT department, hours, total_hours FROM vr_player_hours WHERE ckey = :t_ckey", list("t_ckey" = sql_ckey)) //CHOMPEdit TGSQL
+=======
+	var/datum/db_query/query_hours = SSdbcore.NewQuery("SELECT department, hours, total_hours FROM vr_player_hours WHERE ckey = '[sql_ckey]'")
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 	if(query_hours.Execute())
 		while(query_hours.NextRow())
 			department_hours[query_hours.item[1]] = text2num(query_hours.item[2])
@@ -522,18 +566,30 @@
 	qdel(query_hours) //CHOMPEdit TGSQL
 	if(sql_id)
 		//Player already identified previously, we need to just update the 'lastseen', 'ip' and 'computer_id' variables
+<<<<<<< HEAD
 		var/datum/db_query/query_update = SSdbcore.NewQuery("UPDATE erro_player SET lastseen = Now(), ip = '[sql_ip]', computerid = '[sql_computerid]', lastadminrank = '[sql_admin_rank]' WHERE id = [sql_id]") //CHOMPEdit TGSQL
+=======
+		var/datum/db_query/query_update = SSdbcore.NewQuery("UPDATE erro_player SET lastseen = Now(), ip = '[sql_ip]', computerid = '[sql_computerid]', lastadminrank = '[sql_admin_rank]' WHERE id = [sql_id]")
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 		query_update.Execute()
 		qdel(query_update) //CHOMPEdit TGSQL
 	else
 		//New player!! Need to insert all the stuff
+<<<<<<< HEAD
 		var/datum/db_query/query_insert = SSdbcore.NewQuery("INSERT INTO erro_player (id, ckey, firstseen, lastseen, ip, computerid, lastadminrank) VALUES (null, :t_ckey, Now(), Now(), '[sql_ip]', '[sql_computerid]', '[sql_admin_rank]')", list("t_ckey" = sql_ckey)) //CHOMPEdit TGSQL
+=======
+		var/datum/db_query/query_insert = SSdbcore.NewQuery("INSERT INTO erro_player (id, ckey, firstseen, lastseen, ip, computerid, lastadminrank) VALUES (null, '[sql_ckey]', Now(), Now(), '[sql_ip]', '[sql_computerid]', '[sql_admin_rank]')")
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 		query_insert.Execute()
 		qdel(query_insert) //CHOMPEdit TGSQL
 
 	//Logging player access
 	var/serverip = "[world.internet_address]:[world.port]"
+<<<<<<< HEAD
 	var/datum/db_query/query_accesslog = SSdbcore.NewQuery("INSERT INTO `erro_connection_log`(`id`,`datetime`,`serverip`,`ckey`,`ip`,`computerid`) VALUES(null,Now(),'[serverip]',:t_ckey,'[sql_ip]','[sql_computerid]');", list("t_ckey" = sql_ckey)) //CHOMPEdit TGSQL
+=======
+	var/datum/db_query/query_accesslog = SSdbcore.NewQuery("INSERT INTO `erro_connection_log`(`id`,`datetime`,`serverip`,`ckey`,`ip`,`computerid`) VALUES(null,Now(),'[serverip]','[sql_ckey]','[sql_ip]','[sql_computerid]');")
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 	query_accesslog.Execute()
 	qdel(query_accesslog) //CHOMPEdit TGSQL
 

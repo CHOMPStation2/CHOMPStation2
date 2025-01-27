@@ -81,11 +81,19 @@
 	if(!IsGuestKey(src.key))
 		establish_db_connection()
 
+<<<<<<< HEAD
 		if(SSdbcore.IsConnected()) //CHOMPEdit TGSQL
 			var/isadmin = 0
 			if(src.client && src.client.holder)
 				isadmin = 1
 			var/datum/db_query/query = SSdbcore.NewQuery("SELECT id FROM erro_poll_question WHERE [(isadmin ? "" : "adminonly = false AND")] Now() BETWEEN starttime AND endtime AND id NOT IN (SELECT pollid FROM erro_poll_vote WHERE ckey = :t_ckey) AND id NOT IN (SELECT pollid FROM erro_poll_textreply WHERE ckey = :t_ckey)",list("t_ckey" = ckey)) //CHOMPEdit TGSQL
+=======
+		if(SSdbcore.IsConnected())
+			var/isadmin = 0
+			if(src.client && src.client.holder)
+				isadmin = 1
+			var/datum/db_query/query = SSdbcore.NewQuery("SELECT id FROM erro_poll_question WHERE [(isadmin ? "" : "adminonly = false AND")] Now() BETWEEN starttime AND endtime AND id NOT IN (SELECT pollid FROM erro_poll_vote WHERE ckey = \"[ckey]\") AND id NOT IN (SELECT pollid FROM erro_poll_textreply WHERE ckey = \"[ckey]\")")
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 			query.Execute()
 			var/newpoll = 0
 			while(query.NextRow())
@@ -251,12 +259,20 @@
 
 	if(href_list["privacy_poll"])
 		establish_db_connection()
+<<<<<<< HEAD
 		if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
+=======
+		if(!SSdbcore.IsConnected())
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 			return
 		var/voted = 0
 
 		//First check if the person has not voted yet.
+<<<<<<< HEAD
 		var/datum/db_query/query = SSdbcore.NewQuery("SELECT * FROM erro_privacy WHERE ckey=:t_ckey", list("t_ckey" = src.ckey)) //CHOMPEdit TGSQL
+=======
+		var/datum/db_query/query = SSdbcore.NewQuery("SELECT * FROM erro_privacy WHERE ckey='[src.ckey]'")
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 		query.Execute()
 		while(query.NextRow())
 			voted = 1
@@ -281,9 +297,14 @@
 			return
 
 		if(!voted)
+<<<<<<< HEAD
 			var/list/sqlargs = list("t_ckey" = src.ckey, "t_option" = "[option]") //CHOMPEdit TGSQL
 			var/sql = "INSERT INTO erro_privacy VALUES (null, Now(), :t_ckey, :t_option)" //CHOMPEdit TGSQL
 			var/datum/db_query/query_insert = SSdbcore.NewQuery(sql,sqlargs) //CHOMPEdit TGSQL
+=======
+			var/sql = "INSERT INTO erro_privacy VALUES (null, Now(), '[src.ckey]', '[option]')"
+			var/datum/db_query/query_insert = SSdbcore.NewQuery(sql)
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 			query_insert.Execute()
 			to_chat(usr, span_bold("Thank you for your vote!"))
 			qdel(query_insert)

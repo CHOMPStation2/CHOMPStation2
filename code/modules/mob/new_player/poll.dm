@@ -1,11 +1,19 @@
 
 /mob/new_player/proc/handle_privacy_poll()
 	establish_db_connection()
+<<<<<<< HEAD
 	if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
 		return
 	var/voted = 0
 
 	var/datum/db_query/query = SSdbcore.NewQuery("SELECT * FROM erro_privacy WHERE ckey=:t_ckey", list("t_ckey" = src.ckey)) //CHOMPEdit TGSQL
+=======
+	if(!SSdbcore.IsConnected())
+		return
+	var/voted = 0
+
+	var/datum/db_query/query = SSdbcore.NewQuery("SELECT * FROM erro_privacy WHERE ckey='[src.ckey]'")
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 	query.Execute()
 	while(query.NextRow())
 		voted = 1
@@ -48,12 +56,20 @@
 
 /mob/new_player/proc/handle_player_polling()
 	establish_db_connection()
+<<<<<<< HEAD
 	if(SSdbcore.IsConnected()) //CHOMPEdit TGSQL
+=======
+	if(SSdbcore.IsConnected())
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 		var/isadmin = 0
 		if(src.client && src.client.holder)
 			isadmin = 1
 
+<<<<<<< HEAD
 		var/datum/db_query/select_query = SSdbcore.NewQuery("SELECT id, question FROM erro_poll_question WHERE [(isadmin ? "" : "adminonly = false AND")] Now() BETWEEN starttime AND endtime") //CHOMPEdit TGSQL
+=======
+		var/datum/db_query/select_query = SSdbcore.NewQuery("SELECT id, question FROM erro_poll_question WHERE [(isadmin ? "" : "adminonly = false AND")] Now() BETWEEN starttime AND endtime")
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 		select_query.Execute()
 
 		var/output = "<div align='center'><B>Player polls</B>"
@@ -82,9 +98,15 @@
 /mob/new_player/proc/poll_player(var/pollid = -1)
 	if(pollid == -1) return
 	establish_db_connection()
+<<<<<<< HEAD
 	if(SSdbcore.IsConnected()) //CHOMPEdit TGSQL
 
 		var/datum/db_query/select_query = SSdbcore.NewQuery("SELECT starttime, endtime, question, polltype, multiplechoiceoptions FROM erro_poll_question WHERE id = [pollid]") //CHOMPEdit TGSQL
+=======
+	if(SSdbcore.IsConnected())
+
+		var/datum/db_query/select_query = SSdbcore.NewQuery("SELECT starttime, endtime, question, polltype, multiplechoiceoptions FROM erro_poll_question WHERE id = [pollid]")
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 		select_query.Execute()
 
 		var/pollstarttime = ""
@@ -109,7 +131,11 @@
 		switch(polltype)
 			//Polls that have enumerated options
 			if("OPTION")
+<<<<<<< HEAD
 				var/datum/db_query/voted_query = SSdbcore.NewQuery("SELECT optionid FROM erro_poll_vote WHERE pollid = [pollid] AND ckey = :t_ckey", list("t_ckey" = usr.ckey)) //CHOMPEdit TGSQL
+=======
+				var/datum/db_query/voted_query = SSdbcore.NewQuery("SELECT optionid FROM erro_poll_vote WHERE pollid = [pollid] AND ckey = '[usr.ckey]'")
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 				voted_query.Execute()
 
 				var/voted = 0
@@ -121,7 +147,11 @@
 				qdel(voted_query) //CHOMPEdit TGSQL
 				var/list/datum/polloption/options = list()
 
+<<<<<<< HEAD
 				var/datum/db_query/options_query = SSdbcore.NewQuery("SELECT id, text FROM erro_poll_option WHERE pollid = [pollid]") //CHOMPEdit TGSQL
+=======
+				var/datum/db_query/options_query = SSdbcore.NewQuery("SELECT id, text FROM erro_poll_option WHERE pollid = [pollid]")
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 				options_query.Execute()
 				while(options_query.NextRow())
 					var/datum/polloption/PO = new()
@@ -162,7 +192,11 @@
 
 			//Polls with a text input
 			if("TEXT")
+<<<<<<< HEAD
 				var/datum/db_query/voted_query = SSdbcore.NewQuery("SELECT replytext FROM erro_poll_textreply WHERE pollid = [pollid] AND ckey = :t_ckey", list("t_ckey" = usr.ckey)) //CHOMPEdit TGSQL
+=======
+				var/datum/db_query/voted_query = SSdbcore.NewQuery("SELECT replytext FROM erro_poll_textreply WHERE pollid = [pollid] AND ckey = '[usr.ckey]'")
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 				voted_query.Execute()
 
 				var/voted = 0
@@ -204,7 +238,11 @@
 
 			//Polls with a text input
 			if("NUMVAL")
+<<<<<<< HEAD
 				var/datum/db_query/voted_query = SSdbcore.NewQuery("SELECT o.text, v.rating FROM erro_poll_option o, erro_poll_vote v WHERE o.pollid = [pollid] AND v.ckey = :t_ckey AND o.id = v.optionid", list("t_ckey" = usr.ckey)) //CHOMPEdit TGSQL
+=======
+				var/datum/db_query/voted_query = SSdbcore.NewQuery("SELECT o.text, v.rating FROM erro_poll_option o, erro_poll_vote v WHERE o.pollid = [pollid] AND v.ckey = '[usr.ckey]' AND o.id = v.optionid")
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 				voted_query.Execute()
 
 				var/output = "<div align='center'><B>Player poll</B>"
@@ -230,7 +268,11 @@
 					var/minid = 999999
 					var/maxid = 0
 
+<<<<<<< HEAD
 					var/datum/db_query/option_query = SSdbcore.NewQuery("SELECT id, text, minval, maxval, descmin, descmid, descmax FROM erro_poll_option WHERE pollid = [pollid]") //CHOMPEdit TGSQL
+=======
+					var/datum/db_query/option_query = SSdbcore.NewQuery("SELECT id, text, minval, maxval, descmin, descmid, descmax FROM erro_poll_option WHERE pollid = [pollid]")
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 					option_query.Execute()
 					while(option_query.NextRow())
 						var/optionid = text2num(option_query.item[1])
@@ -273,7 +315,11 @@
 
 				src << browse("<html>[output]</html>","window=playerpoll;size=500x500")
 			if("MULTICHOICE")
+<<<<<<< HEAD
 				var/datum/db_query/voted_query = SSdbcore.NewQuery("SELECT optionid FROM erro_poll_vote WHERE pollid = [pollid] AND ckey = :t_ckey", list("t_ckey" = usr.ckey)) //CHOMPEdit TGSQL
+=======
+				var/datum/db_query/voted_query = SSdbcore.NewQuery("SELECT optionid FROM erro_poll_vote WHERE pollid = [pollid] AND ckey = '[usr.ckey]'")
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 				voted_query.Execute()
 
 				var/list/votedfor = list()
@@ -286,7 +332,11 @@
 				var/maxoptionid = 0
 				var/minoptionid = 0
 
+<<<<<<< HEAD
 				var/datum/db_query/options_query = SSdbcore.NewQuery("SELECT id, text FROM erro_poll_option WHERE pollid = [pollid]") //CHOMPEdit TGSQL
+=======
+				var/datum/db_query/options_query = SSdbcore.NewQuery("SELECT id, text FROM erro_poll_option WHERE pollid = [pollid]")
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 				options_query.Execute()
 				while(options_query.NextRow())
 					var/datum/polloption/PO = new()
@@ -343,9 +393,15 @@
 	if(!isnum(pollid) || !isnum(optionid))
 		return
 	establish_db_connection()
+<<<<<<< HEAD
 	if(SSdbcore.IsConnected()) //CHOMPEdit TGSQL
 
 		var/datum/db_query/select_query = SSdbcore.NewQuery("SELECT starttime, endtime, question, polltype, multiplechoiceoptions FROM erro_poll_question WHERE id = [pollid] AND Now() BETWEEN starttime AND endtime") //CHOMPEdit TGSQL
+=======
+	if(SSdbcore.IsConnected())
+
+		var/datum/db_query/select_query = SSdbcore.NewQuery("SELECT starttime, endtime, question, polltype, multiplechoiceoptions FROM erro_poll_question WHERE id = [pollid] AND Now() BETWEEN starttime AND endtime")
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 		select_query.Execute()
 
 		var/validpoll = 0
@@ -363,7 +419,11 @@
 			to_chat(usr, span_red("Poll is not valid."))
 			return
 
+<<<<<<< HEAD
 		var/datum/db_query/select_query2 = SSdbcore.NewQuery("SELECT id FROM erro_poll_option WHERE id = [optionid] AND pollid = [pollid]") //CHOMPEdit TGSQL
+=======
+		var/datum/db_query/select_query2 = SSdbcore.NewQuery("SELECT id FROM erro_poll_option WHERE id = [optionid] AND pollid = [pollid]")
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 		select_query2.Execute()
 
 		var/validoption = 0
@@ -372,14 +432,22 @@
 			validoption = 1
 			break
 
+<<<<<<< HEAD
 		qdel(select_query2) //CHOMPEdit TGSQL
+=======
+		qdel(select_query2)
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 		if(!validoption)
 			to_chat(usr, span_red("Poll option is not valid."))
 			return
 
 		var/alreadyvoted = 0
 
+<<<<<<< HEAD
 		var/datum/db_query/voted_query = SSdbcore.NewQuery("SELECT id FROM erro_poll_vote WHERE pollid = [pollid] AND ckey = :t_ckey", list("t_ckey" = usr.ckey)) //CHOMPEdit TGSQL
+=======
+		var/datum/db_query/voted_query = SSdbcore.NewQuery("SELECT id FROM erro_poll_vote WHERE pollid = [pollid] AND ckey = '[usr.ckey]'")
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 		voted_query.Execute()
 
 		while(voted_query.NextRow())
@@ -400,7 +468,11 @@
 			adminrank = usr.client.holder.rank
 
 
+<<<<<<< HEAD
 		var/datum/db_query/insert_query = SSdbcore.NewQuery("INSERT INTO erro_poll_vote (id ,datetime ,pollid ,optionid ,ckey ,ip ,adminrank) VALUES (null, Now(), [pollid], [optionid], :t_ckey, '[usr.client.address]', '[adminrank]')", list("t_ckey" = usr.ckey)) //CHOMPEdit TGSQL
+=======
+		var/datum/db_query/insert_query = SSdbcore.NewQuery("INSERT INTO erro_poll_vote (id ,datetime ,pollid ,optionid ,ckey ,ip ,adminrank) VALUES (null, Now(), [pollid], [optionid], '[usr.ckey]', '[usr.client.address]', '[adminrank]')")
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 		insert_query.Execute()
 
 		to_chat(usr, span_blue("Vote successful."))
@@ -415,9 +487,15 @@
 	if(!isnum(pollid) || !istext(replytext))
 		return
 	establish_db_connection()
+<<<<<<< HEAD
 	if(SSdbcore.IsConnected()) //CHOMPEdit TGSQL
 
 		var/datum/db_query/select_query = SSdbcore.NewQuery("SELECT starttime, endtime, question, polltype FROM erro_poll_question WHERE id = [pollid] AND Now() BETWEEN starttime AND endtime") //CHOMPEdit TGSQL
+=======
+	if(SSdbcore.IsConnected())
+
+		var/datum/db_query/select_query = SSdbcore.NewQuery("SELECT starttime, endtime, question, polltype FROM erro_poll_question WHERE id = [pollid] AND Now() BETWEEN starttime AND endtime")
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 		select_query.Execute()
 
 		var/validpoll = 0
@@ -434,7 +512,11 @@
 
 		var/alreadyvoted = 0
 
+<<<<<<< HEAD
 		var/datum/db_query/voted_query = SSdbcore.NewQuery("SELECT id FROM erro_poll_textreply WHERE pollid = [pollid] AND ckey = :t_ckey", list("t_ckey" = usr.ckey)) //CHOMPEdit TGSQL
+=======
+		var/datum/db_query/voted_query = SSdbcore.NewQuery("SELECT id FROM erro_poll_textreply WHERE pollid = [pollid] AND ckey = '[usr.ckey]'")
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 		voted_query.Execute()
 
 		while(voted_query.NextRow())
@@ -459,7 +541,11 @@
 			to_chat(usr, "The text you entered was blank, contained illegal characters or was too long. Please correct the text and submit again.")
 			return
 
+<<<<<<< HEAD
 		var/datum/db_query/insert_query = SSdbcore.NewQuery("INSERT INTO erro_poll_textreply (id ,datetime ,pollid ,ckey ,ip ,replytext ,adminrank) VALUES (null, Now(), [pollid], :t_ckey, '[usr.client.address]', :t_reply, '[adminrank]')", list("t_ckey" = usr.ckey, "t_reply" = replytext)) //CHOMPEdit TGSQL
+=======
+		var/datum/db_query/insert_query = SSdbcore.NewQuery("INSERT INTO erro_poll_textreply (id ,datetime ,pollid ,ckey ,ip ,replytext ,adminrank) VALUES (null, Now(), [pollid], '[usr.ckey]', '[usr.client.address]', '[replytext]', '[adminrank]')")
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 		insert_query.Execute()
 
 		to_chat(usr, span_blue("Feedback logging successful."))
@@ -474,9 +560,15 @@
 	if(!isnum(pollid) || !isnum(optionid))
 		return
 	establish_db_connection()
+<<<<<<< HEAD
 	if(SSdbcore.IsConnected()) //CHOMPEdit TGSQL
 
 		var/datum/db_query/select_query = SSdbcore.NewQuery("SELECT starttime, endtime, question, polltype FROM erro_poll_question WHERE id = [pollid] AND Now() BETWEEN starttime AND endtime") //CHOMPEdit TGSQL
+=======
+	if(SSdbcore.IsConnected())
+
+		var/datum/db_query/select_query = SSdbcore.NewQuery("SELECT starttime, endtime, question, polltype FROM erro_poll_question WHERE id = [pollid] AND Now() BETWEEN starttime AND endtime")
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 		select_query.Execute()
 
 		var/validpoll = 0
@@ -491,7 +583,11 @@
 			to_chat(usr, span_red("Poll is not valid."))
 			return
 
+<<<<<<< HEAD
 		var/datum/db_query/select_query2 = SSdbcore.NewQuery("SELECT id FROM erro_poll_option WHERE id = [optionid] AND pollid = [pollid]") //CHOMPEdit TGSQL
+=======
+		var/datum/db_query/select_query2 = SSdbcore.NewQuery("SELECT id FROM erro_poll_option WHERE id = [optionid] AND pollid = [pollid]")
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 		select_query2.Execute()
 
 		var/validoption = 0
@@ -506,7 +602,11 @@
 
 		var/alreadyvoted = 0
 
+<<<<<<< HEAD
 		var/datum/db_query/voted_query = SSdbcore.NewQuery("SELECT id FROM erro_poll_vote WHERE optionid = [optionid] AND ckey = :t_ckey", list("t_ckey" = usr.ckey)) //CHOMPEdit TGSQL
+=======
+		var/datum/db_query/voted_query = SSdbcore.NewQuery("SELECT id FROM erro_poll_vote WHERE optionid = [optionid] AND ckey = '[usr.ckey]'")
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 		voted_query.Execute()
 
 		while(voted_query.NextRow())
@@ -522,7 +622,11 @@
 			adminrank = usr.client.holder.rank
 
 
+<<<<<<< HEAD
 		var/datum/db_query/insert_query = SSdbcore.NewQuery("INSERT INTO erro_poll_vote (id ,datetime ,pollid ,optionid ,ckey ,ip ,adminrank, rating) VALUES (null, Now(), [pollid], [optionid], '[usr.ckey]', '[usr.client.address]', '[adminrank]', :t_rating)", list("t_ckey" = usr.ckey, "t_rating" = rating)) //CHOMPEdit TGSQL
+=======
+		var/datum/db_query/insert_query = SSdbcore.NewQuery("INSERT INTO erro_poll_vote (id ,datetime ,pollid ,optionid ,ckey ,ip ,adminrank, rating) VALUES (null, Now(), [pollid], [optionid], '[usr.ckey]', '[usr.client.address]', '[adminrank]', [(isnull(rating)) ? "null" : rating])")
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 		insert_query.Execute()
 
 		to_chat(usr, span_blue("Vote successful."))

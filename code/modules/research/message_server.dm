@@ -371,10 +371,17 @@ var/obj/machinery/blackbox_recorder/blackbox
 
 	round_end_data_gathering() //round_end time logging and some other data processing
 	establish_db_connection()
+<<<<<<< HEAD
 	if(!SSdbcore.IsConnected()) return //CHOMPEdit TGSQL
 	var/round_id
 
 	var/datum/db_query/query = SSdbcore.NewQuery("SELECT MAX(round_id) AS round_id FROM erro_feedback") //CHOMPEdit TGSQL
+=======
+	if(!SSdbcore.IsConnected()) return
+	var/round_id
+
+	var/datum/db_query/query = SSdbcore.NewQuery("SELECT MAX(round_id) AS round_id FROM erro_feedback")
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 	query.Execute()
 	while(query.NextRow())
 		round_id = query.item[1]
@@ -384,9 +391,14 @@ var/obj/machinery/blackbox_recorder/blackbox
 	round_id++
 
 	for(var/datum/feedback_variable/FV in feedback)
+<<<<<<< HEAD
 		var/list/sqlargs = list("t_roundid" = round_id, "t_variable" = "[FV.get_variable()]", "t_value" = "[FV.get_value()]", "t_details" = "[FV.get_details()]") //CHOMPEdit TGSQL
 		var/sql = "INSERT INTO erro_feedback VALUES (null, Now(), :t_roundid, :t_variable, :t_value, :t_details)" //CHOMPEdit TGSQL
 		var/datum/db_query/query_insert = SSdbcore.NewQuery(sql, sqlargs) //CHOMPEdit TGSQL
+=======
+		var/sql = "INSERT INTO erro_feedback VALUES (null, Now(), [round_id], \"[FV.get_variable()]\", [FV.get_value()], \"[FV.get_details()]\")"
+		var/datum/db_query/query_insert = SSdbcore.NewQuery(sql)
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 		query_insert.Execute()
 		qdel(query_insert) //CHOMPEdit TGSQL
 

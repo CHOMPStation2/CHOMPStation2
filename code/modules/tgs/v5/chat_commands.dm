@@ -91,8 +91,13 @@ GLOBAL_LIST_EMPTY(pending_discord_registrations)
 
 /datum/tgs_chat_command/register/Run(datum/tgs_chat_user/sender, params)
 	// Try to find if that ID is registered to someone already
+<<<<<<< HEAD
 	//var/sql_discord = sql_sanitize_text(sender.id) //CHOMPEdit TGSQL
 	var/datum/db_query/query = SSdbcore.NewQuery("SELECT discord_id FROM erro_player WHERE discord_id = :t_discord", list("t_discord"=sender.id)) //CHOMPEdit TGSQL
+=======
+	var/sql_discord = sql_sanitize_text(sender.id)
+	var/datum/db_query/query = SSdbcore.NewQuery("SELECT discord_id FROM erro_player WHERE discord_id = '[sql_discord]'")
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 	query.Execute()
 	if(query.NextRow())
 		qdel(query) //CHOMPEdit TGSQL
@@ -115,9 +120,15 @@ GLOBAL_LIST_EMPTY(pending_discord_registrations)
 	if(!user)
 		return "[sender.friendly_name], I couldn't find a logged-in user with the username of '[key_to_find]', which is what you provided after conversion to Byond's ckey format. Please connect to the game server and try again."
 
+<<<<<<< HEAD
 	//var/sql_ckey = sql_sanitize_text(key_to_find) //CHOMPEdit TGSQL
 	var/datum/db_query/query2 = SSdbcore.NewQuery("SELECT discord_id FROM erro_player WHERE ckey = :t_ckey",list("t_ckey" = key_to_find)) //CHOMPEdit TGSQL
 	query2.Execute() //CHOMPEdit TGSQL
+=======
+	var/sql_ckey = sql_sanitize_text(key_to_find)
+	query = SSdbcore.NewQuery("SELECT discord_id FROM erro_player WHERE ckey = '[sql_ckey]'")
+	query.Execute()
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 
 	// We somehow found their client, BUT they don't exist in the database
 	if(!query2.NextRow()) //CHOMPEdit TGSQL

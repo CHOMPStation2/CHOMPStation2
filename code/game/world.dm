@@ -9,6 +9,8 @@
 	diary = start_log("[log_path].log")
 	href_logfile = start_log("[log_path]-hrefs.htm")
 	error_log = start_log("[log_path]-error.log")
+	sql_error_log = start_log("[log_path]-sql-error.log")
+	query_debug_log = start_log("[log_path]-query-debug.log")
 	debug_log = start_log("[log_path]-debug.log")
 	//VOREStation Edit End
 
@@ -106,7 +108,11 @@
 	// (i.e. basically nothing should be added before load_admins() in here)
 
 	// Try to set round ID
+<<<<<<< HEAD
 	SSdbcore.InitializeRound() // CHOMPEdit
+=======
+	SSdbcore.InitializeRound()
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 
 	//apply a default value to config.python_path, if needed
 	if (!CONFIG_GET(string/python_path))
@@ -665,8 +671,8 @@ var/failed_old_db_connections = 0
 	if(failed_db_connections > FAILED_DB_CONNECTION_CUTOFF)	//If it failed to establish a connection more than 5 times in a row, don't bother attempting to conenct anymore.
 		return 0
 
-	if(!dbcon)
-		dbcon = new()
+	if(!SSdbcore)
+		SSdbcore = new()
 
 	var/user = CONFIG_GET(string/feedback_login)
 	var/pass = CONFIG_GET(string/feedback_password)
@@ -674,8 +680,8 @@ var/failed_old_db_connections = 0
 	var/address = CONFIG_GET(string/address)
 	var/port = CONFIG_GET(number/port)
 
-	dbcon.Connect("dbi:mysql:[db]:[address]:[port]","[user]","[pass]")
-	. = dbcon.IsConnected()
+	SSdbcore.Connect("dbi:mysql:[db]:[address]:[port]","[user]","[pass]")
+	. = SSdbcore.IsConnected()
 	if ( . )
 		failed_db_connections = 0	//If this connection succeeded, reset the failed connections counter.
 		//CHOMPEdit Begin
@@ -689,13 +695,24 @@ var/failed_old_db_connections = 0
 		//CHOMPEdit End
 	else
 		failed_db_connections++		//If it failed, increase the failed connections counter.
-		to_world_log(dbcon.ErrorMsg())
+		to_world_log(SSdbcore.ErrorMsg())
 
 	return .*/
 
 //This proc ensures that the connection to the feedback database (global variable dbcon) is established
+<<<<<<< HEAD
 /proc/establish_db_connection() //CHOMPEdit TGSQL
 	return SSdbcore.Connect()
+=======
+/proc/establish_db_connection()
+	if(failed_db_connections > FAILED_DB_CONNECTION_CUTOFF)
+		return 0
+
+	if(!SSdbcore || !SSdbcore.IsConnected())
+		return setup_database_connection()
+	else
+		return 1
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 
 /* CHOMPedit
 // Cleans up DB connections and recreates them
@@ -703,14 +720,11 @@ var/failed_old_db_connections = 0
 	var/list/results = list("-- Resetting DB connections --")
 	failed_db_connections = 0
 
-	if(dbcon?.IsConnected())
-		dbcon.Disconnect()
-		results += "dbcon was connected and asked to disconnect"
+	if(SSdbcore?.IsConnected())
+		SSdbcore.Disconnect()
+		results += "SSdbcore was connected and asked to disconnect"
 	else
-		results += "dbcon was not connected"
-
-	if(dbcon_old?.IsConnected())
-		results += "WARNING: dbcon_old is connected, not touching it, but is this intentional?"
+		results += "SSdbcore was not connected"
 
 	if(!CONFIG_GET(flag/sql_enabled))
 		results += "stopping because config.sql_enabled = false"

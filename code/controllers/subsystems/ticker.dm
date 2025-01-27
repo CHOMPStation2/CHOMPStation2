@@ -546,7 +546,11 @@ var/global/datum/controller/subsystem/ticker/ticker
 	for(var/i in total_antagonists)
 		log_game("[i]s[total_antagonists[i]].")
 
+<<<<<<< HEAD
 	SSdbcore.SetRoundEnd() // CHOMPEdit
+=======
+	SSdbcore.SetRoundEnd()
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 
 	return 1
 

@@ -81,7 +81,10 @@
 					"address" = client.address,
 					"computer_id" = client.computer_id,
 				),
+<<<<<<< HEAD
 				// CHOMPEdit - "server" section
+=======
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 				"server" = list(
 					"round_id" = GLOB.round_id,
 				),

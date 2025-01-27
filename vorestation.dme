@@ -195,7 +195,11 @@
 #include "code\_global_vars\_regexes.dm"
 #include "code\_global_vars\bitfields.dm"
 #include "code\_global_vars\configuration.dm"
+<<<<<<< HEAD
 #include "code\_global_vars\logging_ch.dm"
+=======
+#include "code\_global_vars\logging.dm"
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 #include "code\_global_vars\misc.dm"
 #include "code\_global_vars\mobs.dm"
 #include "code\_global_vars\time_vars.dm"

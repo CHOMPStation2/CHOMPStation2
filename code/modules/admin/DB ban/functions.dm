@@ -5,7 +5,11 @@
 	if(!check_rights(R_MOD,0) && !check_rights(R_BAN))	return
 
 	establish_db_connection()
+<<<<<<< HEAD
 	if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
+=======
+	if(!SSdbcore.IsConnected())
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 		return
 
 	var/serverip = "[world.internet_address]:[world.port]"
@@ -44,7 +48,11 @@
 		computerid = bancid
 		ip = banip
 
+<<<<<<< HEAD
 	var/datum/db_query/query = SSdbcore.NewQuery("SELECT id FROM erro_player WHERE ckey = :t_ckey", list("t_ckey",ckey)) //CHOMPEdit TGSQL
+=======
+	var/datum/db_query/query = SSdbcore.NewQuery("SELECT id FROM erro_player WHERE ckey = '[ckey]'")
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 	query.Execute()
 	var/validckey = 0
 	if(query.NextRow())
@@ -83,7 +91,12 @@
 	var/list/sqlargs = list("t_bantype" = bantype_str, "t_reason" = reason, "t_job" = job, "t_ckey" = ckey, "t_a_ckey" = a_ckey, "t_who" = who, "t_adminwho" = adminwho) //CHOMPEdit TGSQL
 	var/sql = "INSERT INTO erro_ban (`id`,`bantime`,`serverip`,`bantype`,`reason`,`job`,`duration`,`rounds`,`expiration_time`,`ckey`,`computerid`,`ip`,`a_ckey`,`a_computerid`,`a_ip`,`who`,`adminwho`,`edits`,`unbanned`,`unbanned_datetime`,`unbanned_ckey`,`unbanned_computerid`,`unbanned_ip`) VALUES (null, Now(), '[serverip]', :t_bantype, :t_reason, :t_job, [(duration)?"[duration]":"0"], [(rounds)?"[rounds]":"0"], Now() + INTERVAL [(duration>0) ? duration : 0] MINUTE, :t_ckey, '[computerid]', '[ip]', :t_a_ckey, '[a_computerid]', '[a_ip]', :t_who, :t_adminwho, '', null, null, null, null, null)" //CHOMPEdit TGSQL
 
+<<<<<<< HEAD
 	var/datum/db_query/query_insert = SSdbcore.NewQuery(sql,sqlargs) //CHOMPEdit TGSQL
+=======
+	var/sql = "INSERT INTO erro_ban (`id`,`bantime`,`serverip`,`bantype`,`reason`,`job`,`duration`,`rounds`,`expiration_time`,`ckey`,`computerid`,`ip`,`a_ckey`,`a_computerid`,`a_ip`,`who`,`adminwho`,`edits`,`unbanned`,`unbanned_datetime`,`unbanned_ckey`,`unbanned_computerid`,`unbanned_ip`) VALUES (null, Now(), '[serverip]', '[bantype_str]', '[reason]', '[job]', [(duration)?"[duration]":"0"], [(rounds)?"[rounds]":"0"], Now() + INTERVAL [(duration>0) ? duration : 0] MINUTE, '[ckey]', '[computerid]', '[ip]', '[a_ckey]', '[a_computerid]', '[a_ip]', '[who]', '[adminwho]', '', null, null, null, null, null)"
+	var/datum/db_query/query_insert = SSdbcore.NewQuery(sql)
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 	query_insert.Execute()
 	to_chat(usr, span_filter_adminlog("[span_blue("Ban saved to database.")]"))
 	message_admins("[key_name_admin(usr)] has added a [bantype_str] for [ckey] [(job)?"([job])":""] [(duration > 0)?"([duration] minutes)":""] with the reason: \"[reason]\" to the ban database.",1)
@@ -126,13 +139,21 @@
 		sql += " AND job = '[job]'"
 
 	establish_db_connection()
+<<<<<<< HEAD
 	if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
+=======
+	if(!SSdbcore.IsConnected())
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 		return
 
 	var/ban_id
 	var/ban_number = 0 //failsafe
 
+<<<<<<< HEAD
 	var/datum/db_query/query = SSdbcore.NewQuery(sql, list("t_ckey" = ckey)) //CHOMPEdit TGSQL
+=======
+	var/datum/db_query/query = SSdbcore.NewQuery(sql)
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 	query.Execute()
 	while(query.NextRow())
 		ban_id = query.item[1]
@@ -162,7 +183,11 @@
 		to_chat(usr, "Cancelled")
 		return
 
+<<<<<<< HEAD
 	var/datum/db_query/query = SSdbcore.NewQuery("SELECT ckey, duration, reason FROM erro_ban WHERE id = [banid]") //CHOMPEdit TGSQL
+=======
+	var/datum/db_query/query = SSdbcore.NewQuery("SELECT ckey, duration, reason FROM erro_ban WHERE id = [banid]")
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 	query.Execute()
 
 	var/eckey = usr.ckey	//Editing admin ckey
@@ -176,9 +201,16 @@
 		reason = query.item[3]
 	else
 		to_chat(usr, span_filter_adminlog("Invalid ban id. Contact the database admin"))
+<<<<<<< HEAD
 		qdel(query) //CHOMPEdit TGSQL
 		return
 	qdel(query) //CHOMPEdit TGSQL
+=======
+		qdel(query)
+		return
+
+	qdel(query)
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 	reason = sql_sanitize_text(reason)
 	var/value
 
@@ -190,8 +222,13 @@
 				if(!value)
 					to_chat(usr, "Cancelled")
 					return
+<<<<<<< HEAD
 			var/list/sqlargs = list("t_reason" = value, "t_edits" = "- [eckey] changed ban reason from <cite><b>\\\"[reason]\\\"</b></cite> to <cite><b>\\\"[value]\\\"</b></cite><BR>") //CHOMPEdit TGSQL
 			var/datum/db_query/update_query = SSdbcore.NewQuery("UPDATE erro_ban SET reason = '[value]', edits = CONCAT(edits,:t_edits) WHERE id = [banid]", sqlargs) //CHOMPEdit TGSQL
+=======
+
+			var/datum/db_query/update_query = SSdbcore.NewQuery("UPDATE erro_ban SET reason = '[value]', edits = CONCAT(edits,'- [eckey] changed ban reason from <cite><b>\\\"[reason]\\\"</b></cite> to <cite><b>\\\"[value]\\\"</b></cite><BR>') WHERE id = [banid]")
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 			update_query.Execute()
 			message_admins("[key_name_admin(usr)] has edited a ban for [pckey]'s reason from [reason] to [value]",1)
 			qdel(update_query) //CHOMPEdit TGSQL
@@ -201,8 +238,13 @@
 				if(!isnum(value) || !value)
 					to_chat(usr, "Cancelled")
 					return
+<<<<<<< HEAD
 			var/list/sqlargs = list("t_edits" = "- [eckey] changed ban duration from [duration] to [value]<br>") //CHOMPEdit TGSQL
 			var/datum/db_query/update_query = SSdbcore.NewQuery("UPDATE erro_ban SET duration = [value], edits = CONCAT(edits,:t_edits), expiration_time = DATE_ADD(bantime, INTERVAL [value] MINUTE) WHERE id = [banid]",sqlargs) //CHOMPEdit TGSQL
+=======
+
+			var/datum/db_query/update_query = SSdbcore.NewQuery("UPDATE erro_ban SET duration = [value], edits = CONCAT(edits,'- [eckey] changed ban duration from [duration] to [value]<br>'), expiration_time = DATE_ADD(bantime, INTERVAL [value] MINUTE) WHERE id = [banid]")
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 			message_admins("[key_name_admin(usr)] has edited a ban for [pckey]'s duration from [duration] to [value]",1)
 			update_query.Execute()
 			qdel(update_query) //CHOMPEdit TGSQL
@@ -220,13 +262,21 @@
 	var/sql = "SELECT ckey FROM erro_ban WHERE id = [id]"
 
 	establish_db_connection()
+<<<<<<< HEAD
 	if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
+=======
+	if(!SSdbcore.IsConnected())
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 		return
 
 	var/ban_number = 0 //failsafe
 
 	var/pckey
+<<<<<<< HEAD
 	var/datum/db_query/query = SSdbcore.NewQuery(sql) //CHOMPEdit TGSQL
+=======
+	var/datum/db_query/query = SSdbcore.NewQuery(sql)
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 	query.Execute()
 	while(query.NextRow())
 		pckey = query.item[1]
@@ -250,7 +300,11 @@
 	var/sql_update = "UPDATE erro_ban SET unbanned = 1, unbanned_datetime = Now(), unbanned_ckey = :t_ckey, unbanned_computerid = '[unban_computerid]', unbanned_ip = '[unban_ip]' WHERE id = [id]" //CHOMPEdit TGSQL
 	message_admins("[key_name_admin(usr)] has lifted [pckey]'s ban.",1)
 
+<<<<<<< HEAD
 	var/datum/db_query/query_update = SSdbcore.NewQuery(sql_update,sqlargs) //CHOMPEdit TGSQL
+=======
+	var/datum/db_query/query_update = SSdbcore.NewQuery(sql_update)
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 	query_update.Execute()
 	qdel(query_update) //CHOMPEdit TGSQL
 
@@ -272,7 +326,11 @@
 	if(!check_rights(R_BAN))	return
 
 	establish_db_connection()
+<<<<<<< HEAD
 	if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
+=======
+	if(!SSdbcore.IsConnected())
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 		to_chat(usr, span_filter_adminlog("[span_red("Failed to establish database connection")]"))
 		return
 
@@ -408,7 +466,11 @@
 					else
 						bantypesearch += "'PERMABAN' "
 
+<<<<<<< HEAD
 			var/datum/db_query/select_query = SSdbcore.NewQuery("SELECT id, bantime, bantype, reason, job, duration, expiration_time, ckey, a_ckey, unbanned, unbanned_ckey, unbanned_datetime, edits, ip, computerid FROM erro_ban WHERE 1 [playersearch] [adminsearch] [ipsearch] [cidsearch] [bantypesearch] ORDER BY bantime DESC LIMIT 100", sqlargs) //CHOMPEdit TGSQL
+=======
+			var/datum/db_query/select_query = SSdbcore.NewQuery("SELECT id, bantime, bantype, reason, job, duration, expiration_time, ckey, a_ckey, unbanned, unbanned_ckey, unbanned_datetime, edits, ip, computerid FROM erro_ban WHERE 1 [playersearch] [adminsearch] [ipsearch] [cidsearch] [bantypesearch] ORDER BY bantime DESC LIMIT 100")
+>>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 			select_query.Execute()
 
 			var/now = time2text(world.realtime, "YYYY-MM-DD hh:mm:ss") // MUST BE the same format as SQL gives us the dates in, and MUST be least to most specific (i.e. year, month, day not day, month, year)
