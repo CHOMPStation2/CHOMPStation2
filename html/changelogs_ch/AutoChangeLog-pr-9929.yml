@@ -1,6 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - rscadd: "added new variants of all three vulp earsets with colourable eartips"
-  - rscadd: "added satin's tiger taur parts (normal, fat, and vwag-toggleable)"
-  - refactor: "de-kaleidoscope'd tails/ears/etc."
