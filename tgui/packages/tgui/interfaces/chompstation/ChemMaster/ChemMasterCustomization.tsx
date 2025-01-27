@@ -1,8 +1,7 @@
-import { BooleanLike } from 'common/react';
-
-import { useBackend } from '../../../backend';
-import { Box, Button, Section } from '../../../components';
-import { modalOpen } from '../.././common/ComplexModal';
+import { useBackend } from 'tgui/backend';
+import { modalOpen } from 'tgui/interfaces/common/ComplexModal';
+import { Box, Button, Section } from 'tgui-core/components';
+import { BooleanLike } from 'tgui-core/react';
 
 export const ChemMasterCustomization = (props: {
   loaded_pill_bottle: BooleanLike;

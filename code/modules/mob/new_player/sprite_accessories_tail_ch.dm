@@ -16,16 +16,6 @@
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "snaketail_stripes"
 
-/datum/sprite_accessory/tail/zorgoia
-	name = "Zorgoia tail, dual-color"
-	desc = ""
-	icon = 'icons/mob/vore/tails_ch.dmi'
-	icon_state = "zorgoia"
-	extra_overlay = "zorgoia_fluff"
-	extra_overlay2 = "zorgoia_fluff_top"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
 /datum/sprite_accessory/tail/leopard
 	name = "Leopard tail, dual-color (vwag)"
 	icon = 'icons/mob/vore/tails_ch.dmi'

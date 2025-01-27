@@ -1,7 +1,7 @@
 import {
   CheckboxInput,
   FeatureToggle,
-} from '../../../../../PreferencesMenu/preferences/features/base';
+} from 'tgui/interfaces/PreferencesMenu/preferences/features/base';
 
 export const EMOTE_VARY: FeatureToggle = {
   name: 'Random emote pitch',

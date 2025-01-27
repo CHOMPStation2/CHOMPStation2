@@ -1,7 +1,7 @@
-import { BooleanLike } from 'common/react';
-import { capitalize } from 'common/string';
 import { useBackend } from 'tgui/backend';
-import { Box, Button, Flex, Section } from 'tgui/components';
+import { Box, Button, Section, Stack } from 'tgui-core/components';
+import { BooleanLike } from 'tgui-core/react';
+import { capitalize } from 'tgui-core/string';
 
 import { localPrefs } from '../types';
 import { VoreUserPreferenceItem } from '../VoreUserPreferenceItem';
@@ -29,26 +29,31 @@ export const VoreUserPreferencesDevouring = (props: {
       }
     >
       {devourable ? (
-        <Flex spacing={1} wrap="wrap" justify="center">
-          <Flex.Item basis="33%">
+        <Stack wrap="wrap" justify="center">
+          <Stack.Item
+            basis="32%"
+            style={{
+              marginLeft: '0.5em', // Remove if tgui core implements gap
+            }}
+          >
             <VoreUserPreferenceItem
               spec={preferences.healbelly}
               tooltipPosition="right"
             />
-          </Flex.Item>
-          <Flex.Item basis="33%" grow={1}>
+          </Stack.Item>
+          <Stack.Item basis="32%" grow>
             <VoreUserPreferenceItem
               spec={preferences.digestion}
               tooltipPosition="top"
             />
-          </Flex.Item>
-          <Flex.Item basis="33%">
+          </Stack.Item>
+          <Stack.Item basis="32%">
             <VoreUserPreferenceItem
               spec={preferences.absorbable}
               tooltipPosition="left"
             />
-          </Flex.Item>
-          <Flex.Item basis="33%">
+          </Stack.Item>
+          <Stack.Item basis="32%">
             <Button
               fluid
               backgroundColor={digestModeToColor[selective_active]}
@@ -58,44 +63,44 @@ export const VoreUserPreferencesDevouring = (props: {
             >
               {'Selective Mode Preference: ' + capitalize(selective_active)}
             </Button>
-          </Flex.Item>
-          <Flex.Item basis="33%" grow={1}>
+          </Stack.Item>
+          <Stack.Item basis="32%" grow>
             <VoreUserPreferenceItem
               spec={preferences.mobvore}
               tooltipPosition="top"
             />
-          </Flex.Item>
-          <Flex.Item basis="33%">
+          </Stack.Item>
+          <Stack.Item basis="32%">
             <VoreUserPreferenceItem
               spec={preferences.autotransferable}
               tooltipPosition="left"
             />
-          </Flex.Item>
-          <Flex.Item basis="33%">
+          </Stack.Item>
+          <Stack.Item basis="32%">
             <VoreUserPreferenceItem
               spec={preferences.strippref}
               tooltipPosition="right"
             />
-          </Flex.Item>
-          <Flex.Item basis="33%" grow={1}>
+          </Stack.Item>
+          <Stack.Item basis="32%" grow>
             <VoreUserPreferenceItem
               spec={preferences.liquid_apply}
               tooltipPosition="top"
             />
-          </Flex.Item>
-          <Flex.Item basis="33%">
+          </Stack.Item>
+          <Stack.Item basis="32%">
             <VoreUserPreferenceItem
               spec={preferences.remains}
               tooltipPosition="left"
             />
-          </Flex.Item>
-          <Flex.Item basis="33%">
+          </Stack.Item>
+          <Stack.Item basis="32%">
             <VoreUserPreferenceItem
               spec={preferences.toggle_digest_pain}
               tooltipPosition="right"
             />
-          </Flex.Item>
-        </Flex>
+          </Stack.Item>
+        </Stack>
       ) : (
         ''
       )}

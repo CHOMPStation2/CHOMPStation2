@@ -489,4 +489,4 @@
 			output += "</table></div>"
 			qdel(select_query) //CHOMPEdit TGSQL
 
-	usr << browse(output,"window=lookupbans;size=900x700")
+	usr << browse("<html>[output]</html>","window=lookupbans;size=900x700")

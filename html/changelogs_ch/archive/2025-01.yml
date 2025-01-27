@@ -236,3 +236,153 @@
   - bugfix: Fixed escape pod UI saying ERROR instead of CLOSED for its hatch
   Kashargul:
   - bugfix: some invisible icons
+2025-01-22:
+  Hunter-Dovetail:
+  - rscadd: smallchubbybelly-l_hand and -r_hand
+  - image: improvements to hippo_upperjaw-head, hippo_lowerjaw-head, bovine_snout-head,
+      bovine_nose-head
+2025-01-24:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: tgui color picker for anyone using 516 or later
+  - bugfix: more missing html tags
+  - balance: adjusted the concussion maul for better power efficiency and slightly
+      faster attack cooldown, and added a detailed info-desc
+  - bugfix: an issue where the supermatter was not announcing safe operation conditions
+      after going critical
+  FluffMedic:
+  - balance: tyr things rebalanced
+  NickBelmont:
+  - code_imp: Changes tgui/components and tgui/format to their tgui-core equivalents,
+      and replaces a Flex element with Stack
+  TheGreatKitsune:
+  - qol: doorbell functionality moved to ctrl-click.
+2025-01-25:
+  Kashargul:
+  - code_imp: migrates our chomp UIs to tgui-core
+2025-01-26:
+  Kashargul:
+  - admin: heavily improves the ticket panel
+  Verkister:
+  - rscadd: Added large shark tails.
+2025-01-27:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: cleans up some destroy and new
+  - rscadd: option to test robot dmis without recompiling the game
+  - bugfix: camera qdel failures on disassembling
+  - image: added top surgery, body tonage and gradient markings
+  - image: fixed stray pixel on blue singer outfit
+  - bugfix: partially fixes hardsuits eating gloves
+  - bugfix: egg plants not mutating to the right type
+  - rscadd: added new variants of all three vulp earsets with colourable eartips
+  - rscadd: added satin's tiger taur parts (normal, fat, and vwag-toggleable)
+  - refactor: de-kaleidoscope'd tails/ears/etc.
+  - refactor: Changes how xenoarch generation works to make it take up less memory.
+      Leaves an EXTREME amount of comments to help future maintainers dig through
+      the mess that is xenoarch code.
+  - qol: Makes the Artifact Analyzer give you actually accurate data that isn't completely
+      cluttered. Tells you what the artifact does (vaguely), its activation requirements,
+      and what range it does it in.
+  - bugfix: Fixes the Artifact Harvester so it actually works for ALL artifacts and
+      can harvest object artifacts properly.
+  - bugfix: Fixes the Artifact Harvester and makes it able to harvest artifacts that
+      have more than 1 effect
+  - code_imp: Added a debug proc to the game to allow spawning minor artifacts for
+      easy testing & admin events.
+  - code_imp: ' Changes /obj/item/New() to /obj/item/Initialize(mapload)'
+  - rscdel: Removes 'anomaly depth' and 'anomaly dispersion', meaning the depth of
+      the artifact is how deep you need to dig. No longer has a range.
+  - qol: Removes the Suspension Generator requirement for artifacts. Can now be excavated
+      without it.
+  - qol: Makes the excavation drill faster and able to go down to 60 depth
+  - qol: Gives the xenoarcheology closet the excavation drill at spawn.
+  - qol: Expands the list of reagents that can be used to activate chemical requirements
+      for artifacts.
+  - qol: Rocky Debris no longer spawns randomly.
+  - qol: Rocky Debris only spawns when an artifact is held within the rock.
+  - qol: LARGE artifacts can no longer be accidentally destroyed. This means miners
+      will no longer eat rads to the face and upset science at the same time.
+  - qol: Strange Rocks no longer require a brush/welder to be used. Any pick will
+      work.
+  - qol: Makes plant artifacts give a description to say that they should be given
+      to xenoflora
+  - qol: Massively lowers the rate of fossils and bones spawning.
+  - qol: Removes a lot of random RNG that made no sense, like touching having a 75%
+      chance to not activate a touch artifact.
+  - qol: Makes it so you can touch artifacts with gloves to activate them, but not
+      bump them if you have gloves.
+  - refactor: Condenses all the gas artifacts into one artifact type & file.
+  - refactor: Condenses good/bad/cannible feel, hot/cold atmos, heal/harm, and synth
+      heal/harm into singular types instead of duplicated files.
+  - code_imp: Changes all istype to ishuman, isrobot, ismob where appropriate in the
+      xenoarch code.
+  - code_imp: Changes Bold to span_bold() where appropriate in the xenoarch code.
+  - rscadd: Adds a wrench to the xenoarch supply pack
+  - rscadd: Adds the xenoarcheology depth scanner to mining vendor. (Allows miners
+      to excavate, but not locate artifacts to prevent jobstealing.)
+  - bugfix: Makes the xenoarch syringe find no longer go invisible
+  - bugfix: Fixes a bug where sometimes, nothing would spawn when an artifact was
+      excavated.
+  - bugfix: Fixes a bug where sometimes a large artifact would have the 'datum/artifact_effect/extreme'
+      effect which did nothing.
+  - bugfix: Fixes a server crashing bug where - very rarely - a gravity anomaly would
+      be triggered by touch, resulting in an infinite loop. Added comments to tell
+      you not to touch it.
+  - rscadd: Sets of artifacts can now spawn. Primarily used for xeno organs and cult
+      armor.
+  - rscadd: Makes it so Human Remains finds will spawn with a random organ
+  - rscadd: Makes it so Alien Remains finds will spawn with a xenomorph plasma vessel
+      + xenomorph organ
+  - rscadd: Makes it so Robot Remains finds will spawn a robot drone pod (Allowing
+      for ghosts to take control of it and become a vore robot)
+  - rscadd: Makes it so Gun Finds (energy and projectile) will spawn with randomized
+      projectiles.
+  - rscadd: Makes it so xenoarch syringe find will spawn with random reagents
+  - rscadd: Makes it so xenoarch bowls/urns will generate random reagents
+  - rscadd: Swaps the Cult Blade spawn with an Artifact Blade that has a collection
+      of unique upsides and downsides. Just don't try to hit your fellow crew with
+      it!
+  - rscadd: Makes the anomaly scanner do a 'wavelength change' if the Z level runs
+      out of small/large artifacts. This creates more digsites around the user.
+  - rscadd: Adds a new 'power generator' artifact. Commented out until some good sounds
+      can be procured.
+  - rscdel: Deletes a lot of useless junk from the spawnpool, like cutlery, rods,
+      and shards.
+  - rscadd: Makes 'material stack' drops found via xenoarch select a random material
+      from the game (with a blacklist) instead of a few select ones.
+  - rscadd: Expanded the alien tool drops and also allows them to spawn with an alien
+      equipment piece as well.
+  - rscadd: Allows tomes to be unearthed in xenoarch. (No functionality, just fluff)
+  - rscadd: Makes any objects that have subtypes have a chance of having the subtype
+      spawn in.
+  - balance: Makes it so the gasmask actually spawns a unique one (poltergeist or
+      voice) instead of just a normal, mundane gasmask.
+  - bugfix: Makes it so the 'cult armor' artifact actually spawns armor
+  - bugfix: Makes the shock maul play a different sound when powered down and used
+      on a rock.
+  - bugfix: Makes Shadow wrights not sit in nullspace forever after activating
+  - rscadd: Makes shadow wrights give you some text when they KO you instead of just
+      disappearing
+  - balance: Adjusted xenoarch large artifact spawnrates.
+  - balance: More xenoarch large artifacts spawn in the universe now.
+  - balance: Makes the vampiric artifact and vampiric statue give you rewards for
+      feeding them instead of giving you pain and suffering through spawning mobs
+      on top of you.
+  - rscadd: Adds Catborgs
+  - rscadd: Adds Kittyborgs
+  - rscadd: Adds a Gryphonborg
+  - code_imp: change the logout check lists to only use the smaller ones
+  - bugfix: Fixed hanner beast form and reverting spawning on turf rather than in
+      the same location as the hanner.
+  - rscadd: Added a new "signpost_fake" structure that looks like other sign posts,
+      but without the teleporting functionality.
+  - maptweak: Fixed signposts that would break your character in the fantasy redgate
+      map.
+  - rscadd: topic and click limits
+  - qol: adds filters and sorting to the crew monitor
+  - rscadd: Added a new "Private Notes" option to character setup.
+  - rscadd: Added a new "Private Notes" verb to the IC tab.
+  - qol: Moved memory "Note" verbs to a new Notes sub category in the IC tab alongside
+      the new Private Notes function.
+  - bugfix: more icon and map issues
+  Drathek Rykka-Stormheart:
+  - rscadd: Added auxtools support for debugging in VSC (currently only 515)

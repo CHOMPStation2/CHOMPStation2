@@ -65,8 +65,8 @@
 	var/damage = 0
 	var/damage_archived = 0
 	var/safe_alert = "Crystaline hyperstructure returning to safe operating levels."
-	var/safe_warned = 0
-	var/public_alert = 0 //Stick to Engineering frequency except for big warnings when integrity bad
+	var/safe_warned = TRUE
+	var/public_alert = FALSE //Stick to Engineering frequency except for big warnings when integrity bad
 	var/warning_point = 100
 	var/warning_alert = "Danger! Crystal hyperstructure instability!"
 	var/emergency_point = 500
@@ -113,9 +113,9 @@
 
 	var/datum/looping_sound/supermatter/soundloop
 
-	var/engwarn = 0 // CHOMPEdit: Looping Alarms
-	var/critwarn = 0 // CHOMPEdit: Looping Alarms
-	var/causalitywarn = 0 // CHOMPEdit: Looping Alarms
+	var/engwarn = FALSE // CHOMPEdit: Looping Alarms
+	var/critwarn = FALSE // CHOMPEdit: Looping Alarms
+	var/causalitywarn = FALSE // CHOMPEdit: Looping Alarms
 	var/stationcrystal = FALSE // CHOMPEdit: Looping Alarms
 
 /obj/machinery/power/supermatter/New()
@@ -182,7 +182,7 @@
 	exploded = 1
 	// CHOMPEdit Start - Looping Alarms. We want to stop the alarm here.
 	if(stationcrystal) // Are we an on-station crystal?
-		addtimer(CALLBACK(src, PROC_REF(reset_alarms)), 10 SECONDS, TIMER_STOPPABLE)
+		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(reset_sm_alarms)), 10 SECONDS, TIMER_STOPPABLE)
 	// CHOMPEdit End
 
 	sleep(pull_time)
@@ -276,8 +276,9 @@
 					if(istype(our_area, /area/engineering))
 						candidate_alarm.critalarm.start()
 						candidate_alarm.critwarn = TRUE // Tell the fire alarm we're warning engineering
-			critwarn = 1
+			critwarn = TRUE
 		// CHOMPEdit End
+		safe_warned = FALSE
 	else if(damage >= damage_archived) // The damage is still going up
 		// CHOMPEdit: Looping Alarms - we're not making a proc for initiating the alarms in this case.
 		if(!engwarn)
@@ -289,14 +290,14 @@
 							L.set_alert_engineering()
 						candidate_alarm.engalarm.start()
 						candidate_alarm.engwarn = TRUE // Tell the fire alarm we're warning engineering
-			engwarn = 1 // So we don't repeatedly try and start over the soundloop/etc
+			engwarn = TRUE // So we don't repeatedly try and start over the soundloop/etc
 		// CHOMPEdit End
-		safe_warned = 0
+		safe_warned = FALSE
 		alert_msg = warning_alert + alert_msg
 		lastwarning = world.timeofday
 
 	else if(!safe_warned)
-		safe_warned = 1 // We are safe, warn only once
+		safe_warned = TRUE // We are safe, warn only once
 		alert_msg = safe_alert
 		lastwarning = world.timeofday
 		reset_alarms() // CHOMPEdit: Looping Alarms
@@ -312,11 +313,11 @@
 				if(!isnewplayer(M) && !isdeaf(M)) // Rykka adds SM Delam alarm
 					M << message_sound // Rykka adds SM Delam alarm
 			admin_chat_message(message = "SUPERMATTER DELAMINATING!", color = "#FF2222") //VOREStation Add
-			public_alert = 1
+			public_alert = TRUE
 			log_game("SUPERMATTER([x],[y],[z]) Emergency PUBLIC announcement. Power:[power], Oxygen:[oxygen], Damage:[damage], Integrity:[get_integrity()]")
 		else if(safe_warned && public_alert)
 			global_announcer.autosay(alert_msg, "Supermatter Monitor")
-			public_alert = 0
+			public_alert = FALSE
 
 /obj/machinery/power/supermatter/process()
 
@@ -341,6 +342,10 @@
 			announce_warning()
 	else
 		shift_light(4,initial(light_color))
+
+	if(damage < warning_point && !safe_warned && (world.timeofday - lastwarning) >= WARNING_DELAY * 10) // In case our safe announcement was not sent, we send it latest now
+		announce_warning()
+
 	if(grav_pulling)
 		supermatter_pull(src)
 
@@ -453,7 +458,7 @@
 					if(istype(our_area, /area/engineering))
 						candidate_alarm.causality.start()
 						candidate_alarm.causalitywarn = TRUE // Tell the fire alarm it's warning, too
-			causalitywarn = 1
+			causalitywarn = TRUE
 
 	if(!(src.z in using_map.station_levels)) // CHOMPEdit: SM Global Warn Fix; Is our location the same as the station? If no, then we're not going to use a stabilization field.
 		explode() // CHOMPEdit: SM Global Warn Fix;  Just exploding, because we're not on the station's Z. No safety countdown.
@@ -647,9 +652,9 @@
 
 /obj/machinery/power/supermatter/proc/reset_alarms()
 	reset_sm_alarms()
-	engwarn = 0
-	critwarn = 0
-	causalitywarn = 0
+	engwarn = FALSE
+	critwarn = FALSE
+	causalitywarn = FALSE
 
 /proc/reset_sm_alarms()
 	for(var/obj/machinery/firealarm/candidate_alarm in global.machines)

@@ -1,7 +1,8 @@
-import { classes } from '../../../.././common/react';
-import { useBackend } from '../../../backend';
-import { Box, Button, Flex, LabeledList, Section } from '../../../components';
-import { modalOpen } from '../.././common/ComplexModal';
+import { useBackend } from 'tgui/backend';
+import { modalOpen } from 'tgui/interfaces/common/ComplexModal';
+import { Box, Button, LabeledList, Section, Stack } from 'tgui-core/components';
+import { classes } from 'tgui-core/react';
+
 import { Data } from './types';
 
 export const ChemSynthesizerSettings = (props) => {
@@ -18,11 +19,15 @@ export const ChemSynthesizerSettings = (props) => {
   } = data;
 
   return (
-    <Flex height="100%" width="100%" direction="column">
-      <Flex.Item height={0} grow={1}>
+    <Stack height="100%" width="100%" direction="column">
+      <Stack.Item height={0} grow>
         <Section height="100%" title="Settings" overflowY="auto">
-          <Flex direction="column">
-            <Flex.Item>
+          <Stack direction="column">
+            <Stack.Item
+              style={{
+                marginLeft: '0.5em', // Remove if tgui core implements gap
+              }}
+            >
               <Button
                 color={production_mode ? 'green' : 'bad'}
                 icon="wrench"
@@ -32,8 +37,8 @@ export const ChemSynthesizerSettings = (props) => {
                   ? 'Recipe mode: Import'
                   : 'Recipe mode: Tutorial'}
               </Button>
-            </Flex.Item>
-            <Flex.Item>
+            </Stack.Item>
+            <Stack.Item>
               <Button
                 disabled={!!busy}
                 color={panel_open ? 'bad' : 'green'}
@@ -42,8 +47,8 @@ export const ChemSynthesizerSettings = (props) => {
               >
                 {panel_open ? 'Panel Open' : 'Panel Closed'}
               </Button>
-            </Flex.Item>
-            <Flex.Item>
+            </Stack.Item>
+            <Stack.Item>
               {!busy && (
                 <Button
                   disabled={!rxn_vessel.length}
@@ -55,8 +60,8 @@ export const ChemSynthesizerSettings = (props) => {
                   Bottle Manually
                 </Button>
               )}
-            </Flex.Item>
-            <Flex.Item>
+            </Stack.Item>
+            <Stack.Item>
               <Button
                 disabled={!busy}
                 color="bad"
@@ -65,11 +70,11 @@ export const ChemSynthesizerSettings = (props) => {
               >
                 EMERGENCY STOP
               </Button>
-            </Flex.Item>
-          </Flex>
+            </Stack.Item>
+          </Stack>
         </Section>
-      </Flex.Item>
-      <Flex.Item height={0} grow={1}>
+      </Stack.Item>
+      <Stack.Item height={0} grow>
         <Section height="100%" title="Drug Substance" overflowY="auto">
           <LabeledList>
             <LabeledList.Item label="Bottle">
@@ -179,7 +184,7 @@ export const ChemSynthesizerSettings = (props) => {
             </LabeledList.Item>
           </LabeledList>
         </Section>
-      </Flex.Item>
-    </Flex>
+      </Stack.Item>
+    </Stack>
   );
 };

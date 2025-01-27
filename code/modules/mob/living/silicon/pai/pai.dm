@@ -157,6 +157,7 @@
 		ooc_notes_maybes = read_preference(/datum/preference/text/living/ooc_notes_maybes)
 		ooc_notes_style = read_preference(/datum/preference/toggle/living/ooc_notes_style)
 		//CHOMPAdd End
+		private_notes = client.prefs.read_preference(/datum/preference/text/living/private_notes)
 
 	src << sound('sound/effects/pai_login.ogg', volume = 75)	//VOREStation Add
 
