@@ -1,4 +1,3 @@
-//todo
 /datum/artifact_effect/dnaswitch
 	name = "dnaswitch"
 	effect_type = EFFECT_ORGANIC
