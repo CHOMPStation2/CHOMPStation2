@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 //todo
+=======
+>>>>>>> 63e434274d (bunch of more xenoarch stuff (#16962))
 /datum/artifact_effect/dnaswitch
 	name = "dnaswitch"
 	effect_type = EFFECT_ORGANIC
