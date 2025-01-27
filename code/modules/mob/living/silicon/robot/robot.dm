@@ -1313,6 +1313,8 @@
 	if(!rest_style)
 		rest_style = "Default"
 
+	update_icon()
+
 /mob/living/silicon/robot/verb/robot_nom(var/mob/living/T in living_mobs_in_view(1)) //CHOMPEdit
 	set name = "Robot Nom"
 	set category = "Abilities.Vore"
