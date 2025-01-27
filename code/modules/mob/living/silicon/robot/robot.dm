@@ -1313,13 +1313,9 @@
 	if(!rest_style)
 		rest_style = "Default"
 
-<<<<<<< HEAD
-/mob/living/silicon/robot/verb/robot_nom(var/mob/living/T in living_mobs_in_view(1)) //CHOMPEdit
-=======
 	update_icon()
 
-/mob/living/silicon/robot/verb/robot_nom(var/mob/living/T in living_mobs(1))
->>>>>>> 63e434274d (bunch of more xenoarch stuff (#16962))
+/mob/living/silicon/robot/verb/robot_nom(var/mob/living/T in living_mobs_in_view(1)) //CHOMPEdit
 	set name = "Robot Nom"
 	set category = "Abilities.Vore"
 	set desc = "Allows you to eat someone."
