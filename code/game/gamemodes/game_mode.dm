@@ -218,11 +218,7 @@ var/global/list/additional_antag_types = list()
 		emergency_shuttle.auto_recall = 1
 
 	feedback_set_details("round_start","[time2text(world.realtime)]")
-<<<<<<< HEAD
-	INVOKE_ASYNC(SSdbcore, TYPE_PROC_REF(/datum/controller/subsystem/dbcore,SetRoundStart)) // CHOMPEdit
-=======
 	INVOKE_ASYNC(SSdbcore, TYPE_PROC_REF(/datum/controller/subsystem/dbcore, SetRoundStart))
->>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 	if(ticker && ticker.mode)
 		feedback_set_details("game_mode","[ticker.mode]")
 	feedback_set_details("server_ip","[world.internet_address]:[world.port]")

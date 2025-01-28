@@ -31,7 +31,6 @@
 	var/category = "Any"
 	var/author
 	var/SQLquery
-	var/list/SQLargs //CHOMPEdit TGSQL
 
 /obj/machinery/librarypubliccomp/attack_hand(var/mob/user as mob)
 	usr.set_machine(src)
@@ -45,11 +44,7 @@
 			<A href='byond://?src=\ref[src];search=1'>\[Start Search\]</A><BR>"}
 		if(1)
 			establish_db_connection()
-<<<<<<< HEAD
-			if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
-=======
 			if(!SSdbcore.IsConnected())
->>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 				dat += span_red(span_bold("ERROR") + ": Unable to contact External Archive. Please contact your system administrator for assistance.") + "<BR>"
 			else if(!SQLquery)
 				dat += span_red(span_bold("ERROR") + ": Malformed search request. Please contact your system administrator for assistance.") + "<BR>"
@@ -57,11 +52,7 @@
 				dat += {"<table>
 				<tr><td>AUTHOR</td><td>TITLE</td><td>CATEGORY</td><td>SS<sup>13</sup>BN</td></tr>"}
 
-<<<<<<< HEAD
-				var/datum/db_query/query = SSdbcore.NewQuery(SQLquery, SQLargs) //CHOMPEdit TGSQL
-=======
 				var/datum/db_query/query = SSdbcore.NewQuery(SQLquery)
->>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 				query.Execute()
 
 				while(query.NextRow())
@@ -105,16 +96,10 @@
 		author = sanitizeSQL(author)
 	if(href_list["search"])
 		SQLquery = "SELECT author, title, category, id FROM library WHERE "
-		SQLargs = list() //CHOMPEdit begin
 		if(category == "Any")
-			SQLquery += "author LIKE '%:t_author%' AND title LIKE '%:t_title%'"
-			SQLargs["t_author"] = author
-			SQLargs["t_title"] = title
+			SQLquery += "author LIKE '%[author]%' AND title LIKE '%[title]%'"
 		else
-			SQLquery += "author LIKE CONCAT('%',:t_author,'%') AND title LIKE CONCAT('%',:t_title,'%') AND category=:t_category"
-			SQLargs["t_author"] = author
-			SQLargs["t_title"] = title
-			SQLargs["t_category"] = category //CHOMPEdit End
+			SQLquery += "author LIKE '%[author]%' AND title LIKE '%[title]%' AND category='[category]'"
 		screenstate = 1
 
 	if(href_list["back"])
@@ -293,21 +278,13 @@
 
 			//dat += "<h3>" + span_red("arning: System Administrator has slated this archive for removal. Personal uploads should be taken to the NT board of internal literature.") + "</h3>" //VOREStation Removal
 
-<<<<<<< HEAD
-			if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
-=======
 			if(!SSdbcore.IsConnected())
->>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 				dat += span_red(span_bold("ERROR") + ": Unable to contact External Archive. Please contact your system administrator for assistance.")
 			else
 				dat += {"<A href='byond://?src=\ref[src];orderbyid=1'>(Order book by SS<sup>13</sup>BN)</A><BR><BR>
 				<table>
 				<tr><td><A href='byond://?src=\ref[src];sort=author>AUTHOR</A></td><td><A href='byond://?src=\ref[src];sort=title>TITLE</A></td><td><A href='byond://?src=\ref[src];sort=category>CATEGORY</A></td><td></td></tr>"}
-<<<<<<< HEAD
-				var/datum/db_query/query = SSdbcore.NewQuery("SELECT id, author, title, category FROM library ORDER BY :t_sortby", list("t_sortby" = sortby)) //CHOMPEdit TGSQL
-=======
 				var/datum/db_query/query = SSdbcore.NewQuery("SELECT id, author, title, category FROM library ORDER BY [sortby]")
->>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 				query.Execute()
 
 				while(query.NextRow())
@@ -316,7 +293,7 @@
 					var/title = query.item[3]
 					var/category = query.item[4]
 					dat += "<tr><td>[author]</td><td>[title]</td><td>[category]</td><td><A href='byond://?src=\ref[src];targetid=[id]'>\[Order\]</A></td></tr>"
-				qdel(query) //CHOMPEdit TGSQL
+				qdel(query)
 				dat += "</table>"
 			dat += "<BR><A href='byond://?src=\ref[src];switchscreen=0'>(Return to main menu)</A><BR>"
 
@@ -355,11 +332,7 @@
 				dat += "<tr><td>[author]</td><td>[title]</td><td>[category]</td><td><A href='byond://?src=\ref[src];delid=[id]'>\[Del\]</A>"
 				dat += "</td></tr>"
 			dat += "</table>"
-<<<<<<< HEAD
-			qdel(query) // CHOMPEdit
-=======
 			qdel(query)
->>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 		dat += "<BR><A href='byond://?src=\ref[src];switchscreen=0'>(Return to main menu)</A><BR>"
 
 		user << browse("<html>[dat]</html>", "window=library")
@@ -462,11 +435,7 @@
 						tgui_alert_async(usr, "This book has been rejected from the database. Aborting!")
 					else
 						establish_db_connection()
-<<<<<<< HEAD
-						if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
-=======
 						if(!SSdbcore.IsConnected())
->>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 							tgui_alert_async(usr, "Connection to Archive has been severed. Aborting.")
 						else
 							/*
@@ -475,33 +444,23 @@
 							var/sqlcontent = SSdbcore.Quote(scanner.cache.dat)
 							var/sqlcategory = SSdbcore.Quote(upload_category)
 							*/
-							var/list/sql_args = list("t_title" = scanner.cache.name, "t_author" = scanner.cache.author, "t_content" = scanner.cache.dat, "t_category" = upload_category) //CHOMPEdit TGSQL
-							/*var/sqltitle = sanitizeSQL(scanner.cache.name) CHOMPEdit TGSQL
+							var/sqltitle = sanitizeSQL(scanner.cache.name)
 							var/sqlauthor = sanitizeSQL(scanner.cache.author)
 							var/sqlcontent = sanitizeSQL(scanner.cache.dat)
-<<<<<<< HEAD
-							var/sqlcategory = sanitizeSQL(upload_category)*/
-							var/datum/db_query/query = SSdbcore.NewQuery("INSERT INTO library (author, title, content, category) VALUES (:t_author, :t_title, :t_content, :t_category)", sql_args) //CHOMPEdit TGSQL
-=======
 							var/sqlcategory = sanitizeSQL(upload_category)
 							var/datum/db_query/query = SSdbcore.NewQuery("INSERT INTO library (author, title, content, category) VALUES ('[sqlauthor]', '[sqltitle]', '[sqlcontent]', '[sqlcategory]')")
->>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 							if(!query.Execute())
 								to_chat(usr,query.ErrorMsg())
 							else
 								log_game("[usr.name]/[usr.key] has uploaded the book titled [scanner.cache.name], [length(scanner.cache.dat)] signs")
 								tgui_alert_async(usr, "Upload Complete.")
-							qdel(query) //CHOMPEdit TGSQL
+							qdel(query)
 	//VOREStation Edit End
 
 	if(href_list["targetid"])
 		var/sqlid = sanitizeSQL(href_list["targetid"])
 		establish_db_connection()
-<<<<<<< HEAD
-		if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
-=======
 		if(!SSdbcore.IsConnected())
->>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 			tgui_alert_async(usr, "Connection to Archive has been severed. Aborting.")
 		if(bibledelay)
 			for (var/mob/V in hearers(src))
@@ -510,11 +469,7 @@
 			bibledelay = 1
 			spawn(6)
 				bibledelay = 0
-<<<<<<< HEAD
-			var/datum/db_query/query = SSdbcore.NewQuery("SELECT * FROM library WHERE id=[sqlid]") //CHOMPEdit TGSQL
-=======
 			var/datum/db_query/query = SSdbcore.NewQuery("SELECT * FROM library WHERE id=[sqlid]")
->>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 			query.Execute()
 
 			while(query.NextRow())
@@ -530,9 +485,7 @@
 				B.item_state = B.icon_state
 				src.visible_message("[src]'s printer hums as it produces a completely bound book. How did it do that?")
 				break
-<<<<<<< HEAD
-			qdel(query) //CHOMPEdit TGSQL
-=======
+			qdel(query)
 
 	if(href_list["delid"])
 		if(!check_rights(R_ADMIN))
@@ -545,7 +498,6 @@
 			var/datum/db_query/query = SSdbcore.NewQuery("DELETE FROM library WHERE id=[sqlid]")
 			query.Execute()
 			log_admin("[usr.key] has deleted the book [sqlid]")	//VOREStation Addition
->>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 
 	if(href_list["orderbyid"])
 		var/orderid = tgui_input_number(usr, "Enter your order:")

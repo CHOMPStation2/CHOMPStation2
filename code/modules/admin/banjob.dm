@@ -77,11 +77,7 @@ DEBUG
 			return
 
 		//Job permabans
-<<<<<<< HEAD
-		var/datum/db_query/query = SSdbcore.NewQuery("SELECT ckey, job FROM erro_ban WHERE bantype = 'JOB_PERMABAN' AND isnull(unbanned)") //CHOMPEdit TGSQL
-=======
 		var/datum/db_query/query = SSdbcore.NewQuery("SELECT ckey, job FROM erro_ban WHERE bantype = 'JOB_PERMABAN' AND isnull(unbanned)")
->>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 		query.Execute()
 
 		while(query.NextRow())
@@ -89,13 +85,9 @@ DEBUG
 			var/job = query.item[2]
 
 			jobban_keylist.Add("[ckey] - [job]")
-		qdel(query) //CHOMPEdit TGSQL
+		qdel(query)
 		//Job tempbans
-<<<<<<< HEAD
-		var/datum/db_query/query1 = SSdbcore.NewQuery("SELECT ckey, job FROM erro_ban WHERE bantype = 'JOB_TEMPBAN' AND isnull(unbanned) AND expiration_time > Now()") //CHOMPEdit TGSQL
-=======
 		var/datum/db_query/query1 = SSdbcore.NewQuery("SELECT ckey, job FROM erro_ban WHERE bantype = 'JOB_TEMPBAN' AND isnull(unbanned) AND expiration_time > Now()")
->>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 		query1.Execute()
 
 		while(query1.NextRow())
@@ -103,7 +95,7 @@ DEBUG
 			var/job = query1.item[2]
 
 			jobban_keylist.Add("[ckey] - [job]")
-		qdel(query1) //CHOMPEdit TGSQL
+		qdel(query1)
 
 /proc/jobban_savebanfile()
 	var/savefile/S=new("data/job_full.ban")

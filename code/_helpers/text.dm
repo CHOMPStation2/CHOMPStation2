@@ -15,19 +15,10 @@
 
 // Run all strings to be used in an SQL query through this proc first to properly escape out injection attempts.
 /proc/sanitizeSQL(var/t as text)
-<<<<<<< HEAD
-	//var/sqltext = dbcon.Quote(t); //CHOMPEdit Begin
-	//return copytext(sqltext, 2, length(sqltext));//Quote() adds quotes around input, we already do that
-	return t
-	//CHOMPEdit End
-
-// CHOMPEdit - Adds format_table_name
-=======
 	//var/sqltext = dbcon.Quote(t);
 	//return copytext(sqltext, 2, length(sqltext));//Quote() adds quotes around input, we already do that
 	return t
 
->>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 /proc/format_table_name(table as text)
 	//return CONFIG_GET(string/feedback_tableprefix) + table
 	return table // We don't implement tableprefix

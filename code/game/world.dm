@@ -108,11 +108,7 @@
 	// (i.e. basically nothing should be added before load_admins() in here)
 
 	// Try to set round ID
-<<<<<<< HEAD
-	SSdbcore.InitializeRound() // CHOMPEdit
-=======
 	SSdbcore.InitializeRound()
->>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 
 	//apply a default value to config.python_path, if needed
 	if (!CONFIG_GET(string/python_path))
@@ -558,14 +554,14 @@ var/world_topic_spam_protect_time = world.timeofday
 				var/ckey = copytext(line, 1, length(line)+1)
 				var/datum/mentor/M = new /datum/mentor(ckey)
 				M.associate(GLOB.directory[ckey])
-	else // CHOMPedit Start - Implementing loading mentors from database
+	else
 		establish_db_connection()
 		if(!SSdbcore.IsConnected())
 			error("Failed to connect to database in load_mentors().")
 			log_misc("Failed to connect to database in load_mentors().")
 			return
 
-		var/datum/db_query/query = SSdbcore.NewQuery("SELECT ckey, mentor FROM erro_mentor") //CHOMPEdit TGSQL
+		var/datum/db_query/query = SSdbcore.NewQuery("SELECT ckey, mentor FROM erro_mentor")
 		query.Execute()
 		while(query.NextRow())
 			var/ckey = query.item[1]
@@ -575,7 +571,6 @@ var/world_topic_spam_protect_time = world.timeofday
 				var/datum/mentor/M = new /datum/mentor(ckey)
 				M.associate(GLOB.directory[ckey])
 		qdel(query)
-	// COMPedit End
 
 /world/proc/update_status()
 	var/s = ""
@@ -642,30 +637,13 @@ var/failed_old_db_connections = 0
 /hook/startup/proc/connectDB()
 	if(!CONFIG_GET(flag/sql_enabled))
 		to_world_log("SQL connection disabled in config.")
-	else if(establish_db_connection())//CHOMPEdit Begin
-		to_world_log("Feedback database connection established.")
-		var/datum/db_query/query_truncate = SSdbcore.NewQuery("TRUNCATE erro_dialog")
-		var/num_tries = 0
-		while(!query_truncate.Execute() && num_tries<5)
-			num_tries++
-
-		if(num_tries==5)
-			log_admin("ERROR TRYING TO CLEAR erro_dialog")
-		qdel(query_truncate)
-		var/datum/db_query/query_truncate2 = SSdbcore.NewQuery("TRUNCATE erro_attacklog")
-		num_tries = 0
-		while(!query_truncate2.Execute() && num_tries<5)
-			num_tries++
-
-		if(num_tries==5)
-			log_admin("ERROR TRYING TO CLEAR erro_attacklog")
-		qdel(query_truncate2)
+	else if(!setup_database_connection())
+		to_world_log("Your server failed to establish a connection with the feedback database.")
 	else
-		to_world_log("Feedback database connection failed.")
-	//CHOMPEdit End
+		to_world_log("Feedback database connection established.")
 	return 1
 
-/*/proc/setup_database_connection() CHOMPEdit TGSQL
+/proc/setup_database_connection()
 	if(!CONFIG_GET(flag/sql_enabled))
 		return 0
 	if(failed_db_connections > FAILED_DB_CONNECTION_CUTOFF)	//If it failed to establish a connection more than 5 times in a row, don't bother attempting to conenct anymore.
@@ -684,26 +662,13 @@ var/failed_old_db_connections = 0
 	. = SSdbcore.IsConnected()
 	if ( . )
 		failed_db_connections = 0	//If this connection succeeded, reset the failed connections counter.
-		//CHOMPEdit Begin
-		var/datum/db_query/query_truncate = dbcon.NewQuery("TRUNCATE erro_dialog")
-		var/num_tries = 0
-		while(!query_truncate.Execute() && num_tries<5)
-			num_tries++
-
-		if(num_tries==5)
-			log_admin("ERROR TRYING TO CLEAR erro_dialog")
-		//CHOMPEdit End
 	else
 		failed_db_connections++		//If it failed, increase the failed connections counter.
 		to_world_log(SSdbcore.ErrorMsg())
 
-	return .*/
+	return .
 
 //This proc ensures that the connection to the feedback database (global variable dbcon) is established
-<<<<<<< HEAD
-/proc/establish_db_connection() //CHOMPEdit TGSQL
-	return SSdbcore.Connect()
-=======
 /proc/establish_db_connection()
 	if(failed_db_connections > FAILED_DB_CONNECTION_CUTOFF)
 		return 0
@@ -712,9 +677,7 @@ var/failed_old_db_connections = 0
 		return setup_database_connection()
 	else
 		return 1
->>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 
-/* CHOMPedit
 // Cleans up DB connections and recreates them
 /proc/reset_database_connections()
 	var/list/results = list("-- Resetting DB connections --")
@@ -737,7 +700,6 @@ var/failed_old_db_connections = 0
 
 	results += "-- DB Reset End --"
 	to_world_log(results.Join("\n"))
-*/
 
 // Things to do when a new z-level was just made.
 /world/proc/max_z_changed()

@@ -119,11 +119,7 @@
 			dat += "</td></tr>"
 		dat += "</table>"
 
-<<<<<<< HEAD
-		qdel(query) // CHOMPEdit
-=======
 		qdel(query)
->>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 	usr << browse("<html>[dat]</html>", "window=library")
 	onclose(usr, "library")
 

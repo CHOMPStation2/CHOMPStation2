@@ -112,22 +112,14 @@ var/list/admin_ranks = list()								//list of all ranks with associated rights
 		//The current admin system uses SQL
 
 		establish_db_connection()
-<<<<<<< HEAD
-		if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
-=======
 		if(!SSdbcore.IsConnected())
->>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 			error("Failed to connect to database in load_admins(). Reverting to legacy system.")
 			log_misc("Failed to connect to database in load_admins(). Reverting to legacy system.")
 			CONFIG_SET(flag/admin_legacy_system, TRUE)
 			load_admins()
 			return
 
-<<<<<<< HEAD
-		var/datum/db_query/query = SSdbcore.NewQuery("SELECT ckey, rank, level, flags FROM erro_admin") //CHOMPEdit TGSQL
-=======
 		var/datum/db_query/query = SSdbcore.NewQuery("SELECT ckey, rank, level, flags FROM erro_admin")
->>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 		query.Execute()
 		while(query.NextRow())
 			var/ckey = query.item[1]
@@ -143,7 +135,7 @@ var/list/admin_ranks = list()								//list of all ranks with associated rights
 
 			//find the client for a ckey if they are connected and associate them with the new admin datum
 			D.associate(GLOB.directory[ckey])
-		qdel(query) //CHOMPEdit TGSQL
+		qdel(query)
 		if(!admin_datums)
 			error("The database query in load_admins() resulted in no admins being added to the list. Reverting to legacy system.")
 			log_misc("The database query in load_admins() resulted in no admins being added to the list. Reverting to legacy system.")

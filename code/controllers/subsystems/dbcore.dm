@@ -497,10 +497,6 @@ Ignore_errors instructes mysql to continue inserting rows if some of them have e
 	return ..()
 
 /datum/db_query/CanProcCall(proc_name)
-<<<<<<< HEAD
-	//fuck off kevinz
-=======
->>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 	return FALSE
 
 /datum/db_query/proc/Activity(activity)
@@ -582,10 +578,6 @@ Ignore_errors instructes mysql to continue inserting rows if some of them have e
 			status = DB_QUERY_BROKEN
 			return
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 8661955bfb (Moving the database to a subsystem (#16480))
 /datum/db_query/proc/slow_query_check()
 	message_admins("HEY! A database query timed out. Did the server just hang? <a href='byond://?_src_=holder;[HrefToken()];slowquery=yes'>\[YES\]</a>|<a href='byond://?_src_=holder;[HrefToken()];slowquery=no'>\[NO\]</a>")
 
