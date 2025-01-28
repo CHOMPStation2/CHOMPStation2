@@ -137,6 +137,10 @@
 		ban_id = query.item[1]
 		ban_number++;
 	qdel(query)
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4ce267de40 (fix dm (#16981))
 	if(ban_number == 0)
 		to_chat(usr, span_filter_adminlog("[span_red("Database update failed due to no bans fitting the search criteria. If this is not a legacy ban you should contact the database admin.")]"))
 		return
@@ -252,6 +256,10 @@
 	var/datum/db_query/query_update = SSdbcore.NewQuery(sql_update)
 	query_update.Execute()
 	qdel(query_update)
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4ce267de40 (fix dm (#16981))
 
 /client/proc/DB_ban_panel()
 	set category = "Admin.Moderation"

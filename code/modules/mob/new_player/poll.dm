@@ -172,6 +172,10 @@
 					voted = 1
 					break
 				qdel(voted_query)
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4ce267de40 (fix dm (#16981))
 
 				var/output = "<div align='center'><B>Player poll</B>"
 				output +="<hr>"
@@ -428,6 +432,10 @@
 			validpoll = 1
 			break
 		qdel(select_query)
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4ce267de40 (fix dm (#16981))
 		if(!validpoll)
 			to_chat(usr, span_red("Poll is not valid."))
 			return
@@ -500,6 +508,10 @@
 			validoption = 1
 			break
 		qdel(select_query2)
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4ce267de40 (fix dm (#16981))
 		if(!validoption)
 			to_chat(usr, span_red("Poll option is not valid."))
 			return

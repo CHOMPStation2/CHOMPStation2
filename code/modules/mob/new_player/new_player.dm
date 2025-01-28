@@ -92,6 +92,10 @@
 				newpoll = 1
 				break
 			qdel(query)
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4ce267de40 (fix dm (#16981))
 			if(newpoll)
 				output += "<p><b><a href='byond://?src=\ref[src];showpoll=1'>Show Player Polls</A><br>(NEW!)</b></p>" //ChompEDIT - fixed height
 			else
@@ -262,6 +266,10 @@
 			voted = 1
 			break
 		qdel(query)
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4ce267de40 (fix dm (#16981))
 		//This is a safety switch, so only valid options pass through
 		var/option = "UNKNOWN"
 		switch(href_list["privacy_poll"])

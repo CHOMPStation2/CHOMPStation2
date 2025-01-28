@@ -292,7 +292,14 @@
 					var/author = query.item[2]
 					var/title = query.item[3]
 					var/category = query.item[4]
+<<<<<<< HEAD
 					dat += "<tr><td>[author]</td><td>[title]</td><td>[category]</td><td><A href='byond://?src=\ref[src];targetid=[id]'>\[Order\]</A></td></tr>"
+=======
+					dat += "<tr><td>[author]</td><td>[title]</td><td>[category]</td><td><A href='byond://?src=\ref[src];targetid=[id]'>\[Order\]</A>"
+					if(show_admin_options) // This isn't the only check, since you can just href-spoof press this button. Just to tidy things up.
+						dat += "<A href='byond://?src=\ref[src];delid=[id]'>\[Del\]</A>"
+					dat += "</td></tr>"
+>>>>>>> 4ce267de40 (fix dm (#16981))
 				qdel(query)
 				dat += "</table>"
 			dat += "<BR><A href='byond://?src=\ref[src];switchscreen=0'>(Return to main menu)</A><BR>"

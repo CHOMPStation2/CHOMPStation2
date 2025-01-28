@@ -70,9 +70,13 @@ var/inactive_keys = "None<br>"
 		for(var/cur_ckey in ckeys_with_customitems)
 			var/datum/db_query/query_inactive = SSdbcore.NewQuery("SELECT ckey FROM erro_player WHERE ckey = '[cur_ckey]'")
 			query_inactive.Execute()
-			if(!query_inactive.rows)
+			if(!length(query_inactive.rows))
 				inactive_ckeys += cur_ckey
 			qdel(query_inactive)
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4ce267de40 (fix dm (#16981))
 	if(inactive_ckeys.len)
 		inactive_keys = ""
 		for(var/cur_key in inactive_ckeys)

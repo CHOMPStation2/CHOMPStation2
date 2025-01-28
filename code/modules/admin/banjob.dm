@@ -86,6 +86,10 @@ DEBUG
 
 			jobban_keylist.Add("[ckey] - [job]")
 		qdel(query)
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4ce267de40 (fix dm (#16981))
 		//Job tempbans
 		var/datum/db_query/query1 = SSdbcore.NewQuery("SELECT ckey, job FROM erro_ban WHERE bantype = 'JOB_TEMPBAN' AND isnull(unbanned) AND expiration_time > Now()")
 		query1.Execute()
