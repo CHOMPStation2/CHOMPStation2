@@ -1,4 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - bugfix: "A few misc xenoarch fixes. Enables the dnaswitch artifact"
