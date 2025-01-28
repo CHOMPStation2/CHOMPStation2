@@ -384,3 +384,11 @@
   - bugfix: more icon and map issues
   Drathek Rykka-Stormheart:
   - rscadd: Added auxtools support for debugging in VSC (currently only 515)
+2025-01-28:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: A few misc xenoarch fixes. Enables the dnaswitch artifact
+  - bugfix: crewMonitor
+  - bugfix: Teshari underfluff colors properly now
+  - bugfix: Altevian ears among other wings, tails, and tuar halves show properly
+  - code_imp: Xenoarch stuff spawns better
+  - qol: Syringe guns can be put in holsters
