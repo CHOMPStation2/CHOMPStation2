@@ -1,5 +1,4 @@
 /* eslint react/no-danger: "off" */
-import { KEY } from 'common/keys';
 import { RefObject, useEffect, useRef, useState } from 'react';
 import { useBackend } from 'tgui/backend';
 import { Window } from 'tgui/layouts';
@@ -15,6 +14,7 @@ import {
   Stack,
   Tabs,
 } from 'tgui-core/components';
+import { KEY } from 'tgui-core/keys';
 import { round, toFixed } from 'tgui-core/math';
 import { BooleanLike } from 'tgui-core/react';
 
