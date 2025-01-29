@@ -126,6 +126,7 @@ jobs:
       - name: Ensure +x on CI directory
         run: |
           chmod -R +x ./tools/ci
+          mkdir -p data/spritesheets
       - name: Restore BYOND Cache
         uses: actions/cache@v4
         with:
