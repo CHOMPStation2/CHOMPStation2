@@ -1,5 +1,3 @@
-import { toFixed } from 'common/math';
-import { BooleanLike } from 'common/react';
 import { useBackend } from 'tgui/backend';
 import { RankIcon } from 'tgui/interfaces/common/RankIcon';
 import {
@@ -11,6 +9,8 @@ import {
   Stack,
 } from 'tgui-core/components';
 import { formatTime } from 'tgui-core/format';
+import { toFixed } from 'tgui-core/math';
+import { BooleanLike } from 'tgui-core/react';
 
 type Data = {
   card: string | null;

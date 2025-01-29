@@ -1,5 +1,5 @@
 import { useBackend } from 'tgui/backend';
-import { Button } from 'tgui/components';
+import { Button } from 'tgui-core/components';
 
 import { preferenceData } from './types';
 
