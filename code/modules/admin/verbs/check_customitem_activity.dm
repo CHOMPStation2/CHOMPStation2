@@ -30,7 +30,7 @@ var/inactive_keys = "None<br>"
 		return
 
 	establish_db_connection()
-	if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
+	if(!SSdbcore.IsConnected())
 		return
 
 	//grab all ckeys associated with custom items
@@ -55,7 +55,7 @@ var/inactive_keys = "None<br>"
 	//run a query to get all ckeys inactive for over 2 months
 	var/list/inactive_ckeys = list()
 	if(ckeys_with_customitems.len)
-		var/datum/db_query/query_inactive = SSdbcore.NewQuery("SELECT ckey, lastseen FROM erro_player WHERE datediff(Now(), lastseen) > 60") //CHOMPEdit TGSQL
+		var/datum/db_query/query_inactive = SSdbcore.NewQuery("SELECT ckey, lastseen FROM erro_player WHERE datediff(Now(), lastseen) > 60")
 		query_inactive.Execute()
 		while(query_inactive.NextRow())
 			var/cur_ckey = query_inactive.item[1]
@@ -63,16 +63,16 @@ var/inactive_keys = "None<br>"
 			if(ckeys_with_customitems.Find(cur_ckey))
 				ckeys_with_customitems.Remove(cur_ckey)
 				inactive_ckeys[cur_ckey] = "last seen on [query_inactive.item[2]]"
-		qdel(query_inactive) //CHOMPEdit TGSQL
+		qdel(query_inactive)
 
 	//if there are ckeys left over, check whether they have a database entry at all
 	if(ckeys_with_customitems.len)
 		for(var/cur_ckey in ckeys_with_customitems)
-			var/datum/db_query/query_inactive = SSdbcore.NewQuery("SELECT ckey FROM erro_player WHERE ckey = :t_ckey", list("t_ckey" = cur_ckey)) //CHOMPEdit TGSQL
+			var/datum/db_query/query_inactive = SSdbcore.NewQuery("SELECT ckey FROM erro_player WHERE ckey = '[cur_ckey]'")
 			query_inactive.Execute()
-			if(!length(query_inactive.rows)) //CHOMPEdit TGSQL
+			if(!query_inactive.rows)
 				inactive_ckeys += cur_ckey
-			qdel(query_inactive) //CHOMPEdit TGSQL
+			qdel(query_inactive)
 	if(inactive_ckeys.len)
 		inactive_keys = ""
 		for(var/cur_key in inactive_ckeys)

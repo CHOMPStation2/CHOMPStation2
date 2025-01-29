@@ -546,7 +546,7 @@ var/global/datum/controller/subsystem/ticker/ticker
 	for(var/i in total_antagonists)
 		log_game("[i]s[total_antagonists[i]].")
 
-	SSdbcore.SetRoundEnd() // CHOMPEdit
+	SSdbcore.SetRoundEnd()
 
 	return 1
 

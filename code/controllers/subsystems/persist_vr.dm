@@ -10,7 +10,7 @@ SUBSYSTEM_DEF(persist)
 	flags = SS_BACKGROUND|SS_NO_INIT|SS_KEEP_TIMING
 	runlevels = RUNLEVEL_GAME|RUNLEVEL_POSTGAME
 	var/list/currentrun = list()
-	var/list/query_stack = list() //CHOMPAdd TGSQL
+	var/list/query_stack = list()
 
 /datum/controller/subsystem/persist/fire(var/resumed = FALSE)
 	update_department_hours(resumed)
@@ -21,7 +21,7 @@ SUBSYSTEM_DEF(persist)
 		return
 
 	establish_db_connection()
-	if(!SSdbcore.IsConnected())	//CHOMPEdit TGSQL
+	if(!SSdbcore.IsConnected())
 		src.currentrun.Cut()
 		return
 	if(!resumed)
@@ -30,7 +30,7 @@ SUBSYSTEM_DEF(persist)
 
 	//cache for sanic speed (lists are references anyways)
 	var/list/currentrun = src.currentrun
-	var/list/query_stack = src.query_stack //CHOMPAdd TGSQL
+	var/list/query_stack = src.query_stack
 	while (currentrun.len)
 		var/mob/M = currentrun[currentrun.len]
 		currentrun.len--
@@ -92,15 +92,15 @@ SUBSYSTEM_DEF(persist)
 			"department" = sql_dpt,
 			"hours" = sql_bal,
 			"total_hours" = sql_total
-			)
-		query_stack += list(entry) //CHOMPEdit TGSQL
+		)
+		query_stack += list(entry)
+
 		if (MC_TICK_CHECK)
 			return
-	 //CHOMPAdd Start TGSQL
 	if(query_stack.len)
 		SSdbcore.MassInsert(format_table_name("vr_player_hours"), query_stack, duplicate_key = "ON DUPLICATE KEY UPDATE hours = VALUES(hours), total_hours = VALUES(total_hours)")
 		query_stack.Cut()
-	 //CHOMPAdd End TGSQL
+
 
 // This proc tries to find the job datum of an arbitrary mob.
 /datum/controller/subsystem/persist/proc/detect_job(var/mob/M)

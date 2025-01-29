@@ -81,7 +81,6 @@
 					"address" = client.address,
 					"computer_id" = client.computer_id,
 				),
-				// CHOMPEdit - "server" section
 				"server" = list(
 					"round_id" = GLOB.round_id,
 				),

@@ -497,7 +497,6 @@ Ignore_errors instructes mysql to continue inserting rows if some of them have e
 	return ..()
 
 /datum/db_query/CanProcCall(proc_name)
-	//fuck off kevinz
 	return FALSE
 
 /datum/db_query/proc/Activity(activity)
@@ -578,7 +577,6 @@ Ignore_errors instructes mysql to continue inserting rows if some of them have e
 			last_error = "CONNECTION OFFLINE"
 			status = DB_QUERY_BROKEN
 			return
-
 
 /datum/db_query/proc/slow_query_check()
 	message_admins("HEY! A database query timed out. Did the server just hang? <a href='byond://?_src_=holder;[HrefToken()];slowquery=yes'>\[YES\]</a>|<a href='byond://?_src_=holder;[HrefToken()];slowquery=no'>\[NO\]</a>")
