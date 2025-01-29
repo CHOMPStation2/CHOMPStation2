@@ -5126,11 +5126,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-<<<<<<< HEAD
-"axios@npm:^1.7.4":
-  version: 1.7.4
-  resolution: "axios@npm:1.7.4"
-=======
 "axe-core@npm:^4.10.0":
   version: 4.10.2
   resolution: "axe-core@npm:4.10.2"
@@ -5141,14 +5136,10 @@ __metadata:
 "axios@npm:^1.7.7":
   version: 1.7.9
   resolution: "axios@npm:1.7.9"
->>>>>>> a9a045a741 (Moves UIs to TGUI core (#16940))
   dependencies:
     follow-redirects: "npm:^1.15.6"
     form-data: "npm:^4.0.0"
     proxy-from-env: "npm:^1.1.0"
-<<<<<<< HEAD
-  checksum: 10c0/5ea1a93140ca1d49db25ef8e1bd8cfc59da6f9220159a944168860ad15a2743ea21c5df2967795acb15cbe81362f5b157fdebbea39d53117ca27658bab9f7f17
-=======
   checksum: 10c0/b7a41e24b59fee5f0f26c1fc844b45b17442832eb3a0fb42dd4f1430eb4abc571fe168e67913e8a1d91c993232bd1d1ab03e20e4d1fee8c6147649b576fc1b0b
   languageName: node
   linkType: hard
@@ -5200,7 +5191,6 @@ __metadata:
   peerDependencies:
     "@babel/core": ^7.0.0
   checksum: 10c0/355e431fbd663fd43dcf68c93edcf66e31c3295c35754739edb3ce39435fdc407de75540b310b370e6eb924af528839b6effb8de21870ad12423aac31e258221
->>>>>>> a9a045a741 (Moves UIs to TGUI core (#16940))
   languageName: node
   linkType: hard
 
@@ -21039,11 +21029,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-<<<<<<< HEAD
-"ws@npm:^8.11.0, ws@npm:^8.13.0, ws@npm:^8.17.1":
-=======
 "ws@npm:^8.11.0, ws@npm:^8.18.0":
->>>>>>> a9a045a741 (Moves UIs to TGUI core (#16940))
   version: 8.18.0
   resolution: "ws@npm:8.18.0"
   peerDependencies:
