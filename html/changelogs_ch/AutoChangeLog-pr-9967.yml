@@ -1,4 +1,0 @@
-author: "ShadowLarkens Kashargul"
-delete-after: True
-changes:
-  - code_imp: "moves our UIs to tgui core"
