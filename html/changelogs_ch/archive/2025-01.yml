@@ -399,3 +399,6 @@
   - bugfix: Fixed resting sprites for medical and security catborgs.
   ShadowLarkens Kashargul:
   - code_imp: moves our UIs to tgui core
+2025-01-30:
+  Kashargul:
+  - code_imp: malignant organs -> adjust_nutrition
