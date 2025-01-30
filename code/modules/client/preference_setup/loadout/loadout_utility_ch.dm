@@ -161,3 +161,8 @@
 	path = /obj/item/storage/backpack/saddlebag_common/vest/heavy
 	slot = slot_back
 	cost = 1
+
+/datum/gear/utility/delux_bs_bracelet
+	display_name = "deluxe bluespace bracelet"
+	path = /obj/item/clothing/gloves/bluespace/deluxe
+	cost = 3
