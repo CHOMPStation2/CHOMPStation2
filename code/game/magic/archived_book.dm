@@ -53,16 +53,13 @@ var/global/datum/book_manager/book_mgr = new()
 		dat += "<h3>ADMINISTRATIVE MANAGEMENT</h3>"
 		establish_old_db_connection()
 
-		if(!SSdbcore.IsConnected()) //CHOMP Edit Start
+		if(!SSdbcore.IsConnected())
 			dat += "<font color=red><b>ERROR</b>: Unable to contact External Archive. Please contact your system administrator for assistance.</font>"
 		else
-			var/datum/db_query/query = SSdbcore.NewQuery("DELETE FROM library WHERE id=[isbn]")
-			if(!query.Execute())
-				to_chat(usr,query.ErrorMsg())
-			qdel(query) //CHOMPEdit End TGSQL
-	else
-		book_mgr.remove(isbn)
-	log_admin("[usr.key] has deleted the book [isbn]")
+			dat += {"<A href='byond://?our_comp=\ref[our_comp];[HrefToken()];orderbyid=1'>(Order book by SS<sup>13</sup>BN)</A><BR><BR>
+			<table>
+			<tr><td><A href='byond://?our_comp=\ref[our_comp];[HrefToken()];sort=author>AUTHOR</A></td><td><A href='byond://?our_comp=\ref[our_comp];[HrefToken()];sort=title>TITLE</A></td><td><A href='byond://?our_comp=\ref[our_comp];[HrefToken()];sort=category>CATEGORY</A></td><td></td></tr>"}
+			var/datum/db_query/query = SSdbcore.NewQuery("SELECT id, author, title, category FROM library ORDER BY [sortby]")
 			query.Execute()
 
 			var/show_admin_options = check_rights(R_ADMIN, show_msg = FALSE)
@@ -77,6 +74,7 @@ var/global/datum/book_manager/book_mgr = new()
 					dat += "<A href='byond://?our_comp=\ref[our_comp];[HrefToken()];delid=[id]'>\[Del\]</A>"
 				dat += "</td></tr>"
 			dat += "</table>"
+			qdel(query)
 
 	usr << browse("<html>[dat]</html>", "window=library")
 	onclose(usr, "library")

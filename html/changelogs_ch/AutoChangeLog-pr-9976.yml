@@ -1,0 +1,4 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - rscadd: "adds the angler bulb to the sprite DM whose name i immediately forgor\nimage:adds angler icon states from caustic cove to ears.dmi"

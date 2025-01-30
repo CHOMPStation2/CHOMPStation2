@@ -1,6 +1,6 @@
-import { BooleanLike } from 'common/react';
 import { useBackend } from 'tgui/backend';
-import { Box, Button, LabeledList } from 'tgui/components';
+import { Box, Button, LabeledList } from 'tgui-core/components';
+import { BooleanLike } from 'tgui-core/react';
 
 export const SoulOptions = (props: { taken_over: BooleanLike }) => {
   const { act } = useBackend();

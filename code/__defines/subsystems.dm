@@ -119,9 +119,9 @@ var/global/list/runlevel_flags = list(RUNLEVEL_LOBBY, RUNLEVEL_SETUP, RUNLEVEL_G
 #define INIT_ORDER_TITLE			99	//CHOMPEdit
 #define INIT_ORDER_SERVER_MAINT		93
 #define INIT_ORDER_WEBHOOKS			50
-#define INIT_ORDER_DBCORE			41	//CHOMPEdit
-#define INIT_ORDER_SQLITE			40
-#define INIT_ORDER_GARBAGE			39
+#define INIT_ORDER_SQLITE			41
+#define INIT_ORDER_GARBAGE			40
+#define INIT_ORDER_DBCORE			39
 #define INIT_ORDER_MEDIA_TRACKS		38 // Gotta get that lobby music up, yo
 #define INIT_ORDER_INPUT			37
 #define INIT_ORDER_CHEMISTRY		35

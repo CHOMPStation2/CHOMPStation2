@@ -393,3 +393,14 @@
   - bugfix: Teshari underfluff colors properly now
   - bugfix: Altevian ears among other wings, tails, and tuar halves show properly
   - code_imp: Xenoarch stuff spawns better
+  - qol: Syringe guns can be put in holsters
+2025-01-29:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: properly enables dnaswitch artifact
+  - bugfix: fixes a to_world
+  - bugfix: Fixed resting sprites for medical and security catborgs.
+  ShadowLarkens Kashargul:
+  - code_imp: moves our UIs to tgui core
+2025-01-30:
+  Kashargul:
+  - code_imp: malignant organs -> adjust_nutrition
