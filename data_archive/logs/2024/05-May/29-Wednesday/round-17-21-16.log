@@ -1,0 +1,911 @@
+[2024-05-29 21:21:13.640] START: Starting up data/logs/2024/05-May/29-Wednesday/round-17-21-16.
+[2024-05-29 21:21:17.960] ADMIN: Loading jobban_rank
+[2024-05-29 21:21:17.961] ADMIN: jobban_keylist was empty
+[2024-05-29 21:21:18.128] ADMIN: Loading Banlist
+[2024-05-29 21:21:44.174] GAME: Excavation Site loaded at at 40,12,5
+[2024-05-29 21:21:44.693] GAME: The Killer Rabbit loaded at at 176,28,5
+[2024-05-29 21:21:44.883] GAME: Dig Site loaded at at 143,103,5
+[2024-05-29 21:21:45.150] GAME: Spider Cave 1 loaded at at 88,16,5
+[2024-05-29 21:21:45.182] GAME: Fenced Geyser loaded at at 201,15,5
+[2024-05-29 21:21:46.183] GAME: Ice Cave 1C loaded at at 168,88,5
+[2024-05-29 21:21:46.292] GAME: Ore-Topped Cliff loaded at at 58,26,5
+[2024-05-29 21:22:15.128] GAME: Cave River loaded at at 10,41,5
+[2024-05-29 21:22:15.334] GAME: Speakeasy loaded at at 120,64,5
+[2024-05-29 21:22:15.370] GAME: Mine Vault 5 loaded at at 37,91,5
+[2024-05-29 21:22:15.449] GAME: Supply Drop 1 loaded at at 29,111,5
+[2024-05-29 21:22:15.629] GAME: spatial anomaly loaded at at 53,158,5
+[2024-05-29 21:22:15.650] GAME: Old Supply Drop loaded at at 54,79,4
+[2024-05-29 21:22:15.727] GAME: Ruptured Canister loaded at at 135,51,4
+[2024-05-29 21:22:15.758] GAME: Merchant Stand loaded at at 77,15,4
+[2024-05-29 21:22:15.960] GAME: Pride Rock loaded at at 46,86,4
+[2024-05-29 21:22:16.129] GAME: Mechpit loaded at at 165,12,4
+[2024-05-29 21:22:16.479] GAME: Farm loaded at at 45,22,4
+[2024-05-29 21:22:16.571] GAME: Thieves' Cave loaded at at 197,51,4
+[2024-05-29 21:22:16.712] GAME: Hot Spring loaded at at 43,177,4
+[2024-05-29 21:22:16.742] GAME: Wrecked Shelter loaded at at 76,31,4
+[2024-05-29 21:22:16.876] GAME: Construction Site loaded at at 67,77,4
+[2024-05-29 21:22:16.913] GAME: Snow 4 loaded at at 30,77,4
+[2024-05-29 21:22:17.350] GAME: Old Hotel loaded at at 92,91,4
+[2024-05-29 21:22:17.412] GAME: Snow 3 loaded at at 15,182,4
+[2024-05-29 21:22:18.533] GAME: Pooled Rocks loaded at at 9,35,4
+[2024-05-29 21:22:18.573] GAME: Ration Cache loaded at at 102,76,4
+[2024-05-29 21:22:18.767] GAME: VR Den loaded at at 73,47,4
+[2024-05-29 21:22:18.796] GAME: Rocky Outcrop loaded at at 36,15,4
+[2024-05-29 21:22:18.806] GAME: Buried Treasure 2 loaded at at 226,44,4
+[2024-05-29 21:22:18.844] GAME: Snow 5 loaded at at 183,51,4
+[2024-05-29 21:22:18.981] GAME: Snow 2 loaded at at 202,147,4
+[2024-05-29 21:22:19.011] GAME: Emergency Pod loaded at at 187,85,4
+[2024-05-29 21:22:19.146] GAME: Abandoned Bonfire loaded at at 19,26,4
+[2024-05-29 21:22:19.187] GAME: Emergency Pod 2 loaded at at 25,208,4
+[2024-05-29 21:22:19.235] GAME: Emergency Pod 4 loaded at at 32,85,9
+[2024-05-29 21:22:19.907] GAME: Demon Pool loaded at at 194,62,9
+[2024-05-29 21:22:19.965] GAME: Rocky 4 loaded at at 144,74,9
+[2024-05-29 21:22:20.022] GAME: Shelter 1 loaded at at 71,92,9
+[2024-05-29 21:22:20.128] GAME: Lab 1 loaded at at 38,18,9
+[2024-05-29 21:22:20.225] GAME: Rocky 1 loaded at at 12,43,9
+[2024-05-29 21:22:20.373] GAME: Rocky 1 loaded at at 112,19,9
+[2024-05-29 21:22:20.451] GAME: Shack 1 loaded at at 121,93,9
+[2024-05-29 21:22:20.644] GAME: Decoupled Engine loaded at at 63,15,9
+[2024-05-29 21:22:20.738] GAME: Empty Cabin loaded at at 93,39,9
+[2024-05-29 21:22:20.856] GAME: Spider Nest 1 loaded at at 55,56,9
+[2024-05-29 21:22:21.137] GAME: Snowrock 1 loaded at at 80,52,9
+[2024-05-29 21:22:21.209] GAME: Mudpit loaded at at 194,15,9
+[2024-05-29 21:22:21.256] GAME: Wolf Den loaded at at 75,72,9
+[2024-05-29 21:22:21.419] GAME: Forest Lake loaded at at 189,34,9
+[2024-05-29 21:22:21.675] GAME: Cragzone 1 loaded at at 102,61,9
+[2024-05-29 21:22:21.717] GAME: Frostfly Nest loaded at at 223,67,9
+[2024-05-29 21:22:21.998] GAME: Spider Nest 1 loaded at at 49,81,9
+[2024-05-29 21:22:22.108] GAME: Kururak Den loaded at at 44,49,9
+[2024-05-29 21:22:23.093] GAME: Government Patrol loaded at at 59,44,9
+[2024-05-29 21:22:23.248] GAME: Smol 1 loaded at at 171,65,9
+[2024-05-29 21:22:24.235] GAME: Spider Nest 1 loaded at at 12,94,9
+[2024-05-29 21:22:24.891] GAME: Chasm loaded at at 142,37,9
+[2024-05-29 21:22:24.936] GAME: Spider Nest 1 loaded at at 133,69,9
+[2024-05-29 21:22:25.163] GAME: Military Camp 1 loaded at at 164,41,9
+[2024-05-29 21:22:29.648] GAME: Rocky 3 loaded at at 14,66,9
+[2024-05-29 21:22:30.526] GAME: Rocky 1 loaded at at 13,17,9
+[2024-05-29 21:22:31.651] GAME: Musk loaded at at 112,10,9
+[2024-05-29 21:22:31.766] GAME: Butcher Shack loaded at at 65,75,9
+[2024-05-29 21:22:35.262] GAME: Spider Nest 1 loaded at at 136,89,9
+[2024-05-29 21:22:37.840] ACCESS IN: RiotScopez/(RiotScopez) - IP:146.115.147.185 - CID:1871707424 - BYOND v515
+[2024-05-29 21:22:49.105] ASSET: Sending asset `tgui-panel.bundle.js` to client `RiotScopez` as `asset.b4751a5ea151bc8ec68c1925b7d0bdd7.js`
+[2024-05-29 21:22:49.151] ASSET: Sending asset `tgui-panel.bundle.css` to client `RiotScopez` as `asset.7efb53cd7dda00777acb7748b31d4a8a.css`
+[2024-05-29 21:22:51.135] ASSET: Sending asset `fa-regular-400.ttf` to client `RiotScopez` as `fa-regular-400.ttf`
+[2024-05-29 21:22:51.136] ASSET: Sending asset `fa-solid-900.ttf` to client `RiotScopez` as `fa-solid-900.ttf`
+[2024-05-29 21:22:51.136] ASSET: Sending asset `fa-v4compatibility.ttf` to client `RiotScopez` as `fa-v4compatibility.ttf`
+[2024-05-29 21:22:51.136] ASSET: Sending asset `v4shim.css` to client `RiotScopez` as `v4shim.css`
+[2024-05-29 21:22:51.136] ASSET: Sending asset `font-awesome.css` to client `RiotScopez` as `asset.fedd834d1c20ed484599a1c38690e330.css`
+[2024-05-29 21:22:52.117] ASSET: Sending asset `tgfont.eot` to client `RiotScopez` as `tgfont.eot`
+[2024-05-29 21:22:52.119] ASSET: Sending asset `tgfont.woff2` to client `RiotScopez` as `tgfont.woff2`
+[2024-05-29 21:22:52.168] ASSET: Sending asset `tgfont.css` to client `RiotScopez` as `asset.9c0bbe21e37e76955d9640f7a6c4b636.css`
+[2024-05-29 21:22:52.487] ASSET: Sending asset `spritesheet_chat.css` to client `RiotScopez` as `asset.e73ec83954ac74e58beadd50f5a3c63b.css`
+[2024-05-29 21:22:52.487] ASSET: Sending asset `chat_32x10.png` to client `RiotScopez` as `asset.2880748b8d8cbf35ee9e8cb72fdacada.png`
+[2024-05-29 21:23:05.883] GAME: Spider Nest 1 loaded at at 122,50,9
+[2024-05-29 21:23:15.021] GAME: Spider Nest 1 loaded at at 91,91,9
+[2024-05-29 21:23:19.652] GAME: Spider Nest 1 loaded at at 96,23,9
+[2024-05-29 21:23:20.033] GAME: Rocky Mining Base loaded at at 33,172,9
+[2024-05-29 21:23:20.120] GAME: DJOutpost 1 loaded at at 190,197,9
+[2024-05-29 21:23:21.203] GAME: Cliff Base loaded at at 85,180,9
+[2024-05-29 21:23:21.400] GAME: Death Den loaded at at 14,180,9
+[2024-05-29 21:23:21.805] GAME: Burning Hadzard Zone loaded at at 157,131,9
+[2024-05-29 21:23:22.785] GAME: Manor 2 loaded at at 106,122,9
+[2024-05-29 21:23:23.118] GAME: Blue Shuttle Down loaded at at 38,122,9
+[2024-05-29 21:23:23.319] GAME: Elite Bounty Hunter Den loaded at at 127,210,9
+[2024-05-29 21:23:24.753] GAME: Dragon Plateu loaded at at 203,105,9
+[2024-05-29 21:23:25.179] GAME: CaveS loaded at at 149,204,9
+[2024-05-29 21:23:25.347] GAME: Raided Mech Hanger loaded at at 57,215,9
+[2024-05-29 21:23:25.681] GAME: Aquatic Xenos loaded at at 163,18,10
+[2024-05-29 21:23:25.981] GAME: Carrier Shuttle loaded at at 156,199,10
+[2024-05-29 21:23:28.594] GAME: Eclipse Base Molten loaded at at 71,197,10
+[2024-05-29 21:23:28.787] GAME: Drone Overlords loaded at at 205,18,10
+[2024-05-29 21:23:28.956] GAME: Maze loaded at at 74,21,10
+[2024-05-29 21:23:29.438] GAME: Fallen Lab loaded at at 200,212,10
+[2024-05-29 21:23:29.599] GAME: Leppy Den loaded at at 17,15,10
+[2024-05-29 21:23:29.735] GAME: Clockwork Den loaded at at 125,9,10
+[2024-05-29 21:23:30.150] GAME: Siege Point loaded at at 213,80,10
+[2024-05-29 21:23:30.516] GAME: Red Shuttle Down loaded at at 103,76,10
+[2024-05-29 21:23:31.118] GAME: Demon Ranch loaded at at 143,140,10
+[2024-05-29 21:23:31.390] GAME: Vox Pirates loaded at at 149,69,10
+[2024-05-29 21:23:31.959] GAME: Cliff Manor loaded at at 214,148,10
+[2024-05-29 21:23:32.416] GAME: Eclipse Xenobio Lab loaded at at 108,159,10
+[2024-05-29 21:23:32.678] GAME: Spider Explo loaded at at 74,148,10
+[2024-05-29 21:23:35.538] GAME: Assualt Base loaded at at 144,101,10
+[2024-05-29 21:23:35.975] GAME: Blood Citadal loaded at at 10,109,10
+[2024-05-29 21:24:18.416] GAME: Z-level Fuel Depot - Z1 Space loaded at at 1,1,12
+[2024-05-29 21:24:38.824] GAME: Z-level Thor Surface loaded at at 1,1,13
+[2024-05-29 21:24:52.994] GAME: Z-level Snow Field loaded at at 1,1,14
+[2024-05-29 21:24:52.995] GAME: Extra z-level Snow Field has no associated map datum
+[2024-05-29 21:26:00.578] MISC: a the gibber didn't find an input plate.
+[2024-05-29 21:30:13.414] ADMIN: RiotScopez/(RiotScopez) delayed the game.
+[2024-05-29 21:30:42.126] GAME: TRAITS riotscopez/(Shara Siidim) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/brute_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/trashcan;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore,;/datum/trait/negative/deep_sleeper
+[2024-05-29 21:30:48.440] GAME: TRAITS riotscopez/(Shara Siidim) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/brute_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/trashcan;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore,;/datum/trait/negative/deep_sleeper
+[2024-05-29 21:31:09.182] ADMIN: RiotScopez/(RiotScopez) <span class='name'>RiotScopez</span> entered ghost/observe mode. 
+[2024-05-29 21:31:09.235] ACCESS OUT: INVALID/(RiotScopez) - IP:146.115.147.185 - CID:Logged Out - BYOND Logged Out
+[2024-05-29 21:31:09.294] ACCESS IN: RiotScopez/(Simple Mob) - IP:146.115.147.185 - CID:1871707424 - BYOND v515
+[2024-05-29 21:31:09.457] ASSET: Sending asset `jquery.min.js` to client `RiotScopez` as `jquery.min.js`
+[2024-05-29 21:31:10.975] ADMIN: RiotScopez/(Simple Mob) has started the game.
+[2024-05-29 21:31:26.994] GAME: TIDI: 26.4387;7.93161;1.58632;0.158632
+[2024-05-29 21:31:48.878] SAY: INVALID/(Medibot) (75,181,9): There's always a catch, and it's the best there is.
+[2024-05-29 21:31:59.873] ASSET: Sending asset `asset.04d16eff5eff161e5d8efa3349a54cd1.png` to client `RiotScopez` as `asset.04d16eff5eff161e5d8efa3349a54cd1.png`
+[2024-05-29 21:32:02.381] ASSET: Sending asset `asset.b8b1682f21f956839d74ff0ccdbf0e40.png` to client `RiotScopez` as `asset.b8b1682f21f956839d74ff0ccdbf0e40.png`
+[2024-05-29 21:32:17.053] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 21:32:23.149] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 21:32:28.251] GAME: TIDI: 2.0816;6.17661;2.50438;0.393207
+[2024-05-29 21:32:46.786] ASSET: Sending asset `asset.2627f6694975d554f7f61e17af78dc84.png` to client `RiotScopez` as `asset.2627f6694975d554f7f61e17af78dc84.png`
+[2024-05-29 21:33:07.319] ASSET: Sending asset `asset.193be159a1ac85b5cf4c20f30e50a4ad.png` to client `RiotScopez` as `asset.193be159a1ac85b5cf4c20f30e50a4ad.png`
+[2024-05-29 21:33:18.510] ASSET: Sending asset `asset.834edf594b37a4f88284a26d993f1357.png` to client `RiotScopez` as `asset.834edf594b37a4f88284a26d993f1357.png`
+[2024-05-29 21:33:23.297] ASSET: Sending asset `asset.37293ed18220f7590580cc2af830eb93.png` to client `RiotScopez` as `asset.37293ed18220f7590580cc2af830eb93.png`
+[2024-05-29 21:33:28.533] GAME: TIDI: 0.249377;4.39844;2.88319;0.642205
+[2024-05-29 21:33:52.199] ASSET: Sending asset `asset.9587a80dc20817d12915823586573872.png` to client `RiotScopez` as `asset.9587a80dc20817d12915823586573872.png`
+[2024-05-29 21:34:01.925] ASSET: Sending asset `asset.9ae3388f5aea7c71792c4c78837d911c.png` to client `RiotScopez` as `asset.9ae3388f5aea7c71792c4c78837d911c.png`
+[2024-05-29 21:34:03.557] ASSET: Sending asset `asset.bead75eda6555f5ac3b46c1ac1a0b913.png` to client `RiotScopez` as `asset.bead75eda6555f5ac3b46c1ac1a0b913.png`
+[2024-05-29 21:34:05.940] ASSET: Sending asset `asset.79dbeaabbe6658c236f15f5312b49880.png` to client `RiotScopez` as `asset.79dbeaabbe6658c236f15f5312b49880.png`
+[2024-05-29 21:34:18.656] ASSET: Sending asset `asset.eb3a5ac9147f2684223aa93dbdfd4669.png` to client `RiotScopez` as `asset.eb3a5ac9147f2684223aa93dbdfd4669.png`
+[2024-05-29 21:34:23.981] ASSET: Sending asset `asset.74f9f22f4f3b1427669b206a5bfc02d4.png` to client `RiotScopez` as `asset.74f9f22f4f3b1427669b206a5bfc02d4.png`
+[2024-05-29 21:34:28.700] GAME: TIDI: 0.0831255;3.10384;2.92732;0.870717
+[2024-05-29 21:34:38.055] ASSET: Sending asset `asset.46c7cad0081e358bb6237b5dc25abb65.png` to client `RiotScopez` as `asset.46c7cad0081e358bb6237b5dc25abb65.png`
+[2024-05-29 21:34:42.504] ASSET: Sending asset `asset.ab6ce1a80928cd5bb2d6bdd481da4557.png` to client `RiotScopez` as `asset.ab6ce1a80928cd5bb2d6bdd481da4557.png`
+[2024-05-29 21:34:44.015] ASSET: Sending asset `asset.f1833969a8648e2d1bc3198c7965931d.png` to client `RiotScopez` as `asset.f1833969a8648e2d1bc3198c7965931d.png`
+[2024-05-29 21:34:45.338] ASSET: Sending asset `asset.5ab6dd18ff319899346558aa63afd1f7.png` to client `RiotScopez` as `asset.5ab6dd18ff319899346558aa63afd1f7.png`
+[2024-05-29 21:34:53.394] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 21:34:56.112] ASSET: Sending asset `asset.b1b518bdb4b3e5b1801788a5b285677f.png` to client `RiotScopez` as `asset.b1b518bdb4b3e5b1801788a5b285677f.png`
+[2024-05-29 21:35:13.611] ASSET: Sending asset `asset.da65c46584aab36ae8c38aecec852bfa.png` to client `RiotScopez` as `asset.da65c46584aab36ae8c38aecec852bfa.png`
+[2024-05-29 21:35:20.761] ASSET: Sending asset `asset.52ec7891fa02a5805ff0636cf1e108ce.png` to client `RiotScopez` as `asset.52ec7891fa02a5805ff0636cf1e108ce.png`
+[2024-05-29 21:35:28.855] GAME: TIDI: 0.0832639;2.19767;2.78139;1.06178
+[2024-05-29 21:35:32.452] ASSET: Sending asset `asset.40870b65ab73d601cfd3a5bd110c8b63.png` to client `RiotScopez` as `asset.40870b65ab73d601cfd3a5bd110c8b63.png`
+[2024-05-29 21:35:45.776] ASSET: Sending asset `asset.a6c8e36af8ace6508f8efdb1910979e5.png` to client `RiotScopez` as `asset.a6c8e36af8ace6508f8efdb1910979e5.png`
+[2024-05-29 21:35:58.933] ASSET: Sending asset `asset.af1ef98671d7bac426e89c40b2e42b5c.png` to client `RiotScopez` as `asset.af1ef98671d7bac426e89c40b2e42b5c.png`
+[2024-05-29 21:36:07.775] ASSET: Sending asset `asset.430e6f2ec98449262b7c1af906fe81ce.png` to client `RiotScopez` as `asset.430e6f2ec98449262b7c1af906fe81ce.png`
+[2024-05-29 21:36:15.083] ASSET: Sending asset `asset.0a650334fe566d5997d75c5f7068aa83.png` to client `RiotScopez` as `asset.0a650334fe566d5997d75c5f7068aa83.png`
+[2024-05-29 21:36:20.683] ASSET: Sending asset `asset.16b73a95ce582355823c6eb8fc881541.png` to client `RiotScopez` as `asset.16b73a95ce582355823c6eb8fc881541.png`
+[2024-05-29 21:36:29.465] ASSET: Sending asset `asset.63e81dbdf4b076f1939da439048c91b7.png` to client `RiotScopez` as `asset.63e81dbdf4b076f1939da439048c91b7.png`
+[2024-05-29 21:36:34.592] GAME: TIDI: 9.40883;4.36102;3.09732;1.26534
+[2024-05-29 21:36:36.908] ASSET: Sending asset `asset.73e27021b31cc7edd68efc267ebed459.png` to client `RiotScopez` as `asset.73e27021b31cc7edd68efc267ebed459.png`
+[2024-05-29 21:36:39.416] SAY: INVALID/(Medibot) (75,181,9): Delicious!
+[2024-05-29 21:37:01.284] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 21:37:11.214] ASSET: Sending asset `tgui.bundle.js` to client `RiotScopez` as `asset.5a806c2cdc0e4d35c94371aedd1e5f4a.js`
+[2024-05-29 21:37:11.301] ASSET: Sending asset `tgui.bundle.css` to client `RiotScopez` as `asset.89501de77523e7848c5824e75ad03820.css`
+[2024-05-29 21:37:40.333] GAME: TIDI: 9.57535;5.92532;3.66292;1.5051
+[2024-05-29 21:38:45.416] GAME: TIDI: 8.40966;6.67062;4.26446;1.78103
+[2024-05-29 21:39:05.784] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 21:39:11.784] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 21:39:27.797] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 21:39:47.238] GAME: TIDI: 3;5.56943;4.52545;2.05547
+[2024-05-29 21:39:51.698] GAME: Z-level Eclipse Base Molten loaded at at 1,1,19
+[2024-05-29 21:40:21.027] ASSET: Sending asset `asset.20d1c507ca090f7b193411d34cc64d91.png` to client `RiotScopez` as `asset.20d1c507ca090f7b193411d34cc64d91.png`
+[2024-05-29 21:40:38.025] SAY: INVALID/(Medibot) (75,181,9): Radar, put a mask on!
+[2024-05-29 21:40:47.705] GAME: TIDI: 0.833333;4.1486;4.45008;2.29493
+[2024-05-29 21:40:50.021] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 21:41:11.300] ADMIN: RiotScopez/(Simple Mob) jumped to the �Mercenary Base
+[2024-05-29 21:41:40.020] SAY: INVALID/(Medibot) (75,181,9): There's always a catch, and it's the best there is.
+[2024-05-29 21:41:49.703] GAME: TIDI: 3.33333;3.90402;4.34087;2.49953
+[2024-05-29 21:42:42.035] ASSET: Sending asset `asset.d516c6cb3293ea24d4a1737318251153.png` to client `RiotScopez` as `asset.d516c6cb3293ea24d4a1737318251153.png`
+[2024-05-29 21:42:49.723] GAME: TIDI: 0;2.73282;4.01926;2.6515
+[2024-05-29 21:43:05.126] ASSET: Sending asset `asset.3694d8c8fb7475bcb9a1f767f34610f2.png` to client `RiotScopez` as `asset.3694d8c8fb7475bcb9a1f767f34610f2.png`
+[2024-05-29 21:43:13.877] ASSET: Sending asset `asset.1982b242e692f09eeea4428fe671ad33.png` to client `RiotScopez` as `asset.1982b242e692f09eeea4428fe671ad33.png`
+[2024-05-29 21:43:30.881] ASSET: Sending asset `asset.b5d171429f2c3c7171a57b879e10a5a2.png` to client `RiotScopez` as `asset.b5d171429f2c3c7171a57b879e10a5a2.png`
+[2024-05-29 21:43:32.111] SAY: INVALID/(Medibot) (75,181,9): I knew it, I should've been a plastic surgeon.
+[2024-05-29 21:43:46.156] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 21:43:48.532] ASSET: Sending asset `asset.3d592249c2a13b3daf71f76bf9ec809b.png` to client `RiotScopez` as `asset.3d592249c2a13b3daf71f76bf9ec809b.png`
+[2024-05-29 21:43:49.792] GAME: TIDI: 0;1.91297;3.598;2.74615
+[2024-05-29 21:44:06.322] ASSET: Sending asset `asset.5e2246fd41a7daa97c9526e8c1bbe492.png` to client `RiotScopez` as `asset.5e2246fd41a7daa97c9526e8c1bbe492.png`
+[2024-05-29 21:44:06.418] ASSET: Sending asset `asset.cbeb26515a98462d7fcfad8e3a7294ba.png` to client `RiotScopez` as `asset.cbeb26515a98462d7fcfad8e3a7294ba.png`
+[2024-05-29 21:44:18.830] ASSET: Sending asset `asset.c18019b1b97f501d6ec30c0dd66620f7.png` to client `RiotScopez` as `asset.c18019b1b97f501d6ec30c0dd66620f7.png`
+[2024-05-29 21:44:18.871] ASSET: Sending asset `asset.a21591c0ef5f15b685e1afd26993f7ab.png` to client `RiotScopez` as `asset.a21591c0ef5f15b685e1afd26993f7ab.png`
+[2024-05-29 21:44:49.907] GAME: TIDI: 0.333333;1.43908;3.16622;2.78816
+[2024-05-29 21:45:05.887] GAME: Z-level Eclipse Prison loaded at at 1,1,20
+[2024-05-29 21:45:22.734] ASSET: Sending asset `asset.718c6fd29f8acf026b651ba1271c7661.png` to client `RiotScopez` as `asset.718c6fd29f8acf026b651ba1271c7661.png`
+[2024-05-29 21:45:26.705] ASSET: Sending asset `asset.e54a503d9b9b2936b464f5b012e8430a.png` to client `RiotScopez` as `asset.e54a503d9b9b2936b464f5b012e8430a.png`
+[2024-05-29 21:45:31.038] ASSET: Sending asset `asset.d6e1b0819a4def0bddc1497b6aa78d79.png` to client `RiotScopez` as `asset.d6e1b0819a4def0bddc1497b6aa78d79.png`
+[2024-05-29 21:45:33.890] ASSET: Sending asset `asset.79d330d8d7d418131ef60a3a4bc7abdc.png` to client `RiotScopez` as `asset.79d330d8d7d418131ef60a3a4bc7abdc.png`
+[2024-05-29 21:45:41.533] ASSET: Sending asset `asset.9b092e5a3268d85dfdd2d5d61add2c1e.png` to client `RiotScopez` as `asset.9b092e5a3268d85dfdd2d5d61add2c1e.png`
+[2024-05-29 21:45:50.503] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 21:45:52.179] GAME: TIDI: 3.66667;2.10736;2.95445;2.80479
+[2024-05-29 21:46:54.106] GAME: TIDI: 3.33333;2.47515;2.85859;2.81017
+[2024-05-29 21:47:06.795] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 21:47:11.523] GAME: Z-level Thor Surface loaded at at 1,1,21
+[2024-05-29 21:47:13.111] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 21:47:54.842] GAME: TIDI: 1.16667;2.0826;2.70339;2.79949
+[2024-05-29 21:48:23.838] ASSET: Sending asset `asset.b84b899e28e896c5c89c134f87616b06.png` to client `RiotScopez` as `asset.b84b899e28e896c5c89c134f87616b06.png`
+[2024-05-29 21:48:25.219] SAY: INVALID/(Medibot) (75,181,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-05-29 21:48:47.292] SAY: INVALID/(Medibot) (75,181,9): Radar, put a mask on!
+[2024-05-29 21:48:54.966] GAME: TIDI: 0.166667;1.50782;2.46428;2.76597
+[2024-05-29 21:49:24.154] GAME: Z-level Blood Church loaded at at 1,1,22
+[2024-05-29 21:49:39.480] SAY: INVALID/(Medibot) (75,181,9): I knew it, I should've been a plastic surgeon.
+[2024-05-29 21:49:43.335] ASSET: Sending asset `asset.0db95eb9fa1c770c24057f20b960f735.png` to client `RiotScopez` as `asset.0db95eb9fa1c770c24057f20b960f735.png`
+[2024-05-29 21:49:57.204] GAME: TIDI: 3.83333;2.20548;2.41252;2.73062
+[2024-05-29 21:50:33.029] ADMIN: RiotScopez/(Simple Mob) jumped to the �Ninja Shuttle
+[2024-05-29 21:50:43.857] ASSET: Sending asset `asset.1c389499ace80106e8849103292a27c5.png` to client `RiotScopez` as `asset.1c389499ace80106e8849103292a27c5.png`
+[2024-05-29 21:50:57.469] GAME: TIDI: 0.333333;1.64383;2.25878;2.68344
+[2024-05-29 21:51:02.027] ADMIN: RiotScopez/(Simple Mob) spawned /mob/living/simple_mob/shadekin/red/rakshasa at (11,247,7)
+[2024-05-29 21:51:06.149] ADMIN: RiotScopez/(Simple Mob) has changed INVALID/(Rakshasa)'s size multiplier to 5.
+[2024-05-29 21:51:09.343] ADMIN: RiotScopez/(Simple Mob) stuffed riotscopez into Rakshasa.
+[2024-05-29 21:51:09.343] ACCESS OUT: INVALID/(Simple Mob) - IP:146.115.147.185 - CID:Logged Out - BYOND Logged Out
+[2024-05-29 21:51:09.344] ACCESS IN: RiotScopez/(Rakshasa) - IP:146.115.147.185 - CID:1871707424 - BYOND v515
+[2024-05-29 21:51:10.038] ASSET: Sending asset `asset.1cd09506e63cb868d861dd3c62e7578d.png` to client `RiotScopez` as `asset.1cd09506e63cb868d861dd3c62e7578d.png`
+[2024-05-29 21:51:10.050] ASSET: Sending asset `asset.3c051b241421ffea83917a35225c3dbe.png` to client `RiotScopez` as `asset.3c051b241421ffea83917a35225c3dbe.png`
+[2024-05-29 21:51:10.052] ASSET: Sending asset `asset.b74c37fe494e7e29496bc8d5d3778b60.png` to client `RiotScopez` as `asset.b74c37fe494e7e29496bc8d5d3778b60.png`
+[2024-05-29 21:51:10.054] ASSET: Sending asset `asset.768cc4b0604a5a26da21a6a437c43387.png` to client `RiotScopez` as `asset.768cc4b0604a5a26da21a6a437c43387.png`
+[2024-05-29 21:51:10.056] ASSET: Sending asset `asset.19816f3b3dc6c68d34a6dca01f98fd1a.png` to client `RiotScopez` as `asset.19816f3b3dc6c68d34a6dca01f98fd1a.png`
+[2024-05-29 21:51:10.061] ASSET: Sending asset `asset.a22537179d8ac0797ae14787bca25331.png` to client `RiotScopez` as `asset.a22537179d8ac0797ae14787bca25331.png`
+[2024-05-29 21:51:17.963] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 21:51:57.681] GAME: TIDI: 0.333333;1.25068;2.05716;2.62081
+[2024-05-29 21:52:57.858] GAME: TIDI: 0.333333;0.975478;1.84082;2.54281
+[2024-05-29 21:53:39.896] ADMIN: riotscopez/(Rakshasa) has ghosted outside cryo. (<A HREF='?_src_=holder;admin_token=3941082738447899391853763577210639;adminplayerobservecoodjump=1;X=11;Y=247;Z=7'>JMP</a>)
+[2024-05-29 21:53:39.968] ACCESS OUT: INVALID/(Rakshasa) - IP:146.115.147.185 - CID:Logged Out - BYOND Logged Out
+[2024-05-29 21:53:39.969] ACCESS IN: RiotScopez/(Rakshasa) - IP:146.115.147.185 - CID:1871707424 - BYOND v515
+[2024-05-29 21:53:39.972] ADMIN: INVALID/(Rakshasa) <span class='name'>Rakshasa</span> entered ghost/observe mode. 
+[2024-05-29 21:53:50.286] SAY: INVALID/(Medibot) (75,181,9): There's always a catch, and it's the best there is.
+[2024-05-29 21:53:57.939] GAME: TIDI: 0.166667;0.732835;1.61923;2.45045
+[2024-05-29 21:54:12.600] ADMIN: riotscopez/(Rakshasa) spawned /mob/living/carbon/human at (11,226,7)
+[2024-05-29 21:54:14.178] ASSET: Sending asset `asset.2ef0a2e9219fe908e75659b302d058f2.png` to client `RiotScopez` as `asset.2ef0a2e9219fe908e75659b302d058f2.png`
+[2024-05-29 21:54:16.969] ADMIN: riotscopez/(Rakshasa) stuffed riotscopez into Tristan Mahanta.
+[2024-05-29 21:54:16.969] ACCESS OUT: INVALID/(Rakshasa) - IP:146.115.147.185 - CID:Logged Out - BYOND Logged Out
+[2024-05-29 21:54:16.969] ACCESS IN: RiotScopez/(Tristan Mahanta) - IP:146.115.147.185 - CID:1871707424 - BYOND v515
+[2024-05-29 21:54:53.062] ADMIN: riotscopez/(Slabadon Beefivich) has given riotscopez/(Slabadon Beefivich) the modifer /datum/modifier/unstoppable, with a duration of forever.
+[2024-05-29 21:54:59.606] GAME: TIDI: 2.83333;1.36298;1.56798;2.36221
+[2024-05-29 21:55:26.184] ADMIN: riotscopez/(Slabadon Beefivich) has given riotscopez/(Slabadon Beefivich) the modifer /datum/modifier/shield_projection/security/strong, with a duration of forever.
+[2024-05-29 21:55:44.449] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 21:55:55.360] ADMIN: riotscopez/(Slabadon Beefivich) changed the equipment of riotscopez/(Slabadon Beefivich) to Spec ops - Death commando.
+[2024-05-29 21:56:00.704] GAME: TIDI: 1.83333;1.50409;1.5552;2.2815
+[2024-05-29 21:56:06.030] ADMIN: riotscopez/(Slabadon Beefivich) spawned /obj/item/weapon/cell/infinite at (11,226,7)
+[2024-05-29 21:56:19.421] ADMIN: riotscopez/(Slabadon Beefivich) deleted the infinite-capacity power cell! at (11,226,7)
+[2024-05-29 21:56:26.467] GAME: Error: /mob/observer/dead([0x30006b2]) took longer than 0.5 seconds to delete (took 0.8 seconds to delete)
+[2024-05-29 21:56:37.377] ADMIN: riotscopez/(Slabadon Beefivich) spawned /obj/item/weapon/cell/device/giga at (11,226,7)
+[2024-05-29 21:56:57.214] ADMIN: riotscopez/(Slabadon Beefivich) spawned /obj/item/weapon/anodevice at (11,227,7)
+[2024-05-29 21:57:00.592] ADMIN: riotscopez/(Slabadon Beefivich) deleted Anomaly power utilizer at (11,227,7)
+[2024-05-29 21:57:02.100] GAME: TIDI: 2.33333;1.75286;1.59473;2.21283
+[2024-05-29 21:57:23.783] ADMIN: riotscopez/(Slabadon Beefivich) created 1 /obj/item/weapon/cell/device/weapon/recharge/alien/omni
+[2024-05-29 21:58:02.610] GAME: TIDI: 0.833333;1.477;1.57119;2.14866
+[2024-05-29 21:58:15.008] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 21:58:41.160] SAY: INVALID/(Medibot) (75,181,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-05-29 21:58:41.199] ADMIN: riotscopez/(Slabadon Beefivich) spawned /obj/item/clothing/under/rank/centcom at (12,227,7)
+[2024-05-29 21:59:03.332] GAME: TIDI: 1.16667;1.3839;1.53373;2.08717
+[2024-05-29 21:59:13.325] ADMIN: riotscopez/(Slabadon Beefivich) spawned /obj/item/integrated_circuit/passive/power/solar_cell/dual at (12,229,7)
+[2024-05-29 21:59:20.328] ADMIN: riotscopez/(Slabadon Beefivich) spawned /obj/item/weapon/material/twohanded/saber at (12,229,7)
+[2024-05-29 21:59:22.002] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 21:59:46.909] ADMIN: riotscopez/(Slabadon Beefivich) spawned /obj/item/weapon/melee/energy/sword/blue at (11,229,7)
+[2024-05-29 22:00:04.285] GAME: TIDI: 1.5;1.41873;1.51073;2.02953
+[2024-05-29 22:01:01.812] ATTACK: riotscopez/(Slabadon Beefivich) against INVALID/(Rakshasa): Fired gun '�LP1 Locust Rifle' (MANUAL)
+[2024-05-29 22:01:01.842] ATTACK: riotscopez/(Slabadon Beefivich) against INVALID/(Rakshasa): Shot with /obj/item/projectile/beam/pulse projectile
+[2024-05-29 22:01:02.656] ATTACK: riotscopez/(Slabadon Beefivich) against INVALID/(Rakshasa): Fired gun '�LP1 Locust Rifle' (MANUAL)
+[2024-05-29 22:01:02.658] ATTACK: riotscopez/(Slabadon Beefivich) against INVALID/(Rakshasa): Shot with /obj/item/projectile/beam/pulse projectile
+[2024-05-29 22:01:02.962] ATTACK: INVALID/(Rakshasa) against riotscopez/(Slabadon Beefivich): Melee attacked with fists (miss/block)
+[2024-05-29 22:01:04.437] GAME: TIDI: 0.333333;1.09311;1.42721;1.96929
+[2024-05-29 22:01:05.331] ATTACK: INVALID/(Rakshasa) against riotscopez/(Slabadon Beefivich): Melee attacked with fists (miss/block)
+[2024-05-29 22:01:05.641] ATTACK: riotscopez/(Slabadon Beefivich) against AUTOMATED/floor: Fired gun '�LP1 Locust Rifle' (MANUAL)
+[2024-05-29 22:01:05.645] ATTACK: riotscopez/(Slabadon Beefivich) against INVALID/(Rakshasa): Shot with /obj/item/projectile/beam/pulse projectile
+[2024-05-29 22:01:06.580] ATTACK: INVALID/(Rakshasa) against riotscopez/(Slabadon Beefivich): Animal-attacked (miss)
+[2024-05-29 22:01:08.081] ATTACK: INVALID/(Rakshasa) against riotscopez/(Slabadon Beefivich): Melee attacked with fists (miss/block)
+[2024-05-29 22:01:08.207] ATTACK: riotscopez/(Slabadon Beefivich) against INVALID/(Rakshasa): Fired gun '�LP1 Locust Rifle' (MANUAL)
+[2024-05-29 22:01:08.210] ATTACK: riotscopez/(Slabadon Beefivich) against INVALID/(Rakshasa): Shot with /obj/item/projectile/beam/pulse projectile
+[2024-05-29 22:01:10.931] ATTACK: INVALID/(Rakshasa) against riotscopez/(Slabadon Beefivich): Melee attacked with fists (miss/block)
+[2024-05-29 22:01:11.802] ATTACK: riotscopez/(Slabadon Beefivich) against INVALID/(Rakshasa): Fired gun '�LP1 Locust Rifle' (MANUAL)
+[2024-05-29 22:01:11.806] ATTACK: riotscopez/(Slabadon Beefivich) against INVALID/(Rakshasa): Shot with /obj/item/projectile/beam/pulse projectile
+[2024-05-29 22:01:12.181] ATTACK: INVALID/(Rakshasa) against riotscopez/(Slabadon Beefivich): Animal-attacked (miss)
+[2024-05-29 22:01:12.979] ATTACK: riotscopez/(Slabadon Beefivich) against INVALID/(Rakshasa): Fired gun '�LP1 Locust Rifle' (MANUAL)
+[2024-05-29 22:01:12.983] ATTACK: riotscopez/(Slabadon Beefivich) against INVALID/(Rakshasa): Shot with /obj/item/projectile/beam/pulse projectile
+[2024-05-29 22:01:13.302] ATTACK: INVALID/(Rakshasa) against riotscopez/(Slabadon Beefivich): Melee attacked with fists (miss/block)
+[2024-05-29 22:01:18.801] ATTACK: INVALID/(Rakshasa) against riotscopez/(Slabadon Beefivich): Animal-attacked (miss)
+[2024-05-29 22:01:20.051] ATTACK: INVALID/(Rakshasa) against riotscopez/(Slabadon Beefivich): Melee attacked with fists (miss/block)
+[2024-05-29 22:01:21.151] ATTACK: INVALID/(Rakshasa) against riotscopez/(Slabadon Beefivich): Melee attacked with fists (miss/block)
+[2024-05-29 22:01:22.401] ATTACK: INVALID/(Rakshasa) against riotscopez/(Slabadon Beefivich): Melee attacked with fists (miss/block)
+[2024-05-29 22:01:23.701] ATTACK: INVALID/(Rakshasa) against riotscopez/(Slabadon Beefivich): Melee attacked with fists (miss/block)
+[2024-05-29 22:01:24.846] ATTACK: INVALID/(Rakshasa) against riotscopez/(Slabadon Beefivich): Melee attacked with fists (miss/block)
+[2024-05-29 22:01:26.009] ATTACK: riotscopez/(Slabadon Beefivich) against INVALID/(Rakshasa): attacked with energy sword (INTENT: HARM) (DAMTYE: BRUTE)
+[2024-05-29 22:01:26.126] ATTACK: INVALID/(Rakshasa) against riotscopez/(Slabadon Beefivich): Melee attacked with fists (miss/block)
+[2024-05-29 22:01:26.902] ATTACK: riotscopez/(Slabadon Beefivich) against INVALID/(Rakshasa): attacked with energy sword (INTENT: HARM) (DAMTYE: BRUTE)
+[2024-05-29 22:01:27.226] ATTACK: INVALID/(Rakshasa) against riotscopez/(Slabadon Beefivich): Melee attacked with fists (miss/block)
+[2024-05-29 22:01:27.681] ATTACK: riotscopez/(Slabadon Beefivich) against INVALID/(Rakshasa): attacked with energy sword (INTENT: HARM) (DAMTYE: BRUTE)
+[2024-05-29 22:01:29.751] ATTACK: INVALID/(Rakshasa) against riotscopez/(Slabadon Beefivich): Melee attacked with fists (miss/block)
+[2024-05-29 22:01:31.001] ATTACK: INVALID/(Rakshasa) against riotscopez/(Slabadon Beefivich): Animal-attacked (miss)
+[2024-05-29 22:01:31.671] ATTACK: riotscopez/(Slabadon Beefivich) against INVALID/(Rakshasa): attacked with energy sword (INTENT: HARM) (DAMTYE: BRUTE)
+[2024-05-29 22:01:32.642] ATTACK: riotscopez/(Slabadon Beefivich) against INVALID/(Rakshasa): attacked with energy sword (INTENT: HARM) (DAMTYE: BRUTE)
+[2024-05-29 22:01:33.415] ATTACK: riotscopez/(Slabadon Beefivich) against INVALID/(Rakshasa): attacked with energy sword (INTENT: HARM) (DAMTYE: BRUTE)
+[2024-05-29 22:01:34.344] ATTACK: riotscopez/(Slabadon Beefivich) against INVALID/(Rakshasa): attacked with energy sword (INTENT: HARM) (DAMTYE: BRUTE)
+[2024-05-29 22:01:34.602] ATTACK: INVALID/(Rakshasa) against riotscopez/(Slabadon Beefivich): Animal-attacked (miss)
+[2024-05-29 22:01:35.133] ATTACK: riotscopez/(Slabadon Beefivich) against INVALID/(Rakshasa): attacked with energy sword (INTENT: HARM) (DAMTYE: BRUTE)
+[2024-05-29 22:01:35.921] ATTACK: riotscopez/(Slabadon Beefivich) against INVALID/(Rakshasa): attacked with energy sword (INTENT: HARM) (DAMTYE: BRUTE)
+[2024-05-29 22:01:38.288] ATTACK: riotscopez/(Slabadon Beefivich) against INVALID/(Rakshasa): attacked with energy sword (INTENT: HARM) (DAMTYE: BRUTE)
+[2024-05-29 22:01:40.023] ATTACK: riotscopez/(Slabadon Beefivich) against INVALID/(Rakshasa): Fired gun '�LP1 Locust Rifle' (MANUAL)
+[2024-05-29 22:01:40.027] ATTACK: riotscopez/(Slabadon Beefivich) against INVALID/(Rakshasa): Shot with /obj/item/projectile/beam/pulse projectile
+[2024-05-29 22:01:40.952] ATTACK: INVALID/(Rakshasa) against riotscopez/(Slabadon Beefivich): Melee attacked with fists (miss/block)
+[2024-05-29 22:01:40.996] ATTACK: riotscopez/(Slabadon Beefivich) against INVALID/(Rakshasa): Fired gun '�LP1 Locust Rifle' (MANUAL)
+[2024-05-29 22:01:41.000] ATTACK: riotscopez/(Slabadon Beefivich) against INVALID/(Rakshasa): Shot with /obj/item/projectile/beam/pulse projectile
+[2024-05-29 22:01:41.812] ATTACK: riotscopez/(Slabadon Beefivich) against INVALID/(Rakshasa): Fired gun '�LP1 Locust Rifle' (MANUAL)
+[2024-05-29 22:01:41.817] ATTACK: riotscopez/(Slabadon Beefivich) against INVALID/(Rakshasa): Shot with /obj/item/projectile/beam/pulse projectile
+[2024-05-29 22:01:42.202] ATTACK: INVALID/(Rakshasa) against riotscopez/(Slabadon Beefivich): Animal-attacked (miss)
+[2024-05-29 22:01:42.646] ATTACK: riotscopez/(Slabadon Beefivich) against INVALID/(Rakshasa): Fired gun '�LP1 Locust Rifle' (MANUAL)
+[2024-05-29 22:01:42.650] ATTACK: riotscopez/(Slabadon Beefivich) against INVALID/(Rakshasa): Shot with /obj/item/projectile/beam/pulse projectile
+[2024-05-29 22:01:43.467] ATTACK: riotscopez/(Slabadon Beefivich) against INVALID/(Rakshasa): Fired gun '�LP1 Locust Rifle' (MANUAL)
+[2024-05-29 22:01:43.471] ATTACK: riotscopez/(Slabadon Beefivich) against INVALID/(Rakshasa): Shot with /obj/item/projectile/beam/pulse projectile
+[2024-05-29 22:01:43.501] ATTACK: INVALID/(Rakshasa) against riotscopez/(Slabadon Beefivich): Melee attacked with fists (miss/block)
+[2024-05-29 22:01:44.321] ATTACK: riotscopez/(Slabadon Beefivich) against INVALID/(Rakshasa): Fired gun '�LP1 Locust Rifle' (MANUAL)
+[2024-05-29 22:01:44.325] ATTACK: riotscopez/(Slabadon Beefivich) against INVALID/(Rakshasa): Shot with /obj/item/projectile/beam/pulse projectile
+[2024-05-29 22:01:44.959] SAY: INVALID/(Medibot) (75,181,9): Delicious!
+[2024-05-29 22:01:45.154] ATTACK: riotscopez/(Slabadon Beefivich) against INVALID/(Rakshasa): Fired gun '�LP1 Locust Rifle' (MANUAL)
+[2024-05-29 22:01:45.160] ATTACK: riotscopez/(Slabadon Beefivich) against INVALID/(Rakshasa): Shot with /obj/item/projectile/beam/pulse projectile
+[2024-05-29 22:01:46.035] ATTACK: INVALID/(Rakshasa) against riotscopez/(Slabadon Beefivich): Animal-attacked (miss)
+[2024-05-29 22:01:47.288] ATTACK: riotscopez/(Slabadon Beefivich) against INVALID/(Rakshasa): Fired gun '�LP1 Locust Rifle' (MANUAL)
+[2024-05-29 22:01:47.292] ATTACK: riotscopez/(Slabadon Beefivich) against INVALID/(Rakshasa): Shot with /obj/item/projectile/beam/pulse projectile
+[2024-05-29 22:01:48.298] ATTACK: riotscopez/(Slabadon Beefivich) against INVALID/(Rakshasa): Fired gun '�LP1 Locust Rifle' (MANUAL)
+[2024-05-29 22:01:48.301] ATTACK: riotscopez/(Slabadon Beefivich) against INVALID/(Rakshasa): Shot with /obj/item/projectile/beam/pulse projectile
+[2024-05-29 22:01:48.385] ATTACK: INVALID/(Rakshasa) against riotscopez/(Slabadon Beefivich): Animal-attacked (miss)
+[2024-05-29 22:01:51.984] ATTACK: INVALID/(Rakshasa) against riotscopez/(Slabadon Beefivich): Melee attacked with fists (miss/block)
+[2024-05-29 22:01:54.525] ATTACK: INVALID/(Rakshasa) against riotscopez/(Slabadon Beefivich): Melee attacked with fists (miss/block)
+[2024-05-29 22:01:56.524] ATTACK: INVALID/(Rakshasa) against riotscopez/(Slabadon Beefivich): Melee attacked with fists (miss/block)
+[2024-05-29 22:01:57.396] ATTACK: riotscopez/(Slabadon Beefivich) against INVALID/(Rakshasa): Fired gun '�LP1 Locust Rifle' (MANUAL)
+[2024-05-29 22:01:57.399] ATTACK: riotscopez/(Slabadon Beefivich) against INVALID/(Rakshasa): Shot with /obj/item/projectile/beam/pulse projectile
+[2024-05-29 22:01:58.729] ATTACK: riotscopez/(Slabadon Beefivich) against INVALID/(Rakshasa): Fired gun '�LP1 Locust Rifle' (MANUAL)
+[2024-05-29 22:01:59.722] ATTACK: riotscopez/(Slabadon Beefivich) against INVALID/(Rakshasa): Fired gun '�LP1 Locust Rifle' (MANUAL)
+[2024-05-29 22:02:00.961] ATTACK: INVALID/(Rakshasa) against riotscopez/(Slabadon Beefivich): Melee attacked with fists (miss/block)
+[2024-05-29 22:02:02.838] ATTACK: INVALID/(Rakshasa) against riotscopez/(Slabadon Beefivich): Melee attacked with fists (miss/block)
+[2024-05-29 22:02:04.564] ATTACK: riotscopez/(Slabadon Beefivich) against riotscopez/(Slabadon Beefivich): Fired gun '�LP1 Locust Rifle' (MANUAL)
+[2024-05-29 22:02:06.587] GAME: TIDI: 3.5;1.81518;1.5048;1.92284
+[2024-05-29 22:02:08.287] ACCESS OUT: INVALID/(Slabadon Beefivich) - IP:146.115.147.185 - CID:Logged Out - BYOND Logged Out
+[2024-05-29 22:02:08.288] ACCESS IN: RiotScopez/(Slabadon Beefivich) - IP:146.115.147.185 - CID:1871707424 - BYOND v515
+[2024-05-29 22:02:18.045] ADMIN: riotscopez/(Slabadon Beefivich) stuffed riotscopez into Rakshasa.
+[2024-05-29 22:02:18.045] ACCESS OUT: INVALID/(Slabadon Beefivich) - IP:146.115.147.185 - CID:Logged Out - BYOND Logged Out
+[2024-05-29 22:02:18.046] ACCESS IN: RiotScopez/(Rakshasa) - IP:146.115.147.185 - CID:1871707424 - BYOND v515
+[2024-05-29 22:02:49.306] ATTACK: riotscopez/(Rakshasa) against INVALID/(Slabadon Beefivich): Scooped up
+[2024-05-29 22:02:52.793] ATTACK: riotscopez/(Rakshasa) against INVALID/(Slabadon Beefivich): Eaten via stomach
+[2024-05-29 22:02:53.382] ATTACK: riotscopez/(Rakshasa) against INVALID/(Slabadon Beefivich): Digested in stomach
+[2024-05-29 22:03:06.880] GAME: TIDI: 0.5;1.42062;1.48797;1.87936
+[2024-05-29 22:03:24.251] ATTACK: riotscopez/(Rakshasa) against riotscopez/(Rakshasa): attacked with energy sword (INTENT: HARM) (DAMTYE: BRUTE)
+[2024-05-29 22:03:25.416] ATTACK: riotscopez/(Rakshasa) against riotscopez/(Rakshasa): attacked with energy sword (INTENT: HARM) (DAMTYE: BRUTE)
+[2024-05-29 22:03:26.511] ATTACK: riotscopez/(Rakshasa) against riotscopez/(Rakshasa): attacked with energy sword (INTENT: HARM) (DAMTYE: BRUTE)
+[2024-05-29 22:03:27.617] ATTACK: riotscopez/(Rakshasa) against riotscopez/(Rakshasa): attacked with energy sword (INTENT: HARM) (DAMTYE: BRUTE)
+[2024-05-29 22:03:28.536] ATTACK: riotscopez/(Rakshasa) against riotscopez/(Rakshasa): attacked with energy sword (INTENT: HARM) (DAMTYE: BRUTE)
+[2024-05-29 22:03:53.903] ACCESS OUT: riotscopez/(Rakshasa) - IP:146.115.147.185 - CID:Logged Out - BYOND Logged Out
+[2024-05-29 22:04:10.754] GAME: TIDI: 6.5;2.94444;1.77926;1.86935
+[2024-05-29 22:05:10.828] GAME: TIDI: 0.166667;2.11111;1.84563;1.86698
+[2024-05-29 22:05:57.207] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 22:06:10.919] GAME: TIDI: 0.166667;1.52777;1.78206;1.85848
+[2024-05-29 22:07:10.975] GAME: TIDI: 0;1.06944;1.63954;1.83659
+[2024-05-29 22:08:11.614] GAME: TIDI: 1.16667;1.09861;1.53135;1.80606
+[2024-05-29 22:08:41.377] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 22:08:55.360] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 22:09:13.385] GAME: TIDI: 2.83333;1.61903;1.54889;1.78035
+[2024-05-29 22:10:13.780] GAME: TIDI: 0.666667;1.33332;1.50577;1.75289
+[2024-05-29 22:11:13.853] GAME: TIDI: 0.166667;0.983323;1.40128;1.71773
+[2024-05-29 22:12:13.948] GAME: TIDI: 0.166667;0.738326;1.26869;1.67282
+[2024-05-29 22:13:14.104] GAME: TIDI: 0.333333;0.616828;1.13832;1.61937
+[2024-05-29 22:13:20.423] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 22:13:36.571] SAY: INVALID/(Medibot) (75,181,9): There's always a catch, and it's the best there is.
+[2024-05-29 22:13:51.000] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 22:14:09.045] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 22:14:14.744] GAME: TIDI: 1;0.73178;1.05701;1.56314
+[2024-05-29 22:14:55.094] SAY: INVALID/(Medibot) (75,181,9): I knew it, I should've been a plastic surgeon.
+[2024-05-29 22:15:14.797] GAME: TIDI: 0;0.512246;0.948058;1.50163
+[2024-05-29 22:16:14.867] GAME: TIDI: 0.166667;0.408572;0.840161;1.43548
+[2024-05-29 22:17:14.943] GAME: TIDI: 0.166667;0.336;0.739329;1.36587
+[2024-05-29 22:17:39.305] SAY: INVALID/(Medibot) (75,181,9): Radar, put a mask on!
+[2024-05-29 22:17:47.349] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 22:18:15.035] GAME: TIDI: 0.166667;0.2852;0.648503;1.29413
+[2024-05-29 22:19:15.102] GAME: TIDI: 0.166667;0.24964;0.568731;1.22159
+[2024-05-29 22:19:33.532] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 22:20:15.221] GAME: TIDI: 0.166667;0.224748;0.499934;1.14943
+[2024-05-29 22:20:17.585] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 22:20:59.625] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 22:21:15.426] GAME: TIDI: 0.333333;0.257324;0.451412;1.07962
+[2024-05-29 22:21:29.765] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 22:21:59.871] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 22:22:15.529] GAME: TIDI: 0.166667;0.230127;0.407155;1.01238
+[2024-05-29 22:22:19.906] SAY: INVALID/(Medibot) (75,181,9): There's always a catch, and it's the best there is.
+[2024-05-29 22:23:15.616] GAME: TIDI: 0.166667;0.211089;0.367942;0.947933
+[2024-05-29 22:23:42.033] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 22:24:15.714] GAME: TIDI: 0.166667;0.197762;0.333906;0.886531
+[2024-05-29 22:25:00.155] SAY: INVALID/(Medibot) (75,181,9): Delicious!
+[2024-05-29 22:25:00.156] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 22:25:15.809] GAME: TIDI: 0.166667;0.188433;0.304811;0.828359
+[2024-05-29 22:26:15.909] GAME: TIDI: 0.166667;0.181903;0.28023;0.773546
+[2024-05-29 22:26:24.279] SAY: INVALID/(Medibot) (75,181,9): Delicious!
+[2024-05-29 22:26:44.320] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 22:27:15.977] GAME: TIDI: 0;0.127332;0.24965;0.721156
+[2024-05-29 22:27:46.337] SAY: INVALID/(Medibot) (75,181,9): Delicious!
+[2024-05-29 22:28:16.061] GAME: TIDI: 0.166667;0.139133;0.227547;0.671795
+[2024-05-29 22:29:16.154] GAME: TIDI: 0.166667;0.147393;0.211516;0.625767
+[2024-05-29 22:30:16.245] GAME: TIDI: 0.166667;0.153175;0.199848;0.583175
+[2024-05-29 22:30:18.614] SAY: INVALID/(Medibot) (75,181,9): Radar, put a mask on!
+[2024-05-29 22:31:02.688] SAY: INVALID/(Medibot) (75,181,9): Delicious!
+[2024-05-29 22:31:08.641] SAY: INVALID/(Medibot) (75,181,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-05-29 22:31:16.322] GAME: TIDI: 0.166667;0.157223;0.191323;0.54399
+[2024-05-29 22:32:16.409] GAME: TIDI: 0.166667;0.160056;0.185069;0.508098
+[2024-05-29 22:32:32.744] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 22:32:38.770] SAY: INVALID/(Medibot) (75,181,9): There's always a catch, and it's the best there is.
+[2024-05-29 22:33:04.794] SAY: INVALID/(Medibot) (75,181,9): I knew it, I should've been a plastic surgeon.
+[2024-05-29 22:33:14.815] SAY: INVALID/(Medibot) (75,181,9): There's always a catch, and it's the best there is.
+[2024-05-29 22:33:16.499] GAME: TIDI: 0;0.112039;0.170463;0.474334
+[2024-05-29 22:34:16.574] GAME: TIDI: 0.166667;0.128427;0.162056;0.443107
+[2024-05-29 22:34:48.930] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 22:35:16.641] GAME: TIDI: 0.166667;0.139899;0.157625;0.414558
+[2024-05-29 22:35:38.995] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 22:36:05.057] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 22:36:16.716] GAME: TIDI: 0.166667;0.147929;0.155686;0.388671
+[2024-05-29 22:36:41.101] SAY: INVALID/(Medibot) (75,181,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-05-29 22:37:13.183] SAY: INVALID/(Medibot) (75,181,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-05-29 22:37:16.813] GAME: TIDI: 0.166667;0.153551;0.155259;0.36533
+[2024-05-29 22:38:05.238] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 22:38:16.931] GAME: TIDI: 0.166667;0.157485;0.155704;0.344367
+[2024-05-29 22:39:17.028] GAME: TIDI: 0.166667;0.16024;0.156611;0.325592
+[2024-05-29 22:39:29.376] SAY: INVALID/(Medibot) (75,181,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-05-29 22:40:17.116] GAME: TIDI: 0.166667;0.162168;0.157722;0.308805
+[2024-05-29 22:40:57.519] SAY: INVALID/(Medibot) (75,181,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-05-29 22:41:17.223] GAME: TIDI: 0.166667;0.163518;0.158882;0.293812
+[2024-05-29 22:41:17.542] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 22:42:17.328] GAME: TIDI: 0.166667;0.164462;0.159998;0.280431
+[2024-05-29 22:43:17.409] GAME: TIDI: 0.166667;0.165124;0.161023;0.26849
+[2024-05-29 22:44:17.491] GAME: TIDI: 0;0.115587;0.151936;0.256835
+[2024-05-29 22:44:19.854] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 22:44:47.850] SAY: INVALID/(Medibot) (75,181,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-05-29 22:44:59.881] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 22:45:17.573] GAME: TIDI: 0.166667;0.130911;0.147731;0.245924
+[2024-05-29 22:45:21.934] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 22:45:29.912] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 22:45:43.931] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 22:46:17.714] GAME: TIDI: 0.333333;0.191637;0.156512;0.236983
+[2024-05-29 22:47:14.365] SAY: INVALID/(Medibot) (75,181,9): I knew it, I should've been a plastic surgeon.
+[2024-05-29 22:47:17.998] GAME: TIDI: 0.333333;0.234146;0.172039;0.230489
+[2024-05-29 22:48:18.083] GAME: TIDI: 0.166667;0.213902;0.180412;0.225481
+[2024-05-29 22:49:18.191] GAME: TIDI: 0.166667;0.199732;0.184276;0.22136
+[2024-05-29 22:49:38.582] SAY: INVALID/(Medibot) (75,181,9): There's always a catch, and it's the best there is.
+[2024-05-29 22:50:18.279] GAME: TIDI: 0.166667;0.189812;0.185383;0.217763
+[2024-05-29 22:50:56.687] SAY: INVALID/(Medibot) (75,181,9): I knew it, I should've been a plastic surgeon.
+[2024-05-29 22:51:18.340] GAME: TIDI: 0.166667;0.182868;0.18488;0.214474
+[2024-05-29 22:51:30.673] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 22:51:56.712] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 22:52:18.501] GAME: TIDI: 0.333333;0.228008;0.193506;0.212377
+[2024-05-29 22:53:18.587] GAME: TIDI: 0;0.159606;0.186726;0.209812
+[2024-05-29 22:53:27.029] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 22:54:18.734] GAME: TIDI: 0.333333;0.211724;0.191725;0.208004
+[2024-05-29 22:55:18.796] GAME: TIDI: 0;0.148207;0.183022;0.205505
+[2024-05-29 22:56:18.896] GAME: TIDI: 0.166667;0.153745;0.177166;0.202671
+[2024-05-29 22:57:18.972] GAME: TIDI: 0.166667;0.157621;0.173257;0.19973
+[2024-05-29 22:57:19.301] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 22:57:35.358] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 22:57:57.330] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 22:58:19.058] GAME: TIDI: 0.166667;0.160335;0.170673;0.196824
+[2024-05-29 22:58:45.393] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 22:59:19.126] GAME: TIDI: 0.166667;0.162234;0.168985;0.19404
+[2024-05-29 23:00:19.224] GAME: TIDI: 0.166667;0.163564;0.167901;0.191426
+[2024-05-29 23:00:23.621] SAY: INVALID/(Medibot) (75,181,9): Radar, put a mask on!
+[2024-05-29 23:01:19.323] GAME: TIDI: 0.166667;0.164495;0.16722;0.189006
+[2024-05-29 23:01:59.774] SAY: INVALID/(Medibot) (75,181,9): There's always a catch, and it's the best there is.
+[2024-05-29 23:02:19.516] GAME: TIDI: 0.333333;0.215146;0.176805;0.187786
+[2024-05-29 23:03:11.891] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 23:03:19.574] GAME: TIDI: 0;0.150602;0.171565;0.186164
+[2024-05-29 23:03:27.964] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 23:04:19.655] GAME: TIDI: 0.166667;0.155422;0.168336;0.184381
+[2024-05-29 23:04:46.014] SAY: INVALID/(Medibot) (75,181,9): There's always a catch, and it's the best there is.
+[2024-05-29 23:05:04.093] SAY: INVALID/(Medibot) (75,181,9): There's always a catch, and it's the best there is.
+[2024-05-29 23:05:19.755] GAME: TIDI: 0.166667;0.158795;0.166428;0.182585
+[2024-05-29 23:06:08.137] SAY: INVALID/(Medibot) (75,181,9): Radar, put a mask on!
+[2024-05-29 23:06:19.833] GAME: TIDI: 0.166667;0.161157;0.165374;0.180864
+[2024-05-29 23:07:19.890] GAME: TIDI: 0;0.11281;0.154861;0.178264
+[2024-05-29 23:07:48.250] SAY: INVALID/(Medibot) (75,181,9): Delicious!
+[2024-05-29 23:08:19.976] GAME: TIDI: 0.166667;0.128967;0.149682;0.175406
+[2024-05-29 23:08:56.394] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 23:09:20.139] GAME: TIDI: 0.333333;0.190277;0.157801;0.173645
+[2024-05-29 23:10:20.241] GAME: TIDI: 0.166667;0.183194;0.16288;0.172569
+[2024-05-29 23:11:20.308] GAME: TIDI: 0.166667;0.178236;0.165951;0.171907
+[2024-05-29 23:12:20.386] GAME: TIDI: 0;0.124765;0.157714;0.170488
+[2024-05-29 23:12:22.703] SAY: INVALID/(Medibot) (75,181,9): There's always a catch, and it's the best there is.
+[2024-05-29 23:13:20.550] GAME: TIDI: 0.333333;0.187335;0.163638;0.169803
+[2024-05-29 23:14:20.621] GAME: TIDI: 0.166667;0.181135;0.167137;0.169536
+[2024-05-29 23:15:20.691] GAME: TIDI: 0;0.126794;0.159069;0.168489
+[2024-05-29 23:15:45.063] SAY: INVALID/(Medibot) (75,181,9): Radar, put a mask on!
+[2024-05-29 23:15:47.059] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 23:16:20.786] GAME: TIDI: 0.166667;0.138756;0.155006;0.167141
+[2024-05-29 23:16:45.147] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 23:17:20.878] GAME: TIDI: 0.166667;0.147129;0.153431;0.16577
+[2024-05-29 23:18:20.966] GAME: TIDI: 0.166667;0.15299;0.153343;0.164527
+[2024-05-29 23:18:53.368] SAY: INVALID/(Medibot) (75,181,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-05-29 23:18:55.319] SAY: INVALID/(Medibot) (75,181,9): Radar, put a mask on!
+[2024-05-29 23:19:07.339] SAY: INVALID/(Medibot) (75,181,9): Delicious!
+[2024-05-29 23:19:21.022] GAME: TIDI: 0.166667;0.157093;0.154093;0.163484
+[2024-05-29 23:20:05.445] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 23:20:13.425] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 23:20:15.430] SAY: INVALID/(Medibot) (75,181,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-05-29 23:20:21.104] GAME: TIDI: 0.166667;0.159965;0.155267;0.162662
+[2024-05-29 23:21:05.489] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 23:21:21.196] GAME: TIDI: 0;0.111976;0.146609;0.161057
+[2024-05-29 23:22:21.292] GAME: TIDI: 0.166667;0.128383;0.142964;0.159248
+[2024-05-29 23:23:21.352] GAME: TIDI: 0.166667;0.139868;0.142345;0.157557
+[2024-05-29 23:24:21.442] GAME: TIDI: 0.166667;0.147908;0.143457;0.156147
+[2024-05-29 23:25:09.826] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 23:25:21.524] GAME: TIDI: 0.166667;0.153535;0.145473;0.15508
+[2024-05-29 23:25:39.885] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 23:26:21.625] GAME: TIDI: 0.166667;0.157475;0.147873;0.154359
+[2024-05-29 23:27:12.054] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 23:27:20.003] SAY: INVALID/(Medibot) (75,181,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-05-29 23:27:21.689] GAME: TIDI: 0;0.110232;0.140345;0.152958
+[2024-05-29 23:28:21.777] GAME: TIDI: 0.166667;0.127163;0.137709;0.151433
+[2024-05-29 23:29:21.851] GAME: TIDI: 0.166667;0.139014;0.13797;0.150087
+[2024-05-29 23:30:21.931] GAME: TIDI: 0.166667;0.14731;0.139838;0.149062
+[2024-05-29 23:30:38.264] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 23:30:42.312] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 23:31:21.988] GAME: TIDI: 0;0.103117;0.132493;0.147405
+[2024-05-29 23:32:22.072] GAME: TIDI: 0.166667;0.122182;0.130431;0.145707
+[2024-05-29 23:33:22.295] GAME: TIDI: 0.333333;0.185527;0.14145;0.145282
+[2024-05-29 23:34:22.383] GAME: TIDI: 0.166667;0.179869;0.149134;0.145667
+[2024-05-29 23:35:22.458] GAME: TIDI: 0.166667;0.175908;0.154489;0.146549
+[2024-05-29 23:35:52.843] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 23:36:18.917] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 23:36:22.553] GAME: TIDI: 0.166667;0.173136;0.158218;0.147716
+[2024-05-29 23:37:20.979] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 23:37:22.664] GAME: TIDI: 0.166667;0.171195;0.160814;0.149026
+[2024-05-29 23:38:09.040] SAY: INVALID/(Medibot) (75,181,9): There's always a catch, and it's the best there is.
+[2024-05-29 23:38:13.088] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 23:38:22.735] GAME: TIDI: 0.166667;0.169837;0.162618;0.150385
+[2024-05-29 23:38:37.070] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 23:39:22.797] GAME: TIDI: 0;0.118886;0.153872;0.150734
+[2024-05-29 23:40:22.883] GAME: TIDI: 0.166667;0.13322;0.149741;0.150634
+[2024-05-29 23:41:22.968] GAME: TIDI: 0.166667;0.143254;0.148444;0.150415
+[2024-05-29 23:42:23.039] GAME: TIDI: 0.166667;0.150278;0.148811;0.150255
+[2024-05-29 23:43:23.098] GAME: TIDI: 0;0.105194;0.140087;0.149238
+[2024-05-29 23:44:23.189] GAME: TIDI: 0.166667;0.123636;0.136797;0.147994
+[2024-05-29 23:45:23.266] GAME: TIDI: 0.166667;0.136545;0.136747;0.146869
+[2024-05-29 23:46:23.350] GAME: TIDI: 0.166667;0.145582;0.138514;0.146034
+[2024-05-29 23:47:23.431] GAME: TIDI: 0.166667;0.151907;0.141192;0.14555
+[2024-05-29 23:47:23.771] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 23:48:23.517] GAME: TIDI: 0.166667;0.156335;0.144221;0.145417
+[2024-05-29 23:49:23.694] GAME: TIDI: 0.166667;0.159435;0.147264;0.145601
+[2024-05-29 23:49:34.024] SAY: INVALID/(Medibot) (75,181,9): Delicious!
+[2024-05-29 23:50:23.765] GAME: TIDI: 0.166667;0.161604;0.150132;0.146055
+[2024-05-29 23:50:36.125] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 23:51:23.842] GAME: TIDI: 0.166667;0.163123;0.15273;0.146722
+[2024-05-29 23:52:23.928] GAME: TIDI: 0.166667;0.164186;0.155021;0.147552
+[2024-05-29 23:53:24.023] GAME: TIDI: 0.166667;0.16493;0.157003;0.148497
+[2024-05-29 23:53:52.432] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 23:54:24.115] GAME: TIDI: 0.166667;0.165451;0.158693;0.149517
+[2024-05-29 23:55:24.210] GAME: TIDI: 0.166667;0.165816;0.160117;0.150577
+[2024-05-29 23:56:24.305] GAME: TIDI: 0.166667;0.166071;0.161308;0.15165
+[2024-05-29 23:57:02.689] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 23:57:24.398] GAME: TIDI: 0;0.11625;0.152296;0.151714
+[2024-05-29 23:57:42.732] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 23:58:10.839] SAY: INVALID/(Medibot) (75,181,9): There's always a catch, and it's the best there is.
+[2024-05-29 23:58:24.546] GAME: TIDI: 0.333333;0.181375;0.158112;0.152354
+[2024-05-29 23:59:24.617] GAME: TIDI: 0.166667;0.176962;0.161882;0.153307
+[2024-05-29 23:59:30.955] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-29 23:59:41.022] SAY: INVALID/(Medibot) (75,181,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-05-29 23:59:47.020] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 00:00:24.698] GAME: TIDI: 0;0.123874;0.15428;0.153404
+[2024-05-30 00:01:17.112] SAY: INVALID/(Medibot) (75,181,9): There's always a catch, and it's the best there is.
+[2024-05-30 00:01:24.794] GAME: TIDI: 0.166667;0.136712;0.150767;0.153141
+[2024-05-30 00:02:24.876] GAME: TIDI: 0.166667;0.145698;0.149753;0.152802
+[2024-05-30 00:02:35.192] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 00:03:25.066] GAME: TIDI: 0.333333;0.201989;0.1602;0.153542
+[2024-05-30 00:03:35.404] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 00:04:25.147] GAME: TIDI: 0.166667;0.191392;0.166439;0.154831
+[2024-05-30 00:05:19.566] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 00:05:25.245] GAME: TIDI: 0.166667;0.183974;0.169946;0.156343
+[2024-05-30 00:05:25.561] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 00:06:17.687] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 00:06:23.705] SAY: INVALID/(Medibot) (75,181,9): Delicious!
+[2024-05-30 00:06:25.340] GAME: TIDI: 0.166667;0.178782;0.171713;0.15788
+[2024-05-30 00:06:35.710] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 00:06:43.685] SAY: INVALID/(Medibot) (75,181,9): Radar, put a mask on!
+[2024-05-30 00:06:57.700] SAY: INVALID/(Medibot) (75,181,9): I knew it, I should've been a plastic surgeon.
+[2024-05-30 00:07:15.710] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 00:07:25.393] GAME: TIDI: 0;0.125147;0.1624;0.158332
+[2024-05-30 00:07:39.795] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 00:08:25.694] GAME: TIDI: 0.5;0.237603;0.177441;0.160243
+[2024-05-30 00:09:25.775] GAME: TIDI: 0.166667;0.216322;0.185217;0.16274
+[2024-05-30 00:09:44.110] SAY: INVALID/(Medibot) (75,181,9): Delicious!
+[2024-05-30 00:10:04.130] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 00:10:25.856] GAME: TIDI: 0.166667;0.201426;0.188459;0.165312
+[2024-05-30 00:11:14.233] SAY: INVALID/(Medibot) (75,181,9): I knew it, I should've been a plastic surgeon.
+[2024-05-30 00:11:25.914] GAME: TIDI: 0.166667;0.190998;0.188967;0.167677
+[2024-05-30 00:12:25.989] GAME: TIDI: 0;0.133699;0.177913;0.168701
+[2024-05-30 00:12:36.397] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 00:12:42.342] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 00:12:44.343] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 00:13:26.089] GAME: TIDI: 0.166667;0.143589;0.171048;0.168936
+[2024-05-30 00:14:26.192] GAME: TIDI: 0.166667;0.150512;0.166941;0.168736
+[2024-05-30 00:14:40.592] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 00:15:26.354] GAME: TIDI: 0.333333;0.205359;0.174625;0.169325
+[2024-05-30 00:16:26.429] GAME: TIDI: 0.166667;0.193751;0.17845;0.170237
+[2024-05-30 00:17:20.838] SAY: INVALID/(Medibot) (75,181,9): I knew it, I should've been a plastic surgeon.
+[2024-05-30 00:17:26.512] GAME: TIDI: 0.166667;0.185626;0.179885;0.171202
+[2024-05-30 00:18:20.914] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 00:18:26.595] GAME: TIDI: 0;0.129938;0.169896;0.171072
+[2024-05-30 00:19:26.664] GAME: TIDI: 0.166667;0.140957;0.164108;0.170375
+[2024-05-30 00:20:07.088] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 00:20:26.829] GAME: TIDI: 0.333333;0.19867;0.17102;0.17044
+[2024-05-30 00:21:13.252] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 00:21:26.903] GAME: TIDI: 0.166667;0.189069;0.17463;0.170859
+[2024-05-30 00:21:35.243] SAY: INVALID/(Medibot) (75,181,9): Radar, put a mask on!
+[2024-05-30 00:22:13.329] SAY: INVALID/(Medibot) (75,181,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-05-30 00:22:26.991] GAME: TIDI: 0;0.132348;0.166174;0.17039
+[2024-05-30 00:23:27.073] GAME: TIDI: 0.166667;0.142644;0.161468;0.169498
+[2024-05-30 00:24:27.171] GAME: TIDI: 0.166667;0.149851;0.159144;0.168463
+[2024-05-30 00:25:27.270] GAME: TIDI: 0.166667;0.154895;0.158294;0.167446
+[2024-05-30 00:26:09.641] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 00:26:27.339] GAME: TIDI: 0.166667;0.158427;0.158321;0.166533
+[2024-05-30 00:26:29.657] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 00:26:57.723] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 00:27:27.408] GAME: TIDI: 0.166667;0.160899;0.158836;0.165764
+[2024-05-30 00:27:43.819] SAY: INVALID/(Medibot) (75,181,9): I knew it, I should've been a plastic surgeon.
+[2024-05-30 00:28:27.511] GAME: TIDI: 0.166667;0.162629;0.159595;0.165147
+[2024-05-30 00:29:05.933] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 00:29:09.882] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 00:29:27.603] GAME: TIDI: 0.166667;0.16384;0.160444;0.164676
+[2024-05-30 00:30:19.975] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 00:30:27.695] GAME: TIDI: 0;0.114688;0.151293;0.163338
+[2024-05-30 00:31:14.071] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 00:31:27.762] GAME: TIDI: 0.166667;0.130282;0.147091;0.161713
+[2024-05-30 00:31:46.174] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 00:32:27.855] GAME: TIDI: 0.166667;0.141197;0.145912;0.160133
+[2024-05-30 00:32:36.202] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 00:33:27.955] GAME: TIDI: 0.166667;0.148838;0.146497;0.15877
+[2024-05-30 00:33:42.473] SAY: INVALID/(Medibot) (75,181,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-05-30 00:33:50.468] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 00:34:28.221] GAME: TIDI: 0.5;0.254187;0.168035;0.159696
+[2024-05-30 00:35:06.572] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 00:35:28.283] GAME: TIDI: 0;0.177931;0.170014;0.160728
+[2024-05-30 00:36:28.378] GAME: TIDI: 0.166667;0.174551;0.170922;0.161747
+[2024-05-30 00:36:36.771] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 00:36:50.739] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 00:37:28.468] GAME: TIDI: 0.166667;0.172186;0.171175;0.16269
+[2024-05-30 00:38:28.563] GAME: TIDI: 0.166667;0.17053;0.171046;0.163526
+[2024-05-30 00:39:28.643] GAME: TIDI: 0.166667;0.169371;0.170711;0.164244
+[2024-05-30 00:40:28.728] GAME: TIDI: 0.166667;0.16856;0.170281;0.164848
+[2024-05-30 00:41:05.133] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 00:41:28.822] GAME: TIDI: 0.166667;0.167992;0.169823;0.165345
+[2024-05-30 00:41:57.177] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 00:42:17.224] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 00:42:28.920] GAME: TIDI: 0.166667;0.167594;0.169377;0.165748
+[2024-05-30 00:42:59.282] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 00:43:29.069] GAME: TIDI: 0.166667;0.167316;0.168965;0.16607
+[2024-05-30 00:44:29.167] GAME: TIDI: 0.166667;0.167121;0.168596;0.166323
+[2024-05-30 00:45:29.264] GAME: TIDI: 0.166667;0.166985;0.168274;0.166518
+[2024-05-30 00:46:27.598] GAME: TESLA(226,176,10) Shocked INVALID/(space jellyfish) for 15dmg.
+[2024-05-30 00:46:27.599] GAME: TESLA(227,173,10) Shocked INVALID/(Burning Mage) for 15dmg.
+[2024-05-30 00:46:27.600] GAME: TESLA(223,169,10) Shocked INVALID/(Teshari Mage) for 10dmg.
+[2024-05-30 00:46:27.600] GAME: TESLA(221,166,10) Shocked INVALID/(space jellyfish) for 5dmg.
+[2024-05-30 00:46:29.820] GAME: TIDI: 1;0.416889;0.217997;0.171666
+[2024-05-30 00:47:29.885] GAME: TIDI: 0;0.291823;0.232762;0.177775
+[2024-05-30 00:47:42.837] GAME: TESLA(192,201,9) Shocked INVALID/(giant spider) for 10dmg.
+[2024-05-30 00:48:08.907] GAME: TESLA(44,138,9) Shocked INVALID/(alien drone) for 23dmg.
+[2024-05-30 00:48:08.908] GAME: TESLA(46,137,9) Shocked INVALID/(alien praetorian) for 21dmg.
+[2024-05-30 00:48:08.908] GAME: TESLA(47,138,9) Shocked INVALID/(alien drone) for 13dmg.
+[2024-05-30 00:48:08.909] GAME: TESLA(46,137,9) Shocked INVALID/(alien praetorian) for 7dmg.
+[2024-05-30 00:48:08.909] GAME: TESLA(47,138,9) Shocked INVALID/(alien drone) for 6dmg.
+[2024-05-30 00:48:08.910] GAME: TESLA(46,137,9) Shocked INVALID/(alien praetorian) for 13dmg.
+[2024-05-30 00:48:30.072] GAME: TIDI: 0.333333;0.304276;0.247065;0.184704
+[2024-05-30 00:48:56.441] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 00:49:30.188] GAME: TIDI: 0.166667;0.262993;0.250251;0.191259
+[2024-05-30 00:49:36.559] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 00:50:30.295] GAME: TIDI: 0.166667;0.234095;0.247019;0.196835
+[2024-05-30 00:50:58.654] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 00:51:30.347] GAME: TIDI: 0.166667;0.213867;0.240389;0.20119
+[2024-05-30 00:52:30.492] GAME: TIDI: 0.166667;0.199707;0.232252;0.204297
+[2024-05-30 00:52:30.855] SAY: INVALID/(Medibot) (75,181,9): There's always a catch, and it's the best there is.
+[2024-05-30 00:53:02.853] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 00:53:30.579] GAME: TIDI: 0.166667;0.189795;0.223761;0.206243
+[2024-05-30 00:53:39.524] GAME: TESLA(136,115,10) Shocked INVALID/(crystal-feather duck) for 9dmg.
+[2024-05-30 00:54:30.730] GAME: TIDI: 0.333333;0.232856;0.22558;0.208177
+[2024-05-30 00:55:23.104] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 00:55:30.815] GAME: TIDI: 0.166667;0.212999;0.223064;0.209665
+[2024-05-30 00:56:27.261] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 00:56:30.950] GAME: TIDI: 0.166667;0.1991;0.218271;0.210526
+[2024-05-30 00:57:31.058] GAME: TIDI: 0.166667;0.18937;0.212491;0.210722
+[2024-05-30 00:57:31.373] SAY: INVALID/(Medibot) (75,181,9): I knew it, I should've been a plastic surgeon.
+[2024-05-30 00:58:31.164] GAME: TIDI: 0.166667;0.182559;0.206504;0.210301
+[2024-05-30 00:59:31.300] GAME: TIDI: 0.333333;0.227791;0.210762;0.210347
+[2024-05-30 01:00:31.389] GAME: TIDI: 0;0.159454;0.2005;0.209362
+[2024-05-30 01:00:55.861] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 01:01:31.595] GAME: TIDI: 0.333333;0.211618;0.202724;0.208698
+[2024-05-30 01:02:31.699] GAME: TIDI: 0.166667;0.198132;0.201805;0.208009
+[2024-05-30 01:03:10.053] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 01:03:31.757] GAME: TIDI: 0.166667;0.188693;0.199183;0.207126
+[2024-05-30 01:04:28.167] SAY: INVALID/(Medibot) (75,181,9): Delicious!
+[2024-05-30 01:04:30.160] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 01:04:31.850] GAME: TIDI: 0.166667;0.182085;0.195763;0.20599
+[2024-05-30 01:05:30.957] GAME: TESLA(87,121,9) Shocked INVALID/(glitterfly) for 15dmg.
+[2024-05-30 01:05:31.930] GAME: TIDI: 0.166667;0.177459;0.192102;0.204601
+[2024-05-30 01:05:56.279] SAY: INVALID/(Medibot) (75,181,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-05-30 01:06:28.315] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 01:06:32.000] GAME: TIDI: 0.166667;0.174222;0.188526;0.202994
+[2024-05-30 01:06:40.316] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 01:07:32.090] GAME: TIDI: 0;0.121955;0.175212;0.200216
+[2024-05-30 01:08:32.186] GAME: TIDI: 0.166667;0.135369;0.167243;0.196918
+[2024-05-30 01:09:32.280] GAME: TIDI: 0.166667;0.144758;0.162746;0.193501
+[2024-05-30 01:09:58.629] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 01:10:32.357] GAME: TIDI: 0.166667;0.151331;0.160463;0.190197
+[2024-05-30 01:11:32.421] GAME: TIDI: 0.166667;0.155931;0.159557;0.187133
+[2024-05-30 01:11:32.753] SAY: INVALID/(Medibot) (75,181,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-05-30 01:12:32.507] GAME: TIDI: 0.166667;0.159152;0.159476;0.184368
+[2024-05-30 01:12:50.848] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 01:13:32.633] GAME: TIDI: 0.166667;0.161406;0.159862;0.181917
+[2024-05-30 01:14:25.016] SAY: INVALID/(Medibot) (75,181,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-05-30 01:14:32.726] GAME: TIDI: 0.166667;0.162984;0.160486;0.179774
+[2024-05-30 01:15:32.800] GAME: TIDI: 0.166667;0.164089;0.161207;0.177917
+[2024-05-30 01:16:32.881] GAME: TIDI: 0;0.114862;0.151938;0.175319
+[2024-05-30 01:17:25.281] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 01:17:32.963] GAME: TIDI: 0.166667;0.130404;0.147631;0.17255
+[2024-05-30 01:17:45.306] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 01:18:33.070] GAME: TIDI: 0.166667;0.141283;0.146361;0.169932
+[2024-05-30 01:19:01.453] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 01:19:33.106] GAME: TIDI: 0.166667;0.148898;0.146869;0.167625
+[2024-05-30 01:20:33.217] GAME: TIDI: 0.166667;0.154228;0.148341;0.165697
+[2024-05-30 01:21:33.296] GAME: TIDI: 0;0.10796;0.140265;0.163154
+[2024-05-30 01:21:33.626] SAY: INVALID/(Medibot) (75,181,9): Radar, put a mask on!
+[2024-05-30 01:22:05.731] SAY: INVALID/(Medibot) (75,181,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-05-30 01:22:05.732] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 01:22:33.403] GAME: TIDI: 0.333333;0.175572;0.147326;0.161571
+[2024-05-30 01:23:09.784] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 01:23:29.801] SAY: INVALID/(Medibot) (75,181,9): I knew it, I should've been a plastic surgeon.
+[2024-05-30 01:23:33.480] GAME: TIDI: 0;0.1229;0.142441;0.159658
+[2024-05-30 01:23:55.839] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 01:24:33.562] GAME: TIDI: 0.166667;0.13603;0.141159;0.157808
+[2024-05-30 01:24:47.904] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 01:25:03.930] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 01:25:33.656] GAME: TIDI: 0.166667;0.145221;0.141971;0.156224
+[2024-05-30 01:25:47.981] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 01:26:00.051] SAY: INVALID/(Medibot) (75,181,9): I knew it, I should've been a plastic surgeon.
+[2024-05-30 01:26:33.960] GAME: TIDI: 0.5;0.251655;0.163908;0.156993
+[2024-05-30 01:27:34.025] GAME: TIDI: 0.166667;0.226158;0.176358;0.158929
+[2024-05-30 01:27:34.369] SAY: INVALID/(Medibot) (75,181,9): Radar, put a mask on!
+[2024-05-30 01:27:39.278] GAME: TESLA(96,159,9) Shocked INVALID/(glitterfly) for 30dmg.
+[2024-05-30 01:28:34.221] GAME: TIDI: 0.333333;0.258311;0.192749;0.162311
+[2024-05-30 01:28:36.534] SAY: INVALID/(Medibot) (75,181,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-05-30 01:29:34.441] GAME: TIDI: 0.333333;0.280818;0.210362;0.167116
+[2024-05-30 01:29:50.868] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 01:30:34.658] GAME: TIDI: 0.333333;0.296572;0.227604;0.173165
+[2024-05-30 01:31:25.027] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 01:31:34.712] GAME: TIDI: 0.166667;0.257601;0.233604;0.179209
+[2024-05-30 01:31:51.093] SAY: INVALID/(Medibot) (75,181,9): I knew it, I should've been a plastic surgeon.
+[2024-05-30 01:32:34.809] GAME: TIDI: 0.166667;0.23032;0.232947;0.184583
+[2024-05-30 01:32:51.153] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 01:33:13.214] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 01:33:34.919] GAME: TIDI: 0.166667;0.211224;0.228602;0.188985
+[2024-05-30 01:33:59.332] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 01:34:09.338] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 01:34:33.348] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 01:34:35.030] GAME: TIDI: 0.166667;0.197857;0.222453;0.192332
+[2024-05-30 01:34:53.406] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 01:35:27.408] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 01:35:35.091] GAME: TIDI: 0;0.1385;0.205663;0.193665
+[2024-05-30 01:35:35.487] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 01:36:35.181] GAME: TIDI: 0.166667;0.14695;0.19392;0.19369
+[2024-05-30 01:36:57.622] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 01:37:35.367] GAME: TIDI: 0.333333;0.202865;0.195709;0.193892
+[2024-05-30 01:38:35.445] GAME: TIDI: 0.166667;0.192005;0.194968;0.194
+[2024-05-30 01:39:35.513] GAME: TIDI: 0.166667;0.184404;0.192856;0.193885
+[2024-05-30 01:39:37.842] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 01:40:35.600] GAME: TIDI: 0.166667;0.179083;0.190101;0.193507
+[2024-05-30 01:40:41.942] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 01:40:53.939] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 01:41:01.957] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 01:41:35.678] GAME: TIDI: 0;0.125358;0.177152;0.191871
+[2024-05-30 01:42:32.095] SAY: INVALID/(Medibot) (75,181,9): I knew it, I should've been a plastic surgeon.
+[2024-05-30 01:42:35.781] GAME: TIDI: 0.166667;0.137751;0.169272;0.189611
+[2024-05-30 01:42:38.094] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 01:43:36.011] GAME: TIDI: 0.5;0.246425;0.184703;0.189121
+[2024-05-30 01:43:38.340] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 01:43:58.417] SAY: INVALID/(Medibot) (75,181,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-05-30 01:44:18.385] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 01:44:36.088] GAME: TIDI: 0;0.172498;0.182262;0.188435
+[2024-05-30 01:45:12.488] SAY: INVALID/(Medibot) (75,181,9): I knew it, I should've been a plastic surgeon.
+[2024-05-30 01:45:36.203] GAME: TIDI: 0.333333;0.220748;0.189959;0.188587
+[2024-05-30 01:45:40.521] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 01:46:36.294] GAME: TIDI: 0;0.154524;0.182872;0.188016
+[2024-05-30 01:47:36.495] GAME: TIDI: 0.333333;0.208167;0.187931;0.188007
+[2024-05-30 01:48:36.597] GAME: TIDI: 0.166667;0.195717;0.189488;0.188155
+[2024-05-30 01:49:36.677] GAME: TIDI: 0.166667;0.187002;0.188991;0.188239
+[2024-05-30 01:50:36.803] GAME: TIDI: 0.333333;0.230901;0.197373;0.189152
+[2024-05-30 01:51:05.167] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 01:51:36.871] GAME: TIDI: 0;0.161631;0.190224;0.189259
+[2024-05-30 01:52:36.976] GAME: TIDI: 0.166667;0.163142;0.184808;0.188814
+[2024-05-30 01:53:37.062] GAME: TIDI: 0.166667;0.164199;0.180686;0.188001
+[2024-05-30 01:54:11.426] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 01:54:37.151] GAME: TIDI: 0.166667;0.164939;0.177537;0.186955
+[2024-05-30 01:55:37.242] GAME: TIDI: 0.166667;0.165458;0.175121;0.185772
+[2024-05-30 01:56:29.637] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 01:56:37.322] GAME: TIDI: 0.166667;0.16582;0.173261;0.18452
+[2024-05-30 01:56:51.658] SAY: INVALID/(Medibot) (75,181,9): Radar, put a mask on!
+[2024-05-30 01:57:17.753] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 01:57:29.730] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 01:57:37.416] GAME: TIDI: 0.166667;0.166074;0.171824;0.183251
+[2024-05-30 01:57:39.727] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 01:57:41.729] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 01:58:19.782] SAY: INVALID/(Medibot) (75,181,9): I knew it, I should've been a plastic surgeon.
+[2024-05-30 01:58:23.779] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 01:58:37.490] GAME: TIDI: 0;0.116252;0.160709;0.180997
+[2024-05-30 01:59:13.857] SAY: INVALID/(Medibot) (75,181,9): Radar, put a mask on!
+[2024-05-30 01:59:37.562] GAME: TIDI: 0.166667;0.131376;0.154843;0.178381
+[2024-05-30 02:00:37.654] GAME: TIDI: 0.166667;0.141963;0.152267;0.17577
+[2024-05-30 02:01:04.008] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 02:01:22.030] SAY: INVALID/(Medibot) (75,181,9): There's always a catch, and it's the best there is.
+[2024-05-30 02:01:37.736] GAME: TIDI: 0.166667;0.149374;0.151688;0.173362
+[2024-05-30 02:02:37.840] GAME: TIDI: 0.166667;0.154562;0.152263;0.171252
+[2024-05-30 02:03:16.253] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 02:03:37.961] GAME: TIDI: 0.166667;0.158193;0.153449;0.169472
+[2024-05-30 02:04:38.043] GAME: TIDI: 0.166667;0.160735;0.154906;0.168015
+[2024-05-30 02:04:54.378] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 02:05:38.130] GAME: TIDI: 0.166667;0.162515;0.156428;0.166856
+[2024-05-30 02:06:38.220] GAME: TIDI: 0.166667;0.16376;0.157895;0.16596
+[2024-05-30 02:07:30.598] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 02:07:38.287] GAME: TIDI: 0;0.114632;0.149242;0.164288
+[2024-05-30 02:08:04.649] SAY: INVALID/(Medibot) (75,181,9): I knew it, I should've been a plastic surgeon.
+[2024-05-30 02:08:38.368] GAME: TIDI: 0.166667;0.130243;0.145442;0.162404
+[2024-05-30 02:09:38.445] GAME: TIDI: 0.166667;0.14117;0.144588;0.160622
+[2024-05-30 02:10:38.518] GAME: TIDI: 0.166667;0.148819;0.145434;0.159103
+[2024-05-30 02:11:38.585] GAME: TIDI: 0;0.104173;0.137182;0.156911
+[2024-05-30 02:12:38.746] GAME: TIDI: 0.333333;0.172921;0.14433;0.155653
+[2024-05-30 02:13:25.156] SAY: INVALID/(Medibot) (75,181,9): I knew it, I should've been a plastic surgeon.
+[2024-05-30 02:13:38.862] GAME: TIDI: 0.166667;0.171045;0.149673;0.155055
+[2024-05-30 02:14:46.030] GAME: TIDI: 12;3.71973;0.863684;0.225918
+[2024-05-30 02:15:46.386] GAME: TIDI: 0.5;2.75381;1.24171;0.327497
+[2024-05-30 02:16:46.466] GAME: TIDI: 0.166667;1.97767;1.3889;0.433638
+[2024-05-30 02:17:46.559] GAME: TIDI: 0.166667;1.43437;1.39799;0.530073
+[2024-05-30 02:18:28.931] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 02:18:46.699] GAME: TIDI: 0.166667;1.05406;1.32921;0.609987
+[2024-05-30 02:19:47.072] GAME: TIDI: 0.666667;0.93784;1.25093;0.674081
+[2024-05-30 02:20:47.864] GAME: TIDI: 1.33333;1.05649;1.21204;0.727878
+[2024-05-30 02:21:41.997] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 02:21:51.901] GAME: TIDI: 6.83333;2.78954;1.52754;0.807844
+[2024-05-30 02:22:02.237] SAY: INVALID/(Medibot) (75,181,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-05-30 02:22:52.058] GAME: TIDI: 0.166667;2.00268;1.62257;0.889317
+[2024-05-30 02:23:09.559] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 02:23:17.708] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 02:23:43.887] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 02:23:53.575] GAME: TIDI: 2.5;2.15188;1.72843;0.973229
+[2024-05-30 02:24:53.660] GAME: TIDI: 0.166667;1.55631;1.69401;1.04531
+[2024-05-30 02:25:06.026] SAY: INVALID/(Medibot) (75,181,9): Delicious!
+[2024-05-30 02:25:54.532] GAME: TIDI: 1.5;1.53942;1.66309;1.10708
+[2024-05-30 02:26:24.890] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 02:26:54.765] GAME: TIDI: 0.333333;1.17759;1.56599;1.15298
+[2024-05-30 02:27:39.136] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 02:27:54.821] GAME: TIDI: 0.166667;0.874315;1.42766;1.18044
+[2024-05-30 02:28:55.046] GAME: TIDI: 0.333333;0.712021;1.28453;1.19085
+[2024-05-30 02:29:31.498] SAY: INVALID/(Medibot) (75,181,9): Delicious!
+[2024-05-30 02:29:49.568] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 02:29:51.567] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 02:29:55.249] GAME: TIDI: 0.333333;0.598414;1.14731;1.1865
+[2024-05-30 02:30:07.687] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 02:30:15.944] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 02:30:16.696] GAME: Autotransfer has called the shuttle.
+[2024-05-30 02:30:55.810] GAME: TIDI: 1;0.71889;1.06162;1.17401
+[2024-05-30 02:31:12.144] SAY: INVALID/(Medibot) (75,181,9): There's always a catch, and it's the best there is.
+[2024-05-30 02:31:55.869] GAME: TIDI: 0;0.503223;0.949943;1.1516
+[2024-05-30 02:32:54.256] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 02:32:55.940] GAME: TIDI: 0.166667;0.402256;0.840406;1.12048
+[2024-05-30 02:33:28.375] SAY: INVALID/(Medibot) (75,181,9): Delicious!
+[2024-05-30 02:33:44.435] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 02:33:56.111] GAME: TIDI: 0.333333;0.381579;0.74864;1.0833
+[2024-05-30 02:34:28.514] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 02:34:56.209] GAME: TIDI: 0.166667;0.317106;0.662333;1.0412
+[2024-05-30 02:35:04.570] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 02:35:48.986] SAY: INVALID/(Medibot) (75,181,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-05-30 02:35:53.032] SAY: INVALID/(Medibot) (75,181,9): Delicious!
+[2024-05-30 02:35:58.674] GAME: TIDI: 4;1.42197;0.814262;1.01851
+[2024-05-30 02:36:07.003] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 02:36:58.863] GAME: TIDI: 0.333333;1.09538;0.870486;1.00371
+[2024-05-30 02:37:58.925] GAME: TIDI: 0.166667;0.816767;0.859742;0.98931
+[2024-05-30 02:38:07.263] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 02:38:51.285] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 02:38:58.987] GAME: TIDI: 0;0.571737;0.802141;0.970593
+[2024-05-30 02:39:59.148] GAME: TIDI: 0.333333;0.500216;0.741756;0.947709
+[2024-05-30 02:40:03.494] SAY: INVALID/(Medibot) (75,181,9): I knew it, I should've been a plastic surgeon.
+[2024-05-30 02:41:00.299] GAME: TIDI: 1.83333;0.900151;0.773435;0.930282
+[2024-05-30 02:41:18.711] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 02:42:00.462] GAME: TIDI: 0.333333;0.730106;0.764769;0.91373
+[2024-05-30 02:42:34.893] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 02:42:46.918] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 02:43:00.580] GAME: TIDI: 0.166667;0.561074;0.72403;0.89476
+[2024-05-30 02:43:08.927] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 02:43:24.977] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 02:44:01.045] GAME: TIDI: 0.833333;0.642752;0.707775;0.876062
+[2024-05-30 02:44:01.445] SAY: INVALID/(Medibot) (75,181,9): Radar, put a mask on!
+[2024-05-30 02:44:53.471] SAY: INVALID/(Medibot) (75,181,9): Radar, put a mask on!
+[2024-05-30 02:45:01.156] GAME: TIDI: 0.166667;0.499926;0.666205;0.855076
+[2024-05-30 02:45:17.511] EMOTE: INVALID/(Cleanbot) (60,194,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 02:45:21.558] SAY: INVALID/(Medibot) (75,181,9): I knew it, I should've been a plastic surgeon.
+[2024-05-30 02:46:01.578] GAME: TIDI: 0.666667;0.549948;0.642954;0.833864
+[2024-05-30 02:46:01.904] GAME: Antagonists at round end were...
+[2024-05-30 02:47:02.246] GAME: TIDI: 1.16667;0.734964;0.661356;0.816613
+[2024-05-30 02:48:02.298] GAME: TIDI: 0;0.514475;0.63198;0.79815
+[2024-05-30 02:49:02.369] GAME: TIDI: 0.166667;0.410132;0.58761;0.777096
+[2024-05-30 02:50:02.530] GAME: TIDI: 0.333333;0.387093;0.547507;0.754137

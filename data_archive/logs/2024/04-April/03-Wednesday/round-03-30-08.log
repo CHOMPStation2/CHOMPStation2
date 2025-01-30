@@ -1,0 +1,1059 @@
+[2024-04-03 07:29:49.010] START: Starting up data/logs/2024/04-April/03-Wednesday/round-03-30-08.
+[2024-04-03 07:29:50.612] ADMIN: Loading jobban_rank
+[2024-04-03 07:29:50.613] ADMIN: jobban_keylist was empty
+[2024-04-03 07:29:50.625] ADMIN: Loading Banlist
+[2024-04-03 07:30:02.284] GAME: Crashed Cargo Shuttle loaded at at 183,18,5
+[2024-04-03 07:30:02.725] GAME: Crashed Med Shuttle loaded at at 27,14,5
+[2024-04-03 07:30:02.770] GAME: Dark Ritual loaded at at 79,59,5
+[2024-04-03 07:30:02.992] GAME: Abandoned Relay loaded at at 46,101,5
+[2024-04-03 07:30:03.905] GAME: Crashed UFO Frigate loaded at at 61,14,5
+[2024-04-03 07:30:03.995] GAME: Lost Explorer loaded at at 221,52,5
+[2024-04-03 07:30:04.205] GAME: spatial anomaly loaded at at 32,192,5
+[2024-04-03 07:30:04.238] GAME: Snow loaded at at 205,17,4
+[2024-04-03 07:30:04.321] GAME: Ruptured Canister loaded at at 23,65,4
+[2024-04-03 07:30:04.474] GAME: Thieves' Cave loaded at at 86,105,4
+[2024-04-03 07:30:04.632] GAME: Mechpit loaded at at 62,85,4
+[2024-04-03 07:30:04.829] GAME: Old Hotel loaded at at 21,37,4
+[2024-04-03 07:30:04.853] GAME: Wrecked Shelter loaded at at 200,28,4
+[2024-04-03 07:30:04.917] GAME: Snow 3 loaded at at 30,218,4
+[2024-04-03 07:30:04.946] GAME: Merchant Stand loaded at at 86,72,4
+[2024-04-03 07:30:05.135] GAME: Hot Spring loaded at at 137,46,4
+[2024-04-03 07:30:05.175] GAME: Emergency Pod 2 loaded at at 190,115,4
+[2024-04-03 07:30:05.228] GAME: Snow 5 loaded at at 179,40,4
+[2024-04-03 07:30:05.304] GAME: Construction Site loaded at at 56,158,4
+[2024-04-03 07:30:05.327] GAME: Old Supply Drop loaded at at 16,11,4
+[2024-04-03 07:30:05.357] GAME: Lone Kururak Den loaded at at 180,84,4
+[2024-04-03 07:30:05.366] GAME: Buried Treasure loaded at at 189,65,4
+[2024-04-03 07:30:05.463] GAME: VR Den loaded at at 50,59,4
+[2024-04-03 07:30:05.488] GAME: Snow 2 loaded at at 50,190,4
+[2024-04-03 07:30:05.514] GAME: Rocky Outcrop loaded at at 8,179,4
+[2024-04-03 07:30:05.546] GAME: Camp Site loaded at at 58,148,4
+[2024-04-03 07:30:05.560] GAME: Irradiated Manhole Cover loaded at at 196,54,4
+[2024-04-03 07:30:05.979] GAME: Old Library loaded at at 16,159,4
+[2024-04-03 07:30:06.007] GAME: Emergency Pod loaded at at 203,65,4
+[2024-04-03 07:30:06.030] GAME: Snow 4 loaded at at 51,217,4
+[2024-04-03 07:30:06.206] GAME: Frost Oasis loaded at at 149,34,9
+[2024-04-03 07:30:06.256] GAME: Rocky 3 loaded at at 30,72,9
+[2024-04-03 07:30:06.278] GAME: Kururak Den loaded at at 138,32,9
+[2024-04-03 07:30:06.443] GAME: Drug Den loaded at at 189,54,9
+[2024-04-03 07:30:06.628] GAME: Forest Lake loaded at at 66,33,9
+[2024-04-03 07:30:06.691] GAME: Government Patrol loaded at at 54,14,9
+[2024-04-03 07:30:06.785] GAME: Snowrock 1 loaded at at 23,21,9
+[2024-04-03 07:30:07.298] GAME: Demon Pool loaded at at 93,81,9
+[2024-04-03 07:30:07.394] GAME: Spider Nest 1 loaded at at 110,46,9
+[2024-04-03 07:30:07.489] GAME: Rocky 4 loaded at at 66,87,9
+[2024-04-03 07:30:07.664] GAME: Rocky 2 loaded at at 137,62,9
+[2024-04-03 07:30:07.744] GAME: Shack 1 loaded at at 186,27,9
+[2024-04-03 07:30:08.167] GAME: Chasm loaded at at 35,46,9
+[2024-04-03 07:30:08.375] GAME: Military Camp 1 loaded at at 169,47,9
+[2024-04-03 07:30:08.396] GAME: Spider Nest 1 loaded at at 149,19,9
+[2024-04-03 07:30:08.522] GAME: Rocky 2 loaded at at 79,53,9
+[2024-04-03 07:30:08.565] GAME: Smol 1 loaded at at 17,86,9
+[2024-04-03 07:30:08.571] GAME: Musk loaded at at 162,58,9
+[2024-04-03 07:30:08.665] GAME: Shelter 1 loaded at at 127,13,9
+[2024-04-03 07:30:09.198] GAME: Emergency Pod 4 loaded at at 123,45,9
+[2024-04-03 07:30:09.984] GAME: Mudpit loaded at at 172,78,9
+[2024-04-03 07:30:10.003] GAME: Spider Nest 1 loaded at at 147,88,9
+[2024-04-03 07:30:10.460] GAME: Rocky 1 loaded at at 71,9,9
+[2024-04-03 07:30:10.646] GAME: Lab 1 loaded at at 30,89,9
+[2024-04-03 07:30:11.242] GAME: Wolf Den loaded at at 13,104,9
+[2024-04-03 07:30:11.862] GAME: Frostfly Nest loaded at at 182,37,9
+[2024-04-03 07:30:13.154] GAME: Empty Cabin loaded at at 52,31,9
+[2024-04-03 07:30:14.456] GAME: Butcher Shack loaded at at 12,74,9
+[2024-04-03 07:30:14.515] GAME: Spider Nest 1 loaded at at 113,33,9
+[2024-04-03 07:30:15.100] GAME: Spider Nest 1 loaded at at 14,52,9
+[2024-04-03 07:30:15.305] GAME: Otie Shelter loaded at at 20,220,9
+[2024-04-03 07:30:15.990] GAME: Cliff lake Base loaded at at 119,198,9
+[2024-04-03 07:30:16.314] GAME: CaveS loaded at at 194,172,9
+[2024-04-03 07:30:16.604] GAME: Nanite Lab loaded at at 74,198,9
+[2024-04-03 07:30:16.737] GAME: Death Spice Den loaded at at 70,226,9
+[2024-04-03 07:30:16.968] GAME: Spider Base loaded at at 192,118,9
+[2024-04-03 07:30:17.286] GAME: Black Shuttle Down loaded at at 18,127,9
+[2024-04-03 07:30:17.995] GAME: Cliff Base loaded at at 113,141,9
+[2024-04-03 07:30:18.163] GAME: Bounty Hunter Den loaded at at 83,149,9
+[2024-04-03 07:30:18.270] GAME: DJOutpost 4 loaded at at 63,123,9
+[2024-04-03 07:30:18.609] GAME: Chapel 1 loaded at at 44,170,9
+[2024-04-03 07:30:18.892] GAME: Dragon Den loaded at at 208,208,10
+[2024-04-03 07:30:19.121] GAME: Maze loaded at at 81,32,10
+[2024-04-03 07:30:19.436] GAME: Pirate Cove loaded at at 194,16,10
+[2024-04-03 07:30:19.625] GAME: Frost Lake loaded at at 123,222,10
+[2024-04-03 07:30:19.967] GAME: Aquatic Xenos loaded at at 122,10,10
+[2024-04-03 07:30:20.114] GAME: Solar Pond loaded at at 23,226,10
+[2024-04-03 07:30:20.307] GAME: Phoron Den loaded at at 88,217,10
+[2024-04-03 07:30:20.872] GAME: Maus HQ loaded at at 164,217,10
+[2024-04-03 07:30:20.936] GAME: Teppi Farm loaded at at 12,176,10
+[2024-04-03 07:30:21.451] GAME: Demon Ranch loaded at at 75,67,10
+[2024-04-03 07:30:21.810] GAME: Red Shuttle Down loaded at at 151,75,10
+[2024-04-03 07:30:22.002] GAME: Eclipse Xenobio Lab loaded at at 124,78,10
+[2024-04-03 07:30:22.797] GAME: Eclipse Base Aqua loaded at at 185,146,10
+[2024-04-03 07:30:22.980] GAME: Terraformer loaded at at 228,69,10
+[2024-04-03 07:30:23.311] GAME: Assualt Base loaded at at 126,162,10
+[2024-04-03 07:30:23.390] GAME: Raided Pod loaded at at 70,174,10
+[2024-04-03 07:30:24.775] GAME: Unfinished Outpost loaded at at 8,106,10
+[2024-04-03 07:30:32.357] ACCESS IN: RiotScopez/(RiotScopez) - IP:146.115.147.185 - CID:1871707424 - BYOND v515
+[2024-04-03 07:30:35.705] ASSET: Sending asset `tgui-panel.bundle.js` to client `RiotScopez` as `asset.b4751a5ea151bc8ec68c1925b7d0bdd7.js`
+[2024-04-03 07:30:35.708] ASSET: Sending asset `tgui-panel.bundle.css` to client `RiotScopez` as `asset.7efb53cd7dda00777acb7748b31d4a8a.css`
+[2024-04-03 07:30:36.156] ASSET: Sending asset `fa-regular-400.ttf` to client `RiotScopez` as `fa-regular-400.ttf`
+[2024-04-03 07:30:36.156] ASSET: Sending asset `fa-solid-900.ttf` to client `RiotScopez` as `fa-solid-900.ttf`
+[2024-04-03 07:30:36.156] ASSET: Sending asset `fa-v4compatibility.ttf` to client `RiotScopez` as `fa-v4compatibility.ttf`
+[2024-04-03 07:30:36.156] ASSET: Sending asset `v4shim.css` to client `RiotScopez` as `v4shim.css`
+[2024-04-03 07:30:36.156] ASSET: Sending asset `font-awesome.css` to client `RiotScopez` as `asset.fedd834d1c20ed484599a1c38690e330.css`
+[2024-04-03 07:30:36.292] ASSET: Sending asset `tgfont.eot` to client `RiotScopez` as `tgfont.eot`
+[2024-04-03 07:30:36.294] ASSET: Sending asset `tgfont.woff2` to client `RiotScopez` as `tgfont.woff2`
+[2024-04-03 07:30:36.296] ASSET: Sending asset `tgfont.css` to client `RiotScopez` as `asset.9c0bbe21e37e76955d9640f7a6c4b636.css`
+[2024-04-03 07:30:36.415] ASSET: Sending asset `spritesheet_chat.css` to client `RiotScopez` as `asset.e73ec83954ac74e58beadd50f5a3c63b.css`
+[2024-04-03 07:30:36.415] ASSET: Sending asset `chat_32x10.png` to client `RiotScopez` as `asset.2880748b8d8cbf35ee9e8cb72fdacada.png`
+[2024-04-03 07:31:23.805] GAME: Z-level VR World loaded at at 1,1,11
+[2024-04-03 07:31:24.388] GAME: Z-level Fuel Depot - Z1 Space loaded at at 1,1,12
+[2024-04-03 07:31:36.882] GAME: Z-level Thor Surface loaded at at 1,1,13
+[2024-04-03 07:31:45.863] GAME: Z-level Abandoned City loaded at at 1,1,14
+[2024-04-03 07:32:22.984] MISC: a the gibber didn't find an input plate.
+[2024-04-03 07:32:26.486] MISC: a the gibber didn't find an input plate.
+[2024-04-03 07:36:42.294] ADMIN: RiotScopez/(RiotScopez) delayed the game.
+[2024-04-03 07:36:48.858] ADMIN: RiotScopez/(RiotScopez) has started the game.
+[2024-04-03 07:36:49.210] ACCESS OUT: INVALID/(RiotScopez) - IP:146.115.147.185 - CID:Logged Out - BYOND Logged Out
+[2024-04-03 07:36:49.210] ACCESS IN: RiotScopez/(Cyborg) - IP:146.115.147.185 - CID:1871707424 - BYOND v515
+[2024-04-03 07:36:52.647] ASSET: Sending asset `jquery.min.js` to client `RiotScopez` as `jquery.min.js`
+[2024-04-03 07:36:52.729] GAME: JOINED RiotScopez/(Cyborg) as "Cyborg"
+[2024-04-03 07:36:52.729] GAME: SPECIES RiotScopez/(Cyborg) is a: "Human"
+[2024-04-03 07:36:52.942] ACCESS OUT: INVALID/(Cyborg) - IP:146.115.147.185 - CID:Logged Out - BYOND Logged Out
+[2024-04-03 07:36:52.943] ACCESS IN: RiotScopez/(Default Cyborg-166) - IP:146.115.147.185 - CID:1871707424 - BYOND v515
+[2024-04-03 07:37:52.862] GAME: TIDI: 19.1667;5.75;1.15;0.115
+[2024-04-03 07:38:53.054] GAME: TIDI: 0.333333;4.125;1.745;0.278
+[2024-04-03 07:38:54.964] ADMIN: RiotScopez/(Combat Drone-166) RiotScopez/(Combat Drone-166) has used MODIFYROBOT (Swap a Robot Module) on RiotScopez/(Combat Drone-166).
+[2024-04-03 07:39:41.352] ADMIN: RiotScopez/(Combat Drone-166) RiotScopez/(Combat Drone-166) has used MODIFYROBOT (Swap a Robot Module) on RiotScopez/(Combat Drone-166).
+[2024-04-03 07:39:53.199] GAME: TIDI: 0.166667;2.9375;1.9835;0.44855
+[2024-04-03 07:40:16.397] ATTACK: RiotScopez/(Combat Drone-166) against AUTOMATED/steel wall: Fired gun 'suppression gun' (MANUAL)
+[2024-04-03 07:40:17.698] ATTACK: RiotScopez/(Combat Drone-166) against AUTOMATED/floor: Fired gun 'suppression gun' (MANUAL)
+[2024-04-03 07:40:20.029] ATTACK: RiotScopez/(Combat Drone-166) against AUTOMATED/floor: Fired gun 'suppression gun' (MANUAL)
+[2024-04-03 07:40:24.043] ATTACK: RiotScopez/(Combat Drone-166) against AUTOMATED/floor: Fired gun 'suppression gun' (MANUAL)
+[2024-04-03 07:40:27.865] ATTACK: RiotScopez/(Combat Drone-166) against AUTOMATED/floor: Fired gun 'suppression gun' (MANUAL)
+[2024-04-03 07:40:29.717] ATTACK: RiotScopez/(Combat Drone-166) against AUTOMATED/floor: Fired gun 'suppression gun' (MANUAL)
+[2024-04-03 07:40:31.621] ATTACK: RiotScopez/(Combat Drone-166) against AUTOMATED/floor: Fired gun 'suppression gun' (MANUAL)
+[2024-04-03 07:40:35.199] ATTACK: RiotScopez/(Combat Drone-166) against AUTOMATED/floor: Fired gun 'suppression gun' (MANUAL)
+[2024-04-03 07:40:37.376] ATTACK: RiotScopez/(Combat Drone-166) against AUTOMATED/floor: Fired gun 'suppression gun' (MANUAL)
+[2024-04-03 07:40:39.294] ATTACK: RiotScopez/(Combat Drone-166) against AUTOMATED/floor: Fired gun 'suppression gun' (MANUAL)
+[2024-04-03 07:40:53.263] GAME: TIDI: 0.166667;2.10625;2.00805;0.6045
+[2024-04-03 07:40:58.006] ATTACK: RiotScopez/(Combat Drone-166) against AUTOMATED/floor: Fired gun 'suppression gun' (MANUAL)
+[2024-04-03 07:40:59.482] ATTACK: RiotScopez/(Combat Drone-166) against AUTOMATED/floor: Fired gun 'suppression gun' (MANUAL)
+[2024-04-03 07:41:01.178] ATTACK: RiotScopez/(Combat Drone-166) against AUTOMATED/security camera: Fired gun 'suppression gun' (MANUAL)
+[2024-04-03 07:41:10.443] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 07:41:20.188] ADMIN: RiotScopez/(Combat Drone-166) spawned /mob/living/carbon/human at (130,133,3)
+[2024-04-03 07:41:23.126] ATTACK: RiotScopez/(Combat Drone-166) against INVALID/(Boiko Chakraborty): Fired gun 'suppression gun' (MANUAL)
+[2024-04-03 07:41:23.411] ATTACK: RiotScopez/(Combat Drone-166) against INVALID/(Boiko Chakraborty): Shot with /obj/item/projectile/energy/blue_pellet projectile
+[2024-04-03 07:41:23.535] ATTACK: RiotScopez/(Combat Drone-166) against INVALID/(Boiko Chakraborty): Shot with /obj/item/projectile/energy/blue_pellet projectile
+[2024-04-03 07:41:23.634] ATTACK: RiotScopez/(Combat Drone-166) against INVALID/(Boiko Chakraborty): Shot with /obj/item/projectile/energy/blue_pellet projectile
+[2024-04-03 07:41:23.741] ATTACK: RiotScopez/(Combat Drone-166) against INVALID/(Boiko Chakraborty): Shot with /obj/item/projectile/energy/blue_pellet projectile
+[2024-04-03 07:41:23.794] ATTACK: RiotScopez/(Combat Drone-166) against INVALID/(Boiko Chakraborty): Shot with /obj/item/projectile/energy/blue_pellet projectile
+[2024-04-03 07:41:23.893] ATTACK: RiotScopez/(Combat Drone-166) against INVALID/(Boiko Chakraborty): Shot with /obj/item/projectile/energy/blue_pellet projectile
+[2024-04-03 07:41:23.993] ATTACK: RiotScopez/(Combat Drone-166) against INVALID/(Boiko Chakraborty): Shot with /obj/item/projectile/energy/blue_pellet projectile
+[2024-04-03 07:41:24.272] ATTACK: RiotScopez/(Combat Drone-166) against INVALID/(Boiko Chakraborty): Shot with /obj/item/projectile/energy/blue_pellet projectile
+[2024-04-03 07:41:24.380] ATTACK: RiotScopez/(Combat Drone-166) against INVALID/(Boiko Chakraborty): Shot with /obj/item/projectile/energy/blue_pellet projectile
+[2024-04-03 07:41:24.430] ATTACK: RiotScopez/(Combat Drone-166) against INVALID/(Boiko Chakraborty): Shot with /obj/item/projectile/energy/blue_pellet projectile
+[2024-04-03 07:41:25.419] ATTACK: RiotScopez/(Combat Drone-166) against INVALID/(Boiko Chakraborty): Fired gun 'suppression gun' (MANUAL)
+[2024-04-03 07:41:25.683] ATTACK: RiotScopez/(Combat Drone-166) against INVALID/(Boiko Chakraborty): Shot with /obj/item/projectile/energy/blue_pellet projectile
+[2024-04-03 07:41:25.784] ATTACK: RiotScopez/(Combat Drone-166) against INVALID/(Boiko Chakraborty): Shot with /obj/item/projectile/energy/blue_pellet projectile
+[2024-04-03 07:41:25.884] ATTACK: RiotScopez/(Combat Drone-166) against INVALID/(Boiko Chakraborty): Shot with /obj/item/projectile/energy/blue_pellet projectile
+[2024-04-03 07:41:25.983] ATTACK: RiotScopez/(Combat Drone-166) against INVALID/(Boiko Chakraborty): Shot with /obj/item/projectile/energy/blue_pellet projectile
+[2024-04-03 07:41:26.087] ATTACK: RiotScopez/(Combat Drone-166) against INVALID/(Boiko Chakraborty): Shot with /obj/item/projectile/energy/blue_pellet projectile
+[2024-04-03 07:41:26.208] ATTACK: RiotScopez/(Combat Drone-166) against INVALID/(Boiko Chakraborty): Shot with /obj/item/projectile/energy/blue_pellet projectile
+[2024-04-03 07:41:26.283] ATTACK: RiotScopez/(Combat Drone-166) against INVALID/(Boiko Chakraborty): Shot with /obj/item/projectile/energy/blue_pellet projectile
+[2024-04-03 07:41:26.382] ATTACK: RiotScopez/(Combat Drone-166) against INVALID/(Boiko Chakraborty): Shot with /obj/item/projectile/energy/blue_pellet projectile
+[2024-04-03 07:41:26.488] ATTACK: RiotScopez/(Combat Drone-166) against INVALID/(Boiko Chakraborty): Shot with /obj/item/projectile/energy/blue_pellet projectile
+[2024-04-03 07:41:26.583] ATTACK: RiotScopez/(Combat Drone-166) against INVALID/(Boiko Chakraborty): Shot with /obj/item/projectile/energy/blue_pellet projectile
+[2024-04-03 07:41:27.370] ATTACK: RiotScopez/(Combat Drone-166) against INVALID/(Boiko Chakraborty): Fired gun 'suppression gun' (MANUAL)
+[2024-04-03 07:41:27.632] ATTACK: RiotScopez/(Combat Drone-166) against INVALID/(Boiko Chakraborty): Shot with /obj/item/projectile/energy/blue_pellet projectile
+[2024-04-03 07:41:52.879] ATTACK: RiotScopez/(Combat Drone-166) against INVALID/(Boiko Chakraborty): attacked with energy sword (INTENT: HARM) (DAMTYE: BRUTE)
+[2024-04-03 07:41:54.044] ATTACK: RiotScopez/(Combat Drone-166) against INVALID/(Boiko Chakraborty): attacked with energy sword (INTENT: HARM) (DAMTYE: BRUTE)
+[2024-04-03 07:41:54.248] GAME: TIDI: 1.66667;1.97438;2.00131;0.744181
+[2024-04-03 07:41:54.938] ATTACK: RiotScopez/(Combat Drone-166) against INVALID/(Boiko Chakraborty): attacked with energy sword (INTENT: HARM) (DAMTYE: BRUTE)
+[2024-04-03 07:41:55.913] ATTACK: RiotScopez/(Combat Drone-166) against INVALID/(Boiko Chakraborty): attacked with energy sword (INTENT: HARM) (DAMTYE: BRUTE)
+[2024-04-03 07:41:56.789] ATTACK: RiotScopez/(Combat Drone-166) against INVALID/(Boiko Chakraborty): attacked with energy sword (INTENT: HARM) (DAMTYE: BRUTE)
+[2024-04-03 07:41:57.630] ATTACK: RiotScopez/(Combat Drone-166) against INVALID/(Boiko Chakraborty): attacked with energy sword (INTENT: HARM) (DAMTYE: BRUTE)
+[2024-04-03 07:41:58.605] ATTACK: RiotScopez/(Combat Drone-166) against INVALID/(Boiko Chakraborty): attacked with energy sword (INTENT: HARM) (DAMTYE: BRUTE)
+[2024-04-03 07:41:59.625] ATTACK: RiotScopez/(Combat Drone-166) against INVALID/(Boiko Chakraborty): attacked with energy sword (INTENT: HARM) (DAMTYE: BRUTE)
+[2024-04-03 07:42:00.420] ATTACK: RiotScopez/(Combat Drone-166) against INVALID/(Boiko Chakraborty): attacked with energy sword (INTENT: HARM) (DAMTYE: BRUTE)
+[2024-04-03 07:42:01.322] ATTACK: RiotScopez/(Combat Drone-166) against INVALID/(Boiko Chakraborty): attacked with energy sword (INTENT: HARM) (DAMTYE: BRUTE)
+[2024-04-03 07:42:02.123] ATTACK: RiotScopez/(Combat Drone-166) against INVALID/(Boiko Chakraborty): attacked with energy sword (INTENT: HARM) (DAMTYE: BRUTE)
+[2024-04-03 07:42:03.293] ATTACK: RiotScopez/(Combat Drone-166) against INVALID/(Boiko Chakraborty): attacked with energy sword (INTENT: HARM) (DAMTYE: BRUTE)
+[2024-04-03 07:42:04.189] ATTACK: RiotScopez/(Combat Drone-166) against INVALID/(Boiko Chakraborty): attacked with energy sword (INTENT: HARM) (DAMTYE: BRUTE)
+[2024-04-03 07:42:05.108] ATTACK: RiotScopez/(Combat Drone-166) against INVALID/(Boiko Chakraborty): attacked with energy sword (INTENT: HARM) (DAMTYE: BRUTE)
+[2024-04-03 07:42:06.038] ATTACK: RiotScopez/(Combat Drone-166) against INVALID/(Boiko Chakraborty): attacked with energy sword (INTENT: HARM) (DAMTYE: BRUTE)
+[2024-04-03 07:42:06.825] ATTACK: RiotScopez/(Combat Drone-166) against INVALID/(Boiko Chakraborty): attacked with energy sword (INTENT: HARM) (DAMTYE: BRUTE)
+[2024-04-03 07:42:07.621] ATTACK: RiotScopez/(Combat Drone-166) against INVALID/(Boiko Chakraborty): attacked with energy sword (INTENT: HARM) (DAMTYE: BRUTE)
+[2024-04-03 07:42:08.467] GAME: Error: /icon([0x2101ad63]) took longer than 0.5 seconds to delete (took 0.5 seconds to delete)
+[2024-04-03 07:42:10.137] ATTACK: RiotScopez/(Combat Drone-166) against INVALID/(Boiko Chakraborty): attacked with energy sword (INTENT: HARM) (DAMTYE: BRUTE)
+[2024-04-03 07:42:19.810] ADMIN: RiotScopez/(Combat Drone-166) RiotScopez/(Combat Drone-166) has used MODIFYROBOT (Swap a Robot Module) on RiotScopez/(Combat Drone-166).
+[2024-04-03 07:42:41.165] ADMIN: RiotScopez/(Combat Drone-166) RiotScopez/(Combat Drone-166) has used MODIFYROBOT (Swap a Robot Module) on RiotScopez/(Combat Drone-166).
+[2024-04-03 07:43:00.511] GAME: TIDI: 10.5;4.53206;2.50746;0.92051
+[2024-04-03 07:43:08.679] ADMIN: RiotScopez/(Combat Drone-166) RiotScopez/(Combat Drone-166) has used MODIFYROBOT (Swap a Robot Module) on RiotScopez/(Combat Drone-166).
+[2024-04-03 07:44:00.998] ATTACK: RiotScopez/(Combat Drone-166) against INVALID/(Boiko Chakraborty): attacked with scalpel (INTENT: HARM) (DAMTYE: BRUTE)
+[2024-04-03 07:44:08.062] GAME: TIDI: 12.5;6.92244;3.39046;1.1675
+[2024-04-03 07:44:29.319] GAME: Error: /mob/living/carbon/human([0x3000848]) took longer than 0.5 seconds to delete (took 0.8 seconds to delete)
+[2024-04-03 07:44:33.397] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 07:45:10.890] GAME: TIDI: 4.66667;6.24571;3.96151;1.44691
+[2024-04-03 07:45:44.270] ADMIN: RiotScopez/(Combat Drone-166) has eaten INVALID/(Boiko Chakraborty) with a cyborg belly. (<a href='?_src_=holder;admin_token=9610969108124554701039633948690801010;adminplayerobservecoodjump=1;X=131;Y=134;Z=3'>JMP</a>)
+[2024-04-03 07:45:49.452] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 07:45:51.449] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 07:45:57.769] ADMIN: RiotScopez/(Combat Drone-166) has digested INVALID/(Boiko Chakraborty) with a cyborg belly. (<a href='?_src_=holder;admin_token=1010727175744103093191010031036107109284;adminplayerobservecoodjump=1;X=131;Y=134;Z=3'>JMP</a>)
+[2024-04-03 07:46:11.094] GAME: TIDI: 0.333333;4.472;4.06361;1.70858
+[2024-04-03 07:46:13.753] ADMIN: RiotScopez/(Combat Drone-166) RiotScopez/(Combat Drone-166) has used MODIFYROBOT (Swap a Robot Module) on RiotScopez/(Combat Drone-166).
+[2024-04-03 07:46:40.729] ADMIN: RiotScopez/(Combat Drone-166) RiotScopez/(Combat Drone-166) has used MODIFYROBOT (Swap a Robot Module) on RiotScopez/(Combat Drone-166).
+[2024-04-03 07:47:11.170] GAME: TIDI: 0.166667;3.1804;3.88697;1.92641
+[2024-04-03 07:47:22.070] ADMIN: RiotScopez/(Combat Drone-166) RiotScopez/(Combat Drone-166) has used MODIFYROBOT (Swap a Robot Module) on RiotScopez/(Combat Drone-166).
+[2024-04-03 07:47:33.971] ADMIN: RiotScopez/(Combat Drone-166) RiotScopez/(Combat Drone-166) has used MODIFYROBOT (Swap a Robot Module) on RiotScopez/(Combat Drone-166).
+[2024-04-03 07:47:36.840] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 07:48:12.920] GAME: TIDI: 3;3.12628;3.73483;2.10726
+[2024-04-03 07:48:22.698] ADMIN: RiotScopez/(Combat Drone-166) has changed RiotScopez/(Combat Drone-166)'s size multiplier to 4.
+[2024-04-03 07:49:04.899] ADMIN: RiotScopez/(Amber) RiotScopez/(Amber) has used MODIFYROBOT (Toggle All Station Access Codes) on RiotScopez/(Amber).
+[2024-04-03 07:49:13.830] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 07:49:15.309] GAME: TIDI: 4;3.3884;3.66554;2.26308
+[2024-04-03 07:49:22.187] ADMIN: RiotScopez/(Amber) RiotScopez/(Amber) has used MODIFYROBOT (Toggle All Station Access Codes) on RiotScopez/(Amber).
+[2024-04-03 07:49:25.834] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 07:50:15.389] GAME: TIDI: 0;2.37188;3.40681;2.37746
+[2024-04-03 07:51:15.762] GAME: TIDI: 0.666667;1.86031;3.09751;2.44946
+[2024-04-03 07:51:23.118] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 07:51:40.472] SAY: INVALID/(mouse (117)) (122,119,2): Squeek?
+[2024-04-03 07:51:45.661] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 07:52:17.767] GAME: TIDI: 3.33333;2.30222;2.93845;2.49836
+[2024-04-03 07:52:21.401] ATTACK: INVALID/(rat (461)) against RiotScopez/(Amber): Generic attack (probably animal)
+[2024-04-03 07:52:22.651] ATTACK: INVALID/(rat (461)) against RiotScopez/(Amber): Animal-attacked (dodged)
+[2024-04-03 07:52:23.751] ATTACK: INVALID/(rat (461)) against RiotScopez/(Amber): Animal-attacked (dodged)
+[2024-04-03 07:52:25.000] ATTACK: INVALID/(rat (461)) against RiotScopez/(Amber): Animal-attacked (miss)
+[2024-04-03 07:52:26.300] ATTACK: INVALID/(rat (461)) against RiotScopez/(Amber): Generic attack (probably animal)
+[2024-04-03 07:52:27.900] ATTACK: INVALID/(rat (461)) against RiotScopez/(Amber): Animal-attacked (miss)
+[2024-04-03 07:52:29.149] ATTACK: INVALID/(rat (461)) against RiotScopez/(Amber): Animal-attacked (miss)
+[2024-04-03 07:52:30.250] ATTACK: INVALID/(rat (461)) against RiotScopez/(Amber): Generic attack (probably animal)
+[2024-04-03 07:52:31.608] ATTACK: INVALID/(rat (461)) against RiotScopez/(Amber): Animal-attacked (dodged)
+[2024-04-03 07:52:32.858] ATTACK: INVALID/(rat (461)) against RiotScopez/(Amber): Generic attack (probably animal)
+[2024-04-03 07:52:34.159] ATTACK: INVALID/(rat (461)) against RiotScopez/(Amber): Generic attack (probably animal)
+[2024-04-03 07:52:36.762] ATTACK: INVALID/(rat (461)) against RiotScopez/(Amber): Generic attack (probably animal)
+[2024-04-03 07:52:37.070] ADMIN: VORE: Amber used their Garbage Processor to swallow the �Kaju Mamma! Bar wrapper.
+[2024-04-03 07:52:37.071] ATTACK: RiotScopez/(Amber) against INVALID/(mouse (29)): Eaten via Stomach
+[2024-04-03 07:52:37.071] ATTACK: RiotScopez/(Amber) against INVALID/(mouse (378)): Eaten via Stomach
+[2024-04-03 07:52:37.072] ATTACK: RiotScopez/(Amber) against INVALID/(mouse (951)): Eaten via Stomach
+[2024-04-03 07:52:37.073] ATTACK: RiotScopez/(Amber) against INVALID/(mouse (419)): Eaten via Stomach
+[2024-04-03 07:52:37.073] ATTACK: RiotScopez/(Amber) against INVALID/(mouse (861)): Eaten via Stomach
+[2024-04-03 07:52:37.074] ATTACK: RiotScopez/(Amber) against INVALID/(mouse (356)): Eaten via Stomach
+[2024-04-03 07:52:37.075] ATTACK: RiotScopez/(Amber) against INVALID/(mouse (117)): Eaten via Stomach
+[2024-04-03 07:52:37.076] ATTACK: RiotScopez/(Amber) against INVALID/(rat (461)): Eaten via Stomach
+[2024-04-03 07:52:45.161] ASSET: Sending asset `tgui.bundle.js` to client `RiotScopez` as `asset.5a806c2cdc0e4d35c94371aedd1e5f4a.js`
+[2024-04-03 07:52:45.190] ASSET: Sending asset `tgui.bundle.css` to client `RiotScopez` as `asset.89501de77523e7848c5824e75ad03820.css`
+[2024-04-03 07:52:45.335] ASSET: Sending asset `spritesheet_vore.css` to client `RiotScopez` as `asset.95fa1377fdab26c9c95d30a5977a284e.css`
+[2024-04-03 07:52:45.335] ASSET: Sending asset `vore_240x240.png` to client `RiotScopez` as `asset.78c5424fe8cc7f52e1a464d1f8584818.png`
+[2024-04-03 07:52:45.335] ASSET: Sending asset `spritesheet_fixedvore.css` to client `RiotScopez` as `asset.3900878c2dc37a835ec768a4ec02ad8d.css`
+[2024-04-03 07:52:45.336] ASSET: Sending asset `fixedvore_240x240.png` to client `RiotScopez` as `asset.60970c61b2ec3dede96ef77dc0958522.png`
+[2024-04-03 07:52:49.008] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 07:52:51.000] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 07:53:18.627] GAME: TIDI: 1.5;2.06155;2.76307;2.52483
+[2024-04-03 07:53:37.672] ASSET: Sending asset `asset.b82bfa32442aeb26c113b4004a1bc8a2.png` to client `RiotScopez` as `asset.b82bfa32442aeb26c113b4004a1bc8a2.png`
+[2024-04-03 07:53:56.059] ATTACK: RiotScopez/(Amber) against INVALID/(mouse (29)): Digested in stomach
+[2024-04-03 07:54:18.708] GAME: TIDI: 0.166667;1.49309;2.50908;2.52326
+[2024-04-03 07:54:23.810] ADMIN: RiotScopez/(Amber) dealt -6 amount of brute damage to Amber
+[2024-04-03 07:54:25.751] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 07:55:19.380] GAME: TIDI: 1;1.34516;2.27629;2.49856
+[2024-04-03 07:55:26.750] ATTACK: RiotScopez/(Amber) against INVALID/(rat (461)): Digested in stomach
+[2024-04-03 07:56:10.121] EMOTE: INVALID/(Ian) (135,132,2): <B>Ian</B> chases their tail.
+[2024-04-03 07:56:19.594] GAME: TIDI: 0.333333;1.04161;2.02936;2.45164
+[2024-04-03 07:57:19.657] GAME: TIDI: 0.166667;0.779129;1.77931;2.38441
+[2024-04-03 07:57:40.314] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 07:58:10.348] EMOTE: INVALID/(Ian) (134,134,2): <B>Ian</B> dances around.
+[2024-04-03 07:58:19.859] GAME: TIDI: 0.333333;0.64539;1.55253;2.30122
+[2024-04-03 07:59:20.465] GAME: TIDI: 0.915903;0.726544;1.38733;2.20983
+[2024-04-03 07:59:22.927] EMOTE: INVALID/(Ian) (134,134,2): <B>Ian</B> dances around.
+[2024-04-03 08:00:11.293] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 08:00:20.840] GAME: TIDI: 0.666667;0.708581;1.25158;2.11401
+[2024-04-03 08:01:21.178] GAME: TIDI: 0.5;0.646007;1.13047;2.01565
+[2024-04-03 08:02:21.389] GAME: TIDI: 0.333333;0.552205;1.01481;1.91557
+[2024-04-03 08:02:39.545] ATTACK: INVALID/(rat (659)) against RiotScopez/(Amber): Generic attack (probably animal)
+[2024-04-03 08:02:40.796] ATTACK: INVALID/(rat (659)) against RiotScopez/(Amber): Animal-attacked (dodged)
+[2024-04-03 08:02:43.486] ATTACK: INVALID/(rat (659)) against RiotScopez/(Amber): Generic attack (probably animal)
+[2024-04-03 08:02:45.063] ATTACK: INVALID/(rat (659)) against RiotScopez/(Amber): Animal-attacked (dodged)
+[2024-04-03 08:02:46.831] ATTACK: INVALID/(rat (659)) against RiotScopez/(Amber): Animal-attacked (miss)
+[2024-04-03 08:02:48.137] ATTACK: INVALID/(rat (659)) against RiotScopez/(Amber): Animal-attacked (miss)
+[2024-04-03 08:02:49.665] ATTACK: INVALID/(rat (659)) against RiotScopez/(Amber): Generic attack (probably animal)
+[2024-04-03 08:02:50.766] ATTACK: INVALID/(rat (659)) against RiotScopez/(Amber): Generic attack (probably animal)
+[2024-04-03 08:02:52.510] ATTACK: INVALID/(rat (659)) against RiotScopez/(Amber): Generic attack (probably animal)
+[2024-04-03 08:02:53.811] ATTACK: INVALID/(rat (659)) against RiotScopez/(Amber): Animal-attacked (miss)
+[2024-04-03 08:02:55.321] ATTACK: INVALID/(rat (659)) against RiotScopez/(Amber): Generic attack (probably animal)
+[2024-04-03 08:02:56.571] ATTACK: INVALID/(rat (659)) against RiotScopez/(Amber): Generic attack (probably animal)
+[2024-04-03 08:02:58.072] ATTACK: INVALID/(rat (659)) against RiotScopez/(Amber): Animal-attacked (miss)
+[2024-04-03 08:02:58.676] ADMIN: VORE: Amber used their Garbage Processor to swallow the mining drill.
+[2024-04-03 08:02:58.676] ADMIN: VORE: Amber used their Garbage Processor to swallow the pen.
+[2024-04-03 08:02:58.676] ADMIN: VORE: Amber used their Garbage Processor to swallow the backpack.
+[2024-04-03 08:02:58.676] ADMIN: VORE: Amber used their Garbage Processor to swallow the face mask.
+[2024-04-03 08:02:58.677] ADMIN: VORE: Amber used their Garbage Processor to swallow the green glowstick.
+[2024-04-03 08:02:58.677] ADMIN: VORE: Amber used their Garbage Processor to swallow the apron.
+[2024-04-03 08:02:58.677] ADMIN: VORE: Amber used their Garbage Processor to swallow the briefcase.
+[2024-04-03 08:02:58.677] ADMIN: VORE: Amber used their Garbage Processor to swallow the yellow hoodie.
+[2024-04-03 08:02:58.677] ADMIN: VORE: Amber used their Garbage Processor to swallow the black shoes.
+[2024-04-03 08:02:58.677] ADMIN: VORE: Amber used their Garbage Processor to swallow the breath mask.
+[2024-04-03 08:02:58.678] ADMIN: VORE: Amber used their Garbage Processor to swallow the blue glowstick.
+[2024-04-03 08:02:58.678] ADMIN: VORE: Amber used their Garbage Processor to swallow the gummy candy bag.
+[2024-04-03 08:02:58.678] ADMIN: VORE: Amber used their Garbage Processor to swallow the wet floor sign.
+[2024-04-03 08:02:58.678] ADMIN: VORE: Amber used their Garbage Processor to swallow the screwdriver.
+[2024-04-03 08:02:58.678] ADMIN: VORE: Amber used their Garbage Processor to swallow the wirecutters.
+[2024-04-03 08:02:58.679] ADMIN: VORE: Amber used their Garbage Processor to swallow the �T-ray scanner.
+[2024-04-03 08:02:58.679] ADMIN: VORE: Amber used their Garbage Processor to swallow the crowbar.
+[2024-04-03 08:02:58.679] ADMIN: VORE: Amber used their Garbage Processor to swallow the cable coil.
+[2024-04-03 08:02:58.679] ADMIN: VORE: Amber used their Garbage Processor to swallow the insulated gloves.
+[2024-04-03 08:02:58.680] ATTACK: RiotScopez/(Amber) against INVALID/(rat (659)): Eaten via Stomach
+[2024-04-03 08:03:26.401] GAME: TIDI: 8.5;2.93654;1.39916;1.86393
+[2024-04-03 08:03:33.721] ATTACK: RiotScopez/(Amber) against INVALID/(rat (659)): Digested in stomach
+[2024-04-03 08:04:27.618] GAME: TIDI: 2;2.65558;1.65044;1.84258
+[2024-04-03 08:05:28.051] GAME: TIDI: 0.666667;2.05891;1.73214;1.83153
+[2024-04-03 08:05:32.540] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 08:06:06.438] ATTACK: INVALID/(rat (721)) against RiotScopez/(Amber): Animal-attacked (dodged)
+[2024-04-03 08:06:07.787] ATTACK: INVALID/(rat (721)) against RiotScopez/(Amber): Generic attack (probably animal)
+[2024-04-03 08:06:09.037] ATTACK: INVALID/(rat (721)) against RiotScopez/(Amber): Generic attack (probably animal)
+[2024-04-03 08:06:10.337] ATTACK: INVALID/(rat (721)) against RiotScopez/(Amber): Animal-attacked (dodged)
+[2024-04-03 08:06:12.937] ATTACK: INVALID/(rat (721)) against RiotScopez/(Amber): Generic attack (probably animal)
+[2024-04-03 08:06:14.037] ATTACK: INVALID/(rat (721)) against RiotScopez/(Amber): Generic attack (probably animal)
+[2024-04-03 08:06:15.287] ATTACK: INVALID/(rat (721)) against RiotScopez/(Amber): Generic attack (probably animal)
+[2024-04-03 08:06:16.587] ATTACK: INVALID/(rat (721)) against RiotScopez/(Amber): Generic attack (probably animal)
+[2024-04-03 08:06:18.938] ATTACK: INVALID/(rat (721)) against RiotScopez/(Amber): Generic attack (probably animal)
+[2024-04-03 08:06:22.993] ATTACK: INVALID/(rat (721)) against RiotScopez/(Amber): Animal-attacked (dodged)
+[2024-04-03 08:06:26.894] ATTACK: INVALID/(rat (721)) against RiotScopez/(Amber): Generic attack (probably animal)
+[2024-04-03 08:06:28.094] GAME: TIDI: 0;1.44123;1.67396;1.81578
+[2024-04-03 08:06:29.493] ATTACK: INVALID/(rat (721)) against RiotScopez/(Amber): Generic attack (probably animal)
+[2024-04-03 08:06:31.646] ATTACK: INVALID/(rat (721)) against RiotScopez/(Amber): Animal-attacked (dodged)
+[2024-04-03 08:07:23.264] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 08:07:28.799] GAME: TIDI: 1.16667;1.35886;1.61094;1.79529
+[2024-04-03 08:07:55.305] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 08:08:07.312] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 08:08:13.461] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 08:08:29.001] GAME: TIDI: 0.5;1.1012;1.50899;1.76666
+[2024-04-03 08:09:29.396] GAME: TIDI: 0.5;0.920843;1.39136;1.72913
+[2024-04-03 08:10:15.902] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 08:10:17.975] ASSET: Sending asset `asset.747cc0abcb773996f38d60a2260fe815.png` to client `RiotScopez` as `asset.747cc0abcb773996f38d60a2260fe815.png`
+[2024-04-03 08:10:29.443] GAME: TIDI: 0.166667;0.69459;1.25201;1.68142
+[2024-04-03 08:11:29.794] GAME: TIDI: 0.5;0.636213;1.12885;1.62616
+[2024-04-03 08:12:03.578] ADMIN: RiotScopez/(Amber) spawned /mob/living/carbon/human at (130,114,2)
+[2024-04-03 08:12:31.292] GAME: TIDI: 2.5;1.19535;1.14215;1.57776
+[2024-04-03 08:13:02.781] ADMIN: RiotScopez/(Amber) dealt -93 amount of brute damage to Amber
+[2024-04-03 08:13:32.293] GAME: TIDI: 1.66667;1.33674;1.18107;1.53809
+[2024-04-03 08:13:52.793] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 08:14:08.035] ATTACK: RiotScopez/(Amber) has eaten INVALID/INVALID with a cyborg belly. (<a href='?_src_=holder;admin_token=9610969108124554701039633948690801010;adminplayerobservecoodjump=1;X=130;Y=115;Z=2'>JMP</a>) against : 
+[2024-04-03 08:14:32.377] GAME: TIDI: 0.166667;0.985721;1.142;1.49848
+[2024-04-03 08:15:25.011] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 08:15:32.575] GAME: TIDI: 0.333333;0.790005;1.0716;1.45579
+[2024-04-03 08:16:32.958] GAME: TIDI: 0.666667;0.753003;1.00788;1.411
+[2024-04-03 08:16:53.446] EMOTE: INVALID/(Ian) (136,133,2): <B>Ian</B> chases their tail.
+[2024-04-03 08:17:33.008] GAME: TIDI: 0.166667;0.577102;0.921725;1.36208
+[2024-04-03 08:18:07.190] ADMIN: RiotScopez/(Amber) has digested INVALID/(Damon Owen) with a cyborg belly. (<a href='?_src_=holder;admin_token=1010727175744103093191010031036107109284;adminplayerobservecoodjump=1;X=125;Y=109;Z=2'>JMP</a>)
+[2024-04-03 08:18:10.890] ASSET: Sending asset `asset.912c41730ed2fe3f7854ec63ab1f6ab5.png` to client `RiotScopez` as `asset.912c41730ed2fe3f7854ec63ab1f6ab5.png`
+[2024-04-03 08:18:33.583] GAME: TIDI: 0.833333;0.653972;0.868174;1.31268
+[2024-04-03 08:18:48.169] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 08:19:12.196] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 08:19:33.748] GAME: TIDI: 0.333333;0.55778;0.806096;1.26203
+[2024-04-03 08:19:42.232] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 08:20:30.284] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 08:20:33.815] GAME: TIDI: 0.166667;0.440446;0.732966;1.20912
+[2024-04-03 08:20:40.300] EMOTE: INVALID/(Ian) (136,133,2): <B>Ian</B> dances around.
+[2024-04-03 08:21:33.891] GAME: TIDI: 0;0.308312;0.648035;1.15301
+[2024-04-03 08:22:33.935] GAME: TIDI: 0.166667;0.265819;0.571592;1.09487
+[2024-04-03 08:23:02.418] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 08:23:12.412] EMOTE: INVALID/(Ian) (136,133,2): <B>Ian</B> dances around.
+[2024-04-03 08:23:35.322] GAME: TIDI: 2.33333;0.886073;0.634488;1.04883
+[2024-04-03 08:24:27.323] EMOTE: INVALID/(Ian) (135,132,2): <B>Ian</B> dances around.
+[2024-04-03 08:24:27.328] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 08:24:36.858] GAME: TIDI: 2.5;1.37025;0.781641;1.02211
+[2024-04-03 08:25:31.377] EMOTE: INVALID/(Ian) (135,133,2): <B>Ian</B> chases their tail.
+[2024-04-03 08:25:36.914] GAME: TIDI: 0.166667;1.00918;0.827148;1.00262
+[2024-04-03 08:26:36.964] GAME: TIDI: 0;0.706423;0.803003;0.982654
+[2024-04-03 08:27:37.015] GAME: TIDI: 0.166667;0.544496;0.751301;0.959519
+[2024-04-03 08:27:57.499] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 08:28:21.522] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 08:28:31.525] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 08:28:37.056] GAME: TIDI: 0;0.381147;0.677271;0.931294
+[2024-04-03 08:29:37.094] GAME: TIDI: 0;0.266803;0.595177;0.897682
+[2024-04-03 08:30:37.139] GAME: TIDI: 0.166667;0.236762;0.523494;0.860264
+[2024-04-03 08:31:37.196] GAME: TIDI: 0;0.165733;0.451942;0.819431
+[2024-04-03 08:31:57.687] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 08:32:21.716] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 08:32:37.259] GAME: TIDI: 0.166667;0.166013;0.394756;0.776964
+[2024-04-03 08:32:55.739] EMOTE: INVALID/(Ian) (136,132,2): <B>Ian</B> chases their tail.
+[2024-04-03 08:33:37.311] GAME: TIDI: 0.166667;0.166209;0.349047;0.734172
+[2024-04-03 08:34:37.355] GAME: TIDI: 0;0.116347;0.302507;0.691006
+[2024-04-03 08:35:31.856] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 08:35:37.395] GAME: TIDI: 0;0.0814426;0.258294;0.647734
+[2024-04-03 08:36:37.427] GAME: TIDI: 0.166667;0.10701;0.228037;0.605765
+[2024-04-03 08:37:37.470] GAME: TIDI: 0;0.0749069;0.197411;0.564929
+[2024-04-03 08:38:37.510] GAME: TIDI: 0.166667;0.102435;0.178416;0.526278
+[2024-04-03 08:39:37.548] GAME: TIDI: 0;0.0717044;0.157074;0.489357
+[2024-04-03 08:40:37.582] GAME: TIDI: 0;0.0501931;0.135697;0.453991
+[2024-04-03 08:40:50.062] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 08:41:37.618] GAME: TIDI: 0.166667;0.0851351;0.125585;0.421151
+[2024-04-03 08:42:37.661] GAME: TIDI: 0;0.0595946;0.112387;0.390274
+[2024-04-03 08:42:54.136] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 08:43:37.692] GAME: TIDI: 0;0.0417162;0.0982528;0.361072
+[2024-04-03 08:43:50.166] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 08:44:37.722] GAME: TIDI: 0.166667;0.0792014;0.0944425;0.334409
+[2024-04-03 08:45:37.761] GAME: TIDI: 0;0.0554409;0.0866422;0.309633
+[2024-04-03 08:46:37.790] GAME: TIDI: 0;0.0388087;0.0770755;0.286377
+[2024-04-03 08:47:37.830] GAME: TIDI: 0.166667;0.0771661;0.0770936;0.265448
+[2024-04-03 08:47:44.302] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 08:48:37.866] GAME: TIDI: 0;0.0540162;0.0724781;0.246151
+[2024-04-03 08:49:37.898] GAME: TIDI: 0;0.0378114;0.0655448;0.228091
+[2024-04-03 08:50:37.928] GAME: TIDI: 0.166667;0.076468;0.0677294;0.212055
+[2024-04-03 08:50:42.394] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 08:50:46.399] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 08:50:50.397] EMOTE: INVALID/(Ian) (135,131,2): <B>Ian</B> chases their tail.
+[2024-04-03 08:51:37.969] GAME: TIDI: 0;0.0535276;0.064889;0.197338
+[2024-04-03 08:52:20.568] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 08:52:38.116] GAME: TIDI: 0.333333;0.137469;0.0794051;0.185545
+[2024-04-03 08:53:38.149] GAME: TIDI: 0;0.0962285;0.0827698;0.175267
+[2024-04-03 08:54:00.640] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 08:54:02.634] EMOTE: INVALID/(Ian) (135,130,2): <B>Ian</B> dances around.
+[2024-04-03 08:54:38.189] GAME: TIDI: 0;0.06736;0.0796878;0.165709
+[2024-04-03 08:54:38.661] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 08:54:48.668] EMOTE: INVALID/(Ian) (136,130,2): <B>Ian</B> chases their tail.
+[2024-04-03 08:54:50.668] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 08:55:32.745] EMOTE: INVALID/(Ian) (136,130,2): <B>Ian</B> dances around.
+[2024-04-03 08:55:38.287] GAME: TIDI: 0.166667;0.097152;0.0831807;0.157456
+[2024-04-03 08:55:52.766] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 08:56:38.326] GAME: TIDI: 0.166667;0.118006;0.0901458;0.150725
+[2024-04-03 08:57:38.365] GAME: TIDI: 0;0.0826045;0.0886375;0.144517
+[2024-04-03 08:58:38.403] GAME: TIDI: 0.166667;0.107823;0.0924747;0.139312
+[2024-04-03 08:59:18.896] EMOTE: INVALID/(Ian) (136,132,2): <B>Ian</B> dances around.
+[2024-04-03 08:59:38.444] GAME: TIDI: 0;0.0754762;0.089075;0.134289
+[2024-04-03 09:00:38.468] GAME: TIDI: 0;0.0528333;0.0818266;0.129042
+[2024-04-03 09:01:38.579] GAME: TIDI: 0.166667;0.0869833;0.082858;0.124424
+[2024-04-03 09:01:47.048] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 09:02:38.620] GAME: TIDI: 0.166667;0.110888;0.0884641;0.120828
+[2024-04-03 09:02:59.101] EMOTE: INVALID/(Ian) (137,132,2): <B>Ian</B> dances around.
+[2024-04-03 09:03:07.108] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 09:03:38.658] GAME: TIDI: 0;0.0776218;0.0862956;0.117375
+[2024-04-03 09:04:27.157] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 09:04:38.694] GAME: TIDI: 0;0.0543353;0.0799035;0.113628
+[2024-04-03 09:05:38.717] GAME: TIDI: 0.166667;0.0880347;0.0815298;0.110418
+[2024-04-03 09:06:21.206] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 09:06:38.747] GAME: TIDI: 0;0.0616243;0.0775487;0.107131
+[2024-04-03 09:07:38.784] GAME: TIDI: 0;0.043137;0.0706664;0.103484
+[2024-04-03 09:08:31.283] EMOTE: INVALID/(Ian) (136,132,2): <B>Ian</B> dances around.
+[2024-04-03 09:08:38.819] GAME: TIDI: 0.166667;0.0801959;0.0725723;0.100393
+[2024-04-03 09:09:38.835] GAME: TIDI: 0;0.0561371;0.0692852;0.0972824
+[2024-04-03 09:10:38.874] GAME: TIDI: 0;0.039296;0.0632874;0.0938829
+[2024-04-03 09:11:09.365] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 09:11:38.915] GAME: TIDI: 0.166667;0.0775072;0.0661314;0.0911078
+[2024-04-03 09:12:13.400] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 09:12:38.945] GAME: TIDI: 0;0.054255;0.0637561;0.0883726
+[2024-04-03 09:13:33.453] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 09:13:38.983] GAME: TIDI: 0;0.0379785;0.0586006;0.0853954
+[2024-04-03 09:13:45.454] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 09:14:39.016] GAME: TIDI: 0.166667;0.076585;0.0621975;0.0830756
+[2024-04-03 09:14:49.494] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 09:15:17.507] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 09:15:39.059] GAME: TIDI: 0;0.0536095;0.0604799;0.080816
+[2024-04-03 09:16:33.565] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 09:16:39.099] GAME: TIDI: 0;0.0375266;0.0558892;0.0783233
+[2024-04-03 09:16:49.583] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 09:16:51.579] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 09:17:05.662] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 09:17:39.219] GAME: TIDI: 0.333333;0.126269;0.0699651;0.0774875
+[2024-04-03 09:17:43.684] EMOTE: INVALID/(Ian) (135,130,2): <B>Ian</B> chases their tail.
+[2024-04-03 09:17:57.692] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 09:18:39.256] GAME: TIDI: 0;0.0883881;0.0736497;0.0771037
+[2024-04-03 09:19:39.292] GAME: TIDI: 0;0.0618716;0.0712941;0.0765228
+[2024-04-03 09:20:39.328] GAME: TIDI: 0.166667;0.0933101;0.0756973;0.0764402
+[2024-04-03 09:21:39.362] GAME: TIDI: 0;0.0653171;0.0736213;0.0761583
+[2024-04-03 09:22:15.851] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 09:22:39.401] GAME: TIDI: 0.166667;0.095722;0.0780414;0.0763466
+[2024-04-03 09:22:45.863] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 09:23:39.481] GAME: TIDI: 0;0.0670054;0.0758342;0.0762954
+[2024-04-03 09:24:07.221] ACCESS OUT: RiotScopez/(Amber) - IP:146.115.147.185 - CID:Logged Out - BYOND Logged Out
+[2024-04-03 09:24:40.396] GAME: TIDI: 1.5;0.496904;0.160048;0.0846706
+[2024-04-03 09:25:40.422] GAME: TIDI: 0.166667;0.397833;0.207605;0.0969641
+[2024-04-03 09:25:52.884] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 09:26:36.902] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 09:26:37.078] ACCESS IN: RiotScopez/(Amber) - IP:146.115.147.185 - CID:1871707424 - BYOND v515
+[2024-04-03 09:26:37.080] ASSET: Sending asset `jquery.min.js` to client `RiotScopez` as `jquery.min.js`
+[2024-04-03 09:26:37.419] ASSET: Sending asset `tgui-panel.bundle.js` to client `RiotScopez` as `asset.b4751a5ea151bc8ec68c1925b7d0bdd7.js`
+[2024-04-03 09:26:38.268] ASSET: Sending asset `tgui-panel.bundle.css` to client `RiotScopez` as `asset.7efb53cd7dda00777acb7748b31d4a8a.css`
+[2024-04-03 09:26:38.379] ASSET: Sending asset `fa-regular-400.ttf` to client `RiotScopez` as `fa-regular-400.ttf`
+[2024-04-03 09:26:38.379] ASSET: Sending asset `fa-solid-900.ttf` to client `RiotScopez` as `fa-solid-900.ttf`
+[2024-04-03 09:26:38.379] ASSET: Sending asset `fa-v4compatibility.ttf` to client `RiotScopez` as `fa-v4compatibility.ttf`
+[2024-04-03 09:26:38.379] ASSET: Sending asset `v4shim.css` to client `RiotScopez` as `v4shim.css`
+[2024-04-03 09:26:38.379] ASSET: Sending asset `font-awesome.css` to client `RiotScopez` as `asset.fedd834d1c20ed484599a1c38690e330.css`
+[2024-04-03 09:26:38.379] ASSET: Sending asset `tgfont.eot` to client `RiotScopez` as `tgfont.eot`
+[2024-04-03 09:26:38.420] ASSET: Sending asset `tgfont.woff2` to client `RiotScopez` as `tgfont.woff2`
+[2024-04-03 09:26:38.489] ASSET: Sending asset `tgfont.css` to client `RiotScopez` as `asset.9c0bbe21e37e76955d9640f7a6c4b636.css`
+[2024-04-03 09:26:38.538] ASSET: Sending asset `spritesheet_chat.css` to client `RiotScopez` as `asset.e73ec83954ac74e58beadd50f5a3c63b.css`
+[2024-04-03 09:26:38.538] ASSET: Sending asset `chat_32x10.png` to client `RiotScopez` as `asset.2880748b8d8cbf35ee9e8cb72fdacada.png`
+[2024-04-03 09:26:41.793] GAME: TIDI: 2.16667;0.928483;0.351781;0.122446
+[2024-04-03 09:26:56.276] EMOTE: INVALID/(Ian) (137,131,2): <B>Ian</B> dances around.
+[2024-04-03 09:26:58.274] EMOTE: INVALID/(Ian) (137,131,2): <B>Ian</B> dances around.
+[2024-04-03 09:27:06.276] EMOTE: INVALID/(Ian) (137,131,2): <B>Ian</B> dances around.
+[2024-04-03 09:27:41.825] GAME: TIDI: 0.166667;0.699938;0.421412;0.152342
+[2024-04-03 09:28:22.310] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 09:28:37.051] ACCESS OUT: INVALID/(Amber) - IP:146.115.147.185 - CID:Logged Out - BYOND Logged Out
+[2024-04-03 09:28:37.051] ACCESS IN: RiotScopez/(Amber) - IP:146.115.147.185 - CID:1871707424 - BYOND v515
+[2024-04-03 09:28:37.113] ADMIN: INVALID/(Amber) RiotScopez/(Amber) admin-ghosted.
+[2024-04-03 09:28:37.548] GAME: CRYO riotscopez/(Amber) cryo'd with device power cell (/obj/item/weapon/cell/device)
+[2024-04-03 09:28:37.549] ADMIN: EVENT @RiotScopez/(Amber) (Drone) entered cryostorage.
+[2024-04-03 09:28:37.625] ASSET: Sending asset `asset.53c022c04bacfa2df4134357729ffce7.png` to client `RiotScopez` as `asset.53c022c04bacfa2df4134357729ffce7.png`
+[2024-04-03 09:28:42.083] GAME: TIDI: 0.333333;0.589957;0.455121;0.18262
+[2024-04-03 09:28:57.699] ASSET: Sending asset `asset.7f886fac6f3b5058c0d88f779b724ffd.png` to client `RiotScopez` as `asset.7f886fac6f3b5058c0d88f779b724ffd.png`
+[2024-04-03 09:29:01.374] ASSET: Sending asset `asset.e411fe9fedf179c9aca04e3c3f68decc.png` to client `RiotScopez` as `asset.e411fe9fedf179c9aca04e3c3f68decc.png`
+[2024-04-03 09:29:02.372] ASSET: Sending asset `asset.222a4cc049e93e5d343555d3cf788c4a.png` to client `RiotScopez` as `asset.222a4cc049e93e5d343555d3cf788c4a.png`
+[2024-04-03 09:29:02.503] ASSET: Sending asset `asset.0049aa48c0df18e7fd7ce41eb54806e3.png` to client `RiotScopez` as `asset.0049aa48c0df18e7fd7ce41eb54806e3.png`
+[2024-04-03 09:29:02.549] ASSET: Sending asset `asset.11c4845656e84169c68c2f9fd94cf3c8.png` to client `RiotScopez` as `asset.11c4845656e84169c68c2f9fd94cf3c8.png`
+[2024-04-03 09:29:02.623] ASSET: Sending asset `asset.4e45e7e3c1b36c9bb1e8149796b824a8.png` to client `RiotScopez` as `asset.4e45e7e3c1b36c9bb1e8149796b824a8.png`
+[2024-04-03 09:29:03.247] ASSET: Sending asset `tgui.bundle.js` to client `RiotScopez` as `asset.5a806c2cdc0e4d35c94371aedd1e5f4a.js`
+[2024-04-03 09:29:42.448] GAME: TIDI: 0.666667;0.61297;0.486691;0.213027
+[2024-04-03 09:30:05.376] ASSET: Sending asset `spritesheet_vending.css` to client `RiotScopez` as `asset.1b56c2f325d0d916653577d277869417.css`
+[2024-04-03 09:30:05.376] ASSET: Sending asset `vending_32x32.png` to client `RiotScopez` as `asset.b94e67fa26a58fc1a2edf14c6ad80e51.png`
+[2024-04-03 09:30:05.376] ASSET: Sending asset `vending_64x32.png` to client `RiotScopez` as `asset.c19dfd96778d4d5eef9e037c6563c1c3.png`
+[2024-04-03 09:30:05.376] ASSET: Sending asset `vending_48x48.png` to client `RiotScopez` as `asset.5d07ab806e56ec404c08fd34e69bf9c8.png`
+[2024-04-03 09:30:30.803] ASSET: Sending asset `asset.d516c6cb3293ea24d4a1737318251153.png` to client `RiotScopez` as `asset.d516c6cb3293ea24d4a1737318251153.png`
+[2024-04-03 09:30:42.580] GAME: TIDI: 0.166667;0.479079;0.485168;0.240241
+[2024-04-03 09:30:49.735] ASSET: Sending asset `asset.cfabd14aa3b9532eac3ad28f9256212d.png` to client `RiotScopez` as `asset.cfabd14aa3b9532eac3ad28f9256212d.png`
+[2024-04-03 09:31:01.543] ASSET: Sending asset `asset.5af11cc5b4c6bf51c1bbb03d6032a134.png` to client `RiotScopez` as `asset.5af11cc5b4c6bf51c1bbb03d6032a134.png`
+[2024-04-03 09:31:16.433] ASSET: Sending asset `asset.94c2ee2f1bfb75525240c34e734828c2.png` to client `RiotScopez` as `asset.94c2ee2f1bfb75525240c34e734828c2.png`
+[2024-04-03 09:31:38.574] ASSET: Sending asset `asset.29b0e86bcdcf3814ddb65d71b4ebab0a.png` to client `RiotScopez` as `asset.29b0e86bcdcf3814ddb65d71b4ebab0a.png`
+[2024-04-03 09:31:42.592] GAME: TIDI: 0;0.335355;0.455206;0.261738
+[2024-04-03 09:32:03.055] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 09:32:42.596] GAME: TIDI: 0;0.234749;0.411114;0.276675
+[2024-04-03 09:33:07.835] ASSET: Sending asset `asset.13fb934a784201c8e2fdafab35124950.png` to client `RiotScopez` as `asset.13fb934a784201c8e2fdafab35124950.png`
+[2024-04-03 09:33:37.742] ASSET: Sending asset `asset.80140c74128fefeb75d2a0f6271aa589.png` to client `RiotScopez` as `asset.80140c74128fefeb75d2a0f6271aa589.png`
+[2024-04-03 09:33:42.425] ASSET: Sending asset `asset.47765abde2cb8a8dca4a48d88a5f0627.png` to client `RiotScopez` as `asset.47765abde2cb8a8dca4a48d88a5f0627.png`
+[2024-04-03 09:33:42.603] GAME: TIDI: 0.166667;0.214324;0.371756;0.286184
+[2024-04-03 09:34:12.582] ASSET: Sending asset `asset.ae664f4758cf86efbe02f0e552f47c3a.png` to client `RiotScopez` as `asset.ae664f4758cf86efbe02f0e552f47c3a.png`
+[2024-04-03 09:34:22.128] ASSET: Sending asset `asset.9405104ca3e3ec2d298b9109a700dbbe.png` to client `RiotScopez` as `asset.9405104ca3e3ec2d298b9109a700dbbe.png`
+[2024-04-03 09:34:26.707] ASSET: Sending asset `asset.2e2925ab979d7ececa120a3c35149ed4.png` to client `RiotScopez` as `asset.2e2925ab979d7ececa120a3c35149ed4.png`
+[2024-04-03 09:34:46.450] GAME: TIDI: 6.33333;2.05003;0.70741;0.328306
+[2024-04-03 09:34:49.197] ASSET: Sending asset `asset.c18019b1b97f501d6ec30c0dd66620f7.png` to client `RiotScopez` as `asset.c18019b1b97f501d6ec30c0dd66620f7.png`
+[2024-04-03 09:34:49.199] ASSET: Sending asset `asset.a21591c0ef5f15b685e1afd26993f7ab.png` to client `RiotScopez` as `asset.a21591c0ef5f15b685e1afd26993f7ab.png`
+[2024-04-03 09:35:01.463] ASSET: Sending asset `asset.d3cd23835fe266b7d2f0b2cffeb557f5.png` to client `RiotScopez` as `asset.d3cd23835fe266b7d2f0b2cffeb557f5.png`
+[2024-04-03 09:35:46.894] GAME: TIDI: 0.666667;1.63502;0.892932;0.384769
+[2024-04-03 09:36:46.897] GAME: TIDI: 0;1.14451;0.943248;0.440617
+[2024-04-03 09:36:49.361] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 09:37:04.329] ADMIN: RiotScopez/(Amber) created 1 /obj/item/weapon/gun/projectile/smartgun/loaded
+[2024-04-03 09:37:07.881] ASSET: Sending asset `asset.1096166a7794565e503dbca73dae1ed5.png` to client `RiotScopez` as `asset.1096166a7794565e503dbca73dae1ed5.png`
+[2024-04-03 09:37:21.886] ADMIN: RiotScopez/(Amber) created 1 /obj/item/weapon/gun/projectile/automatic/serdy/vityazb
+[2024-04-03 09:37:24.313] ADMIN: RiotScopez/(Amber) created 1 /obj/item/weapon/gun/projectile/automatic/serdy/vityaz
+[2024-04-03 09:37:27.383] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 09:37:28.811] ADMIN: RiotScopez/(Amber) deleted WKHM 'Vityaz-B' at (93,90,14)
+[2024-04-03 09:37:33.063] ADMIN: RiotScopez/(Amber) deleted WKHM 'Vityaz' at (93,90,14)
+[2024-04-03 09:37:42.719] ADMIN: RiotScopez/(Amber) created 1 /obj/item/weapon/gun/projectile/automatic/serdy/memegun
+[2024-04-03 09:37:46.676] ADMIN: RiotScopez/(Amber) deleted Hardbass Special at (93,90,14)
+[2024-04-03 09:37:46.921] GAME: TIDI: 0.166667;0.851159;0.92483;0.489038
+[2024-04-03 09:37:53.380] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 09:37:55.162] ADMIN: RiotScopez/(Amber) created 1 /obj/item/weapon/gun/projectile/automatic/serdy/krinkov
+[2024-04-03 09:37:59.774] ADMIN: RiotScopez/(Amber) deleted Krinkov at (93,90,14)
+[2024-04-03 09:38:01.358] ADMIN: RiotScopez/(Amber) created 1 /obj/item/weapon/gun/projectile/automatic/serdy/asval
+[2024-04-03 09:38:04.595] ASSET: Sending asset `asset.938c64cddf9c5e86414166d8365a3e65.png` to client `RiotScopez` as `asset.938c64cddf9c5e86414166d8365a3e65.png`
+[2024-04-03 09:38:11.652] ADMIN: RiotScopez/(Amber) deleted AS-VAL at (93,90,14)
+[2024-04-03 09:38:15.639] ADMIN: RiotScopez/(Amber) created 1 /obj/item/weapon/gun/projectile/automatic/sol
+[2024-04-03 09:38:18.846] ADMIN: RiotScopez/(Amber) deleted the �"Sol" SMG at (93,90,14)
+[2024-04-03 09:38:32.802] ADMIN: RiotScopez/(Amber) created 1 /obj/item/weapon/gun/projectile/shotgun/doublebarrel/sawn/alt/holy
+[2024-04-03 09:38:36.017] ADMIN: RiotScopez/(Amber) deleted the sawn-off shotgun at (93,90,14)
+[2024-04-03 09:38:46.922] GAME: TIDI: 0;0.595811;0.859027;0.526037
+[2024-04-03 09:39:08.155] ADMIN: RiotScopez/(Amber) <span class='name'>Amber</span> left ghost/observe mode. 
+[2024-04-03 09:39:08.155] ACCESS OUT: INVALID/(Amber) - IP:146.115.147.185 - CID:Logged Out - BYOND Logged Out
+[2024-04-03 09:39:08.155] ACCESS IN: RiotScopez/(new player) - IP:146.115.147.185 - CID:1871707424 - BYOND v515
+[2024-04-03 09:39:46.928] GAME: TIDI: 0;0.417068;0.770635;0.550497
+[2024-04-03 09:40:39.393] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 09:40:46.929] GAME: TIDI: 0;0.291948;0.674897;0.562937
+[2024-04-03 09:40:50.907] GAME: TRAITS riotscopez/(Katha Tennant) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/darksight;/datum/trait/neutral/bloodsucker_freeform;/datum/trait/neutral/dominate_predator;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore,;/datum/trait/neutral/nutritiongrow
+[2024-04-03 09:41:48.960] GAME: TIDI: 3.33333;1.20436;0.780791;0.584722
+[2024-04-03 09:42:49.829] GAME: TIDI: 1.5;1.29305;0.883243;0.614574
+[2024-04-03 09:43:55.927] GAME: TIDI: 10.1667;3.95514;1.49762;0.702879
+[2024-04-03 09:44:40.316] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 09:45:01.496] GAME: TIDI: 9.16667;5.5186;2.30182;0.862773
+[2024-04-03 09:45:23.968] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 09:46:07.108] GAME: TIDI: 9.5;6.71302;3.18406;1.0949
+[2024-04-03 09:46:31.608] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 09:47:04.472] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 09:47:12.761] GAME: TIDI: 9.33333;7.49911;4.04707;1.39012
+[2024-04-03 09:47:32.443] GAME: TRAITS riotscopez/(Sylvexa) with: nothing
+[2024-04-03 09:47:42.589] GAME: TRAITS riotscopez/(Sylvexa) with: nothing
+[2024-04-03 09:47:47.110] GAME: TRAITS riotscopez/(Sylvexa) with: nothing
+[2024-04-03 09:47:51.816] GAME: TRAITS riotscopez/(Sylvexa) with: nothing
+[2024-04-03 09:48:17.021] GAME: TRAITS riotscopez/(Sylvexa) with: nothing
+[2024-04-03 09:48:20.032] GAME: TIDI: 12.1667;8.89938;5.01753;1.75286
+[2024-04-03 09:48:28.748] GAME: TRAITS riotscopez/(Sylvexa) with: nothing
+[2024-04-03 09:48:38.425] GAME: TRAITS riotscopez/(Sylvexa) with: nothing
+[2024-04-03 09:49:03.211] GAME: TRAITS riotscopez/(Sylvexa) with: nothing
+[2024-04-03 09:49:22.207] GAME: TIDI: 3.66667;7.32957;5.47994;2.12557
+[2024-04-03 09:49:44.675] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 09:50:02.285] GAME: TRAITS riotscopez/(Sylvexa) with: nothing
+[2024-04-03 09:50:12.370] GAME: TRAITS riotscopez/(Sylvexa) with: nothing
+[2024-04-03 09:50:19.722] GAME: TRAITS riotscopez/(Sylvexa) with: nothing
+[2024-04-03 09:50:23.088] GAME: TIDI: 1.33333;5.5307;5.49009;2.46202
+[2024-04-03 09:50:31.451] GAME: TRAITS riotscopez/(Sylvexa) with: nothing
+[2024-04-03 09:50:35.429] GAME: TRAITS riotscopez/(Sylvexa) with: nothing
+[2024-04-03 09:51:05.967] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 09:51:23.510] GAME: TIDI: 0.833333;4.12149;5.21637;2.73745
+[2024-04-03 09:52:01.725] GAME: TRAITS riotscopez/(Skyler Skoll) with: nothing
+[2024-04-03 09:52:23.958] GAME: TIDI: 0.666667;3.08504;4.7901;2.94272
+[2024-04-03 09:52:54.182] GAME: TRAITS riotscopez/(Skyler Skoll) with: nothing
+[2024-04-03 09:52:54.931] GAME: TRAITS riotscopez/(Skyler Skoll) with: nothing
+[2024-04-03 09:52:55.660] GAME: TRAITS riotscopez/(Skyler Skoll) with: nothing
+[2024-04-03 09:53:00.028] GAME: TRAITS riotscopez/(Skyler Skoll) with: nothing
+[2024-04-03 09:53:01.498] GAME: TRAITS riotscopez/(Skyler Skoll) with: nothing
+[2024-04-03 09:53:02.224] GAME: TRAITS riotscopez/(Skyler Skoll) with: nothing
+[2024-04-03 09:53:03.008] GAME: TRAITS riotscopez/(Skyler Skoll) with: nothing
+[2024-04-03 09:53:06.376] GAME: TRAITS riotscopez/(Skyler Skoll) with: nothing
+[2024-04-03 09:53:18.123] GAME: TRAITS riotscopez/(Skyler Skoll) with: nothing
+[2024-04-03 09:53:18.896] GAME: TRAITS riotscopez/(Skyler Skoll) with: nothing
+[2024-04-03 09:53:19.773] GAME: TRAITS riotscopez/(Skyler Skoll) with: nothing
+[2024-04-03 09:53:20.464] GAME: TRAITS riotscopez/(Skyler Skoll) with: nothing
+[2024-04-03 09:53:24.671] GAME: TRAITS riotscopez/(Skyler Skoll) with: nothing
+[2024-04-03 09:53:26.877] GAME: TIDI: 4.83333;3.60953;4.55399;3.10385
+[2024-04-03 09:53:27.339] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 09:54:06.629] GAME: TRAITS riotscopez/(Skyler Skoll) with: nothing
+[2024-04-03 09:54:26.263] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 09:54:27.796] GAME: TIDI: 1.5;2.97667;4.23852;3.21731
+[2024-04-03 09:55:24.283] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 09:55:27.822] GAME: TIDI: 0.166667;2.13367;3.81755;3.27734
+[2024-04-03 09:56:08.298] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 09:56:27.934] GAME: TIDI: 0.166667;1.54357;3.36276;3.28588
+[2024-04-03 09:57:28.213] GAME: TIDI: 0.5;1.2305;2.9363;3.25092
+[2024-04-03 09:58:00.696] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 09:58:28.249] GAME: TIDI: 0;0.861348;2.52131;3.17796
+[2024-04-03 09:58:51.315] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 09:58:55.631] GAME: TRAITS riotscopez/(Katha Tennant) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/darksight;/datum/trait/neutral/bloodsucker_freeform;/datum/trait/neutral/dominate_predator;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore,;/datum/trait/neutral/nutritiongrow
+[2024-04-03 09:59:04.317] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 09:59:12.996] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 09:59:24.909] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 09:59:29.715] GAME: TIDI: 2.5;1.35294;2.28764;3.08893
+[2024-04-03 09:59:50.979] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 09:59:57.163] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:00:01.173] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:00:04.946] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:00:08.433] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:00:09.246] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 10:00:27.923] GAME: TRAITS riotscopez/(Katha Tennant) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/darksight;/datum/trait/neutral/bloodsucker_freeform;/datum/trait/neutral/dominate_predator;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore,;/datum/trait/neutral/nutritiongrow
+[2024-04-03 10:00:30.960] GAME: TIDI: 2;1.54706;2.13952;2.99399
+[2024-04-03 10:00:43.423] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 10:00:43.756] GAME: TRAITS riotscopez/(Katha Tennant) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/darksight;/datum/trait/neutral/bloodsucker_freeform;/datum/trait/neutral/dominate_predator;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore,;/datum/trait/neutral/nutritiongrow
+[2024-04-03 10:00:57.810] GAME: TRAITS riotscopez/(Katha Tennant) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/darksight;/datum/trait/neutral/bloodsucker_freeform;/datum/trait/neutral/dominate_predator;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore,;/datum/trait/neutral/nutritiongrow
+[2024-04-03 10:01:07.766] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:01:08.176] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 10:01:16.181] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 10:01:19.016] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:01:26.584] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:01:28.595] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 10:01:32.125] GAME: TIDI: 2;1.68294;2.04821;2.89941
+[2024-04-03 10:01:32.604] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:01:35.209] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:01:37.892] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:01:48.771] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:01:53.949] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:01:57.227] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:02:00.517] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:02:03.132] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:02:05.775] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:02:10.083] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:02:13.173] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:02:19.412] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:02:22.978] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:02:26.565] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:02:29.911] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:02:35.067] GAME: TIDI: 4.83333;2.62806;2.16418;2.82589
+[2024-04-03 10:02:36.398] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:02:43.931] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:02:48.135] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:02:51.557] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:02:55.863] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:03:00.253] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:03:04.740] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:03:10.667] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:03:21.516] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:03:31.416] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:03:36.943] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:03:37.363] GAME: TIDI: 3.83333;2.98964;2.32927;2.77623
+[2024-04-03 10:03:38.380] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:03:42.784] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:03:44.555] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:03:55.139] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:03:59.673] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:04:04.973] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:04:07.899] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:04:13.120] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:04:17.090] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:04:25.090] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:04:31.448] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:04:34.953] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:04:40.028] GAME: TIDI: 4.5;3.44275;2.55197;2.7538
+[2024-04-03 10:04:40.927] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:04:43.163] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:04:48.815] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:04:51.179] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 10:04:51.387] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:04:56.225] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:05:00.466] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:05:04.487] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:05:06.936] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:05:08.488] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:05:09.720] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:05:19.580] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:05:21.012] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:05:28.744] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:05:34.080] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:05:36.533] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:05:39.598] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:05:43.329] GAME: TIDI: 5.5;4.05992;2.85356;2.76378
+[2024-04-03 10:05:45.983] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:05:48.740] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:05:53.017] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:05:57.916] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:05:59.821] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:06:08.047] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:06:12.961] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 10:06:14.555] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:06:21.229] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 10:06:27.037] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:06:45.061] GAME: TIDI: 2.83333;3.69195;3.02124;2.78952
+[2024-04-03 10:06:51.583] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:06:53.730] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 10:06:54.700] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:07:02.085] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:07:11.824] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:07:18.118] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:07:21.138] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:07:26.365] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:07:29.315] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:07:33.355] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:07:35.868] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:07:47.531] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:07:47.553] ACCESS OUT: INVALID/(new player) - IP:146.115.147.185 - CID:Logged Out - BYOND Logged Out
+[2024-04-03 10:07:47.553] ACCESS IN: RiotScopez/(Skyler Skoll) - IP:146.115.147.185 - CID:1871707424 - BYOND v515
+[2024-04-03 10:07:48.523] GAME: JOINED RiotScopez/(Skyler Skoll) as "Security Officer"
+[2024-04-03 10:07:48.524] GAME: SPECIES RiotScopez/(Skyler Skoll) is a: "Custom Species"
+[2024-04-03 10:07:49.489] GAME: TIDI: 7.33333;4.78436;3.37386;2.84795
+[2024-04-03 10:08:04.483] ADMIN: RiotScopez/(Skyler Skoll) modified Skyler Skoll's nutrition from 219.65 to 1000
+[2024-04-03 10:08:31.365] ADMIN: RiotScopez/(Skyler Skoll) has changed RiotScopez/(Skyler Skoll)'s size multiplier to 4.
+[2024-04-03 10:08:50.167] GAME: TIDI: 1.16667;3.69905;3.4389;2.90705
+[2024-04-03 10:09:24.776] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 10:09:50.316] GAME: TIDI: 0.333333;2.68934;3.28899;2.94524
+[2024-04-03 10:10:50.508] GAME: TIDI: 0.333333;1.98254;3.0277;2.95349
+[2024-04-03 10:11:50.642] GAME: TIDI: 0.166667;1.43778;2.70971;2.92911
+[2024-04-03 10:12:11.499] ASSET: Sending asset `asset.33f1a4b918a3899f4f0eafba0a2a6f99.png` to client `RiotScopez` as `asset.33f1a4b918a3899f4f0eafba0a2a6f99.png`
+[2024-04-03 10:12:21.227] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 10:12:31.216] ASSET: Sending asset `asset.59616b6484c0a501a5d0d414cfdcd7a3.png` to client `RiotScopez` as `asset.59616b6484c0a501a5d0d414cfdcd7a3.png`
+[2024-04-03 10:12:31.331] ASSET: Sending asset `asset.d1fd5c581601314b7bbffd28f16ad965.png` to client `RiotScopez` as `asset.d1fd5c581601314b7bbffd28f16ad965.png`
+[2024-04-03 10:12:31.456] ASSET: Sending asset `asset.14decc880fb21ed9fb443f15f56f5096.png` to client `RiotScopez` as `asset.14decc880fb21ed9fb443f15f56f5096.png`
+[2024-04-03 10:12:41.636] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 10:12:51.170] GAME: TIDI: 0.833333;1.25644;2.41906;2.87811
+[2024-04-03 10:13:01.764] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 10:13:37.892] SUBTLE: RiotScopez/(Skyler Skoll) (129,175,2): rubs their stomach.
+[2024-04-03 10:13:51.335] GAME: TIDI: 0.333333;0.97951;2.13115;2.80341
+[2024-04-03 10:13:57.814] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 10:14:05.456] EMOTE: INVALID/(Noodle) (136,173,2): <B>Noodle</B> hisses.
+[2024-04-03 10:14:11.698] ACCESS OUT: INVALID/(Skyler Skoll) - IP:146.115.147.185 - CID:Logged Out - BYOND Logged Out
+[2024-04-03 10:14:11.698] ACCESS IN: RiotScopez/(Skyler Skoll) - IP:146.115.147.185 - CID:1871707424 - BYOND v515
+[2024-04-03 10:14:11.702] ADMIN: INVALID/(Skyler Skoll) RiotScopez/(Skyler Skoll) admin-ghosted.
+[2024-04-03 10:14:18.691] ADMIN: RiotScopez/(Skyler Skoll) <span class='name'>Skyler Skoll</span> left ghost/observe mode. 
+[2024-04-03 10:14:18.691] ACCESS OUT: INVALID/(Skyler Skoll) - IP:146.115.147.185 - CID:Logged Out - BYOND Logged Out
+[2024-04-03 10:14:18.691] ACCESS IN: RiotScopez/(new player) - IP:146.115.147.185 - CID:1871707424 - BYOND v515
+[2024-04-03 10:14:20.731] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:14:41.341] GAME: TRAITS riotscopez/(Sugmuk Ozers) with: nothing
+[2024-04-03 10:14:41.984] GAME: TRAITS riotscopez/(Sugmuk Ozers) with: nothing
+[2024-04-03 10:14:42.269] GAME: TRAITS riotscopez/(Sugmuk Ozers) with: nothing
+[2024-04-03 10:14:42.522] GAME: TRAITS riotscopez/(Sugmuk Ozers) with: nothing
+[2024-04-03 10:14:52.203] GAME: TIDI: 1.5;1.13566;1.93205;2.71627
+[2024-04-03 10:14:54.826] GAME: TRAITS riotscopez/(Sugmuk Ozers) with: nothing
+[2024-04-03 10:14:58.895] GAME: TRAITS riotscopez/(Sugmuk Ozers) with: nothing
+[2024-04-03 10:15:52.894] GAME: TIDI: 1;1.09496;1.76463;2.62111
+[2024-04-03 10:16:27.436] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 10:16:52.983] GAME: TIDI: 0.166667;0.816472;1.575;2.5165
+[2024-04-03 10:16:57.445] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 10:17:54.017] GAME: TIDI: 1.83333;1.12153;1.48431;2.41328
+[2024-04-03 10:18:07.032] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:18:17.228] ADMIN: RiotScopez/(new player) <span class='name'>RiotScopez</span> entered ghost/observe mode. 
+[2024-04-03 10:18:17.228] ACCESS OUT: INVALID/(new player) - IP:146.115.147.185 - CID:Logged Out - BYOND Logged Out
+[2024-04-03 10:18:17.228] ACCESS IN: RiotScopez/(Zoe Khadzhiev) - IP:146.115.147.185 - CID:1871707424 - BYOND v515
+[2024-04-03 10:18:41.128] ADMIN: RiotScopez/(Zoe Khadzhiev) RiotScopez/(Zoe Khadzhiev) admin cryo'd @RiotScopez/(Skyler Skoll).
+[2024-04-03 10:18:43.415] GAME: CRYO INVALID/(Skyler Skoll) cryo'd with advanced device power cell (/obj/item/weapon/cell/device/weapon)
+[2024-04-03 10:18:43.415] GAME: CRYO INVALID/(Skyler Skoll) cryo'd with officer armor vest (/obj/item/clothing/suit/storage/vest/officer)
+[2024-04-03 10:18:43.417] GAME: CRYO INVALID/(Skyler Skoll) cryo'd with device power cell (/obj/item/weapon/cell/device)
+[2024-04-03 10:18:43.419] GAME: CRYO INVALID/(Skyler Skoll) cryo'd with taser gun (/obj/item/weapon/gun/energy/taser)
+[2024-04-03 10:18:43.419] GAME: CRYO INVALID/(Skyler Skoll) cryo'd with runner's coat (/obj/item/clothing/suit/neo_runner_coat)
+[2024-04-03 10:18:43.420] ADMIN: RiotScopez/(Zoe Khadzhiev) INVALID/(Skyler Skoll) (Security Contractor) entered cryostorage.
+[2024-04-03 10:18:46.078] ADMIN: RiotScopez/(Zoe Khadzhiev) <span class='name'>Zoe Khadzhiev</span> left ghost/observe mode. 
+[2024-04-03 10:18:46.078] ACCESS OUT: INVALID/(Zoe Khadzhiev) - IP:146.115.147.185 - CID:Logged Out - BYOND Logged Out
+[2024-04-03 10:18:46.079] ACCESS IN: RiotScopez/(new player) - IP:146.115.147.185 - CID:1871707424 - BYOND v515
+[2024-04-03 10:18:47.982] GAME: TRAITS riotscopez/(Skyler Skoll) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/emp_resist;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/synth_chemfurnace;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/trashcan;/datum/trait/neutral/synth_ethanolburner;/datum/trait/neutral/hard_vore;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/hardfeet;/datum/trait/neutral/hide;/datum/trait/negative/minor_burn_weak,;/datum/trait/negative/deep_sleeper
+[2024-04-03 10:18:55.021] GAME: TIDI: 1.66667;1.28507;1.44446;2.3164
+[2024-04-03 10:19:55.485] GAME: TIDI: 0.666667;1.09955;1.37548;2.22231
+[2024-04-03 10:20:55.536] GAME: TIDI: 0.166667;0.819685;1.26432;2.12651
+[2024-04-03 10:21:40.669] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 10:21:57.367] GAME: TIDI: 3;1.47378;1.30621;2.04448
+[2024-04-03 10:22:01.833] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 10:22:37.227] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 10:23:00.162] GAME: TIDI: 4.66667;2.43165;1.5313;1.99316
+[2024-04-03 10:24:00.466] GAME: TIDI: 0.5;1.85215;1.59547;1.95339
+[2024-04-03 10:24:16.102] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 10:24:45.271] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 10:24:51.267] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 10:25:02.918] GAME: TIDI: 4.16667;2.54651;1.78568;1.93662
+[2024-04-03 10:25:11.382] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 10:25:34.726] GAME: TRAITS riotscopez/(Zoe Khadzhiev) with: nothing
+[2024-04-03 10:25:43.814] GAME: TRAITS riotscopez/(Zoe Khadzhiev) with: nothing
+[2024-04-03 10:25:52.220] GAME: TRAITS riotscopez/(Zoe Khadzhiev) with: nothing
+[2024-04-03 10:25:56.870] GAME: TRAITS riotscopez/(Zoe Khadzhiev) with: nothing
+[2024-04-03 10:26:03.584] GAME: TIDI: 1;2.08255;1.84505;1.92746
+[2024-04-03 10:26:03.943] GAME: TRAITS riotscopez/(Zoe Khadzhiev) with: nothing
+[2024-04-03 10:26:20.220] GAME: TRAITS riotscopez/(Zoe Khadzhiev) with: nothing
+[2024-04-03 10:26:24.126] GAME: TRAITS riotscopez/(Zoe Khadzhiev) with: nothing
+[2024-04-03 10:26:31.702] GAME: TRAITS riotscopez/(Zoe Khadzhiev) with: nothing
+[2024-04-03 10:26:36.084] GAME: TRAITS riotscopez/(Zoe Khadzhiev) with: nothing
+[2024-04-03 10:26:39.843] GAME: TRAITS riotscopez/(Zoe Khadzhiev) with: nothing
+[2024-04-03 10:26:44.413] GAME: TRAITS riotscopez/(Zoe Khadzhiev) with: nothing
+[2024-04-03 10:26:45.751] GAME: TRAITS riotscopez/(Zoe Khadzhiev) with: nothing
+[2024-04-03 10:26:48.267] GAME: TRAITS riotscopez/(Zoe Khadzhiev) with: nothing
+[2024-04-03 10:27:06.685] GAME: TIDI: 5.16667;3.00779;2.0776;1.94248
+[2024-04-03 10:27:55.326] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 10:28:06.876] GAME: TIDI: 0.333333;2.20545;2.10317;1.95855
+[2024-04-03 10:29:08.679] GAME: TIDI: 3;2.44382;2.1713;1.97982
+[2024-04-03 10:29:31.229] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 10:30:09.123] GAME: TIDI: 0.833333;1.96067;2.12917;1.99476
+[2024-04-03 10:31:09.683] GAME: TIDI: 0.833333;1.62247;2.02783;1.99806
+[2024-04-03 10:32:09.719] GAME: TIDI: 0.166667;1.18573;1.85941;1.9842
+[2024-04-03 10:32:44.202] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 10:33:09.908] GAME: TIDI: 0.333333;0.93001;1.67353;1.95313
+[2024-04-03 10:33:48.474] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 10:34:06.487] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 10:34:10.030] GAME: TIDI: 0.166667;0.701007;1.47903;1.90572
+[2024-04-03 10:34:58.998] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 10:35:10.707] GAME: TIDI: 1.16667;0.840705;1.35136;1.85029
+[2024-04-03 10:36:10.946] GAME: TIDI: 0.333333;0.688493;1.21879;1.78714
+[2024-04-03 10:37:11.063] GAME: TIDI: 0.166667;0.531945;1.08142;1.71656
+[2024-04-03 10:38:11.298] GAME: TIDI: 0.333333;0.472362;0.959608;1.64087
+[2024-04-03 10:38:19.873] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 10:38:37.452] ACCESS OUT: INVALID/(new player) - IP:146.115.147.185 - CID:Logged Out - BYOND Logged Out
+[2024-04-03 10:38:37.452] ACCESS IN: RiotScopez/(Zoe Khadzhiev) - IP:146.115.147.185 - CID:1871707424 - BYOND v515
+[2024-04-03 10:38:38.116] GAME: JOINED RiotScopez/(Zoe Khadzhiev) as "Geneticist"
+[2024-04-03 10:38:38.116] GAME: SPECIES RiotScopez/(Zoe Khadzhiev) is a: "Xenomorph Hybrid"
+[2024-04-03 10:38:55.630] ADMIN: RiotScopez/(Zoe Khadzhiev) has changed RiotScopez/(Zoe Khadzhiev)'s size multiplier to 4.
+[2024-04-03 10:39:07.238] ADMIN: RiotScopez/(Zoe Khadzhiev) modified Zoe Khadzhiev's nutrition from 212.33 to 1000
+[2024-04-03 10:39:13.881] GAME: TIDI: 4.33333;1.63065;1.09382;1.58616
+[2024-04-03 10:39:22.406] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 10:40:07.024] ATTACK: RiotScopez/(Zoe Khadzhiev) against RiotScopez/(Zoe Khadzhiev): Implanted backup implant
+[2024-04-03 10:40:17.293] GAME: TIDI: 5.66667;2.84146;1.44335;1.57188
+[2024-04-03 10:41:18.646] GAME: TIDI: 2.33333;2.68902;1.69248;1.58394
+[2024-04-03 10:42:18.665] GAME: TIDI: 0;1.88231;1.73045;1.59859
+[2024-04-03 10:43:11.282] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 10:43:18.808] GAME: TIDI: 0.333333;1.41762;1.66788;1.60552
+[2024-04-03 10:44:18.923] GAME: TIDI: 0.166667;1.04233;1.54277;1.59925
+[2024-04-03 10:44:59.419] EMOTE: INVALID/(Ian) (135,131,2): <B>Ian</B> chases their tail.
+[2024-04-03 10:45:18.969] GAME: TIDI: 0;0.729634;1.38014;1.57734
+[2024-04-03 10:45:43.062] ASSET: Sending asset `asset.3ba87407d30cc7143366e46187a8c069.png` to client `RiotScopez` as `asset.3ba87407d30cc7143366e46187a8c069.png`
+[2024-04-03 10:46:05.506] EMOTE: INVALID/(Ian) (136,132,2): <B>Ian</B> chases their tail.
+[2024-04-03 10:46:19.038] GAME: TIDI: 0.166667;0.560744;1.21626;1.54123
+[2024-04-03 10:46:43.802] ACCESS OUT: RiotScopez/(Zoe Khadzhiev) - IP:146.115.147.185 - CID:Logged Out - BYOND Logged Out
+[2024-04-03 10:47:19.842] GAME: TIDI: 1.33333;0.792521;1.13152;1.50026
+[2024-04-03 10:47:56.319] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 10:48:19.882] GAME: TIDI: 0;0.554764;1.01617;1.45185
+[2024-04-03 10:48:56.424] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 10:49:19.967] GAME: TIDI: 0.166667;0.438335;0.900599;1.39672
+[2024-04-03 10:49:48.444] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 10:50:14.467] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 10:50:20.008] GAME: TIDI: 0.166667;0.356835;0.791846;1.33624
+[2024-04-03 10:50:40.485] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 10:51:20.038] GAME: TIDI: 0;0.249784;0.683434;1.27096
+[2024-04-03 10:52:20.945] GAME: TIDI: 1.5;0.624849;0.671717;1.21103
+[2024-04-03 10:52:25.415] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 10:53:20.990] GAME: TIDI: 0;0.437394;0.624852;1.15241
+[2024-04-03 10:53:33.460] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 10:54:21.029] GAME: TIDI: 0.166667;0.356176;0.571117;1.09428
+[2024-04-03 10:55:21.103] GAME: TIDI: 0.166667;0.299323;0.516758;1.03653
+[2024-04-03 10:56:21.141] GAME: TIDI: 0;0.209526;0.455312;0.978409
+[2024-04-03 10:57:21.178] GAME: TIDI: 0;0.146668;0.393583;0.919926
+[2024-04-03 10:57:35.685] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 10:57:55.694] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 10:58:21.237] GAME: TIDI: 0.166667;0.152668;0.3454;0.862474
+[2024-04-03 10:59:01.729] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 10:59:21.271] GAME: TIDI: 0;0.106867;0.297694;0.805996
+[2024-04-03 11:00:21.304] GAME: TIDI: 0.166667;0.124807;0.263116;0.751708
+[2024-04-03 11:01:21.389] GAME: TIDI: 0;0.0873651;0.227966;0.699334
+[2024-04-03 11:02:21.492] GAME: TIDI: 0.166667;0.111156;0.204604;0.649861
+[2024-04-03 11:03:21.524] GAME: TIDI: 0.166667;0.127809;0.189245;0.603799
+[2024-04-03 11:04:21.644] GAME: TIDI: 0.166667;0.139466;0.179289;0.561348
+[2024-04-03 11:04:46.118] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 11:05:21.686] GAME: TIDI: 0;0.0976264;0.162957;0.521509
+[2024-04-03 11:06:02.172] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 11:06:21.842] GAME: TIDI: 0.333333;0.168338;0.164033;0.485761
+[2024-04-03 11:06:46.549] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 11:07:22.107] GAME: TIDI: 0.5;0.267837;0.184794;0.455665
+[2024-04-03 11:08:22.149] GAME: TIDI: 0;0.187486;0.185332;0.428631
+[2024-04-03 11:09:22.177] GAME: TIDI: 0;0.13124;0.174514;0.40322
+[2024-04-03 11:10:22.282] GAME: TIDI: 0.166667;0.141868;0.167985;0.379696
+[2024-04-03 11:10:40.762] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 11:11:22.307] GAME: TIDI: 0.166667;0.149308;0.164249;0.358151
+[2024-04-03 11:12:22.332] GAME: TIDI: 0;0.104515;0.152302;0.337566
+[2024-04-03 11:12:28.798] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 11:13:22.446] GAME: TIDI: 0.166667;0.123161;0.146474;0.318457
+[2024-04-03 11:14:22.538] GAME: TIDI: 0.166667;0.136213;0.144422;0.301054
+[2024-04-03 11:15:07.007] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 11:15:22.547] GAME: TIDI: 0;0.0953488;0.134607;0.284409
+[2024-04-03 11:16:22.642] GAME: TIDI: 0.166667;0.116744;0.131035;0.269072
+[2024-04-03 11:17:22.684] GAME: TIDI: 0;0.0817209;0.121172;0.254282
+[2024-04-03 11:18:22.722] GAME: TIDI: 0.166667;0.107205;0.118378;0.240691
+[2024-04-03 11:19:22.829] GAME: TIDI: 0.166667;0.125043;0.119711;0.228593
+[2024-04-03 11:20:22.859] GAME: TIDI: 0;0.0875303;0.113275;0.217061
+[2024-04-03 11:21:13.340] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 11:21:22.883] GAME: TIDI: 0;0.0612712;0.102874;0.205643
+[2024-04-03 11:21:45.508] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 11:22:23.048] GAME: TIDI: 0.333333;0.14289;0.110877;0.196166
+[2024-04-03 11:22:37.519] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 11:22:59.528] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 11:23:23.067] GAME: TIDI: 0;0.100023;0.108707;0.18742
+[2024-04-03 11:24:23.104] GAME: TIDI: 0.166667;0.120016;0.110968;0.179775
+[2024-04-03 11:24:43.758] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 11:25:07.782] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 11:25:23.326] GAME: TIDI: 0.333333;0.184011;0.125577;0.174355
+[2024-04-03 11:26:23.347] GAME: TIDI: 0;0.128808;0.126223;0.169542
+[2024-04-03 11:27:05.841] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 11:27:23.383] GAME: TIDI: 0;0.0901655;0.119012;0.164489
+[2024-04-03 11:28:23.482] GAME: TIDI: 0.166667;0.113116;0.117832;0.159823
+[2024-04-03 11:29:23.499] GAME: TIDI: 0;0.0791811;0.110102;0.154851
+[2024-04-03 11:30:17.995] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 11:30:23.539] GAME: TIDI: 0.166667;0.105427;0.109167;0.150283
+[2024-04-03 11:31:23.649] GAME: TIDI: 0.166667;0.123799;0.112093;0.146464
+[2024-04-03 11:32:23.678] GAME: TIDI: 0;0.0866591;0.107007;0.142518
+[2024-04-03 11:33:06.238] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 11:33:23.782] GAME: TIDI: 0.166667;0.110661;0.107738;0.13904
+[2024-04-03 11:33:32.247] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 11:34:23.856] GAME: TIDI: 0.166667;0.127463;0.111683;0.136304
+[2024-04-03 11:35:23.876] GAME: TIDI: 0;0.0892241;0.107191;0.133393
+[2024-04-03 11:35:54.356] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 11:36:23.895] GAME: TIDI: 0;0.0624569;0.0982441;0.129878
+[2024-04-03 11:37:23.981] GAME: TIDI: 0.166667;0.0937198;0.0973393;0.126624
+[2024-04-03 11:38:16.462] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 11:38:23.996] GAME: TIDI: 0;0.0656039;0.0909922;0.123061
+[2024-04-03 11:38:48.489] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 11:39:08.498] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 11:39:24.034] GAME: TIDI: 0.166667;0.0959227;0.0919783;0.119953
+[2024-04-03 11:40:24.138] GAME: TIDI: 0.166667;0.117146;0.0970118;0.117659
+[2024-04-03 11:40:28.601] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 11:40:30.600] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 11:40:56.613] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 11:41:24.168] GAME: TIDI: 0;0.0820021;0.0940099;0.115294
+[2024-04-03 11:41:56.704] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 11:42:24.200] GAME: TIDI: 0.166667;0.107401;0.0966882;0.113433
+[2024-04-03 11:43:24.271] GAME: TIDI: 0;0.075181;0.0923868;0.111329
+[2024-04-03 11:43:36.745] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 11:43:56.761] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 11:44:24.312] GAME: TIDI: 0.166667;0.102627;0.0944348;0.109639
+[2024-04-03 11:45:24.343] GAME: TIDI: 0;0.0718387;0.0899156;0.107667
+[2024-04-03 11:46:04.881] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 11:46:24.424] GAME: TIDI: 0.166667;0.100287;0.0919899;0.106099
+[2024-04-03 11:47:24.450] GAME: TIDI: 0;0.070201;0.0876321;0.104252
+[2024-04-03 11:48:00.922] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 11:48:24.467] GAME: TIDI: 0;0.0491407;0.0799338;0.101821
+[2024-04-03 11:49:24.550] GAME: TIDI: 0.166667;0.0843985;0.0808267;0.0997212
+[2024-04-03 11:49:53.117] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 11:50:24.675] GAME: TIDI: 0.166667;0.109079;0.0864772;0.0983968
+[2024-04-03 11:51:24.692] GAME: TIDI: 0;0.0763553;0.0844528;0.0970024
+[2024-04-03 11:51:41.230] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 11:52:24.787] GAME: TIDI: 0.166667;0.103449;0.088252;0.0961273
+[2024-04-03 11:53:24.804] GAME: TIDI: 0.166667;0.122414;0.0950844;0.096023
+[2024-04-03 11:54:24.822] GAME: TIDI: 0;0.0856899;0.0932055;0.0957413
+[2024-04-03 11:54:41.351] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 11:54:55.349] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 11:55:24.891] GAME: TIDI: 0;0.0599829;0.086561;0.0948232
+[2024-04-03 11:56:24.944] GAME: TIDI: 0.166667;0.091988;0.0876464;0.0941055
+[2024-04-03 11:57:25.031] GAME: TIDI: 0.166667;0.114392;0.0929954;0.0939945
+[2024-04-03 11:57:57.577] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 11:58:25.137] GAME: TIDI: 0.166667;0.130074;0.100411;0.0946362
+[2024-04-03 11:59:03.611] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 11:59:25.144] GAME: TIDI: 0;0.0910519;0.0985393;0.0950265
+[2024-04-03 12:00:25.191] GAME: TIDI: 0;0.0637363;0.0915787;0.0946817
+[2024-04-03 12:01:09.746] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 12:01:25.281] GAME: TIDI: 0.166667;0.0946154;0.0921861;0.0944322
+[2024-04-03 12:02:25.307] GAME: TIDI: 0.166667;0.116231;0.096995;0.0946884
+[2024-04-03 12:03:25.331] GAME: TIDI: 0;0.0813616;0.0938683;0.0946064
+[2024-04-03 12:03:31.797] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 12:04:25.411] GAME: TIDI: 0.166667;0.106953;0.0964853;0.0947943
+[2024-04-03 12:05:25.442] GAME: TIDI: 0;0.0748672;0.0921617;0.0945311
+[2024-04-03 12:05:37.913] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 12:06:25.492] GAME: TIDI: 0;0.052407;0.0842107;0.093499
+[2024-04-03 12:07:25.580] GAME: TIDI: 0.166667;0.0866849;0.0847056;0.0926197
+[2024-04-03 12:08:02.056] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 12:08:25.602] GAME: TIDI: 0.166667;0.110679;0.0899004;0.0923477
+[2024-04-03 12:09:25.631] GAME: TIDI: 0;0.0774756;0.0874154;0.0918545
+[2024-04-03 12:10:25.724] GAME: TIDI: 0.166667;0.104233;0.0907789;0.0917469
+[2024-04-03 12:11:25.771] GAME: TIDI: 0;0.0729631;0.0872157;0.0912938
+[2024-04-03 12:12:25.801] GAME: TIDI: 0.166667;0.101074;0.0899874;0.0911632
+[2024-04-03 12:13:16.332] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 12:13:25.874] GAME: TIDI: 0;0.0707519;0.0861403;0.0906609
+[2024-04-03 12:13:40.345] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 12:14:25.897] GAME: TIDI: 0;0.0495263;0.0788175;0.0894766
+[2024-04-03 12:14:42.361] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 12:15:25.926] GAME: TIDI: 0.166667;0.0846684;0.0799877;0.0885277
+[2024-04-03 12:15:28.391] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 12:15:52.453] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 12:16:25.995] GAME: TIDI: 0;0.0592679;0.0758438;0.0872593
+[2024-04-03 12:17:00.472] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 12:17:26.035] GAME: TIDI: 0.166667;0.0914875;0.0789725;0.0864306
+[2024-04-03 12:17:40.504] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 12:18:26.061] GAME: TIDI: 0;0.0640413;0.0759863;0.0853862
+[2024-04-03 12:19:26.181] GAME: TIDI: 0.166667;0.0948289;0.0797548;0.084823
+[2024-04-03 12:20:26.206] GAME: TIDI: 0.166667;0.11638;0.0870799;0.0850487
+[2024-04-03 12:20:56.761] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 12:21:26.307] GAME: TIDI: 0.166667;0.131466;0.0959571;0.0861395
+[2024-04-03 12:21:46.882] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 12:22:26.445] GAME: TIDI: 0.166667;0.142026;0.105171;0.0880427
+[2024-04-03 12:23:26.479] GAME: TIDI: 0;0.0994184;0.10402;0.0896405
+[2024-04-03 12:23:46.951] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 12:24:26.488] GAME: TIDI: 0;0.0695929;0.0971349;0.0903899
+[2024-04-03 12:24:34.956] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 12:25:26.555] GAME: TIDI: 0.166667;0.098715;0.097451;0.091096
+[2024-04-03 12:26:26.667] GAME: TIDI: 0.166667;0.119101;0.101781;0.0921645
+[2024-04-03 12:27:26.691] GAME: TIDI: 0;0.0833704;0.0980988;0.0927579
+[2024-04-03 12:27:39.230] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 12:28:07.262] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 12:28:26.799] GAME: TIDI: 0.166667;0.108359;0.100151;0.0934972
+[2024-04-03 12:28:29.269] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 12:29:17.284] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 12:29:26.824] GAME: TIDI: 0.166667;0.125851;0.105291;0.0946766
+[2024-04-03 12:30:05.302] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 12:30:26.845] GAME: TIDI: 0;0.088096;0.101852;0.0953941
+[2024-04-03 12:31:26.938] GAME: TIDI: 0.166667;0.111667;0.103815;0.0962362
+[2024-04-03 12:32:26.972] GAME: TIDI: 0;0.0781671;0.0986855;0.0964811
+[2024-04-03 12:33:26.990] GAME: TIDI: 0;0.0547169;0.0898918;0.0958222
+[2024-04-03 12:34:11.551] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 12:34:19.565] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 12:34:27.094] GAME: TIDI: 0.166667;0.0883019;0.0895738;0.0951974
+[2024-04-03 12:34:45.576] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 12:35:11.652] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 12:35:27.185] GAME: TIDI: 0.166667;0.111811;0.0940213;0.0950797
+[2024-04-03 12:35:58.659] GAME: Autotransfer has called the shuttle.
+[2024-04-03 12:36:27.329] GAME: TIDI: 0.333333;0.178268;0.110871;0.0966588
+[2024-04-03 12:37:03.870] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 12:37:27.413] GAME: TIDI: 0.166667;0.174788;0.123654;0.0993584
+[2024-04-03 12:38:27.452] GAME: TIDI: 0;0.122351;0.123393;0.101762
+[2024-04-03 12:39:27.475] GAME: TIDI: 0;0.0856459;0.115844;0.10317
+[2024-04-03 12:40:06.019] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 12:40:27.610] GAME: TIDI: 0.249792;0.13489;0.119653;0.104818
+[2024-04-03 12:41:27.983] GAME: TIDI: 0.5;0.244423;0.144607;0.108797
+[2024-04-03 12:41:42.407] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 12:42:27.999] GAME: TIDI: 0;0.171096;0.149905;0.112908
+[2024-04-03 12:42:42.485] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 12:43:28.080] GAME: TIDI: 0.166667;0.169767;0.153877;0.117005
+[2024-04-03 12:44:28.120] GAME: TIDI: 0.166667;0.168837;0.156869;0.120991
+[2024-04-03 12:45:28.136] GAME: TIDI: 0;0.118186;0.149133;0.123805
+[2024-04-03 12:45:48.618] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 12:46:28.461] GAME: TIDI: 0.5;0.23273;0.165852;0.12801
+[2024-04-03 12:46:52.898] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 12:47:08.906] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 12:47:28.508] GAME: TIDI: 0.166667;0.212911;0.175264;0.132736
+[2024-04-03 12:48:12.944] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 12:48:28.527] GAME: TIDI: 0;0.149038;0.170019;0.136464
+[2024-04-03 12:48:34.941] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 12:48:51.022] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 12:48:59.045] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 12:49:28.706] GAME: TIDI: 0.333333;0.204326;0.17688;0.140505
+[2024-04-03 12:50:28.967] GAME: TIDI: 0.333333;0.243029;0.19011;0.145466
+[2024-04-03 12:50:47.387] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 12:51:28.978] GAME: TIDI: 0;0.17012;0.186112;0.149531
+[2024-04-03 12:51:44.811] GAME: Antagonists at round end were...
+[2024-04-03 12:52:29.291] GAME: TIDI: 0.5;0.269084;0.202706;0.154848
+[2024-04-03 12:53:29.379] GAME: TIDI: 0.166667;0.238359;0.209837;0.160347
+[2024-04-03 12:53:37.791] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 12:54:29.424] GAME: TIDI: 0.166667;0.216851;0.21124;0.165436
+[2024-04-03 12:55:17.873] EMOTE: INVALID/(Cleanbot) (197,137,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 12:55:29.467] GAME: TIDI: 0;0.151796;0.199351;0.168828
