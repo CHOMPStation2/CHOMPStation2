@@ -175,7 +175,11 @@
 
 	else if(href_list["voice_freq"])
 		var/list/preset_voice_freqs = list("high" = MAX_VOICE_FREQ, "middle-high" = 56250, "middle" = 42500, "middle-low"= 28750, "low" = MIN_VOICE_FREQ, "custom" = 1, "random" = 0)
+<<<<<<< HEAD
 		var/choice = tgui_input_list(user, "What would you like to set your voice frequency to? ([MIN_VOICE_FREQ] - [MAX_VOICE_FREQ])", "Voice Frequency", preset_voice_freqs) //ChompEDIT - usr removal
+=======
+		var/choice = tgui_input_list(user, "What would you like to set your voice frequency to? ([MIN_VOICE_FREQ] - [MAX_VOICE_FREQ])", "Voice Frequency", preset_voice_freqs)
+>>>>>>> 7be621e7c3 (usr to user part two (#16884))
 		if(!choice)
 			return
 		choice = preset_voice_freqs[choice]
@@ -206,6 +210,7 @@
 			"goon speak pug",
 			"goon speak pugg",
 			"goon speak roach",
+<<<<<<< HEAD
 			"goon speak skelly",
 			"xeno speak") // CHOMPedit
 		var/choice = tgui_input_list(user, "Which set of sounds would you like to use for your character's speech sounds?", "Voice Sounds", possible_voice_types)
@@ -213,6 +218,12 @@
 			pref.voice_sound = "goon speak 1"	//CHOMPEdit - Defaults voice to a less jarring sound
 		else if(!choice)
 			return TOPIC_REFRESH  // CHOMPEdit
+=======
+			"goon speak skelly")
+		var/choice = tgui_input_list(user, "Which set of sounds would you like to use for your character's speech sounds?", "Voice Sounds", possible_voice_types)
+		if(!choice)
+			pref.voice_sound = "beep-boop"
+>>>>>>> 7be621e7c3 (usr to user part two (#16884))
 		else
 			pref.voice_sound = choice
 		return TOPIC_REFRESH
