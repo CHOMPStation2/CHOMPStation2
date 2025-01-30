@@ -79,7 +79,7 @@
 		return
 
 	if (isnull(H.size_multiplier)) // Why would this ever be the case?
-		to_chat(H, span_warning("The gloves panics and corrects your apparently microscopic size.</span>"))
+		to_chat(H, span_warning("The gloves panics and corrects your apparently microscopic size."))
 		H.resize(RESIZE_NORMAL, ignore_prefs = TRUE)
 		H.update_icons() //Just want the matrix transform
 		return
