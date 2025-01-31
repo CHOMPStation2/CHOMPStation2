@@ -1,0 +1,145 @@
+[2024-05-30 21:39:52.418] START: Starting up data/logs/2024/05-May/30-Thursday/round-17-39-37.
+[2024-05-30 21:39:56.538] DEBUG: Rebuilding Master Controller
+[2024-05-30 21:41:58.637] DEBUG: Load: Could not find news channel Vir News Network to populate news articles.
+[2024-05-30 21:42:52.194] DEBUG: Duplicate firedoors at 160,118,1
+[2024-05-30 21:45:36.596] DEBUG: Initialized shuttle Stargazer (/datum/shuttle/autodock/overmap/stargazer)
+[2024-05-30 21:45:36.606] DEBUG: Initialized shuttle Baby_mammoth (/datum/shuttle/autodock/overmap/baby_mammoth)
+[2024-05-30 21:45:36.613] DEBUG: Initialized shuttle Ursula (/datum/shuttle/autodock/overmap/ursula)
+[2024-05-30 21:45:36.637] DEBUG: Initialized shuttle Needle (/datum/shuttle/autodock/overmap/needle)
+[2024-05-30 21:45:36.645] DEBUG: Initialized shuttle Echidna (/datum/shuttle/autodock/overmap/echidna)
+[2024-05-30 21:45:36.653] DEBUG: Initialized shuttle Space Bus (/datum/shuttle/autodock/overmap/spacebus)
+[2024-05-30 21:45:36.654] DEBUG: Initialized shuttle Junker (/datum/shuttle/autodock/overmap/junker)
+[2024-05-30 21:45:36.660] DEBUG: Initialized shuttle Escape Pod 1 (/datum/shuttle/autodock/ferry/escape_pod/escape_pod1)
+[2024-05-30 21:45:36.666] DEBUG: Initialized shuttle Escape Pod 2 (/datum/shuttle/autodock/ferry/escape_pod/escape_pod2)
+[2024-05-30 21:45:36.672] DEBUG: Initialized shuttle Escape Pod 3 (/datum/shuttle/autodock/ferry/escape_pod/escape_pod3)
+[2024-05-30 21:45:36.678] DEBUG: Initialized shuttle Escape Pod 4 (/datum/shuttle/autodock/ferry/escape_pod/escape_pod4)
+[2024-05-30 21:45:36.684] DEBUG: Initialized shuttle Escape Pod 5 (/datum/shuttle/autodock/ferry/escape_pod/escape_pod5)
+[2024-05-30 21:45:36.690] DEBUG: Initialized shuttle Escape Pod 6 (/datum/shuttle/autodock/ferry/escape_pod/escape_pod6)
+[2024-05-30 21:45:36.698] DEBUG: Initialized shuttle Escape Pod 7 (/datum/shuttle/autodock/ferry/escape_pod/escape_pod7)
+[2024-05-30 21:45:36.705] DEBUG: Initialized shuttle Escape Pod 8 (/datum/shuttle/autodock/ferry/escape_pod/escape_pod8)
+[2024-05-30 21:45:36.713] DEBUG: Initialized shuttle Cryostorage Shuttle (/datum/shuttle/autodock/ferry/escape_pod/escape_pod_cryo)
+[2024-05-30 21:45:36.720] DEBUG: Initialized shuttle Large Escape Pod 1 (/datum/shuttle/autodock/ferry/escape_pod/large_escape_pod1)
+[2024-05-30 21:45:36.727] DEBUG: Initialized shuttle Large Escape Pod 2 (/datum/shuttle/autodock/ferry/escape_pod/large_escape_pod2)
+[2024-05-30 21:45:36.727] DEBUG: Initialized shuttle Arrivals (/datum/shuttle/autodock/ferry/arrivals/southern_cross)
+[2024-05-30 21:45:36.733] DEBUG: Initialized shuttle Escape (/datum/shuttle/autodock/ferry/emergency/centcom)
+[2024-05-30 21:45:36.733] DEBUG: Initialized shuttle Supply (/datum/shuttle/autodock/ferry/supply/cargo)
+[2024-05-30 21:45:36.739] DEBUG: Initialized shuttle Exploration (/datum/shuttle/autodock/ferry/exploration)
+[2024-05-30 21:45:36.745] DEBUG: Initialized shuttle Administration Shuttle (/datum/shuttle/autodock/multi/administration)
+[2024-05-30 21:45:36.751] DEBUG: Initialized shuttle Centcom Transport Shuttle (/datum/shuttle/autodock/multi/centcom)
+[2024-05-30 21:45:36.757] DEBUG: Initialized shuttle Merchant (/datum/shuttle/autodock/multi/merchant)
+[2024-05-30 21:45:36.757] DEBUG: &lt;span class=&#39;danger&#39;&gt;warning: shuttle Skipjack can&#39;t find its controller with tag skipjack_shuttle!&lt;/span&gt;
+[2024-05-30 21:45:36.757] DEBUG: Initialized shuttle Skipjack (/datum/shuttle/autodock/multi/heist)
+[2024-05-30 21:45:36.757] DEBUG: Initialized shuttle Mercenary Ship (/datum/shuttle/autodock/multi/syndicate)
+[2024-05-30 21:45:36.757] DEBUG: Initialized shuttle Ninja Shuttle (/datum/shuttle/autodock/multi/ninja)
+[2024-05-30 21:45:36.763] DEBUG: Initialized shuttle Response Operations Shuttle (/datum/shuttle/autodock/multi/ert)
+[2024-05-30 21:45:36.768] DEBUG: Initialized shuttle Shuttle 3 (/datum/shuttle/autodock/web_shuttle/shuttle3)
+[2024-05-30 21:45:37.022] DEBUG: Generating cloud of 5 carp school overmap event hazards
+[2024-05-30 21:45:37.023] DEBUG: Generating cloud of 8 carp shoal overmap event hazards
+[2024-05-30 21:45:37.025] DEBUG: Generating cloud of 5 carp school overmap event hazards
+[2024-05-30 21:45:37.026] DEBUG: Generating cloud of 8 ion cloud overmap event hazards
+[2024-05-30 21:45:37.027] DEBUG: Generating cloud of 8 ion cloud overmap event hazards
+[2024-05-30 21:45:37.028] DEBUG: Generating cloud of 8 carp shoal overmap event hazards
+[2024-05-30 21:45:37.029] DEBUG: Generating cloud of 8 ion cloud overmap event hazards
+[2024-05-30 21:45:37.030] DEBUG: Generating cloud of 8 ion cloud overmap event hazards
+[2024-05-30 21:45:37.031] DEBUG: Generating cloud of 8 ion cloud overmap event hazards
+[2024-05-30 21:45:37.032] DEBUG: Generating cloud of 16 dust cloud overmap event hazards
+[2024-05-30 21:45:37.035] DEBUG: Generating cloud of 8 carp shoal overmap event hazards
+[2024-05-30 21:45:37.036] DEBUG: Generating cloud of 11 electrical storm overmap event hazards
+[2024-05-30 21:45:37.037] DEBUG: Generating cloud of 16 dust cloud overmap event hazards
+[2024-05-30 21:45:37.040] DEBUG: Generating cloud of 8 carp shoal overmap event hazards
+[2024-05-30 21:45:37.041] DEBUG: Generating cloud of 15 asteroid field overmap event hazards
+[2024-05-30 21:45:37.044] DEBUG: Generating cloud of 11 electrical storm overmap event hazards
+[2024-05-30 21:45:37.045] DEBUG: Generating cloud of 8 ion cloud overmap event hazards
+[2024-05-30 21:45:37.046] DEBUG: Generating cloud of 8 carp shoal overmap event hazards
+[2024-05-30 21:45:37.047] DEBUG: Generating cloud of 8 carp shoal overmap event hazards
+[2024-05-30 21:45:37.047] DEBUG: Generating cloud of 8 carp shoal overmap event hazards
+[2024-05-30 21:45:37.048] DEBUG: Generating cloud of 5 carp school overmap event hazards
+[2024-05-30 21:45:37.049] DEBUG: Generating cloud of 16 dust cloud overmap event hazards
+[2024-05-30 21:45:37.052] DEBUG: Generating cloud of 8 ion cloud overmap event hazards
+[2024-05-30 21:45:37.053] DEBUG: Generating cloud of 8 carp shoal overmap event hazards
+[2024-05-30 21:45:37.054] DEBUG: Generating cloud of 15 asteroid field overmap event hazards
+[2024-05-30 21:45:37.058] DEBUG: Generating cloud of 5 carp school overmap event hazards
+[2024-05-30 21:45:37.059] DEBUG: Generating cloud of 8 ion cloud overmap event hazards
+[2024-05-30 21:45:37.060] DEBUG: Generating cloud of 8 ion cloud overmap event hazards
+[2024-05-30 21:45:37.061] DEBUG: Generating cloud of 5 carp school overmap event hazards
+[2024-05-30 21:45:37.062] DEBUG: Generating cloud of 5 carp school overmap event hazards
+[2024-05-30 21:45:37.063] DEBUG: Generating cloud of 11 electrical storm overmap event hazards
+[2024-05-30 21:45:37.064] DEBUG: Generating cloud of 8 carp shoal overmap event hazards
+[2024-05-30 21:45:37.065] DEBUG: Generating cloud of 5 carp school overmap event hazards
+[2024-05-30 21:45:37.065] DEBUG: Generating cloud of 15 asteroid field overmap event hazards
+[2024-05-30 21:45:37.068] DEBUG: Generating cloud of 8 ion cloud overmap event hazards
+[2024-05-30 21:45:37.069] DEBUG: Generating cloud of 5 carp school overmap event hazards
+[2024-05-30 21:45:37.069] DEBUG: Generating cloud of 8 ion cloud overmap event hazards
+[2024-05-30 21:45:37.070] DEBUG: Generating cloud of 8 ion cloud overmap event hazards
+[2024-05-30 21:45:37.071] DEBUG: Generating cloud of 15 asteroid field overmap event hazards
+[2024-05-30 21:45:37.074] DEBUG: Generating cloud of 15 asteroid field overmap event hazards
+[2024-05-30 21:45:37.077] DEBUG: Generating cloud of 16 dust cloud overmap event hazards
+[2024-05-30 21:45:37.080] DEBUG: Generating cloud of 8 carp shoal overmap event hazards
+[2024-05-30 21:45:37.081] DEBUG: Generating cloud of 8 carp shoal overmap event hazards
+[2024-05-30 21:45:37.082] DEBUG: Generating cloud of 5 carp school overmap event hazards
+[2024-05-30 21:48:23.337] DEBUG: TiDi Starting Log
+[2024-05-30 21:49:58.293] DEBUG: Thor&#39;s weather is now rain, with a temperature of 306.483&amp;deg;K (33.3333&amp;deg;C | 92&amp;deg;F).
+[2024-05-30 21:49:58.293] DEBUG: Thor&#39;s weather forecast is now &#39;overcast, rain,  then overcast&#39;.
+[2024-05-30 21:49:58.620] DEBUG: Sif&#39;s weather is now clear, with a temperature of 266.9&amp;deg;K (-6.25&amp;deg;C | 20.75&amp;deg;F).
+[2024-05-30 21:49:58.621] DEBUG: Sif&#39;s weather forecast is now &#39;overcast, overcast,  then overcast&#39;.
+[2024-05-30 21:49:58.758] DEBUG: Next event of severity Mundane in 39.028 minutes.
+[2024-05-30 21:49:58.758] DEBUG: Next event of severity Moderate in 30 minutes.
+[2024-05-30 21:49:58.758] DEBUG: Next event of severity Major in 100 minutes.
+[2024-05-30 21:55:36.627] DEBUG: Runtime in code/modules/mob/living/carbon/human/human_organs.dm,208: bad gender &lt;A HREF=&#39;?src=[0x2113cc1c];admin_token=79788990509311300716163029677844;viewruntime=[0x2113cc1c]&#39;&gt;[view]&lt;/A&gt;
+[2024-05-30 21:56:05.798] DEBUG: Runtime in code/modules/mob/living/carbon/human/human_organs.dm,208: bad gender &lt;A HREF=&#39;?src=[0x2111cb40];admin_token=79788990509311300716163029677844;viewruntime=[0x2111cb40]&#39;&gt;[view]&lt;/A&gt;
+[2024-05-30 21:58:20.952] DEBUG: Thor&#39;s weather is now overcast, with a temperature of 306.483&amp;deg;K (33.3333&amp;deg;C | 92&amp;deg;F).
+[2024-05-30 21:58:20.952] DEBUG: Thor&#39;s weather forecast is now &#39;rain, overcast,  then rain&#39;.
+[2024-05-30 21:58:20.952] DEBUG: Sif&#39;s weather is now overcast, with a temperature of 266.9&amp;deg;K (-6.25&amp;deg;C | 20.75&amp;deg;F).
+[2024-05-30 21:58:20.952] DEBUG: Sif&#39;s weather forecast is now &#39;overcast, overcast,  then clear&#39;.
+[2024-05-30 22:04:25.127] DEBUG: Sif&#39;s weather is now overcast, with a temperature of 266.9&amp;deg;K (-6.25&amp;deg;C | 20.75&amp;deg;F).
+[2024-05-30 22:04:25.127] DEBUG: Sif&#39;s weather forecast is now &#39;overcast, clear,  then overcast&#39;.
+[2024-05-30 22:08:25.436] DEBUG: Thor&#39;s weather is now rain, with a temperature of 306.483&amp;deg;K (33.3333&amp;deg;C | 92&amp;deg;F).
+[2024-05-30 22:08:25.436] DEBUG: Thor&#39;s weather forecast is now &#39;overcast, rain,  then rain&#39;.
+[2024-05-30 22:12:25.775] DEBUG: Sif&#39;s weather is now overcast, with a temperature of 266.9&amp;deg;K (-6.25&amp;deg;C | 20.75&amp;deg;F).
+[2024-05-30 22:12:25.775] DEBUG: Sif&#39;s weather forecast is now &#39;clear, overcast,  then clear&#39;.
+[2024-05-30 22:14:25.845] DEBUG: Thor&#39;s weather is now overcast, with a temperature of 305.65&amp;deg;K (32.5&amp;deg;C | 90.5&amp;deg;F).
+[2024-05-30 22:14:25.845] DEBUG: Thor&#39;s weather forecast is now &#39;rain, rain,  then rain&#39;.
+[2024-05-30 22:19:26.168] DEBUG: Sif&#39;s weather is now clear, with a temperature of 266.9&amp;deg;K (-6.25&amp;deg;C | 20.75&amp;deg;F).
+[2024-05-30 22:19:26.168] DEBUG: Sif&#39;s weather forecast is now &#39;overcast, clear,  then overcast&#39;.
+[2024-05-30 22:23:26.953] DEBUG: Thor&#39;s weather is now rain, with a temperature of 305.65&amp;deg;K (32.5&amp;deg;C | 90.5&amp;deg;F).
+[2024-05-30 22:23:26.954] DEBUG: Thor&#39;s weather forecast is now &#39;rain, rain,  then rain&#39;.
+[2024-05-30 22:26:27.373] DEBUG: Sif&#39;s weather is now overcast, with a temperature of 266.9&amp;deg;K (-6.25&amp;deg;C | 20.75&amp;deg;F).
+[2024-05-30 22:26:27.373] DEBUG: Sif&#39;s weather forecast is now &#39;clear, overcast,  then light snow&#39;.
+[2024-05-30 22:29:29.118] DEBUG: Thor&#39;s weather is now rain, with a temperature of 305.65&amp;deg;K (32.5&amp;deg;C | 90.5&amp;deg;F).
+[2024-05-30 22:29:29.118] DEBUG: Thor&#39;s weather forecast is now &#39;rain, rain,  then overcast&#39;.
+[2024-05-30 22:32:32.737] DEBUG: Sif&#39;s weather is now clear, with a temperature of 266.9&amp;deg;K (-6.25&amp;deg;C | 20.75&amp;deg;F).
+[2024-05-30 22:32:32.737] DEBUG: Sif&#39;s weather forecast is now &#39;overcast, light snow,  then snow&#39;.
+[2024-05-30 22:35:34.042] DEBUG: Thor&#39;s weather is now rain, with a temperature of 305.65&amp;deg;K (32.5&amp;deg;C | 90.5&amp;deg;F).
+[2024-05-30 22:35:34.043] DEBUG: Thor&#39;s weather forecast is now &#39;rain, overcast,  then overcast&#39;.
+[2024-05-30 22:38:34.931] DEBUG: Sif&#39;s weather is now overcast, with a temperature of 266.9&amp;deg;K (-6.25&amp;deg;C | 20.75&amp;deg;F).
+[2024-05-30 22:38:34.931] DEBUG: Sif&#39;s weather forecast is now &#39;light snow, snow,  then snow&#39;.
+[2024-05-30 22:40:40.130] DEBUG: Thor&#39;s weather is now rain, with a temperature of 305.65&amp;deg;K (32.5&amp;deg;C | 90.5&amp;deg;F).
+[2024-05-30 22:40:40.130] DEBUG: Thor&#39;s weather forecast is now &#39;overcast, overcast,  then overcast&#39;.
+[2024-05-30 22:43:40.499] DEBUG: Sif&#39;s weather is now light snow, with a temperature of 260.025&amp;deg;K (-13.125&amp;deg;C | 8.37497&amp;deg;F).
+[2024-05-30 22:43:40.499] DEBUG: Sif&#39;s weather forecast is now &#39;snow, snow,  then snow&#39;.
+[2024-05-30 22:49:42.192] DEBUG: Thor&#39;s weather is now overcast, with a temperature of 305.65&amp;deg;K (32.5&amp;deg;C | 90.5&amp;deg;F).
+[2024-05-30 22:49:42.192] DEBUG: Thor&#39;s weather forecast is now &#39;overcast, overcast,  then rain&#39;.
+[2024-05-30 22:51:44.829] DEBUG: Sif&#39;s weather is now snow, with a temperature of 246.9&amp;deg;K (-26.25&amp;deg;C | -15.25&amp;deg;F).
+[2024-05-30 22:51:44.829] DEBUG: Sif&#39;s weather forecast is now &#39;snow, snow,  then light snow&#39;.
+[2024-05-30 22:57:48.182] DEBUG: Thor&#39;s weather is now overcast, with a temperature of 305.65&amp;deg;K (32.5&amp;deg;C | 90.5&amp;deg;F).
+[2024-05-30 22:57:48.182] DEBUG: Thor&#39;s weather forecast is now &#39;overcast, rain,  then overcast&#39;.
+[2024-05-30 22:58:48.288] DEBUG: Sif&#39;s weather is now snow, with a temperature of 246.9&amp;deg;K (-26.25&amp;deg;C | -15.25&amp;deg;F).
+[2024-05-30 22:58:48.288] DEBUG: Sif&#39;s weather forecast is now &#39;snow, light snow,  then snow&#39;.
+[2024-05-30 23:03:54.731] DEBUG: Thor&#39;s weather is now overcast, with a temperature of 305.65&amp;deg;K (32.5&amp;deg;C | 90.5&amp;deg;F).
+[2024-05-30 23:03:54.731] DEBUG: Thor&#39;s weather forecast is now &#39;rain, overcast,  then overcast&#39;.
+[2024-05-30 23:07:28.301] DEBUG: Runtime in code/datums/signals.dm,73: Cannot read null._listen_lookup &lt;A HREF=&#39;?src=[0x21147954];admin_token=226351938090034021010310825283108026;viewruntime=[0x21147954]&#39;&gt;[view]&lt;/A&gt;
+[2024-05-30 23:07:45.650] DEBUG: Runtime in code/datums/signals.dm,73: Cannot read null._listen_lookup &lt;A HREF=&#39;?src=[0x211472a4];admin_token=226351938090034021010310825283108026;viewruntime=[0x211472a4]&#39;&gt;[view]&lt;/A&gt;
+[2024-05-30 23:07:50.872] DEBUG: Runtime in code/modules/entopics_vr/entopics.dm,91: Cannot read null.client &lt;A HREF=&#39;?src=[0x21140ab1];admin_token=226351938090034021010310825283108026;viewruntime=[0x21140ab1]&#39;&gt;[view]&lt;/A&gt;
+[2024-05-30 23:08:03.150] DEBUG: Runtime in code/datums/signals.dm,73: Cannot read null._listen_lookup &lt;A HREF=&#39;?src=[0x21011e71];admin_token=226351938090034021010310825283108026;viewruntime=[0x21011e71]&#39;&gt;[view]&lt;/A&gt;
+[2024-05-30 23:08:32.574] DEBUG: Sif&#39;s weather is now snow, with a temperature of 246.9&amp;deg;K (-26.25&amp;deg;C | -15.25&amp;deg;F).
+[2024-05-30 23:08:32.574] DEBUG: Sif&#39;s weather forecast is now &#39;light snow, snow,  then snow&#39;.
+[2024-05-30 23:08:46.989] DEBUG: Runtime in code/datums/signals.dm,73: Cannot read null._listen_lookup &lt;A HREF=&#39;?src=[0x21141bf1];admin_token=226351938090034021010310825283108026;viewruntime=[0x21141bf1]&#39;&gt;[view]&lt;/A&gt;
+[2024-05-30 23:09:11.223] DEBUG: Runtime in code/game/machinery/atmoalter/portable_atmospherics.dm,44: Cannot execute null.react(). &lt;A HREF=&#39;?src=[0x2113d2a0];admin_token=226351938090034021010310825283108026;viewruntime=[0x2113d2a0]&#39;&gt;[view]&lt;/A&gt;
+[2024-05-30 23:09:40.452] DEBUG: Runtime in code/game/machinery/doors/airlock_control.dm,190: Cannot execute null.return pressure(). &lt;A HREF=&#39;?src=[0x210a6d53];admin_token=226351938090034021010310825283108026;viewruntime=[0x210a6d53]&#39;&gt;[view]&lt;/A&gt;
+[2024-05-30 23:10:03.548] DEBUG: Runtime in code/datums/signals.dm,73: Cannot read null._listen_lookup &lt;A HREF=&#39;?src=[0x210a1b7f];admin_token=226351938090034021010310825283108026;viewruntime=[0x210a1b7f]&#39;&gt;[view]&lt;/A&gt;
+[2024-05-30 23:10:06.744] DEBUG: 
+[2024-05-30 23:10:06.753] DEBUG: Clearing DB queries standby:0 active: 0 all: 0
+[2024-05-30 23:10:06.753] DEBUG: Done clearing DB queries standby:0 active: 0 all: 0
+[2024-05-30 23:10:07.178] DEBUG: 
+[2024-05-30 23:10:07.193] DEBUG: Clearing DB queries standby:0 active: 0 all: 0
+[2024-05-30 23:10:07.193] DEBUG: Done clearing DB queries standby:0 active: 0 all: 0

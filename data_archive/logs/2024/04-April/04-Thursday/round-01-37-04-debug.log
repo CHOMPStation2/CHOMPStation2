@@ -1,0 +1,255 @@
+[2024-04-04 05:36:49.947] START: Starting up data/logs/2024/04-April/04-Thursday/round-01-37-04.
+[2024-04-04 05:36:51.637] DEBUG: Rebuilding Master Controller
+[2024-04-04 05:38:27.160] DEBUG: Load: Could not find news channel Vir News Network to populate news articles.
+[2024-04-04 05:39:05.807] DEBUG: Duplicate firedoors at 160,118,1
+[2024-04-04 05:41:28.835] DEBUG: Initialized shuttle Stargazer (/datum/shuttle/autodock/overmap/stargazer)
+[2024-04-04 05:41:28.840] DEBUG: Initialized shuttle Baby_mammoth (/datum/shuttle/autodock/overmap/baby_mammoth)
+[2024-04-04 05:41:28.846] DEBUG: Initialized shuttle Ursula (/datum/shuttle/autodock/overmap/ursula)
+[2024-04-04 05:41:28.942] DEBUG: Initialized shuttle Needle (/datum/shuttle/autodock/overmap/needle)
+[2024-04-04 05:41:28.949] DEBUG: Initialized shuttle Echidna (/datum/shuttle/autodock/overmap/echidna)
+[2024-04-04 05:41:28.956] DEBUG: Initialized shuttle Space Bus (/datum/shuttle/autodock/overmap/spacebus)
+[2024-04-04 05:41:28.957] DEBUG: Initialized shuttle Junker (/datum/shuttle/autodock/overmap/junker)
+[2024-04-04 05:41:28.963] DEBUG: Initialized shuttle Escape Pod 1 (/datum/shuttle/autodock/ferry/escape_pod/escape_pod1)
+[2024-04-04 05:41:28.968] DEBUG: Initialized shuttle Escape Pod 2 (/datum/shuttle/autodock/ferry/escape_pod/escape_pod2)
+[2024-04-04 05:41:28.973] DEBUG: Initialized shuttle Escape Pod 3 (/datum/shuttle/autodock/ferry/escape_pod/escape_pod3)
+[2024-04-04 05:41:28.977] DEBUG: Initialized shuttle Escape Pod 4 (/datum/shuttle/autodock/ferry/escape_pod/escape_pod4)
+[2024-04-04 05:41:28.982] DEBUG: Initialized shuttle Escape Pod 5 (/datum/shuttle/autodock/ferry/escape_pod/escape_pod5)
+[2024-04-04 05:41:28.986] DEBUG: Initialized shuttle Escape Pod 6 (/datum/shuttle/autodock/ferry/escape_pod/escape_pod6)
+[2024-04-04 05:41:28.990] DEBUG: Initialized shuttle Escape Pod 7 (/datum/shuttle/autodock/ferry/escape_pod/escape_pod7)
+[2024-04-04 05:41:28.995] DEBUG: Initialized shuttle Escape Pod 8 (/datum/shuttle/autodock/ferry/escape_pod/escape_pod8)
+[2024-04-04 05:41:28.999] DEBUG: Initialized shuttle Cryostorage Shuttle (/datum/shuttle/autodock/ferry/escape_pod/escape_pod_cryo)
+[2024-04-04 05:41:29.004] DEBUG: Initialized shuttle Large Escape Pod 1 (/datum/shuttle/autodock/ferry/escape_pod/large_escape_pod1)
+[2024-04-04 05:41:29.008] DEBUG: Initialized shuttle Large Escape Pod 2 (/datum/shuttle/autodock/ferry/escape_pod/large_escape_pod2)
+[2024-04-04 05:41:29.008] DEBUG: Initialized shuttle Arrivals (/datum/shuttle/autodock/ferry/arrivals/southern_cross)
+[2024-04-04 05:41:29.013] DEBUG: Initialized shuttle Escape (/datum/shuttle/autodock/ferry/emergency/centcom)
+[2024-04-04 05:41:29.013] DEBUG: Initialized shuttle Supply (/datum/shuttle/autodock/ferry/supply/cargo)
+[2024-04-04 05:41:29.017] DEBUG: Initialized shuttle Exploration (/datum/shuttle/autodock/ferry/exploration)
+[2024-04-04 05:41:29.022] DEBUG: Initialized shuttle Administration Shuttle (/datum/shuttle/autodock/multi/administration)
+[2024-04-04 05:41:29.026] DEBUG: Initialized shuttle Centcom Transport Shuttle (/datum/shuttle/autodock/multi/centcom)
+[2024-04-04 05:41:29.031] DEBUG: Initialized shuttle Merchant (/datum/shuttle/autodock/multi/merchant)
+[2024-04-04 05:41:29.031] DEBUG: &lt;span class=&#39;danger&#39;&gt;warning: shuttle Skipjack can&#39;t find its controller with tag skipjack_shuttle!&lt;/span&gt;
+[2024-04-04 05:41:29.031] DEBUG: Initialized shuttle Skipjack (/datum/shuttle/autodock/multi/heist)
+[2024-04-04 05:41:29.031] DEBUG: Initialized shuttle Mercenary Ship (/datum/shuttle/autodock/multi/syndicate)
+[2024-04-04 05:41:29.031] DEBUG: Initialized shuttle Ninja Shuttle (/datum/shuttle/autodock/multi/ninja)
+[2024-04-04 05:41:29.036] DEBUG: Initialized shuttle Response Operations Shuttle (/datum/shuttle/autodock/multi/ert)
+[2024-04-04 05:41:29.040] DEBUG: Initialized shuttle Shuttle 3 (/datum/shuttle/autodock/web_shuttle/shuttle3)
+[2024-04-04 05:41:29.249] DEBUG: Generating cloud of 8 carp shoal overmap event hazards
+[2024-04-04 05:41:29.250] DEBUG: Generating cloud of 5 carp school overmap event hazards
+[2024-04-04 05:41:29.251] DEBUG: Generating cloud of 8 carp shoal overmap event hazards
+[2024-04-04 05:41:29.252] DEBUG: Generating cloud of 16 dust cloud overmap event hazards
+[2024-04-04 05:41:29.255] DEBUG: Generating cloud of 11 electrical storm overmap event hazards
+[2024-04-04 05:41:29.256] DEBUG: Generating cloud of 16 dust cloud overmap event hazards
+[2024-04-04 05:41:29.257] DEBUG: Generating cloud of 11 electrical storm overmap event hazards
+[2024-04-04 05:41:29.258] DEBUG: Generating cloud of 11 electrical storm overmap event hazards
+[2024-04-04 05:41:29.259] DEBUG: Generating cloud of 11 electrical storm overmap event hazards
+[2024-04-04 05:41:29.260] DEBUG: Generating cloud of 11 electrical storm overmap event hazards
+[2024-04-04 05:41:29.260] DEBUG: Generating cloud of 8 ion cloud overmap event hazards
+[2024-04-04 05:41:29.261] DEBUG: Generating cloud of 8 ion cloud overmap event hazards
+[2024-04-04 05:41:29.261] DEBUG: Generating cloud of 15 asteroid field overmap event hazards
+[2024-04-04 05:41:29.264] DEBUG: Generating cloud of 5 carp school overmap event hazards
+[2024-04-04 05:41:29.264] DEBUG: Generating cloud of 16 dust cloud overmap event hazards
+[2024-04-04 05:41:29.266] DEBUG: Generating cloud of 16 dust cloud overmap event hazards
+[2024-04-04 05:41:29.268] DEBUG: Generating cloud of 16 dust cloud overmap event hazards
+[2024-04-04 05:41:29.270] DEBUG: Generating cloud of 16 dust cloud overmap event hazards
+[2024-04-04 05:41:29.272] DEBUG: Generating cloud of 11 electrical storm overmap event hazards
+[2024-04-04 05:41:29.273] DEBUG: Generating cloud of 8 carp shoal overmap event hazards
+[2024-04-04 05:41:29.273] DEBUG: Generating cloud of 15 asteroid field overmap event hazards
+[2024-04-04 05:41:29.275] DEBUG: Generating cloud of 8 carp shoal overmap event hazards
+[2024-04-04 05:41:29.276] DEBUG: Generating cloud of 11 electrical storm overmap event hazards
+[2024-04-04 05:41:29.277] DEBUG: Generating cloud of 15 asteroid field overmap event hazards
+[2024-04-04 05:41:29.279] DEBUG: Generating cloud of 5 carp school overmap event hazards
+[2024-04-04 05:41:29.279] DEBUG: Generating cloud of 5 carp school overmap event hazards
+[2024-04-04 05:41:29.280] DEBUG: Generating cloud of 8 carp shoal overmap event hazards
+[2024-04-04 05:41:29.281] DEBUG: Generating cloud of 8 ion cloud overmap event hazards
+[2024-04-04 05:41:29.281] DEBUG: Generating cloud of 11 electrical storm overmap event hazards
+[2024-04-04 05:41:29.282] DEBUG: Generating cloud of 16 dust cloud overmap event hazards
+[2024-04-04 05:41:29.283] DEBUG: Generating cloud of 8 ion cloud overmap event hazards
+[2024-04-04 05:41:29.284] DEBUG: Generating cloud of 8 ion cloud overmap event hazards
+[2024-04-04 05:41:29.285] DEBUG: Generating cloud of 5 carp school overmap event hazards
+[2024-04-04 05:41:29.285] DEBUG: Generating cloud of 8 ion cloud overmap event hazards
+[2024-04-04 05:41:29.286] DEBUG: Generating cloud of 8 carp shoal overmap event hazards
+[2024-04-04 05:41:29.286] DEBUG: Generating cloud of 8 carp shoal overmap event hazards
+[2024-04-04 05:41:29.287] DEBUG: Generating cloud of 8 carp shoal overmap event hazards
+[2024-04-04 05:41:29.287] DEBUG: Generating cloud of 5 carp school overmap event hazards
+[2024-04-04 05:41:29.288] DEBUG: Generating cloud of 8 carp shoal overmap event hazards
+[2024-04-04 05:41:29.288] DEBUG: Generating cloud of 8 carp shoal overmap event hazards
+[2024-04-04 05:41:29.289] DEBUG: Generating cloud of 8 carp shoal overmap event hazards
+[2024-04-04 05:41:29.289] DEBUG: Generating cloud of 16 dust cloud overmap event hazards
+[2024-04-04 05:41:29.291] DEBUG: Generating cloud of 16 dust cloud overmap event hazards
+[2024-04-04 05:41:29.293] DEBUG: Generating cloud of 16 dust cloud overmap event hazards
+[2024-04-04 05:43:08.747] DEBUG: TiDi Starting Log
+[2024-04-04 05:46:15.865] DEBUG: Next event of severity Mundane in 37.714 minutes.
+[2024-04-04 05:46:15.866] DEBUG: Next event of severity Moderate in 30 minutes.
+[2024-04-04 05:46:15.866] DEBUG: Next event of severity Major in 100 minutes.
+[2024-04-04 05:46:16.792] DEBUG: Thor&#39;s weather is now clear, with a temperature of 308.15&amp;deg;K (35&amp;deg;C | 95&amp;deg;F).
+[2024-04-04 05:46:16.792] DEBUG: Thor&#39;s weather forecast is now &#39;clear, rain,  then rain&#39;.
+[2024-04-04 05:46:16.793] DEBUG: Sif&#39;s weather is now overcast, with a temperature of 264.4&amp;deg;K (-8.75&amp;deg;C | 16.25&amp;deg;F).
+[2024-04-04 05:46:16.793] DEBUG: Sif&#39;s weather forecast is now &#39;overcast, fog,  then clear&#39;.
+[2024-04-04 05:52:29.304] DEBUG: Sif&#39;s weather is now overcast, with a temperature of 264.4&amp;deg;K (-8.75&amp;deg;C | 16.25&amp;deg;F).
+[2024-04-04 05:52:29.304] DEBUG: Sif&#39;s weather forecast is now &#39;fog, clear,  then clear&#39;.
+[2024-04-04 05:55:29.703] DEBUG: Thor&#39;s weather is now clear, with a temperature of 308.15&amp;deg;K (35&amp;deg;C | 95&amp;deg;F).
+[2024-04-04 05:55:29.703] DEBUG: Thor&#39;s weather forecast is now &#39;rain, rain,  then rain&#39;.
+[2024-04-04 06:01:30.718] DEBUG: Thor&#39;s weather is now rain, with a temperature of 304.817&amp;deg;K (31.6667&amp;deg;C | 89&amp;deg;F).
+[2024-04-04 06:01:30.718] DEBUG: Thor&#39;s weather forecast is now &#39;rain, rain,  then rain&#39;.
+[2024-04-04 06:02:30.943] DEBUG: Sif&#39;s weather is now fog, with a temperature of 263.775&amp;deg;K (-9.375&amp;deg;C | 15.125&amp;deg;F).
+[2024-04-04 06:02:30.943] DEBUG: Sif&#39;s weather forecast is now &#39;clear, clear,  then overcast&#39;.
+[2024-04-04 06:06:31.467] DEBUG: Thor&#39;s weather is now rain, with a temperature of 305.65&amp;deg;K (32.5&amp;deg;C | 90.5&amp;deg;F).
+[2024-04-04 06:06:31.467] DEBUG: Thor&#39;s weather forecast is now &#39;rain, rain,  then rain&#39;.
+[2024-04-04 06:08:31.543] DEBUG: Sif&#39;s weather is now clear, with a temperature of 263.15&amp;deg;K (-10&amp;deg;C | 14&amp;deg;F).
+[2024-04-04 06:08:31.543] DEBUG: Sif&#39;s weather forecast is now &#39;clear, overcast,  then overcast&#39;.
+[2024-04-04 06:12:32.234] DEBUG: Thor&#39;s weather is now rain, with a temperature of 305.65&amp;deg;K (32.5&amp;deg;C | 90.5&amp;deg;F).
+[2024-04-04 06:12:32.234] DEBUG: Thor&#39;s weather forecast is now &#39;rain, rain,  then overcast&#39;.
+[2024-04-04 06:15:33.047] DEBUG: Sif&#39;s weather is now clear, with a temperature of 263.15&amp;deg;K (-10&amp;deg;C | 14&amp;deg;F).
+[2024-04-04 06:15:33.047] DEBUG: Sif&#39;s weather forecast is now &#39;overcast, overcast,  then fog&#39;.
+[2024-04-04 06:20:33.791] DEBUG: Sif&#39;s weather is now overcast, with a temperature of 263.15&amp;deg;K (-10&amp;deg;C | 14&amp;deg;F).
+[2024-04-04 06:20:33.791] DEBUG: Sif&#39;s weather forecast is now &#39;overcast, fog,  then clear&#39;.
+[2024-04-04 06:22:34.565] DEBUG: Thor&#39;s weather is now rain, with a temperature of 305.65&amp;deg;K (32.5&amp;deg;C | 90.5&amp;deg;F).
+[2024-04-04 06:22:34.566] DEBUG: Thor&#39;s weather forecast is now &#39;rain, overcast,  then overcast&#39;.
+[2024-04-04 06:26:34.838] DEBUG: Sif&#39;s weather is now overcast, with a temperature of 263.15&amp;deg;K (-10&amp;deg;C | 14&amp;deg;F).
+[2024-04-04 06:26:34.838] DEBUG: Sif&#39;s weather forecast is now &#39;fog, clear,  then clear&#39;.
+[2024-04-04 06:32:35.590] DEBUG: Thor&#39;s weather is now rain, with a temperature of 305.65&amp;deg;K (32.5&amp;deg;C | 90.5&amp;deg;F).
+[2024-04-04 06:32:35.590] DEBUG: Thor&#39;s weather forecast is now &#39;overcast, overcast,  then overcast&#39;.
+[2024-04-04 06:32:35.590] DEBUG: Sif&#39;s weather is now fog, with a temperature of 263.15&amp;deg;K (-10&amp;deg;C | 14&amp;deg;F).
+[2024-04-04 06:32:35.590] DEBUG: Sif&#39;s weather forecast is now &#39;clear, clear,  then fog&#39;.
+[2024-04-04 06:40:36.474] DEBUG: Sif&#39;s weather is now clear, with a temperature of 263.15&amp;deg;K (-10&amp;deg;C | 14&amp;deg;F).
+[2024-04-04 06:40:36.474] DEBUG: Sif&#39;s weather forecast is now &#39;clear, fog,  then clear&#39;.
+[2024-04-04 06:41:36.963] DEBUG: Thor&#39;s weather is now overcast, with a temperature of 305.65&amp;deg;K (32.5&amp;deg;C | 90.5&amp;deg;F).
+[2024-04-04 06:41:36.963] DEBUG: Thor&#39;s weather forecast is now &#39;overcast, overcast,  then overcast&#39;.
+[2024-04-04 06:45:37.293] DEBUG: Sif&#39;s weather is now clear, with a temperature of 263.15&amp;deg;K (-10&amp;deg;C | 14&amp;deg;F).
+[2024-04-04 06:45:37.293] DEBUG: Sif&#39;s weather forecast is now &#39;fog, clear,  then clear&#39;.
+[2024-04-04 06:46:37.438] DEBUG: Thor&#39;s weather is now overcast, with a temperature of 305.65&amp;deg;K (32.5&amp;deg;C | 90.5&amp;deg;F).
+[2024-04-04 06:46:37.438] DEBUG: Thor&#39;s weather forecast is now &#39;overcast, overcast,  then overcast&#39;.
+[2024-04-04 06:53:37.979] DEBUG: Thor&#39;s weather is now overcast, with a temperature of 305.65&amp;deg;K (32.5&amp;deg;C | 90.5&amp;deg;F).
+[2024-04-04 06:53:37.979] DEBUG: Thor&#39;s weather forecast is now &#39;overcast, overcast,  then overcast&#39;.
+[2024-04-04 06:53:37.979] DEBUG: Sif&#39;s weather is now fog, with a temperature of 263.15&amp;deg;K (-10&amp;deg;C | 14&amp;deg;F).
+[2024-04-04 06:53:37.979] DEBUG: Sif&#39;s weather forecast is now &#39;clear, clear,  then overcast&#39;.
+[2024-04-04 06:58:38.866] DEBUG: Thor&#39;s weather is now overcast, with a temperature of 305.65&amp;deg;K (32.5&amp;deg;C | 90.5&amp;deg;F).
+[2024-04-04 06:58:38.866] DEBUG: Thor&#39;s weather forecast is now &#39;overcast, overcast,  then rain&#39;.
+[2024-04-04 07:00:39.052] DEBUG: Sif&#39;s weather is now clear, with a temperature of 264.4&amp;deg;K (-8.75&amp;deg;C | 16.25&amp;deg;F).
+[2024-04-04 07:00:39.052] DEBUG: Sif&#39;s weather forecast is now &#39;clear, overcast,  then clear&#39;.
+[2024-04-04 07:08:39.978] DEBUG: Thor&#39;s weather is now overcast, with a temperature of 305.65&amp;deg;K (32.5&amp;deg;C | 90.5&amp;deg;F).
+[2024-04-04 07:08:39.978] DEBUG: Thor&#39;s weather forecast is now &#39;overcast, rain,  then overcast&#39;.
+[2024-04-04 07:08:39.978] DEBUG: Sif&#39;s weather is now clear, with a temperature of 264.4&amp;deg;K (-8.75&amp;deg;C | 16.25&amp;deg;F).
+[2024-04-04 07:08:39.978] DEBUG: Sif&#39;s weather forecast is now &#39;overcast, clear,  then fog&#39;.
+[2024-04-04 07:13:40.336] DEBUG: Thor&#39;s weather is now overcast, with a temperature of 305.65&amp;deg;K (32.5&amp;deg;C | 90.5&amp;deg;F).
+[2024-04-04 07:13:40.336] DEBUG: Thor&#39;s weather forecast is now &#39;rain, overcast,  then rain&#39;.
+[2024-04-04 07:17:40.479] DEBUG: Sif&#39;s weather is now overcast, with a temperature of 264.4&amp;deg;K (-8.75&amp;deg;C | 16.25&amp;deg;F).
+[2024-04-04 07:17:40.479] DEBUG: Sif&#39;s weather forecast is now &#39;clear, fog,  then fog&#39;.
+[2024-04-04 07:22:41.385] DEBUG: Thor&#39;s weather is now rain, with a temperature of 305.65&amp;deg;K (32.5&amp;deg;C | 90.5&amp;deg;F).
+[2024-04-04 07:22:41.385] DEBUG: Thor&#39;s weather forecast is now &#39;overcast, rain,  then rain&#39;.
+[2024-04-04 07:26:42.122] DEBUG: Sif&#39;s weather is now clear, with a temperature of 264.4&amp;deg;K (-8.75&amp;deg;C | 16.25&amp;deg;F).
+[2024-04-04 07:26:42.122] DEBUG: Sif&#39;s weather forecast is now &#39;fog, fog,  then light snow&#39;.
+[2024-04-04 07:32:43.141] DEBUG: Thor&#39;s weather is now overcast, with a temperature of 306.483&amp;deg;K (33.3333&amp;deg;C | 92&amp;deg;F).
+[2024-04-04 07:32:43.141] DEBUG: Thor&#39;s weather forecast is now &#39;rain, rain,  then overcast&#39;.
+[2024-04-04 07:32:43.141] DEBUG: Sif&#39;s weather is now fog, with a temperature of 263.775&amp;deg;K (-9.375&amp;deg;C | 15.125&amp;deg;F).
+[2024-04-04 07:32:43.141] DEBUG: Sif&#39;s weather forecast is now &#39;fog, light snow,  then light snow&#39;.
+[2024-04-04 07:37:43.935] DEBUG: Sif&#39;s weather is now fog, with a temperature of 263.775&amp;deg;K (-9.375&amp;deg;C | 15.125&amp;deg;F).
+[2024-04-04 07:37:43.935] DEBUG: Sif&#39;s weather forecast is now &#39;light snow, light snow,  then hail&#39;.
+[2024-04-04 07:41:44.160] DEBUG: Thor&#39;s weather is now rain, with a temperature of 306.483&amp;deg;K (33.3333&amp;deg;C | 92&amp;deg;F).
+[2024-04-04 07:41:44.160] DEBUG: Thor&#39;s weather forecast is now &#39;rain, overcast,  then rain&#39;.
+[2024-04-04 07:45:45.057] DEBUG: Sif&#39;s weather is now light snow, with a temperature of 259.087&amp;deg;K (-14.0625&amp;deg;C | 6.68747&amp;deg;F).
+[2024-04-04 07:45:45.057] DEBUG: Sif&#39;s weather forecast is now &#39;light snow, hail,  then storm&#39;.
+[2024-04-04 07:48:45.533] DEBUG: Thor&#39;s weather is now rain, with a temperature of 306.483&amp;deg;K (33.3333&amp;deg;C | 92&amp;deg;F).
+[2024-04-04 07:48:45.533] DEBUG: Thor&#39;s weather forecast is now &#39;overcast, rain,  then rain&#39;.
+[2024-04-04 07:51:45.676] DEBUG: Sif&#39;s weather is now light snow, with a temperature of 259.087&amp;deg;K (-14.0625&amp;deg;C | 6.68747&amp;deg;F).
+[2024-04-04 07:51:45.676] DEBUG: Sif&#39;s weather forecast is now &#39;hail, storm,  then storm&#39;.
+[2024-04-04 07:53:45.722] DEBUG: Thor&#39;s weather is now overcast, with a temperature of 306.483&amp;deg;K (33.3333&amp;deg;C | 92&amp;deg;F).
+[2024-04-04 07:53:45.722] DEBUG: Thor&#39;s weather forecast is now &#39;rain, rain,  then rain&#39;.
+[2024-04-04 08:01:46.153] DEBUG: Sif&#39;s weather is now hail, with a temperature of 245.025&amp;deg;K (-28.125&amp;deg;C | -18.625&amp;deg;F).
+[2024-04-04 08:01:46.154] DEBUG: Sif&#39;s weather forecast is now &#39;storm, storm,  then rain&#39;.
+[2024-04-04 08:02:46.546] DEBUG: Thor&#39;s weather is now rain, with a temperature of 306.483&amp;deg;K (33.3333&amp;deg;C | 92&amp;deg;F).
+[2024-04-04 08:02:46.546] DEBUG: Thor&#39;s weather forecast is now &#39;rain, rain,  then rain&#39;.
+[2024-04-04 08:04:46.811] DEBUG: Sif&#39;s weather is now storm, with a temperature of 234.4&amp;deg;K (-38.75&amp;deg;C | -37.75&amp;deg;F).
+[2024-04-04 08:04:46.811] DEBUG: Sif&#39;s weather forecast is now &#39;storm, rain,  then fog&#39;.
+[2024-04-04 08:08:48.211] DEBUG: Thor&#39;s weather is now rain, with a temperature of 307.317&amp;deg;K (34.1667&amp;deg;C | 93.5&amp;deg;F).
+[2024-04-04 08:08:48.211] DEBUG: Thor&#39;s weather forecast is now &#39;rain, rain,  then overcast&#39;.
+[2024-04-04 08:12:53.581] DEBUG: Sif&#39;s weather is now storm, with a temperature of 234.4&amp;deg;K (-38.75&amp;deg;C | -37.75&amp;deg;F).
+[2024-04-04 08:12:53.581] DEBUG: Sif&#39;s weather forecast is now &#39;rain, fog,  then overcast&#39;.
+[2024-04-04 08:13:53.689] DEBUG: Thor&#39;s weather is now rain, with a temperature of 307.317&amp;deg;K (34.1667&amp;deg;C | 93.5&amp;deg;F).
+[2024-04-04 08:13:53.690] DEBUG: Thor&#39;s weather forecast is now &#39;rain, overcast,  then overcast&#39;.
+[2024-04-04 08:21:54.449] DEBUG: Sif&#39;s weather is now rain, with a temperature of 265.65&amp;deg;K (-7.5&amp;deg;C | 18.5&amp;deg;F).
+[2024-04-04 08:21:54.449] DEBUG: Sif&#39;s weather forecast is now &#39;fog, overcast,  then fog&#39;.
+[2024-04-04 08:23:55.258] DEBUG: Thor&#39;s weather is now rain, with a temperature of 307.317&amp;deg;K (34.1667&amp;deg;C | 93.5&amp;deg;F).
+[2024-04-04 08:23:55.258] DEBUG: Thor&#39;s weather forecast is now &#39;overcast, overcast,  then rain&#39;.
+[2024-04-04 08:29:55.779] DEBUG: Sif&#39;s weather is now fog, with a temperature of 264.4&amp;deg;K (-8.75&amp;deg;C | 16.25&amp;deg;F).
+[2024-04-04 08:29:55.779] DEBUG: Sif&#39;s weather forecast is now &#39;overcast, fog,  then overcast&#39;.
+[2024-04-04 08:32:56.845] DEBUG: Thor&#39;s weather is now overcast, with a temperature of 307.317&amp;deg;K (34.1667&amp;deg;C | 93.5&amp;deg;F).
+[2024-04-04 08:32:56.845] DEBUG: Thor&#39;s weather forecast is now &#39;overcast, rain,  then overcast&#39;.
+[2024-04-04 08:37:57.322] DEBUG: Thor&#39;s weather is now overcast, with a temperature of 307.317&amp;deg;K (34.1667&amp;deg;C | 93.5&amp;deg;F).
+[2024-04-04 08:37:57.323] DEBUG: Thor&#39;s weather forecast is now &#39;rain, overcast,  then rain&#39;.
+[2024-04-04 08:38:57.354] DEBUG: Sif&#39;s weather is now overcast, with a temperature of 265.65&amp;deg;K (-7.5&amp;deg;C | 18.5&amp;deg;F).
+[2024-04-04 08:38:57.354] DEBUG: Sif&#39;s weather forecast is now &#39;fog, overcast,  then clear&#39;.
+[2024-04-04 08:45:16.178] DEBUG: The crew transfer shuttle would have been called at vote time due to no players being present.
+[2024-04-04 08:46:58.265] DEBUG: Thor&#39;s weather is now rain, with a temperature of 307.317&amp;deg;K (34.1667&amp;deg;C | 93.5&amp;deg;F).
+[2024-04-04 08:46:58.265] DEBUG: Thor&#39;s weather forecast is now &#39;overcast, rain,  then overcast&#39;.
+[2024-04-04 08:48:58.925] DEBUG: Sif&#39;s weather is now fog, with a temperature of 264.4&amp;deg;K (-8.75&amp;deg;C | 16.25&amp;deg;F).
+[2024-04-04 08:48:58.925] DEBUG: Sif&#39;s weather forecast is now &#39;overcast, clear,  then fog&#39;.
+[2024-04-04 08:56:59.895] DEBUG: Thor&#39;s weather is now overcast, with a temperature of 307.317&amp;deg;K (34.1667&amp;deg;C | 93.5&amp;deg;F).
+[2024-04-04 08:56:59.895] DEBUG: Thor&#39;s weather forecast is now &#39;rain, overcast,  then rain&#39;.
+[2024-04-04 08:57:59.936] DEBUG: Sif&#39;s weather is now overcast, with a temperature of 266.9&amp;deg;K (-6.25&amp;deg;C | 20.75&amp;deg;F).
+[2024-04-04 08:57:59.936] DEBUG: Sif&#39;s weather forecast is now &#39;clear, fog,  then fog&#39;.
+[2024-04-04 09:02:02.313] DEBUG: Thor&#39;s weather is now rain, with a temperature of 307.317&amp;deg;K (34.1667&amp;deg;C | 93.5&amp;deg;F).
+[2024-04-04 09:02:02.314] DEBUG: Thor&#39;s weather forecast is now &#39;overcast, rain,  then overcast&#39;.
+[2024-04-04 09:06:02.708] DEBUG: Sif&#39;s weather is now clear, with a temperature of 266.9&amp;deg;K (-6.25&amp;deg;C | 20.75&amp;deg;F).
+[2024-04-04 09:06:02.708] DEBUG: Sif&#39;s weather forecast is now &#39;fog, fog,  then overcast&#39;.
+[2024-04-04 09:11:03.878] DEBUG: Thor&#39;s weather is now overcast, with a temperature of 308.15&amp;deg;K (35&amp;deg;C | 95&amp;deg;F).
+[2024-04-04 09:11:03.878] DEBUG: Thor&#39;s weather forecast is now &#39;rain, overcast,  then overcast&#39;.
+[2024-04-04 09:16:04.321] DEBUG: Sif&#39;s weather is now fog, with a temperature of 265.025&amp;deg;K (-8.125&amp;deg;C | 17.375&amp;deg;F).
+[2024-04-04 09:16:04.322] DEBUG: Sif&#39;s weather forecast is now &#39;fog, overcast,  then overcast&#39;.
+[2024-04-04 09:21:05.128] DEBUG: Thor&#39;s weather is now rain, with a temperature of 308.15&amp;deg;K (35&amp;deg;C | 95&amp;deg;F).
+[2024-04-04 09:21:05.129] DEBUG: Thor&#39;s weather forecast is now &#39;overcast, overcast,  then overcast&#39;.
+[2024-04-04 09:26:05.692] DEBUG: Thor&#39;s weather is now overcast, with a temperature of 308.15&amp;deg;K (35&amp;deg;C | 95&amp;deg;F).
+[2024-04-04 09:26:05.692] DEBUG: Thor&#39;s weather forecast is now &#39;overcast, overcast,  then rain&#39;.
+[2024-04-04 09:26:05.692] DEBUG: Sif&#39;s weather is now fog, with a temperature of 265.025&amp;deg;K (-8.125&amp;deg;C | 17.375&amp;deg;F).
+[2024-04-04 09:26:05.692] DEBUG: Sif&#39;s weather forecast is now &#39;overcast, overcast,  then fog&#39;.
+[2024-04-04 09:33:06.154] DEBUG: Thor&#39;s weather is now overcast, with a temperature of 308.15&amp;deg;K (35&amp;deg;C | 95&amp;deg;F).
+[2024-04-04 09:33:06.154] DEBUG: Thor&#39;s weather forecast is now &#39;overcast, rain,  then rain&#39;.
+[2024-04-04 09:35:06.329] DEBUG: Sif&#39;s weather is now overcast, with a temperature of 266.9&amp;deg;K (-6.25&amp;deg;C | 20.75&amp;deg;F).
+[2024-04-04 09:35:06.329] DEBUG: Sif&#39;s weather forecast is now &#39;overcast, fog,  then fog&#39;.
+[2024-04-04 09:43:07.748] DEBUG: Thor&#39;s weather is now overcast, with a temperature of 308.15&amp;deg;K (35&amp;deg;C | 95&amp;deg;F).
+[2024-04-04 09:43:07.748] DEBUG: Thor&#39;s weather forecast is now &#39;rain, rain,  then rain&#39;.
+[2024-04-04 09:43:07.748] DEBUG: Sif&#39;s weather is now overcast, with a temperature of 266.9&amp;deg;K (-6.25&amp;deg;C | 20.75&amp;deg;F).
+[2024-04-04 09:43:07.748] DEBUG: Sif&#39;s weather forecast is now &#39;fog, fog,  then fog&#39;.
+[2024-04-04 09:45:16.153] DEBUG: The crew transfer shuttle would have been called at vote time due to no players being present.
+[2024-04-04 09:51:08.283] DEBUG: Sif&#39;s weather is now fog, with a temperature of 265.025&amp;deg;K (-8.125&amp;deg;C | 17.375&amp;deg;F).
+[2024-04-04 09:51:08.283] DEBUG: Sif&#39;s weather forecast is now &#39;fog, fog,  then light snow&#39;.
+[2024-04-04 09:52:08.682] DEBUG: Thor&#39;s weather is now rain, with a temperature of 308.15&amp;deg;K (35&amp;deg;C | 95&amp;deg;F).
+[2024-04-04 09:52:08.682] DEBUG: Thor&#39;s weather forecast is now &#39;rain, rain,  then rain&#39;.
+[2024-04-04 10:00:09.144] DEBUG: Sif&#39;s weather is now fog, with a temperature of 265.65&amp;deg;K (-7.5&amp;deg;C | 18.5&amp;deg;F).
+[2024-04-04 10:00:09.144] DEBUG: Sif&#39;s weather forecast is now &#39;fog, light snow,  then snow&#39;.
+[2024-04-04 10:01:09.195] DEBUG: Thor&#39;s weather is now rain, with a temperature of 308.15&amp;deg;K (35&amp;deg;C | 95&amp;deg;F).
+[2024-04-04 10:01:09.195] DEBUG: Thor&#39;s weather forecast is now &#39;rain, rain,  then rain&#39;.
+[2024-04-04 10:07:09.385] DEBUG: Thor&#39;s weather is now rain, with a temperature of 308.15&amp;deg;K (35&amp;deg;C | 95&amp;deg;F).
+[2024-04-04 10:07:09.385] DEBUG: Thor&#39;s weather forecast is now &#39;rain, rain,  then rain&#39;.
+[2024-04-04 10:07:09.386] DEBUG: Sif&#39;s weather is now fog, with a temperature of 265.65&amp;deg;K (-7.5&amp;deg;C | 18.5&amp;deg;F).
+[2024-04-04 10:07:09.386] DEBUG: Sif&#39;s weather forecast is now &#39;light snow, snow,  then blizzard&#39;.
+[2024-04-04 10:13:09.806] DEBUG: Sif&#39;s weather is now light snow, with a temperature of 261.9&amp;deg;K (-11.25&amp;deg;C | 11.75&amp;deg;F).
+[2024-04-04 10:13:09.806] DEBUG: Sif&#39;s weather forecast is now &#39;snow, blizzard,  then snow&#39;.
+[2024-04-04 10:17:10.281] DEBUG: Thor&#39;s weather is now rain, with a temperature of 308.15&amp;deg;K (35&amp;deg;C | 95&amp;deg;F).
+[2024-04-04 10:17:10.282] DEBUG: Thor&#39;s weather forecast is now &#39;rain, rain,  then rain&#39;.
+[2024-04-04 10:22:10.534] DEBUG: Sif&#39;s weather is now snow, with a temperature of 250.65&amp;deg;K (-22.5&amp;deg;C | -8.50003&amp;deg;F).
+[2024-04-04 10:22:10.535] DEBUG: Sif&#39;s weather forecast is now &#39;blizzard, snow,  then snow&#39;.
+[2024-04-04 10:26:11.195] DEBUG: Thor&#39;s weather is now rain, with a temperature of 308.15&amp;deg;K (35&amp;deg;C | 95&amp;deg;F).
+[2024-04-04 10:26:11.195] DEBUG: Thor&#39;s weather forecast is now &#39;rain, rain,  then rain&#39;.
+[2024-04-04 10:28:11.561] DEBUG: Sif&#39;s weather is now blizzard, with a temperature of 235.65&amp;deg;K (-37.5&amp;deg;C | -35.5&amp;deg;F).
+[2024-04-04 10:28:11.561] DEBUG: Sif&#39;s weather forecast is now &#39;snow, snow,  then overcast&#39;.
+[2024-04-04 10:34:12.278] DEBUG: Thor&#39;s weather is now rain, with a temperature of 308.15&amp;deg;K (35&amp;deg;C | 95&amp;deg;F).
+[2024-04-04 10:34:12.278] DEBUG: Thor&#39;s weather forecast is now &#39;rain, rain,  then rain&#39;.
+[2024-04-04 10:36:12.317] DEBUG: Sif&#39;s weather is now snow, with a temperature of 250.65&amp;deg;K (-22.5&amp;deg;C | -8.50003&amp;deg;F).
+[2024-04-04 10:36:12.317] DEBUG: Sif&#39;s weather forecast is now &#39;snow, overcast,  then clear&#39;.
+[2024-04-04 10:43:13.471] DEBUG: Thor&#39;s weather is now rain, with a temperature of 308.15&amp;deg;K (35&amp;deg;C | 95&amp;deg;F).
+[2024-04-04 10:43:13.471] DEBUG: Thor&#39;s weather forecast is now &#39;rain, rain,  then rain&#39;.
+[2024-04-04 10:46:14.026] DEBUG: Sif&#39;s weather is now snow, with a temperature of 250.65&amp;deg;K (-22.5&amp;deg;C | -8.50003&amp;deg;F).
+[2024-04-04 10:46:14.026] DEBUG: Sif&#39;s weather forecast is now &#39;overcast, clear,  then fog&#39;.
+[2024-04-04 10:51:14.368] DEBUG: Thor&#39;s weather is now rain, with a temperature of 308.15&amp;deg;K (35&amp;deg;C | 95&amp;deg;F).
+[2024-04-04 10:51:14.368] DEBUG: Thor&#39;s weather forecast is now &#39;rain, rain,  then overcast&#39;.
+[2024-04-04 10:53:14.758] DEBUG: Sif&#39;s weather is now overcast, with a temperature of 268.15&amp;deg;K (-5&amp;deg;C | 23&amp;deg;F).
+[2024-04-04 10:53:14.758] DEBUG: Sif&#39;s weather forecast is now &#39;clear, fog,  then clear&#39;.
+[2024-04-04 10:59:15.799] DEBUG: Thor&#39;s weather is now rain, with a temperature of 307.317&amp;deg;K (34.1667&amp;deg;C | 93.5&amp;deg;F).
+[2024-04-04 10:59:15.799] DEBUG: Thor&#39;s weather forecast is now &#39;rain, overcast,  then rain&#39;.
+[2024-04-04 11:01:10.620] DEBUG: Stopping all playing media...
+[2024-04-04 11:02:15.981] DEBUG: Sif&#39;s weather is now clear, with a temperature of 269.4&amp;deg;K (-3.75&amp;deg;C | 25.25&amp;deg;F).
+[2024-04-04 11:02:15.981] DEBUG: Sif&#39;s weather forecast is now &#39;fog, clear,  then overcast&#39;.
+[2024-04-04 11:05:11.649] DEBUG: 
+[2024-04-04 11:05:11.655] DEBUG: Clearing DB queries standby:0 active: 0 all: 0
+[2024-04-04 11:05:11.655] DEBUG: Done clearing DB queries standby:0 active: 0 all: 0

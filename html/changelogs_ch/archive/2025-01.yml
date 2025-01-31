@@ -41,6 +41,8 @@
   whooshboom:
   - qol: Reverts marish to audible condition. Happy marring!
 2025-01-05:
+  Arrhythmia_V:
+  - balance: ERT borg now has their sword tail back
   CHOMPStation2StaffMirrorBot:
   - bugfix: Drones now use robotact
   - bugfix: A few byond:// hrefs for 516
@@ -403,6 +405,8 @@
   Kashargul:
   - code_imp: malignant organs -> adjust_nutrition
 2025-01-31:
+  Arrhythmia_V:
+  - qol: Hemostats and the FixOVein can now be used for the Tend Wounds Surgery
   CHOMPStation2StaffMirrorBot:
   - rscadd: Added a warning message if clients are older than 516, warning them that
       the game will soon update to version 516 and that they will experience issues
