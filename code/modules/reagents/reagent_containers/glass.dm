@@ -78,19 +78,12 @@
 /obj/item/reagent_containers/glass/attack_self(mob/user)
 	..()
 	if(is_open_container())
-<<<<<<< HEAD
-		// to_chat(usr, span_notice("You put the lid on \the [src]."))
-		balloon_alert(usr, "Lid put on \the [src]")
+		// to_chat(user, span_notice("You put the lid on \the [src]."))
+		balloon_alert(user, "Lid put on \the [src]")
 		flags ^= OPENCONTAINER
 	else
-		// to_chat(usr, span_notice("You take the lid off \the [src]."))
-		balloon_alert(usr, "Lid removed off \the [src]") // CHOMPEdit - Changed to ballopn alert
-=======
-		to_chat(user, span_notice("You put the lid on \the [src]."))
-		flags ^= OPENCONTAINER
-	else
-		to_chat(user, span_notice("You take the lid off \the [src]."))
->>>>>>> 7be621e7c3 (usr to user part two (#16884))
+		// to_chat(user, span_notice("You take the lid off \the [src]."))
+		balloon_alert(user, "Lid removed off \the [src]") // CHOMPEdit - Changed to ballopn alert
 		flags |= OPENCONTAINER
 	update_icon()
 

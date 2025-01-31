@@ -97,7 +97,6 @@
 	if(!..())
 		return 0
 
-<<<<<<< HEAD
 	usr.visible_message(span_filter_notice(span_bold("[src]") + " points to [A]."))
 */
 	return ..()
@@ -108,10 +107,6 @@
 
 	visible_message(span_info(span_bold("[src]") + " points at [pointing_at]."), span_info("You point at [pointing_at]."))
 // CHOMPEdit End
-=======
-	src.visible_message(span_filter_notice(span_bold("[src]") + " points to [A]."))
-	return 1
->>>>>>> 7be621e7c3 (usr to user part two (#16884))
 
 /mob/living/verb/succumb()
 	set name = "Succumb to death"
@@ -749,11 +744,7 @@
 	return
 
 
-<<<<<<< HEAD
-/mob/living/verb/Examine_OOC() //ChompEDIT - proc --> verb
-=======
 /mob/living/proc/Examine_OOC(mob/user = src)
->>>>>>> 7be621e7c3 (usr to user part two (#16884))
 	set name = "Examine Meta-Info (OOC)"
 	set category = "OOC.Game"
 	set src in view()

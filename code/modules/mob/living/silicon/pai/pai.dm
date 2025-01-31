@@ -338,20 +338,10 @@
 	var/choice
 	var/finalized = "No"
 	while(finalized == "No" && src.client)
-<<<<<<< HEAD
-		choice = tgui_input_list(usr,"What would you like to use for your mobile chassis icon?","Chassis Choice", possible_chassis)
-=======
-
 		choice = tgui_input_list(src,"What would you like to use for your mobile chassis icon?","Chassis Choice", possible_chassis)
->>>>>>> 7be621e7c3 (usr to user part two (#16884))
 		if(!choice) return
 		icon_state = possible_chassis[choice]
-<<<<<<< HEAD
-		finalized = tgui_alert(usr, "Look at your sprite. Is this what you wish to use?","Choose Chassis",list("No","Yes"))
-=======
 		finalized = tgui_alert(src, "Look at your sprite. Is this what you wish to use?","Choose Chassis",list("No","Yes"))
-
->>>>>>> 7be621e7c3 (usr to user part two (#16884))
 	chassis = possible_chassis[choice]
 	add_verb(src, /mob/living/proc/hide)
 //VOREStation Removal End

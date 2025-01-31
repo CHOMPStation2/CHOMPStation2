@@ -81,24 +81,20 @@
 		busy = 0
 		icon_state = initial(icon_state)
 
-<<<<<<< HEAD
 		//CHOMPAdd Start
 		if(color=="gold") // Happy celebrations!
 			visible_message(span_notice("The roulette stops spinning, the ball lands on the golden zero! Fortune favors all bets!"))
-			src.confetti_spread = new /datum/effect/effect/system/confetti_spread()
-			src.confetti_spread.attach(src) //If somehow people start dragging roulette
+			confetti_spread = new /datum/effect/effect/system/confetti_spread()
+			confetti_spread.attach(src) //If somehow people start dragging roulette
 			spawn(0)
 				for(var/i = 1 to confetti_strength)
-					src.confetti_spread.start()
+					confetti_spread.start()
 					sleep(10)
 		else
 			visible_message(span_notice("The roulette stops spinning, the ball landing on [result], [color]."))
 		//CHOMPAdd End
 
-/obj/structure/casino_table/roulette_table/attackby(obj/item/W as obj, mob/user as mob)
-=======
 /obj/structure/casino_table/roulette_table/attackby(obj/item/W, mob/user)
->>>>>>> 7be621e7c3 (usr to user part two (#16884))
 	if(istype(W, /obj/item/roulette_ball))
 		if(!ball)
 			user.drop_from_inventory(W)
@@ -615,16 +611,11 @@
 				if(safety_ckey in sentientprizes_ckeys_list)
 					to_chat(user, span_warning("The SPASM beeps in an upset manner, you already have a collar!"))
 					return
-<<<<<<< HEAD
-				var/confirm = tgui_alert(usr, "Are you sure you want to become a sentient prize?", "Confirm Sentient Prize", list("Yes", "No"))
+				var/confirm = tgui_alert(user, "Are you sure you want to become a sentient prize?", "Confirm Sentient Prize", list("Yes", "No"))
 				//CHOMPEdit Start
 				if(confirm == "Yes")
 					to_chat(user, span_warning("You are now a prize!"))
 				if(!confirm)
-=======
-				var/confirm = tgui_alert(user, "Are you sure you want to become a sentient prize?", "Confirm Sentient Prize", list("Yes", "No"))
-				if(confirm != "Yes")
->>>>>>> 7be621e7c3 (usr to user part two (#16884))
 					return
 				if(confirm == "No")
 					to_chat(user, span_warning("The SPASM beeps in a sad manner at your impolite decline..."))

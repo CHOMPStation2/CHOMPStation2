@@ -143,12 +143,8 @@
 
 /obj/item/reagent_containers/spray/pepper/attack_self(var/mob/user)
 	safety = !safety
-<<<<<<< HEAD
-	// to_chat(usr, span_notice("You switch the safety [safety ? "on" : "off"]."))
-	balloon_alert(usr, "Safety [safety ? "on" : "off"].") // CHOMPEdit - Changed to balloon alert
-=======
-	to_chat(user, span_notice("You switch the safety [safety ? "on" : "off"]."))
->>>>>>> 7be621e7c3 (usr to user part two (#16884))
+	// to_chat(user, span_notice("You switch the safety [safety ? "on" : "off"]."))
+	balloon_alert(user, "Safety [safety ? "on" : "off"].") // CHOMPEdit - Changed to balloon alert
 
 /obj/item/reagent_containers/spray/pepper/Spray_at(atom/A as mob|obj, mob/user)
 	if(safety)
@@ -277,12 +273,8 @@
 	var/list/the_targets = list(T, T1, T2)
 
 	if(src.reagents.total_volume < 1)
-<<<<<<< HEAD
-		// to_chat(usr, span_notice("\The [src] is empty."))
-		balloon_alert(usr, "\The [src] is empty.")
-=======
-		to_chat(user, span_notice("\The [src] is empty."))
->>>>>>> 7be621e7c3 (usr to user part two (#16884))
+		// to_chat(user, span_notice("\The [src] is empty."))
+		balloon_alert(user, "\The [src] is empty.")
 		return
 
 	if(!heavy_spray)

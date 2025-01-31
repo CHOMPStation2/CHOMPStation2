@@ -187,11 +187,7 @@
 	else if(istype(I,/obj/item/radio/beacon))
 		var/confirm = tgui_alert(user, "[src == user ? "Eat the beacon?" : "Feed the beacon to [src]?"]", "Confirmation", list("Yes!", "Cancel"))
 		if(confirm == "Yes!")
-<<<<<<< HEAD
-			var/obj/belly/B = tgui_input_list(user, "Which belly?", "Select A Belly", vore_organs) //ChompEDIT - user, not usr
-=======
 			var/obj/belly/B = tgui_input_list(user, "Which belly?", "Select A Belly", vore_organs)
->>>>>>> 7be621e7c3 (usr to user part two (#16884))
 			if(!istype(B))
 				return TRUE
 			visible_message(span_warning("[user] is trying to stuff a beacon into [src]'s [lowertext(B.name)]!"),
@@ -751,29 +747,17 @@
 /mob/living/proc/eat_held_mob(mob/living/user, mob/living/prey, mob/living/pred)
 	var/belly
 	if(user != pred)
-<<<<<<< HEAD
-		belly = tgui_input_list(user, "Choose Belly", "Belly Choice", pred.feedable_bellies())	//CHOMPEdit remove usr
-=======
-		belly = tgui_input_list(user, "Choose Belly", "Belly Choice", pred.vore_organs)
->>>>>>> 7be621e7c3 (usr to user part two (#16884))
+		belly = tgui_input_list(user, "Choose Belly", "Belly Choice", pred.feedable_bellies())	//CHOMPEdit
 	else
 		belly = pred.vore_selected
 	return perform_the_nom(user, prey, pred, belly)
 
 /mob/living/proc/feed_self_to_grabbed(mob/living/user, mob/living/pred)
-<<<<<<< HEAD
-	var/belly = tgui_input_list(user, "Choose Belly", "Belly Choice", pred.feedable_bellies())	//CHOMPEdit - remove usr
+	var/belly = tgui_input_list(user, "Choose Belly", "Belly Choice", pred.feedable_bellies())	//CHOMPEdit
 	return perform_the_nom(user, user, pred, belly)
 
 /mob/living/proc/feed_grabbed_to_other(mob/living/user, mob/living/prey, mob/living/pred)
-	var/belly = tgui_input_list(user, "Choose Belly", "Belly Choice", pred.feedable_bellies())	//CHOMPEdit - remove usr
-=======
-	var/belly = tgui_input_list(user, "Choose Belly", "Belly Choice", pred.vore_organs)
-	return perform_the_nom(user, user, pred, belly)
-
-/mob/living/proc/feed_grabbed_to_other(mob/living/user, mob/living/prey, mob/living/pred)
-	var/belly = tgui_input_list(user, "Choose Belly", "Belly Choice", pred.vore_organs)
->>>>>>> 7be621e7c3 (usr to user part two (#16884))
+	var/belly = tgui_input_list(user, "Choose Belly", "Belly Choice", pred.feedable_bellies())	//CHOMPEdit
 	return perform_the_nom(user, prey, pred, belly)
 
 //
@@ -1371,7 +1355,6 @@
 	if(href_list["set_metainfo_ooc_style"])
 		set_metainfo_ooc_style(usr) //ChompEDIT - usr arg
 	//CHOMPEdit End
-		print_ooc_notes_to_chat()
 	if(href_list["save_private_notes"])
 		if(usr == src)
 			save_private_notes(usr)

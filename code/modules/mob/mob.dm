@@ -1146,17 +1146,10 @@
 		throw_icon.icon_state = "act_throw_off"
 
 /mob/proc/throw_mode_on()
-<<<<<<< HEAD
-	src.in_throw_mode = 1
-	if(src.throw_icon && !issilicon(src)) // Silicon use this for something else. Do not overwrite their HUD icon
-		src.throw_icon.icon_state = "act_throw_on"
-/* CHOMPedit removal begin
-=======
 	in_throw_mode = 1
 	if(throw_icon && !issilicon(src)) // Silicon use this for something else. Do not overwrite their HUD icon
 		throw_icon.icon_state = "act_throw_on"
-
->>>>>>> 7be621e7c3 (usr to user part two (#16884))
+/* CHOMPedit removal begin
 /mob/verb/spacebar_throw_on()
 	set name = ".throwon"
 	set hidden = TRUE
@@ -1188,25 +1181,15 @@ ChompEdit removal end*/
 
 
 /obj/Destroy()
+	// CHOMPEdit Start
 	if(exploit_for)
 		var/mob/exploited = exploit_for.resolve()
 		exploited?.exploit_addons -= src
 		exploit_for = null
+	// CHOMPEdit End
 	. = ..()
 
 
-<<<<<<< HEAD
-=======
-
-/obj/Destroy()
-	if(istype(loc, /mob))
-		var/mob/holder = loc
-		if(src in holder.exploit_addons)
-			holder.exploit_addons -= src
-	. = ..()
-
-
->>>>>>> 7be621e7c3 (usr to user part two (#16884))
 /client/proc/check_has_body_select()
 	return mob && mob.hud_used && istype(mob.zone_sel, /obj/screen/zone_sel)
 

@@ -94,9 +94,8 @@
 			NR.forceMove(M.vore_selected)
 		//CHOMPAdd End
 		if(trash)
-<<<<<<< HEAD
-			var/obj/item/TrashItem = new trash(usr)
-			usr.put_in_hands(TrashItem)
+			var/obj/item/TrashItem = new trash(M)
+			M.put_in_hands(TrashItem)
 			//CHOMPAdd Start - Transfer item TF mobs to the trash if able
 			if(possessed_voice && possessed_voice.len)
 				for(var/mob/living/voice/V in possessed_voice)
@@ -110,10 +109,6 @@
 				possessed_voice -= V
 				qdel(V)
 		//CHOMPAdd End
-=======
-			var/obj/item/TrashItem = new trash(M)
-			M.put_in_hands(TrashItem)
->>>>>>> 7be621e7c3 (usr to user part two (#16884))
 		qdel(src)
 
 /obj/item/reagent_containers/food/snacks/attack_self(mob/user as mob)

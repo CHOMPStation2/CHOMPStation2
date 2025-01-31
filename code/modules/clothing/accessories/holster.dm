@@ -81,14 +81,9 @@
 		w_class = initial(w_class)
 		clear_holster()
 
-<<<<<<< HEAD
 //YW change start
-/obj/item/clothing/accessory/holster/attack_hand(mob/user as mob)
-	if (user.a_intent == I_HURT && has_suit && (slot & SLOT_HOLSTER ))	//if we are part of a suit and are using harm intent
-=======
 /obj/item/clothing/accessory/holster/attack_hand(mob/user)
-	if (has_suit && (slot & ACCESSORY_SLOT_UTILITY))	//if we are part of a suit
->>>>>>> 7be621e7c3 (usr to user part two (#16884))
+	if (user.a_intent == I_HURT && has_suit && (slot & SLOT_HOLSTER ))	//if we are part of a suit and are using harm intent
 		if (holstered)
 			unholster(user)
 		return

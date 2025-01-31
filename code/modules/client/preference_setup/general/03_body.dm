@@ -545,11 +545,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 			var/desc_id = href_list["change_descriptor"]
 			if(pref.body_descriptors[desc_id])
 				var/datum/mob_descriptor/descriptor = mob_species.descriptors[desc_id]
-<<<<<<< HEAD
-				var/choice = tgui_input_list(user, "Please select a descriptor.", "Descriptor", descriptor.chargen_value_descriptors) //ChompEDIT - usr removal
-=======
 				var/choice = tgui_input_list(user, "Please select a descriptor.", "Descriptor", descriptor.chargen_value_descriptors)
->>>>>>> 7be621e7c3 (usr to user part two (#16884))
 				if(choice && mob_species.descriptors[desc_id]) // Check in case they sneakily changed species.
 					pref.body_descriptors[desc_id] = descriptor.chargen_value_descriptors[choice]
 					return TOPIC_REFRESH
@@ -562,11 +558,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 
 	else if(href_list["show_species"])
 		// Actual whitelist checks are handled elsewhere, this is just for accessing the preview window.
-<<<<<<< HEAD
-		var/choice = tgui_input_list(user, "Which species would you like to look at?", "Species Choice", GLOB.playable_species) //ChompEDIT - usr removal
-=======
 		var/choice = tgui_input_list(user, "Which species would you like to look at?", "Species Choice", GLOB.playable_species)
->>>>>>> 7be621e7c3 (usr to user part two (#16884))
 		if(!choice) return
 		pref.species_preview = choice
 		SetSpecies(preference_mob())
@@ -1275,11 +1267,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	//vorestation edit end
 	dat += "<td width = 200 align='center'>"
 	if("preview" in cached_icon_states(current_species.icobase))
-<<<<<<< HEAD
-		user << browse_rsc(icon(current_species.icobase,"preview"), "species_preview_[current_species.name].png") //ChompEDIT usr -> user
-=======
 		user << browse_rsc(icon(current_species.icobase,"preview"), "species_preview_[current_species.name].png")
->>>>>>> 7be621e7c3 (usr to user part two (#16884))
 		dat += "<img src='species_preview_[current_species.name].png' width='64px' height='64px'><br/><br/>"
 	dat += span_bold("Language:") + " [current_species.species_language]<br/>"
 	dat += "<small>"

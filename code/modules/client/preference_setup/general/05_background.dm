@@ -152,31 +152,19 @@
 		return TOPIC_REFRESH
 
 	else if(href_list["reset_medrecord"])
-<<<<<<< HEAD
-		var/resetmed_choice = tgui_alert(user, "Wipe your Medical Records? This cannot be reverted if you have not saved your character recently! You may wish to make a backup first.","Reset Records",list("Yes","No")) //ChompEDIT - usr removal
-=======
 		var/resetmed_choice = tgui_alert(user, "Wipe your Medical Records? This cannot be reverted if you have not saved your character recently! You may wish to make a backup first.","Reset Records",list("Yes","No"))
->>>>>>> 7be621e7c3 (usr to user part two (#16884))
 		if(resetmed_choice == "Yes")
 			pref.med_record = null
 		return TOPIC_REFRESH
 
 	else if(href_list["reset_emprecord"])
-<<<<<<< HEAD
-		var/resetemp_choice = tgui_alert(user, "Wipe your Employment Records? This cannot be reverted if you have not saved your character recently! You may wish to make a backup first.","Reset Records",list("Yes","No")) //ChompEDIT - usr removal
-=======
 		var/resetemp_choice = tgui_alert(user, "Wipe your Employment Records? This cannot be reverted if you have not saved your character recently! You may wish to make a backup first.","Reset Records",list("Yes","No"))
->>>>>>> 7be621e7c3 (usr to user part two (#16884))
 		if(resetemp_choice == "Yes")
 			pref.gen_record = null
 		return TOPIC_REFRESH
 
 	else if(href_list["reset_secrecord"])
-<<<<<<< HEAD
-		var/resetsec_choice = tgui_alert(user, "Wipe your Security Records? This cannot be reverted if you have not saved your character recently! You may wish to make a backup first.","Reset Records",list("Yes","No")) //ChompEDIT - usr removal
-=======
 		var/resetsec_choice = tgui_alert(user, "Wipe your Security Records? This cannot be reverted if you have not saved your character recently! You may wish to make a backup first.","Reset Records",list("Yes","No"))
->>>>>>> 7be621e7c3 (usr to user part two (#16884))
 		if(resetsec_choice == "Yes")
 			pref.sec_record = null
 		return TOPIC_REFRESH
