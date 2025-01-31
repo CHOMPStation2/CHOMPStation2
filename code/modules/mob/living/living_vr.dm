@@ -36,6 +36,7 @@
 		to_chat(src, span_filter_notice("OOC notes updated. Don't forget to save!"))
 		log_admin("[key_name(src)] updated their OOC notes mid-round.")
 		ooc_notes_window(src)
+<<<<<<< HEAD
 		//CHOMPEdit Start
 		set_metainfo_likes(src, FALSE)
 		set_metainfo_dislikes(src, FALSE)
@@ -43,6 +44,10 @@
 		set_metainfo_maybes(src, FALSE)
 		set_metainfo_ooc_style(src, FALSE)
 		//CHOMPEdit End
+=======
+		set_metainfo_likes(src, FALSE)
+		set_metainfo_dislikes(src, FALSE)
+>>>>>>> 8ea5bc3f35 (some more usr (#17013))
 
 /mob/living/proc/set_metainfo_panel(mob/user)
 	if(user != src)
