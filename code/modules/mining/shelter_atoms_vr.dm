@@ -43,7 +43,7 @@ GLOBAL_LIST_EMPTY(unique_deployable)
 		. += "This capsule has an unknown template stored."
 
 // CHOMPEdit Start
-/obj/item/survivalcapsule/attack_self(mob/user as mob)
+/obj/item/survivalcapsule/attack_self(mob/user)
 	//Can't grab when capsule is New() because templates aren't loaded then
 	if(istype(get_area(user), /area/vr))
 		to_chat(user, span_danger("\The [src] does not appear to work in VR! This is useless to you!"))
@@ -95,7 +95,7 @@ GLOBAL_LIST_EMPTY(unique_deployable)
 
 		playsound(src, 'sound/effects/phasein.ogg', 100, 1)
 
-		log_and_message_admins("activated a bluespace capsule at [get_area(T)]!", usr)
+		log_and_message_admins("activated a bluespace capsule at [get_area(T)]!", user)
 		if(above_location)
 			template.add_roof(above_location)
 		template.annihilate_plants(deploy_location)

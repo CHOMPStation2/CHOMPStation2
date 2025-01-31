@@ -632,32 +632,32 @@
 
 	update_icon_define_digi = "icons/inventory/feet/mob_digi.dmi"
 
-/obj/item/clothing/shoes/proc/draw_knife()
+/obj/item/clothing/shoes/proc/draw_knife(mob/living/user)
 	set name = "Draw Boot Knife"
 	set desc = "Pull out your boot knife."
 	set category = "IC.Game"
 	set src in usr
 
-	if(usr.stat || usr.restrained() || usr.incapacitated())
+	if(user.stat || user.restrained() || user.incapacitated())
 		return
 
 	//CHOMPEdit begin
-	if(istype(usr, /mob/living/carbon/human))
-		var/mob/living/carbon/human/H = usr
+	if(istype(user, /mob/living/carbon/human))
+		var/mob/living/carbon/human/H = user
 		if(H.ability_flags & 0x1)
-			to_chat(usr, span_warning("You cannot do that while phase shifted."))
+			to_chat(user, span_warning("You cannot do that while phase shifted."))
 			return
 	//CHOMPEdit end
 
-	holding.forceMove(get_turf(usr))
+	holding.forceMove(get_turf(user))
 
-	if(usr.put_in_hands(holding))
-		usr.visible_message(span_danger("\The [usr] pulls a knife out of their boot!"))
+	if(user.put_in_hands(holding))
+		user.visible_message(span_danger("\The [user] pulls a knife out of their boot!"))
 		playsound(src, 'sound/weapons/holster/sheathout.ogg', 25)
 		holding = null
 		cut_overlay("[icon_state]_knife")
 	else
-		to_chat(usr, span_warning("Your need an empty, unbroken hand to do that."))
+		to_chat(user, span_warning("Your need an empty, unbroken hand to do that."))
 		holding.forceMove(src)
 
 	if(!holding)
@@ -668,7 +668,7 @@
 
 /obj/item/clothing/shoes/attack_hand(var/mob/living/M)
 	if(can_hold_knife == 1 && holding && src.loc == M)
-		draw_knife()
+		draw_knife(M)
 		return
 	..()
 
@@ -886,7 +886,7 @@
 /obj/item/clothing/under/attack_hand(var/mob/user)
 	if(LAZYLEN(accessories))
 		..()
-	if ((ishuman(usr) || issmall(usr)) && src.loc == user)
+	if ((ishuman(user) || issmall(user)) && src.loc == user)
 		return
 	..()
 
@@ -975,37 +975,36 @@
 		if(3)
 			. += "Its vital tracker and tracking beacon appear to be enabled."
 
-/obj/item/clothing/under/proc/set_sensors(mob/usr as mob)
-	var/mob/M = usr
-	if (istype(M, /mob/observer)) return
-	if (usr.stat || usr.restrained()) return
+/obj/item/clothing/under/proc/set_sensors(mob/user)
+	if (istype(user, /mob/observer)) return
+	if (user.stat || user.restrained()) return
 	if(has_sensor >= 2)
-		to_chat(usr, "The controls are locked.")
+		to_chat(user, "The controls are locked.")
 		return 0
 	if(has_sensor <= 0)
-		to_chat(usr, "This suit does not have any sensors.")
+		to_chat(user, "This suit does not have any sensors.")
 		return 0
 
 	var/list/modes = list("Off", "Binary sensors", "Vitals tracker", "Tracking beacon")
-	var/switchMode = tgui_input_list(usr, "Select a sensor mode:", "Suit Sensor Mode", modes)
-	if(get_dist(usr, src) > 1)
-		to_chat(usr, "You have moved too far away.")
+	var/switchMode = tgui_input_list(user, "Select a sensor mode:", "Suit Sensor Mode", modes)
+	if(get_dist(user, src) > 1)
+		to_chat(user, "You have moved too far away.")
 		return
 	sensor_mode = modes.Find(switchMode) - 1
 
-	if (src.loc == usr)
+	if (src.loc == user)
 		switch(sensor_mode)
 			if(0)
-				usr.visible_message("[usr] adjusts their sensors.", "You disable your suit's remote sensing equipment.")
+				user.visible_message("[user] adjusts their sensors.", "You disable your suit's remote sensing equipment.")
 			if(1)
-				usr.visible_message("[usr] adjusts their sensors.", "Your suit will now report whether you are live or dead.")
+				user.visible_message("[user] adjusts their sensors.", "Your suit will now report whether you are live or dead.")
 			if(2)
-				usr.visible_message("[usr] adjusts their sensors.", "Your suit will now report your vital lifesigns.")
+				user.visible_message("[user] adjusts their sensors.", "Your suit will now report your vital lifesigns.")
 			if(3)
-				usr.visible_message("[usr] adjusts their sensors.", "Your suit will now report your vital lifesigns as well as your coordinate position.")
+				user.visible_message("[user] adjusts their sensors.", "Your suit will now report your vital lifesigns as well as your coordinate position.")
 
 	else if (istype(src.loc, /mob))
-		usr.visible_message("[usr] adjusts [src.loc]'s sensors.", "You adjust [src.loc]'s sensors.")
+		user.visible_message("[user] adjusts [src.loc]'s sensors.", "You adjust [src.loc]'s sensors.")
 
 /obj/item/clothing/under/verb/toggle()
 	set name = "Toggle Suit Sensors"
@@ -1106,7 +1105,7 @@
 
 				// only override icon if a corresponding digitigrade replacement icon_state exists
 				// otherwise, keep the old non-digi icon_define (or nothing)
-				if(icon_state && icon_states(update_icon_define_digi).Find(icon_state))
+				if(icon_state && icon_states(update_icon_define_digi)?.Find(icon_state))
 					update_icon_define = update_icon_define_digi
 
 
