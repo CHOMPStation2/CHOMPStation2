@@ -1,4 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - rscadd: "Added a warning message if clients are older than 516, warning them that the game will soon update to version 516 and that they will experience issues in the meantime, and eventually not be able to connect at all."

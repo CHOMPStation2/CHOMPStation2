@@ -402,3 +402,13 @@
 2025-01-30:
   Kashargul:
   - code_imp: malignant organs -> adjust_nutrition
+2025-01-31:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Added a warning message if clients are older than 516, warning them that
+      the game will soon update to version 516 and that they will experience issues
+      in the meantime, and eventually not be able to connect at all.
+  - rscadd: 'adds the angler bulb to the sprite DM whose name i immediately forgor
+
+      image:adds angler icon states from caustic cove to ears.dmi'
+  - rscadd: Added a simple recolourable wrestling mask to the loadout for the upcoming
+      event.
