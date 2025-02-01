@@ -69,7 +69,7 @@
 	if((H.nutrition < 50) && prob(25))
 		H.hallucination = max(30,H.hallucination+8)
 	if((H.nutrition < 25) && prob(5))
-		H.drowsyness = max(100,H.drowsyness+30)
+		H.drowsyness = min(100,H.drowsyness+30)
 
 /datum/trait/negative/blindness
 	name = "Permanently blind"
