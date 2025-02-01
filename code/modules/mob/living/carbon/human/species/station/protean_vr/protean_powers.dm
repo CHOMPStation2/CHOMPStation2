@@ -460,7 +460,7 @@
 					choice = show_radial_menu(protie, protie, options, radius = 90)
 					if(!choice || QDELETED(protie) || protie.incapacitated())
 						return 0
-					var/new_color = input("Pick underbelly color:","Underbelly Color", S.dragon_overlays[1]) as null|color
+					var/new_color = tgui_color_picker(protie, "Pick underbelly color:","Underbelly Color", S.dragon_overlays[1])
 					if(!new_color)
 						return 0
 					S.dragon_overlays[1] = choice
@@ -473,7 +473,7 @@
 					choice = show_radial_menu(protie, protie, options, radius = 90)
 					if(!choice || QDELETED(protie) || protie.incapacitated())
 						return 0
-					var/new_color = input("Pick body color:","Body Color", S.dragon_overlays[2]) as null|color
+					var/new_color = tgui_color_picker(protie, "Pick body color:","Body Color", S.dragon_overlays[2])
 					if(!new_color)
 						return 0
 					S.dragon_overlays[2] = choice
@@ -486,7 +486,7 @@
 					choice = show_radial_menu(protie, protie, options, radius = 90)
 					if(!choice || QDELETED(protie) || protie.incapacitated())
 						return 0
-					var/new_color = input("Pick ear color:","Ear Color", S.dragon_overlays[3]) as null|color
+					var/new_color = tgui_color_picker(protie, "Pick ear color:","Ear Color", S.dragon_overlays[3])
 					if(!new_color)
 						return 0
 					S.dragon_overlays[3] = choice
@@ -499,7 +499,7 @@
 					choice = show_radial_menu(protie, protie, options, radius = 90)
 					if(!choice || QDELETED(protie) || protie.incapacitated())
 						return 0
-					var/new_color = input("Pick mane color:","Mane Color", S.dragon_overlays[4]) as null|color
+					var/new_color = tgui_color_picker(protie, "Pick mane color:","Mane Color", S.dragon_overlays[4])
 					if(!new_color)
 						return 0
 					S.dragon_overlays[4] = choice
@@ -512,7 +512,7 @@
 					choice = show_radial_menu(protie, protie, options, radius = 90)
 					if(!choice || QDELETED(protie) || protie.incapacitated())
 						return 0
-					var/new_color = input("Pick horn color:","Horn Color", S.dragon_overlays[5]) as null|color
+					var/new_color = tgui_color_picker(protie, "Pick horn color:","Horn Color", S.dragon_overlays[5])
 					if(!new_color)
 						return 0
 					S.dragon_overlays[5] = choice
@@ -525,7 +525,7 @@
 					choice = show_radial_menu(protie, protie, options, radius = 90)
 					if(!choice || QDELETED(protie) || protie.incapacitated())
 						return 0
-					var/new_color = input("Pick eye color:","Eye Color", S.dragon_overlays[6]) as null|color
+					var/new_color = tgui_color_picker(protie, "Pick eye color:","Eye Color", S.dragon_overlays[6])
 					if(!new_color)
 						return 0
 					S.dragon_overlays[6] = choice
@@ -655,12 +655,12 @@
 			S.blob_appearance = "dullahan"
 			// CHOMPEdit End
 		if("Primary")
-			var/new_color = input("Pick primary color:","Protean Primary", "#FF0000") as null|color
+			var/new_color = tgui_color_picker(protie, "Pick primary color:","Protean Primary", "#FF0000")
 			if(!new_color)
 				return
 			S.blob_color_1 = new_color
 		if("Highlight")
-			var/new_color = input("Pick highlight color:","Protean Highlight", "#FF0000") as null|color
+			var/new_color = tgui_color_picker(protie, "Pick highlight color:","Protean Highlight", "#FF0000")
 			if(!new_color)
 				return
 			S.blob_color_2 = new_color
