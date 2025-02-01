@@ -225,23 +225,14 @@
 		ourmob.forceMove(get_dat_turf)
 		ourmob.vore_selected = M.vore_selected
 		M.vore_selected = null
-		for(var/obj/belly/B as anything in M.vore_organs)
-			log_debug("polymorph belly")
-			B.loc = ourmob
-			B.forceMove(ourmob)
-			B.owner = ourmob
-			M.vore_organs -= B
-			ourmob.vore_organs += B
+		ourmob.mob_belly_transfer(M)
 
 		M.soulgem.transfer_self(ourmob) //CHOMPAdd Soulcatcher
 
 		ourmob.Life(1)
 		if(ishuman(M))
-			log_debug("polymorph human")
 			for(var/obj/item/W in M)
-				log_debug("polymorph items")
 				if(istype(W, /obj/item/implant/backup) || istype(W, /obj/item/nif))
-					log_debug("polymorph implants")
 					continue
 				M.drop_from_inventory(W)
 
@@ -256,6 +247,7 @@
 		var/mob/living/new_mob = spawn_mob(M)
 		new_mob.faction = M.faction
 
+<<<<<<< HEAD
 		if(new_mob && isliving(new_mob))
 			log_debug("polymorph new_mob")
 			for(var/obj/belly/B as anything in new_mob.vore_organs)
@@ -306,6 +298,9 @@
 			M.loc = new_mob
 			M.forceMove(new_mob)
 			new_mob.tf_mob_holder = M
+=======
+		new_mob.mob_tf(M)
+>>>>>>> cd89f4d237 (Glamour Experimentation (#17003))
 	target.bloodstr.clear_reagents() //Got to clear all reagents to make sure mobs don't keep spawning.
 	target.ingested.clear_reagents()
 	target.touching.clear_reagents()

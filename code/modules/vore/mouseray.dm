@@ -103,6 +103,7 @@
 		var/turf/get_dat_turf = get_turf(target)
 		ourmob.loc = get_dat_turf
 		ourmob.forceMove(get_dat_turf)
+<<<<<<< HEAD
 		if(!M.tf_form_ckey)
 			ourmob.vore_selected = M.vore_selected
 			M.vore_selected = null
@@ -116,6 +117,11 @@
 			M.soulgem.transfer_self(ourmob) //CHOMPAdd Soulcatcher
 
 		ourmob.ckey = M.ckey
+=======
+		ourmob.vore_selected = M.vore_selected
+		M.vore_selected = null
+		ourmob.mob_belly_transfer(M)
+>>>>>>> cd89f4d237 (Glamour Experimentation (#17003))
 
 		ourmob.Life(1)
 		if(ishuman(M))
@@ -139,6 +145,7 @@
 			return
 		var/mob/living/new_mob = spawn_mob(M)
 
+<<<<<<< HEAD
 		if(new_mob && isliving(new_mob))
 			new_mob.faction = M.faction //CHOMPEdit Start
 			if(istype(new_mob, /mob/living/simple_mob))
@@ -190,6 +197,9 @@
 			M.loc = new_mob
 			M.forceMove(new_mob)
 			new_mob.tf_mob_holder = M
+=======
+		new_mob.mob_tf(M)
+>>>>>>> cd89f4d237 (Glamour Experimentation (#17003))
 
 /obj/item/projectile/beam/mouselaser/proc/spawn_mob(var/mob/living/target)
 	if(!ispath(tf_type))
@@ -197,6 +207,7 @@
 	var/new_mob = new tf_type(get_turf(target))
 	return new_mob
 
+<<<<<<< HEAD
 /mob/living
 	var/mob/living/tf_mob_holder = null
 
@@ -322,6 +333,8 @@
 	new_mob.allow_mimicry = allow_mimicry
 	new_mob.text_warnings = text_warnings
 	new_mob.allow_mind_transfer = allow_mind_transfer
+=======
+>>>>>>> cd89f4d237 (Glamour Experimentation (#17003))
 
 	//CHOMP stuff Start
 	new_mob.phase_vore = phase_vore
