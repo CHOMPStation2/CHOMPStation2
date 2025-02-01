@@ -121,12 +121,8 @@
 	capacitor = /obj/item/stock_parts/capacitor
 	removable_components = TRUE //CHOMPstation Edit
 
-<<<<<<< HEAD
-	fire_delay = 0
-	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
-=======
 	fire_delay = 0.1
->>>>>>> 4c8b23497c (Fixes a lot of guns with 0 fire delay (#17028))
+	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 	slot_flags = SLOT_BELT
 
