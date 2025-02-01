@@ -1,0 +1,17 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - balance: "Massively lowers chance of the virgo beacon spawning"
+  - balance: "Massively lowers chance of both guns and laser guns spawning in war digsites (The chances you would find a fully functioning gun is pretty low, honestly. This reflects that.)"
+  - balance: "Lowers chance of finding the cult blade"
+  - balance: "Adds human corpses to temple digsites, war digsites, and garden digsites"
+  - balance: "Adds alien corpses to garden digsites and war digsites"
+  - balance: "Adds robot corpses to war digsites and technical digsites"
+  - bugfix: "Xenoarch guns can no longer erroneously choose a firemode and swap their projectile type"
+  - bugfix: "Xenoarch guns no longer become laser rifles when battery is swapped"
+  - bugfix: "Xenoarch guns have proper names now"
+  - balance: "Xenoarch guns can no longer have pulse destroyer beams"
+  - balance: "You can no longer accidentally nuke yourself with the cult sword"
+  - balance: "The electric field artifact can no longer be rapidly turned on and off to nuke people"
+  - bugfix: "The cult sword checks to make sure it has the proper lifeforce"
+  - balance: "Actually properly gets rid of radiation+damage when you destroy an artifact. You instead now become jittery."
