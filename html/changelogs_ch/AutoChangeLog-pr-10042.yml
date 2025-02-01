@@ -1,0 +1,11 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - rscadd: "Added a new stable glamour crafting material that can be used to craft various items."
+  - rscadd: "Added a new unstable glamour item, that has a few risky effects when used and picked up without protection."
+  - rscadd: "Added a new particle smasher recipe to turn unstable glamour into stable glamour."
+  - rscadd: "Added new items to the lleill transmute ability."
+  - rscadd: "Added new glamour bow and arrow items."
+  - rscadd: "Added a variable for particle smasher recipes to have a chance not to consume an item."
+  - rscadd: "Added new glamour turfs for whitespace maps."
+  - code_imp: "Changed TF procs to be called from one centralised location, rather than repeated across the code multiple times."
