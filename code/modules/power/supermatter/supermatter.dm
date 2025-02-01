@@ -279,7 +279,7 @@
 			critwarn = TRUE
 		// CHOMPEdit End
 		safe_warned = FALSE
-	else if(damage >= damage_archived) // The damage is still going up
+	else if(damage > 0 && damage >= damage_archived) // The damage is still going up
 		// CHOMPEdit: Looping Alarms - we're not making a proc for initiating the alarms in this case.
 		if(!engwarn)
 			if(src.z in using_map.station_levels)
