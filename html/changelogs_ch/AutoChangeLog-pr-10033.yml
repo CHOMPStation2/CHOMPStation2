@@ -1,0 +1,5 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - bugfix: "Fixes compact shotguns not being able to rack the gun"
+  - bugfix: "Fixes computers not facing the right way"
