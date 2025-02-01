@@ -407,16 +407,13 @@
 
 	var/datum/db_query/query = SSdbcore.NewQuery("SELECT datediff(Now(),firstseen) as age FROM erro_player WHERE ckey = '[sql_ckey]'")
 	query.Execute()
-	//CHOMPEdit Begin
-	if(query.NextRow())
-		var/outp = text2num(query.item[1])
-		qdel(query)
-		return outp
-	else
-		qdel(query)
-		return -1
-	//CHOMPEdit End
 
+	var/player_age = -1
+	if(query.NextRow())
+		player_age = text2num(query.item[1])
+
+	qdel(query)
+	return player_age
 
 /client/proc/log_client_to_db()
 
