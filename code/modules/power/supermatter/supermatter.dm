@@ -279,6 +279,7 @@
 			critwarn = TRUE
 		// CHOMPEdit End
 		safe_warned = FALSE
+<<<<<<< HEAD
 	else if(damage >= damage_archived) // The damage is still going up
 		// CHOMPEdit: Looping Alarms - we're not making a proc for initiating the alarms in this case.
 		if(!engwarn)
@@ -292,6 +293,9 @@
 						candidate_alarm.engwarn = TRUE // Tell the fire alarm we're warning engineering
 			engwarn = TRUE // So we don't repeatedly try and start over the soundloop/etc
 		// CHOMPEdit End
+=======
+	else if(damage > 0 && damage >= damage_archived) // The damage is still going up
+>>>>>>> 8cbbbd40a1 (another sm alarm fix (#17002))
 		safe_warned = FALSE
 		alert_msg = warning_alert + alert_msg
 		lastwarning = world.timeofday
