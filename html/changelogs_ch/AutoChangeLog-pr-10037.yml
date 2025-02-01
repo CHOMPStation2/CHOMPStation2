@@ -1,0 +1,5 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - rscadd: "Adds a Deluxe bluespace bracelet that allows a variable toggle."
+  - balance: "Lowered cost of base bluespace bracelet to 1 loadout point"
