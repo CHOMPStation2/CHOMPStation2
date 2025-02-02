@@ -1,0 +1,6 @@
+author: "Hunter-Dovetail"
+delete-after: True
+changes:
+  - rscadd: "crocodile_neck-head"
+  - code_imp: "hide_body_parts to scaled_belly-torso, six_pack-torso"
+  - image: "modified and improved horse_head-head, horse_fringe-head, dragon_upperjaw-head, dragon_lowerjaw-head, six_pack-torso, scaled_belly-torso"
