@@ -341,7 +341,7 @@
 			queue -= queue[index]
 		if("clear_queue")
 			// Remove all entries from the queue except the currently processing recipe.
-			var/confirm = alert(usr, "Are you sure you want to clear the running queue?", "Confirm", "No", "Yes")
+			var/confirm = tgui_alert(usr, "Are you sure you want to clear the running queue?", "Confirm", list("No", "Yes"))
 			if(confirm == "Yes")
 				if(busy)
 					// Oh no, I've broken code convention to remove all entries but the first.
@@ -362,7 +362,7 @@
 		if("emergency_stop")
 			// Stops everything if that's desirable for some reason.
 			if(busy)
-				var/confirm = alert(usr, "Are you sure you want to stall the machine?", "Confirm", "Yes", "No")
+				var/confirm = tgui_alert(usr, "Are you sure you want to stall the machine?", "Confirm", list("Yes", "No"))
 				if(confirm == "Yes")
 					stalled = TRUE
 		if("bottle_product")
@@ -388,7 +388,7 @@
 		if("rem_recipe")
 			// Allows the user to remove recipes while the machine is idle.
 			if(!busy)
-				var/confirm = alert(usr, "Are you sure you want to remove this recipe?", "Confirm", "No", "Yes")
+				var/confirm = tgui_alert(usr, "Are you sure you want to remove this recipe?", "Confirm", list("No", "Yes"))
 				if(confirm == "Yes")
 					var/index = params["rm_index"]
 					if(index in recipes)

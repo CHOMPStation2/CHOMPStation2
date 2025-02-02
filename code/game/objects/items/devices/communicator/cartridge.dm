@@ -219,7 +219,7 @@
 			var/list/L = E.contents[href_list["index"]]
 
 			if(href_list["edit"])
-				var/field = alert(user, "Select which field to edit", , "Name", "Quantity", "Value")
+				var/field = tgui_alert(user, "Select which field to edit", "Field?", list("Name", "Quantity", "Value"))
 
 				var/new_val = sanitize(tgui_input_text(user, href_list["edit"], "Enter the new value for this field:", href_list["default"]))
 				if(!new_val)
