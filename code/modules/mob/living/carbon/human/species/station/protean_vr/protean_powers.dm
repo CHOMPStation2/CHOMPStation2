@@ -575,7 +575,7 @@
 					choice = show_radial_menu(protie, protie, options, radius = 90)
 					if(!choice || QDELETED(protie) || protie.incapacitated())
 						return 0
-					var/new_color = input("Pick shell color:","Shell Color", S.dullahan_overlays[3]) as null|color
+					var/new_color = tgui_color_picker(src, "Pick shell color:","Shell Color", S.dullahan_overlays[3])
 					if(!new_color)
 						return 0
 					S.dullahan_overlays[3] = choice //metal overlay is 3, eyes is 4
@@ -594,7 +594,7 @@
 					choice = show_radial_menu(protie, protie, options, radius = 90)
 					if(!choice || QDELETED(protie) || protie.incapacitated())
 						return 0
-					var/new_color = input("Pick eye color:","Eye Color", S.dullahan_overlays[4]) as null|color
+					var/new_color = tgui_color_picker(src, "Pick eye color:","Eye Color", S.dullahan_overlays[4])
 					if(!new_color)
 						return 0
 					S.dullahan_overlays[4] = choice
@@ -607,14 +607,14 @@
 					choice = show_radial_menu(protie, protie, options, radius = 90)
 					if(!choice || QDELETED(protie) || protie.incapacitated())
 						return 0
-					var/new_color = input("Pick decal color:","Decal Color", S.dullahan_overlays[5]) as null|color
+					var/new_color = tgui_color_picker(src, "Pick decal color:","Decal Color", S.dullahan_overlays[5])
 					if(!new_color)
 						return 0
 					S.dullahan_overlays[5] = choice
 					S.dullahan_overlays[S.dullahan_overlays[5]] = new_color
 				if("Import")
 					var/dinput_style
-					dinput_style = sanitizeSafe(input(protie,"Paste the style string you exported with Export Style.", "Style loading","") as text, 128)
+					dinput_style = sanitizeSafe(tgui_input_text(protie,"Paste the style string you exported with Export Style.", "Style loading","", 120), 128)
 					if(dinput_style)
 						var/list/dinput_style_list = splittext(dinput_style, ";")
 						if((LAZYLEN(dinput_style_list) == 6) && (dinput_style_list[1] in dullahanmetal_styles) && (dinput_style_list[3] in dullahandecals_styles) && (dinput_style_list[5] in dullahaneyes_styles))

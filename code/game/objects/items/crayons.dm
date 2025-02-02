@@ -69,11 +69,7 @@
 		shadeColour = new_colour
 	return
 
-<<<<<<< HEAD
-/obj/item/pen/crayon/afterattack(atom/target, mob/user as mob, proximity, click_parameters) // CHOMPEdit - Click parameters
-=======
-/obj/item/pen/crayon/afterattack(atom/target, mob/user, proximity)
->>>>>>> bbed406b2e (remove old inputs (#17008))
+/obj/item/pen/crayon/afterattack(atom/target, mob/user, proximity, click_parameters) // CHOMPEdit - Click parameters
 	if(!proximity) return
 	if(istype(target,/turf/simulated/floor))
 		var/drawtype = tgui_input_list(user, "Choose what you'd like to draw.", "Crayon scribbles", list("graffiti","rune","letter","arrow"))

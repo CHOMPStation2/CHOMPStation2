@@ -37,7 +37,7 @@
 /obj/machinery/smartfridge/tcrystal/tgui_act(action, params)
 	if(..())
 		return TRUE
-	
+
 	add_fingerprint(usr)
 	switch(action)
 		if("Release")
@@ -45,11 +45,11 @@
 			if(params["amount"])
 				amount = params["amount"]
 			else
-				amount = input("How many items?", "How many items would you like to take out?", 1) as num|null
-			
+				amount = tgui_input_number(user, "How many items?", "How many items would you like to take out?", 1)
+
 			if(QDELETED(src) || QDELETED(usr) || !usr.Adjacent(src))
 				return FALSE
-			
+
 			var/index = text2num(params["index"])
 			var/datum/stored_item/I = item_records[index]
 			var/count = I.get_amount()

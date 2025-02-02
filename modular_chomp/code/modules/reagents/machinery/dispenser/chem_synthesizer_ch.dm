@@ -479,12 +479,12 @@
 
 // This proc is lets users create recipes step-by-step and exports a comma delineated list to chat. It's intended to teach how to use the machine.
 /obj/machinery/chemical_synthesizer/proc/babystep_recipe(mob/user)
-	var/rec_name = sanitizeSafe(input(user, "Name your recipe. Consider including the output volume.", "Recipe naming", null) as text, MAX_NAME_LEN)
+	var/rec_name = sanitizeSafe(tgui_input_text(user, "Name your recipe. Consider including the output volume.", "Recipe naming"))
 	if(!rec_name || (rec_name in recipes)) // Code requires each recipe to have a unique name.
 		to_chat(user, "Please provide a unique recipe name!")
 		return
 
-	var/steps = 2 * CLAMP(round(input(user, "How many steps does your recipe contain (16 max)?", "Steps", null) as num), 0, RECIPE_MAX_STEPS) // Round to get a whole integer, clamp to ensure proper range.
+	var/steps = 2 * tgui_input_number(user, "How many steps does your recipe contain (16 max)?", "Steps", 1, RECIPE_MAX_STEPS, 1) // Round to get a whole integer, clamp to ensure proper range.
 	if(!steps)
 		to_chat(user, "Please input a valid number of steps!")
 		return
@@ -496,7 +496,7 @@
 			to_chat(user, "Please select a chemical!")
 			return
 		new_rec[++new_rec.len] = label // Add the reagent ID.
-		var/amount = CLAMP(round(input(user, "How much of the chemical would you like to add?", "Volume", null) as num), 0, src.reagents.maximum_volume)
+		var/amount = tgui_input_number(user, "How much of the chemical would you like to add?", "Volume", 1, src.reagents.maximum_volume, 1)
 		if(!amount)
 			to_chat(user, "Please select a volume!")
 			return
@@ -509,12 +509,12 @@
 
 // This proc allows users to copy-paste a comma delineated list to create a recipe. The recipe will cause a stall() if formatted incorrectly.
 /obj/machinery/chemical_synthesizer/proc/import_recipe(mob/user)
-	var/rec_name = sanitizeSafe(input(user, "Name your recipe. Consider including the output volume.", "Recipe naming", null) as text, MAX_NAME_LEN)
+	var/rec_name = sanitizeSafe(tgui_input_text(user, "Name your recipe. Consider including the output volume.", "Recipe naming", max_length=MAX_NAME_LEN), MAX_NAME_LEN)
 	if(!rec_name || (rec_name in recipes)) // Code requires each recipe to have a unique name.
 		to_chat(user, "Please provide a unique recipe name!")
 		return
 
-	var/rec_input = input(user, "Input your recipe as 'Chem1,vol1,Chem2,vol2,...'", "Import recipe", null)
+	var/rec_input = tgui_input_text(user, "Input your recipe as 'Chem1,vol1,Chem2,vol2,...'", "Import recipe")
 	if(!rec_input || (length(rec_input) > RECIPE_MAX_STRING) || !findtext(rec_input, ",")) // The smallest possible recipe will contain 1 comma.
 		to_chat(user, "Invalid input or recipe max length exceeded!")
 		return

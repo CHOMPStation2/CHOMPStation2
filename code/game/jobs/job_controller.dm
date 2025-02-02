@@ -704,7 +704,7 @@ var/global/datum/controller/occupations/job_master
 				pred_names += M.real_name //very cringe
 
 			if(preds.len)
-				var/pred_name = input(C, "Choose a Predator.", "Pred Spawnpoint") as null|anything in pred_names
+				var/pred_name = tgui_input_list(C, "Choose a Predator.", "Pred Spawnpoint", pred_names)
 				if(!pred_name)
 					return
 				var/index = pred_names.Find(pred_name)
@@ -721,7 +721,7 @@ var/global/datum/controller/occupations/job_master
 				var/backup = alert(C, "Do you want a mind backup?", "Confirm", "Yes", "No")
 				if(backup == "Yes")
 					backup = 1
-				vore_spawn_gut = input(C, "Choose a Belly.", "Belly Spawnpoint") as null|anything in available_bellies
+				vore_spawn_gut = tgui_input_list(C, "Choose a Belly.", "Belly Spawnpoint", available_bellies)
 				if(!vore_spawn_gut)
 					return
 				//CHOMPAdd Start
@@ -799,7 +799,7 @@ var/global/datum/controller/occupations/job_master
 				preys += M
 				prey_names += M.real_name
 			if(preys.len)
-				var/prey_name = input(C, "Choose a Prey to spawn nom.", "Prey Spawnpoint") as null|anything in prey_names
+				var/prey_name = tgui_input_list(C, "Choose a Prey to spawn nom.", "Prey Spawnpoint", prey_names)
 				if(!prey_name)
 					return
 				var/index = prey_names.Find(prey_name)
@@ -809,7 +809,7 @@ var/global/datum/controller/occupations/job_master
 				var/datum/vore_preferences/P = C.prefs_vr
 				for(var/Y in P.belly_prefs)
 					available_bellies += Y["name"]
-				vore_spawn_gut = input(C, "Choose your Belly.", "Belly Spawnpoint") as null|anything in available_bellies
+				vore_spawn_gut = tgui_input_list(C, "Choose your Belly.", "Belly Spawnpoint", available_bellies)
 				if(!vore_spawn_gut)
 					return
 				//CHOMPAdd Start
@@ -910,7 +910,7 @@ var/global/datum/controller/occupations/job_master
 				var/backup = alert(C, "Do you want a mind backup?", "Confirm", "Yes", "No")
 				if(backup == "Yes")
 					backup = 1
-				var/item_name = input(C, "Choose an Item to spawn as.", "Item TF Spawnpoint") as null|anything in item_names
+				var/item_name = tgui_input_list(C, "Choose an Item to spawn as.", "Item TF Spawnpoint", item_names)
 				if(!item_name)
 					return
 				var/index = item_names.Find(item_name)

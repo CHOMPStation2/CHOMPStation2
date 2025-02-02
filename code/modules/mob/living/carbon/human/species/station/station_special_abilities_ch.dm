@@ -28,7 +28,7 @@
 		to_chat(C, span_warning("You must have a tighter grip to bite this creature."))
 		return
 
-	var/choice = input(src, "What do you wish to inject?") as null|anything in list(REAGENT_APHRODISIAC, "Numbing", "Paralyzing")
+	var/choice = tgui_input_list(src, "What do you wish to inject?", "Reagent", list(REAGENT_APHRODISIAC, "Numbing", "Paralyzing"))
 
 	last_special = world.time + 600
 
@@ -127,7 +127,7 @@ var/eggs = 0
 	if(last_special > world.time)
 		return
 
-	var/choice = input(src, "What do you want to do?") as null|anything in list("Make a Egg", "lay your Eggs")
+	var/choice = tgui_input_list(src, "What do you want to do?", "Egg Option", list("Make a Egg", "lay your Eggs"))
 	last_special = world.time + 600
 
 	if(!choice)
@@ -182,7 +182,7 @@ var/eggs = 0
 	var/list/victims = list()
 	for(var/mob/living/carbon/C in oview(1))
 		victims += C
-	var/mob/living/carbon/T = input(src, "Who will we sting?") as null|anything in victims
+	var/mob/living/carbon/T = tgui_input_list(src, "Who will we sting?", "Target", victims)
 
 	if(!T)
 		return
