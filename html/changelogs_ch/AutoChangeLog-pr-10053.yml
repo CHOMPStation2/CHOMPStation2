@@ -1,0 +1,8 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - code_imp: "Makes deluxe bluespace bracelets and hyper jumpsuit code not as bad"
+  - bugfix: "Fixes a bug where projectiles could go into nullspace and runtime"
+  - bugfix: "Fixes a bug where tcomms would runtime trying to get their temperature after being destroyed"
+  - bugfix: "Fixes a bug where circuit boards would not del their datums properly"
+  - rscadd: "Deluxe bluespace bracelets respect dorms"
