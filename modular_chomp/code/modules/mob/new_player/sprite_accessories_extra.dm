@@ -230,7 +230,8 @@
 /datum/sprite_accessory/marking/ch/scaled_belly
 	name = "Scaled Belly"
 	icon_state = "scaled_belly"
-	body_parts = list(BP_TORSO,BP_GROIN)
+	hide_body_parts = list(BP_L_LEG,BP_R_LEG,BP_L_HAND,BP_R_HAND,BP_L_LEG,BP_R_LEG,BP_GROIN)
+	body_parts = list(BP_TORSO,BP_GROIN,BP_L_LEG,BP_R_LEG,BP_L_HAND,BP_R_HAND)
 	color_blend_mode = ICON_MULTIPLY
 
 
@@ -255,6 +256,13 @@
 /datum/sprite_accessory/marking/ch/crocodile_lowerjaw
 	name = "Crocodile Lower Jaw"
 	icon_state = "crocodile_lowerjaw"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+
+
+/datum/sprite_accessory/marking/ch/crocodile_neck
+	name = "Crocodile Neck"
+	icon_state = "crocodile_neck"
 	body_parts = list(BP_HEAD)
 	color_blend_mode = ICON_MULTIPLY
 
@@ -297,12 +305,14 @@
 /datum/sprite_accessory/marking/ch/smallchubbybelly
 	name = "Chubby Belly, Small"
 	icon_state = "smallchubbybelly"
+	hide_body_parts = list(BP_L_LEG,BP_R_LEG,BP_L_HAND,BP_R_HAND,BP_L_LEG,BP_R_LEG,BP_GROIN)
 	body_parts = list(BP_TORSO,BP_GROIN,BP_L_LEG,BP_R_LEG,BP_L_HAND,BP_R_HAND)
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/marking/ch/six_pack
 	name = "Six Pack"
 	icon_state = "six_pack"
+	hide_body_parts = list(BP_L_LEG,BP_R_LEG,BP_GROIN)
 	body_parts = list(BP_TORSO,BP_GROIN)
 	color_blend_mode = ICON_MULTIPLY
 
