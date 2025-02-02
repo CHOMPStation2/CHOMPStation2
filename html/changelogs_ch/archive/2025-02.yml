@@ -5,3 +5,66 @@
   - bugfix: Crew monitor now filters and shows vitals properly
   - code_imp: converts more usr to user / src
   - bugfix: Tritium no longer acts as slime jelly
+2025-02-02:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Adds a new sneptail from Skyrat
+  - bugfix: Fixed inventory missing sprites for some overcoats
+  - bugfix: Fixed missing longsword and sabre sprites.
+  - rscadd: Adds some currently unused weather effects (starry_night, midnight, sandstorm,
+      toxic_rain, downpour, downpourfatal, and acidfog)
+  - rscadd: Added a new stable glamour crafting material that can be used to craft
+      various items.
+  - rscadd: Added a new unstable glamour item, that has a few risky effects when used
+      and picked up without protection.
+  - rscadd: Added a new particle smasher recipe to turn unstable glamour into stable
+      glamour.
+  - rscadd: Added new items to the lleill transmute ability.
+  - rscadd: Added new glamour bow and arrow items.
+  - rscadd: Added a variable for particle smasher recipes to have a chance not to
+      consume an item.
+  - rscadd: Added new glamour turfs for whitespace maps.
+  - code_imp: Changed TF procs to be called from one centralised location, rather
+      than repeated across the code multiple times.
+  - rscadd: Added warnings for people on clients 516.1652 to 1654 that they should
+      use another version.
+  - bugfix: Fixes compact shotguns not being able to rack the gun
+  - bugfix: Fixes computers not facing the right way
+  - bugfix: Fixes a bunch of taur sprites. They no longer make all your items go invisible.
+  - bugfix: Fixed taurs being unable to be ridden.
+  - qol: Robots can now use their mining points to upgrade their scanner
+  - bugfix: All the numerous zaddat players can now rejoice as they can now choose
+      sprite accessories!
+  - code_imp: add cable dir maptest
+  - bugfix: Fixes spontaneous rupture of lungs when breathing otherwise adequate amounts
+      of air
+  - bugfix: The proper alert will now show up when you're suffocating in space.
+  - balance: Massively lowers chance of the virgo beacon spawning
+  - balance: Massively lowers chance of both guns and laser guns spawning in war digsites
+      (The chances you would find a fully functioning gun is pretty low, honestly.
+      This reflects that.)
+  - balance: Lowers chance of finding the cult blade
+  - balance: Adds human corpses to temple digsites, war digsites, and garden digsites
+  - balance: Adds alien corpses to garden digsites and war digsites
+  - balance: Adds robot corpses to war digsites and technical digsites
+  - bugfix: Xenoarch guns can no longer erroneously choose a firemode and swap their
+      projectile type
+  - bugfix: Xenoarch guns no longer become laser rifles when battery is swapped
+  - bugfix: Xenoarch guns have proper names now
+  - balance: Xenoarch guns can no longer have pulse destroyer beams
+  - balance: You can no longer accidentally nuke yourself with the cult sword
+  - balance: The electric field artifact can no longer be rapidly turned on and off
+      to nuke people
+  - bugfix: The cult sword checks to make sure it has the proper lifeforce
+  - balance: Actually properly gets rid of radiation+damage when you destroy an artifact.
+      You instead now become jittery.
+  - bugfix: nearby computers merge their icons
+  - code_imp: crash on guns with 0 fire delay, let us find out what guntype is doing
+      this
+  - bugfix: Fixed Teshari pattern ears being missing from the ears selection.
+  - rscadd: Adds a Deluxe bluespace bracelet that allows a variable toggle.
+  - balance: Lowered cost of base bluespace bracelet to 1 loadout point
+  - bugfix: another case where alarms could get stuck
+  - bugfix: fixes some runtimes pertaining to guns dividing by 0
+  Cameron-The-Raven:
+  - bugfix: _yw taur sprites properly show now
+  - bugfix: low blood sugar will no longer give you infinitely stacking drowsyness
