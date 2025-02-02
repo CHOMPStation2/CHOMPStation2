@@ -8,7 +8,7 @@
 	body_parts_covered = null
 
 /obj/item/clothing/gloves/weddingring/attack_self(mob/user)
-	partnername = copytext(sanitize(input(user, "Would you like to change the holoengraving on the ring?", "Name your betrothed", "Bae") as null|text),1,MAX_NAME_LEN)
+	partnername = copytext(sanitize(tgui_input_text(user, "Would you like to change the holoengraving on the ring?", "Name your betrothed", "Bae", MAX_NAME_LEN)),1,MAX_NAME_LEN)
 	name = "[initial(name)] - [partnername]"
 
 /obj/item/clothing/gloves/weddingring/silver

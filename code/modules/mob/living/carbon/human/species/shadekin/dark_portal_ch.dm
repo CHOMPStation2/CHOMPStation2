@@ -102,8 +102,8 @@ GLOBAL_LIST_BOILERPLATE(all_darkportal_hubs, /obj/structure/dark_portal/hub)
 			to_chat(user, span_warning("You can't use this while phase shifted!"))
 			return
 		if(locked != src)
-			var/confirm = alert(user, "This portal is currently open to [locked_name]. Change the portal destination?", "Change Portal Destination", "Yes", "Cancel")
-			if(confirm == "Cancel")
+			var/confirm = tgui_alert(user, "This portal is currently open to [locked_name]. Change the portal destination?", "Change Portal Destination", list("Yes", "Cancel"))
+			if(!confirm || confirm == "Cancel")
 				return
 		var/list/L = list()
 		for(var/obj/structure/dark_portal/hub/H in GLOB.all_darkportal_hubs)
@@ -189,8 +189,8 @@ GLOBAL_LIST_BOILERPLATE(all_darkportal_minions, /obj/structure/dark_portal/minio
 			to_chat(user, span_warning("You can't use this while phase shifted!"))
 			return FALSE
 		if(icon_state == "minion1")
-			var/confirm = alert(user, "This portal is currently open to [locked_name]. Close this portal to the dark?", "Close Portal", "Yes", "Cancel")
-			if(confirm == "Cancel")
+			var/confirm = tgui_alert(user, "This portal is currently open to [locked_name]. Close this portal to the dark?", "Close Portal", list("Yes", "Cancel"))
+			if(!confirm || confirm == "Cancel")
 				return
 			if(confirm == "Yes")
 				close_portal()

@@ -17,8 +17,8 @@
 		to_chat(src, span_warning("You are immune to resizing!"))
 		return
 
-	var/nagmessage = "Pick a size between 25 to 200%. (Only usable once!)"
-	var/new_size = input(nagmessage, "Pick a Size") as num|null
+	var/nagmessage = "Pick a size between [RESIZE_MINIMUM * 100] to [RESIZE_MAXIMUM * 100]%. (Only usable once!)"
+	var/new_size = tgui_input_number(src, nagmessage, "Pick a Size", size_multiplier*100, RESIZE_MAXIMUM * 100, RESIZE_MINIMUM * 100)
 	if(size_range_check(new_size))
 		resize(new_size/100, uncapped = has_large_resize_bounds(), ignore_prefs = TRUE)
 		picked_size = TRUE

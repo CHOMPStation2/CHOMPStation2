@@ -59,7 +59,7 @@
 		to_chat(user, span_danger("You are banned from playing a Genaprawn.")) //CHOMPedit
 		return
 
-	var/confirm = alert(user, "Are you sure you want to join as a Genaprawn larva?", "Become Larva", "No", "Yes") //CHOMPedit
+	var/confirm = tgui_alert(user, "Are you sure you want to join as a Genaprawn larva?", "Become Larva", list("No", "Yes")) //CHOMPedit
 
 	if(!src || confirm != "Yes")
 		return

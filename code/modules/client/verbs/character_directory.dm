@@ -325,7 +325,7 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 			var/list/names_list = list()
 			for(var/C in vantag_choices_list)
 				names_list[vantag_choices_list[C]] = C
-			var/list/new_eventtag = input(usr, "Pick your preference for event involvement", "Event Preference Tag", usr?.client?.prefs?.vantag_preference) as null|anything in names_list
+			var/list/new_eventtag = tgui_input_list(usr, "Pick your preference for event involvement", "Event Preference Tag", usr?.client?.prefs?.vantag_preference, names_list)
 			if(!new_eventtag)
 				return
 			return set_for_mind_or_prefs(user, action, names_list[new_eventtag], can_set_prefs, can_set_mind)

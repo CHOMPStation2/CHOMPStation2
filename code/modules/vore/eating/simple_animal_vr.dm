@@ -129,7 +129,7 @@
 	if(nutrition < 10)
 		to_chat(src, span_warning("You are too hungry to regenerate health."))
 		return
-	var/heal_amount = input(src, "Input the amount of health to regenerate at the rate of 10 nutrition per second per hitpoint. Current health: [health] / [maxHealth]", "Regenerate health.") as num|null
+	var/heal_amount = tgui_input_number(src, "Input the amount of health to regenerate at the rate of 10 nutrition per second per hitpoint. Current health: [health] / [maxHealth]", "Regenerate health.", 1, min_value=1)
 	if(!heal_amount)
 		return
 	heal_amount = CLAMP(heal_amount, 1, maxHealth - health)

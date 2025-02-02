@@ -56,8 +56,8 @@ GLOBAL_LIST_EMPTY(fuel_injectors)
 			return
 		//CHOMPEdit Begin
 		if(istype(W,/obj/item/fuel_assembly/blitz))
-			var/secondchance = alert("Are you sure you want to put the blitz rod in the fuel injector? This definitely wasn't meant to be used like this, and could only end badly.","Confirm","Yes","No")
-			if(secondchance=="No")
+			var/secondchance = tgui_alert(user, "Are you sure you want to put the blitz rod in the fuel injector? This definitely wasn't meant to be used like this, and could only end badly.","Confirm",list("Yes","No"))
+			if(!secondchance || secondchance=="No")
 				return
 		//CHOMPEdit End
 		if(cur_assembly)
