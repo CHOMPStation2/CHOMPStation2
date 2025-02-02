@@ -3,7 +3,7 @@
 	if(!D)
 		return
 
-	var/add_or_remove = input("Remove/Add?", "Trait Remove/Add") as null|anything in list("Add","Remove")
+	var/add_or_remove = tgui_input_list(usr, "Remove/Add?", "Trait Remove/Add", list("Add","Remove"))
 	if(!add_or_remove)
 		return
 	var/list/availible_traits = list()
@@ -20,7 +20,7 @@
 				var/name = GLOB.trait_name_map[trait] || trait
 				availible_traits[name] = trait
 
-	var/chosen_trait = input("Select trait to modify", "Trait") as null|anything in availible_traits
+	var/chosen_trait = tgui_input_list(usr, "Select trait to modify", "Trait", availible_traits)
 	if(!chosen_trait)
 		return
 	chosen_trait = availible_traits[chosen_trait]
@@ -30,14 +30,14 @@
 		if("Add") //Not doing source choosing here intentionally to make this bit faster to use, you can always vv it.
 			ADD_TRAIT(D,chosen_trait,source)
 		if("Remove")
-			var/specific = input("All or specific source ?", "Trait Remove/Add") as null|anything in list("All","Specific")
+			var/specific = tgui_input_list(usr, "All or specific source ?", "Trait Remove/Add", list("All","Specific"))
 			if(!specific)
 				return
 			switch(specific)
 				if("All")
 					source = null
 				if("Specific")
-					source = input("Source to be removed","Trait Remove/Add") as null|anything in D.status_traits[chosen_trait]
+					source = tgui_input_list(usr, "Source to be removed","Trait Remove/Add", D.status_traits[chosen_trait])
 					if(!source)
 						return
 			REMOVE_TRAIT(D,chosen_trait,source)

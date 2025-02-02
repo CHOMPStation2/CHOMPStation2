@@ -75,15 +75,15 @@
 		if(!is_open_container())
 			. += span_notice("Airtight lid seals it completely.")
 
-/obj/item/reagent_containers/glass/attack_self()
+/obj/item/reagent_containers/glass/attack_self(mob/user)
 	..()
 	if(is_open_container())
-		// to_chat(usr, span_notice("You put the lid on \the [src]."))
-		balloon_alert(usr, "Lid put on \the [src]")
+		// to_chat(user, span_notice("You put the lid on \the [src]."))
+		balloon_alert(user, "Lid put on \the [src]")
 		flags ^= OPENCONTAINER
 	else
-		// to_chat(usr, span_notice("You take the lid off \the [src]."))
-		balloon_alert(usr, "Lid removed off \the [src]") // CHOMPEdit - Changed to ballopn alert
+		// to_chat(user, span_notice("You take the lid off \the [src]."))
+		balloon_alert(user, "Lid removed off \the [src]") // CHOMPEdit - Changed to ballopn alert
 		flags |= OPENCONTAINER
 	update_icon()
 

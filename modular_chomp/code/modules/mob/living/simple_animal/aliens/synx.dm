@@ -685,7 +685,7 @@
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick body color:","Body Color", overlay_colors["Body"]) as null|color
+			var/new_color = tgui_color_picker(src, "Pick body color:","Body Color", overlay_colors["Body"])
 			if(!new_color)
 				return 0
 			body = choice
@@ -698,7 +698,7 @@
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick horn color:","Horn Color", overlay_colors["Horns"]) as null|color
+			var/new_color = tgui_color_picker(src, "Pick horn color:","Horn Color", overlay_colors["Horns"])
 			if(!new_color)
 				return 0
 			horns = choice
@@ -711,7 +711,7 @@
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick marking color:","Marking Color", overlay_colors["Marks"]) as null|color
+			var/new_color = tgui_color_picker(src, "Pick marking color:","Marking Color", overlay_colors["Marks"])
 			if(!new_color)
 				return 0
 			markings = choice
@@ -724,7 +724,7 @@
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick eye color:","Eye Color", overlay_colors["Eyes"]) as null|color
+			var/new_color = tgui_color_picker(src, "Pick eye color:","Eye Color", overlay_colors["Eyes"])
 			if(!new_color)
 				return 0
 			eyes = choice

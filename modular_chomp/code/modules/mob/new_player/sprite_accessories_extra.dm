@@ -220,23 +220,20 @@
 	body_parts = list(BP_HEAD)
 	color_blend_mode = ICON_MULTIPLY
 
+
 /datum/sprite_accessory/marking/ch/dragon_lowerjaw
 	name = "Dragon Lower Jaw"
 	icon_state = "dragon_lowerjaw"
 	body_parts = list(BP_HEAD)
 	color_blend_mode = ICON_MULTIPLY
 
-/datum/sprite_accessory/marking/ch/hippo_upperjaw
-	name = "Hippo Upper Jaw"
-	icon_state = "hippo_upperjaw"
-	body_parts = list(BP_HEAD)
+/datum/sprite_accessory/marking/ch/scaled_belly
+	name = "Scaled Belly"
+	icon_state = "scaled_belly"
+	hide_body_parts = list(BP_L_LEG,BP_R_LEG,BP_L_HAND,BP_R_HAND,BP_L_LEG,BP_R_LEG,BP_GROIN)
+	body_parts = list(BP_TORSO,BP_GROIN,BP_L_LEG,BP_R_LEG,BP_L_HAND,BP_R_HAND)
 	color_blend_mode = ICON_MULTIPLY
 
-/datum/sprite_accessory/marking/ch/hippo_lowerjaw
-	name = "Hippo Lower Jaw"
-	icon_state = "hippo_lowerjaw"
-	body_parts = list(BP_HEAD)
-	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/marking/ch/trex_upperjaw
 	name = "T-Rex Upper Jaw"
@@ -262,6 +259,13 @@
 	body_parts = list(BP_HEAD)
 	color_blend_mode = ICON_MULTIPLY
 
+
+/datum/sprite_accessory/marking/ch/crocodile_neck
+	name = "Crocodile Neck"
+	icon_state = "crocodile_neck"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+
 /datum/sprite_accessory/marking/ch/bovine_snout
 	name = "Bovine Snout"
 	icon_state = "bovine_snout"
@@ -274,10 +278,54 @@
 	body_parts = list(BP_HEAD)
 	color_blend_mode = ICON_MULTIPLY
 
+/datum/sprite_accessory/marking/ch/horse_head
+	name = "Horse Snout"
+	icon_state = "horse_head"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/marking/ch/horse_muzzle
+	name = "Horse Muzzle"
+	icon_state = "horse_muzzle"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/marking/ch/horse_eyes
+	name = "Horse Eyes"
+	icon_state = "horse_eyes"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/marking/ch/horse_fringe
+	name = "Horse Fringe"
+	icon_state = "horse_fringe"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+
 /datum/sprite_accessory/marking/ch/smallchubbybelly
 	name = "Chubby Belly, Small"
 	icon_state = "smallchubbybelly"
+	hide_body_parts = list(BP_L_LEG,BP_R_LEG,BP_L_HAND,BP_R_HAND,BP_L_LEG,BP_R_LEG,BP_GROIN)
 	body_parts = list(BP_TORSO,BP_GROIN,BP_L_LEG,BP_R_LEG,BP_L_HAND,BP_R_HAND)
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/marking/ch/six_pack
+	name = "Six Pack"
+	icon_state = "six_pack"
+	hide_body_parts = list(BP_L_LEG,BP_R_LEG,BP_GROIN)
+	body_parts = list(BP_TORSO,BP_GROIN)
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/marking/ch/hippo_upperjaw
+	name = "Hippo Upper Jaw"
+	icon_state = "hippo_upperjaw"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/marking/ch/hippo_lowerjaw
+	name = "Hippo Lower Jaw"
+	icon_state = "hippo_lowerjaw"
+	body_parts = list(BP_HEAD)
 	color_blend_mode = ICON_MULTIPLY
 
 

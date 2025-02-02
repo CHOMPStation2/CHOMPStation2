@@ -118,7 +118,7 @@
 	set name = "Change Color"
 	set desc = "Change your main color."
 	set category = "Abilities.General"
-	var/new_color = input("Pick new colors:","Color", goia_overlays["zorgoia_main"]) as null|color
+	var/new_color = tgui_color_picker(src, "Pick new colors:","Color", goia_overlays["zorgoia_main"])
 	if(!new_color)
 		return 0
 	goia_overlays["zorgoia_main"] = new_color
@@ -146,7 +146,7 @@
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick ears spike color:","Ears Color", goia_overlays["zorgoia_ears"]) as null|color
+			var/new_color = tgui_color_picker(src, "Pick ears spike color:","Ears Color", goia_overlays["zorgoia_ears"])
 			if(!new_color)
 				return 0
 			goia_overlays["ears"] = choice
@@ -161,7 +161,7 @@
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick spot colors:","Spots Color", goia_overlays["zorgoia_spots"]) as null|color
+			var/new_color = tgui_color_picker(src, "Pick spot colors:","Spots Color", goia_overlays["zorgoia_spots"])
 			if(!new_color)
 				return 0
 			goia_overlays["spots"] = choice
@@ -176,7 +176,7 @@
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick claw colors:","Claws Color", goia_overlays["zorgoia_claws"]) as null|color
+			var/new_color = tgui_color_picker(src, "Pick claw colors:","Claws Color", goia_overlays["zorgoia_claws"])
 			if(!new_color)
 				return 0
 			goia_overlays["claws"] = choice
@@ -191,7 +191,7 @@
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick spines colors:","Spines Color", goia_overlays["zorgoia_spines"]) as null|color
+			var/new_color = tgui_color_picker(src, "Pick spines colors:","Spines Color", goia_overlays["zorgoia_spines"])
 			if(!new_color)
 				return 0
 			goia_overlays["spines"] = choice
@@ -206,7 +206,7 @@
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick fluff colors:","Fluff Color", goia_overlays["zorgoia_fluff"]) as null|color
+			var/new_color = tgui_color_picker(src, "Pick fluff colors:","Fluff Color", goia_overlays["zorgoia_fluff"])
 			if(!new_color)
 				return 0
 			goia_overlays["fluff"] = choice
@@ -221,7 +221,7 @@
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick underbelly colors:","Underbelly Color", goia_overlays["zorgoia_underbelly"]) as null|color
+			var/new_color = tgui_color_picker(src, "Pick underbelly colors:","Underbelly Color", goia_overlays["zorgoia_underbelly"])
 			if(!new_color)
 				return 0
 			goia_overlays["underbelly"] = choice
@@ -236,7 +236,7 @@
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick eye color:","Eye Color", goia_overlays["zorgoia_eyes"]) as null|color
+			var/new_color = tgui_color_picker(src, "Pick eye color:","Eye Color", goia_overlays["zorgoia_eyes"])
 			if(!new_color)
 				return 0
 			goia_overlays["eyes"] = choice
@@ -251,7 +251,7 @@
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick tail spike color:","Tail Color", goia_overlays["zorgoia_spike"]) as null|color //This is overlay 10, not 2, swapped with main body, im not rewriting this array
+			var/new_color = tgui_color_picker(src, "Pick tail spike color:","Tail Color", goia_overlays["zorgoia_spike"]) //This is overlay 10, not 2, swapped with main body, im not rewriting this array
 			if(!new_color)
 				return 0
 			goia_overlays["spike"] = choice
@@ -266,7 +266,7 @@
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick belly color:","Belly Color", goia_overlays["zorgoia_belly"]) as null|color
+			var/new_color = tgui_color_picker(src, "Pick belly color:","Belly Color", goia_overlays["zorgoia_belly"])
 			if(!new_color)
 				return 0
 			goia_overlays["belly"] = choice
@@ -504,7 +504,7 @@
 	set desc = "Import a string of text that was made using the import style verb to get back that style"
 	set category = "Abilities.Settings"
 	var/input_style
-	input_style = sanitizeSafe(input(src,"Paste the style string you exported with Export Style.", "Style loading","") as text, MAX_MESSAGE_LEN)
+	input_style = sanitizeSafe(tgui_input_text(src,"Paste the style string you exported with Export Style.", "Style loading","", 250))
 	if(input_style)
 		var/list/input_style_list = splittext(input_style, ";")
 		if((LAZYLEN(input_style_list) == 20) /* && (input_style_list[2] in main_styles) */ \

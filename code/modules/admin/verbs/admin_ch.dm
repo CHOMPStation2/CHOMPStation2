@@ -16,14 +16,14 @@
 				if(content != null)
 					coords += content
 			if(coords.len>3)
-				alert("You entered too many coordinates! Only 3 are required.")
+				tgui_alert(src, "You entered too many coordinates! Only 3 are required.")
 				return
 			if(coords.len<3)
-				alert("You didn't enter enough coordinates! 3 are required.")
+				tgui_alert(src, "You didn't enter enough coordinates! 3 are required.")
 				return
 			destination = locate(coords[1],coords[2],coords[3])
 			if(!destination)
-				alert("Invalid coordinates!")
+				tgui_alert(src, "Invalid coordinates!")
 				return
 		if("atom")
 			value = vv_get_value(VV_ATOM_REFERENCE)
