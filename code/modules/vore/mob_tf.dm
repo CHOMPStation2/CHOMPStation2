@@ -5,21 +5,13 @@
 	if(!istype(M))
 		return
 	if(src && isliving(src))
-<<<<<<< HEAD
-		//CHOMPEdit Start
-=======
->>>>>>> 9de82ac4b7 (init_vore on mob_TF (#17037))
 		faction = M.faction
 		if(istype(src, /mob/living/simple_mob))
 			var/mob/living/simple_mob/S = src
 			if(!S.voremob_loaded)
 				S.voremob_loaded = TRUE
 				S.init_vore()
-<<<<<<< HEAD
-		new /obj/effect/effect/teleport_greyscale(M.loc)
-		//CHOMPEdit End
-=======
->>>>>>> 9de82ac4b7 (init_vore on mob_TF (#17037))
+		new /obj/effect/effect/teleport_greyscale(M.loc) // 
 		for(var/obj/belly/B as anything in src.vore_organs)
 			src.vore_organs -= B
 			qdel(B)
