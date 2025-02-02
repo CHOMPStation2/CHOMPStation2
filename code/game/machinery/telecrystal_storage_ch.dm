@@ -34,7 +34,7 @@
 		item_records.Add(item)
 		qdel(O)
 
-/obj/machinery/smartfridge/tcrystal/tgui_act(action, params)
+/obj/machinery/smartfridge/tcrystal/tgui_act(action, params, datum/tgui/ui)
 	if(..())
 		return TRUE
 
@@ -45,7 +45,7 @@
 			if(params["amount"])
 				amount = params["amount"]
 			else
-				amount = tgui_input_number(user, "How many items?", "How many items would you like to take out?", 1)
+				amount = tgui_input_number(ui.user, "How many items?", "How many items would you like to take out?", 1)
 
 			if(QDELETED(src) || QDELETED(usr) || !usr.Adjacent(src))
 				return FALSE

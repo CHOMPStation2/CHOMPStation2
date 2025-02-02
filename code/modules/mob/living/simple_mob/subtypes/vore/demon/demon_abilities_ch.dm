@@ -82,7 +82,7 @@
 	set desc = "Changes the amount you grow/shrink people."
 	set category = "Abilities.Demon"
 
-	var/size_select = tgui_input_number(src "Put the desired size ([RESIZE_MINIMUM * 100]-[RESIZE_MAXIMUM * 100]%)", "Set Size", size_amount * 100, RESIZE_MAXIMUM * 100, RESIZE_MINIMUM * 100) //Stolen from sizegun code
+	var/size_select = tgui_input_number(src, "Put the desired size ([RESIZE_MINIMUM * 100]-[RESIZE_MAXIMUM * 100]%)", "Set Size", size_amount * 100, RESIZE_MAXIMUM * 100, RESIZE_MINIMUM * 100) //Stolen from sizegun code
 	if(!size_select)
 		return
 	size_amount = (size_select/100)
