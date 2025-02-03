@@ -68,3 +68,12 @@
   Cameron-The-Raven:
   - bugfix: _yw taur sprites properly show now
   - bugfix: low blood sugar will no longer give you infinitely stacking drowsyness
+2025-02-03:
+  CHOMPStation2StaffMirrorBot:
+  - qol: removes all old inputs
+  - code_imp: removes old alert
+  Hunter-Dovetail:
+  - rscadd: crocodile_neck-head
+  - code_imp: hide_body_parts to scaled_belly-torso, six_pack-torso
+  - image: modified and improved horse_head-head, horse_fringe-head, dragon_upperjaw-head,
+      dragon_lowerjaw-head, six_pack-torso, scaled_belly-torso
