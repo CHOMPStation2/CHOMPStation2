@@ -135,9 +135,9 @@
 			if(istype(L) && M.CanStumbleVore(L))
 				unbuckle_mob(L, TRUE)
 				if(M == user)
-					M.visible_message("<span class='warning'>[M.name] sits down on [L.name]!</span>")
+					M.visible_message(span_warning("[M.name] sits down on [L.name]!"))
 				else
-					M.visible_message("<span class='warning'>[M.name] is forced to sit down on [L.name] by [user.name]!</span>")
+					M.visible_message(span_warning("[M.name] is forced to sit down on [L.name] by [user.name]!"))
 				M.perform_the_nom(user, L, M, M.vore_selected, 1)
 	//CHOMPEdit End
 
