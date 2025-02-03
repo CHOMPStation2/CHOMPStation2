@@ -194,6 +194,7 @@ const BuildTab = (props: {
     >
       <Input
         fluid
+        expensive
         updateOnPropsChange
         placeholder="Search for..."
         value={data.search}
