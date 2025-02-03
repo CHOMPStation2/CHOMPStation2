@@ -1,4 +1,4 @@
-# Contributing to CHOMPStation
+# Contributing to Chaosstation's Chomp fork
 
 :+1::tada: First off, thanks for taking the time to contribute! :tada::+1:
 
@@ -46,37 +46,34 @@ Unsure where to begin contributing to Chomp Station? You can start by looking th
 * Entire new station designs MUST be discussed with the community and the staff. Post a floor plan or basic design before committing effort in discord to prevent wasted time. 
 * For new atmospherics settings, subtypes of turfs for all turfs can be created with the [turfpacks](../modular_chomp/maps/~turfpacks/turfpacks.dm) system quickly and easily.
 
-## Chomp Station Coding Standards
+## Chomp Station Coding Standards (Edited for ChaosStation)
 
 ### General
-* **DO NOT** create joke or meme PRs. The Github is intended to be a sterile location for reviewing technical content.
-* We **DO NOT** allow any kind of CKEY/personally locked content on this codebase. Anything created must be available to all or none.
-    * Our upstream does allow this, and ckey-locked content from them does exist in our code. We try to comment it out where possible. Please report anything missing.
-    * If you have ckey locked content from our upstream and would like to make it available to all here, please contact us.
-* we **DO NOT** allow any 'naming' in our coded content. this includes shoutouts, naming a player as an owner or otherwise. All descriptions, names, lore-texts must be free of an individual's name. NPC naming is permitted.
+* We do not allow any kind of CKEY/personally locked content on this codebase. Anything created must be available to all.
+    * Our upstream does allow this, and ckey-locked content from them does exist in our code. We try to make it all publicly avalible. Please report anything missing.
 
 ### Codewriting
-* Where possible, add changes to the modular_chomp/ subdirectory.
-* For edits to upstream code (Code not inside /modular_chomp)
-    * For single line edits, add "//ChompEDIT - description" at the end of the line.
-    * For block edits, encapsulate your edit with "//ChompEDIT START - explanation" and "//ChompEDIT END".
-    * For removals, comment out the upstream code and append "//ChompEDIT REMOVE - explanation"
-    * For block removals, use "/\*" and "\*/" with "//ChompEDIT REMOVE - explanations"
-* **DO NOT** edit upstream .dmi (icon) files. Add icon changes in a new file in the /modular_chomp folder and override the object's "icon" and "icon_state" variables. 
-* **DO NOT** edit anything in the upstream /maps folder 
+* Where possible, add changes to the modular_chaos/ subdirectory.
+* For edits to upstream code (Code not inside /modular_chaos)
+    * For single line edits, add "//Chaos EDIT - description" at the end of the line.
+    * For block edits, encapsulate your edit with "//Chaos EDIT START - explanation" and "//Chaos EDIT END".
+    * For removals, comment out the upstream code and append "//Chaos EDIT REMOVE - explanation"
+    * For block removals, use "/\*" and "\*/" with "//Chaos EDIT REMOVE - explanations"
+* Do not edit upstream .dmi (icon) files. Add icon changes in a new file in the /modular_chomp folder and override the object's "icon" and "icon_state" variables. 
+* Do not edit anything in the upstream /maps folder 
 * Avoid the use of the 'usr' variable where possible. Use src or have the proc chain give the user's reference.
 * Use defines where they exist, e.g. string names of jobs, factions, ect. 
-* Where possible and applicable, send bugfixes to Virgo (Our upstream) to fix at the source. this is not enforced, however.
+* Where possible and applicable, send bugfixes to Chomp (Our upstream) to fix at the source. This is not enforced, however.
 
 ### Scene devices
 * A scene device or tool is considered any object or coded mechanic designed primarily to service roleplay scenes in-game. Usually, but not limited to roleplay of a private nature.
-* Scene devices **MUST** avoid giving a purely mechanical/gameplay advantage of any kind 
-* Scene devices **MUST** respect OOC consent where applicable.
-* Scene devices **MUST** react to the 'OOC Escape' command where possible. 
+* Scene devices must avoid giving a purely mechanical/gameplay advantage of any kind 
+* Scene devices must respect OOC consent where applicable.
+* Scene devices must react to the 'OOC Escape' command where possible. 
 
 ### TGUI
-* **DO NOT** edit upstream TGUI files. Small changes should be passed to upstream. Large edits require the file to be copied/rewritten in the chompstation subdirectory.
-* **ALL** TGUI files require typescript with properly defined types.
+* Do not edit upstream TGUI files. Small changes should be passed to upstream. Large edits require the file to be copied/rewritten in the chompstation subdirectory.
+* All TGUI files require typescript with properly defined types.
 
 
 ### Pull Requests

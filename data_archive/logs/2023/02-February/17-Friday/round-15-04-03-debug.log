@@ -1,0 +1,121 @@
+[2023-02-17T15:04:27] START: Starting up data/logs/2023/02-February/17-Friday/round-15-04-03.
+[2023-02-17T15:04:28] DEBUG: Rebuilding Master Controller
+[2023-02-17T15:04:51] DEBUG: VChat: RiotScopez got: VChat Loaded!
+[2023-02-17T15:05:24] DEBUG: Load: Could not find news channel Vir News Network to populate news articles.
+[2023-02-17T15:10:05] DEBUG: Initialized shuttle Stargazer (/datum/shuttle/autodock/overmap/stargazer)
+[2023-02-17T15:10:05] DEBUG: Initialized shuttle Baby_mammoth (/datum/shuttle/autodock/overmap/baby_mammoth)
+[2023-02-17T15:10:05] DEBUG: Initialized shuttle Ursula (/datum/shuttle/autodock/overmap/ursula)
+[2023-02-17T15:10:05] DEBUG: Initialized shuttle Needle (/datum/shuttle/autodock/overmap/needle)
+[2023-02-17T15:10:05] DEBUG: Initialized shuttle Echidna (/datum/shuttle/autodock/overmap/echidna)
+[2023-02-17T15:10:05] DEBUG: Initialized shuttle Escape Pod 1 (/datum/shuttle/autodock/ferry/escape_pod/escape_pod1)
+[2023-02-17T15:10:05] DEBUG: Initialized shuttle Escape Pod 2 (/datum/shuttle/autodock/ferry/escape_pod/escape_pod2)
+[2023-02-17T15:10:05] DEBUG: Initialized shuttle Escape Pod 3 (/datum/shuttle/autodock/ferry/escape_pod/escape_pod3)
+[2023-02-17T15:10:05] DEBUG: Initialized shuttle Escape Pod 4 (/datum/shuttle/autodock/ferry/escape_pod/escape_pod4)
+[2023-02-17T15:10:05] DEBUG: Initialized shuttle Escape Pod 5 (/datum/shuttle/autodock/ferry/escape_pod/escape_pod5)
+[2023-02-17T15:10:05] DEBUG: Initialized shuttle Escape Pod 6 (/datum/shuttle/autodock/ferry/escape_pod/escape_pod6)
+[2023-02-17T15:10:05] DEBUG: Initialized shuttle Escape Pod 7 (/datum/shuttle/autodock/ferry/escape_pod/escape_pod7)
+[2023-02-17T15:10:05] DEBUG: Initialized shuttle Escape Pod 8 (/datum/shuttle/autodock/ferry/escape_pod/escape_pod8)
+[2023-02-17T15:10:05] DEBUG: Initialized shuttle Cryostorage Shuttle (/datum/shuttle/autodock/ferry/escape_pod/escape_pod_cryo)
+[2023-02-17T15:10:05] DEBUG: Initialized shuttle Large Escape Pod 1 (/datum/shuttle/autodock/ferry/escape_pod/large_escape_pod1)
+[2023-02-17T15:10:05] DEBUG: Initialized shuttle Large Escape Pod 2 (/datum/shuttle/autodock/ferry/escape_pod/large_escape_pod2)
+[2023-02-17T15:10:05] DEBUG: Initialized shuttle Arrivals (/datum/shuttle/autodock/ferry/arrivals/southern_cross)
+[2023-02-17T15:10:05] DEBUG: Initialized shuttle Escape (/datum/shuttle/autodock/ferry/emergency/centcom)
+[2023-02-17T15:10:05] DEBUG: Initialized shuttle Supply (/datum/shuttle/autodock/ferry/supply/cargo)
+[2023-02-17T15:10:05] DEBUG: Initialized shuttle Exploration (/datum/shuttle/autodock/ferry/exploration)
+[2023-02-17T15:10:05] DEBUG: Initialized shuttle Administration Shuttle (/datum/shuttle/autodock/multi/administration)
+[2023-02-17T15:10:05] DEBUG: Initialized shuttle Centcom Transport Shuttle (/datum/shuttle/autodock/multi/centcom)
+[2023-02-17T15:10:05] DEBUG: Initialized shuttle Merchant (/datum/shuttle/autodock/multi/merchant)
+[2023-02-17T15:10:05] DEBUG: &lt;span class=&#39;danger&#39;&gt;warning: shuttle Skipjack can&#39;t find its controller with tag skipjack_shuttle!&lt;/span&gt;
+[2023-02-17T15:10:05] DEBUG: Initialized shuttle Skipjack (/datum/shuttle/autodock/multi/heist)
+[2023-02-17T15:10:05] DEBUG: Initialized shuttle Mercenary Ship (/datum/shuttle/autodock/multi/syndicate)
+[2023-02-17T15:10:05] DEBUG: Initialized shuttle Ninja Shuttle (/datum/shuttle/autodock/multi/ninja)
+[2023-02-17T15:10:05] DEBUG: Initialized shuttle Response Operations Shuttle (/datum/shuttle/autodock/multi/ert)
+[2023-02-17T15:10:05] DEBUG: Initialized shuttle Shuttle 3 (/datum/shuttle/autodock/web_shuttle/shuttle3)
+[2023-02-17T15:10:06] DEBUG: Generating cloud of 15 asteroid field overmap event hazards
+[2023-02-17T15:10:06] DEBUG: Generating cloud of 15 asteroid field overmap event hazards
+[2023-02-17T15:10:06] DEBUG: Generating cloud of 5 carp school overmap event hazards
+[2023-02-17T15:10:06] DEBUG: Generating cloud of 15 asteroid field overmap event hazards
+[2023-02-17T15:10:06] DEBUG: Generating cloud of 15 asteroid field overmap event hazards
+[2023-02-17T15:10:06] DEBUG: Generating cloud of 8 carp shoal overmap event hazards
+[2023-02-17T15:10:06] DEBUG: Generating cloud of 8 carp shoal overmap event hazards
+[2023-02-17T15:10:06] DEBUG: Generating cloud of 8 ion cloud overmap event hazards
+[2023-02-17T15:10:06] DEBUG: Generating cloud of 11 electrical storm overmap event hazards
+[2023-02-17T15:10:06] DEBUG: Generating cloud of 8 carp shoal overmap event hazards
+[2023-02-17T15:10:06] DEBUG: Generating cloud of 8 carp shoal overmap event hazards
+[2023-02-17T15:10:06] DEBUG: Generating cloud of 8 carp shoal overmap event hazards
+[2023-02-17T15:10:06] DEBUG: Generating cloud of 11 electrical storm overmap event hazards
+[2023-02-17T15:10:06] DEBUG: Generating cloud of 5 carp school overmap event hazards
+[2023-02-17T15:10:06] DEBUG: Generating cloud of 8 carp shoal overmap event hazards
+[2023-02-17T15:10:06] DEBUG: Generating cloud of 5 carp school overmap event hazards
+[2023-02-17T15:10:06] DEBUG: Generating cloud of 16 dust cloud overmap event hazards
+[2023-02-17T15:10:06] DEBUG: Generating cloud of 15 asteroid field overmap event hazards
+[2023-02-17T15:10:06] DEBUG: Generating cloud of 15 asteroid field overmap event hazards
+[2023-02-17T15:10:06] DEBUG: Generating cloud of 5 carp school overmap event hazards
+[2023-02-17T15:10:06] DEBUG: Generating cloud of 8 ion cloud overmap event hazards
+[2023-02-17T15:10:06] DEBUG: Generating cloud of 15 asteroid field overmap event hazards
+[2023-02-17T15:10:06] DEBUG: Generating cloud of 15 asteroid field overmap event hazards
+[2023-02-17T15:10:06] DEBUG: Generating cloud of 8 ion cloud overmap event hazards
+[2023-02-17T15:10:06] DEBUG: Generating cloud of 8 ion cloud overmap event hazards
+[2023-02-17T15:10:06] DEBUG: Generating cloud of 16 dust cloud overmap event hazards
+[2023-02-17T15:10:06] DEBUG: Generating cloud of 11 electrical storm overmap event hazards
+[2023-02-17T15:10:06] DEBUG: Generating cloud of 11 electrical storm overmap event hazards
+[2023-02-17T15:10:06] DEBUG: Generating cloud of 8 carp shoal overmap event hazards
+[2023-02-17T15:10:06] DEBUG: Generating cloud of 16 dust cloud overmap event hazards
+[2023-02-17T15:10:06] DEBUG: Generating cloud of 11 electrical storm overmap event hazards
+[2023-02-17T15:10:06] DEBUG: Generating cloud of 8 ion cloud overmap event hazards
+[2023-02-17T15:10:06] DEBUG: Generating cloud of 11 electrical storm overmap event hazards
+[2023-02-17T15:10:06] DEBUG: Generating cloud of 11 electrical storm overmap event hazards
+[2023-02-17T15:10:06] DEBUG: Generating cloud of 5 carp school overmap event hazards
+[2023-02-17T15:10:06] DEBUG: Generating cloud of 16 dust cloud overmap event hazards
+[2023-02-17T15:10:06] DEBUG: Generating cloud of 8 carp shoal overmap event hazards
+[2023-02-17T15:10:06] DEBUG: Generating cloud of 5 carp school overmap event hazards
+[2023-02-17T15:10:06] DEBUG: Generating cloud of 16 dust cloud overmap event hazards
+[2023-02-17T15:10:06] DEBUG: Generating cloud of 16 dust cloud overmap event hazards
+[2023-02-17T15:10:06] DEBUG: Generating cloud of 11 electrical storm overmap event hazards
+[2023-02-17T15:10:06] DEBUG: Generating cloud of 8 ion cloud overmap event hazards
+[2023-02-17T15:10:06] DEBUG: Generating cloud of 5 carp school overmap event hazards
+[2023-02-17T15:10:06] DEBUG: Generating cloud of 8 carp shoal overmap event hazards
+[2023-02-17T15:12:01] DEBUG: TiDi Starting Log
+[2023-02-17T15:17:23] DEBUG: Next event of severity Mundane in 37.97 minutes.
+[2023-02-17T15:17:23] DEBUG: Next event of severity Moderate in 30 minutes.
+[2023-02-17T15:17:23] DEBUG: Next event of severity Major in 100 minutes.
+[2023-02-17T15:17:23] DEBUG: Sif&#39;s weather is now snow, with a temperature of 248.775&amp;deg;K (-24.375&amp;deg;C | -11.875&amp;deg;F).
+[2023-02-17T15:17:23] DEBUG: Sif&#39;s weather forecast is now &#39;snow, snow,  then snow&#39;.
+[2023-02-17T15:24:36] DEBUG: Sif&#39;s weather is now snow, with a temperature of 248.775&amp;deg;K (-24.375&amp;deg;C | -11.875&amp;deg;F).
+[2023-02-17T15:24:36] DEBUG: Sif&#39;s weather forecast is now &#39;snow, snow,  then snow&#39;.
+[2023-02-17T15:31:40] DEBUG: Sif&#39;s weather is now snow, with a temperature of 248.775&amp;deg;K (-24.375&amp;deg;C | -11.875&amp;deg;F).
+[2023-02-17T15:31:40] DEBUG: Sif&#39;s weather forecast is now &#39;snow, snow,  then light snow&#39;.
+[2023-02-17T15:37:45] DEBUG: Sif&#39;s weather is now snow, with a temperature of 248.775&amp;deg;K (-24.375&amp;deg;C | -11.875&amp;deg;F).
+[2023-02-17T15:37:45] DEBUG: Sif&#39;s weather forecast is now &#39;snow, light snow,  then light snow&#39;.
+[2023-02-17T15:42:47] DEBUG: Sif&#39;s weather is now snow, with a temperature of 248.775&amp;deg;K (-24.375&amp;deg;C | -11.875&amp;deg;F).
+[2023-02-17T15:42:47] DEBUG: Sif&#39;s weather forecast is now &#39;light snow, light snow,  then light snow&#39;.
+[2023-02-17T15:52:52] DEBUG: Sif&#39;s weather is now light snow, with a temperature of 260.962&amp;deg;K (-12.1875&amp;deg;C | 10.0625&amp;deg;F).
+[2023-02-17T15:52:52] DEBUG: Sif&#39;s weather forecast is now &#39;light snow, light snow,  then light snow&#39;.
+[2023-02-17T15:57:54] DEBUG: Sif&#39;s weather is now light snow, with a temperature of 260.025&amp;deg;K (-13.125&amp;deg;C | 8.37497&amp;deg;F).
+[2023-02-17T15:57:54] DEBUG: Sif&#39;s weather forecast is now &#39;light snow, light snow,  then light snow&#39;.
+[2023-02-17T16:03:55] DEBUG: Sif&#39;s weather is now light snow, with a temperature of 260.025&amp;deg;K (-13.125&amp;deg;C | 8.37497&amp;deg;F).
+[2023-02-17T16:03:55] DEBUG: Sif&#39;s weather forecast is now &#39;light snow, light snow,  then snow&#39;.
+[2023-02-17T16:08:58] DEBUG: Sif&#39;s weather is now light snow, with a temperature of 260.025&amp;deg;K (-13.125&amp;deg;C | 8.37497&amp;deg;F).
+[2023-02-17T16:08:58] DEBUG: Sif&#39;s weather forecast is now &#39;light snow, snow,  then light snow&#39;.
+[2023-02-17T16:19:01] DEBUG: Sif&#39;s weather is now light snow, with a temperature of 260.025&amp;deg;K (-13.125&amp;deg;C | 8.37497&amp;deg;F).
+[2023-02-17T16:19:01] DEBUG: Sif&#39;s weather forecast is now &#39;snow, light snow,  then light snow&#39;.
+[2023-02-17T16:27:04] DEBUG: Sif&#39;s weather is now snow, with a temperature of 246.9&amp;deg;K (-26.25&amp;deg;C | -15.25&amp;deg;F).
+[2023-02-17T16:27:04] DEBUG: Sif&#39;s weather forecast is now &#39;light snow, light snow,  then snow&#39;.
+[2023-02-17T16:33:08] DEBUG: Sif&#39;s weather is now light snow, with a temperature of 260.025&amp;deg;K (-13.125&amp;deg;C | 8.37497&amp;deg;F).
+[2023-02-17T16:33:08] DEBUG: Sif&#39;s weather forecast is now &#39;light snow, snow,  then snow&#39;.
+[2023-02-17T16:40:18] DEBUG: Sif&#39;s weather is now light snow, with a temperature of 260.025&amp;deg;K (-13.125&amp;deg;C | 8.37497&amp;deg;F).
+[2023-02-17T16:40:18] DEBUG: Sif&#39;s weather forecast is now &#39;snow, snow,  then blizzard&#39;.
+[2023-02-17T16:45:21] DEBUG: Sif&#39;s weather is now snow, with a temperature of 246.9&amp;deg;K (-26.25&amp;deg;C | -15.25&amp;deg;F).
+[2023-02-17T16:45:21] DEBUG: Sif&#39;s weather forecast is now &#39;snow, blizzard,  then snow&#39;.
+[2023-02-17T16:52:26] DEBUG: Sif&#39;s weather is now snow, with a temperature of 245.025&amp;deg;K (-28.125&amp;deg;C | -18.625&amp;deg;F).
+[2023-02-17T16:52:26] DEBUG: Sif&#39;s weather forecast is now &#39;blizzard, snow,  then snow&#39;.
+[2023-02-17T16:57:28] DEBUG: Sif&#39;s weather is now blizzard, with a temperature of 233.775&amp;deg;K (-39.375&amp;deg;C | -38.875&amp;deg;F).
+[2023-02-17T16:57:28] DEBUG: Sif&#39;s weather forecast is now &#39;snow, snow,  then light snow&#39;.
+[2023-02-17T17:07:33] DEBUG: Sif&#39;s weather is now snow, with a temperature of 245.025&amp;deg;K (-28.125&amp;deg;C | -18.625&amp;deg;F).
+[2023-02-17T17:07:33] DEBUG: Sif&#39;s weather forecast is now &#39;snow, light snow,  then snow&#39;.
+[2023-02-17T17:12:36] DEBUG: Sif&#39;s weather is now snow, with a temperature of 245.025&amp;deg;K (-28.125&amp;deg;C | -18.625&amp;deg;F).
+[2023-02-17T17:12:36] DEBUG: Sif&#39;s weather forecast is now &#39;light snow, snow,  then snow&#39;.
+[2023-02-17T17:18:39] DEBUG: Sif&#39;s weather is now light snow, with a temperature of 259.087&amp;deg;K (-14.0625&amp;deg;C | 6.68747&amp;deg;F).
+[2023-02-17T17:18:39] DEBUG: Sif&#39;s weather forecast is now &#39;snow, snow,  then snow&#39;.
+[2023-02-17T17:24:42] DEBUG: Sif&#39;s weather is now snow, with a temperature of 245.025&amp;deg;K (-28.125&amp;deg;C | -18.625&amp;deg;F).
+[2023-02-17T17:24:42] DEBUG: Sif&#39;s weather forecast is now &#39;snow, snow,  then snow&#39;.
