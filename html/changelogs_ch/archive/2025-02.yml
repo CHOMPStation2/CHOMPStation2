@@ -68,3 +68,20 @@
   Cameron-The-Raven:
   - bugfix: _yw taur sprites properly show now
   - bugfix: low blood sugar will no longer give you infinitely stacking drowsyness
+2025-02-03:
+  CHOMPStation2StaffMirrorBot:
+  - qol: removes all old inputs
+  - rscadd: Additional checks added to mob tf
+  - code_imp: Makes deluxe bluespace bracelets and hyper jumpsuit code not as bad
+  - bugfix: Fixes a bug where projectiles could go into nullspace and runtime
+  - bugfix: Fixes a bug where tcomms would runtime trying to get their temperature
+      after being destroyed
+  - bugfix: Fixes a bug where circuit boards would not del their datums properly
+  - rscadd: Deluxe bluespace bracelets respect dorms
+  - code_imp: removes old alert
+  - bugfix: building camera consoles runtiming
+  Hunter-Dovetail:
+  - rscadd: crocodile_neck-head
+  - code_imp: hide_body_parts to scaled_belly-torso, six_pack-torso
+  - image: modified and improved horse_head-head, horse_fringe-head, dragon_upperjaw-head,
+      dragon_lowerjaw-head, six_pack-torso, scaled_belly-torso
