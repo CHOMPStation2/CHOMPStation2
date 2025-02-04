@@ -5,15 +5,13 @@
 	if(!istype(M))
 		return
 	if(src && isliving(src))
-		//CHOMPEdit Start
 		faction = M.faction
 		if(istype(src, /mob/living/simple_mob))
 			var/mob/living/simple_mob/S = src
 			if(!S.voremob_loaded)
 				S.voremob_loaded = TRUE
 				S.init_vore()
-		new /obj/effect/effect/teleport_greyscale(M.loc)
-		//CHOMPEdit End
+		new /obj/effect/effect/teleport_greyscale(M.loc) // CHOMPAdd
 		for(var/obj/belly/B as anything in src.vore_organs)
 			src.vore_organs -= B
 			qdel(B)
@@ -39,9 +37,9 @@
 				N.identifying_gender = M.gender
 
 		mob_belly_transfer(M)
-		nutrition = M.nutrition //CHOMPAdd
 		M.soulgem.transfer_self(src) //CHOMPAdd Soulcatcher
 
+		nutrition = M.nutrition
 		src.ckey = M.ckey
 		if(M.ai_holder && src.ai_holder)
 			var/datum/ai_holder/old_AI = M.ai_holder

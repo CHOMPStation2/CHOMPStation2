@@ -1,5 +1,4 @@
-2025-02-01:
-  CHOMPStation2StaffMirrorBot:
+CHOMPStation2StaffMirrorBot:
   - rscadd: Bodybags now show a visible tag when written on
   - bugfix: Bodybags show properly again
   - bugfix: Crew monitor now filters and shows vitals properly
@@ -71,7 +70,15 @@
 2025-02-03:
   CHOMPStation2StaffMirrorBot:
   - qol: removes all old inputs
+  - rscadd: Additional checks added to mob tf
+  - code_imp: Makes deluxe bluespace bracelets and hyper jumpsuit code not as bad
+  - bugfix: Fixes a bug where projectiles could go into nullspace and runtime
+  - bugfix: Fixes a bug where tcomms would runtime trying to get their temperature
+      after being destroyed
+  - bugfix: Fixes a bug where circuit boards would not del their datums properly
+  - rscadd: Deluxe bluespace bracelets respect dorms
   - code_imp: removes old alert
+  - bugfix: building camera consoles runtiming
   Hunter-Dovetail:
   - rscadd: crocodile_neck-head
   - code_imp: hide_body_parts to scaled_belly-torso, six_pack-torso
