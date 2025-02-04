@@ -85,3 +85,11 @@
   - code_imp: hide_body_parts to scaled_belly-torso, six_pack-torso
   - image: modified and improved horse_head-head, horse_fringe-head, dragon_upperjaw-head,
       dragon_lowerjaw-head, six_pack-torso, scaled_belly-torso
+2025-02-04:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: removes sleeps in robot module selection
+  - refactor: TGUI collections usage reduced
+  - bugfix: fixed the teshari foot sprites
+  - bugfix: fixed teshi_fluff
+  - image: added foot states for teshi_fluff to make the fix actually work. It's just
+      the leg sprites but I chopped em to fit
