@@ -13,8 +13,13 @@
 	icon_state = "beartrap0"
 	desc = "A mechanically activated leg trap. Low-tech, but reliable. Looks like it could really hurt if you set it off."
 	randpixel = 0
+<<<<<<< HEAD
 	center_of_mass_x = 0 //CHOMPEdit
 	center_of_mass_y = 0 //CHOMPEdit
+=======
+	center_of_mass_x = 0
+	center_of_mass_y = 0
+>>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 	throwforce = 0
 	w_class = ITEMSIZE_NORMAL
 	origin_tech = list(TECH_MATERIAL = 1)

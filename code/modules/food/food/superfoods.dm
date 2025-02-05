@@ -176,8 +176,13 @@
 	desc = "A slice from The Chaos Cake, it pulses weirdly, as if angry to be separated from the whole"
 	icon_state = "chaoscake_slice-1"
 
+<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 10 //CHOMPEdit
+=======
+	center_of_mass_x = 16
+	center_of_mass_y = 10
+>>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 	nutriment_desc = list()
 	nutriment_amt = 4
 	volume = 80

@@ -52,8 +52,13 @@
 	icon_state = "eggbox"
 	icon_type = REAGENT_ID_EGG
 	name = "egg box"
+<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 7 //CHOMPEdit
+=======
+	center_of_mass_x = 16
+	center_of_mass_y = 7
+>>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 	storage_slots = 12
 	can_hold = list(
 		/obj/item/reagent_containers/food/snacks/egg,

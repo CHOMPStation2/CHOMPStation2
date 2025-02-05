@@ -4,8 +4,13 @@
 	desc = "A jar. You're not sure what it's supposed to hold."
 	icon_state = "jar"
 	item_state = "beaker"
+<<<<<<< HEAD
 	center_of_mass_x = 15 //CHOMPEdit
 	center_of_mass_y= 8 //CHOMPEdit
+=======
+	center_of_mass_x = 15
+	center_of_mass_y = 8
+>>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 	unacidable = TRUE
 
 /obj/item/reagent_containers/food/drinks/jar/on_reagent_change()

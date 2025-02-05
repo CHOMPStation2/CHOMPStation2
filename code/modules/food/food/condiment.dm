@@ -12,8 +12,13 @@
 	icon_state = "emptycondiment"
 	flags = OPENCONTAINER
 	possible_transfer_amounts = list(1,5,10)
+<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 6 //CHOMPEdit
+=======
+	center_of_mass_x = 16
+	center_of_mass_y = 6
+>>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 	volume = 50
 
 /obj/item/reagent_containers/food/condiment/attackby(var/obj/item/W as obj, var/mob/user as mob)
@@ -61,60 +66,106 @@
 				name = REAGENT_KETCHUP
 				desc = "You feel more American already."
 				icon_state = "ketchup"
+<<<<<<< HEAD
 				center_of_mass_x = 16 //CHOMPEdit
 				center_of_mass_y= 6 //CHOMPEdit
+=======
+				center_of_mass_x = 16
+				center_of_mass_y = 6
+>>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 			if(REAGENT_ID_MUSTARD)
 				name = REAGENT_MUSTARD
 				desc = "A somewhat bitter topping."
 				icon_state = "mustard"
+<<<<<<< HEAD
 				center_of_mass_x = 16 //CHOMPEdit
 				center_of_mass_y= 6 //CHOMPEdit
+=======
+				center_of_mass_x = 16
+				center_of_mass_y = 6
+>>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 			if(REAGENT_ID_CAPSAICIN)
 				name = "Hotsauce"
 				desc = "You can almost TASTE the stomach ulcers now!"
 				icon_state = "hotsauce"
+<<<<<<< HEAD
 				center_of_mass_x = 16 //CHOMPEdit
 				center_of_mass_y= 6 //CHOMPEdit
+=======
+				center_of_mass_x = 16
+				center_of_mass_y = 6
+>>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 			if(REAGENT_ID_ENZYME)
 				name = REAGENT_ENZYME
 				desc = "Used in cooking various dishes."
 				icon_state = "enzyme"
+<<<<<<< HEAD
 				center_of_mass_x = 16 //CHOMPEdit
 				center_of_mass_y= 6 //CHOMPEdit
+=======
+				center_of_mass_x = 16
+				center_of_mass_y = 6
+>>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 			if(REAGENT_ID_SOYSAUCE)
 				name = REAGENT_SOYSAUCE
 				desc = "A salty soy-based flavoring."
 				icon_state = "soysauce"
+<<<<<<< HEAD
 				center_of_mass_x = 16 //CHOMPEdit
 				center_of_mass_y= 6 //CHOMPEdit
+=======
+				center_of_mass_x = 16
+				center_of_mass_y = 6
+>>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 			if(REAGENT_ID_VINEGAR)
 				name = REAGENT_VINEGAR
 				desc = "An acetic acid used in various dishes."
 				icon_state = "vinegar"
+<<<<<<< HEAD
 				center_of_mass_x = 16 //CHOMPEdit
 				center_of_mass_y= 6 //CHOMPEdit
+=======
+				center_of_mass_x = 16
+				center_of_mass_y = 6
+>>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 			if(REAGENT_ID_FROSTOIL)
 				name = "Coldsauce"
 				desc = "Leaves the tongue numb in its passage."
 				icon_state = "coldsauce"
+<<<<<<< HEAD
 				center_of_mass_x = 16 //CHOMPEdit
 				center_of_mass_y= 6 //CHOMPEdit
+=======
+				center_of_mass_x = 16
+				center_of_mass_y = 6
+>>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 			if(REAGENT_ID_SODIUMCHLORIDE)
 				name = "Salt Shaker"
 				desc = "Salt. From space oceans, presumably."
 				icon_state = "saltshaker"
+<<<<<<< HEAD
 				center_of_mass_x = 17 //CHOMPEdit
 				center_of_mass_y= 11 //CHOMPEdit
+=======
+				center_of_mass_x = 17
+				center_of_mass_y = 11
+>>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 			if(REAGENT_ID_BLACKPEPPER)
 				name = "Pepper Mill"
 				desc = "Often used to flavor food or make people sneeze."
 				icon_state = "peppermillsmall"
+<<<<<<< HEAD
 				center_of_mass_x = 17 //CHOMPEdit
 				center_of_mass_y= 11 //CHOMPEdit
+=======
+				center_of_mass_x = 17
+				center_of_mass_y = 11
+>>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 			if(REAGENT_ID_COOKINGOIL)
 				name = REAGENT_COOKINGOIL
 				desc = "A delicious oil used in cooking. General purpose."
 				icon_state = "oliveoil"
+<<<<<<< HEAD
 				center_of_mass_x = 16 //CHOMPEdit
 				center_of_mass_y= 6 //CHOMPEdit
 			if(REAGENT_ID_SUGAR)
@@ -122,42 +173,81 @@
 				desc = "Tastey space sugar!"
 				center_of_mass_x = 16 //CHOMPEdit
 				center_of_mass_y= 6 //CHOMPEdit
+=======
+				center_of_mass_x = 16
+				center_of_mass_y = 6
+			if(REAGENT_ID_SUGAR)
+				name = REAGENT_SUGAR
+				desc = "Tastey space sugar!"
+				center_of_mass_x = 16
+				center_of_mass_y = 6
+>>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 			if(REAGENT_ID_PEANUTBUTTER)
 				name = REAGENT_PEANUTBUTTER
 				desc = "A jar of smooth peanut butter."
 				icon_state = "peanutbutter"
+<<<<<<< HEAD
 				center_of_mass_x = 16 //CHOMPEdit
 				center_of_mass_y= 6 //CHOMPEdit
+=======
+				center_of_mass_x = 16
+				center_of_mass_y = 6
+>>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 			if(REAGENT_ID_MAYO)
 				name = REAGENT_MAYO
 				desc = "A jar of mayonnaise!"
 				icon_state = "mayo"
+<<<<<<< HEAD
 				center_of_mass_x = 16 //CHOMPEdit
 				center_of_mass_y= 6 //CHOMPEdit
+=======
+				center_of_mass_x = 16
+				center_of_mass_y = 6
+>>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 			if(REAGENT_ID_YEAST)
 				name = REAGENT_YEAST
 				desc = "This is what you use to make bread fluffy."
 				icon_state = "yeast"
+<<<<<<< HEAD
 				center_of_mass_x = 16 //CHOMPEdit
 				center_of_mass_y= 6 //CHOMPEdit
+=======
+				center_of_mass_x = 16
+				center_of_mass_y = 6
+>>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 			if(REAGENT_ID_SPACESPICE)
 				name = "bottle of space spice"
 				desc = "An exotic blend of spices for cooking. Definitely not worms."
 				icon_state = "spacespicebottle"
+<<<<<<< HEAD
 				center_of_mass_x = 16 //CHOMPEdit
 				center_of_mass_y= 6 //CHOMPEdit
+=======
+				center_of_mass_x = 16
+				center_of_mass_y = 6
+>>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 			if(REAGENT_ID_BARBECUE)
 				name = "barbecue sauce"
 				desc = "Barbecue sauce, it's labeled 'sweet and spicy'."
 				icon_state = "barbecue"
+<<<<<<< HEAD
 				center_of_mass_x = 16 //CHOMPEdit
 				center_of_mass_y= 6 //CHOMPEdit
+=======
+				center_of_mass_x = 16
+				center_of_mass_y = 6
+>>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 			if(REAGENT_ID_SPRINKLES)
 				name = REAGENT_ID_SPRINKLES
 				desc = "Bottle of sprinkles, colourful!"
 				icon_state= "sprinkles"
+<<<<<<< HEAD
 				center_of_mass_x = 16 //CHOMPEdit
 				center_of_mass_y= 6 //CHOMPEdit
+=======
+				center_of_mass_x = 16
+				center_of_mass_y = 6
+>>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 			else
 				name = "Misc Condiment Bottle"
 				if (reagents.reagent_list.len==1)
@@ -165,14 +255,24 @@
 				else
 					desc = "A mixture of various condiments. [reagents.get_master_reagent_name()] is one of them."
 				icon_state = "mixedcondiments"
+<<<<<<< HEAD
 				center_of_mass_x = 16 //CHOMPEdit
 				center_of_mass_y= 6 //CHOMPEdit
+=======
+				center_of_mass_x = 16
+				center_of_mass_y = 6
+>>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 	else
 		icon_state = "emptycondiment"
 		name = "Condiment Bottle"
 		desc = "An empty condiment bottle."
+<<<<<<< HEAD
 		center_of_mass_x = 16 //CHOMPEdit
 		center_of_mass_y= 6 //CHOMPEdit
+=======
+		center_of_mass_x = 16
+		center_of_mass_y = 6
+>>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 		return
 
 /obj/item/reagent_containers/food/condiment/enzyme
@@ -244,8 +344,13 @@
 	possible_transfer_amounts = list(1,20)
 	amount_per_transfer_from_this = 1
 	volume = 20
+<<<<<<< HEAD
 	center_of_mass_x = 0 //CHOMPEdit
 	center_of_mass_y = 0 //CHOMPEdit
+=======
+	center_of_mass_x = 0
+	center_of_mass_y = 0
+>>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 
 /obj/item/reagent_containers/food/condiment/small/on_reagent_change()
 	return
@@ -254,8 +359,13 @@
 	name = "salt shaker"											//	a large one.
 	desc = "Salt. From space oceans, presumably."
 	icon_state = "saltshakersmall"
+<<<<<<< HEAD
 	center_of_mass_x = 17 //CHOMPEdit
 	center_of_mass_y= 11 //CHOMPEdit
+=======
+	center_of_mass_x = 17
+	center_of_mass_y = 11
+>>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 
 /obj/item/reagent_containers/food/condiment/small/saltshaker/Initialize()
 	. = ..()
@@ -265,8 +375,13 @@
 	name = "pepper shaker"
 	desc = "Often used to flavor food or make people sneeze."
 	icon_state = "peppershakersmall"
+<<<<<<< HEAD
 	center_of_mass_x = 17 //CHOMPEdit
 	center_of_mass_y= 11 //CHOMPEdit
+=======
+	center_of_mass_x = 17
+	center_of_mass_y = 11
+>>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 
 /obj/item/reagent_containers/food/condiment/small/peppermill/Initialize()
 	. = ..()
@@ -276,8 +391,13 @@
 	name = "pepper mill"
 	desc = "Fancy way to season a dish or make people sneeze."
 	icon_state = "peppermill"
+<<<<<<< HEAD
 	center_of_mass_x = 17 //CHOMPEdit
 	center_of_mass_y= 11 //CHOMPEdit
+=======
+	center_of_mass_x = 17
+	center_of_mass_y = 11
+>>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 
 /obj/item/reagent_containers/food/condiment/small/peppermill/Initialize()
 	. = ..()
@@ -490,8 +610,13 @@
 	icon = 'icons/obj/food.dmi'
 	icon_state = "flour"
 	volume = 220
+<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 8 //CHOMPEdit
+=======
+	center_of_mass_x = 16
+	center_of_mass_y = 8
+>>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 
 /obj/item/reagent_containers/food/condiment/carton/flour/on_reagent_change()
 	update_icon()
@@ -522,8 +647,13 @@
 	desc = "A big carton of sugar. Sweet!"
 	icon_state = REAGENT_ID_SUGAR
 	volume = 120
+<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 8 //CHOMPEdit
+=======
+	center_of_mass_x = 16
+	center_of_mass_y = 8
+>>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 
 /obj/item/reagent_containers/food/condiment/carton/sugar/on_reagent_change()
 	update_icon()

@@ -16,8 +16,13 @@
 	icon = 'icons/goonstation/objects/syringe_vr.dmi'
 	item_state = "syringe_0"
 	icon_state = "0"
+<<<<<<< HEAD
 	center_of_mass_x = 16 //CHOMPEdit
 	center_of_mass_y= 14 //CHOMPEdit
+=======
+	center_of_mass_x = 16
+	center_of_mass_y = 14
+>>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 	matter = list(MAT_GLASS = 150)
 	amount_per_transfer_from_this = 5
 	possible_transfer_amounts = null

@@ -313,8 +313,13 @@
 	desc = "A desk lamp with an adjustable mount."
 	icon_state = "lamp"
 	force = 10
+<<<<<<< HEAD
 	center_of_mass_x = 13 //CHOMPEdit
 	center_of_mass_y= 11 //CHOMPEdit
+=======
+	center_of_mass_x = 13
+	center_of_mass_y = 11
+>>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 	light_range = 5
 	w_class = ITEMSIZE_LARGE
 	power_use = 0
@@ -333,16 +338,26 @@
 /obj/item/flashlight/lamp/green
 	desc = "A classic green-shaded desk lamp."
 	icon_state = "lampgreen"
+<<<<<<< HEAD
 	center_of_mass_x = 15 //CHOMPEdit
 	center_of_mass_y= 11 //CHOMPEdit
+=======
+	center_of_mass_x = 15
+	center_of_mass_y = 11
+>>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 	light_color = "#FFC58F"
 
 // clown lamp
 /obj/item/flashlight/lamp/clown
 	desc = "A whacky banana peel shaped lamp."
 	icon_state = "bananalamp"
+<<<<<<< HEAD
 	center_of_mass_x = 15 //CHOMPEdit
 	center_of_mass_y= 11 //CHOMPEdit
+=======
+	center_of_mass_x = 15
+	center_of_mass_y = 11
+>>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 
 
 /*
