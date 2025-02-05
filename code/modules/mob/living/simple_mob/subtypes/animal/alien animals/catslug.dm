@@ -60,7 +60,11 @@
 
 	allow_mind_transfer = TRUE
 
+<<<<<<< HEAD
 	//var/picked_color = FALSE //CHOMPEdit - now on simplemob.
+=======
+	var/picked_color = FALSE //This needs to be moved to simple_mob. Out of scope for this PR.
+>>>>>>> 9bf650610b (new to init (radios) (#17055))
 
 	can_enter_vent_with = list(
 		/obj/item/implant,
@@ -68,7 +72,11 @@
 		/obj/item/holder,
 		/obj/machinery/camera,
 		/obj/belly,
+<<<<<<< HEAD
 		/obj/soulgem, // CHOMPAdd
+=======
+		//obj/soulgem, // Used downstream.
+>>>>>>> 9bf650610b (new to init (radios) (#17055))
 		/obj/screen,
 		/atom/movable/emissive_blocker,
 		/obj/item/material,
@@ -139,7 +147,10 @@
 	belly_attack = FALSE
 
 /mob/living/simple_mob/vore/alienanimals/catslug/Initialize()
-	. = ..()
+	..()
+	return INITIALIZE_HINT_LATELOAD
+
+/mob/living/simple_mob/vore/alienanimals/catslug/LateInitialize()
 	add_verb(src, /mob/living/proc/ventcrawl)
 	add_verb(src, /mob/living/proc/hide)
 	add_verb(src, /mob/living/simple_mob/vore/alienanimals/catslug/proc/catslug_color)
@@ -360,7 +371,9 @@
 	can_wear_hat = FALSE
 
 /mob/living/simple_mob/vore/alienanimals/catslug/custom/Initialize()
-	. = ..()
+	..()
+	return INITIALIZE_HINT_LATELOAD
+/mob/living/simple_mob/vore/alienanimals/catslug/custom/LateInitialize()
 	add_verb(src, /mob/living/proc/ventcrawl)
 	add_verb(src, /mob/living/proc/hide)
 	remove_verb(src, /mob/living/simple_mob/vore/alienanimals/catslug/proc/catslug_color)	//Most of these have custom sprites with colour already, so we'll not let them have this.
@@ -766,12 +779,15 @@
 	item_state = "capslug"
 
 /mob/living/simple_mob/vore/alienanimals/catslug/custom/capslug/Initialize() 		//This is such an awful proc, but if someone wants it better they're welcome to have a go at it.
-	. = ..()
+	..()
+	return INITIALIZE_HINT_LATELOAD
+
+/mob/living/simple_mob/vore/alienanimals/catslug/custom/capslug/LateInitialize()
 	mob_radio = new /obj/item/radio/headset/mob_headset(src)
 	mob_radio.frequency = PUB_FREQ
 	mob_radio.ks2type = /obj/item/encryptionkey/heads/captain 		//Might not be able to speak, but the catslug can listen.
 	mob_radio.keyslot2 = new /obj/item/encryptionkey/heads/captain(mob_radio)
-	mob_radio.recalculateChannels(1)
+	mob_radio.recalculateChannels(TRUE)
 
 //=============================================================================
 //Admin-spawn only catslugs below - Expect overpowered things & silliness below
@@ -810,7 +826,10 @@
 	player_msg = "You work in the service of corporate Asset Protection, answering directly to the Board of Directors and Asset Protection Commandos."
 
 /mob/living/simple_mob/vore/alienanimals/catslug/custom/spaceslug/deathslug/Initialize()
-	. = ..()
+	..()
+	return INITIALIZE_HINT_LATELOAD
+
+/mob/living/simple_mob/vore/alienanimals/catslug/custom/spaceslug/deathslug/LateInitialize()
 	mob_radio = new /obj/item/radio/headset/mob_headset(src)
 	mob_radio.frequency = DTH_FREQ 			//Can't tell if bugged, deathsquad freq in general seems broken
 	myid.access |= get_all_station_access()
@@ -851,13 +870,16 @@
 	player_msg = "You are in the employ of a criminal syndicate hostile to corporate interests. Follow the Mercenary or Commando's orders and assist them in their goals by any means available."
 
 /mob/living/simple_mob/vore/alienanimals/catslug/custom/spaceslug/syndislug/Initialize()
-	. = ..()
+	..()
+	return INITIALIZE_HINT_LATELOAD
+
+/mob/living/simple_mob/vore/alienanimals/catslug/custom/spaceslug/syndislug/LateInitialize()
 	mob_radio = new /obj/item/radio/headset/mob_headset(src)
 	mob_radio.frequency = SYND_FREQ
-	mob_radio.syndie = 1
+	mob_radio.syndie = TRUE
 	mob_radio.ks2type = /obj/item/encryptionkey/syndicate
 	mob_radio.keyslot2 = new /obj/item/encryptionkey/syndicate(mob_radio)
-	mob_radio.recalculateChannels(1)
+	mob_radio.recalculateChannels(TRUE)
 	myid.access |= get_all_station_access()
 
 //ERT catslug
@@ -895,13 +917,16 @@
 	Think through your actions and make the roleplay immersive! <b>Please remember all rules aside from those without explicit exceptions apply to the ERT.</b>"
 
 /mob/living/simple_mob/vore/alienanimals/catslug/custom/spaceslug/responseslug/Initialize()
-	. = ..()
+	..()
+	return INITIALIZE_HINT_LATELOAD
+
+/mob/living/simple_mob/vore/alienanimals/catslug/custom/spaceslug/responseslug/LateInitialize()
 	mob_radio = new /obj/item/radio/headset/mob_headset(src)
 	mob_radio.frequency = ERT_FREQ
 	mob_radio.centComm = 1
 	mob_radio.ks2type = /obj/item/encryptionkey/ert
 	mob_radio.keyslot2 = new /obj/item/encryptionkey/ert(mob_radio)
-	mob_radio.recalculateChannels(1)
+	mob_radio.recalculateChannels(TRUE)
 	myid.access |= get_all_station_access()
 
 //Pilot Catslug
@@ -917,7 +942,10 @@
 	can_wear_hat = TRUE
 
 /mob/living/simple_mob/vore/alienanimals/catslug/custom/pilotslug/Initialize()
-	. = ..()
+	..()
+	return INITIALIZE_HINT_LATELOAD
+
+/mob/living/simple_mob/vore/alienanimals/catslug/custom/pilotslug/LateInitialize()
 	if(prob(25))
 		var/list/possible_targets = list()
 		for(var/obj/machinery/computer/ship/helm/h in world)
@@ -1118,6 +1146,9 @@
 
 /mob/living/simple_mob/vore/alienanimals/catslug/suslug/Initialize()
 	. = ..()
+	return INITIALIZE_HINT_LATELOAD
+
+/mob/living/simple_mob/vore/alienanimals/catslug/suslug/LateInitialize()
 	add_verb(src, /mob/living/simple_mob/vore/alienanimals/catslug/suslug/proc/assussinate)
 	update_icon()
 
