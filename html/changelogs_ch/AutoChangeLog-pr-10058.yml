@@ -1,6 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - bugfix: "fixed the teshari foot sprites"
-  - bugfix: "fixed teshi_fluff"
-  - image: "added foot states for teshi_fluff to make the fix actually work. It's just the leg sprites but I chopped em to fit"
