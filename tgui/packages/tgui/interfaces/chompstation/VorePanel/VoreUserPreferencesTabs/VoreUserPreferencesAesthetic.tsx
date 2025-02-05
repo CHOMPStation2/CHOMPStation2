@@ -14,7 +14,7 @@ export const VoreUserPreferencesAesthetic = (props: {
 
   return (
     <Section title="Aesthetic Preferences">
-      <Stack>
+      <Stack wrap="wrap" justify="center">
         <Stack.Item
           basis="49%"
           grow
