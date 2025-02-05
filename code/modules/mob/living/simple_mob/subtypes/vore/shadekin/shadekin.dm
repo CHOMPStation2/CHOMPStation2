@@ -78,6 +78,7 @@
 	var/list/shadekin_abilities
 	var/check_for_observer = FALSE
 	var/check_timer = 0
+	var/phase_gentle = 0
 
 	var/respite_activating = FALSE //CHOMPEdit - Dark Respite
 	var/list/active_dark_maws = list()
@@ -255,6 +256,10 @@
 	//CHOMPEdit End
 	cut_overlays()
 	flick("tp_out",src)
+<<<<<<< HEAD
+=======
+	QDEL_IN(src, 1 SECOND)
+>>>>>>> d02c67d6de (new to init (the rest of them) part 1 (#17052))
 
 	//CHOMPEdit Begin - Actually phase to the dark on death
 	var/area/current_area = get_area(src)
@@ -553,3 +558,27 @@
 	say_maybe_target = list("...mar?")
 	say_got_target = list("MAR!!!")
 	//reactions = list("Mar?" = "Marrr!", "Mar!" = "Marrr???", "Mar." = "Marrr.")
+
+//custom light flicker proc
+/mob/living/simple_mob/shadekin/proc/handle_phasein_flicker()
+	if(phase_gentle) // gentle case: No light destruction. Flicker in 4 tile radius for 3s. Weaken for 3sec after
+		for(var/obj/machinery/light/L in machines)
+			if(L.z != z || get_dist(src,L) > 4)
+				continue
+			L.flicker(3)
+		src.Stun(3)
+	else //normal case. Flicker in 10 tile radius for 10s. chance to destroy light based on eye type.
+		var/destroy_lights = 0
+		if(eye_state == RED_EYES)
+			destroy_lights = 80
+		if(eye_state == PURPLE_EYES)
+			destroy_lights = 25
+
+		for(var/obj/machinery/light/L in machines)
+			if(L.z != z || get_dist(src,L) > 10)
+				continue
+
+			if(prob(destroy_lights))
+				addtimer(CALLBACK(L, TYPE_PROC_REF(/obj/machinery/light, broken)), rand(5,25), TIMER_DELETE_ME)
+			else
+				L.flicker(10)

@@ -15,10 +15,17 @@
 	var/airlock_wire = null
 	var/datum/wires/connected = null
 	var/datum/radio_frequency/radio_connection
+<<<<<<< HEAD
 	var/deadman = FALSE //CHOMPAdd
+=======
+	var/deadman = FALSE
+>>>>>>> d02c67d6de (new to init (the rest of them) part 1 (#17052))
 
 /obj/item/assembly/signaler/Initialize()
-	. = ..()
+	..()
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/item/assembly/signaler/LateInitialize()
 	set_frequency(frequency)
 
 /obj/item/assembly/signaler/activate()

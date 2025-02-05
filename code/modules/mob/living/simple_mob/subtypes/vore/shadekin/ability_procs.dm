@@ -5,11 +5,19 @@
 	if(!T.CanPass(src,T) || loc != T)
 		to_chat(src,span_warning("You can't use that here!"))
 		return FALSE
+<<<<<<< HEAD
 	//CHOMPAdd Start
 	if((get_area(src).flags & PHASE_SHIELDED))
 		to_chat(src,span_warning("This area is preventing you from phasing!"))
 		return FALSE
 	//CHOMPAdd End
+=======
+	/*
+	if((get_area(src).flags & PHASE_SHIELDED))
+		to_chat(src,span_warning("This area is preventing you from phasing!"))
+		return FALSE
+	*/
+>>>>>>> d02c67d6de (new to init (the rest of them) part 1 (#17052))
 	//RS Port #658 Start
 	if(!client?.holder && A.flag_check(AREA_BLOCK_PHASE_SHIFT))
 		to_chat(src,span_warning("You can't use that here!"))
@@ -40,7 +48,11 @@
 
 		// change
 		ability_flags &= ~AB_PHASE_SHIFTED
+<<<<<<< HEAD
 		throwpass = FALSE // CHOMPAdd
+=======
+		throwpass = FALSE
+>>>>>>> d02c67d6de (new to init (the rest of them) part 1 (#17052))
 		mouse_opacity = 1
 		name = real_name
 		for(var/obj/belly/B as anything in vore_organs)
@@ -56,22 +68,24 @@
 
 		//Cosmetics mostly
 		flick("tp_in",src)
-		custom_emote(1,"phases in!")
-		sleep(5) //The duration of the TP animation
-		canmove = original_canmove
+		addtimer(CALLBACK(src,PROC_REF(custom_emote), 1, "phases in!"), 0, TIMER_DELETE_ME)
+		addtimer(CALLBACK(src,PROC_REF(phase_in_finish_phase),T,original_canmove),5, TIMER_DELETE_ME)
 
-		//Potential phase-in vore
-		if(can_be_drop_pred) //Toggleable in vore panel
-			var/list/potentials = living_mobs(0)
-			if(potentials.len)
-				var/mob/living/target = pick(potentials)
-				if(istype(target) && target.devourable && target.can_be_drop_prey && vore_selected)
-					target.forceMove(vore_selected)
-					to_chat(target,span_vwarning("\The [src] phases in around you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!"))
+/mob/living/simple_mob/shadekin/proc/phase_in_finish_phase(var/turf/T,var/original_canmove)
+	PRIVATE_PROC(TRUE)
+	SHOULD_NOT_OVERRIDE(TRUE)
+	canmove = original_canmove
 
-		// Do this after the potential vore, so we get the belly
-		update_icon()
+	//Potential phase-in vore
+	if(can_be_drop_pred) //Toggleable in vore panel
+		var/list/potentials = living_mobs(0)
+		if(potentials.len)
+			var/mob/living/target = pick(potentials)
+			if(istype(target) && target.devourable && target.can_be_drop_prey && vore_selected)
+				target.forceMove(vore_selected)
+				to_chat(target,span_vwarning("\The [src] phases in around you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!"))
 
+<<<<<<< HEAD
 		/* CHOMPEdit, comment out and handle in custom proc
 		//Affect nearby lights
 		var/destroy_lights = 0
@@ -91,6 +105,12 @@
 				L.flicker(10)
 		*/
 		handle_phasein_flicker() // CHOMPEdit, special handle for phase-in light flicker
+=======
+	// Do this after the potential vore, so we get the belly
+	update_icon()
+
+	handle_phasein_flicker()
+>>>>>>> d02c67d6de (new to init (the rest of them) part 1 (#17052))
 
 /mob/living/simple_mob/shadekin/proc/phase_out(var/turf/T)
 	if(!(ability_flags & AB_PHASE_SHIFTED))
@@ -120,16 +140,20 @@
 
 		cut_overlays()
 		flick("tp_out",src)
-		sleep(5)
-		invisibility = INVISIBILITY_LEVEL_TWO
-		see_invisible = INVISIBILITY_LEVEL_TWO
-		update_icon()
-		alpha = 127
+		addtimer(CALLBACK(src, PROC_REF(phase_invis_handling), original_canmove), 5, TIMER_DELETE_ME)
 
-		canmove = original_canmove
-		incorporeal_move = TRUE
-		density = FALSE
-		force_max_speed = TRUE
+/mob/living/simple_mob/shadekin/proc/phase_invis_handling(var/original_canmove)
+	PRIVATE_PROC(TRUE)
+	SHOULD_NOT_OVERRIDE(TRUE)
+	invisibility = INVISIBILITY_LEVEL_TWO
+	see_invisible = INVISIBILITY_LEVEL_TWO
+	update_icon()
+	alpha = 127
+
+	canmove = original_canmove
+	incorporeal_move = TRUE
+	density = FALSE
+	force_max_speed = TRUE
 
 /mob/living/simple_mob/shadekin/UnarmedAttack()
 	if(ability_flags & AB_PHASE_SHIFTED)
@@ -173,7 +197,11 @@
 	return TRUE
 
 
+<<<<<<< HEAD
 //CHOMPEdit Begin - Add dark portal creation
+=======
+/*
+>>>>>>> d02c67d6de (new to init (the rest of them) part 1 (#17052))
 /mob/living/simple_mob/shadekin/proc/dark_tunneling()
 	var/template_id = "dark_portal"
 	var/datum/map_template/shelter/template
@@ -220,9 +248,15 @@
 		return TRUE
 	else
 		return FALSE
+<<<<<<< HEAD
 //CHOMPEdit End
 
 //CHOMPEdit Begin - Add Dark Maw
+=======
+*/
+
+/*
+>>>>>>> d02c67d6de (new to init (the rest of them) part 1 (#17052))
 /mob/living/simple_mob/shadekin/proc/dark_maw()
 	var/turf/T = get_turf(src)
 	if(!istype(T))
@@ -241,4 +275,8 @@
 		return TRUE
 	else
 		return FALSE
+<<<<<<< HEAD
 //CHOMPEdit End
+=======
+*/
+>>>>>>> d02c67d6de (new to init (the rest of them) part 1 (#17052))
