@@ -45,7 +45,7 @@ export const VoreUserPreferencesSpawn = (props: {
         {latejoin_vore ? (
           <>
             <Stack.Item
-              basis="32%"
+              basis="31%"
               style={{
                 marginLeft: '0.5em', // Remove if tgui core implements gap
               }}
@@ -88,7 +88,7 @@ export const VoreUserPreferencesSpawn = (props: {
         )}
         {latejoin_prey ? (
           <>
-            <Stack.Item basis="32%">
+            <Stack.Item basis="31%">
               <VoreUserPreferenceItem
                 spec={preferences.no_spawnprey_warning}
                 tooltipPosition="top"
