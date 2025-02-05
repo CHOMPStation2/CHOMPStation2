@@ -105,7 +105,11 @@ SUBSYSTEM_DEF(machines)
 	while(current_run.len)
 		var/datum/pipe_network/PN = current_run[current_run.len]
 		current_run.len--
+<<<<<<< HEAD
 		if(!PN || QDELETED(PN)) //CHOMPEdit
+=======
+		if(!PN || QDELETED(PN))
+>>>>>>> af85f098cd (bunch of misc fixes (#17031))
 			networks.Remove(PN)
 			DISABLE_BITFIELD(PN?.datum_flags, DF_ISPROCESSING)
 		else
@@ -122,7 +126,11 @@ SUBSYSTEM_DEF(machines)
 	while(current_run.len)
 		var/obj/machinery/M = current_run[current_run.len]
 		current_run.len--
+<<<<<<< HEAD
 		if(!istype(M) || QDELETED(M) || (M.process(wait) == PROCESS_KILL)) //CHOMPEdit
+=======
+		if(!istype(M) || QDELETED(M) || (M.process(wait) == PROCESS_KILL))
+>>>>>>> af85f098cd (bunch of misc fixes (#17031))
 			processing_machines.Remove(M)
 			DISABLE_BITFIELD(M?.datum_flags, DF_ISPROCESSING)
 		if(MC_TICK_CHECK)

@@ -222,7 +222,10 @@
 //CHOMPEdit - entire proc changed basically to use recursive listening
 /proc/get_mobs_in_radio_ranges(var/list/obj/item/radio/radios)
 
+<<<<<<< HEAD
 	//set background = 1 //CHOMPEdit
+=======
+>>>>>>> af85f098cd (bunch of misc fixes (#17031))
 	. = list()
 	// Returns a list of mobs who can hear any of the radios given in @radios
 	for(var/obj/item/radio/R as anything in radios)
