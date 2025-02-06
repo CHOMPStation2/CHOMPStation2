@@ -101,3 +101,6 @@
   Cameron-The-Raven:
   - image: adjusts some icons to equal their virgo equivalent. Nothing front-facing,
       all backend.
+2025-02-06:
+  Kashargul:
+  - bugfix: buttons not properly aligned in the vorepanel settings
