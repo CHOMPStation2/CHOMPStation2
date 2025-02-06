@@ -1,0 +1,7 @@
+author: "Missile597"
+delete-after: True
+changes:
+  - maptweak: "Moves the xenobotany hydroponics crate so it doesn't block the fridge at round start"
+  - maptweak: "Adds an air alarm to the distillery room which was either missed or got lost again"
+  - maptweak: "Deleted some redundant supply piping that had been accidentally placed in medical at some point"
+  - maptweak: "Fixed the wires for the electrified grilles in the HoP's office"
