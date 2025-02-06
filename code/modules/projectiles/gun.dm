@@ -441,6 +441,7 @@
 			set_light(0)
 		//VOREStation Edit End
 
+<<<<<<< HEAD
 	//YAWNEDIT: Recoil knockdown for micros, ported from CHOMPStation
 	if(recoil_mode && iscarbon(user))
 		var/mob/living/carbon/nerd = user
@@ -453,6 +454,33 @@
 					to_chat(nerd, span_danger("You're so tiny that you drop the gun and hurt yourself from the recoil!"))
 				else
 					to_chat(nerd, span_danger("You're so tiny that the pull of the trigger causes you to drop the gun!"))
+=======
+			process_accuracy(projectile, user, target, ticker, held_twohanded)
+
+			if(pointblank)
+				process_point_blank(projectile, user, target)
+
+			if(process_projectile(projectile, user, target, user.zone_sel.selecting, clickparams))
+				handle_post_fire(user, target, pointblank, reflex)
+				update_icon()
+
+			// We do this down here, so we don't get the message if we fire an empty gun.
+			if(user.item_is_in_hands(src) && user.hands_are_full())
+				if(one_handed_penalty >= 20)
+					to_chat(user, span_warning("You struggle to keep \the [src] pointed at the correct position with just one hand!"))
+
+			accuracy = initial(accuracy) //Reset our accuracy
+			last_shot = world.time
+			user.hud_used.update_ammo_hud(user, src)
+			user.setClickCooldown(DEFAULT_QUICK_COOLDOWN)
+
+			if(!(target && target.loc))
+				target = targloc
+				pointblank = 0
+
+			if(ticker < burst)
+				addtimer(CALLBACK(src, PROC_REF(handle_gunfire),target, user, clickparams, pointblank, reflex, ++ticker, TRUE), burst_delay, TIMER_DELETE_ME)
+>>>>>>> d149f7e635 (this did in fact need to stay (#17072))
 
 	//YAWNEDIT: Knockdown code end
 
