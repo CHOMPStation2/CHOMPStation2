@@ -32,15 +32,6 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
-/datum/sprite_accessory/tail/longtail/shadekin_tail/shadekin_tail_fat
-	name = "Shadekin Fat Tail"
-	icon = 'icons/mob/vore/taurs_ch.dmi' //long tails in taurs for some reason
-	icon_state = "shadekin_fat_s"
-
-/datum/sprite_accessory/tail/longtail/shadekin_tail/shadekin_tail_fat/spots
-	name = "Shadekin Fat Tail (Spotted)"
-	extra_overlay = "shadekin_fat_spots"
-
 /datum/sprite_accessory/tail/featheredraptor
 	name = "feathered Raptor"
 	icon = 'icons/mob/vore/tails_ch.dmi'
