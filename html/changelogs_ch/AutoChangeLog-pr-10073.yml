@@ -1,0 +1,4 @@
+author: "Diana"
+delete-after: True
+changes:
+  - code_imp: "fixes taur sprites from breaking. Made from _vr and _ch files into just normal .dmi files"
