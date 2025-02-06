@@ -15898,6 +15898,7 @@
 	pixel_x = 11;
 	pixel_y = -24
 	},
+/obj/structure/closet/crate/hydroponics/prespawned,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
 "fFB" = (
@@ -15998,7 +15999,6 @@
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/firstdeck/aft)
 "fKK" = (
-/obj/structure/closet/crate/hydroponics/prespawned,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 8
 	},
