@@ -71,6 +71,7 @@
 	cell_type = /obj/item/cell/device/weapon
 	projectile_type = /obj/item/projectile/energy/astralrail
 
+	recoil_mode = 0
 	charge_meter = 1
 
 	reload_time = 1 //Stupidly low recharge. Revolvery weapon.

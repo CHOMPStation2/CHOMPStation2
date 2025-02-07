@@ -54,6 +54,7 @@
 	battery_lock = 1
 
 	var/decl/plantgene/gene = null
+	recoil_mode = 0
 	var/obj/item/stock_parts/micro_laser/emitter
 
 	firemodes = list(
