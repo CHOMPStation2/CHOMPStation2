@@ -7,8 +7,8 @@
 	//description_fluff = "This could be used to engrave messages on suitable surfaces if you really put your mind to it! Alt-click a floor or wall to engrave with it." //This way it's not a completely hidden, arcane art to engrave. //CHOMP Remove
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "screwdriver"
-	center_of_mass_x = 13 //CHOMPEdit
-	center_of_mass_y= 7 //CHOMPEdit
+	center_of_mass_x = 13
+	center_of_mass_y = 7
 	slot_flags = SLOT_BELT | SLOT_EARS
 	force = 6
 	w_class = ITEMSIZE_TINY

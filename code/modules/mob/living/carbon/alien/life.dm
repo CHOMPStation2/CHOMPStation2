@@ -2,7 +2,6 @@
 /mob/living/carbon/alien/Life()
 
 	set invisibility = 0
-	//set background = 1 //CHOMPEdit
 
 	if (transforming)	return
 	if(!loc)			return

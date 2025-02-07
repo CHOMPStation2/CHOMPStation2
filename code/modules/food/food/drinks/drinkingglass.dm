@@ -7,8 +7,8 @@
 	amount_per_transfer_from_this = 5
 	volume = 30
 	unacidable = TRUE //glass
-	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 10 //CHOMPEdit
+	center_of_mass_x = 16
+	center_of_mass_y = 10
 	matter = list(MAT_GLASS = 500)
 
 /obj/item/reagent_containers/food/drinks/drinkingglass/on_reagent_change()
@@ -16,8 +16,8 @@
 		icon_state = "glass_empty"
 		name = "glass"
 		desc = "Your standard drinking glass."
-		center_of_mass_x = 16 //CHOMPEdit
-		center_of_mass_y= 10 //CHOMPEdit
+		center_of_mass_x = 16
+		center_of_mass_y = 10
 		return
 	var/datum/reagent/R = reagents.get_master_reagent()
 
@@ -36,12 +36,12 @@
 	else
 		desc = "You can't really tell what this is."
 
-	if(R.glass_center_of_mass)
-		center_of_mass_x = R.cup_center_of_mass["x"] //CHOMPEdit
-		center_of_mass_y = R.cup_center_of_mass["y"] //CHOMPEdit
+	if(R.glass_center_of_mass_x || R.glass_center_of_mass_y)
+		center_of_mass_x = R.cup_center_of_mass_x
+		center_of_mass_y = R.cup_center_of_mass_y
 	else
-		center_of_mass_x = 16 //CHOMPEdit
-		center_of_mass_y= 10 //CHOMPEdit
+		center_of_mass_x = 16
+		center_of_mass_y = 10
 
 	if(R.price_tag)
 		price_tag = R.price_tag
@@ -54,16 +54,16 @@
 	icon_state = "cup_empty"
 	amount_per_transfer_from_this = 5
 	volume = 30
-	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 16 //CHOMPEdit
+	center_of_mass_x = 16
+	center_of_mass_y = 16
 
 /obj/item/reagent_containers/food/drinks/cup/on_reagent_change()
 	if (!length(reagents?.reagent_list))
 		icon_state = "cup_empty"
 		name = "coffee cup"
 		desc = "The container of oriental luxuries."
-		center_of_mass_x = 16 //CHOMPEdit
-		center_of_mass_y= 16 //CHOMPEdit
+		center_of_mass_x = 16
+		center_of_mass_y = 16
 		return
 	var/datum/reagent/R = reagents.get_master_reagent()
 
@@ -87,12 +87,12 @@
 	else
 		desc = "You can't really tell what this is."
 
-	if(R.cup_center_of_mass)
-		center_of_mass_x = R.cup_center_of_mass["x"] //CHOMPEdit
-		center_of_mass_y = R.cup_center_of_mass["y"] //CHOMPEdit
+	if(R.cup_center_of_mass_x || R.cup_center_of_mass_y)
+		center_of_mass_x = R.cup_center_of_mass_x
+		center_of_mass_y = R.cup_center_of_mass_y
 	else
-		center_of_mass_x = 16 //CHOMPEdit
-		center_of_mass_y= 16 //CHOMPEdit
+		center_of_mass_x = 16
+		center_of_mass_y = 16
 
 	if(R.price_tag)
 		price_tag = R.price_tag
@@ -184,16 +184,16 @@
 	icon_state = "tall_cup_empty"
 	amount_per_transfer_from_this = 5
 	volume = 40
-	center_of_mass_x = 16 // CHOMPEdit
-	center_of_mass_y =  16 // CHOMPEdit
+	center_of_mass_x = 16
+	center_of_mass_y =  16
 
 /obj/item/reagent_containers/food/drinks/tall/on_reagent_change()
 	if (!length(reagents?.reagent_list))
 		icon_state = "tall_cup_empty"
 		name = "tall cup"
 		desc = "A larger coffee cup."
-		center_of_mass_x = 16 // CHOMPEdit
-		center_of_mass_y =  16 // CHOMPEdit
+		center_of_mass_x = 16
+		center_of_mass_y =  16
 		return
 	var/datum/reagent/R = reagents.get_master_reagent()
 
@@ -217,12 +217,12 @@
 	else
 		desc = "You can't really tell what this is."
 
-	if(R.cup_center_of_mass)
-		center_of_mass_x = R.cup_center_of_mass["x"] //CHOMPEdit
-		center_of_mass_y = R.cup_center_of_mass["y"] //CHOMPEdit
+	if(R.cup_center_of_mass_x || R.cup_center_of_mass_y)
+		center_of_mass_x = R.cup_center_of_mass_x
+		center_of_mass_y = R.cup_center_of_mass_y
 	else
-		center_of_mass_x = 16 // CHOMPEdit
-		center_of_mass_y =  16 // CHOMPEdit
+		center_of_mass_x = 16
+		center_of_mass_y =  16
 
 	if(R.price_tag)
 		price_tag = R.price_tag
@@ -235,16 +235,16 @@
 	icon_state = "grande_cup_empty"
 	amount_per_transfer_from_this = 5
 	volume = 50
-	center_of_mass_x = 16 // CHOMPEdit
-	center_of_mass_y =  16 // CHOMPEdit
+	center_of_mass_x = 16
+	center_of_mass_y =  16
 
 /obj/item/reagent_containers/food/drinks/grande/on_reagent_change()
 	if (!length(reagents?.reagent_list))
 		icon_state = "grande_cup_empty"
 		name = "grande cup"
 		desc = "A much taller coffee cup for people who really need their coffee."
-		center_of_mass_x = 16 // CHOMPEdit
-		center_of_mass_y =  16 // CHOMPEdit
+		center_of_mass_x = 16
+		center_of_mass_y =  16
 		return
 	var/datum/reagent/R = reagents.get_master_reagent()
 
@@ -268,12 +268,12 @@
 	else
 		desc = "You can't really tell what this is."
 
-	if(R.cup_center_of_mass)
-		center_of_mass_x = R.cup_center_of_mass["x"] //CHOMPEdit
-		center_of_mass_y = R.cup_center_of_mass["y"] //CHOMPEdit
+	if(R.cup_center_of_mass_x || R.cup_center_of_mass_y)
+		center_of_mass_x = R.cup_center_of_mass_x
+		center_of_mass_y = R.cup_center_of_mass_y
 	else
-		center_of_mass_x = 16 // CHOMPEdit
-		center_of_mass_y =  16 // CHOMPEdit
+		center_of_mass_x = 16
+		center_of_mass_y =  16
 
 	if(R.price_tag)
 		price_tag = R.price_tag
@@ -286,16 +286,16 @@
 	icon_state = "venti_cup_empty"
 	amount_per_transfer_from_this = 5
 	volume = 60
-	center_of_mass_x = 16 // CHOMPEdit
-	center_of_mass_y =  16 // CHOMPEdit
+	center_of_mass_x = 16
+	center_of_mass_y =  16
 
 /obj/item/reagent_containers/food/drinks/venti/on_reagent_change()
 	if (!length(reagents?.reagent_list))
 		icon_state = "venti_cup_empty"
 		name = "venti cup"
 		desc = "A huge coffee cup for people who literally cannot function without it."
-		center_of_mass_x = 16 // CHOMPEdit
-		center_of_mass_y =  16 // CHOMPEdit
+		center_of_mass_x = 16
+		center_of_mass_y =  16
 		return
 	var/datum/reagent/R = reagents.get_master_reagent()
 
@@ -319,12 +319,12 @@
 	else
 		desc = "You can't really tell what this is."
 
-	if(R.cup_center_of_mass)
-		center_of_mass_x = R.cup_center_of_mass["x"] //CHOMPEdit
-		center_of_mass_y = R.cup_center_of_mass["y"] //CHOMPEdit
+	if(R.cup_center_of_mass_x || R.cup_center_of_mass_y)
+		center_of_mass_x = R.cup_center_of_mass_x
+		center_of_mass_y = R.cup_center_of_mass_y
 	else
-		center_of_mass_x = 16 // CHOMPEdit
-		center_of_mass_y =  16 // CHOMPEdit
+		center_of_mass_x = 16
+		center_of_mass_y =  16
 
 	if(R.price_tag)
 		price_tag = R.price_tag
