@@ -60,11 +60,7 @@
 
 	allow_mind_transfer = TRUE
 
-<<<<<<< HEAD
 	//var/picked_color = FALSE //CHOMPEdit - now on simplemob.
-=======
-	var/picked_color = FALSE //This needs to be moved to simple_mob. Out of scope for this PR.
->>>>>>> 9bf650610b (new to init (radios) (#17055))
 
 	can_enter_vent_with = list(
 		/obj/item/implant,
@@ -72,11 +68,7 @@
 		/obj/item/holder,
 		/obj/machinery/camera,
 		/obj/belly,
-<<<<<<< HEAD
 		/obj/soulgem, // CHOMPAdd
-=======
-		//obj/soulgem, // Used downstream.
->>>>>>> 9bf650610b (new to init (radios) (#17055))
 		/obj/screen,
 		/atom/movable/emissive_blocker,
 		/obj/item/material,
