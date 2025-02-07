@@ -3,7 +3,8 @@
 /datum/reagent/ethanol/cloverclub
 	glass_icon_state = "cloverclub"
 	glass_icon_source = 'modular_chomp/icons/obj/drinks.dmi'
-	glass_center_of_mass = list("x"=16, "y"=8)
+	glass_center_of_mass_x = 16
+	glass_center_of_mass_y = 8
 
 /datum/reagent/ethanol/spiderdrink
 	glass_icon_state = "glassofspiders"
@@ -33,27 +34,32 @@
 /datum/reagent/drink/bubbleteawatermelon
 	glass_icon_state = "bubbleteawatermelonglass"
 	glass_icon_file = 'modular_chomp/icons/obj/drinks.dmi'
-	glass_center_of_mass = list("x"=16, "y"=9)
+	glass_center_of_mass_x = 16
+	glass_center_of_mass_y = 9
 
 /datum/reagent/drink/bubbleteastrawberry
 	glass_icon_state = "bubbleteastrawberryglass"
 	glass_icon_file = 'modular_chomp/icons/obj/drinks.dmi'
-	glass_center_of_mass = list("x"=16, "y"=9)
+	glass_center_of_mass_x = 16
+	glass_center_of_mass_y = 9
 
 /datum/reagent/drink/bubbleteacherry
 	glass_icon_state = "bubbleteacherryglass"
 	glass_icon_file = 'modular_chomp/icons/obj/drinks.dmi'
-	glass_center_of_mass = list("x"=16, "y"=9)
+	glass_center_of_mass_x = 16
+	glass_center_of_mass_y = 9
 
 /datum/reagent/drink/bubbleteacoffee
 	glass_icon_state = "bubbleteacoffeeglass"
 	glass_icon_file = 'modular_chomp/icons/obj/drinks.dmi'
-	glass_center_of_mass = list("x"=16, "y"=9)
+	glass_center_of_mass_x = 16
+	glass_center_of_mass_y = 9
 
 /datum/reagent/drink/bubbleteabanana
 	glass_icon_state = "bubbleteabananaglass"
 	glass_icon_file = 'modular_chomp/icons/obj/drinks.dmi'
-	glass_center_of_mass = list("x"=16, "y"=9)
+	glass_center_of_mass_x = 16
+	glass_center_of_mass_y = 9
 
 /datum/reagent/drink/tea/matcha_latte
 	glass_icon_state = "bigteacup"
@@ -61,12 +67,14 @@
 /datum/reagent/drink/horchata
 	glass_icon_state = "horchata"
 	glass_icon_file = 'modular_chomp/icons/obj/drinks.dmi'
-	glass_center_of_mass = list("x"=16, "y"=7)
+	glass_center_of_mass_x = 16
+	glass_center_of_mass_y = 7
 
 /datum/reagent/toxin/bluetrain
 	glass_icon_state = "bluetrain"
 	glass_icon_file = 'modular_chomp/icons/obj/drinks.dmi'
-	glass_center_of_mass = list("x"=16, "y"=8)
+	glass_center_of_mass_x = 16
+	glass_center_of_mass_y = 8
 
 /datum/reagent/drink/lovepotion
 	glass_icon_state = "lovepotion"

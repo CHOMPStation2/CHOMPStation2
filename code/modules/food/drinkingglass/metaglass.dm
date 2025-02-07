@@ -5,13 +5,8 @@
 	amount_per_transfer_from_this = 5
 	volume = 30
 	unacidable = TRUE //glass
-<<<<<<< HEAD
-	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 10 //CHOMPEdit
-=======
 	center_of_mass_x = 16
 	center_of_mass_y = 10
->>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 	matter = list(MAT_GLASS = 500)
 	icon = 'icons/obj/drinks.dmi'
 
@@ -45,21 +40,12 @@
 		else
 			desc = "You can't really tell what this is."
 
-<<<<<<< HEAD
-		if(R.glass_center_of_mass)
-			center_of_mass_x = R.glass_center_of_mass["x"] //CHOMPEdit
-			center_of_mass_y = R.glass_center_of_mass["x"] //CHOMPEdit
-		else
-			center_of_mass_x = 16 //CHOMPEdit
-			center_of_mass_y= 10 //CHOMPEdit
-=======
 		if(R.glass_center_of_mass_x || R.glass_center_of_mass_y)
 			center_of_mass_x = R.glass_center_of_mass_x
 			center_of_mass_y = R.glass_center_of_mass_y
 		else
 			center_of_mass_x = 16
 			center_of_mass_y= 10
->>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 
 		if(R.price_tag)
 			price_tag = R.price_tag
@@ -70,24 +56,14 @@
 			icon_state = "pglass_empty"
 			name = "metamorphic pint glass"
 			desc = "This glass changes shape and form depending on the drink inside... fancy!"
-<<<<<<< HEAD
-			center_of_mass_x = 16 //CHOMPEdit
-			center_of_mass_y= 10 //CHOMPEdit
-=======
 			center_of_mass_x = 16
 			center_of_mass_y= 10
->>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 		else
 			icon_state = "glass_empty"
 			name = "metamorphic glass"
 			desc = "This glass changes shape and form depending on the drink inside... fancy!"
-<<<<<<< HEAD
-			center_of_mass_x = 16 //CHOMPEdit
-			center_of_mass_y= 10 //CHOMPEdit
-=======
 			center_of_mass_x = 16
 			center_of_mass_y= 10
->>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 			return
 
 /*
@@ -97,13 +73,9 @@ Drinks Data
 /datum/reagent
 	var/glass_icon_file = null
 	var/glass_icon_state = null
-<<<<<<< HEAD
-	var/glass_center_of_mass = null
-	var/glass_icon_source = null //CHOMP A way for us to have metaglass identify and decide which dmi it wants to grab sprites from - Jack
-=======
 	var/glass_center_of_mass_x = 0
 	var/glass_center_of_mass_y = 0
->>>>>>> 3d9113eae3 (removes center of mass list (#17064))
+	var/glass_icon_source = null //CHOMP A way for us to have metaglass identify and decide which dmi it wants to grab sprites from - Jack
 
 /datum/reagent/adminordrazine
 	glass_icon_state = "golden_cup"
@@ -755,14 +727,11 @@ Drinks Data
 	glass_center_of_mass_x = 16
 	glass_center_of_mass_y = 8
 
-<<<<<<< HEAD
-=======
 /datum/reagent/ethanol/cloverclub
 	glass_icon_state = "cloverclub"
 	glass_center_of_mass_x = 16
 	glass_center_of_mass_y = 8
 
->>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 /datum/reagent/ethanol/coldfront
 	glass_icon_state = "coldfront"
 	glass_center_of_mass_x = 16

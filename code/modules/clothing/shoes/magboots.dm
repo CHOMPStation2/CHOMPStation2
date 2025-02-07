@@ -5,13 +5,8 @@
 	flags = PHORONGUARD
 	item_state_slots = list(slot_r_hand_str = "magboots", slot_l_hand_str = "magboots")
 	species_restricted = null
-<<<<<<< HEAD
-	center_of_mass_x = 17 //CHOMPEdit
-	center_of_mass_y= 12 //CHOMPEdit
-=======
 	center_of_mass_x = 17
 	center_of_mass_y = 12
->>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 	force = 3
 	overshoes = 1
 	shoes_under_pants = -1	//These things are huge

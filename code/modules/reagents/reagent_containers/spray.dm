@@ -4,13 +4,8 @@
 	icon = 'icons/obj/janitor.dmi'
 	icon_state = "cleaner"
 	item_state = "cleaner"
-<<<<<<< HEAD
-	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 10 //CHOMPEdit
-=======
 	center_of_mass_x = 16
 	center_of_mass_y = 10
->>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 	flags = OPENCONTAINER|NOBLUDGEON
 	matter = list(MAT_GLASS = 300, MAT_STEEL = 300)
 	slot_flags = SLOT_BELT
@@ -131,13 +126,8 @@
 	icon = 'icons/obj/weapons.dmi'
 	icon_state = "pepperspray"
 	item_state = "pepperspray"
-<<<<<<< HEAD
-	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 16 //CHOMPEdit
-=======
 	center_of_mass_x = 16
 	center_of_mass_y = 16
->>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 	possible_transfer_amounts = null
 	volume = 40
 	var/safety = TRUE
@@ -185,13 +175,8 @@
 	icon_state = "chemsprayer"
 	item_state = "chemsprayer"
 	item_icons = list(slot_l_hand_str = 'icons/mob/items/lefthand_guns.dmi', slot_r_hand_str = 'icons/mob/items/righthand_guns.dmi')
-<<<<<<< HEAD
-	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 16 //CHOMPEdit
-=======
 	center_of_mass_x = 16
 	center_of_mass_y = 16
->>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 	throwforce = 3
 	w_class = ITEMSIZE_NORMAL
 	possible_transfer_amounts = null
@@ -237,13 +222,8 @@
 	icon = 'icons/obj/janitor.dmi'
 	icon_state = "cleaner-industrial"
 	item_state = "cleaner"
-<<<<<<< HEAD
-	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 10 //CHOMPEdit
-=======
 	center_of_mass_x = 16
 	center_of_mass_y = 10
->>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 
 	possible_transfer_amounts = list(5,10,20)
 

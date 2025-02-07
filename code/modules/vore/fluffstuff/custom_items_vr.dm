@@ -1266,13 +1266,8 @@
 	base_name = "Clara's Vacuum Flask"
 	base_icon = "claraflask"
 	icon = 'icons/vore/custom_items_vr.dmi'
-<<<<<<< HEAD
-	center_of_mass_x = 15 //CHOMPEdit
-	center_of_mass_y= 4 //CHOMPEdit
-=======
 	center_of_mass_x = 15
 	center_of_mass_y = 4
->>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 	filling_states = list(15, 30, 50, 60, 80, 100)
 	volume = 60
 

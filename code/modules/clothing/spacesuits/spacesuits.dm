@@ -7,13 +7,8 @@
 	icon_state = "space"
 	desc = "A special helmet designed for work in a hazardous, low-pressure environment."
 	randpixel = 0
-<<<<<<< HEAD
-	center_of_mass_x = 0 //CHOMPEdit
-	center_of_mass_y = 0 //CHOMPEdit
-=======
 	center_of_mass_x = 0
 	center_of_mass_y = 0
->>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 	flags = PHORONGUARD
 	item_flags = THICKMATERIAL | AIRTIGHT | ALLOW_SURVIVALFOOD
 	permeability_coefficient = 0  //Chompedit was 0.01, zeroed to test protecting those who are vulnerable to water.

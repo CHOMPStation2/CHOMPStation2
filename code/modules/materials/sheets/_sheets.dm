@@ -6,13 +6,8 @@
 	w_class = ITEMSIZE_NORMAL
 	throw_speed = 3
 	throw_range = 3
-<<<<<<< HEAD
-	center_of_mass_x = 0 //CHOMPEdit
-	center_of_mass_y = 0 //CHOMPEdit
-=======
 	center_of_mass_x = 0
 	center_of_mass_y = 0
->>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 	max_amount = 50
 	item_icons = list(
 		slot_l_hand_str = 'icons/mob/items/lefthand_material.dmi',

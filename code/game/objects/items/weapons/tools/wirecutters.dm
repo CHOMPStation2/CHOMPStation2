@@ -8,13 +8,8 @@
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "cutters"
 	item_state = "cutters"
-<<<<<<< HEAD
-	center_of_mass_x = 18 //CHOMPEdit
-	center_of_mass_y= 10 //CHOMPEdit
-=======
 	center_of_mass_x = 18
 	center_of_mass_y = 10
->>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 	slot_flags = SLOT_BELT
 	force = 6
 	throw_speed = 2

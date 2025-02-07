@@ -193,13 +193,8 @@
 	icon = 'icons/obj/chemical.dmi'
 	icon_state = "beaker"
 	item_state = "beaker"
-<<<<<<< HEAD
-	center_of_mass_x = 15 //CHOMPEdit
-	center_of_mass_y= 11 //CHOMPEdit
-=======
 	center_of_mass_x = 15
 	center_of_mass_y = 11
->>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 	matter = list(MAT_GLASS = 500)
 	drop_sound = 'sound/items/drop/glass.ogg'
 	pickup_sound = 'sound/items/pickup/glass.ogg'
@@ -255,13 +250,8 @@
 	name = "large beaker"
 	desc = "A large beaker."
 	icon_state = "beakerlarge"
-<<<<<<< HEAD
-	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 11 //CHOMPEdit
-=======
 	center_of_mass_x = 16
 	center_of_mass_y = 11
->>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 	matter = list(MAT_GLASS = 5000)
 	volume = 120
 	amount_per_transfer_from_this = 10
@@ -273,13 +263,8 @@
 	name = "cryostasis beaker"
 	desc = "A cryostasis beaker that allows for chemical storage without reactions."
 	icon_state = "beakernoreact"
-<<<<<<< HEAD
-	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 13 //CHOMPEdit
-=======
 	center_of_mass_x = 16
 	center_of_mass_y = 13
->>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 	matter = list(MAT_GLASS = 500)
 	volume = 60
 	amount_per_transfer_from_this = 10
@@ -289,13 +274,8 @@
 	name = "bluespace beaker"
 	desc = "A bluespace beaker, powered by experimental bluespace technology."
 	icon_state = "beakerbluespace"
-<<<<<<< HEAD
-	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 11 //CHOMPEdit
-=======
 	center_of_mass_x = 16
 	center_of_mass_y = 11
->>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 	matter = list(MAT_GLASS = 5000)
 	volume = 300
 	amount_per_transfer_from_this = 10
@@ -307,13 +287,8 @@
 	name = "vial"
 	desc = "A small glass vial."
 	icon_state = "vial"
-<<<<<<< HEAD
-	center_of_mass_x = 15 //CHOMPEdit
-	center_of_mass_y= 9 //CHOMPEdit
-=======
 	center_of_mass_x = 15
 	center_of_mass_y = 9
->>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 	matter = list(MAT_GLASS = 250)
 	volume = 30
 	w_class = ITEMSIZE_TINY
@@ -332,13 +307,8 @@
 	name = "stoppered bottle"
 	desc = "A stoppered bottle for keeping beverages fresh."
 	icon_state = "stopperedbottle"
-<<<<<<< HEAD
-	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 13 //CHOMPEdit
-=======
 	center_of_mass_x = 16
 	center_of_mass_y = 13
->>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 	volume = 120
 	amount_per_transfer_from_this = 10
 	possible_transfer_amounts = list(5,10,15,25,30,60,120)
@@ -350,13 +320,8 @@
 	icon = 'icons/obj/janitor.dmi'
 	icon_state = "bucket"
 	item_state = "bucket"
-<<<<<<< HEAD
-	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 10 //CHOMPEdit
-=======
 	center_of_mass_x = 16
 	center_of_mass_y = 10
->>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 	matter = list(MAT_STEEL = 200)
 	w_class = ITEMSIZE_NORMAL
 	amount_per_transfer_from_this = 20
@@ -418,13 +383,8 @@
 	icon = 'icons/obj/janitor.dmi'
 	icon_state = "woodbucket"
 	item_state = "woodbucket"
-<<<<<<< HEAD
-	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 8 //CHOMPEdit
-=======
 	center_of_mass_x = 16
 	center_of_mass_y = 8
->>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 	matter = list(MAT_WOOD = 50)
 	w_class = ITEMSIZE_LARGE
 	amount_per_transfer_from_this = 20

@@ -15,13 +15,8 @@
 	desc = "A cup with the British flag emblazoned on it."
 	icon_state = "britcup"
 	volume = 30
-<<<<<<< HEAD
-	center_of_mass_x = 15 //CHOMPEdit
-	center_of_mass_y= 13 //CHOMPEdit
-=======
 	center_of_mass_x = 15
 	center_of_mass_y = 13
->>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 
 /obj/item/reagent_containers/food/drinks/britcup/on_reagent_change()
 	..()
@@ -35,13 +30,8 @@
 	icon = 'icons/obj/drinks_vr.dmi'
 	icon_state = "textmug"
 	volume = 30
-<<<<<<< HEAD
-	center_of_mass_x = 15 //CHOMPEdit
-	center_of_mass_y= 13 //CHOMPEdit
-=======
 	center_of_mass_x = 15
 	center_of_mass_y = 13
->>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 
 /*
  * Coffee Mugs

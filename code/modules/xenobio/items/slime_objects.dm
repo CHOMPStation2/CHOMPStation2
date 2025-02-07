@@ -118,13 +118,8 @@
 	desc = "A glob of slime that is thick as honey.  For the brave " + JOB_XENOBIOLOGIST + "."
 	icon_state = "honeycomb"
 	filling_color = "#FFBB00"
-<<<<<<< HEAD
-	center_of_mass_x = 17 //CHOMPEdit
-	center_of_mass_y= 10 //CHOMPEdit
-=======
 	center_of_mass_x = 17
 	center_of_mass_y = 10
->>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 	nutriment_amt = 25 // Very filling.
 	nutriment_desc = list("slime" = 10, "sweetness" = 10, REAGENT_ID_BLISS = 5)
 

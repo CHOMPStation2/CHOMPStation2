@@ -33,13 +33,8 @@ var/list/random_weighted_donuts = list(
 	icon_state = "donutbox"
 	name = "donut box"
 	desc = "A box that holds tasty donuts, if you're lucky."
-<<<<<<< HEAD
-	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 9 //CHOMPEdit
-=======
 	center_of_mass_x = 16
 	center_of_mass_y = 9
->>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 	max_storage_space = ITEMSIZE_COST_SMALL * 6
 	can_hold = list(/obj/item/reagent_containers/food/snacks/donut)
 	foldable = /obj/item/stack/material/cardboard

@@ -34,11 +34,7 @@
 
 /obj/item/reagent_containers/food/Initialize()
 	. = ..()
-<<<<<<< HEAD
-	if ((center_of_mass_x || center_of_mass_y) && !pixel_x && !pixel_y) //CHOMPEdit
-=======
 	if ((center_of_mass_x || center_of_mass_y) && !pixel_x && !pixel_y)
->>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 		src.pixel_x = rand(-6.0, 6) //Randomizes postion
 		src.pixel_y = rand(-6.0, 6)
 
@@ -56,13 +52,8 @@
 		var/cell_x = max(0, min(CELLS-1, round(mouse_x/CELLSIZE)))
 		var/cell_y = max(0, min(CELLS-1, round(mouse_y/CELLSIZE)))
 
-<<<<<<< HEAD
-		pixel_x = (CELLSIZE * (0.5 + cell_x)) - center_of_mass_x //CHOMPEdit
-		pixel_y = (CELLSIZE * (0.5 + cell_y)) - center_of_mass_y //CHOMPEdit
-=======
 		pixel_x = (CELLSIZE * (0.5 + cell_x)) - center_of_mass_x
 		pixel_y = (CELLSIZE * (0.5 + cell_y)) - center_of_mass_y
->>>>>>> 3d9113eae3 (removes center of mass list (#17064))
 
 /obj/item/reagent_containers/food/container_resist(mob/living/M)
 	if(istype(M, /mob/living/voice)) return	// CHOMPAdd - Stops sentient food from astral projecting
