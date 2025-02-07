@@ -8,7 +8,11 @@
 	icon_state = "red"
 	item_state_slots = list(slot_r_hand_str = "toolbox_red", slot_l_hand_str = "toolbox_red")
 	center_of_mass_x = 16
+<<<<<<< HEAD
 	center_of_mass_y = 11
+=======
+	center_of_mass_y= 11
+>>>>>>> 8c66f479f0 (fix missing naming (#17082))
 	force = 10
 	throwforce = 10
 	throw_speed = 1
