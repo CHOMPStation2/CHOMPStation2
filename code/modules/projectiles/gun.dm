@@ -52,7 +52,6 @@
 	drop_sound = 'sound/items/drop/gun.ogg'
 	pickup_sound = 'sound/items/pickup/gun.ogg'
 
-	var/recoil_mode = 1 //0 = no micro recoil, 1 = regular, anything higher than 1 is a multiplier //YAWN Addition, ported from CHOMP
 	var/automatic = 0
 	var/burst = 1
 	var/fire_delay = 6 	//delay after shooting before the gun can be used again
@@ -311,15 +310,13 @@
 	if(!canremove)
 		return
 
-	//CHOMPEdit start - move these around so that nonhumans can actually click-drag guns at all
-	if (istype(usr.loc,/obj/mecha)) // stops inventory actions in a mech. why?
-		return
-
-	if (!( istype(over_object, /obj/screen) ))
-		return ..()
-
 	if (ishuman(usr) || issmall(usr)) //so monkeys can take off their backpacks -- Urist
-	//CHOMPEdit End
+
+		if (istype(usr.loc,/obj/mecha)) // stops inventory actions in a mech. why?
+			return
+
+		if (!( istype(over_object, /obj/screen) ))
+			return ..()
 
 		//makes sure that the thing is equipped, so that we can't drag it into our hand from miles away.
 		//there's got to be a better way of doing this.
@@ -399,27 +396,6 @@
 			return
 
 		else
-<<<<<<< HEAD
-			set_light(0)
-		//VOREStation Edit End
-
-	//YAWNEDIT: Recoil knockdown for micros, ported from CHOMPStation
-	if(recoil_mode && iscarbon(user))
-		var/mob/living/carbon/nerd = user
-		var/mysize = nerd.size_multiplier
-		if(recoil_mode > 0)
-			if(mysize <= 0.60)
-				nerd.Weaken(1*recoil_mode)
-				if(!istype(src,/obj/item/gun/energy))
-					nerd.adjustBruteLoss((5-mysize*4)*recoil_mode)
-					to_chat(nerd, span_danger("You're so tiny that you drop the gun and hurt yourself from the recoil!"))
-				else
-					to_chat(nerd, span_danger("You're so tiny that the pull of the trigger causes you to drop the gun!"))
-
-	//YAWNEDIT: Knockdown code end
-
-	user.hud_used.update_ammo_hud(user, src)
-=======
 			if(ticker == 1) // So one burst only makes one message and not 3+ messages.
 				handle_firing_text(user, target, pointblank, reflex)
 
@@ -440,6 +416,7 @@
 			accuracy = initial(accuracy) //Reset our accuracy
 			last_shot = world.time
 			user.hud_used.update_ammo_hud(user, src)
+			user.setClickCooldown(DEFAULT_QUICK_COOLDOWN)
 
 			if(!(target && target.loc))
 				target = targloc
@@ -449,7 +426,6 @@
 				addtimer(CALLBACK(src, PROC_REF(handle_gunfire),target, user, clickparams, pointblank, reflex, ++ticker, TRUE), burst_delay, TIMER_DELETE_ME)
 
 
->>>>>>> f9bcaaae6a (Gets rid of sleep in Fire and Fire_userless (#17056))
 
 // Similar to the above proc, but does not require a user, which is ideal for things like turrets.
 /obj/item/gun/proc/Fire_userless(atom/target)
@@ -780,7 +756,7 @@
 	var/datum/firemode/new_mode = firemodes[sel_mode]
 	new_mode.apply_to(src)
 	to_chat(user, span_notice("\The [src] is now set to [new_mode.name]."))
-	user.hud_used.update_ammo_hud(user, src)
+	user.hud_used.update_ammo_hud(user, src) // TGMC Ammo HUD
 
 	return new_mode
 
