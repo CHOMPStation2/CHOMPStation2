@@ -104,3 +104,19 @@
 2025-02-06:
   Kashargul:
   - bugfix: buttons not properly aligned in the vorepanel settings
+2025-02-07:
+  Diana:
+  - code_imp: fixes taur sprites from breaking. Made from _vr and _ch files into just
+      normal .dmi files
+  - code_imp: Clears some duplicate code up
+  Missile597:
+  - maptweak: Moves the xenobotany hydroponics crate so it doesn't block the fridge
+      at round start
+  - maptweak: Adds an air alarm to the distillery room which was either missed or
+      got lost again
+  - maptweak: Deleted some redundant supply piping that had been accidentally placed
+      in medical at some point
+  - maptweak: Fixed the wires for the electrified grilles in the HoP's office
+  tacoguy7765093:
+  - bugfix: Oversight research datum added to outsider console to prevent core RND
+      being printed from it.
