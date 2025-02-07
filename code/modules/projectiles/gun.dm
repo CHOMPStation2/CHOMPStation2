@@ -94,7 +94,11 @@
 	var/obj/item/dnalockingchip/attached_lock
 
 	var/last_shot = 0			//records the last shot fired
+<<<<<<< HEAD
 	var/recoil_mode = 1			//If the gun will hurt micros if shot or not. Disabled on Virgo, used downstream. //CHOMPEDIT - Enabled
+=======
+	var/recoil_mode = 0			//If the gun will hurt micros if shot or not. Disabled on Virgo, used downstream.
+>>>>>>> 71627d97ce (Recoil (#17086))
 
 //VOREStation Add - /tg/ icon system
 	var/charge_sections = 4

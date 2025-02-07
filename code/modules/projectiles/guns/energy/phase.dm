@@ -89,9 +89,12 @@
 	projectile_type = /obj/item/projectile/energy/phase/heavy/cannon
 	accuracy = 15
 	one_handed_penalty = 65
+<<<<<<< HEAD
 
 /obj/item/gun/energy/locked/phasegun/cannon/unlocked
 	desc = "The RayZar EW50 Gaia, also known as the 'phase cannon', is a massive energy weapon purpose-built for clearing land. You feel dirty just looking at it." //ChompEDIT
 	req_access = newlist() //for toggling safety
 	locked = 0
 	lockable = 0
+=======
+>>>>>>> 71627d97ce (Recoil (#17086))
