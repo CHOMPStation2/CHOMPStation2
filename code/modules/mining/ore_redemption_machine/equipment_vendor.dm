@@ -87,11 +87,6 @@
 		EQUIPMENT("Premium Kinetic Accelerator",/obj/item/gun/energy/kinetic_accelerator/premiumka,		12000),
 	)
 	prize_list["Digging Tools"] = list(
-<<<<<<< HEAD
-		EQUIPMENT("Diamond Pickaxe",	/obj/item/pickaxe/diamond,				2000), //CHOMPstation re-addition
-		// EQUIPMENT("Kinetic Crusher",	/obj/item/twohanded/required/kinetic_crusher,	750),
-=======
->>>>>>> 826bb82dd6 (Adds back diamond pickaxe & Kinetic Gauntlets to vendor (#17067))
 		EQUIPMENT("Resonator",			/obj/item/resonator,							900),
 		EQUIPMENT("Silver Pickaxe",		/obj/item/pickaxe/silver,						1200),
 		EQUIPMENT("Diamond Pickaxe",	/obj/item/pickaxe/diamond,				2000),
