@@ -4,10 +4,17 @@
 	edge_blending_priority = 6
 	movement_cost = 2
 	initial_flooring = /decl/flooring/snow
+<<<<<<< HEAD
 	/*turf_layers = list( CHOMP Removal Begin
 		/turf/simulated/floor/outdoors/rocks,
 		/turf/simulated/floor/outdoors/dirt
 		) CHOMP Removal End*/
+=======
+	turf_layers = list(
+		/turf/simulated/floor/outdoors/rocks,
+		/turf/simulated/floor/outdoors/dirt
+		)
+>>>>>>> 3ac6fb4edf (Revert "new to init (the rest of them) part 1 (#17052)" (#17084))
 	var/list/crossed_dirs = list()
 
 

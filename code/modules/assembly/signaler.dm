@@ -15,7 +15,10 @@
 	var/airlock_wire = null
 	var/datum/wires/connected = null
 	var/datum/radio_frequency/radio_connection
+<<<<<<< HEAD
 	var/deadman = FALSE //CHOMPAdd
+=======
+>>>>>>> 3ac6fb4edf (Revert "new to init (the rest of them) part 1 (#17052)" (#17084))
 
 /obj/item/assembly/signaler/Initialize()
 	. = ..()

@@ -120,7 +120,10 @@
 /turf/simulated/floor/can_engrave()
 	return (!flooring || flooring.can_engrave)
 
+<<<<<<< HEAD
 /* CHOMPEdit - moved this block to modular_chomp\code\game\objects\items\weapons\rcd.dm
+=======
+>>>>>>> 3ac6fb4edf (Revert "new to init (the rest of them) part 1 (#17052)" (#17084))
 /turf/simulated/floor/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	switch(passed_mode)
 		if(RCD_FLOORWALL)

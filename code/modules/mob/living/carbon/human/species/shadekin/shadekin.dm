@@ -120,12 +120,15 @@
 	var/kin_type
 	var/energy_light = 0.25
 	var/energy_dark = 0.75
+<<<<<<< HEAD
 	var/nutrition_conversion_scaling = 0.5 //CHOMPEdit - Add nutrition <-> dark energy conversion
 	var/phase_gentle = TRUE //CHOMPEdit - Add gentle phasing, defaults to on.
 	var/doing_phase = FALSE //CHOMPEdit - Prevent bugs when spamming phase button
 	var/manual_respite = FALSE //CHOMPEdit - Dark Respite
 	var/respite_activating = FALSE //CHOMPEdit - Dark Respite
 	var/nutrition_energy_conversion = TRUE //CHOMPEdit - Add toggle to nutrition and energy conversions
+=======
+>>>>>>> 3ac6fb4edf (Revert "new to init (the rest of them) part 1 (#17052)" (#17084))
 
 /datum/species/shadekin/New()
 	..()

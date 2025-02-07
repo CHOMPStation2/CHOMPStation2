@@ -20,12 +20,16 @@
 	var/climbable = FALSE //Adds proc to wall if set to TRUE on its initialization, defined here since not all walls are subtypes of wall
 
 	var/icon_edge = 'icons/turf/outdoors_edge.dmi'	//VOREStation Addition - Allows for alternative edge icon files
+<<<<<<< HEAD
 	var/wet_cleanup_timer
+=======
+>>>>>>> 3ac6fb4edf (Revert "new to init (the rest of them) part 1 (#17052)" (#17084))
 
 // This is not great.
 /turf/simulated/proc/wet_floor(var/wet_val = 1)
 	if(wet > 2)	//Can't mop up ice
 		return
+<<<<<<< HEAD
 	wet = wet_val
 	if(wet_overlay)
 		cut_overlay(wet_overlay)
@@ -48,6 +52,21 @@
 		cut_overlay(wet_overlay)
 		wet_overlay = null
 //ChompEDIT END
+=======
+	spawn(0)
+		wet = wet_val
+		if(wet_overlay)
+			cut_overlay(wet_overlay)
+		wet_overlay = image('icons/effects/water.dmi', icon_state = "wet_floor")
+		add_overlay(wet_overlay)
+		sleep(800)
+		if(wet == 2)
+			sleep(3200)
+		wet = 0
+		if(wet_overlay)
+			cut_overlay(wet_overlay)
+			wet_overlay = null
+>>>>>>> 3ac6fb4edf (Revert "new to init (the rest of them) part 1 (#17052)" (#17084))
 
 /turf/simulated/proc/freeze_floor()
 	if(!wet) // Water is required for it to freeze.
@@ -102,9 +121,14 @@
 
 /turf/simulated/Entered(atom/A, atom/OL)
 	if (isliving(A))
+<<<<<<< HEAD
 		var/dirtslip = FALSE	//CHOMPEdit
 		var/mob/living/M = A
 		if(M.lying || M.flying || M.is_incorporeal()) //VOREStation Edit - CHOMPADD - Don't forget the phased ones.
+=======
+		var/mob/living/M = A
+		if(M.lying || M.flying) //VOREStation Edit
+>>>>>>> 3ac6fb4edf (Revert "new to init (the rest of them) part 1 (#17052)" (#17084))
 			return ..()
 
 		if(M.dirties_floor())
@@ -113,19 +137,26 @@
 
 		if(ishuman(M))
 			var/mob/living/carbon/human/H = M
+<<<<<<< HEAD
 			//CHOMPEdit Begin
 			dirtslip = H.species.dirtslip
 			if(H.species.mudking)
 				dirt = min(dirt+2, 101)
 				update_dirt()
 			//CHOMPEdit End
+=======
+>>>>>>> 3ac6fb4edf (Revert "new to init (the rest of them) part 1 (#17052)" (#17084))
 			// Tracking blood
 			var/list/bloodDNA = null
 			var/bloodcolor=""
 			if(H.shoes)
 				var/obj/item/clothing/shoes/S = H.shoes
 				if(istype(S))
+<<<<<<< HEAD
 					S.handle_movement(src,(H.m_intent == I_RUN ? 1 : 0), H) // CHOMPEdit handle_movement now needs to know who is moving, for inshoe steppies
+=======
+					S.handle_movement(src,(H.m_intent == I_RUN ? 1 : 0))
+>>>>>>> 3ac6fb4edf (Revert "new to init (the rest of them) part 1 (#17052)" (#17084))
 					if(S.track_blood && S.blood_DNA)
 						bloodDNA = S.blood_DNA
 						bloodcolor=S.blood_color
@@ -144,7 +175,11 @@
 
 				bloodDNA = null
 
+<<<<<<< HEAD
 		if(src.wet || (dirtslip && (dirt > 50 || outdoors == 1)))	//CHOMPEdit
+=======
+		if(src.wet)
+>>>>>>> 3ac6fb4edf (Revert "new to init (the rest of them) part 1 (#17052)" (#17084))
 
 			if(M.buckled || (src.wet == 1 && M.m_intent == I_WALK))
 				return
@@ -152,6 +187,7 @@
 			var/slip_dist = 1
 			var/slip_stun = 6
 			var/floor_type = "wet"
+<<<<<<< HEAD
 			//CHOMPEdit Begin
 			if(dirtslip)
 				slip_stun = 10
@@ -162,6 +198,9 @@
 				if(src.wet == 0 && M.m_intent == I_WALK)
 					return
 			//CHOMPEdit End
+=======
+
+>>>>>>> 3ac6fb4edf (Revert "new to init (the rest of them) part 1 (#17052)" (#17084))
 			switch(src.wet)
 				if(2) // Lube
 					floor_type = "slippery"

@@ -78,9 +78,12 @@
 	var/list/shadekin_abilities
 	var/check_for_observer = FALSE
 	var/check_timer = 0
+<<<<<<< HEAD
 
 	var/respite_activating = FALSE //CHOMPEdit - Dark Respite
 	var/list/active_dark_maws = list()
+=======
+>>>>>>> 3ac6fb4edf (Revert "new to init (the rest of them) part 1 (#17052)" (#17084))
 
 /mob/living/simple_mob/shadekin/Initialize()
 	//You spawned the prototype, and want a totally random one.
@@ -255,6 +258,11 @@
 	//CHOMPEdit End
 	cut_overlays()
 	flick("tp_out",src)
+<<<<<<< HEAD
+=======
+	spawn(1 SECOND)
+		qdel(src) //Back from whence you came!
+>>>>>>> 3ac6fb4edf (Revert "new to init (the rest of them) part 1 (#17052)" (#17084))
 
 	//CHOMPEdit Begin - Actually phase to the dark on death
 	var/area/current_area = get_area(src)

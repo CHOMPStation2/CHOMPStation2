@@ -5,11 +5,14 @@
 	if(!T.CanPass(src,T) || loc != T)
 		to_chat(src,span_warning("You can't use that here!"))
 		return FALSE
+<<<<<<< HEAD
 	//CHOMPAdd Start
 	if((get_area(src).flags & PHASE_SHIELDED))
 		to_chat(src,span_warning("This area is preventing you from phasing!"))
 		return FALSE
 	//CHOMPAdd End
+=======
+>>>>>>> 3ac6fb4edf (Revert "new to init (the rest of them) part 1 (#17052)" (#17084))
 	//RS Port #658 Start
 	if(!client?.holder && A.flag_check(AREA_BLOCK_PHASE_SHIFT))
 		to_chat(src,span_warning("You can't use that here!"))
@@ -40,7 +43,10 @@
 
 		// change
 		ability_flags &= ~AB_PHASE_SHIFTED
+<<<<<<< HEAD
 		throwpass = FALSE // CHOMPAdd
+=======
+>>>>>>> 3ac6fb4edf (Revert "new to init (the rest of them) part 1 (#17052)" (#17084))
 		mouse_opacity = 1
 		name = real_name
 		for(var/obj/belly/B as anything in vore_organs)
@@ -72,7 +78,10 @@
 		// Do this after the potential vore, so we get the belly
 		update_icon()
 
+<<<<<<< HEAD
 		/* CHOMPEdit, comment out and handle in custom proc
+=======
+>>>>>>> 3ac6fb4edf (Revert "new to init (the rest of them) part 1 (#17052)" (#17084))
 		//Affect nearby lights
 		var/destroy_lights = 0
 		if(eye_state == RED_EYES)
@@ -89,8 +98,11 @@
 					L.broken()
 			else
 				L.flicker(10)
+<<<<<<< HEAD
 		*/
 		handle_phasein_flicker() // CHOMPEdit, special handle for phase-in light flicker
+=======
+>>>>>>> 3ac6fb4edf (Revert "new to init (the rest of them) part 1 (#17052)" (#17084))
 
 /mob/living/simple_mob/shadekin/proc/phase_out(var/turf/T)
 	if(!(ability_flags & AB_PHASE_SHIFTED))
@@ -109,7 +121,6 @@
 
 		// change
 		ability_flags |= AB_PHASE_SHIFTED
-		throwpass = TRUE // CHOMPAdd
 		mouse_opacity = 0
 		custom_emote(1,"phases out!")
 		real_name = name
@@ -171,6 +182,7 @@
 	visible_message(span_notice("\The [src] gently places a hand on \the [target]..."))
 	face_atom(target)
 	return TRUE
+<<<<<<< HEAD
 
 
 //CHOMPEdit Begin - Add dark portal creation
@@ -242,3 +254,5 @@
 	else
 		return FALSE
 //CHOMPEdit End
+=======
+>>>>>>> 3ac6fb4edf (Revert "new to init (the rest of them) part 1 (#17052)" (#17084))

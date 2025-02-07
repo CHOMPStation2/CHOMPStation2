@@ -174,6 +174,7 @@
 		//cut_overlays()
 		invisibility = initial(invisibility)
 		see_invisible = initial(see_invisible)
+<<<<<<< HEAD
 		see_invisible_default = initial(see_invisible_default) // CHOMPEdit - Allow seeing phased entities while phased.
 		incorporeal_move = initial(incorporeal_move)
 		density = initial(density)
@@ -183,6 +184,11 @@
 		can_pull_mobs = initial(can_pull_mobs)
 		hovering = initial(hovering)
 		//CHOMPEdit end
+=======
+		incorporeal_move = initial(incorporeal_move)
+		density = initial(density)
+		force_max_speed = initial(force_max_speed)
+>>>>>>> 3ac6fb4edf (Revert "new to init (the rest of them) part 1 (#17052)" (#17084))
 		update_icon()
 
 		//Cosmetics mostly
@@ -194,6 +200,7 @@
 		canmove = original_canmove
 		alpha = initial(alpha)
 		remove_modifiers_of_type(/datum/modifier/shadekin_phase_vision)
+<<<<<<< HEAD
 		remove_modifiers_of_type(/datum/modifier/shadekin_phase) //CHOMPEdit - Shadekin probably shouldn't be hit while phasing
 
 		//Potential phase-in vore
@@ -209,12 +216,24 @@
 					forceMove(target.vore_selected)
 					to_chat(target, span_vwarning("\The [src] phases into you, [target.vore_selected.vore_verb]ing them into your [target.vore_selected.name]!"))
 					to_chat(src, span_vwarning("You phase into [target], having them [target.vore_selected.vore_verb] you into their [target.vore_selected.name]!"))
+=======
+
+		//Potential phase-in vore
+		if(can_be_drop_pred) //Toggleable in vore panel
+			var/list/potentials = living_mobs(0)
+			if(potentials.len)
+				var/mob/living/target = pick(potentials)
+				if(istype(target) && target.devourable && target.can_be_drop_prey && vore_selected)
+					target.forceMove(vore_selected)
+					to_chat(target,span_vwarning("\The [src] phases in around you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!"))
+>>>>>>> 3ac6fb4edf (Revert "new to init (the rest of them) part 1 (#17052)" (#17084))
 
 		ability_flags &= ~AB_PHASE_SHIFTING
 
 		//Affect nearby lights
 		var/destroy_lights = 0
 
+<<<<<<< HEAD
 		//CHOMPEdit start - Add back light destruction
 		if(SK.get_shadekin_eyecolor(src) == RED_EYES)
 			destroy_lights = 80
@@ -240,6 +259,17 @@
 						L.broken()
 				else
 					L.flicker(10)
+=======
+		for(var/obj/machinery/light/L in machines)
+			if(L.z != z || get_dist(src,L) > 10)
+				continue
+
+			if(prob(destroy_lights))
+				spawn(rand(5,25))
+					L.broken()
+			else
+				L.flicker(10)
+>>>>>>> 3ac6fb4edf (Revert "new to init (the rest of them) part 1 (#17052)" (#17084))
 
 /mob/living/carbon/human/proc/phase_out(var/turf/T)
 	if(!(ability_flags & AB_PHASE_SHIFTED))
@@ -262,6 +292,7 @@
 		custom_emote(1,"phases out!")
 		name = get_visible_name()
 
+<<<<<<< HEAD
 		//CHOMPEdit begin - Unequipping slots when phasing in, and preventing pulling stuff while phased.
 		if(l_hand)
 			unEquip(l_hand)
@@ -275,6 +306,8 @@
 		hovering = TRUE
 		//CHOMPEdit end
 
+=======
+>>>>>>> 3ac6fb4edf (Revert "new to init (the rest of them) part 1 (#17052)" (#17084))
 		for(var/obj/belly/B as anything in vore_organs)
 			B.escapable = FALSE
 
@@ -282,11 +315,17 @@
 		phaseanim.dir = dir
 		alpha = 0
 		add_modifier(/datum/modifier/shadekin_phase_vision)
+<<<<<<< HEAD
 		add_modifier(/datum/modifier/shadekin_phase) //CHOMPEdit - Shadekin probably shouldn't be hit while phasing
 		sleep(5)
 		invisibility = INVISIBILITY_SHADEKIN
 		see_invisible = INVISIBILITY_SHADEKIN
 		see_invisible_default = INVISIBILITY_SHADEKIN // CHOMPEdit - Allow seeing phased entities while phased.
+=======
+		sleep(5)
+		invisibility = INVISIBILITY_LEVEL_TWO
+		see_invisible = INVISIBILITY_LEVEL_TWO
+>>>>>>> 3ac6fb4edf (Revert "new to init (the rest of them) part 1 (#17052)" (#17084))
 		//cut_overlays()
 		update_icon()
 		alpha = 127
@@ -299,6 +338,7 @@
 	SK.doing_phase = FALSE //CHOMPEdit - Prevent bugs when spamming phase button
 */ //ChompEDIT END - moved to modular_chomp
 
+<<<<<<< HEAD
 //CHOMPEdit Start - Toggle to Nutrition conversion
 /mob/living/carbon/human/proc/nutrition_conversion_toggle()
 	set name = "Toggle Energy <-> Nutrition conversions"
@@ -324,6 +364,8 @@
 	evasion = 100
 //CHOMPEdit End
 
+=======
+>>>>>>> 3ac6fb4edf (Revert "new to init (the rest of them) part 1 (#17052)" (#17084))
 /datum/modifier/shadekin_phase_vision
 	name = "Shadekin Phase Vision"
 	vision_flags = SEE_THRU
@@ -480,6 +522,7 @@
 	holder.glow_color = initial(holder.glow_color)
 	holder.set_light(0)
 	my_kin = null
+<<<<<<< HEAD
 
 
 //CHOMPEdit Begin - Add dark portal creation
@@ -808,3 +851,5 @@
 
 	for(var/obj/effect/abstract/dark_maw/dm in SK.active_dark_maws)
 		dm.dispel()
+=======
+>>>>>>> 3ac6fb4edf (Revert "new to init (the rest of them) part 1 (#17052)" (#17084))
