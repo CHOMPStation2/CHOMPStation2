@@ -188,6 +188,7 @@
 	accept_cell_type = /obj/item/cell/device
 	cell_type = /obj/item/cell/device/weapon/recharge/alien/tyr
 	battery_lock = 1
+	recoil_mode = 0
 	charge_meter = 1
 	move_delay = 0
 
