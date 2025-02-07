@@ -12,17 +12,10 @@
 		client.screen = list()
 	if(mind && mind.current == src)
 		spellremove(src)
-<<<<<<< HEAD
-	if(!istype(src,/mob/observer)) //CHOMPEdit
-		ghostize() //CHOMPEdit
-	//ChompEDIT start - fix hard qdels
-	QDEL_NULL(soulgem) //CHOMPAdd
-=======
 	if(!istype(src,/mob/observer))
 		ghostize()
-	// QDEL_NULL(soulgem) //Soulcatcher. Needs to be ported sometime.
+	QDEL_NULL(soulgem) // CHOMPAdd Soulcatcher
 	QDEL_NULL(dna)
->>>>>>> 2e4f1ce642 ((Partially) Fixes Out Of Memory crashes (#17043))
 	QDEL_NULL(plane_holder)
 	QDEL_NULL(hud_used)
 	for(var/key in alerts) //clear out alerts
@@ -30,15 +23,12 @@
 	if(pulling)
 		stop_pulling() //TG does this on atom/movable but our stop_pulling proc is here so whatever
 
-<<<<<<< HEAD
-=======
 	vore_selected = null
 	if(vore_organs)
 		QDEL_NULL_LIST(vore_organs)
 	if(vorePanel)
 		QDEL_NULL(vorePanel)
 
->>>>>>> 2e4f1ce642 ((Partially) Fixes Out Of Memory crashes (#17043))
 	previewing_belly = null // from code/modules/vore/eating/mob_ch.dm
 	vore_selected = null // from code/modules/vore/eating/mob_vr
 	focus = null
