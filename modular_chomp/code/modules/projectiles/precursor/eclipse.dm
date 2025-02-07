@@ -15,7 +15,6 @@
 	cell_type = /obj/item/cell/device/weapon
 	projectile_type = /obj/item/projectile/energy/frostsphere
 
-	recoil_mode = 0
 	charge_meter = 1
 
 	reload_time = 10
@@ -44,7 +43,6 @@
 	matter = list(MAT_DURASTEEL = 1000, MAT_MORPHIUM = 500)
 	origin_tech = list(TECH_COMBAT = 6, TECH_POWER = 5, TECH_PRECURSOR = 3)
 
-	recoil_mode = 0
 	charge_meter = 1
 
 	move_delay = 0
@@ -74,7 +72,6 @@
 	matter = list(MAT_DURASTEEL = 1000, MAT_MORPHIUM = 500)
 	origin_tech = list(TECH_COMBAT = 6, TECH_POWER = 5, TECH_PRECURSOR = 3)
 
-	recoil_mode = 0
 	charge_meter = 1
 
 	move_delay = 0

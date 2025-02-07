@@ -13,7 +13,6 @@
 	charge_cost = 160  //Chompedit Bringing charge cost down for all phase weapons. 15 shots on normal cell
 	projectile_type = /obj/item/projectile/energy/phase
 	one_handed_penalty = 15
-	recoil_mode = 0 //CHOMP Addition: Removes recoil for micros.
 
 /obj/item/gun/energy/locked/phasegun/unlocked
 	desc = "The RayZar EW26 Artemis, also known as the 'phase carbine', is a downsized energy-based weapon specifically designed for use against wildlife." //ChompEDIT
