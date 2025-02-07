@@ -1,0 +1,9 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - code_imp: "Makes the artifact gas trigger, artifact heat, and artifact cold activation temps defines"
+  - code_imp: "Artifacts now properly remove their signals."
+  - balance: "Artifacts now take more moles in the air to activate"
+  - balance: "Artifacts break if they get WAY too hot."
+  - bugfix: "Fixes an error where it said % to activate artifacts. Now properly tells you it is in moles."
+  - balance: "Telecubes no longer start mated in xenoarch. This means you'll have to find two of them (and be sad the game won't let you pair them). This means you will no longer get gibbed if you're unlucky"
