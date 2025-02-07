@@ -78,6 +78,7 @@ GLOBAL_LIST_BOILERPLATE(all_brain_organs, /obj/item/organ/internal/brain)
 		tmp_owner.internal_organs_by_name[organ_tag] = new replace_path(tmp_owner, 1)
 		tmp_owner = null
 
+<<<<<<< HEAD
 /obj/item/organ/internal/brain/Initialize() // CHOMPEdit
 	. = ..() // CHOMPEdit
 	health = CONFIG_GET(number/default_brain_health)
@@ -85,9 +86,21 @@ GLOBAL_LIST_BOILERPLATE(all_brain_organs, /obj/item/organ/internal/brain)
 	spawn(5)
 		if(brainmob)
 			butcherable = FALSE
+=======
+/obj/item/organ/internal/brain/Initialize(mapload)
+	..()
+	health = CONFIG_GET(number/default_brain_health)
+	defib_timer = (CONFIG_GET(number/defib_timer) MINUTES) / 20				// Time vars measure things in ticks. Life tick happens every ~2 seconds, therefore dividing by 20
+	return INITIALIZE_HINT_LATELOAD
+>>>>>>> bb6a263e2f (organs NEW to INIT (#17050))
 
-			if(brainmob.client)
-				brainmob.client.screen.len = null //clear the hud
+/obj/item/organ/internal/brain/LateInitialize()
+	. = ..()
+	if(brainmob)
+		butcherable = FALSE
+
+		if(brainmob.client)
+			brainmob.client.screen.len = null //clear the hud
 
 /obj/item/organ/internal/brain/Destroy()
 	if(brainmob && brainmob.dna)
@@ -199,14 +212,16 @@ GLOBAL_LIST_BOILERPLATE(all_brain_organs, /obj/item/organ/internal/brain)
 /obj/item/organ/internal/brain/slime/is_open_container()
 	return 1
 
-/obj/item/organ/internal/brain/slime/New()
-	..()
+/obj/item/organ/internal/brain/slime/Initialize(mapload)
+	. = ..()
 	create_reagents(50)
-	var/mob/living/carbon/human/H = null
-	spawn(15) //Match the core to the Promethean's starting color.
-		if(ishuman(owner))
-			H = owner
-			color = rgb(min(H.r_skin + 40, 255), min(H.g_skin + 40, 255), min(H.b_skin + 40, 255))
+
+/obj/item/organ/internal/brain/slime/LateInitialize()
+	. = ..()
+	 //Match the core to the Promethean's starting color.
+	if(ishuman(loc))
+		var/mob/living/carbon/human/H = loc
+		color = rgb(min(H.r_skin + 40, 255), min(H.g_skin + 40, 255), min(H.b_skin + 40, 255))
 
 /obj/item/organ/internal/brain/slime/removed(var/mob/living/user)
 	if(istype(owner))
@@ -324,10 +339,8 @@ GLOBAL_LIST_BOILERPLATE(all_brain_organs, /obj/item/organ/internal/brain)
 	desc = "A piece of juicy meat found in a person's head. This one is strange."
 	icon_state = "brain_grey"
 
-/obj/item/organ/internal/brain/grey/colormatch/New()
-	..()
-	var/mob/living/carbon/human/H = null
-	spawn(15)
-		if(ishuman(owner))
-			H = owner
-			color = H.species.blood_color
+/obj/item/organ/internal/brain/grey/colormatch/LateInitialize()
+	. = ..()
+	if(ishuman(loc))
+		var/mob/living/carbon/human/H = loc
+		color = H.species.blood_color
