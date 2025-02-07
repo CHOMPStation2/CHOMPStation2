@@ -4,8 +4,8 @@
 	icon = 'icons/obj/furniture_vr.dmi' //VOREStation Edit - new Icons
 	icon_state = "bar_stool_preview" //set for the map
 	randpixel = 0
-	center_of_mass_x = 0 //CHOMPEdit
-	center_of_mass_y = 0 //CHOMPEdit
+	center_of_mass_x = 0
+	center_of_mass_y = 0
 	force = 10
 	throwforce = 10
 	w_class = ITEMSIZE_HUGE
