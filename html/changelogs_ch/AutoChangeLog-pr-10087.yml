@@ -1,0 +1,4 @@
+author: "Diana"
+delete-after: True
+changes:
+  - rscadd: "Adds a bunch of new taur sprites that were in the icon files but never had the code written for them.\ncode; Gets the _ch and _vr files in sync"
