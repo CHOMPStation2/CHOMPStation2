@@ -90,7 +90,6 @@
 
 	force = 30 //functions as a melee weapon too! Ain't great, but still works.
 
-	recoil_mode = 0
 	charge_meter = 1
 
 	move_delay = 0
@@ -112,7 +111,6 @@
 	cell_type = /obj/item/cell/device/weapon/recharge/alien/tyr
 	projectile_type = /obj/item/projectile/energy/wp_shotgun
 
-	recoil_mode = 0
 	charge_meter = 1
 
 	firemodes = list(
@@ -139,7 +137,6 @@
 	cell_type = /obj/item/cell/device/weapon/recharge/alien/tyr
 	projectile_type = /obj/item/projectile/energy/wp_blaster
 
-	recoil_mode = 0
 	charge_meter = 1
 
 	move_delay = 0
@@ -160,7 +157,6 @@
 	cell_type = /obj/item/cell/device/weapon/recharge/alien/tyr
 	projectile_type = /obj/item/projectile/beam/precursor_tyr
 
-	recoil_mode = 0
 	charge_meter = 1
 
 	move_delay = 0
@@ -188,7 +184,6 @@
 	accept_cell_type = /obj/item/cell/device
 	cell_type = /obj/item/cell/device/weapon/recharge/alien/tyr
 	battery_lock = 1
-	recoil_mode = 0
 	charge_meter = 1
 	move_delay = 0
 
