@@ -216,7 +216,7 @@
 		/obj/item/radio,
 		/obj/item/gps/explorer,
 		/obj/item/cataloguer/compact, //CHOMP edit
-	//	/obj/item/gun/energy/gun/protector/pilotgun/locked, //CHOMP Removed
+		/obj/item/gun/energy/gun/protector/pilotgun/locked,
 		/obj/item/clothing/accessory/watch/survival,
 		/obj/item/clothing/accessory/storage/webbing/pilot1,
 		/obj/item/clothing/accessory/storage/webbing/pilot2,

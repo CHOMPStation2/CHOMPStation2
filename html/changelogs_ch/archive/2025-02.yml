@@ -1,10 +1,9 @@
-2025-02-01:
-  CHOMPStation2StaffMirrorBot:
-  - rscadd: Bodybags now show a visible tag when written on
-  - bugfix: Bodybags show properly again
-  - bugfix: Crew monitor now filters and shows vitals properly
-  - code_imp: converts more usr to user / src
-  - bugfix: Tritium no longer acts as slime jelly
+CHOMPStation2StaffMirrorBot:
+- rscadd: Bodybags now show a visible tag when written on
+- bugfix: Bodybags show properly again
+- bugfix: Crew monitor now filters and shows vitals properly
+- code_imp: converts more usr to user / src
+- bugfix: Tritium no longer acts as slime jelly
 2025-02-02:
   CHOMPStation2StaffMirrorBot:
   - rscadd: Adds a new sneptail from Skyrat
