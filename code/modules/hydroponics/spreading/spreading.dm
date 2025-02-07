@@ -212,10 +212,6 @@
 		density = FALSE
 
 /obj/effect/plant/proc/calc_dir()
-<<<<<<< HEAD
-	//set background = 1 //CHOMPEdit
-=======
->>>>>>> af85f098cd (bunch of misc fixes (#17031))
 	var/turf/T = get_turf(src)
 	if(!istype(T)) return
 

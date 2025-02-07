@@ -44,14 +44,6 @@
 		if(my_mob.client)
 			my_mob.client.images -= entopic_images
 
-<<<<<<< HEAD
-//CHOMPEdit begin
 /mob/Destroy()
 	. = ..()
 	entopic_users -= src
-//CHOMPEdit end
-=======
-/mob/Destroy()
-	. = ..()
-	entopic_users -= src
->>>>>>> af85f098cd (bunch of misc fixes (#17031))

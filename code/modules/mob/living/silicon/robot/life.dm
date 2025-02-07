@@ -1,9 +1,5 @@
 /mob/living/silicon/robot/Life()
 	set invisibility = 0
-<<<<<<< HEAD
-	//set background = 1 CHOMPEdit
-=======
->>>>>>> af85f098cd (bunch of misc fixes (#17031))
 
 	if (transforming)
 		return

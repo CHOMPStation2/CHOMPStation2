@@ -139,13 +139,8 @@ SUBSYSTEM_DEF(plants)
 			return
 
 /datum/controller/subsystem/plants/proc/add_plant(var/obj/effect/plant/plant)
-<<<<<<< HEAD
-	if(!QDELETED(plant)) //CHOMPEdit GC
-		processing |= plant //CHOMPEdit GC
-=======
 	if(!QDELETED(plant))
 		processing |= plant
->>>>>>> af85f098cd (bunch of misc fixes (#17031))
 
 /datum/controller/subsystem/plants/proc/remove_plant(var/obj/effect/plant/plant)
 	processing -= plant
