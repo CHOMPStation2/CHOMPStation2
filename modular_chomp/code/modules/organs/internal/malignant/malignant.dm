@@ -11,7 +11,7 @@
 
 	origin_tech = list(TECH_BIO = 5)
 
-/obj/item/organ/internal/malignant/New(var/mob/living/holder, var/internal, var/force_location = null, var/forcetag = null)
+/obj/item/organ/internal/malignant/Initialize(var/mob/living/holder, var/internal, var/force_location = null, var/forcetag = null)
 	organ_tag = "[initial(organ_tag)]_[rand(1,9999)]"
 	if(forcetag)
 		organ_tag = forcetag
@@ -606,7 +606,7 @@
 
 	origin_tech = list(TECH_BIO = 3)
 
-/obj/item/organ/internal/malignant/engineered/lattice/New(var/mob/living/holder, var/internal, var/force_location = null, var/forcetag = null)
+/obj/item/organ/internal/malignant/engineered/lattice/Initialize(var/mob/living/holder, var/internal, var/force_location = null, var/forcetag = null)
 	growth_trigger = rand(150,200)
 	return ..( holder, internal, force_location, forcetag)
 
