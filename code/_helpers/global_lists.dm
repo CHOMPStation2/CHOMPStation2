@@ -360,4 +360,14 @@ GLOBAL_LIST_EMPTY(legacy_globals)
 	GLOB.legacy_globals["cultnet"] = cultnet
 	GLOB.legacy_globals["item_tf_spawnpoints"] = item_tf_spawnpoints
 	GLOB.legacy_globals["existing_solargrubs"] = existing_solargrubs
+<<<<<<< HEAD
 	*/
+=======
+
+var/global/list/selectable_footstep = list(
+	"Default" = FOOTSTEP_MOB_HUMAN,
+	"Claw" = FOOTSTEP_MOB_CLAW,
+	"Light Claw" = FOOTSTEP_MOB_TESHARI,
+	"Slither" = FOOTSTEP_MOB_SLITHER,
+)
+>>>>>>> a081d48590 (DCS Update + Footstep element (#17076))

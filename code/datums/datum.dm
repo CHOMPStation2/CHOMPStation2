@@ -19,7 +19,11 @@
 
 	/// Open uis owned by this datum
 	/// Lazy, since this case is semi rare
+<<<<<<< HEAD
 	var/list/open_tguis // CHOMPEdit: FIXME: open_uis
+=======
+	var/list/open_tguis // FIXME: open_uis
+>>>>>>> a081d48590 (DCS Update + Footstep element (#17076))
 
 	/// Active timers with this datum as the target
 	var/list/_active_timers
@@ -43,8 +47,13 @@
 
 	/// Datum level flags
 	var/datum_flags = NONE
+<<<<<<< HEAD
 	var/trigger_uid //CHOMPEdit
 	var/status_traits //CHOMPEdit
+=======
+	var/trigger_uid
+	var/status_traits
+>>>>>>> a081d48590 (DCS Update + Footstep element (#17076))
 
 	/// A weak reference to another datum
 	var/datum/weakref/weak_reference

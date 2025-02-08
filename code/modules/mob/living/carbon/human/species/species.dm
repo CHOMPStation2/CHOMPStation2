@@ -113,6 +113,9 @@
 	var/list/special_step_sounds = null
 	// CHOMPEdit End
 
+	var/footstep = FOOTSTEP_MOB_HUMAN
+	var/list/special_step_sounds = null
+
 	// Combat/health/chem/etc. vars.
 	var/total_health = 100								// How much damage the mob can take before entering crit.
 	var/list/unarmed_types = list(							// Possible unarmed attacks that the mob will use in combat,
@@ -363,6 +366,9 @@
 	update_sort_hint()
 // CHOMPadd
 /datum/species/proc/get_footstep_sounds()
+	return footstep
+
+/datum/species/proc/get_footsep_sounds()
 	return footstep
 
 /datum/species/proc/update_sort_hint()

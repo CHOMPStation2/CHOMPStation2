@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 //CHOMPAdd Start
+=======
+>>>>>>> a081d48590 (DCS Update + Footstep element (#17076))
 /*
 Remember to update _globalvars/traits.dm if you're adding/removing/renaming traits.
 */
@@ -7,7 +10,10 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 //mob traits
 #define TRAIT_BLIND 			"blind"
 */
+<<<<<<< HEAD
 #define TRAIT_DREAMING			"currently_dreaming"
+=======
+>>>>>>> a081d48590 (DCS Update + Footstep element (#17076))
 #define TRAIT_MUTE				"mute"
 /*
 #define TRAIT_EMOTEMUTE			"emotemute"
@@ -210,7 +216,10 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define FROGENITE_TRAIT "frogenite"
 #define FERVEATIUM_TRAIT "ferveatium"
 */
+<<<<<<< HEAD
 //CHOMPAdd End
+=======
+>>>>>>> a081d48590 (DCS Update + Footstep element (#17076))
 
 #define ORGANICS	1
 #define SYNTHETICS	2

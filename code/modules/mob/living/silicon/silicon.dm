@@ -37,7 +37,11 @@
 	init_id()
 	init_subsystems()
 
+<<<<<<< HEAD
 	AddElement(/datum/element/footstep, FOOTSTEP_MOB_SHOE, 1, -6) // CHOMPAdd
+=======
+	AddElement(/datum/element/footstep, FOOTSTEP_MOB_SHOE, 0.75, -6)
+>>>>>>> a081d48590 (DCS Update + Footstep element (#17076))
 
 /mob/living/silicon/Destroy()
 	silicon_mob_list -= src

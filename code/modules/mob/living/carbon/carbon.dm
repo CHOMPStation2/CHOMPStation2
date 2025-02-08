@@ -8,7 +8,11 @@
 	if (!default_language && species_language)
 		default_language = GLOB.all_languages[species_language]
 
+<<<<<<< HEAD
 	AddElement(/datum/element/footstep, custom_footstep, 1, -6) // CHOMPAdd
+=======
+	AddElement(/datum/element/footstep, custom_footstep, 1, -6)
+>>>>>>> a081d48590 (DCS Update + Footstep element (#17076))
 
 /mob/living/carbon/Life()
 	..()

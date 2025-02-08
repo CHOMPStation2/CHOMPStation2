@@ -187,11 +187,17 @@
 	icon_state = "grass0"
 	can_dirty = FALSE //VOREStation Edit
 	initial_flooring = /decl/flooring/grass
+<<<<<<< HEAD
 	// CHOMPAdd - Grass has grass footsteps
 	footstep = FOOTSTEP_GRASS
 	barefootstep = FOOTSTEP_GRASS
 	clawfootstep = FOOTSTEP_GRASS
 	// CHOMPEnd
+=======
+	footstep = FOOTSTEP_GRASS
+	barefootstep = FOOTSTEP_GRASS
+	clawfootstep = FOOTSTEP_GRASS
+>>>>>>> a081d48590 (DCS Update + Footstep element (#17076))
 
 /turf/simulated/floor/tiled
 	name = "floor"
