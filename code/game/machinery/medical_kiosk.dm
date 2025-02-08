@@ -3,13 +3,6 @@
 #define EXTERNAL_BLEEDING 0x4
 #define SERIOUS_EXTERNAL_DAMAGE 0x8
 #define SERIOUS_INTERNAL_DAMAGE 0x10
-<<<<<<< HEAD
-#define RADIATION_DAMAGE 0x20
-#define TOXIN_DAMAGE 0x40
-#define OXY_DAMAGE 0x80
-#define HUSKED_BODY 0x100
-#define WEIRD_ORGANS 0x200 //CHOMPedit malignant
-=======
 #define ACUTE_RADIATION_DOSE 0x20
 #define CHRONIC_RADIATION_DOSE 0x40
 #define TOXIN_DAMAGE 0x80
@@ -17,7 +10,7 @@
 #define HUSKED_BODY 0x200
 #define INFECTION 0x400
 #define VIRUS 0x800
->>>>>>> fe97f7675f (Medical Kiosk additions (#17081))
+#define WEIRD_ORGANS 0x1000 //CHOMPedit malignant
 
 /obj/machinery/medical_kiosk
 	name = "medical kiosk"
@@ -139,15 +132,12 @@
 			problems |= SERIOUS_INTERNAL_DAMAGE
 		if(I.status & ORGAN_BLEEDING)
 			problems |= INTERNAL_BLEEDING
-<<<<<<< HEAD
+		if(I.germ_level >= INFECTION_LEVEL_ONE) //Do NOT check for the germ_level on the mob, it'll be innacurate.
+			problems |= INFECTION
 		//CHOMPedit begin- malignants
 		if(istype(I,/obj/item/organ/internal/malignant))
 			problems |= WEIRD_ORGANS
 		//CHOMPedit end
-=======
-		if(I.germ_level >= INFECTION_LEVEL_ONE) //Do NOT check for the germ_level on the mob, it'll be innacurate.
-			problems |= INFECTION
->>>>>>> fe97f7675f (Medical Kiosk additions (#17081))
 
 	if(HUSK in user.mutations)
 		problems |= HUSKED_BODY
@@ -237,9 +227,6 @@
 #undef TOXIN_DAMAGE
 #undef OXY_DAMAGE
 #undef HUSKED_BODY
-<<<<<<< HEAD
-#undef WEIRD_ORGANS // CHOMPedit - malignants
-=======
 #undef INFECTION
 #undef VIRUS
->>>>>>> fe97f7675f (Medical Kiosk additions (#17081))
+#undef WEIRD_ORGANS // CHOMPedit - malignants
