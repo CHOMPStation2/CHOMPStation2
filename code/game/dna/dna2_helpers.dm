@@ -274,13 +274,7 @@
 		H.species.blood_reagents = H.dna.blood_reagents
 		H.species.blood_color = H.dna.blood_color
 		// VOREStation Edit End
-<<<<<<< HEAD
-
-		H.species.blood_reagents = dna.blood_reagents
 		// CHOMPEnable Start
-=======
-		/* Currently not implemented on virgo
->>>>>>> eeefd4ef3f (Fixes the body designer [WIP] (#17062))
 		H.species.species_sounds = dna.species_sounds
 		H.species.gender_specific_species_sounds = dna.gender_specific_species_sounds
 		H.species.species_sounds_male = dna.species_sounds_male
