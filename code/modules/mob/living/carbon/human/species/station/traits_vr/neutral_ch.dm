@@ -37,13 +37,6 @@
 	..()
 	add_verb(H,/mob/living/carbon/proc/toggle_shrinking) //CHOMPEdit TGPanel
 
-/datum/trait/neutral/mudking
-	name = "Mudking"
-	desc = "Somehow you are so filthy that tiles get dirty four times as quick from you walking on them."
-	cost = 0
-	var_changes = list("mudking" = TRUE)
-	custom_only = FALSE
-
 /datum/trait/neutral/singularity_metabolism
 	name = "Metabolism, Singularity"
 	desc = "You are insanely hungry. You can seemingly never get enough to eat. Perhaps you had a singularity as an ancestor, or maybe one is currently living inside of your gut."

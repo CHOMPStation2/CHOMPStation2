@@ -120,6 +120,10 @@
 /turf/simulated/floor/can_engrave()
 	return (!flooring || flooring.can_engrave)
 
+/turf/simulated/floor/proc/cause_slip(var/mob/living/M)
+	PROTECTED_PROC(TRUE)
+	return
+
 /* CHOMPEdit - moved this block to modular_chomp\code\game\objects\items\weapons\rcd.dm
 /turf/simulated/floor/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	switch(passed_mode)
