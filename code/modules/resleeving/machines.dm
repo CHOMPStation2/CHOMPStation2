@@ -401,13 +401,13 @@
 
 	return 1
 
-/obj/machinery/transhuman/synthprinter/attack_hand(mob/user as mob)
+/obj/machinery/transhuman/synthprinter/attack_hand(mob/user)
 	if((busy == 0) || (stat & NOPOWER))
 		return
 	to_chat(user, "Current print cycle is [busy]% complete.")
 	return
 
-/obj/machinery/transhuman/synthprinter/attackby(obj/item/W as obj, mob/user as mob)
+/obj/machinery/transhuman/synthprinter/attackby(obj/item/W, mob/user)
 	src.add_fingerprint(user)
 	if(busy)
 		to_chat(user, span_notice("\The [src] is busy. Please wait for completion of previous operation."))
@@ -442,7 +442,7 @@
 	else
 		to_chat(user, "\the [src] cannot hold more [S.name].")
 
-	updateUsrDialog()
+	updateUsrDialog(user)
 	return
 
 /obj/machinery/transhuman/synthprinter/update_icon()
@@ -495,7 +495,14 @@
 		manip_rating += M.rating
 	blur_amount = (48 - manip_rating * 8)
 
+<<<<<<< HEAD
 /obj/machinery/transhuman/resleever/attack_hand(mob/user as mob)
+=======
+	var/total_rating = manip_rating + scan_rating
+	sickness_duration = (45 - (total_rating-4)*1.875) MINUTES		// 45 minutes default, 30 minutes with max non-anomaly upgrades, 15 minutes with max anomaly ones
+
+/obj/machinery/transhuman/resleever/attack_hand(mob/user)
+>>>>>>> adcd25a00f (forward refs in usr dialog (#17090))
 	tgui_interact(user)
 
 /obj/machinery/transhuman/resleever/tgui_interact(mob/user, datum/tgui/ui = null)
@@ -532,7 +539,7 @@
 //End chomp edit
 	return data
 
-/obj/machinery/transhuman/resleever/attackby(obj/item/W as obj, mob/user as mob)
+/obj/machinery/transhuman/resleever/attackby(obj/item/W, mob/user)
 	src.add_fingerprint(user)
 	if(default_deconstruction_screwdriver(user, W))
 		return
@@ -547,7 +554,7 @@
 		var/mob/M = G.affecting
 		if(put_mob(M))
 			qdel(G)
-			src.updateUsrDialog()
+			src.updateUsrDialog(user)
 			return //Don't call up else we'll get attack messsages
 	if(istype(W, /obj/item/paicard/sleevecard))
 		var/obj/item/paicard/sleevecard/C = W
@@ -560,7 +567,7 @@
 
 	return ..()
 
-/obj/machinery/transhuman/resleever/MouseDrop_T(mob/living/carbon/O, mob/user as mob)
+/obj/machinery/transhuman/resleever/MouseDrop_T(mob/living/carbon/O, mob/user)
 	if(!istype(O))
 		return 0 //not a mob
 	if(user.incapacitated())
@@ -583,10 +590,10 @@
 
 	if(put_mob(O))
 		if(O == user)
-			src.updateUsrDialog()
+			updateUsrDialog(user)
 			visible_message("[user] climbs into \the [src].")
 		else
-			src.updateUsrDialog()
+			updateUsrDialog(user)
 			visible_message("[user] puts [O] into \the [src].")
 
 	add_fingerprint(user)
@@ -682,7 +689,7 @@
 	icon_state = "implantchair"
 	return
 
-/obj/machinery/transhuman/resleever/proc/put_mob(mob/living/carbon/human/M as mob)
+/obj/machinery/transhuman/resleever/proc/put_mob(mob/living/carbon/human/M)
 	if(!ishuman(M))
 		to_chat(usr, span_warning("\The [src] cannot hold this!"))
 		return
