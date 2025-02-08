@@ -372,7 +372,7 @@
 	icon_state = "xeno_digi"
 	digitigrade_acceptance = MARKING_DIGITIGRADE_ONLY
 	body_parts = list(BP_R_LEG, BP_L_LEG) //This needs BP_L_FOOT AND BP_R_FOOT added to it but the sprite has to be split for that. And it's an upstream .dmi. So you will have to fix it upstream.
-	hide_body_parts = list(BP_L_LEG, BP_L_FOOT, BP_R_LEG BP_R_FOOT)
+	hide_body_parts = list(BP_L_LEG, BP_L_FOOT, BP_R_LEG, BP_R_FOOT)
 
 // TORSOS //
 
