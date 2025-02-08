@@ -529,8 +529,6 @@
 /datum/sprite_accessory/hair/una/Chomp
 	name = "Long Unathi Spines Ch."
 	icon_state = "soghun_longspines"
-	name = "Long Unathi Spines"
-	icon_state = "soghun_longspines"
 	icon = 'modular_chomp/icons/mob/hair_unathi.dmi'
 	icon_add = 'modular_chomp/icons/mob/hair_unathi_add.dmi'
 
@@ -606,23 +604,11 @@
 	name = "Curled Unathi Horns"
 	icon_state = "unathi_horns_curled"
 
-/datum/sprite_accessory/hair/una/ram_horns
-	icon = 'modular_chomp/icons/mob/hair_unathi.dmi'
-	icon_add = 'modular_chomp/icons/mob/hair_unathi_add.dmi'
-	name = "Unathi Ram Horns"
-	icon_state = "unathi_horns_ram"
-
 /datum/sprite_accessory/hair/una/thick_ram_horns
 	icon = 'modular_chomp/icons/mob/hair_unathi.dmi'
 	icon_add = 'modular_chomp/icons/mob/hair_unathi_add.dmi'
 	name = "Thick Unathi Ram Horns"
 	icon_state = "unathi_horns_ram_thick"
-
-/datum/sprite_accessory/hair/una/double_horns
-	icon = 'modular_chomp/icons/mob/hair_unathi.dmi'
-	icon_add = 'modular_chomp/icons/mob/hair_unathi_add.dmi'
-	name = "Double Unathi Horns"
-	icon_state = "unathi_horns_double"
 
 /datum/sprite_accessory/hair/una/swept_horns
 	icon = 'modular_chomp/icons/mob/hair_unathi.dmi'

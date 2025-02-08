@@ -231,7 +231,7 @@
 	name = "Scaled Belly"
 	icon_state = "scaled_belly"
 	hide_body_parts = list(BP_L_LEG,BP_R_LEG,BP_L_HAND,BP_R_HAND,BP_L_LEG,BP_R_LEG,BP_GROIN)
-	body_parts = list(BP_TORSO,BP_GROIN,BP_L_LEG,BP_R_LEG,BP_L_HAND,BP_R_HAND)
+	body_parts = list(BP_TORSO)
 	color_blend_mode = ICON_MULTIPLY
 
 
@@ -306,7 +306,7 @@
 	name = "Chubby Belly, Small"
 	icon_state = "smallchubbybelly"
 	hide_body_parts = list(BP_L_LEG,BP_R_LEG,BP_L_HAND,BP_R_HAND,BP_L_LEG,BP_R_LEG,BP_GROIN)
-	body_parts = list(BP_TORSO,BP_GROIN,BP_L_LEG,BP_R_LEG,BP_L_HAND,BP_R_HAND)
+	body_parts = list(BP_TORSO,BP_GROIN,BP_L_HAND,BP_R_HAND)
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/marking/ch/six_pack
@@ -332,7 +332,7 @@
 /datum/sprite_accessory/marking/ch/sloog_head
 	name = "sloog head"
 	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/sloog.dmi'
-	icon_state = "slooghead"
+	icon_state = "sloog"
 	body_parts = list(BP_HEAD)
 	color_blend_mode = ICON_MULTIPLY
 	// placed in seperate dmi till normal one is functional.
