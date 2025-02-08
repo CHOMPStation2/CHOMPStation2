@@ -1,0 +1,12 @@
+author: "Diana"
+delete-after: True
+changes:
+  - bugfix: "Artifacts will no longer activate via touch if their effect(strength) is set to 'touch strength' but their trigger(method of activation) is set to anything but 'touch'"
+  - bugfix: "Touching a touch artifact to turn it off will no longer hit you with the activation effects"
+  - bugfix: "Touching a touch artifact will now properly make it turn on"
+  - qol: "Gets rid of anomalies that require gas to activate"
+  - qol: "The analyzer now tells you you can dump lead (among others) to activate an artifact"
+  - qol: "Artifacts will not longer activate through gloves. Small artifacts are safe to pick up now!"
+  - rscadd: "Adds more anomaly battery types craftable in science"
+  - rscadd: "Artifact harvesters and its scanpad can now be crafted and deconstructed"
+  - rscadd: "Harvester can now be upgraded, giving increased charge rate."
