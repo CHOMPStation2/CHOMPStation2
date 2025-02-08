@@ -4,13 +4,6 @@
 	edge_blending_priority = 6
 	movement_cost = 2
 	initial_flooring = /decl/flooring/snow
-<<<<<<< HEAD
-	/*turf_layers = list( CHOMP Removal Begin
-		/turf/simulated/floor/outdoors/rocks,
-		/turf/simulated/floor/outdoors/dirt
-		) CHOMP Removal End*/
-=======
->>>>>>> 59586cecb3 (Ice Sliding & Signaler code (#17087))
 	var/list/crossed_dirs = list()
 
 

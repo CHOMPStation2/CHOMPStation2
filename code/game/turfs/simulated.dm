@@ -19,11 +19,7 @@
 	var/special_temperature //Used for turf HE-Pipe interaction
 	var/climbable = FALSE //Adds proc to wall if set to TRUE on its initialization, defined here since not all walls are subtypes of wall
 
-<<<<<<< HEAD
-	var/icon_edge = 'icons/turf/outdoors_edge.dmi'	//VOREStation Addition - Allows for alternative edge icon files
-=======
 	var/icon_edge = 'icons/turf/outdoors_edge.dmi'	//Allows for alternative edge icon files
->>>>>>> 59586cecb3 (Ice Sliding & Signaler code (#17087))
 	var/wet_cleanup_timer
 
 // This is not great.
@@ -51,10 +47,6 @@
 	if(wet_overlay)
 		cut_overlay(wet_overlay)
 		wet_overlay = null
-<<<<<<< HEAD
-//ChompEDIT END
-=======
->>>>>>> 59586cecb3 (Ice Sliding & Signaler code (#17087))
 
 /turf/simulated/proc/freeze_floor()
 	if(!wet) // Water is required for it to freeze.
@@ -109,15 +101,9 @@
 
 /turf/simulated/Entered(atom/A, atom/OL)
 	if (isliving(A))
-<<<<<<< HEAD
-		var/dirtslip = FALSE	//CHOMPEdit
-		var/mob/living/M = A
-		if(M.lying || M.flying || M.is_incorporeal()) //VOREStation Edit - CHOMPADD - Don't forget the phased ones.
-=======
 		var/dirtslip = FALSE
 		var/mob/living/M = A
 		if(M.lying || M.flying || M.is_incorporeal())
->>>>>>> 59586cecb3 (Ice Sliding & Signaler code (#17087))
 			return ..()
 
 		if(M.dirties_floor())
@@ -126,29 +112,17 @@
 
 		if(ishuman(M))
 			var/mob/living/carbon/human/H = M
-<<<<<<< HEAD
-			//CHOMPEdit Begin
-=======
->>>>>>> 59586cecb3 (Ice Sliding & Signaler code (#17087))
 			dirtslip = H.species.dirtslip
 			if(H.species.mudking)
 				dirt = min(dirt+2, 101)
 				update_dirt()
-<<<<<<< HEAD
-			//CHOMPEdit End
-=======
->>>>>>> 59586cecb3 (Ice Sliding & Signaler code (#17087))
 			// Tracking blood
 			var/list/bloodDNA = null
 			var/bloodcolor=""
 			if(H.shoes)
 				var/obj/item/clothing/shoes/S = H.shoes
 				if(istype(S))
-<<<<<<< HEAD
-					S.handle_movement(src,(H.m_intent == I_RUN ? 1 : 0), H) // CHOMPEdit handle_movement now needs to know who is moving, for inshoe steppies
-=======
 					S.handle_movement(src,(H.m_intent == I_RUN ? 1 : 0), H) // handle_movement now needs to know who is moving, for inshoe steppies
->>>>>>> 59586cecb3 (Ice Sliding & Signaler code (#17087))
 					if(S.track_blood && S.blood_DNA)
 						bloodDNA = S.blood_DNA
 						bloodcolor=S.blood_color
@@ -167,22 +141,13 @@
 
 				bloodDNA = null
 
-<<<<<<< HEAD
-		if(src.wet || (dirtslip && (dirt > 50 || outdoors == 1)))	//CHOMPEdit
-
-=======
 		if(src.wet || (dirtslip && (dirt > 50 || outdoors == 1)))
->>>>>>> 59586cecb3 (Ice Sliding & Signaler code (#17087))
 			if(M.buckled || (src.wet == 1 && M.m_intent == I_WALK))
 				return
 
 			var/slip_dist = 1
 			var/slip_stun = 6
 			var/floor_type = "wet"
-<<<<<<< HEAD
-			//CHOMPEdit Begin
-=======
->>>>>>> 59586cecb3 (Ice Sliding & Signaler code (#17087))
 			if(dirtslip)
 				slip_stun = 10
 				if(dirt > 50)
@@ -191,10 +156,6 @@
 					floor_type = "uneven"
 				if(src.wet == 0 && M.m_intent == I_WALK)
 					return
-<<<<<<< HEAD
-			//CHOMPEdit End
-=======
->>>>>>> 59586cecb3 (Ice Sliding & Signaler code (#17087))
 			switch(src.wet)
 				if(2) // Lube
 					floor_type = "slippery"

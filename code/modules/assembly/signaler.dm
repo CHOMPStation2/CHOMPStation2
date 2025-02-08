@@ -15,11 +15,7 @@
 	var/airlock_wire = null
 	var/datum/wires/connected = null
 	var/datum/radio_frequency/radio_connection
-<<<<<<< HEAD
-	var/deadman = FALSE //CHOMPAdd
-=======
 	var/deadman = FALSE
->>>>>>> 59586cecb3 (Ice Sliding & Signaler code (#17087))
 
 /obj/item/assembly/signaler/Initialize()
 	. = ..()
