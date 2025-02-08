@@ -78,21 +78,11 @@ GLOBAL_LIST_BOILERPLATE(all_brain_organs, /obj/item/organ/internal/brain)
 		tmp_owner.internal_organs_by_name[organ_tag] = new replace_path(tmp_owner, 1)
 		tmp_owner = null
 
-<<<<<<< HEAD
-/obj/item/organ/internal/brain/Initialize() // CHOMPEdit
-	. = ..() // CHOMPEdit
-	health = CONFIG_GET(number/default_brain_health)
-	defib_timer = (CONFIG_GET(number/defib_timer) MINUTES) / 2 // CHOMPEdit
-	spawn(5)
-		if(brainmob)
-			butcherable = FALSE
-=======
 /obj/item/organ/internal/brain/Initialize(mapload)
 	..()
 	health = CONFIG_GET(number/default_brain_health)
-	defib_timer = (CONFIG_GET(number/defib_timer) MINUTES) / 20				// Time vars measure things in ticks. Life tick happens every ~2 seconds, therefore dividing by 20
+	defib_timer = (CONFIG_GET(number/defib_timer) MINUTES) / 2	 // CHOMPEdit // Time vars measure things in ticks. Life tick happens every ~2 seconds, therefore dividing by 20
 	return INITIALIZE_HINT_LATELOAD
->>>>>>> bb6a263e2f (organs NEW to INIT (#17050))
 
 /obj/item/organ/internal/brain/LateInitialize()
 	. = ..()
