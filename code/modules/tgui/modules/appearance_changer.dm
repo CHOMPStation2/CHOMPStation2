@@ -506,13 +506,14 @@
 				generate_data(ui.user, owner)
 				changed_hook(APPEARANCECHANGER_CHANGED_RACE)
 				return TRUE
-		/*if("species_sound") //TODO: UP PORT SPECIES_SOUNDS
+		// CHOMPEnable Start
+		if("species_sound")
 			var/list/possible_species_sound_types = species_sound_map
 			var/choice = tgui_input_list(ui.user, "Which set of sounds would you like to use? (Cough, Sneeze, Scream, Pain, Gasp, Death)", "Species Sounds", possible_species_sound_types)
 			if(choice && can_change(owner, APPEARANCE_RACE))
 				owner.species.species_sounds = choice
 				return TRUE
-		*/
+		// CHOMPEnable End
 		if("flavor_text")
 			var/select_key = params["target"]
 			if(select_key && can_change(owner, APPEARANCE_RACE))
@@ -724,7 +725,9 @@
 	data["digitigrade"] = owner.digitigrade
 	data["blood_reagent"] = owner.dna.blood_reagents
 	data["blood_color"] = owner.dna.blood_color
-	//data["species_sound"] = owner.species.species_sounds //TODO: RAISE UP FROM CHOMP
+	// CHOMPEnable Start
+	data["species_sound"] = owner.species.species_sounds //TODO: RAISE UP FROM CHOMP
+	// CHOMPEnable End
 	// Are these needed? It seems to be only used if above is unset??
 	//data["species_sounds_gendered"] = owner.species.gender_specific_species_sounds
 	//data["species_sounds_female"] = owner.species.species_sounds_female

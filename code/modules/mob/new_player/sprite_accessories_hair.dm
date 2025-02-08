@@ -340,6 +340,7 @@
 	icon_state = "hair_celebcurls"
 	flags = HAIR_TIEABLE
 
+/* CHOMPRemove Start
 /datum/sprite_accessory/hair/citheronia
 	name = "Citheronia Hair (Kira72)"
 	icon = 'icons/mob/human_face_vr.dmi'
@@ -353,6 +354,7 @@
 	icon_state = "maw_hair"
 	ckeys_allowed = list("liquidfirefly")
 	do_colouration = 0
+*/// CHOMPRemove End
 
 /datum/sprite_accessory/hair/twindrillslong
 	name = "Twin Drills Long"
@@ -1483,37 +1485,37 @@
 //xeno stuffs
 /datum/sprite_accessory/hair/xeno_head_drone_color
 	name = "Drone dome"
-	icon = 'icons/mob/human_face_alt.dmi'
-	icon_add = 'icons/mob/human_face_alt_add.dmi'
+	icon = 'modular_chomp/icons/mob/human_face_ch.dmi' //chompstation edit
+	icon_add = 'modular_chomp/icons/mob/human_face_ch_add.dmi' //chompstation edit
 	icon_state = "cxeno_drone"
 	gender = NEUTER
 
 // figure this one out for better coloring
 /datum/sprite_accessory/hair/xeno_head_sentinel_color
 	name = "Sentinal dome"
-	icon = 'icons/mob/human_face_alt.dmi'
-	icon_add = 'icons/mob/human_face_alt_add.dmi'
+	icon = 'modular_chomp/icons/mob/human_face_ch.dmi'//chompstation edit
+	icon_add = 'modular_chomp/icons/mob/human_face_ch_add.dmi'//chompstation edit
 	icon_state = "cxeno_sentinel"
 	gender = NEUTER
 
 /datum/sprite_accessory/hair/xeno_head_queen_color
 	name = "Queen dome"
-	icon = 'icons/mob/human_face_alt.dmi'
-	icon_add = 'icons/mob/human_face_alt_add.dmi'
+	icon = 'modular_chomp/icons/mob/human_face_ch.dmi'//chompstation edit
+	icon_add = 'modular_chomp/icons/mob/human_face_ch_add.dmi'//chompstation edit
 	icon_state = "cxeno_queen"
 	gender = NEUTER
 
 /datum/sprite_accessory/hair/xeno_head_hunter_color
 	name = "Hunter dome"
-	icon = 'icons/mob/human_face_alt.dmi'
-	icon_add = 'icons/mob/human_face_alt_add.dmi'
+	icon = 'modular_chomp/icons/mob/human_face_ch.dmi'//chompstation edit
+	icon_add = 'modular_chomp/icons/mob/human_face_ch_add.dmi'//chompstation edit
 	icon_state = "cxeno_hunter"
 	gender = NEUTER
 
 /datum/sprite_accessory/hair/xeno_head_praetorian_color
 	name = "Praetorian dome"
-	icon = 'icons/mob/human_face_alt.dmi'
-	icon_add = 'icons/mob/human_face_alt_add.dmi'
+	icon = 'modular_chomp/icons/mob/human_face_ch.dmi'//chompstation edit
+	icon_add = 'modular_chomp/icons/mob/human_face_ch_add.dmi'//chompstation edit
 	icon_state = "cxeno_praetorian"
 	gender = NEUTER
 
@@ -1593,6 +1595,7 @@
 
 /datum/sprite_accessory/hair/una/spines_short
 	name = "Short Unathi Spines"
+	icon_state = "soghun_shortspines"
 
 /datum/sprite_accessory/hair/una/frills_long
 	name = "Long Unathi Frills"
@@ -1902,6 +1905,7 @@
 	name = "Quill Mohawk"
 	icon_state = "vox_mohawk"
 
+/* CHOMPRemve Start
 /datum/sprite_accessory/hair/shadekin_hair_rivyr
 	name = "Rivyr Hair"
 	icon = 'icons/mob/human_face_vr.dmi'
@@ -1910,6 +1914,7 @@
 	ckeys_allowed = list("verysoft")
 	species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW)
 	gender = NEUTER
+*/// CHOMPRemove End
 
 /datum/sprite_accessory/hair/slicker
 	name = "Slicker"
