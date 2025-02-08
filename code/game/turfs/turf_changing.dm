@@ -77,70 +77,39 @@
 
 	cut_overlays(TRUE)
 	RemoveElement(/datum/element/turf_z_transparency)
+	changing_turf = TRUE
+	qdel(src)
 
-	var/turf/new_turf  //CHOMPEdit
+	var/turf/W = new N( locate(src.x, src.y, src.z) )
 	if(ispath(N, /turf/simulated/floor))
-		//CHOMPEdit Begin
-		var/turf/simulated/W = new N( locate(src.x, src.y, src.z), is_turfchange=TRUE )
-		W.lighting_corners_initialised = old_lighting_corners_initialized
-		if(old_shandler)
-			W.shandler = old_shandler
-			old_shandler.holder = W
-		else if((SSplanets && SSplanets.z_to_planet.len >= z && SSplanets.z_to_planet[z]) && has_dynamic_lighting())
-			W.shandler = new(src)
-			W.shandler.manualInit()
-		//CHOMPEdit End
 		if(old_fire)
-			fire = old_fire
+			W.fire = old_fire
+		W.RemoveLattice()
+	//CHOMPEdit Begin
+	W.lighting_corners_initialised = old_lighting_corners_initialized
+	var/turf/simulated/W_sim = W
+	if(istype(W_sim) && old_shandler)
+		W_sim.shandler = old_shandler
+		old_shandler.holder = W
+	else if(istype(W_sim) && (SSplanets && SSplanets.z_to_planet.len >= z && SSplanets.z_to_planet[z]) && has_dynamic_lighting())
+		W_sim.shandler = new(src)
+		W_sim.shandler.manualInit()
+	//CHOMPEdit End
+	if(old_fire)
+		old_fire.RemoveFire()
 
-		if (istype(W,/turf/simulated/floor))
-			W.RemoveLattice()
+	if(tell_universe)
+		universe.OnTurfChange(W)
 
-		if(tell_universe)
-			universe.OnTurfChange(W)
+	if(SSair)
+		SSair.mark_for_update(W)
 
-		if(SSair)
-			SSair.mark_for_update(src) //handle the addition of the new turf.
-
-		for(var/turf/space/S in range(W,1))
-			S.update_starlight()
-
-		W.levelupdate()
-		W.update_icon(1)
-		W.post_change()
-		new_turf = W //CHOMPEdit
-		. = W
-
-	else
-		//CHOMPEdit Begin
-		var/turf/W = new N( locate(src.x, src.y, src.z), is_turfchange=TRUE )
-		W.lighting_corners_initialised = old_lighting_corners_initialized
-		var/turf/simulated/W_sim = W
-		if(istype(W_sim) && old_shandler)
-			W_sim.shandler = old_shandler
-			old_shandler.holder = W
-		else if(istype(W_sim) && (SSplanets && SSplanets.z_to_planet.len >= z && SSplanets.z_to_planet[z]) && has_dynamic_lighting())
-			W_sim.shandler = new(src)
-			W_sim.shandler.manualInit()
-		//CHOMPEdit End
-		if(old_fire)
-			old_fire.RemoveFire()
-
-		if(tell_universe)
-			universe.OnTurfChange(W)
-
-		if(SSair)
-			SSair.mark_for_update(src)
-
-		for(var/turf/space/S in range(W,1))
-			S.update_starlight()
-
-		W.levelupdate()
-		W.update_icon(1)
-		W.post_change()
-		new_turf = W //CHOMPEdit
-		. =  W
-
+	for(var/turf/space/S in range(W, 1))
+		S.update_starlight()
+	W.levelupdate()
+	W.update_icon(1)
+	W.post_change()
+	. =  W
 
 	dangerous_objects = old_dangerous_objects
 
@@ -177,10 +146,10 @@
 			if(SUNLIGHT_ONLY_SHADE)
 				vis_contents += sim_self.shandler.pshandler.vis_shade
 
-	var/is_open = istype(new_turf,/turf/simulated/open)
+	var/is_open = istype(W,/turf/simulated/open)
 
 
-	propogate_sunlight_changes(oldtype, old_density, new_turf)
+	propogate_sunlight_changes(oldtype, old_density, W)
 	var/turf/simulated/cur_turf = src
 	if(istype(cur_turf) && is_open != was_open)
 		do
@@ -189,7 +158,7 @@
 				cur_turf.make_outdoors()
 			else
 				cur_turf.make_indoors()
-			cur_turf.propogate_sunlight_changes(oldtype, old_density, new_turf, above = TRUE)
+			cur_turf.propogate_sunlight_changes(oldtype, old_density, W, above = TRUE)
 		while(istype(cur_turf,/turf/simulated/open) && HasBelow(cur_turf.z))
 
 	//CHOMPEdit End
