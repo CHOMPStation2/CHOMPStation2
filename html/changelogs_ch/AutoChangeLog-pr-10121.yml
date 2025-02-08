@@ -1,0 +1,4 @@
+author: "ItsSelis"
+delete-after: True
+changes:
+  - bugfix: "makes the dialog/attacklog tables clear again after each round"
