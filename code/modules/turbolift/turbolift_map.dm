@@ -24,12 +24,8 @@
 	turbolifts += src
 	return INITIALIZE_HINT_LATELOAD
 
-/obj/turbolift_map_holder/LateInitialize()
-<<<<<<< HEAD
-	..()
-=======
+/obj/turbolift_map_holder/LateInitialize
 	. = ..()
->>>>>>> 8c66f479f0 (fix missing naming (#17082))
 	// Create our system controller.
 	var/datum/turbolift/lift = new()
 
