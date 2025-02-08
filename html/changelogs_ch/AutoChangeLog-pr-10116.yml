@@ -1,0 +1,4 @@
+author: "UPPORT"
+delete-after: True
+changes:
+  - qol: "Doorbells can now be used on doors via ctrl-click instead of alt-click, allowing you to examine doors properly."
