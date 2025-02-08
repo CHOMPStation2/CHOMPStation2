@@ -15,7 +15,11 @@
 	var/airlock_wire = null
 	var/datum/wires/connected = null
 	var/datum/radio_frequency/radio_connection
+<<<<<<< HEAD
 	var/deadman = FALSE //CHOMPAdd
+=======
+	var/deadman = FALSE
+>>>>>>> 59586cecb3 (Ice Sliding & Signaler code (#17087))
 
 /obj/item/assembly/signaler/Initialize()
 	. = ..()
@@ -123,7 +127,11 @@
 	if(!frequency)
 		return
 	if(!radio_controller)
-		sleep(20)
+		addtimer(CALLBACK(src, PROC_REF(radio_checkup), new_frequency), 2 SECONDS)
+
+
+/obj/item/assembly/signaler/proc/radio_checkup(new_frequency)
+	PROTECTED_PROC(TRUE)
 	if(!radio_controller)
 		return
 

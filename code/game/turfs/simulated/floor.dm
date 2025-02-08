@@ -120,7 +120,14 @@
 /turf/simulated/floor/can_engrave()
 	return (!flooring || flooring.can_engrave)
 
+<<<<<<< HEAD
 /* CHOMPEdit - moved this block to modular_chomp\code\game\objects\items\weapons\rcd.dm
+=======
+/turf/simulated/floor/proc/cause_slip(var/mob/living/M)
+	PROTECTED_PROC(TRUE)
+	return
+
+>>>>>>> 59586cecb3 (Ice Sliding & Signaler code (#17087))
 /turf/simulated/floor/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	switch(passed_mode)
 		if(RCD_FLOORWALL)
