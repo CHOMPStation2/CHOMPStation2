@@ -82,20 +82,12 @@
 		disk = W
 		disk.forceMove(src)
 		to_chat(user, span_notice("You insert \the [W] into \the [src]."))
-<<<<<<< HEAD
-		updateUsrDialog()
-=======
 		updateUsrDialog(user)
->>>>>>> adcd25a00f (forward refs in usr dialog (#17090))
 	else
 		..()
 	return
 
-<<<<<<< HEAD
-/obj/machinery/computer/transhuman/designer/attack_ai(mob/user as mob)
-=======
 /obj/machinery/computer/transhuman/designer/attack_ai(mob/user)
->>>>>>> adcd25a00f (forward refs in usr dialog (#17090))
 	return attack_hand(user)
 
 /obj/machinery/computer/transhuman/designer/attack_hand(mob/user)
