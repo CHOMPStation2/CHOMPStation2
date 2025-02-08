@@ -71,7 +71,7 @@
 		var/product_path = products[choice]
 		var/obj/item/reagent_containers/foodItem = new product_path
 
-		var/total = abs(foodItem.reagents.total_volume-foodItem.reagents.get_free_space())
+		var/total = foodItem.reagents.total_volume
 
 		if(!container)
 			to_chat(user, span_warning("There is no container!"))
@@ -196,7 +196,7 @@
     for(var/obj/item/stock_parts/manipulator/M in component_parts)
         man_rating += M.rating
 
-    efficiency = (man_rating > 0) ? 6 / man_rating : 3
+    efficiency = 3 / man_rating
     speed = cap_rating / 2
 
 
