@@ -28,25 +28,13 @@
 	color_blend_mode = ICON_MULTIPLY
 	body_parts = list(BP_L_ARM,BP_R_ARM)
 	species_allowed = list(SPECIES_AKULA)
-
+/* //I can't make out what this icon_state was ever supposed to be. There is no 'zan' 'mon' or anything like that in the ch.dmi file...
 /datum/sprite_accessory/marking/ch/zangoose_belly
 	name = "Mongoose Cat Belly Marking"
 	icon_state = "test"
 	body_parts = list(BP_TORSO)
 	species_allowed = list(SPECIES_HUMAN, SPECIES_UNATHI, SPECIES_TAJARAN, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE) //This lets all races use the default hairstyles.
-
-/datum/sprite_accessory/marking/ch/head_paint_front
-	name = "Head Paint Front"
-	icon_state = "paintfront"
-	color_blend_mode = ICON_MULTIPLY
-	body_parts = list(BP_HEAD)
-
-/datum/sprite_accessory/marking/ch/head_paint_back
-	name = "Head Paint"
-	icon_state = "paint"
-	color_blend_mode = ICON_MULTIPLY
-	body_parts = list(BP_HEAD)
-
+*/
 /datum/sprite_accessory/marking/ch/athena_lights
 	name = "Hephaestus - Athena lights"
 	icon_state = "athena"
@@ -118,18 +106,6 @@
 	icon_state = "vulpskull"
 	color_blend_mode = ICON_MULTIPLY
 	body_parts = list(BP_HEAD)
-
-/datum/sprite_accessory/marking/ch/manedwolf1
-	name = "Maned Wolf Primary Markings"
-	icon_state = "manedwolf1"
-	color_blend_mode = ICON_MULTIPLY
-	body_parts = list(BP_HEAD,BP_TORSO,BP_R_ARM,BP_L_ARM,BP_R_HAND,BP_L_HAND,BP_R_LEG,BP_L_LEG,BP_R_FOOT,BP_L_FOOT)
-
-/datum/sprite_accessory/marking/ch/manedwolf2
-	name = "Maned Wolf Secondary Markings"
-	icon_state = "manedwolf2"
-	color_blend_mode = ICON_MULTIPLY
-	body_parts = list(BP_HEAD,BP_TORSO,BP_GROIN)
 
 /datum/sprite_accessory/marking/ch/voxbeak2
 	name = "Vox Beak (Normal)"

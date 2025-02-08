@@ -1,0 +1,18 @@
+author: "Diana, Kash, Will"
+delete-after: True
+changes:
+  - bugfix: "Fixes the body designer and changes it to use appearance changer"
+  - code_imp: "Adds a unit test that will POLITELY tell you to to FIX YOUR DUPLICATE / UNNAMED / UN-ICONED sprite_accessory in the  code. It's for your own good. Promise."
+  - code_imp: "Adds another unit test that will POLITELY check your markings in the FILE to let you know you if you add a marking without a proper sprite. (This is for your own good.)"
+  - bugfix: "Fixes a bug with the color picker would let you upload photos to it and accept that as a color input"
+  - bugfix: "Fixes some things having duplicate names / duplicate paths meaning they could never be selected"
+  - bugfix: "Fixes a LOT of broken sprites"
+  - bugfix: "Fixes Shadekin Snoot marking"
+  - bugfix: "Adds Double Unathi Horns"
+  - bugfix: "Skrell Very Short Tentacles never existed."
+  - bugfix: "Wrist Fluff not having the correct body_parts"
+  - bugfix: "Replikant Paneling - SynthFlesh (body) now shows up properly"
+  - bugfix: "Rosette's Groin now shows up properly when viewed."
+  - bugfix: "Augment (Backside Left, Head) now shows up properly"
+  - bugfix: "Augment (Backside Left Diode, Head) now shows up properly"
+  - bugfix: "Hands,Feet,Belly Color (Major, Female) now shows their groin properly."

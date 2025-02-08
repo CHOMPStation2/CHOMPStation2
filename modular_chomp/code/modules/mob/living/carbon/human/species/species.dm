@@ -1,7 +1,6 @@
 /datum/species
 	var/crit_mod = 1
 	var/list/env_traits = list()
-	var/dirtslip = FALSE
 	var/photosynthesizing = FALSE
 	var/grows = FALSE
 	var/shrinks = FALSE
@@ -13,7 +12,6 @@
 	var/grab_power_victims = 0
 	var/grab_power_self = 0
 	var/waking_speed = 1
-	var/mudking = FALSE
 	var/lightweight_light = 0
 
 /datum/species/handle_environment_special(var/mob/living/carbon/human/H)

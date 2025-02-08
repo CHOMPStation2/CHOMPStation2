@@ -1,6 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - code_imp: "Doors are less resource intensive"
-  - code_imp: "Robots will now scream if you touch them wrong in the code"
-  - rscadd: "Doors close faster if it's freezing or a raging fire is on the other side. (Less fire spreading and less heat lost)"

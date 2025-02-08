@@ -1,6 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - bugfix: "Fixes a bug where augments could not be inserted into robotic limbs. The step is now screwdriver->multitool to insert them"
-  - bugfix: "Melee augments can no longer embed inside someone"
-  - rscadd: "A lot of the augments are now craftable in science, requiring high tech levels and lots of resources for them."

@@ -120,3 +120,41 @@
   tacoguy7765093:
   - bugfix: Oversight research datum added to outsider console to prevent core RND
       being printed from it.
+2025-02-08:
+  CHOMPStation2StaffMirrorBot:
+  - rscdel: Removed old things that should have been removed a long time ago
+  - code_imp: Non-Contagious GBS now has CAN_NOT_SPREAD
+  - rscadd: Adds a new spont vore interaction to buckling to an already occupied seat
+  - code_imp: repalces center of mass list with x and y vars
+  - code_imp: fixes a general destroy issue and some init hints
+  - code_imp: Adjusts the way guns fire on the backend
+  - bugfix: Fixes a massive memory leak.
+  - bugfix: Deadringer now properly does deathgasp on the right mob
+  - bugfix: Wounds now properly delete when limbs are Destroy()'d
+  - rscadd: Mining vendor now contains the Kinetic Gauntlets
+  - rscadd: Mining vendor now contains the Diamond Pickaxe
+  - rscadd: Radio code is now more efficient on the backend.
+  - code_imp: Doors are less resource intensive
+  - code_imp: Robots will now scream if you touch them wrong in the code
+  - rscadd: Doors close faster if it's freezing or a raging fire is on the other side.
+      (Less fire spreading and less heat lost)
+  - code_imp: Makes the artifact gas trigger, artifact heat, and artifact cold activation
+      temps defines
+  - code_imp: Artifacts now properly remove their signals.
+  - balance: Artifacts now take more moles in the air to activate
+  - balance: Artifacts break if they get WAY too hot.
+  - bugfix: Fixes an error where it said % to activate artifacts. Now properly tells
+      you it is in moles.
+  - balance: Telecubes no longer start mated in xenoarch. This means you'll have to
+      find two of them (and be sad the game won't let you pair them). This means you
+      will no longer get gibbed if you're unlucky
+  - bugfix: Fixes a bug where augments could not be inserted into robotic limbs. The
+      step is now screwdriver->multitool to insert them
+  - bugfix: Melee augments can no longer embed inside someone
+  - rscadd: A lot of the augments are now craftable in science, requiring high tech
+      levels and lots of resources for them.
+  Diana:
+  - rscadd: 'Adds a bunch of new taur sprites that were in the icon files but never
+      had the code written for them.
+
+      code; Gets the _ch and _vr files in sync'
