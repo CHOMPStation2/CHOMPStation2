@@ -1,5 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - rscadd: "Mining vendor now contains the Kinetic Gauntlets"
-  - rscadd: "Mining vendor now contains the Diamond Pickaxe"

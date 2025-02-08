@@ -119,3 +119,18 @@ CHOMPStation2StaffMirrorBot:
   tacoguy7765093:
   - bugfix: Oversight research datum added to outsider console to prevent core RND
       being printed from it.
+2025-02-08:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Adds a new spont vore interaction to buckling to an already occupied seat
+  - rscadd: Mining vendor now contains the Kinetic Gauntlets
+  - rscadd: Mining vendor now contains the Diamond Pickaxe
+  - bugfix: Fixes a bug where augments could not be inserted into robotic limbs. The
+      step is now screwdriver->multitool to insert them
+  - bugfix: Melee augments can no longer embed inside someone
+  - rscadd: A lot of the augments are now craftable in science, requiring high tech
+      levels and lots of resources for them.
+  Diana:
+  - rscadd: 'Adds a bunch of new taur sprites that were in the icon files but never
+      had the code written for them.
+
+      code; Gets the _ch and _vr files in sync'
