@@ -105,11 +105,7 @@
 	//Atoms on your person
 	// A is your location but is not a turf; or is on you (backpack); or is on something on you (box in backpack); sdepth is needed here because contents depth does not equate inventory storage depth.
 	var/sdepth = A.storage_depth(src)
-<<<<<<< HEAD
-	if((!isturf(A) && A == loc) || (sdepth <= MAX_STORAGE_REACH)) // CHOMPedit: Boxes can be interacted with inside of larger inventories.
-=======
-	if(!currently_restrained && ((!isturf(A) && A == loc) || (sdepth != -1 && sdepth <= 1)))
->>>>>>> 193e5e6eaf (Unarmed Attack Fixes (#17078))
+	if(!currently_restrained && ((!isturf(A) && A == loc) || (sdepth <= MAX_STORAGE_REACH))) // CHOMPedit: Boxes can be interacted with inside of larger inventories.
 		if(W)
 			var/resolved = W.resolve_attackby(A, src, click_parameters = params)
 			if(!resolved && A && W)
@@ -141,23 +137,10 @@
 	//Atoms on turfs (not on your person)
 	// A is a turf or is on a turf, or in something on a turf (pen in a box); but not something in something on a turf (pen in a box in a backpack)
 	sdepth = A.storage_depth_turf()
-<<<<<<< HEAD
 	if(isturf(A) || isturf(A.loc) || (sdepth <= MAX_STORAGE_REACH)) // CHOMPedit: Storage reach depth.
-		if(A.Adjacent(src) || (W && W.attack_can_reach(src, A, W.reach)) ) // see adjacent.dm
-			if(W)
-				// Return 1 in attackby() to prevent afterattack() effects (when safely moving items for example)
-				var/resolved = W.resolve_attackby(A,src, click_parameters = params)
-				if(!resolved && A && W)
-					W.afterattack(A, src, 1, params) // 1: clicking something Adjacent
-			else
-				if(ismob(A)) // No instant mob attacking
-					setClickCooldown(get_attack_speed())
-=======
-	if(isturf(A) || isturf(A.loc) || (sdepth != -1 && sdepth <= 1))
 		if(currently_restrained)
 			if(ismob(A) && A.Adjacent(src)) //We are RESTRAINED (handcuffed or otherwise) and ADJACENT
 				setClickCooldown(get_attack_speed())
->>>>>>> 193e5e6eaf (Unarmed Attack Fixes (#17078))
 				UnarmedAttack(A, 1)
 				trigger_aiming(TARGET_CAN_CLICK)
 				return
