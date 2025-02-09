@@ -573,6 +573,7 @@
 #include "code\datums\elements\footstep.dm"
 #include "code\datums\elements\footstep_override.dm"
 #include "code\datums\elements\light_blocking.dm"
+#include "code\datums\elements\slosh.dm"
 #include "code\datums\elements\turf_transparency.dm"
 #include "code\datums\game_masters\_common.dm"
 #include "code\datums\helper_datums\construction_datum.dm"
