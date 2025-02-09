@@ -27,7 +27,7 @@
 
 	if(ishuman(source))
 		var/mob/living/carbon/human/source_human = source
-		if(source_human.m_intent == I_WALK  && step_count++ % 20 == 0)
+		if(source_human.m_intent == I_WALK && step_count++ % 20 == 0)
 			return
 		if(source_human.m_intent == I_RUN && step_count++ % 2 != 0)
 			return
