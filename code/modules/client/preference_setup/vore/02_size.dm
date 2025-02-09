@@ -214,14 +214,6 @@
 		else
 			pref.voice_sound = choice
 		return TOPIC_REFRESH
-	// CHOMPAdd Start
-	else if(href_list["customize_footsteps"])
-		var/list/footstep_choice = selectable_footstep
-		var/choice = tgui_input_list(user, "What footstep sounds would your character make?", "Custom Foostep Sounds", footstep_choice)
-		if(choice)
-			pref.custom_footstep = footstep_choice[choice]
-			return TOPIC_REFRESH
-	// CHOMPAdd End
 	else if(href_list["customize_speech_bubble"])
 		var/choice = tgui_input_list(user, "What speech bubble style do you want to use? (default for automatic selection)", "Custom Speech Bubble", selectable_speech_bubbles)
 		if(!choice)

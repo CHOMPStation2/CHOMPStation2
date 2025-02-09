@@ -109,8 +109,6 @@
 	var/gasp_volume = 50 // Self-explanatory, define this separately on your species if the sound files are louder.
 	var/death_volume = 50 // Self-explanatory, define this separately on your species if the sound files are louder.
 	// var/species_sounds_herm // If you want a custom sound played for other genders, just add them like so
-	var/footstep = FOOTSTEP_MOB_HUMAN
-	var/list/special_step_sounds = null
 	// CHOMPEdit End
 
 	var/footstep = FOOTSTEP_MOB_HUMAN
@@ -364,9 +362,6 @@
 		inherent_verbs |= /mob/living/carbon/human/proc/regurgitate
 
 	update_sort_hint()
-// CHOMPadd
-/datum/species/proc/get_footstep_sounds()
-	return footstep
 
 /datum/species/proc/get_footsep_sounds()
 	return footstep
