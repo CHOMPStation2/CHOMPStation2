@@ -1,6 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - rscadd: "Adds 'Dirtking' a trait that lets you dirty tiles up quicker (Sorry janitors!)"
-  - rscadd: "Adds 'Mudslip' a trait that makes you slip over dirt tiles (Blame the dirtkings!)"
-  - code_imp: "more backend stuff"

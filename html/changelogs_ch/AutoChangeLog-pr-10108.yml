@@ -1,7 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - rscadd: "Makes medical kiosks now detect viruses and infections"
-  - qol: "Makes medical kiosks have varying text severity's depending on how bad the thing is"
-  - qol: "Makes medical kiosks tell you to put pressure on the wound"
-  - rscadd: "Makes medical kiosks detect chronic radiation (but only if done with the acute phase)"

@@ -158,3 +158,76 @@
       had the code written for them.
 
       code; Gets the _ch and _vr files in sync'
+2025-02-09:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Adds 'Dirtking' a trait that lets you dirty tiles up quicker (Sorry janitors!)
+  - rscadd: Adds 'Mudslip' a trait that makes you slip over dirt tiles (Blame the
+      dirtkings!)
+  - code_imp: more backend stuff
+  - code_imp: forwards usr refs from topic for usrDialog
+  - qol: atmos alarms can now be scrolled through
+  - rscadd: Makes medical kiosks now detect viruses and infections
+  - qol: Makes medical kiosks have varying text severity's depending on how bad the
+      thing is
+  - qol: Makes medical kiosks tell you to put pressure on the wound
+  - rscadd: Makes medical kiosks detect chronic radiation (but only if done with the
+      acute phase)
+  - code_imp: moves organs from new to init
+  - bugfix: rhubarb using the wrong define
+  Diana:
+  - bugfix: You are prevented from stomping while buckled now.
+  - bugfix: You are prevented from kicking while buckled now.
+  - bugfix: You are prevented from biting while buckled now.
+  - bugfix: Fixes gloves increasing damage on anything other than punches.
+  - bugfix: Fixes it so the click code can properly get to unarmed attack code now,
+      allowing it to run it's proper checks to see if you can attack or not instead
+      of just always returning false.
+  - code_imp: Changes some vars from 0 to FALSE where indicated.
+  - code_imp: Gets rid of some needless = FALSE when it was already on the parent
+  - bugfix: Artifacts will no longer activate via touch if their effect(strength)
+      is set to 'touch strength' but their trigger(method of activation) is set to
+      anything but 'touch'
+  - bugfix: Touching a touch artifact to turn it off will no longer hit you with the
+      activation effects
+  - bugfix: Touching a touch artifact will now properly make it turn on
+  - qol: Gets rid of anomalies that require gas to activate
+  - qol: The analyzer now tells you you can dump lead (among others) to activate an
+      artifact
+  - qol: Artifacts will not longer activate through gloves. Small artifacts are safe
+      to pick up now!
+  - rscadd: Adds more anomaly battery types craftable in science
+  - rscadd: Artifact harvesters and its scanpad can now be crafted and deconstructed
+  - rscadd: Harvester can now be upgraded, giving increased charge rate.
+  - bugfix: your sponge will no longer look for its nonexistent species when emp'd
+      when outside your body
+  - bugfix: NPCs are no longer opportunistic and will not maul their sleeping allies
+  Diana, Kash, Will:
+  - bugfix: Fixes the body designer and changes it to use appearance changer
+  - code_imp: Adds a unit test that will POLITELY tell you to to FIX YOUR DUPLICATE
+      / UNNAMED / UN-ICONED sprite_accessory in the  code. It's for your own good.
+      Promise.
+  - code_imp: Adds another unit test that will POLITELY check your markings in the
+      FILE to let you know you if you add a marking without a proper sprite. (This
+      is for your own good.)
+  - bugfix: Fixes a bug with the color picker would let you upload photos to it and
+      accept that as a color input
+  - bugfix: Fixes some things having duplicate names / duplicate paths meaning they
+      could never be selected
+  - bugfix: Fixes a LOT of broken sprites
+  - bugfix: Fixes Shadekin Snoot marking
+  - bugfix: Adds Double Unathi Horns
+  - bugfix: Skrell Very Short Tentacles never existed.
+  - bugfix: Wrist Fluff not having the correct body_parts
+  - bugfix: Replikant Paneling - SynthFlesh (body) now shows up properly
+  - bugfix: Rosette's Groin now shows up properly when viewed.
+  - bugfix: Augment (Backside Left, Head) now shows up properly
+  - bugfix: Augment (Backside Left Diode, Head) now shows up properly
+  - bugfix: Hands,Feet,Belly Color (Major, Female) now shows their groin properly.
+  ItsSelis:
+  - bugfix: makes the dialog/attacklog tables clear again after each round
+  UPPORT:
+  - qol: Doorbells can now be used on doors via ctrl-click instead of alt-click, allowing
+      you to examine doors properly.
+  gameaddict07:
+  - bugfix: The food replicator now costs nutriment based on how many units of reagents
+      are in the replicated dish.

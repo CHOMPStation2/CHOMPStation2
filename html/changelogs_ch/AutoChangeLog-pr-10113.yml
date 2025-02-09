@@ -1,4 +1,0 @@
-author: "Diana"
-delete-after: True
-changes:
-  - bugfix: "NPCs are no longer opportunistic and will not maul their sleeping allies"
