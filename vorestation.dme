@@ -71,11 +71,7 @@
 #include "code\__defines\exosuit_fab.dm"
 #include "code\__defines\faction.dm"
 #include "code\__defines\flags.dm"
-<<<<<<< HEAD
-#include "code\__defines\footsteps_ch.dm"
-=======
 #include "code\__defines\footsteps.dm"
->>>>>>> a081d48590 (DCS Update + Footstep element (#17076))
 #include "code\__defines\gamemode.dm"
 #include "code\__defines\holder.dm"
 #include "code\__defines\holomap.dm"
@@ -190,11 +186,7 @@
 #include "code\__defines\dcs\signals.dm"
 #include "code\__defines\dcs\signals_ch.dm"
 #include "code\__defines\dcs\signals\signals_subsystem.dm"
-<<<<<<< HEAD
 #include "code\__defines\dcs\signals_ch\signals_mob\signals_mob_main_ch.dm"
-=======
-#include "code\__defines\dcs\signals\signals_turf.dm"
->>>>>>> a081d48590 (DCS Update + Footstep element (#17076))
 #include "code\__defines\traits\_traits.dm"
 #include "code\__defines\traits\declarations.dm"
 #include "code\__defines\traits\sources.dm"
@@ -482,12 +474,9 @@
 #include "code\datums\organs.dm"
 #include "code\datums\position_point_vector.dm"
 #include "code\datums\progressbar.dm"
+#include "code\datums\reference_tracking_new.dm"
 #include "code\datums\riding.dm"
 #include "code\datums\signals.dm"
-<<<<<<< HEAD
-#include "code\datums\reference_tracking_new.dm"
-=======
->>>>>>> a081d48590 (DCS Update + Footstep element (#17076))
 #include "code\datums\soul_link.dm"
 #include "code\datums\sun.dm"
 #include "code\datums\verb_callbacks.dm"
@@ -4770,7 +4759,6 @@
 #include "maps\redgate\fantasy_items.dm"
 #include "maps\redgate\falls\atoll_decals.dm"
 #include "maps\redgate\falls\atoll_objs.dm"
-#include "maps\redgate\falls\atoll_turfs.dm"
 #include "maps\submaps\_helpers.dm"
 #include "maps\submaps\_readme.dm"
 #include "modular_chomp\code\coalesce_ch.dm"
@@ -4862,7 +4850,6 @@
 #include "modular_chomp\code\game\objects\items\weapons\storage\firstaid.dm"
 #include "modular_chomp\code\game\objects\random\mapping.dm"
 #include "modular_chomp\code\game\objects\random\misc.dm"
-#include "modular_chomp\code\game\objects\structures\desert_planet_structures.dm"
 #include "modular_chomp\code\game\objects\structures\flora.dm"
 #include "modular_chomp\code\game\objects\structures\holosign.dm"
 #include "modular_chomp\code\game\objects\structures\loot_pile.dm"
