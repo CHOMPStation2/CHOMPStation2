@@ -99,10 +99,6 @@
 /proc/cmp_stored_item_name(datum/stored_item/A, datum/stored_item/B)
 	return sorttext(B.item_name, A.item_name)
 
-<<<<<<< HEAD
-// CHOMPEdit Start - More text compares
-=======
->>>>>>> a081d48590 (DCS Update + Footstep element (#17076))
 /proc/cmp_embed_text_asc(a,b)
 	if(isdatum(a))
 		a = REF(a)
@@ -116,7 +112,3 @@
 	if(isdatum(b))
 		b = REF(b)
 	return sorttext("[a]", "[b]")
-<<<<<<< HEAD
-// CHOMPEdit End
-=======
->>>>>>> a081d48590 (DCS Update + Footstep element (#17076))

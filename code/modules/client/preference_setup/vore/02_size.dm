@@ -14,12 +14,8 @@
 	var/voice_freq = 42500	//CHOMPEdit - Why was the default 0
 	var/voice_sound = "goon speak 1"	//CHOMPEdit - Changed the default voice to one less jarring
 	var/custom_speech_bubble = "default"
-<<<<<<< HEAD
-	var/custom_footstep = "Default"	// CHOMPAdd
-	var/species_sound = "Unset"		// CHOMPEdit: Use default species pain/scream sounds based off icon base if none set, override otherwise
-=======
 	var/custom_footstep = "Default"
->>>>>>> a081d48590 (DCS Update + Footstep element (#17076))
+	var/species_sound = "Unset"		// CHOMPEdit: Use default species pain/scream sounds based off icon base if none set, override otherwise
 
 // Definition of the stuff for Sizing
 /datum/category_item/player_setup_item/vore/size
@@ -36,14 +32,10 @@
 	pref.voice_freq			= save_data["voice_freq"]
 	pref.voice_sound		= save_data["voice_sound"]
 	pref.custom_speech_bubble	= save_data["custom_speech_bubble"]
-<<<<<<< HEAD
-	//CHOMPAdd Start
 	pref.custom_footstep	= save_data["custom_footstep"]
+	//CHOMPAdd Start
 	pref.species_sound		= save_data["species_sound"]
 	//CHOMPAdd End
-=======
-	pref.custom_footstep	= save_data["custom_footstep"]
->>>>>>> a081d48590 (DCS Update + Footstep element (#17076))
 
 /datum/category_item/player_setup_item/vore/size/save_character(list/save_data)
 	save_data["size_multiplier"]	= pref.size_multiplier
@@ -55,14 +47,10 @@
 	save_data["voice_freq"]			= pref.voice_freq
 	save_data["voice_sound"]		= pref.voice_sound
 	save_data["custom_speech_bubble"]		= pref.custom_speech_bubble
-<<<<<<< HEAD
-	//CHOMPAdd Start
 	save_data["custom_footstep"]	= pref.custom_footstep
+	//CHOMPAdd Start
 	save_data["species_sound"]		= pref.species_sound
 	//CHOMPAdd End
-=======
-	save_data["custom_footstep"]	= pref.custom_footstep
->>>>>>> a081d48590 (DCS Update + Footstep element (#17076))
 
 /datum/category_item/player_setup_item/vore/size/sanitize_character()
 	pref.weight_vr			= sanitize_integer(pref.weight_vr, WEIGHT_MIN, WEIGHT_MAX, initial(pref.weight_vr))
@@ -76,16 +64,11 @@
 		pref.size_multiplier = initial(pref.size_multiplier)
 	if(!(pref.custom_speech_bubble in selectable_speech_bubbles))
 		pref.custom_speech_bubble = "default"
-<<<<<<< HEAD
-	if(!(pref.custom_footstep))	// CHOMPAdd
+	if(!(pref.custom_footstep))
 		pref.custom_footstep = "Default"
 	// var/datum/species/selected_species = GLOB.all_species[pref.species] // CHOMPEdit
 	if(!(pref.species_sound)) // CHOMPEdit // && selected_species.selects_bodytype
 		pref.species_sound = "Unset" // CHOMPEdit - otherwise, we leave this as null or w/e the default is
-=======
-	if(!(pref.custom_footstep))
-		pref.custom_footstep = "Default"
->>>>>>> a081d48590 (DCS Update + Footstep element (#17076))
 
 /datum/category_item/player_setup_item/vore/size/copy_to_mob(var/mob/living/carbon/human/character)
 	character.weight			= pref.weight_vr
@@ -117,7 +100,6 @@
 	. += "<a href='byond://?src=\ref[src];voice_test=1'><b>Test Selected Voice</b></a><br>"
 	. += span_bold("Custom Speech Bubble:") + " <a href='byond://?src=\ref[src];customize_speech_bubble=1'>[pref.custom_speech_bubble]</a><br>"
 	. += span_bold("Custom Footstep Sounds:") + "<a href='byond://?src=\ref[src];customize_footsteps=1'>[pref.custom_footstep]</a><br>"
-<<<<<<< HEAD
 	// CHOMPEdit Start: Pain/Scream/Death Custom Sounds
 	// var/datum/species/selected_species = GLOB.all_species[pref.species]
 	// if(selected_species.selects_bodytype)
@@ -130,8 +112,6 @@
 	. += "<a href='byond://?src=\ref[src];gasp_test=1'><b>Test Gasp Sounds</b></a><br>"
 	. += "<a href='byond://?src=\ref[src];death_test=1'><b>Test Death Sounds</b></a><br>"
 	// CHOMPEdit End: Pain/Scream/Death Custom Sounds
-=======
->>>>>>> a081d48590 (DCS Update + Footstep element (#17076))
 	. += "<br>"
 	. += span_bold("Relative Weight:") + " <a href='byond://?src=\ref[src];weight=1'>[pref.weight_vr]</a><br>"
 	. += span_bold("Weight Gain Rate:") + " <a href='byond://?src=\ref[src];weight_gain=1'>[pref.weight_gain]</a><br>"

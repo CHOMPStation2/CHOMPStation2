@@ -137,11 +137,7 @@ var/datum/species/shapeshifter/promethean/prometheans
 		/decl/emote/visible/vibrate
 	)
 
-<<<<<<< HEAD
-	footstep = FOOTSTEP_MOB_SLIME // CHOMPEdit
-=======
 	footstep = FOOTSTEP_MOB_SLIME
->>>>>>> a081d48590 (DCS Update + Footstep element (#17076))
 
 /datum/species/shapeshifter/promethean/New()
 	..()
