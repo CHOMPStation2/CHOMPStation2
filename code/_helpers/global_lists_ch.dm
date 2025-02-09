@@ -182,10 +182,3 @@ var/global/list/vr_mob_spawner_options = list(
 	"Stok" = /mob/living/carbon/human/stok,
 	//"Gryphon" = /mob/living/simple_mob/vore/gryphon // Disabled until tested
 	)
-
-var/global/list/selectable_footstep = list(
-	"Default" = FOOTSTEP_MOB_HUMAN,
-	"Claw" = FOOTSTEP_MOB_CLAW,
-	"Light Claw" = FOOTSTEP_MOB_TESHARI,
-	"Slither" = FOOTSTEP_MOB_SLITHER,
-)
