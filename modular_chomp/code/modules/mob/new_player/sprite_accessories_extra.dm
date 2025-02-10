@@ -220,7 +220,7 @@
 	hide_body_parts = list(BP_L_LEG,BP_R_LEG,BP_L_HAND,BP_R_HAND,BP_L_LEG,BP_R_LEG,BP_GROIN)
 	body_parts = list(BP_TORSO)
 	color_blend_mode = ICON_MULTIPLY
-	digitigrade_acceptance = MARKING_ALL_LEG
+	digitigrade_acceptance = MARKING_ALL_LEGS
 	digitgrade_icon = 'icons/mob/human_races/markings_ch.dmi'
 
 
