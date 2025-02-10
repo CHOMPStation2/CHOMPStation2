@@ -1,0 +1,316 @@
+[2023-03-16T00:14:02] START: Starting up data/logs/2023/03-March/16-Thursday/round-00-13-52.
+[2023-03-16T00:14:02] ADMIN: Loading jobban_rank
+[2023-03-16T00:14:02] ADMIN: jobban_keylist was empty
+[2023-03-16T00:14:02] ADMIN: Loading Banlist
+[2023-03-16T00:14:04] GAME: Ore-Rich Geyser loaded at at 17,46,5
+[2023-03-16T00:14:04] GAME: Crystal Cave 3 loaded at at 68,103,5
+[2023-03-16T00:14:07] GAME: Ore-Topped Cliff loaded at at 205,21,5
+[2023-03-16T00:14:07] GAME: Rat Den loaded at at 37,33,5
+[2023-03-16T00:14:07] GAME: Crashed Med Shuttle loaded at at 169,74,5
+[2023-03-16T00:14:07] GAME: Mine Vault 5 loaded at at 21,21,5
+[2023-03-16T00:14:07] GAME: Spy Remains loaded at at 59,56,5
+[2023-03-16T00:14:07] GAME: Ice Cave 1B loaded at at 168,94,5
+[2023-03-16T00:14:07] GAME: Spider Cave 1 loaded at at 37,67,5
+[2023-03-16T00:14:07] GAME: Crystal Cave 1 loaded at at 41,18,5
+[2023-03-16T00:14:07] GAME: spatial anomaly loaded at at 191,204,5
+[2023-03-16T00:14:07] GAME: Camp Site loaded at at 30,80,4
+[2023-03-16T00:14:07] GAME: Wrecked Shelter loaded at at 122,109,4
+[2023-03-16T00:14:07] GAME: Diner loaded at at 29,99,4
+[2023-03-16T00:14:07] GAME: Shakden loaded at at 217,20,4
+[2023-03-16T00:14:08] GAME: Dragon Den loaded at at 9,77,4
+[2023-03-16T00:14:08] GAME: Buried Treasure 2 loaded at at 165,80,4
+[2023-03-16T00:14:08] GAME: Construction Site loaded at at 49,21,4
+[2023-03-16T00:14:08] GAME: Emergency Pod 2 loaded at at 40,204,4
+[2023-03-16T00:14:08] GAME: Snow 3 loaded at at 66,9,4
+[2023-03-16T00:14:08] GAME: Abandoned Bonfire loaded at at 62,139,4
+[2023-03-16T00:14:09] GAME: Boathouse loaded at at 53,47,4
+[2023-03-16T00:14:09] GAME: Old Supply Drop loaded at at 188,161,4
+[2023-03-16T00:14:09] GAME: Farm loaded at at 179,39,4
+[2023-03-16T00:14:09] GAME: Emergency Pod loaded at at 53,111,4
+[2023-03-16T00:14:09] GAME: Snow loaded at at 169,15,4
+[2023-03-16T00:14:09] GAME: Old Hotel loaded at at 24,154,4
+[2023-03-16T00:14:09] GAME: Hot Spring loaded at at 18,25,4
+[2023-03-16T00:14:09] GAME: Lone Kururak Den loaded at at 19,45,4
+[2023-03-16T00:14:09] GAME: Empty Explorer's Home loaded at at 150,37,4
+[2023-03-16T00:14:09] GAME: Government Patrol loaded at at 41,66,9
+[2023-03-16T00:14:09] GAME: Cragzone 1 loaded at at 167,57,9
+[2023-03-16T00:14:09] GAME: Lab 1 loaded at at 74,54,9
+[2023-03-16T00:14:09] GAME: Decoupled Engine loaded at at 188,25,9
+[2023-03-16T00:14:10] GAME: Demon Pool loaded at at 126,60,9
+[2023-03-16T00:14:10] GAME: Rocky 2 loaded at at 108,15,9
+[2023-03-16T00:14:10] GAME: Rocky 2 loaded at at 10,86,9
+[2023-03-16T00:14:10] GAME: Rocky 4 loaded at at 153,20,9
+[2023-03-16T00:14:10] GAME: Shack 1 loaded at at 131,41,9
+[2023-03-16T00:14:10] GAME: Smol 1 loaded at at 46,26,9
+[2023-03-16T00:14:10] GAME: Frostfly Nest loaded at at 25,42,9
+[2023-03-16T00:14:10] GAME: Frost Oasis loaded at at 88,21,9
+[2023-03-16T00:14:10] GAME: Shelter 1 loaded at at 83,44,9
+[2023-03-16T00:14:10] GAME: Rocky 3 loaded at at 105,67,9
+[2023-03-16T00:14:10] GAME: Snowrock 1 loaded at at 156,36,9
+[2023-03-16T00:14:10] GAME: Chasm loaded at at 211,61,9
+[2023-03-16T00:14:10] GAME: Spider Nest 1 loaded at at 108,83,9
+[2023-03-16T00:14:10] GAME: Butcher Shack loaded at at 155,74,9
+[2023-03-16T00:14:10] GAME: Forest Lake loaded at at 56,18,9
+[2023-03-16T00:14:10] GAME: Military Camp 1 loaded at at 60,77,9
+[2023-03-16T00:14:11] GAME: Empty Cabin loaded at at 38,90,9
+[2023-03-16T00:14:11] GAME: Drug Den loaded at at 21,9,9
+[2023-03-16T00:14:11] GAME: Emergency Pod 4 loaded at at 123,84,9
+[2023-03-16T00:14:11] GAME: Wolf Den loaded at at 31,72,9
+[2023-03-16T00:14:11] GAME: Rocky 2 loaded at at 47,37,9
+[2023-03-16T00:14:11] GAME: Kururak Den loaded at at 102,45,9
+[2023-03-16T00:14:12] GAME: Musk loaded at at 47,98,9
+[2023-03-16T00:14:13] GAME: Spider Nest 1 loaded at at 39,102,9
+[2023-03-16T00:14:13] GAME: CaveS loaded at at 21,144,9
+[2023-03-16T00:14:13] GAME: DJOutpost 1 loaded at at 98,141,9
+[2023-03-16T00:14:13] GAME: Cliff Base loaded at at 166,146,9
+[2023-03-16T00:14:14] GAME: DoomP loaded at at 79,187,9
+[2023-03-16T00:14:14] GAME: Leopardmander Den loaded at at 120,146,9
+[2023-03-16T00:14:15] GAME: Blue Shuttle Down loaded at at 42,209,9
+[2023-03-16T00:14:15] GAME: Rocky Base loaded at at 148,207,9
+[2023-03-16T00:14:16] GAME: Abandoned Lab loaded at at 215,107,9
+[2023-03-16T00:14:16] GAME: Borg Lab loaded at at 215,177,9
+[2023-03-16T00:14:16] GAME: Emergency Pod 3 loaded at at 176,128,9
+[2023-03-16T00:14:16] GAME: Lone Wolf loaded at at 22,207,9
+[2023-03-16T00:14:28] ACCESS IN: RiotScopez/(RiotScopez) - IP:127.0.0.1 - CID:1871707424 - BYOND v514
+[2023-03-16T00:14:42] GAME: Z-level VR World loaded at at 1,1,11
+[2023-03-16T00:14:43] GAME: Z-level Fuel Depot - Z1 Space loaded at at 1,1,12
+[2023-03-16T00:14:48] GAME: Z-level Kara Aerostat - Z1 Aerostat loaded at at 1,1,13
+[2023-03-16T00:14:56] GAME: Z-level Kara - Z1 Northern Star loaded at at 1,1,14
+[2023-03-16T00:15:36] GAME: Z-level Snow Field loaded at at 1,1,15
+[2023-03-16T00:16:08] MISC: a the gibber didn't find an input plate.
+[2023-03-16T00:16:42] MISC: a the gibber didn't find an input plate.
+[2023-03-16T00:20:43] ADMIN: RiotScopez/(RiotScopez) delayed the game.
+[2023-03-16T00:20:46] ADMIN: EVENT Error: /mob/living/simple_mob/animal/giant_spider/broodling([0x30002b1]) took longer than 0.5 seconds to delete (took 0.6 seconds to delete)
+[2023-03-16T00:21:48] GAME: TIDI: 9.16667;2.75;0.55;0.055
+[2023-03-16T00:22:37] GAME: TRAITS riotscopez/(KI-RA V2.49) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:22:57] GAME: TIDI: 15.6667;6.625;1.765;0.226
+[2023-03-16T00:23:52] ADMIN: EVENT Error: /datum/ai_holder/simple_mob/melee([0x2100961f]) took longer than 0.5 seconds to delete (took 0.6 seconds to delete)
+[2023-03-16T00:24:05] GAME: TIDI: 12.3333;8.3375;3.0795;0.51135
+[2023-03-16T00:25:06] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:25:08] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:25:09] GAME: TIDI: 7.66667;8.13625;4.09085;0.8693
+[2023-03-16T00:25:26] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:25:33] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:25:43] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:25:51] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:25:59] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:26:12] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:26:14] GAME: TIDI: 8.33333;8.19538;4.91176;1.27355
+[2023-03-16T00:26:25] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:26:35] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:26:40] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:26:45] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:26:52] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:26:58] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:27:07] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:27:14] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:27:19] GAME: TIDI: 7.33333;7.93676;5.51676;1.69787
+[2023-03-16T00:27:23] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:27:32] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:27:36] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:27:46] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:27:56] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:28:02] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:28:06] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:28:21] GAME: TIDI: 4.16667;6.80573;5.77455;2.10554
+[2023-03-16T00:28:59] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:29:01] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:29:22] GAME: TIDI: 1.5;5.21401;5.66245;2.46123
+[2023-03-16T00:30:22] GAME: TIDI: 0.166667;3.69981;5.26992;2.7421
+[2023-03-16T00:31:22] GAME: TIDI: 0;2.58987;4.73391;2.94128
+[2023-03-16T00:32:23] GAME: TIDI: 0.333333;1.91291;4.16971;3.06412
+[2023-03-16T00:33:08] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:33:23] GAME: TIDI: 0.666667;1.53903;3.64357;3.12207
+[2023-03-16T00:33:26] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:33:27] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:33:31] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:33:33] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:34:25] GAME: TIDI: 3.33333;2.07732;3.33032;3.14289
+[2023-03-16T00:34:49] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:34:53] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:34:55] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:35:03] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:35:14] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:35:16] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:35:29] GAME: TIDI: 6;3.25413;3.31508;3.16011
+[2023-03-16T00:36:29] GAME: TIDI: 0.166667;2.32789;3.11765;3.15586
+[2023-03-16T00:37:29] GAME: TIDI: 0;1.62952;2.82002;3.12228
+[2023-03-16T00:38:29] GAME: TIDI: 0;1.14067;2.48415;3.05847
+[2023-03-16T00:39:29] GAME: TIDI: 0;0.798466;2.14701;2.96732
+[2023-03-16T00:40:29] GAME: TIDI: 0.166667;0.608926;1.8394;2.85453
+[2023-03-16T00:41:29] GAME: TIDI: 0;0.426248;1.55677;2.72475
+[2023-03-16T00:42:30] GAME: TIDI: 2.33333;0.998374;1.44509;2.59679
+[2023-03-16T00:43:31] GAME: TIDI: 2.16667;1.34886;1.42584;2.47969
+[2023-03-16T00:44:31] GAME: TIDI: 0;0.944203;1.32951;2.36467
+[2023-03-16T00:45:31] GAME: TIDI: 0;0.660942;1.1958;2.24779
+[2023-03-16T00:46:31] GAME: TIDI: 0;0.46266;1.04917;2.12792
+[2023-03-16T00:47:31] GAME: TIDI: 0;0.323862;0.90411;2.00554
+[2023-03-16T00:47:49] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:47:54] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:47:58] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:48:03] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:48:09] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:48:12] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:48:34] GAME: TIDI: 4.5;1.5767;1.03863;1.90885
+[2023-03-16T00:48:47] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:49:35] GAME: TIDI: 0.833333;1.35369;1.10164;1.82813
+[2023-03-16T00:50:35] GAME: TIDI: 0;0.947585;1.07083;1.7524
+[2023-03-16T00:51:32] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:51:35] GAME: TIDI: 1;0.963309;1.04933;1.68209
+[2023-03-16T00:51:49] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:52:00] ADMIN: RiotScopez/(RiotScopez) has started the game.
+[2023-03-16T00:52:01] GAME: TRAITS riotscopez/(Sienna) with: /datum/trait/positive/brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/fat;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/trashcan;/datum/trait/neutral/vertical_nom,;/datum/trait/negative/deep_sleeper
+[2023-03-16T00:52:01] ACCESS OUT: INVALID/(RiotScopez) - IP:127.0.0.1 - CID:Logged Out - BYOND Logged Out
+[2023-03-16T00:52:01] ACCESS IN: RiotScopez/(Sienna) - IP:127.0.0.1 - CID:1871707424 - BYOND v514
+[2023-03-16T00:52:05] GAME: JOINED RiotScopez/(Sienna) as "Medical Doctor"
+[2023-03-16T00:52:05] GAME: SPECIES RiotScopez/(Sienna) is a: "Custom Species"
+[2023-03-16T00:52:06] SAY: INVALID/(Medibot) (190,216,9): What kind of medbay is this? Everyone's dropping like flies.
+[2023-03-16T00:52:12] ADMIN: RiotScopez/(Sienna) has changed RiotScopez/(Sienna)'s size multiplier to 5.
+[2023-03-16T00:52:17] ADMIN: EVENT Error: /mob/living/simple_mob/mechanical/viscerator([0x30000fb]) took longer than 0.5 seconds to delete (took 0.6 seconds to delete)
+[2023-03-16T00:52:18] EMOTE: INVALID/(Cleanbot) (175,229,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-16T00:52:44] GAME: TIDI: 14.5;5.02432;1.84432;1.69832
+[2023-03-16T00:52:56] EMOTE: INVALID/(Fitz) (111,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-03-16T00:53:11] ATTACK: RiotScopez/(Sienna) against RiotScopez/(Sienna): Implanted backup implant
+[2023-03-16T00:53:45] GAME: TIDI: 1.16667;3.86702;2.24886;1.75337
+[2023-03-16T00:54:13] EMOTE: INVALID/(Fitz) (111,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-03-16T00:54:46] GAME: TIDI: 1.66667;3.20692;2.44047;1.82208
+[2023-03-16T00:55:20] EMOTE: INVALID/(Ian) (136,132,2): <B>Ian</B> dances around.
+[2023-03-16T00:55:42] EMOTE: INVALID/(Fitz) (111,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-03-16T00:55:46] GAME: TIDI: 1;2.54484;2.46135;1.88601
+[2023-03-16T00:55:56] EMOTE: INVALID/(Cleanbot) (175,229,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-16T00:56:34] ADMIN: RiotScopez/(Sienna) created 1 /obj/item/weapon/reagent_containers/glass/bottle/bicaridine
+[2023-03-16T00:56:45] EMOTE: INVALID/(Cleanbot) (175,229,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-16T00:56:47] GAME: TIDI: 1.16667;2.13139;2.39536;1.93694
+[2023-03-16T00:56:51] ADMIN: RiotScopez/(Sienna) created 1 /obj/item/weapon/reagent_containers/glass/bottle/keloderm
+[2023-03-16T00:57:03] ADMIN: RiotScopez/(Sienna) created 1 /obj/item/weapon/reagent_containers/glass/bottle/carthatoline
+[2023-03-16T00:57:18] ADMIN: RiotScopez/(Sienna) created 1 /obj/item/weapon/reagent_containers/glass/bottle/dexalinp
+[2023-03-16T00:57:48] GAME: TIDI: 1;1.79197;2.27468;1.97072
+[2023-03-16T00:57:52] ADMIN: RiotScopez/(Sienna) created 1 /obj/item/weapon/reagent_containers/glass/bottle/spaceacillin
+[2023-03-16T00:57:56] EMOTE: INVALID/(Cleanbot) (175,229,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-16T00:58:02] EMOTE: INVALID/(Fitz) (111,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-03-16T00:58:08] ADMIN: RiotScopez/(Sienna) created 1 /obj/item/weapon/reagent_containers/glass/bottle/hyronalin
+[2023-03-16T00:58:16] EMOTE: INVALID/(Fitz) (111,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-03-16T00:58:34] EMOTE: INVALID/(Cleanbot) (175,229,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-16T00:58:46] SAY: INVALID/(Medibot) (190,216,9): There's always a catch, and it's the best there is.
+[2023-03-16T00:58:48] GAME: TIDI: 1.5;1.70438;2.16062;1.98971
+[2023-03-16T00:59:33] EMOTE: INVALID/(Cleanbot) (175,229,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-16T00:59:49] GAME: TIDI: 1;1.49307;2.02711;1.99345
+[2023-03-16T01:00:19] EMOTE: INVALID/(Ian) (135,135,2): <B>Ian</B> chases their tail.
+[2023-03-16T01:00:49] GAME: TIDI: 0.666667;1.24515;1.87072;1.98117
+[2023-03-16T01:00:54] EMOTE: INVALID/(Cleanbot) (175,229,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-16T01:01:02] ADMIN: RiotScopez/(Sienna) spawned /mob/living/carbon/human at (164,110,2)
+[2023-03-16T01:01:50] GAME: TIDI: 1.16667;1.2216;1.74089;1.95715
+[2023-03-16T01:02:12] EMOTE: INVALID/(Fitz) (111,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-03-16T01:02:51] GAME: TIDI: 1.33333;1.25512;1.64374;1.9258
+[2023-03-16T01:03:13] EMOTE: INVALID/(Cleanbot) (175,229,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-16T01:03:51] GAME: TIDI: 0.5;1.02859;1.52071;1.8853
+[2023-03-16T01:04:07] EMOTE: INVALID/(Cleanbot) (175,229,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-16T01:04:09] EMOTE: INVALID/(Fitz) (111,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-03-16T01:04:52] GAME: TIDI: 0.5;0.87001;1.39057;1.83582
+[2023-03-16T01:05:52] GAME: TIDI: 0.5;0.759007;1.26426;1.77867
+[2023-03-16T01:06:52] GAME: TIDI: 0.5;0.681305;1.14767;1.71557
+[2023-03-16T01:07:08] EMOTE: INVALID/(Cleanbot) (175,229,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-16T01:07:39] SAY: INVALID/(Medibot) (190,216,9): Radar, put a mask on!
+[2023-03-16T01:07:53] GAME: TIDI: 1;0.776913;1.07352;1.65136
+[2023-03-16T01:07:59] EMOTE: INVALID/(Cleanbot) (175,229,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-16T01:08:09] EMOTE: INVALID/(Ian) (137,134,2): <B>Ian</B> chases their tail.
+[2023-03-16T01:08:13] EMOTE: INVALID/(Fitz) (111,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-03-16T01:08:27] ADMIN: RiotScopez/(Sienna) gave INVALID/(Otiya Thakur) a Badmin disease2 with infection chance 0.
+[2023-03-16T01:08:53] GAME: TIDI: 0.5;0.693839;0.99758;1.58598
+[2023-03-16T01:09:01] EMOTE: INVALID/(Fitz) (111,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-03-16T01:09:03] EMOTE: INVALID/(Cleanbot) (175,229,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-16T01:09:03] EMOTE: INVALID/(Fitz) (111,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-03-16T01:09:45] EMOTE: INVALID/(Cleanbot) (175,229,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-16T01:09:55] GAME: TIDI: 2.83333;1.33569;1.0652;1.5339
+[2023-03-16T01:10:13] EMOTE: INVALID/(Ian) (136,133,2): <B>Ian</B> dances around.
+[2023-03-16T01:10:27] EMOTE: INVALID/(Fitz) (111,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-03-16T01:10:55] GAME: TIDI: 0.666667;1.13498;1.07916;1.48843
+[2023-03-16T01:11:01] EMOTE: INVALID/(Cleanbot) (175,229,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-16T01:11:13] EMOTE: INVALID/(Fitz) (111,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-03-16T01:11:55] GAME: TIDI: 0.5;0.944487;1.05222;1.44481
+[2023-03-16T01:12:26] EMOTE: INVALID/(Cleanbot) (175,229,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-16T01:12:42] ADMIN: RiotScopez/(Sienna) modified Otiya Thakur's number_wounds from 0 to 1
+[2023-03-16T01:12:44] SAY: INVALID/(Medibot) (190,216,9): I knew it, I should've been a plastic surgeon.
+[2023-03-16T01:12:48] EMOTE: INVALID/(Ian) (135,135,2): <B>Ian</B> chases their tail.
+[2023-03-16T01:12:56] GAME: TIDI: 0.833333;0.911141;1.02401;1.40273
+[2023-03-16T01:12:56] EMOTE: INVALID/(Fitz) (111,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-03-16T01:13:02] EMOTE: INVALID/(Fitz) (111,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-03-16T01:13:44] EMOTE: INVALID/(Cleanbot) (175,229,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-16T01:13:56] GAME: TIDI: 0.5;0.787799;0.976765;1.36013
+[2023-03-16T01:14:57] GAME: TIDI: 0.666667;0.751459;0.931704;1.31729
+[2023-03-16T01:15:57] GAME: TIDI: 0.5;0.676021;0.880568;1.27362
+[2023-03-16T01:15:57] SAY: INVALID/(Medibot) (190,216,9): I knew it, I should've been a plastic surgeon.
+[2023-03-16T01:16:21] EMOTE: INVALID/(Cleanbot) (175,229,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-16T01:16:43] EMOTE: INVALID/(Fitz) (111,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-03-16T01:16:57] GAME: TIDI: 0.5;0.623215;0.829097;1.22917
+[2023-03-16T01:17:23] ADMIN: RiotScopez/(Sienna) modified The lungs's health from  to -99
+[2023-03-16T01:17:40] EMOTE: INVALID/(Fitz) (111,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-03-16T01:17:44] SAY: INVALID/(Medibot) (190,216,9): There's always a catch, and it's the best there is.
+[2023-03-16T01:17:46] EMOTE: INVALID/(Cleanbot) (175,229,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-16T01:17:58] GAME: TIDI: 0.833333;0.686251;0.800528;1.1863
+[2023-03-16T01:18:02] ADMIN: RiotScopez/(Sienna) dealt -999 amount of fire damage to Otiya Thakur
+[2023-03-16T01:18:14] ADMIN: RiotScopez/(Sienna) dealt 999 amount of fire damage to Otiya Thakur
+[2023-03-16T01:18:59] GAME: TIDI: 2.66667;1.28038;0.896497;1.15732
+[2023-03-16T01:19:48] EMOTE: INVALID/(Cleanbot) (175,229,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-16T01:19:54] EMOTE: INVALID/(Fitz) (111,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-03-16T01:20:00] GAME: TIDI: 0.5;1.04626;0.92645;1.13423
+[2023-03-16T01:20:32] EMOTE: INVALID/(Fitz) (111,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-03-16T01:20:48] EMOTE: INVALID/(Cleanbot) (175,229,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-16T01:21:00] GAME: TIDI: 0.5;0.882384;0.917637;1.11257
+[2023-03-16T01:21:02] EMOTE: INVALID/(Cleanbot) (175,229,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-16T01:21:38] EMOTE: INVALID/(Fitz) (111,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-03-16T01:22:00] GAME: TIDI: 0.5;0.767669;0.887644;1.09008
+[2023-03-16T01:22:18] EMOTE: INVALID/(Ian) (134,134,2): <B>Ian</B> dances around.
+[2023-03-16T01:22:35] EMOTE: INVALID/(Cleanbot) (175,229,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-16T01:23:01] GAME: TIDI: 0.5;0.687368;0.847588;1.06583
+[2023-03-16T01:23:01] EMOTE: INVALID/(Fitz) (111,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-03-16T01:23:29] EMOTE: INVALID/(Fitz) (111,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-03-16T01:24:01] GAME: TIDI: 1;0.781158;0.834302;1.04268
+[2023-03-16T01:24:11] EMOTE: INVALID/(Fitz) (111,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-03-16T01:25:01] GAME: TIDI: 0.5;0.69681;0.806804;1.01909
+[2023-03-16T01:25:24] EMOTE: INVALID/(Fitz) (111,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-03-16T01:25:30] EMOTE: INVALID/(Fitz) (111,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-03-16T01:26:02] GAME: TIDI: 0.833333;0.737767;0.792997;0.996482
+[2023-03-16T01:26:14] EMOTE: INVALID/(Fitz) (111,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-03-16T01:27:02] GAME: TIDI: 0.333333;0.616437;0.757685;0.972602
+[2023-03-16T01:27:04] EMOTE: INVALID/(Fitz) (111,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-03-16T01:28:03] GAME: TIDI: 0.666667;0.631506;0.732449;0.948587
+[2023-03-16T01:28:11] SAY: INVALID/(Medibot) (190,216,9): There's always a catch, and it's the best there is.
+[2023-03-16T01:28:25] EMOTE: INVALID/(Cleanbot) (175,229,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-16T01:28:31] EMOTE: INVALID/(Fitz) (111,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-03-16T01:28:51] SAY: INVALID/(Medibot) (190,216,9): Delicious!
+[2023-03-16T01:29:03] GAME: TIDI: 0.5;0.592054;0.70437;0.924165
+[2023-03-16T01:29:31] EMOTE: INVALID/(Fitz) (111,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-03-16T01:30:03] GAME: TIDI: 0.5;0.564438;0.676384;0.899387
+[2023-03-16T01:30:33] ATTACK: RiotScopez/(Sienna) against INVALID/(Otiya Thakur): Scooped up
+[2023-03-16T01:30:46] EMOTE: INVALID/(Fitz) (111,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-03-16T01:31:04] GAME: TIDI: 0.833333;0.645107;0.670128;0.876461
+[2023-03-16T01:31:18] EMOTE: INVALID/(Ian) (135,130,2): <B>Ian</B> chases their tail.
+[2023-03-16T01:31:22] EMOTE: INVALID/(Cleanbot) (175,229,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-16T01:31:28] SAY: INVALID/(Medibot) (190,216,9): Delicious!
+[2023-03-16T01:32:04] GAME: TIDI: 0.5;0.601575;0.656417;0.854457
+[2023-03-16T01:32:16] SAY: INVALID/(Medibot) (190,216,9): I knew it, I should've been a plastic surgeon.
+[2023-03-16T01:32:20] EMOTE: INVALID/(Cleanbot) (175,229,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-16T01:32:30] EMOTE: INVALID/(Cleanbot) (175,229,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-16T01:32:42] SAY: INVALID/(Medibot) (190,216,9): I knew it, I should've been a plastic surgeon.
+[2023-03-16T01:32:50] EMOTE: INVALID/(Fitz) (111,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-03-16T01:33:02] EMOTE: INVALID/(Cleanbot) (175,229,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-16T01:33:04] GAME: TIDI: 0.5;0.571102;0.639354;0.832946
+[2023-03-16T01:33:32] EMOTE: INVALID/(Fitz) (111,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-03-16T01:34:05] GAME: TIDI: 0.5;0.549772;0.621438;0.811796
+[2023-03-16T01:35:05] GAME: TIDI: 0.833333;0.63484;0.624118;0.793028
+[2023-03-16T01:35:09] ADMIN: RiotScopez/(Sienna) spawned /mob/living/carbon/human at (176,110,2)
+[2023-03-16T01:35:32] ADMIN: RiotScopez/(Sienna) dealt 60 amount of toxin damage to Scott Rawal
+[2023-03-16T01:35:36] ADMIN: RiotScopez/(Sienna) dealt 27 amount of oxygen damage to Scott Rawal
+[2023-03-16T01:36:06] GAME: TIDI: 1;0.744388;0.648172;0.778542
+[2023-03-16T01:36:30] EMOTE: INVALID/(Cleanbot) (175,229,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-16T01:36:42] EMOTE: INVALID/(Fitz) (111,217,9): <B>Fitz</B> makes an excited booping sound!
+[2023-03-16T01:37:06] GAME: TIDI: 0.5;0.671072;0.652752;0.765963
+[2023-03-16T01:37:16] SAY: INVALID/(Medibot) (190,216,9): Delicious!
+[2023-03-16T01:37:32] EMOTE: INVALID/(Ian) (138,131,2): <B>Ian</B> dances around.
+[2023-03-16T01:38:00] SAY: INVALID/(Medibot) (190,216,9): What kind of medbay is this? Everyone's dropping like flies.
+[2023-03-16T01:38:06] GAME: TIDI: 0.5;0.61975;0.646152;0.753982
+[2023-03-16T01:38:33] EMOTE: INVALID/(Ian) (137,131,2): <B>Ian</B> chases their tail.
+[2023-03-16T01:38:45] EMOTE: INVALID/(Cleanbot) (175,229,9): <B>Cleanbot</B> makes an excited booping sound!
+[2023-03-16T01:39:07] GAME: TIDI: 0.5;0.583825;0.633686;0.741952
+[2023-03-16T01:39:45] ACCESS OUT: RiotScopez/(Sienna) - IP:127.0.0.1 - CID:Logged Out - BYOND Logged Out

@@ -1,0 +1,537 @@
+[2024-05-30 21:39:52.120] START: Starting up data/logs/2024/05-May/30-Thursday/round-17-39-37.
+[2024-05-30 21:39:55.910] ADMIN: Loading jobban_rank
+[2024-05-30 21:39:55.910] ADMIN: jobban_keylist was empty
+[2024-05-30 21:39:55.917] ADMIN: Loading Banlist
+[2024-05-30 21:40:18.284] GAME: Cave River loaded at at 11,37,5
+[2024-05-30 21:40:18.326] GAME: Mine Vault 5 loaded at at 22,111,5
+[2024-05-30 21:40:19.429] GAME: Crashed UFO loaded at at 191,9,5
+[2024-05-30 21:40:19.522] GAME: Excavation Site loaded at at 29,98,5
+[2024-05-30 21:40:19.899] GAME: Dark Ritual loaded at at 21,76,5
+[2024-05-30 21:40:20.306] GAME: Abandoned Temple loaded at at 61,36,5
+[2024-05-30 21:40:20.644] GAME: spatial anomaly loaded at at 39,172,5
+[2024-05-30 21:40:20.879] GAME: Diner loaded at at 20,57,4
+[2024-05-30 21:40:20.954] GAME: VR Den loaded at at 179,29,4
+[2024-05-30 21:40:20.984] GAME: Snow 2 loaded at at 74,14,4
+[2024-05-30 21:40:21.659] GAME: Meth Lab loaded at at 83,54,4
+[2024-05-30 21:40:21.683] GAME: Snow loaded at at 182,20,4
+[2024-05-30 21:40:21.709] GAME: Wrecked Shelter loaded at at 129,107,4
+[2024-05-30 21:40:21.737] GAME: Abandoned Bonfire loaded at at 192,79,4
+[2024-05-30 21:40:21.758] GAME: Buried Treasure 2 loaded at at 167,37,4
+[2024-05-30 21:40:21.938] GAME: Hot Spring loaded at at 38,173,4
+[2024-05-30 21:40:22.100] GAME: Mechpit loaded at at 45,108,4
+[2024-05-30 21:40:22.126] GAME: Ration Cache loaded at at 15,219,4
+[2024-05-30 21:40:22.198] GAME: Construction Site loaded at at 194,160,4
+[2024-05-30 21:40:22.335] GAME: Pride Rock loaded at at 32,202,4
+[2024-05-30 21:40:22.561] GAME: Old Library loaded at at 10,158,4
+[2024-05-30 21:40:22.591] GAME: Rocky Outcrop loaded at at 64,79,4
+[2024-05-30 21:40:22.936] GAME: Thieves' Cave loaded at at 75,24,4
+[2024-05-30 21:40:23.048] GAME: Lone Kururak Den loaded at at 45,89,4
+[2024-05-30 21:40:23.134] GAME: Ruptured Canister loaded at at 54,38,4
+[2024-05-30 21:40:23.183] GAME: Emergency Pod 2 loaded at at 171,74,4
+[2024-05-30 21:40:23.214] GAME: Camp Site loaded at at 14,46,4
+[2024-05-30 21:40:23.341] GAME: Rocky 2 loaded at at 185,36,9
+[2024-05-30 21:40:23.393] GAME: Empty Cabin loaded at at 195,69,9
+[2024-05-30 21:40:23.782] GAME: Frost Oasis loaded at at 133,71,9
+[2024-05-30 21:40:23.937] GAME: Rocky 3 loaded at at 163,55,9
+[2024-05-30 21:40:24.125] GAME: Forest Lake loaded at at 125,52,9
+[2024-05-30 21:40:24.228] GAME: Rocky 1 loaded at at 54,9,9
+[2024-05-30 21:40:24.354] GAME: Shack 1 loaded at at 122,15,9
+[2024-05-30 21:40:24.512] GAME: Cragzone 1 loaded at at 96,33,9
+[2024-05-30 21:40:24.576] GAME: Butcher Shack loaded at at 102,91,9
+[2024-05-30 21:40:24.636] GAME: Musk loaded at at 26,19,9
+[2024-05-30 21:40:25.311] GAME: Demon Pool loaded at at 10,67,9
+[2024-05-30 21:40:25.358] GAME: Frostfly Nest loaded at at 25,20,9
+[2024-05-30 21:40:25.619] GAME: Cragzone 1 loaded at at 44,35,9
+[2024-05-30 21:40:25.689] GAME: Shelter 1 loaded at at 73,93,9
+[2024-05-30 21:40:25.708] GAME: Kururak Den loaded at at 73,61,9
+[2024-05-30 21:40:27.699] GAME: Smol 1 loaded at at 27,93,9
+[2024-05-30 21:40:28.001] GAME: Military Camp 1 loaded at at 89,66,9
+[2024-05-30 21:40:28.903] GAME: Chasm loaded at at 102,9,9
+[2024-05-30 21:40:29.036] GAME: Government Patrol loaded at at 181,79,9
+[2024-05-30 21:40:29.164] GAME: Rocky 1 loaded at at 9,31,9
+[2024-05-30 21:40:30.049] GAME: Drug Den loaded at at 41,67,9
+[2024-05-30 21:40:31.853] GAME: Snowrock 1 loaded at at 113,84,9
+[2024-05-30 21:40:33.014] GAME: Mudpit loaded at at 209,52,9
+[2024-05-30 21:40:34.290] GAME: Spider Nest 1 loaded at at 180,20,9
+[2024-05-30 21:40:34.334] GAME: Spider Nest 1 loaded at at 206,76,9
+[2024-05-30 21:40:35.298] GAME: Wolf Den loaded at at 87,23,9
+[2024-05-30 21:40:39.649] GAME: Emergency Pod 4 loaded at at 224,73,9
+[2024-05-30 21:40:39.676] GAME: Spider Nest 1 loaded at at 190,20,9
+[2024-05-30 21:40:40.780] GAME: Spider Nest 1 loaded at at 86,55,9
+[2024-05-30 21:40:41.428] GAME: Rocky 4 loaded at at 137,32,9
+[2024-05-30 21:40:41.741] GAME: Chapel 1 loaded at at 35,163,9
+[2024-05-30 21:40:41.872] GAME: Raided Mech Hanger loaded at at 213,139,9
+[2024-05-30 21:40:43.323] GAME: Derelict Engine loaded at at 141,125,9
+[2024-05-30 21:40:43.636] GAME: Blue Shuttle Down loaded at at 68,203,9
+[2024-05-30 21:40:43.837] GAME: Bounty Hunter Den loaded at at 222,200,9
+[2024-05-30 21:40:43.881] GAME: Syndi Drone loaded at at 110,227,9
+[2024-05-30 21:40:44.172] GAME: Spider Base loaded at at 110,194,9
+[2024-05-30 21:40:46.518] GAME: Doom Bridge loaded at at 147,187,9
+[2024-05-30 21:40:49.165] ACCESS IN: RiotScopez/(RiotScopez) - IP:146.115.147.185 - CID:1871707424 - BYOND v515
+[2024-05-30 21:40:50.281] GAME: Rocky Base loaded at at 77,159,9
+[2024-05-30 21:40:50.408] GAME: Blob Den loaded at at 161,34,10
+[2024-05-30 21:40:50.546] GAME: Clockwork Den loaded at at 86,224,10
+[2024-05-30 21:40:50.969] GAME: Aquatic Xenos loaded at at 205,8,10
+[2024-05-30 21:40:55.727] ASSET: Sending asset `tgui-panel.bundle.js` to client `RiotScopez` as `asset.b4751a5ea151bc8ec68c1925b7d0bdd7.js`
+[2024-05-30 21:40:55.733] ASSET: Sending asset `tgui-panel.bundle.css` to client `RiotScopez` as `asset.7efb53cd7dda00777acb7748b31d4a8a.css`
+[2024-05-30 21:40:56.101] ASSET: Sending asset `fa-regular-400.ttf` to client `RiotScopez` as `fa-regular-400.ttf`
+[2024-05-30 21:40:56.101] ASSET: Sending asset `fa-solid-900.ttf` to client `RiotScopez` as `fa-solid-900.ttf`
+[2024-05-30 21:40:56.101] ASSET: Sending asset `fa-v4compatibility.ttf` to client `RiotScopez` as `fa-v4compatibility.ttf`
+[2024-05-30 21:40:56.101] ASSET: Sending asset `v4shim.css` to client `RiotScopez` as `v4shim.css`
+[2024-05-30 21:40:56.101] ASSET: Sending asset `font-awesome.css` to client `RiotScopez` as `asset.fedd834d1c20ed484599a1c38690e330.css`
+[2024-05-30 21:40:57.539] ASSET: Sending asset `tgfont.eot` to client `RiotScopez` as `tgfont.eot`
+[2024-05-30 21:40:57.540] ASSET: Sending asset `tgfont.woff2` to client `RiotScopez` as `tgfont.woff2`
+[2024-05-30 21:40:57.542] ASSET: Sending asset `tgfont.css` to client `RiotScopez` as `asset.9c0bbe21e37e76955d9640f7a6c4b636.css`
+[2024-05-30 21:40:58.871] ASSET: Sending asset `spritesheet_chat.css` to client `RiotScopez` as `asset.e73ec83954ac74e58beadd50f5a3c63b.css`
+[2024-05-30 21:40:58.871] ASSET: Sending asset `chat_32x10.png` to client `RiotScopez` as `asset.2880748b8d8cbf35ee9e8cb72fdacada.png`
+[2024-05-30 21:41:00.709] GAME: Eclipse Base Dig loaded at at 171,198,10
+[2024-05-30 21:41:00.925] GAME: Frost Lake loaded at at 213,204,10
+[2024-05-30 21:41:01.773] GAME: Eclipse Base Molten loaded at at 109,8,10
+[2024-05-30 21:41:01.949] GAME: Leppy Den loaded at at 68,30,10
+[2024-05-30 21:41:02.219] GAME: Fallen Lab loaded at at 138,216,10
+[2024-05-30 21:41:02.349] GAME: Terraformer loaded at at 103,83,10
+[2024-05-30 21:41:02.624] GAME: Spider Church loaded at at 186,137,10
+[2024-05-30 21:41:03.197] GAME: Blood Church loaded at at 137,137,10
+[2024-05-30 21:41:03.698] GAME: Cliff Manor loaded at at 175,86,10
+[2024-05-30 21:41:04.618] GAME: Eclipse Base Aqua loaded at at 84,146,10
+[2024-05-30 21:41:06.003] GAME: Failed Portal loaded at at 142,76,10
+[2024-05-30 21:41:07.165] GAME: Xenobio Lab loaded at at 70,74,10
+[2024-05-30 21:41:07.374] GAME: Frozen Lab loaded at at 216,94,10
+[2024-05-30 21:41:11.331] GAME: Eclipse Prison loaded at at 13,120,10
+[2024-05-30 21:42:08.691] GAME: Z-level VR World loaded at at 1,1,11
+[2024-05-30 21:42:09.284] GAME: Z-level Fuel Depot - Z1 Space loaded at at 1,1,12
+[2024-05-30 21:42:20.677] GAME: Z-level Thor Surface loaded at at 1,1,13
+[2024-05-30 21:42:36.122] GAME: Z-level Distant Mining Facility loaded at at 1,1,14
+[2024-05-30 21:43:12.476] MISC: a the gibber didn't find an input plate.
+[2024-05-30 21:43:15.925] MISC: a the gibber didn't find an input plate.
+[2024-05-30 21:48:24.717] ADMIN: RiotScopez/(RiotScopez) delayed the game.
+[2024-05-30 21:49:37.939] GAME: TIDI: 24.3333;7.3;1.46;0.146
+[2024-05-30 21:49:54.155] ADMIN: RiotScopez/(RiotScopez) <span class='name'>RiotScopez</span> entered ghost/observe mode. 
+[2024-05-30 21:49:54.155] ACCESS OUT: INVALID/(RiotScopez) - IP:146.115.147.185 - CID:Logged Out - BYOND Logged Out
+[2024-05-30 21:49:54.155] ACCESS IN: RiotScopez/(Simple Mob) - IP:146.115.147.185 - CID:1871707424 - BYOND v515
+[2024-05-30 21:49:54.194] ASSET: Sending asset `jquery.min.js` to client `RiotScopez` as `jquery.min.js`
+[2024-05-30 21:49:56.715] ADMIN: RiotScopez/(Simple Mob) has started the game.
+[2024-05-30 21:50:18.472] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 21:50:28.649] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 21:50:41.134] GAME: TIDI: 5.33333;6.71;2.51;0.3824
+[2024-05-30 21:51:22.171] ADMIN: RiotScopez/(Simple Mob) spawned /mob/living/simple_mob/shadekin/red/rakshasa at (11,247,7)
+[2024-05-30 21:51:26.965] ADMIN: RiotScopez/(Simple Mob) has changed INVALID/(Rakshasa)'s size multiplier to 5.
+[2024-05-30 21:51:30.522] ADMIN: RiotScopez/(Simple Mob) stuffed riotscopez into Rakshasa.
+[2024-05-30 21:51:30.522] ACCESS OUT: INVALID/(Simple Mob) - IP:146.115.147.185 - CID:Logged Out - BYOND Logged Out
+[2024-05-30 21:51:30.522] ACCESS IN: RiotScopez/(Rakshasa) - IP:146.115.147.185 - CID:1871707424 - BYOND v515
+[2024-05-30 21:51:31.007] ASSET: Sending asset `asset.1cd09506e63cb868d861dd3c62e7578d.png` to client `RiotScopez` as `asset.1cd09506e63cb868d861dd3c62e7578d.png`
+[2024-05-30 21:51:31.009] ASSET: Sending asset `asset.3c051b241421ffea83917a35225c3dbe.png` to client `RiotScopez` as `asset.3c051b241421ffea83917a35225c3dbe.png`
+[2024-05-30 21:51:31.011] ASSET: Sending asset `asset.b74c37fe494e7e29496bc8d5d3778b60.png` to client `RiotScopez` as `asset.b74c37fe494e7e29496bc8d5d3778b60.png`
+[2024-05-30 21:51:31.019] ASSET: Sending asset `asset.768cc4b0604a5a26da21a6a437c43387.png` to client `RiotScopez` as `asset.768cc4b0604a5a26da21a6a437c43387.png`
+[2024-05-30 21:51:31.104] ASSET: Sending asset `asset.19816f3b3dc6c68d34a6dca01f98fd1a.png` to client `RiotScopez` as `asset.19816f3b3dc6c68d34a6dca01f98fd1a.png`
+[2024-05-30 21:51:31.115] ASSET: Sending asset `asset.a22537179d8ac0797ae14787bca25331.png` to client `RiotScopez` as `asset.a22537179d8ac0797ae14787bca25331.png`
+[2024-05-30 21:51:41.956] GAME: TIDI: 1.33333;5.097;3.0274;0.6469
+[2024-05-30 21:51:44.003] ADMIN: riotscopez/(Rakshasa) spawned /mob/living/carbon/human at (11,247,7)
+[2024-05-30 21:52:00.909] ADMIN: riotscopez/(Rakshasa) assumed direct control of Triston Mertens.
+[2024-05-30 21:52:00.909] ACCESS OUT: INVALID/(Rakshasa) - IP:146.115.147.185 - CID:Logged Out - BYOND Logged Out
+[2024-05-30 21:52:00.910] ACCESS IN: RiotScopez/(Triston Mertens) - IP:146.115.147.185 - CID:1871707424 - BYOND v515
+[2024-05-30 21:52:06.515] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 21:52:06.992] ATTACK: INVALID/(Rakshasa) against riotscopez/(Triston Mertens): Melee attacked with fists (miss/block)
+[2024-05-30 21:52:08.107] ATTACK: INVALID/(Rakshasa) against riotscopez/(Triston Mertens): Animal-attacked (dodged)
+[2024-05-30 21:52:09.457] ATTACK: INVALID/(Rakshasa) against riotscopez/(Triston Mertens): Melee attacked with fists (miss/block)
+[2024-05-30 21:52:10.710] ATTACK: INVALID/(Rakshasa) against riotscopez/(Triston Mertens): Melee attacked with fists (miss/block)
+[2024-05-30 21:52:12.026] ATTACK: INVALID/(Rakshasa) against riotscopez/(Triston Mertens): Melee attacked with fists (miss/block)
+[2024-05-30 21:52:13.326] ATTACK: INVALID/(Rakshasa) against riotscopez/(Triston Mertens): Melee attacked with fists (miss/block)
+[2024-05-30 21:52:14.577] ATTACK: INVALID/(Rakshasa) against riotscopez/(Triston Mertens): Melee attacked with fists (miss/block)
+[2024-05-30 21:52:16.481] ATTACK: INVALID/(Rakshasa) against riotscopez/(Triston Mertens): Melee attacked with fists (miss/block)
+[2024-05-30 21:52:17.272] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 21:52:17.781] ATTACK: INVALID/(Rakshasa) against riotscopez/(Triston Mertens): Animal-attacked (miss)
+[2024-05-30 21:52:18.291] ADMIN: riotscopez/(Triston Mertens) assumed direct control of Rakshasa.
+[2024-05-30 21:52:18.291] ACCESS OUT: INVALID/(Triston Mertens) - IP:146.115.147.185 - CID:Logged Out - BYOND Logged Out
+[2024-05-30 21:52:18.292] ACCESS IN: RiotScopez/(Rakshasa) - IP:146.115.147.185 - CID:1871707424 - BYOND v515
+[2024-05-30 21:52:25.921] ATTACK: riotscopez/(Rakshasa) against INVALID/(Triston Mertens): Scooped up
+[2024-05-30 21:52:43.326] SAY: INVALID/(Medibot) (119,168,9): Radar, put a mask on!
+[2024-05-30 21:52:43.578] GAME: TIDI: 2.66667;4.3679;3.2955;0.91176
+[2024-05-30 21:52:52.288] ADMIN: riotscopez/(Rakshasa) healed / revived INVALID/(Triston Mertens)
+[2024-05-30 21:52:56.295] ATTACK: riotscopez/(Rakshasa) against INVALID/(Triston Mertens): Scooped up
+[2024-05-30 21:52:57.388] EMOTE: INVALID/(Cleanbot) (115,213,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 21:53:01.390] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 21:53:04.066] ACCESS OUT: INVALID/(Rakshasa) - IP:146.115.147.185 - CID:Logged Out - BYOND Logged Out
+[2024-05-30 21:53:04.067] ACCESS IN: RiotScopez/(Sihle Leda) - IP:146.115.147.185 - CID:1871707424 - BYOND v515
+[2024-05-30 21:53:04.071] ADMIN: INVALID/(Rakshasa) RiotScopez/(Sihle Leda) admin-ghosted.
+[2024-05-30 21:53:09.402] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 21:53:12.324] ADMIN: riotscopez/(Sihle Leda) assumed direct control of Triston Mertens.
+[2024-05-30 21:53:12.324] ACCESS OUT: INVALID/(Sihle Leda) - IP:146.115.147.185 - CID:Logged Out - BYOND Logged Out
+[2024-05-30 21:53:12.324] ACCESS IN: RiotScopez/(Triston Mertens) - IP:146.115.147.185 - CID:1871707424 - BYOND v515
+[2024-05-30 21:53:33.996] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 21:53:44.558] GAME: TIDI: 1.66667;3.55753;3.34791;1.15537
+[2024-05-30 21:53:46.289] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 21:54:00.864] ADMIN: RiotScopez/(Sgt. Slabadon Beefivich) force-set Holiday to "/list"
+[2024-05-30 21:54:02.881] EMOTE: INVALID/(Cleanbot) (115,213,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 21:54:50.273] GAME: TIDI: 9.5;5.34027;3.74638;1.41448
+[2024-05-30 21:55:27.128] EMOTE: INVALID/(Cleanbot) (115,213,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 21:55:51.111] EMOTE: INVALID/(Cleanbot) (115,213,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 21:55:55.771] GAME: TIDI: 9.16667;6.48819;4.29474;1.7025
+[2024-05-30 21:56:22.624] ADMIN: riotscopez/(Sgt. Slabadon Beefivich) changed the equipment of riotscopez/(Sgt. Slabadon Beefivich) to Spec ops - Death commando.
+[2024-05-30 21:56:25.028] EMOTE: INVALID/(Cleanbot) (115,213,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 21:56:35.448] ADMIN: riotscopez/(Sgt. Slabadon Beefivich) deleted the green jumpsuit at (13,245,7)
+[2024-05-30 21:56:45.740] ADMIN: riotscopez/(Sgt. Slabadon Beefivich) spawned /obj/item/clothing/head/beret/centcom/officer at (13,245,7)
+[2024-05-30 21:56:50.275] ADMIN: riotscopez/(Sgt. Slabadon Beefivich) deleted the officers beret at (13,245,7)
+[2024-05-30 21:56:57.425] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 21:56:59.704] GAME: TIDI: 6.66667;6.54173;4.74414;2.00667
+[2024-05-30 21:57:00.511] ADMIN: riotscopez/(Sgt. Slabadon Beefivich) spawned /obj/item/clothing/under/rank/centcom_officer at (13,246,7)
+[2024-05-30 21:57:16.170] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 21:57:21.577] ADMIN: riotscopez/(Sgt. Slabadon Beefivich) spawned /obj/item/weapon/cell/device/giga at (14,246,7)
+[2024-05-30 21:57:24.278] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 21:57:26.253] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 21:57:29.200] ASSET: Sending asset `tgui.bundle.js` to client `RiotScopez` as `asset.5a806c2cdc0e4d35c94371aedd1e5f4a.js`
+[2024-05-30 21:57:29.515] ASSET: Sending asset `tgui.bundle.css` to client `RiotScopez` as `asset.89501de77523e7848c5824e75ad03820.css`
+[2024-05-30 21:57:43.424] ASSET: Sending asset `asset.c4cae7d96ea6cfb31cd888bc1942a49d.png` to client `RiotScopez` as `asset.c4cae7d96ea6cfb31cd888bc1942a49d.png`
+[2024-05-30 21:57:51.458] ADMIN: riotscopez/(Sgt. Slabadon Beefivich) deleted the drop pod at (11,244,7)
+[2024-05-30 21:57:58.898] EMOTE: INVALID/(Cleanbot) (115,213,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 21:58:01.181] GAME: TIDI: 2.33333;5.27921;4.85115;2.29111
+[2024-05-30 21:58:30.877] ACCESS OUT: INVALID/(Sgt. Slabadon Beefivich) - IP:146.115.147.185 - CID:Logged Out - BYOND Logged Out
+[2024-05-30 21:58:30.878] ACCESS IN: RiotScopez/(Sgt. Slabadon Beefivich) - IP:146.115.147.185 - CID:1871707424 - BYOND v515
+[2024-05-30 21:58:30.882] ADMIN: INVALID/(Sgt. Slabadon Beefivich) RiotScopez/(Sgt. Slabadon Beefivich) admin-ghosted.
+[2024-05-30 21:58:30.990] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 21:58:34.397] ADMIN: riotscopez/(Sgt. Slabadon Beefivich) stuffed riotscopez into Rakshasa.
+[2024-05-30 21:58:34.397] ACCESS OUT: INVALID/(Sgt. Slabadon Beefivich) - IP:146.115.147.185 - CID:Logged Out - BYOND Logged Out
+[2024-05-30 21:58:34.397] ACCESS IN: RiotScopez/(Rakshasa) - IP:146.115.147.185 - CID:1871707424 - BYOND v515
+[2024-05-30 21:58:39.414] EMOTE: INVALID/(Cleanbot) (115,213,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 21:58:45.785] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 21:59:02.093] GAME: TIDI: 1.5;4.14545;4.71001;2.533
+[2024-05-30 21:59:05.916] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 21:59:15.920] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 21:59:17.925] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 21:59:51.923] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 22:00:02.232] GAME: TIDI: 0.333333;3.00181;4.36837;2.71654
+[2024-05-30 22:00:09.958] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:00:13.960] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 22:00:56.911] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:01:03.200] GAME: TIDI: 1.66667;2.60127;4.01495;2.84638
+[2024-05-30 22:01:55.214] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 22:02:03.503] GAME: TIDI: 0.5;1.97089;3.60614;2.92236
+[2024-05-30 22:02:11.406] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:02:35.417] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 22:02:39.419] SAY: INVALID/(Medibot) (119,168,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-05-30 22:02:47.418] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 22:03:03.720] GAME: TIDI: 0.333333;1.47962;3.18084;2.94821
+[2024-05-30 22:04:04.892] GAME: TIDI: 1.83333;1.58574;2.86182;2.93957
+[2024-05-30 22:04:10.612] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 22:04:26.628] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:04:26.630] EMOTE: INVALID/(Cleanbot) (115,213,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:05:04.960] GAME: TIDI: 0.166667;1.16001;2.52146;2.89776
+[2024-05-30 22:05:08.676] EMOTE: INVALID/(Cleanbot) (115,213,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:05:14.682] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:05:16.693] SAY: INVALID/(Medibot) (119,168,9): I knew it, I should've been a plastic surgeon.
+[2024-05-30 22:05:24.692] SAY: INVALID/(Medibot) (119,168,9): There's always a catch, and it's the best there is.
+[2024-05-30 22:05:36.706] SAY: INVALID/(Medibot) (119,168,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-05-30 22:06:05.015] GAME: TIDI: 0.166667;0.86201;2.18957;2.82694
+[2024-05-30 22:07:02.803] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:07:05.088] GAME: TIDI: 0;0.603407;1.87234;2.73148
+[2024-05-30 22:07:24.867] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:07:38.868] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 22:08:05.191] GAME: TIDI: 0.166667;0.472385;1.59235;2.61756
+[2024-05-30 22:08:16.923] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:08:24.927] EMOTE: INVALID/(Cleanbot) (115,213,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:08:34.929] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 22:09:00.961] SAY: INVALID/(Medibot) (119,168,9): Delicious!
+[2024-05-30 22:09:05.241] GAME: TIDI: 0.166667;0.38067;1.35001;2.49081
+[2024-05-30 22:10:03.006] EMOTE: INVALID/(Cleanbot) (115,213,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:10:05.294] GAME: TIDI: 0;0.266469;1.1333;2.35506
+[2024-05-30 22:10:15.026] EMOTE: INVALID/(Cleanbot) (115,213,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:10:35.047] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 22:11:05.359] GAME: TIDI: 0.166667;0.236528;0.953947;2.21495
+[2024-05-30 22:11:29.136] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:11:49.148] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 22:12:05.444] GAME: TIDI: 0.166667;0.21557;0.806272;2.07408
+[2024-05-30 22:12:29.184] EMOTE: INVALID/(Cleanbot) (115,213,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:12:31.183] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:12:39.187] EMOTE: INVALID/(Cleanbot) (115,213,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:12:43.192] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:13:05.492] GAME: TIDI: 0;0.150899;0.675197;1.93419
+[2024-05-30 22:13:15.213] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:13:17.227] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 22:14:05.531] GAME: TIDI: 0.166667;0.155629;0.571284;1.7979
+[2024-05-30 22:15:05.553] GAME: TIDI: 0;0.10894;0.478815;1.66599
+[2024-05-30 22:15:27.297] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:16:01.331] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 22:16:05.637] GAME: TIDI: 0.166667;0.126258;0.408304;1.54022
+[2024-05-30 22:16:27.371] SAY: INVALID/(Medibot) (119,168,9): Radar, put a mask on!
+[2024-05-30 22:17:01.412] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 22:17:03.417] EMOTE: INVALID/(Cleanbot) (115,213,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:17:05.697] GAME: TIDI: 0;0.0883808;0.344319;1.42063
+[2024-05-30 22:17:15.415] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:17:17.420] EMOTE: INVALID/(Cleanbot) (115,213,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:17:51.459] SAY: INVALID/(Medibot) (119,168,9): There's always a catch, and it's the best there is.
+[2024-05-30 22:17:57.466] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 22:18:05.756] GAME: TIDI: 0.166667;0.111867;0.297829;1.30835
+[2024-05-30 22:19:05.549] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:19:05.825] GAME: TIDI: 0.166667;0.128307;0.263924;1.20391
+[2024-05-30 22:19:23.573] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:19:57.718] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 22:19:59.718] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 22:20:05.999] GAME: TIDI: 0.166667;0.139815;0.239102;1.10743
+[2024-05-30 22:20:33.754] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 22:21:03.772] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 22:21:06.054] GAME: TIDI: 0.166667;0.14787;0.220856;1.01877
+[2024-05-30 22:21:07.778] SAY: INVALID/(Medibot) (119,168,9): Delicious!
+[2024-05-30 22:21:33.824] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 22:21:46.259] ACCESS OUT: INVALID/(Rakshasa) - IP:146.115.147.185 - CID:Logged Out - BYOND Logged Out
+[2024-05-30 22:21:46.259] ACCESS IN: RiotScopez/(Sanja McDonohugh) - IP:146.115.147.185 - CID:1871707424 - BYOND v515
+[2024-05-30 22:21:46.263] ADMIN: INVALID/(Rakshasa) RiotScopez/(Sanja McDonohugh) admin-ghosted.
+[2024-05-30 22:22:01.846] SAY: INVALID/(Medibot) (119,168,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-05-30 22:22:06.142] GAME: TIDI: 0.166667;0.153509;0.207387;0.937632
+[2024-05-30 22:22:19.877] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 22:22:37.896] SAY: INVALID/(Medibot) (119,168,9): Delicious!
+[2024-05-30 22:23:06.208] GAME: TIDI: 0.166667;0.157456;0.197401;0.863609
+[2024-05-30 22:23:10.528] ASSET: Sending asset `asset.13fb934a784201c8e2fdafab35124950.png` to client `RiotScopez` as `asset.13fb934a784201c8e2fdafab35124950.png`
+[2024-05-30 22:23:17.727] ASSET: Sending asset `asset.ce0376fafe8bb79907f2e330d9a98eb5.png` to client `RiotScopez` as `asset.ce0376fafe8bb79907f2e330d9a98eb5.png`
+[2024-05-30 22:23:32.776] ASSET: Sending asset `asset.6de26c154a237f5fc8b3f6b0afe413f8.png` to client `RiotScopez` as `asset.6de26c154a237f5fc8b3f6b0afe413f8.png`
+[2024-05-30 22:23:57.324] ASSET: Sending asset `asset.988e8fc7cc010f8fd7b418aec37c4327.png` to client `RiotScopez` as `asset.988e8fc7cc010f8fd7b418aec37c4327.png`
+[2024-05-30 22:23:58.125] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:24:06.414] GAME: TIDI: 0.333333;0.21022;0.199964;0.797245
+[2024-05-30 22:24:08.131] EMOTE: INVALID/(Cleanbot) (115,213,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:24:12.129] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:24:19.624] ASSET: Sending asset `asset.9f9d306065696176cbd2b8fd225569c8.png` to client `RiotScopez` as `asset.9f9d306065696176cbd2b8fd225569c8.png`
+[2024-05-30 22:25:00.215] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:25:06.515] GAME: TIDI: 0.166667;0.197154;0.199402;0.73746
+[2024-05-30 22:25:09.278] ASSET: Sending asset `asset.cf22b9be042b2d0358a7dd7be35f3937.png` to client `RiotScopez` as `asset.cf22b9be042b2d0358a7dd7be35f3937.png`
+[2024-05-30 22:25:22.953] ASSET: Sending asset `asset.73e27021b31cc7edd68efc267ebed459.png` to client `RiotScopez` as `asset.73e27021b31cc7edd68efc267ebed459.png`
+[2024-05-30 22:25:24.280] SAY: INVALID/(Medibot) (119,168,9): There's always a catch, and it's the best there is.
+[2024-05-30 22:25:24.280] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:25:57.101] ASSET: Sending asset `asset.c18019b1b97f501d6ec30c0dd66620f7.png` to client `RiotScopez` as `asset.c18019b1b97f501d6ec30c0dd66620f7.png`
+[2024-05-30 22:25:57.121] ASSET: Sending asset `asset.ecdd755c70ab1fb3f1ba54146d8475c8.png` to client `RiotScopez` as `asset.ecdd755c70ab1fb3f1ba54146d8475c8.png`
+[2024-05-30 22:25:58.347] EMOTE: INVALID/(Cleanbot) (115,213,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:26:06.648] GAME: TIDI: 0.166667;0.188008;0.197123;0.683427
+[2024-05-30 22:26:26.882] ADMIN: riotscopez has cleared the custom event text.
+[2024-05-30 22:26:57.284] ADMIN: riotscopez/(Sanja McDonohugh) deleted the mouse (479) at (149,101,3)
+[2024-05-30 22:27:02.394] ADMIN: riotscopez/(Sanja McDonohugh) deleted the drop pod at (149,101,3)
+[2024-05-30 22:27:07.305] GAME: TIDI: 1.16667;0.481605;0.25402;0.640486
+[2024-05-30 22:27:15.084] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 22:27:35.119] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 22:28:07.447] GAME: TIDI: 0.166667;0.387124;0.28064;0.604501
+[2024-05-30 22:29:00.294] ADMIN: riotscopez/(Sanja McDonohugh) created 1 /mob/living/simple_mob/vore/vore_hostile/leaper
+[2024-05-30 22:29:01.512] EMOTE: INVALID/(Cleanbot) (115,213,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:29:07.528] EMOTE: INVALID/(Cleanbot) (115,213,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:29:07.813] GAME: TIDI: 0.666667;0.470987;0.31871;0.575922
+[2024-05-30 22:29:14.284] ADMIN: riotscopez/(Sanja McDonohugh) stuffed riotscopez into abyss leaper.
+[2024-05-30 22:29:14.285] ACCESS OUT: INVALID/(Sanja McDonohugh) - IP:146.115.147.185 - CID:Logged Out - BYOND Logged Out
+[2024-05-30 22:29:14.285] ACCESS IN: RiotScopez/(abyss leaper) - IP:146.115.147.185 - CID:1871707424 - BYOND v515
+[2024-05-30 22:29:19.689] ADMIN: riotscopez/(abyss leaper) has changed riotscopez/(abyss leaper)'s size multiplier to 2.
+[2024-05-30 22:29:22.316] ATTACK: INVALID/(rat (872)) against INVALID/(cockroach): Generic attack (probably animal)
+[2024-05-30 22:29:48.680] ASSET: Sending asset `asset.7afaa8975daad8b09137be9828430e76.png` to client `RiotScopez` as `asset.7afaa8975daad8b09137be9828430e76.png`
+[2024-05-30 22:30:08.155] GAME: TIDI: 0.5;0.479691;0.350906;0.553421
+[2024-05-30 22:30:19.879] EMOTE: INVALID/(Cleanbot) (115,213,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:30:21.888] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:30:21.889] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 22:30:58.688] ATTACK: INVALID/(rat (960)) against riotscopez/(Vanya): Animal-attacked (miss)
+[2024-05-30 22:31:08.238] GAME: TIDI: 0.166667;0.385783;0.357881;0.533867
+[2024-05-30 22:31:12.483] ATTACK: riotscopez/(Vanya) against INVALID/(mouse (303)): Eaten via stomach
+[2024-05-30 22:31:15.482] ASSET: Sending asset `spritesheet_vore.css` to client `RiotScopez` as `asset.95fa1377fdab26c9c95d30a5977a284e.css`
+[2024-05-30 22:31:15.482] ASSET: Sending asset `vore_240x240.png` to client `RiotScopez` as `asset.78c5424fe8cc7f52e1a464d1f8584818.png`
+[2024-05-30 22:31:15.483] ASSET: Sending asset `spritesheet_fixedvore.css` to client `RiotScopez` as `asset.3900878c2dc37a835ec768a4ec02ad8d.css`
+[2024-05-30 22:31:15.483] ASSET: Sending asset `fixedvore_240x240.png` to client `RiotScopez` as `asset.60970c61b2ec3dede96ef77dc0958522.png`
+[2024-05-30 22:31:30.266] ATTACK: riotscopez/(Vanya) against INVALID/(mouse (303)): Digested in stomach
+[2024-05-30 22:31:39.919] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:32:01.714] ADMIN: riotscopez/(Vanya) spawned /mob/living/carbon/human at (108,122,2)
+[2024-05-30 22:32:07.565] ATTACK: riotscopez/(Vanya) against INVALID/(Owen Styx): Eaten via stomach
+[2024-05-30 22:32:10.361] GAME: TIDI: 3.5;1.32005;0.550315;0.535511
+[2024-05-30 22:32:37.186] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:33:09.444] ATTACK: riotscopez/(Vanya) against INVALID/(mouse (512)): Eaten via stomach
+[2024-05-30 22:33:11.492] GAME: TIDI: 1.83333;1.47403;0.735059;0.555466
+[2024-05-30 22:33:19.542] ATTACK: riotscopez/(Vanya) against INVALID/(mouse (512)): Digested in stomach
+[2024-05-30 22:33:31.245] EMOTE: INVALID/(Cleanbot) (115,213,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:34:01.583] ATTACK: riotscopez/(Vanya) against INVALID/(Owen Styx): Digested in stomach
+[2024-05-30 22:34:11.607] GAME: TIDI: 0.333333;1.13182;0.814412;0.581361
+[2024-05-30 22:35:12.053] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:35:12.269] GAME: TIDI: 1;1.09228;0.869985;0.610223
+[2024-05-30 22:35:27.997] EMOTE: INVALID/(Cleanbot) (115,213,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:35:46.026] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 22:35:56.035] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 22:36:12.081] EMOTE: INVALID/(Ian) (135,135,2): <B>Ian</B> dances around.
+[2024-05-30 22:36:12.322] GAME: TIDI: 0.166667;0.814594;0.858907;0.635091
+[2024-05-30 22:36:58.395] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 22:37:12.402] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:37:12.682] GAME: TIDI: 0.5;0.720216;0.831168;0.654699
+[2024-05-30 22:37:49.455] ADMIN: riotscopez/(Vanya) climbed into disposals!
+[2024-05-30 22:37:57.872] ADMIN: riotscopez/(Vanya) climbed into disposals!
+[2024-05-30 22:38:10.117] ADMIN: riotscopez/(Vanya) climbed into disposals!
+[2024-05-30 22:38:12.776] GAME: TIDI: 0.166667;0.554151;0.775765;0.666806
+[2024-05-30 22:38:26.500] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 22:38:50.149] EMOTE: riotscopez/(Vanya) (199,141,2): <B>Vanya</B> nuzzles Vanya!
+[2024-05-30 22:39:06.886] EMOTE: INVALID/(Cleanbot) (115,213,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:39:13.167] GAME: TIDI: 0.666667;0.587906;0.738193;0.673944
+[2024-05-30 22:39:29.154] EMOTE: INVALID/(Cleanbot) (115,213,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:40:15.581] SAY: INVALID/(Medibot) (119,168,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-05-30 22:40:17.575] EMOTE: INVALID/(Cleanbot) (115,213,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:40:17.861] GAME: TIDI: 7.83333;2.76153;1.14286;0.720836
+[2024-05-30 22:41:17.925] GAME: TIDI: 0.166667;1.98307;1.3109;0.779843
+[2024-05-30 22:41:21.643] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:41:41.665] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:41:43.674] EMOTE: INVALID/(Cleanbot) (115,213,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:41:49.700] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:41:55.699] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:42:11.735] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 22:42:13.737] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 22:42:18.020] GAME: TIDI: 0.166667;1.43815;1.33635;0.835494
+[2024-05-30 22:42:29.743] SAY: INVALID/(Medibot) (119,168,9): Delicious!
+[2024-05-30 22:42:30.665] ATTACK: INVALID/(rat (960)) against INVALID/(cockroach): Generic attack (probably animal)
+[2024-05-30 22:42:37.677] EMOTE: riotscopez/(Vanya) (127,105,2): <B>Vanya</B> nuzzles Vanya!
+[2024-05-30 22:43:01.509] ADMIN: riotscopez/(Vanya) deleted Vanya at (127,105,2)
+[2024-05-30 22:43:01.589] ACCESS OUT: INVALID/(Vanya) - IP:146.115.147.185 - CID:Logged Out - BYOND Logged Out
+[2024-05-30 22:43:01.590] ACCESS IN: RiotScopez/(Kamryn Sanu) - IP:146.115.147.185 - CID:1871707424 - BYOND v515
+[2024-05-30 22:43:10.854] ADMIN: riotscopez/(Kamryn Sanu) spawned /mob/living/simple_mob/vore/vore_hostile/leaper at (124,108,2)
+[2024-05-30 22:43:11.935] SAY: INVALID/(Medibot) (119,168,9): Radar, put a mask on!
+[2024-05-30 22:43:13.936] EMOTE: INVALID/(Cleanbot) (115,213,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:43:16.198] ADMIN: riotscopez/(Kamryn Sanu) stuffed riotscopez into abyss leaper.
+[2024-05-30 22:43:16.199] ACCESS OUT: INVALID/(Kamryn Sanu) - IP:146.115.147.185 - CID:Logged Out - BYOND Logged Out
+[2024-05-30 22:43:16.199] ACCESS IN: RiotScopez/(abyss leaper) - IP:146.115.147.185 - CID:1871707424 - BYOND v515
+[2024-05-30 22:43:17.946] SAY: INVALID/(Medibot) (119,168,9): Radar, put a mask on!
+[2024-05-30 22:43:18.225] GAME: TIDI: 0.333333;1.10671;1.29042;0.880987
+[2024-05-30 22:43:21.608] ADMIN: riotscopez/(abyss leaper) has changed riotscopez/(abyss leaper)'s size multiplier to 2.
+[2024-05-30 22:43:25.956] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 22:43:33.956] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:43:41.966] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 22:43:50.040] SAY: INVALID/(Medibot) (119,168,9): Radar, put a mask on!
+[2024-05-30 22:44:18.340] GAME: TIDI: 0.166667;0.824694;1.19728;0.912616
+[2024-05-30 22:44:30.090] EMOTE: INVALID/(Ian) (137,131,2): <B>Ian</B> dances around.
+[2024-05-30 22:45:10.114] EMOTE: INVALID/(Cleanbot) (115,213,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:45:16.127] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:45:18.407] GAME: TIDI: 0.166667;0.627286;1.08328;0.929682
+[2024-05-30 22:46:00.165] EMOTE: INVALID/(Cleanbot) (115,213,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:46:18.176] EMOTE: INVALID/(Ian) (136,133,2): <B>Ian</B> dances around.
+[2024-05-30 22:46:18.461] GAME: TIDI: 0;0.4391;0.954444;0.932158
+[2024-05-30 22:47:18.513] GAME: TIDI: 0.166667;0.35737;0.835029;0.922445
+[2024-05-30 22:47:44.518] EMOTE: INVALID/(Ian) (136,131,2): <B>Ian</B> dances around.
+[2024-05-30 22:48:00.529] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:48:19.129] GAME: TIDI: 1;0.550159;0.778055;0.908006
+[2024-05-30 22:48:39.231] SAY: INVALID/(Medibot) (119,168,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-05-30 22:49:07.251] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 22:49:09.252] SAY: INVALID/(Medibot) (119,168,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-05-30 22:49:19.536] GAME: TIDI: 0.666667;0.585111;0.739466;0.891152
+[2024-05-30 22:49:40.964] ADMIN: <a href='?priv_msg=[0x5000000]'>riotscopez</a>/(abyss leaper) infected INVALID/INVALID with a virus!
+[2024-05-30 22:50:20.038] GAME: TIDI: 0.833333;0.659578;0.723489;0.874386
+[2024-05-30 22:50:25.762] ADMIN: riotscopez/(abyss leaper) dealt 200 amount of brute damage to the abyss leaper
+[2024-05-30 22:50:40.013] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 22:50:40.326] ADMIN: riotscopez/(abyss leaper) dealt 1 amount of toxin damage to the abyss leaper
+[2024-05-30 22:50:48.198] ADMIN: riotscopez/(abyss leaper) dealt 400 amount of brute damage to the abyss leaper
+[2024-05-30 22:50:59.264] ADMIN: riotscopez/(abyss leaper) dealt -999 amount of brute damage to the abyss leaper
+[2024-05-30 22:51:03.689] ACCESS OUT: INVALID/(abyss leaper) - IP:146.115.147.185 - CID:Logged Out - BYOND Logged Out
+[2024-05-30 22:51:03.689] ACCESS IN: RiotScopez/(Ashlie Mazzi) - IP:146.115.147.185 - CID:1871707424 - BYOND v515
+[2024-05-30 22:51:07.625] ACCESS OUT: INVALID/(Ashlie Mazzi) - IP:146.115.147.185 - CID:Logged Out - BYOND Logged Out
+[2024-05-30 22:51:07.625] ACCESS IN: RiotScopez/(abyss leaper) - IP:146.115.147.185 - CID:1871707424 - BYOND v515
+[2024-05-30 22:51:07.629] ADMIN: INVALID/(Ashlie Mazzi) <span class='name'>RiotScopez</span> left ghost/observe mode. They now occupy their body again.
+[2024-05-30 22:51:12.467] ADMIN: riotscopez/(abyss leaper) deleted the abyss leaper at (124,108,2)
+[2024-05-30 22:51:12.545] ACCESS OUT: INVALID/(abyss leaper) - IP:146.115.147.185 - CID:Logged Out - BYOND Logged Out
+[2024-05-30 22:51:12.546] ACCESS IN: RiotScopez/(Georgene Tanner) - IP:146.115.147.185 - CID:1871707424 - BYOND v515
+[2024-05-30 22:51:15.615] SAY: INVALID/(Medibot) (119,168,9): What kind of medbay is this? Everyone's dropping like flies.
+[2024-05-30 22:51:21.900] GAME: TIDI: 3.16667;1.4117;0.861132;0.873061
+[2024-05-30 22:51:27.121] ADMIN: riotscopez/(Georgene Tanner) spawned /mob/living/simple_mob/vore/vore_hostile/leaper at (124,109,2)
+[2024-05-30 22:51:30.285] ADMIN: riotscopez/(Georgene Tanner) stuffed riotscopez into abyss leaper.
+[2024-05-30 22:51:30.285] ACCESS OUT: INVALID/(Georgene Tanner) - IP:146.115.147.185 - CID:Logged Out - BYOND Logged Out
+[2024-05-30 22:51:30.285] ACCESS IN: RiotScopez/(abyss leaper) - IP:146.115.147.185 - CID:1871707424 - BYOND v515
+[2024-05-30 22:51:34.696] ADMIN: riotscopez/(abyss leaper) has changed riotscopez/(abyss leaper)'s size multiplier to 2.
+[2024-05-30 22:51:47.804] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 22:52:22.169] GAME: TIDI: 0.333333;1.08819;0.906544;0.876409
+[2024-05-30 22:53:02.713] ADMIN: RiotScopez/(abyss leaper) has remade the powernet. SSmachines.makepowernets() called.
+[2024-05-30 22:53:06.810] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 22:53:12.745] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:53:23.108] GAME: TIDI: 1.66667;1.26174;0.977582;0.886526
+[2024-05-30 22:53:58.923] ADMIN: riotscopez has cleared the custom event text.
+[2024-05-30 22:54:00.898] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:54:23.222] GAME: TIDI: 0.166667;0.933215;0.968709;0.894745
+[2024-05-30 22:54:26.942] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 22:54:34.939] EMOTE: INVALID/(Cleanbot) (115,213,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:54:53.999] ADMIN: RiotScopez/(abyss leaper) force-set Holiday to "/list"
+[2024-05-30 22:54:56.980] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 22:55:19.051] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:55:23.334] GAME: TIDI: 0.166667;0.70325;0.915617;0.896832
+[2024-05-30 22:55:43.097] EMOTE: INVALID/(Cleanbot) (115,213,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:55:47.101] EMOTE: INVALID/(Cleanbot) (115,213,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:56:09.127] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 22:56:15.157] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 22:56:19.152] EMOTE: INVALID/(Cleanbot) (115,213,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:56:23.782] GAME: TIDI: 0.666667;0.692275;0.870949;0.894243
+[2024-05-30 22:56:48.182] EMOTE: INVALID/(Cleanbot) (115,213,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:57:10.207] EMOTE: INVALID/(Cleanbot) (115,213,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:57:24.511] GAME: TIDI: 1.33333;0.884593;0.873678;0.892187
+[2024-05-30 22:57:47.368] ADMIN: riotscopez/(abyss leaper) checked antagonists.
+[2024-05-30 22:57:50.255] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 22:57:52.262] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 22:58:24.585] GAME: TIDI: 0;0.619215;0.822785;0.885247
+[2024-05-30 23:00:01.624] GAME: TIDI: 61.8333;18.9835;4.45492;1.24221
+[2024-05-30 23:00:19.369] EMOTE: INVALID/(Cleanbot) (115,213,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 23:00:35.369] EMOTE: INVALID/(Cleanbot) (115,213,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 23:00:47.386] SAY: INVALID/(Medibot) (119,168,9): Delicious!
+[2024-05-30 23:01:01.680] GAME: TIDI: 0;13.2884;6.22162;1.74015
+[2024-05-30 23:01:17.144] ADMIN: riotscopez/(abyss leaper) has set narsie's behaviour to "CultStation13".
+[2024-05-30 23:01:29.443] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 23:01:45.456] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 23:01:55.464] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 23:02:22.550] GAME: TIDI: 34.8333;19.7519;8.92767;2.45891
+[2024-05-30 23:02:24.267] EMOTE: INVALID/(Cleanbot) (115,213,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 23:02:43.424] ACCESS IN: BottleOfFur/(BottleOfFur) - IP:73.225.135.8 - CID:1975932243 - BYOND v515
+[2024-05-30 23:02:44.766] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 23:02:45.247] ASSET: Sending asset `tgui-panel.bundle.js` to client `BottleOfFur` as `asset.b4751a5ea151bc8ec68c1925b7d0bdd7.js`
+[2024-05-30 23:02:51.387] ASSET: Sending asset `tgui-panel.bundle.css` to client `BottleOfFur` as `asset.7efb53cd7dda00777acb7748b31d4a8a.css`
+[2024-05-30 23:02:52.083] ASSET: Sending asset `fa-regular-400.ttf` to client `BottleOfFur` as `fa-regular-400.ttf`
+[2024-05-30 23:02:52.083] ASSET: Sending asset `fa-solid-900.ttf` to client `BottleOfFur` as `fa-solid-900.ttf`
+[2024-05-30 23:02:52.083] ASSET: Sending asset `fa-v4compatibility.ttf` to client `BottleOfFur` as `fa-v4compatibility.ttf`
+[2024-05-30 23:02:52.083] ASSET: Sending asset `v4shim.css` to client `BottleOfFur` as `v4shim.css`
+[2024-05-30 23:02:52.083] ASSET: Sending asset `font-awesome.css` to client `BottleOfFur` as `asset.fedd834d1c20ed484599a1c38690e330.css`
+[2024-05-30 23:02:52.083] ASSET: Sending asset `tgfont.eot` to client `BottleOfFur` as `tgfont.eot`
+[2024-05-30 23:02:52.522] ASSET: Sending asset `tgfont.woff2` to client `BottleOfFur` as `tgfont.woff2`
+[2024-05-30 23:02:52.824] ASSET: Sending asset `tgfont.css` to client `BottleOfFur` as `asset.9c0bbe21e37e76955d9640f7a6c4b636.css`
+[2024-05-30 23:02:52.907] ASSET: Sending asset `spritesheet_chat.css` to client `BottleOfFur` as `asset.e73ec83954ac74e58beadd50f5a3c63b.css`
+[2024-05-30 23:02:52.907] ASSET: Sending asset `chat_32x10.png` to client `BottleOfFur` as `asset.2880748b8d8cbf35ee9e8cb72fdacada.png`
+[2024-05-30 23:03:08.224] EMOTE: INVALID/(Cleanbot) (115,213,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 23:03:17.511] ADMIN: riotscopez/(abyss leaper) checked antagonists.
+[2024-05-30 23:03:18.249] bottleoffur in verb/fix_tgui_panel
+ - Started fixing.
+[2024-05-30 23:03:28.960] ADMIN: BottleOfFur/(BottleOfFur) <span class='name'>BottleOfFur</span> entered ghost/observe mode. 
+[2024-05-30 23:03:28.960] ACCESS OUT: INVALID/(BottleOfFur) - IP:73.225.135.8 - CID:Logged Out - BYOND Logged Out
+[2024-05-30 23:03:28.960] ACCESS IN: BottleOfFur/(Helen Bandiera) - IP:73.225.135.8 - CID:1975932243 - BYOND v515
+[2024-05-30 23:03:28.961] ASSET: Sending asset `jquery.min.js` to client `BottleOfFur` as `jquery.min.js`
+[2024-05-30 23:03:30.853] GAME: TIDI: 13.8333;17.9763;10.7374;3.28676
+[2024-05-30 23:03:32.137] ADMIN: riotscopez/(abyss leaper) attempting to force mode autospawn.
+[2024-05-30 23:03:36.486] ASSET: Sending asset `asset.9b092e5a3268d85dfdd2d5d61add2c1e.png` to client `BottleOfFur` as `asset.9b092e5a3268d85dfdd2d5d61add2c1e.png`
+[2024-05-30 23:04:02.583] ASSET: Sending asset `asset.5af11cc5b4c6bf51c1bbb03d6032a134.png` to client `BottleOfFur` as `asset.5af11cc5b4c6bf51c1bbb03d6032a134.png`
+[2024-05-30 23:04:03.794] ASSET: Sending asset `asset.2ef0a2e9219fe908e75659b302d058f2.png` to client `BottleOfFur` as `asset.2ef0a2e9219fe908e75659b302d058f2.png`
+[2024-05-30 23:04:06.567] ASSET: Sending asset `asset.3909298266ed2ee0c5e9a97270dec722.png` to client `BottleOfFur` as `asset.3909298266ed2ee0c5e9a97270dec722.png`
+[2024-05-30 23:04:06.585] ASSET: Sending asset `asset.83eed6e4154b17ab943e21867fcb67c2.png` to client `BottleOfFur` as `asset.83eed6e4154b17ab943e21867fcb67c2.png`
+[2024-05-30 23:04:06.593] ASSET: Sending asset `asset.de6e7cbea5438d7000d8e4381fe5d199.png` to client `BottleOfFur` as `asset.de6e7cbea5438d7000d8e4381fe5d199.png`
+[2024-05-30 23:04:06.596] ASSET: Sending asset `asset.a2ad79f0bcaa8cf8a3aa6b19b760af62.png` to client `BottleOfFur` as `asset.a2ad79f0bcaa8cf8a3aa6b19b760af62.png`
+[2024-05-30 23:04:06.599] ASSET: Sending asset `asset.ff3986640c09cc1a24a56124d2340425.png` to client `BottleOfFur` as `asset.ff3986640c09cc1a24a56124d2340425.png`
+[2024-05-30 23:04:06.601] ASSET: Sending asset `asset.949fd3718be746a5b916c6de55d45378.png` to client `BottleOfFur` as `asset.949fd3718be746a5b916c6de55d45378.png`
+[2024-05-30 23:04:06.603] ASSET: Sending asset `asset.8d85d147c8d4fa3b67909789722b59b6.png` to client `BottleOfFur` as `asset.8d85d147c8d4fa3b67909789722b59b6.png`
+[2024-05-30 23:04:06.607] ASSET: Sending asset `asset.5b76e9aec6dd83be89b1da010f1381ec.png` to client `BottleOfFur` as `asset.5b76e9aec6dd83be89b1da010f1381ec.png`
+[2024-05-30 23:04:06.612] ASSET: Sending asset `asset.6e5ca9aa95643a6033e2f0bff14f92d2.png` to client `BottleOfFur` as `asset.6e5ca9aa95643a6033e2f0bff14f92d2.png`
+[2024-05-30 23:04:06.856] ASSET: Sending asset `asset.df54ad9c7d824c7f6b1017006de14354.png` to client `BottleOfFur` as `asset.df54ad9c7d824c7f6b1017006de14354.png`
+[2024-05-30 23:04:12.370] ADMIN: riotscopez/(abyss leaper) used gibself.
+[2024-05-30 23:04:13.947] ACCESS OUT: INVALID/(abyss leaper) - IP:146.115.147.185 - CID:Logged Out - BYOND Logged Out
+[2024-05-30 23:04:13.948] ACCESS IN: RiotScopez/(Marshall Pal) - IP:146.115.147.185 - CID:1871707424 - BYOND v515
+[2024-05-30 23:04:31.898] GAME: TIDI: 1.66667;13.0834;11.2066;4.07874
+[2024-05-30 23:04:47.633] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 23:04:55.644] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 23:05:15.682] EMOTE: INVALID/(Cleanbot) (104,181,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 23:05:17.686] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 23:05:31.989] GAME: TIDI: 0.166667;9.2084;10.807;4.75156
+[2024-05-30 23:06:15.810] SAY: INVALID/(Medibot) (119,168,9): Delicious!
+[2024-05-30 23:06:29.824] SAY: INVALID/(Medibot) (119,168,9): Delicious!
+[2024-05-30 23:06:32.104] GAME: TIDI: 0.333333;6.54588;9.95475;5.27188
+[2024-05-30 23:07:08.488] ADMIN: riotscopez/(Marshall Pal) used secret 'Summon Nar-Sie'
+[2024-05-30 23:07:09.908] EMOTE: INVALID/(Fitz) (179,217,9): <B>Fitz</B> makes an excited booping sound!
+[2024-05-30 23:07:13.561] ADMIN: riotscopez/(Marshall Pal) has summoned Nar-Sie and brought about a new realm of suffering.
+[2024-05-30 23:07:46.455] ASSET: Sending asset `asset.912c41730ed2fe3f7854ec63ab1f6ab5.png` to client `RiotScopez` as `asset.912c41730ed2fe3f7854ec63ab1f6ab5.png`
+[2024-05-30 23:07:46.455] ASSET: Sending asset `asset.912c41730ed2fe3f7854ec63ab1f6ab5.png` to client `BottleOfFur` as `asset.912c41730ed2fe3f7854ec63ab1f6ab5.png`
+[2024-05-30 23:07:58.529] GAME: TIDI: 44;17.7821;11.5202;5.89672
+[2024-05-30 23:08:06.893] EMOTE: INVALID/(Cleanbot) (115,213,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-05-30 23:08:13.241] ASSET: Sending asset `asset.e0fa7ff742e8741d499d877daaa621bc.png` to client `RiotScopez` as `asset.e0fa7ff742e8741d499d877daaa621bc.png`
+[2024-05-30 23:08:34.153] ATTACK: INVALID/(trained giant spider) against INVALID/(creature): Animal-attacked (miss)
+[2024-05-30 23:08:36.332] ATTACK: INVALID/(trained giant spider) against INVALID/(creature): Generic attack (probably animal)
+[2024-05-30 23:08:36.595] ATTACK: INVALID/(creature) against INVALID/(trained giant spider): Animal-attacked (miss)
+[2024-05-30 23:08:37.792] ATTACK: INVALID/(creature) against INVALID/(trained giant spider): Generic attack (probably animal)
+[2024-05-30 23:08:43.317] ATTACK: INVALID/(trained giant spider) against INVALID/(Faithless): Generic attack (probably animal)
+[2024-05-30 23:08:44.533] ATTACK: INVALID/(mercenary) against INVALID/(Faithless): Generic attack (probably animal)
+[2024-05-30 23:09:13.054] GAME: TIDI: 23.9601;19.6355;13.1433;6.62137
+[2024-05-30 23:10:05.759] ADMIN: riotscopez/(Marshall Pal) initiated an immediate reboot.
+[2024-05-30 23:10:06.843] ASSET: Sending asset `asset.952237867679a4d5b2dff626859b7923.png` to client `RiotScopez` as `asset.952237867679a4d5b2dff626859b7923.png`
+[2024-05-30 23:10:06.844] ADMIN: riotscopez/(Marshall Pal) initiated an immediate reboot.
+[2024-05-30 23:10:07.218] ACCESS OUT: riotscopez/(Marshall Pal) - IP:146.115.147.185 - CID:Logged Out - BYOND Logged Out
+[2024-05-30 23:10:07.219] ACCESS OUT: BottleOfFur/(Helen Bandiera) - IP:73.225.135.8 - CID:Logged Out - BYOND Logged Out
