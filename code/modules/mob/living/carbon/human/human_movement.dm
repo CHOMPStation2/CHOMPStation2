@@ -300,54 +300,9 @@
 
 // Handle footstep sounds
 /mob/living/carbon/human/handle_footstep(var/turf/T)
-	/*CHOMPEdit - This is an Element now
-	if(!istype(T) || is_incorporeal() || !CONFIG_GET(number/footstep_volume) || !T.footstep_sounds || !T.footstep_sounds.len) // CHOMPEdit
-		return	//CHOMPEdit - Condensed some return checks
-	// CHOMPedit start: Future Upgrades - Multi species support
-	var/list/footstep_sounds = T.footstep_sounds[src.get_species()]
-	if(!LAZYLEN(footstep_sounds))
-		footstep_sounds = T.footstep_sounds["human"] // Probably doesn't have species sounds, use the default // TODO: replace this with a define, unfortunately SPECIES_HUMAN is "Human" instead of "human"
-		if(!footstep_sounds)
-			return // CHOMPedit end
-	var/S = pick(footstep_sounds)
-	GLOB.step_taken_shift_roundstat++
-	if(!S) return
-
-	// Play every 20 steps while walking, for the sneak
-	if(m_intent == I_WALK && step_count++ % 20 != 0)
-		check_vorefootstep(m_intent, T) //CHOMPstation edit: sloshing reagent belly walk system
-	// Play every other step while running
-	if(m_intent == I_RUN && step_count++ % 2 != 0)
-		check_vorefootstep(m_intent, T) //CHOMPstation edit: sloshing reagent belly walk system
-	*/
 	if(shoes && loc == T && get_gravity(loc) && !flying)
-		if(SEND_SIGNAL(shoes, COMSIG_SHOES_STEP_ACTION, m_intent))	//CHOMPEdit - Shoe step comsig
+		if(SEND_SIGNAL(shoes, COMSIG_SHOES_STEP_ACTION, m_intent))
 			return
-	/*
-	if(step_count % 2 == 0)	//CHOMPAdd, since I removed the returns up above, need this to track each odd step.
-		return
-
-	var/volume = CONFIG_GET(number/footstep_volume)
-
-	// Reduce volume while walking or barefoot
-	if(!shoes || m_intent == I_WALK)
-		volume *= 0.5
-	else if(shoes)
-		var/obj/item/clothing/shoes/feet = shoes
-		if(istype(feet))
-			volume *= feet.step_volume_mod
-
-	if(!has_organ(BP_L_FOOT) && !has_organ(BP_R_FOOT))
-		return // no feet = no footsteps
-
-	if(buckled || lying || throwing)
-		return // people flying, lying down or sitting do not step
-
-	if(!get_gravity(src) && prob(75))
-		return // Far less likely to make noise in no gravity
-
-	playsound(T, S, volume, FALSE)
-	*/
 	return
 
 /mob/living/carbon/human/set_dir(var/new_dir)

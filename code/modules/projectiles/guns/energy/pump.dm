@@ -78,7 +78,7 @@
 		list(mode_name="lethal", fire_delay=12, projectile_type=/obj/item/projectile/beam/phaser, charge_cost = 300),
 		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/beam/phaser/light, charge_cost = 80),
 	)
-	recoil_mode = 0 //CHOMP Addition: Removes recoil for micros.
+	recoil_mode = 0
 
 /obj/item/gun/energy/locked/frontier/unload_ammo(var/mob/user)
 	if(recharging)

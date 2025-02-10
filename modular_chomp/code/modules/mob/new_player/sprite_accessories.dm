@@ -136,7 +136,7 @@
 
 /datum/sprite_accessory/hair/shyold
 	name = "Shy old"
-	icon_add = 'modular_chomp/icons/mob/human_face.dmi'
+	icon = 'modular_chomp/icons/mob/human_face.dmi'
 	icon_state = "hair_shy_old"
 	flags = HAIR_TIEABLE
 
@@ -175,7 +175,7 @@
 
 /datum/sprite_accessory/hair/emoleft
 	name = "Emo Left"
-	icon_add = 'modular_chomp/icons/mob/human_face.dmi'
+	icon = 'modular_chomp/icons/mob/human_face.dmi'
 	icon_state = "hair_emoleft"
 	flags = HAIR_TIEABLE
 
@@ -205,7 +205,7 @@
 
 /datum/sprite_accessory/hair/doll
 	name = "Doll"
-	icon_add = 'modular_chomp/icons/mob/human_face.dmi'
+	icon = 'modular_chomp/icons/mob/human_face.dmi'
 	icon_state = "hair_doll"
 	flags = HAIR_TIEABLE
 
@@ -356,12 +356,12 @@
 
 /datum/sprite_accessory/hair/teshari/tallmohawk
 	name = "Teshari Tall Mohawk"
-	icon_add = 'modular_chomp/icons/mob/human_face.dmi'
+	icon = 'modular_chomp/icons/mob/human_face.dmi'
 	icon_state = "teshari_tallmohawk"
 
 /datum/sprite_accessory/hair/teshari/aerodynamic
 	name = "Teshari Aerodynamic"
-	icon_add = 'modular_chomp/icons/mob/human_face.dmi'
+	icon = 'modular_chomp/icons/mob/human_face.dmi'
 	icon_state = "teshari_aerodynamic"
 
 /datum/sprite_accessory/hair/teshari/pointy
@@ -369,7 +369,7 @@
 
 /datum/sprite_accessory/hair/teshari/crowned
 	name = "Teshari Crowned"
-	icon_add = 'modular_chomp/icons/mob/human_face.dmi'
+	icon = 'modular_chomp/icons/mob/human_face.dmi'
 	icon_state = "teshari_crowned"
 
 /datum/sprite_accessory/hair/teshari/tight
@@ -377,7 +377,7 @@
 
 /datum/sprite_accessory/hair/teshari/bun
 	name = "Teshari Bun"
-	icon_add = 'modular_chomp/icons/mob/human_face.dmi'
+	icon = 'modular_chomp/icons/mob/human_face.dmi'
 	icon_state = "teshari_bun"
 
 /datum/sprite_accessory/hair/teshari/droopy
@@ -402,7 +402,7 @@
 
 /datum/sprite_accessory/hair/teshari/peel
 	name = "Teshari Peel"
-	icon_add = 'modular_chomp/icons/mob/human_face.dmi'
+	icon = 'modular_chomp/icons/mob/human_face.dmi'
 	icon_state = "teshari_peel"
 
 /datum/sprite_accessory/hair/teshari/altdefault
@@ -410,17 +410,17 @@
 
 /datum/sprite_accessory/hair/teshari/sleek
 	name = "Teshari Sleek"
-	icon_add = 'modular_chomp/icons/mob/human_face.dmi'
+	icon = 'modular_chomp/icons/mob/human_face.dmi'
 	icon_state = "teshari_sleek"
 
 /datum/sprite_accessory/hair/teshari/ponytail
 	name = "Teshari Ponytail"
-	icon_add = 'modular_chomp/icons/mob/human_face.dmi'
+	icon = 'modular_chomp/icons/mob/human_face.dmi'
 	icon_state = "teshari_ponytail"
 
 /datum/sprite_accessory/hair/teshari/sweep
 	name = "Teshari Sweep"
-	icon_add = 'modular_chomp/icons/mob/human_face.dmi'
+	icon = 'modular_chomp/icons/mob/human_face.dmi'
 	icon_state = "teshari_sweep"
 
 /datum/sprite_accessory/hair/teshari/spike
@@ -431,7 +431,7 @@
 
 /datum/sprite_accessory/hair/teshari/spiky2
 	name = "Teshari Alt. Spiky"
-	icon_add = 'modular_chomp/icons/mob/human_face.dmi'
+	icon = 'modular_chomp/icons/mob/human_face.dmi'
 	icon_state = "teshari_spiky2"
 
 /datum/sprite_accessory/hair/teshari/mane
@@ -454,12 +454,12 @@
 
 /datum/sprite_accessory/hair/teshari/crest
 	name = "Teshari Crest"
-	icon_add = 'modular_chomp/icons/mob/human_face.dmi'
+	icon= 'modular_chomp/icons/mob/human_face.dmi'
 	icon_state = "teshari_crest"
 
 /datum/sprite_accessory/hair/teshari/soap
 	name = "Teshari Soap"
-	icon_add = 'modular_chomp/icons/mob/human_face.dmi'
+	icon = 'modular_chomp/icons/mob/human_face.dmi'
 	icon_state = "teshari_soap"
 
 //screll hair override
@@ -528,8 +528,6 @@
 //una hair override with shading
 /datum/sprite_accessory/hair/una/Chomp
 	name = "Long Unathi Spines Ch."
-	icon_state = "soghun_longspines"
-	name = "Long Unathi Spines"
 	icon_state = "soghun_longspines"
 	icon = 'modular_chomp/icons/mob/hair_unathi.dmi'
 	icon_add = 'modular_chomp/icons/mob/hair_unathi_add.dmi'
@@ -606,23 +604,11 @@
 	name = "Curled Unathi Horns"
 	icon_state = "unathi_horns_curled"
 
-/datum/sprite_accessory/hair/una/ram_horns
-	icon = 'modular_chomp/icons/mob/hair_unathi.dmi'
-	icon_add = 'modular_chomp/icons/mob/hair_unathi_add.dmi'
-	name = "Unathi Ram Horns"
-	icon_state = "unathi_horns_ram"
-
 /datum/sprite_accessory/hair/una/thick_ram_horns
 	icon = 'modular_chomp/icons/mob/hair_unathi.dmi'
 	icon_add = 'modular_chomp/icons/mob/hair_unathi_add.dmi'
 	name = "Thick Unathi Ram Horns"
 	icon_state = "unathi_horns_ram_thick"
-
-/datum/sprite_accessory/hair/una/double_horns
-	icon = 'modular_chomp/icons/mob/hair_unathi.dmi'
-	icon_add = 'modular_chomp/icons/mob/hair_unathi_add.dmi'
-	name = "Double Unathi Horns"
-	icon_state = "unathi_horns_double"
 
 /datum/sprite_accessory/hair/una/swept_horns
 	icon = 'modular_chomp/icons/mob/hair_unathi.dmi'
