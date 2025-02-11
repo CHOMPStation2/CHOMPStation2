@@ -1,6 +1,6 @@
 /obj/machinery/suspension_gen
 	name = "suspension field generator"
-	desc = "It has stubby bolts up against it's treads for stabilising."
+	desc = "It has stubby bolts up against it's treads for stabilising. Used to be required for artifact removal but now merely works as a monster deterrant."
 	icon = 'icons/obj/xenoarchaeology.dmi'
 	icon_state = "suspension"
 	density = 1
@@ -78,13 +78,13 @@
 					if(anchored)
 						activate()
 					else
-						to_chat(usr, span_warning("You are unable to activate [src] until it is properly secured on the ground."))
+						to_chat(ui.user, span_warning("You are unable to activate [src] until it is properly secured on the ground."))
 			else
 				deactivate()
 			return TRUE
 
 		if("lock")
-			if(allowed(usr))
+			if(allowed(ui.user))
 				locked = !locked
 				return TRUE
 

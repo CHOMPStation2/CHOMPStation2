@@ -96,7 +96,7 @@
 		return
 
 	if(istype(W, /obj/item/card/id)||istype(W, /obj/item/pda))
-		if(allowed(usr))
+		if(allowed(user))
 			if(emagged)
 				to_chat(user, span_notice("The turret control is unresponsive."))
 			else
@@ -149,10 +149,10 @@
 	)
 	return data
 
-/obj/machinery/turretid/tgui_act(action, params)
+/obj/machinery/turretid/tgui_act(action, params, datum/tgui/ui)
 	if(..())
 		return
-	if(isLocked(usr))
+	if(isLocked(ui.user))
 		return
 
 	. = TRUE

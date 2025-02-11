@@ -54,7 +54,7 @@
 		else
 			for(var/mob/M in viewers(1, src))
 				if (M.client && M.machine == src)
-					src.updateUsrDialog()
+					src.updateUsrDialog(M)
 
 	proc
 		overheat()
@@ -110,7 +110,7 @@
 	proc
 		interact(mob/user)
 			if (get_dist(src, user) > 1 )
-				if (!istype(user, /mob/living/silicon/ai))
+				if (!isAI(user))
 					user.machine = null
 					user << browse(null, "window=port_gen")
 					return
@@ -119,17 +119,17 @@
 
 			var/dat = text(span_bold("[name]") + "<br>")
 			if (active)
-				dat += text("Generator: <A href='?src=\ref[src];action=disable'>On</A><br>")
+				dat += text("Generator: <A href='byond://?src=\ref[src];action=disable'>On</A><br>")
 			else
-				dat += text("Generator: <A href='?src=\ref[src];action=enable'>Off</A><br>")
+				dat += text("Generator: <A href='byond://?src=\ref[src];action=enable'>Off</A><br>")
 			if(P)
 				dat += text("Currently loaded phoron tank: [P.air_contents.phoron]<br>")
 			else
 				dat += text("No phoron tank currently loaded.<br>")
-			dat += text("Power output: <A href='?src=\ref[src];action=lower_power'>-</A> [power_gen * power_output] <A href='?src=\ref[src];action=higher_power'>+</A><br>")
+			dat += text("Power output: <A href='byond://?src=\ref[src];action=lower_power'>-</A> [power_gen * power_output] <A href='byond://?src=\ref[src];action=higher_power'>+</A><br>")
 			dat += text("Heat: [heat]<br>")
-			dat += "<br><A href='?src=\ref[src];action=close'>Close</A>"
-			user << browse("[dat]", "window=port_gen")
+			dat += "<br><A href='byond://?src=\ref[src];action=close'>Close</A>"
+			user << browse("<html>[dat]</html>", "window=port_gen")
 
 	Topic(href, href_list)
 		if(..())
@@ -141,20 +141,20 @@
 				if(!active && HasFuel())
 					active = 1
 					icon_state = "portgen1"
-					src.updateUsrDialog()
+					src.updateUsrDialog(usr)
 			if(href_list["action"] == "disable")
 				if (active)
 					active = 0
 					icon_state = "portgen0"
-					src.updateUsrDialog()
+					src.updateUsrDialog(usr)
 			if(href_list["action"] == "lower_power")
 				if (power_output > 1)
 					power_output--
-					src.updateUsrDialog()
+					src.updateUsrDialog(usr)
 			if (href_list["action"] == "higher_power")
 				if (power_output < 4 || emagged)
 					power_output++
-					src.updateUsrDialog()
+					src.updateUsrDialog(usr)
 			if (href_list["action"] == "close")
 				usr << browse(null, "window=port_gen")
 				usr.machine = null

@@ -20,7 +20,7 @@
 	START_PROCESSING(SSobj, src)
 
 /turf/proc/clean_deploy(atom/source)
-	if(source.reagents.has_reagent("water", 1))
+	if(source.reagents.has_reagent(REAGENT_ID_WATER, 1))
 		clean_blood()
 		if(istype(src, /turf/simulated))
 			var/turf/simulated/T = src
@@ -56,13 +56,14 @@
 	user.drop_from_inventory(src)
 	spawn(1) if(!QDELETED(src)) qdel(src)
 
-/obj/item/mop_deploy/dropped()
+/obj/item/mop_deploy/dropped(mob/user)
+	..()
 	spawn(1) if(!QDELETED(src)) qdel(src)
 
 /obj/item/mop_deploy/process()
 	if(!creator || loc != creator || !creator.item_is_in_hands(src))
 		// Tidy up a bit.
-		if(istype(loc,/mob/living))
+		if(isliving(loc))
 			var/mob/living/carbon/human/host = loc
 			if(istype(host))
 				for(var/obj/item/organ/external/organ in host.organs)

@@ -40,6 +40,7 @@
 	icon_state = "pillowpile_large_pink"
 	var/pillowpilefront = "/obj/structure/bed/pillowpilefront"
 	var/sourcepillow = "/obj/item/bedsheet/pillow"
+	flippable = FALSE
 
 /obj/structure/bed/pillowpilefront
 	name = "pillow pile"
@@ -50,8 +51,8 @@
 	plane = MOB_PLANE
 	var/sourcepillow = "/obj/item/bedsheet/pillow"
 
-/obj/structure/bed/pillowpile/New()
-	..()
+/obj/structure/bed/pillowpile/Initialize()
+	. = ..()
 	var/turf/T = get_turf(src)
 	new pillowpilefront(T)
 

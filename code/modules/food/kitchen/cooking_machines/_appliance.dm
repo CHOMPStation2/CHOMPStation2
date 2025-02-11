@@ -43,6 +43,11 @@
 	var/combine_first = FALSE // If TRUE, this appliance will do combination cooking before checking recipes
 	var/food_safety = FALSE	//RS ADD - If true, the appliance automatically ejects food instead of burning it
 
+	var/static/radial_eject = image(icon = 'icons/mob/radial.dmi', icon_state = "radial_eject")
+	var/static/radial_power = image(icon = 'icons/mob/radial.dmi', icon_state = "radial_power")
+	var/static/radial_safety = image(icon = 'icons/mob/radial.dmi', icon_state = "radial_safety")
+	var/static/radial_output = image(icon = 'icons/mob/radial.dmi', icon_state = "radial_change_output")
+
 /obj/machinery/appliance/Initialize()
 	. = ..()
 
@@ -602,6 +607,12 @@
 	smoke.set_up(10, 0, get_turf(src), 300)
 	smoke.start()
 
+	// CHOMPAdd - Chance to make a terrible fire
+	if(prob(70))
+		var/turf/T = get_turf(src)
+		T.lingering_fire(0.45)
+	// CHOMPAdd End
+
 	// Set off fire alarms!
 	var/obj/machinery/firealarm/FA = locate() in get_area(src)
 	if(FA)
@@ -611,8 +622,31 @@
 	if(..())
 		return
 
-	if(cooking_objs.len)
-		removal_menu(user)
+	interact(user)
+
+/obj/machinery/appliance/interact(mob/user)
+	var/list/options = list(
+		"power" = radial_power,
+		"safety" = radial_safety,
+	)
+
+	if(LAZYLEN(cooking_objs))
+		options["remove"] = radial_eject
+
+	if(LAZYLEN(output_options))
+		options["select_output"] = radial_output
+
+	var/choice = show_radial_menu(user, src, options, require_near = !issilicon(user))
+
+	switch(choice)
+		if("power")
+			toggle_power()
+		if("safety")
+			toggle_safety()
+		if("remove")
+			removal_menu(user)
+		if("select_output")
+			choose_output()
 
 /obj/machinery/appliance/proc/removal_menu(var/mob/user)
 	if (can_remove_items(user))
@@ -688,19 +722,19 @@
 /mob/living/proc/calculate_composition() // moved from devour.dm on aurora's side
 	if (!composition_reagent)//if no reagent has been set, then we'll set one
 		if (isSynthetic())
-			src.composition_reagent = "iron"
+			src.composition_reagent = REAGENT_ID_IRON
 		else
 			if(istype(src, /mob/living/carbon/human/diona) || istype(src, /mob/living/carbon/alien/diona))
-				src.composition_reagent = "nutriment" // diona are plants, not meat
+				src.composition_reagent = REAGENT_ID_NUTRIMENT // diona are plants, not meat
 			else
-				src.composition_reagent = "protein"
-				if(istype(src, /mob/living/carbon/human))
+				src.composition_reagent = REAGENT_ID_PROTEIN
+				if(ishuman(src))
 					var/mob/living/carbon/human/H = src
 					if(istype(H.species, /datum/species/diona))
-						src.composition_reagent = "nutriment"
+						src.composition_reagent = REAGENT_ID_NUTRIMENT
 
 	//if the mob is a simple animal - MOB NOT ANIMAL - with a defined meat quantity
-	if (istype(src, /mob/living/simple_mob))
+	if (isanimal(src))
 		var/mob/living/simple_mob/SA = src
 		if(SA.meat_amount)
 			src.composition_reagent_quantity = SA.meat_amount*2*9

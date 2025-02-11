@@ -4,8 +4,7 @@
 
 /obj/machinery/computer/transhuman/resleeving
 	name = "resleeving control console"
-	catalogue_data = list(/datum/category_item/catalogue/information/organization/vey_med,
-						/datum/category_item/catalogue/technology/resleeving)
+	catalogue_data = list(/datum/category_item/catalogue/technology/resleeving)
 	icon_keyboard = "med_key"
 	icon_screen = "dna"
 	light_color = "#315ab4"
@@ -230,7 +229,7 @@
 
 	return data
 
-/obj/machinery/computer/transhuman/resleeving/tgui_act(action, params)
+/obj/machinery/computer/transhuman/resleeving/tgui_act(action, params, datum/tgui/ui)
 	. = ..()
 	if(.)
 		return
@@ -290,7 +289,7 @@
 							set_temp("Error: Not enough [MAT_STEEL] in SynthFab.", "danger")
 							active_br = null
 							return
-						else if(spod.stored_material["glass"] < spod.body_cost)
+						else if(spod.stored_material[MAT_GLASS] < spod.body_cost)
 							set_temp("Error: Not enough glass in SynthFab.", "danger")
 							active_br = null
 							return
@@ -391,7 +390,7 @@
 								subtargets += H
 							if(subtargets.len)
 								var/oc_sanity = sleever.occupant
-								override = tgui_input_list(usr,"Multiple bodies detected. Select target for resleeving of [active_mr.mindname] manually. Sleeving of primary body is unsafe with sub-contents, and is not listed.", "Resleeving Target", subtargets)
+								override = tgui_input_list(ui.user,"Multiple bodies detected. Select target for resleeving of [active_mr.mindname] manually. Sleeving of primary body is unsafe with sub-contents, and is not listed.", "Resleeving Target", subtargets)
 								if(!override || oc_sanity != sleever.occupant || !(override in sleever.occupant))
 									set_temp("Error: Target selection aborted.", "danger")
 									active_mr = null

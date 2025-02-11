@@ -1,6 +1,6 @@
 /datum/reagent/adranol
-	name = "Adranol"
-	id = "adranol"
+	name = REAGENT_ADRANOL
+	id = REAGENT_ID_ADRANOL
 	description = "A mild sedative that calms the nerves and relaxes the patient."
 	taste_description = "milk"
 	reagent_state = LIQUID
@@ -18,8 +18,8 @@
 		M.make_jittery(min(-25*removed,0))
 
 /datum/reagent/numbing_enzyme
-	name = "Numbing Enzyme"
-	id = "numbenzyme"
+	name = REAGENT_NUMBENZYME
+	id = REAGENT_ID_NUMBENZYME
 	description = "Some sort of organic painkiller."
 	taste_description = "sourness"
 	reagent_state = LIQUID
@@ -61,8 +61,8 @@
 			H.stuttering += 20
 
 /datum/reagent/vermicetol
-	name = "Vermicetol"
-	id = "vermicetol"
+	name = REAGENT_VERMICETOL
+	id = REAGENT_ID_VERMICETOL
 	description = "A potent chemical that treats physical damage at an exceptional rate."
 	taste_description = "sparkles"
 	taste_mult = 3
@@ -80,10 +80,10 @@
 
 /*CHOMPStation removal begin
 /datum/reagent/sleevingcure
-	name = "Vey-Med Resleeving Booster"
-	id = "sleevingcure"
-	description = "A rare medication provided by Vey-Med that helps counteract negative side effects of using resleeving machinery. The instructions say to numb tongue before swallowing."
-	taste_description = "indescribably awful"
+	name = REAGENT_SLEEVINGCURE
+	id = REAGENT_ID_SLEEVINGCURE
+	description = "A rare medication provided by Vey-Med that helps counteract negative side effects of using imperfect resleeving machinery."
+	taste_description = "chocolate peanut butter"
 	taste_mult = 2
 	reagent_state = LIQUID
 	color = "#b4dcdc"
@@ -98,9 +98,9 @@
 
 
 /datum/reagent/prussian_blue //We don't have iodine, so prussian blue we go.
-	name = "Prussian Blue"
-	id = "prussian_blue"
-	description = "Prussian Blue is an medication used to temporarily pause the effects of radiation poisoning to allow for treatment. Does not treat radiation sickness on its own."
+	name = REAGENT_PRUSSIANBLUE
+	id = REAGENT_ID_PRUSSIANBLUE
+	description = "Prussian Blue is a medication used to temporarily pause the effects of radiation poisoning to allow for treatment. Does not treat radiation sickness on its own."
 	taste_description = "salt"
 	reagent_state = SOLID
 	color = "#003153" //Blue!
@@ -115,8 +115,8 @@
 		M.adjustToxLoss(-10 * removed)
 
 /datum/reagent/lipozilase // The anti-nutriment that rapidly removes weight.
-	name = "Lipozilase"
-	id = "lipozilase"
+	name = REAGENT_LIPOZILASE
+	id = REAGENT_ID_LIPOZILASE
 	description = "A chemical compound that causes a dangerously powerful fat-burning reaction."
 	taste_description = "blandness"
 	reagent_state = LIQUID
@@ -129,8 +129,8 @@
 		M.weight -= 0.3
 
 /datum/reagent/lipostipo // The drug that rapidly increases weight.
-	name = "Lipostipo"
-	id = "lipostipo"
+	name = REAGENT_LIPOSTIPO
+	id = REAGENT_ID_LIPOSTIPO
 	description = "A chemical compound that causes a dangerously powerful fat-adding reaction."
 	taste_description = "blubber"
 	reagent_state = LIQUID
@@ -143,8 +143,8 @@
 		M.weight += 0.3
 
 /datum/reagent/polymorph
-	name = "Transforitine"
-	id = "polymorph"
+	name = REAGENT_POLYMORPH
+	id = REAGENT_ID_POLYMORPH
 	description = "A chemical that instantly transforms the consumer into another creature."
 	taste_description = "luck"
 	reagent_state = LIQUID
@@ -225,23 +225,14 @@
 		ourmob.forceMove(get_dat_turf)
 		ourmob.vore_selected = M.vore_selected
 		M.vore_selected = null
-		for(var/obj/belly/B as anything in M.vore_organs)
-			log_debug("polymorph belly")
-			B.loc = ourmob
-			B.forceMove(ourmob)
-			B.owner = ourmob
-			M.vore_organs -= B
-			ourmob.vore_organs += B
+		ourmob.mob_belly_transfer(M)
 
 		M.soulgem.transfer_self(ourmob) //CHOMPAdd Soulcatcher
 
 		ourmob.Life(1)
 		if(ishuman(M))
-			log_debug("polymorph human")
 			for(var/obj/item/W in M)
-				log_debug("polymorph items")
 				if(istype(W, /obj/item/implant/backup) || istype(W, /obj/item/nif))
-					log_debug("polymorph implants")
 					continue
 				M.drop_from_inventory(W)
 
@@ -256,56 +247,7 @@
 		var/mob/living/new_mob = spawn_mob(M)
 		new_mob.faction = M.faction
 
-		if(new_mob && isliving(new_mob))
-			log_debug("polymorph new_mob")
-			for(var/obj/belly/B as anything in new_mob.vore_organs)
-				log_debug("polymorph new_mob belly")
-				new_mob.vore_organs -= B
-				qdel(B)
-			new_mob.vore_organs = list()
-			new_mob.name = M.name
-			new_mob.real_name = M.real_name
-			for(var/lang in M.languages)
-				new_mob.languages |= lang
-			M.copy_vore_prefs_to_mob(new_mob)
-			new_mob.vore_selected = M.vore_selected
-			if(ishuman(M))
-				log_debug("polymorph ishuman part2")
-				var/mob/living/carbon/human/H = M
-				if(ishuman(new_mob))
-					log_debug("polymorph ishuman(newmob)")
-					var/mob/living/carbon/human/N = new_mob
-					N.gender = H.gender
-					N.identifying_gender = H.identifying_gender
-				else
-					log_debug("polymorph gender else")
-					new_mob.gender = H.gender
-			else
-				log_debug("polymorph gender else 2")
-				new_mob.gender = M.gender
-				if(ishuman(new_mob))
-					var/mob/living/carbon/human/N = new_mob
-					N.identifying_gender = M.gender
-
-			for(var/obj/belly/B as anything in M.vore_organs)
-				B.loc = new_mob
-				B.forceMove(new_mob)
-				B.owner = new_mob
-				M.vore_organs -= B
-				new_mob.vore_organs += B
-
-			M.soulgem.transfer_self(new_mob) //CHOMPAdd Soulcatcher
-
-			new_mob.ckey = M.ckey
-			if(M.ai_holder && new_mob.ai_holder)
-				var/datum/ai_holder/old_AI = M.ai_holder
-				old_AI.set_stance(STANCE_SLEEP)
-				var/datum/ai_holder/new_AI = new_mob.ai_holder
-				new_AI.hostile = old_AI.hostile
-				new_AI.retaliate = old_AI.retaliate
-			M.loc = new_mob
-			M.forceMove(new_mob)
-			new_mob.tf_mob_holder = M
+		new_mob.mob_tf(M)
 	target.bloodstr.clear_reagents() //Got to clear all reagents to make sure mobs don't keep spawning.
 	target.ingested.clear_reagents()
 	target.touching.clear_reagents()
@@ -323,8 +265,8 @@
 	return new_mob
 
 /datum/reagent/glamour
-	name = "Glamour"
-	id = "glamour"
+	name = REAGENT_GLAMOUR
+	id = REAGENT_ID_GLAMOUR
 	description = "This material is from somewhere else, just being near produces changes."
 	taste_description = "change"
 	reagent_state = LIQUID

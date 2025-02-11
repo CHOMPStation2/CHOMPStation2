@@ -249,7 +249,7 @@
 
 /obj/item/pen/reagent/sleepy/New()
 	..()
-	reagents.add_reagent("chloralhydrate", 22)	//Used to be 100 sleep toxin//30 Chloral seems to be fatal, reducing it to 22./N
+	reagents.add_reagent(REAGENT_ID_CHLORALHYDRATE, 22)	//Used to be 100 sleep toxin//30 Chloral seems to be fatal, reducing it to 22./N
 
 
 /*
@@ -260,8 +260,8 @@
 
 /obj/item/pen/reagent/paralysis/New()
 	..()
-	reagents.add_reagent("zombiepowder", 5)
-	reagents.add_reagent("cryptobiolin", 10)
+	reagents.add_reagent(REAGENT_ID_ZOMBIEPOWDER, 5)
+	reagents.add_reagent(REAGENT_ID_CRYPTOBIOLIN, 10)
 
 /*
  * Chameleon Pen
@@ -269,7 +269,7 @@
 /obj/item/pen/chameleon
 	var/signature = ""
 
-/obj/item/pen/chameleon/attack_self(mob/user as mob)
+/obj/item/pen/chameleon/attack_self(mob/user)
 	/*
 	// Limit signatures to official crew members
 	var/personnel_list[] = list()
@@ -277,11 +277,11 @@
 		personnel_list.Add(t.fields["name"])
 	personnel_list.Add("Anonymous")
 
-	var/new_signature = tgui_input_list(usr, "Enter new signature pattern.", "New Signature", personnel_list)
+	var/new_signature = tgui_input_list(user, "Enter new signature pattern.", "New Signature", personnel_list)
 	if(new_signature)
 		signature = new_signature
 	*/
-	signature = sanitize(tgui_input_text(usr, "Enter new signature. Leave blank for 'Anonymous'", "New Signature", signature))
+	signature = sanitize(tgui_input_text(user, "Enter new signature. Leave blank for 'Anonymous'", "New Signature", signature))
 
 /obj/item/pen/proc/get_signature(var/mob/user)
 	return (user && user.real_name) ? user.real_name : "Anonymous"

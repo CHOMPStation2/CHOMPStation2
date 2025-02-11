@@ -33,7 +33,7 @@
 	can_be_pushed = 0
 /obj/item/robot_module/robot/exploration/New(var/mob/living/silicon/robot/R)
 	src.modules += new /obj/item/dogborg/sleeper/exploration(src)
-	src.modules += new /obj/item/gun/energy/locked/phasegun/unlocked/mounted/cyborg(src)
+	src.modules += new /obj/item/gun/energy/robotic/phasegun(src)
 	src.modules += new /obj/item/cataloguer(src)
 	src.modules += new /obj/item/roller_holder(src)
 	src.modules += new /obj/item/gun/energy/taser/mounted/cyborg/flare(src)

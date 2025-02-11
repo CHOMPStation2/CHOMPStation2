@@ -33,7 +33,7 @@ SUBSYSTEM_DEF(supply)
 		else
 			qdel(P)
 
-	return SS_INIT_SUCCESS // CHOMPEdit
+	return SS_INIT_SUCCESS
 
 // Supply shuttle ticker - handles supply point regeneration. Just add points over time.
 /datum/controller/subsystem/supply/fire()
@@ -121,11 +121,41 @@ SUBSYSTEM_DEF(supply)
 						EC.contents[EC.contents.len]["quantity"] = cashmoney.worth
 						EC.value += EC.contents[EC.contents.len]["value"]
 
+					if(istype(A, /obj/item/reagent_containers/glass/bottle/vaccine))
+						var/obj/item/reagent_containers/glass/bottle/vaccine/sale_bottle = A
+						if(!istype(CR, /obj/structure/closet/crate/freezer))
+							EC.contents = list(
+								"error" = "Error: Product was improperly packaged. Send conents in freezer crate to preserve contents for transport."
+							)
+						else if(sale_bottle.reagents.reagent_list.len != 1 || sale_bottle.reagents.get_reagent_amount(REAGENT_ID_VACCINE) < sale_bottle.volume)
+							EC.contents = list(
+								"error" = "Error: Tainted product in batch. Was opened, contaminated, or was full. Payment rendered null under terms of agreement."
+							)
+						else
+							EC.contents[EC.contents.len]["value"] = 5
+							EC.value += EC.contents[EC.contents.len]["value"]
+
 					// CHOMPAdd Start - Sell salvage
 					if(istype(A, /obj/item/salvage))
 						var/obj/item/salvage/salvagedStuff = A
 						EC.contents[EC.contents.len]["value"] = salvagedStuff.worth
 					// CHOMPAdd End
+
+				// CHOMPedit begin - Selling engineered organs
+					if(istype(A, /obj/item/organ/internal))
+						var/obj/item/organ/internal/organ_stuff = A
+						if(!istype(CR,/obj/structure/closet/crate/freezer))
+							EC.contents = list(
+								"error" = "Error: Product was improperly packaged. Send contents in freezer crate to preserve contents for transport."
+							)
+						else if(organ_stuff.health != initial(organ_stuff.health) )
+							EC.contents = list(
+								"error" = "Error: Product was damaged on arrival."
+							)
+						else
+							EC.contents[EC.contents.len]["value"] = organ_stuff.supply_conversion_value
+							EC.value += EC.contents[EC.contents.len]["value"]
+					// CHOMPedit end
 
 
 			// Make a log of it, but it wasn't shipped properly, and so isn't worth anything

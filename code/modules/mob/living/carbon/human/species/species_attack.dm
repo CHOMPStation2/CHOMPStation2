@@ -12,6 +12,7 @@
 	attack_noun = list("tendril")
 	eye_attack_text = "a tendril"
 	eye_attack_text_victim = "a tendril"
+	is_punch = TRUE
 
 /datum/unarmed_attack/claws
 	attack_name = "claws"
@@ -25,11 +26,9 @@
 	edge = TRUE
 
 /datum/unarmed_attack/claws/show_attack(var/mob/living/carbon/human/user, var/mob/living/carbon/human/target, var/zone, var/attack_damage)
-	var/skill = user.skills["combat"]
 	var/obj/item/organ/external/affecting = target.get_organ(zone)
 	var/datum/gender/T = gender_datums[user.get_visible_gender()]
 	var/datum/gender/TT = gender_datums[target.get_visible_gender()]
-	if(!skill)	skill = 1
 	attack_damage = CLAMP(attack_damage, 1, 5)
 
 	if(target == user)

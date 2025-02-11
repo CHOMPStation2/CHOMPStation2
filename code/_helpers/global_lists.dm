@@ -62,6 +62,7 @@ var/global/list/exclude_jobs = list(/datum/job/ai,/datum/job/cyborg)
 var/list/datum/visualnet/visual_nets = list()
 var/datum/visualnet/camera/cameranet = new()
 var/datum/visualnet/cult/cultnet = new()
+var/datum/visualnet/ghost/ghostnet = new()
 
 // Runes
 var/global/list/rune_list = new()
@@ -360,3 +361,21 @@ GLOBAL_LIST_EMPTY(legacy_globals)
 	GLOB.legacy_globals["item_tf_spawnpoints"] = item_tf_spawnpoints
 	GLOB.legacy_globals["existing_solargrubs"] = existing_solargrubs
 	*/
+
+var/global/list/selectable_footstep = list(
+	"Default" = FOOTSTEP_MOB_HUMAN,
+	"Claw" = FOOTSTEP_MOB_CLAW,
+	"Light Claw" = FOOTSTEP_MOB_TESHARI,
+	"Slither" = FOOTSTEP_MOB_SLITHER,
+)
+
+// Put any artifact effects that are duplicates, unique, or otherwise unwated in here! This prevents them from spawning via RNG.
+var/global/list/blacklisted_artifact_effects = list(
+	/datum/artifact_effect/gas/sleeping,
+	/datum/artifact_effect/gas/oxy,
+	/datum/artifact_effect/gas/carbondiox,
+	/datum/artifact_effect/gas/fuel,
+	/datum/artifact_effect/gas/nitro,
+	/datum/artifact_effect/gas/phoron,
+	/datum/artifact_effect/extreme
+)

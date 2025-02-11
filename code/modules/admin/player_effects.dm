@@ -1,7 +1,7 @@
 /client/proc/player_effects(var/mob/target in mob_list)
 	set name = "Player Effects"
 	set desc = "Modify a player character with various 'special treatments' from a list."
-	set category = "Fun.Event Kit" //CHOMPEdit
+	set category = "Fun.Event Kit"
 	if(!check_rights(R_FUN))
 		return
 
@@ -39,14 +39,14 @@
 /datum/eventkit/player_effects/tgui_state(mob/user)
 	return GLOB.tgui_admin_state
 
-/datum/eventkit/player_effects/tgui_act(action)
+/datum/eventkit/player_effects/tgui_act(action, list/params, datum/tgui/ui)
 	. = ..()
 	if(.)
 		return
-	if(!check_rights_for(usr.client, R_SPAWN))
+	if(!check_rights_for(ui.user.client, R_SPAWN))
 		return
 
-	log_and_message_admins("[key_name(user)] used player effect: [action] on [target.ckey] playing [target.name]")
+	log_and_message_admins("used player effect: [action] on [target.ckey] playing [target.name]", user)
 
 	switch(action)
 
@@ -66,7 +66,7 @@
 				to_chat(user,"[target] didn't have any breakable legs, sorry.")
 
 		if("bluespace_artillery")
-			bluespace_artillery(target,usr)
+			bluespace_artillery(target, ui.user)
 
 		if("spont_combustion")
 			var/mob/living/carbon/human/Tar = target
@@ -104,7 +104,7 @@
 			var/mob/living/simple_mob/shadekin/red/shadekin = new(Ts)
 			//Abuse of shadekin
 			shadekin.real_name = shadekin.name
-			shadekin.voremob_loaded = TRUE // CHOMPAdd
+			shadekin.voremob_loaded = TRUE
 			shadekin.init_vore()
 			shadekin.ability_flags |= 0x1
 			shadekin.phase_shift()
@@ -138,14 +138,14 @@
 				"Orange Eyes (Light)" = /mob/living/simple_mob/shadekin/orange/white,
 				"Orange Eyes (Brown)" = /mob/living/simple_mob/shadekin/orange/brown,
 				"Rivyr (Unique)" = /mob/living/simple_mob/shadekin/blue/rivyr)
-			var/kin_type = tgui_input_list(usr, "Select the type of shadekin for [target] nomf","Shadekin Type Choice", kin_types)
+			var/kin_type = tgui_input_list(ui.user, "Select the type of shadekin for [target] nomf","Shadekin Type Choice", kin_types)
 			if(!kin_type || !target)
 				return
 
 
 			kin_type = kin_types[kin_type]
 
-			var/myself = tgui_alert(usr, "Control the shadekin yourself or delete pred and prey after?","Control Shadekin?",list("Control","Cancel","Delete"))
+			var/myself = tgui_alert(ui.user, "Control the shadekin yourself or delete pred and prey after?","Control Shadekin?",list("Control","Cancel","Delete"))
 			if(!myself || myself == "Cancel" || !target)
 				return
 
@@ -158,7 +158,7 @@
 			target.transforming = TRUE //Cheap hack to stop them from moving
 			var/mob/living/simple_mob/shadekin/shadekin = new kin_type(Tt)
 			shadekin.real_name = shadekin.name
-			shadekin.voremob_loaded = TRUE // CHOMPAdd
+			shadekin.voremob_loaded = TRUE
 			shadekin.init_vore()
 			shadekin.can_be_drop_pred = TRUE
 			shadekin.dir = SOUTH
@@ -189,13 +189,13 @@
 
 
 		if("redspace_abduct")
-			redspace_abduction(target, usr)
+			redspace_abduction(target, ui.user)
 
 		if("autosave")
-			fake_autosave(target, usr)
+			fake_autosave(target, ui.user)
 
 		if("autosave2")
-			fake_autosave(target, usr, TRUE)
+			fake_autosave(target, ui.user, TRUE)
 
 		if("adspam")
 			if(target.client)
@@ -298,48 +298,7 @@
 			var/mob/living/new_mob = new chosen_beast(get_turf(M))
 			new_mob.faction = M.faction
 
-			if(new_mob && isliving(new_mob))
-				for(var/obj/belly/B as anything in new_mob.vore_organs)
-					new_mob.vore_organs -= B
-					qdel(B)
-				new_mob.vore_organs = list()
-				new_mob.name = M.name
-				new_mob.real_name = M.real_name
-				for(var/lang in M.languages)
-					new_mob.languages |= lang
-				M.copy_vore_prefs_to_mob(new_mob)
-				new_mob.vore_selected = M.vore_selected
-				if(ishuman(M))
-					var/mob/living/carbon/human/H = M
-					if(ishuman(new_mob))
-						var/mob/living/carbon/human/N = new_mob
-						N.gender = H.gender
-						N.identifying_gender = H.identifying_gender
-					else
-						new_mob.gender = H.gender
-				else
-					new_mob.gender = M.gender
-					if(ishuman(new_mob))
-						var/mob/living/carbon/human/N = new_mob
-						N.identifying_gender = M.gender
-
-				for(var/obj/belly/B as anything in M.vore_organs)
-					B.loc = new_mob
-					B.forceMove(new_mob)
-					B.owner = new_mob
-					M.vore_organs -= B
-					new_mob.vore_organs += B
-
-				new_mob.ckey = M.ckey
-				if(M.ai_holder && new_mob.ai_holder)
-					var/datum/ai_holder/old_AI = M.ai_holder
-					old_AI.set_stance(STANCE_SLEEP)
-					var/datum/ai_holder/new_AI = new_mob.ai_holder
-					new_AI.hostile = old_AI.hostile
-					new_AI.retaliate = old_AI.retaliate
-				M.loc = new_mob
-				M.forceMove(new_mob)
-				new_mob.tf_mob_holder = M
+			new_mob.mob_tf(M)
 
 		if("item_tf")
 			var/mob/living/M = target
@@ -610,6 +569,12 @@
 			add_verb(Tar, /mob/living/proc/eat_trash)
 			add_verb(Tar, /mob/living/proc/toggle_trash_catching)
 
+		if("active_cloaking")
+			var/mob/living/Tar = target
+			if(!istype(Tar))
+				return
+			add_verb(Tar, /mob/living/proc/toggle_active_cloaking)
+
 
 		////////INVENTORY//////////////
 
@@ -708,7 +673,7 @@
 					new chosen_NIF(Tar)
 				else
 					new /obj/item/nif(Tar)
-			log_and_message_admins("[key_name(user)] Quick NIF'd [Tar.real_name] with a [input_NIF].")
+			log_and_message_admins("Quick NIF'd [Tar.real_name] with a [input_NIF].", user)
 
 		if("resize")
 			user.client.resize(target)
@@ -720,7 +685,7 @@
 			if(where == "To Me")
 				user.client.Getmob(target)
 			if(where == "To Mob")
-				var/mob/selection = tgui_input_list(usr, "Select a mob to jump [target] to:", "Jump to mob", mob_list)
+				var/mob/selection = tgui_input_list(ui.user, "Select a mob to jump [target] to:", "Jump to mob", mob_list)
 				target.on_mob_jump()
 				target.forceMove(get_turf(selection))
 				log_admin("[key_name(user)] jumped [target] to [selection]")
@@ -766,23 +731,23 @@
 			X.orbit(target)
 
 		if("ai")
-			if(!istype(target, /mob/living))
-				to_chat(usr, span_notice("This can only be used on instances of type /mob/living"))
+			if(!isliving(target))
+				to_chat(ui.user, span_notice("This can only be used on instances of type /mob/living"))
 				return
 			var/mob/living/L = target
 			if(L.client || L.teleop)
-				to_chat(usr, span_warning("This cannot be used on player mobs!"))
+				to_chat(ui.user, span_warning("This cannot be used on player mobs!"))
 				return
 
 			if(L.ai_holder)	//Cleaning up the original ai
 				var/ai_holder_old = L.ai_holder
 				L.ai_holder = null
 				qdel(ai_holder_old)	//Only way I could make #TESTING - Unable to be GC'd to stop. del() logs show it works.
-			L.ai_holder_type = tgui_input_list(usr, "Choose AI holder", "AI Type", typesof(/datum/ai_holder/))
+			L.ai_holder_type = tgui_input_list(ui.user, "Choose AI holder", "AI Type", typesof(/datum/ai_holder/))
 			L.initialize_ai_holder()
-			L.faction = sanitize(tgui_input_text(usr, "Please input AI faction", "AI faction", "neutral"))
-			L.a_intent = tgui_input_list(usr, "Please choose AI intent", "AI intent", list(I_HURT, I_HELP))
-			if(tgui_alert(usr, "Make mob wake up? This is needed for carbon mobs.", "Wake mob?", list("Yes", "No")) == "Yes")
+			L.faction = sanitize(tgui_input_text(ui.user, "Please input AI faction", "AI faction", "neutral"))
+			L.a_intent = tgui_input_list(ui.user, "Please choose AI intent", "AI intent", list(I_HURT, I_HELP))
+			if(tgui_alert(ui.user, "Make mob wake up? This is needed for carbon mobs.", "Wake mob?", list("Yes", "No")) == "Yes")
 				L.AdjustSleeping(-100)
 
 		if("cloaking")
@@ -808,7 +773,7 @@
 			var/reply = tgui_input_text(target, "An admin has sent you a message: [message]", "Reply")
 			if(!reply)
 				return
-			log_and_message_admins("[key_name(target)] replied to [user]'s message: [reply].")
+			log_and_message_admins("replied to [user]'s message: [reply].", target)
 
 		if("stop-orbits")
 			//CHOMPEdit Start

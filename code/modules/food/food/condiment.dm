@@ -12,8 +12,8 @@
 	icon_state = "emptycondiment"
 	flags = OPENCONTAINER
 	possible_transfer_amounts = list(1,5,10)
-	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 6 //CHOMPEdit
+	center_of_mass_x = 16
+	center_of_mass_y = 6
 	volume = 50
 
 /obj/item/reagent_containers/food/condiment/attackby(var/obj/item/W as obj, var/mob/user as mob)
@@ -57,107 +57,107 @@
 /obj/item/reagent_containers/food/condiment/on_reagent_change()
 	if(reagents.reagent_list.len > 0)
 		switch(reagents.get_master_reagent_id())
-			if("ketchup")
-				name = "Ketchup"
+			if(REAGENT_ID_KETCHUP)
+				name = REAGENT_KETCHUP
 				desc = "You feel more American already."
 				icon_state = "ketchup"
-				center_of_mass_x = 16 //CHOMPEdit
-				center_of_mass_y= 6 //CHOMPEdit
-			if("mustard")
-				name = "Mustard"
+				center_of_mass_x = 16
+				center_of_mass_y = 6
+			if(REAGENT_ID_MUSTARD)
+				name = REAGENT_MUSTARD
 				desc = "A somewhat bitter topping."
 				icon_state = "mustard"
-				center_of_mass_x = 16 //CHOMPEdit
-				center_of_mass_y= 6 //CHOMPEdit
-			if("capsaicin")
+				center_of_mass_x = 16
+				center_of_mass_y = 6
+			if(REAGENT_ID_CAPSAICIN)
 				name = "Hotsauce"
 				desc = "You can almost TASTE the stomach ulcers now!"
 				icon_state = "hotsauce"
-				center_of_mass_x = 16 //CHOMPEdit
-				center_of_mass_y= 6 //CHOMPEdit
-			if("enzyme")
-				name = "Universal Enzyme"
+				center_of_mass_x = 16
+				center_of_mass_y = 6
+			if(REAGENT_ID_ENZYME)
+				name = REAGENT_ENZYME
 				desc = "Used in cooking various dishes."
 				icon_state = "enzyme"
-				center_of_mass_x = 16 //CHOMPEdit
-				center_of_mass_y= 6 //CHOMPEdit
-			if("soysauce")
-				name = "Soy Sauce"
+				center_of_mass_x = 16
+				center_of_mass_y = 6
+			if(REAGENT_ID_SOYSAUCE)
+				name = REAGENT_SOYSAUCE
 				desc = "A salty soy-based flavoring."
 				icon_state = "soysauce"
-				center_of_mass_x = 16 //CHOMPEdit
-				center_of_mass_y= 6 //CHOMPEdit
-			if("vinegar")
-				name = "Vinegar"
+				center_of_mass_x = 16
+				center_of_mass_y = 6
+			if(REAGENT_ID_VINEGAR)
+				name = REAGENT_VINEGAR
 				desc = "An acetic acid used in various dishes."
 				icon_state = "vinegar"
-				center_of_mass_x = 16 //CHOMPEdit
-				center_of_mass_y= 6 //CHOMPEdit
-			if("frostoil")
+				center_of_mass_x = 16
+				center_of_mass_y = 6
+			if(REAGENT_ID_FROSTOIL)
 				name = "Coldsauce"
 				desc = "Leaves the tongue numb in its passage."
 				icon_state = "coldsauce"
-				center_of_mass_x = 16 //CHOMPEdit
-				center_of_mass_y= 6 //CHOMPEdit
-			if("sodiumchloride")
+				center_of_mass_x = 16
+				center_of_mass_y = 6
+			if(REAGENT_ID_SODIUMCHLORIDE)
 				name = "Salt Shaker"
 				desc = "Salt. From space oceans, presumably."
 				icon_state = "saltshaker"
-				center_of_mass_x = 17 //CHOMPEdit
-				center_of_mass_y= 11 //CHOMPEdit
-			if("blackpepper")
+				center_of_mass_x = 17
+				center_of_mass_y = 11
+			if(REAGENT_ID_BLACKPEPPER)
 				name = "Pepper Mill"
 				desc = "Often used to flavor food or make people sneeze."
 				icon_state = "peppermillsmall"
-				center_of_mass_x = 17 //CHOMPEdit
-				center_of_mass_y= 11 //CHOMPEdit
-			if("cookingoil")
-				name = "Cooking Oil"
+				center_of_mass_x = 17
+				center_of_mass_y = 11
+			if(REAGENT_ID_COOKINGOIL)
+				name = REAGENT_COOKINGOIL
 				desc = "A delicious oil used in cooking. General purpose."
 				icon_state = "oliveoil"
-				center_of_mass_x = 16 //CHOMPEdit
-				center_of_mass_y= 6 //CHOMPEdit
-			if("sugar")
-				name = "Sugar"
+				center_of_mass_x = 16
+				center_of_mass_y = 6
+			if(REAGENT_ID_SUGAR)
+				name = REAGENT_SUGAR
 				desc = "Tastey space sugar!"
-				center_of_mass_x = 16 //CHOMPEdit
-				center_of_mass_y= 6 //CHOMPEdit
-			if("peanutbutter")
-				name = "Peanut Butter"
+				center_of_mass_x = 16
+				center_of_mass_y = 6
+			if(REAGENT_ID_PEANUTBUTTER)
+				name = REAGENT_PEANUTBUTTER
 				desc = "A jar of smooth peanut butter."
 				icon_state = "peanutbutter"
-				center_of_mass_x = 16 //CHOMPEdit
-				center_of_mass_y= 6 //CHOMPEdit
-			if("mayo")
-				name = "Mayonnaise"
+				center_of_mass_x = 16
+				center_of_mass_y = 6
+			if(REAGENT_ID_MAYO)
+				name = REAGENT_MAYO
 				desc = "A jar of mayonnaise!"
 				icon_state = "mayo"
-				center_of_mass_x = 16 //CHOMPEdit
-				center_of_mass_y= 6 //CHOMPEdit
-			if("yeast")
-				name = "Yeast"
+				center_of_mass_x = 16
+				center_of_mass_y = 6
+			if(REAGENT_ID_YEAST)
+				name = REAGENT_YEAST
 				desc = "This is what you use to make bread fluffy."
 				icon_state = "yeast"
-				center_of_mass_x = 16 //CHOMPEdit
-				center_of_mass_y= 6 //CHOMPEdit
-			if("spacespice")
+				center_of_mass_x = 16
+				center_of_mass_y = 6
+			if(REAGENT_ID_SPACESPICE)
 				name = "bottle of space spice"
 				desc = "An exotic blend of spices for cooking. Definitely not worms."
 				icon_state = "spacespicebottle"
-				center_of_mass_x = 16 //CHOMPEdit
-				center_of_mass_y= 6 //CHOMPEdit
-			if("barbecue")
+				center_of_mass_x = 16
+				center_of_mass_y = 6
+			if(REAGENT_ID_BARBECUE)
 				name = "barbecue sauce"
 				desc = "Barbecue sauce, it's labeled 'sweet and spicy'."
 				icon_state = "barbecue"
-				center_of_mass_x = 16 //CHOMPEdit
-				center_of_mass_y= 6 //CHOMPEdit
-			if("sprinkles")
-				name = "sprinkles"
+				center_of_mass_x = 16
+				center_of_mass_y = 6
+			if(REAGENT_ID_SPRINKLES)
+				name = REAGENT_ID_SPRINKLES
 				desc = "Bottle of sprinkles, colourful!"
 				icon_state= "sprinkles"
-				center_of_mass_x = 16 //CHOMPEdit
-				center_of_mass_y= 6 //CHOMPEdit
+				center_of_mass_x = 16
+				center_of_mass_y = 6
 			else
 				name = "Misc Condiment Bottle"
 				if (reagents.reagent_list.len==1)
@@ -165,87 +165,87 @@
 				else
 					desc = "A mixture of various condiments. [reagents.get_master_reagent_name()] is one of them."
 				icon_state = "mixedcondiments"
-				center_of_mass_x = 16 //CHOMPEdit
-				center_of_mass_y= 6 //CHOMPEdit
+				center_of_mass_x = 16
+				center_of_mass_y = 6
 	else
 		icon_state = "emptycondiment"
 		name = "Condiment Bottle"
 		desc = "An empty condiment bottle."
-		center_of_mass_x = 16 //CHOMPEdit
-		center_of_mass_y= 6 //CHOMPEdit
+		center_of_mass_x = 16
+		center_of_mass_y = 6
 		return
 
 /obj/item/reagent_containers/food/condiment/enzyme
-	name = "Universal Enzyme"
+	name = REAGENT_ENZYME
 	desc = "Used in cooking various dishes."
 	icon_state = "enzyme"
 
 /obj/item/reagent_containers/food/condiment/enzyme/Initialize()
 	. = ..()
-	reagents.add_reagent("enzyme", 50)
+	reagents.add_reagent(REAGENT_ID_ENZYME, 50)
 
 /obj/item/reagent_containers/food/condiment/sugar/Initialize()
 	. = ..()
-	reagents.add_reagent("sugar", 50)
+	reagents.add_reagent(REAGENT_ID_SUGAR, 50)
 
 /obj/item/reagent_containers/food/condiment/ketchup/Initialize()
 	. = ..()
-	reagents.add_reagent("ketchup", 50)
+	reagents.add_reagent(REAGENT_ID_KETCHUP, 50)
 
 /obj/item/reagent_containers/food/condiment/mustard/Initialize()
 	. = ..()
-	reagents.add_reagent("mustard", 50)
+	reagents.add_reagent(REAGENT_ID_MUSTARD, 50)
 
 /obj/item/reagent_containers/food/condiment/hotsauce/Initialize()
 	. = ..()
-	reagents.add_reagent("capsaicin", 50)
+	reagents.add_reagent(REAGENT_ID_CAPSAICIN, 50)
 
 /obj/item/reagent_containers/food/condiment/cookingoil
-	name = "Cooking Oil"
+	name = REAGENT_COOKINGOIL
 
 /obj/item/reagent_containers/food/condiment/cookingoil/Initialize()
 	. = ..()
-	reagents.add_reagent("cookingoil", 50)
+	reagents.add_reagent(REAGENT_ID_COOKINGOIL, 50)
 
 /obj/item/reagent_containers/food/condiment/cornoil
-	name = "Corn Oil"
+	name = REAGENT_CORNOIL
 
 /obj/item/reagent_containers/food/condiment/cornoil/Initialize()
 	. = ..()
-	reagents.add_reagent("cornoil", 50)
+	reagents.add_reagent(REAGENT_ID_CORNOIL, 50)
 
 /obj/item/reagent_containers/food/condiment/coldsauce/Initialize()
 	. = ..()
-	reagents.add_reagent("frostoil", 50)
+	reagents.add_reagent(REAGENT_ID_FROSTOIL, 50)
 
 /obj/item/reagent_containers/food/condiment/soysauce/Initialize()
 	. = ..()
-	reagents.add_reagent("soysauce", 50)
+	reagents.add_reagent(REAGENT_ID_SOYSAUCE, 50)
 
 /obj/item/reagent_containers/food/condiment/vinegar/Initialize()
 	. = ..()
-	reagents.add_reagent("vinegar", 50)
+	reagents.add_reagent(REAGENT_ID_VINEGAR, 50)
 
 /obj/item/reagent_containers/food/condiment/yeast
-	name = "Yeast"
+	name = REAGENT_YEAST
 
 /obj/item/reagent_containers/food/condiment/yeast/Initialize()
 	. = ..()
-	reagents.add_reagent("yeast", 50)
+	reagents.add_reagent(REAGENT_ID_YEAST, 50)
 
 /obj/item/reagent_containers/food/condiment/sprinkles
-	name = "Sprinkles"
+	name = REAGENT_SPRINKLES
 
 /obj/item/reagent_containers/food/condiment/sprinkles/Initialize()
 	. = ..()
-	reagents.add_reagent("sprinkles", 50)
+	reagents.add_reagent(REAGENT_ID_SPRINKLES, 50)
 
 /obj/item/reagent_containers/food/condiment/small
 	possible_transfer_amounts = list(1,20)
 	amount_per_transfer_from_this = 1
 	volume = 20
-	center_of_mass_x = 0 //CHOMPEdit
-	center_of_mass_y = 0 //CHOMPEdit
+	center_of_mass_x = 0
+	center_of_mass_y = 0
 
 /obj/item/reagent_containers/food/condiment/small/on_reagent_change()
 	return
@@ -254,43 +254,43 @@
 	name = "salt shaker"											//	a large one.
 	desc = "Salt. From space oceans, presumably."
 	icon_state = "saltshakersmall"
-	center_of_mass_x = 17 //CHOMPEdit
-	center_of_mass_y= 11 //CHOMPEdit
+	center_of_mass_x = 17
+	center_of_mass_y = 11
 
 /obj/item/reagent_containers/food/condiment/small/saltshaker/Initialize()
 	. = ..()
-	reagents.add_reagent("sodiumchloride", 20)
+	reagents.add_reagent(REAGENT_ID_SODIUMCHLORIDE, 20)
 
 /obj/item/reagent_containers/food/condiment/small/peppermill //Keeping name here to save map based headaches
 	name = "pepper shaker"
 	desc = "Often used to flavor food or make people sneeze."
 	icon_state = "peppershakersmall"
-	center_of_mass_x = 17 //CHOMPEdit
-	center_of_mass_y= 11 //CHOMPEdit
+	center_of_mass_x = 17
+	center_of_mass_y = 11
 
 /obj/item/reagent_containers/food/condiment/small/peppermill/Initialize()
 	. = ..()
-	reagents.add_reagent("blackpepper", 20)
+	reagents.add_reagent(REAGENT_ID_BLACKPEPPER, 20)
 
 /obj/item/reagent_containers/food/condiment/small/peppergrinder
 	name = "pepper mill"
 	desc = "Fancy way to season a dish or make people sneeze."
 	icon_state = "peppermill"
-	center_of_mass_x = 17 //CHOMPEdit
-	center_of_mass_y= 11 //CHOMPEdit
+	center_of_mass_x = 17
+	center_of_mass_y = 11
 
 /obj/item/reagent_containers/food/condiment/small/peppermill/Initialize()
 	. = ..()
-	reagents.add_reagent("blackpepper", 30)
+	reagents.add_reagent(REAGENT_ID_BLACKPEPPER, 30)
 
 /obj/item/reagent_containers/food/condiment/small/sugar
-	name = "sugar"
+	name = REAGENT_ID_SUGAR
 	desc = "Sweetness in a bottle"
 	icon_state = "sugarsmall"
 
 /obj/item/reagent_containers/food/condiment/small/sugar/Initialize()
 	. = ..()
-	reagents.add_reagent("sugar", 20)
+	reagents.add_reagent(REAGENT_ID_SUGAR, 20)
 
 //MRE condiments and drinks.
 
@@ -308,7 +308,7 @@
 
 /obj/item/reagent_containers/food/condiment/small/packet/salt/Initialize()
 	. = ..()
-	reagents.add_reagent("sodiumchloride", 5)
+	reagents.add_reagent(REAGENT_ID_SODIUMCHLORIDE, 5)
 
 /obj/item/reagent_containers/food/condiment/small/packet/pepper
 	name = "pepper packet"
@@ -317,7 +317,7 @@
 
 /obj/item/reagent_containers/food/condiment/small/packet/pepper/Initialize()
 	. = ..()
-	reagents.add_reagent("blackpepper", 5)
+	reagents.add_reagent(REAGENT_ID_BLACKPEPPER, 5)
 
 /obj/item/reagent_containers/food/condiment/small/packet/sugar
 	name = "sugar packet"
@@ -326,7 +326,7 @@
 
 /obj/item/reagent_containers/food/condiment/small/packet/sugar/Initialize()
 	. = ..()
-	reagents.add_reagent("sugar", 5)
+	reagents.add_reagent(REAGENT_ID_SUGAR, 5)
 
 /obj/item/reagent_containers/food/condiment/small/packet/jelly
 	name = "jelly packet"
@@ -336,7 +336,7 @@
 
 /obj/item/reagent_containers/food/condiment/small/packet/jelly/Initialize()
 	. = ..()
-	reagents.add_reagent("cherryjelly", 10)
+	reagents.add_reagent(REAGENT_ID_CHERRYJELLY, 10)
 
 /obj/item/reagent_containers/food/condiment/small/packet/honey
 	name = "honey packet"
@@ -346,7 +346,7 @@
 
 /obj/item/reagent_containers/food/condiment/small/packet/honey/Initialize()
 	. = ..()
-	reagents.add_reagent("honey", 10)
+	reagents.add_reagent(REAGENT_ID_HONEY, 10)
 
 /obj/item/reagent_containers/food/condiment/small/packet/capsaicin
 	name = "hot sauce packet"
@@ -355,7 +355,7 @@
 
 /obj/item/reagent_containers/food/condiment/small/packet/capsaicin/Initialize()
 	. = ..()
-	reagents.add_reagent("capsaicin", 5)
+	reagents.add_reagent(REAGENT_ID_CAPSAICIN, 5)
 
 /obj/item/reagent_containers/food/condiment/small/packet/ketchup
 	name = "ketchup packet"
@@ -364,7 +364,7 @@
 
 /obj/item/reagent_containers/food/condiment/small/packet/ketchup/Initialize()
 	. = ..()
-	reagents.add_reagent("ketchup", 5)
+	reagents.add_reagent(REAGENT_ID_KETCHUP, 5)
 
 /obj/item/reagent_containers/food/condiment/small/packet/mayo
 	name = "mayonnaise packet"
@@ -373,7 +373,7 @@
 
 /obj/item/reagent_containers/food/condiment/small/packet/mayo/Initialize()
 	. = ..()
-	reagents.add_reagent("mayo", 5)
+	reagents.add_reagent(REAGENT_ID_MAYO, 5)
 
 /obj/item/reagent_containers/food/condiment/small/packet/soy
 	name = "soy sauce packet"
@@ -382,7 +382,7 @@
 
 /obj/item/reagent_containers/food/condiment/small/packet/soy/Initialize()
 	. = ..()
-	reagents.add_reagent("soysauce", 5)
+	reagents.add_reagent(REAGENT_ID_SOYSAUCE, 5)
 
 /obj/item/reagent_containers/food/condiment/small/packet/coffee
 	name = "coffee powder packet"
@@ -390,7 +390,7 @@
 
 /obj/item/reagent_containers/food/condiment/small/packet/coffee/Initialize()
 	. = ..()
-	reagents.add_reagent("coffeepowder", 5)
+	reagents.add_reagent(REAGENT_ID_COFFEEPOWDER, 5)
 
 /obj/item/reagent_containers/food/condiment/small/packet/tea
 	name = "tea powder packet"
@@ -398,7 +398,7 @@
 
 /obj/item/reagent_containers/food/condiment/small/packet/tea/Initialize()
 	. = ..()
-	reagents.add_reagent("tea", 5)
+	reagents.add_reagent(REAGENT_ID_TEA, 5)
 
 /obj/item/reagent_containers/food/condiment/small/packet/cocoa
 	name = "cocoa powder packet"
@@ -406,7 +406,7 @@
 
 /obj/item/reagent_containers/food/condiment/small/packet/cocoa/Initialize()
 	. = ..()
-	reagents.add_reagent("coco", 5)
+	reagents.add_reagent(REAGENT_ID_COCO, 5)
 
 /obj/item/reagent_containers/food/condiment/small/packet/grape
 	name = "grape juice powder packet"
@@ -414,7 +414,7 @@
 
 /obj/item/reagent_containers/food/condiment/small/packet/grape/Initialize()
 	. = ..()
-	reagents.add_reagent("instantgrape", 5)
+	reagents.add_reagent(REAGENT_ID_INSTANTGRAPE, 5)
 
 /obj/item/reagent_containers/food/condiment/small/packet/orange
 	name = "orange juice powder packet"
@@ -422,7 +422,7 @@
 
 /obj/item/reagent_containers/food/condiment/small/packet/orange/Initialize()
 	. = ..()
-	reagents.add_reagent("instantorange", 5)
+	reagents.add_reagent(REAGENT_ID_INSTANTORANGE, 5)
 
 /obj/item/reagent_containers/food/condiment/small/packet/watermelon
 	name = "watermelon juice powder packet"
@@ -430,7 +430,7 @@
 
 /obj/item/reagent_containers/food/condiment/small/packet/watermelon/Initialize()
 	. = ..()
-	reagents.add_reagent("instantwatermelon", 5)
+	reagents.add_reagent(REAGENT_ID_INSTANTWATERMELON, 5)
 
 /obj/item/reagent_containers/food/condiment/small/packet/apple
 	name = "apple juice powder packet"
@@ -438,7 +438,7 @@
 
 /obj/item/reagent_containers/food/condiment/small/packet/apple/Initialize()
 	. = ..()
-	reagents.add_reagent("instantapple", 5)
+	reagents.add_reagent(REAGENT_ID_INSTANTAPPLE, 5)
 
 /obj/item/reagent_containers/food/condiment/small/packet/protein
 	name = "protein powder packet"
@@ -448,7 +448,7 @@
 
 /obj/item/reagent_containers/food/condiment/small/packet/protein/Initialize()
 	. = ..()
-	reagents.add_reagent("protein", 10)
+	reagents.add_reagent(REAGENT_ID_PROTEIN, 10)
 
 /obj/item/reagent_containers/food/condiment/small/packet/crayon
 	name = "crayon powder packet"
@@ -456,31 +456,31 @@
 	volume = 10
 /obj/item/reagent_containers/food/condiment/small/packet/crayon/generic/Initialize()
 	. = ..()
-	reagents.add_reagent("crayon_dust", 10)
+	reagents.add_reagent(REAGENT_ID_CRAYONDUST, 10)
 /obj/item/reagent_containers/food/condiment/small/packet/crayon/red/Initialize()
 	. = ..()
-	reagents.add_reagent("crayon_dust_red", 10)
+	reagents.add_reagent(REAGENT_ID_CRAYONDUSTRED, 10)
 /obj/item/reagent_containers/food/condiment/small/packet/crayon/orange/Initialize()
 	. = ..()
-	reagents.add_reagent("crayon_dust_orange", 10)
+	reagents.add_reagent(REAGENT_ID_CRAYONDUSTORANGE, 10)
 /obj/item/reagent_containers/food/condiment/small/packet/crayon/yellow/Initialize()
 	. = ..()
-	reagents.add_reagent("crayon_dust_yellow", 10)
+	reagents.add_reagent(REAGENT_ID_CRAYONDUSTYELLOW, 10)
 /obj/item/reagent_containers/food/condiment/small/packet/crayon/green/Initialize()
 	. = ..()
-	reagents.add_reagent("crayon_dust_green", 10)
+	reagents.add_reagent(REAGENT_ID_CRAYONDUSTGREEN, 10)
 /obj/item/reagent_containers/food/condiment/small/packet/crayon/blue/Initialize()
 	. = ..()
-	reagents.add_reagent("crayon_dust_blue", 10)
+	reagents.add_reagent(REAGENT_ID_CRAYONDUSTBLUE, 10)
 /obj/item/reagent_containers/food/condiment/small/packet/crayon/purple/Initialize()
 	. = ..()
-	reagents.add_reagent("crayon_dust_purple", 10)
+	reagents.add_reagent(REAGENT_ID_CRAYONDUSTPURPLE, 10)
 /obj/item/reagent_containers/food/condiment/small/packet/crayon/grey/Initialize()
 	. = ..()
-	reagents.add_reagent("crayon_dust_grey", 10)
+	reagents.add_reagent(REAGENT_ID_CRAYONDUSTGREY, 10)
 /obj/item/reagent_containers/food/condiment/small/packet/crayon/brown/Initialize()
 	. = ..()
-	reagents.add_reagent("crayon_dust_brown", 10)
+	reagents.add_reagent(REAGENT_ID_CRAYONDUSTBROWN, 10)
 
 //End of MRE stuff.
 
@@ -490,8 +490,8 @@
 	icon = 'icons/obj/food.dmi'
 	icon_state = "flour"
 	volume = 220
-	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 8 //CHOMPEdit
+	center_of_mass_x = 16
+	center_of_mass_y = 8
 
 /obj/item/reagent_containers/food/condiment/carton/flour/on_reagent_change()
 	update_icon()
@@ -499,7 +499,7 @@
 
 /obj/item/reagent_containers/food/condiment/carton/flour/Initialize()
 	. = ..()
-	reagents.add_reagent("flour", 200)
+	reagents.add_reagent(REAGENT_ID_FLOUR, 200)
 	randpixel_xy()
 
 /obj/item/reagent_containers/food/condiment/carton/update_icon()
@@ -520,10 +520,10 @@
 /obj/item/reagent_containers/food/condiment/carton/sugar
 	name = "sugar carton"
 	desc = "A big carton of sugar. Sweet!"
-	icon_state = "sugar"
+	icon_state = REAGENT_ID_SUGAR
 	volume = 120
-	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 8 //CHOMPEdit
+	center_of_mass_x = 16
+	center_of_mass_y = 8
 
 /obj/item/reagent_containers/food/condiment/carton/sugar/on_reagent_change()
 	update_icon()
@@ -531,7 +531,7 @@
 
 /obj/item/reagent_containers/food/condiment/carton/sugar/Initialize()
 	. = ..()
-	reagents.add_reagent("sugar", 100)
+	reagents.add_reagent(REAGENT_ID_SUGAR, 100)
 
 /obj/item/reagent_containers/food/condiment/carton/sugar/rustic
 	name = "sugar sack"
@@ -551,7 +551,7 @@
 
 /obj/item/reagent_containers/food/condiment/spacespice/Initialize()
 	. = ..()
-	reagents.add_reagent("spacespice", 40)
+	reagents.add_reagent(REAGENT_ID_SPACESPICE, 40)
 
 /obj/item/reagent_containers/food/condiment/small/packet/protein_powder
 	name = "protein powder packet"
@@ -560,7 +560,7 @@
 
 /obj/item/reagent_containers/food/condiment/small/packet/protein_powder/Initialize()
 	. = ..()
-	reagents.add_reagent("protein_powder", 5)
+	reagents.add_reagent(REAGENT_ID_PROTEINPOWDER, 5)
 
 /obj/item/reagent_containers/food/condiment/small/packet/protein_powder/vanilla
 	name = "vanilla protein powder packet"
@@ -569,7 +569,7 @@
 
 /obj/item/reagent_containers/food/condiment/small/packet/protein_powder/vanilla/Initialize()
 	. = ..()
-	reagents.add_reagent("vanilla_protein_powder", 5)
+	reagents.add_reagent(REAGENT_ID_VANILLAPROTEINPOWDER, 5)
 
 /obj/item/reagent_containers/food/condiment/small/packet/protein_powder/banana
 	name = "banana protein powder packet"
@@ -578,7 +578,7 @@
 
 /obj/item/reagent_containers/food/condiment/small/packet/protein_powder/banana/Initialize()
 	. = ..()
-	reagents.add_reagent("banana_protein_powder", 5)
+	reagents.add_reagent(REAGENT_ID_BANANAPROTEINPOWDER, 5)
 
 /obj/item/reagent_containers/food/condiment/small/packet/protein_powder/chocolate
 	name = "chocolate protein powder packet"
@@ -587,7 +587,7 @@
 
 /obj/item/reagent_containers/food/condiment/small/packet/protein_powder/chocolate/Initialize()
 	. = ..()
-	reagents.add_reagent("chocolate_protein_powder", 5)
+	reagents.add_reagent(REAGENT_ID_CHOCOLATEPROTEINPOWDER, 5)
 
 /obj/item/reagent_containers/food/condiment/small/packet/protein_powder/strawberry
 	name = "strawberry protein powder packet"
@@ -596,4 +596,4 @@
 
 /obj/item/reagent_containers/food/condiment/small/packet/protein_powder/strawberry/Initialize()
 	. = ..()
-	reagents.add_reagent("strawberry_protein_powder", 5)
+	reagents.add_reagent(REAGENT_ID_STRAWBERRYPROTEINPOWDER, 5)

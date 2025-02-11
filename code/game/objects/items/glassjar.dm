@@ -76,8 +76,8 @@
 		if(istype(M,/mob/living/voice)) //Don't knock voices out!
 			continue
 		M.forceMove(get_turf(user))
-		to_chat(M, "<span class='warning'>[user] shakes you out of \the [src]!</span>")
-		to_chat(user, "<span class='notice'>You shake [M] out of \the [src]!</span>")
+		to_chat(M, span_warning("[user] shakes you out of \the [src]!"))
+		to_chat(user, span_notice("You shake [M] out of \the [src]!"))
 //CHOMPADD END
 /obj/item/glass_jar/attackby(var/obj/item/W, var/mob/user)
 	if(istype(W, /obj/item/spacecash))
@@ -98,15 +98,15 @@
 				continue
 			full++
 		if(full >= 2)
-			to_chat(user, "<span class='warning'>You can't fit anyone else into \the [src]!</span>")
+			to_chat(user, span_warning("You can't fit anyone else into \the [src]!"))
 		else
 			var/obj/item/holder/micro/holder = W
 			if(holder.held_mob && (holder.held_mob in holder))
 				var/mob/living/M = holder.held_mob
 				holder.dump_mob()
-				to_chat(M, "<span class='warning'>[user] stuffs you into \the [src]!</span>")
+				to_chat(M, span_warning("[user] stuffs you into \the [src]!"))
 				M.forceMove(src)
-				to_chat(user, "<span class='notice'>You stuff \the [M] into \the [src]!</span>")
+				to_chat(user, span_notice("You stuff \the [M] into \the [src]!"))
 //CHOMPADD END
 /obj/item/glass_jar/update_icon() // Also updates name and desc
 	underlays.Cut()
@@ -207,7 +207,7 @@
 /obj/item/glass_jar/fish/afterattack(var/atom/A, var/mob/user, var/proximity)
 	if(!filled)
 		if(istype(A, /obj/structure/sink) || istype(A, /turf/simulated/floor/water))
-			if(contains && user.a_intent == "help")
+			if(contains && user.a_intent == I_HELP)
 				to_chat(user, span_warning("That probably isn't the best idea."))
 				return
 
@@ -221,7 +221,7 @@
 /obj/item/glass_jar/fish/attack_self(var/mob/user)
 	if(filled)
 		if(contains == JAR_ANIMAL)
-			if(user.a_intent == "help")
+			if(user.a_intent == I_HELP)
 				to_chat(user, span_notice("Maybe you shouldn't empty the water..."))
 				return
 

@@ -201,13 +201,13 @@ Thus, the two variables affect pump operation are set in New():
 /obj/machinery/atmospherics/binary/pump/attack_hand(mob/user)
 	if(..())
 		return
-	add_fingerprint(usr)
+	add_fingerprint(user)
 	if(!allowed(user))
 		to_chat(user, span_warning("Access denied."))
 		return
 	tgui_interact(user)
 
-/obj/machinery/atmospherics/binary/pump/tgui_act(action, params)
+/obj/machinery/atmospherics/binary/pump/tgui_act(action, params, datum/tgui/ui)
 	if(..())
 		return TRUE
 
@@ -223,11 +223,11 @@ Thus, the two variables affect pump operation are set in New():
 				if("max")
 					target_pressure = max_pressure_setting
 				if("set")
-					var/new_pressure = tgui_input_number(usr,"Enter new output pressure (0-[max_pressure_setting]kPa)","Pressure control",src.target_pressure,max_pressure_setting,0)
+					var/new_pressure = tgui_input_number(ui.user,"Enter new output pressure (0-[max_pressure_setting]kPa)","Pressure control",src.target_pressure,max_pressure_setting,0)
 					src.target_pressure = between(0, new_pressure, max_pressure_setting)
 			. = TRUE
 
-	add_fingerprint(usr)
+	add_fingerprint(ui.user)
 	update_icon()
 
 /obj/machinery/atmospherics/binary/pump/power_change()
@@ -254,3 +254,30 @@ Thus, the two variables affect pump operation are set in New():
 			span_notice("You have unfastened \the [src]."), \
 			"You hear ratchet.")
 		deconstruct()
+
+
+
+//CHOMPEdit Start - Adds TGStation keybinds to save our engineers some time.
+/obj/machinery/atmospherics/binary/pump/AltClick(mob/user)
+	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
+	if(allowed(user))
+		to_chat(user, span_notice("You set the [name] to max output"))
+		target_pressure = max_pressure_setting
+		add_fingerprint(user)
+	else
+		to_chat(user, span_warning("Access denied."))
+
+/obj/machinery/atmospherics/binary/pump/CtrlClick(mob/user)
+	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
+	if(allowed(user))
+		update_use_power(!use_power)
+		update_icon()
+		add_fingerprint(user)
+		if(use_power)
+			to_chat(user, span_notice("You toggle the [name] on."))
+		else
+			to_chat(user, span_notice("You toggle the [name] off."))
+
+	else
+		to_chat(user, span_warning("Access denied."))
+//CHOMPEdit End

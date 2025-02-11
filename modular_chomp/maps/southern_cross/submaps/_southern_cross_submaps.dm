@@ -20,7 +20,7 @@
 #include "gateway/BaseBlep.dmm"
 #include "gateway/maddnesslab.dmm"
 #include "gateway/snowfield.dmm"
-#include "gateway/hiddeneclipse.dmm"
+// #include "gateway/hiddeneclipse.dmm" //needs remaping and energy is low.
 #include "../../virtual_reality/constructVR.dmm"
 #endif
 
@@ -42,20 +42,20 @@
 /datum/map_template/sc_lateload/gateway/snowfield
 	name = "Snow Field"
 	desc = "An old base in middle of snowy wasteland"
-	mappath = 'gateway/snowfield.dmm'
+	mappath = "modular_chomp/maps/southern_cross/submaps/gateway/snowfield.dmm"
 
 #include "gateway/darkrps.dm"
 /datum/map_template/sc_lateload/gateway/darkrps
 	name = "Abandoned City"
 	desc = "An abandoned city overrun with piracy and mercernaries."
-	mappath = 'gateway/darkrps.dmm'
+	mappath = "modular_chomp/maps/southern_cross/submaps/gateway/darkrps.dmm"
 	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
 
 #include "gateway/diescraper.dm"
 /datum/map_template/sc_lateload/gateway/diescraper
 	name = "Skyscraper"
 	desc = "A skyscraper of various businesses, apartments, and recreations. Do not fall"
-	mappath = 'gateway/diescraper.dmm'
+	mappath = "modular_chomp/maps/southern_cross/submaps/gateway/diescraper.dmm"
 	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
 
 #include "gateway/BaseBlep.dm"
@@ -63,30 +63,30 @@
 	name = "Base Blep"
 	desc = "A brand new but already lost base at the end of a squishy canyon"
 
-	mappath = 'gateway/BaseBlep.dmm'
+	mappath = "modular_chomp/maps/southern_cross/submaps/gateway/BaseBlep.dmm"
 	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
 
 #include "gateway/maddnesslab.dm"
 /datum/map_template/sc_lateload/gateway/maddnesslab
 	name = "Maddness Lab"
 	desc = "An ancient base brimming with creations of maddness"
-	mappath = 'gateway/maddnesslab.dmm'
+	mappath = "modular_chomp/maps/southern_cross/submaps/gateway/maddnesslab.dmm"
 	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
 
 #include "gateway/carpfarm.dm"
 /datum/map_template/sc_lateload/gateway/carpfarm
 	name = "Carp Farm"
 	desc = "Asteroid base surrounded by carp"
-	mappath = 'gateway/carpfarm.dmm'
+	mappath = "modular_chomp/maps/southern_cross/submaps/gateway/carpfarm.dmm"
 	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
-
+/*
 #include "gateway/hiddeneclipse.dm"
 /datum/map_template/sc_lateload/gateway/hiddeneclipse
 	name = "Distant Mining Facility"
 	desc = "Asteroid mining facility, lost to unknown horrors"
-	mappath = 'gateway/hiddeneclipse.dmm'
+	mappath = "modular_chomp/maps/southern_cross/submaps/gateway/hiddeneclipse.dmm"
 	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
-
+*/
 //VR maps go here, tell me if theres a better way to load this
 // #include "virtual_reality/constructVR.dm" Virtual Reality areas included by default.
 //#include "modular_chomp/maps/virtual_reality/constructVR.dm" //Included in .dme
@@ -268,14 +268,14 @@
 				my_mob.maxbodytemp = env.temperature * 1.2
 
 				var/list/gaslist = env.gas
-				my_mob.min_oxy = gaslist["oxygen"] * 0.8
-				my_mob.min_tox = gaslist["phoron"] * 0.8
-				my_mob.min_n2 = gaslist["nitrogen"] * 0.8
-				my_mob.min_co2 = gaslist["carbon_dioxide"] * 0.8
-				my_mob.max_oxy = gaslist["oxygen"] * 1.2
-				my_mob.max_tox = gaslist["phoron"] * 1.2
-				my_mob.max_n2 = gaslist["nitrogen"] * 1.2
-				my_mob.max_co2 = gaslist["carbon_dioxide"] * 1.2
+				my_mob.min_oxy = gaslist[GAS_O2] * 0.8
+				my_mob.min_tox = gaslist[GAS_PHORON] * 0.8
+				my_mob.min_n2 = gaslist[GAS_N2] * 0.8
+				my_mob.min_co2 = gaslist[GAS_CO2] * 0.8
+				my_mob.max_oxy = gaslist[GAS_O2] * 1.2
+				my_mob.max_tox = gaslist[GAS_PHORON] * 1.2
+				my_mob.max_n2 = gaslist[GAS_N2] * 1.2
+				my_mob.max_co2 = gaslist[GAS_CO2] * 1.2
 /* //VORESTATION AI TEMPORARY REMOVAL
 		if(guard)
 			my_mob.returns_home = TRUE

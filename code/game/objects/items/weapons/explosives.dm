@@ -39,7 +39,7 @@
 		..()
 
 /obj/item/plastique/attack_self(mob/user as mob)
-	var/newtime = tgui_input_number(usr, "Please set the timer.", "Timer", 10, 60000, 10)
+	var/newtime = tgui_input_number(user, "Please set the timer.", "Timer", 10, 60000, 10)
 	if(user.get_active_hand() == src)
 		newtime = CLAMP(newtime, 10, 60000)
 		timer = newtime
@@ -62,7 +62,7 @@
 			add_attack_logs(user, target, "planted [name] on with [timer] second fuse")
 			user.visible_message(span_danger("[user.name] finished planting an explosive on [target.name]!"))
 		else
-			message_admins("[key_name(user, user.client)](<A HREF='?_src_=holder;[HrefToken()];adminmoreinfo=\ref[user]'>?</A>) planted [src.name] on [target.name] at ([target.x],[target.y],[target.z] - <A HREF='?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[target.x];Y=[target.y];Z=[target.z]'>JMP</a>) with [timer] second fuse",0,1)
+			message_admins("[key_name(user, user.client)](<A href='byond://?_src_=holder;[HrefToken()];adminmoreinfo=\ref[user]'>?</A>) planted [src.name] on [target.name] at ([target.x],[target.y],[target.z] - <A href='byond://?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[target.x];Y=[target.y];Z=[target.z]'>JMP</a>) with [timer] second fuse",0,1)
 			log_game("[key_name(user)] planted [src.name] on [target.name] at ([target.x],[target.y],[target.z]) with [timer] second fuse")
 
 		target.add_overlay(image_overlay, TRUE)
@@ -82,7 +82,7 @@
 		if (istype(target, /turf/simulated/wall))
 			var/turf/simulated/wall/W = target
 			W.dismantle_wall(1,1,1)
-		else if(istype(target, /mob/living))
+		else if(isliving(target))
 			target.ex_act(2) // c4 can't gib mobs anymore.
 		else
 			target.ex_act(1)

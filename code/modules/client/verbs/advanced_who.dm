@@ -68,7 +68,7 @@
 				entry += "[seconds % 60] seconds)"
 
 			entry += "</td><td>"
-			entry += " (<A HREF='?_src_=holder;[HrefToken()];adminmoreinfo=\ref[C.mob]'>?</A>)"
+			entry += " (<A href='byond://?_src_=holder;[HrefToken()];adminmoreinfo=\ref[C.mob]'>?</A>)"
 			entry += "</td></tr>"
 
 			Lines += entry
@@ -82,7 +82,7 @@
 			var/mob/observer/dead/O = C.mob
 			if(isobserver(O))
 				entry += " - " + span_gray("Observing") + "<br>"
-			else if(istype(O,/mob/new_player))
+			else if(isnewplayer(O))
 				entry += " - " + span_blue("In Lobby") + "<br>"
 			else
 				entry += " - "+ span_green("Playing") + "<br>"

@@ -85,7 +85,7 @@ var/obj/screen/robot_inventory
 	using = new /obj/screen()
 	using.name = "mov_intent"
 	using.icon = HUD.ui_style
-	using.icon_state = (m_intent == "run" ? "running" : "walking")
+	using.icon_state = (m_intent == I_RUN ? "running" : "walking")
 	using.screen_loc = ui_movi
 	using.color = HUD.ui_color
 	using.alpha = HUD.ui_alpha
@@ -230,7 +230,7 @@ var/obj/screen/robot_inventory
 			else if(speed == -1)
 				using.icon_state = "speed_2"
 			HUD.control_vtec = using
-			m_intent = "run"
+			m_intent = I_RUN
 			HUD.move_intent.icon_state = "running"
 			client.screen += HUD.control_vtec
 
@@ -254,7 +254,7 @@ var/obj/screen/robot_inventory
 			control_vtec.icon_state = "speed_1"
 		else if(R.speed == -1)
 			control_vtec.icon_state = "speed_2"
-		R.m_intent = "run"
+		R.m_intent = I_RUN
 		R.hud_used.move_intent.icon_state = "running"
 		R.client?.screen += control_vtec
 	else
@@ -282,11 +282,11 @@ var/obj/screen/robot_inventory
 		//r.client.screen += robot_inventory	//"store" icon
 
 		if(!r.module)
-			to_chat(usr, span_danger("No module selected"))
+			to_chat(r, span_danger("No module selected"))
 			return
 
 		if(!r.module.modules)
-			to_chat(usr, span_danger("Selected module has no modules to select"))
+			to_chat(r, span_danger("Selected module has no modules to select"))
 			return
 
 		if(!r.robot_modules_background)

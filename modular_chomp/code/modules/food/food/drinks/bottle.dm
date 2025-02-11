@@ -1,5 +1,5 @@
 /obj/item/reagent_containers/food/drinks/bottle/snaps
-	name = "Akvavit"
+	name = REAGENT_SNAPS
 	desc = "This could go well with lunch."
 	icon = 'modular_chomp/icons/obj/drinks.dmi'
 	icon_state = "snapsbottle"
@@ -8,4 +8,4 @@
 
 /obj/item/reagent_containers/food/drinks/bottle/snaps/Initialize()
 	. = ..()
-	reagents.add_reagent("snaps", 100)
+	reagents.add_reagent(REAGENT_ID_SNAPS, 100)

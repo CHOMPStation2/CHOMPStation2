@@ -291,36 +291,36 @@
 					var/mob/living/carbon/C = usr
 					if(C.legcuffed)
 						to_chat(C, span_notice("You are legcuffed! You cannot run until you get [C.legcuffed] removed!"))
-						C.m_intent = "walk"	//Just incase
+						C.m_intent = I_WALK	//Just incase
 						C.hud_used.move_intent.icon_state = "walking"
 						return 1
 				var/mob/living/L = usr
 				switch(L.m_intent)
-					if("run")
-						L.m_intent = "walk"
+					if(I_RUN)
+						L.m_intent = I_WALK
 						L.hud_used.move_intent.icon_state = "walking"
-					if("walk")
-						L.m_intent = "run"
+					if(I_WALK)
+						L.m_intent = I_RUN
 						L.hud_used.move_intent.icon_state = "running"
 		if("m_intent")
 			if(!usr.m_int)
 				switch(usr.m_intent)
-					if("run")
+					if(I_RUN)
 						usr.m_int = "13,14"
-					if("walk")
+					if(I_WALK)
 						usr.m_int = "14,14"
 					if("face")
 						usr.m_int = "15,14"
 			else
 				usr.m_int = null
-		if("walk")
-			usr.m_intent = "walk"
+		if(I_WALK)
+			usr.m_intent = I_WALK
 			usr.m_int = "14,14"
 		if("face")
 			usr.m_intent = "face"
 			usr.m_int = "15,14"
-		if("run")
-			usr.m_intent = "run"
+		if(I_RUN)
+			usr.m_intent = I_RUN
 			usr.m_int = "13,14"
 		if("Reset Machine")
 			usr.unset_machine()
@@ -347,7 +347,7 @@
 						else
 							var/list/nicename = null
 							var/list/tankcheck = null
-							var/breathes = "oxygen"    //default, we'll check later
+							var/breathes = GAS_O2    //default, we'll check later
 							var/list/contents = list()
 							var/from = "on"
 
@@ -376,30 +376,30 @@
 										continue					//in it, so we're going to believe the tank is what it says it is
 									switch(breathes)
 																		//These tanks we're sure of their contents
-										if("nitrogen") 							//So we're a bit more picky about them.
+										if(GAS_N2) 							//So we're a bit more picky about them.
 
-											if(t.air_contents.gas["nitrogen"] && !t.air_contents.gas["oxygen"])
-												contents.Add(t.air_contents.gas["nitrogen"])
+											if(t.air_contents.gas[GAS_N2] && !t.air_contents.gas[GAS_O2])
+												contents.Add(t.air_contents.gas[GAS_N2])
 											else
 												contents.Add(0)
 
-										if ("oxygen")
-											if(t.air_contents.gas["oxygen"] && !t.air_contents.gas["phoron"])
-												contents.Add(t.air_contents.gas["oxygen"])
+										if (GAS_O2)
+											if(t.air_contents.gas[GAS_O2] && !t.air_contents.gas[GAS_PHORON])
+												contents.Add(t.air_contents.gas[GAS_O2])
 											else
 												contents.Add(0)
 
 										// No races breath this, but never know about downstream servers.
-										if ("carbon dioxide")
-											if(t.air_contents.gas["carbon_dioxide"] && !t.air_contents.gas["phoron"])
-												contents.Add(t.air_contents.gas["carbon_dioxide"])
+										if (GAS_CO2)
+											if(t.air_contents.gas[GAS_CO2] && !t.air_contents.gas[GAS_PHORON])
+												contents.Add(t.air_contents.gas[GAS_CO2])
 											else
 												contents.Add(0)
 
 										// And here's for the Vox
-										if ("phoron")
-											if(t.air_contents.gas["phoron"] && !t.air_contents.gas["oxygen"])
-												contents.Add(t.air_contents.gas["phoron"])
+										if (GAS_PHORON)
+											if(t.air_contents.gas[GAS_PHORON] && !t.air_contents.gas[GAS_O2])
+												contents.Add(t.air_contents.gas[GAS_PHORON])
 											else
 												contents.Add(0)
 
@@ -431,7 +431,7 @@
 								if(C.internals)
 									C.internals.icon_state = "internal1"
 							else
-								to_chat(C, span_notice("You don't have a[breathes=="oxygen" ? "n oxygen" : addtext(" ",breathes)] tank."))
+								to_chat(C, span_notice("You don't have a[breathes==GAS_O2 ? "n " + GAS_O2 : addtext(" ",breathes)] tank."))
 		if("act_intent")
 			usr.a_intent_change("right")
 		if(I_HELP)
@@ -532,15 +532,15 @@
 					to_chat(R, "You haven't selected a module yet.")
 
 		if("module1")
-			if(istype(usr, /mob/living/silicon/robot))
+			if(isrobot(usr))
 				usr:toggle_module(1)
 
 		if("module2")
-			if(istype(usr, /mob/living/silicon/robot))
+			if(isrobot(usr))
 				usr:toggle_module(2)
 
 		if("module3")
-			if(istype(usr, /mob/living/silicon/robot))
+			if(isrobot(usr))
 				usr:toggle_module(3)
 
 		if("AI Core")
@@ -776,6 +776,7 @@
 	var/obj/screen/mapper/extras_holder/extras_holder
 
 /obj/screen/movable/mapper_holder/Initialize(mapload, newowner)
+	. = ..()
 	owner = newowner
 
 	mask_full = new(src) // Full white square mask

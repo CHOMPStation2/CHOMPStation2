@@ -108,6 +108,9 @@
 				if(combined_dir in dirs_checked)
 					bad_tests++
 					log_unit_test("[bad_msg] Contains multiple wires with same direction on top of each other.")
+				if(C.dir != SOUTH)
+					bad_tests++
+					log_unit_test("[bad_msg] Contains wire with dir set, wires MUST face south, use icon_states.")
 				dirs_checked.Add(combined_dir)
 
 		log_unit_test("[color] wires checked.")
@@ -148,10 +151,10 @@
 
 /datum/unit_test/active_edges/start_test()
 
-	var/active_edges = air_master.active_edges.len
+	var/active_edges = SSair.active_edges.len
 	var/list/edge_log = list()
 	if(active_edges)
-		for(var/connection_edge/E in air_master.active_edges)
+		for(var/connection_edge/E in SSair.active_edges)
 			var/a_temp = E.A.air.temperature
 			var/a_moles = E.A.air.total_moles
 			var/a_vol = E.A.air.volume

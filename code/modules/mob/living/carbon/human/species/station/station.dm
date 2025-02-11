@@ -90,7 +90,6 @@
 	// CHOMPEdit: Reverted these back to Polaris, but commented them out. We're using species-specific sounds instead.
 	// male_scream_sound = list ('sound/effects/mob_effects/una_scream1.ogg','sound/effects/mob_effects/una_scream2.ogg')
 	// female_scream_sound = list ('sound/effects/mob_effects/una_scream1.ogg','sound/effects/mob_effects/una_scream2.ogg')
-	footstep = FOOTSTEP_MOB_CLAW // CHOMPEdit
 	species_sounds = "Lizard" // Species sounds
 
 	pain_verb_1p = list("hiss", "growl") // CHOMPEdit: Unathi pain emotes
@@ -189,12 +188,14 @@
 		/decl/emote/human/stopsway
 	)
 
+	footstep = FOOTSTEP_MOB_CLAW
+
 /datum/species/unathi/equip_survival_gear(var/mob/living/carbon/human/H)
 	..()
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes)
 
 /datum/species/tajaran
-	name = SPECIES_TAJ
+	name = SPECIES_TAJARAN
 	name_plural = "Tajaran"
 	icobase = 'icons/mob/human_races/r_tajaran.dmi'
 	deform = 'icons/mob/human_races/r_def_tajaran.dmi'
@@ -346,7 +347,7 @@
 	flash_mod = 1.2
 	chemOD_mod = 0.9
 
-	blood_reagents = "copper"
+	blood_reagents = REAGENT_ID_COPPER
 	bloodloss_rate = 1.5
 
 	ambiguous_genders = TRUE
@@ -462,7 +463,7 @@
 	warning_low_pressure = 300   // Low pressure warning.
 	hazard_low_pressure = 220     // Dangerously low pressure.
 	safe_pressure = 400
-	poison_type = "nitrogen"      // technically it's a partial pressure thing but IDK if we can emulate that
+	poison_type = GAS_N2      // technically it's a partial pressure thing but IDK if we can emulate that
 	ideal_air_type = /datum/gas_mixture/belly_air/zaddat
 
 	genders = list(FEMALE, PLURAL) //females are polyp-producing, infertile females and males are nigh-identical

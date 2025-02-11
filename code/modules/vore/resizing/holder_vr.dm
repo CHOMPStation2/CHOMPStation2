@@ -1,8 +1,10 @@
 /obj/item/holder/dropped(mob/user)
+	// CHOMPEdit Start
 	..()
 	spawn(1)
 		if(!throwing && isturf(loc))
 			qdel(src)
+	// CHOMPEdit End
 
 /obj/item/holder/attack_hand(mob/living/user as mob) //straight up just copypasted from objects/items.dm with a few things changed (doesn't called dropped unless +actually dropped+)
 	if (!user) return

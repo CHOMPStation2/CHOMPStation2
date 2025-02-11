@@ -8,7 +8,8 @@
 	sharp = TRUE
 	var/datum/geosample/geological_data
 
-/obj/item/rocksliver/New()
+/obj/item/rocksliver/Initialize()
+	. = ..()
 	icon_state = "sliver[rand(1, 3)]"
 	randpixel_xy()
 
@@ -19,7 +20,7 @@
 	var/age_billion = 0
 	var/artifact_id = ""
 	var/artifact_distance = -1
-	var/source_mineral = "chlorine"
+	var/source_mineral = REAGENT_ID_CHLORINE
 	var/list/find_presence = list()
 
 /datum/geosample/New(var/turf/simulated/mineral/container)
@@ -47,14 +48,14 @@
 			source_mineral = container.mineral.xarch_source_mineral
 
 	if(prob(75))
-		find_presence["phosphorus"] = rand(1, 500) / 100
+		find_presence[REAGENT_ID_PHOSPHORUS] = rand(1, 500) / 100
 	if(prob(25))
-		find_presence["mercury"] = rand(1, 500) / 100
-	find_presence["chlorine"] = rand(500, 2500) / 100
+		find_presence[REAGENT_ID_MERCURY] = rand(1, 500) / 100
+	find_presence[REAGENT_ID_CHLORINE] = rand(500, 2500) / 100
 
 	for(var/datum/find/F in container.finds)
 		var/responsive_reagent = get_responsive_reagent(F.find_type)
-		find_presence[responsive_reagent] = F.dissonance_spread
+		find_presence[responsive_reagent] = 25 //Just making this phoron because this this feature was axed 8 years ago.
 
 	var/total_presence = 0
 	for(var/carrier in find_presence)

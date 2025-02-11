@@ -120,7 +120,7 @@
 	set category = "Object"
 	set src in usr
 
-	if(!istype(usr, /mob/living))
+	if(!isliving(usr))
 		return
 
 	if(usr.stat)
@@ -130,12 +130,12 @@
 	if(iscarbon(usr))
 		var/mob/living/carbon/C = usr
 		if(C.handcuffed)
-			to_chat(C, "<span class='warning'>You cannot remove accessories while handcuffed!</span>")
+			to_chat(C, span_warning("You cannot remove accessories while handcuffed!"))
 			return
 		else if(istype(C, /mob/living/carbon/human))
 			var/mob/living/carbon/human/H = C
 			if(H.ability_flags & 0x1)
-				to_chat(H, "<span class='warning'>You cannot remove accessories while phase shifted!</span>")
+				to_chat(H, span_warning("You cannot remove accessories while phase shifted!"))
 				return
 	//CHOMPEdit end
 
@@ -148,7 +148,11 @@
 			A = tgui_input_list(usr, "Select an accessory to remove from \the [src]", "Accessory Choice", accessories)
 
 	if(A)
-		remove_accessory(usr,A)
+		if(A.can_remove)
+			remove_accessory(usr,A)
+		else
+			to_chat(usr, span_warning("It doesn't look like \the [A] can be taken off \the [src]."))
+
 
 	if(!LAZYLEN(accessories))
 		src.verbs -= /obj/item/clothing/proc/removetie_verb

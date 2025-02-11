@@ -45,8 +45,6 @@
 	var/lip_style = null	//no lipstick by default- arguably misleading, as it could be used for general makeup
 
 	var/age = 30		//Player's age (pure fluff)
-	var/bday_month = 0	//Character birth month
-	var/bday_day = 0	//Character birthday day
 
 	var/b_type = "A+"	//Player's bloodtype
 	var/datum/robolimb/synthetic		//If they are a synthetic (aka synthetic torso). Also holds the datum for the type of robolimb.
@@ -81,10 +79,6 @@
 	var/obj/item/r_store = null
 	var/obj/item/l_store = null
 	var/obj/item/s_store = null
-
-	var/used_skillpoints = 0
-	var/skill_specialization = null
-	var/list/skills = list()
 
 	var/voice = ""	//Instead of new say code calling GetVoice() over and over and over, we're just going to ask this variable, which gets updated in Life()
 

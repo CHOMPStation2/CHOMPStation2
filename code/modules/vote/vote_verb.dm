@@ -1,5 +1,5 @@
 /client/verb/vote()
-	set category = "OOC.Game" // CHOMPedit
+	set category = "OOC.Game"
 	set name = "Vote"
 
 	if(SSvote.active_vote)
@@ -48,7 +48,7 @@
 		choices |= option
 
 	var/c2 = tgui_alert(usr, "Show counts while vote is happening?", "Counts", list("Yes", "No"))
-	var/c3 = input(usr, "Select a result calculation type", "Vote", VOTE_RESULT_TYPE_MAJORITY) as anything in list(VOTE_RESULT_TYPE_MAJORITY)
+	var/c3 = tgui_input_list(usr, "Select a result calculation type", "Vote", list(VOTE_RESULT_TYPE_MAJORITY))
 
 	var/datum/vote/V = new /datum/vote(usr.ckey, question, choices, TRUE)
 	V.show_counts = (c2 == "Yes")

@@ -1,11 +1,12 @@
-import { useBackend } from '../../backend';
-import { Box, Button, Section } from '../../components';
+import { useBackend } from 'tgui/backend';
+import { Box, Button, Section } from 'tgui-core/components';
+
 import { Data, modalData } from './types';
 
 export const viewCrateContents = (modal: modalData) => {
   const { act, data } = useBackend<Data>();
   const { supply_points } = data;
-  const { name, cost, manifest, ref, random } = modal.args;
+  const { name, cost, desc, manifest, ref, random } = modal.args;
   return (
     <Section
       width="400px"
@@ -22,6 +23,7 @@ export const viewCrateContents = (modal: modalData) => {
         </Button>
       }
     >
+      {desc}
       <Section
         title={'Contains' + (random ? ' any ' + random + ' of:' : '')}
         scrollable

@@ -72,7 +72,7 @@
 	icon_state = "[base_icon][wielded]"
 	item_state = icon_state
 
-/obj/item/material/twohanded/dropped()
+/obj/item/material/twohanded/dropped(mob/user)
 	..()
 	if(wielded)
 		spawn(0)
@@ -157,7 +157,7 @@
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	mob_throw_hit_sound =  'sound/weapons/pierce.ogg'
 	attack_verb = list("attacked", "poked", "jabbed", "torn", "gored")
-	default_material = "glass"
+	default_material = MAT_GLASS
 	applies_material_colour = 0
 	fragile = 1	//It's a haphazard thing of glass, wire, and steel
 	reach = 2 // Spears are long.

@@ -116,7 +116,7 @@
 			summoned_mobs -= A
 			continue
 		// Now check for dead mobs who shouldn't be on the list.
-		if(istype(A, /mob/living))
+		if(isliving(A))
 			var/mob/living/L = A
 			if(L.stat == DEAD)
 				summoned_mobs -= L
@@ -357,7 +357,7 @@
 /obj/item/technomancer_core/universal
 	name = "universal core"
 	desc = "A bewilderingly complex 'black box' that allows the wearer to accomplish amazing feats. \
-	This one is a copy of a 'technomancer' core, shamelessly ripped off by a Kitsuhana pattern designer \
+	This one is a copy of a 'technomancer' core, shamelessly ripped off by an unknown pattern designer \
 	for fun, so that he could perform impressive 'magic'. The pack sloshes slightly if you shake it.<br>\
 	Under the straps, <i>'Export Edition'</i> is printed."
 	energy = 7000

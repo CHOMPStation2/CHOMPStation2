@@ -90,7 +90,7 @@
 		return
 
 	if(panel_open)
-		to_chat(usr, span_boldnotice("Close the maintenance panel first."))
+		to_chat(user, span_boldnotice("Close the maintenance panel first."))
 		return
 
 	tgui_interact(user)
@@ -139,8 +139,8 @@
 
 	return data
 
-/obj/machinery/atmospherics/unary/cryo_cell/tgui_act(action, params)
-	if(..() || usr == occupant)
+/obj/machinery/atmospherics/unary/cryo_cell/tgui_act(action, params, datum/tgui/ui)
+	if(..() || ui.user == occupant)
 		return TRUE
 
 	. = TRUE
@@ -157,13 +157,13 @@
 				beaker = null
 				update_icon()
 		if("ejectOccupant")
-			if(!occupant || isslime(usr) || ispAI(usr))
+			if(!occupant || isslime(ui.user) || ispAI(ui.user))
 				return 0 // don't update UIs attached to this object
 			go_out()
 		else
 			return FALSE
 
-	add_fingerprint(usr)
+	add_fingerprint(ui.user)
 
 /obj/machinery/atmospherics/unary/cryo_cell/attackby(var/obj/item/G as obj, var/mob/user as mob)
 	if(istype(G, /obj/item/reagent_containers/glass))
@@ -218,7 +218,7 @@
 		if(occupant.bodytemperature < T0C)
 			occupant.Sleeping(max(5, (1/occupant.bodytemperature)*2000))
 			occupant.Paralyse(max(5, (1/occupant.bodytemperature)*3000))
-			if(air_contents.gas["oxygen"] > 2)
+			if(air_contents.gas[GAS_O2] > 2)
 				if(occupant.getOxyLoss()) occupant.adjustOxyLoss(-1)
 			else
 				occupant.adjustOxyLoss(-1)
@@ -232,8 +232,8 @@
 				var/heal_brute = occupant.getBruteLoss() ? min(1, 20/occupant.getBruteLoss()) : 0
 				var/heal_fire = occupant.getFireLoss() ? min(1, 20/occupant.getFireLoss()) : 0
 				occupant.heal_organ_damage(heal_brute,heal_fire)
-		var/has_cryo = occupant.reagents.get_reagent_amount("cryoxadone") >= 1
-		var/has_clonexa = occupant.reagents.get_reagent_amount("clonexadone") >= 1
+		var/has_cryo = occupant.reagents.get_reagent_amount(REAGENT_ID_CRYOXADONE) >= 1
+		var/has_clonexa = occupant.reagents.get_reagent_amount(REAGENT_ID_CLONEXADONE) >= 1
 		var/has_cryo_medicine = has_cryo || has_clonexa
 		if(beaker && !has_cryo_medicine)
 			beaker.reagents.trans_to_mob(occupant, 1, CHEM_BLOOD, 10)
@@ -363,7 +363,7 @@
 /datum/data/function/proc/reset()
 	return
 
-/datum/data/function/proc/r_input(href, href_list, mob/user as mob)
+/datum/data/function/proc/r_input(href, href_list, mob/user)
 	return
 
 /datum/data/function/proc/display()

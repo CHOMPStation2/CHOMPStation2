@@ -72,7 +72,7 @@
 	if(isturf(A) || isarea(A))	// Something has gone horribly wrong if the second is true.
 		return FALSE	// No mob is carrying us.
 
-	if(!istype(A, /mob/living))
+	if(!isliving(A))
 		A = get_carrier(A)
 
 	return A
@@ -122,7 +122,7 @@
 	name = "Hostile Blob Revival"
 	id = "blob_revival"
 	result = null
-	required_reagents = list("phoron" = 60)
+	required_reagents = list(REAGENT_ID_PHORON = 60)
 	result_amount = 1
 
 /decl/chemical_reaction/instant/blob_reconstitution/can_happen(var/datum/reagents/holder)
@@ -142,7 +142,7 @@
 	name = "Allied Blob Revival"
 	id = "blob_friend"
 	result = null
-	required_reagents = list("hydrophoron" = 40, "peridaxon" = 20, "mutagen" = 20)
+	required_reagents = list(REAGENT_ID_HYDROPHORON = 40, REAGENT_ID_PERIDAXON = 20, REAGENT_ID_MUTAGEN = 20)
 	result_amount = 1
 
 /decl/chemical_reaction/instant/blob_reconstitution/domination/on_reaction(var/datum/reagents/holder)

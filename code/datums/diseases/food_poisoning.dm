@@ -5,13 +5,13 @@
 	spread_text = "Non-Contagious"
 	spread_flags = NON_CONTAGIOUS
 	cure_text = "Sleep"
-	agent = "Salmonella"
-	cures = list("chicken_soup")
+	agent = REAGENT_SALMONELLA
+	cures = list(REAGENT_ID_CHICKENSOUP)
 	cure_chance = 10
 	viable_mobtypes = list(/mob/living/carbon/human)
 	desc = "Nausea, sickness, and vomitting."
 	severity = MINOR
-	disease_flags = CURABLE
+	disease_flags = CURABLE|CAN_NOT_POPULATE
 	virus_heal_resistant = TRUE
 
 /datum/disease/food_poisoning/stage_act()

@@ -57,7 +57,7 @@
 /obj/structure/dispenser/tgui_data(mob/user)
 	var/list/data = list()
 	data["oxygen"] = oxygentanks
-	data["plasma"] = phorontanks
+	data["phoron"] = phorontanks
 
 	return data
 
@@ -98,14 +98,14 @@
 
 #undef TANK_DISPENSER_CAPACITY
 
-/obj/structure/dispenser/tgui_act(action, params)
+/obj/structure/dispenser/tgui_act(action, params, datum/tgui/ui)
 	if(..())
 		return
 	switch(action)
-		if("plasma")
+		if("phoron")
 			var/obj/item/tank/phoron/tank = locate() in src
-			if(tank && Adjacent(usr))
-				usr.put_in_hands(tank)
+			if(tank && Adjacent(ui.user))
+				ui.user.put_in_hands(tank)
 				phorontanks--
 			. = TRUE
 			playsound(src, 'sound/items/drop/gascan.ogg', 100, 1, 1)
@@ -115,8 +115,8 @@
 				if(istype(T, /obj/item/tank/oxygen) || istype(T, /obj/item/tank/air) || istype(T, /obj/item/tank/anesthetic))
 					tank = T
 					break
-			if(tank && Adjacent(usr))
-				usr.put_in_hands(tank)
+			if(tank && Adjacent(ui.user))
+				ui.user.put_in_hands(tank)
 				oxygentanks--
 			. = TRUE
 			playsound(src, 'sound/items/drop/gascan.ogg', 100, 1, 1)

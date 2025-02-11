@@ -302,7 +302,7 @@
 	//If following checks determine user is protected we won't alarm for long.
 	if(PN)
 		PN.trigger_warning(5)
-	if(istype(M,/mob/living/carbon/human))
+	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(H.species.siemens_coefficient <= 0)
 			return
@@ -312,8 +312,8 @@
 /*CHOMP Edit: Phorochem removed.
 //Phorochemistry DM: Allows chemicalresistant shocking -Radiantflash
 		for(var/datum/reagent/phororeagent/R in M.reagents.reagent_list)
-			if(R.id == "fulguracin")
-				to_chat(M, "<span class='notice'>Your hairs stand up, but you resist the shock for the most part</span>")
+			if(R.id == REAGENT_ID_FULGURACIN)
+				to_chat(M, span_notice("Your hairs stand up, but you resist the shock for the most part"))
 				return 0 //no shock for you
 */
 	//Checks again. If we are still here subject will be shocked, trigger standard 20 tick warning

@@ -113,8 +113,6 @@
 		for(var/atom/movable/A in affecting)
 			if(istype(A,/obj/effect/abstract)) // Flashlight's lights are not physical objects
 				continue
-			if(istype(A,/obj/effect/decal/jan_hud)) // Ignore these too
-				continue
 			if(!A.anchored)
 				if(A.loc == src.loc) // prevents the object from being affected if it's not currently here.
 					step(A,movedir)
@@ -134,7 +132,7 @@
 
 	if(istype(I, /obj/item/multitool))
 		if(panel_open)
-			var/input = sanitize(tgui_input_text(usr, "What id would you like to give this conveyor?", "Multitool-Conveyor interface", id))
+			var/input = sanitize(tgui_input_text(user, "What id would you like to give this conveyor?", "Multitool-Conveyor interface", id))
 			if(!input)
 				to_chat(user, "No input found. Please hang up and try your call again.")
 				return
@@ -314,7 +312,7 @@
 			return
 
 	if(I.has_tool_quality(TOOL_MULTITOOL))
-		var/input = sanitize(tgui_input_text(usr, "What id would you like to give this conveyor switch?", "Multitool-Conveyor interface", id))
+		var/input = sanitize(tgui_input_text(user, "What id would you like to give this conveyor switch?", "Multitool-Conveyor interface", id))
 		if(!input)
 			to_chat(user, "No input found. Please hang up and try your call again.")
 			return

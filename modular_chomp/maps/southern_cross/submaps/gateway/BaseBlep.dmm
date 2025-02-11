@@ -47,12 +47,9 @@
 "dm" = (
 /obj/machinery/power/rad_collector,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating{
@@ -98,12 +95,9 @@
 "ee" = (
 /obj/machinery/power/rad_collector,
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating{
@@ -138,13 +132,9 @@
 /area/awaymission/baseblep/cavern)
 "fl" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/plating{
@@ -175,8 +165,6 @@
 /area/awaymission/baseblep/base)
 "ga" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock,
@@ -248,13 +236,9 @@
 /area/awaymission/baseblep/hivebotsphere)
 "kr" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/plating{
@@ -265,7 +249,6 @@
 "ky" = (
 /obj/machinery/power/rad_collector,
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating{
@@ -275,7 +258,6 @@
 /area/awaymission/baseblep/base)
 "kD" = (
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating{
@@ -312,13 +294,9 @@
 /area/awaymission/baseblep/base)
 "lM" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/plating{
@@ -436,8 +414,6 @@
 /area/awaymission/baseblep/base)
 "qr" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating{
@@ -577,8 +553,6 @@
 /area/awaymission/baseblep)
 "yp" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/plating{
@@ -747,8 +721,6 @@
 /area/awaymission/baseblep/base)
 "Fb" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/plating{
@@ -783,8 +755,6 @@
 /area/awaymission/baseblep/caynon)
 "FK" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/wall/uranium,
@@ -927,13 +897,9 @@
 /area/awaymission/baseblep/finale)
 "LX" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/plating{
@@ -944,7 +910,6 @@
 "MB" = (
 /obj/machinery/power/rad_collector,
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating{
@@ -1026,7 +991,6 @@
 "Qk" = (
 /obj/machinery/power/rad_collector,
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating{
@@ -1046,7 +1010,6 @@
 	},
 /obj/structure/cable/cyan,
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating{
@@ -1105,8 +1068,6 @@
 /area/awaymission/baseblep/base)
 "RE" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating{
@@ -1121,12 +1082,9 @@
 "SE" = (
 /obj/machinery/power/rad_collector,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating{
@@ -1156,12 +1114,9 @@
 "Ty" = (
 /obj/machinery/power/rad_collector,
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating{
@@ -1223,8 +1178,6 @@
 /area/awaymission/baseblep/hivebotsphere)
 "Wr" = (
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating{

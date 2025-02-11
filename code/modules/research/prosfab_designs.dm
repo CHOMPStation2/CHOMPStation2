@@ -27,11 +27,9 @@
 		else
 			O.species = GLOB.all_species["Human"]
 		O.robotize(prosfab.manufacturer)
-		O.dna = new/datum/dna() //Uuughhhh... why do I have to do this?
+		qdel_swap(O.dna, new/datum/dna()) //Uuughhhh... why do I have to do this?
 		O.dna.ResetUI()
 		O.dna.ResetSE()
-		spawn(10) //Limbs love to flop around. Who am I to deny them?
-			O.dir = 2
 		return O
 	return ..()
 
@@ -68,7 +66,7 @@
 				manf = all_robolimbs["Unbranded"]
 
 			O.robotize(manf.company)
-			O.dna = new/datum/dna()
+			qdel_swap(O.dna, new/datum/dna())
 			O.dna.ResetUI()
 			O.dna.ResetSE()
 
@@ -83,6 +81,7 @@
 		H.b_skin = 255 // CHOMP Edit
 		H.dna.ResetUIFrom(H)
 
+		H.allow_spontaneous_tf = TRUE // Allows vore customization of synthmorphs
 		H.real_name = "Synthmorph #[rand(100,999)]"
 		H.name = H.real_name
 		H.dir = 2

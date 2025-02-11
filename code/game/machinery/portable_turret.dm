@@ -378,7 +378,7 @@
 /obj/machinery/porta_turret/proc/isLocked(mob/user)
 	if(locked && !issilicon(user))
 		to_chat(user, span_notice("Controls locked."))
-		return TRUE // CHOMPEdit
+		return TRUE
 	if(HasController())
 		return TRUE
 	if(isrobot(user) || isAI(user))
@@ -443,7 +443,7 @@
 /obj/machinery/porta_turret/tgui_act(action, list/params, datum/tgui/ui, datum/tgui_state/state)
 	if(..())
 		return TRUE
-	if(isLocked(usr))
+	if(isLocked(ui.user))
 		return TRUE
 	. = TRUE
 
@@ -539,7 +539,7 @@
 		if(allowed(user))
 			locked = !locked
 			to_chat(user, span_notice("Controls are now [locked ? "locked" : "unlocked"]."))
-			updateUsrDialog()
+			updateUsrDialog(user)
 		else
 			to_chat(user, span_notice("Access denied."))
 
@@ -675,11 +675,8 @@
 	var/list/targets = list()			//list of primary targets
 	var/list/secondarytargets = list()	//targets that are least important
 
-	//CHOMPEdit Begin
-
-	for(var/mob/M in mobs_in_xray_view(world.view, src))
+	for(var/mob/M in mobs_in_view(world.view, src))
 		assess_and_assign(M, targets, secondarytargets)
-	//CHOMPEdit End
 
 	if(!tryToShootAt(targets) && !tryToShootAt(secondarytargets) && --timeout <= 0)
 		popDown() // no valid targets, close the cover
@@ -688,14 +685,12 @@
 		use_power(20000)
 		health = min(health+1, maxhealth) // 1HP for 20kJ
 
-//CHOMPAdd Start
 /obj/machinery/porta_turret/proc/assess_and_assign(mob/living/L, list/targets, list/secondarytargets)
 	switch(assess_living(L))
 		if(TURRET_PRIORITY_TARGET)
 			targets += L
 		if(TURRET_SECONDARY_TARGET)
 			secondarytargets += L
-//CHOMPAdd End
 
 /obj/machinery/porta_turret/proc/assess_living(var/mob/living/L)
 	if(!istype(L))
@@ -707,7 +702,7 @@
 	if(faction && L.faction == faction)
 		return TURRET_NOT_TARGET
 
-	if((!emagged && siliconaccess(L) && check_all == FALSE) || (issilicon(L) && !check_access && !check_all))	// Don't target silica, unless told to neutralize everything. //CHOMPEdit no more free pass for borg...
+	if((!emagged && siliconaccess(L) && check_all == FALSE) || (issilicon(L) && !check_access && !check_all))	// Don't target silica, unless told to neutralize everything.
 		return TURRET_NOT_TARGET
 
 	if(L.stat == DEAD && !emagged)		//if the perp is dead, no need to bother really
@@ -723,7 +718,7 @@
 		return TURRET_NOT_TARGET
 
 	if(check_synth || check_all)	//If it's set to attack all non-silicons or everything, target them!
-		if(L.lying && (L.incapacitated(INCAPACITATION_KNOCKOUT) || L.incapacitated(INCAPACITATION_STUNNED))) // CHOMPEdit - Crawling targets are dangerous, if they are able.
+		if(L.lying && (L.incapacitated(INCAPACITATION_KNOCKOUT) || L.incapacitated(INCAPACITATION_STUNNED))) // Crawling targets are dangerous, if they are able.
 			return check_down ? TURRET_SECONDARY_TARGET : TURRET_NOT_TARGET
 		return TURRET_PRIORITY_TARGET
 
@@ -740,7 +735,7 @@
 		if(assess_perp(L) < 4)
 			return TURRET_NOT_TARGET	//if threat level < 4, keep going
 
-	if(L.lying && (L.incapacitated(INCAPACITATION_KNOCKOUT) || L.incapacitated(INCAPACITATION_STUNNED)))		//if the perp is lying down, it's still a target but a less-important target - CHOMPEdit - Crawling targets are dangerous, if they are able.
+	if(L.lying && (L.incapacitated(INCAPACITATION_KNOCKOUT) || L.incapacitated(INCAPACITATION_STUNNED)))		//if the perp is lying down, it's still a target but a less-important target - Crawling targets are dangerous, if they are able.
 		return check_down ? TURRET_SECONDARY_TARGET : TURRET_NOT_TARGET
 
 	return TURRET_PRIORITY_TARGET	//if the perp has passed all previous tests, congrats, it is now a "shoot-me!" nominee
@@ -1087,7 +1082,7 @@
 		var/t = sanitizeSafe(tgui_input_text(user, "Enter new turret name", name, finish_name, MAX_NAME_LEN), MAX_NAME_LEN)
 		if(!t)
 			return
-		if(!in_range(src, usr) && loc != usr)
+		if(!in_range(src, user) && loc != user)
 			return
 
 		finish_name = t

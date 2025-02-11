@@ -71,7 +71,7 @@
 		if(org.damage >= 1 && !istype(org, /obj/item/organ/internal/brain))
 			organ = TRUE
 
-	var/blood_volume = M.vessel.get_reagent_amount("blood")
+	var/blood_volume = M.vessel.get_reagent_amount(REAGENT_ID_BLOOD)
 	if(blood_volume <= M.species.blood_volume*M.species.blood_level_safe)
 		bloodloss = TRUE
 
@@ -107,7 +107,7 @@
 			if(D.visibility_flags & HIDDEN_SCANNER)
 				continue
 			else
-				dat += span_bold("Viral Infection") + " - Inform a Virologist or the Chief Medical Officer and administer antiviral chemicals such as Spaceacilin. Limit exposure to other personnel.<br>"
+				dat += span_bold("Viral Infection") + " - Inform a Virologist or the Chief Medical Officer and administer antiviral chemicals such as Spaceacillin. Limit exposure to other personnel.<br>"
 	if(robotparts)
 		dat += span_bold("Robotic Body Parts") + " - Inform the Robotics department."
 

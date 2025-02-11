@@ -19,7 +19,7 @@
 	src.modules += new /obj/item/mop(src)
 	src.modules += new /obj/item/lightreplacer(src)
 	src.emag = new /obj/item/reagent_containers/spray(src)
-	src.emag.reagents.add_reagent("lube", 250)
+	src.emag.reagents.add_reagent(REAGENT_ID_LUBE, 250)
 	src.emag.name = "Lube spray"
 	R.icon 		 = 'icons/mob/robots_yw.dmi'
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
@@ -95,7 +95,7 @@
 	src.modules += new /obj/item/sleevemate(src)
 	src.modules += new /obj/item/surgical/bioregen(src) //chompstation addition in case this borg is ever added
 	src.emag = new /obj/item/reagent_containers/spray(src)
-	src.emag.reagents.add_reagent("pacid", 250)
+	src.emag.reagents.add_reagent(REAGENT_ID_PACID, 250)
 	src.emag.name = "Polyacid spray"
 
 	src.modules += new /obj/item/dogborg/pounce(src) //CHOMPEdit - Switch to the more balanced pounce module.
@@ -123,5 +123,5 @@
 /obj/item/robot_module/medical/robot/surgeon/respawn_consumable(var/mob/living/silicon/robot/R, var/amount)
 	if(src.emag)
 		var/obj/item/reagent_containers/spray/PS = src.emag
-		PS.reagents.add_reagent("pacid", 2 * amount)
+		PS.reagents.add_reagent(REAGENT_ID_PACID, 2 * amount)
 	..()

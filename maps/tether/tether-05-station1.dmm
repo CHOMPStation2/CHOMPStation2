@@ -421,10 +421,7 @@
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
+/obj/item/cell/high,
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/engine_smes)
 "aaS" = (
@@ -517,10 +514,7 @@
 	info = "The big blue box recently installed in here is a 'grid checker' which will shut off the power if a dangerous power spike from the engine erupts into the powernet.  Shutting everything down protects everything from electrical damage, however the outages can be disruptive to colony operations, so it is designed to restore power after a somewhat significant delay, up to ten minutes or so.  The grid checker can be manually hacked in order to end the outage sooner.  To do that, you must cut three specific wires which do not cause a red light to shine, then pulse a fourth wire.  Electrical protection is highly recommended when doing maintenance on the grid checker.";
 	name = "grid checker info"
 	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
+/obj/item/cell/high,
 /obj/item/storage/box/lights/mixed,
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/engine_smes)
@@ -788,7 +782,6 @@
 	id = "EngineEmitterPortWest2";
 	name = "Engine Room Blast Doors";
 	pixel_x = 25;
-	req_access = null;
 	req_one_access = list(11,24)
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -2468,6 +2461,12 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/machinery/door/blast/shutters{
+	dir = 2;
+	id = "cargo_shutter";
+	layer = 3.3;
+	name = "Cargo Shutters"
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
 "aer" = (
@@ -8016,7 +8015,6 @@
 /obj/machinery/door/airlock/multi_tile/glass{
 	dir = 2;
 	name = "Gateway/EVA Prep Room";
-	req_access = null;
 	req_one_access = list(18,19,43,67)
 	},
 /turf/simulated/floor/tiled/steel_ridged,
@@ -8588,6 +8586,12 @@
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /obj/structure/disposalpipe/segment,
+/obj/machinery/door/blast/shutters{
+	dir = 2;
+	id = "cargo_shutter";
+	layer = 3.3;
+	name = "Cargo Shutters"
+	},
 /turf/simulated/floor/plating,
 /area/quartermaster/office)
 "avz" = (
@@ -10375,10 +10379,7 @@
 /area/engineering/gravity_gen)
 "aCf" = (
 /obj/structure/table/reinforced,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
+/obj/item/cell/high,
 /obj/machinery/camera/network/engineering,
 /turf/simulated/floor/tiled,
 /area/engineering/engine_eva)
@@ -10515,22 +10516,13 @@
 "aCP" = (
 /obj/structure/table/reinforced,
 /obj/machinery/cell_charger,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
+/obj/item/cell/high,
 /obj/item/tool/wrench,
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
+/obj/item/cell/high,
+/obj/item/cell/high,
 /turf/simulated/floor/tiled,
 /area/engineering/workshop)
 "aCQ" = (
@@ -12706,8 +12698,7 @@
 /obj/structure/plasticflaps,
 /obj/machinery/conveyor{
 	dir = 8;
-	id = "miningops";
-	movedir = null
+	id = "miningops"
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/belterdock/refinery)
@@ -14707,7 +14698,6 @@
 /area/tether/exploration)
 "bYK" = (
 /obj/structure/cable/green{
-	dir = 1;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
@@ -14869,6 +14859,19 @@
 	fancy_shuttle_tag = "secbus"
 	},
 /area/shuttle/securiship/engines)
+"cbX" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/machinery/door/blast/shutters{
+	dir = 2;
+	id = "cargo_shutter";
+	layer = 3.3;
+	name = "Cargo Shutters"
+	},
+/turf/simulated/floor/plating,
+/area/quartermaster/office)
 "cbY" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -15375,7 +15378,6 @@
 	icon_state = "0-2"
 	},
 /obj/structure/cable/green{
-	dir = 1;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
@@ -15925,7 +15927,6 @@
 /area/quartermaster/belterdock/refinery)
 "dfN" = (
 /obj/structure/cable/green{
-	dir = 1;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/green{
@@ -20522,6 +20523,12 @@
 /obj/structure/window/reinforced/full,
 /obj/machinery/door/firedoor/glass,
 /obj/structure/disposalpipe/segment,
+/obj/machinery/door/blast/shutters{
+	dir = 2;
+	id = "cargo_shutter";
+	layer = 3.3;
+	name = "Cargo Shutters"
+	},
 /turf/simulated/floor/plating,
 /area/quartermaster/office)
 "hUm" = (
@@ -27351,8 +27358,7 @@
 "pty" = (
 /obj/machinery/conveyor{
 	dir = 8;
-	id = "miningops";
-	movedir = null
+	id = "miningops"
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/belterdock/refinery)
@@ -28040,7 +28046,6 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
-	dir = 1;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/dark{
@@ -28814,10 +28819,7 @@
 /area/maintenance/substation/civilian)
 "rxE" = (
 /obj/structure/table/steel,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
+/obj/item/cell/high,
 /obj/item/stack/cable_coil,
 /obj/machinery/cell_charger{
 	pixel_y = 5
@@ -28906,7 +28908,6 @@
 /area/engineering/hallway)
 "rFu" = (
 /obj/structure/cable/green{
-	dir = 1;
 	icon_state = "1-2"
 	},
 /obj/machinery/hologram/holopad,
@@ -29631,8 +29632,7 @@
 	dir = 4;
 	id = "medivac blast";
 	name = "window blast shields";
-	pixel_y = 1;
-	req_access = null
+	pixel_y = 1
 	},
 /turf/simulated/floor/tiled,
 /area/shuttle/medivac/cockpit)
@@ -29926,8 +29926,7 @@
 /obj/machinery/mineral/input,
 /obj/machinery/conveyor{
 	dir = 8;
-	id = "miningops";
-	movedir = null
+	id = "miningops"
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/belterdock/refinery)
@@ -30435,7 +30434,14 @@
 /obj/machinery/requests_console{
 	department = "Cargo Bay";
 	departmentType = 2;
-	pixel_y = 32
+	pixel_y = 32;
+	pixel_x = -6
+	},
+/obj/machinery/button/remote/blast_door{
+	id = "cargo_shutter";
+	name = "Cargo Shutter Control";
+	pixel_x = 10;
+	pixel_y = 24
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
@@ -30943,8 +30949,7 @@
 /obj/machinery/mineral/output,
 /obj/machinery/conveyor{
 	dir = 8;
-	id = "miningops";
-	movedir = null
+	id = "miningops"
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/belterdock/refinery)
@@ -31985,8 +31990,7 @@
 	frequency = 1380;
 	id_tag = "securiship_bay";
 	pixel_x = 24;
-	pixel_y = -26;
-	req_one_access = null
+	pixel_y = -26
 	},
 /turf/simulated/floor/tiled,
 /area/tether/station/dock_two)
@@ -32442,14 +32446,8 @@
 "vHM" = (
 /obj/structure/table/reinforced,
 /obj/machinery/cell_charger,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
+/obj/item/cell/high,
+/obj/item/cell/high,
 /obj/item/stack/cable_coil{
 	pixel_x = 3;
 	pixel_y = -7
@@ -34459,6 +34457,12 @@
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
+/obj/machinery/door/blast/shutters{
+	dir = 2;
+	id = "cargo_shutter";
+	layer = 3.3;
+	name = "Cargo Shutters"
+	},
 /turf/simulated/floor/plating,
 /area/quartermaster/office)
 
@@ -44910,7 +44914,7 @@ oWu
 qkG
 mkL
 iDA
-yjH
+cbX
 tnC
 tWj
 jhJ

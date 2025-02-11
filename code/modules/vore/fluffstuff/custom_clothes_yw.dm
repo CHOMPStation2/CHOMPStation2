@@ -941,18 +941,19 @@
 		H.update_inv_wear_suit()
 	hood.forceMove(src)
 
-/obj/item/clothing/suit/storage/toggle/hoodiebuttoned/dropped()
+/obj/item/clothing/suit/storage/toggle/hoodiebuttoned/dropped(mob/living/user)
 	RemoveHood()
+	..()
 
 /obj/item/clothing/suit/storage/toggle/hoodiebuttoned/proc/ToggleHood()
 	if(!suittoggled)
 		if(ishuman(loc))
 			var/mob/living/carbon/human/H = src.loc
 			if(H.wear_suit != src)
-				to_chat(H, "<span class='warning'>You must be wearing [src] to put up the hood!</span>")
+				to_chat(H, span_warning("You must be wearing [src] to put up the hood!"))
 				return
 			if(H.head)
-				to_chat(H, "<span class='warning'>You're already wearing something on your head!</span>")
+				to_chat(H, span_warning("You're already wearing something on your head!"))
 				return
 			else
 				H.equip_to_slot_if_possible(hood,slot_head,0,0,1)
@@ -1268,11 +1269,11 @@
 	if(ring_on)
 		icon_state = "[base_icon]"
 		ring_on = 0
-		usr << "<span class='notice'>You remove the right earring.</span>"
+		usr << span_notice("You remove the right earring.")
 	else
 		icon_state = "[base_icon]_on"
 		ring_on = 1
-		usr << "<span class='notice'>You put on the right earring.</span>"
+		usr << span_notice("You put on the right earring.")
 
 	update_clothing_icon()
 
@@ -1315,7 +1316,7 @@
 		if(istype(H) && istype(H.tail_style, /datum/sprite_accessory/tail/taur/horse/big))
 			return ..()
 		else
-			to_chat(H,"<span class='warning'>You need to have a kentauri half to wear this.</span>")
+			to_chat(H,span_warning("You need to have a kentauri half to wear this."))
 			return 0
 
 /obj/item/clothing/suit/armor/vest/harpsong/make_worn_icon(var/body_type,var/slot_name,var/inhands,var/default_icon,var/default_layer = 0, var/icon/clip_mask = null)
@@ -1392,7 +1393,7 @@
 	if(usr.stat || usr.incapacitated())
 		return
 
-	var/new_color = input(usr, "Pick a new colour", "Collar Colour", color) as color|null
+	var/new_color = tgui_color_picker(usr, "Pick a new colour", "Collar Colour", color)
 
 	if(new_color && (new_color != color))
 		color = new_color

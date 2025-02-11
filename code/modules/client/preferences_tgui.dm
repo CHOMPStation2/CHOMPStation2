@@ -13,7 +13,7 @@
 
 /datum/preferences/ui_assets(mob/user)
 	var/list/assets = list(
-		// get_asset_datum(/datum/asset/spritesheet/preferences),
+		get_asset_datum(/datum/asset/spritesheet/preferences),
 		get_asset_datum(/datum/asset/json/preferences),
 	)
 
@@ -63,7 +63,7 @@
 			var/value = params["value"]
 
 			for(var/datum/preference_middleware/preference_middleware as anything in middleware)
-				if(preference_middleware.pre_set_preference(usr, requested_preference_key, value))
+				if(preference_middleware.pre_set_preference(ui.user, requested_preference_key, value))
 					return TRUE
 
 			var/datum/preference/requested_preference = GLOB.preference_entries_by_key[requested_preference_key]
@@ -79,10 +79,38 @@
 
 			return TRUE
 
+		if("set_color_preference")
+			var/requested_preference_key = params["preference"]
+
+			var/datum/preference/requested_preference = GLOB.preference_entries_by_key[requested_preference_key]
+			if(isnull(requested_preference))
+				return FALSE
+
+			if(!istype(requested_preference, /datum/preference/color))
+				return FALSE
+
+			var/default_value = read_preference(requested_preference.type)
+
+			// Yielding
+			var/new_color = tgui_color_picker(
+				ui.user,
+				"Select new color",
+				null,
+				default_value || COLOR_WHITE,
+			)
+
+			if(!new_color)
+				return FALSE
+
+			if(!update_preference(requested_preference, new_color))
+				return FALSE
+
+			return TRUE
+
 	for(var/datum/preference_middleware/preference_middleware as anything in middleware)
 		var/delegation = preference_middleware.action_delegations[action]
 		if(!isnull(delegation))
-			return call(preference_middleware, delegation)(params, usr)
+			return call(preference_middleware, delegation)(params, ui.user)
 
 	return FALSE
 

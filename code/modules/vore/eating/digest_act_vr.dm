@@ -124,7 +124,7 @@
 		//CHOMPEdit End
 			g_damage = w_class / 2
 			if(B.item_digest_logs)
-				to_chat(B.owner,"<span class='notice'>[src] was digested inside your [lowertext(B.name)].</span>")
+				to_chat(B.owner,span_notice("[src] was digested inside your [lowertext(B.name)]."))
 			qdel(src)
 		else if(istype(src,/obj/item/stack))
 			var/obj/item/stack/S = src
@@ -148,7 +148,7 @@
 					if(goodmeal.trash)
 						new goodmeal.trash(src)
 			if(B.item_digest_logs)
-				to_chat(B.owner,"<span class='notice'>[src] was digested inside your [lowertext(B.name)].</span>")
+				to_chat(B.owner,span_notice("[src] was digested inside your [lowertext(B.name)]."))
 			qdel(src)//CHOMPEdit End
 	if(g_damage > w_class)
 		return w_class

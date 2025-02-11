@@ -50,10 +50,10 @@
 /obj/item/storage/fancy/egg_box
 	icon = 'icons/obj/food.dmi'
 	icon_state = "eggbox"
-	icon_type = "egg"
+	icon_type = REAGENT_ID_EGG
 	name = "egg box"
-	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 7 //CHOMPEdit
+	center_of_mass_x = 16
+	center_of_mass_y = 7
 	storage_slots = 12
 	can_hold = list(
 		/obj/item/reagent_containers/food/snacks/egg,
@@ -80,7 +80,7 @@
 /obj/item/storage/fancy/egg_box/open(mob/user as mob)
 	if(open)
 		return
-	if (isobserver(usr))
+	if (isobserver(user))
 		return
 	open = TRUE
 	update_icon()

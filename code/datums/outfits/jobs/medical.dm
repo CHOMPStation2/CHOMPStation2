@@ -78,7 +78,6 @@
 
 /decl/hierarchy/outfit/job/medical/geneticist
 	name = OUTFIT_JOB_NAME(JOB_GENETICIST)
-	l_ear = /obj/item/radio/headset/headset_medsci // CHOMPAdd - Geneticists get their cool headset
 	uniform = /obj/item/clothing/under/rank/geneticist
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat/genetics
 	backpack = /obj/item/storage/backpack/genetics
@@ -86,6 +85,12 @@
 	satchel_one = /obj/item/storage/backpack/satchel/gen
 	id_type = /obj/item/card/id/medical/geneticist
 	pda_type = /obj/item/pda/geneticist
+
+	// CHOMPAdd Start - Geneticists get their cool headset
+	headset = /obj/item/radio/headset/headset_medsci
+	headset_alt = /obj/item/radio/headset/headset_medsci
+	headset_earbud = /obj/item/radio/headset/headset_medsci
+	// CHOMPAdd End
 
 /decl/hierarchy/outfit/job/medical/psychiatrist
 	name = OUTFIT_JOB_NAME(JOB_PSYCHIATRIST)

@@ -101,6 +101,11 @@
 	// Action button
 	actions_types = list(/datum/action/item_action/hardsuit_interface)
 
+	// Protean
+	var/protean = 0
+	var/obj/item/storage/backpack/rig_storage
+	permeability_coefficient = 0  //Protect the squishies, after all this shit should be waterproof.
+
 /obj/item/rig/New()
 	..()
 
@@ -186,7 +191,7 @@
 				continue
 			. += "[icon2html(piece, user.client)] \The [piece] [piece.gender == PLURAL ? "are" : "is"] deployed."
 
-	if(src.loc == usr)
+	if(src.loc == user)
 		. += "The access panel is [locked? "locked" : "unlocked"]."
 		. += "The maintenance panel is [open ? "open" : "closed"]."
 		. += "Hardsuit systems are [offline ? span_warning("offline") : span_notice("online")]."
@@ -207,7 +212,7 @@
 	var/mob/living/M
 	for(var/obj/item/piece in list(gloves,boots,helmet,chest))
 		if(piece.loc != src && !(wearer && piece.loc == wearer))
-			if(istype(piece.loc, /mob/living))
+			if(isliving(piece.loc))
 				M = piece.loc
 				M.unEquip(piece)
 			piece.forceMove(src)
@@ -425,14 +430,14 @@
 		return
 
 	cooling_on = 1
-	to_chat(usr, span_notice("You switch \the [src]'s cooling system on."))
+	to_chat(user, span_notice("You switch \the [src]'s cooling system on."))
 
 
 /obj/item/rig/proc/turn_cooling_off(var/mob/user, var/failed)
 	if(failed)
 		visible_message("\The [src]'s cooling system clicks and whines as it powers down.")
 	else
-		to_chat(usr, span_notice("You switch \the [src]'s cooling system off."))
+		to_chat(user, span_notice("You switch \the [src]'s cooling system off."))
 	cooling_on = 0
 
 /obj/item/rig/proc/get_environment_temperature()
@@ -532,14 +537,13 @@
 						to_chat(wearer, span_danger("The suit optics flicker and die, leaving you with restricted vision."))
 					else if(offline_vision_restriction == 2)
 						to_chat(wearer, span_danger("The suit optics drop out completely, drowning you in darkness."))
-		if(!offline)
-			offline = 1
-	else
-		if(offline)
+			if(!offline)
+				offline = 1
+		else if (offline)
 			offline = 0
 			if(istype(wearer) && !wearer.wearing_rig)
 				wearer.wearing_rig = src
-			if(!istype(src,/obj/item/rig/protean))	//CHOMPEdit - Stupid snowflake protean special check for rig assimilation code
+			if(!istype(src,/obj/item/rig/protean))	// Stupid snowflake protean special check for rig assimilation code
 				slowdown = initial(slowdown)
 
 	if(offline)
@@ -687,15 +691,15 @@
 	if((!istype(wearer) || (!wearer.back == src && !wearer.belt == src)) && !forced)
 		return
 
-	if((usr == wearer && (usr.stat||usr.paralysis||usr.stunned)) && !forced) // If the usr isn't wearing the suit it's probably an AI.
+	if(!H)
+		return
+
+	if((H == wearer && (H.stat||H.paralysis||H.stunned)) && !forced) // If the user isn't wearing the suit it's probably an AI.
 		return
 
 	var/obj/item/check_slot
 	var/equip_to
 	var/obj/item/use_obj
-
-	if(!H)
-		return
 
 	switch(piece)
 		if("helmet")
@@ -729,7 +733,7 @@
 						use_obj.canremove = TRUE
 						holder.drop_from_inventory(use_obj)
 						use_obj.forceMove(get_turf(src))
-						use_obj.dropped()
+						use_obj.dropped(holder)
 						use_obj.canremove = FALSE
 						use_obj.forceMove(src)
 
@@ -786,7 +790,7 @@
 	for(var/piece in list("helmet","gauntlets","chest","boots"))
 		toggle_piece(piece, H, ONLY_DEPLOY)
 
-/obj/item/rig/dropped(var/mob/user)
+/obj/item/rig/dropped(mob/user)
 	. = ..(user)
 	for(var/piece in list("helmet","gauntlets","chest","boots"))
 		toggle_piece(piece, user, ONLY_RETRACT)
@@ -922,16 +926,16 @@
 	if(world.time < wearer_move_delay)
 		return
 
-	if(!wearer || !wearer.loc) //CHOMP Edit - Removed some stuff for protean living hardsuit
+	if(!wearer || !wearer.loc) // Removed some stuff for protean living hardsuit
 		return
 
-//CHOMP Addition - Added this for protean living hardsuit
+// Added this for protean living hardsuit
 	wearer_move_delay = world.time + 2
 	if(ai_moving)
 		if(!ai_can_move_suit(user, check_user_module = 1))
 			return
 		// AIs are a bit slower than regular and ignore move intent.
-		//CHOMPEdit - Moved this to where it's relevant
+		// Moved this to where it's relevant
 		wearer_move_delay = world.time + ai_controlled_move_delay
 
 	//This is sota the goto stop mobs from moving var

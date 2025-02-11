@@ -85,12 +85,12 @@
 	var/dat = "<title>[name]</title>"
 
 	for(var/obj/item/paper/P in src)
-		dat += "<A href='?src=\ref[src];remove=\ref[P]'>Remove</A> <A href='?src=\ref[src];rename=\ref[P]'>Rename</A> - <A href='?src=\ref[src];read=\ref[P]'>[P.name]</A><BR>"
+		dat += "<A href='byond://?src=\ref[src];remove=\ref[P]'>Remove</A> <A href='byond://?src=\ref[src];rename=\ref[P]'>Rename</A> - <A href='byond://?src=\ref[src];read=\ref[P]'>[P.name]</A><BR>"
 	for(var/obj/item/photo/Ph in src)
-		dat += "<A href='?src=\ref[src];remove=\ref[Ph]'>Remove</A> <A href='?src=\ref[src];rename=\ref[Ph]'>Rename</A> - <A href='?src=\ref[src];look=\ref[Ph]'>[Ph.name]</A><BR>"
+		dat += "<A href='byond://?src=\ref[src];remove=\ref[Ph]'>Remove</A> <A href='byond://?src=\ref[src];rename=\ref[Ph]'>Rename</A> - <A href='byond://?src=\ref[src];look=\ref[Ph]'>[Ph.name]</A><BR>"
 	for(var/obj/item/paper_bundle/Pb in src)
-		dat += "<A href='?src=\ref[src];remove=\ref[Pb]'>Remove</A> <A href='?src=\ref[src];rename=\ref[Pb]'>Rename</A> - <A href='?src=\ref[src];browse=\ref[Pb]'>[Pb.name]</A><BR>"
-	user << browse(dat, "window=folder")
+		dat += "<A href='byond://?src=\ref[src];remove=\ref[Pb]'>Remove</A> <A href='byond://?src=\ref[src];rename=\ref[Pb]'>Rename</A> - <A href='byond://?src=\ref[src];browse=\ref[Pb]'>[Pb.name]</A><BR>"
+	user << browse("<html>[dat]</html>", "window=folder")
 	onclose(user, "folder")
 	add_fingerprint(user)
 	return
@@ -111,7 +111,7 @@
 		else if(href_list["read"])
 			var/obj/item/paper/P = locate(href_list["read"])
 			if(P && (P.loc == src) && istype(P))
-				if(!(istype(usr, /mob/living/carbon/human) || istype(usr, /mob/observer/dead) || istype(usr, /mob/living/silicon)))
+				if(!(ishuman(usr) || isobserver(usr) || issilicon(usr)))
 					usr << browse("<HTML><HEAD><TITLE>[P.name]</TITLE></HEAD><BODY>[stars(P.info)][P.stamps]</BODY></HTML>", "window=[P.name]")
 					onclose(usr, "[P.name]")
 				else

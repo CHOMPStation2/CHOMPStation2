@@ -11,25 +11,31 @@
 	var/glass = 1
 	var/datum/tgui_module/appearance_changer/mirror/M
 
-/obj/structure/mirror/Initialize(mapload, var/dir, var/building = 0, mob/user as mob)
+/obj/structure/mirror/Initialize(mapload, var/dir, var/building = 0)
+	. = ..()
 	M = new(src, null)
 	if(building)
 		glass = 0
 		icon_state = "mirror_frame"
 		pixel_x = (dir & 3)? 0 : (dir == 4 ? -28 : 28)
 		pixel_y = (dir & 3)? (dir == 1 ? -30 : 30) : 0
-	return
 
 /obj/structure/mirror/Destroy()
 	QDEL_NULL(M)
 	. = ..()
 
-/obj/structure/mirror/attack_hand(mob/user as mob)
+/obj/structure/mirror/attack_hand(mob/user)
 	if(!glass) return
 	if(shattered)	return
 
-	if(ishuman(user))
-		M.tgui_interact(user)
+	M.tgui_interact(user)
+
+/obj/structure/mirror/attack_ai(mob/user)
+	if(!glass) return
+	if(shattered)	return
+	if(!Adjacent(user)) return
+
+	M.tgui_interact(user)
 
 /obj/structure/mirror/proc/shatter()
 	if(!glass) return
@@ -125,7 +131,7 @@
 /obj/structure/mirror/raider/attack_hand(var/mob/living/carbon/human/user)
 	if(istype(get_area(src),/area/syndicate_mothership))
 		if(istype(user) && user.mind && user.mind.special_role == "Raider" && user.species.name != SPECIES_VOX && is_alien_whitelisted(user, SPECIES_VOX))
-			var/choice = tgui_alert(usr, "Do you wish to become a true Vox of the Shoal? This is not reversible.", "Become Vox?", list("No","Yes"))
+			var/choice = tgui_alert(user, "Do you wish to become a true Vox of the Shoal? This is not reversible.", "Become Vox?", list("No","Yes"))
 			if(choice && choice == "Yes")
 				var/mob/living/carbon/human/vox/vox = new(get_turf(src),SPECIES_VOX)
 				vox.gender = user.gender

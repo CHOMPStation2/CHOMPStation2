@@ -1,10 +1,17 @@
-import { BooleanLike } from 'common/react';
 import { useState } from 'react';
 import { useBackend } from 'tgui/backend';
-import { Box, Button, Flex, Icon, LabeledList, Section } from 'tgui/components';
 import { Window } from 'tgui/layouts';
 /* This is all basically stolen from routes.js. */
 import { routingError } from 'tgui/routes';
+import {
+  Box,
+  Button,
+  Icon,
+  LabeledList,
+  Section,
+  Stack,
+} from 'tgui-core/components';
+import { BooleanLike } from 'tgui-core/react';
 
 type Data = {
   owner: string;
@@ -25,17 +32,27 @@ type Data = {
 };
 
 const requirePdaInterface = require.context('./pda_screens', false, /\.tsx$/);
-
+// CHOMPEdit Start - Add check for chompstation pda_screens
+const requirePdaInterfaceCh = require.context(
+  '../chompstation/Pda/pda_screens',
+  false,
+  /\.tsx$/,
+);
 function getPdaApp(name: string) {
   let appModule: __WebpackModuleApi.RequireContext;
   try {
-    appModule = requirePdaInterface(`./${name}.tsx`);
+    appModule = requirePdaInterfaceCh(`./${name}.tsx`);
   } catch (err) {
-    if (err.code === 'MODULE_NOT_FOUND') {
-      return routingError('notFound', name);
+    try {
+      appModule = requirePdaInterface(`./${name}.tsx`);
+    } catch (err) {
+      if (err.code === 'MODULE_NOT_FOUND') {
+        return routingError('notFound', name);
+      }
+      throw err;
     }
-    throw err;
   }
+  // CHOMPEdit End
   const Component: () => React.JSX.Element = appModule[name];
   if (!Component) {
     return routingError('missingExport', name);
@@ -105,9 +122,9 @@ const PDAHeader = (props: {
 
   return (
     <Box mb={1}>
-      <Flex align="center" justify="space-between">
+      <Stack align="center" justify="space-between">
         {!!idInserted && (
-          <Flex.Item>
+          <Stack.Item>
             <Button
               icon="eject"
               color="transparent"
@@ -115,20 +132,20 @@ const PDAHeader = (props: {
             >
               {idLink}
             </Button>
-          </Flex.Item>
+          </Stack.Item>
         )}
-        <Flex.Item grow={1} textAlign="center" bold>
+        <Stack.Item grow textAlign="center" bold>
           {stationTime}
-        </Flex.Item>
-        <Flex.Item>
+        </Stack.Item>
+        <Stack.Item>
           <Button
             selected={props.settingsMode}
             onClick={() => props.onSettingsMode(!props.settingsMode)}
             icon="cog"
           />
           <Button onClick={() => act('Retro')} icon="adjust" />
-        </Flex.Item>
-      </Flex>
+        </Stack.Item>
+      </Stack>
     </Box>
   );
 };
@@ -187,8 +204,8 @@ const PDAFooter = (props: { onSettingsMode: Function }) => {
       right="0%"
       backgroundColor={useRetro ? '#6f7961' : '#1b1b1b'}
     >
-      <Flex>
-        <Flex.Item basis="33%">
+      <Stack>
+        <Stack.Item basis="33%">
           <Button
             fluid
             color="transparent"
@@ -199,8 +216,8 @@ const PDAFooter = (props: { onSettingsMode: Function }) => {
             fontSize={1.7}
             onClick={() => act('Back')}
           />
-        </Flex.Item>
-        <Flex.Item basis="33%">
+        </Stack.Item>
+        <Stack.Item basis="33%">
           <Button
             fluid
             color="transparent"
@@ -214,8 +231,8 @@ const PDAFooter = (props: { onSettingsMode: Function }) => {
               act('Home');
             }}
           />
-        </Flex.Item>
-      </Flex>
+        </Stack.Item>
+      </Stack>
     </Box>
   );
 };

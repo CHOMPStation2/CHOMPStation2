@@ -12,18 +12,16 @@
 	//appearance_flags = RADIATION_GLOWS
 	shock_resist = 0 // Lets not be immune to zaps.
 	friendly = list("nuzzles", "glomps", "snuggles", "cuddles", "squishes") // lets be cute :3
-//ChompEdit begins	Prommies are cute and all, but they're still slimes, and ought to be deadlier than even this.  So far this part is just a direct copy of Protean_blob.dm
 	harm_intent_damage = 3
 	melee_damage_lower = 5
 	melee_damage_upper = 5
-	see_in_dark = 10
-//Chomp Edit ends
+	see_in_dark = 10 // CHOMPAdd
 	player_msg = "You're a little squisher! Your cuteness level has increased tenfold."
 	heat_damage_per_tick = 20 // Hot and cold are bad, but cold is AS bad for prommies as it is for slimes.
 	cold_damage_per_tick = 20
 	//glow_range = 0
 	//glow_intensity = 0
-	has_hands = 1  //Chomp Addition, brings in line with Proteans' own blob form.
+	has_hands = 1  // brings in line with Proteans' own blob form.
 
 	var/mob/living/carbon/human/humanform
 	var/datum/modifier/healing
@@ -91,14 +89,13 @@
 		humanform.species.update_misc_tabs(src)
 
 /mob/living/simple_mob/slime/promethean/handle_special() // Should disable default slime healing, we'll use nutrition based heals instead.
-//ChompAdd Begins.  They already heal from their carbon form while even in slime form, but this is for a small bonus healing for being unformed.
+// They already heal from their carbon form while even in slime form, but this is for a small bonus healing for being unformed.
 	adjustOxyLoss(-0.2)
 	adjustToxLoss(-0.2)
 	adjustFireLoss(-0.2)
 	adjustCloneLoss(-0.2)
 	adjustBruteLoss(-0.2)
 	adjustHalLoss(-6) // HalLoss ticks down FAST
-//ChompAdd Ends
 	if(rad_glow)
 		rad_glow = CLAMP(rad_glow,0,250)
 		set_light(max(1,min(5,rad_glow/15)), max(1,min(10,rad_glow/25)), color)
@@ -313,7 +310,7 @@
 
 	last_special = world.time + 25
 
-	var/new_skin = input(usr, "Please select a new body color.", "Shapeshifter Colour", color) as null|color
+	var/new_skin = tgui_color_picker(src, "Please select a new body color.", "Shapeshifter Colour", color)
 	if(!new_skin)
 		return
 	color = new_skin
@@ -384,27 +381,14 @@
 //	for(var/obj/item/I in things_to_drop) //rip hoarders  //Chompedit: Or not.
 //		drop_from_inventory(I)
 
-//	if(w_uniform && istype(w_uniform,/obj/item/clothing)) //No webbings tho. We do this after in case a suit was in the way
-//		var/obj/item/clothing/uniform = w_uniform
-//		if(LAZYLEN(uniform.accessories))
-//			for(var/obj/item/clothing/accessory/A in uniform.accessories)
-//				if(is_type_in_list(A, disallowed_protean_accessories))
-//					uniform.remove_accessory(null,A) //First param is user, but adds fingerprints and messages
-//Chompremoval End
 	//Size update
 	blob.transform = matrix()*size_multiplier
 	blob.size_multiplier = size_multiplier
 
-//ChompEdit Begins:  Let's drop what's in our hands.
-//	if(l_hand) blob.prev_left_hand = l_hand //Won't save them if dropped above, but necessary if handdrop is disabled.
-//	if(r_hand) blob.prev_right_hand = r_hand
-
 	if(l_hand) drop_from_inventory(l_hand)
 	if(r_hand) drop_from_inventory(r_hand)
-//ChompEdit Ends
 
 	//Put our owner in it (don't transfer var/mind)
-//	blob.Weaken(2) //ChompRemoval  Not needed.
 	blob.transforming = TRUE
 	blob.ckey = ckey
 	blob.ooc_notes = ooc_notes
@@ -417,7 +401,7 @@
 	//CHOMPEdit End
 	blob.transforming = FALSE
 	blob.name = name
-	blob.real_name = real_name //CHOMPEdit
+	blob.real_name = real_name
 	blob.nutrition = nutrition
 	blob.color = rgb(r_skin, g_skin, b_skin)
 	playsound(src.loc, "sound/effects/slime_squish.ogg", 15)
@@ -436,7 +420,6 @@
 	remove_verb(blob, /mob/living/simple_mob/proc/set_name) // We already have a name.
 	temporary_form = blob
 
-//ChompAdd begins  Handles the ID and Radio, giving the blobform each of them.
 	var/obj/item/radio/R = null
 	if(isradio(l_ear))
 		R = l_ear
@@ -447,7 +430,6 @@
 		R.forceMove(blob)
 	if(wear_id)
 		blob.myid = wear_id.GetID()
-//ChompAdd End
 	//Mail them to nullspace
 	moveToNullspace()
 
@@ -499,7 +481,6 @@
 	forceMove(reform_spot)
 
 	//Put our owner in it (don't transfer var/mind)
-//	Weaken(2)  //Chompremoval again, not needed.
 	playsound(src.loc, "sound/effects/slime_squish.ogg", 15)
 	transforming = TRUE
 	ckey = blob.ckey
@@ -540,10 +521,6 @@
 
 	//vore_organs.Cut()
 
-//ChompEdit begin.  And let's drop them again.
-//	if(blob.prev_left_hand) put_in_l_hand(blob.prev_left_hand)
-//	if(blob.prev_right_hand) put_in_r_hand(blob.prev_right_hand)
-
 	if(blob.l_hand) blob.drop_from_inventory(blob.l_hand)
 	if(blob.r_hand) blob.drop_from_inventory(blob.r_hand)
 
@@ -551,9 +528,7 @@
 		blob.mob_radio.forceMove(src)
 		blob.mob_radio = null
 	if(blob.myid)
-		blob.myid.forceMove(src)
 		blob.myid = null
-//ChompEdit End
 
 	Life(1) //Fix my blindness right meow //Has to be moved up here, there exists a circumstance where blob could be deleted without vore organs moving right.
 
@@ -581,3 +556,8 @@
 	else if(humanform.say_understands(other, speaking))		//So they're speaking something other than promethean or sign, let's just ask our original mob if it understands
 		return TRUE
 	else return FALSE
+
+/mob/living/simple_mob/slime/promethean/character_directory_species()
+	if (humanform)
+		return "[humanform.custom_species ? humanform.custom_species : (humanform.species ? humanform.species.name : "Promethean Blob")]"
+	return "Promethean Blob"

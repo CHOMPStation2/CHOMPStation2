@@ -53,7 +53,7 @@
 		starts_with = null
 
 	if(!opened)		// if closed, any item at the crate's loc is put in the contents
-		if(istype(loc, /mob/living)) return
+		if(isliving(loc)) return
 		var/obj/item/I
 		for(I in loc)
 			if(I.density || I.anchored || I == src) continue
@@ -319,7 +319,7 @@
 			return
 		if(W.loc != user) // This should stop mounted modules ending up outside the module.
 			return
-		usr.drop_item()
+		user.drop_item()
 		if(W)
 			W.forceMove(loc)
 	else if(istype(W, /obj/item/packageWrap))
@@ -387,7 +387,7 @@
 /obj/structure/closet/attack_self_tk(mob/user as mob)
 	add_fingerprint(user)
 	if(!toggle())
-		to_chat(usr, span_notice("It won't budge!"))
+		to_chat(user, span_notice("It won't budge!"))
 
 /obj/structure/closet/verb/verb_toggleopen()
 	set src in oview(1)
@@ -477,12 +477,6 @@
 		BD.unwrap()
 	open()
 
-/obj/structure/closet/proc/animate_shake()
-	var/init_px = pixel_x
-	var/shake_dir = pick(-1, 1)
-	animate(src, transform=turn(matrix(), 8*shake_dir), pixel_x=init_px + 2*shake_dir, time=1)
-	animate(transform=null, pixel_x=init_px, time=6, easing=ELASTIC_EASING)
-
 /obj/structure/closet/onDropInto(var/atom/movable/AM)
 	return
 
@@ -554,7 +548,7 @@
 	set category = "Object"
 	set name = "Devour Occupants" //ChompEDIT vore as a verb is cronge
 
-	if(!istype(usr, /mob/living)) //no ghosts
+	if(!isliving(usr)) //no ghosts
 		return
 
 	if(!(usr in src.contents))
@@ -564,7 +558,7 @@
 	var/list/targets = list() //IF IT IS NOT BROKEN. DO NOT FIX IT.
 
 	for(var/mob/living/L in src.contents)
-		if(!istype(L, /mob/living)) //Don't eat anything that isn't mob/living. Failsafe.
+		if(!isliving(L)) //Don't eat anything that isn't mob/living. Failsafe.
 			continue
 		if(L == usr) //no eating yourself. 1984.
 			continue
@@ -580,7 +574,7 @@
 	if(!target)
 		return
 
-	if(!istype(target, /mob/living)) //Safety.
+	if(!isliving(target)) //Safety.
 		to_chat(src, span_warning("You need to select a living target!"))
 		return
 

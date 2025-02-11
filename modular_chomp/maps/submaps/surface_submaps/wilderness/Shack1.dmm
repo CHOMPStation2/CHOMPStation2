@@ -14,7 +14,7 @@
 "e" = (
 /obj/effect/decal/cleanable/cobweb,
 /turf/simulated/floor/holofloor/wood{
-	icon_state = "wood_broken1"
+	icon_state = "wood-broken1"
 	},
 /area/submap/Shack1)
 "f" = (
@@ -39,13 +39,13 @@
 /area/submap/Shack1)
 "j" = (
 /turf/simulated/floor/holofloor/wood{
-	icon_state = "wood_broken0"
+	icon_state = "wood-broken0"
 	},
 /area/submap/Shack1)
 "k" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/holofloor/wood{
-	icon_state = "wood_broken5"
+	icon_state = "wood-broken5"
 	},
 /area/submap/Shack1)
 "l" = (
@@ -58,7 +58,7 @@
 /area/submap/Shack1)
 "n" = (
 /turf/simulated/floor/holofloor/wood{
-	icon_state = "wood_broken3"
+	icon_state = "wood-broken3"
 	},
 /area/submap/Shack1)
 "o" = (
@@ -83,7 +83,7 @@
 /area/submap/Shack1)
 "s" = (
 /turf/simulated/floor/holofloor/wood{
-	icon_state = "wood_broken6"
+	icon_state = "wood-broken6"
 	},
 /area/submap/Shack1)
 "t" = (

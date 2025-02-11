@@ -55,7 +55,7 @@
 
 	return data
 
-/datum/tgui_module/rcon/tgui_act(action, params)
+/datum/tgui_module/rcon/tgui_act(action, params, datum/tgui/ui)
 	if(..())
 		return TRUE
 
@@ -78,15 +78,21 @@
 			var/obj/machinery/power/smes/buildable/SMES = GetSMESByTag(params["smes"])
 			if(SMES)
 				SMES.tgui_set_io(SMES_TGUI_INPUT, params["target"], text2num(params["adjust"]))
-				// var/inputset = (input(usr, "Enter new input level (0-[SMES.input_level_max/1000] kW)", "SMES Input Power Control", SMES.input_level/1000) as num) * 1000
-				// SMES.set_input(inputset)
+				/* var/inputset = (tgui_input_number(ui.user, "Enter new input level (0-[SMES.input_level_max/1000] kW)", "SMES Input Power Control", SMES.input_level/1000))
+				if(inputset)
+					inputset *= 1000
+					SMES.set_input(inputset)
+				*/
 			. = TRUE
 		if("smes_out_set")
 			var/obj/machinery/power/smes/buildable/SMES = GetSMESByTag(params["smes"])
 			if(SMES)
 				SMES.tgui_set_io(SMES_TGUI_OUTPUT, params["target"], text2num(params["adjust"]))
-				// var/outputset = (input(usr, "Enter new output level (0-[SMES.output_level_max/1000] kW)", "SMES Output Power Control", SMES.output_level/1000) as num) * 1000
-				// SMES.set_output(outputset)
+				/* var/outputset = (tgui_input_number(ui.user, "Enter new output level (0-[SMES.output_level_max/1000] kW)", "SMES Output Power Control", SMES.output_level/1000))
+				if(outputset)
+					outputset *= 1000
+					SMES.set_input(outputset)
+				SMES.set_output(outputset) */
 			. = TRUE
 		if("toggle_breaker")
 			var/obj/machinery/power/breakerbox/toggle = null
@@ -95,7 +101,7 @@
 					toggle = breaker
 			if(toggle)
 				if(toggle.update_locked)
-					to_chat(usr, "The breaker box was recently toggled. Please wait before toggling it again.")
+					to_chat(ui.user, "The breaker box was recently toggled. Please wait before toggling it again.")
 				else
 					toggle.auto_toggle()
 			. = TRUE

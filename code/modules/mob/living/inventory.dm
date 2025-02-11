@@ -26,7 +26,6 @@
 				newitem.forceMove(S)
 			return S
 
-	//CHOMPedit - protean rigsuit integrated backpack, behold, jank!
 	if(istype(src.back,/obj/item/rig))	//This would be much cooler if we had componentized storage datums
 		var/obj/item/rig/R = src.back
 		if(R.rig_storage)
@@ -184,7 +183,7 @@
 // This handles the drag-open inventory panel.
 /mob/living/MouseDrop(atom/over_object)
 	var/mob/living/L = over_object
-	if(istype(L) && L != src && L == usr && Adjacent(L))
+	if(istype(L) && L != src && L == usr && Adjacent(L) && !L.is_incorporeal()) // CHOMPEdit
 		show_inventory_panel(L)
 	. = ..()
 
@@ -306,7 +305,7 @@
 
 	switch(action)
 		if("targetSlot")
-			H.handle_strip(params["slot"], usr)
+			H.handle_strip(params["slot"], ui.user)
 			return TRUE
 
 

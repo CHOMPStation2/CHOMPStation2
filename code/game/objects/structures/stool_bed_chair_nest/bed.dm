@@ -21,19 +21,20 @@
 	var/datum/material/padding_material
 	var/base_icon = "bed"
 	var/applies_material_colour = 1
+	var/flippable = TRUE
 
-/obj/structure/bed/New(var/newloc, var/new_material, var/new_padding_material)
+/obj/structure/bed/Initialize(var/newloc, var/new_material, var/new_padding_material)
 	..(newloc)
 	color = null
 	if(!new_material)
 		new_material = MAT_STEEL
 	material = get_material_by_name(new_material)
 	if(!istype(material))
-		qdel(src)
-		return
+		return INITIALIZE_HINT_QDEL
 	if(new_padding_material)
 		padding_material = get_material_by_name(new_padding_material)
 	update_icon()
+	return INITIALIZE_HINT_NORMAL
 
 /obj/structure/bed/get_material()
 	return material
@@ -172,25 +173,49 @@
 	if(padding_material)
 		padding_material.place_sheet(get_turf(src), 1)
 
+/obj/structure/bed/verb/turn_around()
+	set name = "Turn Around"
+	set category = "Object"
+	set src in oview(1)
+
+	if(!flippable)
+		to_chat(usr,span_notice("\The [src] can't face the other direction."))
+		return
+
+	if(!usr || !isturf(usr.loc))
+		return
+	if(usr.stat || usr.restrained())
+		return
+	if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction)))
+		return
+	if(dir == 2)
+		src.set_dir(1)
+	else if(dir == 1)
+		src.set_dir(2)
+	else if(dir == 4)
+		src.set_dir(8)
+	else if(dir == 8)
+		src.set_dir(4)
+
 /obj/structure/bed/psych
 	name = "psychiatrist's couch"
 	desc = "For prime comfort during psychiatric evaluations."
 	icon_state = "psychbed"
 	base_icon = "psychbed"
 
-/obj/structure/bed/psych/New(var/newloc)
-	..(newloc,"wood","leather")
+/obj/structure/bed/psych/Initialize(var/newloc)
+	. = ..(newloc,MAT_WOOD,MAT_LEATHER)
 
-/obj/structure/bed/padded/New(var/newloc)
-	..(newloc,"plastic","cotton")
+/obj/structure/bed/padded/Initialize(var/newloc)
+	. = ..(newloc,MAT_PLASTIC,MAT_COTTON)
 
 /obj/structure/bed/double
 	name = "double bed"
 	icon_state = "doublebed"
 	base_icon = "doublebed"
 
-/obj/structure/bed/double/padded/New(var/newloc)
-	..(newloc,"wood","cotton")
+/obj/structure/bed/double/padded/Initialize(var/newloc)
+	. = ..(newloc,MAT_WOOD,MAT_COTTON)
 
 /obj/structure/bed/double/post_buckle_mob(mob/living/M as mob)
 	if(M.buckled == src)
@@ -212,6 +237,7 @@
 	surgery_odds = 50 //VOREStation Edit
 	var/bedtype = /obj/structure/bed/roller
 	var/rollertype = /obj/item/roller
+	flippable = FALSE
 
 /obj/structure/bed/roller/adv
 	name = "advanced roller bed"
@@ -242,8 +268,8 @@
 	desc = "A collapsed roller bed that can be carried around."
 	icon = 'icons/obj/rollerbed.dmi'
 	icon_state = "folded_rollerbed"
-	center_of_mass_x = 17 //CHOMPEdit
-	center_of_mass_y= 7 //CHOMPEdit
+	center_of_mass_x = 17
+	center_of_mass_y = 7
 	slot_flags = SLOT_BACK
 	w_class = ITEMSIZE_LARGE
 	var/rollertype = /obj/item/roller
@@ -283,8 +309,8 @@
 	icon_state = "rollerbed"
 	var/obj/item/roller/held
 
-/obj/item/roller_holder/New()
-	..()
+/obj/item/roller_holder/Initialize()
+	. = ..()
 	held = new /obj/item/roller(src)
 
 /obj/item/roller_holder/attack_self(mob/user as mob)
@@ -352,6 +378,7 @@
 	catalogue_data = list(/datum/category_item/catalogue/anomalous/precursor_a/alien_bed)
 	icon = 'icons/obj/abductor.dmi'
 	icon_state = "bed"
+	flippable = FALSE
 
 /obj/structure/bed/alien/update_icon()
 	return // Doesn't care about material or anything else.

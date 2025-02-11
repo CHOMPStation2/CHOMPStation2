@@ -119,9 +119,9 @@ var/global/list/runlevel_flags = list(RUNLEVEL_LOBBY, RUNLEVEL_SETUP, RUNLEVEL_G
 #define INIT_ORDER_TITLE			99	//CHOMPEdit
 #define INIT_ORDER_SERVER_MAINT		93
 #define INIT_ORDER_WEBHOOKS			50
-#define INIT_ORDER_DBCORE			41	//CHOMPEdit
-#define INIT_ORDER_SQLITE			40
-#define INIT_ORDER_GARBAGE			39
+#define INIT_ORDER_SQLITE			41
+#define INIT_ORDER_GARBAGE			40
+#define INIT_ORDER_DBCORE			39
 #define INIT_ORDER_MEDIA_TRACKS		38 // Gotta get that lobby music up, yo
 #define INIT_ORDER_INPUT			37
 #define INIT_ORDER_CHEMISTRY		35
@@ -191,8 +191,8 @@ var/global/list/runlevel_flags = list(RUNLEVEL_LOBBY, RUNLEVEL_SETUP, RUNLEVEL_G
 #define FIRE_PRIORITY_CHAT			400
 #define FIRE_PRIORITY_OVERLAYS		500
 #define FIRE_PRIORITY_TIMER			700
-#define FIRE_PRIORITY_SPEECH_CONTROLLER 900 // CHOMPEdit
-#define FIRE_PRIORITY_DELAYED_VERBS 950 // CHOMPEdit
+#define FIRE_PRIORITY_SPEECH_CONTROLLER 900
+#define FIRE_PRIORITY_DELAYED_VERBS 950
 #define FIRE_PRIORITY_INPUT			1000 // This must always always be the max highest priority. Player input must never be lost.
 
 /**
@@ -205,5 +205,5 @@ var/global/list/runlevel_flags = list(RUNLEVEL_LOBBY, RUNLEVEL_SETUP, RUNLEVEL_G
 */
 #define addtimer(args...) _addtimer(args, file = __FILE__, line = __LINE__)
 
-/// The timer key used to know how long subsystem initialization takes // CHOMPEdit
-#define SS_INIT_TIMER_KEY "ss_init" // CHOMPEdit
+/// The timer key used to know how long subsystem initialization takes
+#define SS_INIT_TIMER_KEY "ss_init"

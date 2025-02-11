@@ -18,7 +18,7 @@
 		if(time2 < 10)
 			time2 = "0[time2]"
 
-		user.visible_message("<span class='rose'>[src] displays [time1]:[time2]</span>")
+		user.visible_message(span_rose("[src] displays [time1]:[time2]"))
 	else
 		return ..()
 	return
@@ -87,7 +87,7 @@
 
 /obj/item/toy/bosunwhistle/fluff/strix/attack_self(mob/user as mob)
 	if(cooldown < world.time - 15)
-		user << "<span class='notice'>You blow on [src], creating an ear-splitting noise!</span>"
+		user << span_notice("You blow on [src], creating an ear-splitting noise!")
 		playsound(user, 'sound/misc/boatswain.ogg', 25, 1)
 		cooldown = world.time
 
@@ -157,18 +157,18 @@
 /obj/item/melee/goz_whitecane/attack_self(mob/user as mob)
 	on = !on
 	if(on)
-		user.visible_message("<span class='notice'>\The [user] extends the white cane.</span>",\
-		"<span class='warning'>You extend the white cane.</span>",\
-		"You hear an ominous click.")
+		user.visible_message(span_notice("\The [user] extends the white cane."),\
+		span_warning("You extend the white cane."),\
+		span_hear("You hear an ominous click."))
 		icon_state = "goz_whitecane_1"
 		item_state_slots = list(slot_r_hand_str = "goz_whitecane", slot_l_hand_str = "goz_whitecane")
 		w_class = ITEMSIZE_NORMAL
 		force = 5
 		attack_verb = list("smacked", "struck", "craked", "beaten")
 	else
-		user.visible_message("<span class='notice'>\The [user] collapses the white cane.</span>",\
-		"<span class='notice'>You collapse the white cane.</span>",\
-		"You hear a click.")
+		user.visible_message(span_notice("\The [user] collapses the white cane."),\
+		span_notice("You collapse the white cane."),\
+		span_hear("You hear a click."))
 		icon_state = "goz_whitecane_0"
 		item_state_slots = list(slot_r_hand_str = null, slot_l_hand_str = null)
 		w_class = ITEMSIZE_SMALL
@@ -187,7 +187,7 @@
 
 /obj/item/melee/goz_whitecane/attack(mob/M as mob, mob/user as mob)
 	if(user.a_intent == I_HELP)
-		user.visible_message("<span class='notice'>\The [user] has lightly tapped [M] on the ankle with their white cane!</span>")
+		user.visible_message(span_notice("\The [user] has lightly tapped [M] on the ankle with their white cane!"))
 		return
 	else
 		..()
@@ -440,7 +440,7 @@
 	if(user.r_hand == src || user.l_hand == src)
 		if(icon_state != "[basestate]-s")
 			icon_state = "[basestate]-s"
-			user.visible_message("<span class='rose'>[user] spins the [src]!</span>")
+			user.visible_message(span_rose("[user] spins the [src]!"))
 			spawn(100)
 				icon_state = "[basestate]"
 	else
@@ -458,7 +458,7 @@
 	if(user.r_hand == src || user.l_hand == src)
 		if(icon_state != "squeezetoy-s")
 			icon_state = "squeezetoy-s"
-			user.visible_message("<span class='rose'>[user] squeezes the [src] a few times!</span>")
+			user.visible_message(span_rose("[user] squeezes the [src] a few times!"))
 			spawn(50)
 				icon_state = "squeezetoy"
 	else
@@ -477,11 +477,11 @@
 	if(user.r_hand == src || user.l_hand == src)
 		if(folded == 0)
 			icon_state = "infinitycube0"
-			user.visible_message("<span class='rose'>[user] folds the [src]!</span>")
+			user.visible_message(span_rose("[user] folds the [src]!"))
 			folded = 1
 		else if(folded == 1)
 			icon_state = "infinitycube1"
-			user.visible_message("<span class='rose'>[user] unfolds the [src]!</span>")
+			user.visible_message(span_rose("[user] unfolds the [src]!"))
 			folded = 0
 	else
 		return ..()
@@ -607,13 +607,13 @@
 	icon_state = "implanter1_1"
 
 /obj/item/implanter/fluff/coda/remove_implant() //No way to remove this implant.
-	to_chat(usr, "<span class='notice'>It seems \the [imp] can't be removed from \the [src].</span>")
+	to_chat(usr, span_notice("It seems \the [imp] can't be removed from \the [src]."))
 	return
 
 /obj/item/implanter/fluff/coda/attack()
 	..()
 	if(!imp) //After injection, the implanter poofs.
-		to_chat(usr, "<span class='notice'>\The [src] disentegrates after you use it!</span>")
+		to_chat(usr, span_notice("\The [src] disentegrates after you use it!"))
 		qdel(src)
 
 /obj/item/implant/fluff/coda
@@ -631,7 +631,7 @@
 /obj/item/implant/fluff/coda/process()
 	if(implanted_in && (src.imp_in != implanted_in)) //If the implant is removed.
 		implanted_in.setBrainLoss(200)
-		visible_message("<span class='notice'>\The [src] shorts and sparks during removal, frying itself!</span>")
+		visible_message(span_notice("\The [src] shorts and sparks during removal, frying itself!"))
 		playsound(src.loc, "sparks", 50, 1)
 		STOP_PROCESSING(SSobj, src)
 		name = "melted implant"

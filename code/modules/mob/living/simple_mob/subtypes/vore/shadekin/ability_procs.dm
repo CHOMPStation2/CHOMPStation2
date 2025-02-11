@@ -1,27 +1,46 @@
 // Phase shifting procs (and related procs)
 /mob/living/simple_mob/shadekin/proc/phase_shift()
 	var/turf/T = get_turf(src)
+	var/area/A = T.loc	//RS Port #658
 	if(!T.CanPass(src,T) || loc != T)
 		to_chat(src,span_warning("You can't use that here!"))
 		return FALSE
+	//CHOMPAdd Start
 	if((get_area(src).flags & PHASE_SHIELDED))
-		to_chat(src,"<span class='warning'>This area is preventing you from phasing!</span>")
+		to_chat(src,span_warning("This area is preventing you from phasing!"))
 		return FALSE
-
-	forceMove(T)
-	var/original_canmove = canmove
-	SetStunned(0)
-	SetWeakened(0)
-	if(buckled)
-		buckled.unbuckle_mob()
-	if(pulledby)
-		pulledby.stop_pulling()
-	stop_pulling()
-	canmove = FALSE
+	//CHOMPAdd End
+	//RS Port #658 Start
+	if(!client?.holder && A.flag_check(AREA_BLOCK_PHASE_SHIFT))
+		to_chat(src,span_warning("You can't use that here!"))
+		return FALSE
+	//RS Port #658 End
 
 	//Shifting in
 	if(ability_flags & AB_PHASE_SHIFTED)
+		phase_in(T)
+	//Shifting out
+	else
+		phase_out(T)
+
+/mob/living/simple_mob/shadekin/proc/phase_in(var/turf/T)
+	if(ability_flags & AB_PHASE_SHIFTED)
+
+		// pre-change
+		forceMove(T)
+		var/original_canmove = canmove
+		SetStunned(0)
+		SetWeakened(0)
+		if(buckled)
+			buckled.unbuckle_mob()
+		if(pulledby)
+			pulledby.stop_pulling()
+		stop_pulling()
+		canmove = FALSE
+
+		// change
 		ability_flags &= ~AB_PHASE_SHIFTED
+		throwpass = FALSE // CHOMPAdd
 		mouse_opacity = 1
 		name = real_name
 		for(var/obj/belly/B as anything in vore_organs)
@@ -73,9 +92,24 @@
 		*/
 		handle_phasein_flicker() // CHOMPEdit, special handle for phase-in light flicker
 
-	//Shifting out
-	else
+/mob/living/simple_mob/shadekin/proc/phase_out(var/turf/T)
+	if(!(ability_flags & AB_PHASE_SHIFTED))
+
+		// pre-change
+		forceMove(T)
+		var/original_canmove = canmove
+		SetStunned(0)
+		SetWeakened(0)
+		if(buckled)
+			buckled.unbuckle_mob()
+		if(pulledby)
+			pulledby.stop_pulling()
+		stop_pulling()
+		canmove = FALSE
+
+		// change
 		ability_flags |= AB_PHASE_SHIFTED
+		throwpass = TRUE // CHOMPAdd
 		mouse_opacity = 0
 		custom_emote(1,"phases out!")
 		real_name = name
@@ -156,13 +190,13 @@
 	switch(status)
 		//Not allowed due to /area technical reasons
 		if(SHELTER_DEPLOY_BAD_AREA)
-			to_chat(src, "<span class='warning'>A tunnel to the Dark will not function in this area.</span>")
+			to_chat(src, span_warning("A tunnel to the Dark will not function in this area."))
 
 		//Anchored objects or no space
 		if(SHELTER_DEPLOY_BAD_TURFS, SHELTER_DEPLOY_ANCHORED_OBJECTS)
 			var/width = template.width
 			var/height = template.height
-			to_chat(src, "<span class='warning'>There is not enough open area for a tunnel to the Dark to form! You need to clear a [width]x[height] area!</span>")
+			to_chat(src, span_warning("There is not enough open area for a tunnel to the Dark to form! You need to clear a [width]x[height] area!"))
 
 	if(status != SHELTER_DEPLOY_ALLOWED)
 		return FALSE
@@ -173,10 +207,10 @@
 	smoke.set_up(10, 0, T)
 	smoke.start()
 
-	src.visible_message("<span class='notice'>[src] begins pulling dark energies around themselves.</span>")
+	src.visible_message(span_notice("[src] begins pulling dark energies around themselves."))
 	if(do_after(src, 600)) //60 seconds
 		playsound(src, 'sound/effects/phasein.ogg', 100, 1)
-		src.visible_message("<span class='notice'>[src] finishes pulling dark energies around themselves, creating a portal.</span>")
+		src.visible_message(span_notice("[src] finishes pulling dark energies around themselves, creating a portal."))
 
 		log_and_message_admins("[key_name_admin(src)] created a tunnel to the dark at [get_area(T)]!")
 		template.annihilate_plants(deploy_location)
@@ -192,10 +226,10 @@
 /mob/living/simple_mob/shadekin/proc/dark_maw()
 	var/turf/T = get_turf(src)
 	if(!istype(T))
-		to_chat(src, "<span class='warning'>You don't seem to be able to set a trap here!</span>")
+		to_chat(src, span_warning("You don't seem to be able to set a trap here!"))
 		return FALSE
 	else if(T.get_lumcount() >= 0.5)
-		to_chat(src, "<span class='warning'>There is too much light here for your trap to last!</span>")
+		to_chat(src, span_warning("There is too much light here for your trap to last!"))
 		return FALSE
 
 	if(do_after(src, 10))

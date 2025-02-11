@@ -3,4 +3,4 @@
 	desc = "A small bottle of sorbitol. Sickeningly sweet."
 	icon = 'icons/obj/chemical.dmi'
 	icon_state = "bottle-3"
-	prefill = list("sorbitol" = 60)
+	prefill = list(REAGENT_ID_SORBITOL = 60)

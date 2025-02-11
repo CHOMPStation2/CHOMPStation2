@@ -41,13 +41,62 @@
 
 	var/movement_cost = 0       // How much the turf slows down movement, if any.
 
-	// var/list/footstep_sounds = null CHOMPEdit - Better footstep sounds
-	// var/list/vorefootstep_sounds = null	//CHOMPstation edit
-
 	var/block_tele = FALSE      // If true, most forms of teleporting to or from this turf tile will fail.
 	var/can_build_into_floor = FALSE // Used for things like RCDs (and maybe lattices/floor tiles in the future), to see if a floor should replace it.
 	var/list/dangerous_objects // List of 'dangerous' objs that the turf holds that can cause something bad to happen when stepped on, used for AI mobs.
 	var/tmp/changing_turf
+
+	var/blocks_nonghost_incorporeal = FALSE
+	var/footstep
+	var/barefootstep
+	var/heavyfootstep
+	var/clawfootstep
+
+/turf/simulated/floor
+	footstep = FOOTSTEP_FLOOR
+	barefootstep = FOOTSTEP_HARD_BAREFOOT
+	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
+	clawfootstep = FOOTSTEP_HARD_CLAW
+
+/turf/simulated/floor/wood
+	footstep = FOOTSTEP_WOOD
+	barefootstep = FOOTSTEP_WOOD_BAREFOOT
+	clawfootstep = FOOTSTEP_WOOD_CLAW
+
+/turf/simulated/floor/carpet
+	footstep = FOOTSTEP_CARPET
+	barefootstep = FOOTSTEP_CARPET_BAREFOOT
+	clawfootstep = FOOTSTEP_CARPET_BAREFOOT
+
+/turf/simulated/floor/plating
+	footstep = FOOTSTEP_PLATING
+	barefootstep = FOOTSTEP_HARD_BAREFOOT
+	clawfootstep = FOOTSTEP_HARD_CLAW
+
+/turf/simulated/mineral
+	footstep = FOOTSTEP_SAND
+	barefootstep = FOOTSTEP_SAND
+	clawfootstep = FOOTSTEP_SAND
+
+/turf/simulated/floor/outdoors
+	footstep = FOOTSTEP_SAND
+	barefootstep = FOOTSTEP_SAND
+	clawfootstep = FOOTSTEP_SAND
+
+/turf/simulated/floor/outdoors/grass
+	footstep = FOOTSTEP_GRASS
+	barefootstep = FOOTSTEP_GRASS
+	clawfootstep = FOOTSTEP_GRASS
+
+/turf/simulated/floor/water
+	footstep = FOOTSTEP_WATER
+	barefootstep = FOOTSTEP_WATER
+	clawfootstep = FOOTSTEP_WATER
+
+/turf/simulated/floor/lava
+	footstep = FOOTSTEP_LAVA
+	barefootstep = FOOTSTEP_LAVA
+	clawfootstep = FOOTSTEP_LAVA
 
 /turf/Initialize(mapload)
 	. = ..()
@@ -164,7 +213,7 @@
 		return
 	if(istype(O, /obj/screen))
 		return
-	if(user.restrained() || user.stat || user.stunned || user.paralysis || (!user.lying && !istype(user, /mob/living/silicon/robot)))
+	if(user.restrained() || user.stat || user.stunned || user.paralysis || (!user.lying && !isrobot(user)))
 		return
 	if((!(istype(O, /atom/movable)) || O.anchored || !Adjacent(user) || !Adjacent(O) || !user.Adjacent(O)))
 		return
@@ -195,9 +244,6 @@
 
 //There's a lot of QDELETED() calls here if someone can figure out how to optimize this but not runtime when something gets deleted by a Bump/CanPass/Cross call, lemme know or go ahead and fix this mess - kevinz000
 /turf/Enter(atom/movable/mover, atom/oldloc)
-	if(movement_disabled && usr.ckey != movement_disabled_exception)
-		to_chat(usr, span_warning("Movement is admin-disabled.")) //This is to identify lag problems
-		return
 	// Do not call ..()
 	// Byond's default turf/Enter() doesn't have the behaviour we want with Bump()
 	// By default byond will call Bump() on the first dense object in contents
@@ -297,7 +343,7 @@
 
 //expects an atom containing the reagents used to clean the turf
 /turf/proc/clean(atom/source, mob/user)
-	if(source.reagents.has_reagent("water", 1) || source.reagents.has_reagent("cleaner", 1))
+	if(source.reagents.has_reagent(REAGENT_ID_WATER, 1) || source.reagents.has_reagent(REAGENT_ID_CLEANER, 1))
 		clean_blood()
 		if(istype(src, /turf/simulated))
 			var/turf/simulated/T = src
@@ -344,7 +390,7 @@
 		to_chat(vandal, span_warning("There's too much graffiti here to add more."))
 		return FALSE
 
-	var/message = sanitize(tgui_input_text(usr, "Enter a message to engrave.", "Graffiti"), trim = TRUE)
+	var/message = sanitize(tgui_input_text(vandal, "Enter a message to engrave.", "Graffiti"), trim = TRUE)
 	if(!message)
 		return FALSE
 
@@ -430,6 +476,11 @@
 		return TRUE
 	return FALSE
 */
+
+/turf/occult_act(mob/living/user)
+	to_chat(user, span_cult("You consecrate the floor."))
+	ChangeTurf(/turf/simulated/floor/cult, preserve_outdoors = TRUE)
+	return TRUE
 
 // We're about to be the A-side in a turf translation
 /turf/proc/pre_translate_A(var/turf/B)

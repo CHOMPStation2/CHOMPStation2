@@ -151,7 +151,7 @@
 				a.autosay("[S.real_name] is in a critical condition, located at ([T.x],[T.y],[T.z])!", "[S.real_name]'s NIF", "Medical")
 				qdel(a)
 		*/ //Chomp comment out END
-		
+
 		return TRUE
 
 /datum/nifsoft/spare_breath
@@ -205,7 +205,7 @@
 /datum/nifsoft/spare_breath/proc/resp_breath()
 	if(!active) return null
 	var/datum/gas_mixture/breath = new(BREATH_VOLUME)
-	breath.adjust_gas("oxygen", BREATH_MOLES)
+	breath.adjust_gas(GAS_O2, BREATH_MOLES)
 	breath.temperature = T20C
 	return breath
 

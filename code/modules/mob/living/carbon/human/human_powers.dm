@@ -22,7 +22,7 @@
 				var/datum/sprite_accessory/hair/test = hair_styles_list[hair_string]
 				if(test.flags & HAIR_TIEABLE)
 					valid_hairstyles.Add(hair_string)
-			selected_string = tgui_input_list(usr, "Select a new hairstyle", "Your hairstyle", valid_hairstyles)
+			selected_string = tgui_input_list(src, "Select a new hairstyle", "Your hairstyle", valid_hairstyles)
 		if(incapacitated())
 			to_chat(src, span_warning("You can't mess with your hair right now!"))
 			return
@@ -90,11 +90,11 @@
 	var/text = null
 
 	targets += getmobs() //Fill list, prompt user with list
-	target = tgui_input_list(usr, "Select a creature!", "Speak to creature", targets)
+	target = tgui_input_list(src, "Select a creature!", "Speak to creature", targets)
 
 	if(!target) return
 
-	text = tgui_input_text(usr, "What would you like to say?", "Speak to creature", null, MAX_MESSAGE_LEN)
+	text = tgui_input_text(src, "What would you like to say?", "Speak to creature", null, MAX_MESSAGE_LEN)
 
 	text = sanitize(text, MAX_MESSAGE_LEN)
 
@@ -102,14 +102,14 @@
 
 	var/mob/M = targets[target]
 
-	if(istype(M, /mob/observer/dead) || M.stat == DEAD)
+	if(isobserver(M) || M.stat == DEAD)
 		to_chat(src, span_filter_notice("Not even a [src.species.name] can speak to the dead."))
 		return
 
 	log_say("(COMMUNE to [key_name(M)]) [text]",src)
 
 	to_chat(M, span_filter_say("[span_blue("Like lead slabs crashing into the ocean, alien thoughts drop into your mind: [text]")]"))
-	if(istype(M,/mob/living/carbon/human))
+	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(H.species.name == src.species.name)
 			return
@@ -134,7 +134,7 @@
 	set desc = "Whisper silently to someone over a distance."
 	set category = "Abilities.General"
 
-	var/msg = sanitize(tgui_input_text(usr, "Message:", "Psychic Whisper"))
+	var/msg = sanitize(tgui_input_text(src, "Message:", "Psychic Whisper"))
 	if(msg)
 		log_say("(PWHISPER to [key_name(M)]) [msg]", src)
 		to_chat(M, span_filter_say("[span_green("You hear a strange, alien voice in your head... <i>[msg]</i>")]"))
@@ -370,7 +370,7 @@
 	var/list/states
 	if(!states)
 		states = params2list(robohead.monitor_styles)
-	var/choice = tgui_input_list(usr, "Select a screen icon:", "Screen Icon Choice", states)
+	var/choice = tgui_input_list(src, "Select a screen icon:", "Screen Icon Choice", states)
 	if(choice)
 		E.eye_icon_location = robohead.monitor_icon
 		E.eye_icon = states[choice]

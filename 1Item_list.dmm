@@ -42123,7 +42123,7 @@
 	},
 /area/survivalpod)
 "mpy" = (
-/obj/item/magnetic_ammo/pistol/khi,
+/obj/item/magnetic_ammo/pistol,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},

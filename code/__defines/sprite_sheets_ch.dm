@@ -1,7 +1,7 @@
 // Default species get default sprites, VR species get VR sprites, CH species get CH sprites.
 #define CH_SPECIES_SPRITE_SHEETS_SUIT_MOB list(\
 SPECIES_HUMAN = 'icons/inventory/suit/mob.dmi',\
-SPECIES_TAJ = 'icons/inventory/suit/mob_tajaran.dmi',\
+SPECIES_TAJARAN = 'icons/inventory/suit/mob_tajaran.dmi',\
 SPECIES_SKRELL = 'icons/inventory/suit/mob_skrell.dmi',\
 SPECIES_UNATHI = 'icons/inventory/suit/mob_unathi.dmi',\
 SPECIES_TESHARI = 'icons/inventory/suit/mob_teshari.dmi',\

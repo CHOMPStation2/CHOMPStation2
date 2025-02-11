@@ -15,14 +15,14 @@
 			return
 	else
 		if(!isemptylist(src.search_contents_for(/obj/item/disk/nuclear)))
-			to_chat(usr, "You get the feeling that you shouldn't cremate one of the items in the cremator.")
+			to_chat(user, "You get the feeling that you shouldn't cremate one of the items in the cremator.")
 			return
 
 		for(var/I in contents)
 			if(!(I in allowed_items))
 				to_chat(user, span_notice("\The [src] cannot cremate while there are items inside!"))
 				return
-			if(istype(I, /mob/living))
+			if(isliving(I))
 				var/mob/living/cremated = I
 				for(var/Z in cremated.contents)
 					if(!(Z in allowed_items))

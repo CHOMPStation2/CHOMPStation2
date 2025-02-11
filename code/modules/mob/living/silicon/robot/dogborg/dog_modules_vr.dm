@@ -1,110 +1,3 @@
-/obj/item/melee/dogborg/jaws
-	icon = 'icons/mob/dogborg_vr.dmi'
-	hitsound = 'sound/weapons/bite.ogg'
-	throwforce = 0
-	w_class = ITEMSIZE_NORMAL
-	pry = 1
-	tool_qualities = list(TOOL_CROWBAR)
-
-/obj/item/melee/dogborg/jaws/big
-	name = "combat jaws"
-	icon_state = "jaws"
-	desc = "The jaws of the law."
-	force = 25
-	armor_penetration = 25
-	defend_chance = 15
-	attack_verb = list("chomped", "bit", "ripped", "mauled", "enforced")
-
-/obj/item/melee/dogborg/jaws/small
-	name = "puppy jaws"
-	icon_state = "smalljaws"
-	desc = "The jaws of a small dog."
-	force = 10
-	defend_chance = 5
-	attack_verb = list("nibbled", "bit", "gnawed", "chomped", "nommed")
-	var/emagged = 0
-
-/obj/item/melee/dogborg/jaws/small/attack_self(mob/user)
-	var/mob/living/silicon/robot/R = user
-	if(R.emagged || R.emag_items)
-		emagged = !emagged
-		if(emagged)
-			name = "combat jaws"
-			icon_state = "jaws"
-			desc = "The jaws of the law."
-			force = 25
-			armor_penetration = 25
-			defend_chance = 15
-			attack_verb = list("chomped", "bit", "ripped", "mauled", "enforced")
-		else
-			name = "puppy jaws"
-			icon_state = "smalljaws"
-			desc = "The jaws of a small dog."
-			force = 10
-			armor_penetration = 0
-			defend_chance = 5
-			attack_verb = list("nibbled", "bit", "gnawed", "chomped", "nommed")
-		update_icon()
-
-// Baton chompers
-/obj/item/melee/borg_combat_shocker
-	name = "combat shocker"
-	icon = 'icons/mob/dogborg_vr.dmi'
-	icon_state = "combatshocker"
-	desc = "Shocking!"
-	force = 15
-	throwforce = 0
-	hitsound = 'sound/weapons/genhit1.ogg'
-	attack_verb = list("hit")
-	w_class = ITEMSIZE_NORMAL
-	var/charge_cost = 15
-	var/dogborg = FALSE
-
-/obj/item/melee/borg_combat_shocker/apply_hit_effect(mob/living/target, mob/living/user, var/hit_zone)
-	if(isrobot(target))
-		return ..()
-
-	var/agony = 60 // Copied from stun batons
-	var/stun = 0 // ... same
-
-	var/obj/item/organ/external/affecting = null
-	if(ishuman(target))
-		var/mob/living/carbon/human/H = target
-		affecting = H.get_organ(hit_zone)
-
-	if(user.a_intent == I_HURT)
-		// Parent handles messages
-		. = ..()
-		//whacking someone causes a much poorer electrical contact than deliberately prodding them.
-		agony *= 0.5
-		stun *= 0.5
-	else
-		if(affecting)
-			if(dogborg)
-				target.visible_message(span_danger("[target] has been zap-chomped in the [affecting.name] with [src] by [user]!"))
-			else
-				target.visible_message(span_danger("[target] has been zapped in the [affecting.name] with [src] by [user]!"))
-		else
-			if(dogborg)
-				target.visible_message(span_danger("[target] has been zap-chomped with [src] by [user]!"))
-			else
-				target.visible_message(span_danger("[target] has been zapped with [src] by [user]!"))
-		playsound(src, 'sound/weapons/Egloves.ogg', 50, 1, -1)
-
-	// Try to use power
-	var/stunning = FALSE
-	if(isrobot(loc))
-		var/mob/living/silicon/robot/R = loc
-		if(R.cell?.use(charge_cost) == charge_cost)
-			stunning = TRUE
-
-	if(stunning)
-		target.stun_effect_act(stun, agony, hit_zone, src)
-		msg_admin_attack("[key_name(user)] stunned [key_name(target)] with the [src].")
-		if(ishuman(target))
-			var/mob/living/carbon/human/H = target
-			H.forcesay(hit_appends)
-
 //Boop //New and improved, now a simple reagent sniffer.
 /obj/item/boop_module
 	name = "boop module"
@@ -203,7 +96,7 @@
 	name = "MediHound hypospray"
 	desc = "An advanced chemical synthesizer and injection system utilizing carrier's reserves, designed for heavy-duty medical equipment."
 //	charge_cost = 10 // CHOMPedit: Water requirement removal.
-	reagent_ids = list("inaprovaline", "tricordrazine", "dexalin", "bicaridine", "kelotane", "anti_toxin", "spaceacillin", "tramadol", "adranol") // CHOMPedit: More chems for Medihound
+	reagent_ids = list(REAGENT_ID_INAPROVALINE, REAGENT_ID_TRICORDRAZINE, REAGENT_ID_DEXALIN, REAGENT_ID_BICARIDINE, REAGENT_ID_KELOTANE, REAGENT_ID_ANTITOXIN, REAGENT_ID_SPACEACILLIN, REAGENT_ID_TRAMADOL, REAGENT_ID_ADRANOL) // CHOMPedit: More chems for Medihound
 	var/datum/matter_synth/water = null
 
 /* CHOMPedit start: Water requirement removal. *
@@ -224,12 +117,12 @@
 /obj/item/reagent_containers/borghypo/hound/lost
 	name = "Hound hypospray"
 	desc = "An advanced chemical synthesizer and injection system utilizing carrier's reserves."
-	reagent_ids = list("tricordrazine", "inaprovaline", "bicaridine", "dexalin", "anti_toxin", "tramadol", "spaceacillin")
+	reagent_ids = list(REAGENT_ID_TRICORDRAZINE, REAGENT_ID_INAPROVALINE, REAGENT_ID_BICARIDINE, REAGENT_ID_DEXALIN, REAGENT_ID_ANTITOXIN, REAGENT_ID_TRAMADOL, REAGENT_ID_SPACEACILLIN)
 
 /obj/item/reagent_containers/borghypo/hound/trauma
 	name = "Hound hypospray"
 	desc = "An advanced chemical synthesizer and injection system utilizing carrier's reserves."
-	reagent_ids = list("tricordrazine", "inaprovaline", "oxycodone", "dexalin" ,"spaceacillin")
+	reagent_ids = list(REAGENT_ID_TRICORDRAZINE, REAGENT_ID_INAPROVALINE, REAGENT_ID_OXYCODONE, REAGENT_ID_DEXALIN ,REAGENT_ID_SPACEACILLIN)
 
 
 //Tongue stuff
@@ -419,20 +312,6 @@
 	recharge_time = 1 //Takes ten ticks to recharge a laser, so don't waste them all!
 	//cell_type = null //Same cell as a taser until edits are made.
 
-/obj/item/melee/combat_borgblade
-	name = "energy blade"
-	icon = 'icons/mob/dogborg_vr.dmi'
-	icon_state = "swordtail"
-	desc = "A glowing dagger. It appears to be extremely sharp."
-	force = 35 //Takes 3 hits to 100-0
-	armor_penetration = 70
-	sharp = TRUE
-	edge = TRUE
-	throwforce = 0 //This shouldn't be thrown in the first place.
-	hitsound = 'sound/weapons/blade1.ogg'
-	attack_verb = list("slashed", "stabbed", "jabbed", "mauled", "sliced")
-	w_class = ITEMSIZE_NORMAL
-
 /obj/item/lightreplacer/dogborg
 	name = "light replacer"
 	desc = "A device to automatically replace lights. This version is capable to produce a few replacements using your internal matter reserves."
@@ -447,7 +326,7 @@
 	if(!choice)
 		return
 	if(choice == "Color")
-		var/new_color = input(usr, "Choose a color to set the light to! (Default is [LIGHT_COLOR_INCANDESCENT_TUBE])", "", selected_color) as color|null
+		var/new_color = tgui_color_picker(user, "Choose a color to set the light to! (Default is [LIGHT_COLOR_INCANDESCENT_TUBE])", "", selected_color)
 		if(new_color)
 			selected_color = new_color
 			to_chat(user, span_filter_notice("The light color has been changed."))
@@ -544,7 +423,7 @@
 		to_chat(src, span_filter_notice("Cell charge too low to continue."))
 		return
 
-	if(usr.incapacitated(INCAPACITATION_DISABLED))
+	if(src.incapacitated(INCAPACITATION_DISABLED))
 		to_chat(src, span_filter_notice("You cannot leap in your current state."))
 		return
 
@@ -573,7 +452,7 @@
 	if(last_special > world.time)
 		return
 
-	if(usr.incapacitated(INCAPACITATION_DISABLED))
+	if(src.incapacitated(INCAPACITATION_DISABLED))
 		to_chat(src, span_filter_notice("You cannot leap in your current state."))
 		return
 
@@ -643,3 +522,38 @@
 	R = null
 	last_robot_loc = null
 	..()
+
+/obj/item/mining_scanner/robot
+	name = "integrated deep scan device"
+	description_info = "This scanner can be upgraded for mining points."
+	var/upgrade_cost = 2500
+
+/obj/item/mining_scanner/robot/attackby(obj/item/O, mob/user)
+	if(exact)
+		return
+	if(!istype(O, /obj/item/card/id/cargo/miner/borg))
+		return
+	if(!(user == loc || user == loc.loc))
+		return
+	var/obj/item/card/id/cargo/miner/borg/id = O
+	if(!id.adjust_mining_points(-upgrade_cost))
+		return
+	upgrade(user)
+
+/obj/item/mining_scanner/robot/proc/upgrade(mob/user)
+	desc = "An advanced device used to locate ore deep underground."
+	description_info = "This scanner has variable range, you can use the Set Scanner Range verb, or alt+click the device. Drills dig in 5x5."
+	scan_time = 0.5 SECONDS
+	exact = TRUE
+	to_chat(user, span_notice("You've upgraded the mining scanner for [upgrade_cost] points."))
+
+/obj/item/mining_scanner/robot/AltClick(mob/user)
+	change_size(user)
+
+/obj/item/mining_scanner/robot/proc/change_size(mob/user)
+	if(!exact)
+		return
+	var/custom_range = tgui_input_list(user, "Scanner Range","Pick a range to scan. ", list(0,1,2,3,4,5,6,7))
+	if(custom_range)
+		range = custom_range
+		to_chat(user, span_notice("Scanner will now look up to [range] tile(s) away."))

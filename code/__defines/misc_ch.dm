@@ -17,8 +17,6 @@
 #define MAT_CARPET_PURPLE		"purple carpet"
 #define MAT_CARPET_ORANGE		"orange carpet"
 
-#define PHASE_SHIELDED 16 // Prevents shadekin phasing in/out in this area
-
 #define RCD_FIRELOCK		"Firelock"			// Builds an emergency glass shutter
 #define RCD_WINDOOR			"Windoor"			// Build a window door
 #define RCD_FRAME			"Frame"				// Build a Machine or Computer frame

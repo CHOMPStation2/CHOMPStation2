@@ -9,6 +9,8 @@ var/list/_human_default_emotes = list(
 	/decl/emote/audible/synth/dwoop,
 	/decl/emote/audible/synth/boop,
 	/decl/emote/audible/synth/robochirp,
+	/decl/emote/audible/synth/ding,
+	/decl/emote/audible/synth/microwave,
 	/decl/emote/visible/nod,
 	/decl/emote/visible/shake,
 	/decl/emote/visible/shiver,
@@ -186,7 +188,11 @@ var/list/_human_default_emotes = list(
 	/decl/emote/audible/wawa,
 	/decl/emote/audible/malehumanscream,
 	/decl/emote/audible/scientist/scream,
-	/decl/emote/audible/scientist/pain
+	/decl/emote/audible/scientist/pain,
+	/decl/emote/audible/caw,
+	/decl/emote/audible/yip,
+	/decl/emote/audible/tailthump,
+	/decl/emote/audible/squeal,
 	//CHOMP Add end
 )
 
@@ -335,7 +341,11 @@ var/list/_simple_mob_default_emotes = list(
 	/decl/emote/audible/mgeow,
 	/decl/emote/audible/xenogrowl,
 	/decl/emote/audible/xenohiss,
-	/decl/emote/audible/xenopurr
+	/decl/emote/audible/xenopurr,
+	/decl/emote/audible/caw,
+	/decl/emote/audible/yip,
+	/decl/emote/audible/tailthump,
+	/decl/emote/audible/squeal,
 	//CHOMP Add end
 	)
 	//VOREStation Add End
@@ -355,14 +365,14 @@ var/list/_simple_mob_default_emotes = list(
 
 	var/datum/gender/T = gender_datums[get_visible_gender()]
 
-	pose = strip_html_simple(tgui_input_text(usr, "This is [src]. [T.he]...", "Pose", null))
+	pose = strip_html_simple(tgui_input_text(src, "This is [src]. [T.he]...", "Pose", null))
 
 /mob/living/carbon/human/verb/set_flavor()
 	set name = "Set Flavour Text"
 	set desc = "Sets an extended description of your character's features."
 	set category = "IC.Settings"
 
-	var/HTML = "<body>"
+	var/HTML = "<html><body>"
 	HTML += "<tt><center>"
 	HTML += span_bold("Update Flavour Text") + " <hr />"
 	HTML += "<br></center>"
@@ -394,8 +404,8 @@ var/list/_simple_mob_default_emotes = list(
 	HTML += TextPreview(flavor_texts["feet"])
 	HTML += "<br>"
 	HTML += "<hr />"
-	HTML +="<a href='?src=\ref[src];flavor_change=done'>\[Done\]</a>"
-	HTML += "<tt>"
+	HTML +="<a href='byond://?src=\ref[src];flavor_change=done'>\[Done\]</a>"
+	HTML += "<tt></body></html>"
 	src << browse(HTML, "window=flavor_changes;size=430x300")
 
 /mob/living/carbon/human/proc/toggle_tail(var/setting,var/message = 0)

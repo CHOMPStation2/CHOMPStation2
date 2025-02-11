@@ -128,7 +128,7 @@ var/global/list/obj/item/communicator/all_communicators = list()
 	if(id)
 		remove_id()
 	else
-		to_chat(usr, "<span class='notice'>This Communicator does not have an ID in it.</span>")
+		to_chat(usr, span_notice("This Communicator does not have an ID in it."))
 // Proc: GetAccess()
 // Parameters: None
 // Description: Returns the access level of the communicator's ID, if it has one. If the communicator does not have an ID, the procedure returns the
@@ -155,7 +155,7 @@ var/global/list/obj/item/communicator/all_communicators = list()
 		if (ismob(loc))
 			var/mob/M = loc
 			M.put_in_hands(id)
-			to_chat(M, "<span class='notice'>You remove the ID from the [name].</span>") //ChompEDIT usr --> M
+			to_chat(M, span_notice("You remove the ID from the [name].")) //ChompEDIT usr --> M
 			playsound(src, 'sound/machines/id_swipe.ogg', 100, 1)
 		else
 			id.loc = get_turf(src)
@@ -214,7 +214,7 @@ var/global/list/obj/item/communicator/all_communicators = list()
 // Description: Sets up the exonet datum, gives the device an address, and then gets a node reference.  Afterwards, populates the device
 //				list.
 /obj/item/communicator/proc/initialize_exonet(mob/user)
-	if(!user || !istype(user, /mob/living))
+	if(!user || !isliving(user))
 		return
 	if(!exonet)
 		exonet = new(src)

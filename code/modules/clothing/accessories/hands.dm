@@ -25,7 +25,7 @@
 	icon = 'icons/inventory/accessory/item.dmi'
 	icon_state = "bracelet"
 	w_class = ITEMSIZE_TINY
-	slot_flags = SLOT_GLOVES
+	slot_flags = SLOT_GLOVES | SLOT_TIE
 	slot = ACCESSORY_SLOT_WRIST
 
 /obj/item/clothing/accessory/bracelet/friendship
@@ -41,7 +41,7 @@
 	if(!M.mind)
 		return 0
 
-	var/input = sanitizeSafe(input(usr, "Who do you want to dedicate the bracelet to?", ,""), MAX_NAME_LEN)
+	var/input = sanitizeSafe(tgui_input_text(M, "Who do you want to dedicate the bracelet to?","Friendship Bracelet" ,"", MAX_NAME_LEN), MAX_NAME_LEN)
 
 	if(src && input && !M.stat && in_range(M,src))
 		desc = "A beautiful friendship bracelet in all the colors of the rainbow. It's dedicated to [input]."
@@ -68,31 +68,31 @@
 	return material
 
 /obj/item/clothing/accessory/bracelet/material/wood/New(var/newloc)
-	..(newloc, "wood")
+	..(newloc, MAT_WOOD)
 
 /obj/item/clothing/accessory/bracelet/material/plastic/New(var/newloc)
-	..(newloc, "plastic")
+	..(newloc, MAT_PLASTIC)
 
 /obj/item/clothing/accessory/bracelet/material/iron/New(var/newloc)
-	..(newloc, "iron")
+	..(newloc, MAT_IRON)
 
 /obj/item/clothing/accessory/bracelet/material/steel/New(var/newloc)
-	..(newloc, "steel")
+	..(newloc, MAT_STEEL)
 
 /obj/item/clothing/accessory/bracelet/material/silver/New(var/newloc)
-	..(newloc, "silver")
+	..(newloc, MAT_SILVER)
 
 /obj/item/clothing/accessory/bracelet/material/gold/New(var/newloc)
-	..(newloc, "gold")
+	..(newloc, MAT_GOLD)
 
 /obj/item/clothing/accessory/bracelet/material/platinum/New(var/newloc)
-	..(newloc, "platinum")
+	..(newloc, MAT_PLATINUM)
 
 /obj/item/clothing/accessory/bracelet/material/phoron/New(var/newloc)
-	..(newloc, "phoron")
+	..(newloc, MAT_PHORON)
 
 /obj/item/clothing/accessory/bracelet/material/glass/New(var/newloc)
-	..(newloc, "glass")
+	..(newloc, MAT_GLASS)
 
 //wristbands
 
@@ -102,7 +102,7 @@
 	icon = 'icons/inventory/accessory/item.dmi'
 	icon_state = "wristband"
 	w_class = ITEMSIZE_TINY
-	slot_flags = SLOT_GLOVES
+	slot_flags = SLOT_GLOVES  | SLOT_TIE
 	slot = ACCESSORY_SLOT_WRIST
 
 /obj/item/clothing/accessory/wristband/spiked

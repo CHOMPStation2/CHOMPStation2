@@ -62,21 +62,21 @@ GLOBAL_LIST_BOILERPLATE(all_pai_cards, /obj/item/paicard)
 	if(pai != null) //Have a person in them already?
 		return ..()
 	if(is_damage_critical())
-		to_chat(usr, span_warning("That card is too damaged to activate!"))
+		to_chat(user, span_warning("That card is too damaged to activate!"))
 		return
 	var/time_till_respawn = user.time_till_respawn()
 	if(time_till_respawn == -1) // Special case, never allowed to respawn
-		to_chat(usr, span_warning("Respawning is not allowed!"))
+		to_chat(user, span_warning("Respawning is not allowed!"))
 	else if(time_till_respawn) // Nonzero time to respawn
-		to_chat(usr, span_warning("You can't do that yet! You died too recently. You need to wait another [round(time_till_respawn/10/60, 0.1)] minutes."))
+		to_chat(user, span_warning("You can't do that yet! You died too recently. You need to wait another [round(time_till_respawn/10/60, 0.1)] minutes."))
 		return
-	if(jobban_isbanned(usr, JOB_PAI))
-		to_chat(usr,span_warning("You cannot join a pAI card when you are banned from playing as a pAI."))
+	if(jobban_isbanned(user, JOB_PAI))
+		to_chat(user,span_warning("You cannot join a pAI card when you are banned from playing as a pAI."))
 		return
 
 	for(var/ourkey in paikeys)
 		if(ourkey == user.ckey)
-			to_chat(usr, span_warning("You can't just rejoin any old pAI card!!! Your card still exists."))
+			to_chat(user, span_warning("You can't just rejoin any old pAI card!!! Your card still exists."))
 			return
 
 	var/choice = tgui_alert(user, "You sure you want to inhabit this PAI, or submit yourself to being recruited?", "Confirmation", list("Inhabit", "Recruit", "Cancel"))
@@ -340,6 +340,7 @@ GLOBAL_LIST_BOILERPLATE(all_pai_cards, /obj/item/paicard)
 				<br>
 				<p>Each time this button is pressed, a request will be sent out to any available personalities. Check back often give plenty of time for personalities to respond. This process could take anywhere from 15 seconds to several minutes, depending on the available personalities' timeliness.</p>
 			"}
+	dat += "</html>"
 	user << browse(dat, "window=paicard")
 	onclose(user, "paicard")
 	return

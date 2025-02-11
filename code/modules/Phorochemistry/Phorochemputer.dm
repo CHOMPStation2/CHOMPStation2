@@ -32,7 +32,7 @@ var/global/list/discovered_phororeagents //list of all phororeagents discovered 
 		phororeactions.set_up_reactions()
 
 	if(!discovered_phororeagents)
-		discovered_phororeagents = list("bicordrazine")
+		discovered_phororeagents = list(REAGENT_ID_BICORDRAZINE)
 
 /obj/machinery/computer/phoronics/attack_hand(var/mob/user as mob)
 	return src.ui_interact(user)
@@ -47,8 +47,8 @@ var/global/list/discovered_phororeagents //list of all phororeagents discovered 
 	data["message"] = message
 	if(source)
 		var/datum/gas_mixture/enviro = source.return_air()
-		if(enviro.gas["phoron"])
-			data["phoron"] = round(enviro.gas["phoron"])
+		if(enviro.gas[GAS_PHORON])
+			data["phoron"] = round(enviro.gas[GAS_PHORON])
 		else
 			data["phoron"] = 0
 	else
@@ -201,7 +201,7 @@ var/global/list/discovered_phororeagents //list of all phororeagents discovered 
 			return abort("ERROR: No reagents detected, aborting test")
 
 		var/datum/gas_mixture/enviro = source.return_air()
-		if(!enviro.gas["phoron"] || enviro.gas["phoron"] < 40)
+		if(!enviro.gas[GAS_PHORON] || enviro.gas[GAS_PHORON] < 40)
 			return abort("ERROR: Not enough phoron to initiate reaction")
 
 		reactant = container.reagents.reagent_list[1]
@@ -291,7 +291,7 @@ var/global/list/discovered_phororeagents //list of all phororeagents discovered 
 				phororeagent = container.reagents.reagent_list[1]
 
 				var/datum/gas_mixture/enviro = source.return_air()
-				enviro.adjust_gas("phoron", -0.15 * vol) //must fix to use proportion of moles with gas laws
+				enviro.adjust_gas(GAS_PHORON, -0.15 * vol) //must fix to use proportion of moles with gas laws
 
 			message = result
 		else

@@ -40,7 +40,7 @@
 		T = safepick(oview(1,src))
 	if(!melee_can_hit)
 		return
-	if(istype(T, /mob/living))
+	if(isliving(T))
 		var/mob/living/M = T
 		if(src.occupant.a_intent == I_HURT || istype(src.occupant, /mob/living/carbon/brain)) //Brains cannot change intents; Exo-piloting brains lack any form of physical feedback for control, limiting the ability to 'play nice'.
 			playsound(src, 'sound/weapons/heavysmash.ogg', 50, 1)
@@ -69,10 +69,10 @@
 							update |= temp.take_damage(0, rand(force/2, force))
 						if("tox")
 							if(H.reagents)
-								if(H.reagents.get_reagent_amount("carpotoxin") + force < force*2)
-									H.reagents.add_reagent("carpotoxin", force)
-								if(H.reagents.get_reagent_amount("cryptobiolin") + force < force*2)
-									H.reagents.add_reagent("cryptobiolin", force)
+								if(H.reagents.get_reagent_amount(REAGENT_ID_CARPOTOXIN) + force < force*2)
+									H.reagents.add_reagent(REAGENT_ID_CARPOTOXIN, force)
+								if(H.reagents.get_reagent_amount(REAGENT_ID_CRYPTOBIOLIN) + force < force*2)
+									H.reagents.add_reagent(REAGENT_ID_CRYPTOBIOLIN, force)
 						if("halloss")
 							H.stun_effect_act(1, force / 2, BP_TORSO, src)
 						else
@@ -89,10 +89,10 @@
 						M.take_overall_damage(0, rand(force/2, force))
 					if("tox")
 						if(M.reagents)
-							if(M.reagents.get_reagent_amount("carpotoxin") + force < force*2)
-								M.reagents.add_reagent("carpotoxin", force)
-							if(M.reagents.get_reagent_amount("cryptobiolin") + force < force*2)
-								M.reagents.add_reagent("cryptobiolin", force)
+							if(M.reagents.get_reagent_amount(REAGENT_ID_CARPOTOXIN) + force < force*2)
+								M.reagents.add_reagent(REAGENT_ID_CARPOTOXIN, force)
+							if(M.reagents.get_reagent_amount(REAGENT_ID_CRYPTOBIOLIN) + force < force*2)
+								M.reagents.add_reagent(REAGENT_ID_CRYPTOBIOLIN, force)
 					else
 						return
 				M.updatehealth()

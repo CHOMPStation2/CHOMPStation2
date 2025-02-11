@@ -6,7 +6,7 @@ CIRCUITS BELOW
 	build_type = IMPRINTER
 	req_tech = list(TECH_DATA = 2)
 	materials = list(MAT_GLASS = 2000)
-	chemicals = list("sacid" = 20)
+	chemicals = list(REAGENT_ID_SACID = 20)
 	time = 5
 
 /datum/design/circuit/AssembleDesignName()
@@ -126,6 +126,13 @@ CIRCUITS BELOW
 	req_tech = list(TECH_DATA = 3, TECH_MAGNET = 2, TECH_BIO = 2)
 	build_path = /obj/item/circuitboard/crew
 	sort_string = "FAGAI"
+
+/datum/design/circuit/pandemic
+	name = "PanD.E.M.I.C 2200"
+	id = "pandemic"
+	req_tech = list(TECH_DATA = 2, TECH_BIO = 2)
+	build_path = /obj/item/circuitboard/pandemic
+	sort_string = "FAGAJ"
 
 /datum/design/circuit/teleconsole
 	name = "teleporter control console"
@@ -608,7 +615,7 @@ CIRCUITS BELOW
 	id = "durand_main"
 	req_tech = list(TECH_DATA = 4)
 	materials = list(MAT_GLASS = 2000, MAT_GRAPHITE = 1250)
-	chemicals = list("sacid" = 20)
+	chemicals = list(REAGENT_ID_SACID = 20)
 	build_path = /obj/item/circuitboard/mecha/durand/main
 	sort_string = "NAADA"
 
@@ -617,7 +624,7 @@ CIRCUITS BELOW
 	id = "durand_peri"
 	req_tech = list(TECH_DATA = 4)
 	materials = list(MAT_GLASS = 2000, MAT_GRAPHITE = 1250)
-	chemicals = list("sacid" = 20)
+	chemicals = list(REAGENT_ID_SACID = 20)
 	build_path = /obj/item/circuitboard/mecha/durand/peripherals
 	sort_string = "NAADB"
 
@@ -626,7 +633,7 @@ CIRCUITS BELOW
 	id = "durand_targ"
 	req_tech = list(TECH_DATA = 4, TECH_COMBAT = 2)
 	materials = list(MAT_GLASS = 2000, MAT_GRAPHITE = 1250)
-	chemicals = list("sacid" = 20)
+	chemicals = list(REAGENT_ID_SACID = 20)
 	build_path = /obj/item/circuitboard/mecha/durand/targeting
 	sort_string = "NAADC"
 
@@ -857,3 +864,65 @@ CIRCUITS BELOW
 	build_path = /obj/item/circuitboard/recycler_stamper
 	sort_string = "OAABE"
 	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
+
+///Fighters///
+
+//Pinnace//
+
+/datum/design/circuit/mecha/fighter/pinnace_main
+	name = "Pinnace central control board"
+	id = "pinnace_main"
+	req_tech = list(TECH_DATA = 3, TECH_POWER = 4)
+	build_path = /obj/item/circuitboard/mecha/fighter/pinnace/main
+	sort_string = "NAAGA"
+
+/datum/design/circuit/mecha/fighter/pinnace_flight
+	name = "Pinnace flight control board"
+	id = "pinnace_flight"
+	req_tech = list(TECH_DATA = 3, TECH_POWER = 4)
+	build_path = /obj/item/circuitboard/mecha/fighter/pinnace/flight
+	sort_string = "NAAGB"
+
+/datum/design/circuit/mecha/fighter/pinnace_targeting
+	name = "Pinnace weapon control and targeting board"
+	id = "pinnace_targeting"
+	req_tech = list(TECH_DATA = 3, TECH_POWER = 4)
+	build_path = /obj/item/circuitboard/mecha/fighter/pinnace/targeting
+	sort_string = "NAAGC"
+
+/datum/design/circuit/mecha/fighter/pinnace_cockpit_control
+	name = "Pinnace manual flight control instruments"
+	id = "pinnace_cockpit_control"
+	req_tech = list(TECH_DATA = 3, TECH_POWER = 4)
+	build_path = /obj/item/circuitboard/mecha/fighter/pinnace/cockpitboard
+	sort_string = "NAAGD"
+
+//Baron//
+
+/datum/design/circuit/mecha/fighter/baron_main
+	name = "Baron central control board"
+	id = "baron_main"
+	req_tech = list(TECH_DATA = 5, TECH_POWER = 4)
+	build_path = /obj/item/circuitboard/mecha/fighter/baron/main
+	sort_string = "NAAHA"
+
+/datum/design/circuit/mecha/fighter/baron_flight
+	name = "Baron flight control board"
+	id = "baron_flight"
+	req_tech = list(TECH_DATA = 5, TECH_POWER = 4)
+	build_path = /obj/item/circuitboard/mecha/fighter/baron/flight
+	sort_string = "NAAHB"
+
+/datum/design/circuit/mecha/fighter/baron_targeting
+	name = "Baron weapon control and targeting board"
+	id = "baron_targeting"
+	req_tech = list(TECH_DATA = 5, TECH_POWER = 4, TECH_COMBAT = 3)
+	build_path = /obj/item/circuitboard/mecha/fighter/baron/targeting
+	sort_string = "NAAHC"
+
+/datum/design/circuit/mecha/fighter/baron_cockpit_control
+	name = "Baron manual flight control instruments"
+	id = "baron_cockpit_control"
+	req_tech = list(TECH_DATA = 5, TECH_POWER = 4, TECH_COMBAT = 3)
+	build_path = /obj/item/circuitboard/mecha/fighter/baron/cockpitboard
+	sort_string = "NAAHD"

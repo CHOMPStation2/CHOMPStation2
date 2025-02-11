@@ -11,7 +11,7 @@ jobs:
   run_linters:
     if: ( !contains(github.event.head_commit.message, '[ci skip]') )
     name: Run Linters
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     concurrency:
       group: run_linters-${{ github.head_ref || github.run_id }}
       cancel-in-progress: true
@@ -68,19 +68,24 @@ jobs:
           bash tools/ci/install_build_deps.sh
           bash tools/ci/install_ripgrep.sh
           bash tools/ci/install_spaceman_dmm.sh dreamchecker
+          bash tools/ci/install_spaceman_dmm.sh dmm-tools
           tools/bootstrap/python -c ''
       - name: Run Tests
         run: |
           tools/ci/validate_files.sh
+      - name: Run Define Sanity Checks
+        run: tools/bootstrap/python -m define_sanity.check
       - name: Run DreamChecker
         shell: bash
         run: ~/dreamchecker 2>&1 | bash tools/ci/annotate_dm.sh
       - name: Run TGUI Checks
         run: tools/build/build --ci lint tgui-test
+      - name: Run Nanomap Checks
+        run: tools/github-actions/nanomap-renderer-invoker.sh --testing
 
   dreamchecker:
     name: DreamChecker
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
 
@@ -115,7 +120,7 @@ jobs:
     # name: Integration Tests (${{ matrix.map }})
     name: Integration Tests
     # needs: ['run_linters', 'dreamchecker']
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - name: Ensure +x on CI directory
@@ -131,7 +136,7 @@ jobs:
           sudo dpkg --add-architecture i386
           sudo apt update || true
           sudo apt install gcc-multilib
-          sudo apt install zlib1g-dev:i386 libssl-dev:i386
+          sudo apt install zlib1g-dev:i386
           ldd librust_g.so
           ldd libbapi_dmm_reader.so
           ldd libverdigris.so
@@ -157,7 +162,7 @@ jobs:
     if: ( !contains(github.event.head_commit.message, '[ci skip]') )
     name: Integration Tests
     needs: ['run_linters', 'dreamchecker', 'unit_tests']
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       - name: Report Success
         run: |

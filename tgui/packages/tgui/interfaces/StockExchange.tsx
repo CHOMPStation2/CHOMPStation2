@@ -1,8 +1,14 @@
-import { BooleanLike } from 'common/react';
-
-import { useBackend } from '../backend';
-import { Box, Button, Chart, Divider, Section, Table } from '../components';
-import { Window } from '../layouts';
+import { useBackend } from 'tgui/backend';
+import { Window } from 'tgui/layouts';
+import {
+  Box,
+  Button,
+  Chart,
+  Divider,
+  Section,
+  Table,
+} from 'tgui-core/components';
+import { BooleanLike } from 'tgui-core/react';
 
 type Data = {
   stationName: string;
@@ -224,7 +230,7 @@ const StockExchangeCompactView = (props) => {
   );
 };
 
-// "<div><a href='?src=[REF(src)];show_logs=1'>Refresh</a></div></br>"
+// "<div><a href='byond://?src=[REF(src)];show_logs=1'>Refresh</a></div></br>"
 const StockExchangeLogs = (props) => {
   const { act, data } = useBackend<Data>();
 

@@ -273,15 +273,15 @@
 			var/obj/item/fuel_assembly/rod = loaded
 			//CHOMPEdit Begin
 			switch(rod.fuel_type)
-				if("composite") //Safety check for rods spawned in without a fueltype.
+				if(MAT_COMPOSITE) //Safety check for rods spawned in without a fueltype.
 					projectile_type = /obj/item/projectile/bullet/magnetic/fuelrod
-				if("deuterium")
+				if(MAT_DEUTERIUM)
 					projectile_type = /obj/item/projectile/bullet/magnetic/fuelrod
-				if("tritium")
+				if(MAT_TRITIUM)
 					projectile_type = /obj/item/projectile/bullet/magnetic/fuelrod/tritium
-				if("phoron")
+				if(MAT_PHORON)
 					projectile_type = /obj/item/projectile/bullet/magnetic/fuelrod/phoron
-				if("supermatter")
+				if(MAT_SUPERMATTER)
 					projectile_type = /obj/item/projectile/bullet/magnetic/fuelrod/supermatter
 					visible_message(span_danger("The barrel of \the [src] glows a blinding white!"))
 					spawn(5)
@@ -310,7 +310,7 @@
 					for(var/mob/living/carbon/M in hear(max_range, get_turf(src)))
 						blitzed(get_turf(src), M, max_range, banglet)
 					new/obj/effect/effect/sparks(src.loc)
-					new/obj/effect/effect/smoke/illumination(src.loc, 5, range=30, power=30, color="#FFFFFF")
+					new/obj/effect/effect/smoke/illumination(loc, 5, 30, 30, "#FFFFFF")
 					spawn(2)
 						qdel(src)
 				if("blitzu")

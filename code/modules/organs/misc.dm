@@ -11,7 +11,7 @@
 /obj/item/organ/internal/borer/process()
 
 	// Borer husks regenerate health, feel no pain, and are resistant to stuns and brainloss.
-	for(var/chem in list("tricordrazine","tramadol","hyperzine","alkysine"))
+	for(var/chem in list(REAGENT_ID_TRICORDRAZINE,REAGENT_ID_TRAMADOL,REAGENT_ID_HYPERZINE,REAGENT_ID_ALKYSINE))
 		if(owner.reagents.get_reagent_amount(chem) < 3)
 			owner.reagents.add_reagent(chem, 5)
 
@@ -46,7 +46,7 @@
 /obj/item/organ/internal/stack
 	name = "cortical stack"
 	parent_organ = BP_HEAD
-	icon_state = "brain-prosthetic"
+	icon_state = "brain_prosthetic"
 	organ_tag = "stack"
 	vital = 1
 	var/backup_time = 0

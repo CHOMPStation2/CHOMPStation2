@@ -57,7 +57,7 @@
 				if(!istype(user)) // Ref no longer valid
 					return
 
-				var/newVal = input(user, "Input a new [href_list["signaler_value"]].", href_list["signaler_value"], (href_list["signaler_value"] == "Code" ? S.code : S.frequency)) as num|null
+				var/newVal = tgui_input_number(user, "Input a new [href_list["signaler_value"]].", href_list["signaler_value"], (href_list["signaler_value"] == "Code" ? S.code : S.frequency), round_value=FALSE)
 				if(newVal)
 					switch(href_list["signaler_value"])
 						if("Code")
@@ -99,7 +99,7 @@
 				if(!istype(user)) // Ref no longer valid
 					return
 
-				var/newTag = input(user, "Please enter desired tag.", G.tag) as text|null
+				var/newTag = tgui_input_text(user, "Please enter desired tag.", "Name Tag", G.tag)
 
 				if(newTag)
 					G.tag = newTag
@@ -129,13 +129,13 @@
 				return
 
 			if(world.time < internal_data["supply_reqtime"])
-				visible_message("<span class='warning'>[src] flashes, \"[internal_data["supply_reqtime"] - world.time] seconds remaining until another requisition form may be printed.\"</span>")
+				visible_message(span_warning("[src] flashes, \"[internal_data["supply_reqtime"] - world.time] seconds remaining until another requisition form may be printed.\""))
 				return
 
 			var/timeout = world.time + 600
-			var/reason = sanitize(input(user, "Reason:","Why do you require this item?","") as null|text)
+			var/reason = sanitize(tgui_input_text(user, "Reason:","Why do you require this item?",""))
 			if(world.time > timeout)
-				to_chat(user, "<span class='warning'>Error. Request timed out.</span>")
+				to_chat(user, span_warning("Error. Request timed out."))
 				return
 			if(!reason)
 				return
@@ -155,7 +155,7 @@
 			return
 
 		if(href_list["edit"])
-			var/new_val = sanitize(input(user, href_list["edit"], "Enter the new value for this field:", href_list["default"]) as null|text)
+			var/new_val = sanitize(tgui_input_text(user, href_list["edit"], "Enter the new value for this field:", href_list["default"]))
 			if(!new_val)
 				return
 
@@ -219,9 +219,9 @@
 			var/list/L = E.contents[href_list["index"]]
 
 			if(href_list["edit"])
-				var/field = alert(user, "Select which field to edit", , "Name", "Quantity", "Value")
+				var/field = tgui_alert(user, "Select which field to edit", "Field?", list("Name", "Quantity", "Value"))
 
-				var/new_val = sanitize(input(user, href_list["edit"], "Enter the new value for this field:", href_list["default"]) as null|text)
+				var/new_val = sanitize(tgui_input_text(user, href_list["edit"], "Enter the new value for this field:", href_list["default"]))
 				if(!new_val)
 					return
 
@@ -244,7 +244,7 @@
 
 		// Else clause means they're editing/deleting the whole export report, rather than a specific item in it
 		else if(href_list["edit"])
-			var/new_val = sanitize(input(user, href_list["edit"], "Enter the new value for this field:", href_list["default"]) as null|text)
+			var/new_val = sanitize(tgui_input_text(user, href_list["edit"], "Enter the new value for this field:", href_list["default"]))
 			if(!new_val)
 				return
 
@@ -267,14 +267,14 @@
 		switch(href_list["send_shuttle"])
 			if("send_away")
 				if(SSsupply.shuttle.forbidden_atoms_check())
-					to_chat(usr, "<span class='warning'>For safety reasons the automated supply shuttle cannot transport live organisms, classified nuclear weaponry or homing beacons.</span>")
+					to_chat(usr, span_warning("For safety reasons the automated supply shuttle cannot transport live organisms, classified nuclear weaponry or homing beacons."))
 				else
 					SSsupply.shuttle.launch(src)
-					to_chat(usr, "<span class='notice'>Initiating launch sequence.</span>")
+					to_chat(usr, span_notice("Initiating launch sequence."))
 
 			if("send_to_station")
 				SSsupply.shuttle.launch(src)
-				to_chat(usr, "<span class='notice'>The supply shuttle has been called and will arrive in approximately [round(SSsupply.movetime/600,1)] minutes.</span>")
+				to_chat(usr, span_notice("The supply shuttle has been called and will arrive in approximately [round(SSsupply.movetime/600,1)] minutes."))
 
 			if("cancel_shuttle")
 				SSsupply.shuttle.cancel_launch(src)
@@ -291,7 +291,7 @@
 			post_status("alert", href_list["alert"])
 			internal_data["stat_display_special"] = href_list["alert"]
 		if("setmsg")
-			internal_data["stat_display_line[href_list["line"]]"] = reject_bad_text(sanitize(input("Line 1", "Enter Message Text", internal_data["stat_display_line[href_list["line"]]"]) as text|null, 40), 40)
+			internal_data["stat_display_line[href_list["line"]]"] = reject_bad_text(sanitize(tgui_input_text(usr, "Line 1", "Enter Message Text", internal_data["stat_display_line[href_list["line"]]"], 40), 40), 40)
 		else
 			post_status(href_list["stat_display"])
 			internal_data["stat_display_special"] = href_list["stat_display"]

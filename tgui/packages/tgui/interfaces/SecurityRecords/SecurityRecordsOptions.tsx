@@ -1,5 +1,6 @@
-import { useBackend } from '../../backend';
-import { Button, Section, Tabs } from '../../components';
+import { useBackend } from 'tgui/backend';
+import { Button, Section, Tabs } from 'tgui-core/components';
+
 import { SecurityRecordsViewGeneral } from './SecurityRecordsViewGeneral';
 import { SecurityRecordsViewSecurity } from './SecurityRecordsViewSecurity';
 import { Data } from './types';
@@ -35,6 +36,14 @@ export const SecurityRecordsView = (props) => {
         <SecurityRecordsViewSecurity />
       </Section>
       <Section title="Actions">
+        <Button
+          icon="upload"
+          disabled={!!security!.empty}
+          color="good"
+          onClick={() => act('sync_r')}
+        >
+          Sync Security Record
+        </Button>
         <Button.Confirm
           icon="trash"
           disabled={!!security!.empty}

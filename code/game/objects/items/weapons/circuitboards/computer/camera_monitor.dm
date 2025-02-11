@@ -10,8 +10,9 @@
 	var/locked = 1
 	var/emagged = 0
 
-/obj/item/circuitboard/security/New()
-	..()
+/obj/item/circuitboard/security/Initialize()
+	. = ..()
+	network = using_map.station_networks
 
 /obj/item/circuitboard/security/tv
 	name = T_BOARD("security camera monitor - television")
@@ -22,8 +23,8 @@
 	build_path = /obj/machinery/computer/security/engineering
 	req_access = list()
 
-/obj/item/circuitboard/security/engineering/New()
-	..()
+/obj/item/circuitboard/security/engineering/Initialize()
+	. = ..()
 	network = engineering_networks
 
 /obj/item/circuitboard/security/mining
@@ -38,8 +39,8 @@
 	board_type = new /datum/frame/frame_types/display
 	matter = list(MAT_STEEL = 50, MAT_GLASS = 50)
 
-/obj/item/circuitboard/security/telescreen/entertainment/New()
-	..()
+/obj/item/circuitboard/security/telescreen/entertainment/Initialize()
+	. = ..()
 	network = NETWORK_THUNDER
 
 // CHOMPEdit Begin - Bodycam
@@ -86,14 +87,14 @@
 			to_chat(user, span_warning("Circuit controls are locked."))
 			return
 		var/existing_networks = jointext(network,",")
-		var/input = sanitize(tgui_input_text(usr, "Which networks would you like to connect this camera console circuit to? Separate networks with a comma. No Spaces!\nFor example: SS13,Security,Secret ", "Multitool-Circuitboard interface", existing_networks))
+		var/input = sanitize(tgui_input_text(user, "Which networks would you like to connect this camera console circuit to? Separate networks with a comma. No Spaces!\nFor example: SS13,Security,Secret ", "Multitool-Circuitboard interface", existing_networks))
 		if(!input)
-			to_chat(usr, "No input found please hang up and try your call again.")
+			to_chat(user, "No input found please hang up and try your call again.")
 			return
 		var/list/tempnetwork = splittext(input, ",")
 		tempnetwork = difflist(tempnetwork,restricted_camera_networks,1)
 		if(tempnetwork.len < 1)
-			to_chat(usr, "No network found please hang up and try your call again.")
+			to_chat(user, "No network found please hang up and try your call again.")
 			return
 		network = tempnetwork
 	return

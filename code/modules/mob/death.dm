@@ -73,6 +73,12 @@
 		return 0
 	SEND_SIGNAL(src, COMSIG_MOB_DEATH, gibbed)
 	if(src.loc && istype(loc,/obj/belly) || istype(loc,/obj/item/dogborg/sleeper) || istype(loc, /obj/item/clothing/shoes)) deathmessage = "no message" //VOREStation Add - Prevents death messages from inside mobs - CHOMPEdit: Added in-shoe as well
+	//CHOMPAdd Start - Muffle original body death on Mob TF death
+	if(src.loc && isliving(loc))
+		var/mob/living/L = loc
+		if(L.tf_mob_holder == src)
+			deathmessage = "no message"
+	//CHOMPAdd End
 	facing_dir = null
 
 	if(!gibbed && deathmessage != DEATHGASP_NO_MESSAGE)
@@ -93,6 +99,16 @@
 
 	drop_r_hand()
 	drop_l_hand()
+
+	if(viruses)
+		for(var/datum/disease/D in viruses)
+			if(istype(D, /datum/disease/advance))
+				var/datum/disease/advance/AD = D
+				for(var/symptom in AD.symptoms)
+					var/datum/symptom/S = symptom
+					S.OnDeath(AD)
+			else
+				D.OnDeath()
 
 	if(healths)
 		healths.overlays = null // This is specific to humans but the relevant code is here; shouldn't mess with other mobs.

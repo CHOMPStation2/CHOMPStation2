@@ -277,12 +277,15 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			"resist_animation" = selected.resist_triggers_animation,
 			"voresprite_size_factor" = selected.size_factor_for_sprite,
 			"belly_sprite_to_affect" = selected.belly_sprite_to_affect,
-			"belly_sprite_option_shown" = LAZYLEN(host.vore_icon_bellies) >= 1 ? TRUE : FALSE, //CHOMPEdit
-			"tail_option_shown" = istype(host, /mob/living/carbon/human),
+			"belly_sprite_option_shown" = LAZYLEN(host.vore_icon_bellies) >= 1 ? TRUE : FALSE,
+			"tail_option_shown" = ishuman(host),
 			"tail_to_change_to" = selected.tail_to_change_to,
 			"tail_colouration" = selected.tail_colouration,
 			"tail_extra_overlay" = selected.tail_extra_overlay,
 			"tail_extra_overlay2" = selected.tail_extra_overlay2,
+			"undergarment_chosen" = selected.undergarment_chosen,
+			"undergarment_if_none" = selected.undergarment_if_none || "None",
+			"undergarment_color" = selected.undergarment_color,
 			//CHOMP add: vore sprite options and additional stuff
 			"belly_fullscreen_color" = selected.belly_fullscreen_color,
 			//"belly_fullscreen_color_secondary" = selected.belly_fullscreen_color_secondary, // Chomp REMOVE - use our solution, not upstream's
@@ -313,9 +316,6 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			"vorespawn_whitelist" = selected.vorespawn_whitelist,
 			"vorespawn_absorbed" = (global_flag_check(selected.vorespawn_absorbed, VS_FLAG_ABSORB_YES) + global_flag_check(selected.vorespawn_absorbed, VS_FLAG_ABSORB_PREY)),
 			"sound_volume" = selected.sound_volume,
-			"undergarment_chosen" = selected.undergarment_chosen,
-			"undergarment_if_none" = selected.undergarment_if_none || "None",
-			"undergarment_color" = selected.undergarment_color,
 			"noise_freq" = selected.noise_freq,
 			"item_digest_logs" = selected.item_digest_logs,
 			"private_struggle" = selected.private_struggle,
@@ -613,7 +613,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 
 	return data
 
-/datum/vore_look/tgui_act(action, params)
+/datum/vore_look/tgui_act(action, params, datum/tgui/ui)
 	if(..())
 		return TRUE
 
@@ -622,7 +622,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			show_pictures = !show_pictures
 			return TRUE
 		if("int_help")
-			tgui_alert(usr, "These control how your belly responds to someone using 'resist' while inside you. The percent chance to trigger each is listed below, \
+			tgui_alert(ui.user, "These control how your belly responds to someone using 'resist' while inside you. The percent chance to trigger each is listed below, \
 					and you can change them to whatever you see fit. Setting them to 0% will disable the possibility of that interaction. \
 					These only function as long as interactions are turned on in general. Keep in mind, the 'belly mode' interactions (digest/absorb) \
 					will affect all prey in that belly, if one resists and triggers digestion/absorption. If multiple trigger at the same time, \
@@ -631,17 +631,17 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 
 		// Host is inside someone else, and is trying to interact with something else inside that person.
 		if("pick_from_inside")
-			return pick_from_inside(usr, params)
+			return pick_from_inside(ui.user, params)
 
 		// Host is trying to interact with something in host's belly.
 		if("pick_from_outside")
-			return pick_from_outside(usr, params)
+			return pick_from_outside(ui.user, params)
 
 		if("newbelly")
 			if(host.vore_organs.len >= BELLIES_MAX)
 				return FALSE
 
-			var/new_name = html_encode(tgui_input_text(usr,"New belly's name:","New Belly"))
+			var/new_name = html_encode(tgui_input_text(ui.user,"New belly's name:","New Belly"))
 
 			if(!new_name)
 				return FALSE
@@ -657,7 +657,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 						break
 
 			if(failure_msg) //Something went wrong.
-				tgui_alert_async(usr, failure_msg, "Error!")
+				tgui_alert_async(ui.user, failure_msg, "Error!")
 				return TRUE
 
 			var/obj/belly/NB = new(host)
@@ -674,7 +674,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		if("move_belly")
 			var/dir = text2num(params["dir"])
 			if(LAZYLEN(host.vore_organs) <= 1)
-				to_chat(usr, span_warning("You can't sort bellies with only one belly to sort..."))
+				to_chat(ui.user, span_warning("You can't sort bellies with only one belly to sort..."))
 				return TRUE
 
 			var/current_index = host.vore_organs.Find(host.vore_selected)
@@ -685,82 +685,80 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			return TRUE
 
 		if("set_attribute")
-			return set_attr(usr, params)
+			return set_attr(ui.user, params)
 
 		if("saveprefs")
 			if(isnewplayer(host))
-				var/choice = tgui_alert(usr, "Warning: Saving your vore panel while in the lobby will save it to the CURRENTLY LOADED character slot, and potentially overwrite it. Are you SURE you want to overwrite your current slot with these vore bellies?", "WARNING!", list("No, abort!", "Yes, save."))
+				var/choice = tgui_alert(ui.user, "Warning: Saving your vore panel while in the lobby will save it to the CURRENTLY LOADED character slot, and potentially overwrite it. Are you SURE you want to overwrite your current slot with these vore bellies?", "WARNING!", list("No, abort!", "Yes, save."))
 				if(choice != "Yes, save.")
 					return TRUE
 			else if(host.real_name != host.client.prefs.real_name || (!ishuman(host) && !issilicon(host)))
-				var/choice = tgui_alert(usr, "Warning: Saving your vore panel while playing what is very-likely not your normal character will overwrite whatever character you have loaded in character setup. Maybe this is your 'playing a simple mob' slot, though. Are you SURE you want to overwrite your current slot with these vore bellies?", "WARNING!", list("No, abort!", "Yes, save."))
+				var/choice = tgui_alert(ui.user, "Warning: Saving your vore panel while playing what is very-likely not your normal character will overwrite whatever character you have loaded in character setup. Maybe this is your 'playing a simple mob' slot, though. Are you SURE you want to overwrite your current slot with these vore bellies?", "WARNING!", list("No, abort!", "Yes, save."))
 				if(choice != "Yes, save.")
 					return TRUE
 			if(!host.save_vore_prefs())
-				tgui_alert_async(usr, "ERROR: Chomp-specific preferences failed to save!","Error")
+				tgui_alert_async(ui.user, "ERROR: Chomp-specific preferences failed to save!","Error") // CHOMPEdit
 			else
-				to_chat(usr, span_notice("Chomp-specific preferences saved!"))
+				to_chat(ui.user, span_notice("Chomp-specific preferences saved!")) // CHOMPEdit
 				unsaved_changes = FALSE
 			return TRUE
 		if("reloadprefs")
-			var/alert = tgui_alert(usr, "Are you sure you want to reload character slot preferences? This will remove your current vore organs and eject their contents.","Confirmation",list("Reload","Cancel"))
+			var/alert = tgui_alert(ui.user, "Are you sure you want to reload character slot preferences? This will remove your current vore organs and eject their contents.","Confirmation",list("Reload","Cancel"))
 			if(alert != "Reload")
 				return FALSE
 			if(!host.apply_vore_prefs())
-				tgui_alert_async(usr, "ERROR: Chomp-specific preferences failed to apply!","Error")
+				tgui_alert_async(ui.user, "ERROR: Chomp-specific preferences failed to apply!","Error") // CHOMPEdit
 			else
-				to_chat(usr,span_notice("Chomp-specific preferences applied from active slot!"))
+				to_chat(ui.user,span_notice("Chomp-specific preferences applied from active slot!")) // CHOMPEdit
 				unsaved_changes = FALSE
 			return TRUE
 		if("loadprefsfromslot")
-			var/alert = tgui_alert(usr, "Are you sure you want to load another character slot's preferences? This will remove your current vore organs and eject their contents. This will not be immediately saved to your character slot, and you will need to save manually to overwrite your current bellies and preferences.","Confirmation",list("Load","Cancel"))
+			var/alert = tgui_alert(ui.user, "Are you sure you want to load another character slot's preferences? This will remove your current vore organs and eject their contents. This will not be immediately saved to your character slot, and you will need to save manually to overwrite your current bellies and preferences.","Confirmation",list("Load","Cancel"))
 			if(alert != "Load")
 				return FALSE
 			if(!host.load_vore_prefs_from_slot())
-				tgui_alert_async(usr, "ERROR: Vore-specific preferences failed to apply!","Error") //CHOMPEdit
+				tgui_alert_async(ui.user, "ERROR: Vore-specific preferences failed to apply!","Error") //CHOMPEdit
 			else
-				to_chat(usr,span_notice("Vore-specific preferences applied from active slot!")) //CHOMPEdit
+				to_chat(ui.user,span_notice("Vore-specific preferences applied from active slot!")) //CHOMPEdit
 				unsaved_changes = TRUE
 			return TRUE
 		//CHOMPEdit - "Belly HTML Export Earlyport"
 		if("exportpanel")
-			var/mob/living/user = usr
-			if(!user)
-				to_chat(usr,span_notice("Mob undefined: [user]"))
+			if(!ui.user)
 				return FALSE
 
 			var/datum/vore_look/export_panel/exportPanel
 			if(!exportPanel)
-				exportPanel = new(usr)
+				exportPanel = new(ui.user)
 
 			if(!exportPanel)
-				to_chat(user,span_notice("Export panel undefined: [exportPanel]"))
+				to_chat(ui.user,span_notice("Export panel undefined: [exportPanel]"))
 				return FALSE
 
-			exportPanel.open_export_panel(user)
+			exportPanel.open_export_panel(ui.user)
 
 			return TRUE
 		//CHOMPEdit End
 		if("setflavor")
-			var/new_flavor = html_encode(tgui_input_text(usr,"What your character tastes like (400ch limit). This text will be printed to the pred after 'X tastes of...' so just put something like 'strawberries and cream':","Character Flavor",host.vore_taste))
+			var/new_flavor = html_encode(tgui_input_text(ui.user,"What your character tastes like (400ch limit). This text will be printed to the pred after 'X tastes of...' so just put something like 'strawberries and cream':","Character Flavor",host.vore_taste))
 			if(!new_flavor)
 				return FALSE
 
 			new_flavor = readd_quotes(new_flavor)
 			if(length(new_flavor) > FLAVOR_MAX)
-				tgui_alert_async(usr, "Entered flavor/taste text too long. [FLAVOR_MAX] character limit.","Error!")
+				tgui_alert_async(ui.user, "Entered flavor/taste text too long. [FLAVOR_MAX] character limit.","Error!")
 				return FALSE
 			host.vore_taste = new_flavor
 			unsaved_changes = TRUE
 			return TRUE
 		if("setsmell")
-			var/new_smell = html_encode(tgui_input_text(usr,"What your character smells like (400ch limit). This text will be printed to the pred after 'X smells of...' so just put something like 'strawberries and cream':","Character Smell",host.vore_smell))
+			var/new_smell = html_encode(tgui_input_text(ui.user,"What your character smells like (400ch limit). This text will be printed to the pred after 'X smells of...' so just put something like 'strawberries and cream':","Character Smell",host.vore_smell))
 			if(!new_smell)
 				return FALSE
 
 			new_smell = readd_quotes(new_smell)
 			if(length(new_smell) > FLAVOR_MAX)
-				tgui_alert_async(usr, "Entered perfume/smell text too long. [FLAVOR_MAX] character limit.","Error!")
+				tgui_alert_async(ui.user, "Entered perfume/smell text too long. [FLAVOR_MAX] character limit.","Error!")
 				return FALSE
 			host.vore_smell = new_smell
 			unsaved_changes = TRUE
@@ -905,9 +903,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			return TRUE
 		//CHOMPedit start: liquid belly code
 		if("liq_set_attribute")
-			return liq_set_attr(usr, params)
+			return liq_set_attr(ui.user, params)
 		if("liq_set_messages")
-			return liq_set_msg(usr, params)
+			return liq_set_msg(ui.user, params)
 		if("toggle_liq_rec")
 			host.receive_reagents = !host.receive_reagents
 			if(host.client.prefs_vr)
@@ -991,7 +989,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			unsaved_changes = TRUE
 			return TRUE
 		if("switch_selective_mode_pref")
-			host.selective_preference = tgui_input_list(usr, "What would you prefer happen to you with selective bellymode?","Selective Bellymode", list(DM_DEFAULT, DM_DIGEST, DM_ABSORB, DM_DRAIN))
+			host.selective_preference = tgui_input_list(ui.user, "What would you prefer happen to you with selective bellymode?","Selective Bellymode", list(DM_DEFAULT, DM_DIGEST, DM_ABSORB, DM_DRAIN))
 			if(!(host.selective_preference))
 				host.selective_preference = DM_DEFAULT
 			if(host.client.prefs_vr)
@@ -1006,14 +1004,13 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			host.weight_message_visible = !host.weight_message_visible
 			unsaved_changes = TRUE
 			return TRUE
-		//CHOMPEdit start - vore sprites color
 		if("set_vs_color")
-			var/belly_choice = tgui_input_list(usr, "Which vore sprite are you going to edit the color of?", "Vore Sprite Color", host.vore_icon_bellies)
+			var/belly_choice = tgui_input_list(ui.user, "Which vore sprite are you going to edit the color of?", "Vore Sprite Color", host.vore_icon_bellies)
 			if(belly_choice)
-				var/newcolor = input(usr, "Choose a color.", "", host.vore_sprite_color[belly_choice]) as color|null
+				var/newcolor = tgui_color_picker(ui.user, "Choose a color.", "", host.vore_sprite_color[belly_choice])
 				if(newcolor)
 					host.vore_sprite_color[belly_choice] = newcolor
-					var/multiply = tgui_input_list(usr, "Set the color to be applied multiplicatively or additively? Currently in [host.vore_sprite_multiply[belly_choice] ? "Multiply" : "Add"]", "Vore Sprite Color", list("Multiply", "Add"))
+					var/multiply = tgui_input_list(ui.user, "Set the color to be applied multiplicatively or additively? Currently in [host.vore_sprite_multiply[belly_choice] ? "Multiply" : "Add"]", "Vore Sprite Color", list("Multiply", "Add"))
 					if(multiply == "Multiply")
 						host.vore_sprite_multiply[belly_choice] = TRUE
 					else if(multiply == "Add")
@@ -1021,8 +1018,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 					host.update_icons_body()
 					unsaved_changes = TRUE
 			return TRUE
+		//CHOMPAdd start - vore sprites color
 		if("set_belly_rub")
-			host.belly_rub_target = tgui_input_list(usr, "Which belly would you prefer to be rubbed?","Select Target", host.vore_organs)
+			host.belly_rub_target = tgui_input_list(ui.user, "Which belly would you prefer to be rubbed?","Select Target", host.vore_organs)
 			if(!(host.belly_rub_target))
 				host.belly_rub_target = null
 			if(host.client.prefs_vr)
@@ -1239,7 +1237,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				unsaved_changes = TRUE
 				host.soulgem.set_custom_message(message, "delete")
 			return TRUE
-		//CHOMPEdit end
+		//CHOMPAdd end
 
 /datum/vore_look/proc/pick_from_inside(mob/user, params)
 	var/atom/movable/target = locate(params["pick"])
@@ -1364,7 +1362,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 	var/atom/movable/target = locate(params["pick"])
 	if(!(target in host.vore_selected))
 		return TRUE // Not in our X anymore, update UI
-	var/list/available_options = list("Examine", "Eject", "Move", "Transfer")
+	var/list/available_options = list("Examine", "Eject", "Launch", "Move", "Transfer")
 	if(ishuman(target))
 		available_options += "Transform"
 		available_options += "Health Check"
@@ -1395,6 +1393,16 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				return TRUE
 
 			host.vore_selected.release_specific_contents(target)
+			return TRUE
+
+		if("Launch")
+			if(host.stat)
+				to_chat(user, span_warning("You can't do that in your state!"))
+				return TRUE
+
+			host.vore_selected.release_specific_contents(target)
+			target.throw_at(get_edge_target_turf(host, host.dir), 3, 1, host)
+			host.visible_message(span_danger("[host] launches [target]!"))
 			return TRUE
 
 		if("Move")
@@ -1457,6 +1465,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 
 			var/mob/living/carbon/human/H = target
 			if(!istype(H))
+				return
+
+			if(!H.allow_spontaneous_tf)
 				return
 
 			var/datum/tgui_module/appearance_changer/vore/V = new(host, H)
@@ -2238,11 +2249,9 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			list("Sleeper", "Vorebelly", "Both"))
 			if(belly_choice == null)
 				return FALSE
-			//CHOMPEdit Start, changed to sync the setting among all sleepers for multibelly support
 			for (var/belly in host.vore_organs)
 				var/obj/belly/B = belly
 				B.silicon_belly_overlay_preference = belly_choice
-			//CHOMPEdit End
 			host.update_icon()
 			. = TRUE
 		if("b_belly_mob_mult")
@@ -2528,12 +2537,12 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.vore_selected.digestchance = sanitize_integer(digest_chance_input, 0, 100, initial(host.vore_selected.digestchance))
 			. = TRUE
 		if("b_autotransferchance") //CHOMPedit Start
-			var/autotransferchance_input = input(user, "Set belly auto-transfer chance (as %). You must also set the location for this to have any effect.", "Auto-Transfer Chance") as num|null
+			var/autotransferchance_input = tgui_input_number(user, "Set belly auto-transfer chance (as %). You must also set the location for this to have any effect.", "Auto-Transfer Chance", host.vore_selected.autotransferchance, 100)
 			if(!isnull(autotransferchance_input))
 				host.vore_selected.autotransferchance = sanitize_integer(autotransferchance_input, 0, 100, initial(host.vore_selected.autotransferchance))
 			. = TRUE
 		if("b_autotransferwait")
-			var/autotransferwait_input = input(user, "Set minimum number of seconds for auto-transfer wait delay.", "Auto-Transfer Time") as num|null //CHOMPEdit: Wiggle room for rougher time resolution in process cycles.
+			var/autotransferwait_input = tgui_input_number(user, "Set minimum number of seconds for auto-transfer wait delay.", "Auto-Transfer Time", host.vore_selected.autotransferwait, 1800, 1)
 			if(!isnull(autotransferwait_input))
 				host.vore_selected.autotransferwait = sanitize_integer(autotransferwait_input*10, 10, 18000, initial(host.vore_selected.autotransferwait))
 			. = TRUE
@@ -2547,7 +2556,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.vore_selected.autotransferlocation = choice.name
 			. = TRUE
 		if("b_autotransferextralocation")
-			var/obj/belly/choice = tgui_input_list(usr, "What extra places do you want your [lowertext(host.vore_selected.name)] auto-transfer to?","Select Belly", (host.vore_organs - host.vore_selected - host.vore_selected.autotransferlocation))
+			var/obj/belly/choice = tgui_input_list(user, "What extra places do you want your [lowertext(host.vore_selected.name)] auto-transfer to?","Select Belly", (host.vore_organs - host.vore_selected - host.vore_selected.autotransferlocation))
 			if(!choice) //They cancelled, no changes
 				return FALSE
 			else if(choice.name in host.vore_selected.autotransferextralocation)
@@ -2556,7 +2565,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.vore_selected.autotransferextralocation += choice.name
 			. = TRUE
 		if("b_autotransferchance_secondary")
-			var/autotransferchance_secondary_input = input(user, "Set secondary belly auto-transfer chance (as %). You must also set the location for this to have any effect.", "Secondary Auto-Transfer Chance") as num|null
+			var/autotransferchance_secondary_input = tgui_input_number(user, "Set secondary belly auto-transfer chance (as %). You must also set the location for this to have any effect.", "Secondary Auto-Transfer Chance")
 			if(!isnull(autotransferchance_secondary_input))
 				host.vore_selected.autotransferchance_secondary = sanitize_integer(autotransferchance_secondary_input, 0, 100, initial(host.vore_selected.autotransferchance_secondary))
 			. = TRUE
@@ -2570,7 +2579,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.vore_selected.autotransferlocation_secondary = choice.name
 			. = TRUE
 		if("b_autotransferextralocation_secondary")
-			var/obj/belly/choice = tgui_input_list(usr, "What extra places do you want your [lowertext(host.vore_selected.name)] auto-transfer to?","Select Belly", (host.vore_organs - host.vore_selected - host.vore_selected.autotransferlocation_secondary))
+			var/obj/belly/choice = tgui_input_list(user, "What extra places do you want your [lowertext(host.vore_selected.name)] auto-transfer to?","Select Belly", (host.vore_organs - host.vore_selected - host.vore_selected.autotransferlocation_secondary))
 			if(!choice) //They cancelled, no changes
 				return FALSE
 			else if(choice.name in host.vore_selected.autotransferextralocation_secondary)
@@ -2636,12 +2645,12 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			host.vore_selected.autotransfer_secondary_blacklist_items ^= host.vore_selected.autotransfer_flags_list_items[toggle_addon]
 			. = TRUE
 		if("b_autotransfer_min_amount")
-			var/autotransfer_min_amount_input = input(user, "Set the minimum amount of items your belly can belly auto-transfer at once. Set to 0 for no limit.", "Auto-Transfer Min Amount") as num|null
+			var/autotransfer_min_amount_input = tgui_input_number(user, "Set the minimum amount of items your belly can belly auto-transfer at once. Set to 0 for no limit.", "Auto-Transfer Min Amount", host.vore_selected.autotransfer_min_amount, 100)
 			if(!isnull(autotransfer_min_amount_input))
 				host.vore_selected.autotransfer_min_amount = sanitize_integer(autotransfer_min_amount_input, 0, 100, initial(host.vore_selected.autotransfer_min_amount))
 			. = TRUE
 		if("b_autotransfer_max_amount")
-			var/autotransfer_max_amount_input = input(user, "Set the maximum amount of items your belly can belly auto-transfer at once. Set to 0 for no limit.", "Auto-Transfer Max Amount") as num|null
+			var/autotransfer_max_amount_input = tgui_input_number(user, "Set the maximum amount of items your belly can belly auto-transfer at once. Set to 0 for no limit.", "Auto-Transfer Max Amount", host.vore_selected.autotransfer_max_amount, 100)
 			if(!isnull(autotransfer_max_amount_input))
 				host.vore_selected.autotransfer_max_amount = sanitize_integer(autotransfer_max_amount_input, 0, 100, initial(host.vore_selected.autotransfer_max_amount))
 			. = TRUE
@@ -2666,25 +2675,25 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			host.vore_selected.clear_preview(host) //Clears the stomach overlay. This is a failsafe but shouldn't occur.
 			. = TRUE
 		if("b_fullscreen_color")
-			var/newcolor = input(user, "Choose a color.", "", host.vore_selected.belly_fullscreen_color) as color|null
+			var/newcolor = tgui_color_picker(user, "Choose a color.", "", host.vore_selected.belly_fullscreen_color)
 			if(newcolor)
 				host.vore_selected.belly_fullscreen_color = newcolor
 				host.vore_selected.update_internal_overlay()
 			. = TRUE
 		if("b_fullscreen_color2")
-			var/newcolor2 = input(user, "Choose a color.", "", host.vore_selected.belly_fullscreen_color2) as color|null
+			var/newcolor2 = tgui_color_picker(user, "Choose a color.", "", host.vore_selected.belly_fullscreen_color2)
 			if(newcolor2)
 				host.vore_selected.belly_fullscreen_color2 = newcolor2
 				host.vore_selected.update_internal_overlay()
 			. = TRUE
 		if("b_fullscreen_color3")
-			var/newcolor3 = input(user, "Choose a color.", "", host.vore_selected.belly_fullscreen_color3) as color|null
+			var/newcolor3 = tgui_color_picker(user, "Choose a color.", "", host.vore_selected.belly_fullscreen_color3)
 			if(newcolor3)
 				host.vore_selected.belly_fullscreen_color3 = newcolor3
 				host.vore_selected.update_internal_overlay()
 			. = TRUE
 		if("b_fullscreen_color4")
-			var/newcolor4 = input(user, "Choose a color.", "", host.vore_selected.belly_fullscreen_color4) as color|null
+			var/newcolor4 = tgui_color_picker(user, "Choose a color.", "", host.vore_selected.belly_fullscreen_color4)
 			if(newcolor4)
 				host.vore_selected.belly_fullscreen_color4 = newcolor4
 				host.vore_selected.update_internal_overlay()
@@ -2697,12 +2706,12 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			. = TRUE
 		/* //Chomp REMOVE - use our solution, not upstream's
 		if("b_fullscreen_color_secondary")
-			var/newcolor = input(user, "Choose a color.", "", host.vore_selected.belly_fullscreen_color_secondary) as color|null
+			var/newcolor = tgui_color_picker(user, "Choose a color.", "", host.vore_selected.belly_fullscreen_color_secondary)
 			if(newcolor)
 				host.vore_selected.belly_fullscreen_color_secondary = newcolor
 			. = TRUE
 		if("b_fullscreen_color_trinary")
-			var/newcolor = input(user, "Choose a color.", "", host.vore_selected.belly_fullscreen_color_trinary) as color|null
+			var/newcolor = tgui_color_picker(user, "Choose a color.", "", host.vore_selected.belly_fullscreen_color_trinary)
 			if(newcolor)
 				host.vore_selected.belly_fullscreen_color_trinary = newcolor
 			. = TRUE
@@ -2779,47 +2788,70 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				return FALSE
 			else
 				host.vore_selected.belly_sprite_to_affect = belly_choice
-				host.update_fullness()
+				if(isanimal(host))
+					host.update_icon()
+				else
+					host.update_fullness()
 			. = TRUE
 		if("b_affects_vore_sprites")
 			host.vore_selected.affects_vore_sprites = !host.vore_selected.affects_vore_sprites
-			host.update_fullness()
+			if(isanimal(host))
+				host.update_icon()
+			else
+				host.update_fullness()
 			. = TRUE
 		if("b_count_absorbed_prey_for_sprites")
 			host.vore_selected.count_absorbed_prey_for_sprite = !host.vore_selected.count_absorbed_prey_for_sprite
-			host.update_fullness()
+			if(isanimal(host))
+				host.update_icon()
+			else
+				host.update_fullness()
 			. = TRUE
 		if("b_absorbed_multiplier")
-			var/absorbed_multiplier_input = input(user, "Set the impact absorbed prey's size have on your vore sprite. 1 means no scaling, 0.5 means absorbed prey count half as much, 2 means absorbed prey count double. (Range from 0.1 - 3)", "Absorbed Multiplier") as num|null
+			var/absorbed_multiplier_input = tgui_input_number(user, "Set the impact absorbed prey's size have on your vore sprite. 1 means no scaling, 0.5 means absorbed prey count half as much, 2 means absorbed prey count double. (Range from 0.1 - 3)", "Absorbed Multiplier", host.vore_selected.absorbed_multiplier, 3, 0.1, round_value=FALSE)
 			if(!isnull(absorbed_multiplier_input))
 				host.vore_selected.absorbed_multiplier = CLAMP(absorbed_multiplier_input, 0.1, 3)
-				host.update_fullness()
+				if(isanimal(host))
+					host.update_icon()
+				else
+					host.update_fullness()
 			. = TRUE
 		if("b_count_items_for_sprites")
 			host.vore_selected.count_items_for_sprite = !host.vore_selected.count_items_for_sprite
-			host.update_fullness()
+			if(isanimal(host))
+				host.update_icon()
+			else
+				host.update_fullness()
 			. = TRUE
 		if("b_item_multiplier")
-			var/item_multiplier_input = input(user, "Set the impact items will have on your vore sprite. 1 means a belly with 8 normal-sized items will count as 1 normal sized prey-thing's worth, 0.5 means items count half as much, 2 means items count double. (Range from 0.1 - 10)", "Item Multiplier") as num|null
+			var/item_multiplier_input = tgui_input_number(user, "Set the impact items will have on your vore sprite. 1 means a belly with 8 normal-sized items will count as 1 normal sized prey-thing's worth, 0.5 means items count half as much, 2 means items count double. (Range from 0.1 - 10)", "Item Multiplier", host.vore_selected.item_multiplier, 10, 0.1, round_value=FALSE)
 			if(!isnull(item_multiplier_input))
 				host.vore_selected.item_multiplier = CLAMP(item_multiplier_input, 0.1, 10)
-				host.update_fullness()
+				if(isanimal(host))
+					host.update_icon()
+				else
+					host.update_fullness()
 			. = TRUE
 		if("b_health_impacts_size")
 			host.vore_selected.health_impacts_size = !host.vore_selected.health_impacts_size
-			host.update_fullness()
+			if(isanimal(host))
+				host.update_icon()
+			else
+				host.update_fullness()
 			. = TRUE
 		if("b_resist_animation")
 			host.vore_selected.resist_triggers_animation = !host.vore_selected.resist_triggers_animation
 			. = TRUE
 		if("b_size_factor_sprites")
-			var/size_factor_input = input(user, "Set the impact all belly content's collective size has on your vore sprite. 1 means no scaling, 0.5 means content counts half as much, 2 means contents count double. (Range from 0.1 - 3)", "Size Factor") as num|null
+			var/size_factor_input = tgui_input_number(user, "Set the impact all belly content's collective size has on your vore sprite. 1 means no scaling, 0.5 means content counts half as much, 2 means contents count double. (Range from 0.1 - 3)", "Size Factor", host.vore_selected.size_factor_for_sprite, 3, 0.1, round_value=FALSE)
 			if(!isnull(size_factor_input))
 				host.vore_selected.size_factor_for_sprite = CLAMP(size_factor_input, 0.1, 3)
-				host.update_fullness()
+				if(isanimal(host))
+					host.update_icon()
+				else
+					host.update_fullness()
 			. = TRUE
-		//CHOMPEdit End
-		if("b_vore_sprite_flags") //CHOMP Addition
+		if("b_vore_sprite_flags")
 			var/list/menu_list = host.vore_selected.vore_sprite_flag_list.Copy()
 			var/toggle_vs_flag = tgui_input_list(user, "Toggle Vore Sprite Modes", "Mode Choice", menu_list)
 			if(!toggle_vs_flag)
@@ -2828,15 +2860,21 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			. = TRUE
 		if("b_count_liquid_for_sprites") //CHOMP Addition
 			host.vore_selected.count_liquid_for_sprite = !host.vore_selected.count_liquid_for_sprite
-			host.update_fullness()
-			. = TRUE
-		if("b_liquid_multiplier") //CHOMP Addition
-			var/liquid_multiplier_input = input(user, "Set the impact amount of liquid reagents will have on your vore sprite. 1 means a belly with 100 reagents of fluid will count as 1 normal sized prey-thing's worth, 0.5 means liquid counts half as much, 2 means liquid counts double. (Range from 0.1 - 10)", "Liquid Multiplier") as num|null
-			if(!isnull(liquid_multiplier_input))
-				host.vore_selected.liquid_multiplier = CLAMP(liquid_multiplier_input, 0.1, 10)
+			if(isanimal(host))
+				host.update_icon()
+			else
 				host.update_fullness()
 			. = TRUE
-		if("b_undergarment_choice") //CHOMP Addition
+		if("b_liquid_multiplier") //CHOMP Addition
+			var/liquid_multiplier_input = tgui_input_number(user, "Set the impact amount of liquid reagents will have on your vore sprite. 1 means a belly with 100 reagents of fluid will count as 1 normal sized prey-thing's worth, 0.5 means liquid counts half as much, 2 means liquid counts double. (Range from 0.1 - 10)", "Liquid Multiplier", host.vore_selected.liquid_multiplier, 10, 0.1, round_value=FALSE)
+			if(!isnull(liquid_multiplier_input))
+				host.vore_selected.liquid_multiplier = CLAMP(liquid_multiplier_input, 0.1, 10)
+				if(isanimal(host))
+					host.update_icon()
+				else
+					host.update_fullness()
+			. = TRUE
+		if("b_undergarment_choice")
 			var/datum/category_group/underwear/undergarment_choice = tgui_input_list(user, "Which undergarment do you want to enable when your [lowertext(host.vore_selected.name)] is filled?","Select Undergarment Class", global_underwear.categories)
 			if(!undergarment_choice) //They cancelled, no changes
 				return FALSE
@@ -2844,7 +2882,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.vore_selected.undergarment_chosen = undergarment_choice.name
 				host.update_fullness()
 			. = TRUE
-		if("b_undergarment_if_none") //CHOMP Addition
+		if("b_undergarment_if_none")
 			var/datum/category_group/underwear/UWC = global_underwear.categories_by_name[host.vore_selected.undergarment_chosen]
 			var/datum/category_item/underwear/selected_underwear = tgui_input_list(user, "If no undergarment is equipped, which undergarment style do you want to use?","Select Underwear Style",UWC.items,host.vore_selected.undergarment_if_none)
 			if(!selected_underwear) //They cancelled, no changes
@@ -2853,8 +2891,8 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.vore_selected.undergarment_if_none = selected_underwear
 				host.update_fullness()
 				host.updateVRPanel()
-		if("b_undergarment_color") //CHOMP Addition
-			var/newcolor = input(user, "Choose a color.", "", host.vore_selected.undergarment_color) as color|null
+		if("b_undergarment_color")
+			var/newcolor = tgui_color_picker(user, "Choose a color.", "", host.vore_selected.undergarment_color)
 			if(newcolor)
 				host.vore_selected.undergarment_color = newcolor
 				host.update_fullness()
@@ -2867,28 +2905,27 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.vore_selected.tail_to_change_to = tail_choice
 			. = TRUE
 		if("b_tail_color")
-			var/newcolor = input(user, "Choose tail color.", "", host.vore_selected.tail_colouration) as color|null
+			var/newcolor = tgui_color_picker(user, "Choose tail color.", "", host.vore_selected.tail_colouration)
 			if(newcolor)
 				host.vore_selected.tail_colouration = newcolor
 			. = TRUE
 		if("b_tail_color2")
-			var/newcolor = input(user, "Choose tail secondary color.", "", host.vore_selected.tail_extra_overlay) as color|null
+			var/newcolor = tgui_color_picker(user, "Choose tail secondary color.", "", host.vore_selected.tail_extra_overlay)
 			if(newcolor)
 				host.vore_selected.tail_extra_overlay = newcolor
 			. = TRUE
 		if("b_tail_color3")
-			var/newcolor = input(user, "Choose tail tertiary color.", "", host.vore_selected.tail_extra_overlay2) as color|null
+			var/newcolor = tgui_color_picker(user, "Choose tail tertiary color.", "", host.vore_selected.tail_extra_overlay2)
 			if(newcolor)
 				host.vore_selected.tail_extra_overlay2 = newcolor
 			. = TRUE
-
 	if(.)
 		unsaved_changes = TRUE
 
 //CHOMPedit start: liquid belly procs
 /datum/vore_look/proc/liq_set_attr(mob/user, params)
 	if(!host.vore_selected)
-		alert("No belly selected to modify.")
+		tgui_alert("No belly selected to modify.")
 		return FALSE
 
 	var/attr = params["liq_attribute"]
@@ -2911,7 +2948,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			. = TRUE
 		if("b_liq_reagent_type")
 			var/list/menu_list = host.vore_selected.reagent_choices.Copy() //Useful if we want to make certain races, synths, borgs, and other things result in additional reagents to produce - Jack
-			var/new_reagent = input("Choose Reagent (currently [host.vore_selected.reagent_chosen])") as null|anything in menu_list
+			var/new_reagent = tgui_input_list(user, "Current reagent: [host.vore_selected.reagent_chosen]", "Choose Reagent", menu_list)
 			if(!new_reagent)
 				return FALSE
 
@@ -2919,25 +2956,25 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			host.vore_selected.ReagentSwitch() // For changing variables when a new reagent is chosen
 			. = TRUE
 		if("b_liq_reagent_name")
-			var/new_name = html_encode(input(user,"New name for liquid shown when transfering and dumping on floor (The actual liquid's name is still the same):","New Name") as text|null)
+			var/new_name = html_encode(tgui_input_text(user,"New name for liquid shown when transfering and dumping on floor (The actual liquid's name is still the same):","New Name",host.vore_selected.reagent_name))
 
 			if(length(new_name) > BELLIES_NAME_MAX || length(new_name) < BELLIES_NAME_MIN)
-				alert("Entered name length invalid (must be longer than [BELLIES_NAME_MIN], no longer than [BELLIES_NAME_MAX]).","Error")
+				tgui_alert("Entered name length invalid (must be longer than [BELLIES_NAME_MIN], no longer than [BELLIES_NAME_MAX]).","Error")
 				return FALSE
 
 			host.vore_selected.reagent_name = new_name
 			. = TRUE
 		if("b_liq_reagent_transfer_verb")
-			var/new_verb = html_encode(input(user,"New verb when liquid is transfered from this belly:","New Verb") as text|null)
+			var/new_verb = html_encode(tgui_input_text(user,"New verb when liquid is transfered from this belly:","New Verb", host.vore_selected.reagent_transfer_verb))
 
 			if(length(new_verb) > BELLIES_NAME_MAX || length(new_verb) < BELLIES_NAME_MIN)
-				alert("Entered verb length invalid (must be longer than [BELLIES_NAME_MIN], no longer than [BELLIES_NAME_MAX]).","Error")
+				tgui_alert("Entered verb length invalid (must be longer than [BELLIES_NAME_MIN], no longer than [BELLIES_NAME_MAX]).","Error")
 				return FALSE
 
 			host.vore_selected.reagent_transfer_verb = new_verb
 			. = TRUE
 		if("b_liq_reagent_nutri_rate")
-			host.vore_selected.gen_time_display = input(user, "Choose the time it takes to fill the belly from empty state using nutrition.", "Set Liquid Production Time.")  in list("10 minutes","30 minutes","1 hour","3 hours","6 hours","12 hours","24 hours")|null
+			host.vore_selected.gen_time_display = tgui_input_list(user, "Choose the time it takes to fill the belly from empty state using nutrition.", "Set Liquid Production Time.",list("10 minutes","30 minutes","1 hour","3 hours","6 hours","12 hours","24 hours"))
 			switch(host.vore_selected.gen_time_display)
 				if("10 minutes")
 					host.vore_selected.gen_time = 0
@@ -2957,7 +2994,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 					return FALSE
 			. = TRUE
 		if("b_liq_reagent_capacity")
-			var/new_custom_vol = input(user, "Choose the amount of liquid the belly can contain at most. Ranges from 10 to 300.", "Set Custom Belly Capacity.", host.vore_selected.custom_max_volume) as num|null
+			var/new_custom_vol = tgui_input_number(user, "Choose the amount of liquid the belly can contain at most. Ranges from 10 to 300.", "Set Custom Belly Capacity.", host.vore_selected.custom_max_volume, 300, 10)
 			if(new_custom_vol == null)
 				return FALSE
 			var/new_new_custom_vol = CLAMP(new_custom_vol, 10, 300)
@@ -2973,7 +3010,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			. = TRUE
 		if("b_liq_reagent_addons")
 			var/list/menu_list = host.vore_selected.reagent_mode_flag_list.Copy()
-			var/reagent_toggle_addon = input("Toggle Addon") as null|anything in menu_list
+			var/reagent_toggle_addon = tgui_input_list(user, "Toggle your addons", "Toggle Addon", menu_list)
 			if(!reagent_toggle_addon)
 				return FALSE
 			host.vore_selected.reagent_mode_flags ^= host.vore_selected.reagent_mode_flag_list[reagent_toggle_addon]
@@ -2987,7 +3024,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				to_chat(user,span_warning("Your [lowertext(host.vore_selected.name)] no longer has liquid overlay enabled."))
 			. = TRUE
 		if("b_max_liquid_level")
-			var/new_max_liquid_level = input(user, "Set custom maximum liquid level. 0-100%", "Set Custom Max Level.", host.vore_selected.max_liquid_level) as num|null
+			var/new_max_liquid_level = tgui_input_number(user, "Set custom maximum liquid level. 0-100%", "Set Custom Max Level.", host.vore_selected.max_liquid_level, 100)
 			if(new_max_liquid_level == null)
 				return FALSE
 			var/new_new_max_liquid_level = CLAMP(new_max_liquid_level, 0, 100)
@@ -2995,7 +3032,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			host.vore_selected.update_internal_overlay()
 			. = TRUE
 		if("b_custom_reagentcolor")
-			var/newcolor = input(user, "Choose custom color for liquid overlay. Cancel for normal reagent color.", "", host.vore_selected.custom_reagentcolor) as color|null
+			var/newcolor = tgui_color_picker(user, "Choose custom color for liquid overlay. Cancel for normal reagent color.", "", host.vore_selected.custom_reagentcolor)
 			if(newcolor)
 				host.vore_selected.custom_reagentcolor = newcolor
 			else
@@ -3028,7 +3065,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			host.vore_selected.update_internal_overlay()
 			. = TRUE
 		if("b_mush_color")
-			var/newcolor = input(user, "Choose custom color for mush overlay.", "", host.vore_selected.mush_color) as color|null
+			var/newcolor = tgui_color_picker(user, "Choose custom color for mush overlay.", "", host.vore_selected.mush_color)
 			if(newcolor)
 				host.vore_selected.mush_color = newcolor
 				host.vore_selected.update_internal_overlay()
@@ -3040,7 +3077,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.vore_selected.update_internal_overlay()
 			. = TRUE
 		if("b_max_mush")
-			var/new_max_mush = input(user, "Choose the amount of nutrition required for full mush overlay. Ranges from 0 to 6000. Default 500.", "Set Fullness Overlay Scaling.", host.vore_selected.max_mush) as num|null
+			var/new_max_mush = tgui_input_number(user, "Choose the amount of nutrition required for full mush overlay. Ranges from 0 to 6000. Default 500.", "Set Fullness Overlay Scaling.", host.vore_selected.max_mush, 6000)
 			if(new_max_mush == null)
 				return FALSE
 			var/new_new_max_mush = CLAMP(new_max_mush, 0, 6000)
@@ -3048,7 +3085,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			host.vore_selected.update_internal_overlay()
 			. = TRUE
 		if("b_min_mush")
-			var/new_min_mush = input(user, "Set custom minimum mush level. 0-100%", "Set Custom Minimum.", host.vore_selected.min_mush) as num|null
+			var/new_min_mush = tgui_input_number(user, "Set custom minimum mush level. 0-100%", "Set Custom Minimum.", host.vore_selected.min_mush, 100)
 			if(new_min_mush == null)
 				return FALSE
 			var/new_new_min_mush = CLAMP(new_min_mush, 0, 100)
@@ -3056,7 +3093,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			host.vore_selected.update_internal_overlay()
 			. = TRUE
 		if("b_item_mush_val")
-			var/new_item_mush_val = input(user, "Set how much solid belly contents affect mush level. 0-1000 fullness per item.", "Set Item Mush Value.", host.vore_selected.item_mush_val) as num|null
+			var/new_item_mush_val = tgui_input_number(user, "Set how much solid belly contents affect mush level. 0-1000 fullness per item.", "Set Item Mush Value.", host.vore_selected.item_mush_val, 1000)
 			if(new_item_mush_val == null)
 				return FALSE
 			var/new_new_item_mush_val = CLAMP(new_item_mush_val, 0, 1000)
@@ -3073,7 +3110,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			host.vore_selected.update_internal_overlay()
 			. = TRUE
 		if("b_metabolism_mush_ratio")
-			var/new_metabolism_mush_ratio = input(user, "How much should ingested reagents affect fullness overlay compared to nutrition? Nutrition units per reagent unit. Default 15.", "Set Metabolism Mush Ratio.", host.vore_selected.metabolism_mush_ratio) as num|null
+			var/new_metabolism_mush_ratio = tgui_input_number(user, "How much should ingested reagents affect fullness overlay compared to nutrition? Nutrition units per reagent unit. Default 15.", "Set Metabolism Mush Ratio.", host.vore_selected.metabolism_mush_ratio, 500)
 			if(new_metabolism_mush_ratio == null)
 				return FALSE
 			var/new_new_metabolism_mush_ratio = CLAMP(new_metabolism_mush_ratio, 0, 500)
@@ -3081,7 +3118,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			host.vore_selected.update_internal_overlay()
 			. = TRUE
 		if("b_max_ingested")
-			var/new_max_ingested = input(user, "Choose the amount of reagents within ingested metabolism required for full mush overlay when not using mush overlay option. Ranges from 0 to 6000. Default 500.", "Set Metabolism Overlay Scaling.", host.vore_selected.max_ingested) as num|null
+			var/new_max_ingested = tgui_input_number(user, "Choose the amount of reagents within ingested metabolism required for full mush overlay when not using mush overlay option. Ranges from 0 to 6000. Default 500.", "Set Metabolism Overlay Scaling.", host.vore_selected.max_ingested, 6000)
 			if(new_max_ingested == null)
 				return FALSE
 			var/new_new_max_ingested = CLAMP(new_max_ingested, 0, 6000)
@@ -3089,7 +3126,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			host.vore_selected.update_internal_overlay()
 			. = TRUE
 		if("b_custom_ingested_color")
-			var/newcolor = input(user, "Choose custom color for ingested metabolism overlay. Cancel for reagent-based dynamic blend.", "", host.vore_selected.custom_ingested_color) as color|null
+			var/newcolor = tgui_color_picker(user, "Choose custom color for ingested metabolism overlay. Cancel for reagent-based dynamic blend.", "", host.vore_selected.custom_ingested_color)
 			if(newcolor)
 				host.vore_selected.custom_ingested_color = newcolor
 			else
@@ -3103,8 +3140,8 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.vore_selected.update_internal_overlay()
 			. = TRUE
 		if("b_liq_purge")
-			var/alert = alert("Are you sure you want to delete the liquids in your [lowertext(host.vore_selected.name)]?","Confirmation","Delete","Cancel")
-			if(!(alert == "Delete"))
+			var/alert = tgui_alert("Are you sure you want to delete the liquids in your [lowertext(host.vore_selected.name)]?","Confirmation",list("Delete","Cancel"))
+			if(alert != "Delete")
 				return FALSE
 			else
 				host.vore_selected.reagents.clear_reagents()
@@ -3114,7 +3151,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 
 /datum/vore_look/proc/liq_set_msg(mob/user, params)
 	if(!host.vore_selected)
-		alert("No belly selected to modify.")
+		tgui_alert(user, "No belly selected to modify.")
 		return FALSE
 
 	var/attr = params["liq_messages"]
@@ -3143,42 +3180,42 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			host.vore_selected.liquid_fullness5_messages = !host.vore_selected.liquid_fullness5_messages
 			. = TRUE
 		if("b_liq_msg1")
-			alert(user,"Setting abusive or deceptive messages will result in a ban. Consider this your warning. Max 150 characters per message, max 10 messages per topic.","Really, don't.")
+			tgui_alert(user,"Setting abusive or deceptive messages will result in a ban. Consider this your warning. Max 150 characters per message, max 10 messages per topic.","Really, don't.")
 			var/help = " Press enter twice to separate messages. '%pred' will be replaced with your name. '%prey' will be replaced with the prey's name. '%belly' will be replaced with your belly's name."
 
-			var/new_message = input(user,"These are sent to people who examine you when this belly is 0 to 20% full. Write them in 3rd person ('Their %belly is bulging')."+help,"Liquid Examine Message (0 - 20%)",host.vore_selected.get_reagent_messages("full1")) as message
+			var/new_message = tgui_input_text(user,"These are sent to people who examine you when this belly is 0 to 20% full. Write them in 3rd person ('Their %belly is bulging')."+help,"Liquid Examine Message (0 - 20%)",host.vore_selected.get_reagent_messages("full1"))
 			if(new_message)
 				host.vore_selected.set_reagent_messages(new_message,"full1")
 			. = TRUE
 		if("b_liq_msg2")
-			alert(user,"Setting abusive or deceptive messages will result in a ban. Consider this your warning. Max 150 characters per message, max 10 messages per topic.","Really, don't.")
+			tgui_alert(user,"Setting abusive or deceptive messages will result in a ban. Consider this your warning. Max 150 characters per message, max 10 messages per topic.","Really, don't.")
 			var/help = " Press enter twice to separate messages. '%pred' will be replaced with your name. '%prey' will be replaced with the prey's name. '%belly' will be replaced with your belly's name."
 
-			var/new_message = input(user,"These are sent to people who examine you when this belly is 20 to 40% full. Write them in 3rd person ('Their %belly is bulging')."+help,"Liquid Examine Message (20 - 40%)",host.vore_selected.get_reagent_messages("full2")) as message
+			var/new_message = tgui_input_text(user,"These are sent to people who examine you when this belly is 20 to 40% full. Write them in 3rd person ('Their %belly is bulging')."+help,"Liquid Examine Message (20 - 40%)",host.vore_selected.get_reagent_messages("full2"))
 			if(new_message)
 				host.vore_selected.set_reagent_messages(new_message,"full2")
 			. = TRUE
 		if("b_liq_msg3")
-			alert(user,"Setting abusive or deceptive messages will result in a ban. Consider this your warning. Max 150 characters per message, max 10 messages per topic.","Really, don't.")
+			tgui_alert(user,"Setting abusive or deceptive messages will result in a ban. Consider this your warning. Max 150 characters per message, max 10 messages per topic.","Really, don't.")
 			var/help = " Press enter twice to separate messages. '%pred' will be replaced with your name. '%prey' will be replaced with the prey's name. '%belly' will be replaced with your belly's name."
 
-			var/new_message = input(user,"These are sent to people who examine you when this belly is 40 to 60% full. Write them in 3rd person ('Their %belly is bulging')."+help,"Liquid Examine Message (40 - 60%)",host.vore_selected.get_reagent_messages("full3")) as message
+			var/new_message = tgui_input_text(user,"These are sent to people who examine you when this belly is 40 to 60% full. Write them in 3rd person ('Their %belly is bulging')."+help,"Liquid Examine Message (40 - 60%)",host.vore_selected.get_reagent_messages("full3"))
 			if(new_message)
 				host.vore_selected.set_reagent_messages(new_message,"full3")
 			. = TRUE
 		if("b_liq_msg4")
-			alert(user,"Setting abusive or deceptive messages will result in a ban. Consider this your warning. Max 150 characters per message, max 10 messages per topic.","Really, don't.")
+			tgui_alert(user,"Setting abusive or deceptive messages will result in a ban. Consider this your warning. Max 150 characters per message, max 10 messages per topic.","Really, don't.")
 			var/help = " Press enter twice to separate messages. '%pred' will be replaced with your name. '%prey' will be replaced with the prey's name. '%belly' will be replaced with your belly's name."
 
-			var/new_message = input(user,"These are sent to people who examine you when this belly is 60 to 80% full. Write them in 3rd person ('Their %belly is bulging')."+help,"Liquid Examine Message (60 - 80%)",host.vore_selected.get_reagent_messages("full4")) as message
+			var/new_message = tgui_input_text(user,"These are sent to people who examine you when this belly is 60 to 80% full. Write them in 3rd person ('Their %belly is bulging')."+help,"Liquid Examine Message (60 - 80%)",host.vore_selected.get_reagent_messages("full4"))
 			if(new_message)
 				host.vore_selected.set_reagent_messages(new_message,"full4")
 			. = TRUE
 		if("b_liq_msg5")
-			alert(user,"Setting abusive or deceptive messages will result in a ban. Consider this your warning. Max 150 characters per message, max 10 messages per topic.","Really, don't.")
+			tgui_alert(user,"Setting abusive or deceptive messages will result in a ban. Consider this your warning. Max 150 characters per message, max 10 messages per topic.","Really, don't.")
 			var/help = " Press enter twice to separate messages. '%pred' will be replaced with your name. '%prey' will be replaced with the prey's name. '%belly' will be replaced with your belly's name."
 
-			var/new_message = input(user,"These are sent to people who examine you when this belly is 80 to 100% full. Write them in 3rd person ('Their %belly is bulging')."+help,"Liquid Examine Message (80 - 100%)",host.vore_selected.get_reagent_messages("full5")) as message
+			var/new_message = tgui_input_text(user,"These are sent to people who examine you when this belly is 80 to 100% full. Write them in 3rd person ('Their %belly is bulging')."+help,"Liquid Examine Message (80 - 100%)",host.vore_selected.get_reagent_messages("full5"))
 			if(new_message)
 				host.vore_selected.set_reagent_messages(new_message,"full5")
 			. = TRUE

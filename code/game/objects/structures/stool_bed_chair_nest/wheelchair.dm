@@ -13,8 +13,8 @@
 	var/min_mob_buckle_size = MOB_SMALL
 	var/max_mob_buckle_size = MOB_LARGE
 
-/obj/structure/bed/chair/wheelchair/New(var/newloc, var/new_material, var/new_padding_material)
-	..()
+/obj/structure/bed/chair/wheelchair/Initialize(var/newloc, var/new_material, var/new_padding_material)
+	. = ..()
 	update_icon()
 
 /obj/structure/bed/chair/wheelchair/motor
@@ -148,7 +148,7 @@
 
 /obj/structure/bed/chair/wheelchair/attack_hand(mob/living/user as mob)
 	if (pulling)
-		MouseDrop(usr)
+		MouseDrop(user)
 	else
 		if(has_buckled_mobs())
 			for(var/A in buckled_mobs)
@@ -169,7 +169,7 @@
 			user.set_dir(get_dir(user, src))
 			to_chat(user, "You grip \the [name]'s handles.")
 		else
-			to_chat(usr, "You let go of \the [name]'s handles.")
+			to_chat(user, "You let go of \the [name]'s handles.")
 			pulling.pulledby = null
 			pulling = null
 		return
@@ -195,7 +195,7 @@
 		occupant.apply_effect(6, STUTTER, blocked)
 		occupant.apply_damage(10, BRUTE, def_zone, soaked)
 		playsound(src, 'sound/weapons/punch1.ogg', 50, 1, -1)
-		if(istype(A, /mob/living))
+		if(isliving(A))
 			var/mob/living/victim = A
 			def_zone = ran_zone()
 			blocked = victim.run_armor_check(def_zone, "melee")
@@ -228,7 +228,7 @@
 /obj/structure/bed/chair/wheelchair/buckle_mob(mob/M as mob, mob/user as mob)
 	if(M == pulling)
 		pulling = null
-		usr.pulledby = null
+		user.pulledby = null
 	..()
 
 /obj/structure/bed/chair/wheelchair/MouseDrop(over_object, src_location, over_location)

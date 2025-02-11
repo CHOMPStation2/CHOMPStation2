@@ -64,27 +64,51 @@
 
 	item_list = list()
 	item_list["Food Items"] = list(
-		BIOGEN_REAGENT("Milk x10", "milk", 10, 20),
-		BIOGEN_REAGENT("Milk x50", "milk", 50, 95),
-		BIOGEN_REAGENT("Cream x10", "cream", 10, 30),
-		BIOGEN_REAGENT("Cream x50", "cream", 50, 120),
+		BIOGEN_REAGENT("Milk x10", REAGENT_ID_MILK, 10, 20),
+		BIOGEN_REAGENT("Milk x50", REAGENT_ID_MILK, 50, 95),
+		BIOGEN_REAGENT("Cream x10", REAGENT_ID_CREAM, 10, 30),
+		BIOGEN_REAGENT("Cream x50", REAGENT_ID_CREAM, 50, 120),
 		BIOGEN_ITEM("Slab of meat", /obj/item/reagent_containers/food/snacks/meat, 1, 50),
 		BIOGEN_ITEM("Slabs of meat x5", /obj/item/reagent_containers/food/snacks/meat, 5, 250),
 	)
 	item_list["Cooking Ingredients"] = list(
-		BIOGEN_REAGENT("Universal Enzyme x10", "enzyme", 10, 30),
-		BIOGEN_REAGENT("Universal Enzyme x50", "enzyme", 50, 120),
+		BIOGEN_REAGENT("Universal Enzyme x10", REAGENT_ID_ENZYME, 10, 30),
+		BIOGEN_REAGENT("Universal Enzyme x50", REAGENT_ID_ENZYME, 50, 120),
 		BIOGEN_ITEM("Nutri-spread", /obj/item/reagent_containers/food/snacks/spreads, 1, 30),
 		BIOGEN_ITEM("Nutri-spread x5", /obj/item/reagent_containers/food/snacks/spreads, 5, 120),
+		//CHOMPAdd Start - adding common condiments to the list for chefs
+		BIOGEN_REAGENT(REAGENT_SODIUMCHLORIDE + " x10", REAGENT_ID_SODIUMCHLORIDE, 10, 20),
+		BIOGEN_REAGENT(REAGENT_SODIUMCHLORIDE + " x50", REAGENT_ID_SODIUMCHLORIDE, 50, 100),
+		BIOGEN_REAGENT(REAGENT_SOYSAUCE + " x10", REAGENT_ID_SOYSAUCE, 10, 30),
+		BIOGEN_REAGENT(REAGENT_SOYSAUCE + " x50", REAGENT_ID_SOYSAUCE, 50, 120),
+		//CHOMPAdd End
 	)
-	item_list["Gardening Nutrients"] = list(
-		BIOGEN_ITEM("E-Z-Nutrient", /obj/item/reagent_containers/glass/bottle/eznutrient, 1, 60),
-		BIOGEN_ITEM("E-Z-Nutrient x5", /obj/item/reagent_containers/glass/bottle/eznutrient, 5, 300),
-		BIOGEN_ITEM("Left 4 Zed", /obj/item/reagent_containers/glass/bottle/left4zed, 1, 120),
-		BIOGEN_ITEM("Left 4 Zed x5", /obj/item/reagent_containers/glass/bottle/left4zed, 5, 600),
-		BIOGEN_ITEM("Robust Harvest", /obj/item/reagent_containers/glass/bottle/robustharvest, 1, 150),
-		BIOGEN_ITEM("Robust Harvest x5", /obj/item/reagent_containers/glass/bottle/robustharvest, 5, 750),
+	item_list["Botany Chemicals"] = list(
+		//CHOMPEdit Start - reduced costs of fertilisers
+		BIOGEN_ITEM("E-Z-Nutrient", /obj/item/reagent_containers/glass/bottle/eznutrient, 1, 30),
+		BIOGEN_ITEM("E-Z-Nutrient x5", /obj/item/reagent_containers/glass/bottle/eznutrient, 5, 150),
+		BIOGEN_ITEM("Left 4 Zed", /obj/item/reagent_containers/glass/bottle/left4zed, 1, 50),
+		BIOGEN_ITEM("Left 4 Zed x5", /obj/item/reagent_containers/glass/bottle/left4zed, 5, 250),
+		BIOGEN_ITEM("Robust Harvest", /obj/item/reagent_containers/glass/bottle/robustharvest, 1, 50),
+		BIOGEN_ITEM("Robust Harvest x5", /obj/item/reagent_containers/glass/bottle/robustharvest, 5, 250),
+		//CHOMPEdit End
+		//CHOMPAdd Start - adding additional fertilisers for botany use
+		BIOGEN_ITEM(REAGENT_DIETHYLAMINE, /obj/item/reagent_containers/glass/bottle/diethylamine, 1, 60),
+		BIOGEN_ITEM(REAGENT_DIETHYLAMINE + " x5", /obj/item/reagent_containers/glass/bottle/diethylamine, 5, 300),
+		BIOGEN_ITEM(REAGENT_MUTAGEN, /obj/item/reagent_containers/glass/bottle/mutagen, 1, 50),
+		BIOGEN_ITEM(REAGENT_MUTAGEN + " x5", /obj/item/reagent_containers/glass/bottle/mutagen, 5, 250),
+		BIOGEN_ITEM(REAGENT_PLANTBGONE, /obj/item/reagent_containers/spray/plantbgone, 1, 50),
+		BIOGEN_ITEM(REAGENT_PLANTBGONE + " x5", /obj/item/reagent_containers/spray/plantbgone, 5, 250),
+		//CHOMPAdd End
 	)
+	//CHOMPAdd Start - Another source of exotic seeds
+	item_list["Exotic Seeds"] = list(
+		BIOGEN_ITEM("Mystery seed pack", /obj/item/seeds/random, 1, 150),
+		BIOGEN_ITEM("Mystery seed pack x5", /obj/item/seeds/random, 5, 750),
+		BIOGEN_ITEM("Kudzu seed pack", /obj/item/seeds/kudzuseed, 1, 100),
+		BIOGEN_ITEM("Kudzu seed pack x5", /obj/item/seeds/kudzuseed, 5, 500),
+	)
+	//CHOMPAdd End
 	item_list["Leather Products"] = list(
 		BIOGEN_ITEM("Wallet", /obj/item/storage/wallet, 1, 100),
 		BIOGEN_ITEM("Botanical gloves", /obj/item/clothing/gloves/botanic_leather, 1, 250),
@@ -135,14 +159,14 @@
 		ui = new(user, src, "Biogenerator", name)
 		ui.open()
 
-/obj/machinery/biogenerator/tgui_act(action, params)
+/obj/machinery/biogenerator/tgui_act(action, params, datum/tgui/ui)
 	if(..())
 		return
 
 	. = TRUE
 	switch(action)
 		if("activate")
-			INVOKE_ASYNC(src, PROC_REF(activate))
+			INVOKE_ASYNC(src, PROC_REF(activate), ui.user)
 			return TRUE
 		if("detach")
 			if(beaker)
@@ -166,11 +190,11 @@
 					return
 				var/cost = round(br.cost / build_eff)
 				if(cost > points)
-					to_chat(usr, span_danger("Insufficient biomass."))
+					to_chat(ui.user, span_danger("Insufficient biomass."))
 					return
 				var/amt_to_actually_dispense = round(min(beaker.reagents.get_free_space(), br.reagent_amt))
 				if(amt_to_actually_dispense <= 0)
-					to_chat(usr, span_danger("The loaded beaker is full!"))
+					to_chat(ui.user, span_danger("The loaded beaker is full!"))
 					return
 				points -= (cost * (amt_to_actually_dispense / br.reagent_amt))
 				beaker.reagents.add_reagent(br.reagent_id, amt_to_actually_dispense)
@@ -179,7 +203,7 @@
 
 			var/cost = round(bi.cost / build_eff)
 			if(cost > points)
-				to_chat(usr, span_danger("Insufficient biomass."))
+				to_chat(ui.user, span_danger("Insufficient biomass."))
 				return
 
 			points -= cost
@@ -207,7 +231,7 @@
 		icon_state = "biogen-work"
 	return
 
-/obj/machinery/biogenerator/attackby(var/obj/item/O as obj, var/mob/user as mob)
+/obj/machinery/biogenerator/attackby(var/obj/item/O, var/mob/user)
 	if(default_deconstruction_screwdriver(user, O))
 		return
 	if(default_deconstruction_crowbar(user, O))
@@ -223,7 +247,7 @@
 			user.remove_from_mob(O)
 			O.loc = src
 			beaker = O
-			updateUsrDialog()
+			updateUsrDialog(user)
 	else if(processing)
 		to_chat(user, span_notice("\The [src] is currently processing."))
 	else if(istype(O, /obj/item/storage/bag/plants))
@@ -263,20 +287,20 @@
 		return
 	tgui_interact(user)
 
-/obj/machinery/biogenerator/proc/activate()
-	if(usr.stat)
+/obj/machinery/biogenerator/proc/activate(mob/user)
+	if(user.stat)
 		return
 	if(stat) //NOPOWER etc
 		return
 	if(processing)
-		to_chat(usr, span_notice("The biogenerator is in the process of working."))
+		to_chat(user, span_notice("The biogenerator is in the process of working."))
 		return
 	var/S = 0
 	for(var/obj/item/reagent_containers/food/snacks/grown/I in contents)
 		S += 5
-		if(I.reagents.get_reagent_amount("nutriment") < 0.1)
+		if(I.reagents.get_reagent_amount(REAGENT_ID_NUTRIMENT) < 0.1)
 			points += 1
-		else points += I.reagents.get_reagent_amount("nutriment") * 10 * eat_eff
+		else points += I.reagents.get_reagent_amount(REAGENT_ID_NUTRIMENT) * 10 * eat_eff
 		qdel(I)
 	if(S)
 		processing = 1
@@ -289,7 +313,7 @@
 		playsound(src, 'sound/machines/biogenerator_end.ogg', 40, 1)
 		update_icon()
 	else
-		to_chat(usr, span_warning("Error: No growns inside. Please insert growns."))
+		to_chat(user, span_warning("Error: No growns inside. Please insert growns."))
 	return
 
 /obj/machinery/biogenerator/RefreshParts()

@@ -122,14 +122,14 @@
 //	dat += "Engine autoselect in [time2text(src.lifetime SECONDS, "mm:ss")].<BR>"
 	dat += "WARNING: Selecting an engine will deploy nanobots to construct it. These nanobots will attempt to disassemble anything in their way, including curious engineers!.<BR>"
 
-	dat += "<A href='?src=\ref[src];TESLA=1'>Build Tesla engine</A><BR>"
-	dat += "<A href='?src=\ref[src];SM=1'>Build Supermatter Engine</A><BR>"
-//	dat += "<A href='?src=\ref[src];SINGULO=1'>Build Singularity Engine</A><BR>" //Not enabled because of stability issues.
-	dat += "<A href='?src=\ref[src];RUSTEngine=1'>Build R-UST</A><BR>"
-	dat += "<BR><A href='?src=\ref[src];RANDOM=1'>Build Random Engine</A><BR>"
+	dat += "<A href='byond://?src=\ref[src];TESLA=1'>Build Tesla engine</A><BR>"
+	dat += "<A href='byond://?src=\ref[src];SM=1'>Build Supermatter Engine</A><BR>"
+//	dat += "<A href='byond://?src=\ref[src];SINGULO=1'>Build Singularity Engine</A><BR>" //Not enabled because of stability issues.
+	dat += "<A href='byond://?src=\ref[src];RUSTEngine=1'>Build R-UST</A><BR>"
+	dat += "<BR><A href='byond://?src=\ref[src];RANDOM=1'>Build Random Engine</A><BR>"
 
-	dat += "<A href='?src=\ref[user];mach_close=computer'>Close</A>"
-	user << browse(dat, "window=computer;size=575x450")
+	dat += "<A href='byond://?src=\ref[user];mach_close=computer'>Close</A>"
+	user << browse("<html>[dat]</html>", "window=computer;size=575x450")
 	onclose(user, "computer")
 	return
 
@@ -160,7 +160,7 @@
 		usr.unset_machine()
 
 	add_fingerprint(usr)
-	updateUsrDialog()
+	updateUsrDialog(usr)
 	return
 
 //Take the engine tpe we're building, warn engineering, and pass it to the engine loader.

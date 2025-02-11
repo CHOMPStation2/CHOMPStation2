@@ -107,7 +107,7 @@
 	new painting_decal(F, painting_dir, painting_colour)
 
 /obj/item/floor_painter/attack_self(var/mob/user)
-	var/choice = tgui_alert(usr, "Do you wish to change the decal type, paint direction, or paint colour?", "Modify What?", list("Decal","Direction","Colour","Cancel"))
+	var/choice = tgui_alert(user, "Do you wish to change the decal type, paint direction, or paint colour?", "Modify What?", list("Decal","Direction","Colour","Cancel"))
 	if(choice == "Cancel")
 		return
 	else if(choice == "Decal")
@@ -129,7 +129,7 @@
 
 	if(usr.incapacitated())
 		return
-	var/new_colour = input(usr, "Choose a colour.", name, paint_colour) as color|null
+	var/new_colour = tgui_color_picker(usr, "Choose a colour.", name, paint_colour)
 	if(new_colour && new_colour != paint_colour)
 		paint_colour = new_colour
 		to_chat(usr, span_notice("You set \the [src] to paint with <font color='[paint_colour]'>a new colour</font>."))

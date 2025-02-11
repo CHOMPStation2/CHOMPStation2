@@ -372,7 +372,7 @@
  // Do y'like drugs?
 	var/poison_chance = 75
 	var/poison_per_bite = 3
-	var/poison_type = "mindbreaker"
+	var/poison_type = REAGENT_ID_MINDBREAKER
 
 /datum/say_list/cyber_horror/cat
 	threaten_sound = 'modular_chomp/sound/mob/robots/Cyber_Horror_Cat.ogg'

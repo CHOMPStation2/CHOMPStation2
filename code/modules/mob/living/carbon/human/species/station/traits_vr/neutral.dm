@@ -175,18 +175,18 @@
 /datum/trait/neutral/venom_bite/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
 	add_verb(H, /mob/living/proc/injection)
-	H.trait_injection_reagents += "microcillin"		// get small
-	H.trait_injection_reagents += "macrocillin"		// get BIG
-	H.trait_injection_reagents += "normalcillin"	// normal
-	H.trait_injection_reagents += "numbenzyme"		// no feelings
-	H.trait_injection_reagents += "change_drug_male"		// -> MALE // CHOMPEdit
-	H.trait_injection_reagents += "change_drug_female"		// -> FEMALE // CHOMPEdit
-	H.trait_injection_reagents += "change_drug_intersex"	// -> PLURAL // CHOMPEdit
-	H.trait_injection_reagents += "stoxin"			// night night chem
-	H.trait_injection_reagents += "rainbowtoxin" 	// Funny flashing lights.
-	H.trait_injection_reagents += "paralysistoxin" 	// Paralysis!
-	H.trait_injection_reagents += "painenzyme"		// Pain INCREASER
-	H.trait_injection_reagents += "aphrodisiac"		// Horni //CHOMPedit
+	H.trait_injection_reagents += REAGENT_ID_MICROCILLIN		// get small
+	H.trait_injection_reagents += REAGENT_ID_MACROCILLIN		// get BIG
+	H.trait_injection_reagents += REAGENT_ID_NORMALCILLIN	// normal
+	H.trait_injection_reagents += REAGENT_ID_NUMBENZYME		// no feelings
+	H.trait_injection_reagents += REAGENT_ID_ANDROROVIR 		// -> MALE
+	H.trait_injection_reagents += REAGENT_ID_GYNOROVIR 		// -> FEMALE
+	H.trait_injection_reagents += REAGENT_ID_ANDROGYNOROVIR 	// -> PLURAL
+	H.trait_injection_reagents += REAGENT_ID_STOXIN			// night night chem
+	H.trait_injection_reagents += REAGENT_ID_RAINBOWTOXIN 	// Funny flashing lights.
+	H.trait_injection_reagents += REAGENT_ID_PARALYSISTOXIN 	// Paralysis!
+	H.trait_injection_reagents += REAGENT_ID_PAINENZYME		// Pain INCREASER
+	H.trait_injection_reagents += REAGENT_ID_APHRODISIAC		// Horni //CHOMPedit
 
 /datum/trait/neutral/long_vore
 	name = "Long Predatorial Reach"
@@ -549,7 +549,7 @@
 	cost = 0
 	custom_only = FALSE
 	var_changes = list("chem_strength_alcohol" = 1)
-	allowed_species = list(SPECIES_SKRELL,SPECIES_TAJ,SPECIES_UNATHI,SPECIES_DIONA,SPECIES_PROMETHEAN)
+	allowed_species = list(SPECIES_SKRELL,SPECIES_TAJARAN,SPECIES_UNATHI,SPECIES_DIONA,SPECIES_PROMETHEAN)
 
 /datum/trait/neutral/alcohol_tolerance_basic
 	name = "Liver of Iron"
@@ -1180,3 +1180,55 @@
 /datum/trait/neutral/agraviaphobia/apply(var/datum/species/S,var/mob/living/carbon/human/H, var/trait_prefs = null)
 	..()
 	H.phobias |= AGRAVIAPHOBIA
+
+/datum/trait/neutral/gargoyle
+	name = "Gargoyle (Adjustable)"
+	desc = "You turn into a statue (or similar) at will, but also whenever you run out of energy. Being a statue replenishes your energy slowly."
+	cost = 0
+	custom_only = FALSE //slimes, xenochimera, diona, proteans, etc, basically anything but custom doesn't make sense (as much as I wanna play a petrifying slime)
+	//Nah makes perfect sense, they could just be gene modded, not to mention we can expand this to have the statue and description of it renameable as well as color adjustable, to support general petrification
+	has_preferences = list("identifier" = list(TRAIT_PREF_TYPE_STRING, "Identifier", TRAIT_NO_VAREDIT_TARGET, "statue"),
+							"material" = list(TRAIT_PREF_TYPE_STRING, "Material", TRAIT_NO_VAREDIT_TARGET, "stone"),
+							"tint" = list(TRAIT_PREF_TYPE_COLOR, "Statue color", TRAIT_NO_VAREDIT_TARGET, "#FFFFFF"),
+							"adjective" = list(TRAIT_PREF_TYPE_STRING, "Adjective", TRAIT_NO_VAREDIT_TARGET, "hardens")/*,
+							"pickupable" = list(TRAIT_PREF_TYPE_BOOLEAN, "Can be picked up", TRAIT_NO_VAREDIT_TARGET, FALSE)*/)
+
+/datum/trait/neutral/gargoyle/apply(var/datum/species/S,var/mob/living/carbon/human/H, var/list/trait_prefs)
+	..()
+	var/datum/component/gargoyle/G = H.LoadComponent(/datum/component/gargoyle)
+	if (trait_prefs)
+		G.tint = trait_prefs["tint"]
+		G.material = lowertext(trait_prefs["material"])
+		G.identifier = lowertext(trait_prefs["identifier"])
+		G.adjective = lowertext(trait_prefs["adjective"])
+
+/datum/trait/neutral/gargoyle/apply_sanitization_to_string(var/pref, var/input)
+	if (has_preferences[pref][1] != TRAIT_PREF_TYPE_STRING || length(input) <= 0)
+		return
+	input = sanitizeSafe(input, 25)
+	if (length(input) <= 0)
+		return default_value_for_pref(pref)
+	input = lowertext(input)
+	if (pref == "adjective")
+		if (copytext_char(input, -1) != "s")
+			switch(copytext_char(input, -2))
+				if ("ss")
+					input += "es"
+				if ("sh")
+					input += "es"
+				if ("ch")
+					input += "es"
+				else
+					switch(copytext_char(input, -1))
+						if("s", "x", "z")
+							input += "es"
+						else
+							input += "s"
+	return input
+
+/datum/trait/neutral/mudking
+	name = "Mudking"
+	desc = "Somehow you are so filthy that tiles get dirty four times as quick from you walking on them."
+	cost = 0
+	var_changes = list("mudking" = TRUE)
+	custom_only = FALSE

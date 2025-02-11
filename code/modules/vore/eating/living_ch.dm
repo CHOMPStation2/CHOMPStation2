@@ -12,47 +12,8 @@
 	var/passtable_reset		// For crawling
 	var/passtable_crawl_checked = FALSE
 
-	// CHOMP vore icons refactor (Now on living)
-	var/vore_icons = 0					// Bitfield for which fields we have vore icons for.
-	var/vore_eyes = FALSE				// For mobs with fullness specific eye overlays.
-
 /mob/living/proc/handle_special_unlocks()
 	return
-
-// Update fullness based on size & quantity of belly contents
-/mob/proc/update_fullness(var/returning = FALSE)
-	if(!returning)
-		if(updating_fullness)
-			return
-		updating_fullness = TRUE
-		spawn(2)
-		updating_fullness = FALSE
-		src.update_fullness(TRUE)
-		return
-	var/list/new_fullness = list()
-	vore_fullness = 0
-	for(var/belly_class in vore_icon_bellies)
-		new_fullness[belly_class] = 0
-	for(var/obj/belly/B as anything in vore_organs)
-		if(DM_FLAG_VORESPRITE_BELLY & B.vore_sprite_flags)
-			new_fullness[B.belly_sprite_to_affect] += B.GetFullnessFromBelly()
-		if(istype(src, /mob/living/carbon/human) && DM_FLAG_VORESPRITE_ARTICLE & B.vore_sprite_flags)
-			if(!new_fullness[B.undergarment_chosen])
-				new_fullness[B.undergarment_chosen] = 1
-			new_fullness[B.undergarment_chosen] += B.GetFullnessFromBelly()
-			new_fullness[B.undergarment_chosen + "-ifnone"] = B.undergarment_if_none
-			new_fullness[B.undergarment_chosen + "-color"] = B.undergarment_color
-	for(var/belly_class in vore_icon_bellies)
-		new_fullness[belly_class] /= size_multiplier //Divided by pred's size so a macro mob won't get macro belly from a regular prey.
-		new_fullness[belly_class] *= belly_size_multiplier // Some mobs are small even at 100% size. Let's account for that.
-		new_fullness[belly_class] = round(new_fullness[belly_class], 1) // Because intervals of 0.25 are going to make sprite artists cry.
-		vore_fullness_ex[belly_class] = min(vore_capacity_ex[belly_class], new_fullness[belly_class])
-		vore_fullness += new_fullness[belly_class]
-	if(vore_fullness < 0)
-		vore_fullness = 0
-	vore_fullness = min(vore_capacity, vore_fullness)
-	updating_fullness = FALSE
-	return new_fullness
 
 /* This is an ELEMENT now
 /mob/living/proc/check_vorefootstep(var/m_intent, var/turf/T)
@@ -118,7 +79,7 @@
 	set category = "Abilities.Vore"
 	set desc = "Check the amount of liquid in your belly."
 
-	var/obj/belly/RTB = input("Choose which vore belly to check") as null|anything in src.vore_organs
+	var/obj/belly/RTB = tgui_input_list(src, "Choose which vore belly to check", "Select Belly", vore_organs)
 	if(!RTB)
 		return FALSE
 
@@ -133,16 +94,16 @@
 	if(!checkClickCooldown() || incapacitated(INCAPACITATION_KNOCKOUT))
 		return FALSE
 
-	var/mob/living/user = usr
+	var/mob/living/user = src
 
-	var/mob/living/TG = input("Choose who to transfer from") as null| mob in view(1,user.loc)
+	var/mob/living/TG = tgui_input_list(user, "Choose who to transfer from", "Transfer From", mobs_in_view(1,user))
 	if(!TG)
 		return FALSE
 	if(TG.give_reagents == FALSE && user != TG) //User isnt forced to allow giving in prefs if they are the one doing it
 		to_chat(user, span_vwarning("This person's prefs dont allow that!"))
 		return FALSE
 
-	var/obj/belly/RTB = input("Choose which vore belly to transfer from") as null|anything in TG.vore_organs //First they choose the belly to transfer from.
+	var/obj/belly/RTB = tgui_input_list(user, "Choose which vore belly to transfer from", "Select Belly", vore_organs)
 	if(!RTB)
 		return FALSE
 
@@ -154,16 +115,16 @@
 		if("Cancel")
 			return FALSE
 		if("Vore belly")
-			var/mob/living/TR = input(user,"Choose who to transfer to","Select Target") as null|mob in view(1,user.loc)
+			var/mob/living/TR = tgui_input_list(user,"Choose who to transfer to","Select Target", mobs_in_view(1,user))
 			if(!TR)  return FALSE
 
 			if(TR == user) //Proceed, we dont need to have prefs enabled for transfer within user
-				var/obj/belly/TB = input("Choose which organ to transfer to") as null|anything in user.vore_organs
+				var/obj/belly/TB = tgui_input_list(user, "Choose which organ to transfer to", "Select Belly", user.vore_organs)
 				if(!TB)
 					return FALSE
 				if(!Adjacent(TR) || !Adjacent(TG))
 					return //No long distance transfer
-				if(!TR.reagents.get_free_space())
+				if(!TB.reagents?.get_free_space())
 					to_chat(user, span_vnotice("[TB] is full!"))
 					return FALSE
 
@@ -181,12 +142,12 @@
 				return FALSE
 
 			else
-				var/obj/belly/TB = input("Choose which organ to transfer to") as null|anything in TR.vore_organs
+				var/obj/belly/TB = tgui_input_list(user, "Choose which organ to transfer to", "Select Belly", TR.vore_organs)
 				if(!TB)
 					return FALSE
 				if(!Adjacent(TR) || !Adjacent(TG))
 					return //No long distance transfer
-				if(!TR.reagents.get_free_space())
+				if(!TB.reagents?.get_free_space())
 					to_chat(user, span_vnotice("[TR]'s [lowertext(TB.name)] is full!"))
 					return FALSE
 
@@ -204,7 +165,7 @@
 
 
 		if("Stomach")
-			var/mob/living/TR = input(user,"Choose who to transfer to","Select Target") as null|mob in view(1,user.loc)
+			var/mob/living/TR = tgui_input_list(user,"Choose who to transfer to","Select Target", mobs_in_view(1,user))
 			if(!TR)  return
 			if(!Adjacent(TR) || !Adjacent(TG))
 				return //No long distance transfer
@@ -235,12 +196,12 @@
 					update_fullness()
 
 		if("Container")
-			if(RTB.reagentid == "stomacid")
+			if(RTB.reagentid == REAGENT_ID_STOMACID)
 				return
 			var/list/choices = list()
 			for(var/obj/item/reagent_containers/rc in view(1,user.loc))
 				choices += rc
-			var/obj/item/reagent_containers/T = input(user,"Choose what to transfer to","Select Target") as null|anything in choices
+			var/obj/item/reagent_containers/T = tgui_input_list(user,"Choose what to transfer to","Select Target", choices)
 			if(!T)
 				return FALSE
 			if(!Adjacent(T) || !Adjacent(TG))
@@ -256,7 +217,7 @@
 			if(RTB.count_liquid_for_sprite)
 				update_fullness()
 		if("Floor")
-			if(RTB.reagentid == "water")
+			if(RTB.reagentid == REAGENT_ID_WATER)
 				return
 			var/amount_removed = RTB.reagents.remove_any(transfer_amount)
 			if(RTB.count_liquid_for_sprite)
@@ -294,7 +255,7 @@
 	set desc = "Provide bellyrubs to either yourself or another mob with a belly."
 
 	if(!T)
-		T = input("Choose whose belly to rub") as null| mob in view(1,src)
+		T = tgui_input_list(src, "Choose whose belly to rub", "Rub Belly?", mobs_in_view(1,src))
 		if(!T)
 			return FALSE
 	if(!(T in view(1,src)))

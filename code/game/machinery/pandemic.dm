@@ -1,6 +1,7 @@
 /obj/machinery/computer/pandemic
 	name = "PanD.E.M.I.C 2200"
 	desc = "Used to work with viruses."
+	circuit = /obj/item/circuitboard/pandemic
 	density = TRUE
 	anchored = TRUE
 	icon = 'icons/obj/pandemic.dmi'
@@ -10,6 +11,12 @@
 	var/wait = null
 	var/selected_strain_index = 1
 	var/obj/item/reagent_containers/beaker = null
+
+// PanDEMIC Bottle
+/obj/item/reagent_containers/glass/bottle/vaccine
+	icon_state = "bottle10"
+	possible_transfer_amounts = (list(5, 10, 15))
+	volume = 15
 
 /obj/machinery/computer/pandemic/Initialize(mapload)
 	. = ..()
@@ -66,13 +73,20 @@
 		return
 	icon_state = "pandemic[(beaker)?"1":"0"][!(stat & NOPOWER) ? "" : "_nopower"]"
 
-/obj/machinery/computer/pandemic/proc/create_culture(name, bottle_type = "culture", cooldown = 50)
-	var/obj/item/reagent_containers/glass/bottle/B = new/obj/item/reagent_containers/glass/bottle(loc)
-	B.icon_state = "bottle10"
+/obj/machinery/computer/pandemic/proc/create_culture(name, bottle_type = "culture", cooldown = 50, vaccine = FALSE)
+
+	var/obj/item/reagent_containers/glass/bottle/B
+	if(vaccine)
+		B = new /obj/item/reagent_containers/glass/bottle/vaccine(loc)
+		B.name = "[name] vaccine"
+	else
+		B = new(loc)
+		B.icon_state = "bottle10"
+		B.name = "[name] [bottle_type] bottle"
+
 	B.pixel_x = rand(-3, 3)
 	B.pixel_y = rand(-3, 3)
 	replicator_cooldown(cooldown)
-	B.name = "[name] [bottle_type] bottle"
 	return B
 
 /obj/machinery/computer/pandemic/tgui_act(action, params, datum/tgui/ui, datum/tgui_state/state)
@@ -114,12 +128,12 @@
 				default_name = replacetext(beaker.name, new/regex(" culture bottle\\Z", "g"), "")
 			else
 				default_name = D.name
-			var/name = tgui_input_text(usr, "Name:", "Name the culture", default_name, MAX_NAME_LEN)
+			var/name = tgui_input_text(ui.user, "Name:", "Name the culture", default_name, MAX_NAME_LEN)
 			if(name == null || wait)
 				return
 			var/obj/item/reagent_containers/glass/bottle/B = create_culture(name)
 			B.desc = "A small bottle. Contains [D.agent] culture in synthblood medium."
-			B.reagents.add_reagent("blood", 20, list("viruses" = list(D)))
+			B.reagents.add_reagent(REAGENT_ID_BLOOD, 20, list("viruses" = list(D)))
 		if("clone_vaccine")
 			if(wait)
 				atom_say("The replicator is not ready yet.")
@@ -145,8 +159,13 @@
 				atom_say("Unable to synthesize requested antibody.")
 				return
 
-			var/obj/item/reagent_containers/glass/bottle/B = create_culture(vaccine_name, "vaccine", 200)
-			B.reagents.add_reagent("vaccine", 15, list(vaccine_type))
+			var/obj/item/reagent_containers/glass/bottle/vaccine/B = create_culture(vaccine_name, REAGENT_ID_VACCINE, 200, TRUE)
+			B.reagents.add_reagent(REAGENT_ID_VACCINE, 15, list(vaccine_type))
+			if(beaker && beaker.reagents && length(beaker.reagents.reagent_list))
+				beaker.reagents.remove_reagent(REAGENT_ID_BLOOD, 5)
+				if(!length(beaker.reagents.reagent_list))
+					update_tgui_static_data(ui.user)
+
 		if("eject_beaker")
 			eject_beaker()
 			update_tgui_static_data(ui.user)
@@ -167,7 +186,7 @@
 			if(!A)
 				atom_say("Unable to find requested strain.")
 				return
-			print_form(A, usr)
+			print_form(A, ui.user)
 		if("name_strain")
 			var/strain_index = text2num(params["strain_index"])
 			if(isnull(strain_index))
@@ -184,7 +203,7 @@
 			if(A.name != "Unknown")
 				atom_say("Request rejected. Strain already has a name.")
 				return
-			var/new_name = tgui_input_text(usr, "Name the Strain", "New Name", max_length = MAX_NAME_LEN)
+			var/new_name = tgui_input_text(ui.user, "Name the Strain", "New Name", max_length = MAX_NAME_LEN)
 			if(!new_name)
 				return
 			A.AssignName(new_name)
@@ -325,7 +344,7 @@
 		printing = 1
 		var/obj/item/paper/P = new /obj/item/paper(loc)
 		visible_message(span_notice("[src] rattles and prints out a sheet of paper."))
-		// playsound(loc, 'sound/goonstation/machines/printer_dotmatrix.ogg', 50, 1)
+		playsound(loc, 'sound/machines/printer.ogg', 50, 1)
 
 		P.info = "<U><font size=\"4\"><B><center> Releasing Virus </B></center></font></U>"
 		P.info += "<HR>"
@@ -360,17 +379,17 @@
 	if(I.has_tool_quality(TOOL_SCREWDRIVER))
 		eject_beaker()
 		return
-	if(istype(I, /obj/item/reagent_containers/glass) && I.is_open_container())
+	if(istype(I, /obj/item/reagent_containers/glass) && I.is_open_container() || istype(I, /obj/item/reagent_containers/syringe))
 		if(stat & (NOPOWER|BROKEN))
 			return
 		if(beaker)
-			to_chat(user, span_warning("A beaker is already loaded into the machine!"))
+			to_chat(user, span_warning("A [beaker] is already loaded into the machine!"))
 			return
 
 		user.drop_item()
 		beaker = I
 		beaker.loc = src
-		to_chat(user, span_notice("You add the beaker to the machine."))
+		to_chat(user, span_notice("You add \the [I] to the machine."))
 		update_tgui_static_data(user)
 		icon_state = "pandemic1"
 	else

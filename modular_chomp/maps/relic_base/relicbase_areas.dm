@@ -60,7 +60,6 @@
 /area/surface/outside
 	ambience = AMBIENCE_THOR
 	always_unpowered = TRUE
-	flags = AREA_FLAG_IS_NOT_PERSISTENT
 	outdoors = OUTDOORS_YES
 
 // The area near the outpost, so POIs don't show up right next to the outpost.
@@ -130,7 +129,6 @@
 	name = "Sesquehanna River"
 	icon_state = "bluenew"
 /area/surface/cave
-	flags = RAD_SHIELDED
 	always_unpowered = TRUE
 
 /area/surface/cave
@@ -666,7 +664,6 @@ z
 	icon_state = "shuttle"
 	requires_power = 0
 	dynamic_lighting = 1
-	flags = RAD_SHIELDED
 
 /area/turbolift/start
 	name = "\improper Turbolift Start"
@@ -880,7 +877,6 @@ z
 	name = "\improper First Deck First-Aid Station"
 
 /area/storage/emergency_storage/
-	flags = RAD_SHIELDED
 	name = "Emergency Storage"
 	icon_state = "emergencystorage"
 
@@ -1003,7 +999,7 @@ z
 /area/crew_quarters/heads/sc/
 	name = "\improper Command - Head Office"
 	icon_state = "head_quarters"
-	flags = RAD_SHIELDED
+	flags = RAD_SHIELDED | AREA_FORBID_SINGULO
 	sound_env = MEDIUM_SOFTFLOOR
 
 /area/crew_quarters/heads/sc/hop
@@ -1038,7 +1034,6 @@ z
 /area/engineering/engi_restroom
 	name = "\improper Engineering Restroom"
 	icon_state = "toilet"
-	flags = RAD_SHIELDED
 	sound_env = SMALL_ENCLOSED
 
 /area/engineering/hallway/atmos_hallway
@@ -1120,7 +1115,6 @@ z
 /area/medical/medical_restroom
 	name = "\improper Medbay Restroom"
 	icon_state = "medbay_restroom"
-	flags = RAD_SHIELDED
 	sound_env = SMALL_ENCLOSED
 
 /area/security/aid_station
@@ -1134,7 +1128,6 @@ z
 /area/security/security_restroom
 	name = "\improper Security - Restroom"
 	icon_state = "security_bathroom"
-	flags = RAD_SHIELDED
 	sound_env = SMALL_ENCLOSED
 
 /area/storage/emergency_storage/seconddeck/ap_emergency
@@ -1158,7 +1151,6 @@ z
 /area/rnd/research_restroom_sc
 	name = "\improper Research Restroom"
 	icon_state = "research_restroom"
-	flags = RAD_SHIELDED
 	sound_env = SMALL_ENCLOSED
 
 /area/rnd/research_lockerroom

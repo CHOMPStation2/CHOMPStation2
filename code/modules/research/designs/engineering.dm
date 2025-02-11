@@ -34,22 +34,12 @@
 	sort_string = "NAAAC"
 	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 // YW addition begins
-/datum/design/item/tool/rpd
-	name = "Rapid Piping Device (RPD)"
-	desc = "A device used to rapidly pipe things."
-	id = "RPD"
-	req_tech = list(TECH_ENGINEERING = 3, TECH_MATERIAL = 2, TECH_BLUESPACE = 2)
-	materials = list(DEFAULT_WALL_MATERIAL = 300, "silver" = 100, "diamond" = 500)
-	build_path = /obj/item/pipe_dispenser
-	sort_string = "NAAAB"
-	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
-
 /datum/design/item/tool/rms
 	name = "Rapid Material Synthesizer (RMS)"
 	desc = "A tool that converts battery charge to materials."
 	id = "RMS"
 	req_tech = list(TECH_ENGINEERING = 4, TECH_MATERIAL = 3, TECH_BLUESPACE = 3)
-	materials = list(DEFAULT_WALL_MATERIAL = 500, "glass" = 500, "silver" = 300, "phoron" = 300, "diamond" = 500) //Probably change the price in the future just put something for now
+	materials = list(DEFAULT_WALL_MATERIAL = 500, MAT_GLASS = 500, MAT_SILVER = 300, MAT_PHORON = 300, MAT_DIAMOND = 500) //Probably change the price in the future just put something for now
 	build_path = /obj/item/rms
 	sort_string = "NAAAB"
 	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd

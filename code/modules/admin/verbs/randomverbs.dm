@@ -24,7 +24,7 @@
 		return
 
 	if (ismob(M))
-		if(istype(M, /mob/living/silicon/ai))
+		if(isAI(M))
 			tgui_alert_async(usr, "The AI can't be sent to prison you jerk!")
 			return
 		//strip their stuff before they teleport into a cell :downs:
@@ -34,7 +34,7 @@
 		M.Paralyse(5)
 		sleep(5)	//so they black out before warping
 		M.loc = pick(prisonwarp)
-		if(istype(M, /mob/living/carbon/human))
+		if(ishuman(M))
 			var/mob/living/carbon/human/prisoner = M
 			prisoner.equip_to_slot_or_del(new /obj/item/clothing/under/color/prison(prisoner), slot_w_uniform)
 			prisoner.equip_to_slot_or_del(new /obj/item/clothing/shoes/orange(prisoner), slot_shoes)
@@ -75,7 +75,7 @@
 		to_chat(src, "Some accounts did not have proper ages set in their clients.  This function requires database to be present.")
 
 	if(msg != "")
-		src << browse(msg, "window=Player_age_check")
+		src << browse("<html>[msg]</html>", "window=Player_age_check")
 	else
 		to_chat(src, "No matches for that age range found.")
 
@@ -662,12 +662,14 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	//New message handling
 	post_comm_message(customname, replacetext(input, "\n", "<br/>"))
 
-	switch(tgui_alert(usr, "Should this be announced to the general population?","Show world?",list("Yes","No")))
-		if("Yes")
-			command_announcement.Announce(input, customname, new_sound = 'sound/AI/commandreport.ogg', msg_sanitized = 1);
-		if("No")
-			to_world(span_red("New [using_map.company_name] Update available at all communication consoles."))
-			world << sound('sound/AI/commandreport.ogg')
+	var/confirm = tgui_alert(usr, "Should this be announced to the general population?","Show world?",list("Yes","No"))
+	if(!confirm)
+		return
+	if(confirm == "Yes")
+		command_announcement.Announce(input, customname, new_sound = 'sound/AI/commandreport.ogg', msg_sanitized = 1);
+	else
+		to_world(span_red("New [using_map.company_name] Update available at all communication consoles."))
+		world << sound('sound/AI/commandreport.ogg')
 
 	log_admin("[key_name(src)] has created a command report: [input]")
 	message_admins("[key_name_admin(src)] has created a command report", 1)
@@ -762,7 +764,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	log_admin("[key_name(usr)] has gibbed [key_name(M)]")
 	message_admins("[key_name_admin(usr)] has gibbed [key_name_admin(M)]", 1)
 
-	if(istype(M, /mob/observer/dead))
+	if(isobserver(M))
 		gibs(M.loc)
 		return
 
@@ -780,7 +782,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	if(!confirm)
 		return
 	if(confirm == "Yes")
-		if (istype(mob, /mob/observer/dead)) // so they don't spam gibs everywhere
+		if (isobserver(mob)) // so they don't spam gibs everywhere
 			return
 		else
 			mob.gib()
@@ -811,11 +813,11 @@ Traitors and the like can also be revived with the previous role mostly intact.
 
 	switch(tgui_alert(usr, "Temporary Ban?","Temporary Ban",list("Yes","No")))
 	if("Yes")
-		var/mins = input(usr,"How long (in minutes)?","Ban time",1440) as num
+		var/mins = tgui_input_number(usr,"How long (in minutes)?","Ban time",1440) as num
 		if(!mins)
 			return
 		if(mins >= 525600) mins = 525599
-		var/reason = input(usr,"Reason?","reason","Griefer") as text
+		var/reason = tgui_input_text(usr,"Reason?","reason","Griefer")
 		if(!reason)
 			return
 		if(M)
@@ -831,7 +833,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 		else
 
 	if("No")
-		var/reason = input(usr,"Reason?","reason","Griefer") as text
+		var/reason = tgui_input_text(usr,"Reason?","reason","Griefer")
 		if(!reason)
 			return
 		AddBan(M.ckey, M.computer_id, reason, usr.ckey, 0, 0)
@@ -1069,7 +1071,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 			human_cryopods[listname] = CP
 
 	//Gotta log this up here before they get ghostized and lose their key or anything.
-	log_and_message_admins("[key_name(src)] admin cryo'd [key_name(M)].")
+	log_and_message_admins("admin cryo'd [key_name(M)].", src)
 	feedback_add_details("admin_verb","ACRYO") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 	if(ishuman(M))

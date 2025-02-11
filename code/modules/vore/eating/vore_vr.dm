@@ -69,6 +69,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	var/step_mechanics_pref = FALSE
 	var/pickup_pref = TRUE
 	var/vore_sprite_color = list("stomach" = "#000", "taur belly" = "#000")
+	var/vore_sprite_multiply = list("stomach" = FALSE, "taur belly" = FALSE)
 	var/allow_mind_transfer = FALSE
 
 	//CHOMP stuff
@@ -81,7 +82,6 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	var/latejoin_prey = FALSE
 	var/autotransferable = TRUE
 	var/strip_pref = FALSE
-	var/vore_sprite_multiply = list("stomach" = FALSE, "taur belly" = FALSE)
 	var/no_latejoin_vore_warning = FALSE // Only load, when... no_latejoin_vore_warning_persists
 	var/no_latejoin_prey_warning = FALSE // Only load, when... no_latejoin_vore_warning_persists
 	var/no_latejoin_vore_warning_time = 15 // Only load, when... no_latejoin_vore_warning_persists
@@ -141,8 +141,8 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 //	Check if an object is capable of eating things, based on vore_organs
 //
 /proc/is_vore_predator(mob/living/O)
-	if(istype(O,/mob/living))
-		if(istype(O,/mob/living/simple_mob)) //CHOMPEdit: On-demand belly loading.
+	if(isliving(O))
+		if(isanimal(O)) //On-demand belly loading.
 			var/mob/living/simple_mob/SM = O
 			if(SM.vore_active && !SM.voremob_loaded)
 				SM.voremob_loaded = TRUE

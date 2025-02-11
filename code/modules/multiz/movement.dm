@@ -21,7 +21,7 @@
 
 	var/swim_modifier = 1
 	var/climb_modifier = 1
-	if(istype(src,/mob/living/carbon/human))
+	if(ishuman(src))
 		var/mob/living/carbon/human/MS = src
 		swim_modifier = MS.species.swim_mult
 		climb_modifier = MS.species.climb_mult
@@ -79,7 +79,6 @@
 		if(direction == UP)
 			var/obj/structure/lattice/lattice = locate() in destination.contents
 			var/obj/structure/catwalk/catwalk = locate() in destination.contents
-			var/turf/simulated/floor/water/deep/ocean/diving/surface = destination
 
 			if(lattice)
 				var/pull_up_time = max((5 SECONDS + (src.movement_delay() * 10) * climb_modifier), 1)
@@ -91,7 +90,7 @@
 					to_chat(src, span_warning("You gave up on pulling yourself up."))
 					return 0
 
-			else if(istype(surface))
+			else if(istype(destination, /turf/simulated/floor/water/deep/ocean/diving))
 				var/pull_up_time = max((5 SECONDS + (src.movement_delay() * 10) * swim_modifier), 1)
 				to_chat(src, span_notice("You start swimming upwards..."))
 				src.audible_message(span_notice("[src] begins to swim towards the surface."), runemessage = "splish splosh")
@@ -115,6 +114,11 @@
 				else
 					to_chat(src, span_warning("You gave up on pulling yourself up."))
 					return 0
+
+			// Explicit check if the destination turf allows full passing
+			else if(!destination.CanZPass(src, direction))
+				to_chat(src, span_warning("Something solid above stops you from passing."))
+				return 0
 
 			else if(isliving(src)) //VOREStation Edit Start. Are they a mob, and are they currently flying??
 				var/mob/living/H = src
@@ -276,10 +280,14 @@
 	if(!below)
 		return
 
-	if(istype(below, /turf/space))
+	if(isspace(below))
 		return
 
 	var/turf/T = loc
+
+	if(isdiveablewater(T))
+		return
+
 	if(!T.CanZPass(src, DOWN) || !below.CanZPass(src, DOWN))
 		return
 
@@ -530,7 +538,7 @@
 /mob/living/fall_impact(var/atom/hit_atom, var/damage_min = 0, var/damage_max = 5, var/silent = FALSE, var/planetary = FALSE)
 	var/turf/landing = get_turf(hit_atom)
 	var/safe_fall = FALSE
-	if(src.softfall || (istype(src, /mob/living/simple_mob) && src.mob_size <= MOB_SMALL))
+	if(src.softfall || (isanimal(src) && src.mob_size <= MOB_SMALL))
 		safe_fall = TRUE
 	if(planetary && src.CanParachute())
 		if(!silent)

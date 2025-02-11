@@ -86,7 +86,7 @@
 	. = list()
 	. += "<tt><center>"
 	. += span_bold("Choose occupation chances") + "<br>Unavailable occupations are crossed out.<br>"
-	. += "<script type='text/javascript'>function setJobPrefRedirect(level, rank) { window.location.href='?src=\ref[src];level=' + level + ';set_job=' + encodeURIComponent(rank); return false; }</script>"
+	. += "<script type='text/javascript'>function setJobPrefRedirect(level, rank) { window.location.href='byond://?src=\ref[src];level=' + level + ';set_job=' + encodeURIComponent(rank); return false; }</script>"
 	. += "<table width='100%' cellpadding='1' cellspacing='0'><tr><td width='20%' valign='top'>" // Table within a table for alignment, also allows you to easily add more columns.
 	. += "<table width='100%' cellpadding='1' cellspacing='0'>"
 	var/index = -1
@@ -146,7 +146,7 @@
 
 		var/rank = job.title
 		lastJob = job
-		. += "<a href='?src=\ref[src];job_info=[rank]'>"
+		. += "<a href='byond://?src=\ref[src];job_info=[rank]'>"
 		if(jobban_isbanned(user, rank))
 			if(CONFIG_GET(flag/usewhitelist) && !check_whitelist(user)) // CHOMPedit start
 				. += "<del>[rank]</del></td><td><b> \[WHITELISTED]</b></td></tr>"
@@ -170,7 +170,7 @@
 		if(job.is_species_banned(user.client.prefs.species, user.client.prefs.organ_data["brain"]) == TRUE)
 			. += "<del>[rank]</del></td></a><td> \[THIS RACE/BRAIN TYPE CANNOT TAKE THIS ROLE.\]</td></tr>"
 			continue
-		if((job.minimum_character_age || job.min_age_by_species) && user.client && (user.client.prefs.age < job.get_min_age(user.client.prefs.species, user.client.prefs.organ_data["brain"])))
+		if((job.minimum_character_age || job.min_age_by_species) && user.client && (user.read_preference(/datum/preference/numeric/human/age) < job.get_min_age(user.client.prefs.species, user.client.prefs.organ_data["brain"])))
 			. += "<del>[rank]</del></td></a><td> \[MINIMUM CHARACTER AGE FOR SELECTED RACE/BRAIN TYPE: [job.get_min_age(user.client.prefs.species, user.client.prefs.organ_data["brain"])]\]</td></tr>"
 			continue
 		if((pref.job_civilian_low & ASSISTANT) && job.type != /datum/job/assistant)
@@ -208,7 +208,7 @@
 			prefUpperLevel = 3
 			prefLowerLevel = 1
 
-		. += "<a href='?src=\ref[src];set_job=[rank];level=[prefUpperLevel]' oncontextmenu='javascript:return setJobPrefRedirect([prefLowerLevel], \"[rank]\");'>"
+		. += "<a href='byond://?src=\ref[src];set_job=[rank];level=[prefUpperLevel]' oncontextmenu='javascript:return setJobPrefRedirect([prefLowerLevel], \"[rank]\");'>"
 
 		if(job.type == /datum/job/assistant)//Assistant is special
 			if(pref.job_civilian_low & ASSISTANT)
@@ -216,26 +216,26 @@
 			else
 				. += " <font color=black>\[No]</font>"
 			if(LAZYLEN(job.alt_titles)) //Blatantly cloned from a few lines down.
-				. += "</a></td></tr><tr bgcolor='[lastJob.selection_color]'><td width='60%' align='center'>&nbsp</td><td><a href='?src=\ref[src];select_alt_title=\ref[job]'>\[[pref.GetPlayerAltTitle(job)]\]</a></td></tr>"
+				. += "</a></td></tr><tr bgcolor='[lastJob.selection_color]'><td width='60%' align='center'>&nbsp</td><td><a href='byond://?src=\ref[src];select_alt_title=\ref[job]'>\[[pref.GetPlayerAltTitle(job)]\]</a></td></tr>"
 			. += "</a></td></tr>"
 			continue
 
 		. += " <font color=[prefLevelColor]>\[[prefLevelLabel]]</font>"
 		if(LAZYLEN(job.alt_titles))
-			. += "</a></td></tr><tr bgcolor='[lastJob.selection_color]'><td width='60%' align='center'>&nbsp</td><td><a href='?src=\ref[src];select_alt_title=\ref[job]'>\[[pref.GetPlayerAltTitle(job)]\]</a></td></tr>"
+			. += "</a></td></tr><tr bgcolor='[lastJob.selection_color]'><td width='60%' align='center'>&nbsp</td><td><a href='byond://?src=\ref[src];select_alt_title=\ref[job]'>\[[pref.GetPlayerAltTitle(job)]\]</a></td></tr>"
 		. += "</a></td></tr>"
 	. += "</td'></tr></table>"
 	. += "</center></table><center>"
 
 	switch(pref.alternate_option)
 		if(GET_RANDOM_JOB)
-			. += span_underline("<a href='?src=\ref[src];job_alternative=1'>Get random job if preferences unavailable</a>")
+			. += span_underline("<a href='byond://?src=\ref[src];job_alternative=1'>Get random job if preferences unavailable</a>")
 		if(BE_ASSISTANT)
-			. += span_underline("<a href='?src=\ref[src];job_alternative=1'>Be assistant if preference unavailable</a>")
+			. += span_underline("<a href='byond://?src=\ref[src];job_alternative=1'>Be assistant if preference unavailable</a>")
 		if(RETURN_TO_LOBBY)
-			. += span_underline("<a href='?src=\ref[src];job_alternative=1'>Return to lobby if preference unavailable</a>")
+			. += span_underline("<a href='byond://?src=\ref[src];job_alternative=1'>Return to lobby if preference unavailable</a>")
 
-	. += "<a href='?src=\ref[src];reset_jobs=1'>\[Reset\]</a></center>"
+	. += "<a href='byond://?src=\ref[src];reset_jobs=1'>\[Reset\]</a></center>"
 	. += "</tt>"
 	. = jointext(.,null)
 
@@ -255,7 +255,7 @@
 		var/datum/job/job = locate(href_list["select_alt_title"])
 		if (job)
 			var/choices = list(job.title) + job.alt_titles
-			var/choice = tgui_input_list(user, "Choose a title for [job.title].", "Choose Title", choices, pref.GetPlayerAltTitle(job)) //ChompEDIT - usr removal
+			var/choice = tgui_input_list(user, "Choose a title for [job.title].", "Choose Title", choices, pref.GetPlayerAltTitle(job))
 			if(choice && CanUseTopic(user))
 				SetPlayerAltTitle(job, choice)
 				return (pref.equip_preview_mob ? TOPIC_REFRESH_UPDATE_PREVIEW : TOPIC_REFRESH)
@@ -283,7 +283,7 @@
 
 		dat += "<hr style='clear:left;'>"
 		if(CONFIG_GET(string/wikiurl))
-			dat += "<a href='?src=\ref[src];job_wiki=[rank]'>Open wiki page in browser</a>"
+			dat += "<a href='byond://?src=\ref[src];job_wiki=[rank]'>Open wiki page in browser</a>"
 
 		var/alt_title = pref.GetPlayerAltTitle(job)
 		var/list/description = job.get_description_blurb(alt_title)

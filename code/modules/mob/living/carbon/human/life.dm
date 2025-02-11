@@ -311,7 +311,7 @@
 			return
 		//VOREStation Addition end: shadekin
 
-		if(reagents.has_reagent("prussian_blue")) //Prussian Blue temporarily stops radiation effects.
+		if(reagents.has_reagent(REAGENT_ID_PRUSSIANBLUE)) //Prussian Blue temporarily stops radiation effects.
 			return
 
 		var/damage = 0
@@ -370,9 +370,15 @@
 					to_chat(src, span_warning("You feel horribly ill."))
 					AdjustWeakened(3)
 				if(prob(5) && internal_organs.len)
-					I = pick(internal_organs) //Internal organ damage...Not good. Not good at all.
-					if(istype(I)) I.add_autopsy_data("Radiation Induced Cancerous Growth", damage)
-					I.take_damage(damage * species.radiation_mod * RADIATION_SPEED_COEFFICIENT)
+					// CHOMPedit begin - organ mutations
+					if(prob(2))
+						// random organ time!
+						random_malignant_organ(TRUE,FALSE,prob(40))
+					// CHOMPedit end
+					else
+						I = pick(internal_organs) //Internal organ damage...Not good. Not good at all.
+						if(istype(I)) I.add_autopsy_data("Radiation Induced Cancerous Growth", damage)
+						I.take_damage(damage * species.radiation_mod * RADIATION_SPEED_COEFFICIENT)
 
 
 		else if (radiation >= 400 && radiation < 1500) //Equivalent of 8.0 to 30 Gy.
@@ -401,9 +407,14 @@
 					to_chat(src, span_critical("Your entire body feels like it's on fire!"))
 					adjustHalLoss(5)
 				if(prob(10) && internal_organs.len)
-					I = pick(internal_organs) //Internal organ damage...Not good. Not good at all.
-					if(istype(I)) I.add_autopsy_data("Radiation Induced Cancerous Growth", damage)
-					I.take_damage(damage * species.radiation_mod * RADIATION_SPEED_COEFFICIENT)
+					if(prob(2))
+						// CHOMPedit begin - organ mutations
+						random_malignant_organ(TRUE,FALSE,prob(60))
+					// CHOMPedit end
+					else
+						I = pick(internal_organs) //Internal organ damage...Not good. Not good at all.
+						if(istype(I)) I.add_autopsy_data("Radiation Induced Cancerous Growth", damage)
+						I.take_damage(damage * species.radiation_mod * RADIATION_SPEED_COEFFICIENT)
 
 		else if (radiation >= 1500) //Above 30Gy. You had to get absolutely blasted with rads for this.
 			damage = 30
@@ -432,9 +443,15 @@
 					to_chat(src, span_danger("Your hand won't respond properly, you drop what you're holding!"))
 					drop_item()
 				if(internal_organs.len)
-					I = pick(internal_organs) //Internal organ damage...Not good. Not good at all.
-					if(istype(I)) I.add_autopsy_data("Radiation Induced Cancerous Growth", damage * species.radiation_mod * RADIATION_SPEED_COEFFICIENT)
-					I.take_damage(damage * species.radiation_mod * RADIATION_SPEED_COEFFICIENT)
+					// CHOMPedit begin - organ mutations
+					if(prob(2))
+						// random organ time!
+						random_malignant_organ(prob(40),FALSE,TRUE)
+					// CHOMPedit end
+					else
+						I = pick(internal_organs) //Internal organ damage...Not good. Not good at all.
+						if(istype(I)) I.add_autopsy_data("Radiation Induced Cancerous Growth", damage * species.radiation_mod * RADIATION_SPEED_COEFFICIENT)
+						I.take_damage(damage * species.radiation_mod * RADIATION_SPEED_COEFFICIENT)
 
 /* 		//Not-so-sparkledog code. TODO: Make a pref for 'special game interactions' that allows interactions that align with prefs to occur.
 		if(radiation >= 250) //Special effect stuff that occurs at certain rad levels.
@@ -456,7 +473,7 @@
 	// Begin long-term radiation effects
 	// Loss of taste occurs at 100 (2Gy) and is handled in taste.dm
 	// These are all done one after another, so duplication is not required. Someone at 400rads will have the 100&400 effects.
-	if(!radiation && accumulated_rads >= 100  && !reagents.has_reagent("prussian_blue")) //Let's not hit them with long term effects when they're actively being hit with rads.
+	if(!radiation && accumulated_rads >= 100  && !reagents.has_reagent(REAGENT_ID_PRUSSIANBLUE)) //Let's not hit them with long term effects when they're actively being hit with rads.
 		if(!isSynthetic())
 			I = internal_organs_by_name[O_EYES]
 			if(I) //Eye stuff
@@ -509,8 +526,12 @@
 	..()
 	//spread some viruses while we are at it
 	if(breath && !isnull(viruses) && prob(10))
+		if((wear_mask && (wear_mask.item_flags & AIRTIGHT)) || (head && (head && (head.item_flags & AIRTIGHT))))
+			return
+		if(wear_mask && wear_mask.permeability_coefficient < 1)
+			return
 		for(var/datum/disease/D in GetViruses())
-			if((D.spread_flags & SPECIAL) || (D.spread_flags & NON_CONTAGIOUS))
+			if(!D.IsSpreadByAir())
 				continue
 			for(var/mob/living/carbon/M in view(1,src))
 				ContractDisease(D)
@@ -571,10 +592,10 @@
 			if(!L.is_bruised() && prob(8))
 				rupture_lung()
 
-		throw_alert("pressure", /obj/screen/alert/lowpressure)
+		throw_alert("oxy", /obj/screen/alert/not_enough_atmos)
 		return 0
 	else
-		clear_alert("pressure")
+		clear_alert("oxy")
 
 	var/safe_pressure_min = species.minimum_breath_pressure // Minimum safe partial pressure of breathable gas in kPa
 
@@ -588,11 +609,6 @@
 			safe_pressure_min *= 1.5
 		else if(L.is_bruised())
 			safe_pressure_min *= 1.25
-		else if(breath)
-			if(breath.total_moles < BREATH_MOLES / 10 || breath.total_moles > BREATH_MOLES * 5)
-				if(is_below_sound_pressure(get_turf(src)))	//No more popped lungs from choking/drowning
-					if (prob(8))
-						rupture_lung()
 
 	var/safe_exhaled_max = 10
 	var/safe_toxins_max = 0.2
@@ -616,13 +632,13 @@
 	if(species.breath_type)
 		breath_type = species.breath_type
 	else
-		breath_type = "oxygen"
+		breath_type = GAS_O2
 	inhaling = breath.gas[breath_type]
 
 	if(species.poison_type)
 		poison_type = species.poison_type
 	else
-		poison_type = "phoron"
+		poison_type = GAS_PHORON
 	poison = breath.gas[poison_type]
 
 	if(species.exhale_type)
@@ -640,6 +656,8 @@
 	if(inhale_pp < safe_pressure_min)
 		if(prob(20))
 			spawn(0) emote("gasp")
+		if(is_below_sound_pressure(get_turf(src)) && prob(8))	//No more popped lungs from choking/drowning
+			rupture_lung()
 
 		var/ratio = inhale_pp/safe_pressure_min
 		// Don't fuck them up too fast (space only does HUMAN_MAX_OXYLOSS after all!)
@@ -647,17 +665,17 @@
 		failed_inhale = 1
 
 		switch(breath_type)
-			if("oxygen")
+			if(GAS_O2)
 				throw_alert("oxy", /obj/screen/alert/not_enough_oxy)
-			if("phoron")
+			if(GAS_PHORON)
 				throw_alert("oxy", /obj/screen/alert/not_enough_tox)
-			if("nitrogen")
+			if(GAS_N2)
 				throw_alert("oxy", /obj/screen/alert/not_enough_nitro)
-			if("carbon_dioxide")
+			if(GAS_CO2)
 				throw_alert("oxy", /obj/screen/alert/not_enough_co2)
-			if("volatile_fuel")
+			if(GAS_VOLATILE_FUEL)
 				throw_alert("oxy", /obj/screen/alert/not_enough_fuel)
-			if("nitrous_oxide")
+			if(GAS_N2O)
 				throw_alert("oxy", /obj/screen/alert/not_enough_n2o)
 
 	else
@@ -702,15 +720,15 @@
 	if(toxins_pp > safe_toxins_max)
 		var/ratio = (poison/safe_toxins_max) * 10
 		if(reagents)
-			reagents.add_reagent("toxin", CLAMP(ratio, MIN_TOXIN_DAMAGE, MAX_TOXIN_DAMAGE))
+			reagents.add_reagent(REAGENT_ID_TOXIN, CLAMP(ratio, MIN_TOXIN_DAMAGE, MAX_TOXIN_DAMAGE))
 			breath.adjust_gas(poison_type, -poison/6, update = 0) //update after
 		throw_alert("tox_in_air", /obj/screen/alert/tox_in_air)
 	else
 		clear_alert("tox_in_air")
 
 	// If there's some other shit in the air lets deal with it here.
-	if(breath.gas["nitrous_oxide"])
-		var/SA_pp = (breath.gas["nitrous_oxide"] / breath.total_moles) * breath_pressure
+	if(breath.gas[GAS_N2O])
+		var/SA_pp = (breath.gas[GAS_N2O] / breath.total_moles) * breath_pressure
 
 		// Enough to make us paralysed for a bit
 		if(SA_pp > SA_para_min)
@@ -726,7 +744,7 @@
 		else if(SA_pp > 0.15)
 			if(prob(20))
 				spawn(0) emote(pick("giggle", "laugh"))
-		breath.adjust_gas("nitrous_oxide", -breath.gas["nitrous_oxide"]/6, update = 0) //update after
+		breath.adjust_gas(GAS_N2O, -breath.gas[GAS_N2O]/6, update = 0) //update after
 
 	// Were we able to breathe?
 	if (failed_inhale || failed_exhale)
@@ -1698,11 +1716,15 @@
 
 	else //We aren't dead
 		sight &= ~(SEE_TURFS|SEE_MOBS|SEE_OBJS)
-		see_invisible = see_in_dark>2 ? SEE_INVISIBLE_LEVEL_ONE : see_invisible_default
+
+		if(see_invisible_default > SEE_INVISIBLE_LEVEL_ONE)
+			see_invisible = see_invisible_default
+		else
+			see_invisible = see_in_dark>2 ? SEE_INVISIBLE_LEVEL_ONE : see_invisible_default
 
 		// Do this early so certain stuff gets turned off before vision is assigned.
 		var/area/A = get_area(src)
-		if(A?.no_spoilers)
+		if(A?.flag_check(AREA_NO_SPOILERS))
 			disable_spoiler_vision()
 
 		if(XRAY in mutations)
@@ -1726,7 +1748,10 @@
 		else
 			sight = species.get_vision_flags(src)
 			see_in_dark = species.darksight
-			see_invisible = see_in_dark>2 ? SEE_INVISIBLE_LEVEL_ONE : see_invisible_default
+			if(see_invisible_default > SEE_INVISIBLE_LEVEL_ONE)
+				see_invisible = see_invisible_default
+			else
+				see_invisible = see_in_dark>2 ? SEE_INVISIBLE_LEVEL_ONE : see_invisible_default
 
 		var/glasses_processed = 0
 		var/obj/item/rig/rig = get_rig()
@@ -1740,7 +1765,8 @@
 		if(XRAY in mutations)
 			sight |= SEE_TURFS|SEE_MOBS|SEE_OBJS
 			see_in_dark = 8
-			if(!druggy)		see_invisible = SEE_INVISIBLE_LEVEL_TWO
+			if(!druggy)
+				see_invisible = SEE_INVISIBLE_LEVEL_TWO
 
 		for(var/datum/modifier/M in modifiers)
 			if(!isnull(M.vision_flags))
@@ -1853,7 +1879,7 @@
 					stomach_contents.Remove(M)
 					qdel(M)
 					continue
-				if(air_master.current_cycle%3==1)
+				if(SSair.current_cycle%3==1)
 					if(!(M.status_flags & GODMODE))
 						M.adjustBruteLoss(5)
 					adjust_nutrition(10)
@@ -1991,7 +2017,8 @@
 			else if(mod.pulse_set_level > modifier_set)
 				modifier_set = round(mod.pulse_set_level)
 
-			modifier_set = max(0, modifier_set)	// No setting to negatives.
+			if(!isnull(modifier_set))
+				modifier_set = max(0, modifier_set)	// No setting to negatives.
 
 			if(mod.pulse_modifier)
 				modifier_shift += mod.pulse_modifier
@@ -2023,7 +2050,7 @@
 	if(Pump)
 		temp += Pump.standard_pulse_level - PULSE_NORM
 
-	if(round(vessel.get_reagent_amount("blood")) <= species.blood_volume*species.blood_level_danger)	//how much blood do we have
+	if(round(vessel.get_reagent_amount(REAGENT_ID_BLOOD)) <= species.blood_volume*species.blood_level_danger)	//how much blood do we have
 		temp = temp + 3	//not enough :(
 
 	if(status_flags & FAKEDEATH)
@@ -2093,13 +2120,16 @@
 /mob/living/carbon/human/proc/handle_hud_list()
 	if (BITTEST(hud_updateflag, HEALTH_HUD))
 		var/image/holder = grab_hud(HEALTH_HUD)
+		var/image/health_us = grab_hud(HEALTH_VR_HUD)
 		if(stat == DEAD)
 			holder.icon_state = "-100" 	// X_X
 		else
 			holder.icon_state = RoundHealth((health-CONFIG_GET(number/health_threshold_crit))/(getMaxHealth()-CONFIG_GET(number/health_threshold_crit))*100)
 		if(block_hud)
 			holder.icon_state = "hudblank"
+		health_us.icon_state = holder.icon_state
 		apply_hud(HEALTH_HUD, holder)
+		apply_hud(HEALTH_VR_HUD, health_us)
 
 	if (BITTEST(hud_updateflag, LIFE_HUD))
 		var/image/holder = grab_hud(LIFE_HUD)
@@ -2114,20 +2144,16 @@
 		apply_hud(LIFE_HUD, holder)
 
 	if (BITTEST(hud_updateflag, STATUS_HUD))
-		var/foundVirus = 0
-		for (var/datum/disease/D in GetViruses())
-			if(D.discovered)
-				foundVirus = 1
-				break
 
 		var/image/holder = grab_hud(STATUS_HUD)
 		var/image/holder2 = grab_hud(STATUS_HUD_OOC)
+		var/image/status_r = grab_hud(STATUS_R_HUD)
 		if (isSynthetic())
 			holder.icon_state = "hudrobo"
 		else if(stat == DEAD)
 			holder.icon_state = "huddead"
 			holder2.icon_state = "huddead"
-		else if(foundVirus)
+		else if(has_virus())
 			holder.icon_state = "hudill"
 /* Start Chomp edit
 		else if(has_brain_worms())
@@ -2140,17 +2166,17 @@
 End Chomp edit */
 		else
 			holder.icon_state = "hudhealthy"
-			if(viruses.len)
-				for(var/datum/disease/D in GetViruses())
-					if(D.discovered)
-						holder2.icon_state = "hudill"
+			if(has_virus())
+				holder2.icon_state = "hudill"
 			else
 				holder2.icon_state = "hudhealthy"
 		if(block_hud)
 			holder.icon_state = "hudblank"
 			holder2.icon_state = "hudblank"
 
+		status_r.icon_state = holder.icon_state
 		apply_hud(STATUS_HUD, holder)
+		apply_hud(STATUS_R_HUD, status_r)
 		apply_hud(STATUS_HUD_OOC, holder2)
 
 	if (BITTEST(hud_updateflag, ID_HUD))
@@ -2232,7 +2258,36 @@ End Chomp edit */
 				holder.icon_state = "hudsyndicate"
 		apply_hud(SPECIALROLE_HUD, holder)
 
-	attempt_vr(src,"handle_hud_list_vr",list()) //VOREStation Add - Custom HUDs.
+	//Backup implant hud status
+	if (BITTEST(hud_updateflag, BACKUP_HUD))
+		var/image/holder = grab_hud(BACKUP_HUD)
+
+		holder.icon_state = "hudblank"
+
+		for(var/obj/item/organ/external/E in organs)
+			for(var/obj/item/implant/I in E.implants)
+				if(I.implanted && istype(I,/obj/item/implant/backup))
+					var/obj/item/implant/backup/B = I
+					if(!mind)
+						holder.icon_state = "hud_backup_nomind"
+					else if(!(mind.name in B.our_db.body_scans))
+						holder.icon_state = "hud_backup_nobody"
+					else
+						holder.icon_state = "hud_backup_norm"
+		if(block_hud)
+			holder.icon_state = "hudblank"
+		apply_hud(BACKUP_HUD, holder)
+
+	//VOREStation Antag Hud
+	if (BITTEST(hud_updateflag, VANTAG_HUD))
+		var/image/vantag = grab_hud(VANTAG_HUD)
+		if(vantag_pref)
+			vantag.icon_state = vantag_pref
+		else
+			vantag.icon_state = "hudblank"
+		if(block_hud)
+			vantag.icon_state = "hudblank"
+		apply_hud(VANTAG_HUD, vantag)
 
 	hud_updateflag = 0
 
@@ -2272,6 +2327,15 @@ End Chomp edit */
 		return // Still no brain.
 
 	brain.tick_defib_timer()
+
+/mob/living/carbon/human/proc/has_virus()
+	for(var/thing in viruses)
+		var/datum/disease/D = thing
+		if(!D.discovered)
+			continue
+		if((!(D.visibility_flags & HIDDEN_SCANNER)) && (D.severity != NONTHREAT))
+			return TRUE
+	return FALSE
 
 #undef HUMAN_MAX_OXYLOSS
 #undef HUMAN_CRIT_MAX_OXYLOSS

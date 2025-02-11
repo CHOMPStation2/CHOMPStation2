@@ -115,14 +115,14 @@
 	projectile_type = /obj/item/projectile/beam/medical_cell/phys_heal
 
 /obj/item/projectile/beam/medical_cell/phys_heal/on_hit(var/mob/living/carbon/human/target)
-	if(istype(target, /mob/living/carbon/human))
+	if(ishuman(target))
 		target.adjustBruteLoss(-20)
 		target.adjustFireLoss(-20)
 	else
 		return 1
 
 /obj/item/projectile/beam/medical_cell/detox/on_hit(var/mob/living/carbon/human/target)
-	if(istype(target, /mob/living/carbon/human))
+	if(ishuman(target))
 		target.adjustToxLoss(-15)
 		target.radiation = max(target.radiation - 75, 0) //worse than mlem for rad, better for tox.
 	else

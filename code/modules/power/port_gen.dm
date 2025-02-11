@@ -254,7 +254,7 @@
 	var/phoron = (sheets+sheet_left)*20
 	var/datum/gas_mixture/environment = loc.return_air()
 	if (environment)
-		environment.adjust_gas_temp("phoron", phoron/10, temperature + T0C)
+		environment.adjust_gas_temp(GAS_PHORON, phoron/10, temperature + T0C)
 
 	sheets = 0
 	sheet_left = 0
@@ -268,7 +268,7 @@
 		emagged = 1
 		return 1
 
-/obj/machinery/power/port_gen/pacman/attackby(var/obj/item/O as obj, var/mob/user as mob)
+/obj/machinery/power/port_gen/pacman/attackby(var/obj/item/O, var/mob/user)
 	if(istype(O, sheet_path))
 		var/obj/item/stack/addstack = O
 		var/amount = min((max_sheets - sheets), addstack.get_amount())
@@ -278,7 +278,7 @@
 		to_chat(user, span_notice("You add [amount] sheet\s to the [src.name]."))
 		sheets += amount
 		addstack.use(amount)
-		updateUsrDialog()
+		updateUsrDialog(user)
 		return
 	else if(!active)
 		if(O.has_tool_quality(TOOL_WRENCH))
@@ -299,7 +299,7 @@
 			return
 	return ..()
 
-/obj/machinery/power/port_gen/pacman/attack_hand(mob/user as mob)
+/obj/machinery/power/port_gen/pacman/attack_hand(mob/user)
 	..()
 	if (!anchored)
 		return
@@ -324,9 +324,9 @@
 
 	data["active"] = active
 
-	if(istype(user, /mob/living/silicon/ai))
+	if(isAI(user))
 		data["is_ai"] = TRUE
-	else if(istype(user, /mob/living/silicon/robot) && !Adjacent(user))
+	else if(isrobot(user) && !Adjacent(user))
 		data["is_ai"] = TRUE
 	else
 		data["is_ai"] = FALSE
@@ -350,11 +350,11 @@
 
 	return data
 
-/obj/machinery/power/port_gen/pacman/tgui_act(action, params)
+/obj/machinery/power/port_gen/pacman/tgui_act(action, params, datum/tgui/ui)
 	if(..())
 		return
 
-	add_fingerprint(usr)
+	add_fingerprint(ui.user)
 	switch(action)
 		if("toggle_power")
 			TogglePower()

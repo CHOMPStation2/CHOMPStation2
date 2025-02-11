@@ -36,7 +36,7 @@ var/datum/species/shapeshifter/promethean/prometheans
 	assisted_langs = list(LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)	// Prometheans are weird, let's just assume they can use basically any language.
 
 	blood_name = "gelatinous ooze"
-	blood_reagents = "slimejelly"
+	blood_reagents = REAGENT_ID_SLIMEJELLY
 
 	breath_type = null
 	poison_type = null
@@ -124,7 +124,7 @@ var/datum/species/shapeshifter/promethean/prometheans
 		/mob/living/carbon/human/proc/regenerate
 		)
 
-	valid_transform_species = list(SPECIES_HUMAN, SPECIES_HUMAN_VATBORN, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_SKRELL, SPECIES_DIONA, SPECIES_TESHARI, SPECIES_MONKEY)
+	valid_transform_species = list(SPECIES_HUMAN, SPECIES_HUMAN_VATBORN, SPECIES_UNATHI, SPECIES_TAJARAN, SPECIES_SKRELL, SPECIES_DIONA, SPECIES_TESHARI, SPECIES_MONKEY)
 
 	var/heal_rate = 0.5 // Temp. Regen per tick.
 
@@ -137,7 +137,7 @@ var/datum/species/shapeshifter/promethean/prometheans
 		/decl/emote/visible/vibrate
 	)
 
-	footstep = FOOTSTEP_MOB_SLIME // CHOMPEdit
+	footstep = FOOTSTEP_MOB_SLIME
 
 /datum/species/shapeshifter/promethean/New()
 	..()

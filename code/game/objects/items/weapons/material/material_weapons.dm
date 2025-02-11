@@ -109,7 +109,7 @@
 /obj/item/material/proc/shatter(var/consumed)
 	var/turf/T = get_turf(src)
 	T.visible_message(span_danger("\The [src] [material.destruction_desc]!"))
-	if(istype(loc, /mob/living))
+	if(isliving(loc))
 		var/mob/living/M = loc
 		M.drop_from_inventory(src)
 	playsound(src, "shatter", 70, 1)
@@ -147,7 +147,7 @@
 			to_chat(M, "You should repair [src] first. Try using [kit] on it.")
 			return FALSE
 		M.visible_message("[M] begins to replace parts of [src] with [kit].", "You begin to replace parts of [src] with [kit].")
-		if(do_after(usr, sharpen_time))
+		if(do_after(M, sharpen_time))
 			M.visible_message("[M] has finished replacing parts of [src].", "You finish replacing parts of [src].")
 			src.set_material(material)
 			return TRUE

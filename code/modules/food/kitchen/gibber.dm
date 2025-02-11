@@ -136,11 +136,11 @@
 		to_chat(user, span_danger("The gibber is locked and running, wait for it to finish."))
 		return
 
-	if(!(istype(victim, /mob/living/carbon)) && !(istype(victim, /mob/living/simple_mob)) )
+	if(!(iscarbon(victim)) && !(isanimal(victim)) )
 		to_chat(user, span_danger("This is not suitable for the gibber!"))
 		return
 
-	if(istype(victim,/mob/living/carbon/human) && !emagged)
+	if(ishuman(victim) && !emagged)
 		to_chat(user, span_danger("The gibber safety guard is engaged!"))
 		return
 
@@ -204,7 +204,7 @@
 
 	var/list/byproducts = occupant?.butchery_loot?.Copy()
 
-	if(istype(src.occupant,/mob/living/carbon/human))
+	if(ishuman(src.occupant))
 		var/mob/living/carbon/human/H = occupant
 		slab_name = src.occupant.real_name
 		slab_type = H.isSynthetic() ? /obj/item/stack/material/steel : H.species.meat_type
@@ -218,7 +218,7 @@
 		var/obj/item/reagent_containers/food/snacks/meat/new_meat = new slab_type(src, rand(3,8))
 		if(istype(new_meat))
 			new_meat.name = "[slab_name] [new_meat.name]"
-			new_meat.reagents.add_reagent("nutriment",slab_nutrition)
+			new_meat.reagents.add_reagent(REAGENT_ID_NUTRIMENT,slab_nutrition)
 			if(src.occupant.reagents)
 				src.occupant.reagents.trans_to_obj(new_meat, round(occupant.reagents.total_volume/(2 + occupant.meat_amount),1))
 

@@ -4,7 +4,7 @@
 	set desc = "Tag yourself for delivery through the disposals system."
 	set category = "Abilities.Silicon"
 
-	var/new_tag = tgui_input_list(usr, "Select the desired destination.", "Set Mail Tag", GLOB.tagger_locations)
+	var/new_tag = tgui_input_list(src, "Select the desired destination.", "Set Mail Tag", GLOB.tagger_locations)
 
 	if(!new_tag)
 		mail_destination = ""
@@ -25,7 +25,7 @@
 	var/mob/living/carbon/human/H = over_object
 	if(!istype(H) || !Adjacent(H))
 		return ..()
-	if(H.a_intent == "grab" && hat && !(H.l_hand && H.r_hand))
+	if(H.a_intent == I_GRAB && hat && !(H.l_hand && H.r_hand))
 		H.put_in_hands(hat)
 		H.visible_message(span_danger("\The [H] removes \the [src]'s [hat]."))
 		hat = null

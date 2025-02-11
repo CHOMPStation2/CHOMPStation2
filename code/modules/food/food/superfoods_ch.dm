@@ -2,8 +2,8 @@
 // adjust recipes, make ingredients mobs
 
 /datum/recipe/thecake_firstlayer
-	reagents = list("flour" = 500,"milk" = 200, "sugar" = 200, "egg" = 100)
-	fruit = list("icechili" = 30, "plastellium" =  15)
+	reagents = list(REAGENT_ID_FLOUR = 500,REAGENT_ID_MILK = 200, REAGENT_ID_SUGAR = 200, REAGENT_ID_EGG = 100)
+	fruit = list(PLANT_ICECHILI = 30, PLANT_PLASTIC =  15)
 	items = list(
 			/obj/item/stack/material/silver,
 			/obj/item/stack/material/silver,
@@ -24,8 +24,8 @@
 	result = /obj/structure/thecake
 
 /datum/recipe/thecake_secondlayer
-	reagents = list("flour" = 400, "milk" = 200, "sugar" = 100, "cryoxadone" = 200, "frostoil" = 100)
-	fruit = list("vanilla" =  30, "icelettuce" = 15)
+	reagents = list(REAGENT_ID_FLOUR = 400, REAGENT_ID_MILK = 200, REAGENT_ID_SUGAR = 100, REAGENT_ID_CRYOXADONE = 200, REAGENT_ID_FROSTOIL = 100)
+	fruit = list(PLANT_VANILLA =  30, PLANT_SIFLETTUCE = 15)
 	items = list(
 			/obj/item/stack/material/glass/phoronglass,
 			/obj/item/stack/material/glass/phoronglass,
@@ -46,8 +46,8 @@
 	result = /obj/item/thecake_layer
 
 /datum/recipe/thecake_thirdlayer
-	reagents = list("flour" = 300, "singulo" = 300, "atomicbomb" = 150, "threemileisland" = 150, "manhattan_proj" = 100)
-	fruit = list("glowberries" = 30, "glowshrooms" =  15)
+	reagents = list(REAGENT_ID_FLOUR = 300, REAGENT_ID_SINGULO = 300, REAGENT_ID_ATOMICBOMB = 150, REAGENT_ID_THREEMILEISLAND = 150, REAGENT_ID_MANHATTANPROJ = 100)
+	fruit = list(PLANT_GLOWBERRIES = 30, PLANT_GLOWSHROOM =  15)
 	items = list(
 			/obj/item/stack/material/uranium,
 			/obj/item/stack/material/uranium,
@@ -68,8 +68,8 @@
 	result = /obj/item/thecake_layer/three
 
 /datum/recipe/thecake_fourthlayer
-	reagents = list("flour" = 400, "holymary" = 100, "angelskiss" = 100, "goldschlager" = 100, "gold" = 300)
-	fruit = list("ambrosiadeus" = 30, "goldapple" =  15)
+	reagents = list(REAGENT_ID_FLOUR = 400, REAGENT_ID_HOLYMARY = 100, REAGENT_ID_ANGELSKISS = 100, REAGENT_ID_GOLDSCHLAGER = 100, REAGENT_ID_GOLD = 300)
+	fruit = list(PLANT_AMBROSIADEUS = 30, PLANT_GOLDAPPLE =  15)
 	items = list(
 			/obj/item/stack/material/gold,
 			/obj/item/stack/material/gold,
@@ -90,8 +90,8 @@
 	result = /obj/item/thecake_layer/four
 
 /datum/recipe/thecake_fifthlayer
-	reagents = list("deathbell" = 1000)
-	fruit = list("libertycap" = 10, "deathnettle" =  10, "destroyingangel" = 10)
+	reagents = list(REAGENT_ID_DEATHBELL = 1000)
+	fruit = list(PLANT_LIBERTYCAP = 10, PLANT_DEATHNETTLE =  10, PLANT_DESTROYINGANGEL = 10)
 	items = list(
 			/obj/item/stack/material/platinum,
 			/obj/item/stack/material/platinum,
@@ -228,8 +228,8 @@
 // Chaos cake
 
 /datum/recipe/chaoscake_layerone
-	reagents = list("flour" = 300,"milk" = 200, "sugar" = 100, "egg" = 30)
-	fruit = list("poisonberries" = 15, "cherries" =  15)
+	reagents = list(REAGENT_ID_FLOUR = 300,REAGENT_ID_MILK = 200, REAGENT_ID_SUGAR = 100, REAGENT_ID_EGG = 30)
+	fruit = list(PLANT_POISONBERRIES = 15, PLANT_CHERRY =  15)
 	items = list(
 			/obj/item/reagent_containers/food/snacks/meat/,
 			/obj/item/reagent_containers/food/snacks/meat/,
@@ -239,8 +239,8 @@
 	result = /obj/structure/chaoscake
 
 /datum/recipe/chaoscake_layertwo
-	reagents = list("flour" = 300, "milk" = 200, "sugar" = 100, "egg" = 30, )
-	fruit = list("vanilla" =  15, "banana" = 15)
+	reagents = list(REAGENT_ID_FLOUR = 300, REAGENT_ID_MILK = 200, REAGENT_ID_SUGAR = 100, REAGENT_ID_EGG = 30, )
+	fruit = list(PLANT_VANILLA =  15, PLANT_BANANA = 15)
 	items = list(
 			/obj/item/reagent_containers/food/snacks/dough,
 			/obj/item/reagent_containers/food/snacks/dough,
@@ -250,8 +250,8 @@
 	result = /obj/item/chaoscake_layer
 
 /datum/recipe/chaoscake_layerthree
-	reagents = list("flour" = 240, "milk" = 150, "sugar" = 80, "egg" = 24, "deathbell" = 100)
-	fruit = list("grapes" = 30)
+	reagents = list(REAGENT_ID_FLOUR = 240, REAGENT_ID_MILK = 150, REAGENT_ID_SUGAR = 80, REAGENT_ID_EGG = 24, REAGENT_ID_DEATHBELL = 100)
+	fruit = list(PLANT_GRAPES = 30)
 	items = list(
 			/obj/item/reagent_containers/food/snacks/dough,
 			/obj/item/reagent_containers/food/snacks/dough,
@@ -260,8 +260,8 @@
 	result = /obj/item/chaoscake_layer/three
 
 /datum/recipe/chaoscake_layerfour
-	reagents = list("flour" = 240, "milk" = 150, "sugar" = 80, "egg" = 24, "milkshake" = 300)
-	fruit = list("rice" = 30)
+	reagents = list(REAGENT_ID_FLOUR = 240, REAGENT_ID_MILK = 150, REAGENT_ID_SUGAR = 80, REAGENT_ID_EGG = 24, REAGENT_ID_MILKSHAKE = 300)
+	fruit = list(PLANT_RICE = 30)
 	items = list(
 			/obj/item/reagent_containers/food/snacks/dough,
 			/obj/item/reagent_containers/food/snacks/dough,
@@ -270,8 +270,8 @@
 	result = /obj/item/chaoscake_layer/four
 
 /datum/recipe/chaoscake_layerfive
-	reagents = list("flour" = 180, "milk" = 100, "sugar" = 60, "egg" = 18, "blood" = 300)
-	fruit = list("tomato" = 20)
+	reagents = list(REAGENT_ID_FLOUR = 180, REAGENT_ID_MILK = 100, REAGENT_ID_SUGAR = 60, REAGENT_ID_EGG = 18, REAGENT_ID_BLOOD = 300)
+	fruit = list(PLANT_TOMATO = 20)
 	items = list(
 		/obj/item/reagent_containers/food/snacks/lobster,
 		/obj/item/reagent_containers/food/snacks/lobster,
@@ -281,8 +281,8 @@
 	result = /obj/item/chaoscake_layer/five
 
 /datum/recipe/chaoscake_layersix
-	reagents = list("flour" = 180, "milk" = 100, "sugar" = 60, "egg" = 18, "sprinkles" = 10)
-	fruit = list("apple" = 30)
+	reagents = list(REAGENT_ID_FLOUR = 180, REAGENT_ID_MILK = 100, REAGENT_ID_SUGAR = 60, REAGENT_ID_EGG = 18, REAGENT_ID_SPRINKLES = 10)
+	fruit = list(PLANT_APPLE = 30)
 	items = list(
 			/obj/item/reagent_containers/food/snacks/dough,
 			/obj/item/reagent_containers/food/snacks/dough,
@@ -294,8 +294,8 @@
 	result = /obj/item/chaoscake_layer/six
 
 /datum/recipe/chaoscake_layerseven
-	reagents = list("flour" = 120, "milk" = 50, "sugar" = 40, "egg" = 12, "devilskiss" = 200)
-	fruit = list("potato" = 10)
+	reagents = list(REAGENT_ID_FLOUR = 120, REAGENT_ID_MILK = 50, REAGENT_ID_SUGAR = 40, REAGENT_ID_EGG = 12, REAGENT_ID_DEVILSKISS = 200)
+	fruit = list(PLANT_POTATO = 10)
 	items = list(
 			/obj/item/reagent_containers/food/snacks/dough,
 			/obj/item/reagent_containers/food/snacks/dough,
@@ -304,8 +304,8 @@
 	result = /obj/item/chaoscake_layer/seven
 
 /datum/recipe/chaoscake_layereight
-	reagents = list("flour" = 120, "milk" = 50, "sugar" = 40, "egg" = 12, "cream" = 200)
-	fruit = list("lemon" = 10)
+	reagents = list(REAGENT_ID_FLOUR = 120, REAGENT_ID_MILK = 50, REAGENT_ID_SUGAR = 40, REAGENT_ID_EGG = 12, REAGENT_ID_CREAM = 200)
+	fruit = list(PLANT_LEMON = 10)
 	items = list(
 			/obj/item/reagent_containers/food/snacks/dough,
 			/obj/item/reagent_containers/food/snacks/dough,
@@ -314,8 +314,8 @@
 	result = /obj/item/chaoscake_layer/eight
 
 /datum/recipe/chaoscake_layernine
-	reagents = list("water" = 100, "blood" = 100)
-	fruit = list("goldapple" = 50)
+	reagents = list(REAGENT_ID_WATER = 100, REAGENT_ID_BLOOD = 100)
+	fruit = list(PLANT_GOLDAPPLE = 50)
 	items = list()
 	result = /obj/item/chaoscake_layer/nine
 
@@ -323,7 +323,7 @@
 	name = "An unfinished cake"
 	desc = "A single layer of a strange cake, you can see the cherry paste ooze, but it feels very incomplete..."
 
-	icon = 'icons/obj/food64x64_ch.dmi'
+	icon = 'icons/obj/food64x64.dmi'
 	icon_state = "chaoscake_unfinished-1"
 	pixel_x = -16
 
@@ -352,14 +352,14 @@
 /obj/item/chaoscake_layerone
 	name = "A layer of cake"
 	desc = "a layer of cake, you can see the cherry paste ooze."
-	icon = 'icons/obj/food_ch.dmi'
+	icon = 'icons/obj/food.dmi'
 	icon_state = "chaoscake_layer-1"
 */
 
 /obj/item/chaoscake_layer
 	name = "A layer of cake"
 	desc = "a layer of cake, it is made out of colourful cream."
-	icon = 'icons/obj/food_ch.dmi'
+	icon = 'icons/obj/food.dmi'
 	icon_state = "chaoscake_layer-2"
 	var/layer_stage = 1
 
@@ -432,54 +432,54 @@
 			name = "Slice Of Evil" //Pretty damn poisonous, takes a lot of work to make safe for consumption, useful for medical.
 			desc = "An odd slice, despite the grease and cherries oozing off the top, it smells delicious."
 			nutriment_desc = list("The desire to consume" = 10) // You won't even taste the poison.
-			reagents.add_reagent("neurotoxic_protein", 2)
-			reagents.add_reagent("shockchem", 2)
-			reagents.add_reagent("amatoxin", 2)
-			reagents.add_reagent("carpotoxin", 2)
-			reagents.add_reagent("spidertoxin", 2)
+			reagents.add_reagent(REAGENT_ID_NEUROTOXIC_PROTEIN, 2)
+			reagents.add_reagent(REAGENT_ID_SHOCKCHEM, 2)
+			reagents.add_reagent(REAGENT_ID_AMATOXIN, 2)
+			reagents.add_reagent(REAGENT_ID_CARPOTOXIN, 2)
+			reagents.add_reagent(REAGENT_ID_SPIDERTOXIN, 2)
 			bitesize = 7
 		if(2)
 			name = "Slice Of Evil" //A bad trip
 			desc = "A mysterious slice, coated in purple frosting that smells like grapes."
 			nutriment_desc = list("The desire to show off an party" = 10)
-			reagents.add_reagent("stoxin", 2)
-			reagents.add_reagent("space_drugs", 10)
-			reagents.add_reagent("serotrotium", 4)
-			reagents.add_reagent("cryptobiolin", 8)
-			reagents.add_reagent("mindbreaker", 10)
-			reagents.add_reagent("psilocybin", 10)
+			reagents.add_reagent(REAGENT_ID_STOXIN, 2)
+			reagents.add_reagent(REAGENT_ID_SPACEDRUGS, 10)
+			reagents.add_reagent(REAGENT_ID_SEROTROTIUM, 4)
+			reagents.add_reagent(REAGENT_ID_CRYPTOBIOLIN, 8)
+			reagents.add_reagent(REAGENT_ID_MINDBREAKER, 10)
+			reagents.add_reagent(REAGENT_ID_PSILOCYBIN, 10)
 			bitesize = 30 //even a single bite won't make you escape fate.
 		if(3)
 			name = "Slice Of Evil" //acidic
 			desc = "A menacing slice, smelling clearly of copper, blood clots float on top."
 			nutriment_desc = list("Infernal Rage" = 10)
-			reagents.add_reagent("blood", 20)
-			reagents.add_reagent("stomacid", 10)
-			reagents.add_reagent("mutagen", 4)
-			reagents.add_reagent("thirteenloko", 20)
-			reagents.add_reagent("hyperzine", 10)
+			reagents.add_reagent(REAGENT_ID_BLOOD, 20)
+			reagents.add_reagent(REAGENT_ID_STOMACID, 10)
+			reagents.add_reagent(REAGENT_ID_MUTAGEN, 4)
+			reagents.add_reagent(REAGENT_ID_THIRTEENLOKO, 20)
+			reagents.add_reagent(REAGENT_ID_HYPERZINE, 10)
 			bitesize = 30
 		if(4)
 			name = "Slice Of Good" //anti-tox
 			desc = "A colourful slice, smelling of pear and coated in delicious cream."
 			nutriment_desc = list("Hapiness" = 10)
-			reagents.add_reagent("anti_toxin", 2)
-			reagents.add_reagent("tricordrazine", 2)
+			reagents.add_reagent(REAGENT_ID_ANTITOXIN, 2)
+			reagents.add_reagent(REAGENT_ID_TRICORDRAZINE, 2)
 			bitesize = 3
 		if(5)
 			name = "Slice Of Good" //anti-oxy
 			desc = "A light slice, it's pretty to look at and smells of vanilla."
 			nutriment_desc = list("Freedom" = 10)
-			reagents.add_reagent("dexalinp", 2)
-			reagents.add_reagent("tricordrazine", 2)
+			reagents.add_reagent(REAGENT_ID_DEXALINP, 2)
+			reagents.add_reagent(REAGENT_ID_TRICORDRAZINE, 2)
 			bitesize = 3
 		if(6)
 			name = "Slice Of Good" //anti-burn/brute
 			desc = "A hearty slice, it smells of chocolate and strawberries."
 			nutriment_desc = list("Love" = 10)
-			reagents.add_reagent("bicaridine", 2)
-			reagents.add_reagent("tricordrazine", 2)
-			reagents.add_reagent("kelotane", 2)
+			reagents.add_reagent(REAGENT_ID_BICARIDINE, 2)
+			reagents.add_reagent(REAGENT_ID_TRICORDRAZINE, 2)
+			reagents.add_reagent(REAGENT_ID_KELOTANE, 2)
 			bitesize = 4
 
 /obj/structure/chaoscake/attackby(var/obj/item/W, var/mob/living/user)
@@ -577,7 +577,7 @@
 	icon_state = "big_veggie_slice"
 
 /datum/recipe/theonepizza
-	fruit = list("tomato" = 5, "mushroom" = 5, "eggplant" = 1, "carrot" = 1, "corn" = 1)
+	fruit = list(PLANT_TOMATO = 5, PLANT_MUSHROOMS = 5, PLANT_EGGPLANT = 1, PLANT_CARROT = 1, PLANT_CORN = 1)
 	items = list(
 		/obj/item/reagent_containers/food/snacks/sliceable/flatdough,
 		/obj/item/reagent_containers/food/snacks/sliceable/flatdough,

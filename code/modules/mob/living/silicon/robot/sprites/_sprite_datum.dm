@@ -2,6 +2,7 @@
 	var/name
 	var/module_type
 	var/default_sprite = FALSE
+	var/sprite_flags
 
 	var/sprite_icon
 	var/sprite_icon_state
@@ -9,6 +10,7 @@
 
 	var/has_eye_sprites = TRUE
 	var/has_eye_light_sprites = FALSE
+	var/has_robotdecal_sprites = FALSE
 	var/has_custom_open_sprites = FALSE
 	var/has_vore_belly_sprites = FALSE
 	var/has_vore_belly_resting_sprites = FALSE
@@ -22,17 +24,71 @@
 	var/has_custom_equipment_sprites = FALSE
 	var/vis_height = 32
 	var/pixel_x = 0
+	var/icon_x = 32
+	var/icon_y = 32
 
 	var/is_whitelisted = FALSE
 	var/whitelist_ckey
 	var/whitelist_charname
+	var/list/belly_light_list = list() // Support multiple sleepers with r/g light "sleeper"
+	var/list/belly_capacity_list = list() //Support multiple bellies with multiple sizes, default: "sleeper" = 1
+
+/// Determines if the borg has the proper flags to show an overlay.
+/datum/robot_sprite/proc/sprite_flag_check(var/flag_to_check)
+	return (sprite_flags & flag_to_check)
 
 /datum/robot_sprite/proc/handle_extra_icon_updates(var/mob/living/silicon/robot/ourborg)
-	return
+	if(ourborg.resting) //Don't do ANY of the overlay code if we're resting. It just won't look right!
+		return
+	if(sprite_flag_check(ROBOT_HAS_SHIELD_SPEED_SPRITE))
+		if(ourborg.has_active_type(/obj/item/borg/combat/shield) && ourborg.has_active_type(/obj/item/borg/combat/mobility))
+			ourborg.add_overlay("[sprite_icon_state]-speed_shield")
+			return //Stop here. No need to add more overlays. Nothing else is compatible.
 
-/datum/robot_sprite/proc/get_belly_overlay(var/mob/living/silicon/robot/ourborg, var/size = 1, var/b_class) //CHOMPEdit, allows use of our multi belly system
+	if(sprite_flag_check(ROBOT_HAS_SPEED_SPRITE) && ourborg.has_active_type(/obj/item/borg/combat/mobility))
+		ourborg.icon_state = "[sprite_icon_state]-roll"
+		return //Stop here. No need to add more overlays. Nothing else is compatible.
+
+	if(sprite_flag_check(ROBOT_HAS_SHIELD_SPRITE))
+		if(ourborg.has_active_type(/obj/item/borg/combat/shield))
+			var/obj/item/borg/combat/shield/shield = locate() in ourborg
+			if(shield && shield.active)
+				ourborg.add_overlay("[sprite_icon_state]-shield")
+
+	if(ourborg.activated_module_type_list(list(/obj/item/melee/robotic, /obj/item/gun/energy/robotic)))
+		for(var/thing_to_check in ourborg.get_active_modules()) //We look at our active modules. Let's peep!
+
+			//Melee Check
+			if(istype(thing_to_check, /obj/item/melee/robotic))
+				var/obj/item/melee/robotic/melee = thing_to_check
+				if(sprite_flag_check(ROBOT_HAS_MELEE_SPRITE) && melee.weapon_flag_check(COUNTS_AS_ROBOTIC_MELEE))
+					ourborg.add_overlay("[sprite_icon_state]-melee")
+					continue
+				if(sprite_flag_check(ROBOT_HAS_DAGGER_SPRITE) && melee.weapon_flag_check(COUNTS_AS_ROBOT_DAGGER))
+					ourborg.add_overlay("[sprite_icon_state]-dagger")
+					continue
+				if(sprite_flag_check(ROBOT_HAS_BLADE_SPRITE) && melee.weapon_flag_check(COUNTS_AS_ROBOT_BLADE))
+					ourborg.add_overlay("[sprite_icon_state]-blade")
+					continue
+
+			//Gun Check
+			if(istype(thing_to_check, /obj/item/gun/energy/robotic))
+				var/obj/item/gun/energy/robotic/gun = thing_to_check
+				if(sprite_flag_check(ROBOT_HAS_GUN_SPRITE) && gun.gun_flag_check(COUNTS_AS_ROBOT_GUN))
+					ourborg.add_overlay("[sprite_icon_state]-gun")
+					continue
+				if(sprite_flag_check(ROBOT_HAS_LASER_SPRITE) && gun.gun_flag_check(COUNTS_AS_ROBOT_LASER))
+					ourborg.add_overlay("[sprite_icon_state]-laser")
+					continue
+				if(sprite_flag_check(ROBOT_HAS_TASER_SPRITE) && gun.gun_flag_check(COUNTS_AS_ROBOT_TASER))
+					ourborg.add_overlay("[sprite_icon_state]-taser")
+					continue
+				if(sprite_flag_check(ROBOT_HAS_DISABLER_SPRITE) && gun.gun_flag_check(COUNTS_AS_ROBOT_DISABLER))
+					ourborg.add_overlay("[sprite_icon_state]-disabler")
+					continue
+
+/datum/robot_sprite/proc/get_belly_overlay(var/mob/living/silicon/robot/ourborg, var/size = 1, var/b_class)
 	//Size
-	//CHOMPEdit Start, using our own belly handling
 	if(has_sleeper_light_indicator || belly_light_list.len)
 		if(belly_light_list.len)
 			if(belly_light_list.Find(b_class))
@@ -52,18 +108,17 @@
 				sleeperColor = "r"
 			return "[sprite_icon_state]-[b_class]-[size]-[sleeperColor]"
 	return "[sprite_icon_state]-[b_class]-[size]"
-	//CHOMPEdit End
 
-/datum/robot_sprite/proc/get_belly_resting_overlay(var/mob/living/silicon/robot/ourborg, var/size = 1, var/b_class) //CHOMPEdit, allows use of our multi belly system
+/datum/robot_sprite/proc/get_belly_resting_overlay(var/mob/living/silicon/robot/ourborg, var/size = 1, var/b_class)
 	if(!(ourborg.rest_style in rest_sprite_options))
 		ourborg.rest_style = "Default"
 	switch(ourborg.rest_style)
 		if("Sit")
-			return "[get_belly_overlay(ourborg, size, b_class)]-sit" //CHOMPEdit, allows use of our multi belly system
+			return "[get_belly_overlay(ourborg, size, b_class)]-sit"
 		if("Bellyup")
-			return "[get_belly_overlay(ourborg, size, b_class)]-bellyup" //CHOMPEdit, allows use of our multi belly system
+			return "[get_belly_overlay(ourborg, size, b_class)]-bellyup"
 		else
-			return "[get_belly_overlay(ourborg, size, b_class)]-rest" //CHOMPEdit, allows use of our multi belly system
+			return "[get_belly_overlay(ourborg, size, b_class)]-rest"
 
 /datum/robot_sprite/proc/get_eyes_overlay(var/mob/living/silicon/robot/ourborg)
 	if(!(ourborg.resting && has_rest_sprites))
@@ -74,6 +129,12 @@
 /datum/robot_sprite/proc/get_eye_light_overlay(var/mob/living/silicon/robot/ourborg)
 	if(!(ourborg.resting && has_rest_sprites))
 		return "[sprite_icon_state]-lights"
+	else
+		return
+
+/datum/robot_sprite/proc/get_robotdecal_overlay(var/mob/living/silicon/robot/ourborg)
+	if(!(ourborg.resting && has_robotdecal_sprites))
+		return "[sprite_icon_state]-decals"
 	else
 		return
 
@@ -127,21 +188,9 @@
 	has_dead_sprite_overlay = TRUE
 	has_custom_equipment_sprites = TRUE
 	pixel_x = -16
-/* //Does not need to be dogborg-only, letting all borgs use these -Reo
-/datum/robot_sprite/dogborg/get_rest_sprite(var/mob/living/silicon/robot/ourborg)
-	if(!(ourborg.rest_style in rest_sprite_options))
-		ourborg.rest_style = "Default"
-	switch(ourborg.rest_style)
-		if("Sit")
-			return "[sprite_icon_state]-sit"
-		if("Bellyup")
-			return "[sprite_icon_state]-bellyup"
-		else
-			return "[sprite_icon_state]-rest"
+	icon_x = 64
+	icon_y = 32
 
-/datum/robot_sprite/dogborg/get_belly_overlay(var/mob/living/silicon/robot/ourborg)
-	return "[sprite_icon_state]-sleeper"
-*/
 /datum/robot_sprite/dogborg/do_equipment_glamour(var/obj/item/robot_module/module)
 	if(!has_custom_equipment_sprites)
 		return
@@ -160,7 +209,8 @@
 	has_dead_sprite_overlay = FALSE
 	has_custom_equipment_sprites = FALSE
 	vis_height = 64
-	pixel_x = -16
+	icon_x = 64
+	icon_y = 64
 
 // Default module sprite
 
@@ -175,5 +225,6 @@
 /datum/robot_sprite/dogborg/raptor
 	has_dead_sprite_overlay = FALSE
 	vis_height = 45
-	pixel_x = -16
+	icon_x = 64
+	icon_y = 64
 //CHOMPAdd End

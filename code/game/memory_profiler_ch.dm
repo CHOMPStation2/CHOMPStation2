@@ -194,3 +194,6 @@
 	if(num_bytes > 10000)
 		return "[num_bytes/1000] kb"
 	return "[num_bytes] b"
+
+#undef LOOP_STEP_SIZE
+//#undef MEM_NO_CHECK_TICK

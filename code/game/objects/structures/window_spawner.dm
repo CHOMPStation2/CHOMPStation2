@@ -58,7 +58,7 @@
 	activated = 1
 	for(var/obj/effect/wingrille_spawn/other in neighbours)
 		if(!other.activated) other.activate()
-	if((flags & ATOM_INITIALIZED) && !QDELETED(src)) //CHOMPEdit
+	if((flags & ATOM_INITIALIZED) && !QDELETED(src))
 		qdel(src)
 
 /obj/effect/wingrille_spawn/proc/handle_window_spawn(var/obj/structure/window/W)

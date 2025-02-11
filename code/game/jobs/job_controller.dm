@@ -50,7 +50,7 @@ var/global/datum/controller/occupations/job_master
 		var/datum/job/job = GetJob(rank)
 		if(!job)
 			return 0
-		if((job.minimum_character_age || job.min_age_by_species) && (player.client.prefs.age < job.get_min_age(player.client.prefs.species, player.client.prefs.organ_data["brain"])))
+		if((job.minimum_character_age || job.min_age_by_species) && (player.read_preference(/datum/preference/numeric/human/age) < job.get_min_age(player.client.prefs.species, player.client.prefs.organ_data["brain"])))
 			return 0
 		if(jobban_isbanned(player, rank))
 			return 0
@@ -106,7 +106,7 @@ var/global/datum/controller/occupations/job_master
 		if(!job.player_old_enough(player.client))
 			Debug("FOC player not old enough, Player: [player]")
 			continue
-		if(job.minimum_character_age && (player.client.prefs.age < job.get_min_age(player.client.prefs.species, player.client.prefs.organ_data["brain"])))
+		if(job.minimum_character_age && (player.read_preference(/datum/preference/numeric/human/age) < job.get_min_age(player.client.prefs.species, player.client.prefs.organ_data["brain"])))
 			Debug("FOC character not old enough, Player: [player]")
 			continue
 		//VOREStation Code Start
@@ -134,7 +134,7 @@ var/global/datum/controller/occupations/job_master
 		if(!job)
 			continue
 
-		if((job.minimum_character_age || job.min_age_by_species) && (player.client.prefs.age < job.get_min_age(player.client.prefs.species, player.client.prefs.organ_data["brain"])))
+		if((job.minimum_character_age || job.min_age_by_species) && (player.read_preference(/datum/preference/numeric/human/age) < job.get_min_age(player.client.prefs.species, player.client.prefs.organ_data["brain"])))
 			continue
 
 		if(job.is_species_banned(player.client.prefs.species, player.client.prefs.organ_data["brain"]) == TRUE)
@@ -193,7 +193,7 @@ var/global/datum/controller/occupations/job_master
 			for(var/mob/V in candidates)
 				// Log-out during round-start? What a bad boy, no head position for you!
 				if(!V.client) continue
-				var/age = V.client.prefs.age
+				var/age = V.read_preference(/datum/preference/numeric/human/age)
 
 				if(age < job.get_min_age(V.client.prefs.species, V.client.prefs.organ_data["brain"])) // Nope.
 					continue
@@ -439,6 +439,8 @@ var/global/datum/controller/occupations/job_master
 					//if(G.slot == slot_wear_mask || G.slot == slot_wear_suit || G.slot == slot_head)
 					//	custom_equip_leftovers += thing
 					//else
+					if(G.slot == slot_wear_suit && H.client?.prefs?.no_jacket)
+						continue
 					/* CHOMPRemove Start, remove RS No shoes
 					if(G.slot == slot_shoes && H.client?.prefs?.shoe_hater)	//RS ADD
 						continue
@@ -468,6 +470,8 @@ var/global/datum/controller/occupations/job_master
 		// If some custom items could not be equipped before, try again now.
 		for(var/thing in custom_equip_leftovers)
 			var/datum/gear/G = gear_datums[thing]
+			if(G.slot == slot_wear_suit && H.client?.prefs?.no_jacket)
+				continue
 			/* CHOMPRemove Start, remove RS No shoes
 			if(G.slot == slot_shoes && H.client?.prefs?.shoe_hater)	//RS ADD
 				continue
@@ -682,8 +686,8 @@ var/global/datum/controller/occupations/job_master
 	//CHOMPEdit -  Remove fail_deadly addition on offmap_spawn
 
 	//Spawn them at their preferred one
-	if(C && C.prefs.spawnpoint)
-		if(C.prefs.spawnpoint == "Vorespawn - Prey")
+	if(C && C.prefs.read_preference(/datum/preference/choiced/living/spawnpoint))
+		if(C.prefs.read_preference(/datum/preference/choiced/living/spawnpoint) == "Vorespawn - Prey")
 			var/list/preds = list()
 			var/list/pred_names = list() //This is cringe
 			for(var/client/V in GLOB.clients)
@@ -700,7 +704,7 @@ var/global/datum/controller/occupations/job_master
 				pred_names += M.real_name //very cringe
 
 			if(preds.len)
-				var/pred_name = input(C, "Choose a Predator.", "Pred Spawnpoint") as null|anything in pred_names
+				var/pred_name = tgui_input_list(C, "Choose a Predator.", "Pred Spawnpoint", pred_names)
 				if(!pred_name)
 					return
 				var/index = pred_names.Find(pred_name)
@@ -714,19 +718,19 @@ var/global/datum/controller/occupations/job_master
 						continue
 					//CHOMPAdd End
 					available_bellies += Y
-				var/backup = alert(C, "Do you want a mind backup?", "Confirm", "Yes", "No")
+				var/backup = tgui_alert(C, "Do you want a mind backup?", "Confirm", list("Yes", "No"))
 				if(backup == "Yes")
 					backup = 1
-				vore_spawn_gut = input(C, "Choose a Belly.", "Belly Spawnpoint") as null|anything in available_bellies
+				vore_spawn_gut = tgui_input_list(C, "Choose a Belly.", "Belly Spawnpoint", available_bellies)
 				if(!vore_spawn_gut)
 					return
 				//CHOMPAdd Start
 				if(vore_spawn_gut.vorespawn_absorbed & VS_FLAG_ABSORB_YES)
 					absorb_choice = TRUE
 					if(vore_spawn_gut.vorespawn_absorbed & VS_FLAG_ABSORB_PREY)
-						if(alert(C, "Do you want to start absorbed into [pred]'s [vore_spawn_gut]?", "Confirm", "Yes", "No") != "Yes")
+						if(tgui_alert(C, "Do you want to start absorbed into [pred]'s [vore_spawn_gut]?", "Confirm", list("Yes", "No")) != "Yes")
 							absorb_choice = FALSE
-					else if(alert(C, "[pred]'s [vore_spawn_gut] will start with you absorbed. Continue?", "Confirm", "Yes", "No") != "Yes")
+					else if(tgui_alert(C, "[pred]'s [vore_spawn_gut] will start with you absorbed. Continue?", "Confirm", list("Yes", "No")) != "Yes")
 						return
 				//CHOMPAdd End
 				to_chat(C, span_boldwarning("[pred] has received your spawn request. Please wait."))
@@ -747,9 +751,9 @@ var/global/datum/controller/occupations/job_master
 				else
 					//CHOMPEdit Start
 					if(absorb_choice)
-						confirm = alert(pred, "[C.prefs.real_name] is attempting to spawn absorbed as your [vore_spawn_gut]. Let them?", "Confirm", "No", "Yes")
+						confirm = tgui_alert(pred, "[C.prefs.real_name] is attempting to spawn absorbed as your [vore_spawn_gut]. Let them?", "Confirm", list("No", "Yes"))
 					else
-						confirm = alert(pred, "[C.prefs.real_name] is attempting to spawn into your [vore_spawn_gut]. Let them?", "Confirm", "No", "Yes")
+						confirm = tgui_alert(pred, "[C.prefs.real_name] is attempting to spawn into your [vore_spawn_gut]. Let them?", "Confirm", list("No", "Yes"))
 					//CHOMPEdit End
 				if(confirm != "Yes")
 					to_chat(C, span_warning("[pred] has declined your spawn request."))
@@ -778,8 +782,8 @@ var/global/datum/controller/occupations/job_master
 			else
 				to_chat(C, span_warning("No predators were available to accept you."))
 				return
-			spawnpos = spawntypes[C.prefs.spawnpoint]
-		if(C.prefs.spawnpoint == "Vorespawn - Pred") //Same as above, but in reverse!
+			spawnpos = spawntypes[C.prefs.read_preference(/datum/preference/choiced/living/spawnpoint)]
+		if(C.prefs.read_preference(/datum/preference/choiced/living/spawnpoint) == "Vorespawn - Pred") //Same as above, but in reverse!
 			var/list/preys = list()
 			var/list/prey_names = list() //This is still cringe
 			for(var/client/V in GLOB.clients)
@@ -795,7 +799,7 @@ var/global/datum/controller/occupations/job_master
 				preys += M
 				prey_names += M.real_name
 			if(preys.len)
-				var/prey_name = input(C, "Choose a Prey to spawn nom.", "Prey Spawnpoint") as null|anything in prey_names
+				var/prey_name = tgui_input_list(C, "Choose a Prey to spawn nom.", "Prey Spawnpoint", prey_names)
 				if(!prey_name)
 					return
 				var/index = prey_names.Find(prey_name)
@@ -805,7 +809,7 @@ var/global/datum/controller/occupations/job_master
 				var/datum/vore_preferences/P = C.prefs_vr
 				for(var/Y in P.belly_prefs)
 					available_bellies += Y["name"]
-				vore_spawn_gut = input(C, "Choose your Belly.", "Belly Spawnpoint") as null|anything in available_bellies
+				vore_spawn_gut = tgui_input_list(C, "Choose your Belly.", "Belly Spawnpoint", available_bellies)
 				if(!vore_spawn_gut)
 					return
 				//CHOMPAdd Start
@@ -830,9 +834,9 @@ var/global/datum/controller/occupations/job_master
 				else
 					//CHOMPEdit Start
 					if(absorb_choice)
-						confirm = alert(prey, "[C.prefs.real_name] is attempting to televore and instantly absorb you with their [vore_spawn_gut]. Let them?", "Confirm", "No", "Yes")
+						confirm = tgui_alert(prey, "[C.prefs.real_name] is attempting to televore and instantly absorb you with their [vore_spawn_gut]. Let them?", "Confirm", list("No", "Yes"))
 					else
-						confirm = alert(prey, "[C.prefs.real_name] is attempting to televore you into their [vore_spawn_gut]. Let them?", "Confirm", "No", "Yes")
+						confirm = tgui_alert(prey, "[C.prefs.real_name] is attempting to televore you into their [vore_spawn_gut]. Let them?", "Confirm", list("No", "Yes"))
 					//CHOMPEdit End
 				if(confirm != "Yes")
 					to_chat(C, span_warning("[prey] has declined your spawn request."))
@@ -855,7 +859,7 @@ var/global/datum/controller/occupations/job_master
 				to_chat(C, span_warning("No prey were available to accept you."))
 				return
 		//CHOMPEdit - Item TF spawnpoints!
-		else if(C.prefs.spawnpoint == "Item TF spawn")
+		else if(C.prefs.read_preference(/datum/preference/choiced/living/spawnpoint) == "Item TF spawn")
 			var/list/items = list()
 			var/list/item_names = list()
 			var/list/carriers = list()
@@ -903,10 +907,10 @@ var/global/datum/controller/occupations/job_master
 					else
 						item_names += "[I.name] (\a [initial(I.name)] at [I.loc.name])"
 			if(LAZYLEN(items))
-				var/backup = alert(C, "Do you want a mind backup?", "Confirm", "Yes", "No")
+				var/backup = tgui_alert(C, "Do you want a mind backup?", "Confirm", list("Yes", "No"))
 				if(backup == "Yes")
 					backup = 1
-				var/item_name = input(C, "Choose an Item to spawn as.", "Item TF Spawnpoint") as null|anything in item_names
+				var/item_name = tgui_input_list(C, "Choose an Item to spawn as.", "Item TF Spawnpoint", item_names)
 				if(!item_name)
 					return
 				var/index = item_names.Find(item_name)
@@ -917,7 +921,7 @@ var/global/datum/controller/occupations/job_master
 					to_chat(C, "<b><span class='warning'>[carrier] has received your spawn request. Please wait.</span></b>")
 					log_and_message_admins("[key_name(C)] has requested to item spawn into [key_name(carrier)]'s possession")
 
-					var/confirm = alert(carrier, "[C.prefs.real_name] is attempting to join as the [item_name] in your possession.", "Confirm", "No", "Yes")
+					var/confirm = tgui_alert(carrier, "[C.prefs.real_name] is attempting to join as the [item_name] in your possession.", "Confirm", list("No", "Yes"))
 					if(confirm != "Yes")
 						to_chat(C, span_warning("[carrier] has declined your spawn request."))
 						var/message = sanitizeSafe(input(carrier,"Do you want to leave them a message?")as text|null)
@@ -938,7 +942,7 @@ var/global/datum/controller/occupations/job_master
 					if(backup)
 						addtimer(CALLBACK(src, PROC_REF(m_backup_client), C), 5 SECONDS)
 				else
-					var/confirm = alert(C, "\The [item.name] is currently not in any character's possession! Do you still want to spawn as it?", "Confirm", "No", "Yes")
+					var/confirm = tgui_alert(C, "\The [item.name] is currently not in any character's possession! Do you still want to spawn as it?", "Confirm", list("No", "Yes"))
 					if(confirm != "Yes")
 						return
 					log_and_message_admins("[key_name(C)] has item spawned into \a [item.name] that was not held by anyone")
@@ -948,7 +952,7 @@ var/global/datum/controller/occupations/job_master
 				if(istype(item, /obj/item/capture_crystal))
 					var/obj/item/capture_crystal/cryst = item
 					if(cryst.spawn_mob_type)
-						var/confirm = alert(C, "Do you want to spawn with your slot's vore organs and prefs?", "Confirm", "No", "Yes")
+						var/confirm = tgui_alert(C, "Do you want to spawn with your slot's vore organs and prefs?", "Confirm", list("No", "Yes"))
 						if(confirm == "Yes")
 							vorgans = TRUE
 			else
@@ -956,15 +960,15 @@ var/global/datum/controller/occupations/job_master
 				return
 		//CHOMPEdit End
 		else
-			if(!(C.prefs.spawnpoint in using_map.allowed_spawns))
+			if(!(C.prefs.read_preference(/datum/preference/choiced/living/spawnpoint) in using_map.allowed_spawns))
 				if(fail_deadly)
 					to_chat(C, span_warning("Your chosen spawnpoint is unavailable for this map and your job requires a specific spawnpoint. Please correct your spawn point choice."))
 					return
 				else
-					to_chat(C, span_warning("Your chosen spawnpoint ([C.prefs.spawnpoint]) is unavailable for the current map. Spawning you at one of the enabled spawn points instead."))
+					to_chat(C, span_warning("Your chosen spawnpoint ([C.prefs.read_preference(/datum/preference/choiced/living/spawnpoint)]) is unavailable for the current map. Spawning you at one of the enabled spawn points instead."))
 					spawnpos = null
 			else
-				spawnpos = spawntypes[C.prefs.spawnpoint]
+				spawnpos = spawntypes[C.prefs.read_preference(/datum/preference/choiced/living/spawnpoint)]
 
 	//We will return a list key'd by "turf" and "msg"
 	. = list("turf","msg", "voreny", "prey", "itemtf", "vorgans", "carrier") //CHOMPEdit - Item TF spawnpoints, spawn as mob

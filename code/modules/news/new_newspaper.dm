@@ -46,7 +46,7 @@ obj/item/newspaper/attack_self(mob/user)
 					dat+="</ul>"
 				if(scribble_page==curr_page)
 					dat+="<BR><I>There is a small scribble near the end of this page... It reads: \"[scribble]\"</I>"
-				dat+= "<HR><DIV STYLE='float:right;'><A href='?src=\ref[src];next_page=1'>Next Page</A></DIV> <div style='float:left;'><A href='?src=\ref[human_user];mach_close=newspaper_main'>Done reading</A></DIV>"
+				dat+= "<HR><DIV STYLE='float:right;'><A href='byond://?src=\ref[src];next_page=1'>Next Page</A></DIV> <div style='float:left;'><A href='byond://?src=\ref[human_user];mach_close=newspaper_main'>Done reading</A></DIV>"
 			if(1) // X channel pages inbetween.
 				for(var/datum/feed_channel/NP in news_content)
 					pages++ //Let's get it right again.
@@ -70,7 +70,7 @@ obj/item/newspaper/attack_self(mob/user)
 						dat+="</ul>"
 				if(scribble_page==curr_page)
 					dat+="<BR><I>There is a small scribble near the end of this page... It reads: \"[scribble]\"</I>"
-				dat+= "<BR><HR><DIV STYLE='float:left;'><A href='?src=\ref[src];prev_page=1'>Previous Page</A></DIV> <DIV STYLE='float:right;'><A href='?src=\ref[src];next_page=1'>Next Page</A></DIV>"
+				dat+= "<BR><HR><DIV STYLE='float:left;'><A href='byond://?src=\ref[src];prev_page=1'>Previous Page</A></DIV> <DIV STYLE='float:right;'><A href='byond://?src=\ref[src];next_page=1'>Next Page</A></DIV>"
 			if(2) //Last page
 				for(var/datum/feed_channel/NP in news_content)
 					pages++
@@ -88,12 +88,12 @@ obj/item/newspaper/attack_self(mob/user)
 					dat+=span_italics("Apart from some uninteresting Classified ads, there's nothing on this page...")
 				if(scribble_page==curr_page)
 					dat+="<BR><I>There is a small scribble near the end of this page... It reads: \"[scribble]\"</I>"
-				dat+= "<HR><DIV STYLE='float:left;'><A href='?src=\ref[src];prev_page=1'>Previous Page</A></DIV>"
+				dat+= "<HR><DIV STYLE='float:left;'><A href='byond://?src=\ref[src];prev_page=1'>Previous Page</A></DIV>"
 			else
 				dat+="I'm sorry to break your immersion. This shit's bugged. Report this bug to Agouri, polyxenitopalidou@gmail.com"
 
 		dat+="<BR><HR><div align='center'>[curr_page+1]</div>"
-		human_user << browse(dat, "window=newspaper_main;size=300x400")
+		human_user << browse("<html>[dat]</html>", "window=newspaper_main;size=300x400")
 		onclose(human_user, "newspaper_main")
 	else
 		to_chat(user, span_infoplain("The paper is full of intelligible symbols!"))
@@ -138,7 +138,7 @@ obj/item/newspaper/attackby(obj/item/W as obj, mob/user)
 			s = sanitize(s)
 			if(!s)
 				return
-			if(!in_range(src, usr) && src.loc != usr)
+			if(!in_range(src, user) && loc != user)
 				return
 			scribble_page = curr_page
 			scribble = s

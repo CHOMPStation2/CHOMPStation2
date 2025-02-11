@@ -53,7 +53,7 @@
 /mob/living/simple_mob/animal/passive/fox/init_vore()
 	if(!voremob_loaded)
 		return
-	.=..()
+	. = ..()
 	var/obj/belly/B = vore_selected
 	B.name = "Stomach"
 	B.desc = "Slick foxguts. Cute on the outside, slimy on the inside!"
@@ -87,7 +87,7 @@
 	var/mob/living/carbon/H = over_object
 	if(!istype(H) || !Adjacent(H)) return ..()
 
-	if(H.a_intent == "help")
+	if(H.a_intent == I_HELP)
 		get_scooped(H)
 		return
 	else
@@ -118,7 +118,7 @@
 		return // Fuck off ghosts.
 
 	if(friend)
-		if(friend == usr)
+		if(friend == L)
 			to_chat(L, span_notice("\The [src] is already your friend!"))
 			return
 		else
@@ -201,7 +201,7 @@
 /mob/living/simple_mob/animal/passive/fox/renault/init_vore()
 	if(!voremob_loaded)
 		return
-	.=..()
+	. = ..()
 	var/obj/belly/B = vore_selected
 	B.name = "Stomach"
 	B.desc = "Slick foxguts. They seem somehow more regal than perhaps other foxes!"

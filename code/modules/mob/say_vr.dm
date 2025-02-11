@@ -4,13 +4,9 @@
 
 /mob/verb/me_verb_subtle(message as message) //This would normally go in say.dm //CHOMPEdit
 	set name = "Subtle"
-	// set category = "IC.Subtle" //CHOMPEdit
 	set desc = "Emote to nearby people (and your pred/prey)"
 	set hidden = 1
 
-	if(say_disabled)	//This is here to try to identify lag problems
-		to_chat(usr, "Speech is currently admin-disabled.")
-		return
 	if(forced_psay)
 		pme(message)
 		return
@@ -21,18 +17,14 @@
 
 	client?.stop_thinking()
 	if(use_me)
-		usr.emote_vr("me",4,message)
+		emote_vr("me",4,message)
 	else
-		usr.emote_vr(message)
+		emote_vr(message)
 
 /mob/verb/me_verb_subtle_custom(message as message) // Literally same as above but with mode_selection set to true //CHOMPEdit
 	set name = "Subtle (Custom)"
-	// set category = "IC.Subtle" //CHOMPEdit
 	set desc = "Emote to nearby people, with ability to choose which specific portion of people you wish to target."
 
-	if(say_disabled)	//This is here to try to identify lag problems
-		to_chat(usr, "Speech is currently admin-disabled.")
-		return
 	if(forced_psay)
 		pme(message)
 		return
@@ -43,9 +35,9 @@
 
 	client?.stop_thinking()
 	if(use_me)
-		usr.emote_vr("me",4,message,TRUE)
+		emote_vr("me",4,message,TRUE)
 	else
-		usr.emote_vr(message)
+		emote_vr(message)
 
 /mob/proc/custom_emote_vr(var/m_type=1,var/message = null,var/mode_selection = FALSE) //This would normally go in emote.dm
 	if(stat || !use_me && usr == src)
@@ -203,8 +195,8 @@
 				continue
 			if(src.client && M && !(get_z(src) == get_z(M)))
 				message = span_multizsay("[message]")
-			if(isobserver(M) && (!(M.client?.prefs?.read_preference(/datum/preference/toggle/ghost_see_whisubtle) || (isbelly(M.loc) && src == M.loc:owner)) || \
-			!client?.prefs?.read_preference(/datum/preference/toggle/whisubtle_vis) && !M.client?.holder)) //CHOMPEdit - Added the belly check so that ghosts in bellies can still see their pred's messages.
+			if(isobserver(M) && (!M.read_preference(/datum/preference/toggle/ghost_see_whisubtle) || \
+			(!(read_preference(/datum/preference/toggle/whisubtle_vis) || (isbelly(M.loc) && src == M.loc:owner)) && !M.client?.holder)))
 				spawn(0)
 					M.show_message(undisplayed_message, 2)
 			else
@@ -260,8 +252,7 @@
 
 ///// PSAY /////
 
-/mob/verb/psay(message as text) //CHOMPEdit
-	// set category = "IC.Subtle" //CHOMPEdit
+/mob/verb/psay(message as text)
 	set name = "Psay"
 	set desc = "Talk to people affected by complete absorbed or dominate predator/prey."
 
@@ -270,7 +261,7 @@
 			to_chat(src, span_warning("You cannot speak in IC (muted)."))
 			return
 	if (!message)
-		message = tgui_input_text(usr, "Type a message to say.","Psay")
+		message = tgui_input_text(src, "Type a message to say.","Psay")
 	message = sanitize_or_reflect(message,src)
 	if (!message)
 		return
@@ -353,7 +344,7 @@
 				if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
 					M << sound(pick(voice_sounds_list), volume = 25)
 		for (var/mob/G in player_list)
-			if (istype(G, /mob/new_player))
+			if (isnewplayer(G))
 				continue
 			else if(isobserver(G) &&  G.client?.prefs?.read_preference(/datum/preference/toggle/ghost_ears) && \
 			G.client?.prefs?.read_preference(/datum/preference/toggle/ghost_see_whisubtle))
@@ -366,8 +357,7 @@
 
 ///// PME /////
 
-/mob/verb/pme(message as message) //CHOMPEdit
-	// set category = "IC.Subtle" //CHOMPEdit
+/mob/verb/pme(message as message)
 	set name = "Pme"
 	set desc = "Emote to people affected by complete absorbed or dominate predator/prey."
 
@@ -376,7 +366,7 @@
 			to_chat(src, span_warning("You cannot speak in IC (muted)."))
 			return
 	if (!message)
-		message = tgui_input_text(usr, "Type a message to emote.","Pme")
+		message = tgui_input_text(src, "Type a message to emote.","Pme")
 	message = sanitize_or_reflect(message,src)
 	if (!message)
 		return
@@ -459,7 +449,7 @@
 				if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
 					M << sound(pick(voice_sounds_list), volume = 25)
 		for (var/mob/G in player_list)
-			if (istype(G, /mob/new_player))
+			if (isnewplayer(G))
 				continue
 			else if(isobserver(G) && G.client?.prefs?.read_preference(/datum/preference/toggle/ghost_ears) && \
 			G.client?.prefs?.read_preference(/datum/preference/toggle/ghost_see_whisubtle))
@@ -470,8 +460,7 @@
 		M.forced_psay = FALSE
 		M.me_verb(message)
 
-/mob/living/verb/player_narrate(message as message) //CHOMPEdit
-	// set category = "IC.Chat" //CHOMPEdit
+/mob/living/verb/player_narrate(message as message)
 	set name = "Narrate (Player)"
 	set desc = "Narrate an action or event! An alternative to emoting, for when your emote shouldn't start with your name!"
 
@@ -480,7 +469,7 @@
 			to_chat(src, span_warning("You cannot speak in IC (muted)."))
 			return
 	if(!message)
-		message = tgui_input_text(usr, "Type a message to narrate.","Narrate")
+		message = tgui_input_text(src, "Type a message to narrate.","Narrate")
 	message = sanitize_or_reflect(message,src)
 	if(!message)
 		return

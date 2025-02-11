@@ -1,4 +1,3 @@
-//CHOMPEdit Begin
 /atom/movable/proc/get_mob()
 	if(buckled_mobs) return buckled_mobs.Copy()
 
@@ -12,7 +11,7 @@
 	return src
 
 /mob/living/bot/mulebot/get_mob()
-	if(load && istype(load, /mob/living))
+	if(load && isliving(load))
 		return list(src, load)
 	return src
 
@@ -25,6 +24,8 @@
 
 	return mobs
 
+/// This gets a list of mobs ALL around us as if we had xray vision and can see through walls.
+/// Currently only used in portable_turret.dm if you wish to see an example of how to use it.
 /proc/mobs_in_xray_view(range, source)
 	var/list/mobs = list()
 	for(var/atom/movable/AM in orange(range, source))
@@ -33,7 +34,6 @@
 			mobs += M
 
 	return mobs
-//CHOMPEdit End
 /proc/random_hair_style(gender, species = SPECIES_HUMAN)
 	var/h_style = "Bald"
 
@@ -182,7 +182,7 @@ Proc for attack log creation, because really why not
 
 //checks whether this item is a module of the robot it is located in.
 /proc/is_robot_module(var/obj/item/thing)
-	if (!thing || !istype(thing.loc, /mob/living/silicon/robot))
+	if (!thing || !isrobot(thing.loc))
 		return 0
 	var/mob/living/silicon/robot/R = thing.loc
 	return (thing in R.module.modules)
@@ -248,7 +248,7 @@ Proc for attack log creation, because really why not
 			. = FALSE
 			break
 
-		if(target_zone && user.zone_sel.selecting != target_zone)
+		if(target_zone && user.zone_sel?.selecting != target_zone)
 			. = FALSE
 			break
 
@@ -374,7 +374,7 @@ Proc for attack log creation, because really why not
 		cached_character_icons[cachekey] = .
 
 /proc/not_has_ooc_text(mob/user)
-	if (CONFIG_GET(flag/allow_metadata) && (!user.client?.prefs?.metadata || length(user.client.prefs.metadata) < 15))
+	if (CONFIG_GET(flag/allow_metadata) && (!user.client?.prefs?.read_preference(/datum/preference/text/living/ooc_notes) || length(user.client.prefs.read_preference(/datum/preference/text/living/ooc_notes)) < 15))
 		to_chat(user, span_warning("Please set informative OOC notes related to RP/ERP preferences. Set them using the 'OOC Notes' button on the 'General' tab in character setup."))
 		return TRUE
 	return FALSE

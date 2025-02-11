@@ -37,7 +37,7 @@
 
 /obj/item/sign/attackby(obj/item/tool as obj, mob/user as mob)	//construction
 	if(tool.has_tool_quality(TOOL_SCREWDRIVER) && isturf(user.loc))
-		var/direction = tgui_input_list(usr, "In which direction?", "Select direction.", list("North", "East", "South", "West", "Cancel"))
+		var/direction = tgui_input_list(user, "In which direction?", "Select direction.", list("North", "East", "South", "West", "Cancel"))
 		if(direction == "Cancel") return
 		var/target_type = original_type || /obj/structure/sign
 		var/obj/structure/sign/S = new target_type(user.loc)
@@ -1645,7 +1645,7 @@
 	qdel(src)
 
 /obj/structure/sign/flag/attack_hand(mob/user)
-	if(alert("Do you want to rip \the [src] from its place?","You think...","Yes","No") == "Yes")
+	if(tgui_alert(user, "Do you want to rip \the [src] from its place?","You think...",list("Yes","No")) == "Yes")
 		if(!Adjacent(user)) //Cannot bring up dialogue and walk away
 			return FALSE
 		visible_message(span_warning("\The [user] rips \the [src] in a single, decisive motion!" ))

@@ -33,11 +33,11 @@
 	silicon_mob_list |= src
 	..()
 	add_language(LANGUAGE_GALCOM)
-	apply_default_language(GLOB.all_languages[LANGUAGE_GALCOM]) //CHOMPEdit
+	apply_default_language(GLOB.all_languages[LANGUAGE_GALCOM])
 	init_id()
 	init_subsystems()
 
-	AddElement(/datum/element/footstep, FOOTSTEP_MOB_SHOE, 1, -6) // CHOMPAdd
+	AddElement(/datum/element/footstep, FOOTSTEP_MOB_SHOE, 1, -6)
 
 /mob/living/silicon/Destroy()
 	silicon_mob_list -= src
@@ -262,14 +262,14 @@
 	set desc = "Sets a description which will be shown when someone examines you."
 	set category = "IC.Settings"
 
-	pose =  strip_html_simple(tgui_input_text(usr, "This is [src]. It is...", "Pose", null))
+	pose =  strip_html_simple(tgui_input_text(src, "This is [src]. It is...", "Pose", null))
 
 /mob/living/silicon/verb/set_flavor()
 	set name = "Set Flavour Text"
 	set desc = "Sets an extended description of your character's features."
 	set category = "IC.Settings"
 
-	var/new_flavortext = strip_html_simple(tgui_input_text(usr, "Please enter your new flavour text.", "Flavour text", flavor_text, multiline = TRUE))
+	var/new_flavortext = strip_html_simple(tgui_input_text(src, "Please enter your new flavour text.", "Flavour text", flavor_text, multiline = TRUE))
 	if(new_flavortext)
 		flavor_text = new_flavortext
 
@@ -353,7 +353,7 @@
 					to_chat(src, "\The [A.alarm_name()].")
 
 		if(alarm_raised)
-			to_chat(src, span_filter_notice("<A HREF=?src=\ref[src];showalerts=1>\[Show Alerts\]</A>"))
+			to_chat(src, span_filter_notice("<A HREF='byond://?src=\ref[src];showalerts=1'>\[Show Alerts\]</A>"))
 
 		for(var/datum/alarm_handler/AH in queued_alarms)
 			var/list/alarms = queued_alarms[AH]
@@ -365,7 +365,7 @@
 /mob/living/silicon/ai/raised_alarm(var/datum/alarm/A)
 	var/cameratext = ""
 	for(var/obj/machinery/camera/C in A.cameras())
-		cameratext += "[(cameratext == "")? "" : "|"]<A HREF=?src=\ref[src];switchcamera=\ref[C]>[C.c_tag]</A>"
+		cameratext += "[(cameratext == "")? "" : "|"]<A HREF='byond://?src=\ref[src];switchcamera=\ref[C]'>[C.c_tag]</A>"
 	to_chat(src, span_filter_warning("[A.alarm_name()]! ([(cameratext)? cameratext : "No Camera"])"))
 
 

@@ -9,7 +9,7 @@
 		return FALSE
 
 	if((get_area(src).flags & PHASE_SHIELDED))	//CHOMPAdd - Mapping tools to control phasing
-		to_chat(src,"<span class='warning'>This area is preventing you from phasing!</span>")
+		to_chat(src,span_warning("This area is preventing you from phasing!"))
 		return FALSE
 
 	if(shift_state && shift_state == AB_SHIFT_ACTIVE)

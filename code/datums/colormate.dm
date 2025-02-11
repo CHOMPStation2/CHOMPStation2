@@ -43,7 +43,7 @@
 /datum/ColorMate/tgui_state(mob/user)
 	return GLOB.tgui_conscious_state
 
-/datum/ColorMate/tgui_data()
+/datum/ColorMate/tgui_data(mob/user)
 	. = list()
 	.["activemode"] = active_mode
 	.["matrixcolors"] = list(
@@ -69,7 +69,7 @@
 		.["item"] = list()
 		.["item"]["name"] = inserted.name
 		.["item"]["sprite"] = icon2base64(get_flat_icon(inserted,dir=SOUTH,no_anim=TRUE))
-		.["item"]["preview"] = icon2base64(build_preview())
+		.["item"]["preview"] = icon2base64(build_preview(user))
 	else
 		.["item"] = null
 
@@ -83,17 +83,17 @@
 				active_mode = text2num(params["mode"])
 				return TRUE
 			if("choose_color")
-				var/chosen_color = input(inserted, "Choose a color: ", "ColorMate colour picking", activecolor) as color|null
+				var/chosen_color = tgui_color_picker(inserted, "Choose a color: ", "ColorMate colour picking", activecolor)
 				if(chosen_color)
 					activecolor = chosen_color
 				return TRUE
 			if("paint")
 				do_paint(inserted)
 				temp = "Painted Successfully!"
-				if(istype(inserted, /mob/living/simple_mob))
+				if(isanimal(inserted))
 					var/mob/living/simple_mob/M = inserted
 					M.has_recoloured = TRUE
-				if(istype(inserted, /mob/living/silicon/robot))
+				if(isrobot(inserted))
 					var/mob/living/silicon/robot/R = inserted
 					R.has_recoloured = TRUE
 				Destroy()
@@ -159,7 +159,7 @@
 	return TRUE
 
 /// Produces the preview image of the item, used in the UI, the way the color is not stacking is a sin.
-/datum/ColorMate/proc/build_preview()
+/datum/ColorMate/proc/build_preview(mob/user)
 	if(inserted) //sanity
 		var/list/cm
 		switch(active_mode)
@@ -178,17 +178,17 @@
 					text2num(color_matrix_last[11]),
 					text2num(color_matrix_last[12]),
 				)
-				if(!check_valid_color(cm, usr))
+				if(!check_valid_color(cm, user))
 					return get_flat_icon(inserted, dir=SOUTH, no_anim=TRUE)
 
 			if(COLORMATE_TINT)
-				if(!check_valid_color(activecolor, usr))
+				if(!check_valid_color(activecolor, user))
 					return get_flat_icon(inserted, dir=SOUTH, no_anim=TRUE)
 
 			if(COLORMATE_HSV)
 				cm = color_matrix_hsv(build_hue, build_sat, build_val)
 				color_matrix_last = cm
-				if(!check_valid_color(cm, usr))
+				if(!check_valid_color(cm, user))
 					return get_flat_icon(inserted, dir=SOUTH, no_anim=TRUE)
 
 		var/cur_color = inserted.color

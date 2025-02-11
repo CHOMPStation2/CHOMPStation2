@@ -17,11 +17,11 @@
 		return
 	if(isliving(AM))
 		var/mob/living/L = AM
-		if(L.m_intent == "run")
+		if(L.m_intent == I_RUN)
 			L.visible_message(
-				"<span class='danger'>[L] steps on \the [src].</span>",
-				"<span class='danger'>You step on \the [src], you poor bastard!</span>",
-				"<b>You hear the sound of immeasurable suffering!</b>"
+				span_danger("[L] steps on \the [src]."),
+				span_danger("You step on \the [src], you poor bastard!"),
+				span_hear(span_bold("You hear the sound of immeasurable suffering!"))
 				)
 			L.adjustHalLoss(100)
 			playsound(src, 'sound/misc/legodeath.ogg', 50, 1)
@@ -47,11 +47,11 @@
 		return
 	if(isliving(AM))
 		var/mob/living/L = AM
-		if(L.m_intent == "run")
+		if(L.m_intent == I_RUN)
 			L.visible_message(
-				"<span class='danger'>[L] steps on \the [src].</span>",
-				"<span class='danger'>You step on \the [src], you poor bastard!</span>",
-				"<b>You hear the sound of immeasurable suffering!</b>"
+				span_danger("[L] steps on \the [src]."),
+				span_danger("You step on \the [src], you poor bastard!"),
+				span_hear(span_bold("You hear the sound of immeasurable suffering!"))
 				)
 			L.gib()
 			playsound(src, 'sound/misc/legodeath.ogg', 50, 1)

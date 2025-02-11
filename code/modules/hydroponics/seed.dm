@@ -254,11 +254,11 @@
 				var/no_los
 				var/turf/last_turf = origin_turf
 				for(var/turf/target_turf in getline(origin_turf,neighbor))
-					if(air_master.air_blocked(last_turf, target_turf))
+					if(SSair.air_blocked(last_turf, target_turf))
 						no_los = 1
 						break
 					last_turf = target_turf
-				if(!no_los && air_master.air_blocked(origin_turf, neighbor))
+				if(!no_los && SSair.air_blocked(origin_turf, neighbor))
 					no_los = 1
 				if(no_los)
 					closed_turfs |= neighbor
@@ -274,7 +274,7 @@
 		qdel(thrown)
 		return
 
-	if(istype(target,/mob/living))
+	if(isliving(target))
 		splatted = apply_special_effect(target,thrown)
 	else if(istype(target,/turf))
 		splatted = 1
@@ -445,29 +445,29 @@
 
 	if(prob(5))
 		consume_gasses = list()
-		var/gas = pick("oxygen","nitrogen","phoron","carbon_dioxide")
+		var/gas = pick(GAS_O2,GAS_N2,GAS_PHORON,GAS_CO2)
 		consume_gasses[gas] = rand(3,9)
 
 	if(prob(5))
 		exude_gasses = list()
-		var/gas = pick("oxygen","nitrogen","phoron","carbon_dioxide")
+		var/gas = pick(GAS_O2,GAS_N2,GAS_PHORON,GAS_CO2)
 		exude_gasses[gas] = rand(3,9)
 
 	chems = list()
 	if(prob(80))
-		chems["nutriment"] = list(rand(1,10),rand(10,20))
+		chems[REAGENT_ID_NUTRIMENT] = list(rand(1,10),rand(10,20))
 
 	var/additional_chems = rand(0,5)
 
 	if(additional_chems)
 		// VOREStation Edit Start: Modified exclusion list
 		var/list/banned_chems = list(
-			"adminordrazine",
-			"nutriment",
-			"macrocillin",
-			"microcillin",
-			"normalcillin",
-			"magicdust"
+			REAGENT_ID_ADMINORDRAZINE,
+			REAGENT_ID_NUTRIMENT,
+			REAGENT_ID_MACROCILLIN,
+			REAGENT_ID_MICROCILLIN,
+			REAGENT_ID_NORMALCILLIN,
+			REAGENT_ID_MAGICDUST
 			)
 		// VOREStation Edit End: Modified exclusion list
 
@@ -853,7 +853,7 @@
 				product.force = 1
 
 			//Handle spawning in living, mobile products (like dionaea).
-			if(istype(product,/mob/living))
+			if(isliving(product))
 				product.visible_message(span_notice("The pod disgorges [product]!"))
 				handle_living_product(product)
 

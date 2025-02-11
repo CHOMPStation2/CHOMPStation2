@@ -186,14 +186,14 @@ GLOBAL_VAR_INIT(dynamic_sector_master, null)
 		desc = initial(desc)
 
 	if(loaded)
-		var/confirm = alert(user, "Sever bluespace link? This location will become permanently inaccessible.", "Are you sure?", "No", "Yes")
+		var/confirm = tgui_alert(user, "Sever bluespace link? This location will become permanently inaccessible.", "Are you sure?", list("No", "Yes"))
 		if(confirm == "Yes")
 			if(is_empty(1)) // Dynamic POI's should only ever have 1 entry in map_z
 				destroy_poi(user) // Delete POI from dynamic z-level
 			else
 				to_chat(user, "Unable to sever link. Location likely contains living realspace entities.")
 	else
-		var/confirm = alert(user, "Transient subspace anomaly detected. Tether object to realspace?", "Stabilize anomaly?", "Yes", "No")
+		var/confirm = tgui_alert(user, "Transient subspace anomaly detected. Tether object to realspace?", "Stabilize anomaly?", list("Yes", "No"))
 		if(confirm == "Yes")
 			create_poi(user) // Load POI to dynamic z-level
 
@@ -224,17 +224,16 @@ GLOBAL_VAR_INIT(dynamic_sector_master, null)
 			map_sectors["[parent.map_z[i]]"] = src // Pass ownership of z-level to child, probably hacky and terribad, also mandatory for using forceMove() on shuttle landmarks
 			break // Terminate loop
 	if(!my_index) // No z-levels available
-		var/confirm = alert(user, "\[REDACTED\] matrix at capacity; a bluespace link must be permanently severed to stabilize this anomaly. Continue?", "Are you sure?", "No", "Yes")
-		if(confirm == "Yes")
-			my_index = parent.cull_child(user)
-			if(my_index)
-				parent.active_pois[my_index] = src
-				map_z[1] = parent.map_z[my_index]
-				map_sectors["[parent.map_z[my_index]]"] = src
-			else // Something went wrong, ideally due to all relevant z-levels containing players.
-				to_chat(user, "Unable to sever any bluespace link. All links likely contain living realspace entities.")
-				return
-		else
+		var/confirm = tgui_alert(user, "\[REDACTED\] matrix at capacity; a bluespace link must be permanently severed to stabilize this anomaly. Continue?", "Are you sure?", list("No", "Yes"))
+		if(confirm != "Yes")
+			return
+		my_index = parent.cull_child(user)
+		if(my_index)
+			parent.active_pois[my_index] = src
+			map_z[1] = parent.map_z[my_index]
+			map_sectors["[parent.map_z[my_index]]"] = src
+		else // Something went wrong, ideally due to all relevant z-levels containing players.
+			to_chat(user, "Unable to sever any bluespace link. All links likely contain living realspace entities.")
 			return
 
 	var/turf/T = locate(round(world.maxx/2), round(world.maxy/2), map_z[1]) // Find center turf, or near center for even-dimension maps.

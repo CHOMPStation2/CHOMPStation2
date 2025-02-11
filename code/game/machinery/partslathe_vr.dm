@@ -62,7 +62,7 @@
 	for(var/obj/item/stock_parts/matter_bin/M in component_parts)
 		mb_rating += M.rating
 	storage_capacity[MAT_STEEL] = mb_rating  * 16000
-	storage_capacity["glass"] = mb_rating  * 8000
+	storage_capacity[MAT_GLASS] = mb_rating  * 8000
 	var/T = 0
 	for(var/obj/item/stock_parts/manipulator/M in component_parts)
 		T += M.rating
@@ -86,7 +86,7 @@
 			flick("partslathe-lidopen", src)
 		icon_state = "partslathe-idle"
 
-/obj/machinery/partslathe/attackby(var/obj/item/O as obj, var/mob/user as mob)
+/obj/machinery/partslathe/attackby(var/obj/item/O, var/mob/user)
 	if(busy)
 		to_chat(user, span_notice("\The [src] is busy. Please wait for completion of previous operation."))
 		return 1
@@ -110,7 +110,7 @@
 		copy_board = O
 		O.forceMove(src)
 		user.visible_message("[user] inserts [O] into \the [src]'s circuit reader.", span_notice("You insert [O] into \the [src]'s circuit reader."))
-		updateUsrDialog()
+		updateUsrDialog(user)
 		return
 	if(try_load_materials(user, O))
 		return
@@ -136,7 +136,7 @@
 			count++
 		user.visible_message("[user] inserts [S.name] into \the [src].", span_notice("You insert [count] [S.name] into \the [src]."))
 		flick("partslathe-load-[S.material.name]", src)
-		updateUsrDialog()
+		updateUsrDialog(user)
 	else
 		to_chat(user, span_warning("\The [src] cannot hold more [S.name]."))
 	return 1
@@ -212,7 +212,7 @@
 	switch(material)
 		if(MAT_STEEL)
 			mattype = /obj/item/stack/material/steel
-		if("glass")
+		if(MAT_GLASS)
 			mattype = /obj/item/stack/material/glass
 		else
 			return
@@ -297,7 +297,7 @@
 	if(..())
 		return TRUE
 
-	add_fingerprint(usr)
+	add_fingerprint(ui.user)
 	switch(action)
 		// Queue management can be done even while busy
 		if("queue")
@@ -331,7 +331,7 @@
 			return TRUE
 
 	if(busy)
-		to_chat(usr, span_notice("[src] is busy. Please wait for completion of previous operation."))
+		to_chat(ui.user, span_notice("[src] is busy. Please wait for completion of previous operation."))
 		return
 
 	switch(action)

@@ -8,7 +8,7 @@
 	color = "#CC23FF"
 	slime_color = "purple"
 	coretype = /obj/item/slime_extract/purple
-	reagent_injected = "toxin"
+	reagent_injected = REAGENT_ID_TOXIN
 
 	description_info = "This slime spreads a toxin when it attacks.  A biosuit or other thick armor can protect from the toxic attack."
 	player_msg = "You <b>inject a harmful toxin</b> when attacking."
@@ -57,7 +57,7 @@
 	color = "#19FFFF"
 	slime_color = "blue"
 	coretype = /obj/item/slime_extract/blue
-	reagent_injected = "cryotoxin"
+	reagent_injected = REAGENT_ID_CRYOTOXIN
 	cold_resist = 0.50 // Not as strong as dark blue, which has immunity.
 
 	description_info = "The slime is resistant to the cold, and attacks from this slime can inject cryotoxin into you. \
@@ -173,7 +173,7 @@
 	color = "#660088"
 	slime_color = "dark purple"
 	coretype = /obj/item/slime_extract/dark_purple
-	reagent_injected = "phoron"
+	reagent_injected = REAGENT_ID_PHORON
 
 	description_info = "This slime applies phoron to enemies it attacks.  A biosuit or other thick armor can protect from the toxic attack.  \
 	If hit with a burning attack, it will erupt in flames."
@@ -190,29 +190,29 @@
 /mob/living/simple_mob/slime/xenobio/dark_purple/proc/ignite()
 	visible_message(span_critical("\The [src] erupts in an inferno!"))
 	for(var/turf/simulated/target_turf in view(2, src))
-		target_turf.assume_gas("phoron", 30, 1500+T0C)
+		target_turf.assume_gas(GAS_PHORON, 30, 1500+T0C)
 		spawn(0)
 			target_turf.hotspot_expose(1500+T0C, 400)
 	qdel(src)
 
 /mob/living/simple_mob/slime/xenobio/dark_purple/ex_act(severity)
-	log_and_message_admins("[src] ignited due to a chain reaction with an explosion.")
+	log_and_message_admins("ignited due to a chain reaction with an explosion.", src)
 	ignite()
 
 /mob/living/simple_mob/slime/xenobio/dark_purple/fire_act(datum/gas_mixture/air, temperature, volume)
-	log_and_message_admins("[src] ignited due to exposure to fire.")
+	log_and_message_admins("ignited due to exposure to fire.", src)
 	ignite()
 
 /mob/living/simple_mob/slime/xenobio/dark_purple/bullet_act(var/obj/item/projectile/P, var/def_zone)
 	if(P.damage_type && P.damage_type == BURN && P.damage) // Most bullets won't trigger the explosion, as a mercy towards Security.
-		log_and_message_admins("[src] ignited due to bring hit by a burning projectile[P.firer ? " by [key_name(P.firer)]" : ""].")
+		log_and_message_admins("ignited due to bring hit by a burning projectile[P.firer ? " by [key_name(P.firer)]" : ""].", src)
 		ignite()
 	else
 		..()
 
 /mob/living/simple_mob/slime/xenobio/dark_purple/attackby(var/obj/item/W, var/mob/user)
 	if(istype(W) && W.force && W.damtype == BURN)
-		log_and_message_admins("[src] ignited due to being hit with a burning weapon ([W]) by [key_name(user)].")
+		log_and_message_admins("ignited due to being hit with a burning weapon ([W]) by [key_name(user)].", src)
 		ignite()
 	else
 		..()
@@ -511,7 +511,7 @@
 	slime_color = "green"
 	coretype = /obj/item/slime_extract/green
 	glow_toggle = TRUE
-	reagent_injected = "radium"
+	reagent_injected = REAGENT_ID_RADIUM
 	var/rads = 25
 
 	description_info = "This slime will irradiate anything nearby passively, and will inject radium on attack.  \
@@ -656,29 +656,29 @@
 		say(pick("Sacrifice...!", "Sssss...", "Boom...!"))
 		set_AI_busy(TRUE)
 		sleep(2 SECONDS)
-		log_and_message_admins("[src] has suicide-bombed themselves while trying to kill \the [L].")
+		log_and_message_admins("has suicide-bombed themselves while trying to kill \the [L].", src)
 		explode()
 
 	return ..()
 
 /mob/living/simple_mob/slime/xenobio/oil/ex_act(severity)
-	log_and_message_admins("[src] exploded due to a chain reaction with another explosion.")
+	log_and_message_admins("exploded due to a chain reaction with another explosion.", src)
 	explode()
 
 /mob/living/simple_mob/slime/xenobio/oil/fire_act(datum/gas_mixture/air, temperature, volume)
-	log_and_message_admins("[src] exploded due to exposure to fire.")
+	log_and_message_admins("exploded due to exposure to fire.", src)
 	explode()
 
 /mob/living/simple_mob/slime/xenobio/oil/bullet_act(obj/item/projectile/P, def_zone)
 	if(P.damage_type && P.damage_type == BURN && P.damage) // Most bullets won't trigger the explosion, as a mercy towards Security.
-		log_and_message_admins("[src] exploded due to bring hit by a burning projectile[P.firer ? " by [key_name(P.firer)]" : ""].")
+		log_and_message_admins("exploded due to bring hit by a burning projectile[P.firer ? " by [key_name(P.firer)]" : ""].", src)
 		explode()
 	else
 		..()
 
 /mob/living/simple_mob/slime/xenobio/oil/attackby(obj/item/W, mob/living/user)
 	if(istype(W) && W.force && W.damtype == BURN)
-		log_and_message_admins("[src] exploded due to being hit with a burning weapon ([W]) by [key_name(user)].")
+		log_and_message_admins("exploded due to being hit with a burning weapon ([W]) by [key_name(user)].", src)
 		explode()
 	else
 		..()

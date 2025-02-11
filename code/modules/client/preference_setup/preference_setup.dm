@@ -7,18 +7,13 @@
 	sort_order = 1
 	category_item_type = /datum/category_item/player_setup_item/general
 
-/datum/category_group/player_setup_category/skill_preferences
-	name = "Skills"
-	sort_order = 2
-	category_item_type = /datum/category_item/player_setup_item/skills
-
 /datum/category_group/player_setup_category/occupation_preferences
 	name = "Occupation"
 	sort_order = 3
 	category_item_type = /datum/category_item/player_setup_item/occupation
 
 /datum/category_group/player_setup_category/appearance_preferences
-	name = "Antagonism"
+	name = "Special Roles"
 	sort_order = 4
 	category_item_type = /datum/category_item/player_setup_item/antagonism
 
@@ -31,11 +26,13 @@
 	name = "Traits"
 	sort_order = 6
 	category_item_type = /datum/category_item/player_setup_item/traits
-*/ //VOREStation Removal End
+
+//redundant due to having most of its content stripped out, merged into special roles
 /datum/category_group/player_setup_category/global_preferences
 	name = "Global"
 	sort_order = 6 //VOREStation Edit due to above commented out
 	category_item_type = /datum/category_item/player_setup_item/player_global
+*/ //VOREStation Removal End
 
 /****************************
 * Category Collection Setup *
@@ -85,8 +82,8 @@
 		if(PS == selected_category)
 			dat += "[PS.name] "	// TODO: Check how to properly mark a href/button selected in a classic browser window
 		else
-			dat += "<a href='?src=\ref[src];category=\ref[PS]'>[PS.name]</a> "
-	dat += "<a href='?src=\ref[src];game_prefs=1'>Game Options</a>"
+			dat += "<a href='byond://?src=\ref[src];category=\ref[PS]'>[PS.name]</a> "
+	dat += "<a href='byond://?src=\ref[src];game_prefs=1'>Game Options</a>"
 	return dat
 
 /datum/category_collection/player_setup_collection/proc/content(var/mob/user)

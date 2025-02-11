@@ -15,7 +15,6 @@
 /area/submap/druglab)
 "bN" = (
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2";
 	pixel_y = 1
 	},

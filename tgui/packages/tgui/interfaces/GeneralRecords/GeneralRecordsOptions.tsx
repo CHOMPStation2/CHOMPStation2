@@ -1,5 +1,6 @@
-import { useBackend } from '../../backend';
-import { Button, Icon, Section, Tabs } from '../../components';
+import { useBackend } from 'tgui/backend';
+import { Button, Icon, Section, Tabs } from 'tgui-core/components';
+
 import { GeneralRecordsViewGeneral } from './GeneralRecordsViewGeneral';
 import { Data } from './types';
 
@@ -21,6 +22,14 @@ export const GeneralRecordsView = (props) => {
         <GeneralRecordsViewGeneral />
       </Section>
       <Section title="Actions">
+        <Button
+          icon="upload"
+          disabled={!!general!.empty}
+          color="good"
+          onClick={() => act('sync_r')}
+        >
+          Sync Employment Record
+        </Button>
         <Button.Confirm
           icon="trash"
           disabled={!!general!.empty}

@@ -20,6 +20,8 @@
 	min_age = 18
 	max_age = 200
 
+	digi_allowed = TRUE
+
 	//Specific abilities
 
 	burn_mod = 0.8 //Slightly resistant to fire
@@ -90,12 +92,14 @@
 		/mob/living/carbon/human/proc/shapeshifter_select_secondary_ears,
 		/mob/living/carbon/human/proc/shapeshifter_select_eye_colour,
 		/mob/living/proc/set_size,
+		/mob/living/carbon/human/proc/shapeshifter_copy_body,
+		/mob/living/carbon/human/proc/shapeshifter_regenerate,
 //		/mob/living/carbon/human/proc/lleill_contact,
 //		/mob/living/carbon/human/proc/lleill_alchemy,
 //		/mob/living/carbon/human/proc/hanner_beast_form
 		)
 
-	valid_transform_species = list(SPECIES_HUMAN, SPECIES_HUMAN_VATBORN, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_SKRELL, SPECIES_ALTEVIAN, SPECIES_TESHARI, SPECIES_MONKEY, SPECIES_LLEILL, SPECIES_VULPKANIN, SPECIES_ZORREN_HIGH, SPECIES_RAPALA, SPECIES_NEVREAN, SPECIES_VASILISSAN, SPECIES_AKULA)
+	valid_transform_species = list(SPECIES_HUMAN, SPECIES_HUMAN_VATBORN, SPECIES_UNATHI, SPECIES_TAJARAN, SPECIES_SKRELL, SPECIES_ALTEVIAN, SPECIES_TESHARI, SPECIES_MONKEY, SPECIES_LLEILL, SPECIES_VULPKANIN, SPECIES_ZORREN_HIGH, SPECIES_RAPALA, SPECIES_NEVREAN, SPECIES_VASILISSAN, SPECIES_AKULA)
 
 	var/list/lleill_abilities = list(/datum/power/lleill/contact,
 									   /datum/power/lleill/alchemy,

@@ -130,11 +130,11 @@
 	if(..())
 		return
 
-	add_fingerprint(usr)
+	add_fingerprint(ui.user)
 
 	switch(action)
 		if("power")
-			if(!access_scanner.allowed(usr))
+			if(!access_scanner.allowed(ui.user))
 				return FALSE
 			if(on)
 				turn_off()
@@ -142,7 +142,7 @@
 				turn_on()
 			. = TRUE
 
-	if(locked && !issilicon(usr))
+	if(locked && !issilicon(ui.user))
 		return TRUE
 
 	switch(action)
@@ -344,7 +344,7 @@
 						H.handcuffed = new /obj/item/handcuffs(H)
 					H.update_handcuffed()
 			busy = FALSE
-	else if(istype(M, /mob/living))
+	else if(isliving(M))
 		var/mob/living/L = M
 		L.adjustBruteLoss(xeno_harm_strength)
 		do_attack_animation(M)

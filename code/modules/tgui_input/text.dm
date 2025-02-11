@@ -29,7 +29,7 @@
 		return null
 
 	// Client does NOT have tgui_input on: Returns regular input
-	if(!user.client.prefs.tgui_input_mode)
+	if(!user.read_preference(/datum/preference/toggle/tgui_input_mode))
 		if(encode)
 			if(multiline)
 				return stripped_multiline_input(user, message, title, default, PREVENT_CHARACTER_TRIM_LOSS(max_length))
@@ -115,12 +115,12 @@
 
 /datum/tgui_input_text/tgui_static_data(mob/user)
 	var/list/data = list()
-	data["large_buttons"] = user.client.prefs.tgui_large_buttons
+	data["large_buttons"] = user.read_preference(/datum/preference/toggle/tgui_large_buttons)
 	data["max_length"] = max_length
 	data["message"] = message
 	data["multiline"] = multiline
 	data["placeholder"] = default // Default is a reserved keyword
-	data["swapped_buttons"] = !user.client.prefs.tgui_swapped_buttons
+	data["swapped_buttons"] = !user.read_preference(/datum/preference/toggle/tgui_swapped_buttons)
 	data["title"] = title
 	return data
 
@@ -130,7 +130,7 @@
 		data["timeout"] = clamp((timeout - (world.time - start_time) - 1 SECONDS) / (timeout - 1 SECONDS), 0, 1)
 	return data
 
-/datum/tgui_input_text/tgui_act(action, list/params)
+/datum/tgui_input_text/tgui_act(action, list/params, datum/tgui/ui)
 	. = ..()
 	if (.)
 		return
@@ -138,9 +138,9 @@
 		if("submit")
 			if(max_length)
 				if(length(params["entry"]) > max_length)
-					CRASH("[usr] typed a text string longer than the max length")
+					CRASH("[ui.user] typed a text string longer than the max length")
 				if(encode && (length(html_encode(params["entry"])) > max_length))
-					to_chat(usr, span_notice("Your message was clipped due to special character usage."))
+					to_chat(ui.user, span_notice("Your message was clipped due to special character usage."))
 			set_entry(params["entry"])
 			closed = TRUE
 			SStgui.close_uis(src)

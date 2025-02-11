@@ -43,7 +43,7 @@
 	add_overlay("clipboard_over")
 	return
 
-/obj/item/clipboard/attackby(obj/item/W as obj, mob/user as mob)
+/obj/item/clipboard/attackby(obj/item/W, mob/user)
 
 	if(istype(W, /obj/item/paper) || istype(W, /obj/item/photo))
 		user.drop_item()
@@ -54,40 +54,40 @@
 		update_icon()
 
 	else if(istype(toppaper) && istype(W, /obj/item/pen))
-		toppaper.attackby(W, usr)
+		toppaper.attackby(W, user)
 		update_icon()
 
 	return
 
-/obj/item/clipboard/afterattack(turf/T as turf, mob/user as mob)
+/obj/item/clipboard/afterattack(turf/T as turf, mob/user)
 	for(var/obj/item/paper/P in T)
 		P.loc = src
 		toppaper = P
 		update_icon()
 		to_chat(user, span_notice("You clip the [P] onto \the [src]."))
 
-/obj/item/clipboard/attack_self(mob/user as mob)
+/obj/item/clipboard/attack_self(mob/user)
 	var/dat = "<title>Clipboard</title>"
 	if(haspen)
-		dat += "<A href='?src=\ref[src];pen=1'>Remove Pen</A><BR><HR>"
+		dat += "<A href='byond://?src=\ref[src];pen=1'>Remove Pen</A><BR><HR>"
 	else
-		dat += "<A href='?src=\ref[src];addpen=1'>Add Pen</A><BR><HR>"
+		dat += "<A href='byond://?src=\ref[src];addpen=1'>Add Pen</A><BR><HR>"
 
 	//The topmost paper. I don't think there's any way to organise contents in byond, so this is what we're stuck with.	-Pete
 	if(toppaper)
 		var/obj/item/paper/P = toppaper
-		dat += "<A href='?src=\ref[src];write=\ref[P]'>Write</A> <A href='?src=\ref[src];remove=\ref[P]'>Remove</A> <A href='?src=\ref[src];rename=\ref[P]'>Rename</A> - <A href='?src=\ref[src];read=\ref[P]'>[P.name]</A><BR><HR>"
+		dat += "<A href='byond://?src=\ref[src];write=\ref[P]'>Write</A> <A href='byond://?src=\ref[src];remove=\ref[P]'>Remove</A> <A href='byond://?src=\ref[src];rename=\ref[P]'>Rename</A> - <A href='byond://?src=\ref[src];read=\ref[P]'>[P.name]</A><BR><HR>"
 
 	for(var/obj/item/paper/P in src)
 		if(P==toppaper)
 			continue
-		dat += "<A href='?src=\ref[src];remove=\ref[P]'>Remove</A> <A href='?src=\ref[src];rename=\ref[P]'>Rename</A> - <A href='?src=\ref[src];read=\ref[P]'>[P.name]</A><BR>"
+		dat += "<A href='byond://?src=\ref[src];remove=\ref[P]'>Remove</A> <A href='byond://?src=\ref[src];rename=\ref[P]'>Rename</A> - <A href='byond://?src=\ref[src];read=\ref[P]'>[P.name]</A><BR>"
 	for(var/obj/item/photo/Ph in src)
-		dat += "<A href='?src=\ref[src];remove=\ref[Ph]'>Remove</A> <A href='?src=\ref[src];rename=\ref[Ph]'>Rename</A> - <A href='?src=\ref[src];look=\ref[Ph]'>[Ph.name]</A><BR>"
+		dat += "<A href='byond://?src=\ref[src];remove=\ref[Ph]'>Remove</A> <A href='byond://?src=\ref[src];rename=\ref[Ph]'>Rename</A> - <A href='byond://?src=\ref[src];look=\ref[Ph]'>[Ph.name]</A><BR>"
 
-	user << browse(dat, "window=clipboard")
+	user << browse("<html>[dat]</html>", "window=clipboard")
 	onclose(user, "clipboard")
-	add_fingerprint(usr)
+	add_fingerprint(user)
 	return
 
 /obj/item/clipboard/Topic(href, href_list)
@@ -155,7 +155,7 @@
 
 			if(P && (P.loc == src) && istype(P, /obj/item/paper) )
 
-				if(!(istype(usr, /mob/living/carbon/human) || istype(usr, /mob/observer/dead) || istype(usr, /mob/living/silicon)))
+				if(!(ishuman(usr) || isobserver(usr) || issilicon(usr)))
 					usr << browse("<HTML><HEAD><TITLE>[P.name]</TITLE></HEAD><BODY>[stars(P.info)][P.stamps]</BODY></HTML>", "window=[P.name]")
 					onclose(usr, "[P.name]")
 				else

@@ -10,20 +10,19 @@
 	//should be added here
 	var/list/testlist = list()
 	var/list/banlist = list(
-		"iron",      //Probably isn't a good idea to let plants replace mining (easily)
-		"phoron",    //Gold and uranium are ommitted as they can already be obtained with normal xenobotany
-		"silver",
-		"platinum",
-		"mhydrogen",
-		"steel",
-		"plasteel",
-    "hydrophoron",
+		REAGENT_ID_IRON,      //Probably isn't a good idea to let plants replace mining (easily)
+		REAGENT_ID_PHORON,    //Gold and uranium are ommitted as they can already be obtained with normal xenobotany
+		REAGENT_ID_SILVER,
+		REAGENT_ID_PLATINUM,
+		REAGENT_ID_STEEL,
+		REAGENT_ID_PLASTEEL,
+    REAGENT_ID_HYDROPHORON,
 
-    "macrocillin",     //ban everything that's already banned in seed.dm except nutriment
-    "microcillin",
-    "normalcillin",
-    "adminordrazine",
-    "magicdust"
+    REAGENT_ID_MACROCILLIN,     //ban everything that's already banned in seed.dm except nutriment
+    REAGENT_ID_MICROCILLIN,
+    REAGENT_ID_NORMALCILLIN,
+    REAGENT_ID_ADMINORDRAZINE,
+    REAGENT_ID_MAGICDUST
 		)
 
 	var/list/datum/reagent/allowed_reagents = list() //compile the list of reagents we're allowed to splice in

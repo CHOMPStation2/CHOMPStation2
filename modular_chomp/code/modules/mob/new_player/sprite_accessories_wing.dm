@@ -1,11 +1,3 @@
-/datum/sprite_accessory/wing/sect_drone //We should some day make a variable to make some wings not be able to fly
-	name = "Sect drone wings (To use with bodytype marking)"
-	desc = ""
-	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/wings.dmi'
-	icon_state = "sectdrone_wing"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
 /datum/sprite_accessory/wing/snagc
 	name = "xenomorph backplate, colorable"
 	desc = ""
@@ -193,6 +185,14 @@
 	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/wings.dmi'
 	icon_state = "mothwings_angel"
 
+/datum/sprite_accessory/wing/mothwings_no_antennae_colorable
+	name = "Moth Wings (Colorable)"
+	desc = ""
+	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/wings.dmi'
+	icon_state = "mothwings_no_antennae_color"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
 /// XENO BACKPLATES ///
 
 /datum/sprite_accessory/wing/xeno_standard_backplate
@@ -255,6 +255,15 @@
 	desc = ""
 	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/wings64.dmi'
 	icon_state = "Harpy_wings"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	wing_offset = 16
+
+/datum/sprite_accessory/wing/sloogshell
+	name = "Sloog shell"
+	desc = ""
+	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/wings64.dmi'
+	icon_state = "sloogshell"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	wing_offset = 16

@@ -80,11 +80,13 @@
 	var/list/spots_styles = list(
 		"null",
 		"zorgoia_spots",
-		"zorgoia_stripes"
+		"zorgoia_stripes",
+		"zorgoia_backline"
 	)
 	var/list/claws_styles = list(
 		"null",
 		"zorgoia_claws",
+		"zorgoia_justfangs"
 	)
 	var/list/spines_styles = list(
 		"null",
@@ -92,17 +94,21 @@
 	)
 	var/list/fluff_styles = list(
 		"null",
-		"zorgoia_fluff"
+		"zorgoia_fluff",
+		"zorgoia_feetpaws"
 	)
 	var/list/underbelly_styles = list(
 		"zorgoia_underbelly",
+		"zorgoia_underbellystripe",
 		"null"
 	)
 	var/list/eyes_styles = list(
-		"zorgoia_eyes"
+		"zorgoia_eyes",
+		"zorgoia_eyes2"
 	)
 	var/list/spiky_styles = list(
-		"zorgoia_spike"
+		"zorgoia_spike",
+		"zorgoia_spike2"
 	)
 	var/list/belly_styles = list(
 		"zorgoia_belly"
@@ -112,7 +118,7 @@
 	set name = "Change Color"
 	set desc = "Change your main color."
 	set category = "Abilities.General"
-	var/new_color = input("Pick new colors:","Color", goia_overlays["zorgoia_main"]) as null|color
+	var/new_color = tgui_color_picker(src, "Pick new colors:","Color", goia_overlays["zorgoia_main"])
 	if(!new_color)
 		return 0
 	goia_overlays["zorgoia_main"] = new_color
@@ -140,7 +146,7 @@
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick ears spike color:","Ears Color", goia_overlays["zorgoia_ears"]) as null|color
+			var/new_color = tgui_color_picker(src, "Pick ears spike color:","Ears Color", goia_overlays["zorgoia_ears"])
 			if(!new_color)
 				return 0
 			goia_overlays["ears"] = choice
@@ -155,7 +161,7 @@
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick spot colors:","Spots Color", goia_overlays["zorgoia_spots"]) as null|color
+			var/new_color = tgui_color_picker(src, "Pick spot colors:","Spots Color", goia_overlays["zorgoia_spots"])
 			if(!new_color)
 				return 0
 			goia_overlays["spots"] = choice
@@ -170,7 +176,7 @@
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick claw colors:","Claws Color", goia_overlays["zorgoia_claws"]) as null|color
+			var/new_color = tgui_color_picker(src, "Pick claw colors:","Claws Color", goia_overlays["zorgoia_claws"])
 			if(!new_color)
 				return 0
 			goia_overlays["claws"] = choice
@@ -185,7 +191,7 @@
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick spines colors:","Spines Color", goia_overlays["zorgoia_spines"]) as null|color
+			var/new_color = tgui_color_picker(src, "Pick spines colors:","Spines Color", goia_overlays["zorgoia_spines"])
 			if(!new_color)
 				return 0
 			goia_overlays["spines"] = choice
@@ -200,7 +206,7 @@
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick fluff colors:","Fluff Color", goia_overlays["zorgoia_fluff"]) as null|color
+			var/new_color = tgui_color_picker(src, "Pick fluff colors:","Fluff Color", goia_overlays["zorgoia_fluff"])
 			if(!new_color)
 				return 0
 			goia_overlays["fluff"] = choice
@@ -215,7 +221,7 @@
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick underbelly colors:","Underbelly Color", goia_overlays["zorgoia_underbelly"]) as null|color
+			var/new_color = tgui_color_picker(src, "Pick underbelly colors:","Underbelly Color", goia_overlays["zorgoia_underbelly"])
 			if(!new_color)
 				return 0
 			goia_overlays["underbelly"] = choice
@@ -230,7 +236,7 @@
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick eye color:","Eye Color", goia_overlays["zorgoia_eyes"]) as null|color
+			var/new_color = tgui_color_picker(src, "Pick eye color:","Eye Color", goia_overlays["zorgoia_eyes"])
 			if(!new_color)
 				return 0
 			goia_overlays["eyes"] = choice
@@ -245,7 +251,7 @@
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick tail spike color:","Tail Color", goia_overlays["zorgoia_spike"]) as null|color //This is overlay 10, not 2, swapped with main body, im not rewriting this array
+			var/new_color = tgui_color_picker(src, "Pick tail spike color:","Tail Color", goia_overlays["zorgoia_spike"]) //This is overlay 10, not 2, swapped with main body, im not rewriting this array
 			if(!new_color)
 				return 0
 			goia_overlays["spike"] = choice
@@ -260,7 +266,7 @@
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick belly color:","Belly Color", goia_overlays["zorgoia_belly"]) as null|color
+			var/new_color = tgui_color_picker(src, "Pick belly color:","Belly Color", goia_overlays["zorgoia_belly"])
 			if(!new_color)
 				return 0
 			goia_overlays["belly"] = choice
@@ -277,18 +283,18 @@
 	add_verb(src,/mob/living/proc/injection) //Poison sting c:
 	add_verb(src,/mob/living/simple_mob/vore/zorgoia/proc/export_style)
 	add_verb(src,/mob/living/simple_mob/vore/zorgoia/proc/import_style)
-	src.trait_injection_reagents += "microcillin"			// get small
-	src.trait_injection_reagents += "macrocillin"			// get BIG
-	src.trait_injection_reagents += "normalcillin"			// normal
-	src.trait_injection_reagents += "numbenzyme"			// no feelings
-	src.trait_injection_reagents += "change_drug_male"		// -> MALE
-	src.trait_injection_reagents += "change_drug_female"	// -> FEMALE
-	src.trait_injection_reagents += "change_drug_intersex"	// -> PLURAL
-	src.trait_injection_reagents += "stoxin"				// night night chem
-	src.trait_injection_reagents += "rainbowtoxin" 			// Funny flashing lights.
-	src.trait_injection_reagents += "paralysistoxin" 		// Paralysis!
-	src.trait_injection_reagents += "painenzyme"			// Pain INCREASER
-	src.trait_injection_reagents += "aphrodisiac"			// Horni
+	src.trait_injection_reagents += REAGENT_ID_MICROCILLIN			// get small
+	src.trait_injection_reagents += REAGENT_ID_MACROCILLIN			// get BIG
+	src.trait_injection_reagents += REAGENT_ID_NORMALCILLIN			// normal
+	src.trait_injection_reagents += REAGENT_ID_NUMBENZYME			// no feelings
+	src.trait_injection_reagents += REAGENT_ID_ANDROROVIR			// -> MALE
+	src.trait_injection_reagents += REAGENT_ID_GYNOROVIR			// -> FEMALE
+	src.trait_injection_reagents += REAGENT_ID_ANDROGYNOROVIR		// -> PLURAL
+	src.trait_injection_reagents += REAGENT_ID_STOXIN				// night night chem
+	src.trait_injection_reagents += REAGENT_ID_RAINBOWTOXIN			// Funny flashing lights.
+	src.trait_injection_reagents += REAGENT_ID_PARALYSISTOXIN 		// Paralysis!
+	src.trait_injection_reagents += REAGENT_ID_PAINENZYME			// Pain INCREASER
+	src.trait_injection_reagents += REAGENT_ID_APHRODISIAC			// Horni
 
 	var/list/goia_colors = list("#1a00ff", "#6c5bff", "#ff00fe", "#ff0000", "#00d3ff", "#00ff7c", "#00ff35", "#e1ff00", "#ff9f00", "#393939")
 	var/bodycolor = pick(goia_colors)
@@ -367,16 +373,9 @@
 	add_overlay(I)
 	qdel(I)
 
+
 	I = image(icon, "[goia_overlays["fluff"]][resting? "-rest" : null]", pixel_x = -16)
 	I.color = goia_overlays["zorgoia_fluff"]
-	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
-	I.plane = MOB_PLANE
-	I.layer = MOB_LAYER
-	add_overlay(I)
-	qdel(I)
-
-	I = image(icon, "[goia_overlays["underbelly"]][resting? "-rest" : null]", pixel_x = -16)
-	I.color = goia_overlays["zorgoia_underbelly"]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = MOB_PLANE
 	I.layer = MOB_LAYER
@@ -398,8 +397,16 @@
 	add_overlay(I)
 	qdel(I)
 
-	I = image(icon, "[goia_overlays["belly"]][resting? "-rest" : (vore_fullness? "-[vore_fullness]" : null)]", pixel_x = -16) //todo, check kasscs resting sprite
+	I = image(icon, "[goia_overlays["belly"]][resting? "-rest" : (vore_fullness? "-[vore_fullness]" : null)]", pixel_x = -16)
 	I.color = goia_overlays["zorgoia_belly"]
+	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
+	I.plane = MOB_PLANE
+	I.layer = MOB_LAYER
+	add_overlay(I)
+	qdel(I)
+
+	I = image(icon, "[goia_overlays["underbelly"]][resting? "-rest" : (vore_fullness? "-[vore_fullness]" : null)]", pixel_x = -16)
+	I.color = goia_overlays["zorgoia_underbelly"]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = MOB_PLANE
 	I.layer = MOB_LAYER
@@ -497,7 +504,7 @@
 	set desc = "Import a string of text that was made using the import style verb to get back that style"
 	set category = "Abilities.Settings"
 	var/input_style
-	input_style = sanitizeSafe(input(src,"Paste the style string you exported with Export Style.", "Style loading","") as text, MAX_MESSAGE_LEN)
+	input_style = sanitizeSafe(tgui_input_text(src,"Paste the style string you exported with Export Style.", "Style loading","", 250))
 	if(input_style)
 		var/list/input_style_list = splittext(input_style, ";")
 		if((LAZYLEN(input_style_list) == 20) /* && (input_style_list[2] in main_styles) */ \

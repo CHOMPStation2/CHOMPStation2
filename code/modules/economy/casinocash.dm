@@ -58,7 +58,7 @@
 		var/obj/item/spacecasinocash/SC = W
 
 		SC.adjust_worth(src.worth)
-		if(istype(user, /mob/living/carbon/human))
+		if(ishuman(user))
 			var/mob/living/carbon/human/h_user = user
 
 			h_user.drop_from_inventory(src)
@@ -111,8 +111,8 @@
 		update_icon()
 	return worth
 
-/obj/item/spacecasinocash/attack_self()
-	var/amount = tgui_input_number(usr, "How much credits worth of chips do you want to take? (0 to [src.worth])", "Take chips", 20, src.worth)
+/obj/item/spacecasinocash/attack_self(mob/user)
+	var/amount = tgui_input_number(user, "How much credits worth of chips do you want to take? (0 to [src.worth])", "Take chips", 20, src.worth)
 	if(!src || QDELETED(src))
 		return
 	amount = round(CLAMP(amount, 0, src.worth))
@@ -121,9 +121,9 @@
 		return
 
 	adjust_worth(-amount)
-	var/obj/item/spacecasinocash/SC = new (usr.loc)
+	var/obj/item/spacecasinocash/SC = new (user.loc)
 	SC.set_worth(amount)
-	usr.put_in_hands(SC)
+	user.put_in_hands(SC)
 
 /obj/item/spacecasinocash/c1
 	name = "1 credit casino chip"

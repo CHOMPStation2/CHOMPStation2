@@ -45,26 +45,26 @@
 
 /datum/category_item/player_setup_item/general/background/content(var/mob/user)
 	. += span_bold("Background Information") + "<br>"
-	. += "Economic Status: <a href='?src=\ref[src];econ_status=1'>[pref.economic_status]</a><br/>"
-	. += "Home: <a href='?src=\ref[src];home_system=1'>[pref.home_system]</a><br/>"
-	. += "Birthplace: <a href='?src=\ref[src];birthplace=1'>[pref.birthplace]</a><br/>"
-	. += "Citizenship: <a href='?src=\ref[src];citizenship=1'>[pref.citizenship]</a><br/>"
-	. += "Faction: <a href='?src=\ref[src];faction=1'>[pref.faction]</a><br/>"
-	. += "Religion: <a href='?src=\ref[src];religion=1'>[pref.religion]</a><br/>"
+	. += "Economic Status: <a href='byond://?src=\ref[src];econ_status=1'>[pref.economic_status]</a><br/>"
+	. += "Home: <a href='byond://?src=\ref[src];home_system=1'>[pref.home_system]</a><br/>"
+	. += "Birthplace: <a href='byond://?src=\ref[src];birthplace=1'>[pref.birthplace]</a><br/>"
+	. += "Citizenship: <a href='byond://?src=\ref[src];citizenship=1'>[pref.citizenship]</a><br/>"
+	. += "Faction: <a href='byond://?src=\ref[src];faction=1'>[pref.faction]</a><br/>"
+	. += "Religion: <a href='byond://?src=\ref[src];religion=1'>[pref.religion]</a><br/>"
 
 	. += "<br/><b>Records</b>:<br/>"
 	if(jobban_isbanned(user, "Records"))
 		. += span_danger("You are banned from using character records.") + "<br>"
 	else
 		. += "Medical Records:<br>"
-		. += "<a href='?src=\ref[src];set_medical_records=1'>[TextPreview(pref.med_record,40)]</a><br>"
-		. += " (<a href='?src=\ref[src];reset_medrecord=1'>Reset</A>)<br><br>"
+		. += "<a href='byond://?src=\ref[src];set_medical_records=1'>[TextPreview(pref.med_record,40)]</a><br>"
+		. += " (<a href='byond://?src=\ref[src];reset_medrecord=1'>Reset</A>)<br><br>"
 		. += "Employment Records:<br>"
-		. += "<a href='?src=\ref[src];set_general_records=1'>[TextPreview(pref.gen_record,40)]</a><br>"
-		. += "(<a href='?src=\ref[src];reset_emprecord=1'>Reset</A>)<br><br>"
+		. += "<a href='byond://?src=\ref[src];set_general_records=1'>[TextPreview(pref.gen_record,40)]</a><br>"
+		. += "(<a href='byond://?src=\ref[src];reset_emprecord=1'>Reset</A>)<br><br>"
 		. += "Security Records:<br>"
-		. += "<a href='?src=\ref[src];set_security_records=1'>[TextPreview(pref.sec_record,40)]</a><br>"
-		. += "(<a href='?src=\ref[src];reset_secrecord=1'>Reset</A>)"
+		. += "<a href='byond://?src=\ref[src];set_security_records=1'>[TextPreview(pref.sec_record,40)]</a><br>"
+		. += "(<a href='byond://?src=\ref[src];reset_secrecord=1'>Reset</A>)"
 
 /datum/category_item/player_setup_item/general/background/OnTopic(var/href,var/list/href_list, var/mob/user)
 	if(href_list["econ_status"])
@@ -152,19 +152,19 @@
 		return TOPIC_REFRESH
 
 	else if(href_list["reset_medrecord"])
-		var/resetmed_choice = tgui_alert(user, "Wipe your Medical Records? This cannot be reverted if you have not saved your character recently! You may wish to make a backup first.","Reset Records",list("Yes","No")) //ChompEDIT - usr removal
+		var/resetmed_choice = tgui_alert(user, "Wipe your Medical Records? This cannot be reverted if you have not saved your character recently! You may wish to make a backup first.","Reset Records",list("Yes","No"))
 		if(resetmed_choice == "Yes")
 			pref.med_record = null
 		return TOPIC_REFRESH
 
 	else if(href_list["reset_emprecord"])
-		var/resetemp_choice = tgui_alert(user, "Wipe your Employment Records? This cannot be reverted if you have not saved your character recently! You may wish to make a backup first.","Reset Records",list("Yes","No")) //ChompEDIT - usr removal
+		var/resetemp_choice = tgui_alert(user, "Wipe your Employment Records? This cannot be reverted if you have not saved your character recently! You may wish to make a backup first.","Reset Records",list("Yes","No"))
 		if(resetemp_choice == "Yes")
 			pref.gen_record = null
 		return TOPIC_REFRESH
 
 	else if(href_list["reset_secrecord"])
-		var/resetsec_choice = tgui_alert(user, "Wipe your Security Records? This cannot be reverted if you have not saved your character recently! You may wish to make a backup first.","Reset Records",list("Yes","No")) //ChompEDIT - usr removal
+		var/resetsec_choice = tgui_alert(user, "Wipe your Security Records? This cannot be reverted if you have not saved your character recently! You may wish to make a backup first.","Reset Records",list("Yes","No"))
 		if(resetsec_choice == "Yes")
 			pref.sec_record = null
 		return TOPIC_REFRESH

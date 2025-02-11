@@ -116,9 +116,9 @@
 	say_got_target = list()
 
 /mob/living/simple_mob/vore/alienanimals/catslug/init_vore()
-	if(!voremob_loaded) //CHOMPEdit
+	if(!voremob_loaded)
 		return
-	.=..()
+	. = ..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "The hot slick gut of a catslug!! Copious slime smears over you as you’re packed away into the gloom and oppressive humidity of this churning gastric sac. The pressure around you is intense, the squashy flesh bends and forms to your figure, clinging to you insistently! There’s basically no free space at all as your ears are filled with the slick slide of flesh against flesh and the burbling of gastric juices glooping all around you. The thumping of a heart booms from somewhere nearby, making everything pulse in against you in time with it! This is it! You’ve been devoured by a catslug!!!"
@@ -164,9 +164,9 @@
 			return
 		to_chat(user, span_notice("\The [src] seems too full to eat."))
 		return
-	var/nutriment_amount = O.reagents?.get_reagent_amount("nutriment") //does it have nutriment, if so how much?
-	var/protein_amount = O.reagents?.get_reagent_amount("protein") //does it have protein, if so how much?
-	var/glucose_amount = O.reagents?.get_reagent_amount("glucose") //does it have glucose, if so how much?
+	var/nutriment_amount = O.reagents?.get_reagent_amount(REAGENT_ID_NUTRIMENT) //does it have nutriment, if so how much?
+	var/protein_amount = O.reagents?.get_reagent_amount(REAGENT_ID_PROTEIN) //does it have protein, if so how much?
+	var/glucose_amount = O.reagents?.get_reagent_amount(REAGENT_ID_GLUCOSE) //does it have glucose, if so how much?
 	var/yum = nutriment_amount + protein_amount + glucose_amount
 	if(yum)
 		yum = (yum * 20) / 3
@@ -292,7 +292,7 @@
 	if(picked_color)
 		to_chat(src, span_notice("You have already picked a color! If you picked the wrong color, ask an admin to change your picked_color variable to 0."))
 		return
-	var/newcolor = input(usr, "Choose a color.", "", color) as color|null
+	var/newcolor = tgui_color_picker(src, "Choose a color.", "", color)
 	if(newcolor)
 		color = newcolor
 		picked_color = TRUE
@@ -771,7 +771,7 @@
 	mob_radio.frequency = PUB_FREQ
 	mob_radio.ks2type = /obj/item/encryptionkey/heads/captain 		//Might not be able to speak, but the catslug can listen.
 	mob_radio.keyslot2 = new /obj/item/encryptionkey/heads/captain(mob_radio)
-	mob_radio.recalculateChannels(1)
+	mob_radio.recalculateChannels(TRUE)
 
 //=============================================================================
 //Admin-spawn only catslugs below - Expect overpowered things & silliness below
@@ -854,10 +854,10 @@
 	. = ..()
 	mob_radio = new /obj/item/radio/headset/mob_headset(src)
 	mob_radio.frequency = SYND_FREQ
-	mob_radio.syndie = 1
+	mob_radio.syndie = TRUE
 	mob_radio.ks2type = /obj/item/encryptionkey/syndicate
 	mob_radio.keyslot2 = new /obj/item/encryptionkey/syndicate(mob_radio)
-	mob_radio.recalculateChannels(1)
+	mob_radio.recalculateChannels(TRUE)
 	myid.access |= get_all_station_access()
 
 //ERT catslug
@@ -901,7 +901,7 @@
 	mob_radio.centComm = 1
 	mob_radio.ks2type = /obj/item/encryptionkey/ert
 	mob_radio.keyslot2 = new /obj/item/encryptionkey/ert(mob_radio)
-	mob_radio.recalculateChannels(1)
+	mob_radio.recalculateChannels(TRUE)
 	myid.access |= get_all_station_access()
 
 //Pilot Catslug
@@ -1058,6 +1058,41 @@
 /datum/say_list/catslug/custom/exploslug
 	speak = list("Fortune and porls, kid. Fortune and porls.", "Lizards, why'd it have to be lizards.", "That thingy is an important artifact. It belongs in a museum!", "Everything lost is meant to be found. By me.", "I swear I've seen that stone before...", "I should have packed more jellyfishes.", "I better get back before nightfall!", "A comfy bed? Hah! I sleep under the stars!")
 
+//xmas slug
+
+/mob/living/simple_mob/vore/alienanimals/catslug/custom/santaslug
+	name = "Santa Claws"
+	desc = "A green-furred noodley bodied creature with thin arms and legs, and gloomy dark eyes. This one is adorned with a festive coat, hat, boots and ribbons on it's tail."
+	tt_desc = "Mollusca Felis Solstice"
+	icon_state = "santaslug"
+	icon_living = "santaslug"
+	icon_rest = "santaslug_rest"
+	icon_dead = "santaslug_dead"
+	catalogue_data = list(/datum/category_item/catalogue/fauna/catslug/custom/santaslug)
+	say_list_type = /datum/say_list/catslug/custom/santaslug
+
+/datum/category_item/catalogue/fauna/catslug/custom/santaslug
+	name = "Alien Wildlife - Catslug - Santa Claws"
+	desc = "Found in a mysterious toyshop in a snowy wonderland, Claws\
+	is a catslug who spends their days building toys and is said to, \
+	once a year, hand them out to well behaved people. Always seen wearing \
+	their red coat and hat, they are always ready to spread \
+	festive cheer throughout the galaxy. \
+	\
+	The Catslug is an omnivorous terrestrial creature.\
+	Exhibiting properties of both a cat and a slug (hence its name)\
+	it moves somewhat awkwardly. However, the unique qualities of\
+	its body make it exceedingly flexible and smooth, allowing it to\
+	wiggle into and move effectively in even extremely tight spaces.\
+	Additionally, it has surprisingly capable hands, and moves quite\
+	well on two legs or four. Caution is advised when interacting\
+	with these creatures, they are quite intelligent, and proficient\
+	tool users."
+	value = CATALOGUER_REWARD_TRIVIAL
+
+/datum/say_list/catslug/custom/santaslug
+	speak = list("Ho ho ho!", "Meow-ery Solstice, everybody!", "Thanks fur all the furstive cheer!", "I must get all these purresents", "What would be the pawfect gift for you?", "All I want for solstice is... Porls.", "The winter trees are more bark than bite!", "I'm just glad not to be stuck in a blizzard again!")
+
 
 //=============================
 //Admin-spawn only catslugs end
@@ -1135,7 +1170,7 @@
 	if(victims.len == 1)
 		target = victims[1]
 	else
-		target = tgui_input_list(usr, "Kill", "Pick a victim", victims)
+		target = tgui_input_list(src, "Kill", "Pick a victim", victims)
 
 	if(target && istype(target))
 		target.adjustBruteLoss(3000)

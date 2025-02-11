@@ -35,7 +35,7 @@
 /area/submap/Oldhouse)
 "j" = (
 /turf/simulated/floor/wood{
-	icon_state = "wood_broken6"
+	icon_state = "wood-broken6"
 	},
 /area/submap/Oldhouse)
 "k" = (
@@ -58,12 +58,12 @@
 "o" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood{
-	icon_state = "wood_broken4"
+	icon_state = "wood-broken4"
 	},
 /area/submap/Oldhouse)
 "p" = (
 /turf/simulated/floor/wood{
-	icon_state = "wood_broken2"
+	icon_state = "wood-broken2"
 	},
 /area/submap/Oldhouse)
 "q" = (
@@ -75,7 +75,7 @@
 /area/submap/Oldhouse)
 "s" = (
 /turf/simulated/floor/wood{
-	icon_state = "wood_broken4"
+	icon_state = "wood-broken4"
 	},
 /area/submap/Oldhouse)
 "t" = (
@@ -103,7 +103,7 @@
 "x" = (
 /obj/effect/decal/cleanable/cobweb,
 /turf/simulated/floor/wood{
-	icon_state = "wood_broken6"
+	icon_state = "wood-broken6"
 	},
 /area/submap/Oldhouse)
 "y" = (
@@ -246,13 +246,13 @@
 "Y" = (
 /obj/structure/table/woodentable,
 /turf/simulated/floor/wood{
-	icon_state = "wood_broken6"
+	icon_state = "wood-broken6"
 	},
 /area/submap/Oldhouse)
 "Z" = (
 /obj/structure/table/woodentable,
 /turf/simulated/floor/wood{
-	icon_state = "wood_broken2"
+	icon_state = "wood-broken2"
 	},
 /area/submap/Oldhouse)
 

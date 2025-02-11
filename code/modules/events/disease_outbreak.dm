@@ -1,10 +1,6 @@
 GLOBAL_LIST_EMPTY(current_pending_diseases)
 /datum/event/disease_outbreak
 	var/datum/disease/chosen_disease
-	var/list/disease_blacklist = list(
-		/datum/disease/advance,
-		/datum/disease/food_poisoning
-	)
 	var/static/list/transmissable_symptoms = list()
 	var/static/list/diseases_minor = list()
 	var/static/list/diseases_moderate_major = list()
@@ -24,7 +20,7 @@ GLOBAL_LIST_EMPTY(current_pending_diseases)
 			else
 				stack_trace("Disease Outbreak: Invalid Event Level [severity]. Expected: 1-2")
 				virus = /datum/disease/cold
-		chosen_disease = new virus()
+		chosen_disease = new virus
 	else
 		if(severity == EVENT_LEVEL_MAJOR)
 			chosen_disease = create_virus(severity * pick(2,3))	//50% chance for a major disease instead of a moderate one
@@ -37,28 +33,29 @@ GLOBAL_LIST_EMPTY(current_pending_diseases)
 	GLOB.current_pending_diseases += chosen_disease
 
 	var/list/candidates = list()
-	for(var/mob/living/carbon/human/G in player_list)
+	for(var/mob/living/carbon/human/G in human_mob_list)
 		if(G.mind && G.stat != DEAD && G.is_client_active(5) && !player_is_antag(G.mind))
 			var/area/A = get_area(G)
 			if(!A)
 				continue
 			if(!(A.z in using_map.station_levels))
 				continue
-			if(A.flags & RAD_SHIELDED)
+			if(A.flag_check(RAD_SHIELDED))
 				continue
 			if(isbelly(G.loc))
 				continue
-			if(!G.CanContractDisease())
+			if(G.species.virus_immune)
 				continue
 			candidates += G
 
 	var/chosen_infect = rand(3, 5)
 
 	while(chosen_infect)
-		var/mob/living/carbon/human/H = pick(candidates)
-		H.ContractDisease(chosen_disease)
-		candidates -= H
-
+		if(!isemptylist(candidates))
+			var/mob/living/carbon/human/H = pick(candidates)
+			H.ForceContractDisease(chosen_disease)
+			candidates -= H
+		chosen_infect--
 
 //Creates a virus with a harmful effect, guaranteed to be spreadable by contact or airborne
 /datum/event/disease_outbreak/proc/create_virus(max_severity = 6)
@@ -83,7 +80,7 @@ GLOBAL_LIST_EMPTY(current_pending_diseases)
 /datum/event/disease_outbreak/proc/populate_diseases()
 	for(var/candidate in subtypesof(/datum/disease))
 		var/datum/disease/CD = new candidate
-		if(is_type_in_list(CD, disease_blacklist))
+		if(CD.disease_flags & CAN_NOT_POPULATE)
 			continue
 		switch(CD.severity)
 			if(NONTHREAT, MINOR)

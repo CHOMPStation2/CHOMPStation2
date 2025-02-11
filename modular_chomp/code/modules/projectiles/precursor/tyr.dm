@@ -29,8 +29,9 @@
 	icon = 'modular_chomp/icons/obj/guns/precursor/tyr.dmi'
 	icon_state = "shotgun_blast"
 	damage = 50
-	range = 4
-	check_armour = "laser"
+	range = 5
+	check_armour = "bullet"
+	damage_type = BRUTE
 
 /obj/item/projectile/energy/wp_shotgun/on_hit(var/atom/movable/target, var/blocked = 0)
 	if(isliving(target))
@@ -44,14 +45,16 @@
 	name = "laser blast"
 	icon = 'modular_chomp/icons/obj/guns/precursor/tyr.dmi'
 	icon_state = "blaster_blast"
-	damage = 40
+	damage = 60
 	range = 5
 	check_armour = "laser"
 
 /obj/item/projectile/beam/precursor_tyr
 	name = "laser"
 	icon_state = "laser"
-	damage = 30
+	damage = 20
+	armor_penetration = 30
+	penetrating = 20
 	damage_type = BURN
 	check_armour = "laser"
 	range = 5
@@ -59,6 +62,15 @@
 	hitscan = 1
 	hud_state = "laser"
 	hud_state_empty = "battery_empty"
+
+/obj/item/projectile/bullet/tyrshotburst
+	use_submunitions = 1
+	range = 0
+	embed_chance = 0
+	spread_submunition_damage = FALSE
+	submunition_spread_max = 120
+	submunition_spread_min = 60
+	submunitions = list(/obj/item/projectile/beam/precursor_tyr = 5)
 
 /obj/item/gun/energy/energyballchain
 	name = "remade prototype weapon"
@@ -102,6 +114,11 @@
 
 	recoil_mode = 0
 	charge_meter = 1
+
+	firemodes = list(
+		list(mode_name="explosive", projectile_type=/obj/item/projectile/energy/wp_shotgun, charge_cost = 500),
+		list(mode_name="spray", projectile_type=/obj/item/projectile/bullet/tyrshotburst, charge_cost = 750),
+		)
 
 	move_delay = 0
 	one_handed_penalty = 50

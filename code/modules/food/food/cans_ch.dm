@@ -8,4 +8,4 @@
 
 /obj/item/reagent_containers/food/drinks/cans/waterbottle/wataur/Initialize()
 	. = ..()
-	reagents.add_reagent("water", 120)
+	reagents.add_reagent(REAGENT_ID_WATER, 120)

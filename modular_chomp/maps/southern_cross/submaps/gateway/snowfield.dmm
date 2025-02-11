@@ -85,8 +85,6 @@
 /area/awaymission/snowfield/engineering/staff_room)
 "afo" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -121,8 +119,6 @@
 	req_access = list(1)
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/red,
@@ -168,7 +164,6 @@
 	dir = 1
 	},
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
@@ -314,8 +309,6 @@
 /area/awaymission/snowfield/checkpointunpowered)
 "amU" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/glass{
@@ -373,8 +366,6 @@
 	name = "Restroom"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -425,8 +416,6 @@
 	dir = 9
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -487,8 +476,6 @@
 /area/awaymission/snowfield/security/armory)
 "ayB" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -532,13 +519,9 @@
 "azz" = (
 /obj/structure/catwalk,
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -651,8 +634,6 @@
 /area/awaymission/snowfield/command/server)
 "aGE" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/effect/floor_decal/borderfloorwhite{
@@ -704,13 +685,9 @@
 	dir = 1
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/monotile,
@@ -754,8 +731,6 @@
 /area/awaymission/snowfield/service/cafeteria)
 "aKG" = (
 /obj/structure/cable/heavyduty{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/cult,
@@ -763,8 +738,6 @@
 "aKI" = (
 /obj/machinery/door/airlock/security,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/red,
@@ -905,8 +878,6 @@
 /area/awaymission/snowfield/public/toolstroage2)
 "aQV" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock{
@@ -939,8 +910,6 @@
 /area/awaymission/snowfield/dorms/dorm5)
 "aSi" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -995,8 +964,6 @@
 /area/awaymission/snowfield/outside)
 "aWq" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/catwalk,
@@ -1019,8 +986,6 @@
 "aWJ" = (
 /obj/structure/catwalk,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/iv_drip,
@@ -1029,14 +994,11 @@
 /area/awaymission/snowfield/hallway/northhallway)
 "aWM" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/cable/green,
 /obj/structure/cable/heavyduty{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor,
@@ -1100,8 +1062,6 @@
 /obj/structure/catwalk,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -1293,13 +1253,9 @@
 /area/awaymission/snowfield/command/bridge)
 "bjT" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/effect/decal/remains/human,
@@ -1310,18 +1266,13 @@
 "bjV" = (
 /obj/structure/catwalk,
 /obj/structure/cable/heavyduty{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable/heavyduty{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/heavyduty,
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor,
@@ -1426,13 +1377,9 @@
 /area/awaymission/snowfield/outside)
 "bqj" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/catwalk,
@@ -1498,8 +1445,6 @@
 /area/awaymission/snowfield/outside)
 "btO" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/effect/floor_decal/borderfloorwhite{
@@ -1608,16 +1553,12 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/red/border,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/security/security_cell_hallway)
 "byq" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -1644,8 +1585,6 @@
 "byw" = (
 /obj/structure/catwalk,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -1663,21 +1602,15 @@
 	dir = 1
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/service/cafeteria)
 "byM" = (
 /obj/structure/cable/heavyduty{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -1696,8 +1629,6 @@
 "bAl" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/neutral,
@@ -1715,8 +1646,6 @@
 /area/awaymission/snowfield/medical/storage_room)
 "bAX" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/wall,
@@ -1730,8 +1659,6 @@
 /area/awaymission/snowfield/engineering/staff_room)
 "bBa" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -1755,8 +1682,6 @@
 /area/awaymission/snowfield/dorms/dorm5)
 "bBU" = (
 /obj/structure/cable/heavyduty{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/engineering,
@@ -1767,8 +1692,6 @@
 /area/awaymission/snowfield/command/bsa)
 "bCH" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -1776,8 +1699,6 @@
 /area/awaymission/snowfield/hallway/centerhallway)
 "bCY" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock{
@@ -1788,8 +1709,6 @@
 /area/awaymission/snowfield/dorms/dorm8)
 "bDb" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -1871,8 +1790,6 @@
 /area/awaymission/snowfield/outside)
 "bGI" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/security,
@@ -1901,8 +1818,6 @@
 /area/awaymission/snowfield/outside)
 "bJp" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock{
@@ -2003,8 +1918,6 @@
 /area/awaymission/snowfield/medical/front_desk)
 "bMx" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -2038,8 +1951,6 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -2052,7 +1963,6 @@
 /area/awaymission/snowfield/command/observatory_path)
 "bPf" = (
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
@@ -2064,8 +1974,6 @@
 /area/awaymission/snowfield/engineering/tech_storage)
 "bPg" = (
 /obj/structure/cable/heavyduty{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/flora/grass/brown,
@@ -2079,8 +1987,6 @@
 	req_one_access = list(61)
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/blast/regular{
@@ -2102,8 +2008,6 @@
 "bSm" = (
 /obj/structure/catwalk,
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -2135,8 +2039,6 @@
 /area/awaymission/snowfield/engineering/locker_room)
 "bTZ" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -2152,8 +2054,6 @@
 /area/awaymission/snowfield/outside)
 "bUl" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -2220,8 +2120,6 @@
 /area/awaymission/snowfield/engineering/restroom)
 "bYA" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock{
@@ -2290,8 +2188,6 @@
 /area/awaymission/snowfield/security/hallway)
 "ccW" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals6{
@@ -2304,7 +2200,6 @@
 /area/awaymission/snowfield/medical/patient_restroom)
 "cdN" = (
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -2341,8 +2236,6 @@
 	dir = 6
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -2354,8 +2247,6 @@
 /area/awaymission/snowfield/medical/surgery)
 "cgp" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/cult,
@@ -2433,7 +2324,6 @@
 /area/awaymission/snowfield/hallway/commandhallway)
 "ciQ" = (
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/atmospherics/pipe/cap/visible{
@@ -2467,13 +2357,9 @@
 /area/awaymission/snowfield/checkpointunpowered)
 "ckr" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/catwalk,
@@ -2481,8 +2367,6 @@
 /area/awaymission/snowfield/outside)
 "ckB" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/wood/broken,
@@ -2493,15 +2377,13 @@
 "clO" = (
 /obj/structure/catwalk,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/item/ammo_casing/spent{
 	pixel_x = -5;
 	pixel_y = 3
 	},
-/obj/item/ammo_casing/a762x54{
+/obj/item/ammo_casing/a762{
 	pixel_x = -3;
 	pixel_y = -8
 	},
@@ -2563,8 +2445,6 @@
 	dir = 1
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -2591,7 +2471,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -2620,13 +2499,9 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/catwalk,
@@ -2635,8 +2510,6 @@
 /area/awaymission/snowfield/engineering/engine)
 "cqC" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/industrial/outline,
@@ -2677,13 +2550,9 @@
 /area/awaymission/snowfield/engineering/monitor_room)
 "csK" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
@@ -2698,8 +2567,6 @@
 /area/awaymission/snowfield/command/gateway)
 "ctZ" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/decal/remains/deer,
@@ -2716,8 +2583,6 @@
 /area/awaymission/snowfield/engineering/primary_storage)
 "cuw" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -2819,8 +2684,6 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -2852,8 +2715,6 @@
 	dir = 1
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -2861,8 +2722,6 @@
 /area/awaymission/snowfield/engineering/monitor_room)
 "czv" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -2875,8 +2734,6 @@
 /area/awaymission/snowfield/medical/hallway)
 "cBr" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/glass_medical{
@@ -2952,8 +2809,6 @@
 /obj/effect/floor_decal/corner/red/border,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/monotile,
@@ -2977,18 +2832,12 @@
 /area/awaymission/snowfield/command/gateway)
 "cGS" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -3005,7 +2854,6 @@
 /area/awaymission/snowfield/medical/hallway)
 "cIw" = (
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -3064,10 +2912,7 @@
 	pixel_y = 5
 	},
 /obj/item/multitool,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
+/obj/item/cell/high,
 /obj/item/stack/cable_coil,
 /obj/item/stack/cable_coil,
 /turf/simulated/floor/tiled/techfloor,
@@ -3171,7 +3016,6 @@
 "cSU" = (
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/catwalk,
@@ -3233,8 +3077,6 @@
 /obj/structure/catwalk,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -3248,7 +3090,6 @@
 /area/awaymission/snowfield/outside)
 "cWo" = (
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/atmospherics/pipe/cap/visible{
@@ -3269,8 +3110,6 @@
 /area/awaymission/snowfield/hallway/commandhallway)
 "cXi" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -3358,8 +3197,6 @@
 "dco" = (
 /obj/structure/catwalk,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -3388,13 +3225,9 @@
 /area/awaymission/snowfield/command/bridge)
 "dcJ" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/catwalk,
@@ -3435,8 +3268,6 @@
 /area/awaymission/snowfield/dorms/dorm3)
 "der" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -3447,8 +3278,6 @@
 /area/awaymission/snowfield/solarshack)
 "deC" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -3458,7 +3287,6 @@
 	dir = 5
 	},
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
@@ -3481,8 +3309,6 @@
 /area/awaymission/snowfield/command/monitorroom)
 "dgf" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/carpet,
@@ -3524,8 +3350,6 @@
 /area/awaymission/snowfield/dorms/dorm6)
 "dhV" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -3553,14 +3377,11 @@
 /area/awaymission/snowfield/security/security_cell)
 "djC" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
@@ -3573,8 +3394,6 @@
 /area/awaymission/snowfield/hallway/dormhallway)
 "dke" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -3588,8 +3407,6 @@
 /area/awaymission/snowfield/medical/surgery)
 "dkB" = (
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/catwalk,
@@ -3676,20 +3493,15 @@
 /area/awaymission/snowfield/restricted)
 "dnp" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/outdoors/snow/sif/planetuse,
 /area/awaymission/snowfield/outside)
 "dnJ" = (
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/terminal{
@@ -3795,7 +3607,6 @@
 	output_level = 750000
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor,
@@ -3839,8 +3650,6 @@
 /area/awaymission/snowfield/command/bsa)
 "dvx" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -3922,8 +3731,6 @@
 /area/awaymission/snowfield/service/kitchen)
 "dyT" = (
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/effect/floor_decal/industrial/warning,
@@ -3955,8 +3762,6 @@
 /area/awaymission/snowfield/cavern)
 "dzH" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -3967,7 +3772,6 @@
 	start_charge = 0
 	},
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor,
@@ -4014,13 +3818,9 @@
 /area/awaymission/snowfield/medical/chemistry)
 "dzR" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -4054,11 +3854,9 @@
 /area/awaymission/snowfield/command/monitorroom)
 "dAv" = (
 /obj/structure/cable/heavyduty{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/catwalk,
@@ -4137,8 +3935,6 @@
 /area/awaymission/snowfield/security/security_cell)
 "dGf" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -4152,8 +3948,6 @@
 	dir = 9
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -4171,8 +3965,6 @@
 	dir = 5
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -4234,7 +4026,6 @@
 /area/awaymission/snowfield/security/interrogation)
 "dIo" = (
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -4271,13 +4062,9 @@
 /area/awaymission/snowfield/cavern)
 "dJo" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/catwalk,
@@ -4297,8 +4084,6 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -4328,8 +4113,6 @@
 /area/awaymission/snowfield/command/gateway)
 "dLP" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock{
@@ -4381,8 +4164,6 @@
 /area/awaymission/snowfield/dorms/dorm9)
 "dMS" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -4424,8 +4205,6 @@
 /area/awaymission/snowfield/dorms/dorm14)
 "dNW" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/blast/regular{
@@ -4443,13 +4222,9 @@
 /area/awaymission/snowfield/engineering/hallway)
 "dOC" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/catwalk,
@@ -4540,7 +4315,6 @@
 /area/awaymission/snowfield/dorms/dorm8)
 "dTw" = (
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor,
@@ -4569,8 +4343,6 @@
 /area/awaymission/snowfield/security/detective)
 "dUh" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/spider/stickyweb,
@@ -4600,7 +4372,6 @@
 /area/awaymission/snowfield/security/firingrange)
 "dVm" = (
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/smes/buildable{
@@ -4615,8 +4386,6 @@
 "dVK" = (
 /obj/structure/catwalk,
 /obj/structure/cable/heavyduty{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -4624,7 +4393,6 @@
 /area/awaymission/snowfield/hallway/commandhallway)
 "dWW" = (
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/terminal{
@@ -4716,13 +4484,9 @@
 /area/awaymission/snowfield/cavern)
 "dZR" = (
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/cult,
@@ -4736,8 +4500,6 @@
 /area/awaymission/snowfield/dorms/dorm7)
 "eab" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -4796,8 +4558,6 @@
 /area/awaymission/snowfield/public/publicrestroom)
 "edD" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
@@ -4813,8 +4573,6 @@
 /area/awaymission/snowfield/dorms/dorm1)
 "edK" = (
 /obj/structure/cable/heavyduty{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/railing{
@@ -4827,7 +4585,6 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
@@ -4871,8 +4628,6 @@
 /area/awaymission/snowfield/command/bsa)
 "egk" = (
 /obj/structure/cable/heavyduty{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -4951,8 +4706,6 @@
 /area/awaymission/snowfield/security/lobby)
 "ejk" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
@@ -4973,8 +4726,6 @@
 	dir = 1
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -4982,33 +4733,23 @@
 /area/awaymission/snowfield/security/hallway)
 "ekx" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/security/lobby)
 "ekO" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -5084,8 +4825,6 @@
 /area/awaymission/snowfield/medical/medical_locker)
 "epG" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -5114,7 +4853,6 @@
 /area/awaymission/snowfield/medical/surgery)
 "epY" = (
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
@@ -5193,16 +4931,12 @@
 /area/awaymission/snowfield/security/armory)
 "etc" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/catwalk,
@@ -5258,8 +4992,6 @@
 /area/awaymission/snowfield/dorms/dorm14)
 "evZ" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -5299,8 +5031,6 @@
 /area/awaymission/snowfield/command/gateway)
 "ewW" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/security{
@@ -5363,7 +5093,6 @@
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/green/border,
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/light,
@@ -5437,8 +5166,6 @@
 	req_one_access = list(1,11,23,30,56,70)
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -5532,7 +5259,6 @@
 	dir = 6
 	},
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
@@ -5652,8 +5378,6 @@
 	dir = 1
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /mob/living/simple_mob/animal/giant_spider/broodling,
@@ -5745,7 +5469,6 @@
 /area/awaymission/snowfield/cavern)
 "eWZ" = (
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -5753,8 +5476,6 @@
 /area/awaymission/snowfield/hallway/commandhallway)
 "eXv" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/machinery/light{
@@ -5800,8 +5521,6 @@
 	name = "Restroom"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -5920,18 +5639,12 @@
 /area/awaymission/snowfield/medical/chemistry)
 "fdE" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
@@ -5969,7 +5682,6 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/catwalk,
@@ -5988,8 +5700,6 @@
 /area/awaymission/snowfield/engineering/primary_storage)
 "fhg" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -6068,8 +5778,6 @@
 /area/awaymission/snowfield/hallway/northhallway)
 "fkQ" = (
 /obj/structure/cable/heavyduty{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor,
@@ -6140,13 +5848,9 @@
 /area/awaymission/snowfield/public/cafeteria_restroom)
 "fnX" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/catwalk,
@@ -6181,21 +5885,15 @@
 /area/awaymission/snowfield/security/warden)
 "fqn" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/snowfield/security/armory_entrance)
 "fqI" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock{
@@ -6235,8 +5933,6 @@
 /area/awaymission/snowfield/security/seconddesk)
 "fsg" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/industrial/warning,
@@ -6340,8 +6036,6 @@
 "fyb" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/cult,
@@ -6377,8 +6071,6 @@
 "fAZ" = (
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -6386,18 +6078,12 @@
 /area/awaymission/snowfield/engineering/locker_room)
 "fBf" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -6415,8 +6101,6 @@
 /area/awaymission/snowfield/security/security_lockerroom)
 "fBJ" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock{
@@ -6464,8 +6148,6 @@
 /area/awaymission/snowfield/service/hydro)
 "fEi" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -6474,8 +6156,6 @@
 /area/awaymission/snowfield/command/bridge)
 "fFQ" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals6,
@@ -6514,13 +6194,9 @@
 /area/awaymission/snowfield/command/gateway)
 "fJZ" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -6621,8 +6297,6 @@
 /area/awaymission/snowfield/security/security_cell)
 "fMN" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/spider/stickyweb,
@@ -6759,8 +6433,6 @@
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/grey/border,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -6781,7 +6453,6 @@
 	pixel_x = -24
 	},
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/flora/pottedplant/thinbush,
@@ -6789,13 +6460,9 @@
 /area/awaymission/snowfield/security/seconddesk)
 "fSy" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/item/material/shard/shrapnel{
@@ -6832,8 +6499,6 @@
 /area/awaymission/snowfield/dorms/dorm7)
 "fVh" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -6877,8 +6542,6 @@
 /area/awaymission/snowfield/engineering/staff_room)
 "fWQ" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/blue{
@@ -6920,14 +6583,10 @@
 /area/awaymission/snowfield/command/monitorroom)
 "fYG" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/catwalk,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor,
@@ -6952,8 +6611,6 @@
 	},
 /obj/structure/catwalk,
 /obj/structure/cable/heavyduty{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -7106,8 +6763,6 @@
 	name = "Tool Storage"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -7267,8 +6922,6 @@
 	dir = 1
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -7372,8 +7025,6 @@
 /area/awaymission/snowfield/engineering/locker_room)
 "gsu" = (
 /obj/structure/cable/heavyduty{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -7385,8 +7036,6 @@
 /area/awaymission/snowfield/medical/patients)
 "gsZ" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -7403,8 +7052,6 @@
 "gvJ" = (
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/neutral,
@@ -7538,8 +7185,6 @@
 /area/awaymission/snowfield/dorms/panicroom)
 "gAs" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/industrial/warning,
@@ -7548,8 +7193,6 @@
 /area/awaymission/snowfield/hallway/commandhallway_substation)
 "gBk" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -7565,8 +7208,6 @@
 "gBN" = (
 /obj/structure/catwalk,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/item/ammo_casing/spent{
@@ -7667,13 +7308,9 @@
 /area/awaymission/snowfield/public/publicrestroom)
 "gGa" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -7711,8 +7348,6 @@
 /area/awaymission/snowfield/dorms/panicroom)
 "gHQ" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals10{
@@ -7765,8 +7400,6 @@
 /area/awaymission/snowfield/command/gateway)
 "gJv" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/borderfloorblack,
@@ -7859,7 +7492,6 @@
 /obj/item/soap,
 /obj/item/soap,
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
@@ -7931,8 +7563,6 @@
 /area/awaymission/snowfield/medical/surgery)
 "gPl" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -8045,12 +7675,10 @@
 	},
 /obj/structure/catwalk,
 /obj/structure/cable/heavyduty{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable/green,
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -8067,8 +7695,6 @@
 /area/awaymission/snowfield/security/security_cell)
 "gUR" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -8096,8 +7722,6 @@
 /area/awaymission/snowfield/security/firingrange)
 "gWG" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -8192,7 +7816,6 @@
 /area/awaymission/snowfield/security/detective)
 "haz" = (
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
@@ -8248,8 +7871,6 @@
 /area/awaymission/snowfield/hallway/southhallway)
 "hbK" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -8271,8 +7892,6 @@
 /area/awaymission/snowfield/security/warden)
 "hcV" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -8348,8 +7967,6 @@
 /area/awaymission/snowfield/security/armory)
 "hfQ" = (
 /obj/structure/cable/heavyduty{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -8368,13 +7985,9 @@
 /area/awaymission/snowfield/checkpoint)
 "hhj" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -8415,7 +8028,6 @@
 	pixel_x = 24
 	},
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/catwalk,
@@ -8430,8 +8042,6 @@
 	dir = 8
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -8457,8 +8067,6 @@
 	dir = 1
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -8466,13 +8074,9 @@
 /area/awaymission/snowfield/command/bridge)
 "hjS" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -8480,13 +8084,9 @@
 /area/awaymission/snowfield/medical/hallway)
 "hkK" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -8541,7 +8141,6 @@
 /area/awaymission/snowfield/checkpointunpowered)
 "hnK" = (
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/space_heater,
@@ -8609,7 +8208,6 @@
 /area/awaymission/snowfield/service/cafeteria)
 "hpr" = (
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor,
@@ -8617,8 +8215,6 @@
 "hqb" = (
 /obj/structure/catwalk,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -8638,13 +8234,9 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/red/border,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -8664,7 +8256,6 @@
 /area/awaymission/snowfield/hallway/northhallway)
 "hrB" = (
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -8713,8 +8304,6 @@
 /area/awaymission/snowfield/command/bsa)
 "huG" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/catwalk,
@@ -8723,8 +8312,6 @@
 /area/awaymission/snowfield/hallway/commandhallway)
 "hvz" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/catwalk,
@@ -8747,8 +8334,6 @@
 /area/awaymission/snowfield/dorms/dorm4)
 "hwI" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/item/material/shard/shrapnel{
@@ -8765,8 +8350,6 @@
 /area/awaymission/snowfield/medical/front_desk)
 "hxs" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/medical{
@@ -8847,8 +8430,6 @@
 /area/awaymission/snowfield/command/bsa)
 "hAH" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/catwalk,
@@ -8937,8 +8518,6 @@
 	id = "snowfield bsa access"
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -8986,8 +8565,6 @@
 /area/awaymission/snowfield/dorms/panicroom)
 "hGr" = (
 /obj/structure/cable/heavyduty{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
@@ -9007,8 +8584,6 @@
 /area/awaymission/snowfield/cavern)
 "hHW" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -9191,8 +8766,6 @@
 /area/awaymission/snowfield/outside)
 "hQr" = (
 /obj/structure/cable/heavyduty{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/railing,
@@ -9240,8 +8813,6 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/decal/remains/human,
@@ -9271,8 +8842,6 @@
 /area/awaymission/snowfield/medical/patient_restroom)
 "hVG" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/engineering,
@@ -9336,8 +8905,6 @@
 /area/awaymission/snowfield/command/observatory)
 "hWM" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/vault{
@@ -9363,8 +8930,6 @@
 /area/awaymission/snowfield/engineering/staff_room)
 "hYj" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -9433,8 +8998,6 @@
 /area/awaymission/snowfield/command/bsa)
 "ibL" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/blast/regular{
@@ -9763,8 +9326,6 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -9773,7 +9334,6 @@
 "ipm" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
@@ -9793,8 +9353,6 @@
 "irb" = (
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/neutral,
@@ -9877,8 +9435,6 @@
 /area/awaymission/snowfield/public/cafeteria_restroom)
 "ivP" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /mob/living/simple_mob/faithless/cult{
@@ -9917,8 +9473,6 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -9934,8 +9488,6 @@
 	id = "snowfield emergency bunk"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -9981,8 +9533,6 @@
 /area/awaymission/snowfield/public/cafeteria_restroom)
 "iBb" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/ash,
@@ -10013,8 +9563,6 @@
 /area/awaymission/snowfield/hallway/southhallway)
 "iDk" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/neutral,
@@ -10117,7 +9665,6 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/floor_decal/corner/green/border{
@@ -10153,8 +9700,6 @@
 /area/awaymission/snowfield/security/heavy_armory)
 "iHU" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -10176,8 +9721,6 @@
 /area/awaymission/snowfield/dorms/dorm14)
 "iIf" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -10209,8 +9752,6 @@
 /area/awaymission/snowfield/medical/morgue)
 "iJk" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/catwalk,
@@ -10244,18 +9785,12 @@
 /area/awaymission/snowfield/security/seconddesk)
 "iKO" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -10304,8 +9839,6 @@
 	dir = 10
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -10349,8 +9882,6 @@
 /area/awaymission/snowfield/cavern)
 "iOB" = (
 /obj/structure/cable/heavyduty{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -10397,7 +9928,6 @@
 	output_level = 750000
 	},
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/catwalk,
@@ -10415,8 +9945,6 @@
 /area/awaymission/snowfield/outside)
 "iRT" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -10452,13 +9980,9 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/steel,
@@ -10484,12 +10008,9 @@
 /area/awaymission/snowfield/dorms/dorm12)
 "iWo" = (
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -10549,8 +10070,6 @@
 /area/awaymission/snowfield/engineering/monitor_room)
 "iXD" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -10569,8 +10088,6 @@
 	name = "Tool Storage"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/neutral,
@@ -10580,18 +10097,12 @@
 /area/awaymission/snowfield/emergency_pathway/EP_powered)
 "iZz" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/catwalk,
@@ -10607,8 +10118,6 @@
 /area/awaymission/snowfield/medical/storage_room)
 "jaj" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -10621,8 +10130,6 @@
 /area/awaymission/snowfield/hallway/commandhallway)
 "jaS" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/industrial/warning,
@@ -10690,7 +10197,6 @@
 /area/awaymission/snowfield/command/bridge)
 "jdV" = (
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -10704,8 +10210,6 @@
 /area/awaymission/snowfield/command/bsa)
 "jdZ" = (
 /obj/structure/cable/heavyduty{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -10714,7 +10218,6 @@
 "jem" = (
 /obj/structure/closet/crate/bin,
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/catwalk,
@@ -10794,8 +10297,6 @@
 /area/awaymission/snowfield/command/bsa)
 "jgA" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/lino,
@@ -10812,8 +10313,6 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/spider/stickyweb,
@@ -10848,8 +10347,6 @@
 /area/awaymission/snowfield/medical/front_desk)
 "jhx" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -10955,8 +10452,6 @@
 	req_access = list(3)
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -11004,8 +10499,6 @@
 /area/awaymission/snowfield/command/gateway)
 "jqn" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -11029,16 +10522,12 @@
 	req_access = list(1)
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/red,
 /area/awaymission/snowfield/security/security_cell_hallway)
 "jry" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/catwalk,
@@ -11065,8 +10554,6 @@
 /area/awaymission/snowfield/public/cafeteria_restroom)
 "jtj" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -11112,16 +10599,12 @@
 	id = "snowfield third blast"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/hallway/checkpointhallway)
 "juX" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -11168,7 +10651,6 @@
 	dir = 1
 	},
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
@@ -11184,8 +10666,6 @@
 /area/awaymission/snowfield/hallway/centerhallway)
 "jxy" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -11239,8 +10719,6 @@
 /area/awaymission/snowfield/security/seconddesk)
 "jzR" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/catwalk,
@@ -11255,16 +10733,12 @@
 	dir = 1
 	},
 /obj/structure/cable/heavyduty{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
 /area/awaymission/snowfield/hallway/commandhallway)
 "jBP" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -11283,8 +10757,6 @@
 /area/awaymission/snowfield/outside)
 "jBW" = (
 /obj/structure/cable/heavyduty{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/engineering,
@@ -11309,8 +10781,6 @@
 /area/awaymission/snowfield/engineering/restroom)
 "jCV" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -11326,8 +10796,6 @@
 /area/awaymission/snowfield/security/firingrange)
 "jDu" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/catwalk,
@@ -11356,8 +10824,6 @@
 "jDZ" = (
 /obj/structure/catwalk,
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -11508,7 +10974,6 @@
 /area/awaymission/snowfield/restricted)
 "jJK" = (
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -11528,8 +10993,6 @@
 "jKl" = (
 /obj/structure/catwalk,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/spider/stickyweb,
@@ -11627,8 +11090,6 @@
 /area/awaymission/snowfield/service/publicstaff)
 "jQq" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/blue{
@@ -11655,8 +11116,6 @@
 /area/awaymission/snowfield/security/heavy_armory)
 "jQP" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/maintenance_hatch{
@@ -11682,13 +11141,9 @@
 /area/awaymission/snowfield/security/hallway)
 "jRe" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/catwalk,
@@ -11753,8 +11208,6 @@
 /area/awaymission/snowfield/checkpointunpowered)
 "jTW" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -11782,18 +11235,12 @@
 /area/awaymission/snowfield/command/bridge)
 "jVo" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/catwalk,
@@ -11802,8 +11249,6 @@
 /area/awaymission/snowfield/medical/front_desk)
 "jWa" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -11896,7 +11341,6 @@
 /area/awaymission/snowfield/checkpoint)
 "jZQ" = (
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -11917,13 +11361,9 @@
 /area/awaymission/snowfield/service/publicstaff)
 "kbd" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -11956,8 +11396,6 @@
 /area/awaymission/snowfield/command/bsa)
 "kbn" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/catwalk,
@@ -11968,8 +11406,6 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -11987,7 +11423,6 @@
 	dir = 1
 	},
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor,
@@ -12012,13 +11447,9 @@
 /area/awaymission/snowfield/command/sub_chamber)
 "kcN" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/catwalk,
@@ -12045,8 +11476,6 @@
 /area/awaymission/snowfield/medical/chemistry)
 "kdU" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -12054,8 +11483,6 @@
 /area/awaymission/snowfield/hallway/commandhallway)
 "kei" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/command,
@@ -12066,8 +11493,6 @@
 /area/awaymission/snowfield/command/observatory)
 "keG" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/highsecurity{
@@ -12123,8 +11548,6 @@
 /area/awaymission/snowfield/cavern)
 "kia" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/blast/regular{
@@ -12141,8 +11564,6 @@
 /area/awaymission/snowfield/hallway/frontgate_substation)
 "kiD" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -12161,8 +11582,6 @@
 /area/awaymission/snowfield/engineering/engine)
 "kjZ" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/catwalk,
@@ -12234,8 +11653,6 @@
 /area/awaymission/snowfield/hallway/commandhallway)
 "knr" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/cult,
@@ -12274,7 +11691,6 @@
 "kpM" = (
 /obj/effect/floor_decal/corner/yellow/diagonal,
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
@@ -12325,8 +11741,6 @@
 /area/awaymission/snowfield/security/firingrange)
 "krX" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -12365,8 +11779,6 @@
 /area/awaymission/snowfield/security/seconddesk)
 "kug" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -12388,8 +11800,6 @@
 "kvO" = (
 /obj/structure/catwalk,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -12450,8 +11860,6 @@
 /area/awaymission/snowfield/medical/storage_room)
 "kyw" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/catwalk,
@@ -12513,8 +11921,6 @@
 "kzk" = (
 /obj/structure/catwalk,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/item/clothing/suit/fire/heavy{
@@ -12547,7 +11953,6 @@
 "kBA" = (
 /obj/structure/catwalk,
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
@@ -12639,8 +12044,6 @@
 /area/awaymission/snowfield/medical/surgery)
 "kGz" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
@@ -12683,8 +12086,6 @@
 /area/awaymission/snowfield/service/kitchen)
 "kJw" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/maintenance_hatch{
@@ -12703,8 +12104,6 @@
 /area/awaymission/snowfield/hallway/frontgate_substation)
 "kJQ" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/freezer{
@@ -12770,13 +12169,9 @@
 /area/awaymission/snowfield/cavern)
 "kMP" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -12809,15 +12204,12 @@
 /area/awaymission/snowfield/hallway/northhallway)
 "kNJ" = (
 /obj/structure/cable/heavyduty{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/light/small{
 	dir = 8
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
@@ -12833,8 +12225,6 @@
 /area/awaymission/snowfield/command/testroom)
 "kNY" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -12936,8 +12326,6 @@
 	dir = 5
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -12949,8 +12337,6 @@
 /area/awaymission/snowfield/engineering/primary_storage)
 "kWR" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
@@ -12969,8 +12355,6 @@
 	dir = 1
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/power/apc{
@@ -12980,7 +12364,6 @@
 	start_charge = 0
 	},
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/steel,
@@ -13067,8 +12450,6 @@
 /area/awaymission/snowfield/security/security_cell)
 "kZp" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/glass_security,
@@ -13087,8 +12468,6 @@
 /area/awaymission/snowfield/security/detective)
 "kZK" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -13105,7 +12484,6 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor,
@@ -13141,8 +12519,6 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -13158,8 +12534,6 @@
 /area/awaymission/snowfield/security/seconddesk)
 "lcn" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -13210,8 +12584,6 @@
 /area/awaymission/snowfield/security/seconddesk)
 "ldT" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -13247,13 +12619,9 @@
 "lfj" = (
 /obj/structure/catwalk,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor,
@@ -13302,8 +12670,6 @@
 /area/awaymission/snowfield/public/toolstroage2)
 "lin" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -13330,8 +12696,6 @@
 /area/awaymission/snowfield/hallway/checkpointhallway)
 "ljm" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -13340,8 +12704,6 @@
 /area/awaymission/snowfield/hallway/centerhallway)
 "ljs" = (
 /obj/structure/cable/heavyduty{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/railing{
@@ -13362,8 +12724,6 @@
 /area/awaymission/snowfield/hallway/commandhallway)
 "lkO" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -13377,8 +12737,6 @@
 	req_one_access = list(1,33)
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/neutral,
@@ -13389,8 +12747,6 @@
 	req_access = list(1)
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
@@ -13434,8 +12790,6 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -13547,7 +12901,6 @@
 /area/awaymission/snowfield/engineering/engine)
 "lqC" = (
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/catwalk,
@@ -13565,8 +12918,6 @@
 /area/awaymission/snowfield/dorms/dorm9)
 "lro" = (
 /obj/structure/cable/heavyduty{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/outdoors/snow/sif/planetuse,
@@ -13651,16 +13002,12 @@
 "lvw" = (
 /obj/structure/catwalk,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/spider/stickyweb,
 /mob/living/simple_mob/animal/giant_spider/frost,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor,
@@ -13762,8 +13109,6 @@
 "lyb" = (
 /obj/structure/catwalk,
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -13827,8 +13172,6 @@
 /area/awaymission/snowfield/outside)
 "lBZ" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/medical{
@@ -14006,7 +13349,7 @@
 /turf/simulated/floor/tiled/monotile,
 /area/awaymission/snowfield/security/lobby)
 "lIw" = (
-/obj/item/ammo_casing/a762x54,
+/obj/item/ammo_casing/a762,
 /obj/item/ammo_casing/spent{
 	pixel_x = -4;
 	pixel_y = -7
@@ -14085,8 +13428,6 @@
 /area/awaymission/snowfield/hallway/commandhallway)
 "lLw" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/catwalk,
@@ -14128,8 +13469,6 @@
 /area/awaymission/snowfield/security/warden)
 "lPK" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -14207,8 +13546,6 @@
 	},
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/steel,
@@ -14244,8 +13581,6 @@
 /area/awaymission/snowfield/security/armory)
 "lZH" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/light/small{
@@ -14260,8 +13595,6 @@
 /area/awaymission/snowfield/public/toolstorage1)
 "mah" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -14309,8 +13642,6 @@
 /area/awaymission/snowfield/hallway/northhallway)
 "mbh" = (
 /obj/structure/cable/heavyduty{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
@@ -14342,8 +13673,6 @@
 	dir = 1
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/spider/stickyweb,
@@ -14360,8 +13689,6 @@
 /area/awaymission/snowfield/checkpointunpowered)
 "mdc" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -14452,13 +13779,9 @@
 /area/awaymission/snowfield/engineering/secure_tech_storage)
 "mgJ" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/catwalk,
@@ -14539,8 +13862,6 @@
 	req_one_access = list(61)
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -14657,8 +13978,6 @@
 /area/awaymission/snowfield/solarshack)
 "mtE" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor,
@@ -14682,8 +14001,6 @@
 	name = "Restroom"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -14704,8 +14021,6 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/corner/grey/border{
@@ -14741,18 +14056,12 @@
 /area/awaymission/snowfield/dorms/dorm16)
 "mwo" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -14781,8 +14090,6 @@
 /area/awaymission/snowfield/medical/storage_room)
 "mwM" = (
 /obj/structure/cable/heavyduty{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -14827,8 +14134,6 @@
 /area/awaymission/snowfield/engineering/engine_checkpoint)
 "myq" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/red,
@@ -14860,8 +14165,6 @@
 /area/awaymission/snowfield/medical/hallway)
 "mzy" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -14928,8 +14231,6 @@
 /area/awaymission/snowfield/medical/surgery)
 "mDV" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -14981,7 +14282,6 @@
 /obj/machinery/power/solar,
 /obj/machinery/power/solar,
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor,
@@ -15030,8 +14330,6 @@
 	},
 /obj/effect/floor_decal/corner/white/border,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -15073,13 +14371,9 @@
 /area/awaymission/snowfield/checkpointunpowered)
 "mJR" = (
 /obj/structure/cable/heavyduty{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable/heavyduty{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/catwalk,
@@ -15100,8 +14394,6 @@
 /area/awaymission/snowfield/dorms/dorm16)
 "mMp" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -15116,8 +14408,6 @@
 /area/awaymission/snowfield/medical/morgue)
 "mMS" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -15234,8 +14524,6 @@
 /area/awaymission/snowfield/checkpointunpowered)
 "mRz" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -15247,15 +14535,12 @@
 /area/awaymission/snowfield/medical/medical_locker)
 "mRN" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
 /obj/effect/spider/stickyweb,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
@@ -15274,8 +14559,6 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -15296,8 +14579,6 @@
 	req_one_access = list(3)
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -15325,8 +14606,6 @@
 "mTL" = (
 /obj/structure/catwalk,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -15464,8 +14743,6 @@
 /area/awaymission/snowfield/service/kitchen)
 "mZF" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -15488,8 +14765,6 @@
 /area/awaymission/snowfield/security/lobby)
 "nau" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -15542,8 +14817,6 @@
 /area/awaymission/snowfield/dorms/dorm1)
 "ndW" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -15556,8 +14829,6 @@
 /area/awaymission/snowfield/hallway/northhallway)
 "nei" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -15582,22 +14853,18 @@
 	},
 /obj/structure/catwalk,
 /obj/structure/cable/heavyduty{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/command/monitorroom)
 "nfA" = (
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/kitchenspike,
@@ -15615,8 +14882,6 @@
 	},
 /obj/structure/catwalk,
 /obj/structure/cable/heavyduty{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor,
@@ -15632,8 +14897,6 @@
 	dir = 1
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/effect/decal/cleanable/blood/drip,
@@ -15661,13 +14924,9 @@
 /area/awaymission/snowfield/engineering/primary_storage)
 "nhd" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/catwalk,
@@ -15779,13 +15038,9 @@
 /area/awaymission/snowfield/medical/staff_room)
 "nmV" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/steel,
@@ -15798,8 +15053,6 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/space_heater,
@@ -15822,8 +15075,6 @@
 /area/awaymission/snowfield/service/hydro)
 "noR" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
@@ -15868,8 +15119,6 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/railing{
@@ -15893,8 +15142,6 @@
 /area/awaymission/snowfield/dorms/dorm5)
 "nsn" = (
 /obj/structure/cable/heavyduty{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -15943,8 +15190,6 @@
 /area/awaymission/snowfield/checkpoint)
 "nue" = (
 /obj/structure/cable/heavyduty{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -15953,7 +15198,6 @@
 "nvp" = (
 /obj/effect/decal/remains/human,
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -16015,8 +15259,6 @@
 /area/awaymission/snowfield/security/frontgate)
 "nwW" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -16089,8 +15331,6 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/red/border,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/light,
@@ -16124,8 +15364,6 @@
 /area/awaymission/snowfield/security/frontgate)
 "nAG" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -16136,8 +15374,6 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -16214,8 +15450,6 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/item/surgical/circular_saw{
@@ -16227,8 +15461,6 @@
 /area/awaymission/snowfield/medical/surgery)
 "nDh" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/catwalk,
@@ -16306,15 +15538,12 @@
 "nHI" = (
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/service/cafeteria)
 "nHO" = (
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -16355,8 +15584,6 @@
 "nLM" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/cult,
@@ -16379,13 +15606,9 @@
 /area/awaymission/snowfield/engineering/locker_room)
 "nMh" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -16446,8 +15669,6 @@
 /area/awaymission/snowfield/dorms/dorm7)
 "nON" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -16525,7 +15746,6 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor,
@@ -16537,8 +15757,6 @@
 /area/awaymission/snowfield/security/seconddesk)
 "nSC" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/wood,
@@ -16679,8 +15897,6 @@
 "oac" = (
 /obj/structure/catwalk,
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -16712,8 +15928,6 @@
 /area/awaymission/snowfield/command/bsa)
 "obZ" = (
 /obj/structure/cable/heavyduty{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/catwalk,
@@ -16736,8 +15950,6 @@
 /area/awaymission/snowfield/security/security_cell)
 "ocF" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -16745,8 +15957,6 @@
 /area/awaymission/snowfield/engineering/tech_storage)
 "ocP" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/maintenance_hatch{
@@ -16768,21 +15978,15 @@
 /obj/item/circuitboard/broken,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/command/sub_chamber)
 "odi" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/catwalk,
@@ -16844,8 +16048,6 @@
 /area/awaymission/snowfield/security/lobby)
 "ogy" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock{
@@ -16894,8 +16096,6 @@
 /area/awaymission/snowfield/command/server)
 "oik" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -16945,8 +16145,6 @@
 /area/awaymission/snowfield/emergency_pathway/EP_unpowered)
 "ojY" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -16954,13 +16152,9 @@
 /area/awaymission/snowfield/security/security_restroom)
 "okk" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -17000,7 +16194,6 @@
 /obj/machinery/power/solar,
 /obj/machinery/power/solar,
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/outdoors/snow/sif/planetuse,
@@ -17032,8 +16225,6 @@
 	dir = 6
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/effect/spider/stickyweb,
@@ -17114,8 +16305,6 @@
 "oqV" = (
 /obj/structure/catwalk,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/item/clothing/suit/bio_suit/general,
@@ -17224,8 +16413,6 @@
 /area/awaymission/snowfield/public/publicrestroom)
 "our" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/neutral,
@@ -17260,8 +16447,6 @@
 	dir = 6
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/table/steel_reinforced,
@@ -17311,8 +16496,6 @@
 /area/awaymission/snowfield/security/warden)
 "oAu" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/red,
@@ -17342,8 +16525,6 @@
 /area/awaymission/snowfield/hallway/northhallway)
 "oCc" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -17364,13 +16545,9 @@
 /area/awaymission/snowfield/command/bsa)
 "oDz" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -17379,13 +16556,9 @@
 /area/awaymission/snowfield/engineering/hallway)
 "oDD" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -17537,8 +16710,6 @@
 "oOl" = (
 /obj/structure/catwalk,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -17628,8 +16799,6 @@
 /area/awaymission/snowfield/dorms/dorm9)
 "oVH" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -17672,8 +16841,6 @@
 /area/awaymission/snowfield/security/seconddesk)
 "oXp" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor,
@@ -17705,7 +16872,6 @@
 	pixel_x = -24
 	},
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled/steel,
@@ -17722,8 +16888,6 @@
 /area/awaymission/snowfield/security/security_lockerroom)
 "oZe" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -17759,8 +16923,6 @@
 /area/awaymission/snowfield/service/kitchen)
 "paH" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -17841,8 +17003,6 @@
 /area/awaymission/snowfield/medical/medical_locker)
 "pfj" = (
 /obj/structure/cable/heavyduty{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/wall,
@@ -17872,13 +17032,9 @@
 /area/awaymission/snowfield/medical/surgery)
 "pgn" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/catwalk,
@@ -17890,13 +17046,9 @@
 /area/awaymission/snowfield/dorms/dorm11)
 "phA" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/item/ammo_casing/spent{
@@ -17920,8 +17072,6 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -17948,21 +17098,15 @@
 	req_access = list(1)
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/awaymission/snowfield/security/observatory)
 "pmE" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/catwalk,
@@ -17970,8 +17114,6 @@
 /area/awaymission/snowfield/hallway/dormhallway)
 "pnb" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -17979,8 +17121,6 @@
 /area/awaymission/snowfield/medical/patients)
 "pnj" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
@@ -17994,15 +17134,13 @@
 	dir = 1
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/command/bridge)
 "pnD" = (
-/obj/item/ammo_casing/a762x54,
-/obj/item/ammo_casing/a762x54,
+/obj/item/ammo_casing/a762,
+/obj/item/ammo_casing/a762,
 /obj/item/tool/crowbar/red{
 	pixel_x = -10;
 	pixel_y = -15
@@ -18078,8 +17216,6 @@
 /area/awaymission/snowfield/dorms/dorm12)
 "psa" = (
 /obj/structure/cable/heavyduty{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/window/reinforced{
@@ -18158,8 +17294,6 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals10,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -18194,18 +17328,12 @@
 /area/awaymission/snowfield/dorms/dorm6)
 "puS" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/item/material/shard/shrapnel{
@@ -18223,8 +17351,6 @@
 /area/awaymission/snowfield/outside)
 "pvl" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/spider/stickyweb,
@@ -18247,13 +17373,9 @@
 	dir = 1
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/spider/stickyweb,
@@ -18269,8 +17391,6 @@
 /area/awaymission/snowfield/engineering/locker_room)
 "pwq" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock{
@@ -18289,8 +17409,6 @@
 "pxr" = (
 /obj/structure/catwalk,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -18313,8 +17431,6 @@
 	req_access = list(1)
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -18341,8 +17457,6 @@
 /area/awaymission/snowfield/security/warden)
 "pyr" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -18426,8 +17540,6 @@
 /area/awaymission/snowfield/checkpointunpowered)
 "pAp" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/wood/broken,
@@ -18435,7 +17547,6 @@
 "pAB" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
@@ -18461,13 +17572,9 @@
 "pBA" = (
 /obj/machinery/atmospherics/pipe/simple/visible/blue,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -18513,8 +17620,6 @@
 /area/awaymission/snowfield/command/commandarmory)
 "pER" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/wood,
@@ -18536,7 +17641,6 @@
 /area/awaymission/snowfield/cavern)
 "pGC" = (
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
@@ -18549,8 +17653,6 @@
 "pHa" = (
 /obj/structure/catwalk,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/spider/stickyweb,
@@ -18558,8 +17660,6 @@
 /area/awaymission/snowfield/hallway/northhallway)
 "pHG" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -18568,8 +17668,6 @@
 /area/awaymission/snowfield/engineering/hallway)
 "pHK" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/catwalk,
@@ -18591,8 +17689,6 @@
 /area/awaymission/snowfield/hallway/checkpointhallway)
 "pHZ" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -18603,7 +17699,6 @@
 	start_charge = 0
 	},
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor,
@@ -18625,8 +17720,6 @@
 /area/awaymission/snowfield/outside)
 "pJb" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -18641,13 +17734,9 @@
 /area/awaymission/snowfield/command/commandarmory)
 "pJC" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
@@ -18678,8 +17767,6 @@
 	req_one_access = null
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -18701,8 +17788,6 @@
 "pMg" = (
 /obj/effect/floor_decal/industrial/outline,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/arrows{
@@ -18754,8 +17839,6 @@
 	req_one_access = newlist()
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -18841,8 +17924,6 @@
 	dir = 1
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/spider/stickyweb,
@@ -18874,8 +17955,6 @@
 	req_one_access = list(3)
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -18890,8 +17969,6 @@
 /area/awaymission/snowfield/dorms/dorm8)
 "pUC" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -18899,8 +17976,6 @@
 /area/awaymission/snowfield/hallway/commandhallway)
 "pUI" = (
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -18957,8 +18032,6 @@
 	dir = 1
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/industrial/warning,
@@ -18993,8 +18066,6 @@
 /area/awaymission/snowfield/hallway/commandhallway)
 "qbB" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/security{
@@ -19025,7 +18096,6 @@
 "qbN" = (
 /obj/machinery/power/solar,
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/outdoors/snow/sif/planetuse,
@@ -19106,8 +18176,6 @@
 	name = "Restroom"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -19121,8 +18189,6 @@
 /area/awaymission/snowfield/service/hydro)
 "qdJ" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
@@ -19158,22 +18224,10 @@
 /area/awaymission/snowfield/security/security_restroom)
 "qfC" = (
 /obj/structure/table/steel,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
+/obj/item/cell/high,
+/obj/item/cell/high,
+/obj/item/cell/high,
+/obj/item/cell/high,
 /obj/machinery/light/small{
 	dir = 1
 	},
@@ -19183,8 +18237,6 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/red/border,
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -19223,8 +18275,6 @@
 	dir = 8
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/light/small/flicker{
@@ -19274,8 +18324,6 @@
 /area/awaymission/snowfield/security/seconddesk)
 "qiR" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -19289,8 +18337,6 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/item/clothing/head/hardhat/firefighter/atmos,
@@ -19313,7 +18359,6 @@
 "qjX" = (
 /obj/structure/cable,
 /obj/structure/cable/heavyduty{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/catwalk,
@@ -19326,8 +18371,6 @@
 /area/awaymission/snowfield/dorms/dorm12)
 "qkE" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
@@ -19402,8 +18445,6 @@
 /area/awaymission/snowfield/hallway/southhallway)
 "qmQ" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -19414,8 +18455,6 @@
 "qne" = (
 /obj/structure/catwalk,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor,
@@ -19433,8 +18472,6 @@
 "qnP" = (
 /obj/structure/catwalk,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/machinery/light/flicker{
@@ -19509,8 +18546,6 @@
 /area/awaymission/snowfield/medical/morgue)
 "qpE" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/catwalk,
@@ -19529,8 +18564,6 @@
 /area/awaymission/snowfield/outside)
 "qqE" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -19679,13 +18712,9 @@
 /area/awaymission/snowfield/engineering/engine)
 "qxb" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/outdoors/snow/sif/planetuse,
@@ -19767,8 +18796,6 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -19790,16 +18817,12 @@
 "qCz" = (
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/engineering/locker_room)
 "qCV" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
@@ -19840,8 +18863,6 @@
 	req_access = list(45)
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/neutral,
@@ -19881,7 +18902,6 @@
 /area/awaymission/snowfield/command/monitorroom)
 "qJL" = (
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -19925,8 +18945,6 @@
 /area/awaymission/snowfield/command/testroom)
 "qMk" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
@@ -19974,8 +18992,6 @@
 	req_one_access = list(1,53)
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -20079,8 +19095,6 @@
 /area/awaymission/snowfield/dorms/dorm9)
 "qSJ" = (
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -20094,8 +19108,6 @@
 	},
 /obj/effect/decal/cleanable/blood,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -20161,16 +19173,12 @@
 /area/awaymission/snowfield/cavern)
 "qXw" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/command/bridge)
 "qXC" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/neutral,
@@ -20263,16 +19271,12 @@
 /area/awaymission/snowfield/outside)
 "raJ" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor,
 /area/awaymission/snowfield/security/hallway2)
 "rbD" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -20341,8 +19345,6 @@
 /area/awaymission/snowfield/command/gateway)
 "rff" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -20425,8 +19427,6 @@
 /area/awaymission/snowfield/outside)
 "rjo" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -20469,8 +19469,6 @@
 /area/awaymission/snowfield/dorms/dorm13)
 "rkk" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -20499,7 +19497,6 @@
 /area/awaymission/snowfield/medical/morgue)
 "rkU" = (
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/smes/buildable{
@@ -20602,8 +19599,6 @@
 /area/awaymission/snowfield/engineering/staff_room)
 "rqp" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -20616,8 +19611,6 @@
 /area/awaymission/snowfield/public/toolstroage2)
 "rqq" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -20634,8 +19627,6 @@
 /area/awaymission/snowfield/security/evidence_storage)
 "rrb" = (
 /obj/structure/cable/heavyduty{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /mob/living/simple_mob/construct/harvester{
@@ -20645,8 +19636,6 @@
 /area/awaymission/snowfield/hallway/commandhallway)
 "rrm" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -20657,8 +19646,6 @@
 /area/awaymission/snowfield/medical/front_desk)
 "rrW" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -20689,8 +19676,6 @@
 /area/awaymission/snowfield/engineering/hallway)
 "rvN" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -20819,8 +19804,6 @@
 "rHF" = (
 /obj/structure/catwalk,
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -20904,13 +19887,9 @@
 /area/awaymission/snowfield/engineering/restroom)
 "rLd" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/catwalk,
@@ -20951,8 +19930,6 @@
 	name = "Restroom"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -20968,8 +19945,6 @@
 /area/awaymission/snowfield/checkpoint)
 "rNV" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -20984,13 +19959,9 @@
 /area/awaymission/snowfield/dorms/dorm7)
 "rOE" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
@@ -21086,8 +20057,6 @@
 "rVx" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/steel,
@@ -21137,8 +20106,6 @@
 /area/awaymission/snowfield/dorms/dorm9)
 "rXj" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -21146,8 +20113,6 @@
 /area/awaymission/snowfield/engineering/tech_storage)
 "rYh" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/glass_medical{
@@ -21159,8 +20124,6 @@
 /area/awaymission/snowfield/medical/storage_room)
 "rYF" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/catwalk,
@@ -21168,18 +20131,12 @@
 /area/awaymission/snowfield/command/server)
 "rYI" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/catwalk,
@@ -21209,7 +20166,6 @@
 /area/awaymission/snowfield/engineering/engine)
 "saz" = (
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/filingcabinet/chestdrawer{
@@ -21229,7 +20185,6 @@
 /area/awaymission/snowfield/medical/morgue)
 "sbj" = (
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
@@ -21268,8 +20223,6 @@
 "scB" = (
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/neutral,
@@ -21295,8 +20248,6 @@
 /area/awaymission/snowfield/hallway/centerhallway)
 "sez" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -21321,8 +20272,6 @@
 /area/awaymission/snowfield/checkpointunpowered)
 "sgz" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -21335,8 +20284,6 @@
 /area/awaymission/snowfield/security/security_cell)
 "siu" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -21414,18 +20361,12 @@
 /area/awaymission/snowfield/command/gateway)
 "snY" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor,
@@ -21513,8 +20454,6 @@
 /area/awaymission/snowfield/command/bridge)
 "suv" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -21612,18 +20551,12 @@
 /area/awaymission/snowfield/checkpointunpowered)
 "szW" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/outdoors/snow/sif/planetuse,
@@ -21691,8 +20624,6 @@
 /area/awaymission/snowfield/outside)
 "sED" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/outdoors/snow/sif/planetuse,
@@ -21809,8 +20740,6 @@
 "sJd" = (
 /obj/structure/catwalk,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -21840,8 +20769,6 @@
 /area/awaymission/snowfield/security/heavy_armory)
 "sKY" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -21859,7 +20786,6 @@
 /area/awaymission/snowfield/checkpointunpowered)
 "sMv" = (
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/effect/floor_decal/borderfloorwhite{
@@ -22000,8 +20926,6 @@
 /area/awaymission/snowfield/medical/storage_room)
 "sSb" = (
 /obj/structure/cable/heavyduty{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/railing{
@@ -22033,8 +20957,6 @@
 "sUP" = (
 /obj/structure/catwalk,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
@@ -22048,16 +20970,12 @@
 "sUZ" = (
 /obj/structure/door_assembly/door_assembly_sec,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor,
 /area/awaymission/snowfield/security/hallway2)
 "sVf" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -22089,8 +21007,6 @@
 "sWu" = (
 /obj/structure/catwalk,
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -22162,7 +21078,6 @@
 /area/awaymission/snowfield/security/evidence_storage)
 "tbG" = (
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/terminal{
@@ -22199,8 +21114,6 @@
 	dir = 9
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -22217,8 +21130,6 @@
 /area/awaymission/snowfield/dorms/dorm2)
 "tfe" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/neutral,
@@ -22231,7 +21142,6 @@
 /area/awaymission/snowfield/dorms/dorm13)
 "tfA" = (
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
@@ -22260,8 +21170,6 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/catwalk,
@@ -22274,8 +21182,6 @@
 /area/awaymission/snowfield/command/gateway)
 "tgO" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock{
@@ -22289,8 +21195,6 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -22310,8 +21214,6 @@
 /area/awaymission/snowfield/security/seconddesk)
 "thE" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -22322,7 +21224,6 @@
 	start_charge = 0
 	},
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor,
@@ -22348,8 +21249,6 @@
 /area/awaymission/snowfield/command/sub_chamber)
 "tji" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
@@ -22415,8 +21314,6 @@
 /area/awaymission/snowfield/medical/patients)
 "tng" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/industrial/warning,
@@ -22440,8 +21337,6 @@
 /area/awaymission/snowfield/service/janitor)
 "tor" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -22464,8 +21359,6 @@
 /area/awaymission/snowfield/outside)
 "toV" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -22485,8 +21378,6 @@
 /area/awaymission/snowfield/security/lobby)
 "tpt" = (
 /obj/structure/cable/heavyduty{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -22499,8 +21390,6 @@
 /area/awaymission/snowfield/dorms/dorm2)
 "tpN" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /mob/living/simple_mob/animal/giant_spider/broodling,
@@ -22564,8 +21453,6 @@
 /area/awaymission/snowfield/medical/staff_room)
 "ttQ" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/blue{
@@ -22666,8 +21553,6 @@
 /area/awaymission/snowfield/emergency_pathway/EP_powered)
 "twX" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/industrial/warning,
@@ -22676,8 +21561,6 @@
 /area/awaymission/snowfield/medical/front_desk)
 "txs" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -22744,8 +21627,6 @@
 /area/awaymission/snowfield/emergency_pathway/EP_unpowered)
 "tBQ" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -22773,14 +21654,10 @@
 /area/awaymission/snowfield/checkpointunpowered)
 "tDm" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
 /obj/structure/cable/heavyduty{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/highsecurity{
@@ -22812,8 +21689,6 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -22826,8 +21701,6 @@
 /area/awaymission/snowfield/outside)
 "tFR" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/effect/floor_decal/corner/yellow/diagonal,
@@ -22863,7 +21736,6 @@
 /area/awaymission/snowfield/engineering/tech_storage)
 "tIn" = (
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -22931,8 +21803,6 @@
 /area/awaymission/snowfield/security/armory)
 "tLS" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/decal/remains/human,
@@ -23051,8 +21921,6 @@
 "tPE" = (
 /obj/structure/catwalk,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -23060,18 +21928,12 @@
 /area/awaymission/snowfield/command/bridge)
 "tPK" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -23079,13 +21941,9 @@
 /area/awaymission/snowfield/outside)
 "tPY" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/catwalk,
@@ -23126,8 +21984,6 @@
 /area/awaymission/snowfield/engineering/primary_storage)
 "tQR" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -23202,8 +22058,6 @@
 "tWH" = (
 /obj/structure/catwalk,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -23229,8 +22083,6 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/bed/chair{
@@ -23255,8 +22107,6 @@
 /area/awaymission/snowfield/engineering/locker_room)
 "tYb" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -23302,16 +22152,12 @@
 /area/awaymission/snowfield/command/bridge)
 "tZD" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/awaymission/snowfield/dorms/dorm8)
 "tZS" = (
 /obj/structure/cable/heavyduty{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor,
@@ -23381,8 +22227,6 @@
 	},
 /obj/structure/simple_door/cult,
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/cult,
@@ -23423,13 +22267,9 @@
 /area/awaymission/snowfield/service/hydro)
 "udJ" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/machinery/light/small/flicker{
@@ -23611,8 +22451,6 @@
 /area/awaymission/snowfield/hallway/northhallway)
 "umI" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -23644,8 +22482,6 @@
 /area/awaymission/snowfield/hallway/commandhallway)
 "uoD" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/catwalk,
@@ -23675,8 +22511,6 @@
 /area/awaymission/snowfield/engineering/locker_room)
 "uoX" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/wall,
@@ -23764,8 +22598,6 @@
 /area/awaymission/snowfield/command/bridge)
 "uuv" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -23843,8 +22675,6 @@
 /area/awaymission/snowfield/emergency_pathway/EP_powered)
 "uwQ" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/effect/floor_decal/corner/red/border{
@@ -23926,8 +22756,6 @@
 	dir = 9
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/steel,
@@ -23953,8 +22781,6 @@
 /area/awaymission/snowfield/security/security_cell)
 "uDQ" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -23962,8 +22788,6 @@
 /area/awaymission/snowfield/hallway/checkpointhallway)
 "uEn" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock{
@@ -23984,7 +22808,6 @@
 /area/awaymission/snowfield/engineering/engine)
 "uFd" = (
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor,
@@ -24012,8 +22835,6 @@
 /area/awaymission/snowfield/dorms/dorm15)
 "uGz" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -24021,7 +22842,6 @@
 /area/awaymission/snowfield/medical/hallway)
 "uHq" = (
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
@@ -24038,13 +22858,9 @@
 /area/awaymission/snowfield/checkpointunpowered)
 "uIh" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/catwalk,
@@ -24093,8 +22909,6 @@
 /obj/structure/table/steel_reinforced,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/item/ammo_magazine/ammo_box/b12g/pellet,
@@ -24143,8 +22957,6 @@
 /area/awaymission/snowfield/engineering/primary_storage)
 "uKG" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
@@ -24212,7 +23024,6 @@
 /area/awaymission/snowfield/hallway/commandhallway)
 "uNR" = (
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -24274,8 +23085,6 @@
 /area/awaymission/snowfield/security/security_lockerroom)
 "uRx" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/fence/door,
@@ -24297,8 +23106,6 @@
 /area/awaymission/snowfield/security/warden)
 "uRO" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/glass{
@@ -24336,8 +23143,6 @@
 /area/awaymission/snowfield/engineering/hallway)
 "uUD" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/effect/floor_decal/borderfloorwhite{
@@ -24369,8 +23174,6 @@
 /area/awaymission/snowfield/cavern)
 "uWu" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -24387,8 +23190,6 @@
 /area/awaymission/snowfield/engineering/staff_room)
 "uXm" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -24440,8 +23241,6 @@
 /area/awaymission/snowfield/security/security_cell)
 "uZn" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/lattice,
@@ -24501,8 +23300,6 @@
 /area/awaymission/snowfield/dorms/dorm7)
 "vbE" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor,
@@ -24551,13 +23348,9 @@
 /area/awaymission/snowfield/service/cafeteria)
 "vep" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/catwalk,
@@ -24617,13 +23410,9 @@
 /area/awaymission/snowfield/service/kitchen)
 "vfO" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/catwalk,
@@ -24634,18 +23423,12 @@
 /area/awaymission/snowfield/checkpointunpowered)
 "vgm" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/catwalk,
@@ -24702,8 +23485,6 @@
 /area/awaymission/snowfield/security/armory)
 "vhm" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock{
@@ -24724,8 +23505,6 @@
 /area/awaymission/snowfield/medical/hallway)
 "vhC" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/wall,
@@ -24840,8 +23619,6 @@
 /area/awaymission/snowfield/cavern)
 "vmX" = (
 /obj/structure/cable/heavyduty{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/window/reinforced{
@@ -24897,7 +23674,6 @@
 "vnW" = (
 /obj/structure/catwalk,
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/terminal{
@@ -24929,8 +23705,6 @@
 /area/awaymission/snowfield/medical/medical_restroom)
 "vto" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/cult,
@@ -24960,8 +23734,6 @@
 "vuw" = (
 /obj/structure/catwalk,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor,
@@ -24971,8 +23743,6 @@
 	dir = 1
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -24992,8 +23762,6 @@
 /area/awaymission/snowfield/command/observatory)
 "vvh" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock{
@@ -25019,8 +23787,6 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/blast/regular{
@@ -25031,8 +23797,6 @@
 "vwg" = (
 /obj/structure/catwalk,
 /obj/structure/cable/heavyduty{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/highsecurity{
@@ -25098,8 +23862,6 @@
 /area/awaymission/snowfield/dorms/dorm5)
 "vAc" = (
 /obj/structure/cable/heavyduty{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/outdoors/snow/sif/planetuse,
@@ -25111,8 +23873,6 @@
 /area/awaymission/snowfield/command/gateway)
 "vAq" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -25131,7 +23891,6 @@
 	req_access = list(1)
 	},
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/space_heater,
@@ -25241,8 +24000,6 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/neutral,
@@ -25259,7 +24016,6 @@
 /area/awaymission/snowfield/medical/front_desk)
 "vGA" = (
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/smes/buildable{
@@ -25277,8 +24033,6 @@
 /area/awaymission/snowfield/security/security_restroom)
 "vHd" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/catwalk,
@@ -25287,8 +24041,6 @@
 /area/awaymission/snowfield/hallway/frontgate_substation)
 "vHw" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -25315,8 +24067,6 @@
 /area/awaymission/snowfield/engineering/engine)
 "vIw" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -25356,8 +24106,6 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -25388,13 +24136,9 @@
 /area/awaymission/snowfield/dorms/dorm5)
 "vKF" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/catwalk,
@@ -25451,8 +24195,6 @@
 /area/awaymission/snowfield/service/hydro)
 "vMb" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -25467,7 +24209,6 @@
 /area/awaymission/snowfield/medical/front_desk)
 "vNd" = (
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/fractal_reactor/fluff/smes,
@@ -25485,14 +24226,10 @@
 /area/awaymission/snowfield/dorms/dorm13)
 "vOj" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -25632,8 +24369,6 @@
 /area/awaymission/snowfield/medical/chemistry)
 "vVX" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock{
@@ -25765,8 +24500,6 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -25789,13 +24522,9 @@
 /area/awaymission/snowfield/hallway/dormhallway)
 "wcP" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/catwalk,
@@ -25804,7 +24533,6 @@
 /area/awaymission/snowfield/engineering/hallway)
 "wdf" = (
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -25827,13 +24555,9 @@
 /area/awaymission/snowfield/security/hallway2)
 "wdD" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/catwalk,
@@ -25842,7 +24566,6 @@
 "weG" = (
 /obj/machinery/power/solar,
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor,
@@ -25865,8 +24588,6 @@
 /area/awaymission/snowfield/medical/storage_room)
 "wfG" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -25970,7 +24691,6 @@
 /area/awaymission/snowfield/engineering/locker_room)
 "wmy" = (
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -26001,8 +24721,6 @@
 /area/awaymission/snowfield/outside)
 "woT" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -26016,8 +24734,6 @@
 	dir = 10
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/table/steel_reinforced,
@@ -26029,8 +24745,6 @@
 /area/awaymission/snowfield/security/seconddesk)
 "wpf" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -26043,7 +24757,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -26066,8 +24779,6 @@
 /area/awaymission/snowfield/engineering/tech_storage)
 "wpZ" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /mob/living/simple_mob/animal/giant_spider/electric,
@@ -26090,8 +24801,6 @@
 /area/awaymission/snowfield/emergency_pathway/EP_unpowered)
 "wqI" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/blast/regular{
@@ -26105,8 +24814,6 @@
 /area/awaymission/snowfield/outside)
 "wsx" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock{
@@ -26158,8 +24865,6 @@
 /area/awaymission/snowfield/medical/front_desk)
 "wvU" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals10{
@@ -26209,7 +24914,6 @@
 /area/awaymission/snowfield/hallway/northhallway)
 "wxz" = (
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/catwalk,
@@ -26226,8 +24930,6 @@
 	id = "snowfield second blast"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -26284,8 +24986,6 @@
 /area/awaymission/snowfield/hallway/commandhallway)
 "wBU" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/steel,
@@ -26298,8 +24998,6 @@
 	dir = 5
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/steel,
@@ -26331,8 +25029,6 @@
 "wDw" = (
 /obj/structure/fence/door,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/outdoors/snow/sif/planetuse,
@@ -26365,8 +25061,6 @@
 /area/awaymission/snowfield/security/security_cell_hallway)
 "wFJ" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/engineering{
@@ -26394,13 +25088,9 @@
 	dir = 1
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/spider/stickyweb,
@@ -26415,8 +25105,6 @@
 /area/awaymission/snowfield/hallway/dormhallway)
 "wHr" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/cult,
@@ -26456,13 +25144,9 @@
 /area/awaymission/snowfield/medical/medical_locker)
 "wJX" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/catwalk,
@@ -26477,8 +25161,6 @@
 "wKA" = (
 /obj/structure/catwalk,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -26508,8 +25190,6 @@
 	dir = 1
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/railing{
@@ -26521,8 +25201,6 @@
 /area/awaymission/snowfield/command/bridge)
 "wMf" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -26530,8 +25208,6 @@
 /area/awaymission/snowfield/dorms/panicroom)
 "wMn" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/borderfloorblack{
@@ -26548,8 +25224,6 @@
 /area/awaymission/snowfield/hallway/checkpointhallway)
 "wNc" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/engineering{
@@ -26581,7 +25255,6 @@
 /obj/effect/floor_decal/corner/grey/border,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
@@ -26600,8 +25273,6 @@
 	req_one_access = list(1,10)
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -26619,8 +25290,6 @@
 /area/awaymission/snowfield/security/evidence_storage)
 "wPg" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -26714,7 +25383,6 @@
 	start_charge = 0
 	},
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled/steel,
@@ -26725,8 +25393,6 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
@@ -26771,8 +25437,6 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -26781,8 +25445,6 @@
 "wUh" = (
 /obj/structure/catwalk,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -26805,7 +25467,6 @@
 "wUO" = (
 /obj/machinery/power/solar_control,
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor,
@@ -26830,16 +25491,12 @@
 /obj/effect/floor_decal/corner/white/border,
 /obj/effect/decal/cleanable/flour,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snowfield/service/kitchen)
 "wVW" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -26944,8 +25601,6 @@
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/catwalk,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -27026,8 +25681,6 @@
 /area/awaymission/snowfield/dorms/dorm6)
 "xap" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -27100,7 +25753,6 @@
 /area/awaymission/snowfield/medical/staff_room)
 "xaT" = (
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
@@ -27122,8 +25774,6 @@
 /area/awaymission/snowfield/security/security_cell)
 "xbN" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock{
@@ -27182,7 +25832,6 @@
 /area/awaymission/snowfield/outside)
 "xeg" = (
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
@@ -27209,8 +25858,6 @@
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/neutral,
@@ -27229,8 +25876,6 @@
 /area/awaymission/snowfield/command/monitorroom)
 "xfQ" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock{
@@ -27245,8 +25890,6 @@
 	req_one_access = list(1,5)
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/neutral,
@@ -27262,18 +25905,12 @@
 /area/awaymission/snowfield/security/security_lockerroom)
 "xgl" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/outdoors/snow/sif/planetuse,
@@ -27284,8 +25921,6 @@
 /area/awaymission/snowfield/cavern)
 "xgK" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -27319,8 +25954,6 @@
 /area/awaymission/snowfield/emergency_pathway/EP_powered)
 "xhp" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -27345,13 +25978,9 @@
 /area/awaymission/snowfield/dorms/dorm7)
 "xiw" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
@@ -27406,8 +26035,6 @@
 /area/awaymission/snowfield/public/cafeteria_restroom)
 "xjH" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -27505,7 +26132,6 @@
 /area/awaymission/snowfield/medical/front_desk)
 "xmc" = (
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central5{
@@ -27634,8 +26260,6 @@
 /area/awaymission/snowfield/dorms/dorm10)
 "xqW" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/highsecurity{
@@ -27670,8 +26294,6 @@
 /area/awaymission/snowfield/command/observatory)
 "xsF" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -27687,8 +26309,6 @@
 	req_one_access = null
 	},
 /obj/structure/cable/heavyduty{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/blast/regular{
@@ -27732,13 +26352,9 @@
 /area/awaymission/snowfield/dorms/dorm15)
 "xuE" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/catwalk,
@@ -27753,8 +26369,6 @@
 /area/awaymission/snowfield/cavern)
 "xuZ" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/outdoors/snow/sif/planetuse,
@@ -27807,8 +26421,6 @@
 /area/awaymission/snowfield/security/seconddesk)
 "xxF" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals6{
@@ -27858,13 +26470,9 @@
 /area/awaymission/snowfield/engineering/primary_storage)
 "xAd" = (
 /obj/structure/cable/heavyduty{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/heavyduty{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/catwalk,
@@ -27885,7 +26493,6 @@
 	pixel_x = -30
 	},
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/table/steel,
@@ -27935,8 +26542,6 @@
 "xCP" = (
 /obj/structure/catwalk,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/item/ammo_casing/spent{
@@ -27970,13 +26575,9 @@
 	},
 /obj/structure/catwalk,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -27996,8 +26597,6 @@
 /area/awaymission/snowfield/dorms/dorm16)
 "xGx" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/command{
@@ -28019,8 +26618,6 @@
 /area/awaymission/snowfield/checkpoint)
 "xIh" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -28035,8 +26632,6 @@
 	},
 /obj/effect/floor_decal/corner/white/border,
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/steel,
@@ -28116,8 +26711,6 @@
 /area/awaymission/snowfield/hallway/checkpointhallway)
 "xMy" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/catwalk,
@@ -28198,7 +26791,6 @@
 "xPt" = (
 /obj/machinery/power/tracker,
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor,
@@ -28238,8 +26830,6 @@
 /area/awaymission/snowfield/dorms/dorm13)
 "xQk" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -28287,13 +26877,9 @@
 /area/awaymission/snowfield/medical/medical_restroom)
 "xTB" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -28338,13 +26924,9 @@
 /area/awaymission/snowfield/medical/surgery)
 "xVB" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -28409,8 +26991,6 @@
 /area/awaymission/snowfield/medical/surgery)
 "xYN" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -28432,8 +27012,6 @@
 /area/awaymission/snowfield/hallway/commandhallway)
 "xZv" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/blue{
@@ -28469,8 +27047,6 @@
 /area/awaymission/snowfield/medical/storage_room)
 "ybW" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/steel,
@@ -28490,8 +27066,6 @@
 /area/awaymission/snowfield/medical/medical_locker)
 "ycJ" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/lattice,
@@ -28622,8 +27196,6 @@
 /area/awaymission/snowfield/medical/storage_room)
 "yjw" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
@@ -28692,8 +27264,6 @@
 /area/awaymission/snowfield/command/gateway)
 "ylU" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock{

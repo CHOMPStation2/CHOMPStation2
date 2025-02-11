@@ -235,7 +235,7 @@
 ////////////////////////////////////////////////////////////////////////////////////// //keeping most of these the same except the stuff that apply to the standard synx. -lo
 /*
 /datum/seed/hardlightseed/
-	name = "Type NULL Hardlight Generator"
+	name = PLANT_NULLHARDLIGHT
 	seed_name = "Biomechanical Hardlight generator seed"
 	display_name = "Biomechanical Hardlight stem"
 	mutants = null
@@ -685,7 +685,7 @@
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick body color:","Body Color", overlay_colors["Body"]) as null|color
+			var/new_color = tgui_color_picker(src, "Pick body color:","Body Color", overlay_colors["Body"])
 			if(!new_color)
 				return 0
 			body = choice
@@ -698,7 +698,7 @@
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick horn color:","Horn Color", overlay_colors["Horns"]) as null|color
+			var/new_color = tgui_color_picker(src, "Pick horn color:","Horn Color", overlay_colors["Horns"])
 			if(!new_color)
 				return 0
 			horns = choice
@@ -711,7 +711,7 @@
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick marking color:","Marking Color", overlay_colors["Marks"]) as null|color
+			var/new_color = tgui_color_picker(src, "Pick marking color:","Marking Color", overlay_colors["Marks"])
 			if(!new_color)
 				return 0
 			markings = choice
@@ -724,7 +724,7 @@
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick eye color:","Eye Color", overlay_colors["Eyes"]) as null|color
+			var/new_color = tgui_color_picker(src, "Pick eye color:","Eye Color", overlay_colors["Eyes"])
 			if(!new_color)
 				return 0
 			eyes = choice
@@ -885,7 +885,7 @@
 			"bio" = 100,
 			"rad" = 100)
 	////////////////////////////MED INJECTOR
-	poison_type = "oxycodone" //OD effects, eye_blurry | Confuse + for slimes | stuttering
+	poison_type = REAGENT_ID_OXYCODONE //OD effects, eye_blurry | Confuse + for slimes | stuttering
 	poison_chance = 77 //high but not guranteed.
 	poison_per_bite = 9 //OD for oxyc is 20
 	//////////////////////////////////////////////FACTION

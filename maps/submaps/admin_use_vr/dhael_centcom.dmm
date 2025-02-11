@@ -2247,16 +2247,6 @@
 	dir = 2
 	},
 /area/centcom/control)
-"ey" = (
-/obj/structure/device/piano{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/yellow/diagonal,
-/obj/effect/floor_decal/corner/blue/diagonal{
-	dir = 4
-	},
-/turf/unsimulated/floor/steel,
-/area/centcom/control)
 "ez" = (
 /obj/machinery/computer/rdconsole/core{
 	dir = 4
@@ -2597,14 +2587,8 @@
 /area/centcom/control)
 "fl" = (
 /obj/structure/table/standard,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
+/obj/item/cell/high,
+/obj/item/cell/high,
 /obj/machinery/cell_charger,
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/purple/border,
@@ -2780,8 +2764,6 @@
 	name = "robotics parts"
 	},
 /obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000;
 	pixel_x = 5;
 	pixel_y = -5
 	},
@@ -2794,20 +2776,14 @@
 	pixel_y = 4
 	},
 /obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000;
 	pixel_x = 5;
 	pixel_y = -5
 	},
 /obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000;
 	pixel_x = 5;
 	pixel_y = -5
 	},
 /obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000;
 	pixel_x = 5;
 	pixel_y = -5
 	},
@@ -3951,15 +3927,6 @@
 /area/centcom/security)
 "im" = (
 /obj/structure/table/rack,
-/obj/item/storage/box/empshells/large,
-/obj/item/storage/box/empshells/large,
-/obj/item/storage/box/empshells/large,
-/obj/item/storage/box/empshells/large,
-/obj/item/storage/box/empshells/large,
-/obj/item/storage/box/empshells/large,
-/obj/item/storage/box/empshells/large,
-/obj/item/storage/box/empshells/large,
-/obj/item/storage/box/empshells/large,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/camera/network/crescent,
 /turf/unsimulated/floor{
@@ -4685,33 +4652,7 @@
 	icon_state = "white"
 	},
 /area/centcom/medical)
-"jV" = (
-/obj/machinery/disease2/diseaseanalyser,
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/green/border{
-	dir = 1
-	},
-/turf/unsimulated/floor/steel{
-	icon_state = "white"
-	},
-/area/centcom/medical)
-"jW" = (
-/obj/machinery/computer/diseasesplicer,
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/green/border{
-	dir = 1
-	},
-/obj/machinery/camera/network/crescent,
-/turf/unsimulated/floor/steel{
-	icon_state = "white"
-	},
-/area/centcom/medical)
 "jX" = (
-/obj/machinery/disease2/incubator,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
 	},
@@ -4745,7 +4686,6 @@
 	},
 /area/centcom/medical)
 "jZ" = (
-/obj/machinery/disease2/isolator,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 5
 	},
@@ -5447,7 +5387,6 @@
 /obj/effect/floor_decal/corner/green/bordercorner2{
 	dir = 8
 	},
-/obj/machinery/computer/centrifuge,
 /turf/unsimulated/floor/steel{
 	icon_state = "white"
 	},
@@ -11418,14 +11357,14 @@
 "wI" = (
 /turf/unsimulated/floor/steel{
 	icon = 'icons/turf/outdoors.dmi';
-	icon_state = "grass"
+	icon_state = "grass-dark0"
 	},
 /area/centcom/main_hall)
 "wJ" = (
 /obj/structure/table/bench/wooden,
 /turf/unsimulated/floor/steel{
 	icon = 'icons/turf/outdoors.dmi';
-	icon_state = "grass"
+	icon_state = "grass-dark0"
 	},
 /area/centcom/main_hall)
 "wK" = (
@@ -11706,14 +11645,14 @@
 /obj/machinery/light/flamp/noshade,
 /turf/unsimulated/floor/steel{
 	icon = 'icons/turf/outdoors.dmi';
-	icon_state = "grass"
+	icon_state = "grass-dark0"
 	},
 /area/centcom/main_hall)
 "xh" = (
 /obj/structure/flora/ausbushes/brflowers,
 /turf/unsimulated/floor/steel{
 	icon = 'icons/turf/outdoors.dmi';
-	icon_state = "grass"
+	icon_state = "grass-dark0"
 	},
 /area/centcom/main_hall)
 "xi" = (
@@ -12063,7 +12002,7 @@
 /obj/structure/flora/ausbushes/ppflowers,
 /turf/unsimulated/floor/steel{
 	icon = 'icons/turf/outdoors.dmi';
-	icon_state = "grass"
+	icon_state = "grass-dark0"
 	},
 /area/centcom/main_hall)
 "xJ" = (
@@ -13061,7 +13000,7 @@
 /obj/structure/flora/ausbushes/ywflowers,
 /turf/unsimulated/floor/steel{
 	icon = 'icons/turf/outdoors.dmi';
-	icon_state = "grass"
+	icon_state = "grass-dark0"
 	},
 /area/centcom/main_hall)
 "zf" = (
@@ -22548,7 +22487,7 @@ ei
 ac
 ac
 jK
-jV
+jX
 kv
 kv
 kv
@@ -22690,7 +22629,7 @@ ei
 ac
 ac
 jK
-jW
+jQ
 kz
 kR
 kR
@@ -29630,7 +29569,7 @@ dm
 dG
 dV
 dV
-ey
+dV
 dV
 dV
 fA

@@ -224,8 +224,6 @@
 /area/awaymission/diescraper/indoors/floor1)
 "aF" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/lino,
@@ -366,8 +364,6 @@
 /area/awaymission/diescraper/outside)
 "be" = (
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -913,8 +909,6 @@
 /area/awaymission/diescraper/indoors/floor3)
 "cE" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/lino,
@@ -1009,7 +1003,6 @@
 "cV" = (
 /obj/machinery/power/rtg/fake_z_wires,
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
@@ -1230,7 +1223,6 @@
 /area/awaymission/diescraper/indoors/floor7)
 "dI" = (
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
@@ -1741,8 +1733,6 @@
 /area/awaymission/diescraper/indoors/floor4second)
 "fq" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/random/trash,
@@ -1807,8 +1797,6 @@
 /area/awaymission/diescraper/indoors/floor5)
 "fC" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/lino,
@@ -1840,8 +1828,6 @@
 	icon_state = "1-8"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/reinforced{
@@ -2113,12 +2099,9 @@
 "gs" = (
 /obj/machinery/power/rtg/fake_z_wires,
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled,
@@ -2141,8 +2124,6 @@
 /area/awaymission/diescraper/indoors/floor4)
 "gv" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/reinforced{
@@ -2370,7 +2351,6 @@
 	pixel_x = -24
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
@@ -2447,12 +2427,9 @@
 "hq" = (
 /obj/item/stack/cable_coil/random,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/port_gen/pacman/super,
@@ -2536,7 +2513,6 @@
 /obj/structure/table/steel_reinforced,
 /obj/random/tool,
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled,
@@ -2825,8 +2801,6 @@
 /area/awaymission/diescraper/indoors/floor9)
 "iI" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating{
@@ -2906,8 +2880,6 @@
 /area/awaymission/diescraper/indoors/floor6)
 "iV" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -3409,8 +3381,6 @@
 /area/awaymission/diescraper/indoors/floor1)
 "kl" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/rust,
@@ -3955,8 +3925,6 @@
 /area/awaymission/diescraper/indoors/floor11)
 "lN" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
@@ -4163,8 +4131,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/barricade/cutout,
@@ -4294,8 +4260,6 @@
 /obj/random/tool/power,
 /obj/random/tool/power,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
@@ -4584,7 +4548,6 @@
 	pixel_x = 26
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -5117,8 +5080,6 @@
 /area/awaymission/diescraper/indoors/floor4)
 "pl" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -5173,7 +5134,6 @@
 	},
 /obj/structure/barricade/cutout,
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/rtg/fake_z_wires,
@@ -5230,8 +5190,6 @@
 /area/awaymission/diescraper/indoors/floor2)
 "pC" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/plating,
@@ -5384,8 +5342,6 @@
 /area/awaymission/diescraper/indoors/floor10)
 "pY" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -5492,8 +5448,6 @@
 	dir = 8
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -5710,7 +5664,6 @@
 "qS" = (
 /obj/machinery/power/rtg/fake_z_wires,
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -6397,8 +6350,6 @@
 /area/awaymission/diescraper/indoors/floor9)
 "sS" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -6618,8 +6569,6 @@
 /area/awaymission/diescraper/indoors/floor8)
 "tw" = (
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating,
@@ -6816,8 +6765,6 @@
 /obj/structure/table/steel_reinforced,
 /obj/random/tool,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
@@ -7130,8 +7077,6 @@
 /area/awaymission/diescraper/indoors/floor1)
 "uU" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/plating,
@@ -7227,8 +7172,6 @@
 /obj/structure/table/steel_reinforced,
 /obj/item/storage/toolbox/mechanical,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
@@ -7298,7 +7241,6 @@
 	pixel_x = 24
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -7361,8 +7303,6 @@
 /area/awaymission/diescraper/indoors/floor3)
 "vF" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -7543,8 +7483,6 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -7606,8 +7544,6 @@
 /area/awaymission/diescraper/indoors/floor11)
 "wv" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/reinforced{
@@ -8517,7 +8453,6 @@
 /area/awaymission/diescraper/indoors/floor10)
 "yY" = (
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
@@ -8745,8 +8680,6 @@
 /area/awaymission/diescraper/indoors/floor10)
 "zy" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/reinforced{
@@ -8869,8 +8802,6 @@
 /area/awaymission/diescraper/indoors/floor10)
 "zN" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
@@ -9002,8 +8933,6 @@
 /area/awaymission/diescraper/outside)
 "Af" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
@@ -9064,7 +8993,6 @@
 	pixel_x = 24
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
@@ -10015,13 +9943,9 @@
 /area/awaymission/diescraper/indoors/floor8)
 "CX" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
@@ -10051,8 +9975,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
@@ -10091,8 +10013,6 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -10515,8 +10435,6 @@
 /area/awaymission/diescraper/indoors/floor7)
 "Eo" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/wingrille_spawn/reinforced,
@@ -10565,8 +10483,6 @@
 /area/awaymission/diescraper/indoors/floor10)
 "Ex" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock,
@@ -10654,8 +10570,6 @@
 /area/awaymission/diescraper/indoors/floor10)
 "EL" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -11014,7 +10928,6 @@
 "FF" = (
 /obj/machinery/power/rtg/fake_z_wires,
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -11063,8 +10976,6 @@
 /area/awaymission/diescraper/indoors/floor8)
 "FL" = (
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/plating,
@@ -11086,8 +10997,6 @@
 	dir = 1
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -11095,8 +11004,6 @@
 "FP" = (
 /obj/machinery/door/airlock,
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/lino,
@@ -11612,8 +11519,6 @@
 /area/awaymission/diescraper/indoors/floor5)
 "Hq" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
@@ -11793,8 +11698,6 @@
 /area/awaymission/diescraper/indoors/floor1)
 "HR" = (
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/machinery/light/floortube{
@@ -11838,8 +11741,6 @@
 /area/awaymission/diescraper/indoors/floor2)
 "HX" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -11992,7 +11893,6 @@
 	pixel_x = 20
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
@@ -12033,18 +11933,12 @@
 	icon_state = "1-8"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/reinforced{
@@ -12316,8 +12210,6 @@
 /area/awaymission/diescraper/indoors/floor9)
 "Jq" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /mob/living/simple_mob/vore/aggressive/rat,
@@ -12660,7 +12552,6 @@
 "Kw" = (
 /obj/machinery/power/solar,
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/reinforced{
@@ -12852,8 +12743,6 @@
 /area/awaymission/diescraper/indoors/floor5)
 "KY" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -12864,8 +12753,6 @@
 	},
 /obj/structure/barricade/cutout,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled,
@@ -12960,7 +12847,6 @@
 /area/awaymission/diescraper/indoors/floor5)
 "Ln" = (
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
@@ -13133,8 +13019,6 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
@@ -13162,12 +13046,9 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled,
@@ -13495,7 +13376,6 @@
 	pixel_x = -26
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/floor_decal/rust,
@@ -14059,13 +13939,9 @@
 /area/awaymission/diescraper/indoors/floor4second)
 "Oo" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
@@ -14174,8 +14050,6 @@
 /area/awaymission/diescraper/indoors/floor5)
 "OH" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/light{
@@ -14566,8 +14440,6 @@
 /area/awaymission/diescraper/indoors/floor6)
 "PR" = (
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -14709,8 +14581,6 @@
 /area/awaymission/diescraper/indoors/floor9)
 "Qt" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/light{
@@ -14941,13 +14811,9 @@
 /area/awaymission/diescraper/indoors/floor8)
 "Rg" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/reinforced{
@@ -15116,7 +14982,6 @@
 "RJ" = (
 /obj/machinery/power/rtg/fake_z_wires,
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
@@ -15145,11 +15010,9 @@
 	pixel_x = 24
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
@@ -15660,8 +15523,6 @@
 /area/awaymission/diescraper/indoors/floor10)
 "Td" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -15886,8 +15747,6 @@
 	dir = 5
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled,
@@ -16007,7 +15866,6 @@
 	pixel_x = 23
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
@@ -16068,8 +15926,6 @@
 /area/awaymission/diescraper/indoors/floor6)
 "Uk" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -16129,7 +15985,6 @@
 	pixel_x = -26
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/closet/crate/engineering,
@@ -16228,8 +16083,6 @@
 /area/awaymission/diescraper/indoors/floor8)
 "UK" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
@@ -16358,8 +16211,6 @@
 "Vg" = (
 /obj/machinery/door/airlock,
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -16433,8 +16284,6 @@
 /area/awaymission/diescraper/indoors/floor7)
 "Vp" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -16737,7 +16586,6 @@
 "Wf" = (
 /obj/machinery/power/rtg/fake_z_wires,
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
@@ -16747,8 +16595,6 @@
 /area/awaymission/diescraper/indoors/floor8)
 "Wh" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/rust,
@@ -17063,8 +16909,6 @@
 /area/awaymission/diescraper/indoors/floor10)
 "Xk" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -17767,8 +17611,6 @@
 /area/awaymission/diescraper/indoors/floor7)
 "Zp" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
@@ -17883,8 +17725,6 @@
 /area/awaymission/diescraper/indoors/floor4)
 "ZE" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
@@ -18057,8 +17897,6 @@
 /area/awaymission/diescraper/indoors/floor3)
 "ZY" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/blood,

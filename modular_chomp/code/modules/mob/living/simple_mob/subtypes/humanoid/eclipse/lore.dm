@@ -9,34 +9,6 @@
 	value = CATALOGUER_REWARD_TRIVIAL
 	unlocked_by_any = list(/datum/category_item/catalogue/fauna/eclipse)
 
-// Obtained by scanning all X.
-/datum/category_item/catalogue/fauna/all_eclipse
-	name = "Collection - Eclipse"
-	desc = "You have scanned a large array of different types of eclipse memebers, \
-	and therefore you have been granted a large sum of points, through this \
-	entry."
-	value = CATALOGUER_REWARD_SUPERHARD
-	unlocked_by_all = list(
-		/datum/category_item/catalogue/fauna/eclipse/teslanoodle,
-		/datum/category_item/catalogue/fauna/eclipse/firemoff,
-		/datum/category_item/catalogue/fauna/eclipse/snipertesh,
-		/datum/category_item/catalogue/fauna/eclipse/radiation,
-		/datum/category_item/catalogue/fauna/eclipse/silvernoodle,
-		/datum/category_item/catalogue/fauna/eclipse/shotgunner,
-		/datum/category_item/catalogue/fauna/eclipse/bulletstorm,
-		/datum/category_item/catalogue/fauna/eclipse/ravanger,
-		/datum/category_item/catalogue/fauna/eclipse/hellhound,
-		/datum/category_item/catalogue/fauna/eclipse/wheel,
-		/datum/category_item/catalogue/fauna/eclipse/guardian,
-		/datum/category_item/catalogue/fauna/eclipse/pummler,
-		/datum/category_item/catalogue/fauna/eclipse/aeroblaster,
-		/datum/category_item/catalogue/fauna/eclipse/miner,
-		/datum/category_item/catalogue/fauna/eclipse/froststalker,
-		/datum/category_item/catalogue/fauna/eclipse/cryomancer
-		)
-
-/mob/living/simple_mob/humanoid/eclipse/solar/teslanoodle
-	catalogue_data = list(/datum/category_item/catalogue/fauna/eclipse/teslanoodle)
 
 /datum/category_item/catalogue/fauna/eclipse/teslanoodle
 	name = "The Tesla Armor"
@@ -44,9 +16,6 @@
 	Manifestation of such energy seeming to be summoned at will or at \
 	random. This creation seems to be in a prototype phase."
 	value = CATALOGUER_REWARD_MEDIUM
-
-/mob/living/simple_mob/humanoid/eclipse/solar/firemoff
-	catalogue_data = list(/datum/category_item/catalogue/fauna/eclipse/firemoff)
 
 /datum/category_item/catalogue/fauna/eclipse/firemoff
 	name = "Eclipse Shielding"
@@ -58,9 +27,6 @@
 	diverse apperance."
 	value = CATALOGUER_REWARD_MEDIUM
 
-/mob/living/simple_mob/humanoid/eclipse/solar/snipertesh
-	catalogue_data = list(/datum/category_item/catalogue/fauna/eclipse/snipertesh)
-
 /datum/category_item/catalogue/fauna/eclipse/snipertesh
 	name = "Cult-like rituals"
 	desc = "The Eclipse started off as a strange mixutre of a friendly \
@@ -70,8 +36,6 @@
 	mixed results, rarely resulting in in-fighting."
 	value = CATALOGUER_REWARD_MEDIUM
 
-/mob/living/simple_mob/humanoid/eclipse/solar/radiation
-	catalogue_data = list(/datum/category_item/catalogue/fauna/eclipse/radiation)
 
 /datum/category_item/catalogue/fauna/eclipse/radiation
 	name = "Nuclear Failures"
@@ -82,8 +46,6 @@
 	power sources to radiation field generators."
 	value = CATALOGUER_REWARD_MEDIUM
 
-/mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle
-	catalogue_data = list(/datum/category_item/catalogue/fauna/eclipse/silvernoodle)
 
 /datum/category_item/catalogue/fauna/eclipse/silvernoodle
 	name = "Failed Selling"
@@ -94,8 +56,7 @@
 	medication are one of the few reasons they have not wiped themselves out."
 	value = CATALOGUER_REWARD_MEDIUM
 
-/mob/living/simple_mob/humanoid/eclipse/lunar/shotgunner
-	catalogue_data = list(/datum/category_item/catalogue/fauna/eclipse/shotgunner)
+
 
 /datum/category_item/catalogue/fauna/eclipse/shotgunner
 	name = "Specialized Arms"
@@ -105,8 +66,6 @@
 	Although this leads to weapon failures, or creation accidents."
 	value = CATALOGUER_REWARD_MEDIUM
 
-/mob/living/simple_mob/humanoid/eclipse/lunar/bulletstorm
-	catalogue_data = list(/datum/category_item/catalogue/fauna/eclipse/bulletstorm)
 
 /datum/category_item/catalogue/fauna/eclipse/bulletstorm
 	name = "Open Joining"
@@ -114,9 +73,6 @@
 	sizes, and heritages. This is due to a varity of factors, which includes  \
 	high mortality rates, mutations, and body modification expermintation."
 	value = CATALOGUER_REWARD_MEDIUM
-
-/mob/living/simple_mob/humanoid/eclipse/lunar/ravanger
-	catalogue_data = list(/datum/category_item/catalogue/fauna/eclipse/ravanger)
 
 /datum/category_item/catalogue/fauna/eclipse/ravanger
 	name = "Resleeving Failures"
@@ -127,9 +83,6 @@
 	such as shaping them into ravanger units."
 	value = CATALOGUER_REWARD_MEDIUM
 
-/mob/living/simple_mob/humanoid/eclipse/solar/hellhound
-	catalogue_data = list(/datum/category_item/catalogue/fauna/eclipse/hellhound)
-
 /datum/category_item/catalogue/fauna/eclipse/hellhound
 	name = "Hellhound Units"
 	desc = "Equiped with specialized armor, the systems of the suit pairing \
@@ -139,9 +92,6 @@
 	hunting, and frontal assualt."
 	value = CATALOGUER_REWARD_MEDIUM
 
-/mob/living/simple_mob/humanoid/eclipse/lunar/wheel
-	catalogue_data = list(/datum/category_item/catalogue/fauna/eclipse/wheel)
-
 /datum/category_item/catalogue/fauna/eclipse/wheel
 	name = "Armadillo"
 	desc = "With several strange creatures among their ranks, the Eclipse \
@@ -149,9 +99,6 @@
 	to curl up into a ball shape, the wheel armor was created, trying to turn \
 	a rolling motion into an offensive force."
 	value = CATALOGUER_REWARD_MEDIUM
-
-/mob/living/simple_mob/humanoid/eclipse/solar/guardian
-	catalogue_data = list(/datum/category_item/catalogue/fauna/eclipse/guardian)
 
 /datum/category_item/catalogue/fauna/eclipse/guardian
 	name = "Slime Pits"
@@ -162,9 +109,6 @@
 	renamants of the donator's DNA."
 	value = CATALOGUER_REWARD_MEDIUM
 
-/mob/living/simple_mob/humanoid/eclipse/lunar/pummler
-	catalogue_data = list(/datum/category_item/catalogue/fauna/eclipse/pummler)
-
 /datum/category_item/catalogue/fauna/eclipse/pummler
 	name = "Hunter Unit - Pummler"
 	desc = "Another drone like creation, meld with alien sea life, and traces \
@@ -174,9 +118,6 @@
 	targets across any and all terrains."
 	value = CATALOGUER_REWARD_MEDIUM
 
-/mob/living/simple_mob/humanoid/eclipse/lunar/aeroblaster
-	catalogue_data = list(/datum/category_item/catalogue/fauna/eclipse/pummler)
-
 /datum/category_item/catalogue/fauna/eclipse/aeroblaster
 	name = "Eclipse Drones"
 	desc = "Sometimes, the failed resleeves only leave the fragments of a mind \
@@ -184,9 +125,6 @@
 	the brain's remaining procressing power to create special circuits for, \
 	their drones."
 	value = CATALOGUER_REWARD_MEDIUM
-
-/mob/living/simple_mob/humanoid/eclipse/lunar/miner
-	catalogue_data = list(/datum/category_item/catalogue/fauna/eclipse/miner)
 
 /datum/category_item/catalogue/fauna/eclipse/miner
 	name = "Bio-tech Unit"
@@ -196,8 +134,6 @@
 	both being able to flee or alter plans as soon as either noitces."
 	value = CATALOGUER_REWARD_MEDIUM
 
-/mob/living/simple_mob/humanoid/eclipse/solar/froststalker
-	catalogue_data = list(/datum/category_item/catalogue/fauna/eclipse/froststalker)
 
 /datum/category_item/catalogue/fauna/eclipse/froststalker
 	name = "Mindless Ice"
@@ -206,9 +142,6 @@
 	have had their bodies freeze over, transforming into sentient creatures, \
 	of ice. Their minds sometimes lost alongside their orginal form."
 	value = CATALOGUER_REWARD_MEDIUM
-
-/mob/living/simple_mob/humanoid/eclipse/solar/cryomancer
-	catalogue_data = list(/datum/category_item/catalogue/fauna/eclipse/cryomancer)
 
 /datum/category_item/catalogue/fauna/eclipse/cryomancer
 	name = "Cryomancers"

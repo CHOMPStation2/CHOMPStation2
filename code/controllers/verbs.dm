@@ -89,7 +89,6 @@
 
 	//Goon PS stuff, and other yet-to-be-subsystem things.
 	options["LEGACY: master_controller"] = master_controller
-	options["LEGACY: air_master"] = air_master
 	options["LEGACY: job_master"] = job_master
 	options["LEGACY: radio_controller"] = radio_controller
 	options["LEGACY: emergency_shuttle"] = emergency_shuttle
@@ -98,7 +97,7 @@
 	options["LEGACY: transfer_controller"] = transfer_controller
 	options["LEGACY: gas_data"] = gas_data
 
-	var/pick = input(mob, "Choose a controller to debug/view variables of.", "VV controller:") as null|anything in options // Leaving as input() due to debug tool
+	var/pick = tgui_input_list(mob, "Choose a controller to debug/view variables of.", "VV controller:", options)
 	if(!pick)
 		return
 	var/datum/D = options[pick]

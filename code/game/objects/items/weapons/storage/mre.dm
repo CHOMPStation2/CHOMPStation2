@@ -36,7 +36,7 @@ MRE Stuff
 
 /obj/item/storage/mre/open(mob/user)
 	if(!opened)
-		to_chat(usr, span_notice("You tear open the bag, breaking the vacuum seal."))
+		to_chat(user, span_notice("You tear open the bag, breaking the vacuum seal."))
 		opened = 1
 		update_icon()
 	. = ..()
@@ -236,7 +236,7 @@ MRE Stuff
 
 /obj/item/storage/mrebag/open(mob/user)
 	if(!opened && !isobserver(user))
-		to_chat(usr, span_notice("The pouch heats up as you break the vacuum seal."))
+		to_chat(user, span_notice("The pouch heats up as you break the vacuum seal."))
 		opened = 1
 		update_icon()
 	. = ..()
@@ -364,19 +364,19 @@ MRE Stuff
 		if("boneless pork ribs", "grilled chicken", "pizza square", "spaghetti", "chicken tenders")
 			icon_state = "tgmcmre_entree"
 			nutriment_amt = 5
-			starts_with = list("sodiumchloride" = 1)
+			starts_with = list(REAGENT_ID_SODIUMCHLORIDE = 1)
 		if("meatballs", "cheese spread", "beef turnover", "mashed potatoes")
 			icon_state = "tgmcmre_side"
 			nutriment_amt = 3
-			starts_with = list("sodiumchloride" = 1)
+			starts_with = list(REAGENT_ID_SODIUMCHLORIDE= 1)
 		if("biscuit", "pretzels", "peanuts", "cracker")
 			icon_state = "tgmcmre_snack"
 			nutriment_amt = 2
-			starts_with = list("sodiumchloride" = 1)
+			starts_with = list(REAGENT_ID_SODIUMCHLORIDE = 1)
 		if("spiced apples", "chocolate brownie", "sugar cookie", "choco bar")
 			icon_state = "tgmcmre_dessert"
 			nutriment_amt = 2
-			starts_with = list("sugar" = 1)
+			starts_with = list(REAGENT_ID_SUGAR = 1)
 
 	package_open_state = "tgmcmre_[flavor]"
 	nutriment_desc = list("[new_taste]" = nutriment_amt)

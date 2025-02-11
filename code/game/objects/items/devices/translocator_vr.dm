@@ -255,7 +255,7 @@ This device records all warnings given and teleport events for admin review in c
 	if(!teleport_checks(target,user))
 		return //The checks proc can send them a message if it wants.
 
-	if(istype(target, /mob/living))
+	if(isliving(target))
 		var/mob/living/L = target
 		if(!L.stat)
 			if(L != user)
@@ -270,7 +270,7 @@ This device records all warnings given and teleport events for admin review in c
 	power_source.use(charge_cost)
 
 	//Unbuckle taur riders
-	if(istype(target, /mob/living))
+	if(isliving(target))
 		var/mob/living/L = target
 		if(LAZYLEN(L.buckled_mobs))
 			var/datum/riding/R = L.riding_datum
@@ -413,7 +413,7 @@ GLOBAL_LIST_BOILERPLATE(premade_tele_beacons, /obj/item/perfect_tele_beacon/stat
 	var/mob/living/L = user
 	var/confirm = tgui_alert(user, "You COULD eat the beacon...", "Eat beacon?", list("Eat it!", "No, thanks."))
 	if(confirm == "Eat it!")
-		var/obj/belly/bellychoice = tgui_input_list(usr, "Which belly?","Select A Belly", L.vore_organs)
+		var/obj/belly/bellychoice = tgui_input_list(user, "Which belly?","Select A Belly", L.vore_organs)
 		if(bellychoice)
 			user.visible_message(span_warning("[user] is trying to stuff \the [src] into [user.gender == MALE ? "his" : user.gender == FEMALE ? "her" : "their"] [bellychoice.name]!"),span_notice("You begin putting \the [src] into your [bellychoice.name]!"))
 			if(do_after(user,5 SECONDS,src))

@@ -137,3 +137,35 @@
 2024-11-23:
   Raeschen:
   - refactor: min account age for head roles --> 31 days
+2024-11-26:
+  Birdiest-Bird:
+  - bugfix: VR avatars no longer get mail from cargo
+  FluffMedic:
+  - bugfix: fixed a floating APC on spider chapel
+2024-11-27:
+  Fracshun:
+  - rscadd: Eating someone bound to a food item can spont pred them as nutrition with
+      food vore enabled
+  - rscadd: Eating someone bound to a food item will retain them as the trash item
+      if eaten with spont pred/food vore disabled
+  - bugfix: Eating someone bound to a food item no longer makes them astral project
+      as a ghost in the world
+2024-11-28:
+  Birdiest-Bird:
+  - rscadd: '*caw'
+  - sound: sound/voice/caw.ogg
+2024-11-29:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: added recolourable fingerless gloves without the cutout
+  - maptweak: added shutters to SD and Tether cargo bay desks
+  - maptweak: reorganized the SD cargo office a little bit, for more shelf space up
+      front
+  - maptweak: Leggy has been relocated to the relative safety of the mining equipment
+      room, to reduce incidents of unscheduled spacewalks and to stop supply shuttles
+      engaging in leggybraking
+  - rscdel: The skill system is OUTTA HERE
+2024-11-30:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: fixed talon headset options, and headset options for a bunch of event
+      outfits
+  - qol: cleaned up _vr files for jobs, moved cargo jobs into their own base dm.

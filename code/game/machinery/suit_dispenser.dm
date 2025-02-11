@@ -20,8 +20,8 @@ var/list/dispenser_presets = list()
 	if(LAZYLEN(req_one_access))
 		var/accesses = user.GetAccess()
 		return has_access(null, req_one_access, accesses)
-	
-	return 1	
+
+	return 1
 
 /datum/gear_disp/proc/spawn_gear(var/turf/T, var/mob/living/carbon/human/user)
 	var/list/spawned = list()
@@ -39,7 +39,7 @@ var/list/dispenser_presets = list()
 /datum/gear_disp/custom/allowed(var/mob/living/carbon/human/user)
 	if(ckey_allowed && user.ckey != ckey_allowed)
 		return 0
-	
+
 	if(character_allowed && user.real_name != character_allowed)
 		return 0
 
@@ -98,7 +98,7 @@ var/list/dispenser_presets = list()
 			magboots = new magboots_type(voidsuit)
 			voidsuit.boots = magboots
 			spawned += magboots
-	
+
 	if(refit)
 		voidsuit.refit_for_species(user.species?.get_bodytype()) // does helmet and boots if they're attached
 
@@ -113,7 +113,7 @@ var/list/dispenser_presets = list()
 		else if(user.species?.breath_type)
 			if(voidsuit.tank)
 				error("[src] created a voidsuit [voidsuit] and wants to add a tank but it already has one")
-			else	
+			else
 				//Create a tank (if such a thing exists for this species)
 				var/tanktext = "/obj/item/tank/" + "[user.species?.breath_type]"
 				var/obj/item/tank/tankpath = text2path(tanktext)
@@ -137,7 +137,7 @@ var/list/dispenser_presets = list()
 /datum/gear_disp/voidsuit/custom/allowed(var/mob/living/carbon/human/user)
 	if(ckey_allowed && user.ckey != ckey_allowed)
 		return 0
-	
+
 	if(character_allowed && user.real_name != character_allowed)
 		return 0
 
@@ -158,7 +158,7 @@ var/list/dispenser_presets = list()
 	//req_one_access = list(whatever) // Note that each gear datum can have access, too.
 
 /obj/machinery/gear_dispenser/custom/emag_act(remaining_charges, mob/user, emag_source)
-	to_chat(user, "<span class='warning'>Your moral standards prevent you from emagging this machine!</span>")
+	to_chat(user, span_warning("Your moral standards prevent you from emagging this machine!"))
 	return -1 // Letting people emag this one would be bad times
 
 /obj/machinery/gear_dispenser/Initialize()
@@ -172,7 +172,7 @@ var/list/dispenser_presets = list()
 	if(one_setting)
 		one_setting = new one_setting
 	dispenses = real_gear_list
-	
+
 
 /obj/machinery/gear_dispenser/attack_hand(var/mob/living/carbon/human/user)
 	if(!can_use(user))
@@ -180,18 +180,18 @@ var/list/dispenser_presets = list()
 	dispenser_flags |= GD_BUSY
 	if(!(dispenser_flags & GD_ONEITEM))
 		var/list/gear_list = get_gear_list(user)
-		
+
 		if(!LAZYLEN(gear_list))
-			to_chat(user, "<span class='warning'>\The [src] doesn't have anything to dispense for you!</span>")
+			to_chat(user, span_warning("\The [src] doesn't have anything to dispense for you!"))
 			dispenser_flags &= ~GD_BUSY
 			return
-		
-		var/choice = input("Select equipment to dispense.", "Equipment Dispenser") as null|anything in gear_list
-		
+
+		var/choice = tgui_input_list(user, "Select equipment to dispense.", "Equipment Dispenser", gear_list)
+
 		if(!choice)
 			dispenser_flags &= ~GD_BUSY
 			return
-		
+
 		dispense(gear_list[choice],user)
 	else
 		dispense(one_setting,user)
@@ -200,28 +200,28 @@ var/list/dispenser_presets = list()
 /obj/machinery/gear_dispenser/proc/can_use(var/mob/living/carbon/human/user)
 	var/list/used_by = gear_distributed_to["[type]"]
 	if(!istype(user))
-		to_chat(user,"<span class='warning'>You can't use this!</span>")
+		to_chat(user,span_warning("You can't use this!"))
 		return 0
 	if((dispenser_flags & GD_BUSY))
-		to_chat(user,"<span class='warning'>Someone else is using this!</span>")
+		to_chat(user,span_warning("Someone else is using this!"))
 		return 0
 	if((dispenser_flags & GD_ONEITEM) && !(dispenser_flags & GD_UNLIMITED) && !one_setting.amount)
-		to_chat(user,"<span class='warning'>There's nothing in here!</span>")
+		to_chat(user,span_warning("There's nothing in here!"))
 		return 0
 	if ((dispenser_flags & GD_NOGREED) && (user in used_by) && !emagged)
-		to_chat(user,"<span class='warning'>You've already picked up your gear!</span>")
+		to_chat(user,span_warning("You've already picked up your gear!"))
 		playsound(src, 'sound/machines/buzz-sigh.ogg', 50, 0)
 		return 0
 	if(emagged)
 		audible_message("!'^&YouVE alreaDY pIC&$!Ked UP yOU%r Ge^!ar.")
 		playsound(src, 'sound/machines/buzz-sigh.ogg', 100, 0)
 		return 1
-	
+
 	// And finally
 	if(allowed(user))
 		return 1
 	else
-		to_chat(user,"<span class='warning'>Your access is rejected!</span>")
+		to_chat(user,span_warning("Your access is rejected!"))
 		playsound(src, 'sound/machines/buzz-sigh.ogg', 100, 0)
 		return 0
 
@@ -239,7 +239,7 @@ var/list/dispenser_presets = list()
 
 /obj/machinery/gear_dispenser/proc/dispense(var/datum/gear_disp/S,var/mob/living/carbon/human/user,var/greet=TRUE)
 	if(!S.amount && !(dispenser_flags & GD_UNLIMITED))
-		to_chat(user,"<span class='warning'>There are no more [S.name]s left!</span>")
+		to_chat(user,span_warning("There are no more [S.name]s left!"))
 		dispenser_flags &= ~GD_BUSY
 		return 1
 	else if(!(dispenser_flags & GD_UNLIMITED))
@@ -257,13 +257,13 @@ var/list/dispenser_presets = list()
 	var/turf/T = get_turf(src)
 	if(!(S && T)) // in case we got destroyed while we slept
 		return 1
-	
+
 	S.spawn_gear(T, user)
 
 	if(emagged)
 		emagged = FALSE
 	if(greet && user && !user.stat) // in case we got destroyed while we slept
-		to_chat(user,"<span class='notice'>[S.name] dispensing processed. Have a good day.</span>")
+		to_chat(user,span_notice("[S.name] dispensing processed. Have a good day."))
 
 /obj/machinery/gear_dispenser/proc/fit_for(var/obj/item/clothing/C, var/mob/living/carbon/human/H)
 	if(!istype(C))
@@ -278,7 +278,7 @@ var/list/dispenser_presets = list()
 	. = ..()
 	if(!emagged)
 		emagged = TRUE
-		visible_message("<span class='warning'>\The [user] slides a weird looking ID into \the [src]!</span>","<span class='warning'>You temporarily short the safety mechanisms.</span>")
+		visible_message(span_warning("\The [user] slides a weird looking ID into \the [src]!"),span_warning("You temporarily short the safety mechanisms."))
 		return 1
 
 
@@ -463,3 +463,8 @@ var/list/dispenser_presets = list()
 	icon_state = "suitdispenserAL"
 	dispenser_flags = GD_ONEITEM|GD_NOGREED|GD_UNLIMITED
 	one_setting = /datum/gear_disp/voidsuit/autolok
+
+#undef GD_BUSY
+#undef GD_ONEITEM
+#undef GD_NOGREED
+#undef GD_UNLIMITED

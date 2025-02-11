@@ -5,14 +5,14 @@
 	icon_state = "headset"
 	item_state = null //To remove the radio's state
 	matter = list(MAT_STEEL = 75)
-	subspace_transmission = 1
+	subspace_transmission = TRUE
 	canhear_range = 0 // can't hear headsets from very far away
 	slot_flags = SLOT_EARS
 	sprite_sheets = list(SPECIES_TESHARI = 'icons/inventory/ears/mob_teshari.dmi',
 						SPECIES_WEREBEAST = 'icons/inventory/ears/mob_vr_werebeast.dmi')
 
-	var/translate_binary = 0
-	var/translate_hive = 0
+	var/translate_binary = FALSE
+	var/translate_hive = FALSE
 	var/obj/item/encryptionkey/keyslot1 = null
 	var/obj/item/encryptionkey/keyslot2 = null
 	var/ks1type = null
@@ -21,14 +21,14 @@
 	drop_sound = 'sound/items/drop/component.ogg'
 	pickup_sound = 'sound/items/pickup/component.ogg'
 
-/obj/item/radio/headset/New()
-	..()
+/obj/item/radio/headset/Initialize()
+	. = ..()
 	internal_channels.Cut()
 	if(ks1type)
 		keyslot1 = new ks1type(src)
 	if(ks2type)
 		keyslot2 = new ks2type(src)
-	recalculateChannels(1)
+	recalculateChannels(TRUE)
 
 /obj/item/radio/headset/Destroy()
 	qdel(keyslot1)
@@ -144,11 +144,11 @@
 
 	return
 
-/obj/item/radio/headset/recalculateChannels(var/setDescription = 0)
+/obj/item/radio/headset/recalculateChannels(var/setDescription = FALSE)
 	src.channels = list()
-	src.translate_binary = 0
-	src.translate_hive = 0
-	src.syndie = 0
+	src.translate_binary = FALSE
+	src.translate_hive = FALSE
+	src.syndie = FALSE
 
 	if(keyslot1)
 		for(var/ch_name in keyslot1.channels)
@@ -158,13 +158,13 @@
 			src.channels[ch_name] = keyslot1.channels[ch_name]
 
 		if(keyslot1.translate_binary)
-			src.translate_binary = 1
+			src.translate_binary = TRUE
 
 		if(keyslot1.translate_hive)
-			src.translate_hive = 1
+			src.translate_hive = TRUE
 
 		if(keyslot1.syndie)
-			src.syndie = 1
+			src.syndie = TRUE
 
 	if(keyslot2)
 		for(var/ch_name in keyslot2.channels)
@@ -174,28 +174,31 @@
 			src.channels[ch_name] = keyslot2.channels[ch_name]
 
 		if(keyslot2.translate_binary)
-			src.translate_binary = 1
+			src.translate_binary = TRUE
 
 		if(keyslot2.translate_hive)
-			src.translate_hive = 1
+			src.translate_hive = TRUE
 
 		if(keyslot2.syndie)
-			src.syndie = 1
+			src.syndie = TRUE
 
+	handle_finalize_recalculatechannels(setDescription, TRUE)
+
+/obj/item/radio/headset/proc/handle_finalize_recalculatechannels(var/setDescription = FALSE, var/initial_run = FALSE)
+	PRIVATE_PROC(TRUE)
+	SHOULD_NOT_OVERRIDE(TRUE)
+	if(!radio_controller && initial_run)
+		addtimer(CALLBACK(src,PROC_REF(handle_finalize_recalculatechannels),setDescription, FALSE),3 SECONDS)
+		return
+	if(!radio_controller && !initial_run)
+		name = "broken radio headset"
+		return
 
 	for (var/ch_name in channels)
-		if(!radio_controller)
-			sleep(30) // Waiting for the radio_controller to be created.
-		if(!radio_controller)
-			src.name = "broken radio headset"
-			return
-
 		secure_radio_connections[ch_name] = radio_controller.add_object(src, radiochannels[ch_name],  RADIO_CHAT)
 
 	if(setDescription)
 		setupRadioDescription()
-
-	return
 
 /obj/item/radio/headset/proc/setupRadioDescription()
 	var/radio_text = ""
@@ -216,7 +219,7 @@
 /obj/item/radio/headset/mob_headset/afterattack(var/atom/movable/target, mob/living/user, proximity)
 	if(!proximity)
 		return
-	if(istype(target,/mob/living/simple_mob))
+	if(isanimal(target))
 		var/mob/living/simple_mob/M = target
 		if(!M.mob_radio)
 			user.drop_item()
@@ -514,6 +517,7 @@
 	name = "emergency response team bowman headset"
 	desc = "The bowman headset of the boss's boss." // CHOMPAdd
 	icon_state = "com_headset_alt"
+	centComm = 1
 	ks2type = /obj/item/encryptionkey/ert
 
 /obj/item/radio/headset/ia
@@ -546,6 +550,8 @@
 	name = "centcom bowman headset"
 	desc = "The bowman headset of the boss's boss." // CHOMPAdd
 	icon_state = "com_headset_alt"
+	centComm = 1
+	ks2type = /obj/item/encryptionkey/ert
 
 /obj/item/radio/headset/nanotrasen
 	name = "\improper NT radio headset"
@@ -558,6 +564,8 @@
 	name = "\improper NT bowman headset"
 	desc = "The bowman headset of a Nanotrasen corporate employee." // CHOMPAdd
 	icon_state = "nt_headset_alt"
+	centComm = 1
+	ks2type = /obj/item/encryptionkey/ert
 
 /obj/item/radio/headset/pathfinder
 	name = "pathfinder's headset"
@@ -570,6 +578,8 @@
 	name = "pathfinder's bowman headset"
 	desc = "Bowman headset used by pathfinders for exploring. Access to the explorer and command channels." // CHOMPAdd
 	icon_state = "exp_headset_alt"
+	adhoc_fallback = TRUE
+	ks2type = /obj/item/encryptionkey/pathfinder
 
 /obj/item/radio/headset/pilot
 	name = "pilot's headset"
@@ -581,6 +591,7 @@
 	name = "pilot's bowman headset"
 	desc = "A bowman headset used by pilots." // CHOMPAdd
 	icon_state = "pilot_headset_alt"
+	adhoc_fallback = TRUE
 
 /obj/item/radio/headset/explorer
 	name = "away team member's headset"
@@ -593,6 +604,8 @@
 	name = "away team's bowman headset"
 	desc = "Bowman headset used by the away team for exploring. Access to the away team channel." // CHOMPAdd
 	icon_state = "exp_headset_alt"
+	adhoc_fallback = TRUE
+	ks2type = /obj/item/encryptionkey/explorer
 
 /obj/item/radio/headset/sar
 	name = "search and rescue headset"

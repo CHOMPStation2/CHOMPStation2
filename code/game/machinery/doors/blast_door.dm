@@ -42,7 +42,7 @@
 
 /obj/machinery/door/blast/Initialize()
 	. = ..()
-	implicit_material = get_material_by_name("plasteel")
+	implicit_material = get_material_by_name(MAT_PLASTEEL)
 
 /obj/machinery/door/blast/get_material()
 	return implicit_material
@@ -139,7 +139,7 @@
 //Proc: attack_hand
 //Description: Attacked with empty hand. Only to allow special attack_bys.
 /obj/machinery/door/blast/attack_hand(mob/user as mob)
-	if(istype(user, /mob/living/carbon/human))
+	if(ishuman(user))
 		var/mob/living/carbon/human/X = user
 		if(istype(X.species, /datum/species/xenos))
 			src.attack_alien(user)
@@ -183,7 +183,7 @@
 					take_damage(W.force*0.35) //it's a blast door, it should take a while. -Luke
 				return
 
-	else if(istype(C, /obj/item/stack/material) && C.get_material_name() == "plasteel") // Repairing.
+	else if(istype(C, /obj/item/stack/material) && C.get_material_name() == MAT_PLASTEEL) // Repairing.
 		var/amt = CEILING((maxhealth - health)/150, 1)
 		if(!amt)
 			to_chat(user, span_notice("\The [src] is already fully repaired."))
@@ -193,7 +193,7 @@
 			to_chat(user, span_warning("You don't have enough sheets to repair this! You need at least [amt] sheets."))
 			return
 		to_chat(user, span_notice("You begin repairing [src]..."))
-		if(do_after(usr, 30))
+		if(do_after(user, 30))
 			if(P.use(amt))
 				to_chat(user, span_notice("You have repaired \The [src]"))
 				src.repair()
@@ -217,7 +217,7 @@
 // Parameters: Attacking Xeno mob.
 // Description: Forces open the door after a delay.
 /obj/machinery/door/blast/attack_alien(var/mob/user) //Familiar, right? Doors.
-	if(istype(user, /mob/living/carbon/human))
+	if(ishuman(user))
 		var/mob/living/carbon/human/X = user
 		if(istype(X.species, /datum/species/xenos))
 			if(src.density)

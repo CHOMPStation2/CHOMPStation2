@@ -16,7 +16,7 @@
 	var/id = 1.0
 	var/drive_range = 50 //this is mostly irrelevant since current mass drivers throw into space, but you could make a lower-range mass driver for interstation transport or something I guess.
 
-/obj/machinery/mass_driver/New()
+/obj/machinery/mass_driver/Initialize(mapload)
 	. = ..()
 	default_apply_parts()
 
@@ -28,9 +28,9 @@
 
 	if(istype(I, /obj/item/multitool))
 		if(panel_open)
-			var/input = sanitize(tgui_input_text(usr, "What id would you like to give this conveyor?", "Multitool-Conveyor interface", id))
+			var/input = sanitize(tgui_input_text(user, "What id would you like to give this conveyor?", "Multitool-Conveyor interface", id))
 			if(!input)
-				to_chat(usr, "No input found please hang up and try your call again.")
+				to_chat(user, "No input found please hang up and try your call again.")
 				return
 			id = input
 			return

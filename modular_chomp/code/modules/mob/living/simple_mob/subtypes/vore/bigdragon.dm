@@ -27,7 +27,7 @@
 	set desc = "Import a string of text that was made using the import style verb to get back that style"
 	set category = "Abilities.Settings"
 	var/input_style
-	input_style = sanitizeSafe(input(src,"Paste the style string you exported with Export Style.", "Style loading","") as text, MAX_MESSAGE_LEN)
+	input_style = sanitizeSafe(tgui_input_text(src,"Paste the style string you exported with Export Style.", "Style loading"))
 	if(input_style)
 		var/list/input_style_list = splittext(input_style, ";")
 		if((LAZYLEN(input_style_list) == 12) && (input_style_list[2] in underbelly_styles) && (input_style_list[4] in body_styles) && (input_style_list[6] in ear_styles) && (input_style_list[8] in mane_styles) && (input_style_list[10] in horn_styles) && (input_style_list[12] in ear_styles))

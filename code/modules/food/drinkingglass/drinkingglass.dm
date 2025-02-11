@@ -10,6 +10,7 @@
 	icon = DRINK_ICON_FILE
 	var/base_icon = "square" // Base icon name
 	volume = 30
+	icon_state = "square"
 
 	var/list/filling_states // List of percentages full that have icons
 
@@ -17,8 +18,8 @@
 
 	var/rim_pos
 
-	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 10 //CHOMPEdit
+	center_of_mass_x = 16
+	center_of_mass_y = 10
 
 	amount_per_transfer_from_this = 5
 	possible_transfer_amounts = list(5,10,15,30)
@@ -46,8 +47,8 @@
 /obj/item/reagent_containers/food/drinks/glass2/proc/has_ice()
 	if(reagents.reagent_list.len > 0)
 		var/datum/reagent/R = reagents.get_master_reagent()
-		if(!((R.id == "ice") || ("ice" in R.glass_special))) // if it's not a cup of ice, and it's not already supposed to have ice in, see if the bartender's put ice in it
-			if(reagents.has_reagent("ice", reagents.total_volume / 10)) // 10% ice by volume
+		if(!((R.id == REAGENT_ID_ICE) || (REAGENT_ID_ICE in R.glass_special))) // if it's not a cup of ice, and it's not already supposed to have ice in, see if the bartender's put ice in it
+			if(reagents.has_reagent(REAGENT_ID_ICE, reagents.total_volume / 10)) // 10% ice by volume
 				return 1
 
 	return 0

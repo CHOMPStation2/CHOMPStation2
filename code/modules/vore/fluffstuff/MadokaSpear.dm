@@ -42,13 +42,14 @@
 /obj/item/oldtwohanded/mob_can_equip(M as mob, slot, disable_warning = FALSE)
 	//Cannot equip wielded items.
 	if(wielded)
-		to_chat(M, "<span class='warning'>Unwield the [initial(name)] first!</span>")
+		to_chat(M, span_warning("Unwield the [initial(name)] first!"))
 		return 0
 
 	return ..()
 
 /obj/item/oldtwohanded/dropped(mob/user as mob)
 	//handles unwielding a twohanded weapon when dropped as well as clearing up the offhand
+	..()
 	if(user)
 		var/obj/item/oldtwohanded/O = user.get_inactive_hand()
 		if(istype(O))
@@ -67,7 +68,7 @@
 
 	if(wielded) //Trying to unwield it
 		unwield()
-		user << "<span class='notice'>You are now carrying the [name] with one hand.</span>"
+		user << span_notice("You are now carrying the [name] with one hand.")
 		if (src.unwieldsound)
 			playsound(src.loc, unwieldsound, 50, 1)
 
@@ -77,10 +78,10 @@
 
 	else //Trying to wield it
 		if(user.get_inactive_hand())
-			user << "<span class='warning'>You need your other hand to be empty</span>"
+			user << span_warning("You need your other hand to be empty")
 			return
 		wield()
-		user << "<span class='notice'>You grab the [initial(name)] with both hands.</span>"
+		user << span_notice("You grab the [initial(name)] with both hands.")
 		if (src.wieldsound)
 			playsound(src.loc, wieldsound, 50, 1)
 

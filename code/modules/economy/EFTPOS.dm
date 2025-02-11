@@ -78,7 +78,7 @@
 		var/dat = span_bold("[eftpos_name]") + "<br>"
 		dat += "<i>This terminal is</i> [machine_id]. <i>Report this code when contacting IT Support</i><br>"
 		if(transaction_locked)
-			dat += "<a href='?src=\ref[src];choice=toggle_lock'>Back[transaction_paid ? "" : " (authentication required)"]</a><br><br>"
+			dat += "<a href='byond://?src=\ref[src];choice=toggle_lock'>Back[transaction_paid ? "" : " (authentication required)"]</a><br><br>"
 
 			dat += "Transaction purpose: <b>[transaction_purpose]</b><br>"
 			dat += "Value: <b>$[transaction_amount]</b><br>"
@@ -87,21 +87,21 @@
 				dat += "<i>This transaction has been processed successfully.</i><hr>"
 			else
 				dat += "<i>Swipe your card below the line to finish this transaction.</i><hr>"
-				dat += "<a href='?src=\ref[src];choice=scan_card'>\[------\]</a>"
+				dat += "<a href='byond://?src=\ref[src];choice=scan_card'>\[------\]</a>"
 		else
-			dat += "<a href='?src=\ref[src];choice=toggle_lock'>Lock in new transaction</a><br><br>"
+			dat += "<a href='byond://?src=\ref[src];choice=toggle_lock'>Lock in new transaction</a><br><br>"
 
-			dat += "<a href='?src=\ref[src];choice=trans_purpose'>Transaction purpose: [transaction_purpose]</a><br>"
-			dat += "Value: <a href='?src=\ref[src];choice=trans_value'>$[transaction_amount]</a><br>"
-			dat += "Linked account: <a href='?src=\ref[src];choice=link_account'>[linked_account ? linked_account.owner_name : "None"]</a><hr>"
-			dat += "<a href='?src=\ref[src];choice=change_code'>Change access code</a><br>"
-			dat += "<a href='?src=\ref[src];choice=change_id'>Change EFTPOS ID</a><br>"
-			dat += "Scan card to reset access code <a href='?src=\ref[src];choice=reset'>\[------\]</a>"
-		user << browse(dat,"window=eftpos")
+			dat += "<a href='byond://?src=\ref[src];choice=trans_purpose'>Transaction purpose: [transaction_purpose]</a><br>"
+			dat += "Value: <a href='byond://?src=\ref[src];choice=trans_value'>$[transaction_amount]</a><br>"
+			dat += "Linked account: <a href='byond://?src=\ref[src];choice=link_account'>[linked_account ? linked_account.owner_name : "None"]</a><hr>"
+			dat += "<a href='byond://?src=\ref[src];choice=change_code'>Change access code</a><br>"
+			dat += "<a href='byond://?src=\ref[src];choice=change_id'>Change EFTPOS ID</a><br>"
+			dat += "Scan card to reset access code <a href='byond://?src=\ref[src];choice=reset'>\[------\]</a>"
+		user << browse("<html>[dat]</html>","window=eftpos")
 	else
 		user << browse(null,"window=eftpos")
 
-/obj/item/eftpos/attackby(obj/item/O as obj, user as mob)
+/obj/item/eftpos/attackby(obj/item/O, mob/user)
 
 	var/obj/item/card/id/I = O.GetID()
 
@@ -109,7 +109,7 @@
 		if(linked_account)
 			scan_card(I, O)
 		else
-			to_chat(usr, "[icon2html(src, usr.client)]" + span_warning("Unable to connect to linked account."))
+			to_chat(user, "[icon2html(src, user.client)]" + span_warning("Unable to connect to linked account."))
 	else if (istype(O, /obj/item/spacecash/ewallet))
 		var/obj/item/spacecash/ewallet/E = O
 		if (linked_account)
@@ -134,11 +134,11 @@
 						T.time = stationtime2text()
 						linked_account.transaction_log.Add(T)
 					else
-						to_chat(usr, "[icon2html(src, usr.client)]" + span_warning("\The [O] doesn't have that much money!"))
+						to_chat(user, "[icon2html(src, user.client)]" + span_warning("\The [O] doesn't have that much money!"))
 			else
-				to_chat(usr, "[icon2html(src, usr.client)]" + span_warning("Connected account has been suspended."))
+				to_chat(user, "[icon2html(src, user.client)]" + span_warning("Connected account has been suspended."))
 		else
-			to_chat(usr, "[icon2html(src, usr.client)]" + span_warning("EFTPOS is not connected to an account."))
+			to_chat(user, "[icon2html(src, user.client)]" + span_warning("EFTPOS is not connected to an account."))
 
 	else
 		..()
@@ -158,9 +158,9 @@
 				else
 					to_chat(usr, "[icon2html(src, usr.client)]" + span_warning("Incorrect code entered."))
 			if("change_id")
-				var/attempt_code = text2num(input(usr, "Re-enter the current EFTPOS access code", "Confirm EFTPOS code"))
+				var/attempt_code = tgui_input_number(usr, "Re-enter the current EFTPOS access code", "Confirm EFTPOS code")
 				if(attempt_code == access_code)
-					eftpos_name = sanitize(input(usr, "Enter a new terminal ID for this device", "Enter new EFTPOS ID"), MAX_NAME_LEN) + " EFTPOS scanner"
+					eftpos_name = sanitize(tgui_input_text(usr, "Enter a new terminal ID for this device", "Enter new EFTPOS ID",max_length=MAX_NAME_LEN), MAX_NAME_LEN) + " EFTPOS scanner"
 					print_reference()
 				else
 					to_chat(usr, "[icon2html(src, usr.client)]" + span_warning("Incorrect code entered."))
@@ -175,8 +175,9 @@
 				else
 					to_chat(usr, "[icon2html(src, usr.client)]" + span_warning("Account not found."))
 			if("trans_purpose")
-				var/choice = sanitize(input(usr, "Enter reason for EFTPOS transaction", "Transaction purpose"))
-				if(choice) transaction_purpose = choice
+				var/choice = sanitize(tgui_input_text(usr, "Enter reason for EFTPOS transaction", "Transaction purpose"))
+				if(choice)
+					transaction_purpose = choice
 			if("trans_value")
 				var/try_num = tgui_input_number(usr, "Enter amount for EFTPOS transaction", "Transaction amount")
 				if(try_num < 0)

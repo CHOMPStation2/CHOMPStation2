@@ -234,11 +234,11 @@ SUBSYSTEM_DEF(vote)
 						choices.Add(antag.role_text)
 				choices.Add("None")
 			if(VOTE_CUSTOM)
-				question = sanitizeSafe(input(usr, "What is the vote for?") as text|null)
+				question = sanitizeSafe(tgui_input_text(usr, "What is the vote for?"))
 				if(!question)
 					return 0
 				for(var/i = 1 to 10)
-					var/option = capitalize(sanitize(input(usr, "Please enter an option or hit cancel to finish") as text|null))
+					var/option = capitalize(sanitize(tgui_input_text(usr, "Please enter an option or hit cancel to finish"))
 					if(!option || mode || !usr.client)
 						break
 					choices.Add(option)
@@ -255,7 +255,7 @@ SUBSYSTEM_DEF(vote)
 
 		log_vote(text)
 
-		world << span_lightpurple("<b>[text]</b>\nType <b>vote</b> or click <a href='?src=\ref[src]'>here</a> to place your votes.\nYou have [config.vote_period / 10] seconds to vote.")
+		world << span_lightpurple("<b>[text]</b>\nType <b>vote</b> or click <a href='byond://?src=\ref[src]'>here</a> to place your votes.\nYou have [config.vote_period / 10] seconds to vote.")
 		if(vote_type == VOTE_CREW_TRANSFER || vote_type == VOTE_GAMEMODE || vote_type == VOTE_CUSTOM)
 			world << sound('sound/ambience/alarm4.ogg', repeat = 0, wait = 0, volume = 50, channel = 3)
 
@@ -293,55 +293,55 @@ SUBSYSTEM_DEF(vote)
 			. += "<tr>"
 			var/thisVote = (current_votes[C.ckey] == i)
 			if(mode == VOTE_GAMEMODE)
-				. += "<td>[thisVote ? "<b>" : ""]<a href='?src=\ref[src];vote=[i]'>[gamemode_names[choices[i]]]</a>[thisVote ? "</b>" : ""]</td><td align = 'center'>[votes]</td>"
+				. += "<td>[thisVote ? "<b>" : ""]<a href='byond://?src=\ref[src];vote=[i]'>[gamemode_names[choices[i]]]</a>[thisVote ? "</b>" : ""]</td><td align = 'center'>[votes]</td>"
 			else
-				. += "<td>[thisVote ? "<b>" : ""]<a href='?src=\ref[src];vote=[i]'>[choices[i]]</a>[thisVote ? "</b>" : ""]</td><td align = 'center'>[votes]</td>"
+				. += "<td>[thisVote ? "<b>" : ""]<a href='byond://?src=\ref[src];vote=[i]'>[choices[i]]</a>[thisVote ? "</b>" : ""]</td><td align = 'center'>[votes]</td>"
 			if (additional_text.len >= i)
 				. += additional_text[i]
 			. += "</tr>"
 
-		. += "<tr><td><a href='?src=\ref[src];vote=unvote'>Unvote</a></td></tr>"
+		. += "<tr><td><a href='byond://?src=\ref[src];vote=unvote'>Unvote</a></td></tr>"
 
 		. += "</table><hr>"
 		if(admin)
-			. += "(<a href='?src=\ref[src];vote=cancel'>Cancel Vote</a>) "
+			. += "(<a href='byond://?src=\ref[src];vote=cancel'>Cancel Vote</a>) "
 	else
 		. += "<h2>Start a vote:</h2><hr><ul><li>"
 		if(admin || config.allow_vote_restart)
-			. += "<a href='?src=\ref[src];vote=restart'>Restart</a>"
+			. += "<a href='byond://?src=\ref[src];vote=restart'>Restart</a>"
 		else
 			. += "<font color='grey'>Restart (Disallowed)</font>"
 		. += "</li><li>"
 
 		if(admin || config.allow_vote_restart)
-			. += "<a href='?src=\ref[src];vote=crew_transfer'>Crew Transfer</a>"
+			. += "<a href='byond://?src=\ref[src];vote=crew_transfer'>Crew Transfer</a>"
 		else
 			. += "<font color='grey'>Crew Transfer (Disallowed)</font>"
 
 		if(admin)
-			. += "\t(<a href='?src=\ref[src];vote=toggle_restart'>[config.allow_vote_restart ? "Allowed" : "Disallowed"]</a>)"
+			. += "\t(<a href='byond://?src=\ref[src];vote=toggle_restart'>[config.allow_vote_restart ? "Allowed" : "Disallowed"]</a>)"
 		. += "</li><li>"
 
 		if(admin || CONFIG_GET(flag/allow_vote_mode)) // CHOMPEdit
-			. += "<a href='?src=\ref[src];vote=gamemode'>GameMode</a>"
+			. += "<a href='byond://?src=\ref[src];vote=gamemode'>GameMode</a>"
 		else
 			. += "<font color='grey'>GameMode (Disallowed)</font>"
 
 		if(admin)
-			. += "\t(<a href='?src=\ref[src];vote=toggle_gamemode'>[CONFIG_GET(flag/allow_vote_mode) ? "Allowed" : "Disallowed"]</a>)" // CHOMPEdit
+			. += "\t(<a href='byond://?src=\ref[src];vote=toggle_gamemode'>[CONFIG_GET(flag/allow_vote_mode) ? "Allowed" : "Disallowed"]</a>)" // CHOMPEdit
 		. += "</li><li>"
 
 		if(!antag_add_failed && CONFIG_GET(flag/allow_extra_antags)) // CHOMPEdit
-			. += "<a href='?src=\ref[src];vote=add_antagonist'>Add Antagonist Type</a>"
+			. += "<a href='byond://?src=\ref[src];vote=add_antagonist'>Add Antagonist Type</a>"
 		else
 			. += "<font color='grey'>Add Antagonist (Disallowed)</font>"
 		. += "</li>"
 
 		if(admin)
-			. += "<li><a href='?src=\ref[src];vote=custom'>Custom</a></li>"
+			. += "<li><a href='byond://?src=\ref[src];vote=custom'>Custom</a></li>"
 		. += "</ul><hr>"
 
-	. += "<a href='?src=\ref[src];vote=close' style='position:absolute;right:50px'>Close</a></body></html>"
+	. += "<a href='byond://?src=\ref[src];vote=close' style='position:absolute;right:50px'>Close</a></body></html>"
 
 /datum/controller/subsystem/vote/Topic(href, href_list[])
 	if(!usr || !usr.client)

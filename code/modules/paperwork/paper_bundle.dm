@@ -18,7 +18,7 @@
 	var/list/pages = list()  // Ordered list of pages as they are to be displayed. Can be different order than src.contents.
 
 
-/obj/item/paper_bundle/attackby(obj/item/W as obj, mob/user as mob)
+/obj/item/paper_bundle/attackby(obj/item/W, mob/user)
 	..()
 
 	if (istype(W, /obj/item/paper/carbon))
@@ -40,7 +40,7 @@
 		user.drop_from_inventory(W)
 		for(var/obj/O in W)
 			O.loc = src
-			O.add_fingerprint(usr)
+			O.add_fingerprint(user)
 			pages.Add(O)
 
 		to_chat(user, span_notice("You add \the [W.name] to [(src.name == "paper bundle") ? "the paper bundle" : src.name]."))
@@ -49,13 +49,13 @@
 		if(istype(W, /obj/item/tape_roll))
 			return 0
 		if(istype(W, /obj/item/pen))
-			usr << browse("", "window=[name]") //Closes the dialog
+			user << browse("", "window=[name]") //Closes the dialog
 		var/obj/P = pages[page]
 		P.attackby(W, user)
 
 	update_icon()
-	attack_self(usr) //Update the browsed page.
-	add_fingerprint(usr)
+	attack_self(user) //Update the browsed page.
+	add_fingerprint(user)
 	return
 
 /obj/item/paper_bundle/proc/insert_sheet_at(mob/user, var/index, obj/item/sheet)
@@ -103,29 +103,29 @@
 	else
 		. += span_notice("It is too far away.")
 
-/obj/item/paper_bundle/proc/show_content(mob/user as mob)
+/obj/item/paper_bundle/proc/show_content(mob/user)
 	var/dat
 	var/obj/item/W = pages[page]
 
 	// first
 	if(page == 1)
-		dat+= "<DIV STYLE='float:left; text-align:left; width:33.33333%'><A href='?src=\ref[src];prev_page=1'>Front</A></DIV>"
-		dat+= "<DIV STYLE='float:left; text-align:center; width:33.33333%'><A href='?src=\ref[src];remove=1'>Remove [(istype(W, /obj/item/paper)) ? "paper" : "photo"]</A></DIV>"
-		dat+= "<DIV STYLE='float:left; text-align:right; width:33.33333%'><A href='?src=\ref[src];next_page=1'>Next Page</A></DIV><BR><HR>"
+		dat+= "<DIV STYLE='float:left; text-align:left; width:33.33333%'><A href='byond://?src=\ref[src];prev_page=1'>Front</A></DIV>"
+		dat+= "<DIV STYLE='float:left; text-align:center; width:33.33333%'><A href='byond://?src=\ref[src];remove=1'>Remove [(istype(W, /obj/item/paper)) ? "paper" : "photo"]</A></DIV>"
+		dat+= "<DIV STYLE='float:left; text-align:right; width:33.33333%'><A href='byond://?src=\ref[src];next_page=1'>Next Page</A></DIV><BR><HR>"
 	// last
 	else if(page == pages.len)
-		dat+= "<DIV STYLE='float:left; text-align:left; width:33.33333%'><A href='?src=\ref[src];prev_page=1'>Previous Page</A></DIV>"
-		dat+= "<DIV STYLE='float:left; text-align:center; width:33.33333%'><A href='?src=\ref[src];remove=1'>Remove [(istype(W, /obj/item/paper)) ? "paper" : "photo"]</A></DIV>"
-		dat+= "<DIV STYLE='float;left; text-align:right; with:33.33333%'><A href='?src=\ref[src];next_page=1'>Back</A></DIV><BR><HR>"
+		dat+= "<DIV STYLE='float:left; text-align:left; width:33.33333%'><A href='byond://?src=\ref[src];prev_page=1'>Previous Page</A></DIV>"
+		dat+= "<DIV STYLE='float:left; text-align:center; width:33.33333%'><A href='byond://?src=\ref[src];remove=1'>Remove [(istype(W, /obj/item/paper)) ? "paper" : "photo"]</A></DIV>"
+		dat+= "<DIV STYLE='float;left; text-align:right; with:33.33333%'><A href='byond://?src=\ref[src];next_page=1'>Back</A></DIV><BR><HR>"
 	// middle pages
 	else
-		dat+= "<DIV STYLE='float:left; text-align:left; width:33.33333%'><A href='?src=\ref[src];prev_page=1'>Previous Page</A></DIV>"
-		dat+= "<DIV STYLE='float:left; text-align:center; width:33.33333%'><A href='?src=\ref[src];remove=1'>Remove [(istype(W, /obj/item/paper)) ? "paper" : "photo"]</A></DIV>"
-		dat+= "<DIV STYLE='float:left; text-align:right; width:33.33333%'><A href='?src=\ref[src];next_page=1'>Next Page</A></DIV><BR><HR>"
+		dat+= "<DIV STYLE='float:left; text-align:left; width:33.33333%'><A href='byond://?src=\ref[src];prev_page=1'>Previous Page</A></DIV>"
+		dat+= "<DIV STYLE='float:left; text-align:center; width:33.33333%'><A href='byond://?src=\ref[src];remove=1'>Remove [(istype(W, /obj/item/paper)) ? "paper" : "photo"]</A></DIV>"
+		dat+= "<DIV STYLE='float:left; text-align:right; width:33.33333%'><A href='byond://?src=\ref[src];next_page=1'>Next Page</A></DIV><BR><HR>"
 
 	if(istype(pages[page], /obj/item/paper))
 		var/obj/item/paper/P = W
-		if(!(istype(usr, /mob/living/carbon/human) || istype(usr, /mob/observer/dead) || istype(usr, /mob/living/silicon)))
+		if(!(ishuman(user) || isobserver(user) || issilicon(user)))
 			dat+= "<HTML><HEAD><TITLE>[P.name]</TITLE></HEAD><BODY>[stars(P.info)][P.stamps]</BODY></HTML>"
 		else
 			dat+= "<HTML><HEAD><TITLE>[P.name]</TITLE></HEAD><BODY>[P.info][P.stamps]</BODY></HTML>"
@@ -133,15 +133,15 @@
 	else if(istype(pages[page], /obj/item/photo))
 		var/obj/item/photo/P = W
 		user << browse_rsc(P.img, "tmp_photo.png")
-		user << browse(dat + "<html><head><title>[P.name]</title></head>" \
+		user << browse("<html>" + dat + "<head><title>[P.name]</title></head>" \
 		+ "<body style='overflow:hidden'>" \
 		+ "<div> <img src='tmp_photo.png' width = '180'" \
 		+ "[P.scribble ? "<div> Written on the back:<br><i>[P.scribble]</i>" : null]"\
 		+ "</body></html>", "window=[name]")
 
-/obj/item/paper_bundle/attack_self(mob/user as mob)
+/obj/item/paper_bundle/attack_self(mob/user)
 	src.show_content(user)
-	add_fingerprint(usr)
+	add_fingerprint(user)
 	update_icon()
 	return
 
@@ -185,7 +185,7 @@
 			update_icon()
 
 		src.attack_self(usr)
-		updateUsrDialog()
+		updateUsrDialog(usr)
 	else
 		to_chat(usr, span_notice("You need to hold it in hands!"))
 

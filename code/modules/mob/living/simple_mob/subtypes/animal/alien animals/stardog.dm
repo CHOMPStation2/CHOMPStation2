@@ -1149,7 +1149,7 @@
 		to_chat(L, span_warning("You cannot speak in IC (muted)."))
 		return
 	if (!message)
-		message = tgui_input_text(usr, "Type a message to emote.","Emote Beyond")
+		message = tgui_input_text(L, "Type a message to emote.","Emote Beyond")
 	message = sanitize_or_reflect(message,L)
 	if (!message)
 		return
@@ -1437,7 +1437,7 @@
 	water_state = "enzyme_shallow"
 	under_state = "flesh_floor"
 
-	reagent_type = "Sulphuric acid"	//why not
+	reagent_type = REAGENT_ID_SACID //why not
 	outdoors = FALSE
 	var/mob/living/simple_mob/vore/overmap/stardog/linked_mob
 	var/mobstuff = TRUE		//if false, we don't care about dogs, and that's terrible

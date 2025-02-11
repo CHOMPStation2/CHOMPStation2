@@ -22,7 +22,6 @@
 	icon_state = "shuttle"
 	requires_power = 0
 	dynamic_lighting = 1
-	flags = RAD_SHIELDED
 
 /area/turbolift/start
 	name = "\improper Turbolift Start"
@@ -212,7 +211,7 @@
 /area/hallway/primary/firstdeck/auxdockaft
 	name = "\improper First Deck Aft Auxiliary Dock"
 	icon_state = "docking_hallway"
-	forbid_events = TRUE
+	flags = AREA_FORBID_EVENTS | AREA_ALLOW_CLOCKOUT
 
 /area/hallway/primary/firstdeck/auxdockfore
 	name = "\improper First Deck Fore Auxiliary Dock"
@@ -292,7 +291,6 @@
 	name = "\improper First Deck First-Aid Station"
 
 /area/storage/emergency_storage/
-	flags = RAD_SHIELDED
 	name = "Emergency Storage"
 	icon_state = "emergencystorage"
 
@@ -432,7 +430,7 @@
 /area/crew_quarters/thirddeck/vrroom
 	name = "\improper Virtual Reality Room"
 	icon_state = "gaming"
-	flags = RAD_SHIELDED //Depending on the video game, you might still get figuative cancer
+	flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO | AREA_ALLOW_CLOCKOUT //Depending on the video game, you might still get figuative cancer
 
 //CHOMPStation Edit End
 
@@ -448,7 +446,6 @@
 /area/crew_quarters/heads/sc/
 	name = "\improper Command - Head Office"
 	icon_state = "head_quarters"
-	flags = RAD_SHIELDED
 	sound_env = MEDIUM_SOFTFLOOR
 
 /area/crew_quarters/heads/sc/hop
@@ -483,7 +480,6 @@
 /area/engineering/engi_restroom
 	name = "\improper Engineering Restroom"
 	icon_state = "toilet"
-	flags = RAD_SHIELDED
 	sound_env = SMALL_ENCLOSED
 
 /area/engineering/hallway/atmos_hallway
@@ -561,8 +557,15 @@
 /area/medical/medical_restroom
 	name = "\improper Medbay Restroom"
 	icon_state = "medbay_restroom"
-	flags = RAD_SHIELDED
 	sound_env = SMALL_ENCLOSED
+
+/area/medical/sc_patient_a
+	name ="\improper Patient A"
+	icon_state = "medbay_patient_room_a"
+
+/area/medical/sc_patient_b
+	name ="\improper Patient B"
+	icon_state = "medbay_patient_room_b"
 
 /area/security/aid_station
 	name = "\improper Security - Aid Station"
@@ -575,7 +578,6 @@
 /area/security/security_restroom
 	name = "\improper Security - Restroom"
 	icon_state = "security_bathroom"
-	flags = RAD_SHIELDED
 	sound_env = SMALL_ENCLOSED
 
 /area/storage/emergency_storage/seconddeck/ap_emergency
@@ -599,7 +601,6 @@
 /area/rnd/research_restroom_sc
 	name = "\improper Research Restroom"
 	icon_state = "research_restroom"
-	flags = RAD_SHIELDED
 	sound_env = SMALL_ENCLOSED
 
 /area/rnd/research_lockerroom
@@ -730,6 +731,7 @@
 /area/maintenance/thirddeck/dormsstarboard/maintbar
 	name = "Third Deck Aft Starboard Speakeasy"
 	icon_state = "asmaint"
+
 //CHOMPedit end
 /area/maintenance/thirddeck/dormsaft
 	name = "Third Deck Aft Starboard Maintenance"
@@ -822,7 +824,6 @@
 	name = "\improper Response Team Ship"
 	icon_state = "shuttlered"
 	requires_power = 0
-	flags = RAD_SHIELDED
 	ambience = AMBIENCE_HIGHSEC
 
 /* Chompstation Edit - Removing Shuttle 1 & 2
@@ -948,7 +949,6 @@ End Chompstation Edit*/
 	icon_state = "syndie-ship"
 	requires_power = 0
 	dynamic_lighting = 0
-	flags = RAD_SHIELDED
 	ambience = AMBIENCE_HIGHSEC
 
 /area/syndicate_station
@@ -956,7 +956,6 @@ End Chompstation Edit*/
 	icon_state = "syndie-ship"
 	requires_power = 0
 	dynamic_lighting = 0
-	flags = RAD_SHIELDED
 	ambience = AMBIENCE_HIGHSEC
 
 /area/syndicate_station/start
@@ -1017,7 +1016,6 @@ End Chompstation Edit*/
 	icon_state = "yellow"
 	requires_power = 0
 	dynamic_lighting = 0
-	flags = RAD_SHIELDED
 	ambience = AMBIENCE_HIGHSEC
 
 /area/skipjack_station/transit
@@ -1071,7 +1069,6 @@ End Chompstation Edit*/
 	name = "\improper Ninja Base"
 	icon_state = "green"
 	requires_power = 0
-	flags = RAD_SHIELDED
 	ambience = AMBIENCE_HIGHSEC
 
 /area/ninja_dojo/dojo
@@ -1358,18 +1355,15 @@ End Chompstation Edit*/
 
 /area/expoutpost/bar
 	name = "\improper Bar"
-	flags = RAD_SHIELDED
 
 /area/expoutpost/starbowhallway
 	name = "\improper Starboard Bow Hallway"
 
 /area/expoutpost/suite1
 	name = "\improper Suite One"
-	flags = RAD_SHIELDED
 
 /area/expoutpost/suite2
 	name = "\improper Suite Two"
-	flags = RAD_SHIELDED
 
 /area/expoutpost/pathfinderroom
 	name = "\improper Pathfinder's Ready-Room"
@@ -1712,11 +1706,7 @@ End Chompstation Edit*/
 /area/maintenance/bar/dorms
 	name = "Maintenance Bar Dorms"
 	icon_state = "Sleep"
-	soundproofed = TRUE
-	limit_mob_size = FALSE
-	block_suit_sensors = TRUE
-	flags = RAD_SHIELDED
-	block_tracking = TRUE
+	flags = RAD_SHIELDED | AREA_SOUNDPROOF |AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING | AREA_ALLOW_CLOCKOUT
 
 /area/maintenance/bar/dorms/dorm_1
 	name = "Maintenance Deck Bar Dorms 1"

@@ -63,8 +63,8 @@
 	max_signs = 3
 
 /obj/item/holosign_creator/medical
-	name = "\improper PENLITE barrier projector"
-	desc = "A holographic projector that creates PENLITE holobarriers. Useful during quarantines since they halt those with malicious diseases."
+	name = "Vey-Med barrier projector"
+	desc = "A holographic projector that creates Vey-Medical holobarriers. Useful during quarantines since they halt those with malicious diseases."
 	icon = 'modular_chomp/icons/obj/device.dmi'
 	icon_state = "signmaker_med"
 	holosign_type = /obj/structure/holosign/barrier/medical

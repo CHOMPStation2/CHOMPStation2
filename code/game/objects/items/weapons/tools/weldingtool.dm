@@ -49,7 +49,7 @@
 	var/datum/reagents/R = new/datum/reagents(max_fuel)
 	reagents = R
 	R.my_atom = src
-	R.add_reagent("fuel", max_fuel)
+	R.add_reagent(REAGENT_ID_FUEL, max_fuel)
 	update_icon()
 	if(always_process)
 		START_PROCESSING(SSobj, src)
@@ -147,7 +147,7 @@
 			setWelding(0)
 		else			//Only start fires when its on and has enough fuel to actually keep working
 			var/turf/location = src.loc
-			if(istype(location, /mob/living))
+			if(isliving(location))
 				var/mob/living/M = location
 				if(M.item_is_in_hands(src))
 					location = get_turf(M)
@@ -185,7 +185,7 @@
 
 //Returns the amount of fuel in the welder
 /obj/item/weldingtool/proc/get_fuel()
-	return reagents.get_reagent_amount("fuel")
+	return reagents.get_reagent_amount(REAGENT_ID_FUEL)
 
 /obj/item/weldingtool/proc/get_max_fuel()
 	return max_fuel
@@ -197,7 +197,7 @@
 	if(amount)
 		burned_fuel_for = 0 // Reset the counter since we're removing fuel.
 	if(get_fuel() >= amount)
-		reagents.remove_reagent("fuel", amount)
+		reagents.remove_reagent(REAGENT_ID_FUEL, amount)
 		if(M)
 			eyecheck(M)
 		update_icon()
@@ -322,7 +322,7 @@
 		return 1
 	var/safety = user.eyecheck()
 	safety = between(-1, safety + eye_safety_modifier, 2)
-	if(istype(user, /mob/living/carbon/human))
+	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		var/obj/item/organ/internal/eyes/E = H.internal_organs_by_name[O_EYES]
 		if(!E)
@@ -330,17 +330,17 @@
 		if(H.nif && H.nif.flag_check(NIF_V_UVFILTER,NIF_FLAGS_VISION)) return //VOREStation Add - NIF
 		switch(safety)
 			if(1)
-				to_chat(usr, span_warning("Your eyes sting a little."))
+				to_chat(user, span_warning("Your eyes sting a little."))
 				E.damage += rand(1, 2)
 				if(E.damage > 12)
 					user.eye_blurry += rand(3,6)
 			if(0)
-				to_chat(usr, span_warning("Your eyes burn."))
+				to_chat(user, span_warning("Your eyes burn."))
 				E.damage += rand(2, 4)
 				if(E.damage > 10)
 					E.damage += rand(4,10)
 			if(-1)
-				to_chat(usr, span_danger("Your thermals intensify the welder's glow. Your eyes itch and burn severely."))
+				to_chat(user, span_danger("Your thermals intensify the welder's glow. Your eyes itch and burn severely."))
 				user.eye_blurry += rand(12,20)
 				E.damage += rand(12, 16)
 		if(safety<2)
@@ -440,7 +440,7 @@
 
 /obj/item/weldingtool/alien/process()
 	if(get_fuel() <= get_max_fuel())
-		reagents.add_reagent("fuel", 1)
+		reagents.add_reagent(REAGENT_ID_FUEL, 1)
 	..()
 
 /obj/item/weldingtool/experimental
@@ -461,7 +461,7 @@
 	..()
 	if(get_fuel() < get_max_fuel() && nextrefueltick < world.time)
 		nextrefueltick = world.time + 10
-		reagents.add_reagent("fuel", 1)
+		reagents.add_reagent(REAGENT_ID_FUEL, 1)
 
 /obj/item/weldingtool/experimental/hybrid
 	name = "strange welding tool"
@@ -508,7 +508,7 @@
 
 /obj/item/weldingtool/tubefed/process()
 	if(mounted_pack)
-		if(!istype(mounted_pack.loc,/mob/living/carbon/human))
+		if(!ishuman(mounted_pack.loc))
 			mounted_pack.return_nozzle()
 		else
 			var/mob/living/carbon/human/H = mounted_pack.loc

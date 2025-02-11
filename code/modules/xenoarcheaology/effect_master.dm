@@ -3,6 +3,23 @@
  * Here there be the base component for artifacts.
  */
 
+//The reagents used to be a very small list of only certain reagent IDs previously.
+//Now, we use modifiable lists that allows /types/ of reagents to be used. Nifty, right?
+//Now if you dump reagent/toxin/really_bad_deadly_stuff it'll activate it just like reagent/toxin will.
+#define HYDROGEN_PATH /datum/reagent/hydrogen
+#define WATER_PATH /datum/reagent/water
+#define ACID_PATH /datum/reagent/acid
+#define DIETHYLAMINE_PATH /datum/reagent/diethylamine
+#define PHORON_PATH /datum/reagent/toxin/phoron
+#define HYDROPHORON_PATH /datum/reagent/toxin/hydrophoron
+#define THERMITE_PATH /datum/reagent/thermite
+#define TOXIN_PATH /datum/reagent/toxin
+
+var/list/water_reagents = list(HYDROGEN_PATH, WATER_PATH)
+var/list/acid_reagents = list(ACID_PATH, DIETHYLAMINE_PATH)
+var/list/volatile_reagents = list(PHORON_PATH, HYDROPHORON_PATH, THERMITE_PATH)
+var/list/toxic_reagents = list(TOXIN_PATH)
+
 /atom/proc/is_anomalous()
 	return (GetComponent(/datum/component/artifact_master))
 
@@ -66,6 +83,10 @@
  * Component System Registry.
  * Here be dragons.
  */
+/*
+ * Hi, it's me 3 years in the future
+ * Why would you do this to us
+ */
 
 /datum/component/artifact_master/proc/DoRegistry()
 //Melee Hit
@@ -92,6 +113,16 @@
  *
  */
 
+/datum/component/artifact_master/proc/do_unregister()
+	UnregisterSignal(holder, COMSIG_PARENT_ATTACKBY)
+	UnregisterSignal(holder, COMSIG_ATOM_EX_ACT)
+	UnregisterSignal(holder, COMSIG_ATOM_BULLET_ACT)
+	UnregisterSignal(holder, COMSIG_ATOM_ATTACK_HAND)
+	UnregisterSignal(holder, COMSIG_MOVABLE_BUMP)
+	UnregisterSignal(holder, COMSIG_ATOM_BUMPED)
+	UnregisterSignal(holder, COMSIG_MOVABLE_MOVED)
+	UnregisterSignal(holder, COMSIG_REAGENTS_TOUCH)
+
 /datum/component/artifact_master/proc/get_active_effects()
 	var/list/active_effects = list()
 	for(var/datum/artifact_effect/my_effect in my_effects)
@@ -100,8 +131,15 @@
 
 	return active_effects
 
+/datum/component/artifact_master/proc/get_all_effects()
+	var/list/effects = list()
+	for(var/datum/artifact_effect/my_effect in my_effects)
+		effects |= my_effect
+
+	return effects
+
 /datum/component/artifact_master/proc/add_effect()
-	var/effect_type = input(usr, "What type do you want?", "Effect Type") as null|anything in subtypesof(/datum/artifact_effect)
+	var/effect_type = tgui_input_list(usr, "What type do you want?", "Effect Type", subtypesof(/datum/artifact_effect))
 	if(effect_type)
 		var/datum/artifact_effect/my_effect = new effect_type(src)
 		if(istype(holder, my_effect.req_type))
@@ -112,7 +150,7 @@
 			qdel(my_effect)
 
 /datum/component/artifact_master/proc/remove_effect()
-	var/to_remove_effect = input(usr, "What effect do you want to remove?", "Remove Effect") as null|anything in my_effects
+	var/to_remove_effect = tgui_input_list(usr, "What effect do you want to remove?", "Remove Effect", my_effects)
 
 	if(to_remove_effect)
 		var/datum/artifact_effect/AE = to_remove_effect
@@ -120,6 +158,7 @@
 		qdel(AE)
 
 /datum/component/artifact_master/Destroy()
+	do_unregister()
 	holder = null
 	for(var/datum/artifact_effect/AE in my_effects)
 		AE.master = null
@@ -144,7 +183,7 @@
 
 /datum/component/artifact_master/proc/generate_effects()
 	while(effect_generation_chance > 0)
-		var/chosen_path = pick(subtypesof(/datum/artifact_effect))
+		var/chosen_path = pick(subtypesof(/datum/artifact_effect) - blacklisted_artifact_effects)
 		if(effect_generation_chance >= 100)	// If we're above 100 percent, just cut a flat amount and add an effect.
 			var/datum/artifact_effect/AE = new chosen_path(src)
 			if(istype(holder, AE.req_type))
@@ -228,12 +267,10 @@
 					my_effect.ToggleActivate()
 
 		else if(ishuman(bumped) && GetAnomalySusceptibility(bumped) >= 0.5)
-			if (my_effect.trigger == TRIGGER_TOUCH && prob(50))
+			if (my_effect.trigger == TRIGGER_TOUCH)
 				my_effect.ToggleActivate()
-				warn = 1
-
-			if (my_effect.effect == EFFECT_TOUCH && prob(50))
-				my_effect.DoEffectTouch(bumped)
+				if(my_effect.activated && my_effect.effect == EFFECT_TOUCH)
+					my_effect.DoEffectTouch(bumped)
 				warn = 1
 
 	if(warn && isliving(bumped))
@@ -249,12 +286,10 @@
 					my_effect.ToggleActivate()
 
 		else if(ishuman(M) && !istype(M:gloves,/obj/item/clothing/gloves))
-			if (my_effect.trigger == TRIGGER_TOUCH && prob(50))
-				my_effect.ToggleActivate()
-				warn = 1
-
-			if (my_effect.effect == EFFECT_TOUCH && prob(50))
-				my_effect.DoEffectTouch(M)
+			if (my_effect.trigger == TRIGGER_TOUCH)
+				my_effect.ToggleActivate(M)
+				if(my_effect.activated && my_effect.effect == EFFECT_TOUCH)
+					my_effect.DoEffectTouch(M)
 				warn = 1
 
 	if(warn && isliving(M))
@@ -268,21 +303,16 @@
 	if (get_dist(user, holder) > 1)
 		to_chat(user, span_filter_notice("[span_red("You can't reach [holder] from here.")]"))
 		return
-	if(ishuman(user) && user:gloves)
-		to_chat(user, span_filter_notice(span_bold("You touch [holder]") + " with your gloved hands, [pick("but nothing of note happens","but nothing happens","but nothing interesting happens","but you notice nothing different","but nothing seems to have happened")]."))
-		return
 
 	var/triggered = FALSE
 
-	for(var/datum/artifact_effect/my_effect in my_effects)
-
-		if(my_effect.trigger == TRIGGER_TOUCH)
-			triggered = TRUE
-			my_effect.ToggleActivate()
-
-		if (my_effect.effect == EFFECT_TOUCH)
-			triggered = TRUE
-			my_effect.DoEffectTouch(user)
+	if(ishuman(user) && !istype(user:gloves,/obj/item/clothing/gloves))
+		for(var/datum/artifact_effect/my_effect in my_effects)
+			if(my_effect.trigger == TRIGGER_TOUCH)
+				triggered = TRUE
+				my_effect.ToggleActivate()
+				if(my_effect.activated && my_effect.effect == EFFECT_TOUCH)
+					my_effect.DoEffectTouch(user)
 
 	if(triggered)
 		to_chat(user, span_filter_notice(span_bold("You touch [holder].")))
@@ -293,56 +323,73 @@
 
 /datum/component/artifact_master/proc/on_attackby()
 	var/obj/item/W = args[2]
-	for(var/datum/artifact_effect/my_effect in my_effects)
 
+	for(var/datum/artifact_effect/my_effect in my_effects)
+		//If we were splashed by a reagent, let's check to see if we have a trigger for that.
 		if (istype(W, /obj/item/reagent_containers))
-			if(W.reagents.has_reagent("hydrogen", 1) || W.reagents.has_reagent("water", 1))
-				if(my_effect.trigger == TRIGGER_WATER)
-					my_effect.ToggleActivate()
-			else if(W.reagents.has_reagent("sacid", 1) || W.reagents.has_reagent("pacid", 1) || W.reagents.has_reagent("diethylamine", 1))
-				if(my_effect.trigger == TRIGGER_ACID)
-					my_effect.ToggleActivate()
-			else if(W.reagents.has_reagent("phoron", 1) || W.reagents.has_reagent("thermite", 1))
-				if(my_effect.trigger == TRIGGER_VOLATILE)
-					my_effect.ToggleActivate()
-			else if(W.reagents.has_reagent("toxin", 1) || W.reagents.has_reagent("cyanide", 1) || W.reagents.has_reagent("amatoxin", 1) || W.reagents.has_reagent("neurotoxin", 1))
-				if(my_effect.trigger == TRIGGER_TOXIN)
-					my_effect.ToggleActivate()
+			if(my_effect.trigger == TRIGGER_WATER)
+				for(var/datum/reagent/R in W.reagents.reagent_list) //What chems are in the beaker?
+					var/T = R.type
+					if(is_path_in_list(T,water_reagents)) //Check the reagent and activate!
+						my_effect.ToggleActivate()
+
+			else if(my_effect.trigger == TRIGGER_ACID)
+				for(var/datum/reagent/R in W.reagents.reagent_list)
+					var/T = R.type
+					if(is_path_in_list(T,acid_reagents))
+						my_effect.ToggleActivate()
+
+			else if(my_effect.trigger == TRIGGER_VOLATILE)
+				for(var/datum/reagent/R in W.reagents.reagent_list)
+					var/T = R.type
+					if(is_path_in_list(T,volatile_reagents))
+						my_effect.ToggleActivate()
+
+			else if(my_effect.trigger == TRIGGER_TOXIN)
+				for(var/datum/reagent/R in W.reagents.reagent_list)
+					var/T = R.type
+					if(is_path_in_list(T,toxic_reagents))
+						my_effect.ToggleActivate()
+		//If we weren't splashed, let's see if we were hit by a energy item and if we're energy activation.
 		else if(istype(W,/obj/item/melee/baton) && W:status ||\
 				istype(W,/obj/item/melee/energy) ||\
 				istype(W,/obj/item/melee/cultblade) ||\
 				istype(W,/obj/item/card/emag) ||\
 				istype(W,/obj/item/multitool))
+
 			if (my_effect.trigger == TRIGGER_ENERGY)
 				my_effect.ToggleActivate()
 
+		//If we weren't hit by energy, let's see if we were hit by a lighter or welding tool and if we are heat.
 		else if (istype(W,/obj/item/flame) && W:lit ||\
 				istype(W,/obj/item/weldingtool) && W:welding)
 			if(my_effect.trigger == TRIGGER_HEAT)
 				my_effect.ToggleActivate()
+
+		//Otherwise, let's see if we were hit with something with enough force to activate us.
 		else
 			if (my_effect.trigger == TRIGGER_FORCE && W.force >= 10)
 				my_effect.ToggleActivate()
 
 /datum/component/artifact_master/proc/on_reagent()
-	var/datum/reagent/Touching = args[2]
-
-	var/list/water = list("hydrogen", "water")
-	var/list/acid = list("sacid", "pacid", "diethylamine")
-	var/list/volatile = list("phoron","thermite")
-	var/list/toxic = list("toxin","cyanide","amatoxin","neurotoxin")
+	//A strange bug here is that, when a reagent is splashed on an artifact, it calls this proc twice.
+	//Why? I have no clue. I only accidentally stumbled upon it during debugging!
+	//I left one of the debug logs commented out so others can confirm this.
+	var/datum/reagent/touching = args[2]
+	var/T = touching.type //What type of reagent is being splashed on it?
 
 	for(var/datum/artifact_effect/my_effect in my_effects)
-		if(Touching.id in water)
+		if(is_path_in_list(T,water_reagents))
+			//log_debug("ON REAGENT T in path = [is_path_in_list(T,water_reagents)]!")
 			if(my_effect.trigger == TRIGGER_WATER)
 				my_effect.ToggleActivate()
-		else if(Touching.id in acid)
+		else if(is_path_in_list(T,acid_reagents))
 			if(my_effect.trigger == TRIGGER_ACID)
 				my_effect.ToggleActivate()
-		else if(Touching.id in volatile)
+		else if(is_path_in_list(T,volatile_reagents))
 			if(my_effect.trigger == TRIGGER_VOLATILE)
 				my_effect.ToggleActivate()
-		else if(Touching.id in toxic)
+		else if(is_path_in_list(T,toxic_reagents))
 			if(my_effect.trigger == TRIGGER_TOXIN)
 				my_effect.ToggleActivate()
 
@@ -374,27 +421,14 @@
 	//if any of our effects rely on environmental factors, work that out
 	var/trigger_cold = 0
 	var/trigger_hot = 0
-	var/trigger_phoron = 0
-	var/trigger_oxy = 0
-	var/trigger_co2 = 0
-	var/trigger_nitro = 0
 
 	var/turf/T = get_turf(holder)
 	var/datum/gas_mixture/env = T.return_air()
 	if(env)
-		if(env.temperature < 225)
+		if(env.temperature < ARTIFACT_COLD_TRIGGER)
 			trigger_cold = 1
-		else if(env.temperature > 375)
+		else if(env.temperature > ARTIFACT_HEAT_TRIGGER)
 			trigger_hot = 1
-
-		if(env.gas["phoron"] >= 10)
-			trigger_phoron = 1
-		if(env.gas["oxygen"] >= 10)
-			trigger_oxy = 1
-		if(env.gas["carbon_dioxide"] >= 10)
-			trigger_co2 = 1
-		if(env.gas["nitrogen"] >= 10)
-			trigger_nitro = 1
 
 	for(var/datum/artifact_effect/my_effect in my_effects)
 		my_effect.artifact_id = artifact_id
@@ -409,18 +443,11 @@
 		if(my_effect.trigger == TRIGGER_HEAT && (trigger_hot ^ my_effect.activated))
 			my_effect.ToggleActivate()
 
-		//PHORON GAS ACTIVATION
-		if(my_effect.trigger == TRIGGER_PHORON && (trigger_phoron ^ my_effect.activated))
-			my_effect.ToggleActivate()
-
-		//OXYGEN GAS ACTIVATION
-		if(my_effect.trigger == TRIGGER_OXY && (trigger_oxy ^ my_effect.activated))
-			my_effect.ToggleActivate()
-
-		//CO2 GAS ACTIVATION
-		if(my_effect.trigger == TRIGGER_CO2 && (trigger_co2 ^ my_effect.activated))
-			my_effect.ToggleActivate()
-
-		//NITROGEN GAS ACTIVATION
-		if(my_effect.trigger == TRIGGER_NITRO && (trigger_nitro ^ my_effect.activated))
-			my_effect.ToggleActivate()
+#undef HYDROGEN_PATH
+#undef WATER_PATH
+#undef ACID_PATH
+#undef DIETHYLAMINE_PATH
+#undef PHORON_PATH
+#undef HYDROPHORON_PATH
+#undef THERMITE_PATH
+#undef TOXIN_PATH

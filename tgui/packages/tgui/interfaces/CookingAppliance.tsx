@@ -1,17 +1,20 @@
-import { BooleanLike } from 'common/react';
-
-import { useBackend } from '../backend';
+import { useBackend } from 'tgui/backend';
+import { Window } from 'tgui/layouts';
 import {
   AnimatedNumber,
   Button,
-  Flex,
   LabeledList,
   ProgressBar,
   Section,
-} from '../components';
-import { Window } from '../layouts';
+  Stack,
+} from 'tgui-core/components';
+import { BooleanLike } from 'tgui-core/react';
 
 type Data = {
+  on: BooleanLike;
+  safety: BooleanLike;
+  selected_option: string | null;
+  show_selected_option: BooleanLike;
   temperature: number;
   optimalTemp: number;
   temperatureEnough: BooleanLike;
@@ -29,6 +32,10 @@ export const CookingAppliance = (props) => {
   const { act, data } = useBackend<Data>();
 
   const {
+    on,
+    safety,
+    selected_option,
+    show_selected_option,
     temperature,
     optimalTemp,
     temperatureEnough,
@@ -40,8 +47,41 @@ export const CookingAppliance = (props) => {
   return (
     <Window width={600} height={600}>
       <Window.Content scrollable>
-        <Section title="Status">
+        <Section
+          title="Status"
+          buttons={
+            <Button
+              selected={on}
+              icon="power-off"
+              onClick={() => act('toggle_power')}
+            >
+              {on ? 'On' : 'Off'}
+            </Button>
+          }
+        >
           <LabeledList>
+            <LabeledList.Item label="Safety">
+              <Button
+                fluid
+                selected={safety}
+                icon={safety ? 'shield-alt' : 'exclamation-triangle'}
+                onClick={() => act('toggle_safety')}
+              >
+                {safety ? 'On' : 'Off'}
+              </Button>
+            </LabeledList.Item>
+            {!!show_selected_option && (
+              <LabeledList.Item label="Selected Output">
+                <Button
+                  icon="pencil"
+                  fluid
+                  onClick={() => act('change_output')}
+                  tooltip="Change Output"
+                >
+                  {selected_option || 'Default'}
+                </Button>
+              </LabeledList.Item>
+            )}
             <LabeledList.Item label="Temperature">
               <ProgressBar
                 color={temperatureEnough ? 'good' : 'blue'}
@@ -76,16 +116,16 @@ export const CookingAppliance = (props) => {
                   verticalAlign="middle"
                   key={i}
                 >
-                  <Flex spacing={1}>
-                    <Flex.Item>
+                  <Stack>
+                    <Stack.Item>
                       <Button
                         disabled={!containersRemovable}
                         onClick={() => act('slot', { slot: i + 1 })}
                       >
                         {content.container || 'No Container'}
                       </Button>
-                    </Flex.Item>
-                    <Flex.Item grow={1}>
+                    </Stack.Item>
+                    <Stack.Item grow>
                       <ProgressBar
                         color={content.progressText[0]}
                         value={content.progress}
@@ -93,8 +133,8 @@ export const CookingAppliance = (props) => {
                       >
                         {content.progressText[1]}
                       </ProgressBar>
-                    </Flex.Item>
-                  </Flex>
+                    </Stack.Item>
+                  </Stack>
                 </LabeledList.Item>
               );
             })}

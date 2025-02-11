@@ -1,4 +1,4 @@
-import { BooleanLike } from 'common/react';
+import { BooleanLike } from 'tgui-core/react';
 
 export type Data = {
   shuttle_auth: BooleanLike;
@@ -18,6 +18,7 @@ export type modalData = {
   text: string;
   args: {
     name: string;
+    desc: string;
     cost: number;
     manifest: string[];
     ref: string;
@@ -28,6 +29,7 @@ export type modalData = {
 
 export type supplyPack = {
   name: string;
+  desc: string;
   cost: number;
   group: string;
   contraband: BooleanLike;

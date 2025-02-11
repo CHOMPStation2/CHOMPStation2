@@ -1,5 +1,6 @@
-import { useBackend } from '../../backend';
-import { Box, Button, Image, LabeledList, Section } from '../../components';
+import { useBackend } from 'tgui/backend';
+import { Box, Button, Image, LabeledList, Section } from 'tgui-core/components';
+
 import { modalOpen } from '../common/ComplexModal';
 import { doEdit } from './functions';
 import { Data } from './types';
@@ -43,6 +44,7 @@ export const GeneralRecordsViewGeneral = (props) => {
         </LabeledList>
         <Section title="Employment/skills summary" preserveWhitespace>
           {general.skills || 'No data found.'}
+          {<Button icon="pen" ml="0.5rem" onClick={() => act('edit_notes')} />}
         </Section>
         <Section title="Comments/Log">
           {general.comments && general.comments.length === 0 ? (

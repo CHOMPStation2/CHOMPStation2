@@ -19,7 +19,7 @@ var/datum/antagonist/traitor/traitors
 	traitors = src
 
 /datum/antagonist/traitor/get_extra_panel_options(var/datum/mind/player)
-	return "<a href='?src=\ref[player];[HrefToken()];common=crystals'>\[set crystals\]</a><a href='?src=\ref[src];[HrefToken()];spawn_uplink=\ref[player.current]'>\[spawn uplink\]</a>"
+	return "<a href='byond://?src=\ref[player];[HrefToken()];common=crystals'>\[set crystals\]</a><a href='byond://?src=\ref[src];[HrefToken()];spawn_uplink=\ref[player.current]'>\[spawn uplink\]</a>"
 
 /datum/antagonist/traitor/Topic(href, href_list)
 	if (..())
@@ -115,21 +115,23 @@ var/datum/antagonist/traitor/traitors
 	var/loc = ""
 	var/obj/item/R = locate() //Hide the uplink in a PDA if available, otherwise radio
 
-	if(traitor_mob.client.prefs.uplinklocation == "Headset")
+	var/uplinklocation = traitor_mob.read_preference(/datum/preference/choiced/uplinklocation)
+
+	if(uplinklocation == "Headset")
 		R = locate(/obj/item/radio) in traitor_mob.contents
 		if(!R)
 			R = locate(/obj/item/pda) in traitor_mob.contents
 			to_chat(traitor_mob, "Could not locate a Radio, installing in PDA instead!")
 		if (!R)
 			to_chat(traitor_mob, "Unfortunately, neither a radio or a PDA relay could be installed.")
-	else if(traitor_mob.client.prefs.uplinklocation == "PDA")
+	else if(uplinklocation == "PDA")
 		R = locate(/obj/item/pda) in traitor_mob.contents
 		if(!R)
 			R = locate(/obj/item/radio) in traitor_mob.contents
 			to_chat(traitor_mob, "Could not locate a PDA, installing into a Radio instead!")
 		if(!R)
 			to_chat(traitor_mob, "Unfortunately, neither a radio or a PDA relay could be installed.")
-	else if(traitor_mob.client.prefs.uplinklocation == "None")
+	else if(uplinklocation == "None")
 		to_chat(traitor_mob, "You have elected to not have an AntagCorp portable teleportation relay installed!")
 		R = null
 	else

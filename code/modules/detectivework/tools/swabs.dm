@@ -30,7 +30,7 @@
 		to_chat(user, span_warning("They don't seem to have DNA!"))
 		return
 
-	if(user != H && H.a_intent != "help" && !H.lying)
+	if(user != H && H.a_intent != I_HELP && !H.lying)
 		user.visible_message(span_danger("\The [user] tries to take a swab sample from \the [H], but they move away."))
 		return
 
@@ -92,7 +92,7 @@
 	else if(choices.len == 1)
 		choice = choices[1]
 	else
-		choice = tgui_input_list(usr, "What kind of evidence are you looking for?","Evidence Collection", choices)
+		choice = tgui_input_list(user, "What kind of evidence are you looking for?","Evidence Collection", choices)
 
 	if(!choice)
 		return

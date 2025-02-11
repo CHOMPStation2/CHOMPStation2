@@ -5,13 +5,6 @@
 /datum/trait/negative/hollow
 	excludes = list(/datum/trait/positive/densebones)
 
-/datum/trait/negative/slipperydirt
-	name = "Dirt Vulnerability"
-	desc = "Even the tiniest particles of dirt give you uneasy footing, even through several layers of footwear."
-	cost = -5
-	var_changes = list("dirtslip" = TRUE)
-	excludes = list(/datum/trait/positive/absorbent)
-
 /datum/trait/negative/less_blood
 	name = "Low Blood Volume"
 	desc = "You have 33.3% less blood volume compared to most species, making you more prone to blood loss issues."
@@ -69,7 +62,7 @@
 	if((H.nutrition < 50) && prob(25))
 		H.hallucination = max(30,H.hallucination+8)
 	if((H.nutrition < 25) && prob(5))
-		H.drowsyness = max(100,H.drowsyness+30)
+		H.drowsyness = min(100,H.drowsyness+30)
 
 /datum/trait/negative/blindness
 	name = "Permanently blind"
@@ -460,3 +453,5 @@
 	desc = "Your biochemistry is a little delicate, rendering you more susceptible to both deadly toxins and the more subtle ones. You'll probably want to list this in your medical records, and perhaps in your exploitable info as well. Toxin damages and knockout drugs are 25% stronger on you."
 	cost = -1
 	var_changes = list("chem_strength_tox" = 1.25)
+
+#undef GAUSSIAN_RANDOM

@@ -26,11 +26,9 @@ SUBSYSTEM_DEF(plants)
 	msg = "P:[processing.len]|S:[seeds.len]"
 	return ..()
 
-//CHOMPEdit Begin
 /datum/controller/subsystem/plants/Initialize()
 	setup()
 	return SS_INIT_SUCCESS
-//CHOMPEdit End
 
 // Predefined/roundstart varieties use a string key to make it
 // easier to grab the new variety when mutating. Post-roundstart
@@ -110,10 +108,10 @@ SUBSYSTEM_DEF(plants)
 
 	if(survive_on_station)
 		if(seed.consume_gasses)
-			seed.consume_gasses["phoron"] = null
-			seed.consume_gasses["carbon_dioxide"] = null
-		if(seed.chems && !isnull(seed.chems["pacid"]))
-			seed.chems["pacid"] = null // Eating through the hull will make these plants completely inviable, albeit very dangerous.
+			seed.consume_gasses[GAS_PHORON] = null
+			seed.consume_gasses[GAS_CO2] = null
+		if(seed.chems && !isnull(seed.chems[REAGENT_ID_PACID]))
+			seed.chems[REAGENT_ID_PACID] = null // Eating through the hull will make these plants completely inviable, albeit very dangerous.
 			seed.chems -= null // Setting to null does not actually remove the entry, which is weird.
 		seed.set_trait(TRAIT_IDEAL_HEAT,293)
 		seed.set_trait(TRAIT_HEAT_TOLERANCE,20)
@@ -141,8 +139,8 @@ SUBSYSTEM_DEF(plants)
 			return
 
 /datum/controller/subsystem/plants/proc/add_plant(var/obj/effect/plant/plant)
-	if(!QDELETED(plant)) //CHOMPEdit GC
-		processing |= plant //CHOMPEdit GC
+	if(!QDELETED(plant))
+		processing |= plant
 
 /datum/controller/subsystem/plants/proc/remove_plant(var/obj/effect/plant/plant)
 	processing -= plant

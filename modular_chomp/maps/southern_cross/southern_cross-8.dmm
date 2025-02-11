@@ -3024,7 +3024,7 @@
 /obj/item/target/alien,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/wood.dmi';
-	icon_state = "wood_broken2"
+	icon_state = "wood-broken2"
 	},
 /area/ninja_dojo/dojo)
 "chd" = (
@@ -5798,7 +5798,7 @@
 /obj/item/bedsheet/orange,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/wood.dmi';
-	icon_state = "wood_broken1"
+	icon_state = "wood-broken1"
 	},
 /area/skipjack_station)
 "ePF" = (
@@ -5825,21 +5825,6 @@
 	icon_state = "wood"
 	},
 /area/skipjack_station)
-"eQB" = (
-/obj/structure/table/rack,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/turf/unsimulated/floor{
-	dir = 5;
-	icon_state = "vault"
-	},
-/area/centcom/specops)
 "eQT" = (
 /obj/structure/closet/crate/medical,
 /obj/item/surgical/circular_saw,
@@ -7377,7 +7362,6 @@
 /obj/item/storage/box/donkpockets,
 /obj/item/storage/box/donkpockets,
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = 30
 	},
 /obj/effect/floor_decal/corner/orange{
@@ -8453,7 +8437,7 @@
 "hrC" = (
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/wood.dmi';
-	icon_state = "wood_broken3"
+	icon_state = "wood-broken3"
 	},
 /area/skipjack_station)
 "hrS" = (
@@ -9052,7 +9036,7 @@
 	},
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/wood.dmi';
-	icon_state = "wood_broken2"
+	icon_state = "wood-broken2"
 	},
 /area/skipjack_station)
 "hUU" = (
@@ -9817,7 +9801,7 @@
 "iCl" = (
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/wood.dmi';
-	icon_state = "wood_broken1"
+	icon_state = "wood-broken1"
 	},
 /area/ninja_dojo/dojo)
 "iCF" = (
@@ -12106,9 +12090,7 @@
 	},
 /area/ninja_dojo/dojo)
 "kwC" = (
-/turf/unsimulated/floor{
-	icon_state = "sandwater"
-	},
+/turf/unsimulated/floor,
 /area/beach)
 "kwM" = (
 /obj/structure/flora/ausbushes/reedbush,
@@ -13764,10 +13746,7 @@
 	},
 /area/centcom/living)
 "mcF" = (
-/turf/unsimulated/wall{
-	icon = 'icons/misc/title.dmi';
-	icon_state = "title"
-	},
+/turf/unsimulated/wall,
 /area/space)
 "mcT" = (
 /obj/effect/floor_decal/corner/red/full,
@@ -17997,7 +17976,6 @@
 	dir = 8
 	},
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = 32
 	},
 /turf/simulated/floor/carpet,
@@ -19733,10 +19711,6 @@
 /area/ninja_dojo/dojo)
 "shL" = (
 /obj/structure/table/rack,
-/obj/item/gun/projectile/automatic/serdy/hectate,
-/obj/item/gun/projectile/automatic/serdy/hectate,
-/obj/item/gun/projectile/automatic/serdy/hectate,
-/obj/item/gun/projectile/automatic/serdy/hectate,
 /turf/unsimulated/floor{
 	dir = 5;
 	icon_state = "vault"
@@ -22239,7 +22213,7 @@
 /obj/machinery/space_heater,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/wood.dmi';
-	icon_state = "wood_broken3"
+	icon_state = "wood-broken3"
 	},
 /area/ninja_dojo/dojo)
 "uxc" = (
@@ -46393,7 +46367,7 @@ vFi
 vFi
 vFi
 nZC
-eQB
+shL
 eos
 eos
 eos

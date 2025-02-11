@@ -66,7 +66,7 @@
 
 	switch(action)
 		if("print")
-			print_report(usr)
+			print_report(ui.user)
 			return TRUE
 		if("close")
 			last_seed = null
@@ -168,7 +168,7 @@
 	var/obj/item/paper/P = new /obj/item/paper(get_turf(src))
 	P.name = "paper - [form_title]"
 	P.info = "[dat]"
-	if(istype(user,/mob/living/carbon/human))
+	if(ishuman(user))
 		user.put_in_hands(P)
 	user.visible_message("\The [src] spits out a piece of paper.")
 	return

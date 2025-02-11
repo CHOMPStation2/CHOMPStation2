@@ -22,7 +22,7 @@
 	return GLOB.tgui_always_state
 
 /datum/pai_software/tgui_status(mob/user)
-	if(!istype(user, /mob/living/silicon/pai))
+	if(!ispAI(user))
 		return STATUS_CLOSE
 	return ..()
 
@@ -50,7 +50,7 @@
 	return data
 
 /datum/pai_software/directives/tgui_act(action, list/params, datum/tgui/ui, datum/tgui_state/state)
-	var/mob/living/silicon/pai/P = usr
+	var/mob/living/silicon/pai/P = ui.user
 	if(!istype(P))
 		return TRUE
 	if(..())
@@ -61,7 +61,7 @@
 
 		var/count = 0
 		// Find the carrier
-		while(!istype(M, /mob/living))
+		while(!isliving(M))
 			if(!M || !M.loc || count > 6)
 				//For a runtime where M ends up in nullspace (similar to bluespace but less colourful)
 				to_chat(src, span_infoplain("You are not being carried by anyone!"))
@@ -160,7 +160,7 @@
 
 /datum/pai_software/med_records/tgui_act(action, list/params, datum/tgui/ui, datum/tgui_state/state)
 	. = ..()
-	var/mob/living/silicon/pai/P = usr
+	var/mob/living/silicon/pai/P = ui.user
 	if(!istype(P))
 		return
 
@@ -216,7 +216,7 @@
 
 /datum/pai_software/sec_records/tgui_act(action, list/params, datum/tgui/ui, datum/tgui_state/state)
 	. = ..()
-	var/mob/living/silicon/pai/P = usr
+	var/mob/living/silicon/pai/P = ui.user
 	if(!istype(P))
 		return
 
@@ -267,7 +267,7 @@
 	return data
 
 /datum/pai_software/door_jack/tgui_act(action, list/params, datum/tgui/ui, datum/tgui_state/state)
-	var/mob/living/silicon/pai/P = usr
+	var/mob/living/silicon/pai/P = ui.user
 	if(!istype(P) || ..())
 		return TRUE
 
@@ -340,10 +340,10 @@
 		var/pressure = environment.return_pressure()
 		var/total_moles = environment.total_moles
 		if (total_moles)
-			var/o2_level = environment.gas["oxygen"]/total_moles
-			var/n2_level = environment.gas["nitrogen"]/total_moles
-			var/co2_level = environment.gas["carbon_dioxide"]/total_moles
-			var/phoron_level = environment.gas["phoron"]/total_moles
+			var/o2_level = environment.gas[GAS_O2]/total_moles
+			var/n2_level = environment.gas[GAS_N2]/total_moles
+			var/co2_level = environment.gas[GAS_CO2]/total_moles
+			var/phoron_level = environment.gas[GAS_PHORON]/total_moles
 			var/unknown_level =  1-(o2_level+n2_level+co2_level+phoron_level)
 
 			// entry is what the element is describing
@@ -421,9 +421,9 @@
 		user.add_language(LANGUAGE_ALAI)
 		user.add_language(LANGUAGE_PROMETHEAN)
 		user.add_language(LANGUAGE_GIBBERISH)
-		user.add_language("Mouse")
-		user.add_language("Animal")
-		user.add_language("Teppi")
+		user.add_language(LANGUAGE_MOUSE)
+		user.add_language(LANGUAGE_ANIMAL)
+		user.add_language(LANGUAGE_TEPPI)
 	else
 		user.remove_language(LANGUAGE_UNATHI)
 		user.remove_language(LANGUAGE_SIIK)
@@ -449,9 +449,9 @@
 		user.remove_language(LANGUAGE_ALAI)
 		user.remove_language(LANGUAGE_PROMETHEAN)
 		user.remove_language(LANGUAGE_GIBBERISH)
-		user.remove_language("Mouse")
-		user.remove_language("Animal")
-		user.remove_language("Teppi")
+		user.remove_language(LANGUAGE_MOUSE)
+		user.remove_language(LANGUAGE_ANIMAL)
+		user.remove_language(LANGUAGE_TEPPI)
 
 /datum/pai_software/translator/is_active(mob/living/silicon/pai/user)
 	return user.translator_on
@@ -484,7 +484,7 @@
 	if(..())
 		return TRUE
 
-	var/mob/living/silicon/pai/user = usr
+	var/mob/living/silicon/pai/user = ui.user
 	if(istype(user))
 		var/obj/item/radio/integrated/signal/R = user.sradio
 

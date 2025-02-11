@@ -17,14 +17,14 @@
 	for(var/datum/category_group/underwear/UWC in global_underwear.categories)
 		var/datum/category_item/underwear/UWI = H.all_underwear[UWC.name]
 		var/item_name = UWI ? UWI.name : "None"
-		dat += "[UWC.name]: <a href='?src=\ref[src];change_underwear=[UWC.name]'>[item_name]</a>"
+		dat += "[UWC.name]: <a href='byond://?src=\ref[src];change_underwear=[UWC.name]'>[item_name]</a>"
 		if(UWI)
 			for(var/datum/gear_tweak/gt in UWI.tweaks)
-				dat += " <a href='?src=\ref[src];underwear=[UWC.name];tweak=\ref[gt]'>[gt.get_contents(get_metadata(H, UWC.name, gt))]</a>"
-		dat += " <a href='?src=\ref[src];remove_underwear=[UWC.name]'>(Remove)</a><br>"
+				dat += " <a href='byond://?src=\ref[src];underwear=[UWC.name];tweak=\ref[gt]'>[gt.get_contents(get_metadata(H, UWC.name, gt))]</a>"
+		dat += " <a href='byond://?src=\ref[src];remove_underwear=[UWC.name]'>(Remove)</a><br>"
 
 	dat = jointext(dat,null)
-	H << browse(dat, "window=wardrobe;size=400x200")
+	H << browse("<html>[dat]</html>", "window=wardrobe;size=400x200")
 
 /obj/structure/undies_wardrobe/proc/get_metadata(var/mob/living/carbon/human/H, var/underwear_category, var/datum/gear_tweak/gt)
 	var/metadata = H.all_underwear_metadata[underwear_category]

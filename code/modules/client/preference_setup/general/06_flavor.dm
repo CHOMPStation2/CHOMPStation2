@@ -48,21 +48,13 @@
 	character.flavor_texts["hands"]		= pref.flavor_texts["hands"]
 	character.flavor_texts["legs"]		= pref.flavor_texts["legs"]
 	character.flavor_texts["feet"]		= pref.flavor_texts["feet"]
-	character.ooc_notes 				= pref.metadata //VOREStation Add
-	character.ooc_notes_likes			= pref.metadata_likes
-	character.ooc_notes_dislikes		= pref.metadata_dislikes
-	//CHOMPEdit Start
-	character.ooc_notes_maybes			= pref.metadata_maybes
-	character.ooc_notes_favs			= pref.metadata_favs
-	character.ooc_notes_style			= pref.matadata_ooc_style
-	//CHOMPEdit End
 	character.custom_link				= pref.custom_link
 
 /datum/category_item/player_setup_item/general/flavor/content(var/mob/user)
 	. += span_bold("Flavor:") + "<br>"
-	. += "<a href='?src=\ref[src];flavor_text=open'>Set Flavor Text</a><br/>"
-	. += "<a href='?src=\ref[src];flavour_text_robot=open'>Set Robot Flavor Text</a><br/>"
-	. += "<a href='?src=\ref[src];custom_link=1'>Set Custom Link</a><br/>"
+	. += "<a href='byond://?src=\ref[src];flavor_text=open'>Set Flavor Text</a><br/>"
+	. += "<a href='byond://?src=\ref[src];flavour_text_robot=open'>Set Robot Flavor Text</a><br/>"
+	. += "<a href='byond://?src=\ref[src];custom_link=1'>Set Custom Link</a><br/>"
 
 /datum/category_item/player_setup_item/general/flavor/OnTopic(var/href,var/list/href_list, var/mob/user)
 	if(href_list["flavor_text"])
@@ -104,56 +96,56 @@
 	return ..()
 
 /datum/category_item/player_setup_item/general/flavor/proc/SetFlavorText(mob/user)
-	var/HTML = "<body>"
+	var/HTML = "<html><body>"
 	HTML += "<tt><center>"
 	HTML += span_bold("Set Flavor Text") + " <hr />"
 	HTML += "Note: This is not *literal* flavor of your character. This is visual description of what they look like. <hr />"
 	HTML += "<br></center>"
-	HTML += "<a href='?src=\ref[src];flavor_text=general'>General:</a> "
+	HTML += "<a href='byond://?src=\ref[src];flavor_text=general'>General:</a> "
 	HTML += TextPreview(pref.flavor_texts["general"])
 	HTML += "<br>"
-	HTML += "<a href='?src=\ref[src];flavor_text=head'>Head:</a> "
+	HTML += "<a href='byond://?src=\ref[src];flavor_text=head'>Head:</a> "
 	HTML += TextPreview(pref.flavor_texts["head"])
 	HTML += "<br>"
-	HTML += "<a href='?src=\ref[src];flavor_text=face'>Face:</a> "
+	HTML += "<a href='byond://?src=\ref[src];flavor_text=face'>Face:</a> "
 	HTML += TextPreview(pref.flavor_texts["face"])
 	HTML += "<br>"
-	HTML += "<a href='?src=\ref[src];flavor_text=eyes'>Eyes:</a> "
+	HTML += "<a href='byond://?src=\ref[src];flavor_text=eyes'>Eyes:</a> "
 	HTML += TextPreview(pref.flavor_texts["eyes"])
 	HTML += "<br>"
-	HTML += "<a href='?src=\ref[src];flavor_text=torso'>Body:</a> "
+	HTML += "<a href='byond://?src=\ref[src];flavor_text=torso'>Body:</a> "
 	HTML += TextPreview(pref.flavor_texts["torso"])
 	HTML += "<br>"
-	HTML += "<a href='?src=\ref[src];flavor_text=arms'>Arms:</a> "
+	HTML += "<a href='byond://?src=\ref[src];flavor_text=arms'>Arms:</a> "
 	HTML += TextPreview(pref.flavor_texts["arms"])
 	HTML += "<br>"
-	HTML += "<a href='?src=\ref[src];flavor_text=hands'>Hands:</a> "
+	HTML += "<a href='byond://?src=\ref[src];flavor_text=hands'>Hands:</a> "
 	HTML += TextPreview(pref.flavor_texts["hands"])
 	HTML += "<br>"
-	HTML += "<a href='?src=\ref[src];flavor_text=legs'>Legs:</a> "
+	HTML += "<a href='byond://?src=\ref[src];flavor_text=legs'>Legs:</a> "
 	HTML += TextPreview(pref.flavor_texts["legs"])
 	HTML += "<br>"
-	HTML += "<a href='?src=\ref[src];flavor_text=feet'>Feet:</a> "
+	HTML += "<a href='byond://?src=\ref[src];flavor_text=feet'>Feet:</a> "
 	HTML += TextPreview(pref.flavor_texts["feet"])
 	HTML += "<br>"
 	HTML += "<hr />"
-	HTML += "<tt>"
+	HTML += "<tt></body></html>"
 	user << browse(HTML, "window=flavor_text;size=430x300")
 	return
 
 /datum/category_item/player_setup_item/general/flavor/proc/SetFlavourTextRobot(mob/user)
-	var/HTML = "<body>"
+	var/HTML = "<html><body>"
 	HTML += "<tt><center>"
 	HTML += span_bold("Set Robot Flavour Text") + " <hr />"
 	HTML += "<br></center>"
-	HTML += "<a href='?src=\ref[src];flavour_text_robot=Default'>Default:</a> "
+	HTML += "<a href='byond://?src=\ref[src];flavour_text_robot=Default'>Default:</a> "
 	HTML += TextPreview(pref.flavour_texts_robot["Default"])
 	HTML += "<hr />"
 	for(var/module in robot_module_types)
-		HTML += "<a href='?src=\ref[src];flavour_text_robot=[module]'>[module]:</a> "
+		HTML += "<a href='byond://?src=\ref[src];flavour_text_robot=[module]'>[module]:</a> "
 		HTML += TextPreview(pref.flavour_texts_robot[module])
 		HTML += "<br>"
 	HTML += "<hr />"
-	HTML += "<tt>"
+	HTML += "<tt></body></html>"
 	user << browse(HTML, "window=flavour_text_robot;size=430x300")
 	return

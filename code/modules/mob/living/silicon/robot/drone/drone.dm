@@ -216,7 +216,7 @@ var/list/mob_hat_cache = list()
 //Drones cannot be upgraded with borg modules so we need to catch some items before they get used in ..().
 /mob/living/silicon/robot/drone/attackby(var/obj/item/W, var/mob/user)
 
-	if(user.a_intent == "help" && istype(W, /obj/item/clothing/head))
+	if(user.a_intent == I_HELP && istype(W, /obj/item/clothing/head))
 		if(hat)
 			to_chat(user, span_warning("\The [src] is already wearing \the [hat]."))
 			return
@@ -240,7 +240,7 @@ var/list/mob_hat_cache = list()
 				to_chat(user, span_danger("The interface is fried, and a distressing burned smell wafts from the robot's interior. You're not rebooting this one."))
 				return
 
-			if(!allowed(usr))
+			if(!allowed(user))
 				to_chat(user, span_danger("Access denied."))
 				return
 
@@ -258,7 +258,7 @@ var/list/mob_hat_cache = list()
 			if(emagged)
 				return
 
-			if(allowed(usr))
+			if(allowed(user))
 				shut_down()
 			else
 				to_chat(user, span_danger("Access denied."))*/

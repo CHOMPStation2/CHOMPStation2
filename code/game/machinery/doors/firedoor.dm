@@ -138,7 +138,7 @@
 	if(operating)
 		return//Already doing something.
 
-	if(istype(user, /mob/living/carbon/human))
+	if(ishuman(user))
 		var/mob/living/carbon/human/X = user
 		if(istype(X.species, /datum/species/xenos))
 			src.attack_alien(user)
@@ -195,7 +195,7 @@
 				close()
 
 /obj/machinery/door/firedoor/attack_alien(var/mob/user) //Familiar, right? Doors.
-	if(istype(user, /mob/living/carbon/human))
+	if(ishuman(user))
 		var/mob/living/carbon/human/X = user
 		if(istype(X.species, /datum/species/xenos))
 			if(src.blocked)
@@ -416,7 +416,10 @@
 /obj/machinery/door/firedoor/close()
 	latetoggle()
 	. = ..()
+
+/obj/machinery/door/firedoor/close_internalfinish(forced = 0)
 	// Queue us for processing when we are closed!
+	..()
 	if(density)
 		START_MACHINE_PROCESSING(src)
 
@@ -503,15 +506,15 @@
 
 
 	update_nearby_tiles(need_rebuild)
-		if(!air_master) return 0
+		if(!SSair) return 0
 
 		var/turf/simulated/source = loc
 		var/turf/simulated/destination = get_step(source,dir)
 
 		update_heat_protection(loc)
 
-		if(istype(source)) air_master.tiles_to_update += source
-		if(istype(destination)) air_master.tiles_to_update += destination
+		if(istype(source)) SSair.tiles_to_update += source
+		if(istype(destination)) SSair.tiles_to_update += destination
 		return 1
 */
 

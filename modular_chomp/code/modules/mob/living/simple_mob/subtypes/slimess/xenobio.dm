@@ -6,7 +6,7 @@
 	color = "#968473"
 	slime_color = "sepia"
 	coretype = /obj/item/slime_extract/sepia
-	reagent_injected = "stoxin"
+	reagent_injected = REAGENT_ID_STOXIN
 
 	mutation_chance = 100
 
@@ -26,8 +26,8 @@
 /decl/chemical_reaction/instant/slime/senseenhancer
 	name = "Slime Sense Enhancer"
 	id = "sepia_sh"
-	result = "senseenhancer"
-	required_reagents = list("phoron" = 5)
+	result = REAGENT_ID_SENSEENHANCER
+	required_reagents = list(REAGENT_ID_PHORON = 5)
 	result_amount = 30
 	required = /obj/item/slime_extract/sepia
 
@@ -35,7 +35,7 @@
 	name = "Secert Slime "
 	id = "sepia_swapm"
 	result = "change_secert"
-	required_reagents = list("blood" = 5, "water" = 5)
+	required_reagents = list(REAGENT_ID_BLOOD = 5, REAGENT_ID_WATER = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/sepia
 
@@ -48,7 +48,7 @@
 	name = "Slime Spawn"
 	id = "m_sepia_spawn"
 	result = null
-	required_reagents = list("slimejelly" = 5)
+	required_reagents = list(REAGENT_ID_SLIMEJELLY = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/sepia
 
@@ -64,7 +64,7 @@
 	color = "#A50021"
 	slime_color = "redspace"
 	coretype = /obj/item/slime_extract/redspace
-	reagent_injected = "mindbreaker"
+	reagent_injected = REAGENT_ID_MINDBREAKER
 
 	mutation_chance = 0
 
@@ -85,15 +85,15 @@
 /decl/chemical_reaction/instant/slime/redspace_fire
 	name = "Slime Living Fire"
 	id = "m_liquid_fire"
-	result = "neoliquidfire"
-	required_reagents = list("phoron" = 5)
+	result = REAGENT_ID_NEOLIQUIDFIRE
+	required_reagents = list(REAGENT_ID_PHORON = 5)
 	result_amount = 30
 	required = /obj/item/slime_extract/redspace
 
 /decl/chemical_reaction/instant/slime/soulstone
 	name = "Slime Soulstone"
 	id = "m_redspace_soulstone"
-	required_reagents = list("blood" = 5)
+	required_reagents = list(REAGENT_ID_BLOOD = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/redspace
 
@@ -104,7 +104,7 @@
 /decl/chemical_reaction/instant/slime/obj/item/slime_extract/redspace_smoke
 	name = "Slime Smoke"
 	id = "m_redspace_smoke"
-	required_reagents = list("water" = 5)
+	required_reagents = list(REAGENT_ID_WATER = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/redspace
 
@@ -122,8 +122,8 @@
 /decl/chemical_reaction/instant/slime/slime_mindbreaker
 	name = "Slime Pyrotoxin"
 	id = "m_redspace_mindbreaker"
-	result = "mindbreaker"
-	required_reagents = list("slimejelly" = 5)
+	result = REAGENT_ID_MINDBREAKER
+	required_reagents = list(REAGENT_ID_SLIMEJELLY = 5)
 	result_amount = 30
 	required = /obj/item/slime_extract/redspace
 
@@ -153,15 +153,15 @@
 /decl/chemical_reaction/instant/slime/dark_neofire
 	name = "Slime Healing Liquid"
 	id = "m_liquid_healing"
-	result = "healing_nanites"
-	required_reagents = list("neoliquidfire" = 5)
+	result = REAGENT_ID_HEALINGNANITES
+	required_reagents = list(REAGENT_ID_NEOLIQUIDFIRE = 5)
 	result_amount = 30
 	required = /obj/item/slime_extract/dark
 
 /decl/chemical_reaction/instant/slime/dark_liquidfire
 	name = "Slime Secert Guard"
 	id = "m_slime_guardian"
-	required_reagents = list("liquidfire" = 5)
+	required_reagents = list(REAGENT_ID_LIQUIDFIRE = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/dark
 
@@ -174,7 +174,7 @@
 /decl/chemical_reaction/instant/slime/dark_deathblood
 	name = "Slime Secert Painite"
 	id = "m_slime_painite"
-	required_reagents = list("deathblood" = 5)
+	required_reagents = list(REAGENT_ID_DEATHBLOOD = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/dark
 
@@ -185,7 +185,7 @@
 /decl/chemical_reaction/instant/slime/dark_liquidlife
 	name = "Slime Secert Overcharge"
 	id = "m_slime_darkspeed"
-	required_reagents = list("liquidlife" = 5)
+	required_reagents = list(REAGENT_ID_LIQUIDLIFE = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/dark
 
@@ -198,7 +198,7 @@
 /decl/chemical_reaction/instant/slime/dark_carpotoxin
 	name = "Slime Dark Secert "
 	id = "m_fish_slime"
-	required_reagents = list("carpotoxin" = 5)
+	required_reagents = list(REAGENT_ID_CARPOTOXIN = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/dark
 
@@ -210,7 +210,7 @@
 /decl/chemical_reaction/instant/slime/dark_spidertoxin
 	name = "Slime Secert Dark Spooder"
 	id = "m_slime_darkspooder"
-	required_reagents = list("spidertoxin" = 5)
+	required_reagents = list(REAGENT_ID_SPIDERTOXIN = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/dark
 
@@ -221,7 +221,7 @@
 /decl/chemical_reaction/instant/slime/dark_blood
 	name = "Slime Secert Void Opal"
 	id = "m_slime_voidopal"
-	required_reagents = list("blood" = 5)
+	required_reagents = list(REAGENT_ID_BLOOD = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/dark
 
@@ -253,8 +253,8 @@
 /decl/chemical_reaction/instant/slime/plague_toxin
 	name = "Slime Living Fire"
 	id = "m_plague_toxin"
-	result = "neurophage_nanites"
-	required_reagents = list("phoron" = 5)
+	result = REAGENT_ID_NEUROPHAGENANITES
+	required_reagents = list(REAGENT_ID_PHORON = 5)
 	result_amount = 30
 	required = /obj/item/slime_extract/plague
 
@@ -262,7 +262,7 @@
 /decl/chemical_reaction/instant/slime/virusdish
 	name = "Virus dish"
 	id = "m_plague_dish"
-	required_reagents = list("blood" = 5)
+	required_reagents = list(REAGENT_ID_BLOOD = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/plague
 
@@ -273,8 +273,8 @@
 /decl/chemical_reaction/instant/slime/obj/item/slime_extract/plague_jelly
 	name = "Slime Smoke"
 	id = "m_slimejelly_alt"
-	result = "slimejelly"
-	required_reagents = list("water" = 5)
+	result = REAGENT_ID_SLIMEJELLY
+	required_reagents = list(REAGENT_ID_WATER = 5)
 	result_amount = 30
 	required = /obj/item/slime_extract/plague
 
@@ -287,7 +287,7 @@
 	rainbow_core_candidate = FALSE //For health and safety
 	mutation_chance = 0
 
-	reagent_injected = "carpotoxin"
+	reagent_injected = REAGENT_ID_CARPOTOXIN
 
 	slime_mutation = list(
 			/mob/living/simple_mob/slime/xenobio/sepia,
@@ -330,7 +330,7 @@
 /decl/chemical_reaction/instant/slime/carpfren
 	name = "Carp Friend"
 	id = "m_carp_friends"
-	required_reagents = list("blood" = 5)
+	required_reagents = list(REAGENT_ID_BLOOD = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/oceanic
 
@@ -341,23 +341,23 @@
 /decl/chemical_reaction/instant/slime/oceancarp
 	name = "Slime Carptoxi"
 	id = "m_slime_carptox"
-	required_reagents = list("slimejelly" = 5)
-	result = "carpotoxin"
+	required_reagents = list(REAGENT_ID_SLIMEJELLY = 5)
+	result = REAGENT_ID_CARPOTOXIN
 	result_amount = 30
 	required = /obj/item/slime_extract/oceanic
 
 /decl/chemical_reaction/instant/slime/waterdupe
 	name = "Water Duplication"
 	id = "m_slime_water"
-	required_reagents = list("water" = 5)
-	result = "water"
+	required_reagents = list(REAGENT_ID_WATER = 5)
+	result = REAGENT_ID_WATER
 	result_amount = 30
 	required = /obj/item/slime_extract/oceanic
 
 /decl/chemical_reaction/instant/slime/oceanboon
 	name = "Carp Boon"
 	id = "m_carp_boon"
-	required_reagents = list("phoron" = 5)
+	required_reagents = list(REAGENT_ID_PHORON = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/oceanic
 
@@ -369,7 +369,7 @@
 /decl/chemical_reaction/instant/slime/warplague
 	name = "Nuclear Slime Summon"
 	id = "m_nuclear_slime"
-	required_reagents = list("mindbreaker" = 5)
+	required_reagents = list(REAGENT_ID_MINDBREAKER = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/plague
 
@@ -428,7 +428,7 @@
 /decl/chemical_reaction/instant/slime/nuclear_radpulse
 	name = "Slime Radiation Pulse"
 	id = "m_green_radpulse"
-	required_reagents = list("phoron" = 5)
+	required_reagents = list(REAGENT_ID_PHORON = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/nuclear
 
@@ -444,7 +444,7 @@
 /decl/chemical_reaction/instant/slime/nuclear_emitter
 	name = "Slime Radiation Emitter"
 	id = "m_green_emitter"
-	required_reagents = list("blood" = 5)
+	required_reagents = list(REAGENT_ID_BLOOD = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/green
 
@@ -457,8 +457,8 @@
 /decl/chemical_reaction/instant/slime/nuclear_radium
 	name = "Slime Radium"
 	id = "m_green_radium"
-	result = "radium"
-	required_reagents = list("water" = 5)
+	result = REAGENT_ID_RADIUM
+	required_reagents = list(REAGENT_ID_WATER = 5)
 	result_amount = 30
 	required = /obj/item/slime_extract/green
 
@@ -466,7 +466,7 @@
 /decl/chemical_reaction/instant/slime/nuclear_uranium
 	name = "Slime Uranium"
 	id = "m_green_uranium"
-	required_reagents = list("slimejelly" = 5)
+	required_reagents = list(REAGENT_ID_SLIMEJELLY = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/green
 
@@ -497,7 +497,7 @@
 /decl/chemical_reaction/instant/slime/dreamscale
 	name = "dream scale creation "
 	id = "m_dreamscale_slime"
-	required_reagents = list("water" = 5)
+	required_reagents = list(REAGENT_ID_WATER = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/dream
 
@@ -508,7 +508,7 @@
 /decl/chemical_reaction/instant/slime/nightmareslime
 	name = "Nightmare Slime Summon "
 	id = "m_nightmare_slime"
-	required_reagents = list("blood" = 5, "phoron" = 5, "slimejelly" = 5)
+	required_reagents = list(REAGENT_ID_BLOOD = 5, REAGENT_ID_PHORON = 5, REAGENT_ID_SLIMEJELLY = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/dream
 
@@ -574,7 +574,7 @@
 /decl/chemical_reaction/instant/slime/nightmarewater
 	name = "nightmare water"
 	id = "m_nightmare_water"
-	required_reagents = list("water" = 5)
+	required_reagents = list(REAGENT_ID_WATER = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/nightmare
 
@@ -587,7 +587,7 @@
 /decl/chemical_reaction/instant/slime/nightmarejelly
 	name = "nightmare jelly"
 	id = "m_nightmare_jelly"
-	required_reagents = list("slimejelly" = 5)
+	required_reagents = list(REAGENT_ID_SLIMEJELLY = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/nightmare
 
@@ -599,7 +599,7 @@
 /decl/chemical_reaction/instant/slime/nightmareblood
 	name = "nightmare blood"
 	id = "m_nightmare_blood"
-	required_reagents = list("blood" = 5)
+	required_reagents = list(REAGENT_ID_BLOOD = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/nightmare
 
@@ -610,7 +610,7 @@
 /decl/chemical_reaction/instant/slime/nightmarephoron
 	name = "nightmare phoron"
 	id = "m_nightmare_phoron"
-	required_reagents = list("phoron" = 5)
+	required_reagents = list(REAGENT_ID_PHORON = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/nightmare
 
@@ -625,7 +625,7 @@
 /decl/chemical_reaction/instant/slime/redspace_sound
 	name = "Slime Sound Creation"
 	id = "m_make_sound"
-	required_reagents = list("mindbreaker" = 5)
+	required_reagents = list(REAGENT_ID_MINDBREAKER = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/redspace
 
@@ -681,7 +681,7 @@
 /decl/chemical_reaction/instant/slime/soundblood
 	name = "sound blood"
 	id = "m_sound_blood"
-	required_reagents = list("blood" = 5)
+	required_reagents = list(REAGENT_ID_BLOOD = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/sound
 
@@ -692,7 +692,7 @@
 /decl/chemical_reaction/instant/slime/soundphoron
 	name = "sound blood"
 	id = "m_sound_blood"
-	required_reagents = list("phoron" = 5)
+	required_reagents = list(REAGENT_ID_PHORON = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/sound
 
@@ -704,7 +704,7 @@
 /decl/chemical_reaction/instant/slime/soundwater
 	name = "sound water"
 	id = "m_sound_water"
-	required_reagents = list("water" = 5)
+	required_reagents = list(REAGENT_ID_WATER = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/sound
 
@@ -716,7 +716,7 @@
 /decl/chemical_reaction/instant/slime/soundjelly
 	name = "sound slimejelly"
 	id = "m_sound_slimejelly"
-	required_reagents = list("slimejelly" = 5)
+	required_reagents = list(REAGENT_ID_SLIMEJELLY = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/sound
 

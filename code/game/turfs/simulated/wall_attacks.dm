@@ -17,7 +17,7 @@
 		src.blocks_air = 0
 		set_opacity(0)
 		for(var/turf/simulated/turf in loc)
-			air_master.mark_for_update(turf)
+			SSair.mark_for_update(turf)
 	else
 		can_open = WALL_OPENING
 		//flick("[material.icon_base]fwall_closing", src)
@@ -29,18 +29,18 @@
 		src.blocks_air = 1
 		set_opacity(1)
 		for(var/turf/simulated/turf in loc)
-			air_master.mark_for_update(turf)
+			SSair.mark_for_update(turf)
 
 	can_open = WALL_CAN_OPEN
 	update_icon()
 
 /turf/simulated/wall/proc/update_air()
-	if(!air_master)
+	if(!SSair)
 		return
 
 	for(var/turf/simulated/turf in loc)
 		update_thermal(turf)
-		air_master.mark_for_update(turf)
+		SSair.mark_for_update(turf)
 
 
 /turf/simulated/wall/proc/update_thermal(var/turf/simulated/source)
@@ -92,6 +92,13 @@
 		toggle_open(user)
 	return 0
 
+/turf/simulated/wall/attack_ai(var/mob/user)
+	if(!Adjacent(user))
+		return
+	if(!isrobot((user)))
+		return
+	var/rotting = (locate(/obj/effect/overlay/wallrot) in src)
+	try_touch(user, rotting)
 
 /turf/simulated/wall/attack_hand(var/mob/user)
 

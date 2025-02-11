@@ -43,7 +43,7 @@
 	say_list_type = /datum/say_list/solarmoth
 
 	var/poison_per_bite = 5 //grubs cause a shock when they bite someone
-	var/poison_type = "shockchem"
+	var/poison_type = REAGENT_ID_SHOCKCHEM
 	var/poison_chance = 50
 	var/shock_chance = 20 // Beware synths
 

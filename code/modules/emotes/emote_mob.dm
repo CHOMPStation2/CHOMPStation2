@@ -83,7 +83,7 @@
 
 	var/decl/emote/use_emote = get_emote_by_key(act)
 	if(!istype(use_emote))
-		to_chat(src, span_warning("Unknown emote '[act]'. Type <b>say *help</b> for a list of usable emotes. ([act] [message])")) //CHOMPEdit - Add full message in the event you used * instead of ! or something like that
+		to_chat(src, span_warning("Unknown emote '[act]'. Type " + span_bold("say *help") + " for a list of usable emotes. ([act] [message])")) // Add full message in the event you used * instead of ! or something like that
 		return
 
 	if(!use_emote.mob_can_use(src))
@@ -226,12 +226,11 @@
 						message = span_emote(span_bold("[src]") + " ([ghost_follow_link(src, M)]) [input]")
 					if(usr && usr.client && M && !(get_z(usr) == get_z(M)))
 						message = span_multizsay("[message]")
-					//CHOMPEdit Start - If you are in the same tile, right next to, or being held by a person doing an emote, you should be able to see it while blind
+					// If you are in the same tile, right next to, or being held by a person doing an emote, you should be able to see it while blind
 					if(m_type != AUDIBLE_MESSAGE && (src.Adjacent(M) || (istype(src.loc, /obj/item/holder) && src.loc.loc == M)))
 						M.show_message(message)
 					else
 						M.show_message(message, m_type)
-					//CHOMPEdit End
 					M.create_chat_message(src, "[runemessage]", FALSE, list("emote"), (m_type == AUDIBLE_MESSAGE))
 
 		for(var/obj/O as anything in o_viewers)

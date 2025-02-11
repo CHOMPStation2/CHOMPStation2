@@ -15,7 +15,7 @@
 	var/list/blend_objects = null // Objects which to blend with //CHOMPEdit default null
 	var/list/noblend_objects = null //Objects to avoid blending with (such as children of listed blend objects. //CHOMPEdit default null
 
-/obj/structure/Initialize()
+/obj/structure/Initialize(mapload)
 	. = ..()
 	if(climbable)
 		verbs += /obj/structure/proc/climb_on
@@ -30,7 +30,7 @@
 		if(HULK in user.mutations)
 			user.say(pick(";RAAAAAAAARGH!", ";HNNNNNNNNNGGGGGGH!", ";GWAAAAAAAARRRHHH!", "NNNNNNNNGGGGGGGGHH!", ";AAAAAAARRRGH!" ))
 			attack_generic(user,1,"smashes")
-		else if(istype(user,/mob/living/carbon/human))
+		else if(ishuman(user))
 			var/mob/living/carbon/human/H = user
 			if(H.species.can_shred(user))
 				attack_generic(user,1,"slices")
@@ -104,7 +104,7 @@
 	if (!can_climb(user))
 		return
 
-	usr.visible_message(span_warning("[user] starts climbing onto \the [src]!"))
+	user.visible_message(span_warning("[user] starts climbing onto \the [src]!"))
 	LAZYDISTINCTADD(climbers, user)
 
 	if(!do_after(user,(issmall(user) ? climb_delay * 0.6 : climb_delay)))
@@ -115,10 +115,10 @@
 		LAZYREMOVE(climbers, user)
 		return
 
-	usr.forceMove(climb_to(user))
+	user.forceMove(climb_to(user))
 
 	if (get_turf(user) == get_turf(src))
-		usr.visible_message(span_warning("[user] climbs onto \the [src]!"))
+		user.visible_message(span_warning("[user] climbs onto \the [src]!"))
 	LAZYREMOVE(climbers, user)
 
 /obj/structure/proc/climb_to(var/mob/living/user)

@@ -44,8 +44,8 @@
 	var/show_ssd = "fast asleep"
 	var/virus_immune
 	var/short_sighted										// Permanent weldervision.
-	var/blood_name = "blood"								// Name for the species' blood.
-	var/blood_reagents = "iron"								// Reagent(s) that restore lost blood. goes by reagent IDs.
+	var/blood_name = REAGENT_ID_BLOOD								// Name for the species' blood.
+	var/blood_reagents = REAGENT_ID_IRON								// Reagent(s) that restore lost blood. goes by reagent IDs.
 	var/blood_volume = 560									// Initial blood volume.
 	var/bloodloss_rate = 1									// Multiplier for how fast a species bleeds out. Higher = Faster
 	var/blood_level_safe = 0.85								//"Safe" blood level; above this, you're OK
@@ -109,9 +109,10 @@
 	var/gasp_volume = 50 // Self-explanatory, define this separately on your species if the sound files are louder.
 	var/death_volume = 50 // Self-explanatory, define this separately on your species if the sound files are louder.
 	// var/species_sounds_herm // If you want a custom sound played for other genders, just add them like so
+	// CHOMPEdit End
+
 	var/footstep = FOOTSTEP_MOB_HUMAN
 	var/list/special_step_sounds = null
-	// CHOMPEdit End
 
 	// Combat/health/chem/etc. vars.
 	var/total_health = 100								// How much damage the mob can take before entering crit.
@@ -161,9 +162,9 @@
 
 	// Environment tolerance/life processes vars.
 	var/reagent_tag											//Used for metabolizing reagents.
-	var/breath_type = "oxygen"								// Non-oxygen gas breathed, if any.
-	var/poison_type = "phoron"								// Poisonous air.
-	var/exhale_type = "carbon_dioxide"						// Exhaled gas type.
+	var/breath_type = GAS_O2								// Non-oxygen gas breathed, if any.
+	var/poison_type = GAS_PHORON								// Poisonous air.
+	var/exhale_type = GAS_CO2								// Exhaled gas type.
 	var/water_breather = FALSE
 	var/suit_inhale_sound = 'sound/effects/mob_effects/suit_breathe_in.ogg'
 	var/suit_exhale_sound = 'sound/effects/mob_effects/suit_breathe_out.ogg'
@@ -239,6 +240,7 @@
 	var/has_glowing_eyes = 0								// Whether the eyes are shown above all lighting
 	var/water_movement = 0									// How much faster or slower the species is in water
 	var/snow_movement = 0									// How much faster or slower the species is on snow
+	var/dirtslip = FALSE									// If we slip over dirt or not.
 	var/can_space_freemove = FALSE							// Can we freely move in space?
 	var/can_zero_g_move	= FALSE								// What about just in zero-g non-space?
 
@@ -254,6 +256,10 @@
 
 	var/rarity_value = 1									// Relative rarity/collector value for this species.
 	var/economic_modifier = 2								// How much money this species makes
+
+	var/vanity_base_fit 									//when shapeshifting using vanity_copy_to, this allows you to have add something so they can go back to their original species fit
+
+	var/mudking = FALSE										// If we dirty up tiles quicker
 
 	var/vore_belly_default_variant = "H"
 
@@ -356,8 +362,8 @@
 		inherent_verbs |= /mob/living/carbon/human/proc/regurgitate
 
 	update_sort_hint()
-// CHOMPadd
-/datum/species/proc/get_footstep_sounds()
+
+/datum/species/proc/get_footsep_sounds()
 	return footstep
 
 /datum/species/proc/update_sort_hint()
@@ -624,4 +630,29 @@
 	return
 
 /datum/species/proc/update_misc_tabs(var/mob/living/carbon/human/H)
+	return
+
+/datum/species/proc/handle_base_eyes(var/mob/living/carbon/human/H, var/custom_base)
+	if(selects_bodytype && custom_base) // only bother if our src species datum allows bases and one is assigned
+		var/datum/species/S = GLOB.all_species[custom_base]
+
+		//extract default eye data from species datum
+		var/baseHeadPath = S.has_limbs[BP_HEAD]["path"] //has_limbs is a list of lists
+
+		if(!baseHeadPath)
+			return // exit if we couldn't find a head path from the base.
+
+		var/obj/item/organ/external/head/baseHead = new baseHeadPath()
+		if(!baseHead)
+			return // exit if we didn't create the base properly
+
+		var/obj/item/organ/external/head/targetHead = H.get_organ(BP_HEAD)
+		if(!targetHead)
+			return // don't bother if target mob has no head for whatever reason
+
+		targetHead.eye_icon = baseHead.eye_icon
+		targetHead.eye_icon_location = baseHead.eye_icon_location
+
+		if(!QDELETED(baseHead) && baseHead)
+			qdel(baseHead)
 	return

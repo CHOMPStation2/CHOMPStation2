@@ -108,26 +108,26 @@
 	var/current_capacity = 0
 	var/max_pickup = 100 //How much ore can be picked up in one go. There to prevent someone from walking on a turf with 10000 ore and making the server cry.
 	var/list/stored_ore = list(
-		"sand" = 0,
-		"hematite" = 0,
-		"carbon" = 0,
-		"raw copper" = 0,
-		"raw tin" = 0,
-		"void opal" = 0,
-		"painite" = 0,
-		"quartz" = 0,
-		"raw bauxite" = 0,
-		"phoron" = 0,
-		"silver" = 0,
-		"gold" = 0,
-		"marble" = 0,
-		"uranium" = 0,
-		"diamond" = 0,
-		"platinum" = 0,
-		"lead" = 0,
-		"mhydrogen" = 0,
-		"verdantium" = 0,
-		"rutile" = 0)
+		ORE_SAND = 0,
+		ORE_HEMATITE = 0,
+		ORE_CARBON = 0,
+		ORE_COPPER = 0,
+		ORE_TIN = 0,
+		ORE_VOPAL = 0,
+		ORE_PAINITE = 0,
+		ORE_QUARTZ = 0,
+		ORE_BAUXITE = 0,
+		ORE_PHORON = 0,
+		ORE_SILVER = 0,
+		ORE_GOLD = 0,
+		ORE_MARBLE = 0,
+		ORE_URANIUM = 0,
+		ORE_DIAMOND = 0,
+		ORE_PLATINUM = 0,
+		ORE_LEAD = 0,
+		ORE_MHYDROGEN = 0,
+		ORE_VERDANTIUM = 0,
+		ORE_RUTILE = 0)
 	var/last_update = 0
 
 /obj/item/storage/bag/ore/holding
@@ -207,17 +207,12 @@
 
 /obj/item/storage/bag/ore/equipped(mob/user)
 	..()
-	if(user.get_inventory_slot(src) == slot_wear_suit || slot_l_hand || slot_l_hand || slot_belt) //Basically every place they can go. Makes sure it doesn't unregister if moved to other slots.
-		user.AddComponent(/datum/component/recursive_move)
-		RegisterSignal(user, COMSIG_OBSERVER_MOVED, /obj/item/storage/bag/ore/proc/autoload, user, override = TRUE)
+	user.AddComponent(/datum/component/recursive_move)
+	RegisterSignal(user, COMSIG_OBSERVER_MOVED, /obj/item/storage/bag/ore/proc/autoload, user)
 
 /obj/item/storage/bag/ore/dropped(mob/user)
 	..()
-	if(user.get_inventory_slot(src) == slot_wear_suit || slot_l_hand || slot_l_hand || slot_belt) //See above. This should really be a define.
-		user.AddComponent(/datum/component/recursive_move)
-		RegisterSignal(user, COMSIG_OBSERVER_MOVED, /obj/item/storage/bag/ore/proc/autoload, user, override = TRUE)
-	else
-		UnregisterSignal(user, COMSIG_OBSERVER_MOVED)
+	UnregisterSignal(user, COMSIG_OBSERVER_MOVED)
 
 /obj/item/storage/bag/ore/proc/autoload(mob/user)
 	var/obj/item/ore/O = locate() in get_turf(src)
@@ -235,7 +230,7 @@
 	if(!Adjacent(user)) //Can only check the contents of ore bags if you can physically reach them.
 		return .
 
-	if(istype(user, /mob/living))
+	if(isliving(user))
 		add_fingerprint(user)
 
 	. += span_notice("It holds:")
@@ -326,11 +321,15 @@
 			break
 
 	if(!inserted)
-		usr.remove_from_mob(S)
-		if (usr.client && usr.s_active != src)
-			usr.client.screen -= S
-		S.dropped(usr)
-		S.loc = src
+		if(capacity < current + S.get_amount())
+			var/obj/item/stack/F = S.split(amount)
+			F.loc = src
+		else
+			usr.remove_from_mob(S)
+			if (usr.client && usr.s_active != src)
+				usr.client.screen -= S
+			S.dropped(usr)
+			S.loc = src
 
 	orient2hud(usr)
 	if(usr.s_active)

@@ -7,7 +7,13 @@
 /datum/maintpred_task/path_near_atom/New(var/atom/going_to, var/datum/maintpred_task/task_parent)
 	parent = task_parent
 	interruptable = parent.interruptable
-	path = SSpathfinder.default_ai_pathfinding(parent.holder.ai_holder, get_turf(going_to), 0)
+
+	if (get_z(parent.holder.ai_holder) != get_z(going_to)) {
+		message_admins("Crossing z levels!")
+		path = list(going_to)
+	} else {
+		path = SSpathfinder.default_ai_pathfinding(parent.holder.ai_holder, get_turf(going_to), 0)
+	}
 	if (length(path) != 0) {
 		parent.holder.ai_holder.give_destination(path[1], 0)
 	}
@@ -85,7 +91,7 @@
 		return wander()
 	}
 
-	holder.ai_holder.give_destination(path[1], 0)
+	holder.ai_holder.task = new /datum/maintpred_task/path_near_atom(path[1], src)
 
 /datum/maintpred_task/path_area/gave_up()
 	// Hit the next path location
@@ -93,13 +99,8 @@
 		return
 	}
 
-	// Fallback failed
-	if (fallback) {
-		reset_pathing()
-		return
-	}
-
-	holder.ai_holder.task = new /datum/maintpred_task/path_near_atom(path[1], src)
+	// Path failed, it's blocked
+	reset_pathing()
 
 /datum/maintpred_task/path_area/proc/reset_pathing()
 	blocked += get_area(path[1])

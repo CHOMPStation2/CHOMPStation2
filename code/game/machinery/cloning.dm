@@ -14,7 +14,7 @@
 		if((M.stat != 2) || (!M.client))
 			continue
 		//They need a brain!
-		if(istype(M, /mob/living/carbon/human))
+		if(ishuman(M))
 			var/mob/living/carbon/human/H = M
 			if(!H.has_brain())
 				continue
@@ -130,9 +130,9 @@
 
 	if(!R.dna)
 		H.dna = new /datum/dna()
-		H.dna.real_name = H.real_name
+		qdel_swap(H.dna, new /datum/dna())
 	else
-		H.dna = R.dna
+		qdel_swap(H.dna, R.dna)
 	H.UpdateAppearance()
 	H.sync_organ_dna()
 	if(heal_level < 60)
@@ -195,8 +195,8 @@
 			occupant.adjustBrainLoss(-(CEILING(0.5*heal_rate, 1)))
 
 			//So clones don't die of oxyloss in a running pod.
-			if(occupant.reagents.get_reagent_amount("inaprovaline") < 30)
-				occupant.reagents.add_reagent("inaprovaline", 60)
+			if(occupant.reagents.get_reagent_amount(REAGENT_ID_INAPROVALINE) < 30)
+				occupant.reagents.add_reagent(REAGENT_ID_INAPROVALINE, 60)
 			occupant.Sleeping(30)
 			//Also heal some oxyloss ourselves because inaprovaline is so bad at preventing it!!
 			occupant.adjustOxyLoss(-4)
@@ -350,7 +350,7 @@
 	if(LAZYLEN(containers))
 		for(var/obj/item/reagent_containers/glass/G in containers)
 			for(var/datum/reagent/R in G.reagents.reagent_list)
-				if(R.id == "biomass")
+				if(R.id == REAGENT_ID_BIOMASS)
 					biomass_count += R.volume
 
 	return biomass_count
@@ -362,7 +362,7 @@
 		for(var/obj/item/reagent_containers/glass/G in containers)
 			if(to_remove < amount)	//If we have what we need, we can stop. Checked every time we switch beakers
 				for(var/datum/reagent/R in G.reagents.reagent_list)
-					if(R.id == "biomass")		// Finds Biomass
+					if(R.id == REAGENT_ID_BIOMASS)		// Finds Biomass
 						var/need_remove = max(0, amount - to_remove)	//Figures out how much biomass is in this container
 						if(R.volume >= need_remove)						//If we have more than enough in this beaker, only take what we need
 							R.remove_self(need_remove)
@@ -407,15 +407,12 @@
 		mess = 1
 		update_icon()
 		occupant.ghostize()
-		spawn(5)
-			qdel(occupant)
-	return
+		QDEL_IN(occupant, 0.5 SECONDS)
 
-/obj/machinery/clonepod/relaymove(mob/user as mob)
+/obj/machinery/clonepod/relaymove(mob/user)
 	if(user.stat)
 		return
 	go_out()
-	return
 
 /obj/machinery/clonepod/emp_act(severity)
 	if(prob(100/severity))
@@ -456,8 +453,8 @@
 		icon_state = "pod_g"
 
 
-/obj/machinery/clonepod/full/New()
-	..()
+/obj/machinery/clonepod/full/Initialize()
+	. = ..()
 	for(var/i = 1 to container_limit)
 		containers += new /obj/item/reagent_containers/glass/bottle/biomass(src)
 

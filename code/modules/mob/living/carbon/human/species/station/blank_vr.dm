@@ -82,8 +82,8 @@
 	var/datum/species/real = GLOB.all_species[base_species]
 	return real.race_key
 
-/datum/species/custom/produceCopy(var/list/traits, var/mob/living/carbon/human/H, var/custom_base)
-	. = ..(traits, H, custom_base)
+/datum/species/custom/produceCopy(var/list/traits, var/mob/living/carbon/human/H, var/custom_base, var/reset_dna = TRUE)
+	. = ..(traits, H, custom_base,reset_dna)
 	H.maxHealth = H.species.total_health
 	H.hunger_rate = H.species.hunger_factor
 
@@ -97,10 +97,10 @@
 //Called when spawning to equip them with special things.
 /datum/species/custom/equip_survival_gear(var/mob/living/carbon/human/H, var/extendedtank = 0, var/comprehensive = 0)
 	. = ..()
-	if(breath_type != "oxygen")
+	if(breath_type != GAS_O2)
 		H.equip_to_slot_or_del(new /obj/item/clothing/mask/breath(H), slot_wear_mask)
 		var/obj/item/tank/tankpath
-		if(breath_type == "phoron")
+		if(breath_type == GAS_PHORON)
 			tankpath = /obj/item/tank/vox
 		else
 			tankpath = text2path("/obj/item/tank/" + breath_type)

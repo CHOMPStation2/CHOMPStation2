@@ -9,6 +9,8 @@
 	/// The display name for the TGUI window. For example, given the var is "APC"...
 	/// When the TGUI window is opened, "wires" will be appended to it's title, and it would become "APC wires".
 	var/proper_name = "Unknown"
+	/// The template to use for TGUI.
+	var/tgui_template = "Wires"
 	/// The total number of wires that our holder atom has.
 	var/wire_count = NONE
 	/// A list of all wires. For a list of valid wires defines that can go here, see `code/__DEFINES/wires.dm`
@@ -92,7 +94,7 @@
 /datum/wires/tgui_interact(mob/user, datum/tgui/ui = null)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-		ui = new(user, src, "Wires", "[proper_name] wires")
+		ui = new(user, src, tgui_template, "[proper_name] wires")
 		ui.open()
 
 /datum/wires/tgui_state(mob/user)
@@ -153,24 +155,23 @@
 	data["status"] = status
 	return data
 
-/datum/wires/tgui_act(action, list/params)
+/datum/wires/tgui_act(action, list/params, datum/tgui/ui)
 	if(..())
 		return TRUE
 
-	var/mob/user = usr
-	if(!interactable(user))
+	if(!interactable(ui.user))
 		return
 
-	var/obj/item/I = user.get_active_hand()
+	var/obj/item/I = ui.user.get_active_hand()
 	var/color = lowertext(params["wire"])
-	holder.add_hiddenprint(user)
+	holder.add_hiddenprint(ui.user)
 
 	switch(action)
 		 // Toggles the cut/mend status.
 		if("cut")
 			// if(!I.has_tool_quality(TOOL_WIRECUTTER) && !user.can_admin_interact())
 			if(!istype(I) || !I.has_tool_quality(TOOL_WIRECUTTER))
-				to_chat(user, span_warning("You need wirecutters!"))
+				to_chat(ui.user, span_warning("You need wirecutters!"))
 				return
 
 			playsound(holder, I.usesound, 20, 1)
@@ -181,7 +182,7 @@
 		if("pulse")
 			// if(!I.has_tool_quality(TOOL_MULTITOOL) && !user.can_admin_interact())
 			if(!istype(I) || !I.has_tool_quality(TOOL_MULTITOOL))
-				to_chat(user, span_warning("You need a multitool!"))
+				to_chat(ui.user, span_warning("You need a multitool!"))
 				return
 
 			playsound(holder, 'sound/weapons/empty.ogg', 20, 1)
@@ -189,7 +190,7 @@
 
 			// If they pulse the electrify wire, call interactable() and try to shock them.
 			if(get_wire(color) == WIRE_ELECTRIFY)
-				interactable(user)
+				interactable(ui.user)
 
 			return TRUE
 
@@ -198,18 +199,18 @@
 			if(is_attached(color))
 				var/obj/item/O = detach_assembly(color)
 				if(O)
-					user.put_in_hands(O)
+					ui.user.put_in_hands(O)
 					return TRUE
 
 			if(!istype(I, /obj/item/assembly/signaler))
-				to_chat(user, span_warning("You need a remote signaller!"))
+				to_chat(ui.user, span_warning("You need a remote signaller!"))
 				return
 
-			if(user.unEquip(I))
+			if(ui.user.unEquip(I))
 				attach_assembly(color, I)
 				return TRUE
 			else
-				to_chat(user, span_warning("[I] is stuck to your hand!"))
+				to_chat(ui.user, span_warning("[I] is stuck to your hand!"))
 
 /**
  * Proc called to determine if the user can see wire define information, such as "Contraband", "Door Bolts", etc.

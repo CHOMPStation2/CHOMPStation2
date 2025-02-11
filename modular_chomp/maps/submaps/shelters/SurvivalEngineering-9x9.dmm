@@ -97,18 +97,9 @@
 /obj/item/storage/toolbox/electrical,
 /obj/item/storage/toolbox/emergency,
 /obj/item/storage/toolbox/emergency,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
+/obj/item/cell/high,
+/obj/item/cell/high,
+/obj/item/cell/high,
 /obj/item/radio/off,
 /obj/item/radio/off,
 /obj/item/radio/off,

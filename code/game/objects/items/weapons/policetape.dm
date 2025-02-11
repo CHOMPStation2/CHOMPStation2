@@ -32,6 +32,7 @@ var/list/tape_roll_applications = list()
 /obj/item/tape
 	name = "tape"
 	icon = 'icons/policetape.dmi'
+	icon_state = "tape"
 	anchored = TRUE
 	layer = WINDOW_LAYER
 	var/lifted = 0
@@ -323,7 +324,7 @@ var/list/tape_roll_applications = list()
 		add_fingerprint(M)
 		if(!allowed(M))	//only select few learn art of not crumpling the tape
 			to_chat(M, span_warning("You are not supposed to go past \the [src]..."))
-			if(M.a_intent == I_HELP && !(istype(M, /mob/living/simple_mob)))
+			if(M.a_intent == I_HELP && !(isanimal(M)))
 				return FALSE
 			crumple()
 	return ..()

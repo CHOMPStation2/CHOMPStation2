@@ -34,6 +34,9 @@
 
 /obj/machinery/computer/cloning/Destroy()
 	releasecloner()
+	for(var/datum/dna2/record/R in records)
+		qdel(R.dna)
+		qdel(R)
 	return ..()
 
 /obj/machinery/computer/cloning/process()
@@ -196,7 +199,7 @@
 
 	return data
 
-/obj/machinery/computer/cloning/tgui_act(action, params)
+/obj/machinery/computer/cloning/tgui_act(action, params, datum/tgui/ui)
 	if(..())
 		return TRUE
 
@@ -204,12 +207,13 @@
 	switch(tgui_modal_act(src, action, params))
 		if(TGUI_MODAL_ANSWER)
 			if(params["id"] == "del_rec" && active_record)
-				var/obj/item/card/id/C = usr.get_active_hand()
+				var/obj/item/card/id/C = ui.user.get_active_hand()
 				if(!istype(C) && !istype(C, /obj/item/pda))
 					set_temp("ID not in hand.", "danger")
 					return
 				if(check_access(C))
 					records.Remove(active_record)
+					qdel(active_record.dna)
 					qdel(active_record)
 					set_temp("Record deleted.", "success")
 					menu = MENU_RECORDS
@@ -344,6 +348,7 @@
 							set_temp("Initiating cloning cycle...", "success")
 							playsound(src, 'sound/machines/medbayscanner1.ogg', 100, 1)
 							records.Remove(C)
+							qdel(C.dna)
 							qdel(C)
 							menu = MENU_MAIN
 						else
@@ -360,16 +365,16 @@
 			else
 				scan_mode = FALSE
 		if("eject")
-			if(usr.incapacitated() || !scanner || loading)
+			if(ui.user.incapacitated() || !scanner || loading)
 				return
-			scanner.eject_occupant(usr)
-			scanner.add_fingerprint(usr)
+			scanner.eject_occupant(ui.user)
+			scanner.add_fingerprint(ui.user)
 		if("cleartemp")
 			temp = null
 		else
 			return FALSE
 
-	add_fingerprint(usr)
+	add_fingerprint(ui.user)
 
 /obj/machinery/computer/cloning/proc/scan_mob(mob/living/carbon/human/subject as mob, var/scan_brain = 0)
 	if(stat & NOPOWER)
@@ -423,7 +428,7 @@
 	subject.dna.check_integrity()
 
 	var/datum/dna2/record/R = new /datum/dna2/record()
-	R.dna = subject.dna
+	qdel_swap(R.dna, subject.dna)
 	R.ckey = subject.ckey
 	R.id = copytext(md5(subject.real_name), 2, 6)
 	R.name = R.dna.real_name

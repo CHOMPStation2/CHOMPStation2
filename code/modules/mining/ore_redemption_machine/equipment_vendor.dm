@@ -41,6 +41,7 @@
 		EQUIPMENT("Defense Equipment - Smoke Bomb",				/obj/item/grenade/smokebomb,									100),
 		EQUIPMENT("Hybrid Equipment - Proto-Kinetic Dagger",	/obj/item/kinetic_crusher/machete/dagger,					500),
 		EQUIPMENT("Hybrid Equipment - Proto-Kinetic Machete",	/obj/item/kinetic_crusher/machete,							1000),
+		EQUIPMENT("Hybrid Equipment - Proto-Kinetic Gauntlets",	/obj/item/kinetic_crusher/machete/gauntlets,					1000), //eh this is two-hasnded so whatever, same price for slight dmg increase!
 		EQUIPMENT("Durasteel Fishing Rod",						/obj/item/material/fishing_rod/modern/strong,				7500),
 		EQUIPMENT("Titanium Fishing Rod",						/obj/item/material/fishing_rod/modern,						1000),
 		EQUIPMENT("Fishing Net",								/obj/item/material/fishing_net,								500),
@@ -86,11 +87,13 @@
 		EQUIPMENT("Premium Kinetic Accelerator",/obj/item/gun/energy/kinetic_accelerator/premiumka,		12000),
 	)
 	prize_list["Digging Tools"] = list(
-		EQUIPMENT("Diamond Pickaxe",	/obj/item/pickaxe/diamond,				2000), //CHOMPstation re-addition
-		// EQUIPMENT("Kinetic Crusher",	/obj/item/twohanded/required/kinetic_crusher,	750),
 		EQUIPMENT("Resonator",			/obj/item/resonator,							900),
-		EQUIPMENT("Silver Pickaxe",		/obj/item/pickaxe/silver,				1200),
+		EQUIPMENT("Silver Pickaxe",		/obj/item/pickaxe/silver,						1200),
+		EQUIPMENT("Diamond Pickaxe",	/obj/item/pickaxe/diamond,				2000),
 		EQUIPMENT("Super Resonator",	/obj/item/resonator/upgraded,					2500),
+		EQUIPMENT("Archeology Equipment - Chisels",			/obj/item/storage/excavation,			500),
+		EQUIPMENT("Archeology Equipment - Scanner",			/obj/item/depth_scanner,				1000), // They can get a basic scanner for archeology, but not the anomaly scanner. Keeps job stealing at a minimum while also allowing miners to excavate any cool rocks they come across.
+		EQUIPMENT("Fine Excavation Kit - Measuring Tape",	/obj/item/measuring_tape,				125),
 		EQUIPMENT("Explosive Excavation Kit - Plastic Charge",/obj/item/plastique/seismic/locked,	1500),
 		EQUIPMENT("Industrial Equipment - Phoron Bore",		/obj/item/gun/magnetic/matfed/phoronbore/loaded,			3000),
 		EQUIPMENT("Industrial Equipment - Inducer",			/obj/item/inducer,						3500),
@@ -108,7 +111,7 @@
 		EQUIPMENT("Hardsuit - Proto-Kinetic Gauntlets",		/obj/item/rig_module/gauntlets,					2000),
 	)
 	prize_list["Miscellaneous"] = list(
-		EQUIPMENT("Absinthe",					/obj/item/reagent_containers/food/drinks/bottle/absinthe,	125),
+		EQUIPMENT(REAGENT_ABSINTHE,					/obj/item/reagent_containers/food/drinks/bottle/absinthe,	125),
 		EQUIPMENT("Cigar",						/obj/item/clothing/mask/smokable/cigarette/cigar/havana,			150),
 		EQUIPMENT("Digital Tablet - Standard",	/obj/item/modular_computer/tablet/preset/custom_loadout/standard,	500),
 		EQUIPMENT("Digital Tablet - Advanced",	/obj/item/modular_computer/tablet/preset/custom_loadout/advanced,	1000),
@@ -120,7 +123,7 @@
 		EQUIPMENT("Thalers - 100",				/obj/item/spacecash/c100,									1000),
 		EQUIPMENT("Thalers - 1000",				/obj/item/spacecash/c1000,									10000),
 		EQUIPMENT("Umbrella",					/obj/item/melee/umbrella/random,								200),
-		EQUIPMENT("Whiskey",					/obj/item/reagent_containers/food/drinks/bottle/whiskey,		125),
+		EQUIPMENT(REAGENT_WHISKEY,					/obj/item/reagent_containers/food/drinks/bottle/whiskey,		125),
 		EQUIPMENT("Mining PSG Upgrade Disk",	/obj/item/borg/upgrade/shield_upgrade,								2500),
 	//CHOMPedit Start
 		EQUIPMENT("Mining PSG", 				/obj/item/personal_shield_generator/belt/mining/loaded,      2000),
@@ -179,7 +182,7 @@
 	return target.mining_points
 
 /obj/machinery/mineral/equipment_vendor/proc/remove_points(obj/item/card/id/target, amt)
-	target.mining_points -= amt
+	target.adjust_mining_points(-amt)
 
 /obj/machinery/mineral/equipment_vendor/tgui_static_data(mob/user)
 	var/list/static_data[0]
@@ -215,7 +218,7 @@
 		ui.set_autoupdate(FALSE)
 
 
-/obj/machinery/mineral/equipment_vendor/tgui_act(action, params)
+/obj/machinery/mineral/equipment_vendor/tgui_act(action, params, datum/tgui/ui)
 	if(..())
 		return
 
@@ -224,7 +227,7 @@
 		if("logoff")
 			if(!inserted_id)
 				return
-			usr.put_in_hands(inserted_id)
+			ui.user.put_in_hands(inserted_id)
 			inserted_id = null
 		if("purchase")
 			if(!inserted_id)
@@ -237,7 +240,7 @@
 				return
 			var/datum/data/mining_equipment/prize = prize_list[category][name]
 			if(prize.cost > get_points(inserted_id)) // shouldn't be able to access this since the button is greyed out, but..
-				to_chat(usr, span_danger("You have insufficient points."))
+				to_chat(ui.user, span_danger("You have insufficient points."))
 				flick(icon_deny, src) //VOREStation Add
 				return
 

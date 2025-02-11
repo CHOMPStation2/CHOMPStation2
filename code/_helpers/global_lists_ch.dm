@@ -1,21 +1,4 @@
-
-//Reagent Vore belly Sounds
-GLOBAL_LIST_INIT(slosh, list(
-	'sound/vore/walkslosh1.ogg',
-	'sound/vore/walkslosh2.ogg',
-	'sound/vore/walkslosh3.ogg',
-	'sound/vore/walkslosh4.ogg',
-	'sound/vore/walkslosh5.ogg',
-	'sound/vore/walkslosh6.ogg',
-	'sound/vore/walkslosh7.ogg',
-	'sound/vore/walkslosh8.ogg',
-	'sound/vore/walkslosh9.ogg',
-	'sound/vore/walkslosh10.ogg'
-))
-
 var/global/list/item_tf_spawnpoints = list() // Global variable tracking which items are item tf spawnpoints
-
-/var/global/list/existing_metroids = list() //Global variable for tracking metroids for the event announcement. Needs to go here for load order.
 
 //stuff that only synths can eat
 var/global/list/edible_tech = list(/obj/item/cell,
@@ -199,10 +182,3 @@ var/global/list/vr_mob_spawner_options = list(
 	"Stok" = /mob/living/carbon/human/stok,
 	//"Gryphon" = /mob/living/simple_mob/vore/gryphon // Disabled until tested
 	)
-
-var/global/list/selectable_footstep = list(
-	"Default" = FOOTSTEP_MOB_HUMAN,
-	"Claw" = FOOTSTEP_MOB_CLAW,
-	"Light Claw" = FOOTSTEP_MOB_TESHARI,
-	"Slither" = FOOTSTEP_MOB_SLITHER,
-)

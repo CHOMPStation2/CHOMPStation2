@@ -16,12 +16,12 @@
 
 	if(istype(loc,/obj/belly)){
 		var/obj/belly/B = loc
-		B.owner.visible_message("<span class='warning'><b>Something grows inside [B.owner]'s [lowertext(B.name)]!</b></span>")
-		to_chat(B.owner, "<span class='warning'>\The [src] suddenly evolves inside your [lowertext(B.name)]!</span>")
+		B.owner.visible_message(span_warning("<b>Something grows inside [B.owner]'s [lowertext(B.name)]!</b>"))
+		to_chat(B.owner, span_warning("\The [src] suddenly evolves inside your [lowertext(B.name)]!"))
 		B.release_specific_contents(src, TRUE)
 		B.nom_mob(bigger, null)
 		qdel(src)
 	}else{
-		visible_message("<span class='warning'>\The [src] suddenly evolves!</span>")
+		visible_message(span_warning("\The [src] suddenly evolves!"))
 		qdel(src)
 	}

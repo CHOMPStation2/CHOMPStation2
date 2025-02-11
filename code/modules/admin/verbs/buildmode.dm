@@ -16,7 +16,7 @@
 	set category = "Special Verbs"
 	if(M.client)
 		if(M.client.buildmode)
-			log_admin("[key_name(usr)] has left build mode.")
+			log_admin("[key_name(M)] has left build mode.")
 			M.client.buildmode = 0
 			M.client.show_popup_menus = 1
 			M.plane_holder.set_vis(VIS_BUILDMODE, FALSE)
@@ -24,7 +24,7 @@
 				if(H.cl == M.client)
 					qdel(H)
 		else
-			log_admin("[key_name(usr)] has entered build mode.")
+			log_admin("[key_name(M)] has entered build mode.")
 			M.client.buildmode = 1
 			M.client.show_popup_menus = 0
 			M.plane_holder.set_vis(VIS_BUILDMODE, TRUE)
@@ -324,7 +324,7 @@
 						if(input)
 							new_light_intensity = input
 					if("Color")
-						var/input = input(usr, "New light color.","Light Maker",3) as null|color
+						var/input = tgui_color_picker(usr, "New light color.","Light Maker",new_light_color)
 						if(input)
 							new_light_color = input
 			if(BUILDMODE_DROP)
@@ -831,9 +831,9 @@ CHOMP Remove end */
 			if (!isturf(NT) || (NT in found) || (NT in pending))
 				continue
 			// We ask ZAS to determine if its airtight.  Thats what matters anyway right?
-			if(air_master.air_blocked(T, NT))
+			if(SSair.air_blocked(T, NT))
 				// Okay thats the edge of the room
-				if(get_area_type_buildmode(NT.loc) == AREA_SPACE && air_master.air_blocked(NT, NT))
+				if(get_area_type_buildmode(NT.loc) == AREA_SPACE && SSair.air_blocked(NT, NT))
 					found += NT // So we include walls/doors not already in any area
 				continue
 			if (istype(NT, /turf/space))

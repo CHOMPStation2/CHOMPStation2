@@ -484,7 +484,7 @@
 	//CHOMPEdit - Getting around to proper object flags
 	if(HAS_TRAIT(W, TRAIT_NODROP)) //SHOULD be handled in unEquip, but better safe than sorry.
 		if(!stop_messages)
-			to_chat(usr, "<span class='warning'>\the [W] is stuck to your hand, you can't put it in \the [src]!</span>")
+			to_chat(usr, span_warning("\the [W] is stuck to your hand, you can't put it in \the [src]!"))
 		return FALSE
 
 	return 1
@@ -614,8 +614,8 @@
 	W.add_fingerprint(user)
 	return handle_item_insertion(W)
 
-/obj/item/storage/dropped(mob/user as mob)
-	return
+/obj/item/storage/dropped(mob/user)
+	return ..()
 
 /obj/item/storage/attack_hand(mob/user as mob)
 	if(ishuman(user) && !pocketable)
@@ -708,7 +708,7 @@
 	max_storage_space = max(total_storage_space,max_storage_space) //Prevents spawned containers from being too small for their contents.
 
 /obj/item/storage/emp_act(severity)
-	if(!istype(src.loc, /mob/living))
+	if(!isliving(src.loc))
 		for(var/obj/O in contents)
 			O.emp_act(severity)
 	..()

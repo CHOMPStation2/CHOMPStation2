@@ -19,13 +19,11 @@
 
 	var/depth = 1 // Higher numbers indicates deeper water.
 
-	var/reagent_type = "water"
+	var/reagent_type = REAGENT_ID_WATER
 	// var/datum/looping_sound/water/soundloop CHOMPEdit: Removing soundloop for now.
 
 /turf/simulated/floor/water/Initialize()
 	. = ..()
-	// var/decl/flooring/F = get_flooring_data(/decl/flooring/water) - CHOMPEdit
-	// footstep_sounds = F?.footstep_sounds CHOMPEdit - Footsteps
 	update_icon()
 	handle_fish()
 	// soundloop = new(list(src), FALSE) // CHOMPEdit: Removing soundloop for now.
@@ -68,11 +66,11 @@
 			var/datum/gas_mixture/water_breath = new()
 			var/datum/gas_mixture/above_air = return_air()
 			var/amount = 300
-			water_breath.adjust_gas("oxygen", amount) // Assuming water breathes just extract the oxygen directly from the water.
+			water_breath.adjust_gas(GAS_O2, amount) // Assuming water breathes just extract the oxygen directly from the water.
 			water_breath.temperature = above_air.temperature
 			return water_breath
 		else
-			var/gasid = "carbon_dioxide"
+			var/gasid = GAS_CO2
 			if(ishuman(L))
 				var/mob/living/carbon/human/H = L
 				if(H.species && H.species.exhale_type)
@@ -89,11 +87,11 @@
 			var/datum/gas_mixture/water_breath = new()
 			var/datum/gas_mixture/above_air = return_air()
 			var/amount = 300
-			water_breath.adjust_gas("oxygen", amount) // Assuming water breathes just extract the oxygen directly from the water.
+			water_breath.adjust_gas(GAS_O2, amount) // Assuming water breathes just extract the oxygen directly from the water.
 			water_breath.temperature = above_air.temperature
 			return water_breath
 		else
-			var/gasid = "carbon_dioxide"
+			var/gasid = GAS_CO2
 			if(ishuman(L))
 				var/mob/living/carbon/human/H = L
 				if(H.species && H.species.exhale_type)
@@ -106,7 +104,7 @@
 	return return_air() // Otherwise their head is above the water, so get the air from the atmosphere instead.
 
 /turf/simulated/floor/water/Entered(atom/movable/AM, atom/oldloc)
-	if(istype(AM, /mob/living))
+	if(isliving(AM))
 		var/mob/living/L = AM
 		L.update_water()
 		if(L.check_submerged() <= 0)
@@ -117,7 +115,7 @@
 	..()
 
 /turf/simulated/floor/water/Exited(atom/movable/AM, atom/newloc)
-	if(istype(AM, /mob/living))
+	if(isliving(AM))
 		var/mob/living/L = AM
 		L.update_water()
 		if(L.check_submerged() <= 0)
@@ -247,7 +245,7 @@ var/list/shoreline_icon_cache = list()
 
 /turf/simulated/floor/water/contaminated/Entered(atom/movable/AM, atom/oldloc)
 	..()
-	if(istype(AM, /mob/living))
+	if(isliving(AM))
 		var/mob/living/L = AM
 		if(L.isSynthetic())
 			return
@@ -256,20 +254,20 @@ var/list/shoreline_icon_cache = list()
 			L.adjustToxLoss(poisonlevel)
 
 /turf/simulated/floor/water/blood
-	name = "blood"
+	name = REAGENT_ID_BLOOD
 	desc = "A body of blood.  It seems shallow enough to walk through, if needed."
 	icon = 'icons/turf/outdoors.dmi'
 	icon_state = "bloodshallow"
 	water_icon = 'icons/turf/outdoors.dmi'
 	water_state = "bloodshallow"
 	under_state = "rock"
-	reagent_type = "blood"
+	reagent_type = REAGENT_ID_BLOOD
 
 /turf/simulated/floor/water/blood/get_edge_icon_state()
 	return "bloodshallow"
 
 /turf/simulated/floor/water/blood/Entered(atom/movable/AM, atom/oldloc)
-	if(istype(AM, /mob/living))
+	if(isliving(AM))
 		var/mob/living/L = AM
 		L.update_water()
 		if(L.check_submerged() <= 0)
@@ -287,4 +285,4 @@ var/list/shoreline_icon_cache = list()
 	water_icon = 'icons/turf/flooring/glamour.dmi'
 	water_state = "water"
 	under_state = "glamour"
-	reagent_type = "water"
+	reagent_type = REAGENT_ID_WATER

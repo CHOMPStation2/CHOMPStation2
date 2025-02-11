@@ -266,7 +266,7 @@ update_flag
 		src.add_fingerprint(user)
 		healthcheck()
 
-	if(istype(user, /mob/living/silicon/robot) && istype(W, /obj/item/tank/jetpack))
+	if(isrobot(user) && istype(W, /obj/item/tank/jetpack))
 		var/datum/gas_mixture/thejetpack = W:air_contents
 		var/env_pressure = thejetpack.return_pressure()
 		var/pressure_delta = min(10*ONE_ATMOSPHERE - env_pressure, (air_contents.return_pressure() - env_pressure)/2)
@@ -320,7 +320,7 @@ update_flag
 
 	return data
 
-/obj/machinery/portable_atmospherics/canister/tgui_act(action, params)
+/obj/machinery/portable_atmospherics/canister/tgui_act(action, params, datum/tgui/ui)
 	if(..())
 		return TRUE
 
@@ -336,7 +336,7 @@ update_flag
 					"\[Air\]" = "grey", \
 					"\[CAUTION\]" = "yellow", \
 				)
-				var/label = tgui_input_list(usr, "Choose canister label", "Gas canister", colors)
+				var/label = tgui_input_list(ui.user, "Choose canister label", "Gas canister", colors)
 				if(label)
 					canister_color = colors[label]
 					icon_state = colors[label]
@@ -353,7 +353,7 @@ update_flag
 				pressure = 10*ONE_ATMOSPHERE
 				. = TRUE
 			else if(pressure == "input")
-				pressure = tgui_input_number(usr, "New release pressure ([ONE_ATMOSPHERE/10]-[10*ONE_ATMOSPHERE] kPa):", name, release_pressure, 10*ONE_ATMOSPHERE, ONE_ATMOSPHERE/10)
+				pressure = tgui_input_number(ui.user, "New release pressure ([ONE_ATMOSPHERE/10]-[10*ONE_ATMOSPHERE] kPa):", name, release_pressure, 10*ONE_ATMOSPHERE, ONE_ATMOSPHERE/10)
 				if(!isnull(pressure) && !..())
 					. = TRUE
 			else if(text2num(pressure) != null)
@@ -364,14 +364,14 @@ update_flag
 		if("valve")
 			if(valve_open)
 				if(holding)
-					release_log += "Valve was " + span_bold("closed") + " by [usr] ([usr.ckey]), stopping the transfer into the [holding]<br>"
+					release_log += "Valve was " + span_bold("closed") + " by [ui.user] ([ui.user.ckey]), stopping the transfer into the [holding]<br>"
 				else
-					release_log += "Valve was " + span_bold("closed") + " by [usr] ([usr.ckey]), stopping the transfer into the " + span_red(span_bold("air")) + "<br>"
+					release_log += "Valve was " + span_bold("closed") + " by [ui.user] ([ui.user.ckey]), stopping the transfer into the " + span_red(span_bold("air")) + "<br>"
 			else
 				if(holding)
-					release_log += "Valve was " + span_bold("opened") + " by [usr] ([usr.ckey]), starting the transfer into the [holding]<br>"
+					release_log += "Valve was " + span_bold("opened") + " by [ui.user] ([ui.user.ckey]), starting the transfer into the [holding]<br>"
 				else
-					release_log += "Valve was " + span_bold("opened") + " by [usr] ([usr.ckey]), starting the transfer into the " + span_red(span_bold("air")) + "<br>"
+					release_log += "Valve was " + span_bold("opened") + " by [ui.user] ([ui.user.ckey]), starting the transfer into the " + span_red(span_bold("air")) + "<br>"
 					log_open()
 			valve_open = !valve_open
 			. = TRUE
@@ -379,34 +379,34 @@ update_flag
 			if(holding)
 				if(valve_open)
 					valve_open = 0
-					release_log += "Valve was " + span_bold("closed") + " by [usr] ([usr.ckey]), stopping the transfer into the [holding]<br>"
+					release_log += "Valve was " + span_bold("closed") + " by [ui.user] ([ui.user.ckey]), stopping the transfer into the [holding]<br>"
 				if(istype(holding, /obj/item/tank))
-					holding.manipulated_by = usr.real_name
+					holding.manipulated_by = ui.user.real_name
 				holding.loc = loc
 				holding = null
 			. = TRUE
 
-	add_fingerprint(usr)
+	add_fingerprint(ui.user)
 	update_icon()
 
 /obj/machinery/portable_atmospherics/canister/phoron/Initialize() //ChompEDIT New --> Initialize
 	..()
 
-	src.air_contents.adjust_gas("phoron", MolesForPressure())
+	src.air_contents.adjust_gas(GAS_PHORON, MolesForPressure())
 	src.update_icon()
 	return 1
 
 /obj/machinery/portable_atmospherics/canister/oxygen/Initialize() //ChompEDIT New --> Initialize
 	..()
 
-	src.air_contents.adjust_gas("oxygen", MolesForPressure())
+	src.air_contents.adjust_gas(GAS_O2, MolesForPressure())
 	src.update_icon()
 	return 1
 
 /obj/machinery/portable_atmospherics/canister/oxygen/prechilled/Initialize() //ChompEDIT New --> Initialize
 	..()
 
-	src.air_contents.adjust_gas("oxygen", MolesForPressure())
+	src.air_contents.adjust_gas(GAS_O2, MolesForPressure())
 	src.air_contents.temperature = 80
 	src.update_icon()
 	return 1
@@ -414,14 +414,14 @@ update_flag
 /obj/machinery/portable_atmospherics/canister/nitrous_oxide/Initialize() //ChompEDIT New --> Initialize
 	..()
 
-	air_contents.adjust_gas("nitrous_oxide", MolesForPressure())
+	air_contents.adjust_gas(GAS_N2O, MolesForPressure())
 	src.update_icon()
 	return 1
 
 //Dirty way to fill room with gas. However it is a bit easier to do than creating some floor/engine/n2o -rastaf0
 /obj/machinery/portable_atmospherics/canister/nitrous_oxide/roomfiller/Initialize()
 	. = ..()
-	air_contents.gas["nitrous_oxide"] = 9*4000
+	air_contents.gas[GAS_N2O] = 9*4000
 	var/turf/simulated/location = src.loc
 	if (istype(src.loc))
 		location.assume_air(air_contents)
@@ -432,13 +432,13 @@ update_flag
 
 	..()
 
-	src.air_contents.adjust_gas("nitrogen", MolesForPressure())
+	src.air_contents.adjust_gas(GAS_N2, MolesForPressure())
 	src.update_icon()
 	return 1
 
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide/Initialize() //ChompEDIT New --> Initialize
 	..()
-	src.air_contents.adjust_gas("carbon_dioxide", MolesForPressure())
+	src.air_contents.adjust_gas(GAS_CO2, MolesForPressure())
 	src.update_icon()
 	return 1
 
@@ -446,7 +446,7 @@ update_flag
 /obj/machinery/portable_atmospherics/canister/air/Initialize() //ChompEDIT New --> Initialize
 	..()
 	var/list/air_mix = StandardAirMix()
-	src.air_contents.adjust_multi("oxygen", air_mix["oxygen"], "nitrogen", air_mix["nitrogen"])
+	src.air_contents.adjust_multi(GAS_O2, air_mix[GAS_O2], GAS_N2, air_mix[GAS_N2])
 
 	src.update_icon()
 	return 1
@@ -455,19 +455,19 @@ update_flag
 // Special types used for engine setup admin verb, they contain double amount of that of normal canister.
 /obj/machinery/portable_atmospherics/canister/nitrogen/engine_setup/Initialize() //ChompEDIT New --> Initialize
 	..()
-	src.air_contents.adjust_gas("nitrogen", MolesForPressure())
+	src.air_contents.adjust_gas(GAS_N2, MolesForPressure())
 	src.update_icon()
 	return 1
 
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide/engine_setup/Initialize() //ChompEDIT New --> Initialize
 	..()
-	src.air_contents.adjust_gas("carbon_dioxide", MolesForPressure())
+	src.air_contents.adjust_gas(GAS_CO2, MolesForPressure())
 	src.update_icon()
 	return 1
 
 /obj/machinery/portable_atmospherics/canister/phoron/engine_setup/Initialize() //ChompEDIT New --> Initialize
 	..()
-	src.air_contents.adjust_gas("phoron", MolesForPressure())
+	src.air_contents.adjust_gas(GAS_PHORON, MolesForPressure())
 	src.update_icon()
 	return 1
 

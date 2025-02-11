@@ -1,0 +1,176 @@
+2024-12-01:
+  CHOMPStation2StaffMirrorBot:
+  - qol: Strange Rocks can now generate Research Samples when broken apart.
+  - qol: Blender UI opens even when there's only one choice
+  - rscadd: Basic appliances (the mixer only I think?) now has a radial menu
+  - rscadd: Power/safety/change output buttons for cookers
+  - bugfix: Radial menus now layer properly
+  - refactor: Radial menus updated to /tg/ latest
+  - rscadd: Microwave UI now tells you what it's going to make... or at least try
+      to make
+  - rscadd: pAI cards put into a machine are allowed to attack_ai() their machine
+  - qol: capped the max hallucinations space ghosts can inflict with their attacks,
+      and reduced the amount applied
+  - qol: adjusted mining spawns on SD asteroids
+2024-12-02:
+  CHOMPStation2StaffMirrorBot:
+  - qol: ZAS refactored a bit.
+2024-12-04:
+  Hunter-Dovetail:
+  - rscadd: dragon_upperjaw
+  - rscadd: dragon_lowerjaw
+  - rscadd: hippo_upperjaw
+  - rscadd: hippo_lowerjaw
+  - bugfix: VBO_maw26.dmi
+  Kashargul:
+  - bugfix: some headset code from the refactor
+  Missile597:
+  - maptweak: Added some lights in darker areas of medical
+  - maptweak: Fixed the genetics sorter so the lab is no longer a dumping ground and
+      deliveries will now work
+  - maptweak: Added a bottle of Adranol pills and a bottle of Mutagen to give some
+      starting chems and hints for viro. Also added some phoron and a grinder for
+      same reason.
+  - maptweak: Added the sign by viro disposals reminding people that it goes into
+      space
+  - maptweak: Added the viro requests console back into viro
+  - maptweak: Fixed the chemistry tables
+  - maptweak: Finally moved Erik's Lungs out of the way
+  - maptweak: Added a flu culture to the maints loot with the cold culture
+  - maptweak: Adds droppers to viro
+  - maptweak: Replaced the chem dispenser in xenobotany with 2 bottles of Diethylamine
+      and 2 bottles of Mutagen
+  - maptweak: Removed xenobiology's chem dispenser and halved the starting phoron
+      stacks
+  - maptweak: Removed the chem master and dispenser from the science ship and replaced
+      it with an RnD console and Destructive analyser
+  - maptweak: Removed the chemistry lab in xenoarch - the lab already has a massive
+      coolant supply. Added a sulphuric acid dispenser in its place
+  - maptweak: Removes the crew monitor from xenoarch
+2024-12-05:
+  Kashargul:
+  - bugfix: ai robot module list
+2024-12-06:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: You can now de and reconstruct all parts of an airlock.
+  - rscadd: Ability to set tags on different airlock parts (button, sensor, vent pumps)
+      with a multitool.
+2024-12-07:
+  Kashargul:
+  - bugfix: liquid transfer not working when the partner's vorgan had no reagent datum
+      before
+  - bugfix: 'limit check respecting the belly reagent limit, not the character limit
+
+      fix reagent transfer between borgs and simple mobs'
+2024-12-08:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: pilot, explorer and centcomm headset types having different functions
+2024-12-09:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: appearance changer sub windows showing for the wrong player
+  - bugfix: appearance changer not able to edit tail colour 3 and wing colour 3
+  - bugfix: unusable sprite prototypes showing
+  - bugfix: trademark sign not working
+  - bugfix: multiple issues with the secondary ear slot
+  - bugfix: vore transform now checks the spont tf pref
+  - qol: borgs can easily toggle fake walls, curtains and take a look into others
+      mirrors
+  - qol: adjusted a slew of traffic events and added an assload of new generic ship
+      names, with most corps now using the generic names on top of their standard
+      lists
+  - rscdel: removed the ue-katish and vox marauders from events
+  - qol: removed widespread references to KHI, adjusting them to various appropriate
+      companies
+  - rscdel: purged the old busyspace module and replaced its contents entirely
+  FluffMedic:
+  - rscadd: More things to Tyr
+2024-12-10:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: adds "Stowaway" hole, a spin on the classic maint pred that lets you spawn
+      as your current character slot
+  Kashargul:
+  - code_imp: converts the remaining old spans to defines
+  TheCaramelion:
+  - bugfix: Fixed wormholes spawning in dorms
+  - bugfix: Fixed Infected Room event not happening
+  - code_imp: Moved hoarde events into the modular folder
+  - balance: Removed 25% chance of hoarde event failing
+2024-12-11:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: lurkers can now spawn with a backpack (inc. their rig module, for protean
+      lurkers)
+  - qol: lurkers now spawn with 200 thalers
+2024-12-12:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: rig host assimilation
+  - rscadd: maint lurkers, pAIs, and simplemobs now show in the chardir
+  - bugfix: Alt click menu now works under 516
+  - bugfix: Statbrowser scrollbar is colored correctly under 516
+2024-12-14:
+  Kashargul:
+  - bugfix: pitchblende using the wrong name
+2024-12-16:
+  Asher-42:
+  - rscadd: Dullahan engineer chassis code and scaling issue.
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: proteans can no longer hide and rest. You only can do one or the other
+2024-12-17:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: adds descriptions to supply packs that are visible in the terminal when
+      viewing the pack info
+  - qol: changes the 'C' icon in the terminal to show "Info"
+  - qol: fixes a few stray crate access restrictions that were wrongly assigned compared
+      to others
+  - qol: cleans up some duplicate supply pack defs
+  - bugfix: Export chatlog works under 516
+2024-12-21:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: 516 chat flickering
+2024-12-23:
+  Asher-42:
+  - rscadd: Added sloog ears
+  - rscadd: Added sloog shell
+  - rscadd: Added sloog taur body
+  - rscadd: Added sloog head
+  CHOMPStation2StaffMirrorBot:
+  - qol: 516 clients are served an Edge-optimized bundle.
+  Colfer1:
+  - bugfix: fixed exploit allowing vr users to escape into the real world
+  Kashargul:
+  - admin: fix admin resize
+  tacoguy7765093:
+  - bugfix: paralysis toxin now commits paralysis.
+2024-12-24:
+  tacoguy7765093:
+  - maptweak: Fixed the SDF corvettes docking issues,
+2024-12-27:
+  Fracshun:
+  - qol: Death messages of the original body during Mob TF are now muffled
+  - bugfix: Body swapping no longer links life state
+2024-12-28:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: '"Launch" button to vore panel, ejects occupant and throws them three
+      tiles in the direction you''re facing.'
+2024-12-29:
+  TheCaramelion:
+  - bugfix: fixed medical holo-barriers throwing false positives
+2024-12-30:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: 516 webroot css assets not working
+  - refactor: Sorted assets into their own files for cleanliness.
+  NickBelmont:
+  - rscadd: Timeclock app to the set of default PDA applications
+  - rscadd: AREA_ALLOW_CLOCKOUT flag for setting which areas allow players to clock
+      out using the pda timeclock
+  Scarlet-Oduko:
+  - rscadd: colorable no-antennae moth wings
+  - bugfix: Deathhead moth wings no longer visually clip in and out due to random
+      frame
+2024-12-31:
+  Kashargul:
+  - bugfix: apparently some fire issues
+  TheCaramelion:
+  - qol: Fire is a proper danger now
+  - rscadd: Electrical Fire event
+  tacoguy7765093:
+  - rscadd: Added /effect/instantboom and subtypes for eventmins.

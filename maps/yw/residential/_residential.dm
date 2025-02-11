@@ -52,8 +52,8 @@
 
 
 /obj/structure/table/leadreinforcedwood/New()
-    material = get_material_by_name("lead")
-    reinforced = get_material_by_name("wood")
+    material = get_material_by_name(MAT_LEAD)
+    reinforced = get_material_by_name(MAT_WOOD)
     ..()
 
 // Spawn points

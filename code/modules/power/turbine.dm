@@ -124,7 +124,7 @@
 	if(default_deconstruction_crowbar(user, W))
 		return
 	if(istype(W, /obj/item/multitool))
-		var/new_ident = tgui_input_text(usr, "Enter a new ident tag.", name, comp_id, MAX_NAME_LEN)
+		var/new_ident = tgui_input_text(user, "Enter a new ident tag.", name, comp_id, MAX_NAME_LEN)
 		new_ident = sanitize(new_ident,MAX_NAME_LEN)
 		if(new_ident && user.Adjacent(src))
 			comp_id = new_ident
@@ -291,8 +291,8 @@
 	var/t = "<TT><B>Gas Turbine Generator</B><HR><PRE>"
 	t += "Generated power : [DisplayPower(lastgen)]<BR><BR>"
 	t += "Turbine: [round(compressor.rpm)] RPM<BR>"
-	t += "Starter: [ compressor.starter ? "<A href='?src=\ref[src];str=1'>Off</A> " + span_bold("On") : span_bold("Off") + " <A href='?src=\ref[src];str=1'>On</A>"]"
-	t += "</PRE><HR><A href='?src=\ref[src];close=1'>Close</A>"
+	t += "Starter: [ compressor.starter ? "<A href='byond://?src=\ref[src];str=1'>Off</A> " + span_bold("On") : span_bold("Off") + " <A href='byond://?src=\ref[src];str=1'>On</A>"]"
+	t += "</PRE><HR><A href='byond://?src=\ref[src];close=1'>Close</A>"
 	t += "</TT>"
 	var/datum/browser/popup = new(user, "turbine", name, 700, 500, src)
 	popup.set_content(t)
@@ -338,7 +338,7 @@
 
 /obj/machinery/computer/turbine_computer/attackby(obj/item/W, mob/user)
 	if(istype(W, /obj/item/multitool))
-		var/new_ident = tgui_input_text(usr, "Enter a new ident tag.", name, id, MAX_NAME_LEN)
+		var/new_ident = tgui_input_text(user, "Enter a new ident tag.", name, id, MAX_NAME_LEN)
 		new_ident = sanitize(new_ident,MAX_NAME_LEN)
 		if(new_ident && user.Adjacent(src))
 			id = new_ident

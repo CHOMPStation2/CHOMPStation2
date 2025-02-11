@@ -29,7 +29,7 @@
 /obj/item/slime_extract/New()
 	..()
 	create_reagents(5)
-//	reagents.add_reagent("slimejelly", 30)
+//	reagents.add_reagent(REAGENT_ID_SLIMEJELLY, 30)
 
 /obj/item/slime_extract/grey
 	name = "grey slime extract"
@@ -151,7 +151,7 @@
 
 	qdel(M)
 
-	var/newname = sanitize(input(user, "Would you like to give the slime a name?", "Name your new pet", "pet slime") as null|text, MAX_NAME_LEN)
+	var/newname = sanitize(tgui_input_text(user, "Would you like to give the slime a name?", "Name your new pet", "pet slime", MAX_NAME_LEN))
 
 	if (!newname)
 		newname = "pet slime"
@@ -203,7 +203,7 @@
 		pet.colour = "[M.colour]"
 		to_chat(user, "You feed the slime the potion, removing it's powers and calming it.")
 		qdel(M)
-		var/newname = sanitize(input(user, "Would you like to give the slime a name?", "Name your new pet", "pet slime") as null|text, MAX_NAME_LEN)
+		var/newname = sanitize(tgui_input_text(user, "Would you like to give the slime a name?", "Name your new pet", "pet slime", MAX_NAME_LEN))
 
 		if (!newname)
 			newname = "pet slime"
@@ -358,8 +358,8 @@
 
 /obj/item/reagent_containers/food/snacks/egg/slime/Initialize()
 	. = ..()
-	reagents.add_reagent("nutriment", 4)
-	reagents.add_reagent("slimejelly", 1)
+	reagents.add_reagent(REAGENT_ID_NUTRIMENT, 4)
+	reagents.add_reagent(REAGENT_ID_SLIMEJELLY, 1)
 	addtimer(CALLBACK(src, PROC_REF(Grow)), rand(120 SECONDS, 150 SECONDS))
 
 /obj/item/reagent_containers/food/snacks/egg/slime/proc/Grow()

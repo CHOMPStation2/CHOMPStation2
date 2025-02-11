@@ -560,7 +560,7 @@
 /obj/item/bedsheet/orange,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/wood.dmi';
-	icon_state = "wood_broken1"
+	icon_state = "wood-broken1"
 	},
 /area/skipjack_station)
 "acP" = (
@@ -1277,61 +1277,61 @@
 /obj/item/ammo_magazine/m16/rubber,
 /obj/item/ammo_magazine/m16/rubber,
 /obj/item/ammo_magazine/m16/rubber,
-/obj/item/ammo_magazine/a57p90,
-/obj/item/ammo_magazine/a57p90,
-/obj/item/ammo_magazine/a57p90,
-/obj/item/ammo_magazine/a57p90,
-/obj/item/ammo_magazine/a57p90,
-/obj/item/ammo_magazine/a57p90,
-/obj/item/ammo_magazine/a57p90,
-/obj/item/ammo_magazine/a57p90,
-/obj/item/ammo_magazine/a57p90,
-/obj/item/ammo_magazine/a57p90,
-/obj/item/ammo_magazine/a57p90,
-/obj/item/ammo_magazine/a57p90,
-/obj/item/ammo_magazine/a57p90,
-/obj/item/ammo_magazine/a57p90,
-/obj/item/ammo_magazine/a57p90,
-/obj/item/ammo_magazine/a57p90,
-/obj/item/ammo_magazine/a57p90,
-/obj/item/ammo_magazine/a57p90,
-/obj/item/ammo_magazine/a57p90,
-/obj/item/ammo_magazine/a57p90,
-/obj/item/ammo_magazine/a57p90,
-/obj/item/ammo_magazine/a57p90,
-/obj/item/ammo_magazine/a57p90,
-/obj/item/ammo_magazine/a57p90,
-/obj/item/ammo_magazine/a57p90,
-/obj/item/ammo_magazine/a57p90,
-/obj/item/ammo_magazine/a57p90,
-/obj/item/ammo_magazine/a57p90,
-/obj/item/ammo_magazine/a57p90,
-/obj/item/ammo_magazine/a57p90,
-/obj/item/ammo_magazine/a57p90,
-/obj/item/ammo_magazine/a57p90,
-/obj/item/ammo_magazine/a57p90,
-/obj/item/ammo_magazine/a57p90,
-/obj/item/ammo_magazine/a57p90/rubber,
-/obj/item/ammo_magazine/a57p90/rubber,
-/obj/item/ammo_magazine/a57p90/rubber,
-/obj/item/ammo_magazine/a57p90/rubber,
-/obj/item/ammo_magazine/a57p90/rubber,
-/obj/item/ammo_magazine/a57p90/rubber,
-/obj/item/ammo_magazine/a57p90/rubber,
-/obj/item/ammo_magazine/a57p90/rubber,
-/obj/item/ammo_magazine/a57p90/rubber,
-/obj/item/ammo_magazine/a57p90/rubber,
-/obj/item/ammo_magazine/a57p90/rubber,
-/obj/item/ammo_magazine/a57p90/rubber,
-/obj/item/ammo_magazine/a57p90/rubber,
-/obj/item/ammo_magazine/a57p90/rubber,
-/obj/item/ammo_magazine/a57p90/rubber,
-/obj/item/ammo_magazine/a57p90/rubber,
-/obj/item/ammo_magazine/a57p90/rubber,
-/obj/item/ammo_magazine/a57p90/rubber,
-/obj/item/ammo_magazine/a57p90/rubber,
-/obj/item/ammo_magazine/a57p90/rubber,
-/obj/item/ammo_magazine/a57p90/rubber,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90/rubber,
+/obj/item/ammo_magazine/m9mmp90/rubber,
+/obj/item/ammo_magazine/m9mmp90/rubber,
+/obj/item/ammo_magazine/m9mmp90/rubber,
+/obj/item/ammo_magazine/m9mmp90/rubber,
+/obj/item/ammo_magazine/m9mmp90/rubber,
+/obj/item/ammo_magazine/m9mmp90/rubber,
+/obj/item/ammo_magazine/m9mmp90/rubber,
+/obj/item/ammo_magazine/m9mmp90/rubber,
+/obj/item/ammo_magazine/m9mmp90/rubber,
+/obj/item/ammo_magazine/m9mmp90/rubber,
+/obj/item/ammo_magazine/m9mmp90/rubber,
+/obj/item/ammo_magazine/m9mmp90/rubber,
+/obj/item/ammo_magazine/m9mmp90/rubber,
+/obj/item/ammo_magazine/m9mmp90/rubber,
+/obj/item/ammo_magazine/m9mmp90/rubber,
+/obj/item/ammo_magazine/m9mmp90/rubber,
+/obj/item/ammo_magazine/m9mmp90/rubber,
+/obj/item/ammo_magazine/m9mmp90/rubber,
+/obj/item/ammo_magazine/m9mmp90/rubber,
+/obj/item/ammo_magazine/m9mmp90/rubber,
 /obj/item/cell/vepr,
 /obj/item/cell/vepr,
 /obj/item/cell/vepr,
@@ -2158,7 +2158,7 @@
 "bzT" = (
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/wood.dmi';
-	icon_state = "wood_broken3"
+	icon_state = "wood-broken3"
 	},
 /area/skipjack_station)
 "bAn" = (
@@ -4081,7 +4081,7 @@
 /obj/item/target/alien,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/wood.dmi';
-	icon_state = "wood_broken2"
+	icon_state = "wood-broken2"
 	},
 /area/ninja_dojo/dojo)
 "dCj" = (
@@ -11453,10 +11453,7 @@
 	},
 /area/centcom/living)
 "mcF" = (
-/turf/unsimulated/wall{
-	icon = 'icons/misc/title.dmi';
-	icon_state = "title"
-	},
+/turf/unsimulated/wall,
 /area/space)
 "mcT" = (
 /turf/simulated/floor/holofloor/lino,
@@ -11616,7 +11613,7 @@
 	},
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/wood.dmi';
-	icon_state = "wood_broken2"
+	icon_state = "wood-broken2"
 	},
 /area/skipjack_station)
 "moz" = (
@@ -14875,7 +14872,6 @@
 	dir = 8
 	},
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = 32
 	},
 /turf/simulated/floor/carpet,
@@ -15965,50 +15961,50 @@
 /obj/item/gun/projectile/revolver/saa,
 /obj/item/gun/projectile/revolver/saa,
 /obj/item/gun/projectile/revolver/saa,
-/obj/item/ammo_magazine/s45lc/rifle,
-/obj/item/ammo_magazine/s45lc/rifle,
-/obj/item/ammo_magazine/s45lc/rifle,
-/obj/item/ammo_magazine/s45lc/rifle,
-/obj/item/ammo_magazine/s45lc/rifle,
-/obj/item/ammo_magazine/s45lc/rifle,
-/obj/item/ammo_magazine/s45lc/rifle,
-/obj/item/ammo_magazine/s45lc/rifle,
-/obj/item/ammo_magazine/s45lc/rifle,
-/obj/item/ammo_magazine/s45lc/rifle,
-/obj/item/ammo_magazine/s45lc/rifle,
-/obj/item/ammo_magazine/s45lc/rifle,
-/obj/item/ammo_magazine/s45lc/rifle,
-/obj/item/ammo_magazine/s45lc/rifle,
-/obj/item/ammo_magazine/s45lc/rifle,
-/obj/item/ammo_magazine/s45lc/rifle,
-/obj/item/ammo_magazine/s45lc/rifle,
-/obj/item/ammo_magazine/s45lc/rifle,
-/obj/item/ammo_magazine/s45lc/rifle,
-/obj/item/ammo_magazine/s45lc/rifle,
-/obj/item/ammo_magazine/s45lc/rifle,
-/obj/item/ammo_magazine/s45lc/rifle,
-/obj/item/ammo_magazine/s45lc/rifle,
-/obj/item/ammo_magazine/s45lc/rifle,
-/obj/item/ammo_magazine/s45lc/rifle,
-/obj/item/ammo_magazine/s45lc/rifle,
-/obj/item/ammo_magazine/s45lc/rifle,
-/obj/item/ammo_magazine/s45lc/rifle,
-/obj/item/ammo_magazine/s45lc/rifle,
-/obj/item/ammo_magazine/s45lc/rifle,
-/obj/item/ammo_magazine/s45lc/rifle,
-/obj/item/ammo_magazine/s45lc/rifle,
-/obj/item/ammo_magazine/s45lc/rifle,
-/obj/item/ammo_magazine/s45lc/rifle,
-/obj/item/ammo_magazine/s45lc/rifle,
-/obj/item/ammo_magazine/s45lc/rifle,
-/obj/item/ammo_magazine/s45lc/rifle,
-/obj/item/ammo_magazine/s45lc/rifle,
-/obj/item/ammo_magazine/s45lc/rifle,
-/obj/item/ammo_magazine/s45lc/rifle,
-/obj/item/ammo_magazine/s45lc/rifle,
-/obj/item/ammo_magazine/s45lc/rifle,
-/obj/item/ammo_magazine/s45lc/rifle,
-/obj/item/ammo_magazine/s45lc/rifle,
+/obj/item/ammo_magazine/s45,
+/obj/item/ammo_magazine/s45,
+/obj/item/ammo_magazine/s45,
+/obj/item/ammo_magazine/s45,
+/obj/item/ammo_magazine/s45,
+/obj/item/ammo_magazine/s45,
+/obj/item/ammo_magazine/s45,
+/obj/item/ammo_magazine/s45,
+/obj/item/ammo_magazine/s45,
+/obj/item/ammo_magazine/s45,
+/obj/item/ammo_magazine/s45,
+/obj/item/ammo_magazine/s45,
+/obj/item/ammo_magazine/s45,
+/obj/item/ammo_magazine/s45,
+/obj/item/ammo_magazine/s45,
+/obj/item/ammo_magazine/s45,
+/obj/item/ammo_magazine/s45,
+/obj/item/ammo_magazine/s45,
+/obj/item/ammo_magazine/s45,
+/obj/item/ammo_magazine/s45,
+/obj/item/ammo_magazine/s45,
+/obj/item/ammo_magazine/s45,
+/obj/item/ammo_magazine/s45,
+/obj/item/ammo_magazine/s45,
+/obj/item/ammo_magazine/s45,
+/obj/item/ammo_magazine/s45,
+/obj/item/ammo_magazine/s45,
+/obj/item/ammo_magazine/s45,
+/obj/item/ammo_magazine/s45,
+/obj/item/ammo_magazine/s45,
+/obj/item/ammo_magazine/s45,
+/obj/item/ammo_magazine/s45,
+/obj/item/ammo_magazine/s45,
+/obj/item/ammo_magazine/s45,
+/obj/item/ammo_magazine/s45,
+/obj/item/ammo_magazine/s45,
+/obj/item/ammo_magazine/s45,
+/obj/item/ammo_magazine/s45,
+/obj/item/ammo_magazine/s45,
+/obj/item/ammo_magazine/s45,
+/obj/item/ammo_magazine/s45,
+/obj/item/ammo_magazine/s45,
+/obj/item/ammo_magazine/s45,
+/obj/item/ammo_magazine/s45,
 /turf/simulated/floor/redgrid/animated,
 /area/centcom/specops)
 "rQe" = (
@@ -16513,7 +16509,7 @@
 /obj/machinery/space_heater,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/wood.dmi';
-	icon_state = "wood_broken3"
+	icon_state = "wood-broken3"
 	},
 /area/ninja_dojo/dojo)
 "ssX" = (
@@ -18654,7 +18650,7 @@
 "vco" = (
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/wood.dmi';
-	icon_state = "wood_broken1"
+	icon_state = "wood-broken1"
 	},
 /area/ninja_dojo/dojo)
 "vcz" = (

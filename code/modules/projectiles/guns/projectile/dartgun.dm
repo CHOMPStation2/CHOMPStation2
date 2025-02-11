@@ -108,7 +108,7 @@
 				for(var/datum/reagent/R in B.reagents.reagent_list)
 					. += span_notice("[R.volume] units of [R.name]")
 
-/obj/item/gun/projectile/dartgun/attackby(obj/item/I as obj, mob/user as mob)
+/obj/item/gun/projectile/dartgun/attackby(obj/item/I, mob/user)
 	if(istype(I, /obj/item/reagent_containers/glass))
 		if(!istype(I, container_type))
 			to_chat(user, span_blue("[I] doesn't seem to fit into [src]."))
@@ -121,7 +121,7 @@
 		B.loc = src
 		beakers += B
 		to_chat(user, span_blue("You slot [B] into [src]."))
-		src.updateUsrDialog()
+		updateUsrDialog(user)
 		return 1
 	..()
 
@@ -144,12 +144,12 @@
 				for(var/datum/reagent/R in B.reagents.reagent_list)
 					dat += "<br>    [R.volume] units of [R.name], "
 				if (check_beaker_mixing(B))
-					dat += text("<A href='?src=\ref[src];stop_mix=[i]'><font color='green'>Mixing</font></A> ")
+					dat += text("<A href='byond://?src=\ref[src];stop_mix=[i]'><font color='green'>Mixing</font></A> ")
 				else
-					dat += text("<A href='?src=\ref[src];mix=[i]'><font color='red'>Not mixing</font></A> ")
+					dat += text("<A href='byond://?src=\ref[src];mix=[i]'><font color='red'>Not mixing</font></A> ")
 			else
 				dat += "nothing."
-			dat += " \[<A href='?src=\ref[src];eject=[i]'>Eject</A>\]<br>"
+			dat += " \[<A href='byond://?src=\ref[src];eject=[i]'>Eject</A>\]<br>"
 			i++
 	else
 		dat += "There are no beakers inserted!<br><br>"
@@ -159,9 +159,9 @@
 			dat += "The dart cartridge has [ammo_magazine.stored_ammo.len] shots remaining."
 		else
 			dat += "<font color='red'>The dart cartridge is empty!</font>"
-		dat += " \[<A href='?src=\ref[src];eject_cart=1'>Eject</A>\]"
+		dat += " \[<A href='byond://?src=\ref[src];eject_cart=1'>Eject</A>\]"
 
-	user << browse(dat, "window=dartgun")
+	user << browse("<html>[dat]</html>", "window=dartgun")
 	onclose(user, "dartgun", src)
 
 /obj/item/gun/projectile/dartgun/proc/check_beaker_mixing(var/obj/item/B)
@@ -197,7 +197,7 @@
 				B.loc = get_turf(src)
 	else if (href_list["eject_cart"])
 		unload_ammo(usr)
-	src.updateUsrDialog()
+	src.updateUsrDialog(usr)
 	return
 
 ///Variants of the Dartgun and Chemdarts.///

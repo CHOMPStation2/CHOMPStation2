@@ -113,7 +113,7 @@
 	desc = "A prototype version of the advanced health analyzer, able to distinguish the location of more serious injuries as well as accurately determine radiation levels, and neurological analysis suites. This analyzer even picks up chemicals in the patient's stomach."
 	id = "phasic_analyzer"
 	req_tech = list(TECH_MAGNET = 7, TECH_BIO = 8, TECH_BLUESPACE = 6, TECH_PHORON = 5)
-	materials = list(DEFAULT_WALL_MATERIAL = 2000, "glass" = 1000, "silver" = 1500, "gold" = 2000, "uranium" = 1250, "diamond" = 750, "phoron" = 500, "plastic" = 1000, "osmium" = 500)
+	materials = list(DEFAULT_WALL_MATERIAL = 2000, MAT_GLASS = 1000, MAT_SILVER = 1500, MAT_GOLD = 2000, MAT_URANIUM = 1250, MAT_DIAMOND = 750, MAT_PHORON = 500, MAT_PLASTIC = 1000, MAT_OSMIUM = 500)
 	build_path = /obj/item/healthanalyzer/phasic
 	sort_string = "KBAAD"
 
@@ -121,7 +121,7 @@
 	desc = "A massive body bag made with bluespace tech."
 	id = "large_bodybag"
 	req_tech = list( TECH_ENGINEERING = 3, TECH_BIO = 5, TECH_BLUESPACE = 3)
-	materials = list(DEFAULT_WALL_MATERIAL = 3500, "glass" = 500, "phoron" = 4000, "plastic" = 18000) //2 phoron and 9 plastic sheets.
+	materials = list(DEFAULT_WALL_MATERIAL = 3500, MAT_GLASS = 500, MAT_PHORON = 4000, MAT_PLASTIC = 18000) //2 phoron and 9 plastic sheets.
 	build_path = /obj/item/bodybag/large
 	sort_string = "KCAAB" //To be under the roller bed
 //End of YAWN changes

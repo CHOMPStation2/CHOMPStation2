@@ -18,7 +18,7 @@ SUBSYSTEM_DEF(lighting)
 	return ..()
 
 
-/datum/controller/subsystem/lighting/Initialize() // CHOMPEdit
+/datum/controller/subsystem/lighting/Initialize()
 	if(!subsystem_initialized)
 		if (CONFIG_GET(flag/starlight))
 			for(var/area/A in world)
@@ -37,7 +37,7 @@ SUBSYSTEM_DEF(lighting)
 	fire(FALSE, TRUE)
 	sunlight_queue_active += sunlight_queue + sunlight_queue //CHOMPEdit Run through shandler's twice during lobby wait to get some initial computation out of the way. After these two, the sunlight system will run MUCH faster.
 
-	return SS_INIT_SUCCESS // CHOMPEdit
+	return SS_INIT_SUCCESS
 
 /datum/controller/subsystem/lighting/fire(resumed, init_tick_checks)
 	MC_SPLIT_TICK_INIT(4)

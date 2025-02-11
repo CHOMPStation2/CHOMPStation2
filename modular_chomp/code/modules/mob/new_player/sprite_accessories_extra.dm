@@ -145,19 +145,6 @@
 	hide_body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG)
 	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_GROIN)
 
-/datum/sprite_accessory/marking/ch/sect_drone
-	name = "Sect Drone Bodytype"
-	icon_state = "sectdrone"
-	color_blend_mode = ICON_MULTIPLY
-	hide_body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_GROIN,BP_TORSO,BP_HEAD)
-	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_GROIN,BP_TORSO,BP_HEAD)
-
-/datum/sprite_accessory/marking/ch/sect_drone_eyes
-	name = "Sect Drone Eyes"
-	icon_state = "sectdrone_eyes"
-	color_blend_mode = ICON_MULTIPLY
-	body_parts = list(BP_HEAD)
-
 /datum/sprite_accessory/marking/ch/thickneck
 	name = "Thick Neck"
 	icon_state = "thickneck"
@@ -214,11 +201,26 @@
 	name = "Reptile Breasts"
 	icon_state = "breasts_reptile"
 
-/datum/sprite_accessory/marking/ch/hippo_head
-	name = "Hippo Snout"
-	icon_state = "hippo_head"
+/datum/sprite_accessory/marking/ch/dragon_upperjaw
+	name = "Dragon Upper Jaw"
+	icon_state = "dragon_upperjaw"
 	body_parts = list(BP_HEAD)
 	color_blend_mode = ICON_MULTIPLY
+
+
+/datum/sprite_accessory/marking/ch/dragon_lowerjaw
+	name = "Dragon Lower Jaw"
+	icon_state = "dragon_lowerjaw"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/marking/ch/scaled_belly
+	name = "Scaled Belly"
+	icon_state = "scaled_belly"
+	hide_body_parts = list(BP_L_LEG,BP_R_LEG,BP_L_HAND,BP_R_HAND,BP_L_LEG,BP_R_LEG,BP_GROIN)
+	body_parts = list(BP_TORSO)
+	color_blend_mode = ICON_MULTIPLY
+
 
 /datum/sprite_accessory/marking/ch/trex_upperjaw
 	name = "T-Rex Upper Jaw"
@@ -245,6 +247,82 @@
 	color_blend_mode = ICON_MULTIPLY
 
 
+/datum/sprite_accessory/marking/ch/crocodile_neck
+	name = "Crocodile Neck"
+	icon_state = "crocodile_neck"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/marking/ch/bovine_snout
+	name = "Bovine Snout"
+	icon_state = "bovine_snout"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/marking/ch/bovine_nose
+	name = "Bovine Nose"
+	icon_state = "bovine_nose"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/marking/ch/horse_head
+	name = "Horse Snout"
+	icon_state = "horse_head"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/marking/ch/horse_muzzle
+	name = "Horse Muzzle"
+	icon_state = "horse_muzzle"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/marking/ch/horse_eyes
+	name = "Horse Eyes"
+	icon_state = "horse_eyes"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/marking/ch/horse_fringe
+	name = "Horse Fringe"
+	icon_state = "horse_fringe"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/marking/ch/smallchubbybelly
+	name = "Chubby Belly, Small"
+	icon_state = "smallchubbybelly"
+	hide_body_parts = list(BP_L_LEG,BP_R_LEG,BP_L_HAND,BP_R_HAND,BP_L_LEG,BP_R_LEG,BP_GROIN)
+	body_parts = list(BP_TORSO,BP_GROIN,BP_L_HAND,BP_R_HAND)
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/marking/ch/six_pack
+	name = "Six Pack"
+	icon_state = "six_pack"
+	hide_body_parts = list(BP_L_LEG,BP_R_LEG,BP_GROIN)
+	body_parts = list(BP_TORSO,BP_GROIN)
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/marking/ch/hippo_upperjaw
+	name = "Hippo Upper Jaw"
+	icon_state = "hippo_upperjaw"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/marking/ch/hippo_lowerjaw
+	name = "Hippo Lower Jaw"
+	icon_state = "hippo_lowerjaw"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+
+
+/datum/sprite_accessory/marking/ch/sloog_head
+	name = "sloog head"
+	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/sloog.dmi'
+	icon_state = "sloog"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+	// placed in seperate dmi till normal one is functional.
 
 
 /// NEW XENOMORPH SPRITE_ACCESSORIES - Basesprites borrowed from Citadel and tidied up by Makkinindorn, should blend a bit more nicely. ///
@@ -252,7 +330,7 @@
 /datum/sprite_accessory/marking/ch/xenomorph // This is just here to create an easy-to-follow typepath.
 	icon = 'icons/mob/human_races/markings_ch.dmi'
 	color_blend_mode = ICON_MULTIPLY
-	species_allowed = list(SPECIES_HUMAN, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE) // Anyone can use these.
+	species_allowed = list(SPECIES_HUMAN, SPECIES_UNATHI, SPECIES_TAJARAN, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE) // Anyone can use these.
 
 // LIMBS //
 
@@ -288,36 +366,13 @@
 
 // DIGI LEGS //
 
-/datum/sprite_accessory/marking/ch/xenomorph/digi_r_leg
-	name = "Xenomorph right leg (digitigrade)"
+/datum/sprite_accessory/marking/ch/xenomorph/digi_legs
+	name = "Xenomorph legs (digitigrade)"
 	icon = 'icons/mob/human_races/markings_digi.dmi'
 	icon_state = "xeno_digi"
 	digitigrade_acceptance = MARKING_DIGITIGRADE_ONLY
-	body_parts = list(BP_R_LEG, BP_R_FOOT)
-
-/datum/sprite_accessory/marking/ch/xenomorph/digi_r_leg_hidden
-	name = "Xenomorph right leg (digitigrade, hide)"
-	icon = 'icons/mob/human_races/markings_digi.dmi'
-	icon_state = "xeno_digi"
-	digitigrade_acceptance = MARKING_DIGITIGRADE_ONLY
-	body_parts = list(BP_R_LEG, BP_R_FOOT)
-	hide_body_parts = list(BP_R_LEG, BP_R_FOOT)
-
-/datum/sprite_accessory/marking/ch/xenomorph/digi_l_leg
-	name = "Xenomorph left leg (digitigrade)"
-	icon = 'icons/mob/human_races/markings_digi.dmi'
-	icon_state = "xeno_digi"
-	digitigrade_acceptance = MARKING_DIGITIGRADE_ONLY
-	body_parts = list(BP_L_LEG, BP_L_FOOT)
-
-/datum/sprite_accessory/marking/ch/xenomorph/digi_l_leg_hidden
-	name = "Xenomorph left leg (digitigrade, hide)"
-	icon = 'icons/mob/human_races/markings_digi.dmi'
-	icon_state = "xeno_digi"
-	digitigrade_acceptance = MARKING_DIGITIGRADE_ONLY
-	body_parts = list(BP_L_LEG, BP_L_FOOT)
-	hide_body_parts = list(BP_L_LEG, BP_L_FOOT)
-
+	body_parts = list(BP_R_LEG, BP_L_LEG) //This needs BP_L_FOOT AND BP_R_FOOT added to it but the sprite has to be split for that. And it's an upstream .dmi. So you will have to fix it upstream.
+	hide_body_parts = list(BP_L_LEG, BP_L_FOOT, BP_R_LEG, BP_R_FOOT)
 
 // TORSOS //
 

@@ -19,12 +19,12 @@
 	icon_state = "wahcap"
 	item_state_slots = list(slot_r_hand_str = "wahcap", slot_l_hand_str = "wahcap")
 	icon = 'icons/obj/clothing/hats_ch.dmi'
-	icon_override = 'modular_chomp/icons/mob/head_ch.dmi'
+	icon_override = 'icons/mob/head.dmi'
 
 
 /obj/item/clothing/head/crown //Generic crown doesnt exist, no sprites
 	icon = 'icons/obj/clothing/hats_ch.dmi'
-	icon_override = 'modular_chomp/icons/mob/head_ch.dmi'
+	icon_override = 'icons/mob/head.dmi'
 	icon_state = "crown"
 	item_state = "crown"
 	name = "crown"
@@ -35,7 +35,7 @@
 	name = "Crown of the golden goose king"
 	desc = "It's the crown given to the goose king from the golden goose casino, what an honor!"
 	icon = 'icons/obj/clothing/hats_ch.dmi'
-	icon_override = 'modular_chomp/icons/mob/head_ch.dmi'
+	icon_override = 'icons/mob/head.dmi'
 	icon_state = "goose_king"
 	item_state = "goose_king"
 
@@ -48,7 +48,7 @@
 	name = "Crown of the golden goose queen"
 	desc = "It's the crown given to the goose queen from the golden goose casino, what an honor!"
 	icon = 'icons/obj/clothing/hats_ch.dmi'
-	icon_override = 'modular_chomp/icons/mob/head_ch.dmi'
+	icon_override = 'icons/mob/head.dmi'
 	icon_state = "goose_queen"
 	item_state = "goose_queen"
 
@@ -60,11 +60,12 @@
 	name = "Bear pelt"
 	desc = "A luxurious bear pelt, good to keep warm in winter. Or to sleep through winter."
 	icon = 'icons/obj/clothing/hats_ch.dmi'
-	icon_override = 'modular_chomp/icons/mob/head_ch.dmi'
+	icon_override = 'icons/mob/head.dmi'
 	icon_state = "bearpelt_brown"
 	item_state = "bearpelt_brown"
 
 /obj/item/clothing/head/pelt/black
+	icon=""
 	icon_state = "bearpelt_black"
 	item_state = "bearpelt_black"
 

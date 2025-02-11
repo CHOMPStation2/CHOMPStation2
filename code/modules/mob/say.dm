@@ -1,71 +1,52 @@
 /mob/proc/say(var/message, var/datum/language/speaking = null, var/whispering = 0)
 	return
 
-/mob/verb/whisper(message as text)  //CHOMPEdit
+/mob/verb/whisper(message as text)
 	set name = "Whisper"
-	// set category = "IC.Subtle" //CHOMPEdit
 	set hidden = 1
-	//VOREStation Addition Start
 	if(forced_psay)
 		psay(message)
 		return
-	//VOREStation Addition End
 
-	usr.say(message,whispering=1)
+	say(message,whispering=1)
 
-/mob/verb/say_verb(message as text) //CHOMPEdit
+/mob/verb/say_verb(message as text)
 	set name = "Say"
-	// set category = "IC.Chat" //CHOMPEdit
-	set instant = TRUE // CHOMPEdit
 	set hidden = 1
-	//VOREStation Addition Start
+	set instant = TRUE
+
 	if(forced_psay)
 		psay(message)
 		return
-	//VOREStation Addition End
 
 	client?.stop_thinking()
-	// CHOMPEdit Start
 	//queue this message because verbs are scheduled to process after SendMaps in the tick and speech is pretty expensive when it happens.
 	//by queuing this for next tick the mc can compensate for its cost instead of having speech delay the start of the next tick
 	if(message)
 		QUEUE_OR_CALL_VERB_FOR(VERB_CALLBACK(src, TYPE_PROC_REF(/mob, say), message), SSspeech_controller)
-	// CHOMPEdit End
 
-/mob/verb/me_verb(message as message) //CHOMPEdit
+/mob/verb/me_verb(message as message)
 	set name = "Me"
-	// set category = "IC.Chat" //CHOMPEdit
 	set desc = "Emote to nearby people (and your pred/prey)"
 	set hidden = 1
 
-	if(say_disabled)	//This is here to try to identify lag problems
-		to_chat(usr, span_red("Speech is currently admin-disabled."))
-		return
-	//VOREStation Addition Start
 	if(forced_psay)
 		pme(message)
 		return
-	//VOREStation Addition End
 
-	//VOREStation Edit Start
 	if(muffled)
 		return me_verb_subtle(message)
 	if(autowhisper)
 		return me_verb_subtle(message)
-	message = sanitize_or_reflect(message,src) //VOREStation Edit - Reflect too-long messages (within reason)
-	//VOREStation Edit End
+	message = sanitize_or_reflect(message,src) //Reflect too-long messages (within reason)
 
 	client?.stop_thinking()
 	if(use_me)
-		custom_emote(usr.emote_type, message)
+		custom_emote(emote_type, message)
 	else
-		usr.emote(message)
+		emote(message)
 
 /mob/proc/say_dead(var/message)
-	if(say_disabled)	//This is here to try to identify lag problems
-		to_chat(usr, span_danger("Speech is currently admin-disabled."))
-		return
-
 	if(!client)
 		return // Clientless mobs shouldn't be trying to talk in deadchat.
 
@@ -75,7 +56,7 @@
 			return
 
 	if(!client?.prefs?.read_preference(/datum/preference/toggle/show_dsay))
-		to_chat(usr, span_danger("You have deadchat muted."))
+		to_chat(src, span_danger("You have deadchat muted."))
 		return
 
 	message = encode_html_emphasis(message)
@@ -90,14 +71,12 @@
 	else if(universal_speak || universal_understand)
 		return TRUE
 
-	//VOREStation Addition Start
 	if(isliving(src))
 		var/mob/living/L = src
 		if(isbelly(L.loc) && L.absorbed)
 			var/mob/living/P = L.loc.loc
 			if(P.say_understands(other, speaking))
 				return TRUE
-	//VOREStation Addition End
 
 	//Languages are handled after.
 	if(!speaking)
@@ -118,9 +97,9 @@
 	if(speaking.flags & NONVERBAL)
 		if(sdisabilities & BLIND || blinded)
 			return FALSE
-		if(!other) //CHOMPEdit - Fixes seeing non-verbal languages while being held
+		if(!other)
 			return FALSE
-		//CHOMPEdit Start - Fixes seeing non-verbal languages while being held
+		// Fixes seeing non-verbal languages while being held
 		if(istype(other.loc, /obj/item/holder))
 			if(istype(src.loc, /obj/item/holder))
 				if(!(other.loc in view(src.loc.loc)))
@@ -132,7 +111,6 @@
 				return FALSE
 		else if((!other) in view(src))
 			return FALSE
-		//CHOMPEdit End
 
 	//Language check.
 	for(var/datum/language/L in languages)
@@ -197,7 +175,7 @@
 	var/list/prefixes = list() // [["Common", start, end], ["Gutter", start, end]]
 	for(var/i in 1 to length(message))
 		// This grabs 3 character substrings, to allow for up to 1 prefix, 1 letter language key, and one post-key character to more strictly control where the language breaks happen
-		var/selection = trim_right(copytext(message, i, i + 3)) // VOREStation Edit: We use uppercase keys to avoid Polaris key duplication, but this had lowertext() in it
+		var/selection = trim_right(copytext(message, i, i + 3)) // We use uppercase keys to avoid Polaris key duplication, but this had lowertext() in it
 		// The first character in the selection will always be the prefix (if this is a valid language invocation)
 		var/prefix = copytext(selection, 1, 2)
 		var/language_key = copytext(selection, 2, 3)

@@ -94,7 +94,7 @@
 	circuit = /obj/item/circuitboard/sleeper
 	var/mob/living/carbon/human/occupant = null
 	var/list/available_chemicals = list()
-	var/list/base_chemicals = list("inaprovaline" = "Inaprovaline", "paracetamol" = "Paracetamol", "anti_toxin" = "Dylovene", "dexalin" = "Dexalin")
+	var/list/base_chemicals = list(REAGENT_ID_INAPROVALINE = REAGENT_INAPROVALINE, REAGENT_ID_PARACETAMOL = REAGENT_PARACETAMOL, REAGENT_ID_ANTITOXIN = REAGENT_ANTITOXIN, REAGENT_ID_DEXALIN = REAGENT_DEXALIN)
 	var/amounts = list(5, 10)
 	var/obj/item/reagent_containers/glass/beaker = null
 	var/filtering = 0
@@ -149,18 +149,18 @@
 
 		if(man_rating >= 4) // Alien tech.
 			var/reag_ID = pickweight(list(
-				"healing_nanites" = 10,
-				"shredding_nanites" = 5,
-				"irradiated_nanites" = 5,
-				"neurophage_nanites" = 2)
+				REAGENT_ID_HEALINGNANITES = 10,
+				REAGENT_ID_SHREDDINGNANITES = 5,
+				REAGENT_ID_IRRADIATEDNANITES = 5,
+				REAGENT_ID_NEUROPHAGENANITES = 2)
 				)
 			new_chemicals[reag_ID] = "Nanite"
 		if(man_rating >= 3) // Anomalous tech.
-			new_chemicals["immunosuprizine"] = "Immunosuprizine"
+			new_chemicals[REAGENT_ID_IMMUNOSUPRIZINE] = REAGENT_IMMUNOSUPRIZINE
 		if(man_rating >= 2) // Tier 3.
-			new_chemicals["spaceacillin"] = "Spaceacillin"
+			new_chemicals[REAGENT_ID_SPACEACILLIN] = REAGENT_SPACEACILLIN
 		if(man_rating >= 1) // Tier 2.
-			new_chemicals["leporazine"] = "Leporazine"
+			new_chemicals[REAGENT_ID_LEPORAZINE] = REAGENT_LEPORAZINE
 
 		if(new_chemicals.len)
 			available_chemicals += new_chemicals
@@ -234,7 +234,7 @@
 		if(ishuman(occupant) && !(NO_BLOOD in occupant.species.flags) && occupant.vessel)
 			occupantData["pulse"] = occupant.get_pulse(GETPULSE_TOOL)
 			occupantData["hasBlood"] = 1
-			var/blood_volume = round(occupant.vessel.get_reagent_amount("blood"))
+			var/blood_volume = round(occupant.vessel.get_reagent_amount(REAGENT_ID_BLOOD))
 			occupantData["bloodLevel"] = blood_volume
 			occupantData["bloodMax"] = occupant.species.blood_volume
 			occupantData["bloodPercent"] = round(100*(blood_volume/occupant.species.blood_volume), 0.01) //copy pasta ends here
@@ -296,10 +296,10 @@
 /obj/machinery/sleeper/tgui_act(action, params, datum/tgui/ui, datum/tgui_state/state)
 	if(..())
 		return TRUE
-	if(!controls_inside && usr == occupant)
+	if(!controls_inside && ui.user == occupant)
 		return
 	if(panel_open)
-		to_chat(usr, span_notice("Close the maintenance panel first."))
+		to_chat(ui.user, span_notice("Close the maintenance panel first."))
 		return
 
 	. = TRUE
@@ -309,16 +309,16 @@
 				return
 			if(occupant.stat == DEAD)
 				var/datum/gender/G = gender_datums[occupant.get_visible_gender()]
-				to_chat(usr, span_danger("This person has no life to preserve anymore. Take [G.him] to a department capable of reanimating [G.him]."))
+				to_chat(ui.user, span_danger("This person has no life to preserve anymore. Take [G.him] to a department capable of reanimating [G.him]."))
 				return
 			var/chemical = params["chemid"]
 			var/amount = text2num(params["amount"])
 			if(!length(chemical) || amount <= 0)
 				return
 			if(occupant.health > min_health) //|| (chemical in emergency_chems))
-				inject_chemical(usr, chemical, amount)
+				inject_chemical(ui.user, chemical, amount)
 			else
-				to_chat(usr, span_danger("This person is not in good enough condition for sleepers to be effective! Use another means of treatment, such as cryogenics!"))
+				to_chat(ui.user, span_danger("This person is not in good enough condition for sleepers to be effective! Use another means of treatment, such as cryogenics!"))
 		if("removebeaker")
 			remove_beaker()
 		if("togglefilter")
@@ -328,7 +328,7 @@
 		if("ejectify")
 			go_out()
 		if("changestasis")
-			var/new_stasis = tgui_input_list(usr, "Levels deeper than 50% stasis level will render the patient unconscious.","Stasis Level", stasis_choices)
+			var/new_stasis = tgui_input_list(ui.user, "Levels deeper than 50% stasis level will render the patient unconscious.","Stasis Level", stasis_choices)
 			if(new_stasis)
 				stasis_level = stasis_choices[new_stasis]
 		if("auto_eject_dead_on")
@@ -337,7 +337,7 @@
 			auto_eject_dead = FALSE
 		else
 			return FALSE
-	add_fingerprint(usr)
+	add_fingerprint(ui.user)
 
 /obj/machinery/sleeper/process()
 	if(stat & (NOPOWER|BROKEN))

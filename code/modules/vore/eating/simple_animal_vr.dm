@@ -3,7 +3,7 @@
 	var/swallowTime = (3 SECONDS)		//How long it takes to eat its prey in 1/10 of a second. The default is 3 seconds.
 	var/list/prey_excludes = null		//For excluding people from being eaten.
 
-/mob/living/simple_mob/insidePanel() //CHOMPedit: On-demand belly loading.
+/mob/living/simple_mob/insidePanel() //On-demand belly loading.
 	if(vore_active && !voremob_loaded)
 		voremob_loaded = TRUE
 		init_vore()
@@ -17,9 +17,10 @@
 	set category = "Abilities.Vore" // Moving this to abilities from IC as it's more fitting there
 	set desc = "Since you can't grab, you get a verb!"
 
-	if(vore_active && !voremob_loaded) //CHOMPedit: On-demand belly loading.
+	if(vore_active && !voremob_loaded) // On-demand belly loading.
 		voremob_loaded = TRUE
 		init_vore()
+
 	if(stat != CONSCIOUS)
 		return
 	// Verbs are horrifying. They don't call overrides. So we're stuck with this.
@@ -33,7 +34,6 @@
 	feed_grabbed_to_self(src,T)
 	//update_icon() CHOMPEdit
 
-//CHOMPedit: On-demand belly loading.
 /mob/living/simple_mob/perform_the_nom(mob/living/user, mob/living/prey, mob/living/pred, obj/belly/belly, delay)
 	if(vore_active && !voremob_loaded && pred == src) //Only init your own bellies.
 		voremob_loaded = TRUE
@@ -127,9 +127,9 @@
 	set desc = "Slowly regenerate health using nutrition."
 
 	if(nutrition < 10)
-		to_chat(src, "<span class='warning'>You are too hungry to regenerate health.</span>")
+		to_chat(src, span_warning("You are too hungry to regenerate health."))
 		return
-	var/heal_amount = input(src, "Input the amount of health to regenerate at the rate of 10 nutrition per second per hitpoint. Current health: [health] / [maxHealth]", "Regenerate health.") as num|null
+	var/heal_amount = tgui_input_number(src, "Input the amount of health to regenerate at the rate of 10 nutrition per second per hitpoint. Current health: [health] / [maxHealth]", "Regenerate health.", 1, min_value=1)
 	if(!heal_amount)
 		return
 	heal_amount = CLAMP(heal_amount, 1, maxHealth - health)

@@ -31,7 +31,7 @@ SUBSYSTEM_DEF(statpanels)
 			"Map: [using_map.name]",
 			//cached ? "Next Map: [cached.map_name]" : null,
 			//"Next Map: -- Not Available --",
-			"Round ID: [GLOB.round_id ? GLOB.round_id : "NULL"]", // CHOMPEdit
+			"Round ID: [GLOB.round_id ? GLOB.round_id : "NULL"]",
 			"Server Time: [time2text(world.timeofday, "YYYY-MM-DD hh:mm:ss")]",
 			"Round Time: [roundduration2text()]",
 			"Station Date: [stationdate2text()], [capitalize(GLOB.world_time_season)]", // CHOMPEdit
@@ -428,8 +428,8 @@ SUBSYSTEM_DEF(statpanels)
 		COMSIG_MOB_LOGOUT = PROC_REF(on_mob_logout),
 	)
 	AddComponent(/datum/component/connect_mob_behalf, parent, connections)
-	RegisterSignal(parent.tracked_turf, COMSIG_ATOM_ENTERED, PROC_REF(turflist_changed))
-	RegisterSignal(parent.tracked_turf, COMSIG_ATOM_EXITED, PROC_REF(turflist_changed))
+	RegisterSignal(new_turf, COMSIG_ATOM_ENTERED, PROC_REF(turflist_changed))
+	RegisterSignal(new_turf, COMSIG_ATOM_EXITED, PROC_REF(turflist_changed))
 	parent.stat_panel.send_message("create_listedturf", new_turf)
 	parent.tracked_turf = new_turf
 

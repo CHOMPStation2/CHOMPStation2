@@ -32,7 +32,7 @@
 	id = "phazon_main"
 	req_tech = list(TECH_BLUESPACE = 5, TECH_MAGNET = 6, TECH_PHORON = 3, TECH_ARCANE = 1)
 	materials = list(MAT_GLASS = 2000, MAT_GRAPHITE = 1250)
-	chemicals = list("sacid" = 20)
+	chemicals = list(REAGENT_ID_SACID = 20)
 	build_path = /obj/item/circuitboard/mecha/phazon/main
 	sort_string = "PAADA"
 
@@ -41,7 +41,7 @@
 	id = "phazon_peri"
 	req_tech = list(TECH_BLUESPACE = 5, TECH_MAGNET = 6, TECH_PHORON = 3, TECH_ARCANE = 1)
 	materials = list(MAT_GLASS = 2000, MAT_GRAPHITE = 1250)
-	chemicals = list("sacid" = 20)
+	chemicals = list(REAGENT_ID_SACID = 20)
 	build_path = /obj/item/circuitboard/mecha/phazon/peripherals
 	sort_string = "PAADB"
 
@@ -50,6 +50,6 @@
 	id = "phazon_targ"
 	req_tech = list(TECH_BLUESPACE = 5, TECH_MAGNET = 6, TECH_PHORON = 3, TECH_ARCANE = 1, TECH_COMBAT = 5)
 	materials = list(MAT_GLASS = 2000, MAT_GRAPHITE = 1250)
-	chemicals = list("sacid" = 20)
+	chemicals = list(REAGENT_ID_SACID = 20)
 	build_path = /obj/item/circuitboard/mecha/phazon/targeting
 	sort_string = "PAADC"

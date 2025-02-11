@@ -1,12 +1,12 @@
 // fun if you want to typecast humans/monkeys/etc without writing long path-filled lines.
 /proc/isxenomorph(A)
-	if(istype(A, /mob/living/carbon/human))
+	if(ishuman(A))
 		var/mob/living/carbon/human/H = A
 		return istype(H.species, /datum/species/xenos)
 	return 0
 
 /proc/issmall(A)
-	if(A && istype(A, /mob/living))
+	if(A && isliving(A))
 		var/mob/living/L = A
 		return L.mob_size <= MOB_SMALL
 	return 0
@@ -21,14 +21,14 @@
 	return TRUE
 
 /proc/istiny(A)
-	if(A && istype(A, /mob/living))
+	if(A && isliving(A))
 		var/mob/living/L = A
 		return L.mob_size <= MOB_TINY
 	return 0
 
 
 /proc/ismini(A)
-	if(A && istype(A, /mob/living))
+	if(A && isliving(A))
 		var/mob/living/L = A
 		return L.mob_size <= MOB_MINISCULE
 	return 0
@@ -293,28 +293,20 @@ It's fairly easy to fix if dealing with single letters but not so much with comp
 
 
 /proc/shake_camera(mob/M, duration, strength=1)
-	if(!M || !M.client || M.shakecamera || M.stat || isEye(M) || isAI(M))
+	if(!M || !M.client || duration < 1)
 		return
-	M.shakecamera = 1
-	spawn(1)
-		if(!M.client)
-			return
+	var/client/C = M.client
+	var/oldx = C.pixel_x
+	var/oldy = C.pixel_y
+	var/max = strength * world.icon_size
+	var/min = -(strength * world.icon_size)
 
-		var/atom/oldeye=M.client.eye
-		var/aiEyeFlag = 0
-		if(istype(oldeye, /mob/observer/eye/aiEye))
-			aiEyeFlag = 1
-
-		var/x
-		for(x=0; x<duration, x++)
-			if(aiEyeFlag)
-				M.client.eye = locate(dd_range(1,oldeye.loc.x+rand(-strength,strength),world.maxx),dd_range(1,oldeye.loc.y+rand(-strength,strength),world.maxy),oldeye.loc.z)
-			else
-				M.client.eye = locate(dd_range(1,M.loc.x+rand(-strength,strength),world.maxx),dd_range(1,M.loc.y+rand(-strength,strength),world.maxy),M.loc.z)
-			sleep(1)
-		M.client.eye=oldeye
-		M.shakecamera = 0
-
+	for(var/i in 0 to duration - 1)
+		if(i == 0)
+			animate(C, pixel_x = rand(min, max), pixel_y = rand(min, max), time = 1)
+		else
+			animate(pixel_x = rand(min, max), pixel_y = rand(min, max), time = 1)
+	animate(pixel_x = oldx, pixel_y = oldy, time = 1)
 
 /proc/findname(msg)
 	for(var/mob/M in mob_list)
@@ -342,7 +334,7 @@ var/list/intents = list(I_HELP,I_DISARM,I_GRAB,I_HURT)
 			if(2)			return I_GRAB
 			else			return I_HURT
 
-//change a mob's act-intent. Input the intent as a string such as "help" or use "right"/"left
+//change a mob's act-intent. Input the intent as a string such as I_HELP or use "right"/"left
 /mob/verb/a_intent_change(input as text)
 	set name = "a-intent"
 	set hidden = 1
@@ -411,7 +403,7 @@ var/list/intents = list(I_HELP,I_DISARM,I_GRAB,I_HURT)
 		return // Can't talk in deadchat if you can't see it.
 
 	for(var/mob/M in player_list)
-		if(M.client && ((!istype(M, /mob/new_player) && M.stat == DEAD) || (M.client.holder && M.client.holder.rights && M.client?.prefs?.read_preference(/datum/preference/toggle/holder/show_staff_dsay))) && M.client?.prefs?.read_preference(/datum/preference/toggle/show_dsay))
+		if(M.client && ((!isnewplayer(M) && M.stat == DEAD) || (M.client.holder && M.client.holder.rights && M.client?.prefs?.read_preference(/datum/preference/toggle/holder/show_staff_dsay))) && M.client?.prefs?.read_preference(/datum/preference/toggle/show_dsay))
 			var/follow
 			var/lname
 			if(M.forbid_seeing_deadchat && !M.client.holder)
@@ -425,7 +417,7 @@ var/list/intents = list(I_HELP,I_DISARM,I_GRAB,I_HURT)
 				if(M.stat != DEAD && M.client.holder)
 					follow = "([admin_jump_link(subject, M.client.holder)]) "
 				var/mob/observer/dead/DM
-				if(istype(subject, /mob/observer/dead))
+				if(isobserver(subject))
 					DM = subject
 				if(M.client.holder) 							// What admins see
 					lname = "[keyname][(DM && DM.anonsay) ? "*" : (DM ? "" : "^")] ([name])"
@@ -441,7 +433,7 @@ var/list/intents = list(I_HELP,I_DISARM,I_GRAB,I_HURT)
 
 /proc/say_dead_object(var/message, var/obj/subject = null)
 	for(var/mob/M in player_list)
-		if(M.client && ((!istype(M, /mob/new_player) && M.stat == DEAD) || (M.client.holder && M.client.holder.rights && M.client?.prefs?.read_preference(/datum/preference/toggle/holder/show_staff_dsay))) && M.client?.prefs?.read_preference(/datum/preference/toggle/show_dsay))
+		if(M.client && ((!isnewplayer(M) && M.stat == DEAD) || (M.client.holder && M.client.holder.rights && M.client?.prefs?.read_preference(/datum/preference/toggle/holder/show_staff_dsay))) && M.client?.prefs?.read_preference(/datum/preference/toggle/show_dsay))
 			var/follow
 			var/lname = "Game Master"
 			if(M.forbid_seeing_deadchat && !M.client.holder)

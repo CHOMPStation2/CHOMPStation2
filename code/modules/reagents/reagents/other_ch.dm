@@ -2,8 +2,8 @@
 
 //LIQUID EGG
 /datum/reagent/liquidspideregg
-	name = "spider eggs"
-	id = "spideregg"
+	name = REAGENT_SPIDEREGG
+	id = REAGENT_ID_SPIDEREGG
 	description = "These are eggs, spiders crawl out of these.. probably not healthy inside of a person."
 	taste_description = "SO MANY LEGS"
 	reagent_state = LIQUID
@@ -37,8 +37,8 @@
 				O.implants += spiderling
 
 /datum/reagent/nutriment/pitcher_nectar //Pitcher plant reagent, doubles plant growth speed.
-	name = "Pitcher Nectar"
-	id = "pitcher_nectar"
+	name = REAGENT_ID_PITCHERNECTAR
+	id = REAGENT_ID_PITCHERNECTAR
 	description = "An odd, sticky slurry which promotes rapid plant growth."
 	taste_description = "pineapple"
 	reagent_state = LIQUID
@@ -55,8 +55,8 @@
 //////SAP IN UNREFINED FORM////
 
 /datum/reagent/toxin/bluesap //This is the first sap. Blue one.
-	name = "Blue Sap"
-	id = "bluesap"
+	name = REAGENT_BLUESAP
+	id = REAGENT_ID_BLUESAP
 	description = "Glowing blue liquid."
 	reagent_state = LIQUID
 	color = "#91f9ff" // rgb(145, 249, 255)
@@ -65,15 +65,15 @@
 	mrate_static = TRUE
 
 /datum/reagent/purplesap
-	name = "Purple sap"
-	id = "purplesap"
+	name = REAGENT_ID_PURPLESAP
+	id = REAGENT_PURPLESAP
 	description = "Purple liquid. It is very sticky and smells of ammonia."
 	color = "#7a48a0"
 	taste_description = "Ammonia"
 
 /datum/reagent/orangesap
-	name = "Orange sap"
-	id = "orangesap"
+	name = REAGENT_ORANGESAP
+	id = REAGENT_ID_ORANGESAP
 	description = "Orange liquid. It wobbles around a bit like jelly."
 	color = "#e0962f"
 	taste_description = "Ammonia"
@@ -81,8 +81,8 @@
 //YW stuff
 
 /datum/reagent/benzilate
-	name = "Odd Goo"
-	id = "benzilate"
+	name = REAGENT_BENZILATE
+	id = REAGENT_ID_BENZILATE
 	description = "Grey... goo? This smells like hot acid. Consuming this likely wouldn't be good for your health."
 	taste_description = "raw iron"
 	taste_mult = 0.4
@@ -90,8 +90,8 @@
 	color = "#929292"
 
 /datum/reagent/phenethylamine
-	name = "Phenethylamine"
-	id = "phenethylamine"
+	name = REAGENT_PHENETHYLAMINE
+	id = REAGENT_ID_PHENETHYLAMINE
 	description = "Just looking at this makes you feel odd. Whether or not this would be good to consume is likely a gamble."
 	color = "#463667"
 	data = list("count"=1)
@@ -127,7 +127,7 @@
 
 /obj/item/reagent_containers/pill/benzilate/Initialize()
 	. = ..()
-	reagents.add_reagent("benzilate", 50)
+	reagents.add_reagent(REAGENT_ID_BENZILATE, 50)
 	color = reagents.get_color()
 
 
@@ -138,7 +138,7 @@
 
 /obj/item/reagent_containers/pill/phenethylamine/Initialize()
 	. = ..()
-	reagents.add_reagent("phenethylamine", 50)
+	reagents.add_reagent(REAGENT_ID_PHENETHYLAMINE, 50)
 	color = reagents.get_color()
 
 

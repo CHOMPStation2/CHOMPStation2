@@ -2,8 +2,8 @@
 	name = "reagent generator implant"
 	desc = "This is an implant that has attached storage and generates a reagent."
 	implant_color = "r"
-	var/list/generated_reagents = list("water" = 2) //Any number of reagents, the associated value is how many units are generated per process()
-	var/reagent_name = "water" //What is shown when reagents are removed, doesn't need to be an actual reagent
+	var/list/generated_reagents = list(REAGENT_ID_WATER = 2) //Any number of reagents, the associated value is how many units are generated per process()
+	var/reagent_name = REAGENT_ID_WATER //What is shown when reagents are removed, doesn't need to be an actual reagent
 	var/gen_cost = 0.5 //amount of nutrient taken from the host per process tick
 	var/transfer_amount = 30 //amount transferred when using verb
 	var/usable_volume = 120
@@ -92,7 +92,7 @@
 		if(container.reagents.total_volume < container.volume)
 			var/container_name = container.name
 			if(rimplant.reagents.trans_to(container, amount = rimplant.transfer_amount))
-				user.visible_message(span_notice("[usr] [pick(rimplant.emote_descriptor)] into \the [container_name]."),
+				user.visible_message(span_notice("[user] [pick(rimplant.emote_descriptor)] into \the [container_name]."),
 									span_notice("You [pick(rimplant.self_emote_descriptor)] some [rimplant.reagent_name] into \the [container_name]."))
 				if(prob(5))
 					src.visible_message(span_notice("[src] [pick(rimplant.random_emote)].")) // M-mlem.

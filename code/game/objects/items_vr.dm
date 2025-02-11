@@ -32,9 +32,9 @@
 		new_voice.item_tf = is_item_tf 					// allows items to use /me
 		new_voice.emote_type = 1
 	if(istype(src, /obj/item/mindbinder))
-		to_chat(new_voice,"<span class='notice'>Your mind has been stored in [src]!</span>")
+		to_chat(new_voice,span_notice("Your mind has been stored in [src]!"))
 	else
-		to_chat(new_voice,"<span class='notice'>You have become [src]!</span>")
+		to_chat(new_voice,span_notice("You have become [src]!"))
 	//CHOMPEdit End
 
 // Chomp edit

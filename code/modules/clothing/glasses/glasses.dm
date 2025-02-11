@@ -48,7 +48,7 @@ BLIND     // can't see anything
 	// Prevent people from just turning their goggles back on.
 	if(!active && (vision_flags & (SEE_TURFS|SEE_OBJS)))
 		var/area/A = get_area(src)
-		if(A.no_spoilers)
+		if(A.flag_check(AREA_NO_SPOILERS))
 			return FALSE
 
 	return TRUE
@@ -190,7 +190,7 @@ BLIND     // can't see anything
 	set name = "Switch Eyepatch"
 	set category = "Object"
 	set src in usr
-	if(!istype(usr, /mob/living)) return
+	if(!isliving(usr)) return
 	if(usr.stat) return
 
 	eye = !eye
@@ -214,7 +214,7 @@ BLIND     // can't see anything
 	set name = "Switch Eyepatch"
 	set category = "Object"
 	set src in usr
-	if(!istype(usr, /mob/living)) return
+	if(!isliving(usr)) return
 	if(usr.stat) return
 
 	eye = !eye
@@ -353,21 +353,21 @@ BLIND     // can't see anything
 	icon_state = "salesman"
 	var/ar = 0
 
-/obj/item/clothing/glasses/sunglasses/bigshot/examine(mob/user as mob)
+/obj/item/clothing/glasses/sunglasses/bigshot/examine(mob/user)
 	. = ..()
-	. += to_chat(usr, span_notice("Alt-click to toggle modes."))
+	. += to_chat(user, span_notice("Alt-click to toggle modes."))
 
-/obj/item/clothing/glasses/sunglasses/bigshot/AltClick()
+/obj/item/clothing/glasses/sunglasses/bigshot/AltClick(mob/user)
 	set src in usr
-	if(usr.canmove && !usr.stat && !usr.restrained())
+	if(user.canmove && !user.stat && !user.restrained())
 		if(src.ar)
 			src.ar = !src.ar
 			icon_state = initial(icon_state)
-			to_chat(usr, "You press a small button on \the [src] and deactivate the AR mode.")
+			to_chat(user, "You press a small button on \the [src] and deactivate the AR mode.")
 		else
 			src.ar = !src.ar
 			icon_state = "[initial(icon_state)]_fzz"
-			to_chat(usr, "You press a small button on \the [src] and activate the AR mode.")
+			to_chat(user, "You press a small button on \the [src] and activate the AR mode.")
 		update_clothing_icon()
 
 /obj/item/clothing/glasses/welding
@@ -422,6 +422,7 @@ BLIND     // can't see anything
 	icon_state = "blindfold"
 	item_state_slots = list(slot_r_hand_str = "blindfold", slot_l_hand_str = "blindfold")
 	flash_protection = FLASH_PROTECTION_MAJOR
+	body_parts_covered = EYES
 	tint = BLIND
 	drop_sound = 'sound/items/drop/gloves.ogg'
 	pickup_sound = 'sound/items/pickup/gloves.ogg'
@@ -436,6 +437,7 @@ BLIND     // can't see anything
 	desc = "A thin blindfold to help protect sensitive eyes while still allowing some sight"
 	icon_state = "blindfoldwhite"
 	flash_protection = FLASH_PROTECTION_MODERATE //not as thick, only offers some protection
+	body_parts_covered = EYES
 	tint = TINT_HEAVY
 
 /obj/item/clothing/glasses/sunglasses/blindfold/tape
@@ -445,6 +447,7 @@ BLIND     // can't see anything
 	icon_state = "tape_cross"
 	item_state_slots = list(slot_r_hand_str = null, slot_l_hand_str = null)
 	w_class = ITEMSIZE_TINY
+	body_parts_covered = EYES
 
 /obj/item/clothing/glasses/sunglasses/prescription
 	name = "prescription sunglasses"
@@ -493,12 +496,12 @@ BLIND     // can't see anything
 			flash_protection = FLASH_PROTECTION_NONE
 			enables_planes = away_planes
 			away_planes = null
-			to_chat(usr, "You switch the [src] to HUD mode.")
+			to_chat(user, "You switch the [src] to HUD mode.")
 		else
 			flash_protection = initial(flash_protection)
 			away_planes = enables_planes
 			enables_planes = null
-			to_chat(usr, "You switch \the [src] to flash protection mode.")
+			to_chat(user, "You switch \the [src] to flash protection mode.")
 		update_icon()
 		user << activation_sound
 		user.recalculate_vis()
@@ -535,7 +538,7 @@ BLIND     // can't see anything
 	flash_protection = FLASH_PROTECTION_REDUCED
 
 /obj/item/clothing/glasses/thermal/emp_act(severity)
-	if(istype(src.loc, /mob/living/carbon/human))
+	if(ishuman(src.loc))
 		var/mob/living/carbon/human/M = src.loc
 		to_chat(M, span_red("The Optical Thermal Scanner overloads and blinds you!"))
 		if(M.glasses == src)

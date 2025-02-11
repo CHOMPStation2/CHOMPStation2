@@ -5,10 +5,10 @@
 	block=MONKEYBLOCK
 
 /datum/dna/gene/monkey/can_activate(var/mob/M,var/flags)
-	return istype(M, /mob/living/carbon/human) || istype(M,/mob/living/carbon/monkey)
+	return ishuman(M) || istype(M,/mob/living/carbon/monkey)
 
 /datum/dna/gene/monkey/activate(var/mob/living/M, var/connected, var/flags)
-	if(!istype(M,/mob/living/carbon/human))
+	if(!ishuman(M))
 		//testing("Cannot monkey-ify [M], type is [M.type].")
 		return
 	var/mob/living/carbon/human/H = M
@@ -45,8 +45,8 @@
 
 	if(M)
 		if (M.dna)
-			O.dna = M.dna.Clone()
-			M.dna = null
+			qdel_swap(O.dna, M.dna.Clone())
+			QDEL_NULL(M.dna)
 
 		if (M.suiciding)
 			O.suiciding = M.suiciding
@@ -116,8 +116,8 @@
 
 	if (M)
 		if (M.dna)
-			O.dna = M.dna.Clone()
-			M.dna = null
+			qdel_swap(O.dna, M.dna.Clone())
+			QDEL_NULL(M.dna)
 
 		if (M.suiciding)
 			O.suiciding = M.suiciding

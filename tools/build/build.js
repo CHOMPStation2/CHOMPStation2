@@ -208,6 +208,7 @@ export const DmTarget = new Juke.Target({
     'icons/**',
     'interface/**',
     'sound/**',
+    'tgui/public/tgui.html',
     'modular_chomp/code/**',
     'modular_chomp/icons/**',
     'modular_chomp/sound/**',

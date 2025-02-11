@@ -59,6 +59,8 @@
 	say_list_type = /datum/say_list/corrupthound
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive/corrupthound
 
+	has_langs = list(LANGUAGE_GALCOM, LANGUAGE_EAL) //Robots speak in beep, yes?
+
 	max_buckled_mobs = 1 //Yeehaw
 	can_buckle = TRUE
 	buckle_movable = TRUE
@@ -127,7 +129,7 @@
 /mob/living/simple_mob/vore/aggressive/corrupthound/init_vore()
 	if(!voremob_loaded)
 		return
-	.=..()
+	. = ..()
 	var/obj/belly/B = vore_selected
 	B.name = "fuel processor"
 	B.desc = "Uttering distorted growls and fragmented voice clips all the while, the corrupted hound gulps the rest of your squirming figure past its jaws... which snap shut with an audible click of metal on metal. Your trip down its slickly lubricated, rubbery gullet is a tight and efficient one... and once you spill out into the machine's fuel processor, your weight making it sag slightly, hot-and-thick slime begins oozing all over your form. Only time will tell if you're destined to become fuel for its next bout of rampaging... be it days, hours, or just mere minutes..."
@@ -151,7 +153,7 @@
 /mob/living/simple_mob/vore/aggressive/corrupthound/prettyboi/init_vore()
 	if(!voremob_loaded)
 		return
-	..()
+	. = ..()
 	var/obj/belly/B = vore_selected
 	B.name = "fuel processor"
 	B.desc = "The twice-corrupted hound takes a moment to lather over the rest of your figure in heated, slimy synth-slobber before gulping you the rest of the way down its lubricated, rubbery throat. After a short string of slick-sounding, autonomous swallows, you spill out into its awaiting processor, your body immediately making its synth-flesh sag down slightly... and, as an oddly distorted rumble vibrates into the chamber, so too does a slowly accumulating pool of hot, viscous ooze. Only time will tell if whatever extra programming the hound has will spare you from being processed..."

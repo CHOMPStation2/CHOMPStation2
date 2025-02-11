@@ -19,7 +19,7 @@
 
 	/// Open uis owned by this datum
 	/// Lazy, since this case is semi rare
-	var/list/open_tguis // CHOMPEdit: FIXME: open_uis
+	var/list/open_tguis // FIXME: open_uis
 
 	/// Active timers with this datum as the target
 	var/list/_active_timers
@@ -43,8 +43,8 @@
 
 	/// Datum level flags
 	var/datum_flags = NONE
-	var/trigger_uid //CHOMPEdit
-	var/status_traits //CHOMPEdit
+	var/trigger_uid
+	var/status_traits
 
 	/// A weak reference to another datum
 	var/datum/weakref/weak_reference
@@ -89,7 +89,7 @@
  */
 /datum/proc/Destroy(force=FALSE)
 	SHOULD_CALL_PARENT(TRUE)
-	// SHOULD_NOT_SLEEP(TRUE) FIXME: Causing some big issues still
+	//SHOULD_NOT_SLEEP(TRUE)
 	tag = null
 	weak_reference = null //ensure prompt GCing of weakref.
 

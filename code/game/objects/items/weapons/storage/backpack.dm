@@ -34,7 +34,7 @@
 	..(user, slot)
 
 /*
-/obj/item/storage/backpack/dropped(mob/user as mob)
+/obj/item/storage/backpack/dropped(mob/user)
 	if (loc == user && src.use_sound)
 		playsound(src, src.use_sound, 50, 1, -5)
 	..(user)
@@ -512,7 +512,7 @@
 	set category = "Object"
 	set src in usr
 
-	if(!istype(src.loc, /mob/living))
+	if(!isliving(src.loc))
 		return
 
 	var/mob/living/carbon/human/H = usr

@@ -2,7 +2,6 @@
 	name = OUTFIT_JOB_NAME("Pathfinder")
 	shoes = /obj/item/clothing/shoes/boots/winter/explorer
 	uniform = /obj/item/clothing/under/explorer //TODO: Uniforms.
-	l_ear = /obj/item/radio/headset/explorer
 	id_slot = slot_wear_id
 	pda_slot = slot_l_store
 	pda_type = /obj/item/pda/pathfinder
@@ -10,6 +9,10 @@
 	id_pda_assignment = "Pathfinder"
 	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL|OUTFIT_COMPREHENSIVE_SURVIVAL
 	backpack_contents = list(/obj/item/clothing/accessory/permit/gun/planetside = 1)
+
+	headset = /obj/item/radio/headset/explorer
+	headset_alt = /obj/item/radio/headset/explorer
+	headset_earbud = /obj/item/radio/headset/explorer
 
 /decl/hierarchy/outfit/job/pathfinder/post_equip(mob/living/carbon/human/H)
 	..()

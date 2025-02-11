@@ -19,3 +19,5 @@
 /obj/item/circuitboard/mecha/scarab/main
 		name = T_BOARD_CHMECHA("Scarab central control")
 		icon_state = "mainboard"
+
+#undef T_BOARD_CHMECHA

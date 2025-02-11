@@ -28,7 +28,7 @@
 	set category = "Abilities.Silicon"
 	set src in usr
 
-	var/new_pupil_color = input(usr, "Select a pupil colour.", "Pupil Colour Selection") as color|null
+	var/new_pupil_color = tgui_color_picker(usr, "Select a pupil colour.", "Pupil Colour Selection")
 	if(usr.incapacitated() || QDELETED(usr) || QDELETED(src) || loc != usr)
 		return
 
@@ -64,8 +64,7 @@
 	modules += bandaid
 	synths += medicine
 
-	var/obj/item/gun/energy/locked/phasegun/unlocked/mounted/cyborg/phasegun = new(src)  //CHOMP Edit
-	modules += phasegun
+	modules += new /obj/item/gun/energy/robotic/phasegun(src)  //CHOMP Edit
 
 	emag += new /obj/item/chainsaw(src)
 

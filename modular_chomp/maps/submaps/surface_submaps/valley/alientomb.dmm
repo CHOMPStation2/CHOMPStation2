@@ -52,8 +52,6 @@
 /area/submap/alientomb)
 "A" = (
 /obj/structure/cable/blue{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating/sif/planetuse,
@@ -81,7 +79,6 @@
 "X" = (
 /obj/machinery/power/port_gen/pacman,
 /obj/structure/cable/blue{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating/sif/planetuse,

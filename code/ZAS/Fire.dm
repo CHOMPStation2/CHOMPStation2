@@ -51,14 +51,19 @@ If it gains pressure too slowly, it may leak or just rupture instead of explodin
 				fuel_objs -= fuel
 	else
 		for(var/turf/simulated/T in fire_tiles)
-			if(istype(T.fire))
-				T.fire.RemoveFire()
-			T.fire = null
+			// CHOMPEdit - Lingering fires
+			if(istype(T.fire) && !istype(T.fire, /obj/fire/lingering))
+				qdel(T.fire)
+				if(prob(10))
+					T.lingering_fire(1)
+				else
+					T.fire = null
+			// CHOMPEdit End
 		fire_tiles.Cut()
 		fuel_objs.Cut()
 
 	if(!fire_tiles.len)
-		air_master.active_fire_zones.Remove(src)
+		SSair.active_fire_zones.Remove(src)
 
 /zone/proc/remove_liquidfuel(var/used_liquid_fuel, var/remove_fire=0)
 	if(!fuel_objs.len)
@@ -86,6 +91,12 @@ If it gains pressure too slowly, it may leak or just rupture instead of explodin
 	return 0
 
 /turf/simulated/create_fire(fl)
+	// CHOMPAdd - Lingering fires
+	if(istype(fire) && istype(fire, /obj/fire/lingering))
+		var/obj/fire/F = fire
+		F.RemoveFire()
+		qdel(F)
+	// CHOMPEnd - Lingering fires
 	if(fire)
 		fire.firelevel = max(fl, fire.firelevel)
 		return 1
@@ -94,7 +105,7 @@ If it gains pressure too slowly, it may leak or just rupture instead of explodin
 		return 1
 
 	fire = new(src, fl)
-	air_master.active_fire_zones |= zone
+	SSair.active_fire_zones |= zone
 
 	var/obj/effect/decal/cleanable/liquid_fuel/fuel = locate() in src
 	zone.fire_tiles |= src
@@ -165,6 +176,8 @@ If it gains pressure too slowly, it may leak or just rupture instead of explodin
 				//reduce firelevel.
 				if(enemy_tile.fire_protection > world.time-30)
 					firelevel -= 1.5
+					if(firelevel < 0)
+						firelevel = 0
 					continue
 
 				//Spread the fire.
@@ -191,7 +204,7 @@ If it gains pressure too slowly, it may leak or just rupture instead of explodin
 	set_light(3, 1, color)
 
 	firelevel = fl
-	air_master.active_hotspots.Add(src)
+	SSair.active_hotspots.Add(src)
 
 /obj/fire/proc/fire_color(var/env_temperature)
 	var/temperature = max(4000*sqrt(firelevel/vsc.fire_firelevel_multiplier), env_temperature)
@@ -209,7 +222,7 @@ If it gains pressure too slowly, it may leak or just rupture instead of explodin
 
 		T.fire = null
 		loc = null
-	air_master.active_hotspots.Remove(src)
+	SSair.active_hotspots.Remove(src)
 
 
 /turf/simulated/var/fire_protection = 0 //Protects newly extinguished tiles from being overrun again.
@@ -301,13 +314,14 @@ If it gains pressure too slowly, it may leak or just rupture instead of explodin
 		//remove_by_flag() and adjust_gas() handle the group_multiplier for us.
 		remove_by_flag(XGM_GAS_OXIDIZER, used_oxidizers)
 		remove_by_flag(XGM_GAS_FUEL, used_gas_fuel)
-		adjust_gas("carbon_dioxide", used_oxidizers)
+		adjust_gas(GAS_CO2, used_oxidizers)
 
 		if(zone)
 			zone.remove_liquidfuel(used_liquid_fuel, !check_combustability())
 
 		//calculate the energy produced by the reaction and then set the new temperature of the mix
-		temperature = (starting_energy + vsc.fire_fuel_energy_release * (used_gas_fuel + used_liquid_fuel)) / heat_capacity()
+		if(heat_capacity() > 0)
+			temperature = min((starting_energy + vsc.fire_fuel_energy_release * (used_gas_fuel + used_liquid_fuel)) / heat_capacity(), MAX_ATMOS_TEMPERATURE)
 		update_values()
 
 		#ifdef FIREDBG

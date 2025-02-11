@@ -2780,7 +2780,6 @@
 /area/centcom/command)
 "iU" = (
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = 32
 	},
 /obj/effect/floor_decal/borderfloorblack{
@@ -3155,14 +3154,8 @@
 /area/centcom/specops)
 "kr" = (
 /obj/structure/table/standard,
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
+/obj/item/cell/high,
+/obj/item/cell/high,
 /obj/machinery/cell_charger,
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/purple/border,
@@ -8432,7 +8425,6 @@
 /area/shuttle/supply)
 "HH" = (
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_y = 30
 	},
 /turf/simulated/floor/lino,
@@ -9330,8 +9322,6 @@
 	name = "robotics parts"
 	},
 /obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000;
 	pixel_x = 5;
 	pixel_y = -5
 	},
@@ -9344,20 +9334,14 @@
 	pixel_y = 4
 	},
 /obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000;
 	pixel_x = 5;
 	pixel_y = -5
 	},
 /obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000;
 	pixel_x = 5;
 	pixel_y = -5
 	},
 /obj/item/cell/high{
-	charge = 100;
-	maxcharge = 15000;
 	pixel_x = 5;
 	pixel_y = -5
 	},
@@ -14169,7 +14153,6 @@
 /area/shuttle/ccboat)
 "VK" = (
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = 32
 	},
 /obj/effect/floor_decal/borderfloorblack{

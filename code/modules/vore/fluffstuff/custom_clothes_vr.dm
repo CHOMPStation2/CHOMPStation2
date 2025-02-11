@@ -746,8 +746,8 @@
 
 	storage_slots = 9
 
-/obj/item/storage/belt/utility/fluff/vulpine/New()
-	..()
+/obj/item/storage/belt/utility/fluff/vulpine/Initialize()
+	. = ..()
 	new /obj/item/tool/screwdriver(src)
 	new /obj/item/tool/wrench(src)
 	new /obj/item/weldingtool(src)
@@ -816,25 +816,6 @@
 		var/mob/living/carbon/human/H = user
 		if(H.head == src)
 			H.update_inv_head()
-/*
-/obj/item/rig/light/hacker/fluff/aronai
-	name = "KHI-99-AAR suit module"
-	suit_type = "nano"
-	desc = "A thin collapsable spacesuit for synths from Kitsuhana Heavy Industries."
-	airtight = 1 //Not because it should be airtight but because suit coolers don't work w/o it.
-	armor = list(melee = 25, bullet = 15, laser = 15, energy = 60, bomb = 30, bio = 70, rad = 100)
-	air_type = null //No O2 tank, why would it have one?
-
-	cell_type =  /obj/item/cell/hyper
-	req_access = list(access_medical)
-
-	initial_modules = list(
-		/obj/item/rig_module/maneuvering_jets,
-		/obj/item/rig_module/teleporter
-		)
-
-No. With a teleporter? Just *no*. - Hawk, YW
-*/
 //Viveret:Keturah
 /obj/item/clothing/under/dress/maid
 	name = "Maid Outfit"
@@ -916,7 +897,6 @@ No. With a teleporter? Just *no*. - Hawk, YW
 /obj/item/clothing/under/rank/khi
 	name = "Delete Me"
 	desc = "Why did you spawn this one? Dork."
-	//catalogue_data = list(/datum/category_item/catalogue/information/organization/khi)
 	sensor_mode = 3
 
 	icon = 'icons/inventory/uniform/item_vr.dmi'
@@ -1315,7 +1295,7 @@ Departamental Swimsuits, for general use
 /obj/item/clothing/suit/storage/hooded/wintercoat/jessie
 	name = "Handmade Winter Suit"
 	desc = "A durable, but somewhat ragged lower portion of a snow suit fitted for a wolftaur."
-	icon = 'icons/mob/taursuits_wolf_vr.dmi'
+	icon = 'icons/mob/taursuits_wolf.dmi'
 	icon_state = "jessiecoat"
 	item_state = "jessiecoat"
 
@@ -1332,7 +1312,7 @@ Departamental Swimsuits, for general use
 	name = "Kat's Fox Taur Armor"
 	desc = "A set of security armor, light weight and easy to run in for a Taur, this item protects the \
 	entire body."
-	icon = 'icons/mob/taursuits_wolf_vr.dmi'
+	icon = 'icons/mob/taursuits_wolf.dmi'
 	icon_state = "katesuit"
 	item_state_slots = null
 
@@ -1350,7 +1330,7 @@ Departamental Swimsuits, for general use
 	desc = "Taur engineering voidsuit. Recolored navy blue and white. Slightly tweaked as well to \
 	get close to having security voidsuit protection as possible with a slight reduction in movement \
 	speed to compensate for custom padding and armor Kateryna made herself."
-	icon = 'icons/mob/taursuits_wolf_vr.dmi'
+	icon = 'icons/mob/taursuits_wolf.dmi'
 	icon_state = "lilithsuit"
 	item_state = "lilithsuit"
 	species_restricted = null
@@ -1771,7 +1751,7 @@ Departamental Swimsuits, for general use
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 	desc = "A series of armor plates painted black, deployed from a back-mounted module. They fit smoothly over the unit's armor plates and projects a skintight bubble shield over the unit's uncovered parts. Faceplate and coolant unit not included."
 	species_restricted = null
-	icon = 'icons/mob/taursuits_lizard_vr.dmi'
+	icon = 'icons/mob/taursuits_lizard.dmi'
 	icon_state = "hasd_suit"
 	item_state = "hasd_suit"
 	pixel_x = -16
@@ -1900,7 +1880,7 @@ Departamental Swimsuits, for general use
 	if(!..())
 		return 0
 
-	if(istype(M,/mob/living/carbon/human))
+	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(!(H.get_species() == SPECIES_PROMETHEAN))	//Only wearable by slimes, since species_restricted actually checks bodytype, not species
 			return 0
@@ -2301,7 +2281,8 @@ Departamental Swimsuits, for general use
 		icon_override = 'icons/vore/custom_onmob_vr.dmi'
 	update_clothing_icon()
 
-/obj/item/clothing/accessory/poncho/roles/cloak/fluff/cloakglowing/dropped()
+/obj/item/clothing/accessory/poncho/roles/cloak/fluff/cloakglowing/dropped(mob/user)
+	..()
 	icon_override = 'icons/vore/custom_onmob_vr.dmi'
 
 /obj/item/clothing/accessory/poncho/roles/cloak/fluff/cloakglowing/proc/colorswap(mob/user)
@@ -2323,7 +2304,7 @@ Departamental Swimsuits, for general use
 	set name = "Swap color"
 	set category = "Object"
 	set src in usr
-	if(!istype(usr, /mob/living)) return
+	if(!isliving(usr)) return
 	if(usr.stat) return
 
 	colorswap(usr)
@@ -2708,4 +2689,15 @@ End CHOMP Removal*/
 	icon_state = "valkhorns"
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
 	item_state = "valkhorns_onmob"
+
+//sixberry: Thistle
+
+/obj/item/clothing/head/fluff/memory_crown
+    name = "Memory Crown"
+    desc = "A thorned crown sporting numerous amethyst inserts, all of which seem to glow faintly in the dark.  Just holding it makes you feel as though you've forgotten something unpleasant."
+    icon = 'icons/vore/custom_clothes_vr.dmi'
+    icon_state = "memorycrown"
+    icon_override = 'icons/vore/custom_clothes_vr.dmi'
+    item_state = "memorycrown_onmob"
+    slot_flags = SLOT_HEAD
 */ //Chomp REMOVE END

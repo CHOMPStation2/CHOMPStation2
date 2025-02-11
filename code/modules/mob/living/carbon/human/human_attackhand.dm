@@ -267,7 +267,7 @@
 			var/real_damage = rand_damage
 			var/hit_dam_type = attack.damage_type
 			real_damage += attack.get_unarmed_damage(H)
-			if(H.gloves)
+			if(H.gloves && attack.is_punch)
 				if(istype(H.gloves, /obj/item/clothing/gloves))
 					var/obj/item/clothing/gloves/G = H.gloves
 					real_damage += G.punch_force
@@ -277,7 +277,7 @@
 					real_damage += G.punch_force
 					hit_dam_type = G.punch_damtype
 				if(H.pulling_punches && !attack.sharp && !attack.edge)	//SO IT IS DECREED: PULLING PUNCHES WILL PREVENT THE ACTUAL DAMAGE FROM RINGS AND KNUCKLES, BUT NOT THE ADDED PAIN, BUT YOU CAN'T "PULL" A KNIFE
-					hit_dam_type = AGONY
+					hit_dam_type = HALLOSS
 			real_damage *= damage_multiplier
 			rand_damage *= damage_multiplier
 			if(HULK in H.mutations)
@@ -477,7 +477,7 @@
 		else
 			dat += span_bold("Primarily [u_attack.attack_name]") + " - <a href='byond://?src=\ref[src];default_attk=\ref[u_attack]'>set default</a><br/><br/><br/>"
 
-	src << browse(dat, "window=checkattack")
+	src << browse("<html>[dat]</html>", "window=checkattack")
 
 /mob/living/carbon/human/Topic(href, href_list)
 	if(href_list["default_attk"])

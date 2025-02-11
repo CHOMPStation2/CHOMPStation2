@@ -216,7 +216,7 @@
 			return TRUE
 		if("play")
 			if(current_track == null)
-				to_chat(usr, "No track selected.")
+				to_chat(ui.user, "No track selected.")
 			else
 				StartPlaying()
 			return TRUE
@@ -230,7 +230,7 @@
 	if(!istype(L))
 		return
 	if(deployed_headpods)
-		to_chat(usr, span_warning("The HeadPods are already deployed!"))
+		to_chat(L, span_warning("The HeadPods are already deployed!"))
 		return
 	deployed_headpods = new ()
 	L.put_in_any_hand_if_possible(deployed_headpods)

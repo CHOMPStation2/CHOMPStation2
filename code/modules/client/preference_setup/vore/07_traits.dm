@@ -2,7 +2,7 @@
 #define NEUTRAL_MODE 2
 #define NEGATIVE_MODE 3
 
-var/global/list/valid_bloodreagents = list("default","iron","copper","phoron","silver","gold","slimejelly")	//allowlist-based so people don't make their blood restored by alcohol or something really silly. use reagent IDs!
+var/global/list/valid_bloodreagents = list("default",REAGENT_ID_IRON,REAGENT_ID_COPPER,REAGENT_ID_PHORON,REAGENT_ID_SILVER,REAGENT_ID_GOLD,REAGENT_ID_SLIMEJELLY)	//allowlist-based so people don't make their blood restored by alcohol or something really silly. use reagent IDs!
 
 /datum/preferences
 	var/custom_species	// Custom species name, can't be changed due to it having been used in savefiles already.
@@ -57,13 +57,13 @@ var/global/list/valid_bloodreagents = list("default","iron","copper","phoron","s
 				trait_prefs[identifier] = trait.default_value_for_pref(identifier) //won't be called at all often
 				altered = TRUE
 			. += "<li>- [pref_list[2]]:"
-			var/link = " <a href='?src=\ref[src];clicked_trait_pref=[trait.type];pref=[identifier]'>"
+			var/link = " <a href='byond://?src=\ref[src];clicked_trait_pref=[trait.type];pref=[identifier]'>"
 			switch (pref_list[1])
 				if (1) //TRAIT_PREF_TYPE_BOOLEAN
 					. += link + (trait_prefs[identifier] ? "Enabled" : "Disabled")
 				if (2) //TRAIT_PREF_TYPE_COLOR
 					. += " " + color_square(hex = trait_prefs[identifier]) + link + "Change"
-				if (3) //TRAIT_PREF_TYPE_STRING - CHOMPEdit
+				if (3) //TRAIT_PREF_TYPE_STRING
 					var/string = trait_prefs[identifier]
 					. += link + (length(string) > 0 ? string : "\[Empty\]")
 			. += "</a></li>"
@@ -101,10 +101,10 @@ var/global/list/valid_bloodreagents = list("default","iron","copper","phoron","s
 		if (1) //TRAIT_PREF_TYPE_BOOLEAN
 			trait_prefs[preference] = !trait_prefs[preference]
 		if (2) //TRAIT_PREF_TYPE_COLOR
-			var/new_color = input(user, "Choose the color for this trait preference:", "Trait Preference", trait_prefs[preference]) as color|null
+			var/new_color = tgui_color_picker(user, "Choose the color for this trait preference:", "Trait Preference", trait_prefs[preference])
 			if (new_color)
 				trait_prefs[preference] = new_color
-		if (3) //TRAIT_PREF_TYPE_STRING - CHOMPEdit
+		if (3) //TRAIT_PREF_TYPE_STRING
 			var/new_string = instance.apply_sanitization_to_string(preference, tgui_input_text(user, "What should the new value be?", instance.has_preferences[preference][2], trait_prefs[preference], MAX_NAME_LEN))
 			trait_prefs[preference] = new_string
 
@@ -257,7 +257,7 @@ var/global/list/valid_bloodreagents = list("default","iron","copper","phoron","s
 		pref.dirty_synth = 0
 
 	var/datum/species/S = character.species
-	var/datum/species/new_S = S.produceCopy(pref.pos_traits + pref.neu_traits + pref.neg_traits, character, pref.custom_base)
+	var/datum/species/new_S = S.produceCopy(pref.pos_traits + pref.neu_traits + pref.neg_traits, character, pref.custom_base, TRUE)
 
 	for(var/datum/trait/T in new_S.traits)
 		T.apply_pref(src)
@@ -288,12 +288,12 @@ var/global/list/valid_bloodreagents = list("default","iron","copper","phoron","s
 
 /datum/category_item/player_setup_item/vore/traits/content(var/mob/user)
 	. += span_bold("Custom Species Name:") + " "
-	. += "<a href='?src=\ref[src];custom_species=1'>[pref.custom_species ? pref.custom_species : "-Input Name-"]</a><br>"
+	. += "<a href='byond://?src=\ref[src];custom_species=1'>[pref.custom_species ? pref.custom_species : "-Input Name-"]</a><br>"
 
 	var/datum/species/selected_species = GLOB.all_species[pref.species]
 	if(selected_species.selects_bodytype)
 		. += span_bold("Icon Base:") + " "
-		. += "<a href='?src=\ref[src];custom_base=1'>[pref.custom_base ? pref.custom_base : "Human"]</a><br>"
+		. += "<a href='byond://?src=\ref[src];custom_base=1'>[pref.custom_base ? pref.custom_base : "Human"]</a><br>"
 
 	var/traits_left = pref.max_traits
 
@@ -310,57 +310,57 @@ var/global/list/valid_bloodreagents = list("default","iron","copper","phoron","s
 	if(points_left < 0 || traits_left < 0 || (!pref.custom_species && pref.species == SPECIES_CUSTOM))
 		. += span_red(span_bold("^ Fix things! ^")) + "<br>"
 
-	. += "<a href='?src=\ref[src];add_trait=[POSITIVE_MODE]'>Positive Trait(s) (Limited) +</a><br>" // CHOMPEdit: More obvious/clear to players.
+	. += "<a href='byond://?src=\ref[src];add_trait=[POSITIVE_MODE]'>Positive Trait(s) (Limited) +</a><br>" // CHOMPEdit: More obvious/clear to players.
 	. += "<ul>"
 	for(var/T in pref.pos_traits)
 		var/datum/trait/trait = positive_traits[T]
-		. += "<li>- <a href='?src=\ref[src];clicked_pos_trait=[T]'>[trait.name] ([trait.cost])</a> [get_html_for_trait(trait, pref.pos_traits[T])]</li>"
+		. += "<li>- <a href='byond://?src=\ref[src];clicked_pos_trait=[T]'>[trait.name] ([trait.cost])</a> [get_html_for_trait(trait, pref.pos_traits[T])]</li>"
 	. += "</ul>"
 
-	. += "<a href='?src=\ref[src];add_trait=[NEUTRAL_MODE]'>Neutral Trait(s) (No Limit) +</a><br>" // CHOMPEdit: More obvious/clear to players.
+	. += "<a href='byond://?src=\ref[src];add_trait=[NEUTRAL_MODE]'>Neutral Trait(s) (No Limit) +</a><br>" // CHOMPEdit: More obvious/clear to players.
 	. += "<ul>"
 	for(var/T in pref.neu_traits)
 		var/datum/trait/trait = neutral_traits[T]
-		. += "<li>- <a href='?src=\ref[src];clicked_neu_trait=[T]'>[trait.name] ([trait.cost])</a> [get_html_for_trait(trait, pref.neu_traits[T])]</li>"
+		. += "<li>- <a href='byond://?src=\ref[src];clicked_neu_trait=[T]'>[trait.name] ([trait.cost])</a> [get_html_for_trait(trait, pref.neu_traits[T])]</li>"
 	. += "</ul>"
 
-	. += "<a href='?src=\ref[src];add_trait=[NEGATIVE_MODE]'>Negative Trait(s) (No Limit) +</a><br>" // CHOMPEdit: More obvious/clear to players.
+	. += "<a href='byond://?src=\ref[src];add_trait=[NEGATIVE_MODE]'>Negative Trait(s) (No Limit) +</a><br>" // CHOMPEdit: More obvious/clear to players.
 	. += "<ul>"
 	for(var/T in pref.neg_traits)
 		var/datum/trait/trait = negative_traits[T]
-		. += "<li>- <a href='?src=\ref[src];clicked_neg_trait=[T]'>[trait.name] ([trait.cost])</a> [get_html_for_trait(trait, pref.neg_traits[T])]</li>"
+		. += "<li>- <a href='byond://?src=\ref[src];clicked_neg_trait=[T]'>[trait.name] ([trait.cost])</a> [get_html_for_trait(trait, pref.neg_traits[T])]</li>"
 	. += "</ul>"
 
 	. += span_bold("Blood Color: ") //People that want to use a certain species to have that species traits (xenochimera/promethean/spider) should be able to set their own blood color.
-	. += "<a href='?src=\ref[src];blood_color=1'>Set Color <font color='[pref.blood_color]'>&#9899;</font></a>"
-	. += "<a href='?src=\ref[src];blood_reset=1'>R</a><br>"
+	. += "<a href='byond://?src=\ref[src];blood_color=1'>Set Color <font color='[pref.blood_color]'>&#9899;</font></a>"
+	. += "<a href='byond://?src=\ref[src];blood_reset=1'>R</a><br>"
 	. += span_bold("Blood Reagent: ")	//Wanna be copper-based? Go ahead.
-	. += "<a href='?src=\ref[src];blood_reagents=1'>[pref.blood_reagents]</a><br>"
+	. += "<a href='byond://?src=\ref[src];blood_reagents=1'>[pref.blood_reagents]</a><br>"
 	. += "<br>"
 
 	. += span_bold("Custom Say: ")
-	. += "<a href='?src=\ref[src];custom_say=1'>Set Say Verb</a>"
-	. += "(<a href='?src=\ref[src];reset_say=1'>Reset</A>)"
+	. += "<a href='byond://?src=\ref[src];custom_say=1'>Set Say Verb</a>"
+	. += "(<a href='byond://?src=\ref[src];reset_say=1'>Reset</A>)"
 	. += "<br>"
 	. += span_bold("Custom Whisper: ")
-	. += "<a href='?src=\ref[src];custom_whisper=1'>Set Whisper Verb</a>"
-	. += "(<a href='?src=\ref[src];reset_whisper=1'>Reset</A>)"
+	. += "<a href='byond://?src=\ref[src];custom_whisper=1'>Set Whisper Verb</a>"
+	. += "(<a href='byond://?src=\ref[src];reset_whisper=1'>Reset</A>)"
 	. += "<br>"
 	. += span_bold("Custom Ask: ")
-	. += "<a href='?src=\ref[src];custom_ask=1'>Set Ask Verb</a>"
-	. += "(<a href='?src=\ref[src];reset_ask=1'>Reset</A>)"
+	. += "<a href='byond://?src=\ref[src];custom_ask=1'>Set Ask Verb</a>"
+	. += "(<a href='byond://?src=\ref[src];reset_ask=1'>Reset</A>)"
 	. += "<br>"
 	. += span_bold("Custom Exclaim: ")
-	. += "<a href='?src=\ref[src];custom_exclaim=1'>Set Exclaim Verb</a>"
-	. += "(<a href='?src=\ref[src];reset_exclaim=1'>Reset</A>)"
+	. += "<a href='byond://?src=\ref[src];custom_exclaim=1'>Set Exclaim Verb</a>"
+	. += "(<a href='byond://?src=\ref[src];reset_exclaim=1'>Reset</A>)"
 	. += "<br>"
 	. += span_bold("Custom Heat Discomfort: ")
-	. += "<a href='?src=\ref[src];custom_heat=1'>Set Heat Messages</a>"
-	. += "(<a href='?src=\ref[src];reset_heat=1'>Reset</A>)"
+	. += "<a href='byond://?src=\ref[src];custom_heat=1'>Set Heat Messages</a>"
+	. += "(<a href='byond://?src=\ref[src];reset_heat=1'>Reset</A>)"
 	. += "<br>"
 	. += span_bold("Custom Cold Discomfort: ")
-	. += "<a href='?src=\ref[src];custom_cold=1'>Set Cold Messages</a>"
-	. += "(<a href='?src=\ref[src];reset_cold=1'>Reset</A>)"
+	. += "<a href='byond://?src=\ref[src];custom_cold=1'>Set Cold Messages</a>"
+	. += "(<a href='byond://?src=\ref[src];reset_cold=1'>Reset</A>)"
 	. += "<br>"
 
 /datum/category_item/player_setup_item/vore/traits/OnTopic(var/href,var/list/href_list, var/mob/user)
@@ -376,13 +376,13 @@ var/global/list/valid_bloodreagents = list("default","iron","copper","phoron","s
 
 	else if(href_list["custom_base"])
 		var/list/choices = pref.get_custom_bases_for_species()
-		var/text_choice = tgui_input_list(user, "Pick an icon set for your species:","Icon Base", choices) //ChompEDIT - usr removal
+		var/text_choice = tgui_input_list(user, "Pick an icon set for your species:","Icon Base", choices)
 		if(text_choice in choices)
 			pref.custom_base = text_choice
 		return TOPIC_REFRESH_UPDATE_PREVIEW
 
 	else if(href_list["blood_color"])
-		var/color_choice = input(user, "Pick a blood color (does not apply to synths)","Blood Color",pref.blood_color) as color //ChompEDIT - usr removal
+		var/color_choice = tgui_color_picker(user, "Pick a blood color (does not apply to synths)","Blood Color",pref.blood_color)
 		if(color_choice)
 			pref.blood_color = sanitize_hexcolor(color_choice, default="#A10808")
 		return TOPIC_REFRESH
@@ -390,7 +390,7 @@ var/global/list/valid_bloodreagents = list("default","iron","copper","phoron","s
 	else if(href_list["blood_reset"])
 		var/datum/species/spec = GLOB.all_species[pref.species]
 		var/new_blood = spec.blood_color ? spec.blood_color : "#A10808"
-		var/choice = tgui_alert(user, "Reset blood color to species default ([new_blood])?","Reset Blood Color",list("Reset","Cancel")) //ChompEDIT - usr removal
+		var/choice = tgui_alert(user, "Reset blood color to species default ([new_blood])?","Reset Blood Color",list("Reset","Cancel"))
 		if(choice == "Reset")
 			pref.blood_color = new_blood
 		return TOPIC_REFRESH
@@ -403,7 +403,7 @@ var/global/list/valid_bloodreagents = list("default","iron","copper","phoron","s
 
 	else if(href_list["clicked_pos_trait"])
 		var/datum/trait/trait = text2path(href_list["clicked_pos_trait"])
-		var/choice = tgui_alert(user, "Remove [initial(trait.name)] and regain [initial(trait.cost)] points?","Remove Trait",list("Remove","Cancel")) //ChompEDIT - usr removal
+		var/choice = tgui_alert(user, "Remove [initial(trait.name)] and regain [initial(trait.cost)] points?","Remove Trait",list("Remove","Cancel"))
 		if(choice == "Remove")
 			pref.pos_traits -= trait
 			var/datum/trait/instance = all_traits[trait]
@@ -412,7 +412,7 @@ var/global/list/valid_bloodreagents = list("default","iron","copper","phoron","s
 
 	else if(href_list["clicked_neu_trait"])
 		var/datum/trait/trait = text2path(href_list["clicked_neu_trait"])
-		var/choice = tgui_alert(user, "Remove [initial(trait.name)]?","Remove Trait",list("Remove","Cancel")) //ChompEDIT - usr removal
+		var/choice = tgui_alert(user, "Remove [initial(trait.name)]?","Remove Trait",list("Remove","Cancel"))
 		if(choice == "Remove")
 			pref.neu_traits -= trait
 			var/datum/trait/instance = all_traits[trait]
@@ -421,7 +421,7 @@ var/global/list/valid_bloodreagents = list("default","iron","copper","phoron","s
 
 	else if(href_list["clicked_neg_trait"])
 		var/datum/trait/trait = text2path(href_list["clicked_neg_trait"])
-		var/choice = tgui_alert(user, "Remove [initial(trait.name)] and lose [initial(trait.cost)] points?","Remove Trait",list("Remove","Cancel")) //ChompEDIT - usr removal
+		var/choice = tgui_alert(user, "Remove [initial(trait.name)] and lose [initial(trait.cost)] points?","Remove Trait",list("Remove","Cancel"))
 		if(choice == "Remove")
 			pref.neg_traits -= trait
 			var/datum/trait/instance = all_traits[trait]
@@ -434,25 +434,25 @@ var/global/list/valid_bloodreagents = list("default","iron","copper","phoron","s
 		return TOPIC_REFRESH
 
 	else if(href_list["custom_say"])
-		var/say_choice = sanitize(tgui_input_text(user, "This word or phrase will appear instead of 'says': [pref.real_name] says, \"Hi.\"", "Custom Say", pref.custom_say, 12), 12) //ChompEDIT - usr removal
+		var/say_choice = sanitize(tgui_input_text(user, "This word or phrase will appear instead of 'says': [pref.real_name] says, \"Hi.\"", "Custom Say", pref.custom_say, 12), 12)
 		if(say_choice)
 			pref.custom_say = say_choice
 		return TOPIC_REFRESH
 
 	else if(href_list["custom_whisper"])
-		var/whisper_choice = sanitize(tgui_input_text(user, "This word or phrase will appear instead of 'whispers': [pref.real_name] whispers, \"Hi...\"", "Custom Whisper", pref.custom_whisper, 12), 12) //ChompEDIT - usr removal
+		var/whisper_choice = sanitize(tgui_input_text(user, "This word or phrase will appear instead of 'whispers': [pref.real_name] whispers, \"Hi...\"", "Custom Whisper", pref.custom_whisper, 12), 12)
 		if(whisper_choice)
 			pref.custom_whisper = whisper_choice
 		return TOPIC_REFRESH
 
 	else if(href_list["custom_ask"])
-		var/ask_choice = sanitize(tgui_input_text(user, "This word or phrase will appear instead of 'asks': [pref.real_name] asks, \"Hi?\"", "Custom Ask", pref.custom_ask, 12), 12) //ChompEDIT - usr removal
+		var/ask_choice = sanitize(tgui_input_text(user, "This word or phrase will appear instead of 'asks': [pref.real_name] asks, \"Hi?\"", "Custom Ask", pref.custom_ask, 12), 12)
 		if(ask_choice)
 			pref.custom_ask = ask_choice
 		return TOPIC_REFRESH
 
 	else if(href_list["custom_exclaim"])
-		var/exclaim_choice = sanitize(tgui_input_text(user, "This word or phrase will appear instead of 'exclaims', 'shouts' or 'yells': [pref.real_name] exclaims, \"Hi!\"", "Custom Exclaim", pref.custom_exclaim, 12), 12) //ChompEDIT - usr removal
+		var/exclaim_choice = sanitize(tgui_input_text(user, "This word or phrase will appear instead of 'exclaims', 'shouts' or 'yells': [pref.real_name] exclaims, \"Hi!\"", "Custom Exclaim", pref.custom_exclaim, 12), 12)
 		if(exclaim_choice)
 			pref.custom_exclaim = exclaim_choice
 		return TOPIC_REFRESH
@@ -460,7 +460,7 @@ var/global/list/valid_bloodreagents = list("default","iron","copper","phoron","s
 	else if(href_list["custom_heat"])
 		tgui_alert(user, "You are setting custom heat messages. These will overwrite your species' defaults. To return to defaults, click reset.")
 		var/old_message = pref.custom_heat.Join("\n\n")
-		var/new_message = sanitize(tgui_input_text(user,"Use double enter between messages to enter a new one. Must be at least 3 characters long, 160 characters max and up to 10 messages are allowed.","Heat Discomfort messages",old_message, multiline= TRUE, prevent_enter = TRUE), MAX_MESSAGE_LEN,0,0,0) //ChompEDIT - usr removal
+		var/new_message = sanitize(tgui_input_text(user,"Use double enter between messages to enter a new one. Must be at least 3 characters long, 160 characters max and up to 10 messages are allowed.","Heat Discomfort messages",old_message, multiline= TRUE, prevent_enter = TRUE), MAX_MESSAGE_LEN,0,0,0)
 		if(length(new_message) > 0)
 			var/list/raw_list = splittext(new_message,"\n\n")
 			if(raw_list.len > 10)
@@ -476,8 +476,8 @@ var/global/list/valid_bloodreagents = list("default","iron","copper","phoron","s
 
 	else if(href_list["custom_cold"])
 		tgui_alert(user, "You are setting custom cold messages. These will overwrite your species' defaults. To return to defaults, click reset.")
-		var/old_message = pref.custom_cold.Join("\n\n") //CHOMP Edit
-		var/new_message = sanitize(tgui_input_text(user,"Use double enter between messages to enter a new one. Must be at least 3 characters long, 160 characters max and up to 10 messages are allowed.","Cold Discomfort messages",old_message, multiline= TRUE, prevent_enter = TRUE), MAX_MESSAGE_LEN,0,0,0) //ChompEDIT - usr removal
+		var/old_message = pref.custom_heat.Join("\n\n")
+		var/new_message = sanitize(tgui_input_text(user,"Use double enter between messages to enter a new one. Must be at least 3 characters long, 160 characters max and up to 10 messages are allowed.","Cold Discomfort messages",old_message, multiline= TRUE, prevent_enter = TRUE), MAX_MESSAGE_LEN,0,0,0)
 		if(length(new_message) > 0)
 			var/list/raw_list = splittext(new_message,"\n\n")
 			if(raw_list.len > 10)
@@ -492,37 +492,37 @@ var/global/list/valid_bloodreagents = list("default","iron","copper","phoron","s
 		return TOPIC_REFRESH
 
 	else if(href_list["reset_say"])
-		var/say_choice = tgui_alert(user, "Reset your Custom Say Verb?","Reset Verb",list("Yes","No")) //ChompEDIT - usr removal
+		var/say_choice = tgui_alert(user, "Reset your Custom Say Verb?","Reset Verb",list("Yes","No"))
 		if(say_choice == "Yes")
 			pref.custom_say = null
 		return TOPIC_REFRESH
 
 	else if(href_list["reset_whisper"])
-		var/whisper_choice = tgui_alert(user, "Reset your Custom Whisper Verb?","Reset Verb",list("Yes","No")) //ChompEDIT - usr removal
+		var/whisper_choice = tgui_alert(user, "Reset your Custom Whisper Verb?","Reset Verb",list("Yes","No"))
 		if(whisper_choice == "Yes")
 			pref.custom_whisper = null
 		return TOPIC_REFRESH
 
 	else if(href_list["reset_ask"])
-		var/ask_choice = tgui_alert(user, "Reset your Custom Ask Verb?","Reset Verb",list("Yes","No")) //ChompEDIT - usr removal
+		var/ask_choice = tgui_alert(user, "Reset your Custom Ask Verb?","Reset Verb",list("Yes","No"))
 		if(ask_choice == "Yes")
 			pref.custom_ask = null
 		return TOPIC_REFRESH
 
 	else if(href_list["reset_exclaim"])
-		var/exclaim_choice = tgui_alert(user, "Reset your Custom Exclaim Verb?","Reset Verb",list("Yes","No")) //ChompEDIT - usr removal
+		var/exclaim_choice = tgui_alert(user, "Reset your Custom Exclaim Verb?","Reset Verb",list("Yes","No"))
 		if(exclaim_choice == "Yes")
 			pref.custom_exclaim = null
 		return TOPIC_REFRESH
 
 	else if(href_list["reset_cold"])
-		var/cold_choice = tgui_alert(user, "Reset your Custom Cold Discomfort messages?", "Reset Discomfort",list("Yes","No")) //ChompEDIT - usr removal
+		var/cold_choice = tgui_alert(user, "Reset your Custom Cold Discomfort messages?", "Reset Discomfort",list("Yes","No"))
 		if(cold_choice == "Yes")
 			pref.custom_cold = list()
 		return TOPIC_REFRESH
 
 	else if(href_list["reset_heat"])
-		var/heat_choice = tgui_alert(user, "Reset your Custom Heat Discomfort messages?", "Reset Discomfort",list("Yes","No")) //ChompEDIT - usr removal
+		var/heat_choice = tgui_alert(user, "Reset your Custom Heat Discomfort messages?", "Reset Discomfort",list("Yes","No"))
 		if(heat_choice == "Yes")
 			pref.custom_heat = list()
 		return TOPIC_REFRESH
@@ -587,12 +587,12 @@ var/global/list/valid_bloodreagents = list("default","iron","copper","phoron","s
 		var/trait_choice
 		var/done = FALSE
 		while(!done)
-			trait_choice = tgui_input_list(user, message, title, nicelist) //ChompEDIT - usr removal
+			trait_choice = tgui_input_list(user, message, title, nicelist)
 			if(!trait_choice)
 				done = TRUE
 			if(trait_choice in nicelist)
 				var/datum/trait/path = nicelist[trait_choice]
-				var/choice = tgui_alert(user, "\[Cost:[initial(path.cost)]\] [initial(path.desc)]",initial(path.name), list("Take Trait","Go Back")) //ChompEDIT - usr removal
+				var/choice = tgui_alert(user, "\[Cost:[initial(path.cost)]\] [initial(path.desc)]",initial(path.name), list("Take Trait","Go Back"))
 				if(choice == "Take Trait")
 					done = TRUE
 
@@ -605,20 +605,19 @@ var/global/list/valid_bloodreagents = list("default","iron","copper","phoron","s
 			var/conflict = FALSE
 
 			if(pref.dirty_synth && !(instance.can_take & SYNTHETICS))
-				tgui_alert_async(user, "The trait you've selected can only be taken by organic characters!", "Error") //ChompEDIT - usr removal
-				//pref.dirty_synth = 0	//Just to be sure //CHOMPEdit this shit broke, stop.
+				tgui_alert_async(user, "The trait you've selected can only be taken by organic characters!", "Error")
 				return TOPIC_REFRESH
 
 			if(pref.gross_meatbag && !(instance.can_take & ORGANICS))
-				tgui_alert_async(user, "The trait you've selected can only be taken by synthetic characters!", "Error") //ChompEDIT - usr removal
+				tgui_alert_async(user, "The trait you've selected can only be taken by synthetic characters!", "Error")
 				return TOPIC_REFRESH
 
 			if(pref.species in instance.banned_species)
-				tgui_alert_async(user, "The trait you've selected cannot be taken by the species you've chosen!", "Error") //ChompEDIT - usr removal
+				tgui_alert_async(user, "The trait you've selected cannot be taken by the species you've chosen!", "Error")
 				return TOPIC_REFRESH
 
 			if( LAZYLEN(instance.allowed_species) && !(pref.species in instance.allowed_species))
-				tgui_alert_async(user, "The trait you've selected cannot be taken by the species you've chosen!", "Error") //ChompEDIT - usr removal
+				tgui_alert_async(user, "The trait you've selected cannot be taken by the species you've chosen!", "Error")
 				return TOPIC_REFRESH
 
 			if(trait_choice in pref.pos_traits + pref.neu_traits + pref.neg_traits)
@@ -644,7 +643,7 @@ var/global/list/valid_bloodreagents = list("default","iron","copper","phoron","s
 							break varconflict
 
 			if(conflict)
-				tgui_alert_async(user, "You cannot take this trait and [conflict] at the same time. Please remove that trait, or pick another trait to add.", "Error") //ChompEDIT - usr removal
+				tgui_alert_async(user, "You cannot take this trait and [conflict] at the same time. Please remove that trait, or pick another trait to add.", "Error")
 				return TOPIC_REFRESH
 
 			instance.apply_pref(pref)

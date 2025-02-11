@@ -9,6 +9,8 @@
 	diary = start_log("[log_path].log")
 	href_logfile = start_log("[log_path]-hrefs.htm")
 	error_log = start_log("[log_path]-error.log")
+	sql_error_log = start_log("[log_path]-sql-error.log")
+	query_debug_log = start_log("[log_path]-query-debug.log")
 	debug_log = start_log("[log_path]-debug.log")
 	//VOREStation Edit End
 
@@ -58,12 +60,10 @@
 	src.update_status()
 	setup_season()	//VOREStation Addition
 
-	// CHOMPStation Addition: Spaceman DMM Debugging
 	var/debug_server = world.GetConfig("env", "AUXTOOLS_DEBUG_DLL")
 	if (debug_server)
 		call_ext(debug_server, "auxtools_init")()
 		enable_debugging()
-	// CHOMPStation Add End
 
 	. = ..()
 
@@ -108,7 +108,7 @@
 	// (i.e. basically nothing should be added before load_admins() in here)
 
 	// Try to set round ID
-	SSdbcore.InitializeRound() // CHOMPEdit
+	SSdbcore.InitializeRound()
 
 	//apply a default value to config.python_path, if needed
 	if (!CONFIG_GET(string/python_path))
@@ -167,7 +167,7 @@ var/world_topic_spam_protect_time = world.timeofday
 						continue
 					admins[C.key] = C.holder.rank
 				players += C.key
-				if(istype(C.mob, /mob/living))
+				if(isliving(C.mob))
 					active++
 
 			s["players"] = players.len
@@ -335,7 +335,7 @@ var/world_topic_spam_protect_time = world.timeofday
 			info["hasbeenrev"] = M.mind ? M.mind.has_been_rev : "No mind"
 			info["stat"] = M.stat
 			info["type"] = M.type
-			if(istype(M, /mob/living))
+			if(isliving(M))
 				var/mob/living/L = M
 				info["damage"] = list2params(list(
 							oxy = L.getOxyLoss(),
@@ -393,8 +393,8 @@ var/world_topic_spam_protect_time = world.timeofday
 		if(!rank)
 			rank = "Admin"
 
-		var/message =	span_red("IRC-[rank] PM from <b><a href='?irc_msg=[input["sender"]]'>IRC-[input["sender"]]</a></b>: [input["msg"]]")
-		var/amessage =  span_blue("IRC-[rank] PM from <a href='?irc_msg=[input["sender"]]'>IRC-[input["sender"]]</a> to <b>[key_name(C)]</b> : [input["msg"]]")
+		var/message =	span_red("IRC-[rank] PM from <b><a href='byond://?irc_msg=[input["sender"]]'>IRC-[input["sender"]]</a></b>: [input["msg"]]")
+		var/amessage =  span_blue("IRC-[rank] PM from <a href='byond://?irc_msg=[input["sender"]]'>IRC-[input["sender"]]</a> to <b>[key_name(C)]</b> : [input["msg"]]")
 
 		C.received_irc_pm = world.time
 		C.irc_admin = input["sender"]
@@ -554,14 +554,14 @@ var/world_topic_spam_protect_time = world.timeofday
 				var/ckey = copytext(line, 1, length(line)+1)
 				var/datum/mentor/M = new /datum/mentor(ckey)
 				M.associate(GLOB.directory[ckey])
-	else // CHOMPedit Start - Implementing loading mentors from database
+	else
 		establish_db_connection()
 		if(!SSdbcore.IsConnected())
 			error("Failed to connect to database in load_mentors().")
 			log_misc("Failed to connect to database in load_mentors().")
 			return
 
-		var/datum/db_query/query = SSdbcore.NewQuery("SELECT ckey, mentor FROM erro_mentor") //CHOMPEdit TGSQL
+		var/datum/db_query/query = SSdbcore.NewQuery("SELECT ckey, mentor FROM erro_mentor")
 		query.Execute()
 		while(query.NextRow())
 			var/ckey = query.item[1]
@@ -571,7 +571,6 @@ var/world_topic_spam_protect_time = world.timeofday
 				var/datum/mentor/M = new /datum/mentor(ckey)
 				M.associate(GLOB.directory[ckey])
 		qdel(query)
-	// COMPedit End
 
 /world/proc/update_status()
 	var/s = ""
@@ -638,8 +637,11 @@ var/failed_old_db_connections = 0
 /hook/startup/proc/connectDB()
 	if(!CONFIG_GET(flag/sql_enabled))
 		to_world_log("SQL connection disabled in config.")
-	else if(establish_db_connection())//CHOMPEdit Begin
+	else if(!setup_database_connection())
+		to_world_log("Your server failed to establish a connection with the feedback database.")
+	else
 		to_world_log("Feedback database connection established.")
+		// CHOMPEdit Begin - Truncating the temporary dialog/attacklog tables
 		var/datum/db_query/query_truncate = SSdbcore.NewQuery("TRUNCATE erro_dialog")
 		var/num_tries = 0
 		while(!query_truncate.Execute() && num_tries<5)
@@ -656,19 +658,17 @@ var/failed_old_db_connections = 0
 		if(num_tries==5)
 			log_admin("ERROR TRYING TO CLEAR erro_attacklog")
 		qdel(query_truncate2)
-	else
-		to_world_log("Feedback database connection failed.")
-	//CHOMPEdit End
+		// CHOMPEdit End
 	return 1
 
-/*/proc/setup_database_connection() CHOMPEdit TGSQL
+/proc/setup_database_connection()
 	if(!CONFIG_GET(flag/sql_enabled))
 		return 0
 	if(failed_db_connections > FAILED_DB_CONNECTION_CUTOFF)	//If it failed to establish a connection more than 5 times in a row, don't bother attempting to conenct anymore.
 		return 0
 
-	if(!dbcon)
-		dbcon = new()
+	if(!SSdbcore)
+		SSdbcore = new()
 
 	var/user = CONFIG_GET(string/feedback_login)
 	var/pass = CONFIG_GET(string/feedback_password)
@@ -676,43 +676,36 @@ var/failed_old_db_connections = 0
 	var/address = CONFIG_GET(string/address)
 	var/port = CONFIG_GET(number/port)
 
-	dbcon.Connect("dbi:mysql:[db]:[address]:[port]","[user]","[pass]")
-	. = dbcon.IsConnected()
+	SSdbcore.Connect("dbi:mysql:[db]:[address]:[port]","[user]","[pass]")
+	. = SSdbcore.IsConnected()
 	if ( . )
 		failed_db_connections = 0	//If this connection succeeded, reset the failed connections counter.
-		//CHOMPEdit Begin
-		var/datum/db_query/query_truncate = dbcon.NewQuery("TRUNCATE erro_dialog")
-		var/num_tries = 0
-		while(!query_truncate.Execute() && num_tries<5)
-			num_tries++
-
-		if(num_tries==5)
-			log_admin("ERROR TRYING TO CLEAR erro_dialog")
-		//CHOMPEdit End
 	else
 		failed_db_connections++		//If it failed, increase the failed connections counter.
-		to_world_log(dbcon.ErrorMsg())
+		to_world_log(SSdbcore.ErrorMsg())
 
-	return .*/
+	return .
 
 //This proc ensures that the connection to the feedback database (global variable dbcon) is established
-/proc/establish_db_connection() //CHOMPEdit TGSQL
-	return SSdbcore.Connect()
+/proc/establish_db_connection()
+	if(failed_db_connections > FAILED_DB_CONNECTION_CUTOFF)
+		return 0
 
-/* CHOMPedit
+	if(!SSdbcore || !SSdbcore.IsConnected())
+		return setup_database_connection()
+	else
+		return 1
+
 // Cleans up DB connections and recreates them
 /proc/reset_database_connections()
 	var/list/results = list("-- Resetting DB connections --")
 	failed_db_connections = 0
 
-	if(dbcon?.IsConnected())
-		dbcon.Disconnect()
-		results += "dbcon was connected and asked to disconnect"
+	if(SSdbcore?.IsConnected())
+		SSdbcore.Disconnect()
+		results += "SSdbcore was connected and asked to disconnect"
 	else
-		results += "dbcon was not connected"
-
-	if(dbcon_old?.IsConnected())
-		results += "WARNING: dbcon_old is connected, not touching it, but is this intentional?"
+		results += "SSdbcore was not connected"
 
 	if(!CONFIG_GET(flag/sql_enabled))
 		results += "stopping because config.sql_enabled = false"
@@ -725,7 +718,6 @@ var/failed_old_db_connections = 0
 
 	results += "-- DB Reset End --"
 	to_world_log(results.Join("\n"))
-*/
 
 // Things to do when a new z-level was just made.
 /world/proc/max_z_changed()
@@ -797,7 +789,6 @@ var/global/game_id = null
 		t = round(t / l)
 	return 1
 
-// CHOMPStation Add: Spaceman DMM Debugger
 /proc/auxtools_stack_trace(msg)
 	CRASH(msg)
 
@@ -812,5 +803,3 @@ var/global/game_id = null
 	if (debug_server)
 		call_ext(debug_server, "auxtools_shutdown")()
 	. = ..()
-
-// CHOMPStation Add End: Spaceman DMM Debugger

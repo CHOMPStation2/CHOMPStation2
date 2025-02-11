@@ -64,10 +64,10 @@
 	var/obj/item/reagent_containers/glass/beaker/B1 = new(src)
 	var/obj/item/reagent_containers/glass/beaker/B2 = new(src)
 
-	B1.reagents.add_reagent("miasma", 30)
-	B1.reagents.add_reagent("potassium", 5)
-	B2.reagents.add_reagent("sugar", 5)
-	B2.reagents.add_reagent("phosphorus", 5)
+	B1.reagents.add_reagent(REAGENT_ID_MIASMA, 30)
+	B1.reagents.add_reagent(REAGENT_ID_POTASSIUM, 5)
+	B2.reagents.add_reagent(REAGENT_ID_SUGAR, 5)
+	B2.reagents.add_reagent(REAGENT_ID_PHOSPHORUS, 5)
 
 	beakers += B1
 	beakers += B2
@@ -113,7 +113,7 @@
 	new /obj/item/grenade/chem_grenade/miasma(droploc)
 	/*Broken smoke spawn code. Above line is a bandaid.
 	var/datum/reagents/R = new/datum/reagents(30)
-	reagents.add_reagent("miasma", 30)
+	reagents.add_reagent(REAGENT_ID_MIASMA, 30)
 	var/datum/effect_system/smoke_spread/chem/S = new /datum/effect_system/smoke_spread/chem
 	S.attach(droploc)
 	S.set_up(R, 30, 0, droploc)

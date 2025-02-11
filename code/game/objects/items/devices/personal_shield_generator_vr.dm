@@ -182,7 +182,7 @@
 	else if(W.has_tool_quality(TOOL_SCREWDRIVER))
 		if(bcell)
 			if(istype(bcell, /obj/item/cell/device/shield_generator/parry)) //CHOMPedit: Cannot remove the cell from Parry shields.
-				to_chat(user,"<span class='notice'>You cannot remove the cell from this device.</span>") //CHOMPedit: No cell removal.
+				to_chat(user,span_notice("You cannot remove the cell from this device.")) //CHOMPedit: No cell removal.
 				return //CHOMPedit: No cell removal.
 			if(istype(bcell, /obj/item/cell/device/shield_generator)) //No stealing self charging batteries!
 				var/choice = tgui_alert(user, "A popup appears on the device 'REMOVING THE INTERNAL CELL WILL DESTROY THE BATTERY. DO YOU WISH TO CONTINUE?'...Well, do you?", "Selection List", list("Cancel", "Remove"))
@@ -211,7 +211,7 @@
 				to_chat(user, span_notice("You remove the cell from \the [src]."))
 				update_icon()
 	else if(istype(W,/obj/item/multitool))
-		var/new_color = input(usr, "Choose a color to set the shield to!", "", effect_color) as color|null
+		var/new_color = tgui_color_picker(usr, "Choose a color to set the shield to!", "", effect_color)
 		if(new_color)
 			effect_color = new_color
 	else
@@ -300,7 +300,7 @@
 
 /obj/item/personal_shield_generator/process()
 	if(!bcell) //They removed the battery midway.
-		if(istype(loc, /mob/living/carbon/human)) //We on someone? Tell them it turned off.
+		if(ishuman(loc)) //We on someone? Tell them it turned off.
 			var/mob/living/carbon/human/user = loc
 			to_chat(user, span_warning("The shield deactivates! An error message pops up on screen: 'Cell missing. Cell replacement required.'"))
 			user.remove_modifiers_of_type(/datum/modifier/shield_projection)
@@ -312,7 +312,7 @@
 
 	if(shield_active)
 		if(bcell.rigged) //They turned it back on after it was rigged to go boom.
-			if(istype(loc, /mob/living/carbon/human)) //Deactivate the shield, first. You're not getting reduced damage...
+			if(ishuman(loc)) //Deactivate the shield, first. You're not getting reduced damage...
 				var/mob/living/carbon/human/user = loc
 				to_chat(user, span_warning("The shield deactivates, an error message popping up on screen: 'Cell Reactor Critically damaged. Cell replacement required.'"))
 				user.remove_modifiers_of_type(/datum/modifier/shield_projection)
@@ -333,7 +333,7 @@
 
 	if(bcell.charge < generator_hit_cost || bcell.charge < generator_active_cost) //Out of charge...
 		shield_active = 0
-		if(istype(loc, /mob/living/carbon/human)) //We on someone? Tell them it turned off.
+		if(ishuman(loc)) //We on someone? Tell them it turned off.
 			var/mob/living/carbon/human/user = loc
 			to_chat(user, span_warning("The shield deactivates, an error message popping up on screen: 'Cell out of charge.'"))
 			user.remove_modifiers_of_type(/datum/modifier/shield_projection)
@@ -542,7 +542,7 @@
 //Misc belts. Admin-spawn only atm.
 
 /obj/item/personal_shield_generator/belt/adminbus
-	desc = "You should not see this. You REALLY should not see this. If you do, you have either been blessed or are about to be the target of some sick prank."
+	desc = DEVELOPER_WARNING_NAME + " You REALLY should not see this. If you do, you have either been blessed or are about to be the target of some sick prank."
 	modifier_type = /datum/modifier/shield_projection/admin
 	generator_hit_cost = 0
 	generator_active_cost = 0

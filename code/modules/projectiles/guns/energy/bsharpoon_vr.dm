@@ -90,7 +90,7 @@
 	if(ownturf.z != T.z || get_dist(T,ownturf) > world.view)
 		to_chat(user, span_warning("The target is out of range!"))
 		return
-	if((get_area(A).flags & BLUE_SHIELDED) || (T.block_tele) || (ownturf.block_tele))	//CHOMPedit, consistency smh
+	if((get_area(A).flag_check(BLUE_SHIELDED)) || (T.block_tele) || (ownturf.block_tele))	//CHOMPedit, consistency smh
 		to_chat(user, span_warning("The target area protected by bluespace shielding!"))
 		return
 	if(!(A in view(user, world.view)))
@@ -115,7 +115,7 @@
 
 	var/recievefailchance = failure_chance
 	var/sendfailchance = failure_chance
-	if(istype(user, /mob/living))
+	if(isliving(user))
 		var/mob/living/L = user
 		if(LAZYLEN(L.buckled_mobs))
 			for(var/rider in L.buckled_mobs)

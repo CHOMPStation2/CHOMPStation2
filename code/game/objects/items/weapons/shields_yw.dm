@@ -28,14 +28,14 @@ obj/item/shield/riot/stun
 		throw_speed = 2
 		w_class = ITEMSIZE_LARGE
 		slot_flags = SLOT_BACK
-		user << "<span class='notice'>You extend \the [src].</span>"
+		user << span_notice("You extend \the [src].")
 	else
 		force = 3
 		throwforce = 3
 		throw_speed = 3
 		w_class = ITEMSIZE_NORMAL
 		slot_flags = null
-		user << "<span class='notice'>[src] can now be concealed.</span>"
+		user << span_notice("[src] can now be concealed.")
 
 	if(istype(user,/mob/living/carbon/human))
 		var/mob/living/carbon/human/H = user
@@ -44,4 +44,3 @@ obj/item/shield/riot/stun
 
 	add_fingerprint(user)
 	return
-

@@ -17,6 +17,7 @@
 	pref.communicator_visibility	= save_data["communicator_visibility"]
 	pref.ringtone					= save_data["ttone"] // CHOMPEdit - We use ttone in the pref so that it doesnt get reset
 	//pref.shoe_hater					= save_data["shoe_hater"] //CHOMPRemove, remove RS No shoes
+	pref.no_jacket					= save_data["no_jacket"]
 
 /datum/category_item/player_setup_item/general/equipment/save_character(list/save_data)
 	save_data["all_underwear"]				= pref.all_underwear
@@ -30,6 +31,7 @@
 	save_data["communicator_visibility"]	= pref.communicator_visibility
 	save_data["ttone"]						= pref.ringtone // CHOMPEdit - We use ttone in the pref so that it doesnt get reset
 	//save_data["shoe_hater"] 				= pref.shoe_hater //CHOMPRemove, remove RS No shoes
+	save_data["no_jacket"]					= pref.no_jacket
 
 var/global/list/valid_ringtones = list(
 		"beep",
@@ -124,19 +126,20 @@ var/global/list/valid_ringtones = list(
 	. += span_bold("Equipment:") + "<br>"
 	for(var/datum/category_group/underwear/UWC in global_underwear.categories)
 		var/item_name = pref.all_underwear[UWC.name] ? pref.all_underwear[UWC.name] : "None"
-		. += "[UWC.name]: <a href='?src=\ref[src];change_underwear=[UWC.name]'><b>[item_name]</b></a>"
+		. += "[UWC.name]: <a href='byond://?src=\ref[src];change_underwear=[UWC.name]'><b>[item_name]</b></a>"
 		var/datum/category_item/underwear/UWI = UWC.items_by_name[item_name]
 		if(UWI)
 			for(var/datum/gear_tweak/gt in UWI.tweaks)
-				. += " <a href='?src=\ref[src];underwear=[UWC.name];tweak=\ref[gt]'>[gt.get_contents(get_metadata(UWC.name, gt))]</a>"
+				. += " <a href='byond://?src=\ref[src];underwear=[UWC.name];tweak=\ref[gt]'>[gt.get_contents(get_metadata(UWC.name, gt))]</a>"
 
 		. += "<br>"
-	. += "Headset Type: <a href='?src=\ref[src];change_headset=1'><b>[GLOB.headsetlist[pref.headset]]</b></a><br>"
-	. += "Backpack Type: <a href='?src=\ref[src];change_backpack=1'><b>[backbaglist[pref.backbag]]</b></a><br>"
-	. += "PDA Type: <a href='?src=\ref[src];change_pda=1'><b>[pdachoicelist[pref.pdachoice]]</b></a><br>"
-	. += "Communicator Visibility: <a href='?src=\ref[src];toggle_comm_visibility=1'><b>[(pref.communicator_visibility) ? "Yes" : "No"]</b></a><br>"
-	. += "Ringtone (leave blank for job default): <a href='?src=\ref[src];set_ringtone=1'><b>[pref.ringtone]</b></a><br>"
-	//. += "Spawn With Shoes:<a href='?src=\ref[src];toggle_shoes=1'><b>[(pref.shoe_hater) ? "No" : "Yes"]</b></a><br>" //RS Addition //CHOMPRemove, remove RS No shoes
+	. += "Headset Type: <a href='byond://?src=\ref[src];change_headset=1'><b>[GLOB.headsetlist[pref.headset]]</b></a><br>"
+	. += "Backpack Type: <a href='byond://?src=\ref[src];change_backpack=1'><b>[backbaglist[pref.backbag]]</b></a><br>"
+	. += "PDA Type: <a href='byond://?src=\ref[src];change_pda=1'><b>[pdachoicelist[pref.pdachoice]]</b></a><br>"
+	. += "Communicator Visibility: <a href='byond://?src=\ref[src];toggle_comm_visibility=1'><b>[(pref.communicator_visibility) ? "Yes" : "No"]</b></a><br>"
+	. += "Ringtone (leave blank for job default): <a href='byond://?src=\ref[src];set_ringtone=1'><b>[pref.ringtone]</b></a><br>"
+	//. += "Spawn With Shoes:<a href='byond://?src=\ref[src];toggle_shoes=1'><b>[(pref.shoe_hater) ? "No" : "Yes"]</b></a><br>" //RS Addition //CHOMPRemove, remove RS No shoes
+	. += "Spawn With Jacket:<a href='byond://?src=\ref[src];toggle_jacket=1'><b>[(pref.no_jacket) ? "No" : "Yes"]</b></a><br>"
 
 	return jointext(.,null)
 
@@ -192,7 +195,7 @@ var/global/list/valid_ringtones = list(
 		var/datum/gear_tweak/gt = locate(href_list["tweak"])
 		if(!gt)
 			return TOPIC_NOACTION
-		var/new_metadata = gt.get_metadata(user, get_metadata(underwear, gt)) //ChompEDIT - usr removal
+		var/new_metadata = gt.get_metadata(user, get_metadata(underwear, gt))
 		if(new_metadata)
 			set_metadata(underwear, gt, new_metadata)
 			return TOPIC_REFRESH_UPDATE_PREVIEW
@@ -218,5 +221,9 @@ var/global/list/valid_ringtones = list(
 			return TOPIC_REFRESH
 			//RS ADD END
 	*///CHOMPRemove End, remove RS No shoes
+	else if(href_list["toggle_jacket"])
+		if(CanUseTopic(user))
+			pref.no_jacket = !pref.no_jacket
+			return TOPIC_REFRESH
 
 	return ..()

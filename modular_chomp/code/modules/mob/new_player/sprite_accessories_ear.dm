@@ -24,3 +24,12 @@
 	icon_state = "longdragonhorns_v1"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/ears/sloogbobbers
+	name = "Sloog Bobbers"
+	desc = ""
+	icon = 'icons/mob/vore/ears_ch.dmi'
+	icon_state = "sloog_bobbers"
+	extra_overlay = "sloog_tips"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY

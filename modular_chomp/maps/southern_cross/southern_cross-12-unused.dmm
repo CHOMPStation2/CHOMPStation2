@@ -78,7 +78,6 @@
 	pixel_y = 26
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/table/standard,
@@ -132,8 +131,6 @@
 /turf/simulated/floor/outdoors/grass)
 "em" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/wall/log_sif,
@@ -144,8 +141,6 @@
 "eP" = (
 /obj/structure/coatrack,
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/wood/sif,
@@ -381,18 +376,13 @@
 /turf/simulated/floor/water/deep)
 "kB" = (
 /obj/structure/cable{
-	d1 = 32;
 	icon_state = "32-1"
 	},
 /obj/structure/lattice,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/railing/grey{
@@ -876,8 +866,6 @@
 	pixel_x = -22
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/wood/sif,
@@ -983,8 +971,6 @@
 	starts_with = list(/obj/item/ammo_magazine/clip/c762/practice=10)
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/item/storage/bag/trash{
@@ -1124,8 +1110,6 @@
 /area/surface/outpost/shelter/utilityroom)
 "CZ" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/wall/log_sif,
@@ -1285,7 +1269,6 @@
 	pixel_x = 24
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/wood/sif,
@@ -1311,7 +1294,6 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/thermoregulator/southerncross{
@@ -1401,8 +1383,6 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/washing_machine,
@@ -1410,8 +1390,6 @@
 /area/surface/outpost/shelter/utilityroom)
 "Mw" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/wall/log_sif,
@@ -1481,8 +1459,6 @@
 "Oj" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/wood/sif,
@@ -1518,7 +1494,6 @@
 	pixel_x = 24
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/wood/sif{
@@ -1659,7 +1634,6 @@
 /area/surface/outpost/shelter/dorms)
 "Se" = (
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/thermoregulator/southerncross{
@@ -1668,13 +1642,9 @@
 	pixel_y = 1
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/wood/sif,
@@ -1805,8 +1775,6 @@
 /turf/simulated/floor/outdoors/dirt)
 "Wv" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/wood/sif,
@@ -1859,8 +1827,6 @@
 	pixel_y = -2
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/wood/sif,
@@ -1956,8 +1922,6 @@
 /area/surface/outpost/shelter/dorms)
 "Yv" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/table/standard,

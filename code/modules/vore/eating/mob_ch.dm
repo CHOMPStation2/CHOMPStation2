@@ -15,18 +15,3 @@
 	var/no_latejoin_prey_warning_persists = FALSE	//Do we save it?
 	var/belly_rub_target = null
 	var/soulcatcher_pref_flags = 0			//Default disabled
-
-	// CHOMP vore icons refactor (Now on mob)
-	var/vore_capacity = 0				// Maximum capacity, -1 for unlimited
-	var/vore_capacity_ex = list("stomach" = 0) //expanded list of capacities
-	var/vore_fullness = 0				// How "full" the belly is (controls icons)
-	var/list/vore_fullness_ex = list("stomach" = 0) // Expanded list of fullness
-	var/belly_size_multiplier = 1
-	var/vore_sprite_multiply = list("stomach" = FALSE, "taur belly" = FALSE)
-	var/vore_sprite_color = list("stomach" = "#000", "taur belly" = "#000")
-
-	var/list/vore_icon_bellies = list("stomach")
-	var/updating_fullness = FALSE
-	var/obj/belly/previewing_belly
-
-	var/obj/soulgem/soulgem

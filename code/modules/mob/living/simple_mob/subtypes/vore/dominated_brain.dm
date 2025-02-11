@@ -166,7 +166,7 @@
 	pred_body.ooc_notes_maybes = pred_ooc_maybes
 	pred_body.ooc_notes_style = pred_ooc_style
 	//CHOMPEdit End
-	log_and_message_admins("[pred_body] is now controlled by [pred_body.ckey]. They were restored to control through prey domination, and had been controlled by [prey_ckey].")
+	log_and_message_admins("is now controlled by [pred_body.ckey]. They were restored to control through prey domination, and had been controlled by [prey_ckey].", pred_body)
 	pred_body.absorb_langs()
 	pred_body.prey_controlled = FALSE
 	qdel(src)
@@ -318,7 +318,7 @@
 	pred_brain.real_name = pred.real_name
 	pred.ckey = pred_brain.prey_ckey
 	pred.prey_controlled = TRUE
-	log_and_message_admins("[pred] is now controlled by [pred.ckey], they were taken over via prey domination, and were originally controlled by [pred_brain.pred_ckey].")
+	log_and_message_admins("is now controlled by [pred.ckey], they were taken over via prey domination, and were originally controlled by [pred_brain.pred_ckey].", pred)
 	if(delete_source)
 		qdel(prey)
 
@@ -602,6 +602,6 @@
 	pred_brain.real_name = pred.real_name
 	pred.ckey = pred_brain.prey_ckey
 	pred.prey_controlled = TRUE
-	log_and_message_admins("[pred] is now controlled by [pred.ckey], they were taken over via pred submission, and were originally controlled by [pred_brain.pred_ckey].")
+	log_and_message_admins("is now controlled by [pred.ckey], they were taken over via pred submission, and were originally controlled by [pred_brain.pred_ckey].", pred)
 	if(delete_source)
 		qdel(prey)

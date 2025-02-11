@@ -4,12 +4,15 @@
 	if(!target || !istype(target))
 		return
 
-	if(iscarbon(target))
-		var/mob/living/carbon/C = target
+	if(isliving(target))
 		if(type == CHEM_VORE)
 			var/datum/reagents/R = target_belly.reagents
+			if(!R)
+				R = new /datum/reagents(amount)
+				target_belly.reagents = R
 			return trans_to_holder(R, amount, multiplier, copy)
-		if(type == CHEM_INGEST)
+		if(type == CHEM_INGEST && iscarbon(target))
+			var/mob/living/carbon/C = target
 			var/datum/reagents/R = C.ingested
 			return C.ingest(src, R, amount, multiplier, copy)
 

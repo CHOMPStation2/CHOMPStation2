@@ -127,7 +127,7 @@
 				return
 
 			// If the human is losing too much blood, beep.
-			if(T.vessel.get_reagent_amount("blood") < T.species.blood_volume*T.species.blood_level_safe)
+			if(T.vessel.get_reagent_amount(REAGENT_ID_BLOOD) < T.species.blood_volume*T.species.blood_level_safe)
 				visible_message("\The [src] beeps loudly.")
 
 			var/datum/reagent/B = T.take_blood(beaker,amount)
@@ -153,7 +153,7 @@
 	set name = "Toggle Mode"
 	set src in view(1)
 
-	if(!istype(usr, /mob/living))
+	if(!isliving(usr))
 		to_chat(usr, span_warning("You can't do that."))
 		return
 

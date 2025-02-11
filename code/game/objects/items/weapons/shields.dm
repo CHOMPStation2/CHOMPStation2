@@ -174,7 +174,7 @@
 		playsound(src, 'sound/weapons/saberoff.ogg', 50, 1)
 		to_chat(user, span_notice("\The [src] can now be concealed."))
 
-	if(istype(user,/mob/living/carbon/human))
+	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		H.update_inv_l_hand()
 		H.update_inv_r_hand()
@@ -197,7 +197,7 @@
 		set_light(0)
 		item_state = "[icon_state]"
 
-	if(istype(usr,/mob/living/carbon/human))
+	if(ishuman(usr))
 		var/mob/living/carbon/human/H = usr
 		H.update_inv_l_hand()
 		H.update_inv_r_hand()
@@ -208,8 +208,8 @@
 	if(user.incapacitated() || !istype(user))
 		to_chat(user, span_warning("You can't do that right now!"))
 		return
-	if(tgui_alert(usr, "Are you sure you want to recolor your shield?", "Confirm Recolor", list("Yes", "No")) == "Yes")
-		var/energy_color_input = input(usr,"","Choose Energy Color",lcolor) as color|null
+	if(tgui_alert(user, "Are you sure you want to recolor your shield?", "Confirm Recolor", list("Yes", "No")) == "Yes")
+		var/energy_color_input = tgui_color_picker(user,"","Choose Energy Color",lcolor)
 		if(energy_color_input)
 			lcolor = sanitize_hexcolor(energy_color_input)
 		update_icon()
@@ -257,7 +257,7 @@
 		slot_flags = null
 		to_chat(user, span_notice("[src] can now be concealed."))
 
-	if(istype(user,/mob/living/carbon/human))
+	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		H.update_inv_l_hand()
 		H.update_inv_r_hand()

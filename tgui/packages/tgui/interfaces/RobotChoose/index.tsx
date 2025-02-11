@@ -17,13 +17,14 @@ export const RobotChoose = (props) => {
     sprite_datum,
     theme,
     currentName,
+    mind_name,
     isDefaultName,
     sprite_datum_class,
     sprite_datum_size,
   } = data;
 
   return (
-    <Window width={800} height={600} theme={theme || 'ntos'}>
+    <Window width={800} height={605} theme={theme || 'ntos'}>
       <Window.Content>
         <Stack fill>
           <ModuleSection
@@ -38,6 +39,7 @@ export const RobotChoose = (props) => {
           />
           <IconSection
             currentName={currentName}
+            mindName={mind_name}
             isDefaultName={isDefaultName}
             sprite={sprite_datum_class}
             size={sprite_datum_size}

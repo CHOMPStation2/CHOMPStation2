@@ -63,8 +63,8 @@
 	if(..())
 		return TRUE
 
-	add_fingerprint(usr)
-	usr.set_machine(src)
+	add_fingerprint(ui.user)
+	ui.user.set_machine(src)
 
 	if(!touch_silent)
 		playsound(src, 'sound/machines/pda_click.ogg', 20)
@@ -99,13 +99,13 @@
 				cartridge = null
 				update_shortcuts()
 		if("Authenticate")//Checks for ID
-			id_check(usr, 1)
+			id_check(ui.user, 1)
 		if("Retro")
 			retro_mode = !retro_mode
 		if("TouchSounds")
 			touch_silent = !touch_silent
 		if("Ringtone")
-			return set_ringtone()
+			return set_ringtone(ui.user)
 		else
 			if(current_app)
 				. = current_app.tgui_act(action, params, ui, state)
