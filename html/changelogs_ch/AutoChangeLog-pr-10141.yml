@@ -1,0 +1,5 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - bugfix: "a 6 year old issue where any modifier could set your pulse to 0"
+  - bugfix: "door tag id inputs being too short"
