@@ -93,20 +93,12 @@
 /datum/species/monkey/get_random_name()
 	return "[lowertext(name)] ([rand(100,999)])"
 
-<<<<<<< HEAD
-/datum/species/monkey/handle_post_spawn(var/mob/living/carbon/human/H)//CHOMPadd begin
-=======
 /datum/species/monkey/handle_post_spawn(var/mob/living/carbon/human/H)
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 	if(!H.ckey)
 		H.can_be_drop_prey = TRUE
 		H.digest_leave_remains = 1
 		H.low_priority = TRUE
-<<<<<<< HEAD
-	return ..()//CHOMPadd end
-=======
 	return ..()
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 
 /datum/species/monkey/tajaran
 	name = SPECIES_MONKEY_TAJ

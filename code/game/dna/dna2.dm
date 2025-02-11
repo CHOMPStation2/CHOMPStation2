@@ -312,11 +312,7 @@ GLOBAL_LIST_EMPTY_TYPED(dna_genes_bad, /datum/gene/trait)
 	if (block<=0) return
 	ASSERT(maxvalue<=4095)
 	var/range = (4095 / maxvalue)
-<<<<<<< HEAD
-	if(value!=null)	//CHOMPEdit DO NOT PORT VIRGO'S FIX FOR RESLEEVING. IT IS BAD. Also fuck travis
-=======
 	if(value!=null)
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 		SetUIValue(block,round(value * range),defer)
 
 // Getter version of above.

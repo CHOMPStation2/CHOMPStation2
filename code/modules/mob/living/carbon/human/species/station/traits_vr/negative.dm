@@ -207,9 +207,6 @@
 	custom_only = FALSE
 	varchange_type = TRAIT_VARCHANGE_MORE_BETTER
 
-<<<<<<< HEAD
-/* // CHOMPedit: commented out because we disabled baymiss so this does nothing.
-=======
 	//Traitgenes
 	is_genetrait = TRUE
 	hidden = FALSE
@@ -217,7 +214,6 @@
 	activation_message="The dark seems darker than usual."
 	primitive_expression_messages=list("looks towards the light")
 
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 /datum/trait/negative/bad_shooter
 	name = "Bad Shot"
 	desc = "You are terrible at aiming."
@@ -225,7 +221,6 @@
 	var_changes = list("gun_accuracy_mod" = -35)
 	custom_only = FALSE
 	varchange_type = TRAIT_VARCHANGE_MORE_BETTER
-*/
 
 	//Traitgenes
 	is_genetrait = TRUE

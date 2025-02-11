@@ -15,12 +15,9 @@
 	if(owner)
 		var/mob/living/silicon/ai/ai = owner
 		ai.all_eyes -= src
-<<<<<<< HEAD
-=======
 		owner = null
 	visualnet.clear_references(src, src.client)
 	visualnet = null
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 	. = ..()
 
 /mob/observer/eye/aiEye/setLoc(var/T, var/cancel_tracking = 1)

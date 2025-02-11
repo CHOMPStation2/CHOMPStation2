@@ -37,13 +37,8 @@
 
 /datum/trait/positive/endurance_high
 	name = "High Endurance"
-<<<<<<< HEAD
-	desc = "Increases your maximum total hitpoints to 125. You require 250 damage in total to die, compared to 200 normally. You will still go into crit after losing 125 HP, compared to crit at 100 HP." // CHOMPEdit: Clarity for players' sake.
-	cost = 3 // CHOMPEdit
-=======
 	desc = "Increases your maximum total hitpoints to 125. You require 250 damage in total to die, compared to 200 normally. You will still go into crit after losing 125 HP, compared to crit at 100 HP."
 	cost = 3
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 	var_changes = list("total_health" = 125)
 	custom_only = FALSE
 	banned_species = list(SPECIES_TESHARI, SPECIES_UNATHI, SPECIES_SHADEKIN_CREW) //Either not applicable or buffs are too strong
@@ -54,17 +49,6 @@
 
 /datum/trait/positive/nonconductive
 	name = "Non-Conductive"
-<<<<<<< HEAD
-	desc = "Decreases your susceptibility to electric shocks by 25%." //CHOMP Edit - GRAMMAR PLS.
-	cost = 2 //This effects tasers!
-	var_changes = list("siemens_coefficient" = 0.75) //CHOMP Edit
-
-/datum/trait/positive/nonconductive_plus
-	name = "Non-Conductive, Major"
-	desc = "Decreases your susceptibility to electric shocks by 50%." //CHOMP Edit - GRAMMAR PLS.
-	cost = 3 //Let us not forget this effects tasers!
-	var_changes = list("siemens_coefficient" = 0.5) //CHOMP Edit
-=======
 	desc = "Decreases your susceptibility to electric shocks by 25%."
 	cost = 2
 	var_changes = list("siemens_coefficient" = 0.75)
@@ -74,16 +58,11 @@
 	desc = "Decreases your susceptibility to electric shocks by 50%."
 	cost = 3
 	var_changes = list("siemens_coefficient" = 0.5)
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 
 /*   //Chompedit, moving to Positive_ch.dm so it wont be messed with from upstream
 /datum/trait/positive/darksight
 	name = "Darksight"
-<<<<<<< HEAD
-	desc = "Allows you to see a short distance in the dark and 10% more susceptible to flashes." //CHOMP Edit
-=======
 	desc = "Allows you to see a short distance in the dark and 10% more susceptible to flashes."
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 	cost = 1
 	var_changes = list("darksight" = 3)  //CHOMP Edit
 	custom_only = FALSE
@@ -91,11 +70,7 @@
 
 /datum/trait/positive/darksight_plus
 	name = "Darksight, Major"
-<<<<<<< HEAD
-	desc = "Allows you to see in the dark for almost the whole screen and 20% more susceptible to flashes." //CHOMP Edit
-=======
 	desc = "Allows you to see in the dark for almost the whole screen and 20% more susceptible to flashes."
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 	cost = 2
 	var_changes = list("darksight" = 6)  //CHOMP Edit
 	custom_only = FALSE
@@ -233,11 +208,7 @@
 	name = "Aquatic"
 	desc = "You can breathe under water and can traverse water more efficiently. Additionally, you can eat others in the water."
 	cost = 1
-<<<<<<< HEAD
-	custom_only = FALSE //CHOMPEdit: honestly within the bounds of genemods, just hopefully people actually design characters around it
-=======
 	custom_only = FALSE
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 	var_changes = list("water_breather" = 1, "water_movement" = -4) //Negate shallow water. Half the speed in deep water.
 	allowed_species = list(SPECIES_HANNER, SPECIES_CUSTOM) //So it only shows up for custom species and hanner
 	custom_only = FALSE

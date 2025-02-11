@@ -372,11 +372,7 @@
 		return
 	if(isnull(subject) || (!(ishuman(subject))) || (!subject.dna))
 		if(isalien(subject))
-<<<<<<< HEAD
-			set_scan_temp("Genaprawns are not scannable.", "bad") //CHOMPedit
-=======
 			set_scan_temp("Genaprawns are not scannable.", "bad")
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 			SStgui.update_uis(src)
 			return
 		// can add more conditions for specific non-human messages here

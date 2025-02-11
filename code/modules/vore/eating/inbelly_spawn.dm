@@ -68,11 +68,7 @@ Please do not abuse this ability.
 		return
 
 	// Are we cool with this prey spawning in at all?
-<<<<<<< HEAD
-	var/answer = tgui_alert(src, "[potential_prey.prefs.real_name] wants to spawn in one of your bellies. Do you accept?", "Inbelly Spawning", list("Yes", "No")) //CHOMPEdit - hides ckey
-=======
 	var/answer = tgui_alert(src, "[potential_prey.prefs.real_name] wants to spawn in one of your bellies. Do you accept?", "Inbelly Spawning", list("Yes", "No"))
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 	if(answer != "Yes")
 		to_chat(potential_prey, span_notice("Your request was turned down."))
 		return

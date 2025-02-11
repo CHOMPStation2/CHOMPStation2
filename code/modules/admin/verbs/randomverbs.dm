@@ -912,11 +912,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	mob.set_viewsize(view)
 
 	log_admin("[key_name(usr)] changed their view range to [view].")
-<<<<<<< HEAD
-	message_admins("<font color='blue'>[key_name_admin(usr)] changed their view range to [view].</font>", 1)	//CHOMPEdit - Uncommented this.
-=======
 	message_admins("<font color='blue'>[key_name_admin(usr)] changed their view range to [view].</font>", 1)
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 
 	feedback_add_details("admin_verb","CVRA") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
@@ -956,11 +952,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	set category = "Admin.Events"
 	set name = "Cancel Shuttle"
 
-<<<<<<< HEAD
-	if(!check_rights(R_ADMIN|R_FUN))	return // CHOMPstation edit: Lets anyone cancel the shuttle.
-=======
 	if(!check_rights(R_ADMIN|R_FUN))	return
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 
 	if(tgui_alert(src, "You sure?", "Confirm", list("Yes", "No")) != "Yes") return
 

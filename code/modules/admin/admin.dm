@@ -645,11 +645,7 @@ var/global/floorIsLava = 0
 		if(!check_rights(R_SERVER,0))
 			message = sanitize(message, 500, extra = 0)
 		message = replacetext(message, "\n", "<br>") // required since we're putting it in a <p> tag
-<<<<<<< HEAD
-		send_ooc_announcement(message, "From [usr.client.holder.fakekey ? "Administrator" : usr.key]") // CHOMPEdit
-=======
 		send_ooc_announcement(message, "From [usr.client.holder.fakekey ? "Administrator" : usr.key]")
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 		log_admin("Announce: [key_name(usr)] : [message]")
 	feedback_add_details("admin_verb","A") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
@@ -925,15 +921,6 @@ var/datum/announcement/minor/admin_min_announcer = new
 	set desc="Whether persistent data will be saved from now on."
 	set name="Toggle Persistent Data"
 	CONFIG_SET(flag/persistence_disabled, !CONFIG_GET(flag/persistence_disabled))
-<<<<<<< HEAD
-	/* CHOMP Edit: the entire world doesn't need to know.
-	if(!CONFIG_GET(flag/persistence_disabled))
-		to_world(span_world("Persistence is now enabled."))
-	else
-		to_world(span_world("Persistence is no longer enabled."))
-	*/
-=======
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 	message_admins(span_blue("[key_name_admin(usr)] toggled persistence to [CONFIG_GET(flag/persistence_disabled) ? "Off" : "On"]."), 1)
 	log_admin("[key_name(usr)] toggled persistence to [CONFIG_GET(flag/persistence_disabled) ? "Off" : "On"].")
 	world.update_status()

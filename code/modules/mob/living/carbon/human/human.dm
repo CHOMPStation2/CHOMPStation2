@@ -27,11 +27,7 @@
 	var/can_defib = 1					//Horrible damage (like beheadings) will prevent defibbing organics.
 	var/active_regen = FALSE //Used for the regenerate proc in human_powers.dm
 	var/active_regen_delay = 300
-<<<<<<< HEAD
-	var/last_breath_sound				//CHOMPAdd, Feels weird doing this, but allows us to store the value across proc calls per-mob.
-=======
 	var/last_breath_sound				//Allows us to store the value across proc calls per-mob.
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 	var/list/teleporters = list() //Used for lleill abilities
 
 	var/rest_dir = 0					//To lay down in a specific direction
@@ -75,15 +71,7 @@
 
 /mob/living/carbon/human/Destroy()
 	human_mob_list -= src
-<<<<<<< HEAD
-	QDEL_NULL_LIST(organs) // CHOMPEdit
-	/* //REMOVE - this is done on mob/living/Destroy
-	for(var/organ in organs)
-		qdel(organ)
-	*/
-=======
 	QDEL_NULL_LIST(organs)
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 	if(nif)
 		QDEL_NULL(nif)
 	worn_clothing.Cut()
@@ -206,11 +194,7 @@
 			if (!get_ear_protection() >= 2)
 				ear_damage += 30
 				ear_deaf += 120
-<<<<<<< HEAD
-				deaf_loop.start() // CHOMPStation Add: Ear Ringing/Deafness
-=======
-				// deaf_loop.start() // Used downstream
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
+				deaf_loop.start() // CHOMPEnable: Ear Ringing/Deafness
 			if (prob(70) && !shielded)
 				Paralyse(10)
 
@@ -221,11 +205,7 @@
 			if (!get_ear_protection() >= 2)
 				ear_damage += 15
 				ear_deaf += 60
-<<<<<<< HEAD
-				deaf_loop.start() // CHOMPStation Add: Ear Ringing/Deafness
-=======
-				// deaf_loop.start() // Used downstream
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
+				deaf_loop.start() // CHOMPEnable: Ear Ringing/Deafness
 			if (prob(50) && !shielded)
 				Paralyse(10)
 
@@ -1318,11 +1298,7 @@
 	maxHealth = species.total_health
 	hunger_rate = species.hunger_factor
 
-<<<<<<< HEAD
-	default_pixel_x = initial(pixel_x) + species.pixel_offset_x //CHOMPedit for giving datum/species ways to change 64x64 sprite offsets
-=======
 	default_pixel_x = initial(pixel_x) + species.pixel_offset_x //For giving datum/species ways to change 64x64 sprite offsets
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 	default_pixel_y = initial(pixel_y) + species.pixel_offset_y
 	pixel_x = default_pixel_x
 	pixel_y = default_pixel_y
@@ -1531,22 +1507,14 @@
 		if(C.body_parts_covered & FEET)
 			footcoverage_check = TRUE
 			break
-<<<<<<< HEAD
-	if(lying) // CHOMPadd - Drops stuff from hands, but no sleep.
-=======
 	if(lying)
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 		playsound(src, 'sound/misc/slip.ogg', 25, 1, -1)
 		drop_both_hands()
 		return 0
 	if((species.flags & NO_SLIP && !footcoverage_check) || (shoes && (shoes.item_flags & NOSLIP))) //Footwear negates a species' natural traction.
 		return 0
 	if(..(slipped_on,stun_duration))
-<<<<<<< HEAD
-		drop_both_hands() // CHOMPAdd - Drops stuff from both hands
-=======
 		drop_both_hands()
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 		return 1
 
 /mob/living/carbon/human/proc/relocate()
@@ -1869,11 +1837,7 @@
 /mob/living/carbon/human/verb/lay_down_left()
 	set name = "Rest-Left"
 
-<<<<<<< HEAD
-	rest_dir = 1 // CHOMPEdit
-=======
 	rest_dir = 1
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 	resting = !resting
 	to_chat(src, span_notice("You are now [resting ? "resting" : "getting up"]."))
 	update_canmove()
@@ -1881,11 +1845,7 @@
 /mob/living/carbon/human/verb/lay_down_right()
 	set name = "Rest-Right"
 
-<<<<<<< HEAD
-	rest_dir = 0 // CHOMPEdit
-=======
 	rest_dir = 0
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 	resting = !resting
 	to_chat(src, span_notice("You are now [resting ? "resting" : "getting up"]."))
 	update_canmove()

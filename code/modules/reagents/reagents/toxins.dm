@@ -186,21 +186,12 @@
 	taste_mult = 0.6
 	reagent_state = LIQUID
 	color = "#CF3600"
-<<<<<<< HEAD
-	strength = 15 //CHOMPEdit this shit needs to be changed sheesh
-	metabolism = REM * 0.5 //CHOMPEdit holy balls
-
-/datum/reagent/toxin/cyanide/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	..()
-	M.adjustOxyLoss(10 * removed) //CHOMPEdit the fucking toxins are already crazy enough, calm down
-=======
 	strength = 15
 	metabolism = REM * 0.5
 
 /datum/reagent/toxin/cyanide/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
 	M.adjustOxyLoss(10 * removed)
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 	M.Sleeping(1)
 
 /datum/reagent/toxin/mold

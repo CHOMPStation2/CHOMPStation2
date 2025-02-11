@@ -725,10 +725,6 @@
 	M.heal_organ_damage(3 * removed, 0)	//Gives the bones a chance to set properly even without other meds
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
-<<<<<<< HEAD
-		//CHOMPEdit Begin
-=======
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 		var/totalvol = 0
 		if(H.ingested)
 			for(var/datum/reagent/R in H.ingested.reagent_list)
@@ -739,17 +735,10 @@
 			for(var/obj/item/organ/external/O in H.bad_external_organs)
 				if(O.status & ORGAN_BROKEN)
 					O.mend_fracture()		//Only works if the bone won't rebreak, as usual
-<<<<<<< HEAD
-					H.custom_pain("You feel a terrible agony tear through your bones!",60)
-					H.adjustHalLoss(60)
-					H.AdjustStunned(1)		//Bones being regrown will knock you over - CHOMPEdit - Crawling made this trivial, get stunned
-		//CHOMPEdit End
-=======
 					H.custom_pain(span_danger("<b><font size=2>You feel a terrible agony tear through your [O.name]!</font></b>"),60,TRUE)
 					H.AdjustWeakened(10)		//Bones being regrown will knock you over
 					H.adjustHalLoss(60)
 					H.AdjustStunned(1)		//Bones being regrown will knock you over
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 
 /datum/reagent/myelamine
 	name = REAGENT_MYELAMINE
@@ -757,19 +746,11 @@
 	description = "Used to rapidly clot internal hemorrhages by increasing the effectiveness of platelets."
 	reagent_state = LIQUID
 	color = "#4246C7"
-<<<<<<< HEAD
-	metabolism = REM * 0.75	//CHOMPEdit
-	overdose = REAGENTS_OVERDOSE * 0.5
-	overdose_mod = 1.5
-	scannable = 1
-	var/repair_strength = 6	//CHOMPEdit
-=======
 	metabolism = REM * 0.75
 	overdose = REAGENTS_OVERDOSE * 0.5
 	overdose_mod = 1.5
 	scannable = 1
 	var/repair_strength = 6
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 
 /datum/reagent/myelamine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)

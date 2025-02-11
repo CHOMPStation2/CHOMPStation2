@@ -77,11 +77,7 @@
 /datum/language/xenocommon
 	name = "Xenolingua" //CHOMPedit
 	colour = "alien"
-<<<<<<< HEAD
-	desc = "The common tongue of both the xenomorphs and the Genaprawns." //CHOMPedit
-=======
 	desc = "The common tongue of both the xenomorphs and the Genaprawns."
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 	speech_verb = "hisses"
 	ask_verb = "hisses"
 	exclaim_verb = "hisses"

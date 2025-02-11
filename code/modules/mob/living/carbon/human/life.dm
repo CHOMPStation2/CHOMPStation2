@@ -12,10 +12,6 @@
 #define COLD_DAMAGE_LEVEL_2 1.5 //Amount of damage applied when your body temperature passes the 200K point
 #define COLD_DAMAGE_LEVEL_3 3 //Amount of damage applied when your body temperature passes the 120K point
 
-<<<<<<< HEAD
-//# define RADIATION_SPEED_COEFFICIENT 0.1 //CHOMPRemove
-=======
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 #define HUMAN_COMBUSTION_TEMP 524 //524k is the sustained combustion temperature of human fat
 
 /mob/living/carbon/human
@@ -426,7 +422,6 @@
 				if(prob(15) && !weakened)
 					to_chat(src, span_warning("You feel horribly ill."))
 					AdjustWeakened(3)
-<<<<<<< HEAD
 				if(prob(5) && internal_organs.len)
 					// CHOMPedit begin - organ mutations
 					if(prob(2))
@@ -437,12 +432,6 @@
 						I = pick(internal_organs) //Internal organ damage...Not good. Not good at all.
 						if(istype(I)) I.add_autopsy_data("Radiation Induced Cancerous Growth", damage)
 						I.take_damage(damage * species.radiation_mod * RADIATION_SPEED_COEFFICIENT)
-=======
-				if(prob(5) && internal_organs.len) //TODO: Add malignant organs. - The person that wrote radcode.
-					I = pick(internal_organs) //Internal organ damage...Not good. Not good at all.
-					if(istype(I)) I.add_autopsy_data("Radiation Induced Cancerous Growth", damage)
-					I.take_damage(damage * species.radiation_mod * RADIATION_SPEED_COEFFICIENT)
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 
 
 		else if (radiation >= species.rad_levels["danger_3"] && radiation < species.rad_levels["danger_4"]) //Equivalent of 8.0 to 30 Gy.
@@ -470,22 +459,15 @@
 				if(prob(5))
 					to_chat(src, span_critical("Your entire body feels like it's on fire!"))
 					adjustHalLoss(5)
-<<<<<<< HEAD
 				if(prob(10) && internal_organs.len)
+					// CHOMPedit begin - organ mutations
 					if(prob(2))
-						// CHOMPedit begin - organ mutations
 						random_malignant_organ(TRUE,FALSE,prob(60))
 					// CHOMPedit end
 					else
 						I = pick(internal_organs) //Internal organ damage...Not good. Not good at all.
 						if(istype(I)) I.add_autopsy_data("Radiation Induced Cancerous Growth", damage)
 						I.take_damage(damage * species.radiation_mod * RADIATION_SPEED_COEFFICIENT)
-=======
-				if(prob(10) && internal_organs.len)  //TODO: Add malignant organs. - The person that wrote radcode.
-					I = pick(internal_organs) //Internal organ damage...Not good. Not good at all.
-					if(istype(I)) I.add_autopsy_data("Radiation Induced Cancerous Growth", damage)
-					I.take_damage(damage * species.radiation_mod * RADIATION_SPEED_COEFFICIENT)
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 
 		else if (radiation >= species.rad_levels["danger_4"]) //Above 30Gy. You had to get absolutely blasted with rads for this.
 			damage = 30
@@ -513,23 +495,10 @@
 				if(get_active_hand() && prob(15)) //CNS is shutting down.
 					to_chat(src, span_danger("Your hand won't respond properly, you drop what you're holding!"))
 					drop_item()
-<<<<<<< HEAD
-				if(internal_organs.len)
-					// CHOMPedit begin - organ mutations
-					if(prob(2))
-						// random organ time!
-						random_malignant_organ(prob(40),FALSE,TRUE)
-					// CHOMPedit end
-					else
-						I = pick(internal_organs) //Internal organ damage...Not good. Not good at all.
-						if(istype(I)) I.add_autopsy_data("Radiation Induced Cancerous Growth", damage * species.radiation_mod * RADIATION_SPEED_COEFFICIENT)
-						I.take_damage(damage * species.radiation_mod * RADIATION_SPEED_COEFFICIENT)
-=======
 				if(internal_organs.len)  //TODO: Add malignant organs. - The person that wrote radcode.
 					I = pick(internal_organs) //Internal organ damage...Not good. Not good at all.
 					if(istype(I)) I.add_autopsy_data("Radiation Induced Cancerous Growth", damage * species.radiation_mod * RADIATION_SPEED_COEFFICIENT)
 					I.take_damage(damage * species.radiation_mod * RADIATION_SPEED_COEFFICIENT)
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 
 /* 		//Not-so-sparkledog code. TODO: Make a pref for 'special game interactions' that allows interactions that align with prefs to occur.
 		if(radiation >= 250) //Special effect stuff that occurs at certain rad levels.
@@ -639,11 +608,7 @@
 	if(status_flags & GODMODE)
 		return
 
-<<<<<<< HEAD
-	if(mNobreath in src.mutations) //CHOMPadd
-=======
 	if(mNobreath in mutations)
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 		return
 
 	if(suiciding)
@@ -1275,10 +1240,6 @@
 			take_overall_damage(1,1)
 		else //heal in the dark
 			heal_overall_damage(1,1)
-<<<<<<< HEAD
-	//CHOMPEdit Begin
-=======
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 	if(species.photosynthesizing && nutrition < 1000)
 		var/light_amount = 0
 		if(isturf(loc))
@@ -1288,54 +1249,32 @@
 	// nutrition decrease
 	if(nutrition <= 0 &&  species.shrinks && size_multiplier > RESIZE_TINY)
 		nutrition = 0.1
-<<<<<<< HEAD
-	//CHOMPEdit End
-=======
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 	if(nutrition > 0 && stat != DEAD)
 		var/nutrition_reduction = species.hunger_factor
 
 		for(var/datum/modifier/mod in modifiers)
 			if(!isnull(mod.metabolism_percent))
 				nutrition_reduction *= mod.metabolism_percent
-<<<<<<< HEAD
-		//CHOMPEdit Begin
-=======
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 		if(nutrition > 1000 && species.grows) //Removing the strict check against normal max/min size to support dorms/VR oversizing
 			nutrition_reduction *= 5
 			resize(size_multiplier+0.01, animate = FALSE, uncapped = has_large_resize_bounds()) //Bringing this code in line with micro and macro shrooms
 		if(nutrition < 50 && species.shrinks)
 			nutrition_reduction *= 0.3
 			resize(size_multiplier-0.01, animate = FALSE, uncapped = has_large_resize_bounds()) //Bringing this code in line with micro and macro shrooms
-<<<<<<< HEAD
-		//CHOMPEdit End
-=======
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 		adjust_nutrition(-nutrition_reduction)
 
 	if(noisy == TRUE && nutrition < 250 && prob(10))
 		var/sound/growlsound = sound(get_sfx("hunger_sounds"))
 		var/growlmultiplier = 100 - (nutrition / 250 * 100)
 		playsound(src, growlsound, vol = growlmultiplier, vary = 1, falloff = 0.1, ignore_walls = TRUE, preference = /datum/preference/toggle/digestion_noises)
-<<<<<<< HEAD
-	// VOREStation Edit End
-	//CHOMPEdit Begin
-=======
-	/* //Unused here, used downstream.
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
+	// CHOMPEnable Start
 	if(nutrition > 500 && noisy_full == TRUE)
 		var/belch_prob = 5 //Maximum belch prob.
 		if(nutrition < 4075)
 			belch_prob = ((nutrition-500)/3575)*5 //Scale belch prob with fullness if not already at max. If editing make sure the multiplier matches the max prob above.
 		if(prob(belch_prob))
 			src.emote("belch")
-<<<<<<< HEAD
-	//CHOMPEdit End
-
-=======
-	*/
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
+	// CHOMPEnable End
 	if((CE_DARKSIGHT in chem_effects) && chemical_darksight == 0)
 		recalculate_vis()
 		chemical_darksight = 1
@@ -1364,11 +1303,7 @@
 	if(stat == DEAD)	//DEAD. BROWN BREAD. SWIMMING WITH THE SPESS CARP
 		blinded = 1
 		silent = 0
-<<<<<<< HEAD
-		deaf_loop.stop() // CHOMPStation Add: Ear Ringing/Deafness - Not sure if we need this, but, safety.
-=======
-		// deaf_loop.stop() //Unused. Used downstream.
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
+		deaf_loop.stop() // CHOMPEnable: Ear Ringing/Deafness - Not sure if we need this, but, safety.
 	else				//ALIVE. LIGHTS ARE ON
 		updatehealth()	//TODO
 
@@ -1376,28 +1311,15 @@
 			death()
 			blinded = 1
 			silent = 0
-<<<<<<< HEAD
-			deaf_loop.stop() // CHOMPStation Add: Ear Ringing/Deafness - Not sure if we need this, but, safety.
-			return 1
-
-		//UNCONSCIOUS. NO-ONE IS HOME
-		if((getOxyLoss() > (species.total_health/2)) || (health <= (CONFIG_GET(number/health_threshold_crit) * species.crit_mod))) // CHOMPEdit
-=======
-			// deaf_loop.stop() //Unused. Used downstream.
+			deaf_loop.stop() // CHOMPEnable: Ear Ringing/Deafness - Not sure if we need this, but, safety.
 			return 1
 
 		//UNCONSCIOUS. NO-ONE IS HOME
 		if((getOxyLoss() > (species.total_health/2)) || (health <= (CONFIG_GET(number/health_threshold_crit) * species.crit_mod)))
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 			Paralyse(3)
 
 		if(hallucination)
 			if(hallucination >= 20 && !(species.flags & (NO_POISON|IS_PLANT|NO_HALLUCINATION)) )
-<<<<<<< HEAD
-				//if(prob(3)) //ChompREMOVE fake_attacker - EXTREME image qdel usage.
-					//fake_attack(src) //ChompREMOVE fake_attacker - EXTREME image qdel usage.
-=======
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 				if(!handling_hal)
 					spawn handle_hallucinations() //The not boring kind!
 				/* Stop spinning the view, it breaks too much.
@@ -1540,11 +1462,7 @@
 		//Ears
 		if(sdisabilities & DEAF)	//disabled-deaf, doesn't get better on its own
 			ear_deaf = max(ear_deaf, 1)
-<<<<<<< HEAD
-			deaf_loop.start(skip_start_sound = TRUE) // CHOMPStation Add: Ear Ringing/Deafness
-=======
-			// deaf_loop.start(skip_start_sound = TRUE) //Used downstream.
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
+			deaf_loop.start(skip_start_sound = TRUE) // CHOMPEnable: Ear Ringing/Deafness
 		else if(ear_deaf)			//deafness, heals slowly over time
 			ear_deaf = max(ear_deaf-1, 0)
 		else if(get_ear_protection() >= 2)	//resting your ears with earmuffs heals ear damage faster
@@ -1553,17 +1471,10 @@
 		else if(ear_damage < 25)	//ear damage heals slowly under this threshold. otherwise you'll need earmuffs
 			ear_damage = max(ear_damage-0.05, 0)
 
-<<<<<<< HEAD
-		// CHOMPAdd: Handle Ear ringing, standalone safety check.
-		if(ear_deaf <= 0)
-			deaf_loop.stop() // CHOMPStation Add: Ear Ringing/Deafness
-		// CHOMPAdd End
-=======
-		/* //Used downstream. Add someday to here.
+		// CHOMPEnable Start: Handle Ear ringing, standalone safety check.
 		if(ear_deaf <= 0)
 			deaf_loop.stop()
-		*/
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
+		// CHOMPEnable End
 
 		//Resting
 		if(resting)
@@ -1785,12 +1696,8 @@
 		else
 			clear_alert("high")
 
-<<<<<<< HEAD
 		//CHOMPEdit - surrounding_belly() used instead of isbelly(loc) to not clear indirect vorefx
 		if(!surrounding_belly() && !previewing_belly) //VOREStation Add - Belly fullscreens safety //CHOMPEdit
-=======
-		if(!isbelly(loc))
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 			clear_fullscreen("belly")
 			//clear_fullscreen("belly2") //Chomp disable, using our own implementation
 			//clear_fullscreen("belly3") //Chomp disable, using our own implementation
@@ -1980,20 +1887,12 @@
 	if(isturf(loc) && rand(1,1000) == 1)
 		var/turf/T = loc
 		if(T.get_lumcount() <= LIGHTING_SOFT_THRESHOLD)
-<<<<<<< HEAD
 			/* CHOMPEdit Start
-			//VOREStation Add Start
-=======
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 			if(text2num(time2text(world.timeofday, "MM")) == 4)
 				if(text2num(time2text(world.timeofday, "DD")) == 1)
 					playsound_local(src,pick(scawwySownds),50, 0)
 					return
-<<<<<<< HEAD
-			//VOREStation Add End
 			*/ // CHOMPedit End
-=======
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 			playsound_local(src,pick(scarySounds),50, 1, -1)
 
 /mob/living/carbon/human/handle_stomach()
@@ -2061,10 +1960,6 @@
 /mob/living/carbon/human/handle_shock()
 	..()
 	if(status_flags & GODMODE)	return 0	//godmode
-<<<<<<< HEAD
-	//CHOMPEdit - couple of fixes here. Fixes synths being stuck in permenant shock.
-=======
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 	if(traumatic_shock >= 80 && can_feel_pain())
 		shock_stage += 1
 	else
@@ -2072,14 +1967,8 @@
 		shock_stage = max(shock_stage-1, 0)
 	if(!can_feel_pain()) return
 
-<<<<<<< HEAD
-	if(health < (CONFIG_GET(number/health_threshold_softcrit) * species.crit_mod)) //CHOMPEdit - fixes
-		shock_stage = max(shock_stage, 61)
-	//CHOMPEdit end
-=======
 	if(health < (CONFIG_GET(number/health_threshold_softcrit) * species.crit_mod))
 		shock_stage = max(shock_stage, 61)
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 	if(stat)
 		return 0
 
@@ -2111,40 +2000,22 @@
 		if (prob(5))
 			if(traumatic_shock >= 80)
 				to_chat(src, span_danger("[pick("The pain is excruciating", "Please&#44; just end the pain", "Your whole body is going numb")]!"))
-<<<<<<< HEAD
-				// CHOMPEdit: Pain
-				if(prob(20) && !isbelly(loc)) // Hopefully not spammy, only 20% of the time will we groan in pain + sanity for in-belly
-					emote("pain")
-				// CHOMPEdit End
-=======
 				if(prob(20) && !isbelly(loc))
 					emote("pain")
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 			Weaken(20)
 
 	if(shock_stage >= 120)
 		if (prob(2))
 			if(traumatic_shock >= 80)
 				to_chat(src, span_danger("[pick("You black out", "You feel like you could die any moment now", "You are about to lose consciousness")]!"))
-<<<<<<< HEAD
-				// CHOMPEdit: Pain
-				if(prob(40) && !isbelly(loc)) // Hopefully not spammy, only 40% of the time will we groan in pain + sanity for in-belly
-					emote("pain")
-				// CHOMPEdit End
-=======
 				if(prob(40) && !isbelly(loc))
 					emote("pain")
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 			Paralyse(5)
 
 	if(shock_stage == 150)
 		if(!isbelly(loc))
 			custom_emote(VISIBLE_MESSAGE, "can no longer stand, collapsing!")
-<<<<<<< HEAD
-			if(prob(60)) // Hopefully not spammy, only 60% of the time will we groan in pain
-=======
 			if(prob(60))
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 				emote("pain")
 		Weaken(20)
 
@@ -2306,18 +2177,6 @@
 			holder2.icon_state = "huddead"
 		else if(has_virus())
 			holder.icon_state = "hudill"
-<<<<<<< HEAD
-/* Start Chomp edit
-		else if(has_brain_worms())
-			var/mob/living/simple_mob/animal/borer/B = has_brain_worms()
-			if(B.controlling)
-				holder.icon_state = "hudbrainworm"
-			else
-				holder.icon_state = "hudhealthy"
-			holder2.icon_state = "hudbrainworm"
-End Chomp edit */
-=======
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 		else
 			holder.icon_state = "hudhealthy"
 			if(has_virus())
@@ -2502,8 +2361,4 @@ End Chomp edit */
 #undef COLD_DAMAGE_LEVEL_2
 #undef COLD_DAMAGE_LEVEL_3
 
-<<<<<<< HEAD
-//# undef RADIATION_SPEED_COEFFICIENT //CHOMPRemove
-=======
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 #undef HUMAN_COMBUSTION_TEMP

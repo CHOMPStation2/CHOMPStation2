@@ -19,8 +19,4 @@
 
 #define TECHNOMANCER_INSTABILITY_MIN_GLOW			10		// When above this number, the entity starts glowing, affecting others.
 
-<<<<<<< HEAD
-#define RADIATION_SPEED_COEFFICIENT 0.1  //CHOMPAdd, global here
-=======
 #define RADIATION_SPEED_COEFFICIENT 0.1
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))

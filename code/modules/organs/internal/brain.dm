@@ -33,11 +33,7 @@ GLOBAL_LIST_BOILERPLATE(all_brain_organs, /obj/item/organ/internal/brain)
 	if(!owner || owner.stat == DEAD)
 		defib_timer = max(--defib_timer, 0)
 	else
-<<<<<<< HEAD
-		defib_timer = min(++defib_timer, (CONFIG_GET(number/defib_timer) MINUTES) / 2) // CHOMPEdit
-=======
 		defib_timer = min(++defib_timer, (CONFIG_GET(number/defib_timer) MINUTES) / 2)
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 
 /obj/item/organ/internal/brain/proc/can_assist()
 	return can_assist
@@ -153,11 +149,7 @@ GLOBAL_LIST_BOILERPLATE(all_brain_organs, /obj/item/organ/internal/brain)
 
 	var/obj/item/organ/internal/brain/B = src
 	if(istype(B) && owner)
-<<<<<<< HEAD
-		if(istype(owner, /mob/living/carbon) && owner.ckey) //CHOMPEdit - Make sure owner's mind isn't elsewhere otherwise on brain removal brings them back
-=======
 		if(istype(owner, /mob/living/carbon) && owner.ckey)
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 			B.transfer_identity(owner)
 
 	..()

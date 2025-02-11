@@ -7,11 +7,7 @@
 	cost = 0
 	var_changes = list("metabolic_rate" = 1.2, "hunger_factor" = 0.2, "metabolism" = 0.06) // +20% rate and 4x hunger (Teshari level)
 	excludes = list(/datum/trait/neutral/metabolism_down, /datum/trait/neutral/metabolism_apex)
-<<<<<<< HEAD
-	custom_only = FALSE // CHOMPEdit
-=======
 	custom_only = FALSE
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 
 /datum/trait/neutral/metabolism_down
 	name = "Metabolism, Slow"
@@ -19,11 +15,7 @@
 	cost = 0
 	var_changes = list("metabolic_rate" = 0.8, "hunger_factor" = 0.04, "metabolism" = 0.0012) // -20% of default.
 	excludes = list(/datum/trait/neutral/metabolism_up, /datum/trait/neutral/metabolism_apex)
-<<<<<<< HEAD
-	custom_only = FALSE // CHOMPEdit
-=======
 	custom_only = FALSE
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 
 /datum/trait/neutral/metabolism_apex
 	name = "Metabolism, Apex"
@@ -31,11 +23,7 @@
 	cost = 0
 	var_changes = list("metabolic_rate" = 1.4, "hunger_factor" = 0.4, "metabolism" = 0.012) // +40% rate and 8x hunger (Double Teshari)
 	excludes = list(/datum/trait/neutral/metabolism_up, /datum/trait/neutral/metabolism_down)
-<<<<<<< HEAD
-	custom_only = FALSE // CHOMPEdit
-=======
 	custom_only = FALSE
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 
 /datum/trait/neutral/coldadapt
 	name = "Temp. Adapted, Cold"
@@ -82,14 +70,8 @@
 			"x" = list("ks", "kss", "ksss")
 		),
 	autohiss_exempt = list(LANGUAGE_UNATHI))
-<<<<<<< HEAD
 	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_vassilian, /datum/trait/neutral/autohiss_zaddat) // CHOMPEdit: exclude vassillian hiss
 	custom_only = FALSE
-	//banned_species = list(SPECIES_TAJARAN, SPECIES_UNATHI, SPECIES_ZADDAT) //CHOMPRemove
-=======
-	excludes = list(/datum/trait/neutral/autohiss_tajaran)
-	custom_only = FALSE
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 
 /datum/trait/neutral/autohiss_tajaran
 	name = "Autohiss (Tajaran)"
@@ -100,14 +82,8 @@
 			"r" = list("rr", "rrr", "rrrr")
 		),
 	autohiss_exempt = list(LANGUAGE_SIIK,LANGUAGE_AKHANI,LANGUAGE_ALAI))
-<<<<<<< HEAD
 	excludes = list(/datum/trait/neutral/autohiss_unathi, /datum/trait/neutral/autohiss_zaddat, /datum/trait/neutral/autohiss_vassilian) // CHOMPEdit: exclude vassillian hiss
 	custom_only = FALSE
-	//banned_species = list(SPECIES_TAJARAN, SPECIES_UNATHI, SPECIES_ZADDAT) //CHOMPRemove
-=======
-	excludes = list(/datum/trait/neutral/autohiss_unathi)
-	custom_only = FALSE
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 
 /datum/trait/neutral/autohiss_zaddat
 	name = "Autohiss (Zaddat)"
@@ -127,10 +103,6 @@
 	autohiss_exempt = list(LANGUAGE_ZADDAT,LANGUAGE_VESPINAE))
 	excludes = list(/datum/trait/neutral/autohiss_tajaran)
 	custom_only = FALSE
-<<<<<<< HEAD
-	//banned_species = list(SPECIES_TAJARAN, SPECIES_UNATHI, SPECIES_ZADDAT) // CHOMPRemove
-=======
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 
 /datum/trait/neutral/bloodsucker
 	name = "Bloodsucker, Obligate"
@@ -148,11 +120,7 @@
 	cost = 0
 	custom_only = FALSE
 	var_changes = list("organic_food_coeff" = 0, "bloodsucker" = TRUE) //The verb is given in human.dm
-<<<<<<< HEAD
 	excludes = list(/datum/trait/neutral/bloodsucker_freeform, /datum/trait/positive/bloodsucker_plus) //YW edit
-=======
-	excludes = list(/datum/trait/neutral/bloodsucker_freeform)
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 
 /datum/trait/neutral/bloodsucker/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
@@ -275,11 +243,7 @@
 	add_verb(H, /mob/living/proc/toggle_stuffing_mode)
 
 /datum/trait/neutral/hard_vore
-<<<<<<< HEAD
-	name = "Hard Vore" //CHOMPedit Renamed Brutal Predation to Hard Vore, because some people don't know what this actually does
-=======
 	name = "Hard Vore"
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 	desc = "Allows you to tear off limbs & tear out internal organs."
 	cost = 0
 	custom_only = FALSE
@@ -345,11 +309,7 @@
 	cost = 0
 	custom_only = FALSE
 	can_take = SYNTHETICS
-<<<<<<< HEAD
-	var_changes = list("organic_food_coeff" = 0.75, "synthetic_food_coeff" = 1) //CHOMPEdit: Increase values
-=======
 	var_changes = list("organic_food_coeff" = 0.75, "synthetic_food_coeff" = 1)
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 	excludes = list(/datum/trait/neutral/biofuel_value_down)
 
 /datum/trait/neutral/synth_ethanolburner
@@ -721,9 +681,6 @@
 	name = "Colorblindness (Monochromancy)"
 	desc = "You simply can't see colors at all, period. You are 100% colorblind."
 	cost = 0
-<<<<<<< HEAD
-	custom_only = FALSE //CHOMPedit: Some of this are named with species, and there is a descent number of reasons to have this.
-=======
 	custom_only = FALSE
 
 	// Traitgenes Made into a gene trait
@@ -731,7 +688,6 @@
 	hidden = FALSE
 
 	activation_message="Your eyes feel strange..."
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 
 /datum/trait/neutral/colorblind/mono/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
@@ -746,9 +702,6 @@
 	name = "Colorblindness (Para Vulp)"
 	desc = "You have a severe issue with green colors and have difficulty recognizing them from red colors."
 	cost = 0
-<<<<<<< HEAD
-	custom_only = FALSE //CHOMPedit: Some of this are named with species, and there is a descent number of reasons to have this.
-=======
 	custom_only = FALSE
 
 	// Traitgenes Made into a gene trait
@@ -756,7 +709,6 @@
 	hidden = FALSE
 
 	activation_message="Your eyes feel strange..."
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 
 /datum/trait/neutral/colorblind/para_vulp/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
@@ -771,9 +723,6 @@
 	name = "Colorblindness (Para Taj)"
 	desc = "You have a minor issue with blue colors and have difficulty recognizing them from red colors."
 	cost = 0
-<<<<<<< HEAD
-	custom_only = FALSE //CHOMPedit: Some of this are named with species, and there is a descent number of reasons to have this.
-=======
 	custom_only = FALSE
 
 	// Traitgenes - Made into a gene trait
@@ -781,7 +730,6 @@
 	hidden = FALSE
 
 	activation_message="Your eyes feel strange..."
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 
 /datum/trait/neutral/colorblind/para_taj/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
