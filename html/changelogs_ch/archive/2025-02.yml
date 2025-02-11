@@ -236,3 +236,8 @@
   - bugfix: firedoors checking the processing before being closed
   - rscadd: Footstep Element
   - code_imp: Upated DCS
+2025-02-11:
+  Diana:
+  - bugfix: signalers will now signal
+  TheCaramelion:
+  - balance: Disabled Random virus event
