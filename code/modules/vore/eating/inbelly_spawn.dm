@@ -68,7 +68,11 @@ Please do not abuse this ability.
 		return
 
 	// Are we cool with this prey spawning in at all?
+<<<<<<< HEAD
 	var/answer = tgui_alert(src, "[potential_prey.prefs.real_name] wants to spawn in one of your bellies. Do you accept?", "Inbelly Spawning", list("Yes", "No")) //CHOMPEdit - hides ckey
+=======
+	var/answer = tgui_alert(src, "[potential_prey.prefs.real_name] wants to spawn in one of your bellies. Do you accept?", "Inbelly Spawning", list("Yes", "No"))
+>>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 	if(answer != "Yes")
 		to_chat(potential_prey, span_notice("Your request was turned down."))
 		return
@@ -144,6 +148,7 @@ Please do not abuse this ability.
 	prey.prefs.copy_to(new_character)
 	if(new_character.dna)
 		new_character.dna.ResetUIFrom(new_character)
+		new_character.sync_dna_traits(TRUE) // Traitgenes Sync traits to genetics if needed
 		new_character.sync_organ_dna()
 	new_character.key = player_key
 	if(new_character.mind)

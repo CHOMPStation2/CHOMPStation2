@@ -55,7 +55,11 @@ var/list/be_special_flags = list(
 	"Wizard"           = BE_WIZARD,
 	"Malf AI"          = BE_MALF,
 	"Revolutionary"    = BE_REV,
+<<<<<<< HEAD
 	"Genaprawn"        = BE_ALIEN, //CHOMPedit
+=======
+	"Genaprawn"        = BE_ALIEN,
+>>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 	"Positronic Brain" = BE_AI,
 	"Cultist"          = BE_CULTIST,
 	"Renegade"         = BE_RENEGADE,

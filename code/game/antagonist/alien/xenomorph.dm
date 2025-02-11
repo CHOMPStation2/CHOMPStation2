@@ -3,8 +3,13 @@ var/datum/antagonist/xenos/xenomorphs
 /datum/antagonist/xenos
 	id = MODE_XENOMORPH
 	role_type = BE_ALIEN
+<<<<<<< HEAD
 	role_text = "Genaprawn" //CHOMPedit
 	role_text_plural = "Genaprawns" //CHOMPedit
+=======
+	role_text = "Genaprawn"
+	role_text_plural = "Genaprawns"
+>>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 	mob_path = /mob/living/carbon/alien/larva
 	bantype = "Xenomorph"
 	flags = ANTAG_OVERRIDE_MOB | ANTAG_RANDSPAWN | ANTAG_OVERRIDE_JOB | ANTAG_VOTABLE

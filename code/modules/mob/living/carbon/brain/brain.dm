@@ -8,9 +8,13 @@
 	use_me = 0 //Can't use the me verb, it's a freaking immobile brain
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "brain1"
+<<<<<<< HEAD
 	no_vore = TRUE //VOREStation Edit - PLEASE. lol.
 	can_pain_emote = FALSE // CHOMPEdit: Sanity/safety
 	low_priority = TRUE //CHOMPEdit
+=======
+	no_vore = TRUE
+>>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 
 /mob/living/carbon/brain/Initialize()
 	. = ..()

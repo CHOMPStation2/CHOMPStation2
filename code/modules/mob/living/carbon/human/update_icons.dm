@@ -2,6 +2,7 @@
 	Global associative list for caching humanoid icons.
 	Index format m or f, followed by a string of 0 and 1 to represent bodyparts followed by husk fat hulk skeleton 1 or 0.
 */
+<<<<<<< HEAD
 //ChompEDIT START - change to managed GLOB
 GLOBAL_LIST_EMPTY(human_icon_cache) //key is incredibly complex, see update_icons_body()
 GLOBAL_LIST_EMPTY(tail_icon_cache) //key is [species.race_key][r_skin][g_skin][b_skin]
@@ -9,6 +10,15 @@ GLOBAL_LIST_EMPTY(wing_icon_cache) // See tail.
 GLOBAL_LIST_EMPTY(light_overlay_cache) //see make_worn_icon() on helmets
 GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 //ChompEDIT END
+=======
+
+//TODO: Get all these up to date with Chomp. I'd rather not do an entire caching update with the genetics PR, thanks.
+var/global/list/human_icon_cache = list() //key is incredibly complex, see update_icons_body()
+var/global/list/tail_icon_cache = list() //key is [species.race_key][r_skin][g_skin][b_skin]
+var/global/list/wing_icon_cache = list() // See tail.
+var/global/list/light_overlay_cache = list() //see make_worn_icon() on helmets
+var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
+>>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 // # Human Icon Updating System
@@ -606,21 +616,7 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 	if(!LAZYLEN(mutations))
 		return //No mutations, no icons.
 
-	//TODO: THIS PROC???
-	var/fat
-	if(FAT in mutations)
-		fat = "fat"
-
 	var/image/standing	= image(icon = 'icons/effects/genetics.dmi', layer = BODY_LAYER+MUTATIONS_LAYER)
-	var/g = gender == FEMALE ? "f" : "m"
-
-	for(var/datum/dna/gene/gene in dna_genes)
-		if(!gene.block)
-			continue
-		if(gene.is_active(src))
-			var/underlay = gene.OnDrawUnderlays(src,g,fat)
-			if(underlay)
-				standing.underlays += underlay
 
 	for(var/mut in mutations)
 		if(mut == LASER)

@@ -75,20 +75,6 @@
 		else if(status == 3) //Digital organ
 			I.digitize()
 
-	//Give breathing equipment if needed
-	if(current_project.breath_type != GAS_O2)
-		H.equip_to_slot_or_del(new /obj/item/clothing/mask/breath(H), slot_wear_mask)
-		var/obj/item/tank/tankpath
-		if(current_project.breath_type == GAS_PHORON)
-			tankpath = /obj/item/tank/vox
-		else
-			tankpath = text2path("/obj/item/tank/" + current_project.breath_type)
-
-		if(tankpath)
-			H.equip_to_slot_or_del(new tankpath(H), slot_back)
-			H.internal = H.back
-			if(istype(H.internal,/obj/item/tank) && H.internals)
-				H.internals.icon_state = "internal1"
 
 	occupant = H
 
@@ -111,7 +97,11 @@
 		H.dna.digitigrade = R.dna.digitigrade // ensure cloned DNA is set appropriately from record??? for some reason it doesn't get set right despite the override to datum/dna/Clone()
 
 	//Apply damage
+<<<<<<< HEAD
 	H.adjustCloneLoss((H.getMaxHealth() - CONFIG_GET(number/health_threshold_dead))*-0.75) // CHOMPEdit
+=======
+	H.adjustCloneLoss((H.getMaxHealth() - CONFIG_GET(number/health_threshold_dead))*-0.75)
+>>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 	H.Paralyse(4)
 	H.updatehealth()
 
@@ -123,8 +113,25 @@
 
 	//Update appearance, remake icons
 	H.UpdateAppearance()
+	H.sync_dna_traits(FALSE) // Traitgenes Sync traits to genetics if needed
 	H.sync_organ_dna()
 	H.regenerate_icons()
+
+	// Traitgenes Moved breathing equipment to AFTER the genes set it
+	//Give breathing equipment if needed
+	if(current_project.breath_type != null && current_project.breath_type != GAS_O2)
+		H.equip_to_slot_or_del(new /obj/item/clothing/mask/breath(H), slot_wear_mask)
+		var/obj/item/tank/tankpath
+		if(current_project.breath_type == GAS_PHORON)
+			tankpath = /obj/item/tank/vox
+		else
+			tankpath = text2path("/obj/item/tank/" + current_project.breath_type)
+
+		if(tankpath)
+			H.equip_to_slot_or_del(new tankpath(H), slot_back)
+			H.internal = H.back
+			if(istype(H.internal,/obj/item/tank) && H.internals)
+				H.internals.icon_state = "internal1"
 
 	//Basically all the VORE stuff
 	H.ooc_notes = current_project.body_oocnotes
@@ -357,6 +364,11 @@
 	qdel_swap(H.dna, R.dna.Clone())
 	H.original_player = current_project.ckey
 
+	//Apply legs
+	H.digitigrade = R.dna.digitigrade // ensure clone mob has digitigrade var set appropriately
+	if(H.dna.digitigrade <> R.dna.digitigrade)
+		H.dna.digitigrade = R.dna.digitigrade // ensure cloned DNA is set appropriately from record??? for some reason it doesn't get set right despite the override to datum/dna/Clone()
+
 	//Apply damage
 	H.adjustBruteLoss(brute_value)
 	H.adjustFireLoss(burn_value)
@@ -364,6 +376,7 @@
 
 	//Update appearance, remake icons
 	H.UpdateAppearance()
+	H.sync_dna_traits(FALSE) // Traitgenes Sync traits to genetics if needed
 	H.sync_organ_dna()
 	H.regenerate_icons()
 
@@ -466,7 +479,10 @@
 	anchored = TRUE
 	var/blur_amount
 	var/confuse_amount
+<<<<<<< HEAD
 	// var/sickness_duration // CHOMPRemove
+=======
+>>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 
 	var/mob/living/carbon/human/occupant = null
 	var/connected = null
@@ -496,12 +512,16 @@
 		manip_rating += M.rating
 	blur_amount = (48 - manip_rating * 8)
 
+<<<<<<< HEAD
 	/* CHOMPRemove Start
 	var/total_rating = manip_rating + scan_rating
 	sickness_duration = (45 - (total_rating-4)*1.875) MINUTES		// 45 minutes default, 30 minutes with max non-anomaly upgrades, 15 minutes with max anomaly ones
 	*/// CHOMPRemove End
 
 /obj/machinery/transhuman/resleever/attack_hand(mob/user)
+=======
+/obj/machinery/transhuman/resleever/attack_hand(mob/user as mob)
+>>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 	tgui_interact(user)
 
 /obj/machinery/transhuman/resleever/tgui_interact(mob/user, datum/tgui/ui = null)
@@ -524,6 +544,7 @@
 		data["stat"] = occupant.stat
 		data["mindStatus"] = !!occupant.mind
 		data["mindName"] = occupant.mind?.name
+<<<<<<< HEAD
 /* CHOMP Edit: Get rid of resleeving sickness stuff
 		if(occupant.has_modifier_of_type(/datum/modifier/resleeving_sickness) || occupant.has_modifier_of_type(/datum/modifier/faux_resleeving_sickness))
 			data["resleeveSick"] = TRUE
@@ -536,6 +557,8 @@
 			data["initialSick"] = FALSE
 */
 //End chomp edit
+=======
+>>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 	return data
 
 /obj/machinery/transhuman/resleever/attackby(obj/item/W, mob/user)
@@ -673,6 +696,7 @@
 	if(!occupant.mind)
 		log_debug("[occupant] didn't have a mind to check for vore_death, which may be problematic.")
 
+<<<<<<< HEAD
 	if(occupant.mind?.vore_death)
 		occupant.add_modifier(/datum/modifier/faux_resleeving_sickness, sickness_duration)
 		occupant.mind.vore_death = FALSE
@@ -681,6 +705,8 @@
 		occupant.add_modifier(/datum/modifier/resleeving_sickness, sickness_duration)
 	*/// CHOMPRemove End
 
+=======
+>>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 	if(occupant.mind && occupant.original_player && ckey(occupant.mind.key) != occupant.original_player)
 		log_and_message_admins("is now a cross-sleeved character. Body originally belonged to [occupant.real_name]. Mind is now [occupant.mind.name].",occupant)
 

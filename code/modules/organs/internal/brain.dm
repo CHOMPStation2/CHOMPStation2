@@ -33,7 +33,11 @@ GLOBAL_LIST_BOILERPLATE(all_brain_organs, /obj/item/organ/internal/brain)
 	if(!owner || owner.stat == DEAD)
 		defib_timer = max(--defib_timer, 0)
 	else
+<<<<<<< HEAD
 		defib_timer = min(++defib_timer, (CONFIG_GET(number/defib_timer) MINUTES) / 2) // CHOMPEdit
+=======
+		defib_timer = min(++defib_timer, (CONFIG_GET(number/defib_timer) MINUTES) / 2)
+>>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 
 /obj/item/organ/internal/brain/proc/can_assist()
 	return can_assist
@@ -108,7 +112,7 @@ GLOBAL_LIST_BOILERPLATE(all_brain_organs, /obj/item/organ/internal/brain)
 		if(istype(H))
 			qdel_swap(brainmob.dna, H.dna.Clone())
 			brainmob.timeofhostdeath = H.timeofdeath
-			brainmob.ooc_notes = H.ooc_notes //VOREStation Edit
+			brainmob.ooc_notes = H.ooc_notes
 			brainmob.ooc_notes_likes = H.ooc_notes_likes
 			brainmob.ooc_notes_dislikes = H.ooc_notes_dislikes
 			//CHOMPEdit Start
@@ -149,7 +153,11 @@ GLOBAL_LIST_BOILERPLATE(all_brain_organs, /obj/item/organ/internal/brain)
 
 	var/obj/item/organ/internal/brain/B = src
 	if(istype(B) && owner)
+<<<<<<< HEAD
 		if(istype(owner, /mob/living/carbon) && owner.ckey) //CHOMPEdit - Make sure owner's mind isn't elsewhere otherwise on brain removal brings them back
+=======
+		if(istype(owner, /mob/living/carbon) && owner.ckey)
+>>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 			B.transfer_identity(owner)
 
 	..()
@@ -189,7 +197,7 @@ GLOBAL_LIST_BOILERPLATE(all_brain_organs, /obj/item/organ/internal/brain)
 	can_assist = FALSE
 
 /obj/item/organ/internal/brain/slime
-	icon = 'icons/obj/surgery_vr.dmi' // Vorestation edit
+	icon = 'icons/obj/surgery_vr.dmi'
 	name = "slime core"
 	desc = "A complex, organic knot of jelly and crystalline particles."
 	icon_state = "core"
@@ -263,6 +271,7 @@ GLOBAL_LIST_BOILERPLATE(all_brain_organs, /obj/item/organ/internal/brain)
 		qdel_swap(H.dna, R.dna.Clone())
 
 	H.UpdateAppearance()
+	H.sync_dna_traits(FALSE) // Traitgenes Sync traits to genetics if needed
 	H.sync_organ_dna()
 	if(!R.dna.real_name)	//to prevent null names
 		R.dna.real_name = "promethean ([rand(0,999)])"
