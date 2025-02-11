@@ -164,6 +164,9 @@
 	B.vore_sound = "Stomach Move"
 	B.sound_volume = 20
 
+	if(!soulgem)
+		soulgem = new(src)
+
 /obj/belly/longneck
 	affects_vore_sprites = TRUE
 	belly_sprite_to_affect = "neck1"
