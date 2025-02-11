@@ -337,15 +337,6 @@ var/list/preferences_datums = list()
 	// Ask the preferences datums to apply their own settings to the new mob
 	player_setup.copy_to_mob(character)
 
-	// CHOMPEdit start Fix blood levels after trait apply (since the extra/less blood traits set the var after)
-	if(character.vessel.total_volume < character.species.blood_volume)
-		character.vessel.maximum_volume = character.species.blood_volume
-		character.vessel.add_reagent(REAGENT_ID_BLOOD, character.species.blood_volume - character.vessel.total_volume)
-	else if(character.vessel.total_volume > character.species.blood_volume)
-		character.vessel.remove_reagent(REAGENT_ID_BLOOD,character.vessel.total_volume - character.species.blood_volume) //This one should stay remove_reagent to work even lack of a O_heart
-		character.vessel.maximum_volume = character.species.blood_volume
-	// CHOMPEdit end
-
 	for(var/datum/preference/preference as anything in get_preferences_in_priority_order())
 		if(preference.savefile_identifier != PREFERENCE_CHARACTER)
 			continue
