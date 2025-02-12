@@ -714,7 +714,8 @@
 	glass_name = "Worm blood"
 	glass_desc = "Who had the grand idea to bottle THE BLOOD OF A WORM."
 	glass_icon_state = "wormblood"
-	glass_center_of_mass = list("x"=16, "y"=8)
+	glass_center_of_mass_x = 16
+	glass_center_of_mass_y = 8
 	glass_icon_file = 'icons/obj/drinks_yw.dmi'
 
 /datum/reagent/blondiemix

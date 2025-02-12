@@ -21,7 +21,6 @@
 
 	// CHOMPEdit Start: Species Sounds
 	species_sounds = "Teshari"
-	footstep = FOOTSTEP_MOB_TESHARI // CHOMPEdit
 	// male_cough_sounds = list('sound/effects/mob_effects/tesharicougha.ogg','sound/effects/mob_effects/tesharicoughb.ogg')
 	// female_cough_sounds = list('sound/effects/mob_effects/tesharicougha.ogg','sound/effects/mob_effects/tesharicoughb.ogg')
 	// male_sneeze_sound = 'sound/effects/mob_effects/tesharisneeze.ogg'
@@ -167,6 +166,8 @@
 		/decl/emote/audible/teshchirp,
 		/decl/emote/audible/teshtrill
 	)
+
+	footstep = FOOTSTEP_MOB_TESHARI
 
 /datum/species/teshari/equip_survival_gear(var/mob/living/carbon/human/H)
 	..()

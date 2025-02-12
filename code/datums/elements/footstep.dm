@@ -48,9 +48,9 @@
 		if(FOOTSTEP_MOB_SHOE)
 			footstep_ret = GLOB.footstep
 		if(FOOTSTEP_MOB_SLIME)
-			footstep_ret = 'modular_chomp/sound/effects/footstep/slime1.ogg'
+			footstep_ret = 'sound/effects/footstep/slime1.ogg'
 		if(FOOTSTEP_MOB_SLITHER)
-			footstep_ret = 'modular_chomp/sound/effects/footstep/crawl1.ogg'
+			footstep_ret = 'sound/effects/footstep/crawl1.ogg'
 		else
 			footstep_ret = GLOB.barefootstep
 	return footstep_ret
@@ -74,7 +74,7 @@
 
 	if(source.lying) //play crawling sound if we're lying
 		if(turf.footstep)
-			playsound(turf, 'modular_chomp/sound/effects/footstep/crawl1.ogg', 15 * volume, falloff = 1, vary = sound_vary)
+			playsound(turf, 'sound/effects/footstep/crawl1.ogg', 15 * volume, falloff = 1, vary = sound_vary)
 		return
 
 	if(iscarbon(source))
@@ -159,9 +159,9 @@
 		if(source.species.special_step_sounds)
 			playsound(source.loc, pick(source.species.special_step_sounds), volume, TRUE, falloff = 1, vary = sound_vary)
 		else if (istype(source.species, /datum/species/shapeshifter/promethean))
-			playsound(source.loc, 'modular_chomp/sound/effects/footstep/slime1.ogg', volume, TRUE, falloff = 1)
+			playsound(source.loc, 'sound/effects/footstep/slime1.ogg', volume, TRUE, falloff = 1)
 		else if (source.custom_footstep == FOOTSTEP_MOB_SLITHER)
-			playsound(source.loc, 'modular_chomp/sound/effects/footstep/crawl1.ogg', 15 * volume, falloff = 1, vary = sound_vary)
+			playsound(source.loc, 'sound/effects/footstep/crawl1.ogg', 15 * volume, falloff = 1, vary = sound_vary)
 		else
 			var/barefoot_type = prepared_steps[FOOTSTEP_MOB_BAREFOOT]
 			var/bare_footstep_sounds

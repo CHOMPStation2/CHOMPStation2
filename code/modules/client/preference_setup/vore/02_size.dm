@@ -1,6 +1,4 @@
 // Body weight limits on a character.
-#define WEIGHT_MIN 70
-#define WEIGHT_MAX 500
 #define WEIGHT_CHANGE_MIN 0
 #define WEIGHT_CHANGE_MAX 100
 
@@ -16,7 +14,7 @@
 	var/voice_freq = 42500	//CHOMPEdit - Why was the default 0
 	var/voice_sound = "goon speak 1"	//CHOMPEdit - Changed the default voice to one less jarring
 	var/custom_speech_bubble = "default"
-	var/custom_footstep = "Default"	// CHOMPAdd
+	var/custom_footstep = "Default"
 	var/species_sound = "Unset"		// CHOMPEdit: Use default species pain/scream sounds based off icon base if none set, override otherwise
 
 // Definition of the stuff for Sizing
@@ -34,8 +32,8 @@
 	pref.voice_freq			= save_data["voice_freq"]
 	pref.voice_sound		= save_data["voice_sound"]
 	pref.custom_speech_bubble	= save_data["custom_speech_bubble"]
-	//CHOMPAdd Start
 	pref.custom_footstep	= save_data["custom_footstep"]
+	//CHOMPAdd Start
 	pref.species_sound		= save_data["species_sound"]
 	//CHOMPAdd End
 
@@ -49,8 +47,8 @@
 	save_data["voice_freq"]			= pref.voice_freq
 	save_data["voice_sound"]		= pref.voice_sound
 	save_data["custom_speech_bubble"]		= pref.custom_speech_bubble
-	//CHOMPAdd Start
 	save_data["custom_footstep"]	= pref.custom_footstep
+	//CHOMPAdd Start
 	save_data["species_sound"]		= pref.species_sound
 	//CHOMPAdd End
 
@@ -66,7 +64,7 @@
 		pref.size_multiplier = initial(pref.size_multiplier)
 	if(!(pref.custom_speech_bubble in selectable_speech_bubbles))
 		pref.custom_speech_bubble = "default"
-	if(!(pref.custom_footstep))	// CHOMPAdd
+	if(!(pref.custom_footstep))
 		pref.custom_footstep = "Default"
 	// var/datum/species/selected_species = GLOB.all_species[pref.species] // CHOMPEdit
 	if(!(pref.species_sound)) // CHOMPEdit // && selected_species.selects_bodytype
@@ -216,14 +214,6 @@
 		else
 			pref.voice_sound = choice
 		return TOPIC_REFRESH
-	// CHOMPAdd Start
-	else if(href_list["customize_footsteps"])
-		var/list/footstep_choice = selectable_footstep
-		var/choice = tgui_input_list(user, "What footstep sounds would your character make?", "Custom Foostep Sounds", footstep_choice)
-		if(choice)
-			pref.custom_footstep = footstep_choice[choice]
-			return TOPIC_REFRESH
-	// CHOMPAdd End
 	else if(href_list["customize_speech_bubble"])
 		var/choice = tgui_input_list(user, "What speech bubble style do you want to use? (default for automatic selection)", "Custom Speech Bubble", selectable_speech_bubbles)
 		if(!choice)
@@ -231,6 +221,13 @@
 		else
 			pref.custom_speech_bubble = choice
 		return TOPIC_REFRESH
+
+	else if(href_list["customize_footsteps"])
+		var/list/footstep_choice = selectable_footstep
+		var/choice = tgui_input_list(user, "What footstep sounds would your character make?", "Custom Foostep Sounds", footstep_choice)
+		if(choice)
+			pref.custom_footstep = footstep_choice[choice]
+			return TOPIC_REFRESH
 
 	else if(href_list["voice_test"])
 		var/sound/S
@@ -373,7 +370,5 @@
 	// CHOMPEdit End
 	return ..();
 
-#undef WEIGHT_MIN
-#undef WEIGHT_MAX
 #undef WEIGHT_CHANGE_MIN
 #undef WEIGHT_CHANGE_MAX

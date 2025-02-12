@@ -26,7 +26,7 @@
 #define FOOTSTEP_MOB_BAREFOOT "footstep_barefoot"
 #define FOOTSTEP_MOB_HEAVY "footstep_heavy"
 #define FOOTSTEP_MOB_SHOE "footstep_shoe"
-#define FOOTSTEP_MOB_HUMAN "footstep_human" //Warning: Only works on /mob/living/carbon/human
+#define FOOTSTEP_MOB_HUMAN "footstep_human"
 #define FOOTSTEP_MOB_SLIME "footstep_slime"
 #define FOOTSTEP_MOB_SLITHER "footstep_slither"
 #define FOOTSTEP_OBJ_MACHINE "footstep_machine"
@@ -96,7 +96,7 @@ GLOBAL_LIST_INIT(footstep, list(
 		'sound/effects/footstep/lava2.ogg',
 		'sound/effects/footstep/lava3.ogg'), 100, 0),
 	FOOTSTEP_MEAT = list(list(
-		'modular_chomp/sound/effects/meatslap.ogg'), 100, 0),
+		'sound/effects/meatslap.ogg'), 100, 0),
 	FOOTSTEP_CATWALK = list(list(
 		'sound/effects/footstep/catwalk1.ogg',
 		'sound/effects/footstep/catwalk2.ogg',
@@ -108,23 +108,23 @@ GLOBAL_LIST_INIT(footstep, list(
 //bare footsteps lists
 GLOBAL_LIST_INIT(barefootstep, list(
 	FOOTSTEP_WOOD_BAREFOOT = list(list(
-		'modular_chomp/sound/effects/footstep/woodbarefoot1.ogg',
-		'modular_chomp/sound/effects/footstep/woodbarefoot2.ogg',
-		'modular_chomp/sound/effects/footstep/woodbarefoot3.ogg',
-		'modular_chomp/sound/effects/footstep/woodbarefoot4.ogg',
-		'modular_chomp/sound/effects/footstep/woodbarefoot5.ogg'), 80, -1),
+		'sound/effects/footstep/woodbarefoot1.ogg',
+		'sound/effects/footstep/woodbarefoot2.ogg',
+		'sound/effects/footstep/woodbarefoot3.ogg',
+		'sound/effects/footstep/woodbarefoot4.ogg',
+		'sound/effects/footstep/woodbarefoot5.ogg'), 80, -1),
 	FOOTSTEP_HARD_BAREFOOT = list(list(
-		'modular_chomp/sound/effects/footstep/hardbarefoot1.ogg',
-		'modular_chomp/sound/effects/footstep/hardbarefoot2.ogg',
-		'modular_chomp/sound/effects/footstep/hardbarefoot3.ogg',
-		'modular_chomp/sound/effects/footstep/hardbarefoot4.ogg',
-		'modular_chomp/sound/effects/footstep/hardbarefoot5.ogg'), 80, -1),
+		'sound/effects/footstep/hardbarefoot1.ogg',
+		'sound/effects/footstep/hardbarefoot2.ogg',
+		'sound/effects/footstep/hardbarefoot3.ogg',
+		'sound/effects/footstep/hardbarefoot4.ogg',
+		'sound/effects/footstep/hardbarefoot5.ogg'), 80, -1),
 	FOOTSTEP_CARPET_BAREFOOT = list(list(
-		'modular_chomp/sound/effects/footstep/carpetbarefoot1.ogg',
-		'modular_chomp/sound/effects/footstep/carpetbarefoot2.ogg',
-		'modular_chomp/sound/effects/footstep/carpetbarefoot3.ogg',
-		'modular_chomp/sound/effects/footstep/carpetbarefoot4.ogg',
-		'modular_chomp/sound/effects/footstep/carpetbarefoot5.ogg'), 75, -1),
+		'sound/effects/footstep/carpetbarefoot1.ogg',
+		'sound/effects/footstep/carpetbarefoot2.ogg',
+		'sound/effects/footstep/carpetbarefoot3.ogg',
+		'sound/effects/footstep/carpetbarefoot4.ogg',
+		'sound/effects/footstep/carpetbarefoot5.ogg'), 75, -1),
 	FOOTSTEP_SAND = list(list(
 		'sound/effects/footstep/asteroid1.ogg',
 		'sound/effects/footstep/asteroid2.ogg',
@@ -146,29 +146,29 @@ GLOBAL_LIST_INIT(barefootstep, list(
 		'sound/effects/footstep/lava2.ogg',
 		'sound/effects/footstep/lava3.ogg'), 100, 0),
 	FOOTSTEP_MEAT = list(list(
-		'modular_chomp/sound/effects/meatslap.ogg'), 100, 0),
+		'sound/effects/meatslap.ogg'), 100, 0),
 ))
 
 //claw footsteps lists
 GLOBAL_LIST_INIT(clawfootstep, list(
 	FOOTSTEP_WOOD_BAREFOOT = list(list(
-		'modular_chomp/sound/effects/footstep/woodclaw1.ogg',
-		'modular_chomp/sound/effects/footstep/woodclaw2.ogg',
-		'modular_chomp/sound/effects/footstep/woodclaw3.ogg',
-		'modular_chomp/sound/effects/footstep/woodclaw2.ogg',
-		'modular_chomp/sound/effects/footstep/woodclaw1.ogg'), 90, 1),
+		'sound/effects/footstep/woodclaw1.ogg',
+		'sound/effects/footstep/woodclaw2.ogg',
+		'sound/effects/footstep/woodclaw3.ogg',
+		'sound/effects/footstep/woodclaw2.ogg',
+		'sound/effects/footstep/woodclaw1.ogg'), 90, 1),
 	FOOTSTEP_HARD_BAREFOOT = list(list(
-		'modular_chomp/sound/effects/footstep/hardclaw1.ogg',
-		'modular_chomp/sound/effects/footstep/hardclaw2.ogg',
-		'modular_chomp/sound/effects/footstep/hardclaw3.ogg',
-		'modular_chomp/sound/effects/footstep/hardclaw4.ogg',
-		'modular_chomp/sound/effects/footstep/hardclaw1.ogg'), 90, 1),
+		'sound/effects/footstep/hardclaw1.ogg',
+		'sound/effects/footstep/hardclaw2.ogg',
+		'sound/effects/footstep/hardclaw3.ogg',
+		'sound/effects/footstep/hardclaw4.ogg',
+		'sound/effects/footstep/hardclaw1.ogg'), 90, 1),
 	FOOTSTEP_CARPET_BAREFOOT = list(list(
-		'modular_chomp/sound/effects/footstep/carpetbarefoot1.ogg',
-		'modular_chomp/sound/effects/footstep/carpetbarefoot2.ogg',
-		'modular_chomp/sound/effects/footstep/carpetbarefoot3.ogg',
-		'modular_chomp/sound/effects/footstep/carpetbarefoot4.ogg',
-		'modular_chomp/sound/effects/footstep/carpetbarefoot5.ogg'), 75, -2),
+		'sound/effects/footstep/carpetbarefoot1.ogg',
+		'sound/effects/footstep/carpetbarefoot2.ogg',
+		'sound/effects/footstep/carpetbarefoot3.ogg',
+		'sound/effects/footstep/carpetbarefoot4.ogg',
+		'sound/effects/footstep/carpetbarefoot5.ogg'), 75, -2),
 	FOOTSTEP_SAND = list(list(
 		'sound/effects/footstep/asteroid1.ogg',
 		'sound/effects/footstep/asteroid2.ogg',
@@ -190,7 +190,7 @@ GLOBAL_LIST_INIT(clawfootstep, list(
 		'sound/effects/footstep/lava2.ogg',
 		'sound/effects/footstep/lava3.ogg'), 100, 0),
 	FOOTSTEP_MEAT = list(list(
-		'modular_chomp/sound/effects/meatslap.ogg'), 100, 0),
+		'sound/effects/meatslap.ogg'), 100, 0),
 ))
 
 //light claw footsteps list
@@ -230,14 +230,14 @@ GLOBAL_LIST_INIT(lightclawfootstep, list(
 		'sound/effects/footstep/lava2.ogg',
 		'sound/effects/footstep/lava3.ogg'), 100, 0),
 	FOOTSTEP_MEAT = list(list(
-		'modular_chomp/sound/effects/meatslap.ogg'), 100, 0),
+		'sound/effects/meatslap.ogg'), 100, 0),
 ))
 
 //heavy footsteps list
 GLOBAL_LIST_INIT(heavyfootstep, list(
 	FOOTSTEP_GENERIC_HEAVY = list(list(
-		'modular_chomp/sound/effects/footstep/heavy1.ogg',
-		'modular_chomp/sound/effects/footstep/heavy2.ogg'), 100, 2),
+		'sound/effects/footstep/heavy1.ogg',
+		'sound/effects/footstep/heavy2.ogg'), 100, 2),
 	FOOTSTEP_WATER = list(list(
 		'sound/effects/footstep/water1.ogg',
 		'sound/effects/footstep/water2.ogg',
@@ -248,5 +248,5 @@ GLOBAL_LIST_INIT(heavyfootstep, list(
 		'sound/effects/footstep/lava2.ogg',
 		'sound/effects/footstep/lava3.ogg'), 100, 0),
 	FOOTSTEP_MEAT = list(list(
-		'modular_chomp/sound/effects/meatslap.ogg'), 100, 0),
+		'sound/effects/meatslap.ogg'), 100, 0),
 ))

@@ -1,3 +1,4 @@
+// Drop in replacement for reference tracking
 #ifdef REFERENCE_TRACKING
 #define REFSEARCH_RECURSE_LIMIT 64
 

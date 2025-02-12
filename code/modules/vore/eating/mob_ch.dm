@@ -15,5 +15,3 @@
 	var/no_latejoin_prey_warning_persists = FALSE	//Do we save it?
 	var/belly_rub_target = null
 	var/soulcatcher_pref_flags = 0			//Default disabled
-
-	var/obj/soulgem/soulgem

@@ -160,7 +160,7 @@
 		usr.unset_machine()
 
 	add_fingerprint(usr)
-	updateUsrDialog()
+	updateUsrDialog(usr)
 	return
 
 //Take the engine tpe we're building, warn engineering, and pass it to the engine loader.
