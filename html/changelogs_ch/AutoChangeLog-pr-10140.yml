@@ -1,4 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - code_imp: "You can no longer place markings on your lungs (Unit test checks for improper bodypart areas)"
