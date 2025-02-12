@@ -32,7 +32,7 @@
 			if(!selfdestructing)
 				dat += "<br><br><A href='byond://?src=\ref[src];betraitor=1;traitormob=\ref[user]'>\"[pick("I want to switch teams.", "I want to work for you.", "Let me join you.", "I can be of use to you.", "You want me working for you, and here's why...", "Give me an objective.", "How's the 401k over at the Syndicate?")]\"</A><BR>"
 	dat += temptext
-	user << browse(dat, "window=syndbeacon")
+	user << browse("<html>[dat]</html>", "window=syndbeacon")
 	onclose(user, "syndbeacon")
 
 /obj/machinery/syndicate_beacon/Topic(href, href_list)
@@ -40,18 +40,18 @@
 		return
 	if(href_list["betraitor"])
 		if(charges < 1)
-			updateUsrDialog()
+			updateUsrDialog(usr)
 			return
 		var/mob/M = locate(href_list["traitormob"])
 		if(M.mind.special_role || jobban_isbanned(M, JOB_SYNDICATE))
 			temptext = "<i>We have no need for you at this time. Have a pleasant day.</i><br>"
-			updateUsrDialog()
+			updateUsrDialog(usr)
 			return
 		charges -= 1
 		switch(rand(1,2))
 			if(1)
 				temptext = "<font color=red><i><b>Double-crosser. You planned to betray us from the start. Allow us to repay the favor in kind.</b></i></font>"
-				updateUsrDialog()
+				updateUsrDialog(usr)
 				spawn(rand(50,200)) selfdestruct()
 				return
 			if(2)
@@ -63,7 +63,7 @@
 			traitors.equip(N)
 			message_admins("[N]/([N.ckey]) has accepted a traitor objective from a syndicate beacon.")
 
-	updateUsrDialog()
+	updateUsrDialog(usr)
 	return
 
 /obj/machinery/syndicate_beacon/proc/selfdestruct()

@@ -97,7 +97,7 @@
 		var/new_type = pickweight(sk_types)
 
 		new new_type(loc)
-		flags |= ATOM_INITIALIZED //CHOMPEdit
+		flags |= ATOM_INITIALIZED
 		return INITIALIZE_HINT_QDEL
 
 	if(icon_state == "map_example")

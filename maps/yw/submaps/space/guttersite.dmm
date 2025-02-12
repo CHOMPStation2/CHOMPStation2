@@ -591,7 +591,6 @@
 /obj/machinery/alarm{
 	alarms_hidden = 1;
 	dir = 4;
-	icon_state = "alarm0";
 	pixel_x = -22;
 	pixel_y = 0
 	},
@@ -932,7 +931,6 @@
 /obj/machinery/alarm{
 	alarms_hidden = 1;
 	dir = 4;
-	icon_state = "alarm0";
 	pixel_x = -22;
 	pixel_y = 0
 	},
@@ -1405,7 +1403,6 @@
 	alarms_hidden = 1;
 	breach_detection = 0;
 	dir = 1;
-	icon_state = "alarm0";
 	pixel_y = -22
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -1598,7 +1595,6 @@
 /obj/machinery/alarm{
 	alarms_hidden = 1;
 	dir = 4;
-	icon_state = "alarm0";
 	pixel_x = -22;
 	pixel_y = 0
 	},
@@ -1692,7 +1688,6 @@
 /obj/machinery/alarm{
 	alarms_hidden = 1;
 	dir = 4;
-	icon_state = "alarm0";
 	pixel_x = -22;
 	pixel_y = 0
 	},
@@ -1819,7 +1814,6 @@
 /obj/machinery/alarm{
 	alarms_hidden = 1;
 	dir = 4;
-	icon_state = "alarm0";
 	pixel_x = -22;
 	pixel_y = 0
 	},
@@ -2482,7 +2476,6 @@
 /obj/machinery/alarm{
 	alarms_hidden = 1;
 	dir = 4;
-	icon_state = "alarm0";
 	pixel_x = -22;
 	pixel_y = 0
 	},
@@ -2832,7 +2825,6 @@
 /obj/machinery/alarm{
 	alarms_hidden = 1;
 	dir = 4;
-	icon_state = "alarm0";
 	pixel_x = -22;
 	pixel_y = 0
 	},
@@ -2842,7 +2834,6 @@
 /obj/machinery/alarm{
 	alarms_hidden = 1;
 	dir = 4;
-	icon_state = "alarm0";
 	pixel_x = -22;
 	pixel_y = 0
 	},
@@ -2933,7 +2924,6 @@
 /obj/machinery/alarm{
 	alarms_hidden = 1;
 	dir = 4;
-	icon_state = "alarm0";
 	pixel_x = -22;
 	pixel_y = 0
 	},
@@ -2960,7 +2950,6 @@
 /obj/machinery/alarm{
 	alarms_hidden = 1;
 	dir = 4;
-	icon_state = "alarm0";
 	pixel_x = -22;
 	pixel_y = 0
 	},
@@ -3124,7 +3113,6 @@
 /obj/machinery/alarm{
 	alarms_hidden = 1;
 	dir = 4;
-	icon_state = "alarm0";
 	pixel_x = -22;
 	pixel_y = 0
 	},
@@ -3980,7 +3968,6 @@
 /obj/machinery/alarm{
 	alarms_hidden = 1;
 	dir = 4;
-	icon_state = "alarm0";
 	pixel_x = -22;
 	pixel_y = 0
 	},
@@ -5573,7 +5560,6 @@
 /obj/machinery/alarm{
 	alarms_hidden = 1;
 	dir = 4;
-	icon_state = "alarm0";
 	pixel_x = -22;
 	pixel_y = 0
 	},
@@ -5623,7 +5609,6 @@
 "nV" = (
 /obj/machinery/alarm/alarms_hidden{
 	dir = 4;
-	icon_state = "alarm0";
 	pixel_x = -25
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -5631,7 +5616,6 @@
 "nW" = (
 /obj/machinery/alarm/alarms_hidden{
 	dir = 4;
-	icon_state = "alarm0";
 	pixel_x = -25
 	},
 /obj/machinery/firealarm{
@@ -5704,7 +5688,6 @@
 /obj/machinery/alarm{
 	alarms_hidden = 1;
 	dir = 4;
-	icon_state = "alarm0";
 	pixel_x = -22;
 	pixel_y = 0
 	},
@@ -5777,7 +5760,6 @@
 /obj/machinery/alarm{
 	alarms_hidden = 1;
 	dir = 4;
-	icon_state = "alarm0";
 	pixel_x = -22;
 	pixel_y = 0
 	},

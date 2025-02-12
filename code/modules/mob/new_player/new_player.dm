@@ -31,7 +31,7 @@
 	else
 		forceMove(locate(1,1,1))
 	//CHOMPEdit End
-	flags |= ATOM_INITIALIZED // Explicitly don't use Initialize().  New players join super early and use New() //CHOMPEdit
+	flags |= ATOM_INITIALIZED // Explicitly don't use Initialize().  New players join super early and use New()
 
 
 /mob/new_player/Destroy()
@@ -81,17 +81,17 @@
 	if(!IsGuestKey(src.key))
 		establish_db_connection()
 
-		if(SSdbcore.IsConnected()) //CHOMPEdit TGSQL
+		if(SSdbcore.IsConnected())
 			var/isadmin = 0
 			if(src.client && src.client.holder)
 				isadmin = 1
-			var/datum/db_query/query = SSdbcore.NewQuery("SELECT id FROM erro_poll_question WHERE [(isadmin ? "" : "adminonly = false AND")] Now() BETWEEN starttime AND endtime AND id NOT IN (SELECT pollid FROM erro_poll_vote WHERE ckey = :t_ckey) AND id NOT IN (SELECT pollid FROM erro_poll_textreply WHERE ckey = :t_ckey)",list("t_ckey" = ckey)) //CHOMPEdit TGSQL
+			var/datum/db_query/query = SSdbcore.NewQuery("SELECT id FROM erro_poll_question WHERE [(isadmin ? "" : "adminonly = false AND")] Now() BETWEEN starttime AND endtime AND id NOT IN (SELECT pollid FROM erro_poll_vote WHERE ckey = \"[ckey]\") AND id NOT IN (SELECT pollid FROM erro_poll_textreply WHERE ckey = \"[ckey]\")")
 			query.Execute()
 			var/newpoll = 0
 			while(query.NextRow())
 				newpoll = 1
 				break
-			qdel(query) //CHOMPEdit TGSQL
+			qdel(query)
 			if(newpoll)
 				output += "<p><b><a href='byond://?src=\ref[src];showpoll=1'>Show Player Polls</A><br>(NEW!)</b></p>" //ChompEDIT - fixed height
 			else
@@ -112,7 +112,7 @@
 			output += "<p><b><a href='byond://?src=\ref[src];open_station_news=1'>Show [using_map.station_name] News<br>(NEW!)</A></b></p>" //ChompEDIT - fixed height
 
 	//ChompEDIT start: Show Changelog
-	if(client.prefs.lastchangelog == changelog_hash)
+	if(client?.prefs?.lastchangelog == changelog_hash)
 		output += "<p><a href='byond://?src=\ref[src];open_changelog=1'>Show Changelog</A><br><i>No Changes</i></p>"
 	else
 		output += "<p><b><a href='byond://?src=\ref[src];open_changelog=1'>Show Changelog</A><br>(NEW!)</b></p>"
@@ -155,11 +155,13 @@
 		var/datum/job/refJob = null
 		for(var/mob/new_player/player in player_list)
 			refJob = player.client.prefs.get_highest_job()
-			if(player.client.prefs.obfuscate_key && player.client.prefs.obfuscate_job)
+			var/obfuscate_key = player.client.prefs.read_preference(/datum/preference/toggle/obfuscate_key)
+			var/obfuscate_job = player.client.prefs.read_preference(/datum/preference/toggle/obfuscate_job)
+			if(obfuscate_key && obfuscate_job)
 				. += "Anonymous User [player.ready ? "Ready!" : null]"
-			else if(player.client.prefs.obfuscate_key)
+			else if(obfuscate_key)
 				. += "Anonymous User [player.ready ? "(Playing as: [refJob ? refJob.title : "Unknown"])" : null]"
-			else if(player.client.prefs.obfuscate_job)
+			else if(obfuscate_job)
 				. += "[player.key] [player.ready ? "Ready!" : null]"
 			else
 				. += "[player.key] [player.ready ? "(Playing as: [refJob ? refJob.title : "Unknown"])" : null]"
@@ -210,7 +212,7 @@
 
 			announce_ghost_joinleave(src)
 
-			if(client.prefs.be_random_name)
+			if(client.prefs.read_preference(/datum/preference/toggle/human/name_is_always_random))
 				client.prefs.real_name = random_name(client.prefs.identifying_gender)
 			observer.real_name = client.prefs.real_name
 			observer.name = observer.real_name
@@ -249,17 +251,17 @@
 
 	if(href_list["privacy_poll"])
 		establish_db_connection()
-		if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
+		if(!SSdbcore.IsConnected())
 			return
 		var/voted = 0
 
 		//First check if the person has not voted yet.
-		var/datum/db_query/query = SSdbcore.NewQuery("SELECT * FROM erro_privacy WHERE ckey=:t_ckey", list("t_ckey" = src.ckey)) //CHOMPEdit TGSQL
+		var/datum/db_query/query = SSdbcore.NewQuery("SELECT * FROM erro_privacy WHERE ckey='[src.ckey]'")
 		query.Execute()
 		while(query.NextRow())
 			voted = 1
 			break
-		qdel(query) //CHOMPEdit TGSQL
+		qdel(query)
 		//This is a safety switch, so only valid options pass through
 		var/option = "UNKNOWN"
 		switch(href_list["privacy_poll"])
@@ -279,9 +281,8 @@
 			return
 
 		if(!voted)
-			var/list/sqlargs = list("t_ckey" = src.ckey, "t_option" = "[option]") //CHOMPEdit TGSQL
-			var/sql = "INSERT INTO erro_privacy VALUES (null, Now(), :t_ckey, :t_option)" //CHOMPEdit TGSQL
-			var/datum/db_query/query_insert = SSdbcore.NewQuery(sql,sqlargs) //CHOMPEdit TGSQL
+			var/sql = "INSERT INTO erro_privacy VALUES (null, Now(), '[src.ckey]', '[option]')"
+			var/datum/db_query/query_insert = SSdbcore.NewQuery(sql)
 			query_insert.Execute()
 			to_chat(usr, span_bold("Thank you for your vote!"))
 			qdel(query_insert)
@@ -442,10 +443,10 @@
 	if (src != usr)
 		return 0
 	if(!ticker || ticker.current_state != GAME_STATE_PLAYING)
-		to_chat(usr, span_red("The round is either not ready, or has already finished..."))
+		to_chat(src, span_red("The round is either not ready, or has already finished..."))
 		return 0
 	if(!CONFIG_GET(flag/enter_allowed))
-		to_chat(usr, span_notice("There is an administrative lock on entering the game!"))
+		to_chat(src, span_notice("There is an administrative lock on entering the game!"))
 		return 0
 	if(!IsJobAvailable(rank))
 		tgui_alert_async(src,"[rank] is not available. Please try another.")

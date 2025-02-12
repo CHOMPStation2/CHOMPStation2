@@ -1,4 +1,4 @@
-export const getTagColor = (tag) => {
+export const getTagColor = (tag: string) => {
   switch (tag) {
     case 'Unset':
       return 'label';

@@ -58,15 +58,12 @@
 	reload_time = 1.5 SECONDS
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/eclipse
 
-	loot_list = list(/obj/item/slime_extract/sepia  = 1,
-		/obj/item/bone/skull = 100
-			)
-
 	special_attack_cooldown = 15 SECONDS
 	special_attack_min_range = 2
 	special_attack_max_range = 7
 	var/has_heal_droid = FALSE
 	var/specialattackprojectile = /obj/item/projectile/energy/phase/bolt
+	var/artidrop = /obj/effect/artillery_attack
 
 //Want a self heal for a spefic dude, and to increase diffculty of some POIs
 /mob/living/simple_mob/humanoid/eclipse/handle_special()
@@ -130,17 +127,15 @@
 	desc = "You shouldn't be seeing this. But don't use lasers or energy weapons"
 	health = 100
 	maxHealth = 100
-	projectiletype = /obj/item/projectile/energy/mob/midlaser
+	projectiletype = /obj/item/projectile/energy/eclipse
 
 	armor = list(melee = -100, bullet = -100, laser = 40, energy = 40, bomb = 50, bio = 100, rad = 100) //Solar members are nigh immune to burns.
 	armor_soak = list(melee = 0, bullet = 0, laser = 20, energy = 20, bomb = 0, bio = 0, rad = 0)
 
 /mob/living/simple_mob/humanoid/eclipse/solar/bullet_act(obj/item/projectile/P)
+	..()
 	if(istype(P, /obj/item/projectile/energy) || istype(P, /obj/item/projectile/beam))
-		visible_message(span_boldwarning("[P] seems ineffective!."))
-		..()
-	else
-		..()
+		visible_message(span_cult("[P] seems ineffective!."))
 
 /mob/living/simple_mob/humanoid/eclipse/solar/snipertesh
 	name = "Solar Eclipse Sniper"
@@ -152,7 +147,7 @@
 	icon_state = "eclipse_snipertesh"
 	icon_living = "eclipse_snipertesh"
 
-	projectiletype = /obj/item/projectile/scatter/laser
+	projectiletype = /obj/item/projectile/bullet/tyrshotburst
 
 	projectile_accuracy = 100
 
@@ -299,6 +294,7 @@
 	special_attack_min_range = 1
 	special_attack_max_range = 7
 
+	projectiletype = /obj/item/projectile/energy/eclipse
 	specialattackprojectile = /obj/item/projectile/energy/flash
 
 	loot_list = list(/obj/item/slime_extract/sepia  = 1,
@@ -348,7 +344,7 @@
 	name = "Solar Eclipse Technician"
 	desc = "A strange being wearing a burn resistaint coat."
 	icon_state = "eclipse_nuke"
-	projectiletype = /obj/item/projectile/bullet/magnetic/flechette/small
+	projectiletype = /obj/item/projectile/energy/lightingspark
 	special_attack_cooldown = 15 SECONDS
 	special_attack_min_range = 1
 	special_attack_max_range = 9
@@ -382,7 +378,7 @@
 	special_attack_cooldown = 5 SECONDS
 	special_attack_min_range = 1
 	special_attack_max_range = 7
-	projectiletype = /obj/item/projectile/energy/mob/drone
+	projectiletype = /obj/item/projectile/energy/eclipse
 	icon_state = "guardian"
 	icon_living = "guardian"
 	reload_max = 4
@@ -445,18 +441,17 @@
 	desc = "You shouldn't be seeing this, but don't use melee weapons or bullets."
 	health = 100
 	maxHealth = 100
+	projectiletype = /obj/item/projectile/bullet/crystaline
 	armor = list(melee = 40, bullet = 40, laser = -100, energy = -100, bomb = 50, bio = 100, rad = 100) //Lunar members are nigh immune to burns.
 	armor_soak = list(melee = 20, bullet = 20, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0) //15 because every melee weapon has dumb amount of AP
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/bullet_act(obj/item/projectile/P)
+	..()
 	if(istype(P, /obj/item/projectile/bullet))
-		visible_message(span_boldwarning("[P] seems ineffective!."))
-		..()
-	else
-		..()
+		visible_message(span_cult("[P] seems ineffective!."))
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/attackby(var/obj/item/O as obj, var/mob/user as mob)
-	to_chat(user, span_warning("This weapon is ineffective, it does no damage."))
+	to_chat(user, span_cult("This weapon is ineffective, it does no damage."))
 	.=..()
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/bulletstorm //tesh got a gun
@@ -469,7 +464,7 @@
 	movement_cooldown = -1
 
 
-	projectiletype = /obj/item/projectile/scatter/shotgun
+	projectiletype = /obj/item/projectile/bullet/crystalineburst
 	reload_max = 1
 	reload_time = 2.5 SECONDS
 	ranged_attack_delay = 1.5 SECONDS
@@ -580,7 +575,6 @@
 	icon_state = "eclipse_silver"
 	icon_living = "eclipse_silver"
 
-	projectiletype = /obj/item/projectile/bullet/pistol/medium
 	special_attack_cooldown = 30 SECONDS
 	special_attack_min_range = 1
 	special_attack_max_range = 7
@@ -725,6 +719,8 @@
 	reload_max = 1
 	reload_time = 1.5 SECOND
 
+	specialattackprojectile = /obj/item/projectile/energy/mechahack
+
 	loot_list = list(/obj/item/slime_extract/sepia  = 1,
 		/obj/item/bone/skull = 100,
 		/obj/item/disposable_teleporter = 15
@@ -732,17 +728,14 @@
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/abyssdiver/do_special_attack(atom/A)
 	visible_message(span_danger("\The [src] begins to mess with a wrist mounted device."))
-	if(isrobot(A))
-		addtimer(CALLBACK(src, PROC_REF(remote_shutdown), A), 3 SECONDS, TIMER_DELETE_ME)
-	else if(istype(A, /obj/mecha))
-		addtimer(CALLBACK(src, PROC_REF(remote_eject), A), 3 SECONDS, TIMER_DELETE_ME)
+	if(istype(A, /obj/mecha))
+		addtimer(CALLBACK(src, PROC_REF(special_projectile), A), 3 SECONDS, TIMER_DELETE_ME)
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/servicesquish
 	name = "Lunar Eclipse Service"
 	desc = "A strange being wearing a blunt resistaint coat."
 	icon_state = "miner"
 	icon_living = "miner"
-	projectiletype = /obj/item/projectile/bullet/pistol/hp
 
 	loot_list = list(/obj/item/slime_extract/sepia  = 1,
 		/obj/item/slime_extract/ruby = 100,
@@ -758,7 +751,7 @@
 	for(var/mob/living/L in view(src, 4))
 		if(L.stat == DEAD || !IIsAlly(L))
 			continue
-		L.add_modifier(/datum/modifier/technomancer/repel_missiles, null, src)
+		L.add_modifier(/datum/modifier/technomancer/repel_missiles, 4, src)
 
 
 /mob/living/simple_mob/mechanical/ward/monitor/eclipse

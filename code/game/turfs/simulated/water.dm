@@ -24,8 +24,6 @@
 
 /turf/simulated/floor/water/Initialize()
 	. = ..()
-	// var/decl/flooring/F = get_flooring_data(/decl/flooring/water) - CHOMPEdit
-	// footstep_sounds = F?.footstep_sounds CHOMPEdit - Footsteps
 	update_icon()
 	handle_fish()
 	// soundloop = new(list(src), FALSE) // CHOMPEdit: Removing soundloop for now.

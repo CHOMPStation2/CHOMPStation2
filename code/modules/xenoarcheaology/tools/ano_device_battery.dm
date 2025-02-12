@@ -1,15 +1,39 @@
+/// NOTE:
+/// If you are adding an artifact, I would highly recommend thinking of HOW it can be utilized by the harvester first and foremost.
+/// If you need assistance in getting it to work with the harvester, I suggest looking at animate_anomaly.dm (for a full incorporation) and electric_field (for a partial incoporation)
+
 /obj/item/anobattery
 	name = "Anomaly power battery"
+	desc = "A device that is able to harness the power of anomalies!"
 	icon = 'icons/obj/xenoarchaeology.dmi'
 	icon_state = "anobattery0"
 	var/datum/artifact_effect/battery_effect
 	var/capacity = 500
 	var/stored_charge = 0
-	var/effect_id = ""
+
+/obj/item/anobattery/examine(mob/user)
+	. = ..()
+	if(Adjacent(user))
+		. += "It currently has a charge of [stored_charge] out of [capacity]"
+/obj/item/anobattery/Destroy()
+	battery_effect = null
+	..()
+
+/obj/item/anobattery/moderate
+	name = "moderate anomaly battery"
+	capacity = 1000
 
 /obj/item/anobattery/advanced
 	name = "advanced anomaly battery"
 	capacity = 3000
+
+/obj/item/anobattery/exotic
+	name = "exotic anomaly battery"
+	capacity = 10000
+
+/obj/item/anobattery/adminbus //Adminspawn only. Do not make this accessible or I will gnaw you.
+	name = "godly anomaly battery"
+	capacity = 100000000
 
 /*
 /obj/item/anobattery/New()
@@ -37,10 +61,21 @@
 	var/obj/item/anobattery/inserted_battery
 	var/turf/archived_loc
 	var/energy_consumed_on_touch = 100
+	var/mob/last_user_touched
 
 /obj/item/anodevice/New()
 	..()
 	START_PROCESSING(SSobj, src)
+
+/obj/item/anodevice/Destroy()
+	inserted_battery = null
+	archived_loc = null
+	last_user_touched = null
+	..()
+
+/obj/item/anodevice/equipped(var/mob/user, var/slot)
+	last_user_touched = user
+	..()
 
 /obj/item/anodevice/attackby(var/obj/I as obj, var/mob/user as mob)
 	if(istype(I, /obj/item/anobattery))
@@ -156,7 +191,7 @@
 						//consume power equal to time passed
 						inserted_battery.use_power(world.time - last_process)
 
-					inserted_battery.battery_effect.DoEffectTouch(holder)
+					inserted_battery.battery_effect.DoEffectTouch(last_user_touched) //Yes. This means if you give it something REALLY bad, it'll keep hitting you as if you're touching it. Be responsible with eldritch magic.
 
 				else if(inserted_battery.battery_effect.effect == EFFECT_PULSE)
 					inserted_battery.battery_effect.chargelevel = inserted_battery.battery_effect.chargelevelmax

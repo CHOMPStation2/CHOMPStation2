@@ -164,6 +164,9 @@
 	B.vore_sound = "Stomach Move"
 	B.sound_volume = 20
 
+	if(!soulgem)
+		soulgem = new(src)
+
 /obj/belly/longneck
 	affects_vore_sprites = TRUE
 	belly_sprite_to_affect = "neck1"
@@ -292,7 +295,7 @@
 		if(usr != src)
 			usr.put_in_active_hand(Vac)
 		else
-			var/mob/living/L = input("Borrow Vac-Pack for") as null| mob in view(1,usr.loc)
+			var/mob/living/L = tgui_input_list(usr, "Borrow Vac-Pack for", "Swoopie", mobs_in_view(1, usr))
 			if(!L || L == usr)
 				return
 			L.put_in_active_hand(Vac)

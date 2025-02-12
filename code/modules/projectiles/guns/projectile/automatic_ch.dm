@@ -13,7 +13,7 @@
 
 /obj/item/gun/projectile/automatic/p90
 	name = "\improper P90K PDW"
-	desc = "The P90K Personal Defense Weapon is a MarsTech-assembled modernized variation of the ancient FN P90, a compact, high-capacity submachine gun of human origin. Its fierce reputation owes to its minimal recoil and ergonomic design. Chambered in 5.7x28mm caseless rounds."
+	desc = "The P90K Personal Defense Weapon is a MarsTech-assembled modernized variation of the ancient FN P90, a compact, high-capacity submachine gun of human origin. Its fierce reputation owes to its minimal recoil and ergonomic design. Chambered in 9mm rounds."
 	description_fluff = "The leading civilian-sector high-quality small arms subsidiary of Hephaestus Industries, MarsTech has been the provider of choice for law enforcement and security forces for over 300 years."
 
 	icon = 'icons/obj/gun_ch.dmi'
@@ -34,11 +34,11 @@
 	auto_eject = 1 // Auto-ejects magazine when it's empty.
 	auto_eject_sound = 'sound/weapons/smg_empty_alarm.ogg'
 
-	caliber = "5.7x28mm" // The type of caliber the gun accepts. Will not accept magazines loaded with the wrong caliber, even if they're listed in allowed_magazines.
-	ammo_type = /obj/item/ammo_casing/a57 // Should always be an ammo casing that uses the same caliber as the gun's listed for.
+	caliber = "9mm" // The type of caliber the gun accepts. Will not accept magazines loaded with the wrong caliber, even if they're listed in allowed_magazines.
+	ammo_type = /obj/item/ammo_casing/a9mm // Should always be an ammo casing that uses the same caliber as the gun's listed for.
 	load_method = MAGAZINE
-	magazine_type = /obj/item/ammo_magazine/a57p90 // The magazine type it spawns with.
-	allowed_magazines = list(/obj/item/ammo_magazine/a57p90) // What kind of magazine(s) it can load.
+	magazine_type = /obj/item/ammo_magazine/m9mmp90 // The magazine type it spawns with.
+	allowed_magazines = list(/obj/item/ammo_magazine/m9mmp90, /obj/item/ammo_magazine/m9mmt) // What kind of magazine(s) it can load.
 	fire_sound = "sound/weapons/Gunshot1.ogg"
 
 	firemodes = list(

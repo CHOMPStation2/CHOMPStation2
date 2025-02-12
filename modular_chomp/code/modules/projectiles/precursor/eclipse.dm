@@ -188,3 +188,82 @@
 	submunition_spread_min = 200
 	submunitions = list(/obj/item/projectile/energy/redlighting = 3)
 	hud_state = "laser_sniper"
+
+
+
+/obj/item/projectile/energy/mechahack
+	name = "remote hack"
+	icon = 'modular_chomp/icons/obj/guns/precursor/eclipse.dmi'
+	icon_state = "databreach"
+	nodamage = 1
+	irradiate = 3
+	speed = 1 //a bit faster due to the source having a 3 second wind up
+
+/obj/item/projectile/energy/mechahack/on_hit(var/atom/target)
+	. = ..()
+	if(istype(target, /obj/mecha))
+		remote_eject(target)
+
+/obj/item/projectile/energy/mechahack/proc/remote_eject(obj/mecha/M)
+	if(!M)
+		return
+	visible_message(span_critical("\The [M] is remotly hacked and ejects [M.occupant]!"))
+	M.go_out()
+
+/obj/item/projectile/energy/lightingspark
+	name = "lighting spark"
+	icon_state = "spark"
+	nodamage = 1
+	damage_type = HALLOSS
+	speed = 2
+	var/power = 35				//How hard it will hit for with electrocute_act(), decreases with each bounce.
+
+/obj/item/projectile/energy/lightingspark/attack_mob(var/mob/living/target_mob, var/distance, var/miss_modifier=0)
+	//First we shock the guy we just hit.
+	if(ishuman(target_mob))
+		var/mob/living/carbon/human/H = target_mob
+		var/obj/item/organ/external/affected = H.get_organ(check_zone(BP_TORSO))
+		H.electrocute_act(power, src, H.get_siemens_coefficient_organ(affected), affected, 0)
+	else
+		target_mob.electrocute_act(power, src, 0.75, BP_TORSO)
+
+/obj/item/projectile/bullet/crystaline
+	name = "crystal bullet"
+	icon = 'modular_chomp/icons/obj/guns/precursor/eclipse.dmi'
+	icon_state = "crystal"
+	damage = 30
+	armor_penetration = 20
+	embed_chance = 0
+	speed = 2
+
+/obj/item/projectile/energy/eclipse
+	name = "experimental laser"
+	icon = 'modular_chomp/icons/obj/guns/precursor/eclipse.dmi'
+	icon_state = "laser"
+	check_armour = "laser"
+	damage = 30
+	armor_penetration = 20
+	speed = 2
+
+//The normal laser is easier to guard, but can chain screw ups easier
+/obj/item/projectile/energy/eclipse/lorge
+	damage = 50
+	armor_penetration = 20
+	eyeblur = 3
+	icon_state = "mega_laser"
+	speed = 15
+
+/obj/item/projectile/energy/eclipse/lorgealien
+	damage = 50
+	armor_penetration = 40
+	icon_state = "mega_laser_p"
+	speed = 15
+
+/obj/item/projectile/bullet/crystalineburst
+	use_submunitions = 1
+	range = 0
+	embed_chance = 0
+	spread_submunition_damage = FALSE
+	submunition_spread_max = 120
+	submunition_spread_min = 60
+	submunitions = list(/obj/item/projectile/bullet/crystaline = 5)

@@ -8752,7 +8752,6 @@
 	},
 /obj/machinery/computer/security/telescreen/entertainment{
 	desc = "Looks like it's set to history channel, the show is talking about modern aliens.  I wonder what else is on?";
-	icon_state = "frame";
 	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -12470,7 +12469,6 @@
 /obj/structure/table/standard,
 /obj/machinery/computer/security/telescreen/entertainment{
 	desc = "Look's like it's set to the info station... I wonder what else is on?";
-	icon_state = "frame";
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled,
@@ -12584,7 +12582,6 @@
 "avg" = (
 /obj/machinery/computer/security/telescreen/entertainment{
 	desc = "Damn, looks like it's on the clown world channel. I wonder what else is on?";
-	icon_state = "frame";
 	pixel_y = 32
 	},
 /obj/structure/disposalpipe/segment{
@@ -21289,7 +21286,6 @@
 /area/rnd/robotics/mechbay)
 "aJS" = (
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = -64
 	},
 /turf/simulated/floor/wood,
@@ -33829,7 +33825,6 @@
 "biO" = (
 /obj/machinery/computer/security/telescreen/entertainment{
 	desc = "Looks like it's set to Free-Anur-Entertanment, I wonder what else is on?";
-	icon_state = "frame";
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled,
@@ -34087,7 +34082,6 @@
 /obj/structure/table/bench/sifwooden/padded,
 /obj/machinery/computer/security/telescreen/entertainment{
 	desc = "Looks like it's set to history channel, the show is talking about modern aliens.  I wonder what else is on?";
-	icon_state = "frame";
 	pixel_y = -32
 	},
 /turf/simulated/floor/tiled,
@@ -35144,7 +35138,6 @@
 /area/tether/surfacebase/medical/storage)
 "bmk" = (
 /obj/structure/closet/crate{
-	icon_state = "crate";
 	name = "Grenade Crate"
 	},
 /obj/item/grenade/chem_grenade,
@@ -41120,7 +41113,6 @@
 	},
 /obj/machinery/computer/security/telescreen/entertainment{
 	desc = "Look's like it's set to the info station... I wonder what else is on?";
-	icon_state = "frame";
 	pixel_x = 32;
 	pixel_y = -64
 	},

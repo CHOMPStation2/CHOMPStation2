@@ -15,7 +15,7 @@
 	var/list/blend_objects = null // Objects which to blend with //CHOMPEdit default null
 	var/list/noblend_objects = null //Objects to avoid blending with (such as children of listed blend objects. //CHOMPEdit default null
 
-/obj/structure/Initialize()
+/obj/structure/Initialize(mapload)
 	. = ..()
 	if(climbable)
 		verbs += /obj/structure/proc/climb_on

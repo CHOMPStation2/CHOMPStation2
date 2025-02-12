@@ -1116,7 +1116,7 @@
 		to_chat(src, span_warning("You are not a weaver! How are you doing this? Tell a developer!"))
 		return
 
-	var/new_silk_color = input(src, "Pick a color for your woven products:","Silk Color", species.silk_color) as null|color
+	var/new_silk_color = tgui_color_picker(src, "Pick a color for your woven products:","Silk Color", species.silk_color)
 	if(new_silk_color)
 		species.silk_color = new_silk_color
 
@@ -1263,7 +1263,7 @@
 	set category = "Abilities.Vore"
 	set desc = "Grab a target with any of your appendages!"
 
-	if(stat || paralysis || weakened || stunned || world.time < last_special) //No tongue flicking while stunned.
+	if(stat || paralysis || weakened || stunned || world.time < last_special || is_incorporeal()) //No tongue flicking while stunned. // CHOMPEdit
 		to_chat(src, span_warning("You can't do that in your current state."))
 		return
 
@@ -1278,7 +1278,7 @@
 		return
 
 	if(choice == "Color") //Easy way to set color so we don't bloat up the menu with even more buttons.
-		var/new_color = input(src, "Choose a color to set your appendage to!", "", appendage_color) as color|null
+		var/new_color = tgui_color_picker(src, "Choose a color to set your appendage to!", "", appendage_color)
 		if(new_color)
 			appendage_color = new_color
 
@@ -1616,7 +1616,7 @@
 					You can also bite synthetics, but due to how synths work, they won't have anything injected into them.
 					<br>
 					"}
-		src << browse(output,"window=chemicalrefresher")
+		src << browse("<html>[output]</html>","window=chemicalrefresher")
 		return
 	else
 		var/list/targets = list() //IF IT IS NOT BROKEN. DO NOT FIX IT. AND KEEP COPYPASTING IT  (Pointing Rick Dalton: "That's my code!" ~CL)

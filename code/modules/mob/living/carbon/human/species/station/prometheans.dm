@@ -137,7 +137,7 @@ var/datum/species/shapeshifter/promethean/prometheans
 		/decl/emote/visible/vibrate
 	)
 
-	footstep = FOOTSTEP_MOB_SLIME // CHOMPEdit
+	footstep = FOOTSTEP_MOB_SLIME
 
 /datum/species/shapeshifter/promethean/New()
 	..()

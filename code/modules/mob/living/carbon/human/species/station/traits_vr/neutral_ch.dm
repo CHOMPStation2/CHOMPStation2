@@ -23,18 +23,19 @@
 	cost = 0
 	var_changes = list("grows" = TRUE)
 
+/datum/trait/neutral/nutritiongrow/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..()
+	add_verb(H,/mob/living/carbon/proc/toggle_growth) //CHOMPEdit TGPanel
+
 /datum/trait/neutral/nutritionshrink
 	name = "Shrinking"
 	desc = "If you don't eat enough, your body starts shrinking to make up the difference!"
 	cost = 0
 	var_changes = list("shrinks" = TRUE)
 
-/datum/trait/neutral/mudking
-	name = "Mudking"
-	desc = "Somehow you are so filthy that tiles get dirty four times as quick from you walking on them."
-	cost = 0
-	var_changes = list("mudking" = TRUE)
-	custom_only = FALSE
+/datum/trait/neutral/nutritiongrow/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..()
+	add_verb(H,/mob/living/carbon/proc/toggle_shrinking) //CHOMPEdit TGPanel
 
 /datum/trait/neutral/singularity_metabolism
 	name = "Metabolism, Singularity"

@@ -29,6 +29,7 @@
 
 // For the client FPS pref and anywhere else
 #define MAX_CLIENT_FPS	200
+#define RECOMMENDED_FPS	100
 
 // Some arbitrary defines to be used by self-pruning global lists. (see master_controller)
 #define MAX_GEAR_COST 15 // Used in chargen for accessory loadout limit.
@@ -113,11 +114,12 @@
 #define AREA_BLOCK_SUIT_SENSORS		0x800	// If suit sensors are blocked in the area.
 #define AREA_BLOCK_TRACKING			0x1000	// If camera tracking is blocked in the area.
 #define AREA_BLOCK_GHOST_SIGHT		0x2000	// If an area blocks sight for ghosts
+// The 0x800000 is blocked by INITIALIZED, do NOT use it!
 
 // CHOMPAdd Start/area
-#define PHASE_SHIELDED				0x200000 // A less rough way to prevent phase shifting without blocking access
-#define AREA_LIMIT_DARK_RESPITE		0x400000// Shadekin will die normally in those areas
-#define AREA_ALLOW_CLOCKOUT			0x800000 //The PDA timeclock app can only be used in these areas
+#define PHASE_SHIELDED				0x100000 // A less rough way to prevent phase shifting without blocking access
+#define AREA_LIMIT_DARK_RESPITE		0x200000// Shadekin will die normally in those areas
+#define AREA_ALLOW_CLOCKOUT			0x400000 //The PDA timeclock app can only be used in these areas
 // CHOMPAdd End
 
 // OnTopic return values
@@ -218,6 +220,7 @@
 // These are mostly for the department guessing code and event system.
 #define DEPARTMENT_UNKNOWN			"Unknown"
 #define DEPARTMENT_EVERYONE			"Everyone"
+#define DEPARTMENT_ANY				"Any" // Used for events
 
 // Canonical spellings of TSCs, so typos never have to happen again due to human error.
 #define TSC_NT		"NanoTrasen"
@@ -584,3 +587,6 @@ GLOBAL_LIST_INIT(all_volume_channels, list(
 #define RESIZE_A_BIGNORMAL (RESIZE_BIG + RESIZE_NORMAL) / 2
 #define RESIZE_A_NORMALSMALL (RESIZE_NORMAL + RESIZE_SMALL) / 2
 #define RESIZE_A_SMALLTINY (RESIZE_SMALL + RESIZE_TINY) / 2
+
+#define WEIGHT_MIN 70
+#define WEIGHT_MAX 500

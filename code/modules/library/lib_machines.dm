@@ -31,11 +31,10 @@
 	var/category = "Any"
 	var/author
 	var/SQLquery
-	var/list/SQLargs //CHOMPEdit TGSQL
 
-/obj/machinery/librarypubliccomp/attack_hand(var/mob/user as mob)
-	usr.set_machine(src)
-	var/dat = "<HEAD><TITLE>Library Visitor</TITLE></HEAD><BODY>\n" // <META HTTP-EQUIV='Refresh' CONTENT='10'>
+/obj/machinery/librarypubliccomp/attack_hand(var/mob/user)
+	user.set_machine(src)
+	var/dat = "<html><HEAD><TITLE>Library Visitor</TITLE></HEAD><BODY>\n" // <META HTTP-EQUIV='Refresh' CONTENT='10'>
 	switch(screenstate)
 		if(0)
 			dat += {"<h2>Search Settings</h2><br>
@@ -45,7 +44,7 @@
 			<A href='byond://?src=\ref[src];search=1'>\[Start Search\]</A><BR>"}
 		if(1)
 			establish_db_connection()
-			if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
+			if(!SSdbcore.IsConnected())
 				dat += span_red(span_bold("ERROR") + ": Unable to contact External Archive. Please contact your system administrator for assistance.") + "<BR>"
 			else if(!SQLquery)
 				dat += span_red(span_bold("ERROR") + ": Malformed search request. Please contact your system administrator for assistance.") + "<BR>"
@@ -53,7 +52,7 @@
 				dat += {"<table>
 				<tr><td>AUTHOR</td><td>TITLE</td><td>CATEGORY</td><td>SS<sup>13</sup>BN</td></tr>"}
 
-				var/datum/db_query/query = SSdbcore.NewQuery(SQLquery, SQLargs) //CHOMPEdit TGSQL
+				var/datum/db_query/query = SSdbcore.NewQuery(SQLquery)
 				query.Execute()
 
 				while(query.NextRow())
@@ -64,7 +63,7 @@
 					dat += "<tr><td>[author]</td><td>[title]</td><td>[category]</td><td>[id]</td></tr>"
 				qdel(query)
 				dat += "</table><BR>"
-			dat += "<A href='byond://?src=\ref[src];back=1'>\[Go Back\]</A><BR>"
+			dat += "<A href='byond://?src=\ref[src];back=1'>\[Go Back\]</A><BR></html>"
 	user << browse(dat, "window=publiclibrary")
 	onclose(user, "publiclibrary")
 
@@ -97,23 +96,17 @@
 		author = sanitizeSQL(author)
 	if(href_list["search"])
 		SQLquery = "SELECT author, title, category, id FROM library WHERE "
-		SQLargs = list() //CHOMPEdit begin
 		if(category == "Any")
-			SQLquery += "author LIKE '%:t_author%' AND title LIKE '%:t_title%'"
-			SQLargs["t_author"] = author
-			SQLargs["t_title"] = title
+			SQLquery += "author LIKE '%[author]%' AND title LIKE '%[title]%'"
 		else
-			SQLquery += "author LIKE CONCAT('%',:t_author,'%') AND title LIKE CONCAT('%',:t_title,'%') AND category=:t_category"
-			SQLargs["t_author"] = author
-			SQLargs["t_title"] = title
-			SQLargs["t_category"] = category //CHOMPEdit End
+			SQLquery += "author LIKE '%[author]%' AND title LIKE '%[title]%' AND category='[category]'"
 		screenstate = 1
 
 	if(href_list["back"])
 		screenstate = 0
 
 	src.add_fingerprint(usr)
-	src.updateUsrDialog()
+	src.updateUsrDialog(usr)
 	return
 
 
@@ -176,8 +169,8 @@
 			var/obj/item/book/M = new path(null)
 			all_books[M.title] = M
 
-/obj/machinery/librarycomp/attack_hand(var/mob/user as mob)
-	usr.set_machine(src)
+/obj/machinery/librarycomp/attack_hand(var/mob/user)
+	user.set_machine(src)
 	var/dat = "<HEAD><TITLE>Book Inventory Management</TITLE></HEAD><BODY>\n" // <META HTTP-EQUIV='Refresh' CONTENT='10'>
 	switch(screenstate)
 		if(0)
@@ -285,13 +278,13 @@
 
 			//dat += "<h3>" + span_red("arning: System Administrator has slated this archive for removal. Personal uploads should be taken to the NT board of internal literature.") + "</h3>" //VOREStation Removal
 
-			if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
+			if(!SSdbcore.IsConnected())
 				dat += span_red(span_bold("ERROR") + ": Unable to contact External Archive. Please contact your system administrator for assistance.")
 			else
 				dat += {"<A href='byond://?src=\ref[src];orderbyid=1'>(Order book by SS<sup>13</sup>BN)</A><BR><BR>
 				<table>
 				<tr><td><A href='byond://?src=\ref[src];sort=author>AUTHOR</A></td><td><A href='byond://?src=\ref[src];sort=title>TITLE</A></td><td><A href='byond://?src=\ref[src];sort=category>CATEGORY</A></td><td></td></tr>"}
-				var/datum/db_query/query = SSdbcore.NewQuery("SELECT id, author, title, category FROM library ORDER BY :t_sortby", list("t_sortby" = sortby)) //CHOMPEdit TGSQL
+				var/datum/db_query/query = SSdbcore.NewQuery("SELECT id, author, title, category FROM library ORDER BY [sortby]")
 				query.Execute()
 
 				while(query.NextRow())
@@ -300,12 +293,12 @@
 					var/title = query.item[3]
 					var/category = query.item[4]
 					dat += "<tr><td>[author]</td><td>[title]</td><td>[category]</td><td><A href='byond://?src=\ref[src];targetid=[id]'>\[Order\]</A></td></tr>"
-				qdel(query) //CHOMPEdit TGSQL
+				qdel(query)
 				dat += "</table>"
 			dat += "<BR><A href='byond://?src=\ref[src];switchscreen=0'>(Return to main menu)</A><BR>"
 
 	//dat += "<A href='byond://?src=\ref[user];mach_close=library'>Close</A><br><br>"
-	user << browse(dat, "window=library")
+	user << browse("<html>[dat]</html>", "window=library")
 	onclose(user, "library")
 
 //VOREStation Addition Start
@@ -316,7 +309,7 @@
 		. = ..()
 
 	else
-		usr.set_machine(src)
+		user.set_machine(src)
 		var/dat = "<HEAD><TITLE>Book Inventory Management</TITLE></HEAD><BODY>\n" // <META HTTP-EQUIV='Refresh' CONTENT='10'>
 
 		dat += "<h3>ADMINISTRATIVE MANAGEMENT</h3>"
@@ -339,10 +332,10 @@
 				dat += "<tr><td>[author]</td><td>[title]</td><td>[category]</td><td><A href='byond://?src=\ref[src];delid=[id]'>\[Del\]</A>"
 				dat += "</td></tr>"
 			dat += "</table>"
-			qdel(query) // CHOMPEdit
+			qdel(query)
 		dat += "<BR><A href='byond://?src=\ref[src];switchscreen=0'>(Return to main menu)</A><BR>"
 
-		user << browse(dat, "window=library")
+		user << browse("<html>[dat]</html>", "window=library")
 		onclose(user, "library")
 //VOREStation Addition End
 
@@ -442,33 +435,32 @@
 						tgui_alert_async(usr, "This book has been rejected from the database. Aborting!")
 					else
 						establish_db_connection()
-						if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
+						if(!SSdbcore.IsConnected())
 							tgui_alert_async(usr, "Connection to Archive has been severed. Aborting.")
 						else
 							/*
-							var/sqltitle = dbcon.Quote(scanner.cache.name)
-							var/sqlauthor = dbcon.Quote(scanner.cache.author)
-							var/sqlcontent = dbcon.Quote(scanner.cache.dat)
-							var/sqlcategory = dbcon.Quote(upload_category)
+							var/sqltitle = SSdbcore.Quote(scanner.cache.name)
+							var/sqlauthor = SSdbcore.Quote(scanner.cache.author)
+							var/sqlcontent = SSdbcore.Quote(scanner.cache.dat)
+							var/sqlcategory = SSdbcore.Quote(upload_category)
 							*/
-							var/list/sql_args = list("t_title" = scanner.cache.name, "t_author" = scanner.cache.author, "t_content" = scanner.cache.dat, "t_category" = upload_category) //CHOMPEdit TGSQL
-							/*var/sqltitle = sanitizeSQL(scanner.cache.name) CHOMPEdit TGSQL
+							var/sqltitle = sanitizeSQL(scanner.cache.name)
 							var/sqlauthor = sanitizeSQL(scanner.cache.author)
 							var/sqlcontent = sanitizeSQL(scanner.cache.dat)
-							var/sqlcategory = sanitizeSQL(upload_category)*/
-							var/datum/db_query/query = SSdbcore.NewQuery("INSERT INTO library (author, title, content, category) VALUES (:t_author, :t_title, :t_content, :t_category)", sql_args) //CHOMPEdit TGSQL
+							var/sqlcategory = sanitizeSQL(upload_category)
+							var/datum/db_query/query = SSdbcore.NewQuery("INSERT INTO library (author, title, content, category) VALUES ('[sqlauthor]', '[sqltitle]', '[sqlcontent]', '[sqlcategory]')")
 							if(!query.Execute())
 								to_chat(usr,query.ErrorMsg())
 							else
 								log_game("[usr.name]/[usr.key] has uploaded the book titled [scanner.cache.name], [length(scanner.cache.dat)] signs")
 								tgui_alert_async(usr, "Upload Complete.")
-							qdel(query) //CHOMPEdit TGSQL
+							qdel(query)
 	//VOREStation Edit End
 
 	if(href_list["targetid"])
 		var/sqlid = sanitizeSQL(href_list["targetid"])
 		establish_db_connection()
-		if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
+		if(!SSdbcore.IsConnected())
 			tgui_alert_async(usr, "Connection to Archive has been severed. Aborting.")
 		if(bibledelay)
 			for (var/mob/V in hearers(src))
@@ -477,7 +469,7 @@
 			bibledelay = 1
 			spawn(6)
 				bibledelay = 0
-			var/datum/db_query/query = SSdbcore.NewQuery("SELECT * FROM library WHERE id=[sqlid]") //CHOMPEdit TGSQL
+			var/datum/db_query/query = SSdbcore.NewQuery("SELECT * FROM library WHERE id=[sqlid]")
 			query.Execute()
 
 			while(query.NextRow())
@@ -493,7 +485,20 @@
 				B.item_state = B.icon_state
 				src.visible_message("[src]'s printer hums as it produces a completely bound book. How did it do that?")
 				break
-			qdel(query) //CHOMPEdit TGSQL
+			qdel(query)
+
+	if(href_list["delid"])
+		if(!check_rights(R_ADMIN))
+			return
+		var/sqlid = sanitizeSQL(href_list["delid"])
+		establish_db_connection()
+		if(!SSdbcore.IsConnected())
+			tgui_alert_async(usr, "Connection to Archive has been severed. Aborting.")
+		else
+			var/datum/db_query/query = SSdbcore.NewQuery("DELETE FROM library WHERE id=[sqlid]")
+			query.Execute()
+			log_admin("[usr.key] has deleted the book [sqlid]")	//VOREStation Addition
+			qdel(query)
 
 	if(href_list["orderbyid"])
 		var/orderid = tgui_input_number(usr, "Enter your order:")
@@ -508,7 +513,7 @@
 		var/obj/item/book/NewBook = new newpath(get_turf(src))
 		NewBook.name = "Book: [NewBook.name]"
 	src.add_fingerprint(usr)
-	src.updateUsrDialog()
+	src.updateUsrDialog(usr)
 	return
 
 /*
@@ -523,13 +528,13 @@
 	density = TRUE
 	var/obj/item/book/cache		// Last scanned book
 
-/obj/machinery/libraryscanner/attackby(var/obj/O as obj, var/mob/user as mob)
+/obj/machinery/libraryscanner/attackby(var/obj/O, var/mob/user)
 	if(istype(O, /obj/item/book))
 		user.drop_item()
 		O.loc = src
 
-/obj/machinery/libraryscanner/attack_hand(var/mob/user as mob)
-	usr.set_machine(src)
+/obj/machinery/libraryscanner/attack_hand(var/mob/user)
+	user.set_machine(src)
 	var/dat = "<HEAD><TITLE>Scanner Control Interface</TITLE></HEAD><BODY>\n" // <META HTTP-EQUIV='Refresh' CONTENT='10'>
 	if(cache)
 		dat += span_darkgray("Data stored in memory.") + "<BR>"
@@ -540,7 +545,7 @@
 		dat += "       <A href='byond://?src=\ref[src];clear=1'>\[Clear Memory\]</A><BR><BR><A href='byond://?src=\ref[src];eject=1'>\[Remove Book\]</A>"
 	else
 		dat += "<BR>"
-	user << browse(dat, "window=scanner")
+	user << browse("<html>[dat]</html>", "window=scanner")
 	onclose(user, "scanner")
 
 /obj/machinery/libraryscanner/Topic(href, href_list)
@@ -559,7 +564,7 @@
 		for(var/obj/item/book/B in contents)
 			B.loc = src.loc
 	src.add_fingerprint(usr)
-	src.updateUsrDialog()
+	src.updateUsrDialog(usr)
 	return
 
 

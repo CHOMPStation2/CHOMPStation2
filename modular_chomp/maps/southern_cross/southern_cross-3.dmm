@@ -4318,10 +4318,10 @@
 /obj/machinery/door/window/brigdoor/westleft{
 	name = "Ammo"
 	},
-/obj/item/ammo_magazine/a57p90,
-/obj/item/ammo_magazine/a57p90,
-/obj/item/ammo_magazine/a57p90,
-/obj/item/ammo_magazine/a57p90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
 /turf/simulated/floor/tiled/dark,
 /area/security/tactical)
 "alH" = (
@@ -40278,9 +40278,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -43716,7 +43713,6 @@
 /obj/structure/disposaloutlet{
 	dir = 4
 	},
-/obj/machinery/shield_diffuser,
 /obj/machinery/shield_diffuser,
 /turf/simulated/floor/airless,
 /area/space)
@@ -50203,6 +50199,10 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 10
 	},
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -23
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/distillery)
 "hlX" = (
@@ -51427,6 +51427,9 @@
 /obj/machinery/door/firedoor/glass,
 /obj/effect/wingrille_spawn/reinforced/polarized{
 	id = "hop_office"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/sc/hop)
@@ -53901,7 +53904,6 @@
 /area/hallway/primary/seconddeck/apcenter)
 "jgH" = (
 /obj/structure/table/standard,
-/obj/structure/table/standard,
 /obj/item/stack/cable_coil,
 /obj/item/multitool,
 /obj/machinery/cell_charger,
@@ -53911,6 +53913,9 @@
 	dir = 4;
 	id = "Xenobio";
 	pixel_x = -25
+	},
+/obj/item/stack/material/plastic{
+	amount = 2
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/misc_lab)
@@ -70968,10 +70973,6 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 1
 	},
-/obj/machinery/disposal/wall{
-	dir = 4;
-	pixel_x = -37
-	},
 /turf/simulated/floor/tiled/white,
 /area/medical/genetics)
 "tnO" = (
@@ -74128,9 +74129,6 @@
 	},
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/paleblue/border,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
 "vyn" = (

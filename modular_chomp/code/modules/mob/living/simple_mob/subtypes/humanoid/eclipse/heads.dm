@@ -12,6 +12,7 @@
 
 	armor = list(melee = 20, bullet = 20, laser = 20, energy = 20, bomb = 100, bio = 100, rad = 100)
 	armor_soak = list(melee = 7, bullet = 7, laser = 7, energy = 7, bomb = 0, bio = 0, rad = 0)
+	has_heal_droid = TRUE
 
 /mob/living/simple_mob/humanoid/eclipse/head/security
 	name = "Eclipse Head Of Security"
@@ -389,7 +390,7 @@
 				if(T.y+i <= world.maxy)
 					line_range += locate(T.x, T.y+i, T.z)
 	for(var/turf/dropspot in line_range)
-		new /obj/effect/artillery_attack(dropspot)
+		new artidrop(dropspot)
 
 
 /mob/living/simple_mob/humanoid/eclipse/proc/bomb_chaos(atom/A)
@@ -443,7 +444,7 @@
 					var/zed = rand(1,3)
 					line_range += locate(T.x-zed, T.y+i, T.z)
 	for(var/turf/dropspot in line_range)
-		new /obj/effect/artillery_attack(dropspot)
+		new artidrop(dropspot)
 
 
 /obj/effect/artillery_attack
@@ -453,6 +454,7 @@
 	mouse_opacity = 0
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "drop_marker"
+	var/ammmotype = /obj/effect/falling_effect/callstrike_bomb
 
 /obj/effect/artillery_attack/Initialize(mapload)
 	..()
@@ -463,7 +465,7 @@
 	addtimer(CALLBACK(src, PROC_REF(spawner)), delay, TIMER_DELETE_ME)
 
 /obj/effect/artillery_attack/proc/spawner()
-	new /obj/effect/falling_effect/callstrike_bomb(src.loc)
+	new ammmotype(src.loc)
 	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(qdel), src), 0.7 SECONDS, TIMER_DELETE_ME)
 
 /obj/effect/falling_effect/callstrike_bomb
@@ -490,3 +492,168 @@
 			break
 	playsound(src, 'sound/effects/clang2.ogg', 50, 1)
 	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(qdel), src), 0.25 SECONDS, TIMER_DELETE_ME)
+
+//Spacing
+/obj/effect/falling_effect/callstrike_slime
+	falling_type = /obj/effect/callstrike_slime
+	crushing = FALSE
+
+/obj/effect/callstrike_slime
+	anchored = TRUE
+	density = FALSE
+	mouse_opacity = 0
+	icon ='modular_chomp/icons/obj/guns/precursor/tyr.dmi'
+
+/obj/effect/callstrike_slime/Initialize(mapload)
+	.=..()
+	icon_state = "squish"
+
+/obj/effect/callstrike_slime/end_fall(var/crushing = FALSE)
+	for(var/mob/living/L in loc)
+		var/target_zone = ran_zone()
+		var/blocked = L.run_armor_check(target_zone, "energy")
+		var/soaked = L.get_armor_soak(target_zone, "energy")
+
+		if(!L.apply_damage(50, BURN, target_zone, blocked, soaked))
+			break
+	playsound(src, 'sound/effects/squelch1.ogg', 50, 1)
+	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(qdel), src), 0.25 SECONDS, TIMER_DELETE_ME)
+
+
+/obj/effect/artillery_attack/goop
+	ammmotype = /obj/effect/falling_effect/callstrike_slime
+
+/obj/effect/falling_effect/callstrike_slimezone
+	falling_type = /obj/effect/slimeattack
+	crushing = FALSE
+
+/obj/effect/slimeattack
+	name = "slime goop"
+	desc = "A pool of acidic slime"
+	icon_state = "pool"
+	icon ='modular_chomp/icons/obj/guns/precursor/tyr.dmi'
+	var/health = 5
+	var/modifiertype = /datum/modifier/poisoned/weak
+
+/obj/effect/slimeattack/Crossed(atom/movable/AM as mob|obj)
+	if(AM.is_incorporeal())
+		return
+	Bumped(AM)
+
+/obj/effect/slimeattack/attackby(var/obj/item/W, var/mob/user)
+	user.setClickCooldown(user.get_attack_speed(W))
+
+	if(LAZYLEN(W.attack_verb))
+		visible_message(span_warning("\The [src] has been [pick(W.attack_verb)] with \the [W][(user ? " by [user]." : ".")]"))
+	else
+		visible_message(span_warning("\The [src] has been attacked with \the [W][(user ? " by [user]." : ".")]"))
+
+	var/damage = W.force / 4.0
+
+	health -= damage
+	healthcheck()
+
+
+/obj/effect/slimeattack/bullet_act(var/obj/item/projectile/Proj)
+	..()
+	health -= Proj.get_structure_damage()
+	healthcheck()
+
+/obj/effect/slimeattack/proc/die()
+	qdel(src)
+
+/obj/effect/slimeattack/proc/healthcheck()
+	if(health <= 0)
+		die()
+
+/obj/effect/slimeattack/Bumped(mob/M as mob|obj)
+	if(istype(M, /obj/mecha))
+		return
+
+	if(istype(M, /mob/living/))
+		var/mob/living/mob = M
+		if(!mob.hovering || !mob.flying)
+			attack_mob(M)
+
+
+/obj/effect/slimeattack/proc/attack_mob(mob/living/L)
+	var/target_zone = pick(BP_ALL)
+	var/amount_blocked = L.run_armor_check(target_zone, "bio")
+	var/amount_soaked = L.get_armor_soak(target_zone, "bio")
+
+	var/damage = rand(5,5)
+
+	if(amount_blocked >= 40)
+		return
+
+	if(amount_soaked >= damage)
+		return
+
+	L.apply_damage(damage, BURN, target_zone, amount_blocked, amount_soaked, used_weapon = "slime")
+	L.add_modifier(modifiertype, 5 SECONDS)
+
+/mob/living/simple_mob/humanoid/eclipse/minion
+	name = "Eclipse Expirment"
+	desc = "A being in an armored spacesuit"
+
+/mob/living/simple_mob/humanoid/eclipse/minion/squish_sphere
+	name = "Eclipse Bio-Sphere"
+	desc = "A floating orb of slime"
+	health = 7
+	maxHealth = 7
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 100, rad = 100)
+	armor_soak = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
+	icon_state = "squishblob"
+	icon_living = "squishblob"
+	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
+	melee_damage_lower = 1
+	melee_damage_upper = 1
+	attack_armor_pen = 100 //90% sure we need damage for the application of mods to proc
+
+/mob/living/simple_mob/humanoid/eclipse/minion/squish_sphere/apply_melee_effects(var/atom/A) //bring curea, a synth or gamble hard enough.
+	if(isliving(A))
+		var/mob/living/L = A
+		L.add_modifier(/datum/modifier/poisoned, 120 SECONDS)
+
+
+/mob/living/simple_mob/humanoid/eclipse/head/stargazer //starhunter boss replacement
+	name = "Eclipse Stargazer"
+	desc = "A being in an armored spacesuit"
+	icon_state = "medi" //place holdery
+	icon_living = "medi" //place holdery
+	health = 600
+	maxHealth = 600
+	armor = list(melee = 35, bullet = 35, laser = 35, energy = 35, bomb = 100, bio = 100, rad = 100)
+	armor_soak = list(melee = 7, bullet = 7, laser = 7, energy = 7, bomb = 0, bio = 0, rad = 0)
+	projectiletype = /obj/item/projectile/energy/homing_bolt
+	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
+	loot_list = list(/obj/item/slime_extract/sepia  = 25,
+		/obj/item/slime_extract/ruby  = 25,
+		/obj/item/slime_extract/bluespace  = 25,
+		/obj/item/slime_extract/light_pink  = 25,
+		/obj/item/slime_extract/yellow  = 25,
+		/obj/item/slime_extract/oil  = 25,
+			)
+
+/mob/living/simple_mob/humanoid/eclipse/head/stargazer/bullet_act(obj/item/projectile/P)
+	..()
+	for(var/i =1 to 3)
+		new /mob/living/simple_mob/humanoid/eclipse/minion/squish_sphere
+
+/mob/living/simple_mob/humanoid/eclipse/head/stargazer/attackby(var/obj/item/O as obj, var/mob/user as mob)
+	..()
+	new /mob/living/simple_mob/humanoid/eclipse/minion/squish_sphere
+
+/mob/living/simple_mob/humanoid/eclipse/head/stargazer/do_special_attack(atom/A)
+	if(prob(50))
+		artidrop = /obj/effect/artillery_attack/goop
+		if(prob(50))
+			bomb_lines(A)
+		else
+			chaos_lines(A)
+	else
+		artidrop = /obj/effect/falling_effect/callstrike_slime
+		if(prob(50))
+			bomb_lines(A)
+		else
+			chaos_lines(A)

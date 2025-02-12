@@ -1,8 +1,0 @@
-author: "FluffMedic"
-delete-after: True
-changes:
-  - rscadd: "Remove alien vests from tyr and added tyr version. Sprites WIP"
-  - rscadd: "Event BH mecha that spams random fire."
-  - balance: "Tyr alien weapons are a smidhe better"
-  - bugfix: "Janus uses the right projectiles for phase 3 now"
-  - bugfix: "tyr spawn not being protected"

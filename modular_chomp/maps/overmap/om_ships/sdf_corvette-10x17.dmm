@@ -333,11 +333,12 @@
 /obj/item/clothing/suit/armor/pcarrier/light,
 /obj/item/clothing/head/helmet,
 /obj/item/gun/projectile/automatic/p90,
-/obj/item/ammo_magazine/a57p90,
-/obj/item/ammo_magazine/a57p90,
-/obj/item/ammo_magazine/a57p90,
-/obj/item/ammo_magazine/a57p90,
-/obj/item/ammo_magazine/a57p90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/ammo_box/b9mm,
+/obj/item/ammo_magazine/ammo_box/b9mm,
+/obj/item/ammo_magazine/ammo_box/b9mm,
+/obj/item/ammo_magazine/ammo_box/b9mm,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/sdf_corvette2)
 "tt" = (

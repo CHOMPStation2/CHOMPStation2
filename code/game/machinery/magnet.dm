@@ -262,7 +262,7 @@
 	dat += "Moving: <a href='byond://?src=\ref[src];operation=togglemoving'>[moving ? "Enabled":"Disabled"]</a>"
 
 
-	user << browse(dat, "window=magnet;size=400x500")
+	user << browse("<html>[dat]</html>", "window=magnet;size=400x500")
 	onclose(user, "magnet")
 
 /obj/machinery/magnetic_controller/Topic(href, href_list)
@@ -300,9 +300,6 @@
 
 		radio_connection.post_signal(src, signal, radio_filter = RADIO_MAGNETS)
 
-		spawn(1)
-			updateUsrDialog() // pretty sure this increases responsiveness
-
 	if(href_list["operation"])
 		switch(href_list["operation"])
 			if("plusspeed")
@@ -327,7 +324,7 @@
 					spawn() MagnetMove()
 
 
-	updateUsrDialog()
+	updateUsrDialog(usr)
 
 /obj/machinery/magnetic_controller/proc/MagnetMove()
 	if(looping) return

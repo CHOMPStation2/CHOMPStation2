@@ -26,10 +26,10 @@
 		if(isobj(T))
 			possible_things |= T
 	if(!center)
-		center = input(usr, "What should act as the center of the orbit?", "Center") as anything in possible_things
+		center = tgui_input_list(src, "What should act as the center of the orbit?", "Center", possible_things)
 		possible_things -= center
 	if(!orbiter)
-		orbiter = input(usr, "What should act as the orbiter of the orbit?", "Orbiter") as anything in possible_things
+		orbiter = tgui_input_list(src, "What should act as the orbiter of the orbit?", "Orbiter", possible_things)
 	if(!center || !orbiter)
 		to_chat(usr, span_warning("A center of orbit and an orbiter must be configured. You can also do this by marking a target."))
 		return
@@ -119,8 +119,8 @@
 			dat += "</td></tr>"
 		dat += "</table>"
 
-		qdel(query) // CHOMPEdit
-	usr << browse(dat, "window=library")
+		qdel(query)
+	usr << browse("<html>[dat]</html>", "window=library")
 	onclose(usr, "library")
 
 /client/proc/toggle_spawning_with_recolour()

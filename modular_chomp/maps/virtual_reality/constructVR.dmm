@@ -8908,7 +8908,6 @@
 	pixel_y = 20
 	},
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = -32
 	},
 /obj/item/handcuffs/legcuffs/fuzzy,
@@ -10661,6 +10660,17 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
+/area/vr/powered/dungeon)
+"iMu" = (
+/obj/machinery/door/window/brigdoor/eastright{
+	req_access = null;
+	dir = 2
+	},
+/obj/machinery/door/window/brigdoor/eastleft{
+	req_access = null;
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/vr/powered/dungeon)
 "iMU" = (
 /obj/machinery/door/window/survival_pod{
@@ -25659,7 +25669,6 @@
 /obj/structure/curtain/bed,
 /obj/item/bedsheet/hosdouble,
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_y = 32
 	},
 /turf/simulated/floor/wood,
@@ -29051,7 +29060,8 @@
 	},
 /obj/structure/window/phoronreinforced,
 /obj/structure/prop/statue/phoron{
-	pixel_x = 16
+	pixel_x = 16;
+	pixel_y = 0
 	},
 /turf/simulated/floor/redgrid/animated,
 /area/vr/powered/cult)
@@ -29396,7 +29406,6 @@
 /obj/item/clothing/shoes/sandal,
 /obj/item/clothing/shoes/sandal,
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = -32
 	},
 /obj/item/towel/random,
@@ -42435,10 +42444,10 @@ xAF
 wbD
 dnC
 dnC
-shu
+iMu
 vzj
 lhj
-shu
+iMu
 dnC
 csG
 vmY
@@ -43467,10 +43476,10 @@ xAF
 wbD
 nai
 dnC
-shu
+iMu
 vzj
 lhj
-shu
+iMu
 dnC
 dOT
 vmY
@@ -44502,7 +44511,7 @@ dnC
 shu
 iwO
 lhj
-shu
+iMu
 dnC
 gmV
 vmY

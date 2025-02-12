@@ -13,7 +13,7 @@
 
 /obj/machinery/drone_fabricator/proc/choose_dronetype(possible_drones)
 	var/choice
-	choice = input(usr,"What module would you like to use?") as null|anything in possible_drones
+	choice = tgui_input_list(usr,"What module would you like to use?", "Drone Type", possible_drones)
 	if(!choice) return
 	drone_type = possible_drones[choice]
 //UNIFY end

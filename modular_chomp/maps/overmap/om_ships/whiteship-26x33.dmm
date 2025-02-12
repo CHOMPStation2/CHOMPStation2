@@ -333,11 +333,12 @@
 /obj/structure/closet/secure_closet/guncabinet{
 	req_one_access = null
 	},
-/obj/item/ammo_magazine/speedloader_six,
-/obj/item/ammo_magazine/speedloader_six,
 /obj/item/gun/projectile/revolver/mateba,
-/obj/item/ammo_magazine/clip/medium,
-/obj/item/ammo_magazine/clip/medium,
+/obj/item/ammo_magazine/clip/c762,
+/obj/item/ammo_magazine/clip/c762,
+/obj/item/ammo_magazine/s357,
+/obj/item/ammo_magazine/s357,
+/obj/item/ammo_magazine/ammo_box/b762,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/whiteshipOM2)
 "lM" = (
@@ -1835,7 +1836,6 @@
 /obj/structure/curtain/bed,
 /obj/item/bedsheet/hosdouble,
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_y = 32
 	},
 /turf/simulated/floor/wood,

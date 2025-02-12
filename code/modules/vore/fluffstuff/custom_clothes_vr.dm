@@ -1295,7 +1295,7 @@ Departamental Swimsuits, for general use
 /obj/item/clothing/suit/storage/hooded/wintercoat/jessie
 	name = "Handmade Winter Suit"
 	desc = "A durable, but somewhat ragged lower portion of a snow suit fitted for a wolftaur."
-	icon = 'icons/mob/taursuits_wolf_vr.dmi'
+	icon = 'icons/mob/taursuits_wolf.dmi'
 	icon_state = "jessiecoat"
 	item_state = "jessiecoat"
 
@@ -1312,7 +1312,7 @@ Departamental Swimsuits, for general use
 	name = "Kat's Fox Taur Armor"
 	desc = "A set of security armor, light weight and easy to run in for a Taur, this item protects the \
 	entire body."
-	icon = 'icons/mob/taursuits_wolf_vr.dmi'
+	icon = 'icons/mob/taursuits_wolf.dmi'
 	icon_state = "katesuit"
 	item_state_slots = null
 
@@ -1330,7 +1330,7 @@ Departamental Swimsuits, for general use
 	desc = "Taur engineering voidsuit. Recolored navy blue and white. Slightly tweaked as well to \
 	get close to having security voidsuit protection as possible with a slight reduction in movement \
 	speed to compensate for custom padding and armor Kateryna made herself."
-	icon = 'icons/mob/taursuits_wolf_vr.dmi'
+	icon = 'icons/mob/taursuits_wolf.dmi'
 	icon_state = "lilithsuit"
 	item_state = "lilithsuit"
 	species_restricted = null
@@ -1751,7 +1751,7 @@ Departamental Swimsuits, for general use
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 	desc = "A series of armor plates painted black, deployed from a back-mounted module. They fit smoothly over the unit's armor plates and projects a skintight bubble shield over the unit's uncovered parts. Faceplate and coolant unit not included."
 	species_restricted = null
-	icon = 'icons/mob/taursuits_lizard_vr.dmi'
+	icon = 'icons/mob/taursuits_lizard.dmi'
 	icon_state = "hasd_suit"
 	item_state = "hasd_suit"
 	pixel_x = -16
@@ -2281,7 +2281,8 @@ Departamental Swimsuits, for general use
 		icon_override = 'icons/vore/custom_onmob_vr.dmi'
 	update_clothing_icon()
 
-/obj/item/clothing/accessory/poncho/roles/cloak/fluff/cloakglowing/dropped()
+/obj/item/clothing/accessory/poncho/roles/cloak/fluff/cloakglowing/dropped(mob/user)
+	..()
 	icon_override = 'icons/vore/custom_onmob_vr.dmi'
 
 /obj/item/clothing/accessory/poncho/roles/cloak/fluff/cloakglowing/proc/colorswap(mob/user)
@@ -2688,4 +2689,15 @@ End CHOMP Removal*/
 	icon_state = "valkhorns"
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
 	item_state = "valkhorns_onmob"
+
+//sixberry: Thistle
+
+/obj/item/clothing/head/fluff/memory_crown
+    name = "Memory Crown"
+    desc = "A thorned crown sporting numerous amethyst inserts, all of which seem to glow faintly in the dark.  Just holding it makes you feel as though you've forgotten something unpleasant."
+    icon = 'icons/vore/custom_clothes_vr.dmi'
+    icon_state = "memorycrown"
+    icon_override = 'icons/vore/custom_clothes_vr.dmi'
+    item_state = "memorycrown_onmob"
+    slot_flags = SLOT_HEAD
 */ //Chomp REMOVE END

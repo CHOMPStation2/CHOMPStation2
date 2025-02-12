@@ -1,7 +1,7 @@
 /obj/random/organ
 	name = "Random Organ"
 	desc = "An amalgamate of meaty things"
-	icon_state = "brain2"
+	icon_state = "brain"
 
 /obj/random/organ/item_to_spawn()
 	return pick(prob(1500);/obj/random/meat,

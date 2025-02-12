@@ -31,7 +31,7 @@
 /obj/machinery/gravity_generator/Initialize()
 	. = ..()
 	locatelocalareas()
-	
+
 /obj/machinery/computer/gravity_control_computer/proc/updatemodules()
 	src.gravity_generator = findgenerator()
 
@@ -93,7 +93,7 @@
 	else
 		dat += "No local gravity generator detected!"
 
-	user << browse(dat, "window=gravgen")
+	user << browse("<html>[dat]</html>", "window=gravgen")
 	onclose(user, "gravgen")
 
 
@@ -125,5 +125,5 @@
 				gravity_generator:on = 1
 				A.gravitychange(1)
 
-		src.updateUsrDialog()
+		src.updateUsrDialog(usr)
 		return

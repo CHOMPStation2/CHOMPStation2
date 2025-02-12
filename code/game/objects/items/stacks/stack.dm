@@ -14,8 +14,8 @@
 	origin_tech = list(TECH_MATERIAL = 1)
 	icon = 'icons/obj/stacks_ch.dmi' //CHOMPedit - materials update
 	randpixel = 7
-	center_of_mass_x = 0 //CHOMPEdit
-	center_of_mass_y = 0 //CHOMPEdit
+	center_of_mass_x = 0
+	center_of_mass_y = 0
 	var/list/datum/stack_recipe/recipes
 	var/singular_name
 	var/amount = 1
@@ -82,7 +82,7 @@
 /obj/item/stack/tgui_interact(mob/user, datum/tgui/ui, datum/tgui/parent_ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-		ui = new(user, src, "Stack", name)
+		ui = new(user, src, "MaterialStack", name)
 		ui.open()
 
 /obj/item/stack/tgui_data(mob/user, datum/tgui/ui, datum/tgui_state/state)

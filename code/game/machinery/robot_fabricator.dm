@@ -56,7 +56,7 @@ Please wait until completion...</TT><BR>
 <A href='byond://?src=\ref[src];make=7'>Robot Frame (75,000 cc metal).<BR>
 "}
 
-	user << browse("<HEAD><TITLE>Robotic Fabricator Control Panel</TITLE></HEAD><TT>[dat]</TT>", "window=robot_fabricator")
+	user << browse("<html><HEAD><TITLE>Robotic Fabricator Control Panel</TITLE></HEAD><TT>[dat]</TT></html>", "window=robot_fabricator")
 	onclose(user, "robot_fabricator")
 	return
 
@@ -122,7 +122,7 @@ Please wait until completion...</TT><BR>
 					being_built = new building(src)
 
 					add_overlay("fab-active")
-					updateUsrDialog()
+					updateUsrDialog(usr)
 
 					spawn (build_time)
 						if(!isnull(being_built))

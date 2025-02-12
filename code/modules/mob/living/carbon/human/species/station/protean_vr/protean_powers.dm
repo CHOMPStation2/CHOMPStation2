@@ -460,7 +460,7 @@
 					choice = show_radial_menu(protie, protie, options, radius = 90)
 					if(!choice || QDELETED(protie) || protie.incapacitated())
 						return 0
-					var/new_color = input("Pick underbelly color:","Underbelly Color", S.dragon_overlays[1]) as null|color
+					var/new_color = tgui_color_picker(protie, "Pick underbelly color:","Underbelly Color", S.dragon_overlays[1])
 					if(!new_color)
 						return 0
 					S.dragon_overlays[1] = choice
@@ -473,7 +473,7 @@
 					choice = show_radial_menu(protie, protie, options, radius = 90)
 					if(!choice || QDELETED(protie) || protie.incapacitated())
 						return 0
-					var/new_color = input("Pick body color:","Body Color", S.dragon_overlays[2]) as null|color
+					var/new_color = tgui_color_picker(protie, "Pick body color:","Body Color", S.dragon_overlays[2])
 					if(!new_color)
 						return 0
 					S.dragon_overlays[2] = choice
@@ -486,7 +486,7 @@
 					choice = show_radial_menu(protie, protie, options, radius = 90)
 					if(!choice || QDELETED(protie) || protie.incapacitated())
 						return 0
-					var/new_color = input("Pick ear color:","Ear Color", S.dragon_overlays[3]) as null|color
+					var/new_color = tgui_color_picker(protie, "Pick ear color:","Ear Color", S.dragon_overlays[3])
 					if(!new_color)
 						return 0
 					S.dragon_overlays[3] = choice
@@ -499,7 +499,7 @@
 					choice = show_radial_menu(protie, protie, options, radius = 90)
 					if(!choice || QDELETED(protie) || protie.incapacitated())
 						return 0
-					var/new_color = input("Pick mane color:","Mane Color", S.dragon_overlays[4]) as null|color
+					var/new_color = tgui_color_picker(protie, "Pick mane color:","Mane Color", S.dragon_overlays[4])
 					if(!new_color)
 						return 0
 					S.dragon_overlays[4] = choice
@@ -512,7 +512,7 @@
 					choice = show_radial_menu(protie, protie, options, radius = 90)
 					if(!choice || QDELETED(protie) || protie.incapacitated())
 						return 0
-					var/new_color = input("Pick horn color:","Horn Color", S.dragon_overlays[5]) as null|color
+					var/new_color = tgui_color_picker(protie, "Pick horn color:","Horn Color", S.dragon_overlays[5])
 					if(!new_color)
 						return 0
 					S.dragon_overlays[5] = choice
@@ -525,7 +525,7 @@
 					choice = show_radial_menu(protie, protie, options, radius = 90)
 					if(!choice || QDELETED(protie) || protie.incapacitated())
 						return 0
-					var/new_color = input("Pick eye color:","Eye Color", S.dragon_overlays[6]) as null|color
+					var/new_color = tgui_color_picker(protie, "Pick eye color:","Eye Color", S.dragon_overlays[6])
 					if(!new_color)
 						return 0
 					S.dragon_overlays[6] = choice
@@ -533,23 +533,24 @@
 			S.blob_appearance = "dragon"
 		// CHOMPEdit Start
 		if("dullahan")
-			var/list/options = list("Body","Eyes","Decals")
+			var/list/options = list("Metalshell","Eyes","Decals","Import","Export")
 			for(var/option in options)
 				LAZYSET(options, option, image('modular_chomp/icons/mob/dullahanborg/dullahansigns.dmi', option))
 			var/choice = show_radial_menu(protie, protie, options, radius = 60)
 			if(!choice || QDELETED(protie) || protie.incapacitated())
 				return FALSE
 			. = TRUE
-			var/list/Dullahan_metal_styles = list(
+			var/list/dullahanmetal_styles = list(
 				"dullahanmetal",
 				"dullahanmetal2"
 			)
 			if(mind.assigned_role in command_positions)
-				Dullahan_metal_styles.Add("dullahancommand")
-			var/list/Dullahan_eye_styles = list(
+				dullahanmetal_styles.Add("dullahancommand")
+			var/list/dullahaneyes_styles = list(
 				"dullahaneyes"
 			)
-			var/list/Dullahan_decal_styles = list(
+			var/list/dullahandecals_styles = list(
+				"dullahandecals",
 				"dullahandecals1",
 				"dullahandecals2",
 				"dullahandecals3",
@@ -557,20 +558,24 @@
 				"dullahandecals5",
 				"emptydecals"
 			)
-			//if(user.mind.assigned_role != JOB_CHAPLAIN)
-				//return FALSE
+			var/dmetal
+			var/ddecals
+			var/deyes
+			var/ddecalscolor
+			var/deyescolor
+			var/dmetalcolor
 			switch(choice)
-				if("Body")
+				if("Metalshell")
 					var/extraon = "dullahanextendedon"
 					var/extraoff = "dullahanextendedoff"
-					options = Dullahan_metal_styles
+					options = dullahanmetal_styles
 					for(var/option in options)
 						var/image/I = image('modular_chomp/icons/mob/dullahanborg/Dullahanprotean64x64.dmi', option, dir = 2, pixel_x = -16)
 						LAZYSET(options, option, I)
 					choice = show_radial_menu(protie, protie, options, radius = 90)
 					if(!choice || QDELETED(protie) || protie.incapacitated())
 						return 0
-					var/new_color = input("Pick body color:","Body Color", S.dragon_overlays[3]) as null|color
+					var/new_color = tgui_color_picker(src, "Pick shell color:","Shell Color", S.dullahan_overlays[3])
 					if(!new_color)
 						return 0
 					S.dullahan_overlays[3] = choice //metal overlay is 3, eyes is 4
@@ -582,40 +587,80 @@
 					else
 						S.dullahan_overlays[6] = extraoff
 				if("Eyes")
-					options = Dullahan_eye_styles
+					options = dullahaneyes_styles
 					for(var/option in options)
 						var/image/I = image('modular_chomp/icons/mob/dullahanborg/Dullahanprotean64x64.dmi', option, dir = 2, pixel_x = -16)
 						LAZYSET(options, option, I)
 					choice = show_radial_menu(protie, protie, options, radius = 90)
 					if(!choice || QDELETED(protie) || protie.incapacitated())
 						return 0
-					var/new_color = input("Pick body color:","Body Color", S.dragon_overlays[4]) as null|color
+					var/new_color = tgui_color_picker(src, "Pick eye color:","Eye Color", S.dullahan_overlays[4])
 					if(!new_color)
 						return 0
-					S.dullahan_overlays[4] = choice //metal overlay is 3, eyes is 4
+					S.dullahan_overlays[4] = choice
 					S.dullahan_overlays[S.dullahan_overlays[4]] = new_color
 				if("Decals")
-					options = Dullahan_decal_styles
+					options = dullahandecals_styles
 					for(var/option in options)
 						var/image/I = image('modular_chomp/icons/mob/dullahanborg/Dullahanprotean64x64.dmi', option, dir = 2, pixel_x = -16, pixel_y = -16)
 						LAZYSET(options, option, I)
 					choice = show_radial_menu(protie, protie, options, radius = 90)
 					if(!choice || QDELETED(protie) || protie.incapacitated())
 						return 0
-					var/new_color = input("Pick body color:","Body Color", S.dragon_overlays[5]) as null|color
+					var/new_color = tgui_color_picker(src, "Pick decal color:","Decal Color", S.dullahan_overlays[5])
 					if(!new_color)
 						return 0
-					S.dullahan_overlays[5] = choice //metal overlay is 3, eyes is 4
+					S.dullahan_overlays[5] = choice
 					S.dullahan_overlays[S.dullahan_overlays[5]] = new_color
+				if("Import")
+					var/dinput_style
+					dinput_style = sanitizeSafe(tgui_input_text(protie,"Paste the style string you exported with Export Style.", "Style loading","", 120), 128)
+					if(dinput_style)
+						var/list/dinput_style_list = splittext(dinput_style, ";")
+						if((LAZYLEN(dinput_style_list) == 6) && (dinput_style_list[1] in dullahanmetal_styles) && (dinput_style_list[3] in dullahandecals_styles) && (dinput_style_list[5] in dullahaneyes_styles))
+							try
+								if(dinput_style_list[1] in dullahanmetal_styles)
+									S.dullahan_overlays[3] = dinput_style_list[1]
+									if(dinput_style_list[1] == "dullahanmetal2")
+										S.dullahan_overlays[6] = "dullahanextendedon"
+									else
+										S.dullahan_overlays[6] = "dullahanextendedoff"
+								if(rgb2num(dinput_style_list[2]))
+									S.dullahan_overlays[S.dullahan_overlays[3]] = dinput_style_list[2] //metal shell color -2-
+							catch
+								dmetal = dinput_style_list[1]
+							try
+								if(dinput_style_list[3] in dullahandecals_styles)
+									S.dullahan_overlays[5] = dinput_style_list[3]
+								if(rgb2num(dinput_style_list[4]))
+									S.dullahan_overlays[S.dullahan_overlays[5]] = dinput_style_list[4] // decals color
+							catch
+								ddecals = dinput_style_list[3]
+							try
+								if(dinput_style_list[5] in dullahaneyes_styles)
+									S.dullahan_overlays[4] = dinput_style_list[5]
+								if(rgb2num(dinput_style_list[6]))
+									S.dullahan_overlays[S.dullahan_overlays[4]] = dinput_style_list[6] //eyes color
+							catch
+								ddecals = dinput_style_list[5]
+				if("Export")
+					dmetal = S.dullahan_overlays[3]
+					ddecals = S.dullahan_overlays[5]
+					deyes = S.dullahan_overlays[4]
+					dmetalcolor = S.dullahan_overlays[S.dullahan_overlays[3]]
+					ddecalscolor = S.dullahan_overlays[S.dullahan_overlays[5]]
+					deyescolor = S.dullahan_overlays[S.dullahan_overlays[4]]
+					var/output_style = jointext(list(dmetal,dmetalcolor,ddecals,ddecalscolor,deyes,deyescolor), ";")
+					to_chat(protie, span_notice("Exported style string is \" [output_style] \". Use this to get the same style in the future with import style"))
 			S.blob_appearance = "dullahan"
 			// CHOMPEdit End
 		if("Primary")
-			var/new_color = input("Pick primary color:","Protean Primary", "#FF0000") as null|color
+			var/new_color = tgui_color_picker(protie, "Pick primary color:","Protean Primary", "#FF0000")
 			if(!new_color)
 				return
 			S.blob_color_1 = new_color
 		if("Highlight")
-			var/new_color = input("Pick highlight color:","Protean Highlight", "#FF0000") as null|color
+			var/new_color = tgui_color_picker(protie, "Pick highlight color:","Protean Highlight", "#FF0000")
 			if(!new_color)
 				return
 			S.blob_color_2 = new_color
