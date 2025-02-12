@@ -449,7 +449,7 @@
 		dat += "<br><center><h3>Experience the journey of your ancestors!</h3></center><br><br>"
 		dat += "<center><b><a href='byond://?src=\ref[src];newgame=1'>New Game</a></b></center>"
 		dat += "<P ALIGN=Right><a href='byond://?src=\ref[src];close=1'>Close</a></P>"
-	user << browse(dat,"window=arcade")
+	user << browse("<html>[dat]</html>","window=arcade")
 	return
 
 /obj/machinery/computer/arcade/orion_trail/Topic(href, href_list)
@@ -500,7 +500,7 @@
 						if(severity >= 3) //you didn't pray hard enough
 							to_chat(M, span_warning("An overpowering wave of nausea consumes over you. You hunch over, your stomach's contents preparing for a spectacular exit."))
 							spawn(30)
-							if(istype(M,/mob/living/carbon/human))
+							if(ishuman(M))
 								var/mob/living/carbon/human/H = M
 								H.vomit()
 					if(ORION_TRAIL_FLUX)
@@ -732,7 +732,7 @@
 							event()
 
 	src.add_fingerprint(usr)
-	src.updateUsrDialog()
+	src.updateUsrDialog(usr)
 	busy = 0
 	return
 

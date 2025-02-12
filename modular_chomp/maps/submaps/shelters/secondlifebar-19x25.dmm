@@ -20,8 +20,6 @@
 /area/survivalpod/superpose/secondlifebar)
 "cl" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/shuttle/floor/purple,
@@ -218,8 +216,6 @@
 /obj/structure/table/darkglass,
 /obj/item/material/whip,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/milspec/raised,
@@ -319,8 +315,6 @@
 "ok" = (
 /obj/structure/table/steel,
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -414,12 +408,9 @@
 "rP" = (
 /obj/machinery/power/rtg/advanced,
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -612,7 +603,6 @@
 	pixel_x = -24
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/shuttle/floor/purple,
@@ -674,8 +664,6 @@
 /area/survivalpod/superpose/secondlifebar)
 "BX" = (
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating,
@@ -768,8 +756,6 @@
 /area/survivalpod/superpose/secondlifebar)
 "GO" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/shuttle/floor/purple,
@@ -929,8 +915,6 @@
 "KJ" = (
 /obj/machinery/door/airlock/gold,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -943,8 +927,6 @@
 /area/survivalpod/superpose/secondlifebar)
 "Le" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -1077,7 +1059,6 @@
 "Pc" = (
 /obj/machinery/power/rtg/advanced,
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
@@ -1096,8 +1077,6 @@
 "Px" = (
 /obj/machinery/door/airlock/gold,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/unsimulated/shuttle/floor/purple,

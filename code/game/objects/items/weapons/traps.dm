@@ -13,8 +13,8 @@
 	icon_state = "beartrap0"
 	desc = "A mechanically activated leg trap. Low-tech, but reliable. Looks like it could really hurt if you set it off."
 	randpixel = 0
-	center_of_mass_x = 0 //CHOMPEdit
-	center_of_mass_y = 0 //CHOMPEdit
+	center_of_mass_x = 0
+	center_of_mass_y = 0
 	throwforce = 0
 	w_class = ITEMSIZE_NORMAL
 	origin_tech = list(TECH_MATERIAL = 1)
@@ -125,7 +125,7 @@
 		return
 	if(deployed && isliving(AM))
 		var/mob/living/L = AM
-		if(L.m_intent == "run")
+		if(L.m_intent == I_RUN)
 			L.visible_message(
 				span_danger("[L] steps on \the [src]."),
 				span_danger("You step on \the [src]!"),
@@ -272,7 +272,7 @@
 		return
 	if(anchored && isliving(AM))
 		var/mob/living/L = AM
-		if(L.m_intent == "run")
+		if(L.m_intent == I_RUN)
 			L.visible_message(
 				span_danger("[L] steps in \the [src]."),
 				span_danger("You step in \the [src]!"),

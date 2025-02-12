@@ -7,15 +7,18 @@
 	desc = "A pair of rubber balls used for receiving optical information."
 	can_reject = FALSE
 	icon_state = "eyes_grey"
+	supply_conversion_value = 10 // CHOMPedit - Selling engineered organs
 
 /obj/item/organ/internal/brain/replicant
 	name = "replicant brain"
 	desc = "A juicy piece of.. rubber, found in someone's head?"
 	can_reject = FALSE
 	icon_state = "brain_grey"
+	supply_conversion_value = 10 // CHOMPedit - Selling engineered organs
 
 /obj/item/organ/internal/brain/replicant/torso
 	parent_organ = BP_TORSO
+	supply_conversion_value = 10 // CHOMPedit - Selling engineered organs
 
 /obj/item/organ/internal/voicebox/replicant
 	name = "replicant voicebox"
@@ -28,30 +31,35 @@
 	can_reject = FALSE
 	icon_state = "heart_grey-on"
 	dead_icon = "heart_grey-off"
+	supply_conversion_value = 10 // CHOMPedit - Selling engineered organs
 
 /obj/item/organ/internal/lungs/replicant
 	name = "replicant lungs"
 	desc = "A pair of rubbery sacs used for respiration."
 	can_reject = FALSE
 	icon_state = "lungs_grey"
+	supply_conversion_value = 10 // CHOMPedit - Selling engineered organs
 
 /obj/item/organ/internal/liver/replicant
 	name = "replicant liver"
 	desc = "A mass of rubber used for filtering and breaking down chemicals."
 	can_reject = FALSE
 	icon_state = "liver_grey"
+	supply_conversion_value = 10 // CHOMPedit - Selling engineered organs
 
 /obj/item/organ/internal/kidneys/replicant
 	name = "replicant kidneys"
 	desc = "A pair of small sacs used for filtering chemicals."
 	can_reject = FALSE
 	icon_state = "kidneys_grey"
+	supply_conversion_value = 10 // CHOMPedit - Selling engineered organs
 
 /obj/item/organ/internal/xenos/plasmavessel/replicant
 	name = "replicant phorogenic sac"
 	desc = "A bulbous rubbery mass that converts nutrients from the host into a biological compound eerily similar to phoron."
 	can_reject = FALSE
 	icon_state = "plasma_grey"
+	supply_conversion_value = 50 // CHOMPedit - Selling engineered organs
 
 /obj/item/organ/internal/xenos/plasmavessel/replicant/crew/handle_organ_proc_special()
 	if(!istype(owner))
@@ -91,6 +99,7 @@
 	icon_state = "immunehub"
 
 	var/rejection_adjust = 10
+	supply_conversion_value = 50 // CHOMPedit - Selling engineered organs
 
 /obj/item/organ/internal/immunehub/replicant
 	name = "replicant assimilation web"
@@ -119,6 +128,7 @@
 	organ_verbs = list(
 		/mob/living/proc/ventcrawl
 		)
+	supply_conversion_value = 10 // CHOMPedit - Selling engineered organs
 
 /obj/item/organ/internal/metamorphgland/replicant
 	name = "replicant malleoshift node"
@@ -138,6 +148,7 @@
 	organ_verbs = list(
 		/mob/living/carbon/human/proc/exit_vr
 		)
+	supply_conversion_value = 50 // CHOMPedit - Selling engineered organs
 
 /*
  * These subtypes are used by the Replicant species, and provide bonuses to their owners. Even when transplanted!
@@ -149,6 +160,7 @@
 	description_info = "This organ, when connected properly to the body, will attempt to induce an adrenaline surge in the implantee."
 	var/prev_damage_tally = 0
 	var/last_activation_time = 0
+	supply_conversion_value = 10 // CHOMPedit - Selling engineered organs
 
 /obj/item/organ/internal/heart/replicant/rage/handle_organ_proc_special()
 	if(!owner)

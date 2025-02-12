@@ -13,7 +13,7 @@
 	name = "grave"
 	desc = "Dirt."
 	icon = 'icons/obj/closets/grave.dmi'
-	icon_state = "closed_unlocked"
+	icon_state = ""
 	seal_tool = null
 	breakout_sound = 'sound/weapons/thudswoosh.ogg'
 	anchored = TRUE
@@ -42,7 +42,7 @@
 		add_fingerprint(M)
 		if(ishuman(M))
 			var/mob/living/carbon/human/H = M
-			if(H.m_intent == "walk")
+			if(H.m_intent == I_WALK)
 				to_chat(H, span_warning("You stop at the edge of \the [src.name]."))
 				return FALSE
 			else

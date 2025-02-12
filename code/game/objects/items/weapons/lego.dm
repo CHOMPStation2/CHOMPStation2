@@ -17,7 +17,7 @@
 		return
 	if(isliving(AM))
 		var/mob/living/L = AM
-		if(L.m_intent == "run")
+		if(L.m_intent == I_RUN)
 			L.visible_message(
 				span_danger("[L] steps on \the [src]."),
 				span_danger("You step on \the [src], you poor bastard!"),
@@ -47,7 +47,7 @@
 		return
 	if(isliving(AM))
 		var/mob/living/L = AM
-		if(L.m_intent == "run")
+		if(L.m_intent == I_RUN)
 			L.visible_message(
 				span_danger("[L] steps on \the [src]."),
 				span_danger("You step on \the [src], you poor bastard!"),

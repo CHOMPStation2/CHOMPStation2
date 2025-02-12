@@ -101,8 +101,8 @@
 	var/text = null
 
 	targets += getmobs() //Fill list, prompt user with list
-	target = input("Select a creature!", "Speak to creature", null, null) as null|anything in targets
-	text = input("What would you like to say?", "Speak to creature", null, null)
+	target = tgui_input_list(src, "Select a creature!", "Speak to creature", targets)
+	text = tgui_input_text(src, "What would you like to say?", "Speak to creature")
 
 	if (!target || !text)
 		return

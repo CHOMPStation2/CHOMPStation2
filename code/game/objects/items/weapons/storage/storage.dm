@@ -614,8 +614,8 @@
 	W.add_fingerprint(user)
 	return handle_item_insertion(W)
 
-/obj/item/storage/dropped(mob/user as mob)
-	return
+/obj/item/storage/dropped(mob/user)
+	return ..()
 
 /obj/item/storage/attack_hand(mob/user as mob)
 	if(ishuman(user) && !pocketable)
@@ -708,7 +708,7 @@
 	max_storage_space = max(total_storage_space,max_storage_space) //Prevents spawned containers from being too small for their contents.
 
 /obj/item/storage/emp_act(severity)
-	if(!istype(src.loc, /mob/living))
+	if(!isliving(src.loc))
 		for(var/obj/O in contents)
 			O.emp_act(severity)
 	..()

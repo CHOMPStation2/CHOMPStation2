@@ -8,8 +8,22 @@
 /obj/item/reagent_containers/glass/replenishing/Initialize()
 	. = ..()
 	START_PROCESSING(SSobj, src)
-	spawning_id = pick(REAGENT_ID_BLOOD,REAGENT_ID_HOLYWATER,REAGENT_ID_LUBE,REAGENT_ID_STOXIN,REAGENT_ID_ETHANOL,REAGENT_ID_ICE,REAGENT_ID_GLYCEROL,REAGENT_ID_FUEL,REAGENT_ID_CLEANER)
-
+	//Taken from hydroponics/seed.dm...This should be a global list at some point and reworked in both places.
+	var/list/banned_chems = list(
+		REAGENT_ID_ADMINORDRAZINE,
+		REAGENT_ID_NUTRIMENT,
+		REAGENT_ID_MACROCILLIN,
+		REAGENT_ID_MICROCILLIN,
+		REAGENT_ID_NORMALCILLIN,
+		REAGENT_ID_MAGICDUST
+		)
+	for(var/x=1;x<=10;x++) //You got 10 chances to hit a reagent that is NOT banned.
+		var/new_chem = pick(SSchemistry.chemical_reagents)
+		if(new_chem in banned_chems)
+			continue
+		else
+			spawning_id = new_chem
+			break
 /obj/item/reagent_containers/glass/replenishing/process()
 	reagents.add_reagent(spawning_id, 0.3)
 
@@ -25,7 +39,7 @@
 	START_PROCESSING(SSobj, src)
 
 /obj/item/clothing/mask/gas/poltergeist/process()
-	if(heard_talk.len && istype(src.loc, /mob/living) && prob(10))
+	if(heard_talk.len && isliving(src.loc) && prob(10))
 		var/mob/living/M = src.loc
 		M.say(pick(heard_talk))
 
@@ -34,7 +48,7 @@
 	if(heard_talk.len > max_stored_messages)
 		heard_talk.Remove(pick(heard_talk))
 	heard_talk.Add(multilingual_to_message(message_pieces))
-	if(istype(src.loc, /mob/living) && world.time - last_twitch > 50)
+	if(isliving(src.loc) && world.time - last_twitch > 50)
 		last_twitch = world.time
 
 
@@ -82,7 +96,9 @@
 	//use up stored charges
 	if(charges >= 10)
 		charges -= 10
-		new /obj/effect/spider/eggcluster(pick(RANGE_TURFS(1,src)))
+		var/new_object = pick(/obj/item/soulstone, /obj/item/melee/artifact_blade, /obj/item/book/tome, /obj/item/clothing/head/helmet/space/cult, /obj/item/clothing/suit/space/cult, /obj/structure/constructshell)
+		new new_object(pick(RANGE_TURFS(1,src)))
+		playsound(src, 'sound/effects/ghost.ogg', 50, 1, -3)
 
 	if(charges >= 3)
 		if(prob(5))
@@ -194,10 +210,14 @@
 			'sound/hallucinations/turn_around1.ogg',\
 			'sound/hallucinations/turn_around2.ogg',\
 			), 50, 1, -3)
+			to_chat(M, span_cult("The [src] phases right into your body, your entire form feeling cold and numb!")) //You just had a ghost possess / take residence you...YEAH, it's going to be alarming!
+			M.visible_message(span_cult("[M]'s body glows bright red for a moment as glyphs spread across their form!")) //Let's try something fancy.
 			M.Sleeping(rand(5, 10))
+
 			src.loc = null
 	else
 		STOP_PROCESSING(SSobj, src)
+		qdel(src) //Let's not just sit in nullspace forever, yeah?
 
 /obj/effect/shadow_wight/Bump(var/atom/obstacle)
 	to_chat(obstacle, span_red("You feel a chill run down your spine!"))

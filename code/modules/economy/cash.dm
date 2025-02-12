@@ -26,7 +26,7 @@
 		var/obj/item/spacecash/SC = W
 
 		SC.adjust_worth(src.worth)
-		if(istype(user, /mob/living/carbon/human))
+		if(ishuman(user))
 			var/mob/living/carbon/human/h_user = user
 
 			h_user.drop_from_inventory(src)
@@ -79,8 +79,8 @@
 		update_icon()
 	return worth
 
-/obj/item/spacecash/attack_self()
-	var/amount = tgui_input_number(usr, "How many [initial_name]s do you want to take? (0 to [src.worth])", "Take Money", 20, src.worth)
+/obj/item/spacecash/attack_self(mob/user)
+	var/amount = tgui_input_number(user, "How many [initial_name]s do you want to take? (0 to [src.worth])", "Take Money", 20, src.worth)
 	if(!src || QDELETED(src))
 		return
 	amount = round(CLAMP(amount, 0, src.worth))
@@ -89,9 +89,9 @@
 		return
 
 	adjust_worth(-amount)
-	var/obj/item/spacecash/SC = new (usr.loc)
+	var/obj/item/spacecash/SC = new (user.loc)
 	SC.set_worth(amount)
-	usr.put_in_hands(SC)
+	user.put_in_hands(SC)
 
 /obj/item/spacecash/c1
 	name = "1 Thaler"

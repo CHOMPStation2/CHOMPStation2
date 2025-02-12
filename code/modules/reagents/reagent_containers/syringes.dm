@@ -16,8 +16,8 @@
 	icon = 'icons/goonstation/objects/syringe_vr.dmi'
 	item_state = "syringe_0"
 	icon_state = "0"
-	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 14 //CHOMPEdit
+	center_of_mass_x = 16
+	center_of_mass_y = 14
 	matter = list(MAT_GLASS = 150)
 	amount_per_transfer_from_this = 5
 	possible_transfer_amounts = null
@@ -133,7 +133,7 @@
 
 					var/datum/reagent/B
 					drawing = 1
-					if(istype(T, /mob/living/carbon/human))
+					if(ishuman(T))
 						var/mob/living/carbon/human/H = T
 						if(H.species && !H.should_have_organ(O_HEART))
 							H.reagents.trans_to_obj(src, amount)
@@ -185,6 +185,19 @@
 				return
 			if(istype(target, /obj/item/implantcase/chem))
 				return
+
+			// CHOMPedit begin - Engineered organ training
+			if(istype(target, /obj/item/organ/internal/malignant/engineered/lattice))
+				var/datum/reagent/R = pick(reagents.reagent_list)
+				if(R)
+					var/obj/item/organ/internal/malignant/engineered/lattice/LAT = target
+					var/success = LAT.make_mutoid(R.id)
+					to_chat(user, span_notice("You inject \the [target] with \the [src], and [success ? "it begins to mutate!" : "nothing seems to happen."]"))
+					reagents.clear_reagents()
+					mode = SYRINGE_DRAW
+					update_icon()
+				return
+			// CHOMPedit end
 
 			if(!target.is_open_container() && !ismob(target) && !istype(target, /obj/item/reagent_containers/food) && !istype(target, /obj/item/slime_extract) && !istype(target, /obj/item/clothing/mask/smokable/cigarette) && !istype(target, /obj/item/storage/fancy/cigarettes) && !istype(target, /obj/item/clothing/mask/chewable)) // CHOMPEdit
 				to_chat(user, span_notice("You cannot directly fill this object."))
@@ -261,7 +274,7 @@
 	return
 
 /obj/item/reagent_containers/syringe/proc/syringestab(mob/living/carbon/target as mob, mob/living/carbon/user as mob)
-	if(istype(target, /mob/living/carbon/human))
+	if(ishuman(target))
 
 		var/mob/living/carbon/human/H = target
 
@@ -390,7 +403,7 @@
 	desc = "Contains drugs for muscle growth."
 
 /obj/item/reagent_containers/syringe/steroid/Initialize()
-	..()
+	. = ..()
 	//reagents.add_reagent(REAGENT_ID_ADRENALINE,5) //VOREStation Edit - No thanks.
 	reagents.add_reagent(REAGENT_ID_HYPERZINE,10)
 
@@ -419,7 +432,7 @@
 		infect_chance = 0
 	infect_chance += (targets.len-1)*10    //Extra 10% per extra target
 	if(prob(infect_chance))
-		log_and_message_admins("[loc] infected [target]'s [eo.name] with \the [src].")
+		log_and_message_admins("[loc] infected [target]'s [eo.name] with \the [src].", usr)
 		infect_limb(eo)
 
 	//75% chance to spread a virus if we have one

@@ -255,23 +255,28 @@ Thus, the two variables affect pump operation are set in New():
 			"You hear ratchet.")
 		deconstruct()
 
+
+
 //CHOMPEdit Start - Adds TGStation keybinds to save our engineers some time.
-/obj/machinery/atmospherics/binary/pump/AltClick(mob/user as mob)
+/obj/machinery/atmospherics/binary/pump/AltClick(mob/user)
 	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 	if(allowed(user))
-		to_chat(user, span_notice("You set the pump to max output"))
+		to_chat(user, span_notice("You set the [name] to max output"))
 		target_pressure = max_pressure_setting
+		add_fingerprint(user)
 	else
 		to_chat(user, span_warning("Access denied."))
 
-/obj/machinery/atmospherics/binary/pump/CtrlClick(mob/user as mob)
+/obj/machinery/atmospherics/binary/pump/CtrlClick(mob/user)
 	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 	if(allowed(user))
 		update_use_power(!use_power)
+		update_icon()
+		add_fingerprint(user)
 		if(use_power)
-			to_chat(user, span_notice("You turn the pump on."))
+			to_chat(user, span_notice("You toggle the [name] on."))
 		else
-			to_chat(user, span_notice("You turn the pump off."))
+			to_chat(user, span_notice("You toggle the [name] off."))
 
 	else
 		to_chat(user, span_warning("Access denied."))

@@ -1082,7 +1082,6 @@
 /area/tether_away/aerostat/inside)
 "di" = (
 /obj/structure/cable/heavyduty{
-	dir = 2;
 	icon_state = "0-4"
 	},
 /obj/structure/cable/yellow,
@@ -1342,7 +1341,6 @@
 	dir = 8
 	},
 /obj/structure/cable/heavyduty{
-	dir = 2;
 	icon_state = "0-4"
 	},
 /obj/structure/cable{

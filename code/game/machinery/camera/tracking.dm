@@ -119,7 +119,7 @@
 		else
 			TB.names.Add(name)
 			TB.namecounts[name] = 1
-		if(istype(M, /mob/living/carbon/human))
+		if(ishuman(M))
 			TB.humans[name] = M
 		else
 			TB.others[name] = M
@@ -230,7 +230,7 @@
 		return TRACKING_TERMINATE
 	var/turf/pos = get_turf(src)
 	var/area/B = pos?.loc // No cam tracking in dorms!
-	if(InvalidPlayerTurf(pos) || B.flag_check(AREA_BLOCK_TRACKING))
+	if(InvalidPlayerTurf(pos) || B?.flag_check(AREA_BLOCK_TRACKING))
 		return TRACKING_TERMINATE
 	if(invisibility >= INVISIBILITY_LEVEL_ONE) //cloaked
 		return TRACKING_TERMINATE

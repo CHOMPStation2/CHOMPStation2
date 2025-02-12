@@ -124,7 +124,7 @@
 			///// If user clicked on themselves
 			if(src == G.assailant && is_vore_predator(src))
 				if(istype(victim) && !victim.client && !victim.ai_holder)
-					log_and_message_admins("[key_name_admin(src)] attempted to eat [key_name_admin(G.affecting)] whilst they were AFK ([G.affecting ? ADMIN_JMP(G.affecting) : "null"])")
+					log_and_message_admins("attempted to eat [key_name_admin(G.affecting)] whilst they were AFK ([G.affecting ? ADMIN_JMP(G.affecting) : "null"])", src)
 				if(feed_grabbed_to_self(src, G.affecting))
 					qdel(G)
 					return TRUE
@@ -134,10 +134,10 @@
 			///// If user clicked on their grabbed target
 			else if((src == G.affecting) && (attacker.a_intent == I_GRAB) && (attacker.zone_sel.selecting == BP_TORSO) && (is_vore_predator(G.affecting)))
 				if(istype(victim) && !victim.client && !victim.ai_holder) //Check whether the victim is: A carbon mob, has no client, but has a ckey. This should indicate an SSD player.
-					log_and_message_admins("[key_name_admin(attacker)] attempted to force feed themselves to [key_name_admin(G.affecting)] whilst they were AFK ([G.affecting ? ADMIN_JMP(G.affecting) : "null"])")
+					log_and_message_admins("attempted to force feed themselves to [key_name_admin(G.affecting)] whilst they were AFK ([G.affecting ? ADMIN_JMP(G.affecting) : "null"])", attacker)
 				if(!G.affecting.feeding)
 					to_chat(user, span_vnotice("[G.affecting] isn't willing to be fed."))
-					log_and_message_admins("[key_name_admin(src)] attempted to feed themselves to [key_name_admin(G.affecting)] against their prefs ([G.affecting ? ADMIN_JMP(G.affecting) : "null"])")
+					log_and_message_admins("attempted to feed themselves to [key_name_admin(G.affecting)] against their prefs ([G.affecting ? ADMIN_JMP(G.affecting) : "null"])", src)
 					return FALSE
 
 				if(attacker.feed_self_to_grabbed(attacker, G.affecting))
@@ -149,18 +149,18 @@
 			///// If user clicked on anyone else but their grabbed target
 			else if((src != G.affecting) && (src != G.assailant) && (is_vore_predator(src)))
 				if(istype(victim) && !victim.client && !victim.ai_holder)
-					log_and_message_admins("[key_name_admin(attacker)] attempted to feed [key_name_admin(G.affecting)] to [key_name_admin(src)] whilst [key_name_admin(G.affecting)] was AFK ([G.affecting ? ADMIN_JMP(G.affecting) : "null"])")
+					log_and_message_admins("attempted to feed [key_name_admin(G.affecting)] to [key_name_admin(src)] whilst [key_name_admin(G.affecting)] was AFK ([G.affecting ? ADMIN_JMP(G.affecting) : "null"])", attacker)
 				var/mob/living/carbon/victim_fed = src
 				if(istype(victim_fed) && !victim_fed.client && !victim_fed.ai_holder)
-					log_and_message_admins("[key_name_admin(attacker)] attempted to feed [key_name_admin(G.affecting)] to [key_name_admin(src)] whilst [key_name_admin(src)] was AFK ([G.affecting ? ADMIN_JMP(G.affecting) : "null"])")
+					log_and_message_admins("attempted to feed [key_name_admin(G.affecting)] to [key_name_admin(src)] whilst [key_name_admin(src)] was AFK ([G.affecting ? ADMIN_JMP(G.affecting) : "null"])", attacker)
 
 				if(!feeding)
 					to_chat(user, span_vnotice("[src] isn't willing to be fed."))
-					log_and_message_admins("[key_name_admin(attacker)] attempted to feed [key_name_admin(G.affecting)] to [key_name_admin(src)] against predator's prefs ([src ? ADMIN_JMP(src) : "null"])")
+					log_and_message_admins("attempted to feed [key_name_admin(G.affecting)] to [key_name_admin(src)] against predator's prefs ([src ? ADMIN_JMP(src) : "null"])", attacker)
 					return FALSE
 				if(!(G.affecting.devourable))
 					to_chat(user, span_vnotice("[G.affecting] isn't able to be devoured."))
-					log_and_message_admins("[key_name_admin(attacker)] attempted to feed [key_name_admin(G.affecting)] to [key_name_admin(src)] against prey's prefs ([G.affecting ? ADMIN_JMP(G.affecting) : "null"])")
+					log_and_message_admins("attempted to feed [key_name_admin(G.affecting)] to [key_name_admin(src)] against prey's prefs ([G.affecting ? ADMIN_JMP(G.affecting) : "null"])", attacker)
 					return FALSE
 				if(attacker.feed_grabbed_to_other(attacker, G.affecting, src))
 					qdel(G)
@@ -187,7 +187,7 @@
 	else if(istype(I,/obj/item/radio/beacon))
 		var/confirm = tgui_alert(user, "[src == user ? "Eat the beacon?" : "Feed the beacon to [src]?"]", "Confirmation", list("Yes!", "Cancel"))
 		if(confirm == "Yes!")
-			var/obj/belly/B = tgui_input_list(user, "Which belly?", "Select A Belly", vore_organs) //ChompEDIT - user, not usr
+			var/obj/belly/B = tgui_input_list(user, "Which belly?", "Select A Belly", vore_organs)
 			if(!istype(B))
 				return TRUE
 			visible_message(span_warning("[user] is trying to stuff a beacon into [src]'s [lowertext(B.name)]!"),
@@ -626,7 +626,7 @@
 		SetSleeping(0) //Wake up instantly if asleep
 		for(var/mob/living/simple_mob/SA in range(10))
 			LAZYSET(SA.prey_excludes, src, world.time)
-		log_and_message_admins("[key_name(src)] used the OOC escape button to get out of [key_name(B.owner)] ([B.owner ? "<a href='byond://?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[B.owner.x];Y=[B.owner.y];Z=[B.owner.z]'>JMP</a>" : "null"])")
+		log_and_message_admins("used the OOC escape button to get out of [key_name(B.owner)] ([B.owner ? "<a href='byond://?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[B.owner.x];Y=[B.owner.y];Z=[B.owner.z]'>JMP</a>" : "null"])", src)
 
 		B.owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 		if(!ishuman(B.owner))
@@ -641,14 +641,14 @@
 		if(confirm != "Okay" || loc != belly)
 			return
 		//Actual escaping
-		log_and_message_admins("[key_name(src)] used the OOC escape button to get out of [key_name(pred)] (BORG) ([pred ? "<a href='byond://?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[pred.x];Y=[pred.y];Z=[pred.z]'>JMP</a>" : "null"])")
+		log_and_message_admins("used the OOC escape button to get out of [key_name(pred)] (BORG) ([pred ? "<a href='byond://?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[pred.x];Y=[pred.y];Z=[pred.z]'>JMP</a>" : "null"])", src)
 		belly.go_out(src) //Just force-ejects from the borg as if they'd clicked the eject button.
 
 	//You're in an AI hologram!
 	else if(istype(loc, /obj/effect/overlay/aiholo))
 		var/obj/effect/overlay/aiholo/holo = loc
 		holo.drop_prey() //Easiest way
-		log_and_message_admins("[key_name(src)] used the OOC escape button to get out of [key_name(holo.master)] (AI HOLO) ([holo ? "<a href='byond://?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[holo.x];Y=[holo.y];Z=[holo.z]'>JMP</a>" : "null"])")
+		log_and_message_admins("used the OOC escape button to get out of [key_name(holo.master)] (AI HOLO) ([holo ? "<a href='byond://?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[holo.x];Y=[holo.y];Z=[holo.z]'>JMP</a>" : "null"])", src)
 
 	//You're in a capture crystal! ((It's not vore but close enough!))
 	else if(iscapturecrystal(loc))
@@ -657,10 +657,10 @@
 		crystal.bound_mob = null
 		crystal.bound_mob = capture_crystal = 0
 		clear_fullscreen(ATOM_BELLY_FULLSCREEN) // CHOMPedit
-		log_and_message_admins("[key_name(src)] used the OOC escape button to get out of [crystal] owned by [crystal.owner]. [ADMIN_FLW(src)]")
+		log_and_message_admins("used the OOC escape button to get out of [crystal] owned by [crystal.owner]. [ADMIN_FLW(src)]", src)
 
 	//You've been turned into an item!
-	else if(tf_mob_holder && istype(src, /mob/living/voice) && istype(src.loc, /obj/item))
+	else if(tf_mob_holder && isvoice(src) && istype(src.loc, /obj/item))
 		var/obj/item/item_to_destroy = src.loc //If so, let's destroy the item they just TF'd out of.
 		//CHOMPEdit Start - If tf_mob_holder is not located in src, then it's a Mind Binder OOC Escape
 		var/mob/living/ourmob = tf_mob_holder
@@ -680,28 +680,28 @@
 		//CHOMPEdit End
 		if(istype(src.loc, /obj/item/clothing)) //Are they in clothes? Delete the item then revert them.
 			qdel(item_to_destroy)
-			log_and_message_admins("[key_name(src)] used the OOC escape button to revert back to their original form from being TFed into an object.")
+			log_and_message_admins("used the OOC escape button to revert back to their original form from being TFed into an object.", src)
 			revert_mob_tf()
 		else //Are they in any other type of object? If qdel is done first, the mob is deleted from the world.
 			forceMove(get_turf(src))
 			qdel(item_to_destroy)
-			log_and_message_admins("[key_name(src)] used the OOC escape button to revert back to their original form from being TFed into an object.")
+			log_and_message_admins("used the OOC escape button to revert back to their original form from being TFed into an object.", src)
 			revert_mob_tf()
 
 	//You've been turned into a mob!
 	else if(tf_mob_holder)
-		log_and_message_admins("[key_name(src)] used the OOC escape button to revert back to their original form from being TFed into another mob.")
+		log_and_message_admins("used the OOC escape button to revert back to their original form from being TFed into another mob.", src)
 		revert_mob_tf()
 
 	else if(istype(loc, /obj/item/holder/micro) && (istype(loc.loc, /obj/machinery/microwave)))
 		forceMove(get_turf(src))
-		log_and_message_admins("[key_name(src)] used the OOC escape button to get out of a microwave.")
+		log_and_message_admins("used the OOC escape button to get out of a microwave.", src)
 
 	else if(istype(loc, /obj/structure/gargoyle) && loc:was_rayed)
 		var/obj/structure/gargoyle/G = loc
 		G.can_revert = TRUE
 		qdel(G)
-		log_and_message_admins("[key_name(src)] used the OOC escape button to revert back from being petrified.")
+		log_and_message_admins("used the OOC escape button to revert back from being petrified.", src)
 
 	//CHOMPEdit - In-shoe OOC escape. Checking voices as precaution if something akin to obj TF or possession happens
 	else if(!istype(src, /mob/living/voice) && istype(src.loc, /obj/item/clothing/shoes))
@@ -715,7 +715,13 @@
 		if(F.food_inserted_micros)
 			F.food_inserted_micros -= src
 		src.forceMove(get_turf(F))
-		log_and_message_admins("[key_name(src)] used the OOC escape button to get out of a food item.")
+		log_and_message_admins("used the OOC escape button to get out of a food item.", src)
+
+	else if(src.alerts["leashed"])
+		var/obj/screen/alert/leash_pet/pet_alert = src.alerts["leashed"]
+		var/obj/item/leash/owner = pet_alert.master
+		owner.clear_leash()
+		log_and_message_admins("used the OOC escape button to get out of a leash.", src)
 
 	//Don't appear to be in a vore situation
 	else
@@ -741,17 +747,17 @@
 /mob/living/proc/eat_held_mob(mob/living/user, mob/living/prey, mob/living/pred)
 	var/belly
 	if(user != pred)
-		belly = tgui_input_list(user, "Choose Belly", "Belly Choice", pred.feedable_bellies())	//CHOMPEdit remove usr
+		belly = tgui_input_list(user, "Choose Belly", "Belly Choice", pred.feedable_bellies())	//CHOMPEdit
 	else
 		belly = pred.vore_selected
 	return perform_the_nom(user, prey, pred, belly)
 
 /mob/living/proc/feed_self_to_grabbed(mob/living/user, mob/living/pred)
-	var/belly = tgui_input_list(user, "Choose Belly", "Belly Choice", pred.feedable_bellies())	//CHOMPEdit - remove usr
+	var/belly = tgui_input_list(user, "Choose Belly", "Belly Choice", pred.feedable_bellies())	//CHOMPEdit
 	return perform_the_nom(user, user, pred, belly)
 
 /mob/living/proc/feed_grabbed_to_other(mob/living/user, mob/living/prey, mob/living/pred)
-	var/belly = tgui_input_list(user, "Choose Belly", "Belly Choice", pred.feedable_bellies())	//CHOMPEdit - remove usr
+	var/belly = tgui_input_list(user, "Choose Belly", "Belly Choice", pred.feedable_bellies())	//CHOMPEdit
 	return perform_the_nom(user, prey, pred, belly)
 
 //
@@ -778,7 +784,7 @@
 
 	if(!prey.devourable)
 		to_chat(user, span_vnotice("They aren't able to be devoured."))
-		log_and_message_admins("[key_name_admin(src)] attempted to devour [key_name_admin(prey)] against their prefs ([prey ? ADMIN_JMP(prey) : "null"])")
+		log_and_message_admins("attempted to devour [key_name_admin(prey)] against their prefs ([prey ? ADMIN_JMP(prey) : "null"])", src)
 		return FALSE
 	if(prey.absorbed || pred.absorbed)
 		to_chat(user, span_vwarning("They aren't aren't in a state to be devoured."))
@@ -822,7 +828,7 @@
 	if(delay)
 		swallow_time = delay
 	else
-		swallow_time = istype(prey, /mob/living/carbon/human) ? belly.human_prey_swallow_time : belly.nonhuman_prey_swallow_time
+		swallow_time = ishuman(prey) ? belly.human_prey_swallow_time : belly.nonhuman_prey_swallow_time
 
 	// Their AI should get notified so they can stab us
 	prey.ai_holder?.react_to_attack(user)
@@ -852,10 +858,10 @@
 
 	var/mob/living/carbon/victim = prey // Check for afk vore
 	if(istype(victim) && !victim.client && !victim.ai_holder && victim.ckey)
-		log_and_message_admins("[key_name_admin(pred)] ate [key_name_admin(prey)] whilst the prey was AFK ([pred ? ADMIN_JMP(pred) : "null"])")
+		log_and_message_admins("ate [key_name_admin(prey)] whilst the prey was AFK ([pred ? ADMIN_JMP(pred) : "null"])", pred)
 	var/mob/living/carbon/victim_pred = pred // Check for afk vore
 	if(istype(victim_pred) && !victim_pred.client && !victim_pred.ai_holder && victim_pred.ckey)
-		log_and_message_admins("[key_name_admin(pred)] ate [key_name_admin(prey)] whilst the pred was AFK ([pred ? ADMIN_JMP(pred) : "null"])")
+		log_and_message_admins("ate [key_name_admin(prey)] whilst the pred was AFK ([pred ? ADMIN_JMP(pred) : "null"])", pred)
 
 	// Inform Admins
 	if(pred == user)
@@ -929,8 +935,23 @@
     gas = list(
         GAS_N2 = 100)
 
+//CHOMPEdit Start - for CO2 breathers
+/datum/gas_mixture/belly_air/carbon_dioxide_breather
+    volume = 2500
+    temperature = 293.150
+    total_moles = 104
+
+/datum/gas_mixture/carbon_dioxide_breather/New()
+    . = ..()
+    gas = list(
+        GAS_CO2 = 100)
+//CHOMPEdit End
 
 /mob/living/proc/feed_grabbed_to_self_falling_nom(var/mob/living/user, var/mob/living/prey)
+	// CHOMPAdd Start
+	if(user.is_incorporeal())
+		return FALSE
+	// CHOMPAdd End
 	var/belly = user.vore_selected
 	return perform_the_nom(user, prey, user, belly, delay = 1) //1/10th of a second is probably fine.
 
@@ -952,7 +973,7 @@
 
 	//Again, no real need for a check on this. I'm unsure how it could be somehow abused.
 	//Even if they open the box 900 times, who cares, they get the wrong color and do it again.
-	var/new_color = input(src,"Select a new color","Body Glow",glow_color) as color
+	var/new_color = tgui_color_picker(src,"Select a new color","Body Glow",glow_color)
 	if(new_color)
 		glow_color = new_color
 
@@ -1309,7 +1330,7 @@
 	if(href_list["vore_prefs"])
 		display_voreprefs(usr)
 	if(href_list["ooc_notes"])
-		src.Examine_OOC()
+		do_examine_ooc(usr)
 	if(href_list["edit_ooc_notes"])
 		if(usr == src)
 			set_metainfo_panel(usr) //ChompEDIT - usr arg
@@ -1334,6 +1355,12 @@
 	if(href_list["set_metainfo_ooc_style"])
 		set_metainfo_ooc_style(usr) //ChompEDIT - usr arg
 	//CHOMPEdit End
+	if(href_list["save_private_notes"])
+		if(usr == src)
+			save_private_notes(usr)
+	if(href_list["edit_private_notes"])
+		if(usr == src)
+			set_metainfo_private_notes(usr)
 	return ..()
 
 /mob/living/proc/display_voreprefs(mob/user)	//Called by Topic() calls on instances of /mob/living (and subtypes) containing vore_prefs as an argument
@@ -1412,12 +1439,12 @@
 	if(result == "Open Panel")
 		var/mob/living/user = usr
 		if(!user)
-			to_chat(usr,span_notice("Mob undefined: [user]"))
+			to_chat(user,span_notice("Mob undefined: [user]"))
 			return FALSE
 
 		var/datum/vore_look/export_panel/exportPanel
 		if(!exportPanel)
-			exportPanel = new(usr)
+			exportPanel = new(user)
 
 		if(!exportPanel)
 			to_chat(user,span_notice("Export panel undefined: [exportPanel]"))

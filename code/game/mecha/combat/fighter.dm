@@ -5,7 +5,7 @@
 	desc = "The base type of fightercraft. Don't spawn this one!"
 
 	var/datum/effect/effect/system/ion_trail_follow/ion_trail
-	var/stabilization_enabled = TRUE //If our anti-space-drift is on
+	var/landing_gear_raised = FALSE //If our landing gear for safely crossing ground turfs is on.
 	var/ground_capable = FALSE //If we can fly over normal turfs and not just space
 
 	icon = 'icons/mecha/fighters64x64.dmi' //See ATTRIBUTIONS.md for details on license
@@ -27,8 +27,9 @@
 
 	wreckage = /obj/effect/decal/mecha_wreckage/gunpod
 
-	stomp_sound = 'sound/machines/generator/generator_end.ogg'
-	swivel_sound = 'sound/machines/hiss.ogg'
+	stomp_sound = 'sound/mecha/fighter/engine_mid_fighter_move.ogg'
+	stomp_sound_2 = 'sound/mecha/fighter/engine_mid_fighter_move.ogg' // CHOMPedit: Fix for additional move sound on Chomp mecha.
+	swivel_sound = 'sound/mecha/fighter/engine_mid_boost_01.ogg'
 
 	bound_height = 64
 	bound_width = 64
@@ -39,10 +40,12 @@
 	max_universal_equip = 1
 	max_special_equip = 1
 
+	zoom_possible = 1
+
 	starting_components = list(
-		/obj/item/mecha_parts/component/hull/lightweight,
+		/obj/item/mecha_parts/component/hull/fighter,
 		/obj/item/mecha_parts/component/actuator,
-		/obj/item/mecha_parts/component/armor,
+		/obj/item/mecha_parts/component/armor/fighter,
 		/obj/item/mecha_parts/component/gas,
 		/obj/item/mecha_parts/component/electrical
 		)
@@ -135,17 +138,17 @@
 //Modified phazon code
 /obj/mecha/combat/fighter/Topic(href, href_list)
 	..()
-	if (href_list["toggle_stabilization"])
-		stabilization_enabled = !stabilization_enabled
-		send_byjax(src.occupant,"exosuit.browser","stabilization_command","[stabilization_enabled?"Dis":"En"]able thruster stabilization")
-		src.occupant_message(span_notice("Thruster stabilization [stabilization_enabled? "enabled" : "disabled"]."))
+	if (href_list["toggle_landing_gear"])
+		landing_gear_raised = !landing_gear_raised
+		send_byjax(src.occupant,"exosuit.browser","landing_gear_command","[landing_gear_raised?"Raise":"Lower"] landing gear")
+		src.occupant_message(span_notice("Landing gear [landing_gear_raised? "raised" : "lowered"]."))
 		return
 
 /obj/mecha/combat/fighter/get_commands()
 	var/output = {"<div class='wr'>
 						<div class='header'>Special</div>
 						<div class='links'>
-						<a href='byond://?src=\ref[src];toggle_stabilization=1'><span id="stabilization_command">[stabilization_enabled?"Dis":"En"]able thruster stabilization</span></a><br>
+						<a href='byond://?src=\ref[src];toggle_landing_gear=1'><span id="landing_gear_command">[landing_gear_raised?"Raise":"Lower"] landing gear</span></a><br>
 						</div>
 						</div>
 						"}
@@ -153,22 +156,28 @@
 	return output
 
 /obj/mecha/combat/fighter/can_ztravel()
-	return (stabilization_enabled && has_charge(step_energy_drain))
+	return (landing_gear_raised && has_charge(step_energy_drain))
 
 // No space drifting
+// This doesnt work but I actually dont want it to anyways, so I'm not touching it at all. Space drifting is cool.
 /obj/mecha/combat/fighter/check_for_support()
-	if (stabilization_enabled)
+	if (landing_gear_raised)
 		return 1
 
 	return ..()
 
 // No falling if we've got our boosters on
 /obj/mecha/combat/fighter/can_fall()
-	return (stabilization_enabled && has_charge(step_energy_drain))
+	if(landing_gear_raised && has_charge(step_energy_drain))
+		return FALSE
+	else
+		return TRUE
 
 /obj/mecha/combat/fighter/proc/consider_gravity(var/moved = FALSE)
 	var/gravity = get_gravity()
-	if(gravity && ground_capable && occupant)
+	if (gravity && !landing_gear_raised)
+		playsound(src, 'sound/effects/roll.ogg', 50, 1)
+	else if(gravity && ground_capable && occupant)
 		start_hover()
 	else if((!gravity && ground_capable) || !occupant)
 		stop_hover()
@@ -176,6 +185,11 @@
 		occupant_message("Collision alert! Vehicle not rated for use in gravity!")
 		take_damage(NOGRAV_FIGHTER_DAMAGE, "brute")
 		playsound(src, 'sound/effects/grillehit.ogg', 50, 1)
+
+/obj/mecha/combat/fighter/get_step_delay()
+    . = ..()
+    if(get_gravity() && !landing_gear_raised)
+        . += 4
 
 /obj/mecha/combat/fighter/handle_equipment_movement()
 	. = ..()
@@ -202,7 +216,7 @@
 		animate(src, pixel_y = old_y, time = 5, easing = SINE_EASING | EASE_IN) //halt animation
 
 /obj/mecha/combat/fighter/check_for_support()
-	if (has_charge(step_energy_drain) && stabilization_enabled)
+	if (has_charge(step_energy_drain) && landing_gear_raised)
 		return 1
 
 	var/list/things = orange(1, src)
@@ -215,9 +229,18 @@
 
 /obj/mecha/combat/fighter/play_entered_noise(var/mob/who)
 	if(hasInternalDamage())
-		who << sound('sound/mecha/fighter_entered_bad.ogg',volume=50)
+		who << sound('sound/mecha/fighter/fighter_entered_bad.ogg',volume=60)
 	else
-		who << sound('sound/mecha/fighter_entered.ogg',volume=50)
+		who << sound('sound/mecha/fighter/fighter_entered.ogg',volume=60)
+
+
+//causes damage when running into objects
+/obj/mecha/combat/fighter/Bump(atom/obstacle)
+	. = ..()
+	if(istype(obstacle, /obj) || istype(obstacle, /turf))
+		occupant_message("<B><FONT COLOR=red SIZE=+2>COLLISION ALERT!</B></FONT>")
+		take_damage(20, "brute")
+		playsound(src, 'sound/mecha/fighter/fighter_collision.ogg', 50)
 
 ////////////// Gunpod //////////////
 
@@ -241,7 +264,7 @@
 	var/image/stripe1_overlay
 	var/image/stripe2_overlay
 
-/obj/mecha/combat/fighter/gunpod/loaded/Initialize() //Loaded version with gans
+/obj/mecha/combat/fighter/gunpod/loaded/Initialize() //Loaded version with guns
 	. = ..()
 	var/obj/item/mecha_parts/mecha_equipment/ME = new /obj/item/mecha_parts/mecha_equipment/weapon/energy/laser
 	ME.attach(src)
@@ -272,7 +295,7 @@
 	if(istype(W,/obj/item/multitool) && state == 1)
 		var/new_paint_location = tgui_input_list(user, "Please select a target zone.", "Paint Zone", list("Fore Stripe", "Aft Stripe", "CANCEL"))
 		if(new_paint_location && new_paint_location != "CANCEL")
-			var/new_paint_color = input(user, "Please select a paint color.", "Paint Color", null) as color|null
+			var/new_paint_color = tgui_color_picker(user, "Please select a paint color.", "Paint Color", null)
 			if(new_paint_color)
 				switch(new_paint_location)
 					if("Fore Stripe")
@@ -313,7 +336,7 @@
 
 	ground_capable = FALSE
 
-/obj/mecha/combat/fighter/baron/loaded/Initialize() //Loaded version with gans
+/obj/mecha/combat/fighter/baron/loaded/Initialize() //Loaded version with guns
 	. = ..()
 	var/obj/item/mecha_parts/mecha_equipment/ME = new /obj/item/mecha_parts/mecha_equipment/weapon/energy/laser
 	ME.attach(src)
@@ -340,7 +363,7 @@
 
 /obj/mecha/combat/fighter/scoralis
 	name = "scoralis"
-	desc = "An imported space fighter with integral cloaking device. Beware the power consumption, though. Not capable of ground operations."
+	desc = "An imported space fighter with an integral cloaking device. Beware the power consumption, though. Incapable of ground operations."
 	icon = 'icons/mecha/fighters64x64.dmi'
 	icon_state = "scoralis"
 	initial_icon = "scoralis"
@@ -350,7 +373,7 @@
 
 	ground_capable = FALSE
 
-/obj/mecha/combat/fighter/scoralis/loaded/Initialize() //Loaded version with gans
+/obj/mecha/combat/fighter/scoralis/loaded/Initialize() //Loaded version with guns
 	. = ..()
 	var/obj/item/mecha_parts/mecha_equipment/ME = new /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/lmg
 	ME.attach(src)
@@ -389,7 +412,7 @@
 	health = 500
 	maxhealth = 500
 
-/obj/mecha/combat/fighter/allure/loaded/Initialize() //Loaded version with gans
+/obj/mecha/combat/fighter/allure/loaded/Initialize() //Loaded version with guns
 	. = ..()
 	var/obj/item/mecha_parts/mecha_equipment/ME = new /obj/item/mecha_parts/mecha_equipment/cloak
 	ME.attach(src)
@@ -413,30 +436,27 @@
 
 /obj/mecha/combat/fighter/pinnace
 	name = "pinnace"
-	desc = "A cramped ship's boat, capable of atmospheric and space flight. Not capable of mounting weapons. Capable of fitting one pilot and one passenger."
+	desc = "A mass-produced, lightweight fighter craft, capable of atmospheric and interstellar operation. While cheap and simple to operate, it suffers from sub-par survivability."
 	icon = 'icons/mecha/fighters64x64.dmi'
 	icon_state = "pinnace"
 	initial_icon = "pinnace"
-
-	max_hull_equip = 1
-	max_weapon_equip = 0
-	max_utility_equip = 0
-	max_universal_equip = 0
-	max_special_equip = 1
 
 	catalogue_data = list(/datum/category_item/catalogue/technology/pinnace)
 	wreckage = /obj/effect/decal/mecha_wreckage/pinnace
 
 	ground_capable = TRUE
 
-/obj/mecha/combat/fighter/pinnace/loaded/Initialize() //Loaded version with gans
+	health = 200
+	maxhealth = 200
+
+/obj/mecha/combat/fighter/pinnace/loaded/Initialize() //Loaded version with guns
 	. = ..()
-	var/obj/item/mecha_parts/mecha_equipment/ME = new /obj/item/mecha_parts/mecha_equipment/tool/passenger
+	var/obj/item/mecha_parts/mecha_equipment/ME = new /obj/item/mecha_parts/mecha_equipment/weapon/energy/laser
 	ME.attach(src)
 
 /obj/effect/decal/mecha_wreckage/pinnace
 	name = "pinnace wreckage"
-	desc = "Remains of some unfortunate ship's boat. Completely unrepairable."
+	desc = "Remains of some unfortunate fighter. Completely unrepairable."
 	icon = 'icons/mecha/fighters64x64.dmi'
 	icon_state = "pinnace-broken"
 	bound_width = 64
@@ -444,10 +464,11 @@
 
 /datum/category_item/catalogue/technology/pinnace
 	name = "Voidcraft - Pinnace"
-	desc = "A very small boat, usually used as a tender at very close ranges. The lack of a bluespace \
-	drive means that it can't get too far from it's parent ship. Though the pinnace is typically unarmed, \
-	it is capable of atmospheric flight and escaping most pursuing fighters by diving into the atmosphere of \
-	nearby planets to seek cover."
+	desc = "A small, unassuming forward-swept-wing fighter craft, first produced some seventy years ago by Hesphaestus Industries for \
+	the Commonwealth. Since then, the design has seen widespread adoption by many different corporate, federal and independent \
+	groups alike; this can easily be attributed due to its ease of manufacturing, reliability and simplicity to both maintain and \
+	operate. Outdated in comparison to more modern aerospace craft, it still sees heavy usage in the frontier regions where \
+	cutting-edge technology is less of a concern."
 	value = CATALOGUER_REWARD_MEDIUM
 
 #undef NOGRAV_FIGHTER_DAMAGE

@@ -35,7 +35,7 @@ export async function processAutoChangelog({ github, context }) {
 	github.rest.repos.createOrUpdateFileContents({
 		owner: context.repo.owner,
 		repo: context.repo.repo,
-		path: `html/changelogs_ch/AutoChangeLog-pr-${context.payload.pull_request.number}.yml`,
+		path: `html/changelogs_ch/AutoChangeLog-pr-${context.payload.pull_request.number}.yml`, // CHOMPEdit
 		message: `Automatic changelog for PR #${context.payload.pull_request.number} [ci skip]`,
 		content: Buffer.from(yml).toString("base64"),
 	});

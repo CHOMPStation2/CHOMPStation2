@@ -26,7 +26,7 @@
 	var/obj/item/paper/P = new /obj/item/paper(get_turf(src))
 	P.name = "paper - [form_title]"
 	P.info = "[last_data]"
-	if(istype(user,/mob/living/carbon/human))
+	if(ishuman(user))
 		user.put_in_hands(P)
 	user.visible_message("\The [src] spits out a piece of paper.")
 	return
@@ -180,6 +180,6 @@
 	if(dat)
 		last_data = dat
 		dat += "<br><br>\[<a href='byond://?src=\ref[src];print=1'>print report</a>\]"
-		user << browse(dat,"window=xeno_analyzer")
+		user << browse("<html>[dat]</html>","window=xeno_analyzer")
 
 	return

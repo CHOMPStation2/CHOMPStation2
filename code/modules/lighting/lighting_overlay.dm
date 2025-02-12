@@ -112,6 +112,8 @@
 
 //CHOMPEdit Begin
 /datum/lighting_object/proc/update_sun()
+	if(QDELETED(src))
+		return
 	//Used to have more code here, but it became redundant.
 	affected_turf.set_luminosity(1)
 

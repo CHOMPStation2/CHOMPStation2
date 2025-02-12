@@ -20,7 +20,7 @@
 	if(areaname)
 		A = return_sorted_areas()[areaname]
 	else
-		A = return_sorted_areas()[tgui_input_list(usr, "Pick an area:", "Jump to Area", return_sorted_areas())] //CHOMPEdit
+		A = return_sorted_areas()[tgui_input_list(usr, "Pick an area:", "Jump to Area", return_sorted_areas())]
 
 	if(!A)
 		return

@@ -4,6 +4,7 @@
 	desc = "Sandy and smooth from erosion."
 	density = TRUE
 	anchored = TRUE
+	icon_state = "desert_rock0"
 
 /obj/structure/prop/desert_rock/rock
 	name = "desert rock"
@@ -16,8 +17,8 @@
 	if(do_after(user, 3 SECONDS, src))
 		step(src, movedir)
 
-/obj/structure/prop/desert_rock/rock/New()
-	..()
+/obj/structure/prop/desert_rock/rock/Initialize(mapload)
+	. = ..()
 	icon_state = "desert_rock[rand(0,6)]"
 
 /obj/structure/prop/desert_rock/pebble
@@ -29,12 +30,12 @@
 		return
 	if(istype(AM, /mob/living))
 		var/mob/living/M = AM
-		if(M.m_intent == "run" && prob(5))
+		if(M.m_intent == I_RUN && prob(5))
 			M.Weaken(2)
 			to_chat(M, "You trip over the [src]!")
 
-/obj/structure/prop/desert_rock/pebble/New()
-	..()
+/obj/structure/prop/desert_rock/pebble/Initialize(mapload)
+	. = ..()
 	icon_state = "desert_pebble[rand(0,6)]"
 
 /obj/structure/prop/desert_rock/anthill
@@ -43,8 +44,8 @@
 	icon = 'modular_chomp/icons/obj/desert_planet/desert_plants.dmi'
 	icon_state = "anthill0"
 
-/obj/structure/prop/desert_rock/anthill/New()
-	..()
+/obj/structure/prop/desert_rock/anthill/Initialize(mapload)
+	. = ..()
 	icon_state = "anthill[rand(0,2)]"
 
 /obj/structure/prop/desert_planet64x64
@@ -150,8 +151,8 @@
 	desc = "Colloquially known as a pot plant."
 	icon_state = "potplant0"
 
-/obj/structure/flora/desert_planet/potted_plant/New()
-	..()
+/obj/structure/flora/desert_planet/potted_plant/Initialize(mapload)
+	. = ..()
 	icon_state = "potplant[rand(0,2)]"
 
 /obj/structure/flora/desert_planet/thicket
@@ -159,8 +160,8 @@
 	desc = "Weedy growths."
 	icon_state = "thicket0"
 
-/obj/structure/flora/desert_planet/thicket/New()
-	..()
+/obj/structure/flora/desert_planet/thicket/Initialize(mapload)
+	. = ..()
 	icon_state = "thicket[rand(0,6)]"
 
 /obj/structure/flora/desert_planet/shrub
@@ -168,8 +169,8 @@
 	desc = "Dense and weedy."
 	icon_state = "shrub0"
 
-/obj/structure/flora/desert_planet/shrub/New()
-	..()
+/obj/structure/flora/desert_planet/shrub/Initialize(mapload)
+	. = ..()
 	icon_state = "shrub[rand(0,5)]"
 
 /obj/structure/flora/desert_planet/bush
@@ -177,8 +178,8 @@
 	desc = "Denser and weedier."
 	icon_state = "bush0"
 
-/obj/structure/flora/desert_planet/bush/New()
-	..()
+/obj/structure/flora/desert_planet/bush/Initialize(mapload)
+	. = ..()
 	icon_state = "bush[rand(0,5)]"
 
 /obj/structure/flora/desert_planet/barrelcacti
@@ -186,8 +187,8 @@
 	desc = "Small, adorable, and begging for a hug."
 	icon_state = "barrelcacti0"
 
-/obj/structure/flora/desert_planet/barrelcacti/New()
-	..()
+/obj/structure/flora/desert_planet/barrelcacti/Initialize(mapload)
+	. = ..()
 	icon_state = "barrelcacti[rand(0,3)]"
 
 /obj/structure/flora/desert_planet/palmy
@@ -195,8 +196,8 @@
 	desc = "Probably not actually a yucca."
 	icon_state = "palmy0"
 
-/obj/structure/flora/desert_planet/palmy/New()
-	..()
+/obj/structure/flora/desert_planet/palmy/Initialize(mapload)
+	. = ..()
 	icon_state = "palmy[rand(0,2)]"
 
 /obj/structure/flora/desert_planet/shrubber
@@ -204,8 +205,8 @@
 	desc = "Makes for great fur accessories."
 	icon_state = "shrubber0"
 
-/obj/structure/flora/desert_planet/shrubber/New()
-	..()
+/obj/structure/flora/desert_planet/shrubber/Initialize(mapload)
+	. = ..()
 	icon_state = "shrubber[rand(0,2)]"
 
 /obj/structure/flora/desert_planet/lbarrelcacti
@@ -213,8 +214,8 @@
 	desc = "Absolutely begging for pets."
 	icon_state = "lbarrelcacti0"
 
-/obj/structure/flora/desert_planet/lbarrelcacti/New()
-	..()
+/obj/structure/flora/desert_planet/lbarrelcacti/Initialize(mapload)
+	. = ..()
 	icon_state = "lbarrelcacti[rand(0,2)]"
 
 // Trees

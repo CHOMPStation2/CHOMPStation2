@@ -180,7 +180,7 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 
 			flavor_text = R.flavor_text
 
-		if(istype(C.mob, /mob/living/silicon/pai))
+		if(ispAI(C.mob))
 			var/mob/living/silicon/pai/P = C.mob
 			name = P.name
 			species = "pAI"
@@ -205,7 +205,7 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 			//CHOMPEdit End
 			flavor_text = P.flavor_text
 
-		if(istype(C.mob, /mob/living/simple_mob))
+		if(isanimal(C.mob))
 			var/mob/living/simple_mob/S = C.mob
 			name = S.name
 			// CHOMPEdit Start
@@ -325,7 +325,7 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 			var/list/names_list = list()
 			for(var/C in vantag_choices_list)
 				names_list[vantag_choices_list[C]] = C
-			var/list/new_eventtag = input(usr, "Pick your preference for event involvement", "Event Preference Tag", usr?.client?.prefs?.vantag_preference) as null|anything in names_list
+			var/list/new_eventtag = tgui_input_list(usr, "Pick your preference for event involvement", "Event Preference Tag", usr?.client?.prefs?.vantag_preference, names_list)
 			if(!new_eventtag)
 				return
 			return set_for_mind_or_prefs(user, action, names_list[new_eventtag], can_set_prefs, can_set_mind)

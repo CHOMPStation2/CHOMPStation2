@@ -97,7 +97,7 @@
 		var/new_type = pickweight(sk_types)
 
 		new new_type(loc)
-		flags |= ATOM_INITIALIZED //CHOMPEdit
+		flags |= ATOM_INITIALIZED
 		return INITIALIZE_HINT_QDEL
 
 	if(icon_state == "map_example")
@@ -213,7 +213,7 @@
 		check_timer = 0
 		var/non_kin_count = 0
 		for(var/mob/living/M in view(6,src))
-			if(!istype(M, /mob/living/simple_mob/shadekin))
+			if(!issimplekin(M))
 				non_kin_count ++
 		// Technically can be combined with ||, they call the same function, but readability is poor
 		if(!non_kin_count && (ability_flags & AB_PHASE_SHIFTED))

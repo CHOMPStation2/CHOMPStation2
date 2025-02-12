@@ -66,7 +66,7 @@
 	if(scan)
 		to_chat(usr, "You remove \the [scan] from \the [src].")
 		scan.loc = get_turf(src)
-		if(!usr.get_active_hand() && istype(usr,/mob/living/carbon/human))
+		if(!usr.get_active_hand() && ishuman(usr))
 			usr.put_in_hands(scan)
 		scan = null
 	else
@@ -520,7 +520,7 @@
 	..(severity)
 
 /obj/machinery/computer/secure_data/detective_computer
-	icon_state = "messyfiles"
+	icon_state = "forensic"
 
 #undef SEC_DATA_R_LIST
 #undef SEC_DATA_MAINT

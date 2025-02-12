@@ -16,7 +16,7 @@
 
 	target_slot = slot_l_hand
 
-	target_parent_classes = list(ORGAN_FLESH, ORGAN_ASSISTED)
+	target_parent_classes = list(ORGAN_FLESH, ORGAN_ROBOT)
 
 	integrated_object_type = /obj/item/gun/energy/laser/mounted/augment
 
@@ -144,7 +144,7 @@
 		else
 			return
 
-	if(istype(owner, /mob/living/carbon/human))
+	if(ishuman(owner))
 		var/mob/living/carbon/human/H = owner
 		H.add_modifier(/datum/modifier/melee_surge, 0.75 MINUTES)
 

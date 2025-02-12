@@ -232,7 +232,6 @@
 	pixel_y = 2
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/closet/crate/bin,
@@ -260,12 +259,9 @@
 	pixel_x = -24
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/item/radio/subspace{
@@ -297,8 +293,6 @@
 /obj/structure/table/sifwooden_reinforced,
 /obj/machinery/cell_charger,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/recharger/wallcharger{
@@ -374,8 +368,6 @@
 	pixel_x = -22
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/table/sifwooden_reinforced,
@@ -410,8 +402,6 @@
 	tag_door = "mining_dock_3_door"
 	},
 /obj/structure/cable{
-	d1 = 16;
-	d2 = 0;
 	icon_state = "16-0"
 	},
 /turf/simulated/floor/wood/sif,
@@ -475,8 +465,6 @@
 /area/surface/outpost/shelter)
 "cA" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/wall/log_sif,
@@ -509,8 +497,6 @@
 /area/surface/outpost/shelter/exterior)
 "dh" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/wood/sif,
@@ -579,17 +565,12 @@
 /area/surface/outpost/shelter/utilityroom)
 "gV" = (
 /obj/structure/cable{
-	d1 = 16;
-	d2 = 0;
 	icon_state = "16-0"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/button/remote/blast_door{
@@ -598,13 +579,9 @@
 	pixel_y = 26
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating,
@@ -651,15 +628,12 @@
 /area/surface/outpost/shelter)
 "hu" = (
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/frame{
 	anchored = 1
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -674,8 +648,6 @@
 "ib" = (
 /obj/structure/simple_door/sifwood,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/wood/sif,
@@ -771,13 +743,9 @@
 /area/surface/outside/landing/wilderness)
 "lX" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/wood/sif,
@@ -795,12 +763,9 @@
 /area/surface/outpost/shelter/utilityroom)
 "mj" = (
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/frame{
@@ -825,8 +790,6 @@
 /area/surface/outpost/shelter/exterior)
 "nN" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/wood/sif,
@@ -862,8 +825,6 @@
 /area/surface/outpost/shelter/dorms)
 "pn" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/wood/sif,
@@ -956,8 +917,6 @@
 	starts_with = list(/obj/item/roller,/obj/item/bodybag/cryobag,/obj/item/storage/firstaid/regular=2,/obj/item/storage/pill_bottle/spaceacillin)
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/wood/sif,
@@ -986,12 +945,9 @@
 /area/surface/outpost/shelter/exterior)
 "tB" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
@@ -1000,8 +956,6 @@
 	pixel_x = -24
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/plating,
@@ -1015,8 +969,6 @@
 	req_one_access = list(1,5,10,12,13,18,31,43,47,48,50)
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/wood/sif,
@@ -1040,7 +992,6 @@
 /area/surface/outpost/shelter/utilityroom)
 "ub" = (
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/frame{
@@ -1118,8 +1069,6 @@
 	starts_with = list(/obj/item/gps=5,/obj/item/material/knife/tacknife/survival=5,/obj/random/mre=5,/obj/item/flashlight/color/yellow=5,/obj/item/flashlight/flare=5,/obj/item/reagent_containers/food/drinks/cans/waterbottle=5,/obj/item/whetstone)
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/wood/sif,
@@ -1177,8 +1126,6 @@
 	starts_with = list(/obj/item/defib_kit/loaded)
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/wood/sif,
@@ -1193,8 +1140,6 @@
 /area/surface/outpost/shelter/utilityroom)
 "zv" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/wood/sif,
@@ -1219,8 +1164,6 @@
 /area/surface/outpost/shelter/dorms)
 "AY" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -1228,8 +1171,6 @@
 "AZ" = (
 /obj/machinery/atmospheric_field_generator/perma/underdoors,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/simple_door/sifwood,
@@ -1266,8 +1207,6 @@
 "BY" = (
 /obj/structure/simple_door/sifwood,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/wood/sif,
@@ -1310,8 +1249,6 @@
 	req_one_access = null
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/wood/sif,
@@ -1410,12 +1347,9 @@
 	pixel_y = 1
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/wood/sif,
@@ -1537,7 +1471,6 @@
 	pixel_x = 24
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/wood/sif,
@@ -1571,8 +1504,6 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/wood/sif,
@@ -1631,7 +1562,6 @@
 	},
 /obj/structure/closet/crate/bin,
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/wood/sif,
@@ -1656,12 +1586,9 @@
 /area/surface/outpost/shelter)
 "SI" = (
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/machinery/power/rtg/fake_gen{
@@ -1710,16 +1637,12 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter/utilityroom)
 "VK" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/wood/sif,
@@ -1739,12 +1662,9 @@
 /area/surface/outpost/shelter)
 "WB" = (
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/power/port_gen/pacman{
@@ -1835,7 +1755,6 @@
 	pixel_y = 26
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,

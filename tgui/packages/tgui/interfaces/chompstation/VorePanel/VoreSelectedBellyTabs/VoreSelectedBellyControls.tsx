@@ -1,5 +1,5 @@
 import { useBackend } from 'tgui/backend';
-import { Button, LabeledList } from 'tgui/components';
+import { Button, LabeledList } from 'tgui-core/components';
 
 import { digestModeToColor } from '../constants';
 import { selectedData } from '../types';

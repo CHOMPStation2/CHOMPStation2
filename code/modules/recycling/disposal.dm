@@ -334,7 +334,7 @@
 
 
 	// user.set_machine(src)
-	// user << browse(dat, "window=disposal;size=360x170")
+	// user << browse("<html>[dat]</html>", "window=disposal;size=360x170")
 	// onclose(user, "disposal")
 
 // handle machine interaction
@@ -546,7 +546,7 @@
 		if(prob(75))
 			AM.forceMove(src)
 			if(istype(AM, /obj/item/holder/micro) || istype(AM, /mob/living))
-				log_and_message_admins("[AM] was thrown into \the [src]")
+				log_and_message_admins("[AM] was thrown into \the [src]", null)
 				visible_message("\The [AM] lands in \the [src]!")
 				//flush() //Away they go! //Uncomment this for proper autoflush. Compromising with autopull to avoid possible disposal dunking abuse
 				//flush = 1 //1984. No autoflush, no autopull. Leaving this here incase someone wants to revisit this in the future when the mood on this changes
@@ -569,7 +569,7 @@
 		if(prob(75))
 			I.forceMove(src)
 			if(istype(I, /obj/item/holder/micro))
-				log_and_message_admins("[I.name] was thrown into \the [src]")
+				log_and_message_admins("[I.name] was thrown into \the [src]", null)
 			for(var/mob/M in viewers(src))
 				M.show_message("\The [I] lands in \the [src].", 3)
 		else
@@ -751,7 +751,7 @@
 // called when player tries to move while in a pipe
 /obj/structure/disposalholder/relaymove(mob/user as mob)
 
-	if(!istype(user,/mob/living))
+	if(!isliving(user))
 		return
 
 	var/mob/living/U = user

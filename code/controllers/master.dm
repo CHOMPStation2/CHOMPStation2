@@ -54,11 +54,9 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 
 	var/current_runlevel //!for scheduling different subsystems for different stages of the round
 
-	// CHOMPEdit Start
 	/// During initialization, will be the instanced subsytem that is currently initializing.
 	/// Outside of initialization, returns null.
 	var/current_initializing_subsystem = null
-	// CHOMPEdit End
 
 	var/static/restart_clear = 0
 	var/static/restart_timeout = 0
@@ -204,10 +202,9 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 	for (var/datum/controller/subsystem/SS in subsystems)
 		if (SS.flags & SS_NO_INIT)
 			continue
-		//SS.Initialize(REALTIMEOFDAY) // CHOMPEdit
-		init_subsystem(SS) // CHOMPEdit
+		init_subsystem(SS)
 		CHECK_TICK
-	current_initializing_subsystem = null // CHOMPEdit
+	current_initializing_subsystem = null
 	current_ticklimit = TICK_LIMIT_RUNNING
 	var/time = (REALTIMEOFDAY - start_timeofday) / 10
 
@@ -216,7 +213,8 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 	log_world(msg)
 
 
-	send2chat("Server Initialization completed! - Took [time] second[time == 1 ? "" : "s"].", "bot announce")
+	// FIXME: TGS <-> Discord communication; sending message to a TGS chat channel
+	send2chat("Server Initialization completed! - Took [time] second[time == 1 ? "" : "s"].", "bot announce") // CHOMPEnable
 
 	if (!current_runlevel)
 		SetRunLevel(RUNLEVEL_LOBBY)
@@ -238,7 +236,6 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 	// Loop.
 	Master.StartProcessing(0)
 
-// CHOMPEdit Start
 /**
  * Initialize a given subsystem and handle the results.
  *
@@ -312,7 +309,6 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 
 	to_chat(world, chat_message)
 	log_world(message)
-// CHOMPEdit End
 
 /datum/controller/master/proc/SetRunLevel(new_runlevel)
 	var/old_runlevel = isnull(current_runlevel) ? "NULL" : runlevel_flags[current_runlevel]

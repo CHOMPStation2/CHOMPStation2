@@ -204,7 +204,7 @@
 	set category = "Object"
 	set src in usr
 
-	if(!istype(src.loc, /mob/living))	// Needs to be in your hands to reset
+	if(!isliving(src.loc))	// Needs to be in your hands to reset
 		return
 
 	var/mob/living/carbon/human/H = usr
@@ -214,10 +214,10 @@
 		return
 
 	if(LAZYLEN(stored_ammo))
-		to_chat(usr, span_warning("You can't reset \the [src] unless it's empty!"))
+		to_chat(H, span_warning("You can't reset \the [src] unless it's empty!"))
 		return
 
-	to_chat(usr, span_notice("You clear \the [src]'s data buffers."))
+	to_chat(H, span_notice("You clear \the [src]'s data buffers."))
 
 	caliber = null
 	ammo_type = null

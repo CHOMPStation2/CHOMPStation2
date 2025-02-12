@@ -4,8 +4,8 @@
 	icon = 'icons/obj/janitor.dmi'
 	icon_state = "cleaner"
 	item_state = "cleaner"
-	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 10 //CHOMPEdit
+	center_of_mass_x = 16
+	center_of_mass_y = 10
 	flags = OPENCONTAINER|NOBLUDGEON
 	matter = list(MAT_GLASS = 300, MAT_STEEL = 300)
 	slot_flags = SLOT_BELT
@@ -55,10 +55,10 @@
 		log_game("[key_name(user)] fired Space lube from \a [src].")
 	return
 
-/obj/item/reagent_containers/spray/proc/Spray_at(atom/A as mob|obj, mob/user as mob, proximity)
+/obj/item/reagent_containers/spray/proc/Spray_at(atom/A as mob|obj, mob/user, proximity)
 	playsound(src, 'sound/effects/spray2.ogg', 50, 1, -6)
 	if (A.density && proximity)
-		A.visible_message("[usr] sprays [A] with [src].")
+		A.visible_message("[user] sprays [A] with [src].")
 		reagents.splash(A, amount_per_transfer_from_this)
 	else
 		spawn(0)
@@ -126,8 +126,8 @@
 	icon = 'icons/obj/weapons.dmi'
 	icon_state = "pepperspray"
 	item_state = "pepperspray"
-	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 16 //CHOMPEdit
+	center_of_mass_x = 16
+	center_of_mass_y = 16
 	possible_transfer_amounts = null
 	volume = 40
 	var/safety = TRUE
@@ -143,12 +143,12 @@
 
 /obj/item/reagent_containers/spray/pepper/attack_self(var/mob/user)
 	safety = !safety
-	// to_chat(usr, span_notice("You switch the safety [safety ? "on" : "off"]."))
-	balloon_alert(usr, "Safety [safety ? "on" : "off"].") // CHOMPEdit - Changed to balloon alert
+	// to_chat(user, span_notice("You switch the safety [safety ? "on" : "off"]."))
+	balloon_alert(user, "Safety [safety ? "on" : "off"].") // CHOMPEdit - Changed to balloon alert
 
-/obj/item/reagent_containers/spray/pepper/Spray_at(atom/A as mob|obj)
+/obj/item/reagent_containers/spray/pepper/Spray_at(atom/A as mob|obj, mob/user)
 	if(safety)
-		to_chat(usr, span_warning("The safety is on!"))
+		to_chat(user, span_warning("The safety is on!"))
 		return
 	. = ..()
 
@@ -175,15 +175,15 @@
 	icon_state = "chemsprayer"
 	item_state = "chemsprayer"
 	item_icons = list(slot_l_hand_str = 'icons/mob/items/lefthand_guns.dmi', slot_r_hand_str = 'icons/mob/items/righthand_guns.dmi')
-	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 16 //CHOMPEdit
+	center_of_mass_x = 16
+	center_of_mass_y = 16
 	throwforce = 3
 	w_class = ITEMSIZE_NORMAL
 	possible_transfer_amounts = null
 	volume = 600
 	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 3, TECH_ENGINEERING = 3)
 
-/obj/item/reagent_containers/spray/chemsprayer/Spray_at(atom/A as mob|obj)
+/obj/item/reagent_containers/spray/chemsprayer/Spray_at(atom/A as mob|obj, mob/user)
 	playsound(src, 'sound/effects/spray3.ogg', rand(50,1), -6)
 	var/direction = get_dir(src, A)
 	var/turf/T = get_turf(A)
@@ -222,8 +222,8 @@
 	icon = 'icons/obj/janitor.dmi'
 	icon_state = "cleaner-industrial"
 	item_state = "cleaner"
-	center_of_mass_x = 16 //CHOMPEdit
-	center_of_mass_y= 10 //CHOMPEdit
+	center_of_mass_x = 16
+	center_of_mass_y = 10
 
 	possible_transfer_amounts = list(5,10,20)
 
@@ -263,7 +263,7 @@
 	else
 		. = ..()
 
-/obj/item/reagent_containers/spray/chemsprayer/hosed/Spray_at(atom/A as mob|obj)
+/obj/item/reagent_containers/spray/chemsprayer/hosed/Spray_at(atom/A as mob|obj, mob/user)
 	update_icon()
 
 	var/direction = get_dir(src, A)
@@ -273,8 +273,8 @@
 	var/list/the_targets = list(T, T1, T2)
 
 	if(src.reagents.total_volume < 1)
-		// to_chat(usr, span_notice("\The [src] is empty."))
-		balloon_alert(usr, "\The [src] is empty.")
+		// to_chat(user, span_notice("\The [src] is empty."))
+		balloon_alert(user, "\The [src] is empty.")
 		return
 
 	if(!heavy_spray)

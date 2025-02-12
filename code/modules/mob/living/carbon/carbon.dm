@@ -8,7 +8,7 @@
 	if (!default_language && species_language)
 		default_language = GLOB.all_languages[species_language]
 
-	AddElement(/datum/element/footstep, custom_footstep, 1, -6) // CHOMPAdd
+	AddElement(/datum/element/footstep, custom_footstep, 1, -6)
 
 /mob/living/carbon/Life()
 	..()
@@ -36,10 +36,10 @@
 	. = ..()
 	if(src.nutrition && src.stat != 2)
 		adjust_nutrition(-DEFAULT_HUNGER_FACTOR / 10)
-		if(src.m_intent == "run")
+		if(src.m_intent == I_RUN)
 			adjust_nutrition(-DEFAULT_HUNGER_FACTOR / 10)
 
-	if((FAT in src.mutations) && src.m_intent == "run" && src.bodytemperature <= 360)
+	if((FAT in src.mutations) && src.m_intent == I_RUN && src.bodytemperature <= 360)
 		src.bodytemperature += 2
 
 	// Moving around increases germ_level faster
@@ -54,7 +54,7 @@
 			var/obj/item/I = user.get_active_hand()
 			if(I && I.force)
 				var/d = rand(round(I.force / 4), I.force)
-				if(istype(src, /mob/living/carbon/human))
+				if(ishuman(src))
 					var/mob/living/carbon/human/H = src
 					var/obj/item/organ/external/organ = H.get_organ(BP_TORSO)
 					if (istype(organ))
@@ -197,7 +197,7 @@
 
 /mob/living/carbon/proc/help_shake_act(mob/living/carbon/M)
 	if (src.health >= CONFIG_GET(number/health_threshold_crit))
-		if(src == M && istype(src, /mob/living/carbon/human))
+		if(src == M && ishuman(src))
 			var/mob/living/carbon/human/H = src
 			var/datum/gender/T = gender_datums[H.get_visible_gender()]
 			src.visible_message( \
@@ -275,7 +275,7 @@
 							src.ExtinguishMob()
 							src.fire_stacks = 0
 		else
-			if (istype(src,/mob/living/carbon/human) && src:w_uniform)
+			if (ishuman(src) && src:w_uniform)
 				var/mob/living/carbon/human/H = src
 				H.w_uniform.add_fingerprint(M)
 

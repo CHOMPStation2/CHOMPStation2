@@ -370,9 +370,15 @@
 					to_chat(src, span_warning("You feel horribly ill."))
 					AdjustWeakened(3)
 				if(prob(5) && internal_organs.len)
-					I = pick(internal_organs) //Internal organ damage...Not good. Not good at all.
-					if(istype(I)) I.add_autopsy_data("Radiation Induced Cancerous Growth", damage)
-					I.take_damage(damage * species.radiation_mod * RADIATION_SPEED_COEFFICIENT)
+					// CHOMPedit begin - organ mutations
+					if(prob(2))
+						// random organ time!
+						random_malignant_organ(TRUE,FALSE,prob(40))
+					// CHOMPedit end
+					else
+						I = pick(internal_organs) //Internal organ damage...Not good. Not good at all.
+						if(istype(I)) I.add_autopsy_data("Radiation Induced Cancerous Growth", damage)
+						I.take_damage(damage * species.radiation_mod * RADIATION_SPEED_COEFFICIENT)
 
 
 		else if (radiation >= 400 && radiation < 1500) //Equivalent of 8.0 to 30 Gy.
@@ -401,9 +407,14 @@
 					to_chat(src, span_critical("Your entire body feels like it's on fire!"))
 					adjustHalLoss(5)
 				if(prob(10) && internal_organs.len)
-					I = pick(internal_organs) //Internal organ damage...Not good. Not good at all.
-					if(istype(I)) I.add_autopsy_data("Radiation Induced Cancerous Growth", damage)
-					I.take_damage(damage * species.radiation_mod * RADIATION_SPEED_COEFFICIENT)
+					if(prob(2))
+						// CHOMPedit begin - organ mutations
+						random_malignant_organ(TRUE,FALSE,prob(60))
+					// CHOMPedit end
+					else
+						I = pick(internal_organs) //Internal organ damage...Not good. Not good at all.
+						if(istype(I)) I.add_autopsy_data("Radiation Induced Cancerous Growth", damage)
+						I.take_damage(damage * species.radiation_mod * RADIATION_SPEED_COEFFICIENT)
 
 		else if (radiation >= 1500) //Above 30Gy. You had to get absolutely blasted with rads for this.
 			damage = 30
@@ -432,9 +443,15 @@
 					to_chat(src, span_danger("Your hand won't respond properly, you drop what you're holding!"))
 					drop_item()
 				if(internal_organs.len)
-					I = pick(internal_organs) //Internal organ damage...Not good. Not good at all.
-					if(istype(I)) I.add_autopsy_data("Radiation Induced Cancerous Growth", damage * species.radiation_mod * RADIATION_SPEED_COEFFICIENT)
-					I.take_damage(damage * species.radiation_mod * RADIATION_SPEED_COEFFICIENT)
+					// CHOMPedit begin - organ mutations
+					if(prob(2))
+						// random organ time!
+						random_malignant_organ(prob(40),FALSE,TRUE)
+					// CHOMPedit end
+					else
+						I = pick(internal_organs) //Internal organ damage...Not good. Not good at all.
+						if(istype(I)) I.add_autopsy_data("Radiation Induced Cancerous Growth", damage * species.radiation_mod * RADIATION_SPEED_COEFFICIENT)
+						I.take_damage(damage * species.radiation_mod * RADIATION_SPEED_COEFFICIENT)
 
 /* 		//Not-so-sparkledog code. TODO: Make a pref for 'special game interactions' that allows interactions that align with prefs to occur.
 		if(radiation >= 250) //Special effect stuff that occurs at certain rad levels.
@@ -575,10 +592,10 @@
 			if(!L.is_bruised() && prob(8))
 				rupture_lung()
 
-		throw_alert("pressure", /obj/screen/alert/lowpressure)
+		throw_alert("oxy", /obj/screen/alert/not_enough_atmos)
 		return 0
 	else
-		clear_alert("pressure")
+		clear_alert("oxy")
 
 	var/safe_pressure_min = species.minimum_breath_pressure // Minimum safe partial pressure of breathable gas in kPa
 
@@ -592,11 +609,6 @@
 			safe_pressure_min *= 1.5
 		else if(L.is_bruised())
 			safe_pressure_min *= 1.25
-		else if(breath)
-			if(breath.total_moles < BREATH_MOLES / 10 || breath.total_moles > BREATH_MOLES * 5)
-				if(is_below_sound_pressure(get_turf(src)))	//No more popped lungs from choking/drowning
-					if (prob(8))
-						rupture_lung()
 
 	var/safe_exhaled_max = 10
 	var/safe_toxins_max = 0.2
@@ -644,6 +656,8 @@
 	if(inhale_pp < safe_pressure_min)
 		if(prob(20))
 			spawn(0) emote("gasp")
+		if(is_below_sound_pressure(get_turf(src)) && prob(8))	//No more popped lungs from choking/drowning
+			rupture_lung()
 
 		var/ratio = inhale_pp/safe_pressure_min
 		// Don't fuck them up too fast (space only does HUMAN_MAX_OXYLOSS after all!)
@@ -2003,7 +2017,8 @@
 			else if(mod.pulse_set_level > modifier_set)
 				modifier_set = round(mod.pulse_set_level)
 
-			modifier_set = max(0, modifier_set)	// No setting to negatives.
+			if(!isnull(modifier_set))
+				modifier_set = max(0, modifier_set)	// No setting to negatives.
 
 			if(mod.pulse_modifier)
 				modifier_shift += mod.pulse_modifier

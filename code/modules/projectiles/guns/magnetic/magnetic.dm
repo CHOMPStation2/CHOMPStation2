@@ -310,7 +310,7 @@
 					for(var/mob/living/carbon/M in hear(max_range, get_turf(src)))
 						blitzed(get_turf(src), M, max_range, banglet)
 					new/obj/effect/effect/sparks(src.loc)
-					new/obj/effect/effect/smoke/illumination(src.loc, 5, range=30, power=30, color="#FFFFFF")
+					new/obj/effect/effect/smoke/illumination(loc, 5, 30, 30, "#FFFFFF")
 					spawn(2)
 						qdel(src)
 				if("blitzu")

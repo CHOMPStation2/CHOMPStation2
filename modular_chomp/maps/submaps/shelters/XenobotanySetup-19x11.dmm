@@ -250,6 +250,7 @@
 	},
 /obj/effect/floor_decal/corner/green/border,
 /obj/structure/table/glass,
+/obj/item/storage/box/botanydisk,
 /turf/simulated/floor/tiled/hydro,
 /area/survivalpod/superpose/XenoBotanySetup)
 "wn" = (
@@ -351,8 +352,6 @@
 "EE" = (
 /obj/machinery/portable_atmospherics/hydroponics,
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/hydro,
@@ -544,8 +543,6 @@
 /area/survivalpod/superpose/XenoBotanySetup)
 "WI" = (
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/plating,
@@ -563,8 +560,6 @@
 /obj/structure/grille,
 /obj/structure/window/titanium/full,
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,

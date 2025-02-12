@@ -112,10 +112,10 @@
 	set name = "Succumb to death"
 	set category = "IC.Game"
 	set desc = "Press this button if you are in crit and wish to die. Use this sparingly (ending a scene, no medical, etc.)"
-	var/confirm1 = tgui_alert(usr, "Pressing this button will kill you instantenously! Are you sure you wish to proceed?", "Confirm wish to succumb", list("No","Yes"))
+	var/confirm1 = tgui_alert(src, "Pressing this button will kill you instantenously! Are you sure you wish to proceed?", "Confirm wish to succumb", list("No","Yes"))
 	var/confirm2 = "No"
 	if(confirm1 == "Yes")
-		confirm2 = tgui_alert(usr, "Pressing this buttom will really kill you, no going back", "Are you sure?", list("Yes", "No")) //Swapped answers to protect from accidental double clicks.
+		confirm2 = tgui_alert(src, "Pressing this buttom will really kill you, no going back", "Are you sure?", list("Yes", "No")) //Swapped answers to protect from accidental double clicks.
 	if (src.health < 0 && stat != DEAD && confirm1 == "Yes" && confirm2 == "Yes") // Checking both confirm1 and confirm2 for good measure. I don't trust TGUI.
 		src.death()
 		to_chat(src, span_blue("You have given up life and succumbed to death."))
@@ -179,7 +179,7 @@
 
 //sort of a legacy burn method for /electrocute, /shock, and the e_chair
 /mob/living/proc/burn_skin(burn_amount)
-	if(istype(src, /mob/living/carbon/human))
+	if(ishuman(src))
 		//to_world("DEBUG: burn_skin(), mutations=[mutations]")
 		if(mShock in src.mutations) //shockproof
 			return 0
@@ -194,7 +194,7 @@
 				H.UpdateDamageIcon()
 		H.updatehealth()
 		return 1
-	else if(istype(src, /mob/living/silicon/ai))
+	else if(isAI(src))
 		return 0
 
 /mob/living/proc/adjustBodyTemp(actual, desired, incrementboost)
@@ -213,7 +213,7 @@
 		temperature -= change
 		if(actual < desired)
 			temperature = desired
-//	if(istype(src, /mob/living/carbon/human))
+//	if(ishuman(src))
 //		to_world("[src] ~ [src.bodytemperature] ~ [temperature]")
 	return temperature
 
@@ -744,21 +744,24 @@
 	return
 
 
-/mob/living/verb/Examine_OOC() //ChompEDIT - proc --> verb
+/mob/living/verb/Examine_OOC()
 	set name = "Examine Meta-Info (OOC)"
 	set category = "OOC.Game"
 	set src in view()
+	do_examine_ooc(usr)
+
+/mob/living/proc/do_examine_ooc(mob/user)
 	//VOREStation Edit Start - Making it so SSD people have prefs with fallback to original style.
 	if(CONFIG_GET(flag/allow_metadata))
 		if(ooc_notes)
-			ooc_notes_window(usr)
-//			to_chat(usr, span_filter_notice("[src]'s Metainfo:<br>[ooc_notes]"))
+			ooc_notes_window(user)
+//			to_chat(user, span_filter_notice("[src]'s Metainfo:<br>[ooc_notes]"))
 		else if(client)
-			to_chat(usr, span_filter_notice("[src]'s Metainfo:<br>[client.prefs.metadata]"))
+			to_chat(user, span_filter_notice("[src]'s Metainfo:<br>[client.prefs.read_preference(/datum/preference/text/living/ooc_notes)]"))
 		else
-			to_chat(usr, span_filter_notice("[src] does not have any stored infomation!"))
+			to_chat(user, span_filter_notice("[src] does not have any stored infomation!"))
 	else
-		to_chat(usr, span_filter_notice("OOC Metadata is not supported by this server!"))
+		to_chat(user, span_filter_notice("OOC Metadata is not supported by this server!"))
 	//VOREStation Edit End - Making it so SSD people have prefs with fallback to original style.
 
 	return
@@ -1036,7 +1039,7 @@
 		density = initial(density)
 	// CHOMPEdit Start - Rest passtable when crawling
 		if(passtable_reset)
-			passtable_reset = TRUE
+			passtable_reset = FALSE
 			pass_flags &= ~PASSTABLE
 		passtable_crawl_checked = FALSE
 	// CHOMPEdit End
@@ -1413,7 +1416,7 @@
 /mob/living/verb/mob_sleep()
 	set name = "Sleep"
 	set category = "IC.Game"
-	if(!toggled_sleeping && alert(src, "Are you sure you wish to go to sleep? You will snooze until you use the Sleep verb again.", "Sleepy Time", "No", "Yes") == "No")
+	if(!toggled_sleeping && tgui_alert(src, "Are you sure you wish to go to sleep? You will snooze until you use the Sleep verb again.", "Sleepy Time", list("No", "Yes")) != "Yes")
 		return
 	toggled_sleeping = !toggled_sleeping
 	to_chat(src, span_notice("You are [toggled_sleeping ? "now sleeping. Use the Sleep verb again to wake up" : "no longer sleeping"]."))

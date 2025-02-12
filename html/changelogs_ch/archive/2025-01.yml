@@ -1,0 +1,414 @@
+2025-01-01:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: record updates being applied without consent on ui close
+  Missile597:
+  - rscadd: 'Added new materials to the biogenerator list: Diethylamine, Unstable
+      Mutagen, Plant-B-Gone, Table Salt, Soy Sauce, Flora Disk, Floral Somatoray,
+      Kudzu Seeds, Random Exotic Seeds'
+  - balance: Lowered the costs of the fertilisers and botany materials to make them
+      easier to obtain. After all, the department uses these a lot.
+  whooshboom:
+  - rscadd: 'Added keybinds from TGstation to engineering (Ctrl-click: Toggle, Alt-click:
+      Max)'
+2025-01-02:
+  Asher-42:
+  - bugfix: adds modules to med solgov hardsuit, due to it using the wrong obj path.
+2025-01-03:
+  Aroliacue:
+  - maptweak: Patient rooms in medbay now have rad-shielding.
+  Asher-42:
+  - bugfix: fixed small rpator miner/cargo sprites.
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: fixed sample containers being able to hold more samples if you use the
+      scoop functions
+  FluffMedic:
+  - rscadd: Added more stuff to Tyr
+  - rscadd: Some bonu stuff for wilderness
+  SilencedMP5A5:
+  - rscadd: Assorted Event mobs
+  - rscadd: Some Event related turfs
+  - rscadd: Event mob related sounds
+  - rscadd: A bunch of related icons
+2025-01-04:
+  CHOMPStation2StaffMirrorBot:
+  - qol: added consolidated versions of the campbell tattoos and modular longsock
+      markings
+  - rscadd: icon states for the black half-mask on vulp-base icons
+  FluffMedic:
+  - bugfix: fixed t-12 and  SR-25 Carbine ammo
+  Kashargul:
+  - bugfix: bonfire examine
+  whooshboom:
+  - qol: Reverts marish to audible condition. Happy marring!
+2025-01-05:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Drones now use robotact
+  - bugfix: A few byond:// hrefs for 516
+  FluffMedic:
+  - bugfix: Vepr Cell fix
+  whooshboom:
+  - rscadd: Similar keybinds to the recent pump additions are now on most atmospheric
+      devices.
+  - bugfix: Fixes issue where using the keybind on a pump would not update the icon.
+2025-01-06:
+  CHOMPStation2StaffMirrorBot:
+  - qol: Tgui-say colors adjusted for better contrast
+  - qol: renamed antagonism tag and hid most of the options there as they're not relevant
+      for our purposes
+  - qol: adds mirrors to all resleeving and autoresleeving rooms
+  - rscadd: Fighter Exosuits now have landing gear.
+  - rscadd: Science can now build and assemble the Pinnace and Baron Fighter Exosuits.
+  Kashargul:
+  - bugfix: over 10 known shadekin exploits...
+2025-01-07:
+  Kashargul:
+  - bugfix: arc vial projectiles not working
+2025-01-08:
+  Aroliacue:
+  - bugfix: Fixed exosuit fighters having an additional 'stomp' stepsound.
+  Asher-42:
+  - rscadd: protean borg (dullahan)
+  - rscadd: dullahan command sprite thats job locked to protean / command only.
+  Kashargul:
+  - bugfix: lingering fire now caps out at the fire max temp
+  aKromatopzia:
+  - image: smolraptors can curl up when resting; and miner lost its purple collar.
+  whooshboom:
+  - rscadd: CO2 Breather trait, CO2 tanks, and loadout double-tanks.
+2025-01-09:
+  FluffMedic:
+  - rscadd: Remove alien vests from tyr and added tyr version. Sprites WIP
+  - rscadd: Event BH mecha that spams random fire.
+  - balance: Tyr alien weapons are a smidhe better
+  - bugfix: Janus uses the right projectiles for phase 3 now
+  - bugfix: tyr spawn not being protected
+  Kashargul:
+  - bugfix: reagents effects applying to the wrong mob types
+  tacoguy7765093:
+  - rscadd: Added malignant organs, dangerous organs gotten through radiation and
+      random events needing surgery to remove.
+  - rscadd: Added engineered organs, applying organ lattices in mobs to be mutated
+      once fully grown.
+  - rscadd: Exotic organs can be sold via cargo. Freezer crate recommended.
+  - rscadd: Freezer crate for cargo has been added under the supply tab.
+2025-01-10:
+  Asher-42:
+  - bugfix: fixed the protean dullahan rest sprite for boob plate version
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: Massive overhaul to the backend of character creation. Any visible changes
+      are considered bugs.
+  Kashargul:
+  - code_imp: cleans up event defines
+2025-01-11:
+  Asher-42:
+  - bugfix: fixed sloog head not coloring right.
+  FluffMedic:
+  - rscadd: Removed Starhunter Challenge, put functional eclipse boss thing in its
+      place
+2025-01-13:
+  CHOMPStation2StaffMirrorBot:
+  - rscdel: removed vestigial Global tab in Character Setup, merged remaining pAI
+      setup functionality into Special Roles tab
+  - rscadd: added full chest fluff (vulp) and inner arms markings
+  - rscadd: Exosuit Fighters now have exclusive hull and armor types, with a faster
+      top speed at the cost of reduced durability.
+  - rscadd: Exosuit Fighters now have collision mechanics. Fly responsibly.
+  - rscadd: Exosuit Fighters have new enter sound effects and a special collision
+      effect.
+  - rscadd: Pinnace has been rebalanced into a weak, entry-level fighter. Has reduced
+      health compared to other fighters, but can mount weapons and fly in atmosphere.
+  - qol: altered gorka uniforms for less icon states and easier adding of new types,
+      added plain, service, and janitor subtypes
+  - rscadd: added 'can_remove' bool to accessories, which defaults to TRUE and does
+      exactly what it sounds like
+  TheGreatKitsune:
+  - rscadd: Toggle verbs for growing/shrinking traits
+2025-01-14:
+  Kashargul:
+  - bugfix: catslugs can now actually use wawa
+  tacoguy7765093:
+  - rscadd: Added new sprite option for zorgoia simplemob.
+2025-01-15:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: sheet snatcher being able to have larger than the capacity would allow
+      stacks inserted when being close to full and getting a new type
+  - bugfix: missing overrides in some robot guns
+2025-01-16:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: runtimes when spam upgrading griders
+  - rscadd: Added Blob Spores symptom
+  - rscadd: Added vaccine bottles, sellable to CentCom in a freezer, made in the PanDEMIC
+  - rscadd: Added supply packs with normal and minor experimental diseases
+  - qol: PanDEMIC now takes syringes as well
+  - qol: Mobs may be picked as targets with Bluespace Sneeze
+  - qol: Many symptoms that affected carbon now affect mobs too
+  - balance: All diseases will cure themselves eventually, as the body works up immunity
+  - balance: Shuffled the list of cures for advanced diseases
+  - balance: PanDEMIC consumes 5 blood when making vaccines now
+  - balance: Reduced the health and damage of macrophages, adding more depending on
+      the disease they're based on
+  - balance: Macrophages now shrivel up when killed, leaving behind some of their
+      bits on the ground, or in someone's stomach if eaten.
+  - balance: Macrophages would rather go after non-infected people
+  - balance: Macrophages will take a lot of damage if splashed with Space Cleaner
+  - bugfix: Fixed equipment permeability not being taken into account when attempting
+      to resist viruses
+  - bugfix: Fixed overactive Adrenal Gland syndrome not adding Hyperzine
+  - bugfix: Fixed fake GBS not showing some of the messages
+  - admin: Added various spawneable culture bottles
+  - code_imp: Added onDeath() to viruses and symptoms
+  - code_imp: Added random experimental disease and minor random experimental disease
+      datum
+  - code_imp: Added random macrophage disease datum and random blob spores datum
+  - code_imp: Added CAN_NOT_POPULATE for diseases to be avoided in random events
+  - code_imp: Sanitized many of the symptoms when affecting carbon mobs
+  - code_imp: Disease outbreak now uses disease flags instead of a list
+  - bugfix: micros stuck to bare feet breaking magboots
+  - rscadd: Added the ability to disable spawning with a jacket slot item.
+  - bugfix: Rejuvenante not updating a destroyed robot sprite
+  - rscadd: Added ACE Security outfit (undersuit + armour) for security; undersuit
+      is available in loadout uniform selector, full outfit available in officer and
+      warden lockers
+  - bugfix: an issue where the crafting ui could get stuck in a busy state if closed
+      during crafting
+  Kashargul:
+  - bugfix: an issue where crawling could reset table passing continuously
+  tacoguy7765093:
+  - rscdel: Lots of bloat worth of bullet chambers have been removed
+  - rscdel: Ammo simplification, back to calibers.
+  - qol: Caliber simplification.
+2025-01-17:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: runtime flood
+2025-01-18:
+  Asher-42:
+  - rscadd: adds import export button to radial hud for colors and part selection.
+  - bugfix: code rehaul
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Makes robot decals show up properly
+  - bugfix: Fixes advanced diseases being uncurable
+  - qol: Changed the name of advanced Cold and Flu to Engineered Cold and Engineered
+      Flu
+  - qol: Improves screen shake effect
+  - balance: Changed fitness machines to drain your weight ten times faster.
+  - balance: Changed fitness structures to drain your weight.
+  - rscadd: Added a craftable variant of the leash, made from a stack of cable coils
+      (at least 3 cables in it).
+  - rscadd: Added silver and white jackboots to loadouts
+  - bugfix: Fixed the traditional kimono being unselectable
+  - refactor: Cleaned up _vr files for loadouts
+  Hunter-Dovetail:
+  - rscadd: cow_head-head
+  - rscadd: 'cow_nose-head
+
+      add smallchubbybelly-torso'
+  Kashargul:
+  - bugfix: light handling going missing after area changes
+  - bugfix: disable long vore while incorporeal
+  Mitryll:
+  - rscadd: Added yip, squeal and tailthump emotes
+2025-01-19:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: cleans up some unhandled references
+  - bugfix: some more 516 windows
+  Kashargul:
+  - bugfix: a bug that could cause runtimes if a non human tried to enter VR
+  NickBelmont:
+  - maptweak: Added a box of gene disks to the XenobotanySetup outsider shelter.
+2025-01-20:
+  Hunter-Dovetail:
+  - code_imp: '"cow_head-head", and "cow_nose-head" changed to "bovine_snout-head"
+      and "bovine_nose-head", to avoid confusion and overwriting existing "cow nose"
+      body marking.'
+  - bugfix: '"chubby belly, small" by separating the sprite via "torso" and groin",
+      and improved its look and greyscaling,'
+  - code_imp: altered the dmi for smallchubbybelly for visual improvement, and to
+      hide protruding hand sprites when facing sideways.
+  - image: visual and greyscaling improvements to bovine_snout and bovine_nose
+  Kashargul:
+  - bugfix: honkhounds losing EAL on module selection after a reset
+2025-01-21:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: more 516 browser windows
+  Drathek:
+  - bugfix: Fixed escape pod UI saying ERROR instead of CLOSED for its hatch
+  Kashargul:
+  - bugfix: some invisible icons
+2025-01-22:
+  Hunter-Dovetail:
+  - rscadd: smallchubbybelly-l_hand and -r_hand
+  - image: improvements to hippo_upperjaw-head, hippo_lowerjaw-head, bovine_snout-head,
+      bovine_nose-head
+2025-01-24:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: tgui color picker for anyone using 516 or later
+  - bugfix: more missing html tags
+  - balance: adjusted the concussion maul for better power efficiency and slightly
+      faster attack cooldown, and added a detailed info-desc
+  - bugfix: an issue where the supermatter was not announcing safe operation conditions
+      after going critical
+  FluffMedic:
+  - balance: tyr things rebalanced
+  NickBelmont:
+  - code_imp: Changes tgui/components and tgui/format to their tgui-core equivalents,
+      and replaces a Flex element with Stack
+  TheGreatKitsune:
+  - qol: doorbell functionality moved to ctrl-click.
+2025-01-25:
+  Kashargul:
+  - code_imp: migrates our chomp UIs to tgui-core
+2025-01-26:
+  Kashargul:
+  - admin: heavily improves the ticket panel
+  Verkister:
+  - rscadd: Added large shark tails.
+2025-01-27:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: cleans up some destroy and new
+  - rscadd: option to test robot dmis without recompiling the game
+  - bugfix: camera qdel failures on disassembling
+  - image: added top surgery, body tonage and gradient markings
+  - image: fixed stray pixel on blue singer outfit
+  - bugfix: partially fixes hardsuits eating gloves
+  - bugfix: egg plants not mutating to the right type
+  - rscadd: added new variants of all three vulp earsets with colourable eartips
+  - rscadd: added satin's tiger taur parts (normal, fat, and vwag-toggleable)
+  - refactor: de-kaleidoscope'd tails/ears/etc.
+  - refactor: Changes how xenoarch generation works to make it take up less memory.
+      Leaves an EXTREME amount of comments to help future maintainers dig through
+      the mess that is xenoarch code.
+  - qol: Makes the Artifact Analyzer give you actually accurate data that isn't completely
+      cluttered. Tells you what the artifact does (vaguely), its activation requirements,
+      and what range it does it in.
+  - bugfix: Fixes the Artifact Harvester so it actually works for ALL artifacts and
+      can harvest object artifacts properly.
+  - bugfix: Fixes the Artifact Harvester and makes it able to harvest artifacts that
+      have more than 1 effect
+  - code_imp: Added a debug proc to the game to allow spawning minor artifacts for
+      easy testing & admin events.
+  - code_imp: ' Changes /obj/item/New() to /obj/item/Initialize(mapload)'
+  - rscdel: Removes 'anomaly depth' and 'anomaly dispersion', meaning the depth of
+      the artifact is how deep you need to dig. No longer has a range.
+  - qol: Removes the Suspension Generator requirement for artifacts. Can now be excavated
+      without it.
+  - qol: Makes the excavation drill faster and able to go down to 60 depth
+  - qol: Gives the xenoarcheology closet the excavation drill at spawn.
+  - qol: Expands the list of reagents that can be used to activate chemical requirements
+      for artifacts.
+  - qol: Rocky Debris no longer spawns randomly.
+  - qol: Rocky Debris only spawns when an artifact is held within the rock.
+  - qol: LARGE artifacts can no longer be accidentally destroyed. This means miners
+      will no longer eat rads to the face and upset science at the same time.
+  - qol: Strange Rocks no longer require a brush/welder to be used. Any pick will
+      work.
+  - qol: Makes plant artifacts give a description to say that they should be given
+      to xenoflora
+  - qol: Massively lowers the rate of fossils and bones spawning.
+  - qol: Removes a lot of random RNG that made no sense, like touching having a 75%
+      chance to not activate a touch artifact.
+  - qol: Makes it so you can touch artifacts with gloves to activate them, but not
+      bump them if you have gloves.
+  - refactor: Condenses all the gas artifacts into one artifact type & file.
+  - refactor: Condenses good/bad/cannible feel, hot/cold atmos, heal/harm, and synth
+      heal/harm into singular types instead of duplicated files.
+  - code_imp: Changes all istype to ishuman, isrobot, ismob where appropriate in the
+      xenoarch code.
+  - code_imp: Changes Bold to span_bold() where appropriate in the xenoarch code.
+  - rscadd: Adds a wrench to the xenoarch supply pack
+  - rscadd: Adds the xenoarcheology depth scanner to mining vendor. (Allows miners
+      to excavate, but not locate artifacts to prevent jobstealing.)
+  - bugfix: Makes the xenoarch syringe find no longer go invisible
+  - bugfix: Fixes a bug where sometimes, nothing would spawn when an artifact was
+      excavated.
+  - bugfix: Fixes a bug where sometimes a large artifact would have the 'datum/artifact_effect/extreme'
+      effect which did nothing.
+  - bugfix: Fixes a server crashing bug where - very rarely - a gravity anomaly would
+      be triggered by touch, resulting in an infinite loop. Added comments to tell
+      you not to touch it.
+  - rscadd: Sets of artifacts can now spawn. Primarily used for xeno organs and cult
+      armor.
+  - rscadd: Makes it so Human Remains finds will spawn with a random organ
+  - rscadd: Makes it so Alien Remains finds will spawn with a xenomorph plasma vessel
+      + xenomorph organ
+  - rscadd: Makes it so Robot Remains finds will spawn a robot drone pod (Allowing
+      for ghosts to take control of it and become a vore robot)
+  - rscadd: Makes it so Gun Finds (energy and projectile) will spawn with randomized
+      projectiles.
+  - rscadd: Makes it so xenoarch syringe find will spawn with random reagents
+  - rscadd: Makes it so xenoarch bowls/urns will generate random reagents
+  - rscadd: Swaps the Cult Blade spawn with an Artifact Blade that has a collection
+      of unique upsides and downsides. Just don't try to hit your fellow crew with
+      it!
+  - rscadd: Makes the anomaly scanner do a 'wavelength change' if the Z level runs
+      out of small/large artifacts. This creates more digsites around the user.
+  - rscadd: Adds a new 'power generator' artifact. Commented out until some good sounds
+      can be procured.
+  - rscdel: Deletes a lot of useless junk from the spawnpool, like cutlery, rods,
+      and shards.
+  - rscadd: Makes 'material stack' drops found via xenoarch select a random material
+      from the game (with a blacklist) instead of a few select ones.
+  - rscadd: Expanded the alien tool drops and also allows them to spawn with an alien
+      equipment piece as well.
+  - rscadd: Allows tomes to be unearthed in xenoarch. (No functionality, just fluff)
+  - rscadd: Makes any objects that have subtypes have a chance of having the subtype
+      spawn in.
+  - balance: Makes it so the gasmask actually spawns a unique one (poltergeist or
+      voice) instead of just a normal, mundane gasmask.
+  - bugfix: Makes it so the 'cult armor' artifact actually spawns armor
+  - bugfix: Makes the shock maul play a different sound when powered down and used
+      on a rock.
+  - bugfix: Makes Shadow wrights not sit in nullspace forever after activating
+  - rscadd: Makes shadow wrights give you some text when they KO you instead of just
+      disappearing
+  - balance: Adjusted xenoarch large artifact spawnrates.
+  - balance: More xenoarch large artifacts spawn in the universe now.
+  - balance: Makes the vampiric artifact and vampiric statue give you rewards for
+      feeding them instead of giving you pain and suffering through spawning mobs
+      on top of you.
+  - rscadd: Adds Catborgs
+  - rscadd: Adds Kittyborgs
+  - rscadd: Adds a Gryphonborg
+  - code_imp: change the logout check lists to only use the smaller ones
+  - bugfix: Fixed hanner beast form and reverting spawning on turf rather than in
+      the same location as the hanner.
+  - rscadd: Added a new "signpost_fake" structure that looks like other sign posts,
+      but without the teleporting functionality.
+  - maptweak: Fixed signposts that would break your character in the fantasy redgate
+      map.
+  - rscadd: topic and click limits
+  - qol: adds filters and sorting to the crew monitor
+  - rscadd: Added a new "Private Notes" option to character setup.
+  - rscadd: Added a new "Private Notes" verb to the IC tab.
+  - qol: Moved memory "Note" verbs to a new Notes sub category in the IC tab alongside
+      the new Private Notes function.
+  - bugfix: more icon and map issues
+  Drathek Rykka-Stormheart:
+  - rscadd: Added auxtools support for debugging in VSC (currently only 515)
+2025-01-28:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: A few misc xenoarch fixes. Enables the dnaswitch artifact
+  - bugfix: crewMonitor
+  - bugfix: Teshari underfluff colors properly now
+  - bugfix: Altevian ears among other wings, tails, and tuar halves show properly
+  - code_imp: Xenoarch stuff spawns better
+  - qol: Syringe guns can be put in holsters
+2025-01-29:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: properly enables dnaswitch artifact
+  - bugfix: fixes a to_world
+  - bugfix: Fixed resting sprites for medical and security catborgs.
+  ShadowLarkens Kashargul:
+  - code_imp: moves our UIs to tgui core
+2025-01-30:
+  Kashargul:
+  - code_imp: malignant organs -> adjust_nutrition
+2025-01-31:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Added a warning message if clients are older than 516, warning them that
+      the game will soon update to version 516 and that they will experience issues
+      in the meantime, and eventually not be able to connect at all.
+  - rscadd: 'adds the angler bulb to the sprite DM whose name i immediately forgor
+
+      image:adds angler icon states from caustic cove to ears.dmi'
+  - rscadd: Added a simple recolourable wrestling mask to the loadout for the upcoming
+      event.

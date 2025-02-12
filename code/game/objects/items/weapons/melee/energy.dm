@@ -112,7 +112,7 @@
 	else
 		activate(user)
 
-	if(istype(user,/mob/living/carbon/human))
+	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		H.update_inv_l_hand()
 		H.update_inv_r_hand()
@@ -170,7 +170,7 @@
 	cut_overlays()		//So that it doesn't keep stacking overlays non-stop on top of each other
 	if(active)
 		add_overlay(blade_overlay)
-	if(istype(usr,/mob/living/carbon/human))
+	if(ishuman(usr))
 		var/mob/living/carbon/human/H = usr
 		H.update_inv_l_hand()
 		H.update_inv_r_hand()
@@ -188,10 +188,12 @@
 		return
 
 	if(tgui_alert(user, "Are you sure you want to recolor your blade?", "Confirm Recolor", list("Yes", "No")) == "Yes")
-		var/energy_color_input = input(user,"","Choose Energy Color",lcolor) as color|null
+		var/energy_color_input = tgui_color_picker(user,"","Choose Energy Color",lcolor)
 		if(energy_color_input)
 			lcolor = sanitize_hexcolor(energy_color_input)
 		update_icon()
+		if(active)
+			set_light(lrange, lpower, lcolor)
 
 /obj/item/melee/energy/examine(mob/user)
 	. = ..()
@@ -279,7 +281,7 @@
 
 	projectile_parry_chance = 65
 
-/obj/item/melee/energy/sword/dropped(var/mob/user)
+/obj/item/melee/energy/sword/dropped(mob/user)
 	..()
 	if(!istype(loc,/mob))
 		deactivate(user)
@@ -453,13 +455,14 @@
 	user.drop_from_inventory(src)
 	spawn(1) if(src) qdel(src)
 
-/obj/item/melee/energy/blade/dropped()
+/obj/item/melee/energy/blade/dropped(mob/user)
+	..()
 	spawn(1) if(src) qdel(src)
 
 /obj/item/melee/energy/blade/process()
 	if(!creator || loc != creator || !creator.item_is_in_hands(src))
 		// Tidy up a bit.
-		if(istype(loc,/mob/living))
+		if(isliving(loc))
 			var/mob/living/carbon/human/host = loc
 			if(istype(host))
 				for(var/obj/item/organ/external/organ in host.organs)

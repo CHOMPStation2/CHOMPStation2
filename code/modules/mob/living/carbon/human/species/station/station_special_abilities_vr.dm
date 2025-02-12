@@ -215,7 +215,7 @@
 						var/list/slots_free = list(ui_lhand,ui_rhand)
 						if(l_hand) slots_free -= ui_lhand
 						if(r_hand) slots_free -= ui_rhand
-						if(istype(src,/mob/living/carbon/human))
+						if(ishuman(src))
 							var/mob/living/carbon/human/H = src
 							if(!H.belt) slots_free += ui_belt
 							if(!H.l_store) slots_free += ui_storage1
@@ -1116,7 +1116,7 @@
 		to_chat(src, span_warning("You are not a weaver! How are you doing this? Tell a developer!"))
 		return
 
-	var/new_silk_color = input(src, "Pick a color for your woven products:","Silk Color", species.silk_color) as null|color
+	var/new_silk_color = tgui_color_picker(src, "Pick a color for your woven products:","Silk Color", species.silk_color)
 	if(new_silk_color)
 		species.silk_color = new_silk_color
 
@@ -1263,13 +1263,13 @@
 	set category = "Abilities.Vore"
 	set desc = "Grab a target with any of your appendages!"
 
-	if(stat || paralysis || weakened || stunned || world.time < last_special) //No tongue flicking while stunned.
+	if(stat || paralysis || weakened || stunned || world.time < last_special || is_incorporeal()) //No tongue flicking while stunned. // CHOMPEdit
 		to_chat(src, span_warning("You can't do that in your current state."))
 		return
 
 	last_special = world.time + 10 //Anti-spam.
 
-	if (!istype(src, /mob/living))
+	if (!isliving(src))
 		to_chat(src, span_warning("It doesn't work that way."))
 		return
 
@@ -1278,7 +1278,7 @@
 		return
 
 	if(choice == "Color") //Easy way to set color so we don't bloat up the menu with even more buttons.
-		var/new_color = input(src, "Choose a color to set your appendage to!", "", appendage_color) as color|null
+		var/new_color = tgui_color_picker(src, "Choose a color to set your appendage to!", "", appendage_color)
 		if(new_color)
 			appendage_color = new_color
 
@@ -1294,7 +1294,7 @@
 		var/list/targets = list() //IF IT IS NOT BROKEN. DO NOT FIX IT.
 
 		for(var/mob/living/L in range(5, src))
-			if(!istype(L, /mob/living)) //Don't eat anything that isn't mob/living. Failsafe.
+			if(!isliving(L)) //Don't eat anything that isn't mob/living. Failsafe.
 				continue
 			if(L == src) //no eating yourself. 1984.
 				continue
@@ -1310,7 +1310,7 @@
 		if(!target)
 			return
 
-		if(!istype(target, /mob/living)) //Safety.
+		if(!isliving(target)) //Safety.
 			to_chat(src, span_warning("You need to select a living target!"))
 			return
 
@@ -1360,7 +1360,7 @@
 
 /obj/item/projectile/beam/appendage/generate_hitscan_tracers()
 	if(firer) //This neat little code block allows for C O L O R A B L E tongues! Correction: 'Appendages'
-		if(istype(firer,/mob/living))
+		if(isliving(firer))
 			var/mob/living/originator = firer
 			color = originator.appendage_color
 	..()
@@ -1368,10 +1368,10 @@
 /obj/item/projectile/beam/appendage/on_hit(var/atom/target)
 	if(target == firer) //NO EATING YOURSELF
 		return
-	if(istype(target, /mob/living))
+	if(isliving(target))
 		var/mob/living/M = target
 		var/throw_range = get_dist(firer,M)
-		if(istype(firer, /mob/living)) //Let's check for any alt settings. Such as: User selected to be thrown at target.
+		if(isliving(firer)) //Let's check for any alt settings. Such as: User selected to be thrown at target.
 			var/mob/living/F = firer
 			if(F.appendage_alt_setting == 1)
 				F.throw_at(M, throw_range, firer.throw_speed, F) //Firer thrown at target.
@@ -1386,7 +1386,7 @@
 	if(istype(target, /obj/item/)) //We hit an object? Pull it. This can only happen via admin shenanigans such as a gun being VV'd with this projectile.
 		var/obj/item/hit_object = target
 		if(hit_object.density || hit_object.anchored)
-			if(istype(firer, /mob/living))
+			if(isliving(firer))
 				var/mob/living/originator = firer
 				originator.Weaken(2) //If you hit something dense or anchored, fall flat on your face.
 				originator.visible_message(span_warning("\The [originator] trips over their self and falls flat on their face!"), \
@@ -1396,7 +1396,7 @@
 		else
 			hit_object.throw_at(firer, throw_range, hit_object.throw_speed, firer)
 	if(istype(target, /turf/simulated/wall) || istype(target, /obj/machinery/door) || istype(target, /obj/structure/window)) //This can happen normally due to odd terrain. For some reason, it seems to not actually interact with walls.
-		if(istype(firer, /mob/living))
+		if(isliving(firer))
 			var/mob/living/originator = firer
 			originator.Weaken(2) //Hit a wall? Whoops!
 			originator.visible_message(span_warning("\The [originator] trips over their self and falls flat on their face!"), \
@@ -1485,7 +1485,7 @@
 
 	last_special = world.time + 10 //Anti-spam.
 
-	if (!istype(src, /mob/living))
+	if (!isliving(src))
 		to_chat(src, span_warning("It doesn't work that way."))
 		return
 
@@ -1493,7 +1493,7 @@
 		var/list/targets = list() //IF IT IS NOT BROKEN. DO NOT FIX IT.
 
 		for(var/mob/living/L in range(5, src))
-			if(!istype(L, /mob/living)) //Don't eat anything that isn't mob/living. Failsafe.
+			if(!isliving(L)) //Don't eat anything that isn't mob/living. Failsafe.
 				continue
 			if(L == src) //no eating yourself. 1984.
 				continue
@@ -1509,7 +1509,7 @@
 		if(!target)
 			return
 
-		if(!istype(target, /mob/living)) //Safety.
+		if(!isliving(target)) //Safety.
 			to_chat(src, span_warning("You need to select a living target!"))
 			return
 
@@ -1616,7 +1616,7 @@
 					You can also bite synthetics, but due to how synths work, they won't have anything injected into them.
 					<br>
 					"}
-		src << browse(output,"window=chemicalrefresher")
+		src << browse("<html>[output]</html>","window=chemicalrefresher")
 		return
 	else
 		var/list/targets = list() //IF IT IS NOT BROKEN. DO NOT FIX IT. AND KEEP COPYPASTING IT  (Pointing Rick Dalton: "That's my code!" ~CL)

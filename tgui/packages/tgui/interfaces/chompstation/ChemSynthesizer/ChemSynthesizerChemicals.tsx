@@ -1,6 +1,7 @@
-import { useBackend } from '../../../backend';
-import { Box, Button, Flex, Section } from '../../../components';
-import { BeakerContents } from '../.././common/BeakerContents';
+import { useBackend } from 'tgui/backend';
+import { BeakerContents } from 'tgui/interfaces/common/BeakerContents';
+import { Box, Button, Section, Stack } from 'tgui-core/components';
+
 import { Data } from './types';
 
 export const ChemSynthesizerChemicals = (props) => {
@@ -20,11 +21,11 @@ export const ChemSynthesizerChemicals = (props) => {
     flexFillers.push(true);
   }
   return (
-    <Flex direction="column">
+    <Stack direction="column">
       <Section title="Cartridge Reagents" flexGrow>
-        <Flex direction="row" wrap="wrap" height="100%" align="flex-start">
+        <Stack direction="row" wrap="wrap" height="100%" align="flex-start">
           {chemicals.map((c, i) => (
-            <Flex.Item key={i} grow="1" m={0.2} basis="40%" height="20px">
+            <Stack.Item key={i} grow m={0.2} basis="40%" height="20px">
               <Button
                 icon="arrow-circle-down"
                 width="100%"
@@ -34,12 +35,12 @@ export const ChemSynthesizerChemicals = (props) => {
               >
                 {c.title + ' (' + c.amount + ')'}
               </Button>
-            </Flex.Item>
+            </Stack.Item>
           ))}
           {flexFillers.map((_, i) => (
-            <Flex.Item key={i} grow="1" basis="25%" height="20px" />
+            <Stack.Item key={i} grow basis="25%" height="20px" />
           ))}
-        </Flex>
+        </Stack>
       </Section>
       <Section title="Reaction Vessel">
         {rxn_vessel.length > 0 ? (
@@ -50,7 +51,6 @@ export const ChemSynthesizerChemicals = (props) => {
       </Section>
       <Section
         title="Catalyst"
-        flex="content"
         minHeight="25%"
         buttons={
           <Box>
@@ -74,6 +74,6 @@ export const ChemSynthesizerChemicals = (props) => {
           beakerContents={catalyst_reagents}
         />
       </Section>
-    </Flex>
+    </Stack>
   );
 };

@@ -193,7 +193,7 @@
 
 	else if (user.a_intent == I_HURT)
 
-		if (istype(user,/mob/living/carbon/human))
+		if (ishuman(user))
 			var/mob/living/carbon/human/H = user
 			if(H.species.can_shred(H))
 				attack_generic(H,25)
@@ -247,7 +247,7 @@
 	// Slamming.
 	if (istype(W, /obj/item/grab) && get_dist(src,user)<2)
 		var/obj/item/grab/G = W
-		if(istype(G.affecting,/mob/living))
+		if(isliving(G.affecting))
 			var/mob/living/M = G.affecting
 			var/state = G.state
 			qdel(W)	//gotta delete it here because if window breaks, it won't get deleted
@@ -620,7 +620,7 @@
 		// Otherwise fall back to asking them... and remind them what the current ID is.
 		if(id)
 			to_chat(user, "The window's current ID is [id].")
-		var/t = sanitizeSafe(input(user, "Enter the new ID for the window.", src.name, null), MAX_NAME_LEN)
+		var/t = sanitizeSafe(tgui_input_text(user, "Enter the new ID for the window.", src.name, id), MAX_NAME_LEN)
 		if(t && in_range(src, user))
 			src.id = t
 			to_chat(user, span_notice("The new ID of \the [src] is '[id]'."))

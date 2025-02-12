@@ -15,7 +15,7 @@
 	if(!user)
 		return
 	if((user.mind && !wizards.is_antagonist(user.mind)))
-		to_chat(usr, span_warning("You stare at the book but cannot make sense of the markings!"))
+		to_chat(user, span_warning("You stare at the book but cannot make sense of the markings!"))
 		return
 
 	user.set_machine(src)
@@ -78,7 +78,7 @@
 		// END AUTOFIX
 		if(op)
 			dat += "<A href='byond://?src=\ref[src];spell_choice=rememorize'>Re-memorize Spells</A><BR>"
-	user << browse(dat, "window=radio")
+	user << browse("<html>[dat]</html>", "window=radio")
 	onclose(user, "radio")
 	return
 
@@ -88,7 +88,7 @@
 
 	if(H.stat || H.restrained())
 		return
-	if(!istype(H, /mob/living/carbon/human))
+	if(!ishuman(H))
 		return 1
 
 	if(H.mind.special_role == JOB_APPRENTICE)
@@ -100,7 +100,7 @@
 		if(href_list["spell_choice"])
 			if(href_list["spell_choice"] == "rememorize")
 				var/area/wizard_station/A = locate()
-				if(usr in A.contents)
+				if(H in A.contents)
 					uses = max_uses
 					H.spellremove()
 					temp = "All spells have been removed. You may now memorize a new set of spells."
@@ -404,7 +404,7 @@
 	desc = "This book is more horse than your mind has room for."
 
 /obj/item/spellbook/oneuse/horsemask/recoil(mob/living/carbon/user as mob)
-	if(istype(user, /mob/living/carbon/human))
+	if(ishuman(user))
 		to_chat(user, "<font size='15' color='red'><b>HOR-SIE HAS RISEN</b></font>")
 		var/obj/item/clothing/mask/horsehead/magichead = new /obj/item/clothing/mask/horsehead
 		magichead.canremove = FALSE		//curses!

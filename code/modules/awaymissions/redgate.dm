@@ -30,7 +30,7 @@
 
 /obj/structure/redgate/proc/teleport(var/mob/M as mob)
 	var/keycheck = TRUE
-	if (!istype(M,/mob/living))		//We only want mob/living, no bullets or mechs or AI eyes or items
+	if (!isliving(M))		//We only want mob/living, no bullets or mechs or AI eyes or items
 		if(is_type_in_list(M, exceptions))
 			keycheck = FALSE		//we'll allow it
 		else
@@ -54,7 +54,7 @@
 	var/turf/ourturf = find_our_turf(M)		//Find the turf on the opposite side of the target
 	if(!ourturf.check_density(TRUE,TRUE))	//Make sure there isn't a wall there
 		M.unbuckle_all_mobs(TRUE)
-		if(istype(M,/mob/living) && M.pulling)
+		if(isliving(M) && M.pulling)
 			var/atom/movable/pulled = M.pulling
 			M.stop_pulling()
 			playsound(src,'sound/effects/ominous-hum-2.ogg', 100,1)
@@ -1489,7 +1489,7 @@
 
 /*
 //TODO - make this not trigger when the flag is returned to its original location
-/obj/item/laserdome_flag/dropped()
+/obj/item/laserdome_flag/dropped(mob/user)
 	. = ..()
 	global_announcer.autosay("[src] dropped!","Laserdome Announcer","Entertainment")
 */
@@ -1654,7 +1654,7 @@
 
 /*
 //TODO- make this not trigger when the ball is thrown or dunked, only when it's actually dropped
-/obj/item/laserdome_hyperball/dropped()
+/obj/item/laserdome_hyperball/dropped(mob/user)
 	. = ..()
 	global_announcer.autosay("[capitalize(last_team)] fumble!","Laserdome Announcer","Entertainment")
 */

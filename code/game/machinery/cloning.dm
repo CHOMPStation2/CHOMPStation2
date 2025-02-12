@@ -14,7 +14,7 @@
 		if((M.stat != 2) || (!M.client))
 			continue
 		//They need a brain!
-		if(istype(M, /mob/living/carbon/human))
+		if(ishuman(M))
 			var/mob/living/carbon/human/H = M
 			if(!H.has_brain())
 				continue
@@ -130,9 +130,9 @@
 
 	if(!R.dna)
 		H.dna = new /datum/dna()
-		H.dna.real_name = H.real_name
+		qdel_swap(H.dna, new /datum/dna())
 	else
-		H.dna = R.dna
+		qdel_swap(H.dna, R.dna)
 	H.UpdateAppearance()
 	H.sync_organ_dna()
 	if(heal_level < 60)
@@ -407,15 +407,12 @@
 		mess = 1
 		update_icon()
 		occupant.ghostize()
-		spawn(5)
-			qdel(occupant)
-	return
+		QDEL_IN(occupant, 0.5 SECONDS)
 
-/obj/machinery/clonepod/relaymove(mob/user as mob)
+/obj/machinery/clonepod/relaymove(mob/user)
 	if(user.stat)
 		return
 	go_out()
-	return
 
 /obj/machinery/clonepod/emp_act(severity)
 	if(prob(100/severity))
@@ -456,8 +453,8 @@
 		icon_state = "pod_g"
 
 
-/obj/machinery/clonepod/full/New()
-	..()
+/obj/machinery/clonepod/full/Initialize()
+	. = ..()
 	for(var/i = 1 to container_limit)
 		containers += new /obj/item/reagent_containers/glass/bottle/biomass(src)
 

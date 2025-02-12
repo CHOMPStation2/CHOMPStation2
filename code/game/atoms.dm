@@ -39,7 +39,7 @@
 	//Detective Work, used for the duplicate data points kept in the scanners
 	var/list/original_atom
 	// Track if we are already had initialize() called to prevent double-initialization.
-	//var/initialized = FALSE CHOMPEdit moved to flag
+	//var/initialized = FALSE // using the atom flags
 
 	/// Last name used to calculate a color for the chatmessage overlays
 	var/chat_color_name
@@ -91,9 +91,9 @@
 /atom/proc/Initialize(mapload, ...)
 	if(QDELETED(src))
 		stack_trace("GC: -- [type] had initialize() called after qdel() --")
-	if(flags & ATOM_INITIALIZED) //CHOMPEdit moved initialized to flag
+	if(flags & ATOM_INITIALIZED)
 		stack_trace("Warning: [src]([type]) initialized multiple times!")
-	flags |= ATOM_INITIALIZED //CHOMPEdit moved initialized to flag
+	flags |= ATOM_INITIALIZED
 	return INITIALIZE_HINT_NORMAL
 
 /atom/Destroy()
@@ -125,7 +125,7 @@
 //return flags that should be added to the viewer's sight var.
 //Otherwise return a negative number to indicate that the view should be cancelled.
 /atom/proc/check_eye(user as mob)
-	if (istype(user, /mob/living/silicon/ai)) // WHYYYY
+	if (isAI(user)) // WHYYYY
 		return 0
 	return -1
 
@@ -224,6 +224,7 @@
 
 //All atoms
 /atom/proc/examine(mob/user, var/infix = "", var/suffix = "")
+	SHOULD_CALL_PARENT(TRUE)
 	//This reformat names to get a/an properly working on item descriptions when they are bloody
 	var/f_name = "\a [src][infix]."
 	if(src.blood_DNA && !istype(src, /obj/effect/decal))
@@ -292,6 +293,9 @@
 	return FALSE
 
 /atom/proc/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
+	return
+
+/atom/proc/occult_act(mob/living/user)
 	return
 
 /atom/proc/melt()

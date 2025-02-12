@@ -7,15 +7,15 @@
 		if(M.client)
 			playercount += 1
 	establish_db_connection()
-	if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
+	if(!SSdbcore.IsConnected())
 		log_game("SQL ERROR during population polling. Failed to connect.")
 	else
 		var/sqltime = time2text(world.realtime, "YYYY-MM-DD hh:mm:ss")
-		var/datum/db_query/query = SSdbcore.NewQuery("INSERT INTO `population` (`playercount`, `admincount`, `time`) VALUES ([playercount], [admincount], '[sqltime]')") //CHOMPEdit TGSQL
+		var/datum/db_query/query = SSdbcore.NewQuery("INSERT INTO population (`playercount`, `admincount`, `time`) VALUES ([playercount], [admincount], '[sqltime]')")
 		if(!query.Execute())
 			var/err = query.ErrorMsg()
 			log_game("SQL ERROR during population polling. Error : \[[err]\]\n")
-		qdel(query) //CHOMPEdit TGSQL
+		qdel(query)
 
 /proc/sql_report_round_start()
 	// TODO
@@ -51,14 +51,14 @@
 	var/coord = "[H.x], [H.y], [H.z]"
 	//to_world("INSERT INTO death (name, byondkey, job, special, pod, tod, laname, lakey, gender, bruteloss, fireloss, brainloss, oxyloss) VALUES ('[sqlname]', '[sqlkey]', '[sqljob]', '[sqlspecial]', '[sqlpod]', '[sqltime]', '[laname]', '[lakey]', '[H.gender]', [H.bruteloss], [H.getFireLoss()], [H.brainloss], [H.getOxyLoss()])")
 	establish_db_connection()
-	if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
+	if(!SSdbcore.IsConnected())
 		log_game("SQL ERROR during death reporting. Failed to connect.")
 	else
-		var/datum/db_query/query = SSdbcore.NewQuery("INSERT INTO death (name, byondkey, job, special, pod, tod, laname, lakey, gender, bruteloss, fireloss, brainloss, oxyloss, coord) VALUES (:t_name, :t_byondkey, :t_job, :t_special, :t_pod, '[sqltime]', :t_laname, :t_lakey, '[H.gender]', [H.getBruteLoss()], [H.getFireLoss()], [H.brainloss], [H.getOxyLoss()], '[coord]')", list("t_name" = sqlname,"t_byondkey" = sqlkey, "t_job" = sqljob, "t_special" = sqlspecial, "t_pod" = sqlpod, "t_laname" = laname, "t_lakey" = lakey)) //CHOMPEdit TGSQL
+		var/datum/db_query/query = SSdbcore.NewQuery("INSERT INTO death (name, byondkey, job, special, pod, tod, laname, lakey, gender, bruteloss, fireloss, brainloss, oxyloss, coord) VALUES ('[sqlname]', '[sqlkey]', '[sqljob]', '[sqlspecial]', '[sqlpod]', '[sqltime]', '[laname]', '[lakey]', '[H.gender]', [H.getBruteLoss()], [H.getFireLoss()], [H.brainloss], [H.getOxyLoss()], '[coord]')")
 		if(!query.Execute())
 			var/err = query.ErrorMsg()
 			log_game("SQL ERROR during death reporting. Error : \[[err]\]\n")
-		qdel(query) //CHOMPEdit TGSQL
+		qdel(query)
 
 
 /proc/sql_report_cyborg_death(var/mob/living/silicon/robot/H)
@@ -86,14 +86,14 @@
 	var/coord = "[H.x], [H.y], [H.z]"
 	//to_world("INSERT INTO death (name, byondkey, job, special, pod, tod, laname, lakey, gender, bruteloss, fireloss, brainloss, oxyloss) VALUES ('[sqlname]', '[sqlkey]', '[sqljob]', '[sqlspecial]', '[sqlpod]', '[sqltime]', '[laname]', '[lakey]', '[H.gender]', [H.bruteloss], [H.getFireLoss()], [H.brainloss], [H.getOxyLoss()])")
 	establish_db_connection()
-	if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
+	if(!SSdbcore.IsConnected())
 		log_game("SQL ERROR during death reporting. Failed to connect.")
 	else
-		var/datum/db_query/query = SSdbcore.NewQuery("INSERT INTO death (name, byondkey, job, special, pod, tod, laname, lakey, gender, bruteloss, fireloss, brainloss, oxyloss, coord) VALUES (:t_name, :t_byondkey, :t_job, :t_special, :t_pod, '[sqltime]', :t_laname, :t_lakey, '[H.gender]', [H.getBruteLoss()], [H.getFireLoss()], [H.brainloss], [H.getOxyLoss()], '[coord]')", list("t_name" = sqlname,"t_byondkey" = sqlkey, "t_job" = sqljob, "t_special" = sqlspecial, "t_pod" = sqlpod, "t_laname" = laname, "t_lakey" = lakey)) //CHOMPEdit TGSQL
+		var/datum/db_query/query = SSdbcore.NewQuery("INSERT INTO death (name, byondkey, job, special, pod, tod, laname, lakey, gender, bruteloss, fireloss, brainloss, oxyloss, coord) VALUES ('[sqlname]', '[sqlkey]', '[sqljob]', '[sqlspecial]', '[sqlpod]', '[sqltime]', '[laname]', '[lakey]', '[H.gender]', [H.getBruteLoss()], [H.getFireLoss()], [H.brainloss], [H.getOxyLoss()], '[coord]')")
 		if(!query.Execute())
 			var/err = query.ErrorMsg()
 			log_game("SQL ERROR during death reporting. Error : \[[err]\]\n")
-		qdel(query) //CHOMPEdit TGSQL
+		qdel(query)
 
 
 /proc/statistic_cycle()
@@ -118,18 +118,18 @@
 		return
 
 	establish_db_connection()
-	if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
+	if(!SSdbcore.IsConnected())
 		log_game("SQL ERROR during feedback reporting. Failed to connect.")
 	else
 
-		var/datum/db_query/max_query = SSdbcore.NewQuery("SELECT MAX(roundid) AS max_round_id FROM erro_feedback") //CHOMPEdit TGSQL
+		var/datum/db_query/max_query = SSdbcore.NewQuery("SELECT MAX(roundid) AS max_round_id FROM erro_feedback")
 		max_query.Execute()
 
 		var/newroundid
 
 		while(max_query.NextRow())
 			newroundid = max_query.item[1]
-		qdel(max_query) //CHOMPEdit TGSQL
+		qdel(max_query)
 		if(!(isnum(newroundid)))
 			newroundid = text2num(newroundid)
 
@@ -142,8 +142,8 @@
 			var/variable = item.get_variable()
 			var/value = item.get_value()
 
-			var/datum/db_query/query = SSdbcore.NewQuery("INSERT INTO erro_feedback (id, roundid, time, variable, value) VALUES (null, [newroundid], Now(), '[variable]', '[value]')") //CHOMPEdit TGSQL
+			var/datum/db_query/query = SSdbcore.NewQuery("INSERT INTO erro_feedback (id, roundid, time, variable, value) VALUES (null, [newroundid], Now(), '[variable]', '[value]')")
 			if(!query.Execute())
 				var/err = query.ErrorMsg()
 				log_game("SQL ERROR during death reporting. Error : \[[err]\]\n")
-			qdel(query) //CHOMPEdit TGSQL
+			qdel(query)

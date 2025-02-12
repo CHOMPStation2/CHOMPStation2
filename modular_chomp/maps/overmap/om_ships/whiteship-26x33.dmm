@@ -333,11 +333,12 @@
 /obj/structure/closet/secure_closet/guncabinet{
 	req_one_access = null
 	},
-/obj/item/ammo_magazine/speedloader_six,
-/obj/item/ammo_magazine/speedloader_six,
 /obj/item/gun/projectile/revolver/mateba,
-/obj/item/ammo_magazine/clip/medium,
-/obj/item/ammo_magazine/clip/medium,
+/obj/item/ammo_magazine/clip/c762,
+/obj/item/ammo_magazine/clip/c762,
+/obj/item/ammo_magazine/s357,
+/obj/item/ammo_magazine/s357,
+/obj/item/ammo_magazine/ammo_box/b762,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/whiteshipOM2)
 "lM" = (
@@ -615,8 +616,6 @@
 /area/shuttle/whiteshipOM2)
 "te" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -737,16 +736,12 @@
 /area/shuttle/whiteshipOM2)
 "vN" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -794,7 +789,6 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -973,8 +967,6 @@
 /area/shuttle/whiteshipOM2)
 "Cm" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -1166,8 +1158,6 @@
 /area/shuttle/whiteshipOM2)
 "EN" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -1385,7 +1375,6 @@
 /obj/machinery/power/port_gen/pacman/mrs,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -1420,8 +1409,6 @@
 /obj/effect/shuttle_landmark/shuttle_initializer/whiteship2,
 /obj/effect/overmap/visitable/ship/landable/whiteship2,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -1440,8 +1427,6 @@
 	},
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -1530,8 +1515,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -1588,8 +1571,6 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -1614,7 +1595,6 @@
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/shield_generator/charged{
@@ -1664,8 +1644,6 @@
 /area/shuttle/whiteshipOM2)
 "Pz" = (
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/effect/floor_decal/industrial/warning/corner,
@@ -1679,13 +1657,9 @@
 /area/shuttle/whiteshipOM2)
 "PS" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -1730,8 +1704,6 @@
 	pixel_y = -26
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/wood,
@@ -1820,8 +1792,6 @@
 /obj/random/maintenance/research,
 /obj/random/maintenance/research,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/green,
@@ -1866,7 +1836,6 @@
 /obj/structure/curtain/bed,
 /obj/item/bedsheet/hosdouble,
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_y = 32
 	},
 /turf/simulated/floor/wood,
@@ -2019,8 +1988,6 @@
 "VJ" = (
 /obj/structure/table/steel_reinforced,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/random/maintenance,
@@ -2059,16 +2026,12 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/map_helper/airlock/door/int_door,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/whiteshipOM2)
 "VY" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{

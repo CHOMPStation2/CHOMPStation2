@@ -51,7 +51,7 @@
 /obj/item/handcuffs/proc/can_place(var/mob/target, var/mob/user)
 	if(user == target)
 		return 1
-	if(istype(user, /mob/living/silicon/robot))
+	if(isrobot(user))
 		if(user.Adjacent(target))
 			return 1
 	else
@@ -274,8 +274,8 @@ var/last_chew = 0
 	lcuffs.loc = target
 	target.legcuffed = lcuffs
 	target.update_inv_legcuffed()
-	if(target.m_intent != "walk")
-		target.m_intent = "walk"
+	if(target.m_intent != I_WALK)
+		target.m_intent = I_WALK
 		if(target.hud_used && user.hud_used.move_intent)
 			target.hud_used.move_intent.icon_state = "walking"
 	return 1
@@ -283,8 +283,8 @@ var/last_chew = 0
 /obj/item/handcuffs/legcuffs/equipped(var/mob/living/user,var/slot)
 	. = ..()
 	if(slot == slot_legcuffed)
-		if(user.m_intent != "walk")
-			user.m_intent = "walk"
+		if(user.m_intent != I_WALK)
+			user.m_intent = I_WALK
 			if(user.hud_used && user.hud_used.move_intent)
 				user.hud_used.move_intent.icon_state = "walking"
 
@@ -301,7 +301,8 @@ var/last_chew = 0
 	if(user) //A ranged legcuff, until proper implementation as items it remains a projectile-only thing.
 		return 1
 
-/obj/item/handcuffs/legcuffs/bola/dropped()
+/obj/item/handcuffs/legcuffs/bola/dropped(mob/user)
+	..()
 	visible_message(span_infoplain(span_bold("\The [src]") + " falls apart!"))
 	qdel(src)
 
@@ -310,12 +311,12 @@ var/last_chew = 0
 
 	var/mob/living/carbon/human/H = target
 	if(!istype(H))
-		src.dropped()
+		src.dropped(user)
 		return 0
 
 	if(!H.has_organ_for_slot(slot_legcuffed))
 		H.visible_message(span_infoplain(span_bold("\The [src]") + " slams into [H], but slides off!"))
-		src.dropped()
+		src.dropped(user)
 		return 0
 
 	H.visible_message(span_danger("\The [H] has been snared by \the [src]!"))
@@ -325,8 +326,8 @@ var/last_chew = 0
 	lcuffs.loc = target
 	target.legcuffed = lcuffs
 	target.update_inv_legcuffed()
-	if(target.m_intent != "walk")
-		target.m_intent = "walk"
+	if(target.m_intent != I_WALK)
+		target.m_intent = I_WALK
 		if(target.hud_used && user.hud_used.move_intent)
 			target.hud_used.move_intent.icon_state = "walking"
 	return 1

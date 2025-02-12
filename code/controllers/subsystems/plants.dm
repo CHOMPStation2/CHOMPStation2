@@ -26,11 +26,9 @@ SUBSYSTEM_DEF(plants)
 	msg = "P:[processing.len]|S:[seeds.len]"
 	return ..()
 
-//CHOMPEdit Begin
 /datum/controller/subsystem/plants/Initialize()
 	setup()
 	return SS_INIT_SUCCESS
-//CHOMPEdit End
 
 // Predefined/roundstart varieties use a string key to make it
 // easier to grab the new variety when mutating. Post-roundstart
@@ -141,8 +139,8 @@ SUBSYSTEM_DEF(plants)
 			return
 
 /datum/controller/subsystem/plants/proc/add_plant(var/obj/effect/plant/plant)
-	if(!QDELETED(plant)) //CHOMPEdit GC
-		processing |= plant //CHOMPEdit GC
+	if(!QDELETED(plant))
+		processing |= plant
 
 /datum/controller/subsystem/plants/proc/remove_plant(var/obj/effect/plant/plant)
 	processing -= plant

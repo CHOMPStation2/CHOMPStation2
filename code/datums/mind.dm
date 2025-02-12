@@ -114,7 +114,7 @@
 
 	if(ambitions)
 		output += "<HR><B>Ambitions:</B> [ambitions]<br>"
-	recipient << browse(output,"window=memory")
+	recipient << browse("<html>[output]</html>","window=memory")
 
 /datum/mind/proc/edit_memory()
 	if(!ticker || !ticker.mode)
@@ -149,7 +149,7 @@
 		out += "None."
 	out += "<br><a href='byond://?src=\ref[src];[HrefToken()];obj_add=1'>\[add\]</a><br><br>"
 	out += span_bold("Ambitions:") + " [ambitions ? ambitions : "None"] <a href='byond://?src=\ref[src];[HrefToken()];amb_edit=\ref[src]'>\[edit\]</a></br>"
-	usr << browse(out, "window=edit_memory[src]")
+	usr << browse("<html>[out]</html>", "window=edit_memory[src]")
 
 /datum/mind/Topic(href, href_list)
 	if(!check_rights(R_ADMIN|R_FUN|R_EVENT))	return
@@ -179,7 +179,7 @@
 		if(antag) antag.place_mob(src.current)
 
 	else if (href_list["role_edit"])
-		var/new_role = input("Select new role", "Assigned role", assigned_role) as null|anything in joblist
+		var/new_role = tgui_input_list(usr, "Select new role", "Assigned role", assigned_role, joblist)
 		if (!new_role) return
 		assigned_role = new_role
 
@@ -231,7 +231,7 @@
 
 				var/list/possible_targets = list("Free objective")
 				for(var/datum/mind/possible_target in ticker.minds)
-					if ((possible_target != src) && istype(possible_target.current, /mob/living/carbon/human))
+					if ((possible_target != src) && ishuman(possible_target.current))
 						possible_targets += possible_target.current
 
 				var/mob/def_target = null
@@ -376,7 +376,7 @@
 					log_admin("[key_name_admin(usr)] has unemag'ed [R].")
 
 			if("unemagcyborgs")
-				if (istype(current, /mob/living/silicon/ai))
+				if (isAI(current))
 					var/mob/living/silicon/ai/ai = current
 					for (var/mob/living/silicon/robot/R in ai.connected_robots)
 						R.emagged = 0

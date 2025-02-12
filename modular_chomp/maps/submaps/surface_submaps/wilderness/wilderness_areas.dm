@@ -178,6 +178,10 @@
 	name = "POI Wilderness - Otie Shelter"
 	ambience = AMBIENCE_HIGHSEC
 
+/area/submap/PirateLake
+	name = "POI Wilderness - Pirate Lake"
+	ambience = AMBIENCE_HIGHSEC
+
 /area/submap/Rocky1
 	name = "POI Wilderness - Rocky Demise"
 	ambience = AMBIENCE_SIF
@@ -228,4 +232,8 @@
 
 /area/submap/XenoHive
 	name = "POI Wilderness - Xeno Hive"
+	ambience = AMBIENCE_RUINS
+
+/area/submap/VolcanicFissure
+	name = "POI Wilderness - Volcanic Fissure"
 	ambience = AMBIENCE_RUINS

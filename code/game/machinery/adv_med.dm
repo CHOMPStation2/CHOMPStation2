@@ -504,6 +504,7 @@
 			else
 				dat += "<td>[e.name]</td><td>-</td><td>-</td><td>Not Found</td>"
 			dat += "</tr>"
+		var/hasMalignants = "" //CHOMPedit - malignant organs
 		for(var/obj/item/organ/i in occupant.internal_organs)
 			var/mech = ""
 			var/i_dead = ""
@@ -535,6 +536,12 @@
 				if(A.inflamed)
 					infection = "Inflammation detected!"
 
+			// CHOMPedit begin - malignant organs
+			if(istype(i, /obj/item/organ/internal/malignant))
+				var/obj/item/organ/internal/ORG = occupant.organs_by_name[i.parent_organ]
+				hasMalignants += span_red(" -[ORG.name]") + "<BR>"
+			// CHOMPedit end
+
 			dat += "<tr>"
 			dat += "<td>[i.name]</td><td>N/A</td><td>[i.damage]</td><td>[infection]:[mech][i_dead]</td><td></td>"
 			dat += "</tr>"
@@ -543,6 +550,10 @@
 			dat += span_red("Cataracts detected.") + "<BR>"
 		if(occupant.disabilities & NEARSIGHTED)
 			dat += span_red("Retinal misalignment detected.") + "<BR>"
+		//CHOMPedit begin - malignant organs
+		if(hasMalignants != "")
+			dat += span_red("Unknown anatomy detected!") + "<BR>[hasMalignants]"
+		//CHOMPedit end
 		if(HUSK in occupant.mutations) // VOREstation edit
 			dat += span_red("Anatomical structure lost, resuscitation not possible!") + "<BR>"
 	else
@@ -565,8 +576,8 @@
 	circuit = /obj/item/circuitboard/scanner_console
 	var/printing = null
 
-/obj/machinery/body_scanconsole/New()
-	..()
+/obj/machinery/body_scanconsole/Initialize(mapload)
+	. = ..()
 	findscanner()
 
 /obj/machinery/body_scanconsole/Destroy()

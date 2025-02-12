@@ -25,6 +25,8 @@
 
 	var/anomalous_organs = FALSE	// Can it print anomalous organs?
 
+	var/engineered_organs = FALSE // CHOMPedit - Can it print advanced engineered organs that any species can use (Abductor gameplay)
+
 	// These should be subtypes of /obj/item/organ
 	// Costs roughly 20u Phoron (1 sheet) per internal organ, limbs are 60u for limb and extremity
 	var/list/products = list(
@@ -43,7 +45,8 @@
 		"Foot, Left"   = list(/obj/item/organ/external/foot,  20),
 		"Foot, Right"   = list(/obj/item/organ/external/foot/right,  20),
 		"Hand, Left"   = list(/obj/item/organ/external/hand,  20),
-		"Hand, Right"   = list(/obj/item/organ/external/hand/right,  20)
+		"Hand, Right"   = list(/obj/item/organ/external/hand/right,  20),
+		"Organ Lattice" = list(/obj/item/organ/internal/malignant/engineered/lattice,  30) // CHOMPedit - Bioprinting engineered lattice organs
 		)
 
 	var/list/complex_products = list(
@@ -58,9 +61,27 @@
 		"Adrenal Valve Cluster" = list(/obj/item/organ/internal/heart/replicant/rage, 80)
 		)
 
+	// CHOMPadd begin  - engineered organs
+	var/list/engineered_products = list(
+		"Phoroketic Gland"  = list(/obj/item/organ/internal/malignant/engineered/chemorgan/phoron, 90),
+		"Trioketic Gland"  	= list(/obj/item/organ/internal/malignant/engineered/chemorgan/tricord, 90),
+		"Tramoketic Gland"  = list(/obj/item/organ/internal/malignant/engineered/chemorgan/tramadol, 90),
+		"Dylovetic Gland"  	= list(/obj/item/organ/internal/malignant/engineered/chemorgan/dylovene, 90),
+		"Citometic Gland"  	= list(/obj/item/organ/internal/malignant/engineered/chemorgan/citalopram, 90),
+		"Bicordic Gland" 	= list(/obj/item/organ/internal/malignant/engineered/chemorgan/bicaridine, 90),
+		"Dermalic Gland" 	= list(/obj/item/organ/internal/malignant/engineered/chemorgan/dermaline, 90),
+		"Kelovetic Gland" 	= list(/obj/item/organ/internal/malignant/engineered/chemorgan/kelotane, 90),
+		"Dexalic Gland" 	= list(/obj/item/organ/internal/malignant/engineered/chemorgan/dexalin, 90),
+		"Hypalic Gland" 	= list(/obj/item/organ/internal/malignant/engineered/chemorgan/hyperzine, 90),
+		"Spaceacilic Gland" = list(/obj/item/organ/internal/malignant/engineered/chemorgan/spaceacillin, 90),
+		"Inaprovic Gland" 	= list(/obj/item/organ/internal/malignant/engineered/chemorgan/inaprovaline, 90),
+		"Euphorian" 		= list(/obj/item/organ/internal/malignant/engineered/chemorgan/bliss, 90)
+		)
+	// CHOMPadd end
+
 /obj/machinery/organ_printer/attackby(var/obj/item/O, var/mob/user)
 	if(default_deconstruction_screwdriver(user, O))
-		updateUsrDialog()
+		updateUsrDialog(user)
 		return
 	if(default_deconstruction_crowbar(user, O))
 		return
@@ -150,6 +171,11 @@
 
 	if(anomalous_organs)
 		possible_list |= anomalous_products
+
+	// CHOMPedit begin - engineered organs
+	if(engineered_organs)
+		possible_list |= engineered_products
+	// CHOMPedit end
 
 	var/choice = tgui_input_list(user, "What would you like to print?", "Print Choice", possible_list)
 
@@ -339,7 +365,7 @@
 	var/matter_amount_per_sheet = 10
 	var/matter_type = MAT_STEEL
 
-/obj/machinery/organ_printer/robot/full/New()
+/obj/machinery/organ_printer/robot/full/Initialize()
 	. = ..()
 	stored_matter = max_stored_matter
 

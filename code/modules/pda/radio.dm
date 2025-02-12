@@ -17,13 +17,15 @@
 	on = 0 //Are we currently active??
 	var/menu_message = ""
 
-/obj/item/radio/integrated/New()
+/obj/item/radio/integrated/Initialize()
 	..()
 	if(istype(loc.loc, /obj/item/pda))
 		hostpda = loc.loc
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/item/radio/integrated/LateInitialize()
 	if(bot_filter)
-		spawn(5)
-			add_to_radio(bot_filter)
+		add_to_radio(bot_filter)
 
 /obj/item/radio/integrated/Destroy()
 	if(radio_controller)
@@ -77,7 +79,7 @@
 				post_signal(control_freq, "command", "bot_status", "active", active, s_filter = bot_filter)
 
 /obj/item/radio/integrated/receive_signal(datum/signal/signal)
-	if(bot_type && istype(signal.source, /mob/living/bot) && signal.data["type"] == bot_type)
+	if(bot_type && isbot(signal.source) && signal.data["type"] == bot_type)
 		if(!botlist)
 			botlist = new()
 

@@ -656,6 +656,18 @@ Medium Weapons
 	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium_small)
 	magazine_type = /obj/item/ammo_magazine/medium
 
+/obj/item/gun/projectile/automatic/serdy/t12
+	caliber = "medium"
+	projectile_type = /obj/item/projectile/bullet/rifle/a762
+	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium_small)
+	magazine_type = /obj/item/ammo_magazine/medium
+
+/obj/item/gun/projectile/automatic/serdy/sr25c
+	caliber = "medium"
+	projectile_type = /obj/item/projectile/bullet/rifle/a762
+	allowed_magazines = list(/obj/item/ammo_magazine/medium,/obj/item/ammo_magazine/medium_small)
+	magazine_type = /obj/item/ammo_magazine/medium
+
 /obj/item/gun/projectile/automatic/serdy/fal
 	caliber = "medium"
 	projectile_type = /obj/item/projectile/bullet/rifle/a762

@@ -941,8 +941,9 @@
 		H.update_inv_wear_suit()
 	hood.forceMove(src)
 
-/obj/item/clothing/suit/storage/toggle/hoodiebuttoned/dropped()
+/obj/item/clothing/suit/storage/toggle/hoodiebuttoned/dropped(mob/living/user)
 	RemoveHood()
+	..()
 
 /obj/item/clothing/suit/storage/toggle/hoodiebuttoned/proc/ToggleHood()
 	if(!suittoggled)
@@ -1392,7 +1393,7 @@
 	if(usr.stat || usr.incapacitated())
 		return
 
-	var/new_color = input(usr, "Pick a new colour", "Collar Colour", color) as color|null
+	var/new_color = tgui_color_picker(usr, "Pick a new colour", "Collar Colour", color)
 
 	if(new_color && (new_color != color))
 		color = new_color

@@ -90,7 +90,6 @@
 	// CHOMPEdit: Reverted these back to Polaris, but commented them out. We're using species-specific sounds instead.
 	// male_scream_sound = list ('sound/effects/mob_effects/una_scream1.ogg','sound/effects/mob_effects/una_scream2.ogg')
 	// female_scream_sound = list ('sound/effects/mob_effects/una_scream1.ogg','sound/effects/mob_effects/una_scream2.ogg')
-	footstep = FOOTSTEP_MOB_CLAW // CHOMPEdit
 	species_sounds = "Lizard" // Species sounds
 
 	pain_verb_1p = list("hiss", "growl") // CHOMPEdit: Unathi pain emotes
@@ -188,6 +187,8 @@
 		/decl/emote/human/swag,
 		/decl/emote/human/stopsway
 	)
+
+	footstep = FOOTSTEP_MOB_CLAW
 
 /datum/species/unathi/equip_survival_gear(var/mob/living/carbon/human/H)
 	..()

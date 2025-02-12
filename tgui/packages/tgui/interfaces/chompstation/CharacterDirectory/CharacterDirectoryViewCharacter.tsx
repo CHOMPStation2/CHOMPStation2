@@ -1,4 +1,5 @@
-import { Box, Button, Section, Table } from '../../../components';
+import { Box, Button, Section, Table } from 'tgui-core/components';
+
 import { getTagColor } from './constants';
 import { mobEntry } from './types';
 

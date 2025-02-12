@@ -57,7 +57,7 @@
 				if(!istype(user)) // Ref no longer valid
 					return
 
-				var/newVal = input(user, "Input a new [href_list["signaler_value"]].", href_list["signaler_value"], (href_list["signaler_value"] == "Code" ? S.code : S.frequency)) as num|null
+				var/newVal = tgui_input_number(user, "Input a new [href_list["signaler_value"]].", href_list["signaler_value"], (href_list["signaler_value"] == "Code" ? S.code : S.frequency), round_value=FALSE)
 				if(newVal)
 					switch(href_list["signaler_value"])
 						if("Code")
@@ -99,7 +99,7 @@
 				if(!istype(user)) // Ref no longer valid
 					return
 
-				var/newTag = input(user, "Please enter desired tag.", G.tag) as text|null
+				var/newTag = tgui_input_text(user, "Please enter desired tag.", "Name Tag", G.tag)
 
 				if(newTag)
 					G.tag = newTag
@@ -133,7 +133,7 @@
 				return
 
 			var/timeout = world.time + 600
-			var/reason = sanitize(input(user, "Reason:","Why do you require this item?","") as null|text)
+			var/reason = sanitize(tgui_input_text(user, "Reason:","Why do you require this item?",""))
 			if(world.time > timeout)
 				to_chat(user, span_warning("Error. Request timed out."))
 				return
@@ -155,7 +155,7 @@
 			return
 
 		if(href_list["edit"])
-			var/new_val = sanitize(input(user, href_list["edit"], "Enter the new value for this field:", href_list["default"]) as null|text)
+			var/new_val = sanitize(tgui_input_text(user, href_list["edit"], "Enter the new value for this field:", href_list["default"]))
 			if(!new_val)
 				return
 
@@ -219,9 +219,9 @@
 			var/list/L = E.contents[href_list["index"]]
 
 			if(href_list["edit"])
-				var/field = alert(user, "Select which field to edit", , "Name", "Quantity", "Value")
+				var/field = tgui_alert(user, "Select which field to edit", "Field?", list("Name", "Quantity", "Value"))
 
-				var/new_val = sanitize(input(user, href_list["edit"], "Enter the new value for this field:", href_list["default"]) as null|text)
+				var/new_val = sanitize(tgui_input_text(user, href_list["edit"], "Enter the new value for this field:", href_list["default"]))
 				if(!new_val)
 					return
 
@@ -244,7 +244,7 @@
 
 		// Else clause means they're editing/deleting the whole export report, rather than a specific item in it
 		else if(href_list["edit"])
-			var/new_val = sanitize(input(user, href_list["edit"], "Enter the new value for this field:", href_list["default"]) as null|text)
+			var/new_val = sanitize(tgui_input_text(user, href_list["edit"], "Enter the new value for this field:", href_list["default"]))
 			if(!new_val)
 				return
 
@@ -291,7 +291,7 @@
 			post_status("alert", href_list["alert"])
 			internal_data["stat_display_special"] = href_list["alert"]
 		if("setmsg")
-			internal_data["stat_display_line[href_list["line"]]"] = reject_bad_text(sanitize(input("Line 1", "Enter Message Text", internal_data["stat_display_line[href_list["line"]]"]) as text|null, 40), 40)
+			internal_data["stat_display_line[href_list["line"]]"] = reject_bad_text(sanitize(tgui_input_text(usr, "Line 1", "Enter Message Text", internal_data["stat_display_line[href_list["line"]]"], 40), 40), 40)
 		else
 			post_status(href_list["stat_display"])
 			internal_data["stat_display_special"] = href_list["stat_display"]

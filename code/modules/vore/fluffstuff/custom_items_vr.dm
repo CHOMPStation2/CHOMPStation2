@@ -452,7 +452,7 @@
 	name = "custom security cuirass"
 	desc = "An armored vest that protects against some damage. It appears to be created for a wolfhound. The name 'Serdykov L. Antoz' is written on a tag inside one of the haunchplates."
 	species_restricted = null //Species restricted since all it cares about is a taur half
-	icon = 'icons/mob/taursuits_wolf_vr.dmi'
+	icon = 'icons/mob/taursuits_wolf.dmi'
 	icon_state = "serdy_armor"
 	item_state = "serdy_armor"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS //It's a full body suit, minus hands and feet. Arms and legs should be protected, not just the torso. Retains normal security armor values still.
@@ -532,8 +532,8 @@
 	var/client/owner_c = null //They'll be dead when we message them probably.
 	var/state = 0 //0 - New, 1 - Paired, 2 - Breaking, 3 - Broken (same as iconstates)
 
-/obj/item/clothing/accessory/collar/khcrystal/New()
-	..()
+/obj/item/clothing/accessory/collar/khcrystal/Initialize()
+	. = ..()
 	update_state(0)
 
 /obj/item/clothing/accessory/collar/khcrystal/Destroy() //Waitwaitwait
@@ -618,8 +618,8 @@
 	max_storage_space = ITEMSIZE_COST_SMALL * 2
 	w_class = ITEMSIZE_SMALL
 
-/obj/item/storage/box/khcrystal/New()
-	..()
+/obj/item/storage/box/khcrystal/Initialize()
+	. = ..()
 	new /obj/item/paper/khcrystal_manual(src)
 	new /obj/item/clothing/accessory/collar/khcrystal(src)
 
@@ -870,7 +870,7 @@
 
 /obj/item/fluff/injector/monkey/attack(mob/living/M, mob/living/user)
 
-	if(usr == M) //Is the person using it on theirself?
+	if(user == M) //Is the person using it on theirself?
 		if(ishuman(M)) //If so, monkify them.
 			var/mob/living/carbon/human/H = user
 			H.monkeyize()
@@ -884,7 +884,7 @@
 
 /obj/item/fluff/injector/numb_bite/attack(mob/living/M, mob/living/user)
 
-	if(usr == M) //Is the person using it on theirself?
+	if(user == M) //Is the person using it on theirself?
 		if(ishuman(M)) //Give them numbing bites.
 			var/mob/living/carbon/human/H = user
 			H.species.give_numbing_bite() //This was annoying, but this is the easiest way of performing it.
@@ -902,8 +902,8 @@
 				slot_r_hand_str = 'icons/vore/custom_items_right_hand_vr.dmi',
 				)
 
-/obj/item/material/twohanded/fluff/New(var/newloc)
-	..(newloc," ") //See materials_vr_dmi for more information as to why this is a blank space.
+/obj/item/material/twohanded/fluff/Initialize(var/newloc)
+	. = ..(newloc," ") //See materials_vr_dmi for more information as to why this is a blank space.
 
 //jacknoir413:Areax Third
 /obj/item/melee/baton/fluff/stunstaff
@@ -926,11 +926,10 @@
 	var/wielded = 0
 	var/base_name = "stunstaff"
 
-/obj/item/melee/baton/fluff/stunstaff/New()
-	..()
+/obj/item/melee/baton/fluff/stunstaff/Initialize()
+	. = ..()
 	bcell = new/obj/item/cell/device/weapon(src)
 	update_icon()
-	return
 
 /obj/item/melee/baton/fluff/stunstaff/update_held_icon()
 	var/mob/living/M = loc
@@ -961,7 +960,7 @@
 	else
 		set_light(0)
 
-/obj/item/melee/baton/fluff/stunstaff/dropped()
+/obj/item/melee/baton/fluff/stunstaff/dropped(mob/user)
 	..()
 	if(wielded)
 		wielded = 0
@@ -996,8 +995,8 @@
 	max_w_class = ITEMSIZE_HUGE
 	max_storage_space = 16
 
-/obj/item/storage/backpack/fluff/stunstaff/New()
-	..()
+/obj/item/storage/backpack/fluff/stunstaff/Initialize()
+	. = ..()
 	new /obj/item/melee/baton/fluff/stunstaff(src)
 
 
@@ -1047,7 +1046,7 @@
 	else
 		activate(user)
 
-	if(istype(user,/mob/living/carbon/human))
+	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		H.update_inv_l_hand()
 		H.update_inv_r_hand()
@@ -1075,7 +1074,7 @@
 	allowed = list(/obj/item/shield/fluff/wolfgirlshield)
 	damtype = HALLOSS
 
-/obj/item/melee/fluffstuff/wolfgirlsword/dropped(var/mob/user)
+/obj/item/melee/fluffstuff/wolfgirlsword/dropped(mob/user)
 	..()
 	if(!istype(loc,/mob))
 		deactivate(user)
@@ -1267,8 +1266,8 @@
 	base_name = "Clara's Vacuum Flask"
 	base_icon = "claraflask"
 	icon = 'icons/vore/custom_items_vr.dmi'
-	center_of_mass_x = 15 //CHOMPEdit
-	center_of_mass_y= 4 //CHOMPEdit
+	center_of_mass_x = 15
+	center_of_mass_y = 4
 	filling_states = list(15, 30, 50, 60, 80, 100)
 	volume = 60
 
@@ -1349,12 +1348,12 @@ End CHOMP Removal*/
 	w_class = ITEMSIZE_TINY
 	starts_with = list(/obj/item/clothing/mask/smokable/cigarette = 7)
 
-/obj/item/storage/fancy/fluff/charlotte/New()
+/obj/item/storage/fancy/fluff/charlotte/Initialize()
 	if(!open_state)
 		open_state = "[initial(icon_state)]0"
 	if(!closed_state)
 		closed_state = "[initial(icon_state)]"
-	..()
+	. = ..()
 
 /obj/item/storage/fancy/fluff/charlotte/update_icon()
 	cut_overlays()
@@ -1569,7 +1568,8 @@ End CHOMP Removal*/
 	..()
 	icon_state = "ceph_d6[result]"
 
-/obj/item/dice/loaded/ceph/New()
+/obj/item/dice/loaded/ceph/Initialize()
+	. = ..()
 	icon_state = "ceph_d6[rand(1,sides)]"
 
 
@@ -1580,3 +1580,11 @@ End CHOMP Removal*/
 
 	icon = 'icons/inventory/accessory/item.dmi'
 	icon_state = "silver"
+
+//beeholddrbeesphb: Evelynn
+/obj/item/laser_pointer/evelynn_fluff
+	name = "Evelynn's Laser Pointer"
+	desc = "A small, furry, and fluffy toy that looks like a bee. It has laser eyes. Upon firing, the lasers make a buzzing noise."
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_state = "evelynn"
+	pointer_icon_state = "purple_laser"

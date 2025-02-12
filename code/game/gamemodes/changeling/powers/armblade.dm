@@ -75,6 +75,7 @@
 		src.creator = loc
 
 /obj/item/melee/changeling/dropped(mob/user)
+	..()
 	visible_message(span_warning("With a sickening crunch, [creator] reforms their arm!"),
 	span_notice("We assimilate the weapon back into our body."),
 	span_warningplain("You hear organic matter ripping and tearing!"))
@@ -91,7 +92,7 @@
 /obj/item/melee/changeling/process()  //Stolen from ninja swords.
 	if(!creator || loc != creator || !creator.item_is_in_hands(src))
 		// Tidy up a bit.
-		if(istype(loc,/mob/living))
+		if(isliving(loc))
 			var/mob/living/carbon/human/host = loc
 			if(istype(host))
 				for(var/obj/item/organ/external/organ in host.organs)

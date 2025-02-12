@@ -298,7 +298,7 @@ var/global/list/rnwords = list("ire","ego","nahlizet","certum","veri","jatkaa","
 /obj/item/book/tome/attack(mob/living/M as mob, mob/living/user as mob)
 	add_attack_logs(user,M,"Hit with [name]")
 
-	if(istype(M,/mob/observer/dead))
+	if(isobserver(M))
 		var/mob/observer/dead/D = M
 		D.manifest(user)
 		return
@@ -447,9 +447,9 @@ var/global/list/rnwords = list("ire","ego","nahlizet","certum","veri","jatkaa","
 		if (!istype(user.loc,/turf))
 			to_chat(user, span_notice("You do not have enough space to write a proper rune."))
 		var/list/runes = list("teleport", "itemport", "tome", "armor", "convert", "tear in reality", "emp", "drain", "seer", "raise", "obscure", "reveal", "astral journey", "manifest", "imbue talisman", "sacrifice", "wall", "freedom", "cultsummon", "deafen", "blind", "bloodboil", "communicate", "stun")
-		r = input(user, "Choose a rune to scribe", "Rune Scribing") in runes // Remains input() for extreme blocking
+		r = tgui_input_list(user, "Choose a rune to scribe", "Rune Scribing", runes, timeout=30 SECONDS)
 		var/obj/effect/rune/R = new /obj/effect/rune
-		if(istype(user, /mob/living/carbon/human))
+		if(ishuman(user))
 			var/mob/living/carbon/human/H = user
 			R.blood_DNA = list()
 			R.blood_DNA[H.dna.unique_enzymes] = H.dna.b_type
@@ -460,7 +460,7 @@ var/global/list/rnwords = list("ire","ego","nahlizet","certum","veri","jatkaa","
 				var/list/words = list("ire", "ego", "nahlizet", "certum", "veri", "jatkaa", "balaq", "mgar", "karazet", "geeri")
 				var/beacon
 				if(user)
-					beacon = input(user, "Select the last rune", "Rune Scribing") in words // Remains input() for extreme blocking
+					beacon = tgui_input_list(user, "Select the last rune", "Rune Scribing", words, timeout=30 SECONDS)
 				R.word1=cultwords["travel"]
 				R.word2=cultwords["self"]
 				R.word3=beacon
@@ -470,7 +470,7 @@ var/global/list/rnwords = list("ire","ego","nahlizet","certum","veri","jatkaa","
 				var/list/words = list("ire", "ego", "nahlizet", "certum", "veri", "jatkaa", "balaq", "mgar", "karazet", "geeri")
 				var/beacon
 				if(user)
-					beacon = input(user, "Select the last rune", "Rune Scribing") in words // Remains input() for extreme blocking
+					beacon = tgui_input_list(user, "Select the last rune", "Rune Scribing", words, timeout=30 SECONDS)
 				R.word1=cultwords["travel"]
 				R.word2=cultwords["other"]
 				R.word3=beacon

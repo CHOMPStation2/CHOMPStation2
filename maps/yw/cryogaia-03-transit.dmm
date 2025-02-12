@@ -21,7 +21,6 @@
 	icon_state = "16-0"
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/disposalpipe/up,

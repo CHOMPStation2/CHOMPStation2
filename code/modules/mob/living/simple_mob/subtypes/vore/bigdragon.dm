@@ -252,7 +252,7 @@ I think I covered everything.
 	faction = FACTION_NEUTRAL
 
 /mob/living/simple_mob/vore/bigdragon/Initialize()
-	..()
+	. = ..()
 	src.adjust_nutrition(src.max_nutrition)
 	build_icons(1)
 	add_language(LANGUAGE_DRUDAKAR)
@@ -427,7 +427,7 @@ I think I covered everything.
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick underbelly color:","Underbelly Color", overlay_colors["Underbelly"]) as null|color
+			var/new_color = tgui_color_picker(src, "Pick underbelly color:","Underbelly Color", overlay_colors["Underbelly"])
 			if(!new_color)
 				return 0
 			under = choice
@@ -440,7 +440,7 @@ I think I covered everything.
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick body color:","Body Color", overlay_colors["Body"]) as null|color
+			var/new_color = tgui_color_picker(src, "Pick body color:","Body Color", overlay_colors["Body"])
 			if(!new_color)
 				return 0
 			body = choice
@@ -453,7 +453,7 @@ I think I covered everything.
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick ear color:","Ear Color", overlay_colors["Ears"]) as null|color
+			var/new_color = tgui_color_picker(src, "Pick ear color:","Ear Color", overlay_colors["Ears"])
 			if(!new_color)
 				return 0
 			ears = choice
@@ -466,7 +466,7 @@ I think I covered everything.
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick mane color:","Mane Color", overlay_colors["Mane"]) as null|color
+			var/new_color = tgui_color_picker(src, "Pick mane color:","Mane Color", overlay_colors["Mane"])
 			if(!new_color)
 				return 0
 			mane = choice
@@ -479,7 +479,7 @@ I think I covered everything.
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick horn color:","Horn Color", overlay_colors["Horns"]) as null|color
+			var/new_color = tgui_color_picker(src, "Pick horn color:","Horn Color", overlay_colors["Horns"])
 			if(!new_color)
 				return 0
 			horns = choice
@@ -492,7 +492,7 @@ I think I covered everything.
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick eye color:","Eye Color", overlay_colors["Eyes"]) as null|color
+			var/new_color = tgui_color_picker(src, "Pick eye color:","Eye Color", overlay_colors["Eyes"])
 			if(!new_color)
 				return 0
 			eyes = choice
@@ -924,7 +924,7 @@ I think I covered everything.
 	var/last_warning
 
 /datum/ai_holder/simple_mob/healbelly/proc/confirmPatient(var/mob/living/P)
-	if(istype(holder,/mob/living/simple_mob))
+	if(isanimal(holder))
 		var/mob/living/simple_mob/H = holder
 		if(H.will_eat(P))
 			if(issilicon(P))
@@ -1001,7 +1001,7 @@ I think I covered everything.
 				//The following is some reagent injections to cover our bases, since being swallowed and dying from internal injuries sucks
 				//If this ends up being op because medbay gets replaced by a voremob buckled to a chair, feel free to remove some.
 				//Alternatively bully a coder (me) to make a unique digest_mode for mob healbellies that prevents death, or something.
-				if(istype(A, /mob/living/carbon/human))
+				if(ishuman(A))
 					var/mob/living/carbon/human/P = L
 					var/list/to_inject = list(REAGENT_ID_MYELAMINE,REAGENT_ID_OSTEODAXON,REAGENT_ID_SPACEACILLIN,REAGENT_ID_PERIDAXON, REAGENT_ID_IRON, REAGENT_ID_HYRONALIN)
 					//Lets not OD them...

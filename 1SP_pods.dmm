@@ -344,7 +344,6 @@
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/shield_generator/charged{
@@ -1913,8 +1912,6 @@
 	req_access = list(2,4)
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/bed/chair/bay/chair/padded/black{
@@ -2062,8 +2059,6 @@
 	req_one_access = null
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -2307,8 +2302,6 @@
 /area/survivalpod/superpose/HydroCave)
 "bLf" = (
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/effect/floor_decal/industrial/loading{
@@ -2988,7 +2981,6 @@
 	dir = 1
 	},
 /obj/structure/cable/cyan{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor,
@@ -3897,7 +3889,6 @@
 /obj/item/clothing/shoes/sandal,
 /obj/item/clothing/shoes/sandal,
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = -32
 	},
 /obj/item/towel/random,
@@ -3968,8 +3959,6 @@
 /area/survivalpod/superpose/HydroCave)
 "cXq" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/voidcraft/survival_pod{
@@ -4074,7 +4063,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/steel_dirty,
@@ -5250,13 +5238,9 @@
 	req_access = list(2,4)
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/shuttle/plating/skipjack,
@@ -5388,7 +5372,6 @@
 	id = "SP-Sec"
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
@@ -5567,12 +5550,9 @@
 	id = "SP-Sec"
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/plating,
@@ -6363,8 +6343,6 @@
 /area/survivalpod/superpose/DragonCave)
 "eAz" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/freezer/cold,
@@ -6714,7 +6692,6 @@
 	dir = 8
 	},
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = 32
 	},
 /turf/simulated/floor/carpet,
@@ -6767,8 +6744,6 @@
 /area/survivalpod/superpose/HydroCave)
 "eMp" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/gear_painter,
@@ -6990,7 +6965,6 @@
 	dir = 1
 	},
 /obj/structure/cable/cyan{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor,
@@ -7091,12 +7065,9 @@
 	id = "SP-Sec"
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
@@ -7276,8 +7247,6 @@
 /area/survivalpod/superpose/CrashedInfestedShip)
 "fgs" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -7734,14 +7703,9 @@
 /area/survivalpod/superpose/WoodenCamp)
 "fyt" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	dir = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/shuttle/wall/voidcraft/blue,
@@ -8573,7 +8537,6 @@
 	pixel_x = -24
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/steel_dirty,
@@ -8708,13 +8671,9 @@
 /area/survivalpod/superpose/LoneHome)
 "gjM" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/shuttle/wall/voidcraft/blue,
@@ -10478,8 +10437,6 @@
 "hrp" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/shuttle/wall/voidcraft/blue,
@@ -10614,13 +10571,9 @@
 /area/survivalpod/superpose/TradingShip)
 "hxz" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/shuttle/floor/voidcraft,
@@ -10980,9 +10933,7 @@
 "hJi" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/seeds/wheatseed{
-	icon_state = "seed"
-	},
+/obj/item/seeds/wheatseed,
 /turf/simulated/floor/outdoors/dirt,
 /area/survivalpod/superpose/DragonCave)
 "hJu" = (
@@ -11690,8 +11641,6 @@
 /area/survivalpod/superpose/MethLab)
 "iiA" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/shuttle/wall/voidcraft/blue,
@@ -11933,8 +11882,6 @@
 "itA" = (
 /obj/structure/table/steel_reinforced,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/random/maintenance,
@@ -12103,7 +12050,6 @@
 /obj/machinery/power/port_gen/pacman,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -12436,13 +12382,9 @@
 /area/template_noop)
 "iQm" = (
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/fire,
@@ -13326,7 +13268,6 @@
 	output_level = 950000
 	},
 /obj/structure/cable/cyan{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor,
@@ -13445,8 +13386,6 @@
 	dir = 4
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/fire,
@@ -14317,8 +14256,6 @@
 /area/survivalpod/superpose/CrashedInfestedShip)
 "kgy" = (
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/effect/floor_decal/industrial/warning/corner,
@@ -14501,8 +14438,6 @@
 /area/template_noop)
 "kmz" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/shuttle/wall/voidcraft/blue,
@@ -14724,8 +14659,6 @@
 /obj/random/maintenance/research,
 /obj/random/maintenance/research,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -15010,8 +14943,6 @@
 /area/survivalpod/superpose/TradingShip)
 "kEc" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
@@ -15549,8 +15480,6 @@
 /area/template_noop)
 "lcC" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/shuttle/wall/voidcraft/hard_corner/blue,
@@ -16161,8 +16090,6 @@
 /area/survivalpod/superpose/HydroCave)
 "lop" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -16381,7 +16308,6 @@
 	pixel_y = 20
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor,
@@ -16778,20 +16704,15 @@
 /obj/structure/curtain/bed,
 /obj/item/bedsheet/hosdouble,
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_y = 32
 	},
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/ScienceShip)
 "lLH" = (
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/fire,
@@ -17612,19 +17533,12 @@
 /area/survivalpod/superpose/CrashedInfestedShip)
 "mmX" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	dir = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/shuttle/wall/voidcraft/hard_corner/blue,
@@ -17774,8 +17688,6 @@
 /area/template_noop)
 "mss" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -18262,8 +18174,6 @@
 	name = "Privacy blast door"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/shuttle/floor/voidcraft/dark,
@@ -18356,7 +18266,6 @@
 	pixel_y = 20
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/shuttle/plating/skipjack,
@@ -18818,8 +18727,6 @@
 /area/survivalpod/superpose/HydroCave)
 "nhv" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/disposalpipe/segment{
@@ -19202,8 +19109,6 @@
 /area/survivalpod/superpose/TradingShip)
 "nxC" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -19717,8 +19622,6 @@
 /area/survivalpod/superpose/HydroCave)
 "nPH" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/segment{
@@ -19852,7 +19755,6 @@
 	pixel_y = 20
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/shuttle/floor/voidcraft,
@@ -19923,7 +19825,6 @@
 	pixel_x = -28
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/lino,
@@ -21170,9 +21071,6 @@
 /area/survivalpod/superpose/ScienceShip)
 "oKt" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	dir = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/shuttle/wall/voidcraft/blue,
@@ -21487,13 +21385,9 @@
 /area/survivalpod/superpose/GrandLibrary)
 "oTF" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/random/maintenance/engineering,
@@ -24396,8 +24290,6 @@
 /area/survivalpod/superpose/TradingShip)
 "pQW" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/voidcraft/survival_pod{
@@ -24769,8 +24661,6 @@
 /area/survivalpod/superpose/MethLab)
 "qdm" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/vending/dinnerware{
@@ -24982,8 +24872,6 @@
 /area/template_noop)
 "qkX" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/shuttle/wall/voidcraft/blue,
@@ -24996,8 +24884,6 @@
 	dir = 4
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
@@ -25298,8 +25184,6 @@
 /area/template_noop)
 "qvQ" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -26060,13 +25944,9 @@
 /area/template_noop)
 "rbS" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor,
@@ -26273,8 +26153,6 @@
 /area/survivalpod/superpose/ScienceShip)
 "rkb" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/shuttle/wall/voidcraft/blue,
@@ -26467,7 +26345,6 @@
 	pixel_x = -28
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/shuttle/floor/voidcraft,
@@ -27620,13 +27497,9 @@
 /area/survivalpod/superpose/MethLab)
 "spx" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/random/maintenance/engineering,
@@ -28662,8 +28535,6 @@
 "tgE" = (
 /obj/structure/kitchenspike,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/freezer/cold,
@@ -29055,7 +28926,6 @@
 	pixel_y = 20
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/floor_decal/borderfloorwhite{
@@ -29351,8 +29221,6 @@
 /area/survivalpod/superpose/CrashedInfestedShip)
 "tEh" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/shuttle/floor/voidcraft,
@@ -29692,7 +29560,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/white,
@@ -30372,7 +30239,6 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -31438,13 +31304,9 @@
 /area/template_noop)
 "vkJ" = (
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/random/maintenance/engineering,
@@ -31649,8 +31511,6 @@
 /obj/item/tape/random,
 /obj/item/taperecorder,
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/item/paper_bin{
@@ -31946,8 +31806,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -31965,8 +31823,6 @@
 /area/survivalpod/superpose/CrashedInfestedShip)
 "vFy" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/disposalpipe/segment{
@@ -32127,7 +31983,6 @@
 "vOq" = (
 /obj/machinery/power/port_gen/pacman,
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor,
@@ -33556,8 +33411,6 @@
 /area/survivalpod/superpose/CrashedInfestedShip)
 "wMJ" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/shuttle/wall/voidcraft/blue,
@@ -33600,8 +33453,6 @@
 /area/survivalpod/superpose/CultShip)
 "wPT" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/fire,
@@ -33768,8 +33619,6 @@
 /area/template_noop)
 "wUM" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/segment{
@@ -34011,8 +33860,6 @@
 /area/template_noop)
 "xbQ" = (
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/random/maintenance/engineering,
@@ -34190,7 +34037,6 @@
 	pixel_y = 20
 	},
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = -32
 	},
 /obj/item/handcuffs/legcuffs/fuzzy,
@@ -34401,9 +34247,7 @@
 /area/survivalpod/superpose/Farm)
 "xms" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
-/obj/item/seeds/onionseed{
-	icon_state = "seed"
-	},
+/obj/item/seeds/onionseed,
 /obj/item/seeds/tomatoseed{
 	icon_state = "seed";
 	pixel_x = 4;
@@ -34624,7 +34468,6 @@
 	pixel_y = 20
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
@@ -34941,7 +34784,6 @@
 	pixel_x = -28
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/shuttle/floor/voidcraft/dark,
@@ -35316,8 +35158,6 @@
 /area/survivalpod/superpose/TradingShip)
 "xVN" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/shuttle/plating/skipjack,

@@ -29,7 +29,7 @@
 		shockdirs = list(turn(dir,90),turn(dir,-90))
 
 /obj/machinery/containment_field/Destroy()
-	unsense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity)) // CHOMPEdit
+	unsense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity))
 	if(FG1 && !FG1.clean_up)
 		FG1.cleanup()
 	if(FG2 && !FG2.clean_up)
@@ -62,7 +62,7 @@
 		log_debug("DEBUG: HasProximity called without reference on [src].")
 		return
 // CHOMPEdit End
-	if(!istype(AM, /mob/living) || AM:incorporeal_move)
+	if(!isliving(AM) || AM:incorporeal_move)
 		return 0
 	if(!(get_dir(src,AM) in shockdirs))
 		return 0

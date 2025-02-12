@@ -214,8 +214,6 @@ var/list/mining_overlay_cache = list()
 	if(random_icon)
 		dir = pick(alldirs)
 		. = INITIALIZE_HINT_LATELOAD
-	// var/decl/flooring/F = get_flooring_data(/decl/flooring/sand) - CHOMPEdit
-	// footstep_sounds = F?.footstep_sounds CHOMPEdit footsteps
 
 /turf/simulated/mineral/LateInitialize()
 	if(density && mineral)
@@ -325,7 +323,7 @@ var/list/mining_overlay_cache = list()
 	if(!density)
 		return .
 
-	if(istype(AM,/mob/living/carbon/human))
+	if(ishuman(AM))
 		var/mob/living/carbon/human/H = AM
 		var/obj/item/pickaxe/P = H.get_inactive_hand()
 		if(istype(P))
@@ -422,6 +420,7 @@ var/list/mining_overlay_cache = list()
 
 
 	else
+		//This lets us get a sample of the artifact core...This is JUST used for fluff.
 		if (istype(W, /obj/item/core_sampler))
 			geologic_data.UpdateNearbyArtifactInfo(src)
 			var/obj/item/core_sampler/C = W
@@ -455,8 +454,8 @@ var/list/mining_overlay_cache = list()
 				return
 
 			var/obj/item/melee/shock_maul/S = W
-			if(!S.wielded)	//CHOMPEdit - slight maul buff
-				to_chat(user, span_warning("\The [W] must be wielded in two hands to be used for mining!"))	//CHOMPEdit - fixed improper name
+			if(!S.wielded)
+				to_chat(user, span_warning("\The [W] must be wielded in two hands to be used for mining!"))
 				return
 
 			var/newDepth = excavation_level + S.excavation_amount // Used commonly below
@@ -470,9 +469,12 @@ var/list/mining_overlay_cache = list()
 					wreckfinds(S.destroy_artefacts)
 
 			to_chat(user, span_notice("You smash through \the [src][fail_message]."))
-			//CHOMPEdit start - Moved the maul sounds up here and made it not cost energy to mine
-			user.visible_message(span_warning("\The [src] discharges with a thunderous, hair-raising crackle!"))
-			playsound(src, 'sound/weapons/resonator_blast.ogg', 100, 1, -1)
+			if(S.status != 0) //We're on. This isn't just a == 1 in case someone adds some weird functionality in the future to give it multiple states.
+				user.visible_message(span_warning("\The [src] discharges with a thunderous, hair-raising crackle!"))
+				playsound(src, 'sound/weapons/resonator_blast.ogg', 100, 1, -1)
+			else
+				user.visible_message(span_warning("\The [src] plows into the rock with a thunk, smashing it to pieces."))
+				playsound(src, get_sfx("pickaxe"), 35, 1, -1) //Weak. Not on. Just as good as a normal pick.
 
 			if(newDepth >= 200) // This means the rock is mined out fully
 				if(S.destroy_artefacts)
@@ -483,7 +485,7 @@ var/list/mining_overlay_cache = list()
 
 			excavation_level += S.excavation_amount
 			update_archeo_overlays(S.excavation_amount)
-			geologic_data = new /datum/geosample(src) //CHOMPEdit
+			geologic_data = new /datum/geosample(src)
 			//drop some rocks
 			next_rock += S.excavation_amount
 			while(next_rock > 50)
@@ -491,7 +493,6 @@ var/list/mining_overlay_cache = list()
 				var/obj/item/ore/O = new(src)
 				geologic_data.UpdateNearbyArtifactInfo(src)
 				O.geologic_data = geologic_data
-			//CHOMPEdit end
 
 		if (istype(W, /obj/item/pickaxe))
 			if(!istype(user.loc, /turf))
@@ -520,8 +521,8 @@ var/list/mining_overlay_cache = list()
 					var/datum/find/F = finds[1]
 					if(newDepth == F.excavation_required) // When the pick hits that edge just right, you extract your find perfectly, it's never confined in a rock
 						excavate_find(1, F)
-					else if(newDepth > F.excavation_required - F.clearance_range) // Not quite right but you still extract your find, the closer to the bottom the better, but not above 80%
-						excavate_find(prob(80 * (F.excavation_required - newDepth) / F.clearance_range), F)
+					else if(newDepth > F.excavation_required)
+						excavate_find(prob(10), F) //A 1 in 10 chance to get it out perfectly seems fine if you're not being careful.
 
 				to_chat(user, span_notice("You finish [P.drill_verb] \the [src]."))
 
@@ -534,7 +535,7 @@ var/list/mining_overlay_cache = list()
 
 				excavation_level += P.excavation_amount
 				update_archeo_overlays(P.excavation_amount)
-				geologic_data = new /datum/geosample(src) //CHOMPEdit
+				geologic_data = new /datum/geosample(src)
 				//drop some rocks
 				next_rock += P.excavation_amount
 				while(next_rock > 50)
@@ -546,14 +547,15 @@ var/list/mining_overlay_cache = list()
 
 	return attack_hand(user)
 
+//THIS IS THE 'YOU HIT AN ARTIFACT AND ARE GOING TOO DEEP' PROC. This is NOT the 'you destroyed the turf' proc. For that, look at 'GetDrilled'
 /turf/simulated/mineral/proc/wreckfinds(var/destroy = FALSE)
-	if(!destroy && prob(90)) //nondestructive methods have a chance of letting you step away to not trash things
-		if(prob(25))
-			excavate_find(prob(5), finds[1])
-	else if(prob(50) || destroy) //destructive methods will always destroy finds, no bowls menacing with spikes for you
+	if(!destroy) //nondestructive methods have a chance of letting you step away to not trash things
+		if(prob(10))	//This is to keep  you from just running into an artifact turf over and over and over and over while also keeping a small % chance to cause a small rock to drop if you truly accidentally went too deep.
+						//Technically you CAN KEEP RUNNING INTO THE TILE but like, you're wasting so much time at that point. Just buy a pick set from the mining vendor.
+			excavate_find(prob(1), finds[1]) //1 in 100 chance of digging it out
+	else //destructive methods will always destroy finds, no bowls menacing with spikes for you
 		finds.Remove(finds[1])
-		if(prob(50))
-			artifact_debris()
+		artifact_debris()
 
 /turf/simulated/mineral/proc/update_archeo_overlays(var/excavation_amount = 0)
 	var/updateIcon = 0
@@ -602,7 +604,7 @@ var/list/mining_overlay_cache = list()
 	if(!mineral)
 		return
 	clear_ore_effects()
-	geologic_data = new /datum/geosample(src) //CHOMPEdit
+	geologic_data = new /datum/geosample(src)
 	var/obj/item/ore/O = new mineral.ore (src)
 	if(istype(O))
 		geologic_data.UpdateNearbyArtifactInfo(src)
@@ -612,16 +614,9 @@ var/list/mining_overlay_cache = list()
 /turf/simulated/mineral/proc/excavate_turf()
 	var/obj/structure/boulder/B
 	if(artifact_find)
-		if( excavation_level > 0 || prob(15) )
-			//boulder with an artifact inside
-			B = new(src)
-			if(artifact_find)
-				B.artifact_find = artifact_find
-		else
-			artifact_debris(1)
-	else if(prob(5))
-		//empty boulder
+		//boulder with an artifact inside
 		B = new(src)
+		B.artifact_find = artifact_find
 
 	if(B)
 		GetDrilled(0)
@@ -649,7 +644,7 @@ var/list/mining_overlay_cache = list()
 
 	//destroyed artifacts have weird, unpleasant effects
 	//make sure to destroy them before changing the turf though
-	if(artifact_find && artifact_fail)
+	if(finds && finds.len && prob(10)) //You destroyed an artifact turf!
 		var/pain = 0
 		if(prob(50))
 			pain = 1
@@ -657,15 +652,12 @@ var/list/mining_overlay_cache = list()
 			to_chat(M, span_danger("[pick("A high-pitched [pick("keening","wailing","whistle")]","A rumbling noise like [pick("thunder","heavy machinery")]")] somehow penetrates your mind before fading away!"))
 			if(pain)
 				flick("pain",M.pain)
-				if(prob(50))
-					M.adjustBruteLoss(5)
-			else
-				M.flash_eyes()
-				if(prob(50))
-					M.Stun(5)
-			SSradiation.flat_radiate(src, 25, 100)
+			M.flash_eyes()
+			if(prob(50))
+				M.Stun(5)
+			M.make_jittery(1000) //SHAKY
 		if(prob(25))
-			excavate_find(prob(5), finds[1])
+			excavate_find(prob(25), finds[1])
 	else if(rand(1,500) == 1)
 		visible_message(span_notice("An old dusty crate was buried within!"))
 		new /obj/structure/closet/crate/secure/loot(src)
@@ -676,10 +668,10 @@ var/list/mining_overlay_cache = list()
 /turf/simulated/mineral/proc/excavate_find(var/is_clean = 0, var/datum/find/F)
 	//with skill and luck, players can cleanly extract finds
 	//otherwise, they come out inside a chunk of rock
-	geologic_data = new /datum/geosample(src) //CHOMPEdit
+	geologic_data = new /datum/geosample(src)
 	var/obj/item/X
 	if(is_clean)
-		X = new /obj/item/archaeological_find(src, F.find_type) // CHOMPEdit
+		X = new /obj/item/archaeological_find(src, F.find_type)
 	else
 		X = new /obj/item/strangerock(src, inside_item_type = F.find_type)
 		geologic_data.UpdateNearbyArtifactInfo(src)
@@ -694,6 +686,8 @@ var/list/mining_overlay_cache = list()
 	if(X)
 		display_name = X.name
 
+	//This is affected by 'prob_delicate' in finds.dm. As of writing, this has been set to 0 because the suspension field is just one extra piece that makes
+	//Xenoarch that much more confusing, and the intent of this PR is to make it more friendly to get into.
 	//many finds are ancient and thus very delicate - luckily there is a specialised energy suspension field which protects them when they're being extracted
 	if(prob(F.prob_delicate))
 		var/obj/effect/suspension_field/S = locate() in src

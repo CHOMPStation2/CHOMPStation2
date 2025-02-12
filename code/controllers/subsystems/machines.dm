@@ -30,12 +30,12 @@ SUBSYSTEM_DEF(machines)
 	var/list/powernets = list()
 	var/list/powerobjs = list()
 
-/datum/controller/subsystem/machines/Initialize() // CHOMPEdit
+/datum/controller/subsystem/machines/Initialize()
 	makepowernets()
 	admin_notice(span_danger("Initializing atmos machinery."), R_DEBUG)
 	setup_atmos_machinery(all_machines)
 	fire()
-	return SS_INIT_SUCCESS // CHOMPEdit
+	return SS_INIT_SUCCESS
 
 /datum/controller/subsystem/machines/fire(resumed = 0)
 	var/timer = TICK_USAGE
@@ -105,7 +105,7 @@ SUBSYSTEM_DEF(machines)
 	while(current_run.len)
 		var/datum/pipe_network/PN = current_run[current_run.len]
 		current_run.len--
-		if(!PN || QDELETED(PN)) //CHOMPEdit
+		if(!PN || QDELETED(PN))
 			networks.Remove(PN)
 			DISABLE_BITFIELD(PN?.datum_flags, DF_ISPROCESSING)
 		else
@@ -122,7 +122,7 @@ SUBSYSTEM_DEF(machines)
 	while(current_run.len)
 		var/obj/machinery/M = current_run[current_run.len]
 		current_run.len--
-		if(!istype(M) || QDELETED(M) || (M.process(wait) == PROCESS_KILL)) //CHOMPEdit
+		if(!istype(M) || QDELETED(M) || (M.process(wait) == PROCESS_KILL))
 			processing_machines.Remove(M)
 			DISABLE_BITFIELD(M?.datum_flags, DF_ISPROCESSING)
 		if(MC_TICK_CHECK)

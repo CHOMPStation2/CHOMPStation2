@@ -54,7 +54,7 @@
 		if("logout")
 			authenticated = 0
 
-	src.updateUsrDialog()
+	src.updateUsrDialog(usr)
 
 /obj/machinery/computer/am_engine/attack_ai(var/mob/user as mob)
 	return src.attack_hand(user)
@@ -90,7 +90,7 @@
 			dat += "<BR>Contents:<br>[src.connected_E.H_fuel]kg of Hydrogen<br>[src.connected_E.antiH_fuel]kg of Anti-Hydrogen<br>"
 
 	dat += "<BR>\[ [(src.state != STATE_DEFAULT) ? "<A href='byond://?src=\ref[src];operation=main'>Main Menu</A> | " : ""]<A href='byond://?src=\ref[user];mach_close=communications'>Close</A> \]"
-	user << browse(dat, "window=communications;size=400x500")
+	user << browse("<html>[dat]</html>", "window=communications;size=400x500")
 	onclose(user, "communications")
 
 #undef STATE_DEFAULT

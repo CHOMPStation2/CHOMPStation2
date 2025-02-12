@@ -67,7 +67,7 @@
 		to_chat(src, span_alium("Their plasma vessel is missing."))
 		return
 
-	var/amount = tgui_input_number(usr, "Amount:", "Transfer Plasma to [M]")
+	var/amount = tgui_input_number(src, "Amount:", "Transfer Plasma to [M]")
 	if (amount)
 		amount = abs(round(amount))
 		if(check_alien_ability(amount,0,O_PLASMA))
@@ -368,7 +368,7 @@
 
 	visible_message(span_warning(span_bold("\The [src]") + " rips viciously at \the [G.affecting]'s body with its claws!"))
 
-	if(istype(G.affecting,/mob/living/carbon/human))
+	if(ishuman(G.affecting))
 		var/mob/living/carbon/human/H = G.affecting
 		H.apply_damage(50,BRUTE)
 		if(H.stat == 2)

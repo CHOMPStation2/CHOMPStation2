@@ -83,17 +83,17 @@
 				active_mode = text2num(params["mode"])
 				return TRUE
 			if("choose_color")
-				var/chosen_color = input(inserted, "Choose a color: ", "ColorMate colour picking", activecolor) as color|null
+				var/chosen_color = tgui_color_picker(inserted, "Choose a color: ", "ColorMate colour picking", activecolor)
 				if(chosen_color)
 					activecolor = chosen_color
 				return TRUE
 			if("paint")
 				do_paint(inserted)
 				temp = "Painted Successfully!"
-				if(istype(inserted, /mob/living/simple_mob))
+				if(isanimal(inserted))
 					var/mob/living/simple_mob/M = inserted
 					M.has_recoloured = TRUE
-				if(istype(inserted, /mob/living/silicon/robot))
+				if(isrobot(inserted))
 					var/mob/living/silicon/robot/R = inserted
 					R.has_recoloured = TRUE
 				Destroy()

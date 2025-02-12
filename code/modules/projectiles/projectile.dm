@@ -336,6 +336,9 @@
 	if(isnum(angle))
 		setAngle(angle)
 	starting = get_turf(src)
+	if(!starting)
+		qdel(src)
+		return
 	if(isnull(Angle))	//Try to resolve through offsets if there's no angle set.
 		if(isnull(xo) || isnull(yo))
 			stack_trace("WARNING: Projectile [type] deleted due to being unable to resolve a target after angle was null!")
@@ -469,7 +472,7 @@
 			impacted_mobs.Cut()
 		impacted_mobs = null
 
-	QDEL_NULL(trajectory) //CHOMPEdit
+	QDEL_NULL(trajectory)
 	cleanup_beam_segments()
 
 	if(my_case)
@@ -574,7 +577,7 @@
 
 	if(ismob(A))
 		var/mob/M = A
-		if(istype(A, /mob/living))
+		if(isliving(A))
 			//if they have a neck grab on someone, that person gets hit instead
 			var/obj/item/grab/G = locate() in M
 			if(G && G.state >= GRAB_NECK)
@@ -710,7 +713,7 @@
 		return FALSE
 
 	var/impacted_organ = parse_zone(def_zone)
-	if(istype(target_mob, /mob/living/simple_mob))
+	if(isanimal(target_mob))
 		var/mob/living/simple_mob/SM = target_mob
 		var/decl/mob_organ_names/organ_plan = SM.organ_names
 		impacted_organ = pick(organ_plan.hit_zones)

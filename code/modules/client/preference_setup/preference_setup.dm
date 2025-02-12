@@ -13,7 +13,7 @@
 	category_item_type = /datum/category_item/player_setup_item/occupation
 
 /datum/category_group/player_setup_category/appearance_preferences
-	name = "Antagonism"
+	name = "Special Roles"
 	sort_order = 4
 	category_item_type = /datum/category_item/player_setup_item/antagonism
 
@@ -26,11 +26,13 @@
 	name = "Traits"
 	sort_order = 6
 	category_item_type = /datum/category_item/player_setup_item/traits
-*/ //VOREStation Removal End
+
+//redundant due to having most of its content stripped out, merged into special roles
 /datum/category_group/player_setup_category/global_preferences
 	name = "Global"
 	sort_order = 6 //VOREStation Edit due to above commented out
 	category_item_type = /datum/category_item/player_setup_item/player_global
+*/ //VOREStation Removal End
 
 /****************************
 * Category Collection Setup *

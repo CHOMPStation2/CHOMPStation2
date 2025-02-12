@@ -49,9 +49,8 @@
 //-------------------------------------------
 //ChompADD START
 /obj/vehicle/Initialize()
-	.=..()
+	. = ..()
 	soundloop = new(list(src), FALSE)
-	return
 //ChompADD END
 
 ///obj/vehicle/New()
@@ -248,7 +247,7 @@
 	var/turf/Tsec = get_turf(src)
 
 	//stuns people who are thrown off a train that has been blown up
-	if(istype(load, /mob/living))
+	if(isliving(load))
 		var/mob/living/M = load
 		M.apply_effects(5, 5)
 
@@ -303,7 +302,7 @@
 	C.forceMove(src)
 	cell = C
 	powercheck()
-	to_chat(usr, span_notice("You install [C] in [src]."))
+	to_chat(H, span_notice("You install [C] in [src]."))
 
 /obj/vehicle/proc/remove_cell(var/mob/living/carbon/human/H)
 	if(!mechanical)
@@ -311,7 +310,7 @@
 	if(!cell)
 		return
 
-	to_chat(usr, span_notice("You remove [cell] from [src]."))
+	to_chat(H, span_notice("You remove [cell] from [src]."))
 	cell.forceMove(get_turf(H))
 	H.put_in_hands(cell)
 	cell = null

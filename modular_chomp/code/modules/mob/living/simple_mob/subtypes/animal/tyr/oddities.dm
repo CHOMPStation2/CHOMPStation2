@@ -54,8 +54,8 @@
 	vore_bump_emote = "slurps up" //Not really a good way to make the grammar work with a passive vore plant.
 	vore_active = 1
 	vore_capacity = 1
-	vore_pounce_chance = 0 //Plants only eat people who stumble into them.
-	swallowTime = 3 //3 deciseconds. This is intended to be nearly instant, e.g. victim trips and falls in.
+	vore_pounce_chance = 100
+	swallowTime = 3
 	vore_ignores_undigestable = 0
 	vore_default_mode = DM_DIGEST
 
@@ -110,6 +110,7 @@
 	spawn_types = list(
 	/mob/living/simple_mob/animal/tyr/electronic_beetle = 1,
 	/mob/living/simple_mob/animal/tyr/explode_beetle = 1,
+	/mob/living/simple_mob/animal/tyr/glowing_beetle = 1,
 	)
 
 	simultaneous_spawns = 2
@@ -122,8 +123,8 @@
 	desc = "A large insect."
 	icon_state = "lighting_beetle"
 	icon_dead = "beetle_dead"
-	maxHealth = 40
-	health = 40
+	maxHealth = 18
+	health = 18
 	pass_flags = PASSTABLE //flying bug
 	movement_cooldown = 1
 
@@ -155,8 +156,8 @@
 	desc = "A large insect."
 	icon_state = "fire_beetle"
 	icon_dead = "beetle_dead"
-	maxHealth = 40
-	health = 40
+	maxHealth = 18
+	health = 18
 	pass_flags = PASSTABLE //flying bug
 	movement_cooldown = 1
 
@@ -177,3 +178,33 @@
 	if(isliving(A))
 		var/mob/living/L = A
 		L.add_modifier(/datum/modifier/fire, 3 SECONDS)
+
+/mob/living/simple_mob/animal/tyr/glowing_beetle
+	name = "glowing beetle"
+	desc = "A large insect."
+	icon_state = "green_beetle"
+	icon_dead = "beetle_dead"
+	maxHealth = 18
+	health = 18
+	pass_flags = PASSTABLE
+	movement_cooldown = 1
+
+	needs_reload = TRUE
+	reload_max = 1
+	reload_time = 2 SECONDS
+
+	ai_holder_type = /datum/ai_holder/hostile/ranged/robust
+	projectiletype = /obj/item/projectile/arc/spore
+
+	meat_type = /obj/item/reagent_containers/food/snacks/deathclawmeat
+	meat_amount = 2
+
+	butchery_loot = list(\
+		/obj/item/stack/material/chitin = 1\
+		)
+
+	see_in_dark = 3
+	melee_damage_lower = 16
+	melee_damage_upper = 16
+
+	ranged_cooldown = 30

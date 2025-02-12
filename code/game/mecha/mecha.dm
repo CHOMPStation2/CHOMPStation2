@@ -1060,7 +1060,7 @@
 	else
 		temp_deflect_chance = round(ArmC.get_efficiency() * ArmC.deflect_chance + (defence_mode ? 25 : 0))
 
-	if(istype(user,/mob/living/carbon/human))
+	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		if(H.species.can_shred(user))
 			if(!prob(temp_deflect_chance))
@@ -1125,7 +1125,7 @@
 		src.occupant_message(span_notice("\The [A] bounces off the armor."))
 		src.visible_message("\The [A] bounces off \the [src] armor")
 		src.log_append_to_last("Armor saved.")
-		if(istype(A, /mob/living))
+		if(isliving(A))
 			var/mob/living/M = A
 			M.take_organ_damage(10)
 	else if(istype(A, /obj))
@@ -1607,12 +1607,12 @@
 
 /*
 /obj/mecha/attack_ai(var/mob/living/silicon/ai/user as mob)
-	if(!istype(user, /mob/living/silicon/ai))
+	if(!isAI(user))
 		return
 	var/output = {"<b>Assume direct control over [src]?</b>
 						<a href='byond://?src=\ref[src];ai_take_control=\ref[user];duration=3000'>Yes</a><br>
 						"}
-	user << browse(output, "window=mecha_attack_ai")
+	user << browse("<html>[output]</html>", "window=mecha_attack_ai")
 	return
 */
 
@@ -2128,7 +2128,7 @@
 		for(var/atom/ID in list(H.get_active_hand(), H.wear_id, H.belt))
 			if(src.check_access(ID,src.internals_req_access))
 				return 1
-	else if(istype(H, /mob/living/silicon/robot))
+	else if(isrobot(H))
 		var/mob/living/silicon/robot/R = H
 		if(src.check_access(R.idcard,src.internals_req_access))
 			return 1

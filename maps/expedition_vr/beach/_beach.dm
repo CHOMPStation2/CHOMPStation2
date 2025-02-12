@@ -70,7 +70,7 @@
 	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, Z_LEVEL_BEACH_CAVE, world.maxx, world.maxy)
 	new /datum/random_map/noise/ore/beachmine(null, 1, 1, Z_LEVEL_BEACH_CAVE, 64, 64)*/
 
-	initialized = TRUE
+	flags |= ATOM_INITIALIZED
 	return INITIALIZE_HINT_QDEL
 
 // Two mob spawners that are placed on the map that spawn some mobs!
@@ -119,15 +119,15 @@
 
 // These are step-teleporters, for map edge transitions
 // This top one goes INTO the cave
-/obj/effect/step_trigger/teleporter/away_beach_tocave/New()
-	..()
+/obj/effect/step_trigger/teleporter/away_beach_tocave/Initialize()
+	. = ..()
 	teleport_x = src.x //X is horizontal. This is a top of map transition, so you want the same horizontal alignment in the cave as you have on the beach
 	teleport_y = 2 //2 is because it's putting you on row 2 of the map to the north
 	teleport_z = z+1 //The cave is always our Z-level plus 1, because it's loaded after us
 
 //This one goes OUT OF the cave
-/obj/effect/step_trigger/teleporter/away_beach_tobeach/New()
-	..()
+/obj/effect/step_trigger/teleporter/away_beach_tobeach/Initialize()
+	. = ..()
 	teleport_x = src.x //Same reason as bove
 	teleport_y = world.maxy - 1 //This means "1 space from the top of the map"
 	teleport_z = z-1 //Opposite of 'tocave', beach is always loaded as the map before us
@@ -139,8 +139,8 @@
 	name = "Water"
 	icon_state = "water"
 
-/turf/simulated/floor/beach/coastwater/New()
-	..()
+/turf/simulated/floor/beach/coastwater/Initialize()
+	. = ..()
 	add_overlay(image("icon"='icons/misc/beach.dmi',"icon_state"="water","layer"=MOB_LAYER+0.1))
 
 // -- Areas -- //

@@ -41,7 +41,8 @@
 	setUniqueSpeciesSprite()
 	..(S, user)
 
-/obj/item/clothing/accessory/choker/dropped()
+/obj/item/clothing/accessory/choker/dropped(mob/user)
+	..()
 	icon_override = icon_previous_override
 
 /obj/item/clothing/accessory/collar
@@ -79,7 +80,8 @@
 	setUniqueSpeciesSprite()
 	..(S, user)
 
-/obj/item/clothing/accessory/collar/dropped()
+/obj/item/clothing/accessory/collar/dropped(mob/user)
+	..()
 	icon_override = icon_previous_override
 
 //ywedit start. forces different sprite sheet on equip
@@ -98,7 +100,8 @@
 	setUniqueSpeciesSprite()
 	..(S, user)
 
-/obj/item/clothing/accessory/collar/dropped()
+/obj/item/clothing/accessory/collar/dropped(mob/user)
+	..()
 	icon_override = icon_previous_override
 //ywedit end
 
@@ -128,7 +131,7 @@
 	set name = "Jingle Bell"
 	set category = "Object"
 	set src in usr
-	if(!istype(usr, /mob/living)) return
+	if(!isliving(usr)) return
 	if(usr.stat) return
 
 	if(!jingled)

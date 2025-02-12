@@ -164,7 +164,7 @@
 
 	var/nagmessage = "Adjust your mass to be a size between 25 to 200% (or 1% to 600% in dormitories). (DO NOT ABUSE)"
 	var/default = size_multiplier * 100
-	var/new_size = tgui_input_number(usr, nagmessage, "Pick a Size", default, 600, 1)
+	var/new_size = tgui_input_number(src, nagmessage, "Pick a Size", default, 600, 1)
 	if(size_range_check(new_size))
 		resize(new_size/100, uncapped = has_large_resize_bounds(), ignore_prefs = TRUE)
 		if(temporary_form)	//CHOMPEdit - resizing both our forms
@@ -199,7 +199,7 @@
 			return 0
 	if(size_diff >= 0.50 || mob_size < MOB_SMALL || size_diff >= get_effective_size() || ignore_size)
 		if(buckled)
-			to_chat(usr,span_notice("You have to unbuckle \the [src] before you pick them up."))
+			to_chat(src,span_notice("You have to unbuckle \the [src] before you pick them up."))
 			return 0
 		holder_type = /obj/item/holder/micro
 		var/obj/item/holder/m_holder = get_scooped(M, G)
@@ -300,7 +300,7 @@
 		for (var/atom/movable/M in prey.loc)
 			if (prey == M || pred == M)
 				continue
-			if (istype(M, /mob/living))
+			if (isliving(M))
 				var/mob/living/L = M
 				if (!M.CanPass(src, prey.loc) && !(get_effective_size(FALSE) - L.get_effective_size(TRUE) >= size_ratio_needed || L.lying))
 					can_pass = FALSE
@@ -370,7 +370,7 @@
 				equip_to_slot_if_possible(prey.get_scooped(pred), slot_shoes, 0, 1)
 				add_attack_logs(pred, prey, "Grabbed underfoot ([tail ? "taur" : "nontaur"], no shoes)")
 
-		if(m_intent == "run")
+		if(m_intent == I_RUN)
 			switch(a_intent)
 				if(I_DISARM)
 					message_pred = "You quickly push [prey] to the ground with your foot!"

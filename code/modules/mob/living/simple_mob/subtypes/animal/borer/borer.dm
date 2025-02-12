@@ -109,7 +109,7 @@
 	if(!host || !controlling)
 		return
 
-	if(istype(host, /mob/living/carbon/human))
+	if(ishuman(host))
 		var/mob/living/carbon/human/H = host
 		var/obj/item/organ/external/head = H.get_organ(BP_HEAD)
 		if(head)
@@ -171,7 +171,7 @@
 	reset_view(null)
 	machine = null
 
-	if(istype(host, /mob/living/carbon/human))
+	if(ishuman(host))
 		var/mob/living/carbon/human/H = host
 		var/obj/item/organ/external/head = H.get_organ(BP_HEAD)
 		if(head)
@@ -245,7 +245,7 @@
 					nearby_mobs += LM
 			var/mob/living/speaker
 			if(nearby_mobs.len)
-				speaker = tgui_input_list(usr, "Choose a target speaker:", "Target Choice", nearby_mobs)
+				speaker = tgui_input_list(src, "Choose a target speaker:", "Target Choice", nearby_mobs)
 			if(speaker)
 				log_admin("[src.ckey]/([src]) tried to force [speaker] to say: [message]")
 				message_admins("[src.ckey]/([src]) tried to force [speaker] to say: [message]")
@@ -260,7 +260,7 @@
 	to_chat(host, "Your own thoughts speak: \"[message]\"")
 
 	for(var/mob/M in player_list)
-		if(istype(M, /mob/new_player))
+		if(isnewplayer(M))
 			continue
 		else if(M.stat == DEAD && M.client?.prefs?.read_preference(/datum/preference/toggle/ghost_ears))
 			to_chat(M, "[src.true_name] whispers to [host], \"[message]\"")

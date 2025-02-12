@@ -37,18 +37,18 @@
 	icon_state = "[bike_icon]_off"
 	update_icon()
 
-/obj/vehicle/bike/built/New()
-	..()
+/obj/vehicle/bike/built/Initialize()
+	. = ..()
 	qdel(cell)
 	cell = null
 
-/obj/vehicle/bike/random/New()
+/obj/vehicle/bike/random/Initialize()
 	paint_color = rgb(rand(1,255),rand(1,255),rand(1,255))
-	..()
+	. = ..()
 
-/obj/vehicle/bike/attackby(obj/item/W as obj, mob/user as mob)
+/obj/vehicle/bike/attackby(obj/item/W, mob/user)
 	if(istype(W, /obj/item/multitool) && open)
-		var/new_paint = input(usr, "Please select paint color.", "Paint Color", paint_color) as color|null
+		var/new_paint = tgui_color_picker(user, "Please select paint color.", "Paint Color", paint_color)
 		if(new_paint)
 			paint_color = new_paint
 			update_icon()

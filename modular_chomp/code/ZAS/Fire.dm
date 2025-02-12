@@ -1,12 +1,15 @@
 #define FIRE_MAX_TEMP 20000
 
 /turf/proc/lingering_fire(fl)
-	return
+	return FALSE
+
+/turf/simulated/floor/water/lingering_fire(fl)
+	return FALSE
+
+/turf/simulated/floor/flesh/lingering_fire(fl)
+	return FALSE
 
 /turf/simulated/lingering_fire(fl)
-	if(istype(src, /turf/space) || istype(src, /turf/simulated/floor/water) || istype(src, /turf/simulated/flesh))
-		return FALSE
-
 	if(istype(src, /turf/simulated/open))
 		var/turf/below = GetBelow(src)
 		if(below)
@@ -85,7 +88,8 @@
 	// Limit max lingering fire temp gain, or engines melt
 	if(air_contents.temperature < FIRE_MAX_TEMP) // May as well limit this
 		var/starting_energy = air_contents.temperature * air_contents.heat_capacity()
-		air_contents.temperature = (starting_energy + vsc.fire_fuel_energy_release * (gas_exchange * 1.05)) / air_contents.heat_capacity()
+		if(starting_energy > 0)
+			air_contents.temperature = min((starting_energy + vsc.fire_fuel_energy_release * (gas_exchange * 1.05)) / air_contents.heat_capacity(), FIRE_MAX_TEMP)
 	air_contents.update_values()
 
 	// Affect contents

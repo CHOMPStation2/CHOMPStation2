@@ -81,10 +81,11 @@
 	name = "crate"
 	desc = "A rectangular steel crate."
 
-
-	icon_state = "crate"
-	icon_living = "crate"
-	icon = 'modular_chomp/icons/mob/animal_ch.dmi' //CHOMPEdit
+	//CHOMPEdit Start
+	icon_state = "open"
+	icon_living = "open"
+	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
+	// CHOMPEdit End
 
 	faction = FACTION_MIMIC
 

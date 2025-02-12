@@ -214,6 +214,8 @@ var/global/list/obj/machinery/telecomms/telecomms_list = list()
 	..()
 
 /obj/machinery/telecomms/proc/checkheat()
+	if(QDELETED(src))
+		return
 	// Checks heat from the environment and applies any integrity damage
 	var/datum/gas_mixture/environment = loc.return_air()
 	var/damage_chance = 0                           // Percent based chance of applying 1 integrity damage this tick
@@ -641,7 +643,7 @@ var/global/list/obj/machinery/telecomms/telecomms_list = list()
 
 				log.parameters["race"] = race
 
-				if(!istype(M, /mob/new_player) && M)
+				if(!isnewplayer(M) && M)
 					log.parameters["uspeech"] = M.universal_speak
 				else
 					log.parameters["uspeech"] = 0

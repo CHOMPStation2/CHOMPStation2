@@ -26,7 +26,7 @@
 	dat += span_bold("Four uses use them wisely:") + "<BR>"
 	dat += "<A href='byond://?src=\ref[src];spell_teleport=1'>Teleport</A><BR>"
 	dat += "Kind regards,<br>Wizards Federation<br><br>P.S. Don't forget to bring your gear, you'll need it to cast most spells.<HR>"
-	user << browse(dat, "window=scroll")
+	user << browse("<html>[dat]</html>", "window=scroll")
 	onclose(user, "scroll")
 	return
 
@@ -35,7 +35,7 @@
 	if (usr.stat || usr.restrained() || src.loc != usr)
 		return
 	var/mob/living/carbon/human/H = usr
-	if (!( istype(H, /mob/living/carbon/human)))
+	if (!ishuman(H))
 		return 1
 	if ((usr == src.loc || (in_range(src, usr) && istype(src.loc, /turf))))
 		usr.set_machine(src)

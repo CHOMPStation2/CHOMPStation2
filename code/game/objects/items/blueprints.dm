@@ -44,7 +44,7 @@
 	var/can_rename_areas_in = AREA_STATION	// Only station areas can be reanamed
 
 /obj/item/blueprints/attack_self(mob/M as mob)
-	if (!istype(M,/mob/living/carbon/human))
+	if (!ishuman(M))
 		to_chat(M, "This stack of blue paper means nothing to you.") //monkeys cannot into projecting
 		return
 	interact()
@@ -337,7 +337,7 @@
 				usr.client.images.Remove(i)
 
 // Make sure to turn off the colors when we drop the blueprints.
-/obj/item/blueprints/dropped(mob/user as mob)
+/obj/item/blueprints/dropped(mob/user)
 	if(areaColor_turfs.len)
 		seeAreaColors_remove()
 	return ..()

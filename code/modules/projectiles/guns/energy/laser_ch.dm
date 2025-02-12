@@ -18,7 +18,7 @@
 	is_picked_up = TRUE
 	update_transform()
 
-/obj/item/gun/energy/laser/dropped()
+/obj/item/gun/energy/laser/dropped(mob/living/user)
 	. = ..()
 	if(!istype(loc,/mob/living))
 		is_picked_up = FALSE
@@ -71,11 +71,13 @@
 	origin_tech = list(TECH_POWER = 4, TECH_COMBAT = 6, TECH_MAGNET = 4, TECH_ILLEGAL = 4)
 
 /obj/item/cell/vepr
+	name = "VEPR cell"
 	icon = 'icons/obj/ammo_ch.dmi'
 	icon_state = "veprcell"
 	item_state = "egg6"
 	w_class = ITEMSIZE_SMALL
 	maxcharge = 7200
+	charge = 7200
 	charge_amount = 20
 	matter = list(MAT_METAL = 350, MAT_GLASS = 50)
 	preserve_item = 1

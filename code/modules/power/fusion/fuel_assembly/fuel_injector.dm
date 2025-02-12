@@ -43,7 +43,7 @@ GLOBAL_LIST_EMPTY(fuel_injectors)
 /obj/machinery/fusion_fuel_injector/attackby(obj/item/W, mob/user)
 
 	if(istype(W, /obj/item/multitool))
-		var/new_ident = tgui_input_text(usr, "Enter a new ident tag.", "Fuel Injector", id_tag, MAX_NAME_LEN)
+		var/new_ident = tgui_input_text(user, "Enter a new ident tag.", "Fuel Injector", id_tag, MAX_NAME_LEN)
 		new_ident = sanitize(new_ident,MAX_NAME_LEN)
 		if(new_ident && user.Adjacent(src))
 			id_tag = new_ident
@@ -56,8 +56,8 @@ GLOBAL_LIST_EMPTY(fuel_injectors)
 			return
 		//CHOMPEdit Begin
 		if(istype(W,/obj/item/fuel_assembly/blitz))
-			var/secondchance = alert("Are you sure you want to put the blitz rod in the fuel injector? This definitely wasn't meant to be used like this, and could only end badly.","Confirm","Yes","No")
-			if(secondchance=="No")
+			var/secondchance = tgui_alert(user, "Are you sure you want to put the blitz rod in the fuel injector? This definitely wasn't meant to be used like this, and could only end badly.","Confirm",list("Yes","No"))
+			if(!secondchance || secondchance=="No")
 				return
 		//CHOMPEdit End
 		if(cur_assembly)

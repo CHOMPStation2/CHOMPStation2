@@ -109,9 +109,7 @@
 				prob(4);/obj/item/ammo_magazine/m45uzi,\
 				prob(4);/obj/item/ammo_magazine/m9mml,\
 				prob(4);/obj/item/ammo_magazine/m9mmt,\
-//CHOMPedit start: new P90 magazine.
-				prob(4);/obj/item/ammo_magazine/a57p90,\
-//CHOMPedit end.
+				prob(4);/obj/item/ammo_magazine/m9mmp90,\
 				prob(4);/obj/item/ammo_magazine/m10mm,\
 				prob(4);/obj/item/ammo_magazine/m545/small,\
 				prob(3);/obj/item/ammo_magazine/clip/c44,\
@@ -192,7 +190,7 @@
 
 /obj/random/outside_mob/spawn_item()
 	. = ..()
-	if(istype(., /mob/living/simple_mob))
+	if(isanimal(.))
 		var/mob/living/simple_mob/this_mob = .
 		this_mob.faction = src.faction
 		if (this_mob.minbodytemp > 200) // Temporary hotfix. Eventually I'll add code to change all mob vars to fit the environment they are spawned in.
