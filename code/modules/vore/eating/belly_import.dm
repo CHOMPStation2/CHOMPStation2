@@ -1177,6 +1177,6 @@
 		new_belly.items_preserved.Cut()
 		new_belly.update_internal_overlay() // Signal not implemented! CHOMPEnable
 
-	host.update_fullness()
+	host.handle_belly_update()
 	host.updateVRPanel()
 	unsaved_changes = TRUE

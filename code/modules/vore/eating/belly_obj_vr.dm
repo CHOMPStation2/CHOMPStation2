@@ -486,8 +486,15 @@
 				//formatted_desc = replacetext(formatted_desc, "%prey", thing) //replace with whatever mob entered into this belly
 				//to_chat(CC.bound_mob, span_notice("<B>[formatted_desc]</B>")) //CHOMPedit end
 
+<<<<<<< HEAD
 	/*/ Intended for simple mobs //CHMOPEdit: Counting belly cycles now.
 	if((!owner.client || autotransfer_enabled) && autotransferlocation && autotransferchance > 0)
+=======
+	owner.handle_belly_update()
+
+	// Intended for simple mobs
+	if(!owner.client && autotransferlocation && autotransferchance > 0)
+>>>>>>> b22ada5b3c (updates belly handling (#17126))
 		addtimer(CALLBACK(src, TYPE_PROC_REF(/obj/belly, check_autotransfer), thing, autotransferlocation), autotransferwait)
 	*/
 
@@ -507,6 +514,7 @@
 	var/list/endfx = list()
 	if(isliving(thing))
 		var/mob/living/L = thing
+<<<<<<< HEAD
 		endfx.Add(L)
 		endfx.Add(get_belly_surrounding(L.contents))
 	if(istype(thing,/obj/item))
@@ -542,6 +550,19 @@
 			I.d_stage_overlay = temp
 			for(var/count in I.d_mult to 1 step 0.25)
 				I.add_overlay(I.d_stage_overlay, TRUE) //CHOMPEdit end
+=======
+		L.clear_fullscreen("belly")
+		L.clear_fullscreen("belly2")
+		L.clear_fullscreen("belly3")
+		L.clear_fullscreen("belly4")
+		if(L.hud_used)
+			if(!L.hud_used.hud_shown)
+				L.toggle_hud_vis()
+		if((L.stat != DEAD) && L.ai_holder)
+			L.ai_holder.go_wake()
+	owner.handle_belly_update()
+	return
+>>>>>>> b22ada5b3c (updates belly handling (#17126))
 
 // CHOMPedit: SEND_SIGNAL(COMSIG_BELLY_UPDATE_VORE_FX) is sometimes used when calling vore_fx() to send belly visuals
 // to certain non-belly atoms. Not called here as vore_fx() is usually only called if a mob is in the belly.
@@ -922,8 +943,6 @@
 
 	//Clean up our own business
 	items_preserved.Cut()
-	if(!ishuman(owner))
-		owner.update_icons()
 
 	//Determines privacy
 	var/privacy_range = world.view
@@ -1007,9 +1026,6 @@
 		if(ML.stat)
 			ML.SetSleeping(min(ML.sleeping,20))
 
-	//Clean up our own business
-	if(!ishuman(owner))
-		owner.update_icons()
 
 	//Determines privacy
 	var/privacy_range = world.view
@@ -1059,8 +1075,6 @@
 		var/mob/ourmob = prey
 		ourmob.reset_view(owner)
 	owner.updateVRPanel()
-	if(isanimal(owner))
-		owner.update_icon()
 
 	for(var/mob/living/M in contents)
 		M.updateVRPanel()
@@ -1166,6 +1180,7 @@
 	//Incase they have the loop going, let's double check to stop it.
 	M.stop_sound_channel(CHANNEL_PREYLOOP)
 	// Delete the digested mob
+<<<<<<< HEAD
 	//CHOMPEdit start - Changed qdel to a forceMove to allow reforming, and... handled robots special.
 	if(isrobot(M))
 		var/mob/living/silicon/robot/R = M
@@ -1207,6 +1222,13 @@
 	if(isanimal(owner))
 		owner.update_icon()
 	//CHOMPEdit End
+=======
+	var/mob/observer/G = M.ghostize() //Ports CHOMPStation PR#3074 Make sure they're out, so we can copy attack logs and such.
+	if(G)
+		G.forceMove(src)
+	qdel(M)
+	owner.handle_belly_update()
+>>>>>>> b22ada5b3c (updates belly handling (#17126))
 
 // Handle a mob being absorbed
 /obj/belly/proc/absorb_living(mob/living/M)
@@ -1259,10 +1281,7 @@
 
 	//Update owner
 	owner.updateVRPanel()
-	if(isanimal(owner))
-		owner.update_icon()
-	else
-		owner.update_fullness()
+	owner.handle_belly_update()
 	// Finally, if they're to be sent to a special pudge belly, send them there
 	if(transferlocation_absorb)
 		var/obj/belly/dest_belly
@@ -1289,10 +1308,7 @@
 
 	//Update owner
 	owner.updateVRPanel()
-	if(isanimal(owner))
-		owner.update_icon()
-	else
-		owner.update_fullness()
+	owner.handle_belly_update()
 
 /////////////////////////////////////////////////////////////////////////
 /obj/belly/proc/handle_absorb_langs()
@@ -1617,7 +1633,7 @@
 	owner.updateVRPanel()
 	for(var/mob/living/M in contents)
 		M.updateVRPanel()
-	owner.update_icon()
+	owner.handle_belly_update()
 
 //Autotransfer callback CHOMPEdit Start
 /obj/belly/proc/check_autotransfer(var/atom/movable/prey)
