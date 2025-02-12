@@ -96,11 +96,14 @@
 
 ///Setter for the byond luminosity var
 /turf/proc/set_luminosity(new_luminosity, force)
+<<<<<<< HEAD
 	/*CHOMP Removal Begin
 	if((is_outdoors() && !force) || outdoors_adjacent)
 		if(check_for_sun()) //If another system handles our lighting, don't interfere
 			return
 	*/ //CHOMP Removal End
+=======
+>>>>>>> 69858552ca (Up ports the dynamic light system (#17102))
 	if(((is_outdoors() && !force) || outdoors_adjacent) && (z in fake_sunlight_zs)) //Special exception for fakesun lit tiles
 		return
 

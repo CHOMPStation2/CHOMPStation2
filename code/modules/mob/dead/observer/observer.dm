@@ -458,7 +458,11 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 	ManualFollow(M || jumpable_mobs()[mobname])
 
+<<<<<<< HEAD
 /mob/observer/dead/forceMove(atom/destination, direction, movetime, just_spawned = FALSE) //ChompEDIT - pass movetime through
+=======
+/mob/observer/dead/forceMove(atom/destination, direction, movetime, just_spawned = FALSE) // pass movetime through
+>>>>>>> 69858552ca (Up ports the dynamic light system (#17102))
 	if(client?.holder)
 		return ..()
 
@@ -578,7 +582,11 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 			following_mobs -= M
 		else
 			if(M.loc != .)
+<<<<<<< HEAD
 				M.forceMove(., movetime = MOVE_GLIDE_CALC(glide_size, moving_diagonally)) //ChompEDIT - pass movespeed
+=======
+				M.forceMove(., movetime = MOVE_GLIDE_CALC(glide_size, moving_diagonally)) // pass movespeed
+>>>>>>> 69858552ca (Up ports the dynamic light system (#17102))
 
 /mob
 	var/list/following_mobs = list()

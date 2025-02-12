@@ -225,7 +225,11 @@
 
 	// If we moved, call Moved() on ourselves
 	if(.)
+<<<<<<< HEAD
 		Moved(oldloc, direct, FALSE, movetime ? movetime : MOVE_GLIDE_CALC(glide_size, moving_diagonally) ) //CHOMPEDIT - proper diagonal movement
+=======
+		Moved(oldloc, direct, FALSE, movetime ? movetime : MOVE_GLIDE_CALC(glide_size, moving_diagonally) )
+>>>>>>> 69858552ca (Up ports the dynamic light system (#17102))
 
 	// Update timers/cooldown stuff
 	move_speed = world.time - l_move_time

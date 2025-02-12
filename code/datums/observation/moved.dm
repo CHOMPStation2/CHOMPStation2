@@ -44,7 +44,11 @@ GLOBAL_DATUM_INIT(moved_event, /decl/observ/moved, new)
 	if(. && !loc)
 		SEND_SIGNAL(src,COMSIG_OBSERVER_MOVED, old_loc, null)
 
+<<<<<<< HEAD
 /atom/movable/forceMove(atom/destination, direction, movetime) //ChompEDIT - pass movetime through
+=======
+/atom/movable/forceMove(atom/destination, direction, movetime) // pass movetime through
+>>>>>>> 69858552ca (Up ports the dynamic light system (#17102))
 	var/old_loc = loc
 	. = ..()
 	if(. && !loc)

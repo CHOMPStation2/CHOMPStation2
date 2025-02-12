@@ -1,17 +1,31 @@
 SUBSYSTEM_DEF(lighting)
 	name = "Lighting"
+<<<<<<< HEAD
 	wait = 1 // CHOMPEdit
 	init_order = INIT_ORDER_LIGHTING
 	flags = SS_TICKER
 	runlevels = RUNLEVELS_DEFAULT | RUNLEVEL_LOBBY //CHOMPEdit Do some work during lobby waiting period. May as well.
+=======
+	wait = 1
+	init_order = INIT_ORDER_LIGHTING
+	flags = SS_TICKER
+	runlevels = RUNLEVELS_DEFAULT | RUNLEVEL_LOBBY // Do some work during lobby waiting period. May as well.
+>>>>>>> 69858552ca (Up ports the dynamic light system (#17102))
 	var/sun_mult = 1.0
 	var/static/list/sources_queue = list() // List of lighting sources queued for update.
 	var/static/list/corners_queue = list() // List of lighting corners queued for update.
 	var/static/list/objects_queue = list() // List of lighting objects queued for update.
+<<<<<<< HEAD
 	var/static/list/sunlight_queue = list() //CHOMPEdit // List of turfs that are affected by sunlight
 	var/static/list/sunlight_queue_active = list() //CHOMPEdit // List of turfs that need to have their sunlight updated
 	var/list/planet_shandlers = list() //CHOMPEdit //Precomputed lighting values for tiles only affected by the sun
 	var/list/z_to_pshandler = list() //CHOMPEdit
+=======
+	var/static/list/sunlight_queue = list() // List of turfs that are affected by sunlight
+	var/static/list/sunlight_queue_active = list() // List of turfs that need to have their sunlight updated
+	var/list/planet_shandlers = list() // Precomputed lighting values for tiles only affected by the sun
+	var/list/z_to_pshandler = list()
+>>>>>>> 69858552ca (Up ports the dynamic light system (#17102))
 
 /datum/controller/subsystem/lighting/stat_entry(msg)
 	msg = "L:[length(sources_queue)]|C:[length(corners_queue)]|O:[length(objects_queue)]"
@@ -28,6 +42,7 @@ SUBSYSTEM_DEF(lighting)
 		subsystem_initialized = TRUE
 		create_all_lighting_objects()
 
+<<<<<<< HEAD
 	//CHOMPEdit Begin
 	for(var/datum/planet/planet in SSplanets.planets)
 		if(!planet_shandlers[planet])
@@ -36,6 +51,14 @@ SUBSYSTEM_DEF(lighting)
 
 	fire(FALSE, TRUE)
 	sunlight_queue_active += sunlight_queue + sunlight_queue //CHOMPEdit Run through shandler's twice during lobby wait to get some initial computation out of the way. After these two, the sunlight system will run MUCH faster.
+=======
+	for(var/datum/planet/planet in SSplanets.planets)
+		if(!planet_shandlers[planet])
+			planet_shandlers[planet] = new /datum/planet_sunlight_handler(planet)
+
+	fire(FALSE, TRUE)
+	sunlight_queue_active += sunlight_queue + sunlight_queue // Run through shandler's twice during lobby wait to get some initial computation out of the way. After these two, the sunlight system will run MUCH faster.
+>>>>>>> 69858552ca (Up ports the dynamic light system (#17102))
 
 	return SS_INIT_SUCCESS
 
@@ -123,7 +146,10 @@ SUBSYSTEM_DEF(lighting)
 			break
 	if (i)
 		queue.Cut(1, i + 1)
+<<<<<<< HEAD
 //CHOMPEdit Begin
+=======
+>>>>>>> 69858552ca (Up ports the dynamic light system (#17102))
 		i = 0
 
 
@@ -183,7 +209,10 @@ SUBSYSTEM_DEF(lighting)
 	return pshandler
 
 /datum/controller/subsystem/lighting
+<<<<<<< HEAD
 //CHOMPEdit End
+=======
+>>>>>>> 69858552ca (Up ports the dynamic light system (#17102))
 
 /datum/controller/subsystem/lighting/Recover()
 	subsystem_initialized = SSlighting.subsystem_initialized

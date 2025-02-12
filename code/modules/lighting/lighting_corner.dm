@@ -5,7 +5,11 @@
 /datum/lighting_corner
 	var/list/datum/light_source/affecting // Light sources affecting us.
 
+<<<<<<< HEAD
 	var/sunlight = SUNLIGHT_NONE // CHOMPEdit
+=======
+	var/sunlight = SUNLIGHT_NONE
+>>>>>>> 69858552ca (Up ports the dynamic light system (#17102))
 	var/x = 0
 	var/y = 0
 
@@ -30,7 +34,11 @@
 	///whether we are to be added to SSlighting's corners_queue list for an update
 	var/needs_update = FALSE
 
+<<<<<<< HEAD
 /datum/lighting_corner/New(x, y, z, dynamic) // CHOMPEdit
+=======
+/datum/lighting_corner/New(x, y, z, dynamic)
+>>>>>>> 69858552ca (Up ports the dynamic light system (#17102))
 	. = ..()
 
 	src.x = x + 0.5
@@ -72,7 +80,11 @@
 		master_SE = process_next
 		process_next.lighting_corner_NW = src
 
+<<<<<<< HEAD
 	if(((SSplanets && SSplanets.z_to_planet.len >= z && SSplanets.z_to_planet[z]) || SSlighting.get_pshandler_z(z)) && dynamic) sunlight = SUNLIGHT_POSSIBLE //CHOMPEdit
+=======
+	if(((SSplanets && SSplanets.z_to_planet.len >= z && SSplanets.z_to_planet[z]) || SSlighting.get_pshandler_z(z)) && dynamic) sunlight = SUNLIGHT_POSSIBLE
+>>>>>>> 69858552ca (Up ports the dynamic light system (#17102))
 
 /datum/lighting_corner/proc/save_master(turf/master, dir)
 	switch (dir)
@@ -90,7 +102,11 @@
 			master.lighting_corner_SE = src
 
 /datum/lighting_corner/proc/self_destruct_if_idle()
+<<<<<<< HEAD
 	if (!LAZYLEN(affecting) && !sunlight) //CHOMPEdit
+=======
+	if (!LAZYLEN(affecting) && !sunlight)
+>>>>>>> 69858552ca (Up ports the dynamic light system (#17102))
 		qdel(src, force = TRUE)
 
 /datum/lighting_corner/proc/vis_update()
@@ -102,27 +118,43 @@
 		light_source.recalc_corner(src)
 
 // God that was a mess, now to do the rest of the corner code! Hooray!
+<<<<<<< HEAD
 /datum/lighting_corner/proc/update_lumcount(delta_r, delta_g, delta_b, var/from_sholder = FALSE) //CHOMPEdit
 	if (!(delta_r || delta_g || delta_b)) // 0 is falsey ok
 		return
 
 	//CHOMPEdit Begin
+=======
+/datum/lighting_corner/proc/update_lumcount(delta_r, delta_g, delta_b, var/from_sholder = FALSE)
+	if (!(delta_r || delta_g || delta_b)) // 0 is falsey ok
+		return
+
+>>>>>>> 69858552ca (Up ports the dynamic light system (#17102))
 	if((sunlight == SUNLIGHT_ONLY || sunlight == SUNLIGHT_ONLY_SHADE) && LAZYLEN(affecting))
 		change_sun()
 		if(sunlight == SUNLIGHT_ONLY || sunlight == SUNLIGHT_ONLY_SHADE)
 			//Okay fuck. If we're here some doodoo kaka bullshit happened (probably thanks to in-round map loading) and now the sunlight handler that owned us previously is fucking gone (real cool dude) so like try to get a new one ig
 			//Is this optimal? No. Is there a better way? Maybe. God knows I tried, but whatever fucking black magic is going on behind the scenes seems to defy all attempts at logic. So, if this works, it stays.
 			sunlight = SUNLIGHT_POSSIBLE
+<<<<<<< HEAD
 	//CHOMPEdit End
+=======
+>>>>>>> 69858552ca (Up ports the dynamic light system (#17102))
 	lum_r += delta_r
 	lum_g += delta_g
 	lum_b += delta_b
 
+<<<<<<< HEAD
 	//CHOMPEdit Begin
 	if(sunlight == SUNLIGHT_CURRENT && !LAZYLEN(affecting) && !from_sholder)
 		update_sunlight_handlers()
 		update_sunlight_handlers()
 	//CHOMPEdit End
+=======
+	if(sunlight == SUNLIGHT_CURRENT && !LAZYLEN(affecting) && !from_sholder)
+		update_sunlight_handlers()
+		update_sunlight_handlers()
+>>>>>>> 69858552ca (Up ports the dynamic light system (#17102))
 
 	if (!needs_update)
 		needs_update = TRUE
@@ -204,7 +236,10 @@
 
 	return ..()
 
+<<<<<<< HEAD
 //CHOMPEdit Begin
+=======
+>>>>>>> 69858552ca (Up ports the dynamic light system (#17102))
 /datum/lighting_corner/proc/update_sun(var/datum/planet_sunlight_handler/pshandler)
 	if(!pshandler)
 		return
@@ -311,5 +346,8 @@
 		master_SW_sim.shandler.sunlight_update()
 	if(istype(master_NW_sim) && master_NW_sim.shandler && master_NW_sim.shandler.sleeping)
 		master_NW_sim.shandler.sunlight_update()
+<<<<<<< HEAD
 
 //CHOMPEdit End
+=======
+>>>>>>> 69858552ca (Up ports the dynamic light system (#17102))

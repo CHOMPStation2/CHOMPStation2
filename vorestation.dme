@@ -89,9 +89,12 @@
 #include "code\__defines\jukebox.dm"
 #include "code\__defines\life.dm"
 #include "code\__defines\lighting.dm"
+<<<<<<< HEAD
 #include "code\__defines\lighting_ch.dm"
 #include "code\__defines\lighting_source_ch.dm"
 #include "code\__defines\lighting_vr.dm"
+=======
+>>>>>>> 69858552ca (Up ports the dynamic light system (#17102))
 #include "code\__defines\logging.dm"
 #include "code\__defines\lum.dm"
 #include "code\__defines\machinery.dm"
@@ -2959,8 +2962,13 @@
 #include "code\modules\lighting\lighting_setup.dm"
 #include "code\modules\lighting\lighting_source.dm"
 #include "code\modules\lighting\lighting_turf.dm"
+<<<<<<< HEAD
 #include "code\modules\lighting\planet_sunlight_ch.dm"
 #include "code\modules\lighting\sunlight_handler_ch.dm"
+=======
+#include "code\modules\lighting\planet_sunlight.dm"
+#include "code\modules\lighting\sunlight_handler.dm"
+>>>>>>> 69858552ca (Up ports the dynamic light system (#17102))
 #include "code\modules\looking_glass\lg_area.dm"
 #include "code\modules\looking_glass\lg_console.dm"
 #include "code\modules\looking_glass\lg_imageholder.dm"
