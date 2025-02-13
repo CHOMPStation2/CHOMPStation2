@@ -101,17 +101,12 @@
 	H.Paralyse(4)
 	H.updatehealth()
 
-	//Grower specific mutations
-	if(heal_level < 60)
-		randmutb(H)
-		H.dna.UpdateSE()
-		H.dna.UpdateUI()
-
 	//Update appearance, remake icons
 	H.UpdateAppearance()
 	H.sync_dna_traits(FALSE) // Traitgenes Sync traits to genetics if needed
 	H.sync_organ_dna()
 	H.regenerate_icons()
+	H.initialize_vessel()
 
 	// Traitgenes Moved breathing equipment to AFTER the genes set it
 	//Give breathing equipment if needed
@@ -375,6 +370,7 @@
 	H.sync_dna_traits(FALSE) // Traitgenes Sync traits to genetics if needed
 	H.sync_organ_dna()
 	H.regenerate_icons()
+	H.initialize_vessel()
 
 	//Basically all the VORE stuff
 	H.ooc_notes = current_project.body_oocnotes

@@ -107,7 +107,7 @@
 /obj/structure/safe,
 /obj/item/dnainjector/set_trait/xray,
 /obj/item/dnainjector/set_trait/haste,
-/obj/item/dnainjector/antistutt,
+/obj/item/dnainjector/set_trait/anxiety/disable,
 /turf/simulated/floor/tiled/airless,
 /area/submap/debris2)
 "H" = (
