@@ -40278,9 +40278,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -43716,7 +43713,6 @@
 /obj/structure/disposaloutlet{
 	dir = 4
 	},
-/obj/machinery/shield_diffuser,
 /obj/machinery/shield_diffuser,
 /turf/simulated/floor/airless,
 /area/space)
@@ -53908,7 +53904,6 @@
 /area/hallway/primary/seconddeck/apcenter)
 "jgH" = (
 /obj/structure/table/standard,
-/obj/structure/table/standard,
 /obj/item/stack/cable_coil,
 /obj/item/multitool,
 /obj/machinery/cell_charger,
@@ -53918,6 +53913,9 @@
 	dir = 4;
 	id = "Xenobio";
 	pixel_x = -25
+	},
+/obj/item/stack/material/plastic{
+	amount = 2
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/misc_lab)
@@ -70974,10 +70972,6 @@
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 1
-	},
-/obj/machinery/disposal/wall{
-	dir = 4;
-	pixel_x = -37
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/genetics)

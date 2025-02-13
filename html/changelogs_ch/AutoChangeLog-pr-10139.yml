@@ -1,7 +1,0 @@
-author: "Diana"
-delete-after: True
-changes:
-  - bugfix: "Xenoarch gas effects will no longer have a 1/3 chance of not working when spawned in."
-  - bugfix: "Gas artifacts no longer overpopulate the artifact pool"
-  - qol: "Gas artifacts and temperature artifacts can no longer be 'spam-toggled' and will instead only be aura artifacts."
-  - code_imp: "Made a global blacklist for artifacts that should not spawn in global_lists.dm"
