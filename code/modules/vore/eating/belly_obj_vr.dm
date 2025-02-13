@@ -443,6 +443,7 @@
 		var/mob/living/L = thing
 		startfx.Add(L)
 		startfx.Add(get_belly_surrounding(L.contents))
+		owner.handle_belly_update() //CHOMPEdit - This is run whenever a belly's contents are changed.
 	if(istype(thing,/obj/item))
 		var/obj/item/I = thing
 		startfx.Add(get_belly_surrounding(I.contents))
@@ -466,7 +467,6 @@
 		vore_fx(M, TRUE) //CHOMPEdit: update belleh
 		if(owner.previewing_belly == src) //CHOMPEdit
 			vore_fx(owner, TRUE) //CHOMPEdit: update belleh
-		owner.handle_belly_update() //CHOMPEdit - This is run whenever a belly's contents are changed.
 		//Stop AI processing in bellies
 		if(M.ai_holder)
 			M.ai_holder.go_sleep()
@@ -509,13 +509,13 @@
 		var/mob/living/L = thing
 		endfx.Add(L)
 		endfx.Add(get_belly_surrounding(L.contents))
+		owner.handle_belly_update() //CHOMPEdit - This is run whenever a belly's contents are changed.
 	if(istype(thing,/obj/item))
 		var/obj/item/I = thing
 		endfx.Add(get_belly_surrounding(I.contents))
 	if(!isbelly(thing.loc))
 		for(var/mob/living/L in endfx) //CHOMPEdit End
 			if(L.surrounding_belly()) continue
-			owner.handle_belly_update() //CHOMPEdit - This is run whenever a belly's contents are changed.
 			L.clear_fullscreen("belly")
 			//L.clear_fullscreen("belly2") // CHOMP Disable - using our implementation, not upstream's
 			//L.clear_fullscreen("belly3") // CHOMP Disable - using our implementation, not upstream's
