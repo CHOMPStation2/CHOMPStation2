@@ -283,7 +283,7 @@
 /turf/template_noop,
 /area/template_noop)
 "nj" = (
-/obj/item/dnainjector/telemut,
+/obj/item/dnainjector/set_trait/tk,
 /obj/structure/closet/grave{
 	opened = 0
 	},
@@ -510,7 +510,7 @@
 /turf/simulated/floor/tiled/red,
 /area/submap/piratefortress)
 "Di" = (
-/obj/item/dnainjector/telemut,
+/obj/item/dnainjector/set_trait/tk,
 /turf/simulated/floor/outdoors/rocks,
 /area/submap/piratefortress)
 "DD" = (

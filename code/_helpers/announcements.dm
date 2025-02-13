@@ -25,7 +25,7 @@
 	title = "",
 	players,
 	play_sound = TRUE,
-	sound_override = 'modular_chomp/sound/misc/bloop.ogg',
+	sound_override = 'sound/misc/bloop.ogg',
 	sender_override = "Server Admin Announcement",
 	encode_title = TRUE,
 	encode_text = FALSE,

@@ -112,7 +112,7 @@
 		if(92)
 			new/obj/item/material/sword/katana(src)
 		if(93)
-			new/obj/item/dnainjector/xraymut(src) // Probably the least OP
+			new/obj/item/dnainjector/set_trait/xray(src) // Probably the least OP
 		if(94) // Why the hell not
 			new/obj/item/storage/backpack/clown(src)
 			new/obj/item/clothing/under/rank/clown(src)

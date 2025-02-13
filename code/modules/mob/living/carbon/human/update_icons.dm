@@ -606,21 +606,7 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 	if(!LAZYLEN(mutations))
 		return //No mutations, no icons.
 
-	//TODO: THIS PROC???
-	var/fat
-	if(FAT in mutations)
-		fat = "fat"
-
 	var/image/standing	= image(icon = 'icons/effects/genetics.dmi', layer = BODY_LAYER+MUTATIONS_LAYER)
-	var/g = gender == FEMALE ? "f" : "m"
-
-	for(var/datum/dna/gene/gene in dna_genes)
-		if(!gene.block)
-			continue
-		if(gene.is_active(src))
-			var/underlay = gene.OnDrawUnderlays(src,g,fat)
-			if(underlay)
-				standing.underlays += underlay
 
 	for(var/mut in mutations)
 		if(mut == LASER)

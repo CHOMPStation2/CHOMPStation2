@@ -139,6 +139,7 @@
 		M.radiation += 50
 		randmutb(M)
 		domutcheck(M,null)
+		M.UpdateAppearance()
 	visible_message("\The [src.name] flashes violently before disintegrating!")
 	spawn(0)
 		qdel(s)

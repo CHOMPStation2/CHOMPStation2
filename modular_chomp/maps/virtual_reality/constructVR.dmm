@@ -14688,22 +14688,22 @@
 /area/vr/powered)
 "lQK" = (
 /obj/structure/table/darkglass,
-/obj/item/dnainjector/xraymut{
+/obj/item/dnainjector/set_trait/xray{
 	pixel_y = 1
 	},
-/obj/item/dnainjector/xraymut{
+/obj/item/dnainjector/set_trait/xray{
 	pixel_y = -5
 	},
-/obj/item/dnainjector/xraymut{
+/obj/item/dnainjector/set_trait/xray{
 	pixel_y = -2
 	},
-/obj/item/dnainjector/regenerate{
+/obj/item/dnainjector/set_trait/regenerate{
 	pixel_y = 10
 	},
-/obj/item/dnainjector/regenerate{
+/obj/item/dnainjector/set_trait/regenerate{
 	pixel_y = 4
 	},
-/obj/item/dnainjector/regenerate{
+/obj/item/dnainjector/set_trait/regenerate{
 	pixel_y = 7
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
@@ -22913,20 +22913,20 @@
 /area/vr/powered)
 "sfW" = (
 /obj/structure/table/darkglass,
-/obj/item/dnainjector/insulation,
-/obj/item/dnainjector/insulation{
+/obj/item/dnainjector/set_trait/coldadapt,
+/obj/item/dnainjector/set_trait/coldadapt{
 	pixel_y = -5
 	},
-/obj/item/dnainjector/insulation{
+/obj/item/dnainjector/set_trait/coldadapt{
 	pixel_y = -3
 	},
-/obj/item/dnainjector/telemut{
+/obj/item/dnainjector/set_trait/tk{
 	pixel_y = 9
 	},
-/obj/item/dnainjector/telemut{
+/obj/item/dnainjector/set_trait/tk{
 	pixel_y = 3
 	},
-/obj/item/dnainjector/telemut{
+/obj/item/dnainjector/set_trait/tk{
 	pixel_y = 6
 	},
 /turf/simulated/shuttle/floor/voidcraft/dark,
