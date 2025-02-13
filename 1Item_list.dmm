@@ -70686,7 +70686,7 @@
 	},
 /area/survivalpod)
 "uLL" = (
-/obj/item/dnainjector/set_trait/remote_view,
+/obj/item/dnainjector/set_trait/remoteview,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
