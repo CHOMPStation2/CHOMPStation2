@@ -24,7 +24,6 @@
 		return 1
 
 	H = new(T)
-	H.set_species(SPECIES_HUMAN)
 	startOxyloss = H.getOxyLoss()
 
 	return 1
