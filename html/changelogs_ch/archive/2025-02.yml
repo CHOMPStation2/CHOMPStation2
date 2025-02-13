@@ -259,3 +259,6 @@
   - code_imp: Made a global blacklist for artifacts that should not spawn in global_lists.dm
   Kashargul:
   - bugfix: swoopies being unable to use the soulcatcher
+2025-02-13:
+  tacoguy7765093:
+  - maptweak: Map stability fixes.
