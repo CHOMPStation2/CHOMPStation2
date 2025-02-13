@@ -173,11 +173,7 @@
 				else
 					randmutg(M)
 					domutcheck(M,null)
-<<<<<<< HEAD
-				H.UpdateAppearance()
-=======
 				M.UpdateAppearance()
->>>>>>> 96381f94f1 (Better Block Injectors (#17128))
 			else
 				M.adjustFireLoss(rand(5,15))
 				M.show_message(span_red("The radiation beam singes you!"))

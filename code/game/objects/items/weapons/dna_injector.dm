@@ -325,10 +325,6 @@
 	trait_path = /datum/trait/positive/superpower_remoteview
 /obj/item/dnainjector/set_trait/remoteview/disable
 	disabling = TRUE
-<<<<<<< HEAD
-
-=======
->>>>>>> 96381f94f1 (Better Block Injectors (#17128))
 /obj/item/dnainjector/set_trait/flashproof // flashproof
 	trait_path = /datum/trait/positive/superpower_flashproof
 /obj/item/dnainjector/set_trait/flashproof/disable
@@ -348,16 +344,9 @@
 	trait_path = /datum/trait/positive/superpower_remotetalk
 /obj/item/dnainjector/set_trait/remotetalk/disable
 	disabling = TRUE
-<<<<<<< HEAD
-
-=======
-/*
->>>>>>> 96381f94f1 (Better Block Injectors (#17128))
+// CHOMPEnable Start
 /obj/item/dnainjector/set_trait/nonconduct // shock
 	trait_path = /datum/trait/positive/nonconductive_plus
 /obj/item/dnainjector/set_trait/nonconduct/disable
 	disabling = TRUE
-<<<<<<< HEAD
-=======
-*/
->>>>>>> 96381f94f1 (Better Block Injectors (#17128))
+// CHOMPEnable End

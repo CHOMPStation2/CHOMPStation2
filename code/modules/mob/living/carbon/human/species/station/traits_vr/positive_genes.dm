@@ -11,10 +11,6 @@
 	activity_bounds = DNA_HARD_BOUNDS
 	activation_message="You feel no need to breathe."
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 96381f94f1 (Better Block Injectors (#17128))
 /datum/trait/positive/superpower_remoteview
 	name = "Remote Viewing"
 	desc = "Remotely view other locations."
