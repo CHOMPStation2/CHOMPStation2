@@ -67,3 +67,4 @@
 				if(M)
 					M.active_genes -= gene.name // Traitgenes Use name instead, cannot use type with dynamically setup traitgenes
 					M.update_icon = 1
+	M.update_mutations()
