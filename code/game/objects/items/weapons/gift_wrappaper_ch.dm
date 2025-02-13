@@ -100,7 +100,7 @@
 		/obj/item/lego,
 		/obj/item/dnainjector/set_trait/nobreathe,
 		/obj/item/dnainjector/set_trait/regenerate,
-		///obj/item/dnainjector/set_trait/remote_view,
+		/obj/item/dnainjector/set_trait/remote_view,
 		/obj/item/dnainjector/set_trait/haste,
 		/obj/item/dnainjector/set_trait/tk,
 		/obj/item/dnainjector/set_trait/xray,
