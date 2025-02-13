@@ -49,24 +49,13 @@
 	var/old_outdoors = outdoors
 	var/old_dangerous_objects = dangerous_objects
 	var/old_dynamic_lumcount = dynamic_lumcount
-<<<<<<< HEAD
-	var/oldtype = src.type	//CHOMPEdit
-	var/old_density = src.density //CHOMPEdit
-	var/was_open = istype(src,/turf/simulated/open) //CHOMPEdit
-	//CHOMPEdit Begin
-=======
 	var/oldtype = src.type
 	var/old_density = src.density
 	var/was_open = istype(src,/turf/simulated/open)
->>>>>>> 69858552ca (Up ports the dynamic light system (#17102))
 	var/datum/sunlight_handler/old_shandler
 	var/turf/simulated/simself = src
 	if(istype(simself) && simself.shandler)
 		old_shandler = simself.shandler
-<<<<<<< HEAD
-	//CHOMPEdit End
-=======
->>>>>>> 69858552ca (Up ports the dynamic light system (#17102))
 
 	var/turf/Ab = GetAbove(src)
 	if(Ab)
@@ -94,10 +83,6 @@
 		if(old_fire)
 			W.fire = old_fire
 		W.RemoveLattice()
-<<<<<<< HEAD
-	//CHOMPEdit Begin
-=======
->>>>>>> 69858552ca (Up ports the dynamic light system (#17102))
 	W.lighting_corners_initialised = old_lighting_corners_initialized
 	var/turf/simulated/W_sim = W
 	if(istype(W_sim) && old_shandler)
@@ -106,10 +91,6 @@
 	else if(istype(W_sim) && (SSplanets && SSplanets.z_to_planet.len >= z && SSplanets.z_to_planet[z]) && has_dynamic_lighting())
 		W_sim.shandler = new(src)
 		W_sim.shandler.manualInit()
-<<<<<<< HEAD
-	//CHOMPEdit End
-=======
->>>>>>> 69858552ca (Up ports the dynamic light system (#17102))
 	if(old_fire)
 		old_fire.RemoveFire()
 
@@ -152,10 +133,6 @@
 		for(var/turf/space/space_tile in RANGE_TURFS(1, src))
 			space_tile.update_starlight()
 
-<<<<<<< HEAD
-	//CHOMPEdit begin
-=======
->>>>>>> 69858552ca (Up ports the dynamic light system (#17102))
 	var/turf/simulated/sim_self = src
 	if(lighting_object && istype(sim_self) && sim_self.shandler) //sanity check, but this should never be null for either of the switch cases (lighting_object will be null during initializations sometimes)
 		switch(lighting_object.sunlight_only)
@@ -179,20 +156,11 @@
 			cur_turf.propogate_sunlight_changes(oldtype, old_density, W, above = TRUE)
 		while(istype(cur_turf,/turf/simulated/open) && HasBelow(cur_turf.z))
 
-<<<<<<< HEAD
-	//CHOMPEdit End
-	if(old_shandler) old_shandler.holder_change() //CHOMPEdit
-=======
 	if(old_shandler) old_shandler.holder_change()
->>>>>>> 69858552ca (Up ports the dynamic light system (#17102))
 	if(preserve_outdoors)
 		outdoors = old_outdoors
 
 
-<<<<<<< HEAD
-//CHOMPEdit begin
-=======
->>>>>>> 69858552ca (Up ports the dynamic light system (#17102))
 /turf/proc/propogate_sunlight_changes(oldtype, old_density, new_turf, var/above = FALSE)
 	//SEND_SIGNAL(src, COMSIG_TURF_UPDATE, oldtype, old_density, W)
 	//Sends signals in a cross pattern to all tiles that may have their sunlight var affected including this tile.
@@ -221,7 +189,3 @@
 					T.shandler.turf_update(old_density, new_turf, above)
 			steps += 1
 			cur_turf = get_step(cur_turf,dir)
-<<<<<<< HEAD
-//CHOMPEdit end
-=======
->>>>>>> 69858552ca (Up ports the dynamic light system (#17102))

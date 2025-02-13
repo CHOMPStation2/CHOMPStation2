@@ -43,11 +43,7 @@
 
 /datum/sun_holder/proc/remove_from_turf(turf/T)
 	if(!(sun in T.vis_contents))
-<<<<<<< HEAD
-		//warning("Was asked to remove fake sun from [T.x], [T.y], [T.z] despite it not having us in it's vis contents") SHUT YOUR FUCKING MOUTH I DON'T CARE (CHOMP removal)
-=======
 		// warning("Was asked to remove fake sun from [T.x], [T.y], [T.z] despite it not having us in it's vis contents") // Disable the warning
->>>>>>> 69858552ca (Up ports the dynamic light system (#17102))
 		return
 	sun.remove_from_turf(T)
 
