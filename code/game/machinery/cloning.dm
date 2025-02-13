@@ -544,17 +544,6 @@
 	name = "Diskette Box"
 	icon_state = "disk_kit"
 
-<<<<<<< HEAD
-/obj/item/storage/box/disks/New()
-	..()
-	new /obj/item/disk/data(src)
-	new /obj/item/disk/data(src)
-	new /obj/item/disk/data(src)
-	new /obj/item/disk/data(src)
-	new /obj/item/disk/data(src)
-	new /obj/item/disk/data(src)
-	new /obj/item/disk/data(src)
-=======
 /obj/item/storage/box/Initialize()
 	. = ..()
 	new /obj/item/disk/body_record(src)
@@ -564,7 +553,6 @@
 	new /obj/item/disk/body_record(src)
 	new /obj/item/disk/body_record(src)
 	new /obj/item/disk/body_record(src)
->>>>>>> 9a6f44b850 (some more NEW to init (#17093))
 
 /*
  *	Manual -- A big ol' manual.
