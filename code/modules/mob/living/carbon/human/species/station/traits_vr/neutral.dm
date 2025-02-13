@@ -70,11 +70,7 @@
 			"x" = list("ks", "kss", "ksss")
 		),
 	autohiss_exempt = list(LANGUAGE_UNATHI))
-<<<<<<< HEAD
 	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_vassilian, /datum/trait/neutral/autohiss_zaddat) // CHOMPEdit: exclude vassillian hiss
-=======
-	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_zaddat)
->>>>>>> 32c323ece8 (No multihiss (#17124))
 	custom_only = FALSE
 
 /datum/trait/neutral/autohiss_tajaran
@@ -86,11 +82,7 @@
 			"r" = list("rr", "rrr", "rrrr")
 		),
 	autohiss_exempt = list(LANGUAGE_SIIK,LANGUAGE_AKHANI,LANGUAGE_ALAI))
-<<<<<<< HEAD
 	excludes = list(/datum/trait/neutral/autohiss_unathi, /datum/trait/neutral/autohiss_zaddat, /datum/trait/neutral/autohiss_vassilian) // CHOMPEdit: exclude vassillian hiss
-=======
-	excludes = list(/datum/trait/neutral/autohiss_unathi, /datum/trait/neutral/autohiss_zaddat)
->>>>>>> 32c323ece8 (No multihiss (#17124))
 	custom_only = FALSE
 
 /datum/trait/neutral/autohiss_zaddat
@@ -109,7 +101,7 @@
 			"v" = list("vv", "vvv")
 		),
 	autohiss_exempt = list(LANGUAGE_ZADDAT,LANGUAGE_VESPINAE))
-	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_unathi)
+	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_unathi, /datum/trait/neutral/autohiss_vassilian) // CHOMPEdit: exclude vassillian hiss
 	custom_only = FALSE
 
 /datum/trait/neutral/bloodsucker
