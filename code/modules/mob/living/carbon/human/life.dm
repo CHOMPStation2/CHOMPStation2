@@ -2024,8 +2024,7 @@
 			else if(mod.pulse_set_level > modifier_set)
 				modifier_set = round(mod.pulse_set_level)
 
-			if(!isnull(modifier_set))
-				modifier_set = max(0, modifier_set)	// No setting to negatives.
+			modifier_set = max(0, modifier_set)	// No setting to negatives.
 
 			if(mod.pulse_modifier)
 				modifier_shift += mod.pulse_modifier
