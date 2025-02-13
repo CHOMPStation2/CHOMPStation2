@@ -2836,19 +2836,13 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			. = TRUE
 		if("b_count_liquid_for_sprites") //CHOMP Addition
 			host.vore_selected.count_liquid_for_sprite = !host.vore_selected.count_liquid_for_sprite
-			if(isanimal(host))
-				host.update_icon()
-			else
-				host.update_fullness()
+			host.handle_belly_update()
 			. = TRUE
 		if("b_liquid_multiplier") //CHOMP Addition
 			var/liquid_multiplier_input = tgui_input_number(user, "Set the impact amount of liquid reagents will have on your vore sprite. 1 means a belly with 100 reagents of fluid will count as 1 normal sized prey-thing's worth, 0.5 means liquid counts half as much, 2 means liquid counts double. (Range from 0.1 - 10)", "Liquid Multiplier", host.vore_selected.liquid_multiplier, 10, 0.1, round_value=FALSE)
 			if(!isnull(liquid_multiplier_input))
 				host.vore_selected.liquid_multiplier = CLAMP(liquid_multiplier_input, 0.1, 10)
-				if(isanimal(host))
-					host.update_icon()
-				else
-					host.update_fullness()
+				host.handle_belly_update()
 			. = TRUE
 		if("b_undergarment_choice")
 			var/datum/category_group/underwear/undergarment_choice = tgui_input_list(user, "Which undergarment do you want to enable when your [lowertext(host.vore_selected.name)] is filled?","Select Undergarment Class", global_underwear.categories)

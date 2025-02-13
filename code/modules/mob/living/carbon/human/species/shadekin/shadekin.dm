@@ -188,7 +188,7 @@
 			phaseanim.dir = H.dir
 		H.invisibility = initial(H.invisibility)
 		respite_activating = FALSE
-		belly.owner.update_fullness()
+		belly.owner.handle_belly_update() // CHOMPEdit
 		H.clear_fullscreen("belly")
 		if(H.hud_used)
 			if(!H.hud_used.hud_shown)

@@ -42,8 +42,7 @@ GLOBAL_LIST_INIT(digest_modes, list())
 		else
 			B.handle_digestion_death(L)
 		if(!L)
-<<<<<<< HEAD
-			B.owner.update_fullness()
+			B.owner.handle_belly_update()
 			return list("to_update" = TRUE)
 	if(!L)
 		return //CHOMPEdit End
@@ -57,16 +56,10 @@ GLOBAL_LIST_INIT(digest_modes, list())
 			L.adjustBruteLoss(-paratox*2) //Should automaticaly clamp to 0
 			L.adjustFireLoss(-paratox*2) //Should automaticaly clamp to 0
 			if(B.health_impacts_size) //CHOMPEdit - Health probably changed so...
-				B.owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
+				B.owner.handle_belly_update() //CHOMPEdit - This is run whenever a belly's contents are changed.
 			return
 
  		//CHOMPedit end
-=======
-			B.owner.handle_belly_update()
-		if(!B.fancy_vore)
-			return list("to_update" = TRUE, "soundToPlay" = sound(get_sfx("classic_death_sounds")))
-		return list("to_update" = TRUE, "soundToPlay" = sound(get_sfx("fancy_death_pred")))
->>>>>>> b22ada5b3c (updates belly handling (#17126))
 
 	// Deal digestion damage (and feed the pred)
 	var/old_health = L.health
