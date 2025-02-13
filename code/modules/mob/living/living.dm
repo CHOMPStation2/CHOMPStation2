@@ -865,15 +865,6 @@
 /mob/living/proc/slip(var/slipped_on,stun_duration=8)
 	return 0
 
-// CHOMPAdd - Drop both things on hands
-/mob/living/proc/drop_both_hands()
-	if(l_hand)
-		unEquip(l_hand)
-	if(r_hand)
-		unEquip(r_hand)
-	return
-// CHOMPEnd
-
 /mob/living/carbon/drop_from_inventory(var/obj/item/W, var/atom/target = null)
 	return !(W in internal_organs) && ..()
 

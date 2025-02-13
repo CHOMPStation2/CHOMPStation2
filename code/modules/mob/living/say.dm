@@ -121,20 +121,11 @@ var/list/channel_to_radio_key = new
 			verb = pick("muffles")
 			whispering = 1
 			. = 1
-<<<<<<< HEAD
-		//VOREStation Edit End
-		//YW Edit start
-		if(wingdings)
-			S.message = span_wingdings(S.message)
-			. = 1
-		//YW Edit End
-=======
 		if(disabilities & WINGDINGS)
 			verb = pick("gibbers","gabbers","gahoos","gazonks") // Yeah lets just be stupid
 			S.message = Gibberish(S.message, 100) // Googlybonkers
 			S.message = span_wingdings((S.message))
 			. = 1
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 
 	message_data[1] = message_pieces
 	message_data[2] = verb

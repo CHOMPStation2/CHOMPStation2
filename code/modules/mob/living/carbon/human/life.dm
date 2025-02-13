@@ -294,20 +294,6 @@
 		if((COLD_RESISTANCE in mutations) || (prob(1)))
 			heal_organ_damage(0,1)
 
-<<<<<<< HEAD
-	 if(stat != DEAD) //CHOMPadd: Until I find where nutrion heal code is anyway
-	 	if((mRegen in mutations))
-	 		heal_organ_damage(0.2,0.2)
-
-	// DNA2 - Gene processing.
-	// The HULK stuff that was here is now in the hulk gene.
-	if(!isSynthetic())
-		for(var/datum/dna/gene/gene in dna_genes)
-			if(!gene.block)
-				continue
-			if(gene.is_active(src))
-				gene.OnMobLife(src)
-=======
 	if(stat != DEAD)
 		if((mRegen in mutations))
 			var/heal = rand(0.2,1.3)
@@ -324,7 +310,6 @@
 								O.wounds -= W
 			else
 				heal_organ_damage(heal,heal)
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 
 	radiation = CLAMP(radiation,0,5000) //Max of 100Gy. If you reach that...You're going to wish you were dead. You probably will be dead.
 	accumulated_rads = CLAMP(accumulated_rads,0,5000) //Max of 100Gy as well. You should never get higher than this. You will be dead before you can reach this.

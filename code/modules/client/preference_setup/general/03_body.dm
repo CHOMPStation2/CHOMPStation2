@@ -96,13 +96,6 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	pref.synth_markings		= save_data["synth_markings"]
 	pref.bgstate			= save_data["bgstate"]
 	pref.body_descriptors	= check_list_copy(save_data["body_descriptors"])
-	//YWadd start
-	pref.wingdings			= save_data["Wingdings"]
-	pref.colorblind_mono	= save_data["colorblind_mono"]
-	pref.colorblind_vulp	= save_data["colorblind_vulp"]
-	pref.colorblind_taj		= save_data["colorblind_taj"]
-	pref.haemophilia		= save_data["haemophilia"]
-	//YWadd end
 	pref.ear_style			= save_data["ear_style"]
 	pref.ear_secondary_style = save_data["ear_secondary_style"]
 	pref.ear_secondary_colors = save_data["ear_secondary_colors"]
@@ -129,13 +122,6 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	save_data["synth_markings"]		= pref.synth_markings
 	save_data["bgstate"]			= pref.bgstate
 	save_data["body_descriptors"]	= check_list_copy(pref.body_descriptors)
-	//YWadd start
-	save_data["Wingdings"]			= pref.wingdings
-	save_data["colorblind_mono"]	= pref.colorblind_mono
-	save_data["colorblind_vulp"]	= pref.colorblind_vulp
-	save_data["colorblind_taj"]		= pref.colorblind_taj
-	save_data["haemophilia"]		= pref.haemophilia
-	//YWadd end
 	save_data["ear_style"]			= pref.ear_style
 	save_data["ear_secondary_style"] = pref.ear_secondary_style
 	save_data["ear_secondary_colors"] = pref.ear_secondary_colors
@@ -212,22 +198,6 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	character.wing_style = wing_styles[pref.wing_style]
 
 	character.set_gender(pref.biological_gender)
-
-	if(pref.species == "Grey")//YWadd START
-		character.wingdings = pref.wingdings
-
-	if(pref.colorblind_mono == 1)
-		character.add_modifier(/datum/modifier/trait/colorblind_monochrome)
-
-	else if(pref.colorblind_vulp == 1)
-		character.add_modifier(/datum/modifier/trait/colorblind_vulp)
-
-	else if(pref.colorblind_taj == 1)
-		character.add_modifier(/datum/modifier/trait/colorblind_taj)
-
-	if(pref.haemophilia == 1)
-		character.add_modifier(/datum/modifier/trait/haemophilia)
-	//YWadd END
 
 	// Destroy/cyborgize organs and limbs.
 	character.synthetic = pref.species == "Protean" ? all_robolimbs["protean"] : null //Clear the existing var. (unless protean, then switch it to the normal protean limb)
@@ -310,11 +280,6 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	. += "Blood Type: <a href='byond://?src=\ref[src];blood_type=1'>[pref.b_type]</a><br>"
 	if(has_flag(mob_species, HAS_SKIN_TONE))
 		. += "Skin Tone: <a href='byond://?src=\ref[src];skin_tone=1'>[-pref.s_tone + 35]/220</a><br>"
-<<<<<<< HEAD
-	. += "<b>Disabilities</b><br> <a href='byond://?src=\ref[src];disabilities_yw=1'>Adjust</a><br>" // YWadd
-	//YWcommented moved onto disabilities. += "Needs Glasses: <a href='byond://?src=\ref[src];disabilities=[NEARSIGHTED]'><b>[pref.disabilities & NEARSIGHTED ? "Yes" : "No"]</b></a><br>"
-=======
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 	. += "Limbs: <a href='byond://?src=\ref[src];limbs=1'>Adjust</a> <a href='byond://?src=\ref[src];reset_limbs=1'>Reset</a><br>"
 	. += "Internal Organs: <a href='byond://?src=\ref[src];organs=1'>Adjust</a><br>"
 	//display limbs below
@@ -564,9 +529,6 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 		SetSpecies(preference_mob())
 		pref.alternate_languages.Cut() // Reset their alternate languages. Todo: attempt to just fix it instead?
 		return TOPIC_HANDLED
-
-	else if(href_list["disabilities_yw"])
-		Disabilities_YW(user) //ChompEDIT - usr removal
 
 	else if(href_list["set_species"])
 		user << browse(null, "window=species")
@@ -1051,14 +1013,6 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 
 		return TOPIC_REFRESH
 
-<<<<<<< HEAD
-	else if(href_list["disabilities"])
-		var/disability_flag = text2num(href_list["disabilities"])
-		pref.disabilities ^= disability_flag
-		Disabilities_YW(user) //YW Edit //ChompEDIT - usr removal
-
-=======
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 	else if(href_list["toggle_preview_value"])
 		pref.equip_preview_mob ^= text2num(href_list["toggle_preview_value"])
 		return TOPIC_REFRESH_UPDATE_PREVIEW
@@ -1084,38 +1038,6 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	else if(href_list["cycle_bg"])
 		pref.bgstate = next_in_list(pref.bgstate, pref.bgstate_options)
 		return TOPIC_REFRESH_UPDATE_PREVIEW
-
-	//YW Add Start
-
-	else if(href_list["wingdings"])
-		pref.wingdings = !pref.wingdings
-		Disabilities_YW(user) //ChompEDIT - usr removal
-
-	else if(href_list["colorblind_mono"])
-		pref.colorblind_mono = !pref.colorblind_mono
-		Disabilities_YW(user) //ChompEDIT - usr removal
-
-	else if(href_list["colorblind_vulp"])
-		pref.colorblind_vulp = !pref.colorblind_vulp
-		Disabilities_YW(user) //ChompEDIT - usr removal
-
-	else if(href_list["colorblind_taj"])
-		pref.colorblind_taj = !pref.colorblind_taj
-		Disabilities_YW(user) //ChompEDIT - usr removal
-
-	else if(href_list["haemophilia"])
-		pref.haemophilia = !pref.haemophilia
-		Disabilities_YW(user) //ChompEDIT - usr removal
-
-	else if(href_list["reset_disabilities"])
-		pref.wingdings = 0
-		pref.colorblind_mono = 0
-		pref.colorblind_taj = 0
-		pref.colorblind_vulp = 0
-		pref.haemophilia = 0
-		Disabilities_YW(user) //ChompEDIT - usr removal
-
-	//YW Add End
 
 	else if(href_list["ear_style"])
 		var/new_ear_style = tgui_input_list(user, "Select an ear style for this character:", "Character Preference", pref.get_available_styles(global.ear_styles_list), pref.ear_style)

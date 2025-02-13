@@ -543,10 +543,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 			if(new_character.mind)
 				new_character.mind.assigned_role = charjob
 				new_character.mind.role_alt_title = job_master.GetPlayerAltTitle(new_character, charjob)
-<<<<<<< HEAD
 		equip_custom_items(new_character)	//CHOMPEdit readded to enable custom_item.txt
-=======
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 
 	//If desired, add records.
 	if(records)

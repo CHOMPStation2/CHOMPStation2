@@ -105,8 +105,8 @@
 /area/submap/debris2)
 "G" = (
 /obj/structure/safe,
-/obj/item/dnainjector/xraymut,
-/obj/item/dnainjector/runfast,
+/obj/item/dnainjector/set_trait/xray,
+/obj/item/dnainjector/set_trait/haste,
 /obj/item/dnainjector/antistutt,
 /turf/simulated/floor/tiled/airless,
 /area/submap/debris2)

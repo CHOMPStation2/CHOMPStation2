@@ -33329,7 +33329,7 @@
 	},
 /area/survivalpod)
 "jKU" = (
-/obj/item/dnainjector/xraymut,
+/obj/item/dnainjector/set_trait/xray,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -43831,7 +43831,7 @@
 	},
 /area/survivalpod)
 "mPi" = (
-/obj/item/dnainjector/telemut,
+/obj/item/dnainjector/set_trait/tk,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -50472,7 +50472,7 @@
 	},
 /area/survivalpod)
 "oHT" = (
-/obj/item/dnainjector/nobreath,
+/obj/item/dnainjector/set_trait/nobreathe,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -53739,7 +53739,7 @@
 	},
 /area/survivalpod)
 "pIH" = (
-/obj/item/dnainjector/regenerate,
+/obj/item/dnainjector/set_trait/regenerate,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -65456,7 +65456,7 @@
 	},
 /area/survivalpod)
 "tiU" = (
-/obj/item/dnainjector/runfast,
+/obj/item/dnainjector/set_trait/haste,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -70686,7 +70686,7 @@
 	},
 /area/survivalpod)
 "uLL" = (
-/obj/item/dnainjector/remoteview,
+/obj/item/dnainjector/set_trait/remote_view,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},

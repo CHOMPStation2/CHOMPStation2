@@ -59,6 +59,10 @@
 	cost = 3
 	var_changes = list("siemens_coefficient" = 0.5)
 
+	is_genetrait = TRUE
+
+	activation_message="Your skin feels strange."
+
 /*   //Chompedit, moving to Positive_ch.dm so it wont be messed with from upstream
 /datum/trait/positive/darksight
 	name = "Darksight"

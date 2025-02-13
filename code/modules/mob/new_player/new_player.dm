@@ -516,14 +516,9 @@
 		qdel(src) //Deletes new_player
 		return
 
-<<<<<<< HEAD
 	// Equip our custom items only AFTER deploying to spawn points eh?
 	equip_custom_items(character)	//CHOMPEdit readded to enable custom_item.txt
 
-	//character.apply_traits() //VOREStation Removal
-
-=======
->>>>>>> cdafe425a5 (Adds Trait Genetics (#16921))
 	// Moving wheelchair if they have one
 	if(character.buckled && istype(character.buckled, /obj/structure/bed/chair/wheelchair))
 		character.buckled.loc = character.loc
