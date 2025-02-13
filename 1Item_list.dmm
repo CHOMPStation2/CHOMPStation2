@@ -57638,7 +57638,7 @@
 	},
 /area/survivalpod)
 "qSE" = (
-/obj/item/disk/data/monkey,
+/obj/item/disk/body_record,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -73588,7 +73588,7 @@
 	},
 /area/survivalpod)
 "vDD" = (
-/obj/item/disk/data,
+/obj/item/disk/body_record,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -76305,7 +76305,7 @@
 	},
 /area/survivalpod)
 "wqM" = (
-/obj/item/disk/data/demo,
+/obj/item/disk/body_record,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
