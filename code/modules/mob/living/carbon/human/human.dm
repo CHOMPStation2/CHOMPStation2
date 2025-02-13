@@ -66,7 +66,7 @@
 		dna.real_name = real_name
 		sync_dna_traits(FALSE) // Traitgenes Sync traits to genetics if needed
 		sync_organ_dna()
-	initialize_vessel() //This is
+	initialize_vessel()
 
 	AddComponent(/datum/component/personal_crafting)
 
@@ -1070,6 +1070,7 @@
 			dna.ResetUIFrom(src)
 			sync_dna_traits(TRUE) // Traitgenes Sync traits to genetics if needed
 			sync_organ_dna()
+	initialize_vessel()
 
 	losebreath = 0
 
