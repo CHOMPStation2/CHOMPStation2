@@ -1331,7 +1331,6 @@
 		return 0
 
 /mob/living/carbon/human/proc/initialize_vessel() //This needs fixing. For some reason mob species is not immediately set in set_species.
-	PRIVATE_PROC(TRUE)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	regenerate_icons()
 	make_blood()
