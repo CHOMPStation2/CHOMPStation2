@@ -473,7 +473,7 @@
 		if(reagents.total_volume >= 5) //CHOMPEdit Start
 			if(digest_mode == DM_DIGEST && M.digestable)
 				reagents.trans_to(M, reagents.total_volume * 0.1, 1 / max(LAZYLEN(contents), 1), FALSE)
-			to_chat(M, span_vwarning("<B>You splash into a pool of [reagent_name]!</B>"))
+			to_chat(M, span_vwarning(span_bold("You splash into a pool of [reagent_name]!")))
 	if(!isliving(thing) && count_items_for_sprite) //CHOMPEdit - If this is enabled also update fullness for non-living things
 		owner.handle_belly_update() //CHOMPEdit - This is run whenever a belly's contents are changed.
 	//if(istype(thing, /obj/item/capture_crystal)) //CHOMPEdit start: Capture crystal occupant gets to see belly text too. Moved to modular_chomp capture_crystal.dm.
