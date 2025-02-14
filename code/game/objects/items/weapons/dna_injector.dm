@@ -325,7 +325,6 @@
 	trait_path = /datum/trait/positive/superpower_remoteview
 /obj/item/dnainjector/set_trait/remoteview/disable
 	disabling = TRUE
-
 /obj/item/dnainjector/set_trait/flashproof // flashproof
 	trait_path = /datum/trait/positive/superpower_flashproof
 /obj/item/dnainjector/set_trait/flashproof/disable
@@ -345,8 +344,9 @@
 	trait_path = /datum/trait/positive/superpower_remotetalk
 /obj/item/dnainjector/set_trait/remotetalk/disable
 	disabling = TRUE
-
+// CHOMPEnable Start
 /obj/item/dnainjector/set_trait/nonconduct // shock
 	trait_path = /datum/trait/positive/nonconductive_plus
 /obj/item/dnainjector/set_trait/nonconduct/disable
 	disabling = TRUE
+// CHOMPEnable End
