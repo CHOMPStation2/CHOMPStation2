@@ -776,10 +776,15 @@
 			log_and_message_admins("replied to [user]'s message: [reply].", target)
 
 		if("stop-orbits")
+<<<<<<< HEAD
 			//CHOMPEdit Start
 			if(target.orbiters)
 				qdel(target.orbiters)
 			//CHOMPEdit End
+=======
+			if(target.orbiters)
+				qdel(target.orbiters)
+>>>>>>> 900d0144a7 (Up port orbit improvements (#17122))
 
 		if("revert-mob-tf")
 			var/mob/living/Tar = target
