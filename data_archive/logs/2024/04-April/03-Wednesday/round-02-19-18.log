@@ -1,0 +1,282 @@
+[2024-04-03 06:19:24.009] START: Starting up data/logs/2024/04-April/03-Wednesday/round-02-19-18.
+[2024-04-03 06:19:25.444] ADMIN: Loading jobban_rank
+[2024-04-03 06:19:25.445] ADMIN: jobban_keylist was empty
+[2024-04-03 06:19:25.449] ADMIN: Loading Banlist
+[2024-04-03 06:19:26.656] ACCESS IN: RiotScopez/(RiotScopez) - IP:146.115.147.185 - CID:1871707424 - BYOND v515
+[2024-04-03 06:19:27.296] GAME: Fenced Geyser loaded at at 58,27,5
+[2024-04-03 06:19:30.425] ASSET: Sending asset `tgui-panel.bundle.js` to client `RiotScopez` as `asset.b4751a5ea151bc8ec68c1925b7d0bdd7.js`
+[2024-04-03 06:19:30.429] ASSET: Sending asset `tgui-panel.bundle.css` to client `RiotScopez` as `asset.7efb53cd7dda00777acb7748b31d4a8a.css`
+[2024-04-03 06:19:30.660] ASSET: Sending asset `fa-regular-400.ttf` to client `RiotScopez` as `fa-regular-400.ttf`
+[2024-04-03 06:19:30.660] ASSET: Sending asset `fa-solid-900.ttf` to client `RiotScopez` as `fa-solid-900.ttf`
+[2024-04-03 06:19:30.660] ASSET: Sending asset `fa-v4compatibility.ttf` to client `RiotScopez` as `fa-v4compatibility.ttf`
+[2024-04-03 06:19:30.660] ASSET: Sending asset `v4shim.css` to client `RiotScopez` as `v4shim.css`
+[2024-04-03 06:19:30.661] ASSET: Sending asset `font-awesome.css` to client `RiotScopez` as `asset.fedd834d1c20ed484599a1c38690e330.css`
+[2024-04-03 06:19:30.681] ASSET: Sending asset `tgfont.eot` to client `RiotScopez` as `tgfont.eot`
+[2024-04-03 06:19:30.683] ASSET: Sending asset `tgfont.woff2` to client `RiotScopez` as `tgfont.woff2`
+[2024-04-03 06:19:30.685] ASSET: Sending asset `tgfont.css` to client `RiotScopez` as `asset.9c0bbe21e37e76955d9640f7a6c4b636.css`
+[2024-04-03 06:19:30.830] ASSET: Sending asset `spritesheet_chat.css` to client `RiotScopez` as `asset.e73ec83954ac74e58beadd50f5a3c63b.css`
+[2024-04-03 06:19:30.830] ASSET: Sending asset `chat_32x10.png` to client `RiotScopez` as `asset.2880748b8d8cbf35ee9e8cb72fdacada.png`
+[2024-04-03 06:19:34.590] GAME: Excavation Site loaded at at 59,11,5
+[2024-04-03 06:19:34.933] GAME: Ice Cave 1A loaded at at 8,24,5
+[2024-04-03 06:19:35.014] GAME: Ore-Topped Cliff loaded at at 177,107,5
+[2024-04-03 06:19:35.133] GAME: Spy Remains loaded at at 229,54,5
+[2024-04-03 06:19:35.277] GAME: Speakeasy loaded at at 199,11,5
+[2024-04-03 06:19:35.377] GAME: Abandoned Relay loaded at at 148,87,5
+[2024-04-03 06:19:35.399] GAME: Mine Vault 1 loaded at at 230,86,5
+[2024-04-03 06:19:35.779] GAME: Ice Cave 1B loaded at at 12,100,5
+[2024-04-03 06:19:35.894] GAME: Rat Den loaded at at 226,14,5
+[2024-04-03 06:19:36.860] GAME: Abandoned Temple loaded at at 81,9,5
+[2024-04-03 06:19:36.901] GAME: Supply Drop 1 loaded at at 60,118,5
+[2024-04-03 06:19:37.135] GAME: spatial anomaly loaded at at 54,183,5
+[2024-04-03 06:19:37.305] GAME: Old Library loaded at at 32,69,4
+[2024-04-03 06:19:37.351] GAME: Snow 2 loaded at at 99,91,4
+[2024-04-03 06:19:37.419] GAME: Snow 3 loaded at at 171,59,4
+[2024-04-03 06:19:37.643] GAME: Diner loaded at at 46,157,4
+[2024-04-03 06:19:37.751] GAME: VR Den loaded at at 204,68,4
+[2024-04-03 06:19:37.787] GAME: Camp Site loaded at at 64,63,4
+[2024-04-03 06:19:38.190] GAME: Farm loaded at at 62,73,4
+[2024-04-03 06:19:38.200] GAME: Buried Treasure loaded at at 154,107,4
+[2024-04-03 06:19:38.267] GAME: Ruptured Canister loaded at at 23,40,4
+[2024-04-03 06:19:38.300] GAME: Snow loaded at at 177,151,4
+[2024-04-03 06:19:38.543] GAME: Meth Lab loaded at at 12,105,4
+[2024-04-03 06:19:38.582] GAME: Rocky Outcrop loaded at at 67,52,4
+[2024-04-03 06:19:38.618] GAME: Merchant Stand loaded at at 20,217,4
+[2024-04-03 06:19:38.644] GAME: Snow 4 loaded at at 117,134,4
+[2024-04-03 06:19:38.807] GAME: Empty Explorer's Home loaded at at 88,29,4
+[2024-04-03 06:19:38.982] GAME: Mechpit loaded at at 171,70,4
+[2024-04-03 06:19:39.006] GAME: Abandoned Bonfire loaded at at 97,61,4
+[2024-04-03 06:19:39.032] GAME: Lone Kururak Den loaded at at 143,134,4
+[2024-04-03 06:19:39.195] GAME: Pride Rock loaded at at 49,8,4
+[2024-04-03 06:19:39.212] GAME: Wrecked Shelter loaded at at 179,36,4
+[2024-04-03 06:19:39.823] GAME: Pooled Rocks loaded at at 12,160,4
+[2024-04-03 06:19:39.851] GAME: Emergency Pod loaded at at 200,38,4
+[2024-04-03 06:19:40.100] GAME: Decoupled Engine loaded at at 68,11,9
+[2024-04-03 06:19:40.130] GAME: Kururak Den loaded at at 78,78,9
+[2024-04-03 06:19:40.339] GAME: Forest Lake loaded at at 26,8,9
+[2024-04-03 06:19:40.413] GAME: Rocky 4 loaded at at 20,56,9
+[2024-04-03 06:19:40.469] GAME: Empty Cabin loaded at at 205,74,9
+[2024-04-03 06:19:40.538] GAME: Shelter 1 loaded at at 53,72,9
+[2024-04-03 06:19:40.589] GAME: Rocky 3 loaded at at 33,29,9
+[2024-04-03 06:19:40.631] GAME: Shack 1 loaded at at 125,68,9
+[2024-04-03 06:19:40.767] GAME: Lab 1 loaded at at 199,14,9
+[2024-04-03 06:19:41.040] GAME: Drug Den loaded at at 11,78,9
+[2024-04-03 06:19:41.231] GAME: Chasm loaded at at 163,67,9
+[2024-04-03 06:19:41.330] GAME: Snowrock 1 loaded at at 198,52,9
+[2024-04-03 06:19:41.492] GAME: Cragzone 1 loaded at at 94,72,9
+[2024-04-03 06:19:41.978] GAME: Demon Pool loaded at at 42,46,9
+[2024-04-03 06:19:42.004] GAME: Spider Nest 1 loaded at at 93,47,9
+[2024-04-03 06:19:42.103] GAME: Military Camp 1 loaded at at 128,31,9
+[2024-04-03 06:19:42.189] GAME: Emergency Pod 4 loaded at at 113,51,9
+[2024-04-03 06:19:42.298] GAME: Mudpit loaded at at 53,90,9
+[2024-04-03 06:19:42.433] GAME: Frost Oasis loaded at at 108,22,9
+[2024-04-03 06:19:42.547] GAME: Rocky 1 loaded at at 67,44,9
+[2024-04-03 06:19:42.903] GAME: Rocky 1 loaded at at 167,35,9
+[2024-04-03 06:19:42.944] GAME: Spider Nest 1 loaded at at 103,46,9
+[2024-04-03 06:19:43.047] GAME: Butcher Shack loaded at at 144,78,9
+[2024-04-03 06:19:43.052] GAME: Musk loaded at at 92,60,9
+[2024-04-03 06:19:43.076] GAME: Spider Nest 1 loaded at at 137,53,9
+[2024-04-03 06:19:43.553] GAME: Frostfly Nest loaded at at 10,18,9
+[2024-04-03 06:19:44.184] GAME: Wolf Den loaded at at 126,77,9
+[2024-04-03 06:19:45.391] GAME: Government Patrol loaded at at 11,43,9
+[2024-04-03 06:19:45.589] GAME: Xeno Hive loaded at at 66,192,9
+[2024-04-03 06:19:45.757] GAME: Leopardmander Den loaded at at 111,186,9
+[2024-04-03 06:19:45.833] GAME: DJOutpost 2 loaded at at 209,159,9
+[2024-04-03 06:19:45.947] GAME: Raided Mech Hanger loaded at at 87,222,9
+[2024-04-03 06:19:46.276] GAME: Chapel 1 loaded at at 148,164,9
+[2024-04-03 06:19:47.017] GAME: Cliff lake Base loaded at at 182,205,9
+[2024-04-03 06:19:47.360] GAME: Black Shuttle Down loaded at at 100,119,9
+[2024-04-03 06:19:47.673] GAME: Borg Lab loaded at at 196,120,9
+[2024-04-03 06:19:48.042] GAME: Great Wolf Den loaded at at 32,193,9
+[2024-04-03 06:19:49.348] GAME: Manor 1 loaded at at 33,138,9
+[2024-04-03 06:19:49.638] GAME: Burning Hadzard Zone loaded at at 119,209,9
+[2024-04-03 06:19:50.086] GAME: Dog Base loaded at at 142,120,9
+[2024-04-03 06:19:50.136] GAME: Lone Wolf loaded at at 200,161,9
+[2024-04-03 06:19:50.300] GAME: Clockwork Den loaded at at 138,16,10
+[2024-04-03 06:19:50.454] GAME: Leppy Den loaded at at 215,11,10
+[2024-04-03 06:19:50.839] GAME: Eclipse Base Dig loaded at at 165,196,10
+[2024-04-03 06:19:51.130] GAME: Phoron Den loaded at at 69,218,10
+[2024-04-03 06:19:51.224] GAME: Solar Pond loaded at at 48,222,10
+[2024-04-03 06:19:51.378] GAME: Frost Lake loaded at at 13,15,10
+[2024-04-03 06:19:53.178] GAME: Eclipse Base Molten loaded at at 111,198,10
+[2024-04-03 06:19:53.412] GAME: Dragon Den loaded at at 197,205,10
+[2024-04-03 06:19:53.680] GAME: Warzone loaded at at 147,136,10
+[2024-04-03 06:19:53.768] GAME: Raided Pod loaded at at 186,97,10
+[2024-04-03 06:19:54.287] GAME: Siege Point loaded at at 140,82,10
+[2024-04-03 06:19:55.167] GAME: Eclipse Base Aqua loaded at at 99,143,10
+[2024-04-03 06:19:55.699] GAME: Cult Bar loaded at at 188,136,10
+[2024-04-03 06:19:55.944] GAME: Frozen Lab loaded at at 112,82,10
+[2024-04-03 06:19:56.189] GAME: Xenobio Lab loaded at at 184,73,10
+[2024-04-03 06:19:57.409] GAME: Failed Portal loaded at at 228,163,10
+[2024-04-03 06:20:04.260] GAME: Unfinished Outpost loaded at at 11,97,10
+[2024-04-03 06:21:00.196] GAME: Z-level VR World loaded at at 1,1,11
+[2024-04-03 06:21:00.800] GAME: Z-level Fuel Depot - Z1 Space loaded at at 1,1,12
+[2024-04-03 06:21:13.725] GAME: Z-level Thor Surface loaded at at 1,1,13
+[2024-04-03 06:21:29.486] GAME: Z-level Snow Field loaded at at 1,1,14
+[2024-04-03 06:21:29.486] GAME: Extra z-level Snow Field has no associated map datum
+[2024-04-03 06:22:06.035] MISC: a the gibber didn't find an input plate.
+[2024-04-03 06:22:08.765] MISC: a the gibber didn't find an input plate.
+[2024-04-03 06:26:37.981] ADMIN: RiotScopez/(RiotScopez) delayed the game.
+[2024-04-03 06:26:41.022] GAME: TRAITS riotscopez/(Kyra Kuahara) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/minor_brute_resist;/datum/trait/positive/rad_resistance;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_hyper;/datum/trait/neutral/stuffing_feeder;/datum/trait/neutral/hard_vore;/datum/trait/neutral/micro_size_up;/datum/trait/neutral/nutritiongrow;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/spice_intolerance_slight;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/succubus_drain,;/datum/trait/negative/deep_sleeper
+[2024-04-03 06:27:45.322] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:27:50.885] GAME: TIDI: 34.6667;10.4;2.08;0.208
+[2024-04-03 06:27:51.472] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:28:07.691] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:28:15.927] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:28:23.013] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:28:40.558] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:28:50.058] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:28:51.772] GAME: TIDI: 1.5;7.73;3.21;0.5082
+[2024-04-03 06:29:10.191] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:29:16.715] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:29:27.854] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:29:43.489] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:29:53.004] GAME: TIDI: 2.16667;6.061;3.7802;0.8354
+[2024-04-03 06:29:53.303] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:30:02.496] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:30:07.288] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:30:21.467] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:30:32.012] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:30:54.089] GAME: TIDI: 1.66667;4.7427;3.9727;1.14913
+[2024-04-03 06:31:04.367] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:31:28.040] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:31:54.533] GAME: TIDI: 0.833333;3.56989;3.89214;1.42343
+[2024-04-03 06:31:58.660] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:32:04.163] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:32:09.728] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:32:15.604] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:32:22.085] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:32:26.084] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:32:33.905] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:32:48.522] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:32:51.223] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:32:59.408] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:33:01.329] GAME: TIDI: 11.3333;5.89892;4.2935;1.71044
+[2024-04-03 06:33:15.994] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:33:24.151] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:33:29.658] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:33:33.810] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:33:42.957] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:33:47.383] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:34:05.645] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:34:10.465] GAME: TIDI: 15.1667;8.67925;5.17065;2.05646
+[2024-04-03 06:34:10.682] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:34:38.866] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:34:41.471] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:35:15.193] GAME: TIDI: 7.83333;8.42547;5.82161;2.43297
+[2024-04-03 06:35:20.329] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:35:25.322] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:35:29.154] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:35:32.401] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:35:45.080] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:35:49.055] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:35:52.286] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:36:16.359] GAME: TIDI: 2;6.49783;5.95685;2.78536
+[2024-04-03 06:36:40.838] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:36:45.364] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:36:50.796] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:36:56.739] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:36:59.364] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:37:17.441] GAME: TIDI: 1.83333;5.09848;5.78518;3.08534
+[2024-04-03 06:37:23.813] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:37:29.594] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:37:44.496] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:37:48.702] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:37:52.938] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:38:05.089] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:38:08.018] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:38:17.639] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:38:19.468] GAME: TIDI: 3.33333;4.56894;5.54193;3.331
+[2024-04-03 06:38:24.709] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:38:29.954] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:39:13.155] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:39:20.259] GAME: TIDI: 1.33333;3.59826;5.1532;3.51322
+[2024-04-03 06:39:30.984] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:39:38.553] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:39:50.796] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:40:10.675] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:40:21.032] GAME: TIDI: 1.33333;2.91878;4.70631;3.63253
+[2024-04-03 06:40:24.483] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:40:33.176] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:40:37.859] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:40:47.235] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:41:21.708] GAME: TIDI: 1.16667;2.39315;4.24368;3.69365
+[2024-04-03 06:42:21.707] GAME: TIDI: 0;1.6752;3.72998;3.69728
+[2024-04-03 06:43:21.708] GAME: TIDI: 0;1.17264;3.21852;3.6494
+[2024-04-03 06:44:21.963] GAME: TIDI: 0.333333;0.920849;2.75898;3.56036
+[2024-04-03 06:45:07.643] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:45:18.685] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:45:20.283] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:45:21.868] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:45:22.676] GAME: TIDI: 1.16667;0.994594;2.4061;3.44493
+[2024-04-03 06:46:02.420] GAME: TRAITS riotscopez/(Katha Tennant) with: nothing
+[2024-04-03 06:46:22.872] GAME: TIDI: 0.333333;0.796216;2.08413;3.30885
+[2024-04-03 06:47:23.007] GAME: TIDI: 0.333333;0.657351;1.79877;3.15785
+[2024-04-03 06:48:23.092] GAME: TIDI: 0;0.460146;1.53105;2.99517
+[2024-04-03 06:49:23.091] GAME: TIDI: 0;0.322102;1.28926;2.82457
+[2024-04-03 06:50:23.092] GAME: TIDI: 0;0.225471;1.0765;2.64977
+[2024-04-03 06:51:20.745] GAME: TRAITS riotscopez/(Katha Tennant) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/darksight;/datum/trait/neutral/bloodsucker_freeform;/datum/trait/neutral/dominate_predator;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore,;/datum/trait/neutral/nutritiongrow
+[2024-04-03 06:51:23.325] GAME: TIDI: 0.5;0.30783;0.922766;2.47707
+[2024-04-03 06:52:00.293] GAME: TRAITS riotscopez/(Katha Tennant) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/darksight;/datum/trait/neutral/bloodsucker_freeform;/datum/trait/neutral/dominate_predator;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore,;/datum/trait/neutral/nutritiongrow
+[2024-04-03 06:52:05.487] GAME: TRAITS riotscopez/(Katha Tennant) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/darksight;/datum/trait/neutral/bloodsucker_freeform;/datum/trait/neutral/dominate_predator;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore,;/datum/trait/neutral/nutritiongrow
+[2024-04-03 06:52:18.995] GAME: TRAITS riotscopez/(Katha Tennant) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/darksight;/datum/trait/neutral/bloodsucker_freeform;/datum/trait/neutral/dominate_predator;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore,;/datum/trait/neutral/nutritiongrow
+[2024-04-03 06:52:23.973] GAME: TIDI: 1;0.515481;0.841309;2.31349
+[2024-04-03 06:52:26.352] GAME: TRAITS riotscopez/(Katha Tennant) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/darksight;/datum/trait/neutral/bloodsucker_freeform;/datum/trait/neutral/dominate_predator;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore,;/datum/trait/neutral/nutritiongrow
+[2024-04-03 06:52:44.628] GAME: TRAITS riotscopez/(Katha Tennant) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/darksight;/datum/trait/neutral/bloodsucker_freeform;/datum/trait/neutral/dominate_predator;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore,;/datum/trait/neutral/nutritiongrow
+[2024-04-03 06:53:06.353] GAME: TRAITS riotscopez/(Katha Tennant) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/darksight;/datum/trait/neutral/bloodsucker_freeform;/datum/trait/neutral/dominate_predator;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore,;/datum/trait/neutral/nutritiongrow
+[2024-04-03 06:53:24.703] GAME: TRAITS riotscopez/(Katha Tennant) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/darksight;/datum/trait/neutral/bloodsucker_freeform;/datum/trait/neutral/dominate_predator;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore,;/datum/trait/neutral/nutritiongrow
+[2024-04-03 06:53:24.793] GAME: TIDI: 1.33333;0.760837;0.825215;2.16466
+[2024-04-03 06:53:27.879] GAME: TRAITS riotscopez/(Katha Tennant) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/darksight;/datum/trait/neutral/bloodsucker_freeform;/datum/trait/neutral/dominate_predator;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore,;/datum/trait/neutral/nutritiongrow
+[2024-04-03 06:53:38.607] GAME: TRAITS riotscopez/(Katha Tennant) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/darksight;/datum/trait/neutral/bloodsucker_freeform;/datum/trait/neutral/dominate_predator;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore,;/datum/trait/neutral/nutritiongrow
+[2024-04-03 06:53:44.117] GAME: TRAITS riotscopez/(Katha Tennant) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/darksight;/datum/trait/neutral/bloodsucker_freeform;/datum/trait/neutral/dominate_predator;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore,;/datum/trait/neutral/nutritiongrow
+[2024-04-03 06:53:48.222] GAME: TRAITS riotscopez/(Katha Tennant) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/darksight;/datum/trait/neutral/bloodsucker_freeform;/datum/trait/neutral/dominate_predator;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore,;/datum/trait/neutral/nutritiongrow
+[2024-04-03 06:54:03.390] GAME: TRAITS riotscopez/(Katha Tennant) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/darksight;/datum/trait/neutral/bloodsucker_freeform;/datum/trait/neutral/dominate_predator;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore,;/datum/trait/neutral/nutritiongrow
+[2024-04-03 06:54:14.238] GAME: TRAITS riotscopez/(Katha Tennant) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/darksight;/datum/trait/neutral/bloodsucker_freeform;/datum/trait/neutral/dominate_predator;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore,;/datum/trait/neutral/nutritiongrow
+[2024-04-03 06:54:17.001] GAME: TRAITS riotscopez/(Katha Tennant) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/darksight;/datum/trait/neutral/bloodsucker_freeform;/datum/trait/neutral/dominate_predator;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore,;/datum/trait/neutral/nutritiongrow
+[2024-04-03 06:54:19.906] GAME: TRAITS riotscopez/(Katha Tennant) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/darksight;/datum/trait/neutral/bloodsucker_freeform;/datum/trait/neutral/dominate_predator;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore,;/datum/trait/neutral/nutritiongrow
+[2024-04-03 06:54:22.139] GAME: TRAITS riotscopez/(Katha Tennant) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/darksight;/datum/trait/neutral/bloodsucker_freeform;/datum/trait/neutral/dominate_predator;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore,;/datum/trait/neutral/nutritiongrow
+[2024-04-03 06:54:22.897] GAME: TRAITS riotscopez/(Katha Tennant) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/darksight;/datum/trait/neutral/bloodsucker_freeform;/datum/trait/neutral/dominate_predator;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore,;/datum/trait/neutral/nutritiongrow
+[2024-04-03 06:54:23.977] GAME: TRAITS riotscopez/(Katha Tennant) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/darksight;/datum/trait/neutral/bloodsucker_freeform;/datum/trait/neutral/dominate_predator;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore,;/datum/trait/neutral/nutritiongrow
+[2024-04-03 06:54:24.914] GAME: TRAITS riotscopez/(Katha Tennant) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/darksight;/datum/trait/neutral/bloodsucker_freeform;/datum/trait/neutral/dominate_predator;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore,;/datum/trait/neutral/nutritiongrow
+[2024-04-03 06:54:27.105] GAME: TIDI: 4;1.73259;1.00669;2.04887
+[2024-04-03 06:54:35.425] GAME: TRAITS riotscopez/(Katha Tennant) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/darksight;/datum/trait/neutral/bloodsucker_freeform;/datum/trait/neutral/dominate_predator;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore,;/datum/trait/neutral/nutritiongrow
+[2024-04-03 06:54:41.120] GAME: TRAITS riotscopez/(Katha Tennant) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/darksight;/datum/trait/neutral/bloodsucker_freeform;/datum/trait/neutral/dominate_predator;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore,;/datum/trait/neutral/nutritiongrow
+[2024-04-03 06:54:51.405] GAME: TRAITS riotscopez/(Katha Tennant) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/darksight;/datum/trait/neutral/bloodsucker_freeform;/datum/trait/neutral/dominate_predator;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore,;/datum/trait/neutral/nutritiongrow
+[2024-04-03 06:54:57.469] GAME: TRAITS riotscopez/(Katha Tennant) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/darksight;/datum/trait/neutral/bloodsucker_freeform;/datum/trait/neutral/dominate_predator;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore,;/datum/trait/neutral/nutritiongrow
+[2024-04-03 06:55:17.697] GAME: TRAITS riotscopez/(Katha Tennant) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/darksight;/datum/trait/neutral/bloodsucker_freeform;/datum/trait/neutral/dominate_predator;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore,;/datum/trait/neutral/nutritiongrow
+[2024-04-03 06:55:27.453] GAME: TRAITS riotscopez/(Katha Tennant) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/darksight;/datum/trait/neutral/bloodsucker_freeform;/datum/trait/neutral/dominate_predator;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore,;/datum/trait/neutral/nutritiongrow
+[2024-04-03 06:55:28.334] GAME: TIDI: 2;1.81281;1.16791;1.96077
+[2024-04-03 06:55:37.954] GAME: TRAITS riotscopez/(Katha Tennant) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/darksight;/datum/trait/neutral/bloodsucker_freeform;/datum/trait/neutral/dominate_predator;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore,;/datum/trait/neutral/nutritiongrow
+[2024-04-03 06:55:41.204] GAME: TRAITS riotscopez/(Katha Tennant) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/darksight;/datum/trait/neutral/bloodsucker_freeform;/datum/trait/neutral/dominate_predator;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore,;/datum/trait/neutral/nutritiongrow
+[2024-04-03 06:55:46.294] GAME: TRAITS riotscopez/(Katha Tennant) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/darksight;/datum/trait/neutral/bloodsucker_freeform;/datum/trait/neutral/dominate_predator;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore,;/datum/trait/neutral/nutritiongrow
+[2024-04-03 06:56:01.715] GAME: TRAITS riotscopez/(Katha Tennant) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/darksight;/datum/trait/neutral/bloodsucker_freeform;/datum/trait/neutral/dominate_predator;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore,;/datum/trait/neutral/nutritiongrow
+[2024-04-03 06:56:05.460] GAME: TRAITS riotscopez/(Katha Tennant) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/darksight;/datum/trait/neutral/bloodsucker_freeform;/datum/trait/neutral/dominate_predator;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore,;/datum/trait/neutral/nutritiongrow
+[2024-04-03 06:56:09.602] GAME: TRAITS riotscopez/(Katha Tennant) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/darksight;/datum/trait/neutral/bloodsucker_freeform;/datum/trait/neutral/dominate_predator;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore,;/datum/trait/neutral/nutritiongrow
+[2024-04-03 06:56:27.116] GAME: TRAITS riotscopez/(Katha Tennant) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/darksight;/datum/trait/neutral/bloodsucker_freeform;/datum/trait/neutral/dominate_predator;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore,;/datum/trait/neutral/nutritiongrow
+[2024-04-03 06:56:29.557] GAME: TIDI: 2;1.86897;1.30812;1.89551
+[2024-04-03 06:56:38.616] GAME: TRAITS riotscopez/(Katha Tennant) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/darksight;/datum/trait/neutral/bloodsucker_freeform;/datum/trait/neutral/dominate_predator;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore,;/datum/trait/neutral/nutritiongrow
+[2024-04-03 06:56:42.032] GAME: TRAITS riotscopez/(Katha Tennant) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/darksight;/datum/trait/neutral/bloodsucker_freeform;/datum/trait/neutral/dominate_predator;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore,;/datum/trait/neutral/nutritiongrow
+[2024-04-03 06:56:55.192] GAME: TRAITS riotscopez/(Katha Tennant) with: /datum/trait/positive/antiseptic_saliva;/datum/trait/positive/darksight;/datum/trait/neutral/bloodsucker_freeform;/datum/trait/neutral/dominate_predator;/datum/trait/neutral/dominate_prey;/datum/trait/neutral/big_mouth_extreme;/datum/trait/neutral/glowing_eyes;/datum/trait/neutral/taller;/datum/trait/neutral/obese;/datum/trait/neutral/vertical_nom;/datum/trait/neutral/alcohol_immunity;/datum/trait/neutral/hard_vore,;/datum/trait/neutral/nutritiongrow
+[2024-04-03 06:57:08.169] ADMIN: RiotScopez/(RiotScopez) has started the game.
+[2024-04-03 06:57:08.744] ACCESS OUT: INVALID/(RiotScopez) - IP:146.115.147.185 - CID:Logged Out - BYOND Logged Out
+[2024-04-03 06:57:08.744] ACCESS IN: RiotScopez/(Cyborg) - IP:146.115.147.185 - CID:1871707424 - BYOND v515
+[2024-04-03 06:57:12.243] ASSET: Sending asset `jquery.min.js` to client `RiotScopez` as `jquery.min.js`
+[2024-04-03 06:57:12.348] GAME: JOINED RiotScopez/(Cyborg) as "Cyborg"
+[2024-04-03 06:57:12.348] GAME: SPECIES RiotScopez/(Cyborg) is a: "Human"
+[2024-04-03 06:57:12.846] ACCESS OUT: INVALID/(Cyborg) - IP:146.115.147.185 - CID:Logged Out - BYOND Logged Out
+[2024-04-03 06:57:12.846] ACCESS IN: RiotScopez/(Default Cyborg-897) - IP:146.115.147.185 - CID:1871707424 - BYOND v515
+[2024-04-03 06:57:35.769] GAME: TIDI: 10.2415;4.38072;1.92264;1.89822
+[2024-04-03 06:57:49.568] GAME: Default Drone-897 triggered a fire alarm at (136,146,3)
+[2024-04-03 06:58:00.947] ASSET: Sending asset `tgui.bundle.js` to client `RiotScopez` as `asset.5a806c2cdc0e4d35c94371aedd1e5f4a.js`
+[2024-04-03 06:58:01.006] ASSET: Sending asset `tgui.bundle.css` to client `RiotScopez` as `asset.89501de77523e7848c5824e75ad03820.css`
+[2024-04-03 06:58:17.098] GAME: Exploration Drone-897 reset a fire alarm at (136,146,3)
+[2024-04-03 06:58:35.968] GAME: TIDI: 0.417014;3.19161;2.17644;1.92604
+[2024-04-03 06:58:47.020] ADMIN: RiotScopez/(Exploration Drone-897) RiotScopez/(Exploration Drone-897) has used MODIFYROBOT (Toggle ERT Module Overwrite) on RiotScopez/(Exploration Drone-897).
+[2024-04-03 06:59:36.175] GAME: TIDI: 0.333333;2.33412;2.20797;1.95423
+[2024-04-03 07:00:02.196] EMOTE: INVALID/(Cleanbot) (147,139,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 07:00:33.917] ADMIN: RiotScopez/(Crisis Drone-897) RiotScopez/(Crisis Drone-897) has used MODIFYROBOT (Add a Module) on RiotScopez/(Crisis Drone-897).
+[2024-04-03 07:00:36.404] GAME: TIDI: 0.5;1.78389;2.12316;1.97113
+[2024-04-03 07:00:50.290] ADMIN: RiotScopez/(Crisis Drone-897) RiotScopez/(Crisis Drone-897) has used MODIFYROBOT (Swap a Robot Module) on RiotScopez/(Crisis Drone-897).
+[2024-04-03 07:01:12.928] ADMIN: RiotScopez/(Crisis Drone-897) RiotScopez/(Crisis Drone-897) has used MODIFYROBOT (Swap a Robot Module) on RiotScopez/(Crisis Drone-897).
+[2024-04-03 07:01:36.763] GAME: TIDI: 0.5;1.39872;1.97827;1.97184
+[2024-04-03 07:01:38.725] EMOTE: INVALID/(Cleanbot) (147,139,9): <B>Cleanbot</B> makes an excited booping sound!
+[2024-04-03 07:01:50.723] ACCESS OUT: RiotScopez/(Crisis Drone-897) - IP:146.115.147.185 - CID:Logged Out - BYOND Logged Out

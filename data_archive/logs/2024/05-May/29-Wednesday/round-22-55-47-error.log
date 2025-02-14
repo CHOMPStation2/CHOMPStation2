@@ -1,0 +1,24 @@
+[2024-05-30 02:55:38.057] START: Starting up data/logs/2024/05-May/29-Wednesday/round-22-55-47.
+[2024-05-30 05:37:50.147] RUNTIME: [2024-05-30T01:37:50] Runtime in code/_helpers/unsorted.dm,1537: addtimer called with a callback assigned to a qdeleted object. In the future such timers will not be supported and may refuse to run or run with a 0 wait
+[2024-05-30 05:37:50.149] RUNTIME:   proc name: stack trace (/proc/stack_trace)
+[2024-05-30 05:37:50.151] RUNTIME:   src: null
+[2024-05-30 05:37:50.153] RUNTIME:   call stack:
+[2024-05-30 05:37:50.154] RUNTIME:   stack trace("addtimer called with a callbac...")
+[2024-05-30 05:37:50.180] RUNTIME:    addtimer(/datum/callback (/datum/callback), 3, 8, null, "code/modules/mob/living/simple...", 196)
+[2024-05-30 05:37:50.182] RUNTIME:   the space jellyfish (/mob/living/simple_mob/vore/alienanimals/space_jellyfish): death(1, "dies!")
+[2024-05-30 05:37:50.183] RUNTIME:   the space jellyfish (/mob/living/simple_mob/vore/alienanimals/space_jellyfish): death(1)
+[2024-05-30 05:37:50.185] RUNTIME:   the space jellyfish (/mob/living/simple_mob/vore/alienanimals/space_jellyfish): death(1)
+[2024-05-30 05:37:50.213] RUNTIME:   the space jellyfish (/mob/living/simple_mob/vore/alienanimals/space_jellyfish): death(1)
+[2024-05-30 05:37:50.215] RUNTIME:   the space jellyfish (/mob/living/simple_mob/vore/alienanimals/space_jellyfish): ash("dust-m")
+[2024-05-30 05:37:50.217] RUNTIME:   the space jellyfish (/mob/living/simple_mob/vore/alienanimals/space_jellyfish): lightning act()
+[2024-05-30 05:37:50.219] RUNTIME:   lightning strike(the shallow water (170,114,10) (/turf/simulated/floor/water), 0)
+[2024-05-30 05:37:50.221] RUNTIME:   storm (/datum/weather/sif/storm): handle lightning()
+[2024-05-30 05:37:50.222] RUNTIME:   storm (/datum/weather/sif/storm): process effects()
+[2024-05-30 05:37:50.224] RUNTIME:   /datum/weather_holder/sif (/datum/weather_holder/sif): process()
+[2024-05-30 05:37:50.225] RUNTIME:   Sif (/datum/planet/sif): update weather()
+[2024-05-30 05:37:50.227] RUNTIME:   Sif (/datum/planet/sif): process(95392)
+[2024-05-30 05:37:50.229] RUNTIME:   Planets (/datum/controller/subsystem/planets): fire(0)
+[2024-05-30 05:37:50.232] RUNTIME:   Planets (/datum/controller/subsystem/planets): ignite(0)
+[2024-05-30 05:37:50.233] RUNTIME:   Master (/datum/controller/master): RunQueue()
+[2024-05-30 05:37:50.235] RUNTIME:   Master (/datum/controller/master): Loop()
+[2024-05-30 05:37:50.258] RUNTIME:   Master (/datum/controller/master): StartProcessing(0)

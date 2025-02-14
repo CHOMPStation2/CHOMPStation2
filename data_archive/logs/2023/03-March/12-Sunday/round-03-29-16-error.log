@@ -1,0 +1,32 @@
+[2023-03-12T03:29:10] START: Starting up data/logs/2023/03-March/12-Sunday/round-03-29-16.
+[2023-03-12T03:52:41] RUNTIME: [2023-03-12T03:52:41] Runtime in job.dm,20: Cannot modify null.access.
+[2023-03-12T03:52:41] RUNTIME:   proc name: equip id (/decl/hierarchy/outfit/job/equip_id)
+[2023-03-12T03:52:41] RUNTIME:   src: Job - Visitor (/decl/hierarchy/outfit/job/assistant)
+[2023-03-12T03:52:41] RUNTIME:   call stack:
+[2023-03-12T03:52:41] RUNTIME:   Job - Visitor (/decl/hierarchy/outfit/job/assistant): equip id(Kasper Kemble (/mob/living/carbon/human), "Visitor", "Visitor")
+[2023-03-12T03:52:41] RUNTIME:   Job - Visitor (/decl/hierarchy/outfit/job/assistant): equip(Kasper Kemble (/mob/living/carbon/human), "Visitor", "Visitor")
+[2023-03-12T03:52:41] RUNTIME:   /datum/job/assistant (/datum/job/assistant): equip(Kasper Kemble (/mob/living/carbon/human), null)
+[2023-03-12T03:52:41] RUNTIME:   /datum/controller/occupations (/datum/controller/occupations): EquipRank(Kasper Kemble (/mob/living/carbon/human), "Visitor", 0, 1)
+[2023-03-12T03:52:41] RUNTIME:   Gameticker (/datum/controller/subsystem/ticker): equip characters()
+[2023-03-12T03:52:41] RUNTIME:   Gameticker (/datum/controller/subsystem/ticker): setup startgame()
+[2023-03-12T03:52:41] RUNTIME:   Gameticker (/datum/controller/subsystem/ticker): setup tick(0)
+[2023-03-12T03:52:41] RUNTIME:   Gameticker (/datum/controller/subsystem/ticker): fire(0)
+[2023-03-12T03:52:41] RUNTIME:   Gameticker (/datum/controller/subsystem/ticker): pregame tick()
+[2023-03-12T03:52:41] RUNTIME:   Gameticker (/datum/controller/subsystem/ticker): fire(0)
+[2023-03-12T03:52:41] RUNTIME:   Gameticker (/datum/controller/subsystem/ticker): ignite(0)
+[2023-03-12T03:52:41] RUNTIME:   Master (/datum/controller/master): RunQueue()
+[2023-03-12T03:52:41] RUNTIME:   Master (/datum/controller/master): Loop()
+[2023-03-12T03:52:41] RUNTIME:   Master (/datum/controller/master): StartProcessing(0)
+[2023-03-12T03:52:44] RUNTIME: [2023-03-12T03:52:44] Runtime in mob_spawner_vr.dm,60: Undefined variable /obj/structure/closet/crate/mimic/var/nest
+[2023-03-12T03:52:44] 
+[2023-03-12T03:52:44] RUNTIME:   proc name: do spawn (/obj/structure/mob_spawner/proc/do_spawn)
+[2023-03-12T03:52:44] RUNTIME:   src: Mining Lazy Spawner (/obj/structure/mob_spawner/scanner/mining_animals)
+[2023-03-12T03:52:44] RUNTIME:   src.loc: the rock (194,18,5) (/turf/simulated/mineral/sif)
+[2023-03-12T03:52:44] RUNTIME:   call stack:
+[2023-03-12T03:52:44] RUNTIME:   Mining Lazy Spawner (/obj/structure/mob_spawner/scanner/mining_animals): do spawn(/obj/structure/closet/crate/mi... (/obj/structure/closet/crate/mimic))
+[2023-03-12T03:52:44] RUNTIME:   Mining Lazy Spawner (/obj/structure/mob_spawner/scanner/mining_animals): process(20)
+[2023-03-12T03:52:44] RUNTIME:   Objects (/datum/controller/subsystem/processing/obj): fire(1)
+[2023-03-12T03:52:44] RUNTIME:   Objects (/datum/controller/subsystem/processing/obj): ignite(1)
+[2023-03-12T03:52:44] RUNTIME:   Master (/datum/controller/master): RunQueue()
+[2023-03-12T03:52:44] RUNTIME:   Master (/datum/controller/master): Loop()
+[2023-03-12T03:52:44] RUNTIME:   Master (/datum/controller/master): StartProcessing(0)
