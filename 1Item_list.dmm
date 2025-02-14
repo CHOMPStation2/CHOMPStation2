@@ -4090,7 +4090,7 @@
 	},
 /area/survivalpod)
 "bkv" = (
-/obj/item/dnainjector/antistutt,
+/obj/item/dnainjector/set_trait/anxiety/disable,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -6171,7 +6171,7 @@
 	},
 /area/survivalpod)
 "bQK" = (
-/obj/item/dnainjector/hallucination,
+/obj/item/dnainjector/set_trait/flashproof,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -7219,7 +7219,7 @@
 	},
 /area/survivalpod)
 "cgu" = (
-/obj/item/dnainjector/noprints,
+/obj/item/dnainjector/set_trait/noprints,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -7591,7 +7591,7 @@
 	},
 /area/survivalpod)
 "clx" = (
-/obj/item/dnainjector/tourmut,
+/obj/item/dnainjector/set_trait/tourettes,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -14005,7 +14005,7 @@
 	},
 /area/survivalpod)
 "eeW" = (
-/obj/item/dnainjector/anticough,
+/obj/item/dnainjector/set_trait/cough/disable,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -14075,7 +14075,7 @@
 	},
 /area/survivalpod)
 "egn" = (
-/obj/item/dnainjector/glassesmut,
+/obj/item/dnainjector/set_trait/nearsighted,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -17728,7 +17728,7 @@
 	},
 /area/survivalpod)
 "fko" = (
-/obj/item/dnainjector/antifire,
+/obj/item/dnainjector/set_trait/heatadapt/disable,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -18258,7 +18258,7 @@
 	},
 /area/survivalpod)
 "ftt" = (
-/obj/item/dnainjector/antiepi,
+/obj/item/dnainjector/set_trait/epilepsy/disable,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -19736,7 +19736,7 @@
 	},
 /area/survivalpod)
 "fPz" = (
-/obj/item/dnainjector/antimorph,
+/obj/item/dnainjector/set_trait/morph/disable,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -20192,7 +20192,7 @@
 	},
 /area/survivalpod)
 "fVT" = (
-/obj/item/dnainjector/antiregenerate,
+/obj/item/dnainjector/set_trait/regenerate/disable,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -21832,7 +21832,7 @@
 	},
 /area/survivalpod)
 "gvF" = (
-/obj/item/dnainjector/clumsymut,
+/obj/item/dnainjector/set_trait/clumsy,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -24337,7 +24337,7 @@
 /turf/simulated/floor/atoll,
 /area/survivalpod)
 "hgB" = (
-/obj/item/dnainjector/m2h,
+/obj/item/dnainjector/set_trait/remotetalk,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -27135,7 +27135,7 @@
 	},
 /area/survivalpod)
 "hWt" = (
-/obj/item/dnainjector/antitour,
+/obj/item/dnainjector/set_trait/tourettes/disable,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -29050,7 +29050,7 @@
 	},
 /area/survivalpod)
 "iyg" = (
-/obj/item/dnainjector/antiglasses,
+/obj/item/dnainjector/set_trait/nearsighted/disable,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -29426,7 +29426,7 @@
 	},
 /area/survivalpod)
 "iDS" = (
-/obj/item/dnainjector/antinoprints,
+/obj/item/dnainjector/set_trait/noprints/disable,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -32750,7 +32750,7 @@
 	},
 /area/survivalpod)
 "jDH" = (
-/obj/item/dnainjector/insulation,
+/obj/item/dnainjector/set_trait/coldadapt,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -33329,7 +33329,7 @@
 	},
 /area/survivalpod)
 "jKU" = (
-/obj/item/dnainjector/xraymut,
+/obj/item/dnainjector/set_trait/xray,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -36242,7 +36242,7 @@
 	},
 /area/survivalpod)
 "kDt" = (
-/obj/item/dnainjector,
+/obj/item/dnainjector/random,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -36290,7 +36290,7 @@
 	},
 /area/survivalpod)
 "kDX" = (
-/obj/item/dnainjector/coughmut,
+/obj/item/dnainjector/set_trait/cough,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -39829,7 +39829,7 @@
 	},
 /area/survivalpod)
 "lGo" = (
-/obj/item/dnainjector/deafmut,
+/obj/item/dnainjector/set_trait/deaf,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -43259,7 +43259,7 @@
 	},
 /area/survivalpod)
 "mGj" = (
-/obj/item/dnainjector/morph,
+/obj/item/dnainjector/set_trait/morph,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -43831,7 +43831,7 @@
 	},
 /area/survivalpod)
 "mPi" = (
-/obj/item/dnainjector/telemut,
+/obj/item/dnainjector/set_trait/tk,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -43909,7 +43909,7 @@
 	},
 /area/survivalpod)
 "mQw" = (
-/obj/item/dnainjector/antirunfast,
+/obj/item/dnainjector/set_trait/haste/disable,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -45962,7 +45962,7 @@
 	},
 /area/survivalpod)
 "ntI" = (
-/obj/item/dnainjector/antiinsulation,
+/obj/item/dnainjector/set_trait/coldadapt/disable,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -46022,7 +46022,7 @@
 	},
 /area/survivalpod)
 "nuY" = (
-/obj/item/dnainjector/antihallucination,
+/obj/item/dnainjector/set_trait/flashproof/disable,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -47375,7 +47375,7 @@
 	},
 /area/survivalpod)
 "nMU" = (
-/obj/item/dnainjector/antitele,
+/obj/item/dnainjector/set_trait/tk/disable,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -47947,7 +47947,7 @@
 	},
 /area/survivalpod)
 "nVr" = (
-/obj/item/dnainjector/blindmut,
+/obj/item/dnainjector/set_trait/blind,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -50472,7 +50472,7 @@
 	},
 /area/survivalpod)
 "oHT" = (
-/obj/item/dnainjector/nobreath,
+/obj/item/dnainjector/set_trait/nobreathe,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -53739,7 +53739,7 @@
 	},
 /area/survivalpod)
 "pIH" = (
-/obj/item/dnainjector/regenerate,
+/obj/item/dnainjector/set_trait/regenerate,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -57638,7 +57638,7 @@
 	},
 /area/survivalpod)
 "qSE" = (
-/obj/item/disk/data/monkey,
+/obj/item/disk/body_record,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -60390,7 +60390,7 @@
 	},
 /area/survivalpod)
 "rJl" = (
-/obj/item/dnainjector/anticlumsy,
+/obj/item/dnainjector/set_trait/clumsy/disable,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -61384,7 +61384,7 @@
 	},
 /area/survivalpod)
 "rYL" = (
-/obj/item/dnainjector/h2m,
+/obj/item/dnainjector/set_trait/remotetalk/disable,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -64464,7 +64464,7 @@
 	},
 /area/survivalpod)
 "sVd" = (
-/obj/item/dnainjector/antideaf,
+/obj/item/dnainjector/set_trait/deaf/disable,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -65456,7 +65456,7 @@
 	},
 /area/survivalpod)
 "tiU" = (
-/obj/item/dnainjector/runfast,
+/obj/item/dnainjector/set_trait/haste,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -66176,7 +66176,7 @@
 	},
 /area/survivalpod)
 "ttB" = (
-/obj/item/dnainjector/stuttmut,
+/obj/item/dnainjector/set_trait/anxiety,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -68527,7 +68527,7 @@
 	},
 /area/survivalpod)
 "ueC" = (
-/obj/item/dnainjector/antinobreath,
+/obj/item/dnainjector/set_trait/nobreathe/disable,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -69577,7 +69577,7 @@
 	},
 /area/survivalpod)
 "uvF" = (
-/obj/item/dnainjector/firemut,
+/obj/item/dnainjector/set_trait/heatadapt,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -70686,7 +70686,7 @@
 	},
 /area/survivalpod)
 "uLL" = (
-/obj/item/dnainjector/remoteview,
+/obj/item/dnainjector/set_trait/remoteview,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -70722,7 +70722,7 @@
 	},
 /area/survivalpod)
 "uMw" = (
-/obj/item/dnainjector/epimut,
+/obj/item/dnainjector/set_trait/epilepsy,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -71106,7 +71106,7 @@
 	},
 /area/survivalpod)
 "uSj" = (
-/obj/item/dnainjector/antixray,
+/obj/item/dnainjector/set_trait/xray/disable,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -73588,7 +73588,7 @@
 	},
 /area/survivalpod)
 "vDD" = (
-/obj/item/disk/data,
+/obj/item/disk/body_record,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -74066,7 +74066,7 @@
 	},
 /area/survivalpod)
 "vKJ" = (
-/obj/item/dnainjector/antihulk,
+/obj/item/dnainjector/set_trait/hulk/disable,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -75611,7 +75611,7 @@
 	},
 /area/survivalpod)
 "wgu" = (
-/obj/item/dnainjector/antiblind,
+/obj/item/dnainjector/set_trait/blind/disable,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -76305,7 +76305,7 @@
 	},
 /area/survivalpod)
 "wqM" = (
-/obj/item/disk/data/demo,
+/obj/item/disk/body_record,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -77105,7 +77105,7 @@
 	},
 /area/survivalpod)
 "wCK" = (
-/obj/item/dnainjector/hulkmut,
+/obj/item/dnainjector/set_trait/hulk,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -79888,7 +79888,7 @@
 	},
 /area/survivalpod)
 "xsA" = (
-/obj/item/dnainjector/midgit,
+/obj/item/dnainjector/set_trait/table_passer,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -80656,7 +80656,7 @@
 	},
 /area/survivalpod)
 "xDX" = (
-/obj/item/dnainjector/antimidgit,
+/obj/item/dnainjector/set_trait/table_passer/disable,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -81192,7 +81192,7 @@
 	},
 /area/survivalpod)
 "xKQ" = (
-/obj/item/dnainjector/antiremoteview,
+/obj/item/dnainjector/set_trait/remotetalk/disable,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},

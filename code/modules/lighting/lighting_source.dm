@@ -145,7 +145,6 @@
 		(. * _lum_b) - (OLD * _applied_lum_b)      \
 	);                                           \
 
-//CHOMPEdit Begin
 #define APPLY_CORNER_NEW(C)                      \
 	. = LUM_FALLOFF(C);         			     \
 	. *= _light_power;                            \
@@ -160,7 +159,7 @@
 		(. * _lum_g) - (OLD * _applied_lum_g),     \
 		(. * _lum_b) - (OLD * _applied_lum_b)      \
 	);                                           \
-//CHOMPEdit End
+
 #define REMOVE_CORNER(C)                         \
 	. = -effect_str[C];                          \
 	C.update_lumcount                            \
@@ -174,8 +173,8 @@
 	SETUP_CORNERS_REMOVAL_CACHE(src)
 	applied = FALSE
 	for (var/datum/lighting_corner/corner as anything in effect_str)
-		LAZYREMOVE(corner.affecting, src) //CHOMPEdit
-		REMOVE_CORNER(corner) //CHOMPEdit
+		LAZYREMOVE(corner.affecting, src)
+		REMOVE_CORNER(corner)
 
 	effect_str = null
 
@@ -191,24 +190,6 @@
 
 /datum/light_source/proc/get_turfs_in_range()
 	return view(CEILING(light_range, 1), source_turf)
-
-// Keep in mind. Lighting corners accept the bottom left (northwest) set of cords to them as input
-/* CHOMPRemove Start, we use our own in _defines
-# define GENERATE_MISSING_CORNERS(gen_for) \
-	if (!gen_for.lighting_corner_NE) { \
-		gen_for.lighting_corner_NE = new /datum/lighting_corner(gen_for.x, gen_for.y, gen_for.z); \
-	} \
-	if (!gen_for.lighting_corner_SE) { \
-		gen_for.lighting_corner_SE = new /datum/lighting_corner(gen_for.x, gen_for.y - 1, gen_for.z); \
-	} \
-	if (!gen_for.lighting_corner_SW) { \
-		gen_for.lighting_corner_SW = new /datum/lighting_corner(gen_for.x - 1, gen_for.y - 1, gen_for.z); \
-	} \
-	if (!gen_for.lighting_corner_NW) { \
-		gen_for.lighting_corner_NW = new /datum/lighting_corner(gen_for.x - 1, gen_for.y, gen_for.z); \
-	} \
-	gen_for.lighting_corners_initialised = TRUE;
-*/// CHOMPRemove End
 
 /datum/light_source/proc/update_corners()
 	var/update = FALSE
@@ -294,18 +275,13 @@
 	LAZYINITLIST(src.effect_str)
 	var/list/effect_str = src.effect_str
 	if (needs_update == LIGHTING_VIS_UPDATE)
-		for (var/datum/lighting_corner/corner in new_corners) //CHOMPEdit
-			//CHOMPEdit Begin
+		for (var/datum/lighting_corner/corner in new_corners)
 			APPLY_CORNER_NEW(corner)
-			//CHOMPEdit End
 	else
-		for (var/datum/lighting_corner/corner in new_corners) //CHOMPEdit
-			//CHOMPEdit Begin
+		for (var/datum/lighting_corner/corner in new_corners)
 			APPLY_CORNER_NEW(corner)
-			//CHOMPEdit End
 
-		for (var/datum/lighting_corner/corner in corners - new_corners) // Existing corners //CHOMPEdit
-		//CHOMPEdit Begin
+		for (var/datum/lighting_corner/corner in corners - new_corners) // Existing corners
 			. = LUM_FALLOFF(corner);
 			. *= _light_power;
 			var/OLD = effect_str[corner];
@@ -321,12 +297,11 @@
 				(. * _lum_b) - (OLD * _applied_lum_b)	\
 			);
 #undef APPLY_CORNER_NEW
-		//CHOMPEdit End
 
 	var/list/datum/lighting_corner/gone_corners = effect_str - corners
 	for (var/datum/lighting_corner/corner as anything in gone_corners)
-		LAZYREMOVE(corner.affecting, src) //CHOMPEdit
-		REMOVE_CORNER(corner) //CHOMPEdit
+		LAZYREMOVE(corner.affecting, src)
+		REMOVE_CORNER(corner)
 	effect_str -= gone_corners
 
 	applied_lum_r = lum_r

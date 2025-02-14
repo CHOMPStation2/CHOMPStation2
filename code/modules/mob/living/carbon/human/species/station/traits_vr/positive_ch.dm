@@ -86,31 +86,6 @@
 					   )
 	excludes = list(/datum/trait/positive/lowpressureresminor,/datum/trait/positive/lowpressureresmajor,/datum/trait/positive/highpressureresminor,/datum/trait/positive/highpressureresmajor,/datum/trait/positive/pressureres)
 
-/datum/trait/positive/photosynth
-	name = "Photosynthesis"
-	desc = "Your body is able to produce nutrition from being in light."
-	cost = 3
-	var_changes = list("photosynthesizing" = TRUE)
-	can_take = ORGANICS|SYNTHETICS //Synths actually use nutrition, just with a fancy covering.
-
-/datum/trait/positive/rad_resistance
-	name = "Radiation Resistance"
-	desc = "You are generally more resistant to radiation, and it dissipates faster from your body."
-	cost = 1
-	var_changes = list("radiation_mod" = 0.65, "rad_removal_mod" = 3.5, "rad_levels" = list("safe" = 20, "danger_1" = 75, "danger_2" = 100, "danger_3" = 200))
-
-/datum/trait/positive/rad_resistance_extreme
-	name = "Radiation Resistance, Major"
-	desc = "You are much more resistant to radiation, and it dissipates much faster from your body."
-	cost = 2
-	var_changes = list("radiation_mod" = 0.5, "rad_removal_mod" = 5, "rad_levels" = list("safe" = 40, "danger_1" = 100, "danger_2" = 150, "danger_3" = 250))
-
-/datum/trait/positive/rad_immune
-	name = "Radiation Immunity"
-	desc = "For whatever reason, be it a more dense build or some quirk of your genetic code, your body is completely immune to radiation."
-	cost = 3
-	var_changes = list("radiation_mod" = 0.0, "rad_removal_mod" = 10, "rad_levels" = list("safe" = 300, "danger_1" = 300, "danger_2" = 300, "danger_3" = 300))
-
 /datum/trait/positive/more_blood
 	name = "Blood Volume, High"
 	desc = "You have 50% more blood."
@@ -137,18 +112,6 @@
 	..()
 	H.mob_size = MOB_LARGE
 	H.mob_bump_flag = HEAVY
-
-/datum/trait/positive/table_passer
-	name = "Table Passer"
-	desc = "You move over or under tables with ease of a Teshari."
-	cost = 2
-	has_preferences = list("pass_table" = list(TRAIT_PREF_TYPE_BOOLEAN, "On spawn", TRAIT_NO_VAREDIT_TARGET, TRUE))
-
-/datum/trait/positive/table_passer/apply(var/datum/species/S,var/mob/living/carbon/human/H, var/list/trait_prefs)
-	..()
-	if (trait_prefs?["pass_table"] || !trait_prefs)
-		H.pass_flags |= PASSTABLE
-	add_verb(H,/mob/living/proc/toggle_pass_table) //CHOMPEdit TGPanel
 
 /datum/trait/positive/grappling_expert
 	name = "Grappling Expert"

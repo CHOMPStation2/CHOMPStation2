@@ -36,8 +36,8 @@ var/datum/planet/sif/planet_sif = null
 
 	switch(sun_position)
 		if(0 to 0.40) // Night
-			low_brightness = 0.15 //CHOMPedit
-			low_color = "#19195c" //CHOMPedit
+			low_brightness = 0.15
+			low_color = "#19195c"
 
 			high_brightness = 0.3
 			high_color = "#66004D"

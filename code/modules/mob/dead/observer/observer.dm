@@ -458,7 +458,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 	ManualFollow(M || jumpable_mobs()[mobname])
 
-/mob/observer/dead/forceMove(atom/destination, direction, movetime, just_spawned = FALSE) //ChompEDIT - pass movetime through
+/mob/observer/dead/forceMove(atom/destination, direction, movetime, just_spawned = FALSE) // pass movetime through
 	if(client?.holder)
 		return ..()
 
@@ -578,7 +578,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 			following_mobs -= M
 		else
 			if(M.loc != .)
-				M.forceMove(., movetime = MOVE_GLIDE_CALC(glide_size, moving_diagonally)) //ChompEDIT - pass movespeed
+				M.forceMove(., movetime = MOVE_GLIDE_CALC(glide_size, moving_diagonally)) // pass movespeed
 
 /mob
 	var/list/following_mobs = list()
@@ -590,6 +590,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	return ..()
 
 /mob/observer/dead/Destroy()
+	visualnet.addVisibility(src, src.client)
 	visualnet = null
 	if(ismob(following))
 		var/mob/M = following

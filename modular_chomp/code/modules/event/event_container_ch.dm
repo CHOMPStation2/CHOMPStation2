@@ -113,7 +113,6 @@
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Atmos Leak",					/datum/event/atmos_leak, 				5,		list(DEPARTMENT_ENGINEERING = 35), 1),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Blob",						/datum/event/blob, 						-100,	list(DEPARTMENT_SECURITY = 40, JOB_HEAD_OF_SECURITY = 10, JOB_WARDEN = 10, DEPARTMENT_ENGINEERING = 5), 1, min_jobs = list(DEPARTMENT_SECURITY = 1)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Carp Migration",				/datum/event/carp_migration,			-110,	list(DEPARTMENT_SECURITY = 50, JOB_HEAD_OF_SECURITY = 10, JOB_WARDEN = 10), 1, min_jobs = list(DEPARTMENT_SECURITY = 3)),
-		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Disease Outbreak",			/datum/event/disease_outbreak,			-30,	list(DEPARTMENT_MEDICAL = 30, DEPARTMENT_ANY = 1), 	1, min_jobs = list(DEPARTMENT_MEDICAL = 2)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Electrical Fire",				/datum/event/electrical_fire,	 		5,		list(DEPARTMENT_ENGINEERING = 5, JOB_CYBORG = 5), 0),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Exotic Horde Infestation",	/datum/event/highdangerinfestation, 	-50,	list(DEPARTMENT_ENGINEERING = 20, DEPARTMENT_RESEARCH = 5, DEPARTMENT_ANY = 2), 1),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Horde Infestation",			/datum/event/horde_infestation, 		-60,	list(DEPARTMENT_SECURITY = 20, JOB_HEAD_OF_SECURITY = 10, JOB_WARDEN = 10, DEPARTMENT_ANY = 3), 0),
@@ -127,6 +126,7 @@
 	)
 	add_disabled_events(list(
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Containment Breach",			/datum/event/prison_break/station,		0,		list(DEPARTMENT_ANY = 5),0),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Disease Outbreak",			/datum/event/disease_outbreak,			-30,	list(DEPARTMENT_MEDICAL = 30, DEPARTMENT_ANY = 1), 	1, min_jobs = list(DEPARTMENT_MEDICAL = 2)),
 		//Spiders moved into horde infestation
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Spider Infestation",			/datum/event/spider_infestation, 		-60,	list(DEPARTMENT_SECURITY = 20, JOB_HEAD_OF_SECURITY = 10, JOB_WARDEN = 10, DEPARTMENT_ANY = 3), 0),
 		//Metroids moved into horde infestation

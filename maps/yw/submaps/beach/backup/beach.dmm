@@ -85,7 +85,7 @@
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/tether_away/beach/jungle)
 "ax" = (
-/obj/item/dnainjector/regenerate,
+/obj/item/dnainjector/set_trait/regenerate,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/tether_away/beach/jungle)
 "ay" = (
