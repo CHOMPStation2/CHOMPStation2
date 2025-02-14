@@ -302,7 +302,7 @@
 		forceMove(pick(floors))
 		flick("tp_in",src)
 		respite_activating = FALSE
-		belly.owner.update_fullness()
+		belly.owner.handle_belly_update() // CHOMPEdit
 		clear_fullscreen("belly")
 		if(hud_used)
 			if(!hud_used.hud_shown)

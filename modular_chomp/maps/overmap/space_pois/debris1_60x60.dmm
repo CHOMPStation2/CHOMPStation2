@@ -72,6 +72,12 @@
 /mob/living/simple_mob/animal/space/carp,
 /turf/template_noop,
 /area/submap/debris1)
+"fp" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/template_noop,
+/area/submap/debris1)
 "fu" = (
 /obj/item/stack/arcadeticket/thirty,
 /turf/template_noop,
@@ -207,9 +213,9 @@
 /area/submap/debris1)
 "nt" = (
 /obj/structure/safe,
-/obj/item/dnainjector/xraymut,
-/obj/item/dnainjector/runfast,
-/obj/item/dnainjector/antistutt,
+/obj/item/dnainjector/set_trait/xray,
+/obj/item/dnainjector/set_trait/haste,
+/obj/item/dnainjector/set_trait/anxiety/disable,
 /turf/simulated/floor/tiled/airless,
 /area/submap/debris1)
 "oh" = (
@@ -276,12 +282,6 @@
 "qH" = (
 /obj/random/humanoidremains,
 /turf/simulated/floor/plating,
-/area/submap/debris1)
-"rd" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/template_noop,
 /area/submap/debris1)
 "rt" = (
 /obj/structure/disposalpipe/broken{
@@ -621,12 +621,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
 /area/submap/debris1)
-"Ob" = (
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
-/turf/template_noop,
-/area/submap/debris1)
 "Od" = (
 /obj/random/humanoidremains,
 /turf/simulated/floor/tiled/airless,
@@ -703,6 +697,12 @@
 "TI" = (
 /obj/structure/loot_pile/surface/bones,
 /turf/simulated/floor/tiled/airless,
+/area/submap/debris1)
+"TO" = (
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/turf/template_noop,
 /area/submap/debris1)
 "Uz" = (
 /obj/item/stack/material/wood,
@@ -2567,7 +2567,7 @@ ip
 wq
 jG
 ip
-rd
+fp
 jq
 wq
 wq
@@ -2629,7 +2629,7 @@ ip
 ip
 jG
 ip
-Ob
+TO
 Fu
 wq
 wq

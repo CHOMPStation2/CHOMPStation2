@@ -3819,6 +3819,12 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
+"bfZ" = (
+/obj/item/clothing/accessory/ring/fluff/basir,
+/turf/simulated/fitness{
+	icon_state = "vault"
+	},
+/area/survivalpod)
 "bga" = (
 /mob/living/simple_mob/vore/oregrub/lava{
 	ai_holder_type = null
@@ -4084,7 +4090,7 @@
 	},
 /area/survivalpod)
 "bkv" = (
-/obj/item/dnainjector/antistutt,
+/obj/item/dnainjector/set_trait/anxiety/disable,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -5848,12 +5854,6 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
-"bLS" = (
-/obj/item/clothing/accessory/ring/fluff/basir,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
 "bLX" = (
 /obj/item/clothing/under/gov,
 /turf/simulated/fitness{
@@ -6171,7 +6171,7 @@
 	},
 /area/survivalpod)
 "bQK" = (
-/obj/item/dnainjector/hallucination,
+/obj/item/dnainjector/set_trait/flashproof,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -7122,12 +7122,6 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
-"ceV" = (
-/mob/living/simple_mob/vore/alienanimals/space_ghost{
-	ai_holder_type = null
-	},
-/turf/simulated/floor/atoll,
-/area/survivalpod)
 "cff" = (
 /obj/item/ammo_magazine/ammo_box/b545/large/hunter,
 /turf/simulated/fitness{
@@ -7224,14 +7218,8 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
-"cgp" = (
-/obj/item/clothing/accessory/ring/mariner,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
 "cgu" = (
-/obj/item/dnainjector/noprints,
+/obj/item/dnainjector/set_trait/noprints,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -7603,7 +7591,7 @@
 	},
 /area/survivalpod)
 "clx" = (
-/obj/item/dnainjector/tourmut,
+/obj/item/dnainjector/set_trait/tourettes,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -7862,12 +7850,6 @@
 /area/survivalpod)
 "cpw" = (
 /obj/item/mecha_parts/part/scarab_right_legs,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
-"cpx" = (
-/obj/item/clothing/accessory/ring/material/phoron,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -8526,12 +8508,6 @@
 /area/survivalpod)
 "czn" = (
 /obj/item/seeds/blackwabback,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
-"czv" = (
-/obj/item/clothing/accessory/ring/seal,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -9640,12 +9616,6 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
-"cPQ" = (
-/obj/item/clothing/accessory/ring/engagement,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
 "cPS" = (
 /obj/item/clothing/suit/storage/vest/press,
 /turf/simulated/fitness{
@@ -10156,6 +10126,12 @@
 /area/survivalpod)
 "cXI" = (
 /obj/item/clothing/suit/space/void/responseteam/medical,
+/turf/simulated/fitness{
+	icon_state = "vault"
+	},
+/area/survivalpod)
+"cXK" = (
+/obj/item/clothing/accessory/ring/material/silver,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -11246,6 +11222,12 @@
 	},
 /turf/simulated/floor/atoll,
 /area/survivalpod)
+"dmX" = (
+/obj/item/clothing/accessory/ring/seal/mason,
+/turf/simulated/fitness{
+	icon_state = "vault"
+	},
+/area/survivalpod)
 "dna" = (
 /obj/item/clothing/head/tesh_hood/standard/white_grey,
 /turf/simulated/fitness{
@@ -11356,6 +11338,12 @@
 /area/survivalpod)
 "doN" = (
 /obj/item/stack/hose,
+/turf/simulated/fitness{
+	icon_state = "vault"
+	},
+/area/survivalpod)
+"doW" = (
+/obj/item/clothing/accessory/ring/material/gold,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -14017,7 +14005,7 @@
 	},
 /area/survivalpod)
 "eeW" = (
-/obj/item/dnainjector/anticough,
+/obj/item/dnainjector/set_trait/cough/disable,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -14087,7 +14075,7 @@
 	},
 /area/survivalpod)
 "egn" = (
-/obj/item/dnainjector/glassesmut,
+/obj/item/dnainjector/set_trait/nearsighted,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -17073,6 +17061,12 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
+"eZW" = (
+/obj/item/clothing/accessory/ring/wedding,
+/turf/simulated/fitness{
+	icon_state = "vault"
+	},
+/area/survivalpod)
 "fae" = (
 /obj/item/weldingtool/mini/two,
 /turf/simulated/fitness{
@@ -17734,7 +17728,7 @@
 	},
 /area/survivalpod)
 "fko" = (
-/obj/item/dnainjector/antifire,
+/obj/item/dnainjector/set_trait/heatadapt/disable,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -18264,7 +18258,7 @@
 	},
 /area/survivalpod)
 "ftt" = (
-/obj/item/dnainjector/antiepi,
+/obj/item/dnainjector/set_trait/epilepsy/disable,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -19431,6 +19425,12 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
+"fLV" = (
+/obj/item/radio/headset/alt/explorer,
+/turf/simulated/fitness{
+	icon_state = "vault"
+	},
+/area/survivalpod)
 "fMe" = (
 /obj/item/reagent_containers/food/condiment/sugar,
 /turf/simulated/fitness{
@@ -19736,7 +19736,7 @@
 	},
 /area/survivalpod)
 "fPz" = (
-/obj/item/dnainjector/antimorph,
+/obj/item/dnainjector/set_trait/morph/disable,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -20081,12 +20081,6 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
-"fUx" = (
-/obj/item/clothing/accessory/ring/material/plastic,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
 "fUy" = (
 /obj/item/prop/alien/phasecoil,
 /turf/simulated/fitness{
@@ -20198,7 +20192,7 @@
 	},
 /area/survivalpod)
 "fVT" = (
-/obj/item/dnainjector/antiregenerate,
+/obj/item/dnainjector/set_trait/regenerate/disable,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -21838,7 +21832,7 @@
 	},
 /area/survivalpod)
 "gvF" = (
-/obj/item/dnainjector/clumsymut,
+/obj/item/dnainjector/set_trait/clumsy,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -23081,12 +23075,6 @@
 	},
 /turf/simulated/floor/atoll,
 /area/survivalpod)
-"gNI" = (
-/obj/item/clothing/accessory/ring/material/gold,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
 "gNJ" = (
 /obj/item/clothing/accessory/bracelet/material/steel,
 /turf/simulated/fitness{
@@ -23295,12 +23283,6 @@
 /area/survivalpod)
 "gQn" = (
 /obj/item/reagent_containers/food/snacks/ovenfries,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
-"gQp" = (
-/obj/item/clothing/accessory/ring/material/osmium,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -24320,6 +24302,12 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
+"hfZ" = (
+/obj/item/clothing/accessory/ring/engagement,
+/turf/simulated/fitness{
+	icon_state = "vault"
+	},
+/area/survivalpod)
 "hgr" = (
 /obj/item/seeds/deathnettleseed,
 /obj/machinery/portable_atmospherics/hydroponics{
@@ -24349,7 +24337,7 @@
 /turf/simulated/floor/atoll,
 /area/survivalpod)
 "hgB" = (
-/obj/item/dnainjector/m2h,
+/obj/item/dnainjector/set_trait/remotetalk,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -24404,6 +24392,12 @@
 /area/survivalpod)
 "hhM" = (
 /obj/item/clothing/suit/storage/hooded/knight_costume/robin,
+/turf/simulated/fitness{
+	icon_state = "vault"
+	},
+/area/survivalpod)
+"hhR" = (
+/obj/item/clothing/accessory/ring/seal/secgen,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -26056,12 +26050,6 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
-"hGn" = (
-/obj/item/clothing/accessory/ring/buzzer,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
 "hGx" = (
 /obj/item/seeds/bluetomatoseed,
 /turf/simulated/fitness{
@@ -26354,6 +26342,12 @@
 	},
 /turf/simulated/floor/atoll,
 /area/survivalpod)
+"hKj" = (
+/obj/item/clothing/accessory/ring/material,
+/turf/simulated/fitness{
+	icon_state = "vault"
+	},
+/area/survivalpod)
 "hKk" = (
 /obj/machinery/door/airlock/angled_bay/hatch/explo,
 /turf/simulated/fitness{
@@ -26594,12 +26588,6 @@
 	},
 /turf/simulated/floor/atoll,
 /area/survivalpod)
-"hND" = (
-/obj/item/clothing/accessory/ring/seal/secgen,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
 "hNE" = (
 /mob/living/simple_mob/animal/borer/non_antag,
 /turf/simulated/floor/atoll,
@@ -26760,12 +26748,6 @@
 /area/survivalpod)
 "hQk" = (
 /obj/item/pickaxe/advdrill,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
-"hQr" = (
-/obj/item/clothing/accessory/ring/material/diamond,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -27153,7 +27135,7 @@
 	},
 /area/survivalpod)
 "hWt" = (
-/obj/item/dnainjector/antitour,
+/obj/item/dnainjector/set_trait/tourettes/disable,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -27890,12 +27872,6 @@
 /area/survivalpod)
 "igW" = (
 /obj/item/computer_hardware/battery_module/ultra,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
-"igY" = (
-/obj/item/clothing/accessory/ring/seal/signet/fluff/phi,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -29074,7 +29050,7 @@
 	},
 /area/survivalpod)
 "iyg" = (
-/obj/item/dnainjector/antiglasses,
+/obj/item/dnainjector/set_trait/nearsighted/disable,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -29450,7 +29426,7 @@
 	},
 /area/survivalpod)
 "iDS" = (
-/obj/item/dnainjector/antinoprints,
+/obj/item/dnainjector/set_trait/noprints/disable,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -30745,6 +30721,12 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
+"iYT" = (
+/obj/item/clothing/accessory/ring/reagent/sleepy,
+/turf/simulated/fitness{
+	icon_state = "vault"
+	},
+/area/survivalpod)
 "iYU" = (
 /obj/item/clothing/under/solgov/utility/fleet/exploration,
 /turf/simulated/fitness{
@@ -30957,12 +30939,6 @@
 /area/survivalpod)
 "jbA" = (
 /obj/item/toy/plushie/carp/electric,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
-"jbC" = (
-/obj/item/clothing/accessory/ring/material/iron,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -31925,6 +31901,12 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
+"jqj" = (
+/obj/item/clothing/accessory/ring/material/uranium,
+/turf/simulated/fitness{
+	icon_state = "vault"
+	},
+/area/survivalpod)
 "jqo" = (
 /obj/item/tank/jetpack/void,
 /turf/simulated/fitness{
@@ -32657,12 +32639,6 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
-"jBK" = (
-/obj/item/clothing/accessory/ring/material/copper,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
 "jBQ" = (
 /obj/structure/cult/pylon,
 /turf/simulated/fitness{
@@ -32774,7 +32750,7 @@
 	},
 /area/survivalpod)
 "jDH" = (
-/obj/item/dnainjector/insulation,
+/obj/item/dnainjector/set_trait/coldadapt,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -33353,7 +33329,7 @@
 	},
 /area/survivalpod)
 "jKU" = (
-/obj/item/dnainjector/xraymut,
+/obj/item/dnainjector/set_trait/xray,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -35893,12 +35869,6 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
-"kxO" = (
-/obj/item/clothing/accessory/ring/wedding/silver,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
 "kxT" = (
 /obj/machinery/cryopod/robot/door/dorms,
 /turf/simulated/fitness{
@@ -36272,7 +36242,7 @@
 	},
 /area/survivalpod)
 "kDt" = (
-/obj/item/dnainjector,
+/obj/item/dnainjector/random,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -36320,7 +36290,7 @@
 	},
 /area/survivalpod)
 "kDX" = (
-/obj/item/dnainjector/coughmut,
+/obj/item/dnainjector/set_trait/cough,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -37243,6 +37213,12 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
+"kQl" = (
+/obj/item/clothing/accessory/ring/seal,
+/turf/simulated/fitness{
+	icon_state = "vault"
+	},
+/area/survivalpod)
 "kQw" = (
 /obj/item/gun/energy/sniperrifle,
 /turf/simulated/fitness{
@@ -37513,12 +37489,6 @@
 /area/survivalpod)
 "kUf" = (
 /obj/item/clothing/under/undersuit/hazard,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
-"kUl" = (
-/obj/item/clothing/accessory/knuckledusters,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -39859,7 +39829,7 @@
 	},
 /area/survivalpod)
 "lGo" = (
-/obj/item/dnainjector/deafmut,
+/obj/item/dnainjector/set_trait/deaf,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -40246,12 +40216,6 @@
 /area/survivalpod)
 "lMi" = (
 /obj/structure/sign/redcross,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
-"lMp" = (
-/obj/item/clothing/accessory/ring/wedding,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -42065,6 +42029,12 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
+"mnZ" = (
+/obj/item/clothing/accessory/ring/material/plastic,
+/turf/simulated/fitness{
+	icon_state = "vault"
+	},
+/area/survivalpod)
 "moa" = (
 /obj/item/clothing/head/helmet/space/syndicate/blue,
 /turf/simulated/fitness{
@@ -43114,12 +43084,6 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
-"mDG" = (
-/obj/item/clothing/accessory/ring/seal/mason,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
 "mDK" = (
 /obj/item/clothing/suit/armor/combat/crusader_costume/bedevere,
 /turf/simulated/fitness{
@@ -43289,7 +43253,7 @@
 	},
 /area/survivalpod)
 "mGj" = (
-/obj/item/dnainjector/morph,
+/obj/item/dnainjector/set_trait/morph,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -43861,7 +43825,7 @@
 	},
 /area/survivalpod)
 "mPi" = (
-/obj/item/dnainjector/telemut,
+/obj/item/dnainjector/set_trait/tk,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -43939,7 +43903,7 @@
 	},
 /area/survivalpod)
 "mQw" = (
-/obj/item/dnainjector/antirunfast,
+/obj/item/dnainjector/set_trait/haste/disable,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -44292,6 +44256,12 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
+"mVK" = (
+/obj/item/clothing/accessory/ring/material/copper,
+/turf/simulated/fitness{
+	icon_state = "vault"
+	},
+/area/survivalpod)
 "mVM" = (
 /obj/structure/bed/chair/bay,
 /turf/simulated/fitness{
@@ -44450,6 +44420,12 @@
 /area/survivalpod)
 "mXB" = (
 /obj/item/clothing/accessory/poncho/thermal/security,
+/turf/simulated/fitness{
+	icon_state = "vault"
+	},
+/area/survivalpod)
+"mXF" = (
+/obj/item/clothing/accessory/ring/material/bronze,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -44724,12 +44700,6 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
-"nbs" = (
-/obj/item/clothing/accessory/ring/material/wood,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
 "nbv" = (
 /obj/item/storage/bag/fossils,
 /turf/simulated/fitness{
@@ -44824,12 +44794,6 @@
 /area/survivalpod)
 "ncw" = (
 /obj/item/paper/jobs,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
-"ncE" = (
-/obj/item/clothing/accessory/ring/seal/signet,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -45992,7 +45956,7 @@
 	},
 /area/survivalpod)
 "ntI" = (
-/obj/item/dnainjector/antiinsulation,
+/obj/item/dnainjector/set_trait/coldadapt/disable,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -46052,7 +46016,7 @@
 	},
 /area/survivalpod)
 "nuY" = (
-/obj/item/dnainjector/antihallucination,
+/obj/item/dnainjector/set_trait/flashproof/disable,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -47405,7 +47369,7 @@
 	},
 /area/survivalpod)
 "nMU" = (
-/obj/item/dnainjector/antitele,
+/obj/item/dnainjector/set_trait/tk/disable,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -47478,12 +47442,6 @@
 /area/survivalpod)
 "nOb" = (
 /obj/structure/closet/walllocker_double,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
-"nOc" = (
-/obj/item/clothing/accessory/ring/cti,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -47983,7 +47941,7 @@
 	},
 /area/survivalpod)
 "nVr" = (
-/obj/item/dnainjector/blindmut,
+/obj/item/dnainjector/set_trait/blind,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -50207,12 +50165,6 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
-"oCS" = (
-/obj/item/clothing/accessory/ring/material/silver,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
 "oDm" = (
 /obj/item/storage/backpack/messenger/explorer,
 /turf/simulated/fitness{
@@ -50514,7 +50466,7 @@
 	},
 /area/survivalpod)
 "oHT" = (
-/obj/item/dnainjector/nobreath,
+/obj/item/dnainjector/set_trait/nobreathe,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -50581,12 +50533,6 @@
 /area/survivalpod)
 "oJn" = (
 /obj/item/implantcase/loyalty,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
-"oJs" = (
-/obj/item/clothing/accessory/ring/material/titanium,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -51479,6 +51425,12 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
+"oXA" = (
+/obj/item/clothing/accessory/ring/material/lead,
+/turf/simulated/fitness{
+	icon_state = "vault"
+	},
+/area/survivalpod)
 "oXL" = (
 /obj/item/ammo_magazine/ar10,
 /turf/simulated/fitness{
@@ -51872,6 +51824,12 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
+"pdx" = (
+/obj/item/clothing/accessory/ring/seal/signet/fluff/phi,
+/turf/simulated/fitness{
+	icon_state = "vault"
+	},
+/area/survivalpod)
 "pdF" = (
 /obj/item/frame/light,
 /turf/simulated/fitness{
@@ -51994,6 +51952,12 @@
 /area/survivalpod)
 "pfL" = (
 /obj/item/reagent_containers/food/snacks/ratfruitcake,
+/turf/simulated/fitness{
+	icon_state = "vault"
+	},
+/area/survivalpod)
+"pfP" = (
+/obj/item/clothing/accessory/ring/cti,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -53090,6 +53054,12 @@
 /mob/living/simple_mob/animal/passive/bird/parrot/black_headed_caique,
 /turf/simulated/floor/atoll,
 /area/survivalpod)
+"pwN" = (
+/obj/item/clothing/accessory/ring/buzzer,
+/turf/simulated/fitness{
+	icon_state = "vault"
+	},
+/area/survivalpod)
 "pwS" = (
 /obj/item/card/id/event/accessset/itg/white,
 /turf/simulated/fitness{
@@ -53763,7 +53733,7 @@
 	},
 /area/survivalpod)
 "pIH" = (
-/obj/item/dnainjector/regenerate,
+/obj/item/dnainjector/set_trait/regenerate,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -55152,14 +55122,14 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
-"qdY" = (
-/obj/item/storage/vore_egg/human,
+"qdZ" = (
+/obj/item/clothing/under/rank/nullsuit/sci,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
 /area/survivalpod)
-"qdZ" = (
-/obj/item/clothing/under/rank/nullsuit/sci,
+"qef" = (
+/obj/item/reagent_containers/glass/beaker/stopperedbottle,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -55926,12 +55896,6 @@
 /area/survivalpod)
 "qqB" = (
 /obj/mecha/combat/phazon/old,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
-"qqE" = (
-/obj/item/clothing/accessory/ring/material/steel,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -57661,12 +57625,6 @@
 /area/survivalpod)
 "qSC" = (
 /obj/item/shield_diffuser,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
-"qSE" = (
-/obj/item/disk/data/monkey,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -60005,6 +59963,12 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
+"rCV" = (
+/obj/item/clothing/accessory/ring/material/osmium,
+/turf/simulated/fitness{
+	icon_state = "vault"
+	},
+/area/survivalpod)
 "rCX" = (
 /obj/item/handcuffs/cable/plantfiber,
 /turf/simulated/fitness{
@@ -60412,7 +60376,7 @@
 	},
 /area/survivalpod)
 "rJl" = (
-/obj/item/dnainjector/anticlumsy,
+/obj/item/dnainjector/set_trait/clumsy/disable,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -61253,12 +61217,6 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
-"rWh" = (
-/obj/item/clothing/accessory/ring/material/uranium,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
 "rWi" = (
 /obj/item/clothing/under/color/ranger,
 /turf/simulated/fitness{
@@ -61412,7 +61370,7 @@
 	},
 /area/survivalpod)
 "rYL" = (
-/obj/item/dnainjector/h2m,
+/obj/item/dnainjector/set_trait/remotetalk/disable,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -63421,6 +63379,12 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
+"sDH" = (
+/obj/item/clothing/accessory/ring,
+/turf/simulated/fitness{
+	icon_state = "vault"
+	},
+/area/survivalpod)
 "sDV" = (
 /obj/item/clothing/accessory/solgov/rank/marine/officer/o2,
 /turf/simulated/fitness{
@@ -63552,6 +63516,12 @@
 	ai_holder_type = null
 	},
 /turf/simulated/floor/atoll,
+/area/survivalpod)
+"sGg" = (
+/obj/item/storage/vore_egg/human,
+/turf/simulated/fitness{
+	icon_state = "vault"
+	},
 /area/survivalpod)
 "sGl" = (
 /obj/item/clothing/head/fluff/headbando/craftable,
@@ -63921,12 +63891,6 @@
 	},
 /turf/simulated/floor/atoll,
 /area/survivalpod)
-"sLW" = (
-/obj/item/clothing/accessory/ring/material/tin,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
 "sMa" = (
 /obj/item/sniper_rifle_part,
 /turf/simulated/fitness{
@@ -64049,12 +64013,6 @@
 /area/survivalpod)
 "sNM" = (
 /obj/item/reagent_containers/food/snacks/burger/bacon,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
-"sNN" = (
-/obj/item/clothing/accessory/ring/material/lead,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -64471,6 +64429,12 @@
 	},
 /turf/simulated/floor/atoll,
 /area/survivalpod)
+"sUz" = (
+/obj/item/clothing/accessory/ring/material/diamond,
+/turf/simulated/fitness{
+	icon_state = "vault"
+	},
+/area/survivalpod)
 "sUP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/purple,
 /turf/simulated/fitness{
@@ -64484,7 +64448,7 @@
 	},
 /area/survivalpod)
 "sVd" = (
-/obj/item/dnainjector/antideaf,
+/obj/item/dnainjector/set_trait/deaf/disable,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -65429,12 +65393,6 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
-"thZ" = (
-/obj/item/clothing/accessory/ring,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
 "tin" = (
 /mob/living/silicon/robot/syndicate/combat_medic,
 /turf/simulated/floor/atoll,
@@ -65482,7 +65440,7 @@
 	},
 /area/survivalpod)
 "tiU" = (
-/obj/item/dnainjector/runfast,
+/obj/item/dnainjector/set_trait/haste,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -65543,6 +65501,12 @@
 /area/survivalpod)
 "tjZ" = (
 /obj/item/slime_extract/pink,
+/turf/simulated/fitness{
+	icon_state = "vault"
+	},
+/area/survivalpod)
+"tke" = (
+/obj/item/clothing/accessory/ring/material/wood,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -66196,7 +66160,7 @@
 	},
 /area/survivalpod)
 "ttB" = (
-/obj/item/dnainjector/stuttmut,
+/obj/item/dnainjector/set_trait/anxiety,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -67721,12 +67685,6 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
-"tRL" = (
-/obj/item/clothing/accessory/ring/material/bronze,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
 "tRY" = (
 /obj/item/clothing/under/nanotrasen/security,
 /turf/simulated/fitness{
@@ -67789,6 +67747,12 @@
 /area/survivalpod)
 "tTd" = (
 /obj/structure/loot_pile/mecha/gygax,
+/turf/simulated/fitness{
+	icon_state = "vault"
+	},
+/area/survivalpod)
+"tTk" = (
+/obj/item/clothing/accessory/ring/material/phoron,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -68547,7 +68511,7 @@
 	},
 /area/survivalpod)
 "ueC" = (
-/obj/item/dnainjector/antinobreath,
+/obj/item/dnainjector/set_trait/nobreathe/disable,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -69016,12 +68980,6 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
-"ulP" = (
-/obj/item/reagent_containers/glass/beaker/stopperedbottle,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
 "umn" = (
 /obj/item/clothing/accessory/pride/trans,
 /turf/simulated/fitness{
@@ -69136,6 +69094,12 @@
 /area/survivalpod)
 "unX" = (
 /obj/item/clothing/under/dress/flamenco,
+/turf/simulated/fitness{
+	icon_state = "vault"
+	},
+/area/survivalpod)
+"uog" = (
+/obj/item/clothing/accessory/ring/material/iron,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -69392,6 +69356,12 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
+"usN" = (
+/obj/item/clothing/accessory/ring/material/glass,
+/turf/simulated/fitness{
+	icon_state = "vault"
+	},
+/area/survivalpod)
 "usX" = (
 /obj/machinery/gear_painter,
 /turf/simulated/fitness{
@@ -69585,7 +69555,7 @@
 	},
 /area/survivalpod)
 "uvF" = (
-/obj/item/dnainjector/firemut,
+/obj/item/dnainjector/set_trait/heatadapt,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -70345,6 +70315,12 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
+"uHm" = (
+/obj/item/clothing/accessory/ring/seal/signet,
+/turf/simulated/fitness{
+	icon_state = "vault"
+	},
+/area/survivalpod)
 "uHA" = (
 /obj/item/clothing/suit/storage/hooded/teshari/standard/red_grey,
 /turf/simulated/fitness{
@@ -70353,12 +70329,6 @@
 /area/survivalpod)
 "uHB" = (
 /obj/structure/sign/flag/pirate/right,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
-"uHD" = (
-/obj/item/clothing/accessory/ring/material/glass,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -70688,7 +70658,7 @@
 	},
 /area/survivalpod)
 "uLL" = (
-/obj/item/dnainjector/remoteview,
+/obj/item/dnainjector/set_trait/remoteview,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -70724,7 +70694,7 @@
 	},
 /area/survivalpod)
 "uMw" = (
-/obj/item/dnainjector/epimut,
+/obj/item/dnainjector/set_trait/epilepsy,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -71101,8 +71071,14 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
+"uSd" = (
+/obj/item/clothing/accessory/ring/mariner,
+/turf/simulated/fitness{
+	icon_state = "vault"
+	},
+/area/survivalpod)
 "uSj" = (
-/obj/item/dnainjector/antixray,
+/obj/item/dnainjector/set_trait/xray/disable,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -71115,6 +71091,12 @@
 /area/survivalpod)
 "uSy" = (
 /obj/item/clothing/accessory/poncho/roles/cloak/cmo,
+/turf/simulated/fitness{
+	icon_state = "vault"
+	},
+/area/survivalpod)
+"uSE" = (
+/obj/item/clothing/accessory/knuckledusters,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -72320,12 +72302,6 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
-"vjQ" = (
-/obj/item/radio/headset/alt/explorer,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
 "vjR" = (
 /obj/item/clothing/under/solgov/utility/fleet/supply,
 /turf/simulated/fitness{
@@ -72334,6 +72310,12 @@
 /area/survivalpod)
 "vjU" = (
 /obj/item/integrated_circuit/trig/cotangent,
+/turf/simulated/fitness{
+	icon_state = "vault"
+	},
+/area/survivalpod)
+"vjZ" = (
+/obj/item/clothing/accessory/ring/material/steel,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -73577,12 +73559,6 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
-"vDD" = (
-/obj/item/disk/data,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
 "vDI" = (
 /obj/structure/ship_munition/disperser_charge/mining,
 /turf/simulated/fitness{
@@ -73711,12 +73687,6 @@
 /area/survivalpod)
 "vFz" = (
 /obj/machinery/atmospherics/pipe/manifold4w/visible/yellow,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
-"vFB" = (
-/obj/item/clothing/accessory/ring/reagent/sleepy,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -74062,7 +74032,7 @@
 	},
 /area/survivalpod)
 "vKJ" = (
-/obj/item/dnainjector/antihulk,
+/obj/item/dnainjector/set_trait/hulk/disable,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -74702,6 +74672,12 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
+"vTI" = (
+/obj/item/clothing/accessory/ring/material/tin,
+/turf/simulated/fitness{
+	icon_state = "vault"
+	},
+/area/survivalpod)
 "vTJ" = (
 /obj/item/clothing/head/cone,
 /turf/simulated/fitness{
@@ -75220,12 +75196,6 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
-"vZS" = (
-/obj/item/clothing/accessory/ring/material/platinum,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
 "wac" = (
 /obj/item/ammo_magazine/m16/rubber,
 /turf/simulated/fitness{
@@ -75601,7 +75571,7 @@
 	},
 /area/survivalpod)
 "wgu" = (
-/obj/item/dnainjector/antiblind,
+/obj/item/dnainjector/set_trait/blind/disable,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -75938,6 +75908,12 @@
 /area/survivalpod)
 "wlM" = (
 /obj/item/clothing/under/teshari/undercoat/standard/worksuit/whitepurple,
+/turf/simulated/fitness{
+	icon_state = "vault"
+	},
+/area/survivalpod)
+"wlP" = (
+/obj/item/clothing/accessory/ring/wedding/silver,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -76288,12 +76264,6 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
-"wqM" = (
-/obj/item/disk/data/demo,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
 "wqR" = (
 /obj/item/clothing/suit/storage/qm,
 /turf/simulated/fitness{
@@ -76564,12 +76534,6 @@
 /area/survivalpod)
 "wue" = (
 /obj/item/storage/box/syndie_kit/spy,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
-"wuh" = (
-/obj/item/clothing/accessory/ring/material,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -77089,7 +77053,7 @@
 	},
 /area/survivalpod)
 "wCK" = (
-/obj/item/dnainjector/hulkmut,
+/obj/item/dnainjector/set_trait/hulk,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -77776,6 +77740,12 @@
 	frozen = 1;
 	closed_system = 1
 	},
+/turf/simulated/fitness{
+	icon_state = "vault"
+	},
+/area/survivalpod)
+"wNz" = (
+/obj/item/clothing/accessory/ring/material/platinum,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -79866,7 +79836,7 @@
 	},
 /area/survivalpod)
 "xsA" = (
-/obj/item/dnainjector/midgit,
+/obj/item/dnainjector/set_trait/table_passer,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -80634,7 +80604,7 @@
 	},
 /area/survivalpod)
 "xDX" = (
-/obj/item/dnainjector/antimidgit,
+/obj/item/dnainjector/set_trait/table_passer/disable,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -81169,12 +81139,6 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
-"xKQ" = (
-/obj/item/dnainjector/antiremoteview,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
 "xKR" = (
 /obj/item/clothing/under/primitive,
 /turf/simulated/fitness{
@@ -81238,6 +81202,12 @@
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
+/area/survivalpod)
+"xLZ" = (
+/mob/living/simple_mob/vore/alienanimals/space_ghost{
+	ai_holder_type = null
+	},
+/turf/simulated/floor/atoll,
 /area/survivalpod)
 "xMe" = (
 /obj/item/clothing/accessory/scarf,
@@ -82196,6 +82166,12 @@
 /area/survivalpod)
 "yaf" = (
 /obj/machinery/artifact_scanpad,
+/turf/simulated/fitness{
+	icon_state = "vault"
+	},
+/area/survivalpod)
+"yan" = (
+/obj/item/clothing/accessory/ring/material/titanium,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -86123,7 +86099,7 @@ anS
 ebu
 ebu
 ebu
-ceV
+xLZ
 wbL
 ebu
 ebu
@@ -97029,7 +97005,7 @@ xaw
 xrr
 nnt
 nwi
-qdY
+sGg
 jYM
 eoj
 umR
@@ -100019,12 +99995,12 @@ kxE
 wQG
 lmy
 dWy
-nOc
-jBK
-sNN
-oCS
-nbs
-ncE
+pfP
+mVK
+oXA
+cXK
+tke
+uHm
 qJl
 wsh
 sLp
@@ -100220,13 +100196,13 @@ uOW
 wAf
 lJF
 kcE
-hGn
-cPQ
-hQr
-gQp
-qqE
-vFB
-lMp
+pwN
+hfZ
+sUz
+rCV
+vjZ
+iYT
+eZW
 ecy
 apG
 viO
@@ -100422,13 +100398,13 @@ ugI
 kNx
 kBG
 vur
-thZ
-cgp
-uHD
-cpx
-sLW
-czv
-kxO
+sDH
+uSd
+usN
+tTk
+vTI
+kQl
+wlP
 mnD
 gYy
 vOT
@@ -100621,15 +100597,15 @@ uoz
 axF
 aEW
 wJC
-kUl
+uSE
 hAN
 lVE
 mhQ
-wuh
-gNI
-fUx
-oJs
-mDG
+hKj
+doW
+mnZ
+yan
+dmX
 aak
 alg
 rYb
@@ -100827,11 +100803,11 @@ nCj
 kVz
 vyC
 thy
-tRL
-jbC
-vZS
-rWh
-hND
+mXF
+uog
+wNz
+jqj
+hhR
 hgJ
 fjF
 wvv
@@ -104161,7 +104137,7 @@ vOT
 vOT
 vOT
 mhQ
-hGn
+pwN
 vOT
 vOT
 afs
@@ -104565,7 +104541,7 @@ vOT
 vOT
 vOT
 kVm
-vFB
+iYT
 vOT
 vOT
 wPq
@@ -107389,7 +107365,7 @@ iKM
 ttP
 sMb
 hpQ
-igY
+pdx
 gJd
 iYE
 pKx
@@ -108196,7 +108172,7 @@ hOp
 eLb
 kit
 dXd
-bLS
+bfZ
 xyx
 aVL
 mKf
@@ -111172,9 +111148,9 @@ dyO
 fUB
 htY
 kDC
-vDD
-wqM
-qSE
+dar
+dar
+dar
 nvT
 kKr
 lmi
@@ -112318,7 +112294,7 @@ oxC
 mOF
 iYs
 xgC
-ulP
+qef
 atn
 uPM
 wqh
@@ -113053,7 +113029,7 @@ vuh
 wgu
 fko
 xDX
-xKQ
+rYL
 uSj
 uMw
 wCK
@@ -117200,7 +117176,7 @@ vOT
 vOT
 vOT
 xVd
-vjQ
+fLV
 xbB
 pzM
 hls
@@ -118221,7 +118197,7 @@ fsk
 hVg
 rjM
 eFn
-vjQ
+fLV
 vOT
 vOT
 vOT

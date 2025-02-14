@@ -19,4 +19,4 @@
 
 #define TECHNOMANCER_INSTABILITY_MIN_GLOW			10		// When above this number, the entity starts glowing, affecting others.
 
-#define RADIATION_SPEED_COEFFICIENT 0.1  //CHOMPAdd, global here
+#define RADIATION_SPEED_COEFFICIENT 0.1

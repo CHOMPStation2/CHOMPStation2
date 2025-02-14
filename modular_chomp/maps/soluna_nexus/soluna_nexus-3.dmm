@@ -34677,18 +34677,18 @@
 	pixel_y = 1;
 	pixel_x = 2
 	},
-/obj/item/dnainjector/hallucination{
+/obj/item/dnainjector/set_trait/flashproof{
 	pixel_y = 3
 	},
-/obj/item/dnainjector/anticlumsy{
+/obj/item/dnainjector/set_trait/clumsy/disable{
 	pixel_y = 5;
 	pixel_x = 1
 	},
-/obj/item/dnainjector/antiblind{
+/obj/item/dnainjector/set_trait/blind/disable{
 	pixel_y = 7;
 	pixel_x = 2
 	},
-/obj/item/dnainjector/tourmut{
+/obj/item/dnainjector/set_trait/tourettes{
 	pixel_y = 9;
 	pixel_x = 1
 	},
