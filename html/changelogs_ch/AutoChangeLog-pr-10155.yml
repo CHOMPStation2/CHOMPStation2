@@ -1,7 +1,0 @@
-author: "Will"
-delete-after: True
-changes:
-  - bugfix: "Injectors can now properly spawn on maps now."
-  - bugfix: "Some issues with blood were fixed"
-  - bugfix: "Fixes various issues with genetics"
-  - rscadd: "The resleever will now talk to you with a cute medical speech bubble when it makes a dna resequencer."
