@@ -1,0 +1,5 @@
+author: "Diana"
+delete-after: True
+changes:
+  - code_imp: "Radiation now works differently on the backend."
+  - bugfix: "Enabling and disabling the radiation immunity trait no longer breaks things."
