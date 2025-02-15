@@ -35634,7 +35634,7 @@
 	},
 /area/survivalpod)
 "kuH" = (
-/obj/item/reagent_containers/food/drinks/bottle/tequilla,
+/obj/item/reagent_containers/food/drinks/bottle/tequila,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
