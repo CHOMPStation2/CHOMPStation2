@@ -348,3 +348,7 @@
       addeed
   - code_imp: send_ooc_announcement proc added
   - code_imp: Gets rid of a spawn(0) in species generation
+2025-02-15:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: moves the dependencies to 516.1655
+  - code_imp: tgui 516
