@@ -384,10 +384,6 @@
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "kaiju_spikes_a_glow"
 
-<<<<<<< HEAD
-/* //exclusive wings // CHOMPRemove Start
-=======
-
 /datum/sprite_accessory/wing/cyberangel
 	name = "Cyber angel wing (colorable)"
 	desc = ""
@@ -622,8 +618,7 @@
 	color_blend_mode = ICON_MULTIPLY
 	wing_offset = 16
 
-//exclusive wings
->>>>>>> acbc348eaf (Up-ports wings (#17119))
+/* //exclusive wings // CHOMPRemove Start
 /datum/sprite_accessory/wing/kara
 	name = "Pterokara wings"
 	desc = ""
