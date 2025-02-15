@@ -213,7 +213,7 @@
 	name = REAGENT_THIRTEENLOKO
 	id = REAGENT_ID_THIRTEENLOKO
 	result = REAGENT_ID_THIRTEENLOKO
-	required_reagents = list(REAGENT_ID_BEER = 1, REAGENT_ID_TEQUILLA = 1, REAGENT_ID_COFFEE = 1)
+	required_reagents = list(REAGENT_ID_BEER = 1, REAGENT_ID_TEQUILA = 1, REAGENT_ID_COFFEE = 1)
 	result_amount = 3
 
 //Arachnid slammer reactions - Jack
