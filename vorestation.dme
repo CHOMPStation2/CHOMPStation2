@@ -5077,8 +5077,6 @@
 #include "modular_chomp\code\modules\mob\new_player\sprite_accessories_ear.dm"
 #include "modular_chomp\code\modules\mob\new_player\sprite_accessories_extra.dm"
 #include "modular_chomp\code\modules\mob\new_player\sprite_accessories_tail.dm"
-#include "modular_chomp\code\modules\mob\new_player\sprite_accessories_taur.dm"
-#include "modular_chomp\code\modules\mob\new_player\sprite_accessories_wing.dm"
 #include "modular_chomp\code\modules\organs\organ_icon.dm"
 #include "modular_chomp\code\modules\organs\internal\malignant\malignant.dm"
 #include "modular_chomp\code\modules\overmap\dynamic_sector.dm"
