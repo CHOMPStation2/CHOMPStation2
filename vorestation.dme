@@ -401,11 +401,7 @@
 #include "code\controllers\subsystems\media_tracks.dm"
 #include "code\controllers\subsystems\mobs.dm"
 #include "code\controllers\subsystems\nightshift.dm"
-<<<<<<< HEAD
 #include "code\controllers\subsystems\overlays_ch.dm"
-=======
-#include "code\controllers\subsystems\overlays.dm"
->>>>>>> 900d0144a7 (Up port orbit improvements (#17122))
 #include "code\controllers\subsystems\overmap_renamer_vr.dm"
 #include "code\controllers\subsystems\pathfinder_ch.dm"
 #include "code\controllers\subsystems\persist_vr.dm"
@@ -4779,7 +4775,6 @@
 #include "modular_chomp\code\datums\http.dm"
 #include "modular_chomp\code\datums\autolathe\engineering_ch.dm"
 #include "modular_chomp\code\datums\autolathe\general_ch.dm"
-#include "modular_chomp\code\datums\changelog\changelog.dm"
 #include "modular_chomp\code\datums\components\dry.dm"
 #include "modular_chomp\code\datums\components\hearer.dm"
 #include "modular_chomp\code\datums\components\orbiter.dm"
