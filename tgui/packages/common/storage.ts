@@ -45,34 +45,20 @@ class HubStorageBackend implements StorageBackend {
     this.impl = IMPL_HUB_STORAGE;
   }
 
-<<<<<<< HEAD:tgui/packages/common/storage.js
-  async get(key) {
-    const value = await window.hubStorage.getItem('chomp-' + key); // CHOMPEdit
-=======
   async get(key: string): Promise<any> {
-    const value = await window.hubStorage.getItem('virgo-' + key);
->>>>>>> 44f6c9eed4 (Revert "Revert "storage to typescript"" (#17151)):tgui/packages/common/storage.ts
+    const value = await window.hubStorage.getItem('chomp-' + key); // CHOMPEdit
     if (typeof value === 'string') {
       return JSON.parse(value);
     }
     return undefined;
   }
 
-<<<<<<< HEAD:tgui/packages/common/storage.js
-  set(key, value) {
+  async set(key: string, value: any): Promise<void> {
     window.hubStorage.setItem('chomp-' + key, JSON.stringify(value)); // CHOMPEdit
   }
 
-  remove(key) {
-    window.hubStorage.removeItem('chomp-' + key); // CHOMPEdit
-=======
-  async set(key: string, value: any): Promise<void> {
-    window.hubStorage.setItem('virgo-' + key, JSON.stringify(value));
-  }
-
   async remove(key: string): Promise<void> {
-    window.hubStorage.removeItem('virgo-' + key);
->>>>>>> 44f6c9eed4 (Revert "Revert "storage to typescript"" (#17151)):tgui/packages/common/storage.ts
+    window.hubStorage.removeItem('chomp-' + key); // CHOMPEdit
   }
 
   async clear(): Promise<void> {
