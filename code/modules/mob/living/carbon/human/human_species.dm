@@ -75,13 +75,8 @@
 	return ..(mapload, SPECIES_UNATHI)
 
 /mob/living/carbon/human/dummy/mannequin/autoequip/sergal
-<<<<<<< HEAD
 	icon = 'modular_chomp/icons/mob/human_races/r_sergal.dmi' //ChompEDIT - our icons
-/mob/living/carbon/human/dummy/mannequin/autoequip/sergal/Initialize(var/new_loc)
-=======
-	icon = 'icons/mob/human_races/r_sergal.dmi'
 /mob/living/carbon/human/dummy/mannequin/autoequip/sergal/Initialize(mapload)
->>>>>>> f9e7b44dae (cleans up INIT (#17130))
 	h_style = "Sergal Ears"
 	return ..(mapload, SPECIES_SERGAL)
 

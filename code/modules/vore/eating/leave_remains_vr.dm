@@ -126,11 +126,7 @@
 	drop_sound = 'sound/items/drop/device.ogg'   //not organic bones, so they get different sounds
 	pickup_sound = 'sound/items/pickup/device.ogg'
 
-<<<<<<< HEAD
-/obj/item/digestion_remains/Initialize(var/mapload, var/mob/living/pred, var/mob/living/prey) //CHOMPEdit
-=======
-/obj/item/digestion_remains/Initialize(mapload, var/mob/living/pred)
->>>>>>> f9e7b44dae (cleans up INIT (#17130))
+/obj/item/digestion_remains/Initialize(mapload, var/mob/living/pred, var/mob/living/prey) //CHOMPEdit
 	. = ..()
 	if(!mapload)
 		pred_ckey = pred?.ckey

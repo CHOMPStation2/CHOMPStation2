@@ -38,11 +38,7 @@
 	var/obj/effect/alien/weeds/node/linked_node = null
 	var/static/list/weedImageCache
 
-<<<<<<< HEAD
-/obj/effect/alien/weeds/Initialize(var/mapload, var/node) // CHOMPedit: No coloration.
-=======
 /obj/effect/alien/weeds/Initialize(mapload, var/node, var/newcolor)
->>>>>>> f9e7b44dae (cleans up INIT (#17130))
 	. = ..()
 	if(isspace(loc))
 		return INITIALIZE_HINT_QDEL
@@ -79,11 +75,7 @@
 	var/node_range = NODERANGE
 //	var/set_color = "#321D37" // CHOMPedit:  Removing coloration.
 
-<<<<<<< HEAD
-/obj/effect/alien/weeds/node/Initialize(var/mapload, var/node) // CHOMPedit: Removing coloration.
-=======
 /obj/effect/alien/weeds/node/Initialize(mapload, var/node, var/newcolor)
->>>>>>> f9e7b44dae (cleans up INIT (#17130))
 	. = ..()
 
 	for(var/obj/effect/alien/weeds/existing in loc)
