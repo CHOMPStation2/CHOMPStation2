@@ -24,8 +24,13 @@
 	clicksound = "switch"
 	interact_offline = TRUE
 
+<<<<<<< HEAD
 /obj/machinery/space_heater/Initialize() //ChompEDIT New --> Initialize
 	..()
+=======
+/obj/machinery/space_heater/Initialize(mapload)
+	. = ..()
+>>>>>>> 2ae6355aff (more new to Init (#17147))
 	if(cell_type)
 		cell = new cell_type(src)
 	update_icon()

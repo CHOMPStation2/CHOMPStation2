@@ -25,8 +25,8 @@
 	name = "Gopher Chassis"
 	icon_state = "gopher-chassis"
 
-/obj/item/mecha_parts/micro/chassis/gopher/New()
-	..()
+/obj/item/mecha_parts/micro/chassis/gopher/Initialize(mapload)
+	. = ..()
 	construct = new /datum/construction/mecha/gopher_chassis(src)
 
 /obj/item/mecha_parts/micro/part/gopher_torso
@@ -64,8 +64,8 @@
 	name = "Polecat Chassis"
 	icon_state = "polecat-chassis"
 
-/obj/item/mecha_parts/micro/chassis/polecat/New()
-	..()
+/obj/item/mecha_parts/micro/chassis/polecat/Initialize(mapload)
+	. = ..()
 	construct = new /datum/construction/mecha/polecat_chassis(src)
 
 /obj/item/mecha_parts/micro/part/polecat_torso
@@ -103,8 +103,8 @@
 	name = "Weasel Chassis"
 	icon_state = "weasel-chassis"
 
-/obj/item/mecha_parts/micro/chassis/weasel/New()
-	..()
+/obj/item/mecha_parts/micro/chassis/weasel/Initialize(mapload)
+	. = ..()
 	construct = new /datum/construction/mecha/weasel_chassis(src)
 
 /obj/item/mecha_parts/micro/part/weasel_torso
@@ -140,4 +140,8 @@
 /obj/item/mecha_parts/micro/part/weasel_tri_leg
 	name="Weasel Legs"
 	icon_state = "weasel-leg-all"
+<<<<<<< HEAD
 	origin_tech = list(TECH_DATA = 2, TECH_MATERIAL = 3, TECH_ENGINEERING = 3) */
+=======
+	origin_tech = list(TECH_DATA = 2, TECH_MATERIAL = 3, TECH_ENGINEERING = 3)
+>>>>>>> 2ae6355aff (more new to Init (#17147))

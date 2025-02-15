@@ -13,6 +13,7 @@
 	var/start_pressure = ONE_ATMOSPHERE
 	var/maximum_pressure = 90 * ONE_ATMOSPHERE
 
+<<<<<<< HEAD
 /obj/machinery/portable_atmospherics/New()
 	//..() CHOMP Removal, moved to bottom
 	//VOREStation Edit - Fix runtime
@@ -25,6 +26,13 @@
 
 /obj/machinery/portable_atmospherics/Initialize()
 	..()
+=======
+/obj/machinery/portable_atmospherics/Initialize(mapload)
+	..()
+	if(air_contents)
+		air_contents.volume = volume
+		air_contents.temperature = T20C
+>>>>>>> 2ae6355aff (more new to Init (#17147))
 	return INITIALIZE_HINT_LATELOAD
 
 /obj/machinery/portable_atmospherics/LateInitialize()

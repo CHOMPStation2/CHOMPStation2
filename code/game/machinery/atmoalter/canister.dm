@@ -389,34 +389,50 @@ update_flag
 	add_fingerprint(ui.user)
 	update_icon()
 
+<<<<<<< HEAD
 /obj/machinery/portable_atmospherics/canister/phoron/Initialize() //ChompEDIT New --> Initialize
 	..()
+=======
+/obj/machinery/portable_atmospherics/canister/phoron/Initialize(mapload)
+	. = ..()
+>>>>>>> 2ae6355aff (more new to Init (#17147))
 
-	src.air_contents.adjust_gas(GAS_PHORON, MolesForPressure())
-	src.update_icon()
-	return 1
+	air_contents.adjust_gas(GAS_PHORON, MolesForPressure())
+	update_icon()
 
+<<<<<<< HEAD
 /obj/machinery/portable_atmospherics/canister/oxygen/Initialize() //ChompEDIT New --> Initialize
 	..()
+=======
+/obj/machinery/portable_atmospherics/canister/oxygen/Initialize(mapload)
+	. = ..()
+>>>>>>> 2ae6355aff (more new to Init (#17147))
 
-	src.air_contents.adjust_gas(GAS_O2, MolesForPressure())
-	src.update_icon()
-	return 1
+	air_contents.adjust_gas(GAS_O2, MolesForPressure())
+	update_icon()
 
+<<<<<<< HEAD
 /obj/machinery/portable_atmospherics/canister/oxygen/prechilled/Initialize() //ChompEDIT New --> Initialize
 	..()
+=======
+/obj/machinery/portable_atmospherics/canister/oxygen/prechilled/Initialize(mapload)
+	. = ..()
+>>>>>>> 2ae6355aff (more new to Init (#17147))
 
-	src.air_contents.adjust_gas(GAS_O2, MolesForPressure())
-	src.air_contents.temperature = 80
-	src.update_icon()
-	return 1
+	air_contents.adjust_gas(GAS_O2, MolesForPressure())
+	air_contents.temperature = 80
+	update_icon()
 
+<<<<<<< HEAD
 /obj/machinery/portable_atmospherics/canister/nitrous_oxide/Initialize() //ChompEDIT New --> Initialize
 	..()
+=======
+/obj/machinery/portable_atmospherics/canister/nitrous_oxide/Initialize(mapload)
+	. = ..()
+>>>>>>> 2ae6355aff (more new to Init (#17147))
 
 	air_contents.adjust_gas(GAS_N2O, MolesForPressure())
-	src.update_icon()
-	return 1
+	update_icon()
 
 //Dirty way to fill room with gas. However it is a bit easier to do than creating some floor/engine/n2o -rastaf0
 /obj/machinery/portable_atmospherics/canister/nitrous_oxide/roomfiller/Initialize()
@@ -426,12 +442,18 @@ update_flag
 	if (istype(src.loc))
 		location.assume_air(air_contents)
 		air_contents = new
-	return 1
 
+<<<<<<< HEAD
 /obj/machinery/portable_atmospherics/canister/nitrogen/Initialize() //ChompEDIT New --> Initialize
+=======
+/obj/machinery/portable_atmospherics/canister/nitrogen/Initialize(mapload)
+	. = ..()
+>>>>>>> 2ae6355aff (more new to Init (#17147))
 
-	..()
+	air_contents.adjust_gas(GAS_N2, MolesForPressure())
+	update_icon()
 
+<<<<<<< HEAD
 	src.air_contents.adjust_gas(GAS_N2, MolesForPressure())
 	src.update_icon()
 	return 1
@@ -445,14 +467,24 @@ update_flag
 
 /obj/machinery/portable_atmospherics/canister/air/Initialize() //ChompEDIT New --> Initialize
 	..()
-	var/list/air_mix = StandardAirMix()
-	src.air_contents.adjust_multi(GAS_O2, air_mix[GAS_O2], GAS_N2, air_mix[GAS_N2])
+=======
+/obj/machinery/portable_atmospherics/canister/carbon_dioxide/Initialize(mapload)
+	. = ..()
+	air_contents.adjust_gas(GAS_CO2, MolesForPressure())
+	update_icon()
 
-	src.update_icon()
-	return 1
+
+/obj/machinery/portable_atmospherics/canister/air/Initialize(mapload)
+	. = ..()
+>>>>>>> 2ae6355aff (more new to Init (#17147))
+	var/list/air_mix = StandardAirMix()
+	air_contents.adjust_multi(GAS_O2, air_mix[GAS_O2], GAS_N2, air_mix[GAS_N2])
+
+	update_icon()
 
 //R-UST port
 // Special types used for engine setup admin verb, they contain double amount of that of normal canister.
+<<<<<<< HEAD
 /obj/machinery/portable_atmospherics/canister/nitrogen/engine_setup/Initialize() //ChompEDIT New --> Initialize
 	..()
 	src.air_contents.adjust_gas(GAS_N2, MolesForPressure())
@@ -470,7 +502,23 @@ update_flag
 	src.air_contents.adjust_gas(GAS_PHORON, MolesForPressure())
 	src.update_icon()
 	return 1
+=======
+/obj/machinery/portable_atmospherics/canister/nitrogen/engine_setup/Initialize(mapload)
+	. = ..()
+	air_contents.adjust_gas(GAS_N2, MolesForPressure())
+	update_icon()
+
+/obj/machinery/portable_atmospherics/canister/carbon_dioxide/engine_setup/Initialize(mapload)
+	. = ..()
+	air_contents.adjust_gas(GAS_CO2, MolesForPressure())
+	update_icon()
+
+/obj/machinery/portable_atmospherics/canister/phoron/engine_setup/Initialize(mapload)
+	. = ..()
+	air_contents.adjust_gas(GAS_PHORON, MolesForPressure())
+	update_icon()
+>>>>>>> 2ae6355aff (more new to Init (#17147))
 
 /obj/machinery/portable_atmospherics/canister/take_damage(var/damage)
-	src.health -= damage
+	health -= damage
 	healthcheck()
