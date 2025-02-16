@@ -1,5 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - code_imp: "Adjusts the temp cap to be higher for  engineers trying to make hellmixes."
-  - bugfix: "Gases will no longer linger as microscopic values in pipes."

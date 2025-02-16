@@ -1,4 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - bugfix: "fixes picking a hair style properly instead of just a simple null check (passing the user properly)"

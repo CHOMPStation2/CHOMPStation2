@@ -1,7 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - code_imp: "removes no longer needed spawns"
-  - bugfix: "meteor gone projectile"
-  - bugfix: "muzzle flash lasting forever"
-  - bugfix: "body record disks being spawned in every box"

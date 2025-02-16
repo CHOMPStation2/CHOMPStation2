@@ -1,6 +1,0 @@
-author: "Will"
-delete-after: True
-changes:
-  - bugfix: "Vents now properly hibernate instead of running 24/7"
-  - code_imp: "Gets rid of more sleeps"
-  - code_imp: "Showers are more efficient on the backend"

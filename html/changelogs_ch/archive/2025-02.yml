@@ -352,3 +352,39 @@
   CHOMPStation2StaffMirrorBot:
   - code_imp: moves the dependencies to 516.1655
   - code_imp: tgui 516
+2025-02-16:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: cleans up a lot of badly converted News
+  - bugfix: The chemmaster will no longer have ethanol turn into wine like Jesus touched
+      it
+  - bugfix: fixes picking a hair style properly instead of just a simple null check
+      (passing the user properly)
+  - code_imp: Adjusts the temp cap to be higher for  engineers trying to make hellmixes.
+  - bugfix: Gases will no longer linger as microscopic values in pipes.
+  - bugfix: IRC comms are disabled without a password set
+  - refactor: up-ports ghost orbiting refactor
+  - bugfix: runechat size multiplier offset
+  - code_imp: Anything in the /mob to /human pathline qdels properly
+  - code_imp: There is now a Unit Test to make sure reagents are valid.
+  - bugfix: Tequila is no longer spelt TequiLLa. Update your maps if they have it
+      placed there manually!
+  - code_imp: removes no longer needed spawns
+  - bugfix: meteor gone projectile
+  - bugfix: muzzle flash lasting forever
+  - bugfix: body record disks being spawned in every box
+  - code_imp: move runechat to a subsystem
+  Diana:
+  - rscadd: Adds a bunch of wings to the server from Chompstation
+  - code_imp: Radiation now works differently on the backend.
+  - bugfix: Enabling and disabling the radiation immunity trait no longer breaks things.
+  - bugfix: Fixes a 10 year bug where you wouldn't get your cult spells when turned
+      into a construct.
+  - code_imp: Makes spells less garbage.
+  Guti:
+  - image: Added a few icon effects
+  TheGreatKitsune:
+  - bugfix: removes an unintended way to break into/out of VR
+  Will:
+  - bugfix: Vents now properly hibernate instead of running 24/7
+  - code_imp: Gets rid of more sleeps
+  - code_imp: Showers are more efficient on the backend
