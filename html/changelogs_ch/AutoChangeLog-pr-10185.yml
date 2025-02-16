@@ -1,4 +1,4 @@
 author: "CHOMPStation2StaffMirrorBot"
 delete-after: True
 changes:
-  - code_imp: "moves the dependencies to 516.1655"
+  - bugfix: "cyborg mats will never show up now"

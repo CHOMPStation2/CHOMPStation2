@@ -24,7 +24,5 @@
 #define INVENTORY_DUFFLEBAG_SPACE	ITEMSIZE_COST_NORMAL * 9 // 36
 #define INVENTORY_BOX_SPACE			ITEMSIZE_COST_SMALL * 7 // 14
 
-// CHOMPedit start.
 //this all needs a refactor to tg storage but for now...
 #define MAX_STORAGE_REACH 2		//maximum you can reach down to grab things from storage.
-// CHOMPedit end.

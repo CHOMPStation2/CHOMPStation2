@@ -51,11 +51,11 @@ export function TguiSay() {
   const [lightMode, setLightMode] = useState(false);
   const [value, setValue] = useState('');
 
-  function handleArrowKeys(direction: KEY.Up | KEY.Down): void {
+  function handleArrowKeys(direction: KEY.PageUp | KEY.PageDown): void {
     const chat = chatHistory.current;
     const iterator = channelIterator.current;
 
-    if (direction === KEY.Up) {
+    if (direction === KEY.PageUp) {
       if (chat.isAtLatest() && value) {
         // Save current message to temp history if at the most recent message
         chat.saveTemp(value);
@@ -130,7 +130,7 @@ export function TguiSay() {
     const prefix = currentPrefix ?? '';
     const grunt = iterator.isSay() ? prefix + value : value;
 
-    messages.current.forceSayMsg(grunt, iterator.current());
+    messages.current.forceSayMsg(grunt);
     unloadChat();
   }
 
@@ -140,10 +140,26 @@ export function TguiSay() {
     iterator.next();
     setButtonContent(iterator.current());
     setCurrentPrefix(null);
-    messages.current.channelIncrementMsg(iterator.isVisible());
+    messages.current.channelIncrementMsg(
+      iterator.isVisible(),
+      iterator.current(),
+    );
+  }
+
+  function handleDecrementChannel() {
+    const iterator = channelIterator.current;
+
+    iterator.prev();
+    setButtonContent(iterator.current());
+    setCurrentPrefix(null);
+    messages.current.channelIncrementMsg(
+      iterator.isVisible(),
+      iterator.current(),
+    );
   }
 
   function handleInput(event: FormEvent<HTMLTextAreaElement>): void {
+    const iterator = channelIterator.current;
     let newValue = event.currentTarget.value;
 
     let newPrefix = getPrefix(newValue) || currentPrefix;
@@ -160,7 +176,7 @@ export function TguiSay() {
 
     // Handles typing indicators
     if (channelIterator.current.isVisible() && newPrefix !== ',b ') {
-      messages.current.typingMsg();
+      messages.current.typingMsg(iterator.current());
     }
 
     setValue(newValue);
@@ -218,8 +234,8 @@ export function TguiSay() {
           event.currentTarget.selectionEnd = selectionEnd + 2;
         }
         break;
-      case KEY.Up:
-      case KEY.Down:
+      case KEY.PageUp:
+      case KEY.PageDown:
         event.preventDefault();
         handleArrowKeys(event.key);
         break;
@@ -230,12 +246,18 @@ export function TguiSay() {
         break;
 
       case KEY.Enter:
-        event.preventDefault();
-        handleEnter();
+        if (!event.shiftKey) {
+          event.preventDefault();
+          handleEnter();
+        }
         break;
 
       case KEY.Tab:
         event.preventDefault();
+        if (event.shiftKey) {
+          handleDecrementChannel();
+          break;
+        }
         handleIncrementChannel();
         break;
 

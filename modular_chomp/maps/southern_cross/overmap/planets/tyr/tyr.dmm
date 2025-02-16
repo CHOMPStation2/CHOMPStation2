@@ -19,13 +19,6 @@
 	},
 /turf/simulated/floor,
 /area/surface/tyr/eclipse_stronghold/generatorB)
-"ae" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/effect/zone_divider,
-/turf/simulated/floor,
-/area/surface/tyr/huntery)
 "af" = (
 /turf/simulated/wall/solidrock,
 /area/surface/tyr/eclipse_stronghold/sectorfinale)
@@ -39,12 +32,6 @@
 /obj/structure/prop/tyr_elevator,
 /turf/simulated/shuttle/floor/alien,
 /area/surface/tyr/eclipse_stronghold/sectorfinale)
-"ak" = (
-/obj/item/ammo_casing/microbattery/medical/haste,
-/obj/item/ammo_casing/microbattery/medical/haste,
-/obj/structure/table/rack,
-/turf/simulated/shuttle/floor/alien,
-/area/surface/tyr/precursorruins/finale)
 "an" = (
 /obj/effect/zone_divider,
 /turf/simulated/mineral/light/tyr,
@@ -167,12 +154,6 @@
 /obj/effect/floor_decal/corner/orange/bordercorner,
 /turf/simulated/floor/wmarble,
 /area/surface/tyr/eclipse_stronghold)
-"aU" = (
-/obj/effect/landmark{
-	name = "JoinLateTyrVillage"
-	},
-/turf/simulated/floor,
-/area/surface/tyr/huntery)
 "aV" = (
 /obj/effect/floor_decal/corner/white/diagonal,
 /obj/machinery/light/small{
@@ -294,12 +275,6 @@
 "bE" = (
 /turf/simulated/wall/r_concrete,
 /area/surface/tyr/north_caverns)
-"bF" = (
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
-/turf/simulated/floor,
-/area/surface/tyr/huntery)
 "bH" = (
 /mob/living/simple_mob/humanoid/eclipse/lunar/experimenter,
 /turf/simulated/floor/tiled/old_tile/green,
@@ -349,6 +324,14 @@
 	},
 /turf/simulated/floor/bmarble,
 /area/surface/tyr/eclipse_stronghold)
+"bT" = (
+/obj/item/storage/fancy/candle_box,
+/obj/item/storage/fancy/candle_box,
+/obj/structure/closet/crate,
+/obj/item/storage/fancy/blackcandle_box,
+/obj/item/storage/fancy/blackcandle_box,
+/turf/simulated/floor/wood/alt/panel/turfpack,
+/area/surface/tyr/town_hall)
 "bV" = (
 /obj/structure/closet/secure_closet/guncabinet{
 	req_one_access = null
@@ -407,12 +390,6 @@
 /obj/structure/toilet,
 /turf/simulated/floor/tiled/freezer,
 /area/surface/tyr/eclipse_stronghold/cmooffice)
-"ck" = (
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
-/turf/simulated/floor,
-/area/surface/tyr/huntery)
 "cl" = (
 /obj/effect/floor_decal/corner/white/diagonal,
 /obj/structure/cable{
@@ -433,6 +410,10 @@
 /obj/item/reagent_containers/glass/beaker/large,
 /turf/simulated/floor/tiled/white,
 /area/surface/tyr/eclipse_stronghold/chemistb)
+"co" = (
+/obj/structure/table/wooden_reinforced,
+/turf/simulated/floor/wood/alt/panel/turfpack,
+/area/surface/tyr/town_hall)
 "cp" = (
 /turf/simulated/floor,
 /area/surface/tyr/eclipse_stronghold/generatorB)
@@ -463,6 +444,11 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/tyr/eclipse_stronghold/alienbotany)
+"ct" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/storage/bible,
+/turf/simulated/floor/wood/alt/panel/turfpack,
+/area/surface/tyr/town_hall)
 "cu" = (
 /obj/structure/cable{
 	icon_state = "2-8"
@@ -498,6 +484,10 @@
 /obj/machinery/chemical_dispenser/biochemistry/full,
 /turf/simulated/floor/tiled/white,
 /area/surface/tyr/eclipse_stronghold/chemistb)
+"cG" = (
+/obj/structure/bed/chair/bay/chair/padded/red/bignest,
+/turf/simulated/floor/wood/alt/panel/turfpack,
+/area/surface/tyr/town_hall)
 "cH" = (
 /obj/machinery/door/airlock/silver,
 /turf/simulated/floor/tiled/old_tile/purple,
@@ -556,12 +546,22 @@
 /mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle,
 /turf/simulated/floor/wmarble,
 /area/surface/tyr/eclipse_stronghold)
+"cP" = (
+/obj/item/gun/energy/curse_tyrshotgun,
+/obj/structure/table/rack,
+/turf/simulated/shuttle/floor/alien,
+/area/surface/tyr/precursorruins/finale)
 "cR" = (
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
 /area/surface/tyr/eclipse_stronghold/generatorA)
+"cT" = (
+/obj/item/prop/alien/prototype,
+/obj/structure/table/rack,
+/turf/simulated/shuttle/floor/alien,
+/area/surface/tyr/precursorruins/finale)
 "cU" = (
 /obj/effect/floor_decal/corner/grey/diagonal,
 /mob/living/simple_mob/humanoid/eclipse/solar/disablernoodle,
@@ -572,6 +572,13 @@
 /obj/structure/curtain/black,
 /turf/simulated/floor,
 /area/surface/tyr/eclipse_stronghold/creaturestorageA)
+"cY" = (
+/obj/item/gun/energy/energyballchain,
+/obj/item/holosign_creator/forcewand,
+/obj/item/holosign_creator/forcewand,
+/obj/structure/table/rack,
+/turf/simulated/shuttle/floor/alien,
+/area/surface/tyr/precursorruins/finale)
 "cZ" = (
 /obj/machinery/door/airlock/silver,
 /turf/simulated/floor/tiled/old_tile/green,
@@ -601,6 +608,12 @@
 "dg" = (
 /turf/simulated/floor/tiled/dark,
 /area/surface/tyr/eclipse_stronghold)
+"dh" = (
+/obj/item/rig/ch/tyrprecursor,
+/obj/item/rig/ch/tyrprecursor,
+/obj/structure/table/rack,
+/turf/simulated/shuttle/floor/alien,
+/area/surface/tyr/precursorruins/finale)
 "di" = (
 /obj/machinery/door/blast/puzzle/tyrdoor{
 	id = "tyrbonuspuzzlesix"
@@ -663,6 +676,12 @@
 	},
 /turf/simulated/floor/bmarble,
 /area/surface/tyr/eclipse_stronghold)
+"dt" = (
+/obj/item/holosign_creator/forcewand,
+/obj/item/holosign_creator/forcewand,
+/obj/structure/table/rack,
+/turf/simulated/shuttle/floor/alien,
+/area/surface/tyr/precursorruins/finale)
 "du" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 1
@@ -714,9 +733,10 @@
 	},
 /turf/simulated/floor/wmarble,
 /area/surface/tyr/eclipse_stronghold)
-"dG" = (
-/turf/simulated/floor/outdoors/desert_planet/gravel/tyr,
-/area/surface/tyr/mining_depot)
+"dH" = (
+/obj/machinery/optable,
+/turf/simulated/floor,
+/area/surface/tyr/huntery)
 "dL" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/concrete,
@@ -774,10 +794,6 @@
 "dY" = (
 /turf/simulated/floor/carpet/purple,
 /area/surface/tyr/eclipse_stronghold)
-"dZ" = (
-/obj/structure/inflatable,
-/turf/simulated/floor,
-/area/surface/tyr/huntery)
 "ea" = (
 /obj/structure/table/standard,
 /obj/item/walkpod,
@@ -801,14 +817,6 @@
 /obj/structure/flora/tyr/flowers,
 /turf/simulated/floor/outdoors/desert_planet/deep_grass/tyr,
 /area/surface/tyr/south_caverns)
-"ej" = (
-/obj/item/ammo_casing/microbattery/medical/grow,
-/obj/item/ammo_casing/microbattery/medical/grow,
-/obj/item/ammo_casing/microbattery/medical/shrink,
-/obj/item/ammo_casing/microbattery/medical/shrink,
-/obj/structure/table/rack,
-/turf/simulated/shuttle/floor/alien,
-/area/surface/tyr/precursorruins/finale)
 "ek" = (
 /obj/machinery/light/small,
 /turf/simulated/floor/carpet/purple,
@@ -1094,13 +1102,6 @@
 /obj/structure/table/standard,
 /turf/simulated/floor/wood,
 /area/surface/tyr/eclipse_stronghold/docks)
-"fq" = (
-/obj/structure/bed/chair/bay/chair/padded/red/bignest,
-/obj/effect/landmark{
-	name = "JoinLateTyrVillage"
-	},
-/turf/simulated/floor,
-/area/surface/tyr/huntery)
 "fr" = (
 /obj/effect/floor_decal/corner/white/diagonal,
 /obj/machinery/light/small,
@@ -1111,6 +1112,12 @@
 /obj/effect/floor_decal/corner/lime/border,
 /turf/simulated/floor/wmarble,
 /area/surface/tyr/eclipse_stronghold)
+"fu" = (
+/obj/item/prop/alien/prototype,
+/obj/item/pickaxe/diamonddrill/alien,
+/obj/structure/table/rack,
+/turf/simulated/shuttle/floor/alien,
+/area/surface/tyr/precursorruins/finale)
 "fw" = (
 /obj/machinery/vending/fooddessert,
 /turf/simulated/floor/carpet/bcarpet,
@@ -1206,6 +1213,14 @@
 "fR" = (
 /turf/simulated/wall/r_concrete,
 /area/surface/tyr/eclipse_stronghold/teslastorage)
+"fS" = (
+/obj/item/prop/alien/prototype,
+/obj/item/weldingtool/experimental/hybrid/alien,
+/obj/item/weldingtool/experimental/hybrid/alien,
+/obj/item/tool/wirecutters/hybrid/alien,
+/obj/structure/table/rack,
+/turf/simulated/shuttle/floor/alien,
+/area/surface/tyr/precursorruins/finale)
 "fT" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -1336,6 +1351,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/tyr/eclipse_stronghold/viro)
+"gy" = (
+/obj/item/prop/alien/prototype,
+/obj/item/ammo_casing/microbattery/medical/normalsize,
+/obj/item/ammo_casing/microbattery/medical/normalsize,
+/obj/structure/table/rack,
+/turf/simulated/shuttle/floor/alien,
+/area/surface/tyr/precursorruins/finale)
 "gz" = (
 /obj/machinery/computer/scan_consolenew{
 	dir = 8
@@ -1532,11 +1554,6 @@
 	},
 /turf/simulated/floor,
 /area/surface/tyr/eclipse_stronghold/generatorA)
-"hk" = (
-/obj/machinery/power/rtg/fake_reactor,
-/obj/structure/cable,
-/turf/simulated/floor,
-/area/surface/tyr/huntery)
 "hl" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -1621,9 +1638,13 @@
 	},
 /turf/simulated/floor/wood,
 /area/surface/tyr/eclipse_stronghold/docks)
-"hJ" = (
-/turf/simulated/floor/wood/alt/panel/turfpack,
-/area/surface/tyr/town_hall)
+"hH" = (
+/obj/item/prop/alien/prototype,
+/obj/item/melee/energy/sword/dualsaber,
+/obj/item/melee/energy/sword/dualsaber,
+/obj/structure/table/rack,
+/turf/simulated/shuttle/floor/alien,
+/area/surface/tyr/precursorruins/finale)
 "hM" = (
 /obj/structure/bed/chair/bay/chair/padded{
 	dir = 1
@@ -1768,6 +1789,9 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor,
 /area/surface/tyr/eclipse_stronghold)
+"ir" = (
+/turf/simulated/wall/r_lead,
+/area/surface/tyr/huntery)
 "iu" = (
 /obj/structure/cable{
 	icon_state = "1-8"
@@ -1812,7 +1836,6 @@
 /area/surface/tyr/eclipse_stronghold)
 "iA" = (
 /obj/structure/fuel_port/heavy{
-	dir = 41;
 	pixel_y = 24
 	},
 /turf/simulated/floor/wood,
@@ -1840,6 +1863,12 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/surface/tyr/eclipse_stronghold/showers)
+"iF" = (
+/obj/item/pickaxe/diamonddrill/alien,
+/obj/item/pickaxe/diamonddrill/alien,
+/obj/structure/table/rack,
+/turf/simulated/shuttle/floor/alien,
+/area/surface/tyr/precursorruins/finale)
 "iG" = (
 /mob/living/simple_mob/slime,
 /obj/machinery/light/small,
@@ -1870,22 +1899,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/surface/tyr/eclipse_stronghold/secoffice)
-"iM" = (
-/obj/structure/table/rack{
-	dir = 8;
-	layer = 2.6
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/machinery/door/window/eastleft,
-/obj/item/clothing/suit/space/void/salvagecorp_shipbreaker,
-/obj/item/clothing/head/helmet/space/void/salvagecorp_shipbreaker,
-/obj/item/flashlight/maglight,
-/obj/item/pickaxe/plasmacutter,
-/obj/item/gun/energy/mininglaser,
-/turf/simulated/floor,
-/area/surface/tyr/huntery)
 "iN" = (
 /obj/structure/closet,
 /obj/structure/window/plastitanium,
@@ -1979,6 +1992,11 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/wmarble,
 /area/surface/tyr/eclipse_stronghold)
+"jd" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/flame/candle/everburn,
+/turf/simulated/floor/wood/alt/panel/turfpack,
+/area/surface/tyr/town_hall)
 "je" = (
 /obj/item/clothing/head/wizard,
 /turf/simulated/floor,
@@ -2082,6 +2100,12 @@
 "jz" = (
 /turf/simulated/floor/wmarble,
 /area/surface/tyr/eclipse_stronghold/jailhouse)
+"jC" = (
+/obj/item/gun/energy/curse_lasershooter,
+/obj/item/pickaxe/diamonddrill/alien,
+/obj/structure/table/rack,
+/turf/simulated/shuttle/floor/alien,
+/area/surface/tyr/precursorruins/finale)
 "jD" = (
 /turf/simulated/floor/outdoors/desert_planet/deep_grass/tyr,
 /area/surface/tyr/northern_wilderness)
@@ -2105,6 +2129,14 @@
 	},
 /turf/simulated/floor/wmarble,
 /area/surface/tyr/eclipse_stronghold)
+"jG" = (
+/obj/item/gun/energy/curse_blaster,
+/obj/item/tool/screwdriver/hybrid/alien,
+/obj/item/tool/screwdriver/hybrid/alien,
+/obj/item/tool/wirecutters/hybrid/alien,
+/obj/structure/table/rack,
+/turf/simulated/shuttle/floor/alien,
+/area/surface/tyr/precursorruins/finale)
 "jK" = (
 /obj/structure/toilet/prison{
 	dir = 4
@@ -2161,10 +2193,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/tyr/eclipse_stronghold/alienbotany)
-"jW" = (
-/obj/effect/zone_divider,
-/turf/simulated/wall/shull,
-/area/surface/tyr/huntery)
 "jX" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -2243,6 +2271,12 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/surface/tyr/eclipse_stronghold/poolroom)
+"kh" = (
+/obj/item/tool/crowbar/hybrid/alien,
+/obj/item/tool/crowbar/hybrid/alien,
+/obj/structure/table/rack,
+/turf/simulated/shuttle/floor/alien,
+/area/surface/tyr/precursorruins/finale)
 "ki" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 4
@@ -2290,10 +2324,6 @@
 /obj/machinery/light/small,
 /turf/simulated/floor,
 /area/surface/tyr/eclipse_stronghold/slimeresearch)
-"kv" = (
-/obj/structure/inflatable/door,
-/turf/simulated/floor/wood/alt/panel/turfpack,
-/area/surface/tyr/town_hall)
 "kx" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -2632,6 +2662,10 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/tyr/eclipse_stronghold/recoveryB)
+"lK" = (
+/obj/structure/inflatable/door,
+/turf/simulated/floor/wood/alt/panel/turfpack,
+/area/surface/tyr/town_hall)
 "lL" = (
 /obj/effect/floor_decal/corner/green{
 	dir = 1
@@ -2815,12 +2849,6 @@
 	},
 /turf/simulated/floor/wmarble,
 /area/surface/tyr/eclipse_stronghold)
-"mu" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor,
-/area/surface/tyr/huntery)
 "mv" = (
 /obj/effect/zone_divider,
 /turf/simulated/mineral/light/tyr,
@@ -2967,6 +2995,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/tyr/eclipse_stronghold)
+"mY" = (
+/obj/item/ammo_casing/microbattery/medical/haste,
+/obj/item/ammo_casing/microbattery/medical/haste,
+/obj/structure/table/rack,
+/turf/simulated/shuttle/floor/alien,
+/area/surface/tyr/precursorruins/finale)
 "mZ" = (
 /mob/living/simple_mob/humanoid/eclipse/solar/froststalker,
 /turf/simulated/floor/bmarble,
@@ -2995,6 +3029,14 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/tyr/eclipse_stronghold/alienbotany)
+"nc" = (
+/obj/item/ammo_casing/microbattery/medical/grow,
+/obj/item/ammo_casing/microbattery/medical/grow,
+/obj/item/ammo_casing/microbattery/medical/shrink,
+/obj/item/ammo_casing/microbattery/medical/shrink,
+/obj/structure/table/rack,
+/turf/simulated/shuttle/floor/alien,
+/area/surface/tyr/precursorruins/finale)
 "ne" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 8
@@ -3004,6 +3046,11 @@
 /mob/living/simple_mob/humanoid/eclipse/lunar/titanhunter,
 /turf/simulated/floor/tiled/white,
 /area/surface/tyr/eclipse_stronghold/recoveryB)
+"nf" = (
+/obj/item/melee/energy/sword/dualsaber,
+/obj/structure/table/rack,
+/turf/simulated/shuttle/floor/alien,
+/area/surface/tyr/precursorruins/finale)
 "ng" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -3058,6 +3105,10 @@
 /obj/machinery/shieldwallgen,
 /turf/simulated/floor/tiled/old_tile/green,
 /area/surface/tyr/eclipse_stronghold)
+"nv" = (
+/obj/effect/zone_divider,
+/turf/simulated/wall/shull,
+/area/surface/tyr/huntery)
 "nx" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 8
@@ -3121,6 +3172,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/tyr/eclipse_stronghold/surgery)
+"nK" = (
+/obj/machinery/door/airlock/hatch{
+	req_one_access = null
+	},
+/obj/structure/fans/hardlight,
+/turf/simulated/floor,
+/area/surface/tyr/huntery)
 "nL" = (
 /obj/structure/bed/chair/bar_stool,
 /mob/living/simple_mob/humanoid/eclipse/solar/disablernoodle,
@@ -3130,13 +3188,17 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/wmarble,
 /area/surface/tyr/eclipse_stronghold)
-"nN" = (
-/obj/effect/zone_divider,
-/turf/simulated/wall/r_lead,
-/area/surface/tyr/huntery)
 "nO" = (
 /turf/simulated/floor/tiled/dark,
 /area/surface/tyr/eclipse_stronghold/secoffice)
+"nP" = (
+/obj/structure/grille,
+/obj/structure/window/plastitanium{
+	dir = 1
+	},
+/obj/structure/window/plastitanium,
+/turf/simulated/floor,
+/area/surface/tyr/huntery)
 "nQ" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -3323,6 +3385,10 @@
 	},
 /turf/simulated/floor/carpet/oracarpet,
 /area/surface/tyr/eclipse_stronghold)
+"oE" = (
+/obj/structure/inflatable/door,
+/turf/simulated/floor/outdoors/desert_planet/gravel/tyr,
+/area/surface/tyr/mining_depot)
 "oF" = (
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 8
@@ -3374,11 +3440,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/tyr/eclipse_stronghold/surgery)
-"oO" = (
-/obj/item/gun/energy/curse_tyrshotgun,
-/obj/structure/table/rack,
-/turf/simulated/shuttle/floor/alien,
-/area/surface/tyr/precursorruins/finale)
 "oP" = (
 /obj/structure/window/plastitanium{
 	dir = 1
@@ -3394,6 +3455,12 @@
 	},
 /turf/simulated/floor/carpet,
 /area/surface/tyr/eclipse_stronghold/filestorage)
+"oR" = (
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor,
+/area/surface/tyr/huntery)
 "oS" = (
 /obj/structure/window/plastitanium{
 	dir = 4
@@ -3468,6 +3535,12 @@
 	},
 /turf/simulated/floor,
 /area/surface/tyr/eclipse_stronghold/generatorC)
+"pd" = (
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor,
+/area/surface/tyr/huntery)
 "pe" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -3585,12 +3658,6 @@
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
 /turf/simulated/floor,
 /area/surface/tyr/eclipse_stronghold/powerplantfuel)
-"pJ" = (
-/obj/item/pickaxe/diamonddrill/alien,
-/obj/item/pickaxe/diamonddrill/alien,
-/obj/structure/table/rack,
-/turf/simulated/shuttle/floor/alien,
-/area/surface/tyr/precursorruins/finale)
 "pK" = (
 /turf/simulated/floor,
 /area/surface/tyr/eclipse_stronghold/docks)
@@ -3656,6 +3723,22 @@
 	},
 /turf/simulated/floor/wood,
 /area/surface/tyr/eclipse_stronghold/docks)
+"pV" = (
+/obj/structure/table/rack{
+	dir = 8;
+	layer = 2.6
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/window/eastleft,
+/obj/item/clothing/suit/space/void/salvagecorp_shipbreaker,
+/obj/item/clothing/head/helmet/space/void/salvagecorp_shipbreaker,
+/obj/item/flashlight/maglight,
+/obj/item/pickaxe/plasmacutter,
+/obj/item/gun/energy/mininglaser,
+/turf/simulated/floor,
+/area/surface/tyr/huntery)
 "pW" = (
 /obj/structure/cable{
 	icon_state = "1-8"
@@ -3668,9 +3751,6 @@
 	},
 /turf/simulated/floor,
 /area/surface/tyr/eclipse_stronghold/generatorA)
-"pX" = (
-/turf/simulated/wall/shull,
-/area/surface/tyr/huntery)
 "pY" = (
 /obj/machinery/light/small,
 /turf/simulated/floor/tiled,
@@ -3760,6 +3840,10 @@
 	},
 /turf/simulated/floor/wmarble,
 /area/surface/tyr/eclipse_stronghold)
+"qp" = (
+/obj/machinery/suit_cycler/refit_only,
+/turf/simulated/floor,
+/area/surface/tyr/huntery)
 "qs" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/cyan{
 	dir = 8
@@ -3908,6 +3992,13 @@
 /obj/structure/window/plastitanium,
 /turf/simulated/floor/reinforced,
 /area/surface/tyr/eclipse_stronghold/viro)
+"rd" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/zone_divider,
+/turf/simulated/floor,
+/area/surface/tyr/huntery)
 "re" = (
 /obj/machinery/door/airlock/silver,
 /turf/simulated/floor/carpet/bcarpet,
@@ -3976,6 +4067,22 @@
 /mob/living/simple_mob/humanoid/eclipse/solar/nuclear,
 /turf/simulated/floor/concrete,
 /area/surface/tyr/eclipse_stronghold/cafe)
+"rp" = (
+/obj/structure/table/rack{
+	dir = 8;
+	layer = 2.6
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/window/westleft,
+/obj/item/clothing/suit/space/void/salvagecorp_shipbreaker,
+/obj/item/clothing/head/helmet/space/void/salvagecorp_shipbreaker,
+/obj/item/flashlight/maglight,
+/obj/item/pickaxe/plasmacutter,
+/obj/item/gun/energy/mininglaser,
+/turf/simulated/floor,
+/area/surface/tyr/huntery)
 "rq" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 8
@@ -4306,11 +4413,6 @@
 /obj/random/firstaid,
 /turf/simulated/floor/carpet/tealcarpet,
 /area/surface/tyr/eclipse_stronghold/cmooffice)
-"su" = (
-/obj/structure/table/standard,
-/obj/item/stack/medical/advanced/bruise_pack,
-/turf/simulated/floor,
-/area/surface/tyr/huntery)
 "sw" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 4
@@ -4347,10 +4449,6 @@
 	},
 /turf/simulated/floor/tiled/old_tile/purple,
 /area/surface/tyr/eclipse_stronghold/creaturestorageA)
-"sF" = (
-/obj/machinery/optable,
-/turf/simulated/floor,
-/area/surface/tyr/huntery)
 "sH" = (
 /obj/structure/cable/orange,
 /obj/item/stack/material/tritium{
@@ -4433,11 +4531,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/surface/tyr/eclipse_stronghold)
-"sW" = (
-/obj/structure/table/wooden_reinforced,
-/obj/item/storage/bible,
-/turf/simulated/floor/wood/alt/panel/turfpack,
-/area/surface/tyr/town_hall)
 "sX" = (
 /obj/structure/table/standard,
 /obj/item/storage/box/monkeycubes/farwacubes,
@@ -4465,9 +4558,6 @@
 /obj/machinery/light/small,
 /turf/simulated/floor/tiled/white,
 /area/surface/tyr/eclipse_stronghold/alienbotany)
-"td" = (
-/turf/simulated/floor,
-/area/surface/tyr/huntery)
 "te" = (
 /obj/effect/floor_decal/corner/grey/diagonal,
 /obj/structure/cable{
@@ -4585,12 +4675,22 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/surface/tyr/eclipse_stronghold/morgue)
+"tH" = (
+/mob/living/simple_mob/animal/tyr/mineral_ants/queen,
+/turf/simulated/floor/outdoors/desert_planet/gravel/tyr,
+/area/surface/tyr/mining_depot)
 "tI" = (
 /obj/effect/floor_decal/corner/orange/bordercorner{
 	dir = 8
 	},
 /turf/simulated/floor/bmarble,
 /area/surface/tyr/eclipse_stronghold)
+"tJ" = (
+/obj/effect/landmark{
+	name = "JoinLateTyrVillage"
+	},
+/turf/simulated/floor,
+/area/surface/tyr/huntery)
 "tL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 6
@@ -4644,6 +4744,12 @@
 /mob/living/simple_mob/humanoid/eclipse/solar/medicalsquish,
 /turf/simulated/floor/tiled/white,
 /area/surface/tyr/eclipse_stronghold/distillery)
+"tW" = (
+/obj/structure/table/standard,
+/obj/item/radio,
+/obj/item/radio,
+/turf/simulated/floor,
+/area/surface/tyr/huntery)
 "tX" = (
 /obj/effect/floor_decal/corner/blue/diagonal,
 /obj/effect/floor_decal/corner/paleblue/diagonal{
@@ -4758,10 +4864,6 @@
 /mob/living/simple_mob/humanoid/eclipse/solar/froststalker,
 /turf/simulated/floor/tiled/old_tile/purple,
 /area/surface/tyr/eclipse_stronghold/creaturestorageB)
-"uv" = (
-/mob/living/simple_mob/animal/tyr/mineral_ants/queen,
-/turf/simulated/floor/outdoors/desert_planet/gravel/tyr,
-/area/surface/tyr/mining_depot)
 "ux" = (
 /obj/structure/window/plastitanium{
 	dir = 8
@@ -4798,9 +4900,23 @@
 "uD" = (
 /turf/simulated/floor/tiled/steel_ridged,
 /area/surface/tyr/eclipse_stronghold/poolroom)
+"uF" = (
+/obj/machinery/power/rtg/fake_reactor,
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor,
+/area/surface/tyr/huntery)
 "uH" = (
 /turf/simulated/wall/r_concrete,
 /area/surface/tyr/eclipse_stronghold/antroom)
+"uK" = (
+/obj/structure/bed/chair/bay/chair/padded/red/bignest,
+/obj/effect/landmark{
+	name = "JoinLateTyrVillage"
+	},
+/turf/simulated/floor,
+/area/surface/tyr/huntery)
 "uL" = (
 /obj/structure/closet/toolcloset,
 /obj/effect/floor_decal/corner/yellow/diagonal,
@@ -4911,6 +5027,16 @@
 /obj/machinery/door/airlock/silver,
 /turf/simulated/floor/tiled/white,
 /area/surface/tyr/eclipse_stronghold/distillery)
+"vb" = (
+/obj/machinery/cryopod/robot/door/gateway/quiet,
+/turf/simulated/floor,
+/area/surface/tyr/huntery)
+"vc" = (
+/obj/machinery/computer/cryopod/gateway{
+	pixel_x = 32
+	},
+/turf/simulated/floor,
+/area/surface/tyr/huntery)
 "vd" = (
 /obj/machinery/atmospherics/unary/engine{
 	dir = 1
@@ -5054,6 +5180,10 @@
 /obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/surface/tyr/eclipse_stronghold)
+"vK" = (
+/obj/machinery/door/airlock,
+/turf/simulated/floor,
+/area/surface/tyr/huntery)
 "vL" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -5071,6 +5201,15 @@
 /obj/structure/grille,
 /turf/simulated/floor,
 /area/surface/tyr/eclipse_stronghold/jailhouse)
+"vN" = (
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor,
+/area/surface/tyr/huntery)
 "vO" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 8
@@ -5085,6 +5224,11 @@
 /obj/machinery/light/small,
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/surface/tyr/eclipse_stronghold)
+"vR" = (
+/obj/structure/table/standard,
+/obj/item/storage/firstaid/surgery,
+/turf/simulated/floor,
+/area/surface/tyr/huntery)
 "vT" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 8
@@ -5163,11 +5307,6 @@
 /obj/random/maintenance/engineering,
 /turf/simulated/floor/tiled/yellow,
 /area/surface/tyr/eclipse_stronghold/toolstorage)
-"wr" = (
-/obj/item/prop/alien/prototype,
-/obj/structure/table/rack,
-/turf/simulated/shuttle/floor/alien,
-/area/surface/tyr/precursorruins/finale)
 "ws" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -5225,6 +5364,13 @@
 	},
 /turf/simulated/floor/carpet/oracarpet,
 /area/surface/tyr/eclipse_stronghold)
+"wH" = (
+/obj/machinery/door/airlock/hatch,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor,
+/area/surface/tyr/huntery)
 "wI" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 10
@@ -5247,6 +5393,18 @@
 /mob/living/simple_mob/humanoid/eclipse/lunar/experimenter,
 /turf/simulated/floor/tiled/monotile,
 /area/surface/tyr/eclipse_stronghold/showers)
+"wO" = (
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor,
+/area/surface/tyr/huntery)
 "wP" = (
 /obj/effect/floor_decal/corner/grey/diagonal,
 /mob/living/simple_mob/humanoid/eclipse/lunar/servicesquish,
@@ -5292,10 +5450,14 @@
 	},
 /turf/simulated/floor,
 /area/surface/tyr/eclipse_stronghold/generatorB)
-"xc" = (
-/obj/structure/table/wooden_reinforced,
-/turf/simulated/floor/wood/alt/panel/turfpack,
-/area/surface/tyr/town_hall)
+"xb" = (
+/obj/machinery/power/rtg/fake_reactor,
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/obj/effect/zone_divider,
+/turf/simulated/floor,
+/area/surface/tyr/huntery)
 "xd" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -5373,11 +5535,30 @@
 	},
 /turf/simulated/floor/wmarble,
 /area/surface/tyr/eclipse_stronghold)
+"xu" = (
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 8;
+	pixel_x = -24
+	},
+/turf/simulated/floor,
+/area/surface/tyr/huntery)
 "xv" = (
 /obj/structure/table/standard,
 /obj/item/storage/box/monkeycubes/farwacubes,
 /turf/simulated/floor/tiled/old_tile/beige,
 /area/surface/tyr/eclipse_stronghold)
+"xx" = (
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor,
+/area/surface/tyr/huntery)
 "xz" = (
 /obj/structure/window/plastitanium,
 /obj/structure/window/plastitanium{
@@ -5405,14 +5586,6 @@
 	},
 /turf/simulated/floor/bmarble,
 /area/surface/tyr/eclipse_stronghold)
-"xF" = (
-/obj/item/storage/fancy/candle_box,
-/obj/item/storage/fancy/candle_box,
-/obj/structure/closet/crate,
-/obj/item/storage/fancy/blackcandle_box,
-/obj/item/storage/fancy/blackcandle_box,
-/turf/simulated/floor/wood/alt/panel/turfpack,
-/area/surface/tyr/town_hall)
 "xH" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/yellow,
 /turf/simulated/floor,
@@ -5477,22 +5650,6 @@
 /obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/white,
 /area/surface/tyr/eclipse_stronghold/cafe)
-"xV" = (
-/obj/structure/table/rack{
-	dir = 8;
-	layer = 2.6
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/machinery/door/window/westleft,
-/obj/item/clothing/suit/space/void/salvagecorp_shipbreaker,
-/obj/item/clothing/head/helmet/space/void/salvagecorp_shipbreaker,
-/obj/item/flashlight/maglight,
-/obj/item/pickaxe/plasmacutter,
-/obj/item/gun/energy/mininglaser,
-/turf/simulated/floor,
-/area/surface/tyr/huntery)
 "xX" = (
 /turf/simulated/floor/outdoors/ice/dark/turfpack/station,
 /area/surface/tyr/precursorruins/finale)
@@ -5575,14 +5732,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/tyr/eclipse_stronghold)
-"yj" = (
-/obj/structure/grille,
-/obj/structure/window/plastitanium,
-/obj/structure/window/plastitanium{
-	dir = 1
-	},
-/turf/simulated/floor,
-/area/surface/tyr/huntery)
 "yk" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -5605,6 +5754,16 @@
 	},
 /turf/simulated/floor,
 /area/surface/tyr/eclipse_stronghold/chemicalgas)
+"yo" = (
+/obj/structure/grille,
+/obj/structure/window/plastitanium{
+	dir = 8
+	},
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/surface/tyr/huntery)
 "yp" = (
 /obj/effect/floor_decal/corner/white/diagonal,
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -5625,15 +5784,31 @@
 	},
 /turf/simulated/floor/tiled/red,
 /area/surface/tyr/eclipse_stronghold/docks)
+"ys" = (
+/obj/machinery/power/rtg/fake_reactor,
+/obj/structure/cable,
+/turf/simulated/floor,
+/area/surface/tyr/huntery)
 "yt" = (
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/surface/tyr/eclipse_stronghold/stash)
+"yu" = (
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor,
+/area/surface/tyr/huntery)
 "yw" = (
 /turf/simulated/floor/carpet/oracarpet,
 /area/surface/tyr/eclipse_stronghold)
+"yx" = (
+/obj/structure/table/standard,
+/obj/item/stack/medical/advanced/bruise_pack,
+/turf/simulated/floor,
+/area/surface/tyr/huntery)
 "yy" = (
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 8
@@ -5690,6 +5865,11 @@
 	},
 /turf/simulated/floor,
 /area/surface/tyr/eclipse_stronghold/generatorA)
+"yM" = (
+/obj/structure/table/standard,
+/obj/item/stack/medical/splint,
+/turf/simulated/floor,
+/area/surface/tyr/huntery)
 "yN" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -5735,10 +5915,6 @@
 	},
 /turf/simulated/floor/tiled/old_tile/purple,
 /area/surface/tyr/eclipse_stronghold/creaturestorageB)
-"yW" = (
-/obj/structure/inflatable/door,
-/turf/simulated/floor/outdoors/desert_planet/gravel/tyr,
-/area/surface/tyr/mining_depot)
 "yY" = (
 /turf/simulated/wall/r_concrete,
 /area/surface/tyr/eclipse_stronghold/alienbotany)
@@ -5786,12 +5962,6 @@
 	},
 /turf/simulated/floor/carpet/bcarpet,
 /area/surface/tyr/eclipse_stronghold/breakroom)
-"zk" = (
-/obj/item/prop/alien/prototype,
-/obj/item/pickaxe/diamonddrill/alien,
-/obj/structure/table/rack,
-/turf/simulated/shuttle/floor/alien,
-/area/surface/tyr/precursorruins/finale)
 "zl" = (
 /obj/effect/floor_decal/corner/lime/diagonal,
 /turf/simulated/floor/tiled/hydro,
@@ -6076,15 +6246,6 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/surface/tyr/eclipse_stronghold/engihead)
-"AE" = (
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
-/turf/simulated/floor,
-/area/surface/tyr/huntery)
 "AF" = (
 /obj/structure/bookcase,
 /turf/simulated/floor/carpet/purcarpet,
@@ -6133,13 +6294,6 @@
 /mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle,
 /turf/simulated/floor/tiled/white,
 /area/surface/tyr/eclipse_stronghold/cafe)
-"AO" = (
-/obj/item/prop/alien/prototype,
-/obj/item/melee/energy/sword/dualsaber,
-/obj/item/melee/energy/sword/dualsaber,
-/obj/structure/table/rack,
-/turf/simulated/shuttle/floor/alien,
-/area/surface/tyr/precursorruins/finale)
 "AQ" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 6
@@ -6410,6 +6564,9 @@
 /obj/machinery/power/tesla_coil/amplifier,
 /turf/simulated/floor,
 /area/surface/tyr/eclipse_stronghold/teslastorage)
+"BY" = (
+/turf/simulated/floor,
+/area/surface/tyr/huntery)
 "BZ" = (
 /obj/structure/sink{
 	dir = 1
@@ -6449,6 +6606,12 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/surface/tyr/eclipse_stronghold)
+"Ch" = (
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor,
+/area/surface/tyr/huntery)
 "Ci" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /obj/machinery/door/airlock/silver,
@@ -6645,13 +6808,6 @@
 /obj/effect/overmap/visitable/planet/tyr,
 /turf/simulated/wall/solidrock,
 /area/surface/tyr/south_caverns)
-"Dc" = (
-/obj/item/gun/energy/energyballchain,
-/obj/item/holosign_creator/forcewand,
-/obj/item/holosign_creator/forcewand,
-/obj/structure/table/rack,
-/turf/simulated/shuttle/floor/alien,
-/area/surface/tyr/precursorruins/finale)
 "Dd" = (
 /obj/structure/table/steel,
 /obj/item/grenade/flashbang,
@@ -6743,12 +6899,6 @@
 "Ds" = (
 /turf/simulated/wall/r_concrete,
 /area/surface/tyr/eclipse_stronghold/cafe)
-"Dt" = (
-/obj/item/gun/energy/curse_lasershooter,
-/obj/item/pickaxe/diamonddrill/alien,
-/obj/structure/table/rack,
-/turf/simulated/shuttle/floor/alien,
-/area/surface/tyr/precursorruins/finale)
 "Du" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 1
@@ -6803,14 +6953,6 @@
 	},
 /turf/simulated/wall/r_concrete,
 /area/surface/tyr/eclipse_stronghold)
-"DJ" = (
-/obj/structure/grille,
-/obj/structure/window/plastitanium{
-	dir = 1
-	},
-/obj/structure/window/plastitanium,
-/turf/simulated/floor,
-/area/surface/tyr/huntery)
 "DL" = (
 /obj/structure/cable{
 	icon_state = "2-8"
@@ -6880,11 +7022,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/tyr/eclipse_stronghold)
-"Eb" = (
-/obj/structure/table/wooden_reinforced,
-/obj/item/flame/candle/everburn,
-/turf/simulated/floor/wood/alt/panel/turfpack,
-/area/surface/tyr/town_hall)
 "Ec" = (
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 4
@@ -7246,12 +7383,6 @@
 	},
 /turf/simulated/floor/tiled/old_tile/green,
 /area/surface/tyr/eclipse_stronghold/antroom)
-"Fz" = (
-/obj/machinery/computer/cryopod/gateway{
-	pixel_x = 32
-	},
-/turf/simulated/floor,
-/area/surface/tyr/huntery)
 "FB" = (
 /obj/structure/table/reinforced,
 /obj/item/mecha_parts/mecha_equipment/tool/hydraulic_clamp/safety,
@@ -7378,9 +7509,6 @@
 /obj/random/cash,
 /turf/simulated/floor/tiled/dark,
 /area/surface/tyr/eclipse_stronghold/stash)
-"Gi" = (
-/turf/simulated/wall/stonelogs,
-/area/surface/tyr/mining_depot)
 "Gj" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -7467,12 +7595,6 @@
 	},
 /turf/simulated/floor,
 /area/surface/tyr/eclipse_stronghold/generatorC)
-"GD" = (
-/obj/item/holosign_creator/forcewand,
-/obj/item/holosign_creator/forcewand,
-/obj/structure/table/rack,
-/turf/simulated/shuttle/floor/alien,
-/area/surface/tyr/precursorruins/finale)
 "GF" = (
 /obj/effect/floor_decal/corner/grey{
 	dir = 1
@@ -7539,6 +7661,9 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/tyr/eclipse_stronghold/cafe)
+"GW" = (
+/turf/simulated/wall/stonelogs,
+/area/surface/tyr/mining_depot)
 "GX" = (
 /obj/machinery/door/airlock/silver,
 /turf/simulated/floor/tiled/dark,
@@ -7563,10 +7688,6 @@
 "Hd" = (
 /turf/simulated/floor,
 /area/surface/tyr/eclipse_stronghold/slimeresearch)
-"He" = (
-/obj/machinery/suit_cycler/refit_only,
-/turf/simulated/floor,
-/area/surface/tyr/huntery)
 "Hf" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/outdoors/desert_planet/sand/tyr,
@@ -7615,13 +7736,6 @@
 	},
 /turf/simulated/floor,
 /area/surface/tyr/eclipse_stronghold/generatorA)
-"Hp" = (
-/obj/machinery/power/rtg/fake_reactor,
-/obj/structure/cable{
-	icon_state = "0-2"
-	},
-/turf/simulated/floor,
-/area/surface/tyr/huntery)
 "Hq" = (
 /obj/structure/closet,
 /obj/random/maintenance/medical,
@@ -7704,13 +7818,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/surface/tyr/eclipse_stronghold)
-"HH" = (
-/obj/machinery/door/airlock/hatch,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor,
-/area/surface/tyr/huntery)
 "HI" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/white,
@@ -7893,15 +8000,6 @@
 /obj/random/maintenance/foodstuff,
 /turf/simulated/floor/concrete,
 /area/surface/tyr/eclipse_stronghold/cafe)
-"Iz" = (
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
-/turf/simulated/floor,
-/area/surface/tyr/huntery)
 "IA" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -8283,21 +8381,9 @@
 	},
 /turf/simulated/floor,
 /area/surface/tyr/eclipse_stronghold/powerplantfuel)
-"Kg" = (
-/obj/structure/table/standard,
-/obj/item/radio,
-/obj/item/radio,
-/turf/simulated/floor,
-/area/surface/tyr/huntery)
 "Kh" = (
 /turf/simulated/floor/bmarble,
 /area/surface/tyr/eclipse_stronghold/cafe)
-"Kj" = (
-/obj/item/tool/crowbar/hybrid/alien,
-/obj/item/tool/crowbar/hybrid/alien,
-/obj/structure/table/rack,
-/turf/simulated/shuttle/floor/alien,
-/area/surface/tyr/precursorruins/finale)
 "Kk" = (
 /obj/effect/floor_decal/corner/yellow/bordercorner{
 	dir = 1
@@ -8432,22 +8518,6 @@
 "KO" = (
 /turf/simulated/floor/water/contaminated,
 /area/surface/tyr/precursorruins/finale)
-"KQ" = (
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor,
-/area/surface/tyr/huntery)
-"KR" = (
-/obj/structure/bed/chair/bay/chair/padded/red/bignest,
-/turf/simulated/floor/wood/alt/panel/turfpack,
-/area/surface/tyr/town_hall)
 "KS" = (
 /obj/effect/floor_decal/corner/lime/border,
 /turf/simulated/floor/bmarble,
@@ -8497,7 +8567,7 @@
 /mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle,
 /turf/simulated/floor/concrete,
 /area/surface/tyr/eclipse_stronghold/cafe)
-"Le" = (
+"Lc" = (
 /obj/structure/table/standard,
 /obj/item/stack/medical/advanced/ointment,
 /turf/simulated/floor,
@@ -8568,6 +8638,10 @@
 /mob/living/simple_mob/humanoid/eclipse/lunar/bulletstorm,
 /turf/simulated/floor/wmarble,
 /area/surface/tyr/eclipse_stronghold)
+"Lt" = (
+/obj/structure/inflatable,
+/turf/simulated/floor,
+/area/surface/tyr/huntery)
 "Lu" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -8646,21 +8720,6 @@
 /obj/random/plushie,
 /turf/simulated/floor,
 /area/surface/tyr/eclipse_stronghold/miscstorage)
-"LH" = (
-/obj/item/prop/alien/prototype,
-/obj/item/weldingtool/experimental/hybrid/alien,
-/obj/item/weldingtool/experimental/hybrid/alien,
-/obj/item/tool/wirecutters/hybrid/alien,
-/obj/structure/table/rack,
-/turf/simulated/shuttle/floor/alien,
-/area/surface/tyr/precursorruins/finale)
-"LI" = (
-/obj/machinery/door/airlock/hatch{
-	req_one_access = null
-	},
-/obj/structure/fans/hardlight,
-/turf/simulated/floor,
-/area/surface/tyr/huntery)
 "LJ" = (
 /obj/machinery/light/small,
 /obj/structure/table/steel,
@@ -8891,10 +8950,6 @@
 	},
 /turf/simulated/shuttle/floor/alien,
 /area/surface/tyr/precursorruins/finale)
-"MG" = (
-/obj/machinery/cryopod/robot/door/gateway/quiet,
-/turf/simulated/floor,
-/area/surface/tyr/huntery)
 "MH" = (
 /obj/effect/floor_decal/corner/grey/diagonal,
 /obj/structure/cable{
@@ -8902,9 +8957,6 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/surface/tyr/eclipse_stronghold/showers)
-"MI" = (
-/turf/simulated/wall/stonelogs,
-/area/surface/tyr/town_hall)
 "MJ" = (
 /obj/effect/floor_decal/corner/white/diagonal,
 /obj/structure/cable{
@@ -8945,6 +8997,12 @@
 	},
 /turf/simulated/floor/bmarble,
 /area/surface/tyr/eclipse_stronghold)
+"MQ" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor,
+/area/surface/tyr/huntery)
 "MR" = (
 /turf/simulated/shuttle/wall/alien/blue{
 	density = 0
@@ -9129,14 +9187,6 @@
 /obj/item/reagent_containers/food/snacks/dragonmeat,
 /turf/simulated/floor/tiled/freezer,
 /area/surface/tyr/eclipse_stronghold/meatstorage)
-"NL" = (
-/obj/item/gun/energy/curse_blaster,
-/obj/item/tool/screwdriver/hybrid/alien,
-/obj/item/tool/screwdriver/hybrid/alien,
-/obj/item/tool/wirecutters/hybrid/alien,
-/obj/structure/table/rack,
-/turf/simulated/shuttle/floor/alien,
-/area/surface/tyr/precursorruins/finale)
 "NP" = (
 /obj/machinery/atmospherics/unary/vent_pump,
 /turf/simulated/floor,
@@ -9181,11 +9231,6 @@
 /obj/machinery/door/airlock/silver,
 /turf/simulated/floor/tiled/monotile,
 /area/surface/tyr/eclipse_stronghold/bathroom)
-"NY" = (
-/obj/structure/table/standard,
-/obj/item/storage/firstaid/surgery,
-/turf/simulated/floor,
-/area/surface/tyr/huntery)
 "NZ" = (
 /obj/structure/cable{
 	icon_state = "2-4"
@@ -9282,13 +9327,6 @@
 	},
 /turf/simulated/floor/carpet/bcarpet,
 /area/surface/tyr/eclipse_stronghold/breakroom)
-"Ou" = (
-/obj/item/prop/alien/prototype,
-/obj/item/ammo_casing/microbattery/medical/normalsize,
-/obj/item/ammo_casing/microbattery/medical/normalsize,
-/obj/structure/table/rack,
-/turf/simulated/shuttle/floor/alien,
-/area/surface/tyr/precursorruins/finale)
 "Ov" = (
 /obj/structure/grille,
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
@@ -9390,6 +9428,10 @@
 	},
 /turf/simulated/floor,
 /area/surface/tyr/eclipse_stronghold/generatorA)
+"OV" = (
+/obj/effect/zone_divider,
+/turf/simulated/wall/r_lead,
+/area/surface/tyr/huntery)
 "OW" = (
 /obj/machinery/door/airlock/silver,
 /turf/simulated/floor/tiled/white,
@@ -9419,12 +9461,6 @@
 /obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/tiled/monotile,
 /area/surface/tyr/eclipse_stronghold/bathroom)
-"Pa" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor,
-/area/surface/tyr/huntery)
 "Pb" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -9526,6 +9562,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/tyr/eclipse_stronghold)
+"Py" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor,
+/area/surface/tyr/huntery)
 "Pz" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 9
@@ -9837,10 +9879,6 @@
 "QO" = (
 /turf/simulated/floor,
 /area/surface/tyr/eclipse_stronghold/radequipmentA)
-"QP" = (
-/obj/machinery/door/airlock,
-/turf/simulated/floor,
-/area/surface/tyr/huntery)
 "QQ" = (
 /obj/structure/cable{
 	icon_state = "1-4"
@@ -9951,16 +9989,6 @@
 /mob/living/simple_mob/humanoid/eclipse/solar/disablernoodle,
 /turf/simulated/floor/tiled/monotile,
 /area/surface/tyr/eclipse_stronghold/bathroom)
-"Rx" = (
-/obj/structure/grille,
-/obj/structure/window/plastitanium{
-	dir = 8
-	},
-/obj/structure/window/plastitanium{
-	dir = 4
-	},
-/turf/simulated/floor,
-/area/surface/tyr/huntery)
 "Rz" = (
 /obj/item/clothing/head/wizard/fake/realistic,
 /obj/effect/spider/stickyweb,
@@ -10368,6 +10396,9 @@
 	},
 /turf/simulated/floor/carpet/bcarpet,
 /area/surface/tyr/eclipse_stronghold/breakroom)
+"Ty" = (
+/turf/simulated/floor/outdoors/desert_planet/gravel/tyr,
+/area/surface/tyr/mining_depot)
 "Tz" = (
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 5
@@ -10429,12 +10460,6 @@
 	},
 /turf/simulated/floor/wmarble,
 /area/surface/tyr/eclipse_stronghold)
-"TP" = (
-/obj/item/rig/ch/tyrprecursor,
-/obj/item/rig/ch/tyrprecursor,
-/obj/structure/table/rack,
-/turf/simulated/shuttle/floor/alien,
-/area/surface/tyr/precursorruins/finale)
 "TR" = (
 /obj/machinery/vending/foodasian,
 /obj/machinery/light/small{
@@ -10554,14 +10579,6 @@
 	},
 /turf/simulated/floor,
 /area/surface/tyr/eclipse_stronghold/teslastorage)
-"Uy" = (
-/obj/machinery/power/rtg/fake_reactor,
-/obj/structure/cable{
-	icon_state = "0-8"
-	},
-/obj/effect/zone_divider,
-/turf/simulated/floor,
-/area/surface/tyr/huntery)
 "Uz" = (
 /obj/machinery/light/small,
 /turf/simulated/floor/tiled/dark,
@@ -10573,16 +10590,6 @@
 	},
 /turf/simulated/floor,
 /area/surface/tyr/eclipse_stronghold/teslastorage)
-"UC" = (
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
-/obj/machinery/power/apc/alarms_hidden{
-	dir = 8;
-	pixel_x = -24
-	},
-/turf/simulated/floor,
-/area/surface/tyr/huntery)
 "UD" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 8
@@ -10635,6 +10642,14 @@
 /obj/effect/floor_decal/corner/yellow/diagonal,
 /turf/simulated/floor/tiled/yellow,
 /area/surface/tyr/eclipse_stronghold/toolstorage)
+"UQ" = (
+/obj/structure/grille,
+/obj/structure/window/plastitanium,
+/obj/structure/window/plastitanium{
+	dir = 1
+	},
+/turf/simulated/floor,
+/area/surface/tyr/huntery)
 "UR" = (
 /mob/living/simple_mob/vore/spacecritter/solarray/galaxyray,
 /obj/effect/zone_divider,
@@ -10805,11 +10820,6 @@
 /obj/machinery/light/small,
 /turf/simulated/floor/tiled/yellow,
 /area/surface/tyr/eclipse_stronghold/toolstorage)
-"VG" = (
-/obj/structure/table/standard,
-/obj/item/stack/medical/splint,
-/turf/simulated/floor,
-/area/surface/tyr/huntery)
 "VJ" = (
 /obj/random/vendorsnack,
 /turf/simulated/floor/tiled/dark,
@@ -11044,6 +11054,9 @@
 	},
 /turf/simulated/floor/bmarble,
 /area/surface/tyr/eclipse_stronghold)
+"WU" = (
+/turf/simulated/wall/shull,
+/area/surface/tyr/huntery)
 "WV" = (
 /obj/structure/cable{
 	icon_state = "2-4"
@@ -11179,6 +11192,9 @@
 /obj/machinery/light/small,
 /turf/simulated/floor/wood,
 /area/surface/tyr/eclipse_stronghold)
+"XE" = (
+/turf/simulated/wall/stonelogs,
+/area/surface/tyr/town_hall)
 "XG" = (
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 8
@@ -11224,11 +11240,6 @@
 /mob/living/simple_mob/humanoid/eclipse/solar/nuclear,
 /turf/simulated/floor/tiled/techmaint,
 /area/surface/tyr/eclipse_stronghold)
-"XV" = (
-/obj/item/melee/energy/sword/dualsaber,
-/obj/structure/table/rack,
-/turf/simulated/shuttle/floor/alien,
-/area/surface/tyr/precursorruins/finale)
 "XW" = (
 /turf/simulated/floor/tiled/freezer,
 /area/surface/tyr/eclipse_stronghold/cmooffice)
@@ -11311,9 +11322,6 @@
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor,
 /area/surface/tyr/eclipse_stronghold)
-"Yr" = (
-/turf/simulated/wall/r_lead,
-/area/surface/tyr/huntery)
 "Ys" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
 /turf/simulated/floor,
@@ -11415,6 +11423,9 @@
 	},
 /turf/simulated/floor/wmarble,
 /area/surface/tyr/eclipse_stronghold)
+"YP" = (
+/turf/simulated/floor/wood/alt/panel/turfpack,
+/area/surface/tyr/town_hall)
 "YS" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 9
@@ -11571,12 +11582,6 @@
 	},
 /turf/simulated/floor/tiled/old_tile/green,
 /area/surface/tyr/eclipse_stronghold/antroom)
-"ZN" = (
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
-/turf/simulated/floor,
-/area/surface/tyr/huntery)
 "ZP" = (
 /obj/machinery/light/small,
 /turf/simulated/floor,
@@ -11626,12 +11631,6 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/surface/tyr/eclipse_stronghold/meatstorage)
-"ZX" = (
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
-/turf/simulated/floor,
-/area/surface/tyr/huntery)
 
 (1,1,1) = {"
 Vr
@@ -41955,9 +41954,9 @@ Uo
 Uo
 Uo
 Mz
-oO
+cP
 Th
-TP
+dh
 Mz
 Mz
 Mz
@@ -42471,14 +42470,14 @@ Uo
 Uo
 Mz
 Mz
-wr
+cT
 Th
 Th
 Mz
 Mz
-zk
+fu
 Th
-pJ
+iF
 Mz
 Mz
 Mz
@@ -42994,7 +42993,7 @@ Th
 ef
 Th
 Th
-Dt
+jC
 Mz
 Mz
 Mz
@@ -43509,9 +43508,9 @@ Th
 Th
 Th
 Mz
-Ou
+gy
 Th
-ak
+mY
 Mz
 Mz
 Mz
@@ -44027,7 +44026,7 @@ Th
 fx
 Th
 Th
-ej
+nc
 Mz
 Mz
 Mz
@@ -45317,7 +45316,7 @@ Th
 fQ
 Th
 Th
-XV
+nf
 Mz
 Mz
 Mz
@@ -45831,9 +45830,9 @@ Th
 Th
 Th
 Mz
-AO
+hH
 Th
-XV
+nf
 Mz
 Mz
 Mz
@@ -46348,7 +46347,7 @@ Th
 ez
 Th
 Th
-NL
+jG
 Mz
 Mz
 Mz
@@ -46857,14 +46856,14 @@ Uo
 Uo
 Mz
 Mz
-wr
+cT
 Th
 Th
 Mz
 Mz
-LH
+fS
 Th
-Kj
+kh
 Mz
 Mz
 Mz
@@ -47373,9 +47372,9 @@ Uo
 Uo
 Uo
 Mz
-Dc
+cY
 Th
-GD
+dt
 Mz
 Mz
 Mz
@@ -62871,12 +62870,12 @@ Uo
 Uo
 Uo
 Uo
-dZ
+Lt
 Uo
 Uo
 Uo
 Uo
-dZ
+Lt
 Uo
 Uo
 Uo
@@ -63128,14 +63127,14 @@ Uo
 Uo
 Uo
 Uo
-pX
-td
-dZ
-dZ
+WU
+BY
+Lt
+Lt
 Uo
-dZ
-td
-dZ
+Lt
+BY
+Lt
 Uo
 Uo
 Uo
@@ -63386,14 +63385,14 @@ Uo
 Uo
 Uo
 Uo
-pX
-td
-td
-td
-dZ
-dZ
-td
-dZ
+WU
+BY
+BY
+BY
+Lt
+Lt
+BY
+Lt
 Uo
 Uo
 Uo
@@ -63644,15 +63643,15 @@ Uo
 Uo
 Uo
 Uo
-pX
-td
-td
-td
-td
-td
-td
-td
-dZ
+WU
+BY
+BY
+BY
+BY
+BY
+BY
+BY
+Lt
 Uo
 Uo
 Uo
@@ -63902,15 +63901,15 @@ Uo
 Uo
 Uo
 Uo
-pX
-td
-td
-td
-td
-td
-td
-td
-pX
+WU
+BY
+BY
+BY
+BY
+BY
+BY
+BY
+WU
 Uo
 Uo
 Uo
@@ -64160,15 +64159,15 @@ Uo
 Uo
 Uo
 Uo
-pX
-td
-pX
-pX
-pX
-pX
-pX
-td
-pX
+WU
+BY
+WU
+WU
+WU
+WU
+WU
+BY
+WU
 Uo
 Uo
 Uo
@@ -64418,15 +64417,15 @@ Uo
 Uo
 Uo
 Uo
-pX
-td
-pX
-td
-MG
-td
-pX
-td
-pX
+WU
+BY
+WU
+BY
+vb
+BY
+WU
+BY
+WU
 Uo
 Uo
 Uo
@@ -64676,15 +64675,15 @@ Uo
 Uo
 Uo
 Uo
-pX
-td
-pX
-td
-td
-td
-pX
-td
-pX
+WU
+BY
+WU
+BY
+BY
+BY
+WU
+BY
+WU
 Uo
 Uo
 Uo
@@ -64934,15 +64933,15 @@ Uo
 Uo
 Uo
 Uo
-pX
-td
-td
-td
-Fz
-td
-td
-td
-pX
+WU
+BY
+BY
+BY
+vc
+BY
+BY
+BY
+WU
 Uo
 Uo
 Uo
@@ -65192,15 +65191,15 @@ Uo
 Uo
 Uo
 Uo
-pX
-td
-pX
-pX
-pX
-pX
-pX
-td
-pX
+WU
+BY
+WU
+WU
+WU
+WU
+WU
+BY
+WU
 Uo
 Uo
 Uo
@@ -65450,15 +65449,15 @@ Uo
 Uo
 Uo
 Uo
-pX
-ZN
-Pa
-Pa
-AE
-Pa
-Pa
-ck
-pX
+WU
+oR
+MQ
+MQ
+vN
+MQ
+MQ
+Ch
+WU
 Uo
 Uo
 Uo
@@ -65708,15 +65707,15 @@ Uo
 Uo
 Uo
 Uo
-pX
-mu
-Yr
-Yr
-HH
-Yr
-Yr
-mu
-pX
+WU
+Py
+ir
+ir
+wH
+ir
+ir
+Py
+WU
 Uo
 Uo
 Uo
@@ -65966,15 +65965,15 @@ Uo
 Uo
 Uo
 Uo
-pX
-mu
-Yr
-Yr
-mu
-Yr
-Yr
-mu
-pX
+WU
+Py
+ir
+ir
+Py
+ir
+ir
+Py
+WU
 Uo
 Uo
 Uo
@@ -66224,15 +66223,15 @@ Uo
 Uo
 Uo
 Uo
-pX
-mu
-Yr
-Hp
-KQ
-hk
-Yr
-mu
-pX
+WU
+Py
+ir
+uF
+wO
+ys
+ir
+Py
+WU
 Uo
 Uo
 Uo
@@ -66482,15 +66481,15 @@ YZ
 YZ
 YZ
 YZ
-jW
-ae
-nN
-nN
-Uy
-nN
-nN
-ae
-jW
+nv
+rd
+OV
+OV
+xb
+OV
+OV
+rd
+nv
 YZ
 YZ
 YZ
@@ -66740,15 +66739,15 @@ Uo
 Uo
 Wa
 Wa
-pX
-mu
-Yr
-Yr
-Yr
-Yr
-Yr
-mu
-pX
+WU
+Py
+ir
+ir
+ir
+ir
+ir
+Py
+WU
 Uo
 Uo
 Uo
@@ -66998,15 +66997,15 @@ Uo
 Wa
 Wa
 Wa
-LI
-mu
-td
-td
-UC
-td
-td
-mu
-LI
+nK
+Py
+BY
+BY
+xu
+BY
+BY
+Py
+nK
 Wa
 Wa
 Uo
@@ -67256,15 +67255,15 @@ Wa
 Wa
 Wa
 Wa
-LI
-bF
-Pa
-Pa
-Iz
-Pa
-Pa
-ZX
-LI
+nK
+pd
+MQ
+MQ
+xx
+MQ
+MQ
+yu
+nK
 Wa
 Wa
 Wa
@@ -67514,15 +67513,15 @@ Wa
 Wa
 Wa
 Uo
-pX
-pX
-pX
-pX
-td
-pX
-pX
-pX
-pX
+WU
+WU
+WU
+WU
+BY
+WU
+WU
+WU
+WU
 Wa
 Wa
 Wa
@@ -67772,15 +67771,15 @@ Wa
 Wa
 Wa
 Uo
-pX
-iM
-iM
-pX
-td
-pX
-NY
-su
-pX
+WU
+pV
+pV
+WU
+BY
+WU
+vR
+yx
+WU
 Uo
 Wa
 Wa
@@ -68030,15 +68029,15 @@ Wa
 Wa
 Uo
 Uo
-DJ
-td
-aU
-pX
-td
-pX
-td
-sF
-dZ
+nP
+BY
+tJ
+WU
+BY
+WU
+BY
+dH
+Lt
 Uo
 Uo
 Wa
@@ -68288,15 +68287,15 @@ Wa
 Uo
 Uo
 Uo
-dZ
-He
-td
-QP
-td
-QP
-td
-VG
-yj
+Lt
+qp
+BY
+vK
+BY
+vK
+BY
+yM
+UQ
 Uo
 Uo
 Wa
@@ -68546,15 +68545,15 @@ Wa
 Uo
 Uo
 Uo
-dZ
-td
-td
-pX
-td
-pX
-aU
-sF
-dZ
+Lt
+BY
+BY
+WU
+BY
+WU
+tJ
+dH
+Lt
 Uo
 Uo
 Uo
@@ -68804,15 +68803,15 @@ Wa
 Wa
 Uo
 Uo
-pX
-xV
-xV
-pX
-td
-pX
-Le
-NY
-pX
+WU
+rp
+rp
+WU
+BY
+WU
+Lc
+vR
+WU
 Uo
 Uo
 Uo
@@ -69062,15 +69061,15 @@ Wa
 Wa
 Uo
 Uo
-pX
-pX
-pX
-pX
-QP
-pX
-pX
-pX
-pX
+WU
+WU
+WU
+WU
+vK
+WU
+WU
+WU
+WU
 Uo
 Uo
 Uo
@@ -69320,15 +69319,15 @@ Wa
 Wa
 Uo
 Uo
-pX
-pX
-Kg
-td
-td
-td
-Kg
-pX
-pX
+WU
+WU
+tW
+BY
+BY
+BY
+tW
+WU
+WU
 Uo
 Uo
 Uo
@@ -69578,15 +69577,15 @@ Wa
 Wa
 Uo
 Uo
-pX
-pX
-Kg
-fq
-td
-fq
-Kg
-pX
-pX
+WU
+WU
+tW
+uK
+BY
+uK
+tW
+WU
+WU
 Uo
 Uo
 Uo
@@ -69837,13 +69836,13 @@ Wa
 Wa
 Uo
 Uo
-pX
-pX
-td
-td
-td
-pX
-pX
+WU
+WU
+BY
+BY
+BY
+WU
+WU
 Uo
 Uo
 Uo
@@ -70071,20 +70070,20 @@ Uo
 Hf
 Uo
 Uo
-MI
-MI
-MI
-MI
-MI
-MI
-MI
-MI
-MI
-MI
-MI
-MI
-MI
-MI
+XE
+XE
+XE
+XE
+XE
+XE
+XE
+XE
+XE
+XE
+XE
+XE
+XE
+XE
 Uo
 Uo
 Uo
@@ -70096,11 +70095,11 @@ Wa
 Wa
 Uo
 Uo
-pX
-dZ
-Rx
-Rx
-pX
+WU
+Lt
+yo
+yo
+WU
 Uo
 Uo
 Uo
@@ -70328,21 +70327,21 @@ Uo
 Uo
 Hf
 Uo
-MI
-MI
-hJ
-hJ
-hJ
-KR
-hJ
-hJ
-KR
-hJ
-hJ
-KR
-hJ
-hJ
-MI
+XE
+XE
+YP
+YP
+YP
+cG
+YP
+YP
+cG
+YP
+YP
+cG
+YP
+YP
+XE
 Uo
 Uo
 Uo
@@ -70585,22 +70584,22 @@ Uo
 Uo
 Uo
 Hf
-MI
-MI
-hJ
-hJ
-hJ
-hJ
-KR
-hJ
-hJ
-KR
-hJ
-hJ
-KR
-hJ
-hJ
-MI
+XE
+XE
+YP
+YP
+YP
+YP
+cG
+YP
+YP
+cG
+YP
+YP
+cG
+YP
+YP
+XE
 Uo
 Uo
 Uo
@@ -70843,22 +70842,22 @@ Uo
 Uo
 Uo
 Hf
-MI
-xF
-hJ
-hJ
-hJ
-hJ
-Eb
-hJ
-hJ
-Eb
-hJ
-hJ
-Eb
-hJ
-hJ
-MI
+XE
+bT
+YP
+YP
+YP
+YP
+jd
+YP
+YP
+jd
+YP
+YP
+jd
+YP
+YP
+XE
 Wa
 Uo
 Uo
@@ -71101,22 +71100,22 @@ Uo
 Uo
 Uo
 Hf
-MI
-hJ
-hJ
-xc
-hJ
-hJ
-hJ
-hJ
-hJ
-hJ
-hJ
-hJ
-hJ
-hJ
-hJ
-kv
+XE
+YP
+YP
+co
+YP
+YP
+YP
+YP
+YP
+YP
+YP
+YP
+YP
+YP
+YP
+lK
 Wa
 Wa
 Uo
@@ -71359,22 +71358,22 @@ Uo
 Uo
 Uo
 Hf
-MI
-hJ
-hJ
-sW
-hJ
-hJ
-hJ
-hJ
-hJ
-hJ
-hJ
-hJ
-hJ
-hJ
-hJ
-MI
+XE
+YP
+YP
+ct
+YP
+YP
+YP
+YP
+YP
+YP
+YP
+YP
+YP
+YP
+YP
+XE
 Wa
 Wa
 Wa
@@ -71617,22 +71616,22 @@ Uo
 Uo
 Uo
 Hf
-MI
-hJ
-hJ
-xc
-hJ
-hJ
-hJ
-hJ
-hJ
-hJ
-hJ
-hJ
-hJ
-hJ
-hJ
-kv
+XE
+YP
+YP
+co
+YP
+YP
+YP
+YP
+YP
+YP
+YP
+YP
+YP
+YP
+YP
+lK
 Wa
 Wa
 Wa
@@ -71875,22 +71874,22 @@ Uo
 Uo
 Uo
 Hf
-MI
-hJ
-hJ
-hJ
-hJ
-hJ
-Eb
-hJ
-hJ
-Eb
-hJ
-hJ
-Eb
-hJ
-hJ
-MI
+XE
+YP
+YP
+YP
+YP
+YP
+jd
+YP
+YP
+jd
+YP
+YP
+jd
+YP
+YP
+XE
 Wa
 Wa
 Wa
@@ -72133,22 +72132,22 @@ Uo
 Uo
 Uo
 Hf
-MI
-MI
-hJ
-hJ
-hJ
-hJ
-KR
-hJ
-hJ
-KR
-hJ
-hJ
-KR
-hJ
-hJ
-MI
+XE
+XE
+YP
+YP
+YP
+YP
+cG
+YP
+YP
+cG
+YP
+YP
+cG
+YP
+YP
+XE
 Uo
 Wa
 Wa
@@ -72392,21 +72391,21 @@ Uo
 Uo
 Hf
 Uo
-MI
-MI
-hJ
-hJ
-hJ
-KR
-hJ
-hJ
-KR
-hJ
-hJ
-KR
-hJ
-hJ
-MI
+XE
+XE
+YP
+YP
+YP
+cG
+YP
+YP
+cG
+YP
+YP
+cG
+YP
+YP
+XE
 Uo
 Uo
 Uo
@@ -72651,20 +72650,20 @@ Uo
 Hf
 Uo
 Uo
-MI
-MI
-MI
-MI
-MI
-MI
-MI
-MI
-MI
-MI
-MI
-MI
-MI
-MI
+XE
+XE
+XE
+XE
+XE
+XE
+XE
+XE
+XE
+XE
+XE
+XE
+XE
+XE
 Uo
 Uo
 Uo
@@ -73445,14 +73444,14 @@ Uo
 Uo
 Uo
 Uo
-Gi
-Gi
-Gi
-yW
-yW
-Gi
-Gi
-Gi
+GW
+GW
+GW
+oE
+oE
+GW
+GW
+GW
 Uo
 Uo
 Uo
@@ -73703,14 +73702,14 @@ Uo
 Uo
 Uo
 Uo
-Gi
-dG
-dG
-dG
-dG
-dG
-dG
-Gi
+GW
+Ty
+Ty
+Ty
+Ty
+Ty
+Ty
+GW
 Uo
 Uo
 Uo
@@ -73961,14 +73960,14 @@ Uo
 Uo
 Uo
 Uo
-Gi
-dG
-dG
-dG
-dG
-dG
-dG
-Gi
+GW
+Ty
+Ty
+Ty
+Ty
+Ty
+Ty
+GW
 Uo
 Uo
 Uo
@@ -74219,14 +74218,14 @@ Uo
 Uo
 Uo
 Uo
-Gi
-dG
-dG
-dG
-dG
-dG
-dG
-Gi
+GW
+Ty
+Ty
+Ty
+Ty
+Ty
+Ty
+GW
 Uo
 Uo
 Uo
@@ -74477,14 +74476,14 @@ Uo
 Uo
 Uo
 Uo
-Gi
-dG
-dG
-dG
-dG
-dG
-dG
-Gi
+GW
+Ty
+Ty
+Ty
+Ty
+Ty
+Ty
+GW
 Uo
 Uo
 Uo
@@ -74735,14 +74734,14 @@ Uo
 Uo
 Uo
 Uo
-Gi
-dG
-dG
-dG
-dG
-dG
-dG
-Gi
+GW
+Ty
+Ty
+Ty
+Ty
+Ty
+Ty
+GW
 Uo
 Uo
 Uo
@@ -74993,14 +74992,14 @@ Uo
 Uo
 Uo
 Uo
-Gi
-dG
-dG
-dG
-uv
-dG
-dG
-Gi
+GW
+Ty
+Ty
+Ty
+tH
+Ty
+Ty
+GW
 Uo
 Uo
 Uo
@@ -75251,14 +75250,14 @@ Uo
 Uo
 Uo
 Uo
-Gi
-dG
-dG
-dG
-dG
-dG
-dG
-Gi
+GW
+Ty
+Ty
+Ty
+Ty
+Ty
+Ty
+GW
 Uo
 Uo
 Uo
@@ -75509,14 +75508,14 @@ Uo
 Uo
 Uo
 Uo
-Gi
-dG
-dG
-dG
-dG
-dG
-dG
-Gi
+GW
+Ty
+Ty
+Ty
+Ty
+Ty
+Ty
+GW
 Uo
 Uo
 Uo
@@ -75767,14 +75766,14 @@ Uo
 Uo
 Uo
 Uo
-Gi
-dG
-dG
-dG
-dG
-dG
-dG
-Gi
+GW
+Ty
+Ty
+Ty
+Ty
+Ty
+Ty
+GW
 Uo
 Uo
 Uo
@@ -76025,14 +76024,14 @@ Uo
 Uo
 Uo
 Uo
-Gi
-Gi
-Gi
-Gi
-Gi
-Gi
-Gi
-Gi
+GW
+GW
+GW
+GW
+GW
+GW
+GW
+GW
 Uo
 Uo
 Uo

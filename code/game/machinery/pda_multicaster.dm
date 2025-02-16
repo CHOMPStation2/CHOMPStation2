@@ -15,8 +15,8 @@
 	var/datum/looping_sound/tcomms/soundloop // CHOMPStation Add: Hummy noises
 	var/noisy = TRUE  // CHOMPStation Add: Hummy noises
 
-/obj/machinery/pda_multicaster/New()
-	..()
+/obj/machinery/pda_multicaster/Initialize(mapload)
+	. = ..()
 	internal_PDAs = list("command" = new /obj/item/pda/multicaster/command(src),
 		"security" = new /obj/item/pda/multicaster/security(src),
 		"engineering" = new /obj/item/pda/multicaster/engineering(src),
