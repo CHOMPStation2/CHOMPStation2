@@ -1383,16 +1383,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/wall/solidrock,
 /area/awaymission/mol/vr/shattered)
-"iW" = (
-/obj/effect/floor_decal/corner/red/border{
-	dir = 3
-	},
-/turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 293.15;
-	oxygen = 21.8366;
-	nitrogen = 82.1472
-	},
-/area/awaymission/mol/entrancetunnel)
 "jb" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -1663,15 +1653,6 @@
 /mob/living/simple_mob/vore/candy/bluecabold,
 /turf/simulated/floor/tiled/kafel_full/beige,
 /area/awaymission/mol/kitchen/chamberB)
-"kP" = (
-/obj/machinery/crystal/ice,
-/obj/machinery/crystal/ice,
-/turf/simulated/floor/outdoors/ice/dark{
-	nitrogen = 82.1472;
-	oxygen = 21.8366;
-	temperature = 293.15
-	},
-/area/awaymission/mol/mines)
 "kR" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/wall/r_wall,
@@ -2616,13 +2597,6 @@
 /obj/structure/bookcase,
 /turf/simulated/floor/wood,
 /area/awaymission/mol/audiotorium)
-"qL" = (
-/obj/effect/floor_decal/corner/grey/diagonal,
-/obj/structure/table/steel,
-/obj/structure/table/steel,
-/obj/random/maintenance,
-/turf/simulated/floor/bmarble,
-/area/awaymission/mol/scraptunnels/room2)
 "qN" = (
 /obj/structure/table/borosilicate,
 /obj/machinery/button/remote/blast_door{
@@ -2856,13 +2830,6 @@
 /obj/structure/closet/secure_closet/freezer/meat,
 /turf/simulated/floor/tiled/kafel_full/yellow,
 /area/awaymission/mol/kitchen/chamberC)
-"sf" = (
-/obj/effect/floor_decal/corner/grey/diagonal,
-/obj/structure/table/steel,
-/obj/structure/table/steel,
-/obj/random/maintenance,
-/turf/simulated/floor/bmarble,
-/area/awaymission/mol/scraptunnels/room3)
 "sg" = (
 /obj/effect/decal/mecha_wreckage/mauler,
 /obj/effect/floor_decal/corner/black/diagonal,
@@ -3737,7 +3704,6 @@
 "xM" = (
 /obj/effect/floor_decal/corner/yellow/border,
 /obj/machinery/light,
-/obj/machinery/body_scanconsole,
 /obj/machinery/body_scanconsole,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/medical)
@@ -5059,12 +5025,6 @@
 /obj/effect/floor_decal/corner/black/diagonal,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/hardlightentrance)
-"FA" = (
-/obj/effect/floor_decal/corner/grey/diagonal,
-/obj/structure/table/marble,
-/obj/structure/table/marble,
-/turf/simulated/floor/bmarble,
-/area/awaymission/mol/scraptunnels/room1)
 "FB" = (
 /obj/effect/floor_decal/corner/grey/diagonal,
 /obj/machinery/light{
@@ -6059,12 +6019,6 @@
 "Mj" = (
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/scraptunnels/room3)
-"Mk" = (
-/obj/effect/floor_decal/corner/grey/diagonal,
-/obj/machinery/light,
-/obj/machinery/light,
-/turf/simulated/floor/bmarble,
-/area/awaymission/mol/scraptunnels/room1)
 "Mr" = (
 /mob/living/simple_mob/vore/candy/purplecabold,
 /obj/structure/disposalpipe/segment,
@@ -6945,13 +6899,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full/gray,
 /area/awaymission/mol/kitchen/ChamberD)
-"RW" = (
-/obj/effect/floor_decal/corner/grey/diagonal,
-/obj/structure/table/steel,
-/obj/structure/table/steel,
-/obj/structure/curtain,
-/turf/simulated/floor/bmarble,
-/area/awaymission/mol/scraptunnels/room3)
 "RZ" = (
 /mob/living/simple_mob/vore/candy/yellowcabold,
 /turf/simulated/floor/tiled/kafel_full/yellow,
@@ -7319,19 +7266,6 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/awaymission/mol/serverroom)
-"Us" = (
-/obj/effect/floor_decal/corner/red/border{
-	dir = 3
-	},
-/obj/effect/floor_decal/corner/red/border{
-	dir = 3
-	},
-/turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 293.15;
-	oxygen = 21.8366;
-	nitrogen = 82.1472
-	},
-/area/awaymission/mol/entrancetunnel)
 "Ut" = (
 /obj/effect/floor_decal/corner/red/border{
 	dir = 5
@@ -22389,7 +22323,7 @@ uc
 Ta
 bF
 bF
-RW
+bF
 uc
 bF
 bF
@@ -22899,7 +22833,7 @@ HX
 zu
 Ta
 HX
-sf
+zu
 zu
 HX
 Ta
@@ -27543,7 +27477,7 @@ dc
 zs
 Jw
 dc
-qL
+zs
 zs
 dc
 Jw
@@ -34502,7 +34436,7 @@ WQ
 WQ
 WQ
 WQ
-Mk
+qE
 wa
 zv
 zv
@@ -35273,7 +35207,7 @@ xx
 uS
 GX
 xx
-FA
+xx
 WQ
 WQ
 WQ
@@ -38920,7 +38854,7 @@ Nh
 Ae
 kX
 zj
-Us
+Oo
 Ae
 Nh
 Ae
@@ -39178,7 +39112,7 @@ Nh
 Ae
 kX
 YW
-iW
+Oo
 Ae
 Nh
 Ae
@@ -39436,7 +39370,7 @@ Ae
 Ae
 ef
 YW
-iW
+Oo
 Ae
 Ae
 Ae
@@ -41500,7 +41434,7 @@ Ae
 Ae
 kX
 YW
-iW
+Oo
 Ae
 Ae
 Ae
@@ -41758,7 +41692,7 @@ Nh
 Ae
 kX
 YW
-iW
+Oo
 Ae
 Nh
 Ae
@@ -42016,7 +41950,7 @@ Nh
 Ae
 kX
 zj
-iW
+Oo
 Ae
 Nh
 Ae
@@ -55417,7 +55351,7 @@ Nh
 xB
 xB
 xB
-kP
+AW
 xB
 xB
 xB
