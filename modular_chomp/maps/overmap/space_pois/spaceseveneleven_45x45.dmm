@@ -760,13 +760,13 @@
 /obj/structure/window/basic{
 	dir = 8
 	},
-/obj/item/reagent_containers/food/drinks/bottle/tequilla{
+/obj/item/reagent_containers/food/drinks/bottle/tequila{
 	pixel_x = -7
 	},
-/obj/item/reagent_containers/food/drinks/bottle/tequilla{
+/obj/item/reagent_containers/food/drinks/bottle/tequila{
 	pixel_x = -7
 	},
-/obj/item/reagent_containers/food/drinks/bottle/tequilla{
+/obj/item/reagent_containers/food/drinks/bottle/tequila{
 	pixel_x = -7
 	},
 /obj/item/reagent_containers/food/drinks/bottle/jager,

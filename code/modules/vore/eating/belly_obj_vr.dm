@@ -443,6 +443,7 @@
 		var/mob/living/L = thing
 		startfx.Add(L)
 		startfx.Add(get_belly_surrounding(L.contents))
+		owner.handle_belly_update() //CHOMPEdit - This is run whenever a belly's contents are changed.
 	if(istype(thing,/obj/item))
 		var/obj/item/I = thing
 		startfx.Add(get_belly_surrounding(I.contents))
@@ -466,16 +467,15 @@
 		vore_fx(M, TRUE) //CHOMPEdit: update belleh
 		if(owner.previewing_belly == src) //CHOMPEdit
 			vore_fx(owner, TRUE) //CHOMPEdit: update belleh
-		owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 		//Stop AI processing in bellies
 		if(M.ai_holder)
 			M.ai_holder.go_sleep()
 		if(reagents.total_volume >= 5) //CHOMPEdit Start
 			if(digest_mode == DM_DIGEST && M.digestable)
 				reagents.trans_to(M, reagents.total_volume * 0.1, 1 / max(LAZYLEN(contents), 1), FALSE)
-			to_chat(M, span_vwarning("<B>You splash into a pool of [reagent_name]!</B>"))
+			to_chat(M, span_vwarning(span_bold("You splash into a pool of [reagent_name]!")))
 	if(!isliving(thing) && count_items_for_sprite) //CHOMPEdit - If this is enabled also update fullness for non-living things
-		owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
+		owner.handle_belly_update() //CHOMPEdit - This is run whenever a belly's contents are changed.
 	//if(istype(thing, /obj/item/capture_crystal)) //CHOMPEdit start: Capture crystal occupant gets to see belly text too. Moved to modular_chomp capture_crystal.dm.
 		//var/obj/item/capture_crystal/CC = thing
 		//if(CC.bound_mob && desc)
@@ -500,7 +500,7 @@
 	if(isbelly(thing.loc)) //CHOMPEdit Start
 		var/obj/belly/NB = thing.loc
 		if(count_items_for_sprite && !NB.count_items_for_sprite)
-			owner.update_fullness()
+			owner.handle_belly_update()
 		return //CHOMPEdit End
 
 	//CHOMPEdit Start - Remove vorefx from all those indirectly viewing as well
@@ -509,13 +509,13 @@
 		var/mob/living/L = thing
 		endfx.Add(L)
 		endfx.Add(get_belly_surrounding(L.contents))
+		owner.handle_belly_update() //CHOMPEdit - This is run whenever a belly's contents are changed.
 	if(istype(thing,/obj/item))
 		var/obj/item/I = thing
 		endfx.Add(get_belly_surrounding(I.contents))
 	if(!isbelly(thing.loc))
 		for(var/mob/living/L in endfx) //CHOMPEdit End
 			if(L.surrounding_belly()) continue
-			owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
 			L.clear_fullscreen("belly")
 			//L.clear_fullscreen("belly2") // CHOMP Disable - using our implementation, not upstream's
 			//L.clear_fullscreen("belly3") // CHOMP Disable - using our implementation, not upstream's
@@ -529,7 +529,7 @@
 	//CHOMPEdit End of indirect vorefx changes
 	if(isitem(thing) && !isbelly(thing.loc)) //CHOMPEdit: Digest stage effects. Don't bother adding overlays to stuff that won't make it back out.
 		if(count_items_for_sprite) //CHOMPEdit - If this is enabled also update fullness for non-living things
-			owner.update_fullness() //CHOMPEdit - This is run whenever a belly's contents are changed.
+			owner.handle_belly_update() //CHOMPEdit - This is run whenever a belly's contents are changed.
 		var/obj/item/I = thing
 		if(I.gurgled)
 			I.cut_overlay(gurgled_overlays[I.gurgled_color]) //No double-overlay for worn items.
@@ -922,8 +922,6 @@
 
 	//Clean up our own business
 	items_preserved.Cut()
-	if(!ishuman(owner))
-		owner.update_icons()
 
 	//Determines privacy
 	var/privacy_range = world.view
@@ -1007,9 +1005,6 @@
 		if(ML.stat)
 			ML.SetSleeping(min(ML.sleeping,20))
 
-	//Clean up our own business
-	if(!ishuman(owner))
-		owner.update_icons()
 
 	//Determines privacy
 	var/privacy_range = world.view
@@ -1059,8 +1054,6 @@
 		var/mob/ourmob = prey
 		ourmob.reset_view(owner)
 	owner.updateVRPanel()
-	if(isanimal(owner))
-		owner.update_icon()
 
 	for(var/mob/living/M in contents)
 		M.updateVRPanel()
@@ -1161,7 +1154,7 @@
 			M.reagents.del_reagent(REAGENT_ID_CLEANER) //Don't need this stuff in our bloodstream.
 			M.reagents.trans_to_holder(Pred.ingested, M.reagents.total_volume, 0.5, TRUE) //CHOMPEdit End
 
-	owner.update_fullness()
+	owner.handle_belly_update()
 
 	//Incase they have the loop going, let's double check to stop it.
 	M.stop_sound_channel(CHANNEL_PREYLOOP)
@@ -1204,8 +1197,7 @@
 			M.forceMove(G)
 		else
 			qdel(M)
-	if(isanimal(owner))
-		owner.update_icon()
+	owner.handle_belly_update()
 	//CHOMPEdit End
 
 // Handle a mob being absorbed
@@ -1259,10 +1251,7 @@
 
 	//Update owner
 	owner.updateVRPanel()
-	if(isanimal(owner))
-		owner.update_icon()
-	else
-		owner.update_fullness()
+	owner.handle_belly_update()
 	// Finally, if they're to be sent to a special pudge belly, send them there
 	if(transferlocation_absorb)
 		var/obj/belly/dest_belly
@@ -1289,10 +1278,7 @@
 
 	//Update owner
 	owner.updateVRPanel()
-	if(isanimal(owner))
-		owner.update_icon()
-	else
-		owner.update_fullness()
+	owner.handle_belly_update()
 
 /////////////////////////////////////////////////////////////////////////
 /obj/belly/proc/handle_absorb_langs()
@@ -1617,7 +1603,7 @@
 	owner.updateVRPanel()
 	for(var/mob/living/M in contents)
 		M.updateVRPanel()
-	owner.update_icon()
+	owner.handle_belly_update()
 
 //Autotransfer callback CHOMPEdit Start
 /obj/belly/proc/check_autotransfer(var/atom/movable/prey)

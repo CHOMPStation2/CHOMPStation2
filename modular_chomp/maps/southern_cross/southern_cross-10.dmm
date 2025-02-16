@@ -425,10 +425,6 @@
 "bE" = (
 /turf/simulated/wall/rsifwood,
 /area/surface/outpost/shelter/exterior)
-"bF" = (
-/turf/simulated/mineral/sif,
-/turf/simulated/mineral/sif,
-/area/surface/outside/wilderness/mountains)
 "bG" = (
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/shelter/dorms)
@@ -67124,7 +67120,7 @@ ac
 ac
 ac
 ac
-bF
+ac
 ac
 ac
 ac

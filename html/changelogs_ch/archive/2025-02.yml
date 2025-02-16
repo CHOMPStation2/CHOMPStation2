@@ -259,3 +259,132 @@
   - code_imp: Made a global blacklist for artifacts that should not spawn in global_lists.dm
   Kashargul:
   - bugfix: swoopies being unable to use the soulcatcher
+2025-02-13:
+  tacoguy7765093:
+  - maptweak: Map stability fixes.
+2025-02-14:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: You can no longer choose multiple autohisses at once
+  - rscadd: dynamic light system for planets
+  - qol: updates diagonal movement calculations
+  - bugfix: belly sprites not properly working in some cases
+  - bugfix: Micro cameras will now properly reset when micros are dropped
+  Will:
+  - bugfix: Injectors can now properly spawn on maps now.
+  - bugfix: Some issues with blood were fixed
+  - bugfix: Fixes various issues with genetics
+  - rscadd: The resleever will now talk to you with a cute medical speech bubble when
+      it makes a dna resequencer.
+  Will, Kash, Diana:
+  - bugfix: Fixes a server crashing issue with flip emote
+  - bugfix: Fixes Genetics and all the powers that came with it
+  - rscadd: Adds Trait Genetics to the game. (Genetics can activate/deactivate traits)
+  - rscadd: Various new traits up-ported (drippy, rad-resistance/immunity, Photosynthesis,
+      Rotting Genetics, Incomprehensible, Less blood volume, slowdown EXTREME, low
+      blood sugar, Agoraphobia, Loneliness, Glass Endurance, reduced biocompat, photosensitivity,
+      haemophillia, pain intolerance, sensitive biochem, table passer,)
+  - rscadd: Health analyzers tell you if someone is  suffering from a genetic side
+      effect and what to give to cure them.
+  - rscadd: Allows cocoon weaver to change eye and skin color
+  - bugfix: Various small bugfixes up-ported from Chomp
+  - sound: Added some founds from Chomp for space inhale/exhale sounds
+  - refactor: Refactors how radiation code works to work with rad resistance/immunity.
+  - refactor: Genetic side effects edited NOT to be shitcode with spawns & sleeps.
+      Made to use timers instead.
+  - code_imp: Updated a LOT of files to be equivalent to their chomp versions.
+  - balance: Adjusted  laser eyes  to do 10 damage instead of 40 per shot, due to
+      being spammable and nutrition being extremely high.
+  - balance: Chems that formerly fixed genetic damage now heal cloneloss instead of
+      genetics, since the new system is incomparable with old genetic healing.
+  - rscadd: People can be reset to their default with the resleever console, as it
+      can print out a genetic injector that does NO radiation or genetic damage, just
+      purely fixing them back to their default.
+  - code_imp: A lot of the below were added because while updating the files to be
+      1:1 where traitgene changes occured, there were massive changes codewise.
+  - code_imp: Autostrip steptriggers added
+  - code_imp: Flare box now contains 14 instead of just 4 flares.
+  - code_imp: Mind secure closets added
+  - code_imp: Persistence doesn't do to_world anymore
+  - code_imp: Removes a LOT OF VORESTATION EDIT COMMENTS as we are no longer a downstream.
+  - code_imp: '''DO NOT USE'' sprite_accessories will no longer appear.'
+  - code_imp: disk/data was removed and replaced with disk/body_record. Fluff item
+      fixed with this in mind.
+  - code_imp: Gets rid of RS comments that slipped into our code somehow.
+  - code_imp: Save_character will now tell you you saved your character.
+  - code_imp: Abandoned crates given dna injectors as possible loot. Teppi ray added.
+      Alien junk prop added.
+  - bugfix: When an observer/dead is destroyed, it now properly gets rid of the visualnet
+      blocked turfs.
+  - bugfix: choosing high blood volume no longer kills you on spawn
+  - bugfix: AI eye no longer hard deletes
+  - rscadd: Last_breath_sounds added from CS. Touched human/human.dm
+  - bugfix: Rest-left Rest-right works properly
+  - code_imp: Moving with broken limbs checks to see if you can feel pain before doing
+      a pain emote
+  - code_imp: Radiation cap increased to 5000 to account for rad resistant peoples.
+  - code_imp: Radiation now is decreased by a rad_removal_mod.
+  - code_imp: Shrinks & grows vars added. Not used here, but used downstream. Crit_mod
+      as well.
+  - code_imp: Monkeys no longer process if there is nobody on their Z level
+  - bugfix: Protean rig no longer hard deletes
+  - bugfix: PAI no longer gets stuck outside disposals
+  - code_imp: new censor_swears proc.
+  - code_imp: Polls now have the 'NEW' under them instead of next to them
+  - code_imp: Brain moved from /new to /init
+  - code_imp: Droplimb acid added
+  - balance: Immunorejection chems last much longer
+  - code_imp: Adds a debug log if someone spawns with no DNA
+  - code_imp: Resleeve designer can now add flavortext per limb
+  - bugfix: Resleever properly applys digi legs now.
+  - balance: Resleeve sickness is no longer a thing (you also do not get genetic mutations
+      from the sleever)
+  - code_imp: Psionic and wingdings fonts added
+  - code_imp: 'Makes the SD MAP_OVERRIDE warning note that it is the SD not the tether
+
+      code:'
+  - code_imp: Xenomorph references changed to Genaprawn like downstream, was included
+      in a few files that were being changed.
+  - code_imp: span_major_announcement, ooc_announcement and subheader_announcement
+      addeed
+  - code_imp: send_ooc_announcement proc added
+  - code_imp: Gets rid of a spawn(0) in species generation
+2025-02-15:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: moves the dependencies to 516.1655
+  - code_imp: tgui 516
+2025-02-16:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: cleans up a lot of badly converted News
+  - bugfix: The chemmaster will no longer have ethanol turn into wine like Jesus touched
+      it
+  - bugfix: fixes picking a hair style properly instead of just a simple null check
+      (passing the user properly)
+  - code_imp: Adjusts the temp cap to be higher for  engineers trying to make hellmixes.
+  - bugfix: Gases will no longer linger as microscopic values in pipes.
+  - bugfix: IRC comms are disabled without a password set
+  - refactor: up-ports ghost orbiting refactor
+  - bugfix: runechat size multiplier offset
+  - code_imp: Anything in the /mob to /human pathline qdels properly
+  - code_imp: There is now a Unit Test to make sure reagents are valid.
+  - bugfix: Tequila is no longer spelt TequiLLa. Update your maps if they have it
+      placed there manually!
+  - code_imp: removes no longer needed spawns
+  - bugfix: meteor gone projectile
+  - bugfix: muzzle flash lasting forever
+  - bugfix: body record disks being spawned in every box
+  - code_imp: move runechat to a subsystem
+  Diana:
+  - rscadd: Adds a bunch of wings to the server from Chompstation
+  - code_imp: Radiation now works differently on the backend.
+  - bugfix: Enabling and disabling the radiation immunity trait no longer breaks things.
+  - bugfix: Fixes a 10 year bug where you wouldn't get your cult spells when turned
+      into a construct.
+  - code_imp: Makes spells less garbage.
+  Guti:
+  - image: Added a few icon effects
+  TheGreatKitsune:
+  - bugfix: removes an unintended way to break into/out of VR
+  Will:
+  - bugfix: Vents now properly hibernate instead of running 24/7
+  - code_imp: Gets rid of more sleeps
+  - code_imp: Showers are more efficient on the backend

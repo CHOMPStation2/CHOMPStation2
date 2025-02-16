@@ -56,12 +56,6 @@
 	layer = GASFIRE_LAYER
 	appearance_flags = PIXEL_SCALE | RESET_COLOR
 	mouse_opacity = 0
-/*
-	plane = ABOVE_MOB_PLANE
-/atom/movable/gas_visuals/New(newloc, ico)
-	..()
-	icon_state = ico
-*/
 	var/gas_id
 
 /obj/effect/gas_overlay/Initialize(mapload, gas)

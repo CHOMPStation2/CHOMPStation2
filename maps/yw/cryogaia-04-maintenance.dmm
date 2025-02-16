@@ -4349,16 +4349,16 @@
 /obj/structure/safe/floor{
 	name = "Vault of Memories"
 	},
-/obj/item/dnainjector/tourmut{
+/obj/item/dnainjector/set_trait/tourettes{
 	name = "\improper DNA injector (???)"
 	},
-/obj/item/dnainjector/hallucination{
+/obj/item/dnainjector/set_trait/flashproof{
 	name = "\improper DNA injector (???)"
 	},
-/obj/item/dnainjector/firemut{
+/obj/item/dnainjector/set_trait/heatadapt{
 	name = "\improper DNA injector (???)"
 	},
-/obj/item/dnainjector/firemut{
+/obj/item/dnainjector/set_trait/heatadapt{
 	name = "\improper DNA injector (???)"
 	},
 /obj/item/clothing/under/rank/geneticist{
