@@ -2,7 +2,11 @@
 
 /obj/item/evidencebag
 	name = "evidence bag"
+<<<<<<< HEAD
 	desc = "An empty evidence bag.  Use by clicking on the bag and dragging it to the item you want to bag."	//CHOMPstation edit-"Actually clarifies how to use the item in game"
+=======
+	desc = "An empty evidence bag.  Use by clicking on the bag and dragging it to the item you want to bag."
+>>>>>>> 65db3fe9f3 (Adds the ability to use storage in storage (#17142))
 	icon = 'icons/obj/storage.dmi'
 	icon_state = "evidenceobj"
 	item_state = null
@@ -27,7 +31,11 @@
 		//If it isn't on the floor. Do some checks to see if it's in our hands or a box. Otherwise give up.
 		if(istype(I.loc,/obj/item/storage))	//in a container.
 			var/sdepth = I.storage_depth(user)
+<<<<<<< HEAD
 			if (sdepth > MAX_STORAGE_REACH) // CHOMPedit: Storage reach depth.
+=======
+			if (sdepth > MAX_STORAGE_REACH)
+>>>>>>> 65db3fe9f3 (Adds the ability to use storage in storage (#17142))
 				return	//too deeply nested to access
 
 			var/obj/item/storage/U = I.loc
