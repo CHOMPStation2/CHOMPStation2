@@ -727,21 +727,13 @@
 
 	while (cur_atom && !(cur_atom in container.contents))
 		if (isarea(cur_atom))
-<<<<<<< HEAD
-			return INFINITY // CHOMPedit
-=======
 			return INFINITY
->>>>>>> c7703de699 (Hotfixes the infinite reach (#17166))
 		if (istype(cur_atom.loc, /obj/item/storage))
 			depth++
 		cur_atom = cur_atom.loc
 
 	if (!cur_atom)
-<<<<<<< HEAD
-		return INFINITY	// CHOMPedit - inside something with a null loc.
-=======
 		return INFINITY	//inside something with a null loc.
->>>>>>> c7703de699 (Hotfixes the infinite reach (#17166))
 
 	return depth
 
@@ -753,21 +745,13 @@
 
 	while (cur_atom && !isturf(cur_atom))
 		if (isarea(cur_atom))
-<<<<<<< HEAD
-			return INFINITY // CHOMPedit
-=======
 			return INFINITY
->>>>>>> c7703de699 (Hotfixes the infinite reach (#17166))
 		if (istype(cur_atom.loc, /obj/item/storage))
 			depth++
 		cur_atom = cur_atom.loc
 
 	if (!cur_atom)
-<<<<<<< HEAD
-		return INFINITY	//CHOMPedit - inside something with a null loc.
-=======
 		return INFINITY	//inside something with a null loc.
->>>>>>> c7703de699 (Hotfixes the infinite reach (#17166))
 
 	return depth
 
