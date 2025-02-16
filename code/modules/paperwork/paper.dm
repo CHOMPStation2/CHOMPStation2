@@ -74,21 +74,6 @@
 	desc = "A gift card with a heart on the cover."
 	icon_state = "greetingcard_heart"
 
-<<<<<<< HEAD
-/obj/item/paper/card/Initialize() //ChompEDIT New --> Initialize
-	..()
-	pixel_y = rand(-8, 8)
-	pixel_x = rand(-9, 9)
-	stamps = null
-
-	if(info != initial(info))
-		info = html_encode(info)
-		info = replacetext(info, "\n", "<BR>")
-		info = parsepencode(info)
-		return
-
-=======
->>>>>>> 2ae6355aff (more new to Init (#17147))
 /obj/item/paper/alien
 	name = "alien tablet"
 	desc = "It looks highly advanced"
@@ -119,11 +104,6 @@
 	if(mapload) // Jank, but we do this to prevent maploaded papers from somehow stacking across rounds if re-added to the board by a player.
 		was_maploaded = TRUE
 
-<<<<<<< HEAD
-/obj/item/paper/Initialize(var/newloc, var/text, var/title) //ChompEDIT New --> Initialize
-	..()
-=======
->>>>>>> 2ae6355aff (more new to Init (#17147))
 	pixel_y = rand(-8, 8)
 	pixel_x = rand(-9, 9)
 	stamps = ""

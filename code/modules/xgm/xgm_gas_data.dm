@@ -40,11 +40,7 @@
 		gas_data.specific_heat[gas.id] = gas.specific_heat
 		gas_data.molar_mass[gas.id] = gas.molar_mass
 		if(gas.tile_overlay)
-<<<<<<< HEAD
 			gas_data.tile_overlay[gas.id] = gas.tile_overlay // CHOMPEdit
-=======
-			gas_data.tile_overlay[gas.id] = new /atom/movable/gas_visuals(null, gas.tile_overlay)
->>>>>>> 2ae6355aff (more new to Init (#17147))
 		if(gas.overlay_limit)
 			gas_data.overlay_limit[gas.id] = gas.overlay_limit
 		gas_data.flags[gas.id] = gas.flags
@@ -60,13 +56,6 @@
 	layer = GASFIRE_LAYER
 	appearance_flags = PIXEL_SCALE | RESET_COLOR
 	mouse_opacity = 0
-/*
-	plane = ABOVE_MOB_PLANE
-<<<<<<< HEAD
-/atom/movable/gas_visuals/New(newloc, ico)
-	..()
-	icon_state = ico
-*/
 	var/gas_id
 
 /obj/effect/gas_overlay/Initialize(mapload, gas)
@@ -75,9 +64,3 @@
 	if(gas_data.tile_overlay[gas_id])
 		icon_state = gas_data.tile_overlay[gas_id]
 // CHOMPEdit End
-=======
-
-/atom/movable/gas_visuals/Initialize(mapload, ico)
-	. = ..()
-	icon_state = ico
->>>>>>> 2ae6355aff (more new to Init (#17147))

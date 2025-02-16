@@ -140,8 +140,4 @@
 /obj/item/mecha_parts/micro/part/weasel_tri_leg
 	name="Weasel Legs"
 	icon_state = "weasel-leg-all"
-<<<<<<< HEAD
 	origin_tech = list(TECH_DATA = 2, TECH_MATERIAL = 3, TECH_ENGINEERING = 3) */
-=======
-	origin_tech = list(TECH_DATA = 2, TECH_MATERIAL = 3, TECH_ENGINEERING = 3)
->>>>>>> 2ae6355aff (more new to Init (#17147))
