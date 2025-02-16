@@ -972,13 +972,7 @@
 /area/awaymission/diescraper/indoors/floor11)
 "cP" = (
 /obj/structure/bed/double/padded,
-/obj/structure/bed/double/padded{
-	pixel_y = -24
-	},
 /obj/item/bedsheet/piratedouble,
-/obj/item/bedsheet/piratedouble{
-	pixel_y = -25
-	},
 /turf/simulated/floor/carpet/retro,
 /area/awaymission/diescraper/indoors/floor9)
 "cQ" = (
@@ -2811,10 +2805,6 @@
 /obj/machinery/door/airlock/glass,
 /turf/simulated/floor/reinforced,
 /area/awaymission/diescraper/indoors/floor112)
-"iK" = (
-/turf/simulated/floor/tiled/old_tile,
-/turf/simulated/wall/concrete,
-/area/awaymission/diescraper/indoors/floor10)
 "iL" = (
 /turf/simulated/wall/wood,
 /area/awaymission/diescraper/indoors/floor10)
@@ -11877,12 +11867,6 @@
 	},
 /turf/simulated/floor/tiled/yellow,
 /area/awaymission/diescraper/indoors/floor4)
-"Ip" = (
-/obj/structure/table/hardwoodtable,
-/obj/structure/table/hardwoodtable,
-/obj/random/pizzabox,
-/turf/simulated/floor/wood,
-/area/awaymission/diescraper/indoors/floor1)
 "Iq" = (
 /obj/effect/floor_decal/stairs,
 /turf/simulated/floor/plating,
@@ -35405,7 +35389,7 @@ Lx
 Lx
 Bz
 FU
-Ip
+Pg
 pA
 wq
 xu
@@ -61050,9 +61034,9 @@ oL
 oL
 oL
 SF
-iK
-iK
-iK
+oL
+oL
+oL
 oL
 oL
 FL
@@ -66510,7 +66494,7 @@ gn
 IC
 dx
 cP
-OS
+cP
 wW
 gM
 dx
