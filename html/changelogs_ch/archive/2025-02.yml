@@ -388,3 +388,13 @@
   - bugfix: Vents now properly hibernate instead of running 24/7
   - code_imp: Gets rid of more sleeps
   - code_imp: Showers are more efficient on the backend
+2025-02-17:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: next part of the new to init
+  - bugfix: tgui say boarder color not updating on larger sizes
+  - bugfix: tgui say not reverting to say channel on radio channel prefix
+  - bugfix: channel swap on button click drag
+  - bugfix: cyborg mats will never show up now
+  - rscadd: You can now use storage containers that is in another storage container
+  tacoguy7765093:
+  - bugfix: Map fixes
