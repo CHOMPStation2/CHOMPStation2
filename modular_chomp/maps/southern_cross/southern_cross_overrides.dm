@@ -23,6 +23,13 @@
 		to_chat(src, span_danger("The VR systems cannot comprehend this power! This is useless to you!"))
 		. = FALSE
 
+/obj/effect/shadekin_ability/dark_tunneling/do_ability()
+	if(istype(get_area(my_kin), /area/vr))
+		to_chat(my_kin, span_danger("The VR systems cannot comprehend this power! This is useless to you!"))
+		return FALSE
+	else
+		..()
+
 
 /obj/item/disposable_teleporter/attack_self(mob/user as mob)//Prevents people from using technomancer gear to escape to station from the VR pods.
 	if(istype(get_area(user), /area/vr))

@@ -11994,13 +11994,6 @@
 "kEv" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/structure/bed/chair/wheelchair,
-/obj/structure/bed/chair/wheelchair,
-/obj/structure/bed/chair/wheelchair,
-/obj/structure/bed/chair/wheelchair,
-/obj/structure/bed/chair/wheelchair,
-/obj/structure/bed/chair/wheelchair,
-/obj/structure/bed/chair/wheelchair,
-/obj/structure/bed/chair/wheelchair,
 /obj/item/cane,
 /obj/item/cane,
 /obj/item/cane,
@@ -14278,14 +14271,6 @@
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/snowfield/medical/staff_room)
-"mFY" = (
-/obj/machinery/power/solar,
-/obj/machinery/power/solar,
-/obj/structure/cable/yellow{
-	icon_state = "0-2"
-	},
-/turf/simulated/floor,
-/area/awaymission/snowfield/outside)
 "mGG" = (
 /obj/structure/bed,
 /turf/simulated/floor/tiled/steel,
@@ -16190,14 +16175,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/security/security_lockerroom)
-"olD" = (
-/obj/machinery/power/solar,
-/obj/machinery/power/solar,
-/obj/structure/cable/yellow{
-	icon_state = "0-2"
-	},
-/turf/simulated/floor/outdoors/snow/sif/planetuse,
-/area/awaymission/snowfield/outside)
 "olY" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -17243,13 +17220,6 @@
 	},
 /obj/structure/window/reinforced/full{
 	health = 1e+006
-	},
-/obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "snowfieldenglockdown";
-	name = "Engineering Lockdown";
-	opacity = 0
 	},
 /turf/simulated/floor,
 /area/awaymission/snowfield/hallway/frontgate_substation)
@@ -24702,9 +24672,6 @@
 	},
 /obj/structure/window/reinforced,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/iv_drip,
-/obj/machinery/iv_drip,
-/obj/machinery/iv_drip,
 /obj/machinery/iv_drip,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/snowfield/medical/storage_room)
@@ -32293,7 +32260,7 @@ pun
 imC
 pun
 pun
-mFY
+weG
 pgn
 iNn
 pun
@@ -32551,7 +32518,7 @@ pun
 pun
 imC
 pun
-olD
+qbN
 mwo
 iNn
 pun
@@ -32809,7 +32776,7 @@ pun
 pun
 pun
 pun
-mFY
+weG
 cGS
 iNn
 pun
@@ -33067,7 +33034,7 @@ pun
 pun
 pun
 pun
-olD
+qbN
 mwo
 iNn
 pun
@@ -33325,7 +33292,7 @@ pun
 pun
 pun
 pun
-mFY
+weG
 mwo
 sRm
 pun
@@ -33583,7 +33550,7 @@ pun
 pun
 pun
 pun
-olD
+qbN
 xgl
 sRm
 pun
@@ -33841,7 +33808,7 @@ pun
 pun
 pun
 pun
-olD
+qbN
 xgl
 sRm
 pun
@@ -34099,7 +34066,7 @@ pun
 pun
 pun
 pun
-mFY
+weG
 cGS
 iNn
 pun
@@ -34357,7 +34324,7 @@ pun
 pun
 pun
 pun
-olD
+qbN
 mwo
 iNn
 pun
@@ -34615,7 +34582,7 @@ pun
 pun
 pun
 pun
-olD
+qbN
 xgl
 iNn
 pun
@@ -34873,7 +34840,7 @@ pun
 pun
 imC
 pun
-olD
+qbN
 xgl
 sRm
 pun
@@ -35131,7 +35098,7 @@ pun
 pun
 pun
 pun
-olD
+qbN
 xgl
 sRm
 pun
@@ -35389,7 +35356,7 @@ pun
 pun
 pun
 pun
-mFY
+weG
 cGS
 iNn
 pun
@@ -35647,7 +35614,7 @@ pun
 pun
 pun
 pun
-mFY
+weG
 cGS
 iNn
 pun
@@ -35905,7 +35872,7 @@ pun
 pun
 pun
 pun
-mFY
+weG
 cGS
 sRm
 pun
@@ -41839,7 +41806,7 @@ pun
 pun
 pun
 pun
-olD
+qbN
 xgl
 sRm
 pun
@@ -42097,7 +42064,7 @@ pun
 pun
 pun
 pun
-olD
+qbN
 mwo
 iNn
 pun
@@ -42355,7 +42322,7 @@ pun
 pun
 pun
 pun
-olD
+qbN
 mwo
 sRm
 pun
@@ -42613,7 +42580,7 @@ pun
 pun
 pun
 pun
-olD
+qbN
 cGS
 iNn
 pun
@@ -42871,7 +42838,7 @@ pun
 pun
 pun
 pun
-olD
+qbN
 mwo
 iNn
 pun
@@ -43129,7 +43096,7 @@ pun
 pun
 pun
 pun
-mFY
+weG
 cGS
 iNn
 pun
@@ -43387,7 +43354,7 @@ pun
 pun
 pun
 pun
-olD
+qbN
 cGS
 iNn
 pun
@@ -43645,7 +43612,7 @@ pun
 pun
 pun
 pun
-mFY
+weG
 cGS
 sRm
 pun
@@ -43903,7 +43870,7 @@ pun
 pun
 imC
 pun
-mFY
+weG
 mwo
 sRm
 pun
@@ -44161,7 +44128,7 @@ pun
 pun
 pun
 pun
-olD
+qbN
 xgl
 sRm
 pun
@@ -44419,7 +44386,7 @@ pun
 pun
 pun
 pun
-olD
+qbN
 xgl
 iNn
 pun
@@ -44677,7 +44644,7 @@ pun
 pun
 pun
 pun
-olD
+qbN
 cGS
 iNn
 pun
@@ -44935,7 +44902,7 @@ pun
 pun
 pun
 pun
-mFY
+weG
 cGS
 iNn
 pun
@@ -45967,7 +45934,7 @@ pun
 pun
 pun
 pun
-mFY
+weG
 iKO
 sRm
 pun
@@ -46225,7 +46192,7 @@ pun
 pun
 pun
 pun
-olD
+qbN
 szW
 sRm
 pun
@@ -46483,7 +46450,7 @@ pun
 pun
 pun
 pun
-olD
+qbN
 szW
 iNn
 pun
@@ -46741,7 +46708,7 @@ pun
 bUb
 pun
 pun
-olD
+qbN
 tPK
 iNn
 pun
@@ -46999,7 +46966,7 @@ pun
 pun
 pun
 pun
-olD
+qbN
 iKO
 iNn
 pun
@@ -47257,7 +47224,7 @@ pun
 pun
 pun
 pun
-olD
+qbN
 iKO
 sRm
 pun
@@ -47515,7 +47482,7 @@ pun
 pun
 pun
 pun
-mFY
+weG
 tPK
 sRm
 pun
@@ -47773,7 +47740,7 @@ bUb
 pun
 pun
 pun
-mFY
+weG
 szW
 sRm
 pun
@@ -48031,7 +47998,7 @@ pun
 pun
 pun
 pun
-mFY
+weG
 szW
 sRm
 pun
@@ -48289,7 +48256,7 @@ pun
 pun
 pun
 pun
-olD
+qbN
 szW
 sRm
 pun
@@ -48547,7 +48514,7 @@ pun
 pun
 pun
 pun
-olD
+qbN
 szW
 iNn
 pun
@@ -48805,7 +48772,7 @@ pun
 pun
 pun
 pun
-mFY
+weG
 iKO
 iNn
 pun
@@ -49063,7 +49030,7 @@ pun
 pun
 pun
 pun
-mFY
+weG
 iKO
 iNn
 pun
@@ -49321,7 +49288,7 @@ pun
 pun
 pun
 pun
-mFY
+weG
 iKO
 iNn
 pun
@@ -49579,7 +49546,7 @@ pun
 pun
 pun
 pun
-mFY
+weG
 qxb
 sRm
 pun

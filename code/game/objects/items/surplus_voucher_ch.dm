@@ -17,7 +17,7 @@
 	var/path = pick(prob(6);/obj/item/reagent_containers/food/drinks/bottle/whiskey,
 					prob(3);/obj/item/reagent_containers/food/drinks/bottle/specialwhiskey,
 					prob(3);/obj/item/reagent_containers/food/drinks/bottle/vodka,
-					prob(3);/obj/item/reagent_containers/food/drinks/bottle/tequilla,
+					prob(3);/obj/item/reagent_containers/food/drinks/bottle/tequila,
 					prob(3);/obj/item/reagent_containers/food/drinks/bottle/rum,
 					prob(3);/obj/item/reagent_containers/food/drinks/bottle/goldschlager,
 					prob(3);/obj/item/reagent_containers/food/drinks/bottle/vermouth,

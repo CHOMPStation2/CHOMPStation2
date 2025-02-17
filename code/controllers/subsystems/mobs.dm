@@ -97,7 +97,3 @@ SUBSYSTEM_DEF(mobs)
 /datum/controller/subsystem/mobs/critfail()
 	..()
 	log_recent()
-
-/mob/Destroy()
-	. = ..()
-	SSmobs.currentrun -= src
