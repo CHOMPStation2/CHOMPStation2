@@ -1,0 +1,6 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - bugfix: "tgui say boarder color not updating on larger sizes"
+  - bugfix: "tgui say not reverting to say channel on radio channel prefix"
+  - bugfix: "channel swap on button click drag"
