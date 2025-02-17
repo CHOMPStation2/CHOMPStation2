@@ -1,0 +1,27 @@
+[2024-04-03 12:59:10.750] START: Starting up data/logs/2024/04-April/03-Wednesday/round-08-59-31.
+[2024-04-03 13:15:53.008] RUNTIME: [2024-04-03T09:15:53] Runtime in code/_helpers/unsorted.dm,1537: addtimer called with a callback assigned to a qdeleted object. In the future such timers will not be supported and may refuse to run or run with a 0 wait
+[2024-04-03 13:15:53.011] RUNTIME:   proc name: stack trace (/proc/stack_trace)
+[2024-04-03 13:15:53.014] RUNTIME:   usr: Solar Eclipse Sniper (/mob/living/simple_mob/humanoid/eclipse/solar/snipertesh) @ (NULL) (0,0,0) (NULL) (ckey=)
+[2024-04-03 13:15:53.016] RUNTIME:   usr.loc: *null*
+[2024-04-03 13:15:53.018] RUNTIME:   src: null
+[2024-04-03 13:15:53.020] RUNTIME:   call stack:
+[2024-04-03 13:15:53.022] RUNTIME:   stack trace("addtimer called with a callbac...")
+[2024-04-03 13:15:53.025] RUNTIME:    addtimer(/datum/callback (/datum/callback), 3, 8, null, "code/modules/mob/living/simple...", 196)
+[2024-04-03 13:15:53.027] RUNTIME:   Solar Eclipse Sniper (/mob/living/simple_mob/humanoid/eclipse/solar/snipertesh): death(1, "dies!")
+[2024-04-03 13:15:53.030] RUNTIME:   Solar Eclipse Sniper (/mob/living/simple_mob/humanoid/eclipse/solar/snipertesh): death(1)
+[2024-04-03 13:15:53.032] RUNTIME:   Solar Eclipse Sniper (/mob/living/simple_mob/humanoid/eclipse/solar/snipertesh): death(1)
+[2024-04-03 13:15:53.035] RUNTIME:   Solar Eclipse Sniper (/mob/living/simple_mob/humanoid/eclipse/solar/snipertesh): death(1)
+[2024-04-03 13:15:53.038] RUNTIME:   Solar Eclipse Sniper (/mob/living/simple_mob/humanoid/eclipse/solar/snipertesh): ash("dust-m")
+[2024-04-03 13:15:53.040] RUNTIME:   Solar Eclipse Sniper (/mob/living/simple_mob/humanoid/eclipse/solar/snipertesh): lava act()
+[2024-04-03 13:15:53.043] RUNTIME:   the lava (219,228,10) (/turf/simulated/floor/lava): burn stuff(Solar Eclipse Sniper (/mob/living/simple_mob/humanoid/eclipse/solar/snipertesh))
+[2024-04-03 13:15:53.045] RUNTIME:   the lava (219,228,10) (/turf/simulated/floor/lava): Entered(Solar Eclipse Sniper (/mob/living/simple_mob/humanoid/eclipse/solar/snipertesh), the soil (217,231,10) (/turf/simulated/floor/outdoors/dirt))
+[2024-04-03 13:15:53.047] RUNTIME:   ...
+[2024-04-03 13:15:53.049] RUNTIME:   Solar Eclipse Sniper (/mob/living/simple_mob/humanoid/eclipse/solar/snipertesh): Bump(the cliff (/obj/structure/cliff/automatic))
+[2024-04-03 13:15:53.051] RUNTIME:   Solar Eclipse Sniper (/mob/living/simple_mob/humanoid/eclipse/solar/snipertesh): Bump(the cliff (/obj/structure/cliff/automatic))
+[2024-04-03 13:15:53.053] RUNTIME:   the lava (218,231,10) (/turf/simulated/floor/lava): Enter(Solar Eclipse Sniper (/mob/living/simple_mob/humanoid/eclipse/solar/snipertesh), the soil (217,231,10) (/turf/simulated/floor/outdoors/dirt))
+[2024-04-03 13:15:53.055] RUNTIME:   Solar Eclipse Sniper (/mob/living/simple_mob/humanoid/eclipse/solar/snipertesh): Move(the lava (218,231,10) (/turf/simulated/floor/lava), 4, null)
+[2024-04-03 13:15:53.058] RUNTIME:   Solar Eclipse Sniper (/mob/living/simple_mob/humanoid/eclipse/solar/snipertesh): Move(the reinforced plasteel hull w... (229,174,10) (/turf/simulated/wall/rpshull), null, null)
+[2024-04-03 13:15:53.060] RUNTIME:   teleport (/datum/artifact_effect/teleport): process()
+[2024-04-03 13:15:53.062] RUNTIME:   Objects (/datum/controller/subsystem/processing/obj): fire(0)
+[2024-04-03 13:15:53.064] RUNTIME:   Master (/datum/controller/master): RunQueue()
+[2024-04-03 13:15:53.066] RUNTIME:   Master (/datum/controller/master): StartProcessing(0)

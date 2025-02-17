@@ -1,0 +1,131 @@
+[2024-04-03 06:16:13.025] START: Starting up data/logs/2024/04-April/03-Wednesday/round-02-15-53.
+[2024-04-03 06:16:14.841] ADMIN: Loading jobban_rank
+[2024-04-03 06:16:14.841] ADMIN: jobban_keylist was empty
+[2024-04-03 06:16:14.851] ADMIN: Loading Banlist
+[2024-04-03 06:16:58.914] GAME: Rocky Base 1 loaded at at 151,65,5
+[2024-04-03 06:16:58.965] GAME: Supply Drop 1 loaded at at 148,97,5
+[2024-04-03 06:16:59.016] GAME: Mine Vault 5 loaded at at 9,24,5
+[2024-04-03 06:16:59.046] GAME: Crystal Cave 1 loaded at at 77,21,5
+[2024-04-03 06:16:59.061] GAME: Lost Explorer loaded at at 189,113,5
+[2024-04-03 06:16:59.337] GAME: Dark Ritual loaded at at 43,47,5
+[2024-04-03 06:17:00.484] GAME: Fenced Geyser loaded at at 140,94,5
+[2024-04-03 06:17:00.514] GAME: Crystal Cave 1 loaded at at 231,63,5
+[2024-04-03 06:17:00.662] GAME: Dig Site loaded at at 52,57,5
+[2024-04-03 06:17:01.010] GAME: Crashed Med Shuttle loaded at at 72,32,5
+[2024-04-03 06:17:01.080] GAME: Prepper Bunker loaded at at 231,76,5
+[2024-04-03 06:17:01.756] GAME: Ice Cave 1B loaded at at 163,12,5
+[2024-04-03 06:17:02.117] GAME: Ore-Topped Cliff loaded at at 16,97,5
+[2024-04-03 06:17:02.280] GAME: spatial anomaly loaded at at 12,147,5
+[2024-04-03 06:17:02.310] GAME: Rocky Outcrop loaded at at 83,52,4
+[2024-04-03 06:17:02.343] GAME: Ration Cache loaded at at 170,63,4
+[2024-04-03 06:17:02.387] GAME: Emergency Pod 2 loaded at at 48,29,4
+[2024-04-03 06:17:02.621] GAME: Old Hotel loaded at at 27,38,4
+[2024-04-03 06:17:02.641] GAME: Snow loaded at at 189,158,4
+[2024-04-03 06:17:02.767] GAME: Pride Rock loaded at at 17,17,4
+[2024-04-03 06:17:02.793] GAME: Lone Kururak Den loaded at at 25,127,4
+[2024-04-03 06:17:03.091] GAME: Pooled Rocks loaded at at 174,12,4
+[2024-04-03 06:17:03.103] GAME: Buried Treasure 2 loaded at at 46,71,4
+[2024-04-03 06:17:03.215] GAME: Thieves' Cave loaded at at 9,105,4
+[2024-04-03 06:17:03.608] GAME: Shakden loaded at at 187,64,4
+[2024-04-03 06:17:03.683] GAME: Ruptured Canister loaded at at 65,100,4
+[2024-04-03 06:17:03.792] GAME: VR Den loaded at at 25,192,4
+[2024-04-03 06:17:03.839] GAME: Abandoned Bonfire loaded at at 89,115,4
+[2024-04-03 06:17:03.901] GAME: Construction Site loaded at at 208,20,4
+[2024-04-03 06:17:03.946] GAME: Snow 3 loaded at at 38,165,4
+[2024-04-03 06:17:04.198] GAME: Meth Lab loaded at at 155,26,4
+[2024-04-03 06:17:04.243] GAME: Merchant Stand loaded at at 120,136,4
+[2024-04-03 06:17:04.283] GAME: Camp Site loaded at at 118,59,4
+[2024-04-03 06:17:04.344] GAME: Old Supply Drop loaded at at 16,80,4
+[2024-04-03 06:17:04.505] GAME: Hot Spring loaded at at 65,46,4
+[2024-04-03 06:17:04.778] GAME: Rocky 2 loaded at at 76,44,9
+[2024-04-03 06:17:04.805] GAME: Kururak Den loaded at at 219,49,9
+[2024-04-03 06:17:04.936] GAME: Mudpit loaded at at 143,53,9
+[2024-04-03 06:17:05.010] GAME: Rocky 4 loaded at at 78,90,9
+[2024-04-03 06:17:05.049] GAME: Butcher Shack loaded at at 25,48,9
+[2024-04-03 06:17:05.155] GAME: Military Camp 1 loaded at at 106,82,9
+[2024-04-03 06:17:05.341] GAME: Frost Oasis loaded at at 59,77,9
+[2024-04-03 06:17:05.462] GAME: Snowrock 1 loaded at at 23,67,9
+[2024-04-03 06:17:05.517] GAME: Empty Cabin loaded at at 60,10,9
+[2024-04-03 06:17:05.555] GAME: Government Patrol loaded at at 150,36,9
+[2024-04-03 06:17:05.819] GAME: Cragzone 1 loaded at at 184,51,9
+[2024-04-03 06:17:05.853] GAME: Smol 1 loaded at at 10,101,9
+[2024-04-03 06:17:05.880] GAME: Musk loaded at at 84,8,9
+[2024-04-03 06:17:05.907] GAME: Spider Nest 1 loaded at at 31,39,9
+[2024-04-03 06:17:06.059] GAME: Forest Lake loaded at at 113,32,9
+[2024-04-03 06:17:06.205] GAME: Lab 1 loaded at at 186,18,9
+[2024-04-03 06:17:06.294] GAME: Shack 1 loaded at at 114,53,9
+[2024-04-03 06:17:07.075] GAME: Drug Den loaded at at 45,25,9
+[2024-04-03 06:17:07.115] GAME: Spider Nest 1 loaded at at 69,97,9
+[2024-04-03 06:17:07.200] GAME: Rocky 3 loaded at at 100,62,9
+[2024-04-03 06:17:07.921] GAME: Demon Pool loaded at at 89,16,9
+[2024-04-03 06:17:07.965] GAME: Frostfly Nest loaded at at 168,77,9
+[2024-04-03 06:17:08.033] GAME: Emergency Pod 4 loaded at at 48,90,9
+[2024-04-03 06:17:08.139] GAME: Shelter 1 loaded at at 117,10,9
+[2024-04-03 06:17:08.582] GAME: Rocky 2 loaded at at 22,87,9
+[2024-04-03 06:17:10.259] GAME: Rocky 1 loaded at at 43,52,9
+[2024-04-03 06:17:11.246] GAME: Rocky 1 loaded at at 13,11,9
+[2024-04-03 06:17:11.496] GAME: Cragzone 1 loaded at at 127,68,9
+[2024-04-03 06:17:13.045] GAME: Spider Nest 1 loaded at at 128,16,9
+[2024-04-03 06:17:14.873] GAME: Wolf Den loaded at at 174,43,9
+[2024-04-03 06:17:16.393] GAME: Spider Nest 1 loaded at at 80,70,9
+[2024-04-03 06:17:18.000] GAME: Spider Nest 1 loaded at at 48,81,9
+[2024-04-03 06:17:20.983] GAME: Spider Nest 1 loaded at at 177,30,9
+[2024-04-03 06:17:21.199] GAME: Otie Shelter loaded at at 211,163,9
+[2024-04-03 06:17:21.482] GAME: Abandoned Lab loaded at at 143,227,9
+[2024-04-03 06:17:21.832] GAME: Borg Lab loaded at at 174,142,9
+[2024-04-03 06:17:21.927] GAME: DJOutpost 1 loaded at at 222,146,9
+[2024-04-03 06:17:22.126] GAME: Xeno Hive loaded at at 68,219,9
+[2024-04-03 06:17:22.421] GAME: Black Shuttle Down loaded at at 27,164,9
+[2024-04-03 06:17:22.483] GAME: Lone Wolf loaded at at 33,234,9
+[2024-04-03 06:17:23.194] GAME: Cliff Base loaded at at 44,124,9
+[2024-04-03 06:17:23.400] GAME: Elite Bounty Hunter Den loaded at at 101,177,9
+[2024-04-03 06:17:23.619] GAME: Great Wolf Den loaded at at 124,151,9
+[2024-04-03 06:17:24.772] GAME: Dragon Island loaded at at 169,171,9
+[2024-04-03 06:17:24.839] GAME: Syndi Drone loaded at at 220,107,9
+[2024-04-03 06:17:25.020] GAME: Leopardmander Den loaded at at 140,173,9
+[2024-04-03 06:17:25.177] GAME: Death Spice Den loaded at at 106,216,9
+[2024-04-03 06:17:25.510] GAME: Aquatic Xenos loaded at at 157,207,10
+[2024-04-03 06:17:25.791] GAME: Maus HQ loaded at at 121,30,10
+[2024-04-03 06:17:26.101] GAME: Fallen Lab loaded at at 154,24,10
+[2024-04-03 06:17:26.386] GAME: Carrier Shuttle loaded at at 78,193,10
+[2024-04-03 06:17:26.568] GAME: Puzzle Dungeon loaded at at 25,9,10
+[2024-04-03 06:17:26.674] GAME: Plant Den loaded at at 212,218,10
+[2024-04-03 06:17:27.014] GAME: Pirate Cove loaded at at 110,211,10
+[2024-04-03 06:17:27.338] GAME: Maze loaded at at 73,24,10
+[2024-04-03 06:17:27.508] GAME: Assualt Base loaded at at 191,97,10
+[2024-04-03 06:17:27.561] GAME: Raided Pod loaded at at 101,149,10
+[2024-04-03 06:17:27.655] GAME: Teppi Farm loaded at at 172,95,10
+[2024-04-03 06:17:28.515] GAME: Eclipse Base Aqua loaded at at 136,144,10
+[2024-04-03 06:17:28.747] GAME: Eclipse Xenobio Lab loaded at at 73,137,10
+[2024-04-03 06:17:29.132] ACCESS IN: RiotScopez/(RiotScopez) - IP:146.115.147.185 - CID:1871707424 - BYOND v515
+[2024-04-03 06:17:29.346] GAME: Mouse Takeover loaded at at 213,149,10
+[2024-04-03 06:17:29.755] GAME: Siege Point loaded at at 80,77,10
+[2024-04-03 06:17:31.185] GAME: Red Shuttle Down loaded at at 115,67,10
+[2024-04-03 06:17:31.827] GAME: Blood Citadal loaded at at 12,102,10
+[2024-04-03 06:17:32.313] ASSET: Sending asset `tgui-panel.bundle.js` to client `RiotScopez` as `asset.b4751a5ea151bc8ec68c1925b7d0bdd7.js`
+[2024-04-03 06:17:32.321] ASSET: Sending asset `tgui-panel.bundle.css` to client `RiotScopez` as `asset.7efb53cd7dda00777acb7748b31d4a8a.css`
+[2024-04-03 06:17:32.492] ASSET: Sending asset `fa-regular-400.ttf` to client `RiotScopez` as `fa-regular-400.ttf`
+[2024-04-03 06:17:32.492] ASSET: Sending asset `fa-solid-900.ttf` to client `RiotScopez` as `fa-solid-900.ttf`
+[2024-04-03 06:17:32.493] ASSET: Sending asset `fa-v4compatibility.ttf` to client `RiotScopez` as `fa-v4compatibility.ttf`
+[2024-04-03 06:17:32.493] ASSET: Sending asset `v4shim.css` to client `RiotScopez` as `v4shim.css`
+[2024-04-03 06:17:32.493] ASSET: Sending asset `font-awesome.css` to client `RiotScopez` as `asset.fedd834d1c20ed484599a1c38690e330.css`
+[2024-04-03 06:17:32.610] ASSET: Sending asset `tgfont.eot` to client `RiotScopez` as `tgfont.eot`
+[2024-04-03 06:17:32.612] ASSET: Sending asset `tgfont.woff2` to client `RiotScopez` as `tgfont.woff2`
+[2024-04-03 06:17:32.614] ASSET: Sending asset `tgfont.css` to client `RiotScopez` as `asset.9c0bbe21e37e76955d9640f7a6c4b636.css`
+[2024-04-03 06:17:32.929] ASSET: Sending asset `spritesheet_chat.css` to client `RiotScopez` as `asset.e73ec83954ac74e58beadd50f5a3c63b.css`
+[2024-04-03 06:17:32.929] ASSET: Sending asset `chat_32x10.png` to client `RiotScopez` as `asset.2880748b8d8cbf35ee9e8cb72fdacada.png`
+[2024-04-03 06:17:46.933] ACCESS OUT: RiotScopez/(RiotScopez) - IP:146.115.147.185 - CID:Logged Out - BYOND Logged Out
+[2024-04-03 06:17:48.328] ACCESS IN: RiotScopez/(RiotScopez) - IP:146.115.147.185 - CID:1871707424 - BYOND v515
+[2024-04-03 06:17:48.509] ASSET: Sending asset `tgui-panel.bundle.js` to client `RiotScopez` as `asset.b4751a5ea151bc8ec68c1925b7d0bdd7.js`
+[2024-04-03 06:17:48.513] ASSET: Sending asset `tgui-panel.bundle.css` to client `RiotScopez` as `asset.7efb53cd7dda00777acb7748b31d4a8a.css`
+[2024-04-03 06:17:48.619] ASSET: Sending asset `fa-regular-400.ttf` to client `RiotScopez` as `fa-regular-400.ttf`
+[2024-04-03 06:17:48.620] ASSET: Sending asset `fa-solid-900.ttf` to client `RiotScopez` as `fa-solid-900.ttf`
+[2024-04-03 06:17:48.620] ASSET: Sending asset `fa-v4compatibility.ttf` to client `RiotScopez` as `fa-v4compatibility.ttf`
+[2024-04-03 06:17:48.620] ASSET: Sending asset `v4shim.css` to client `RiotScopez` as `v4shim.css`
+[2024-04-03 06:17:48.620] ASSET: Sending asset `font-awesome.css` to client `RiotScopez` as `asset.fedd834d1c20ed484599a1c38690e330.css`
+[2024-04-03 06:17:48.620] ASSET: Sending asset `tgfont.eot` to client `RiotScopez` as `tgfont.eot`
+[2024-04-03 06:17:48.621] ASSET: Sending asset `tgfont.woff2` to client `RiotScopez` as `tgfont.woff2`
+[2024-04-03 06:17:48.669] ASSET: Sending asset `tgfont.css` to client `RiotScopez` as `asset.9c0bbe21e37e76955d9640f7a6c4b636.css`
+[2024-04-03 06:17:48.725] ASSET: Sending asset `spritesheet_chat.css` to client `RiotScopez` as `asset.e73ec83954ac74e58beadd50f5a3c63b.css`
+[2024-04-03 06:17:48.725] ASSET: Sending asset `chat_32x10.png` to client `RiotScopez` as `asset.2880748b8d8cbf35ee9e8cb72fdacada.png`
+[2024-04-03 06:18:01.572] ACCESS OUT: RiotScopez/(RiotScopez) - IP:146.115.147.185 - CID:Logged Out - BYOND Logged Out

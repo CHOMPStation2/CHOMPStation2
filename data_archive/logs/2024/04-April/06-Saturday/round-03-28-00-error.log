@@ -1,0 +1,24 @@
+[2024-04-06 07:28:14.687] START: Starting up data/logs/2024/04-April/06-Saturday/round-03-28-00.
+[2024-04-06 09:38:20.938] RUNTIME: [2024-04-06T05:38:20] Runtime in code/_helpers/unsorted.dm,1537: addtimer called with a callback assigned to a qdeleted object. In the future such timers will not be supported and may refuse to run or run with a 0 wait
+[2024-04-06 09:38:20.940] RUNTIME:   proc name: stack trace (/proc/stack_trace)
+[2024-04-06 09:38:20.942] RUNTIME:   src: null
+[2024-04-06 09:38:20.944] RUNTIME:   call stack:
+[2024-04-06 09:38:20.946] RUNTIME:   stack trace("addtimer called with a callbac...")
+[2024-04-06 09:38:21.011] RUNTIME:    addtimer(/datum/callback (/datum/callback), 3, 8, null, "code/modules/mob/living/simple...", 196)
+[2024-04-06 09:38:21.014] RUNTIME:   the viscerator (/mob/living/simple_mob/mechanical/viscerator): death(null, "is smashed into pieces!")
+[2024-04-06 09:38:21.018] RUNTIME:   the viscerator (/mob/living/simple_mob/mechanical/viscerator): death(null, "is smashed into pieces!")
+[2024-04-06 09:38:21.021] RUNTIME:   the viscerator (/mob/living/simple_mob/mechanical/viscerator): death(null, "is smashed into pieces!")
+[2024-04-06 09:38:21.023] RUNTIME:   the viscerator (/mob/living/simple_mob/mechanical/viscerator): death(1)
+[2024-04-06 09:38:21.026] RUNTIME:   the viscerator (/mob/living/simple_mob/mechanical/viscerator): ash("dust-m")
+[2024-04-06 09:38:21.028] RUNTIME:   the viscerator (/mob/living/simple_mob/mechanical/viscerator): lightning act()
+[2024-04-06 09:38:21.031] RUNTIME:   lightning strike(the plating (103,20,9) (/turf/simulated/floor/plating/sif/planetuse), 0)
+[2024-04-06 09:38:21.033] RUNTIME:   storm (/datum/weather/sif/storm): handle lightning()
+[2024-04-06 09:38:21.036] RUNTIME:   storm (/datum/weather/sif/storm): process effects()
+[2024-04-06 09:38:21.038] RUNTIME:   /datum/weather_holder/sif (/datum/weather_holder/sif): process()
+[2024-04-06 09:38:21.040] RUNTIME:   Sif (/datum/planet/sif): update weather()
+[2024-04-06 09:38:21.042] RUNTIME:   Sif (/datum/planet/sif): process(76565.5)
+[2024-04-06 09:38:21.043] RUNTIME:   Planets (/datum/controller/subsystem/planets): fire(0)
+[2024-04-06 09:38:21.045] RUNTIME:   Planets (/datum/controller/subsystem/planets): ignite(0)
+[2024-04-06 09:38:21.047] RUNTIME:   Master (/datum/controller/master): RunQueue()
+[2024-04-06 09:38:21.050] RUNTIME:   Master (/datum/controller/master): Loop()
+[2024-04-06 09:38:21.052] RUNTIME:   Master (/datum/controller/master): StartProcessing(0)
