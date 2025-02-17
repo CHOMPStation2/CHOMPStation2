@@ -89,7 +89,7 @@
 	if(air_contents.temperature < FIRE_MAX_TEMP) // May as well limit this
 		var/starting_energy = air_contents.temperature * air_contents.heat_capacity()
 		if(starting_energy > 0)
-			air_contents.temperature = min((starting_energy + vsc.fire_fuel_energy_release * (gas_exchange * 1.05)) / air_contents.heat_capacity(), FIRE_MAX_TEMP)
+			air_contents.temperature = min((starting_energy + vsc.fire_fuel_energy_release * (gas_exchange * 1.025)) / air_contents.heat_capacity(), FIRE_MAX_TEMP)
 	air_contents.update_values()
 
 	// Affect contents
