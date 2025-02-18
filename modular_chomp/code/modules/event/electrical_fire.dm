@@ -44,7 +44,7 @@
 		sparks.start()
 
 		var/turf/T = get_turf(M)
-		T.lingering_fire(0.6)
+		T.lingering_fire(0.3)
 
 		var/area/A = get_area(T)
 		log_admin("Electrical event: [M] in [A] caught fire.")
