@@ -14,11 +14,11 @@
 	debug_log = start_log("[log_path]-debug.log")
 	//VOREStation Edit End
 
-	//changelog_hash = md5('html/changelog.html') //used for telling if the changelog has changed recently //Chomp REMOVE
-	//ChompADD Start - Better Changelogs
-	var/latest_changelog = file("html/changelogs_ch/archive/" + time2text(world.timeofday, "YYYY-MM") + ".yml")
-	changelog_hash = fexists(latest_changelog) ? md5(latest_changelog) : 0 //for telling if the changelog has changed recently
-	//Newsfile
+	var/latest_changelog = file("[global.config.directory]/../html/changelogs_ch/archive/" + time2text(world.timeofday, "YYYY-MM") + ".yml") // CHOMPEdit - changelogs_ch
+	GLOB.changelog_hash = fexists(latest_changelog) ? md5(latest_changelog) : "" //for telling if the changelog has changed recently
+	to_world_log("Changelog Hash: '[GLOB.changelog_hash]' ([latest_changelog])")
+
+	//ChompADD Start - Newsfile
 	var/savefile/F = new(NEWSFILE)
 	if(F)
 		var/title

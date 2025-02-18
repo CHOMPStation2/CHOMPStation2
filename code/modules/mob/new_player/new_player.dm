@@ -111,12 +111,10 @@
 		else
 			output += "<p><b><a href='byond://?src=\ref[src];open_station_news=1'>Show [using_map.station_name] News<br>(NEW!)</A></b></p>"
 
-	//ChompEDIT start: Show Changelog
-	if(client?.prefs?.lastchangelog == changelog_hash)
+	if(read_preference(/datum/preference/text/lastchangelog) == GLOB.changelog_hash)
 		output += "<p><a href='byond://?src=\ref[src];open_changelog=1'>Show Changelog</A><br><i>No Changes</i></p>"
 	else
 		output += "<p><b><a href='byond://?src=\ref[src];open_changelog=1'>Show Changelog</A><br>(NEW!)</b></p>"
-	//ChompEDIT End
 
 	output += "</div>"
 
@@ -357,13 +355,10 @@
 		else
 			client.feedback_form = new(client)
 
-	//ChompEDIT START
 	if(href_list["open_changelog"])
-		client.prefs.lastchangelog = changelog_hash
-		SScharacter_setup.queue_preferences_save(client.prefs)
+		write_preference_directly(/datum/preference/text/lastchangelog, GLOB.changelog_hash)
 		client.changes()
 		return
-	//ChompEDIT END
 
 /mob/new_player/proc/handle_server_news()
 	if(!client)

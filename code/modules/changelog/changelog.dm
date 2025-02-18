@@ -25,7 +25,7 @@
 	var/list/data = list( "dates" = list() )
 	var/regex/ymlRegex = regex(@"\.yml", "g")
 
-	for(var/archive_file in sortList(flist("html/changelogs_ch/archive/")))
+	for(var/archive_file in sortList(flist("html/changelogs_ch/archive/"))) // CHOMPEdit - changelog_ch
 		var/archive_date = ymlRegex.Replace(archive_file, "")
 		data["dates"] = list(archive_date) + data["dates"]
 
