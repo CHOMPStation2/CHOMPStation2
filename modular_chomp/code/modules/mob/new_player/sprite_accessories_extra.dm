@@ -221,7 +221,7 @@
 	body_parts = list(BP_TORSO)
 	color_blend_mode = ICON_MULTIPLY
 	digitigrade_acceptance = MARKING_ALL_LEGS
-	digitgrade_icon = 'icons/mob/human_races/markings_ch.dmi'
+	digitigrade_icon = 'icons/mob/human_races/markings_ch.dmi'
 
 
 /datum/sprite_accessory/marking/ch/trex_upperjaw
