@@ -3,7 +3,7 @@
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/SurvivalSecurity)
 "b" = (
-/obj/item/tape/random,
+/obj/item/tape,
 /obj/item/taperecorder,
 /obj/structure/cable/green{
 	icon_state = "4-8"

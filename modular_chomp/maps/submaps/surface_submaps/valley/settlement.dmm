@@ -571,12 +571,6 @@
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled/white,
 /area/submap/settlement)
-"GV" = (
-/obj/structure/fence/corner{
-	dir = 3
-	},
-/turf/simulated/floor/outdoors/mud,
-/area/submap/settlement)
 "HF" = (
 /obj/machinery/appliance/mixer/cereal,
 /obj/machinery/light,
@@ -2469,7 +2463,7 @@ gC
 gC
 gC
 gC
-GV
+Oj
 PG
 PG
 Bv

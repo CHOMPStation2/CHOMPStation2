@@ -12,6 +12,7 @@
 /area/submap/AbandonedLab
 	name = "POI - Abandoned Lab"
 	ambience = AMBIENCE_HIGHSEC
+	requires_power = FALSE
 
 /area/submap/Blackshuttledown
 	name = "POI Wilderness - Black-Operative Shuttle"

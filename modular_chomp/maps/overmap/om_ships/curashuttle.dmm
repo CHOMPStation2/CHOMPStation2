@@ -1388,7 +1388,6 @@
 	dir = 1;
 	icon_state = "nozzle"
 	},
-/turf/space,
 /turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/curabitur/curashuttle/eng)
 "dF" = (

@@ -17,19 +17,6 @@
 /obj/structure/lattice,
 /turf/template_noop,
 /area/template_noop)
-"af" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
-/obj/effect/catwalk_plated/dark,
-/turf/template_noop,
-/area/submap/dj)
 "ag" = (
 /obj/structure/grille{
 	density = 0;
@@ -38,12 +25,12 @@
 /obj/structure/lattice,
 /turf/template_noop,
 /area/template_noop)
-"ai" = (
+"ah" = (
 /obj/structure/cable{
-	icon_state = "1-2"
+	icon_state = "4-8"
 	},
 /obj/effect/catwalk_plated/dark,
-/turf/template_noop,
+/turf/simulated/floor/plating/external,
 /area/submap/dj)
 "aj" = (
 /obj/structure/lattice,
@@ -53,48 +40,6 @@
 	},
 /turf/template_noop,
 /area/template_noop)
-"ak" = (
-/obj/structure/lattice,
-/obj/structure/lattice,
-/turf/template_noop,
-/area/template_noop)
-"al" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
-/obj/effect/catwalk_plated/dark,
-/turf/simulated/floor/plating/external,
-/area/submap/dj)
-"am" = (
-/obj/structure/grille,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/structure/shuttle/window,
-/turf/simulated/floor/plating,
-/area/submap/dj)
-"an" = (
-/obj/structure/grille,
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
-/obj/structure/shuttle/window,
-/turf/simulated/floor/plating,
-/area/submap/dj)
-"ap" = (
-/obj/structure/grille,
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
-/obj/structure/shuttle/window,
-/turf/simulated/floor/plating,
-/area/submap/dj)
 "aq" = (
 /turf/simulated/wall/titanium,
 /area/submap/dj)
@@ -103,14 +48,6 @@
 /turf/simulated/floor/airless{
 	icon_state = "solarpanel"
 	},
-/area/submap/dj)
-"as" = (
-/obj/structure/grille,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/structure/shuttle/window,
-/turf/simulated/floor/plating,
 /area/submap/dj)
 "at" = (
 /obj/effect/decal/cleanable/dirt,
@@ -130,28 +67,6 @@
 "av" = (
 /turf/simulated/floor/plating,
 /area/submap/dj)
-"ax" = (
-/obj/structure/grille,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/structure/shuttle/window,
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
-/turf/simulated/floor/plating,
-/area/submap/dj)
-"ay" = (
-/obj/structure/grille,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/structure/shuttle/window,
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
-/turf/simulated/floor/plating,
-/area/submap/dj)
 "az" = (
 /obj/machinery/power/terminal,
 /turf/simulated/floor/plating,
@@ -165,87 +80,17 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating,
 /area/submap/dj)
-"aE" = (
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
-/turf/simulated/wall/titanium,
-/area/submap/dj)
 "aF" = (
 /obj/item/extinguisher,
-/turf/simulated/floor/plating,
-/area/submap/dj)
-"aG" = (
-/obj/structure/cable{
-	icon_state = "0-2"
-	},
-/obj/machinery/power/smes,
 /turf/simulated/floor/plating,
 /area/submap/dj)
 "aH" = (
 /obj/effect/catwalk_plated/dark,
 /turf/template_noop,
 /area/submap/dj)
-"aI" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/plating,
-/area/submap/dj)
-"aJ" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/plating,
-/area/submap/dj)
-"aK" = (
-/obj/structure/grille,
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/structure/shuttle/window,
-/turf/simulated/floor/plating,
-/area/submap/dj)
 "aL" = (
 /obj/structure/grille,
 /obj/structure/shuttle/window,
-/turf/simulated/floor/plating,
-/area/submap/dj)
-"aM" = (
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/power/apc/hyper{
-	pixel_y = -20
-	},
-/turf/simulated/floor/plating,
-/area/submap/dj)
-"aN" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/item/storage/box/lights/mixed,
-/obj/structure/sign/securearea{
-	desc = "A warning sign which reads 'HIGH VOLTAGE'";
-	icon_state = "shock";
-	name = "HIGH VOLTAGE";
-	pixel_y = -32
-	},
-/turf/simulated/floor/plating,
-/area/submap/dj)
-"aO" = (
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
 /turf/simulated/floor/plating,
 /area/submap/dj)
 "aP" = (
@@ -274,19 +119,6 @@
 "aR" = (
 /obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/tiled/steel_grid,
-/area/submap/dj)
-"aS" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
-/obj/effect/catwalk_plated/dark,
-/turf/simulated/floor/plating/external,
 /area/submap/dj)
 "aT" = (
 /obj/structure/closet/emcloset,
@@ -471,16 +303,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/dj)
-"bI" = (
-/obj/structure/curtain/open/shower,
-/obj/machinery/shower{
-	dir = 4;
-	tag = "icon-shower (EAST)"
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/random/junk,
-/turf/simulated/floor/tiled/freezer,
-/area/submap/dj)
 "bJ" = (
 /obj/machinery/light_switch{
 	pixel_x = 32;
@@ -488,13 +310,6 @@
 	},
 /obj/random/maintenance/medical,
 /turf/simulated/floor/tiled/freezer,
-/area/submap/dj)
-"bK" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/effect/catwalk_plated/dark,
-/turf/simulated/floor/plating/external,
 /area/submap/dj)
 "bL" = (
 /turf/simulated/floor/tiled/dark,
@@ -638,9 +453,23 @@
 /obj/random/trash,
 /turf/simulated/floor/tiled/white,
 /area/submap/dj)
+"cs" = (
+/obj/structure/grille,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/shuttle/window,
+/turf/simulated/floor/plating,
+/area/submap/dj)
 "cu" = (
 /obj/item/stool/padded,
 /turf/simulated/floor/tiled/dark,
+/area/submap/dj)
+"cv" = (
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/turf/simulated/wall/titanium,
 /area/submap/dj)
 "dH" = (
 /mob/living/simple_mob/humanoid/russian,
@@ -660,6 +489,28 @@
 /area/submap/dj)
 "hp" = (
 /obj/random/trash,
+/turf/simulated/floor/plating,
+/area/submap/dj)
+"iq" = (
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/plating,
+/area/submap/dj)
+"jK" = (
+/obj/structure/curtain/open/shower,
+/obj/machinery/shower{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/random/junk,
+/turf/simulated/floor/tiled/freezer,
+/area/submap/dj)
+"kz" = (
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/obj/machinery/power/smes,
 /turf/simulated/floor/plating,
 /area/submap/dj)
 "lH" = (
@@ -691,16 +542,37 @@
 /obj/structure/lattice,
 /turf/template_noop,
 /area/template_noop)
-"qC" = (
+"pj" = (
 /obj/structure/cable{
-	icon_state = "2-8"
+	icon_state = "4-8"
 	},
-/turf/simulated/wall/titanium,
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/obj/effect/catwalk_plated/dark,
+/turf/simulated/floor/plating/external,
 /area/submap/dj)
 "rR" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/random/maintenance/engineering,
 /turf/simulated/floor/plating,
+/area/submap/dj)
+"vz" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/submap/dj)
+"xU" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/wall/titanium,
 /area/submap/dj)
 "zc" = (
 /mob/living/simple_mob/humanoid/russian/ranged,
@@ -710,6 +582,51 @@
 /obj/random/trash,
 /turf/simulated/floor/tiled/dark,
 /area/submap/dj)
+"zX" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
+/area/submap/dj)
+"BC" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/item/storage/box/lights/mixed,
+/obj/structure/sign/securearea{
+	desc = "A warning sign which reads 'HIGH VOLTAGE'";
+	icon_state = "shock";
+	name = "HIGH VOLTAGE";
+	pixel_y = -32
+	},
+/turf/simulated/floor/plating,
+/area/submap/dj)
+"CO" = (
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/turf/simulated/wall/titanium,
+/area/submap/dj)
+"EB" = (
+/obj/structure/grille,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/shuttle/window,
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/plating,
+/area/submap/dj)
+"Fc" = (
+/obj/structure/grille,
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/obj/structure/shuttle/window,
+/turf/simulated/floor/plating,
+/area/submap/dj)
 "GV" = (
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating,
@@ -718,6 +635,22 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/random/junk,
 /turf/simulated/floor/tiled/dark,
+/area/submap/dj)
+"IQ" = (
+/obj/structure/grille,
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/structure/shuttle/window,
+/turf/simulated/floor/plating,
+/area/submap/dj)
+"JQ" = (
+/obj/structure/grille,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/shuttle/window,
+/turf/simulated/floor/plating,
 /area/submap/dj)
 "Lt" = (
 /obj/item/stack/rods{
@@ -729,16 +662,41 @@
 /obj/structure/lattice,
 /turf/template_noop,
 /area/submap/dj)
-"Ov" = (
-/obj/random/junk,
+"MX" = (
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/power/apc/hyper{
+	pixel_y = -20
+	},
 /turf/simulated/floor/plating,
 /area/submap/dj)
-"Qh" = (
+"Nw" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/effect/catwalk_plated/dark,
+/turf/template_noop,
+/area/submap/dj)
+"Oc" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable{
-	icon_state = "4-8"
+	icon_state = "2-4"
 	},
-/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/submap/dj)
+"Ov" = (
+/obj/random/junk,
 /turf/simulated/floor/plating,
 /area/submap/dj)
 "RR" = (
@@ -749,11 +707,47 @@
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
 /area/submap/dj)
-"Vm" = (
+"UW" = (
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/simulated/wall/titanium,
+/obj/effect/catwalk_plated/dark,
+/turf/template_noop,
+/area/submap/dj)
+"Wo" = (
+/obj/structure/grille,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/shuttle/window,
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/plating,
+/area/submap/dj)
+"WM" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/effect/catwalk_plated/dark,
+/turf/simulated/floor/plating/external,
+/area/submap/dj)
+"XC" = (
+/obj/structure/grille,
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/shuttle/window,
+/turf/simulated/floor/plating,
 /area/submap/dj)
 "XR" = (
 /obj/effect/catwalk_plated/dark,
@@ -833,7 +827,7 @@ aa
 aa
 aa
 ab
-ak
+ad
 ad
 ar
 aa
@@ -865,9 +859,9 @@ aa
 ab
 ad
 ar
-aS
+pj
 ar
-aS
+pj
 ar
 aa
 aa
@@ -895,9 +889,9 @@ aa
 ab
 ad
 ar
-aS
+pj
 ar
-aS
+pj
 ar
 aa
 aq
@@ -925,9 +919,9 @@ aa
 ac
 ad
 ar
-aS
+pj
 ar
-aS
+pj
 ar
 aa
 aq
@@ -955,9 +949,9 @@ aa
 ab
 aa
 ar
-aS
+pj
 ar
-aS
+pj
 ar
 aa
 aq
@@ -985,9 +979,9 @@ aa
 aa
 aa
 aa
-bK
+ah
 aH
-bK
+ah
 ad
 aa
 aq
@@ -995,7 +989,7 @@ ba
 RR
 bm
 aq
-bI
+jK
 bP
 aq
 ad
@@ -1015,9 +1009,9 @@ aa
 XR
 XR
 XR
-bK
+ah
 aH
-bK
+ah
 ad
 ad
 aq
@@ -1043,11 +1037,11 @@ aa
 aa
 aa
 XR
-aE
-as
-ax
-Vm
-an
+cv
+cs
+Wo
+xU
+IQ
 aL
 aq
 aq
@@ -1073,12 +1067,12 @@ ar
 ar
 aa
 XR
-am
+JQ
 mx
 av
 aF
 bz
-aM
+MX
 aq
 aT
 IF
@@ -1097,18 +1091,18 @@ aa
 (12,1,1) = {"
 aa
 ar
-af
-af
-af
-af
-ai
-ai
-an
+Nw
+Nw
+Nw
+Nw
+UW
+UW
+IQ
 rR
 GV
 hp
 GV
-aN
+BC
 aq
 bL
 bL
@@ -1136,9 +1130,9 @@ LZ
 aq
 au
 az
-aG
-aI
-aO
+kz
+Oc
+iq
 aR
 bL
 zp
@@ -1157,17 +1151,17 @@ aa
 (14,1,1) = {"
 aa
 ar
-af
-af
-af
-af
-ai
-ai
-ap
+Nw
+Nw
+Nw
+Nw
+UW
+UW
+Fc
 av
 hp
 Ov
-aJ
+zX
 bn
 aq
 aW
@@ -1193,11 +1187,11 @@ ar
 ar
 ad
 XR
-am
+JQ
 av
 aB
 at
-Qh
+vz
 aQ
 aq
 aX
@@ -1223,11 +1217,11 @@ ad
 ad
 aa
 XR
-qC
-as
-ay
-Vm
-aK
+CO
+cs
+EB
+xU
+XC
 aL
 aq
 aq
@@ -1255,9 +1249,9 @@ Lt
 XR
 XR
 ad
-bK
+ah
 aH
-bK
+ah
 XR
 XR
 aq
@@ -1285,9 +1279,9 @@ ad
 aa
 ad
 ad
-bK
+ah
 aH
-bK
+ah
 aa
 aa
 aq
@@ -1315,9 +1309,9 @@ ad
 ab
 aa
 ar
-al
+WM
 ar
-al
+WM
 ar
 aa
 aq
@@ -1345,9 +1339,9 @@ ad
 ab
 aa
 ar
-al
+WM
 ar
-al
+WM
 ar
 aa
 aq
@@ -1375,9 +1369,9 @@ aa
 aj
 ad
 ar
-al
+WM
 ar
-al
+WM
 ar
 Lt
 aq
@@ -1405,9 +1399,9 @@ aa
 ab
 ad
 ar
-al
+WM
 ar
-al
+WM
 ar
 aa
 aa

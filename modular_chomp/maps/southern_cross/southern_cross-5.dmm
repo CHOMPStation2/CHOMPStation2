@@ -22000,8 +22000,7 @@
 	icon_state = "0-8"
 	},
 /obj/structure/cable/heavyduty{
-	dir = 4;
-	icon_state = "0-4"
+	icon_state = "0-1"
 	},
 /obj/effect/wingrille_spawn/reinforced_phoron,
 /obj/machinery/door/firedoor/border_only,

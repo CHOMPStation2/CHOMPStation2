@@ -2141,6 +2141,10 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "Derelict EVA Storage"
 	icon_state = "eva"
 
+/area/derelict/eva/annex
+	name = "Derelict Annex"
+	icon_state = "eva"
+
 /area/derelict/ship
 	name = "\improper Abandoned Ship"
 	icon_state = "yellow"

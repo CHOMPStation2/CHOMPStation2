@@ -2,68 +2,37 @@
 "aa" = (
 /turf/simulated/mineral/sif,
 /area/surface/outside/wilderness/mountains)
-"ad" = (
-/obj/machinery/light{
-	dir = 4
-	},
-/obj/machinery/floodlight,
-/turf/simulated/floor/tiled/steel_dirty,
-/area/surface/outpost/mining_main/exterior{
-	name = "Surface Mines Operations Pad"
-	})
 "ai" = (
 /turf/simulated/shuttle/wall/voidcraft/hard_corner,
 /area/surface/outpost/wall/checkpoint)
-"ax" = (
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 4
+"br" = (
+/obj/machinery/light{
+	dir = 8
 	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/asteroid_steel,
-/area/surface/outpost/mining_main/exterior{
-	name = "Surface Mines Operations Pad"
-	})
-"aH" = (
-/obj/machinery/light,
 /turf/simulated/floor/tiled/steel_dirty,
-/area/surface/outpost/mining_main/exterior{
-	name = "Surface Mines Operations Pad"
-	})
+/area/surface/outpost/mining_main/exterior/pad)
+"cJ" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel_dirty,
+/area/surface/outpost/mining_main/exterior/pad)
 "cM" = (
 /turf/unsimulated/wall/planetary/normal/thor,
 /area/surface/outpost/wall)
 "cW" = (
 /obj/structure/cable/heavyduty{
-	icon_state = "4-8";
-	d1 = 4;
-	d2 = 8
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/surface/outpost/wall/checkpoint)
-"ed" = (
-/obj/effect/floor_decal/industrial/warning/dust{
+"eh" = (
+/obj/machinery/light{
 	dir = 4
 	},
-/obj/machinery/power/port_gen/pacman,
-/obj/item/tool/wrench,
-/turf/simulated/floor/plating,
-/area/surface/outpost/mining_main/exterior{
-	name = "Surface Mines Operations Pad"
-	})
-"ek" = (
 /obj/machinery/floodlight,
-/turf/simulated/floor/tiled/asteroid_steel,
-/area/surface/outpost/mining_main/exterior{
-	name = "Surface Mines Operations Pad"
-	})
-"eI" = (
-/obj/structure/ore_box,
-/turf/simulated/floor/tiled/asteroid_steel,
-/area/surface/outpost/mining_main/exterior{
-	name = "Surface Mines Operations Pad"
-	})
+/turf/simulated/floor/tiled/steel_dirty,
+/area/surface/outpost/mining_main/exterior/pad)
 "eV" = (
 /obj/effect/map_effect/portal/line/side_b{
 	dir = 8
@@ -73,33 +42,298 @@
 "eY" = (
 /turf/simulated/shuttle/wall/voidcraft/hard_corner,
 /area/surface/outside/wilderness/mountains)
-"ft" = (
-/obj/structure/sign/warning{
-	desc = "WARNING - WILD ANIMALS. PROCEED AT YOUR OWN RISK.";
-	name = "\improper WARNING - WILD ANIMALS"
+"fm" = (
+/obj/structure/ore_box,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/surface/outpost/mining_main/exterior/pad)
+"fD" = (
+/obj/machinery/light{
+	dir = 8;
+	layer = 3
 	},
-/turf/simulated/shuttle/wall/voidcraft/hard_corner,
-/area/surface/outpost/mining_main/exterior{
-	name = "Surface Mines Operations Pad"
-	})
+/obj/machinery/floodlight,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/surface/outpost/mining_main/exterior/pad)
 "fQ" = (
 /obj/effect/map_effect/portal/line/side_b{
 	dir = 8
 	},
 /turf/unsimulated/wall/planetary/normal/thor,
 /area/surface/outpost/wall/checkpoint)
-"iu" = (
-/turf/simulated/shuttle/wall/voidcraft/hard_corner,
-/area/surface/outpost/mining_main/exterior{
-	name = "Surface Mines Operations Pad"
-	})
+"fY" = (
+/obj/effect/floor_decal/industrial/warning/dust,
+/obj/structure/ore_box,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/surface/outpost/mining_main/exterior/pad)
 "iD" = (
 /obj/machinery/door/airlock/voidcraft{
 	name = "Wilderness Containment"
 	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/surface/outpost/wall/checkpoint)
-"iM" = (
+"jl" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 4
+	},
+/obj/machinery/power/port_gen/pacman,
+/obj/structure/cable,
+/obj/item/stack/material/phoron{
+	amount = 10
+	},
+/turf/simulated/floor/plating,
+/area/surface/outpost/mining_main/exterior/pad)
+"jo" = (
+/obj/structure/cable/ender{
+	icon_state = "4-8";
+	id = "surface-mines"
+	},
+/turf/unsimulated/wall/planetary/normal/thor,
+/area/surface/outpost/wall)
+"jP" = (
+/obj/structure/sign/signnew/danger,
+/turf/simulated/shuttle/wall/voidcraft,
+/area/surface/outpost/wall/checkpoint)
+"lQ" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/surface/outpost/mining_main/exterior/pad)
+"ox" = (
+/turf/simulated/mineral/floor/ignore_mapgen/sif,
+/area/surface/outside/path)
+"pi" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/surface/outpost/mining_main/exterior/pad)
+"qV" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 1
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/surface/outpost/mining_main/exterior/pad)
+"rh" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/plating,
+/area/surface/outside/wilderness/mountains)
+"sb" = (
+/turf/simulated/floor/tiled/steel_dirty,
+/area/surface/outpost/mining_main/exterior/pad)
+"sy" = (
+/obj/machinery/mining/drill/loaded,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/surface/outpost/mining_main/exterior/pad)
+"sQ" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 6
+	},
+/obj/structure/ore_box,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/surface/outpost/mining_main/exterior/pad)
+"ud" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/surface/outpost/mining_main/exterior/pad)
+"uH" = (
+/obj/machinery/light,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/surface/outpost/wall/checkpoint)
+"vp" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 4
+	},
+/obj/structure/ore_box,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/surface/outpost/mining_main/exterior/pad)
+"xb" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel_dirty,
+/area/surface/outpost/mining_main/exterior/pad)
+"yG" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 8
+	},
+/obj/vehicle/train/engine{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/surface/outpost/mining_main/exterior/pad)
+"yZ" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/surface/outpost/mining_main/exterior/pad)
+"BJ" = (
+/obj/effect/floor_decal/industrial/warning/dust,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/surface/outpost/mining_main/exterior/pad)
+"EF" = (
+/obj/machinery/floodlight,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/surface/outpost/mining_main/exterior/pad)
+"Gr" = (
+/turf/simulated/floor/tiled/steel_dirty,
+/area/surface/outpost/wall/checkpoint)
+"Gv" = (
+/obj/structure/sign/warning{
+	desc = "WARNING - WILD ANIMALS. PROCEED AT YOUR OWN RISK.";
+	name = "\improper WARNING - WILD ANIMALS"
+	},
+/turf/simulated/shuttle/wall/voidcraft/hard_corner,
+/area/surface/outpost/wall/checkpoint)
+"HX" = (
+/obj/structure/sign/signnew/explosives,
+/turf/simulated/shuttle/wall/voidcraft,
+/area/surface/outpost/wall/checkpoint)
+"IZ" = (
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/surface/outpost/mining_main/exterior/pad)
+"JM" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/surface/outpost/mining_main/exterior/pad)
+"JX" = (
+/obj/machinery/door/airlock/voidcraft{
+	name = "Wilderness Containment"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/steel_dirty,
+/area/surface/outpost/wall/checkpoint)
+"LK" = (
+/obj/machinery/light,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/surface/outpost/mining_main/exterior/pad)
+"MA" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/steel_dirty,
+/area/surface/outpost/wall/checkpoint)
+"MF" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/effect/wingrille_spawn/reinforced,
+/turf/simulated/floor/plating,
+/area/surface/outpost/wall/checkpoint)
+"Nd" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel_dirty,
+/area/surface/outpost/mining_main/exterior/pad)
+"Ox" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/surface/outside/wilderness/mountains)
+"OA" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/surface/outpost/mining_main/exterior/pad)
+"OM" = (
+/obj/structure/table/steel,
+/obj/machinery/cell_charger,
+/obj/item/cell/high{
+	pixel_x = 2;
+	pixel_y = 4
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/surface/outpost/mining_main/exterior/pad)
+"Pg" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 4
+	},
+/obj/machinery/power/port_gen/pacman,
+/obj/item/tool/wrench,
+/turf/simulated/floor/plating,
+/area/surface/outpost/mining_main/exterior/pad)
+"PH" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/surface/outpost/mining_main/exterior/pad)
+"PZ" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel_dirty,
+/area/surface/outpost/wall/checkpoint)
+"Rf" = (
+/obj/machinery/mining/brace,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/surface/outpost/mining_main/exterior/pad)
+"RJ" = (
+/obj/effect/map_effect/portal/line/side_b{
+	dir = 8
+	},
+/turf/simulated/shuttle/wall/voidcraft/hard_corner,
+/area/surface/outpost/wall/checkpoint)
+"SD" = (
+/turf/simulated/shuttle/wall/voidcraft/hard_corner,
+/area/surface/outpost/mining_main/exterior/pad)
+"SR" = (
+/turf/unsimulated/mineral,
+/area/surface/outside/wilderness/mountains)
+"Un" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 8
+	},
+/obj/vehicle/train/trolley{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/surface/outpost/mining_main/exterior/pad)
+"VQ" = (
+/obj/effect/map_effect/portal/master/side_b{
+	dir = 8;
+	portal_id = "outpost_to_mines"
+	},
+/turf/unsimulated/wall/planetary/normal/thor,
+/area/surface/outpost/wall/checkpoint)
+"Ww" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/surface/outpost/mining_main/exterior/pad)
+"Yf" = (
+/obj/structure/sign/warning{
+	desc = "WARNING - WILD ANIMALS. PROCEED AT YOUR OWN RISK.";
+	name = "\improper WARNING - WILD ANIMALS"
+	},
+/turf/simulated/shuttle/wall/voidcraft/hard_corner,
+/area/surface/outpost/mining_main/exterior/pad)
+"Yv" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 5
 	},
@@ -115,339 +349,17 @@
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled/asteroid_steel,
-/area/surface/outpost/mining_main/exterior{
-	name = "Surface Mines Operations Pad"
-	})
-"jo" = (
-/obj/structure/cable/ender{
-	icon_state = "4-8";
-	id = "surface-mines"
+/area/surface/outpost/mining_main/exterior/pad)
+"Yy" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
 	},
-/turf/unsimulated/wall/planetary/normal/thor,
-/area/surface/outpost/wall)
-"jP" = (
-/obj/structure/sign/signnew/danger,
-/turf/simulated/shuttle/wall/voidcraft,
-/area/surface/outpost/wall/checkpoint)
-"mm" = (
-/obj/machinery/light{
-	dir = 8;
-	layer = 3
-	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/surface/outpost/mining_main/exterior/pad)
+"ZQ" = (
 /obj/machinery/floodlight,
-/turf/simulated/floor/tiled/steel_dirty,
-/area/surface/outpost/mining_main/exterior{
-	name = "Surface Mines Operations Pad"
-	})
-"nO" = (
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 9
-	},
 /turf/simulated/floor/tiled/asteroid_steel,
-/area/surface/outpost/mining_main/exterior{
-	name = "Surface Mines Operations Pad"
-	})
-"ox" = (
-/turf/simulated/mineral/floor/ignore_mapgen/sif,
-/area/surface/outside/path)
-"oT" = (
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/steel_dirty,
-/area/surface/outpost/mining_main/exterior{
-	name = "Surface Mines Operations Pad"
-	})
-"po" = (
-/obj/machinery/mining/brace,
-/turf/simulated/floor/tiled/asteroid_steel,
-/area/surface/outpost/mining_main/exterior{
-	name = "Surface Mines Operations Pad"
-	})
-"rh" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/plating,
-/area/surface/outside/wilderness/mountains)
-"rw" = (
-/obj/machinery/mining/drill/loaded,
-/turf/simulated/floor/tiled/asteroid_steel,
-/area/surface/outpost/mining_main/exterior{
-	name = "Surface Mines Operations Pad"
-	})
-"uD" = (
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 4
-	},
-/obj/structure/ore_box,
-/turf/simulated/floor/tiled/asteroid_steel,
-/area/surface/outpost/mining_main/exterior{
-	name = "Surface Mines Operations Pad"
-	})
-"uH" = (
-/obj/machinery/light,
-/turf/simulated/floor/tiled/steel_dirty,
-/area/surface/outpost/wall/checkpoint)
-"wp" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2";
-	d1 = 1;
-	d2 = 2
-	},
-/turf/simulated/floor/tiled/asteroid_steel,
-/area/surface/outpost/mining_main/exterior{
-	name = "Surface Mines Operations Pad"
-	})
-"zE" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8";
-	d1 = 4;
-	d2 = 8
-	},
-/turf/simulated/floor/tiled/asteroid_steel,
-/area/surface/outpost/mining_main/exterior{
-	name = "Surface Mines Operations Pad"
-	})
-"zU" = (
-/obj/machinery/floodlight,
-/turf/simulated/floor/tiled/steel_dirty,
-/area/surface/outpost/mining_main/exterior{
-	name = "Surface Mines Operations Pad"
-	})
-"Bs" = (
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 6
-	},
-/obj/structure/ore_box,
-/turf/simulated/floor/tiled/asteroid_steel,
-/area/surface/outpost/mining_main/exterior{
-	name = "Surface Mines Operations Pad"
-	})
-"Cs" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2";
-	d1 = 1;
-	d2 = 2
-	},
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/steel_dirty,
-/area/surface/outpost/mining_main/exterior{
-	name = "Surface Mines Operations Pad"
-	})
-"Dp" = (
-/obj/effect/floor_decal/industrial/warning/dust,
-/obj/structure/ore_box,
-/turf/simulated/floor/tiled/asteroid_steel,
-/area/surface/outpost/mining_main/exterior{
-	name = "Surface Mines Operations Pad"
-	})
-"Gr" = (
-/turf/simulated/floor/tiled/steel_dirty,
-/area/surface/outpost/wall/checkpoint)
-"Gv" = (
-/obj/structure/sign/warning{
-	desc = "WARNING - WILD ANIMALS. PROCEED AT YOUR OWN RISK.";
-	name = "\improper WARNING - WILD ANIMALS"
-	},
-/turf/simulated/shuttle/wall/voidcraft/hard_corner,
-/area/surface/outpost/wall/checkpoint)
-"GD" = (
-/obj/effect/floor_decal/industrial/warning/dust,
-/turf/simulated/floor/tiled/asteroid_steel,
-/area/surface/outpost/mining_main/exterior{
-	name = "Surface Mines Operations Pad"
-	})
-"Hc" = (
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 10
-	},
-/turf/simulated/floor/tiled/asteroid_steel,
-/area/surface/outpost/mining_main/exterior{
-	name = "Surface Mines Operations Pad"
-	})
-"HX" = (
-/obj/structure/sign/signnew/explosives,
-/turf/simulated/shuttle/wall/voidcraft,
-/area/surface/outpost/wall/checkpoint)
-"IS" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/steel_dirty,
-/area/surface/outpost/mining_main/exterior{
-	name = "Surface Mines Operations Pad"
-	})
-"JX" = (
-/obj/machinery/door/airlock/voidcraft{
-	name = "Wilderness Containment"
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8";
-	d1 = 4;
-	d2 = 8
-	},
-/turf/simulated/floor/tiled/steel_dirty,
-/area/surface/outpost/wall/checkpoint)
-"Kv" = (
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/asteroid_steel,
-/area/surface/outpost/mining_main/exterior{
-	name = "Surface Mines Operations Pad"
-	})
-"KG" = (
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/asteroid_steel,
-/area/surface/outpost/mining_main/exterior{
-	name = "Surface Mines Operations Pad"
-	})
-"Lg" = (
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/steel_dirty,
-/area/surface/outpost/mining_main/exterior{
-	name = "Surface Mines Operations Pad"
-	})
-"Lp" = (
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 4
-	},
-/obj/machinery/power/port_gen/pacman,
-/obj/structure/cable,
-/obj/item/stack/material/phoron{
-	amount = 10
-	},
-/turf/simulated/floor/plating,
-/area/surface/outpost/mining_main/exterior{
-	name = "Surface Mines Operations Pad"
-	})
-"LG" = (
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 8
-	},
-/obj/vehicle/train/trolley{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/asteroid_steel,
-/area/surface/outpost/mining_main/exterior{
-	name = "Surface Mines Operations Pad"
-	})
-"Me" = (
-/obj/structure/table/steel,
-/obj/machinery/cell_charger,
-/obj/item/cell/high{
-	pixel_x = 2;
-	pixel_y = 4
-	},
-/turf/simulated/floor/tiled/asteroid_steel,
-/area/surface/outpost/mining_main/exterior{
-	name = "Surface Mines Operations Pad"
-	})
-"MA" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-8"
-	},
-/turf/simulated/floor/tiled/steel_dirty,
-/area/surface/outpost/wall/checkpoint)
-"MF" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2";
-	d1 = 1;
-	d2 = 2
-	},
-/obj/effect/wingrille_spawn/reinforced,
-/turf/simulated/floor/plating,
-/area/surface/outpost/wall/checkpoint)
-"Nb" = (
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 8
-	},
-/obj/vehicle/train/engine{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/asteroid_steel,
-/area/surface/outpost/mining_main/exterior{
-	name = "Surface Mines Operations Pad"
-	})
-"Ox" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2";
-	d1 = 1;
-	d2 = 2
-	},
-/turf/simulated/floor/plating,
-/area/surface/outside/wilderness/mountains)
-"ON" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/tiled/asteroid_steel,
-/area/surface/outpost/mining_main/exterior{
-	name = "Surface Mines Operations Pad"
-	})
-"PZ" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8";
-	d1 = 4;
-	d2 = 8
-	},
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/steel_dirty,
-/area/surface/outpost/wall/checkpoint)
-"RJ" = (
-/obj/effect/map_effect/portal/line/side_b{
-	dir = 8
-	},
-/turf/simulated/shuttle/wall/voidcraft/hard_corner,
-/area/surface/outpost/wall/checkpoint)
-"SH" = (
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/asteroid_steel,
-/area/surface/outpost/mining_main/exterior{
-	name = "Surface Mines Operations Pad"
-	})
-"SR" = (
-/turf/unsimulated/mineral,
-/area/surface/outside/wilderness/mountains)
-"VQ" = (
-/obj/effect/map_effect/portal/master/side_b{
-	dir = 8;
-	portal_id = "outpost_to_mines"
-	},
-/turf/unsimulated/wall/planetary/normal/thor,
-/area/surface/outpost/wall/checkpoint)
-"Wm" = (
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 1
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-4"
-	},
-/turf/simulated/floor/tiled/asteroid_steel,
-/area/surface/outpost/mining_main/exterior{
-	name = "Surface Mines Operations Pad"
-	})
-"Wz" = (
-/turf/simulated/floor/tiled/steel_dirty,
-/area/surface/outpost/mining_main/exterior{
-	name = "Surface Mines Operations Pad"
-	})
-"Zx" = (
-/turf/simulated/floor/tiled/asteroid_steel,
-/area/surface/outpost/mining_main/exterior{
-	name = "Surface Mines Operations Pad"
-	})
+/area/surface/outpost/mining_main/exterior/pad)
 
 (1,1,1) = {"
 cM
@@ -63030,23 +62942,23 @@ ox
 ox
 ox
 ox
-iu
-iu
-IS
-Wz
-aH
-iu
-iu
-iu
-IS
-Wz
-Wz
-Wz
-Wz
-Wz
-aH
-iu
-iu
+SD
+SD
+cJ
+sb
+LK
+SD
+SD
+SD
+cJ
+sb
+sb
+sb
+sb
+sb
+LK
+SD
+SD
 aa
 aa
 aa
@@ -63287,23 +63199,23 @@ ox
 ox
 ox
 ox
-iu
-ek
-Zx
-Zx
-Zx
-ek
-iu
-nO
-Kv
-Nb
-LG
-LG
-LG
-Kv
-Kv
-Hc
-iu
+SD
+ZQ
+IZ
+IZ
+IZ
+ZQ
+SD
+lQ
+JM
+yG
+Un
+Un
+Un
+JM
+JM
+OA
+SD
 aa
 aa
 aa
@@ -63544,23 +63456,23 @@ ox
 ox
 ox
 ox
-oT
-Zx
-Zx
-Zx
-Zx
-Zx
-oT
-KG
-Zx
-Zx
-po
-Zx
-po
-Zx
-po
-GD
-mm
+br
+IZ
+IZ
+IZ
+IZ
+IZ
+br
+pi
+IZ
+IZ
+Rf
+IZ
+Rf
+IZ
+Rf
+BJ
+fD
 aa
 aa
 aa
@@ -63801,23 +63713,23 @@ ox
 ox
 ox
 ox
-Wz
-Zx
-Zx
-Zx
-Zx
-Zx
-Wz
-KG
-Zx
-Zx
-rw
-Zx
-rw
-Zx
-rw
-GD
-zU
+sb
+IZ
+IZ
+IZ
+IZ
+IZ
+sb
+pi
+IZ
+IZ
+sy
+IZ
+sy
+IZ
+sy
+BJ
+EF
 aa
 aa
 aa
@@ -64058,23 +63970,23 @@ ox
 ox
 ox
 ox
-Wz
-Zx
-Zx
-Zx
-Zx
-Zx
-Wz
-KG
-Zx
-Zx
-po
-Zx
-po
-Zx
-po
-GD
-zU
+sb
+IZ
+IZ
+IZ
+IZ
+IZ
+sb
+pi
+IZ
+IZ
+Rf
+IZ
+Rf
+IZ
+Rf
+BJ
+EF
 aa
 aa
 aa
@@ -64315,23 +64227,23 @@ aa
 ox
 ox
 ox
-Lg
-Zx
-ON
-wp
-wp
-wp
-Cs
-Wm
-Zx
-Zx
-Zx
-Zx
-eI
-eI
-eI
-Dp
-ad
+xb
+IZ
+yZ
+Yy
+Yy
+Yy
+Nd
+qV
+IZ
+IZ
+IZ
+IZ
+fm
+fm
+fm
+fY
+eh
 aa
 aa
 aa
@@ -64572,23 +64484,23 @@ aa
 aa
 aa
 aa
-iu
-ek
-zE
-Me
-Me
-Zx
-iu
-iM
-ax
-Lp
-ed
-SH
-uD
-uD
-uD
-Bs
-iu
+SD
+ZQ
+ud
+OM
+OM
+IZ
+SD
+Yv
+PH
+jl
+Pg
+Ww
+vp
+vp
+vp
+sQ
+SD
 aa
 aa
 aa
@@ -64835,17 +64747,17 @@ JX
 jP
 HX
 iD
-ft
-iu
-IS
-Wz
-Wz
-Wz
-Wz
-Wz
-aH
-iu
-iu
+Yf
+SD
+cJ
+sb
+sb
+sb
+sb
+sb
+LK
+SD
+SD
 aa
 aa
 aa

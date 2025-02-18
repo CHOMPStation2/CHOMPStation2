@@ -2730,7 +2730,7 @@
 	},
 /obj/item/radio/intercom/department/security{
 	dir = 4;
-	icon_override = "secintercom";
+	icon_state = "secintercom";
 	pixel_x = 22
 	},
 /obj/effect/floor_decal/borderfloorblack{
@@ -5491,7 +5491,7 @@
 	},
 /obj/item/radio/intercom/department/security{
 	dir = 8;
-	icon_override = "secintercom";
+	icon_state = "secintercom";
 	pixel_x = -22
 	},
 /obj/item/reagent_containers/spray/sterilizine{
@@ -12011,7 +12011,7 @@
 "aLT" = (
 /obj/item/radio/intercom/department/security{
 	dir = 4;
-	icon_override = "secintercom";
+	icon_state = "secintercom";
 	pixel_x = 22
 	},
 /obj/machinery/light{
@@ -23642,7 +23642,7 @@
 /obj/structure/table/rack,
 /obj/item/radio/intercom/department/security{
 	dir = 4;
-	icon_override = "secintercom";
+	icon_state = "secintercom";
 	pixel_x = 22
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -32114,7 +32114,7 @@
 "cfb" = (
 /obj/item/radio/intercom/department/security{
 	dir = 8;
-	icon_override = "secintercom";
+	icon_state = "secintercom";
 	pixel_x = -22
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central2,
@@ -50220,7 +50220,7 @@
 "fld" = (
 /obj/item/radio/intercom/department/security{
 	dir = 4;
-	icon_override = "secintercom";
+	icon_state = "secintercom";
 	pixel_x = 22
 	},
 /obj/effect/floor_decal/borderfloor/corner,
@@ -79553,7 +79553,7 @@
 	},
 /obj/item/radio/intercom/department/security{
 	dir = 8;
-	icon_override = "secintercom";
+	icon_state = "secintercom";
 	pixel_x = -22
 	},
 /obj/effect/floor_decal/borderfloorblack{
@@ -92624,7 +92624,7 @@
 	},
 /obj/item/radio/intercom/department/security{
 	dir = 8;
-	icon_override = "secintercom";
+	icon_state = "secintercom";
 	pixel_x = -22
 	},
 /obj/effect/floor_decal/borderfloorblack{

@@ -1535,8 +1535,7 @@
 /area/submap/spaceseveneleven)
 "HI" = (
 /obj/structure/cable{
-	icon_state = "4-8";
-	tag = ""
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/outdoors/sidewalk/slab/city{
 	oxygen = 0;
