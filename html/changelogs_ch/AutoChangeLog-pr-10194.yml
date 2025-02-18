@@ -1,0 +1,5 @@
+author: "TheCaramelion"
+delete-after: True
+changes:
+  - qol: "Engineering will get an alarm whenever a fire alarm triggers"
+  - balance: "Makes fire less spreadable"
