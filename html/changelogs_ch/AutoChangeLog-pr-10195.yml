@@ -1,5 +1,0 @@
-author: "ItsSelis"
-delete-after: True
-changes:
-  - code_imp: "changelog hash is now a global var"
-  - code_imp: "last viewed changelog is now a tg pref"
