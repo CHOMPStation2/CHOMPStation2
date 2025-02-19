@@ -397,3 +397,10 @@ CHOMPStation2StaffMirrorBot:
   - rscadd: You can now use storage containers that is in another storage container
   tacoguy7765093:
   - bugfix: Map fixes
+2025-02-19:
+  ItsSelis:
+  - code_imp: changelog hash is now a global var
+  - code_imp: last viewed changelog is now a tg pref
+  TheCaramelion:
+  - qol: Engineering will get an alarm whenever a fire alarm triggers
+  - balance: Makes fire less spreadable
