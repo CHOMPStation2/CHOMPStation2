@@ -21,7 +21,6 @@ var/sql_error_log		= null
 var/query_debug_log		= null
 var/debug_log			= null
 var/href_logfile		= null
-<<<<<<< HEAD
 //CHOMPStation Removal Start TFF 24/12/19 - Blep. Remove extra stuff. Where do these even come in?
 /*
 var/station_name		= "Yawn Wider Station"
@@ -36,22 +35,8 @@ var/const/star_name		= "Virgo-Erigone"
 var/const/starsys_name	= "Virgo-Erigone"
 */
 //CHOMPStation Removal End
-var/const/game_version	= "CHOMPStation"	//CHOMPStation Edit TFF 24/12/19 - Chompers
 var/servernews_hash		= "" //ChompADD - news hash gen
 var/game_year			= (text2num(time2text(world.realtime, "YYYY")) + 544) //YW EDIT
-=======
-// var/station_name		= "Northern Star"
-// var/const/station_orig	= "Northern Star" //station_name can't be const due to event prefix/suffix
-// var/const/station_short	= "Northern Star"
-// var/const/dock_name		= "Vir Interstellar Spaceport"
-// var/const/boss_name		= "Central Command"
-// var/const/boss_short	= "CentCom"
-// var/const/company_name	= "NanoTrasen"
-// var/const/company_short	= "NT"
-// var/const/star_name		= "Vir"
-// var/const/starsys_name	= "Vir"
-var/game_year			= (text2num(time2text(world.realtime, "YYYY")) + 300) //VOREStation Edit
->>>>>>> 9d29d7596b (Changed 1 Global Var to test the workflow change (#17174))
 var/round_progressing = 1
 
 var/master_mode       = "extended" // "extended"
