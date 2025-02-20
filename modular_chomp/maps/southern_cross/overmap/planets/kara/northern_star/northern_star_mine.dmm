@@ -558,8 +558,7 @@
 	desc = "Small wall-mounted chime triggered by a bell";
 	id_tag = "science_dinger";
 	name = "Science request chime";
-	pixel_w = 0;
-	pixel_z = 33
+	pixel_w = 0
 	},
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/mixing)
@@ -2366,8 +2365,7 @@
 	desc = "Small wall-mounted chime triggered by a bell";
 	id_tag = "science_dinger";
 	name = "Science request chime";
-	pixel_w = -29;
-	pixel_z = 2
+	pixel_x = -29
 	},
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/hallway/toxins_hallway)
@@ -2636,7 +2634,7 @@
 	desc = "Small wall-mounted chime triggered by a bell";
 	id_tag = "science_dinger";
 	name = "Science request chime";
-	pixel_w = 29
+	pixel_x = 29
 	},
 /turf/simulated/floor/plating,
 /area/outpost/research/toxins_misc_lab)
@@ -3347,8 +3345,7 @@
 	desc = "Small wall-mounted chime triggered by a bell";
 	id_tag = "science_dinger";
 	name = "Science request chime";
-	pixel_w = 0;
-	pixel_z = -29
+	pixel_w = 0
 	},
 /turf/simulated/floor/tiled,
 /area/outpost/research/xenobiology)
@@ -5069,8 +5066,7 @@
 	desc = "Small wall-mounted chime triggered by a bell";
 	id_tag = "science_dinger";
 	name = "Science request chime";
-	pixel_w = 0;
-	pixel_z = -27
+	pixel_w = 0
 	},
 /obj/machinery/light,
 /turf/simulated/floor/tiled/white,
@@ -5274,8 +5270,7 @@
 	desc = "Small wall-mounted chime triggered by a bell";
 	id_tag = "science_dinger";
 	name = "Science request chime";
-	pixel_w = 0;
-	pixel_z = 34
+	pixel_w = 0
 	},
 /turf/simulated/floor/wood,
 /area/outpost/research/dorms)
@@ -5972,8 +5967,7 @@
 	desc = "Small wall-mounted chime triggered by a bell";
 	id_tag = "science_dinger";
 	name = "Science request chime";
-	pixel_w = -28;
-	pixel_z = 1
+	pixel_x = -28
 	},
 /turf/simulated/floor/tiled/dark,
 /area/outpost/research/longtermstorage)
@@ -6002,8 +5996,8 @@
 /area/outpost/research/tempstorage)
 "lV" = (
 /obj/machinery/conveyor{
-	dir = 3;
-	id = "anolongstorage"
+	id = "anolongstorage";
+	dir = 6
 	},
 /turf/simulated/floor/plating{
 	dir = 10
@@ -6447,11 +6441,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/cable/blue{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/blue{
 	icon_state = "1-2"
 	},
@@ -9858,8 +9847,7 @@
 	desc = "Small wall-mounted chime triggered by a bell";
 	id_tag = "science_dinger";
 	name = "Science request chime";
-	pixel_w = -29;
-	pixel_z = 2
+	pixel_x = -29
 	},
 /turf/simulated/floor/tiled,
 /area/outpost/research/tempstorage)
@@ -11212,8 +11200,7 @@
 	desc = "Small wall-mounted chime triggered by a bell";
 	id_tag = "science_dinger";
 	name = "Science request chime";
-	pixel_w = 0;
-	pixel_z = 32
+	pixel_w = 0
 	},
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/dock)
@@ -12528,8 +12515,7 @@
 	desc = "Small wall-mounted chime triggered by a bell";
 	id_tag = "science_dinger";
 	name = "Science request chime";
-	pixel_w = 0;
-	pixel_z = 31
+	pixel_w = 0
 	},
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/anomaly)
@@ -13060,8 +13046,7 @@
 	desc = "Small wall-mounted chime triggered by a bell";
 	id_tag = "science_dinger";
 	name = "Science request chime";
-	pixel_w = 0;
-	pixel_z = -28
+	pixel_w = 0
 	},
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/analysis)
@@ -14393,8 +14378,7 @@
 	desc = "Small wall-mounted chime triggered by a bell";
 	id_tag = "medical_dinger";
 	name = "Medical request chime";
-	pixel_w = 1;
-	pixel_z = -29
+	pixel_x = 1
 	},
 /turf/simulated/floor/plating,
 /area/outpost/medical/atmos)
@@ -14476,7 +14460,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/vending/wallmed1{
-	pixel_w = 31
+	pixel_y = 31
 	},
 /turf/simulated/floor/wood,
 /area/outpost/medical/dorm)
@@ -14507,7 +14491,7 @@
 	dir = 9
 	},
 /obj/machinery/vending/wallmed1{
-	pixel_w = -30
+	pixel_x = -30
 	},
 /turf/simulated/floor/tiled/white,
 /area/outpost/medical/rec)
@@ -14933,8 +14917,7 @@
 	desc = "Small wall-mounted chime triggered by a bell";
 	id_tag = "medical_dinger";
 	name = "Medical request chime";
-	pixel_w = 28;
-	pixel_z = -29
+	pixel_x = 28
 	},
 /turf/simulated/floor/tiled/white,
 /area/outpost/medical/rec)
@@ -15252,8 +15235,7 @@
 	frequency = 1380;
 	id_tag = "med_outpost_airlock2";
 	pixel_x = -6;
-	pixel_y = -25;
-	pixel_z = 51;
+	pixel_y = 25;
 	req_one_access = list(5);
 	tag_airpump = "med_outpost_airlock2_vent";
 	tag_chamber_sensor = "med_outpost_airlock2_sensor";
@@ -15264,8 +15246,7 @@
 	frequency = 1380;
 	id_tag = "med_outpost_airlock2_sensor";
 	pixel_x = 6;
-	pixel_y = -24;
-	pixel_z = 49
+	pixel_y = 25
 	},
 /turf/simulated/floor/tiled/white,
 /area/outpost/medical/airlocks)
@@ -15357,9 +15338,7 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 6
 	},
-/obj/machinery/vending/wallmed1{
-	pixel_z = 30
-	},
+/obj/machinery/vending/wallmed1,
 /turf/simulated/floor/tiled/white,
 /area/outpost/medical/main_room)
 "Fg" = (
@@ -15802,10 +15781,8 @@
 	frequency = 1380;
 	master_tag = "med_outpost_airlock1";
 	name = "airlock 1 access button";
-	pixel_w = -3;
 	pixel_x = 25;
 	pixel_y = 25;
-	pixel_z = -35;
 	req_access = list(45);
 	req_one_access = list(5)
 	},
@@ -15814,10 +15791,8 @@
 	frequency = 1380;
 	master_tag = "med_outpost_airlock2";
 	name = "airlock 2 access button";
-	pixel_w = -3;
 	pixel_x = 25;
 	pixel_y = 25;
-	pixel_z = -15;
 	req_access = list(45);
 	req_one_access = list(5)
 	},
@@ -15831,30 +15806,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
-	},
-/obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1380;
-	master_tag = "med_outpost_airlock1";
-	name = "airlock 1 access button";
-	pixel_w = -48;
-	pixel_x = 25;
-	pixel_y = 25;
-	pixel_z = -35;
-	req_access = list(45);
-	req_one_access = list(5)
-	},
-/obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1380;
-	master_tag = "med_outpost_airlock2";
-	name = "airlock 2 access button";
-	pixel_w = -48;
-	pixel_x = 25;
-	pixel_y = 25;
-	pixel_z = -16;
-	req_access = list(45);
-	req_one_access = list(5)
 	},
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 9
@@ -16196,10 +16147,8 @@
 	frequency = 1380;
 	master_tag = "med_outpost_airlock";
 	name = "interior access button";
-	pixel_w = -18;
 	pixel_x = 25;
 	pixel_y = 25;
-	pixel_z = -47;
 	req_one_access = list(5)
 	},
 /turf/simulated/floor/tiled/white,
@@ -16453,9 +16402,7 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 10
 	},
-/obj/machinery/vending/wallmed1{
-	pixel_z = -30
-	},
+/obj/machinery/vending/wallmed1,
 /turf/simulated/floor/tiled/white,
 /area/outpost/medical/airlocks)
 "Hb" = (
@@ -16499,8 +16446,7 @@
 	desc = "Small wall-mounted chime triggered by a bell";
 	id_tag = "medical_dinger";
 	name = "Medical request chime";
-	pixel_w = -28;
-	pixel_z = 3
+	pixel_x = -28
 	},
 /turf/simulated/floor/tiled/white,
 /area/outpost/medical/main_room)
@@ -16529,9 +16475,7 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 9
 	},
-/obj/machinery/vending/wallmed1{
-	pixel_z = 32
-	},
+/obj/machinery/vending/wallmed1,
 /obj/structure/closet/secure_closet/medical2{
 	req_access = list(45);
 	req_one_access = list(5)
@@ -16840,8 +16784,7 @@
 	desc = "Small wall-mounted chime triggered by a bell";
 	id_tag = "medical_dinger";
 	name = "Medical request chime";
-	pixel_w = -28;
-	pixel_z = 2
+	pixel_x = -28
 	},
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
@@ -17250,7 +17193,7 @@
 	dir = 9
 	},
 /obj/machinery/vending/wallmed1{
-	pixel_w = -29
+	pixel_x = -29
 	},
 /turf/simulated/floor/tiled/white,
 /area/outpost/medical/suit_storage)
@@ -17518,8 +17461,7 @@
 	desc = "Small wall-mounted chime triggered by a bell";
 	id_tag = "cargo_dinger";
 	name = "Cargo request chime";
-	pixel_w = -28;
-	pixel_z = 2
+	pixel_x = -28
 	},
 /turf/simulated/floor/tiled/dark,
 /area/outpost/mining_main/break_room)
@@ -17671,8 +17613,7 @@
 	desc = "Small wall-mounted chime triggered by a bell";
 	id_tag = "cargo_dinger";
 	name = "Cargo request chime";
-	pixel_w = -29;
-	pixel_z = 1
+	pixel_x = -29
 	},
 /turf/simulated/floor/tiled,
 /area/outpost/mining_main/north_hall)
@@ -18147,11 +18088,6 @@
 	req_access = list(48)
 	},
 /obj/machinery/door/firedoor/glass,
-/obj/structure/cable/blue{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
@@ -18243,8 +18179,7 @@
 	desc = "Small wall-mounted chime triggered by a bell";
 	id_tag = "cargo_dinger";
 	name = "Cargo request chime";
-	pixel_w = -31;
-	pixel_z = 1
+	pixel_x = -31
 	},
 /obj/machinery/drone_fabricator/mining,
 /turf/simulated/floor/tiled/dark,
@@ -18847,8 +18782,7 @@
 	desc = "Small wall-mounted chime triggered by a bell";
 	id_tag = "cargo_dinger";
 	name = "Cargo request chime";
-	pixel_w = -28;
-	pixel_z = 2
+	pixel_x = -28
 	},
 /turf/simulated/floor/tiled,
 /area/outpost/mining_main/eva)
@@ -19653,8 +19587,7 @@
 	desc = "Small wall-mounted chime triggered by a bell";
 	id_tag = "engineering_dinger";
 	name = "Engineering request chime";
-	pixel_w = -29;
-	pixel_z = 2
+	pixel_x = -29
 	},
 /turf/simulated/floor,
 /area/outpost/engineering/atmospherics)
@@ -20136,8 +20069,7 @@
 /obj/machinery/doorbell_chime{
 	desc = "Small wall-mounted chime triggered by a bell";
 	id_tag = "engineering_dinger";
-	name = "Engineering request chime";
-	pixel_z = 32
+	name = "Engineering request chime"
 	},
 /turf/simulated/floor/tiled,
 /area/outpost/engineering/hallway)
@@ -20804,8 +20736,7 @@
 /obj/machinery/doorbell_chime{
 	desc = "Small wall-mounted chime triggered by a bell";
 	id_tag = "engineering_dinger";
-	name = "Engineering request chime";
-	pixel_z = 33
+	name = "Engineering request chime"
 	},
 /turf/simulated/floor/tiled,
 /area/outpost/engineering/kitchen)
@@ -22062,6 +21993,19 @@
 /mob/living/simple_mob/metroid/juvenile/alpha,
 /turf/simulated/floor/reinforced,
 /area/outpost/research/xenobiology)
+"ZR" = (
+/obj/machinery/access_button{
+	command = "cycle_interior";
+	frequency = 1380;
+	master_tag = "med_outpost_airlock1";
+	name = "airlock 1 access button";
+	pixel_x = 8;
+	pixel_y = 9;
+	req_access = list(45);
+	req_one_access = list(5)
+	},
+/turf/simulated/wall/r_wall,
+/area/outpost/medical/airlocks)
 
 (1,1,1) = {"
 aa
@@ -67943,7 +67887,7 @@ ED
 EY
 Fm
 EY
-EC
+ZR
 EY
 GL
 EY

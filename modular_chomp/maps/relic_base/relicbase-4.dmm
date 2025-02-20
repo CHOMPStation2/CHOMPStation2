@@ -11189,12 +11189,6 @@
 	maxhealth = 600;
 	name = "atmos reinforced window"
 	},
-/obj/structure/window/reinforced{
-	dir = 1;
-	health = 600;
-	maxhealth = 600;
-	name = "atmos reinforced window"
-	},
 /turf/simulated/floor/plating,
 /area/engineering/atmos/storage)
 "kss" = (
