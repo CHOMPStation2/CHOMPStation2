@@ -3491,12 +3491,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/hangaroneprep)
-"og" = (
-/obj/structure/lattice,
-/obj/structure/grille,
-/obj/structure/grille,
-/turf/space,
-/area/space)
 "oh" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
@@ -4914,12 +4908,6 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
 /turf/simulated/floor/plating,
 /area/expoutpost/aftdock)
 "tw" = (
@@ -42513,7 +42501,7 @@ HE
 Oc
 Oc
 Ql
-og
+Ql
 Ql
 Ql
 Ql

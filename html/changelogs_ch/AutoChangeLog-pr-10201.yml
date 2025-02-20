@@ -1,0 +1,4 @@
+author: "tacoguy7765093"
+delete-after: True
+changes:
+  - bugfix: "Mapping errors on relic_base and NS_mines"

@@ -1,4 +1,4 @@
 author: "CHOMPStation2StaffMirrorBot"
 delete-after: True
 changes:
-  - bugfix: "cyborg mats will never show up now"
+  - bugfix: "build mode  dropped items will no longer always gib"
