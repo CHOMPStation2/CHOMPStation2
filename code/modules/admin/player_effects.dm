@@ -776,10 +776,8 @@
 			log_and_message_admins("replied to [user]'s message: [reply].", target)
 
 		if("stop-orbits")
-			//CHOMPEdit Start
 			if(target.orbiters)
 				qdel(target.orbiters)
-			//CHOMPEdit End
 
 		if("revert-mob-tf")
 			var/mob/living/Tar = target

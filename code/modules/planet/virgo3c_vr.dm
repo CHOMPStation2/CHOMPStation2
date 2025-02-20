@@ -26,7 +26,7 @@ var/datum/planet/virgo3c/planet_virgo3c = null
 	seconds_in_day = 6 HOURS
 
 /datum/planet/virgo3c
-	name = "Virgo-3c"
+	name = "Virgo-3C"
 	desc = "A habitable moon of the gas giant Virgo 3. The volcanic activity of this moon keeps its atmosphere warm enough for life to flourish."
 	current_time = new /datum/time/virgo3c()
 	planetary_wall_type = /turf/unsimulated/wall/planetary/virgo3c
@@ -53,15 +53,15 @@ var/datum/planet/virgo3c/planet_virgo3c = null
 	var/min = 0
 
 	switch(sun_position)
-		if(0 to 0.45) // Night
-			low_brightness = 0.1
+		if(0 to 0.3) // Night
+			low_brightness = 0.3
 			low_color = "#000066"
 
-			high_brightness = 0.2
+			high_brightness = 0.4
 			high_color = "#66004D"
 			min = 0
 
-		if(0.45 to 0.50) // Twilight
+		if(0.3 to 0.35) // Twilight
 			low_brightness = 0.5
 			low_color = "#66004D"
 
@@ -69,19 +69,19 @@ var/datum/planet/virgo3c/planet_virgo3c = null
 			high_color = "#CC3300"
 			min = 0.40
 
-		if(0.50 to 0.55) // Sunrise/set
+		if(0.35 to 0.45) // Sunrise/set
 			low_brightness = 0.9
 			low_color = "#CC3300"
 
-			high_brightness = 3.0
+			high_brightness = 1.0
 			high_color = "#FF9933"
 			min = 0.50
 
-		if(0.55 to 1.00) // Noon
-			low_brightness = 3.0
+		if(0.45 to 1.00) // Noon
+			low_brightness = 1.0
 			low_color = "#DDDDDD"
 
-			high_brightness = 10.0
+			high_brightness = 1.0
 			high_color = "#FFFFFF"
 			min = 0.70
 
@@ -638,7 +638,6 @@ var/datum/planet/virgo3c/planet_virgo3c = null
 	alpha = 0xFF
 	VIRGO3C_SET_ATMOS
 
-VIRGO3C_TURF_CREATE(/turf/simulated/mineral/cave)
 VIRGO3C_TURF_CREATE(/turf/simulated/floor/outdoors/newdirt)
 VIRGO3C_TURF_CREATE(/turf/simulated/floor/outdoors/newdirt_nograss)
 VIRGO3C_TURF_CREATE(/turf/simulated/floor/outdoors/sidewalk)
@@ -649,7 +648,6 @@ VIRGO3C_TURF_CREATE(/turf/simulated/floor/water/deep)
 VIRGO3C_TURF_CREATE(/turf/simulated/floor/tiled)
 VIRGO3C_TURF_CREATE(/turf/simulated/floor/reinforced)
 VIRGO3C_TURF_CREATE(/turf/simulated/floor/glass/reinforced)
-VIRGO3C_TURF_CREATE(/turf/simulated/open)
 VIRGO3C_TURF_CREATE(/turf/simulated/floor/tiled/dark)
 VIRGO3C_TURF_CREATE(/turf/simulated/mineral)
 VIRGO3C_TURF_CREATE(/turf/simulated/mineral/ignore_cavegen)
@@ -700,17 +698,16 @@ VIRGO3C_TURF_CREATE(/turf/simulated/floor/tiled/asteroid_steel/outdoors)
 
 	var/animal_chance = 0.5
 	var/animal_types = list(
-		/mob/living/simple_mob/vore/alienanimals/teppi = 5,
-		/mob/living/simple_mob/vore/redpanda = 20,
-		/mob/living/simple_mob/vore/redpanda/fae = 1,
-		/mob/living/simple_mob/vore/sheep = 10,
-		/mob/living/simple_mob/vore/rabbit/black = 10,
-		/mob/living/simple_mob/vore/rabbit/white = 10,
-		/mob/living/simple_mob/vore/rabbit/brown = 10,
-		/mob/living/simple_mob/vore/leopardmander = 1,
-		/mob/living/simple_mob/vore/horse/big = 5,
-		/mob/living/simple_mob/vore/bigdragon/friendly = 0.5,
-		/mob/living/simple_mob/vore/alienanimals/dustjumper = 10
+		/mob/living/simple_mob/vore/redpanda = 40,
+		/mob/living/simple_mob/vore/redpanda/fae = 2,
+		/mob/living/simple_mob/vore/sheep = 20,
+		/mob/living/simple_mob/vore/rabbit/black = 20,
+		/mob/living/simple_mob/vore/rabbit/white = 20,
+		/mob/living/simple_mob/vore/rabbit/brown = 20,
+		/mob/living/simple_mob/vore/leopardmander = 2,
+		/mob/living/simple_mob/vore/horse/big = 10,
+		/mob/living/simple_mob/vore/bigdragon/friendly = 1,
+		/mob/living/simple_mob/vore/alienanimals/dustjumper = 20
 		)
 
 

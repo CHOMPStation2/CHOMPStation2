@@ -221,12 +221,12 @@
 		CASINO_PRIZE("Implant: Restraining bolt", /obj/item/implantcase/restrainingbolt, 1, 1000, "implants"),
 		CASINO_PRIZE("Implant: Surge", /obj/item/implantcase/surge, 1, 500, "implants"),
 		CASINO_PRIZE("Implant: Wrist sword", /obj/item/implantcase/sword, 1, 1000, "implants"),
-		CASINO_PRIZE("Genemod: No breath", /obj/item/dnainjector/nobreath, 1, 1000, "implants"),
-		CASINO_PRIZE("Genemod: Regenerate", /obj/item/dnainjector/regenerate, 1, 1000, "implants"),
-		CASINO_PRIZE("Genemod: Remote view", /obj/item/dnainjector/remoteview, 1, 1000, "implants"),
-		CASINO_PRIZE("Genemod: Sprinter", /obj/item/dnainjector/runfast, 1, 1000, "implants"),
-		CASINO_PRIZE("Genemod: Telekinesis", /obj/item/dnainjector/telemut, 1, 1000, "implants"),
-		CASINO_PRIZE("Genemod: X-ray", /obj/item/dnainjector/xraymut, 1, 1000, "implants"),
+		CASINO_PRIZE("Genemod: No breath", /obj/item/dnainjector/set_trait/nobreathe, 1, 1000, "implants"),
+		CASINO_PRIZE("Genemod: Regenerate", /obj/item/dnainjector/set_trait/regenerate, 1, 1000, "implants"),
+		CASINO_PRIZE("Genemod: Remote view", /obj/item/dnainjector/set_trait/remoteview, 1, 1000, "implants"),
+		CASINO_PRIZE("Genemod: Sprinter", /obj/item/dnainjector/set_trait/haste, 1, 1000, "implants"),
+		CASINO_PRIZE("Genemod: Telekinesis", /obj/item/dnainjector/set_trait/tk, 1, 1000, "implants"),
+		CASINO_PRIZE("Genemod: X-ray", /obj/item/dnainjector/set_trait/xray, 1, 1000, "implants"),
 	)
 
 	item_list["Event"] = list(

@@ -578,3 +578,7 @@
 			M.adjustToxLoss(-5)
 			M.adjustOxyLoss(-5)
 	return 1
+
+/obj/item/projectile/beam/laser_vision
+	name = "laser"
+	damage = 10

@@ -1659,7 +1659,7 @@
 	})
 "gQ" = (
 /obj/structure/table/standard,
-/obj/item/disk/data/demo{
+/obj/item/disk/body_record{
 	pixel_x = -14;
 	pixel_y = -1
 	},

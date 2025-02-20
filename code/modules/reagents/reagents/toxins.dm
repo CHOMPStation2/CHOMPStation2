@@ -186,12 +186,12 @@
 	taste_mult = 0.6
 	reagent_state = LIQUID
 	color = "#CF3600"
-	strength = 15 //CHOMPEdit this shit needs to be changed sheesh
-	metabolism = REM * 0.5 //CHOMPEdit holy balls
+	strength = 15
+	metabolism = REM * 0.5
 
 /datum/reagent/toxin/cyanide/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
-	M.adjustOxyLoss(10 * removed) //CHOMPEdit the fucking toxins are already crazy enough, calm down
+	M.adjustOxyLoss(10 * removed)
 	M.Sleeping(1)
 
 /datum/reagent/toxin/mold
@@ -624,16 +624,12 @@
 
 	if(M.dna)
 		if(prob(removed * 10)) // Removed is .2 per tick. Multiplying it by 10 makes it a 2% chance per tick. 10 units has 50 ticks, so 10 units injected should give a single good/bad mutation.
-			randmuti(M)
 			if(prob(98))
 				randmutb(M)
 			else
 				randmutg(M)
 			domutcheck(M, null)
 			M.UpdateAppearance()
-		if(prob(removed * 40)) //Additionally, let's make it so there's an 8% chance per tick for a random cosmetic/not guranteed good/bad mutation.
-			randmuti(M)//This should equate to 4 random cosmetic mutations per 10 injected/20 ingested/30 touching units
-			to_chat(M, span_warning("You feel odd!"))
 	M.apply_effect(10 * removed, IRRADIATE, 0)
 
 /datum/reagent/slimejelly
@@ -896,16 +892,12 @@
 
 	if(M.dna)
 		if(prob(removed * 10))
-			randmuti(M)
 			if(prob(98))
 				randmutb(M)
 			else
 				randmutg(M)
 			domutcheck(M, null)
 			M.UpdateAppearance()
-		if(prob(removed * 40))
-			randmuti(M)
-			to_chat(M, span_warning("You feel odd!"))
 	M.apply_effect(16 * removed, IRRADIATE, 0)
 
 /datum/reagent/aslimetoxin
@@ -916,7 +908,7 @@
 	reagent_state = LIQUID
 	color = "#FF69B4"
 
-/datum/reagent/aslimetoxin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed) // TODO: check if there's similar code anywhere else
+/datum/reagent/aslimetoxin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(M.isSynthetic())
 		return
 
@@ -926,16 +918,12 @@
 
 	if(M.dna)
 		if(prob(removed * 10))
-			randmuti(M)
 			if(prob(98))
 				randmutb(M)
 			else
 				randmutg(M)
 			domutcheck(M, null)
 			M.UpdateAppearance()
-		if(prob(removed * 40))
-			randmuti(M)
-			to_chat(M, span_warning("You feel odd!"))
 	M.apply_effect(6 * removed, IRRADIATE, 0)
 
 /*
