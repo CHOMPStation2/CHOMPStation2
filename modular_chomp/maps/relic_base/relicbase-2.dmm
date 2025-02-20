@@ -11704,6 +11704,15 @@
 /area/maintenance/firstdeck{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"luI" = (
+/obj/structure/bed/double/padded{
+	name = "taur-sized bed";
+	pixel_x = 3
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/maintenance/firstdeck/forestarboard{
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+	})
 "luU" = (
 /obj/effect/floor_decal/rust,
 /obj/structure/table/steel_reinforced,
@@ -17736,6 +17745,18 @@
 /area/maintenance/firstdeck/fore{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
+"teN" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/structure/bed/double/padded{
+	name = "taur-sized bed";
+	pixel_x = 3
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/maintenance/firstdeck/forestarboard{
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+	})
 "tfO" = (
 /obj/effect/floor_decal/rust,
 /obj/machinery/light/small/readylight,
@@ -19883,6 +19904,14 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/firstdeck/hallway{
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+	})
+"vJR" = (
+/obj/structure/bed/double/padded{
+	name = "taur-sized bed"
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/maintenance/firstdeck/forestarboard{
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 	})
 "vJV" = (
@@ -65715,8 +65744,8 @@ rlb
 rlb
 rlb
 bot
-eCB
-eEP
+teN
+luI
 eKY
 uob
 bot
@@ -65972,8 +66001,8 @@ rlb
 rlb
 rlb
 bot
-eCD
-bPG
+vJR
+vJR
 eKY
 uob
 bot

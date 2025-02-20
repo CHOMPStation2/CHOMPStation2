@@ -80,14 +80,12 @@
 "aaj" = (
 /obj/machinery/portable_atmospherics/canister/phoron,
 /obj/item/tank/vox,
-/turf/space,
 /turf/unsimulated/floor{
 	icon_state = "asteroid"
 	},
 /area/skipjack_station)
 "aak" = (
 /obj/item/clothing/head/philosopher_wig,
-/turf/space,
 /turf/unsimulated/floor{
 	icon_state = "asteroid"
 	},
@@ -102,7 +100,6 @@
 /area/tdome/tdomeobserve)
 "aan" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
-/turf/space,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -121,7 +118,6 @@
 /obj/item/clothing/suit/space/syndicate/black/red,
 /obj/item/clothing/mask/breath,
 /obj/item/clothing/head/helmet/space/syndicate/black/red,
-/turf/space,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -295,7 +291,6 @@
 	dir = 8
 	},
 /obj/machinery/meter,
-/turf/space,
 /turf/simulated/shuttle/plating,
 /area/shuttle/skipjack)
 "aaR" = (
@@ -311,13 +306,8 @@
 	},
 /obj/machinery/light/small,
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
-/turf/space,
 /turf/simulated/shuttle/plating,
 /area/shuttle/skipjack)
-"aaT" = (
-/turf/space,
-/turf/simulated/wall/bay/r_wall/black,
-/area/centcom/bar)
 "aaZ" = (
 /obj/machinery/computer/pod{
 	dir = 4;
@@ -635,10 +625,6 @@
 	icon_state = "wood"
 	},
 /area/ninja_dojo/dojo)
-"agv" = (
-/turf/space,
-/turf/simulated/mineral,
-/area/space)
 "agC" = (
 /obj/machinery/optable,
 /turf/simulated/shuttle/floor/voidcraft/light,
@@ -1787,20 +1773,6 @@
 /obj/effect/floor_decal/techfloor,
 /turf/simulated/floor/tiled/techfloor,
 /area/centcom/security)
-"aYN" = (
-/obj/structure/shuttle/engine/heater{
-	dir = 4
-	},
-/obj/machinery/turretid{
-	pixel_x = 32;
-	req_access = list(150)
-	},
-/obj/machinery/turretid{
-	pixel_x = 32;
-	req_access = list(150)
-	},
-/turf/simulated/floor/airless,
-/area/shuttle/syndicate)
 "aZj" = (
 /obj/machinery/door/airlock/voidcraft/vertical{
 	name = "Ship External Hatch"
@@ -2958,12 +2930,6 @@
 "cnm" = (
 /turf/unsimulated/wall,
 /area/syndicate_mothership/elite_squad)
-"coR" = (
-/turf/space,
-/turf/unsimulated/floor{
-	icon_state = "asteroid"
-	},
-/area/skipjack_station)
 "cpo" = (
 /obj/structure/bed/chair/comfy/black,
 /turf/simulated/shuttle/floor/black,
@@ -6271,10 +6237,6 @@
 	},
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_courtroom)
-"gvb" = (
-/turf/space,
-/turf/simulated/wall/skipjack,
-/area/shuttle/skipjack)
 "gvn" = (
 /obj/machinery/vending/hydroseeds,
 /turf/simulated/shuttle/plating,
@@ -7087,10 +7049,6 @@
 /obj/machinery/chemical_dispenser/bar_alc/full,
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/merchant)
-"hpw" = (
-/turf/space,
-/turf/simulated/mineral/thor,
-/area/space)
 "hpU" = (
 /obj/structure/table/steel_reinforced,
 /obj/machinery/light{
@@ -8581,10 +8539,6 @@
 "jfd" = (
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/merchant)
-"jfC" = (
-/turf/space,
-/turf/simulated/mineral,
-/area/skipjack_station)
 "jfN" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 8
@@ -9343,10 +9297,6 @@
 	},
 /turf/simulated/floor/holofloor/grass,
 /area/holodeck/source_picnicarea)
-"jRP" = (
-/turf/space,
-/turf/unsimulated/wall,
-/area/space)
 "jSo" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /obj/effect/floor_decal/spline/fancy/wood/corner{
@@ -11452,9 +11402,6 @@
 	icon_state = "steel"
 	},
 /area/centcom/living)
-"mcF" = (
-/turf/unsimulated/wall,
-/area/space)
 "mcT" = (
 /turf/simulated/floor/holofloor/lino,
 /area/holodeck/source_meetinghall)
@@ -14749,10 +14696,6 @@
 "qox" = (
 /turf/simulated/floor/holofloor/tiled,
 /area/holodeck/source_basketball)
-"qoX" = (
-/turf/space,
-/turf/simulated/shuttle/wall/dark,
-/area/shuttle/merchant)
 "qoY" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 6
@@ -17720,10 +17663,6 @@
 	},
 /turf/simulated/floor/holofloor/tiled,
 /area/holodeck/source_thunderdomecourt)
-"tTm" = (
-/turf/space,
-/turf/simulated/shuttle/wall/dark/hard_corner,
-/area/shuttle/merchant)
 "tTO" = (
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/skipjack)
@@ -18232,12 +18171,6 @@
 	},
 /turf/unsimulated/wall,
 /area/space)
-"uyi" = (
-/turf/space,
-/turf/unsimulated/floor{
-	icon_state = "dark"
-	},
-/area/syndicate_station)
 "uyy" = (
 /obj/machinery/atmospherics/unary/freezer{
 	icon_state = "freezer"
@@ -22728,7 +22661,7 @@ dtV
 dtV
 dtV
 dtV
-mcF
+dtV
 xUf
 xUf
 xUf
@@ -30963,7 +30896,7 @@ xUf
 xUf
 xUf
 xUf
-hpw
+xUf
 xUf
 xUf
 xUf
@@ -31220,7 +31153,7 @@ xUf
 xUf
 xUf
 xUf
-hpw
+xUf
 xUf
 xUf
 xUf
@@ -31735,7 +31668,7 @@ xUf
 xUf
 xUf
 xUf
-hpw
+xUf
 xUf
 xUf
 xUf
@@ -31992,7 +31925,7 @@ xUf
 xUf
 xUf
 xUf
-hpw
+xUf
 xUf
 xUf
 xUf
@@ -32249,7 +32182,7 @@ xUf
 xUf
 xUf
 xUf
-hpw
+xUf
 xUf
 xUf
 xUf
@@ -32762,7 +32695,7 @@ dtV
 dtV
 dtV
 dtV
-jRP
+dtV
 dtV
 dtV
 dtV
@@ -33019,7 +32952,7 @@ unx
 unx
 unx
 unx
-aaT
+unx
 unx
 unx
 unx
@@ -46327,8 +46260,8 @@ vFi
 vFi
 mcs
 mcs
-agv
-agv
+mcs
+mcs
 mcs
 vFi
 vFi
@@ -47337,7 +47270,7 @@ efI
 efI
 ngU
 ngU
-gvb
+ngU
 ngU
 ngU
 ngU
@@ -48108,7 +48041,7 @@ rXq
 rXq
 ngU
 ngU
-gvb
+ngU
 ngU
 ngU
 cxW
@@ -54268,7 +54201,7 @@ wda
 wda
 jFb
 wda
-coR
+wda
 kog
 lHI
 mcs
@@ -54525,7 +54458,7 @@ fjX
 nTt
 bJb
 wda
-jfC
+lHI
 wda
 hnj
 mcs
@@ -54782,7 +54715,7 @@ lHI
 lHI
 lHI
 lHI
-jfC
+lHI
 lHI
 lHI
 mcs
@@ -57866,7 +57799,7 @@ jhj
 ppE
 ppE
 ppE
-uyi
+ppE
 ppE
 tOX
 tOX
@@ -58123,7 +58056,7 @@ tOX
 ppE
 ppE
 ppE
-uyi
+ppE
 ppE
 nlG
 tOX
@@ -58894,7 +58827,7 @@ tOX
 ppE
 ppE
 ppE
-uyi
+ppE
 ppE
 oTT
 tOX
@@ -64825,7 +64758,7 @@ rzA
 psx
 psx
 psx
-aYN
+psx
 rzA
 vFi
 vFi
@@ -65470,7 +65403,7 @@ wOF
 iYC
 iYC
 iYC
-tTm
+uvs
 eVq
 uvs
 vFi
@@ -65727,7 +65660,7 @@ uvs
 aga
 aga
 eVq
-qoX
+eVq
 eVq
 vFi
 vFi

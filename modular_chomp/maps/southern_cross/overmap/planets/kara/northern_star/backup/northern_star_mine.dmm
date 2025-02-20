@@ -12,7 +12,7 @@
 /turf/space,
 /area/syndicate_station/mining)
 "ad" = (
-/turf/simulated/mineral,
+/turf/simulated/mineral/vacuum,
 /area/mine/unexplored)
 "ae" = (
 /turf/simulated/wall/r_wall,
@@ -558,8 +558,7 @@
 	desc = "Small wall-mounted chime triggered by a bell";
 	id_tag = "science_dinger";
 	name = "Science request chime";
-	pixel_w = 0;
-	pixel_z = 33
+	pixel_w = 0
 	},
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/mixing)
@@ -1490,7 +1489,7 @@
 /turf/simulated/floor/plating,
 /area/outpost/research/toxins_launch)
 "dn" = (
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/airless,
 /area/mine/explored)
 "do" = (
 /obj/structure/grille,
@@ -2117,7 +2116,7 @@
 	dir = 8;
 	pixel_x = 0
 	},
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/airless,
 /area/mine/explored)
 "er" = (
 /obj/structure/cable/blue{
@@ -2366,8 +2365,7 @@
 	desc = "Small wall-mounted chime triggered by a bell";
 	id_tag = "science_dinger";
 	name = "Science request chime";
-	pixel_w = -29;
-	pixel_z = 2
+	pixel_x = -29
 	},
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/hallway/toxins_hallway)
@@ -2636,7 +2634,7 @@
 	desc = "Small wall-mounted chime triggered by a bell";
 	id_tag = "science_dinger";
 	name = "Science request chime";
-	pixel_w = 29
+	pixel_x = 29
 	},
 /turf/simulated/floor/plating,
 /area/outpost/research/toxins_misc_lab)
@@ -2645,7 +2643,7 @@
 /turf/simulated/wall/r_wall,
 /area/outpost/research/toxins_misc_lab)
 "fA" = (
-/mob/living/simple_mob/metroid/mine,
+/mob/living/simple_mob/metroid/juvenile/baby,
 /turf/simulated/floor/reinforced,
 /area/outpost/research/xenobiology)
 "fB" = (
@@ -2715,7 +2713,7 @@
 /area/outpost/research/toxins_misc_lab)
 "fI" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging/junction,
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/airless,
 /area/mine/explored)
 "fJ" = (
 /obj/structure/closet/emcloset,
@@ -2780,7 +2778,7 @@
 /area/space)
 "fQ" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging,
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/airless,
 /area/mine/explored)
 "fR" = (
 /obj/structure/closet/bombcloset/double,
@@ -3275,7 +3273,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/airless,
 /area/mine/explored)
 "gF" = (
 /obj/structure/window/reinforced{
@@ -3347,8 +3345,7 @@
 	desc = "Small wall-mounted chime triggered by a bell";
 	id_tag = "science_dinger";
 	name = "Science request chime";
-	pixel_w = 0;
-	pixel_z = -29
+	pixel_w = 0
 	},
 /turf/simulated/floor/tiled,
 /area/outpost/research/xenobiology)
@@ -3451,7 +3448,7 @@
 /area/outpost/research/xenobiology)
 "gX" = (
 /obj/structure/lattice,
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/airless,
 /area/mine/explored)
 "gY" = (
 /obj/structure/lattice,
@@ -3459,7 +3456,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/airless,
 /area/mine/explored)
 "gZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -4353,7 +4350,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/airless,
 /area/mine/explored)
 "iy" = (
 /obj/structure/lattice,
@@ -4427,7 +4424,7 @@
 	dir = 8
 	},
 /obj/structure/lattice,
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/airless,
 /area/mine/explored)
 "iG" = (
 /obj/structure/table/standard,
@@ -5027,7 +5024,7 @@
 	dir = 4
 	},
 /obj/structure/window/reinforced,
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/airless,
 /area/mine/explored)
 "jG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -5049,7 +5046,7 @@
 	name = "'I got lost' award."
 	},
 /obj/structure/closet/crate,
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/airless,
 /area/mine/unexplored)
 "jI" = (
 /obj/structure/cable/blue{
@@ -5069,8 +5066,7 @@
 	desc = "Small wall-mounted chime triggered by a bell";
 	id_tag = "science_dinger";
 	name = "Science request chime";
-	pixel_w = 0;
-	pixel_z = -27
+	pixel_w = 0
 	},
 /obj/machinery/light,
 /turf/simulated/floor/tiled/white,
@@ -5274,8 +5270,7 @@
 	desc = "Small wall-mounted chime triggered by a bell";
 	id_tag = "science_dinger";
 	name = "Science request chime";
-	pixel_w = 0;
-	pixel_z = 34
+	pixel_w = 0
 	},
 /turf/simulated/floor/wood,
 /area/outpost/research/dorms)
@@ -5972,8 +5967,7 @@
 	desc = "Small wall-mounted chime triggered by a bell";
 	id_tag = "science_dinger";
 	name = "Science request chime";
-	pixel_w = -28;
-	pixel_z = 1
+	pixel_x = -28
 	},
 /turf/simulated/floor/tiled/dark,
 /area/outpost/research/longtermstorage)
@@ -6002,8 +5996,8 @@
 /area/outpost/research/tempstorage)
 "lV" = (
 /obj/machinery/conveyor{
-	dir = 3;
-	id = "anolongstorage"
+	id = "anolongstorage";
+	dir = 6
 	},
 /turf/simulated/floor/plating{
 	dir = 10
@@ -6286,7 +6280,7 @@
 	dir = 4;
 	icon_state = "tube1"
 	},
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/airless,
 /area/outpost/research/dock)
 "mD" = (
 /obj/machinery/portable_atmospherics/canister/air/airlock,
@@ -6450,11 +6444,6 @@
 /obj/structure/cable/blue{
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/cable/blue{
-	icon_state = "1-2"
-	},
 /turf/simulated/floor/tiled/dark,
 /area/outpost/research/longtermstorage)
 "mX" = (
@@ -6507,7 +6496,7 @@
 	},
 /area/outpost/research/tempstorage)
 "ne" = (
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/airless,
 /area/shuttle/research/outpost)
 "nf" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
@@ -7346,7 +7335,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/airless,
 /area/mine/explored)
 "oM" = (
 /obj/machinery/door/airlock/external{
@@ -8256,7 +8245,7 @@
 "qo" = (
 /obj/structure/lattice,
 /obj/machinery/light,
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/airless,
 /area/outpost/research/dock)
 "qp" = (
 /obj/structure/grille,
@@ -9295,7 +9284,7 @@
 /area/outpost/research/eva)
 "sq" = (
 /obj/machinery/light/small,
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/airless,
 /area/mine/explored)
 "sr" = (
 /obj/structure/grille,
@@ -9858,8 +9847,7 @@
 	desc = "Small wall-mounted chime triggered by a bell";
 	id_tag = "science_dinger";
 	name = "Science request chime";
-	pixel_w = -29;
-	pixel_z = 2
+	pixel_x = -29
 	},
 /turf/simulated/floor/tiled,
 /area/outpost/research/tempstorage)
@@ -10554,7 +10542,7 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/airless,
 /area/mine/explored)
 "uX" = (
 /obj/structure/table/standard,
@@ -10629,17 +10617,17 @@
 /area/outpost/mining_main/north_hall)
 "vj" = (
 /obj/structure/lattice,
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/airless,
 /area/outpost/mining_main/north_hall)
 "vk" = (
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/airless,
 /area/shuttle/mining/outpost)
 "vl" = (
 /obj/structure/lattice,
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/airless,
 /area/outpost/mining_main/north_hall)
 "vm" = (
 /obj/machinery/atmospherics/pipe/simple/visible/supply{
@@ -10835,7 +10823,7 @@
 	dir = 1
 	},
 /obj/structure/disposalpipe/trunk,
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/airless,
 /area/mine/explored)
 "vG" = (
 /obj/structure/grille,
@@ -10980,7 +10968,7 @@
 /area/outpost/mining_main/break_room)
 "vT" = (
 /obj/structure/disposalpipe/segment,
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/airless,
 /area/mine/explored)
 "vU" = (
 /obj/structure/disposalpipe/segment,
@@ -11212,8 +11200,7 @@
 	desc = "Small wall-mounted chime triggered by a bell";
 	id_tag = "science_dinger";
 	name = "Science request chime";
-	pixel_w = 0;
-	pixel_z = 32
+	pixel_w = 0
 	},
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/dock)
@@ -11574,7 +11561,7 @@
 /area/mine/explored)
 "xc" = (
 /obj/structure/ore_box,
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/airless,
 /area/mine/explored)
 "xd" = (
 /turf/simulated/wall,
@@ -11712,7 +11699,7 @@
 /area/mine/explored)
 "xu" = (
 /obj/machinery/floodlight,
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/airless,
 /area/mine/unexplored)
 "xv" = (
 /turf/simulated/wall/r_wall,
@@ -12395,7 +12382,7 @@
 	dir = 4;
 	pixel_y = 0
 	},
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/airless,
 /area/mine/explored)
 "yL" = (
 /obj/machinery/atmospherics/portables_connector{
@@ -12528,8 +12515,7 @@
 	desc = "Small wall-mounted chime triggered by a bell";
 	id_tag = "science_dinger";
 	name = "Science request chime";
-	pixel_w = 0;
-	pixel_z = 31
+	pixel_w = 0
 	},
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/anomaly)
@@ -13060,8 +13046,7 @@
 	desc = "Small wall-mounted chime triggered by a bell";
 	id_tag = "science_dinger";
 	name = "Science request chime";
-	pixel_w = 0;
-	pixel_z = -28
+	pixel_w = 0
 	},
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/analysis)
@@ -14393,8 +14378,7 @@
 	desc = "Small wall-mounted chime triggered by a bell";
 	id_tag = "medical_dinger";
 	name = "Medical request chime";
-	pixel_w = 1;
-	pixel_z = -29
+	pixel_x = 1
 	},
 /turf/simulated/floor/plating,
 /area/outpost/medical/atmos)
@@ -14476,7 +14460,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/vending/wallmed1{
-	pixel_w = 31
+	pixel_y = 31
 	},
 /turf/simulated/floor/wood,
 /area/outpost/medical/dorm)
@@ -14507,7 +14491,7 @@
 	dir = 9
 	},
 /obj/machinery/vending/wallmed1{
-	pixel_w = -30
+	pixel_x = -30
 	},
 /turf/simulated/floor/tiled/white,
 /area/outpost/medical/rec)
@@ -14572,7 +14556,7 @@
 /turf/simulated/floor/wood,
 /area/outpost/medical/dorm)
 "DE" = (
-/obj/effect/shuttle_landmark/premade/northern_star/mine_dock,
+/obj/effect/shuttle_landmark/premade/northern_star/ns_mine_dock,
 /turf/space,
 /area/space)
 "DF" = (
@@ -14933,8 +14917,7 @@
 	desc = "Small wall-mounted chime triggered by a bell";
 	id_tag = "medical_dinger";
 	name = "Medical request chime";
-	pixel_w = 28;
-	pixel_z = -29
+	pixel_x = 28
 	},
 /turf/simulated/floor/tiled/white,
 /area/outpost/medical/rec)
@@ -15040,7 +15023,7 @@
 /turf/simulated/floor/tiled/freezer,
 /area/outpost/medical/dorm)
 "EA" = (
-/turf/simulated/mineral,
+/turf/simulated/mineral/vacuum,
 /area/mine/explored)
 "EB" = (
 /obj/structure/cable{
@@ -15200,7 +15183,7 @@
 	dir = 8;
 	icon_state = "tube1"
 	},
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/airless,
 /area/mine/explored)
 "ET" = (
 /obj/structure/lattice,
@@ -15209,7 +15192,7 @@
 	icon_state = "tube1";
 	pixel_x = 0
 	},
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/airless,
 /area/mine/explored)
 "EU" = (
 /obj/structure/cable{
@@ -15252,8 +15235,7 @@
 	frequency = 1380;
 	id_tag = "med_outpost_airlock2";
 	pixel_x = -6;
-	pixel_y = -25;
-	pixel_z = 51;
+	pixel_y = 25;
 	req_one_access = list(5);
 	tag_airpump = "med_outpost_airlock2_vent";
 	tag_chamber_sensor = "med_outpost_airlock2_sensor";
@@ -15264,8 +15246,7 @@
 	frequency = 1380;
 	id_tag = "med_outpost_airlock2_sensor";
 	pixel_x = 6;
-	pixel_y = -24;
-	pixel_z = 49
+	pixel_y = 25
 	},
 /turf/simulated/floor/tiled/white,
 /area/outpost/medical/airlocks)
@@ -15357,13 +15338,11 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 6
 	},
-/obj/machinery/vending/wallmed1{
-	pixel_z = 30
-	},
+/obj/machinery/vending/wallmed1,
 /turf/simulated/floor/tiled/white,
 /area/outpost/medical/main_room)
 "Fg" = (
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/airless,
 /area/outpost/medical/atmos)
 "Fh" = (
 /obj/machinery/alarm{
@@ -15603,7 +15582,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/airless,
 /area/mine/explored)
 "FB" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
@@ -15802,10 +15781,8 @@
 	frequency = 1380;
 	master_tag = "med_outpost_airlock1";
 	name = "airlock 1 access button";
-	pixel_w = -3;
 	pixel_x = 25;
 	pixel_y = 25;
-	pixel_z = -35;
 	req_access = list(45);
 	req_one_access = list(5)
 	},
@@ -15814,10 +15791,8 @@
 	frequency = 1380;
 	master_tag = "med_outpost_airlock2";
 	name = "airlock 2 access button";
-	pixel_w = -3;
 	pixel_x = 25;
 	pixel_y = 25;
-	pixel_z = -15;
 	req_access = list(45);
 	req_one_access = list(5)
 	},
@@ -15831,30 +15806,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
-	},
-/obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1380;
-	master_tag = "med_outpost_airlock1";
-	name = "airlock 1 access button";
-	pixel_w = -48;
-	pixel_x = 25;
-	pixel_y = 25;
-	pixel_z = -35;
-	req_access = list(45);
-	req_one_access = list(5)
-	},
-/obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1380;
-	master_tag = "med_outpost_airlock2";
-	name = "airlock 2 access button";
-	pixel_w = -48;
-	pixel_x = 25;
-	pixel_y = 25;
-	pixel_z = -16;
-	req_access = list(45);
-	req_one_access = list(5)
 	},
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 9
@@ -16196,10 +16147,8 @@
 	frequency = 1380;
 	master_tag = "med_outpost_airlock";
 	name = "interior access button";
-	pixel_w = -18;
 	pixel_x = 25;
 	pixel_y = 25;
-	pixel_z = -47;
 	req_one_access = list(5)
 	},
 /turf/simulated/floor/tiled/white,
@@ -16398,7 +16347,7 @@
 "GW" = (
 /obj/structure/lattice,
 /obj/machinery/light,
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/airless,
 /area/mine/explored)
 "GX" = (
 /obj/structure/cable{
@@ -16453,9 +16402,7 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 10
 	},
-/obj/machinery/vending/wallmed1{
-	pixel_z = -30
-	},
+/obj/machinery/vending/wallmed1,
 /turf/simulated/floor/tiled/white,
 /area/outpost/medical/airlocks)
 "Hb" = (
@@ -16499,8 +16446,7 @@
 	desc = "Small wall-mounted chime triggered by a bell";
 	id_tag = "medical_dinger";
 	name = "Medical request chime";
-	pixel_w = -28;
-	pixel_z = 3
+	pixel_x = -28
 	},
 /turf/simulated/floor/tiled/white,
 /area/outpost/medical/main_room)
@@ -16529,9 +16475,7 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 9
 	},
-/obj/machinery/vending/wallmed1{
-	pixel_z = 32
-	},
+/obj/machinery/vending/wallmed1,
 /obj/structure/closet/secure_closet/medical2{
 	req_access = list(45);
 	req_one_access = list(5)
@@ -16588,7 +16532,7 @@
 	brightness_power = 1;
 	brightness_range = 5
 	},
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/airless,
 /area/mine/explored)
 "Ho" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
@@ -16840,8 +16784,7 @@
 	desc = "Small wall-mounted chime triggered by a bell";
 	id_tag = "medical_dinger";
 	name = "Medical request chime";
-	pixel_w = -28;
-	pixel_z = 2
+	pixel_x = -28
 	},
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
@@ -17250,7 +17193,7 @@
 	dir = 9
 	},
 /obj/machinery/vending/wallmed1{
-	pixel_w = -29
+	pixel_x = -29
 	},
 /turf/simulated/floor/tiled/white,
 /area/outpost/medical/suit_storage)
@@ -17518,8 +17461,7 @@
 	desc = "Small wall-mounted chime triggered by a bell";
 	id_tag = "cargo_dinger";
 	name = "Cargo request chime";
-	pixel_w = -28;
-	pixel_z = 2
+	pixel_x = -28
 	},
 /turf/simulated/floor/tiled/dark,
 /area/outpost/mining_main/break_room)
@@ -17671,8 +17613,7 @@
 	desc = "Small wall-mounted chime triggered by a bell";
 	id_tag = "cargo_dinger";
 	name = "Cargo request chime";
-	pixel_w = -29;
-	pixel_z = 1
+	pixel_x = -29
 	},
 /turf/simulated/floor/tiled,
 /area/outpost/mining_main/north_hall)
@@ -18147,11 +18088,6 @@
 	req_access = list(48)
 	},
 /obj/machinery/door/firedoor/glass,
-/obj/structure/cable/blue{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
@@ -18243,8 +18179,7 @@
 	desc = "Small wall-mounted chime triggered by a bell";
 	id_tag = "cargo_dinger";
 	name = "Cargo request chime";
-	pixel_w = -31;
-	pixel_z = 1
+	pixel_x = -31
 	},
 /obj/machinery/drone_fabricator/mining,
 /turf/simulated/floor/tiled/dark,
@@ -18397,7 +18332,7 @@
 /area/mine/explored)
 "KP" = (
 /obj/effect/mine/stun,
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/airless,
 /area/mine/explored)
 "KQ" = (
 /obj/machinery/computer/drone_control{
@@ -18847,8 +18782,7 @@
 	desc = "Small wall-mounted chime triggered by a bell";
 	id_tag = "cargo_dinger";
 	name = "Cargo request chime";
-	pixel_w = -28;
-	pixel_z = 2
+	pixel_x = -28
 	},
 /turf/simulated/floor/tiled,
 /area/outpost/mining_main/eva)
@@ -18888,7 +18822,7 @@
 /turf/simulated/floor/tiled,
 /area/outpost/mining_main/eva)
 "LW" = (
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/airless,
 /area/outpost/mining_main/eva)
 "LX" = (
 /turf/simulated/wall/r_wall,
@@ -18928,7 +18862,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/airless,
 /area/mine/explored)
 "Mf" = (
 /obj/machinery/conveyor{
@@ -18992,7 +18926,7 @@
 /turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/outpost/mining_main/eva)
 "Mo" = (
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/airless,
 /area/mine/unexplored)
 "Mp" = (
 /turf/space,
@@ -19324,7 +19258,6 @@
 	dir = 8
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
 /area/outpost/engineering/storage)
 "MZ" = (
@@ -19654,8 +19587,7 @@
 	desc = "Small wall-mounted chime triggered by a bell";
 	id_tag = "engineering_dinger";
 	name = "Engineering request chime";
-	pixel_w = -29;
-	pixel_z = 2
+	pixel_x = -29
 	},
 /turf/simulated/floor,
 /area/outpost/engineering/atmospherics)
@@ -20137,8 +20069,7 @@
 /obj/machinery/doorbell_chime{
 	desc = "Small wall-mounted chime triggered by a bell";
 	id_tag = "engineering_dinger";
-	name = "Engineering request chime";
-	pixel_z = 32
+	name = "Engineering request chime"
 	},
 /turf/simulated/floor/tiled,
 /area/outpost/engineering/hallway)
@@ -20805,8 +20736,7 @@
 /obj/machinery/doorbell_chime{
 	desc = "Small wall-mounted chime triggered by a bell";
 	id_tag = "engineering_dinger";
-	name = "Engineering request chime";
-	pixel_z = 33
+	name = "Engineering request chime"
 	},
 /turf/simulated/floor/tiled,
 /area/outpost/engineering/kitchen)
@@ -21670,7 +21600,7 @@
 /turf/simulated/wall,
 /area/outpost/engineering/hallway)
 "RL" = (
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/airless,
 /area/shuttle/constructionsite/site)
 "RM" = (
 /obj/structure/cable/yellow{
@@ -21682,7 +21612,7 @@
 /area/mine/explored)
 "RN" = (
 /obj/structure/grille,
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/airless,
 /area/mine/explored)
 "RO" = (
 /obj/machinery/power/solar{
@@ -21830,7 +21760,7 @@
 	density = 0;
 	icon_state = "brokengrille"
 	},
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/airless,
 /area/mine/explored)
 "Sc" = (
 /obj/structure/cable/yellow{
@@ -21844,16 +21774,16 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/airless,
 /area/outpost/engineering/kitchen)
 "Se" = (
 /obj/machinery/light{
 	dir = 8
 	},
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/airless,
 /area/outpost/engineering/kitchen)
 "Sf" = (
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/airless,
 /area/outpost/engineering/solarsoutside/aft)
 "Sg" = (
 /obj/structure/cable/yellow{
@@ -21922,7 +21852,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "2-4"
 	},
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/airless,
 /area/mine/explored)
 "Sm" = (
 /obj/structure/cable/yellow{
@@ -21946,7 +21876,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "2-4"
 	},
-/turf/simulated/mineral/floor/ignore_mapgen,
+/turf/simulated/mineral/floor/ignore_mapgen/airless,
 /area/mine/explored)
 "So" = (
 /obj/structure/cable/yellow{
@@ -22036,9 +21966,46 @@
 /turf/simulated/floor/airless,
 /area/mine/explored)
 "SB" = (
-/obj/effect/overmap/visitable/planet/kara,
+/obj/effect/overmap/visitable/sector/northern_star_mines,
 /turf/space,
 /area/space)
+"SC" = (
+/obj/effect/shuttle_landmark/premade/northern_star/ns_mine_echidna_dock,
+/turf/space,
+/area/space)
+"Uy" = (
+/mob/living/simple_mob/metroid/juvenile/omega,
+/turf/simulated/floor/reinforced,
+/area/outpost/research/xenobiology)
+"UY" = (
+/mob/living/simple_mob/metroid/juvenile/zeta,
+/turf/simulated/floor/reinforced,
+/area/outpost/research/xenobiology)
+"Vr" = (
+/mob/living/simple_mob/metroid/juvenile/gamma,
+/turf/simulated/floor/reinforced,
+/area/outpost/research/xenobiology)
+"VH" = (
+/mob/living/simple_mob/metroid/juvenile/super,
+/turf/simulated/floor/reinforced,
+/area/outpost/research/xenobiology)
+"Zk" = (
+/mob/living/simple_mob/metroid/juvenile/alpha,
+/turf/simulated/floor/reinforced,
+/area/outpost/research/xenobiology)
+"ZR" = (
+/obj/machinery/access_button{
+	command = "cycle_interior";
+	frequency = 1380;
+	master_tag = "med_outpost_airlock1";
+	name = "airlock 1 access button";
+	pixel_x = 8;
+	pixel_y = 9;
+	req_access = list(45);
+	req_one_access = list(5)
+	},
+/turf/simulated/wall/r_wall,
+/area/outpost/medical/airlocks)
 
 (1,1,1) = {"
 aa
@@ -45786,7 +45753,7 @@ gx
 jf
 jr
 fr
-fr
+Zk
 fr
 jD
 jE
@@ -46798,7 +46765,7 @@ ad
 ad
 ff
 fZ
-fr
+VH
 fr
 fX
 gh
@@ -46814,7 +46781,7 @@ gx
 jf
 ju
 fr
-fA
+Vr
 fr
 ff
 ad
@@ -48346,11 +48313,11 @@ ff
 ff
 ff
 gW
-fr
+UY
 hC
 ib
 is
-fr
+Uy
 iQ
 ff
 ff
@@ -55146,7 +55113,7 @@ aa
 aa
 aa
 aa
-ha
+aa
 aa
 aa
 aa
@@ -55403,7 +55370,7 @@ aa
 aa
 aa
 aa
-ha
+aa
 aa
 aa
 aa
@@ -55660,7 +55627,7 @@ aa
 aa
 aa
 aa
-ha
+aa
 aa
 aa
 aa
@@ -55917,7 +55884,7 @@ aa
 aa
 aa
 aa
-ha
+aa
 aa
 aa
 aa
@@ -56174,7 +56141,7 @@ aa
 aa
 aa
 aa
-ha
+aa
 aa
 aa
 aa
@@ -56431,7 +56398,7 @@ aa
 aa
 aa
 aa
-ha
+aa
 aa
 aa
 aa
@@ -56688,7 +56655,7 @@ aa
 aa
 aa
 aa
-ha
+aa
 aa
 aa
 aa
@@ -56945,7 +56912,7 @@ aa
 aa
 aa
 aa
-ha
+aa
 aa
 aa
 aa
@@ -57202,7 +57169,7 @@ aa
 aa
 aa
 aa
-ha
+aa
 aa
 aa
 aa
@@ -57459,7 +57426,7 @@ aa
 aa
 aa
 aa
-ha
+aa
 aa
 aa
 aa
@@ -57716,7 +57683,7 @@ aa
 aa
 aa
 aa
-ha
+aa
 aa
 aa
 aa
@@ -57961,19 +57928,19 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 DE
 aa
 aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-ha
 aa
 aa
 aa
@@ -58230,7 +58197,7 @@ aa
 aa
 aa
 aa
-ha
+aa
 aa
 aa
 aa
@@ -67920,7 +67887,7 @@ ED
 EY
 Fm
 EY
-EC
+ZR
 EY
 GL
 EY
@@ -69812,7 +69779,7 @@ aa
 aa
 aa
 aa
-aa
+SC
 aa
 aa
 aa
