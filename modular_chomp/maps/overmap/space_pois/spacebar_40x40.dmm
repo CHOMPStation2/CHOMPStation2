@@ -453,13 +453,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/submap/spacebar)
-"jM" = (
-/obj/structure/table/woodentable,
-/obj/structure/table/woodentable,
-/turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 295.15
-	},
-/area/submap/spacebar)
 "jQ" = (
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -1778,7 +1771,7 @@ jQ
 pD
 aX
 aY
-jM
+ab
 be
 al
 aZ

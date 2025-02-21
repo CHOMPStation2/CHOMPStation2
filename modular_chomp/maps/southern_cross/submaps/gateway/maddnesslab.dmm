@@ -2863,9 +2863,7 @@
 /area/awaymission/mol/conveyorcontrol)
 "sz" = (
 /obj/structure/janitorialcart,
-/obj/effect/floor_decal/corner/paleblue/border{
-	dir = 3
-	},
+/obj/effect/floor_decal/corner/paleblue/border,
 /obj/effect/floor_decal/corner/green/diagonal,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/vistortunnel)
@@ -8185,9 +8183,7 @@
 /obj/structure/mopbucket,
 /obj/item/reagent_containers/glass/bucket,
 /obj/item/mop/advanced,
-/obj/effect/floor_decal/corner/paleblue/border{
-	dir = 3
-	},
+/obj/effect/floor_decal/corner/paleblue/border,
 /obj/effect/floor_decal/corner/green/diagonal,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/vistortunnel)

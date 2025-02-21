@@ -887,21 +887,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/gecko_sh)
-"rY" = (
-/obj/machinery/door/firedoor/glass,
-/obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "gecko_sh_blast";
-	name = "Blast Shields";
-	opacity = 0
-	},
-/obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/hatch{
-	req_one_access = list()
-	},
-/turf/simulated/floor/plating,
-/area/shuttle/gecko_sh)
 "sB" = (
 /obj/structure/handrail{
 	dir = 8
@@ -3521,7 +3506,7 @@ Yj
 ll
 oi
 ZJ
-rY
+aa
 Wr
 Df
 Df

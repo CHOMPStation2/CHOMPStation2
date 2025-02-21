@@ -4094,9 +4094,7 @@
 /obj/machinery/alarm{
 	pixel_y = 22
 	},
-/obj/item/storage/pouch{
-	remove_delay = 0
-	},
+/obj/item/storage/pouch,
 /obj/machinery/recharger/wallcharger{
 	pixel_x = 4;
 	pixel_y = 31
@@ -6873,7 +6871,6 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/workshop)
 "dgk" = (
-/obj/structure/table/standard,
 /obj/structure/table/standard,
 /obj/item/stack/cable_coil,
 /obj/item/multitool,
@@ -18544,7 +18541,6 @@
 /area/surface/outpost/main/landing/one)
 "hXm" = (
 /obj/item/radio/intercom{
-	broadcasting = 0;
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
@@ -19085,7 +19081,6 @@
 /obj/structure/fans/tiny,
 /obj/machinery/door/airlock/command{
 	name = "Electrical Maintenance";
-	req_access = null;
 	req_one_access = list(1,11,24)
 	},
 /turf/simulated/floor,
@@ -22034,9 +22029,7 @@
 "jAM" = (
 /obj/machinery/porta_turret{
 	check_access = 0;
-	check_anomalies = 1;
 	check_arrest = 0;
-	check_records = 1;
 	faction = "neutral";
 	installation = /obj/item/gun/energy/locked/phasegun/cannon/unlocked
 	},
@@ -27694,7 +27687,6 @@
 	dir = 6
 	},
 /obj/item/radio/intercom{
-	broadcasting = 0;
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
@@ -28049,7 +28041,6 @@
 	pixel_y = -32
 	},
 /obj/item/radio/intercom{
-	broadcasting = 0;
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
@@ -28875,7 +28866,6 @@
 /area/bridge)
 "mDs" = (
 /obj/item/radio/intercom{
-	broadcasting = 0;
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
@@ -29830,7 +29820,6 @@
 	dir = 1
 	},
 /obj/item/radio/intercom{
-	broadcasting = 0;
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
@@ -32772,7 +32761,6 @@
 /area/surface/outpost/civilian/emergency_storage)
 "osm" = (
 /obj/item/radio/intercom{
-	broadcasting = 0;
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
@@ -41042,7 +41030,6 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/multi_tile/glass{
 	dir = 2;
-	id_tag = null;
 	name = "EMT Bay";
 	req_access = list(5)
 	},
@@ -41267,7 +41254,6 @@
 "saV" = (
 /obj/machinery/door/airlock/multi_tile/glass{
 	dir = 2;
-	id_tag = null;
 	name = "EMT Bay";
 	req_access = list(5)
 	},
@@ -48978,7 +48964,6 @@
 	dir = 8
 	},
 /obj/machinery/computer/shuttle_control/mining{
-	ai_control = 1;
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/purple,
@@ -49130,7 +49115,6 @@
 /area/rnd/research)
 "vjf" = (
 /obj/machinery/computer/shuttle_control/research{
-	ai_control = 1;
 	req_one_access = list(47)
 	},
 /obj/machinery/light{
@@ -49191,7 +49175,6 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/command{
-	id_tag = null;
 	name = "Research Director Quarters";
 	req_access = list(30)
 	},
@@ -49861,7 +49844,6 @@
 	dir = 4
 	},
 /obj/machinery/computer/shuttle_control/research{
-	ai_control = 1;
 	dir = 1;
 	req_one_access = list(47)
 	},
@@ -56105,27 +56087,13 @@
 	},
 /obj/item/clothing/mask/gas/clear,
 /obj/item/clothing/mask/gas/clear,
-/obj/item/storage/pouch{
-	remove_delay = 0
-	},
-/obj/item/storage/pouch{
-	remove_delay = 0
-	},
-/obj/item/storage/pouch{
-	remove_delay = 0
-	},
-/obj/item/storage/pouch{
-	remove_delay = 0
-	},
-/obj/item/storage/pouch{
-	remove_delay = 0
-	},
-/obj/item/storage/pouch{
-	remove_delay = 0
-	},
-/obj/item/storage/pouch{
-	remove_delay = 0
-	},
+/obj/item/storage/pouch,
+/obj/item/storage/pouch,
+/obj/item/storage/pouch,
+/obj/item/storage/pouch,
+/obj/item/storage/pouch,
+/obj/item/storage/pouch,
+/obj/item/storage/pouch,
 /turf/simulated/floor/tiled/techfloor,
 /area/security/security_ses)
 "xRi" = (

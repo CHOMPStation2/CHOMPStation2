@@ -44,6 +44,26 @@
 	icon_state = "dark"
 	},
 /area/syndicate_station)
+"aaj" = (
+/obj/item/bedsheet/mimedouble{
+	pixel_x = 10;
+	pixel_y = -2
+	},
+/obj/structure/bed/double/padded{
+	pixel_x = 10;
+	pixel_y = -2
+	},
+/turf/simulated/floor/carpet/blue2,
+/area/shadekin)
+"aak" = (
+/obj/item/bedsheet/mimedouble{
+	pixel_y = -2
+	},
+/obj/structure/bed/double/padded{
+	pixel_y = -2
+	},
+/turf/simulated/floor/carpet/blue2,
+/area/shadekin)
 "aal" = (
 /obj/machinery/computer/arcade,
 /turf/unsimulated/floor{
@@ -189,7 +209,6 @@
 /area/centcom/medical)
 "aaU" = (
 /obj/machinery/honey_extractor,
-/turf/space,
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
@@ -4543,15 +4562,7 @@
 /area/shadekin)
 "dBP" = (
 /obj/structure/bed/double/padded{
-	pixel_x = 10;
-	pixel_y = 25
-	},
-/obj/structure/bed/double/padded{
 	pixel_x = 10
-	},
-/obj/item/bedsheet/mimedouble{
-	pixel_x = 10;
-	pixel_y = 27
 	},
 /obj/item/bedsheet/mimedouble{
 	pixel_x = 10
@@ -5127,7 +5138,6 @@
 /area/centcom/bar)
 "dZT" = (
 /obj/machinery/biogenerator,
-/turf/space,
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
@@ -8309,13 +8319,7 @@
 	},
 /area/wizard_station)
 "hbJ" = (
-/obj/structure/bed/double/padded{
-	pixel_y = 25
-	},
 /obj/structure/bed/double/padded,
-/obj/item/bedsheet/mimedouble{
-	pixel_y = 26
-	},
 /obj/item/bedsheet/mimedouble,
 /turf/simulated/floor/carpet/blue2,
 /area/shadekin)
@@ -8736,12 +8740,6 @@
 /obj/machinery/chemical_dispenser/bar_alc/full,
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/merchant)
-"hpw" = (
-/turf/space,
-/turf/unsimulated/floor{
-	icon_state = "steel"
-	},
-/area/centcom/bar)
 "hqg" = (
 /obj/structure/bed/chair/holochair{
 	dir = 1
@@ -14454,9 +14452,6 @@
 /obj/structure/lattice,
 /turf/space,
 /area/space)
-"mcF" = (
-/turf/unsimulated/wall,
-/area/space)
 "mcT" = (
 /obj/effect/floor_decal/corner/red/full,
 /turf/simulated/floor/holofloor/tiled,
@@ -16714,7 +16709,6 @@
 "ofa" = (
 /obj/structure/table/woodentable/holotable,
 /obj/effect/landmark/costume/elpresidente,
-/turf/space,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_game_room)
 "ofD" = (
@@ -17237,7 +17231,6 @@
 /obj/machinery/vending/hydronutrients{
 	dir = 1
 	},
-/turf/space,
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
@@ -18858,10 +18851,6 @@
 "qoU" = (
 /turf/simulated/floor/carpet/blucarpet,
 /area/shadekin)
-"qoX" = (
-/turf/space,
-/turf/simulated/shuttle/wall/dark,
-/area/shuttle/merchant)
 "qoY" = (
 /obj/effect/overlay/coconut,
 /turf/simulated/floor/holofloor/beach/sand,
@@ -21629,13 +21618,6 @@
 	icon_state = "vault"
 	},
 /area/centcom/specops)
-"sHT" = (
-/obj/item/stool/padded,
-/turf/space,
-/turf/unsimulated/floor{
-	icon_state = "steel"
-	},
-/area/centcom/bar)
 "sIZ" = (
 /obj/structure/flora/tree/pine/holo,
 /turf/simulated/floor/holofloor/snow,
@@ -23086,10 +23068,6 @@
 /obj/structure/window/reinforced/full,
 /turf/simulated/shuttle/plating,
 /area/shuttle/syndicate)
-"tTm" = (
-/turf/space,
-/turf/simulated/shuttle/wall/dark/hard_corner,
-/area/shuttle/merchant)
 "tTO" = (
 /obj/structure/table/steel_reinforced,
 /obj/machinery/recharger,
@@ -23709,10 +23687,6 @@
 	},
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/shadekin)
-"uyi" = (
-/turf/space,
-/turf/space,
-/area/space)
 "uyy" = (
 /obj/machinery/atmospherics/unary/freezer{
 	icon_state = "freezer"
@@ -25704,7 +25678,6 @@
 /obj/machinery/seed_storage/garden{
 	dir = 1
 	},
-/turf/space,
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
@@ -27209,10 +27182,6 @@
 "xMU" = (
 /obj/structure/shuttle/engine/heater{
 	dir = 4
-	},
-/obj/machinery/turretid{
-	pixel_x = 32;
-	req_access = list(150)
 	},
 /obj/machinery/turretid{
 	pixel_x = 32;
@@ -37209,7 +37178,7 @@ spk
 spk
 ssG
 xUf
-sHT
+qCw
 wbS
 spk
 vFi
@@ -37467,7 +37436,7 @@ spk
 lkV
 ssG
 ssG
-hpw
+ssG
 kZe
 spk
 vFi
@@ -39015,7 +38984,7 @@ kwj
 ssG
 ssG
 ssG
-hpw
+ssG
 ssG
 wTS
 kAf
@@ -50764,7 +50733,7 @@ vwH
 lnu
 ffE
 vfc
-xbZ
+aaj
 dBP
 bMy
 xom
@@ -51022,7 +50991,7 @@ aLm
 bOS
 ffE
 vfc
-xbZ
+aak
 hbJ
 bMy
 cWu
@@ -53647,7 +53616,7 @@ vFi
 vFi
 vFi
 vFi
-uyi
+vFi
 vFi
 vFi
 vFi
@@ -53905,7 +53874,7 @@ vFi
 vFi
 vFi
 vFi
-uyi
+vFi
 vFi
 vFi
 vFi
@@ -54163,7 +54132,7 @@ vFi
 vFi
 vFi
 vFi
-uyi
+vFi
 vFi
 vFi
 vFi
@@ -54421,7 +54390,7 @@ vFi
 vFi
 vFi
 vFi
-uyi
+vFi
 vFi
 vFi
 vFi
@@ -88470,7 +88439,7 @@ wOF
 iYC
 iYC
 iYC
-tTm
+uvs
 eVq
 uvs
 vFi
@@ -88728,7 +88697,7 @@ uvs
 aga
 aga
 eVq
-qoX
+eVq
 eVq
 vFi
 vFi
@@ -89882,7 +89851,7 @@ dtV
 dtV
 dtV
 dtV
-mcF
+dtV
 vFi
 dtV
 sun

@@ -1950,10 +1950,7 @@
 "bPG" = (
 /obj/structure/bed/double/padded{
 	name = "taur-sized bed";
-	pixel_y = 25
-	},
-/obj/structure/bed/double/padded{
-	name = "taur-sized bed"
+	layer = 3.01
 	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/maintenance/firstdeck/forestarboard/simulated_caves)
@@ -4395,9 +4392,18 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/structure/bed/double/padded{
+	name = "taur-sized bed";
+	pixel_x = 3;
+	pixel_y = -4
+	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/maintenance/firstdeck/forestarboard/simulated_caves)
 "eCD" = (
+/obj/structure/bed/double/padded{
+	name = "taur-sized bed";
+	pixel_y = -4
+	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/maintenance/firstdeck/forestarboard/simulated_caves)
 "eDo" = (
@@ -4438,11 +4444,7 @@
 /obj/structure/bed/double/padded{
 	name = "taur-sized bed";
 	pixel_x = 3;
-	pixel_y = 25
-	},
-/obj/structure/bed/double/padded{
-	name = "taur-sized bed";
-	pixel_x = 3
+	layer = 3.01
 	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/maintenance/firstdeck/forestarboard/simulated_caves)
@@ -9746,13 +9748,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/simulated_caves)
-"luI" = (
-/obj/structure/bed/double/padded{
-	name = "taur-sized bed";
-	pixel_x = 3
-	},
-/turf/simulated/floor/carpet/purcarpet,
-/area/maintenance/firstdeck/forestarboard/simulated_caves)
 "luU" = (
 /obj/effect/floor_decal/rust,
 /obj/structure/table/steel_reinforced,
@@ -14915,16 +14910,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/fore/simulated_caves)
-"teN" = (
-/obj/machinery/light/small{
-	dir = 1
-	},
-/obj/structure/bed/double/padded{
-	name = "taur-sized bed";
-	pixel_x = 3
-	},
-/turf/simulated/floor/carpet/purcarpet,
-/area/maintenance/firstdeck/forestarboard/simulated_caves)
 "tfO" = (
 /obj/effect/floor_decal/rust,
 /obj/machinery/light/small/readylight,
@@ -16744,12 +16729,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/firstdeck/hallway/simulated_caves)
-"vJR" = (
-/obj/structure/bed/double/padded{
-	name = "taur-sized bed"
-	},
-/turf/simulated/floor/carpet/purcarpet,
-/area/maintenance/firstdeck/forestarboard/simulated_caves)
 "vJV" = (
 /obj/machinery/status_display{
 	layer = 4;
@@ -62176,8 +62155,8 @@ rlb
 rlb
 rlb
 bot
-teN
-luI
+eCB
+eEP
 eKY
 uob
 bot
@@ -62433,8 +62412,8 @@ rlb
 rlb
 rlb
 bot
-vJR
-vJR
+eCD
+bPG
 eKY
 uob
 bot

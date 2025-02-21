@@ -1133,7 +1133,6 @@
 	master_tag = "d0_airlock";
 	name = "exterior access button";
 	pixel_y = -28;
-	req_access = null;
 	dir = 8;
 	pixel_x = -8
 	},
@@ -2212,7 +2211,6 @@
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	id_tag = "d0_airlock";
 	pixel_y = -26;
-	req_access = null;
 	tag_airpump = "d0_pump";
 	tag_chamber_sensor = "d0_sensor";
 	tag_exterior_door = "d0_outer";
@@ -2609,11 +2607,6 @@
 	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerocent)
-"kN" = (
-/obj/structure/table,
-/obj/structure/table,
-/turf/simulated/floor/carpet/purcarpet,
-/area/maintenance/zeroaft)
 "kP" = (
 /obj/structure/catwalk,
 /obj/structure/catwalk,
@@ -5487,8 +5480,7 @@
 	master_tag = "d0_airlock";
 	name = "interior access button";
 	pixel_x = 26;
-	pixel_y = 23;
-	req_access = null
+	pixel_y = 23
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/zeroport)
@@ -43269,7 +43261,7 @@ Zd
 lW
 qb
 YU
-kN
+jB
 Zd
 Dw
 Sk
