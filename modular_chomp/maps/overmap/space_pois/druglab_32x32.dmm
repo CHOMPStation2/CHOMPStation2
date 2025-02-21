@@ -13,6 +13,19 @@
 /obj/fruitspawner/corn,
 /turf/simulated/floor/plating,
 /area/submap/druglab)
+"bN" = (
+/obj/structure/cable{
+	icon_state = "0-2";
+	pixel_y = 1
+	},
+/obj/machinery/power/apc{
+	dir = 4;
+	layer = 5;
+	name = "east bump";
+	pixel_x = 24
+	},
+/turf/simulated/floor/plating,
+/area/submap/druglab)
 "bP" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -637,19 +650,6 @@
 	},
 /turf/template_noop,
 /area/template_noop)
-"UT" = (
-/obj/structure/cable{
-	icon_state = "0-2";
-	pixel_y = 1
-	},
-/obj/machinery/power/apc{
-	dir = 4;
-	layer = 5;
-	name = "east bump";
-	pixel_x = 24
-	},
-/turf/simulated/floor/plating,
-/area/submap/druglab)
 "Va" = (
 /obj/item/grenade/chem_grenade/metalfoam,
 /obj/fruitspawner/corn,
@@ -940,7 +940,7 @@ jR
 jR
 lJ
 kf
-UT
+bN
 dU
 Jq
 jR

@@ -599,6 +599,24 @@
 /obj/machinery/portable_atmospherics/hydroponics,
 /turf/simulated/floor/light,
 /area/submap/deepstorage)
+"br" = (
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/machinery/power/port_gen/pacman,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
+/area/submap/deepstorage)
+"bs" = (
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/machinery/power/smes/buildable/point_of_interest,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
+/area/submap/deepstorage)
 "bu" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -625,6 +643,17 @@
 	temperature = 295.15
 	},
 /area/submap/deepstorage)
+"by" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/power/terminal{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
+/area/submap/deepstorage)
 "bz" = (
 /obj/structure/reagent_dispensers/fueltank,
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -643,6 +672,35 @@
 /area/submap/deepstorage)
 "bF" = (
 /obj/machinery/seed_extractor,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
+/area/submap/deepstorage)
+"bG" = (
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/machinery/power/apc/high{
+	dir = 8;
+	pixel_x = -20
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
+/area/submap/deepstorage)
+"bH" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
+/area/submap/deepstorage)
+"bI" = (
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 295.15
 	},
@@ -791,27 +849,15 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/light,
 /area/submap/deepstorage)
-"eP" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/external,
-/area/submap/deepstorage)
 "eX" = (
 /obj/effect/floor_decal/borderfloorblack,
 /turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/deepstorage)
-"hw" = (
+"ic" = (
 /obj/structure/cable{
-	icon_state = "1-2"
+	icon_state = "4-8"
 	},
-/obj/machinery/power/terminal{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 295.15
-	},
+/turf/simulated/floor/plating/external,
 /area/submap/deepstorage)
 "il" = (
 /obj/effect/decal/cleanable/blood/gibs{
@@ -849,19 +895,6 @@
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 295.15
 	},
-/area/submap/deepstorage)
-"jB" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/plating/external,
-/area/submap/deepstorage)
-"jG" = (
-/obj/structure/prop/machine/comm_tower/starts_on,
-/obj/structure/cable{
-	icon_state = "0-8"
-	},
-/turf/simulated/floor/plating/external,
 /area/submap/deepstorage)
 "kX" = (
 /obj/structure/closet/crate/secure/large,
@@ -920,20 +953,18 @@
 "qc" = (
 /turf/simulated/floor/plating/external,
 /area/submap/deepstorage)
-"qg" = (
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
-/obj/machinery/power/port_gen/pacman,
-/turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 295.15
-	},
-/area/submap/deepstorage)
 "qN" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/asteroid_steel/airless,
+/area/submap/deepstorage)
+"qV" = (
+/obj/structure/prop/machine/comm_tower/starts_on,
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating/external,
 /area/submap/deepstorage)
 "rc" = (
 /obj/machinery/door/blast/regular{
@@ -993,14 +1024,6 @@
 	temperature = 295.15
 	},
 /area/submap/deepstorage)
-"uD" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 295.15
-	},
-/area/submap/deepstorage)
 "uE" = (
 /obj/structure/table/standard,
 /obj/random/firstaid,
@@ -1017,10 +1040,11 @@
 	},
 /turf/simulated/floor/tiled,
 /area/submap/deepstorage)
-"vD" = (
+"uJ" = (
 /obj/structure/cable{
-	icon_state = "2-4"
+	icon_state = "4-8"
 	},
+/obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/external,
 /area/submap/deepstorage)
 "vI" = (
@@ -1089,6 +1113,12 @@
 	temperature = 295.15
 	},
 /area/submap/deepstorage)
+"CJ" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating/external,
+/area/submap/deepstorage)
 "Dd" = (
 /obj/structure/marker_beacon,
 /turf/simulated/floor/tiled/asteroid_steel/airless,
@@ -1111,26 +1141,9 @@
 /obj/effect/decal/remains/tajaran,
 /turf/simulated/floor/wood,
 /area/submap/deepstorage)
-"EL" = (
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
-/obj/machinery/power/smes/buildable/point_of_interest,
-/turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 295.15
-	},
-/area/submap/deepstorage)
 "FZ" = (
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating,
-/area/submap/deepstorage)
-"Hu" = (
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
-/turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 295.15
-	},
 /area/submap/deepstorage)
 "HS" = (
 /obj/machinery/door/blast/regular{
@@ -1138,17 +1151,17 @@
 	},
 /turf/simulated/floor/plating,
 /area/submap/deepstorage)
-"II" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/plating/external,
-/area/submap/deepstorage)
 "Jh" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/asteroid_steel/airless,
+/area/submap/deepstorage)
+"Kl" = (
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/plating/external,
 /area/submap/deepstorage)
 "Kq" = (
 /obj/item/stack/cable_coil,
@@ -1200,19 +1213,6 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/asteroid_steel/airless,
-/area/submap/deepstorage)
-"My" = (
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
-/obj/machinery/power/apc/high{
-	dir = 8;
-	pixel_x = -20
-	},
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 295.15
-	},
 /area/submap/deepstorage)
 "NN" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -3031,7 +3031,7 @@ bj
 ac
 bx
 mL
-My
+bG
 bO
 bU
 mL
@@ -3098,9 +3098,9 @@ ac
 mL
 mL
 ac
-qg
+br
 mL
-uD
+bH
 mL
 mL
 mL
@@ -3167,9 +3167,9 @@ ac
 ac
 au
 ac
-EL
-hw
-Hu
+bs
+by
+bI
 QY
 QY
 mL
@@ -3450,8 +3450,8 @@ bY
 bW
 bY
 ac
-jB
-vD
+CJ
+Kl
 iM
 ab
 ce
@@ -3589,7 +3589,7 @@ ac
 ab
 ab
 ab
-II
+ic
 ab
 ab
 ab
@@ -3658,7 +3658,7 @@ ac
 ab
 ab
 ab
-II
+ic
 ab
 ab
 ab
@@ -3727,7 +3727,7 @@ bc
 ab
 ab
 ab
-eP
+uJ
 ab
 ab
 ce
@@ -3865,7 +3865,7 @@ bc
 ab
 ab
 ab
-eP
+uJ
 ab
 ab
 ab
@@ -3934,7 +3934,7 @@ ac
 ab
 ab
 ab
-eP
+uJ
 ab
 ab
 ab
@@ -4003,7 +4003,7 @@ ac
 ab
 ab
 ab
-II
+ic
 ab
 ab
 ab
@@ -4072,7 +4072,7 @@ ac
 ab
 ab
 ab
-jG
+qV
 ab
 ab
 ab

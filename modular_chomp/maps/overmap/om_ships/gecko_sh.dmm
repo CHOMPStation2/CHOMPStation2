@@ -1,18 +1,4 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"aa" = (
-/obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "gecko_sh_blast";
-	name = "Blast Shields";
-	opacity = 0
-	},
-/obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/hatch{
-	req_one_access = list()
-	},
-/turf/simulated/floor/plating,
-/area/shuttle/gecko_sh)
 "ai" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
@@ -886,6 +872,20 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
+/area/shuttle/gecko_sh)
+"rY" = (
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "gecko_sh_blast";
+	name = "Blast Shields";
+	opacity = 0
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/hatch{
+	req_one_access = list()
+	},
+/turf/simulated/floor/plating,
 /area/shuttle/gecko_sh)
 "sB" = (
 /obj/structure/handrail{
@@ -2990,7 +2990,7 @@ OZ
 rj
 BH
 ZJ
-aa
+rY
 Wr
 Df
 Df
@@ -3506,7 +3506,7 @@ Yj
 ll
 oi
 ZJ
-aa
+rY
 Wr
 Df
 Df

@@ -1,14 +1,4 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"ag" = (
-/obj/machinery/seed_extractor,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/outdoors/sidewalk/slab{
-	movement_cost = 0;
-	temperature = 293.15
-	},
-/area/survivalpod/superpose/PizzaParlor)
 "ah" = (
 /obj/structure/table/woodentable,
 /obj/random/cigarettes,
@@ -120,6 +110,24 @@
 	},
 /turf/simulated/floor/wood/alt/parquet,
 /area/survivalpod/superpose/PizzaParlor)
+"dJ" = (
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/outdoors/sidewalk/slab{
+	movement_cost = 0;
+	temperature = 293.15
+	},
+/area/survivalpod/superpose/PizzaParlor)
+"dZ" = (
+/obj/effect/floor_decal/corner/lime/border{
+	dir = 5
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/hydro,
+/area/survivalpod/superpose/PizzaParlor)
 "eU" = (
 /obj/structure/bed/chair/sofa/left/brown,
 /obj/structure/window/basic{
@@ -135,19 +143,6 @@
 	layer = 3
 	},
 /obj/vehicle/train/engine/quadbike,
-/turf/simulated/floor/outdoors/sidewalk/slab{
-	movement_cost = 0;
-	temperature = 293.15
-	},
-/area/survivalpod/superpose/PizzaParlor)
-"fk" = (
-/obj/machinery/vending/hydroseeds{
-	req_log_access = null;
-	dir = 1
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/outdoors/sidewalk/slab{
 	movement_cost = 0;
 	temperature = 293.15
@@ -169,22 +164,6 @@
 	},
 /turf/simulated/floor/wood/alt/parquet,
 /area/survivalpod/superpose/PizzaParlor)
-"gC" = (
-/obj/machinery/power/thermoregulator/southerncross{
-	pixel_x = 1;
-	pixel_y = 26
-	},
-/obj/structure/closet/crate/bin{
-	anchored = 1
-	},
-/obj/effect/floor_decal/corner/grey/diagonal{
-	dir = 4
-	},
-/obj/structure/cable{
-	icon_state = "0-8"
-	},
-/turf/simulated/floor/tiled/white,
-/area/survivalpod/superpose/PizzaParlor)
 "gR" = (
 /obj/machinery/biogenerator,
 /turf/simulated/floor/outdoors/sidewalk/slab{
@@ -199,18 +178,6 @@
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/wood/alt/parquet,
 /area/survivalpod/superpose/PizzaParlor)
-"hh" = (
-/obj/effect/floor_decal/corner/grey/diagonal{
-	dir = 4
-	},
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
-/turf/simulated/floor/tiled/white,
-/area/survivalpod/superpose/PizzaParlor)
 "hk" = (
 /obj/structure/simple_door/wood{
 	name = "Pizza Parlor"
@@ -220,6 +187,62 @@
 /area/survivalpod/superpose/PizzaParlor)
 "hq" = (
 /turf/simulated/floor/tiled/freezer/cold,
+/area/survivalpod/superpose/PizzaParlor)
+"hA" = (
+/obj/structure/closet/walllocker_double/north,
+/obj/item/gps,
+/obj/item/starcaster_news,
+/obj/item/pen/blue,
+/obj/item/pda,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/gun/energy/locked/phasegun/pistol,
+/obj/item/material/knife/tacknife/survival,
+/obj/item/clothing/accessory/permit/gun,
+/obj/item/camera,
+/obj/item/binoculars,
+/obj/item/threadneedle,
+/obj/random/soap,
+/obj/item/towel/random,
+/obj/item/bodybag/cryobag,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/color/yellow,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/flame/lighter/random,
+/obj/item/cell/device/hyper,
+/obj/item/cell/device/hyper,
+/obj/item/extinguisher/mini,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/reagent_containers/pill/spaceacillin,
+/obj/item/reagent_containers/pill/spaceacillin,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/suit_cooling_unit/emergency,
+/obj/item/stack/nanopaste,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/storage/backpack/messenger,
+/obj/item/clothing/accessory/storage/black_drop_pouches,
+/obj/item/clothing/accessory/poncho/thermal,
+/obj/item/storage/box/survival/comp,
+/obj/item/storage/toolbox/brass,
+/obj/item/storage/box/khcrystal,
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/PizzaParlor)
 "iq" = (
 /obj/structure/table/hardwoodtable,
@@ -251,12 +274,40 @@
 	},
 /turf/simulated/floor/tiled/freezer/cold,
 /area/survivalpod/superpose/PizzaParlor)
+"mi" = (
+/obj/machinery/power/thermoregulator/southerncross{
+	pixel_x = 1;
+	pixel_y = 26
+	},
+/obj/structure/closet/crate/bin{
+	anchored = 1
+	},
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/PizzaParlor)
 "mN" = (
 /obj/machinery/vending/dinnerware{
 	req_log_access = null
 	},
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/PizzaParlor)
+"mQ" = (
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/PizzaParlor)
@@ -324,21 +375,6 @@
 /obj/random/meat,
 /turf/simulated/floor/tiled/freezer/cold,
 /area/survivalpod/superpose/PizzaParlor)
-"qt" = (
-/obj/machinery/seed_storage/garden{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/outdoors/sidewalk/slab{
-	movement_cost = 0;
-	temperature = 293.15
-	},
-/area/survivalpod/superpose/PizzaParlor)
 "qz" = (
 /obj/structure/bed/chair/sofa/right/brown,
 /obj/structure/window/basic{
@@ -360,44 +396,6 @@
 /obj/effect/floor_decal/corner/lime/border,
 /turf/simulated/floor/tiled/hydro,
 /area/survivalpod/superpose/PizzaParlor)
-"rG" = (
-/obj/structure/table/standard,
-/obj/item/toy/plushie/borgplushie/medihound{
-	pixel_y = 7
-	},
-/obj/item/clothing/under/pizzaguy{
-	rolled_down = 1;
-	icon_override = 'icons/inventory/uniform/mob_vr_rolled_down.dmi'
-	},
-/obj/item/clothing/under/pizzaguy{
-	rolled_down = 1;
-	icon_override = 'icons/inventory/uniform/mob_vr_rolled_down.dmi'
-	},
-/obj/item/clothing/head/soft/red,
-/obj/item/clothing/head/soft/red,
-/obj/effect/floor_decal/corner/grey/diagonal{
-	dir = 4
-	},
-/obj/item/card/id/generic{
-	access = list(515);
-	assignment = "Pizza Courier";
-	name = "Pizza Delivery ID"
-	},
-/obj/item/card/id/generic{
-	access = list(515);
-	assignment = "Pizza Courier";
-	name = "Pizza Delivery ID"
-	},
-/obj/machinery/recharger,
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
-/obj/machinery/power/apc/high{
-	dir = 8;
-	pixel_x = -24
-	},
-/turf/simulated/floor/tiled/white,
-/area/survivalpod/superpose/PizzaParlor)
 "rN" = (
 /obj/structure/closet/crate/freezer,
 /obj/item/reagent_containers/food/drinks/bottle/milk,
@@ -412,15 +410,6 @@
 /obj/item/reagent_containers/food/snacks/sliceable/cheesewheel,
 /obj/item/reagent_containers/food/snacks/sliceable/cheesewheel,
 /turf/simulated/floor/tiled/freezer/cold,
-/area/survivalpod/superpose/PizzaParlor)
-"rW" = (
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/outdoors/sidewalk/slab{
-	movement_cost = 0;
-	temperature = 293.15
-	},
 /area/survivalpod/superpose/PizzaParlor)
 "rX" = (
 /obj/effect/floor_decal/corner/grey/diagonal{
@@ -492,18 +481,6 @@
 /obj/machinery/power/rtg/fake_gen,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/PizzaParlor)
-"xn" = (
-/obj/structure/simple_door/wood{
-	name = "Pizza Parlor"
-	},
-/obj/effect/floor_decal/corner/grey/diagonal{
-	dir = 4
-	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/hydro,
-/area/survivalpod/superpose/PizzaParlor)
 "yg" = (
 /obj/structure/bed/chair/sofa/brown{
 	dir = 8
@@ -526,6 +503,18 @@
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/PizzaParlor)
+"zy" = (
+/obj/structure/simple_door/wood{
+	name = "Pizza Parlor"
+	},
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/hydro,
+/area/survivalpod/superpose/PizzaParlor)
 "zL" = (
 /turf/simulated/wall/wood,
 /area/survivalpod/superpose/PizzaParlor)
@@ -547,6 +536,22 @@
 	movement_cost = 0;
 	temperature = 293.15
 	},
+/area/survivalpod/superpose/PizzaParlor)
+"At" = (
+/obj/machinery/power/thermoregulator/southerncross{
+	pixel_x = 1;
+	pixel_y = 26
+	},
+/obj/structure/sink{
+	pixel_y = 16
+	},
+/obj/effect/floor_decal/corner/lime/border{
+	dir = 1
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/tiled/hydro,
 /area/survivalpod/superpose/PizzaParlor)
 "Az" = (
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -658,15 +663,6 @@
 	},
 /turf/simulated/wall/wood,
 /area/survivalpod/superpose/PizzaParlor)
-"ED" = (
-/obj/effect/floor_decal/corner/grey/diagonal{
-	dir = 4
-	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/white,
-/area/survivalpod/superpose/PizzaParlor)
 "EV" = (
 /obj/structure/bed/chair/sofa/left/brown{
 	dir = 1
@@ -675,15 +671,6 @@
 	dir = 6
 	},
 /turf/simulated/floor/wood/alt/parquet,
-/area/survivalpod/superpose/PizzaParlor)
-"Fc" = (
-/obj/effect/floor_decal/corner/lime/border{
-	dir = 5
-	},
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
-/turf/simulated/floor/tiled/hydro,
 /area/survivalpod/superpose/PizzaParlor)
 "Fz" = (
 /obj/structure/closet/crate/freezer,
@@ -705,6 +692,20 @@
 	temperature = 293.15
 	},
 /area/survivalpod/superpose/PizzaParlor)
+"Gt" = (
+/obj/structure/fans/tiny,
+/obj/machinery/door/airlock{
+	name = "Pizza Parlor";
+	req_one_access = list(515)
+	},
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/PizzaParlor)
 "HD" = (
 /obj/structure/table/marble,
 /obj/item/reagent_containers/food/condiment/enzyme{
@@ -719,62 +720,6 @@
 	},
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
-	},
-/turf/simulated/floor/tiled/white,
-/area/survivalpod/superpose/PizzaParlor)
-"Iv" = (
-/obj/structure/closet/walllocker_double/north,
-/obj/item/gps,
-/obj/item/starcaster_news,
-/obj/item/pen/blue,
-/obj/item/pda,
-/obj/item/storage/mre/random,
-/obj/item/storage/mre/random,
-/obj/item/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/reagent_containers/food/snacks/sosjerky,
-/obj/item/reagent_containers/food/snacks/sosjerky,
-/obj/item/gun/energy/locked/phasegun/pistol,
-/obj/item/material/knife/tacknife/survival,
-/obj/item/clothing/accessory/permit/gun,
-/obj/item/camera,
-/obj/item/binoculars,
-/obj/item/threadneedle,
-/obj/random/soap,
-/obj/item/towel/random,
-/obj/item/bodybag/cryobag,
-/obj/item/flashlight/flare,
-/obj/item/flashlight/flare,
-/obj/item/flashlight/color/yellow,
-/obj/item/radio,
-/obj/item/radio,
-/obj/item/flame/lighter/random,
-/obj/item/cell/device/hyper,
-/obj/item/cell/device/hyper,
-/obj/item/extinguisher/mini,
-/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
-/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
-/obj/item/reagent_containers/pill/spaceacillin,
-/obj/item/reagent_containers/pill/spaceacillin,
-/obj/item/fbp_backup_cell,
-/obj/item/fbp_backup_cell,
-/obj/item/suit_cooling_unit/emergency,
-/obj/item/stack/nanopaste,
-/obj/item/reagent_containers/hypospray/autoinjector/biginjector/clotting,
-/obj/item/storage/backpack/messenger,
-/obj/item/clothing/accessory/storage/black_drop_pouches,
-/obj/item/clothing/accessory/poncho/thermal,
-/obj/item/storage/box/survival/comp,
-/obj/item/storage/toolbox/brass,
-/obj/item/storage/box/khcrystal,
-/obj/effect/floor_decal/corner/grey/diagonal{
-	dir = 4
-	},
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/PizzaParlor)
@@ -899,29 +844,20 @@
 	},
 /turf/simulated/floor/wood/alt/parquet,
 /area/survivalpod/superpose/PizzaParlor)
-"NM" = (
-/obj/structure/cable{
-	icon_state = "1-2"
+"Pb" = (
+/obj/machinery/seed_storage/garden{
+	dir = 1
 	},
-/obj/structure/closet/crate/solar,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/outdoors/sidewalk/slab{
 	movement_cost = 0;
 	temperature = 293.15
 	},
-/area/survivalpod/superpose/PizzaParlor)
-"NW" = (
-/obj/structure/fans/tiny,
-/obj/machinery/door/airlock{
-	name = "Pizza Parlor";
-	req_one_access = list(515)
-	},
-/obj/effect/floor_decal/corner/grey/diagonal{
-	dir = 4
-	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/PizzaParlor)
 "PH" = (
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -956,22 +892,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/PizzaParlor)
-"QG" = (
-/obj/machinery/power/thermoregulator/southerncross{
-	pixel_x = 1;
-	pixel_y = 26
-	},
-/obj/structure/sink{
-	pixel_y = 16
-	},
-/obj/effect/floor_decal/corner/lime/border{
-	dir = 1
-	},
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
-/turf/simulated/floor/tiled/hydro,
-/area/survivalpod/superpose/PizzaParlor)
 "QN" = (
 /obj/structure/table/hardwoodtable,
 /obj/item/reagent_containers/food/condiment/small/saltshaker{
@@ -1004,6 +924,19 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/PizzaParlor)
+"Sr" = (
+/obj/machinery/vending/hydroseeds{
+	req_log_access = null;
+	dir = 1
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/outdoors/sidewalk/slab{
+	movement_cost = 0;
+	temperature = 293.15
+	},
 /area/survivalpod/superpose/PizzaParlor)
 "SK" = (
 /obj/structure/table/marble,
@@ -1069,6 +1002,16 @@
 	temperature = 293.15
 	},
 /area/survivalpod/superpose/PizzaParlor)
+"TG" = (
+/obj/machinery/seed_extractor,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/outdoors/sidewalk/slab{
+	movement_cost = 0;
+	temperature = 293.15
+	},
+/area/survivalpod/superpose/PizzaParlor)
 "TH" = (
 /obj/structure/grille/rustic,
 /obj/structure/window/reinforced/full,
@@ -1101,6 +1044,44 @@
 	dir = 9
 	},
 /turf/simulated/floor/wood/alt/parquet,
+/area/survivalpod/superpose/PizzaParlor)
+"VC" = (
+/obj/structure/table/standard,
+/obj/item/toy/plushie/borgplushie/medihound{
+	pixel_y = 7
+	},
+/obj/item/clothing/under/pizzaguy{
+	rolled_down = 1;
+	icon_override = 'icons/inventory/uniform/mob_vr_rolled_down.dmi'
+	},
+/obj/item/clothing/under/pizzaguy{
+	rolled_down = 1;
+	icon_override = 'icons/inventory/uniform/mob_vr_rolled_down.dmi'
+	},
+/obj/item/clothing/head/soft/red,
+/obj/item/clothing/head/soft/red,
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/item/card/id/generic{
+	access = list(515);
+	assignment = "Pizza Courier";
+	name = "Pizza Delivery ID"
+	},
+/obj/item/card/id/generic{
+	access = list(515);
+	assignment = "Pizza Courier";
+	name = "Pizza Delivery ID"
+	},
+/obj/machinery/recharger,
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/machinery/power/apc/high{
+	dir = 8;
+	pixel_x = -24
+	},
+/turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/PizzaParlor)
 "VK" = (
 /obj/structure/table/marble,
@@ -1144,8 +1125,27 @@
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/wood/alt/parquet,
 /area/survivalpod/superpose/PizzaParlor)
+"Wi" = (
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/PizzaParlor)
 "Xz" = (
 /turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/PizzaParlor)
+"XT" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/closet/crate/solar,
+/turf/simulated/floor/outdoors/sidewalk/slab{
+	movement_cost = 0;
+	temperature = 293.15
+	},
 /area/survivalpod/superpose/PizzaParlor)
 "YR" = (
 /obj/structure/window/reinforced{
@@ -1181,9 +1181,9 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/PizzaParlor)
-"ZI" = (
+"ZJ" = (
 /obj/structure/cable{
-	icon_state = "2-8"
+	icon_state = "2-4"
 	},
 /turf/simulated/floor/outdoors/sidewalk/slab{
 	movement_cost = 0;
@@ -1210,8 +1210,8 @@
 /area/survivalpod/superpose/PizzaParlor)
 
 (1,1,1) = {"
-rW
-NM
+ZJ
+XT
 wY
 bV
 bV
@@ -1231,7 +1231,7 @@ bV
 bV
 "}
 (2,1,1) = {"
-qt
+Pb
 zL
 zL
 zL
@@ -1252,15 +1252,15 @@ bV
 bV
 "}
 (3,1,1) = {"
-ag
+TG
 zL
-rG
+VC
 rX
 aH
 DK
 Lk
 zL
-QG
+At
 Cf
 Cf
 ro
@@ -1273,15 +1273,15 @@ bV
 bV
 "}
 (4,1,1) = {"
-fk
+Sr
 zL
-Iv
-ED
-ED
-ED
-ED
-xn
-Fc
+hA
+Wi
+Wi
+Wi
+Wi
+zy
+dZ
 cl
 Cy
 wD
@@ -1294,9 +1294,9 @@ bV
 bV
 "}
 (5,1,1) = {"
-ZI
-NW
-hh
+dJ
+Gt
+mQ
 wM
 Mo
 Bw
@@ -1317,7 +1317,7 @@ bV
 (6,1,1) = {"
 fa
 zL
-gC
+mi
 wM
 jp
 Cr

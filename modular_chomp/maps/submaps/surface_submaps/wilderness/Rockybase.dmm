@@ -88,7 +88,27 @@
 /obj/effect/decal/remains/deer,
 /turf/template_noop,
 /area/template_noop)
+"ax" = (
+/obj/machinery/shower{
+	dir = 4;
+	pixel_x = 5
+	},
+/obj/structure/curtain/open/shower,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/hydro,
+/area/submap/Rockybase)
 "ay" = (
+/turf/simulated/floor/tiled/hydro,
+/area/submap/Rockybase)
+"az" = (
+/obj/machinery/shower{
+	dir = 8;
+	pixel_x = -5
+	},
+/obj/structure/curtain/open/shower,
+/obj/item/soap,
 /turf/simulated/floor/tiled/hydro,
 /area/submap/Rockybase)
 "aA" = (
@@ -159,6 +179,53 @@
 "aN" = (
 /turf/simulated/floor/tiled,
 /area/submap/Rockybase)
+"aO" = (
+/obj/structure/table/standard,
+/obj/item/modular_computer/laptop/preset/custom_loadout/cheap,
+/obj/effect/floor_decal/corner/red/border{
+	dir = 9
+	},
+/turf/simulated/floor/tiled,
+/area/submap/Rockybase)
+"aP" = (
+/obj/structure/table/standard,
+/obj/effect/floor_decal/corner/red/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/submap/Rockybase)
+"aQ" = (
+/obj/structure/table/rack,
+/obj/item/gun/projectile/pistol,
+/obj/effect/floor_decal/corner/red/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/submap/Rockybase)
+"aR" = (
+/obj/structure/table/rack,
+/obj/item/gun/energy/gun/taser,
+/obj/effect/floor_decal/corner/red/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/submap/Rockybase)
+"aS" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/submap/Rockybase)
+"aT" = (
+/obj/machinery/vending/coffee,
+/obj/effect/floor_decal/corner/red/border{
+	dir = 5
+	},
+/turf/simulated/floor/tiled,
+/area/submap/Rockybase)
 "aU" = (
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/Rockybase)
@@ -168,12 +235,63 @@
 /obj/item/gun/projectile/shotgun/pump/combat,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/Rockybase)
+"aW" = (
+/obj/machinery/vending/hydronutrients,
+/obj/effect/floor_decal/corner/lime/border{
+	dir = 9
+	},
+/turf/simulated/floor/tiled,
+/area/submap/Rockybase)
+"aX" = (
+/obj/structure/closet/crate/hydroponics,
+/obj/effect/floor_decal/corner/lime/border{
+	dir = 5
+	},
+/turf/simulated/floor/tiled,
+/area/submap/Rockybase)
+"aY" = (
+/obj/machinery/shower{
+	dir = 4;
+	pixel_x = 5
+	},
+/obj/structure/curtain/open/shower,
+/turf/simulated/floor/tiled/hydro,
+/area/submap/Rockybase)
+"aZ" = (
+/obj/machinery/shower{
+	dir = 8;
+	pixel_x = -5
+	},
+/obj/structure/curtain/open/shower,
+/turf/simulated/floor/tiled/hydro,
+/area/submap/Rockybase)
 "ba" = (
 /obj/structure/janitorialcart,
 /turf/simulated/floor/tiled,
 /area/submap/Rockybase)
+"bb" = (
+/obj/structure/table/standard,
+/obj/item/grenade/chem_grenade/cleaner,
+/obj/item/grenade/chem_grenade/cleaner,
+/obj/item/grenade/chem_grenade/cleaner,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/submap/Rockybase)
 "bc" = (
 /obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/submap/Rockybase)
+"bd" = (
+/obj/structure/table/standard,
+/obj/item/paper{
+	info = "Carl's absolutly fucked in the head. He's trying to squeeze as much drone production out as he can since he's worried we're gonna get found out but he's getting sloppier with each batch. Now's he's telling us he can speed the time on the IFF encoding. I already have a hard enough time getting these damn things not to stare at walls and now he's gonna shortchange the only part of these tincans that tells em not to turn us into paste on a wall. I told Richter to get out while he can, We're counting days before either some Sif task force shows up at our door or these things decide we aren't there friends anymore.";
+	name = "Note"
+	},
+/obj/effect/floor_decal/corner/red/border{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -188,12 +306,46 @@
 /mob/living/simple_mob/mechanical/viscerator,
 /turf/simulated/floor/tiled,
 /area/submap/Rockybase)
+"bg" = (
+/obj/machinery/vending/security,
+/obj/effect/floor_decal/corner/red/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/submap/Rockybase)
 "bh" = (
 /obj/structure/table/rack,
 /obj/item/cell/device/weapon,
 /obj/item/ammo_magazine/ammo_box/b12g/pellet,
 /obj/item/ammo_magazine/ammo_box/b12g/pellet,
 /turf/simulated/floor/tiled/techfloor,
+/area/submap/Rockybase)
+"bi" = (
+/obj/effect/floor_decal/corner/lime/border{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/submap/Rockybase)
+"bj" = (
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11
+	},
+/obj/effect/floor_decal/corner/lime/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/submap/Rockybase)
+"bk" = (
+/obj/machinery/shower{
+	dir = 8;
+	pixel_x = -5
+	},
+/obj/structure/curtain/open/shower,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/hydro,
 /area/submap/Rockybase)
 "bl" = (
 /obj/item/mecha_parts/part/gygax_left_leg,
@@ -221,6 +373,14 @@
 /obj/structure/table/standard,
 /obj/item/storage/bag/trash,
 /obj/item/storage/bag/trash,
+/turf/simulated/floor/tiled,
+/area/submap/Rockybase)
+"br" = (
+/obj/structure/table/standard,
+/obj/item/paper_bin,
+/obj/effect/floor_decal/corner/red/border{
+	dir = 10
+	},
 /turf/simulated/floor/tiled,
 /area/submap/Rockybase)
 "bs" = (
@@ -255,8 +415,35 @@
 /obj/item/gun/energy/ionrifle/pistol,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/Rockybase)
+"by" = (
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/effect/floor_decal/corner/lime/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/submap/Rockybase)
 "bz" = (
 /obj/machinery/door/airlock,
+/turf/simulated/floor/tiled,
+/area/submap/Rockybase)
+"bA" = (
+/obj/effect/floor_decal/corner/lime/border{
+	dir = 8
+	},
+/mob/living/bot/farmbot{
+	faction = "malf_drone";
+	name = "Mr. Weddleton"
+	},
+/turf/simulated/floor/tiled,
+/area/submap/Rockybase)
+"bB" = (
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lime/border{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/submap/Rockybase)
 "bC" = (
@@ -501,6 +688,12 @@
 /obj/structure/closet/crate/medical,
 /turf/simulated/floor/tiled,
 /area/submap/Rockybase)
+"cu" = (
+/obj/structure/table/standard,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/burn,
+/turf/simulated/floor/tiled,
+/area/submap/Rockybase)
 "cv" = (
 /obj/structure/table/standard,
 /obj/item/clothing/mask/breath/medical,
@@ -520,12 +713,39 @@
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/submap/Rockybase)
+"cy" = (
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11
+	},
+/turf/simulated/floor/tiled/hydro,
+/area/submap/Rockybase)
 "cz" = (
 /obj/structure/table/standard,
 /obj/item/mmi/digital/robot,
 /obj/item/stock_parts/capacitor/adv,
 /obj/item/stock_parts/scanning_module/adv,
 /turf/simulated/floor/tiled,
+/area/submap/Rockybase)
+"cA" = (
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled,
+/area/submap/Rockybase)
+"cB" = (
+/obj/structure/cable{
+	icon_state = "4-8";
+	pixel_x = 0
+	},
+/turf/simulated/floor/tiled,
+/area/submap/Rockybase)
+"cC" = (
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/obj/machinery/power/port_gen/pacman,
+/turf/simulated/floor,
 /area/submap/Rockybase)
 "cD" = (
 /obj/structure/door_assembly,
@@ -559,6 +779,12 @@
 /obj/structure/closet/secure_closet/medical1,
 /turf/simulated/floor/tiled,
 /area/submap/Rockybase)
+"cK" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/hydro,
+/area/submap/Rockybase)
 "cL" = (
 /mob/living/simple_mob/mechanical/mecha/combat/gygax/dark/advanced{
 	faction = "malf_drone"
@@ -590,6 +816,34 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
+/area/submap/Rockybase)
+"cR" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable{
+	icon_state = "1-2";
+	pixel_y = 0
+	},
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/mob/living/simple_mob/mechanical/combat_drone/lesser,
+/turf/simulated/floor/tiled,
+/area/submap/Rockybase)
+"cS" = (
+/obj/machinery/power/terminal{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/tiled,
+/area/submap/Rockybase)
+"cT" = (
+/obj/machinery/power/smes/buildable/point_of_interest,
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor,
 /area/submap/Rockybase)
 "cU" = (
 /obj/machinery/vending/medical,
@@ -629,6 +883,55 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled,
 /area/submap/Rockybase)
+"dd" = (
+/obj/machinery/vending/robotics,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/submap/Rockybase)
+"de" = (
+/obj/machinery/power/apc{
+	cell_type = /obj/item/cell/super;
+	dir = 8;
+	name = "Unknown APC";
+	pixel_x = -24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/tiled,
+/area/submap/Rockybase)
+"df" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
+/area/submap/Rockybase)
+"dg" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable{
+	icon_state = "1-2";
+	pixel_y = 0
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
+/area/submap/Rockybase)
+"dh" = (
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled,
+/area/submap/Rockybase)
 "di" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -636,8 +939,29 @@
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor,
 /area/submap/Rockybase)
+"dj" = (
+/obj/item/mecha_parts/part/gygax_right_leg,
+/obj/effect/floor_decal/corner/lime/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/submap/Rockybase)
+"dk" = (
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11
+	},
+/obj/item/mecha_parts/part/gygax_left_arm,
+/turf/simulated/floor/tiled/hydro,
+/area/submap/Rockybase)
 "dl" = (
 /obj/machinery/vending,
+/turf/simulated/floor/tiled,
+/area/submap/Rockybase)
+"dm" = (
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/tiled,
 /area/submap/Rockybase)
 "dn" = (
@@ -656,6 +980,13 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /mob/living/simple_mob/mechanical/combat_drone/lesser,
+/turf/simulated/floor/tiled,
+/area/submap/Rockybase)
+"dq" = (
+/obj/structure/closet/secure_closet/hydroponics,
+/obj/effect/floor_decal/corner/lime/border{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/submap/Rockybase)
 "dr" = (
@@ -714,6 +1045,20 @@
 	},
 /turf/simulated/floor/tiled,
 /area/submap/Rockybase)
+"dC" = (
+/obj/machinery/vending/hydroseeds,
+/obj/effect/floor_decal/corner/lime/border{
+	dir = 10
+	},
+/turf/simulated/floor/tiled,
+/area/submap/Rockybase)
+"dD" = (
+/obj/structure/closet/crate/secure/hydrosec,
+/obj/effect/floor_decal/corner/lime/border{
+	dir = 6
+	},
+/turf/simulated/floor/tiled,
+/area/submap/Rockybase)
 "dE" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
 /obj/structure/gravemarker{
@@ -729,356 +1074,11 @@
 /obj/effect/gibspawner/human,
 /turf/template_noop,
 /area/template_noop)
-"eF" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled,
-/area/submap/Rockybase)
-"fN" = (
-/obj/machinery/vending/coffee,
-/obj/effect/floor_decal/corner/red/border{
-	dir = 5
-	},
-/turf/simulated/floor/tiled,
-/area/submap/Rockybase)
-"gl" = (
-/obj/machinery/vending/security,
-/obj/effect/floor_decal/corner/red/border{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/submap/Rockybase)
-"gS" = (
-/obj/machinery/power/terminal{
-	dir = 4
-	},
-/obj/structure/cable{
-	icon_state = "0-8"
-	},
-/turf/simulated/floor/tiled,
-/area/submap/Rockybase)
-"iT" = (
-/obj/machinery/power/smes/buildable/point_of_interest,
-/obj/structure/cable/green{
-	icon_state = "0-2"
-	},
-/turf/simulated/floor,
-/area/submap/Rockybase)
-"je" = (
-/obj/structure/sink{
-	dir = 4;
-	pixel_x = 11
-	},
-/turf/simulated/floor/tiled/hydro,
-/area/submap/Rockybase)
-"kQ" = (
-/obj/machinery/power/apc{
-	cell_type = /obj/item/cell/super;
-	dir = 8;
-	name = "Unknown APC";
-	pixel_x = -24
-	},
-/obj/structure/cable/green{
-	icon_state = "0-4"
-	},
-/turf/simulated/floor/tiled,
-/area/submap/Rockybase)
-"mG" = (
-/obj/machinery/vending/hydronutrients,
-/obj/effect/floor_decal/corner/lime/border{
-	dir = 9
-	},
-/turf/simulated/floor/tiled,
-/area/submap/Rockybase)
-"nr" = (
-/obj/structure/table/standard,
-/obj/effect/floor_decal/corner/red/border{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
-/area/submap/Rockybase)
-"pk" = (
-/obj/machinery/shower{
-	dir = 8;
-	pixel_x = -5
-	},
-/obj/structure/curtain/open/shower,
-/obj/item/soap,
-/turf/simulated/floor/tiled/hydro,
-/area/submap/Rockybase)
-"pr" = (
-/obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1"
-	},
-/obj/structure/cable/green{
-	icon_state = "1-8"
-	},
-/obj/structure/cable/green{
-	icon_state = "2-8"
-	},
-/turf/simulated/floor/tiled,
-/area/submap/Rockybase)
-"qH" = (
-/obj/structure/table/rack,
-/obj/item/gun/projectile/pistol,
-/obj/effect/floor_decal/corner/red/border{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
-/area/submap/Rockybase)
-"rc" = (
-/obj/structure/sink{
-	dir = 4;
-	pixel_x = 11
-	},
-/obj/effect/floor_decal/corner/lime/border{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/submap/Rockybase)
-"rs" = (
-/obj/machinery/portable_atmospherics/hydroponics,
-/obj/machinery/light{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/lime/border{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/submap/Rockybase)
-"sR" = (
-/obj/machinery/vending/robotics,
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/submap/Rockybase)
-"vb" = (
-/obj/structure/closet/secure_closet/hydroponics,
-/obj/effect/floor_decal/corner/lime/border{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/submap/Rockybase)
-"vZ" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/red/border{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
-/area/submap/Rockybase)
-"AG" = (
-/obj/machinery/portable_atmospherics/hydroponics,
-/obj/effect/floor_decal/corner/lime/border{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/submap/Rockybase)
-"CG" = (
-/obj/machinery/shower{
-	dir = 4;
-	pixel_x = 5
-	},
-/obj/structure/curtain/open/shower,
-/obj/machinery/light/small{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/hydro,
-/area/submap/Rockybase)
-"Dj" = (
-/obj/structure/table/standard,
-/obj/item/grenade/chem_grenade/cleaner,
-/obj/item/grenade/chem_grenade/cleaner,
-/obj/item/grenade/chem_grenade/cleaner,
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/submap/Rockybase)
-"Dz" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/cable{
-	icon_state = "1-2";
-	pixel_y = 0
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled,
-/area/submap/Rockybase)
-"DR" = (
-/obj/machinery/vending/hydroseeds,
-/obj/effect/floor_decal/corner/lime/border{
-	dir = 10
-	},
-/turf/simulated/floor/tiled,
-/area/submap/Rockybase)
-"FM" = (
-/obj/structure/table/standard,
-/obj/effect/decal/cleanable/dirt,
-/obj/item/reagent_containers/hypospray/autoinjector/biginjector/burn,
-/turf/simulated/floor/tiled,
-/area/submap/Rockybase)
-"Ge" = (
-/obj/structure/closet/crate/secure/hydrosec,
-/obj/effect/floor_decal/corner/lime/border{
-	dir = 6
-	},
-/turf/simulated/floor/tiled,
-/area/submap/Rockybase)
-"Gx" = (
-/obj/structure/table/rack,
-/obj/item/gun/energy/gun/taser,
-/obj/effect/floor_decal/corner/red/border{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
-/area/submap/Rockybase)
 "Hx" = (
 /obj/structure/ghost_pod/manual/lost_drone/dogborg{
 	activated = 1
 	},
 /turf/simulated/floor/holofloor/lino,
-/area/submap/Rockybase)
-"HM" = (
-/obj/machinery/shower{
-	dir = 8;
-	pixel_x = -5
-	},
-/obj/structure/curtain/open/shower,
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/hydro,
-/area/submap/Rockybase)
-"IR" = (
-/obj/item/mecha_parts/part/gygax_right_leg,
-/obj/effect/floor_decal/corner/lime/border{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/submap/Rockybase)
-"Lp" = (
-/obj/structure/table/standard,
-/obj/item/paper_bin,
-/obj/effect/floor_decal/corner/red/border{
-	dir = 10
-	},
-/turf/simulated/floor/tiled,
-/area/submap/Rockybase)
-"ME" = (
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
-/turf/simulated/floor/tiled,
-/area/submap/Rockybase)
-"Nm" = (
-/obj/structure/sink{
-	dir = 4;
-	pixel_x = 11
-	},
-/obj/item/mecha_parts/part/gygax_left_arm,
-/turf/simulated/floor/tiled/hydro,
-/area/submap/Rockybase)
-"Oc" = (
-/obj/effect/floor_decal/corner/lime/border{
-	dir = 8
-	},
-/mob/living/bot/farmbot{
-	faction = "malf_drone";
-	name = "Mr. Weddleton"
-	},
-/turf/simulated/floor/tiled,
-/area/submap/Rockybase)
-"Pl" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/cable{
-	icon_state = "1-2";
-	pixel_y = 0
-	},
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
-/mob/living/simple_mob/mechanical/combat_drone/lesser,
-/turf/simulated/floor/tiled,
-/area/submap/Rockybase)
-"Ps" = (
-/obj/structure/cable{
-	icon_state = "4-8";
-	pixel_x = 0
-	},
-/turf/simulated/floor/tiled,
-/area/submap/Rockybase)
-"Qg" = (
-/obj/structure/table/standard,
-/obj/item/paper{
-	info = "Carl's absolutly fucked in the head. He's trying to squeeze as much drone production out as he can since he's worried we're gonna get found out but he's getting sloppier with each batch. Now's he's telling us he can speed the time on the IFF encoding. I already have a hard enough time getting these damn things not to stare at walls and now he's gonna shortchange the only part of these tincans that tells em not to turn us into paste on a wall. I told Richter to get out while he can, We're counting days before either some Sif task force shows up at our door or these things decide we aren't there friends anymore.";
-	name = "Note"
-	},
-/obj/effect/floor_decal/corner/red/border{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/submap/Rockybase)
-"RL" = (
-/obj/structure/table/standard,
-/obj/item/modular_computer/laptop/preset/custom_loadout/cheap,
-/obj/effect/floor_decal/corner/red/border{
-	dir = 9
-	},
-/turf/simulated/floor/tiled,
-/area/submap/Rockybase)
-"SZ" = (
-/obj/effect/floor_decal/corner/lime/border{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/submap/Rockybase)
-"Wi" = (
-/obj/machinery/shower{
-	dir = 4;
-	pixel_x = 5
-	},
-/obj/structure/curtain/open/shower,
-/turf/simulated/floor/tiled/hydro,
-/area/submap/Rockybase)
-"WY" = (
-/obj/structure/cable{
-	icon_state = "0-8"
-	},
-/obj/machinery/power/port_gen/pacman,
-/turf/simulated/floor,
-/area/submap/Rockybase)
-"Yv" = (
-/obj/structure/closet/crate/hydroponics,
-/obj/effect/floor_decal/corner/lime/border{
-	dir = 5
-	},
-/turf/simulated/floor/tiled,
-/area/submap/Rockybase)
-"YC" = (
-/obj/machinery/shower{
-	dir = 8;
-	pixel_x = -5
-	},
-/obj/structure/curtain/open/shower,
-/turf/simulated/floor/tiled/hydro,
-/area/submap/Rockybase)
-"ZA" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/hydro,
-/area/submap/Rockybase)
-"ZD" = (
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/tiled,
 /area/submap/Rockybase)
 
 (1,1,1) = {"
@@ -1399,9 +1399,9 @@ ai
 ai
 ai
 at
-CG
-Wi
-Wi
+ax
+aY
+aY
 ay
 at
 bc
@@ -1475,19 +1475,19 @@ ai
 ai
 ai
 at
-pk
-YC
-HM
+az
+aZ
+bk
 ay
 at
 aN
 at
 bY
 ay
-je
-ZA
+cy
+cK
 ay
-Nm
+dk
 ay
 at
 ai
@@ -2018,7 +2018,7 @@ at
 cn
 cz
 cP
-sR
+dd
 dl
 cp
 at
@@ -2094,7 +2094,7 @@ at
 co
 aN
 cQ
-kQ
+de
 aN
 du
 at
@@ -2132,7 +2132,7 @@ at
 cp
 aN
 bL
-eF
+df
 aN
 dv
 at
@@ -2168,10 +2168,10 @@ aN
 bQ
 bZ
 aN
-ZD
-Pl
-Dz
-ME
+cA
+cR
+dg
+dm
 dw
 at
 ai
@@ -2198,7 +2198,7 @@ al
 aq
 at
 aM
-Dj
+bb
 bq
 at
 bE
@@ -2206,10 +2206,10 @@ aN
 bR
 at
 cq
-Ps
-gS
-eF
-gS
+cB
+cS
+df
+cS
 aN
 at
 ai
@@ -2244,9 +2244,9 @@ aN
 bR
 at
 cr
-WY
-iT
-pr
+cC
+cT
+dh
 dn
 dx
 at
@@ -2387,9 +2387,9 @@ al
 al
 as
 at
-RL
-Qg
-Lp
+aO
+bd
+br
 at
 bE
 aN
@@ -2425,7 +2425,7 @@ af
 al
 ar
 at
-nr
+aP
 be
 bs
 at
@@ -2463,7 +2463,7 @@ af
 an
 aq
 at
-qH
+aQ
 bf
 bt
 at
@@ -2471,7 +2471,7 @@ bE
 aN
 bQ
 at
-FM
+cu
 cE
 cW
 cY
@@ -2501,7 +2501,7 @@ af
 af
 aq
 at
-Gx
+aR
 aN
 bt
 at
@@ -2539,7 +2539,7 @@ af
 af
 ai
 at
-vZ
+aS
 aN
 bu
 bz
@@ -2577,8 +2577,8 @@ af
 af
 ai
 at
-fN
-gl
+aT
+bg
 bt
 at
 bE
@@ -2767,20 +2767,20 @@ ai
 ai
 ai
 at
-mG
-SZ
-SZ
-Oc
-SZ
-SZ
-SZ
-SZ
-SZ
-SZ
-SZ
-SZ
-SZ
-DR
+aW
+bi
+bi
+bA
+bi
+bi
+bi
+bi
+bi
+bi
+bi
+bi
+bi
+dC
 at
 ai
 ai
@@ -2805,20 +2805,20 @@ ai
 ai
 ai
 at
-Yv
-rc
-AG
-rs
-AG
-AG
-rs
-AG
-AG
-rs
-AG
-IR
-vb
-Ge
+aX
+bj
+by
+bB
+by
+by
+bB
+by
+by
+bB
+by
+dj
+dq
+dD
 at
 ai
 ai

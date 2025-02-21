@@ -71,14 +71,6 @@
 /obj/effect/floor_decal/corner/yellow/diagonal,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/eclipsemountain)
-"fD" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/item/stack/material/void_opal,
-/obj/structure/table/rack,
-/turf/simulated/floor/tiled/steel,
-/area/submap/eclipsemountain)
 "fX" = (
 /obj/structure/table/darkglass,
 /obj/machinery/button/remote/blast_door{
@@ -90,19 +82,6 @@
 "hw" = (
 /obj/structure/cliff/automatic,
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/eclipsemountain)
-"ih" = (
-/obj/machinery/power/terminal{
-	dir = 1;
-	icon_state = "term"
-	},
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/steel,
 /area/submap/eclipsemountain)
 "iU" = (
 /turf/simulated/floor/tiled/steel,
@@ -257,6 +236,22 @@
 /obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/tiled/steel,
 /area/submap/eclipsemountain)
+"tS" = (
+/obj/machinery/power/terminal{
+	dir = 1;
+	icon_state = "term"
+	},
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/steel,
+/area/submap/eclipsemountain)
 "uw" = (
 /obj/effect/map_helper/no_phaseshift/area,
 /turf/simulated/floor/tiled/red,
@@ -277,6 +272,16 @@
 	},
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/red,
+/area/submap/eclipsemountain)
+"vx" = (
+/obj/machinery/power/terminal{
+	dir = 1;
+	icon_state = "term"
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/tiled/steel,
 /area/submap/eclipsemountain)
 "vC" = (
 /obj/effect/floor_decal/corner/grey/diagonal,
@@ -324,7 +329,7 @@
 	temperature = 243.15
 	},
 /area/submap/eclipsemountain)
-"AB" = (
+"zZ" = (
 /obj/machinery/power/terminal{
 	dir = 1;
 	icon_state = "term"
@@ -338,16 +343,6 @@
 /mob/living/simple_mob/humanoid/eclipse/lunar/wheel,
 /obj/effect/floor_decal/corner/black/diagonal,
 /turf/simulated/floor/tiled/dark,
-/area/submap/eclipsemountain)
-"BI" = (
-/obj/machinery/power/terminal{
-	dir = 1;
-	icon_state = "term"
-	},
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
-/turf/simulated/floor/tiled/steel,
 /area/submap/eclipsemountain)
 "Cy" = (
 /obj/structure/cliff/automatic{
@@ -365,6 +360,19 @@
 	},
 /obj/effect/floor_decal/corner/black/diagonal,
 /turf/simulated/floor/tiled/dark,
+/area/submap/eclipsemountain)
+"Ec" = (
+/obj/machinery/power/terminal{
+	dir = 1;
+	icon_state = "term"
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/steel,
 /area/submap/eclipsemountain)
 "EA" = (
 /obj/structure/table/rack,
@@ -534,22 +542,6 @@
 	},
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/eclipsemountain)
-"Pt" = (
-/obj/machinery/power/terminal{
-	dir = 1;
-	icon_state = "term"
-	},
-/obj/structure/cable{
-	icon_state = "0-2"
-	},
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
-/turf/simulated/floor/tiled/steel,
-/area/submap/eclipsemountain)
 "PL" = (
 /obj/machinery/light,
 /obj/effect/floor_decal/corner/grey/diagonal,
@@ -634,17 +626,25 @@
 /obj/effect/floor_decal/corner/yellow/diagonal,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/eclipsemountain)
-"WK" = (
+"Wd" = (
 /obj/machinery/power/terminal{
 	dir = 1;
 	icon_state = "term"
 	},
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "0-4"
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/turf/simulated/floor/tiled/steel,
+/area/submap/eclipsemountain)
+"WC" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/item/stack/material/void_opal,
+/obj/structure/table/rack,
 /turf/simulated/floor/tiled/steel,
 /area/submap/eclipsemountain)
 "XK" = (
@@ -1994,7 +1994,7 @@ Cz
 Cz
 MM
 Rg
-BI
+vx
 iU
 iU
 MM
@@ -2036,7 +2036,7 @@ Cz
 Cz
 MM
 Rg
-ih
+Wd
 rI
 iU
 MM
@@ -2078,8 +2078,8 @@ Cz
 Cz
 MM
 Rg
-Pt
-fD
+tS
+WC
 GC
 MM
 hw
@@ -2120,7 +2120,7 @@ Cz
 Cz
 MM
 Rg
-WK
+Ec
 Oa
 iU
 MM
@@ -2162,7 +2162,7 @@ Cz
 Cz
 MM
 Rg
-AB
+zZ
 iU
 iU
 MM

@@ -2,12 +2,6 @@
 "aa" = (
 /turf/template_noop,
 /area/template_noop)
-"ab" = (
-/obj/structure/table/woodentable,
-/turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 295.15
-	},
-/area/submap/spacebar)
 "ae" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/effect/floor_decal/rust,
@@ -452,6 +446,12 @@
 	pixel_x = -25
 	},
 /turf/simulated/floor/plating,
+/area/submap/spacebar)
+"jM" = (
+/obj/structure/table/woodentable,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/spacebar)
 "jQ" = (
 /obj/effect/floor_decal/rust,
@@ -1771,7 +1771,7 @@ jQ
 pD
 aX
 aY
-ab
+jM
 be
 al
 aZ
@@ -1895,7 +1895,7 @@ sV
 jQ
 jQ
 aZ
-ab
+jM
 go
 aZ
 aZ

@@ -99,11 +99,6 @@
 /obj/machinery/light/small,
 /turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/derelict2)
-"s" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/turf/simulated/floor/plating,
-/area/submap/derelict2)
 "t" = (
 /obj/item/clothing/head/cowboy/fancy,
 /turf/simulated/floor/tiled/asteroid_steel/airless,
@@ -166,6 +161,11 @@
 	name = "Felix"
 	},
 /turf/simulated/floor/tiled/asteroid_steel/airless,
+/area/submap/derelict2)
+"V" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor/plating,
 /area/submap/derelict2)
 "W" = (
 /obj/machinery/portable_atmospherics/canister/air,
@@ -296,9 +296,9 @@ a
 a
 a
 f
-s
+V
 c
-s
+V
 f
 a
 a
@@ -359,7 +359,7 @@ b
 b
 b
 b
-s
+V
 W
 i
 Z
@@ -367,7 +367,7 @@ x
 L
 i
 i
-s
+V
 b
 b
 b
@@ -403,7 +403,7 @@ d
 d
 d
 d
-s
+V
 i
 i
 i
@@ -411,7 +411,7 @@ M
 E
 i
 W
-s
+V
 d
 d
 d
@@ -472,9 +472,9 @@ a
 a
 a
 f
-s
+V
 c
-s
+V
 f
 a
 a

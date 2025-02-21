@@ -41,6 +41,30 @@
 	temperature = 295.15
 	},
 /area/submap/blowntcommsat)
+"an" = (
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24
+	},
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
+/area/submap/blowntcommsat)
+"ao" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
+/area/submap/blowntcommsat)
 "aq" = (
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -63,6 +87,14 @@
 	dir = 4
 	},
 /turf/template_noop,
+/area/submap/blowntcommsat)
+"aw" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/blowntcommsat)
 "ax" = (
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -247,6 +279,20 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/airless,
+/area/submap/blowntcommsat)
+"bb" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
 /area/submap/blowntcommsat)
 "bc" = (
 /obj/structure/window/reinforced,
@@ -868,20 +914,6 @@
 /mob/living/simple_mob/mechanical/hivebot/ranged_damage/basic,
 /turf/template_noop,
 /area/template_noop)
-"iD" = (
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 295.15
-	},
-/area/submap/blowntcommsat)
 "jO" = (
 /obj/structure/loot_pile/maint/boxfort,
 /turf/simulated/floor/airless,
@@ -931,7 +963,25 @@
 /obj/random/trash,
 /turf/simulated/floor/tiled,
 /area/submap/blowntcommsat)
-"pL" = (
+"pr" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 295.15
+	},
+/area/submap/blowntcommsat)
+"rU" = (
+/obj/structure/frame,
+/turf/simulated/floor/airless,
+/area/submap/blowntcommsat)
+"vA" = (
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
 	dir = 1
@@ -943,39 +993,14 @@
 	temperature = 295.15
 	},
 /area/submap/blowntcommsat)
-"rU" = (
-/obj/structure/frame,
-/turf/simulated/floor/airless,
-/area/submap/blowntcommsat)
-"yy" = (
-/obj/structure/window/reinforced,
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
-/turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 295.15
-	},
-/area/submap/blowntcommsat)
 "zO" = (
 /obj/structure/loot_pile/maint/boxfort,
 /turf/simulated/floor/tiled,
 /area/submap/blowntcommsat)
-"Ak" = (
+"Bk" = (
+/obj/structure/window/reinforced,
 /obj/structure/cable{
-	icon_state = "0-4"
-	},
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 24
-	},
-/turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 295.15
-	},
-/area/submap/blowntcommsat)
-"Ay" = (
-/obj/structure/cable{
-	icon_state = "1-2"
+	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 295.15
@@ -1099,17 +1124,6 @@
 	temperature = 295.15
 	},
 /area/submap/blowntcommsat)
-"Sx" = (
-/obj/machinery/light/small{
-	dir = 1
-	},
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
-/turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 295.15
-	},
-/area/submap/blowntcommsat)
 "Uc" = (
 /obj/structure/loot_pile/surface/drone,
 /turf/simulated/floor/tiled/dark{
@@ -1133,20 +1147,6 @@
 "Xh" = (
 /mob/living/simple_mob/mechanical/hivebot/ranged_damage/basic,
 /turf/simulated/floor/tiled,
-/area/submap/blowntcommsat)
-"XG" = (
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 295.15
-	},
 /area/submap/blowntcommsat)
 
 (1,1,1) = {"
@@ -2327,7 +2327,7 @@ am
 bx
 aH
 aP
-iD
+bb
 aR
 bx
 bF
@@ -2381,11 +2381,11 @@ aa
 ad
 cQ
 cQ
-Ak
+an
 ax
 aI
 aQ
-pL
+vA
 bp
 az
 bE
@@ -2439,11 +2439,11 @@ aa
 ae
 cQ
 cQ
-Sx
-Ay
+ao
+aw
 aJ
-XG
-yy
+pr
+Bk
 bq
 cQ
 cQ

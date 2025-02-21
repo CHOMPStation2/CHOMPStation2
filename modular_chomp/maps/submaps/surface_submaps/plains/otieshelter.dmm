@@ -30,9 +30,18 @@
 	},
 /turf/simulated/floor/carpet/turcarpet/virgo3b,
 /area/submap/OtieShelter)
-"ez" = (
-/obj/machinery/power/smes/buildable/point_of_interest,
-/obj/structure/cable/green{
+"cU" = (
+/obj/machinery/power/port_gen/pacman,
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/submap/OtieShelter)
+"eI" = (
+/obj/machinery/power/terminal{
+	dir = 1
+	},
+/obj/structure/cable{
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -292,11 +301,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/submap/OtieShelter)
-"vb" = (
-/obj/structure/table/marble,
-/obj/item/radio/phone,
-/turf/simulated/floor/carpet/turcarpet/virgo3b,
-/area/submap/OtieShelter)
 "vA" = (
 /obj/item/bone,
 /turf/simulated/floor/tiled/virgo3b,
@@ -315,27 +319,9 @@
 "wg" = (
 /turf/simulated/floor/carpet/turcarpet/virgo3b,
 /area/submap/OtieShelter)
-"wF" = (
-/obj/machinery/power/port_gen/pacman,
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/submap/OtieShelter)
 "wO" = (
 /obj/structure/dogbed,
 /turf/simulated/floor/tiled,
-/area/submap/OtieShelter)
-"wV" = (
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "PAPC";
-	pixel_y = 24
-	},
-/obj/structure/cable/green{
-	icon_state = "0-4"
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
 /area/submap/OtieShelter)
 "xf" = (
 /obj/structure/window/phoronreinforced{
@@ -496,6 +482,11 @@
 	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/submap/OtieShelter)
+"Nd" = (
+/obj/structure/table/marble,
+/obj/item/radio/phone,
+/turf/simulated/floor/carpet/turcarpet/virgo3b,
+/area/submap/OtieShelter)
 "Nh" = (
 /obj/item/bedsheet/browndouble,
 /obj/structure/bed/double/padded,
@@ -553,20 +544,22 @@
 	},
 /turf/simulated/floor/tiled/virgo3b,
 /area/submap/OtieShelter)
-"Qd" = (
-/obj/machinery/power/terminal{
-	dir = 1
-	},
-/obj/structure/cable{
-	icon_state = "0-8"
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/submap/OtieShelter)
 "Qr" = (
 /turf/template_noop,
 /area/template_noop)
 "Ro" = (
 /turf/simulated/floor/carpet/turcarpet,
+/area/submap/OtieShelter)
+"RW" = (
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "PAPC";
+	pixel_y = 24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/submap/OtieShelter)
 "Sn" = (
 /obj/machinery/light{
@@ -579,6 +572,13 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/virgo3b,
+/area/submap/OtieShelter)
+"TP" = (
+/obj/machinery/power/smes/buildable/point_of_interest,
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/submap/OtieShelter)
 "UF" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -883,7 +883,7 @@ OJ
 AQ
 ob
 jy
-vb
+Nd
 nR
 Mz
 Qr
@@ -1012,8 +1012,8 @@ Qr
 Qr
 Qr
 Mz
-wV
-wF
+RW
+cU
 Mz
 Qr
 Qr
@@ -1034,8 +1034,8 @@ Qr
 Qr
 Qr
 Mz
-ez
-Qd
+TP
+eI
 Mz
 Qr
 Qr
