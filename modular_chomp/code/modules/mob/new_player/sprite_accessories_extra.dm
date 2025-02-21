@@ -220,6 +220,8 @@
 	hide_body_parts = list(BP_L_LEG,BP_R_LEG,BP_L_HAND,BP_R_HAND,BP_L_LEG,BP_R_LEG,BP_GROIN)
 	body_parts = list(BP_TORSO)
 	color_blend_mode = ICON_MULTIPLY
+	digitigrade_acceptance = MARKING_ALL_LEGS
+	digitigrade_icon = 'icons/mob/human_races/markings_ch.dmi'
 
 
 /datum/sprite_accessory/marking/ch/trex_upperjaw
@@ -292,7 +294,6 @@
 /datum/sprite_accessory/marking/ch/smallchubbybelly
 	name = "Chubby Belly, Small"
 	icon_state = "smallchubbybelly"
-	hide_body_parts = list(BP_L_LEG,BP_R_LEG,BP_L_HAND,BP_R_HAND,BP_L_LEG,BP_R_LEG,BP_GROIN)
 	body_parts = list(BP_TORSO,BP_GROIN,BP_L_HAND,BP_R_HAND)
 	color_blend_mode = ICON_MULTIPLY
 
