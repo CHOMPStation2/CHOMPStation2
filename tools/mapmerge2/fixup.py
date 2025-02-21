@@ -2,7 +2,7 @@
 import os
 import pygit2
 from . import dmm
-from .mapmerge import merge_map
+from .mapmerge import merge_map, frontend
 
 
 STATUS_INDEX = (pygit2.GIT_STATUS_INDEX_NEW
@@ -79,8 +79,9 @@ def main(repo : pygit2.Repository):
     # Walk the head commit tree and convert as needed
     converted = {}
     commit_message_lines = []
+    map_folder_to_check = os.path.join(frontend.read_settings().map_folder).replace("\\", "/").replace("../", "") # Remove this ever virgo maps aren't busted
     for path, blob in walk_tree(head_commit.tree):
-        if path.endswith(".dmm"):
+        if path.endswith(".dmm") and path.startswith(map_folder_to_check):
             head_data = blob.read_raw()
             head_map = dmm.DMM.from_bytes(head_data)
 
