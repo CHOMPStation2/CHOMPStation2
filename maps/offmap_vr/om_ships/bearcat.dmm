@@ -102,7 +102,8 @@
 /area/shuttle/bearcat/command_captain)
 "as" = (
 /obj/machinery/light{
-	dir = 4
+	dir = 4;
+	icon_state = "tube1"
 	},
 /obj/structure/window/reinforced{
 	dir = 8
@@ -114,7 +115,8 @@
 	pixel_x = 28
 	},
 /obj/machinery/power/apc/alarms_hidden{
-	dir = 1
+	dir = 1;
+	icon_state = "apc0"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/bearcat/comms)
@@ -123,14 +125,16 @@
 /area/shuttle/bearcat/comms)
 "au" = (
 /obj/machinery/light{
-	dir = 4
+	dir = 4;
+	icon_state = "tube1"
 	},
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan,
 /obj/machinery/power/apc/alarms_hidden{
-	dir = 4
+	dir = 4;
+	icon_state = "apc0"
 	},
 /obj/machinery/light_switch{
 	pixel_x = 28
@@ -149,10 +153,12 @@
 /area/shuttle/bearcat/comms)
 "aw" = (
 /obj/structure/cable{
-	icon_state = "4-8"
+	icon_state = "4-8";
+	pixel_x = 0
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 4
+	dir = 4;
+	icon_state = "intact"
 	},
 /obj/machinery/door/airlock/voidcraft/vertical,
 /turf/simulated/floor/tiled/techmaint,
@@ -172,7 +178,8 @@
 /area/shuttle/bearcat/command)
 "ay" = (
 /obj/machinery/light{
-	dir = 8
+	dir = 8;
+	icon_state = "tube1"
 	},
 /obj/item/gun/energy/stunrevolver,
 /obj/structure/closet/cabinet,
@@ -212,17 +219,20 @@
 /area/shuttle/bearcat/command_captain)
 "aD" = (
 /obj/structure/cable{
-	icon_state = "4-8"
+	icon_state = "4-8";
+	pixel_y = 0
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 4
+	dir = 4;
+	icon_state = "intact"
 	},
 /obj/machinery/door/airlock/voidcraft/vertical,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/bearcat/command_captain)
 "aE" = (
 /obj/machinery/light{
-	dir = 4
+	dir = 4;
+	icon_state = "tube1"
 	},
 /obj/structure/window/reinforced{
 	dir = 8
@@ -241,7 +251,8 @@
 /area/shuttle/bearcat/comms)
 "aF" = (
 /obj/machinery/light{
-	dir = 4
+	dir = 4;
+	icon_state = "tube1"
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -262,7 +273,8 @@
 /area/shuttle/bearcat/command)
 "aH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 4
+	dir = 4;
+	icon_state = "intact"
 	},
 /obj/structure/cable{
 	icon_state = "2-8"
@@ -297,13 +309,16 @@
 	pixel_x = -26
 	},
 /obj/machinery/light{
-	dir = 8
+	dir = 8;
+	icon_state = "tube1";
+	pixel_x = 0
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/bearcat/dock_central)
 "aM" = (
 /obj/machinery/light{
-	dir = 8
+	dir = 8;
+	icon_state = "tube1"
 	},
 /obj/structure/table/woodentable,
 /obj/structure/cable{
@@ -331,7 +346,8 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc/alarms_hidden{
-	dir = 4
+	dir = 4;
+	icon_state = "apc0"
 	},
 /obj/structure/panic_button{
 	pixel_x = 32
@@ -351,7 +367,8 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/cyan{
-	dir = 4
+	dir = 4;
+	icon_state = "map"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/bearcat/dock_central)
@@ -416,7 +433,8 @@
 /area/shuttle/bearcat/dock_central)
 "bb" = (
 /obj/structure/cable{
-	icon_state = "4-8"
+	icon_state = "4-8";
+	pixel_x = 0
 	},
 /obj/machinery/door/airlock/voidcraft/vertical,
 /turf/simulated/floor/tiled/techmaint,
@@ -443,7 +461,8 @@
 /area/shuttle/bearcat/dock_starboard)
 "bf" = (
 /obj/structure/cable{
-	icon_state = "4-8"
+	icon_state = "4-8";
+	pixel_x = 0
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/bearcat/dock_central)
@@ -516,7 +535,8 @@
 "br" = (
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 4
+	dir = 4;
+	icon_state = "map_vent"
 	},
 /obj/effect/map_helper/airlock/sensor/chamber_sensor,
 /obj/machinery/airlock_sensor/airlock_interior{
@@ -542,13 +562,15 @@
 /area/shuttle/bearcat/dock_port)
 "bt" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 10
+	dir = 10;
+	icon_state = "intact"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/bearcat/dock_port)
 "bu" = (
 /obj/machinery/power/apc/alarms_hidden{
-	dir = 4
+	dir = 4;
+	icon_state = "apc0"
 	},
 /obj/structure/cable,
 /obj/machinery/light{
@@ -589,7 +611,8 @@
 /area/shuttle/bearcat/dock_central)
 "bA" = (
 /obj/machinery/power/apc/alarms_hidden{
-	dir = 8
+	dir = 8;
+	icon_state = "apc0"
 	},
 /obj/structure/cable,
 /obj/machinery/light{
@@ -670,7 +693,8 @@
 /area/shuttle/bearcat/dock_port)
 "bJ" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
-	dir = 5
+	dir = 5;
+	icon_state = "intact"
 	},
 /turf/simulated/wall/rshull,
 /area/shuttle/bearcat/dock_port)
@@ -679,7 +703,8 @@
 /area/shuttle/bearcat/dock_port)
 "bL" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
-	dir = 9
+	dir = 9;
+	icon_state = "intact"
 	},
 /turf/simulated/wall/rshull,
 /area/shuttle/bearcat/dock_starboard)
@@ -721,7 +746,8 @@
 /area/shuttle/bearcat/crew_dorms)
 "bU" = (
 /obj/machinery/light{
-	dir = 4
+	dir = 4;
+	icon_state = "tube1"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/bearcat/dock_central)
@@ -737,7 +763,8 @@
 /area/shuttle/bearcat/dock_starboard)
 "bW" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 10
+	dir = 10;
+	icon_state = "intact"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/bearcat/dock_starboard)
@@ -746,7 +773,8 @@
 /area/shuttle/bearcat/dock_starboard)
 "bY" = (
 /obj/machinery/power/apc/alarms_hidden{
-	dir = 1
+	dir = 1;
+	icon_state = "apc0"
 	},
 /obj/structure/cable{
 	icon_state = "0-8"
@@ -771,7 +799,8 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/light{
-	dir = 4
+	dir = 4;
+	icon_state = "tube1"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/bearcat/dock_starboard)
@@ -832,10 +861,12 @@
 /area/shuttle/bearcat/dock_port)
 "cl" = (
 /obj/structure/window/reinforced/tinted{
-	dir = 4
+	dir = 4;
+	icon_state = "twindow"
 	},
 /obj/machinery/shower{
-	dir = 4
+	dir = 4;
+	icon_state = "shower"
 	},
 /obj/item/soap,
 /obj/machinery/light{
@@ -846,10 +877,12 @@
 "cm" = (
 /obj/structure/toilet,
 /obj/structure/window/reinforced/tinted{
-	dir = 4
+	dir = 4;
+	icon_state = "twindow"
 	},
 /obj/structure/window/reinforced/tinted{
-	dir = 8
+	dir = 8;
+	icon_state = "twindow"
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light{
@@ -894,7 +927,8 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc/alarms_hidden{
-	dir = 1
+	dir = 1;
+	icon_state = "apc0"
 	},
 /obj/machinery/light{
 	dir = 1
@@ -976,7 +1010,8 @@
 	level = 2
 	},
 /obj/structure/cable{
-	icon_state = "4-8"
+	icon_state = "4-8";
+	pixel_y = 0
 	},
 /obj/machinery/door/airlock/voidcraft/vertical,
 /turf/simulated/floor/tiled/techmaint,
@@ -987,14 +1022,16 @@
 /area/shuttle/bearcat/dock_port)
 "cC" = (
 /obj/structure/cable{
-	icon_state = "4-8"
+	icon_state = "4-8";
+	pixel_y = 0
 	},
 /obj/machinery/door/airlock/voidcraft/vertical,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/bearcat/crew_saloon)
 "cD" = (
 /obj/structure/cable{
-	icon_state = "4-8"
+	icon_state = "4-8";
+	pixel_y = 0
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/bearcat/crew_saloon)
@@ -1004,7 +1041,8 @@
 /area/shuttle/bearcat/dock_starboard)
 "cF" = (
 /obj/structure/cable{
-	icon_state = "4-8"
+	icon_state = "4-8";
+	pixel_y = 0
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -1013,19 +1051,23 @@
 /area/shuttle/bearcat/crew_saloon)
 "cG" = (
 /obj/structure/cable{
-	icon_state = "4-8"
+	icon_state = "4-8";
+	pixel_y = 0
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/cyan{
-	dir = 4
+	dir = 4;
+	icon_state = "map"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/bearcat/crew_corridors)
 "cH" = (
 /obj/structure/cable{
-	icon_state = "4-8"
+	icon_state = "4-8";
+	pixel_y = 0
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 4
+	dir = 4;
+	icon_state = "intact"
 	},
 /obj/machinery/door/airlock/voidcraft/vertical,
 /turf/simulated/floor/tiled/techmaint,
@@ -1038,7 +1080,8 @@
 	icon_state = "2-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 4
+	dir = 4;
+	icon_state = "intact"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/bearcat/crew_dorms)
@@ -1058,10 +1101,12 @@
 /area/shuttle/bearcat/crew_dorms)
 "cM" = (
 /obj/machinery/shower{
-	dir = 4
+	dir = 4;
+	icon_state = "shower"
 	},
 /obj/structure/window/reinforced/tinted{
-	dir = 4
+	dir = 4;
+	icon_state = "twindow"
 	},
 /obj/machinery/light,
 /turf/simulated/floor/tiled/techfloor,
@@ -1072,10 +1117,12 @@
 	icon_state = "toilet00"
 	},
 /obj/structure/window/reinforced/tinted{
-	dir = 4
+	dir = 4;
+	icon_state = "twindow"
 	},
 /obj/structure/window/reinforced/tinted{
-	dir = 8
+	dir = 8;
+	icon_state = "twindow"
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light,
@@ -1088,7 +1135,8 @@
 	pixel_y = -25
 	},
 /obj/machinery/power/apc/alarms_hidden{
-	dir = 4
+	dir = 4;
+	icon_state = "apc0"
 	},
 /obj/structure/handrail{
 	dir = 1
@@ -1355,7 +1403,8 @@
 	dir = 4
 	},
 /obj/machinery/power/apc/alarms_hidden{
-	dir = 4
+	dir = 4;
+	icon_state = "apc0"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/bearcat/crew_corridors)
@@ -1379,7 +1428,8 @@
 	pixel_y = 1
 	},
 /obj/machinery/power/apc/alarms_hidden{
-	dir = 4
+	dir = 4;
+	icon_state = "apc0"
 	},
 /obj/structure/handrail{
 	dir = 8
@@ -1425,7 +1475,8 @@
 "dH" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable{
-	icon_state = "1-2"
+	icon_state = "1-2";
+	pixel_y = 0
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan,
 /obj/machinery/light{
@@ -1435,7 +1486,8 @@
 /area/shuttle/bearcat/crew_corridors)
 "dI" = (
 /obj/machinery/light{
-	dir = 1
+	dir = 1;
+	icon_state = "tube1"
 	},
 /obj/machinery/sleep_console{
 	dir = 4
@@ -1488,10 +1540,12 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	icon_state = "4-8"
+	icon_state = "4-8";
+	pixel_y = 0
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 4
+	dir = 4;
+	icon_state = "intact"
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -1512,14 +1566,16 @@
 /area/shuttle/bearcat/crew_corridors)
 "dQ" = (
 /obj/structure/cable{
-	icon_state = "4-8"
+	icon_state = "4-8";
+	pixel_y = 0
 	},
 /obj/machinery/door/airlock/voidcraft/vertical,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/bearcat/cargo)
 "dR" = (
 /obj/structure/cable{
-	icon_state = "4-8"
+	icon_state = "4-8";
+	pixel_y = 0
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/bearcat/cargo)
@@ -1531,7 +1587,8 @@
 /area/shuttle/bearcat/maintenance_engine_pod_port)
 "dT" = (
 /obj/structure/cable{
-	icon_state = "4-8"
+	icon_state = "4-8";
+	pixel_y = 0
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -1540,10 +1597,12 @@
 /area/shuttle/bearcat/cargo)
 "dU" = (
 /obj/structure/cable{
-	icon_state = "4-8"
+	icon_state = "4-8";
+	pixel_y = 0
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 4
+	dir = 4;
+	icon_state = "intact"
 	},
 /obj/machinery/door/airlock/voidcraft/vertical,
 /turf/simulated/floor/tiled/techmaint,
@@ -1551,7 +1610,8 @@
 "dV" = (
 /obj/structure/disposaloutlet,
 /obj/structure/disposalpipe/trunk{
-	dir = 1
+	dir = 1;
+	icon_state = "pipe-t"
 	},
 /turf/simulated/floor/airless,
 /area/shuttle/bearcat/maintenance_engine)
@@ -1571,7 +1631,8 @@
 "dX" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable{
-	icon_state = "4-8"
+	icon_state = "4-8";
+	pixel_y = 0
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -1580,7 +1641,8 @@
 /area/shuttle/bearcat/cargo)
 "dY" = (
 /obj/structure/cable{
-	icon_state = "4-8"
+	icon_state = "4-8";
+	pixel_y = 0
 	},
 /obj/structure/cable{
 	icon_state = "2-8"
@@ -1595,7 +1657,8 @@
 	icon_state = "2-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 4
+	dir = 4;
+	icon_state = "intact"
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -1615,7 +1678,8 @@
 /obj/structure/cable,
 /obj/item/storage/firstaid,
 /obj/machinery/power/apc/alarms_hidden{
-	dir = 8
+	dir = 8;
+	icon_state = "apc0"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/bearcat/crew_medbay)
@@ -1628,14 +1692,16 @@
 /area/shuttle/bearcat/crew_kitchen)
 "ee" = (
 /obj/structure/cable{
-	icon_state = "1-2"
+	icon_state = "1-2";
+	pixel_y = 0
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/bearcat/crew_kitchen)
 "ef" = (
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
-	dir = 1
+	dir = 1;
+	icon_state = "pipe-t"
 	},
 /obj/machinery/light_switch{
 	pixel_x = 28
@@ -1656,7 +1722,8 @@
 /area/shuttle/bearcat/unused1)
 "ei" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 5
+	dir = 5;
+	icon_state = "intact"
 	},
 /obj/structure/handrail{
 	dir = 4
@@ -1674,10 +1741,12 @@
 "ek" = (
 /obj/structure/disposalpipe/junction,
 /obj/structure/cable{
-	icon_state = "4-8"
+	icon_state = "4-8";
+	pixel_y = 0
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/cyan{
-	dir = 4
+	dir = 4;
+	icon_state = "map"
 	},
 /obj/structure/cable{
 	icon_state = "1-4"
@@ -1733,7 +1802,8 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable,
 /obj/machinery/power/apc/alarms_hidden{
-	dir = 4
+	dir = 4;
+	icon_state = "apc0"
 	},
 /obj/structure/handrail{
 	dir = 8
@@ -1797,7 +1867,8 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/manifold/hidden/cyan{
-	dir = 8
+	dir = 8;
+	icon_state = "map"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/bearcat/crew_corridors)
@@ -1840,7 +1911,8 @@
 	icon_state = "2-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/cyan{
-	dir = 4
+	dir = 4;
+	icon_state = "map"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/bearcat/crew_corridors)
@@ -1854,14 +1926,16 @@
 /area/shuttle/bearcat/maintenance_storage)
 "eM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 4
+	dir = 4;
+	icon_state = "intact"
 	},
 /obj/machinery/door/airlock/voidcraft/vertical,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/bearcat/crew_medbay)
 "eN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 4
+	dir = 4;
+	icon_state = "intact"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/bearcat/crew_medbay)
@@ -1911,10 +1985,12 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 4
+	dir = 4;
+	icon_state = "intact"
 	},
 /obj/machinery/power/apc/alarms_hidden{
-	dir = 1
+	dir = 1;
+	icon_state = "apc0"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/bearcat/unused1)
@@ -2049,7 +2125,8 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/cyan{
-	dir = 8
+	dir = 8;
+	icon_state = "map"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/bearcat/maintenance_storage)
@@ -2093,18 +2170,21 @@
 /area/shuttle/bearcat/crew_corridors)
 "fo" = (
 /obj/structure/cable{
-	icon_state = "1-2"
+	icon_state = "1-2";
+	pixel_y = 0
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/bearcat/unused2)
 "fp" = (
 /obj/machinery/atmospherics/pipe/simple{
+	dir = 2;
 	icon_state = "intact";
 	level = 2
 	},
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable{
-	icon_state = "1-2"
+	icon_state = "1-2";
+	pixel_y = 0
 	},
 /obj/machinery/door/airlock/voidcraft,
 /turf/simulated/floor/tiled/techmaint,
@@ -2116,13 +2196,15 @@
 	icon_state = "1-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/cyan{
-	dir = 4
+	dir = 4;
+	icon_state = "map"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/bearcat/crew_corridors)
 "fr" = (
 /obj/structure/cable{
-	icon_state = "4-8"
+	icon_state = "4-8";
+	pixel_y = 0
 	},
 /obj/machinery/door/airlock/voidcraft/vertical,
 /turf/simulated/floor/tiled/techmaint,
@@ -2132,14 +2214,16 @@
 	icon_state = "2-4"
 	},
 /obj/structure/cable{
-	icon_state = "4-8"
+	icon_state = "4-8";
+	pixel_y = 0
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/bearcat/maintenance_storage)
 "ft" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable{
-	icon_state = "4-8"
+	icon_state = "4-8";
+	pixel_y = 0
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -2151,7 +2235,8 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/cyan{
-	dir = 4
+	dir = 4;
+	icon_state = "map"
 	},
 /obj/structure/cable{
 	icon_state = "2-8"
@@ -2188,7 +2273,8 @@
 /area/shuttle/bearcat/crew_wash)
 "fz" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/cyan{
-	dir = 8
+	dir = 8;
+	icon_state = "map"
 	},
 /obj/structure/cable{
 	icon_state = "2-4"
@@ -2237,7 +2323,8 @@
 	icon_state = "pipe-c"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 5
+	dir = 5;
+	icon_state = "intact"
 	},
 /obj/structure/handrail{
 	dir = 1
@@ -2250,7 +2337,8 @@
 	icon_state = "conpipe-c"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 4
+	dir = 4;
+	icon_state = "intact"
 	},
 /obj/machinery/light,
 /obj/structure/closet/walllocker/emerglocker/south,
@@ -2258,7 +2346,8 @@
 /area/shuttle/bearcat/crew_corridors)
 "fG" = (
 /obj/machinery/power/apc/alarms_hidden{
-	dir = 1
+	dir = 1;
+	icon_state = "apc0"
 	},
 /obj/structure/cable{
 	icon_state = "0-2";
@@ -2291,7 +2380,8 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 4
+	dir = 4;
+	icon_state = "intact"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/bearcat/crew_wash)
@@ -2300,7 +2390,8 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 4
+	dir = 4;
+	icon_state = "intact"
 	},
 /obj/machinery/door/airlock/voidcraft/vertical,
 /turf/simulated/floor/tiled/techmaint,
@@ -2308,20 +2399,23 @@
 "fM" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 4
+	dir = 4;
+	icon_state = "intact"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/bearcat/crew_corridors)
 "fN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 4
+	dir = 4;
+	icon_state = "intact"
 	},
 /obj/structure/handrail,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/bearcat/crew_corridors)
 "fO" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 4
+	dir = 4;
+	icon_state = "intact"
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -2331,7 +2425,8 @@
 /area/shuttle/bearcat/unused2)
 "fP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 4
+	dir = 4;
+	icon_state = "intact"
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -2382,7 +2477,8 @@
 /area/shuttle/bearcat/maintenance_power)
 "fW" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 4
+	dir = 4;
+	icon_state = "intact"
 	},
 /obj/structure/handrail,
 /obj/structure/cable{
@@ -2392,7 +2488,8 @@
 /area/shuttle/bearcat/crew_corridors)
 "fX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 4
+	dir = 4;
+	icon_state = "intact"
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -2408,7 +2505,8 @@
 /area/shuttle/bearcat/maintenance_atmos)
 "fZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 4
+	dir = 4;
+	icon_state = "intact"
 	},
 /obj/machinery/light{
 	dir = 1
@@ -2421,7 +2519,8 @@
 /area/shuttle/bearcat/crew_corridors)
 "ga" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 9
+	dir = 9;
+	icon_state = "intact"
 	},
 /obj/structure/handrail{
 	dir = 1
@@ -2452,7 +2551,8 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/power/apc/alarms_hidden{
-	dir = 1
+	dir = 1;
+	icon_state = "apc0"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/bearcat/maintenance_enginecontrol)
@@ -2481,7 +2581,8 @@
 /area/shuttle/bearcat/unused2)
 "gi" = (
 /obj/structure/cable{
-	icon_state = "4-8"
+	icon_state = "4-8";
+	pixel_x = 0
 	},
 /obj/structure/closet/secure_closet/engineering_electrical,
 /obj/machinery/alarm/alarms_hidden{
@@ -2534,7 +2635,8 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable{
-	icon_state = "4-8"
+	icon_state = "4-8";
+	pixel_x = 0
 	},
 /obj/structure/closet/toolcloset,
 /turf/simulated/floor/tiled/techfloor,
@@ -2575,19 +2677,23 @@
 "gu" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable{
-	icon_state = "4-8"
+	icon_state = "4-8";
+	pixel_y = 0
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/cyan{
-	dir = 1
+	dir = 1;
+	icon_state = "map"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/bearcat/maintenance_enginecontrol)
 "gv" = (
 /obj/structure/cable{
-	icon_state = "4-8"
+	icon_state = "4-8";
+	pixel_y = 0
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 4
+	dir = 4;
+	icon_state = "intact"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/bearcat/maintenance_enginecontrol)
@@ -2655,10 +2761,12 @@
 /area/shuttle/bearcat/maintenance_atmos)
 "gC" = (
 /obj/structure/cable{
-	icon_state = "4-8"
+	icon_state = "4-8";
+	pixel_y = 0
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 4
+	dir = 4;
+	icon_state = "intact"
 	},
 /obj/machinery/door/airlock/voidcraft/vertical,
 /obj/structure/sign/nosmoking_2{
@@ -2669,10 +2777,12 @@
 "gD" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable{
-	icon_state = "4-8"
+	icon_state = "4-8";
+	pixel_y = 0
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 4
+	dir = 4;
+	icon_state = "intact"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/bearcat/maintenance_enginecontrol)
@@ -2692,7 +2802,8 @@
 /area/shuttle/bearcat/maintenance_enginecontrol)
 "gF" = (
 /obj/structure/cable{
-	icon_state = "4-8"
+	icon_state = "4-8";
+	pixel_x = 0
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
@@ -2702,7 +2813,8 @@
 /area/shuttle/bearcat/maintenance_enginecontrol)
 "gH" = (
 /obj/structure/cable{
-	icon_state = "4-8"
+	icon_state = "4-8";
+	pixel_x = 0
 	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
@@ -2712,7 +2824,8 @@
 /area/shuttle/bearcat/maintenance_enginecontrol)
 "gI" = (
 /obj/structure/disposalpipe/junction{
-	dir = 8
+	dir = 8;
+	icon_state = "pipe-j1"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan,
 /obj/structure/cable{
@@ -2722,7 +2835,8 @@
 /area/shuttle/bearcat/maintenance_enginecontrol)
 "gJ" = (
 /obj/structure/cable{
-	icon_state = "4-8"
+	icon_state = "4-8";
+	pixel_x = 0
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
 	dir = 4
@@ -2738,16 +2852,19 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	icon_state = "4-8"
+	icon_state = "4-8";
+	pixel_x = 0
 	},
 /obj/structure/cable{
-	icon_state = "1-2"
+	icon_state = "1-2";
+	pixel_y = 0
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/bearcat/maintenance_power)
 "gL" = (
 /obj/structure/cable{
-	icon_state = "4-8"
+	icon_state = "4-8";
+	pixel_x = 0
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -2786,7 +2903,8 @@
 "gP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan,
 /obj/structure/cable{
-	icon_state = "1-2"
+	icon_state = "1-2";
+	pixel_y = 0
 	},
 /obj/machinery/door/airlock/voidcraft,
 /turf/simulated/floor/plating,
@@ -2808,7 +2926,8 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	icon_state = "4-8"
+	icon_state = "4-8";
+	pixel_y = 0
 	},
 /obj/structure/closet/crate{
 	dir = 8
@@ -2830,7 +2949,8 @@
 	icon_state = "1-8"
 	},
 /obj/machinery/computer/ship/engines{
-	dir = 1
+	dir = 1;
+	icon_state = "computer"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/bearcat/maintenance_enginecontrol)
@@ -2859,7 +2979,8 @@
 /area/shuttle/bearcat/maintenance_enginecontrol)
 "gW" = (
 /obj/machinery/power/apc/alarms_hidden{
-	dir = 8
+	dir = 8;
+	icon_state = "apc0"
 	},
 /obj/structure/cable{
 	icon_state = "0-4"
@@ -2917,7 +3038,8 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/cyan{
-	dir = 8
+	dir = 8;
+	icon_state = "map"
 	},
 /obj/structure/cable{
 	icon_state = "2-8"
@@ -2998,7 +3120,8 @@
 /area/shuttle/bearcat/maintenance_engine)
 "hr" = (
 /obj/machinery/light/small{
-	dir = 8
+	dir = 8;
+	pixel_x = 0
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/bearcat/maintenance_engine)
@@ -3022,7 +3145,8 @@
 	dir = 9
 	},
 /obj/machinery/light/small{
-	dir = 4
+	dir = 4;
+	pixel_y = 0
 	},
 /obj/structure/sign/signnew/flammables{
 	pixel_x = 32
@@ -3058,7 +3182,8 @@
 /area/shuttle/bearcat/command)
 "hB" = (
 /obj/machinery/atmospherics/pipe/tank/air{
-	dir = 1
+	dir = 1;
+	icon_state = "air_map"
 	},
 /turf/simulated/floor/airless,
 /area/shuttle/bearcat/dock_port)
@@ -3082,7 +3207,8 @@
 /area/shuttle/bearcat/crew_medbay)
 "jN" = (
 /obj/machinery/power/apc/alarms_hidden{
-	dir = 1
+	dir = 1;
+	icon_state = "apc0"
 	},
 /obj/structure/cable{
 	icon_state = "0-2"
@@ -3128,7 +3254,8 @@
 	icon_state = "1-8"
 	},
 /obj/machinery/light/small{
-	dir = 4
+	dir = 4;
+	pixel_y = 0
 	},
 /obj/structure/sign/signnew/flammables{
 	pixel_x = 32
@@ -3247,7 +3374,8 @@
 /area/shuttle/bearcat/crew_corridors)
 "Fe" = (
 /obj/machinery/power/apc/alarms_hidden{
-	dir = 1
+	dir = 1;
+	icon_state = "apc0"
 	},
 /obj/structure/cable{
 	icon_state = "0-2";
@@ -3281,7 +3409,8 @@
 "Hu" = (
 /obj/machinery/atmospherics/valve/open,
 /obj/machinery/light/small{
-	dir = 8
+	dir = 8;
+	pixel_y = 0
 	},
 /obj/structure/sign/signnew/flammables{
 	pixel_x = -32
@@ -3400,13 +3529,16 @@
 /area/shuttle/bearcat/maintenance_engine_pod_port)
 "Xp" = (
 /obj/structure/cable{
-	icon_state = "4-8"
+	icon_state = "4-8";
+	pixel_y = 0
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 4
+	dir = 4;
+	icon_state = "intact"
 	},
 /obj/structure/cable{
-	icon_state = "4-8"
+	icon_state = "4-8";
+	pixel_y = 0
 	},
 /obj/machinery/door/airlock/voidcraft/vertical,
 /turf/simulated/wall/rshull,
@@ -3422,10 +3554,12 @@
 /area/shuttle/bearcat/dock_port)
 "YH" = (
 /obj/structure/cable{
-	icon_state = "4-8"
+	icon_state = "4-8";
+	pixel_y = 0
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/cyan{
-	dir = 8
+	dir = 8;
+	icon_state = "map"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/bearcat/crew_corridors)
