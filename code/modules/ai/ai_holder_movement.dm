@@ -66,6 +66,7 @@
 /datum/ai_holder/proc/give_destination(turf/new_destination, min_distance = 1, combat = FALSE)
 	ai_log("give_destination() : Entering.", AI_LOG_DEBUG)
 
+	message_admins("Changed destination! [get_x(destination)], [get_y(destination)] to [get_x(new_destination)], [get_y(new_destination)]")
 	destination = new_destination
 	min_distance_to_destination = min_distance
 

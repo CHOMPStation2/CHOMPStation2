@@ -1094,3 +1094,6 @@ var/global/list/area_or_turf_fail_types = typecacheof(list(
 	/area/submap/casino_event,
 	/area/vr //CHOMPedit
 	))
+
+// A list of ladders in each z-level
+var/global/list/list/global_ladders = alist()

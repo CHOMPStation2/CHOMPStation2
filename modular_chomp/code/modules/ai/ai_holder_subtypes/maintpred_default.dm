@@ -23,6 +23,6 @@
 	if (hit) {
 		return null
 	}
-	message_admins("At [get_area(ai_holder.holder).name]")
+
 	return new /datum/maintpred_task/path_area((locate(/area/crew_quarters/cafeteria) in world), new /datum/maintpred_task/dummy(src, 10))
 	//return new /datum/maintpred_task/wander(src, 0)

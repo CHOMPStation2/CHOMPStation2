@@ -15,6 +15,11 @@
 
 /obj/structure/ladder/Initialize()
 	. = ..()
+	// track ladders for maintpred AI pathing
+	if (!global_ladders[get_z(src)])
+		global_ladders[get_z(src)] = list()
+	global_ladders[get_z(src)] += src
+
 	// the upper will connect to the lower
 	if(allowed_directions & DOWN) //we only want to do the top one, as it will initialize the ones before it.
 		for(var/obj/structure/ladder/L in GetBelow(src))
@@ -25,6 +30,9 @@
 	update_icon()
 
 /obj/structure/ladder/Destroy()
+	// track ladders for maintpred AI pathing
+	global_ladders[get_z(src)] -= src
+
 	if(target_down)
 		target_down.target_up = null
 		target_down = null
