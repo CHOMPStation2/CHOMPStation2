@@ -206,18 +206,6 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/kara,
 /area/sc_away/aerostat/solars)
-"aC" = (
-/obj/machinery/atmospherics/binary/algae_farm,
-/obj/machinery/atmospherics/pipe/simple/hidden/black{
-	dir = 5;
-	icon_state = "intact"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/black{
-	dir = 5;
-	icon_state = "intact"
-	},
-/turf/simulated/floor/tiled/techfloor/kara,
-/area/sc_away/aerostat/inside)
 "aD" = (
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/kara,
@@ -315,12 +303,6 @@
 	name = "east bump";
 	pixel_x = 28;
 	req_access = list()
-	},
-/turf/simulated/floor/bluegrid/kara,
-/area/sc_away/aerostat/inside)
-"aQ" = (
-/obj/structure/cable{
-	icon_state = "2-4"
 	},
 /turf/simulated/floor/bluegrid/kara,
 /area/sc_away/aerostat/inside)
@@ -474,12 +456,6 @@
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 8
 	},
-/turf/simulated/floor/plating/kara,
-/area/sc_away/aerostat/inside)
-"bo" = (
-/obj/structure/grille,
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
 /turf/simulated/floor/plating/kara,
 /area/sc_away/aerostat/inside)
 "bp" = (
@@ -9209,7 +9185,7 @@ bf
 bf
 bv
 bv
-bo
+bf
 bf
 bv
 bv
@@ -9402,7 +9378,7 @@ bf
 bf
 bv
 bv
-bo
+bf
 bf
 bv
 bv
@@ -11322,11 +11298,11 @@ aw
 aw
 aw
 bv
-bo
+bf
 bf
 bv
 bv
-bo
+bf
 bf
 bv
 be
@@ -11360,7 +11336,7 @@ cI
 be
 bv
 aK
-aQ
+aM
 dn
 dn
 dN
@@ -11394,11 +11370,11 @@ aw
 bq
 bv
 bv
-bo
+bf
 bf
 bv
 bv
-bo
+bf
 bf
 bv
 aw
@@ -11748,11 +11724,11 @@ aw
 aw
 aw
 bv
-bo
+bf
 bf
 bv
 bv
-bo
+bf
 bf
 bv
 be
@@ -11820,11 +11796,11 @@ aw
 bq
 bv
 bv
-bo
+bf
 bf
 bv
 bv
-bo
+bf
 bf
 bv
 aw
@@ -12926,7 +12902,7 @@ bv
 ci
 ci
 bv
-aC
+az
 bR
 az
 bR
@@ -14088,7 +14064,7 @@ bf
 bf
 bv
 bv
-bo
+bf
 bf
 bv
 bv
@@ -14179,7 +14155,7 @@ bf
 bd
 bv
 bv
-bo
+bf
 bf
 bv
 bv

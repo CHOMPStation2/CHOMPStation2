@@ -67,6 +67,8 @@
 		return
 	var/mob/living/ourmob = tf_mob_holder
 	//CHOMPAdd Start - OOC Escape functionality for Mind Binder and Body Snatcher
+	if(soulgem) //Should always be the case, but...Safety. Done here first
+		soulgem.transfer_self(ourmob)
 	if(ourmob.loc != src)
 		if(isnull(ourmob.loc))
 			to_chat(src,span_notice("You have no body."))

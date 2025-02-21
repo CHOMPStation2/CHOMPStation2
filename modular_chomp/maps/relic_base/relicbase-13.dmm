@@ -4,9 +4,7 @@
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/white,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "dp" = (
 /obj/effect/step_trigger/thrower{
 	affect_ghosts = 1;
@@ -19,9 +17,7 @@
 /area/space)
 "eS" = (
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "fj" = (
 /obj/machinery/light/floortube{
 	dir = 8
@@ -45,9 +41,7 @@
 	dir = 10
 	},
 /turf/simulated/shuttle/floor/white,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "gA" = (
 /obj/effect/landmark/teleport_mark{
 	landmark_id = "fall_sif"
@@ -83,9 +77,7 @@
 	pixel_x = 21
 	},
 /turf/simulated/shuttle/floor/white,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "hb" = (
 /obj/effect/step_trigger/thrower{
 	direction = 1;
@@ -105,14 +97,10 @@
 /area/shuttle/shuttle3/transit)
 "iX" = (
 /turf/simulated/shuttle/floor,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "jb" = (
 /turf/simulated/shuttle/floor/white,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "kO" = (
 /turf/simulated/sky/moving/south,
 /area/space)
@@ -142,9 +130,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "mP" = (
 /obj/machinery/light/floortube{
 	dir = 4
@@ -156,9 +142,7 @@
 	dir = 4
 	},
 /turf/simulated/shuttle/floor/white,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "nb" = (
 /obj/effect/shuttle_landmark/transit{
 	landmark_tag = "shuttle3_sky_transit";
@@ -187,9 +171,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "pa" = (
 /obj/structure/handrail{
 	dir = 8
@@ -217,9 +199,7 @@
 	},
 /obj/effect/shuttle_landmark/relicbase/arrivals/offsite,
 /turf/simulated/shuttle/floor/white,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "pv" = (
 /obj/structure/handrail{
 	dir = 8
@@ -233,18 +213,14 @@
 /obj/structure/closet/walllocker/emerglocker/east,
 /obj/structure/table/steel_reinforced,
 /turf/simulated/floor/tiled/steel_ridged,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "pL" = (
 /turf/unsimulated/wall,
 /area/space)
 "pS" = (
 /obj/structure/hull_corner,
 /turf/simulated/floor/tiled/techfloor/grid/transit,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "qg" = (
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 1
@@ -253,9 +229,7 @@
 	name = "JoinLate"
 	},
 /turf/simulated/shuttle/floor,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "qo" = (
 /obj/effect/shuttle_landmark/transit{
 	landmark_tag = "shuttle3_transit";
@@ -271,9 +245,7 @@
 	pixel_x = 11
 	},
 /turf/simulated/wall/thull,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "qQ" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
@@ -288,18 +260,14 @@
 	name = "Arrivals Announcement Computer"
 	},
 /turf/simulated/shuttle/floor/white,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "qR" = (
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/white/border,
 /obj/effect/floor_decal/borderfloorblack/corner2,
 /obj/effect/floor_decal/corner/white/bordercorner2,
 /turf/simulated/shuttle/floor,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "ri" = (
 /turf/simulated/sky/south,
 /area/shuttle/shuttle3/sky)
@@ -308,9 +276,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid/transit,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "rU" = (
 /obj/effect/step_trigger/teleporter/random{
 	affect_ghosts = 1;
@@ -342,17 +308,13 @@
 /area/space)
 "sX" = (
 /turf/simulated/wall/thull,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "tt" = (
 /obj/structure/hull_corner{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor/grid/transit,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "uY" = (
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 1
@@ -361,9 +323,7 @@
 	name = "JoinLate"
 	},
 /turf/simulated/shuttle/floor/white,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "vr" = (
 /obj/structure/grille/rustic{
 	health = 25;
@@ -374,17 +334,13 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "vZ" = (
 /obj/structure/hull_corner{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor/grid/transit,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "wj" = (
 /obj/structure/handrail{
 	dir = 4
@@ -397,9 +353,7 @@
 	},
 /obj/structure/closet/walllocker/emerglocker/west,
 /turf/simulated/shuttle/floor/white,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "wm" = (
 /obj/structure/window/reinforced/survival_pod{
 	dir = 1
@@ -410,9 +364,7 @@
 	name = "reinforced grille"
 	},
 /turf/simulated/floor/plating,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "ws" = (
 /obj/structure/handrail{
 	dir = 4
@@ -431,9 +383,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/steel_ridged,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "ww" = (
 /turf/simulated/floor/tiled/techfloor/grid/transit,
 /area/space)
@@ -449,9 +399,7 @@
 	},
 /obj/structure/closet/walllocker/emerglocker/east,
 /turf/simulated/shuttle/floor/white,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "xi" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
@@ -464,9 +412,7 @@
 	dir = 4
 	},
 /turf/simulated/shuttle/floor,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "xv" = (
 /obj/structure/handrail{
 	dir = 4
@@ -489,9 +435,7 @@
 	pixel_x = -21
 	},
 /turf/simulated/shuttle/floor/white,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "yl" = (
 /turf/unsimulated/wall/transit,
 /area/space)
@@ -508,18 +452,14 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "zq" = (
 /obj/structure/bed/chair/bay/shuttle,
 /obj/effect/landmark{
 	name = "JoinLate"
 	},
 /turf/simulated/shuttle/floor/white,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "zN" = (
 /obj/effect/step_trigger/thrower{
 	affect_ghosts = 1;
@@ -550,9 +490,7 @@
 	dir = 10
 	},
 /turf/simulated/shuttle/floor/white,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "Dk" = (
 /obj/machinery/door/airlock/silver{
 	icon_state = "door_locked";
@@ -561,27 +499,21 @@
 	secured_wires = 1
 	},
 /turf/simulated/shuttle/floor/white,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "Du" = (
 /obj/effect/shuttle_landmark/transit{
 	landmark_tag = "response_ship_transit";
 	name = "ERT Transit"
 	},
 /turf/space/transit/south,
-/area/shuttle/response_ship{
-	base_turf = /turf/simulated/floor/reinforced
-	})
+/area/shuttle/response_ship/simulated_reinforced)
 "DF" = (
 /obj/structure/bed/chair/bay/shuttle,
 /obj/effect/landmark{
 	name = "JoinLate"
 	},
 /turf/simulated/shuttle/floor,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "DY" = (
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 1
@@ -592,9 +524,7 @@
 	name = "JoinLate"
 	},
 /turf/simulated/shuttle/floor/white,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "Eg" = (
 /obj/effect/step_trigger/thrower{
 	affect_ghosts = 1;
@@ -635,9 +565,7 @@
 	},
 /obj/effect/floor_decal/corner/blue/border,
 /turf/simulated/shuttle/floor,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "Hi" = (
 /obj/effect/step_trigger/teleporter/planetary_fall{
 	planet = null
@@ -647,9 +575,7 @@
 "Hp" = (
 /obj/machinery/ai_status_display,
 /turf/simulated/wall/thull,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "Il" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 6
@@ -661,9 +587,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/steel_ridged,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "Im" = (
 /obj/effect/shuttle_landmark{
 	landmark_tag = "shuttle3_orbit";
@@ -682,9 +606,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_ridged,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "JQ" = (
 /obj/effect/shuttle_landmark/relicbase/escape/transit,
 /turf/simulated/floor/reinforced,
@@ -692,9 +614,7 @@
 "Ku" = (
 /obj/structure/table/steel_reinforced,
 /turf/simulated/shuttle/floor,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "Ly" = (
 /obj/effect/shuttle_landmark/transit{
 	landmark_tag = "ninja_transit";
@@ -714,14 +634,10 @@
 	dir = 8
 	},
 /turf/simulated/shuttle/floor,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "MN" = (
 /turf/space/transit/south,
-/area/shuttle/response_ship{
-	base_turf = /turf/simulated/floor/reinforced
-	})
+/area/shuttle/response_ship/simulated_reinforced)
 "Na" = (
 /turf/simulated/floor/reinforced,
 /area/shuttle/escape/transit)
@@ -735,9 +651,7 @@
 	dir = 9
 	},
 /turf/simulated/shuttle/floor,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "Pi" = (
 /turf/space/transit/south,
 /area/space)
@@ -749,9 +663,7 @@
 	name = "Arrivals Tram"
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "Pm" = (
 /obj/machinery/light/floortube{
 	dir = 8
@@ -763,9 +675,7 @@
 	dir = 8
 	},
 /turf/simulated/shuttle/floor/white,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "PE" = (
 /obj/effect/shuttle_landmark{
 	landmark_tag = "response_ship_orbit";
@@ -793,9 +703,7 @@
 	dir = 4
 	},
 /turf/simulated/shuttle/floor,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "Qx" = (
 /obj/structure/handrail{
 	dir = 8
@@ -813,9 +721,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/steel_ridged,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "RR" = (
 /obj/effect/step_trigger/teleporter/random{
 	affect_ghosts = 1;
@@ -850,9 +756,7 @@
 	dir = 6
 	},
 /turf/simulated/shuttle/floor/white,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "Sx" = (
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 4
@@ -873,9 +777,7 @@
 	dir = 1
 	},
 /turf/simulated/shuttle/floor,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "Ti" = (
 /turf/space,
 /area/space)
@@ -913,9 +815,7 @@
 /obj/structure/closet/walllocker/emerglocker/west,
 /obj/machinery/computer/shuttle_control/arrivals,
 /turf/simulated/floor/tiled/steel_ridged,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "WE" = (
 /obj/machinery/door/airlock/angled_tgmc/wide/generic{
 	frequency = null;
@@ -924,9 +824,7 @@
 	name = "Arrivals Tram"
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "Xq" = (
 /obj/structure/grille/rustic{
 	health = 25;
@@ -940,9 +838,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 "Ye" = (
 /obj/effect/blocker,
 /turf/unsimulated/floor/transit{
@@ -952,9 +848,7 @@
 "Zy" = (
 /obj/structure/table/steel_reinforced,
 /turf/simulated/shuttle/floor/white,
-/area/shuttle/arrival/pre_game{
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid
-	})
+/area/shuttle/arrival/pre_game/simulated_grid)
 
 (1,1,1) = {"
 Ti

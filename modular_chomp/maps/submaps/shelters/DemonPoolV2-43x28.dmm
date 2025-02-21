@@ -262,7 +262,7 @@
 /area/survivalpod/superpose/DemonPoolV2)
 "Q" = (
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod/superpose/DemonPoolV2)
 "R" = (

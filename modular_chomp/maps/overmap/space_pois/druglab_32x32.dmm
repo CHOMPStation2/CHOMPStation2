@@ -213,11 +213,6 @@
 "nV" = (
 /turf/simulated/floor/plating,
 /area/template_noop)
-"oI" = (
-/obj/structure/lattice,
-/obj/structure/lattice,
-/turf/template_noop,
-/area/template_noop)
 "oO" = (
 /mob/living/simple_mob/humanoid/merc/ranged/space/tommylas,
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -1244,7 +1239,7 @@ sO
 Dd
 Dd
 Dd
-oI
+Dd
 Dd
 Dd
 Dd

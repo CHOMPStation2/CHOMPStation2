@@ -1,4 +1,11 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/structure/bed/double/padded{
+	pixel_x = 10;
+	pixel_y = -4
+	},
+/turf/simulated/floor/carpet/turcarpet,
+/area/survivalpod/superpose/logcabin)
 "aK" = (
 /obj/machinery/media/jukebox,
 /turf/simulated/wall/log_sif,
@@ -91,8 +98,7 @@
 "jA" = (
 /obj/machinery/vending/hydroseeds{
 	dir = 8;
-	pixel_x = 4;
-	pixel_y = 0
+	pixel_x = 4
 	},
 /turf/simulated/floor/outdoors/grass/sif/forest{
 	outdoors = 0
@@ -115,8 +121,7 @@
 /area/survivalpod/superpose/logcabin)
 "kJ" = (
 /obj/machinery/chem_master/condimaster{
-	name = "CondiMaster Neo";
-	pixel_y = 0
+	name = "CondiMaster Neo"
 	},
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/logcabin)
@@ -277,27 +282,12 @@
 /area/survivalpod/superpose/logcabin)
 "wo" = (
 /obj/structure/bed/double/padded{
-	pixel_y = 25
-	},
-/obj/structure/bed/double/padded{
-	pixel_y = 0
-	},
-/obj/item/bedsheet/rddouble{
-	pixel_x = -24;
-	pixel_y = 26
-	},
-/obj/item/bedsheet/rddouble{
-	pixel_y = 26;
-	pixel_x = -12
-	},
-/obj/item/bedsheet/rddouble{
-	pixel_y = 26
+	layer = 3.01
 	},
 /obj/item/bedsheet/rddouble{
 	pixel_x = -24
 	},
 /obj/item/bedsheet/rddouble{
-	pixel_y = 0;
 	pixel_x = -12
 	},
 /obj/item/bedsheet/rddouble,
@@ -381,10 +371,7 @@
 "EN" = (
 /obj/structure/bed/double/padded{
 	pixel_x = 10;
-	pixel_y = 25
-	},
-/obj/structure/bed/double/padded{
-	pixel_x = 10
+	layer = 3.01
 	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/survivalpod/superpose/logcabin)
@@ -481,9 +468,23 @@
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/logcabin)
 "NP" = (
+/obj/structure/bed/double/padded{
+	pixel_y = -4
+	},
+/obj/item/bedsheet/rddouble{
+	pixel_x = -24;
+	pixel_y = -4
+	},
+/obj/item/bedsheet/rddouble{
+	pixel_x = -12;
+	pixel_y = -4
+	},
+/obj/item/bedsheet/rddouble{
+	pixel_y = -4
+	},
 /obj/item/reagent_containers/food/snacks/spellburger{
-	pixel_y = -17;
-	pixel_x = 8
+	pixel_x = 8;
+	pixel_y = -5
 	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/survivalpod/superpose/logcabin)
@@ -553,9 +554,7 @@
 	},
 /area/survivalpod/superpose/logcabin)
 "TN" = (
-/obj/item/flashlight/slime{
-	pixel_y = 0
-	},
+/obj/item/flashlight/slime,
 /turf/simulated/wall/log_sif,
 /area/survivalpod/superpose/logcabin)
 "UT" = (
@@ -806,7 +805,7 @@ OP
 OP
 lu
 fP
-MN
+aa
 EN
 yY
 "}

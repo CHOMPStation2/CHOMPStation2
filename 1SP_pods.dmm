@@ -1467,14 +1467,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/survivalpod/superpose/CultShip)
-"bbP" = (
-/obj/structure/hull_corner{
-	dir = 4
-	},
-/obj/structure/lattice,
-/obj/structure/lattice,
-/turf/template_noop,
-/area/template_noop)
 "bcf" = (
 /obj/structure/table/standard,
 /obj/machinery/reagentgrinder,
@@ -24594,7 +24586,7 @@
 /area/survivalpod/superpose/LoneHome)
 "qaP" = (
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod/superpose/HellCave)
 "qaS" = (
@@ -32498,7 +32490,7 @@
 /area/survivalpod/superpose/GrandLibrary)
 "whZ" = (
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/template_noop)
 "wiQ" = (
@@ -33409,12 +33401,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/CrashedInfestedShip)
-"wMJ" = (
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
-/turf/simulated/shuttle/wall/voidcraft/blue,
-/area/survivalpod)
 "wMK" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 1
@@ -39778,7 +39764,7 @@ wWX
 uHE
 wWX
 uHE
-bbP
+rug
 pIr
 pIr
 pIr
@@ -54119,7 +54105,7 @@ jTF
 mtA
 ktQ
 fsy
-wMJ
+oKt
 qkX
 gjM
 eMp

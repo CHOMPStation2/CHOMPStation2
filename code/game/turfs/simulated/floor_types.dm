@@ -99,6 +99,9 @@
 			I.plane = PLANE_LIGHTING
 			antilight_cache["[diag]"] = I
 
+	if(takes_underlays)
+		underlay_update()
+
 /turf/simulated/shuttle/Destroy()
 	landed_holder = null
 	return ..()

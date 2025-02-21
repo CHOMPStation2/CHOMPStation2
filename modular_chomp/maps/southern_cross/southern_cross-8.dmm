@@ -2288,8 +2288,7 @@
 /area/centcom/specops)
 "bCK" = (
 /obj/structure/window/reinforced/survival_pod{
-	dir = 1;
-	icon_state = "pwindow"
+	dir = 1
 	},
 /turf/simulated/floor/carpet,
 /area/shadekin)
@@ -3101,12 +3100,9 @@
 /area/shadekin)
 "cmS" = (
 /obj/machinery/door/airlock/external{
-	frequency = null;
 	icon_state = "door_locked";
-	id_tag = null;
 	locked = 1;
-	name = "Ship Hatch";
-	req_access = null
+	name = "Ship Hatch"
 	},
 /obj/effect/map_helper/airlock/door/ext_door,
 /turf/simulated/shuttle/floor/black,
@@ -3554,7 +3550,6 @@
 "cIi" = (
 /obj/effect/floor_decal/milspec/color/orange,
 /obj/machinery/light{
-	dir = 2;
 	nightshift_enabled = 1
 	},
 /obj/effect/floor_decal/emblem/itgdauntless{
@@ -3751,8 +3746,7 @@
 /area/tdome/tdomeadmin)
 "cPT" = (
 /obj/structure/window/reinforced/survival_pod{
-	dir = 1;
-	icon_state = "pwindow"
+	dir = 1
 	},
 /turf/simulated/floor/carpet/blue2,
 /area/shadekin)
@@ -4461,8 +4455,7 @@
 	pixel_x = 10
 	},
 /obj/item/bedsheet/mimedouble{
-	pixel_x = 10;
-	pixel_y = 0
+	pixel_x = 10
 	},
 /turf/simulated/floor/carpet/blue2,
 /area/shadekin)
@@ -4545,8 +4538,7 @@
 /area/shadekin)
 "dGf" = (
 /obj/structure/window/reinforced/survival_pod{
-	dir = 1;
-	icon_state = "pwindow"
+	dir = 1
 	},
 /obj/structure/table/marble{
 	color = "#2b2b2b"
@@ -4609,7 +4601,6 @@
 "dHk" = (
 /obj/effect/floor_decal/milspec/color/orange,
 /obj/machinery/light{
-	dir = 2;
 	nightshift_enabled = 1
 	},
 /turf/simulated/floor/tiled/steel_dirty,
@@ -4942,8 +4933,7 @@
 /area/shadekin)
 "dWG" = (
 /obj/structure/window/reinforced/survival_pod{
-	dir = 1;
-	icon_state = "pwindow"
+	dir = 1
 	},
 /obj/structure/table/hardwoodtable,
 /obj/item/flashlight/lamp/green,
@@ -5179,8 +5169,7 @@
 /obj/machinery/light/floortube{
 	dir = 4;
 	nightshift_enabled = 1;
-	pixel_x = -6;
-	pixel_y = 0
+	pixel_x = -6
 	},
 /turf/simulated/floor/wood/alt,
 /area/shadekin)
@@ -5273,7 +5262,6 @@
 "eoa" = (
 /obj/effect/floor_decal/milspec/color/silver,
 /obj/machinery/light{
-	dir = 2;
 	nightshift_enabled = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -5438,8 +5426,7 @@
 	pixel_y = 1
 	},
 /obj/item/storage/rollingpapers{
-	pixel_x = 8;
-	pixel_y = 0
+	pixel_x = 8
 	},
 /obj/item/storage/rollingpapers/blunt{
 	pixel_x = -6;
@@ -5839,8 +5826,7 @@
 /area/centcom/specops)
 "eQU" = (
 /obj/structure/window/reinforced/survival_pod{
-	dir = 1;
-	icon_state = "pwindow"
+	dir = 1
 	},
 /obj/structure/table/hardwoodtable,
 /obj/item/flashlight/lamp/green,
@@ -5893,7 +5879,6 @@
 /obj/effect/floor_decal/milspec/color/orange,
 /obj/effect/floor_decal/techfloor,
 /obj/machinery/light{
-	dir = 2;
 	nightshift_enabled = 1
 	},
 /turf/simulated/floor/tiled/steel_dirty,
@@ -6069,8 +6054,7 @@
 /area/shadekin)
 "ffK" = (
 /obj/structure/window/reinforced/survival_pod{
-	dir = 1;
-	icon_state = "pwindow"
+	dir = 1
 	},
 /obj/structure/table/marble{
 	color = "#2b2b2b"
@@ -6386,12 +6370,10 @@
 /area/wizard_station)
 "fBC" = (
 /obj/structure/bed/double{
-	pixel_x = 10;
-	pixel_y = 0
+	pixel_x = 10
 	},
 /obj/item/bedsheet/browndouble{
-	pixel_x = 10;
-	pixel_y = 0
+	pixel_x = 10
 	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/shadekin)
@@ -6574,8 +6556,7 @@
 /area/centcom/specops)
 "fMY" = (
 /obj/structure/window/reinforced/survival_pod{
-	dir = 1;
-	icon_state = "pwindow"
+	dir = 1
 	},
 /obj/structure/table/hardwoodtable,
 /obj/item/flashlight/lamp/green,
@@ -6751,8 +6732,7 @@
 /area/shuttle/administration)
 "fXP" = (
 /obj/structure/window/reinforced/survival_pod{
-	dir = 1;
-	icon_state = "pwindow"
+	dir = 1
 	},
 /obj/structure/table/marble{
 	color = "#2b2b2b"
@@ -6884,8 +6864,7 @@
 /area/holodeck/source_beach)
 "geM" = (
 /obj/structure/window/reinforced/survival_pod{
-	dir = 1;
-	icon_state = "pwindow"
+	dir = 1
 	},
 /obj/structure/bed/chair/bay/chair/padded/red/bignest{
 	name = "large shadekin nest"
@@ -6990,7 +6969,6 @@
 /area/space)
 "gjN" = (
 /obj/machinery/airlock_sensor{
-	id_tag = null;
 	pixel_y = 27
 	},
 /obj/effect/shuttle_landmark{
@@ -7219,8 +7197,7 @@
 /area/centcom/bar)
 "gxa" = (
 /obj/structure/window/reinforced/survival_pod{
-	dir = 1;
-	icon_state = "pwindow"
+	dir = 1
 	},
 /turf/simulated/floor/carpet/retro_red,
 /area/shadekin)
@@ -7352,19 +7329,14 @@
 "gDm" = (
 /obj/machinery/atmospherics/pipe/simple/visible,
 /obj/machinery/door/airlock/external{
-	frequency = null;
 	icon_state = "door_locked";
-	id_tag = null;
 	locked = 1;
-	name = "Ship Hatch";
-	req_access = null
+	name = "Ship Hatch"
 	},
 /obj/machinery/access_button{
 	dir = 1;
-	master_tag = null;
 	pixel_x = -27;
-	pixel_y = 7;
-	req_one_access = null
+	pixel_y = 7
 	},
 /obj/effect/map_helper/airlock/button/int_button,
 /obj/effect/map_helper/airlock/door/int_door,
@@ -7527,8 +7499,7 @@
 /obj/machinery/light/floortube{
 	dir = 4;
 	nightshift_enabled = 1;
-	pixel_x = -6;
-	pixel_y = 0
+	pixel_x = -6
 	},
 /turf/simulated/floor/wood/alt,
 /area/shadekin)
@@ -7537,7 +7508,6 @@
 /obj/effect/floor_decal/milspec/color/silver,
 /obj/machinery/light{
 	dir = 8;
-	icon_state = "tube1";
 	nightshift_enabled = 1
 	},
 /obj/structure/disposalpipe/segment{
@@ -7682,7 +7652,6 @@
 /area/centcom/evac)
 "gRf" = (
 /obj/effect/floor_decal/spline/fancy{
-	dir = 2;
 	icon_state = "spline_fancy_cee"
 	},
 /obj/structure/flora/lily3,
@@ -7695,8 +7664,7 @@
 /obj/machinery/light/floortube{
 	dir = 4;
 	nightshift_enabled = 1;
-	pixel_x = -6;
-	pixel_y = 0
+	pixel_x = -6
 	},
 /turf/simulated/floor/wood/sif,
 /area/shadekin)
@@ -7830,8 +7798,7 @@
 /area/shuttle/response_ship)
 "gWI" = (
 /obj/structure/window/reinforced/survival_pod{
-	dir = 1;
-	icon_state = "pwindow"
+	dir = 1
 	},
 /turf/simulated/floor/carpet/gaycarpet,
 /area/shadekin)
@@ -7940,9 +7907,7 @@
 	},
 /area/wizard_station)
 "hbJ" = (
-/obj/structure/bed/double/padded{
-	pixel_y = 0
-	},
+/obj/structure/bed/double/padded,
 /obj/item/bedsheet/mimedouble,
 /turf/simulated/floor/carpet/blue2,
 /area/shadekin)
@@ -7971,18 +7936,13 @@
 /area/shuttle/syndicate_elite/mothership)
 "hdC" = (
 /obj/machinery/access_button{
-	master_tag = null;
 	pixel_x = 27;
-	pixel_y = -7;
-	req_one_access = null
+	pixel_y = -7
 	},
 /obj/machinery/door/airlock/external{
-	frequency = null;
 	icon_state = "door_locked";
-	id_tag = null;
 	locked = 1;
-	name = "Ship Hatch";
-	req_access = null
+	name = "Ship Hatch"
 	},
 /obj/effect/map_helper/airlock/button/ext_button,
 /obj/effect/map_helper/airlock/door/ext_door,
@@ -7994,8 +7954,7 @@
 /area/shadekin)
 "hem" = (
 /obj/structure/window/reinforced/survival_pod{
-	dir = 1;
-	icon_state = "pwindow"
+	dir = 1
 	},
 /obj/structure/bed/chair/bay/chair/padded/red/bignest{
 	name = "large shadekin nest"
@@ -8253,8 +8212,7 @@
 "hmy" = (
 /obj/machinery/chemical_dispenser/bar_alc/full{
 	dir = 8;
-	pixel_x = 14;
-	pixel_y = 0
+	pixel_x = 14
 	},
 /obj/structure/table/marble{
 	color = "#2b2b2b"
@@ -8283,8 +8241,7 @@
 	req_access = list(150)
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 4;
-	id_tag = null
+	dir = 4
 	},
 /obj/machinery/button/remote/blast_door{
 	id = "blastninja";
@@ -8318,8 +8275,7 @@
 /area/holodeck/source_emptycourt)
 "hol" = (
 /obj/structure/window/reinforced/survival_pod{
-	dir = 1;
-	icon_state = "pwindow"
+	dir = 1
 	},
 /obj/structure/table/marble{
 	color = "#2b2b2b"
@@ -8345,20 +8301,15 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/voidcraft/vertical{
-	frequency = null;
-	id_tag = null;
-	name = "Ship Internal Hatch";
-	req_access = null
+	name = "Ship Internal Hatch"
 	},
 /obj/effect/map_helper/airlock/door/int_door,
 /obj/effect/map_helper/airlock/button/int_button,
 /obj/machinery/access_button{
 	dir = 4;
-	master_tag = null;
 	name = "interior access button";
 	pixel_x = 7;
-	pixel_y = 27;
-	req_access = null
+	pixel_y = 27
 	},
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/shuttle/ninja)
@@ -8933,8 +8884,7 @@
 /area/centcom/evac)
 "hRE" = (
 /obj/structure/window/reinforced/survival_pod{
-	dir = 1;
-	icon_state = "pwindow"
+	dir = 1
 	},
 /obj/structure/bed/padded,
 /obj/item/bedsheet/captain,
@@ -9865,8 +9815,7 @@
 "iFK" = (
 /obj/machinery/chemical_dispenser/bar_coffee/full{
 	dir = 8;
-	pixel_x = 14;
-	pixel_y = 0
+	pixel_x = 14
 	},
 /obj/structure/table/marble{
 	color = "#2b2b2b"
@@ -9955,8 +9904,7 @@
 /obj/structure/table/marble,
 /obj/machinery/chemical_dispenser/bar_alc/full{
 	dir = 8;
-	pixel_x = 14;
-	pixel_y = 0
+	pixel_x = 14
 	},
 /obj/structure/window/reinforced/survival_pod{
 	opacity = 1
@@ -10269,12 +10217,10 @@
 	},
 /obj/machinery/airlock_sensor{
 	dir = 8;
-	id_tag = null;
 	pixel_x = 27
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 1;
-	id_tag = null
+	dir = 1
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/effect/map_helper/airlock/sensor/chamber_sensor,
@@ -10446,8 +10392,7 @@
 /obj/structure/table/marble,
 /obj/machinery/chemical_dispenser/bar_alc/full{
 	dir = 8;
-	pixel_x = 14;
-	pixel_y = 0
+	pixel_x = 14
 	},
 /obj/structure/window/reinforced/survival_pod{
 	opacity = 1
@@ -11017,7 +10962,6 @@
 	color = "#2b2b2b"
 	},
 /obj/machinery/light{
-	dir = 2;
 	nightshift_enabled = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -11386,8 +11330,7 @@
 /obj/structure/table/marble,
 /obj/machinery/chemical_dispenser/bar_alc/full{
 	dir = 8;
-	pixel_x = 14;
-	pixel_y = 0
+	pixel_x = 14
 	},
 /obj/effect/floor_decal/corner/black/diagonal,
 /obj/structure/window/reinforced/survival_pod{
@@ -11463,8 +11406,7 @@
 /area/shadekin)
 "ken" = (
 /obj/structure/window/reinforced/survival_pod{
-	dir = 1;
-	icon_state = "pwindow"
+	dir = 1
 	},
 /turf/simulated/floor/carpet/geo,
 /area/shadekin)
@@ -11499,8 +11441,7 @@
 /obj/structure/table/rack/shelf/steel,
 /obj/item/storage/box/condimentbottles,
 /obj/item/reagent_containers/food/condiment/sugar{
-	pixel_x = -5;
-	pixel_y = 0
+	pixel_x = -5
 	},
 /obj/item/storage/box/donkpockets{
 	pixel_x = 4;
@@ -12411,8 +12352,7 @@
 /area/centcom/evac)
 "kOE" = (
 /obj/structure/window/reinforced/survival_pod{
-	dir = 1;
-	icon_state = "pwindow"
+	dir = 1
 	},
 /obj/structure/table/hardwoodtable,
 /obj/item/flashlight/lamp/clown{
@@ -12931,8 +12871,7 @@
 "lqC" = (
 /obj/machinery/shower{
 	dir = 8;
-	pixel_x = 7;
-	pixel_y = 0
+	pixel_x = 7
 	},
 /obj/structure/curtain/open/shower,
 /turf/simulated/floor/tiled/freezer,
@@ -13759,7 +13698,6 @@
 	},
 /obj/machinery/light{
 	dir = 8;
-	icon_state = "tube1";
 	nightshift_enabled = 1
 	},
 /turf/simulated/floor/tiled/steel_dirty,
@@ -14053,19 +13991,13 @@
 /turf/simulated/shuttle/floor,
 /area/centcom/evac)
 "mwb" = (
-/obj/machinery/door/airlock/hatch{
-	frequency = null;
-	id_tag = null;
-	req_access = null
-	},
+/obj/machinery/door/airlock/hatch,
 /obj/effect/map_helper/airlock/button/ext_button,
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/machinery/access_button{
 	dir = 1;
-	master_tag = null;
 	pixel_x = -27;
-	pixel_y = 7;
-	req_one_access = null
+	pixel_y = 7
 	},
 /turf/simulated/shuttle/plating,
 /area/shuttle/skipjack)
@@ -14112,19 +14044,13 @@
 /turf/simulated/floor/holofloor/carpet,
 /area/holodeck/source_theatre)
 "myh" = (
-/obj/machinery/door/airlock/hatch{
-	frequency = null;
-	id_tag = null;
-	req_access = null
-	},
+/obj/machinery/door/airlock/hatch,
 /obj/effect/map_helper/airlock/button/ext_button,
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/machinery/access_button{
 	dir = 1;
-	master_tag = null;
 	pixel_x = 27;
-	pixel_y = 7;
-	req_access = null
+	pixel_y = 7
 	},
 /turf/simulated/shuttle/plating,
 /area/shuttle/skipjack)
@@ -14136,11 +14062,7 @@
 	name = "Outer Airlock";
 	opacity = 0
 	},
-/obj/machinery/door/airlock/voidcraft{
-	frequency = null;
-	id_tag = null;
-	req_access = null
-	},
+/obj/machinery/door/airlock/voidcraft,
 /obj/structure/fans/tiny,
 /obj/effect/map_helper/airlock/door/ext_door,
 /turf/simulated/shuttle/plating,
@@ -14156,7 +14078,6 @@
 /obj/effect/floor_decal/milspec/color/white,
 /obj/effect/floor_decal/techfloor,
 /obj/machinery/light{
-	dir = 2;
 	nightshift_enabled = 1
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -14366,9 +14287,7 @@
 /turf/simulated/floor/holofloor/carpet,
 /area/holodeck/source_courtroom)
 "mKp" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	id_tag = null
-	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume,
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/shuttle/plating,
 /area/shuttle/skipjack)
@@ -14379,7 +14298,6 @@
 "mLa" = (
 /obj/machinery/airlock_sensor{
 	dir = 8;
-	id_tag = null;
 	pixel_x = 27
 	},
 /obj/effect/map_helper/airlock/sensor/chamber_sensor,
@@ -14636,7 +14554,6 @@
 "mWp" = (
 /obj/machinery/airlock_sensor{
 	dir = 4;
-	id_tag = null;
 	pixel_x = -27
 	},
 /obj/effect/shuttle_landmark{
@@ -14663,10 +14580,7 @@
 /area/shadekin)
 "mYr" = (
 /obj/machinery/door/airlock/voidcraft/vertical{
-	frequency = null;
-	id_tag = null;
-	name = "Ship External Hatch";
-	req_access = null
+	name = "Ship External Hatch"
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
@@ -14762,8 +14676,7 @@
 /area/holodeck/source_thunderdomecourt)
 "neC" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 8;
-	id_tag = null
+	dir = 8
 	},
 /obj/machinery/button/remote/blast_door{
 	id = "smindicate";
@@ -14785,8 +14698,7 @@
 /area/shuttle/escape/centcom)
 "neI" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 4;
-	id_tag = null
+	dir = 4
 	},
 /obj/machinery/airlock_sensor{
 	dir = 8;
@@ -14852,7 +14764,6 @@
 /obj/effect/floor_decal/milspec/color/black,
 /obj/machinery/light{
 	dir = 8;
-	icon_state = "tube1";
 	nightshift_enabled = 1
 	},
 /turf/simulated/floor/tiled/steel_dirty,
@@ -15158,15 +15069,10 @@
 	frequency = 1331;
 	id_tag = "vox_west_control";
 	pixel_x = 27;
-	req_access = list(150);
-	tag_airpump = null;
-	tag_chamber_sensor = null;
-	tag_exterior_door = null;
-	tag_interior_door = null
+	req_access = list(150)
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 8;
-	id_tag = null
+	dir = 8
 	},
 /obj/machinery/light/small,
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
@@ -15330,15 +15236,10 @@
 	frequency = 1331;
 	id_tag = "skipjack_shuttle";
 	pixel_x = -27;
-	req_access = list(150);
-	tag_airpump = null;
-	tag_chamber_sensor = null;
-	tag_exterior_door = null;
-	tag_interior_door = null
+	req_access = list(150)
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 4;
-	id_tag = null
+	dir = 4
 	},
 /obj/machinery/light/small,
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
@@ -15447,20 +15348,14 @@
 /obj/machinery/atmospherics/pipe/manifold/visible{
 	dir = 8
 	},
-/obj/machinery/door/airlock/voidcraft/vertical{
-	frequency = null;
-	id_tag = null;
-	req_access = null
-	},
+/obj/machinery/door/airlock/voidcraft/vertical,
 /obj/effect/map_helper/airlock/door/int_door,
 /obj/effect/map_helper/airlock/button/int_button,
 /obj/machinery/access_button{
 	dir = 8;
-	master_tag = null;
 	name = "interior access button";
 	pixel_x = -7;
-	pixel_y = 27;
-	req_access = null
+	pixel_y = 27
 	},
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/shuttle/syndicate)
@@ -15475,8 +15370,7 @@
 /area/centcom/creed)
 "nMG" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 8;
-	id_tag = null
+	dir = 8
 	},
 /obj/machinery/light/small,
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
@@ -15563,8 +15457,7 @@
 /area/shadekin)
 "nQF" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 4;
-	id_tag = null
+	dir = 4
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/shuttle/floor/voidcraft/dark,
@@ -15577,11 +15470,7 @@
 	},
 /area/centcom/specops)
 "nQU" = (
-/obj/machinery/door/airlock/voidcraft/vertical{
-	frequency = null;
-	id_tag = null;
-	req_access = null
-	},
+/obj/machinery/door/airlock/voidcraft/vertical,
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 4
 	},
@@ -15589,11 +15478,9 @@
 /obj/effect/map_helper/airlock/button/int_button,
 /obj/machinery/access_button{
 	dir = 4;
-	master_tag = null;
 	name = "interior access button";
 	pixel_x = 7;
-	pixel_y = 27;
-	req_access = null
+	pixel_y = 27
 	},
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/shuttle/syndicate)
@@ -15713,8 +15600,7 @@
 /area/centcom/specops)
 "oal" = (
 /obj/item/material/knife{
-	pixel_x = 8;
-	pixel_y = 0
+	pixel_x = 8
 	},
 /obj/item/material/knife,
 /obj/structure/table/marble{
@@ -15767,8 +15653,7 @@
 /area/shadekin)
 "oba" = (
 /obj/structure/window/reinforced/survival_pod{
-	dir = 1;
-	icon_state = "pwindow"
+	dir = 1
 	},
 /turf/simulated/floor/carpet/tealcarpet,
 /area/shadekin)
@@ -15831,11 +15716,7 @@
 	},
 /area/tdome/tdomeobserve)
 "oeg" = (
-/obj/machinery/door/airlock/hatch{
-	frequency = null;
-	id_tag = null;
-	req_access = null
-	},
+/obj/machinery/door/airlock/hatch,
 /obj/machinery/atmospherics/pipe/simple/visible,
 /obj/effect/map_helper/airlock/door/int_door,
 /turf/simulated/shuttle/plating,
@@ -16219,9 +16100,7 @@
 /obj/structure/bed/double{
 	pixel_x = -1
 	},
-/obj/item/bedsheet/hopdouble{
-	pixel_y = 0
-	},
+/obj/item/bedsheet/hopdouble,
 /turf/simulated/floor/carpet/gaycarpet,
 /area/shadekin)
 "oBM" = (
@@ -16390,13 +16269,11 @@
 /area/ninja_dojo/dojo)
 "oMV" = (
 /obj/structure/bed/double{
-	pixel_x = 1;
-	pixel_y = 0
+	pixel_x = 1
 	},
 /obj/item/bedsheet/hopdouble,
 /obj/item/bedsheet/hopdouble{
-	pixel_x = 16;
-	pixel_y = 0
+	pixel_x = 16
 	},
 /turf/simulated/floor/carpet/gaycarpet,
 /area/shadekin)
@@ -16622,8 +16499,7 @@
 /obj/machinery/light/floortube{
 	dir = 4;
 	nightshift_enabled = 1;
-	pixel_x = -6;
-	pixel_y = 0
+	pixel_x = -6
 	},
 /turf/simulated/floor/wood/sif,
 /area/shadekin)
@@ -16706,10 +16582,8 @@
 /obj/machinery/atmospherics/pipe/simple/visible,
 /obj/machinery/access_button{
 	dir = 4;
-	master_tag = null;
 	pixel_x = -25;
-	pixel_y = 6;
-	req_one_access = null
+	pixel_y = 6
 	},
 /obj/effect/map_helper/airlock/button/int_button,
 /turf/simulated/shuttle/plating,
@@ -16879,10 +16753,8 @@
 /obj/machinery/atmospherics/pipe/simple/visible,
 /obj/machinery/access_button{
 	dir = 8;
-	master_tag = null;
 	pixel_x = 25;
-	pixel_y = 6;
-	req_access = null
+	pixel_y = 6
 	},
 /obj/effect/map_helper/airlock/button/int_button,
 /turf/simulated/shuttle/plating,
@@ -18268,8 +18140,7 @@
 /obj/structure/table/rack/shelf/steel,
 /obj/item/storage/box/condimentbottles,
 /obj/item/reagent_containers/food/condiment/sugar{
-	pixel_x = -5;
-	pixel_y = 0
+	pixel_x = -5
 	},
 /obj/item/storage/box/donkpockets{
 	pixel_x = 4;
@@ -19310,7 +19181,6 @@
 /obj/machinery/appliance/cooker/grill,
 /obj/effect/floor_decal/techfloor,
 /obj/machinery/light{
-	dir = 2;
 	nightshift_enabled = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -19318,7 +19188,6 @@
 "rSl" = (
 /obj/effect/floor_decal/milspec/color/black,
 /obj/machinery/light{
-	dir = 2;
 	nightshift_enabled = 1
 	},
 /turf/simulated/floor/tiled/steel_dirty,
@@ -19343,8 +19212,7 @@
 /area/shadekin)
 "rTw" = (
 /obj/structure/window/reinforced/survival_pod{
-	dir = 1;
-	icon_state = "pwindow"
+	dir = 1
 	},
 /turf/simulated/floor/bronze,
 /area/shadekin)
@@ -19839,8 +19707,7 @@
 /area/shuttle/merchant)
 "sns" = (
 /obj/machinery/computer/security/telescreen/entertainment{
-	pixel_x = -32;
-	pixel_y = 0
+	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shadekin)
@@ -20210,8 +20077,7 @@
 /area/shadekin)
 "sFQ" = (
 /obj/structure/window/reinforced/survival_pod{
-	dir = 1;
-	icon_state = "pwindow"
+	dir = 1
 	},
 /obj/structure/table/hardwoodtable,
 /turf/simulated/floor/carpet/green,
@@ -21413,8 +21279,7 @@
 /area/centcom/command)
 "tLj" = (
 /obj/machinery/cash_register/civilian{
-	pixel_x = 6;
-	pixel_y = 0
+	pixel_x = 6
 	},
 /obj/structure/table/marble{
 	color = "#2b2b2b"
@@ -21543,10 +21408,6 @@
 	icon_state = "vault"
 	},
 /area/centcom/terminal)
-"tTm" = (
-/turf/space,
-/turf/simulated/shuttle/wall/dark/hard_corner,
-/area/shuttle/merchant)
 "tTO" = (
 /obj/structure/table/steel_reinforced,
 /obj/machinery/recharger,
@@ -21642,8 +21503,7 @@
 /obj/effect/catwalk_plated/techmaint,
 /obj/machinery/light/small{
 	dir = 4;
-	nightshift_enabled = 1;
-	pixel_y = 0
+	nightshift_enabled = 1
 	},
 /turf/simulated/floor,
 /area/shadekin)
@@ -22202,8 +22062,7 @@
 /obj/effect/floor_decal/milspec/color/silver,
 /obj/structure/sink/kitchen{
 	dir = 8;
-	pixel_x = -13;
-	pixel_y = 0
+	pixel_x = -13
 	},
 /obj/structure/mirror{
 	dir = 4;
@@ -22850,8 +22709,7 @@
 /area/centcom/evac)
 "vfc" = (
 /obj/structure/window/reinforced/survival_pod{
-	dir = 1;
-	icon_state = "pwindow"
+	dir = 1
 	},
 /obj/structure/table/rack/shelf/steel,
 /turf/simulated/floor/carpet/blue2,
@@ -23430,8 +23288,7 @@
 /area/shuttle/skipjack)
 "vDC" = (
 /obj/structure/window/reinforced/survival_pod{
-	dir = 1;
-	icon_state = "pwindow"
+	dir = 1
 	},
 /turf/simulated/floor/carpet/retro,
 /area/shadekin)
@@ -23575,8 +23432,7 @@
 /area/shuttle/trade)
 "vPi" = (
 /obj/structure/window/reinforced/survival_pod{
-	dir = 1;
-	icon_state = "pwindow"
+	dir = 1
 	},
 /obj/structure/table/bench/wooden,
 /turf/simulated/floor/carpet,
@@ -23913,8 +23769,7 @@
 /area/centcom/evac)
 "wfq" = (
 /obj/structure/window/reinforced/survival_pod{
-	dir = 1;
-	icon_state = "pwindow"
+	dir = 1
 	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/shadekin)
@@ -24711,8 +24566,7 @@
 /obj/structure/table/rack/shelf/steel,
 /obj/item/storage/box/condimentbottles,
 /obj/item/reagent_containers/food/condiment/sugar{
-	pixel_x = -5;
-	pixel_y = 0
+	pixel_x = -5
 	},
 /obj/item/storage/box/donkpockets{
 	pixel_x = 4;
@@ -25343,8 +25197,7 @@
 /obj/machinery/light/floortube{
 	dir = 4;
 	nightshift_enabled = 1;
-	pixel_x = -6;
-	pixel_y = 0
+	pixel_x = -6
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shadekin)
@@ -25770,12 +25623,9 @@
 /area/centcom/specops)
 "xYj" = (
 /obj/machinery/door/airlock/external{
-	frequency = null;
 	icon_state = "door_locked";
-	id_tag = null;
 	locked = 1;
-	name = "Ship Hatch";
-	req_access = null
+	name = "Ship Hatch"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible,
 /obj/effect/map_helper/airlock/door/int_door,
@@ -25850,8 +25700,7 @@
 /area/shadekin)
 "ydX" = (
 /obj/structure/window/reinforced/survival_pod{
-	dir = 1;
-	icon_state = "pwindow"
+	dir = 1
 	},
 /obj/structure/table/hardwoodtable,
 /turf/simulated/floor/carpet/tealcarpet,
@@ -25942,19 +25791,14 @@
 /area/shuttle/syndicate)
 "yhb" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 1;
-	id_tag = null
+	dir = 1
 	},
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	dir = 4;
 	frequency = 1331;
 	id_tag = "trade2_control";
 	pixel_x = -25;
-	req_access = list(150);
-	tag_airpump = null;
-	tag_chamber_sensor = null;
-	tag_exterior_door = null;
-	tag_interior_door = null
+	req_access = list(150)
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/shuttle/floor/black,
@@ -70149,7 +69993,7 @@ wOF
 iYC
 iYC
 iYC
-tTm
+uvs
 eVq
 uvs
 vFi

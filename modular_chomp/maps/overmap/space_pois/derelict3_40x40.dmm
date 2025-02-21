@@ -9,11 +9,6 @@
 /obj/structure/lattice,
 /turf/template_noop,
 /area/submap/derelict3)
-"e" = (
-/obj/structure/lattice,
-/obj/structure/lattice,
-/turf/template_noop,
-/area/submap/derelict3)
 "g" = (
 /obj/structure/salvageable/console_broken_os,
 /turf/simulated/floor/tiled/asteroid_steel/airless,
@@ -537,7 +532,7 @@ m
 d
 d
 a
-e
+d
 d
 h
 a

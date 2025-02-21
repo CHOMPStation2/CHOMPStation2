@@ -40,7 +40,6 @@
 /area/submap/wizardcrash)
 "al" = (
 /obj/structure/shuttle/window,
-/obj/structure/grille,
 /obj/structure/grille/rustic,
 /turf/simulated/floor/wood,
 /area/submap/wizardcrash)
@@ -483,7 +482,6 @@
 /area/submap/wizardcrash)
 "bO" = (
 /obj/structure/shuttle/window,
-/obj/structure/grille,
 /obj/structure/grille/rustic,
 /turf/simulated/floor/plating,
 /area/submap/wizardcrash)

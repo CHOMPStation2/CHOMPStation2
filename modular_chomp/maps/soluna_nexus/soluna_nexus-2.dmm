@@ -197,6 +197,24 @@
 "aan" = (
 /turf/simulated/wall/r_wall,
 /area/space)
+"aao" = (
+/obj/item/bedsheet/piratedouble{
+	pixel_y = 4;
+	layer = 3.91
+	},
+/obj/structure/bed/double/padded{
+	pixel_y = 4;
+	layer = 3.01
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/crew_quarters/Midnight_Kitchen)
+"aap" = (
+/obj/structure/bed/double/padded{
+	pixel_x = 10;
+	pixel_y = -4
+	},
+/turf/simulated/floor/carpet/bcarpet/turfpack/station,
+/area/security/Prison_Wing)
 "aaq" = (
 /obj/structure/bed/chair/office/dark,
 /obj/machinery/newscaster{
@@ -1009,9 +1027,6 @@
 /obj/effect/floor_decal/industrial/arrows,
 /obj/effect/floor_decal/industrial/arrows{
 	dir = 1
-	},
-/obj/machinery/atmospheric_field_generator/perma/underdoors{
-	color = "Yellow"
 	},
 /obj/machinery/atmospheric_field_generator/perma/underdoors{
 	color = "Yellow"
@@ -2730,7 +2745,6 @@
 	},
 /obj/item/radio/intercom/department/security{
 	dir = 4;
-	icon_override = "secintercom";
 	pixel_x = 22
 	},
 /obj/effect/floor_decal/borderfloorblack{
@@ -4891,9 +4905,6 @@
 /obj/machinery/atmospheric_field_generator/perma/underdoors{
 	color = "Yellow"
 	},
-/obj/machinery/atmospheric_field_generator/perma/underdoors{
-	color = "Yellow"
-	},
 /obj/machinery/door/blast/regular/open{
 	layer = 3.5;
 	id = "Port Lockdown";
@@ -5491,7 +5502,6 @@
 	},
 /obj/item/radio/intercom/department/security{
 	dir = 8;
-	icon_override = "secintercom";
 	pixel_x = -22
 	},
 /obj/item/reagent_containers/spray/sterilizine{
@@ -8679,7 +8689,6 @@
 	pixel_x = 5;
 	pixel_y = -3
 	},
-/obj/structure/table/standard,
 /obj/item/folder/red{
 	pixel_y = 4;
 	pixel_x = -6
@@ -12011,7 +12020,6 @@
 "aLT" = (
 /obj/item/radio/intercom/department/security{
 	dir = 4;
-	icon_override = "secintercom";
 	pixel_x = 22
 	},
 /obj/machinery/light{
@@ -17739,9 +17747,6 @@
 /turf/simulated/floor/tiled,
 /area/security/Storage_Room)
 "bfl" = (
-/obj/structure/table/rack{
-	pixel_x = 16
-	},
 /obj/structure/table/rack,
 /obj/item/ammo_magazine/ammo_box/b12g/practice{
 	pixel_y = -5
@@ -21923,9 +21928,6 @@
 /turf/simulated/floor/tiled,
 /area/engineering/Canister_Storage)
 "btt" = (
-/obj/structure/table/rack{
-	pixel_x = 16
-	},
 /obj/structure/table/rack,
 /obj/item/ammo_magazine/m9mm/compact/practice{
 	pixel_y = 9;
@@ -22906,9 +22908,6 @@
 	pixel_y = -3;
 	pixel_x = 1
 	},
-/obj/structure/table/rack{
-	pixel_x = 16
-	},
 /obj/structure/table/rack,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/Firing_Range)
@@ -23642,7 +23641,6 @@
 /obj/structure/table/rack,
 /obj/item/radio/intercom/department/security{
 	dir = 4;
-	icon_override = "secintercom";
 	pixel_x = 22
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -31891,6 +31889,12 @@
 	icon_state = "open";
 	opacity = 0
 	},
+/obj/structure/bed/double/padded{
+	pixel_y = -4
+	},
+/obj/item/bedsheet/rainbowdouble{
+	pixel_y = -4
+	},
 /turf/simulated/floor/tiled/white{
 	color = "#8bbbd5"
 	},
@@ -32114,7 +32118,6 @@
 "cfb" = (
 /obj/item/radio/intercom/department/security{
 	dir = 8;
-	icon_override = "secintercom";
 	pixel_x = -22
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central2,
@@ -39490,7 +39493,6 @@
 /area/rnd/Server_Room)
 "cEt" = (
 /obj/structure/table/reinforced,
-/obj/structure/table/reinforced,
 /obj/item/clothing/mask/gas{
 	pixel_y = 8;
 	pixel_x = -4
@@ -44964,30 +44966,21 @@
 /area/quartermaster/Packaging_Room)
 "dTh" = (
 /obj/structure/bed/double/padded{
-	pixel_y = 25
-	},
-/obj/structure/bed/double/padded,
-/obj/item/bedsheet/orangedouble{
-	pixel_y = 27;
-	pixel_x = -23
-	},
-/obj/item/bedsheet/orangedouble{
-	pixel_y = 27;
-	pixel_x = -11
-	},
-/obj/item/bedsheet/orangedouble{
-	pixel_y = 27
+	layer = 3.01
 	},
 /obj/item/bedsheet/orangedouble{
 	pixel_y = 1;
-	pixel_x = -23
+	pixel_x = -23;
+	layer = 3.91
 	},
 /obj/item/bedsheet/orangedouble{
 	pixel_y = 1;
-	pixel_x = -11
+	pixel_x = -11;
+	layer = 3.92
 	},
 /obj/item/bedsheet/orangedouble{
-	pixel_y = 1
+	pixel_y = 1;
+	layer = 3.92
 	},
 /obj/effect/floor_decal/spline/fancy/wood,
 /obj/structure/window/basic{
@@ -50220,7 +50213,6 @@
 "fld" = (
 /obj/item/radio/intercom/department/security{
 	dir = 4;
-	icon_override = "secintercom";
 	pixel_x = 22
 	},
 /obj/effect/floor_decal/borderfloor/corner,
@@ -54504,24 +54496,15 @@
 "gjr" = (
 /obj/structure/bed/double/padded{
 	pixel_x = 10;
-	pixel_y = 25
-	},
-/obj/structure/bed/double/padded{
-	pixel_x = 10
+	layer = 3.01
 	},
 /obj/item/bedsheet/rainbowdouble{
 	pixel_x = 8;
-	pixel_y = 25
+	layer = 3.91
 	},
 /obj/item/bedsheet/rainbowdouble{
 	pixel_x = 20;
-	pixel_y = 25
-	},
-/obj/item/bedsheet/rainbowdouble{
-	pixel_x = 8
-	},
-/obj/item/bedsheet/rainbowdouble{
-	pixel_x = 20
+	layer = 3.92
 	},
 /obj/structure/curtain/medical{
 	icon_state = "open";
@@ -61089,7 +61072,6 @@
 /turf/simulated/floor/tiled,
 /area/medical/Treatment_Hall)
 "hVT" = (
-/obj/structure/table/woodentable,
 /obj/item/storage/fancy/crayons{
 	pixel_x = 11;
 	pixel_y = -3
@@ -65422,9 +65404,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/medical/Patient_Ward)
 "iXv" = (
-/obj/structure/table/rack/shelf{
-	pixel_x = 16
-	},
 /obj/structure/table/rack/shelf,
 /obj/item/storage/pouch/medical{
 	pixel_y = 9;
@@ -66844,7 +66823,6 @@
 /obj/random/plushie,
 /obj/random/plushie,
 /obj/item/toy/snappop,
-/obj/machinery/firework_launcher,
 /obj/machinery/firework_launcher,
 /obj/structure/cable/white{
 	icon_state = "1-8"
@@ -79553,7 +79531,6 @@
 	},
 /obj/item/radio/intercom/department/security{
 	dir = 8;
-	icon_override = "secintercom";
 	pixel_x = -22
 	},
 /obj/effect/floor_decal/borderfloorblack{
@@ -92624,7 +92601,6 @@
 	},
 /obj/item/radio/intercom/department/security{
 	dir = 8;
-	icon_override = "secintercom";
 	pixel_x = -22
 	},
 /obj/effect/floor_decal/borderfloorblack{
@@ -98854,6 +98830,20 @@
 /obj/structure/window/basic{
 	dir = 4
 	},
+/obj/item/bedsheet/orangedouble{
+	pixel_y = -4;
+	pixel_x = -23
+	},
+/obj/item/bedsheet/orangedouble{
+	pixel_y = -4;
+	pixel_x = -11
+	},
+/obj/item/bedsheet/orangedouble{
+	pixel_y = -4
+	},
+/obj/structure/bed/double/padded{
+	pixel_y = -4
+	},
 /turf/simulated/floor/carpet/bcarpet/turfpack/station,
 /area/security/Prison_Wing)
 "sgZ" = (
@@ -102596,13 +102586,7 @@
 /area/engineering/Deck2_1_Corridor)
 "tfB" = (
 /obj/structure/bed/double/padded,
-/obj/structure/bed/double/padded{
-	pixel_y = -24
-	},
 /obj/item/bedsheet/piratedouble,
-/obj/item/bedsheet/piratedouble{
-	pixel_y = -25
-	},
 /obj/machinery/firealarm{
 	dir = 4;
 	pixel_x = 25
@@ -103647,13 +103631,11 @@
 /area/hallway/Port_2_Deck_Stairwell)
 "twa" = (
 /obj/structure/bed/double/padded{
-	pixel_y = 25
+	layer = 3.01
 	},
-/obj/structure/bed/double/padded,
 /obj/item/bedsheet/rainbowdouble{
-	pixel_y = 25
+	layer = 3.92
 	},
-/obj/item/bedsheet/rainbowdouble,
 /obj/structure/window/basic{
 	dir = 4
 	},
@@ -103816,10 +103798,7 @@
 "txX" = (
 /obj/structure/bed/double/padded{
 	pixel_x = 10;
-	pixel_y = 25
-	},
-/obj/structure/bed/double/padded{
-	pixel_x = 10
+	layer = 3.01
 	},
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/carpet/bcarpet/turfpack/station,
@@ -106204,7 +106183,6 @@
 /obj/item/toy/mecha/mauler,
 /obj/random/plushie,
 /obj/random/plushie,
-/obj/machinery/firework_launcher,
 /obj/machinery/firework_launcher,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck2_Civilian_PortChamber1)
@@ -115110,7 +115088,6 @@
 	pixel_x = -3;
 	pixel_y = 6
 	},
-/obj/structure/table/reinforced,
 /obj/item/wrapping_paper{
 	pixel_y = 2
 	},
@@ -116807,6 +116784,18 @@
 /obj/structure/curtain/medical{
 	icon_state = "open";
 	opacity = 0
+	},
+/obj/structure/bed/double/padded{
+	pixel_x = 10;
+	pixel_y = -4
+	},
+/obj/item/bedsheet/rainbowdouble{
+	pixel_x = 8;
+	pixel_y = -4
+	},
+/obj/item/bedsheet/rainbowdouble{
+	pixel_x = 20;
+	pixel_y = -4
 	},
 /turf/simulated/floor/tiled/white{
 	color = "#8bbbd5"
@@ -143161,7 +143150,7 @@ fwY
 dzR
 ygz
 ane
-qbZ
+aap
 txX
 oev
 ane
@@ -152328,7 +152317,7 @@ gPC
 asn
 hWK
 tfB
-opg
+aao
 gPC
 aWt
 fSb

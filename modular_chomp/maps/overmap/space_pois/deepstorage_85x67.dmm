@@ -691,8 +691,7 @@
 /area/submap/deepstorage)
 "bH" = (
 /obj/structure/cable{
-	icon_state = "4-8";
-	tag = ""
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 295.15
@@ -700,8 +699,7 @@
 /area/submap/deepstorage)
 "bI" = (
 /obj/structure/cable{
-	icon_state = "1-8";
-	tag = ""
+	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 295.15
@@ -857,8 +855,7 @@
 /area/submap/deepstorage)
 "ic" = (
 /obj/structure/cable{
-	icon_state = "4-8";
-	tag = ""
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating/external,
 /area/submap/deepstorage)
@@ -1045,8 +1042,7 @@
 /area/submap/deepstorage)
 "uJ" = (
 /obj/structure/cable{
-	icon_state = "4-8";
-	tag = ""
+	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/external,

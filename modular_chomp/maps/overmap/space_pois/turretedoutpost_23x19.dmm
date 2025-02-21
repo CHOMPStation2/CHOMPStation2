@@ -366,8 +366,7 @@
 "Et" = (
 /obj/structure/bed/chair{
 	dir = 8;
-	icon_state = "chair";
-	tag = "icon-chair (WEST)"
+	icon_state = "chair"
 	},
 /mob/living/simple_mob/humanoid/merc/ranged/space/heavy,
 /turf/simulated/floor/tiled/asteroid_steel{
