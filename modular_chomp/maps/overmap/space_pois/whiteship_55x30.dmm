@@ -503,11 +503,6 @@
 /mob/living/simple_mob/metroid/juvenile/super,
 /turf/simulated/floor/tiled/eris/white/techfloor,
 /area/submap/whiteship)
-"FB" = (
-/obj/structure/lattice,
-/obj/structure/lattice,
-/turf/template_noop,
-/area/submap/whiteship)
 "FT" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/simulated/floor/tiled/eris/white/techfloor,
@@ -2036,7 +2031,7 @@ fR
 fR
 EE
 Nc
-FB
+EE
 Nc
 fR
 fR
@@ -2094,7 +2089,7 @@ fR
 fR
 fR
 EE
-FB
+EE
 EE
 gJ
 gJ

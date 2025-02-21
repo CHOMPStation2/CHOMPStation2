@@ -458,12 +458,6 @@
 	},
 /turf/simulated/floor/plating/kara,
 /area/sc_away/aerostat/inside)
-"bo" = (
-/obj/structure/grille,
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/turf/simulated/floor/plating/kara,
-/area/sc_away/aerostat/inside)
 "bp" = (
 /obj/effect/floor_decal/industrial/warning/dust/corner{
 	dir = 4
@@ -9191,7 +9185,7 @@ bf
 bf
 bv
 bv
-bo
+bf
 bf
 bv
 bv
@@ -9384,7 +9378,7 @@ bf
 bf
 bv
 bv
-bo
+bf
 bf
 bv
 bv
@@ -11304,11 +11298,11 @@ aw
 aw
 aw
 bv
-bo
+bf
 bf
 bv
 bv
-bo
+bf
 bf
 bv
 be
@@ -11376,11 +11370,11 @@ aw
 bq
 bv
 bv
-bo
+bf
 bf
 bv
 bv
-bo
+bf
 bf
 bv
 aw
@@ -11730,11 +11724,11 @@ aw
 aw
 aw
 bv
-bo
+bf
 bf
 bv
 bv
-bo
+bf
 bf
 bv
 be
@@ -11802,11 +11796,11 @@ aw
 bq
 bv
 bv
-bo
+bf
 bf
 bv
 bv
-bo
+bf
 bf
 bv
 aw
@@ -14070,7 +14064,7 @@ bf
 bf
 bv
 bv
-bo
+bf
 bf
 bv
 bv
@@ -14161,7 +14155,7 @@ bf
 bd
 bv
 bv
-bo
+bf
 bf
 bv
 bv

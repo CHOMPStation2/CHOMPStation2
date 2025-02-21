@@ -987,8 +987,7 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	icon_state = "4-8";
-	tag = ""
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 295.15

@@ -107,8 +107,7 @@
 /area/submap/syndiecakesfactory)
 "ky" = (
 /obj/structure/cable{
-	icon_state = "1-2";
-	tag = ""
+	icon_state = "1-2"
 	},
 /turf/simulated/wall,
 /area/submap/syndiecakesfactory)
@@ -231,8 +230,7 @@
 /area/submap/syndiecakesfactory)
 "qS" = (
 /obj/structure/cable{
-	icon_state = "4-8";
-	tag = ""
+	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/maintenance/engi{
 	name = "SyndiCakes"
@@ -361,8 +359,7 @@
 /area/submap/syndiecakesfactory)
 "Cp" = (
 /obj/structure/cable{
-	icon_state = "1-2";
-	tag = ""
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/syndiecakesfactory)
@@ -415,8 +412,7 @@
 /area/submap/syndiecakesfactory)
 "Gm" = (
 /obj/structure/cable{
-	icon_state = "4-8";
-	tag = ""
+	icon_state = "4-8"
 	},
 /obj/random/maintenance,
 /obj/effect/floor_decal/rust,
@@ -462,8 +458,7 @@
 /area/submap/syndiecakesfactory)
 "IB" = (
 /obj/structure/cable{
-	icon_state = "1-2";
-	tag = ""
+	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/rust,
 /obj/random/junk,
@@ -485,8 +480,7 @@
 /area/submap/syndiecakesfactory)
 "Ki" = (
 /obj/structure/cable{
-	icon_state = "4-8";
-	tag = ""
+	icon_state = "4-8"
 	},
 /obj/random/junk,
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -521,8 +515,7 @@
 /area/submap/syndiecakesfactory)
 "Mi" = (
 /obj/structure/cable{
-	icon_state = "4-8";
-	tag = ""
+	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/filth,
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -592,8 +585,7 @@
 /area/submap/syndiecakesfactory)
 "QI" = (
 /obj/structure/cable{
-	icon_state = "4-8";
-	tag = ""
+	icon_state = "4-8"
 	},
 /obj/random/maintenance,
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -663,12 +655,10 @@
 /area/submap/syndiecakesfactory)
 "TT" = (
 /obj/structure/cable{
-	icon_state = "1-8";
-	tag = ""
+	icon_state = "1-8"
 	},
 /obj/structure/cable{
-	icon_state = "1-4";
-	tag = "90Curve"
+	icon_state = "1-4"
 	},
 /obj/effect/floor_decal/rust,
 /obj/random/junk,
@@ -711,8 +701,7 @@
 /area/submap/syndiecakesfactory)
 "VR" = (
 /obj/structure/cable{
-	icon_state = "4-8";
-	tag = ""
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
@@ -720,8 +709,7 @@
 /area/submap/syndiecakesfactory)
 "WL" = (
 /obj/structure/cable{
-	icon_state = "4-8";
-	tag = ""
+	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/asteroid_steel/airless,

@@ -241,8 +241,8 @@
 	pixel_y = 0
 	},
 /obj/item/barcodescanner,
-/obj/item/tape/random,
-/obj/item/tape/random{
+/obj/item/tape,
+/obj/item/tape{
 	pixel_y = -4
 	},
 /obj/structure/cable{

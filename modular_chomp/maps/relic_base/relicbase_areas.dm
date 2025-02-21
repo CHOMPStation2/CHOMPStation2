@@ -67,6 +67,9 @@
 	name = "Outpost Perimeter"
 	icon_state = "green"
 
+/area/surface/outside/plains/outpost/outdoors_area
+	outdoors = OUTDOORS_AREA
+
 /area/surface/outside/plains/outpost/sky
 	name = "The sky"
 	dynamic_lighting = 0
@@ -175,6 +178,9 @@
 	name = "North Mining Outpost Exterior"
 	icon_state = "outpost_mine_main"
 	outdoors = OUTDOORS_YES
+
+/area/surface/outpost/mining_main/exterior/pad
+	name = "Surface Mines Operations Pad"
 
 /area/surface/outpost/mining_main/crew_area
 	name = "North Mining Crew Area"
@@ -735,37 +741,64 @@ z
 	name = "Maintenance Level - Central"
 	icon_state = "maintcentral"
 
+/area/maintenance/firstdeck/simulated_caves
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+
 /area/maintenance/firstdeck/aft
 	name = "Maintenance Level - South"
 	icon_state = "amaint"
+
+/area/maintenance/firstdeck/aft/simulated_caves
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 
 /area/maintenance/firstdeck/aftstarboard
 	name = "Maintenance Level - Southeast"
 	icon_state = "asmaint"
 
+/area/maintenance/firstdeck/aftstarboard/simulated_caves
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+
 /area/maintenance/firstdeck/aftport
 	name = "Maintenance Level - Southwest"
 	icon_state = "apmaint"
+
+/area/maintenance/firstdeck/aftport/simulated_caves
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 
 /area/maintenance/firstdeck/fore
 	name = "Maintenance Level - North"
 	icon_state = "fmaint"
 
+/area/maintenance/firstdeck/fore/simulated_caves
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+
 /area/maintenance/firstdeck/forestarboard
 	name = "Maintenance Level - Northeast"
 	icon_state = "fsmaint"
+
+/area/maintenance/firstdeck/forestarboard/simulated_caves
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 
 /area/maintenance/firstdeck/foreport
 	name = "Maintenance Level - Northwest"
 	icon_state = "fpmaint"
 
+/area/maintenance/firstdeck/foreport/simulated_caves
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+
 /area/maintenance/firstdeck/centralstarboard
 	name = "Maintenance Level - East"
 	icon_state = "smaint"
 
+/area/maintenance/firstdeck/centralstarboard/simulated_caves
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+
 /area/maintenance/firstdeck/centralport
 	name = "Maintenance Level - West"
 	icon_state = "pmaint"
+
+/area/maintenance/firstdeck/centralport/simulated_caves
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 
 /area/maintenance/substation/firstdeck
 	name = "First Deck Utility Access"
@@ -812,6 +845,9 @@ z
 /area/hallway/primary/firstdeck/auxdockaft
 	name = "\improper Arrivals Tram Station"
 	icon_state = "docking_hallway"
+
+/area/hallway/primary/firstdeck/auxdockaft/simulated_caves
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 
 /area/hallway/primary/firstdeck/auxdockfore
 	name = "\improper First Deck Fore Auxiliary Dock"
@@ -941,6 +977,9 @@ z
 /area/maintenance/substation/atmospherics
 	name = "Atmospherics Substation"
 	ambience = AMBIENCE_SUBSTATION //CHOMP Addition
+
+/area/maintenance/substation/atmospherics/exploration
+	name = "Exploration Substation"
 
 /area/maintenance/emergencyeva
 	name = "\improper Emergency EVA Maintenance"
@@ -1083,6 +1122,9 @@ z
 	name = "\improper Departures Tram Station"
 	icon_state = "docking_hallway"
 
+/area/hallway/primary/seconddeck/dockhallway/simulated_caves
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+
 /area/hallway/secondary/seconddeck/research_medical
 	name = "Research Medical Hallway"
 	icon_state = "hallS"
@@ -1165,9 +1207,21 @@ z
 	name = "\improper Research - First Deck Hallway"
 	icon_state = "research"
 
+/area/rnd/research/firstdeck/hallway/simulated_caves
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+
 /area/rnd/xenobiology/xenoflora_isolation
 	name = "\improper Xenoflora Isolation"
 	icon_state = "xeno_f_store"
+
+/area/rnd/xenobiology/simulated_caves
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+
+/area/rnd/storage/simulated_caves
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
+
+/area/rnd/mixing/simulated_caves
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 
 /area/quartermaster/lockerroom
 	name = "\improper Cargo Locker Room"
@@ -1176,6 +1230,9 @@ z
 /area/security/security_hallway
 	name = "\improper Security Hallway"
 	icon_state = "security"
+
+/area/security/tactical/simulated_caves
+	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 
 //Deck Three (Z-3)
 
@@ -1373,6 +1430,9 @@ z
 	requires_power = 0
 	flags = RAD_SHIELDED
 	ambience = AMBIENCE_HIGHSEC
+
+/area/shuttle/response_ship/simulated_reinforced
+	base_turf = /turf/simulated/floor/reinforced
 
 //Shuttle One
 
@@ -1638,6 +1698,19 @@ z
 
 /area/shuttle/merchant/away
 	name = "\improper Merchant Vessel - Away"
+
+// Escape Shuttle
+
+/area/shuttle/escape/station/simulated_grid
+	base_turf = /turf/simulated/floor/tiled/techfloor/grid
+
+// Arrivals Shuttle
+
+/area/shuttle/arrival/pre_game/simulated_grid
+	base_turf = /turf/simulated/floor/tiled/techfloor/grid
+
+/area/shuttle/arrival/station/simulated_grid
+	base_turf = /turf/simulated/floor/tiled/techfloor/grid
 
 //Small Escape Pods
 

@@ -28145,7 +28145,7 @@
 	},
 /obj/item/radio/intercom/department/security{
 	dir = 4;
-	icon_override = "secintercom";
+	icon_state = "secintercom";
 	pixel_x = 21
 	},
 /turf/simulated/floor/tiled,

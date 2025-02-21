@@ -83,10 +83,6 @@
 /obj/structure/cliff/automatic,
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/eclipsemountain)
-"hP" = (
-/turf/simulated/floor/tiled/steel,
-/turf/simulated/wall/r_wall,
-/area/submap/eclipsemountain)
 "iU" = (
 /turf/simulated/floor/tiled/steel,
 /area/submap/eclipsemountain)
@@ -1032,7 +1028,7 @@ Cz
 MM
 lX
 PP
-hP
+MM
 pE
 pE
 MM

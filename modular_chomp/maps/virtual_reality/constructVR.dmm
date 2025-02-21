@@ -145,8 +145,7 @@
 "ajB" = (
 /obj/structure/table/rack/shelf,
 /obj/item/reagent_containers/food/condiment/ketchup{
-	pixel_x = -7;
-	pixel_y = 0
+	pixel_x = -7
 	},
 /obj/item/reagent_containers/food/condiment/mustard{
 	pixel_x = -2
@@ -190,8 +189,7 @@
 "akN" = (
 /obj/machinery/vending/foodasian{
 	dir = 4;
-	pixel_x = -4;
-	pixel_y = 0
+	pixel_x = -4
 	},
 /obj/machinery/light{
 	dir = 8
@@ -298,8 +296,7 @@
 /obj/structure/table/hardwoodtable,
 /obj/machinery/light/small{
 	dir = 4;
-	nightshift_enabled = 1;
-	pixel_y = 0
+	nightshift_enabled = 1
 	},
 /turf/simulated/floor/carpet/blue,
 /area/vr/powered/mall/dorms/dorms4)
@@ -536,8 +533,7 @@
 /obj/item/reagent_containers/food/drinks/smallmilk,
 /obj/item/reagent_containers/food/drinks/smallmilk,
 /obj/structure/closet/secure_closet/freezer/fridge{
-	pixel_x = 6;
-	pixel_y = 0
+	pixel_x = 6
 	},
 /turf/simulated/floor/plating,
 /area/vr/powered/cafe)
@@ -597,9 +593,7 @@
 /turf/simulated/floor/tiled,
 /area/vr/powered/dungeon)
 "aCM" = (
-/obj/structure/table/marble{
-	pixel_y = 0
-	},
+/obj/structure/table/marble,
 /obj/item/reagent_containers/food/snacks/sliceable/sushi{
 	pixel_x = -3;
 	pixel_y = 2
@@ -649,8 +643,7 @@
 /area/vr/powered/dungeon)
 "aEi" = (
 /obj/structure/railing/grey{
-	dir = 8;
-	pixel_y = 0
+	dir = 8
 	},
 /obj/structure/railing/grey,
 /obj/structure/prop/statue/pillar,
@@ -748,7 +741,6 @@
 /area/vr/powered/mall)
 "aIJ" = (
 /obj/machinery/chemical_dispenser/bar_coffee/full{
-	dir = 2;
 	pixel_y = 8
 	},
 /obj/structure/table/marble,
@@ -1020,8 +1012,7 @@
 "aTO" = (
 /obj/structure/table/standard,
 /obj/item/surgical/cautery{
-	pixel_x = 2;
-	pixel_y = 0
+	pixel_x = 2
 	},
 /obj/item/surgical/surgicaldrill,
 /turf/simulated/floor/tiled/white,
@@ -1177,9 +1168,7 @@
 /turf/simulated/floor/bronze,
 /area/vr/powered/cult)
 "aYU" = (
-/obj/machinery/door/airlock/multi_tile/glass{
-	dir = 4
-	},
+/obj/machinery/door/airlock/multi_tile/glass,
 /turf/simulated/floor/bmarble,
 /area/vr/powered/mall)
 "aZi" = (
@@ -1253,8 +1242,7 @@
 "bbR" = (
 /obj/structure/sink/kitchen{
 	dir = 8;
-	pixel_x = -12;
-	pixel_y = 0
+	pixel_x = -12
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered/mall)
@@ -1300,8 +1288,7 @@
 "ben" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/item/stool{
-	color = "grey";
-	dir = 2
+	color = "grey"
 	},
 /obj/structure/sign/poster/nanotrasen{
 	dir = 8
@@ -1367,8 +1354,7 @@
 /area/vr/powered/space/sciship)
 "bhB" = (
 /obj/structure/bed/chair/comfy/red{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /obj/structure/plushie/ian{
 	dir = 4
@@ -1444,8 +1430,7 @@
 /obj/item/reagent_containers/food/drinks/smallmilk,
 /obj/item/reagent_containers/food/drinks/smallmilk,
 /obj/structure/closet/secure_closet/freezer/fridge{
-	pixel_x = 6;
-	pixel_y = 0
+	pixel_x = 6
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered/cafe)
@@ -1496,9 +1481,7 @@
 /turf/simulated/floor/wood/alt/panel,
 /area/vr/powered/mall)
 "bne" = (
-/turf/unsimulated/wall/fakeglass{
-	dir = 2
-	},
+/turf/unsimulated/wall/fakeglass,
 /area/vr/powered/mall/backrooms)
 "bnj" = (
 /obj/machinery/atmospherics/portables_connector,
@@ -1810,8 +1793,7 @@
 /area/vr/outdoors/powered/mall)
 "bCG" = (
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /obj/structure/toilet{
 	dir = 8
@@ -1840,7 +1822,6 @@
 /area/vr/powered/armory)
 "bDN" = (
 /obj/machinery/light{
-	dir = 2;
 	nightshift_enabled = 1
 	},
 /turf/simulated/floor/tiled/old_tile,
@@ -1997,10 +1978,7 @@
 /turf/simulated/floor/tiled/white,
 /area/vr/powered/vet)
 "bKW" = (
-/obj/structure/sign/poster/custom{
-	dir = 2;
-	pixel_y = 0
-	},
+/obj/structure/sign/poster/custom,
 /turf/simulated/floor/carpet/sblucarpet,
 /area/vr/powered/mall/dorms/secondlife)
 "bLz" = (
@@ -2190,8 +2168,7 @@
 /obj/item/clothing/under/skinsuit/leotard/gray,
 /obj/item/clothing/under/skinsuit/fem/leotard/gray,
 /obj/item/clothing/under/skinsuit{
-	pixel_x = 8;
-	pixel_y = 0
+	pixel_x = 8
 	},
 /obj/item/clothing/accessory/collar/shock,
 /obj/item/clothing/glasses/sunglasses/blindfold,
@@ -2454,8 +2431,7 @@
 /area/vr/powered/cult)
 "cbm" = (
 /obj/structure/railing/grey{
-	dir = 1;
-	pixel_y = 0
+	dir = 1
 	},
 /turf/simulated/floor/concrete{
 	outdoors = 0
@@ -2691,8 +2667,7 @@
 /obj/structure/table/hardwoodtable,
 /obj/machinery/light/small{
 	dir = 4;
-	nightshift_enabled = 1;
-	pixel_y = 0
+	nightshift_enabled = 1
 	},
 /turf/simulated/floor/carpet/green,
 /area/vr/powered/mall/dorms/dorms5)
@@ -2790,8 +2765,7 @@
 	},
 /obj/item/reagent_containers/food/condiment/small/saltshaker,
 /obj/item/reagent_containers/food/condiment/small/peppergrinder{
-	pixel_x = 5;
-	pixel_y = 0
+	pixel_x = 5
 	},
 /turf/simulated/floor/wood/alt/tile,
 /area/vr/powered/mall)
@@ -2963,8 +2937,7 @@
 /area/vr/outdoors/powered)
 "cuS" = (
 /obj/structure/railing/grey{
-	dir = 8;
-	pixel_y = 0
+	dir = 8
 	},
 /obj/structure/railing/grey,
 /obj/machinery/light/lamppost,
@@ -3037,16 +3010,14 @@
 	pixel_y = -5
 	},
 /obj/item/storage/box/glasses/square{
-	pixel_x = 6;
-	pixel_y = 0
+	pixel_x = 6
 	},
 /turf/simulated/floor/carpet/brown,
 /area/vr/powered/mall)
 "cAc" = (
 /obj/random/pottedplant,
 /obj/structure/sign/poster/custom{
-	dir = 1;
-	pixel_y = 0
+	dir = 1
 	},
 /turf/simulated/floor/bmarble,
 /area/vr/powered/mall)
@@ -3079,8 +3050,7 @@
 	pixel_x = -6
 	},
 /obj/random/cigarettes{
-	pixel_x = 5;
-	pixel_y = 0
+	pixel_x = 5
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered/bar)
@@ -3580,7 +3550,6 @@
 "cZE" = (
 /obj/machinery/appliance/cooker/oven,
 /obj/machinery/light{
-	dir = 2;
 	nightshift_enabled = 1
 	},
 /turf/simulated/floor/wood/alt/panel,
@@ -3612,8 +3581,7 @@
 	dir = 8
 	},
 /obj/structure/sign/atmos{
-	pixel_x = 32;
-	pixel_y = 0
+	pixel_x = 32
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/vr/powered/mall/secondlife)
@@ -3783,9 +3751,7 @@
 /turf/simulated/floor,
 /area/vr/powered)
 "dik" = (
-/obj/machinery/light/floortube{
-	dir = 2
-	},
+/obj/machinery/light/floortube,
 /turf/simulated/floor/carpet/brown,
 /area/vr/powered/mall)
 "dis" = (
@@ -3796,7 +3762,6 @@
 /obj/machinery/light{
 	brightness_color = "#e060e0";
 	brightness_color_ns = "#9C439C";
-	dir = 2;
 	light_color = "#e060e0";
 	name = "tinted light fixture";
 	nightshift_enabled = 1;
@@ -3976,8 +3941,7 @@
 "dpb" = (
 /obj/structure/sink/kitchen{
 	dir = 8;
-	pixel_x = -12;
-	pixel_y = 0
+	pixel_x = -12
 	},
 /turf/simulated/floor/wmarble,
 /area/vr/powered/mall)
@@ -4164,8 +4128,7 @@
 "dxX" = (
 /obj/structure/table/fancyblack,
 /obj/machinery/light{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered/mall)
@@ -4191,10 +4154,7 @@
 /turf/simulated/shuttle/floor/white,
 /area/vr/powered/space/whiteship)
 "dzQ" = (
-/obj/structure/sign/poster/custom{
-	dir = 2;
-	pixel_y = 0
-	},
+/obj/structure/sign/poster/custom,
 /turf/simulated/floor/carpet/purple,
 /area/vr/powered/mall/dorms/secondlife2)
 "dzT" = (
@@ -4224,9 +4184,7 @@
 /area/vr/outdoors/powered)
 "dAW" = (
 /obj/structure/prop/statue/pillar,
-/obj/machinery/light/floortube{
-	dir = 2
-	},
+/obj/machinery/light/floortube,
 /turf/simulated/floor/tiled/white,
 /area/vr/powered/mall)
 "dBj" = (
@@ -4446,9 +4404,7 @@
 /obj/item/reagent_containers/food/snacks/boiledrice{
 	pixel_y = 4
 	},
-/obj/item/reagent_containers/food/snacks/boiledrice{
-	pixel_y = 0
-	},
+/obj/item/reagent_containers/food/snacks/boiledrice,
 /turf/simulated/floor/wood/alt,
 /area/vr/powered/mall)
 "dLk" = (
@@ -4457,8 +4413,7 @@
 	},
 /obj/effect/floor_decal/corner/purple/border{
 	color = "#f700ff";
-	dir = 1;
-	pixel_y = 0
+	dir = 1
 	},
 /turf/unsimulated/shuttle/floor/purple,
 /area/vr/powered/mall/secondlife)
@@ -5094,13 +5049,6 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techmaint,
 /area/vr/powered/cult)
-"ecq" = (
-/obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
-	},
-/turf/simulated/floor/plating,
-/area/vr/powered/space/mechfactory)
 "edX" = (
 /obj/structure/bed/padded,
 /obj/item/bedsheet/red,
@@ -5121,8 +5069,7 @@
 "efo" = (
 /obj/structure/railing/grey,
 /obj/structure/railing/grey{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /obj/structure/prop/statue/pillar,
 /turf/simulated/floor/concrete{
@@ -5277,7 +5224,6 @@
 	id = "vrmalltint4"
 	},
 /obj/structure/window/reinforced/polarized{
-	dir = 2;
 	id = "vrmalltint4"
 	},
 /turf/simulated/floor/plating,
@@ -5321,8 +5267,7 @@
 /area/vr/powered/cult)
 "emM" = (
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /obj/structure/bed/chair/bay/comfy/black{
 	dir = 1
@@ -5388,24 +5333,13 @@
 /area/vr/powered/space/sciship)
 "eoO" = (
 /obj/effect/floor_decal/corner/purple/border{
-	color = "#f700ff";
-	dir = 2;
-	pixel_y = 0
+	color = "#f700ff"
 	},
 /turf/unsimulated/shuttle/floor/purple,
 /area/vr/powered/mall/secondlife)
 "epd" = (
 /turf/simulated/wall/wood,
 /area/vr/powered/mall/dorms/dorms6)
-"epk" = (
-/obj/structure/table/marble{
-	pixel_y = 0
-	},
-/obj/machinery/microwave{
-	pixel_y = 10
-	},
-/turf/simulated/floor/wmarble,
-/area/vr/powered/mall)
 "epB" = (
 /obj/structure/flora/pottedplant/minitree,
 /turf/simulated/floor/wood,
@@ -5555,7 +5489,6 @@
 	id = "vrmalltint2"
 	},
 /obj/structure/window/reinforced/polarized{
-	dir = 2;
 	id = "vrmalltint2"
 	},
 /turf/simulated/floor/plating,
@@ -5660,9 +5593,7 @@
 	},
 /area/vr/powered/dungeon)
 "eCT" = (
-/obj/effect/floor_decal/corner/paleblue/full{
-	dir = 2
-	},
+/obj/effect/floor_decal/corner/paleblue/full,
 /obj/structure/table/standard,
 /obj/item/cell/high,
 /obj/item/melee/baton/cattleprod,
@@ -6159,8 +6090,7 @@
 /area/vr/powered/mall/dorms/secondlife5)
 "eRP" = (
 /obj/structure/railing/grey{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /obj/structure/prop/statue/pillar,
 /turf/simulated/floor/concrete{
@@ -6176,8 +6106,7 @@
 /area/vr/space)
 "eTl" = (
 /obj/structure/bed/chair/sofa/right/brown{
-	dir = 1;
-	pixel_y = 0
+	dir = 1
 	},
 /turf/simulated/floor/wmarble,
 /area/vr/powered/motel)
@@ -6195,8 +6124,7 @@
 /area/vr/outdoors/powered)
 "eTS" = (
 /obj/machinery/button/mob_spawner_button{
-	pixel_x = -10;
-	pixel_y = 0
+	pixel_x = -10
 	},
 /turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
 /area/vr/powered/building2)
@@ -6239,8 +6167,7 @@
 "eWF" = (
 /obj/structure/table/marble,
 /obj/machinery/microwave{
-	pixel_x = 3;
-	pixel_y = 0
+	pixel_x = 3
 	},
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 4
@@ -6533,8 +6460,7 @@
 /obj/structure/table/reinforced,
 /obj/item/storage/box/wormcan,
 /obj/item/storage/box/wormcan{
-	pixel_x = 5;
-	pixel_y = 0
+	pixel_x = 5
 	},
 /obj/item/storage/box/wormcan/deluxe{
 	pixel_x = -6;
@@ -6644,7 +6570,6 @@
 	id = "vrmalltint5"
 	},
 /obj/structure/window/reinforced/polarized{
-	dir = 2;
 	id = "vrmalltint5"
 	},
 /turf/simulated/floor/plating,
@@ -6753,8 +6678,7 @@
 	dir = 4
 	},
 /obj/structure/sign/poster/custom{
-	dir = 1;
-	pixel_y = 0
+	dir = 1
 	},
 /turf/simulated/floor/bmarble,
 /area/vr/powered/mall)
@@ -6849,24 +6773,19 @@
 "ftX" = (
 /obj/structure/table/marble,
 /obj/item/material/kitchen/utensil/fork{
-	pixel_x = -4;
-	pixel_y = 0
+	pixel_x = -4
 	},
 /obj/item/material/kitchen/utensil/fork{
-	pixel_x = -12;
-	pixel_y = 0
+	pixel_x = -12
 	},
 /obj/item/material/kitchen/utensil/fork{
-	pixel_x = -10;
-	pixel_y = 0
+	pixel_x = -10
 	},
 /obj/item/material/kitchen/utensil/fork{
-	pixel_x = -8;
-	pixel_y = 0
+	pixel_x = -8
 	},
 /obj/item/material/kitchen/utensil/fork{
-	pixel_x = -6;
-	pixel_y = 0
+	pixel_x = -6
 	},
 /obj/item/material/knife/plastic{
 	pixel_x = 6
@@ -7001,8 +6920,7 @@
 	},
 /obj/random/pottedplant,
 /obj/structure/sign/poster/custom{
-	dir = 1;
-	pixel_y = 0
+	dir = 1
 	},
 /turf/simulated/floor/bmarble,
 /area/vr/powered/mall)
@@ -7031,8 +6949,7 @@
 /obj/structure/table/marble,
 /obj/item/material/kitchen/rollingpin,
 /obj/item/material/knife{
-	pixel_x = 11;
-	pixel_y = 0
+	pixel_x = 11
 	},
 /obj/item/reagent_containers/food/condiment/enzyme,
 /obj/item/reagent_containers/glass/beaker,
@@ -7040,9 +6957,7 @@
 /area/vr/powered/mall)
 "fAY" = (
 /obj/machinery/access_button{
-	master_tag = null;
-	pixel_y = 27;
-	req_one_access = null
+	pixel_y = 27
 	},
 /obj/effect/map_helper/airlock/door/int_door,
 /obj/effect/map_helper/airlock/button/int_button,
@@ -7184,8 +7099,7 @@
 "fHm" = (
 /obj/structure/table/standard,
 /obj/item/surgical/FixOVein{
-	pixel_x = 5;
-	pixel_y = 0
+	pixel_x = 5
 	},
 /obj/item/surgical/bonegel{
 	pixel_x = -5;
@@ -7216,8 +7130,7 @@
 "fIO" = (
 /obj/effect/floor_decal/corner/lightgrey/border/shifted,
 /obj/structure/railing/grey{
-	dir = 8;
-	pixel_y = 0
+	dir = 8
 	},
 /turf/simulated/floor/concrete{
 	outdoors = 1
@@ -7358,9 +7271,7 @@
 /turf/simulated/floor/cult,
 /area/vr/powered/cult)
 "fPm" = (
-/obj/structure/bed/chair{
-	dir = 2
-	},
+/obj/structure/bed/chair,
 /turf/simulated/floor/wood/alt/panel,
 /area/vr/powered/mall)
 "fQf" = (
@@ -7413,12 +7324,10 @@
 /area/vr/outdoors/powered)
 "fRu" = (
 /obj/structure/railing/grey{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /obj/structure/bed/chair/sofa/bench/marble{
-	dir = 8;
-	pixel_y = 0
+	dir = 8
 	},
 /turf/simulated/floor/concrete{
 	outdoors = 0
@@ -7445,8 +7354,7 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/purple/bordercorner{
-	color = "#f700ff";
-	dir = 2
+	color = "#f700ff"
 	},
 /obj/item/toy/balloon,
 /turf/simulated/floor/tiled/techfloor,
@@ -7751,8 +7659,7 @@
 "ghU" = (
 /obj/structure/urinal{
 	dir = 4;
-	pixel_x = -34;
-	pixel_y = 0
+	pixel_x = -34
 	},
 /turf/simulated/floor/tiled/old_tile,
 /area/vr/powered/mall)
@@ -7785,9 +7692,7 @@
 /area/vr/powered/space/whiteship)
 "gif" = (
 /obj/structure/easel,
-/obj/item/canvas/nineteen_nineteen{
-	pixel_y = 10
-	},
+/obj/item/canvas/nineteen_nineteen,
 /turf/simulated/floor/wood,
 /area/vr/powered/art)
 "giK" = (
@@ -7924,9 +7829,7 @@
 	dir = 5;
 	id = "vrsushitrain"
 	},
-/obj/item/reagent_containers/food/snacks/kitsuneudon{
-	pixel_y = 0
-	},
+/obj/item/reagent_containers/food/snacks/kitsuneudon,
 /turf/simulated/floor/wmarble,
 /area/vr/powered/mall)
 "gqM" = (
@@ -7983,8 +7886,7 @@
 	},
 /obj/structure/sink/kitchen{
 	dir = 8;
-	pixel_x = -12;
-	pixel_y = 0
+	pixel_x = -12
 	},
 /turf/simulated/floor/tiled/white,
 /area/vr/powered/mall)
@@ -8046,8 +7948,7 @@
 /area/vr/powered)
 "gyW" = (
 /obj/structure/bed/chair/wood{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /turf/simulated/floor/wood/alt/tile,
 /area/vr/powered/mall)
@@ -8229,8 +8130,7 @@
 "gGD" = (
 /obj/structure/table/standard,
 /obj/item/surgical/hemostat{
-	pixel_x = -4;
-	pixel_y = 0
+	pixel_x = -4
 	},
 /obj/item/surgical/retractor,
 /turf/simulated/floor/tiled/white,
@@ -8282,8 +8182,7 @@
 	},
 /obj/item/material/kitchen/rollingpin,
 /obj/item/material/knife{
-	pixel_x = 11;
-	pixel_y = 0
+	pixel_x = 11
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered/mall)
@@ -8755,8 +8654,7 @@
 /area/vr/powered/cult)
 "hgx" = (
 /obj/structure/bed/chair/sofa/bench/marble{
-	dir = 8;
-	pixel_y = 0
+	dir = 8
 	},
 /turf/simulated/floor/outdoors/newdirt_nograss{
 	temperature = 293.15
@@ -8939,7 +8837,6 @@
 "hpF" = (
 /obj/machinery/vending/tool{
 	emagged = 1;
-	req_access = null;
 	req_log_access = null
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -8976,8 +8873,7 @@
 	},
 /obj/structure/sink/kitchen{
 	dir = 4;
-	pixel_x = 13;
-	pixel_y = 0
+	pixel_x = 13
 	},
 /turf/simulated/floor/tiled/white,
 /area/vr/powered/mall)
@@ -9363,8 +9259,7 @@
 /obj/structure/table/darkglass,
 /obj/effect/floor_decal/corner/purple/border{
 	color = "#f700ff";
-	dir = 1;
-	pixel_y = 0
+	dir = 1
 	},
 /obj/item/storage/box/glasses/meta/metapint{
 	pixel_x = 5;
@@ -9382,7 +9277,6 @@
 /area/vr/powered/mall/secondlife)
 "hIL" = (
 /obj/machinery/chemical_dispenser/bar_soft/full{
-	dir = 2;
 	pixel_y = 8
 	},
 /obj/structure/table/marble,
@@ -9435,8 +9329,7 @@
 /area/vr/powered/mall/dorms/secondlife3)
 "hPd" = (
 /obj/structure/railing/grey{
-	dir = 8;
-	pixel_y = 0
+	dir = 8
 	},
 /turf/simulated/floor/outdoors/grass{
 	temperature = 293.15
@@ -9639,9 +9532,7 @@
 /turf/simulated/floor/tiled/milspec/raised,
 /area/vr/powered/mall/secondlife)
 "hWB" = (
-/obj/structure/table/marble{
-	pixel_y = 0
-	},
+/obj/structure/table/marble,
 /obj/machinery/reagentgrinder,
 /obj/effect/step_trigger/teleporter/poi{
 	teleport_x = 250;
@@ -10219,10 +10110,7 @@
 /turf/simulated/floor/carpet/brown,
 /area/vr/powered/mall)
 "ioj" = (
-/obj/structure/sign/poster/custom{
-	dir = 2;
-	pixel_y = 0
-	},
+/obj/structure/sign/poster/custom,
 /turf/simulated/floor/carpet/purcarpet,
 /area/vr/powered/mall/dorms/secondlife3)
 "ion" = (
@@ -10380,8 +10268,7 @@
 	pixel_x = -10
 	},
 /obj/item/clothing/under/teshari/undercoat/standard/black_red{
-	pixel_x = 7;
-	pixel_y = 0
+	pixel_x = 7
 	},
 /obj/item/clothing/under/teshari/undercoat/standard/pink_grey{
 	pixel_x = 7;
@@ -10449,8 +10336,7 @@
 /area/vr/powered/mall/dorms/secondlife5)
 "ivx" = (
 /obj/structure/bed/chair/sofa/bench/marble{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /turf/simulated/floor/outdoors/newdirt_nograss{
 	temperature = 293.15
@@ -10738,8 +10624,7 @@
 /area/vr/powered/cult)
 "iJE" = (
 /obj/structure/sign/poster/custom{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /turf/simulated/floor/carpet/bcarpet,
 /area/vr/powered/mall/dorms/secondlife5)
@@ -10844,8 +10729,7 @@
 /area/vr/outdoors/powered)
 "iRw" = (
 /obj/structure/bed/chair/office/dark{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered/dungeon)
@@ -11014,8 +10898,7 @@
 	dir = 6
 	},
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/vr/powered/vet)
@@ -11316,8 +11199,7 @@
 /area/vr/powered/space/whiteship)
 "jkL" = (
 /obj/structure/railing/grey{
-	dir = 8;
-	pixel_y = 0
+	dir = 8
 	},
 /obj/structure/prop/statue/pillar,
 /turf/simulated/floor/concrete{
@@ -11327,8 +11209,7 @@
 "jkT" = (
 /obj/effect/floor_decal/rust,
 /obj/item/bone/leg{
-	pixel_x = -6;
-	pixel_y = 0
+	pixel_x = -6
 	},
 /obj/item/bone/leg{
 	pixel_x = 4
@@ -11351,8 +11232,7 @@
 /obj/structure/table/marble,
 /obj/item/storage/box/donkpockets/teriyaki,
 /obj/item/material/knife{
-	pixel_x = 11;
-	pixel_y = 0
+	pixel_x = 11
 	},
 /obj/item/reagent_containers/glass/beaker{
 	pixel_x = 5
@@ -11583,12 +11463,10 @@
 "juM" = (
 /obj/structure/table/marble,
 /obj/item/storage/box/glasses/meta/metapint{
-	pixel_x = 4;
-	pixel_y = 0
+	pixel_x = 4
 	},
 /obj/item/storage/box/glasses/square{
-	pixel_x = -7;
-	pixel_y = 0
+	pixel_x = -7
 	},
 /turf/simulated/floor/carpet/geo,
 /area/vr/powered/mall)
@@ -11602,8 +11480,7 @@
 "jvT" = (
 /obj/structure/flora/ausbushes/brflowers,
 /obj/structure/railing/grey{
-	dir = 8;
-	pixel_y = 0
+	dir = 8
 	},
 /turf/simulated/floor/outdoors/grass{
 	temperature = 293.15
@@ -11643,10 +11520,7 @@
 /turf/simulated/shuttle/floor/purple,
 /area/vr/powered/space/whiteship)
 "jzh" = (
-/obj/structure/bed/chair/wood{
-	dir = 2;
-	pixel_y = 0
-	},
+/obj/structure/bed/chair/wood,
 /turf/simulated/floor/tiled/white,
 /area/vr/powered/mall)
 "jzk" = (
@@ -11917,8 +11791,7 @@
 "jJV" = (
 /obj/structure/table/marble,
 /obj/structure/sink/countertop{
-	dir = 8;
-	pixel_y = 0
+	dir = 8
 	},
 /obj/item/reagent_containers/glass/beaker{
 	pixel_x = 5
@@ -11930,8 +11803,7 @@
 /obj/item/paper{
 	info = "Fresh bread... Fresh bread... Every Day, it's fresh bread...";
 	name = "Stained sheet of paper";
-	pixel_x = -9;
-	pixel_y = 0
+	pixel_x = -9
 	},
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 4
@@ -11941,8 +11813,7 @@
 	},
 /obj/item/material/kitchen/rollingpin,
 /obj/item/material/knife{
-	pixel_x = 11;
-	pixel_y = 0
+	pixel_x = 11
 	},
 /turf/simulated/floor/tiled/old_tile/yellow,
 /area/vr/powered/mall)
@@ -12018,20 +11889,12 @@
 	icon_state = "dark"
 	},
 /area/vr/powered/mall/backrooms)
-"jNJ" = (
-/obj/structure/bed/chair/wood{
-	dir = 1;
-	pixel_y = 0
-	},
-/turf/simulated/floor/tiled/white,
-/area/vr/powered/mall)
 "jNK" = (
 /obj/structure/sign/warning/lava,
 /turf/simulated/wall/r_wall,
 /area/vr/powered/redbase)
 "jNO" = (
 /obj/machinery/conveyor{
-	dir = 2;
 	id = "vrsushitrain"
 	},
 /obj/structure/window/reinforced{
@@ -12176,8 +12039,7 @@
 	},
 /obj/effect/floor_decal/corner/purple/border{
 	color = "#f700ff";
-	dir = 1;
-	pixel_y = 0
+	dir = 1
 	},
 /turf/unsimulated/shuttle/floor/purple,
 /area/vr/powered/mall/secondlife)
@@ -12205,7 +12067,6 @@
 "jTS" = (
 /obj/machinery/vending/tool{
 	emagged = 1;
-	req_access = null;
 	req_log_access = null
 	},
 /turf/simulated/floor/tiled,
@@ -12246,9 +12107,7 @@
 /area/vr/powered/mall)
 "jWY" = (
 /obj/effect/floor_decal/corner/purple/border{
-	color = "#f700ff";
-	dir = 2;
-	pixel_y = 0
+	color = "#f700ff"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/vr/powered/mall/secondlife)
@@ -12470,9 +12329,7 @@
 /obj/item/reagent_containers/food/snacks/kitsuneudon{
 	pixel_y = -6
 	},
-/obj/item/reagent_containers/food/snacks/kitsuneudon{
-	pixel_y = 0
-	},
+/obj/item/reagent_containers/food/snacks/kitsuneudon,
 /obj/item/reagent_containers/food/snacks/omurice{
 	pixel_x = 2;
 	pixel_y = 16
@@ -12839,8 +12696,7 @@
 	pixel_y = 9
 	},
 /obj/item/reagent_containers/food/snacks/sharkmeatdip{
-	pixel_x = -3;
-	pixel_y = 0
+	pixel_x = -3
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered/conspawn)
@@ -12920,7 +12776,6 @@
 "kBH" = (
 /obj/structure/table/marble,
 /obj/structure/sink/countertop{
-	dir = 2;
 	pixel_y = 7
 	},
 /obj/item/trash/plate{
@@ -13432,12 +13287,10 @@
 /area/vr/powered/shop)
 "kVX" = (
 /obj/machinery/door/window/northright{
-	name = "Server Room";
-	req_access = null
+	name = "Server Room"
 	},
 /obj/machinery/door/window/southleft{
-	name = "Server Room";
-	req_access = null
+	name = "Server Room"
 	},
 /obj/effect/floor_decal/industrial/warning/full,
 /obj/machinery/door/firedoor/glass,
@@ -13571,8 +13424,7 @@
 	dir = 8
 	},
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /turf/simulated/floor/tiled/old_tile,
 /area/vr/powered/mall)
@@ -13588,8 +13440,7 @@
 "lca" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/vr/powered/dungeon)
@@ -13709,8 +13560,7 @@
 	dir = 8
 	},
 /obj/structure/sign/poster/custom{
-	dir = 8;
-	pixel_y = 0
+	dir = 8
 	},
 /turf/simulated/floor/carpet/brown,
 /area/vr/powered/mall)
@@ -13840,8 +13690,7 @@
 "lot" = (
 /obj/structure/table/hardwoodtable,
 /obj/structure/sign/poster/custom{
-	dir = 1;
-	pixel_y = 0
+	dir = 1
 	},
 /turf/simulated/floor/bmarble,
 /area/vr/powered/mall)
@@ -13921,7 +13770,6 @@
 /area/vr/powered/space/sciship)
 "lrm" = (
 /obj/machinery/conveyor{
-	dir = 2;
 	id = "vrsushitrain"
 	},
 /obj/structure/window/reinforced{
@@ -13989,8 +13837,7 @@
 	pixel_y = 6
 	},
 /obj/item/reagent_containers/food/condiment/small/packet/mayo{
-	pixel_x = -3;
-	pixel_y = 0
+	pixel_x = -3
 	},
 /obj/item/reagent_containers/food/condiment/small/packet/mayo{
 	pixel_x = -3;
@@ -14414,8 +14261,7 @@
 /obj/machinery/chemical_dispenser/bar_soft,
 /obj/effect/floor_decal/corner/purple/border{
 	color = "#f700ff";
-	dir = 1;
-	pixel_y = 0
+	dir = 1
 	},
 /turf/unsimulated/shuttle/floor/purple,
 /area/vr/powered/mall/secondlife)
@@ -14735,8 +14581,7 @@
 	pixel_y = -4
 	},
 /obj/item/reagent_containers/food/condiment/ketchup{
-	pixel_x = -2;
-	pixel_y = 0
+	pixel_x = -2
 	},
 /obj/item/reagent_containers/food/condiment/hotsauce{
 	pixel_x = -2;
@@ -15075,8 +14920,7 @@
 "men" = (
 /obj/structure/table/marble,
 /obj/item/material/knife{
-	pixel_x = 11;
-	pixel_y = 0
+	pixel_x = 11
 	},
 /obj/item/reagent_containers/glass/beaker{
 	pixel_x = 5
@@ -15615,15 +15459,13 @@
 "mBK" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/item/stool{
-	color = "grey";
-	dir = 2
+	color = "grey"
 	},
 /turf/simulated/floor/tiled/yellow,
 /area/vr/powered/mall)
 "mBL" = (
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered/art)
@@ -15674,8 +15516,7 @@
 /area/vr/powered/mall)
 "mFJ" = (
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /turf/simulated/floor/wmarble,
 /area/vr/powered/motel)
@@ -15720,8 +15561,7 @@
 /area/vr/powered/cult)
 "mHQ" = (
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/shuttle/floor/voidcraft,
@@ -15852,7 +15692,6 @@
 /area/vr/powered/bar)
 "mKx" = (
 /obj/structure/reagent_dispensers/acid{
-	density = 0;
 	pixel_x = -30
 	},
 /turf/simulated/shuttle/floor/purple,
@@ -15972,7 +15811,6 @@
 /obj/machinery/light{
 	brightness_color = "#e060e0";
 	brightness_color_ns = "#9C439C";
-	dir = 2;
 	light_color = "#e060e0";
 	name = "tinted light fixture";
 	nightshift_enabled = 1;
@@ -16212,7 +16050,6 @@
 	icon = 'icons/obj/abductor.dmi';
 	icon_state = "dispenser";
 	name = "Drug-Dispenser";
-	pixel_y = -4;
 	req_access = list(777)
 	},
 /obj/item/reagent_containers/hypospray/autoinjector/biginjector/soporific,
@@ -16287,9 +16124,7 @@
 /obj/item/spacecash/c200{
 	pixel_y = 6
 	},
-/obj/item/spacecash/c200{
-	pixel_y = 0
-	},
+/obj/item/spacecash/c200,
 /turf/simulated/floor/carpet/brown,
 /area/vr/powered/mall)
 "nbj" = (
@@ -16418,8 +16253,7 @@
 /area/vr/powered/cult)
 "njG" = (
 /obj/structure/bed/chair/sofa/brown{
-	dir = 1;
-	pixel_y = 0
+	dir = 1
 	},
 /turf/simulated/floor/wmarble,
 /area/vr/powered/motel)
@@ -16620,8 +16454,7 @@
 "nqH" = (
 /obj/machinery/smartfridge/drying_rack{
 	dir = 4;
-	pixel_x = -7;
-	pixel_y = 0
+	pixel_x = -7
 	},
 /turf/simulated/floor/beach/sand/desert,
 /area/vr/powered/mall/vw)
@@ -16637,7 +16470,6 @@
 	id = "estrella_back_hatch";
 	name = "Rear Hatch Control";
 	pixel_y = 27;
-	req_access = null;
 	specialfunctions = 4
 	},
 /obj/machinery/door/firedoor/border_only,
@@ -16818,8 +16650,7 @@
 	dir = 1
 	},
 /obj/machinery/light{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /turf/simulated/floor/wood/alt/tile,
 /area/vr/powered/mall)
@@ -16911,15 +16742,13 @@
 "nCX" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/reagent_containers/food/drinks/bottle/space_up{
-	pixel_x = -9;
-	pixel_y = 0
+	pixel_x = -9
 	},
 /obj/item/reagent_containers/food/drinks/bottle/space_mountain_wind{
 	pixel_x = -2
 	},
 /obj/item/reagent_containers/food/drinks/bottle/dr_gibb{
-	pixel_x = 5;
-	pixel_y = 0
+	pixel_x = 5
 	},
 /turf/simulated/floor/tiled,
 /area/vr/powered/constore)
@@ -17115,7 +16944,6 @@
 /area/vr/space)
 "nHr" = (
 /obj/effect/map_effect/portal/master/side_a{
-	dir = 2;
 	portal_id = "vrdungeonBR"
 	},
 /turf/unsimulated/floor/lino/turfpack/station{
@@ -17271,8 +17099,7 @@
 /area/vr/powered/cult)
 "nMk" = (
 /obj/machinery/power/generator{
-	anchored = 1;
-	dir = 2
+	anchored = 1
 	},
 /turf/unsimulated/floor/lino/turfpack/station{
 	color = "#ffe9ab"
@@ -17395,8 +17222,7 @@
 /area/vr/powered/space/whiteship)
 "nRH" = (
 /obj/structure/bed/chair/wood{
-	dir = 8;
-	pixel_y = 0
+	dir = 8
 	},
 /turf/simulated/floor/wood/alt/tile,
 /area/vr/powered/mall)
@@ -17479,15 +17305,12 @@
 /area/vr/powered/dungeon)
 "nUF" = (
 /obj/structure/sign/poster/custom{
-	dir = 8;
-	pixel_y = 0
+	dir = 8
 	},
 /turf/simulated/floor/wmarble,
 /area/vr/powered/mall)
 "nVl" = (
-/obj/effect/floor_decal/corner/paleblue{
-	dir = 2
-	},
+/obj/effect/floor_decal/corner/paleblue,
 /turf/simulated/floor/tiled,
 /area/vr/powered/vet)
 "nVx" = (
@@ -17521,12 +17344,10 @@
 	dir = 4
 	},
 /obj/item/reagent_containers/food/drinks/bottle/orangejuice{
-	pixel_x = -9;
-	pixel_y = 0
+	pixel_x = -9
 	},
 /obj/item/reagent_containers/food/drinks/bottle/tomatojuice{
-	pixel_x = -4;
-	pixel_y = 0
+	pixel_x = -4
 	},
 /obj/item/reagent_containers/food/drinks/bottle/applejuice{
 	pixel_x = 4;
@@ -17654,12 +17475,10 @@
 "oaZ" = (
 /obj/structure/table/reinforced,
 /obj/item/reagent_containers/food/snacks/popcorn{
-	pixel_x = -4;
-	pixel_y = 0
+	pixel_x = -4
 	},
 /obj/item/reagent_containers/food/snacks/popcorn{
-	pixel_x = 5;
-	pixel_y = 0
+	pixel_x = 5
 	},
 /turf/simulated/floor/tiled,
 /area/vr/powered/constore)
@@ -17685,15 +17504,13 @@
 /area/vr/outdoors/powered/mall)
 "ocA" = (
 /obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1"
+	dir = 4
 	},
 /obj/random/trash,
 /turf/simulated/floor/concrete,
 /area/vr/powered/mall)
 "ocD" = (
 /obj/machinery/vending/dinnerware{
-	dir = 2;
 	pixel_y = 4
 	},
 /obj/effect/floor_decal/corner/lime/border{
@@ -17987,9 +17804,7 @@
 /turf/simulated/floor/lava,
 /area/vr/outdoors/powered/lava)
 "ono" = (
-/obj/effect/map_effect/portal/line/side_a{
-	dir = 2
-	},
+/obj/effect/map_effect/portal/line/side_a,
 /turf/unsimulated/floor/lino/turfpack/station{
 	color = "#ffe9ab"
 	},
@@ -18019,7 +17834,6 @@
 	icon_state = "door_locked";
 	id_tag = "estrella_side_hatch";
 	locked = 1;
-	req_access = null;
 	req_one_access = null
 	},
 /obj/machinery/button/remote/airlock{
@@ -18226,12 +18040,8 @@
 /obj/item/book/tome/imbued{
 	pixel_y = 3
 	},
-/obj/item/book/tome/imbued{
-	pixel_y = 0
-	},
-/obj/item/book/tome/imbued{
-	pixel_y = 0
-	},
+/obj/item/book/tome/imbued,
+/obj/item/book/tome/imbued,
 /turf/simulated/floor/cult,
 /area/vr/powered/cult)
 "ouD" = (
@@ -18271,8 +18081,7 @@
 	dir = 8
 	},
 /obj/structure/sign/poster/custom{
-	dir = 1;
-	pixel_y = 0
+	dir = 1
 	},
 /turf/simulated/floor/bmarble,
 /area/vr/powered/mall)
@@ -18450,8 +18259,7 @@
 	dir = 1
 	},
 /obj/structure/window/reinforced{
-	dir = 8;
-	health = null
+	dir = 8
 	},
 /obj/machinery/door/window/westleft{
 	dir = 2
@@ -19241,7 +19049,6 @@
 /area/vr/powered/mall/backrooms)
 "pkd" = (
 /obj/machinery/conveyor{
-	dir = 2;
 	id = "vrsushitrain"
 	},
 /obj/structure/window/reinforced{
@@ -19597,7 +19404,6 @@
 "pzJ" = (
 /obj/structure/table/marble,
 /obj/structure/sink/countertop{
-	dir = 2;
 	pixel_y = 7
 	},
 /obj/item/trash/plate{
@@ -19666,8 +19472,7 @@
 "pBV" = (
 /obj/structure/table/woodentable,
 /obj/random/cigarettes{
-	pixel_x = 5;
-	pixel_y = 0
+	pixel_x = 5
 	},
 /obj/item/flame/lighter{
 	pixel_x = -6
@@ -19861,16 +19666,13 @@
 "pKp" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/reagent_containers/food/drinks/bottle/cola{
-	pixel_x = 5;
-	pixel_y = 0
+	pixel_x = 5
 	},
 /obj/item/reagent_containers/food/drinks/bottle/cola{
-	pixel_x = -9;
-	pixel_y = 0
+	pixel_x = -9
 	},
 /obj/item/reagent_containers/food/drinks/bottle/cola{
-	pixel_x = -2;
-	pixel_y = 0
+	pixel_x = -2
 	},
 /turf/simulated/floor/tiled,
 /area/vr/powered/constore)
@@ -19906,8 +19708,7 @@
 /area/vr/powered/cult)
 "pKS" = (
 /obj/item/toy/plushie/black_fox{
-	name = "latex black fox";
-	pixel_y = 0
+	name = "latex black fox"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/vr/powered/mall/secondlife)
@@ -20282,8 +20083,7 @@
 	pixel_y = -4
 	},
 /obj/item/reagent_containers/food/snacks/fish_taco{
-	pixel_x = 7;
-	pixel_y = 0
+	pixel_x = 7
 	},
 /obj/item/reagent_containers/food/snacks/taco{
 	pixel_y = 6
@@ -20569,8 +20369,7 @@
 /obj/structure/table/hardwoodtable,
 /obj/machinery/light/small{
 	dir = 4;
-	nightshift_enabled = 1;
-	pixel_y = 0
+	nightshift_enabled = 1
 	},
 /turf/simulated/floor/carpet/oracarpet,
 /area/vr/powered/mall/dorms/dorms1)
@@ -20604,9 +20403,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/powered/dungeon)
 "qki" = (
-/obj/machinery/atmospherics/binary/circulator{
-	dir = 2
-	},
+/obj/machinery/atmospherics/binary/circulator,
 /turf/unsimulated/floor/lino/turfpack/station{
 	color = "#ffe9ab"
 	},
@@ -20784,8 +20581,7 @@
 "qrA" = (
 /obj/item/storage/toolbox/mechanical,
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/vr/powered/vet)
@@ -20835,9 +20631,7 @@
 /obj/item/reagent_containers/food/snacks/lomein{
 	pixel_y = -3
 	},
-/obj/item/reagent_containers/food/snacks/lomein{
-	pixel_y = 0
-	},
+/obj/item/reagent_containers/food/snacks/lomein,
 /obj/item/reagent_containers/food/snacks/fortunecookie{
 	pixel_x = 5;
 	pixel_y = 7
@@ -20884,8 +20678,7 @@
 "qvV" = (
 /obj/effect/floor_decal/corner/lightgrey/border,
 /obj/structure/railing/grey{
-	dir = 8;
-	pixel_y = 0
+	dir = 8
 	},
 /turf/simulated/floor/concrete{
 	outdoors = 1
@@ -21119,11 +20912,8 @@
 	},
 /area/vr/powered/dungeon)
 "qBq" = (
-/obj/structure/sign/poster/nanotrasen{
-	dir = 2
-	},
+/obj/structure/sign/poster/nanotrasen,
 /obj/machinery/light{
-	dir = 2;
 	nightshift_enabled = 1
 	},
 /turf/simulated/floor/wood,
@@ -21528,9 +21318,7 @@
 /turf/simulated/floor/cult,
 /area/vr/powered/cult)
 "qVX" = (
-/obj/machinery/light/floortube{
-	dir = 2
-	},
+/obj/machinery/light/floortube,
 /turf/simulated/floor/outdoors/sidewalk/slab{
 	movement_cost = 0;
 	outdoors = -1;
@@ -21678,8 +21466,7 @@
 	pixel_x = -6
 	},
 /obj/item/toy/tennis/blue{
-	pixel_x = 4;
-	pixel_y = 0
+	pixel_x = 4
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/vr/powered/mall/secondlife)
@@ -21859,13 +21646,6 @@
 /obj/item/storage/firstaid/adv,
 /turf/simulated/shuttle/floor/darkred,
 /area/vr/powered/armory)
-"rkQ" = (
-/obj/structure/bed/chair/wood{
-	dir = 8;
-	pixel_y = 0
-	},
-/turf/simulated/floor/tiled/white,
-/area/vr/powered/mall)
 "rle" = (
 /obj/structure/table/bench/glass,
 /turf/simulated/floor/carpet/sblucarpet,
@@ -22001,8 +21781,7 @@
 	dir = 4
 	},
 /obj/machinery/door/window/survival_pod{
-	dir = 2;
-	req_one_access = null
+	dir = 2
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/vr/powered/space/whiteship)
@@ -22084,9 +21863,7 @@
 /turf/simulated/floor/wood,
 /area/vr/powered/mall)
 "rtd" = (
-/obj/effect/floor_decal/corner/paleblue/full{
-	dir = 2
-	},
+/obj/effect/floor_decal/corner/paleblue/full,
 /obj/machinery/space_heater,
 /turf/simulated/floor/tiled,
 /area/vr/powered/vet)
@@ -22223,9 +22000,7 @@
 /turf/simulated/floor/tiled/white,
 /area/vr/powered/mall)
 "rCq" = (
-/obj/structure/bed/chair/office/dark{
-	dir = 2
-	},
+/obj/structure/bed/chair/office/dark,
 /turf/simulated/floor/tiled,
 /area/vr/powered/vet)
 "rCt" = (
@@ -22245,8 +22020,7 @@
 /obj/structure/table/hardwoodtable,
 /obj/machinery/light/small{
 	dir = 4;
-	nightshift_enabled = 1;
-	pixel_y = 0
+	nightshift_enabled = 1
 	},
 /turf/simulated/floor/carpet/gaycarpet,
 /area/vr/powered/mall/dorms/dorms6)
@@ -22660,8 +22434,7 @@
 	dir = 4
 	},
 /obj/item/reagent_containers/food/drinks/bottle/space_mountain_wind{
-	pixel_x = -9;
-	pixel_y = 0
+	pixel_x = -9
 	},
 /obj/item/reagent_containers/food/drinks/bottle/space_up{
 	pixel_x = -4
@@ -22720,8 +22493,7 @@
 	},
 /obj/structure/table/rack/shelf/steel,
 /obj/item/reagent_containers/food/snacks/popcorn{
-	pixel_x = -6;
-	pixel_y = 0
+	pixel_x = -6
 	},
 /obj/item/reagent_containers/food/snacks/popcorn{
 	pixel_x = 8;
@@ -22760,16 +22532,8 @@
 	temperature = 80
 	},
 /area/vr/powered/space/whiteship)
-"rZJ" = (
-/obj/structure/bed/chair/wood{
-	dir = 4;
-	pixel_y = 0
-	},
-/turf/simulated/floor/tiled/white,
-/area/vr/powered/mall)
 "sae" = (
 /obj/machinery/conveyor{
-	dir = 2;
 	id = "vrsushitrain"
 	},
 /obj/item/reagent_containers/food/snacks/ricecake,
@@ -22872,12 +22636,10 @@
 /area/vr/powered/mall/secondlife)
 "seJ" = (
 /obj/structure/railing/grey{
-	dir = 8;
-	pixel_y = 0
+	dir = 8
 	},
 /obj/structure/bed/chair/sofa/bench/marble{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /turf/simulated/floor/concrete{
 	outdoors = 1
@@ -22957,10 +22719,6 @@
 	},
 /area/vr/powered/dungeon)
 "shu" = (
-/obj/machinery/door/window/brigdoor/eastright{
-	dir = 2;
-	req_access = null
-	},
 /obj/machinery/door/window/brigdoor/eastleft{
 	dir = 1;
 	req_access = null
@@ -23315,7 +23073,6 @@
 	id = "vrmalltint6"
 	},
 /obj/structure/window/reinforced/polarized{
-	dir = 2;
 	id = "vrmalltint6"
 	},
 /turf/simulated/floor/plating,
@@ -23560,8 +23317,7 @@
 /obj/structure/table/hardwoodtable,
 /obj/machinery/light/small{
 	dir = 4;
-	nightshift_enabled = 1;
-	pixel_y = 0
+	nightshift_enabled = 1
 	},
 /turf/simulated/floor/carpet/oracarpet,
 /area/vr/powered/mall/dorms/dorms3)
@@ -23727,8 +23483,7 @@
 /area/vr/powered/space/mechfactory)
 "sKj" = (
 /obj/structure/railing/grey{
-	dir = 8;
-	pixel_y = 0
+	dir = 8
 	},
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/simulated/floor/outdoors/grass{
@@ -23852,13 +23607,11 @@
 /obj/structure/window/reinforced/tinted,
 /obj/structure/table/rack/wood,
 /obj/item/clothing/suit/storage/hooded/teshari/standard{
-	pixel_x = -8;
-	pixel_y = 0
+	pixel_x = -8
 	},
 /obj/item/clothing/suit/storage/hooded/teshari/standard/black_blue,
 /obj/item/clothing/suit/storage/hooded/teshari/standard/black_brown{
-	pixel_x = 6;
-	pixel_y = 0
+	pixel_x = 6
 	},
 /obj/item/toy/plushie/teshari/y_yw{
 	pixel_y = 4
@@ -24044,9 +23797,7 @@
 /area/vr/powered)
 "tep" = (
 /obj/machinery/access_button{
-	master_tag = null;
-	pixel_y = 27;
-	req_one_access = null
+	pixel_y = 27
 	},
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/effect/map_helper/airlock/button/ext_button,
@@ -24074,8 +23825,7 @@
 "teH" = (
 /obj/machinery/light/lamppost,
 /obj/structure/railing/grey{
-	dir = 8;
-	pixel_y = 0
+	dir = 8
 	},
 /turf/simulated/floor/outdoors/grass{
 	temperature = 293.15
@@ -24131,8 +23881,7 @@
 	},
 /obj/item/material/kitchen/rollingpin,
 /obj/item/material/knife{
-	pixel_x = 11;
-	pixel_y = 0
+	pixel_x = 11
 	},
 /turf/simulated/floor/tiled/white,
 /area/vr/powered/mall)
@@ -24265,10 +24014,7 @@
 /turf/simulated/floor/tiled,
 /area/vr/powered/vet)
 "tnK" = (
-/obj/structure/sign/poster/custom{
-	dir = 2;
-	pixel_y = 0
-	},
+/obj/structure/sign/poster/custom,
 /turf/simulated/floor/carpet/gaycarpet,
 /area/vr/powered/mall/dorms/secondlife4)
 "tol" = (
@@ -24558,12 +24304,10 @@
 /obj/item/reagent_containers/food/drinks/smallmilk,
 /obj/item/reagent_containers/food/drinks/smallmilk,
 /obj/structure/closet/secure_closet/freezer/fridge{
-	pixel_x = 6;
-	pixel_y = 0
+	pixel_x = 6
 	},
 /obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1"
+	dir = 4
 	},
 /turf/simulated/floor/concrete,
 /area/vr/powered/mall)
@@ -24845,8 +24589,7 @@
 	dir = 1
 	},
 /obj/structure/sign/poster/custom{
-	dir = 1;
-	pixel_y = 0
+	dir = 1
 	},
 /turf/simulated/floor/bmarble,
 /area/vr/powered/mall)
@@ -24929,8 +24672,7 @@
 	pixel_y = -4
 	},
 /obj/item/reagent_containers/food/snacks/pandenata{
-	pixel_x = -6;
-	pixel_y = 0
+	pixel_x = -6
 	},
 /obj/item/reagent_containers/food/snacks/slice/bigbeanburrito/filled,
 /turf/simulated/floor/wood/alt/panel,
@@ -25010,7 +24752,6 @@
 "tRW" = (
 /obj/structure/table/woodentable,
 /obj/machinery/light{
-	dir = 2;
 	nightshift_enabled = 1
 	},
 /obj/item/reagent_containers/food/condiment/small/saltshaker,
@@ -25427,8 +25168,7 @@
 	pixel_y = -3
 	},
 /obj/item/reagent_containers/food/condiment/cornoil{
-	pixel_x = 5;
-	pixel_y = 0
+	pixel_x = 5
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered/dungeon)
@@ -25717,8 +25457,7 @@
 "uqB" = (
 /obj/effect/floor_decal/corner/lightgrey/border,
 /obj/structure/railing/grey{
-	dir = 8;
-	pixel_y = 0
+	dir = 8
 	},
 /obj/structure/railing/grey,
 /turf/simulated/floor/concrete{
@@ -25844,8 +25583,7 @@
 	},
 /obj/item/reagent_containers/food/condiment/soysauce,
 /obj/item/reagent_containers/food/condiment/soysauce{
-	pixel_x = 5;
-	pixel_y = 0
+	pixel_x = 5
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered/mall)
@@ -25970,7 +25708,6 @@
 	id = "vrmalltint3"
 	},
 /obj/structure/window/reinforced/polarized{
-	dir = 2;
 	id = "vrmalltint3"
 	},
 /turf/simulated/floor/plating,
@@ -26092,24 +25829,19 @@
 "uHU" = (
 /obj/structure/table/fancyblack,
 /obj/item/material/kitchen/utensil/fork/plastic{
-	pixel_x = -7;
-	pixel_y = 0
+	pixel_x = -7
 	},
 /obj/item/material/kitchen/utensil/fork/plastic{
-	pixel_x = -11;
-	pixel_y = 0
+	pixel_x = -11
 	},
 /obj/item/material/kitchen/utensil/fork/plastic{
-	pixel_x = -10;
-	pixel_y = 0
+	pixel_x = -10
 	},
 /obj/item/material/kitchen/utensil/fork/plastic{
-	pixel_x = -9;
-	pixel_y = 0
+	pixel_x = -9
 	},
 /obj/item/material/kitchen/utensil/fork/plastic{
-	pixel_x = -8;
-	pixel_y = 0
+	pixel_x = -8
 	},
 /obj/item/reagent_containers/food/condiment/small/saltshaker{
 	pixel_x = -2;
@@ -26132,8 +25864,7 @@
 	pixel_y = 6
 	},
 /obj/item/reagent_containers/food/condiment/small/packet/ketchup{
-	pixel_x = 8;
-	pixel_y = 0
+	pixel_x = 8
 	},
 /obj/item/reagent_containers/food/condiment/small/packet/ketchup{
 	pixel_x = 8;
@@ -26165,8 +25896,7 @@
 /area/vr/outdoors/powered/lava)
 "uIR" = (
 /obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1"
+	dir = 4
 	},
 /turf/simulated/floor/concrete,
 /area/vr/powered/mall)
@@ -26226,8 +25956,7 @@
 	dir = 1
 	},
 /obj/structure/window/reinforced{
-	dir = 8;
-	health = null
+	dir = 8
 	},
 /obj/item/reagent_containers/food/snacks/kitsuneudon{
 	pixel_y = 4
@@ -26235,9 +25964,7 @@
 /obj/item/reagent_containers/food/snacks/kitsuneudon{
 	pixel_y = -4
 	},
-/obj/item/reagent_containers/food/snacks/kitsuneudon{
-	pixel_y = 0
-	},
+/obj/item/reagent_containers/food/snacks/kitsuneudon,
 /turf/simulated/floor/wood,
 /area/vr/powered/mall)
 "uLw" = (
@@ -26264,7 +25991,6 @@
 /area/vr/powered/mall/dorms/dorms2)
 "uMu" = (
 /obj/structure/sign/scenery/map/left{
-	dir = 2;
 	pixel_y = 30
 	},
 /turf/unsimulated/floor/lino/turfpack/station{
@@ -26345,8 +26071,7 @@
 	pixel_y = -4
 	},
 /obj/item/reagent_containers/food/snacks/chickenfillet{
-	pixel_x = -3;
-	pixel_y = 0
+	pixel_x = -3
 	},
 /obj/item/reagent_containers/food/snacks/plumphelmetbiscuit{
 	pixel_x = 9;
@@ -26407,8 +26132,7 @@
 /obj/structure/table/hardwoodtable,
 /obj/machinery/light/small{
 	dir = 4;
-	nightshift_enabled = 1;
-	pixel_y = 0
+	nightshift_enabled = 1
 	},
 /turf/simulated/floor/carpet/tealcarpet,
 /area/vr/powered/mall/dorms/dorms2)
@@ -26484,8 +26208,7 @@
 	dir = 8
 	},
 /obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/vr/powered/mall)
@@ -26655,7 +26378,6 @@
 "veE" = (
 /obj/machinery/airlock_sensor{
 	dir = 1;
-	id_tag = null;
 	pixel_y = -27
 	},
 /obj/effect/map_helper/airlock/sensor/chamber_sensor,
@@ -26671,8 +26393,7 @@
 	pixel_y = -12
 	},
 /obj/structure/sign/poster/custom{
-	dir = 8;
-	pixel_y = 0
+	dir = 8
 	},
 /turf/simulated/floor/carpet/bcarpet,
 /area/vr/powered/mall/dorms/secondlife5)
@@ -26689,8 +26410,7 @@
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/structure/sink/kitchen{
 	dir = 8;
-	pixel_x = -12;
-	pixel_y = 0
+	pixel_x = -12
 	},
 /turf/simulated/floor/tiled/yellow,
 /area/vr/powered/mall)
@@ -26911,10 +26631,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/vr/powered/dungeon)
 "vnR" = (
-/obj/structure/bed/chair/wood{
-	dir = 2;
-	pixel_y = 0
-	},
+/obj/structure/bed/chair/wood,
 /turf/simulated/floor/wood,
 /area/vr/powered/cafe)
 "vok" = (
@@ -26925,8 +26642,7 @@
 /area/vr/powered/vendor)
 "voo" = (
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood,
@@ -26977,9 +26693,7 @@
 /area/vr/space)
 "vpQ" = (
 /obj/structure/table/woodentable,
-/obj/machinery/light/floortube{
-	dir = 2
-	},
+/obj/machinery/light/floortube,
 /turf/simulated/floor/tiled/white,
 /area/vr/powered/mall)
 "vqv" = (
@@ -27037,8 +26751,7 @@
 /obj/structure/table/steel_reinforced,
 /obj/item/flash/synthetic,
 /obj/item/flash/synthetic{
-	pixel_x = 6;
-	pixel_y = 0
+	pixel_x = 6
 	},
 /turf/simulated/shuttle/floor/yellow,
 /area/vr/powered/space/sciship)
@@ -27059,8 +26772,7 @@
 /area/vr/powered/dungeon)
 "vtI" = (
 /obj/structure/bed/chair/sofa/left/brown{
-	dir = 1;
-	pixel_y = 0
+	dir = 1
 	},
 /turf/simulated/floor/wmarble,
 /area/vr/powered/motel)
@@ -27140,23 +26852,18 @@
 /turf/simulated/floor/wood,
 /area/vr/powered/shop)
 "vxB" = (
-/obj/machinery/door/window/eastright{
-	dir = 4
-	},
+/obj/machinery/door/window/eastright,
 /turf/simulated/floor/tiled,
 /area/vr/powered/constore)
 "vyO" = (
-/obj/structure/table/marble{
-	pixel_y = 0
-	},
+/obj/structure/table/marble,
 /obj/item/material/kitchen/rollingpin,
 /obj/item/reagent_containers/glass/rag,
 /turf/simulated/floor/wmarble,
 /area/vr/powered/mall)
 "vyR" = (
 /obj/structure/railing/grey{
-	dir = 8;
-	pixel_y = 0
+	dir = 8
 	},
 /turf/simulated/floor/outdoors/grass{
 	temperature = 293.15
@@ -27201,8 +26908,7 @@
 /area/vr/powered/mall)
 "vCh" = (
 /obj/item/modular_computer/console/preset/civilian{
-	dir = 8;
-	pixel_y = 0
+	dir = 8
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered/dungeon)
@@ -27245,8 +26951,7 @@
 	pixel_y = -6
 	},
 /obj/item/paint_palette{
-	pixel_x = 6;
-	pixel_y = 0
+	pixel_x = 6
 	},
 /obj/item/paint_palette{
 	pixel_x = 6;
@@ -27366,8 +27071,7 @@
 /area/vr/powered/mall/backrooms)
 "vIR" = (
 /obj/structure/bed/chair/wood{
-	dir = 1;
-	pixel_y = 0
+	dir = 1
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered/cafe)
@@ -27495,19 +27199,9 @@
 "vPw" = (
 /turf/unsimulated/wall,
 /area/vr/powered/dungeon)
-"vPB" = (
-/obj/structure/fence/corner{
-	dir = 2
-	},
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
-/area/vr/outdoors/powered)
 "vQg" = (
 /obj/structure/bed/chair/comfy/brown{
-	dir = 1;
-	pixel_y = 0
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/vr/powered/gunshop)
@@ -27716,7 +27410,6 @@
 /area/vr/powered/cult)
 "vXW" = (
 /obj/machinery/door/window/brigdoor/eastright{
-	dir = 4;
 	req_access = null
 	},
 /obj/machinery/door/window/brigdoor/eastright{
@@ -27756,8 +27449,7 @@
 "vYB" = (
 /obj/effect/floor_decal/rust,
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /obj/machinery/button/remote/blast_door{
 	id = "vrsewers1";
@@ -27871,12 +27563,10 @@
 /area/vr/powered/space/sciship)
 "wdV" = (
 /obj/structure/bed/chair/wood{
-	dir = 8;
-	pixel_y = 0
+	dir = 8
 	},
 /obj/structure/fireplace{
 	density = 0;
-	dir = 2;
 	pixel_x = 10
 	},
 /turf/simulated/floor/wood,
@@ -28107,7 +27797,6 @@
 	id = "vrmalltint1"
 	},
 /obj/structure/window/reinforced/polarized{
-	dir = 2;
 	id = "vrmalltint1"
 	},
 /turf/simulated/floor/plating,
@@ -28248,8 +27937,7 @@
 "wuF" = (
 /obj/random/trash,
 /obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1"
+	dir = 4
 	},
 /turf/simulated/floor/concrete,
 /area/vr/powered/mall)
@@ -28818,8 +28506,7 @@
 /obj/item/reagent_containers/food/drinks/smallmilk,
 /obj/item/reagent_containers/food/drinks/smallmilk,
 /obj/structure/closet/secure_closet/freezer/fridge{
-	pixel_x = 6;
-	pixel_y = 0
+	pixel_x = 6
 	},
 /turf/simulated/floor/concrete,
 /area/vr/powered/mall)
@@ -28828,8 +28515,7 @@
 	icon_state = "2-8"
 	},
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/vr/powered/space/mechfactory)
@@ -28968,13 +28654,6 @@
 	},
 /turf/simulated/shuttle/plating,
 /area/vr/powered/space/mechfactory)
-"wUU" = (
-/obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
-	},
-/turf/simulated/floor/plating,
-/area/vr/powered/dungeon)
 "wVi" = (
 /obj/structure/flora/pottedplant/minitree,
 /turf/simulated/floor/wood,
@@ -29600,9 +29279,7 @@
 	name = "Disposal Sorter";
 	pixel_y = 2
 	},
-/obj/structure/window/reinforced{
-	dir = 2
-	},
+/obj/structure/window/reinforced,
 /turf/simulated/floor/wmarble,
 /area/vr/powered/mall)
 "xvX" = (
@@ -29661,9 +29338,7 @@
 /turf/simulated/floor/cult,
 /area/vr/powered/cult)
 "xAg" = (
-/obj/structure/fence/hedge{
-	dir = 2
-	},
+/obj/structure/fence/hedge,
 /turf/simulated/floor/outdoors/grass{
 	temperature = 293.15
 	},
@@ -29712,7 +29387,6 @@
 "xDK" = (
 /obj/structure/table/woodentable,
 /obj/machinery/light{
-	dir = 2;
 	nightshift_enabled = 1
 	},
 /turf/simulated/floor/wood,
@@ -29782,9 +29456,7 @@
 /turf/simulated/floor/tiled/neutral,
 /area/vr/powered)
 "xGp" = (
-/obj/structure/table/marble{
-	pixel_y = 0
-	},
+/obj/structure/table/marble,
 /obj/item/reagent_containers/food/snacks/sliceable/sushi{
 	pixel_x = -3;
 	pixel_y = 2
@@ -29844,15 +29516,12 @@
 /obj/item/reagent_containers/food/snacks/generalschicken{
 	pixel_y = -3
 	},
-/obj/item/reagent_containers/food/snacks/generalschicken{
-	pixel_y = 0
-	},
+/obj/item/reagent_containers/food/snacks/generalschicken,
 /turf/simulated/floor/wood,
 /area/vr/powered/mall)
 "xGW" = (
 /obj/structure/sign/poster/custom{
-	dir = 8;
-	pixel_y = 0
+	dir = 8
 	},
 /turf/simulated/floor/carpet/brown,
 /area/vr/powered/mall)
@@ -30023,8 +29692,7 @@
 /area/vr/powered/vet)
 "xNN" = (
 /obj/structure/bed/chair/wood{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /turf/simulated/floor/wood,
 /area/vr/powered/cafe)
@@ -30148,8 +29816,7 @@
 /obj/machinery/chemical_dispenser/deluxe/full,
 /obj/effect/floor_decal/corner/purple/border{
 	color = "#f700ff";
-	dir = 1;
-	pixel_y = 0
+	dir = 1
 	},
 /turf/unsimulated/shuttle/floor/purple,
 /area/vr/powered/mall/secondlife)
@@ -30241,9 +29908,7 @@
 /turf/simulated/floor/wood,
 /area/vr/powered/dungeon)
 "xYu" = (
-/obj/machinery/light/floortube{
-	dir = 2
-	},
+/obj/machinery/light/floortube,
 /turf/simulated/floor/tiled/white,
 /area/vr/powered/mall)
 "xYU" = (
@@ -30320,8 +29985,7 @@
 /obj/structure/table/darkglass,
 /obj/effect/floor_decal/corner/purple/border{
 	color = "#f700ff";
-	dir = 1;
-	pixel_y = 0
+	dir = 1
 	},
 /obj/item/storage/box/glasses/rocks{
 	pixel_x = -10;
@@ -30483,14 +30147,12 @@
 /area/vr/powered/building1)
 "yhp" = (
 /obj/effect/floor_decal/corner/purple/bordercorner{
-	color = "#f700ff";
-	dir = 2
+	color = "#f700ff"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/vr/powered/mall/secondlife)
 "yhv" = (
 /obj/machinery/light{
-	dir = 2;
 	overlay_color = "#FFFEB8"
 	},
 /turf/simulated/floor/wood/alt/panel,
@@ -30511,8 +30173,7 @@
 	pixel_y = -3
 	},
 /obj/item/clothing/head/collectable/captain{
-	pixel_x = 5;
-	pixel_y = 0
+	pixel_x = 5
 	},
 /obj/item/clothing/head/collectable/HoS{
 	pixel_x = 5;
@@ -37860,7 +37521,7 @@ wcR
 wcR
 wcR
 kuq
-wUU
+iMi
 kHI
 kHI
 nHC
@@ -38189,7 +37850,7 @@ uyL
 uyL
 uyL
 uyL
-vPB
+bMB
 uiA
 nCF
 cgG
@@ -38367,7 +38028,7 @@ axG
 axG
 nHC
 wcR
-wUU
+iMi
 nHC
 axG
 axG
@@ -44137,7 +43798,7 @@ uyL
 uyL
 uyL
 uyL
-vPB
+bMB
 mGX
 aTx
 aTx
@@ -81244,8 +80905,8 @@ pGp
 pGp
 ouN
 ouN
-rZJ
-rZJ
+vgN
+vgN
 ouN
 wPM
 wPM
@@ -81760,8 +81421,8 @@ pGp
 pGp
 ouN
 ouN
-rkQ
-rkQ
+noa
+noa
 ouN
 ouN
 wPM
@@ -82277,8 +81938,8 @@ pGp
 ouN
 ouN
 ouN
-rZJ
-rZJ
+vgN
+vgN
 ouN
 wPM
 mfD
@@ -82496,7 +82157,7 @@ ijw
 xGp
 oiM
 hWB
-epk
+nnT
 vyO
 pGp
 men
@@ -82793,8 +82454,8 @@ pGp
 pGp
 ouN
 ouN
-rkQ
-rkQ
+noa
+noa
 ouN
 vop
 vfz
@@ -87937,7 +87598,7 @@ iyQ
 ouN
 jzh
 tiz
-jNJ
+dYf
 jzh
 tiz
 dYf
@@ -88195,7 +87856,7 @@ iyQ
 ouN
 jzh
 tiz
-jNJ
+dYf
 jzh
 tiz
 dYf
@@ -90778,8 +90439,8 @@ ouN
 ouN
 ouN
 ouN
-rZJ
-rZJ
+vgN
+vgN
 ouN
 ouN
 ouN
@@ -91297,8 +90958,8 @@ ouN
 noa
 noa
 ouN
-rZJ
-rZJ
+vgN
+vgN
 ouN
 ouN
 wPM
@@ -91551,8 +91212,8 @@ ouN
 ouN
 ouN
 ouN
-rZJ
-rZJ
+vgN
+vgN
 ouN
 ouN
 tiz
@@ -92322,11 +91983,11 @@ cuJ
 ebN
 geo
 ouN
-rZJ
-rZJ
+vgN
+vgN
 ouN
-rZJ
-rZJ
+vgN
+vgN
 ouN
 ouN
 ouN
@@ -92708,7 +92369,7 @@ wuS
 mBM
 sHT
 eSd
-ecq
+qAc
 eSd
 wuS
 nOq

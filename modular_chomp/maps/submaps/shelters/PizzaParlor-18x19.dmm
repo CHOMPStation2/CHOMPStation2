@@ -13,8 +13,7 @@
 	health = 1e+006
 	},
 /obj/structure/window/reinforced{
-	dir = 8;
-	health = null
+	dir = 8
 	},
 /obj/machinery/portable_atmospherics/hydroponics,
 /obj/effect/floor_decal/corner/lime/border{
@@ -143,9 +142,7 @@
 /obj/machinery/light{
 	layer = 3
 	},
-/obj/vehicle/train/engine/quadbike{
-	dir = 4
-	},
+/obj/vehicle/train/engine/quadbike,
 /turf/simulated/floor/outdoors/sidewalk/slab{
 	movement_cost = 0;
 	temperature = 293.15
@@ -343,7 +340,6 @@
 "oZ" = (
 /obj/structure/table/marble,
 /obj/machinery/chemical_dispenser/bar_soft/full{
-	pixel_y = 0;
 	dir = 4;
 	pixel_x = -4
 	},
@@ -729,8 +725,7 @@
 /area/survivalpod/superpose/PizzaParlor)
 "Jb" = (
 /obj/structure/window/reinforced{
-	dir = 8;
-	health = null
+	dir = 8
 	},
 /obj/machinery/portable_atmospherics/hydroponics,
 /obj/effect/floor_decal/corner/lime/border{
@@ -740,8 +735,7 @@
 /area/survivalpod/superpose/PizzaParlor)
 "Jf" = (
 /obj/structure/window/reinforced{
-	dir = 8;
-	health = null
+	dir = 8
 	},
 /obj/machinery/portable_atmospherics/hydroponics,
 /obj/effect/floor_decal/corner/lime/border{
@@ -855,8 +849,7 @@
 	dir = 1
 	},
 /obj/structure/window/reinforced{
-	dir = 8;
-	health = null
+	dir = 8
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -1059,11 +1052,11 @@
 	},
 /obj/item/clothing/under/pizzaguy{
 	rolled_down = 1;
-	icon_override = icons/inventory/uniform/mob_vr_rolled_down.dmi
+	icon_override = 'icons/inventory/uniform/mob_vr_rolled_down.dmi'
 	},
 /obj/item/clothing/under/pizzaguy{
 	rolled_down = 1;
-	icon_override = icons/inventory/uniform/mob_vr_rolled_down.dmi
+	icon_override = 'icons/inventory/uniform/mob_vr_rolled_down.dmi'
 	},
 /obj/item/clothing/head/soft/red,
 /obj/item/clothing/head/soft/red,
@@ -1073,13 +1066,11 @@
 /obj/item/card/id/generic{
 	access = list(515);
 	assignment = "Pizza Courier";
-	pixel_y = 0;
 	name = "Pizza Delivery ID"
 	},
 /obj/item/card/id/generic{
 	access = list(515);
 	assignment = "Pizza Courier";
-	pixel_y = 0;
 	name = "Pizza Delivery ID"
 	},
 /obj/machinery/recharger,
@@ -1088,7 +1079,6 @@
 	},
 /obj/machinery/power/apc/high{
 	dir = 8;
-	pixel_y = 0;
 	pixel_x = -24
 	},
 /turf/simulated/floor/tiled/white,
@@ -1096,23 +1086,18 @@
 "VK" = (
 /obj/structure/table/marble,
 /obj/item/material/kitchen/utensil/fork{
-	pixel_y = 0;
 	pixel_x = -4
 	},
 /obj/item/material/kitchen/utensil/fork{
-	pixel_y = 0;
 	pixel_x = -12
 	},
 /obj/item/material/kitchen/utensil/fork{
-	pixel_y = 0;
 	pixel_x = -10
 	},
 /obj/item/material/kitchen/utensil/fork{
-	pixel_y = 0;
 	pixel_x = -8
 	},
 /obj/item/material/kitchen/utensil/fork{
-	pixel_y = 0;
 	pixel_x = -6
 	},
 /obj/item/material/knife/plastic{
@@ -1164,8 +1149,7 @@
 /area/survivalpod/superpose/PizzaParlor)
 "YR" = (
 /obj/structure/window/reinforced{
-	dir = 8;
-	health = null
+	dir = 8
 	},
 /obj/structure/table/woodentable,
 /obj/item/material/minihoe,
@@ -1216,7 +1200,6 @@
 	pixel_x = 6
 	},
 /obj/item/storage/box/glasses{
-	pixel_y = 0;
 	pixel_x = 6
 	},
 /obj/item/storage/box/glass_extras/straws{

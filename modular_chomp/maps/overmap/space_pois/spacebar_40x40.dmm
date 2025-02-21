@@ -21,7 +21,6 @@
 "al" = (
 /obj/machinery/power/apc/hyper{
 	dir = 8;
-	pixel_y = 0;
 	pixel_x = -24
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -172,8 +171,7 @@
 "aU" = (
 /obj/structure/bed/chair{
 	dir = 4;
-	icon_state = "chair";
-	tag = "icon-chair (EAST)"
+	icon_state = "chair"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 295.15
@@ -190,8 +188,7 @@
 "aW" = (
 /obj/structure/bed/chair{
 	dir = 8;
-	icon_state = "chair";
-	tag = "icon-chair (WEST)"
+	icon_state = "chair"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 295.15
@@ -260,7 +257,6 @@
 "bg" = (
 /obj/structure/urinal{
 	dir = 4;
-	pixel_y = 0;
 	pixel_x = -31
 	},
 /turf/simulated/floor/tiled/old_tile/white,
@@ -350,7 +346,6 @@
 "bs" = (
 /obj/structure/shuttle/engine/propulsion/burst,
 /turf/simulated/floor/plating,
-/turf/space,
 /area/submap/spacebar)
 "bt" = (
 /obj/effect/floor_decal/industrial/warning,
@@ -398,8 +393,7 @@
 	icon_state = "door_locked";
 	id_tag = "spacebar_outer";
 	locked = 1;
-	name = "External Airlock Access";
-	req_access = null
+	name = "External Airlock Access"
 	},
 /obj/structure/fans/tiny,
 /turf/simulated/floor/plating,
@@ -424,8 +418,7 @@
 	icon_state = "door_locked";
 	id_tag = "spacebar_inner";
 	locked = 1;
-	name = "Internal Airlock Access";
-	req_access = null
+	name = "Internal Airlock Access"
 	},
 /turf/simulated/floor/plating,
 /area/submap/spacebar)
@@ -455,7 +448,6 @@
 /turf/simulated/floor/plating,
 /area/submap/spacebar)
 "jM" = (
-/obj/structure/table/woodentable,
 /obj/structure/table/woodentable,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 295.15
@@ -522,7 +514,6 @@
 	pixel_x = 5
 	},
 /obj/item/storage/fancy/cigarettes/killthroat{
-	pixel_y = 0;
 	pixel_x = -6
 	},
 /turf/simulated/floor/wood/broken,
@@ -756,7 +747,6 @@
 /obj/effect/floor_decal/rust,
 /obj/structure/urinal{
 	dir = 4;
-	pixel_y = 0;
 	pixel_x = -31
 	},
 /turf/simulated/floor/tiled/old_tile/white,
@@ -769,7 +759,6 @@
 	},
 /obj/machinery/embedded_controller/radio/airlock/access_controller{
 	pixel_y = 23;
-	dir = 2;
 	id_tag = "spacebar_airlock";
 	tag_interior_door = "spacebar_inner";
 	tag_exterior_door = "spacebar_outer"
@@ -852,7 +841,6 @@
 	pixel_x = -8
 	},
 /obj/item/storage/fancy/cigarettes/killthroat{
-	pixel_y = 0;
 	pixel_x = 8
 	},
 /obj/item/flame/lighter{

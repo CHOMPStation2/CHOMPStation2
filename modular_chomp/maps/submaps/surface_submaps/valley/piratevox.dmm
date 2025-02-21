@@ -15,18 +15,6 @@
 /obj/effect/landmark/corpse/syndicatesoldier,
 /turf/simulated/floor/tiled/white,
 /area/submap/piratevox)
-"cK" = (
-/obj/structure/grille/rustic{
-	health = 25;
-	name = "reinforced grille"
-	},
-/obj/structure/grille/rustic{
-	health = 25;
-	name = "reinforced grille"
-	},
-/obj/structure/window/plastitanium/full,
-/turf/simulated/shuttle/plating,
-/area/submap/piratevox)
 "dy" = (
 /obj/machinery/computer/ship{
 	dir = 1
@@ -1046,7 +1034,7 @@ Os
 Os
 OH
 An
-cK
+UL
 UL
 Cm
 Cm

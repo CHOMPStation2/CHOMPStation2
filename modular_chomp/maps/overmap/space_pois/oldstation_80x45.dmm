@@ -507,8 +507,7 @@
 /area/submap/oldstation_beta)
 "eY" = (
 /obj/structure/cable{
-	icon_state = "1-4";
-	tag = "90Curve"
+	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15

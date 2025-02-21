@@ -1353,12 +1353,9 @@
 "cL" = (
 /obj/mecha/combat/fighter/pinnace{
 	desc = "A modified Pinnace made to be able to fit a wide arsenal of equipment for rescue missions in space.";
-	health = 200;
 	max_equip = 1;
-	max_hull_equip = 2;
 	max_universal_equip = 2;
 	max_utility_equip = 3;
-	maxhealth = 200;
 	name = "Curabitur Pinnace"
 	},
 /obj/machinery/mech_recharger,
@@ -1376,19 +1373,11 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/curabitur/curashuttle/hangar)
-"cO" = (
-/obj/machinery/atmospherics/unary/engine{
-	dir = 1
-	},
-/turf/space,
-/turf/simulated/shuttle/plating/airless/carry,
-/area/shuttle/curabitur/curashuttle/eng)
 "cP" = (
 /obj/machinery/ion_engine{
 	dir = 1;
 	icon_state = "nozzle"
 	},
-/turf/space,
 /turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/curabitur/curashuttle/eng)
 "dF" = (
@@ -1540,7 +1529,7 @@ ce
 co
 cv
 cD
-cO
+cM
 aa
 aa
 "}
@@ -1740,7 +1729,7 @@ cl
 cr
 cB
 cJ
-cO
+cM
 aa
 aa
 "}

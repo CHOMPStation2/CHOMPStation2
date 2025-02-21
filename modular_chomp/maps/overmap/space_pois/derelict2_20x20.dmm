@@ -4,8 +4,7 @@
 /area/template_noop)
 "b" = (
 /obj/structure/window/reinforced{
-	dir = 4;
-	tag = "icon-rwindow (EAST)"
+	dir = 4
 	},
 /turf/template_noop,
 /area/submap/derelict2)
@@ -15,60 +14,41 @@
 /area/submap/derelict2)
 "d" = (
 /obj/structure/window/reinforced{
-	dir = 8;
-	tag = "icon-rwindow (WEST)"
+	dir = 8
 	},
 /turf/template_noop,
 /area/submap/derelict2)
 "e" = (
 /obj/structure/window/reinforced{
-	dir = 4;
-	tag = "icon-rwindow (EAST)"
+	dir = 4
 	},
 /obj/structure/window/reinforced{
-	dir = 8;
-	tag = "icon-rwindow (WEST)"
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/submap/derelict2)
 "f" = (
 /turf/simulated/wall,
 /area/submap/derelict2)
-"g" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 293.15
-	},
-/turf/simulated/floor/plating,
-/area/submap/derelict2)
 "h" = (
 /obj/machinery/light/small{
-	dir = 1;
-	tag = "icon-bulb1 (NORTH)"
+	dir = 1
 	},
 /obj/machinery/power/apc{
 	dir = 8;
 	name = "west bump";
 	pixel_x = -24
 	},
-/turf/simulated/floor/tiled/asteroid_steel/airless{
-	temperature = 293.15
-	},
+/turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/derelict2)
 "i" = (
-/turf/simulated/floor/tiled/asteroid_steel/airless{
-	temperature = 293.15
-	},
+/turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/derelict2)
 "j" = (
 /obj/machinery/light/small{
-	dir = 4;
-	tag = "icon-bulb1 (EAST)"
+	dir = 4
 	},
-/turf/simulated/floor/tiled/asteroid_steel/airless{
-	temperature = 293.15
-	},
+/turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/derelict2)
 "k" = (
 /obj/structure/window/reinforced,
@@ -77,8 +57,7 @@
 "l" = (
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
-	dir = 1;
-	tag = "icon-rwindow (NORTH)"
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/submap/derelict2)
@@ -86,9 +65,7 @@
 /obj/structure/table/standard,
 /obj/item/storage/fancy/heartbox,
 /obj/item/toy/bosunwhistle/fluff/strix,
-/turf/simulated/floor/tiled/asteroid_steel/airless{
-	temperature = 293.15
-	},
+/turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/derelict2)
 "n" = (
 /obj/item/trash/plate{
@@ -99,85 +76,61 @@
 	},
 /obj/structure/table/glass,
 /obj/item/flame/candle/everburn,
-/turf/simulated/floor/tiled/asteroid_steel/airless{
-	temperature = 293.15
-	},
+/turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/derelict2)
 "o" = (
 /obj/structure/table/standard,
 /obj/item/storage/fancy/cigar/cohiba,
-/turf/simulated/floor/tiled/asteroid_steel/airless{
-	temperature = 293.15
-	},
+/turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/derelict2)
 "p" = (
 /obj/structure/window/reinforced{
-	dir = 1;
-	tag = "icon-rwindow (NORTH)"
+	dir = 1
 	},
 /turf/template_noop,
 /area/submap/derelict2)
 "q" = (
 /obj/machinery/light/small{
-	dir = 8;
-	tag = "icon-bulb1 (WEST)"
+	dir = 8
 	},
-/turf/simulated/floor/tiled/asteroid_steel/airless{
-	temperature = 293.15
-	},
+/turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/derelict2)
 "r" = (
 /obj/machinery/light/small,
-/turf/simulated/floor/tiled/asteroid_steel/airless{
-	temperature = 293.15
-	},
+/turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/derelict2)
 "t" = (
 /obj/item/clothing/head/cowboy/fancy,
-/turf/simulated/floor/tiled/asteroid_steel/airless{
-	temperature = 293.15
-	},
+/turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/derelict2)
 "x" = (
 /obj/effect/decal/remains/human,
 /obj/item/clothing/under/cowboy/brown,
 /obj/item/clothing/accessory/cowboy_vest/brown,
-/turf/simulated/floor/tiled/asteroid_steel/airless{
-	temperature = 293.15
-	},
+/turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/derelict2)
 "z" = (
 /obj/item/storage/fancy/blackcandle_box,
 /obj/structure/table/standard,
-/turf/simulated/floor/tiled/asteroid_steel/airless{
-	temperature = 293.15
-	},
+/turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/derelict2)
 "A" = (
 /obj/structure/bed/chair{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/asteroid_steel/airless{
-	temperature = 293.15
-	},
+/turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/derelict2)
 "D" = (
 /obj/item/storage/backpack/fancy,
-/turf/simulated/floor/tiled/asteroid_steel/airless{
-	temperature = 293.15
-	},
+/turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/derelict2)
 "E" = (
 /obj/item/clothing/shoes/dress/white,
-/turf/simulated/floor/tiled/asteroid_steel/airless{
-	temperature = 293.15
-	},
+/turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/derelict2)
 "I" = (
 /obj/item/coin/gold,
-/turf/simulated/floor/tiled/asteroid_steel/airless{
-	temperature = 293.15
-	},
+/turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/derelict2)
 "J" = (
 /obj/item/clothing/gloves/weddingring,
@@ -186,56 +139,41 @@
 	pixel_x = -5
 	},
 /obj/structure/table/standard,
-/turf/simulated/floor/tiled/asteroid_steel/airless{
-	temperature = 293.15
-	},
+/turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/derelict2)
 "L" = (
 /obj/item/clothing/shoes/boots/cowboy/fancy,
-/turf/simulated/floor/tiled/asteroid_steel/airless{
-	temperature = 293.15
-	},
+/turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/derelict2)
 "M" = (
 /obj/effect/decal/remains/human,
 /obj/item/clothing/ears/earring/stud/diamond,
 /obj/item/clothing/under/dress/revealingdress,
-/turf/simulated/floor/tiled/asteroid_steel/airless{
-	temperature = 293.15
-	},
+/turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/derelict2)
 "Q" = (
 /obj/item/storage/backpack/satchel/fancy,
-/turf/simulated/floor/tiled/asteroid_steel/airless{
-	temperature = 293.15
-	},
+/turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/derelict2)
 "T" = (
 /mob/living/simple_mob/animal/passive/cat/bones{
 	desc = "A very odd behaved cat, their scratched name tag reads 'Felix'. They look very malnourished.";
 	name = "Felix"
 	},
-/turf/simulated/floor/tiled/asteroid_steel/airless{
-	temperature = 293.15
-	},
+/turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/derelict2)
 "V" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/plating,
-/turf/space,
 /area/submap/derelict2)
 "W" = (
 /obj/machinery/portable_atmospherics/canister/air,
-/turf/simulated/floor/tiled/asteroid_steel/airless{
-	temperature = 293.15
-	},
+/turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/derelict2)
 "Z" = (
 /obj/structure/bed/chair,
-/turf/simulated/floor/tiled/asteroid_steel/airless{
-	temperature = 293.15
-	},
+/turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/derelict2)
 
 (1,1,1) = {"
@@ -421,7 +359,7 @@ b
 b
 b
 b
-g
+V
 W
 i
 Z
@@ -465,7 +403,7 @@ d
 d
 d
 d
-g
+V
 i
 i
 i
@@ -473,7 +411,7 @@ M
 E
 i
 W
-g
+V
 d
 d
 d
@@ -534,7 +472,7 @@ a
 a
 a
 f
-g
+V
 c
 V
 f

@@ -65,8 +65,7 @@
 	dir = 4
 	},
 /obj/structure/shuttle/engine/heater{
-	dir = 8;
-	tag = "icon-heater (WEST)"
+	dir = 8
 	},
 /turf/simulated/shuttle/plating,
 /area/submap/intactemptyship)
@@ -330,10 +329,6 @@
 	},
 /turf/simulated/shuttle/wall,
 /area/submap/intactemptyship)
-"KL" = (
-/turf/simulated/shuttle/wall,
-/turf/space,
-/area/submap/intactemptyship)
 "KM" = (
 /obj/effect/decal/mecha_wreckage/durand,
 /obj/machinery/mech_recharger,
@@ -351,8 +346,7 @@
 /area/submap/intactemptyship)
 "MK" = (
 /obj/structure/shuttle/engine/propulsion{
-	dir = 8;
-	tag = "icon-propulsion (EAST)"
+	dir = 8
 	},
 /turf/simulated/shuttle/plating,
 /area/submap/intactemptyship)
@@ -965,11 +959,11 @@ IS
 TE
 TE
 TE
-KL
+Gp
 Gp
 VY
 JR
-KL
+Gp
 TE
 TE
 TE
@@ -1016,7 +1010,7 @@ IS
 IS
 IS
 IS
-KL
+Gp
 gT
 gT
 Aw
@@ -1026,7 +1020,7 @@ BS
 Aw
 gT
 gT
-KL
+Gp
 "}
 (21,1,1) = {"
 IS
@@ -1178,7 +1172,7 @@ IS
 IS
 IS
 IS
-KL
+Gp
 Gp
 Gp
 Aw
@@ -1188,7 +1182,7 @@ qg
 Aw
 Gp
 Gp
-KL
+Gp
 "}
 (27,1,1) = {"
 IS
@@ -1288,13 +1282,13 @@ IS
 IS
 TE
 TE
-KL
+Gp
 Gp
 pn
 pn
 pn
 Gp
-KL
+Gp
 TE
 TE
 "}

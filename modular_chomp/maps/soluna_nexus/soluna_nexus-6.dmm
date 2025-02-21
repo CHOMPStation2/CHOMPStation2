@@ -2887,9 +2887,6 @@
 /turf/simulated/wall/r_wall,
 /area/expoutpost/portbowhallway)
 "cCE" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1
-	},
 /obj/structure/bed/double/padded,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -6047,10 +6044,6 @@
 /obj/effect/catwalk_plated/techfloor,
 /turf/simulated/floor,
 /area/expoutpost/starbowhallway)
-"ftT" = (
-/obj/random/trash,
-/turf/simulated/floor,
-/area/expoutpost/portuppermaint)
 "fuN" = (
 /obj/structure/bed/chair/wood{
 	dir = 1
@@ -10275,10 +10268,6 @@
 	},
 /turf/simulated/floor,
 /area/expoutpost/engstorage)
-"jkM" = (
-/obj/random/trash,
-/turf/simulated/floor,
-/area/expoutpost/staruppermaint)
 "jkZ" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
@@ -20070,21 +20059,6 @@
 "rwo" = (
 /turf/simulated/wall/r_wall,
 /area/expoutpost/commanderroom)
-"rwJ" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 1
-	},
-/obj/effect/floor_decal/industrial/danger{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/expoutpost/hangarfive)
 "rxe" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -25695,9 +25669,6 @@
 /turf/simulated/floor/tiled,
 /area/expoutpost/gateway)
 "wdf" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1
-	},
 /obj/structure/bed/double/padded,
 /obj/item/bedsheet/orangedouble,
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -25994,11 +25965,6 @@
 /obj/item/towel/random,
 /turf/simulated/floor/tiled/freezer,
 /area/expoutpost/washroom)
-"wqq" = (
-/obj/machinery/beehive,
-/obj/machinery/beehive,
-/turf/simulated/floor/grass2,
-/area/expoutpost/botany)
 "wrQ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -26525,7 +26491,6 @@
 	},
 /obj/item/radio/intercom/department/security{
 	dir = 4;
-	icon_override = "secintercom";
 	pixel_x = 21
 	},
 /turf/simulated/floor/tiled,
@@ -52211,7 +52176,7 @@ wTs
 wTs
 jlw
 nYm
-ftT
+ctL
 uEZ
 uhl
 wTy
@@ -52985,7 +52950,7 @@ nYm
 nYm
 aMn
 nYm
-ftT
+ctL
 uEZ
 eHT
 xaA
@@ -53233,7 +53198,7 @@ nQm
 wTs
 wTs
 wTs
-ftT
+ctL
 nYm
 nYm
 nYm
@@ -54009,7 +53974,7 @@ nYm
 rrt
 mCg
 fDS
-ftT
+ctL
 smd
 nYm
 qnt
@@ -54272,7 +54237,7 @@ eWj
 eWj
 eWj
 eWj
-ftT
+ctL
 aMn
 ceN
 pgP
@@ -57585,7 +57550,7 @@ xwl
 xwl
 xwl
 xwl
-rwJ
+hcY
 lGy
 tMo
 sPX
@@ -62661,7 +62626,7 @@ gAj
 nuL
 vvK
 aLV
-wqq
+aRH
 aRH
 bQe
 qwc
@@ -68966,7 +68931,7 @@ hVa
 hVa
 hVa
 qWQ
-jkM
+jbK
 pBY
 csU
 pxN
@@ -69745,7 +69710,7 @@ nQm
 qWQ
 qWQ
 qWQ
-jkM
+jbK
 ufY
 dey
 yid
@@ -70020,7 +69985,7 @@ xku
 xku
 vxd
 csU
-jkM
+jbK
 pzz
 erv
 erv
@@ -70276,7 +70241,7 @@ sxM
 csU
 csU
 csU
-jkM
+jbK
 csU
 csU
 pzz
@@ -70528,7 +70493,7 @@ qWQ
 csU
 vxd
 vxd
-jkM
+jbK
 vxd
 vxd
 vxd
