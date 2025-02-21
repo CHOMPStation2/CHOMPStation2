@@ -294,7 +294,7 @@
 /datum/sprite_accessory/marking/ch/smallchubbybelly
 	name = "Chubby Belly, Small"
 	icon_state = "smallchubbybelly"
-	body_parts = list(BP_TORSO,BP_GROIN,BP_L_LEG,BP_R_LEG,BP_L_HAND,BP_R_HAND)
+	body_parts = list(BP_TORSO,BP_GROIN,BP_L_HAND,BP_R_HAND)
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/marking/ch/six_pack
