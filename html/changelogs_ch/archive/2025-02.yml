@@ -405,3 +405,14 @@
   TheCaramelion:
   - qol: Engineering will get an alarm whenever a fire alarm triggers
   - balance: Makes fire less spreadable
+2025-02-21:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: build mode  dropped items will no longer always gib
+  - rscadd: lockpick sets can now be found as part of the contraband pool in maint
+      items (useless on station though)
+  - rscadd: lockpick sets can now be used to pick fence gates as well
+  - image: resprited the basic lockpick set
+  Kashargul:
+  - qol: prevents too long messages from being sent in tgui say
+  tacoguy7765093:
+  - bugfix: Mapping errors on relic_base and NS_mines
