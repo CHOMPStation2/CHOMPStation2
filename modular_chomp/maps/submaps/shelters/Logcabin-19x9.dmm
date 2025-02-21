@@ -1,4 +1,11 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/structure/bed/double/padded{
+	pixel_x = 10;
+	pixel_y = -4
+	},
+/turf/simulated/floor/carpet/turcarpet,
+/area/survivalpod/superpose/logcabin)
 "aK" = (
 /obj/machinery/media/jukebox,
 /turf/simulated/wall/log_sif,
@@ -274,7 +281,9 @@
 /turf/simulated/floor/tiled/freezer,
 /area/survivalpod/superpose/logcabin)
 "wo" = (
-/obj/structure/bed/double/padded,
+/obj/structure/bed/double/padded{
+	layer = 3.01
+	},
 /obj/item/bedsheet/rddouble{
 	pixel_x = -24
 	},
@@ -361,7 +370,8 @@
 /area/survivalpod/superpose/logcabin)
 "EN" = (
 /obj/structure/bed/double/padded{
-	pixel_x = 10
+	pixel_x = 10;
+	layer = 3.01
 	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/survivalpod/superpose/logcabin)
@@ -458,9 +468,23 @@
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/logcabin)
 "NP" = (
+/obj/structure/bed/double/padded{
+	pixel_y = -4
+	},
+/obj/item/bedsheet/rddouble{
+	pixel_x = -24;
+	pixel_y = -4
+	},
+/obj/item/bedsheet/rddouble{
+	pixel_x = -12;
+	pixel_y = -4
+	},
+/obj/item/bedsheet/rddouble{
+	pixel_y = -4
+	},
 /obj/item/reagent_containers/food/snacks/spellburger{
-	pixel_y = -17;
-	pixel_x = 8
+	pixel_x = 8;
+	pixel_y = -5
 	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/survivalpod/superpose/logcabin)
@@ -781,7 +805,7 @@ OP
 OP
 lu
 fP
-MN
+aa
 EN
 yY
 "}

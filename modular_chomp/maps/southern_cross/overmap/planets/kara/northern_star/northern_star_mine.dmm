@@ -13842,7 +13842,7 @@
 /obj/machinery/button/remote/airlock{
 	id = "medoutdorm1";
 	name = "Door Bolt Control";
-	pixel_x = 25;
+	pixel_x = 5;
 	pixel_y = 28;
 	specialfunctions = 4
 	},
@@ -13900,7 +13900,7 @@
 	name = "Door Bolt Control";
 	pixel_y = 28;
 	specialfunctions = 4;
-	pixel_x = -25
+	pixel_x = -5
 	},
 /turf/simulated/floor/wood,
 /area/outpost/medical/dorm)
@@ -14363,7 +14363,7 @@
 /obj/machinery/button/remote/airlock{
 	id = "medoutdorm3";
 	name = "Door Bolt Control";
-	pixel_x = -25;
+	pixel_x = -5;
 	pixel_y = -26;
 	specialfunctions = 4
 	},
@@ -14699,9 +14699,9 @@
 /obj/machinery/button/remote/airlock{
 	id = "medoutrest";
 	name = "Door Bolt Control";
-	pixel_x = 25;
 	pixel_y = -26;
-	specialfunctions = 4
+	specialfunctions = 4;
+	pixel_x = 5
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/outpost/medical/dorm)
@@ -14750,7 +14750,7 @@
 /obj/machinery/button/remote/airlock{
 	id = "medoutdorm4";
 	name = "Door Bolt Control";
-	pixel_x = -25;
+	pixel_x = -5;
 	pixel_y = -26;
 	specialfunctions = 4
 	},
